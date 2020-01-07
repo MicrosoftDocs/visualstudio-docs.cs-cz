@@ -5,15 +5,15 @@ ms.topic: reference
 helpviewer_keywords:
 - load tests, run settings
 ms.assetid: de10dabb-02ed-403b-9e6f-0b735524988c
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7bea257e45b557fd157d68baf9e0229a602a7a6e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8898a474888ce9efbf4c91a5251bf8fe7036fe5f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652977"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75584462"
 ---
 # <a name="load-test-run-settings-properties"></a>Vlastnosti nastavení běhu zátěžového testu
 
@@ -51,8 +51,8 @@ Další informace najdete v tématu [Úprava nastavení protokolování zátěž
 
 |Vlastnost|Definice|
 |-|----------------|
-|**Typ úložiště**|Způsob ukládání čítačů výkonu, které jsou získány v rámci zátěžového testu. Možnosti jsou následující:<br /><br /> -   **Database** – vyžaduje databázi SQL, která má **výsledky testů úložiště Load**.<br />-   **žádné**.|
-|**Úložiště podrobností časování**|Slouží k určení, které podrobnosti budou uloženy v **úložišti výsledky testů zatížení**. K dispozici jsou tři hodnoty:<br /><br /> -   **AllIndividualDetails** – shromažďování a ukládání hodnot jednotlivých časování pro každý test, transakci a stránku, které byly spuštěny nebo vydány během zátěžového testu v **úložišti zatížení výsledky testů**. Je vyžadováno, pokud chcete v **analyzátoru zátěžového testu**použít **graf aktivity virtuálního uživatele** .<br />     Další informace najdete v tématu [Analýza aktivity virtuálních uživatelů v zobrazení podrobností](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).<br />-   **none** – neshromažďuje žádné hodnoty jednotlivých časování. Toto je výchozí hodnota pro Visual Studio 2013 Update 4 a novější verze.<br />-   **StatisticsOnly** – shromažďují a ukládají pouze statistické údaje místo uložení jednotlivých hodnot časování pro každý test, transakci a stránku, které byly provedeny nebo vydány během zátěžového testu v **úložišti zatížení výsledky testů**.<br /><br /> Další informace najdete v tématu [Postupy: určení vlastnosti úložiště podrobností časování](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md).|
+|**Typ úložiště**|Způsob ukládání čítačů výkonu, které jsou získány v rámci zátěžového testu. Možnosti jsou tyto:<br /><br /> -   **Database** – vyžaduje databázi SQL, která má **výsledky testů úložiště Load**.<br />-   **žádné**.|
+|**Úložiště podrobností časování**|Slouží k určení, které podrobnosti budou uloženy v **úložišti výsledky testů zatížení**. K dispozici jsou tři hodnoty:<br /><br /> -   **AllIndividualDetails** – shromažďování a ukládání hodnot jednotlivých časování pro každý test, transakci a stránku, které byly spuštěny nebo vydány během zátěžového testu v **úložišti zatížení výsledky testů**. Je vyžadováno, pokud chcete v **analyzátoru zátěžového testu**použít **graf aktivity virtuálního uživatele** .<br />     Další informace najdete v tématu [analýza aktivity virtuálních uživatelů v podrobném zobrazení](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).<br />-   **none** – neshromažďuje žádné hodnoty jednotlivých časování. Toto je výchozí hodnota pro Visual Studio 2013 Update 4 a novější verze.<br />-   **StatisticsOnly** – shromažďují a ukládají pouze statistické údaje místo uložení jednotlivých hodnot časování pro každý test, transakci a stránku, které byly provedeny nebo vydány během zátěžového testu v **úložišti zatížení výsledky testů**.<br /><br /> Další informace najdete v tématu [postupy: určení vlastnosti úložiště podrobností časování](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md).|
 
 ## <a name="sql-tracing-properties"></a>Vlastnosti trasování SQL
 
@@ -67,8 +67,8 @@ Další informace najdete v tématu [Úprava nastavení protokolování zátěž
 
 |Vlastnost|Definice|
 |-|----------------|
-|**Iterace testu**|Určuje celkový počet jednotlivých testů, které mají být spuštěny před dokončením zátěžového testu. Tato vlastnost se vztahuje pouze v případě, že je `True` vlastnost použít iterace testu.|
-|**Použít iterace testu**|Pokud je `True` použít iterace testu, pak se zátěžový test spustí, dokud počet jednotlivých testů dokončených v rámci zátěžového testu nedosáhne čísla zadaného vlastností "test iterací". V tomto případě se budou ignorovat časová nastavení, která jsou zahřívání, doba běhu a doba trvání chlazení. Pokud je `False` použít iterace testu, platí všechna nastavení časování a "iterace testu" se ignorují.|
+|**Iterace testu**|Určuje celkový počet jednotlivých testů, které mají být spuštěny před dokončením zátěžového testu. Tato vlastnost se vztahuje pouze v případě, že je `True`vlastnost použít iterace testu.|
+|**Použít iterace testu**|Pokud je `True`použít iterace testu, pak se zátěžový test spustí, dokud počet jednotlivých testů dokončených v rámci zátěžového testu nedosáhne čísla zadaného vlastností "test iterací". V tomto případě se budou ignorovat časová nastavení, která jsou zahřívání, doba běhu a doba trvání chlazení. Pokud je `False`použít iterace testu, platí všechna nastavení časování a "iterace testu" se ignorují.|
 
 Další informace naleznete v tématu [How to: zadejte počet testovacích iterací v nastavení spuštění](../test/how-to-specify-the-number-of-test-iterations-in-a-load-test.md).
 
@@ -78,7 +78,7 @@ Další informace naleznete v tématu [How to: zadejte počet testovacích itera
 |-|----------------|
 |**Doba trvání chlazení**|Doba, po kterou se testovací doba nepracuje, vyjádřená ve formátu hh: mm: ss. Jednotlivé testy v rámci zátěžového testu mohou i nadále běžet po dokončení zátěžového testu. Během doby chladnutí mohou tyto testy pokračovat, dokud nebudou dokončeny, nebo dokud nedosáhnete konce doby chlazení. Ve výchozím nastavení neexistuje žádná doba chladnutí a jednotlivé testy jsou ukončeny po dokončení zátěžového testu na základě nastavení trvání běhu.|
 |**Doba trvání běhu**|Délka testu ve formátu hh: mm: ss.|
-|**Vzorkovací frekvence**|Interval, ve kterém mají být zachyceny hodnoty čítače výkonu ve formátu hh: mm: ss.<br /><br /> Další informace najdete v tématu [Postupy: určení vzorkovací frekvence](../test/how-to-specify-the-sample-rate-for-a-load-test.md).|
+|**Vzorkovací frekvence**|Interval, ve kterém mají být zachyceny hodnoty čítače výkonu ve formátu hh: mm: ss.<br /><br /> Další informace najdete v tématu [postupy: určení vzorkovací frekvence](../test/how-to-specify-the-sample-rate-for-a-load-test.md).|
 |**Doba zahřívání**|Období mezi začátkem testu a zahájením zaznamenávání ukázkových dat ve formátu hh: mm: ss. To se často používá pro krok načtení virtuálních uživatelů, aby se dosáhlo určité úrovně zatížení předtím, než se zaznamenávají ukázkové hodnoty. Vzorové hodnoty, které jsou zachyceny před uplynutím doby zahřívání, jsou zobrazeny v **analyzátoru zátěžového testu**.|
 
 ## <a name="webtest-connections-properties"></a>Vlastnosti připojení webového testu
@@ -96,15 +96,15 @@ Postup změny nastavení spuštění:
 
 1. Otevřete zátěžový test.
 
-2. Rozbalte složku **parametry spuštění** .
+2. Rozbalte **parametrů běhu** složky.
 
 3. Vyberte uzel **nastavení spuštění** .
 
-4. V nabídce **zobrazení** klikněte na příkaz **Vlastnosti okno**.
+4. Na **zobrazení** nabídce zvolte **okno vlastností**.
 
      Zobrazí se **okno Vlastnosti** a zobrazí se vlastnosti vybraného nastavení spuštění.
 
-5. Použijte **okno Vlastnosti** ke změně parametrů běhu. Například můžete změnit dobu trvání běhu na **00:05:00** a spustit test po dobu pěti minut.
+5. Použijte **okno Vlastnosti** ke změně parametrů běhu. Například změnit dobu spuštění **00:05:00** na test běžel pět minut.
 
     > [!NOTE]
     > Úplný seznam vlastností parametrů spuštění a jejich popis naleznete v tématu [Vlastnosti nastavení běhu zátěžového testu](../test/load-test-run-settings-properties.md).
@@ -112,8 +112,8 @@ Postup změny nastavení spuštění:
 6. Až dokončíte změnu vlastností, uložte zátěžový test. V nabídce **soubor** klikněte na příkaz **Uložit**.
 
 > [!NOTE]
-> Mapování sad čítačů jsou také součástí parametrů běhu. Další informace naleznete v tématu [Určení sad čítačů a mezních pravidel pro počítače v rámci zátěžového testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md).
+> Mapování sad čítačů jsou také součástí parametrů běhu. Další informace najdete v tématu [určení sad čítačů a mezních pravidel pro počítače v rámci zátěžového testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Konfigurovat nastavení běhu zátěžového testu](../test/configure-load-test-run-settings.md)
+- [Konfigurace parametrů spuštění zátěžového testu](../test/configure-load-test-run-settings.md)

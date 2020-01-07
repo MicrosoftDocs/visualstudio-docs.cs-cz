@@ -4,17 +4,17 @@ ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Visual Studio IntelliTest developer testing tool
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 94bd67ecb4646e3b8079d2d1aadda097c655af4c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: dfa81e7afe313a112e2355ddf5efadb70c555477
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653176"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591592"
 ---
 # <a name="overview-of-microsoft-intellitest"></a>Přehled Microsoft IntelliTest
 
@@ -70,13 +70,16 @@ public partial class HelloWorldTest {
 Po kompilaci a provedení IntelliTest vygeneruje sadu testů, jako je následující sada:
 
 1. ""
-2. "\ 0 \ 0 \ 0 \ 0 \ 0"
-3. Hello
-4. "\ 0 \ 0 \ 0 \ 0 \ 0 \ 0"
+2. "\0\0\0\0\0"
+3. "Hello"
+4. "\0\0\0\0\0\0"
 5. "Hello\0"
 6. "Hello\0\0"
 7. "Hello\0World!"
 8. "Hello World!"
+
+> [!NOTE]
+> V případě problémů se sestavením zkuste nahradit odkazy Microsoft. VisualStudio. TestPlatform. TestFramework a Microsoft. VisualStudio. TestPlatform. TestFramework. Extensions odkazem na Microsoft. VisualStudio. QualityTools. UnitTestFramework.
 
 Přečtěte si téma [generování testů jednotek pomocí IntelliTest](../../test/generate-unit-tests-for-your-code-with-intellitest.md) k pochopení, kde jsou vygenerované testy uloženy. Vygenerovaný testovací kód by měl zahrnovat test, jako je například následující kód:
 
@@ -90,7 +93,7 @@ public void HelloWorldThrowsException167()
 }
 ```
 
-To je to snadné!
+Je to snadné!
 
 ## <a name="limitations"></a>Omezení
 
@@ -99,7 +102,7 @@ Tato část popisuje omezení IntelliTest:
 * [Nondeterminism](#nondeterminism)
 * [Souběžnost](#concurrency)
 * [Nativní kód .NET](#native-code)
-* [Platformy](#platform)
+* [Platforma](#platform)
 * [Jazyk](#language)
 * [Symbolický důvod](#symbolic-reasoning)
 * [Trasování zásobníku](#incorrect-stack-traces)
@@ -115,7 +118,7 @@ V tomto smyslu se výsledky volání nespravovaného nebo neinstrumentované kó
 
 Kromě toho je program považován za nedetermisticný, pokud se při opětovném spuštění programu změní hodnoty z externích zdrojů. V takových případech IntelliTest ztratí kontrolu nad spuštěním programu a jeho hledání se neefektivně.
 
-V některých případech to není zřejmé, pokud k tomu dojde. Vezměte v úvahu následující příklady:
+V některých případech to není zřejmé, pokud k tomu dojde. Příklady:
 
 * Výsledek metody **GetHashCode ()** je poskytován nespravovaným kódem a není předvídatelný.
 * Třída **System. Random** používá aktuální systémový čas k zajištění skutečně náhodných hodnot.
@@ -148,7 +151,7 @@ IntelliTest používá Řešitel automatického [omezení](input-generation.md#c
 
 Vzhledem k tomu, že IntelliTest catch a "rethrows" výjimky v každé instrumentované metodě, čísla řádků v trasování zásobníku nebudou správná. Toto omezení je záměrné návrhem instrukce "Rethrow".
 
-## <a name="further-reading"></a>Další čtení
+## <a name="further-reading"></a>Další materiály ke čtení
 
 * [Úvodní Blogový příspěvek](https://devblogs.microsoft.com/devops/introducing-smart-unit-tests/).
 * [Generování testů částí pro kód pomocí funkce IntelliTest](../../test/generate-unit-tests-for-your-code-with-intellitest.md)

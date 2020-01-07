@@ -3,21 +3,21 @@ title: Uspořádání objektů do kontejnerů rozložení v Návrháři XAML
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 29c80c38-0fa3-48d6-b3a8-3b864f482e44
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: bdda64792195ecac41affeb6ec8a7f4f383ac8a4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3f05874459553b0b83c5e43f326a5deb6b0d4798
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668824"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592936"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>Uspořádání objektů do kontejnerů rozložení v Návrháři XAML
 
 Tento článek popisuje panely rozložení a ovládací prvky pro Návrhář XAML.
 
-Představte si, kde byste chtěli, aby se objekty zobrazovaly na stránce &mdash;objects jako jsou obrázky, tlačítka a videa. Možná budete chtít, aby se zobrazovaly v řádcích a sloupcích, na jednom řádku svisle nebo vodorovně nebo na pevných pozicích.
+Představte si, kde byste chtěli, aby se objekty zobrazovaly na stránce&mdash;objekty, jako jsou obrázky, tlačítka a videa. Možná budete chtít, aby se zobrazovaly v řádcích a sloupcích, na jednom řádku svisle nebo vodorovně nebo na pevných pozicích.
 
 Až budete mít možnost si představit, jak se stránka může zobrazit, vyberte panel rozložení. Všechny stránky začínají na jednom, protože potřebujete něco, ke kterému přidáte objekty. Ve výchozím nastavení je to **Mřížka**, ale můžete ji změnit.
 
@@ -71,7 +71,7 @@ Uspořádejte objekty tak, aby zůstaly nebo *ukotveny*k jednomu okraji panelu.
 
 ![Panel rozložení DockPanel](../designers/media/72d46b58-9a49-4dd5-8af7-6843c0440226.png)
 
-**Podívejte se na krátké video:** ![Play tlačítko ](../designers/media/bldadminconsoleinitialconfigicon.PNG) [WPF-DockPanel](https://www.youtube.com/watch?v=EBH_OIM-zPo)
+**Podívejte se na krátké video:** ![tlačítko Přehrát](../designers/media/bldadminconsoleinitialconfigicon.PNG) [WPF-DockPanel](https://www.youtube.com/watch?v=EBH_OIM-zPo)
 
 ## <a name="layout-controls"></a>Ovládací prvky rozložení
 

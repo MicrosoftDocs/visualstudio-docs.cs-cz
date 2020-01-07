@@ -8,17 +8,17 @@ helpviewer_keywords:
 - managed code, code analysis errors
 - code analysis, policy errors
 ms.assetid: d8fd9475-ac9b-4085-b5a3-b0c807922cac
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13a5322fa4b55d29d791f4aef99037c79d67fa45
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c35ba03c2f93af0705910b8f89dd835c985e3e60
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72610845"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587781"
 ---
 # <a name="code-analysis-application-errors"></a>Chyby aplikace analýzy kódu
 
@@ -33,7 +33,7 @@ Tato část je odkazem na chybové zprávy, které jsou generovány nástrojem p
 |[CA0052](ca0052.md)|Nebyly vybrány žádné cíle pro analýzu.|
 |[CA0053](ca0053.md)|Sestavení pravidla nelze načíst.|
 |[CA0054](ca0054.md)|Sestavení vlastního pravidla obsahuje neplatné prostředky XML.|
-|[CA0055](ca0055.md)|Nelze načíst soubor: \<path >|
+|[CA0055](ca0055.md)|Nelze načíst soubor:\<cesta >|
 |[CA0056](ca0056.md)|Soubor projektu má nesprávnou verzi nástroje pro analýzu.|
 |[CA0057](ca0057.md)|Porušení nelze mapovat na aktuální sadu cílů a pravidel.|
 |[CA0058](ca0058.md)|Nelze načíst sestavení, na které odkazuje.|

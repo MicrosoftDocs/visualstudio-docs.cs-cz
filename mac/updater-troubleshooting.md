@@ -7,12 +7,12 @@ ms.author: dominicn
 ms.date: 04/13/2019
 ms.technology: vs-ide-install
 ms.assetid: 31AF914A-C66B-4CD3-9429-39695E0E94AE
-ms.openlocfilehash: b25285ff3060734ee18085d7a9e89cd0d0c43439
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.openlocfilehash: 2ccef07a2889f66df3e7f217ea292b61ffc0008f
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74984401"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75405476"
 ---
 # <a name="troubleshooting-updater-has-errors-retrieving-information"></a>Řešení potíží: aktualizace obsahuje chyby, které načítají informace
 
@@ -24,4 +24,5 @@ V některých případech se může zobrazit chybová zpráva "Chyba při načí
 - Pokud se tato chybová zpráva zobrazuje i nadále, můžete se také pokusit aktualizovat pomocí instalačního programu, pokud je soubor **. dmg** stále na vašem počítači, nebo si ho můžete stáhnout z [VisualStudio.com](https://visualstudio.microsoft.com/vs/mac/) .
   - Instalační program aktualizuje všechny nainstalované komponenty na vašem počítači.
   - Po opětovném spuštění instalačního programu budete moct nainstalovat i všechny chybějící součásti, které jste předtím nenainstalovali.
-- Můžete také zkusit vymazat soubory stažené z mezipaměti odstraněním souboru umístěného na adrese `~/Library/Caches/VisualStudio/7.0/TempDownload/index.xml`.
+- Můžete také zkusit vymazat soubory stažené z mezipaměti odstraněním souboru umístěného na adrese `~/Library/Caches/VisualStudio/8.0/TempDownload/index.xml`.
+- Pokud pracujete se starší verzí Visual Studio pro Mac, můžete mít v adresáři `VisualStudio` jiná čísla verzí. Odstraňte také soubor `index.xml` v těchto cestách.

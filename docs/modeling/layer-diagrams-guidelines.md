@@ -7,17 +7,17 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8613633289189bec5e403ec76b78731d5e3ecc4f
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 9f8ec90d045259cd5d10533db6096154376d48fe
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72983746"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594627"
 ---
 # <a name="dependency-diagrams-guidelines"></a>Diagramy závislostí: pokyny
 
@@ -102,7 +102,7 @@ Obvykle se zobrazí nějaké závislosti, které by neměly existovat. Tyto záv
 
 Chcete-li popsat změny, které plánujete udělat v systému nebo zamýšlené architektuře, použijte následující postup pro úpravu diagramu závislostí. Můžete také zvážit provedení některých změn refaktoringu pro zlepšení struktury kódu před jeho rozšířením. Viz [vylepšení struktury kódu](#Improving).
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Komu**|**Proveďte tyto kroky**|
 |-|-|
 |Odstranit závislost, která neexistuje|Klikněte na závislost a potom stiskněte **Delete**.|
 |Změna nebo omezení směru závislosti|Nastavte vlastnost **Direction** .|

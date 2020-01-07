@@ -4,17 +4,17 @@ ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Dynamic symbolic execution
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 26befe6612c874c2565e44459cc90fe980296137
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: e5a3248d3f081bcab08c08110d305f0aa6235817
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653190"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591596"
 ---
 # <a name="input-generation-using-dynamic-symbolic-execution"></a>Generování vstupu s použitím dynamického symbolického spuštění
 
@@ -24,7 +24,7 @@ Kroky smyčky jsou:
 
 1. IntelliTest určuje vstupy `i` tak, aby `q(i)=false` pomocí [řešitele omezení](#constraint-solver). V rámci konstrukce vstupní `i` převezme cestu spuštění, která se nezobrazuje předtím. Zpočátku to znamená, že `i` může být jakýkoli vstup, protože ještě nebyla zjištěna žádná cesta spuštění.
 
-1. IntelliTest spustí test s vybraným vstupním `i` a monitoruje provádění testu a testovaného programu.
+1. IntelliTest spustí test s vybraným vstupním `i`a monitoruje provádění testu a testovaného programu.
 
 1. Během provádění program převezme určitou cestu, která je určena všemi podmíněnými větvemi programu. Sada všech podmínek, které určují provedení, se nazývá podmínka pro *cestu*, která se zapsala jako predikát `p: I -> {true, false}` přes formální vstupní parametry. IntelliTest vypočítává reprezentace tohoto predikátu.
 
@@ -54,7 +54,7 @@ IntelliTest používá Řešitel omezení [Z3](https://github.com/Z3Prover/z3/wi
 V důsledku vedlejšího účinku monitorování za běhu shromažďuje IntelliTest data o rozsahu dynamických kódů.
 Tato možnost se nazývá *Dynamická* , protože IntelliTest ví pouze o kódu, který byl proveden, proto nemůže poskytnout absolutní hodnoty pro pokrytí stejným způsobem jako jiný nástroj pokrytí obvykle.
 
-Například když IntelliTest nahlásí dynamické pokrytí jako 5/10 základních bloků, znamená to, že se pokrylo pět bloků z deseti, kde celkový počet bloků ve všech metodách, které byly doposud dosaženy analýzou (na rozdíl od všech metod, které existují v a sestavení v rámci testu) je deset.
+Například když IntelliTest nahlásí dynamické pokrytí jako 5/10 základních bloků, znamená to, že se pokrylo pět bloků z deseti, kde celkový počet bloků ve všech metodách, které byly doposud dosaženy analýzou (na rozdíl od všech metod, které v testovaném sestavení existují), je deset.
 V důsledku toho, že se při analýze objeví více dosažitelných metod, může se zvýšit čitatel (5 v tomto příkladu) a jmenovatel (10).
 
 ## <a name="integers-and-floats"></a>Celá čísla a Floaty
@@ -133,6 +133,6 @@ Statickou třídu [PexChoose](static-helper-classes.md#pexchoose) lze použít k
 
 Publikujte své nápady a žádosti o funkce na [komunitě vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
 
-## <a name="further-reading"></a>Další čtení
+## <a name="further-reading"></a>Další materiály ke čtení
 
 * [Jak to funguje?](https://devblogs.microsoft.com/devops/smart-unit-tests-a-mental-model/)

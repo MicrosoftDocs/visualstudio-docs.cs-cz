@@ -8,17 +8,17 @@ helpviewer_keywords:
 - class diagrams, keyboard shortcuts
 - class diagrams, mouse shortcuts
 ms.assetid: c12d8dac-9902-4fde-b721-2a8116da53b7
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a755de4df0cd7402debbc964d2f3f9c54802eb85
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 6df4932a1043c984509632951ba67864fefe31ce
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188966"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590758"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window"></a>Klávesové zkratky a zkratky myši v diagramu tříd a okně podrobností třídy
 
@@ -28,7 +28,7 @@ Pomocí klávesnice můžete kromě myši provádět navigační akce v **Návrh
 
 Následující akce myši jsou podporovány v diagramech tříd:
 
-|Kombinace myši|Souvislost|Popis|
+|Kombinace myši|Kontext|Popis|
 | - |-------------|-----------------|
 |Dvakrát klikněte na|elementy obrazců|Otevře Editor kódu.|
 |Dvakrát klikněte na|Konektor lupy|Rozbalit nebo sbalit Lupa|
@@ -36,7 +36,7 @@ Následující akce myši jsou podporovány v diagramech tříd:
 |Kolečko myši|Diagram tříd|Posuňte se vertikálně.|
 |**SHIFT** + kolečko myši|Diagram tříd|Posuňte se vodorovně.|
 |**CTRL** + kolečko myši|Diagram tříd|Přibliž.|
-|**Ctrl** +**SHIFT** + kliknutí|Diagram tříd|Přibliž.|
+|**Ctrl**+**SHIFT** + kliknutí|Diagram tříd|Přibliž.|
 
 ## <a name="use-the-mouse-in-the-class-details-window"></a>Použití myši v okně podrobností třídy
 
@@ -56,29 +56,29 @@ Pomocí myši můžete změnit vzhled okna **podrobností třídy** a data, kter
 
 V diagramech tříd jsou podporovány následující akce klávesnice:
 
-|Key|Souvislost|Popis|
+|Key|Kontext|Popis|
 |---------|-------------|-----------------|
 |**Klávesy se šipkami**|Uvnitř typů tvarů|Navigace ve stylu stromu v obsahu obrazce (je podporováno obtékání kolem obrazce). Levé a pravé klávesy rozbalí nebo sbalí aktuální položku, pokud je rozšiřitelná, a pokud ne, přejděte na nadřazený objekt (podrobné chování najdete v tématu navigace stromu zobrazení).|
 |**Klávesy se šipkami**|Tvary nejvyšší úrovně|Přesunutí tvarů v diagramu.|
-|Klávesy **Shift** +**šipky**|Uvnitř typů tvarů|Sestavování průběžného výběru sestávající z prvků tvaru, jako jsou členy, vnořené typy nebo oddíly. Tyto klávesové zkratky nepodporují obtékání kolem.|
-|**Domovské**|Uvnitř typů tvarů|Přejděte k názvu obrazce nejvyšší úrovně.|
-|**Domovské**|Tvary nejvyšší úrovně|Přejděte k prvnímu tvaru v diagramu.|
-|**Účelu**|Uvnitř typů tvarů|Přejděte k poslednímu viditelnému prvku uvnitř obrazce.|
-|**Účelu**|Tvary nejvyšší úrovně|Přejděte k poslednímu obrazci v diagramu.|
-|**Přesunout** +**domovskou stránku**|Uvnitř tvaru typu|Vybere prvky v rámci tvaru počínaje aktuální položkou a končící nejvyšší položkou na stejném obrazci.|
-|**Konec** **posunu** +|Uvnitř tvaru typu|Stejné jako **Shift** +**Home** , ale směr shora dolů.|
-|**Napište**|Všechny kontexty|Vyvolá výchozí akci pro obrazec, který je také k dispozici prostřednictvím dvojího kliknutí. Ve většině případů se jedná o kód zobrazení kódu, ale některé prvky jej definují odlišně (Lupa, záhlaví oddílů, popisky lupy).|
+|Klávesy **Shift**+**šipky**|Uvnitř typů tvarů|Sestavování průběžného výběru sestávající z prvků tvaru, jako jsou členy, vnořené typy nebo oddíly. Tyto klávesové zkratky nepodporují obtékání kolem.|
+|**Domovská stránka**|Uvnitř typů tvarů|Přejděte k názvu obrazce nejvyšší úrovně.|
+|**Domovská stránka**|Tvary nejvyšší úrovně|Přejděte k prvnímu tvaru v diagramu.|
+|**ukončení**|Uvnitř typů tvarů|Přejděte k poslednímu viditelnému prvku uvnitř obrazce.|
+|**ukončení**|Tvary nejvyšší úrovně|Přejděte k poslednímu obrazci v diagramu.|
+|**Přesunout**+**domovskou stránku**|Uvnitř tvaru typu|Vybere prvky v rámci tvaru počínaje aktuální položkou a končící nejvyšší položkou na stejném obrazci.|
+|**Konec** **posunu**+|Uvnitř tvaru typu|Stejné jako **Shift**+**Home** , ale směr shora dolů.|
+|**Zadejte**|Všechny kontexty|Vyvolá výchozí akci pro obrazec, který je také k dispozici prostřednictvím dvojího kliknutí. Ve většině případů se jedná o kód zobrazení kódu, ale některé prvky jej definují odlišně (Lupa, záhlaví oddílů, popisky lupy).|
 |**+** a **-**|Všechny kontexty|Pokud je aktuálně zaměřený element rozšiřitelný, tyto klíče rozbalí nebo sbalí prvek.|
 |**>**|Všechny kontexty|U elementů s podřízenými prvky rozbalí prvek, pokud je sbalený, a přejde na první podřízenou položku.|
 |**<**|Všechny kontexty|Přejde na nadřazený element.|
-|**Alt** +**SHIFT** +**L**|Uvnitř typů Shapes + u tvarů typů.|Přejde na Lupa aktuálně vybraného obrazce, pokud je přítomen.|
-|**Alt** +**SHIFT** +**B**|Uvnitř typů Shapes + u tvarů typů.|Pokud je v obrazovém prvku zobrazen seznam základních typů a má více než jednu položku, Přepíná stav rozbalení seznamu (sbalení a rozbalení).|
+|**Alt**+**SHIFT**+**L**|Uvnitř typů Shapes + u tvarů typů.|Přejde na Lupa aktuálně vybraného obrazce, pokud je přítomen.|
+|**Alt**+**SHIFT**+**B**|Uvnitř typů Shapes + u tvarů typů.|Pokud je v obrazovém prvku zobrazen seznam základních typů a má více než jednu položku, Přepíná stav rozbalení seznamu (sbalení a rozbalení).|
 |**Delete**|Pro tvary typu a komentáře|Vyvolá příkaz **Remove z diagramu** .|
 |**Delete**|Na všechno ostatní.|Vyvolá příkaz **Odstranit z kódu** (členové, parametry, přidružení, dědičnost, popisky typu Lupa).|
-|**Ctrl** +**Odstranit**|Všechny kontexty|Vyvolá **odstranění z příkazu kódu** při výběru.|
-|**Rážky**|Všechny kontexty|Přejde na další podřízenou položku v rámci stejné nadřazené položky (podporuje zalamování).|
-|**Karta** **SHIFT** +|Všechny kontexty|Přejde na předchozí podřízenou položku v rámci stejné nadřazené položky (podporuje zalamování).|
-|**Mezerník**|Všechny kontexty|Přepíná výběr na aktuálním prvku.|
+|**Ctrl**+**Odstranit**|Všechny kontexty|Vyvolá **odstranění z příkazu kódu** při výběru.|
+|**Karta**|Všechny kontexty|Přejde na další podřízenou položku v rámci stejné nadřazené položky (podporuje zalamování).|
+|**Karta** **SHIFT**+|Všechny kontexty|Přejde na předchozí podřízenou položku v rámci stejné nadřazené položky (podporuje zalamování).|
+|**Spacebar**|Všechny kontexty|Přepíná výběr na aktuálním prvku.|
 
 ## <a name="use-the-keyboard-in-the-class-details-window"></a>Použití klávesnice v okně podrobností třídy
 
@@ -90,12 +90,12 @@ K procházení okna **podrobností třídy** použijte následující klávesy:
 |||
 |-|-|
 |Key|Výsledek|
-|**,** (čárka)|Pokud je kurzor v řádku parametrů, zadáním čárky se přesune kurzor do pole název dalšího parametru. Pokud je kurzor v řádku posledního parametru metody, přesune kurzor do > pole \<add parametr, který můžete použít k vytvoření nového parametru.<br /><br /> Pokud se kurzor nachází jinde v okně **podrobností třídy** , zadáním čárky do aktuálního pole se přidá čárka.|
+|**,** (čárka)|Pokud je kurzor v řádku parametrů, zadáním čárky se přesune kurzor do pole název dalšího parametru. Pokud je kurzor v řádku posledního parametru metody, přesune kurzor do pole \<přidat > parametru, které lze použít k vytvoření nového parametru.<br /><br /> Pokud se kurzor nachází jinde v okně **podrobností třídy** , zadáním čárky do aktuálního pole se přidá čárka.|
 |**;** (středník) nebo **)** (pravá kulatá závorka)|Přesuňte kurzor na pole název dalšího řádku člena v mřížce okna **podrobností třídy** .|
-|**Rážky**|Přesune kurzor do dalšího pole, nejprve se přesunou zleva doprava a pak shora dolů. Pokud se kurzor pohybuje z pole, ve kterém máte zadaný text, **Detaily třídy** zpracuje tento text a uloží, pokud nevytvoří chybu.<br /><br /> Pokud se kurzor nachází v prázdném poli, například \<add parametr >, karta se přesune na první pole dalšího řádku.|
-|**Mezerník**|Přesune kurzor do dalšího pole, nejprve se přesunou zleva doprava a pak shora dolů. Pokud je kurzor na prázdném poli, například \<add parametr >, přesune se do prvního pole dalšího řádku. Všimněte si, že \<space > typu hned po čárkě, která je ignorována.<br /><br /> Pokud je kurzor v poli Souhrn, zadáním mezery se přidá znak mezery.<br /><br /> Pokud se kurzor nachází ve sloupci skrýt daného řádku, zadáním mezery se přepíná hodnota zaškrtávacího políčka Skrýt.|
-|**Karta** **CTRL**+|Přepne na další okno dokumentu. Například přepněte z okna **podrobností třídy** na otevřený soubor kódu.|
-|**Kláves**|Pokud jste začali psát text do pole, stiskněte klávesu ESC jako klíč k vrácení zpět a vrátíte obsah pole na předchozí hodnotu. Pokud má Okno podrobností třídy obecný fokus, ale žádná konkrétní buňka nemá fokus, stisknutí klávesy ESC přesune fokus z okna **podrobností třídy** .|
+|**Karta**|Přesune kurzor do dalšího pole, nejprve se přesunou zleva doprava a pak shora dolů. Pokud se kurzor pohybuje z pole, ve kterém máte zadaný text, **Detaily třídy** zpracuje tento text a uloží, pokud nevytvoří chybu.<br /><br /> Pokud se kurzor nachází v prázdném poli, například \<přidat > parametrů, karta ho přesune do prvního pole v dalším řádku.|
+|**Spacebar**|Přesune kurzor do dalšího pole, nejprve se přesunou zleva doprava a pak shora dolů. Pokud se kurzor nachází v prázdném poli, například \<přidat > parametrů, přesune se do prvního pole dalšího řádku. Všimněte si, že \<mezera > typu hned po ignorování čárky.<br /><br /> Pokud je kurzor v poli Souhrn, zadáním mezery se přidá znak mezery.<br /><br /> Pokud se kurzor nachází ve sloupci skrýt daného řádku, zadáním mezery se přepíná hodnota zaškrtávacího políčka Skrýt.|
+|**Ctrl**+**Tab**|Přepne na další okno dokumentu. Například přepněte z okna **podrobností třídy** na otevřený soubor kódu.|
+|**ESC**|Pokud jste začali psát text do pole, stiskněte klávesu ESC jako klíč k vrácení zpět a vrátíte obsah pole na předchozí hodnotu. Pokud má Okno podrobností třídy obecný fokus, ale žádná konkrétní buňka nemá fokus, stisknutí klávesy ESC přesune fokus z okna **podrobností třídy** .|
 |Šipka **nahoru** a **šipka dolů**|Tyto klávesy posunou kurzor z řádku do řádku svisle v mřížce okna **podrobností třídy** .|
 |**Šipka vlevo**|Pokud je kurzor ve sloupci název, stisknutím šipky vlevo sbalíte aktuální uzel v hierarchii (Pokud je otevřený).|
 |**Šipka doprava**|Pokud je kurzor ve sloupci název, stisknutí šipky vpravo rozbalí aktuální uzel v hierarchii (Pokud je sbalený).|

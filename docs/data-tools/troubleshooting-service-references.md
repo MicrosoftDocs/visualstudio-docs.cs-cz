@@ -11,17 +11,17 @@ helpviewer_keywords:
 - service references [Visual Studio], troubleshooting
 - WCF services, troubleshooting
 ms.assetid: 3b531120-1325-4734-90c6-6e6113bd12ac
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 28ff14f10cd6ad5612551bb65b7b17f0280358f3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d52562382f10615c7da1dfab22d4c18323b725b3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639604"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586117"
 ---
 # <a name="troubleshoot-service-references"></a>Řešení potíží s odkazy na služby
 
@@ -31,7 +31,7 @@ Toto téma obsahuje seznam běžných problémů, ke kterým může dojít při 
 
 Když vrátíte `DataSet` nebo `DataTable` ze služby, může se zobrazit výjimka "kvóta maximální velikosti pro příchozí zprávy byla překročena". Ve výchozím nastavení je vlastnost `MaxReceivedMessageSize` pro některé vazby nastavená na relativně malou hodnotu, aby se omezilo riziko útoků DOS (Denial-of-Service). Tuto hodnotu můžete zvýšit, chcete-li zabránit výjimce. Další informace najdete v tématu <xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A>.
 
-Oprava této chyby:
+Chcete-li vyřešit tuto chybu:
 
 1. V **Průzkumník řešení**dvakrát klikněte na soubor *App. config* a otevřete ho.
 
@@ -41,7 +41,7 @@ Oprava této chyby:
 
 Když v dialogovém okně **Přidat odkazy na službu** kliknete na tlačítko **Vyhledat** , v seznamu služby se nezobrazí jeden nebo více projektů knihovny služby WCF v řešení. Tato situace může nastat, pokud byla do řešení přidána Knihovna služby, ale ještě nebyla zkompilována.
 
-Oprava této chyby:
+Chcete-li vyřešit tuto chybu:
 
 - V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt knihovny služby WCF a klikněte na **sestavit**.
 
@@ -49,7 +49,7 @@ Oprava této chyby:
 
 Když uživatel přistupuje ke službě WCF hostované na webu přes připojení ke vzdálené ploše a uživatel nemá oprávnění správce, bude použito ověřování NTLM. Pokud uživatel nemá oprávnění správce, může se uživateli zobrazit následující chybová zpráva: "požadavek HTTP je neautorizovaný se schématem ověřování klienta" anonymous ". Ověřovací hlavička přijatá ze serveru byla "NTLM". "
 
-Oprava této chyby:
+Chcete-li vyřešit tuto chybu:
 
 1. V projektu webu otevřete stránky **vlastností** .
 
@@ -74,7 +74,7 @@ Pokud je projekt služby odebrán z řešení, je zrušena platnost této explic
 
 Chcete-li tuto chybu opravit, je nutné ručně znovu sestavit projekt služby:
 
-1. V nabídce **nástroje** klikněte na příkaz **Možnosti**.
+1. Na **nástroje** nabídky, klikněte na tlačítko **možnosti**.
 
 2. V dialogovém okně **Možnosti** rozbalte položku **projekty a řešení**a pak vyberte možnost **Obecné**.
 
@@ -82,7 +82,7 @@ Chcete-li tuto chybu opravit, je nutné ručně znovu sestavit projekt služby:
 
 4. Načtěte projekt služby WCF.
 
-5. V dialogovém okně **Configuration Manager** nastavte **konfiguraci aktivního řešení** na **ladit**. Další informace najdete v tématu [Postup: vytváření a úpravy konfigurací](../ide/how-to-create-and-edit-configurations.md).
+5. V dialogovém okně **Configuration Manager** nastavte **konfiguraci aktivního řešení** na **ladit**. Další informace najdete v tématu [postupy: vytvoření a úprava konfigurací](../ide/how-to-create-and-edit-configurations.md).
 
 6. V **Průzkumník řešení**vyberte projekt služby WCF.
 

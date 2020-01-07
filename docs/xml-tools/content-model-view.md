@@ -3,21 +3,21 @@ title: Zobrazení modelu obsahu Návrhář schématu XML
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: e8db7c7d-31cf-479e-9dcc-299759891795
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 67453571963ae22910842be0021e008632942de5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 830dbdda0027551a25747235e6ad9dffbbc11b23
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661531"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592910"
 ---
 # <a name="content-model-view"></a>Zobrazení modelu obsahu
 
-Zobrazení modelu obsahu poskytuje grafické reprezentace místních a globálních uzlů schématu a jejich součástí, včetně jednoduchých a složitých typů, prvků, skupin modelů, atributů a skupin atributů. Komentáře XML a pokyny pro zpracování nelze zobrazit v zobrazení modelu obsahu. Zobrazení modelu obsahu obsahuje dva panely: panel **pracovního prostoru** , který obsahuje seznam uzlů v [pracovním prostoru Návrhář schématu XML](../xml-tools/xml-schema-designer-workspace.md)a návrhovou plochu, kde můžete zobrazit model obsahu uzlů schématu, které jsou vybrány v **pracovním prostoru.** panel. Zobrazení modelu obsahu zahrnuje také panel nástrojů Návrhář schématu XML a panel s popisem cesty.
+Zobrazení modelu obsahu poskytuje grafické reprezentace místních a globálních uzlů schématu a jejich součástí, včetně jednoduchých a složitých typů, prvků, skupin modelů, atributů a skupin atributů. Komentáře XML a pokyny pro zpracování nelze zobrazit v zobrazení modelu obsahu. Zobrazení modelu obsahu obsahuje dva panely: panel **pracovního prostoru** , který obsahuje seznam uzlů v [pracovním prostoru Návrhář schématu XML](../xml-tools/xml-schema-designer-workspace.md)a návrhovou plochu, kde můžete zobrazit model obsahu uzlů schématu, které jsou vybrány na panelu **pracovního prostoru** . Zobrazení modelu obsahu zahrnuje také panel nástrojů Návrhář schématu XML a panel s popisem cesty.
 
 Na následujícím obrázku obsahuje panel **pracovního prostoru** šest uzlů schématu. Uzel `purchaseOrder` je vybrán v panelu **pracovní prostor** a zobrazí se na návrhové ploše.
 
@@ -81,9 +81,9 @@ Následující tlačítka panelu nástrojů návrháře XSD jsou povolena, když
 
 |Možnost|Popis|
 |-|-----------------|
-|**Zobrazit úvodní zobrazení**|Přepne do [zobrazení začátek](../xml-tools/start-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **Ctrl** +**1**.|
-|**Zobrazit zobrazení modelu obsahu**|Přepne do [zobrazení modelu obsahu](../xml-tools/content-model-view.md). K tomuto zobrazení lze přistupovat pomocí klávesových zkratek: **Ctrl** +**2**.|
-|**Zobrazit zobrazení grafu**|Přepne do [zobrazení grafu](../xml-tools/graph-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **Ctrl** +**3**.|
+|**Zobrazit úvodní zobrazení**|Přepne do [zobrazení začátek](../xml-tools/start-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **Ctrl**+**1**.|
+|**Zobrazit zobrazení modelu obsahu**|Přepne do [zobrazení modelu obsahu](../xml-tools/content-model-view.md). K tomuto zobrazení lze přistupovat pomocí klávesových zkratek: **Ctrl**+**2**.|
+|**Zobrazit zobrazení grafu**|Přepne do [zobrazení grafu](../xml-tools/graph-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **Ctrl**+**3**.|
 |**Vymazat pracovní prostor**|Vymaže pracovní prostor a návrhovou plochu.|
 |**Odebrat z pracovního prostoru**|Odebere vybrané uzly z pracovního prostoru a na návrhovou plochu.|
 |**Odebrat všechny kromě výběry z pracovního prostoru**|Odebere uzly, které nejsou vybrané z pracovního prostoru a na návrhové ploše.|
@@ -93,7 +93,7 @@ Následující tlačítka panelu nástrojů návrháře XSD jsou povolena, když
 
 Návrhovou plochu můžete posunout pomocí posuvníků nebo podržením klávesy **CTRL** při kliknutí myší a přetažením. Když posuňte návrhovou plochu pomocí kliknutí a přetažením, ukazatel se změní na čtyři šipky ukazující na čtyři směry.
 
-## <a name="undoredo"></a>Vrátit zpět/znovu
+## <a name="undoredo"></a>Zpět/znovu
 
 Možnost vrátit zpět/znovu je v zobrazení modelu obsahu povolena pro následující akce:
 

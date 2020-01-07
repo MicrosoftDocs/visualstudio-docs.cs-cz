@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Toolbox, HTML tab
 - HTML Designer, setting options
 - HTML tab in Toolbox
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed46bdb9b5562b38f37129d69e7f075e425588b0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0489f534466149a437384d4f21e34f1fa9e98c5b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72644775"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596434"
 ---
 # <a name="toolbox-html-tab"></a>Panel nástrojů, karta HTML
 
@@ -30,11 +30,11 @@ Chcete-li vytvořit instanci nástroje na kartě **HTML** , buď poklikejte na n
 
 Ve výchozím nastavení jsou na kartě HTML k dispozici následující nástroje.
 
-**Ukazatele**
+**Pointer**
 
 ![ASP.NET Mobile Designer HTMLpage ukazatel](../../ide/reference/media/vxpointer.gif)
 
-Tento nástroj je vybraný ve výchozím nastavení, když se otevře kterákoli karta panelu nástrojů. Nedá se odstranit. Ukazatel umožňuje přetahovat objekty na zobrazení Návrh plochu, měnit jejich velikost a přemístit je na stránce nebo formuláři. Další informace najdete v tématu [Sada nástrojů](../../ide/reference/toolbox.md).
+Tento nástroj je vybraný ve výchozím nastavení, když se otevře kterákoli karta panelu nástrojů. Nedá se odstranit. Ukazatel umožňuje přetahovat objekty na zobrazení Návrh plochu, měnit jejich velikost a přemístit je na stránce nebo formuláři. Další informace najdete v tématu [nástrojů](../../ide/reference/toolbox.md).
 
 **Vstup (tlačítko)**
 

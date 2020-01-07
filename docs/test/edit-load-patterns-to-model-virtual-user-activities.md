@@ -7,15 +7,15 @@ helpviewer_keywords:
 - load tests, scenarios
 - load tests, virtual users
 ms.assetid: 0ba0363b-7f50-4bde-a919-0e3bce7bc115
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8651b3a11b9db82d4c52ff600706b51855881f02
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0836fdb085ab33b2a646d9774c94bd859b5ca5ad
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665057"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590303"
 ---
 # <a name="edit-load-patterns-to-model-virtual-user-activities"></a>Úprava vzorů zatížení pro modelování aktivit virtuálních uživatelů
 
@@ -42,7 +42,7 @@ Model konstantního zatížení se používá ke spuštění stejného uživatel
 
 Vzor zatížení kroku slouží k určení zátěže uživatele, která se zvyšuje s časem až do definovaného maximálního zatížení uživatele. Při načítání krokování zadáte **počáteční počet uživatelů**, **maximální počet uživatelů**, **dobu trvání kroku (sekundy)** a **počet kroků uživatele**.
 
-Například zatížení kroku s **počátečním počtem uživatelů** 1, **maximální počet uživatelů** 100, **Doba trvání kroku (sekundy):** 10 a **Krok počtu uživatelů** 1 vytvoří uživatelský vzor zatížení, který začíná 1, se zvýší o 1 každých 10 sekund, dokud nebude dosáhne 100 uživatelů.
+Například zátěž kroku s **počátečním počtem uživatelů** 1, **maximální počet uživatelů** 100, **Doba trvání kroku (sekundy):** 10 a **Krok počtu uživatelů** 1 vytvoří uživatelský vzor zatížení, který začíná 1, se zvýší o 1 každých 10 sekund, dokud nedosáhne 100 uživatelů.
 
 > [!NOTE]
 > Pokud je celková doba trvání testu kratší než čas, který je vyžadován pro krok do maximálního zatížení uživatele, pak se test zastaví po uplynutí doby trvání a nedosáhne **maximálního počtu uživatelů** .
@@ -82,16 +82,16 @@ Vzor zatížení založený na cíli se podobá vzoru kroku, ale upravuje zatí�
 |Skupina vlastností|Vlastnost|Hodnota|
 |-|--------------|-|
 |Čítač výkonu|Kategorie|Procesor|
-|Čítač výkonu|Počítač|ContosoServer1|
-|Čítač výkonu|Čítač|% Času procesoru|
+|Čítač výkonu|Computer|ContosoServer1|
+|Čítač výkonu|Counter|% času procesoru|
 |Čítač výkonu|instance|_Total|
 |Cílový rozsah čítače výkonu|Horní konec|90|
 |Cílový rozsah čítače výkonu|Dolní konec|70|
-|Omezení počtu uživatelů|Počáteční počet uživatelů|první|
+|Omezení počtu uživatelů|Počáteční počet uživatelů|1|
 |Omezení počtu uživatelů|Maximální počet uživatelů|100|
 |Omezení počtu uživatelů|Maximální snížení počtu uživatelů|5|
 |Omezení počtu uživatelů|Maximální přírůstek počtu uživatelů|5|
-|Omezení počtu uživatelů|Minimální počet uživatelů|první|
+|Omezení počtu uživatelů|Minimální počet uživatelů|1|
 
 Tato nastavení způsobí, že **analyzátor zátěžového testu** upraví uživatelské zatížení mezi 1 a 100 během testovacího běhu takovým způsobem, že **čítač** pro `% Processor Time` z webserver01 se najede myší na `70%` a `90%.`
 
@@ -105,9 +105,9 @@ Předpokládejme například, že máte jistotu, že v systému je omezení pros
 
 Jedna z věcí, na kterou se můžete podívat, je, že pokud nějaký jiný prostředek omezuje propustnost systému. Tyto prostředky můžou způsobit, že cíl, který je určený vzorem zatížení podle cíle, nebude nikdy dostupný. Zatížení uživatele bude také pokračovat, dokud nebude dosaženo hodnoty zadané pro **maximální počet uživatelů** . Obvykle se nejedná o požadované zatížení, proto buďte opatrní na výběr čítače výkonu v rámci vzoru zatížení založeného na cíli.
 
-## <a name="tasks"></a>Úkoly
+## <a name="tasks"></a>Tasks
 
-|Úkoly|Související témata|
+|Tasks|Související témata|
 |-|-----------------------|
 |**Určení počátečního vzoru zatížení pro zátěžový test:** Když vytvoříte zátěžový test pomocí **nového Průvodce zátěžovým testem**, vyberete vzor zatížení.|-   [změnit vzor zatížení](../test/edit-load-patterns-to-model-virtual-user-activities.md#change-the-load-pattern)|
 |**Úprava vzoru zatížení pro zátěžový test:** Po vytvoření zátěžového testu můžete upravit vzor zatížení v **Editor zátěžového testu**.|-   [Postupy: určení vlastnosti doby rampy kroku pro vzor zatížení](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)|
@@ -119,7 +119,7 @@ Jedna z věcí, na kterou se můžete podívat, je, že pokud nějaký jiný pro
 Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**můžete pomocí **Editor zátěžového testu** změnit vlastnosti vzoru zatížení přidružené ke scénáři na úrovně, které splňují vaše cíle testování.
 
 > [!NOTE]
-> Úplný seznam vlastností scénáře zátěžového testu a jejich popis naleznete v tématu [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
+> Úplný seznam vlastnosti scénáře zátěžového testu a jejich popis najdete v tématu [vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
 
 Vzor zatížení určuje počet virtuálních uživatelů aktivních během zátěžového testu a rychlost, s jakou se přidávají noví uživatelé. Můžete si vybrat ze tří dostupných vzorů: vzor kroku, konstanta a cíl na základě. Další informace najdete v tématu [určení počtu virtuálních uživatelů se vzorci zatížení ve scénáři zátěžového testu](../test/edit-load-patterns-to-model-virtual-user-activities.md).
 
@@ -135,7 +135,7 @@ Vzor zatížení určuje počet virtuálních uživatelů aktivních během zát
     > [!NOTE]
     > Formulace uzlu zátěžového vzoru, jak je zobrazen ve stromu scénáře zátěžového testu, odráží profil zatížení, který jste zvolili při vytváření zátěžového testu. Může to být buď **konstantní profil zatížení** , nebo **profil zatížení kroku**.
 
-3. Stisknutím klávesy **F4** zobrazte okno **vlastnosti** .
+3. Stisknutím klávesy **F4** zobrazíte **vlastnosti** okna.
 
      **Vzor zatížení** a kategorie **parametrů** se zobrazí v okně **vlastnosti** .
 
@@ -152,6 +152,6 @@ Vzor zatížení určuje počet virtuálních uživatelů aktivních během zát
 
 ## <a name="see-also"></a>Viz také:
 
-- [Upravit scénáře zátěžového testu](../test/edit-load-test-scenarios.md)
+- [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md)
 - [Postupy: určení procenta virtuálních uživatelů, kteří používají data mezipaměti webu](../test/how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data.md)
 - [Postupy: určení vlastnosti doby rampy kroku pro vzor zatížení](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)

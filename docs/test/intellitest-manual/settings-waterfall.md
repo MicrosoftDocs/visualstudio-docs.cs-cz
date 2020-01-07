@@ -4,17 +4,17 @@ ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Settings waterfall
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: ad5f03d7722fa2fb8452b6a1217c18996d6c978f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: 95a2029cee1fd13241aba727f671a164d7272543
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653158"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591577"
 ---
 # <a name="settings-waterfall"></a>Vodopádové nastavení
 
@@ -24,7 +24,7 @@ Koncept nastavení vodopádu znamená, že uživatel může zadat nastavení na 
 * Přípravné – [PexClass](attribute-glossary.md#pexclass)
 * Průzkum – [PexExplorationAttributeBase](attribute-glossary.md#pexexplorationattributebase)
 
-Nastavení zadaná na úrovni **sestavení** ovlivňují všechny přípravné a průzkumy pod tímto sestavením. Nastavení zadaná na úrovni **Přípravosti** má vliv na všechny průzkumy v rámci tohoto přípravku. @No__t_0if, které se nastavují podřízená nastavení, se definuje v **sestavení** a na úrovních **přípravku** se použijí nastavení **přípravku** .
+Nastavení zadaná na úrovni **sestavení** ovlivňují všechny přípravné a průzkumy pod tímto sestavením. Nastavení zadaná na úrovni **Přípravosti** má vliv na všechny průzkumy v rámci tohoto přípravku. Pokud je nastavení definované v **sestavení** a na úrovních **přípravcích** , použijí **se nastavení, která se** nahraje&mdash;
 
 Všimněte si, že některá nastavení jsou specifická pro úroveň **sestavení** nebo na úrovni **přípravku** .
 

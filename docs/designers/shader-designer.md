@@ -6,17 +6,17 @@ f1_keywords:
 - vs.graphics.designer.effectdesigner
 - vs.graphics.shaderdesigner
 ms.assetid: 5db09a16-b82c-4ba3-8ec9-630cdc109397
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd82a5c8bee50c778b87927f1074d71a38a21e9f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 85ce7b0f270f0da8728b17610a683dcc17d06189
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72635059"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589926"
 ---
 # <a name="shader-designer"></a>Návrhář shaderů
 
@@ -30,10 +30,10 @@ Pomocí **Návrháře shaderu** můžete vytvořit vlastní vizuální efekty pr
 
 |Název formátu|Přípona souboru|Podporované operace (zobrazení, úpravy, export)|
 |-----------------| - | - |
-|Jazyk shaderu řízeného grafu|*. DGSL*|Zobrazit, upravit|
-|HLSL shader (zdrojový kód)|*. HLSL*|Export|
-|HLSL shader (bytového kódu)|*. CSO*|Export|
-|C++záhlaví (pole HLSL bytového kódu)|*. h*|Export|
+|Jazyk shaderu řízeného grafu|*.dgsl*|Zobrazit, upravit|
+|HLSL shader (zdrojový kód)|*.hlsl*|Exportovat|
+|HLSL shader (bytového kódu)|*.cso*|Exportovat|
+|C++záhlaví (pole HLSL bytového kódu)|*.h*|Exportovat|
 
 ## <a name="get-started"></a>Začínáme
 
@@ -46,11 +46,11 @@ Tato část popisuje, jak přidat DGSL shader do projektu sady Visual Studio C++
 
 1. Ujistěte se, že máte nainstalovanou požadovanou součást sady Visual Studio, kterou potřebujete pracovat s grafikou. Tato součást se nazývá **editory obrázků a 3D model**.
 
-   Pokud ho chcete nainstalovat, otevřete Instalační program pro Visual Studio výběrem **nástrojů**  > **získat nástroje a funkce** z řádku nabídek a pak vyberte kartu **jednotlivé součásti** . vyberte součást **image a editory 3D model** pod  **Vyberte možnost hry a grafika** a pak vyberte **Upravit**.
+   Pokud ho chcete nainstalovat, otevřete Instalační program pro Visual Studio výběrem **nástrojů** > **získat nástroje a funkce** z řádku nabídek a pak vyberte kartu **jednotlivé součásti** . Vyberte komponentu **image a 3D model editory** v kategorii **hry a grafika** a pak vyberte **Upravit**.
 
    ![Součást Editor obrázků a 3D model](media/image-3d-model-editors-component.png)
 
-2. V **Průzkumník řešení**otevřete místní nabídku pro C++ projekt, ke kterému chcete shader přidat, a poté zvolte možnost **Přidat**  > **novou položku**.
+2. V **Průzkumník řešení**otevřete místní nabídku pro C++ projekt, ke kterému chcete shader přidat, a poté zvolte možnost **Přidat** > **novou položku**.
 
 3. V dialogovém okně **Přidat novou položku** vyberte v části **nainstalovaná**možnost **Grafika**a pak vyberte **Visual shader Graph (. DGSL)** .
 
@@ -59,7 +59,7 @@ Tato část popisuje, jak přidat DGSL shader do projektu sady Visual Studio C++
 
 4. Zadejte **název** souboru shaderu a **umístění** , kde se má vytvořit.
 
-5. Klikněte na tlačítko **Přidat** .
+5. Zvolte **přidat** tlačítko.
 
 ### <a name="the-default-shader"></a>Výchozí shader
 
@@ -85,7 +85,7 @@ V této tabulce jsou popsány položky na panelu nástrojů **režimu návrhář
 |------------------|-----------------|
 |**Výběr**|Umožňuje interakci s uzly a hranami v grafu. V tomto režimu můžete vybrat uzly a přesunout je nebo odstranit, a můžete také vytvořit okraje nebo je rozdělit.|
 |**Posouvání**|Umožňuje přesun grafu shaderu relativně k rámečku okna. Pro posouvání vyberte bod na návrhové ploše a přesuňte ho kolem.<br /><br /> V režimu **výběru** můžete stisknout a podržet klávesu **CTRL** a dočasně aktivovat režim **posouvání** .|
-|**Přibliž**|Povoluje zobrazení více nebo méně podrobností shaderového grafu vzhledem k rámečku okna. V režimu **zvětšení** vyberte bod na návrhové ploše a pak ho přesuňte doprava nebo dolů, abyste se přiblížili nebo ponechali oddálit nebo zmenšení.<br /><br /> V režimu **výběru** můžete stisknout a podržet klávesu **CTRL** pro přiblížení nebo oddálení pomocí kolečka myši.|
+|**Přiblížení**|Povoluje zobrazení více nebo méně podrobností shaderového grafu vzhledem k rámečku okna. V režimu **zvětšení** vyberte bod na návrhové ploše a pak ho přesuňte doprava nebo dolů, abyste se přiblížili nebo ponechali oddálit nebo zmenšení.<br /><br /> V režimu **výběru** můžete stisknout a podržet klávesu **CTRL** pro přiblížení nebo oddálení pomocí kolečka myši.|
 |**Přizpůsobit zobrazení**|Zobrazí úplný graf shaderu v rámci okna.|
 |**Režim vykreslování v reálném čase**|Když je povoleno vykreslování v reálném čase, Visual Studio překreslí návrhovou plochu i v případě, že není provedena žádná akce uživatele. Tento režim je užitečný při práci se shadery, které se mění v průběhu času.|
 |**Náhled pomocí koule**|Pokud je tato možnost povolena, použije se k náhledu shaderu model koule. V jednom okamžiku může být povolen pouze jeden obrazec náhledu.|
@@ -145,7 +145,7 @@ V následující tabulce jsou uvedeny parametry shaderu, které lze upravit:
 
 |Parametr|Vlastnosti|
 |---------------|----------------|
-|**Textura 1**  - **Textura 8**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Filename**: úplná cesta k souboru textury, která je přidružena k tomuto registru textury.|
+|**Textura 1** - **Textura 8**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Filename**: úplná cesta k souboru textury, která je přidružena k tomuto registru textury.|
 |**Okolí materiálu**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Value**: barva difúze aktuálního pixelu z důvodu nepřímého nebo okolního osvětlení.|
 |**Materiálové difúze**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Hodnota**: barva, která popisuje, jak aktuální pixel rozptýlí přímé osvětlení.|
 |**Vyzařující materiálu**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Value (hodnota**): podíl barvy aktuálního pixelu z důvodu samostatně poskytnutého osvětlení.|
@@ -176,28 +176,28 @@ Další informace o tom, jak exportovat shadery, naleznete v tématu [How to: Ex
 
 |Příkaz|Klávesové zkratky|
 |-------------| - |
-|Přepnout na režim **výběru**|**Ctrl** +**G**, **CTRL** +**Q**<br /><br /> **Pracují**|
-|Přepnout do režimu **lupy**|**Ctrl** +**G**, **CTRL** +**Z**<br /><br /> **Od**|
-|Přepnout do režimu **posouvání**|**Ctrl** +**G**, **CTRL** +**P**<br /><br /> **K**|
-|Vybrat vše|**Ctrl**+**a**|
+|Přepnout na režim **výběru**|**Ctrl**+**G**, **CTRL**+**Q**<br /><br /> **S**|
+|Přepnout do režimu **lupy**|**Ctrl**+**G**, **Ctrl**+**Z**<br /><br /> **Z**|
+|Přepnout do režimu **posouvání**|**Ctrl**+**G**, **CTRL**+**P**<br /><br /> **K**|
+|Vybrat vše|**Ctrl**+**A**|
 |Odstranit aktuální výběr|**Delete**|
 |Zrušit aktuální výběr|**Řídicí** znak (**ESC**)|
-|Přiblížit|**Ctrl** +**kolečkem myši v popředí**<br /><br /> Znaménko plus ( **+** )|
-|Oddálit|**Ctrl** +**dozadu – kolečko myši**<br /><br /> Symbol mínus ( **-** )|
+|Přiblížit|**Ctrl**+**kolečkem myši v popředí**<br /><br /> Znaménko plus ( **+** )|
+|Oddálit|**Ctrl**+**dozadu – kolečko myši**<br /><br /> Symbol mínus ( **-** )|
 |Posouvání návrhové plochy nahoru|**Kolečko myši dozadu**<br /><br /> **PageDown**|
 |Posunout plochu návrhu dolů|**Kolečko myši – posunutí**<br /><br /> **PageUp**|
-|Posunout návrhovou plochu doleva|**Posunout** +**kolečkem myši dozadu**<br /><br /> **Kolečko myši vlevo**<br /><br /> **Posunutí** +**PageDown**|
-|Posunout návrhovou plochu doprava|**Posunout** +**kolečkem myši na popředí**<br /><br /> **Kolečko myši vpravo**<br /><br /> **Posunutí** +**PageUp**|
+|Posunout návrhovou plochu doleva|**Posunout**+**kolečkem myši dozadu**<br /><br /> **Kolečko myši vlevo**<br /><br /> **Shift**+**PageDown**|
+|Posunout návrhovou plochu doprava|**Posunout**+**kolečkem myši na popředí**<br /><br /> **Kolečko myši vpravo**<br /><br /> **Shift**+**PageUp**|
 |Přesunutí fokusu klávesnice na jiný uzel|Klávesy se **šipkami**|
-|Vyberte uzel, který má fokus klávesnice (přidá uzel do skupiny výběru).|**Shift** +**MEZERNÍK**|
-|Přepnout výběr uzlu, který má fokus klávesnice|**Ctrl** +**MEZERNÍK**|
-|Přepnout aktuální výběr (pokud nejsou vybrané žádné uzly, vyberte uzel, který má fokus klávesnice).|**Mezerník**|
-|Přesunout aktuální výběr nahoru|**Shift** +**šipka nahoru**|
-|Přesunout aktuální výběr dolů|**Shift** +**šipka dolů**|
-|Posunout aktuální výběr doleva|**Shift** +**šipka doleva**|
-|Přesunout aktuální výběr doprava|**Shift** +**šipka doprava**.|
+|Vyberte uzel, který má fokus klávesnice (přidá uzel do skupiny výběru).|**Shift**+**Spacebar**|
+|Přepnout výběr uzlu, který má fokus klávesnice|**Ctrl**+**MEZERNÍK**|
+|Přepnout aktuální výběr (pokud nejsou vybrané žádné uzly, vyberte uzel, který má fokus klávesnice).|**Spacebar**|
+|Přesunout aktuální výběr nahoru|**Shift**+**šipka nahoru**|
+|Přesunout aktuální výběr dolů|**Shift**+**šipka dolů**|
+|Posunout aktuální výběr doleva|**Shift**+**šipka doleva**|
+|Přesunout aktuální výběr doprava|**Shift**+**šipka doprava**.|
 
-## <a name="related-topics"></a>Související témata
+## <a name="related-topics"></a>Příbuzná témata
 
 |Název|Popis|
 |-----------|-----------------|

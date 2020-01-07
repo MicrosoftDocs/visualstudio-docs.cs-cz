@@ -12,17 +12,17 @@ helpviewer_keywords:
 - records, inserting
 - saving data
 ms.assetid: ea118fff-69b1-4675-b79a-e33374377f04
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: aaca23e6aa81fab958fc813fa5e2331f8906a562
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3a3830c9dd1921939ced3577b7bafa22772b49f6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648319"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586416"
 ---
 # <a name="insert-new-records-into-a-database"></a>Vkládání nových záznamů do databáze
 
@@ -46,7 +46,7 @@ Pokud vaše aplikace používá k ukládání dat datové sady, můžete jednodu
 
 1. Přidejte nové záznamy do požadovaných <xref:System.Data.DataTable> vytvořením nového <xref:System.Data.DataRow> a jeho přidáním do kolekce <xref:System.Data.DataTable.Rows%2A>.
 
-2. Po přidání nových řádků do <xref:System.Data.DataTable> volejte metodu `TableAdapter.Update`. Množství dat, která se mají aktualizovat, můžete řídit předáním celého <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, pole <xref:System.Data.DataRow>s nebo jednoho <xref:System.Data.DataRow>.
+2. Po přidání nových řádků do <xref:System.Data.DataTable>volejte metodu `TableAdapter.Update`. Množství dat, která se mají aktualizovat, můžete řídit předáním celého <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, pole <xref:System.Data.DataRow>nebo jednoho <xref:System.Data.DataRow>.
 
    Následující kód ukazuje, jak přidat nový záznam do <xref:System.Data.DataTable> a pak zavolat metodu `TableAdapter.Update` k uložení nového řádku do databáze. (V tomto příkladu se používá tabulka `Region` v databázi Northwind.)
 
@@ -73,7 +73,7 @@ Nové záznamy lze vkládat přímo do databáze pomocí objektů příkazů.
 
 ### <a name="to-insert-new-records-into-a-database-by-using-command-objects"></a>Vložení nových záznamů do databáze pomocí objektů příkazů
 
-- Vytvořte nový objekt příkazu a nastavte jeho vlastnosti `Connection`, `CommandType` a `CommandText`.
+- Vytvořte nový objekt příkazu a nastavte jeho vlastnosti `Connection`, `CommandType`a `CommandText`.
 
 Následující příklad ukazuje vložení záznamů do databáze pomocí objektu Command. Vloží data do tabulky `Region` v databázi Northwind.
 

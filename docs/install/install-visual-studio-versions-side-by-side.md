@@ -8,15 +8,15 @@ helpviewer_keywords:
 - side-by-side installations [Visual Studio]
 - Help [Visual Studio], installing
 - install multiple versions of Visual Studio
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b7fb1e057ffd9f3824fa1fe49e353fd54694da91
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 62acf1c5e8cab960d4b670f7a05481644e9ffc1e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888691"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594081"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>Souběžná instalace různých verzí sady Visual Studio
 
@@ -44,13 +44,13 @@ Než nainstalujete verze vedle sebe, Projděte si následující podmínky:
 
 * Pokud odinstalujete verzi sady Visual Studio na počítači, ve kterém je nainstalována více než jedna verze, přidružení souborů pro sadu Visual Studio budou odebrána pro všechny verze.
 
-* Visual Studio neupgraduje automaticky rozšíření, protože ne všechna rozšíření jsou kompatibilní. Rozšíření je nutné přeinstalovat z [Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo z vydavatele softwaru.
+* Visual Studio neprovádí automatický upgrade rozšíření vzhledem k tomu, že ne všechna rozšíření jsou kompatibilní. Je třeba přeinstalovat rozšíření od [Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo vydavatele softwaru.
 
 ## <a name="net-framework-versions-and-side-by-side-installations"></a>.NET Framework verze a souběžné instalace
 
-Projekty Visual Basic, C#vizuálu a Visual F# používají možnost **target Framework** v **Návrháři projektu** k určení verze .NET Framework, kterou projekt používá. V případě C++ projektu lze cílový rámec ručně změnit úpravou souboru. vcxproj. Další informace najdete v tématu [Kompatibilita verzí](/dotnet/framework/migration-guide/version-compatibility) na stránce .NET Framework.
+Projekty Visual Basic, C#vizuálu a Visual F# používají možnost **target Framework** v **Návrháři projektu** k určení verze .NET Framework, kterou projekt používá. Pro projekt jazyka C++ můžete ručně změnit cílové rozhraní úpravou souboru .vcxproj. Další informace najdete v tématu [Kompatibilita verzí](/dotnet/framework/migration-guide/version-compatibility) na stránce .NET Framework.
 
-Při vytváření projektu můžete určit, která verze .NET Framework projekt cílí v seznamu **.NET Framework** v dialogovém okně **Nový projekt** .
+Když vytvoříte projekt, můžete určit, kterou verzi rozhraní .NET Framework je projekt cílen v **rozhraní .NET Framework** v seznamu **nový projekt** dialogové okno.
 
 Informace specifické pro jazyk najdete v příslušném tématu v následující tabulce.
 

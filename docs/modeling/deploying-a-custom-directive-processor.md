@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, custom directive processors
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83edb231819a47c3c8a6f7a1943ae9086e06467d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8a10252d8465373c8637681763e59511b1e2d621
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653889"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596668"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>Nastavení vlastního procesoru direktiv
 
@@ -52,9 +52,9 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
     1. V editoru manifestu VSIX na kartě **assets (prostředky** ) vyberte možnost **nové** a nastavte vlastnosti nové položky:
 
-         **Typ obsahu**  = **VSPackage**
+         **Typ obsahu** = **VSPackage**
 
-         **Zdrojový projekt**  =  \<*aktuálního projektu* >
+         **Zdrojový projekt** = \<*aktuálního projektu*>
 
     2. Klikněte na možnost **vybrané edice** a ověřte typy instalace, u kterých chcete, aby byl procesor direktiv použitelný.
 
@@ -66,11 +66,11 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
     2. V Průzkumníku řešení ho vyberte a následujícím způsobem nastavte jeho vlastnosti:
 
-         @No__t_1**obsahu** **Akce sestavení**
+         **Akce sestavení** = **Obsah**
 
-         **Kopírovat do výstupního adresáře**  = **Kopírovat vždycky**
+         **Kopírovat do výstupního adresáře** = **Kopírovat vždycky**
 
-         **Zahrnout do VSIX**  = **true**
+         **Zahrnout do VSIX** = **true**
 
     3. Nastavte název rozšíření VSIX a ujistěte se, že je ID jedinečné.
 
@@ -85,15 +85,15 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
     "CodeBase"="$PackageFolder$\AssemblyName.dll"
     ```
 
-     Následující názvy nahraďte vlastními názvy: `CustomDirectiveProcessorName`, `NamespaceName`, `ClassName` `AssemblyName`.
+     Následující názvy nahraďte vlastními názvy: `CustomDirectiveProcessorName`, `NamespaceName`, `ClassName``AssemblyName`.
 
 5. Přidejte do projektu následující odkazy:
 
-    - **Microsoft. VisualStudio. TextTemplating. \*.0**
+    - **Microsoft.VisualStudio.TextTemplating.\*.0**
 
-    - **Microsoft. VisualStudio. TextTemplating. Interfaces. \*.0**
+    - **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0**
 
-    - **Microsoft. VisualStudio. TextTemplating. VSHost. \*.0**
+    - **Microsoft.VisualStudio.TextTemplating.VSHost.\*.0**
 
 6. Přidejte do projektu třídu vlastního procesoru direktiv.
 
@@ -124,7 +124,7 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
 - Metoda `IsDirectiveSupported` musí vracet `true`, když se předává název vašeho `CustomDirective`.
 
-- Pokud toto rozšíření nemůžete zobrazit ve Správci rozšíření, ale neumožní vám ho nainstalovat, odstraňte rozšíření z **%localappdata%\Microsoft\VisualStudio \\ \* 0 \ rozšíření \\** .
+- Pokud toto rozšíření nemůžete zobrazit ve Správci rozšíření, ale neumožní vám ho nainstalovat, odstraňte rozšíření z **%localappdata%\Microsoft\VisualStudio\\\*0 \ rozšíření\\** .
 
 - Otevřete soubor .vsix a zkontrolujte jeho obsah. Chcete-li jej otevřít, změňte jeho příponu na .zip. Ověřte, zda obsahuje soubory .dll, .pkgdef a extension.vsixmanifest. Soubor extension.vsixmanifest by měl obsahovat příslušný seznam v uzlu SupportedProducts a měl by také obsahovat uzel VsPackage pod uzlem Content:
 
@@ -164,7 +164,7 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
 2. V editoru registru přejděte na
 
-    **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\ \*.0 \ TextTemplating\DirectiveProcessors**
+    **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\\*.0\TextTemplating\DirectiveProcessors**
 
     Pokud chcete nainstalovat procesor direktiv v experimentální verzi sady Visual Studio, vložte "EXP" po "11,0".
 
@@ -182,18 +182,18 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
    Pokud vlastní procesor direktiv není v mezipaměti GAC, měly by podklíče registru vypadat podle následující tabulky:
 
-|Name|Typ|Data|
+|Name|Type|Datové|
 |-|-|-|
 |(Výchozí)|REG_SZ|(hodnota nenastavena)|
-|Třída|REG_SZ|**> název \<Namespace. Název \<Class >**|
-|CodeBase|REG_SZ|**\<Your cesta > \\ < název sestavení \>**|
+|Třída|REG_SZ|**Název oboru názvů \<>. Název třídy\<**|
+|CodeBase|REG_SZ|**\<cestu >\\< název sestavení\>**|
 
  Pokud je sestavení v mezipaměti GAC, měly by podklíče registru vypadat podle následující tabulky:
 
-|Name|Typ|Data|
+|Name|Type|Datové|
 |-|-|-|
 |(Výchozí)|REG_SZ|(hodnota nenastavena)|
-|Třída|REG_SZ|\<**plně kvalifikovaného názvu třídy** >|
+|Třída|REG_SZ|\<**plně kvalifikovaného názvu třídy**>|
 |Assembly|REG_SZ|\<**název sestavení v globální mezipaměti sestavení (GAC)** >|
 
 ## <a name="see-also"></a>Viz také:

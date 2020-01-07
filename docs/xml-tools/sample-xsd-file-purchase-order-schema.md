@@ -3,17 +3,17 @@ title: 'Ukázkový soubor XSD: schéma nákupní objednávky'
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: f92b63b5-ec61-43b5-ae1e-63432a7a7e30
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a81cae6bc91e480fb619afd647e8285b6efc410
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d841b75b58dc977b5141dce0b8c7275e4a3ced8a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601808"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592565"
 ---
 # <a name="sample-xsd-file-purchase-order-schema"></a>Ukázkový soubor XSD: schéma nákupní objednávky
 
@@ -88,4 +88,4 @@ Následující soubor XSD se používá v různých příkladech v dokumentaci k
 ```
 
 > [!NOTE]
-> Ukázkové společnosti, organizace, produkty, názvy domén, e-mailové adresy, loga, osoby, místa a události použité v ukázkách jsou smyšlené. Žádná spojitost se skutečnou společností, organizací, produktem, názvem domény, e-mailovou adresou, logem, osobou, místem a událostmi není zamýšlená nebo by se měla odvodit.
+> Společnosti, organizace, produkty, názvy domén, e-mailové adresy, loga, osoby, místa a události použité v ukázkách jsou smyšlené. Žádné spojení se skutečnou společností, organizací, produktem, názvem domény, e-mailovou adresou, logem, osobou, místem nebo událostí není zamýšleno a nemůže být vyvozováno.

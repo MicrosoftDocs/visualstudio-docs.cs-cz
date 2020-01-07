@@ -5,17 +5,17 @@ ms.topic: reference
 helpviewer_keywords:
 - vstest.console.exe
 - command-line tests
-ms.author: jillfra
-author: jillre
+ms.author: mikejo
+author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e46cd6f3589e50959ee521552bb66878147cf604
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1d4c44719854714658c1c15bf7059e49f4e668bd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659714"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590420"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe – možnosti příkazového řádku
 
@@ -32,19 +32,19 @@ V následující tabulce jsou uvedeny všechny možnosti pro *VSTest. Console. e
 
 | Možnost | Popis |
 |---|---|
-|**[*názvy testovacích souborů*]**|Spustí testy ze zadaných souborů. Více názvů testovacích souborů oddělte mezerami.<br />Příklady: `mytestproject.dll` `mytestproject.dll myothertestproject.exe`|
+|**[*názvy testovacích souborů*]**|Spustí testy ze zadaných souborů. Více názvů testovacích souborů oddělte mezerami.<br />Příklady: `mytestproject.dll``mytestproject.dll myothertestproject.exe`|
 |**/Settings: [*název souboru*]**|Spusťte testy s dalšími nastaveními, jako jsou například sběrače dat.<br />Příklad: `/Settings:Local.RunSettings`|
 |**/Tests: [*název testu*]**|Spusťte testy s názvy, které obsahují zadané hodnoty. Chcete-li zadat více hodnot, oddělte je čárkami.<br />Příklad: `/Tests:TestMethod1,testMethod2`<br />Možnost příkazového řádku **/Tests** nelze použít s parametrem příkazového řádku **/TestCaseFilter** .|
 |**/Parallel**|Určuje, že testy budou spuštěny paralelně. Ve výchozím nastavení je možné použít až všechna dostupná jádra v počítači. Počet jader, které se mají použít v souboru nastavení, můžete nakonfigurovat.|
 |**/Enablecodecoverage**|Povolí adaptér diagnostiky dat CodeCoverage v testovacím běhu.<br />Výchozí nastavení se použijí, pokud není zadáno pomocí souboru nastavení.|
 |**/Inisolation.**|Spustí testy v izolovaném procesu.<br />Tato izolace usnadňuje zastavení procesu *VSTest. Console. exe* na chybě v testech, ale testy mohou běžet pomaleji.|
 |**/UseVsixExtensions**|Tato možnost zpřístupní proces *VSTest. Console. exe* nebo přeskočí nainstalované rozšíření VSIX (pokud existuje) v testovacím běhu.<br />Tato možnost je zastaralá. Od další hlavní verze sady Visual Studio může být tato možnost odebrána. Přejděte k využití rozšíření, která jsou zpřístupněna jako balíček NuGet.<br />Příklad: `/UseVsixExtensions:true`|
-|**/TestAdapterPath: [*cesta*]**|Vynutí, aby proces *VSTest. Console. exe* používal vlastní testovací adaptéry ze zadané cesty (pokud existuje) v testovacím běhu.<br />Příklad: `/TestAdapterPath:[pathToCustomAdapters]`|
+|**/TestAdapterPath:[*path*]**|Vynutí, aby proces *VSTest. Console. exe* používal vlastní testovací adaptéry ze zadané cesty (pokud existuje) v testovacím běhu.<br />Příklad: `/TestAdapterPath:[pathToCustomAdapters]`|
 |**/Platform: [*typ platformy*]**|Cílová architektura platformy, která se má použít pro spuštění testu.<br />Platné hodnoty jsou x86, x64 a ARM.|
-|**/Framework: [*Framework – verze*]**|Cílová verze rozhraní .NET, která se má použít pro spuštění testu.<br />Příklady hodnot jsou `Framework35`, `Framework40`, `Framework45` `FrameworkUap10`, `.NETCoreApp,Version=v1.1`.<br />Je-li cílové rozhraní určeno jako **Framework35**, testy jsou spouštěny v modulu CLR 4,0 "compatibly Mode".<br />Příklad: `/Framework:framework40`|
-|**/TestCaseFilter: [*výraz*]**|Spustí testy, které odpovídají danému výrazu.<br />\> < výrazu má vlastnost < Format \> = < Value \> [\| < expression \>].<br />Příklad: `/TestCaseFilter:"Priority=1"`<br />Příklad: `/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />Možnost příkazového řádku **/TestCaseFilter** nelze použít s parametrem příkazového řádku **/Tests** . <br />Informace o vytváření a používání výrazů najdete v tématu [testovací případ Filter](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).|
+|**/Framework: [*Framework – verze*]**|Cílová verze rozhraní .NET, která se má použít pro spuštění testu.<br />Příklady hodnot jsou `Framework35`, `Framework40`, `Framework45``FrameworkUap10`, `.NETCoreApp,Version=v1.1`.<br />Je-li cílové rozhraní určeno jako **Framework35**, testy jsou spouštěny v modulu CLR 4,0 "compatibly Mode".<br />Příklad: `/Framework:framework40`|
+|**/TestCaseFilter:[*expression*]**|Spustí testy, které odpovídají danému výrazu.<br />\> < výrazu má vlastnost < Format\>= < Value\>[\|< expression\>].<br />Příklad: `/TestCaseFilter:"Priority=1"`<br />Příklad: `/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />Možnost příkazového řádku **/TestCaseFilter** nelze použít s parametrem příkazového řádku **/Tests** . <br />Informace o vytváření a používání výrazů najdete v tématu [testovací případ Filter](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).|
 |**/?**|Zobrazí informace o použití.|
-|**/Logger: [*URI/FriendlyName*]**|Zadejte protokolovací nástroj pro výsledky testů.<br />Příklad: Chcete-li protokolovat výsledky do souboru sady Visual Studio Výsledky testů (TRX), použijte **/Logger: TRX**.<br />Příklad: Chcete-li publikovat výsledky testů do Team Foundation Server, použijte TfsPublisher:<br />**/Logger: TfsPublisher;**<br />**Collection = adresa URL projektu < \>;**<br />**Název sestavení = < název sestavení \>;**<br />**TeamProject = < název projektu \>;**<br />**[; Platform = \<Defaults "any CPU" >]**<br />**[; Charakter = \<Defaults k ladění >]**<br />**[; RunTitle = < title \>]**|
+|**/Logger: [*URI/FriendlyName*]**|Zadejte protokolovací nástroj pro výsledky testů.<br />Příklad: Chcete-li protokolovat výsledky do souboru sady Visual Studio Výsledky testů (TRX), použijte **/Logger: TRX**.<br />Příklad: Chcete-li publikovat výsledky testů do Team Foundation Server, použijte TfsPublisher:<br />**/Logger: TfsPublisher;**<br />**Collection = adresa URL projektu <\>;**<br />**Název sestavení = < název sestavení\>;**<br />**TeamProject = < název projektu\>;**<br />**[; Platform =\<ve výchozím nastavení "any CPU" >]**<br />**[; Charakter =\<výchozí nastavení "ladění" >]**<br />**[; RunTitle = < title\>]**|
 |**/ListTests: [*název souboru*]**|Zobrazí seznam zjištěných testů z daného kontejneru testů.|
 |**/ListDiscoverers**|Zobrazí seznam nainstalovaných zjišťování testů.|
 |**/ListExecutors**|Zobrazí seznam nainstalovaných prováděcích modulů testů.|
@@ -53,8 +53,8 @@ V následující tabulce jsou uvedeny všechny možnosti pro *VSTest. Console. e
 |**/Blame**|Sleduje testy při jejich provádění a, pokud proces hostitele testu selže, vygeneruje názvy testů v pořadí spuštění až do a včetně konkrétního testu, který byl spuštěn v době selhání. Tento výstup usnadňuje izolaci problematického testu a další diagnostiku. [Další informace](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/blame-datacollector.md).|
 |**/Diag: [*název souboru*]**|Zapíše protokoly trasování diagnostiky do zadaného souboru.|
 |**/ResultsDirectory: [*cesta*]**|Adresář výsledků testů bude vytvořen v zadané cestě, pokud neexistuje.<br />Příklad: `/ResultsDirectory:<pathToResultsDirectory>`|
-|**/ParentProcessId: [*ParentProcessId*]**|ID procesu nadřazeného procesu zodpovědného za spuštění aktuálního procesu.|
-|**/Port: [*port*]**|Port pro připojení soketu a příjem zpráv událostí.|
+|**/ParentProcessId:[*parentProcessId*]**|ID procesu nadřazeného procesu zodpovědného za spuštění aktuálního procesu.|
+|**/Port:[*port*]**|Port pro připojení soketu a příjem zpráv událostí.|
 |**/Collect: [DataCollector*FriendlyName*]**|Povolí shromažďování dat pro testovací běh. [Další informace](https://aka.ms/vstest-collect).|
 
 > [!TIP]

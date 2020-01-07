@@ -7,23 +7,23 @@ helpviewer_keywords:
 - run-time errors, warnings
 - warnings, configuring
 ms.assetid: 99cf4781-bd4d-47b4-91b9-217933509f82
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c71c352040898874cd90a397db6b8c7321ff39d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 67f65ea691a02bac87f75f43e0a9938125bcd959
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652078"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585506"
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>Konfigurace upozornění v Visual Basic
 
 Kompilátor [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] obsahuje sadu upozornění na kód, který může způsobit chyby v době běhu. Tyto informace můžete použít k zápisu čisticího a rychlejšího kódu s méně chybami. Například kompilátor vytvoří upozornění, když se uživatel pokusí vyvolat člena nepřiřazené proměnné objektu, vrátit se z funkce bez nastavení návratové hodnoty nebo spustit `Try` blok s chybami v logice k zachycení výjimek.
 
-Někdy kompilátor poskytuje další logiku pro uživatele, aby se uživatel mohl soustředit na místo toho, aby se mohl zaměřit na úkol, nikoli na Předvídání možných chyb. V předchozích verzích [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] byla použita **možnost Option Strict** k omezení další logiky, kterou poskytuje kompilátor [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]. Konfigurace upozornění vám umožní omezit tuto logiku podrobněji na úrovni jednotlivých upozornění.
+Někdy kompilátor poskytuje další logiku pro uživatele, aby se uživatel mohl soustředit na místo toho, aby se mohl zaměřit na úkol, nikoli na Předvídání možných chyb. V předchozích verzích [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]byla použita **možnost Option Strict** k omezení další logiky, kterou poskytuje kompilátor [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]. Konfigurace upozornění vám umožní omezit tuto logiku podrobněji na úrovni jednotlivých upozornění.
 
 Můžete chtít přizpůsobit projekt a vypnout některá upozornění, která nejsou relevantní pro vaši aplikaci, a zároveň zapínat jiná upozornění na chyby. Tato stránka vysvětluje, jak zapnout a vypnout jednotlivá upozornění.
 

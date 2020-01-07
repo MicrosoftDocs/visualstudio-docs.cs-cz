@@ -1,7 +1,7 @@
 ---
 title: Zvýšení produktivity pro vývoj pro .NET
 description: Přehled navigace, analýza kódu, testování částí a další funkce, které vám pomůžou psát lepší kód .NET rychleji.
-author: mikadumont
+author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.date: 11/21/2019
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5777ef318d557b85abddf35d2fbdf37a044b0ead
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 0aa8e19f2be78671587dd1d9bc6254306c82a78c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491640"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567499"
 ---
 # <a name="visual-studio-productivity-guide-for-c-developers"></a>Průvodce produktivitou sady Visual C# Studio pro vývojáře
 
@@ -43,23 +43,23 @@ Níže jsou uvedené oblíbené zkratky pro Visual Studio:
 
 | Zástupce (všechny profily) | Příkaz | Popis |
 |-|-|-|
-| **Ctrl**+**t** | Přejít na vše | Přejít k libovolnému souboru, typu, členu nebo deklaraci symbolu |
+| **Ctrl**+**T** | Přejít na vše | Přejít k libovolnému souboru, typu, členu nebo deklaraci symbolu |
 | **F12** (také **CTRL**+**kliknutí**) | Přejít k definici | Přejít na místo, kde je symbol definovaný |
 | **Ctrl**+**F12** | Přejít k implementaci | Přechod ze základního typu nebo členu na jeho různé implementace |
 | **Shift**+**F12** | Najít všechny odkazy | Zobrazit všechny odkazy na symboly nebo literály |
 | **Alt**+**Domů** | Přejít na základní | Navigace v řetězci dědičnosti |
-| **Ctrl**+ **.** (také **Alt**+**zadat** v C# profilu) | Rychlé akce a refaktoringy | Podívejte se, jaké opravy kódu, akce generování kódu, refaktoringy nebo jiné rychlé akce jsou k dispozici na pozici kurzoru nebo výběru kódu. |
+| **CTRL**+ **.** (také **Alt**+**zadat** v C# profilu) | Rychlé akce a refaktoringy | Podívejte se, jaké opravy kódu, akce generování kódu, refaktoringy nebo jiné rychlé akce jsou k dispozici na pozici kurzoru nebo výběru kódu. |
 | **Ctrl**+**D** | Duplicitní řádek | Duplikuje řádek kódu, ve kterém je kurzor (k dispozici v **aplikaci Visual Studio 2017 verze 15,6** a novější) |
 | **Shift**+**Alt**+ **+** / **-** | Výběr rozšíření/smlouvy | Rozšíří nebo vybírá aktuální výběr v editoru (k dispozici v **aplikaci Visual Studio 2017 verze 15,5** a novější). |
 | **Shift** + **ALT** +  **.** | Vložit další vyhovující blikající kurzor | Přidá výběr a blikající kurzor na další místo, které odpovídá aktuálnímu výběru (k dispozici v **aplikaci Visual Studio 2017 verze 15,8** a novější). |
 | **Ctrl**+**Q** | Hledat | Vyhledat všechna nastavení sady Visual Studio |
-| **Stisknutím** | Spustit ladění | Spuštění ladění aplikace |
+| **F5** | Spustit ladění | Spuštění ladění aplikace |
 | **Ctrl**+**F5** | Spustit bez ladění | Místní spuštění aplikace bez ladění |
 | **CTRL**+**K**,**D** (výchozí profil) nebo **CTRL**+**E**,**D** (C# profil) | Formátovat dokument | Vyčistí porušení formátování v souboru na základě nastavení nového řádku, mezer a odsazení. |
 | **CTRL**+ **\\** ,**CTRL**+**E** (výchozí profil) nebo **CTRL**+**W**,**E** (C# Profile) | Zobrazit Seznam chyb | Zobrazit všechny chyby v dokumentu, projektu nebo řešení |
 | **Alt** + **Page Up/Page Down** | Přejít na další/předchozí problém | Přejít na předchozí/další chybu, upozornění, návrh v dokumentu (k dispozici v **aplikaci Visual Studio 2017 verze 15,8** a novější) |
 | **Ctrl**+**K**, **/** | Přepnout komentář na jeden řádek/zrušit komentář | Tento příkaz přidá nebo odebere Jednořádkový komentář v závislosti na tom, jestli je váš výběr už připsaný do komentáře. |
-| **Ctrl**+**SHIFT**+ **/** | Přepnout komentář k bloku/zrušit komentář | Tento příkaz přidá nebo odebere komentáře blokování v závislosti na tom, co jste vybrali. |
+| **Ctrl**+**Shift**+ **/** | Přepnout komentář k bloku/zrušit komentář | Tento příkaz přidá nebo odebere komentáře blokování v závislosti na tom, co jste vybrali. |
 
 > [!NOTE]
 > Některá rozšíření odváže výchozí klávesové zkratky sady Visual Studio. Chcete-li použít výše uvedené příkazy, obnovte vazby klíčů na výchozí hodnoty sady Visual Studio tak, že v **nabídce nástroje** > **nastavení pro Import a export** > **resetovat všechna nastavení** nebo **nástroje** > **Možnosti** > **Klávesová** > **reset**.
@@ -144,7 +144,7 @@ Můžete [nainstalovat analyzátory FxCop](../code-quality/install-fxcop-analyze
 Několik členů komunity má napsaná bezplatná rozšíření, která přidávají další kontroly kódu:
 
 - [Roslynator](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2017)
-- [SonarLint pro Visual Studio](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2017)
+- [SonarLint for Visual Studio](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2017)
 - [StyleCopAnalyzers](https://www.nuget.org/packages/stylecop.analyzers/)
 - [CodeCracker](https://www.nuget.org/packages/codecracker.CSharp/)
 
@@ -157,11 +157,11 @@ Visual Studio obsahuje mnoho funkcí, které vám pomůžou vyhledávat a [Proch
 | Funkce | Zástupce | Podrobnosti a vylepšení |
 |- | - | -|
 | Najít všechny odkazy | **Shift**+**F12**| Výsledky jsou barevné a lze je seskupit podle typu projektu, definice a odkazu, jako je například čtení nebo zápis. Můžete také zamknout výsledky. |
-| Přejít k implementaci | **Ctrl**+**F12** | Pomocí možnosti přejít k definici na klíčovém slově `override` můžete přejít k přepsanému členu. |
-| Přejít k definici | **F12** nebo **CTRL**+**klikněte na**| Když kliknete na tlačítko Přejít na definici, stiskněte klávesu **CTRL** |
+| Přejít k implementaci | **Ctrl**+**F12** | Chcete-li přejít na přepsaného člena, můžete použít klíčové slovo `override` k přechodu na klíč |
+| Přejít k definici | **F12** nebo **Ctrl**+**Klikni**| Když kliknete na tlačítko Přejít na definici, stiskněte klávesu **CTRL** |
 | Náhled definice | **Alt**+**F12** | Vložené zobrazení definice |
-| Vizualizér struktury | Šedá, tečkované – čáry mezi závorkami | Zobrazení struktury kódu najeďte myší |
-| Navigace do dekompilovaných sestavení | **F12** nebo **CTRL**+**klikněte na** | Povolením funkce přejděte na externí zdroj (dekompilovaný s ILSpy). **nástroje** > **Možnosti** > **textový editor** **C#**  >  > **Pokročilé** > **Povolit navigaci na dekompilované zdroje**. |
+| Vizualizér struktur | Šedá, tečkované – čáry mezi závorkami | Zobrazení struktury kódu najeďte myší |
+| Navigace do dekompilovaných sestav | **F12** nebo **Ctrl**+**Klikni** | Povolením funkce přejděte na externí zdroj (dekompilovaný s ILSpy). **nástroje** > **Možnosti** > **textový editor** **C#**  >  > **Pokročilé** > **Povolit navigaci na dekompilované zdroje**. |
 
 ![Přejít na vše a najít všechny odkazy](../ide/media/VSIDE_Productivity_Navigation.png)
 

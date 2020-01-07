@@ -1,8 +1,8 @@
 ---
-title: Instalace sady Visual Studio
+title: Install Visual Studio
 titleSuffix: ''
 description: Zjistěte, jak nainstalovat sadu Visual Studio, krok za krokem.
-ms.date: 10/07/2019
+ms.date: 12/13/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - set up Visual Studio
 - Visual Studio setup
 - Visual Studio installer
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6cd91fadea397955b756461383ed8e17030b4c3b
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 078c54a680fccda0d7d6af88446b709765f277a2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018851"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590121"
 ---
-# <a name="install-visual-studio"></a>Instalace sady Visual Studio
+# <a name="install-visual-studio"></a>Install Visual Studio
 
 ::: moniker range="vs-2019"
 
@@ -131,7 +131,7 @@ Spuštěním souboru zaváděcího nástroje nainstalujte Instalační program p
 
 2. Požádáme vás potvrďte Microsoft [licenční podmínky](https://visualstudio.microsoft.com/license-terms/) a Microsoft [prohlášení o zásadách](https://privacy.microsoft.com/privacystatement). Zvolte **pokračovat**.
 
-   ![Licenční podmínky a prohlášení o zásadách](media/privacy-and-license-terms.png "licenční podmínky společnosti Microsoft a prohlášení o ochraně osobních údajů")
+   ![Licenční smlouvy a prohlášení o zásadách ochrany osobních údajů](media/privacy-and-license-terms.png "Licenční smlouvy společnosti Microsoft a prohlášení o zásadách ochrany osobních údajů")
 
 ## <a name="step-4---choose-workloads"></a>Krok 4 – Výběr úloh
 
@@ -139,9 +139,9 @@ Po dokončení instalace instalační program vám pomůže ho svou instalaci p�
 
  ::: moniker range="vs-2017"
 
-1. Najít úlohu, kterou chcete v **instalaci sady Visual Studio** obrazovky.
+1. V **instalační program pro Visual Studio**Najděte požadované zatížení.
 
-   ![Visual Studio 2017: Instalace úlohy](../install/media/vs-installer-installing-workloads.png)
+   ![Visual Studio 2017: instalace úlohy](../install/media/vs-installer-installing-workloads.png)
 
      Například zvolte úlohu "Vývoj desktopových aplikací .NET". Obsahuje výchozí základní editor, který obsahuje základní podporu pro více než 20 jazycích, schopnost otevírat a upravovat kód z libovolné složky bez nutnosti vytvářet projekt, editaci kódu a integrované správy zdrojového kódu.
 
@@ -153,9 +153,9 @@ Po dokončení instalace instalační program vám pomůže ho svou instalaci p�
 
 ::: moniker range="vs-2019"
 
-1. Po instalaci nové úlohy a komponenty, zvolte **spuštění**.
+1. V **instalační program pro Visual Studio**Najděte požadované zatížení.
 
-   ![Visual Studio 2019: Instalace úlohy](../install/media/vs-2019/vs-installer-workloads.png)
+   ![Visual Studio 2019: instalace úlohy](../install/media/vs-2019/vs-installer-workloads.png)
 
      Například vyberte úlohu vývoj pro ASP.NET a Web. Obsahuje výchozí základní editor, který obsahuje základní podporu pro více než 20 jazycích, schopnost otevírat a upravovat kód z libovolné složky bez nutnosti vytvářet projekt, editaci kódu a integrované správy zdrojového kódu.
 
@@ -170,17 +170,17 @@ Po dokončení instalace instalační program vám pomůže ho svou instalaci p�
 
 ## <a name="step-5---choose-individual-components-optional"></a>Krok 5 – výběr jednotlivých komponent (volitelné)
 
-Pokud nechcete použít funkci úlohy k přizpůsobení instalace sady Visual Studio nebo chcete přidat více součástí, než kolik jich je potřeba, můžete to udělat tak, že nainstalujete nebo přidáte jednotlivé komponenty z karty **jednotlivé komponenty** . Zvolte, co chcete, a pak postupujte podle pokynů.
+Pokud nechcete použít funkci úlohy k přizpůsobení instalace sady Visual Studio nebo chcete přidat další součásti, než kolik je potřeba, můžete to udělat tak, že nainstalujete nebo přidáte jednotlivé komponenty z karty **jednotlivé komponenty** . Zvolte, co chcete, a pak postupujte podle pokynů.
 
 ::: moniker range="vs-2017"
 
-  ![Visual Studio 2017 – instalace jednotlivých součástí](media/vs-installer-installing-components.png "jednotlivých součástí instalace sady Visual Studio")
+  ![Visual Studio 2017 – instalace jednotlivých komponent](media/vs-installer-installing-components.png "Instalovat jednotlivé součásti sady Visual Studio")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-  ![Visual Studio 2019 – instalace jednotlivých komponent](media/vs-2019/vs-installer-individual-components.png "nainstaluje jednotlivé součásti sady Visual Studio") .
+  ![Visual Studio 2019 – instalace jednotlivých komponent](media/vs-2019/vs-installer-individual-components.png "Instalovat jednotlivé součásti sady Visual Studio")
 
 ::: moniker-end
 
@@ -190,13 +190,13 @@ Ve výchozím nastavení instalační program pokusí tak, aby odpovídala jazyk
 
 ::: moniker range="vs-2017"
 
-  ![Visual Studio 2017 – instalace jazykových sad](media/vs-installer-installing-language-packs.png "jazykové sady Nainstalujte Visual Studio")
+  ![Visual Studio 2017 – instalace jazykových sad](media/vs-installer-installing-language-packs.png "Nainstalovat jazykové sady pro Visual Studio")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-  ![Visual studio 2019 – instalace jazykových sad], které(media/vs-2019/vs-installer-language-packs.png "instalují jazykové sady Visual Studio")
+  ![Visual Studio 2019 – instalace jazykových sad](media/vs-2019/vs-installer-language-packs.png "Nainstalovat jazykové sady pro Visual Studio")
 
 ::: moniker-end
 
@@ -208,7 +208,7 @@ Dalším způsobem, že můžete změnit výchozí jazyk je spuštění instala�
 
 ::: moniker range="vs-2017"
 
-**Novinka v 15,7**: Nyní můžete omezit nároky na instalaci sady Visual Studio na systémové jednotce. Můžete se rozhodnout, zda budou přesunuty mezipaměť pro stahování, sdílených komponent, sady SDK a nástrojů na jiné jednotky a sady Visual Studio na disku, na kterém běží nejrychlejší.
+**Nové ve verzi 15.7**: Nyní můžete snížit nároky na instalaci sady Visual Studio na systémovou jednotku. Můžete se rozhodnout, zda budou přesunuty mezipaměť pro stahování, sdílených komponent, sady SDK a nástrojů na jiné jednotky a sady Visual Studio na disku, na kterém běží nejrychlejší.
 
   ![Visual Studio 2017 – Změna umístění instalace](media/installation-options-by-location.png "Změna umístění instalace")
 
@@ -218,7 +218,7 @@ Dalším způsobem, že můžete změnit výchozí jazyk je spuštění instala�
 
 Nároky na instalaci sady Visual Studio můžete snížit na systémové jednotce. Můžete se rozhodnout, zda budou přesunuty mezipaměť pro stahování, sdílených komponent, sady SDK a nástrojů na jiné jednotky a sady Visual Studio na disku, na kterém běží nejrychlejší.
 
-  ![Visual Studio 2019 – výběr]umístění instalace(media/vs-2019/vs-installer-installation-locations.png "Výběr umístění instalace")
+  ![Visual Studio 2019 – výběr umístění instalace](media/vs-2019/vs-installer-installation-locations.png "Vybrat umístění instalace")
 
 ::: moniker-end
 

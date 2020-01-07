@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, constraints
 - Domain-Specific Language, validation
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb059a9175c61c238abf0881cd96e4179fcf6f65
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7a37dbb4d9754641b4bcca826ff0ec77c7298d9b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748172"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594003"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>Ověřování v jazyce specifickém pro doménu
 Jako autor jazyka DSL (Domain-Specific Language) můžete definovat ověřovací omezení a ověřit tak, že model vytvořený uživatelem má smysl. Pokud například vaše DSL umožňuje uživatelům nakreslit rodinný strom lidí a jejich předchůdce, mohli byste napsat omezení, které zajistí, že budou mít děti data po jejich rodičůch.
@@ -125,7 +125,7 @@ public partial class ParentsHaveChildren
 
  Všimněte si následujících bodů tohoto kódu:
 
-- Do doménových tříd nebo doménových vztahů můžete přidat metody ověřování. Kód pro tyto typy je v **Dsl\Generated Code\Domain \*. cs**.
+- Do doménových tříd nebo doménových vztahů můžete přidat metody ověřování. Kód pro tyto typy je v **Dsl\Generated Code\Domain\*. cs**.
 
 - Každá metoda ověřování je použita na všechny instance své třídy a jejích podtříd. V případě doménového vztahu je každá instance propojení mezi dvěma prvky modelu.
 
@@ -193,7 +193,7 @@ if (erroneousLinks.Count < 5) { context.LogError( ... ); }
 
  Pokud nastavíte násobnost role relace domény na hodnotu 1.. * nebo 1.. 1, ale uživatel nevytvoří odkaz na tento vztah, zobrazí se chybová zpráva ověření.
 
- Pokud například vaše DSL má třídy Person a město a relace PersonLivesInTown se vztahem **1.. \\** * v roli města, pak se zobrazí chybová zpráva pro každou osobu, která nemá město.
+ Pokud například vaše DSL má třídy Person a město a relace PersonLivesInTown se vztahem **1..\\** * v roli města, pak se zobrazí chybová zpráva pro každou osobu, která nemá město.
 
 ## <a name="running-validation-from-program-code"></a>Spuštění ověřování z kódu programu
  Ověřování můžete spustit přístupem k ValidationController nebo jeho vytvořením. Chcete-li, aby se chyby zobrazily uživateli v okně chyby, použijte ValidationController, který je připojen k DocData vašeho diagramu. Například při psaní příkazu nabídky je `CurrentDocData.ValidationController` k dispozici ve třídě sady příkazů:
@@ -327,9 +327,9 @@ validationController.ValidateCustom
 
  Tyto techniky se ale nedoporučují. Je obvykle lepší umožnit uživateli rozhodnout, jak opravit neplatný model.
 
- **Úpravou změny obnovte platnost modelu.** Pokud uživatel například nastaví vlastnost nad povolené maximum, mohli byste obnovit vlastnost na maximální hodnotu. Uděláte to tak, že definujete pravidlo. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
+ **Úpravou změny obnovte platnost modelu.** Pokud uživatel například nastaví vlastnost nad povolené maximum, mohli byste obnovit vlastnost na maximální hodnotu. Uděláte to tak, že definujete pravidlo. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
 
- **Pokud se pokusíte o neplatnou změnu, vraťte transakci zpět.** Můžete také definovat pravidlo pro tento účel, ale v některých případech je možné přepsat obslužnou rutinu vlastnosti **OnValueChanging ()** nebo přepsat metodu, například `OnDeleted().` pro vrácení transakce zpět, použití `this.Store.TransactionManager.CurrentTransaction.Rollback().` pro další informace najdete v tématu [doménová vlastnost. Obslužné rutiny změn hodnot](../modeling/domain-property-value-change-handlers.md)
+ **Pokud se pokusíte o neplatnou změnu, vraťte transakci zpět.** Můžete také definovat pravidlo pro tento účel, ale v některých případech je možné přepsat obslužnou rutinu vlastnosti **OnValueChanging ()** nebo přepsat metodu, jako je například `OnDeleted().` pro vrácení transakce zpět, použití `this.Store.TransactionManager.CurrentTransaction.Rollback().` pro další informace najdete v tématu [obslužné rutiny změny hodnoty vlastnosti domény](../modeling/domain-property-value-change-handlers.md).
 
 > [!WARNING]
 > Ujistěte se, že uživatel ví, že změna byla upravena nebo vrácena zpět. Použijte například `System.Windows.Forms.MessageBox.Show("message").`

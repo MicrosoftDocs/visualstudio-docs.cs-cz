@@ -1,5 +1,5 @@
 ---
-title: SDK – Element (MSBuild) | Dokumentace Microsoftu
+title: Element sady SDK (MSBuild) | Microsoft Docs
 ms.date: 01/25/2018
 ms.topic: reference
 f1_keywords:
@@ -12,22 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - Sdk element [MSBuild]
 - <Sdk> element [MSBuild]
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 40b155af29d2d81a43eb0270e776e40df335a4bf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8c65bafd9183c97efa7595c10d7bdb3641c5f75f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838773"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595134"
 ---
-# <a name="sdk-element-msbuild"></a>SDK – element (MSBuild)
-Odkazy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projektu sady SDK.
+# <a name="sdk-element-msbuild"></a>Element sady SDK (MSBuild)
+Odkazuje na sadu SDK [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projektu.
 
- \<Project> \<Sdk>
+ \<Project > \<SDK >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,8 +43,8 @@ Odkazy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Name`|Požadovaný atribut.<br /><br /> Název projektu sadu SDK.|
-|`Version`|Nepovinný atribut.<br /><br /> Verze projektu sady SDK|
+|`Name`|Požadovaný atribut.<br /><br /> Název sady SDK projektu.|
+|`Version`|Nepovinný atribut.<br /><br /> Verze sady SDK projektu|
 
 ### <a name="child-elements"></a>Podřízené prvky
  Žádné
@@ -53,9 +53,9 @@ Odkazy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_
 
 | Prvek | Popis |
 | - | - |
-| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] souboru projektu. |
+| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Odkaz na sadu SDK projektu MSBuild](../msbuild/how-to-use-project-sdk.md)
+- [Postupy: odkazování na sadu SDK projektu MSBuild](../msbuild/how-to-use-project-sdk.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
 - [MSBuild](../msbuild/msbuild.md)

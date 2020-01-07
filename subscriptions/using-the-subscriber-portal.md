@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/19/2019
 ms.topic: conceptual
 description: Přečtěte si o plném rozsahu výhod, které máte k dispozici na portálu předplatných sady Visual Studio.
-ms.openlocfilehash: 7f1d3654aa49b53a1bb8543c28f6edb517c265bf
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+ms.openlocfilehash: 13266e018f122ae2b890e8c92bff71ce3016de75
+ms.sourcegitcommit: 36e874928f2933762d2fc6888a46236e376455d0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74705832"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546223"
 ---
 # <a name="using-the-subscriber-portal---myvisualstudiocom"></a>Použití portálu pro předplatitele – my.visualstudio.com
 
@@ -21,7 +21,7 @@ Portál vyžaduje, abyste se přihlásili pomocí identity přidružené k vaše
 
 Portál je uspořádaný na šest stránkách.  Každá stránka poskytuje přístup k různým produktům nebo službám, které jsou součástí vašeho předplatného.  Šest stránek jsou výhody, soubory ke stažení, kódy Product Key, odběry, podpora a tržiště.
 
-## <a name="benefitshttpsmyvisualstudiocombenefitswtmc_idomsftdocs"></a>[Výhodnější](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
+## <a name="benefitshttpsmyvisualstudiocombenefitswtmc_idomsftdocs"></a>[Výhody](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
 Nástroje a služby, které jsou součástí vašeho předplatného, se zobrazí na stránce výhody jako "dlaždice".  Ne všechny výhody jsou součástí všech předplatných. Dlaždice jsou rozdělené do tří kategorií: nástroje, profesionální vývoj a podpora.  
 
 ### <a name="tools"></a>Nástroje
@@ -41,7 +41,7 @@ Aby bylo pro předplatitele, kteří mají k jednomu účtu přidruženo několi
 ## <a name="product-keyshttpsmyvisualstudiocomproductkeyswtmc_idomsftdocs"></a>[Kódy Product Key](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)
 Navštivte stránku kódy Product Key, kde najdete klíče pro instalaci a aktivaci produktů, a informace o tom, jaké klíče jste už nastavili.  Můžete dokonce exportovat seznam všech klíčů pro bezpečné uložení.
 
-## <a name="subscriptionshttpsmyvisualstudiocomsubscriptionswtmc_idomsftdocs"></a>[Odběru](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)
+## <a name="subscriptionshttpsmyvisualstudiocomsubscriptionswtmc_idomsftdocs"></a>[Předplatná](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)
 Na stránce Předplatná najdete možnosti, které vám umožní zjistit, které odběry vlastníte, přepínat mezi předplatnými, obnovovat je a aktivovat nové odběry. Můžete taky přidružit předplatné, ke kterým máte přístup pomocí účtu Microsoft, s alternativním účtem, který už je přidružený k existujícímu integrovanému vývojovému prostředí (IDE) sady Visual Studio, Azure DevOps nebo prostředkům Azure.
 
 ## <a name="support"></a>Podpora

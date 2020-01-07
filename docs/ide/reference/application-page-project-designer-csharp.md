@@ -8,23 +8,23 @@ f1_keywords:
 helpviewer_keywords:
 - Project Designer, Application page
 - Application page in Project Designer
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: cc28c4b6585c52bca084234b8d21f211b4209b87
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ef9a38fc13d0d9c9f6b912f4cb2b83971d105c29
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651976"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595823"
 ---
 # <a name="application-page-project-designer-c"></a>Stránka Aplikace, návrhář projektu (C#)
 
 Použijte stránku **aplikace** **Návrháře projektu** k určení nastavení aplikace a vlastností projektu.
 
-Pro přístup ke stránce **aplikace** vyberte uzel projektu (nikoli uzel **řešení** ) v **Průzkumník řešení**. Pak zvolte **projekt**  > **vlastnosti** na řádku nabídek. Když se zobrazí **Návrhář projektu** , klikněte na kartu **aplikace** .
+Pro přístup ke stránce **aplikace** vyberte uzel projektu (nikoli uzel **řešení** ) v **Průzkumník řešení**. Pak zvolte **projekt** > **vlastnosti** na řádku nabídek. Když se zobrazí **Návrhář projektu** , klikněte na kartu **aplikace** .
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -83,7 +83,7 @@ Další informace o přesměrování naleznete v tématu [přesměrovávání ve
 
 Definuje vstupní bod, který se má volat při načtení aplikace. Obecně je tato možnost nastavena buď na hlavní formulář v aplikaci, nebo na `Main` postup, který by se měl spustit při spuštění aplikace. Vzhledem k tomu, že knihovny tříd nemají vstupní bod, je jejich jediná možnost pro tuto vlastnost **(nenastavená)** .
 
-Ve výchozím nastavení je v projektu aplikace WPF Tato možnost nastavená na **(Nenastaveno)** . Další možností je \[projectname]. app. V projektu WPF musíte nastavit spouštěcí identifikátor URI pro načtení prostředku uživatelského rozhraní při spuštění aplikace. Provedete to tak, že v projektu otevřete soubor *Application. XAML* a vlastnost `StartupUri` nastavíte na soubor *. XAML* v projektu, jako je například *Window1. XAML*. Seznam přijatelných kořenových elementů naleznete v tématu <xref:System.Windows.Application.StartupUri%2A>. Musíte také definovat metodu `public static void Main()` třídy v projektu. Tato třída se zobrazí v seznamu **spouštěcích objektů** jako *ProjectName. ClassName*. Pak můžete vybrat třídu jako spouštěcí objekt.
+Ve výchozím nastavení je v projektu aplikace WPF Tato možnost nastavená na **(Nenastaveno)** . Druhá možnost je \[ProjectName]. app. V projektu WPF musíte nastavit spouštěcí identifikátor URI pro načtení prostředku uživatelského rozhraní při spuštění aplikace. Provedete to tak, že v projektu otevřete soubor *Application. XAML* a vlastnost `StartupUri` nastavíte na soubor *. XAML* v projektu, jako je například *Window1. XAML*. Seznam přijatelných kořenových elementů naleznete v tématu <xref:System.Windows.Application.StartupUri%2A>. Musíte také definovat metodu `public static void Main()` třídy v projektu. Tato třída se zobrazí v seznamu **spouštěcích objektů** jako *ProjectName. ClassName*. Pak můžete vybrat třídu jako spouštěcí objekt.
 
 Další informace naleznete v tématu [/Main (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/main-compiler-option) . Chcete-li získat přístup k této vlastnosti programově, přečtěte si téma <xref:VSLangProj.ProjectProperties.StartupObject%2A>.
 
@@ -107,7 +107,7 @@ Chcete-li získat přístup k této vlastnosti programově, přečtěte si téma
 
 Informace o vytvoření ikony najdete v tématu [Editor obrázků pro ikony](/cpp/windows/image-editor-for-icons).
 
-**Zřetel**
+**Manifest**
 
 Vybere možnost generování manifestu, pokud je aplikace spuštěna v systému Windows Vista pod nástrojem Řízení uživatelských účtů (UAC). Tato možnost může mít následující hodnoty:
 

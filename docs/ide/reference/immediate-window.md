@@ -11,23 +11,23 @@ helpviewer_keywords:
 - Immediate window
 - first-chance exception notifications
 ms.assetid: d33e7937-73f3-4c69-9df0-777a8713c6f2
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa5f804c22090fa79586549db00b13d824a54690
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b21cdb9136abe1e960e5b74bbf09e7d1694519d7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662532"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568955"
 ---
 # <a name="immediate-window"></a>Příkazové podokno
 
 Použijte **příkazové** okno pro ladění a vyhodnocení výrazů, příkazů Execute a tisku hodnot proměnných. **Příkazové** okno vyhodnotí výrazy sestavením a použitím aktuálně vybraného projektu.
 
-Chcete-li zobrazit okno **okamžité** , otevřete projekt pro úpravy a pak zvolte možnost **ladění**  > **Windows**  > **přímo** nebo stiskněte klávesu **CTRL** +**ALT** +**I**. Můžete také zadat **Debug. Immediate** v **příkazovém** okně.
+Chcete-li zobrazit okno **okamžité** , otevřete projekt pro úpravy a pak zvolte možnost **ladění** > **Windows** > **přímo** nebo stiskněte klávesu **CTRL**+**ALT**+**I**. Můžete také zadat **Debug. Immediate** v **příkazovém** okně.
 
 **Příkazové** okno podporuje technologii IntelliSense.
 
@@ -72,13 +72,13 @@ Můžete použít **příkazové** okno k provedení funkce nebo podrutiny v dob
    End Module
    ```
 
-2. V nabídce **ladění** vyberte možnost **Windows**  > **Immediate**.
+2. V nabídce **ladění** vyberte možnost **Windows** > **Immediate**.
 
 3. Zadejte `?MyFunction(2)` do příkazového **podokna** a stiskněte klávesu **ENTER**.
 
     Okno **okamžité** spustí `MyFunction` a zobrazí `4`.
 
-Pokud funkce nebo podprogram obsahuje zarážku, aplikace Visual Studio přeruší provádění v příslušném bodě. Pak můžete použít okna ladicího programu k prohlédnutí stavu programu. Další informace naleznete v tématu [Návod: ladění v době návrhu](../../debugger/walkthrough-debugging-at-design-time.md).
+Pokud funkce nebo podprogram obsahuje zarážku, aplikace Visual Studio přeruší provádění v příslušném bodě. Potom můžete ladicí program windows prozkoumat stav vaší aplikace. Další informace naleznete v tématu [Návod: ladění v době návrhu](../../debugger/walkthrough-debugging-at-design-time.md).
 
 Vyhodnocení výrazu v době návrhu nelze použít v typech projektů, které vyžadují spuštění spouštěcího prostředí, včetně Visual Studio Tools for Office projektů, webových projektů, projektů inteligentních zařízení a projektů SQL.
 

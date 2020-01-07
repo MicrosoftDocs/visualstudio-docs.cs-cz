@@ -1,35 +1,35 @@
 ---
-title: Co&#39;nového v MSBuild 16.0 | Dokumentace Microsoftu
+title: Co&#39;je nového v MSBuild 16,0 | Microsoft Docs
 ms.date: 03/11/2019
 ms.topic: conceptual
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 9fb23c8a48493056c9a37f510cefea3cc3374095
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3e6ecfc1c08f30eb0232f230d955967d95bc32ee
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777903"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566966"
 ---
-# <a name="whats-new-in-msbuild-160"></a>Co je nového v MSBuild 16.0
+# <a name="whats-new-in-msbuild-160"></a>Co je nového v MSBuild 16,0
 
-Tento článek popisuje vlastnosti v MSBuild 16.0 a aktualizované funkce. Pro prováděcí (pouze koncept) poznámky k verzi, přečtěte si téma [ MSBuild 16.0](https://gist.github.com/rainersigwald/009627466f03964d0028e16fda633d9c).
+Tento článek popisuje aktualizované funkce a vlastnosti v MSBuild 16,0. Podrobné poznámky k verzi (jenom koncept) najdete v tématu [MSBuild 16,0](https://gist.github.com/rainersigwald/009627466f03964d0028e16fda633d9c).
 
-## <a name="changed-path"></a>Změněné cesta
+## <a name="changed-path"></a>Změněná cesta
 
- Nástroj MSBuild je nainstalována v *\Current* jednotlivými verzemi sady Visual Studio ve složce. Například *C:\Program Files (x86) \Microsoft Visual Studio\Current\Enterprise\MSBuild*. Následující modul Powershellu můžete použít také k vyhledání nástroje MSBuild: [vssetup.powershell](https://github.com/Microsoft/vssetup.powershell).
+ Nástroj MSBuild je nainstalován ve složce *\ aktuální* v každé verzi sady Visual Studio. Například *C:\Program Files (x86) \Microsoft Visual Studio\Current\Enterprise\MSBuild*. K vyhledání MSBuild: [vssetup. PowerShellu](https://github.com/Microsoft/vssetup.powershell)můžete použít taky následující modul PowerShellu.
 
 ## <a name="changed-properties"></a>Změněné vlastnosti
 
- Byly aktualizovány následující vlastnosti nástroje MSBuild kvůli nové číslo verze.
+ Následující vlastnosti nástroje MSBuild byly aktualizovány z důvodu nového čísla verze.
 
-- `MSBuildToolsVersion` pro tuto verzi sady nástrojů je "Current". Verze sestavení je stejný jako v sadě Visual Studio 2017, které 15.1.0.0.
+- `MSBuildToolsVersion` pro tuto verzi nástrojů je "aktuální". Verze sestavení je stejná jako v aplikaci Visual Studio 2017, která je 15.1.0.0.
 
-- `VisualStudioVersion` pro tuto verzi sady nástrojů je "16,0"
+- `VisualStudioVersion` pro tuto verzi nástrojů je "16,0"
 
 ## <a name="updates"></a>Aktualizace
 

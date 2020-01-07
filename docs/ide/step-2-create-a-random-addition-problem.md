@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb6f0600d8bdfe8c736305ffd31788edb9d817a6
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 3100ed6951a0130824f4643086cff88a45c40ef8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576296"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588756"
 ---
 # <a name="step-2-create-a-random-addition-problem"></a>Krok 2: vytvoření náhodného přidání problému
 
@@ -33,7 +33,7 @@ V druhé části tohoto kurzu uděláte nenáročný kvíz přidáním matematic
 
 1. V návrháři formuláře vyberte formulář (**Form1**).
 
-2. Na panelu nabídek vyberte možnost **zobrazit**  > **kód**.
+2. Na panelu nabídek vyberte možnost **zobrazit** > **kód**.
 
      *Form1.cs* nebo *Form1. vb* se zobrazí v závislosti na programovacím jazyku, který používáte, abyste mohli zobrazit kód za formulářem.
 
@@ -67,7 +67,7 @@ V druhé části tohoto kurzu uděláte nenáročný kvíz přidáním matematic
 
      Všimněte si, že při zadání tečky (.) po `randomizer` v kódu se otevře okno IntelliSense a zobrazí se všechny metody náhodného objektu, které lze volat. Například IntelliSense zobrazí `Next()` metodu následujícím způsobem.
 
-     Metoda ![Next ](../ide/media/express_randomwhite.png)<br/>
+     ![další metodu](../ide/media/express_randomwhite.png)<br/>
 *Next – metoda*
 
      Když zadáte tečku po objektu, IntelliSense zobrazí seznam členů objektu, jako jsou vlastnosti, metody a události.
@@ -97,7 +97,7 @@ V druhé části tohoto kurzu uděláte nenáročný kvíz přidáním matematic
 
      Zobrazí se náhodný problém sčítání, jak je znázorněno na následujícím snímku obrazovky.
 
-     problém s ![Randomým načtením ](../ide/media/express_additionproblem.png)<br/>
+     ![náhodného přidání problému](../ide/media/express_additionproblem.png)<br/>
 *Náhodný problém sčítání*
 
      V dalším kroku kurzu přidáte součet.

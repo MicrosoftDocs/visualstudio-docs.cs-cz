@@ -1,5 +1,5 @@
 ---
-title: Referenční dokumentace WPF MSBuild | Dokumentace Microsoftu
+title: Referenční dokumentace WPF MSBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,51 +11,51 @@ helpviewer_keywords:
 - build support [WPF]
 - MSBuild [WPF]
 ms.assetid: 94b12890-365d-479a-b239-71109fbcb462
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 147ee5dbaf6d521b609005425eac076314f1f417
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3b3f47f41466d8eb7ddf0a4700428b6e28500b61
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778111"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596304"
 ---
 # <a name="wpf-msbuild-reference"></a>Referenční dokumentace WPF MSBuild
 
-Windows Presentation Foundation (WPF) rozšiřuje Microsoft build engine (MSBuild) s podporou další sestavení, která je popsána v tomto oddílu.
+Windows Presentation Foundation (WPF) rozšiřuje modul Microsoft Build Engine (MSBuild) o další podporu sestavení, která je popsána v této části.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[WPF – soubory .targets](../msbuild/wpf-dot-targets-files.md)
+[WPF. targets – soubory](../msbuild/wpf-dot-targets-files.md)
 
-Popisuje WPF .targets – soubory.
+Popisuje soubory WPF. targets.
 
 [WPF MSBuild – referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)
 
-Úlohy sestavení seznamy dostupných WPF.
+Obsahuje seznam dostupných úloh sestavení WPF.
 
 <xref:Microsoft.Build.Tasks>
 
-Úloha sestavení.
+Sestavení úlohy sestavení.
 
 <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper>
 
-Vytvoření sestavení úloh nasazení zaváděcího nástroje sestavení.
+Sestavení zaváděcího nástroje nasazení úlohy sestavení.
 
 <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities>
 
-Vytvoření sestavení úloh nasazení manifestu nástroje sestavení.
+Sestavení nástroje manifestu nasazení úlohy sestavení
 
 <xref:Microsoft.Build.Tasks.Hosting>
 
-Sestavení úloh hostujícím sestavení.
+Sestavení hostující sestavení.
 
 <xref:Microsoft.Build.Tasks.Windows>
 
-Sestavení windows úkolu sestavení.
+Sestavení Windows pro úlohu sestavení.
 
 ## <a name="see-also"></a>Viz také:
 

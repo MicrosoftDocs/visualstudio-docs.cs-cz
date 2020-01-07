@@ -1,5 +1,5 @@
 ---
-title: Itemgroup – Element (MSBuild) | Dokumentace Microsoftu
+title: ItemCollection – element (MSBuild) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - ItemGroup element [MSBuild]
 - <ItemGroup> element [MSBuild]
 ms.assetid: aac894e3-a9f1-4bbc-a796-6ef07001f35b
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64667ef01d1b21cce8303e2f72be3f252ec4245e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 588118bf31c5d310e947b02fda476a63d0d9df7a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63001204"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75573440"
 ---
-# <a name="itemgroup-element-msbuild"></a>Itemgroup – element (MSBuild)
-Obsahuje sadu uživatelem definované [položky](../msbuild/item-element-msbuild.md) elementy. Každá položka používané [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projektu musí být zadán jako podřízený objekt `ItemGroup` element.
+# <a name="itemgroup-element-msbuild"></a>Item – Element (MSBuild)
+Obsahuje sadu uživatelsky definovaných prvků [položky](../msbuild/item-element-msbuild.md) . Každá položka, která se používá v projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], musí být zadána jako podřízená `ItemGroup` elementu.
 
 \<Project> \<ItemGroup>
 
@@ -46,23 +46,23 @@ Následující části popisují atributy, podřízené prvky a nadřazené prvk
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Condition`|Nepovinný atribut. Podmínku, která má být vyhodnocen. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
+|`Condition`|Nepovinný atribut. Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[Položka](../msbuild/item-element-msbuild.md)|Definuje vstupy pro proces sestavení. Může být nula nebo více `Item` prvky `ItemGroup`.|
+|[Položka](../msbuild/item-element-msbuild.md)|Definuje vstupy procesu sestavení. V `ItemGroup`může být nula nebo více `Item` prvků.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 | Prvek | Popis |
 | - | - |
-| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] souboru projektu. |
-| [Cíl](../msbuild/target-element-msbuild.md) | Od verze rozhraní .NET Framework 3.5 `ItemGroup` element může být použit uvnitř `Target` elementu. Další informace najdete v tématu [cíle](../msbuild/msbuild-targets.md). |
+| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| [Cíl](../msbuild/target-element-msbuild.md) | Počínaje .NET Framework 3,5 se element `ItemGroup` může objevit uvnitř elementu `Target`. Další informace najdete v tématu [cíle](../msbuild/msbuild-targets.md). |
 
 ## <a name="example"></a>Příklad
-Následující příklad kódu ukazuje kolekce uživatelem definovanou položku katalogu `Res` a `CodeFiles` deklarované uvnitř `ItemGroup` elementu. Všechny položky v `Res` položky kolekce obsahuje definovaný uživatelem podřízený [itemmetadata –](../msbuild/itemmetadata-element-msbuild.md) elementu.
+Následující příklad kódu ukazuje uživatelsky definované kolekce položek `Res` a `CodeFiles` deklarované uvnitř elementu `ItemGroup`. Každá položka v kolekci `Res` Item obsahuje uživatelsky definovaný podřízený element [ItemMetadata –](../msbuild/itemmetadata-element-msbuild.md) .
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

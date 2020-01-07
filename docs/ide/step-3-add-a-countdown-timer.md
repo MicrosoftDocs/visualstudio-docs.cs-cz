@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5ee65126fb89f2725b69d196e0659c622d9c389
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 46c445c8fa5b1b4c9b2e4a45025b161223bfa6de
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314107"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588730"
 ---
 # <a name="step-3-add-a-countdown-timer"></a>Krok 3: přidejte časovač odpočítávání
 
@@ -109,7 +109,7 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
 
      Časovač se začne počítat. Když čas vyprší, kvíz skončí a odpověď se zobrazí. Následující ilustrace znázorňuje kvíz probíhá.
 
-     probíhá ![Math kvízu ](../ide/media/express_addcountdown.png)<br/>
+     probíhá ![Matematický kvíz](../ide/media/express_addcountdown.png)<br/>
 *Probíhá Matematický kvíz.*
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat

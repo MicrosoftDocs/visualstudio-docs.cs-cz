@@ -4,15 +4,15 @@ ms.date: 08/09/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows Forms Designer, get started
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 419e5ddb5d915307130a6fdadd795ce5b3236033
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 07526637f2d8083f37f55aa3da36bb01479db087
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72634135"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589835"
 ---
 # <a name="walkthrough-get-started-with-windows-forms-designer"></a>Návod: Začínáme s Návrhář formulářů
 
@@ -55,7 +55,7 @@ Ovládací prvek DemoCalculator obsahuje několik ovládacích prvků model Wind
 
 2. V **sadě nástrojů**vyberte uzel **kontejnery** a otevřete jej. Vyberte ovládací prvek **SplitContainer** a přetáhněte ho na plochu návrháře.
 
-   @No__t_0 je umístěn na návrhové ploše ovládacího prvku DemoCalculator.
+   `SplitContainer` je umístěn na návrhové ploše ovládacího prvku DemoCalculator.
 
     > [!TIP]
     > Ovládací prvek `SplitContainer` přizpůsobí velikost ovládacího prvku DemoCalculator. Chcete-li zobrazit nastavení vlastností ovládacího prvku `SplitContainer`, podívejte se do okna **vlastnosti** . Vyhledejte vlastnost <xref:System.Windows.Forms.SplitContainer.Dock%2A>. Jeho hodnota je [Vlastnost DockStyle. Fill](xref:System.Windows.Forms.DockStyle.Fill), což znamená, že ovládací prvek `SplitContainer` vždy změní velikost sebe sama na hranice ovládacího prvku DemoCalculator. Chcete-li toto chování ověřit, změňte velikost ovládacího prvku DemoCalculator.
@@ -64,7 +64,7 @@ Ovládací prvek DemoCalculator obsahuje několik ovládacích prvků model Wind
 
     Ovládací prvek `SplitContainer` se zmenší na jeho výchozí velikost a již nedodržuje velikost ovládacího prvku DemoCalculator.
 
-4. Vyberte glyf inteligentních značek (![Smart glyf značek ](media/smart-tag-glyph.gif)) v pravém horním rohu ovládacího prvku `SplitContainer`. Vyberte **Dock v nadřazeném kontejneru** a nastavte vlastnost `Dock` na `Fill`.
+4. Vyberte glyf inteligentních značek (![glyf inteligentních značek](media/smart-tag-glyph.gif)) v pravém horním rohu ovládacího prvku `SplitContainer`. Vyberte **Dock v nadřazeném kontejneru** a nastavte vlastnost `Dock` na `Fill`.
 
     Ovládací prvek `SplitContainer` ukotven na hranice ovládacího prvku DemoCalculator.
 
@@ -73,7 +73,7 @@ Ovládací prvek DemoCalculator obsahuje několik ovládacích prvků model Wind
 
 5. Vyberte svislé ohraničení mezi panely a přetáhněte je napravo, aby se většina místa v levém panelu vybrala na maximum.
 
-    @No__t_0 rozdělí ovládací prvek DemoCalculator na dva panely s pohyblivým ohraničením, které ho odděluje. Panel na levé straně bude obsahovat tlačítka a zobrazení kalkulačky a panel na pravé straně zobrazí záznam aritmetických operací provedených uživatelem.
+    `SplitContainer` rozdělí ovládací prvek DemoCalculator na dva panely s pohyblivým ohraničením, které ho odděluje. Panel na levé straně bude obsahovat tlačítka a zobrazení kalkulačky a panel na pravé straně zobrazí záznam aritmetických operací provedených uživatelem.
 
 6. V okně **vlastnosti** změňte hodnotu vlastnosti `BorderStyle` na `Fixed3D`.
 
@@ -131,13 +131,13 @@ Nyní, když je nastaveno rozložení ovládacího prvku, lze naplnit ovládací
 
 7. Na **panelu nástrojů**dvakrát klikněte na ikonu `Button`.
 
-   @No__t_0 ovládací prvek je umístěn v další otevřené buňce ovládacího prvku `TableLayoutPanel`.
+   `Button` ovládací prvek je umístěn v další otevřené buňce ovládacího prvku `TableLayoutPanel`.
 
 8. V **soupravě nástrojů**dvakrát klikněte na ikonu `Button` a naplňte druhý řádek ovládacího prvku `TableLayoutPanel`.
 
-9. Vyberte všechna pět `Button` ovládacích prvků tak, že je vyberete a podržíte klávesu **SHIFT** . Stisknutím **kombinace kláves Ctrl** +**C** zkopírujte ovládací prvky `Button` do schránky.
+9. Vyberte všechna pět `Button` ovládacích prvků tak, že je vyberete a podržíte klávesu **SHIFT** . Stisknutím **kombinace kláves Ctrl**+**C** zkopírujte ovládací prvky `Button` do schránky.
 
-10. Stisknutím **kombinace kláves Ctrl** +**V** třikrát vložte kopie `Button` ovládacích prvků do zbývajících řádků ovládacího prvku `TableLayoutPanel`.
+10. Stisknutím **kombinace kláves Ctrl**+**V** třikrát vložte kopie `Button` ovládacích prvků do zbývajících řádků ovládacího prvku `TableLayoutPanel`.
 
 11. Vyberte všechny 20 `Button` ovládacích prvků tím, že je vyberete a podržíte klávesu **SHIFT** .
 
@@ -157,7 +157,7 @@ Nyní, když je nastaveno rozložení ovládacího prvku, lze naplnit ovládací
 
 Když se ovládací prvek nebo formulář naplní několika ovládacími prvky, může být jednodušší procházet rozložení pomocí okna Osnova dokumentu.
 
-1. Na panelu nabídek vyberte možnost **zobrazit**  >  další**osnova dokumentu** > **Windows** .
+1. Na panelu nabídek vyberte možnost **zobrazit** > další **osnova dokumentu** > **Windows** .
 
    Okno Osnova dokumentu zobrazuje stromové zobrazení ovládacího prvku DemoCalculator a jeho ovládacích prvků na jeho prvku. Ovládací prvky kontejneru jako `SplitContainer` zobrazují jejich podřízené ovládací prvky jako poduzly ve stromové struktuře. Můžete také přejmenovat ovládací prvky na místě pomocí okna Osnova dokumentu.
 
@@ -235,7 +235,7 @@ Když se ovládací prvek nebo formulář naplní několika ovládacími prvky, 
 
    - Změňte vlastnost text ovládacího prvku changeSignButton na **+/-**
 
-   - Změňte vlastnost text ovládacího prvku decimalButton na **.** hodin
+   - Změňte vlastnost text ovládacího prvku decimalButton na **.** (tečka)
 
    - Změnit vlastnost text ovládacího prvku additionButton na **+** (znaménko plus)
 
@@ -261,7 +261,7 @@ Vzhledem k tomu, že ovládací prvek DemoCalculator dědí z třídy <xref:Syst
 
 1. Stisknutím klávesy **F5** Sestavte a spusťte ovládací prvek DemoCalculator v **kontejneru testu UserControl**.
 
-2. Vyberte ohraničení mezi `SplitContainer` panely a přetáhněte je doleva a doprava. @No__t_0 a všechny jeho podřízené ovládací prvky mění velikost sebe sama tak, aby se vešly do dostupného místa.
+2. Vyberte ohraničení mezi `SplitContainer` panely a přetáhněte je doleva a doprava. `TableLayoutPanel` a všechny jeho podřízené ovládací prvky mění velikost sebe sama tak, aby se vešly do dostupného místa.
 
 3. Po dokončení testování ovládacího prvku vyberte možnost **Zavřít**.
 

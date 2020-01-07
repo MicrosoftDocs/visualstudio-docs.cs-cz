@@ -2,17 +2,17 @@
 title: Režim mapy posuvníku a režim pruhového okna
 ms.date: 09/25/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 997f44fede7b31fe44b1e2ea28186ad52d39f443
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 22436c221813ec4c3701d208fc74a96b403fff9c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656583"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591395"
 ---
 # <a name="how-to-customize-the-scroll-bar"></a>Postupy: přizpůsobení posuvníku
 
@@ -22,7 +22,7 @@ Při práci s dlouhými soubory kódu může být obtížné sledovat, kde je v�
 
 Můžete vybrat, zda posuvník zobrazuje poznámky, jako jsou například změny kódu, zarážky, záložky, chyby a pozice blikajícího kurzoru.
 
-   1. Otevřete stránku možnosti **posuvníku** výběrem možnosti **nástroje**  > **Možnosti**  > **textový editor**  > **všechny jazyky**  > **posuvníky**.
+   1. Otevřete stránku možnosti **posuvníku** výběrem možnosti **nástroje** > **Možnosti** > **textový editor** > **všechny jazyky** > **posuvníky**.
 
    2. Vyberte možnost **Zobrazit poznámky přes svislý posuvník**a pak vyberte poznámky, které chcete zobrazit. K dispozici jsou tyto poznámky:
 

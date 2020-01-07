@@ -14,24 +14,24 @@ helpviewer_keywords:
 - /UseEnv Devenv switch
 - Devenv, /UseEnv
 ms.assetid: 2dd14603-a61b-42d2-ba31-427a0ee8a799
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da7a5e1d3490ea8342e6a7b21e91552ae2e8fdf0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 35808b27964b3ca8fa0488f1be2ce6dc5530b3dd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72622411"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596391"
 ---
 # <a name="useenv-devenvexe"></a>/UseEnv (devenv.exe)
 
 Spustí Visual Studio a načte určité proměnné prostředí pro kompilaci.
 
 > [!NOTE]
-> Tento přepínač je nainstalovaný s funkcí **vývoj C++ desktopových** aplikací.
+> Tento přepínač je nainstalován se sadou **vývoj desktopových aplikací pomocí C++** pracovního vytížení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,7 +45,7 @@ devenv /UseEnv {SolutionName|ProjectName}
 
   Úplná cesta a název souboru řešení.
 
-- *Názevprojektu*
+- *ProjectName*
 
   Úplná cesta a název souboru projektu.
 

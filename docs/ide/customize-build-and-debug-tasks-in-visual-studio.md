@@ -1,5 +1,5 @@
 ---
-title: Přizpůsobení úloh ladění sestavení pomocí Tasks. vs. JSON Launch. vs. JSON
+title: Přizpůsobení sestavení ladění úloh pomocí souboru launch.vs.json tasks.vs.json
 ms.date: 02/21/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,51 +8,51 @@ helpviewer_keywords:
 - customize codebases [Visual Studio]
 - tasks.vs.json file [Visual Studio]
 - launch.vs.json file [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a9101db18c8c61f249d9f0b818a75024270a079
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6d10b02908c63d177149f9113c37f71813ee09dc
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652579"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567434"
 ---
-# <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>Přizpůsobení úloh sestavení a ladění pro vývoj "otevřít složku"
+# <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>Přizpůsobení sestavení a ladění úlohy pro vývoj "Otevřít složku"
 
-Visual Studio ví, jak spustit mnoho různých jazyků a základů kódu, ale neví, jak spustit vše. Pokud jste [otevřeli složku kódu](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) v aplikaci Visual Studio a Visual Studio ví, jak váš kód spustit, můžete jej spustit hned bez jakékoli další konfigurace.
+Visual Studio ví, jak spustit mnoha různých jazycích a základů kódu, ale neví, jak spustit vše. Pokud jste [otevřít složku kód](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) v sadě Visual Studio a Visual Studio ví, jak spustit kód, můžete ji spustit okamžitě bez jakékoli dodatečné konfigurace.
 
-Pokud základ kódu používá vlastní nástroje sestavení, které Visual Studio nerozpozná, je nutné zadat některé podrobnosti o konfiguraci pro spuštění a ladění kódu v aplikaci Visual Studio. Aplikaci Visual Studio určíte, jak sestavit kód definováním *úloh sestavení*. Můžete vytvořit jednu nebo více úloh sestavení pro určení všech položek, které jazyk potřebuje k sestavení a spuštění kódu. Můžete také vytvořit libovolný úkol, který může dělat téměř cokoli, co potřebujete. Můžete například vytvořit úlohu pro vypsání obsahu složky nebo přejmenování souboru.
+Pokud základu kódu používá vlastní sestavovací nástroje, které Visual Studio nerozpozná, musíte zadat některé podrobnosti o konfiguraci ke spuštění a ladění kódu v sadě Visual Studio. Řekněte sady Visual Studio jak k sestavení vašeho kódu tak, že definujete *úlohy sestavení*. Můžete vytvořit jednu nebo více úloh zadat všechny položky, které jazyk je potřeba sestavit a spustit jeho kód sestavení. Můžete také vytvořit libovolné úlohy, které můžou provádět téměř všechno, co chcete. Můžete například vytvořit úkol pro vypsání obsahu složky nebo pokud chcete přejmenovat soubor.
 
-Přizpůsobte základ kódu bez projektu pomocí následujících souborů *. JSON* :
+Přizpůsobení vašeho projektu bez základu kódu s použitím následujících *.json* soubory:
 
 |Název souboru|Účel|
 |-|-|
-|*Tasks. vs. JSON*|Zadejte vlastní příkazy sestavení a přepínače kompilátoru a libovolné úlohy (které nejsou související s sestavením).<br>K dispozici prostřednictvím **Průzkumník řešení** položky nabídky po kliknutí pravým tlačítkem myši **Konfigurovat úkoly**.|
-|*Launch. vs. JSON*|Zadejte argumenty příkazového řádku pro ladění.<br>K dispozici prostřednictvím **Průzkumník řešení** položky nabídky po kliknutí pravým tlačítkem myši na položku **nastavení ladění a spuštění**.|
+|*tasks.vs.json*|Určení vlastního sestavení příkazy a přepínače kompilátoru a libovolného (bez sestavení související) úlohy.<br>K dispozici prostřednictvím **Průzkumník řešení** položky nabídky po kliknutí pravým tlačítkem myši **Konfigurovat úkoly**.|
+|*launch.vs.json*|Zadejte argumenty příkazového řádku pro ladění.<br>K dispozici prostřednictvím **Průzkumník řešení** položky nabídky po kliknutí pravým tlačítkem myši na položku **nastavení ladění a spuštění**.|
 
-Tyto soubory *. JSON* se nacházejí ve skryté složce s názvem *. vs* v kořenové složce vašeho základu kódu. Soubory *Tasks. vs. JSON* a *Launch. vs. JSON* vytváří sada Visual Studio podle potřeby, když zvolíte buď **konfiguraci úloh** , nebo **nastavení ladění a spouštění** pro soubor nebo složku v **Průzkumník řešení**. Tyto soubory *. JSON* jsou skryté, protože uživatelé je obvykle nechtějí kontrolovat do správy zdrojového kódu. Pokud však chcete být schopni je vrátit do správy zdrojového kódu, přetáhněte soubory do kořenového adresáře základů kódu, kde jsou viditelné.
+Tyto *.json* soubory jsou umístěny ve skryté složce s názvem *.vs* v kořenové složce vašeho základu kódu. *Tasks.vs.json* a *souboru launch.vs.json* soubory jsou vytvořeny pomocí sady Visual Studio na základě potřeby, po výběru některé **nakonfigurovat úlohy** nebo **ladění Nastavení a spouštění** pro soubor nebo složku v **Průzkumníka řešení**. Tyto *.json* soubory jsou skryté, protože uživatelé zbytečné vrátit je do správy zdrojového kódu. Ale pokud chcete mít možnost zkontrolovat do správy zdrojového kódu, přetáhněte soubory v kořenové složce vašeho základu kódu, kde jsou viditelné.
 
 > [!TIP]
-> Chcete-li zobrazit skryté soubory v sadě Visual Studio, klikněte na tlačítko **Zobrazit všechny soubory** na panelu nástrojů **Průzkumník řešení** .
+> Chcete-li zobrazit skryté soubory v sadě Visual Studio, zvolte **zobrazit všechny soubory** tlačítko **Průzkumníka řešení** nástrojů.
 
-## <a name="define-tasks-with-tasksvsjson"></a>Definování úkolů pomocí Tasks. vs. JSON
+## <a name="define-tasks-with-tasksvsjson"></a>Definovat úkoly pomocí tasks.vs.json
 
-Můžete automatizovat skripty sestavení nebo jiné externí operace se soubory, které máte v aktuálním pracovním prostoru, a to tak, že je spustíte jako úkoly přímo v integrovaném vývojovém prostředí. Novou úlohu můžete nakonfigurovat tak, že kliknete pravým tlačítkem na soubor nebo složku a vyberete **Konfigurovat úlohy**.
+Můžete automatizovat skripty sestavení ani žádné jiné externí operace se soubory, které máte v aktuálním pracovním prostoru spuštěním jako úlohy přímo v integrovaném vývojovém prostředí. Vytvoření nového úkolu můžete nakonfigurovat tak, že kliknete pravým tlačítkem na soubor nebo složku a vyberete **nakonfigurovat úlohy**.
 
-![Nabídka konfigurovat úlohy](../ide/media/customize-configure-tasks-menu.png)
+![Konfigurace nabídka úkoly](../ide/media/customize-configure-tasks-menu.png)
 
-Tím se vytvoří (nebo otevře) soubor *Tasks. vs. JSON* ve složce *. vs* . V tomto souboru můžete definovat úlohu sestavení nebo libovolný úkol a potom ji vyvolat pomocí názvu, který jste zadali v nabídce **Průzkumník řešení** kliknutím pravým tlačítkem myši.
+To vytvoří (nebo se otevře) *tasks.vs.json* ve *.vs* složky. V tomto souboru můžete definovat úlohu sestavení nebo libovolný úkol a potom ji vyvolat pomocí názvu, který jste zadali v nabídce **Průzkumník řešení** kliknutím pravým tlačítkem myši.
 
-Vlastní úkoly lze přidat do jednotlivých souborů nebo do všech souborů určitého typu. Například soubory balíčku NuGet lze nakonfigurovat tak, aby měly úlohu obnovit balíčky, nebo všechny zdrojové soubory lze nakonfigurovat tak, aby měly úlohu statické analýzy, jako je například linter pro všechny soubory *. js* .
+Vlastní úlohy se dají přidat pro jednotlivé soubory nebo pro všechny soubory určitého typu. Například soubory balíčku NuGet lze nakonfigurovat pro úkol "Packages obnovení", nebo všechny zdrojové soubory se dají konfigurovat mít statické analýzy úloh, jako je linter pro všechny *js* soubory.
 
-### <a name="define-custom-build-tasks"></a>Definovat vlastní úkoly sestavení
+### <a name="define-custom-build-tasks"></a>Definovat úkoly vlastního sestavení
 
-Pokud váš základ kódu používá nástroje pro vlastní sestavení, které Visual Studio nerozpozná, nemůžete spustit a ladit kód v aplikaci Visual Studio, dokud nedokončíte některé kroky konfigurace. Visual Studio poskytuje *úkoly sestavení* , kde můžete říct, jak Visual Studio sestavovat, znovu sestavit a vyčistit váš kód. Soubor úlohy sestavení *Tasks. vs. JSON* Couples smyčku vnitřního vývoje sady Visual Studio do vlastních nástrojů sestavení používaných vaším základem kódu.
+Pokud vašeho základu kódu používá vlastní sestavovací nástroje, které Visual Studio nerozpozná, nelze spustit a ladit kód v sadě Visual Studio, dokud je provést některé kroky konfigurace. Visual Studio poskytuje *úlohy sestavení* poznáte sady Visual Studio, jak vytvářet, opětovné sestavení a vyčištění kódu. *Tasks.vs.json* sestavení souboru párům úloh vývoje vnitřní smyčky sady Visual Studio vlastního sestavení nástroje používané ve vašem základu kódu.
 
-Vezměte v úvahu základ kódu, který se C# skládá z jednoho souboru s názvem *Hello.cs*. *Soubor pravidel* pro takový základ kódu by mohl vypadat takto:
+Vezměte v úvahu základu kódu, který se skládá z jedné C# soubor s názvem *hello.cs*. *Makefile* pro takové codebase může vypadat třeba takto:
 
 <!-- markdownlint-disable MD010 -->
 ```makefile
@@ -73,7 +73,7 @@ bin:
 ```
 <!-- markdownlint-enable MD010 -->
 
-Pro takové *soubory pravidel* , které obsahují cíle sestavení, vyčištění a opětovného sestavení, můžete definovat následující *úkoly. soubor vs. JSON* . Obsahuje tři úlohy sestavení pro sestavování, opětovné sestavení a mazání základu kódu pomocí nástroje NMAKE jako nástroj sestavení.
+Pro tento *makefile* , který obsahuje sestavení, vyčištění a znovu sestavte cíle, můžete definovat následující *tasks.vs.json* souboru. Obsahuje tři úlohy sestavení pro vytváření, opětovného sestavování a čištění základu kódu pomocí NMAKE jako nástroj pro sestavení.
 
 ```json
 {
@@ -117,20 +117,20 @@ Pro takové *soubory pravidel* , které obsahují cíle sestavení, vyčištěn�
 }
 ```
 
-Po definování úloh sestavení v *Tasks. vs. JSON*jsou do odpovídajících souborů v **Průzkumník řešení**přidány další nabídky pravým tlačítkem myši (kontextová nabídka) položek. V tomto příkladu jsou možnosti "sestavení", "znovu sestavit" a "vyčistit" přidány do kontextové nabídky všech souborů *pravidel* .
+Po definování úloh sestavení v *Tasks. vs. JSON*jsou do odpovídajících souborů v **Průzkumník řešení**přidány další nabídky pravým tlačítkem myši (kontextová nabídka) položek. V tomto příkladu "sestavení", "sestavení" a "Vyčištění" možnosti jsou přidány do kontextové nabídky žádné *makefile* soubory.
 
-![místní nabídka souboru pravidel pomocí sestavení, opětovného sestavení a vyčištění](media/customize-build-rebuild-clean.png)
+![místní nabídka souboru pravidel se sestavením, opětovné sestavení a vyčištění](media/customize-build-rebuild-clean.png)
 
 > [!NOTE]
-> Příkazy se zobrazí v kontextové nabídce v příkazu **Konfigurovat úlohy** z důvodu jejich nastavení `contextType`. příkazy "Build", "znovu sestavit" a "vyčistit" jsou příkazy sestavení, takže se zobrazí v části Build uprostřed místní nabídky.
+> Příkazy se zobrazí v místní nabídce v části **nakonfigurovat úlohy** příkaz z důvodu jejich `contextType` nastavení. "sestavení", "sestavení" a "Vyčištění" jsou příkazy sestavení, takže se budou zobrazovat v části sestavení uprostřed v místní nabídce.
 
-Když vyberete jednu z těchto možností, úloha se spustí. Výstup se zobrazí v okně **výstup** a chyby sestavení se zobrazí v **Seznam chyb**.
+Když vyberete některou z těchto možností, spustí příslušný úkol. Výstup se zobrazí v **výstup** okno a chyby sestavení se zobrazí v **seznam chyb**.
 
-### <a name="define-arbitrary-tasks"></a>Definovat libovolné úlohy
+### <a name="define-arbitrary-tasks"></a>Definujte libovolné úlohy
 
-Můžete definovat libovolné úkoly v souboru *Tasks. vs. JSON* , abyste mohli přesně dělat cokoli, co potřebujete. Můžete například definovat úkol pro zobrazení názvu aktuálně vybraného souboru v okně **výstup** nebo zobrazit seznam souborů v zadaném adresáři.
+Můžete definovat libovolné úlohy v *tasks.vs.json* souboru prakticky cokoliv, které chcete provést. Například můžete definovat úkol, který zobrazí název aktuálně vybraného souboru v **výstup** okna, nebo seznam souborů v zadaném adresáři.
 
-Následující příklad ukazuje soubor *Tasks. vs. JSON* , který definuje jeden úkol. Při vyvolání úlohy se zobrazí název souboru aktuálně vybraného souboru *. js* .
+Následující příklad ukazuje *tasks.vs.json* soubor, který definuje jeden úkol. Při vyvolání, úloha zobrazuje název souboru z aktuálně vybraného *js* souboru.
 
 ```json
 {
@@ -148,17 +148,17 @@ Následující příklad ukazuje soubor *Tasks. vs. JSON* , který definuje jede
 ```
 
 - `taskName` Určuje název, který se zobrazí v nabídce kliknutím pravým tlačítkem myši.
-- `appliesTo` určuje, na kterých souborech lze příkaz provést.
-- Vlastnost `command` Určuje příkaz, který se má vyvolat. V tomto příkladu je proměnná prostředí `COMSPEC` použita k identifikaci překladače příkazového řádku, obvykle souboru *cmd. exe*.
-- Vlastnost `args` Určuje argumenty, které mají být předány vyvolanému příkazu.
-- Makro `${file}` načte vybraný soubor v **Průzkumník řešení**.
+- `appliesTo` Určuje soubory, které lze příkaz provést na.
+- `command` Vlastnost určuje příkaz, který má být vyvolán. V tomto příkladu `COMSPEC` proměnné prostředí se používá k identifikaci překladač příkazového řádku, obvykle *cmd.exe*.
+- `args` Vlastnost určuje argumenty, které mají být předány je volaný příkaz.
+- `${file}` Makra obnoví na vybraný soubor na **Průzkumníka řešení**.
 
-Po uložení *Tasks. vs. JSON*můžete kliknout pravým tlačítkem na libovolný soubor *. js* ve složce a zvolit **echo filename**. Název souboru se zobrazí v okně **výstup** .
+Po uložení *tasks.vs.json*, kliknete pravým tlačítkem na žádném *js* souboru ve složce a zvolte **Echo filename**. Zobrazí se v názvu souboru **výstup** okna.
 
 > [!NOTE]
-> Pokud váš základ kódu neobsahuje soubor *Tasks. vs. JSON* , můžete ho vytvořit tak, že v **Průzkumník řešení** **kliknete** pravým tlačítkem myši nebo v místní nabídce souboru.
+> Pokud neobsahuje vašeho základu kódu *tasks.vs.json* soubor, můžete vytvořit jednu bránu výběrem **nakonfigurovat úlohy** z klikněte pravým tlačítkem nebo místní nabídky souboru v **Průzkumníka řešení**.
 
-V následujícím příkladu je definován úkol, který obsahuje seznam souborů a podsložek adresáře *bin* .
+Následující příklad definuje úlohu, která obsahuje soubory a podsložky *bin* adresáře.
 
 ```json
 {
@@ -176,64 +176,64 @@ V následujícím příkladu je definován úkol, který obsahuje seznam soubor�
 }
 ```
 
-- `${outDir}` je vlastní makro, které je nejprve definováno před blokem `tasks`. Pak je volána ve vlastnosti `args`.
+- `${outDir}` je definován vlastní makro, které je první před `tasks` bloku. Potom je volána `args` vlastnost.
 
-Tato úloha se vztahuje na všechny soubory. Když otevřete kontextovou nabídku libovolného souboru v **Průzkumník řešení**, zobrazí se v dolní části nabídky **výstupy v seznamu** název úkolu. Když zvolíte **výstupy seznamu**, obsah adresáře *bin* je uveden v okně **výstup** v aplikaci Visual Studio.
+Tato úloha se vztahuje na všechny soubory. Když otevřete místní nabídku na jakýkoli soubor v **Průzkumníka řešení**, název úkolu **seznamu výstupy** se zobrazí v dolní části nabídky. Při výběru **seznamu výstupy**, obsah *bin* adresáře jsou uvedeny v **výstup** okna v sadě Visual Studio.
 
-![Libovolný úkol v místní nabídce](../ide/media/customize-arbitrary-task-menu.png)
+![Libovolné úlohy v kontextové nabídce](../ide/media/customize-arbitrary-task-menu.png)
 
-### <a name="settings-scope"></a>Rozsah nastavení
+### <a name="settings-scope"></a>Nastavení oboru
 
-V kořenu a podadresáři základu kódu můžou existovat různé soubory *. JSON* . Tento návrh umožňuje, aby flexibilita měla různé chování v různých podadresářích základu kódu. Visual Studio agreguje nebo přepisuje nastavení v celém základu kódu a určuje prioritu souborů v následujícím pořadí:
+Více *tasks.vs.json* soubory mohou existovat v kořenové a podadresářů základ kódu. Tento návrh umožňuje flexibilitu pro různé chování v různých podadresáře základu kódu. Visual Studio agreguje nebo přepíše nastavení v celém základu kódu, určování priority soubory v následujícím pořadí:
 
-- Soubory nastavení v adresáři *. vs* kořenové složky.
-- Adresář, ve kterém se počítá nastavení
-- Nadřazený adresář aktuálního adresáře, a to až do kořenového adresáře.
+- Soubory nastavení v kořenové složce *.vs* adresáře.
+- Adresář, ve kterém se počítá nastavení.
+- Nadřazený adresář aktuálního adresáře, až do kořenového adresáře.
 - Soubory nastavení v kořenovém adresáři.
 
-Tato pravidla agregace platí pro *Tasks. vs. JSON*. Informace o tom, jak jsou nastavení v jiném souboru agregovaná, najdete v odpovídající části tohoto souboru v tomto článku.
+Tato pravidla agregace platí pro *Tasks. vs. JSON*. Informace o tom, jak se agregují nastavení v jiném souboru naleznete v části odpovídající pro tento soubor v tomto článku.
 
-### <a name="properties-for-tasksvsjson"></a>Vlastnosti pro Tasks. vs. JSON
+### <a name="properties-for-tasksvsjson"></a>Vlastnosti pro tasks.vs.json
 
-V této části jsou popsány některé vlastnosti, které lze zadat v *Tasks. vs. JSON*.
+Tato část popisuje některé z vlastností můžete zadat v *tasks.vs.json*.
 
-#### <a name="appliesto"></a>appliesTo
+#### <a name="appliesto"></a>AppliesTo –
 
-Můžete vytvořit úkoly pro libovolný soubor nebo složku zadáním jejího názvu do pole `appliesTo`, například `"appliesTo": "hello.js"`. Následující masky souborů lze použít jako hodnoty:
-
-|||
-|-|-|
-|`"*"`| úloha je dostupná pro všechny soubory a složky v pracovním prostoru.|
-|`"*/"`| úloha je dostupná pro všechny složky v pracovním prostoru.|
-|`"*.js"`| úloha je dostupná pro všechny soubory s příponou *. js* v pracovním prostoru.|
-|`"/*.js"`| úloha je dostupná pro všechny soubory s příponou *. js* v kořenu pracovního prostoru.|
-|`"src/*/"`| úloha je k dispozici pro všechny podsložky složky *Src* .|
-|`"makefile"`| úloha je k dispozici pro všechny soubory souborů *pravidel* v pracovním prostoru.|
-|`"/makefile"`| úloha je k dispozici pouze pro *soubor pravidel* v kořenovém adresáři pracovního prostoru.|
-
-#### <a name="macros-for-tasksvsjson"></a>Makra pro Tasks. vs. JSON
+Můžete vytvářet úkoly pro kterýkoli soubor nebo složku tak, že zadáte jeho název `appliesTo` pole, například `"appliesTo": "hello.js"`. Následující masky souboru můžete použít jako hodnoty:
 
 |||
 |-|-|
-|`${env.<VARIABLE>}`| Určuje libovolnou proměnnou prostředí (například $ {env. CESTA}, $ {env. COMSPEC} atd.), která je nastavena pro příkazový řádek vývojáře. Další informace naleznete v tématu [Developer Command Prompt for Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
+|`"*"`| Úloha je k dispozici pro všechny soubory a složky v pracovním prostoru|
+|`"*/"`| Úloha je dostupná pro všechny složky v pracovním prostoru|
+|`"*.js"`| Úloha je dostupná pro všechny soubory s příponou *js* v pracovním prostoru|
+|`"/*.js"`| Úloha je dostupná pro všechny soubory s příponou *js* v kořenu pracovního prostoru|
+|`"src/*/"`| Úloha je k dispozici pro všechny podsložky *src* složky|
+|`"makefile"`| Úloha je k dispozici všem *makefile* souborům v pracovním prostoru|
+|`"/makefile"`| Úloha je k dispozici pouze *makefile* v kořenu pracovního prostoru|
+
+#### <a name="macros-for-tasksvsjson"></a>Makra pro tasks.vs.json
+
+|||
+|-|-|
+|`${env.<VARIABLE>}`| Určuje všechny proměnné prostředí (např. ${env. PATH}, ${env.COMSPEC} a tak dále), která je nastavena pro příkazový řádek pro vývojáře. Další informace najdete v tématu [příkazový řádek pro vývojáře pro sadu Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
 |`${workspaceRoot}`| Úplná cesta ke složce pracovního prostoru (například *C:\sources\hello*)|
-|`${file}`| Úplná cesta k souboru nebo složce vybrané ke spuštění této úlohy (například *C:\sources\hello\src\hello.js*)|
-|`${relativeFile}`| Relativní cesta k souboru nebo složce (například *src\hello.js*)|
-|`${fileBasename}`| Název souboru bez cesty nebo přípony (například *Hello*)|
-|`${fileDirname}`| Úplná cesta k souboru s výjimkou názvu souboru (například *C:\sources\hello\src*)|
-|`${fileExtname}`| Přípona vybraného souboru (například *. js*)|
+|`${file}`| Úplná cesta k souboru nebo složky vybrané ke spuštění této úlohy před (například *C:\sources\hello\src\hello.js*)|
+|`${relativeFile}`| Relativní cesta k souboru nebo složky (například *src\hello.js*)|
+|`${fileBasename}`| Název souboru bez cesty a přípony (například *hello*)|
+|`${fileDirname}`| Úplná cesta k souboru, s výjimkou názvu souboru (například *C:\sources\hello\src*)|
+|`${fileExtname}`| Rozšíření na vybraný soubor (například *js*)|
 
-## <a name="configure-debugging-with-launchvsjson"></a>Konfigurace ladění pomocí Launch. vs. JSON
+## <a name="configure-debugging-with-launchvsjson"></a>Konfigurovat ladění pomocí launch.vs.json
 
-1. Chcete-li konfigurovat základ pro ladění, v **Průzkumník řešení** vyberte položku nabídky **nastavení ladění a spuštění** v místní nabídce nebo v místní nabídce spustitelného souboru.
+1. Ke konfiguraci vašeho základu kódu pro ladění, v **Průzkumníka řešení** zvolte **nastavení ladění a spouštění** položky nabídky v nabídce klepněte pravým tlačítkem nebo kontextu spustitelný soubor.
 
-   ![Místní nabídka nastavení ladění a spuštění](media/customize-debug-launch-menu.png)
+   ![Kontextové nabídky nastavení ladění a spouštění](media/customize-debug-launch-menu.png)
 
-1. V dialogovém okně **Vybrat ladicí program** zvolte možnost a pak klikněte na tlačítko **Vybrat** .
+1. V **vyberte ladicí program** dialogové okno, vyberte možnost a klikněte na tlačítko **vyberte** tlačítko.
 
-   ![Dialogové okno pro výběr ladicího programu](media/customize-select-a-debugger.png)
+   ![Vyberte dialogového okna ladicího programu](media/customize-select-a-debugger.png)
 
-   Pokud soubor *Launch. vs. JSON* ještě neexistuje, vytvoří se.
+   Pokud *souboru launch.vs.json* soubor již neexistuje, vytvoří se.
 
    ```json
    {
@@ -249,20 +249,20 @@ Můžete vytvořit úkoly pro libovolný soubor nebo složku zadáním jejího n
    }
    ```
 
-1. Potom klikněte pravým tlačítkem na spustitelný soubor v **Průzkumník řešení**a vyberte **nastavit jako položku po spuštění**.
+1. Pak klikněte pravým tlačítkem na spustitelný soubor ve **Průzkumníka řešení**a zvolte **nastavit jako položku při spuštění**.
 
-   Spustitelný soubor je určen jako spouštěcí položka pro základ kódu a název tlačítka **Spustit** ladění se změní tak, aby odrážel název spustitelného souboru.
+   Spustitelný soubor je určený jako položku při spuštění vašeho základu kódu a ladění **Start** změny názvu tlačítka tak, aby odrážely název spustitelný soubor.
 
-   ![Přizpůsobené tlačítko Start](media/customize-start-button.png)
+   ![Vlastní tlačítka Start](media/customize-start-button.png)
 
-   Když zvolíte **F5**, ladicí program se spustí a zastaví na jakékoli zarážce, kterou jste už mohli nastavit. Všechna známá okna ladicího programu jsou k dispozici a funkční.
+   Pokud zvolíte **F5**, ladicí program se spustí a zastaví na zarážce, všechny možná jste už nastavili. Všechny známé ladicí program systému windows jsou dostupné a funkční.
 
    > [!IMPORTANT]
    > Další podrobnosti o vlastních úkolech sestavení a ladění v C++ projektech otevřených složek naleznete v tématu [Podpora otevřených složek C++ pro systémy sestavení v aplikaci Visual Studio](/cpp/build/open-folder-projects-cpp).
 
-### <a name="specify-arguments-for-debugging"></a>Zadat argumenty pro ladění
+### <a name="specify-arguments-for-debugging"></a>Zadejte argumenty pro ladění
 
-Můžete zadat argumenty příkazového řádku, které se mají předat pro ladění v souboru *Launch. vs. JSON* . Přidejte argumenty v poli `args`, jak je znázorněno v následujícím příkladu:
+Můžete zadat argumenty příkazového řádku a zajistěte tak předání pro ladění *souboru launch.vs.json* souboru. Přidání argumentů `args` pole, jak je znázorněno v následujícím příkladu:
 
 ```json
 {
@@ -284,33 +284,33 @@ Můžete zadat argumenty příkazového řádku, které se mají předat pro lad
 }
 ```
 
-Při uložení tohoto souboru se název nové konfigurace zobrazí v rozevíracím seznamu cíl ladění a můžete ho vybrat ke spuštění ladicího programu. Můžete vytvořit tolik konfigurací ladění, kolik budete chtít.
+Při ukládání tohoto souboru se zobrazí název nové konfigurace v rozevíracím seznamu cíl ladění a vyberte spuštění ladicího programu. Můžete vytvořit mnoho konfiguraci ladění, kolik chcete.
 
-![Rozevírací seznam konfigurace ladění](media/customize-debug-configurations.png)
+![Ladění konfigurace rozevíracího seznamu](media/customize-debug-configurations.png)
 
 > [!NOTE]
-> Vlastnost `configurations` pole v souboru *Launch. vs. JSON* je čtena ze dvou umístění souborů &mdash;the kořenový adresář pro základ kódu a adresářem *. vs* . Pokud dojde ke konfliktu, priorita je dána hodnotě v *. vs\launch.vs.JSON*.
+> `configurations` Pole vlastnosti v *souboru launch.vs.json* číst ze dvou umístění souboru&mdash;kořenový adresář pro základ kódu a *.vs* adresáře. Pokud dojde ke konfliktu, Priorita se určuje na hodnotu v *.vs\launch.vs.json*.
 
-## <a name="additional-settings-files"></a>Další soubory nastavení
+## <a name="additional-settings-files"></a>Další nastavení soubory
 
-Kromě tří souborů *. JSON* popsaných v tomto tématu Visual Studio také přečte nastavení z některých dalších souborů, pokud existují ve vašem základu kódu.
+Kromě tři *.json* soubory popsané v tomto tématu, Visual Studio také načte nastavení z některé další soubory, pokud existují ve vašem základu kódu.
 
 ### <a name="vscodesettingsjson"></a>.vscode\settings.json
 
-Visual Studio čte omezené nastavení ze souboru s názvem *Settings. JSON*, pokud se nachází v adresáři s názvem *. VSCode*. Tato funkce je k dispozici pro základy kódu, které byly dříve vyvinuty v Visual Studio Code. V současné době je `files.exclude` jediné nastavení, které je čteno z *. vscode\settings.JSON* , což filtruje soubory vizuálně v Průzkumník řešení a z některých nástrojů pro hledání.
+Visual Studio načte omezená nastavení ze souboru s názvem *settings.json*, pokud se nachází v adresáři s názvem *.vscode*. Tato funkce je poskytována pro základů kódu, které dřív byly vyvinuty ve Visual Studio Code. V současné době jediným nastavením, který je čten *.vscode\settings.json* je `files.exclude`, který filtruje soubory vizuálně v Průzkumníku řešení a z některé vyhledávací nástroje.
 
-Ve vašem základu kódu můžete mít libovolný počet souborů *. vscode\settings.JSON* . Nastavení číst z tohoto souboru se aplikují na nadřazený adresář *. VSCode* a všechny jeho podadresáře.
+Můžete mít libovolný počet *.vscode\settings.json* soubory ve vašem základu kódu. Čtení z tohoto souboru nastavení se použijí pro nadřazený adresář složky *.vscode* a všech jeho podadresářích.
 
-### <a name="gitignore"></a>. gitignore
+### <a name="gitignore"></a>.gitignore
 
-soubory *. gitignore* slouží k oznámení Gitu, které soubory se mají ignorovat; To znamená, které soubory a adresáře nechcete vrátit se změnami. soubory *. gitignore* jsou obvykle zahrnuty jako součást základu kódu, aby bylo možné sdílet nastavení se všemi vývojáři základního kódu. Visual Studio čte vzory v souborech *. gitignore* , aby bylo možné filtrovat položky vizuálně a z některých nástrojů pro hledání.
+*.gitignore* soubory se používají k řekněte Git soubory, které se mají ignorovat; to znamená, které soubory a adresáře nechcete k vrácení se změnami. *.gitignore* soubory jsou obvykle součástí základ kódu tak, aby všichni vývojáři základu kódu můžou sdílet nastavení. Visual Studio načte vzory v *.gitignore* soubory pro filtrování položek vizuálně a z některé vyhledávací nástroje.
 
-Nastavení číst ze souboru *. gitignore* se aplikují na svůj nadřazený adresář a všechny podadresáře.
+Čtení nastavení z *.gitignore* souboru se použijí u svého nadřazeného adresáře a všech podadresářích.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Vývoj kódu bez projektů nebo řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
 - [Projekty Otevřít složku pro C++](/cpp/build/open-folder-projects-cpp)
 - [Projekty CMake proC++](/cpp/build/cmake-projects-in-visual-studio)
-- [NMAKE – referenční informace](/cpp/build/reference/nmake-reference)
+- [NMake – odkaz](/cpp/build/reference/nmake-reference)
 - [Funkce editoru kódu](../ide/writing-code-in-the-code-and-text-editor.md)

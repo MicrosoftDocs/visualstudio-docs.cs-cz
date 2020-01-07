@@ -7,17 +7,17 @@ helpviewer_keywords:
 - incremental builds
 - MSBuild, building incrementally
 ms.assetid: 8d82d7d8-a2f1-4df6-9d2f-80b9e0cb3ac3
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d2bf2f8a45618e8b1f7540479a02c1a5f91b9bf
-ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
+ms.openlocfilehash: 949ec0622dd19ef906d4c3a40a2ddadac2b75065
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74316473"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75575897"
 ---
 # <a name="how-to-build-incrementally"></a>Postupy: přírůstkové sestavení
 Při sestavování velkého projektu je důležité, aby dříve vytvořené komponenty, které jsou stále aktuální, nebyly znovu sestaveny. Pokud jsou všechny cíle sestaveny pokaždé, dokončení každého sestavení bude trvat dlouhou dobu. Chcete-li povolit přírůstková sestavení (sestavení, ve kterých jsou znovu sestaveny pouze ty cíle, které nebyly vytvořeny dříve nebo jsou-li cíle zastaraly), [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) mohou porovnat časová razítka vstupních souborů s časovými razítky výstupních souborů a určit, zda má být cíl vynechán, sestavení nebo částečně znovu sestaven. Musí však existovat mapování 1:1 mezi vstupy a výstupy. Pomocí transformací můžete umožnit cílem identifikovat toto přímé mapování. Další informace o transformacích naleznete v tématu [transformace](../msbuild/msbuild-transforms.md).

@@ -3,16 +3,16 @@ title: Nastavení více projektů po spuštění
 description: Tento článek popisuje, jak nastavit více projektů, které se spustí při spuštění nebo ladění.
 author: sayedihashimi
 ms.author: sayedha
-ms.date: 02/21/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: visual-studio-mac
 ms.assetid: fd354fff-ce6b-4505-a815-84a2311e39ba
-ms.openlocfilehash: 3c7c3e00615463ba657ad93022f60ca856e026d6
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 46e6447e07d2ee8439fcd86f5d1519beaa1e4609
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68872371"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75406684"
 ---
 # <a name="set-multiple-startup-projects"></a>Nastavení více projektů po spuštění
 
@@ -42,7 +42,7 @@ Visual Studio pro Mac umožňuje určit, že při ladění nebo spuštění ře�
 
    ![Řešení s více projekty nakonfigurovanými na spouštění při ladění nebo běhu](media/startup-project-configured.png)
 
-   Můžete vidět, že dva projekty jsou nakonfigurovány pro spuštění, protože oba projekty jsou tučně v oblast řešení. Na panelu nástrojů je nová konfigurace spuštění nastavena jako aktuální konfigurace spuštění řešení.
+   Můžete vidět, že dva projekty jsou nakonfigurovány pro spuštění, protože oba projekty jsou **tučně** v oblast řešení. Na panelu nástrojů je nová konfigurace spuštění nastavena jako aktuální konfigurace spuštění řešení.
 
 ## <a name="next-steps"></a>Další kroky
 

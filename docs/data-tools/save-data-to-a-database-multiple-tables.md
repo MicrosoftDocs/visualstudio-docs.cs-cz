@@ -11,17 +11,17 @@ helpviewer_keywords:
 - saving data, walkthroughs
 - data [Visual Studio], updating
 ms.assetid: 7ebe03da-ce8c-4cbc-bac0-a2fde4ae4d07
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: bcb551cdcd5b2505c6ac536a440fcc3e70464bfb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8d4dd98a622a3aa09b2ec11f4f3521ce1839ce8c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648199"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586247"
 ---
 # <a name="save-data-to-a-database-multiple-tables"></a>Uložení dat do databáze (více tabulek)
 
@@ -33,7 +33,7 @@ Data v aplikaci můžete uložit zpět do databáze voláním metody `Update` Ta
 
 - Vytvoření a konfigurace zdroje dat v aplikaci pomocí [Průvodce konfigurací zdroje dat](../data-tools/media/data-source-configuration-wizard.png).
 
-- Nastavení ovládacích prvků položek v [okně zdroje dat](add-new-data-sources.md#data-sources-window). Další informace naleznete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetahování z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
+- Nastavení ovládacích prvků položek v [okně zdroje dat](add-new-data-sources.md#data-sources-window). Další informace najdete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetažení z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
 - Vytváření ovládacích prvků vázaných na data přetažením položek z okna **zdroje dat** do formuláře.
 
@@ -51,11 +51,11 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
     1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (Průzkumník objektů systému SQL Server je nainstalován v rámci úlohy **úložiště dat a zpracování** v instalační program pro Visual Studio.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
 
-       Otevře se okno editoru dotazů.
+       Otevře se okno editor dotazů.
 
     2. Zkopírujte [skript Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
 
-    3. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
+    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
 
        Po krátké době se dotaz dokončí a vytvoří se databáze Northwind.
 
@@ -67,7 +67,7 @@ Vytvořte nový projekt **aplikace model Windows Forms** pro buď C# nebo Visual
 
 Tento krok vytvoří zdroj dat z databáze Northwind pomocí **Průvodce konfigurací zdroje dat**. Abyste mohli vytvořit připojení, musíte mít přístup k ukázkové databázi Northwind. Informace o tom, jak nastavit ukázkovou databázi Northwind, najdete v tématu [Postup: Instalace ukázkových databází](../data-tools/installing-database-systems-tools-and-samples.md).
 
-1. V nabídce **data** vyberte možnost **Zobrazit zdroje dat**.
+1. Na **Data** nabídce vyberte možnost **zobrazit zdroje dat**.
 
    Otevře se okno **zdroje dat** .
 
@@ -101,7 +101,7 @@ V tomto návodu jsou data v `Customers` tabulce v rozložení **podrobností** ,
 
 1. V okně **zdroje dat** rozbalte uzel **Customers (zákazníci** ).
 
-2. V uzlu **Customers (zákazníci** ) vyberte **Podrobnosti** ze seznamu řízení a změňte tak řízení tabulky **Customers** na jednotlivé ovládací prvky. Další informace naleznete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetahování z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
+2. V uzlu **Customers (zákazníci** ) vyberte **Podrobnosti** ze seznamu řízení a změňte tak řízení tabulky **Customers** na jednotlivé ovládací prvky. Další informace najdete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetažení z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
 ## <a name="create-the-data-bound-form"></a>Vytvoření formuláře vázaného na data
 
@@ -109,7 +109,7 @@ Můžete vytvořit ovládací prvky vázané na data přetažením položek z ok
 
 1. Přetáhněte hlavní uzel **Customers** z okna **zdroje dat** do formuláře **Form1**.
 
-     Ovládací prvky vázané na data s popisnými popisky se zobrazí ve formuláři spolu s pruhem nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)`CustomersTableAdapter`, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
+     Ovládací prvky vázané na data s popisnými popisky se zobrazí ve formuláři spolu s pruhem nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)`CustomersTableAdapter`, <xref:System.Windows.Forms.BindingSource>a <xref:System.Windows.Forms.BindingNavigator>.
 
 2. Přetáhněte uzel souvisejících **objednávek** z okna **zdroje dat** do formuláře **Form1**.
 
@@ -120,7 +120,7 @@ Můžete vytvořit ovládací prvky vázané na data přetažením položek z ok
 
 ## <a name="add-code-to-update-the-database"></a>Přidání kódu pro aktualizaci databáze
 
-Databázi můžete aktualizovat voláním metod `Update` objekty TableAdapter a **Customers** a **Orders** . Ve výchozím nastavení je obslužná rutina události pro tlačítko **uložit** <xref:System.Windows.Forms.BindingNavigator> přidána do kódu formuláře, aby odesílala aktualizace databáze. Tento postup upraví kód tak, aby odesílal aktualizace ve správném pořadí. Tím se eliminuje možnost vyvolání chyb referenční integrity. Kód také implementuje zpracování chyb zabalením volání aktualizace do bloku try-catch. Kód můžete upravit tak, aby vyhovoval potřebám vaší aplikace.
+Databázi můžete aktualizovat voláním metod `Update` objekty TableAdapter a **Customers** a **Orders** . Ve výchozím nastavení je obslužná rutina události pro tlačítko **uložit**<xref:System.Windows.Forms.BindingNavigator> přidána do kódu formuláře, aby odesílala aktualizace databáze. Tento postup upraví kód tak, aby odesílal aktualizace ve správném pořadí. Tím se eliminuje možnost vyvolání chyb referenční integrity. Kód také implementuje zpracování chyb zabalením volání aktualizace do bloku try-catch. Kód můžete upravit tak, aby vyhovoval potřebám vaší aplikace.
 
 > [!NOTE]
 > Pro přehlednost tento návod nepoužívá transakci. Pokud však aktualizujete dvě nebo více souvisejících tabulek, zahrňte do transakce veškerou logiku aktualizace. Transakce je proces, který zaručuje, že všechny související změny v databázi budou úspěšné, než budou všechny změny potvrzeny. Další informace najdete v tématu [transakce a souběžnost](/dotnet/framework/data/adonet/transactions-and-concurrency).
@@ -129,7 +129,7 @@ Databázi můžete aktualizovat voláním metod `Update` objekty TableAdapter a 
 
 1. Vyberte tlačítko **Uložit** na <xref:System.Windows.Forms.BindingNavigator>. Otevře se Editor kódu pro obslužnou rutinu události `bindingNavigatorSaveItem_Click`.
 
-2. Nahraďte kód v obslužné rutině události pro volání metody `Update` souvisejícího objekty TableAdapter. Následující kód nejprve vytvoří tři dočasné tabulky dat, které uchovávají aktualizované informace pro každý <xref:System.Data.DataRowState> (<xref:System.Data.DataRowState.Deleted>, <xref:System.Data.DataRowState.Added> a <xref:System.Data.DataRowState.Modified>). Aktualizace se spouští ve správném pořadí. Kód by měl vypadat takto:
+2. Nahraďte kód v obslužné rutině události pro volání metody `Update` souvisejícího objekty TableAdapter. Následující kód nejprve vytvoří tři dočasné tabulky dat, které uchovávají aktualizované informace pro každý <xref:System.Data.DataRowState> (<xref:System.Data.DataRowState.Deleted>, <xref:System.Data.DataRowState.Added>a <xref:System.Data.DataRowState.Modified>). Aktualizace se spouští ve správném pořadí. Kód by měl vypadat takto:
 
      [!code-vb[VbRaddataSaving#10](../data-tools/codesnippet/VisualBasic/save-data-to-a-database-multiple-tables_1.vb)]
      [!code-csharp[VbRaddataSaving#10](../data-tools/codesnippet/CSharp/save-data-to-a-database-multiple-tables_1.cs)]
@@ -140,7 +140,7 @@ Databázi můžete aktualizovat voláním metod `Update` objekty TableAdapter a 
 
 2. Proveďte některé změny dat jednoho nebo více záznamů v každé tabulce.
 
-3. Vyberte tlačítko **Uložit** .
+3. Vyberte tlačítko **Uložit**.
 
 4. Zkontrolujte hodnoty v databázi a ověřte, zda byly změny uloženy.
 

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - MSBuild, ignoring errors
 - ContinueOnError attribute [MSBuild]
 ms.assetid: e2f1ca4f-787b-44bd-bc64-81a036025e96
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
-ms.openlocfilehash: d84292592183d11e5d9ee4fc2febac6679e2a73b
-ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
+ms.openlocfilehash: be8b4a6845e8fd14a0649f4134bcc26d8e1ad08e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74797219"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75574948"
 ---
 # <a name="how-to-ignore-errors-in-tasks"></a>Postupy: ignorování chyb v úlohách
 Někdy je vhodné, aby bylo sestavení odolné vůči chybám v určitých úlohách. Pokud tyto nekritické úkoly selžou, chcete, aby sestavení pokračovalo, protože stále může vytvořit požadovaný výstup. Například pokud projekt používá úlohu `SendMail` k odeslání e-mailové zprávy po sestavení každé součásti, může být vhodné, aby sestavení bylo přijatelné i v případě, že poštovní servery nejsou k dispozici a nelze odeslat stavové zprávy. Nebo například pokud jsou během sestavení obvykle smazány mezilehlé soubory, může být vhodné, aby sestavení bylo přijatelné i v případě, že tyto soubory nelze odstranit.

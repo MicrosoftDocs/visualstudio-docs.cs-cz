@@ -6,26 +6,26 @@ helpviewer_keywords:
 - nullable types, Class Designer
 - Class Designer [Visual Studio], nullable types
 ms.assetid: 84673a89-3f6d-4668-919e-1c0f56182fe5
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 671b2230daafbbdf92edda2ba1a671b688723796
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5be8b553dfead4b8c05f29bbd18c16fcef847130
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647860"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592227"
 ---
 # <a name="how-to-create-a-nullable-type-in-class-designer"></a>Postupy: vytvoření typu s možnou hodnotou null v Návrhář tříd
 
 Některé typy hodnot nemají vždy (nebo potřebují) definovanou hodnotu. To je běžný postup v databázích, kde některá pole nemusí mít přiřazenou žádnou hodnotu. Například můžete přiřadit hodnotu null poli databáze a označit tak, že ještě nebyla přiřazena hodnota.
 
-*Typ s povolenou hodnotou null* je typ hodnoty, který rozšíříte tak, aby přebírá typický rozsah hodnot pro daný typ a také hodnotu null. Například `Int32` s možnou hodnotou null, která se také označuje jako Nullable \<Int32 >, se dá přiřadit jakákoli hodnota od-2147483648 do 2147483647 nebo se jí dá přiřadit hodnota null. Hodnotám \<bool s možnou hodnotou null > lze přiřadit hodnoty `True`, `False` nebo null (žádná hodnota vůbec).
+*Typ s povolenou hodnotou null* je typ hodnoty, který rozšíříte tak, aby přebírá typický rozsah hodnot pro daný typ a také hodnotu null. Například `Int32`s možnou hodnotou null, která se také označuje jako Nullable\<Int32 >, se dá přiřadit jakákoli hodnota od-2147483648 do 2147483647 nebo může být přiřazena hodnota null. \<bool > s možnou hodnotou null lze přiřadit hodnoty `True`, `False`nebo null (žádná hodnota vůbec).
 
 Typy s možnou hodnotou null jsou instancemi <xref:System.Nullable%601> struktury. Každá instance typu s možnou hodnotou null má dvě veřejné vlastnosti jen pro čtení `HasValue` a `Value`:
 
@@ -45,11 +45,11 @@ Další informace o typech Nullable v naleznete C#v tématu [typy s možnou hodn
 
 1. V diagramu tříd rozbalte existující třídu nebo vytvořte novou třídu.
 
-2. Chcete-li přidat třídu do projektu, v nabídce **Diagram tříd** klikněte na **Přidat**  > **Přidat třídu**.
+2. Chcete-li přidat třídu do projektu, v nabídce **Diagram tříd** klikněte na **Přidat** > **Přidat třídu**.
 
 3. Chcete-li rozbalit obrazec třídy, v nabídce **Diagram tříd** klikněte na tlačítko **Rozbalit**.
 
-4. Vyberte obrazec třídy. V nabídce **Diagram tříd** klikněte na **Přidat**  > **pole**. Nové pole, které má výchozí **pole** název, se zobrazí v obrazci třídy a také v okně **podrobností třídy** .
+4. Vyberte obrazec třídy. V nabídce **Diagram tříd** klikněte na **Přidat** > **pole**. Nové pole, které má výchozí **pole** název, se zobrazí v obrazci třídy a také v okně **podrobností třídy** .
 
 5. Ve sloupci **název** okna **podrobností třídy** (nebo v samotném tvaru třídy) změňte název nového pole na platný a smysluplný název.
 
@@ -60,7 +60,7 @@ Další informace o typech Nullable v naleznete C#v tématu [typy s možnou hodn
 
 ## <a name="to-add-a-nullable-type-by-using-the-code-editor"></a>Přidání typu s možnou hodnotou null pomocí editoru kódu
 
-1. Přidejte do projektu třídu. Vyberte uzel projektu v **Průzkumník řešení**a v nabídce **projekt** klikněte na **Přidat třídu**.
+1. Přidání třídy do projektu. Vyberte uzel projektu v **Průzkumník řešení**a v nabídce **projekt** klikněte na **Přidat třídu**.
 
 2. V souboru. cs nebo. vb pro novou třídu přidejte do nové třídy jeden nebo více typů s možnou hodnotou null do deklarace třídy.
 

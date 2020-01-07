@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - tests and requirements
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70e58883e671dea242e0c69aee0ce6cf8b911371
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2981d510b5f56b89a2cb68d1a6bee93222d71b3b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747588"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596655"
 ---
 # <a name="develop-tests-from-a-model"></a>Vývoj testů z modelu
 Můžete použít požadavky a modely architektury, které vám pomůžou organizovat testy vašeho systému a jeho součástí. Tento postup pomáhá zajistit, že budete testovat požadavky, které jsou důležité pro uživatele a další zúčastněné strany, a pomůže vám rychle aktualizovat testy v případě změny požadavků. Pokud používáte [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)], můžete také zachovat propojení mezi modely a testy.
@@ -57,7 +57,7 @@ Můžete použít požadavky a modely architektury, které vám pomůžou organi
 
 ###### <a name="to-link-tests-to-a-use-case"></a>Propojení testů s případem použití
 
-1. V [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] vytvořte požadavek a založte na něm testovací sadu.
+1. V [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]vytvořte požadavek a založte na něm testovací sadu.
 
     Požadavek, který vytvoříte, je pracovní položka v [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]. Může to být uživatelský scénář, požadavek nebo pracovní položka případu použití, v závislosti na šabloně procesu, kterou projekt používá s Team Foundation. Další informace najdete v tématu [o agilních nástrojích a agilních řízeních projektů](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
 
@@ -145,7 +145,7 @@ Assert (countAfter == countBefore = 1);
 
 #### <a name="to-link-tests-to-a-model-element-or-relationship"></a>Propojení testů s prvkem modelu nebo vztahu
 
-1. V [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] vytvořte požadavek a založte na něm testovací sadu.
+1. V [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]vytvořte požadavek a založte na něm testovací sadu.
 
     Požadavek, který vytvoříte, je pracovní položka v [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]. Může to být uživatelský scénář, požadavek nebo pracovní položka případu použití, v závislosti na šabloně procesu, kterou projekt používá s Team Foundation. Další informace najdete v tématu [o agilních nástrojích a agilních řízeních projektů](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
 

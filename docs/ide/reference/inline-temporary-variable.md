@@ -1,23 +1,23 @@
 ---
-title: Nahradit dočasnou proměnnou její hodnotou
+title: Nahraďte dočasnou proměnnou s hodnotou
 ms.date: 01/26/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8b758407dc5500630157050c10f881a6515e1216
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8f0199436f5f9b1013a4c49cfb5909e760c73dcc
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661016"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568864"
 ---
-# <a name="inline-a-temporary-variable-refactoring"></a>Vložené dočasné refaktoring proměnných
+# <a name="inline-a-temporary-variable-refactoring"></a>Vložená dočasná proměnná refaktoring
 
 Tento refaktoring platí pro:
 
@@ -25,19 +25,19 @@ Tento refaktoring platí pro:
 
 - Visual Basic
 
-**Co:** Umožňuje odebrat dočasnou proměnnou a nahradit ji hodnotou místo ní.
+**Co:** umožňuje odebrat dočasné proměnné a nahraďte ji metodou jeho hodnotu.
 
-**Když:** Použití dočasné proměnné usnadňuje pochopení kódu.
+**Kdy:** použijte dočasné proměnné díky těžší porozumět kódu.
 
-**Proč:** Odebrání dočasné proměnné může usnadnit čtení kódu.
+**Důvod, proč:** odebrání dočasná proměnná může být kód lépe čitelný.
 
 ## <a name="how-to"></a>Postupy
 
-1. Zvýrazněte nebo umístěte textový kurzor do dočasné proměnné, která bude vložena:
+1. Zvýrazněte nebo umístit textový kurzor myši do dočasné proměnné se nedá vložit:
 
    - C#:
 
-       ![Zvýrazněný kód –C#](media/inline-highlight-cs.png)
+       ![Zvýrazněný kód:C#](media/inline-highlight-cs.png)
 
    - Visual Basic:
 
@@ -45,22 +45,22 @@ Tento refaktoring platí pro:
 
 2. Dále proveďte jednu z následujících akcí:
 
-   - **Kombinace**
-      - Stiskněte klávesu **Ctrl** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
-   - **Stisknut**
-      - Klikněte pravým tlačítkem na kód a vyberte nabídku **rychlé akce a refaktoring** .
+   - **Klávesnice**
+      - Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
+   - **Myši**
+      - Klikněte pravým tlačítkem na kód a vybrat **rychlé akce a Refaktoringy** nabídky.
 
-3. V překryvném okně náhledu vyberte možnost **vložená dočasná proměnná** .
+3. Vyberte **dočasná proměnná na řádku** z automaticky otevíraného okna okno náhledu.
 
-   Proměnná je odebrána a její použití nahrazeno hodnotou proměnné.
+   Odebrat proměnnou a její použití nahrazuje hodnotu proměnné.
 
    - C#:
 
-      ![Vložený výsledek –C#](media/inline-result-cs.png)
+      ![Výsledek inline-C#](media/inline-result-cs.png)
 
    - Visual Basic:
 
-      ![Vložený výsledek – Visual Basic](media/inline-result-vb.png)
+      ![Výsledek inline - jazyka Visual Basic](media/inline-result-vb.png)
 
 ## <a name="see-also"></a>Viz také:
 

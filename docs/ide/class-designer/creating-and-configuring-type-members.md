@@ -24,23 +24,23 @@ helpviewer_keywords:
 - Class Details window
 - Class Details window, member creation
 ms.assetid: 42af8738-3738-4ca7-82ff-edf573a68f96
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a842ccb936c755a27ab28287f9da8d6355e92fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bfed51812b034d63f250a56548b88f09a98214fe
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647754"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590407"
 ---
 # <a name="create-and-configure-type-members-in-class-designer"></a>Vytvoření a konfigurace členů typu v Návrhář tříd
 
 Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v okně **podrobností třídy** :
 
-|**Textový**|**Členy, které může obsahovat**|
+|**Typ**|**Členy, které může obsahovat**|
 |--------------| - |
 |Třída|metoda, vlastnost (pro C# a Visual Basic), pole, událost (pro C# a Visual Basic), konstruktor (metoda), konstruktor (metoda), konstanta|
 |Výčet|člen|
@@ -51,9 +51,9 @@ Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v ok
 |Modul (pouze VB)|metoda, vlastnost, pole, událost, konstruktor, konstanta|
 
 > [!NOTE]
-> Když přístupové objekty get a set nepotřebují další logiku, můžete deklaraci vlastnosti zestručnit pomocí automaticky implementovaných vlastností (pouze jazyk C#). Chcete-li zobrazit úplný podpis, z nabídky **Diagram tříd** vyberte možnost **změnit formát členů**  > **Zobrazit úplný podpis**. Další informace o automaticky implementovaných vlastnostech naleznete v tématu [automaticky implementované vlastnosti](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties).
+> Když přístupové objekty get a set nepotřebují další logiku, můžete deklaraci vlastnosti zestručnit pomocí automaticky implementovaných vlastností (pouze jazyk C#). Chcete-li zobrazit úplný podpis, z nabídky **Diagram tříd** vyberte možnost **změnit formát členů** > **Zobrazit úplný podpis**. Další informace o automaticky implementovaných vlastnostech naleznete v tématu [automaticky implementované vlastnosti](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties).
 
-## <a name="common-tasks"></a>Běžné úlohy
+## <a name="common-tasks"></a>Běžné úkoly
 
 |Úloha|Podpůrný obsah|
 |----------| - |
@@ -66,7 +66,7 @@ Ve výchozím nastavení se okno **podrobností třídy** zobrazí automaticky p
 
 - Kliknutím pravým tlačítkem myši na libovolnou třídu v diagramu zobrazte kontextovou nabídku a pak vyberte **Podrobnosti třídy**.
 
-- V řádku nabídek vyberte možnost **zobrazit**  >  další**informace o třídě** **Windows**  > .
+- V řádku nabídek vyberte možnost **zobrazit** > další **informace o třídě** **Windows** > .
 
 ## <a name="create-members"></a>Vytvoření členů
 
@@ -98,7 +98,7 @@ Ve výchozím nastavení se okno **podrobností třídy** zobrazí automaticky p
 
      Typ získá fokus a jeho obsah se zobrazí v okně **podrobností třídy** .
 
-2. Na panelu nástrojů okna **podrobností třídy** klikněte na ikonu shora a v rozevíracím seznamu vyberte **Nový \<member >** .
+2. Na panelu nástrojů okna **podrobností třídy** klikněte na ikonu shora a v rozevíracím seznamu vyberte **nový \<členský >** .
 
      Kurzor se přesune do pole **název** v řádku pro druh člena, který chcete přidat. Například pokud jste klikli na možnost **Nová vlastnost**, kurzor se přesune na nový řádek v oddílu **vlastnosti** okna **podrobností třídy** .
 
@@ -114,7 +114,7 @@ Ve výchozím nastavení se okno **podrobností třídy** zobrazí automaticky p
 
      Typ získá fokus a jeho obsah se zobrazí v okně **podrobností třídy** .
 
-2. V okně **podrobností třídy** v části obsahující druh člena, který chcete přidat, klikněte na **\<add členský >** . Například pokud chcete přidat pole, klikněte na **\<add pole >** .
+2. V okně **podrobností třídy** v části obsahující druh člena, který chcete přidat, klikněte na položku **\<přidat > členů**. Například pokud chcete přidat pole, klikněte **\<přidat pole >**.
 
 3. Zadejte název členu, který chcete vytvořit, a stiskněte klávesu Enter.
 
@@ -151,11 +151,11 @@ Každý řádek členu zobrazuje následující prvky:
 
 - **Modifikátor členu**
 
-     Změňte modifikátor viditelnosti člena na buď `Public` (`public`), `Private` (`private`), `Friend` (`internal`) `Protected` (`protected`), `Protected Friend` (`protected internal`) nebo 0.
+     Změňte modifikátor viditelnosti člena na buď `Public` (`public`), `Private` (`private`), `Friend` (`internal`) `Protected` (`protected`), `Protected Friend` (`protected internal`) nebo `Default`.
 
-- **\<add > členů**
+- **\<přidat člena >**
 
-     Poslední řádek v okně **podrobností třídy** obsahuje text **\<add člena >** v buňce **název** . Pokud na tuto buňku klikněte, můžete vytvořit nový člen. Další informace najdete v tématu [Vytvoření členů](creating-and-configuring-type-members.md#create-members).
+     Poslední řádek v okně **podrobností třídy** obsahuje text\<v buňce **název** **Přidat > členů** . Pokud na tuto buňku klikněte, můžete vytvořit nový člen. Další informace najdete v tématu [Vytvoření členů](creating-and-configuring-type-members.md#create-members).
 
 - **Vlastnosti člena v okno Vlastnosti**
 
@@ -192,11 +192,11 @@ Přidejte parametry do metod pomocí okna **podrobností třídy** . Parametry l
 
      Pokud je sloupec **název** příliš úzký, aby se zobrazil celý název, ukazatel na název parametru zobrazí název parametru.
 
-- **Textový**
+- **Typ**
 
      Buňka **typu parametru** používá technologii IntelliSense, která umožňuje vybrat ze seznamu všech typů dostupných v aktuálním projektu nebo v odkazovaných projektech.
 
-- **Upravující**
+- **Modifier**
 
      Buňka **modifikátoru** v řádku parametrů přijímá a zobrazuje nový modifikátor parametru. Chcete-li zadat nový modifikátor parametru, použijte rozevírací seznam k výběru z hodnot **none**, **ref**, **out**nebo **params** v C#a **ByVal**, **ByRef**nebo **ParamArray** v jazyce VB.
 
@@ -204,9 +204,9 @@ Přidejte parametry do metod pomocí okna **podrobností třídy** . Parametry l
 
      Buňka **summary** v řádku parametrů umožňuje zadání komentářů kódu, které se zobrazí v technologii IntelliSense při zadání parametru do editoru kódu.
 
-- **parametr \<add >**
+- **\<přidat parametr >**
 
-     Poslední řádek parametru členu obsahuje text **< přidat \> parametrů** do buňky **Name** . Kliknutím na tuto buňku vytvoříte nový parametr. Další informace naleznete v tématu [Přidání parametru do metody](creating-and-configuring-type-members.md#add-parameters-to-methods).
+     Poslední řádek parametru členu obsahuje text **< přidat\>parametrů** do buňky **Name** . Kliknutím na tuto buňku vytvoříte nový parametr. Další informace naleznete v tématu [Přidání parametru do metody](creating-and-configuring-type-members.md#add-parameters-to-methods).
 
 V okně **vlastnosti** se zobrazí stejné vlastnosti parametrů, které se zobrazují v okně **podrobností třídy** : **název**, **typ**, **Modifikátor**, **Souhrn**a také **volitelná výchozí** vlastnost. Změnou vlastnosti na jednom místě aktualizujete hodnotu vlastnosti globálně, včetně zobrazení hodnoty v jiném umístění.
 
@@ -224,9 +224,9 @@ V okně **vlastnosti** se zobrazí stejné vlastnosti parametrů, které se zobr
 
 2. V okně **podrobností třídy** rozbalte řádek metody, do které chcete přidat parametr.
 
-     Zobrazí se řádek s odsazeným parametrem obsahující pouze dvojici závorek a slova **\<add parametr >.**
+     Zobrazí se řádek s odsazeným parametrem obsahující pouze dvojici závorek a slov **\<přidat > parametrů.**
 
-3. Klikněte na **\<add parametr >** , zadejte název nového parametru a stiskněte klávesu **ENTER**.
+3. Klikněte na **\<přidat > parametrů**, zadejte název nového parametru a stiskněte klávesu **ENTER**.
 
      Nový parametr je přidán do metody a kódu metody. Zobrazuje se v okně **podrobností třídy** a okno Vlastnosti.
 
@@ -240,9 +240,9 @@ V okně **vlastnosti** se zobrazí stejné vlastnosti parametrů, které se zobr
 
 2. V okně **podrobností třídy** rozbalte řádek metody, do které chcete přidat volitelný parametr.
 
-     Zobrazí se řádek s odsazeným parametrem obsahující pouze dvojici závorek a slova **\<add parametr >.**
+     Zobrazí se řádek s odsazeným parametrem obsahující pouze dvojici závorek a slov **\<přidat > parametrů.**
 
-3. Klikněte na **\<add parametr >** , zadejte název nového parametru a stiskněte klávesu **ENTER**.
+3. Klikněte na **\<přidat > parametrů**, zadejte název nového parametru a stiskněte klávesu **ENTER**.
 
      Nový parametr je přidán do metody a kódu metody. Zobrazuje se v okně **podrobností třídy** a okno Vlastnosti.
 
