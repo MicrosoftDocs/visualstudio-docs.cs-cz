@@ -5,19 +5,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - code snippets, distributing
 ms.assetid: 5f717abd-e167-47ae-818c-6b0bae100ceb
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b5ae4053e97e823952118abda11f334c5ac1083
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 23e77658b2b09f643af18a3f136f5428828cfb5c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656070"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591057"
 ---
 # <a name="how-to-distribute-code-snippets"></a>Postupy: distribuce fragmentů kódu
 
@@ -67,19 +67,19 @@ V tomto postupu použijete stejný Hello World fragment kódu, který je vytvoř
 
 2. Přesuňte soubor *. fragmentů* do složky *HelloWorldVB* .
 
-3. Vyberte soubor *. fragmentů* v **Průzkumník řešení**a v okně **vlastnosti** se ujistěte, že je **Akce sestavení** nastavena na **obsah**. možnost **Kopírovat do výstupního adresáře** je nastavena na hodnotu **vždy kopírovat**a **zahrnout do VSIX** . je nastaven na **hodnotu true**.
+3. Vyberte soubor *. fragment* v **Průzkumník řešení**a v okně **vlastnosti** se ujistěte, že je **Akce sestavení** nastavena na **obsah**, možnost **Kopírovat do výstupního adresáře** je nastavena na hodnotu **vždy kopírovat**a možnost **zahrnout do souboru VSIX** je nastavena na **hodnotu true**.
 
 ### <a name="add-the-pkgdef-file"></a>Přidat soubor. pkgdef
 
 ::: moniker range="vs-2017"
 
-1. Do složky *HelloWorldVB* přidejte textový soubor a pojmenujte ho *HelloWorldVB. pkgdef*. Tento soubor se používá k přidání určitých klíčů do registru. V tomto případě přidá nový podklíč do klíče **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Languages\CodeExpansions\Basic** .
+1. Do složky *HelloWorldVB* přidejte textový soubor a pojmenujte ho *HelloWorldVB. pkgdef*. Tento soubor se používá k přidání určitých klíčů do registru. V tomto případě přidá nový podklíč do klíče **HKEY_CURRENT_USER \software\microsoft\visualstudio\15.0\languages\codeexpansions\basic** .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Do složky *HelloWorldVB* přidejte textový soubor a pojmenujte ho *HelloWorldVB. pkgdef*. Tento soubor se používá k přidání určitých klíčů do registru. V tomto případě přidá nový podklíč do klíče **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\16.0\Languages\CodeExpansions\Basic** .
+1. Do složky *HelloWorldVB* přidejte textový soubor a pojmenujte ho *HelloWorldVB. pkgdef*. Tento soubor se používá k přidání určitých klíčů do registru. V tomto případě přidá nový podklíč do klíče **HKEY_CURRENT_USER \software\microsoft\visualstudio\16.0\languages\codeexpansions\basic** .
 
 ::: moniker-end
 
@@ -111,11 +111,11 @@ V tomto postupu použijete stejný Hello World fragment kódu, který je vytvoř
 
    Zobrazí se druhá instance aplikace Visual Studio.
 
-3. V experimentální instanci přejdete na **nástroje**  > **Správce fragmentů kódu** a nastavte **jazyk** na **Basic**. Měli byste vidět *HelloWorldVB* jako jednu ze složek a měli byste být schopni rozbalit složku pro zobrazení fragmentu *HelloWorldVB* .
+3. V experimentální instanci přejdete na **nástroje** > **Správce fragmentů kódu** a nastavte **jazyk** na **Basic**. Měli byste vidět *HelloWorldVB* jako jednu ze složek a měli byste být schopni rozbalit složku pro zobrazení fragmentu *HelloWorldVB* .
 
 4. Otestujte fragment. V experimentální instanci otevřete Visual Basic projekt a otevřete jeden ze souborů kódu. Umístěte kurzor někam do kódu, klikněte pravým tlačítkem myši a v místní nabídce vyberte **Vložit fragment**.
 
-5. Měli byste vidět *HelloWorldVB* jako jednu ze složek. Poklikejte na ni. Měl by se zobrazit překryvný **fragment vložení: HelloWorldVB >** , který má rozevírací seznam **HelloWorldVB**. Klikněte na rozevírací seznam **HelloWorldVB** .
+5. Měli byste vidět *HelloWorldVB* jako jednu ze složek. Poklepejte na něj. Měl by se zobrazit překryvný **fragment vložení: HelloWorldVB >** , který má rozevírací seznam **HelloWorldVB**. Klikněte na rozevírací seznam **HelloWorldVB** .
 
    Do souboru kódu se přidá následující řádek:
 

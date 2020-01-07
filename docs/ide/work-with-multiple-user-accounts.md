@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5993d550d85cdc0bd1c9ce6b72553eda6fc280e5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f757489f26ae41319316fcfc9cdc957dbb7d94a2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647066"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590654"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Práce s několika uživatelskými účty
 
@@ -33,7 +33,7 @@ Přihlaste se k aplikaci Visual Studio pomocí účet Microsoft nebo účtu orga
 
 ### <a name="access-your-azure-account-in-server-explorer"></a>Přístup k účtu Azure v Průzkumník serveru
 
-Chcete-li otevřít Průzkumník serveru, zvolte možnost **zobrazit**  > **Průzkumník serveru** (nebo, pokud používáte [nastavení prostředí](../ide/environment-settings.md)"Obecné", stiskněte klávesu **CTRL** +**ALT** +**S**). Rozbalte uzel **Azure** a Všimněte si, že obsahuje prostředky dostupné v účtu Azure, který je přidružený k účtu, který jste použili k přihlášení do sady Visual Studio. Vypadá podobně jako na následujícím obrázku:
+Chcete-li otevřít Průzkumník serveru, zvolte možnost **zobrazit** > **Průzkumník serveru** (nebo, pokud používáte [nastavení prostředí](../ide/environment-settings.md)"Obecné", stiskněte klávesu **CTRL**+**ALT**+**S**). Rozbalte uzel **Azure** a Všimněte si, že obsahuje prostředky dostupné v účtu Azure, který je přidružený k účtu, který jste použili k přihlášení do sady Visual Studio. Vypadá podobně jako na následujícím obrázku:
 
 ![Průzkumník serveru s rozbaleným uzlem Azure](../ide/media/work-with-multiple-user-accounts/server-explorer.png)
 
@@ -47,7 +47,7 @@ Při příštím otevření **Průzkumník serveru**se zobrazí prostředky pro 
 
 1. Otevřete existující projekt nebo vytvořte nový projekt.
 
-1. Zvolte uzel projektu v **Průzkumník řešení**a potom klikněte pravým tlačítkem a zvolte **Přidat**  > **připojená služba**.
+1. Zvolte uzel projektu v **Průzkumník řešení**a potom klikněte pravým tlačítkem a zvolte **Přidat** > **připojená služba**.
 
    Zobrazí se průvodce **Přidat připojenou službu** a zobrazí se seznam služeb v účtu Azure, který je přidružený k vašemu účtu přizpůsobení sady Visual Studio. Nemusíte se přihlašovat nezávisle na Azure. Při prvním pokusu o přístup k prostředkům z jiného počítače se ale budete muset přihlásit k ostatním účtům.
 
@@ -75,7 +75,7 @@ Další informace o různých druzích ověřování v ASP.NET naleznete v téma
 
 ### <a name="access-your-azure-devops-organization"></a>Přístup ke svojí organizaci Azure DevOps
 
-V hlavní nabídce vyberte možnost **Team**  > **Spravovat připojení** a otevřete okno **Team Explorer-připojit** . Vyberte **Spravovat připojení**  > **připojit k projektu**. V dialogovém okně **připojit k projektu** vyberte v seznamu projekt (nebo vyberte **Přidat server TFS** a zadejte adresu URL k serveru). Když vyberete adresu URL, jste přihlášeni bez nutnosti znovu zadat přihlašovací údaje.
+V hlavní nabídce vyberte možnost **Team** > **Spravovat připojení** a otevřete okno **Team Explorer-připojit** . Vyberte **Spravovat připojení** > **připojit k projektu**. V dialogovém okně **připojit k projektu** vyberte v seznamu projekt (nebo vyberte **Přidat server TFS** a zadejte adresu URL k serveru). Když vyberete adresu URL, jste přihlášeni bez nutnosti znovu zadat přihlašovací údaje.
 
 Další informace najdete v tématu [připojení k projektům v Team Explorer](connect-team-project.md).
 
@@ -83,23 +83,23 @@ Další informace najdete v tématu [připojení k projektům v Team Explorer](c
 
 Přidání dalšího účtu do sady Visual Studio:
 
-1. Vyberte **soubor**  > **Nastavení účtu**.
+1. Vyberte **soubor** > **Nastavení účtu**.
 
 1. V části **všechny účty**vyberte **Přidat účet**.
 
 1. Na stránce **Přihlásit se k účtu** vyberte účet nebo zvolte **použít jiný účet**. Postupujte podle výzev a zadejte nové přihlašovací údaje k účtu.
 
-Volitelné Nyní můžete přejít na **Průzkumník serveru** a zobrazit služby Azure přidružené k účtu, který jste právě přidali. V **Průzkumník serveru**klikněte pravým tlačítkem na uzel **Azure** a vyberte **Spravovat a filtrovat předplatná**. Kliknutím na šipku rozevíracího seznamu vedle aktuálního účtu zvolte nový účet a pak zvolte, která předplatná chcete zobrazit v **Průzkumník serveru**. Měly by se zobrazit všechny služby přidružené k zadanému předplatnému. I když jste se ještě přihlásili do sady Visual Studio s druhým účtem, jste přihlášeni ke službám a prostředkům tohoto účtu. Totéž platí pro **projekt**  > **Přidání připojené služby** a **týmu**  > **připojení k Team Foundation Server**.
+Volitelné Nyní můžete přejít na **Průzkumník serveru** a zobrazit služby Azure přidružené k účtu, který jste právě přidali. V **Průzkumník serveru**klikněte pravým tlačítkem na uzel **Azure** a vyberte **Spravovat a filtrovat předplatná**. Kliknutím na šipku rozevíracího seznamu vedle aktuálního účtu zvolte nový účet a pak zvolte, která předplatná chcete zobrazit v **Průzkumník serveru**. Měly by se zobrazit všechny služby přidružené k zadanému předplatnému. I když jste se ještě přihlásili do sady Visual Studio s druhým účtem, jste přihlášeni ke službám a prostředkům tohoto účtu. Totéž platí pro **projekt** > **Přidání připojené služby** a **týmu** > **připojení k Team Foundation Server**.
 
 ### <a name="add-an-account-using-device-code-flow"></a>Přidání účtu pomocí toku kódu zařízení
 
-V některých případech se nemůžete běžným způsobem přihlašovat nebo přidat účet. K tomu může dojít, pokud je z nějakého důvodu blokovaný Internet Explorer nebo pokud je vaše síť za bránou firewall. Pokud chcete tento problém obejít, můžete povolit *tok kódu zařízení* a přidat účet nebo znovu ověřit váš účet. Tok kódu zařízení vám umožňuje přihlásit se pomocí jiného prohlížeče nebo na jiný počítač &mdash;either fyzickém nebo virtuálním počítači (VM).
+V některých případech se nemůžete běžným způsobem přihlašovat nebo přidat účet. K tomu může dojít, pokud je z nějakého důvodu blokovaný Internet Explorer nebo pokud je vaše síť za bránou firewall. Pokud chcete tento problém obejít, můžete povolit *tok kódu zařízení* a přidat účet nebo znovu ověřit váš účet. Tok kódu zařízení vám umožňuje přihlásit se pomocí jiného prohlížeče nebo na jiný počítač&mdash;fyzickým nebo virtuálním virtuálním počítači (VM).
 
 Přihlášení pomocí toku kódu zařízení:
 
-1. Otevřete stránku [**účty**](reference/accounts-environment-options-dialog-box.md) v nabídce **nástroje**  > **Možnosti**  > **prostředí**a pak **při přidávání nebo opětovném ověřování účtu vyberte Povolit tok kódu zařízení**. Kliknutím na **tlačítko OK** zavřete stránky možnosti.
+1. Otevřete stránku [**účty**](reference/accounts-environment-options-dialog-box.md) v nabídce **nástroje** > **Možnosti** > **prostředí**a pak **při přidávání nebo opětovném ověřování účtu vyberte Povolit tok kódu zařízení**. Kliknutím na **tlačítko OK** zavřete stránky možnosti.
 
-1. Vyberte **soubor**  > **Nastavení účtu** a otevřete stránku Správa účtů.
+1. Vyberte **soubor** > **Nastavení účtu** a otevřete stránku Správa účtů.
 
 1. V části **všechny účty**vyberte **Přidat účet** .
 
@@ -107,7 +107,7 @@ Přihlášení pomocí toku kódu zařízení:
 
    ![Adresa URL a kód toku kódu zařízení](media/work-with-multiple-user-accounts/device-login-code.png)
 
-1. Stisknutím **kombinace kláves Ctrl** +**C** zkopírujte text dialogového okna a kliknutím na **tlačítko OK** zavřete dialogové okno. Vložte zkopírovaný text do textového editoru, jako je například Poznámkový blok. To usnadňuje kopírování kódu v dalším kroku.
+1. Stisknutím **kombinace kláves Ctrl**+**C** zkopírujte text dialogového okna a kliknutím na **tlačítko OK** zavřete dialogové okno. Vložte zkopírovaný text do textového editoru, jako je například Poznámkový blok. To usnadňuje kopírování kódu v dalším kroku.
 
 1. V počítači nebo webovém prohlížeči přejděte na adresu URL pro přihlášení k zařízení, které chcete použít k přihlášení do sady Visual Studio, a vložte nebo zadejte kód, který jste zkopírovali do pole, které říká **kód**.
 
@@ -123,7 +123,7 @@ Přihlášení pomocí toku kódu zařízení:
 
    ![Přihlášení do sady Visual Studio prostřednictvím prohlížeče bylo dokončeno.](media/work-with-multiple-user-accounts/sign-in-browser-complete.png)
 
-1. Vraťte se na stránku Správa účtů v sadě Visual Studio a zobrazí se nově přidaný účet v seznamu **všechny účty**. Klikněte na tlačítko **Zavřít**.
+1. Vraťte se na stránku Správa účtů v sadě Visual Studio a zobrazí se nově přidaný účet v seznamu **všechny účty**. Zvolte **Zavřít**.
 
 ## <a name="see-also"></a>Viz také:
 

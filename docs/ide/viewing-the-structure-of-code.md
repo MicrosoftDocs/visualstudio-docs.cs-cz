@@ -20,17 +20,17 @@ helpviewer_keywords:
 - Visual Studio, call hierarchy window
 - class view
 - object browser
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fc7ade360ac586f09eb838057251172be5d0e81
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b73a4660c9e0dad66ceb73c04852601765174264
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647309"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594198"
 ---
 # <a name="view-the-structure-of-code-using-different-tool-windows"></a>Zobrazení struktury kódu pomocí různých oken nástrojů
 
@@ -57,7 +57,7 @@ Panel nástrojů **zobrazení tříd** obsahuje následující příkazy:
 |||
 |-|-|
 |**Nová složka**|Vytvoří virtuální složku nebo podsložku, ve které můžete uspořádat často používané prvky. Jsou uloženy v souboru aktivního řešení ( *. suo*). Po přejmenování nebo odstranění elementu v kódu se může zobrazit ve virtuální složce jako chybový uzel. Chcete-li tento problém vyřešit, odstraňte chybový uzel. Pokud jste přejmenovali element, můžete jej přesunout z hierarchie projektu do složky znovu.|
-|**Návrat**|Přejde k dříve vybrané položce.|
+|**Zpět**|Přejde k dříve vybrané položce.|
 |**Komisi**|Přejde na další vybranou položku.|
 |**Zobrazení diagramu tříd** (pouze projekty spravovaného kódu)|Bude k dispozici, když v **zobrazení tříd**vyberete obor názvů nebo typ. Když je vybrán obor názvů, diagram třídy zobrazí všechny typy v něm. Když je vybrán typ, diagram třídy zobrazí pouze tento typ.|
 
@@ -86,7 +86,7 @@ Místní nabídka (nebo kliknutí pravým tlačítkem myši) v **zobrazení tř�
 |**Procházet definici**|Zobrazí vybranou položku v **Prohlížeč objektů**.|
 |**Najít všechny odkazy**|Vyhledá aktuálně vybranou položku objektu a zobrazí výsledky v okně **hledání výsledků** .|
 |**Filtrovat podle typu** (jenom spravovaný kód)|Zobrazí pouze vybraný typ nebo obor názvů. Filtr můžete odebrat tak, že kliknete na tlačítko **Vymazat hledání** (**X**) vedle pole **Najít** .|
-|**Kopií**|Zkopíruje plně kvalifikovaný název položky.|
+|**Copy**|Zkopíruje plně kvalifikovaný název položky.|
 |**Seřadit abecedně**|Zobrazí seznam typů a členů abecedně podle názvu.|
 |**Seřadit podle typu člena**|Seznam typů a členů v pořadí podle typu (takové třídy předcházejí rozhraní, rozhraní před delegáty a metody předcházejí vlastností).|
 |**Seřadit podle přístupu ke členům**|Zobrazí seznam typů a členů v pořadí podle typu přístupu, jako je například Public nebo Private.|
@@ -118,8 +118,8 @@ Místní nabídka v okně **hierarchie volání** obsahuje následující přík
 |**Odebrat kořen**|Odebere vybraný kořenový uzel z podokna zobrazení stromu.|
 |**Přejít k definici**|Přejde k původní definici metody.|
 |**Najít všechny odkazy**|Najde v projektu všechny odkazy na vybranou metodu.|
-|**Kopií**|Zkopíruje vybraný uzel (ale ne jeho poduzely).|
-|**Téhle**|Aktualizuje informace.|
+|**Copy**|Zkopíruje vybraný uzel (ale ne jeho poduzely).|
+|**Aktualizace**|Aktualizuje informace.|
 
 ## <a name="BKMK_ObjectBrowser"></a>Prohlížeč objektů
 
@@ -173,8 +173,8 @@ Místní nabídka (nebo kliknutí pravým tlačítkem myši) v **Prohlížeč ob
 |**Procházet definici**|Zobrazuje primární uzel pro vybranou položku.|
 |**Najít všechny odkazy**|Vyhledá aktuálně vybranou položku objektu a zobrazí výsledky v okně **hledání výsledků** .|
 |**Filtrovat podle typu**|Zobrazí pouze vybraný typ nebo obor názvů. Filtr můžete odebrat tak, že kliknete na tlačítko **Vymazat hledání** .|
-|**Kopií**|Zkopíruje plně kvalifikovaný název položky.|
-|**Odebrány**|Pokud je oborem vlastní sada komponent, aplikace Odebere vybranou komponentu z oboru.|
+|**Copy**|Zkopíruje plně kvalifikovaný název položky.|
+|**odebrat**|Pokud je oborem vlastní sada komponent, aplikace Odebere vybranou komponentu z oboru.|
 |**Seřadit abecedně**|Zobrazí seznam typů a členů abecedně podle názvu.|
 |**Seřadit podle typu objektu**|Seznam typů a členů v pořadí podle typu (takové třídy předcházejí rozhraní, rozhraní před delegáty a metody předcházejí vlastností).|
 |**Seřadit podle přístupu k objektům**|Zobrazí seznam typů a členů v pořadí podle typu přístupu, jako je například Public nebo Private.|
@@ -200,7 +200,7 @@ Místní nabídka (nebo kliknutí pravým tlačítkem myši) v okně **definice 
 |||
 |-|-|
 |**Rychlé akce a refaktoringy**||
-|**Přejmenování**||
+|**Přejmenovat**||
 |**Generovat graf souborů zahrnutí**||
 |**Náhled definice**||
 |**Přejít k definici**|Najde definici (nebo definice) pro částečné třídy a zobrazí je v okně **výsledků hledání** .|
@@ -212,7 +212,7 @@ Místní nabídka (nebo kliknutí pravým tlačítkem myši) v okně **definice 
 |**Ladit testy**||
 |**Bodu**|Vloží zarážku (nebo zarážka s trasováním).|
 |**Spustit ke kurzoru**|Spustí program v režimu ladění do umístění kurzoru.|
-|**Zlomk**||
+|**Fragment kódu**||
 |**Vyjmutí**, **zkopírování**a **vložení**||
 |**Poznámka**||
 |**Sbalení**|Standardní příkazy pro sbalení.|
@@ -220,7 +220,7 @@ Místní nabídka (nebo kliknutí pravým tlačítkem myši) v okně **definice 
 |**Upravit definici**|Přesune kurzor do definice v okně Code (kód).|
 |**Zvolit kódování**|Otevře okno **kódování** , aby bylo možné nastavit kódování souboru.|
 
-## <a name="document-outline-window"></a>Okno Osnova dokumentu
+## <a name="document-outline-window"></a>Osnova dokumentu – okno
 
 Můžete použít okno **Osnova dokumentu** ve spojení s zobrazeními návrháře, jako je například Návrhář pro stránku XAML nebo Návrhář formuláře Windows nebo se stránkami HTML. V tomto okně se zobrazí prvky ve stromovém zobrazení, takže můžete zobrazit logickou strukturu formuláře nebo stránky a vyhledat ovládací prvky, které jsou hluboko vložené nebo skryté.
 

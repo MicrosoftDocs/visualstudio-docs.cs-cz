@@ -16,23 +16,23 @@ helpviewer_keywords:
 - updated data saving
 - related tables, saving
 ms.assetid: 68bae3f6-ec9b-45ee-a33a-69395029f54c
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 33ca9f91c9b1105af43af21a91f25be13e153aa9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 158908c45d33781bc9f983950d5558a23481ad37
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648451"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586572"
 ---
 # <a name="hierarchical-update"></a>Hierarchická aktualizace
 
 *Hierarchická aktualizace* odkazuje na proces ukládání aktualizovaných dat (z datové sady se dvěma nebo více souvisejícími tabulkami) zpátky do databáze a přitom zachovává pravidla referenční integrity. *Referenční integrita* odkazuje na pravidla konzistence poskytnutá omezeními v databázi, která řídí chování při vkládání, aktualizaci a odstraňování souvisejících záznamů. Jedná se například o referenční integritu, která vynutila vytvoření záznamu zákazníka před tím, než umožní vytvořit objednávky pro daného zákazníka.  Další informace o relacích v datových sadách naleznete v tématu [relace v datových sadách](../data-tools/relationships-in-datasets.md).
 
-Funkce hierarchické aktualizace používá `TableAdapterManager` ke správě `TableAdapter`s v typované datové sadě. Komponenta `TableAdapterManager` je třída vygenerovaná v rámci sady Visual Studio, nikoli typ .NET. Když přetáhnete tabulku z okna **zdroje dat** na stránku Windows Form nebo WPF, Visual Studio přidá proměnnou typu TableAdapterManager do formuláře nebo stránky a zobrazí se v návrháři v zásobníku komponent. Podrobné informace o třídě `TableAdapterManager` naleznete v části Reference k TableAdapterManager v tématu [objekty TableAdapter](../data-tools/create-and-configure-tableadapters.md).
+Funkce hierarchické aktualizace používá `TableAdapterManager` ke správě `TableAdapter`v typované datové sadě. Komponenta `TableAdapterManager` je třída vygenerovaná v rámci sady Visual Studio, nikoli typ .NET. Když přetáhnete tabulku z okna **zdroje dat** na stránku Windows Form nebo WPF, Visual Studio přidá proměnnou typu TableAdapterManager do formuláře nebo stránky a zobrazí se v návrháři v zásobníku komponent. Podrobné informace o třídě `TableAdapterManager` naleznete v části Reference k TableAdapterManager v tématu [objekty TableAdapter](../data-tools/create-and-configure-tableadapters.md).
 
 Ve výchozím nastavení datová sada zpracovává související tabulky jako "jenom relace", což znamená, že neuplatňuje omezení cizího klíče. Toto nastavení můžete upravit v době návrhu pomocí **Návrhář datových sad**. Vyberte čáru relace mezi dvěma tabulkami a zobrazte tak dialogové okno **relace** . Změny, které zde provedete, určí způsob, jakým se `TableAdapterManager` chová, když odešlou změny v souvisejících tabulkách zpátky do databáze.
 
@@ -52,13 +52,13 @@ Chcete-li vytvořit novou relaci mezi dvěma tabulkami, vyberte v Návrhář dat
 
 Je důležité pochopit, jak se v generovaném kódu datové sady vytvoří omezení cizího klíče a kaskádové chování v databázi.
 
-Ve výchozím nastavení jsou tabulky dat v datové sadě vygenerovány se vztahy (<xref:System.Data.DataRelation>), které se shodují s relacemi v databázi. Vztah v datové sadě ale není generovaný jako omezení cizího klíče. @No__t_0 je nakonfigurován jako **vztah pouze** bez <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> nebo <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> v platnosti.
+Ve výchozím nastavení jsou tabulky dat v datové sadě vygenerovány se vztahy (<xref:System.Data.DataRelation>), které se shodují s relacemi v databázi. Vztah v datové sadě ale není generovaný jako omezení cizího klíče. <xref:System.Data.DataRelation> je nakonfigurován jako **vztah pouze** bez <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> nebo <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> v platnosti.
 
 Ve výchozím nastavení jsou kaskádové aktualizace a kaskádové odstranění vypnuté i v případě, že je v relaci databáze nastavená kaskádová aktualizace nebo kaskádová odstranění. Například vytvořením nového zákazníka a nové objednávky a následným pokusem o uložení dat může dojít ke konfliktu s omezeními cizího klíče, které jsou definovány v databázi. Další informace najdete v tématu vypnutí [omezení při naplňování datové sady](turn-off-constraints-while-filling-a-dataset.md).
 
 ## <a name="set-the-order-to-perform-updates"></a>Nastavení pořadí provádění aktualizací
 
-Nastavení pořadí provádění aktualizací nastaví pořadí jednotlivých vložení, aktualizací a odstranění, které jsou nutné k uložení všech upravených dat ve všech tabulkách datové sady. Pokud je povolena Hierarchická aktualizace, jsou nejprve provedeny příkazy INSERT a pak aktualizace a pak jsou odstraněny. @No__t_0 poskytuje vlastnost `UpdateOrder`, která se dá nastavit tak, aby prováděla aktualizace, a pak vloží a pak odstraní.
+Nastavení pořadí provádění aktualizací nastaví pořadí jednotlivých vložení, aktualizací a odstranění, které jsou nutné k uložení všech upravených dat ve všech tabulkách datové sady. Pokud je povolena Hierarchická aktualizace, jsou nejprve provedeny příkazy INSERT a pak aktualizace a pak jsou odstraněny. `TableAdapterManager` poskytuje vlastnost `UpdateOrder`, která se dá nastavit tak, aby prováděla aktualizace, a pak vloží a pak odstraní.
 
 > [!NOTE]
 > Je důležité si uvědomit, že pořadí aktualizací je všechny zahrnuté. To znamená, že při provádění aktualizací jsou pro všechny tabulky v datové sadě provedeny vložení a pak odstranění.
@@ -80,7 +80,7 @@ Uložte změny ze souvisejících tabulek dat v datové sadě do databáze volá
 
 Po vyřazení položek z okna **zdroje dat** je kód automaticky přidán do události `Form_Load` pro naplnění každé tabulky (`TableAdapter.Fill` metody). Pro uložení dat z datové sady zpět do databáze (metoda `TableAdapterManager.UpdateAll`) se na událost <xref:System.Windows.Forms.BindingNavigator> tlačítka **Uložit** přidá i kód.
 
-Generovaný kód pro uložení obsahuje také řádek kódu, který volá metodu `CustomersBindingSource.EndEdit`. Konkrétně volá metodu <xref:System.Windows.Forms.BindingSource.EndEdit%2A> prvního <xref:System.Windows.Forms.BindingSource>that přidané do formuláře. Jinými slovy, tento kód je generován pouze pro první tabulku, která je přetažena z okna **zdroje dat** do formuláře. @No__t_0 volání potvrdí všechny změny, které jsou zpracovávány v rámci všech právě upravovaných ovládacích prvků vázaných na data. Proto pokud ovládací prvek vázaný na data stále obsahuje fokus a kliknete na tlačítko **Uložit** , všechny čekající úpravy v tomto ovládacím prvku se potvrdí před samotným uložením (`TableAdapterManager.UpdateAll` metoda).
+Generovaný kód pro uložení obsahuje také řádek kódu, který volá metodu `CustomersBindingSource.EndEdit`. Konkrétně volá metodu <xref:System.Windows.Forms.BindingSource.EndEdit%2A> prvního <xref:System.Windows.Forms.BindingSource>, která je přidána do formuláře. Jinými slovy, tento kód je generován pouze pro první tabulku, která je přetažena z okna **zdroje dat** do formuláře. <xref:System.Windows.Forms.BindingSource.EndEdit%2A> volání potvrdí všechny změny, které jsou zpracovávány v rámci všech právě upravovaných ovládacích prvků vázaných na data. Proto pokud ovládací prvek vázaný na data stále obsahuje fokus a kliknete na tlačítko **Uložit** , všechny čekající úpravy v tomto ovládacím prvku se potvrdí před samotným uložením (`TableAdapterManager.UpdateAll` metoda).
 
 > [!NOTE]
 > **Návrhář datových sad** přidá pouze `BindingSource.EndEdit` kód první tabulky, která je na formuláři vynechána. Proto je nutné přidat řádek kódu pro volání metody `BindingSource.EndEdit` pro každou tabulku v relaci ve formuláři. Pro tento návod to znamená, že musíte přidat volání metody `OrdersBindingSource.EndEdit`.
@@ -120,7 +120,7 @@ Následující jsou často používané metody a vlastnosti `TableAdapterManager
 
 |Člen|Popis|
 |------------|-----------------|
-|`UpdateAll` – metoda|Uloží všechna data ze všech tabulek dat.|
+|Metoda `UpdateAll`|Uloží všechna data ze všech tabulek dat.|
 |`BackUpDataSetBeforeUpdate` – vlastnost|Určuje, zda má být před provedením metody `TableAdapterManager.UpdateAll` vytvořena záložní kopie datové sady. Datového.|
 |vlastnost *tableName* `TableAdapter`|Představuje `TableAdapter`. Vygenerovaná `TableAdapterManager` obsahuje vlastnost pro každý `TableAdapter`, která spravuje. Například datová sada s tabulkou Customers and Orders je vygenerována s `TableAdapterManager`, která obsahuje vlastnosti `CustomersTableAdapter` a `OrdersTableAdapter`.|
 |`UpdateOrder` – vlastnost|Určuje pořadí jednotlivých příkazů INSERT, Update a DELETE. Nastavte tuto hodnotu na jednu z hodnot ve výčtu `TableAdapterManager.UpdateOrderOption`.<br /><br /> Ve výchozím nastavení je `UpdateOrder` nastavena na **InsertUpdateDelete**. To znamená, že vložení, následné aktualizace a následné odstranění jsou prováděny pro všechny tabulky v datové sadě.|

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - data access [Visual Studio], objects
 - saving data
 ms.assetid: efd6135a-40cf-4b0d-8f8b-41a5aaea7057
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5208b7764949f6ba6d3e862c7a2102608afb7e24
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 509910730d4da095b6db622212716a8f958495d7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648216"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586260"
 ---
 # <a name="save-data-from-an-object-to-a-database"></a>Uložení dat z objektu do databáze
 
@@ -33,11 +33,11 @@ Ve výchozím nastavení jsou `DBDirect` metody vytvořeny na TableAdapter, kter
 > [!NOTE]
 > Při konfiguraci TableAdapter musí hlavní dotaz poskytnout dostatek informací, aby bylo možné vytvořit metody `DBDirect`. Pokud je například TableAdapter nakonfigurovaný na dotazování dat z tabulky, která nemá definovaný sloupec primárního klíče, negeneruje metody `DBDirect`.
 
-|TableAdapter DBDirect – metoda|Popis|
+|TableAdapter dbdirect – metody|Popis|
 | - |-----------------|
 |`TableAdapter.Insert`|Přidá nové záznamy do databáze a umožňuje předat hodnoty jednotlivých sloupců jako parametry metody.|
-|`TableAdapter.Update`|Aktualizuje existující záznamy v databázi. Metoda `Update` přebírá původní a nové hodnoty sloupce jako parametry metody. Původní hodnoty se používají k vyhledání původního záznamu a k aktualizaci tohoto záznamu se použijí nové hodnoty.<br /><br /> Metoda `TableAdapter.Update` slouží také k sjednocení změn v datové sadě zpět do databáze tím, že převezmete <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, <xref:System.Data.DataRow> nebo pole <xref:System.Data.DataRow>s jako parametry metody.|
-|`TableAdapter.Delete`|Odstraní existující záznamy z databáze na základě původních hodnot sloupců předaných jako parametry metody.|
+|`TableAdapter.Update`|Aktualizace existujících záznamů v databázi. Metoda `Update` přebírá původní a nové hodnoty sloupce jako parametry metody. Původní hodnoty se používají pro vyhledání záznamu původní a nové hodnoty se používají k aktualizaci záznamu.<br /><br /> Metoda `TableAdapter.Update` slouží také k sjednocení změn v datové sadě zpět do databáze tím, že převezme <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, <xref:System.Data.DataRow>nebo pole <xref:System.Data.DataRow>s jako parametry metody.|
+|`TableAdapter.Delete`|Odstraní existující záznamy z databáze založené na původní hodnoty ve sloupcích předané jako parametry metod.|
 
 ## <a name="to-save-new-records-from-an-object-to-a-database"></a>Uložení nových záznamů z objektu do databáze
 
@@ -74,7 +74,7 @@ Ve výchozím nastavení jsou `DBDirect` metody vytvořeny na TableAdapter, kter
 
 ## <a name="net-security"></a>Zabezpečení .NET
 
-Musíte mít oprávnění k provedení vybraných `INSERT`, `UPDATE` nebo `DELETE` v tabulce v databázi.
+Musíte mít oprávnění k provedení vybraných `INSERT`, `UPDATE`nebo `DELETE` v tabulce v databázi.
 
 ## <a name="see-also"></a>Viz také:
 

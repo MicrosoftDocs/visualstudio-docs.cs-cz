@@ -6,17 +6,17 @@ f1_keywords:
 - vs.codeanalysis.policyeditor
 helpviewer_keywords:
 - code analysis, migrating check-in policy
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6d502dc75530bb6b95f38b069b9220c5ad54cac
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d034d65cd356ff44a42d10840ae064d81713457f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649478"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587534"
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>Postupy: Vytváření nebo aktualizace standardních zásad vracení se změnami Analýzy kódu
 
@@ -61,7 +61,7 @@ V seznamu **Spustit tuto sadu pravidel** použijte jednu z následujících meto
 
 - Vyberte standardní sadu pravidel společnosti Microsoft.
 
-- Vyberte sadu vlastních pravidel kliknutím na **\<Select sadu pravidel ze správy zdrojového kódu... >** . Pak zadejte cestu správy verzí sady pravidel v prohlížeči správy zdrojového kódu. Syntaxe cesty správy verzí je:
+- Vyberte sadu vlastních pravidel kliknutím na **\<vybrat sadu pravidel ze správy zdrojového kódu... >** . Pak zadejte cestu správy verzí sady pravidel v prohlížeči správy zdrojového kódu. Syntaxe cesty správy verzí je:
 
    **$/** `TeamProjectName` **/** `VersionControlPath`
 
@@ -69,4 +69,4 @@ Další informace o tom, jak vytvořit a implementovat sadu pravidel pro vlastn�
 
 ## <a name="see-also"></a>Viz také:
 
-- [Vytvoření a použití zásad vrácení se změnami analýzy kódu](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)
+- [Implementace vlastních zásad vracení zpět se změnami analýzy kódu pro spravovaný kód](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md)

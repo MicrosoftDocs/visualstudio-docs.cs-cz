@@ -3,15 +3,15 @@ title: Klávesové zkratky pro Návrhář XAML
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 40211cc7-294a-4943-85a4-941ad6418dad
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: fededb6127c306c9cecfca5bde479b0b80972212
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f9f30dd3eaeb6905088e7eec9db1fa9cc2b0f32c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650919"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592957"
 ---
 # <a name="keyboard-shortcuts-for-xaml-designer"></a>Klávesové zkratky pro Návrhář XAML
 
@@ -34,7 +34,7 @@ Tato tabulka obsahuje seznam klávesových zkratek, které jsou k dispozici pro 
 |Vybrat všechny elementy|Stiskněte klávesu **Ctrl**+**A**|
 |Vymazat výběr všech elementů|Stiskněte klávesu **Ctrl**+**SHIFT**+**A**|
 |Zobrazit nebo skrýt obslužné rutiny elementu|Stiskněte **F9**|
-|Vyberte vlastnost pro element.|Po vybrání prvku a zaměření na okno Vlastnosti stiskněte klávesu **TAB**. (Použijte**kartu** **CTRL**+, chcete-li změnit fokus na okno Vlastnosti.) Pomocí kláves se šipkami můžete vybrat hodnoty vlastností z rozevíracích seznamů.|
+|Vyberte vlastnost pro element.|Po vybrání prvku a zaměření na okno Vlastnosti stiskněte klávesu **TAB**. (Pomocí **klávesy Ctrl**+**TAB** změňte fokus na okno Vlastnosti.) Pomocí kláves se šipkami můžete vybrat hodnoty vlastností z rozevíracích seznamů.|
 
 ## <a name="document-outline-window-shortcuts"></a>Klávesové zkratky v okně Osnova dokumentu
 
@@ -42,7 +42,7 @@ Následující tabulka obsahuje seznam klávesových zkratek, které jsou k disp
 
 |**K provedení této akce**|**Postup**|
 | - |-----------------|
-|Skrýt objekty návrhové plochy, když se fokus nachází v okně Osnova dokumentu|**Ctrl**+**H**|
+|Skrýt objekty návrhové plochy, když se fokus nachází v okně Osnova dokumentu|**CTRL**+**H**|
 |Odkrýt objekty návrhové plochy, když se fokus nachází v okně Osnova dokumentu|**Shift**+**CTRL**+**H**|
 |Zamknutí objektů na návrhové ploše, když je fokus v okně Osnova dokumentu|**Ctrl**+**L**|
 |Odemknutí objektů na návrhové ploše, když je fokus v okně Osnova dokumentu|**Shift**+**CTRL**+**L**|

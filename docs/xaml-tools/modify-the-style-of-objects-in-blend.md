@@ -3,17 +3,17 @@ title: Úpravy stylu objektů
 titleSuffix: Blend for Visual Studio
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 225a9e85493711a1e2903c1f6a632ae68f31136f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f38bfc7a6899ff1d61b8103204bb58df5c5106a6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668826"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592950"
 ---
 # <a name="modify-the-style-of-objects-in-blend-for-visual-studio"></a>Úprava stylu objektů v Blend pro Visual Studio
 
@@ -75,7 +75,7 @@ V dialogovém okně **vytvořit prostředek stylu** můžete buď pojmenovat sty
 
 > [!NOTE]
 > Pro každý typ ovládacího prvku nelze vytvářet styly ani šablony. Pokud je ovládací prvek nepodporuje, tlačítko s popisem cesty se nezobrazí nad návrhovou plochou.
-> Pokud se chcete vrátit do oboru úprav hlavního dokumentu, klikněte na **vrátit rozsah a** ![Return rozsah na ikonu ](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png).
+> Pokud se chcete vrátit do oboru úprav hlavního dokumentu, klikněte na **vrátit rozsah a** ![návratového rozsahu do](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png)ikony.
 
 ### <a name="apply-a-style-or-template-to-a-control"></a>Použití stylu nebo šablony pro ovládací prvek
 
@@ -85,7 +85,7 @@ V okně [objekty a časová osa](../xaml-tools/creating-a-ui-by-using-blend-for-
 
 ### <a name="restore-the-default-style-or-template-of-a-control"></a>Obnovení výchozího stylu nebo šablony ovládacího prvku
 
-Vyberte ovládací prvek a v okně * * Vlastnosti * * * * vyhledejte vlastnost **style** nebo **template** . Zvolte **Upřesnit možnosti**a potom v místní nabídce klikněte na **obnovit** .
+Vyberte ovládací prvek a v okně **Vlastnosti** ** vyhledejte vlastnost **style** nebo **template** . Zvolte **Upřesnit možnosti**a potom v místní nabídce klikněte na **obnovit** .
 
 ## <a name="visual-states"></a>Vizuální stavy
 
@@ -93,7 +93,7 @@ Vizuální stavy umožňují změnit vzhled ovládacího prvku na základě jeho
 
 ![Myš nad stavem](../designers/media/a95c671a-5639-40b9-83db-1e6b214330d5.png)
 
-**Podívejte se na krátké video:** ![Play tlačítko ](../designers/media/bldadminconsoleinitialconfigicon.PNG) [spravovat stav ovládacích prvků WPF](https://www.youtube.com/watch?v=m0PlkF5i6uw).
+**Podívejte se na krátké video:** ![tlačítko Přehrát](../designers/media/bldadminconsoleinitialconfigicon.PNG) [spravovat stav ovládacích prvků WPF](https://www.youtube.com/watch?v=m0PlkF5i6uw).
 
 ## <a name="resources-create-colors-styles-and-templates-and-reuse-them-later"></a>Prostředky: vytvořit barvy, styly a šablony a později je znovu použít
 

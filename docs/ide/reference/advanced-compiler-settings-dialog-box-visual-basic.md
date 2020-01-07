@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - Advanced Compiler Settings dialog box
 ms.assetid: 1f81133a-293f-4dba-bc1c-8baafb01d857
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0cb77021818fd77205a598f54a4a64a1929348f2
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 9ebc2da5e71dbdee13df4cf658f3681804879f58
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919362"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596928"
 ---
 # <a name="advanced-compiler-settings-dialog-box-visual-basic"></a>Dialogové okno Upřesnit nastavení kompilátoru (Visual Basic)
 
@@ -30,7 +30,7 @@ Pomocí dialogového okna **Nastavení AdvancedCompiler** **Návrháře projektu
 
 2. V nabídce **projekt** klikněte na příkaz **vlastnosti**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **kompilovat** .
 
-3. Na [stránce kompilovat Návrháře projektu (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md)vyberte **konfiguraci** a **platformu**. Ve zjednodušených konfiguracích sestavení se nezobrazí seznamy **konfigurací** a **platforem** . Další informace najdete v tématu [jak: Nastavte konfiguraci](../../debugger/how-to-set-debug-and-release-configurations.md)ladění a vydání.
+3. Na [stránce kompilovat Návrháře projektu (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md)vyberte **konfiguraci** a **platformu**. Ve zjednodušených konfiguracích sestavení se nezobrazí seznamy **konfigurací** a **platforem** . Další informace najdete v tématu [Postupy: nastavení ladění a konfigurací vydání](../../debugger/how-to-set-debug-and-release-configurations.md).
 
 4. Klikněte na možnost **Pokročilé možnosti kompilace**.
 
@@ -44,7 +44,7 @@ Následující možnosti určují optimalizace, které mohou v některých pří
 
 Toto políčko je ve výchozím nastavení zaškrtnuté, aby se povolila kontrola přetečení celého čísla. Zaškrtnutím tohoto políčka odeberete kontrolu přetečení celých čísel. Pokud zaškrtnete toto políčko, mohou být výpočty typu Integer rychlejší. Pokud však odeberete kontrolu přetečení a přetečení kapacity datového typu, mohou být uloženy nesprávné výsledky bez vyvolání chyby.
 
-Pokud jsou kontrolovány podmínky přetečení a celočíselná operace přeteče, <xref:System.OverflowException> je vyvolána výjimka. Pokud nejsou kontrolovány podmínky přetečení, celočíselná operace přetéká nevyvolává výjimku.
+Pokud jsou kontrolovány podmínky přetečení a celočíselná operace přeteče, je vyvolána výjimka <xref:System.OverflowException>. Pokud nejsou kontrolovány podmínky přetečení, celočíselná operace přetéká nevyvolává výjimku.
 
 **Povolit optimalizace**
 
@@ -72,13 +72,13 @@ Ve výchozím nastavení je toto zaškrtávací políčko zaškrtnuto a určuje,
 
  **Vlastní konstanty**
 
-Do tohoto textového pole zadejte libovolné vlastní konstanty pro vaši aplikaci. Položky by se měly oddělit čárkami, a to pomocí tohoto formuláře: **Název1 = "hodnota1", název2 = "hodnota2", Název3 = "hodnota3"** .
+Do tohoto textového pole zadejte libovolné vlastní konstanty pro vaši aplikaci. Položky by měly být odděleny čárkami, a to pomocí tohoto formuláře: **název1 = "hodnota1", název2 = "hodnota2", Název3 = "hodnota3"** .
 
-## <a name="other-settings"></a>Další nastavení
+## <a name="other-settings"></a>Other Settings
 
 **Generovat serializace sestavení**
 
-Toto nastavení určuje, zda bude kompilátor vytvářet sestavení serializace XML. Sestavení serializace mohou zlepšit výkon <xref:System.Xml.Serialization.XmlSerializer> při spuštění v případě, že jste tuto třídu použili k serializaci typů ve vašem kódu. Výchozí hodnota této možnosti je **auto**. **Automaticky** určuje, že sestavení serializace budou generována pouze v <xref:System.Xml.Serialization.XmlSerializer> případě, že jste použili ke kódování typů v kódu do XML. **Off** určuje, že sestavení serializace nikdy nebyla vygenerována bez ohledu na to <xref:System.Xml.Serialization.XmlSerializer>, zda váš kód používá. **V** určuje, zda mají být sestavení serializace vždy vygenerována. Sestavení serializace jsou `TypeName`pojmenována. XmlSerializers. dll.
+Toto nastavení určuje, zda bude kompilátor vytvářet sestavení serializace XML. Sestavení serializace mohou zlepšit výkon při spuštění <xref:System.Xml.Serialization.XmlSerializer>, pokud jste tuto třídu použili k serializaci typů ve vašem kódu. Výchozí hodnota této možnosti je **auto**. **Automaticky** určuje, že sestavení serializace budou generována pouze v případě, že jste použili <xref:System.Xml.Serialization.XmlSerializer> ke kódování typů v kódu do XML. **Off** určuje, že sestavení serializace nikdy nebyla vygenerována bez ohledu na to, zda váš kód používá <xref:System.Xml.Serialization.XmlSerializer>. **V** určuje, zda mají být sestavení serializace vždy vygenerována. Sestavení serializace jsou pojmenována `TypeName`. XmlSerializers. dll.
 
 ## <a name="see-also"></a>Viz také:
 

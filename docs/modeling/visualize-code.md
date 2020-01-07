@@ -6,21 +6,21 @@ helpviewer_keywords:
 - code, understanding
 - code, visualizing
 - code, exploring
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 073a91e9bafca41192a12a20a7c06ff89644085f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 56b938321c2b6d1161052ac2358547d72a6bf4e7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663704"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593990"
 ---
 # <a name="visualize-code"></a>Vizualizace kódu
 
-Pomocí nástrojů pro vizualizaci a modelování v aplikaci Visual Studio můžete pochopit existující kód a popsat svou aplikaci. To vám umožní vizuálně zjistit, jak změny můžou ovlivnit kód, a pomohou vám posoudit práci a rizika vyplývající z těchto změn. Příklad:
+Pomocí nástrojů pro vizualizaci a modelování v aplikaci Visual Studio můžete pochopit existující kód a popsat svou aplikaci. To vám umožní vizuálně zjistit, jak by mohly vaše změny ovlivnit kód, a pomůže vám to posoudit práci a rizika vyplývající z těchto změn. Příklad:
 
 - Chcete-li pochopit vztahy v kódu, namapujte tyto vztahy vizuálně.
 

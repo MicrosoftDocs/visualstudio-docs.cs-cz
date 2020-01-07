@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4789248a129bcd41452af1184418f9f59ede7595
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: c3c6eed20fc1f2b76c02865c2a5f6b21cde1ae51
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72562576"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589991"
 ---
 # <a name="step-6-add-a-subtraction-problem"></a>Krok 6: Přidání problému odčítání
 V šesté části tohoto kurzu přidáte problém odčítání a naučíte se, jak provádět následující úlohy:
@@ -61,12 +61,12 @@ V šesté části tohoto kurzu přidáte problém odčítání a naučíte se, j
 
      Můžete volat metodu `Next()` náhodné třídy, kterou jste pojmenovali "randomizer" dříve v tomto kurzu, a to více způsoby. Metody, které lze volat více než jedním způsobem, jsou označovány jako přetížené a můžete je prozkoumat pomocí technologie IntelliSense. Vyhledejte znovu v popisku okna technologie IntelliSense pro metodu `Next()`.
 
-     ![IntelliSense Popis okna ](../ide/media/express_overloads.png)<br/>
+     ![popisku okna technologie IntelliSense](../ide/media/express_overloads.png)<br/>
 *Popisek okna* IntelliSense
 
      Popis zobrazuje **(+ 2 přetížení)** , což znamená, že můžete volat metodu `Next()` dvěma dalšími způsoby. Přetížení obsahují odlišná čísla nebo typy argumentů, aby byly mírně odlišné od sebe. Například metoda může mít jeden celočíselný argument a jedno z jeho přetížení může mít celočíselnou hodnotu a řetězec. Můžete zvolit správné přetížení na základě toho, co chcete udělat. Když přidáte kód do metody `StartTheQuiz()`, zobrazí se v okně IntelliSense Další informace hned po zadání `randomizer.Next(`. Chcete-li cyklicky přepínat, vyberte **šipky nahoru** a **dolů** , jak je znázorněno na následujícím obrázku:
 
-     ![Overload pro další&#40; &#41; metodu v IntelliSense ](../ide/media/express_nextoverload.png)<br/>
+     ![Overload pro metodu&#40; &#41; Next v technologii IntelliSense](../ide/media/express_nextoverload.png)<br/>
 *Overload pro* metodu ***Next ()*** *v* ***IntelliSense***
 
      V takovém případě chcete zvolit poslední přetížení, protože můžete zadat minimální a maximální hodnoty.
@@ -87,7 +87,7 @@ V šesté části tohoto kurzu přidáte problém odčítání a naučíte se, j
 
      Váš program zahrnuje úlohu odčítání, jak ukazuje následující obrázek:
 
-     ![Math kvízu s problémem odčítání ](../ide/media/express_addsubtract.png)<br/>
+     ![Matematický kvíz s problémem odčítání](../ide/media/express_addsubtract.png)<br/>
 ***Matematický kvíz*** *s problémem odčítání*
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat

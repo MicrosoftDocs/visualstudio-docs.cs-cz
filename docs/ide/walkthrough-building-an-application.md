@@ -3,17 +3,17 @@ title: 'Návod: Sestavení aplikace'
 ms.date: 09/25/2017
 ms.technology: vs-ide-compile
 ms.topic: conceptual
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f94cc62cdadb2df3806f5b188278f49e4041235
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 570dd2044346ace8a51096a04842ea88de0a8803
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647176"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594146"
 ---
 # <a name="walkthrough-build-an-application"></a>Návod: Sestavení aplikace
 
@@ -35,25 +35,25 @@ Konfigurace a nastavení platformy můžete změnit nebo vytvořit pomocí dialo
 
    ![Nabídka sestavení, Configuration Manager příkaz](../ide/media/buildwalk_configurationmanagerdialogbox.png)
 
-1. V seznamu **aktivní konfigurace řešení** vyberte možnost **\<New... \>** .
+1. V seznamu **aktivní konfigurace řešení** vyberte možnost **\<nový...\>** .
 
 1. V dialogovém okně **Nová konfigurace řešení** zadejte název nové konfigurace `Test`, zkopírujte nastavení z existující konfigurace **ladění** a pak klikněte na tlačítko **OK** .
 
    ![Dialogové okno Nová konfigurace řešení](../ide/media/buildwalk_newsolutionconfigdlgbox.png)
 
-1. V seznamu **Aktivní platforma řešení** vyberte **\<New... \>** .
+1. V seznamu **Aktivní platforma řešení** vyberte **\<nový...\>** .
 
 1. V dialogovém okně **Nová platforma řešení** vyberte **x64**a nekopírujte nastavení z platformy x86.
 
    ![Dialogové okno Nová platforma řešení](../ide/media/buildwalk_newsolutionplatform.png)
 
-1. Klikněte na tlačítko **OK** .
+1. Zvolte **OK** tlačítko.
 
    Konfigurace aktivního řešení se změnila na **test** s aktivní platformou řešení nastavenou na x64.
 
    ![Configuration Manager s konfigurací testu](../ide/media/buildwalk_configmanagertestconfig.png)
 
-1. Klikněte na tlačítko **Zavřít**.
+1. Zvolte **Zavřít**.
 
 Můžete rychle ověřit nebo změnit konfiguraci aktivního řešení pomocí seznamu **Konfigurace řešení** na **standardním** panelu nástrojů.
 
@@ -65,7 +65,7 @@ V dalším kroku sestavíte řešení s vlastní konfigurací sestavení.
 
 ### <a name="build-the-solution"></a>Sestavení řešení
 
-- Na panelu nabídek zvolte **sestavení**  > **Sestavit řešení**nebo stiskněte **klávesovou zkratku CTRL** +**SHIFT** +**B**.
+- Na panelu nabídek zvolte **sestavení** > **Sestavit řešení**nebo stiskněte **klávesovou zkratku CTRL**+**SHIFT**+**B**.
 
     V okně **výstup** se zobrazí výsledky sestavení. Sestavení bylo úspěšné.
 
@@ -93,7 +93,7 @@ Můžete dočasně skrýt určité varovné zprávy během sestavování, ale ne
 
 1. V **Průzkumník řešení**vyberte uzel projektu nejvyšší úrovně.
 
-1. Na panelu nabídek vyberte možnost **zobrazit**  > **stránky vlastností**.
+1. V panelu nabídky zvolte **zobrazení** > **stránky vlastností**.
 
      Otevře se **Návrhář projektu** .
 
@@ -113,7 +113,7 @@ Můžete dočasně skrýt určité varovné zprávy během sestavování, ale ne
 
 1. V **Průzkumník řešení**vyberte uzel projektu nejvyšší úrovně.
 
-2. Na panelu nabídek vyberte možnost **zobrazit**  > **stránky vlastností**.
+2. V panelu nabídky zvolte **zobrazení** > **stránky vlastností**.
 
      Otevře se **Návrhář projektu** .
 
@@ -121,7 +121,7 @@ Můžete dočasně skrýt určité varovné zprávy během sestavování, ale ne
 
      ![Stránka Kompilovat, Návrhář projektu](../ide/media/buildwalk_vbsuppresswarnings.png)
 
-     Další informace najdete v tématu [Konfigurace upozornění v Visual Basic](../ide/configuring-warnings-in-visual-basic.md).
+     Další informace najdete v tématu [Konfigurace upozornění v jazyce Visual Basic](../ide/configuring-warnings-in-visual-basic.md).
 
 4. Sestavte řešení.
 
@@ -148,18 +148,18 @@ Můžete změnit, kolik informací o procesu sestavení se zobrazí v okně **v�
 
 1. V seznamu **podrobností výstupu sestavení projektu nástroje MSBuild** zvolte možnost **normální**a pak klikněte na tlačítko **OK** .
 
-1. Na panelu nabídek vyberte možnost **sestavit**  > **Vyčistit řešení**.
+1. Na panelu nabídek vyberte možnost **sestavit** > **Vyčistit řešení**.
 
 1. Sestavte řešení a pak zkontrolujte informace v okně **výstup** .
 
      Informace o sestavení zahrnují čas spuštění sestavení (umístěný na začátku) a pořadí, ve kterém byly soubory zpracovány. Tyto informace obsahují také skutečnou syntaxi kompilátoru, kterou Visual Studio spouští během sestavení.
 
-     Například v C# sestavách možnost [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) vypíše kód upozornění, **1762**, který jste zadali dříve v tomto tématu, spolu se třemi dalšími upozorněními.
+     Například v C# sestavách možnost [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) vypíše kód upozornění, **0168**, který jste zadali dříve v tomto tématu, spolu se třemi dalšími upozorněními.
 
      V sestavách Visual Basic [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) neobsahuje specifická upozornění, která se mají vyloučit, takže se nezobrazí žádná upozornění.
 
     > [!TIP]
-    > Pokud zobrazíte dialogové okno **Najít** kliknutím na klávesovou zkratku **CTRL** +**F** , můžete vyhledat obsah okna **výstup** .
+    > Pokud zobrazíte dialogové okno **Najít** kliknutím na klávesovou zkratku **CTRL**+**F** , můžete vyhledat obsah okna **výstup** .
 
 Další informace najdete v tématu [Postup: zobrazení, uložení a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md).
 
@@ -192,13 +192,13 @@ Další informace naleznete v tématu [Postupy: Změna výstupního adresáře s
 
      ![Příkaz Sestavit řešení v nabídce sestavení](../ide/media/exploreide-buildsolution.png)
 
-### <a name="specify-a-release-build-for-c"></a>Zadejte sestavení pro vydání pro C \#
+### <a name="specify-a-release-build-for-c"></a>Zadejte sestavení pro vydání pro C\#
 
 1. Otevřete **Návrhář projektu**.
 
      ![Nabídka zobrazení, příkaz stránky vlastností](../ide/media/buildwalk_viewpropertypages.png)
 
-1. Vyberte stránku **sestavení** .
+1. Zvolte **sestavení** stránky.
 
 1. V seznamu **Konfigurace** vyberte možnost **verze**.
 

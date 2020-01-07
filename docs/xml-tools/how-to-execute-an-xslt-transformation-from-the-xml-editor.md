@@ -3,17 +3,17 @@ title: Spustit transformaci XSLT
 ms.date: 03/05/2019
 ms.topic: conceptual
 ms.assetid: 56a0fe82-5231-487d-8b6e-a08a9b04e0fc
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fb4aee348ae48a2078f7803a44d4746d3dbacc1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3bd26eaadf921d13fc425a91031a39df5a80ea2a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668809"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592695"
 ---
 # <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>Postupy: spuštění transformace XSLT z editoru XML
 
@@ -35,7 +35,7 @@ Pokud **výstupní** vlastnost určuje název souboru s příponou. *htm* nebo. 
 
     - Přidejte šablonu stylů XSLT pomocí okna **vlastnosti** . Otevřete-li soubor XML v editoru, klikněte pravým tlačítkem myši kdekoli v editoru a vyberte možnost **vlastnosti**. V okně **vlastnosti** klikněte na pole se **šablonou stylů** a vyberte tlačítko Procházet (...). Vyberte šablonu stylů XSLT a pak zvolte **otevřít**.
 
-3. Na panelu nabídek vyberte **XML**  > **Spustit XSLT bez ladění**. Nebo stiskněte klávesu **Ctrl** +**ALT** +**F5**.
+3. Na panelu nabídek vyberte **XML** > **Spustit XSLT bez ladění**. Nebo stiskněte klávesu **Ctrl**+**ALT**+**F5**.
 
    Výstup z transformace XSLT se zobrazí v novém okně dokumentu.
 
@@ -51,7 +51,7 @@ Pokud **výstupní** vlastnost určuje název souboru s příponou. *htm* nebo. 
    > [!NOTE]
    > Dokument XML je vstupní dokument, který se používá pro transformaci. Pokud při spuštění transformace XSLT není dokument zadán, zobrazí se dialogové okno **otevřít soubor** a v tomto okamžiku můžete zadat dokument.
 
-3. Na panelu nabídek vyberte **XML**  > **Spustit XSLT bez ladění**. Nebo stiskněte klávesu **Ctrl** +**ALT** +**F5**.
+3. Na panelu nabídek vyberte **XML** > **Spustit XSLT bez ladění**. Nebo stiskněte klávesu **Ctrl**+**ALT**+**F5**.
 
    Výstup z transformace XSLT se zobrazí v novém okně dokumentu.
 

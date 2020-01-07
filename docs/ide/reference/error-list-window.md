@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Error List window
 - errors [Visual Studio], Error List window
 ms.assetid: b7f6d45a-733b-4ad8-bc2f-737a37509e56
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0921d89caa6428c45dc2522e78f58bde50f84be
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8c6d925f61714c524f97a57690870229b2340d21
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654447"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75569660"
 ---
 # <a name="error-list-window"></a>Okno Seznam chyb
 
 > [!NOTE]
-> **Seznam chyb** zobrazí informace o konkrétní chybové zprávě. V okně **výstup** můžete zkopírovat číslo chyby nebo text chybové řetězce. Chcete-li zobrazit okno **výstup** , stiskněte klávesu **Ctrl** +**ALT** +**O**. Viz [okno výstup](../../ide/reference/output-window.md).
+> **Seznam chyb** zobrazí informace o konkrétní chybové zprávě. V okně **výstup** můžete zkopírovat číslo chyby nebo text chybové řetězce. Chcete-li zobrazit okno **výstup** , stiskněte klávesu **Ctrl**+**ALT**+**O**. Viz [okno výstup](../../ide/reference/output-window.md).
 
 Okno **Seznam chyb** umožňuje provádět následující úlohy:
 
@@ -41,7 +41,7 @@ Okno **Seznam chyb** umožňuje provádět následující úlohy:
 
 - Vyhledat konkrétní výrazy a určit rozsah hledání pouze v aktuálním projektu nebo dokumentu.
 
-Chcete-li zobrazit **Seznam chyb**, zvolte možnost **Zobrazit**  > **Seznam chyb**nebo stiskněte klávesu **CTRL** + **\\** +**E**.
+Chcete-li zobrazit **Seznam chyb**, zvolte možnost **Zobrazit** > **Seznam chyb**nebo stiskněte klávesu **CTRL**+ **\\** +**E**.
 
 Můžete vybrat karty **chyby**, **varování**a **zprávy** , abyste viděli různé úrovně informací.
 
@@ -88,7 +88,7 @@ Popis
 
 Zobrazí text položky.
 
-Project
+Projekt
 
 Zobrazuje název aktuálního projektu.
 
@@ -96,6 +96,6 @@ Soubor
 
 Zobrazí název souboru.
 
-Řádek
+Spojnicový
 
 Zobrazuje řádek, kde dochází k problému.

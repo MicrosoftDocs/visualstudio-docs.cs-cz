@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Sestavení stejných zdrojových souborů s různými možnostmi | Dokumentace Microsoftu'
+title: 'Postupy: sestavení stejných zdrojových souborů s různými možnostmi | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,29 +8,29 @@ helpviewer_keywords:
 - project properties, modifying
 - Hello World example [Visual Studio]
 ms.assetid: d14f1212-ddd9-434f-b138-f840011b0fb2
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cb678a05b9301982b4842d272c3032cafa46a87
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b196ae92b7388e8b9f4e1cee60a62b3839a9c120
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977340"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585229"
 ---
-# <a name="how-to-build-the-same-source-files-with-different-options"></a>Postupy: Sestavení stejných zdrojových souborů s různými možnostmi
-Při sestavování projektů často kompilaci stejné komponenty s možnostmi jiné sestavení. Můžete například vytvořit sestavení pro ladění pomocí informací o symbolu nebo sestavení pro vydání se žádné informace o symbolech, ale s povolenými optimalizacemi. Nebo můžete vytvořit projektu pro spuštění na konkrétní platformě, jako je například x86 nebo [!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)]. V těchto případech se většina možností sestavení zůstat stejná; řízení konfigurace sestavení se změní jenom pár možností. S [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], použijete k vytvoření konfigurace sestavení různé vlastnosti a podmínky.
+# <a name="how-to-build-the-same-source-files-with-different-options"></a>Postupy: sestavení stejných zdrojových souborů s různými možnostmi
+Při sestavování projektů je často možné kompilovat stejné komponenty s různými možnostmi sestavení. Můžete například vytvořit sestavení pro ladění s informacemi o symbolech nebo sestavením pro vydání bez informací o symbolu, ale s povolenými optimalizacemi. Nebo můžete sestavit projekt pro spuštění na konkrétní platformě, jako je například x86 nebo [!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)]. Ve všech těchto případech většina možností sestavení zůstává stejná; pro řízení konfigurace sestavení je změněno pouze několik možností. V [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]používáte vlastnosti a podmínky k vytvoření různých konfigurací sestavení.
 
-## <a name="use-properties-to-modify-projects"></a>Použijte vlastnosti upravit projekty
-`Property` Element definuje proměnnou, která je popsána v souboru projektu, jako je například umístění dočasného adresáře, nebo k nastavení hodnot pro vlastnosti, které se používají v sestavení několika konfigurací, jako je například sestavení pro ladění a vydání. Další informace o vlastnostech najdete v tématu [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
+## <a name="use-properties-to-modify-projects"></a>Použití vlastností pro úpravu projektů
+Element `Property` definuje proměnnou, která je v souboru projektu odkazována několikrát, jako je například umístění dočasného adresáře, nebo pro nastavení hodnot vlastností, které jsou použity v několika konfiguracích, jako je například sestavení ladění a sestavení pro vydání. Další informace o vlastnostech naleznete v tématu [MSBuild Properties](../msbuild/msbuild-properties.md).
 
-Vlastnosti můžete změnit konfiguraci sestavení bez nutnosti změny souboru projektu. `Condition` Atribut `Property` elementu a `PropertyGroup` element slouží ke změně hodnoty vlastnosti. Další informace o [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] podmínky, naleznete v tématu [podmínky](../msbuild/msbuild-conditions.md).
+Můžete použít vlastnosti pro změnu konfigurace sestavení bez nutnosti změnit soubor projektu. Atribut `Condition` elementu `Property` a prvek `PropertyGroup` umožňuje změnit hodnotu vlastností. Další informace o podmínkách [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).
 
-#### <a name="to-set-a-group-of-properties-based-on-another-property"></a>Chcete-li nastavit skupinu vlastností na základě jiné vlastnosti
+#### <a name="to-set-a-group-of-properties-based-on-another-property"></a>Nastavení skupiny vlastností na základě jiné vlastnosti
 
-- Použití `Condition` atribut `PropertyGroup` element podobný následujícímu:
+- Použijte atribut `Condition` v prvku `PropertyGroup` podobného následujícímu:
 
   ```xml
   <PropertyGroup Condition="'$(Flavor)'=='DEBUG'">
@@ -39,26 +39,26 @@ Vlastnosti můžete změnit konfiguraci sestavení bez nutnosti změny souboru p
   </PropertyGroup>
   ```
 
-#### <a name="to-define-a-property-based-on-another-property"></a>Chcete-li definovat vlastnost podle jiné vlastnosti
+#### <a name="to-define-a-property-based-on-another-property"></a>Definování vlastnosti na základě jiné vlastnosti
 
-- Použití `Condition` atribut `Property` element podobný následujícímu:
+- Použijte atribut `Condition` v prvku `Property` podobného následujícímu:
 
   ```xml
   <DebugType Condition="'$(Flavor)'=='DEBUG'">full</DebugType>
   ```
 
 ## <a name="specify-properties-on-the-command-line"></a>Zadat vlastnosti na příkazovém řádku
-Jakmile váš soubor projektu je napsané tak, aby přijímal více konfigurací, musíte mít možnost změnit tyto konfigurace pokaždé, když se sestavení projektu. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Tato možnost nabízí a umožňuje zadat na příkazovém řádku pomocí vlastnosti **– vlastnost** nebo **-p** přepnout.
+Po zapsání souboru projektu pro přijetí více konfigurací je nutné mít možnost měnit tyto konfigurace při každém sestavení projektu. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] poskytuje tuto možnost tím, že povoluje zadání vlastností na příkazovém řádku pomocí přepínače **-Property** nebo **-p** .
 
 #### <a name="to-set-a-project-property-at-the-command-line"></a>Nastavení vlastnosti projektu na příkazovém řádku
 
-- Použití **– vlastnost** přepnout s vlastností a hodnota vlastnosti. Příklad:
+- Použijte přepínač **-Property** s hodnotou vlastnosti a vlastnosti. Příklad:
 
   ```cmd
   msbuild file.proj -property:Flavor=Debug
   ```
 
-  or
+  nebo
 
   ```cmd
   Msbuild file.proj -p:Flavor=Debug
@@ -66,34 +66,34 @@ Jakmile váš soubor projektu je napsané tak, aby přijímal více konfigurací
 
 #### <a name="to-specify-more-than-one-project-property-at-the-command-line"></a>Chcete-li zadat více než jednu vlastnost projektu na příkazovém řádku
 
-- Použít **– vlastnost** nebo **-p** přepínač vícekrát s vlastností a hodnot vlastností, nebo použijte jednu **– vlastnost** nebo **-p** přepnutí a víc vlastností oddělujte středníkem (;). Příklad:
+- Použijte přepínač **-Property** nebo **-p** vícekrát s hodnotami vlastností a vlastností, nebo použijte přepínač- **Property** nebo **-p** a oddělte více vlastností středníky (;). Příklad:
 
   ```cmd
   msbuild file.proj -p:Flavor=Debug;Platform=x86
   ```
 
-  or
+  nebo
 
   ```cmd
   msbuild file.proj -p:Flavor=Debug -p:Platform=x86
   ```
 
-  Proměnné prostředí jsou také považovány za vlastnosti a jsou automaticky součástí [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Další informace o použití proměnných prostředí najdete v tématu [jak: Použití proměnných prostředí v sestavení](../msbuild/how-to-use-environment-variables-in-a-build.md).
+  Proměnné prostředí se také považují za vlastnosti a jsou automaticky začleněny pomocí [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Další informace o použití proměnných prostředí naleznete v tématu [How to: use Environment Variables in a Build](../msbuild/how-to-use-environment-variables-in-a-build.md).
 
-  Hodnota vlastnosti, který je zadán v příkazovém řádku má přednost před jakoukoli hodnotu, která je nastavena pro stejnou vlastnost v souboru projektu, a hodnota v souboru projektu má přednost před hodnota v proměnné prostředí.
+  Hodnota vlastnosti, která je zadána v příkazovém řádku, má přednost před jakoukoli hodnotou, která je nastavena pro stejnou vlastnost v souboru projektu a tato hodnota v souboru projektu má přednost před hodnotou v proměnné prostředí.
 
-  Toto chování můžete změnit pomocí `TreatAsLocalProperty` atribut ve značce projektu. Pro názvy vlastností, které jsou uvedeny se tento atribut hodnota vlastnosti, který je zadán v příkazovém řádku nemá přednost před hodnota v souboru projektu. Příklad najdete dále v tomto tématu.
+  Toto chování můžete změnit pomocí atributu `TreatAsLocalProperty` ve značce projektu. U názvů vlastností, které jsou uvedeny s tímto atributem, hodnota vlastnosti zadaná v příkazovém řádku nemá přednost před hodnotou v souboru projektu. Příklad najdete v části dále v tomto tématu.
 
 ## <a name="example"></a>Příklad
-Následující příklad kódu projektu "Hello World" obsahuje dvě nové vlastnosti skupiny, které slouží k vytvoření sestavení pro ladění a sestavení pro vydání.
+Následující příklad kódu, projekt "Hello World", obsahuje dvě nové skupiny vlastností, které lze použít k vytvoření sestavení pro ladění a sestavení pro vydání.
 
-Chcete-li sestavení verze ladění tohoto projektu, zadejte:
+Chcete-li sestavit ladicí verzi tohoto projektu, zadejte:
 
 ```cmd
 msbuild consolehwcs1.proj -p:flavor=debug
 ```
 
-Chcete-li sestavení prodejní verze tohoto projektu, zadejte:
+Chcete-li vytvořit prodejní verzi tohoto projektu, zadejte:
 
 ```cmd
 msbuild consolehwcs1.proj -p:flavor=retail
@@ -152,9 +152,9 @@ msbuild consolehwcs1.proj -p:flavor=retail
 ```
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje způsob použití `TreatAsLocalProperty` atribut. `Color` Vlastnost má hodnotu `Blue` v souboru projektu a `Green` na příkazovém řádku. S `TreatAsLocalProperty="Color"` ve značce projektu vlastnost příkazového řádku (`Green`) nepřepíše vlastnost, která je definována v souboru projektu (`Blue`).
+Následující příklad ukazuje, jak použít atribut `TreatAsLocalProperty`. Vlastnost `Color` má v souboru projektu hodnotu `Blue` a `Green` na příkazovém řádku. Při `TreatAsLocalProperty="Color"` ve značce projektu nepřepisuje vlastnost příkazového řádku (`Green`) vlastnost, která je definována v souboru projektu (`Blue`).
 
-K sestavení projektu, zadejte následující příkaz:
+Chcete-li sestavit projekt, zadejte následující příkaz:
 
 ```cmd
 msbuild colortest.proj -t:go -property:Color=Green

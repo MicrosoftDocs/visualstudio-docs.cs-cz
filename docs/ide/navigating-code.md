@@ -13,17 +13,17 @@ helpviewer_keywords:
 - peek definition
 - go to line
 - go to
-author: mikadumont
-ms.author: midumont
+author: TerryGLee
+ms.author: tglee
 manager: tglee
 ms.workload:
 - multiple
-ms.openlocfilehash: f5348fc0c36435e5760f3967a7e6c9be2aecb1b7
-ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
+ms.openlocfilehash: 0216a71b675473d54aec9738ea7bdc85b7643841
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74316470"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585818"
 ---
 # <a name="navigate-code"></a>Navigace v kódu
 
@@ -61,12 +61,12 @@ Chcete-li skrýt navigační panel, změňte možnost **navigační panel** v na
 
 ## <a name="find-all-references"></a>Najít všechny odkazy
 
-Vyhledá všechny odkazy na vybraný prvek v řešení. Tuto možnost můžete použít ke kontrole možných vedlejších účinků velkého refaktoringu nebo k ověření "mrtvého" kódu. Pro přechod mezi výsledky stiskněte klávesu **F8** . Další informace najdete v tématu [Hledání odkazů v kódu](finding-references.md).
+Vyhledá všechny odkazy na vybraný prvek v řešení. Tuto možnost můžete použít ke kontrole možných vedlejších účinků velkého refaktoringu nebo k ověření "mrtvého" kódu. Pro přechod mezi výsledky stiskněte klávesu **F8** . Další informace najdete v tématu [najít odkazy ve vašem kódu](finding-references.md).
 
 Vstup | Funkce
 ------------ | ---
-**Kombinace** | Umístěte textový kurzor někam do názvu typu a stiskněte **Shift**+**F12** .
-**Stisknut** | Vyberte **Najít všechny odkazy** z nabídky kliknutím pravým tlačítkem myši.
+**Klávesnice** | Umístěte textový kurzor někam do názvu typu a stiskněte **Shift**+**F12** .
+**Myši** | Vyberte **Najít všechny odkazy** z nabídky kliknutím pravým tlačítkem myši.
 
 ## <a name="reference-highlighting"></a>Zvýrazňování odkazů
 
@@ -104,8 +104,8 @@ Přejít k definici přejde do definice vybraného elementu. Další informace n
 
 Vstup | Funkce
 ------------ | ---
-**Kombinace** | Umístěte textový kurzor někam do názvu typu a stiskněte klávesu **F12** .
-**Stisknut** | Klikněte pravým tlačítkem myši na název typu a vyberte **Přejít k definici** nebo stiskněte klávesu **CTRL** a klikněte na název typu.
+**Klávesnice** | Umístěte textový kurzor někam do názvu typu a stiskněte klávesu **F12** .
+**Myši** | Klikněte pravým tlačítkem myši na název typu a vyberte **Přejít k definici** nebo stiskněte klávesu **CTRL** a klikněte na název typu.
 
 ## <a name="peek-definition"></a>Náhled definice
 
@@ -113,8 +113,8 @@ Náhled definice zobrazí definici vybraného prvku v okně bez přechodu z aktu
 
 Vstup | Funkce
 ------------ | ---
-**Kombinace** | Umístěte textový kurzor někam do názvu typu a stiskněte **Alt**+**F12** .
-**Stisknut** | Klikněte pravým tlačítkem myši na název typu a vyberte možnost **Náhled definice** nebo stiskněte klávesu **CTRL** a klikněte na název typu (Pokud máte zaškrtnuté políčko **Otevřít definici v náhledu).**
+**Klávesnice** | Umístěte textový kurzor někam do názvu typu a stiskněte **Alt**+**F12** .
+**Myši** | Klikněte pravým tlačítkem myši na název typu a vyberte možnost **Náhled definice** nebo stiskněte klávesu **CTRL** a klikněte na název typu (Pokud máte zaškrtnuté políčko **Otevřít definici v náhledu).**
 
 ## <a name="go-to-implementation"></a>Přejít k implementaci
 
@@ -122,8 +122,8 @@ Pomocí možnosti přejít k implementaci můžete přejít ze základní tříd
 
 Vstup | Funkce
 ------------ | ---
-**Kombinace** | Umístěte textový kurzor někam do názvu typu a stiskněte klávesy **Ctrl**+**F12** .
-**Stisknut** | Klikněte pravým tlačítkem na název typu a vyberte **Přejít k implementaci** .
+**Klávesnice** | Umístěte textový kurzor někam do názvu typu a stiskněte klávesy **Ctrl**+**F12** .
+**Myši** | Klikněte pravým tlačítkem na název typu a vyberte **Přejít k implementaci** .
 
 ## <a name="go-to-base"></a>Přejít na základní
 
@@ -131,8 +131,8 @@ Pomocí možnosti přejít na základ můžete přejít k řetězci dědičnosti
 
 Vstup | Funkce
 ------------ | ---
-**Kombinace** | Umístěte textový kurzor někam do názvu typu a stiskněte **Alt**+**Home** .
-**Stisknut** | Klikněte pravým tlačítkem na název typu a vyberte **Přejít na základní** .
+**Klávesnice** | Umístěte textový kurzor někam do názvu typu a stiskněte **Alt**+**Home** .
+**Myši** | Klikněte pravým tlačítkem na název typu a vyberte **Přejít na základní** .
 
 ## <a name="call-hierarchy"></a>Hierarchie volání
 
@@ -140,8 +140,8 @@ Můžete zobrazit volání a z metody v [okně hierarchie volání](../ide/refer
 
 Vstup | Funkce
 ------------ | ---
-**Kombinace** | Umístěte textový kurzor někam do názvu typu a stiskněte klávesy **ctrl**+**K**, **CTRL**+**t** .
-**Stisknut** | Klikněte pravým tlačítkem myši na název členu a vyberte **Zobrazit hierarchii volání.**
+**Klávesnice** | Umístěte textový kurzor někam do názvu typu a stiskněte klávesy **ctrl**+**K**, **CTRL**+**t** .
+**Myši** | Klikněte pravým tlačítkem myši na název členu a vyberte **Zobrazit hierarchii volání.**
 
 ## <a name="next-method-and-previous-method-commands-visual-basic"></a>Next – metoda a příkazy předchozí metody (Visual Basic)
 

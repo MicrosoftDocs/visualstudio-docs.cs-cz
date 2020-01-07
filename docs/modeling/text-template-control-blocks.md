@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, template code
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 128be69d356b371cc34f5e089df25546428bc83f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ef39e82ea1abe95b3bea799545ed7fbf5b766fd3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606079"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591785"
 ---
 # <a name="text-template-control-blocks"></a>Řídicí bloky textových šablon
 Řídicí bloky umožňují psát kód v textové šabloně, aby se lišil výstup. Existují tři druhy řídicích bloků, které jsou rozlišené levou hranatou závorkou:
@@ -145,7 +145,7 @@ Some text.
 
  Při používání řídicích bloků byste měli mít na paměti následující skutečnosti:
 
-- **Language.** V textové šabloně můžete C# použít buď kód, nebo Visual Basic. Výchozí jazyk je C#, ale můžete zadat Visual Basic s parametrem `language` direktivy `template`. (Další informace o direktivě `template` naleznete v tématu [direktivy textové šablony T4](../modeling/t4-text-template-directives.md).)
+- **Jazyk.** V textové šabloně můžete C# použít buď kód, nebo Visual Basic. Výchozí jazyk je C#, ale můžete zadat Visual Basic s parametrem `language` direktivy `template`. (Další informace o direktivě `template` naleznete v tématu [direktivy textové šablony T4](../modeling/t4-text-template-directives.md).)
 
      Jazyk, který používáte v řídicích blocích, nemá žádnou akci s jazykem nebo formátem textu, který vygenerujete v textové šabloně. Můžete vygenerovat C# pomocí Visual Basicho kódu nebo naopak.
 

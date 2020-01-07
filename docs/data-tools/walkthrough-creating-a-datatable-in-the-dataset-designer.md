@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Dataset Designer, creating data tables
 - tables [Visual Studio], creating
 - data [Visual Studio], Dataset Designer
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9dbf7116c614a8eec599f197f975ab4c389bc950
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1526a5f4137ece5b76c282255af3da4ab20ac119
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648074"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586000"
 ---
 # <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>Návod: vytvoření DataTable v Návrhář datových sad
 
@@ -25,7 +25,7 @@ Tento návod vysvětluje, jak vytvořit <xref:System.Data.DataTable> (bez TableA
 
 ## <a name="create-a-new-windows-forms-application"></a>Vytvoření nové aplikace model Windows Forms
 
-1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  > **projekt**.
+1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový** > **projekt**.
 
 2. V levém podokně rozbalte buď **vizuál C#**  , nebo **Visual Basic** a pak vyberte **Desktop Windows**.
 
@@ -39,11 +39,11 @@ Tento návod vysvětluje, jak vytvořit <xref:System.Data.DataTable> (bez TableA
 
 1. V nabídce **projekt** vyberte možnost **Přidat novou položku**.
 
-     Zobrazí se dialogové okno **Přidat novou položku** .
+     **Přidat novou položku** zobrazí se dialogové okno.
 
 2. V levém podokně vyberte **data**a potom v prostředním podokně vyberte **datová sada** .
 
-3. Klikněte na tlačítko **Přidat**.
+3. Zvolte **přidat**.
 
      Visual Studio přidá do projektu soubor s názvem **DataSet1. xsd** a otevře ho v **Návrhář datových sad**.
 

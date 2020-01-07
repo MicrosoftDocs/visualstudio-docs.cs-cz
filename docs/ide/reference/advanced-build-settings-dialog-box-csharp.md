@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - Build options [C#], advanced
 ms.assetid: 141f2dee-1563-4ce6-ba37-32920b082519
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 78817f65197c2dd295a6f2202f913c48b54e1ed9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f25f9d96cd8de8dcb140c79c7dfb3a7a5981986c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748809"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595849"
 ---
 # <a name="advanced-build-settings-dialog-box-c"></a>Dialogové okno Upřesnit nastavení sestavení (C#)
 
@@ -50,7 +50,7 @@ Určuje, jestli se mají hlásit chyby kompilátoru Microsoftu. Pokud se nastav�
 
 **Kontrolovat aritmetické přetečení a podtečení**
 
-Určuje, zda je celočíselný aritmetický příkaz, který není v rozsahu [zkontrolovaných](/dotnet/csharp/language-reference/keywords/checked) nebo [nekontrolovaných](/dotnet/csharp/language-reference/keywords/unchecked) klíčových slov a který má za následek, že hodnota mimo rozsah datového typu způsobí výjimku za běhu. Další informace naleznete v tématu [/checked (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/checked-compiler-option).
+Určuje, zda je celočíselný aritmetický příkaz, který není v rozsahu [kontrolovány](/dotnet/csharp/language-reference/keywords/checked) zkontrolovaných [nezaškrtnuto](/dotnet/csharp/language-reference/keywords/unchecked) nebo nekontrolovaných klíčových slov a který má za následek, že hodnota mimo rozsah datového typu způsobí výjimku za běhu. Další informace naleznete v tématu [/checked (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/checked-compiler-option).
 
 **Neodkazovat na mscorlib. dll**
 

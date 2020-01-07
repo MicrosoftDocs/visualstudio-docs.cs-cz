@@ -2,17 +2,17 @@
 title: Nastavení obrázku pozadí v diagramu
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f8806571939cb057852ddd9cca971f9415339ca
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1bdf30636a6c7fee1463cbe554058f0802a5f6f0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748253"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591954"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>Nastavení obrázku pozadí v diagramu
 V sadě Visual Studio vizualizace a modelování sady SDK můžete nastavit obrázek pozadí pro vygenerovaný Návrhář pomocí vlastního kódu.
@@ -53,7 +53,7 @@ V sadě Visual Studio vizualizace a modelování sady SDK můžete nastavit obr�
 
 16. V dialogovém okně **Přidat novou položku** v seznamu **šablony** klikněte na **soubor kódu**.
 
-17. Do pole **název** zadejte `BackgroundImage.cs` a klikněte na **Přidat**.
+17. Do pole **název** zadejte `BackgroundImage.cs`a klikněte na **Přidat**.
 
 18. Zkopírujte následující kód do souboru BackgroundImage.cs, upravte obor názvů, název třídy diagramu a název prostředku obrázkového souboru.
 

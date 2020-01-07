@@ -5,15 +5,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - test settings, recording desktop video
 ms.assetid: 2cefe8c2-430a-4cb4-bbe0-f3edb2e5bc03
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 572b3132056ebed1d26c983fdc4024d2ddc51a82
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 94d8fdc2765b3a073ca481d09bc38dfbc9b38f2c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653525"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589016"
 ---
 # <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>Postupy: zahrnutí záznamů obrazovky a hlasu během testů pomocí nastavení testu
 
@@ -56,14 +56,14 @@ Záznam obrazovky a hlasu lze použít buď ručním, nebo automatizovaným test
 
     3. **Kvalita (1-100):** Můžete určit kvalitu záznamu obrazovky a hlasu tak, že vyberete rozsah mezi 1 a 100. Výchozí hodnota je 50 (střední-rozsah).
 
-7. Klikněte na **tlačítko OK**. Nastavení kolektoru trasování diagnostiky jsou nyní konfigurována a uložena pro nastavení testu.
+7. Vyberte **OK**. Nastavení kolektoru trasování diagnostiky jsou nyní konfigurována a uložena pro nastavení testu.
 
     > [!TIP]
     > Chcete-li obnovit konfiguraci pro tento adaptér diagnostických dat, vyberte možnost **Obnovit výchozí konfiguraci** pro aplikaci Visual Studio a **nastavte výchozí hodnotu** pro Microsoft Test Manager.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Shromažďovat diagnostická data při testování (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)
-- [Shromažďovat diagnostická data v ručních testech (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
-- [Shromažďování diagnostických informací pomocí nastavení testu](../test/collect-diagnostic-information-using-test-settings.md)
-- [Spustit Manuální testy (Azure Test Plans)](/azure/devops/test/run-manual-tests?view=vsts)
+- [Shromažďování diagnostických dat při testování (Azure testovací plány)](/azure/devops/test/collect-diagnostic-data?view=vsts)
+- [Shromažďování diagnostických dat v manuálních testů (Azure testovací plány)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
+- [Shromažďování diagnostických údajů pomocí nastavení testů](../test/collect-diagnostic-information-using-test-settings.md)
+- [Spouštění ručních testů (Azure testovací plány)](/azure/devops/test/run-manual-tests?view=vsts)

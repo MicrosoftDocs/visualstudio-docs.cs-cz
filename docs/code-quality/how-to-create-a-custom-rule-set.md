@@ -6,17 +6,17 @@ f1_keywords:
 - vs.codeanalysis.addremoverulesets
 helpviewer_keywords:
 - rule sets
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b904fd484135943228b2d8ac21e2df0d1c02e34
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b9f23b2badb40effd4222e21ab9e67b2907513c2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649506"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587547"
 ---
 # <a name="customize-a-rule-set"></a>Přizpůsobení sady pravidel
 
@@ -24,7 +24,7 @@ Můžete vytvořit vlastní sadu pravidel pro splnění konkrétních potřeb pr
 
 ## <a name="create-a-custom-rule-set-from-an-existing-rule-set"></a>Vytvoření vlastní sady pravidel z existující sady pravidel
 
-Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel**otevřít integrovanou sadu pravidel. Odtud můžete přidat nebo odebrat specifická pravidla a akci, ke které dojde, když je pravidlo porušeno &mdash;for například, zobrazit upozornění nebo chybu.
+Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel**otevřít integrovanou sadu pravidel. Odtud můžete přidat nebo odebrat specifická pravidla a akci, ke které dojde, když je pravidlo porušeno&mdash;například zobrazit upozornění nebo chybu.
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
 
@@ -44,9 +44,9 @@ Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel
 
    - Vyberte sadu pravidel, kterou chcete upravit.
 
-     \- nebo-
+     \- nebo –
 
-   - Pokud chcete zadat existující sadu pravidel, která není v seznamu, vyberte **\<Browse >** .
+   - Vyberte **\<procházet >** a určete existující sadu pravidel, která není v seznamu.
 
 4. Vyberte **otevřít** a zobrazte pravidla v editoru sad pravidel.
 
@@ -57,11 +57,11 @@ Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel
 
 V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravidel:
 
-1. Vyberte **soubor** > **Nový** **soubor** >  nebo stiskněte klávesu **CTRL**+**N**.
+1. Vyberte **soubor** > **Nový** > **soubor**nebo stiskněte klávesovou **zkratku CTRL**+**N**.
 
 2. V dialogovém okně **nový soubor** vyberte na levé straně kategorii **Obecné** a pak vyberte **sadu pravidel nástroje Analýza kódu**.
 
-3. Vyberte **otevřít**.
+3. Vyberte **Open** (Otevřít).
 
    Nový soubor *. ruleset* se otevře v editoru sad pravidel.
 
@@ -76,13 +76,13 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
 ::: moniker range="vs-2017"
 
-3. Vyberte **\<Choose více sad pravidel >** z **spuštění této sady pravidel**.
+3. Vyberte **\<vybrat více sad pravidel >** z **Spustit tuto sadu pravidel**.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. Vyberte **\<Choose více sad pravidel >** z **aktivních pravidel**.
+3. Vyberte **\<zvolte více sad pravidel >** z **aktivních pravidel**.
 
 ::: moniker-end
 
@@ -111,7 +111,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
 - Pokud je stejné pravidlo uvedeno v sadě *pravidel se stejnou závažností* dvakrát nebo vícekrát, může se v **Seznam chyb**zobrazit následující upozornění:
 
-   **CA0063: Nepodařilo se načíst soubor sady pravidel ' \[your]. ruleset ' nebo jeden z jeho závislých souborů sady pravidel. Soubor není v souladu se schématem sady pravidel.**
+   **CA0063: nepovedlo se načíst soubor sady pravidel '\[Your]. ruleset ' nebo jeden z jeho závislých souborů sady pravidel. Soubor není v souladu se schématem sady pravidel.**
 
 - Pokud sada pravidel obsahuje podřízenou sadu pravidel pomocí tagu **include** a podřízené a nadřazené pravidlo nastaví stejné pravidlo, ale s různou závažností, má přednost i závažnost v nadřazené sadě pravidel. Příklad:
 
@@ -136,7 +136,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
 ## <a name="name-and-description"></a>Název a popis
 
-Chcete-li změnit zobrazovaný název sady pravidel otevřené v editoru, otevřete okno **vlastnosti** výběrem možnosti **Zobrazit** > **okno vlastností** na řádku nabídek. Do pole **název** zadejte zobrazovaný název. Můžete také zadat popis sady pravidel.
+Chcete-li změnit zobrazovaný název sady pravidel otevřené v editoru, otevřete okno **vlastnosti** výběrem možnosti **Zobrazit** > **okno Vlastnosti** v řádku nabídek. Do pole **název** zadejte zobrazovaný název. Můžete také zadat popis sady pravidel.
 
 ## <a name="next-steps"></a>Další kroky
 

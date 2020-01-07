@@ -1,5 +1,5 @@
 ---
-title: Itemmetadata – Element (MSBuild) | Dokumentace Microsoftu
+title: ItemMetadata – – element (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ItemMetadata Element [MSBuild]
 - <ItemMetadata> Element [MSBuild]
 ms.assetid: e3db5122-202d-43a9-b2f4-3e0ec4ed3d08
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 825c6b897447a5a628d9a97e4c7e64f1427fb4d7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 66c19dbd74176babbf9e26030a68a6095992b660
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817668"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589367"
 ---
-# <a name="itemmetadata-element-msbuild"></a>Itemmetadata – element (MSBuild)
-Obsahuje klíč metadat uživatelem definovanou položku katalogu, který obsahuje hodnotu metadat položky. Položka může mít libovolný počet párů klíč hodnota metadat.
+# <a name="itemmetadata-element-msbuild"></a>ItemMetadata – – element (MSBuild)
+Obsahuje klíč metadat položky definovaný uživatelem, který obsahuje hodnotu metadat položky. Položka může mít libovolný počet párů klíč-hodnota metadat.
 
  \<Project> \<ItemGroup> \<Item>
 
@@ -41,7 +41,7 @@ Obsahuje klíč metadat uživatelem definovanou položku katalogu, který obsahu
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Condition`|Nepovinný atribut.<br /><br /> Podmínku, která má být vyhodnocen. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
+|`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
  Žádné
@@ -50,15 +50,15 @@ Obsahuje klíč metadat uživatelem definovanou položku katalogu, který obsahu
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[Položka](../msbuild/item-element-msbuild.md)|Uživatelem definované prvek, který definuje vstupy pro proces sestavení.|
+|[Položka](../msbuild/item-element-msbuild.md)|Uživatelsky definovaný element definující vstupy procesu sestavení.|
 
 ## <a name="text-value"></a>Textová hodnota
  Textová hodnota je volitelná.
 
- Tento text určuje hodnotu položky metadat, který může být text nebo XML.
+ Tento text určuje hodnotu metadat položky, která může být buď text, nebo XML.
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu ukazuje, jak přidat `Culture` metadata s hodnotou `fr` k položce `CSFile`.
+ Následující příklad kódu ukazuje, jak přidat `Culture` metadata s hodnotou `fr` do `CSFile`položky.
 
 ```xml
 <ItemGroup>

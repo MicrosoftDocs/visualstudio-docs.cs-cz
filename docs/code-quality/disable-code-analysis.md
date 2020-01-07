@@ -5,15 +5,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, disable
 - disable code analysis
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: cb1a41642e405046459f6196a98cd6290a217223
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d25254cabecd88c6e876646c3c276503aadf7eb7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649653"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587664"
 ---
 # <a name="how-to-disable-source-code-analysis-for-managed-code"></a>Zakázání analýzy zdrojového kódu pro spravovaný kód
 
@@ -27,7 +27,7 @@ Tato stránka vám pomůže zakázat analýzu kódu v aplikaci Visual Studio. Ex
 
 - Balíček NuGet analyzátoru versus VSIX nebo integrované analyzátory
 
-  V současné době nemůžete zakázat analýzu živých kódů pro integrované analyzátory, například ID pravidla IDE0067. Podobně nemůžete zakázat analýzu živých kódů pro analyzátory, které byly nainstalovány jako součást rozšíření aplikace Visual Studio (VSIX). Chcete-li potlačit chyby a upozornění z vestavěných analyzátorů založených na VSIX, vyberte možnost **analyzovat**  > **sestavovat a potlačit aktivní problémy** na panelu nabídek. *Můžete* zakázat živá a vestavěnou analýzu analyzátorů nainstalovaných jako součást balíčku NuGet.
+  V současné době nemůžete zakázat analýzu živých kódů pro integrované analyzátory, například ID pravidla IDE0067. Podobně nemůžete zakázat analýzu živých kódů pro analyzátory, které byly nainstalovány jako součást rozšíření aplikace Visual Studio (VSIX). Chcete-li potlačit chyby a upozornění z vestavěných analyzátorů založených na VSIX, vyberte možnost **analyzovat** > **sestavovat a potlačit aktivní problémy** na panelu nabídek. *Můžete* zakázat živá a vestavěnou analýzu analyzátorů nainstalovaných jako součást balíčku NuGet.
 
 - Analýza zdrojového kódu oproti starší analýze
 
@@ -45,7 +45,7 @@ Chcete-li otevřít tuto stránku, klikněte pravým tlačítkem myši na uzel p
 - Chcete-li zakázat živou analýzu zdroje, zrušte volbu možnosti **Spustit při analýze za provozu** .
 
 > [!NOTE]
-> Vestavěné analyzátory založené na VSIX budou nadále poskytovat živou analýzu kódu i v případě, že není zaškrtnuta rutina **Spustit při živé analýze** . Pokud chcete potlačit chyby a upozornění z těchto analyzátorů, vyberte možnost **analyzovat**  > **sestavovat a potlačit aktivní problémy** na řádku nabídek.
+> Vestavěné analyzátory založené na VSIX budou nadále poskytovat živou analýzu kódu i v případě, že není zaškrtnuta rutina **Spustit při živé analýze** . Pokud chcete potlačit chyby a upozornění z těchto analyzátorů, vyberte možnost **analyzovat** > **sestavovat a potlačit aktivní problémy** na řádku nabídek.
 
 ## <a name="net-framework-projects"></a>.NET Framework projekty
 
@@ -71,7 +71,7 @@ Příklady:
 
 ## <a name="source-analysis"></a>Zdrojová analýza
 
-Nemůžete vypnout [analýzu zdrojů](roslyn-analyzers-overview.md) v aplikaci Visual Studio 2017. Pokud chcete vymazat chyby analyzátoru z Seznam chyb, můžete potlačit všechna aktuální porušení výběrem možnosti **analyzovat**  > **Spustit analýzu kódu a potlačit aktivní problémy** na řádku nabídek. Další informace najdete v tématu [potlačení porušení](use-roslyn-analyzers.md#suppress-violations).
+Nemůžete vypnout [analýzu zdrojů](roslyn-analyzers-overview.md) v aplikaci Visual Studio 2017. Pokud chcete vymazat chyby analyzátoru z Seznam chyb, můžete potlačit všechna aktuální porušení výběrem možnosti **analyzovat** > **Spustit analýzu kódu a potlačit aktivní problémy** na řádku nabídek. Další informace najdete v tématu [potlačení porušení](use-roslyn-analyzers.md#suppress-violations).
 
 Počínaje verzí Visual Studio 2019 verze 16,3 můžete vypnout analýzu zdrojového kódu na základě NuGet. Zvažte upgrade na Visual Studio 2019.
 

@@ -1,8 +1,8 @@
 ## YamlMime:Landing
 title: Nástroje kontejneru v sadě Visual Studio
 metadata:
-  title: Dokumentace k nástrojům pro vývoj kontejnerů Docker
-  description: 'Naučte se vytvářet a spravovat aplikace a služby založené na kontejnerech. Získejte dokumentaci, ukázkový kód, kurzy a další.'
+  title: Dokumentace ke kontejnerovým vývojovým nástrojům pro Docker
+  description: 'Zjistěte, jak vytvářet a spravovat aplikace a služby založené na kontejnerech. Získejte dokumentaci, ukázkový kód, kurzy a další.'
   author: ghogen
   manager: jillfra
   ms.prod: visual-studio-windows
@@ -11,11 +11,11 @@ metadata:
   ms.date: 11/25/2019
   ms.author: ghogen
 landingContent:
-  - title: O nasazení
+  - title: Nástroje pro kontejnery
     linkLists:
       - linkListType: overview
         links:
-          - text: Nástroje kontejneru v aplikaci Visual Studio
+          - text: Nástroje kontejneru v sadě Visual Studio
             url: overview.md
   - title: Začínáme
     linkLists:
@@ -23,49 +23,49 @@ landingContent:
         links:
           - text: Docker v sadě Visual Studio
             url: container-tools.md
-          - text: Spuštění nástrojů sestavení v kontejneru
+          - text: Spouštění nástrojů sestavení v kontejneru
             url: /visualstudio/install/build-tools-container
           - text: Visual Studio Tools for Kubernetes
             url: tutorial-kubernetes-tools.md
-  - title: Vývoj kontejnerových aplikací
+  - title: Vývoj kontejnerizovaných aplikací
     linkLists:
       - linkListType: tutorial
         links:
-          - text: Aplikace s více kontejnery s Docker Compose
+          - text: Vícekontejnerová aplikace s použitím nástroje Docker Compose
             url: tutorial-multicontainer.md
-          - text: Aplikace reaguje. js v kontejneru
+          - text: Aplikace React.js v kontejneru
             url: container-tools-react.md
-          - text: Ladění aplikací Docker
+          - text: Ladění aplikací Dockeru
             url: edit-and-refresh.md
-  - title: Nasazení kontejnerů Docker
+  - title: Nasazení kontejnerů Dockeru
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Nasadit do Azure Container Registry
+          - text: Nasazení do Azure Container Registry
             url: hosting-web-apps-in-docker.md
           - text: Nasazení do Azure App Service
             url: deploy-app-service.md
           - text: Nasazení do Docker Hubu
             url: deploy-docker-hub.md
-  - title: Úlohy vývoje kontejneru
+  - title: Úkoly v rámci kontejnerového vývoje
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: 'Postupy: konfigurace prostředí sestavení a ladění'
+          - text: 'Postupy: Konfigurace prostředí pro sestavení a ladění'
             url: container-build.md
-          - text: 'Postupy: zobrazení a diagnostika kontejnerů'
+          - text: 'Postupy: Zobrazení a diagnostika kontejnerů'
             url: view-and-diagnose-containers.md
-          - text: 'Postupy: řešení potíží s nástroji pro vývoj kontejnerů'
+          - text: 'Postupy: Řešení potíží s kontejnerovými vývojovými nástroji'
             url: troubleshooting-docker-errors.md
-  - title: Nastavení nástrojů kontejneru
+  - title: Nastavení nástrojů pro kontejnery
     linkLists:
       - linkListType: reference
         links:
-          - text: Nastavení spuštění kontejneru
+          - text: Nastavení spouštění kontejnerů
             url: container-launch-settings.md
-          - text: Vlastnosti MSBuild kontejneru
+          - text: Vlastnosti nástroje MSBuild pro kontejnery
             url: container-msbuild-properties.md
-          - text: Docker Compose vlastnosti MSBuild
+          - text: Vlastnosti nástroje MSBuild pro Docker Compose
             url: docker-compose-properties.md
-          - text: Konfigurace nástrojů kontejneru
+          - text: Konfigurace nástroje pro kontejnery
             url: container-tools-configure.md

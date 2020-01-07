@@ -3,17 +3,17 @@ title: 'Postupy: přepínání mezi zobrazeními a editorem XML'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: cb69fbbd-d99c-439e-9498-5df9050f8df0
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f8049806d14abc8e22154a763e982ce5c86304b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 54e43b00c877f5453d1dc28bbc9d5546fcef056f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601881"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592620"
 ---
 # <a name="how-to-switch-between-views-and-the-xml-editor"></a>Postupy: přepínání mezi zobrazeními a editorem XML
 
@@ -33,6 +33,6 @@ Toto téma ukazuje, jak přepínat mezi zobrazeními v Návrháři schématu XML
 
 5. Chcete-li přepnout do zobrazení začátek ze zobrazení modelu obsahu pomocí panelu nástrojů, klikněte na tlačítko **Spustit zobrazení** na panelu nástrojů XSD.
 
-6. Chcete-li přepínat mezi zobrazeními pomocí klávesových zkratek, stiskněte klávesu **ctrl** +**1** pro zobrazení Start, **CTRL** +**2** pro zobrazení grafu a **CTRL** +**3** pro zobrazení modelu obsahu.
+6. Chcete-li přepínat mezi zobrazeními pomocí klávesových zkratek, stiskněte klávesu **ctrl**+**1** pro zobrazení Start, **CTRL**+**2** pro zobrazení grafu a **CTRL**+**3** pro zobrazení modelu obsahu.
 
 7. Chcete-li přejít do editoru XML ze zobrazení modelu obsahu, klikněte pravým tlačítkem myši na uzel a v místní nabídce vyberte možnost **Zobrazit kód** .

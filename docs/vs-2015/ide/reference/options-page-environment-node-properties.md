@@ -12,17 +12,17 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6c7b6370793068ff07f30066ddd51b72dcc924b3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b45716db44dcc316ec60604aa0411e6498797ae0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668703"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595017"
 ---
 # <a name="options-page-environment-node-properties"></a>Stránka Možnosti, vlastnosti uzlu prostředí
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Tento dokument popisuje stránky (nebo kolekce vlastností), které jsou spojeny s kategorií **prostředí** , `DTE.Properties("Environment", <Property Page>)` dialogového okna **Možnosti** . Název každého dílčího oddílu je volání, které se používá pro přístup k kolekci vlastností a tabulka v každém pododdílu obsahuje seznam vlastností v kolekci.
+Tento dokument popisuje stránky (nebo kolekce vlastností), které jsou spojeny s kategorií **prostředí** , `DTE.Properties("Environment", <Property Page>)`dialogového okna **Možnosti** . Název každého dílčího oddílu je volání, které se používá pro přístup k kolekci vlastností a tabulka v každém pododdílu obsahuje seznam vlastností v kolekci.
 
 ## <a name="general"></a>Obecné
  `DTE.Properties("Environment", "General")`
@@ -130,17 +130,17 @@ Tento dokument popisuje stránky (nebo kolekce vlastností), které jsou spojeny
 |DefaultBehaviorForStartupProjects|Get/Set (String)||
 |MSBuildOutputVerbosity|Get/Set (String)|Určuje úroveň podrobností pro výstup sestavení.|
 
-## <a name="startup"></a>Úvod
+## <a name="startup"></a>Třída pro spuštění
  `DTE.Properties("Environment", "Startup")`
 
 |Název položky vlastnosti|Hodnota|Popis|
 |------------------------|-----------|-----------------|
-|Při spuštění|Get/Set (Enum)|Akce, která se má provést při spuštění, od <xref:EnvDTE.vsStartUp> s hodnotami od 0 do 5:<br /><br /> -0: otevřít domovskou stránku<br />-1: načtení posledního načteného řešení<br />-2: zobrazení dialogového okna **Otevřít projekt**<br />-3: zobrazení dialogového okna **Nový projekt**<br />-4: zobrazení prázdného prostředí<br />-5: Zobrazit úvodní stránku|
+|OnStartUp|Get/Set (Enum)|Akce, která se má provést při spuštění, od <xref:EnvDTE.vsStartUp>s hodnotami od 0 do 5:<br /><br /> -0: otevřít domovskou stránku<br />-1: načtení posledního načteného řešení<br />-2: zobrazení dialogového okna **Otevřít projekt**<br />-3: zobrazení dialogového okna **Nový projekt**<br />-4: zobrazení prázdného prostředí<br />-5: Zobrazit úvodní stránku|
 |StartPageRSSUrl|Get/Set (String)|Adresa URL informačního kanálu RSS, který se používá při spuštění.|
 |StartPageRefreshDownloadedContent|Get/Set (Boolean)|Aktualizuje úvodní stránku po každém průchodu intervalu zadaného v StartPageRefreshInterval.|
 |StartPageRefreshInterval|Získat nebo nastavit (krátký)|Interval obnovování úvodní stránky v minutách|
 
-## <a name="tasklist"></a>TaskList
+## <a name="tasklist"></a>Seznamu úkolů
  `DTE.Properties("Environment", "TaskList")`
 
 |Název položky vlastnosti|Hodnota|Popis|
@@ -161,4 +161,9 @@ Tento dokument popisuje stránky (nebo kolekce vlastností), které jsou spojeny
 |ViewSourceExternalProgram|Get/Set (String)|Cesta k externímu prohlížeči zdrojového kódu.|
 
 ## <a name="see-also"></a>Viz také
- [Řízení nastavení možností](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d) [Určení názvů položek vlastností na](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa) stránce Možnosti stránky možnosti [, písma a barvy](../../ide/reference/options-page-fonts-and-colors-node-properties.md) [Stránka možnosti, vlastnosti uzlu textový editor](../../ide/reference/options-page-text-editor-node-properties.md) [dialogové okno Možnosti prostředí](../../ide/reference/environment-options-dialog-box.md)
+
+- [Řízení nastavení možností](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)
+- [Určení názvů položek vlastností na stránkách možností](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)
+- [Stránka Možnosti, vlastnosti uzlu Písma a barvy](../../ide/reference/options-page-fonts-and-colors-node-properties.md)
+- [Stránka Možnosti, vlastnosti uzlu Textový editor](../../ide/reference/options-page-text-editor-node-properties.md)
+- [Prostředí, dialogové okno Možnosti](../../ide/reference/environment-options-dialog-box.md)

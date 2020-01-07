@@ -2,26 +2,26 @@
 title: Odinstalace sady Visual Studio
 titleSuffix: ''
 description: Zjistěte, jak Odinstalace sady Visual Studio, krok za krokem.
-ms.date: 07/31/2019
+ms.date: 12/19/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
 - uninstall
 - uninstall Visual Studio
 ms.assetid: 0e445255-b796-426d-ad93-a4d8e36da2c5
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d15a20adeb3203687e4d940635551c33774953a5
-ms.sourcegitcommit: c222052906362bf1a3762ec4d4623170e4e06702
+ms.openlocfilehash: a895d9a94ada22ecce340488c6ba00662a599969
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74809664"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594471"
 ---
 # <a name="uninstall-visual-studio"></a>Odinstalace sady Visual Studio
 
@@ -98,10 +98,13 @@ Pokud chcete z počítače odebrat všechny instalace sady Visual Studio 2019 a 
 
 ::: moniker-end
 
+## <a name="remove-all-files"></a>Odebrat všechny soubory
+
+Pokud se setkáte s závažnou chybou a nemůžete odinstalovat Visual Studio pomocí předchozích pokynů, je k dispozici možnost Poslední použití, kterou si můžete místo toho zvážit. Další informace o tom, jak zcela odebrat všechny instalační soubory sady Visual Studio a informace o produktu, najdete na stránce [odebrat aplikaci Visual Studio](remove-visual-studio.md) .
+
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Viz také:
 
 * [Úpravy sady Visual Studio](modify-visual-studio.md)
 * [Aktualizace sady Visual Studio](update-visual-studio.md)
-* [Odinstalace sady Visual Studio pro Mac](/visualstudio/mac/uninstall)

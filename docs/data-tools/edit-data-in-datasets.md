@@ -9,17 +9,17 @@ helpviewer_keywords:
 - datasets [Visual Basic], editing data
 - data [Visual Studio], editing in datasets
 ms.assetid: 50d5c580-fbf7-408f-be70-e63ac4f4d0eb
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 98b19d889ab9afc651939b27120ad132d8332c14
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b51b5b4be12f76e2237ff93659617e1c1843722a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648502"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586650"
 ---
 # <a name="edit-data-in-datasets"></a>Úpravy dat v datových sadách
 Data v datových tabulkách můžete upravovat podobně, jako když upravujete data v tabulce v libovolné databázi. Tento proces může zahrnovat vkládání, aktualizaci a mazání záznamů v tabulce. Ve formuláři vázaného na data můžete určit, která pole jsou uživatelsky upravitelná. V těchto případech infrastruktura vázání dat zpracovává všechna sledování změn tak, aby se změny mohly poslat zpátky do databáze později. Pokud budete programově upravovat data a máte v úmyslu odeslat tyto změny zpět do databáze nástroje, musíte použít objekty a metody, které pro vás provedou sledování změn.
@@ -70,7 +70,7 @@ V případě změn záznamů v datové sadě jsou informace o těchto změnách 
 
 Změny jsou v každém řádku dat sledovány dvěma způsoby:
 
-- Každý řádek dat obsahuje informace související s jeho <xref:System.Data.DataRow.RowState%2A> (například <xref:System.Data.DataRowState.Added>, <xref:System.Data.DataRowState.Modified>, <xref:System.Data.DataRowState.Deleted> nebo <xref:System.Data.DataRowState.Unchanged>).
+- Každý řádek dat obsahuje informace související s jeho <xref:System.Data.DataRow.RowState%2A> (například <xref:System.Data.DataRowState.Added>, <xref:System.Data.DataRowState.Modified>, <xref:System.Data.DataRowState.Deleted>nebo <xref:System.Data.DataRowState.Unchanged>).
 
 - Každý změněný řádek dat obsahuje více verzí tohoto řádku (<xref:System.Data.DataRowVersion>), původní verzi (před změnami) a aktuální verzi (po změnách). Během období, kdy probíhá změna (čas, kdy můžete reagovat na událost <xref:System.Data.DataTable.RowChanging>), je k dispozici také třetí verze – navržená verze.
 
@@ -98,7 +98,7 @@ Následující příklad ukazuje, jak ověřit datovou sadu s názvem `Northwind
 [!code-vb[VbRaddataEditing#13](../data-tools/codesnippet/VisualBasic/edit-data-in-datasets_6.vb)]
 
 ## <a name="to-locate-rows-that-have-errors"></a>Vyhledání řádků s chybami
-Když pracujete s jednotlivými sloupci a řádky dat, může dojít k chybám. Chcete-li zjistit, zda chyby existují v <xref:System.Data.DataSet>, <xref:System.Data.DataTable> nebo <xref:System.Data.DataRow>, můžete zaškrtnout vlastnost `HasErrors`.
+Když pracujete s jednotlivými sloupci a řádky dat, může dojít k chybám. Chcete-li zjistit, zda chyby existují v <xref:System.Data.DataSet>, <xref:System.Data.DataTable>nebo <xref:System.Data.DataRow>, můžete zaškrtnout vlastnost `HasErrors`.
 
 1. Zkontrolujte vlastnost `HasErrors` a zjistěte, zda datová sada obsahuje chyby.
 

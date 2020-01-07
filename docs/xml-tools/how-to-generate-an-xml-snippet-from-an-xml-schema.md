@@ -3,17 +3,17 @@ title: 'Postupy: generování fragmentu XML ze schématu XML'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2c128d2a-aaa6-4814-aa95-e07056afe338
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae55428b61053fbd255446833cb20aec3da79b6e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ec320018cc64e774751c312ca4cdeb94a6d53a9c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645385"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592682"
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>Postupy: generování fragmentu XML ze schématu XML
 
@@ -39,7 +39,7 @@ Výchozí hodnoty jsou vygenerovány a označeny jako upravitelné hodnoty. Poku
 
 - Pokud typ schématu obsahuje všechny omezující vlastnosti výčtu, a to buď přímo, nebo nepřímo prostřednictvím kteréhokoli člena typu sjednocení, jako výchozí se použije první Výčtová hodnota nalezená v objektovém modelu schématu.
 
-- Pokud je typ schématu typ Atomic, Editor získá typ atomie a vloží název atomické typu. Pro odvozený jednoduchý typ používá základní jednoduchý typ. Jako typ seznamu je `itemType` typ atomická. Pro sjednocení je typ atomický typ prvního `memberType`.
+- Pokud je typ schématu typ Atomic, Editor získá typ atomie a vloží název atomické typu. Pro odvozený jednoduchý typ používá základní jednoduchý typ. Jako typ seznamu je `itemType`typ atomická. Pro sjednocení je typ atomický typ prvního `memberType`.
 
 ## <a name="example"></a>Příklad
 
@@ -60,7 +60,7 @@ Kroky v této části ukazují, jak používat funkci fragmentu XML vygenerovano
 
      Zobrazí se dialogové okno **schémata XSD** .
 
-4. Klikněte na tlačítko **Přidat**.
+4. Klikněte na tlačítko **Add** (Přidat).
 
      Zobrazí se dialogové okno **otevřít schéma XSD** .
 

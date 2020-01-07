@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: Naučte se aktivovat zvýhodnění pro jednotlivé kredity Azure DevTest, které jsou součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 789548f50f7d631f3db190ce5e2638858e8c4707
-ms.sourcegitcommit: c222052906362bf1a3762ec4d4623170e4e06702
+ms.openlocfilehash: a6d0eee97ddf2d3a5a35af60ba6c6daf8bcc8425
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810037"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75405312"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Použití Microsoft Azure v předplatných sady Visual Studio
 Jako předplatitelé sady Visual Studio můžete použít Microsoft Azure bez dalších poplatků.  S vaším [měsíčním kreditem Azure DevTest](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)je Azure vaším osobním izolovaným prostorem pro vývoj a testování.  Můžete zřídit virtuální počítače, cloudové služby a další prostředky Azure.  Částky kreditu se liší podle úrovně předplatného.
@@ -23,19 +23,23 @@ Jako předplatitelé sady Visual Studio můžete použít Microsoft Azure bez da
    > [!div class="mx-imgBorder"]
    > ![dlaždici Azure](_img/vs-azure/vs-azure-tile.png)
 
-3. Pokud nemáte existující předplatné Azure, budete požádáni o vyplnění požadovaných informací k vytvoření vašeho předplatného Azure, kliknutím na zaškrtávací políčko přijměte podmínky & podmínky a kliknete na **zaregistrovat**:
+3. Pokud nemáte existující předplatné Azure, budete požádáni o vyplnění požadovaných informací k vytvoření vašeho předplatného Azure.  Prvním krokem je poskytnout vaše osobní údaje a potom kliknout na **Další**.
    > [!div class="mx-imgBorder"]
-   > ![](_img/vs-azure/vs-azure-sign-up-cropped.png) registrace Azure Pokud máte existující předplatné, klikněte na zaškrtávací políčko, abyste smlouvu přijali, a klikněte na **zaregistrovat**.
+   > ![registraci v Azure](_img/vs-azure/vs-azure-about-you.png)
 
-4. Až bude váš účet připravený, budete mít možnost zvolit plán podpory Azure (prodávaný samostatně) nebo začít s vaším předplatným Azure.
+4. V dalším kroku budete muset ověřit identitu pomocí jednoduchého ověřovacího kódu. Zadejte své telefonní číslo a určete, jestli chcete kód přijmout pomocí textu nebo telefonu.  Zadejte kód, který obdržíte, a klikněte na **ověřit kód**.   
    > [!div class="mx-imgBorder"]
-   > Příprava](_img/vs-azure/vs-azure-getting-ready-cropped.png) ![Azure
+   > Příprava](_img/vs-azure/vs-azure-identity.png) ![Azure
 
-5. Nahraje se centrum pro rychlé zprovoznění řídicího panelu Azure.  
+5. V posledním kroku kliknutím na zaškrtávací políčko přijměte podmínky a pak klikněte na **zaregistrovat**.  A je to!
    > [!div class="mx-imgBorder"]
-   > ![](_img/vs-azure/vs-azure-dashboard-quickstart.png) řídicího panelu Azure 
+   > Příprava](_img/vs-azure/vs-azure-agreement.png) ![Azure
 
-6. Přihlaste se k webu [Azure Portal](https://portal.azure.com) , abyste měli snadný přístup i v budoucnu.
+0. Nahraje se centrum pro rychlé zprovoznění řídicího panelu Azure.  
+   > [!div class="mx-imgBorder"]
+   > ![](_img/vs-azure/vs-azure-quick-start.png) řídicího panelu Azure 
+
+0. Pro snadný přístup v budoucnu můžete záložku [Azure Portal](https://portal.azure.com) .
 
 
 ## <a name="eligibility"></a>Nárok
@@ -103,7 +107,7 @@ Pokud nechcete pokračovat v tomto předplatném sady Visual Studio Azure, můž
 
 Pokud se domníváte, že jste tento e-mail dostali v omyl, obraťte se prosím na [zákaznickou podporu Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade).
 
-## <a name="support-resources"></a>Informační zdroje podpory
+## <a name="support-resources"></a>Prostředky podpory
 - Potřebujete pomoc s Azure?  Podívejte se na tyto materiály:
   - Technická podpora: [https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
   - [Dokumentace Azure](/azure/)

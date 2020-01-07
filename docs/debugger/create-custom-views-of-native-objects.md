@@ -13,18 +13,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c38ff2fcc762ccc202e2a02ecd36e942db75ad3d
-ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
+ms.openlocfilehash: 67c96c8d28014ee22a387c3ba3ca828b37f267dd
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061083"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75405214"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>Vytváření vlastních zobrazení C++ objektů v ladicím programu pomocí architektury Natvis
 
 Rozhraní Visual Studio *Natvis* přizpůsobuje způsob, jakým se v oknech proměnných ladicího programu zobrazují nativní typy, jako jsou **místní** a **sledovací** okna a v části **datatipů**. Vizualizace Natvis mohou přispět k vytváření lépe viditelných typů během ladění.
 
 Natvis nahrazuje soubor *autoexp. dat* v dřívějších verzích sady Visual Studio se syntaxí XML, lepší diagnostikou, správou verzí a podporou více souborů.
+
+> [!NOTE]
+> Přizpůsobení Natvis pracují s třídami a strukturami, ale ne definice typedef.
 
 ## <a name="BKMK_Why_create_visualizations_"></a>Vizualizace Natvis
 
@@ -69,9 +72,9 @@ Do libovolného C++ projektu můžete přidat soubor *. Natvis* .
 
 **Postup přidání nového souboru *Natvis* :**
 
-1. Vyberte uzel C++ projektu v **Průzkumník řešení**a vyberte **projekt**  > **Přidat novou položku**nebo klikněte pravým tlačítkem myši na projekt a vyberte **Přidat**  > **novou položku**.
+1. Vyberte uzel C++ projektu v **Průzkumník řešení**a vyberte **projekt** > **Přidat novou položku**nebo klikněte pravým tlačítkem myši na projekt a vyberte **Přidat** > **novou položku**.
 
-1. V dialogovém okně **Přidat novou položku** vyberte **Visual C++**   > **Utility**  > **soubor vizualizace ladicího programu (. Natvis)** .
+1. V dialogovém okně **Přidat novou položku** vyberte **Visual C++**  > **Utility** > **soubor vizualizace ladicího programu (. Natvis)** .
 
 1. Zadejte název souboru a vyberte **Přidat**.
 
@@ -164,7 +167,7 @@ Když ladicí program narazí na chyby v položce vizualizace, ignoruje je. Buď
 
 **Zapnutí diagnostiky Natvis:**
 
-- V **nabídce nástroje**  > **Možnosti** (nebo **ladění** **možností** > ) > **ladění**  > **okno výstup**, nastavte **diagnostické zprávy NatvisC++ (pouze)** na **Chyba**, **Upozornění** nebo **verbose**a pak vyberte **OK**.
+- V nabídce **nástroje** > **možnosti** (nebo > **možnosti** **ladění** ) > **ladění** > **okno výstup**nastavte **pouze diagnostické zprávy NatvisC++ (pouze)** na **chyby**, **varování**nebo **verbose**a pak vyberte **OK**.
 
 Chyby se zobrazí v okně **výstup** .
 
@@ -233,7 +236,7 @@ V následujícím příkladu se vizualizace vztahuje pouze na typ `BaseClass`:
 
 #### <a name="priority-attribute"></a>Priorita – atribut
 
-Nepovinný `Priority` atribut určuje pořadí, ve kterém se mají použít alternativní definice, pokud se definice nedokáže analyzovat. Možné hodnoty `Priority` jsou: `Low`, `MediumLow`, `Medium`, `MediumHigh` a `High`. Výchozí hodnota je `Medium`. Atribut `Priority` rozlišuje pouze priority v rámci stejného souboru *Natvis* .
+Nepovinný `Priority` atribut určuje pořadí, ve kterém se mají použít alternativní definice, pokud se definice nedokáže analyzovat. Možné hodnoty `Priority` jsou: `Low`, `MediumLow`,`Medium`, `MediumHigh`a `High`. Výchozí hodnota je `Medium`. Atribut `Priority` rozlišuje pouze priority v rámci stejného souboru *Natvis* .
 
 Následující příklad nejprve analyzuje položku, která se shoduje s 2015 STL. Pokud se to nepovede analyzovat, používá alternativní položku pro verzi 2013 STL:
 
@@ -269,7 +272,7 @@ Atribut `Optional` můžete umístit na libovolný uzel. Pokud se dílčí výra
 
 ### <a name="BKMK_Condition_attribute"></a>Atribut Condition
 
-Volitelný atribut `Condition` je k dispozici pro mnoho prvků vizualizace a určuje, kdy použít pravidlo vizualizace. Pokud se výraz uvnitř atributu Condition přeloží na `false`, pravidlo vizualizace se nepoužije. Pokud se vyhodnotí jako `true` nebo neexistuje žádný `Condition` atribut, vizualizace se použije. Tento atribut lze použít pro logiku if-else v položkách vizualizace.
+Volitelný atribut `Condition` je k dispozici pro mnoho prvků vizualizace a určuje, kdy použít pravidlo vizualizace. Pokud se výraz uvnitř atributu Condition přeloží na `false`, pravidlo vizualizace se nepoužije. Pokud se vyhodnotí jako `true`nebo neexistuje žádný `Condition` atribut, vizualizace se použije. Tento atribut lze použít pro logiku if-else v položkách vizualizace.
 
 Například následující vizualizace má dva prvky `DisplayString` pro typ inteligentního ukazatele. Pokud je člen `_Myptr` prázdný, je podmínka prvního prvku `DisplayString` překládána na `true`, takže se formulář zobrazí. Pokud člen `_Myptr` není prázdný, je podmínka vyhodnocena jako `false`a druhý `DisplayString` prvek zobrazí.
 
@@ -365,7 +368,7 @@ Přidání prvku `StringView` říká ladicímu programu, že může zobrazit ho
 </Type>
 ```
 
-Během ladění můžete vybrat ikonu lupy vedle proměnné a pak vybrat **Vizualizér textu** pro zobrazení řetězce, na který odkazuje **m_pszData** .
+Během ladění můžete vybrat ikonu lupy vedle proměnné a pak vybrat **Vizualizér textu** pro zobrazení řetězce, na který **m_pszData** odkazuje.
 
  ![Data CStringt pomocí Vizualizér StringView](../debugger/media/dbg_natvis_stringview_cstringt.png "Data CStringt pomocí Vizualizér StringView")
 
@@ -381,7 +384,7 @@ Volitelný `Expand` uzel upravuje podřízené prvky vizuálního typu, když ro
 
 #### <a name="BKMK_Item_expansion"></a>Rozšíření položky
 
- Element `Item` je nejzákladnější a společný prvek v uzlu `Expand`. `Item` definuje jeden podřízený element. Například třída `CRect` s poli `top`, `left`, `right` a `bottom` má následující položku vizualizace:
+ Element `Item` je nejzákladnější a společný prvek v uzlu `Expand`. `Item` definuje jeden podřízený element. Například třída `CRect` s poli `top`, `left`, `right`a `bottom` má následující položku vizualizace:
 
 ```xml
 <Type Name="CRect">
@@ -508,7 +511,7 @@ Ladicí program vyhodnocuje `NextPointer` a `ValueNode` výrazy v kontextu prvku
 `ValueNode` může být ponecháno prázdné nebo pomocí `this` odkazovat na samotný uzel `LinkedListItems`.
 
 #### <a name="customlistitems-expansion"></a>Rozšíření CustomListItems
-Rozšíření `CustomListItems` umožňuje napsat vlastní logiku pro procházení datové struktury, jako je například zatřiďovací tabulka. Pomocí `CustomListItems` Vizualizujte datové struktury, které mohou používat C++ výrazy pro všechno, co potřebujete k vyhodnocení, ale nedělejte si tvarovat pro `ArrayItems`, `IndexListItems` nebo `LinkedListItems`.
+Rozšíření `CustomListItems` umožňuje napsat vlastní logiku pro procházení datové struktury, jako je například zatřiďovací tabulka. Pomocí `CustomListItems` Vizualizujte datové struktury, které mohou používat C++ výrazy pro všechno, co potřebujete k vyhodnocení, ale nedělejte si tvarovat pro `ArrayItems`, `IndexListItems`nebo `LinkedListItems`.
 
 Následující Vizualizér pro `CAtlMap` je skvělým příkladem, kde je `CustomListItems` vhodný.
 
@@ -541,12 +544,12 @@ Následující Vizualizér pro `CAtlMap` je skvělým příkladem, kde je `Custo
 </Type>
 ```
 
-Můžete použít `Exec` k provedení kódu v rozšíření `CustomListItems` pomocí proměnných a objektů definovaných v rozšíření. Pomocí `Exec` můžete použít logické operátory, aritmetické operátory a operátory přiřazení. K vyhodnocení funkcí se nedá použít `Exec`.
+Můžete použít `Exec` k provedení kódu v rozšíření `CustomListItems` pomocí proměnných a objektů definovaných v rozšíření. Pomocí `Exec`můžete použít logické operátory, aritmetické operátory a operátory přiřazení. K vyhodnocení funkcí se nedá použít `Exec`.
 
 `CustomListItems` podporuje následující vnitřní funkce:
 
 - `strlen`, `wcslen`, `strnlen`, `wcsnlen`, `strcmp`, `wcscmp`, `_stricmp`, `_strcmpi`, `_wcsicmp`, `strncmp`, `wcsncmp`, `_strnicmp`, `_wcsnicmp`, `memcmp`, `memicmp`, `wmemcmp`, `strchr`, `wcschr`, `memchr`, `wmemchr`, `strstr`, `wcsstr`, `__log2`, `__findNonNull`
-- `GetLastError`, `TlsGetValue`, `DecodeHString`, `WindowsGetStringLen`, `WindowsGetStringRawBuffer`, `WindowsCompareStringOrdinal`, `RoInspectCapturedStackBackTrace`, `CoDecodeProxy`, `GetEnvBlockLength`, `DecodeWinRTRestrictedException`, 0, 1, 2
+- `GetLastError`, `TlsGetValue`, `DecodeHString`, `WindowsGetStringLen`, `WindowsGetStringRawBuffer`, `WindowsCompareStringOrdinal`, `RoInspectCapturedStackBackTrace`, `CoDecodeProxy`, `GetEnvBlockLength`, `DecodeWinRTRestrictedException`, `DynamicMemberLookup`, `DecodePointer`, `DynamicCast`
 - `ConcurrencyArray_OperatorBracket_idx // Concurrency::array<>::operator[index<>] and operator(index<>)`
 - `ConcurrencyArray_OperatorBracket_int // Concurrency::array<>::operator(int, int, ...)`
 - `ConcurrencyArray_OperatorBracket_tidx // Concurrency::array<>::operator[tiled_index<>] and operator(tiled_index<>)`
@@ -579,7 +582,7 @@ Můžete použít `Exec` k provedení kódu v rozšíření `CustomListItems` po
 </Type>
 ```
 
-Syntaxe je podobná `LinkedListItems` uzlu. `LeftPointer`, `RightPointer` a `ValueNode` jsou vyhodnocovány v kontextu třídy uzlu stromu. `ValueNode` může být ponecháno prázdné nebo pomocí `this` odkazovat na samotný uzel `TreeItems`.
+Syntaxe je podobná `LinkedListItems` uzlu. `LeftPointer`, `RightPointer`a `ValueNode` jsou vyhodnocovány v kontextu třídy uzlu stromu. `ValueNode` může být ponecháno prázdné nebo pomocí `this` odkazovat na samotný uzel `TreeItems`.
 
 #### <a name="BKMK_ExpandedItem_expansion"></a>Rozšíření ExpandedItem
  Element `ExpandedItem` generuje agregované podřízené zobrazení zobrazením vlastností základních tříd nebo datových členů, jako kdyby byly podřízenými objekty typu vizuálu. Ladicí program vyhodnotí zadaný výraz a připojí podřízené uzly výsledku do podřízeného seznamu vizuálního typu.
@@ -665,7 +668,7 @@ Tady je příklad prvku UIVisualizer:
 </AutoVisualizer>
 ```
 
-- Dvojice atributů `ServiceId`  -  `Id` identifikuje `UIVisualizer`. `ServiceId` je identifikátor GUID služby, kterou balíček Vizualizér zpřístupňuje. `Id` je jedinečný identifikátor, který odlišuje vizualizace, pokud služba poskytuje více než jednu. V předchozím příkladu má stejná služba Vizualizér dva nástroje pro vizualizaci.
+- Dvojice atributů `ServiceId` - `Id` identifikuje `UIVisualizer`. `ServiceId` je identifikátor GUID služby, kterou balíček Vizualizér zpřístupňuje. `Id` je jedinečný identifikátor, který odlišuje vizualizace, pokud služba poskytuje více než jednu. V předchozím příkladu má stejná služba Vizualizér dva nástroje pro vizualizaci.
 
 - Atribut `MenuName` definuje název Vizualizátoru, který se zobrazí v rozevíracím seznamu vedle ikony lupy v ladicím programu. Příklad:
 
@@ -686,4 +689,4 @@ Každý typ definovaný v souboru *. Natvis* musí explicitně uvést jakékoli 
 
 Je to mnohem více práce na zápis vlastního Vizualizátoru, než je definice XML Natvis, ale nejste omezeni omezeními na to, co Natvis nebo nepodporují. Vlastní vizualizace mají přístup k plné sadě rozhraní API rozšiřitelnosti ladicího programu, které mohou dotazovat a upravovat proces laděného procesu nebo komunikovat s jinými částmi sady Visual Studio.
 
- Pro prvky `CustomVisualizer` lze použít atributy `Condition`, `IncludeView` a `ExcludeView`.
+ Pro prvky `CustomVisualizer` lze použít atributy `Condition`, `IncludeView`a `ExcludeView`.

@@ -4,17 +4,17 @@ ms.date: 04/04/2018
 ms.topic: reference
 helpviewer_keywords:
 - code analysis, rule sets reference
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96b2c0410e9e1934e8e0a3c9c31c568f1e832c0e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d380346b7e049a6ffc4e8d03a5be27983de10249
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649083"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587235"
 ---
 # <a name="code-analysis-rule-set-reference"></a>Referenční dokumentace sady pravidel nástroje Analýza kódu
 
@@ -23,9 +23,9 @@ Při konfiguraci starší verze analýzy pro projekty spravovaného kódu v sad�
 > [!NOTE]
 > Sady pravidel v této části se týkají starší verze analýzy. Informace o sadách pravidel dostupných pro balíčky analyzátoru kódu najdete v tématu [použití sad pravidel s analyzátory kódu](analyzer-rule-sets.md).
 
-Můžete použít jednu z těchto předdefinovaných sad pravidel nebo můžete [přizpůsobit sadu pravidel](../code-quality/how-to-create-a-custom-rule-set.md) tak, aby vyhovovala vašim požadavkům na projekt. Pokud zahrnete několik sad pravidel, které obsahují stejné pravidlo, v sadě vlastních pravidel, toto pravidlo se v sadě vlastních pravidel zobrazí jenom jednou.
+Můžete použít jednu z těchto sad předdefinovaných pravidel, nebo se dají [přizpůsobování sady vlastních pravidel](../code-quality/how-to-create-a-custom-rule-set.md) podle svých požadavků projektu. Pokud zahrnete několik sad pravidel, které obsahují stejné pravidlo, v sadě vlastních pravidel, toto pravidlo se v sadě vlastních pravidel zobrazí jenom jednou.
 
-Témata v této části popisují předdefinované sady pravidel a pravidla (nebo upozornění), která obsahují.
+Témata v této části popisují předdefinovaných pravidel sady a pravidel (nebo upozornění), které obsahují.
 
 | Sada pravidel | Zahrnutá pravidla |
 | - | - |

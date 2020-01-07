@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, Properties window
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72e0a8393a65d4c0e1549a6617971b0adb8c1df7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b2cd7d4598040721d3c5b6acb7844f668c72ea09
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653968"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589692"
 ---
 # <a name="customize-the-properties-window"></a>Přizpůsobení okno Vlastnosti
 
@@ -26,7 +26,7 @@ V aplikaci Visual Studio můžete přizpůsobit vzhled a chování okna vlastnos
 
 Když nastavíte název vlastnosti v definici DSL, její zobrazovaný název se automaticky nastaví na kopii názvu. Pokud napíšete název Pascal použita, jako je například "FuelGauge", zobrazované jméno bude automaticky obsahovat mezeru: "měřič pohonu". Zobrazované jméno ale můžete nastavit explicitně na jinou hodnotu.
 
-**Popis**. Popis doménové vlastnosti se zobrazí na dvou místech:
+**Popis**: Popis doménové vlastnosti se zobrazí na dvou místech:
 
 - V dolní části okna vlastnosti, když uživatel vybere vlastnost. Můžete ji použít k vysvětlení uživateli, co vlastnost představuje.
 
@@ -40,7 +40,7 @@ Některé dynamické funkce grafických prvků mohou být reprezentovány nebo *
 
 V definici DSL klikněte pravým tlačítkem myši na třídu Shape, přejděte na **Přidat vystavené**a pak zvolte funkci.
 
-V obrazcích můžete vystavit vlastnosti **FillColor**, **OutlineColor**, **TextColor**, **OutlineDashStyle**, **OutlineThickness** a **FillGradientMode** . V konektorech můžete zpřístupnit **barvy** `,`**TextColor**, **DashStyle**a vlastnosti **tloušťky** . V diagramech můžete zveřejnit vlastnosti **FillColor** a **TextColor** .
+V obrazcích můžete vystavit vlastnosti **FillColor**, **OutlineColor**, **TextColor**, **OutlineDashStyle**, **OutlineThickness** a **FillGradientMode** . V konektorech můžete zpřístupnit **barvy**`,`**TextColor**, **DashStyle**a vlastnosti **tloušťky** . V diagramech můžete zveřejnit vlastnosti **FillColor** a **TextColor** .
 
 ## <a name="forwarding-display-properties-of-related-elements"></a>Předávání: zobrazení vlastností souvisejících elementů
 
@@ -179,11 +179,11 @@ Můžete definovat vlastní editor. To umožňuje uživateli povolit buď úprav
 
 Editor definujete tak, že zapíšete třídu, která je odvozena od <xref:System.Drawing.Design.UITypeEditor>. Vaše třída musí přepsat:
 
-- <xref:System.Drawing.Design.UITypeEditor.EditValue%2A> pro interakci s uživatelem a aktualizaci hodnoty vlastnosti.
+- <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>pro interakci s uživatelem a aktualizaci hodnoty vlastnosti.
 
 - <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>, chcete-li určit, zda má Editor otevřít dialogové okno nebo zadat rozevírací nabídku.
 
-Můžete také zadat grafické znázornění hodnoty vlastnosti, která se zobrazí v mřížce vlastností. Provedete to tak, že přepíšete `GetPaintValueSupported` a `PaintValue`.  Další informace najdete v tématu <xref:System.Drawing.Design.UITypeEditor>.
+Můžete také zadat grafické znázornění hodnoty vlastnosti, která se zobrazí v mřížce vlastností. Provedete to tak, že přepíšete `GetPaintValueSupported`a `PaintValue`.  Další informace najdete v tématu <xref:System.Drawing.Design.UITypeEditor>.
 
 > [!NOTE]
 > Přidejte kód do samostatného souboru kódu v projektu **DSL** .

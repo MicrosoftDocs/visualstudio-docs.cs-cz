@@ -8,25 +8,25 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.U-SQL.Formatting.Indentation
 - VS.ToolsOptionsPages.Text_Editor.U-SQL.Formatting
 - VS.ToolsOptionsPages.Text_Editor.U-SQL.Formatting.General
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1e57470c1afa0fad97265bdcebff4fd9a2a0a43
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 200ec41a1295178f1127d10053985384a7813158
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666668"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568266"
 ---
-# <a name="options-text-editor-u-sql-formatting"></a>Možnosti, textový editor, U-SQL, formátování
+# <a name="options-text-editor-u-sql-formatting"></a>Options, Text Editor, U-SQL, Formatting
 
-Pomocí stránky možnosti **formátování** můžete nastavit možnosti formátování kódu v editoru kódu. Chcete-li získat přístup k této stránce Možnosti, vyberte možnost **nástroje**  > **Možnosti**. V dialogovém okně **Možnosti** vyberte možnost **textový editor**  >  formátování**U-SQL**  > .
+Pomocí stránky možnosti **formátování** můžete nastavit možnosti formátování kódu v editoru kódu. Chcete-li získat přístup k této stránce Možnosti, vyberte možnost **nástroje** > **Možnosti**. V dialogovém okně **Možnosti** vyberte možnost **textový editor** > formátování **U-SQL** > .
 
-## <a name="general-page"></a>Stránka Obecné
+## <a name="general-page"></a>Stránka s obecnými informacemi
 
-### <a name="general-settings"></a>Obecné nastavení
+### <a name="general-settings"></a>Obecná nastavení
 
 Tato nastavení mají vliv na to, *kdy* Editor kódu aplikuje možnosti formátování na kód.
 
