@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Domain-Specific Language, external types
 - Domain-Specific Language, relationships
 - Domain-Specific Language, domain properties
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1823fb808985d27a02dc2cac34859ea1fbca44b6
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 00ade696290e4b8d3c32fa335fc4bf07509aef1c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985160"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594679"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>Jak se definuje jazyk specifický pro doménu
 Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešení sady Visual Studio ze šablony. Klíčovou součástí řešení je diagram definice DSL, který je uložený v DslDefinition. DSL. Definice DSL definuje třídy a tvary DSL. Po úpravě a přidání na tyto prvky můžete přidat programový kód pro přizpůsobení DSL.
@@ -30,7 +30,7 @@ Pokud s DSL začínáte, doporučujeme vám pracovat přes **testovací prostře
 
 ## <a name="templates"></a>Výběr řešení šablony
 
-K definování DSL musíte mít nainstalované následující součásti:
+Pokud chcete definovat DSL, musíte mít nainstalovaný následující komponenty:
 
 - Visual Studio
 - Úlohy vývoje rozšíření pro Visual Studio (zahrnuje sadu Visual Studio SDK)
@@ -80,7 +80,7 @@ Chcete-li vytvořit nový jazyk specifický pro doménu, vytvořte nové řešen
 
 4. Můžete buď upravit nastavení na ostatních stránkách, nebo ponechat výchozí hodnoty.
 
-5. Klikněte na tlačítko **Dokončit**.
+5. Klikněte na **Dokončit**.
 
     Průvodce vytvoří řešení, které obsahuje dva nebo tři projekty a generuje kód z definice DSL.
 
@@ -103,7 +103,7 @@ Chcete-li vytvořit nový jazyk specifický pro doménu, vytvořte nové řešen
 
  Experimentujte s nástroji. Vytvořte prvky a připojte je.
 
- Zavřete experimentální instanci sady Visual Studio.
+ Ukončete experimentální instanci sady Visual Studio.
 
 > [!NOTE]
 > Po úpravě DSL již nebudete moci zobrazit obrazce v ukázkovém testovacím souboru. Budete však moci vytvořit nové prvky.
@@ -415,7 +415,7 @@ Chcete-li vytvořit nový jazyk specifický pro doménu, vytvořte nové řešen
 
  Nejjednodušším způsobem dosažení tohoto efektu v definici DSL definujete pro kontejner jednu doménovou třídu a jednu doménovou třídu pro každý seznam. Třída kontejneru je namapována na tvar oddílu.
 
- ![Mapa obrazce](../modeling/media/music_mapcomp.png)
+ ![Mapový tvar](../modeling/media/music_mapcomp.png)
 
  Další informace najdete v tématu [vlastnosti obrazců oddílů](../modeling/properties-of-compartment-shapes.md).
 

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - load model, specifying
 - load test load model, specifying
 ms.assetid: b7fae849-0538-40d1-ab35-2bb3a0fe4393
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c3125a229faed10b141834565fec71e3b9f0a0d2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 18e22cd151d8013a50e34a01757069dde9574e79
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664963"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589601"
 ---
 # <a name="test-mix-models-overview"></a>Přehled modelů kombinace testů
 
@@ -26,18 +26,18 @@ Možnosti zátěžového modelování můžete použít k přesnější předpov
 
 Pomocí Editor zátěžového testu nebo průvodce modelem kombinace testů můžete zadat následující typy kombinace testů pro scénář zátěžového testu. Další informace najdete v tématu [Změna modelu kombinace testů ve scénáři](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md).
 
-Pro scénář zátěžového testu můžete zadat jednu z následujících možností modelu kombinace testů:
+Můžete určit jednu z následujících možností model kombinace testů pro vašeho scénáře zkušebního zatížení:
 
-- **Na základě celkového počtu testů:** Určuje, který webový výkon nebo test jednotek se spustí, když virtuální uživatel spustí iteraci testu. Na konci zátěžového testu je počet, kolikrát se konkrétní testovací běh shodoval s přiřazenou distribucí testu. Tento model kombinace testů použijte, když vytváříte kombinaci testů v procentech transakcí v protokolu služby IIS nebo v provozních datech. Další informace naleznete v [procentech na základě spuštěných testů](#BasedOnTestsStarted).
+- **Na základě celkového počtu testů:** Určuje, který webového výkonu nebo Jednotkový test se spustí, když virtuální uživatel spustí iteraci testu. Na konci zátěžového testu je počet, kolikrát se konkrétní testovací běh shodoval s přiřazenou distribucí testu. Použijte tento model kombinace testů, pokud vytváříte poměru testů podílu transakcí v protokolu služby IIS nebo v údajích o produkci. Další informace naleznete v [procentech na základě spuštěných testů](#BasedOnTestsStarted).
 
-- **Na základě počtu virtuálních uživatelů:** Určuje procentuální podíl virtuálních uživatelů, kteří spustí určitý webový výkon nebo test jednotky. V jakémkoli bodě zátěžového testu odpovídá počet uživatelů, kteří spouštějí určitý test, přiřazenému rozdělení. Tento model kombinace testů použijte, když vytváříte kombinaci testů na procentu uživatelů, kteří spouštějí určitý test. Další informace najdete v [procentech na základě virtuálních uživatelů](#PercentageBasedonVirtualUsers).
+- **Na základě počtu virtuálních uživatelů:** Určuje procentuální podíl virtuálních uživatelů, kteří budou používat konkrétního webového výkonu nebo Jednotkový test. Kdykoli během zátěžového testu odpovídá počet uživatelů, kteří jsou spuštěn určitý test přiřazené distribuce. Tento model kombinace testů použijte, když vytváříte kombinaci testů na procentu uživatelů, kteří spouštějí určitý test. Další informace najdete v [procentech na základě virtuálních uživatelů](#PercentageBasedonVirtualUsers).
 
-- **Podle tempa uživatele:** V průběhu zátěžového testu každý test výkonnosti webu nebo test jednotky spustí určitý počet opakování na uživatele za hodinu. Tento model kombinace testů použijte, pokud chcete, aby virtuální uživatelé spouštěli test s použitím určitého tempa v průběhu zátěžového testu. Další informace najdete v tématu [stimulace test směs](#PacingTestMix).
+- **Založený na kroku uživatele:** v průběhu zátěžového testu je každý test webového výkonu nebo Jednotkový test spustit zadaný počet opakování za uživatele za hodinu. Použijte tento model kombinace testů, když potřebujete virtuálních uživatelů pro spuštění testu v určitém tempu zátěžového testu. Další informace najdete v tématu [stimulace test směs](#PacingTestMix).
 
     > [!TIP]
     > Když zvolíte **procentuální poměr testů** a když zvolíte **procento na základě virtuálních uživatelů**? Rozdíl mezi těmito dvěma možnostmi je důležitý, pokud některé testy v poměru testů mají mnohem delší dobu než jiné testy. V takové situaci byste pravděpodobně zvolili **procento na základě virtuálních uživatelů**. Tato volba pomáhá předejít testovacímu běhu, ve kterém pravděpodobnost zvyšuje, že příliš mnoho uživatelů bude spouštět testy s dlouhou dobou trvání. Pokud ale všechny testy mají podobnou dobu trvání, můžete bezpečněji vybrat **procentuální poměr testů**.
 
-- **Na základě sekvenčního pořadí:** Každý virtuální uživatel spouští testy webového výkonu nebo jednotek v pořadí, ve kterém jsou testy definovány ve scénáři. Virtuální uživatel pokračuje v provádění testů v tomto pořadí, dokud není dokončen zátěžový test. Další informace najdete v tématu [sekvenční pořadí](#SequentialOrder).
+- **Na základě pořadí sekvenčního:** každý virtuální uživatel spouští testy webového výkonu nebo Jednotkový v pořadí, že testy jsou definovány ve scénáři. Virtuální uživatel pokračuje procházením testy v tomto pořadí, dokud není dokončen zátěžový test. Další informace najdete v tématu [sekvenční pořadí](#SequentialOrder).
 
 ### <a name="BasedOnTestsStarted"></a>Procento na základě spuštěných testů
 
@@ -104,9 +104,9 @@ Můžete vybrat testy, které se mají spustit na začátku a konci relace zát�
 
 ## <a name="see-also"></a>Viz také:
 
-- [Upravit modely kombinace textu za účelem určení pravděpodobnosti, že virtuální uživatel spustí test](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)
-- [Úprava vzorů zatížení pro modelování aktivit virtuálních uživatelů](../test/edit-load-patterns-to-model-virtual-user-activities.md)
-- [Úprava poměru testů pro určení testů, které mají být zahrnuty do scénáře zátěžového testu](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)
-- [Konfigurovat nastavení běhu zátěžového testu](../test/configure-load-test-run-settings.md)
+- [Úpravy modelů kombinací testů a určení pravděpodobnosti, že virtuální uživatel spustí test](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)
+- [Úpravy vzorů zatížení pro model aktivity virtuálního uživatele](../test/edit-load-patterns-to-model-virtual-user-activities.md)
+- [Upravit poměr testů k určení, které testy mají být zahrnuty do scénáře zátěžového testu](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)
+- [Konfigurace parametrů spuštění zátěžového testu](../test/configure-load-test-run-settings.md)
 - [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md)
 - [Změna modelu kombinace testů ve scénáři](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)

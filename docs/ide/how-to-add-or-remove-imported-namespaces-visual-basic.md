@@ -9,17 +9,17 @@ helpviewer_keywords:
 - imported namespaces [Visual Studio]
 - references [Visual Studio], imported namespaces
 ms.assetid: 44cebec3-0ea0-47c2-8406-4edeab6a997e
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ff6ad1a07440b27b679fa3f749c24a6d3157dbd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e636969164c4cf2526bb85add95e7cfe02ce6176
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654658"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593327"
 ---
 # <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>Postupy: Přidání nebo odebrání importovaných oborů názvů (Visual Basic)
 
@@ -36,7 +36,7 @@ Importované obory názvů jsou spravovány na stránce **odkazy** v **Návrhá�
 3. V seznamu **importované obory názvů** zaškrtněte políčko pro obor názvů, který chcete přidat.
 
     > [!NOTE]
-    > Aby bylo možné importovat, musí být obor názvů v odkazované součásti. Pokud se obor názvů v seznamu nezobrazí, budete muset přidat odkaz na komponentu, která ho obsahuje. Další informace naleznete v tématu [Správa odkazů v projektu](managing-references-in-a-project.md).
+    > Aby bylo možné importovat, musí být obor názvů v odkazované součásti. Pokud se obor názvů v seznamu nezobrazí, budete muset přidat odkaz na komponentu, která ho obsahuje. Další informace najdete v tématu [Správa odkazů v projektu](managing-references-in-a-project.md).
 
 ### <a name="to-remove-an-imported-namespace"></a>Odebrání importovaného oboru názvů
 

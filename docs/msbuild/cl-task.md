@@ -16,17 +16,17 @@ helpviewer_keywords:
 - MSBuild (C++), CL task
 - CL task (MSBuild (C++))
 ms.assetid: 651ba971-b755-4f03-a549-4816beb3cc0d
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f7704ebee49af51c5cbeff118d2eed8e08ace30
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: effc1b51352052f4e11e42298f9e9567db30d8f1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747347"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593353"
 ---
 # <a name="cl-task"></a>CL – úloha
 Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří spustitelné soubory ( *. exe*), soubory dynamické knihovny ( *. dll*) nebo soubory modulu kódu ( *. netmodule*). Další informace naleznete v tématu [Možnosti kompilátoru](/cpp/build/reference/compiler-options).
@@ -46,7 +46,7 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Volitelný řetězcový parametr.
 
-   Seznam možností příkazového řádku Například "/\<option1 >/\<option2 >/\<option # >". Pomocí tohoto parametru můžete zadat možnosti příkazového řádku, které nejsou reprezentované žádným jiným parametrem úlohy.
+   Seznam možností příkazového řádku Například "/\<možnost1 >/\<možnost2 >/\<možnost # >". Pomocí tohoto parametru můžete zadat možnosti příkazového řádku, které nejsou reprezentované žádným jiným parametrem úlohy.
 
    Další informace naleznete v tématu [Možnosti kompilátoru](/cpp/build/reference/compiler-options).
 
@@ -78,15 +78,15 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Seznam**  -  *\<none >*
+  - ** - ** *\<žádné >*
 
-  - **AssemblyCode**  -  **/FA**
+  - **AssemblyCode** -  **/FA**
 
-  - **AssemblyAndMachineCode**  -  **/FAc**
+  - **AssemblyAndMachineCode** -  **/FAc**
 
-  - **AssemblyAndSourceCode**  -  **/FAS**
+  - **AssemblyAndSourceCode** -  **/FAS**
 
-  - **Všechny**  -  **/FAcs**
+  - **Všechny** -  **/FAcs**
 
     Další informace najdete v tématu možnosti **/Fa**, **/FAc**, **/FAS**a **/FAcs** v [/FA,/FA (soubor výpisu)](/cpp/build/reference/fa-fa-listing-file).
 
@@ -98,13 +98,13 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Výchozí**  -                           *\<none >*
+  - **Výchozí** -                           *\<žádné >*
 
-  - **StackFrameRuntimeCheck**  -  **/RTCs**
+  - **StackFrameRuntimeCheck** -  **/RTCs**
 
-  - **UninitializedLocalUsageCheck**  -  **/RTCu**
+  - **UninitializedLocalUsageCheck** -  **/RTCu**
 
-  - **EnableFastChecks**  -                           **/RTC1**
+  - **EnableFastChecks** -                           **/RTC1**
 
     Další informace naleznete v tématu [/RTC (kontrola chyb za běhu)](/cpp/build/reference/rtc-run-time-error-checks).
 
@@ -146,11 +146,11 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Cdecl**  -  **/GD**
+  - **Cdecl** -  **/Gd**
 
-  - **FastCall**  -                           **/gr**
+  - **FastCall** -                           **/gr**
 
-  - **StdCall**  -                           **/GZ**
+  - **StdCall** -                           **/Gz**
 
     Další informace naleznete v tématu [/GD,/GR,/GV,/GZ (konvence volání)](/cpp/build/reference/gd-gr-gv-gz-calling-convention).
 
@@ -162,11 +162,11 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Výchozí**  -  *\<none >*
+  - **Výchozí** -  *\<žádné >*
 
-  - **CompileAsC**  -  **/TC**
+  - **CompileAsC** -  **/TC**
 
-  - **CompileAsCpp**  -  **/TP**
+  - **CompileAsCpp** -  **/TP**
 
     Další informace naleznete v tématu [/TC,/TP,/TC,/TP (určení typu zdrojového souboru)](/cpp/build/reference/tc-tp-tc-tp-specify-source-file-type).
 
@@ -178,15 +178,15 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **false**  -  *\<none >*
+  - **false** -  *\<žádná >*
 
-  - **true**  -  **/CLR**
+  - **true** -  **/CLR**
 
-  - **Čistě**  -  **/clr: Pure**
+  - **Čistě** -  **/clr: Pure**
 
-  - **Bezpečná**  -  **/clr: Safe**
+  - **Bezpečná** -  **/clr: Safe**
 
-  - **OldSyntax**  -  **/clr: oldSyntax**
+  - **OldSyntax** -  **/clr: oldSyntax**
 
     Další informace naleznete v tématu [/CLR (Common Language Runtime Compilation)](/cpp/build/reference/clr-common-language-runtime-compilation).
 
@@ -206,11 +206,11 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **OldStyle**  -  **/Z7**
+  - **OldStyle** -  **/Z7**
 
-  - **ProgramDatabase**  -  **/Zi**
+  - **ProgramDatabase** -  **/Zi**
 
-  - **EditAndContinue**  -  **/Zi**
+  - **EditAndContinue** -  **/ZI**
 
     Další informace naleznete v tématu [/Z7,/Zi,/Zi (formát ladicích informací)](/cpp/build/reference/z7-zi-zi-debug-information-format).
 
@@ -238,9 +238,9 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **StreamingSIMDExtensions**  -  **/arch: SSE**
+  - **StreamingSIMDExtensions** -  **/arch: SSE**
 
-  - **StreamingSIMDExtensions2**  -  **/arch: SSE2**
+  - **StreamingSIMDExtensions2** -  **/arch:SSE2**
 
     Další informace najdete v tématu [/arch (x86)](/cpp/build/reference/arch-x86).
 
@@ -256,7 +256,7 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Volitelný logický parametr.
 
-   Pokud je `true` povolit analýzu kódu.
+   Pokud je `true`povolit analýzu kódu.
 
    Další informace naleznete v tématu [/analyze (analýza kódu)](/cpp/build/reference/analyze-code-analysis).
 
@@ -268,13 +268,13 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Žádné**  -  **/errorreport: none**
+  - **Žádné** -  **/errorreport: none**
 
-  - **Prompt**  -  **/errorreport: prompt**
+  - **Prompt** -  **/errorreport: prompt**
 
-  - **Fronta**  -  **/errorreport: Queue**
+  - **Fronta** -  **/errorreport: Queue**
 
-  - **Odeslat**  -  **/errorreport: Send**
+  - **Odeslat** -  **/errorreport: Send**
 
     Další informace najdete v tématu [/errorreport (hlášení chyb interních kompilátorů)](/cpp/build/reference/errorreport-report-internal-compiler-errors).
 
@@ -286,13 +286,13 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **false**  -  *\<none >*
+  - **false** -  *\<žádná >*
 
-  - **Asynchronní**  -  **/EHa**
+  - **Asynchronní** -  **/EHa**
 
-  - **Synchronizovat**  -  **/EHsc**
+  - **Sync** -  **/EHsc**
 
-  - **SyncCThrow**  -  **/EHS**
+  - **SyncCThrow** -  **/EHs**
 
     Další informace naleznete v tématu [/EH (model zpracování výjimek)](/cpp/build/reference/eh-exception-handling-model).
 
@@ -312,11 +312,11 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Ani**  -  *\<none >*
+  - Žádná -  *\<žádná >*
 
-  - **Velikost**  -  **/OS**
+  - **Velikost** -  **/OS**
 
-  - **Rychlost**  -  **/ot**
+  - **Rychlost** -  **/ot**
 
     Další informace najdete v tématu [/OS,/ot (upřednostnění malého kódu, upřednostnění rychlého kódu)](/cpp/build/reference/os-ot-favor-small-code-favor-fast-code).
 
@@ -336,11 +336,11 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Přesný**  -  **/FP: přesný**
+  - **Přesný** -  **/FP: přesný**
 
-  - **Striktní**  -  **/FP: Strict**
+  - **Striktní** -  **/FP: Strict**
 
-  - **Rychlé**  -  **/FP: Fast**
+  - **Rychlé** -  **/FP: Fast**
 
     Další informace najdete v tématu [/FP (určení chování s plovoucí](/cpp/build/reference/fp-specify-floating-point-behavior)desetinnou čárkou).
 
@@ -388,7 +388,7 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Volitelný parametr `Boolean`.
 
-   Pokud `true` zabraňuje kompilátoru v hledání souborů k zahrnutí v adresářích zadaných v cestě a proměnných prostředí INCLUDE.
+   Pokud `true`zabraňuje kompilátoru v hledání souborů k zahrnutí v adresářích zadaných v cestě a proměnných prostředí INCLUDE.
 
    Další informace naleznete v části [/x (ignorování standardních cest zahrnutí)](/cpp/build/reference/x-ignore-standard-include-paths).
 
@@ -400,13 +400,13 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Výchozí**  -  *\<none >*
+  - **Výchozí** -  *\<žádné >*
 
-  - **Zakázané**  -  **/Ob0**
+  - **Zakázané** -  **/Ob0**
 
-  - **OnlyExplicitInline**  -  **/OB1**
+  - **OnlyExplicitInline** -  **/Ob1**
 
-  - **AnySuitable**  -  **/Ob2**
+  - **AnySuitable** -  **/Ob2**
 
     Další informace naleznete v tématu [/ob (rozšíření vložené funkce)](/cpp/build/reference/ob-inline-function-expansion).
 
@@ -468,11 +468,11 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Volitelný parametr `Boolean`.
 
-   Pokud `true` způsobí, že kompilátor zpracuje klauzule a direktivy OpenMP.
+   Pokud `true`způsobí, že kompilátor zpracuje klauzule a direktivy OpenMP.
 
    Další informace najdete v tématu [/OpenMP (povolení podpory openmp 2,0)](/cpp/build/reference/openmp-enable-openmp-2-0-support).
 
-- **Vybrané**
+- **Optimalizace**
 
    Volitelný **řetězcový** parametr.
 
@@ -480,13 +480,13 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Zakázané**  -  **/od**
+  - **Zakázané** -  **/od**
 
-  - **MinSpace**  -  **/O1**
+  - **MinSpace** -  **/O1**
 
-  - **MaxSpeed**  -  **/O2**
+  - **MaxSpeed** -  **/O2**
 
-  - **Úplný**  -  **/Ox**
+  - **Úplný** -  **/Ox**
 
     Další informace najdete v tématu [Možnosti/o (optimalizace kódu)](/cpp/build/reference/o-options-optimize-code).
 
@@ -498,11 +498,11 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **NotUsing**  -  *\<none >*
+  - **NotUsing** -  *\<žádné >*
 
-  - **Vytvořit**  -  **/YC**
+  - **Vytvořit** -  **/YC**
 
-  - **Použití**  -  **/Yu**
+  - **Použití** -  **/Yu**
 
     Další informace naleznete v tématu [/Yc (Create a Compiled hlavičkový soubor)](/cpp/build/reference/yc-create-precompiled-header-file) a [/Yu (použít předkompilovaný hlavičkový soubor)](/cpp/build/reference/yu-use-precompiled-header-file). Podívejte se také na parametry **PrecompiledHeaderFile** a **PrecompiledHeaderOutputFile** v této tabulce.
 
@@ -590,13 +590,13 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - @No__t_1 **/Mt** s **více vlákny**
+  -  -  **/Mt** s **více vlákny**
 
-  - **MultiThreadedDebug**  -  **/MTD**
+  - **MultiThreadedDebug** -  **/MTd**
 
-  - **MultiThreadedDLL**  -  **/MD**
+  - **MultiThreadedDLL** -  **/MD**
 
-  - **MultiThreadedDebugDLL**  -  **/MDD**
+  - **MultiThreadedDebugDLL** -  **/MDd**
 
     Další informace naleznete v tématu [/MD,/MT,/LD (použití běhové knihovny)](/cpp/build/reference/md-mt-ld-use-run-time-library).
 
@@ -646,17 +646,17 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Výchozí**  -  **/Zp1**
+  - **Výchozí** -  **/Zp1**
 
-  - **1Byte**  -  **/Zp1**
+  - **1Byte** -  **/Zp1**
 
-  - **2Bytes**  -  **/Zp2**
+  - **2Bytes** -  **/Zp2**
 
-  - **4Bytes**  -  **/Zp4**
+  - **4Bytes** -  **/Zp4**
 
-  - **8Bytes**  -  **/ZP8**
+  - **8Bytes** -  **/Zp8**
 
-  - **16Bytes**  -  **/Zp16**
+  - **16Bytes** -  **/Zp16**
 
     Další informace naleznete v tématu [/zp (zarovnání členů struktury)](/cpp/build/reference/zp-struct-member-alignment).
 
@@ -682,7 +682,7 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zachází s zadaným seznamem upozornění kompilátoru jako s chybami.
 
-   Další informace najdete v části **/we** `n` v příkazu [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/We,/WO,/WV,/WX (úroveň upozornění)](/cpp/build/reference/compiler-option-warning-level).
+   Další informace najdete v části **/we**`n` v příkazu [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/We,/WO,/WV,/WX (úroveň upozornění)](/cpp/build/reference/compiler-option-warning-level).
 
 - **TreatWarningAsError**
 
@@ -740,17 +740,17 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **TurnOffAllWarnings**  -  **/W0**
+  - **TurnOffAllWarnings** -  **/W0**
 
-  - **Level1**  -  **/W1**
+  - **Level1** -  **/W1**
 
-  - **Level2**  -  **/W2**
+  - **Level2** -  **/W2**
 
-  - **Level3**  -  **/w3**
+  - **Level3** -  **/w3**
 
-  - **Level4**  -  **/W4**
+  - **Level4** -  **/W4**
 
-  - **Povolit všechna upozornění**  -  **/Wall**
+  - **Povolit všechna upozornění** -  **/Wall**
 
     Další informace naleznete v části **/w**_n_ v příkazu [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/We,/WO,/WV,/WX (úroveň upozornění)](/cpp/build/reference/compiler-option-warning-level).
 

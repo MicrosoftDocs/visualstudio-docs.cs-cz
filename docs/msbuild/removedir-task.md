@@ -1,5 +1,5 @@
 ---
-title: Removedir – úloha | Dokumentace Microsoftu
+title: Úloha RemoveDir – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,34 +13,34 @@ helpviewer_keywords:
 - RemoveDir task [MSBuild]
 - MSBuild, RemoveDir task
 ms.assetid: 7ab214be-26b2-4bcd-9de8-c1b2091c0b74
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e2e3e629102b3ce1cfab1a998b18842c69666c3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e0827e05b2c295df2922c5f58d6a47d52e9a50e3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974600"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595992"
 ---
 # <a name="removedir-task"></a>RemoveDir – úloha
-Odebere zadaný adresáře a všechny jeho soubory a podadresáře.
+Odebere zadané adresáře a všechny jeho soubory a podadresáře.
 
 ## <a name="parameters"></a>Parametry
- Následující tabulka popisuje parametry `RemoveDir` úloh.
+ Následující tabulka popisuje parametry úlohy `RemoveDir`.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Directories`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje adresáře odstranit.|
-|`RemovedDirectories`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje adresáře, které byly úspěšně odstraněny.|
+|`Directories`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje adresáře, které se mají odstranit.|
+|`RemovedDirectories`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Obsahuje adresáře, které byly úspěšně odstraněny.|
 
 ## <a name="remarks"></a>Poznámky
- Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
- Následující příklad odebere adresáře určené `OutputDirectory` a `DebugDirectory` vlastnosti. Tyto cesty jsou zpracovány jako relativní k adresáři projektu.
+ Následující příklad odebere adresáře určené vlastností `OutputDirectory` a `DebugDirectory`. Tyto cesty jsou považovány za relativní vzhledem k adresáři projektu.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2005">
@@ -60,4 +60,4 @@ Odebere zadaný adresáře a všechny jeho soubory a podadresáře.
 
 ## <a name="see-also"></a>Viz také:
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

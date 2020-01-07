@@ -5,21 +5,21 @@ ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Advanced
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d1d540f3a49eda22973b25a6b9a91691907efe93
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c2f4c01a627fb2cd1b581331dd086e2d783d475f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666293"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596226"
 ---
 # <a name="options-text-editor-c-advanced"></a>Možnosti, textový editor, C#, upřesnit
 
-Stránka **Upřesnit** možnosti slouží k úpravě nastavení formátování editoru, refaktoringu kódu a dokumentačních komentářů XML pro C#. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje**  > **Možnosti**a pak zvolte**C#** **textový editor**  >   > **Upřesnit**.
+Stránka **Upřesnit** možnosti slouží k úpravě nastavení formátování editoru, refaktoringu kódu a dokumentačních komentářů XML pro C#. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje** > **Možnosti**a pak zvolte **C#** **textový editor** >  > **Upřesnit**.
 
 > [!NOTE]
 > Ne všechny možnosti mohou být uvedeny zde.
@@ -94,7 +94,7 @@ Stránka **Upřesnit** možnosti slouží k úpravě nastavení formátování e
 
    ![Rychlá akce pro instalaci balíčku NuGet v aplikaci Visual Studio](media/nuget-lightbulb.png)
 
-## <a name="highlighting"></a>Zvýrazňovač
+## <a name="highlighting"></a>Zvýrazňování
 
 - Zvýraznit odkazy na symbol pod kurzorem
 

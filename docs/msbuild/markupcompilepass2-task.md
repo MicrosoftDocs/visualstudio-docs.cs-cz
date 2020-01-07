@@ -1,5 +1,5 @@
 ---
-title: Markupcompilepass2 – úloha | Dokumentace Microsoftu
+title: Úloha Markupcompilepass2 – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,48 +11,48 @@ helpviewer_keywords:
 - performing second-pass markup [WPF MSBuild], MarkupCompilePass2 task
 - MarkupCompilePass2 task [WPF MSBuild]
 - MarkupCompilePass2 task [WPF MSBuild], parameters
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d929abc6581bf77dfd6ff5cf8b23d450a78a6f6c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f239670200a75dc3494b22b9a6aa761b1736119d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817331"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592214"
 ---
 # <a name="markupcompilepass2-task"></a>MarkupCompilePass2 – úloha
 
-<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> Úloha provede značek druhého průchodu kompilace na [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] soubory, které odkazují na typy ve stejném projektu.
+Úloha <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> provádí kompilaci kódu za sekundu do [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] souborů, které odkazují na typy ve stejném projektu.
 
 ## <a name="task-parameters"></a>Parametry úlohy
 
 | Parametr | Popis |
 | - | - |
-| `AlwaysCompileMarkupFilesInSeparateDomain` | Volitelné **logická** parametru.<br /><br /> Určuje, jestli se má spustit úlohu v samostatném <xref:System.AppDomain>. Pokud tento parametr vrátí **false**, úloha běží ve stejném <xref:System.AppDomain> jako [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)], a ten poběží rychleji. Pokud se vrátí parametr **true**, bude spuštěna úloha za sekundu <xref:System.AppDomain> , která je oddělená od [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] a pomalejší. |
-| `AssembliesGeneratedDuringBuild` | Volitelné **String []** parametru.<br /><br /> Určuje odkazy na sestavení, které se mění během procesu sestavení. Řešení sady Visual Studio může například obsahovat jeden projekt, který odkazuje kompilovaném výstupu z jiného projektu. V takovém případě kompilovaný výstup druhý projekt lze přidat do **AssembliesGeneratedDuringBuild**.<br /><br /> Poznámka: **AssembliesGeneratedDuringBuild** musí obsahovat odkazy na kompletní sadu sestavení, které jsou generovány pomocí sestavení řešení. |
-| `AssemblyName` | Vyžaduje **řetězec** parametru.<br /><br /> Určuje krátký název sestavení, který je generován pro projekt. Například, pokud je generování projektu [!INCLUDE[TLA#tla_win](../msbuild/includes/tlasharptla_win_md.md)] spustitelný soubor, jehož název je *WinExeAssembly.exe*, **AssemblyName** parametr má hodnotu **WinExeAssembly**. |
-| `GeneratedBaml` | Volitelné **[] ITaskItem** výstupní parametr.<br /><br /> Obsahuje seznam generovaných souborů v [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] binárním formátu. |
-| `KnownReferencePaths` | Volitelné **String []** parametru.<br /><br /> Určuje odkazy na sestavení, které se nikdy změněn během procesu sestavení. Zahrnuje sestavení, které jsou umístěné v [!INCLUDE[TLA#tla_gac](../msbuild/includes/tlasharptla_gac_md.md)]v [!INCLUDE[TLA#tla_netframewk](../misc/includes/tlasharptla_netframewk_md.md)] instalační adresář a tak dále. |
-| `Language` | Vyžaduje **řetězec** parametru.<br /><br /> Určuje spravovaného jazyka, který kompilátor podporuje. Platné možnosti jsou **jazyka C#**, **VB**, **JScript**, a **C++**. |
-| `LocalizationDirectivesToLocFile` | Volitelné **řetězec** parametru.<br /><br /> Určuje, jak generovat informace o lokalizaci pro každý zdroj [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] souboru. Platné možnosti jsou **žádný**, **CommentsOnly**, a **všechny**. |
-| `OutputPath` | Vyžaduje **řetězec** parametru.<br /><br /> Určuje adresář, ve kterém generované [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] formát binární soubory jsou vygenerovány. |
-| `OutputType` | Vyžaduje **řetězec** parametru.<br /><br /> Určuje typ sestavení, který je generován projekt. Platné možnosti jsou **winexe**, **exe**, **knihovny**, a **netmodule**. |
-| `References` | Volitelné **[] ITaskItem** parametru.<br /><br /> Určuje seznam odkazů na sestavení, která obsahují typy, které se používají v soubory [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] soubory. Je jeden odkaz na sestavení, který byl vytvořen <xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly> úkolu, který se musí spustit před <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> úloh. |
-| `RootNamespace` | Volitelné **řetězec** parametru.<br /><br /> Určuje kořenový obor názvů pro třídy, které jsou uvnitř projektu. **RootNamespace** se také používá jako výchozí obor názvů generovaného spravovaného kódu souboru, když odpovídající [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] soubor neobsahuje `x:Class` atribut. |
-| `XAMLDebuggingInformation` | Volitelné **logická** parametru.<br /><br /> Když **true**, vygeneruje a součástí zkompilovaný diagnostické informace [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] k usnadnění ladění. |
+| `AlwaysCompileMarkupFilesInSeparateDomain` | Volitelný **logický** parametr.<br /><br /> Určuje, zda má být úloha spuštěna v samostatném <xref:System.AppDomain>. Pokud tento parametr vrátí **hodnotu false**, úloha bude spuštěna ve stejném <xref:System.AppDomain> jako [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)]a bude spuštěna rychleji. Pokud parametr vrátí **hodnotu true**, úloha se spustí ve druhém <xref:System.AppDomain>, který je izolovaný od [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] a běží pomaleji. |
+| `AssembliesGeneratedDuringBuild` | Parametr volitelného **řetězce []** .<br /><br /> Určuje odkazy na sestavení, která se mění během procesu sestavení. Například řešení sady Visual Studio může obsahovat jeden projekt, který odkazuje na kompilovaný výstup jiného projektu. V tomto případě lze zkompilované výstupy druhého projektu přidat do **AssembliesGeneratedDuringBuild**.<br /><br /> Poznámka: **AssembliesGeneratedDuringBuild** musí obsahovat odkazy na úplnou sadu sestavení, která jsou generována řešením sestavení. |
+| `AssemblyName` | Povinný parametr **řetězce**<br /><br /> Určuje krátký název sestavení, který je generován pro projekt. Například pokud projekt generuje [!INCLUDE[TLA#tla_win](../msbuild/includes/tlasharptla_win_md.md)] spustitelný soubor, jehož název je *WinExeAssembly. exe*, parametr **AssemblyName** má hodnotu **WinExeAssembly**. |
+| `GeneratedBaml` | Volitelný výstupní parametr **ITaskItem []** .<br /><br /> Obsahuje seznam generovaných souborů v [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] binárním formátu. |
+| `KnownReferencePaths` | Parametr volitelného **řetězce []** .<br /><br /> Určuje odkazy na sestavení, která se během procesu sestavení nikdy nezměnila. Zahrnuje sestavení nacházející se v [!INCLUDE[TLA#tla_gac](../msbuild/includes/tlasharptla_gac_md.md)], v instalačním adresáři [!INCLUDE[TLA#tla_netframewk](../misc/includes/tlasharptla_netframewk_md.md)] a tak dále. |
+| `Language` | Povinný parametr **řetězce**<br /><br /> Určuje spravovaný jazyk, který podporuje kompilátor. Platné možnosti jsou **C#** , **VB**, **JScript**a **C++** . |
+| `LocalizationDirectivesToLocFile` | Volitelný **řetězcový** parametr.<br /><br /> Určuje, jak generovat informace o lokalizaci pro každý zdrojový [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] soubor. Platné možnosti jsou **none**, **CommentsOnly**a **All**. |
+| `OutputPath` | Povinný parametr **řetězce**<br /><br /> Určuje adresář, ve kterém se generují generované soubory binárního formátu [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)]. |
+| `OutputType` | Povinný parametr **řetězce**<br /><br /> Určuje typ sestavení generovaných projektem. Platné možnosti jsou **winexe**, **exe**, **Library**a **netmodule**. |
+| `References` | Volitelný parametr **ITaskItem []** .<br /><br /> Určuje seznam odkazů ze souborů na sestavení, která obsahují typy používané v souborech [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)]. Jeden odkaz je na sestavení, které bylo vygenerováno úlohou <xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly>, které je třeba spustit před úlohou <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2>. |
+| `RootNamespace` | Volitelný **řetězcový** parametr.<br /><br /> Určuje kořenový obor názvů pro třídy, které jsou uvnitř projektu. **RootNamespace** se používá také jako výchozí obor názvů generovaného souboru spravovaného kódu, pokud odpovídající [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] soubor neobsahuje atribut `x:Class`. |
+| `XAMLDebuggingInformation` | Volitelný **logický** parametr.<br /><br /> Je-li **nastavena hodnota true**, jsou generovány diagnostické informace a zahrnuty do zkompilovaných [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] za účelem podpory ladění. |
 
 ## <a name="remarks"></a>Poznámky
 
-Před spuštěním **markupcompilepass2 –**, budete muset vygenerovat dočasné sestavení, který obsahuje typy, které jsou používány [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] soubory byly odloženo, jehož značky kompilace pass. Generování dočasného sestavení spuštěním **generatetemporarytargetassembly –** úloh.
+Než spustíte **MarkupCompilePass2 –** , musíte vygenerovat dočasné sestavení, které obsahuje typy, které jsou používány soubory [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)], jejichž průchod kompilací kódu byl odložen. Dočasné sestavení vygenerujete spuštěním úlohy **GenerateTemporaryTargetAssembly –** .
 
-Odkaz na generovaný dočasného sestavení je k dispozici na <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> při spuštění, což [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] soubory, jejichž sestavení byla odložena v první kompilace označení předat nyní být zkompilovány do binárního formátu.
+Odkaz na generované dočasné sestavení je <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> při spuštění, což umožňuje, aby soubory [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)], jejichž kompilace byla odložena v prvním průchodu kódu, byly nyní zkompilovány do binárního formátu.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> úlohu, která provede sekundy předat kompilace.
+Následující příklad ukazuje, jak použít úlohu <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> k provedení druhé kompilace Pass.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

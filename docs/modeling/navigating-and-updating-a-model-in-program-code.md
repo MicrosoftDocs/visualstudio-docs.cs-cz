@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7273019d837a9cc13f6ffb306946372f11ec1f7f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 521ad703b92133f56d38e061123bf13db13d6375
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658363"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566173"
 ---
 # <a name="navigate-and-update-a-model-in-program-code"></a>Procházení a aktualizace modelu v programovém kódu
 
@@ -55,7 +55,7 @@ Můžete napsat kód pro vytvoření a odstranění prvků modelu, nastavení je
 
  `henry.Name = "Henry VIII";`
 
- Pokud je v definici DSL **vypočtený** **druh** vlastnosti, nemůžete ho nastavit. Další informace najdete v tématu věnovaném [vypočítaným a vlastním vlastnostem úložiště](../modeling/calculated-and-custom-storage-properties.md).
+ Pokud je v definici DSL **vypočtený** **druh** vlastnosti, nemůžete ho nastavit. Další informace najdete v tématu [vypočtené a vlastní vlastnosti úložiště](../modeling/calculated-and-custom-storage-properties.md).
 
 ### <a name="relationships"></a>Relace
  Doménové vztahy, které definujete v definici DSL, se stanou páry vlastností, jednu na třídu na každém konci relace. Názvy vlastností se zobrazí v diagramu DslDefinition jako popisky rolí na jednotlivých stranách relace. V závislosti na násobnosti role je typ vlastnosti buď třída na druhém konci relace, nebo kolekce této třídy.
@@ -233,7 +233,7 @@ Odstraňte element voláním `Delete()`:
 
 Tato operace odstraní také:
 
-- Vztah odkazuje na element a z něj. @No__t_0 například nebude obsahovat `henry`.
+- Vztah odkazuje na element a z něj. `edward.Parents` například nebude obsahovat `henry`.
 
 - Prvky v rolích, pro které má příznak `PropagatesDelete` hodnotu true. Například tvar, který zobrazuje prvek, bude odstraněn.
 
@@ -262,7 +262,7 @@ V některých případech je odstranění znemožněno existence zámku, buď na
 
  Všechny tyto tři metody mají stejný účinek. Musíte použít jenom jeden z nich.
 
- Pokud má role 0.. 1 nebo 1.. 1 násobnost, můžete ji nastavit na `null` nebo na jinou hodnotu:
+ Pokud má role 0.. 1 nebo 1.. 1 násobnost, můžete ji nastavit na `null`nebo na jinou hodnotu:
 
  `edward.FamilyTreeModel = null;`//nebo:
 

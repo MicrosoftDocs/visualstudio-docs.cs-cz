@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 660c93c5e1ee6b41369ebbfc9f43c4c047042589
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bfd073b07902e3c0a9e33dfe9ae50d4947a50ef2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652404"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597266"
 ---
 # <a name="about-domain-specific-languages"></a>O jazycích specifických pro konkrétní domény
 
@@ -62,7 +62,7 @@ Vývoj specifický pro doménu je proces identifikace částí vašich aplikací
 
 Jazyk specifický pro doménu musí zahrnovat následující funkce:
 
-- Zápis
+- Notace
 
 - Doménový model
 
@@ -72,9 +72,9 @@ Jazyk specifický pro doménu musí zahrnovat následující funkce:
 
 - Integrace se sadou Visual Studio
 
-### <a name="notation"></a>Zápis
+### <a name="notation"></a>Notace
 
-Jazyk specifický pro doménu musí mít přiměřeně malou sadu prvků, které lze snadno definovat a rozšířit tak, aby představovaly konstrukce specifické pro doménu. Zápis se skládá z tvarů, které reprezentují prvky a spojnice, které znázorňují vztahy mezi prvky, na grafické ploše diagramu. V [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] lze tvary rozšířit a zdokonalit tak, aby představovaly prvky vašeho jazyka specifického pro doménu.
+Jazyk specifický pro doménu musí mít přiměřeně malou sadu prvků, které lze snadno definovat a rozšířit tak, aby představovaly konstrukce specifické pro doménu. Zápis se skládá z tvarů, které reprezentují prvky a spojnice, které znázorňují vztahy mezi prvky, na grafické ploše diagramu. V [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]lze tvary rozšířit a zdokonalit tak, aby představovaly prvky vašeho jazyka specifického pro doménu.
 
 ### <a name="domain-model"></a>Doménový model
 

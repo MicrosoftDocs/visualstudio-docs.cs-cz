@@ -2,8 +2,8 @@
 title: Visual Studio Test Professional úlohy a ID komponent
 titleSuffix: ''
 description: Pomocí ID pracovního vytížení a komponenta Visual Studio poskytuje integrované testovací nástroje pro všeobecně testery
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.date: 09/23/2019
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.assetid: 70c03438-8434-4921-ada0-c172519af431
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: vs-2017
-ms.openlocfilehash: d61105a16919e8384aad961d62a81ff3a8688b25
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 9ed75c9731d36f48dcb50be7f929c4cba5ed3b6c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213648"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590893"
 ---
 # <a name="visual-studio-test-professional-component-directory"></a>Visual Studio Test Professional adresář součástí
 
@@ -33,19 +33,19 @@ Všimněte si také následující stránka:
 * Pokud budete chtít, můžete nainstalovat také **doporučená** a **volitelné** komponenty.
 * Přidali jsme také oddíl, který obsahuje další součásti, které nejsou pod něj nespadá u jakékoli úlohy.
 
-Když nastavíte závislosti v manifestu VSIX, je nutné zadat ID součástí pouze. Určení závislostí naše minimální součástí pomocí tabulek na této stránce. V některých případech to může znamenat, že zadáváte pouze jednu komponentu z pracovního vytížení. V jiných scénářích může znamenat, že zadáte více komponent z jedné úlohy nebo více komponent z více úloh. Další informace najdete v [tématu Postupy: Migrujte projekty rozšiřitelnosti na stránku](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) sady Visual Studio 2017.
+Když nastavíte závislosti v manifestu VSIX, je nutné zadat ID součástí pouze. Určení závislostí naše minimální součástí pomocí tabulek na této stránce. V některých případech to může znamenat, že zadáváte pouze jednu komponentu z pracovního vytížení. V jiných scénářích může znamenat, že zadáte více komponent z jedné úlohy nebo více komponent z více úloh. Další informace najdete v tématu [postupy: migrace projektů rozšíření do sady Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) stránky.
 
 Další informace o tom, jak pomocí těchto identifikátorů najdete v části [pomocí parametrů příkazového řádku instalace sady Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) stránky. A seznam pracovního vytížení a komponenta ID pro ostatní produkty, naleznete v tématu [funkcí sady Visual Studio 2017 a ID součástí](workload-and-component-ids.md) stránky.
 
 ## <a name="test-professional"></a>Test Professional
 
-**ÚČET** Microsoft.VisualStudio.Workload.TestProfessional
+**ID:** Microsoft.VisualStudio.Workload.TestProfessional
 
-**Popis:** Test Professional poskytuje integrované testovací nástroje zaměřené na obecné testery, které jim pomůžou zajistit jejich požadavky na testování napříč celým životním cyklem testování.
+**Popis:** Test Professional poskytuje integrované testovací nástroje pro určenou pro všeobecně testery, které jim pomůžou vám zajistí jejich napříč fázích testovacího cyklu.
 
 ### <a name="components-included-by-this-workload"></a>Pomocí této úlohy zahrnuté komponenty
 
-ID součásti | Název | Version | Typ závislosti
+ID součásti | Name | Version | Typ závislosti
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.6.27406.0 | Požadováno
 Microsoft.VisualStudio.Component.TestTools.MicrosoftTestManager | Microsoft Test Manager | 15.6.27406.0 | Požadováno
@@ -54,7 +54,7 @@ Microsoft.VisualStudio.Component.TestTools.MicrosoftTestManager | Microsoft Test
 
 Toto jsou komponenty, které nejsou zahrnuty u jakékoli úlohy, ale může vybrat jako jednotlivých komponent.
 
-ID součásti | Název | Version
+ID součásti | Name | Version
 --- | --- | ---
 není k dispozici | není k dispozici | není k dispozici
 

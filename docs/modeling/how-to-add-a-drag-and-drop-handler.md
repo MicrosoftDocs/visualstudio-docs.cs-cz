@@ -2,17 +2,17 @@
 title: 'Postupy: Přidání obslužné rutiny operace přetažení myší'
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d2019f1333f6f9a5d6e1bffde16cfee2da32061d
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: cc0124df648dbc5ecfbcf60ce0cca2fdc974e7e8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985084"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594692"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>Postupy: Přidání obslužné rutiny operace přetažení myší
 
@@ -22,7 +22,7 @@ Toto téma popisuje gesta přetažení, která pocházejí z jiných diagramů. 
 
 ## <a name="defining-gesture-handlers-by-overriding-shapeelement-methods"></a>Definování obslužných rutin gest přepsáním metod ShapeElement
 
-`OnDragDrop`, `OnDoubleClick`, `OnDragOver` a další metody lze přepsat.
+`OnDragDrop`, `OnDoubleClick`, `OnDragOver`a další metody lze přepsat.
 
 Přidejte nový soubor kódu do projektu DSL. Pro obslužnou rutinu gesta obvykle musíte mít alespoň následující direktivy `using`:
 
@@ -124,7 +124,7 @@ Když uživatel přetáhne položku do vašeho diagramu, nebo z jedné části d
 
 Chcete-li zjistit formáty, ve kterých jsou k dispozici informace o zdroji, spusťte kód v režimu ladění a nastavte zarážku na položku `OnDragOver()` nebo `CanDragDrop()`. Zkontrolujte hodnoty parametru `DiagramDragEventArgs`. Tyto informace jsou k dispozici ve dvou formách:
 
-- <xref:System.Windows.Forms.IDataObject> `Data` – Tato vlastnost přináší serializované verze zdrojových objektů, obvykle ve více než jednom formátu. Nejužitečnější funkce jsou:
+- <xref:System.Windows.Forms.IDataObject>`Data` – Tato vlastnost přináší serializované verze zdrojových objektů, obvykle ve více než jednom formátu. Nejužitečnější funkce jsou:
 
   - diagramEventArgs. data. GetDataFormats () – vypíše formáty, ve kterých lze dekódovat přetažený objekt. Pokud uživatel například přetáhne soubor z plochy, dostupné formáty obsahují název souboru ("`FileNameW`").
 
@@ -160,7 +160,7 @@ Vlastnosti `Data` a `Prototype` argumentů události obsahují pouze odkaz na p�
 
 Zpřístupněte zdrojovou DSL přístupovou pomocí sběrnice modelů sady Visual Studio:
 
-1. V Návrháři DSL otevřete soubor definice DSL pro zdrojovou DSL. Klikněte pravým tlačítkem myši na návrhovou plochu a pak klikněte na **povolit ModelBus**. V dialogovém okně vyberte jednu z možností.  Klikněte na tlačítko **OK**. Do řešení DSL se přidá nový projekt "ModelBus".
+1. V Návrháři DSL otevřete soubor definice DSL pro zdrojovou DSL. Klikněte pravým tlačítkem na návrhové ploše a potom klikněte na tlačítko **povolit Modelbus**. V dialogovém okně vyberte jednu z možností.  Klikněte na tlačítko **OK**. Do řešení DSL se přidá nový projekt "ModelBus".
 
 2. Klikněte na **transformovat všechny šablony** a znovu sestavte řešení.
 

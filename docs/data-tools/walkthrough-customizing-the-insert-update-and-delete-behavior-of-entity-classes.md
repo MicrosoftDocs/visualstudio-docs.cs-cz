@@ -6,23 +6,23 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 03ff1146-706e-4780-91cb-56a83df63eea
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 14b44a16f6652fe8d94669f99107ebe59b790a0e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 105519153e92e3944971f60ae2ff6151fa6a3fdf
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639172"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585948"
 ---
 # <a name="walkthrough-customize-the-insert-update-and-delete-behavior-of-entity-classes"></a>Návod: přizpůsobení chování při vložení, aktualizaci a odstranění tříd entit
 
 [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) poskytují vizuální návrhovou plochu pro vytváření a úpravu LINQ to SQL tříd (třídy entit), které jsou založené na objektech v databázi. Pomocí [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)můžete pro přístup k databázím SQL použít technologii LINQ. Další informace naleznete v tématu [LINQ (jazykově integrovaný dotaz)](/dotnet/csharp/linq/).
 
-Ve výchozím nastavení je logika pro provádění aktualizací poskytována modulem runtime LINQ to SQL. Modul runtime vytvoří výchozí příkazy `Insert`, `Update` a `Delete` na základě schématu tabulky (definice sloupců a informace o primárním klíči). Pokud nechcete použít výchozí chování, můžete nakonfigurovat chování aktualizace a určit konkrétní uložené procedury pro provádění nezbytných vložení, aktualizací a odstranění, které je nutné pro práci s daty v databázi. To lze provést také v případě, že se výchozí chování negeneruje, například když vaše třídy entit budou mapovány na zobrazení. Kromě toho můžete přepsat výchozí chování aktualizace, když databáze vyžaduje přístup k tabulce prostřednictvím uložených procedur. Další informace najdete v tématu [přizpůsobení operací pomocí uložených procedur](/dotnet/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures).
+Ve výchozím nastavení je logika pro provádění aktualizací poskytována modulem runtime LINQ to SQL. Modul runtime vytvoří výchozí příkazy `Insert`, `Update`a `Delete` na základě schématu tabulky (definice sloupců a informace o primárním klíči). Pokud nechcete použít výchozí chování, můžete nakonfigurovat chování aktualizace a určit konkrétní uložené procedury pro provádění nezbytných vložení, aktualizací a odstranění, které je nutné pro práci s daty v databázi. To lze provést také v případě, že se výchozí chování negeneruje, například když vaše třídy entit budou mapovány na zobrazení. Kromě toho můžete přepsat výchozí chování aktualizace, když databáze vyžaduje přístup k tabulce prostřednictvím uložených procedur. Další informace najdete v tématu [přizpůsobení operací pomocí uložených procedur](/dotnet/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures).
 
 > [!NOTE]
 > Tento návod vyžaduje dostupnost uložených procedur **InsertCustomer**, **UpdateCustomer**a **DeleteCustomer** pro databázi Northwind.
@@ -55,11 +55,11 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
     1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (**Průzkumník objektů systému SQL Server** se instalují jako součást úlohy **ukládání a zpracování dat** v **instalační program pro Visual Studio**.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
 
-       Otevře se okno editoru dotazů.
+       Otevře se okno editor dotazů.
 
     2. Zkopírujte [skript Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
 
-    3. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
+    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
 
        Po krátké době se dotaz dokončí a vytvoří se databáze Northwind.
 
@@ -71,7 +71,7 @@ Vzhledem k tomu, že pracujete se LINQ to SQLmi třídami a zobrazujete data ve 
 
 ### <a name="to-create-a-new-windows-forms-application-project-that-contains-linq-to-sql-classes"></a>Vytvoření nového projektu aplikace model Windows Forms, který obsahuje LINQ to SQL třídy
 
-1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  > **projekt**.
+1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový** > **projekt**.
 
 2. V levém podokně rozbalte buď **vizuál C#**  , nebo **Visual Basic** a pak vyberte **Desktop Windows**.
 
@@ -85,7 +85,7 @@ Vzhledem k tomu, že pracujete se LINQ to SQLmi třídami a zobrazujete data ve 
 
 5. Klikněte na šablonu **třídy LINQ to SQL** a do pole **název** zadejte **Northwind. dbml** .
 
-6. Klikněte na tlačítko **Přidat**.
+6. Klikněte na tlačítko **Add** (Přidat).
 
      Do projektu se přidá prázdný soubor tříd LINQ to SQL (**Northwind. dbml**) a otevře se **Návrhář o/R** .
 
@@ -189,7 +189,7 @@ Ve výchozím nastavení není tlačítko Uložit povoleno a funkce Uložit nejs
 
 3. Přetáhněte všechny tři uložené procedury do **návrháře o/R**.
 
-     Uložené procedury jsou přidány do podokna metody jako metody <xref:System.Data.Linq.DataContext>. Další informace naleznete v tématu [metody DataContext (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
+     Uložené procedury jsou přidány do podokna metody jako metody <xref:System.Data.Linq.DataContext>. Další informace najdete v tématu [metod DataContext (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
 
 4. V **Návrháři o/R**vyberte třídu entity **zákazníka** .
 
@@ -214,7 +214,7 @@ Ve výchozím nastavení není tlačítko Uložit povoleno a funkce Uložit nejs
 
      Zkontrolujte seznam **argumentů metody** a **vlastností třídy** a Všimněte si, že existují dva **argumenty metody** a dvě **vlastnosti třídy** pro některé sloupce v tabulce. Díky tomu je snazší sledovat změny a vytvářet příkazy, které kontrolují porušení souběžnosti.
 
-13. Namapujte argument **Original_CustomerID** metody na vlastnost **KódZákazníka (původní)** Class.
+13. Namapujte argument **Original_CustomerID** metody na vlastnost **CustomerID (původní)** Class.
 
     > [!NOTE]
     > Ve výchozím nastavení budou argumenty metody namapovány na vlastnosti třídy, pokud se názvy shodují. Pokud se změní názvy vlastností a již se neshodují mezi tabulkou a třídou entity, může být nutné vybrat vlastnost ekvivalentní třídy, která má být mapována, pokud **Návrhář relací v/R** nemůže určit správné mapování. Kromě toho, pokud argumenty metody nemají platné vlastnosti třídy pro mapování, můžete nastavit **vlastnost třídy** na hodnotu **(žádný)** .
@@ -227,7 +227,7 @@ Ve výchozím nastavení není tlačítko Uložit povoleno a funkce Uložit nejs
 
 17. V seznamu **přizpůsobit** vyberte metodu **DeleteCustomers** .
 
-18. Namapujte argument **Original_CustomerID** metody na vlastnost **KódZákazníka (původní)** Class.
+18. Namapujte argument **Original_CustomerID** metody na vlastnost **CustomerID (původní)** Class.
 
 19. Klikněte na tlačítko **OK**.
 

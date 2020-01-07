@@ -10,19 +10,19 @@ helpviewer_keywords:
 - administrator guide, Visual Studio
 - installing Visual Studio, administrator guide
 ms.assetid: 4af353f5-6cfd-4ebe-bcfb-f42306e451a0
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 89f34d027ec238b1e34724924ffb163267d56dc0
-ms.sourcegitcommit: 0bd63f3bc429ae059b9df6e45c6b8dcae6152940
+ms.openlocfilehash: 0508715637a3ac03c1377d3a337a6ded41a906de
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026474"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590927"
 ---
 # <a name="visual-studio-administrator-guide"></a>Příručka správce sady Visual Studio
 
@@ -30,7 +30,7 @@ V podnikových prostředích správci systému obvykle nasazují instalace konco
 
 Tato příručka pro správce poskytuje pokyny založené na scénářích pro rozsáhlá nasazení v síťovém prostředí.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Před nasazením sady Visual Studio napříč vaší organizací je potřeba provést několik rozhodnutí, aby se dokončily úlohy a:
 
@@ -40,7 +40,7 @@ Před nasazením sady Visual Studio napříč vaší organizací je potřeba pro
 
 * Rozhodněte se o potřebě údržby.
 
-  Pokud vaše společnost potřebuje zůstat v sadě funkcí delší, ale stále chce získávat pravidelné aktualizace, naplánujte použití standardních hodnot údržby. Další informace najdete v části ***Možnosti podpory pro zákazníky v Enterprise a Professional*** na stránce [životní cyklus a údržba produktu Visual Studio](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers) a [také postupy: Aktualizujte si Visual Studio na stránce směrného plánu](update-servicing-baseline.md) údržby.
+  Pokud vaše společnost potřebuje zůstat v sadě funkcí delší, ale stále chce získávat pravidelné aktualizace, naplánujte použití standardních hodnot údržby. Další informace najdete v části ***Možnosti podpory pro zákazníky v Enterprise a Professional*** na stránce [životní cyklus a údržba produktu Visual Studio](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers) a také v tématu [Postupy: aktualizace sady Visual Studio na stránce směrného plánu údržby](update-servicing-baseline.md) .
 
   Pokud plánujete použít aktualizace pro údržbu spolu s kumulativními aktualizacemi funkcí, můžete zvolit nejnovější bity.
 
@@ -62,7 +62,7 @@ Před nasazením sady Visual Studio napříč vaší organizací je potřeba pro
 
 * Rozhodněte se o potřebě údržby.
 
-  Pokud vaše společnost potřebuje zůstat v sadě funkcí delší, ale stále chce získávat pravidelné aktualizace, naplánujte použití standardních hodnot údržby. Další informace najdete v části ***Podpora pro starší verze sady Visual Studio*** na stránce [životní cyklus a údržba produktu Visual Studio](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio) a také v [tématu Postupy: Aktualizujte si Visual Studio na stránce směrného plánu](update-servicing-baseline.md) údržby.
+  Pokud vaše společnost potřebuje zůstat v sadě funkcí delší, ale stále chce získávat pravidelné aktualizace, naplánujte použití standardních hodnot údržby. Další informace naleznete v části ***Podpora pro starší verze sady Visual Studio*** na stránce [životní cyklus a údržba produktu Visual Studio](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio) a také [Postupy: aktualizace sady Visual Studio na stránce směrného plánu údržby](update-servicing-baseline.md) .
 
   Pokud plánujete použít aktualizace pro údržbu spolu s kumulativními aktualizacemi funkcí, můžete zvolit nejnovější bity.
 
@@ -99,7 +99,7 @@ Před nasazením sady Visual Studio napříč vaší organizací je potřeba pro
 
 * Volitelné Nastavte zásady registru, které mají vliv na nasazení sady Visual Studio, například kde jsou nainstalovány některé balíčky sdílené s jinými verzemi nebo instancemi, [kde jsou balíčky uloženy do mezipaměti](set-defaults-for-enterprise-deployments.md?view=vs-2019) nebo [zda jsou balíčky ukládány do mezipaměti](disable-or-move-the-package-cache.md?view=vs-2019).
 
-* Volitelné Nastavte Zásady skupiny. Můžete také [nakonfigurovat sadu Visual Studio tak, aby](../ide/visual-studio-experience-improvement-program.md) na jednotlivých počítačích vypnula zpětnou vazbu od zákazníků.
+* Volitelné Nastavte Zásady skupiny. Můžete také [nakonfigurovat sadu Visual Studio tak, aby na jednotlivých počítačích vypnula zpětnou vazbu od zákazníků](../ide/visual-studio-experience-improvement-program.md) .
 
 ## <a name="step-3---deploy"></a>Krok 3 – nasazení
 
@@ -109,7 +109,7 @@ Před nasazením sady Visual Studio napříč vaší organizací je potřeba pro
 
 * [Aktualizujte vaše umístění v síti s nejnovějšími aktualizacemi](update-a-network-installation-of-visual-studio.md?view=vs-2019) do sady Visual Studio spuštěním příkazu, který jste použili v kroku 1 v pravidelných intervalech a přidejte aktualizované součásti.
 
-  Aplikaci Visual Studio lze aktualizovat pomocí skriptu pro aktualizaci. K tomu použijte [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) parametr příkazového řádku.
+  Aplikaci Visual Studio lze aktualizovat pomocí skriptu pro aktualizaci. Uděláte to tak, že použijete parametr [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) příkazového řádku.
 
 ## <a name="step-5---optional-use-visual-studio-tools"></a>Krok 5 – (volitelné) použití nástrojů sady Visual Studio
 
@@ -138,7 +138,7 @@ Máme několik nástrojů, které vám pomůžou [zjišťovat a spravovat nainst
 
 * Volitelné Nastavte zásady registru, které mají vliv na nasazení sady Visual Studio, například kde jsou nainstalovány některé balíčky sdílené s jinými verzemi nebo instancemi, [kde jsou balíčky uloženy do mezipaměti](set-defaults-for-enterprise-deployments.md?view=vs-2019) nebo [zda jsou balíčky ukládány do mezipaměti](disable-or-move-the-package-cache.md?view=vs-2017).
 
-* Volitelné Nastavte Zásady skupiny. Můžete také [nakonfigurovat sadu Visual Studio tak, aby](../ide/visual-studio-experience-improvement-program.md) na jednotlivých počítačích vypnula zpětnou vazbu od zákazníků.
+* Volitelné Nastavte Zásady skupiny. Můžete také [nakonfigurovat sadu Visual Studio tak, aby na jednotlivých počítačích vypnula zpětnou vazbu od zákazníků](../ide/visual-studio-experience-improvement-program.md) .
 
 ## <a name="step-3---deploy"></a>Krok 3 – nasazení
 
@@ -148,7 +148,7 @@ Máme několik nástrojů, které vám pomůžou [zjišťovat a spravovat nainst
 
 * [Aktualizujte vaše umístění v síti s nejnovějšími aktualizacemi](update-a-network-installation-of-visual-studio.md?view=vs-2017) do sady Visual Studio spuštěním příkazu, který jste použili v kroku 1 v pravidelných intervalech a přidejte aktualizované součásti.
 
-  Aplikaci Visual Studio lze aktualizovat pomocí skriptu pro aktualizaci. K tomu použijte [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) parametr příkazového řádku.
+  Aplikaci Visual Studio lze aktualizovat pomocí skriptu pro aktualizaci. Uděláte to tak, že použijete parametr [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) příkazového řádku.
 
 ## <a name="step-5---optional-use-visual-studio-tools"></a>Krok 5 – (volitelné) použití nástrojů sady Visual Studio
 

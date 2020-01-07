@@ -3,17 +3,17 @@ title: Práce s texturami a obrázky
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b9fbc8fa-66d1-4055-8460-24d8b8fbe43e
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d59b7c2c52cc0fe230a6e9c5c7c89db56d065aff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 110cbbb01f5b86d462a9a5f196735fd4d477fb10
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72633706"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589861"
 ---
 # <a name="work-with-textures-and-images"></a>Práce s texturami a obrázky
 
@@ -46,9 +46,9 @@ Mapy výšky obsahují data pro pole výšky. Slouží k poskytnutí formy geome
 
 ### <a name="cube-maps"></a>Mapy krychle
 
-Mapy datových krychlí mohou obsahovat různé typy dat, například barvy nebo normální, ale jsou uspořádány jako šest textur na ploškách datové krychle. Z tohoto důvodu nejsou mapy krychle odebírány zadáním souřadnic textury, ale poskytnutím vektoru, jehož zdrojem je střed datové krychle. vzorek je pořízen v místě, kde vektor protíná datovou krychli. Mapy datových krychlí slouží k zajištění aproximace prostředí, které lze použít k výpočtu odrazů – Toto je známé jako *mapování prostředí*, nebo poskytnutí textury pro kulové objekty s menším narušením než na úrovni Basic, dvourozměrných textur může sdělit.
+Mapy datových krychlí mohou obsahovat různé typy dat, například barvy nebo normální, ale jsou uspořádány jako šest textur na ploškách datové krychle. Z tohoto důvodu nejsou mapy krychle odebírány zadáním souřadnic textury, ale poskytnutím vektoru, jehož zdrojem je střed datové krychle. vzorek je pořízen v místě, kde vektor protíná datovou krychli. Mapy datových krychlí slouží k zajištění aproximace prostředí, které lze použít k výpočtu odrazů – Toto je známé jako *mapování prostředí*, nebo poskytnutí textury pro kulové objekty s menším narušením než základní, dvourozměrné textury mohou poskytnout.
 
-## <a name="related-topics"></a>Související témata
+## <a name="related-topics"></a>Příbuzná témata
 
 |Název|Popis|
 |-----------|-----------------|

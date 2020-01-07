@@ -1,5 +1,5 @@
 ---
-title: Úloha ZipDirectory | Dokumentace Microsoftu
+title: Úloha ZipDirectory | Microsoft Docs
 ms.date: 11/04/2016
 ms.reviewer: ''
 ms.suite: ''
@@ -17,38 +17,38 @@ helpviewer_keywords:
 - MSBuild, ZipDirectory task
 ms.assetid: 916bb2e3-3017-4828-ae27-c0b5c99bbb48
 caps.latest.revision: 16
-author: Mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2188ef3026e36d5c97cf35cd29362411c473973e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dd4bf72509610e9d397e4b208294112fcc0975b4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777473"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588327"
 ---
-# <a name="zipdirectory-task"></a>ZipDirectory úkolu
-Vytvoří *ZIP* archiv z obsah adresáře.
+# <a name="zipdirectory-task"></a>ZipDirectory – úloha
+Vytvoří archiv *zip* z obsahu adresáře.
 
 >[!NOTE]
->`ZipDirectory` Úloh je k dispozici v MSBuild 15.8 a vyšší pouze.
+>Úkol `ZipDirectory` je k dispozici pouze v MSBuild 15,8 a vyšších.
 
 ## <a name="parameters"></a>Parametry
- Následující tabulka popisuje parametry `ZipDirectory` úloh.
+ Následující tabulka popisuje parametry úlohy `ZipDirectory`.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`DestinationFile`|Vyžaduje <xref:Microsoft.Build.Framework.ITaskItem> parametr<br /><br /> Úplná cesta k *ZIP* souboru se má vytvořit.|
-|`Overwrite`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, přeskočí se přepsat cílový soubor, pokud existuje. Výchozí hodnota je `false`.|
-|`SourceDirectory`|Vyžaduje <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje adresář, který chcete vytvořit *ZIP* z archivu.|
+|`DestinationFile`|Povinný parametr <xref:Microsoft.Build.Framework.ITaskItem><br /><br /> Úplná cesta k souboru *. zip* , který se má vytvořit|
+|`Overwrite`|Volitelný parametr `Boolean`.<br /><br /> Pokud se `true`, přeskočí cílový soubor, pokud existuje. Výchozí hodnota je `false`.|
+|`SourceDirectory`|Vyžaduje se <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje adresář, ze kterého se má vytvořit archiv *zip.*|
 
 ## <a name="remarks"></a>Poznámky
- Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
- Následující příklad vytvoří *ZIP* archiv z výstupního adresáře po sestavení projektu.
+ Následující příklad vytvoří archiv *zip* z výstupního adresáře po sestavení projektu.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -64,4 +64,4 @@ Vytvoří *ZIP* archiv z obsah adresáře.
 
 ## <a name="see-also"></a>Viz také:
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

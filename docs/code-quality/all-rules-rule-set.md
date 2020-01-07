@@ -2,17 +2,17 @@
 title: Sada pravidel Všechna pravidla
 ms.date: 11/04/2016
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41b0dd39908f5a317eda8e77aab0636c55dc736c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 75b8c8d611e1c3e509c16f7adda2a059d81b98ae
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603911"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75584397"
 ---
 # <a name="all-rules-rule-set"></a>Sada pravidel Všechna pravidla
 

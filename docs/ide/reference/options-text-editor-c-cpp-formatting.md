@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Text Editor Options dialog box, formatting
 - ClangFormat
 ms.assetid: cb6f1cbb-5305-48da-a8e8-33fd70775d46
-author: mikeblome
-ms.author: mblome
+author: TerryGLee
+ms.author: tglee
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b866d09dbd448950a641ebb59501c13c3bf35188
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: d7a6029058ab0bc02a623df0e1733eb8548102d5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461809"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596252"
 ---
 # <a name="options-text-editor-cc-formatting"></a>Možnosti, textový editor, C/C++, formátování
 
@@ -44,7 +44,7 @@ Tato stránka obsahuje možnosti formátování příkazů a bloků při jejich 
 
 ::: moniker-end
 
-Stránka také obsahuje možnosti pro konfiguraci podpory pro [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) verze 5,0. ClangFormat je nástroj, který usnadňuje formátování a formátování kódu na základě sady pravidel, která se dají nakonfigurovat ve formátu. Clang-Format nebo _clang-Format.
+Stránka také obsahuje možnosti pro konfiguraci podpory pro [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) verze 5,0. ClangFormat je nástroj, který usnadňuje formátování a formátování kódu na základě sady pravidel, která se dají nakonfigurovat ve formátu. Clang nebo ve formátu souboru _clang.
 
 ### <a name="configuring-clangformat-options"></a>Konfigurace možností ClangFormat
 
@@ -54,7 +54,7 @@ Stránka také obsahuje možnosti pro konfiguraci podpory pro [ClangFormat](http
 
 ::: moniker-end
 
-Podpora ClangFormat je ve výchozím nastavení povolená. Můžete zvolit, které z těchto běžných konvencí formátování se mají použít pro všechny vaše projekty: LLVM, Google, chrom, Mozilla nebo WebKit. Můžete také vytvořit vlastní definici formátu. Clang-Format nebo _clang-Format File. Pokud je takový soubor přítomen ve složce projektu, Visual Studio použije ho k formátování všech souborů zdrojového kódu v této složce a jejích podsložkách.
+Podpora ClangFormat je ve výchozím nastavení povolená. Můžete zvolit, které z těchto běžných konvencí formátování se mají použít pro všechny vaše projekty: LLVM, Google, chrom, Mozilla nebo WebKit. Můžete také vytvořit vlastní definici formátu. Clang-Format nebo soubor _clang-Format. Pokud je takový soubor přítomen ve složce projektu, Visual Studio použije ho k formátování všech souborů zdrojového kódu v této složce a jejích podsložkách.
 
 Ve výchozím nastavení používá Visual Studio clangformat. exe na pozadí při psaní formátování. Můžete také určit, že se má spustit pouze pro ručně vyvolané příkazy formátování **Formát dokumentu (CTRL + k, CTRL + D)** nebo **Výběr formátu (CTRL + k, CTRL + F)** .
 

@@ -12,17 +12,17 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], data binding
 - images [Visual Basic], dragging from Data Sources window
 ms.assetid: 9748815e-3556-49e8-86b1-c6aa593c6163
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 64168339e5f6bd9be6b3108268a009f6a87bc22c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a4155a246516bef074a56e5644712912b2ce5af6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648823"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587001"
 ---
 # <a name="bind-controls-to-pictures-from-a-database"></a>Vytvoření vazby ovládacích prvků k obrázkům z databáze
 
@@ -39,7 +39,7 @@ Následující postup předpokládá, že okno **zdroje dat** je již vyplněno 
 2. V okně **zdroje dat** rozbalte požadovanou tabulku nebo objekt, abyste zobrazili její sloupce nebo vlastnosti.
 
    > [!TIP]
-   > Pokud není okno **zdroje dat** otevřené, otevřete ho výběrem možnosti **Zobrazit**  > **jiné** **zdroje dat** >  Windows.
+   > Pokud není okno **zdroje dat** otevřené, otevřete ho výběrem možnosti **Zobrazit** > **jiné** **zdroje dat** > Windows.
 
 3. Vyberte sloupec nebo vlastnost obsahující data obrázku a ze seznamu ovládacích prvků rozevírací seznam vyberte jeden z následujících ovládacích prvků:
 

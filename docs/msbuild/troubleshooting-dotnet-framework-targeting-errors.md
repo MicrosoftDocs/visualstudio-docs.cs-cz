@@ -12,17 +12,17 @@ helpviewer_keywords:
 - multitargeting
 - .NET Framework Client Profile
 ms.assetid: 830e3e45-9a93-4279-a249-75b84599aefb
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 36401e2ac002a74cdab6e9c19373354f4eb6fb1e
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 1c384f7e2bdd22f7a68140c90aa172d1efc9aca6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189433"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594913"
 ---
 # <a name="troubleshoot-net-framework-targeting-errors"></a>Řešení potíží s chybami cílení .NET Framework
 Toto téma popisuje chyby nástroje MSBuild, ke kterým může dojít kvůli problémům s referencí a o tom, jak tyto chyby vyřešit.
@@ -33,7 +33,7 @@ Toto téma popisuje chyby nástroje MSBuild, ke kterým může dojít kvůli pro
 ## <a name="you-have-re-targeted-a-project-to-a-different-version-of-the-net-framework"></a>Přesměrovali jste projekt na jinou verzi .NET Framework
  Pokud změníte cílovou verzi .NET Framework pro vaši aplikaci, Visual Studio změní některé odkazy, ale možná budete muset některé odkazy aktualizovat ručně. Například jedna z výše uvedených chyb může nastat, pokud změníte aplikaci tak, aby byla cílem [!INCLUDE[net_v35SP1_long](../msbuild/includes/net_v35sp1_long_md.md)] a že má aplikace prostředky nebo nastavení závislé na profilu klienta pro .NET Framework 4.
 
- Chcete-li pracovat s nastavením aplikace, otevřete **Průzkumník řešení**, zvolte možnost **Zobrazit všechny soubory**a pak upravte soubor *App. config* v editoru XML aplikace Visual Studio. Změňte verzi v nastavení tak, aby odpovídala příslušné verzi .NET Framework. Například můžete změnit nastavení verze z 4.0.0.0 na 2.0.0.0. Podobně pro aplikaci, která má přidané prostředky, otevřete **Průzkumník řešení**, zvolte tlačítko **Zobrazit všechny soubory** , rozbalte **můj projekt** (Visual Basic) nebo **vlastnosti** (C#) a pak upravte soubor *Resources. resx.* soubor v editoru XML sady Visual Studio. Změňte nastavení verze z 4.0.0.0 na 2.0.0.0.
+ Chcete-li pracovat s nastavením aplikace, otevřete **Průzkumník řešení**, zvolte možnost **Zobrazit všechny soubory**a pak upravte soubor *App. config* v editoru XML aplikace Visual Studio. Změňte verzi v nastavení tak, aby odpovídala příslušné verzi .NET Framework. Například můžete změnit nastavení verze z 4.0.0.0 na 2.0.0.0. Podobně pro aplikaci, která má přidané prostředky, otevřete **Průzkumník řešení**, zvolte tlačítko **Zobrazit všechny soubory** , rozbalte **můj projekt** (Visual Basic) nebo **vlastnosti** (C#) a pak upravte soubor *Resources. resx* v editoru XML aplikace Visual Studio. Změňte nastavení verze z 4.0.0.0 na 2.0.0.0.
 
  Pokud má vaše aplikace prostředky, jako jsou ikony nebo rastrové obrázky nebo nastavení, například řetězce datových připojení, můžete také vyřešit chybu odebráním všech položek na stránce **Nastavení** **Návrháře projektu** a pak znovu přidat požadovaná nastavení.
 

@@ -2,21 +2,21 @@
 title: 'Návod: Používání hierarchie XSLT'
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 9f3fe246189313dcc04176e2971ad448a1b2cff8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 892c166504b9a33fdcbbe0af2605e8268a2b06e7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604434"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592448"
 ---
 # <a name="walkthrough-use-xslt-hierarchy"></a>Návod: použití hierarchie XSLT
 
 Nástroj hierarchie XSLT zjednodušuje mnoho úloh vývoje XML. Šablona stylů XSLT často používá `includes` a `imports` pokyny. Kompilace začíná z hlavní šablony stylů, ale pokud se zobrazí chyba v důsledku kompilování šablony stylů XSLT, může být chyba z jiného zdroje než z hlavní šablony stylů. Oprava chyby nebo úprav šablony stylů může vyžadovat přístup k zahrnutým nebo importovaným šablonám stylů. Rozkrokování přes šablonu stylů v ladicím programu může otevřít zahrnuté a importované šablony stylů a v některých případech můžete chtít přidat zarážku v jedné nebo více zahrnutých šablonách stylů.
 
-Další situací, kdy může být užitečný nástroj hierarchie XSLT, je vložení zarážek na předdefinovaná pravidla šablony. Pravidla šablony jsou speciální šablony vygenerované pro každý režim šablony stylů a volány `xsl:apply-templates`, když se uzel neshoduje s žádnou jinou šablonou. Chcete-li implementovat ladění v předdefinovaných pravidlech šablon, ladicí program XSLT vytvoří soubor s pravidly v dočasné složce a zkompiluje je spolu s hlavní šablonou stylů. Bez krokování kódu z některých `xsl:apply-template` může být obtížné najít šablony stylů, které byly zahrnuty do hlavní šablony stylů, nebo vyhledat a otevřít šablonu stylů s vestavěnými pravidly šablon.
+Další situací, kdy může být užitečný nástroj hierarchie XSLT, je vložení zarážek na předdefinovaná pravidla šablony. Pravidla šablony jsou speciální šablony vygenerované pro každý režim šablony stylů a volány `xsl:apply-templates`, když se uzel neshoduje s žádnou jinou šablonou. Chcete-li implementovat ladění v předdefinovaných pravidlech šablon, ladicí program XSLT vytvoří soubor s pravidly v dočasné složce a zkompiluje je spolu s hlavní šablonou stylů. Bez krokování kódu z některých `xsl:apply-template`může být obtížné najít šablony stylů, které byly zahrnuty do hlavní šablony stylů, nebo vyhledat a otevřít šablonu stylů s vestavěnými pravidly šablon.
 
 Příklad v tomto tématu ukazuje ladění v odkazované šabloně stylů.
 
@@ -105,9 +105,9 @@ Příklad v tomto tématu ukazuje ladění v odkazované šabloně stylů.
 
 4. Přidejte zarážku na instrukci `<xsl:include href="xslincludefile.xsl" />`.
 
-5. Spustit ladění.
+5. Spusťte ladění.
 
-6. Po zastavení ladicího programu na `<xsl:include href="xslincludefile.xsl" />` instrukcí klikněte na tlačítko **Krokovat** s vnořením. Ladění lze pokračovat v odkazované šabloně stylů. Hierarchie je viditelná a Návrhář zobrazuje správnou cestu.
+6. Po zastavení ladicího programu na `<xsl:include href="xslincludefile.xsl" />`instrukcí klikněte na tlačítko **Krokovat** s vnořením. Ladění lze pokračovat v odkazované šabloně stylů. Hierarchie je viditelná a Návrhář zobrazuje správnou cestu.
 
 ## <a name="see-also"></a>Viz také:
 

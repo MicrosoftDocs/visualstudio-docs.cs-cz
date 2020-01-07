@@ -10,17 +10,17 @@ helpviewer_keywords:
 - text templates, getting started
 - Text Template project item
 - text templates, generating code for your application
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 08451c679f372cb376c6baf97a9a4d06282ba45f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 06c6244f59482825ed435226f79437da9e2c0df0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748424"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589627"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>Vytvoření kódu v době návrhu pomocí textových šablon T4
 
@@ -41,11 +41,11 @@ Textová šablona obsahuje kombinaci textu, který chcete vygenerovat, a kód pr
 
 2. Přidejte textový soubor šablony do projektu a pojmenujte ho s příponou **. TT**.
 
-    Chcete-li to provést, v **Průzkumník řešení**v místní nabídce projektu vyberte možnost **Přidat**  > **novou položku**. V dialogovém okně **Přidat novou položku** vyberte v prostředním podokně **textovou šablonu** .
+    Chcete-li to provést, v **Průzkumník řešení**v místní nabídce projektu vyberte možnost **Přidat** > **novou položku**. V dialogovém okně **Přidat novou položku** vyberte v prostředním podokně **textovou šablonu** .
 
     Všimněte si, že vlastnost **vlastního nástroje** souboru je **hodnotu TextTemplatingFileGenerator**.
 
-3. Otevřete soubor. Již bude obsahovat následující direktivy:
+3. Otevřete tento soubor. Již bude obsahovat následující direktivy:
 
    ```
    <#@ template hostspecific="false" language="C#" #>
@@ -115,9 +115,9 @@ Textové šablony umožňují použít kód programu k odlišení obsahu generov
 
 2. Uložte soubor. TT a znovu zkontrolujte vygenerovaný soubor. txt. Zobrazuje čtverce čísel od 0 do 10.
 
-   Všimněte si, že příkazy jsou uzavřeny v rámci `<#...#>` a jednotlivé výrazy v rámci `<#=...#>`. Další informace najdete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
+   Všimněte si, že příkazy jsou uzavřeny v rámci `<#...#>`a jednotlivé výrazy v rámci `<#=...#>`. Další informace najdete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
 
-   Pokud napíšete kód generování v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], direktiva `template` by měla obsahovat `language="VB"`. výchozím nastavením je `"C#"`.
+   Pokud napíšete kód generování v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], direktiva `template` by měla obsahovat `language="VB"`. `"C#"` je výchozí možnost.
 
 ## <a name="debugging-a-design-time-t4-text-template"></a>Ladění šablony textu T4 v době návrhu
 
@@ -299,7 +299,7 @@ Pokud se zdrojový model změní, měli byste znovu spustit všechny šablony v 
 Pokud jste nainstalovali sadu Visual Studio Modeling SDK, můžete mít všechny šablony transformované automaticky pokaždé, když provedete sestavení. Chcete-li to provést, upravte soubor projektu (. csproj nebo. vbproj) v textovém editoru a přidejte následující řádky poblíž konce souboru za všechny ostatní příkazy `<import>`:
 
 > [!NOTE]
-> Sada text Template Transform SDK a sada Visual Studio Modeling SDK jsou nainstalovány automaticky při instalaci specifických funkcí sady Visual Studio. Další podrobnosti najdete v [tomto blogovém příspěvku](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/).
+> Sada text Template Transform SDK a sada Visual Studio Modeling SDK jsou nainstalovány automaticky při instalaci specifických funkcí sady Visual Studio. Další podrobnosti najdete v tématu [tento příspěvek na blogu](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/).
 
 ::: moniker range="vs-2017"
 
@@ -325,7 +325,7 @@ Pokud jste nainstalovali sadu Visual Studio Modeling SDK, můžete mít všechny
 
 ::: moniker-end
 
-Další informace naleznete v tématu [generování kódu v procesu sestavení](../modeling/code-generation-in-a-build-process.md).
+Další informace najdete v tématu [generování kódu v procesu sestavení](../modeling/code-generation-in-a-build-process.md).
 
 ## <a name="error-reporting"></a>Hlášení chyb
 
@@ -342,7 +342,7 @@ Užitečnou funkcí šablon je, že vypadají velmi podobně jako soubory, kter�
 
 ### <a name="to-convert-an-existing-file-to-a-design-time-template"></a>Převod existujícího souboru na šablonu pro dobu návrhu
 
-1. Do projektu aplikace Visual Studio přidejte soubor typu, který chcete vygenerovat, například `.cs`, `.vb` nebo `.resx` souboru.
+1. Do projektu aplikace Visual Studio přidejte soubor typu, který chcete vygenerovat, například `.cs`, `.vb`nebo `.resx` souboru.
 
 2. Otestujte nový soubor, abyste se ujistili, že funguje.
 
@@ -352,8 +352,8 @@ Užitečnou funkcí šablon je, že vypadají velmi podobně jako soubory, kter�
 
    | | |
    |-|-|
-   | **Vlastní nástroj =** | **Hodnotu TextTemplatingFileGenerator** |
-   | **Akce sestavení =** | **NTato** |
+   | **Vlastní nástroj =** | **TextTemplatingFileGenerator** |
+   | **Akce sestavení =** | **Žádné** |
 
 5. Na začátek souboru vložte následující řádky:
 
@@ -364,7 +364,7 @@ Užitečnou funkcí šablon je, že vypadají velmi podobně jako soubory, kter�
 
     Chcete-li zapsat kód generování šablony v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], nastavte atribut `language` na `"VB"` místo `"C#"`.
 
-    Nastavte atribut `extension` na příponu názvu souboru pro typ souboru, který chcete vygenerovat, například `.cs`, `.resx` nebo `.xml`.
+    Nastavte atribut `extension` na příponu názvu souboru pro typ souboru, který chcete vygenerovat, například `.cs`, `.resx`nebo `.xml`.
 
 6. Uložte soubor.
 
@@ -386,7 +386,7 @@ Přečtěte si [pokyny pro psaní textových šablon T4](../modeling/guidelines-
 |Vygeneruje v době běhu dokumenty ze šablon.|[Generování textu za běhu pomocí textových šablon T4](../modeling/run-time-text-generation-with-t4-text-templates.md)|
 |Spuštění generování textu mimo Visual Studio.|[Generování souborů pomocí nástroje TextTransform](../modeling/generating-files-with-the-texttransform-utility.md)|
 |Transformujte data ve formě jazyka specifického pro doménu.|[Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)|
-|Zapište procesory direktiv pro transformaci vašich vlastních zdrojů dat.|[Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)|
+|Procesory direktiv pro transformaci zdrojích dat zápisu.|[Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)|
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,5 +1,5 @@
 ---
-title: Touch – úloha | Dokumentace Microsoftu
+title: Dotyková úloha | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,37 +13,37 @@ helpviewer_keywords:
 - MSBuild, Touch task
 - Touch task [MSBuild]
 ms.assetid: 8a978645-1393-4904-ae69-42afabd8c109
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96bf92f6e0649a2d1eedda63d6159c3de95ae6bd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4d34d8edca64987f9b6c4648bef1f239aca4d5ba
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62938853"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594939"
 ---
 # <a name="touch-task"></a>Touch – úloha
-Nastaví dobu přístup a úpravy souborů.
+Nastaví dobu přístupu a úprav souborů.
 
 ## <a name="parameters"></a>Parametry
- Následující tabulka popisuje parametry `Touch` úloh.
+ Následující tabulka popisuje parametry úlohy `Touch`.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`AlwaysCreate`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, vytvoří všechny soubory, které už neexistují.|
-|`Files`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje kolekci souborů, které mají dotykového ovládání.|
-|`ForceTouch`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, vynutí touch soubor i v případě, že jsou soubory jen pro čtení.|
-|`Time`|Volitelné `String` parametru.<br /><br /> Určuje dobu, než aktuální čas. Musí být ve formátu formátu, který je akceptovatelná podle <xref:System.DateTime.Parse%2A> metody.|
-|`TouchedFiles`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje kolekci položek, které byly úspěšně změněny.|
+|`AlwaysCreate`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, vytvoří soubory, které ještě neexistují.|
+|`Files`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje kolekci souborů, které se mají kontaktovat.|
+|`ForceTouch`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, vynutí soubor dotykový i v případě, že jsou soubory jen pro čtení.|
+|`Time`|Volitelný parametr `String`.<br /><br /> Určuje jiný čas než aktuální čas. Formát musí být formát, který je přijatelný pro metodu <xref:System.DateTime.Parse%2A>.|
+|`TouchedFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Obsahuje kolekci položek, které byly úspěšně změněny.|
 
 ## <a name="remarks"></a>Poznámky
- Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
- V následujícím příkladu `Touch` úkolu, chcete-li změnit časy přístup a úpravy souborů zadaných v `Files` položky kolekce a vloží seznam úspěšně dokázal souborů v `FilesTouched` kolekci položek.
+ Následující příklad používá úlohu `Touch` ke změně doby přístupu a úprav souborů zadaných v kolekci položek `Files` a k vložení seznamu úspěšně dodaných souborů do kolekce `FilesTouched` položek.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -65,4 +65,4 @@ Nastaví dobu přístup a úpravy souborů.
 
 ## <a name="see-also"></a>Viz také:
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

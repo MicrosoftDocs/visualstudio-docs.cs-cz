@@ -2,17 +2,17 @@
 title: Povolení programového testování uživatelského rozhraní pro vaše ovládací prvky
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: ea58dc703c5ad860683017c39d9d37d9b5cccd04
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: feb7785678be4b6f2c26bbcff93bf7d3e6632116
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664946"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589614"
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>Povolení programového testování uživatelského rozhraní pro vaše ovládací prvky
 
@@ -37,7 +37,7 @@ Implementujte přístupnost pro váš ovládací prvek, jak je uvedeno v násled
 
 ![UI&#95;přístupný](../test/media/cuit_accessible.png)
 
-1. Implementujte třídu, která je odvozena z <xref:System.Windows.Forms.Control.ControlAccessibleObject> a přepište vlastnost <xref:System.Windows.Forms.Control.AccessibilityObject%2A>, která vrátí objekt vaší třídy.
+1. Implementujte třídu, která je odvozena z <xref:System.Windows.Forms.Control.ControlAccessibleObject>a přepište vlastnost <xref:System.Windows.Forms.Control.AccessibilityObject%2A>, která vrátí objekt vaší třídy.
 
     ```csharp
     public partial class ChartControl : UserControl
@@ -66,10 +66,10 @@ Implementujte přístupnost pro váš ovládací prvek, jak je uvedeno v násled
 
 3. Implementujte další objekt usnadnění pro podřízený ovládací prvek a přepište vlastnost <xref:System.Windows.Forms.Control.AccessibilityObject%2A> podřízeného ovládacího prvku tak, aby vracela objekt usnadnění.
 
-4. Přepište <xref:System.Windows.Forms.AccessibleObject.Bounds%2A>, <xref:System.Windows.Forms.AccessibleObject.Name%2A>, <xref:System.Windows.Forms.AccessibleObject.Parent%2A>, <xref:System.Windows.Forms.AccessibleObject.Role%2A>, <xref:System.Windows.Forms.AccessibleObject.State%2A>, <xref:System.Windows.Forms.AccessibleObject.Navigate%2A> a <xref:System.Windows.Forms.AccessibleObject.Select%2A>ch vlastností a metod objektu přístupnosti podřízeného ovládacího prvku.
+4. Přepište <xref:System.Windows.Forms.AccessibleObject.Bounds%2A>, <xref:System.Windows.Forms.AccessibleObject.Name%2A>, <xref:System.Windows.Forms.AccessibleObject.Parent%2A>, <xref:System.Windows.Forms.AccessibleObject.Role%2A>, <xref:System.Windows.Forms.AccessibleObject.State%2A>, <xref:System.Windows.Forms.AccessibleObject.Navigate%2A>a <xref:System.Windows.Forms.AccessibleObject.Select%2A>ch vlastností a metod objektu přístupnosti podřízeného ovládacího prvku.
 
 > [!NOTE]
-> V tomto tématu se začíná ukázka přístupnosti v <xref:System.Windows.Forms.AccessibleObject> a potom se v této ukázce vytvoří ve zbývajících postupech. Pokud chcete vytvořit funkční verzi ukázky přístupnosti, vytvořte konzolovou aplikaci a potom nahraďte kód v *program.cs* ukázkovým kódem. Přidejte odkazy na přístupnost, System. Drawing a System. Windows. Forms. Chcete-li odstranit upozornění sestavení, změňte **typy spolupráce pro vložení** pro přístupnost na **false** . Výstupní typ projektu lze změnit z **konzolové aplikace** na **aplikaci systému Windows** , aby se okno konzoly nezobrazovalo při spuštění aplikace.
+> V tomto tématu se začíná ukázka přístupnosti v <xref:System.Windows.Forms.AccessibleObject>a potom se v této ukázce vytvoří ve zbývajících postupech. Pokud chcete vytvořit funkční verzi ukázky přístupnosti, vytvořte konzolovou aplikaci a potom nahraďte kód v *program.cs* ukázkovým kódem. Přidejte odkazy na přístupnost, System. Drawing a System. Windows. Forms. Chcete-li odstranit upozornění sestavení, změňte **typy spolupráce pro vložení** pro přístupnost na **false** . Výstupní typ projektu lze změnit z **konzolové aplikace** na **aplikaci systému Windows** , aby se okno konzoly nezobrazovalo při spuštění aplikace.
 
 ## <a name="support-custom-property-validation-by-implementing-a-property-provider"></a>Podpora ověřování vlastních vlastností implementací zprostředkovatele vlastností
 
@@ -120,7 +120,7 @@ Po implementaci základní podpory pro záznam a přehrávání a ověřování 
     }
     ```
 
-1. Implementací názvů vlastností a popisovačů vlastností do <xref:System.Collections.Generic.Dictionary%602> implementovat zprostředkovatele vlastností.
+1. Implementací názvů vlastností a popisovačů vlastností do <xref:System.Collections.Generic.Dictionary%602>implementovat zprostředkovatele vlastností.
 
 1. Přepište <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetControlSupportLevel%2A?displayProperty=fullName> pro indikaci, že vaše sestavení poskytuje podporu pro ovládací prvek a jeho podřízené prvky.
 

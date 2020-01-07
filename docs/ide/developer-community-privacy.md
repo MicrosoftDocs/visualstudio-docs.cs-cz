@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - developer community privacy
 - privacy, developer community
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1856d6421dc61ada2f3040e4fdeed880a6ab201
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 09f3e5fed93cac3a251e4b7cdcaa988e63ff8741
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652486"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596265"
 ---
 # <a name="developer-community-data-privacy"></a>Ochrana osobních údajů komunity vývojářů
 
@@ -82,7 +82,7 @@ Pokud dojde **k zahájení nahlášení problému** ze sady Visual Studio, shrom
 
 > [!NOTE]
 > Soubory protokolu, snímky obrazovky a záznamová data se odesílají společnosti Microsoft pouze v případě, že zadáte oprávnění odesláním sestavy problému, se kterou jsou zahrnuty. Můžete si prohlédnout, které soubory jsou zahrnuté v kroku "Souhrn" v okně nahlásit problém (viz snímek obrazovky, který je součástí této poznámky). Shromážděné protokoly a soubory jsou uložené ve složce% Temp% a pravidelně se vyčistí a po každém nahrání. Pokud nechcete do sestavy problému zahrnout protokol, odstraňte před odesláním sestavy soubor ze složky% Temp%.
-  > ![Report problém – Shrnutí shromážděných protokolů ](media/report-a-problem-logs-collected.png)
+  > ![nahlásit problém – Shrnutí shromážděných protokolů](media/report-a-problem-logs-collected.png)
 
 
 ## <a name="see-also"></a>Viz také:

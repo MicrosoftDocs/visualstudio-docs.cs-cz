@@ -5,19 +5,19 @@ ms.date: 03/30/2019
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 837F31AA-F121-46e9-9996-F8BCE768E579
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0f35348e6704ffa822ba5dee93ad930f209004e1
-ms.sourcegitcommit: 32144a09ed46e7223ef7dcab647a9f73afa2dd55
+ms.openlocfilehash: ce4a118d57c20cad9556ecb3b44127ed10ae96b0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586870"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597279"
 ---
 # <a name="command-line-parameter-examples-for-visual-studio-installation"></a>Příklady parametrů příkazového řádku pro instalaci sady Visual Studio
 
@@ -31,7 +31,7 @@ V obou příkladech `vs_enterprise.exe`, `vs_professional.exe` a `vs_community.e
 > [!NOTE]
 > Můžete použít `^` znak na konci příkazového řádku ke zřetězení více řádků do jediného příkazu. Alternativně můžete umístit společně na jediném řádku tyto řádky. V prostředí PowerShell, je ekvivalentní prvními (`` ` ``) znaků.
 
-Seznam úloh a součástí, které můžete nainstalovat pomocí příkazového řádku, najdete v článku [ID pracovního vytížení a komponenta Visual Studio](workload-and-component-ids.md) stránky.
+Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového řádku, najdete na stránce s [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md) .
 
 ## <a name="using---installpath"></a>Pomocí--installPath
 
@@ -62,9 +62,9 @@ Seznam úloh a součástí, které můžete nainstalovat pomocí příkazového 
    --includeRecommended --quiet --wait
   ```
 
-## <a name="using---wait"></a>Pomocí parametru--čekání
+## <a name="using---wait"></a>Použití--Wait
 
-* Čekání na instalační program sady Visual Studio a dokončete před provedením dalšího příkazu pomocí v dávkové soubory nebo skripty. Pro dávkové soubory `%ERRORLEVEL%` proměnné prostředí bude obsahovat vrácenou hodnotu příkazu, jak je uvedeno v [použít parametry příkazového řádku instalace sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md) stránky. Některé nástroje příkazového vyžadují další parametry, které chcete počkat na dokončení a k získání vrácené hodnoty instalačního programu. Následuje příklad další parametry pro příkaz skriptu prostředí PowerShell spuštění procesu:
+* Použijte v dávkových souborech nebo skriptech k čekání na dokončení instalačního programu sady Visual Studio před provedením dalšího příkazu. V případě dávkových souborů bude proměnná prostředí `%ERRORLEVEL%` obsahovat vrácenou hodnotu příkazu, jak je popsáno v [parametrech příkazového řádku use pro instalaci sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md) . Některé příkazové nástroje vyžadují další parametry pro čekání na dokončení a získání návratové hodnoty instalačního programu. Následuje příklad dalších parametrů použitých s příkazem PowerShell Script Start-Process:
 
    ```cmd
    start /wait vs_professional.exe --installPath "C:\VS" --passive --wait > nul
@@ -75,7 +75,7 @@ Seznam úloh a součástí, které můžete nainstalovat pomocí příkazového 
    $exitCode = Start-Process -FilePath vs_enterprise.exe -ArgumentList "--installPath", "C:\VS", "--passive", "--wait" -Wait -PassThru
    ```
 
-   or
+   nebo
 
    ```powershell
     $startInfo = New-Object System.Diagnostics.ProcessStartInfo
@@ -87,7 +87,7 @@ Seznam úloh a součástí, které můžete nainstalovat pomocí příkazového 
     $process.WaitForExit()
    ```
 
-* První "– Počkejte" se používá tak, že instalační program sady Visual Studio a druhá ' – počkejte "je používán procesem' Start-" Čekání na dokončení. "-PassThru' parametr je používán procesem' Start-" použití instalačního programu ukončovací kód pro jeho návratovou hodnotu.
+* První '--wait ' je používán Instalační program pro Visual Studio a druhá '-wait ' je používána ' Start-proces ' k čekání na dokončení. Parametr-PassThru se používá v příkazu Start-Process k použití ukončovacího kódu instalačního programu pro jeho návratovou hodnotu.
 
 ## <a name="using---layout"></a>Pomocí parametru--rozložení
 
@@ -110,9 +110,9 @@ Seznam úloh a součástí, které můžete nainstalovat pomocí příkazového 
    --includeRecommended
   ```
 
-## <a name="using---all"></a>Používání – vše
+## <a name="using---all"></a>Použití--All
 
-* Interaktivní instalací všechny úlohy a komponenty, které jsou k dispozici v edici Visual Studio Enterprise:
+* Spusťte interaktivní instalaci všech úloh a součástí, které jsou k dispozici v edici Visual Studio Enterprise:
 
    ```cmd
    vs_enterprise.exe --all
@@ -120,7 +120,7 @@ Seznam úloh a součástí, které můžete nainstalovat pomocí příkazového 
 
 ## <a name="using---includerecommended"></a>Pomocí--includeRecommended
 
-* Druhý, pojmenovanou instanci sady Visual Studio Professional můžete nainstalujte na počítač s Visual Studio Community edition už nainstalovaná s podporou pro vývoj v Node.js:
+* Instalace druhé pojmenované instance Visual Studio Professional na počítači s již nainstalovanou sadou Visual Studio Community Edition s podporou vývoje pro Node. js:
 
    ```cmd
    vs_professional.exe --installPath C:\VSforNode ^

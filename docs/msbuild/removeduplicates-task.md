@@ -1,5 +1,5 @@
 ---
-title: Removeduplicates – úloha | Dokumentace Microsoftu
+title: Úloha RemoveDuplicates – | Microsoft Docs
 ms.date: 03/01/2018
 ms.topic: reference
 f1_keywords:
@@ -13,36 +13,36 @@ helpviewer_keywords:
 - MSBuild, RemoveDuplicates task
 - RemoveDuplicates task [MSBuild]
 ms.assetid: 481cbab6-73ff-488c-aba5-2c09f9eb1e04
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 027e1f4894660b0198ed8a6df862e66e41cde409
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 235f96b3d67b0ad2e3c3bd1c486c5c9f2eeb86c2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62811612"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596005"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates – úloha
-Odebere duplicitní položky z kolekce zadané položky.
+Odstraní duplicitní položky ze zadané kolekce položek.
 
 ## <a name="parameters"></a>Parametry
- Následující tabulka popisuje parametry `RemoveDuplicates` úloh.
+ Následující tabulka popisuje parametry úlohy `RemoveDuplicates`.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Filtered`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje kolekci položek se odebrat všechny duplicitní položky. Zachování pořadí vstupních položek udržování první instance každé duplicitní položky.|
-|`Inputs`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Odebrat duplicitní položky z kolekce položek.|
+|`Filtered`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Obsahuje kolekci položek s odebranými duplicitními položkami. Pořadí vstupních položek je zachováno a zachová první instanci každé duplicitní položky.|
+|`Inputs`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Kolekce položek, ze které se mají odebrat duplicitní položky|
 
 ## <a name="remarks"></a>Poznámky
- Tato úloha velká a malá písmena a není výsledkem porovnání metadata položky při určování duplicitní položky.
+ U této úlohy se nerozlišují malá a velká písmena a při určování duplicitních hodnot se neshodují metadata položek.
 
- Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
- V následujícím příkladu `RemoveDuplicates` úloh odebrat duplicitní položky ze `MyItems` kolekci položek. Po dokončení úlohy `FilteredItems` kolekce položek obsahuje jednu položku.
+ Následující příklad používá úlohu `RemoveDuplicates` k odebrání duplicitních položek z kolekce `MyItems` Item. Po dokončení úkolu obsahuje kolekce `FilteredItems` položky jednu položku.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -66,7 +66,7 @@ Odebere duplicitní položky z kolekce zadané položky.
 </Project>
 ```
 
- Následující příklad ukazuje, že `RemoveDuplicates` úlohy zachová jeho vstupní pořadí. Po dokončení úlohy `FilteredItems` kolekce položek obsahuje položky *MyFile2.cs*, *MyFile1.cs*, a *MyFile3.cs* v uvedeném pořadí.
+ Následující příklad ukazuje, že úloha `RemoveDuplicates` zachovává vstupní objednávku. Po dokončení úkolu obsahuje kolekce `FilteredItems` položky položky *MyFile2.cs*, *MyFile1.cs*a *MyFile3.cs* v tomto pořadí.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -90,6 +90,6 @@ Odebere duplicitní položky z kolekce zadané položky.
 ```
 
 ## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

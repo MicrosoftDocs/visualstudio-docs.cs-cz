@@ -1,45 +1,45 @@
 ---
-title: Protokolování v nástroji MSBuild | Dokumentace Microsoftu
+title: Přihlášení v MSBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, logging
 ms.assetid: 9aea2e76-8f60-4234-913d-598e7bbad808
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99bbb6ba880ace8b21ae6b6009ee84cffee79485
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 24a769f6d0b9aa847899c02c951921dc77bac21a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62856042"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592188"
 ---
 # <a name="logging-in-msbuild"></a>Protokolování v nástroji MSBuild
-Protokolování poskytuje způsob, jak můžete monitorovat průběh sestavení. Zachycení protokolování sestavení, události, zprávy, upozornění a chyby v souboru protokolu.
+Protokolování poskytuje způsob, jak můžete monitorovat průběh sestavení. Protokolování zachycuje události, zprávy, upozornění a chyby sestavení v souboru protokolu.
 
 ## <a name="in-this-section"></a>V tomto oddílu
-- [Získání protokolů o sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)
+- [Získat protokoly sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)
 
  Popisuje různé aspekty přihlášení [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].
 
 - [Protokolovací nástroje sestavení](../msbuild/build-loggers.md)
 
- Popisuje kroky potřebné k vytváření protokolovacího nástroje jedním procesorem.
+ Popisuje kroky potřebné k vytvoření protokolovacího nástroje s jedním procesorem.
 
 - [Protokolování v prostředí s více procesory](../msbuild/logging-in-a-multi-processor-environment.md)
 
- Popisuje, jak funguje protokolování v prostředí s více procesory a dva modely protokolování pro více procesorů.
+ Popisuje, jak protokolování funguje v prostředí s více procesory a v obou modelech protokolování více procesorů.
 
-- [Zápis více procesorů protokolovacích](../msbuild/writing-multi-processor-aware-loggers.md)
+- [Zápis protokolovacích nástrojů s více procesory](../msbuild/writing-multi-processor-aware-loggers.md)
 
- Toto téma popisuje, jak vytvořit více procesorů protokolovacích a jak používat ConfigurableForwardingLogger.
+ Popisuje, jak vytvořit protokolovací nástroje s více procesory a jak používat ConfigurableForwardingLogger.
 
-- [Vytvořit předávající Protokolovací nástroje](../msbuild/creating-forwarding-loggers.md)
+- [Vytváření protokolovacích nástrojů pro předávání](../msbuild/creating-forwarding-loggers.md)
 
- Ukazuje, jak vytvořit vlastní předávající Protokolovací nástroje.
+ Popisuje způsob vytváření vlastních protokolovacích nástrojů pro přesměrování.
 
 ## <a name="see-also"></a>Viz také:
-- [Sestavování více projektů současně](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md) popisuje, jak rychlejší sestavení více projektů po spuštění paralelně.
+- [Paralelní sestavení více projektů](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md) Popisuje, jak vytvořit více projektů rychleji spuštěním paralelně.

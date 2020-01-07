@@ -1,5 +1,5 @@
 ---
-title: Generatedeploymentmanifest – úloha | Dokumentace Microsoftu
+title: Úloha GenerateDeploymentManifest – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,61 +12,61 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild, GenerateDeploymentManifest task
 - GenerateDeploymentManifest task [MSBuild]
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8a2f4810c8a485d6b9013f658e221db39d8071f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fc953298241ec7c48bbf5ea87c902aa28b349ce0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63003343"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588301"
 ---
 # <a name="generatedeploymentmanifest-task"></a>GenerateDeploymentManifest – úloha
 
-Generuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifestu nasazení. A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifestu nasazení popisuje nasazení aplikace definicí jedinečné identity pro nasazení, identifikující vlastností nasazení, jako je například instalace nebo online režimu, určení aplikace aktualizací nastavení nebo umístění, a označením odpovídajícího [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace.
+Vygeneruje manifest nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]. Manifest nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] popisuje nasazení aplikace definováním jedinečné identity pro nasazení, určením vlastností nasazení, jako je například instalace nebo online režim, určení nastavení aktualizace aplikace a umístění aktualizací a označení odpovídajícího manifestu aplikace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)].
 
 ## <a name="parameters"></a>Parametry
 
-Následující tabulka popisuje parametry `GenerateDeploymentManifest` úloh.
+Následující tabulka popisuje parametry pro úlohu `GenerateDeploymentManifest`.
 
 | Parametr | Popis |
 |--------------------------| - |
-| `AssemblyName` | Volitelné `String` parametru.<br /><br /> Určuje, `Name` pole identity sestavení pro generovaný manifest. Pokud tento parametr nezadáte, název je odvozen z `EntryPoint` nebo `InputManifest` parametry. Pokud název nelze odvodit, úloha vyvolá chybu. |
-| `AssemblyVersion` | Volitelné `String` parametru.<br /><br /> Určuje, `Version` pole identity sestavení pro generovaný manifest. Pokud není tento parametr zadán, úkol používá hodnotu "1.0.0.0". |
-| `CreateDesktopShortcut` | Volitelné `Boolean` parametru.<br /><br /> Při hodnotě true je vytvořena ikona na ploše během instalace aplikace ClickOnce. |
-| `DeploymentUrl` | Volitelné `String` parametru.<br /><br /> Určuje umístění aktualizace pro aplikaci. Pokud není tento parametr zadán, je definován žádné umístění aktualizace pro aplikaci. Nicméně pokud `UpdateEnabled` parametr je `true`, umístění aktualizace musí být zadán. Zadaná hodnota musí být plně kvalifikovaná cesta URL nebo cestu UNC. |
-| `Description` | Volitelné `String` parametru.<br /><br /> Určuje volitelný popis pro aplikaci. |
-| `DisallowUrlActivation` | Volitelné `Boolean` parametru.<br /><br /> Určuje, zda aplikace spouštěna automaticky při otevření prostřednictvím adresy URL. Pokud je tento parametr `true`, aplikaci lze spustit pouze z **Start** nabídky. Výchozí hodnota tohoto parametru je `false`. Tento vstup platí pouze tehdy, když `Install` je hodnota parametru `true`. |
-| `EntryPoint` | Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Označuje položku zadání pro generované sestavení manifestu. Pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest nasazení, tento vstup Určuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace.<br /><br />Pokud `EntryPoint` není zadán parametr úlohy, `<customHostSpecified>` je vložena značka jako podřízený objekt `<entryPoint>` značku, například:<br /><br /> `<entryPoint xmlns="urn:schemas-microsoft-com:asm.v2">`<br /><br /> `<co.v1:customHostSpecified />`<br /><br /> `</entryPoint>`<br /><br /> Závislosti mezi knihovnami DLL k manifestu aplikace můžete přidat pomocí následujících kroků:<br /><br /> 1.  Přeložit odkazy na sestavení pomocí volání <xref:Microsoft.Build.Tasks.ResolveAssemblyReference>.<br />2.  Předejte výstup předchozího úkolu a samotného sestavení do <xref:Microsoft.Build.Tasks.ResolveManifestFiles>.<br />3.  Předejte závislosti pomocí `Dependencies` parametr <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>. |
-| `ErrorReportUrl` | Volitelné <xref:System.String?displayProperty=fullName> parametru.<br /><br /> Určuje adresu URL webové stránky, který se zobrazí v dialogových oknech během instalace ClickOnce. |
-| `InputManifest` | Volitelné <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Označuje vstupní dokument XML, který bude sloužit jako základ pro generátor manifestu. To umožňuje strukturovaným datům, například definicím vlastního manifestu, se projevovat ve výstupním manifestu. Kořenový element v dokumentu XML musí být uzel sestavení v oboru názvů asmv1. |
-| `Install` | Volitelné `Boolean` parametru.<br /><br /> Určuje, zda je aplikace nainstalovaná aplikace nebo aplikace pouze online. Pokud je tento parametr `true`, aplikace se nainstaluje na uživatele **Start** nabídky a můžete ji odstranit pomocí **přidat nebo odebrat programy** dialogové okno. Pokud je tento parametr `false`, aplikace je určena pro použití online z webové stránky. Výchozí hodnota tohoto parametru je `true`. |
-| `MapFileExtensions` | Volitelné `Boolean` parametru.<br /><br /> Určuje, zda *.deploy* mapování přípon názvů souborů se používá. Pokud je tento parametr `true`, každý programový soubor je publikován s *.deploy* příponu názvu souboru. Tato možnost je užitečná pro zabezpečení webového serveru k omezení počtu přípon souborů, které musí být odblokovány pro povolení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace. Výchozí hodnota tohoto parametru je `false`. |
-| `MaxTargetPath` | Volitelné `String` parametru.<br /><br /> Určuje maximální povolenou délku cesty souboru v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace. Pokud tento parametr zadán, délka každé cesty souboru v aplikaci je porovnávána s tímto limitem. Všechny položky, které překračují limit, způsobí upozornění sestavení. Pokud tento vstup není zadán nebo je nula, žádná kontrola se neprovádí. |
-| `MinimumRequiredVersion` | Volitelné `String` parametru.<br /><br /> Určuje, zda uživatel může přeskočit aktualizaci. Pokud má uživatel verzi, která je menší než požadované minimum, že nebude mít možnost Přeskočit aktualizaci. Tento vstup platí, jen když hodnoty `Install` parametr `true`. |
-| `OutputManifest` | Volitelné <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje název generovaného výstupního souboru manifestu. Pokud tento parametr nezadáte, název výstupního souboru je odvozen z identity generovaného manifestu. |
-| `Platform` | Volitelné `String` parametru.<br /><br /> Určuje cílovou platformu aplikace. Tento parametr může mít následující hodnoty:<br /><br /> -   `AnyCPU`<br />-   `x86`<br />-   `x64`<br />-   `Itanium`<br /><br /> Výchozí hodnota je `AnyCPU`. |
-| `Product` | Volitelné `String` parametru.<br /><br /> Určuje název aplikace. Pokud tento parametr nezadáte, název je odvozen z identity generovaného manifestu. Tento název se používá pro název zástupce na **Start** nabídce a je součástí názvu, který se zobrazí **přidat nebo odebrat programy** dialogové okno. |
-| `Publisher` | Volitelné `String` parametru.<br /><br /> Určuje název vydavatele aplikace. Pokud tento parametr nezadáte, název je odvozen z registrovaného uživatele, nebo z identity generovaného manifestu. Tento název se používá pro název složky na **Start** nabídce a je součástí názvu, který se zobrazí **přidat nebo odebrat programy** dialogové okno. |
-| `SuiteNamel` | Volitelné `String` parametru.<br /><br /> Určuje název složky **Start** nabídky kde je umístěna aplikace po nasazení ClickOnce. |
-| `SupportUrl` | Volitelné `String` parametru.<br /><br /> Určuje, který se zobrazí odkaz **přidat nebo odebrat programy** dialogové okno pro aplikaci. Zadaná hodnota musí být plně kvalifikovaná cesta URL nebo cestu UNC. |
-| `TargetCulture` | Volitelné `String` parametru.<br /><br /> Určuje jazykovou verzi aplikace a určuje, `Language` pole identity sestavení pro generovaný manifest. Pokud není tento parametr zadán, předpokládá se, že aplikace je invariantní jazyková verze. |
-| `TrustUrlParameters` | Volitelné `Boolean` parametru.<br /><br /> Určuje, zda parametry řetězce dotazu adresy URL by měly k dispozici pro aplikaci. Výchozí hodnota tohoto parametru je `false`, což znamená, že parametry nebudou k dispozici pro aplikaci. |
-| `UpdateEnabled` | Volitelné `Boolean` parametru.<br /><br /> Určuje, zda je aplikace povolena pro aktualizace. Výchozí hodnota tohoto parametru je `false`. Tento parametr platí, jen když hodnoty `Install` parametr `true`. |
-| `UpdateInterval` | Volitelné `Int32` parametru.<br /><br /> Určuje interval aktualizace pro aplikaci. Výchozí hodnota tohoto parametru je nula. Tento parametr platí, jen když hodnoty `Install` a `UpdateEnabled` parametry jsou obě `true`. |
-| `UpdateMode` | Volitelné `String` parametru.<br /><br /> Určuje, zda mají být aktualizace zkontrolovány na popředí před aplikace je spuštěná, nebo v pozadí, když aplikace běží. Tento parametr může mít následující hodnoty:<br /><br /> -   `Foreground`<br />-   `Background`<br /><br /> Výchozí hodnota tohoto parametru je `Background`. Tento parametr platí, jen když hodnoty `Install` a `UpdateEnabled` parametry jsou obě `true`. |
-| `UpdateUnit` | Volitelné `String` parametru.<br /><br /> Určuje jednotky pro `UpdateInterval` parametru. Tento parametr může mít následující hodnoty:<br /><br /> -   `Hours`<br />-   `Days`<br />-   `Weeks`<br /><br /> Tento parametr platí, jen když hodnoty `Install` a `UpdateEnabled` parametry jsou obě `true`. |
+| `AssemblyName` | Volitelný parametr `String`.<br /><br /> Určuje `Name` pole identity sestavení pro generovaný manifest. Pokud tento parametr není zadán, název je odvozen z parametrů `EntryPoint` nebo `InputManifest`. Pokud se název nedá odvodit, úloha vyvolá chybu. |
+| `AssemblyVersion` | Volitelný parametr `String`.<br /><br /> Určuje `Version` pole identity sestavení pro generovaný manifest. Pokud tento parametr není zadán, úloha použije hodnotu "1.0.0.0". |
+| `CreateDesktopShortcut` | Volitelný parametr `Boolean`.<br /><br /> Pokud má hodnotu true, vytvoří se na ploše během instalace aplikace ClickOnce ikona. |
+| `DeploymentUrl` | Volitelný parametr `String`.<br /><br /> Určuje umístění aktualizace pro aplikaci. Pokud tento parametr není zadán, není pro aplikaci definováno žádné umístění aktualizace. Pokud je však parametr `UpdateEnabled` `true`, je nutné zadat umístění aktualizace. Zadaná hodnota by měla být úplná adresa URL nebo cesta UNC. |
+| `Description` | Volitelný parametr `String`.<br /><br /> Určuje volitelný popis aplikace. |
+| `DisallowUrlActivation` | Volitelný parametr `Boolean`.<br /><br /> Určuje, zda má být aplikace spouštěna automaticky při otevření prostřednictvím adresy URL. Pokud je tento parametr `true`, aplikaci lze spustit pouze z nabídky **Start** . Výchozí hodnota tohoto parametru je `false`. Tento vstup platí pouze v případě, že je hodnota parametru `Install` `true`. |
+| `EntryPoint` | Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Označuje vstupní bod pro vygenerované sestavení manifestu. V případě manifestu nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] určuje tento vstup manifest [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace.<br /><br />Pokud není zadán parametr úlohy `EntryPoint`, je značka `<customHostSpecified>` vložena jako podřízený prvek značky `<entryPoint>`, například:<br /><br /> `<entryPoint xmlns="urn:schemas-microsoft-com:asm.v2">`<br /><br /> `<co.v1:customHostSpecified />`<br /><br /> `</entryPoint>`<br /><br /> Můžete přidat závislosti knihoven DLL do manifestu aplikace pomocí následujících kroků:<br /><br /> 1. vyřešte odkazy na sestavení voláním <xref:Microsoft.Build.Tasks.ResolveAssemblyReference>.<br />2. předání výstupu předchozí úlohy a samotného sestavení do <xref:Microsoft.Build.Tasks.ResolveManifestFiles>.<br />3. předejte závislosti pomocí parametru `Dependencies` pro <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>. |
+| `ErrorReportUrl` | Volitelný parametr <xref:System.String?displayProperty=fullName>.<br /><br /> Určuje adresu URL webové stránky, která se zobrazí v dialogových oknech během instalace ClickOnce. |
+| `InputManifest` | Volitelný parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Označuje vstupní dokument XML, který bude sloužit jako základ pro generátor manifestu. To umožňuje, aby se strukturovaná data, jako jsou definice vlastních manifestů, projevila ve výstupním manifestu. Kořenový element v dokumentu XML musí být uzlem sestavení v oboru názvů asmv1. |
+| `Install` | Volitelný parametr `Boolean`.<br /><br /> Určuje, jestli je aplikace nainstalovaná aplikace nebo aplikace jenom v režimu online. Je-li tento parametr `true`, aplikace bude nainstalována v nabídce **Start** uživatele a lze ji odebrat pomocí dialogového okna **Přidat nebo odebrat programy** . Pokud je tento parametr `false`, aplikace je určena pro online použití z webové stránky. Výchozí hodnota tohoto parametru je `true`. |
+| `MapFileExtensions` | Volitelný parametr `Boolean`.<br /><br /> Určuje, zda je použito mapování přípon názvu souboru *. deploy* . Pokud je tento parametr `true`, všechny programové soubory se publikují s příponou *. deploy* . Tato možnost je užitečná pro zabezpečení webového serveru k omezení počtu přípon názvů souborů, které je potřeba odblokovat, aby bylo možné [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace. Výchozí hodnota tohoto parametru je `false`. |
+| `MaxTargetPath` | Volitelný parametr `String`.<br /><br /> Určuje maximální povolenou délku cesty k souboru ve [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace. Je-li tento parametr zadán, bude na základě tohoto limitu kontrolována délka každé cesty souboru v aplikaci. Všechny položky, které překračují limit, způsobí upozornění sestavení. Pokud tento vstup není zadán nebo je nula, žádná kontrola se neprovádí. |
+| `MinimumRequiredVersion` | Volitelný parametr `String`.<br /><br /> Určuje, jestli uživatel může aktualizaci přeskočit. Pokud má uživatel verzi, která je menší než minimální požadovaná verze, nebude mít možnost tuto aktualizaci přeskočit. Tento vstup platí pouze v případě, že je hodnota parametru `Install` `true`. |
+| `OutputManifest` | Volitelný parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje název vygenerovaného výstupního souboru manifestu. Pokud tento parametr není zadán, název výstupního souboru je odvozen z identity generovaného manifestu. |
+| `Platform` | Volitelný parametr `String`.<br /><br /> Určuje cílovou platformu aplikace. Tento parametr může mít následující hodnoty:<br /><br /> -   `AnyCPU`<br />-   `x86`<br />-   `x64`<br />-   `Itanium`<br /><br /> Výchozí hodnota je `AnyCPU`. |
+| `Product` | Volitelný parametr `String`.<br /><br /> Určuje název aplikace. Pokud tento parametr není zadán, název je odvozen z identity generovaného manifestu. Tento název se používá pro název zástupce v nabídce **Start** a je součástí názvu, který se zobrazí v dialogovém okně **Přidat nebo odebrat programy** . |
+| `Publisher` | Volitelný parametr `String`.<br /><br /> Určuje vydavatele aplikace. Pokud tento parametr není zadán, je název odvozen od registrovaného uživatele nebo z identity generovaného manifestu. Tento název se používá pro název složky v nabídce **Start** a je součástí názvu, který se zobrazí v dialogovém okně **Přidat nebo odebrat programy** . |
+| `SuiteNamel` | Volitelný parametr `String`.<br /><br /> Určuje název složky v nabídce **Start** , kde se aplikace nachází po nasazení ClickOnce. |
+| `SupportUrl` | Volitelný parametr `String`.<br /><br /> Určuje odkaz, který se zobrazí v dialogovém okně **Přidat nebo odebrat programy** pro aplikaci. Zadaná hodnota by měla být úplná adresa URL nebo cesta UNC. |
+| `TargetCulture` | Volitelný parametr `String`.<br /><br /> Určuje jazykovou verzi aplikace a určuje pole `Language` identity sestavení pro generovaný manifest. Není-li tento parametr zadán, předpokládá se, že aplikace je invariantní jazykové verze. |
+| `TrustUrlParameters` | Volitelný parametr `Boolean`.<br /><br /> Určuje, zda mají být pro aplikaci k dispozici parametry řetězce dotazu adresy URL. Výchozí hodnota tohoto parametru je `false`, což znamená, že parametry nebudou k dispozici pro aplikaci. |
+| `UpdateEnabled` | Volitelný parametr `Boolean`.<br /><br /> Určuje, zda je aplikace povolena pro aktualizace. Výchozí hodnota tohoto parametru je `false`. Tento parametr platí pouze v případě, že je hodnota parametru `Install` `true`. |
+| `UpdateInterval` | Volitelný parametr `Int32`.<br /><br /> Určuje interval aktualizace pro aplikaci. Výchozí hodnota tohoto parametru je nula. Tento parametr platí pouze v případě, že jsou hodnoty parametrů `Install` a `UpdateEnabled` `true`. |
+| `UpdateMode` | Volitelný parametr `String`.<br /><br /> Určuje, zda mají být aktualizace zkontrolovány v popředí před spuštěním aplikace nebo na pozadí, jako je aplikace spuštěna. Tento parametr může mít následující hodnoty:<br /><br /> -   `Foreground`<br />-   `Background`<br /><br /> Výchozí hodnota tohoto parametru je `Background`. Tento parametr platí pouze v případě, že jsou hodnoty parametrů `Install` a `UpdateEnabled` `true`. |
+| `UpdateUnit` | Volitelný parametr `String`.<br /><br /> Určuje jednotky pro parametr `UpdateInterval`. Tento parametr může mít následující hodnoty:<br /><br /> -   `Hours`<br />-   `Days`<br />-   `Weeks`<br /><br /> Tento parametr platí pouze v případě, že jsou hodnoty parametrů `Install` a `UpdateEnabled` `true`. |
 
 ## <a name="remarks"></a>Poznámky
 
-Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.GenerateManifestBase> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam parametrů třídy úkoly naleznete v tématu [Task – základní třída](../msbuild/task-base-class.md).
+Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.GenerateManifestBase> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam parametrů třídy Task naleznete v tématu [základní třída Task](../msbuild/task-base-class.md).
 
 ## <a name="see-also"></a>Viz také:
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Generateapplicationmanifest – úloha](../msbuild/generateapplicationmanifest-task.md)
-- [Signfile – úloha](../msbuild/signfile-task.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [GenerateApplicationManifest – – úloha](../msbuild/generateapplicationmanifest-task.md)
+- [SignFile – – úloha](../msbuild/signfile-task.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

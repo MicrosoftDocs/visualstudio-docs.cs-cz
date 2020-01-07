@@ -1,29 +1,31 @@
 ---
-title: Ladění pomocí Xamarin
+title: Ladění pomocí Visual Studio pro Mac
 description: Ladění je běžné a nezbytné, což je součást programování. V rámci vyspělého integrovaného vývojového prostředí Visual Studio pro Mac obsahuje celou sadu funkcí, aby bylo ladění snadné. Z bezpečného ladění na vizualizaci dat v tomto článku se dozvíte, jak používat plný potenciál ladění v Visual Studio pro Mac.
-author: jmatthiesen
-ms.author: jomatthi
-ms.date: 05/06/2018
+author: therealjohn
+ms.author: johmil
+ms.date: 12/13/2019
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
-ms.openlocfilehash: 58844d54000dbeb86548863510ecac63bfb2ade9
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: 8a12880c25e980d668351ef4c24ced1e479577d4
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73716975"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75397949"
 ---
-# <a name="debugging-with-xamarin"></a>Ladění pomocí Xamarin
+# <a name="debugging-with-visual-studio-for-mac"></a>Ladění pomocí Visual Studio pro Mac
 
-Visual Studio pro Mac má nativní ladicí program umožňující ladění pro aplikace Xamarin. iOS, Xamarin. Mac a Xamarin. Android.
+Visual Studio pro Mac obsahuje ladicí programy s podporou pro aplikace .Net Core, .NET Framework, Unity a Xamarin.
 
 Visual Studio pro Mac používá [*měkký ladicí program mono*](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/), který je implementován do mono runtime a umožňuje Visual Studio pro Mac ladit spravovaný kód napříč všemi platformami.
 
 ## <a name="the-debugger"></a>Ladicí program
 
-Visual Studio pro Mac používá ke ladění spravovaného (C# nebo F#) kódu v aplikacích Xamarin měkký ladicí program mono. Měkké ladění mono se liší od běžných ladicích programů v tom, že se jedná o spolupracující ladicí program, který je integrovaný do Mono runtime; generovaný kód a Mono runtime spolupracuje s IDE pro poskytování prostředí ladění. Mono runtime zpřístupňuje funkce ladění prostřednictvím přenosového protokolu, který si můžete přečíst [v dokumentaci k mono](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger-wire-format/).
+Visual Studio pro Mac používá ke ladění spravovaného (C# nebo F#) kódu v aplikacích Xamarin měkký ladicí program mono. Měkké ladění mono se liší od běžných ladicích programů v tom, že se jedná o ladicí program pro spolupráci, který je integrován do Mono runtime; generovaný kód a Mono runtime spolupracovat s IDE pro poskytování prostředí ladění. Mono runtime zpřístupňuje funkce ladění prostřednictvím přenosového protokolu, který si můžete přečíst [v dokumentaci k mono](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger-wire-format/).
 
 Pevné ladicí programy, jako je například [LLDB]( http://lldb.llvm.org/index.html) nebo [GDB]( https://www.gnu.org/software/gdb/), řídí program bez znalosti nebo spolupráce z laděného programu, ale mohou být užitečné při ladění aplikací Xamarin v případě, že potřebujete ladit nativní kód pro iOS nebo Android.
+
+Pro aplikace .NET Core a ASP.NET Core Visual Studio pro Mac používá ladicí program .NET Core. Tento ladicí program je také ladicí program pro spolupráci a spolupracuje s modulem runtime .NET.
 
 ## <a name="using-the-debugger"></a>Použití ladicího programu
 
@@ -31,7 +33,7 @@ Chcete-li spustit ladění jakékoli aplikace, vždy zajistěte, aby byla konfig
 
 ![Konfigurace ladění](media/debugging-image_0.png)
 
-## <a name="setting-a-breakpoint"></a>Nastavení zarážky
+## <a name="setting-a-breakpoint"></a>Nastavením zarážky
 
 Chcete-li nastavit zarážku v integrovaném vývojovém prostředí (IDE), klikněte vedle čísla řádku kódu, který chcete přerušit, na oblast okraje editoru.
 
@@ -43,9 +45,10 @@ Všechny zarážky, které byly nastaveny v kódu, můžete zobrazit tak, že na
 
 ## <a name="start-debugging"></a>Spustit ladění
 
-Chcete-li spustit ladění, vyberte cílové zařízení nebo podobné/emulátor v integrovaném vývojovém prostředí (IDE):
+Chcete-li spustit ladění, vyberte cílový prohlížeč, zařízení nebo simulátor/emulátor:
 
-![Vyberte cílové zařízení.](media/debugging-image1.png)
+![](media/debugging-image_0.png)
+konfigurace ladění ![vyberte cílové zařízení](media/debugging-image1.png)
 
 Pak aplikaci nasaďte stisknutím tlačítka **Přehrát** nebo **příkazu cmd + Return**. Když narazíte na zarážku, kód se zvýrazní žlutě:
 
@@ -90,9 +93,9 @@ Produkty Xamarin dodávané se zdrojovým kódem pro knihovny tříd mono a mů�
 
 Vzhledem k tomu, že tato funkce spotřebovává větší množství paměti během ladění, je ve výchozím nastavení vypnutá.
 
-Chcete-li povolit tuto funkci, přejděte na **Visual Studio pro Mac > předvolby > ladicí program** a ujistěte se, že "**ladit pouze kód projektu; Neprovádějte krok do kódu architektury.** " možnost není **Vybraná**, jak je znázorněno níže:
+Pokud chcete tuto funkci povolit, přejděte na **Visual Studio pro Mac > předvolby > ladicí program** a ujistěte se, že je **Vybraná**možnost "**Krok do externího kódu**", jak je znázorněno níže:
 
-![Nekrokovat s vnořením do možnosti kódu architektury](media/debugging-image8.png)
+![Krokovat s vnořením do externího kódu – možnost](media/debugging-image8.png)
 
 ## <a name="see-also"></a>Viz také:
 

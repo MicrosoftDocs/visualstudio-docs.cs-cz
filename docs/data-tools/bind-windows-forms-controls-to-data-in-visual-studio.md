@@ -12,26 +12,26 @@ helpviewer_keywords:
 - displaying data, Windows Forms
 - data [Windows Forms], displaying
 ms.assetid: 243338ef-41af-4cc5-aff7-1e830236f0ec
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 24c3549cf98e49f3419ef0e7387a6c236c15e9e6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 244829edb30bbd43384ba445852f0a9ceafafb3f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648844"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587014"
 ---
 # <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků modelu Windows Forms k datům v sadě Visual Studio
 
-Data můžete uživatelům vaší aplikace zobrazit tak, že data svážete s model Windows Forms. Chcete-li vytvořit tyto ovládací prvky vázané na data, přetáhněte položky z okna **zdroje dat** do Návrhář formulářů v aplikaci Visual Studio.
+Uživatelům vaší aplikace můžete zobrazit data pomocí vazby dat do formulářů Windows. Chcete-li vytvořit tyto ovládací prvky vázané na data, přetáhněte položky z okna **zdroje dat** do Návrhář formulářů v aplikaci Visual Studio.
 
 ![Operace přetažení zdroje dat](../data-tools/media/raddata-data-source-drag-operation.png)
 
 > [!TIP]
-> Pokud není okno **zdroje dat** viditelné, můžete ho otevřít výběrem možnosti **Zobrazit**  >  jiné**zdroje dat** > **Windows** nebo stisknutím klávesy **SHIFT** +**ALT** +**D**. Chcete-li zobrazit okno **zdroje dat** , musíte mít otevřený projekt v aplikaci Visual Studio.
+> Pokud není okno **zdroje dat** viditelné, můžete ho otevřít výběrem možnosti **Zobrazit** > jiné **zdroje dat** > **Windows** nebo stisknutím klávesy **SHIFT**+**ALT**+**D**. Chcete-li zobrazit okno **zdroje dat** , musíte mít otevřený projekt v aplikaci Visual Studio.
 
 Před přetažením položek můžete nastavit typ ovládacího prvku, na který chcete vytvořit vazby. Různé hodnoty se zobrazí v závislosti na tom, zda jste zvolili tabulku nebo jednotlivý sloupec.  Můžete také nastavit vlastní hodnoty. V případě tabulky **Podrobnosti** znamená, že každý sloupec je svázán s samostatným ovládacím prvkem.
 
@@ -39,9 +39,9 @@ Před přetažením položek můžete nastavit typ ovládacího prvku, na který
 
 ## <a name="bindingsource-and-bindingnavigator-controls"></a>Ovládací prvky BindingSource a BindingNavigator
 
-Komponenta <xref:System.Windows.Forms.BindingSource> slouží dvěma účelům. Nejprve poskytuje vrstvu abstrakce při vázání ovládacích prvků k datům. Ovládací prvky ve formuláři jsou vázány na <xref:System.Windows.Forms.BindingSource> komponentu namísto přímo ke zdroji dat. Za druhé může spravovat kolekci objektů. Přidání typu do <xref:System.Windows.Forms.BindingSource> vytvoří seznam tohoto typu.
+<xref:System.Windows.Forms.BindingSource> Komponenta má dva účely. Nejprve poskytuje vrstvu abstrakce při vázání ovládacích prvků k datům. Ovládací prvky ve formuláři jsou vázány na <xref:System.Windows.Forms.BindingSource> komponentu namísto přímo ke zdroji dat. Za druhé je možné spravovat kolekci objektů. Přidání typu <xref:System.Windows.Forms.BindingSource> vytvoří seznam daného typu.
 
-Další informace o komponentě <xref:System.Windows.Forms.BindingSource> najdete v tématech:
+Další informace o <xref:System.Windows.Forms.BindingSource> komponenty, naleznete v tématu:
 
 - [BindingSource – komponenta](/dotnet/framework/winforms/controls/bindingsource-component)
 
@@ -53,7 +53,7 @@ Další informace o komponentě <xref:System.Windows.Forms.BindingSource> najdet
 
 ## <a name="bind-to-data-in-a-datagridview-control"></a>Vytvoření vazby k datům v ovládacím prvku DataGridView
 
-Pro [ovládací prvek DataGridView](/dotnet/framework/winforms/controls/datagridview-control-overview-windows-forms)je celá tabulka svázána s tímto jediným ovládacím prvkem. Při přetahování **ovládacího prvku DataGridView** do formuláře se zobrazí také pruh nástrojů pro navigaci záznamů (<xref:System.Windows.Forms.BindingNavigator>). V zásobníku komponent se zobrazí [datová sada](../data-tools/dataset-tools-in-visual-studio.md), [TableAdapter](../data-tools/create-and-configure-tableadapters.md), <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>. Na následujícím obrázku je přidána také [TableAdapterManager](https://msdn.microsoft.com/library/bb384426.aspx) , protože tabulka Customers má relaci k tabulce Orders. Tyto proměnné jsou všechny deklarovány v automaticky generovaném kódu jako soukromé členy ve třídě Form. Automaticky generovaný kód pro vyplňování **ovládacího prvku DataGridView** je umístěn v obslužné rutině události `Form_Load`. Kód pro uložení dat pro aktualizaci databáze se nachází v obslužné rutině události `Save` pro **BindingNavigator**. V případě potřeby můžete tento kód přesunout nebo upravit.
+Pro [ovládací prvek DataGridView](/dotnet/framework/winforms/controls/datagridview-control-overview-windows-forms)je celá tabulka svázána s tímto jediným ovládacím prvkem. Při přetahování **ovládacího prvku DataGridView** do formuláře se zobrazí také pruh nástrojů pro navigaci záznamů (<xref:System.Windows.Forms.BindingNavigator>). V zásobníku komponent se zobrazí [datová sada](../data-tools/dataset-tools-in-visual-studio.md), [TableAdapter](../data-tools/create-and-configure-tableadapters.md), <xref:System.Windows.Forms.BindingSource>a <xref:System.Windows.Forms.BindingNavigator>. Na následujícím obrázku je přidána také [TableAdapterManager](https://msdn.microsoft.com/library/bb384426.aspx) , protože tabulka Customers má relaci k tabulce Orders. Tyto proměnné jsou všechny deklarovány v automaticky generovaném kódu jako soukromé členy ve třídě Form. Automaticky generovaný kód pro vyplňování **ovládacího prvku DataGridView** je umístěn v obslužné rutině události `Form_Load`. Kód pro uložení dat pro aktualizaci databáze se nachází v obslužné rutině události `Save` pro **BindingNavigator**. V případě potřeby můžete tento kód přesunout nebo upravit.
 
 ![GridView s BindingNavigator](../data-tools/media/raddata-gridview-with-bindingnavigator.png)
 

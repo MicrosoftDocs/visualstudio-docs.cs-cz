@@ -6,17 +6,17 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 63bc6328-e0df-4655-9ce3-5ff74dbf69a4
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7ab33c2e77de183b5c916fbcfe60843c47c4f83f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c9e6974f1b676b623c58eea451270bde98ddcff7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648059"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585974"
 ---
 # <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>Návod: vytvoření tříd LINQ to SQL pomocí dědičnosti s jednou tabulkou (O/R Designer)
 [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) podporují dědičnost jedné tabulky, protože je obvykle implementována v relačních systémech. Tento názorný postup se rozšíří na obecný postup, který je k dispozici v tématu [How to: Configure dědičnost pomocí návrháře o/R](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) a poskytuje některá skutečná data k předvedení použití dědičnosti v [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].
@@ -51,11 +51,11 @@ Chcete-li zjistit, jak dědičnost funguje, vytvořte malou `Person`ovou tabulku
 
     |Název sloupce|Datový typ|Povoluje hodnoty null.|
     |-----------------|---------------|-----------------|
-    |**ÚČET**|**int**|**Chybné**|
-    |**Textový**|**int**|**Podmínka**|
-    |**FirstName**|**nvarchar (200)**|**Chybné**|
-    |**Polím**|**nvarchar (200)**|**Chybné**|
-    |**Programu**|**int**|**Podmínka**|
+    |**ID**|**int**|**Chybné**|
+    |**Typ**|**int**|**True** (Pravda)|
+    |**Jméno**|**nvarchar(200)**|**Chybné**|
+    |**LastName**|**nvarchar(200)**|**Chybné**|
+    |**Manager**|**int**|**True** (Pravda)|
 
 3. Nastavte sloupec ID jako primární klíč.
 
@@ -72,26 +72,26 @@ Aby bylo možné ověřit, že je dědění správně nakonfigurováno, tabulka 
 
     ||||||
     |-|-|-|-|-|
-    |**ÚČET**|**Textový**|**FirstName**|**Polím**|**Programu**|
-    |**první**|**první**|**Anne**|**Wallace**|**PLATNOST**|
-    |**odst**|**první**|**Carlos**|**Grilo**|**PLATNOST**|
-    |**1**|**první**|**Yael**|**Peled**|**PLATNOST**|
-    |**4**|**odst**|**Gatis**|**Ozolins**|**první**|
-    |**čl**|**odst**|**Andreas**|**Hauser**|**první**|
-    |**6**|**odst**|**Tiffany**|**Phuvasate**|**první**|
-    |**čl**|**odst**|**Alexey**|**Orekhov**|**odst**|
-    |**8**|**odst**|**Michał**|**Poliszkiewicz**|**odst**|
-    |**9**|**odst**|**Černý**|**Yee**|**odst**|
-    |**10pruhový**|**odst**|**Fabricio**|**Noriega**|**1**|
-    |**odst**|**odst**|**Mindy**|**Nováková**|**1**|
-    |**12,5**|**odst**|**Ken**|**Kwok**|**1**|
+    |**ID**|**Typ**|**Jméno**|**LastName**|**Manager**|
+    |**1**|**1**|**Anne**|**Wallace**|**NULL**|
+    |**2**|**1**|**Carlos**|**Grilo**|**NULL**|
+    |**3**|**1**|**Yael**|**Peled**|**NULL**|
+    |**4**|**2**|**Gatis**|**Ozolins**|**1**|
+    |**5**|**2**|**Andreas**|**Hauser**|**1**|
+    |**6**|**2**|**Tiffany**|**Phuvasate**|**1**|
+    |**7**|**2**|**Alexey**|**Orekhov**|**2**|
+    |**8**|**2**|**Michał**|**Poliszkiewicz**|**2**|
+    |**9**|**2**|**Černý**|**Yee**|**2**|
+    |**10**|**2**|**Fabricio**|**Noriega**|**3**|
+    |**11**|**2**|**Mindy**|**Martin**|**3**|
+    |**12**|**2**|**Ken**|**Kwok**|**3**|
 
 ## <a name="create-a-new-project"></a>Vytvoření nového projektu
 Teď, když jste vytvořili tabulku, vytvořte nový projekt pro ukázku konfigurace dědičnosti.
 
 ### <a name="to-create-the-new-windows-forms-application"></a>Vytvoření nové aplikace model Windows Forms
 
-1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  > **projekt**.
+1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový** > **projekt**.
 
 2. V levém podokně rozbalte buď **vizuál C#**  , nebo **Visual Basic** a pak vyberte **Desktop Windows**.
 
