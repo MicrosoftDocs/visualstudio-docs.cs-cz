@@ -5,17 +5,17 @@ ms.topic: conceptual
 f1_keywords:
 - vs.graphics
 ms.assetid: 910d673b-c884-4eeb-9928-0e89f3d38cb6
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4269a6f17c83e7fe6f111c4e564ace0e40cfa7e6
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: aa9fc04df3e817730492353e54d74c1e46c3775e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888480"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589796"
 ---
 # <a name="work-with-3d-assets-for-games-and-apps"></a>Práce s 3D prostředky pro hry a aplikace
 
@@ -23,7 +23,7 @@ Tento článek popisuje nástroje sady Visual Studio, které můžete použít k
 
 ## <a name="directx-app-development-in-visual-studio"></a>Vývoj aplikací DirectX v aplikaci Visual Studio
 
-Aplikace DirectX obvykle kombinuje programovací logiku, rozhraní DirectX API a programy HLSL (High Level prostíning Language) spolu se zvukovým a 3D vizuálními prostředky a prezentuje bohatá interaktivní multimediální prostředí. Visual Studio obsahuje nástroje, které můžete použít pro práci s imagemi a texturami, 3D modely a shadery bez nutnosti opustit rozhraní IDE, aby bylo možné použít jiný nástroj. Nástroje sady Visual Studio jsou obzvláště vhodné pro vytváření *zástupných* prostředků, které můžete použít k testování kódu nebo prototypů sestavení před tím, než provedete prostředky připravené pro produkční prostředí, a pro kontrolu a úpravy prostředků připravených k produkci. ladění aplikace.
+Aplikace DirectX obvykle kombinuje programovací logiku, rozhraní DirectX API a programy HLSL (High Level prostíning Language) spolu se zvukovým a 3D vizuálními prostředky a prezentuje bohatá interaktivní multimediální prostředí. Visual Studio obsahuje nástroje, které můžete použít pro práci s imagemi a texturami, 3D modely a shadery bez nutnosti opustit rozhraní IDE, aby bylo možné použít jiný nástroj. Nástroje sady Visual Studio jsou zvláště vhodné pro vytváření *zástupných* prostředků, které můžete použít k testování kódu nebo prototypů sestavení před tím, než provedete proaktivované prostředky pro produkční prostředí, a pro kontrolu a úpravy prostředků připravených k produkci při ladění aplikace.
 
 Zde jsou další informace o druzích prostředků, se kterými můžete pracovat v aplikaci Visual Studio.
 
@@ -52,7 +52,7 @@ K vytváření vlastních vizuálních efektů bez znalosti programování v HLS
 
 Visual Studio používá rozhraní DirectX k vykreslování 2D a 3D prostředků. Můžete vybrat buď vykreslovací modul rozhraní DirectX 11, nebo systém Windows Advanced Rastring Platform (pokřivení) softwaru. Vykreslovací modul rozhraní DirectX 11 poskytuje vysoce výkonné vykreslování s hardwarovou akcelerací na procesorech DirectX 11 a DirectX 10. Zobrazovací jednotka pro pokřivení pomáhá zajistit, aby vaše prostředky pracovaly s širokou škálou počítačů – to zahrnuje počítače, které nemají moderní grafický hardware a počítače s integrovaným grafickým hardwarem. Další informace o prostudování najdete v tématu [Příručka k platformě Windows Advanced rastring Platform (POkřivení)](/windows/win32/direct3darticles/directx-warp).
 
-## <a name="related-topics"></a>Související témata
+## <a name="related-topics"></a>Příbuzná témata
 
 |Název|Popis|
 |-----------|-----------------|

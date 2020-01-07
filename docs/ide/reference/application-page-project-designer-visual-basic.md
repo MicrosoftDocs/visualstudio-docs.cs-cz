@@ -8,23 +8,23 @@ f1_keywords:
 helpviewer_keywords:
 - Project Designer, Application page
 - Application page in Project Designer
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a40b35960b1dda30e1151e242380147ac58a77ce
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fe303f86b282e7e803dacc1dd8f4d3c1d6b72121
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651924"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595810"
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Stránka Aplikace, návrhář projektu (Visual Basic)
 
 Použijte stránku **aplikace** Návrháře projektu k určení nastavení aplikace a vlastností projektu.
 
-Pro přístup ke stránce **aplikace** vyberte uzel projektu (nikoli uzel **řešení** ) v **Průzkumník řešení**. Pak zvolte **projekt**  > **vlastnosti** na řádku nabídek. Když se zobrazí **Návrhář projektu** , vyberte kartu **aplikace** .
+Pro přístup ke stránce **aplikace** vyberte uzel projektu (nikoli uzel **řešení** ) v **Průzkumník řešení**. Pak zvolte **projekt** > **vlastnosti** na řádku nabídek. Když se zobrazí **Návrhář projektu** , vyberte kartu **aplikace** .
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -94,7 +94,7 @@ Pokud je zaškrtnuto políčko **Povolit aplikační architekturu** , tento sezn
 
 ### <a name="icon"></a>Ikona
 
-Nastaví soubor. ico, který chcete použít jako ikonu programu. Vybrat **\<Browse... >** vyhledat existující grafiku. Další informace naleznete v tématu [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) (nebo [/Win32icon) (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option). Chcete-li získat přístup k této vlastnosti programově, přečtěte si téma <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.
+Nastaví soubor. ico, který chcete použít jako ikonu programu. Vyberte **\<Procházet... >** vyhledat existující grafiku. Další informace naleznete v tématu [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) (nebo [/Win32icon) (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option). Chcete-li získat přístup k této vlastnosti programově, přečtěte si téma <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.
 
 ### <a name="assembly-information"></a>Informace o sestavení
 
@@ -102,7 +102,7 @@ Kliknutím na toto tlačítko zobrazíte [dialogové okno informace o sestavení
 
 ### <a name="enable-application-framework"></a>Povolit aplikační architekturu
 
-Určuje, zda projekt bude používat aplikační rozhraní. Nastavení této možnosti má vliv na možnosti dostupné ve **formuláři po spuštění** /**spouštěcí objekt**.
+Určuje, zda projekt bude používat aplikační rozhraní. Nastavení této možnosti má vliv na možnosti dostupné ve **formuláři po spuštění**/**spouštěcí objekt**.
 
 Pokud je toto políčko zaškrtnuté, vaše aplikace používá standardní `Sub Main`. Zaškrtnutí tohoto políčka povolí funkce v části **Vlastnosti rozhraní Windows Application Framework** a také vyžaduje, abyste vybrali úvodní formulář.
 
@@ -131,7 +131,7 @@ Povolí nebo zakáže vizuální styly systému Windows XP, označované také j
 
 ### <a name="make-single-instance-application"></a>Vytvoření aplikace s jedinou instancí
 
-Zaškrtnutím tohoto políčka zabráníte uživatelům v spuštění více instancí aplikace. Výchozí nastavení pro toto zaškrtávací políčko není *zaškrtnuto*, což umožňuje spustit více instancí aplikace. Další informace najdete v tématu událost <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>.
+Zaškrtnutím tohoto políčka zabráníte uživatelům v spuštění více instancí aplikace. Výchozí nastavení pro toto zaškrtávací políčko není *zaškrtnuto*, což umožňuje spustit více instancí aplikace. Další informace naleznete v události <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>.
 
 ### <a name="save-mysettings-on-shutdown"></a>Uložit My. Settings při vypnutí
 

@@ -5,17 +5,17 @@ ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.RoamingSettings
 ms.assetid: 3cfe09d2-1120-46e8-b882-f7056acb778b
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63b5443599e5e84cab1693aca4281c882c082162
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9ff457523024db49502ae982a390d9a7be6ba9dd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645341"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595901"
 ---
 # <a name="accounts-environment-options-dialog-box"></a>Účty, prostředí, dialogové okno Možnosti
 
@@ -29,7 +29,7 @@ Tuto možnost použijte, chcete-li určit, zda chcete synchronizovat nastavení 
 
 ### <a name="enable-device-code-flow"></a>Povolit tok kódu zařízení
 
-Pokud je vybrána tato možnost, chování aplikace Visual Studio se změní po výběru možnosti **Přidat účet** na stránce  > **Nastavení účtu** **souboru** . Namísto zobrazení na stránce **účtu** se zobrazí dialogové okno, které vám poskytne adresu URL a kód pro vložení do webového prohlížeče pro přihlášení. Tato možnost je užitečná v případech, kdy se nemůžete přihlásit k sadě Visual Studio běžným způsobem, například pokud používáte starší verzi Internet Exploreru nebo pokud brána firewall omezuje přístup. Další informace najdete v tématu [práce s několika uživatelskými účty](../work-with-multiple-user-accounts.md#add-an-account-using-device-code-flow).
+Pokud je vybrána tato možnost, chování aplikace Visual Studio se změní po výběru možnosti **Přidat účet** na stránce > **Nastavení účtu** **souboru** . Namísto zobrazení na stránce **účtu** se zobrazí dialogové okno, které vám poskytne adresu URL a kód pro vložení do webového prohlížeče pro přihlášení. Tato možnost je užitečná v případech, kdy se nemůžete přihlásit k sadě Visual Studio běžným způsobem, například pokud používáte starší verzi Internet Exploreru nebo pokud brána firewall omezuje přístup. Další informace najdete v tématu [práce s několika uživatelskými účty](../work-with-multiple-user-accounts.md#add-an-account-using-device-code-flow).
 
 ## <a name="registered-azure-clouds"></a>Registrované cloudy Azure
 

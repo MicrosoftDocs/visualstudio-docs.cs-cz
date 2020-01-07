@@ -3,17 +3,17 @@ title: Pracovní prostor Návrháře schémat XML
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 588fa495-fe7f-4b16-8a9f-6b6b8d2d502a
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d6e5efc4c192fbb9debeb9dd5f9ccf1eaec69efa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4cf86dd39e010424b25916deec8cdebd23ee1c1b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72608266"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592370"
 ---
 # <a name="xml-schema-designer-workspace-views"></a>Zobrazení pracovního prostoru návrháře schématu XML
 
@@ -37,7 +37,7 @@ Do pracovního prostoru můžete přidat uzly následujícími způsoby:
 
 - Proveďte hledání v Průzkumníku XSD a klikněte na tlačítko **Přidat zvýrazněné uzly do pracovního prostoru** v podokně souhrnné výsledky. Další informace najdete v tématu [hledání sady schémat](../xml-tools/searching-the-schema-set.md).
 
-## <a name="switch-views"></a>Přepnout zobrazení
+## <a name="switch-views"></a>Přepnutí zobrazení
 
 Chcete-li přepnout zobrazení, použijte jednu z následujících možností:
 
@@ -47,4 +47,4 @@ Chcete-li přepnout zobrazení, použijte jednu z následujících možností:
 
 - Meze na stránce zobrazení Start nebo na meze v zobrazení modelu prázdného obsahu nebo zobrazení grafu.
 
-- Klávesové zkratky: **ctrl** +**1** pro zobrazení Start, **CTRL** +**2** pro zobrazení grafu a **CTRL** +**3** pro zobrazení modelu obsahu.
+- Klávesové zkratky: **ctrl**+**1** pro zobrazení Start, **CTRL**+**2** pro zobrazení grafu a **CTRL**+**3** pro zobrazení modelu obsahu.

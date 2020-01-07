@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, providing overridable classes
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c2386b7a7472f6b80457a5a803f6dfe886cc1d0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c3374f67f4fba11543e3dbbca47fef621dd2e714
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658338"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595888"
 ---
 # <a name="override-and-extend-the-generated-classes"></a>Přepsat a zvětšit vygenerované třídy
 
@@ -76,11 +76,11 @@ Rozšiřovací bod označený příznakem je místo v definici DSL, kde můžete
 
 V každém případě když nastavíte příznak a znovu vygenerujete kód, bude výsledkem chyba sestavení. Dvojitým kliknutím na chybu zobrazíte komentář s vysvětlením, co je třeba zadat.
 
-### <a name="rules"></a>Pravidly
+### <a name="rules"></a>Pravidla
 
 Správce transakcí umožňuje definovat pravidla, která se spouštějí před koncem transakce, ve které došlo k určené události, jako je například změna vlastnosti. Pravidla se obvykle používají k údržbě synchronism mezi různými prvky v úložišti. Například pravidla se používají k ujištění, že diagram zobrazuje aktuální stav modelu.
 
-Pravidla jsou definována na základě jednotlivých tříd, takže nemusíte mít kód, který zaregistruje pravidlo pro každý objekt. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
+Pravidla jsou definována na základě jednotlivých tříd, takže nemusíte mít kód, který zaregistruje pravidlo pro každý objekt. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
 
 ### <a name="store-events"></a>Ukládat události
 

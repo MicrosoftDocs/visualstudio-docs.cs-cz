@@ -6,17 +6,17 @@ f1_keywords:
 - msvse_settingsdesigner.err.nameblank
 helpviewer_keywords:
 - application settings [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae4215987ee0a61935efe27ab927d826cc1c6ff9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8d792a6147795f81211203fc442539371f3caa91
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654621"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593704"
 ---
 # <a name="manage-application-settings-net"></a>Správa nastavení aplikace (.NET)
 
@@ -26,7 +26,7 @@ Nastavení aplikace nahradí dynamické vlastnosti používané v dřívějšíc
 
 Každé nastavení aplikace musí mít jedinečný název. Název může být libovolná kombinace písmen, číslic nebo podtržítka, která nesmí začínat číslicí a nesmí obsahovat mezery. Název se změní prostřednictvím vlastnosti `Name`.
 
-Nastavení aplikace lze uložit jako libovolný datový typ serializovaný do formátu XML nebo má `TypeConverter`, který implementuje `ToString` / `FromString`. Nejběžnější typy jsou `String`, `Integer` a `Boolean`, ale můžete také ukládat hodnoty jako <xref:System.Drawing.Color>, <xref:System.Object> nebo jako připojovací řetězec.
+Nastavení aplikace lze uložit jako libovolný datový typ serializovaný do formátu XML nebo má `TypeConverter`, který implementuje `ToString`/`FromString`. Nejběžnější typy jsou `String`, `Integer`a `Boolean`, ale můžete také ukládat hodnoty jako <xref:System.Drawing.Color>, <xref:System.Object>nebo jako připojovací řetězec.
 
 Nastavení aplikace také drží hodnotu. Hodnota je nastavena s vlastností **Value** a musí odpovídat datovému typu nastavení.
 
@@ -76,7 +76,7 @@ Můžete například do svého projektu přidat soubor, například *SpecialSett
 
 ## <a name="access-or-change-application-settings-at-run-time-in-visual-basic"></a>Přístup nebo změna nastavení aplikace za běhu v Visual Basic
 
-V Visual Basic projekty můžete k nastavení aplikace přistupovat v době běhu pomocí objektu `My.Settings`. Na stránce **Nastavení** klikněte na tlačítko **Zobrazit kód** a zobrazte soubor *Settings. vb* . *Settings. vb* definuje třídu `Settings`, která umožňuje zpracovávat tyto události ve třídě nastavení: <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>, <xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>, <xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded> a <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>. Všimněte si, že třída `Settings` v *Settings. vb* je částečná třída, která zobrazuje pouze uživatelský kód, nikoli celou generovanou třídu. Další informace o přístupu k nastavení aplikace pomocí objektu `My.Settings` najdete v tématu [přístup k nastavení aplikace (.NET Framework)](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings).
+V Visual Basic projekty můžete k nastavení aplikace přistupovat v době běhu pomocí objektu `My.Settings`. Na stránce **Nastavení** klikněte na tlačítko **Zobrazit kód** a zobrazte soubor *Settings. vb* . *Settings. vb* definuje třídu `Settings`, která umožňuje zpracovávat tyto události ve třídě nastavení: <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>, <xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>, <xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>a <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>. Všimněte si, že třída `Settings` v *Settings. vb* je částečná třída, která zobrazuje pouze uživatelský kód, nikoli celou generovanou třídu. Další informace o přístupu k nastavení aplikace pomocí objektu `My.Settings` najdete v tématu [přístup k nastavení aplikace (.NET Framework)](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings).
 
 Hodnoty všech nastavení v uživatelském rozsahu, které uživatel změní v době běhu (například pozice formuláře), jsou uloženy v souboru *User. config* . Všimněte si, že výchozí hodnoty jsou pořád uložené v *App. config*.
 

@@ -3,17 +3,17 @@ title: Ladit šablony stylů XSLT
 ms.date: 03/05/2019
 ms.topic: conceptual
 ms.assetid: 3db9fa5a-f619-4cb6-86e7-64b364e58e5d
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c1f774757acc293091f19a783ed93f34647d494
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cd5882cc606bf241a281940464ba028e77986807
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604615"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592474"
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>Návod: ladění šablony stylů XSLT
 
@@ -26,7 +26,7 @@ Pro přípravu k tomuto návodu nejdřív zkopírujte dva [ukázkové soubory](#
 
 ## <a name="start-debugging"></a>Spustit ladění
 
-1. V nabídce **soubor** klikněte na příkaz **otevřít**  > **soubor**.
+1. V nabídce **soubor** klikněte na příkaz **otevřít** > **soubor**.
 
 2. Vyhledejte soubor *below-Average. xsl* a klikněte na tlačítko **otevřít**.
 
@@ -44,11 +44,11 @@ Pro přípravu k tomuto návodu nejdřív zkopírujte dva [ukázkové soubory](#
 
    - Klikněte kamkoli na řádek 12 a pak stiskněte **F9**.
 
-   - Klikněte pravým tlačítkem na značku `xsl:if` Start a pak zvolte **zarážku**  > **Vložit zarážku**.
+   - Klikněte pravým tlačítkem na značku `xsl:if` Start a pak zvolte **zarážku** > **Vložit zarážku**.
 
       ![Vložit zarážku v souboru XSL v aplikaci Visual Studio](media/insert-breakpoint.PNG)
 
-6. Na panelu nabídek vyberte **XML**  > **Spustit ladění XSLT** (nebo stiskněte klávesu **ALT** +**F5**).
+6. Na panelu nabídek vyberte **XML** > **Spustit ladění XSLT** (nebo stiskněte klávesu **ALT**+**F5**).
 
    Spustí se proces ladění.
 
@@ -56,11 +56,11 @@ Pro přípravu k tomuto návodu nejdřív zkopírujte dva [ukázkové soubory](#
 
    Okna **Automatické**hodnoty, **místní**hodnoty a **kukátko 1** se zobrazí v dolní části okna sady Visual Studio. V okně **místní** hodnoty se zobrazí všechny místní proměnné a jejich aktuální hodnoty. To zahrnuje proměnné definované v šabloně stylů a také proměnné, které ladicí program používá ke sledování uzlů, které jsou aktuálně v kontextu.
 
-## <a name="watch-window"></a>Kukátko – okno
+## <a name="watch-window"></a>Okno kukátka
 
 Do okna **kukátko 1** přidáte dvě proměnné, abychom mohli analyzovat jejich hodnoty, když se zpracuje vstupní soubor. (Můžete také použít okno **místní** hodnoty k prohlédnutí hodnot, pokud proměnné, které chcete sledovat, již existují.)
 
-1. V nabídce **ladění** vyberte možnost **Windows**  > **sledovat**  > **kukátko 1**.
+1. V nabídce **ladění** vyberte možnost **Windows** > **sledovat** > **kukátko 1**.
 
    Okno **kukátko 1** se zobrazí.
 
@@ -80,19 +80,19 @@ Do okna **kukátko 1** přidáte dvě proměnné, abychom mohli analyzovat jejic
 
 ## <a name="step-through-the-code"></a>Krokovat kód
 
-1. Pokračujte stisknutím klávesy **F5** .
+1. Pokračujte stisknutím **F5**.
 
    Vzhledem k tomu, že první uzel knihy splnil stav `xsl:if`, uzel Book se přidá do výstupního souboru *below-Average. XML* . Ladicí program bude pokračovat, dokud nebude znovu umístěn v prvku `xsl:if` v šabloně stylů. Ladicí program je nyní umístěn na druhém uzlu Book v souboru *Books. XML* .
 
    V okně **kukátko 1** se hodnota `self::node()` změní na druhý uzel Book. Prozkoumáním hodnoty cenového prvku můžete zjistit, že cena je nad průměrem, takže `xsl:if` podmínka by měla selhat.
 
-2. Pokračujte stisknutím klávesy **F5** .
+2. Pokračujte stisknutím **F5**.
 
    Vzhledem k tomu, že druhý uzel knihy nesplňuje podmínky `xsl:if`, uzel Book není přidán do výstupního souboru *below-Average. XML* . Ladicí program bude pokračovat, dokud nebude znovu umístěn v prvku `xsl:if` v šabloně stylů. Ladicí program je nyní umístěn na třetím `book` uzlu v souboru *Books. XML* .
 
    V okně **kukátko 1** se hodnota `self::node()` změní na uzel třetí knihy. Prozkoumáním hodnoty `price` elementu můžete určit, že cena je nižší než průměr. Podmínka `xsl:if` by měla být úspěšná.
 
-3. Pokračujte stisknutím klávesy **F5** .
+3. Pokračujte stisknutím **F5**.
 
    Vzhledem k tomu, že podmínka `xsl:if` byla splněna, třetí kniha je přidána do výstupního souboru *below-Average. XML* . Všechny knihy v dokumentu XML byly zpracovány a ladicí program se zastaví.
 

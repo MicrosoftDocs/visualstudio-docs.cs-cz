@@ -9,33 +9,33 @@ dev_langs:
 - CSharp
 - C++
 - jsharp
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b77ea7ce288ead0af3d6a9879cab2216ffd6247d
-ms.sourcegitcommit: 628eb202a1153ebfe69c668f966f821b98b34b34
+ms.openlocfilehash: 89dcb8bddf2c92406ad5eff952d1f4050d7f9262
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71720796"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593275"
 ---
-# <a name="diagnosing-task-failures"></a>Diagnostikování selhání úlohy
+# <a name="diagnosing-task-failures"></a>Diagnostikování selhání úloh
 
-`MSB6006` je generována, pokud <xref:Microsoft.Build.Utilities.ToolTask> – odvozená třída spustí proces nástroje, který vrátí nenulový ukončovací kód, pokud úloha neprotokoluje konkrétnější chybu.
+`MSB6006` je generována, když <xref:Microsoft.Build.Utilities.ToolTask>– odvozená třída spustí proces nástroje, který vrátí nenulový ukončovací kód v případě, že úloha neprotokoluje konkrétnější chybu.
 
 ## <a name="identifying-the-failing-task"></a>Identifikace úlohy, která selhala
 
 Když narazíte na chybu úlohy, prvním krokem je identifikace úlohy, která selhává.
 
-Text chyby Určuje název nástroje (popisný název poskytnutý implementací <xref:Microsoft.Build.Utilities.ToolTask.ToolName> nebo název spustitelného souboru) a číselný ukončovací kód. Například v
+Text chyby Určuje název nástroje (popisný název poskytnutý implementací <xref:Microsoft.Build.Utilities.ToolTask.ToolName> úlohy nebo název spustitelného souboru) a číselný ukončovací kód. V systému
 
 ```text
 error MSB6006: "custom tool" exited with code 1.
 ```
 
-Název nástroje je `custom tool` a ukončovací kód `1`.
+Název nástroje je `custom tool` a ukončovací kód je `1`.
 
 ### <a name="command-line-builds"></a>Sestavení z příkazového řádku
 
@@ -49,11 +49,11 @@ Build FAILED.
   S:\MSB6006_demo\MSB6006_demo.csproj(19,5): error MSB6006: "custom tool" exited with code 1.
 ```
 
-Tento výsledek indikuje, že došlo k chybě v úloze definované na řádku 19 souboru `S:\MSB6006_demo\MSB6006_demo.csproj` v cíli s názvem `InvokeToolTask` v projektu `S:\MSB6006_demo\MSB6006_demo.csproj`.
+Tento výsledek indikuje, že došlo k chybě v úloze definované na řádku 19 souboru `S:\MSB6006_demo\MSB6006_demo.csproj`v cíli s názvem `InvokeToolTask`v `S:\MSB6006_demo\MSB6006_demo.csproj`projektu.
 
-### <a name="in-visual-studio"></a>V aplikaci Visual Studio
+### <a name="in-visual-studio"></a>V nástroji Visual Studio
 
-Stejné informace jsou k dispozici v seznamu chyb sady Visual Studio ve sloupcích `Project`, `File` a `Line`.
+Stejné informace jsou k dispozici v seznamu chyb sady Visual Studio ve sloupcích `Project`, `File`a `Line`.
 
 ## <a name="finding-more-failure-information"></a>Hledání informací o dalších chybách
 

@@ -5,20 +5,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], custom host
 - text templates, custom host walkthrough
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 999e8f27a9c60d776d65dc87eb2b42adeec2226c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3d578161d43de68d85f3b7704c9fd69fe4e268ea
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666977"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593535"
 ---
 # <a name="walkthrough-create-a-custom-text-template-host"></a>Návod: Vytvoření vlastního hostitele textových šablon
 
@@ -51,7 +51,7 @@ V tomto návodu vytvoříte vlastního hostitele ve spustitelné aplikaci, kter
 
 2. Přidejte odkazy na následující sestavení:
 
-   - **Microsoft. VisualStudio. TextTemplating. \*.0**
+   - **Microsoft.VisualStudio.TextTemplating.\*.0**
 
    - **Microsoft. VisualStudio. TextTemplating. Interfaces. 10.0 a novějších verzí**
 
@@ -716,9 +716,9 @@ V tomto návodu vytvoříte vlastního hostitele ve spustitelné aplikaci, kter
 
 4. Pouze pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] otevřete nabídku **projekt** a klikněte na příkaz **vlastnosti CustomHost**. V seznamu **spouštěcí objekt** klikněte na **CustomHost. program**.
 
-5. V nabídce **soubor** klikněte na **Uložit vše**.
+5. Na **souboru** nabídky, klikněte na tlačítko **Uložit vše**.
 
-6. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+6. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
 ## <a name="test-the-custom-host"></a>Test vlastního hostitele
 

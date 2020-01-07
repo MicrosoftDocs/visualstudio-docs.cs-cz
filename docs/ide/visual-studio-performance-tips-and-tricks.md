@@ -2,17 +2,17 @@
 title: Tipy pro zlepšení výkonu
 ms.date: 08/14/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ccf785cec859290cac0ebcf5c9685861bd2887e4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 950803d46d7b870804c2c8914f3c85b0b89e5732
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647141"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590667"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Tipy a triky pro výkon sady Visual Studio
 
@@ -33,17 +33,17 @@ Visual Studio automaticky znovu otevře dokumenty, které zůstaly otevřené v 
 
 Pokud automatické obnovení dokumentů způsobuje výrazné zpomalení řešení, Visual Studio vás upozorní na žlutou čáru. Automatické opětovné otevření souboru můžete zakázat pomocí následujících kroků:
 
-1. Vyberte **nástroje**  > **Možnosti** a otevřete dialogové okno **Možnosti** .
+1. Vyberte **nástroje** > **Možnosti** a otevřete dialogové okno **Možnosti** .
 
-1. Na stránce **projekty a řešení**  > **Obecné** zrušte výběr **znovu otevřít dokumenty při načtení řešení**.
+1. Na stránce **projekty a řešení** > **Obecné** zrušte výběr **znovu otevřít dokumenty při načtení řešení**.
 
 Pokud automatické obnovení souborů zakážete, můžete rychlým způsobem navigace do souborů, které chcete otevřít, použít jeden z příkazů [Přejít na](../ide/go-to.md) :
 
-- V části Obecné **přejděte na** možnost **Upravit**  > **přejděte na**  > **Přejít na vše**nebo stiskněte klávesovou **zkratku CTRL** +**t**.
+- V části Obecné **přejděte na** možnost **Upravit** > **přejděte na** > **Přejít na vše**nebo stiskněte klávesovou **zkratku CTRL**+**t**.
 
-- Přejděte do posledního umístění pro úpravy v řešení pomocí **edit**  > **přejděte na**  > **Přejít na poslední umístění úprav**nebo stiskněte **klávesu CTRL** +**SHIFT** +**BACKSPACE**.
+- Přejděte do posledního umístění pro úpravy v řešení pomocí **edit** > **přejděte na** > **Přejít na poslední umístění úprav**nebo stiskněte **klávesu CTRL**+**SHIFT**+**BACKSPACE**.
 
-- Pomocí **Přejít na poslední soubor** zobrazíte seznam nedávno navštívených souborů v řešení. Vyberte **upravit**  > **Přejít na**  > **Přejít na poslední soubor**nebo stiskněte **CTRL** +**1**, **CTRL** +**R**.
+- Pomocí **Přejít na poslední soubor** zobrazíte seznam nedávno navštívených souborů v řešení. Vyberte **upravit** > **Přejít na** > **Přejít na poslední soubor**nebo stiskněte **CTRL**+**1**, **CTRL**+**R**.
 
 ## <a name="configure-debugging-options"></a>Konfigurace možností ladění
 
@@ -53,15 +53,15 @@ Pokud obvykle dochází k nedostatku paměti během relace ladění, můžete op
 
     Nejjednodušší optimalizace je povolit funkci **pouze můj kód** , která načte jenom symboly pro váš projekt. Povolení této funkce může způsobit významné uložení paměti pro ladění spravovaných aplikací (.NET). Tato možnost je již ve výchozím nastavení povolena v některých typech projektů.
 
-    Pokud chcete **povolit pouze můj kód**, zvolte **nástroje**  > **Možnosti**  > **ladění**  > **Obecné**a pak vyberte **Povolit pouze můj kód**.
+    Pokud chcete **povolit pouze můj kód**, zvolte **nástroje** > **Možnosti** > **ladění** > **Obecné**a pak vyberte **Povolit pouze můj kód**.
 
 - **Zadejte symboly, které se mají načíst.**
 
     Pro nativní ladění je načítání souborů symbolů ( *. pdb*) nákladné z důvodu paměťových prostředků. Můžete nakonfigurovat nastavení symbolu ladicího programu pro zachování paměti. Obvykle můžete řešení nakonfigurovat tak, aby se načetly jenom moduly z vašeho projektu.
 
-    Chcete-li určit načítání symbolů, zvolte **nástroje**  > **možnosti**  > **ladění**  > **symboly**.
+    Chcete-li určit načítání symbolů, zvolte **nástroje** > **možnosti** > **ladění** > **symboly**.
 
-    Nastavte možnosti jenom na **zadané moduly** , a ne na **všechny moduly** a pak určete, které moduly si můžete načíst. Při ladění můžete také kliknout pravým tlačítkem myši na konkrétní moduly v okně **moduly** , aby explicitně zahrnovaly modul v načtení symbolu. (Chcete-li otevřít okno při ladění, vyberte možnost **ladit**  > **moduly** **Windows**  > .)
+    Nastavte možnosti jenom na **zadané moduly** , a ne na **všechny moduly** a pak určete, které moduly si můžete načíst. Při ladění můžete také kliknout pravým tlačítkem myši na konkrétní moduly v okně **moduly** , aby explicitně zahrnovaly modul v načtení symbolu. (Chcete-li otevřít okno při ladění, vyberte možnost **ladit** > **moduly** **Windows** > .)
 
     Další informace najdete v tématu [Principy souborů symbolů](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/).
 
@@ -69,7 +69,7 @@ Pokud obvykle dochází k nedostatku paměti během relace ladění, můžete op
 
     Doporučuje se, abyste po použití zakázali profilaci procesoru. Tato funkce může využívat velké množství prostředků. Po povolení profilace procesoru je tento stav trvale v následných ladicích relacích, takže je po dokončení potřeba ho explicitně zapnout. Můžete uložit některé prostředky zakázáním diagnostických nástrojů během ladění, pokud nepotřebujete poskytované funkce.
 
-    Pokud chcete **diagnostické nástroje**zakázat, spusťte ladicí relaci, zvolte **nástroje**  > **Možnosti**  > **Povolit diagnostické nástroje**a zrušte výběr možnosti.
+    Pokud chcete **diagnostické nástroje**zakázat, spusťte ladicí relaci, zvolte **nástroje** > **Možnosti** > **Povolit diagnostické nástroje**a zrušte výběr možnosti.
 
     Další informace najdete v tématu [Nástroje pro profilaci](../profiling/profiling-feature-tour.md).
 
@@ -88,13 +88,13 @@ Informace o požadavcích na výkon .NET Compiler Platform (Roslyn) najdete v t�
 
     Visual Studio provede analýzu celého řešení, aby před vyvoláním sestavení poskytovala bohatou zkušenost s chybami. Tato funkce je užitečná k identifikaci chyb co nejdříve. U velkých řešení ale tato funkce může využívat významné paměťové prostředky. Pokud se setkáváte s tlakem na paměť nebo podobnými problémy, můžete toto prostředí zakázat a uvolnit tak tyto prostředky. Ve výchozím nastavení je tato možnost povolená pro Visual Basic a zakázaná pro C#.
 
-    Chcete-li zakázat **kompletní analýzu řešení**, zvolte **nástroje**  > **Možnosti**  > **textový editor**a pak vyberte buď **C#** **Visual Basic** , nebo. Zvolte **Upřesnit** a zrušte výběr možnosti **Povolit úplnou analýzu řešení**.
+    Chcete-li zakázat **kompletní analýzu řešení**, zvolte **nástroje** > **Možnosti** > **textový editor**a pak vyberte buď **C#** **Visual Basic** , nebo. Zvolte **Upřesnit** a zrušte výběr možnosti **Povolit úplnou analýzu řešení**.
 
 - **Zakázat CodeLens**
 
     Visual Studio provede úlohu **Najít všechny odkazy** na každé metodě, která je zobrazena. CodeLens poskytuje funkce, jako je vložené zobrazení počtu odkazů. Práce se provádí v samostatném procesu, jako je *ServiceHub. RoslynCodeAnalysisService32*. Ve velkých řešeních nebo v systémech s omezením prostředků může mít tato funkce výrazný dopad na výkon. Pokud máte problémy s pamětí, například při načítání velkého řešení na 4 GB počítače nebo vysokém využití procesoru pro tento proces, můžete CodeLens vypnout a uvolnit tak prostředky.
 
-    Chcete-li zakázat **CodeLens**, zvolte **nástroje**  > **Možnosti**  > **textový editor**  > **všechny jazyky**  > **CodeLens**a zrušte výběr funkce.
+    Chcete-li zakázat **CodeLens**, zvolte **nástroje** > **Možnosti** > **textový editor** > **všechny jazyky** > **CodeLens**a zrušte výběr funkce.
 
     > [!NOTE]
     > CodeLens je k dispozici v edicích Professional a Enterprise sady Visual Studio.
@@ -121,7 +121,7 @@ Informace o požadavcích na výkon .NET Compiler Platform (Roslyn) najdete v t�
 
     Návrhář XAML je ve výchozím nastavení povolen, ale spotřebovává prostředky pouze v případě, že otevřete soubor *. XAML* . Pokud pracujete se soubory XAML, ale nechcete používat funkci návrháře, zakažte tuto funkci, aby uvolnila nějakou paměť.
 
-    Pokud chcete **Návrhář XAML**zakázat, v nabídce **nástroje**  > **možnosti**  > **Návrhář XAML**  > **Povolit Návrhář XAML**a zrušte výběr možnosti.
+    Pokud chcete **Návrhář XAML**zakázat, v nabídce **nástroje** > **možnosti** > **Návrhář XAML** > **Povolit Návrhář XAML**a zrušte výběr možnosti.
 
 - **Odebrat úlohy**
 
@@ -131,7 +131,7 @@ Informace o požadavcích na výkon .NET Compiler Platform (Roslyn) najdete v t�
 
 CLR používá systém správy paměti pro uvolňování paměti. V tomto systému se někdy paměť používá v objektech, které už nejsou potřeba. Tento stav je dočasný. systém uvolňování paměti uvolní tuto paměť na základě jeho heuristiky výkonu a využití prostředků. Můžete vynutit, aby CLR shromáždil veškerou nepoužitou paměť pomocí klávesových zkratek v aplikaci Visual Studio. Pokud dojde k výraznému čekání na uvolnění paměti pro shromažďování a vynutíte uvolňování paměti, měli byste vidět využití paměti při zrušení procesu *devenv. exe* ve **Správci úloh**. Tuto metodu je zřídka nutné použít. Po dokončení náročné operace (například úplné sestavení, relace ladění nebo otevřené události řešení) vám však může usnadnit určení množství paměti, které tento proces skutečně používá. Vzhledem k tomu, že je sada Visual Studio smíšená (spravovaná & nativní), je možné, že nativní přidělování a uvolňování paměti můžou být v případě omezeného počtu paměťových prostředků konkurenční. V podmínkách vysokého využití paměti může pomáhat vynutit spouštění uvolňování paměti.
 
-Chcete-li vynutit uvolňování paměti, použijte klávesovou zkratku **ctrl** +**Alt** +**Shift** +**F12**, **CTRL** +**ALT** 0**SHIFT** 2**F12** (stiskněte dvakrát).
+Chcete-li vynutit uvolňování paměti, použijte klávesovou zkratku **ctrl**+**Alt**+**Shift**+**F12**, **CTRL**+**ALT**+**SHIFT**+**F12** (stiskněte dvakrát).
 
 Pokud vynucené uvolňování paměti zajistí spolehlivou práci, zaznamenejte zprávu prostřednictvím nástroje pro zpětnou vazbu sady Visual Studio, protože toto chování je pravděpodobně chyba.
 

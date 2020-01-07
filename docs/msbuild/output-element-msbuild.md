@@ -1,5 +1,5 @@
 ---
-title: Output – Element (MSBuild) | Dokumentace Microsoftu
+title: Output – element (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - <Output> Element [MSBuild]
 - Output Element [MSBuild]
 ms.assetid: 34bc7cd1-efd3-4b57-b691-4584eeb6a0e9
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb8f7a02183fe34dcd882e23ee7bf8b90f9a2cc6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bcd27951390cf86712f846fada2835c4d87ec7fe
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963920"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594835"
 ---
 # <a name="output-element-msbuild"></a>Output – element (MSBuild)
-Úložiště úlohy výstupní hodnoty v položek a vlastností.
+Ukládá výstupní hodnoty úkolu do položek a vlastností.
 
- \<Projekt > \<cíl > \<úloh > \<výstup >
+ \<projektu > \<Target > \<> \<výstup >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,10 +45,10 @@ ms.locfileid: "62963920"
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`TaskParameter`|Požadovaný atribut.<br /><br /> Název úkolu výstupní parametr.|
-|`PropertyName`|Buď `PropertyName` nebo `ItemName` atribut je vyžadován.<br /><br /> Vlastnost, která obdrží úkol výstupní hodnota parametru. Váš projekt pak může odkazovat na vlastnost $ (\<PropertyName >) syntaxe. Název této vlastnosti může být buď nový název vlastnosti nebo název, který je již definován v projektu.<br /><br /> Tento atribut nedá použít, pokud `ItemName` se také používá.|
-|`ItemName`|Buď `PropertyName` nebo `ItemName` atribut je vyžadován.<br /><br /> Hodnota parametru výstupní položku, která obdrží úkol. Váš projekt pak může odkazovat položka @(\<název položky >) syntaxe. Název položky může být buď název nové položky nebo název, který je již definován v projektu. Když se název položky je existující položku, hodnoty výstupních parametrů se přidají do existující položku. <br /><br /> Tento atribut nedá použít, pokud `PropertyName` se také používá.|
-|`Condition`|Nepovinný atribut.<br /><br /> Podmínku, která má být vyhodnocen. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
+|`TaskParameter`|Požadovaný atribut.<br /><br /> Název výstupního parametru úkolu.|
+|`PropertyName`|Je požadován buď atribut `PropertyName`, nebo `ItemName`.<br /><br /> Vlastnost, která obdrží hodnotu výstupního parametru úkolu. Projekt pak může odkazovat na vlastnost pomocí syntaxe $ (\<PropertyName >). Tento název vlastnosti může být buď nový název vlastnosti, nebo název, který je již definován v projektu.<br /><br /> Tento atribut nelze použít, je-li použit i `ItemName`.|
+|`ItemName`|Je požadován buď atribut `PropertyName`, nebo `ItemName`.<br /><br /> Položka, která obdrží hodnotu výstupního parametru úkolu. Projekt pak může na položku odkazovat pomocí syntaxe @ (\<>). Název položky může být buď název nové položky, nebo název, který je již definován v projektu. Pokud je název položky existující položka, hodnoty výstupních parametrů se přidají do existující položky. <br /><br /> Tento atribut nelze použít, je-li použit i `PropertyName`.|
+|`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
  Žádné
@@ -57,10 +57,10 @@ ms.locfileid: "62963920"
 
 | Prvek | Popis |
 | - | - |
-| [Úloha](../msbuild/task-element-msbuild.md) | Vytvoří a spustí instanci [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] úloh. |
+| [Úloha](../msbuild/task-element-msbuild.md) | Vytvoří a spustí instanci úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu ukazuje `Csc` úloh se spouští uvnitř `Target` elementu. Mimo rozsah v tomto příkladu jsou deklarovány položek a vlastností předat parametry úlohy. Hodnota z výstupního parametru `OutputAssembly` je uložen v `FinalAssemblyName` položky a hodnotu z výstupního parametru `BuildSucceeded` je uložen v `BuildWorked` vlastnost. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
+ Následující příklad kódu ukazuje spouštěný `Csc` úkol uvnitř elementu `Target`. Položky a vlastnosti předané parametrům úlohy jsou deklarovány mimo rozsah tohoto příkladu. Hodnota z výstupního parametru `OutputAssembly` je uložena v položce `FinalAssemblyName` a hodnota z `BuildSucceeded` výstupního parametru je uložena ve vlastnosti `BuildWorked`. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
 
 ```xml
 <Target Name="Compile" DependsOnTargets="Resources">

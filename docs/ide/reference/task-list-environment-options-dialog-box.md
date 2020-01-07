@@ -17,17 +17,17 @@ helpviewer_keywords:
 - tokens, and the Task List
 - Task List, comment tasks
 ms.assetid: 88327e04-fa3e-48db-995b-ad89e0dc4ed2
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f2d0ba45ffea940ddb57a6da1e6df55e3da8867b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 05c337a6e809f85490e651fecf405b44e9f28930
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72644864"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592006"
 ---
 # <a name="options-dialog-box-environment--task-list"></a>Dialogové okno Možnosti: prostředí \> Seznam úkolů
 
@@ -49,7 +49,7 @@ Nastaví prioritu úloh, které používají vybraný token (nízká, normální
 Název
 Sem zadejte řetězec tokenu a potom kliknutím na **Přidat** přidejte řetězec do seznamu tokenů.
 
-Přidávání
+Add\
 Tato možnost je povolená, když zadáte nový **název**. Kliknutím můžete přidat nový řetězec tokenu s použitím hodnot zadaných do polí **název** a **Priorita** .
 
 Dstranit

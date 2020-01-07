@@ -5,24 +5,24 @@ ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.XAMLDesigner
 - VS.ToolsOptionsPages.XAML_Designer.General
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 6a08358e8e82abf00a133edab876dc45626bf500
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9a925e7f3c31b8347148c15b050692fcee26fcb1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72621897"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585610"
 ---
 # <a name="xaml-designer-options-page"></a>Stránka možností Návrhář XAML
 
 Stránku možností **Návrhář XAML** použijte k určení toho, jak jsou prvky a atributy formátovány v dokumentech jazyka XAML. Tuto stránku otevřete tak, že kliknete na nabídku **nástroje** a pak zvolíte **Možnosti**. Chcete-li získat přístup k stránce vlastností **Návrhář XAML** , vyberte uzel **Návrhář XAML** . Nastavení Návrhář XAML se aplikují při otevření dokumentu. Takže pokud provedete změny nastavení, musíte zavřít a znovu otevřít Visual Studio, aby se změny zobrazily.
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace najdete v tématu [resetování nastavení](../environment-settings.md#reset-settings).
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [Resetovat nastavení](../environment-settings.md#reset-settings).
 
 ## <a name="enable-xaml-designer"></a>Povolit Návrhář XAML
 

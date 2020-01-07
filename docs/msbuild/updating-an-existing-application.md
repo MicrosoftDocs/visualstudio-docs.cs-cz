@@ -2,17 +2,17 @@
 title: Aktualizace existující aplikace na MSBuild 15 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a891f6d18657bad65a1cf087da975849642b7aec
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 8d4e7d84768307964b495e8c5e97e7731b0622a1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72912040"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597136"
 ---
 # <a name="update-an-existing-application-for-msbuild-15"></a>Aktualizace existující aplikace pro MSBuild 15
 
@@ -69,7 +69,7 @@ Vytvořte odkaz na balíček Microsoft. Build. Locator, abyste zajistili, že va
 
 ### <a name="ensure-output-is-clean"></a>Zajistěte, aby byl výstup čistý.
 
-Sestavte projekt a zkontrolujte výstupní adresář, abyste se ujistili, že neobsahuje žádná sestavení *Microsoft. Build.\*. dll* kromě *Microsoft. Build. Locator. dll*, přidané v dalším kroku.
+Sestavte projekt a zkontrolujte výstupní adresář, abyste měli jistotu, že neobsahuje žádné *Microsoft.Build\*. Knihovna DLL* sestavení jiný než *Microsoft.Build.Locator.dll*přidali v dalším kroku.
 
 ### <a name="add-package-reference-for-microsoftbuildlocator"></a>Přidat odkaz na balíček pro Microsoft. Build. Locator
 

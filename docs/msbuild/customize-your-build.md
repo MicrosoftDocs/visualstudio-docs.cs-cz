@@ -1,48 +1,48 @@
 ---
-title: Přizpůsobení sestavení | Dokumentace Microsoftu
+title: Přizpůsobení sestavení | Microsoft Docs
 ms.date: 06/13/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, transforms
 - transforms [MSBuild]
 ms.assetid: d0bceb3b-14fb-455c-805a-63acefa4b3ed
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e644fd6fc521318512bbc5dd25838a379af78a9
-ms.sourcegitcommit: dd3c8cbf56c7d7f82f6d8818211d45847ab3fcfc
+ms.openlocfilehash: 4f1b0e774d70c5787a7221aa0dfa7b0834dac7e3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141160"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588288"
 ---
 # <a name="customize-your-build"></a>Přizpůsobení sestavení
 
-Projekty MSBuild, které používají standardní proces sestavení (import *Microsoft.Common.props* a *cílů Microsoft.Common.targets*) mají několik háky rozšíření, které můžete použít k přizpůsobení sestavení proces.
+Projekty nástroje MSBuild, které používají standardní proces sestavení (import *Microsoft. Common. props* a *Microsoft. Common. targets*) mají několik zavěšení rozšíření, které lze použít k přizpůsobení procesu sestavení.
 
-## <a name="add-arguments-to-command-line-msbuild-invocations-for-your-project"></a>Přidání argumentů příkazového řádku MSBuild volání pro váš projekt
+## <a name="add-arguments-to-command-line-msbuild-invocations-for-your-project"></a>Přidání argumentů pro volání MSBuild příkazového řádku pro váš projekt
 
-A *Directory.Build.rsp* souboru nebo nad zdrojový adresář se použijí pro sestavení příkazového řádku vašeho projektu. Podrobnosti najdete v tématu [soubory odezvy nástroje MSBuild](../msbuild/msbuild-response-files.md#directorybuildrsp).
+Soubor *Directory. Build. rsp* ve zdrojovém adresáři nebo nad ním bude použit pro sestavení projektu z příkazového řádku. Podrobnosti najdete v tématu [soubory odezvy nástroje MSBuild](../msbuild/msbuild-response-files.md#directorybuildrsp).
 
-## <a name="directorybuildprops-and-directorybuildtargets"></a>Directory.Build.props a Directory.Build.targets
+## <a name="directorybuildprops-and-directorybuildtargets"></a>Directory. Build. props a Directory. Build. targets
 
-Před MSBuild verze 15 Pokud byste chtěli poskytnout nových, vlastních vlastností do projektů ve vašem řešení, museli jste ručně přidejte odkaz na tuto vlastnost pro každý soubor projektu v řešení. Nebo jste museli definovat vlastnost *.props* souboru a k následnému importování explicitně *.props* soubor ve všech projektech v řešení, mimo jiné.
+Pokud jste před nástrojem MSBuild verze 15 chtěli poskytnout novou vlastní vlastnost projektům ve vašem řešení, museli jste ručně přidat odkaz na tuto vlastnost do každého souboru projektu v řešení. Nebo jste museli definovat vlastnost v souboru *. props* a pak explicitně naimportovat soubor *. props* do každého projektu v řešení, mimo jiné.
 
-Ale nyní můžete přidat nové vlastnosti pro každý projekt v jednom kroku definováním v jednotlivých souborů volané *Directory.Build.props* v kořenové složce, která obsahuje váš zdroj. Při spuštění nástroje MSBuild *Microsoft.Common.props* vyhledá strukturu pro *Directory.Build.props* souboru (a *cílů Microsoft.Common.targets* hledá *Directory.Build.targets*). Pokud jeden najde, importuje vlastnost. *Directory.Build.props* je uživatelem definovaného souboru, který obsahuje vlastní nastavení pro projekty v adresáři.
+Nyní však můžete přidat novou vlastnost do každého projektu v jednom kroku definováním v jednom souboru s názvem *Directory. Build. props* v kořenové složce, která obsahuje váš zdroj. Při spuštění nástroje MSBuild vyhledá *Microsoft. Common. props* vaši adresářovou strukturu *. soubor. Build. props* (a *Microsoft. Common. targets* vyhledává pro *Directory. Build. targets*). Pokud ho najde, importuje vlastnost. *Directory. Build. props* je uživatelsky definovaný soubor, který poskytuje přizpůsobení projektům v adresáři.
 
 > [!NOTE]
-> Systémy založené na Linuxu souborů jsou malá a velká písmena. Ujistěte se, že použití malých a velkých Directory.Build.props název souboru odpovídá přesně nebo ho nerozpozná během procesu sestavení.
+> Systémy souborů se systémem Linux rozlišují velká a malá písmena. Ujistěte se, že velká a malá písmena adresáře. Build. props se přesně shodují, nebo se v procesu sestavení nerozpozná.
 >
-> Zobrazit [tento problém Githubu](https://github.com/dotnet/core/issues/1991#issue-368441031) Další informace.
+> Další informace najdete v [tomto problému GitHubu](https://github.com/dotnet/core/issues/1991#issue-368441031) .
 
-### <a name="directorybuildprops-example"></a>Příklad Directory.Build.props
+### <a name="directorybuildprops-example"></a>Příklad Directory. Build. props
 
-Například Kdybyste chtěli povolit všechny projekty pro přístup k nového Roslynu **/ deterministic** funkci (což je zpřístupněná platformě Roslyn `CoreCompile` cílové vlastností `$(Deterministic)`), udělat následující.
+Pokud jste například chtěli povolit všem vašim projektům přístup k nové funkci Roslyn **/Deterministic** (která je vystavena v Roslyn `CoreCompile` cíli vlastností `$(Deterministic)`), můžete provést následující.
 
-1. Vytvořte nový soubor v kořenové složce úložiště volána *Directory.Build.props*.
-2. Přidejte následující kód XML do souboru.
+1. Vytvořte nový soubor v kořenovém adresáři úložiště s názvem *Directory. Build. props*.
+2. Do souboru přidejte následující kód XML.
 
    ```xml
    <Project>
@@ -52,11 +52,11 @@ Například Kdybyste chtěli povolit všechny projekty pro přístup k nového R
    </Project>
    ```
 
-3. Run MSBuild. Váš projekt importů existující *Microsoft.Common.props* a *cílů Microsoft.Common.targets* najít soubor a naimportujte ho.
+3. Spusťte nástroj MSBuild. Stávající importy *Microsoft. Common. props* a *Microsoft. Common. targets* vyhledá soubor a naimportuje ho.
 
 ### <a name="search-scope"></a>Obor vyhledávání
 
-Při hledání *Directory.Build.props* adresářovou strukturu souboru, MSBuild nahoru vás z umístění vašeho projektu (`$(MSBuildProjectFullPath)`), zastavování po je možné vyhledat *Directory.Build.props* soubor. Například pokud vaše `$(MSBuildProjectFullPath)` byl *c:\users\username\code\test\case1*, MSBuild bude zahájeno hledání existuje a pak vyhledejte adresářovou strukturu směrem nahoru, dokud se nachází *Directory.Build.props* soubor jako v následující adresářovou strukturu.
+Při hledání souboru *Directory. Build. props* provede MSBuild strukturu adresáře směrem nahoru z umístění projektu (`$(MSBuildProjectFullPath)`) a zastavuje se, jakmile nalezne soubor *Directory. Build. props* . Pokud jste například `$(MSBuildProjectFullPath)` *c:\users\username\code\test\case1*, MSBuild by začal hledat a potom hledat ve struktuře adresáře vzhůru až do chvíle, kdy se nachází v souboru *Directory. Build. props* , jako v následující adresářové struktuře.
 
 ```
 c:\users\username\code\test\case1
@@ -67,17 +67,17 @@ c:\users
 c:\
 ```
 
-Umístění souboru řešení je závislé na *Directory.Build.props*.
+Umístění souboru řešení je irelevantní pro *Directory. Build. props*.
 
-### <a name="import-order"></a>Importovat pořadí
+### <a name="import-order"></a>Pořadí importu
 
-*Directory.Build.props* velmi brzy importu v *Microsoft.Common.props*, a nejsou k dispozici pro jeho vlastnosti definované později. Vyhněte se proto odkazující na vlastnosti, které nejsou ještě definovány (a bude vyhodnocena jako prázdná).
+*Adresář. Build. props* je importován velmi brzy v *Microsoft. Common. props*a vlastnosti, které jsou definovány později, nejsou k dispozici. Proto se vyhněte odkazování na vlastnosti, které ještě nejsou definovány (a vyhodnotí je prázdné).
 
-*Directory.Build.targets* je importován z *cílů Microsoft.Common.targets* po importu *.targets* soubory z balíčků NuGet. Tedy můžete přepsat vlastnosti a cíle definované ve většině logiku sestavení, ale někdy možná muset upravit soubor projektu po posledním importu.
+*Adresář. Build. targets* se importuje z *Microsoft. Common. targets* po importu *. soubory cílí* z balíčků NuGet. Proto může přepsat vlastnosti a cíle definované ve většině logiky sestavení, ale někdy může být nutné přizpůsobit soubor projektu po konečném importu.
 
-### <a name="use-case-multi-level-merging"></a>Případ použití: víceúrovňové sloučení
+### <a name="use-case-multi-level-merging"></a>Případ použití: sloučení na více úrovní
 
-Předpokládejme, že máte tato struktura standardní řešení:
+Předpokládejme, že máte tuto standardní strukturu řešení:
 
 ```
 \
@@ -93,93 +93,93 @@ Předpokládejme, že máte tato struktura standardní řešení:
     \Project2Tests
 ```
 
-Může být žádoucí použít společná nastavení pro všechny projekty *(1)* , společná nastavení pro *src* projekty *(2 src)* a běžné vlastnosti  *testování* projekty *(2-test)* .
+Může být žádoucí mít společné vlastnosti pro všechny projekty *(1)* , společné vlastnosti pro *srcch* projektů *(2 – src)* a běžné vlastnosti pro *testovací* projekty *(2-test)* .
 
-Aby MSBuild správně sloučit "vnitřní" soubory (*2 src* a *2 test*) s "vnější" souboru (*1*), musí vzít v úvahu, že jakmile MSBuild najde *Directory.Build.props* souboru, zastaví další kontrolu. Pokud chcete pokračovat, kontrolu a sloučení do vnějšího souboru, vložte tento kód do obou vnitřní souborů:
+Aby nástroj MSBuild správně sloučil "vnitřní" soubory (*2 – src* a *2-test*) se "vnějším" souborem (*1*), je nutné vzít v úvahu, že jakmile nástroj MSBuild nalezne soubor *Directory. Build. props* , zastaví se další skenování. Chcete-li pokračovat v kontrole a sloučení do vnějšího souboru, umístěte tento kód do obou vnitřních souborů:
 
 `<Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />`
 
-Přehled nástroje MSBuild pro obecný postup je následující:
+Souhrn obecného přístupu MSBuild je následující:
 
-- U každého projektu, MSBuild najde první *Directory.Build.props* směrem nahoru ve struktuře řešení sloučí s výchozím nastavením a zastaví skenování Další informace
-- Pokud chcete najít a pak sloučit několik úrovní [ `<Import...>` ](../msbuild/property-functions.md#msbuild-getpathoffileabove) (popsaný výš) "vnější" soubor ze souboru "vnitřní"
-- Pokud "vnější" soubor nemá sama také importovat něco nad ním, pak prohledávání zastaví existuje
-- Chcete-li řízení procesu skenování/sloučení, použijte `$(DirectoryBuildPropsPath)` a `$(ImportDirectoryBuildProps)`
+- Pro každý daný projekt MSBuild najde první *adresář. Build. props* směrem nahoru ve struktuře řešení, sloučí ho s výchozími a zastaví vyhledávání.
+- Pokud chcete najít a sloučit více úrovní, pak [`<Import...>`](../msbuild/property-functions.md#msbuild-getpathoffileabove) (viz výše) "vnější" soubor ze souboru "vnitřní".
+- Pokud soubor "vnější" sám naimportuje něco nad ním, pak se kontrola zastaví.
+- Chcete-li řídit proces skenování nebo sloučení, použijte `$(DirectoryBuildPropsPath)` a `$(ImportDirectoryBuildProps)`
 
-Nebo jednoduše: první *Directory.Build.props* , který není nic importu je, kde zastaví MSBuild.
+Nebo jednoduše: první *adresář. Build. props* , který neimportuje cokoli, je místo, kde se MSBuild zastaví.
 
-### <a name="choose-between-adding-properties-to-a-props-or-targets-file"></a>Výběr mezi přidání vlastností do souboru props nebo .targets
+### <a name="choose-between-adding-properties-to-a-props-or-targets-file"></a>Výběr mezi přidáváním vlastností do souboru. props nebo. targets
 
-Nástroj MSBuild je závislé na import pořadí a poslední definice vlastnosti (nebo `UsingTask` nebo cíl) je definice použitá.
+MSBuild je závislý na pořadí importu a poslední definice vlastnosti (nebo `UsingTask` nebo cíle) je použitá definice.
 
-Při použití explicitní importy, můžete importovat z *.props* nebo *.targets* soubor v libovolném bodě. Tady je často používaný konvence:
+Při použití explicitních importů můžete v libovolném bodě importovat ze souboru *. props* nebo *. targets* . Tady je široce používaná konvence:
 
-- *.props* importu souborů v rané fázi importu pořadí.
+- soubory *. props* jsou importovány do začátku v pořadí importu.
 
-- *.TARGETS* soubory jsou importovány v pořadí sestavení.
+- soubory *. targets* se v pořadí sestavení importují pozdě.
 
-Tato konvence je vynucena `<Project Sdk="SdkName">` importuje (to znamená, import *Sdk.props* nastane dřív, než celý obsah souboru, pak *Sdk.targets* obsahuje poslední, až potom obsah Soubor).
+Tato konvence se vynutila `<Project Sdk="SdkName">` importy (to znamená, že se nejdřív naváží *sada SDK. props* , před celý obsah souboru, potom *sada SDK. targets* ), a to po celém obsahu souboru.
 
-Při rozhodování, kam chcete vložit vlastnosti, použijte následující obecné pokyny:
+Při rozhodování, kam umístit vlastnosti, použijte následující obecné pokyny:
 
-- Pro mnoho vlastností nezáleží, ve které jsou definovány, protože se nepřepíšou a pouze v době spuštění se budou číst.
+- Pro mnoho vlastností nezáleží na tom, kde jsou definovány, protože nejsou přepsány a budou načteny pouze v době spuštění.
 
-- Pro chování, které může přizpůsobit v jednotlivých projektů, nastavit výchozí hodnoty *.props* soubory.
+- Pro chování, které je možné přizpůsobit v individuálním projektu, nastavte výchozí hodnoty v souborech *. props* .
 
-- Vyhněte se nastavování závislé vlastnosti *.props* soubory načtením hodnota může být vlastní vlastnosti, protože vlastní nastavení se neprovede, dokud nástroj MSBuild načítá projektu daného uživatele.
+- Vyhněte se nastavení závislých vlastností v souborech *. props* čtením hodnoty potenciálně přizpůsobené vlastnosti, protože vlastní nastavení se neprovede, dokud nástroj MSBuild nenačte projekt uživatele.
 
-- Nastavte závislé vlastnosti *.targets* soubory, protože budete vyzvednutí vlastní nastavení z jednotlivých projektů.
+- Nastavte závislé vlastnosti v souborech *. targets* , protože si budou vybírat vlastní nastavení z jednotlivých projektů.
 
-- Pokud je potřeba přepsat vlastnosti, provést *.targets* souboru po všechna vlastní nastavení uživatele a project jste využili příležitost dobře se projeví. Buďte opatrní při použití odvozených vlastnosti; odvozené vlastnosti může být potřeba také přepsat.
+- Pokud potřebujete přepsat vlastnosti, udělejte to v souboru *. targets* , poté, co všichni vlastní nastavení projektu uživatele mají možnost se projevit. Buďte opatrní při používání odvozených vlastností; je možné, že musí být přepsány také odvozené vlastnosti.
 
-- Zahrnout položky v *.props* soubory (záleží na vlastnost). Všechny vlastnosti jsou považovány za před jakoukoli položku, tak, aby uživatel projektu vlastnost přizpůsobení získat neexistoval, a to projektu daného uživatele dává příležitost `Remove` nebo `Update` libovolnou položku získaných importu.
+- Zahrnout položky do souborů *. props* (podmíněné na vlastnost). Všechny vlastnosti jsou zváženy před jakoukoliv položkou, takže přizpůsobení vlastností projektu uživatele se vybírají, takže uživatel bude mít možnost `Remove` nebo `Update` jakékoliv položce, kterou importuje.
 
-- Definování cílů v *.targets* soubory. Nicméně pokud *.targets* importovaných souborů pomocí sady SDK, mějte na paměti, že tento scénář umožňuje přepsání cíl obtížnější, protože uživatele projekt nemá místo, kde můžete přepsat ve výchozím nastavení.
+- Definujte cíle v souborech *. targets* . Pokud je však soubor *. targets* IMPORTOVÁN sadou SDK, pamatujte, že tento scénář usnadňuje přepsání cíle, protože projekt uživatele nemá místo pro jeho přepsání ve výchozím nastavení.
 
-- Pokud je to možné preferovat úpravy vlastností v době vyhodnocení přes změna vlastností v cíli. Toto pravidlo je snazší načtení projektu a pochopit, co dělají.
+- Pokud je to možné, preferovat přizpůsobení vlastností v době hodnocení přes změnu vlastností v cíli. Tyto zásady usnadňují načtení projektu a pochopení, co dělá.
 
 ## <a name="msbuildprojectextensionspath"></a>MSBuildProjectExtensionsPath
 
-Ve výchozím nastavení *Microsoft.Common.props* importuje `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.props` a *cílů Microsoft.Common.targets* importuje `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.targets`. Výchozí hodnota `MSBuildProjectExtensionsPath` je `$(BaseIntermediateOutputPath)`, `obj/`. NuGet používá tento mechanismus pro odkazování na sestavení logiky dodávají s balíčky; To znamená, vytvoří v době obnovení `{project}.nuget.g.props` soubory, které odkazují na obsah balíčku.
+Ve výchozím nastavení importuje *Microsoft. Common. props* `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.props` a *Microsoft. Common. targets* Imports `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.targets`. Výchozí hodnota `MSBuildProjectExtensionsPath` je `$(BaseIntermediateOutputPath)``obj/`. NuGet používá tento mechanismus k odkazování na logiku sestavení, která se dodává s balíčky. To znamená, že v době obnovení vytvoří `{project}.nuget.g.props` soubory, které odkazují na obsah balíčku.
 
-Tento mechanismus rozšíření můžete zakázat nastavením vlastnosti `ImportProjectExtensionProps` k `false` v *Directory.Build.props* nebo před importem *Microsoft.Common.props*.
+Tento mechanismus rozšiřitelnosti můžete zakázat nastavením vlastnosti `ImportProjectExtensionProps` na `false` v *adresáři. Build. props* nebo před importováním *Microsoft. Common. props*.
 
 > [!NOTE]
-> Zakázání MSBuildProjectExtensionsPath importy zabrání logiku sestavení poskytované v balíčcích NuGet použití do projektu. Některé balíčky NuGet vyžadovat sestavení logiku pro svou funkci provést a zobrazí se zbytečné když je tato možnost zakázána.
+> Zakázání importů MSBuildProjectExtensionsPath zabrání logice sestavení dodávané v balíčcích NuGet pro použití na váš projekt. Některé balíčky NuGet vyžadují pro svou funkci logiku sestavení a budou vygenerovány nepotřebné, pokud je tato funkce zakázána.
 
-## <a name="user-file"></a>soubor .user
+## <a name="user-file"></a>soubor. User
 
-*Microsoft.Common.CurrentVersion.targets* importuje `$(MSBuildProjectFullPath).user` pokud existuje, takže si můžete vytvořit soubor vedle svého projektu pomocí rozšíření, další. Pro dlouhodobé změny, které máte v plánu vrácení se změnami do správy zdrojového kódu dáváte přednost projektu se mění, aby budoucí programu nemusíte vědět o tento mechanismus rozšíření.
+*Microsoft. Common. CurrentVersion. targets* importuje `$(MSBuildProjectFullPath).user`, pokud existuje, takže můžete vytvořit soubor vedle projektu s tímto dodatečným rozšířením. V případě dlouhodobých změn, které plánujete vrátit do správy zdrojových kódů, dáváte přednost změně samotného projektu, aby budoucí údržba nemusela znát tento mechanismus rozšíření.
 
-## <a name="msbuildextensionspath-and-msbuilduserextensionspath"></a>MSBuildExtensionsPath and MSBuildUserExtensionsPath
+## <a name="msbuildextensionspath-and-msbuilduserextensionspath"></a>MSBuildExtensionsPath a MSBuildUserExtensionsPath
 
 > [!WARNING]
-> Pomocí těchto mechanismů rozšíření učiní obtížnější získat opakovatelných sestavení napříč počítači. Zkuste použít konfigurace, která může být zapsány do systému správy zdrojů a sdílí všichni vývojáři vašeho základu kódu.
+> Pomocí těchto mechanismů rozšíření je obtížnější získat opakované sestavení napříč počítači. Zkuste použít konfiguraci, kterou můžete vrátit do systému správy zdrojů a sdílet mezi všemi vývojáři vašeho základu kódu.
 
-Podle konvence mnoho základních import souborů logiku sestavení
+Podle konvence importuje mnoho základních souborů logiky sestavení
 
 ```xml
 $(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\{TargetFileName}\ImportBefore\*.targets
 ```
 
-před jejich obsah a
+před jejich obsahem a
 
 ```xml
 $(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\{TargetFileName}\ImportAfter\*.targets
 ```
 
-později. Tato konvence umožňuje nainstalovaných sad SDK k posílení logiku sestavení běžných typů projektu.
+následně. Tato konvence umožňuje nainstalovaným sadám SDK rozšířit logiku sestavení běžných typů projektů.
 
-Stejnou adresářovou strukturu je prohledávána v `$(MSBuildUserExtensionsPath)`, což je složka uživatelská *%LOCALAPPDATA%\Microsoft\MSBuild*. Pro všechna sestavení odpovídající typ projektu spuštěné pod přihlašovacími údaji uživatele se naimportují soubory umístěné v této složce. Rozšíření uživatele můžete zakázat nastavením vlastnosti s názvem po importu souboru ve vzoru `ImportUserLocationsByWildcardBefore{ImportingFileNameWithNoDots}`. Například nastavení `ImportUserLocationsByWildcardBeforeMicrosoftCommonProps` k `false` by jinak znemožňovaly import `$(MSBuildUserExtensionsPath)\$(MSBuildToolsVersion)\Imports\Microsoft.Common.props\ImportBefore\*`.
+V `$(MSBuildUserExtensionsPath)`je prohledávána stejná adresářová struktura, což je složka pro jednotlivé uživatele, která je *%localappdata%\Microsoft\MSBuild*. Soubory umístěné v této složce budou naimportovány pro všechna sestavení odpovídajícího typu projektu spuštěná v rámci pověření tohoto uživatele. Rozšíření uživatelů můžete zakázat nastavením vlastností pojmenovaných po importu souboru ve vzorovém `ImportUserLocationsByWildcardBefore{ImportingFileNameWithNoDots}`. Například nastavení `ImportUserLocationsByWildcardBeforeMicrosoftCommonProps` na `false` by zabránilo importování `$(MSBuildUserExtensionsPath)\$(MSBuildToolsVersion)\Imports\Microsoft.Common.props\ImportBefore\*`.
 
-## <a name="customize-the-solution-build"></a>Přizpůsobení sestavení řešení
+## <a name="customize-the-solution-build"></a>Přizpůsobení buildu řešení
 
 > [!IMPORTANT]
-> Přizpůsobení sestavení řešení tímto způsobem se vztahuje pouze na příkazový řádek sestavení s *MSBuild.exe*. To **nemá** platí pro sestavení v sadě Visual Studio.
+> Přizpůsobení řešení sestavení tímto způsobem se vztahuje pouze na sestavení příkazového řádku pomocí nástroje *MSBuild. exe*. Nevztahuje **se** na sestavení v rámci sady Visual Studio.
 
-Když MSBuild vytvoří soubor řešení, nejprve ji interně překládá do souboru projektu a pak sestavení se stavem. Importuje soubor generovaný projekt `before.{solutionname}.sln.targets` před definováním veškerých cílů a `after.{solutionname}.sln.targets` po importu cílů včetně cílů nainstalovaná `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore` a `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter` adresáře.
+Když nástroj MSBuild vytvoří soubor řešení, nejprve ho přeloží do souboru projektu a poté sestaví. Vygenerovaný soubor projektu importuje `before.{solutionname}.sln.targets` před definováním cílů a `after.{solutionname}.sln.targets` po importu cílů, včetně cílů nainstalovaných do `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore` a `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter` adresářů.
 
-Například můžete definovat nový cíl k zápisu zprávy do vlastního protokolu po sestavení *MyCustomizedSolution.sln* vytvořením souboru ve stejném adresáři s názvem *po. MyCustomizedSolution.sln.targets* , který obsahuje
+Můžete například definovat nový cíl pro zápis vlastní zprávy protokolu po sestavení *MyCustomizedSolution. sln* vytvořením souboru ve stejném adresáři s názvem *po. MyCustomizedSolution. sln. cíle* , které obsahují
 
 ```xml
 <Project>

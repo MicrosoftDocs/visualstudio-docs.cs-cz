@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - Class Designer [Visual Studio], classes
 ms.assetid: 75e56f8c-11ef-42a3-b7ec-3d2cf25c581b
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84fc10a3f62ea4bef82a466b2d76c46e73eb7e6e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d68391bbd4c6c873940bbc2714ee41db8309b629
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748931"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590732"
 ---
 # <a name="c-classes-in-class-designer"></a>C++třídy v Návrhář tříd
 
@@ -69,7 +69,7 @@ int main()
 }
 ```
 
-Nicméně nebudete mít v úmyslu vytvořit instanci `Swimmer` třídy jako jednotlivé objekty. Je možné, že máte v úmyslu odvodit jenom jiné typy tříd zvířat, například `Penguin`, `Whale` a `Fish`. V takovém případě byste třídu `Swimmer` deklarovali jako abstraktní základní třídu.
+Nicméně nebudete mít v úmyslu vytvořit instanci `Swimmer` třídy jako jednotlivé objekty. Je možné, že máte v úmyslu odvodit jenom jiné typy tříd zvířat, například `Penguin`, `Whale`a `Fish`. V takovém případě byste třídu `Swimmer` deklarovali jako abstraktní základní třídu.
 
 Chcete-li deklarovat třídu jako abstraktní, můžete použít klíčové slovo `abstract`. Členy označené jako abstraktní nebo zahrnuté do abstraktní třídy jsou virtuální a musí být implementované třídami odvozenými z abstraktní třídy.
 
@@ -155,21 +155,21 @@ V následující tabulce jsou uvedeny některé příklady funkcí šablon čás
 
 |Element kódu|Zobrazení Návrhář tříd|
 |------------------| - |
-|`class A`<br /><br /> `{`<br /><br /> `template <class T, class U>`<br /><br /> `void func(T a, U b);`<br /><br /> `template <class T>`<br /><br /> `void func(T a, int b);`<br /><br /> `};`|`A`<br /><br /> Func \<T, U > (+ 1 přetížení)|
+|`class A`<br /><br /> `{`<br /><br /> `template <class T, class U>`<br /><br /> `void func(T a, U b);`<br /><br /> `template <class T>`<br /><br /> `void func(T a, int b);`<br /><br /> `};`|`A`<br /><br /> Func\<T, U > (+ 1 přetížení)|
 |`template <class T1>`<br /><br /> `class A {`<br /><br /> `template <class T2>`<br /><br /> `class B {};`<br /><br /> `};`<br /><br /> `template<> template<>`<br /><br /> `class A<type>::B<type> {};`|`A<T1>`<br /><br /> Template – třída<br /><br /> `B<T2>`<br /><br /> Template – třída<br /><br /> (B je obsaženo v třídě A v rámci **vnořených typů**)|
-|`template <class T>`<br /><br /> `class C {};`<br /><br /> `class A : C<int> {};`|`A`<br /><br /> Třída<br /><br /> -> C \<int ><br /><br /> `C<T>`<br /><br /> Template – třída|
+|`template <class T>`<br /><br /> `class C {};`<br /><br /> `class A : C<int> {};`|`A`<br /><br /> Třída<br /><br /> -> C\<int><br /><br /> `C<T>`<br /><br /> Template – třída|
 
 V následující tabulce jsou uvedeny některé příklady dědičnosti šablon.
 
 |Element kódu|Zobrazení Návrhář tříd|
 |------------------| - |
-|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {`<br /><br /> `class B {};`<br /><br /> `}`<br /><br /> `class A : C<int>::B {};`|`A`<br /><br /> Třída<br /><br /> – > B<br /><br /> `C<int>`<br /><br /> Třída<br /><br /> (B je obsaženo v třídě C v rámci **vnořených typů**)<br /><br /> `C<T>`<br /><br /> Template – třída|
+|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {`<br /><br /> `class B {};`<br /><br /> `}`<br /><br /> `class A : C<int>::B {};`|`A`<br /><br /> Třída<br /><br /> ->B<br /><br /> `C<int>`<br /><br /> Třída<br /><br /> (B je obsaženo v třídě C v rámci **vnořených typů**)<br /><br /> `C<T>`<br /><br /> Template – třída|
 
 V následující tabulce jsou uvedeny některé příklady kanonického specializovaného připojení třídy.
 
 |Element kódu|Zobrazení Návrhář tříd|
 |------------------| - |
-|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {};`<br /><br /> `class A : C<int> {};`<br /><br /> `class D : C<float> {};`|`A`<br /><br /> Třída<br /><br /> -> C \<int ><br /><br /> `C<int>`<br /><br /> Třída<br /><br /> `C<T>`<br /><br /> Template – třída<br /><br /> `D`<br /><br /> Třída<br /><br /> -> C \<float >|
+|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {};`<br /><br /> `class A : C<int> {};`<br /><br /> `class D : C<float> {};`|`A`<br /><br /> Třída<br /><br /> ->C\<int><br /><br /> `C<int>`<br /><br /> Třída<br /><br /> `C<T>`<br /><br /> Template – třída<br /><br /> `D`<br /><br /> Třída<br /><br /> -> C\<float >|
 |`class B {`<br /><br /> `template <class T>`<br /><br /> `T min (const T &a, const T &b);`<br /><br /> `};`|`B`<br /><br /> minimální \<T >|
 
 ## <a name="see-also"></a>Viz také:

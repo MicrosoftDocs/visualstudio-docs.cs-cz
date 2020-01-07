@@ -1,5 +1,5 @@
 ---
-title: Období časového limitu pro testovací kontroléry a testovací agenty
+title: Časových limitů pro testovací Kontroléry a testovací agenty
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,47 +8,47 @@ helpviewer_keywords:
 - controllers, configuring
 - controllers, timeouts
 ms.assetid: 777d0db5-0073-458a-a2a3-58b1c1f24c60
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2f4e82261b9b36ced471dfa3e93be085e22c4d64
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 64ce566369f2c60a52e9026e8f92fc30836d523c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653327"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594757"
 ---
-# <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>Postupy: určení období časového limitu pro testovací kontroléry a testovací agenty
+# <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>Postupy: nastavení časových limitů pro testovací kontroléry a testovací agenty
 
-Testovací kontrolér a testovací agent mají několik nastavení časového limitu, které určují, jak dlouho by měly čekat na odpovědi od sebe, nebo ze zdroje dat, než se nezdaří s chybou. Za určitých okolností může být nutné upravit hodnoty časového limitu tak, aby splňovaly požadavky vaší topologie nebo jiné problémy s prostředím. Chcete-li upravit hodnoty časového limitu, upravte konfigurační soubor XML, který je přidružen buď k testovacímu kontroléru, nebo k testovacímu agentovi, jak je popsáno v následujících postupech.
+Testovací kontrolér a testovací agent mají několik nastavení časového limitu, které určují, jak dlouho musí čekat na odpovědi od sebe nebo od zdroje dat, než oznámí chybu. Za určitých okolností může být nutné upravit hodnoty časového limitu podle potřeb vaší topologie nebo jiných problémů prostředí. Chcete-li upravit hodnoty časového limitu, upravte konfigurační soubor XML, který je spojen s testovacím kontrolérem nebo agentem, jak je popsáno v následující postupy.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Chcete-li upravit nastavení časového limitu testovacího kontroléru nebo testovacího agenta, upravte následující konfigurační soubory pomocí názvů klíčů a hodnot v tabulkách:
+Chcete-li upravit testovací kontrolér nebo testovacího agenta různá nastavení časového limitu, upravte následující konfigurační soubory pomocí názvů klíčů a hodnot v tabulkách:
 
-- Kontroler testů: *QTController. exe. config*
-
-    |Název klíče|Popis|Hodnota|
-    |-|-----------------|-|
-    |AgentConnectionTimeoutInSeconds|Počet sekund, po které se má počkat, než se připojení považuje za ztracené.|"n" sekund.|
-    |AgentSyncTimeoutInSeconds|Když zahájíte synchronizaci testovacího běhu, počet sekund, po které se bude čekat na synchronizaci všech agentů před přerušením spuštění.|"n" sekund.|
-    |AgentInitializeTimeout|Počet sekund, po které se má čekat na inicializaci všech agentů a jejich kolekcí dat na začátku testovacího běhu, než se testovací běh přeruší. Tato hodnota by měla být rozumně velká, pokud se používají sběrače dat.|"n" sekund. Výchozí hodnota: "120" (dvě minuty).|
-    |AgentCleanupTimeout|Počet sekund, po které se má čekat na vyčištění všech agentů a jejich kolekcí dat před dokončením testovacího běhu. Tato hodnota by měla být rozumně velká, pokud se používají sběrače dat.|"n" sekund. Výchozí hodnota: "120" (dvě minuty).|
-
-- Testovací agent: *QTAgentService. exe. config*
+- Testovací kontrolér: *QTController.exe.config*
 
     |Název klíče|Popis|Hodnota|
     |-|-----------------|-|
-    |ControllerConnectionPeriodInSeconds|Počet sekund mezi pokusy o připojení k řadiči.|"n" sekund. Výchozí hodnota: "30" (třicet sekund).|
-    |RemotingTimeoutSeconds|Maximální doba, po kterou může volání vzdálené komunikace trvat v sekundách.|"n" sekund. Výchozí hodnota: "600" (deset minut).|
-    |StopTestRunCallTimeoutInSeconds|Počet sekund, po který se má čekat na ukončení testu.|"n" sekund. Výchozí hodnota: "120" (dvě minuty).|
-    |GetCollectorDataTimeout|Počet sekund čekání na shromažďování dat|"n" sekund. Výchozí hodnota: "300" (pět minut).|
+    |AgentConnectionTimeoutInSeconds|Počet sekund čekání žádosti příkazu ping agenta, než bude připojení považováno ztratit.|"n" sekund.|
+    |AgentSyncTimeoutInSeconds|Po spuštění synchronizace testovacího běhu, počet sekund čekání na synchronizaci před přerušením běhu všech agentů.|"n" sekund.|
+    |AgentInitializeTimeout|Počet sekund čekání na všech agentech a jejich kolektorů dat inicializovat na začátku testu spusťte před přerušením testu. Tato hodnota by měla být přiměřeně velká, pokud používáte kolekce dat.|"n" sekund. Výchozí hodnota: "120" (dvě minuty).|
+    |AgentCleanupTimeout|Počet sekund čekání na všech agentech a jejich kolektorů dat na vyčištění před dokončením testového běhu. Tato hodnota by měla být přiměřeně velká, pokud používáte kolekce dat.|"n" sekund. Výchozí hodnota: "120" (dvě minuty).|
 
-## <a name="to-specify-agent-timeout-options-for-a-test-controller"></a>Určení možností časového limitu agenta pro kontroler testů
+- Testovací Agent: *QTAgentService.exe.config*
 
-1. Otevřete konfigurační soubor XML *konfigurační soubor QTCcontroller. exe. config* umístěný ve složce *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE*.
+    |Název klíče|Popis|Hodnota|
+    |-|-----------------|-|
+    |ControllerConnectionPeriodInSeconds|Počet sekund mezi jednotlivými pokusy o připojení k řadiči.|"n" sekund. Výchozí hodnota: "30" (třicet sekund).|
+    |RemotingTimeoutSeconds|Maximální doba, kterou může vzdálené volání trvat během několika sekund.|"n" sekund. Výchozí hodnota: "600" (deset minut).|
+    |StopTestRunCallTimeoutInSeconds|Počet sekund čekání na volání se zastavit testovací běh.|"n" sekund. Výchozí hodnota: "120" (dvě minuty).|
+    |GetCollectorDataTimeout|Počet sekund čekání na kolekce dat|"n" sekund. Výchozí hodnota: "300" (pět minut).|
 
-2. Vyhledejte značku `<appSettings>`.
+## <a name="to-specify-agent-timeout-options-for-a-test-controller"></a>Určení možností vypršení časového limitu pro testovací kontrolér
+
+1. Otevřít *QTCcontroller.exe.config* konfigurační soubor XML v *% ProgramFiles (x86) %\Microsoft Visual Studio\2017\Enterprise\Common7\IDE*.
+
+2. Vyhledejte `<appSettings>` značky.
 
     ```xml
     <appSettings>
@@ -62,7 +62,7 @@ Chcete-li upravit nastavení časového limitu testovacího kontroléru nebo tes
     </appSettings>
     ```
 
-3. Upravte existující hodnotu pro jeden z klíčů časového limitu testovacího kontroléru. Můžete například změnit výchozí hodnotu klíče `AgentConnectionTimeoutInSeconds` ze dvou minut na tři minuty:
+3. Upravte existující hodnotu pro jeden z klíčů časového limitu testovacího kontroléru. Například můžete změnit výchozí hodnotu pro klíč `AgentConnectionTimeoutInSeconds` ze dvou minut na tři minuty:
 
     ```xml
     <add key="AgentConnectionTimeoutInSeconds" value="180"/>
@@ -70,7 +70,7 @@ Chcete-li upravit nastavení časového limitu testovacího kontroléru nebo tes
 
     -nebo-
 
-    Přidejte další klíč a zadejte hodnotu časového limitu. Můžete například přidat klíč `AgentInitializeTimeout` do části `<appSettings>` a zadat hodnotu pět minut:
+    Přidejte další klíč a zadat hodnotu časového limitu. Například můžete přidat `AgentInitializeTimeout` klíče v `<appSettings>` části a zadejte hodnotu 5 minut:
 
     ```xml
     <appSettings>
@@ -78,11 +78,11 @@ Chcete-li upravit nastavení časového limitu testovacího kontroléru nebo tes
     </appSettings>
     ```
 
-## <a name="to-specify-agent-timeout-options-for-a-test-agent"></a>Určení možností časového limitu agenta pro testovacího agenta
+## <a name="to-specify-agent-timeout-options-for-a-test-agent"></a>Určení možností vypršení časového limitu pro testovacího agenta
 
-1. Otevřete konfigurační soubor XML *QTAgentService. exe. config* umístěný ve složce *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE*.
+1. Otevřít *QTAgentService.exe.config* konfigurační soubor XML v *% ProgramFiles (x86) %\Microsoft Visual Studio\2017\Enterprise\Common7\IDE*.
 
-2. Vyhledejte značku `<appSettings>`.
+2. Vyhledejte `<appSettings>` značky.
 
     ```xml
     <appSettings>
@@ -96,7 +96,7 @@ Chcete-li upravit nastavení časového limitu testovacího kontroléru nebo tes
     </appSettings>  </appSettings>
     ```
 
-3. Upravte existující hodnotu pro jeden z klíčů časového limitu testovacího agenta. Můžete například změnit výchozí hodnotu klíče `ControllerConnectionPeriodInSeconds` ze třiceti sekund na jednu minutu:
+3. Upravte existující hodnotu pro jeden z klíčů časového limitu testovacího agenta. Například můžete změnit výchozí hodnotu pro klíč `ControllerConnectionPeriodInSeconds` ze tří sekund na jednu minutu:
 
     ```xml
     <add key="ControllerConnectionPeriodInSeconds" value="60"/>
@@ -104,7 +104,7 @@ Chcete-li upravit nastavení časového limitu testovacího kontroléru nebo tes
 
     -nebo-
 
-    Přidejte další klíč a zadejte hodnotu časového limitu. Můžete například přidat klíč `RemotingTimeoutSeconds` do části `<appSettings>` a zadat hodnotu 15 minut:
+    Přidejte další klíč a zadat hodnotu časového limitu. Například můžete přidat `RemotingTimeoutSeconds` klíče v `<appSettings>` části a zadat hodnotu patnácti minut:
 
     ```xml
     <appSettings>
@@ -115,6 +115,6 @@ Chcete-li upravit nastavení časového limitu testovacího kontroléru nebo tes
 ## <a name="see-also"></a>Viz také:
 
 - [Instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md)
-- [Změnit nastavení protokolování zátěžového testu](../test/modify-load-test-logging-settings.md)
+- [Úprava nastavení protokolování zátěžového testu](../test/modify-load-test-logging-settings.md)
 - [Konfigurace portů pro testovací kontroléry a testovací agenty](../test/configure-ports-for-test-controllers-and-test-agents.md)
-- [Postupy: vytvoření vazby kontroleru testů nebo testovacího agenta na síťový adaptér](../test/how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter.md)
+- [Postupy: vytvoření vazby testovacího kontroléru nebo testovacího agenta na síťový adaptér](../test/how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter.md)

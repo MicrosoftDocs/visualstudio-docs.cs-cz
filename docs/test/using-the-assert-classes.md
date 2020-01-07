@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Assert classes
 - Assert methods
 - unit tests, Assert classes
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 41be3aaa4967e4c5f975b43f7d8fec982f04c9b9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: c36916c79bd783ed2c6ce960b068e85478b9971d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659724"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592045"
 ---
 # <a name="use-assert-classes-for-unit-testing"></a>Použití tříd Assert pro testování částí
 
@@ -32,13 +32,13 @@ V testovací metodě můžete volat libovolné metody třídy <xref:Microsoft.Vi
 
 Použijte třídu <xref:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert> pro porovnání kolekcí objektů nebo pro ověření stavu kolekce.
 
-Pro porovnání a prohlédnutí řetězců použijte třídu <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert>. Tato třída obsahuje celou řadu užitečných metod, například <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=nameWithType>, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Matches%2A?displayProperty=nameWithType> a <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.StartsWith%2A?displayProperty=nameWithType>.
+Pro porovnání a prohlédnutí řetězců použijte třídu <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert>. Tato třída obsahuje celou řadu užitečných metod, například <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=nameWithType>, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Matches%2A?displayProperty=nameWithType>a <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.StartsWith%2A?displayProperty=nameWithType>.
 
 ### <a name="exceptions"></a>Výjimky
 
 Výjimka <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException> je vyvolána pokaždé, když se test nezdařil. Test se nezdařil, pokud vyprší časový limit, vyvolá neočekávanou výjimku nebo obsahuje příkaz kontrolního výrazu, který vytváří výsledek **neúspěchu** .
 
-@No__t_0 je vyvolána pokaždé, když test vygeneruje výsledek **neprůkazné**. Obvykle přidáte příkaz <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Inconclusive%2A?displayProperty=nameWithType> do testu, na kterém stále pracujete, abyste označili, že ještě není připravené ke spuštění.
+<xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException> je vyvolána pokaždé, když test vygeneruje výsledek **neprůkazné**. Obvykle přidáte příkaz <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Inconclusive%2A?displayProperty=nameWithType> do testu, na kterém stále pracujete, abyste označili, že ještě není připravené ke spuštění.
 
 > [!NOTE]
 > Alternativním strategií je označit test, který není připraven ke spuštění s atributem <xref:Microsoft.VisualStudio.TestTools.UnitTesting.IgnoreAttribute>. To však má nevýhodu, že nemůžete snadno generovat sestavu pro počet testů, které nejsou implementovány.

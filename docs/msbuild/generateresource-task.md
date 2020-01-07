@@ -1,5 +1,5 @@
 ---
-title: Generateresource – úloha | Dokumentace Microsoftu
+title: Úloha GenerateResource – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,62 +13,62 @@ helpviewer_keywords:
 - MSBuild, GenerateResource task
 - GenerateResource task [MSBuild]
 ms.assetid: c0aff32f-f2cc-46f6-9c3e-a5c9f8f912b1
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b47c3315236dc228d3c561c4a3e0f333f5c9600
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c0e83cc04b309a940f5aa4c5a36099f10afddcc3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007090"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594797"
 ---
 # <a name="generateresource-task"></a>GenerateResource – úloha
-Převádí mezi *.txt* a *RESX* (formát založený na formátu XML prostředků) soubory a binární common language runtime *.resources* soubory, které může být vložen do binárního modulu runtime spustitelný soubor nebo soubor zkompilovaný do satelitních sestavení. Tato úloha je obvykle používána pro převod *.txt* nebo *RESX* soubory *.resources* soubory. `GenerateResource` Úkolu je funkčně podobný [resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator).
+Převádí soubory *. txt* a *. resx* (formát prostředků založený na jazyce XML) *a binární soubory* modulu CLR (Common Language Runtime), které mohou být vloženy do binárního spustitelného souboru modulu runtime nebo zkompilovány do satelitních sestavení. Tato úloha se obvykle používá k převodu souborů *. txt* nebo *. resx* na soubory *. Resources* . Úloha `GenerateResource` je funkčně podobná aplikaci [Resgen. exe](/dotnet/framework/tools/resgen-exe-resource-file-generator).
 
 ## <a name="parameters"></a>Parametry
-Následující tabulka popisuje parametry `GenerateResource` úloh.
+Následující tabulka popisuje parametry úlohy `GenerateResource`.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`AdditionalInputs`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Obsahuje další vstupy Kontrola závislosti, které se provádí tento úkol. Soubory projektu a cíle obvykle by měl být například vstupy, tak, že pokud jsou aktualizováni, všechny prostředky budou znovu vygenerovány.|
-|`EnvironmentVariables`|Volitelné `String[]` parametru.<br /><br /> Určuje pole dvojic název hodnota proměnných prostředí, které mají být předány do nové kopie *resgen.exe*, v dodatku (nebo selektivně přepsání) blok regulární prostředí.|
-|`ExcludedInputPaths`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje pole položek, které určují cesty, ze kterých budou ignorovány sledované vstupy během aktuální kontroly.|
-|`ExecuteAsTool`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, spustí *tlbimp.exe* a *aximp.exe* z příslušné cílové rozhraní framework z – mimoprocesovou ke generování sestavení obálky nezbytné. Tento parametr umožňuje cílení na více platforem z `ResolveComReferences`.|
-|`FilesWritten`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje názvy všech souborů zapsaných na disk. To zahrnuje souboru mezipaměti, pokud existuje. Tento parametr je užitečný pro implementace vyčistit.|
-|`MinimalRebuildFromTracking`|Volitelné `Boolean` parametru.<br /><br /> Získává nebo nastavuje přepínač, který určuje, jestli se použije sledované přírůstkové sestavení. Pokud `true`, je zapnuto přírůstkové sestavení; v opačném případě bude vynuceno opětovné sestavení.|
-|`NeverLockTypeAssemblies`|Volitelné `Boolean` parametru.<br /><br /> Získá nebo nastaví logickou hodnotu, která určuje, zda chcete vytvořit nový [AppDomain](/dotnet/api/system.appdomain) vyhodnotit prostředky (*RESX*) soubory (pravda) nebo vytvořit nový [AppDomain](/dotnet/api/system.appdomain) pouze tehdy, když soubory prostředků odkazují na sestavení uživatele (false).|
-|`OutputResources`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Určuje název generovaných souborů, jako například *.resources* soubory. Pokud nezadáte název, použije se název odpovídající vstupního souboru a *.resources* soubor, který je vytvořen je umístěn v adresáři, který obsahuje vstupní soubor.|
-|`PublicClass`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, vytvoří třídu prostředků se silnými typy jako veřejnou třídu.|
-|`References`|Volitelné `String[]` parametru.<br /><br /> Odkazy na načíst typy v *RESX* souborů z doručené pošty. *resx* soubor datové prvky, může mít typ .NET. Když *RESX* soubor je pro čtení, musí jít přeložit. Obvykle se nevyřeší úspěšně pomocí standardní typ načítání pravidel. Pokud zadáte sestavení v `References`, jejich přednost.<br /><br /> Tento parametr není vyžadováno pro prostředky se silnými typy.|
-|`SdkToolsPath`|Volitelné `String` parametru.<br /><br /> Určuje cestu k sadě SDK nástroje, jako *resgen.exe*.|
-|`Sources`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje položky, které chcete převést. Položek předaných tomuto parametru musí mít jednu z následujících přípon:<br /><br /> -   *.txt*: Určuje příponu textový soubor převést. Textové soubory mohou obsahovat pouze řetězcové prostředky.<br />-   *resx*: Určuje rozšíření pro soubor prostředků založený na formátu XML pro převod.<br />-   *.restext*: Určuje stejný formát jako *.txt*. Toto různých rozšíření je užitečné, pokud budete chtít jasně odlišit zdrojové soubory, které obsahují prostředky z jiných zdrojových souborech v procesu sestavení.<br />-   *.Resources*: Určuje rozšíření souboru prostředků pro převod.|
-|`StateFile`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje cestu k souboru volitelné mezipaměti, který se používá ke zrychlení kontrolu odkazů na závislosti *RESX* vstupních souborů.|
-|`StronglyTypedClassName`|Volitelné `String` parametru.<br /><br /> Určuje název třídy pro třídu prostředků se silnými typy. Pokud není tento parametr zadán, je použít základní název souboru prostředků.|
-|`StronglyTypedFilename`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje název souboru pro zdrojový soubor. Pokud tento parametr nezadáte, název třídy se používá jako základní název souboru s příponou závisí na jazyku. Příklad: *MyClass.cs*.|
-|`StronglyTypedLanguage`|Volitelné `String` parametru.<br /><br /> Určuje jazyk, který má použít při generování třídy zdroje pro prostředek silného typu. Tento parametr musí odpovídat přesně jeden z těchto jazyků používané CodeDomProvider. Příklad: `VB` nebo `C#`.<br /><br /> Předejte hodnotu pro tento parametr, dáte pokyn úkolů ke generování prostředky se silnými typy.|
-|`StronglyTypedManifestPrefix`|Volitelné `String` parametru.<br /><br /> Určuje předponu oboru názvů nebo manifest prostředků pro účely prostředků se silnými typy ve vygenerované třídě zdroje.|
-|`StronglyTypedNamespace`|Volitelné `String` parametru.<br /><br /> Určuje obor názvů pro zdroj generovaná třída prostředků se silnými typy. Pokud není tento parametr zadán, jsou všechny prostředky se silnými typy v globálním oboru názvů.|
-|`TLogReadFiles`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr jen pro čtení.<br /><br /> Získá pole objektů, které představují čtení protokoly sledování.|
-|`TLogWriteFiles`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr jen pro čtení.<br /><br /> Získá pole položek, které představují zápis protokoly sledování.|
-|`ToolArchitecture`|Volitelné <xref:System.String?displayProperty=fullName> parametru.<br /><br /> Umožňuje určit, jestli *Tracker.exe* musí být používán nejde vytvořit podřízený *ResGen.exe*.<br /><br /> By měl být analyzovatelný členovi <xref:Microsoft.Build.Utilities.ExecutableType> výčtu. Pokud `String.Empty`, používá k určení výchozí architektura heuristické metody. By měl být na člena výčtu Microsoft.Build.Utilities.ExecutableType možné analyzovat.|
-|`TrackerFrameworkPath`|Volitelné `String` parametru.<br /><br /> Určuje cestu k odpovídající umístění rozhraní .NET Framework, která obsahuje *FileTracker.dll*.<br /><br /> Pokud nastavíte, uživatel provede odpovědnost za zajištění, že počtu bitů *FileTracker.dll* bude úspěšné odpovídá počtu bitů *ResGen.exe* , které mají v úmyslu použít. Pokud není sada, rozhodne úlohy do příslušného umístění na základě aktuální verze rozhraní .NET Framework.|
-|`TrackerLogDirectory`|Volitelné `String` parametru.<br /><br /> Určuje zprostředkující adresář, do kterého bude umístěn protokoly sledování od spuštění této úlohy.|
-|`TrackerSdkPath`|Volitelné `String` parametru.<br /><br /> Určuje cestu k odpovídající umístění sady Windows SDK obsahující *Tracker.exe*.<br /><br /> Pokud nastavíte, uživatel provede odpovědnost za zajištění, že počtu bitů *Tracker.exe* bude úspěšné odpovídá počtu bitů *ResGen.exe* , které mají v úmyslu použít. Pokud není sada, rozhodne úlohy do příslušného umístění podle aktuální sady Windows SDK.|
-|`TrackFileAccess`|Volitelné <xref:System.Boolean> parametru.<br /><br /> Při hodnotě true se vstupního souboru se použije k vyřešení relativní cesty k souboru.|
-|`UseSourcePath`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, určuje, že adresář vstupního souboru se má použít k vyřešení relativní cesty k souboru.|
+|`AdditionalInputs`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Obsahuje další vstupy pro kontrolu závislostí prováděné touto úlohou. Například soubory projektu a cíle obvykle by měly být vstupy, takže pokud jsou aktualizovány, všechny prostředky budou znovu vygenerovány.|
+|`EnvironmentVariables`|Volitelný parametr `String[]`.<br /><br /> Určuje pole párů název-hodnota pro proměnné prostředí, které by měly být předány do vytvořeného nástroje *Resgen. exe*, a to společně s (nebo selektivním přepsáním) normálního bloku prostředí.|
+|`ExcludedInputPaths`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Určuje pole položek, které určují cesty, ze kterých budou během kontroly až do data ignorovány sledované vstupy.|
+|`ExecuteAsTool`|Volitelný parametr `Boolean`.<br /><br /> V případě `true`spustí nástroj *Tlbimp. exe* a *Aximp. exe* z příslušného cílového rozhraní out-of-proc, aby se vygenerovala potřebná sestavení obálky. Tento parametr umožňuje více cílení na `ResolveComReferences`.|
+|`FilesWritten`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Obsahuje názvy všech souborů zapsaných na disk. To zahrnuje soubor mezipaměti, pokud existuje. Tento parametr je vhodný pro implementace čištění.|
+|`MinimalRebuildFromTracking`|Volitelný parametr `Boolean`.<br /><br /> Získá nebo nastaví přepínač, který určuje, zda bude použito sledované přírůstkové sestavení. Pokud `true`, je přírůstkové sestavení zapnuté. v opačném případě bude vynuceno opětovné sestavení.|
+|`NeverLockTypeAssemblies`|Volitelný parametr `Boolean`.<br /><br /> Získá nebo nastaví logickou hodnotu, která určuje, zda má být vytvořena nová [doména](/dotnet/api/system.appdomain) aplikace pro vyhodnocení souborů*prostředků (true) nebo*pro vytvoření nové [domény](/dotnet/api/system.appdomain) aplikace pouze v případě, že soubory prostředků odkazují na sestavení uživatele (false).|
+|`OutputResources`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Určuje název generovaných souborů, například soubory *. Resources* . Pokud název nezadáte, použije se název odpovídajícího vstupního souboru a soubor *. Resources* , který je vytvořen, je umístěn v adresáři, který obsahuje vstupní soubor.|
+|`PublicClass`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, vytvoří třídu prostředků silného typu jako veřejnou třídu.|
+|`References`|Volitelný parametr `String[]`.<br /><br /> Odkazy na typy načítání v souborech *. resx* z. datové prvky souboru *. resx* mohou mít typ .NET. Při čtení souboru *. resx* je nutné ho vyřešit. Obvykle se vyřeší úspěšně pomocí standardních pravidel načítání typu. Pokud zadáte sestavení v `References`, budou mít přednost.<br /><br /> Tento parametr není vyžadován pro prostředky silného typu.|
+|`SdkToolsPath`|Volitelný parametr `String`.<br /><br /> Určuje cestu k nástrojům sady SDK, jako je *Resgen. exe*.|
+|`Sources`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje položky, které se mají převést. Položky předané tomuto parametru musí mít jednu z následujících přípon souborů:<br /><br /> -    *. txt*: Určuje příponu pro textový soubor, který se má převést. Textové soubory mohou obsahovat pouze řetězcové prostředky.<br />-    *. resx*: Určuje rozšíření souboru prostředků založeného na jazyce XML, které má být převedeno.<br />-    *. restext*: Určuje stejný formát jako *. txt*. Toto jiné rozšíření je užitečné, pokud chcete jasně odlišit zdrojové soubory, které obsahují prostředky z jiných zdrojových souborů v procesu sestavení.<br />-    *. Resources*: Určuje rozšíření pro soubor prostředků, který se má převést.|
+|`StateFile`|Volitelný parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje cestu k volitelnému souboru mezipaměti, který se používá k urychlení kontroly závislosti odkazů ve vstupních souborech *. resx* .|
+|`StronglyTypedClassName`|Volitelný parametr `String`.<br /><br /> Určuje název třídy prostředku silně typovaného typu. Pokud není tento parametr zadán, použije se základní název souboru prostředků.|
+|`StronglyTypedFilename`|Volitelný parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje název souboru pro zdrojový soubor. Není-li tento parametr zadán, název třídy je použit jako základní název souboru, přičemž přípona závisí na jazyku. Například: *MyClass.cs*.|
+|`StronglyTypedLanguage`|Volitelný parametr `String`.<br /><br /> Určuje jazyk, který má být použit při generování zdroje třídy pro prostředek silného typu. Tento parametr musí odpovídat přesně jednomu z jazyků, které používá CodeDomProvider. Například: `VB` nebo `C#`.<br /><br /> Předáním hodnoty tomuto parametru dáte pokyn, aby úloha vygenerovala prostředky se silným typem.|
+|`StronglyTypedManifestPrefix`|Volitelný parametr `String`.<br /><br /> Určuje obor názvů prostředku nebo předponu manifestu, který se použije ve vygenerovaném zdroji třídy pro prostředek silného typu.|
+|`StronglyTypedNamespace`|Volitelný parametr `String`.<br /><br /> Určuje obor názvů, který se má použít pro zdroj vygenerovaných tříd pro prostředek se silným typem. Pokud tento parametr není zadán, všechny prostředky silného typu jsou v globálním oboru názvů.|
+|`TLogReadFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr jen pro čtení.<br /><br /> Získá pole položek, které reprezentují protokoly sledování čtení.|
+|`TLogWriteFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr jen pro čtení.<br /><br /> Získá pole položek, které reprezentují protokoly sledování zápisu.|
+|`ToolArchitecture`|Volitelný parametr <xref:System.String?displayProperty=fullName>.<br /><br /> Slouží k určení, zda je nutné použít *sledovací. exe* , aby bylo možné nástroj *Resgen. exe*vytvořit.<br /><br /> By měl být možné analyzovat pro člen <xref:Microsoft.Build.Utilities.ExecutableType> výčtu. Pokud `String.Empty`, používá heuristiku k určení výchozí architektury. By měl být možné analyzovat pro člen výčtu Microsoft. Build. Utilities. ExecutableType.|
+|`TrackerFrameworkPath`|Volitelný parametr `String`.<br /><br /> Určuje cestu k příslušnému umístění .NET Framework, které obsahuje *soubor Tracks. dll*.<br /><br /> Pokud je nastaveno, uživatel vezme zodpovědnost za zajištění, že bitová verze souboru *. dll* , který předává, odpovídá bitová verze nástroje *Resgen. exe* , který hodlají použít. Pokud není nastavená, úloha na základě aktuální verze .NET Framework rozhodne o příslušné umístění.|
+|`TrackerLogDirectory`|Volitelný parametr `String`.<br /><br /> Určuje zprostředkující adresář, do kterého se budou umístit protokoly sledování z běhu této úlohy.|
+|`TrackerSdkPath`|Volitelný parametr `String`.<br /><br /> Určuje cestu k příslušnému umístění Windows SDK, které obsahuje *Nástroj pro sledování. exe*.<br /><br /> Pokud je nastaveno, uživatel vezme zodpovědnost za zajištění, že bitová verze souboru *. exe* , který předává, odpovídá bitová verze nástroje *Resgen. exe* , který hodlají použít. Pokud není nastaven, úloha podle aktuálního Windows SDK určí příslušné umístění.|
+|`TrackFileAccess`|Volitelný parametr <xref:System.Boolean>.<br /><br /> Pokud má hodnotu true, použije se k překladu relativních cest k souborům Adresář vstupního souboru.|
+|`UseSourcePath`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, určuje, že se má pro překlad relativních cest k souborům použít adresář vstupního souboru.|
 
 ## <a name="remarks"></a>Poznámky
-Protože *RESX* soubory mohou obsahovat odkazy na jiné soubory prostředků, nestačí jednoduše porovnat *RESX* a *.resources* souboru časová razítka, jestli jsou výstupy aktuální. Místo toho `GenerateResource` úkol sleduje odkazy v *RESX* soubory a zkontroluje časová razítka propojené soubory. To znamená, že byste neměli používat obecně `Inputs` a `Outputs` atributy cílové obsahující `GenerateResource` úlohy, což může způsobit ji přeskočit, pokud by měl běžet ve skutečnosti.
+Vzhledem k tomu, že soubory *. resx* mohou obsahovat odkazy na jiné soubory prostředků, není dostačující pouze k porovnání časových razítek souborů *. resx* a *. Resources* , aby bylo možné zjistit, zda jsou výstupy v aktuálním stavu. Místo toho `GenerateResource` úloha sleduje odkazy v souborech *. resx* a kontroluje také časová razítka propojených souborů. To znamená, že byste neměli obecně používat `Inputs` a `Outputs` atributy v cíli obsahující `GenerateResource` úkol, protože by to mohlo způsobit jeho přeskočení, když by se měl skutečně spustit.
 
-Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).
+Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
-Při použití nástroje MSBuild 4.0 do projektů cílového rozhraní .NET 3.5, může být sestavení při x86 prostředky. Chcete-li tento problém vyřešit, můžete vytvořit cíl sestavení AnyCPU.
+Při použití MSBuild 4,0 k cílení na projekty .NET 3,5 může sestavení selhat u prostředků x86. Pokud chcete tento problém obejít, můžete vytvořit cíl jako sestavení AnyCPU.
 
 ## <a name="example"></a>Příklad
-V následujícím příkladu `GenerateResource` úkolů ke generování *.resources* soubory z určené soubory `Resx` kolekci položek.
+Následující příklad používá úlohu `GenerateResource` ke generování souborů *. Resources* ze souborů určených kolekcí `Resx` Item.
 
 ```xml
 <GenerateResource
@@ -80,9 +80,9 @@ V následujícím příkladu `GenerateResource` úkolů ke generování *.resour
 </GenerateResource>
 ```
 
-`GenerateResource` Úloh používá \<LogicalName > metadata \<EmbeddedResource > položka název prostředku, který je vložen do sestavení.
+Úkol `GenerateResource` používá k pojmenování prostředku vloženého do sestavení \<logickou > metadat položky \<EmbeddedResource >.
 
-Za předpokladu, že sestavení má název myAssembly, následující kód vygeneruje vložený prostředek s názvem *someQualifier.someResource.resources*:
+Za předpokladu, že sestavení má název myAssembly, následující kód vygeneruje vložený prostředek s názvem *someQualifier. someResource. Resources*:
 
 ```xml
 <ItemGroup>
@@ -92,8 +92,8 @@ Za předpokladu, že sestavení má název myAssembly, následující kód vygen
 </ItemGroup>
 ```
 
-Bez \<LogicalName > metadata, by se pojmenoval prostředek *myAssembly.myResource.resources*.  Tento příklad se týká jenom procesem sestavení jazyka Visual Basic a Visual C#.
+Bez \<> metadat by byl prostředek pojmenovaný *MyAssembly. MyResource. Resources*.  Tento příklad se vztahuje pouze na proces Visual Basic a C# Visual Build.
 
 ## <a name="see-also"></a>Viz také:
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

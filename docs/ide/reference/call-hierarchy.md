@@ -6,17 +6,17 @@ f1_keywords:
 - VS.CallHierarchy
 helpviewer_keywords:
 - Call Hierarchy
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a03a286d8b097fbd208a828411728aaa7a54690
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dcedc6a49c0df84b4482f8030524d59d4336bcc8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668211"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595797"
 ---
 # <a name="view-call-hierarchy"></a>Zobrazit hierarchii volání
 
@@ -69,5 +69,5 @@ Následující tabulka popisuje několik možností místní nabídky, které js
 |**Odebrat kořen**|Odebere vybraný kořenový uzel z podokna zobrazení stromu. Tato možnost je k dispozici pouze z kořenového uzlu.<br /><br /> K odebrání vybraného kořenového uzlu můžete použít také tlačítko **Odebrat kořenový** panel nástrojů.|
 |**Přejít k definici**|Spustí příkaz Přejít k definici na vybraném uzlu. Tím přejdete k původní definici pro členské volání nebo definici proměnné.<br /><br /> Chcete-li spustit příkaz Přejít na definici, můžete také dvakrát kliknout na vybraný uzel nebo stisknout F12 na vybraném uzlu.|
 |**Najít všechny odkazy**|Spustí příkaz Najít všechny odkazy na vybraném uzlu. Tím vyhledáte všechny řádky kódu v projektu, které odkazují na třídu nebo člen.<br /><br /> K spuštění příkazu Najít všechny odkazy na vybraném uzlu můžete také použít SHIFT + F12.|
-|**Kopií**|Zkopíruje obsah vybraného uzlu (ale ne jeho poduzly).|
-|**Téhle**|Sbalí vybraný uzel, aby se znovu rozbalí aktuální informace.|
+|**Copy**|Zkopíruje obsah vybraného uzlu (ale ne jeho poduzly).|
+|**Aktualizace**|Sbalí vybraný uzel, aby se znovu rozbalí aktuální informace.|

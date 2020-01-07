@@ -10,17 +10,17 @@ helpviewer_keywords:
 - WPF data binding [Visual Studio], walkthroughs
 - WPF Designer, data binding
 ms.assetid: 8823537c-82f0-41f7-bf30-705f0e5e59fd
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ecc08be8c865cefa9b440d9af61cf9d019865ea0
-ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
+ms.openlocfilehash: ef13f400ff762818eb97396c51330d755c0203c4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72924556"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586962"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>Vytvoření vazby ovládacích prvků WPF k datové službě WCF
 
@@ -72,7 +72,7 @@ Aby bylo možné vystavit data pro aplikaci pomocí datové služby WCF, je nutn
 
 2. V seznamu nainstalované šablony klikněte na **data**a pak vyberte položku **ADO.NET model EDM (Entity Data Model)** projektu.
 
-3. Změňte název na `AdventureWorksModel.edmx` a klikněte na **Přidat**.
+3. Změňte název na `AdventureWorksModel.edmx`a klikněte na **Přidat**.
 
      Otevře se průvodce **model EDM (Entity Data Model)** .
 
@@ -88,7 +88,7 @@ Aby bylo možné vystavit data pro aplikaci pomocí datové služby WCF, je nutn
 
 7. Na stránce **Zvolte vaše databázové objekty** rozbalte **tabulky**a potom vyberte tabulku **SalesOrderHeader** .
 
-8. Klikněte na tlačítko **Dokončit**.
+8. Klikněte na **Dokončit**.
 
 ## <a name="create-the-service"></a>Vytvoření služby
 
@@ -98,7 +98,7 @@ Vytvoření datové služby WCF pro zpřístupnění dat v model EDM (Entity Dat
 
 2. V seznamu **Nainstalované šablony** klikněte na možnost **Web**a poté vyberte položku projektu **WCF Data Service** .
 
-3. Do pole **název** zadejte `AdventureWorksService.svc` a klikněte na **Přidat**.
+3. Do pole **název** zadejte `AdventureWorksService.svc`a klikněte na **Přidat**.
 
      Visual Studio přidá `AdventureWorksService.svc` do projektu.
 
@@ -125,11 +125,11 @@ Chcete-li zobrazit data z datové služby WCF, vytvořte novou aplikaci WPF se z
 
 3. Vyberte šablonu projektu **aplikace WPF** .
 
-4. Do pole **název** zadejte `AdventureWorksSalesEditor` a klikněte na **OK**.
+4. Do pole **název** zadejte `AdventureWorksSalesEditor`a klikněte na **OK**.
 
    Visual Studio přidá do řešení `AdventureWorksSalesEditor` projekt.
 
-5. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
+5. Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
 
    Otevře se okno **zdroje dat** .
 
@@ -265,7 +265,7 @@ Sestavte a spusťte aplikaci, abyste ověřili, že můžete zobrazit a aktualiz
 
 1. V nabídce **sestavení** klikněte na **Sestavit řešení**. Ověřte, že řešení je sestavení bez chyb.
 
-2. Stiskněte klávesu **Ctrl** +**F5**.
+2. Stiskněte klávesu **Ctrl**+**F5**.
 
      Visual Studio spustí projekt **AdventureWorksService** bez ladění.
 
@@ -273,7 +273,7 @@ Sestavte a spusťte aplikaci, abyste ověřili, že můžete zobrazit a aktualiz
 
 4. V nabídce kliknutím pravým tlačítkem (kontextová nabídka) v části **ladění**klikněte na **spustit novou instanci**.
 
-     Aplikace se spustí. Ověřte následující:
+     Aplikace se spustí. Zkontrolujte:
 
     - Textová pole zobrazují různá pole dat z prvního záznamu prodeje, který má ID prodejní objednávky **71774**.
 

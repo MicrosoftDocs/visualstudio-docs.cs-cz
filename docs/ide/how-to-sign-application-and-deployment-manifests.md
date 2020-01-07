@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Podepsání manifestů aplikace a nasazení'
+title: 'Postupy: podepsání manifestů aplikace a nasazení'
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
 ms.topic: conceptual
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - key files [Visual Studio]
 - assemblies [Visual Studio], signing
 ms.assetid: 64173505-8bfb-41cf-a0de-b9075173f3a2
-author: mikejo5000
-ms.author: mikejo
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2edc0e1e63a716f5e2e649660a9b0333ec8bc923
-ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
+ms.openlocfilehash: fbf25301095ac5ff438514c37f61337e46342860
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71079357"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596161"
 ---
-# <a name="how-to-sign-application-and-deployment-manifests"></a>Postupy: Podepsání manifestů aplikace a nasazení
+# <a name="how-to-sign-application-and-deployment-manifests"></a>Postupy: podepsání manifestů aplikace a nasazení
 
 Pokud chcete publikovat aplikaci pomocí nasazení ClickOnce, manifesty aplikace a nasazení musí být podepsány pomocí páru veřejného a privátního klíče a podepsány pomocí technologie Authenticode. Manifesty můžete podepsat pomocí certifikátu z úložiště certifikátů Windows nebo souboru klíče.
 
@@ -33,7 +33,7 @@ Další informace o nasazení ClickOnce naleznete v tématu [Security and Deploy
 
 Podepisování manifestů ClickOnce je volitelné pro aplikace založené na *. exe*. Další informace naleznete v části "generování nepodepsaných manifestů" v tomto dokumentu.
 
-Informace o vytváření souborů klíčů naleznete v tématu [How to: Vytvoří pár](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)veřejného a privátního klíče.
+Informace o vytváření souborů klíčů naleznete v tématu [How to: Create a Public-Private Key páru](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair).
 
 > [!NOTE]
 > Visual Studio podporuje pouze soubory klíčů PFX (Personal Information Exchange), které mají příponu *. pfx* . Můžete ale vybrat jiné typy certifikátů z úložiště certifikátů Windows aktuálního uživatele tak, že kliknete na **vybrat ze Storu** na stránce **podepisování** vlastností projektu.
@@ -71,7 +71,7 @@ Informace o vytváření souborů klíčů naleznete v tématu [How to: Vytvoř�
 4. Zadejte heslo pro přístup k souboru klíče a pak vyberte **ENTER**.
 
 > [!NOTE]
-> Soubor *. pfx* nemůže obsahovat informace o řetězení certifikátů. V takovém případě dojde k následující chybě importu: **Nejde najít certifikát a privátní klíč pro dešifrování**. Chcete-li odebrat informace o řetězení certifikátů, můžete použít program *certmgr. msc* a [zakázat možnost](/previous-versions/aa730868(v=vs.80)) **zahrnutí všech certifikátů** při exportování souboru *. pfx.
+> Soubor *. pfx* nemůže obsahovat informace o řetězení certifikátů. V takovém případě dojde k následující chybě importu: **nelze najít certifikát a privátní klíč pro dešifrování**. Chcete-li odebrat informace o řetězení certifikátů, můžete použít program *certmgr. msc* a [zakázat možnost](/previous-versions/aa730868(v=vs.80)) **zahrnutí všech certifikátů** při exportování souboru *. pfx.
 
 ## <a name="sign-using-a-test-certificate"></a>Podepsat pomocí testovacího certifikátu
 
@@ -96,7 +96,7 @@ Ve výchozím nastavení ClickOnce automaticky generuje podepsané manifesty, po
 
 2. Na stránce **podepisování** zrušte zaškrtnutí políčka **podepsat manifesty ClickOnce** .
 
-3. Obnovte verzi publikování tak, aby byla k dispozici pouze jedna verze aplikace. Ve výchozím nastavení Visual Studio automaticky zvyšuje číslo revize verze publikování pokaždé, když publikujete aplikaci. Další informace najdete v tématu [jak: Nastavte publikační verzi](../deployment/how-to-set-the-clickonce-publish-version.md)ClickOnce.
+3. Obnovte verzi publikování tak, aby byla k dispozici pouze jedna verze aplikace. Ve výchozím nastavení Visual Studio automaticky zvyšuje číslo revize verze publikování pokaždé, když publikujete aplikaci. Další informace naleznete v tématu [How to: set a publikační verze ClickOnce](../deployment/how-to-set-the-clickonce-publish-version.md).
 
 4. Publikujte aplikaci.
 
@@ -114,6 +114,6 @@ Ve výchozím nastavení ClickOnce automaticky generuje podepsané manifesty, po
 ## <a name="see-also"></a>Viz také:
 
 - [Sestavení se silným názvem](/dotnet/framework/app-domains/strong-named-assemblies)
-- [Postupy: Vytvoření páru klíčů veřejného a soukromého](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)
+- [Postupy: Vytvoření páru veřejného a soukromého klíče](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)
 - [Stránka podepisování, Návrhář projektu](../ide/reference/signing-page-project-designer.md)
 - [ClickOnce – zabezpečení a nasazení](../deployment/clickonce-security-and-deployment.md)

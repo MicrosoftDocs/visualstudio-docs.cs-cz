@@ -4,44 +4,44 @@ description: ''
 ms.date: 07/03/2019
 ms.topic: conceptual
 ms.assetid: e03835db-a616-41e6-b339-92b41d0cfc70
-author: heaths
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: a1a9c1a8db0c4f3481e1edf220412612d70064a8
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 539b21c474f9c119427e7f74192e80e7686b299c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825180"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588525"
 ---
 # <a name="advanced-example-for-containers"></a>Rozšířený příklad pro kontejnery
 
 ::: moniker range="vs-2017"
 
-Ukázkový soubor Dockerfile v [instalace Build Tools do kontejneru](build-tools-container.md) vždy používá [microsoft/dotnet-framework:4.7.2](https://hub.docker.com/r/microsoft/dotnet-framework) image na základě nejnovější image microsoft/windowsservercore a nejnovější Vizuálu Instalační program sady Studio Build Tools. Pokud publikujete, aby k této bitové kopie [registru Dockeru](https://azure.microsoft.com/services/container-registry) pro ostatní uživatele o přijetí změn, tato image může být v pořádku pro řadu scénářů. Ale v praxi je běžné konkrétně o jaké základní image, můžete použít, jaké binární soubory můžete stáhnout, a který nástroj verze je nainstalovat.
+Vzorový souboru Dockerfile při [instalaci nástrojů sestavení do kontejneru](build-tools-container.md) vždy používá Image [Microsoft/DotNET-Framework: 4.7.2](https://hub.docker.com/r/microsoft/dotnet-framework) na základě nejnovější image Microsoft/windowsservercore a nejnovější instalační službu Visual Studio Build Tools. Pokud tuto image publikujete do [registru Docker](https://azure.microsoft.com/services/container-registry) , aby ji ostatní mohli vyžádat, může být tato image v mnoha scénářích v pořádku. V praxi je ale běžnější, že se jedná o konkrétní základní image, jaké binární soubory stáhnete a které verze nástrojů nainstalujete.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Ukázkový soubor Dockerfile v [instalace Build Tools do kontejneru](build-tools-container.md) vždy používá [microsoft/dotnet-framework: 4.8](https://hub.docker.com/r/microsoft/dotnet-framework) image na základě nejnovější image microsoft/windowsservercore a nejnovější Vizuálu Instalační program sady Studio Build Tools. Pokud publikujete, aby k této bitové kopie [registru Dockeru](https://azure.microsoft.com/services/container-registry) pro ostatní uživatele o přijetí změn, tato image může být v pořádku pro řadu scénářů. Ale v praxi je běžné konkrétně o jaké základní image, můžete použít, jaké binární soubory můžete stáhnout, a který nástroj verze je nainstalovat.
+Vzorový souboru Dockerfile při [instalaci nástrojů sestavení do kontejneru](build-tools-container.md) vždy používá Image [Microsoft/DotNET-Framework: 4.8](https://hub.docker.com/r/microsoft/dotnet-framework) na základě nejnovější image Microsoft/windowsservercore a nejnovější instalační službu Visual Studio Build Tools. Pokud tuto image publikujete do [registru Docker](https://azure.microsoft.com/services/container-registry) , aby ji ostatní mohli vyžádat, může být tato image v mnoha scénářích v pořádku. V praxi je ale běžnější, že se jedná o konkrétní základní image, jaké binární soubory stáhnete a které verze nástrojů nainstalujete.
 
 ::: moniker-end
 
-V následujícím příkladu soubor Dockerfile použije značku konkrétní verzi Image microsoft/dotnet-framework. Použití s konkrétní značkou pro základní image je běžné a umožňuje snadno zapamatovatelné budovy nebo vždy znovu sestavit Image má stejný základ.
+Následující příklad souboru Dockerfile používá specifickou značku verze image Microsoft/DotNET-Framework. Použití konkrétní značky pro základní Image je maloobchodech a usnadňuje zapamatování, že vytváření a obnovování imagí má vždycky stejný základ.
 
 > [!NOTE]
-> Visual Studio nelze nainstalovat do microsoft/windowsservercore:10.0.14393.1593 nebo všechny bitové kopie na základě, který obsahuje známé problémy, spouští se instalační program v kontejneru. Další informace najdete v tématu [známé problémy pro kontejnery](build-tools-container-issues.md).
+> Visual Studio nemůžete nainstalovat do Microsoft/windowsservercore: 10.0.14393.1593 ani do žádné image na nich založené, která má známé problémy při spouštění instalačního programu v kontejneru. Další informace najdete v tématu [známé problémy pro kontejnery](build-tools-container-issues.md).
 
-Následující příklad stáhne nejnovější verze sestavovacích nástrojů. Pokud chcete použít starší verzi Build Tools do kontejneru můžete nainstalovat později, je nutné nejprve [vytvořit](create-an-offline-installation-of-visual-studio.md) a [udržovat](update-a-network-installation-of-visual-studio.md) rozložení.
+Následující příklad stáhne nejnovější vydání nástrojů buildu. Chcete-li použít starší verzi nástrojů sestavení, které lze nainstalovat do kontejneru později, je nutné nejprve [vytvořit](create-an-offline-installation-of-visual-studio.md) a [udržovat](update-a-network-installation-of-visual-studio.md) rozložení.
 
-## <a name="install-script"></a>Instalace skriptu
+## <a name="install-script"></a>Nainstalovat skript
 
-Shromažďování protokolů při chybě instalace dojde, vytvořte dávkový skript, který je pojmenován "Soubor Install.cmd" v pracovním adresáři, který obsahuje následující obsah:
+Pokud chcete shromažďovat protokoly, když dojde k chybě instalace, vytvořte v pracovním adresáři dávkový skript s názvem Install. cmd, který obsahuje následující obsah:
 
 ```shell
 @if not defined _echo echo off
@@ -60,9 +60,9 @@ if "%ERRORLEVEL%"=="3010" (
 )
 ```
 
-## <a name="dockerfile"></a>Dockerfile
+## <a name="dockerfile"></a>Souboru Dockerfile
 
-V pracovním adresáři vytvořte "Soubor Dockerfile" s následujícím obsahem:
+V pracovním adresáři vytvořte "souboru Dockerfile" s následujícím obsahem:
 
 ::: moniker range="vs-2017"
 
@@ -104,9 +104,9 @@ CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
 ```
 
    > [!WARNING]
-   > Visual Studio 2017 verze 15,8 nebo starší (libovolný produkt) nenainstaluje správně mcr\.microsoft\.com\/windows\/servercore:1809 nebo novější. Se nezobrazí žádná chyba.
+   > Visual Studio 2017 verze 15,8 nebo starší (jakýkoli produkt) nebude správně nainstalován na MCR\.Microsoft\.com\/Windows\/ServerCore: 1809 nebo novější. Nezobrazuje se žádná chyba.
    >
-   > Zobrazit [známé problémy pro kontejnery](build-tools-container-issues.md) Další informace.
+   > Další informace najdete v tématu [známé problémy pro kontejnery](build-tools-container-issues.md) .
 
 ::: moniker-end
 
@@ -151,7 +151,7 @@ CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
 
 ::: moniker-end
 
-Spusťte následující příkaz k sestavení image v aktuálním pracovním adresáři:
+Spuštěním následujícího příkazu Sestavte image v aktuálním pracovním adresáři:
 
 ::: moniker range="vs-2017"
 
@@ -169,11 +169,11 @@ docker build -t buildtools2019:16.0.28714.193 -t buildtools2019:latest -m 2GB .
 
 ::: moniker-end
 
-Volitelně můžete předat jednoho nebo obou `FROM_IMAGE` nebo `CHANNEL_URL` argumentů pomocí `--build-arg` přepínač příkazového řádku a zadejte jinou základní image nebo umístění interní rozložení zachovat pevnou image.
+Volitelně předejte buď `FROM_IMAGE`, nebo `CHANNEL_URL` argumenty pomocí přepínače příkazového řádku `--build-arg`, abyste určili jiný základní obrázek nebo umístění interního rozložení, aby se zachoval pevný obrázek.
 
-## <a name="diagnosing-install-failures"></a>Diagnostika selhání instalace
+## <a name="diagnosing-install-failures"></a>Diagnostikování selhání instalace
 
-Tento příklad stáhne konkrétních nástrojů a ověří, že klíče hash shodují. Se také stáhne nejnovější sady Visual Studio a nástroj pro shromažďování protokolů rozhraní .NET tak, že pokud dojde k selhání instalace, můžete zkopírovat protokoly na hostitelském počítači k analýze selhání.
+Tento příklad stáhne konkrétní nástroje a ověří, že se hodnoty hash shodují. Stáhne také nejnovější nástroj pro shromažďování protokolů sady Visual Studio a .NET, takže pokud dojde k selhání instalace, můžete tyto protokoly zkopírovat do hostitelského počítače a analyzovat tak selhání.
 
 ::: moniker range="vs-2017"
 
@@ -207,7 +207,7 @@ The command 'cmd /S /C C:\TEMP\Install.cmd C:\TEMP\vs_buildtools.exe ...' return
 
 ::: moniker-end
 
-Po poslední řádek nedokončí, otevřete na svém počítači "% TEMP%\vslogs.zip", nebo odešlete problém na [komunity vývojářů](https://developercommunity.visualstudio.com) webu.
+Po dokončení provádění posledního řádku otevřete na svém počítači "%TEMP%\vslogs.zip" nebo odešlete problém na webu [komunity vývojářů](https://developercommunity.visualstudio.com) .
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
@@ -215,4 +215,4 @@ Po poslední řádek nedokončí, otevřete na svém počítači "% TEMP%\vslogs
 
 * [Instalace Build Tools do kontejneru](build-tools-container.md)
 * [Známé problémy s kontejnery](build-tools-container-issues.md)
-* [ID pracovního vytížení a komponenta Visual Studio Build Tools](workload-component-id-vs-build-tools.md)
+* [Visual Studio Build Tools úlohy a ID komponent](workload-component-id-vs-build-tools.md)

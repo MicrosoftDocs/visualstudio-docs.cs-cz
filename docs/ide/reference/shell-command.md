@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Shell, launching exe files
 - Visual Studio, executables from
 ms.assetid: 737fda23-b852-45c4-a9fe-41cbce6ba70f
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 502bb7b1ab6236fd88c7c6dbc789737e50686d89
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5bf13c7624d6c9d8e64b79f653eb83a0c5f3b3f0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747747"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565874"
 ---
 # <a name="shell-command"></a>Prostředí – příkaz
 Spustí spustitelné programy v rámci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
@@ -48,7 +48,7 @@ Volitelné. Všechny argumenty, které se mají předat vyvolanému programu.
 
 Volitelné. Určuje, že výstup pro spustitelný soubor je zobrazen v **příkazovém** okně.
 
-/dir: `folder` [nebo]/d: `folder`
+/dir:`folder` [nebo]/d: `folder`
 
 Volitelné. Určuje pracovní adresář, který má být nastaven při spuštění programu.
 

@@ -6,17 +6,17 @@ f1_keywords:
 - vs.newproject
 helpviewer_keywords:
 - projects [Visual Studio], creating
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a35302e8f749563ab173e7be15e944f8462fdb18
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 77a6a33a1dde4d779a56c9ee559ecfd3b20dfbfb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652653"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585467"
 ---
 # <a name="create-a-new-project-in-visual-studio"></a>Vytvoření nového projektu v aplikaci Visual Studio
 
@@ -24,18 +24,18 @@ ms.locfileid: "72652653"
 
 ## <a name="open-the-new-project-dialog"></a>Otevření dialogového okna Nový projekt
 
-Existuje několik způsobů, jak vytvořit nový projekt v aplikaci Visual Studio 2017. Na úvodní stránce můžete zadat název šablony projektu v poli **Hledat v šablonách projektů** nebo kliknutím na odkaz **vytvořit nový projekt** otevřít dialogové okno **Nový projekt** . Kromě na úvodní stránce můžete také zvolit **soubor**  > **Nový**  > **projekt** na panelu nabídek nebo klikněte na tlačítko **Nový projekt** na panelu nástrojů.
+Existuje několik způsobů, jak vytvořit nový projekt v aplikaci Visual Studio 2017. Na úvodní stránce můžete zadat název šablony projektu v poli **Hledat v šablonách projektů** nebo kliknutím na odkaz **vytvořit nový projekt** otevřít dialogové okno **Nový projekt** . Kromě na úvodní stránce můžete také zvolit **soubor** > **Nový** > **projekt** na panelu nabídek nebo klikněte na tlačítko **Nový projekt** na panelu nástrojů.
 
 ![Úvodní stránka a soubor > Nový > projekt](./media/vside-newproject1.png)
 
 ## <a name="select-a-template-type"></a>Vybrat typ šablony
 
-V dialogovém okně **Nový projekt** se zobrazí dostupné šablony projektu v seznamu v kategorii **šablony** . Šablony jsou uspořádány podle programovacího jazyka a typu projektu, jako C#je například vizuál, JavaScript a Azure Data Lake.
+V **nový projekt** dialogovém okně dostupných šablon projektu se zobrazí v seznamu v části **šablony** kategorie. Šablony jsou uspořádané podle programovacího jazyka a projekt typu, jako je vizuál C#, JavaScript a Azure Data Lake.
 
-![Nový projekt – dialogové okno](./media/vside-newproject-templates-list.png)
+![Dialogové okno Nový projekt](./media/vside-newproject-templates-list.png)
 
 > [!NOTE]
-> Seznam dostupných jazyků a šablon projektů, které se zobrazí, závisí na verzi sady Visual Studio, kterou používáte, a na nainstalovaných úlohách. Další informace o tom, jak nainstalovat další úlohy, najdete v tématu [Změna sady Visual Studio přidáním nebo odebráním úloh a součástí](../install/modify-visual-studio.md).
+> Seznam dostupných jazyků a šablony projektů, které se zobrazí, závisí na verzi sady Visual Studio spustíte a úlohy, které jsou nainstalovány. Další informace o tom, jak nainstalovat další úlohy, najdete v tématu [Změna sady Visual Studio přidáním nebo odebráním úloh a součástí](../install/modify-visual-studio.md).
 
 Zobrazte seznam šablon pro programovací jazyk, který chcete použít, kliknutím na trojúhelník vedle názvu jazyka a následným výběrem kategorie projektu (například Windows Desktop).
 
@@ -45,7 +45,7 @@ Následující obrázek ukazuje šablony projektu dostupné pro projekty Visual 
 
 ## <a name="configure-your-project"></a>Konfigurace projektu
 
-Do pole **název** zadejte název nového projektu. Projekt můžete uložit ve výchozím umístění v počítači nebo kliknutím na tlačítko **Procházet** vyhledat jiné umístění. Můžete také zvolit název řešení nebo přidat nový projekt do úložiště Git (výběrem možnosti **Přidat do správy zdrojového kódu**).
+Zadejte název nového projektu v **název** pole. Projekt můžete uložit ve výchozím umístění v počítači nebo kliknutím na tlačítko **Procházet** vyhledat jiné umístění. Můžete také zvolit název řešení nebo přidat nový projekt do úložiště Git (výběrem možnosti **Přidat do správy zdrojového kódu**).
 
 Kliknutím na tlačítko **OK** vytvořte řešení a projekt.
 
@@ -67,7 +67,7 @@ Pokud je vývojové prostředí sady Visual Studio již otevřeno, můžete vytv
 
 Na stránce **vytvořit nový projekt** se zobrazí seznam naposledy vybraných šablon na levé straně. Šablony jsou seřazené podle *posledního použití*.
 
-Pokud nevyberete z naposledy použitých šablon, můžete filtrovat všechny dostupné šablony projektu podle **jazyka** ( C# například C++nebo), **platformy** (například Windows nebo Azure) a **typu projektu** (například Plocha nebo Web). Můžete také zadat hledaný text do vyhledávacího pole, chcete-li dále filtrovat šablony, například **ASP.NET**.
+Pokud nevyberete z naposledy použitých šablon, můžete filtrovat všechny dostupné šablony projektu podle **jazyka** ( C# například C++nebo), **platformy** (například Windows nebo Azure), a **typu projektu** (například Desktop nebo Web). Můžete také zadat hledaný text do vyhledávacího pole, chcete-li dále filtrovat šablony, například **ASP.NET**.
 
 ![Filtry šablony projektu v aplikaci Visual Studio 2019](media/vs-2019/create-new-project-filters.png)
 
@@ -97,7 +97,7 @@ Kliknutím na **vytvořit** vytvořte nový projekt.
 
 ## <a name="add-additional-projects-to-a-solution"></a>Přidání dalších projektů do řešení
 
-Pokud chcete přidat další projekt do řešení, klikněte pravým tlačítkem myši na uzel řešení v **Průzkumník řešení** a vyberte **Přidat**  > **Nový projekt**.
+Pokud chcete přidat další projekt do řešení, klikněte pravým tlačítkem myši na uzel řešení v **Průzkumník řešení** a vyberte **Přidat** > **Nový projekt**.
 
 ## <a name="see-also"></a>Viz také:
 

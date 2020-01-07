@@ -9,15 +9,15 @@ helpviewer_keywords:
 - test controller, walkthrough
 - walkthroughs, test controller and test agents
 ms.assetid: 57ed43ae-4e67-4139-8aec-3e9fceb0a745
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9ae46db2d99024b598ff655452ca748298b528a0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f0ea644294ea79f1e4c044c0cebf3f427f5b672a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665305"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591187"
 ---
 # <a name="assign-roles-to-a-test-controller-and-test-agent"></a>Přiřazení rolí k testovacímu kontroleru a testovacímu agentovi
 
@@ -35,21 +35,21 @@ Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které 
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **položky řešení,** přejděte na **Přidat**a pak zvolte **Nová položka**.
 
-     Zobrazí se dialogové okno **Přidat novou položku** .
+     **Přidat novou položku** zobrazí se dialogové okno.
 
-2. V podokně **Nainstalované šablony** vyberte možnost **nastavení testu**.
+2. V **nainstalované šablony** podokně zvolte **nastavení testu**.
 
 3. Do pole **název** zadejte **TestSettingDistributedTestWalkthrough**.
 
-4. Klikněte na tlačítko **Přidat**.
+4. Zvolte **přidat**.
 
      Nový soubor test *TestSettingDistributedTestWalkthrough. testsettings* se zobrazí v **Průzkumník řešení**ve složce **položky řešení** .
 
-     Zobrazí se dialogové okno **nastavení testu** . Je vybrána stránka **Obecné** .
+     **Nastavení testu** se zobrazí dialogové okno. **Obecné** je vybrána stránka.
 
-     Nyní můžete upravit a uložit hodnoty nastavení testu.
+     Teď můžete upravit a uložit hodnoty nastavení testu.
 
-5. Do pole **název**zadejte název nastavení testu.
+5. V části **název**, zadejte název pro nastavení testu.
 
 6. V části **Popis**zadejte **Nastavení distribuovaného testu**.
 
@@ -57,16 +57,16 @@ Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které 
 
 ## <a name="to-assign-roles-to-a-test-controller-and-test-agents"></a>Přiřazení rolí k testovacímu kontroleru a testovacím agentům
 
-1. Vyberte **role**.
+1. Zvolte **role**.
 
-     Zobrazí se stránka **role** .
+     **Role** zobrazí se stránka.
 
 2. Chcete-li spustit test vzdáleně, použijte rozevírací seznam **Metoda provedení testu** a vyberte **vzdálené spuštění**.
 
 3. V rozevíracím seznamu **kontrolér** zadejte název počítače [testovacího kontroléru](../test/lab-management/install-configure-test-agents.md).
 
     > [!NOTE]
-    > Pokud přidáváte řadič poprvé, v rozevíracím seznamu nejsou uvedené žádné řadiče. Seznam je vyplněn předchozími řadiči, které jste zadali v jiných nastaveních testu.
+    > Pokud přidáváte řadič poprvé, v rozevíracím seznamu nejsou uvedené žádné řadiče. Seznam je vyplněn předchozími řadiči, které jste zadali v rámci jiných nastaveních testu.
 
 4. V části **role**klikněte na možnost **Přidat**.
 
@@ -74,9 +74,9 @@ Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které 
 
 ## <a name="to-assign-a-diagnostic-and-data-adapter-to-your-test-setting"></a>Přiřazení diagnostického a datového adaptéru k nastavení testu
 
-1. Vyberte **data a diagnostiku**.
+1. Zvolte **dat a diagnostiky**.
 
-     Zobrazí se stránka **data a diagnostika** .
+     **Dat a diagnostiky** zobrazí se stránka.
 
 2. V části **role**ověřte, že je vybraná role **distribuovaného testu** .
 
@@ -86,14 +86,14 @@ Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které 
 
 4. Vyberte možnost **hostitelé**.
 
-5. Volitelné Pokud je v počítači spuštěná 64 verze Microsoft Windows a váš test jste zkompilováni pomocí **jakékoli konfigurace CPU** , použijte rozevírací seznam **spustit test v 32 bitové nebo 64 bitový proces** a vyberte možnost **spouštět testy 64 v procesu 16bitového procesu na 64. počítač**.
+5. Volitelné Pokud je v počítači spuštěná 64 verze Microsoft Windows a váš test jste zkompilováni pomocí **jakékoli konfigurace CPU** , použijte rozevírací seznam **Spustit test v systému 32 nebo 64 bitových procesů** a vyberte možnost **spouštět testy 64 v 64 procesu 16Bitového počítače v počítači s operačním**systémem.
 
     > [!TIP]
-    > Pro maximální flexibilitu byste měli kompilovat testovací projekty s libovolnou konfigurací **procesoru** . Pak můžete spustit na 32 i 64 bitových agentů. Není k dispozici žádná výhoda pro kompilování testovacích projektů s **64** konfigurací.
+    > Pro maximální flexibilitu byste měli kompilovat testovací projekty s libovolnou konfigurací **procesoru** . Poté můžete spouštět na 32bitových a 64bitových agentech. Není k dispozici žádná výhoda pro kompilování testovacích projektů s **64** konfigurací.
 
 6. Chcete-li uložit nové nastavení testu, klikněte na tlačítko **použít**.
 
-7. Klikněte na tlačítko **Zavřít**.
+7. Zvolte **Zavřít**.
 
 ::: moniker range="vs-2017"
 

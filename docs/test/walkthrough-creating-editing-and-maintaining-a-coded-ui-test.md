@@ -2,17 +2,17 @@
 title: Vytvoření programového testu uživatelského rozhraní
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 268d170926e3a60ba0aa5131795f22bb31cd2ba9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: f1e22a39035e5d3500f4dd45481319e1daecfa04
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659650"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592058"
 ---
 # <a name="walkthrough-create-edit-and-maintain-a-coded-ui-test"></a>Návod: vytvoření, úprava a údržba kódovaného testu uživatelského rozhraní
 
@@ -30,11 +30,11 @@ V tomto návodu se dozvíte, jak vytvořit, upravit a udržovat programový test
 
 3. V části **všechny ovládací prvky WPF** přetáhněte **tlačítko**, **CheckBox** a ovládací prvek **ProgressBar** na MainWindow na návrhové ploše.
 
-4. Vyberte ovládací prvek **tlačítko** . V okně **vlastnosti** změňte hodnotu vlastnosti **název** z \<No název > na Button1. Pak změňte hodnotu vlastnosti **obsah** z tlačítka na spustit.
+4. Vyberte ovládací prvek **tlačítko** . V okně **vlastnosti** změňte hodnotu vlastnosti **název** z \<bez názvu > na Button1. Pak změňte hodnotu vlastnosti **obsah** z tlačítka na spustit.
 
-5. Vyberte ovládací prvek **ProgressBar** . V okně **vlastnosti** změňte hodnotu vlastnosti **název** z \<No název > na ProgressBar1. Pak změňte hodnotu vlastnosti **Maximum** z **100** na **10000**.
+5. Vyberte ovládací prvek **ProgressBar** . V okně **vlastnosti** změňte hodnotu vlastnosti **název** z \<bez názvu > na ProgressBar1. Pak změňte hodnotu vlastnosti **Maximum** z **100** na **10000**.
 
-6. Vyberte ovládací prvek **CheckBox** . V okně **vlastnosti** změňte hodnotu vlastnosti **název** z \<No název > na CheckBox1 a zrušte zaškrtnutí vlastnosti **Nepovoleno** .
+6. Vyberte ovládací prvek **CheckBox** . V okně **vlastnosti** změňte hodnotu vlastnosti **název** z \<žádný název > na CheckBox1 a zrušte zaškrtnutí vlastnosti **Nepovoleno** .
 
      ![Jednoduchá aplikace WPF](../test/media/codedui_wpfapp.png)
 
@@ -106,12 +106,12 @@ V tomto návodu se dozvíte, jak vytvořit, upravit a udržovat programový test
 
 ## <a name="create-a-coded-ui-test-for-simplewpfapp"></a>Vytvoření programového testu UI pro aplikaci SimpleWPFApp
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a vyberte **Přidat**  > **Nový projekt**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a vyberte **Přidat** > **Nový projekt**.
 
 2. Vyhledejte a vyberte šablonu projektu programového **testu uživatelského rozhraní** a pokračujte postupem, dokud se projekt nevytvoří.
 
    > [!NOTE]
-   > Pokud nevidíte šablonu **projektu programový test uživatelského rozhraní** , je nutné [nainstalovat komponentu PROGRAMového testu uživatelského](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component)rozhraní.
+   > Pokud se nezobrazí **projekt testu uživatelského rozhraní programového** šablony, budete muset [nainstalovat komponentu programového testu uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component).
 
      Do vašeho řešení se přidá nový projekt programového testu UI s názvem **CodedUITestProject1** a zobrazí se dialogové okno **generovat kód pro programový test uživatelského rozhraní** .
 
@@ -123,7 +123,7 @@ V tomto návodu se dozvíte, jak vytvořit, upravit a udržovat programový test
 
 1. V dialogovém okně Tvůrce programového **testu uživatelského rozhraní v UIMap** vyberte **Spustit záznam** .
 
-     ![Spustit záznam](../test/media/cuit_builder_record.png)
+     ![Spustit nahrávání](../test/media/cuit_builder_record.png)
 
      V případě potřeby můžete nahrávání pozastavit, například pokud se budete muset zabývat příchozí poštou.
 
@@ -154,11 +154,11 @@ V tomto návodu se dozvíte, jak vytvořit, upravit a udržovat programový test
 
 1. Uložte projekt.
 
-### <a name="run-the-test"></a>Spustit test
+### <a name="run-the-test"></a>Spuštění testu
 
 1. V nabídce **test** zvolte možnost **okna** a pak zvolte možnost **Průzkumník testů**.
 
-2. V nabídce **sestavení** klikněte na příkaz **Sestavit řešení**.
+2. Z **sestavení** nabídce zvolte **sestavit řešení**.
 
 3. V souboru *CodedUITest1.cs* vyhledejte metodu **metodu CodedUITestMethod** , klikněte pravým tlačítkem myši a vyberte možnost **Spustit testy**nebo spusťte test z **Průzkumníka testů**.
 
@@ -178,7 +178,7 @@ V tomto návodu se dozvíte, jak vytvořit, upravit a udržovat programový test
 3. Chcete-li tento problém vyřešit, můžete programový test UI počkat, než se aktivuje ovládací prvek CheckBox, před pokračováním na tento řádek pomocí metody `WaitForControlEnabled()`.
 
     > [!WARNING]
-    > Neupravujte soubor *UIMap.Designer.cs* . Všechny změny kódu, které provedete, budou přepsány pokaždé, když generujete kód pomocí **UIMap – Tvůrce programového testu uživatelského rozhraní**. Pokud je nutné změnit zaznamenanou metodu, zkopírujte ji do souboru *UIMap.cs* a přejmenujte ji. Soubor *UIMap.cs* lze použít k přepsání metod a vlastností v souboru *UIMapDesigner.cs* . Je nutné odebrat odkaz na původní metodu v souboru *CodedUITest.cs* a nahradit ji názvem metody, kterou jste přejmenovali.
+    > Neupravujte soubor *UIMap.Designer.cs* . Všechny změny kódu, které provedete, budou přepsány pokaždé, když generujete kód pomocí **UIMap – Tvůrce programového testu uživatelského rozhraní**. Pokud je nutné změnit zaznamenanou metodu, zkopírujte ji do souboru *UIMap.cs* a přejmenujte ji. *UIMap.cs* soubor lze použít k přepsání metod a vlastností v *UIMapDesigner.cs* souboru. Je nutné odebrat odkaz na původní metodu v souboru *CodedUITest.cs* a nahradit ji názvem metody, kterou jste přejmenovali.
 
 4. V **Průzkumník řešení**v projektu programového testu uživatelského rozhraní vyhledejte *UIMap. UITest* .
 
@@ -190,7 +190,7 @@ V tomto návodu se dozvíte, jak vytvořit, upravit a udržovat programový test
 
 7. Klikněte na tlačítko **přesunout kód** na panelu nástrojů editoru programového **testu UI** .
 
-8. Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze souboru *UIMap. UITest* do souboru *UIMap.cs* a že již nebudete moci upravovat metodu pomocí editoru programového testu uživatelského rozhraní. Vyberte **Ano**.
+8. Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze souboru *UIMap. UITest* do souboru *UIMap.cs* a že již nebudete moci upravovat metodu pomocí editoru programového testu uživatelského rozhraní. Zvolte **Ano**.
 
      Testovací metoda je odebrána ze souboru *UIMap. UITest* a již se nezobrazuje v podokně akce uživatelského rozhraní. Chcete-li upravit přesunutý soubor testu, otevřete soubor *UIMap.cs* z **Průzkumník řešení**.
 
@@ -331,7 +331,7 @@ V tomto návodu se dozvíte, jak vytvořit, upravit a udržovat programový test
 
 ## <a name="videos"></a>Videa
 
-![link k videu ](../data-tools/media/playvideo.gif) [Začínáme s programovým testem uživatelského rozhraní](https://onedrive.live.com/?id=2DB0E1EFE1C1D3B8%21110&cid=2DB0E1EFE1C1D3B8)
+![odkaz na video](../data-tools/media/playvideo.gif) [Začínáme s programovým testem uživatelského rozhraní](https://onedrive.live.com/?id=2DB0E1EFE1C1D3B8%21110&cid=2DB0E1EFE1C1D3B8)
 
 ## <a name="faq"></a>Nejčastější dotazy
 
@@ -340,5 +340,5 @@ V tomto návodu se dozvíte, jak vytvořit, upravit a udržovat programový test
 ## <a name="see-also"></a>Viz také:
 
 - [Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)
-- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a záznamy akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a zaznamenávání akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
 - [Úpravy programových testů uživatelského rozhraní pomocí editoru programových testů uživatelského rozhraní](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)

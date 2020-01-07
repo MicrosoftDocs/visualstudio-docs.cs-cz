@@ -3,8 +3,8 @@ title: Visual Studio Build Tools úlohy a ID komponent
 titleSuffix: ''
 description: Pomocí ID pracovního vytížení a komponenta Visual Studio můžete vytvářet klasické aplikace pro Windows
 keywords: ''
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.date: 12/03/2019
 ms.topic: reference
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b99298df-0280-47fc-af73-44cd7a8ac553
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 5ad3ce0b494e93c06e23d3e50cb51c4873aa7b59
-ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
+ms.openlocfilehash: 6486b305d65d46b2255055bbd11cbdb9e1039411
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74797289"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588496"
 ---
 # <a name="visual-studio-build-tools-component-directory"></a>Visual Studio Build Tools adresář součástí
 

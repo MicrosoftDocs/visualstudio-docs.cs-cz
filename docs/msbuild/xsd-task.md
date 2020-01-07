@@ -15,17 +15,17 @@ helpviewer_keywords:
 - XSD task (MSBuild (C++))
 - MSBuild (C++), XSD task
 ms.assetid: 15c99f5c-7124-4bbc-bc03-70c7bcce8893
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ec51406aec9aec8981e5517480e4cd07bc80ffb1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 31c256e02901d4f7dd7de6f14e9f650626feac25
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748016"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565783"
 ---
 # <a name="xsd-task"></a>XSD – úloha
 Zabalí Nástroj definice schématu XML (*XSD. exe*), který generuje soubory schématu nebo třídy ze zdroje.
@@ -40,7 +40,7 @@ Zabalí Nástroj definice schématu XML (*XSD. exe*), který generuje soubory sc
 
      Volitelný **řetězcový** parametr.
 
-     Seznam možností, jak je uvedeno na příkazovém řádku. Například/\<option1 >/\<option2 >/\<option # >. Pomocí tohoto parametru můžete zadat možnosti, které nejsou reprezentované žádným jiným parametrem úlohy **XSD** .
+     Seznam možností, jak je uvedeno na příkazovém řádku. Například/\<možnost1 >/\<možnost2 >/\<možnost # >. Pomocí tohoto parametru můžete zadat možnosti, které nejsou reprezentované žádným jiným parametrem úlohy **XSD** .
 
 - **GenerateFromSchema**
 
@@ -50,9 +50,9 @@ Zabalí Nástroj definice schématu XML (*XSD. exe*), který generuje soubory sc
 
   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti XSD.
 
-  - **třídy**  -  **/Classes**
+  - **třídy** -  **/Classes**
 
-  - **datová sada**  -  **/DataSet**
+  - **dataset** -  **/dataset**
 
 - **Jazyk**
 
@@ -62,7 +62,7 @@ Zabalí Nástroj definice schématu XML (*XSD. exe*), který generuje soubory sc
 
      Vyberte z **cs** (C#, což je výchozí nastavení), **VB** (Visual Basic) nebo **js** (JScript). Můžete také zadat plně kvalifikovaný název pro třídu, která implementuje `System.CodeDom.Compiler.CodeDomProvider Class`.
 
-- **Hosting**
+- **Namespace**
 
      Volitelný **řetězcový** parametr.
 

@@ -9,18 +9,20 @@ ms.topic: conceptual
 ms.workload: multiple
 ms.date: 07/25/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 5af092bbcb987f45b10121f37d40eaa5466c3da5
-ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
+ms.openlocfilehash: 48754834295a552e3b189ff05ff2d1c12cd221a3
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062177"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75400908"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>Ladění aplikací v místním kontejneru Docker
 
-Visual Studio poskytuje konzistentní způsob vývoje v kontejneru Docker a místní ověření aplikace. Při každém provedení změny kódu není nutné znovu spustit kontejner.
+Visual Studio poskytuje konzistentní způsob vývoje kontejnerů Docker a místní ověření aplikace. Můžete spouštět a ladit své aplikace v kontejnerech Linux nebo Windows spuštěných na místní ploše Windows s nainstalovaným Docker a nemusíte při každém provedení změny kódu restartovat kontejner.
 
-Tento článek ukazuje, jak pomocí sady Visual Studio spustit webovou aplikaci v ASP.NET Core v místním kontejneru Docker, provést změny a pak aktualizovat prohlížeč, aby se změny projevily. Tento článek také ukazuje, jak nastavit zarážky pro ladění pro kontejnerové ASP.NET Core webové aplikace a .NET Framework konzolové aplikace.
+Tento článek ukazuje, jak pomocí sady Visual Studio spustit aplikaci v místním kontejneru Docker, provést změny a pak aktualizovat prohlížeč, aby se změny zobrazily. Tento článek také ukazuje, jak nastavit zarážky pro ladění pro aplikace s využitím kontejnerů. Mezi podporované typy projektů patří .NET Framework a webové a konzolové aplikace .NET Core. V tomto článku používáme ASP.NET Core Web Apps a .NET Framework konzolové aplikace.
+
+Pokud již máte projekt podporovaného typu, Visual Studio může vytvořit souboru Dockerfile a nakonfigurovat projekt tak, aby běžel v kontejneru. Viz [nástroje kontejneru v aplikaci Visual Studio](overview.md).
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -38,11 +40,13 @@ Chcete-li ladit aplikace v místním kontejneru Docker, musí být nainstalován
 
 ::: moniker-end
 
-Pokud chcete spouštět kontejnery Docker místně, musíte mít místního klienta Docker. Můžete použít [sadu nástrojů Docker](https://www.docker.com/products/docker-toolbox), která vyžaduje, aby byla technologie Hyper-V zakázaná. Můžete také použít [Docker for Windows](https://www.docker.com/get-docker), který používá technologii Hyper-V a vyžaduje systém Windows 10. 
+Pokud chcete spouštět kontejnery Docker místně, musíte mít místního klienta Docker. Můžete použít [sadu nástrojů Docker](https://www.docker.com/products/docker-toolbox), která vyžaduje, aby byla technologie Hyper-V zakázaná. Můžete také použít [Docker for Windows](https://www.docker.com/get-docker), který používá technologii Hyper-V a vyžaduje systém Windows 10.
 
 Kontejnery Docker jsou k dispozici pro projekty .NET Framework a .NET Core. Pojďme se podívat na dva příklady. Nejdřív se podíváme na webovou aplikaci .NET Core. Pak se podíváme na .NET Framework konzolovou aplikaci.
 
 ## <a name="create-a-web-app"></a>Vytvoření webové aplikace
+
+Pokud máte projekt a Přidali jste podporu Docker, jak je popsáno v [přehledu](overview.md), přeskočte tuto část.
 
 ::: moniker range="vs-2017"
 [!INCLUDE [create-aspnet5-app](../azure/includes/create-aspnet5-app.md)]
@@ -55,19 +59,21 @@ Kontejnery Docker jsou k dispozici pro projekty .NET Framework a .NET Core. Poj�
 
 Chcete-li rychle iterovat změny, můžete aplikaci spustit v kontejneru. Pak můžete pokračovat v provádění změn a zobrazit je stejně jako u IIS Express.
 
-1. Nastavte **konfiguraci řešení** na **ladit**. Potom stisknutím klávesy **CTRL**+**F5** Sestavte image Docker a spusťte ji místně.
+1. Ujistěte se, že je Docker nastavený tak, aby používal typ kontejneru (Linux nebo Windows), který používáte. Pravým tlačítkem myši klikněte na ikonu Docker na hlavním panelu a vyberte možnost **Přepnout na kontejnery Linux** nebo podle potřeby **Přepnout na kontejnery Windows** .
+
+1. Nastavte **konfiguraci řešení** na **ladit**. Potom stisknutím klávesy **Ctrl**+**F5** Sestavte image Docker a spusťte ji místně.
 
     Když je image kontejneru sestavená a spuštěná v kontejneru Docker, Visual Studio spustí webovou aplikaci ve výchozím prohlížeči.
 
-2. Přejít na stránku *index* . Na této stránce provedeme změny.
-3. Vraťte se do sady Visual Studio a otevřete *index. cshtml*.
-4. Na konec souboru přidejte následující obsah HTML a pak změny uložte.
+1. Přejít na stránku *index* . Na této stránce provedeme změny.
+1. Vraťte se do sady Visual Studio a otevřete *index. cshtml*.
+1. Na konec souboru přidejte následující obsah HTML a pak změny uložte.
 
     ```html
     <h1>Hello from a Docker container!</h1>
     ```
 
-5. V okně výstup, po dokončení sestavení .NET a zobrazení následujících řádků, přepněte zpět do prohlížeče a aktualizujte stránku:
+1. V okně výstup, po dokončení sestavení .NET a zobrazení následujících řádků, přepněte zpět do prohlížeče a aktualizujte stránku:
 
    ```output
    Now listening on: http://*:80
@@ -81,7 +87,7 @@ Vaše změny byly provedeny!
 Změny se často vyžadují ještě další kontroly. Pro tuto úlohu můžete použít funkce ladění sady Visual Studio.
 
 1. V aplikaci Visual Studio otevřete *index.cshtml.cs*.
-2. Obsah `OnGet` metody nahraďte následujícím kódem:
+2. Obsah metody `OnGet` nahraďte následujícím kódem:
 
    ```csharp
        ViewData["Message"] = "Your application description page from within a container";
@@ -91,19 +97,19 @@ Změny se často vyžadují ještě další kontroly. Pro tuto úlohu můžete p
 4. Chcete-li spustit ladění a stisknout zarážku, stiskněte klávesu F5.
 5. Přepněte do sady Visual Studio, abyste zobrazili zarážku. Zkontrolujte hodnoty.
 
-   ![Bodu](media/edit-and-refresh/breakpoint.png)
+   ![Bod přerušení](media/edit-and-refresh/breakpoint.png)
 
 ## <a name="create-a-net-framework-console-app"></a>Vytvoření konzolové aplikace .NET Framework
 
 Pokud používáte projekty konzolových aplikací .NET Framework, možnost přidat podporu Docker bez orchestrace není podporována. Můžete i nadále používat následující postup, i když používáte pouze jeden projekt Docker.
 
 1. Vytvořte nový projekt konzolové aplikace .NET Framework.
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu a pak vyberte **Přidat** > **podporu orchestrace kontejnerů**.  V dialogovém okně, které se zobrazí, vyberte možnost **Docker Compose**. Do projektu se přidá souboru Dockerfile a přidá se Docker Compose projekt s přidruženými podpůrnými soubory.
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu a vyberte **Přidat** **podporu orchestrace kontejnerů** > .  V dialogovém okně, které se zobrazí, vyberte možnost **Docker Compose**. Do projektu se přidá souboru Dockerfile a přidá se Docker Compose projekt s přidruženými podpůrnými soubory.
 
 ### <a name="debug-with-breakpoints"></a>Ladění pomocí zarážek
 
 1. V Průzkumník řešení otevřete *program.cs*.
-2. Obsah `Main` metody nahraďte následujícím kódem:
+2. Obsah metody `Main` nahraďte následujícím kódem:
 
    ```csharp
        System.Console.WriteLine("Hello, world!");
@@ -113,17 +119,21 @@ Pokud používáte projekty konzolových aplikací .NET Framework, možnost při
 4. Stisknutím klávesy F5 spusťte ladění a stiskněte zarážku.
 5. Přepněte do sady Visual Studio, abyste viděli zarážku a zkontrolovali hodnoty.
 
-   ![Bodu](media/edit-and-refresh/breakpoint-console.png)
+   ![Bod přerušení](media/edit-and-refresh/breakpoint-console.png)
 
 ## <a name="container-reuse"></a>Opakované použití kontejneru
 
 Během cyklu vývoje aplikace Visual Studio znovu sestaví pouze image kontejneru a samotný kontejner při změně souboru Dockerfile. Pokud souboru Dockerfile nezměníte, Visual Studio znovu použije kontejner z předchozího spuštění.
 
-Pokud jste kontejner ručně upravili a chcete ho restartovat pomocí čisticí image kontejneru, použijte příkaz **sestavit** > **Vyčištění** v aplikaci Visual Studio a pak Sestavte normálním způsobem.
+Pokud jste kontejner ručně upravili a chcete ho restartovat pomocí čisticí image kontejneru, použijte příkaz **sestavit** > **vyčistit** v aplikaci Visual Studio a pak Sestavte jako normální.
 
-## <a name="troubleshoot"></a>Řešení potíží
+## <a name="troubleshoot"></a>Řešení problémů
 
 Naučte se [řešit potíže s vývojem pro Visual Studio Docker](troubleshooting-docker-errors.md).
+
+## <a name="next-steps"></a>Další kroky
+
+Podrobnější informace získáte v tématu [jak Visual Studio](container-build.md)sestavuje aplikace s využitím kontejnerů.
 
 ## <a name="more-about-docker-with-visual-studio-windows-and-azure"></a>Další informace o Docker se sadou Visual Studio, Windows a Azure
 

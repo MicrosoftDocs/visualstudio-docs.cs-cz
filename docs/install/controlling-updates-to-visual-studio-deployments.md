@@ -8,19 +8,19 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 35C7AB05-07D5-4B38-BCAC-AB88444E7368
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d4ce4621fc2fa32f2730c0ce6cdd0618a44386b2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2cdf4d4e6fb90b18c8141d1d176629539a0a4f8b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974181"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75570580"
 ---
 # <a name="control-updates-to-network-based-visual-studio-deployments"></a>Řízení aktualizací nasazení sady Visual Studio založené na síti
 
@@ -88,9 +88,9 @@ Jak je popsáno výše, zkontroluje sada Visual Studio umístění, ze kterého 
 
 ::: moniker range="vs-2019"
 
-Jak je popsáno výše, zkontroluje sada Visual Studio umístění, ze kterého jeho instalaci, jako je například sdílené síťové složky nebo na internet, pokud chcete zobrazit, zda jsou k dispozici žádné aktualizace. Pokud je aktualizace dostupná, Visual Studio upozorní uživatele s ikonou oznámení v pravém dolním rohu okna.
+Jak je popsáno výše, zkontroluje sada Visual Studio umístění, ze kterého jeho instalaci, jako je například sdílené síťové složky nebo na internet, pokud chcete zobrazit, zda jsou k dispozici žádné aktualizace. Když je k dispozici aktualizace, Visual Studio upozorní uživatele pomocí ikony oznámení v pravém dolním rohu okna.
 
-   ![Ikona oznámení v integrovaném vývojovém prostředí sady Visual Studio](media/vs-2019/notification-bar.png "ikonu oznámení v integrovaném vývojovém prostředí sady Visual Studio")
+   ![Ikona oznámení v integrovaném vývojovém prostředí sady Visual Studio](media/vs-2019/notification-bar.png "Ikona oznámení v integrovaném vývojovém prostředí sady Visual Studio")
 
 ::: moniker-end
 
@@ -108,7 +108,7 @@ vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterpris
 
 ::: moniker range="vs-2019"
 
-Protože Visual Studio 2019 [ukládá položky registru v privátním registru](tools-for-managing-visual-studio-instances.md#editing-the-registry-for-a-visual-studio-instance), které nelze přímo upravovat položky registru obvyklým způsobem. Však zahrnuje Visual Studio `vsregedit.exe` nástroj, který vám umožní změnit nastavení sady Visual Studio. Můžete ji vypnout oznámení pomocí následujícího příkazu:
+Vzhledem k tomu, že Visual Studio 2019 [ukládá položky registru do privátního registru](tools-for-managing-visual-studio-instances.md#editing-the-registry-for-a-visual-studio-instance), nemůžete v obvyklých případech přímo upravovat registr. Však zahrnuje Visual Studio `vsregedit.exe` nástroj, který vám umožní změnit nastavení sady Visual Studio. Můžete ji vypnout oznámení pomocí následujícího příkazu:
 
 ```cmd
 vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" HKCU ExtensionManager AutomaticallyCheckForUpdates2Override dword 0
@@ -129,4 +129,4 @@ vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterpris
 * [Příručka pro správce aplikace Visual Studio](visual-studio-administrator-guide.md)
 * [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 * [Nástroje pro správu instancí sady Visual Studio](tools-for-managing-visual-studio-instances.md)
-* [Životního cyklu produktu Visual Studio a údržba](/visualstudio/releases/2019/servicing/)
+* [Životní cyklus produktu Visual Studio a údržba](/visualstudio/releases/2019/servicing/)

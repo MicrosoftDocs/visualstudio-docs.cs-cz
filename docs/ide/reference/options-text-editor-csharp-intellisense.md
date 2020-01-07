@@ -11,21 +11,21 @@ helpviewer_keywords:
 - wavy underlines
 - Text Editor Options dialog box, IntelliSense
 ms.assetid: 3466dedb-e5f4-424c-8dd8-e4941b2f4fc2
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d1e330788b72ff0b4395d1e5d531d1d233f59e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 87a167a75f3b06522da77d562b0137df89757975
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666231"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596213"
 ---
 # <a name="options-text-editor-c-intellisense"></a>Možnosti, textový editor, C#, IntelliSense
 
-Stránka možnosti **technologie IntelliSense** slouží k úpravě nastavení, která mají vliv na chování technologie C#IntelliSense pro. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje**  > **Možnosti**a pak zvolte**C#** **textový editor**  >   > **IntelliSense**.
+Stránka možnosti **technologie IntelliSense** slouží k úpravě nastavení, která mají vliv na chování technologie C#IntelliSense pro. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje** > **Možnosti**a pak zvolte **C#** **textový editor** >  > **IntelliSense**.
 
 Stránka možnosti **technologie IntelliSense** obsahuje následující možnosti:
 
@@ -33,7 +33,7 @@ Stránka možnosti **technologie IntelliSense** obsahuje následující možnost
 
 - Zobrazit seznam dokončení po zadání znaku *
 
-   Když je vybraná tato možnost, IntelliSense po zahájení psaní automaticky zobrazí seznam dokončení. Pokud tato možnost není vybrána, bude dokončování technologie IntelliSense stále k dispozici v nabídce **technologie IntelliSense** nebo stisknutí klávesy **CTRL** +**MEZERNÍK**.
+   Když je vybraná tato možnost, IntelliSense po zahájení psaní automaticky zobrazí seznam dokončení. Pokud tato možnost není vybrána, bude dokončování technologie IntelliSense stále k dispozici v nabídce **technologie IntelliSense** nebo stisknutí klávesy **CTRL**+**MEZERNÍK**.
 
 - Po odstranění znaku zobrazit seznam dokončení
 
@@ -53,7 +53,7 @@ Stránka možnosti **technologie IntelliSense** obsahuje následující možnost
 
 - Zahrnout fragmenty kódu při zadání?-Tab po identifikátoru
 
-   Pokud je vybrána tato možnost, technologie IntelliSense přidá aliasy pro C# fragmenty kódu do seznamu dokončení při stisknutí klávesy TAB na**kartě** **?** + po identifikátoru.
+   Pokud je vybrána tato možnost, technologie IntelliSense přidá aliasy pro C# fragmenty kódu do seznamu dokončení při stisknutí klávesy TAB na **kartě** **?** +po identifikátoru.
 
 ## <a name="enter-key-behavior"></a>Chování klávesy ENTER
 

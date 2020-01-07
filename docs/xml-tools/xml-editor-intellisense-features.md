@@ -3,17 +3,17 @@ title: Funkce IntelliSense v editoru XML
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2b26f214-cc3a-46bf-b260-14eb8e599182
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a44af076e8663e525e33727a24aa93f9391f4b5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 609684452190bf7471f90fee75f66dbb2fcbec8e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603955"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592383"
 ---
 # <a name="xml-editor-intellisense-features"></a>Funkce IntelliSense editoru XML
 
@@ -87,7 +87,7 @@ Například pokud vyberete prvek `e:Book` ze seznamu IntelliSense, kde je předp
 
 ## <a name="brace-matching"></a>Spárování složených závorek
 
-Editor XML nabízí zvýraznění složených závorek, které poskytuje okamžitou zpětnou vazbu na prvky, které jste právě zavřeli. Můžete také použít klávesovou zkratku (**Ctrl** + **]** ) a přeskočit jednu složenou závorku k párové závorce.
+Editor XML nabízí zvýraznění složených závorek, které poskytuje okamžitou zpětnou vazbu na prvky, které jste právě zavřeli. Můžete také použít klávesovou zkratku (**Ctrl**+ **]** ) a přeskočit jednu složenou závorku k párové závorce.
 
 Editor XML provede následující položky:
 
@@ -107,7 +107,7 @@ Editor XML provede následující položky:
 
 ## <a name="modify-the-intellisense-options"></a>Úprava možností IntelliSense
 
-Funkce IntelliSense a automatické dokončování jsou ve výchozím nastavení povoleny. Můžete to však změnit úpravou nastavení **nástroje**  > **Možnosti** .
+Funkce IntelliSense a automatické dokončování jsou ve výchozím nastavení povoleny. Můžete to však změnit úpravou nastavení **nástroje** > **Možnosti** .
 
 Část **Automatické vložení** stránky **různé** určuje následující chování:
 
@@ -119,7 +119,7 @@ Funkce IntelliSense a automatické dokončování jsou ve výchozím nastavení 
 
 ### <a name="to-change-the-auto-completion-behavior"></a>Změna chování automatického dokončování
 
-1. V nabídce **nástroje** vyberte **možnost možnosti** .
+1. Vyberte **možnosti** z **nástroje** nabídky.
 
 2. Rozbalte položku **textový editor**, rozbalte položku **XML**a vyberte možnost **různé**.
 

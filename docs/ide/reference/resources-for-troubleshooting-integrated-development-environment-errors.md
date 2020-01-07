@@ -88,24 +88,24 @@ f1_keywords:
 - VB_E_TERRCLASSNOTREG
 - vs.webclient.help.general
 ms.assetid: 8f866eb5-a206-4c16-807e-96a0f2c0e645
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c71b281a89d0465ac80f04de868b16cc5468429a
-ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
+ms.openlocfilehash: dc3b1524b97b68e54574badcb003e608924e476d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919066"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593613"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Zdroje informací pro řešení potíží s integrovaným vývojovým prostředím
 
 Ne všechny chybové zprávy mají konkrétní související téma nápovědy. Pokud informace v chybové zprávě vám nepomůžou problém vyřešit, můžete si prostudovat jiné prostředky, jako jsou články znalostní báze, fóra nebo Podpora produktů.
 
 > [!NOTE]
-> Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [řešení potíží s Visual Studio pro Mac](/visualstudio/mac/troubleshooting).
+> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [řešení potíží s Visual Studio pro Mac](/visualstudio/mac/troubleshooting).
 
 ## <a name="knowledge-base-articles"></a>Články znalostní báze
 
@@ -117,7 +117,7 @@ Fóra umožňují interakci s dalšími vývojáři a také zaměstnanci společ
 
 Na webu [technické komunity Microsoftu](https://techcommunity.microsoft.com/t5/Communities/ct-p/communities) můžete získat přístup k fórům, blogům, chatům a dalším prostředkům.
 
-## <a name="product-support"></a>Produktová podpora
+## <a name="product-support"></a>Podpora produktu
 
 Pokud máte i po vyzkoušení dalších prostředků nějaké dotazy, můžete kontaktovat služby podpory Microsoftu na webu [Podpora Microsoftu](https://support.microsoft.com/en-us) . Informace o podpoře produktu dostupné ve vaší oblasti najdete na stránce [Možnosti zpětné vazby pro Visual Studio](../../ide/feedback-options.md) .
 

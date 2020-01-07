@@ -8,17 +8,17 @@ helpviewer_keywords:
 - unit tests, generating
 - unit tests, running
 - unit tests, authoring
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-author: jillre
-ms.openlocfilehash: 317b014ae0ef684dfc5f7ff73247d6186846a860
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: b1ec115dd960799a1242a0d60bd793d671facb18
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659662"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590706"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>Návod: Vytváření a spouštění testů jednotek pro spravovaný kód
 
@@ -28,11 +28,11 @@ Tento článek vás provede vytvořením, spuštěním a přizpůsobením řady 
 
 ::: moniker range="vs-2017"
 
-1. Otevřete Visual Studio.
+1. Otevřít Visual Studio.
 
 2. V nabídce **soubor** vyberte **Nový** > **projekt**.
 
-   Zobrazí se dialogové okno **Nový projekt** .
+   **Nový projekt** zobrazí se dialogové okno.
 
 3. V kategorii **Visual C#**  > **.NET Core** vyberte šablonu projektu **aplikace konzoly (.NET Core)** .
 
@@ -47,7 +47,7 @@ Tento článek vás provede vytvořením, spuštěním a přizpůsobením řady 
 
 ::: moniker range=">=vs-2019"
 
-1. Otevřete Visual Studio.
+1. Otevřít Visual Studio.
 
 2. V okně Start vyberte možnost **vytvořit nový projekt**.
 
@@ -134,16 +134,16 @@ Tento článek vás provede vytvořením, spuštěním a přizpůsobením řady 
 
 6. Přejmenujte soubor na *BankAccount.cs* tak, že kliknete pravým tlačítkem a zvolíte **Přejmenovat** v **Průzkumník řešení**.
 
-7. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+7. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
 Nyní máte projekt s metodami, které můžete testovat. V tomto článku se testy zaměřují na metodu `Debit`. Metoda `Debit` se volá, když se peníze z účtu odeberou.
 
 ## <a name="create-a-unit-test-project"></a>Vytvoření projektu testování částí
 
-1. V nabídce **soubor** vyberte **Přidat**  > **Nový projekt**.
+1. V nabídce **soubor** vyberte **Přidat** > **Nový projekt**.
 
    > [!TIP]
-   > Můžete také kliknout pravým tlačítkem na řešení v **Průzkumník řešení** a zvolit **Přidat**  > **Nový projekt**.
+   > Můžete také kliknout pravým tlačítkem na řešení v **Průzkumník řešení** a zvolit **Přidat** > **Nový projekt**.
 
 ::: moniker range="vs-2017"
 
@@ -151,7 +151,7 @@ Nyní máte projekt s metodami, které můžete testovat. V tomto článku se te
 
 3. V seznamu šablon vyberte **projekt testů MSTest (.NET Core)** .
 
-4. Do pole **název** zadejte `BankTests` a pak vyberte **OK**.
+4. Do pole **název** zadejte `BankTests`a pak vyberte **OK**.
 
    Projekt **BankTests** se přidá do řešení **bank** .
 
@@ -163,7 +163,7 @@ Nyní máte projekt s metodami, které můžete testovat. V tomto článku se te
 
 3. Pojmenujte projekt **BankTests**.
 
-4. Klikněte na **vytvořit**.
+4. Klikněte na **Vytvořit**.
 
    Projekt **BankTests** se přidá do řešení **bank** .
 
@@ -175,7 +175,7 @@ Nyní máte projekt s metodami, které můžete testovat. V tomto článku se te
 
 6. V dialogovém okně **Správce odkazů** rozbalte položku **projekty**, vyberte možnost **řešení**a poté zkontrolujte položku **banka** .
 
-7. Klikněte na **tlačítko OK**.
+7. Vyberte **OK**.
 
 ## <a name="create-the-test-class"></a>Vytvořit testovací třídu
 
@@ -217,7 +217,7 @@ namespace BankTests
 
 ### <a name="add-a-using-statement"></a>Přidat příkaz using
 
-Přidejte do třídy testu [příkaz `using`](/dotnet/csharp/language-reference/keywords/using-statement) , abyste mohli volat do testovaného projektu bez použití plně kvalifikovaných názvů. V horní části souboru třídy přidejte:
+Přidejte do třídy testu [příkaz`using`](/dotnet/csharp/language-reference/keywords/using-statement) , abyste mohli volat do testovaného projektu bez použití plně kvalifikovaných názvů. V horní části souboru třídy přidejte:
 
 ```csharp
 using BankAccountNS;
@@ -287,7 +287,7 @@ Testovací metoda musí splňovat následující požadavky:
 
 1. V nabídce **sestavení** klikněte na příkaz **Sestavit řešení**.
 
-2. Pokud není **Průzkumník testů** otevřený, otevřete ho výběrem možnosti **test**  > **Windows**  > **Průzkumník testů** v horním řádku nabídek.
+2. Pokud není **Průzkumník testů** otevřený, otevřete ho výběrem možnosti **test** > **Windows** > **Průzkumník testů** v horním řádku nabídek.
 
 3. Kliknutím na možnost **Spustit vše** spusťte test.
 
@@ -311,7 +311,7 @@ Chcete-li chybu opravit, v souboru *BankAccount.cs* nahraďte řádek:
 m_balance += amount;
 ```
 
-řetězce
+textem:
 
 ```csharp
 m_balance -= amount;
@@ -352,7 +352,7 @@ public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
 }
 ```
 
-Použijte metodu <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A> k vyhodnocení, že byla vyvolána správná výjimka. Tato metoda způsobí selhání testu, pokud není vyvolána <xref:System.ArgumentOutOfRangeException>. Pokud dočasně upravíte metodu v rámci testu, aby vyvolal obecnější <xref:System.ApplicationException>, pokud je částka MD menší než nula, test se chová správně &mdash;that je, dojde k chybě.
+Použijte metodu <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A> k vyhodnocení, že byla vyvolána správná výjimka. Tato metoda způsobí selhání testu, pokud není vyvolána <xref:System.ArgumentOutOfRangeException>. Pokud dočasně upravíte metodu v rámci testu, aby vyvolal obecnější <xref:System.ApplicationException>, pokud je částka MD menší než nula, test se chová správně&mdash;to znamená, že se nezdařil.
 
 Chcete-li otestovat případ, kdy je stažená částka větší než zůstatek, proveďte následující kroky:
 
@@ -465,7 +465,7 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 Vylepšení testovacího kódu vedla k robustnějším a informativním testovacím metodám. Ale důležitější je, že také vylepšili testovaný kód.
 
 > [!TIP]
-> Tento návod používá pro spravovaný kód rozhraní testování částí společnosti Microsoft. **Průzkumník testů** může také spouštět testy z rozhraní pro testování částí třetích stran, které mají adaptéry pro **Průzkumník testů**. Další informace najdete v tématu [instalace rozhraní pro testování částí třetích stran](../test/install-third-party-unit-test-frameworks.md).
+> Tento návod používá pro spravovaný kód rozhraní testování částí společnosti Microsoft. **Průzkumník testů** může také spouštět testy z rozhraní pro testování částí třetích stran, které mají adaptéry pro **Průzkumník testů**. Další informace najdete v tématu [nainstalovat rozhraní pro testování jednotky třetí strany](../test/install-third-party-unit-test-frameworks.md).
 
 ## <a name="see-also"></a>Viz také:
 

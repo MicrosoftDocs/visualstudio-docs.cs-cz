@@ -36,17 +36,17 @@ helpviewer_keywords:
 - Code Editor, indenting
 - Code Editor, tabs
 ms.assetid: 7e208e1d-5e3a-4bf7-a27b-4417e3e049c7
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 45cee31df08461731c14e2ac1fdef8456a882800
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0fc169960cf757e4e334d5f77b06ff70b0d6da7c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666362"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594744"
 ---
 # <a name="options-text-editor-all-languages-tabs"></a>Možnosti, textový editor, všechny jazyky, karty
 
@@ -67,7 +67,7 @@ Blok
 
 Je-li tato možnost vybrána, budou nové řádky automaticky odsazeny. Bod vložení se umístí na stejný výchozí bod jako předchozí řádek.
 
-Oblé
+Inteligence
 
 Je-li vybrána tato možnost, jsou nové řádky umístěny tak, aby odpovídaly kontextu kódu, pro další nastavení formátování kódu a konvence technologie IntelliSense pro váš vývojový jazyk. Tato možnost není k dispozici pro všechny vývojové jazyky.
 
@@ -87,7 +87,7 @@ Vložit mezery
 
 Pokud je tato možnost vybrána, operace odsazení zabírají pouze znaky, nikoli znaky TABULÁTORu. Pokud je **Velikost odsazení** nastavená na 5, například, pak se při každém stisknutí klávesy TAB nebo **zvětšení odsazení** na panelu nástrojů **formátování** vloží pět znaků mezer.
 
-Zachovat záložky
+Dělejte si záložky
 
 Pokud je tato možnost vybrána, operace odsazení zaplňují tolik znaků TABULÁTORu. Každý znak TABULÁTORu vyplní počet mezer zadaný v poli **velikost tabulátoru**. Pokud **Velikost odsazení** není sudým násobkem **velikosti tabulátoru**, přidají se k vyplnění rozdílu znaky mezer.
 

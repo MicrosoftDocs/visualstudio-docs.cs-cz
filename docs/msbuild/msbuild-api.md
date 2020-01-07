@@ -1,21 +1,21 @@
 ---
-title: Nástroj MSBuild rozhraní API | Dokumentace Microsoftu
+title: Rozhraní API pro MSBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 256dba169357f24af147f6efd244de842563bc43
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6c04a349b606671cb5ca536468b4d7b6fe0d05a9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817282"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592110"
 ---
-# <a name="use-the-msbuild-api"></a>Použití nástroje MSBuild rozhraní API
+# <a name="use-the-msbuild-api"></a>Použití rozhraní API pro MSBuild
 
-Nástroj MSBuild poskytuje veřejné ploše rozhraní API tak, aby váš program může provádět sestavování a zkontrolovat projekty.
+Nástroj MSBuild poskytuje veřejnou plochu rozhraní API, aby mohl program provádět sestavení a kontrolovat projekty.
 
-Dokumentace pro rozhraní API nástroje MSBuild najdete [obory názvů Microsoft.Build](https://msdn.microsoft.com/library/mt476050(v=vs.110).aspx).
+Dokumentaci k rozhraní API pro MSBuild najdete v části [obory názvů Microsoft. Build](https://msdn.microsoft.com/library/mt476050(v=vs.110).aspx).

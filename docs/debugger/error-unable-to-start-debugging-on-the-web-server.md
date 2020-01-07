@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c976f14a4250741d166c189c53a1b8cae8ea891a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2f0e3666c313c55df605cd7b79199827765f40f3
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736709"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75404360"
 ---
 # <a name="error-unable-to-start-debugging-on-the-web-server"></a>Chyba: Nepodařilo se zahájit ladění na webovém serveru.
 
@@ -52,6 +52,7 @@ Zpráva `Unable to start debugging on the Web server` je obecná. V řetězci ch
 - [Nepovedlo se spustit ladění ASP.NET](#aspnet)
 - [Ladicí program se nemůže připojit ke vzdálenému počítači.](#cannot_connect)
 - [Běžné chyby konfigurace najdete v nápovědě. Spuštění webové stránky mimo ladicí program může poskytovat další informace.](#see_help)
+- [Operace není podporována. Neznámá chyba: *ErrorNumber*](#operation_not_supported)
 
 ## <a name="IISlist"></a>Služba IIS neobsahuje seznam webů, které se shodují s adresou URL pro spuštění.
 
@@ -76,14 +77,14 @@ Zpráva `Unable to start debugging on the Web server` je obecná. V řetězci ch
 ## <a name="msvsmon"></a>Zdá se, že sledování vzdáleného ladění sady Microsoft Visual Studio (Msvsmon. exe) na vzdáleném počítači neběží.
 
 - Pokud provádíte ladění na vzdáleném počítači, ujistěte se, že jste [nainstalovali a spouštíte vzdálený ladicí program](../debugger/remote-debugging.md). Pokud se zpráva zmiňuje o bráně firewall, ujistěte se, že jsou otevřené [správné porty brány firewall](../debugger/remote-debugger-port-assignments.md) , zejména pokud používáte bránu firewall jiného výrobce.
-- Pokud používáte soubor hostitelů, ujistěte se, že je správně nakonfigurovaný. Například pokud ladění pomocí klávesy **F5** (místo **připojení k procesu**), musí soubor hostitelů zahrnovat stejnou adresu URL projektu jako ve vlastnostech projektu, **vlastnosti > serverech webového >** nebo **Vlastnosti > ladění**v závislosti na typ projektu.
+- Pokud používáte soubor hostitelů, ujistěte se, že je správně nakonfigurovaný. Například pokud ladění pomocí **F5** (místo **připojení procesu**), musí soubor hostitelů zahrnovat stejnou adresu URL projektu jako ve vlastnostech projektu, **vlastnosti > serverech webových >** nebo **Vlastnosti > ladění**v závislosti na typu projektu.
 
 ## <a name="server_error"></a>Vzdálený server vrátil chybu.
 
 V [souboru protokolu služby IIS](https://support.microsoft.com/help/943891/the-http-status-code-in-iis-7-0--iis-7-5--and-iis-8-0) vyhledejte chybové podkódy a další informace a tento [příspěvek blogu](https://blogs.iis.net/tomkmvp/troubleshoot-a-403)služby IIS 7.
 
 Tady jsou některé běžné kódy chyb a několik návrhů.
-- (403) zakázáno. Tato chyba obsahuje mnoho možných příčin, proto si prohlédněte soubor protokolu a nastavení zabezpečení služby IIS pro web. Ujistěte se, že web. config serveru obsahuje `debug=true` v elementu compilation. Přesvědčte se, zda má složka webové aplikace správná oprávnění a zda je konfigurace fondu aplikací správná (heslo bylo pravděpodobně změněno). Podívejte [se na téma ověření konfigurace služby IIS](#vxtbshttpservererrorsthingstocheck). Pokud jsou tato nastavení již správná a probíhá ladění místně, ověřte také, že se připojujete ke správnému typu serveru a adrese URL (v části **vlastnosti > webové > servery** nebo **Vlastnosti > ladění**v závislosti na typu projektu).
+- (403) Zakázáno. Tato chyba obsahuje mnoho možných příčin, proto si prohlédněte soubor protokolu a nastavení zabezpečení služby IIS pro web. Ujistěte se, že web. config serveru obsahuje `debug=true` v elementu compilation. Přesvědčte se, zda má složka webové aplikace správná oprávnění a zda je konfigurace fondu aplikací správná (heslo bylo pravděpodobně změněno). Podívejte [se na téma ověření konfigurace služby IIS](#vxtbshttpservererrorsthingstocheck). Pokud jsou tato nastavení již správná a probíhá ladění místně, ověřte také, že se připojujete ke správnému typu serveru a adrese URL (v části **vlastnosti > webové > servery** nebo **Vlastnosti > ladění**v závislosti na typu projektu).
 - (503) Server není k dispozici. Fond aplikací byl pravděpodobně zastaven z důvodu chyby nebo změny konfigurace. Restartujte fond aplikací.
 - (404) Nenalezeno. Ujistěte se, že je fond aplikací nakonfigurovaný pro správnou verzi ASP.NET.
 
@@ -105,6 +106,10 @@ Také Pokud používáte soubor hostitelů, ujistěte se, že je správně nakon
 - Používáte aplikaci Visual Studio a webový server na stejném počítači? Otevřete vlastnosti projektu a ujistěte se, že je projekt nakonfigurován pro připojení ke správnému webovému serveru a adresu URL pro spuštění. (Otevřené **vlastnosti > servery nebo vlastnosti webového >** **> ladění** v závislosti na typu projektu.)
 
 - Pokud to nefunguje nebo když ladíte vzdáleně, postupujte podle kroků v [podrobnostech konfigurace služby IIS](#vxtbshttpservererrorsthingstocheck).
+
+## <a name="operation_not_supported"></a>Operace není podporována. Neznámá chyba: *ErrorNumber*
+
+Pokud provádíte přepsání adresy URL, otestujte základní soubor Web. config bez přepsání adresy URL. Podívejte se na **poznámku** o modulu URL přepisu v [konfiguraci služby IIS](#vxtbshttpservererrorsthingstocheck).
 
 ## <a name="vxtbshttpservererrorsthingstocheck"></a>Ověřte konfiguraci služby IIS.
 

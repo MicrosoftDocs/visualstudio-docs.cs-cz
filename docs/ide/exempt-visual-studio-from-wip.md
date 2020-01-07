@@ -2,17 +2,17 @@
 title: Výjimka ze systému Windows Information Protection
 ms.date: 06/01/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab08ea1f3a4c66c026de781f2d39a0bc9d08af96
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8b4eb454f641b5bef7273464d605fb194f650790
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650870"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588561"
 ---
 # <a name="configure-visual-studio-as-a-wip-exempt-app"></a>Konfigurace sady Visual Studio jako aplikace s výjimkou nedokončené výroby
 
@@ -32,7 +32,7 @@ Vzhledem k tomu, že Visual Studio obsahuje více binárních souborů, [vytvoř
 
 ## <a name="add-appcompat-to-the-enterprise-cloud-resource-policy"></a>Přidání AppCompat do zásad podnikového cloudového prostředku
 
-Chcete-li určit, kam má aplikace Visual Studio přistupovat k podnikovým datům ve vaší síti, postupujte podle těchto [kroků a definujte, kam mohou chráněné aplikace najít a odeslat podniková data](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure#choose-where-apps-can-access-enterprise-data). Pokud chcete systému Windows zabránit v blokování připojení ke cloudovým prostředkům prostřednictvím IP adresy, nezapomeňte do tohoto nastavení přidat řetězec/\*AppCompat \*/.
+Chcete-li určit, kam má aplikace Visual Studio přistupovat k podnikovým datům ve vaší síti, postupujte podle těchto [kroků a definujte, kam mohou chráněné aplikace najít a odeslat podniková data](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure#choose-where-apps-can-access-enterprise-data). Pokud chcete systému Windows zabránit v blokování připojení ke cloudovým prostředkům prostřednictvím IP adresy, nezapomeňte do nastavení přidat řetězec\*/\*AppCompat.
 
 ## <a name="see-also"></a>Viz také:
 

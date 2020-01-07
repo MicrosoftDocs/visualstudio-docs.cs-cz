@@ -2,21 +2,21 @@
 title: Přidání parametru do rychlé akce metody
 ms.date: 09/28/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d1edc9d38ff4476a9fe76886676bfce1c80a61db
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6720421fd5188688214665d85de682542b1c1357
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658804"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595862"
 ---
 # <a name="add-a-parameter-to-a-method-using-a-quick-action"></a>Přidání parametru do metody pomocí rychlé akce
 
-Tato generace kódu platí pro:
+Tato generace kód platí pro:
 
 - C#
 
@@ -39,7 +39,7 @@ Tato generace kódu platí pro:
    ![Přidání parametru do rychlé akce metody v aplikaci Visual Studio](media/add-parameter-to-method.png)
 
    > [!TIP]
-   > K nabídce rychlá akce se dostanete také tak, že umístíte kurzor na řádek volání metody a potom stisknete **klávesu Ctrl** + **.** (tečka) nebo v okraji souboru vyberte ikonu žárovky.
+   > K nabídce rychlá akce se dostanete také tak, že umístíte kurzor na řádek volání metody a potom stisknete **klávesu Ctrl**+ **.** (tečka) nebo v okraji souboru vyberte ikonu žárovky.
 
    Visual Studio přidá nový parametr do deklarace metody.
 

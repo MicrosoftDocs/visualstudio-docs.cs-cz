@@ -2,17 +2,17 @@
 title: Postupy pro textové šablony
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fc29b7daa65a9aa0b0c45ae5bc90a4f845dedff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a7ecabc00f37cb199f203bcd71a1b72bdbfbe1a4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605629"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594653"
 ---
 # <a name="how-to--with-text-templates"></a>Postupy pro textové šablony
 Textové šablony v aplikaci Visual Studio poskytují užitečný způsob, jak vygenerovat text libovolného druhu. Můžete použít textové šablony k vygenerování textu v době běhu jako součást vaší aplikace a v době návrhu k vygenerování kódu projektu. Toto téma shrnuje nejčastější dotaz "Návody...?" otázky.
@@ -35,7 +35,7 @@ Textové šablony v aplikaci Visual Studio poskytují užitečný způsob, jak v
 
 - Pokud chcete generovat ze šablon, které jsou k dispozici pouze v době běhu, můžete použít standardní textové šablony. Pokud píšete rozšíření sady Visual Studio, můžete vyvolat službu šablonování textu. Další informace najdete v tématu [vyvolání transformace textu v rozšíření vs](../modeling/invoking-text-transformation-in-a-vs-extension.md). V jiných kontextech můžete použít modul text šablonování. Další informace najdete v tématu <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>.
 
-     K předání parametrů těmto šablonám Použijte direktivu \< # @parameter # >. Další informace naleznete v tématu [direktiva parametru T4](../modeling/t4-parameter-directive.md).
+     K předání parametrů těmto šablonám Použijte direktivu \<#@parameter# >. Další informace naleznete v tématu [direktiva parametru T4](../modeling/t4-parameter-directive.md).
 
 ### <a name="read-another-project-file-from-a-template"></a>Načíst jiný soubor projektu ze šablony
  Chcete-li číst soubor ze stejného projektu sady Visual Studio jako šablonu:
@@ -48,7 +48,7 @@ Textové šablony v aplikaci Visual Studio poskytují užitečný způsob, jak v
 
 Pokud metody již existují, například v třídách .NET:
 
-- Pomocí direktivy \< # @assembly # > načtěte sestavení a pomocí \< # @import # > nastavte kontext oboru názvů. Další informace najdete v tématu [direktiva T4 pro import](../modeling/t4-import-directive.md).
+- Pomocí direktivy \<#@assembly# > načtěte sestavení a pomocí \<#@import# > nastavte kontext oboru názvů. Další informace najdete v tématu [direktiva T4 pro import](../modeling/t4-import-directive.md).
 
    Pokud často používáte stejnou sadu direktiv sestavení a importu, zvažte vytvoření procesoru direktiv. V každé šabloně můžete vyvolat procesor direktiv, který může načíst sestavení a soubory modelu a nastavit kontext oboru názvů. Další informace najdete v tématu [vytváření vlastních procesorů pro direktivy textových šablon T4](../modeling/creating-custom-t4-text-template-directive-processors.md).
 
@@ -94,7 +94,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 
 ### <a name="execute-text-templates-in-the-build-process"></a>Spouštění textových šablon v procesu sestavení
 
-- Další informace naleznete v tématu [generování kódu v procesu sestavení](../modeling/code-generation-in-a-build-process.md).
+- Další informace najdete v tématu [generování kódu v procesu sestavení](../modeling/code-generation-in-a-build-process.md).
 
 ## <a name="more-general-questions"></a>Obecnější otázky
 

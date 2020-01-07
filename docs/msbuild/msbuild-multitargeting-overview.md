@@ -3,17 +3,17 @@ title: Přehled cílení na více verzí nástroje MSBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: eecbcd65-9fbc-4307-a321-46d3c3b79b12
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc7bbf08ac2d020ac058eaa75791e5b733ceab04
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: d54209624a7413bb5d968f212e669a4be8171b43
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926407"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595914"
 ---
 # <a name="msbuild-multitargeting-overview"></a>Přehled cílení na více verzí nástroje MSBuild
 Pomocí nástroje MSBuild můžete zkompilovat aplikaci pro spuštění v libovolné z několika verzí .NET Framework a na některé z několika systémových platforem. Například můžete zkompilovat aplikaci pro spuštění na .NET Framework 2,0 na 32 platformě a zkompilovat stejnou aplikaci, která bude spuštěna na .NET Framework 4,5 64 na 64bitové platformě.
@@ -45,5 +45,5 @@ Pomocí nástroje MSBuild můžete zkompilovat aplikaci pro spuštění v libovo
 ## <a name="configure-targets-and-tasks"></a>Konfigurace cílů a úloh
  Cíle a úlohy nástroje MSBuild můžete nakonfigurovat tak, aby běžely mimo proces s nástrojem MSBuild, abyste mohli cílit na kontexty, které jsou výrazně jiné než ten, na kterém je spuštěný.  Můžete například cílit na 32, .NET Framework 2,0 aplikace, zatímco vývojový počítač běží na platformě 64 s .NET Framework 4,5. Další informace najdete v tématu [Konfigurace cílů a úloh](../msbuild/configuring-targets-and-tasks.md).
 
-## <a name="troubleshooting"></a>Poradce při potížích
+## <a name="troubleshooting"></a>Odstraňování problémů
  Při pokusu o odkaz na sestavení, které není součástí cílového kontextu, může dojít k chybám. Další informace o těchto chybách a o tom, co s nimi dělat, najdete v tématu [řešení potíží s chybami cílení .NET Framework](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md).

@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, adding custom validation
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cfd85d7b7e60c64244fb1753ffb2a903dff03455
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9f7c3c37feb2f2d68817807f056ee470f0d0d05f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748554"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597227"
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Přidání vlastního ověřování architektury do diagramů závislostí
 
@@ -83,38 +83,38 @@ Pokud chcete vytvořit jeden VSIX, který obsahuje validátory vrstvy, příkazy
 
 4. V části **source. extension. vsixmanifest**v části **assets (prostředky**) přidejte projekt ověření vrstvy jako komponentu MEF:
 
-    1. Klikněte na tlačítko **Nový**.
+    1. Zvolte **Nové**.
 
     2. V dialogovém okně **Přidat nový prostředek** nastavte:
 
-         **Zadejte**  = **Microsoft. VisualStudio. MefComponent**
+         **Type** = **Microsoft.VisualStudio.MefComponent**
 
-         **Zdrojový**  = **projekt v aktuálním řešení**
+         **Zdrojový** = **projekt v aktuálním řešení**
 
-         **Projekt**  = *váš projekt validátoru*
+         **Projekt** = *váš projekt validátoru*
 
 5. Musíte ho také přidat jako ověření vrstvy:
 
-    1. Klikněte na tlačítko **Nový**.
+    1. Zvolte **Nové**.
 
     2. V dialogovém okně **Přidat nový prostředek** nastavte:
 
-         **Zadejte**  = **Microsoft. VisualStudio. ArchitectureTools. Layer. validátor**. Nejedná se o jednu z možností v rozevíracím seznamu. Je nutné zadat ho z klávesnice.
+         **Type** = **Microsoft.VisualStudio.ArchitectureTools.Layer.Validator**. Nejedná se o jednu z možností v rozevíracím seznamu. Je nutné zadat ho z klávesnice.
 
-         **Zdrojový**  = **projekt v aktuálním řešení**
+         **Zdrojový** = **projekt v aktuálním řešení**
 
-         **Projekt**  = *váš projekt validátoru*
+         **Projekt** = *váš projekt validátoru*
 
 6. Vraťte se do projektu ověření vrstvy a přidejte následující odkazy projektu:
 
-    |**Reference**|**Co vám to umožňuje**|
+    |**Odkazy**|**Co vám to umožňuje**|
     |-|-|
-    |Microsoft. VisualStudio. GraphModel. dll|Čtení grafu architektury|
-    |Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost. CodeSchema. dll|Čtení modelu DOM kódu přidruženého k vrstvám|
-    |Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost. Layer. dll|Čtení modelu vrstvy|
-    |Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost|Čtení a aktualizace obrazců a diagramů.|
-    |System. ComponentModel. složení|Definice ověřovací komponenty pomocí Managed Extensibility Framework (MEF)|
-    |Microsoft. VisualStudio. Modeling. SDK. znění|Definování rozšíření modelování|
+    |Microsoft.VisualStudio.GraphModel.dll|Čtení grafu architektury|
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|Čtení modelu DOM kódu přidruženého k vrstvám|
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Čtení modelu vrstvy|
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility|Čtení a aktualizace obrazců a diagramů.|
+    |System.ComponentModel.Composition|Definice ověřovací komponenty pomocí Managed Extensibility Framework (MEF)|
+    |Microsoft.VisualStudio.Modeling.Sdk.[version]|Definování rozšíření modelování|
 
 7. Zkopírujte ukázkový kód na konci tohoto tématu do souboru třídy v projektu knihovny validátoru, aby obsahoval kód pro ověření. Další informace najdete v tématu [ověřování programování](#programming).
 
@@ -174,7 +174,7 @@ Model grafu je definován v <xref:Microsoft.VisualStudio.GraphModel>. Jeho hlavn
 
 Každý uzel a každý odkaz má jednu nebo více kategorií, které určují typ prvku nebo vztahu, který představuje. Uzly typického grafu mají následující kategorie:
 
-- DSL. LayerModel
+- Dsl.LayerModel
 
 - DSL. Layer
 

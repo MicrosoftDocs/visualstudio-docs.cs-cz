@@ -16,23 +16,23 @@ helpviewer_keywords:
 - namespaces [Visual Studio], referencing
 - COM components, referencing
 - objects [Visual Studio], referencing
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06235439fdff952225fe3aafea9f5354a27cb0a3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9623e8ffb6a315851d26cd06defb62899e429f44
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658423"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591252"
 ---
 # <a name="manage-references-in-a-project"></a>Správa odkazů v projektu
 
 Před psaním kódu proti externí komponentě nebo připojené službě musí projekt nejprve obsahovat odkaz na něj. Odkaz je v podstatě záznam v souboru projektu, který obsahuje informace, které Visual Studio potřebuje k umístění komponenty nebo služby.
 
-Chcete-li přidat odkaz, klikněte pravým tlačítkem myši na uzel **odkazy** nebo **závislosti** v **Průzkumník řešení** a vyberte možnost **Přidat odkaz**. Můžete také kliknout pravým tlačítkem na uzel projektu a vybrat **přidat**  > **odkaz**. Další informace najdete v tématu [Postupy: Přidání nebo odebrání odkazů](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md).
+Chcete-li přidat odkaz, klikněte pravým tlačítkem myši na uzel **odkazy** nebo **závislosti** v **Průzkumník řešení** a vyberte možnost **Přidat odkaz**. Můžete také kliknout pravým tlačítkem na uzel projektu a vybrat **přidat** > **odkaz**. Další informace najdete v tématu [Postupy: Přidání nebo odebrání odkazů](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md).
 
 ![Přidat odkaz v jazyce Visual C&#43;&#43;](../ide/media/vs2015_cpp_add_reference.png)
 
@@ -72,7 +72,7 @@ Pokud zjistíte, že sada SDK rozšíření, na kterou odkazuje vaše aplikace, 
     > Jedním ze způsobů, jak zjistit, jestli sada rozšíření SDK má závislosti na jiných sadách SDK rozšíření, je vyhledána v **nástroji Správce odkazů**. Restartujte Visual Studio, vytvořte nový C# projekt aplikace pro UWP a pak klikněte pravým tlačítkem na projekt a vyberte **Přidat odkaz**. Klikněte na kartu **Windows** , pak na dílčí kartu **rozšíření** a vyberte sadu SDK rozšíření. Podívejte se do pravého podokna ve **Správci odkazů**. Pokud mají závislosti, budou uvedeny zde.
 
     > [!IMPORTANT]
-    > Pokud projekt cílí na Windows 10 a sada rozšíření SDK nainstalovaná v předchozím kroku má závislost na balíčku Microsoft Visual C++ runtime, verze balíčku Microsoft Visual C++ runtime, která je kompatibilní s Windows 10 je v 14.0, a je nainstalován se sadou Visual Studio.
+    > Pokud projekt cílí na Windows 10 a sada rozšíření SDK nainstalovaná v předchozím kroku má závislost na balíčku Microsoft Visual C++ runtime, verze balíčku Microsoft Visual C++ runtime, která je kompatibilní se systémem Windows 10 je v 14.0 a je nainstalována se sadou Visual Studio.
 
 1. Pokud sada rozšíření SDK, kterou jste nainstalovali v předchozím kroku, má závislosti na dalších rozšířeních SDK, navštivte weby dodavatelů, kteří závislosti vlastní, a nainstalujte verze těchto závislostí, které jsou kompatibilní s verzí platformy, na kterou je váš projekt. cílení na.
 

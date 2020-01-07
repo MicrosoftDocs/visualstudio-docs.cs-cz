@@ -11,19 +11,19 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 9B7B4608-7A3F-4FF4-BDCE-42D9F7CE6DBA
-author: heaths
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 3f1ddb1f1d39255c14e03d114891145c8f2dece5
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 305b0398550a64722f6029a3d50082e6397643cb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551189"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594523"
 ---
 # <a name="set-defaults-for-enterprise-deployments-of-visual-studio"></a>Nastavení výchozích hodnot pro podniková nasazení sady Visual Studio
 
@@ -58,7 +58,7 @@ Můžete nastavit následující hodnoty registru:
 | `BackgroundDownloadDisabled` |`REG_DWORD` | 1 | Zabrání instalačnímu programu stahovat aktualizace automaticky pro všechny nainstalované produkty sady Visual Studio. Kdykoli můžete změnit hodnotu. |
 
 > [!IMPORTANT]
-> Pokud zásady `CachePath` registru po instalaci změníte, je nutné přesunout existující mezipaměť balíčku do nového umístění a zajistit `Administrators` , aby byla zabezpečená, `SYSTEM` aby byla zajištěna úplná kontrola a `Everyone` měla by mít oprávnění ke čtení.
+> Změníte-li `CachePath` zásad registru po instalacích, je nutné přesunout existující mezipaměť balíčků do nového umístění a zajistit, aby byla zabezpečena, aby `SYSTEM` a `Administrators` měla úplnou kontrolu a `Everyone` mají přístup pro čtení.
 > Nepovedlo se přesunout existující mezipaměť nebo ji zabezpečit, může to způsobit problémy s budoucími instalacemi.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]

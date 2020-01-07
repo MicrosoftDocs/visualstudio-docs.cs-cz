@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Řídicí znaky v nástroji MSBuild | Dokumentace Microsoftu'
+title: 'Postupy: sekvence speciálních znaků v nástroji MSBuild | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,47 +8,47 @@ helpviewer_keywords:
 - escape characters
 - MSBuild, escaping special characters
 ms.assetid: 1aa3669c-1647-4960-b770-752e2532102f
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 983e10f26e6fd1d8b4b7ff18c73edd65cb4810f4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 955739372605b9e4f9fe58f73669322e2724de31
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968103"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595004"
 ---
-# <a name="how-to-escape-special-characters-in-msbuild"></a>Postupy: Speciální řídicí znaky v nástroji MSBuild
+# <a name="how-to-escape-special-characters-in-msbuild"></a>Postupy: sekvence speciálních znaků v nástroji MSBuild
 
-Některé znaky mají speciální význam v [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] soubory projektu. Příklady znaků středníky (`;`) a hvězdičky (`*`). Úplný seznam těchto speciálních znaků, naleznete v tématu [speciální znaky nástroje MSBuild](../msbuild/msbuild-special-characters.md).
+Některé znaky mají zvláštní význam v [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] soubory projektu. Mezi příklady znaků patří středník (`;`) a hvězdičky (`*`). Úplný seznam těchto speciálních znaků naleznete v tématu [speciální znaky nástroje MSBuild](../msbuild/msbuild-special-characters.md).
 
-Chcete-li použít tyto speciální znaky jako literály v souboru projektu, se musí zadat pomocí syntaxe `%<xx>`, kde `<xx>` představuje znak šestnáctkové hodnoty ASCII.
+Aby bylo možné použít tyto speciální znaky jako literály v souboru projektu, musí být určeny pomocí syntaxe `%<xx>`, kde `<xx>` představuje šestnáctkovou hodnotu ASCII znaku.
 
 ## <a name="msbuild-special-characters"></a>Speciální znaky nástroje MSBuild
 
-Jedna je například použití speciálních znaků v `Include` atribut položky seznamů. Například následující seznam položek deklaruje dvě položky: *MyFile.cs* a *MyClass.cs*.
+Jeden z příkladů, kde se používají speciální znaky, jsou v atributu `Include` seznamů položek. Například následující seznam položek deklaruje dvě položky: *MyFile.cs* a *MyClass.cs*.
 
 ```xml
 <Compile Include="MyFile.cs;MyClass.cs"/>
 ```
 
-Pokud chcete deklarovat, který obsahuje středníkem v názvu položky, je nutné použít `%<xx>` syntaxe řídicí středník a zabránit [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] z deklarace dvou samostatných položek. Například následující položka řídicí sekvence středník a deklaruje jednu položku s názvem `MyFile.cs;MyClass.cs`.
+Chcete-li deklarovat položku, která obsahuje středník v názvu, je nutné použít syntaxi `%<xx>` pro odřídící středník a zabránit [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] v deklaraci dvou samostatných položek. Například následující položka řídí středník a deklaruje jednu položku s názvem `MyFile.cs;MyClass.cs`.
 
 ```xml
 <Compile Include="MyFile.cs%3BMyClass.cs"/>
 ```
 
-Můžete také použít [vlastnost funkce](../msbuild/property-functions.md) řídicí řetězce. Například to je ekvivalentní k výše uvedený příklad.
+Můžete také použít [funkci vlastnosti](../msbuild/property-functions.md) pro řídicí řetězce. Jedná se například o ekvivalent výše uvedeného příkladu.
 
 ```xml
 <Compile Include="$([MSBuild]::Escape('MyFile.cs;MyClass.cs'))" />
 ```
 
-### <a name="to-use-an-msbuild-special-character-as-a-literal-character"></a>Chcete-li použít speciální znak MSBuild jako literální znak
+### <a name="to-use-an-msbuild-special-character-as-a-literal-character"></a>Použití speciálního znaku MSBuild jako literálního znaku
 
-Použijte notaci `%<xx>` místo speciální znaky, kde `<xx>` představuje šestnáctkovou hodnotu znaku standardu ASCII. Například použijte hvězdičku (`*`) jako literální znak, použijte hodnotu `%2A`.
+Místo speciálního znaku použijte `%<xx>` Notation, kde `<xx>` představuje hexadecimální hodnotu znaku ASCII. Chcete-li například použít hvězdičku (`*`) jako literální znak, použijte hodnotu `%2A`.
 
 ## <a name="see-also"></a>Viz také:
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)

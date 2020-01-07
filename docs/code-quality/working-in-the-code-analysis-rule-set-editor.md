@@ -5,17 +5,17 @@ ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.ruleseteditor
 ms.assetid: 370c97bf-bb29-4b2f-b9ae-ba125bce7b2d
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e23bf15796a8ff581a8a017687f90084c338e74
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8ea828cd0cba0bdab60a1f7cf4f74dbf20bd01d2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649014"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587131"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>Použití editoru sad pravidel pro analýzu kódu
 
@@ -69,12 +69,12 @@ V následující tabulce jsou popsána pole sady pravidel:
 
 |Pole|Popis|
 |-----------|-----------------|
-|**ÚČET**|Identifikátor pravidla|
-|**Kategorií**|Kromě jejich členství v sadách pravidel se pravidla analýzy kódu také seskupují podle kategorií. Další informace najdete v tématu [upozornění analýzy kódu](../code-quality/code-analysis-for-managed-code-warnings.md).|
+|**ID**|Identifikátor pravidla|
+|**Kategorie**|Kromě jejich členství v sadách pravidel se pravidla analýzy kódu také seskupují podle kategorií. Další informace najdete v tématu [upozornění analýzy kódu](../code-quality/code-analysis-for-managed-code-warnings.md).|
 |**Jméno**|Název pravidla|
-|**Hosting**|Obor názvů pravidla|
+|**Namespace**|Obor názvů pravidla|
 |**Cílový typ**|Označuje, zda je pravidlo pro nativní, spravovaný nebo databázový kód.|
-|**Kroky**|Akce provedená v případě porušení pravidla při spuštění analýzy kódu. Můžete upravit pole **Akce** .|
+|**Akce**|Akce provedená v případě porušení pravidla při spuštění analýzy kódu. Můžete upravit pole **Akce** .|
 |**Zdrojové sady pravidel**|Sada pravidel, která obsahuje pravidlo|
 
 ## <a name="sort-and-filter-rule-sets"></a>Řazení a filtrování sad pravidel

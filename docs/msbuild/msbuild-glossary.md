@@ -3,17 +3,17 @@ title: Glosář nástroje MSBuild
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: f767d8e4-24d8-4803-80eb-e857202dbe2c
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c0b5feaa70a79a534af45c67e61b300feb1188bf
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: c3d5f9e402750978b1201c6b2a5b1ef0659e8789
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926346"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593665"
 ---
 # <a name="msbuild-glossary"></a>Glosář nástroje MSBuild
 
@@ -34,16 +34,16 @@ podřízený projekt\
 Viz *projekt, podřízená položka*.
 
 pomocné\
-Mnoho elementů MSBuild lze definovat podmíněně. To znamená, `Condition` že se atribut objeví v elementu. Obsah podmíněných elementů je ignorován, pokud není podmínka vyhodnocena `true`jako. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).
+Mnoho elementů MSBuild lze definovat podmíněně. To znamená, že atribut `Condition` se zobrazí v elementu. Obsah podmíněných elementů je ignorován, pokud podmínka není vyhodnocena jako `true`. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).
 
 definice, položka \
 Viz *definice položky*.
 
 Generovat položku \
-Během fáze provádění sestavení mohou být položky vytvořeny nebo upraveny úlohami, které mají podřízené `Output` prvky, které `ItemName` mají atribut. Tato úloha se označuje jako "generování" nových položek.
+Během fáze provádění sestavení mohou být položky vytvořeny nebo upraveny úlohami, které mají podřízené `Output` prvky, které mají atribut `ItemName`. Tato úloha se označuje jako "generování" nových položek.
 
 generovat vlastnost \
-Během fáze provádění sestavení lze vlastnosti vytvořit nebo upravit pomocí úloh, které mají podřízené `Output` prvky, které `PropertyName` mají atribut. Tato úloha se označuje jako "vygenerování" nové vlastnosti.
+Během fáze provádění sestavení lze vlastnosti vytvořit nebo upravit pomocí úloh, které mají podřízené `Output` prvky, které mají atribut `PropertyName`. Tato úloha se označuje jako "vygenerování" nové vlastnosti.
 
 fáze vyhodnocení \
 Hodnocení je první fází sestavení projektu. Všechny vlastnosti a položky jsou vyhodnocovány v pořadí, v jakém jsou uvedeny v projektu. Importované projekty jsou vyhodnocovány při jejich zjištění v projektu. Cíle a úkoly nejsou spuštěny, dokud fáze provádění a žádné vlastnosti nebo položky, které by mohly být deklarovány nebo generovány, se během hodnocení ignorují.
@@ -107,7 +107,7 @@ Funkce vlastností mohou být kombinovány pro vytvoření složitějších funk
 Další informace najdete v tématu [funkce vlastností](../msbuild/property-functions.md).
 
 vlastnost, Global \
-Globální vlastnost je pár klíč-hodnota, který slouží k řízení procesu sestavení. Globální vlastnosti jsou nastaveny na příkazovém řádku nebo pomocí `Properties` atributu [úlohy MSBuild](../msbuild/msbuild-task.md)a nelze je změnit během fáze hodnocení sestavení. Další informace najdete v tématu [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
+Globální vlastnost je pár klíč-hodnota, který slouží k řízení procesu sestavení. Globální vlastnosti jsou nastaveny na příkazovém řádku nebo pomocí atributu `Properties` [úlohy MSBuild](../msbuild/msbuild-task.md)a nelze je změnit během fáze hodnocení sestavení. Další informace najdete v tématu [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
 
 vlastnost, místní \
 Místní vlastnost je pár klíč-hodnota, který slouží k řízení procesu sestavení. Tento termín slouží pouze k odlišení vlastnosti, která není globálních vlastností.
@@ -122,7 +122,7 @@ projekt – rozsah \
 Obor projektu popisuje objekt MSBuild, například místní vlastnost, která je viditelná pouze v obsahujícím souboru projektu a na všech projektech, které importuje.
 
 projekt, dítě \
-Podřízený projekt je vytvořen úlohou MSBuild během sestavení projektu. Tento nový projekt je podřízenou položkou projektu, který obsahuje nebo importuje cíl, který obsahuje úlohu MSBuild. Podřízený projekt dědí globální vlastnosti nadřazeného projektu, pokud nejsou upraveny `Properties` atributem.
+Podřízený projekt je vytvořen úlohou MSBuild během sestavení projektu. Tento nový projekt je podřízenou položkou projektu, který obsahuje nebo importuje cíl, který obsahuje úlohu MSBuild. Podřízený projekt dědí z globálních vlastností nadřazeného projektu, pokud nejsou měněny atributem `Properties`.
 
 seznam Redist \
 Seznam opětovných distribucí: seznam sestavení, která odpovídají danému rozhraní.
@@ -161,7 +161,7 @@ soubor cílů \
 Soubor cílů je soubor projektu, který obsahuje hlavně cíle a úlohy, které sestavují sestavení. Podle konvence má příponu souboru *. targets*. Cílové soubory jsou obvykle importovány na konci přidružených souborů projektu.
 
 hybn
-Úlohy jsou jednotky spustitelného kódu, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] který projekty používají k provádění operací sestavení. Například úloha může kompilovat vstupní soubory nebo spustit externí nástroj. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
+Úlohy jsou jednotky spustitelného kódu, který [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projekty používají k provádění operací sestavení. Například úloha může kompilovat vstupní soubory nebo spustit externí nástroj. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
 
 převedení
 Transformace je převod 1:1 na jednu kolekci položek na jiný. Kromě povolení projektu pro převod kolekcí položek umožňuje transformace cíli identifikovat přímé mapování mezi vstupy a výstupy. Další informace najdete v tématu [transformace](../msbuild/msbuild-transforms.md).

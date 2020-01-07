@@ -6,21 +6,21 @@ f1_keywords:
 - TypeBrowser.UI
 - ActivityTypeResolver.UI
 ms.assetid: 864b60b6-a070-4e5c-aa5b-a25341b57ea6
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5eac3c2a45f1e220415f7512e601f4bf034c4dd7
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: a526bc9504f4f63a7a135978ade02654bbe63ffd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189809"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597110"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>Dialogové okno Procházet a vybrat typ .NET
 
-V okně **vlastnosti** , dialogová okna nebo návrháře, jako je například Návrhář proměnných, je po výběru možnosti **Vyhledat typy** ze seznamu datových typů zaškrtnuto políčko **Procházet a vybrat typ rozhraní .NET** (dále jen ve zkráceném tvaru jako typ). prohlížeč "). V tomto dialogovém okně můžete zvolit typ ze stromového zobrazení sestavení a projektů.
+V okně **vlastnosti** , dialogová okna nebo návrháře, jako je například Návrhář proměnných, je po výběru možnosti **Vyhledat typy** ze seznamu datových typů zaškrtnuto políčko **Procházet a vybrat typ rozhraní .NET** (dále jen ve zkráceném formátu jako "prohlížeč textu"). V tomto dialogovém okně můžete zvolit typ ze stromového zobrazení sestavení a projektů.
 
 Toto dialogové okno se používá v řadě uživatelských scénářů, včetně následujících:
 

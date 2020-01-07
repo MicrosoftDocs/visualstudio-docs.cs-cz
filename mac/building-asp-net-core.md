@@ -5,12 +5,12 @@ author: sayedihashimi
 ms.author: sayedha
 ms.date: 05/30/2019
 ms.assetid: 771C2F8E-46BC-4280-AFE8-ED9D5C7790CE
-ms.openlocfilehash: 5aa0b02c87335305f29d098b51c89310cc0a9e5d
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: 5600fd2f0b6d83a3bd27350a4d4f0137ea44ced2
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73717270"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75398287"
 ---
 # <a name="building-aspnet-core-applications-in-visual-studio-for-mac"></a>Sestavování aplikací ASP.NET Core v Visual Studio pro Mac
 
@@ -21,7 +21,7 @@ V tomto testovacím prostředí vytvoříte a prozkoumáte ASP.NET Core aplikaci
 ## <a name="objectives"></a>Cíle
 
 > [!div class="checklist"]
-> * Vytvoření webové aplikace v ASP.NET Core
+> * Vytvoření webové aplikace ASP.NET Core
 > * Prozkoumejte ASP.NET Core hostování, konfigurace a middlewarového modelu
 > * Ladění ASP.NET Core webové aplikace
 
@@ -39,7 +39,7 @@ Toto testovací prostředí je určené pro vývojáře, kteří jsou C#obeznám
 
 2. Vyberte **soubor > nové řešení**.
 
-3. Vyberte kategorii **aplikace > .NET Core** a šablonu **ASP.NET Core webové aplikace (C#)** . Klikněte na tlačítko **Další**.
+3. Vyberte kategorii **aplikace > .NET Core** a šablonu **ASP.NET Core webové aplikace (C#)** . Klikněte na **Další**.
 
     ![](media/netcore-image1.png)
 
@@ -73,9 +73,9 @@ Toto testovací prostředí je určené pro vývojáře, kteří jsou C#obeznám
 
     ![](media/netcore-image8.png)
 
-7. K dispozici jsou také různé konfigurační soubory, které slouží ke správě projektu, jeho balíčků a aplikace za běhu. Například výchozí [Konfigurace](/aspnet/core/fundamentals/configuration) aplikace je uložena v souboru **appSettings. JSON**. Některá nebo všechna tato nastavení však můžete přepsat v jednotlivých prostředích, například zadáním **appSettings. Soubor Development. JSON** pro **vývojové** prostředí.
+7. K dispozici jsou také různé konfigurační soubory, které slouží ke správě projektu, jeho balíčků a aplikace za běhu. Například výchozí [Konfigurace](/aspnet/core/fundamentals/configuration) aplikace je uložena v souboru **appSettings. JSON**. Vnořený pod souborem appSettings. JSON je **appSettings. Soubor Development. JSON** . Tady můžete potlačit některá nebo všechna tato nastavení v jednotlivých prostředích. Visual Studio pro Mac bude tímto způsobem vnořovat soubory pomocí stejné logiky jako aplikace Visual Studio pro Windows, takže soubory, které potřebujete získat častěji, jsou v Forefrontu. 
 
-    ![](media/netcore-image9.png)
+    ![](media/netcore-build-nested.png)
 
 ## <a name="task-3-understanding-how-the-application-is-hosted"></a>Úloha 3: princip hostování aplikace
 
@@ -107,7 +107,7 @@ Toto testovací prostředí je určené pro vývojáře, kteří jsou C#obeznám
 
     ![](media/netcore-image16.png)
 
-8. I když třídy **IWebHost** jsou vyžadovány k implementaci neblokujícího **spuštění**, ASP.NET Core projekty mají metodu rozšíření nazvanou **Run** , která zabalí **začátek** s blokujícím kódem, takže nemusíte ručně bránit metodu z okamžitě se ukončí.
+8. I když třídy **IWebHost** jsou vyžadovány k implementaci neblokujícího **spuštění**, ASP.NET Core projekty mají metodu rozšíření s názvem **Run** , která zabalí **začátek** s blokujícím kódem, takže nemusíte ručně zabránit, aby byla metoda ukončena okamžitě.
 
     ![](media/netcore-image17.png)
 
@@ -241,6 +241,6 @@ Toto testovací prostředí je určené pro vývojáře, kteří jsou C#obeznám
 
 12. Po splnění tohoto okna zavřete okno prohlížeče a konzolu.
 
-## <a name="summary"></a>Souhrn
+## <a name="summary"></a>Přehled
 
 V tomto testovacím prostředí jste se naučili, jak začít vyvíjet ASP.NET Core aplikace pomocí Visual Studio pro Mac. Pokud chcete prozkoumat vývoj více kompletních databázových aplikací filmů, přečtěte si kurz Začínáme [s ASP.NET Core MVC](/aspnet/core/tutorials/first-mvc-app/start-mvc) .

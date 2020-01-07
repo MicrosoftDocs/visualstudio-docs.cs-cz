@@ -3,17 +3,17 @@ title: Co je WPF (Windows Presentation Foundation)?
 ms.date: 04/16/2018
 ms.topic: conceptual
 ms.assetid: f3be98cb-870f-472c-9da5-cb815e4f6598
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b8cc1ea22c5cdbe85bf1d24d1641709c5fe5da7a
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: eb58a1a7bee7b07cc9b5434f7fa3e6bd295060d2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187132"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589536"
 ---
 # <a name="get-started-with-wpf"></a>Začínáme s WPF (Windows Presentation Foundation)
 
@@ -23,7 +23,7 @@ V této části najdete témata, která zavádějí a vám pomůžou začít s W
 
 ## <a name="where-should-i-start"></a>Kde mám začít?
 
-|Závislosti|Zboží|
+|Předmět|Articles|
 |-|-|
 |Chci se pustit přímo v...|[Návod: Moje první desktopová aplikace WPF](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)|
 |Chci porovnat vývojové nástroje XAML...|[Návrh XAML v aplikaci Visual Studio a Blend pro Visual Studio](../xaml-tools/designing-xaml-in-visual-studio.md)|

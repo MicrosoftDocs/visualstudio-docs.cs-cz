@@ -7,17 +7,17 @@ helpviewer_keywords:
 - connecting to data, Access databases
 - Access databases, connecting
 ms.assetid: 4159e815-d430-4ad0-a234-e4125fcbef18
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 65fa8b823a49644110dc773eb614da6022f4e8f5
-ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
+ms.openlocfilehash: deb163779110c50560787b35ad7744f90f6a7f36
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72924521"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586858"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>Připojení k datům v accessové databázi
 
@@ -33,7 +33,7 @@ Pomocí následujícího postupu se můžete připojit k databázím vytvořený
 
 1. Otevřete projekt aplikace model Windows Forms nebo WPF v aplikaci Visual Studio.
 
-2. Chcete-li otevřít okno **zdroje dat** , vyberte v nabídce **zobrazení** položku **jiné** **zdroje dat** >  Windows.
+2. Chcete-li otevřít okno **zdroje dat** , vyberte v nabídce **zobrazení** položku **jiné** **zdroje dat** > Windows.
 
    ![Zobrazení dalších zdrojů dat Windows](../data-tools/media/viewdatasources.png)
 
@@ -75,7 +75,7 @@ Pomocí následujícího postupu se připojte k databázím vytvořeným pomocí
 
 1. Otevřete projekt aplikace model Windows Forms nebo WPF v aplikaci Visual Studio.
 
-2. V nabídce **zobrazení** vyberte jiné**zdroje dat** >  **Windows** .
+2. V nabídce **zobrazení** vyberte jiné **zdroje dat** > **Windows** .
 
    ![Zobrazení dalších zdrojů dat Windows](../data-tools/media/viewdatasources.png)
 

@@ -12,12 +12,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb99cf487995859b9623f11b3559f1b5e7e3ca7
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: e2154a07d498012c9c45f992ebed51b0218e823a
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018337"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75401021"
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>Návod: Analýza kódu C/C++ na výskyt závad
 
@@ -67,9 +67,9 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
 
      Upozornění C6230: implicitní přetypování mezi sémanticky odlišnými typy: používá HRESULT v logickém kontextu.
 
-     Editor kódu zobrazuje řádek, který způsobil upozornění ve funkci `bool ProcessDomain()`. Toto upozornění označuje, že se v příkazu if používá HRESULT, kde se očekává logický výsledek.
+     Editor kódu zobrazuje řádek, který způsobil upozornění ve funkci `bool ProcessDomain()`. Toto upozornění indikuje, že `HRESULT` se používá v příkazu if, kde se očekává logický výsledek.  Obvykle se jedná o chybu, protože když se vrátí `S_OK` HRESULT z funkce IT, je indikována úspěch, ale když se převede na logickou hodnotu, vyhodnotí se jako `false`.
 
-3. Opravte toto upozornění pomocí makra úspěšné. Váš kód by měl vypadat podobně jako následující kód:
+3. Opravte toto upozornění pomocí makra `SUCCEEDED`, které se převede na `true`, když `HRESULT` návratová hodnota indikuje úspěch. Váš kód by měl vypadat podobně jako následující kód:
 
    ```cpp
    if (SUCCEEDED (ReadUserAccount()) )
@@ -128,11 +128,11 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
 8. Chcete-li toto upozornění opravit, použijte příkaz if pro otestování návratové hodnoty. Váš kód by měl vypadat podobně jako následující kód:
 
    ```cpp
-   if (NULL != newNode)
+   if (nullptr != newNode)
    {
-   newNode->data = value;
-   newNode->next = 0;
-   node->next = newNode;
+       newNode->data = value;
+       newNode->next = 0;
+       node->next = newNode;
    }
    ```
 
@@ -142,14 +142,10 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
 
 ### <a name="to-use-source-code-annotation"></a>Použití poznámky ke zdrojovému kódu
 
-1. Pomocí podmínek pre a post, jak je znázorněno v tomto příkladu, opatřit poznámkami formální parametry a návratovou hodnotu funkce `AddTail`.
+1. Zadáním formálních parametrů a návratové hodnoty funkce `AddTail` označíte, že hodnoty ukazatele mohou být null:
 
    ```cpp
-   [returnvalue:SA_Post (Null=SA_Maybe)] LinkedList* AddTail
-   (
-   [SA_Pre(Null=SA_Maybe)] LinkedList* node,
-   int value
-   )
+   _Ret_maybenull_ LinkedList* AddTail(_Maybenull_ LinkedList* node, int value)
    ```
 
 2. Znovu sestavit projekt poznámek.
@@ -160,21 +156,18 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
 
      Toto upozornění znamená, že uzel předaný do funkce může mít hodnotu null a označuje číslo řádku, kde bylo upozornění vyvoláno.
 
-4. Chcete-li toto upozornění opravit, použijte příkaz if pro otestování návratové hodnoty. Váš kód by měl vypadat podobně jako následující kód:
+4. Chcete-li toto upozornění opravit, použijte příkaz if na začátku funkce pro otestování předané hodnoty. Váš kód by měl vypadat podobně jako následující kód:
 
    ```cpp
-   . . .
-   LinkedList *newNode = NULL;
-   if (NULL == node)
+   if (nullptr == node)
    {
-        return NULL;
-        . . .
+        return nullptr;
    }
    ```
 
 5. Znovu sestavit projekt poznámek.
 
-     Projekt se vytváří bez upozornění a chyb.
+     Projekt se teď sestaví bez jakýchkoli upozornění nebo chyb.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -3,17 +3,17 @@ title: Sada pravidel Pravidla zabezpečení pro spravovaný kód
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 564aeac6-03fa-41b0-b655-88179f0ab01b
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ea23186ff03ccdb0ff7678380eadc866b63654f2
-ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
+ms.openlocfilehash: babfc00dfadc6b26f8338faf37b5b4a1f7c1d8e5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918917"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587222"
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>Sada pravidel Pravidla zabezpečení pro spravovaný kód
 
@@ -86,4 +86,4 @@ Pomocí sady pravidel zabezpečení společnosti Microsoft pro analýzu kódu st
 |[CA3010](../code-quality/ca3010.md)|Zkontrolujte ohrožení zabezpečení injektáží XAML v kódu|
 |[CA3011](../code-quality/ca3011.md)|Zkontrolujte ohrožení zabezpečení injektáží knihovny DLL v kódu|
 |[CA3012](../code-quality/ca3012.md)|Zkontrolujte ohrožení zabezpečení injektáží regulárního výrazu v kódu|
-|[CA5403](../code-quality/ca5403.md)|Nepevný kód certifikátu|
+|[CA5403](../code-quality/ca5403.md)|Nepoužívejte pevně zakódovaný certifikát|

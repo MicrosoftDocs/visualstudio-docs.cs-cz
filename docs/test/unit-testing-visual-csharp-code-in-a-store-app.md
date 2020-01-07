@@ -1,18 +1,18 @@
 ---
-title: Vizuální C# kód testování částí
+title: Testování jednotek kódu Visual C#
 ms.date: 09/27/2019
 ms.topic: conceptual
-ms.author: jillfra
-author: jillre
+ms.author: mikejo
+author: mikejo5000
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 309cf408167cc463db8cde9e39d5c0fe4dbe26d6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 31fbbfaa5d16dd51776f592b89a7846936b3013f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659834"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590862"
 ---
 # <a name="unit-test-c-code"></a>Test jednotek kódu C#
 
@@ -22,21 +22,21 @@ Tento článek popisuje jeden ze způsobů, jak vytvořit testy jednotek C# pro 
 
 Tento článek ukazuje *Vývoj řízený testováním*. V tomto přístupu nejprve zapíšete test, který ověří konkrétní chování v systému, který testujete, a potom napíšete kód, který projde testem.
 
-## <a name="create-the-solution-and-the-unit-test-project"></a>Vytvořit řešení a projekt testování částí
+## <a name="create-the-solution-and-the-unit-test-project"></a>Vytvoření řešení a projektu testování částí
 
-1. V nabídce **soubor** vyberte **Nový** **projekt** > .
+1. Na **souboru** nabídce zvolte **nový** > **projektu**.
 
 2. Vyhledejte a vyberte šablonu projektu **prázdná aplikace (univerzální pro Windows)** .
 
 3. Pojmenujte **matematiky**projektu.
 
-4. V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a vyberte **Přidat**  > **Nový projekt**.
+4. V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a vyberte **Přidat** > **Nový projekt**.
 
 5. Vyhledejte a vyberte šablonu projektu **aplikace pro testování jednotek (univerzální pro Windows)** .
 
 6. Pojmenujte projekt testů **RooterTests**.
 
-## <a name="verify-that-the-tests-run-in-test-explorer"></a>Ověřte, zda jsou testy spuštěny v Průzkumníku testů
+## <a name="verify-that-the-tests-run-in-test-explorer"></a>Ověřte, že testy spustit v Průzkumníku testů
 
 1. Do souboru *UnitTest.cs* Vložte nějaký kód testu do **TestMethod1** :
 
@@ -62,13 +62,13 @@ Tento článek ukazuje *Vývoj řízený testováním*. V tomto přístupu nejpr
 
 ::: moniker-end
 
-   Testovací projekt se sestaví a spustí. Být pacient, protože může chvíli trvat. Zobrazí se okno **Průzkumník testů** a test je uveden v části **prošlé testy**. Podokno **Souhrn** v dolní části okna poskytuje další podrobnosti o vybraném testu.
+   Testovací projekt vytvoří a spustí. Být pacient, protože může chvíli trvat. **Průzkumníka testů** okno a test je uvedený v části **úspěšné testy**. **Souhrn** poskytuje další podrobnosti o vybrané testovací podokno v dolní části okna.
 
-## <a name="add-the-rooter-class-to-the-maths-project"></a>Přidat třídu Rooter do projektu matematického typu
+## <a name="add-the-rooter-class-to-the-maths-project"></a>Přidat třídu Rooter matematické výrazy projektu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt **matematického** typu a zvolte možnost **Přidat**  > **třídu**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt **matematického** typu a zvolte možnost **Přidat** > **třídu**.
 
-2. Pojmenujte soubor třídy *Rooter.cs*.
+2. Název souboru třídy *Rooter.cs*.
 
 3. Do souboru *Rooter.cs* třídy **root** přidejte následující kód:
 
@@ -96,17 +96,17 @@ Tento článek ukazuje *Vývoj řízený testováním*. V tomto přístupu nejpr
 
 1. Přidejte odkaz z projektu RooterTests do aplikace Maths.
 
-    1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt **RooterTests** a pak zvolte **Přidat**  > **odkaz**.
+    1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt **RooterTests** a pak zvolte **Přidat** > **odkaz**.
 
-    2. V dialogovém okně **Přidat odkaz – RooterTests** rozbalte položku **řešení** a vyberte možnost **projekty**. Vyberte projekt **matematiky** .
+    2. V **přidat odkaz - RooterTests** dialogového okna rozbalte **řešení** a zvolte **projekty**. Vyberte projekt **matematiky** .
 
-        ![Přidat odkaz na projekt Maths](../test/media/ute_cs_windows_addreference.png)
+        ![Přidat odkaz na projekt matematické výrazy](../test/media/ute_cs_windows_addreference.png)
 
 2. Do souboru *UnitTest.cs* přidejte příkaz `using`:
 
     1. Otevřete *UnitTest.cs*.
 
-    2. Přidejte tento kód pod `using Microsoft.VisualStudio.TestTools.UnitTesting;` řádek:
+    2. Přidejte tento kód níže `using Microsoft.VisualStudio.TestTools.UnitTesting;` řádku:
 
        ```csharp
        using Maths;
@@ -126,13 +126,13 @@ Tento článek ukazuje *Vývoj řízený testováním*. V tomto přístupu nejpr
    }
    ```
 
-   Nový test se zobrazí v **Průzkumníku testů** v uzlu **Nespuštěné testy** .
+   Nový test se zobrazí v **Průzkumníka testů** v **nespuštěné testy** uzlu.
 
 4. Aby nedošlo k chybě "datová část obsahuje dva nebo více souborů se stejnou cílovou cestou", v **Průzkumník řešení**rozbalte uzel **vlastnosti** v projektu **matematické** hodnoty a pak odstraňte soubor *Default. Rd. XML* .
 
 ::: moniker range="vs-2017"
 
-6. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+6. V **Průzkumník testů**, zvolte **spustit všechny**.
 
    Řešení se sestaví a spustí a projde testy.
 
@@ -150,9 +150,9 @@ Tento článek ukazuje *Vývoj řízený testováním*. V tomto přístupu nejpr
 
 ::: moniker-end
 
-Nastavili jste projekty testů a aplikací a ověřili, že můžete spouštět testy, které volají funkce v projektu aplikace. Nyní můžete začít psát skutečné testy a kód.
+Nastavili jste projekty testů a aplikací a ověřili, že můžete spouštět testy, které volají funkce v projektu aplikace. Teď můžete začít psát skutečné testů a kódu.
 
-## <a name="iteratively-augment-the-tests-and-make-them-pass"></a>Iterativní rozšíření testů a jejich předání
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a>Využívejte iterativní posílit testy a daly se předat
 
 1. Přidejte nový test s názvem **RangeTest**:
 
@@ -172,16 +172,16 @@ Nastavili jste projekty testů a aplikací a ověřili, že můžete spouštět 
    ```
 
    > [!TIP]
-   > Doporučujeme neměnit testy, které byly úspěšné. Místo toho přidejte nový test.
+   > Doporučujeme neměňte testy, které prošly. Místo toho přidejte nový test.
 
 2. Spusťte test **RangeTest** a ověřte, zda se nezdařila.
 
-   ![RangeTest se nezdařila](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
+   ![RangeTest selže](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
    > [!TIP]
-   > Ihned po zápisu testu spusťte jej a ověřte, zda se nezdařila. To pomáhá vyhnout se jednoduchému omylu při psaní testu, který se nikdy nezdařil.
+   > Ihned po zápisu testu spusťte jej a ověřte, zda se nezdařila. To umožňuje vyhnout se snadno chybu zápisu test, který se nikdy selže.
 
-3. Zvyšte testovaný kód, aby nový test prošl. Změňte funkci **SquareRoot** v *Rooter.cs* na tuto:
+3. Vylepšete testovaného kódu tak, aby nový test byl úspěšný. Změňte funkci **SquareRoot** v *Rooter.cs* na tuto:
 
    ```csharp
    public double SquareRoot(double x)
@@ -200,7 +200,7 @@ Nastavili jste projekty testů a aplikací a ověřili, že můžete spouštět 
 
 ::: moniker range="vs-2017"
 
-4. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+4. V **Průzkumník testů**, zvolte **spustit všechny**.
 
 ::: moniker-end
 
@@ -210,12 +210,12 @@ Nastavili jste projekty testů a aplikací a ověřili, že můžete spouštět 
 
 ::: moniker-end
 
-   Všechny tři testy jsou nyní passované.
+   Všechny tři testy jsou nyní úspěšné.
 
 > [!TIP]
-> Vývoj kódu přidáním testů po jednom. Ujistěte se, že všechny testy proběhnou po každé iteraci.
+> Vývoj kódu tak, že přidáte testy jeden po druhém. Ujistěte se, že všechny testy jsou úspěšné po každé iteraci.
 
-## <a name="refactor-the-code"></a>Refaktoring kódu
+## <a name="refactor-the-code"></a>Refaktorování kódu
 
 V této části provedete refaktorování aplikace a testovací kód, potom znovu spustíte testy, abyste se ujistili, že jsou stále předávány.
 
@@ -234,7 +234,7 @@ V této části provedete refaktorování aplikace a testovací kód, potom znov
 2. Spusťte všechny testy a ujistěte se, že jste nepředstavili regresi. Všechny by měly být passované.
 
 > [!TIP]
-> Stabilní sada dobrých testů jednotek dává jistotu, že jste při změně kódu nepředstavili chyby.
+> Se spouští stabilní sada testů jednotek dobré poskytuje jistotu, že nebyly zavedeny chyby při změně kódu.
 
 ### <a name="eliminate-duplicated-code"></a>Eliminovat duplicitní kód
 

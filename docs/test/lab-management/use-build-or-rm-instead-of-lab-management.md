@@ -4,27 +4,27 @@ ms.date: 10/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - automated testing, lab management, test lab
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 223e494181eed4e137e096f13127c450e41c8db5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: bd6e9b2d9ea408e451b7032a00c3c96fb0ef2b58
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653071"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566823"
 ---
 # <a name="use-azure-test-plans-instead-of-lab-management-for-automated-testing"></a>Použití Azure Test Plans místo Lab Management pro automatizované testování
 
-Pokud používáte Microsoft Test Manager a Lab Management pro automatizované testování nebo pro automatizaci sestavení-nasazení-testování, toto téma vysvětluje, jak lze dosáhnout stejných cílů pomocí funkcí [sestavení a vydání](/azure/devops/pipelines/index?view=vsts) v Azure Pipelines a Team Foundation Server (TFS). .
+Použijete-li Microsoft Test Manager a Lab Management pro automatizované testování nebo pro automatizaci sestavení-nasazení-testování, toto téma vysvětluje, jak lze dosáhnout stejných cílů pomocí funkcí [sestavení a vydání](/azure/devops/pipelines/index?view=vsts) v Azure Pipelines a Team Foundation Server (TFS).
 
 ## <a name="build-deploy-test-automation"></a>Automatizace sestavení – nasazení a testování
 
 Microsoft Test Manager a Lab Management se spoléhají na definici sestavení XAML pro automatizaci sestavování, nasazování a testování vašich aplikací. Sestavení XAML spoléhá na různé konstrukce vytvořené v Microsoft Test Manager jako například testovací prostředí, testovací sady a nastavení testování, a na různých součástech infrastruktury, jako je například kontrolér sestavení, agenti sestavení, testovací kontroléry a testovací agenty. dosažení tohoto cíle. Můžete dosáhnout stejného s méně kroky pomocí Azure Pipelines nebo TFS.
 
-| Uvedené | Pomocí sestavení XAML | V sestavení nebo vydané verzi |
+| Kroky | Pomocí sestavení XAML | V sestavení nebo vydané verzi |
 |-------|----------------------|-----------------|
 | Identifikujte počítače, do kterých chcete nasadit sestavení, a spusťte testy. | Pomocí těchto počítačů vytvořte standardní laboratorní prostředí v Microsoft Test Manager. | není k dispozici |
 | Identifikujte testy, které mají být spuštěny. | Vytvořte testovací sadu v Microsoft Test Manager, vytvořte testovací případy a přidružte automatizaci ke každému testovacímu případu. Vytvořte nastavení testu v Microsoft Test Manager identifikaci role počítačů v testovacím prostředí, ve kterém mají být testy spuštěny. | Pokud plánujete spravovat testování prostřednictvím testovacích plánů, vytvořte sadu automatických testů v Microsoft Test Manager stejným způsobem. Případně můžete přeskočit tuto možnost, pokud chcete spustit testy přímo z testovacích binárních souborů vytvořených sestavením. V obou případech není nutné vytvářet nastavení testu. |
@@ -32,14 +32,14 @@ Microsoft Test Manager a Lab Management se spoléhají na definici sestavení XA
 
 Mezi výhody použití Azure Pipelines nebo TFS pro tento scénář patří:
 
-* Nepotřebujete kontrolér sestavení nebo řadič testu.
-* Testovací agent je nainstalován prostřednictvím úlohy jako součást sestavení nebo vydání.
-* Postup nasazení lze snadno přizpůsobit. Nebudete už mít přístup k použití jednoho skriptu. Můžete také využít celou řadu úloh, které jsou k dispozici v produktu, a také v Visual Studio Marketplace.
-* Nemusíte spravovat testovací sady. Můžete přímo spouštět testy z binárních souborů.
+* Nepotřebujete řadič sestavení nebo testovacího kontroléru.
+* Testovací agent se instaluje prostřednictvím úkolu jako součást sestavení nebo vydané verzi.
+* Je snadné k přizpůsobení kroků nasazení. Už nejsou omezené na pomocí jednoho skriptu. Můžete taky využít výhod celé řadě úloh, které jsou dostupné v produktu stejně jako v aplikaci Visual Studio Marketplace.
+* Nemusíte spravovat testovací sady. Testy můžete spustit přímo z binárních souborů.
 * Získáte rozsáhlejší prostředí pro vytváření sestav pro testy, které byly spuštěny v rámci každého sestavení nebo vydání.
-* Můžete sledovat, které prostředky (verze, sestavení, pracovní položky, potvrzení) jsou aktuálně nasazeny a testovány v každém prostředí.
-* Automatizaci můžete přizpůsobit a rozšíříte tak, aby bylo možné snadno nasadit do více testovacích prostředí a dokonce i do produkčního prostředí.
-* Automatizaci můžete naplánovat tak, že dojde k vrácení se změnami nebo potvrzení nebo v konkrétní době každý den.
+* Můžete sledovat, které prostředky (verze, sestavení, pracovních položek, potvrzení) jsou aktuálně nasadila a otestovala v každém prostředí.
+* Můžete přizpůsobit a rozšířit automatizace snadno nasazovat do více testovacích prostředích a dokonce i do produkčního prostředí.
+* Můžete naplánovat, automatizace, která se provede při každém vrácení se změnami nebo potvrzení změn, nebo v určitý čas každý den.
 
 ## <a name="self-service-management-of-scvmm-environments"></a>Samoobslužná správa prostředí SCVMM
 
@@ -55,7 +55,7 @@ Nicméně vzhledem k vývoji bohatých systémů správy veřejného a privátn�
 
 Následující tabulka shrnuje typické aktivity, které provedete v centru testovacích prostředí, a způsob, jakým je můžete provádět prostřednictvím SCVMM nebo Azure (Pokud se jedná o aktivity správy infrastruktury) nebo prostřednictvím TFS a Azure DevOps Services (Pokud se jedná o testování nebo nasazení). Aktivity):
 
-| Uvedené | S centrem testovacího prostředí | V sestavení nebo vydané verzi |
+| Kroky | S centrem testovacího prostředí | V sestavení nebo vydané verzi |
 |-------|-----------------|-----------------------|
 | Správa knihovny šablon prostředí. | Vytvořte testovací prostředí. Nainstalujte na virtuální počítače potřebný software. Nástroj Sysprep a uložte prostředí jako šablonu v knihovně. | Konzolu pro správu SCVMM můžete použít přímo k vytvoření a správě šablon virtuálních počítačů nebo šablon služeb. Při používání Azure vyberte jednu ze [šablon Azure pro rychlý Start](https://azure.microsoft.com/resources/templates/). |
 | Vytvořte testovací prostředí. | Vyberte šablonu prostředí v knihovně a nasaďte ji. Zadejte potřebné parametry pro přizpůsobení konfigurací virtuálních počítačů. | Použijte konzolu pro správu SCVMM přímo k vytvoření virtuálních počítačů nebo instancí služby ze šablon. K vytváření prostředků použijte Azure Portal přímo. Případně vytvořte definici vydané verze s prostředím. K vytvoření nových virtuálních počítačů použijte úlohy nebo úkoly Azure z [rozšíření Integration SCVMM](https://marketplace.visualstudio.com/items?itemname=ms-vscs-rm.scvmmapp) . Vytvoření nové verze této definice je stejné jako vytvoření nového prostředí v centru testovacích prostředí. |

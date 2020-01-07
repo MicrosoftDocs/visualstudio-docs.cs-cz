@@ -3,17 +3,17 @@ title: Mezipaměť schématu editoru XML
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 35a7fcad-f3bf-4a96-9008-4306e7276223
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aae5749d57dd1c9aaca8748ed02bdbb5587cade6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 40781a5249d9b69df5f41f863f3d36ac6a119645
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668746"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592487"
 ---
 # <a name="schema-cache"></a>Mezipaměť schémat
 
@@ -23,25 +23,25 @@ Editor XML může také vyhledat schémata nacházející se v řešení, schém
 
 Následující tabulka popisuje schémata, která jsou nainstalována s editorem XML.
 
-| Bitmap | Popis |
+| Název souboru | Popis |
 |-| - |
-| *Catalog. xsd* | Schéma pro soubory katalogu schématu editoru XML Informace o katalozích schématu najdete níže. |
-| *Soubor DotNetConfig. xsd* | Schéma pro soubory Web. config, "<http://schemas.microsoft.com/.NETConfiguration/v2.0>". |
-| *MSBuild. xsd* | Schéma pro MSBuild vytvořit soubory "<http://schemas.microsoft.com/developer/msbuild/2003>". |
-| *msdata. xsd* | Schéma pro poznámky XSD přidané třídou <xref:System.Data.DataSet>, "urn: schemas-microsoft-com: XML-msdata". |
-| *msxsl. xsd* | Schéma pro rozšíření bloků skriptu Microsoft XSLT, urn: schemas-microsoft-com: XSLT. |
+| *catalog.xsd* | Schéma pro soubory katalogu schématu editoru XML Informace o katalozích schématu najdete níže. |
+| *DotNetConfig.xsd* | Schéma pro soubory Web. config `http://schemas.microsoft.com/.NETConfiguration/v2.0`. |
+| *MSBuild. xsd* | Schéma pro nástroj MSBuild k vytváření souborů `http://schemas.microsoft.com/developer/msbuild/2003`. |
+| *msdata.xsd* | Schéma pro poznámky XSD přidané třídou <xref:System.Data.DataSet>, "urn: schemas-microsoft-com: XML-msdata". |
+| *msxsl.xsd* | Schéma pro rozšíření bloků skriptu Microsoft XSLT, urn: schemas-microsoft-com: XSLT. |
 | *SnippetFormat. xsd* | Schéma pro soubory XML fragmentu kódu. Příklady najdete v tématu *% VSINSTALLDIR% \VC#\Expansions*. |
-| *SOAP 1.1. xsd* | Schéma pro protokol SOAP (Simple Object Access Protocol) 1,1, http://schemas.xmlsoap.org/soap/envelope/. |
+| *SOAP 1.1. xsd* | Schéma pro protokol SOAP (Simple Object Access Protocol) 1,1, `http://schemas.xmlsoap.org/soap/envelope/`. |
 | *SOAP 1.2. xsd* | Schéma pro Simple Object Access Protocol 1,2. |
-| *SiteMapSchema. xsd* | Schéma pro soubor XML mapy webu ASP.NET "<http://schemas.microsoft.com/AspNet/SiteMap-File-1.0>". |
-| *WSDL. xsd* | Schéma pro jazyk popisu webové služby http://schemas.xmlsoap.org/wsdl/. |
-| *xenc. xsd* | Schéma pro šifrování XML http://www.w3.org/2000/09/xmldsig#. |
-| *XHTML. xsd* | Schéma pro XHTML http://www.w3.org/1999/xhtml. |
-| *XLink. xsd* | Schéma pro XLink 1.0 http://www.w3.org/1999/xlink. |
-| *XML. xsd* | Schéma popisující XML: Space a XML: lang atributy, http://www.w3.org/XML/1998/namespace. |
-| *xmlsig. xsd* | Schéma pro digitální podpisy XML http://www.w3.org/2000/09/xmldsig#. |
-| *xsdschema. xsd* | Schéma popisující samotný XSD, http://www.w3.org/2001/XMLSchema. |
-| *XSLT. xsd* | Schéma pro transformace XML http://www.w3.org/1999/XSL/Transform. |
+| *SiteMapSchema.xsd* | Schéma pro soubor XML mapy webu ASP.NET `http://schemas.microsoft.com/AspNet/SiteMap-File-1.0`. |
+| *wsdl.xsd* | Schéma pro jazyk popisu webové služby `http://schemas.xmlsoap.org/wsdl/`. |
+| *xenc. xsd* | Schéma pro šifrování XML `http://www.w3.org/2000/09/xmldsig#`. |
+| *xhtml.xsd* | Schéma pro XHTML `http://www.w3.org/1999/xhtml`. |
+| *XLink. xsd* | Schéma pro XLink 1.0 `http://www.w3.org/1999/xlink`. |
+| *xml.xsd* | Schéma popisující XML: Space a XML: lang atributy, `http://www.w3.org/XML/1998/namespace`. |
+| *xmlsig.xsd* | Schéma pro digitální podpisy XML `http://www.w3.org/2000/09/xmldsig#`. |
+| *xsdschema.xsd* | Schéma popisující samotný XSD, `http://www.w3.org/2001/XMLSchema`. |
+| *XSLT. xsd* | Schéma pro transformace XML `http://www.w3.org/1999/XSL/Transform`. |
 
 ## <a name="update-schemas-in-the-cache"></a>Aktualizace schémat v mezipaměti
 
@@ -76,7 +76,7 @@ Atribut `href` může být libovolná cesta k souboru nebo adresa URL protokolu 
 
 - CommonApplicationData
 
-- IDENTIFIKÁTORY
+- LCID
 
 Katalogový dokument může zahrnovat `Catalog` element, který odkazuje na jiné katalogy. Pomocí elementu `Catalog` můžete odkazovat na centrální katalog sdílený vaším týmem nebo společností nebo online katalog sdílený s vašimi obchodními partnery. Atribut `href` je cesta k souboru nebo adresa URL protokolu HTTP pro ostatní katalogy. Následuje příklad prvku `Catalog`:
 

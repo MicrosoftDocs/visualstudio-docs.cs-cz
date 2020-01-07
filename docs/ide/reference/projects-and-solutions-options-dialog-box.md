@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Projects and Solutions Options dialog box
 - Options dialog box, Projects and Solutions
 ms.assetid: 2801f24e-a138-488a-ae3c-e1f99a678ac0
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 783cdf5cef127a39958f14a2dc5ece9a45fcee62
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1ed60e07c625665f92838cfbc671b03c605fda0d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655724"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567642"
 ---
 # <a name="options-dialog-box-projects-and-solutions--general"></a>Dialogové okno Možnosti: projekty a řešení \> obecné
 
-Pomocí této stránky můžete definovat chování sady Visual Studio související s projekty a řešeními. Chcete-li získat přístup k těmto možnostem, vyberte možnost **nástroje**  > **Možnosti**, rozbalte položku **projekty a řešení**a pak vyberte možnost **Obecné**.
+Pomocí této stránky můžete definovat chování sady Visual Studio související s projekty a řešeními. Chcete-li získat přístup k těmto možnostem, vyberte možnost **nástroje** > **Možnosti**, rozbalte položku **projekty a řešení**a pak vyberte možnost **Obecné**.
 
 Na stránce **Obecné** jsou k dispozici následující možnosti.
 
@@ -36,9 +36,9 @@ Když se tato možnost vybere, **Průzkumník řešení** se automaticky otevře
 
 ## <a name="show-advanced-build-configurations"></a>Zobrazit pokročilé konfigurace sestavení
 
-Je-li vybrána tato možnost, možnosti konfigurace sestavení se zobrazí v dialogovém okně **stránky vlastností projektu** a v dialogovém okně **stránky vlastností řešení** . Pokud není zaškrtnuto, možnosti konfigurace sestavení se nezobrazí v dialogovém okně **stránky vlastností projektu** a v dialogovém okně **stránky vlastností řešení** pro Visual Basic a C# projekty, které obsahují jednu konfiguraci nebo dvě konfigurace. ladění a vydaná verze. Pokud má projekt uživatelsky definované konfigurace, zobrazí se možnosti konfigurace sestavení.
+Je-li vybrána tato možnost, možnosti konfigurace sestavení se zobrazí v dialogovém okně **stránky vlastností projektu** a v dialogovém okně **stránky vlastností řešení** . Pokud je zaškrtnuto, možnosti konfigurace sestavení se nezobrazují v dialogovém okně **stránky vlastností projektu** a v dialogovém okně **stránky vlastností řešení** pro Visual Basic a C# projekty, které obsahují jednu konfiguraci nebo dvě konfigurace ladění a vydání. Pokud má projekt uživatelsky definované konfigurace, zobrazí se možnosti konfigurace sestavení.
 
-Pokud není vybráno, příkazy v nabídce **sestavení** , jako je **sestavení řešení**, **opětovné sestavení řešení**a **Vyčištění**, jsou prováděny v konfiguraci vydané verze a příkazy v nabídce **ladění** , jako je například **Start. Ladění** a **spouštění bez ladění**se provádí v konfiguraci ladění.
+Pokud není vybráno, příkazy v nabídce **sestavení** , jako je **sestavení řešení**, **opětovné sestavení**řešení a **Vyčištění**, jsou prováděny v konfiguraci vydané verze a příkazy v nabídce **ladění** , jako je například **Spustit ladění** a **Spustit bez ladění**, jsou prováděny v konfiguraci ladění.
 
 ## <a name="always-show-solution"></a>Vždy zobrazit řešení
 
@@ -87,7 +87,7 @@ Pokud je tato možnost vybrána, obnoví stav uzlů v Průzkumník řešení s o
 
 ## <a name="open-sdk-style-project-files-with-double-click-or-the-enter-key"></a>Otevřete soubory projektu ve stylu sady SDK dvojitým kliknutím nebo klávesou ENTER.
 
-Pokud je vybrána tato možnost a dvakrát kliknete na uzel projektu ve stylu sady SDK v Průzkumník řešení nebo jej vyberete a potom stisknete klávesu **ENTER**, soubor projektu (například \* soubor. csproj) se otevře jako XML v editoru. Pokud je tato možnost Odstraněná, poklikejte na uzel projektu ve stylu sady SDK v Průzkumník řešení nebo jeho výběr a stisknutí klávesy **ENTER** má vliv na rozbalení nebo sbalení pouze uzlu.
+Pokud je vybrána tato možnost a dvakrát kliknete na uzel projektu ve stylu sady SDK v Průzkumník řešení nebo jej vyberete a potom stisknete klávesu **ENTER**, soubor projektu (například \*soubor. csproj) se otevře jako XML v editoru. Pokud je tato možnost Odstraněná, poklikejte na uzel projektu ve stylu sady SDK v Průzkumník řešení nebo jeho výběr a stisknutí klávesy **ENTER** má vliv na rozbalení nebo sbalení pouze uzlu.
 
 Pokud tuto možnost nemáte zaškrtnuté a chcete upravit soubor projektu ve stylu sady SDK, klikněte pravým tlačítkem myši na uzel projektu v Průzkumník řešení a vyberte **Upravit soubor projektu**. Pro jiné typy projektů je nutné nejprve uvolnit projekt před jeho úpravou v aplikaci Visual Studio.
 

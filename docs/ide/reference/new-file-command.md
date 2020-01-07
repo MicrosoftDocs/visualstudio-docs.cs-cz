@@ -8,17 +8,17 @@ helpviewer_keywords:
 - File.NewFile command
 - New File command
 ms.assetid: 767868d6-a525-425b-a43b-2198f636ab6b
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 02f6872ef2acaef65bf6ef1b7631bb06c89518ab
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5fe8a99ee59a347fdcb7cff601b75139760630f7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747879"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595953"
 ---
 # <a name="new-file-command"></a>Nový soubor – příkaz
 Vytvoří nový soubor a otevře ho. Soubor se zobrazí ve složce různé soubory.
@@ -35,12 +35,12 @@ File.NewFile [filename] [/t:templatename] [/editor:editorname]
 Volitelné. Název souboru Pokud není zadán žádný název, je zadán výchozí název. Pokud není uveden žádný název šablony, je vytvořen textový soubor.
 
 ## <a name="switches"></a>Přepínače
-/t: `templatename` \
+/t:`templatename`\
 Volitelné. Určuje typ souboru, který se má vytvořit.
 
-Syntaxe argumentu/t: `templatename` zrcadlí informace, které se nacházejí v dialogovém okně Nový soubor. Zadejte název kategorie následovaný zpětným lomítkem (`\`) a názvem šablony a uzavřete celý řetězec v uvozovkách.
+Syntaxe argumentu/t:`templatename` zrcadlí informace, které se nacházejí v dialogovém okně Nový soubor. Zadejte název kategorie následovaný zpětným lomítkem (`\`) a názvem šablony a uzavřete celý řetězec v uvozovkách.
 
-Chcete-li například vytvořit nový zdrojový soubor [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)], zadejte následující příkaz pro argument/t: `templatename`.
+Chcete-li například vytvořit nový zdrojový soubor [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)], zadejte následující příkaz pro argument/t:`templatename`.
 
 ```cmd
 /t:"Visual C++\C++ File (.cpp)"
@@ -48,12 +48,12 @@ Chcete-li například vytvořit nový zdrojový soubor [!INCLUDE[vcprvc](../../c
 
 Výše uvedený příklad ukazuje, že C++ šablona souboru je umístěna v kategorii vizuálu C++ v dialogovém okně **nový soubor** .
 
-/e: `editorname` \
+/e:`editorname`\
 Volitelné. Název editoru, ve kterém bude soubor otevřen. Je-li zadán argument, ale není zadán žádný název editoru, zobrazí se dialogové okno **otevřít v** .
 
-Syntaxe parametru/e: `editorname` používá editory názvů, které se zobrazují v dialogovém okně Otevřít v programu, uzavřeném v uvozovkách.
+Syntaxe parametru/e:`editorname` používá editory názvů, které se zobrazují v dialogovém okně Otevřít v programu, uzavřeném v uvozovkách.
 
-Chcete-li například otevřít soubor v editoru zdrojového kódu, zadejte následující příkaz pro argument/e: `editorname`.
+Chcete-li například otevřít soubor v editoru zdrojového kódu, zadejte následující příkaz pro argument/e:`editorname`.
 
 ```cmd
 /e:"Source Code (text) Editor"

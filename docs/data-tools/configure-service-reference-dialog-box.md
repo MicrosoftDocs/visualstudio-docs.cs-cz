@@ -9,17 +9,17 @@ helpviewer_keywords:
 - service references [Visual Studio], configuring behavior
 - Configure Service Reference dialog box
 ms.assetid: 25e4c36b-2db6-4e71-9010-b7068255d09d
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 033663c347a39c63a76bddd10625bdc86cec1f00
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f5bae3acb6f687c8c787e2d4121999d1133b0f1f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72642863"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586923"
 ---
 # <a name="configure-service-reference-dialog-box"></a>Nastavit odkaz na službu – dialogové okno
 
@@ -39,11 +39,11 @@ Chcete-li získat přístup k dialogovému oknu **Konfigurovat odkaz** na služb
 
 - Chcete-li určit typy kolekce seznamu nebo slovníku pro klienta WCF, vyberte typy ze seznamu **typ kolekce** a **typ kolekce slovníku** .
 
-- Chcete-li zakázat sdílení typů, zrušte zaškrtnutí políčka **znovu použít typy v odkazovaných sestaveních** . Pokud chcete povolit sdílení typů pro podmnožinu odkazovaných sestavení, zaškrtněte políčko **znovu použít typy v odkazovaných sestaveních** , vyberte možnost **znovu použít typy v zadaných odkazovaných sestaveních**a vyberte požadované odkazy v **odkazovaném sestavení. seznam sestavení**.
+- Chcete-li zakázat sdílení typů, zrušte zaškrtnutí políčka **znovu použít typy v odkazovaných sestaveních** . Pokud chcete povolit sdílení typů pro podmnožinu odkazovaných sestavení, zaškrtněte políčko **znovu použít typy v odkazovaných sestaveních** , vyberte možnost **znovu použít typy v zadaných odkazovaných sestaveních**a vyberte požadované odkazy v **seznamu odkazovaných sestavení**.
 
 ## <a name="uielement-list"></a>UIElement – seznam
 
-**Adresáře**
+**Adresa**
 
 Aktualizuje webovou adresu, kde odkaz na službu vyhledává službu. Například během vývoje může být služba hostována na vývojovém serveru a později přesunuta na provozní server, což vyžaduje změnu adresy.
 
@@ -83,7 +83,7 @@ Určuje, zda se klient služby WCF pokusí znovu použít to, co již existuje v
 
 **Znovu použít typy ve všech odkazovaných sestaveních**
 
-Je-li toto políčko zaškrtnuto, budou použity všechny typy v **odkazovaných sestaveních seznamu** , pokud je to možné. Ve výchozím nastavení je tato možnost vybraná.
+Je-li toto políčko zaškrtnuto, budou použity všechny typy v **odkazovaných sestaveních seznamu** , pokud je to možné. Tato možnost je vybrána ve výchozím nastavení.
 
 **Znovu použít typy v zadaných odkazovaných sestaveních**
 

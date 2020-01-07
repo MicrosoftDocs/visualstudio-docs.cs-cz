@@ -2,17 +2,17 @@
 title: Zobrazit závislosti mezi C++ zdrojovými soubory a hlavičkové soubory
 ms.date: 05/16/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbba97f47c3ac0686bad15c3a1882e1e9bd85057
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a17015c7efbb51027450e06bd1fb571ef9820d48
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654186"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597240"
 ---
 # <a name="code-maps-for-c-projects"></a>Mapy kódu pro C++ projekty
 
@@ -20,7 +20,7 @@ Pokud chcete vytvořit více úplných map pro C++ projekty, nastavte u těchto 
 
 Když otevřete řešení, které obsahuje projekty Visual C++, může trvat nějakou dobu, než se aktualizuje databáze technologie IntelliSense. Během této doby možná nebudete moci vytvořit mapy kódu pro soubory hlaviček ( *. h* nebo `#include`), dokud nebude dokončena aktualizace databáze technologie IntelliSense. Na stavovém řádku v dolní části sady Visual Studio můžete sledovat průběh aktualizace.
 
-- Chcete-li zobrazit závislosti mezi všemi zdrojovými soubory a hlavičkovým soubory ve vašem řešení, vyberte možnost **architektura**  > **Generovat graf souborů zahrnutí**.
+- Chcete-li zobrazit závislosti mezi všemi zdrojovými soubory a hlavičkovým soubory ve vašem řešení, vyberte možnost **architektura** > **Generovat graf souborů zahrnutí**.
 
    ![Graf závislosti pro nativní kód](../modeling/media/dependencygraphgeneral_nativecode.png)
 
@@ -38,7 +38,7 @@ Tyto položky nejsou podporovány pro jazyk C C++ a kód:
 
 Tyto problémy mohou nastat při vytváření map kódu pro jazyk C a C++ kód:
 
-|**Chybu**|**Možná příčina**|**Rozhodnutí**|
+|**Problém**|**Možná příčina**|**Řešení**|
 |-|-|-|
 |Nepovedlo se vygenerovat mapu kódu.|V řešení nebyly úspěšně sestaveny žádné projekty.|Opravte chyby sestavení, k nimž došlo, a potom znovu vygenerujte mapu.|
 |Pokud se pokusíte vygenerovat mapu kódu z nabídky **Architektura** , Visual Studio přestane reagovat.|Soubor databáze programů (.pdb) může být poškozen.<br /><br /> Soubor .pdb ukládá informace o ladění, jako je typ, metoda a informace zdrojového souboru.|Znovu sestavte řešení a potom akci opakujte.|

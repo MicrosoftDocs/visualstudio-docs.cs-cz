@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, transformation process
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 518c06f8630ad9fa7742f7b3e85ac27263cd0a86
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6d6cca9a4a98c4afcffa8322acb75a4cef8a7527
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605810"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565861"
 ---
 # <a name="the-text-template-transformation-process"></a>Proces transformace textových šablon
 Proces transformace textové šablony převede soubor textové šablony jako vstup a vygeneruje nový textový soubor jako výstup. Můžete například použít šablony textu k vygenerování Visual Basic nebo C# kódu nebo můžete vygenerovat sestavu HTML.
@@ -27,7 +27,7 @@ Proces transformace textové šablony převede soubor textové šablony jako vst
 
 |Součást|Popis|Přizpůsobitelné (ano/ne)|
 |-|-|-|
-|Jádra|Komponenta Engine řídí proces transformace textové šablony.|Ne.|
+|Modul|Komponenta Engine řídí proces transformace textové šablony.|Ne.|
 |Hostitel|Hostitel je rozhraní mezi modulem a uživatelským prostředím. Visual Studio je hostitelem procesu transformace textu.|Ano. Můžete napsat vlastního hostitele.|
 |Procesory direktiv|Procesory direktiv jsou třídy, které zpracovávají direktivy v textových šablonách. Direktivy můžete použít k poskytnutí dat pro textovou šablonu ze vstupního zdroje.|Ano. Můžete psát vlastní procesory direktiv.|
 

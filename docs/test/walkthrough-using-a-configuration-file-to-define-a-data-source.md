@@ -6,31 +6,31 @@ helpviewer_keywords:
 - configuration files [Visual Studio ALM], defining data sources
 - unit tests, walkthrough
 - data sources, defining with configuration files
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ba7ee908a96675a77997902fc96cea72309b747
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c76d71c106dbd2b5cbe63ab2f36defdfbd6cf127
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659587"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590719"
 ---
-# <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>Návod: použití konfiguračního souboru k definování zdroje dat
+# <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>Návod: Použití konfiguračního souboru k definování zdroje dat
 
-Tento návod ukazuje, jak použít zdroj dat definovaný v souboru *App. config* pro testování částí. Naučíte se, jak vytvořit soubor *App. config* , který definuje zdroj dat, který může být použit třídou <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>. Úlohy v tomto návodu zahrnují následující:
+Tento návod ukazuje, jak používat zdroj dat definované v *app.config* soubor pro testování částí. Se dozvíte, jak vytvořit *app.config* soubor, který definuje zdroje dat, který mohou využívat <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> třídy. Úkoly uvedené v tomto návodu zahrnují následující:
 
-- Vytváří se soubor *App. config* .
+- Vytvoření *app.config* souboru.
 
 - Definování vlastního konfiguračního oddílu.
 
 - Definování připojovacích řetězců.
 
-- Definování zdrojů dat.
+- Definování datových zdrojů.
 
-- Přístup ke zdrojům dat pomocí třídy <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>.
+- Přistupuje k datům zdrojů pomocí <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> třídy.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -38,33 +38,33 @@ K dokončení tohoto návodu budete potřebovat:
 
 - Visual Studio Enterprise
 
-- Data pro alespoň jednu z testovacích metod poskytují buď Microsoft Access, nebo Microsoft Excel.
+- Aplikace Microsoft Access nebo aplikace Microsoft Excel poskytující data pro alespoň jeden testovací metody.
 
-- Řešení sady Visual Studio, které obsahuje projekt testů.
+- Řešení sady Visual Studio, který obsahuje testovací projekt.
 
-## <a name="add-an-appconfig-file-to-the-project"></a>Přidat soubor App. config do projektu
+## <a name="add-an-appconfig-file-to-the-project"></a>Přidejte do projektu soubor app.config
 
-1. Pokud váš projekt testů již obsahuje soubor *App. config* , použijte příkaz [definovat vlastní konfigurační oddíl](#define-a-custom-configuration-section).
+1. Pokud je testovací projekt už *app.config* souboru, přejděte na [definování vlastního konfiguračního oddílu](#define-a-custom-configuration-section).
 
-2. Klikněte pravým tlačítkem na projekt testů v **Průzkumník řešení**a pak vyberte **Přidat**  > **Nová položka**.
+2. Klikněte pravým tlačítkem na projekt testů v **Průzkumníka řešení**a pak vyberte **přidat** > **nová položka**.
 
-     Otevře se okno **Přidat novou položku** .
+     **Přidat novou položku** otevře se okno.
 
-3. Vyberte šablonu **konfigurační soubor aplikace** a klikněte na **Přidat**.
+3. Vyberte **konfiguračního souboru aplikace** šablonu a klikněte na tlačítko **přidat**.
 
-## <a name="define-a-custom-configuration-section"></a>Definovat vlastní konfigurační oddíl
+## <a name="define-a-custom-configuration-section"></a>Definování vlastního konfiguračního oddílu
 
-Prověřte soubor *App. config* . Obsahuje alespoň deklaraci XML a kořenový element.
+Zkontrolujte *app.config* souboru. Obsahuje nejméně deklarace XML a kořenový element.
 
-### <a name="to-add-the-custom-configuration-section-to-the-appconfig-file"></a>Chcete-li přidat vlastní konfigurační oddíl do souboru App. config
+### <a name="to-add-the-custom-configuration-section-to-the-appconfig-file"></a>Chcete-li přidat vlastní konfigurační oddíl do souboru app.config
 
-1. Kořenový element *App. config* by měl být **konfigurační** element. Vytvořte element **configSections** v rámci **konfiguračního** elementu. **ConfigSections** by měl být prvním prvkem v souboru *App. config* .
+1. Kořenový element *app.config* by měl být **konfigurace** elementu. Vytvoření **configSections** element v rámci **konfigurace** elementu. **ConfigSections** by měl být prvním elementem v *app.config* souboru.
 
-2. V rámci elementu **configSections** vytvořte **oddíl** elementu.
+2. V rámci **configSections** elementu, vytvořit **části** elementu.
 
-3. V elementu **Section** přidejte atribut s názvem `name` a přiřaďte mu hodnotu `microsoft.visualstudio.testtools`. Přidejte další atribut s názvem `type` a přiřaďte mu hodnotu `Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions`.
+3. V **části** elementu, přidejte atribut s názvem `name` a přiřaďte ho hodnotu `microsoft.visualstudio.testtools`. Přidat jiný atribut `type` a přiřaďte ho hodnotu `Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions`.
 
-Element **Section** by měl vypadat nějak takto:
+**Části** prvek by měl vypadat nějak takto:
 
 ```xml
 <section name="microsoft.visualstudio.testtools" type="Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions" />
@@ -73,17 +73,17 @@ Element **Section** by měl vypadat nějak takto:
 > [!NOTE]
 > Název sestavení musí odpovídat verzi, kterou používáte.
 
-## <a name="define-connection-strings"></a>Definování připojovacích řetězců
+## <a name="define-connection-strings"></a>Definujte připojovací řetězce
 
-Připojovací řetězce definují informace specifické pro poskytovatele pro přístup ke zdrojům dat. Připojovací řetězce definované v konfiguračních souborech poskytují znovu použitelné informace o poskytovateli dat v rámci aplikace. V této části vytvoříte dva připojovací řetězce, které budou použity zdroji dat, které jsou definovány v části vlastní konfigurace.
+Připojovací řetězce definují informace specifické pro zprostředkovatele pro přístup ke zdrojům dat. Připojovací řetězce, které jsou definované v konfiguračních souborech poskytují informace poskytovatele opakovaně použitelné dat v aplikaci. V této části vytvoříte dva připojovací řetězce, které se použijí podle zdroje dat, které jsou definovány v části vlastní konfigurace.
 
-### <a name="to-define-connection-strings"></a>Definování připojovacích řetězců
+### <a name="to-define-connection-strings"></a>K definování připojovacích řetězců
 
-1. Za element **configSections** vytvořte element **connectionStrings** .
+1. Po **configSections** elementu, vytvořit **connectionStrings** elementu.
 
-2. V rámci elementu **connectionStrings** vytvořte dva prvky **Add** .
+2. V rámci **connectionStrings** elementu, pak vytvoříte další dva **přidat** elementy.
 
-3. V prvním prvku **Přidat** vytvořte následující atributy a hodnoty pro připojení k databázi aplikace Microsoft Access:
+3. V prvním **přidat** elementu, vytvořte následující atributy a hodnoty pro připojení k databázi aplikace Microsoft Access:
 
 |Atribut|Hodnoty|
 |-|------------|
@@ -91,7 +91,7 @@ Připojovací řetězce definují informace specifické pro poskytovatele pro p�
 |`connectionString`|`"Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\testdatasource.accdb; Persist Security Info=False;"`|
 |`providerName`|`"System.Data.OleDb"`|
 
-Ve druhém elementu **Add přidejte** následující atributy a hodnoty pro připojení k tabulce aplikace Microsoft Excel:
+Ve druhém **přidat** elementu, vytvořte následující atributy a hodnoty pro připojení k Microsoft Excelové tabulce:
 
 |Atribut|Hodnoty|
 |-|-|
@@ -99,7 +99,7 @@ Ve druhém elementu **Add přidejte** následující atributy a hodnoty pro při
 |`connectionString`|`"Dsn=Excel Files;dbq=data.xlsx;defaultdir=.\; driverid=790;maxbuffersize=2048;pagetimeout=5"`|
 |`providerName`|`"System.Data.Odbc"`|
 
-Element **connectionStrings** by měl vypadat nějak takto:
+**ConnectionStrings** prvek by měl vypadat nějak takto:
 
 ```xml
 <connectionStrings>
@@ -110,27 +110,27 @@ Element **connectionStrings** by měl vypadat nějak takto:
 
 ## <a name="define-data-sources"></a>Definování zdrojů dat
 
-Část zdroje dat obsahuje čtyři atributy, které používá testovací modul k načtení dat ze zdroje dat.
+Zdroje dat obsahuje čtyři atributy, které se používají modulem test k načtení dat ze zdroje dat.
 
-- `name` definuje identitu, kterou <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> používá k určení zdroje dat, který se má použít.
+- `name` definuje identitu používanou <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> k určení, která data zdroje používat.
 
-- `connectionString` identifikuje připojovací řetězec vytvořený v předchozím oddílu definování připojovacích řetězců.
+- `connectionString` Určuje připojovací řetězec vytvořený v předchozím oddílu definovat připojovací řetězce.
 
-- `dataTableName` definuje tabulku nebo list obsahující data, která se mají použít v testu.
+- `dataTableName` Určuje tabulky nebo listu, obsahující data, která mají v testu používáte.
 
-- `dataAccessMethod` definuje techniku pro přístup k datovým hodnotám ve zdroji dat.
+- `dataAccessMethod` Definuje techniku pro přístup k hodnotám dat ve zdroji dat.
 
-V této části definujete dva zdroje dat, které se použijí při testování částí.
+V této části budete nadefinujeme dva zdroje dat pro použití v testu jednotek.
 
-### <a name="to-define-data-sources"></a>Definování zdrojů dat
+### <a name="to-define-data-sources"></a>K definování zdroje dat
 
-1. Po elementu **connectionStrings** vytvořte prvek **Microsoft. VisualStudio. TestTools** . Tento oddíl byl vytvořen v části definice vlastního konfiguračního oddílu.
+1. Po **connectionStrings** elementu, vytvořit **microsoft.visualstudio.testtools** elementu. Tato část byl vytvořen v definovat vlastní konfigurační oddíl.
 
-2. V rámci elementu **Microsoft. VisualStudio. TestTools** vytvořte element **DataSources** .
+2. V rámci **microsoft.visualstudio.testtools** elementu, vytvořit **zdroje dat** elementu.
 
-3. V elementu **DataSources** vytvořte dva prvky **Přidat** .
+3. V rámci **zdroje dat** elementu, pak vytvoříte další dva **přidat** elementy.
 
-4. V prvním prvku **Přidat** vytvořte následující atributy a hodnoty pro zdroj dat Microsoft Access:
+4. V prvním **přidat** elementu, vytvořte následující atributy a hodnoty pro zdroj dat Microsoft Access:
 
 |Atribut|Hodnoty|
 |-|------------|
@@ -139,7 +139,7 @@ V této části definujete dva zdroje dat, které se použijí při testování 
 |`dataTableName`|`"MyDataTable"`|
 |`dataAccessMethod`|`"Sequential"`|
 
-Ve druhém elementu **Add** element vytvořte následující atributy a hodnoty pro zdroj dat aplikace Microsoft Excel:
+Ve druhém **přidat** elementu, vytvořte následující atributy a hodnoty pro zdroj dat aplikace Microsoft Excel:
 
 |Atribut|Hodnoty|
 |-|-|
@@ -148,7 +148,7 @@ Ve druhém elementu **Add** element vytvořte následující atributy a hodnoty 
 |`dataTableName`|`"Sheet1$"`|
 |`dataAccessMethod`|`"Sequential"`|
 
-Element **Microsoft. VisualStudio. TestTools** by měl vypadat nějak takto:
+**Microsoft.visualstudio.testtools** prvek by měl vypadat nějak takto:
 
 ```xml
 <microsoft.visualstudio.testtools>
@@ -159,7 +159,7 @@ Element **Microsoft. VisualStudio. TestTools** by měl vypadat nějak takto:
 </microsoft.visualstudio.testtools>
 ```
 
-Konečný soubor *App. config* by měl vypadat nějak takto:
+Finální *app.config* soubor by měl vypadat nějak takto:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -180,47 +180,47 @@ Konečný soubor *App. config* by měl vypadat nějak takto:
 </configuration>
 ```
 
-## <a name="create-a-unit-test-that-uses-data-sources-defined-in-appconfig"></a>Vytvoří test jednotky, který používá zdroje dat definované v App. config.
+## <a name="create-a-unit-test-that-uses-data-sources-defined-in-appconfig"></a>Vytvoření testování částí, která používá zdroje dat, které jsou definovány v souboru app.config
 
-Teď, když je soubor *App. config* definovaný, vytvoříte test jednotek, který používá data umístěná ve zdrojích dat, která jsou definovaná v souboru *App. config* . V této části budeme:
+Teď, když *app.config* definoval souboru, bude vytvoření testování částí, která používá data umístěná v zdroje dat, které jsou definovány v *app.config* souboru. V této části provedeme následující:
 
-- Vytvořte zdroje dat nalezené v souboru *App. config* .
+- Vytvoření datového zdroje najdete v *app.config* souboru.
 
-- Použijte zdroje dat ze dvou testovacích metod, které porovnávají hodnoty v jednotlivých zdrojích dat.
+- Zdroje dat ve dvou testovací metody, které porovnat hodnoty u každého zdroje dat použijte.
 
-### <a name="to-create-a-microsoft-access-data-source"></a>Vytvoření zdroje dat aplikace Microsoft Access
+### <a name="to-create-a-microsoft-access-data-source"></a>Chcete-li vytvořit zdroj dat Microsoft Access
 
-1. Vytvořte databázi aplikace Microsoft Access s názvem *testdatasource. accdb*.
+1. Vytvoření databáze Microsoft Access s názvem *testdatasource.accdb*.
 
-2. Vytvořte tabulku a pojmenujte ji `MyDataTable` v *testdatasource. accdb*.
+2. Vytvořte tabulku s názvem `MyDataTable` v *testdatasource.accdb*.
 
-3. Pomocí datového typu `Number` vytvořte dvě pole v `MyDataTable` s názvem `Arg1` a `Arg2`.
+3. Vytvořte dvě pole v `MyDataTable` s názvem `Arg1` a `Arg2` pomocí `Number` datového typu.
 
-4. Přidejte pět entit pro `MyDataTable` s následujícími hodnotami pro `Arg1` a `Arg2`, v uvedeném pořadí: (10, 50), (3, 2), (6, 0), (0, 8) a (12312, 1000).
+4. Přidat pět entity, které `MyDataTable` s použitím následujících hodnot pro `Arg1` a `Arg2`v uvedeném pořadí: (10,50), (3,2), (6,0) (0,8) a (12312,1000).
 
-5. Uložte a zavřete databázi.
+5. Uložte a zavřete databáze.
 
-6. Změňte připojovací řetězec tak, aby odkazoval na umístění databáze. Změňte hodnotu `Data Source` tak, aby odrážela umístění databáze.
+6. Změňte připojovací řetězec tak, aby odkazoval na umístění databáze. Změňte hodnotu vlastnosti `Data Source` tak, aby odrážely umístění databáze.
 
-### <a name="to-create-a-microsoft-excel-data-source"></a>Vytvoření zdroje dat v aplikaci Microsoft Excel
+### <a name="to-create-a-microsoft-excel-data-source"></a>Chcete-li vytvořit zdroj dat aplikace Microsoft Excel
 
-1. Vytvořte tabulku aplikace Microsoft Excel s názvem *data. xlsx*.
+1. Vytvoření tabulky Microsoft Excel s názvem *data.xlsx*.
 
-2. Vytvořte list s názvem `Sheet1`, pokud ještě neexistuje v *data. xlsx*.
+2. Vytvořit tabulku s názvem `Sheet1` Pokud již neexistuje v *data.xlsx*.
 
 3. Vytvořte dvě záhlaví sloupců a pojmenujte je `Val1` a `Val2` v `Sheet1`.
 
-4. Přidejte pět entit pro `Sheet1` s následujícími hodnotami pro `Val1` a `Val2`, v uvedeném pořadí: (1, 1), (2, 2), (3, 3), (4, 4) a (5, 0).
+4. Přidat pět entity, které `Sheet1` s použitím následujících hodnot pro `Val1` a `Val2`v uvedeném pořadí: (1,1), (2,2) (3,3) (4,4) a (5,0).
 
-5. Uložte a zavřete tabulku.
+5. Uložte a zavřete tabulky.
 
-6. Změňte připojovací řetězec tak, aby odkazoval na umístění tabulky. Změňte hodnotu `dbq` tak, aby odrážela umístění tabulky.
+6. Změňte připojovací řetězec tak, aby odkazoval na umístění tabulky. Změňte hodnotu vlastnosti `dbq` tak, aby odrážely umístění tabulky.
 
-### <a name="to-create-a-unit-test-using-the-appconfig-data-sources"></a>Vytvoření testu jednotek pomocí zdrojů dat App. config
+### <a name="to-create-a-unit-test-using-the-appconfig-data-sources"></a>Vytvoření testu jednotky pomocí souboru app.config zdroje dat
 
-1. Přidejte test jednotek do testovacího projektu.
+1. Testování částí přidejte do projektu testů.
 
-2. Automaticky generovaný obsah testu jednotek nahraďte následujícím kódem:
+2. Nahraďte obsah automaticky generovaný sady testování částí s následujícím kódem:
 
     ```csharp
     using System;
@@ -260,14 +260,14 @@ Teď, když je soubor *App. config* definovaný, vytvoříte test jednotek, kter
     }
     ```
 
-3. Projděte si atributy DataSource. Všimněte si názvů nastavení ze souboru *App. config* .
+3. Prozkoumejte atributů DataSource. Všimněte si, že názvy v nastavení *app.config* souboru.
 
-4. Sestavte řešení a spusťte testy MyTestMethod a MyTestMethod2.
+4. Sestavte řešení a spuštění testů MyTestMethod a MyTestMethod2.
 
 > [!IMPORTANT]
-> Nasaďte položky jako zdroje dat tak, aby byly přístupné pro test v adresáři nasazení.
+> Nasaďte položky jako zdroje dat, takže jsou přístupné pro test v adresáři nasazení.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Testování částí kódu](../test/unit-test-your-code.md)
-- [Postupy: vytvoření testu jednotek řízených daty](../test/how-to-create-a-data-driven-unit-test.md)
+- [Postupy: Vytvoření testu jednotek řízené daty](../test/how-to-create-a-data-driven-unit-test.md)

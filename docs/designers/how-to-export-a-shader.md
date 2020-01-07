@@ -3,17 +3,17 @@ title: 'Postupy: Exportování shaderu'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0bd48bf4-9792-4456-a545-e462a2be668d
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c05e40b76d60a5602cee1cb67b5c3094fb94d249
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f4a3aec047238786a60b1261415acccfed521695
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72635552"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589432"
 ---
 # <a name="how-to-export-a-shader"></a>Postupy: Export shaderu
 
@@ -27,7 +27,7 @@ Po vytvoření shaderu pomocí Návrháře shaderu a před jeho použitím v apl
 
      Pokud nemáte soubor **grafu vizuálních shaderů (. DGSL)** otevřený, vytvořte ho tak, jak je popsáno v tématu [How to: Create a Basic Color shader](../designers/how-to-create-a-basic-color-shader.md).
 
-2. Na panelu nástrojů **Návrháře shaderů** vyberte **upřesnit**  > **exportovat**  > **exportovat jako**. Zobrazí se dialogové okno **exportovat shader** .
+2. Na panelu nástrojů **Návrháře shaderů** vyberte **upřesnit** > **exportovat** > **exportovat jako**. Zobrazí se dialogové okno **exportovat shader** .
 
 3. V rozevíracím seznamu **Uložit jako typ** vyberte formát, který chcete exportovat.
 

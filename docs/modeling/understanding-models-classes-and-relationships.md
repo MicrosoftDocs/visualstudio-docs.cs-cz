@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, models
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 391dff6540bcea26f63d8ea88f344455722b742a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c2e8891307520ee841fbed1591565624f2016939
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748225"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565900"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Porozumění modelům, třídám a vztahům
 Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společně s jakýmkoli vlastním programovým kódem, který můžete napsat. Většina kódu programu v řešení DSL je vygenerována z tohoto souboru.
@@ -128,7 +128,7 @@ Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společn
  Když vytvoříte relaci v definici DSL, názvy vlastností a vztahů jsou zadané výchozí hodnoty. Můžete je ale změnit.
 
 ## <a name="multiplicities"></a>Mnohočetnostmi
- Násobnosti určují, kolik prvků může mít stejnou roli v relaci domény. V příkladu nastavení násobnosti nula (0.. \*) v roli **Catalog** určuje, že jakákoli instance třídy domény **vydavatele** může mít tolik odkazů na **PublisherCatalog** vztahů, jak je chcete dát.
+ Násobnosti určují, kolik prvků může mít stejnou roli v relaci domény. V příkladu nastavení násobnosti nula (0..\*) v roli **Catalog** určuje, že jakákoli instance třídy domény **vydavatele** může mít tolik odkazů na **PublisherCatalog** vztahů, jak je chcete dát.
 
  Nastavte násobnost role buď zadáním v diagramu, nebo úpravou vlastnosti `Multiplicity` v okně **vlastnosti** . Následující tabulka popisuje nastavení pro tuto vlastnost.
 
@@ -150,4 +150,4 @@ Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společn
 
 ## <a name="see-also"></a>Viz také:
 
-- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 - projects [Visual Studio], build configuration
 - projects [Visual Studio], cleaning
 ms.assetid: 6b54ef59-ffed-4f62-a645-1279ede97ebf
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fc8b8640f73bc89b43a9ef80d6762e8b2a67c96
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e8bb4b2860d40828a96e25ec6e6c73d947dd60c0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655736"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567655"
 ---
 # <a name="projectconfig-devenvexe"></a>/ProjectConfig (devenv. exe)
 
@@ -43,7 +43,7 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
   Požadováno. Úplná cesta a název souboru řešení.
 
-- {`/Build` | `/Clean` | `/Deploy` | `/Rebuild`}
+- {`/Build`|`/Clean`|`/Deploy`|`/Rebuild`}
 
   Požadováno. [Vytvoří](build-devenv-exe.md), [vyčistí](clean-devenv-exe.md), [nasadí](deploy-devenv-exe.md)nebo [znovu sestaví](rebuild-devenv-exe.md) projekt.
 
@@ -65,7 +65,7 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
 ## <a name="remarks"></a>Poznámky
 
-Přepínač `/ProjectConfig` musí být s přepínačem `/Project` použit jako součást příkazu `/Build`,/`Clean`, `/Deploy` nebo `/Rebuild`.
+Přepínač `/ProjectConfig` musí být s přepínačem `/Project` použit jako součást příkazu `/Build`,/`Clean`, `/Deploy`nebo `/Rebuild`.
 
 Uzavřete řetězce, které obsahují mezery, do dvojitých uvozovek.
 
@@ -73,7 +73,7 @@ Souhrnné informace o sestaveních, včetně chyb, lze zobrazit v příkazovém 
 
 ## <a name="example"></a>Příklad
 
-Následující příkaz sestaví projekt `CSharpWinApp` pomocí `Debug` konfigurace sestavení projektu v rámci `MySolution`:
+Následující příkaz sestaví projekt `CSharpWinApp`pomocí `Debug` konfigurace sestavení projektu v rámci `MySolution`:
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug

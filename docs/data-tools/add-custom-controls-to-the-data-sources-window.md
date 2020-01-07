@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ComplexBindingPropertiesAttribute class, using
 - Data Sources Window, selecting controls
 ms.assetid: 8c43e7d2-ba94-4d9b-96de-3aa971955afd
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
-ms.openlocfilehash: b6334d233ccb2c4453d117b6bdfe942b6ea092e2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cd4791e118d22aab1126987461547f9fa2fec317
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648920"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587105"
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>Přidání vlastních ovládacích prvků do okna zdrojů dat
 
@@ -39,7 +39,7 @@ Chcete-li přidat nebo odebrat ovládací prvky ze seznamu dostupných ovládac�
 2. V okně **zdroje dat** klikněte na položku, která je součástí zdroje dat, který jste přidali do okna, a poté klikněte na rozevírací nabídku položky.
 
    > [!TIP]
-   > Pokud není okno zdroje dat otevřené, otevřete ho výběrem možnosti **zobrazit**  >  jiné**zdroje dat** > **Windows** .
+   > Pokud není okno zdroje dat otevřené, otevřete ho výběrem možnosti **zobrazit** > jiné **zdroje dat** > **Windows** .
 
 3. V rozevírací nabídce klikněte na **přizpůsobit**. Otevře se jedna z následujících dialogových oken:
 

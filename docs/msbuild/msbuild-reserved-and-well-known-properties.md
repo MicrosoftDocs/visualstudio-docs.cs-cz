@@ -10,17 +10,17 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild, reserved properties
 ms.assetid: 99333e61-83c9-4804-84e3-eda297c2478d
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bd54e97535c281d50119fdc7aa759d0704fa9e1
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 1ab4c18006834cc1bef6841864e42609e09bc3a1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491558"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585831"
 ---
 # <a name="msbuild-reserved-and-well-known-properties"></a>Rezervované a dobře známé vlastnosti nástroje MSBuild
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] poskytuje sadu předdefinovaných vlastností, které ukládají informace o souboru projektu a binárních souborech [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Tyto vlastnosti jsou vyhodnocovány stejným způsobem jako ostatní vlastnosti [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Chcete-li například použít vlastnost `MSBuildProjectFile`, zadáte `$(MSBuildProjectFile)`.
@@ -70,10 +70,10 @@ Kromě výše uvedených názvů nelze názvy odpovídající elementům jazyka 
 * UsingTask
 * ProjectExtensions –
 * OnError
-* ImportGroup –
+* ImportGroup
 * Možnost
-* Kdy
-* případech
+* Když
+* Případech
 
 ## <a name="see-also"></a>Viz také:
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

@@ -5,26 +5,26 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, tasks
 ms.assetid: e72e6506-4a11-4edf-ae8d-cfb5a3b9d8a0
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37597d1e1f4fde2b2e81e7aa7868c0aaff935337
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 4f5f19d756d669a7b3e9e5d32a89c598c7edc9d3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416849"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593652"
 ---
 # <a name="msbuild-inline-tasks"></a>Vložené úlohy nástroje MSBuild
-Úlohy nástroje MSBuild jsou obvykle vytvořeny kompilací třídy, která implementuje <xref:Microsoft.Build.Framework.ITask> rozhraní. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
+Úlohy nástroje MSBuild jsou obvykle vytvořeny kompilací třídy, která implementuje rozhraní <xref:Microsoft.Build.Framework.ITask>. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
 
  Počínaje verzí .NET Framework 4 můžete vytvořit úlohy vložené do souboru projektu. Pro hostování úlohy není nutné vytvářet samostatné sestavení. To usnadňuje sledování zdrojového kódu a jednodušší nasazení úlohy. Zdrojový kód je integrovaný do skriptu.
 
  V MSBuild 15,8 byl přidán [RoslynCodeTaskFactory](../msbuild/msbuild-roslyncodetaskfactory.md) , který může vytvářet .NET Standard vložené úkoly pro různé platformy.  Pokud potřebujete použít vložené úlohy pro .NET Core, je nutné použít rozhraní RoslynCodeTaskFactory.
 ## <a name="the-structure-of-an-inline-task"></a>Struktura vložené úlohy
- Vložená úloha je obsažena v prvku [UsingTask](../msbuild/usingtask-element-msbuild.md) . Vložená úloha a `UsingTask` element, který obsahuje, jsou obvykle zahrnuty do souboru *. targets* a importovány do jiných souborů projektu podle potřeby. Zde je základní vložená úloha. Všimněte si, že nedělá nic.
+ Vložená úloha je obsažena v prvku [UsingTask](../msbuild/usingtask-element-msbuild.md) . Vložená úloha a prvek `UsingTask`, který obsahuje, jsou obvykle zahrnuty do souboru *. targets* a importovány do jiných souborů projektu podle potřeby. Zde je základní vložená úloha. Všimněte si, že nedělá nic.
 
 ```xml
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -44,51 +44,51 @@ ms.locfileid: "68416849"
 </Project>
 ```
 
- `UsingTask` Element v příkladu má tři atributy, které popisují úlohu a vložený objekt pro vytváření úloh, který jej zkompiluje.
+ Element `UsingTask` v příkladu má tři atributy, které popisují úlohu a vložený objekt pro vytváření úloh, který ho zkompiluje.
 
-- Atribut pojmenuje úlohu, v tomto `DoNothing`případě. `TaskName`
+- Atribut `TaskName` pojmenuje úkol, v tomto případě `DoNothing`.
 
-- `TaskFactory` Atribut vyjmenovává třídu, která implementuje vložený objekt pro vytváření úloh.
+- Atribut `TaskFactory` pojmenovává třídu, která implementuje vložený objekt pro vytváření úloh.
 
-- `AssemblyFile` Atribut poskytuje umístění vloženého objektu pro vytváření úloh. Alternativně můžete použít `AssemblyName` atribut k určení plně kvalifikovaného názvu vložené třídy úlohy Factory, která se obvykle nachází v globální mezipaměti sestavení (GAC).
+- Atribut `AssemblyFile` poskytuje umístění vloženého objektu pro vytváření úloh. Alternativně můžete použít atribut `AssemblyName` k určení plně kvalifikovaného názvu vložené třídy úlohy Factory, která se obvykle nachází v globální mezipaměti sestavení (GAC).
 
-Zbývající prvky `DoNothing` úkolu jsou prázdné a jsou k dispozici k ilustraci pořadí a struktury vložené úlohy. Robustnější příklad je uveden dále v tomto tématu.
+Zbývající prvky `DoNothing` úlohy jsou prázdné a jsou k dispozici k ilustraci pořadí a struktury vložené úlohy. Robustnější příklad je uveden dále v tomto tématu.
 
-- `ParameterGroup` Element je nepovinný. Je-li tento parametr zadán, deklaruje parametry pro úlohu. Další informace o vstupních a výstupních parametrech naleznete v části [vstupní a výstupní parametry](#input-and-output-parameters) dále v tomto tématu.
+- Element `ParameterGroup` je nepovinný. Je-li tento parametr zadán, deklaruje parametry pro úlohu. Další informace o vstupních a výstupních parametrech naleznete v části [vstupní a výstupní parametry](#input-and-output-parameters) dále v tomto tématu.
 
-- `Task` Element popisuje a obsahuje zdrojový kód úkolu.
+- Element `Task` popisuje a obsahuje zdrojový kód úkolu.
 
-- `Reference` Element určuje odkazy na sestavení .NET, která používáte ve svém kódu. To je ekvivalentní přidání odkazu na projekt v aplikaci Visual Studio. `Include` Atribut určuje cestu odkazovaného sestavení.
+- Element `Reference` Určuje odkazy na sestavení .NET, která používáte ve svém kódu. To je ekvivalentní přidání odkazu na projekt v aplikaci Visual Studio. Atribut `Include` Určuje cestu odkazovaného sestavení.
 
-- `Using` Element vypíše obory názvů, ke kterým chcete získat přístup. To se `Using` podobá příkazu ve vizuálu C#. `Namespace` Atribut určuje obor názvů, který se má zahrnout.
+- Element `Using` obsahuje seznam oborů názvů, ke kterým chcete získat přístup. To se podobá příkazu `Using` v vizuálu C#. Atribut `Namespace` určuje obor názvů, který se má zahrnout.
 
-`Reference`a `Using` elementy jsou Language-nezávislá. Vložené úkoly lze zapsat v libovolném z podporovaných jazyků rozhraní .NET CodeDom, například Visual Basic nebo vizuálu C#.
+prvky `Reference` a `Using` jsou nezávislá jazyka. Vložené úkoly lze zapsat v libovolném z podporovaných jazyků rozhraní .NET CodeDom, například Visual Basic nebo vizuálu C#.
 
 > [!NOTE]
-> Prvky obsažené `Task` v elementu jsou specifické pro objekt pro vytváření úloh, v tomto případě objekt pro vytváření úloh kódu.
+> Prvky, které jsou obsaženy v prvku `Task`, jsou specifické pro objekt pro vytváření úloh, v tomto případě objekt pro vytváření úloh kódu.
 
 ### <a name="code-element"></a>Element kódu
- Poslední podřízený element, který se má zobrazit `Task` v rámci elementu `Code` , je element. `Code` Element obsahuje nebo vyhledá kód, který chcete zkompilovat do úlohy. Co vložíte do `Code` prvku závisí na tom, jak chcete vytvořit úlohu.
+ Poslední podřízený element, který se má zobrazit v prvku `Task` je `Code` element. Element `Code` obsahuje nebo vyhledá kód, který chcete zkompilovat do úlohy. Co vložíte do prvku `Code` závisí na tom, jak chcete vytvořit úlohu.
 
- `Language` Atribut určuje jazyk, ve kterém je kód napsán. Přijatelné hodnoty jsou `cs` `vb` pro C#Visual Basic.
+ Atribut `Language` určuje jazyk, ve kterém je kód napsán. Přijatelné hodnoty jsou `cs` pro C#`vb` Visual Basic.
 
- Atribut určuje typ kódu, který se nachází `Code` v elementu. `Type`
+ Atribut `Type` určuje typ kódu, který se nachází v prvku `Code`.
 
-- Pokud `Type` je `Class`hodnota, pak `Code` element obsahuje kód <xref:Microsoft.Build.Framework.ITask> pro třídu, která je odvozena z rozhraní.
+- Pokud je hodnota `Type` `Class`, pak element `Code` obsahuje kód pro třídu, která je odvozena z rozhraní <xref:Microsoft.Build.Framework.ITask>.
 
-- Pokud `Type` je `Method`hodnota, pak kód definuje přepsání `Execute` metody <xref:Microsoft.Build.Framework.ITask> rozhraní.
+- Pokud je hodnota `Type` `Method`, pak kód definuje přepsání metody `Execute` <xref:Microsoft.Build.Framework.ITask> rozhraní.
 
-- Pokud `Type` je `Fragment`hodnota, pak kód definuje obsah `Execute` `return` metody, ale ne signaturu nebo příkaz.
+- Pokud je hodnota `Type` `Fragment`, pak kód definuje obsah metody `Execute`, ale ne signaturu nebo příkaz `return`.
 
-Samotný kód se obvykle objevuje mezi `<![CDATA[` značkou `]]>` a značkou. Vzhledem k tomu, že kód je v oddílu CDATA, nemusíte se starat o rezervované znaky, například\<"" nebo ">".
+Samotný kód se obvykle zobrazuje mezi značkou `<![CDATA[` a značkou `]]>`. Vzhledem k tomu, že kód je v oddílu CDATA, nemusíte se starat o rezervované znaky, například "\<" nebo ">".
 
-Alternativně můžete použít `Source` atribut `Code` prvku k určení umístění souboru, který obsahuje kód pro úlohu. Kód ve zdrojovém souboru musí být typu, který je určen `Type` atributem. Pokud je přítomen `Type` `Class`atribut, výchozí hodnota je. `Source` Pokud `Source` není k dispozici, je výchozí `Fragment`hodnota.
+Alternativně můžete použít atribut `Source` elementu `Code` k určení umístění souboru, který obsahuje kód pro úlohu. Kód ve zdrojovém souboru musí být typu, který je určen atributem `Type`. Pokud je přítomen atribut `Source`, je výchozí hodnota `Type` `Class`. Pokud `Source` není k dispozici, je výchozí hodnota `Fragment`.
 
 > [!NOTE]
-> Při definování třídy Task ve zdrojovém souboru musí souhlasit název třídy s `TaskName` atributem odpovídajícího elementu [UsingTask](../msbuild/usingtask-element-msbuild.md) .
+> Při definování třídy Task ve zdrojovém souboru musí souhlasit název třídy s atributem `TaskName` odpovídajícího elementu [UsingTask](../msbuild/usingtask-element-msbuild.md) .
 
 ## <a name="helloworld"></a>Hell
- Tady je robustnější vložená úloha. V úloze HelloWorld se zobrazí text Hello, World! na výchozím zařízení pro protokolování chyb, což je obvykle systémová konzola nebo okno **výstup** sady Visual Studio. `Reference` Element v příkladu je zahrnut pouze pro ilustraci.
+ Tady je robustnější vložená úloha. V úloze HelloWorld se zobrazí text Hello, World! na výchozím zařízení pro protokolování chyb, což je obvykle systémová konzola nebo okno **výstup** sady Visual Studio. Element `Reference` v příkladu je zahrnut pouze pro ilustraci.
 
 ```xml
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -125,7 +125,7 @@ Log.LogError("Hello, world!");
 ```
 
 ## <a name="input-and-output-parameters"></a>Vstupní a výstupní parametry
- Vložené parametry úlohy jsou podřízené prvky `ParameterGroup` elementu. Každý parametr přebírá název elementu, který ho definuje. Tento parametr `Text`definuje následující kód.
+ Vložené parametry úlohy jsou podřízené prvky `ParameterGroup`ho prvku. Každý parametr přebírá název elementu, který ho definuje. Následující kód definuje parametr `Text`.
 
 ```xml
 <ParameterGroup>
@@ -135,11 +135,11 @@ Log.LogError("Hello, world!");
 
  Parametry mohou mít jeden nebo více z těchto atributů:
 
-- `Required`je volitelný atribut, který je `false` ve výchozím nastavení. Pokud `true`je, pak je vyžadován parametr a před voláním úlohy musí být předána hodnota.
+- `Required` je volitelný atribut, který je ve výchozím nastavení `false`. Je-li `true`, je vyžadován parametr a před voláním úlohy musí být předána hodnota.
 
-- `ParameterType`je volitelný atribut, který je `System.String` ve výchozím nastavení. Může být nastaven na libovolný plně kvalifikovaný typ, který je buď položka, nebo hodnota, která může být převedena na řetězec a z řetězce pomocí System. Convert. ChangeType. (Jinými slovy, jakýkoli typ, který lze předat do a z vnějšího úkolu.)
+- `ParameterType` je volitelný atribut, který je ve výchozím nastavení `System.String`. Může být nastaven na libovolný plně kvalifikovaný typ, který je buď položka, nebo hodnota, která může být převedena na řetězec a z řetězce pomocí System. Convert. ChangeType. (Jinými slovy, jakýkoli typ, který lze předat do a z vnějšího úkolu.)
 
-- `Output`je volitelný atribut, který je `false` ve výchozím nastavení. Pokud `true`, pak musí být parametru předána hodnota před návratem z metody Execute.
+- `Output` je volitelný atribut, který je ve výchozím nastavení `false`. Pokud `true`, musí být parametru předána hodnota před návratem z metody Execute.
 
 Například
 
@@ -153,13 +153,13 @@ Například
 
 definuje tyto tři parametry:
 
-- `Expression`je požadovaný vstupní parametr typu System. String.
+- `Expression` je povinný vstupní parametr typu System. String.
 
-- `Files`je požadovaný vstupní parametr seznamu položek.
+- `Files` je požadovaný vstupní parametr seznamu položek.
 
-- `Tally`je výstupní parametr typu System. Int32.
+- `Tally` je výstupní parametr typu System. Int32.
 
-`Code` Pokud máelement`Fragment` atribut nebo`Method`, pak se automaticky vytvoří vlastnosti pro každý parametr. `Type` V opačném případě musí být vlastnosti explicitně deklarovány ve zdrojovém kódu úlohy a musí přesně odpovídat definicím parametrů.
+Pokud má element `Code` `Type` atribut `Fragment` nebo `Method`, jsou automaticky vytvořeny vlastnosti pro každý parametr. V opačném případě musí být vlastnosti explicitně deklarovány ve zdrojovém kódu úlohy a musí přesně odpovídat definicím parametrů.
 
 ## <a name="example"></a>Příklad
  Následující vložená úloha nahradí všechny výskyty tokenu v daném souboru zadanou hodnotou.

@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b63a0b1801b0a3b559281959975a1faaa5bb99a5
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: abaae887e39b85e4f2d363a63ef6cde5845e3fa2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516779"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597396"
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>Krok 1: vytvoření projektu a přidání tabulky do formuláře
 
@@ -34,7 +34,7 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
     Zobrazí se formulář s názvem *Form1.cs* nebo *Form1. vb* v závislosti na zvoleném programovacím jazyce.
 
    > [!NOTE]
-   > Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , nainstalujte úlohu **vývoj desktopových aplikací .NET** pomocí instalační program pro Visual Studio.<br/><br/>![ úlohy vývoj desktopových aplikací .NET v Instalační program pro Visual Studio ](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Další informace najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
+   > Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , nainstalujte úlohu **vývoj desktopových aplikací .NET** pomocí instalační program pro Visual Studio.<br/><br/>![úlohy vývoj desktopových aplikací .NET v Instalační program pro Visual Studio](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Další informace najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
 
 ::: moniker-end
 
@@ -57,7 +57,7 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
    >
    > V části Instalační program pro Visual Studio klikněte na možnost zvolit úlohu **vývoj desktopových aplikací .NET** .
    >
-   > ![Zatížení .NET Core v Instalační program pro Visual Studio](../ide/media/install-dot-net-desktop-env.png)
+   > ![Úlohy .NET core v instalačním programu sady Visual Studio](../ide/media/install-dot-net-desktop-env.png)
    >
    > Potom klikněte na tlačítko **Upravit** v instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce; Pokud ano, udělejte to. V dalším kroku vyberte **pokračovat** a nainstalujte úlohu.
 
@@ -117,14 +117,14 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
        > [!NOTE]
        > Písmo Webdings je písmo ikon dodávané s operačním systémem Windows. Ve vaší porovnávací hře musí hráči hledat dvojice ikon, takže toto písmo použijete k zobrazení ikon, které mají být spárovány. Místo vložení **c** do vlastnosti **text** zkuste zadat různá písmena, abyste viděli, jaké ikony se zobrazí. Vykřičník je pavouk, velké písmeno N je oko a čárka je čili paprička.
 
-5. Vyberte ovládací prvek popisku a zkopírujte jej na další buňku v kontejneru TableLayoutPanel. (Vyberte klávesy **Ctrl** +**C** nebo na panelu nabídek vyberte **Upravit**  > **Kopírovat**.) Pak jej vložte. (Vyberte klávesy **Ctrl** +**v** nebo na panelu nabídek vyberte **Upravit**  > **Vložit**.) Kopie prvního popisku se zobrazí v druhé buňce kontejneru TableLayoutPanel. Vložte ho znovu a pod třetí buňku se zobrazí další popisek. Nechejte vkládat ovládací prvky popisku, dokud nebudou všechny buňky vyplněny.
+5. Vyberte ovládací prvek popisku a zkopírujte jej na další buňku v kontejneru TableLayoutPanel. (Vyberte klávesy **Ctrl**+**C** nebo na panelu nabídek vyberte **Upravit** > **Kopírovat**.) Pak jej vložte. (Vyberte klávesy **Ctrl**+**v** nebo na panelu nabídek vyberte **Upravit** > **Vložit**.) Kopie prvního popisku se zobrazí v druhé buňce kontejneru TableLayoutPanel. Vložte ho znovu a pod třetí buňku se zobrazí další popisek. Nechejte vkládat ovládací prvky popisku, dokud nebudou všechny buňky vyplněny.
 
    > [!NOTE]
-   > Pokud vložíte příliš mnoho časů, rozhraní IDE přidá nový řádek do kontejneru TableLayoutPanel, aby měl místo pro přidání nového ovládacího prvku popisek. Akci můžete vrátit zpět. Chcete-li novou buňku odebrat, **stiskněte klávesy Ctrl** +**Z** nebo na panelu nabídek vyberte možnost **Upravit**  > **zpět**.
+   > Pokud vložíte příliš mnoho časů, rozhraní IDE přidá nový řádek do kontejneru TableLayoutPanel, aby měl místo pro přidání nového ovládacího prvku popisek. Akci můžete vrátit zpět. Chcete-li novou buňku odebrat, **stiskněte klávesy Ctrl**+**Z** nebo na panelu nabídek vyberte možnost **Upravit** > **zpět**.
 
     Teď je váš formulář rozložený. Měl by vypadat podobně jako na následujícím obrázku.
 
-    ](../ide/media/express_tut4step1.png) ![Initial odpovídající hernímu formuláři<br/>*Formulář počáteční vyhovující hry*
+    ![počáteční odpovídající tvar hry](../ide/media/express_tut4step1.png)<br/>*Formulář počáteční vyhovující hry*
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 

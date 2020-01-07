@@ -27,27 +27,27 @@ helpviewer_keywords:
 - XSL, style sheets
 - XMLDataDocument class
 ms.assetid: 1fd5de47-2d61-4180-9539-c2c4bf9ab768
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c9412d89ee7d9ad1412f0eaf9fe9341e336a65e5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 87a5f069d5255a744e256bc9f7d1b48a135e85d8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668710"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592305"
 ---
 # <a name="xml-tools-in-visual-studio"></a>Nástroje XML v sadě Visual Studio
 
-*Jazyk XML (Extensible Markup Language) (XML)* je jazyk značek, který poskytuje formát pro popisovaná data. XML odděluje data a její prezentaci pomocí přidružených šablon stylů, jako je XSL (Extensible Stylesheet Language) a kaskádové šablony stylů (CSS). Visual Studio obsahuje nástroje a funkce, které usnadňují práci s XML, XSLT a schématy XML.
+*Kód XML (Extensible Language)* je značkovací jazyk, který poskytuje formátu pro popis data. XML odděluje data a její prezentaci pomocí přidružených šablon stylů, jako je XSL (Extensible Stylesheet Language) a kaskádové šablony stylů (CSS). Visual Studio obsahuje nástroje a funkce, které usnadňují práci s XML, XSLT a schématy XML.
 
 ## <a name="xml-editor"></a>Editor XML
 
 [Editor XML](xml-editor.md) slouží k úpravám dokumentů XML. Poskytuje úplnou kontrolu syntaxe XML, ověřování schématu při psaní, barevném kódování a IntelliSense. Pokud je k dispozici definice typu schématu nebo dokumentu, používá technologie IntelliSense k vypsání přípustných prvků a atributů.
 
-Mezi další funkce patří:
+K těmto dalším funkcím patří:
 
 - Podpora fragmentů kódu XML, včetně fragmentů generovaných schématem
 

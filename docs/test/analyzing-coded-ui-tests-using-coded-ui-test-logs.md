@@ -2,17 +2,17 @@
 title: Analýza programových testů uživatelského rozhraní pomocí protokolů z těchto testů
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 73916d309fa0e070bf4b05ba0d5a8fc02bef29f8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: ec1025eaa53861fae2cf92395d8842854649fa8c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665327"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591213"
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>Analýza programových testů uživatelského rozhraní pomocí protokolů kódovaného testu uživatelského rozhraní
 
@@ -26,9 +26,9 @@ V závislosti na vašem scénáři použijte k povolení protokolu jednu z násl
 
 - Pokud není v testovacím projektu přítomen žádný soubor *App. config* :
 
-   1. Určí, který proces *QTAgent \*. exe* se spustí při spuštění testu. Jedním ze způsobů, jak to provést, je sledovat kartu **Podrobnosti** ve **Správci úloh**systému Windows.
+   1. Určí, který proces *QTAgent\*. exe* se spustí při spuštění testu. Jedním ze způsobů, jak to provést, je sledovat kartu **Podrobnosti** ve **Správci úloh**systému Windows.
 
-   2. Otevřete odpovídající soubor *. config* ze složky *% ProgramFiles (x86)% \ Microsoft Visual Studio \\ \<version > \\ \<edition >* složce. Například pokud je spuštěný proces *QTAgent_40. exe*, otevřete soubor *QTAgent_40. exe. config*.
+   2. Otevřete odpovídající soubor *. config* ze složky *% ProgramFiles (x86)% \ Microsoft Visual Studio\\\<verze >\\* \<. Pokud je například spuštěný proces *QTAgent_40. exe*, otevřete *QTAgent_40. exe. config*.
 
    2. Změňte hodnotu **EqtTraceLevel** na úroveň protokolu, kterou chcete.
 
@@ -60,7 +60,7 @@ V závislosti na vašem scénáři použijte k povolení protokolu jednu z násl
 
 ## <a name="step-2-run-your-coded-ui-test-and-view-the-log"></a>Krok 2: spuštění kódovaného testu uživatelského rozhraní a zobrazení protokolu
 
-Když spustíte programový test uživatelského rozhraní s úpravami v souboru *QTAgent \*. exe. config* , uvidíte odkaz na výstup ve výsledcích **Průzkumníka testů** . Soubory protokolu se vytvářejí nejen v případě, že se test nezdařil, ale také pro úspěšné testy, pokud je úroveň trasování nastavena na **verbose**.
+Když spustíte programový test uživatelského rozhraní s úpravami v souboru *QTAgent\*. exe. config* , uvidíte odkaz na výstup ve výsledcích **Průzkumníka testů** . Soubory protokolu se vytvářejí nejen v případě, že se test nezdařil, ale také pro úspěšné testy, pokud je úroveň trasování nastavena na **verbose**.
 
 1. V nabídce **test** zvolte **okna** a pak vyberte **Průzkumník testů**.
 
@@ -71,7 +71,7 @@ Když spustíte programový test uživatelského rozhraní s úpravami v souboru
      Automatizované testy se spouštějí a označují, jestli byly úspěšné nebo neúspěšné.
 
     > [!TIP]
-    > Chcete-li zobrazit **Průzkumníka testů**, zvolte možnost **test**  > **Windows**a pak zvolte možnost **Průzkumník testů**.
+    > Chcete-li zobrazit **Průzkumníka testů**, zvolte možnost **test** > **Windows**a pak zvolte možnost **Průzkumník testů**.
 
 4. Vyberte odkaz **výstup** ve výsledcích **Průzkumníka testů** .
 

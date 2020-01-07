@@ -3,17 +3,17 @@ title: 'Postupy: Vytvoření přechodu shaderu založeného na geometrii'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 4b204405-ba95-4c5e-bd51-ec033a3ebfb6
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b34d51177e392b46c655c857b7015011818a888
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 96326910a04294e30c410cc96bf9c600bfb3f17c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72635644"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589448"
 ---
 # <a name="how-to-create-a-geometry-based-gradient-shader"></a>Postupy: vytvoření barevného shaderu založeného na geometrii
 
@@ -33,7 +33,7 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
 4. Přidejte do grafu **vektorový uzel masky** . V **panelu nástrojů**v části **Nástroj**vyberte možnost **Vektor masky** a přesuňte ji na návrhovou plochu.
 
-5. Zadejte hodnoty masky pro uzel **Vector masky** . V režimu **výběru** vyberte uzel **Vektor masky** a potom v okně **vlastnosti** nastavte vlastnost **zelená/Y** na **hodnotu true**a potom nastavte vlastnosti **Red/X**, **Blue/Z** a **alfa/W** na **hodnotu false.** . V tomto příkladu vlastnosti **Red/X**, **zelená/Y**a **Blue/Z** odpovídají komponentám X, Y a z uzlu **pozice světa** a **alfa/W** se nepoužívá. Protože pouze **zelená/Y** je nastavena na **hodnotu true**, po maskování zůstane pouze komponenta Y vstupního vektoru.
+5. Zadejte hodnoty masky pro uzel **Vector masky** . V **režimu výběru** vyberte uzel **Vektor masky** a potom v okně **vlastnosti** nastavte vlastnost **zelená/Y** na **hodnotu true**a nastavte vlastnosti **Red/X**, **Blue/Z** a **alfa/W** na **hodnotu false**. V tomto příkladu vlastnosti **Red/X**, **zelená/Y**a **Blue/Z** odpovídají komponentám X, Y a z uzlu **pozice světa** a **alfa/W** se nepoužívá. Protože pouze **zelená/Y** je nastavena na **hodnotu true**, po maskování zůstane pouze komponenta Y vstupního vektoru.
 
 6. Přidejte do grafu uzel **pozice na světě** . V **sadě nástrojů**v části **konstanty**vyberte **umístění světa** a přesuňte jej na plochu návrhu.
 

@@ -1,5 +1,5 @@
 ---
-title: Jak se pohybovat v integrovaném vývojovém prostředí (IDE)
+title: Jak pohyb v integrovaném vývojovém prostředí
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,85 +12,85 @@ helpviewer_keywords:
 - Window.NextDocumentWindowNav
 - IDE navigator
 ms.assetid: 6c36b6eb-c93f-496b-af08-4199f7afd8bd
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b3aa39c1c9748eb3a9270a66a3a6bbcb43fdcea2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2febdedf5cf472132de936c37cad787df3d77518
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645834"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590992"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>Postupy: pohyb v integrovaném vývojovém prostředí sady Visual Studio
 
-Integrované vývojové prostředí (IDE) bylo navrženo tak, aby bylo možné přesouvat z okna do okna a souboru do souboru několika různými způsoby v závislosti na požadavcích na preference nebo projektu. Můžete se rozhodnout přepínat v editoru otevřené soubory nebo cyklicky procházet všechna aktivní okna nástrojů v integrovaném vývojovém prostředí (IDE). Můžete také přepnout přímo na libovolný soubor otevřený v editoru bez ohledu na pořadí, ve kterém byl naposledy použit. Tyto funkce mohou zvýšit vaši produktivitu při práci v integrovaném vývojovém prostředí.
+Integrované vývojové prostředí (IDE) byla navržená tak, aby bylo možné přesunout okno s a soubor se souborem několika různými způsoby v závislosti na požadavcích předvoleb nebo projektu. Můžete procházet soubory lze otevřít v editoru nebo cyklicky procházet všechny aktivní okna nástrojů v rozhraní IDE. Také můžete přepnout na libovolný soubor otevřít v editoru, bez ohledu na pořadí, ve kterém byl naposledy přistupovat přímo. Tyto funkce může pomoct zvýšit vaši produktivitu při práci v integrovaném vývojovém prostředí.
 
 > [!NOTE]
-> Možnosti dostupné v dialogových oknech a názvy a umístění příkazů nabídky, které vidíte, se mohou lišit od toho, co je popsáno v tomto článku v závislosti na aktivních nastaveních nebo edici. Tento článek se vytvořil s **obecným** nastavením. Chcete-li změnit nastavení, například **Obecné** nebo  **C++ vizuální** nastavení, zvolte možnost **nástroje** > **Nastavení importu a exportu**a pak zvolte možnost **resetovat všechna nastavení**.
+> Dostupné možnosti v dialogových oknech, názvy a umístění příkazy nabídek, které se zobrazí, může lišit od co je popsaný v tomto článku, v závislosti na aktivních nastaveních nebo edici. Tento článek byl zapsán s **Obecné** nastavení v paměti. Chcete-li změnit nastavení, například k **Obecné** nebo **Visual C++** nastavení, zvolte **nástroje** > **nastavení importu a exportu**a klikněte na tlačítko **obnovit všechna nastavení**.
 
 ## <a name="keyboard-shortcuts"></a>Klávesové zkratky
 
-Téměř všechny příkazy nabídky v aplikaci Visual Studio mají klávesovou zkratku. Můžete také vytvořit vlastní zástupce. Další informace najdete v tématu [identifikace a přizpůsobení klávesových zkratek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
+Téměř každý příkaz v sadě Visual Studio nemá klávesovou zkratku. Můžete také vytvořit vlastní klávesové zkratky. Další informace najdete v tématu [identifikovat a přizpůsobení klávesových zkratek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
 
-## <a name="navigate-among-files-in-the-editor"></a>Navigace mezi soubory v editoru
+## <a name="navigate-among-files-in-the-editor"></a>Procházet soubory v editoru
 
-K přesunu souborů otevřených v editoru můžete použít několik metod. Můžete přecházet mezi soubory na základě pořadí, ve kterém k nim přistupujete, pomocí Navigátoru IDE můžete rychle najít libovolný otevřený soubor nebo připnout oblíbené soubory na kartu a zajistit, aby byly vždy viditelné.
+Chcete-li procházet soubory otevřené v editoru můžete použít několik metod. Lze přesunout mezi soubory podle pořadí, ve kterém k nim přístup, použijte Navigátor rozhraní IDE a rychle najít všechny aktuálně otevřené soubory nebo PIN kód na kartě Oblíbené soubory také tak, aby ta jsou vždycky viditelná.
 
-Přejděte zpět a procházejte vpřed v editoru podle pořadí, ve kterém byly použity, podobně jako u back-mailů a vpřed pro zobrazení historie v aplikaci Microsoft Internet Explorer.
+Přejít zpět a vpřed cyklu procházet otevřených souborů v editoru podle pořadí, ve kterém byly přístupné, většinu, jako jsou zpět a vpřed udělat pro historii zobrazení v aplikaci Internet Explorer.
 
-### <a name="to-move-through-open-files-in-order-of-use"></a>Procházení otevřených souborů v pořadí podle použití
+### <a name="to-move-through-open-files-in-order-of-use"></a>Chcete-li procházet soubory lze otevřít v pořadí podle používání
 
-- Chcete-li aktivovat otevřené dokumenty v pořadí, v jakém byly naposledy změněny, stiskněte klávesu **Ctrl**+ **-** (pomlčka).
+- Chcete-li aktivovat otevřené dokumenty v pořadí, v jakém byly naposledy změněny, stiskněte klávesovou **zkratku Ctrl**+ **-** (pomlčka).
 
-- Chcete-li aktivovat otevřené dokumenty v obráceném pořadí, stiskněte klávesu **Ctrl**+**SHIFT**+ **-** (pomlčka).
+- Chcete-li aktivovat otevřené dokumenty v obráceném pořadí, stiskněte klávesovou **zkratku Ctrl**+**SHIFT**+ **-** (pomlčka).
 
     > [!NOTE]
-    > **Přejít zpět** a **Přejít vpřed** také najdete v nabídce **zobrazení** .
+    > **Přejděte zpět** a **přejít vpřed** také najdete na **zobrazení** nabídky.
 
-Můžete také přepnout do konkrétního souboru otevřeného v editoru, bez ohledu na to, kdy jste ho naposledy otevřeli, pomocí seznamu aktivní soubory v editoru **rozhraní IDE**, seznam **aktivních souborů** nebo okna **Windows** .
+Můžete také přepnout na určitý soubor otevřít v editoru, bez ohledu na to, kdy posledního otevření souboru, pomocí **IDE Navigátor**, **aktivních souborů** seznamu v editoru, nebo **Windows** dialogové okno.
 
-**Rozhraní IDE navigátor** funguje podobně jako přepínač aplikace systému Windows. Není k dispozici z nabídek a lze k nim získat přístup pouze pomocí klávesových zkratek. K zacyklování **souborů v závislosti** na pořadí, ve kterém chcete cyklicky procházet, můžete použít kterýkoli ze dvou příkazů.
+**IDE Navigátor** funguje podobně jako přepínání aplikace Windows. Není k dispozici v nabídkách a je přístupný pouze pomocí klávesových zkratek. Můžete použít buď dva příkazy pro přístup k **IDE Navigátor** (viz dole) k cyklování skrze souborů, v závislosti na pořadí, ve kterém chcete procházet.
 
-![Visual Studio – navigátor IDE](../ide/media/vs2015_ide_navigator.png)
+![Navigátor rozhraní IDE sady Visual Studio](../ide/media/vs2015_ide_navigator.png)
 
-`Window.PreviousDocumentWindowNav` vám umožňuje přesunout se k souboru, který se naposledy otevřel, a `Window.NextDocumentWindowNav` vám umožní přesunout se v obráceném pořadí. **Nastavení obecného vývoje** přiřadí **klávesu SHIFT**+**ALT**+**f7** až `Window.PreviousDocumentWindowNav` a **ALT**+**F7** až 0.
-
-> [!NOTE]
-> Pokud kombinace nastavení, kterou používáte, ještě nemá přiřazenou kombinaci klávesových zkratek, můžete přiřadit vlastní příkaz pomocí stránky **klávesnice** dialogového okna **Možnosti** . Další informace najdete v tématu [identifikace a přizpůsobení klávesových zkratek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
-
-### <a name="to-switch-to-specific-files-in-the-editor"></a>Přepnutí na konkrétní soubory v editoru
-
-- Pokud chcete zobrazit **navigátor IDE**, stiskněte **CTRL**+**karta** . Podržte stisknutou klávesu **CTRL** a stiskněte klávesu **tabulátor** opakovaně, dokud nevyberete soubor, na který chcete přepnout.
-
-    > [!TIP]
-    > Chcete-li změnit pořadí, ve kterém procházíte seznamem **aktivních souborů** , podržte stisknuté klávesy **CTRL**+**SHIFT** a stiskněte klávesu **TAB**.
-
-    \- nebo-
-
-- V pravém horním rohu editoru klikněte na tlačítko **aktivní soubory** a potom vyberte soubor ze seznamu, na který chcete přejít.
-
-    \- nebo-
-
-- Na panelu nabídek vyberte **okno**  > **Windows**.
-
-- V seznamu vyberte soubor, který chcete zobrazit, a pak zvolte **aktivovat**.
-
-## <a name="navigate-among-tool-windows-in-the-ide"></a>Navigace mezi okny nástrojů v integrovaném vývojovém prostředí
-
-**Rozhraní IDE Navigator** také umožňuje cyklicky procházet okna nástrojů, která jste otevřeli v integrovaném vývojovém prostředí (IDE). Můžete použít kterýkoli ze dvou příkazů pro přístup k **navigátoru IDE** pro přepínání mezi okny nástrojů v závislosti na pořadí, ve kterém chcete cyklicky přepínat. `Window.PreviousToolWindowNav` vám umožňuje přesunout se k souboru, který se naposledy otevřel, a `Window.NextToolWindowNav` vám umožní přesunout se v obráceném pořadí. **Nastavení obecného vývoje** přiřadí **klávesu SHIFT**+**ALT**+**f7** až `Window.PreviousDocumentWindowNav` a **ALT**+**F7** až 0.
+`Window.PreviousDocumentWindowNav` Umožňuje přesunout do posledního přístupu k souboru a `Window.NextDocumentWindowNav` vám umožní přesunout v obráceném pořadí. **Obecné vývojové nastavení** přiřadí **Shift**+**Alt**+**F7** k `Window.PreviousDocumentWindowNav` a **Alt**  + **F7** k `Window.NextDocumentWindowNav`.
 
 > [!NOTE]
-> Pokud kombinace nastavení, kterou používáte, ještě nemá přiřazenou kombinaci klávesových zkratek, můžete přiřadit vlastní příkaz pomocí stránky **klávesnice** dialogového okna **Možnosti** . Další informace najdete v tématu [identifikace a přizpůsobení klávesových zkratek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
+> Pokud používáte kombinaci nastavení už nemá klávesovou zkratku přiřazená tomuto příkazu, můžete přiřadit vlastní pomocí vlastního příkazu **klávesnice** stránce **možnosti** dialogové okno pole. Další informace najdete v tématu [identifikovat a přizpůsobení klávesových zkratek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
 
-### <a name="to-switch-to-a-specific-tool-window-in-the-ide"></a>Přepnutí na určité okno nástrojů v integrovaném vývojovém prostředí
+### <a name="to-switch-to-specific-files-in-the-editor"></a>Přepnout na konkrétní soubory v editoru
 
-- Stiskněte **Alt**+**F7** pro zobrazení **navigátoru IDE**. Podržte stisknutou klávesu **ALT** a stiskněte klávesu **F7** opakovaně, dokud nevyberete okno, na které chcete přepnout.
+- Stisknutím klávesy **Ctrl**+**kartu** zobrazíte **IDE Navigátor**. Podržte stisknutou klávesu **Ctrl** klíč a stiskněte klávesu **kartu** opakovaně, dokud vyberte soubor, který máte v úmyslu přepnout na.
 
     > [!TIP]
-    > Chcete-li změnit pořadí, ve kterém procházíte seznamem **oken aktivních nástrojů** , stiskněte klávesy **SHIFT**+**ALT +** **F7**.
+    > Pořadí, ve kterém můžete projít **aktivních souborů** seznamu, podržte stisknutou klávesu **Ctrl**+**Shift** klávesy a stisknutím kláves **kartu**.
+
+    \- nebo –
+
+- V pravém horním rohu editoru zvolte **aktivních souborů** tlačítko a pak vyberte soubor ze seznamu přepnout na.
+
+    \- nebo –
+
+- V panelu nabídky zvolte **okno** > **Windows**.
+
+- V seznamu, vyberte soubor, který chcete zobrazit a pak zvolte **aktivovat**.
+
+## <a name="navigate-among-tool-windows-in-the-ide"></a>Procházet okna nástrojů v prostředí IDE
+
+**IDE Navigátor** také umožňuje cyklicky procházet okna nástrojů, je nutné otevřít v integrovaném vývojovém prostředí. Můžete použít buď dva příkazy pro přístup k **IDE Navigátor** budete cyklicky procházet okna nástrojů, v závislosti na pořadí, ve kterém chcete procházet. `Window.PreviousToolWindowNav` Umožňuje přesunout do posledního přístupu k souboru a `Window.NextToolWindowNav` vám umožní přesunout v obráceném pořadí. **Obecné vývojové nastavení** přiřadí **Shift**+**Alt**+**F7** k `Window.PreviousDocumentWindowNav` a **Alt**  + **F7** k `Window.NextDocumentWindowNav`.
+
+> [!NOTE]
+> Pokud používáte kombinaci nastavení už nemá klávesovou zkratku přiřazená tomuto příkazu, můžete přiřadit vlastní pomocí vlastního příkazu **klávesnice** stránce **možnosti** dialogové okno pole. Další informace najdete v tématu [identifikovat a přizpůsobení klávesových zkratek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
+
+### <a name="to-switch-to-a-specific-tool-window-in-the-ide"></a>Přejděte do okna konkrétní nástroje v integrovaném vývojovém prostředí
+
+- Stisknutím klávesy **Alt**+**F7** zobrazíte **IDE Navigátor**. Podržte stisknutou klávesu **Alt** klíč a stiskněte klávesu **F7** opakovaně neprojeví, dokud nevyberete máte v úmyslu přepněte do okna.
+
+    > [!TIP]
+    > Pořadí, ve kterém můžete projít **aktivní nástroj Windows** seznamu, podržte stisknutou klávesu **Shift**+**Alt** klávesy a stisknutím kláves **F7**.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -3,17 +3,17 @@ title: 'Návod: použití funkcí editoru XML'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ea8dc357-2e66-455a-aec2-7ccaccfc9adf
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ce7997e1002ced50dc4d8203d522feb0a6bbb49
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d2cf35730b70fc8c8bbec392c73b444b6e8e0aaa
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604451"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592461"
 ---
 # <a name="walkthrough-use-xml-editor-features"></a>Návod: použití funkcí editoru XML
 
@@ -34,7 +34,7 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
      Zobrazí se dialogové okno **schémata XSD** .
 
-4. Klikněte na tlačítko **Přidat**.
+4. Klikněte na tlačítko **Add** (Přidat).
 
      Zobrazí se dialogové okno **otevřít schéma XSD** .
 
@@ -64,7 +64,7 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
 3. Zadejte **soubor XML testu**.
 
-4. Na novém řádku zadejte `<` a v seznamu členů vyberte **Zaměstnanec** .
+4. Na novém řádku zadejte `<`a v seznamu členů vyberte **Zaměstnanec** .
 
      Editor přidá začátek XML elementu `<employee`. V tomto okamžiku můžete přidat atributy k elementu nebo můžete zavřít počáteční značku zadáním `>`.
 
@@ -74,7 +74,7 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
 7. Zadejte `<` a v seznamu členů vyberte **ID** . Pak zadejte `>`.
 
-     Editor přidá XML element, `<ID></ID>` a umístí kurzor za počáteční značku ID.
+     Editor přidá XML element, `<ID></ID>`a umístí kurzor za počáteční značku ID.
 
 8. Zadejte **ABC**.
 
@@ -90,13 +90,13 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
 11. Umístěte kurzor za značku konce ID, zadejte `<`, vyberte položku **Datum přijetí** ze seznamu členů a potom zadejte `>`.
 
-     Editor přidá XML element, `<hire-date></hire-date>` a umístí kurzor po počáteční značku data nástupu.
+     Editor přidá XML element, `<hire-date></hire-date>`a umístí kurzor po počáteční značku data nástupu.
 
 12. Jako hodnotu data přijetí zadejte **2003-01-10** .
 
 ## <a name="to-format-the-xml-document"></a>Formátování dokumentu XML
 
-- Na panelu nástrojů editoru XML vyberte tlačítko **formátovat dokument** nebo stiskněte klávesy **CTRL** +**E**,**D**.
+- Na panelu nástrojů editoru XML vyberte tlačítko **formátovat dokument** nebo stiskněte klávesy **CTRL**+**E**,**D**.
 
    ![Tlačítko formátování dokumentu XML v aplikaci Visual Studio](media/format-xml-document.png)
 
@@ -104,7 +104,7 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
 ## <a name="to-save-the-xml-document"></a>Uložení dokumentu XML
 
-1. V nabídce **soubor** vyberte **Uložit jako**.
+1. V nabídce **Soubor** vyberte **Uložit jako**.
 
      Zobrazí se dialogové okno **Uložit soubor jako** . Výchozí název souboru je *"XMLFile1"* .
 

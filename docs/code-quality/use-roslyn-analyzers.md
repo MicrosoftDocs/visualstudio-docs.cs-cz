@@ -6,17 +6,17 @@ helpviewer_keywords:
 - code analysis, managed code
 - analyzers
 - Roslyn analyzers
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6cd4d5517dae889387ec632df57c90485bd366b0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c24164f31ca444d17035f145a1783c69dfb2585b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649044"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587196"
 ---
 # <a name="use-code-analyzers"></a>Použití analyzátorů kódu
 
@@ -28,7 +28,7 @@ Z **Průzkumník řešení**můžete provádět většinu úprav diagnostiky ana
 
 ![Uzel analyzátorů v Průzkumník řešení](media/analyzers-expanded-in-solution-explorer.png)
 
-V okně **vlastnosti** můžete zobrazit vlastnosti diagnostiky, včetně jeho popisu a výchozí závažnosti. Chcete-li zobrazit vlastnosti, klikněte pravým tlačítkem na pravidlo a vyberte **vlastnosti**, nebo vyberte pravidlo a stiskněte klávesu **ALT** +**ENTER**.
+V okně **vlastnosti** můžete zobrazit vlastnosti diagnostiky, včetně jeho popisu a výchozí závažnosti. Chcete-li zobrazit vlastnosti, klikněte pravým tlačítkem na pravidlo a vyberte **vlastnosti**, nebo vyberte pravidlo a stiskněte klávesu **ALT**+**ENTER**.
 
 ![Diagnostické vlastnosti v okno Vlastnosti](media/analyzer-diagnostic-properties.png)
 
@@ -107,9 +107,9 @@ Nastavení závažnosti pravidla v souboru EditorConfig má přednost před jako
 
 Visual Studio nabízí pohodlný způsob konfigurace závažnosti pravidla z nabídky návrhy [rychlých akcí](../ide/quick-actions.md) .
 
-1. Jakmile dojde k porušení, najeďte myší nad vlnovkou porušení v editoru a otevřete nabídku žárovky. Nebo umístěte kurzor na řádek a stiskněte klávesy **Ctrl** + **.** (tečka).
+1. Jakmile dojde k porušení, najeďte myší nad vlnovkou porušení v editoru a otevřete nabídku žárovky. Nebo umístěte kurzor na řádek a stiskněte klávesy **Ctrl**+ **.** (tečka).
 
-2. V nabídce žárovky vyberte **Konfigurovat nebo potlačit problémy** , > **nakonfigurovat \<rule ID > závažnost**.
+2. V nabídce žárovky vyberte **Konfigurovat nebo potlačit problémy** > **nakonfigurovat \<ID pravidla > závažnost**.
 
    ![Konfigurace závažnosti pravidla z nabídky světlé žárovky v aplikaci Visual Studio](media/configure-rule-severity.png)
 
@@ -126,7 +126,7 @@ Visual Studio nabízí pohodlný způsob konfigurace závažnosti pravidla z nab
 
 ### <a name="set-rule-severity-from-solution-explorer"></a>Nastavit závažnost pravidla z Průzkumník řešení
 
-1. V **Průzkumník řešení**rozbalte **odkazy**  > **analyzátory** (nebo **závislosti**  > **analyzátory** pro projekty .NET Core).
+1. V **Průzkumník řešení**rozbalte **odkazy** > **analyzátory** (nebo **závislosti** > **analyzátory** pro projekty .NET Core).
 
 1. Rozbalte sestavení, které obsahuje pravidlo, pro které chcete nastavit závažnost.
 
@@ -138,7 +138,7 @@ Visual Studio nabízí pohodlný způsob konfigurace závažnosti pravidla z nab
 
 ![Soubor sady pravidel v Průzkumník řešení](media/ruleset-in-solution-explorer.png)
 
-1. Otevřete soubor aktivní sady pravidel tak, že na **Průzkumník řešení**něj dvakrát kliknete a vyberete **Otevřít aktivní sadu pravidel** v místní nabídce uzlu **odkazy**  > **analyzátory** , nebo výběrem možnosti **otevřít** v **kódu.** Stránka vlastností analýzy projektu
+1. Otevřete aktivní soubor sady pravidel tak, že na **Průzkumník řešení**něj dvakrát kliknete a vyberete **Otevřít aktivní sadu pravidel** v místní nabídce uzlu **odkazy** > **analyzátory** , nebo výběrem možnosti **otevřít** na stránce vlastností **analýzy kódu** pro projekt.
 
    Pokud se jedná o první úpravu sady pravidel, sada Visual Studio vytvoří kopii výchozího souboru sady pravidel a pojmenuje ho *\<projectname >. ruleset*a přidá ho do projektu. Tato vlastní sada pravidel se také stal aktivní sadou pravidel pro váš projekt.
 
@@ -163,7 +163,7 @@ Existuje několik způsobů, jak potlačit porušení pravidel:
 
 - Z nabídky **analyzovat**
 
-  Vyberte možnost **analyzovat**  > **sestavovat a potlačit aktivní problémy** na řádku nabídek, aby se potlačila všechna aktuální porušení. Někdy se označuje jako "monitorování standardních hodnot".
+  Vyberte možnost **analyzovat** > **sestavovat a potlačit aktivní problémy** na řádku nabídek, aby se potlačila všechna aktuální porušení. Někdy se označuje jako "monitorování standardních hodnot".
 
 ::: moniker-end
 
@@ -171,7 +171,7 @@ Existuje několik způsobů, jak potlačit porušení pravidel:
 
 - Z nabídky **analyzovat**
 
-  Vyberte možnost **analyzovat**  > **Spustit analýzu kódu a potlačit aktivní problémy** na řádku nabídek, abyste potlačili všechna aktuální porušení. Někdy se označuje jako "monitorování standardních hodnot".
+  Vyberte možnost **analyzovat** > **Spustit analýzu kódu a potlačit aktivní problémy** na řádku nabídek, abyste potlačili všechna aktuální porušení. Někdy se označuje jako "monitorování standardních hodnot".
 
 ::: moniker-end
 
@@ -185,13 +185,13 @@ Existuje několik způsobů, jak potlačit porušení pravidel:
 
 - Z **editoru kódu**
 
-  Umístěte kurzor na řádek kódu s porušením a stisknutím **kombinace kláves Ctrl** +**perioda (.)** otevřete nabídku **rychlé akce** . Vyberte možnost **potlačit CAXXXX**  > **ve zdroji nebo v souboru potlačení**.
+  Umístěte kurzor na řádek kódu s porušením a stisknutím **kombinace kláves Ctrl**+**perioda (.)** otevřete nabídku **rychlé akce** . Vyberte možnost **potlačit CAXXXX** > **ve zdroji nebo v souboru potlačení**.
 
   ![Potlačit diagnostiku z nabídky rychlé akce](media/suppress-diagnostic-from-editor.png)
 
 - Z **Seznam chyb**
 
-  Vyberte pravidla, která chcete potlačit, a potom klikněte pravým tlačítkem myši a vyberte možnost **potlačit**  > **ve zdroji nebo v souboru potlačení**.
+  Vyberte pravidla, která chcete potlačit, a potom klikněte pravým tlačítkem myši a vyberte možnost **potlačit** > **ve zdroji nebo v souboru potlačení**.
 
   - Pokud potlačíte **zdroj**, otevře se dialogové okno **Náhled změn** , ve kterém se zobrazí C# náhled [#pragma varování](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning) nebo Visual Basic #Disable direktivu [Upozornění](/dotnet/visual-basic/language-reference/directives/directives) , která je přidána do zdrojového kódu.
 

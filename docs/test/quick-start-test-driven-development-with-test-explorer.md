@@ -2,23 +2,23 @@
 title: Návod pro vývoj řízený testovacím prostředím
 ms.date: 07/24/2019
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: d62989ffe5444f94cf3b062cde16399c08322b16
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: a264975014fea88126bbca0589fe037e629dae10
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646672"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566277"
 ---
 # <a name="walkthrough-test-driven-development-using-test-explorer"></a>Návod: Vývoj řízený testovacím prostředím pomocí Průzkumníka testů
 
-Vytvořte testy jednotek, které vám pomůžou zajistit správné fungování kódu prostřednictvím přírůstkových změn kódu. Existuje několik platforem, které můžete použít k zápisu jednotkových testů, včetně některých vyvinutých třetími stranami. Některé testovací architektury jsou specializované pro testování v různých jazycích nebo platformách. Průzkumník testů poskytuje jedno rozhraní pro testování částí v kterékoli z těchto rozhraní. Další informace o **Průzkumníku testů**naleznete v tématu [spuštění testů jednotek pomocí Průzkumníka testů](run-unit-tests-with-test-explorer.md) a [nejčastějších dotazů Průzkumníka testů](test-explorer-faq.md).
+Vytvořte testy jednotek, které vám pomůžou zajistit správné fungování kódu prostřednictvím přírůstkových změn kódu. Existuje několik architektur, které můžete použít pro psaní jednotkových testů, včetně některých vyvinutých třetími stranami. Některé testovací architektury jsou specializované pro testování v různých jazycích nebo platformách. Průzkumník testů poskytuje tak jednotné rozhraní pro testování částí v některém z těchto rozhraní. Další informace o **Průzkumníku testů**naleznete v tématu [spuštění testů jednotek pomocí Průzkumníka testů](run-unit-tests-with-test-explorer.md) a [nejčastějších dotazů Průzkumníka testů](test-explorer-faq.md).
 
-Tento návod ukazuje, jak vyvíjet testovaný způsob v C# použití Microsoft Test Frameworku (MSTest). Můžete ji snadno přizpůsobit pro jiné jazyky nebo jiné testovací architektury, jako je například NUnit. Další informace najdete v tématu [instalace rozhraní pro testování částí třetích stran](install-third-party-unit-test-frameworks.md).
+Tento návod ukazuje, jak vyvíjet testovaný způsob v C# použití Microsoft Test Frameworku (MSTest). Můžete ji snadno přizpůsobit pro jiné jazyky nebo jiné testovací architektury, jako je například NUnit. Další informace najdete v tématu [nainstalovat rozhraní pro testování jednotky třetí strany](install-third-party-unit-test-frameworks.md).
 
 ## <a name="create-a-test-and-generate-code"></a>Vytvoří test a vygeneruje kód.
 
@@ -26,7 +26,7 @@ Tento návod ukazuje, jak vyvíjet testovaný způsob v C# použití Microsoft T
 
 2. Ve stejném řešení přidejte nový projekt **testů MSTest (.NET Core)** . Pojmenujte projekt testů **MathTests**.
 
-   ![Nový kód a projekty testů](../test/media/test-driven-development-ide.png)
+   ![Nové projekty kódu a testování](../test/media/test-driven-development-ide.png)
 
 3. Napište jednoduchou testovací metodu, která ověří výsledek získaný pro konkrétní vstup. Do `UnitTest1` třídy přidejte následující kód:
 
@@ -48,7 +48,7 @@ Tento návod ukazuje, jak vyvíjet testovaný způsob v C# použití Microsoft T
 
 4. Vygeneruje typ z testovacího kódu.
 
-   1. Umístěte kurzor na `Rooter` a potom v nabídce žárovky zvolte **generovat typ rooter**  > **generovat nový typ**.
+   1. Umístěte kurzor na `Rooter`a potom v nabídce žárovky zvolte **generovat typ rooter** > **generovat nový typ**.
 
       ![Vytvořit novou rychlou akci typu](media/test-driven-development-generate-new-type.png)
 
@@ -56,11 +56,11 @@ Tento návod ukazuje, jak vyvíjet testovaný způsob v C# použití Microsoft T
 
       ![Dialogové okno generovat typ v aplikaci Visual Studio 2019](media/test-driven-development-generate-type-dialog.png)
 
-5. Vygenerujte metodu z testovacího kódu. Umístěte kurzor na `SquareRoot` a potom v nabídce žárovky zvolte **generovat metodu root. SquareRoot**.
+5. Vygenerujte metodu z testovacího kódu. Umístěte kurzor na `SquareRoot`a potom v nabídce žárovky zvolte **generovat metodu root. SquareRoot**.
 
-6. Spusťte test jednotky.
+6. Spusťte Jednotkový test.
 
-   1. Chcete-li otevřít **Průzkumníka testů**, v nabídce **test** vyberte možnost **Windows**  > **Průzkumník testů**.
+   1. Chcete-li otevřít **Průzkumníka testů**, v nabídce **test** vyberte možnost **Windows** > **Průzkumník testů**.
 
    2. V **Průzkumníku testů**klikněte na tlačítko **Spustit vše** a spusťte test.
 
@@ -87,7 +87,7 @@ V tomto okamžiku jste vytvořili test a zástupnou proceduru, kterou lze upravi
     }
     ```
 
-2. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+2. V **Průzkumník testů**, zvolte **spustit všechny**.
 
    Řešení sestaví a spustí test a projde.
 
@@ -98,7 +98,7 @@ V tomto okamžiku jste vytvořili test a zástupnou proceduru, kterou lze upravi
 Chcete-li zlepšit naši jistotu, že kód funguje ve všech případech, přidejte testy, které vyzkouší širší rozsah vstupních hodnot.
 
 > [!TIP]
-> Vyhněte se změnám stávajících testů, které jsou absolvované. Místo toho přidejte nové testy. Existující testy změňte pouze v případě, že se změní požadavky uživatele. Tato zásada pomáhá zajistit, že při rozšiřování kódu neztratíte stávající funkce.
+> Neupravujte existující testy, které předávají. Místo toho přidejte nové testy. Existující testy měňte pouze v případě, že se změní požadavky uživatele. Tato zásada umožňuje zajistit, aby neztratili stávajících funkcí během rozšiřování kódu.
 
 1. Ve třídě test přidejte následující test, který se pokusí o rozsah vstupních hodnot:
 
@@ -124,11 +124,11 @@ Chcete-li zlepšit naši jistotu, že kód funguje ve všech případech, přide
     }
     ```
 
-2. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+2. V **Průzkumník testů**, zvolte **spustit všechny**.
 
    Nový test se nezdařil (i když první test stále projde). Chcete-li najít bod selhání, vyberte neúspěšný test a potom se podívejte na podrobnosti v podokně **Souhrn podrobností testu** .
 
-3. Zkontrolujte testovaný test a podívejte se, co může být chybné. Upravte kód `SquareRoot` následujícím způsobem:
+3. Zkontrolujte, zda chcete zobrazit, co mohlo způsobit chybu testované metody. Upravte kód `SquareRoot` následujícím způsobem:
 
     ```csharp
     public double SquareRoot(double input)
@@ -144,11 +144,11 @@ Chcete-li zlepšit naši jistotu, že kód funguje ve všech případech, přide
     }
     ```
 
-4. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+4. V **Průzkumník testů**, zvolte **spustit všechny**.
 
-   Oba testy jsou nyní passované.
+   Oba testy jsou nyní úspěšné.
 
-## <a name="add-tests-for-exceptional-cases"></a>Přidat testy pro výjimečné případy
+## <a name="add-tests-for-exceptional-cases"></a>Přidejte testy výjimečných případů
 
 1. Přidejte nový test pro záporné vstupy:
 
@@ -169,7 +169,7 @@ Chcete-li zlepšit naši jistotu, že kód funguje ve všech případech, přide
     }
     ```
 
-2. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+2. V **Průzkumník testů**, zvolte **spustit všechny**.
 
    Metoda v testovacích cyklech a je nutné ji zrušit ručně.
 
@@ -189,18 +189,18 @@ Chcete-li zlepšit naši jistotu, že kód funguje ve všech případech, přide
         ...
     ```
 
-5. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+5. V **Průzkumník testů**, zvolte **spustit všechny**.
 
-   Všechny testy jsou passované.
+   Všechny testy jsou úspěšné.
 
 ## <a name="refactor-the-code-under-test"></a>Refaktoring testovaného kódu
 
 Refaktorujte kód, ale neměňte testy.
 
 > [!TIP]
-> *Refaktoring* je změna, která je určena k tomu, aby byl kód lépe nebo čitelnější. Není určen pro změnu chování kódu, a proto testy nejsou změněny.
+> *Refaktoring* je změna, která je určena k tomu, aby byl kód lépe nebo čitelnější. Refaktorování není zamýšleno změnit chování kódu, a proto testy zůstávají nezměněny.
 >
-> Doporučujeme provést kroky refaktoringu nezávisle na krocích, které rozšiřuje funkčnost. Zachování nezměněných testů vám poskytne jistotu, že jste omylem nepředstavili chyby během refaktoringu.
+> Doporučujeme provádět kroky refaktorování odděleně od kroků rozšiřujících funkčnost. Udržování testů v nezměněné podobě zajišťuje, že jste ještě kódu omylem zavedeny chyby během refaktoringu.
 
 1. Změňte řádek, který vypočítá `result` v metodě `SquareRoot` následujícím způsobem:
 

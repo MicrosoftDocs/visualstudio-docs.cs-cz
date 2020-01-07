@@ -10,17 +10,17 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild, common project items
 ms.assetid: 1eba3721-cc12-4b80-9987-84923ede5e2e
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb759ba9571e16d0030f1fd6baf6d4feb03efb2e
-ms.sourcegitcommit: 510529f2f86a9897ed5767973e60c99c0d3a77a6
+ms.openlocfilehash: b10768d5ab291981dc77af650de61eb9496dfda5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73956149"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596148"
 ---
 # <a name="common-msbuild-project-items"></a>Společné položky projektu nástroje MSBuild
 V [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]položka je pojmenovaný odkaz na jeden nebo více souborů. Položky obsahují metadata, jako jsou názvy souborů, cesty a čísla verzí. Všechny typy projektů v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] mají společné několik položek. Tyto položky jsou definovány v souboru *Microsoft. Build. CommonTypes. xsd*.
@@ -33,7 +33,7 @@ V [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md
 
 |Název metadat položky|Popis|
 |---------------|-----------------|
-|Cestu|Volitelný řetězec. Relativní nebo absolutní cesta k sestavení|
+|HintPath|Volitelný řetězec. Relativní nebo absolutní cesta k sestavení|
 |Name|Volitelný řetězec. Zobrazovaný název sestavení, například "System. Windows. Forms."|
 |Fusion|Volitelný řetězec. Určuje jednoduchý nebo silný název fúze pro položku.<br /><br /> Pokud je tento atribut přítomen, může ušetřit čas, protože soubor sestavení není nutné otevřít, aby získal název fúze.|
 |SpecificVersion|Volitelná logická hodnota. Určuje, zda má být odkazována pouze verze v názvu fúze.|
@@ -46,12 +46,12 @@ V [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md
 |Název metadat položky|Popis|
 |---------------|-----------------|
 |Name|Volitelný řetězec. Zobrazovaný název součásti.|
-|hlavních|Povinný řetězec. Identifikátor GUID pro komponentu ve formuláři {12345678-1234-1234-1234-1234567891234}.|
+|identifikátor GUID|Povinný řetězec. Identifikátor GUID pro komponentu ve formuláři {12345678-1234-1234-1234-1234567891234}.|
 |VersionMajor|Povinný řetězec. Hlavní část čísla verze součásti. Například "5", pokud je číslo úplné verze "5,46".|
 |VersionMinor|Povinný řetězec. Vedlejší část čísla verze součásti. Například "46", pokud je číslo úplné verze "5,46".|
-|IDENTIFIKÁTORY|Volitelný řetězec. LocaleID pro komponentu|
+|LCID|Volitelný řetězec. LocaleID pro komponentu|
 |WrapperTool|Volitelný řetězec. Název nástroje obálky, který se používá pro komponentu, například "Tlbimp".|
-|Izolován|Volitelná logická hodnota. Určuje, zda je komponenta komponentou bez registrace.|
+|V izolovaném prostředí|Volitelná logická hodnota. Určuje, zda je komponenta komponentou bez registrace.|
 
 ### <a name="comfilereference"></a>COMFileReference
  Představuje seznam knihoven typů, které jsou předány do parametru `TypeLibFiles` cíle [ResolveComReference –](resolvecomreference-task.md) . Tato položka se vztahuje pouze na projekty .NET.
@@ -66,7 +66,7 @@ V [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md
 |Název metadat položky|Popis|
 |---------------|-----------------|
 |Name|Povinný řetězec. Základní název souboru manifestu.|
-|Cestu|Povinný řetězec. Relativní cesta k souboru manifestu.|
+|HintPath|Povinný řetězec. Relativní cesta k souboru manifestu.|
 
 ### <a name="projectreference"></a>ProjectReference
  Představuje odkaz na jiný projekt.
@@ -74,19 +74,19 @@ V [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md
 |Název metadat položky|Popis|
 |---------------|-----------------|
 |Name|Volitelný řetězec. Zobrazovaný název odkazu|
-|Project|Volitelný řetězec. Identifikátor GUID odkazu ve formuláři {12345678-1234-1234-1234-1234567891234}.|
+|Projekt|Volitelný řetězec. Identifikátor GUID odkazu ve formuláři {12345678-1234-1234-1234-1234567891234}.|
 |Balíček|Volitelný řetězec. Cesta k souboru projektu, na který se odkazuje|
 |ReferenceOutputAssembly|Volitelná logická hodnota. Pokud je nastaveno na `false`, nezahrnuje výstup odkazovaného projektu jako [odkaz](#reference) na tento projekt, ale stále zajišťuje, že druhý projekt bude sestaven před tímto. Výchozí hodnota je `true`.|
 
-### <a name="compile"></a>Sestavení
+### <a name="compile"></a>Kompilace
  Představuje zdrojové soubory pro kompilátor.
 
 | Název metadat položky | Popis |
 |-----------------------| - |
 | DependentUpon | Volitelný řetězec. Určuje soubor, na kterém je tento soubor závislý, aby se správně zkompiluje. |
 | AutoGen | Volitelná logická hodnota. Určuje, zda byl soubor vygenerován pro projekt [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrovaným vývojovým prostředím (IDE). |
-| Propojit | Volitelný řetězec. Cesta k zápisu, která se má zobrazit, pokud je soubor fyzicky umístěný mimo vliv souboru projektu. |
-| Zobrazeny | Volitelná logická hodnota. Určuje, zda se má v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]zobrazit soubor v **Průzkumník řešení** . |
+| Odkaz | Volitelný řetězec. Cesta k zápisu, která se má zobrazit, pokud je soubor fyzicky umístěný mimo vliv souboru projektu. |
+| Viditelný | Volitelná logická hodnota. Určuje, zda se má v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]zobrazit soubor v **Průzkumník řešení** . |
 | CopyToOutputDirectory | Volitelný řetězec. Určuje, zda se má soubor zkopírovat do výstupního adresáře. Hodnoty jsou:<br /><br /> 1. nikdy<br />2. vždycky<br />3. PreserveNewest |
 
 ### <a name="embeddedresource"></a>EmbeddedResource
@@ -98,10 +98,10 @@ V [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md
 | Generátor | Povinný řetězec. Název jakéhokoli generátoru souborů, který je spuštěn na této položce. |
 | LastGenOutput | Povinný řetězec. Název souboru, který byl vytvořen generátorem souborů, který u této položky běžel. |
 | CustomToolNamespace | Povinný řetězec. Obor názvů, ve kterém má každý generátor souborů, který běží na této položce, vytvořit kód. |
-| Propojit | Volitelný řetězec. Cesta k zápisu se zobrazí, pokud je soubor fyzicky umístěný mimo vliv projektu. |
-| Zobrazeny | Volitelná logická hodnota. Určuje, zda se má v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]zobrazit soubor v **Průzkumník řešení** . |
+| Odkaz | Volitelný řetězec. Cesta k zápisu se zobrazí, pokud je soubor fyzicky umístěný mimo vliv projektu. |
+| Viditelný | Volitelná logická hodnota. Určuje, zda se má v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]zobrazit soubor v **Průzkumník řešení** . |
 | CopyToOutputDirectory | Volitelný řetězec. Určuje, zda se má soubor zkopírovat do výstupního adresáře. Hodnoty jsou:<br /><br /> 1. nikdy<br />2. vždycky<br />3. PreserveNewest |
-| Logický operátor | Povinný řetězec. Logický název vloženého prostředku. |
+| LogicalName | Povinný řetězec. Logický název vloženého prostředku. |
 
 ### <a name="content"></a>Obsah
  Představuje soubory, které nejsou zkompilovány do projektu, ale mohou být vloženy nebo publikovány společně s ní.
@@ -112,10 +112,10 @@ V [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md
 | Generátor | Povinný řetězec. Název jakéhokoli generátoru souborů, který se na této položce spouští. |
 | LastGenOutput | Povinný řetězec. Název souboru, který byl vytvořen generátorem souborů spuštěným u této položky. |
 | CustomToolNamespace | Povinný řetězec. Obor názvů, ve kterém má každý generátor souborů, který běží na této položce, vytvořit kód. |
-| Propojit | Volitelný řetězec. Cesta k zápisu, která se má zobrazit, pokud je soubor fyzicky umístěný mimo vliv projektu. |
+| Odkaz | Volitelný řetězec. Cesta k zápisu, která se má zobrazit, pokud je soubor fyzicky umístěný mimo vliv projektu. |
 | PublishState | Povinný řetězec. Stav publikování obsahu, a to buď:<br /><br /> – Výchozí<br />– Zahrnuto<br />– Vyloučené<br />– Datový datový<br />– Předpoklad |
 | Sestavení | Volitelná logická hodnota. Určuje, zda je soubor sestavením. |
-| Zobrazeny | Volitelná logická hodnota. Určuje, zda se má v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]zobrazit soubor v **Průzkumník řešení** . |
+| Viditelný | Volitelná logická hodnota. Určuje, zda se má v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]zobrazit soubor v **Průzkumník řešení** . |
 | CopyToOutputDirectory | Volitelný řetězec. Určuje, zda se má soubor zkopírovat do výstupního adresáře. Hodnoty jsou:<br /><br /> 1. nikdy<br />2. vždycky<br />3. PreserveNewest |
 
 ### <a name="none"></a>Žádné
@@ -127,8 +127,8 @@ V [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md
 | Generátor | Povinný řetězec. Název jakéhokoli generátoru souborů, který je spuštěn na této položce. |
 | LastGenOutput | Povinný řetězec. Název souboru, který byl vytvořen generátorem souborů, který u této položky běžel. |
 | CustomToolNamespace | Povinný řetězec. Obor názvů, ve kterém má každý generátor souborů, který běží na této položce, vytvořit kód. |
-| Propojit | Volitelný řetězec. Cesta k zápisu, která se má zobrazit, pokud je soubor fyzicky umístěný mimo vliv projektu. |
-| Zobrazeny | Volitelná logická hodnota. Určuje, zda se má v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]zobrazit soubor v **Průzkumník řešení** . |
+| Odkaz | Volitelný řetězec. Cesta k zápisu, která se má zobrazit, pokud je soubor fyzicky umístěný mimo vliv projektu. |
+| Viditelný | Volitelná logická hodnota. Určuje, zda se má v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]zobrazit soubor v **Průzkumník řešení** . |
 | CopyToOutputDirectory | Volitelný řetězec. Určuje, zda se má soubor zkopírovat do výstupního adresáře. Hodnoty jsou:<br /><br /> 1. nikdy<br />2. vždycky<br />3. PreserveNewest |
 
 ### <a name="assemblymetadata"></a>AssemblyMetadata –
@@ -148,7 +148,7 @@ V [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md
 ### <a name="codeanalysisimport"></a>CodeAnalysisImport
  Představuje projekt FxCop, který se má importovat.
 
-### <a name="import"></a>importovat
+### <a name="import"></a>Importovat
  Představuje sestavení, jejichž obory názvů by měly být importovány [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kompilátorem.
 
 ## <a name="see-also"></a>Viz také:

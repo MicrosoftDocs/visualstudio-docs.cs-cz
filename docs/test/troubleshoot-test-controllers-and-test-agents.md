@@ -8,15 +8,15 @@ helpviewer_keywords:
 - load tests, test agents
 - troubleshooting, test controllers and agents in load tests
 ms.assetid: 77329348-3a5d-43de-b6cb-90f93296a081
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 716bc28626e6b408fd618a8ed6c623c5118d7782
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 51d7e15ec71eec7134dfc49b3515385970e593a0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659914"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565952"
 ---
 # <a name="strategies-for-troubleshooting-test-controllers-and-test-agents-in-load-tests"></a>Strategie pro řešení potíží s testovacími kontroléry a testovacími agenty v zátěžových testech
 
@@ -84,11 +84,11 @@ To platí pro testovací kontrolér, službu testovacího agenta a proces testov
 
 ## <a name="bind-a-test-controller-to-a-network-adapter"></a>Vazba testovacího kontroléru na síťový adaptér
 
-Při pokusu o nastavení testovacího agenta se může zobrazit následující chyba:
+Při pokusu o nastavení testovacího agenta, může dojít k následující chybě:
 
 **Chyba 8110. Nelze se připojit k zadanému počítači kontroléru nebo získat přístup k objektu kontroleru.**
 
-Tato chyba může být způsobena instalací kontroleru testů na počítači, který má více než jeden síťový adaptér.
+Tuto chybu může způsobovat instalace testovacího kontroléru na počítači, který má více než jeden síťový adaptér.
 
 > [!NOTE]
 > Je také možné úspěšně nainstalovat testovací agenty a tento problém se neprojeví, dokud se nepokusíte spustit test.
@@ -107,7 +107,7 @@ Chcete-li tuto chybu opravit, je nutné vytvořit vazby kontroleru testů k jedn
 
 3. Zadejte `ipconfig /all`.
 
-     Zobrazí se IP adresy pro vaše síťové adaptéry. Poznamenejte si IP adresu síťového adaptéru, ke kterému chcete vytvořit vazby řadiče.
+     Se zobrazují IP adresy pro síťové adaptéry. Zaznamenejte adresu IP síťového adaptéru, který chcete vytvořit vazbu řadiče.
 
 ### <a name="to-bind-a-test-controller-to-a-network-adapter"></a>Navázání testovacího kontroléru na síťový adaptér
 
@@ -131,13 +131,13 @@ Chcete-li tuto chybu opravit, je nutné vytvořit vazby kontroleru testů k jedn
 
 4. Uložte soubor.
 
-5. Spusťte službu testovacího kontroléru. Do příkazového řádku zadejte `net start vsttcontroller`.
+5. Spusťte službu testovacího řadiče. Do příkazového řádku zadejte `net start vsttcontroller`.
 
 ### <a name="to-connect-a-test-agent-to-a-bound-controller"></a>Připojení testovacího agenta k vázanému kontroleru
 
 - Spusťte instalaci testovacího agenta znovu. Tentokrát zadejte IP adresu testovacího kontroleru místo názvu kontroleru testů.
 
-To platí pro testovací kontrolér, službu testovacího agenta a proces testovacího agenta. Vlastnost `BindTo` musí být nastavena pro každý proces, který je spuštěn v počítači, který má více než jeden síťový adaptér. Postup pro nastavení vlastnosti `BindTo` je stejný pro všechny tři procesy, jak je uvedeno výše pro řadič testu. Chcete-li nastavit úrovně protokolování pro službu testovacího agenta a proces testovacího agenta, použijte konfigurační soubory, které jsou uvedeny v [části nastavení úrovně protokolování v počítači testovacího kontroléru](#set-the-logging-level-on-a-test-controller-computer).
+To platí pro testovací kontrolér, službu testovacího agenta a proces testovacího agenta. `BindTo` Musí být nastavena vlastnost pro každý proces, který běží na počítači, který má více než jeden síťový adaptér. Postup pro nastavení vlastnosti `BindTo` je stejný pro všechny tři procesy, jak je uvedeno výše pro řadič testu. Chcete-li nastavit úrovně protokolování pro službu testovacího agenta a proces testovacího agenta, použijte konfigurační soubory, které jsou uvedeny v [části nastavení úrovně protokolování v počítači testovacího kontroléru](#set-the-logging-level-on-a-test-controller-computer).
 
 ## <a name="see-also"></a>Viz také:
 

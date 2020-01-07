@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - Basic Text Editor Options dialog box
 ms.assetid: 5a8cafca-f7b4-4a2d-92ce-6894a7673d00
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a07645597846bd85f3152da866a253b079bc3963
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 11a069e17e615199e367683273adb85e771f1d9c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666345"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75584514"
 ---
 # <a name="options-text-editor-basic-visual-basic-advanced"></a>Možnosti, textový editor, Basic (Visual Basic), Upřesnit
 Stránka **vlastností specifická pro VB** se nachází ve složce **základní** ve složce **textový editor** v dialogovém okně **Možnosti** (nabídka**nástroje** ), která obsahuje následující vlastnosti:
@@ -51,11 +51,11 @@ Stránka **vlastností specifická pro VB** se nachází ve složce **základní
 
    ![Rychlá akce pro instalaci balíčku NuGet v aplikaci Visual Studio](media/nuget-lightbulb.png)
 
-## <a name="highlighting"></a>Zvýrazňovač
+## <a name="highlighting"></a>Zvýrazňování
 
  **Povolit zvýraznění odkazů a klíčových slov**
 
-Textový editor může zvýraznit všechny výskyty symbolu nebo všechna klíčová slova v klauzuli, jako je například `If..Then`, `While...End While` nebo `Try...Catch...Finally`. Můžete přecházet mezi zvýrazněnými odkazy nebo klíčovými slovy stisknutím **kombinace kláves ctrl**  + **SHIFT**  + **šipka dolů** nebo **kombinací kláves CTRL**  + **SHIFT**  + **šipka nahoru**.
+Textový editor může zvýraznit všechny výskyty symbolu nebo všechna klíčová slova v klauzuli, jako je například `If..Then`, `While...End While`nebo `Try...Catch...Finally`. Můžete přecházet mezi zvýrazněnými odkazy nebo klíčovými slovy stisknutím **kombinace kláves ctrl** + **SHIFT** + **šipka dolů** nebo **kombinací kláves CTRL** + **SHIFT** + **šipka nahoru**.
 
 ## <a name="outlining"></a>Sbalování
 
@@ -97,7 +97,7 @@ Je-li vybrána tato možnost, zobrazí se v editoru svislé čáry, které se za
 
 **Automatické vložení koncových konstrukcí**
 
-Při psaní – například první řádek deklarace procedury, `Sub Main` – a stiskněte klávesu **ENTER**, textový editor přidá vyhovující řádek `End Sub`. Podobně pokud přidáte smyčku [for](/dotnet/visual-basic/language-reference/statements/for-next-statement) , textový editor přidá příkaz, který odpovídá `Next`. Pokud je vybrána tato možnost, Editor kódu automaticky přidá koncovou konstrukci.
+Při psaní – například první řádek deklarace procedury, `Sub Main`– a stiskněte klávesu **ENTER**, textový editor přidá vyhovující řádek `End Sub`. Podobně pokud přidáte smyčku [for](/dotnet/visual-basic/language-reference/statements/for-next-statement) , textový editor přidá příkaz, který odpovídá `Next`. Pokud je vybrána tato možnost, Editor kódu automaticky přidá koncovou konstrukci.
 
 **Automatické vložení členů rozhraní a MustOverride**
 

@@ -3,17 +3,17 @@ title: 'Postupy: Vytvoření základní textury'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0222e8bf-d29f-421b-9b1f-123d500fa179
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3313dd60775bc1136ebd79af6266be0ed4107ae
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 916be87824a86e96d6fcb791cf8181d70e1e8104
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72635855"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589449"
 ---
 # <a name="how-to-create-a-basic-texture"></a>Postupy: Vytvoření základní textury
 
@@ -69,7 +69,7 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** . Pomocí okna
     > [!NOTE]
     > Souřadnice obrazového bodu aktuálního umístění ukazatele se zobrazí ve stavovém řádku aplikace Visual Studio.
 
-12. Změní barvu pozadí. Nastavte **R** na `44`, **G** na `165`, **B** na **`211` a na** `255`.
+12. Změní barvu pozadí. Nastavte **R** na `44`, **G** na `165`, **B** na **`211`a na** `255`.
 
 13. Nakreslete další kružnici z souřadnice pixelu `(64, 64)` na souřadnici pixel `(448, 448)`.
 
@@ -77,7 +77,7 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** . Pomocí okna
 
 15. Nakreslete další kružnici z souřadnice pixelu `(128, 128)` na souřadnici pixel `(384, 384)`.
 
-16. Změní barvu pozadí. Nastavte **R** na `255`, **G** a **B** **na `64` a na** `255`.
+16. Změní barvu pozadí. Nastavte **R** na `255`, **G** a **B** **na `64`a na** `255`.
 
 17. Nakreslete další kružnici z souřadnice pixelu `(192, 192)` na souřadnici pixel `(320, 320)`.
 

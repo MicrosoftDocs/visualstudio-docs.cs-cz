@@ -1,43 +1,43 @@
 ---
-title: Získání protokolů pomocí nástroje MSBuild sestavení | Dokumentace Microsoftu
+title: Získání protokolů sestavení pomocí nástroje MSBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, logging
 - logging [MSBuild]
 ms.assetid: 6ba9a754-9cc0-4fed-9fc8-4dcd3926a031
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 385871a47b2a4d73a1f7afacf9d39a02d7c782ca
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f756d432d9ff4d3824c1f1165c63710e4d10c2e9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963764"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594887"
 ---
-# <a name="obtain-build-logs-with-msbuild"></a>Získání protokolů o sestavení pomocí nástroje MSBuild
+# <a name="obtain-build-logs-with-msbuild"></a>Získání protokolů sestavení pomocí nástroje MSBuild
 
-S použitím přepínače pomocí nástroje MSBuild, můžete určit, kolik data sestavení, které chcete zkontrolovat a určuje, zda chcete uložit data sestavení do jednoho nebo více souborů. Můžete také určit vlastní protokolovací nástroj pro shromažďování dat sestavení. Informace o parametrech příkazového řádku MSBuild, které toto téma nepopisuje najdete v tématu [odkaz na příkazový řádek](../msbuild/msbuild-command-line-reference.md).
+Pomocí přepínačů s nástrojem MSBuild můžete určit, kolik dat sestavení chcete zkontrolovat a zda chcete uložit data sestavení do jednoho nebo více souborů. Můžete také zadat vlastní protokolovací nástroj pro shromažďování dat buildu. Informace o přepínačích příkazového řádku MSBuild, které toto téma popisuje, najdete v tématu [Reference k příkazovému řádku](../msbuild/msbuild-command-line-reference.md).
 
 > [!NOTE]
-> Pokud vytváříte projekty s použitím rozhraní IDE sady Visual Studio, je možné řešit sestavení kontrolou protokolů o sestavení. Další informace najdete v tématu [jak: Zobrazování, ukládání a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md).
+> Pokud vytváříte projekty pomocí integrovaného vývojového prostředí (IDE) sady Visual Studio, můžete tyto sestavení řešit pomocí kontroly protokolů sestavení. Další informace najdete v tématu [Postup: zobrazení, uložení a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md).
 
-## <a name="set-the-level-of-detail"></a>Nastavte úroveň podrobností
+## <a name="set-the-level-of-detail"></a>Nastavit úroveň podrobností
 
- Při vytváření projektu pomocí nástroje MSBuild bez zadání úroveň podrobností protokolu výstupu zobrazí následující informace:
+ Při sestavování projektu pomocí nástroje MSBuild bez zadání úrovně podrobností se v protokolu výstupu zobrazí následující informace:
 
-- Chyby, varování a zprávy, které jsou klasifikovány jako vysoce důležité.
+- Chyby, varování a zprávy, které jsou zařazeny do kategorie jako vysoce důležité.
 
 - Některé události stavu.
 
 - Souhrn sestavení.
 
-S použitím **-podrobností** (**- v**) přepnout, můžete řídit, jak velký objem dat se zobrazí ve výstupu protokolu. S řešením problémů, použijte úroveň podrobností buď `detailed` (`d`) nebo `diagnostic` (`diag`), který poskytuje informace na maximum.
+Pomocí přepínače **-verbose** ( **-v**) můžete určit, kolik dat se zobrazí ve výstupním protokolu. Při řešení potíží použijte úroveň podrobností buď `detailed` (`d`), nebo `diagnostic` (`diag`), která poskytuje nejvíc informací.
 
-Proces sestavení může být pomalejší, při nastavení **-podrobností** k `detailed` a dokonce i pomalejší, při nastavení **-podrobností** k `diagnostic`.
+Proces sestavení může být pomalejší, pokud nastavíte úroveň **-verbose** na `detailed` a ještě pomalejší, pokud nastavíte úroveň **-verbose** na `diagnostic`.
 
 ```cmd
 msbuild MyProject.proj -t:go -v:diag
@@ -45,67 +45,67 @@ msbuild MyProject.proj -t:go -v:diag
 
 ### <a name="verbosity-settings"></a>Nastavení podrobností
 
-V následující tabulce jsou uvedeny typy zpráv (hodnoty řádků), které se protokolují jak ovlivňuje podrobností protokolu (hodnoty sloupců).
+Následující tabulka ukazuje, jak se protokoluje podrobnosti protokolu (hodnoty sloupce), které jsou protokolovány.
 
-|                                       | Quiet | Minimální | Normální | Podrobné | Diagnostika |
+|                                       | Quiet | Minimální | Normální | Detailed | Diagnostika |
 |---------------------------------------|:-----:|:-------:|:------:|:--------:|:----------:|
 | Chyby                                |   ✅   |    ✅    |    ✅   |     ✅    |      ✅     |
 | Upozornění                              |   ✅   |    ✅    |    ✅   |     ✅    |      ✅     |
 | Zprávy s vysokou důležitostí              |       |    ✅    |    ✅   |     ✅    |      ✅     |
-| Normální důležitost zprávy           |       |         |    ✅   |     ✅    |      ✅     |
+| Zprávy normálního významu           |       |         |    ✅   |     ✅    |      ✅     |
 | Zprávy s nízkou důležitostí              |       |         |        |     ✅    |      ✅     |
-| Další informace o stroji MSBuild engine |       |         |        |          |      ✅     |
+| Další informace o modulu MSBuild |       |         |        |          |      ✅     |
 
-## <a name="save-the-build-log-to-a-file"></a>Uložit do protokolu sestavení do souboru
+## <a name="save-the-build-log-to-a-file"></a>Uložení protokolu sestavení do souboru
 
-Můžete použít **- fileLogger** (**fl**) přepínač k uložení dat sestavení do souboru. Následující příklad uloží data sestavení do souboru s názvem *msbuild.log*.
+K uložení dat buildu do souboru můžete použít přepínač **-** (**FL**). Následující příklad uloží data sestavení do souboru s názvem *MSBuild. log*.
 
 ```cmd
 msbuild MyProject.proj -t:go -fileLogger
 ```
 
- V následujícím příkladu je soubor protokolu s názvem *MyProjectOutput.log*, a úroveň podrobností výstupu protokolu je nastavená na `diagnostic`. Tato dvě nastavení zadejte pomocí **- filelogparameters** (`flp`) přepnutí.
+ V následujícím příkladu je soubor protokolu pojmenovaný *MyProjectOutput. log*a podrobnost výstupu protokolu je nastavená na `diagnostic`. Tato dvě nastavení zadáte pomocí přepínače **-filelogparameters** (`flp`).
 
 ```cmd
 msbuild MyProject.proj -t:go -fl -flp:logfile=MyProjectOutput.log;verbosity=diagnostic
 ```
 
- Další informace najdete v tématu [odkaz na příkazový řádek](../msbuild/msbuild-command-line-reference.md).
+ Další informace najdete v tématu [Reference k příkazovému řádku](../msbuild/msbuild-command-line-reference.md).
 
 ## <a name="save-the-log-output-to-multiple-files"></a>Uložení výstupu protokolu do více souborů
 
- V následujícím příkladu se uloží celý protokol *msbuild1.log*, jenom chyby do *JustErrors.log*a jenom oznámení, která *JustWarnings.log*. Příklad používá soubor čísla pro všechny tři soubory. Soubor čísla jsou hned za zadaný **-fl** a **- flp** přepínače (například `-fl1` a `-flp1`).
+ Následující příklad uloží celý protokol do *msbuild1. log*, jenom chyby *JustErrors. log*a jenom upozornění do *JustWarnings. log*. Příklad používá čísla souborů pro každý ze tří souborů. Čísla souborů jsou uvedena hned po přepínačích **-FL** a **-flp** (například `-fl1` a `-flp1`).
 
- **- Filelogparameters** (`flp`) přepne pro soubory 2 a 3 zadat jak název každého souboru a co se má zahrnout do každého souboru. Není zadaný žádný název pro soubor 1, takže výchozí název *msbuild1.log* se používá.
+ Přepínače **-filelogparameters** (`flp`) pro soubory 2 a 3 určují, co má každý soubor pojmenovat a co se má zahrnout do každého souboru. Pro soubor 1 není zadán žádný název, proto je použit výchozí název *msbuild1. log* .
 
 ```cmd
 msbuild MyProject.proj -t:go -fl1 -fl2 -fl3 -flp2:logfile=JustErrors.log;errorsonly -flp3:logfile=JustWarnings.log;warningsonly
 ```
 
- Další informace najdete v tématu [odkaz na příkazový řádek](../msbuild/msbuild-command-line-reference.md).
+ Další informace najdete v tématu [Reference k příkazovému řádku](../msbuild/msbuild-command-line-reference.md).
 
 ## <a name="save-a-binary-log"></a>Uložit binární protokol
 
-V protokolu můžete uložit v komprimované binární formát pomocí **- binaryLogger** (**bl**) přepnutí. Tento protokol obsahuje podrobný popis procesu sestavení a může číst pomocí některých nástrojů pro analýzu protokolu.
+Protokol můžete uložit v komprimovaném binárním formátu pomocí přepínače **-binaryLogger** **(6248**). Tento protokol obsahuje podrobný popis procesu sestavení a lze ho číst pomocí některých nástrojů pro analýzu protokolu.
 
-V následujícím příkladu se vytvoří soubor binární protokolu s názvem *binarylogfilename*.
+V následujícím příkladu se vytvoří binární soubor protokolu s názvem *binarylogfilename*.
 
 ```cmd
 -bl:binarylogfilename.binlog
 ```
 
-Další informace najdete v tématu [odkaz na příkazový řádek](../msbuild/msbuild-command-line-reference.md).
+Další informace najdete v tématu [Reference k příkazovému řádku](../msbuild/msbuild-command-line-reference.md).
 
-## <a name="use-a-custom-logger"></a>Použít vlastní protokolovací nástroj
+## <a name="use-a-custom-logger"></a>Použití vlastního protokolovacího nástroje
 
- Můžete napsat vlastní protokolovací nástroj vytvořením spravovaného typu, který implementuje <xref:Microsoft.Build.Framework.ILogger> rozhraní. Můžete například použít vlastní protokolovací nástroj, odeslat chyby sestavení v e-mailu, připojit k databázi nebo protokolu do souboru XML. Další informace najdete v tématu [Protokolovací nástroje sestavení](../msbuild/build-loggers.md).
+ Vlastní protokolovací nástroj můžete napsat vytvářením spravovaného typu, který implementuje rozhraní <xref:Microsoft.Build.Framework.ILogger>. Pomocí vlastního protokolovacího nástroje můžete například odesílat chyby sestavení v e-mailu, přihlašovat je do databáze nebo do souboru XML. Další informace najdete v tématu [protokolovací nástroje sestavení](../msbuild/build-loggers.md).
 
- V příkazovém řádku nástroje MSBuild, zadejte vlastní protokolovací nástroj s použitím **-logger** přepnout. Můžete také použít **- noconsolelogger** přepínač, který zakáže výchozí protokolovací nástroj konzoly.
+ V příkazovém řádku MSBuild zadáte vlastní protokolovací nástroj pomocí přepínače **-protokolovacího** nástroje. Pomocí přepínače **-noconsolelogger** můžete také zakázat výchozí protokolovací nástroj konzoly.
 
 ## <a name="see-also"></a>Viz také:
 
 - <xref:Microsoft.Build.Framework.LoggerVerbosity>
 - [Protokolovací nástroje sestavení](../msbuild/build-loggers.md)
 - [Protokolování v prostředí s více procesory](../msbuild/logging-in-a-multi-processor-environment.md)
-- [Vytváření předávající Protokolovací nástroje](../msbuild/creating-forwarding-loggers.md)
+- [Vytváření protokolovacích nástrojů pro předávání](../msbuild/creating-forwarding-loggers.md)
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)

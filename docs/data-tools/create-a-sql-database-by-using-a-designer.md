@@ -8,17 +8,17 @@ helpviewer_keywords:
 - database files, creating
 - table designer
 ms.assetid: 99c2b06f-47aa-414e-8057-a3453712fd23
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 14d30a366c7400b05a713f146e602ae9ccd7e766
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c8fa89b2cf6eb5afdf1d09a9b4de60cdc9ca11f2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648665"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586884"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>Vytvoření databáze a přidání tabulek v aplikaci Visual Studio
 
@@ -26,13 +26,13 @@ Můžete použít Visual Studio k vytvoření a aktualizaci místního databázo
 
 ## <a name="prerequisites"></a>Požadavky
 
-K dokončení tohoto Názorného postupu budete potřebovat úlohy pro **vývoj desktopových** aplikací pro .NET a **ukládání a zpracování dat,** které jsou nainstalované v aplikaci Visual Studio. Pokud je chcete nainstalovat, otevřete **instalační program pro Visual Studio** a klikněte na tlačítko **Upravit** (nebo **Další**  > **Upravit**) vedle verze sady Visual Studio, kterou chcete upravit.
+K dokončení tohoto Názorného postupu budete potřebovat úlohy pro **vývoj desktopových** aplikací pro .NET a **ukládání a zpracování dat,** které jsou nainstalované v aplikaci Visual Studio. Pokud je chcete nainstalovat, otevřete **instalační program pro Visual Studio** a klikněte na tlačítko **Upravit** (nebo **Další** > **Upravit**) vedle verze sady Visual Studio, kterou chcete upravit.
 
 ## <a name="create-a-project-and-a-local-database-file"></a>Vytvoření projektu a lokálního databázového souboru
 
 1. Vytvořte nový projekt **aplikace model Windows Forms** a pojmenujte ho **SampleDatabaseWalkthrough**.
 
-2. Na panelu nabídek vyberte **projekt**  > **Přidat novou položku**.
+2. Na panelu nabídek vyberte **projekt** > **Přidat novou položku**.
 
 3. V seznamu šablon položek přejděte dolů a vyberte možnost **databáze na základě služby**.
 
@@ -40,9 +40,9 @@ K dokončení tohoto Názorného postupu budete potřebovat úlohy pro **vývoj 
 
 4. Pojmenujte databázi **SampleDatabase**a pak klikněte na **Přidat**.
 
-### <a name="add-a-data-source"></a>Přidat zdroj dat
+### <a name="add-a-data-source"></a>Přidání zdroje dat
 
-1. Pokud není okno **zdroje dat** otevřené, otevřete ho stisknutím klávesy **Shift** +**ALT** +**D** nebo výběrem možnosti **Zobrazit**  > **jiné** **zdroje dat**  >  Windows na řádku nabídek.
+1. Pokud není okno **zdroje dat** otevřené, otevřete ho stisknutím klávesy **Shift**+**ALT**+**D** nebo výběrem možnosti **Zobrazit** > **jiné** **zdroje dat** > Windows na řádku nabídek.
 
 1. V okně **zdroje dat** vyberte **Přidat nový zdroj dat**.
 
@@ -58,15 +58,15 @@ K dokončení tohoto Názorného postupu budete potřebovat úlohy pro **vývoj 
 
 1. Na stránce **Uložit připojovací řetězec do konfiguračního souboru aplikace** klikněte na tlačítko **Další**.
 
-1. Na stránce **Výběr databázových objektů** se zobrazí zpráva oznamující, že databáze neobsahuje žádné objekty. Klikněte na tlačítko **Dokončit**.
+1. Na stránce **Výběr databázových objektů** se zobrazí zpráva oznamující, že databáze neobsahuje žádné objekty. Zvolte **Dokončit**.
 
 ### <a name="view-properties-of-the-data-connection"></a>Zobrazit vlastnosti datového připojení
 
 Připojovací řetězec pro soubor *SampleDatabase. mdf* můžete zobrazit otevřením okno Vlastnosti datového připojení:
 
-- Výběrem **zobrazit**  > **Průzkumník objektů systému SQL Server** otevřete okno **Průzkumník objektů systému SQL Server** . Rozbalte **(LocalDB) \MSSQLLocalDB**  > **databáze**a potom klikněte pravým tlačítkem na *SampleDatabase. mdf* a vyberte **vlastnosti**.
+- Výběrem **zobrazit** > **Průzkumník objektů systému SQL Server** otevřete okno **Průzkumník objektů systému SQL Server** . Rozbalte **(LocalDB) \MSSQLLocalDB** > **databáze**a potom klikněte pravým tlačítkem na *SampleDatabase. mdf* a vyberte **vlastnosti**.
 
-- Případně můžete vybrat možnost **zobrazit**  > **Průzkumník serveru**, pokud toto okno ještě není otevřené. Otevřete okno Vlastnosti rozbalením uzlu **datová připojení** , kliknutím pravým tlačítkem myši na *SampleDatabase. mdf*a následným výběrem **vlastností**.
+- Případně můžete vybrat možnost **zobrazit** > **Průzkumník serveru**, pokud toto okno ještě není otevřené. Otevřete okno Vlastnosti rozbalením uzlu **datová připojení** , kliknutím pravým tlačítkem myši na *SampleDatabase. mdf*a následným výběrem **vlastností**.
 
   > [!TIP]
   > Pokud nemůžete rozšířit uzel datová připojení, nebo není uvedené připojení SampleDatabase. mdf, vyberte na panelu nástrojů Průzkumník serveru tlačítko **připojit k databázi** . V dialogovém okně **Přidat připojení** se ujistěte, že je v části **zdroj dat**vybraná možnost **Microsoft SQL Server databázový soubor** , a pak vyhledejte a vyberte soubor SampleDatabase. mdf. Kliknutím na **tlačítko OK**dokončete přidání připojení.
@@ -104,7 +104,7 @@ V této části vytvoříte dvě tabulky, primární klíč v každé tabulce a 
    CREATE TABLE [dbo].[Customers]
    ```
 
-   Mělo by se zobrazit něco podobného:
+   Mělo by se zobrazit něco takového:
 
    ![Návrhář tabulky](../data-tools/media/table-designer.png)
 
@@ -180,7 +180,7 @@ V této části vytvoříte dvě tabulky, primární klíč v každé tabulce a 
     > [!IMPORTANT]
     > Zajistěte, aby všechny ID objednávek a množství objednávek byly celá čísla a aby každé ID zákazníka odpovídalo hodnotě, kterou jste zadali ve sloupci **KódZákazníka** tabulky Customers.
 
-7. Na řádku nabídek vyberte **soubor**  > **Uložit vše**.
+7. Na řádku nabídek vyberte **soubor** > **Uložit vše**.
 
 ## <a name="see-also"></a>Viz také:
 

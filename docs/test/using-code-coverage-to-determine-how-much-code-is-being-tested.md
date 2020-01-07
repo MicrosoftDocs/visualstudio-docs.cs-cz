@@ -8,15 +8,15 @@ dev_langs:
 - CSharp
 - VB
 - CPP
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: dc3c11610d95756b265d5ba01a6f8365f115548a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6dd6dde83720c6e6f37bd6827bb5d97526202aa7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659806"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585597"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>Určení rozsahu testovaného kódu pomocí pokrytí kódu
 
@@ -28,7 +28,7 @@ Pokrytí kódu je jedna z možností při spouštění testovacích metod pomoc�
 
 ::: moniker range="vs-2017"
 
-![Výsledky pokrytí kódu s barvou](../test/media/codecoverage1.png)
+![Výsledky pokrytí kódu s barevné zvýrazňování](../test/media/codecoverage1.png)
 
 ::: moniker-end
 
@@ -54,10 +54,10 @@ Funkce pokrytí kódu je k dispozici pouze v edici Visual Studio Enterprise.
 
 ::: moniker-end
 
-2. Po spuštění testů, chcete-li zjistit, které řádky byly spuštěny, vyberte možnost ![Show ikona barevného pokrytí pokrytí kódu ](../test/media/codecoverage-showcoloringicon.png) **Zobrazit barvy pokrytí kódu** v okně **výsledky pokrytí kódu** . Ve výchozím nastavení je kód, který je pokrytý testy, zvýrazněný světle modře.
+2. Po spuštění testů, chcete-li zjistit, které řádky byly spuštěny, vyberte možnost ![zobrazit barevné označení pokrytí kódu](../test/media/codecoverage-showcoloringicon.png) **Zobrazit barvy pokrytí kódu** v okně **výsledky pokrytí kódu** . Ve výchozím nastavení je kód, který je pokrytý testy, zvýrazněný světle modře.
 
    > [!TIP]
-   > Chcete-li změnit barvy nebo použít tučnou plochu, vyberte možnost **nástroje**  > **možnosti**  > **prostředí**  > **písma a barvy**  > **Zobrazit nastavení pro: textový editor**. V části **Zobrazit položky**upravte nastavení položek pokrytí, například **Rozsah nedotčená oblast**.
+   > Chcete-li změnit barvy nebo použít tučnou plochu, vyberte možnost **nástroje** > **možnosti** > **prostředí** > **písma a barvy** > **Zobrazit nastavení pro: textový editor**. V části **Zobrazit položky**upravte nastavení položek pokrytí, například **Rozsah nedotčená oblast**.
    >
    > ![Písma a barvy pokrytí kódu](media/vs-2019/coverage-fonts-and-colors.png)
 
@@ -105,7 +105,7 @@ V některých situacích se na základě testovacích dat použijí různé blo
 
 Například při spuštění testu se vstupem „2“ je zjištěno 50% pokrytí určité funkce. Při druhém spuštění testu se vstupem "-2" se zobrazí v zobrazení vybarvení pokrytí, na které se vztahuje další 50% funkce. Po sloučení výsledků těchto dvou testovacích běhů ukáže sestava i vybarvení 100% pokrytí funkce.
 
-K tomu použijte ![Icon pro tlačítko Sloučit v okně pokrytí kódu ](../test/media/codecoverage-mergeicon.png) **sloučení výsledků pokrytí kódu** . Ke sloučení je možné použít libovolnou kombinaci předešlých běhů nebo importovaných výsledků. Pokud je potřeba sloučit exportované výsledky, je nejprve nutné je importovat.
+Použijte ikonu ![pro tlačítko Sloučit v okně pokrytí kódu](../test/media/codecoverage-mergeicon.png) **sloučení výsledků pokrytí kódu** . Ke sloučení je možné použít libovolnou kombinaci předešlých běhů nebo importovaných výsledků. Pokud je potřeba sloučit exportované výsledky, je nejprve nutné je importovat.
 
 Pomocí **exportu výsledků pokrytí kódu** uložte výsledky operace sloučení.
 
@@ -300,7 +300,7 @@ Chcete-li spustit testy z příkazového řádku, použijte *VSTest. Console. ex
 
 Další informace najdete v tématu [Možnosti příkazového řádku VSTest. Console. exe](vstest-console-options.md).
 
-## <a name="troubleshoot"></a>Řešení potíží
+## <a name="troubleshoot"></a>Řešení problémů
 
 Pokud nevidíte výsledky pokrytí kódu, může vám pomoct článek věnované [řešení potíží s kódem](../test/troubleshooting-code-coverage.md) .
 

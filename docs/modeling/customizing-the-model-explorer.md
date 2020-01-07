@@ -6,17 +6,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.explorerbehavior
 helpviewer_keywords:
 - Domain-Specific Language Tools, Domain-Specific Language Explorer
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82d9a64721f9d1c4f4db982e3a39c65a4b29f167
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 96c12ac2063e6b3ac04e3c0e9b0c20c69ea91a35
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653972"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589705"
 ---
 # <a name="customizing-the-model-explorer"></a>Přizpůsobení Průzkumníka modelů
 Vzhled a chování Průzkumníka pro návrháře jazyka specifického pro doménu můžete změnit následujícím způsobem:
@@ -113,4 +113,4 @@ Vzhled a chování Průzkumníka pro návrháře jazyka specifického pro domén
 
 ## <a name="see-also"></a>Viz také:
 
-- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

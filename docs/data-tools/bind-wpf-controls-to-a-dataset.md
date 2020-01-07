@@ -10,17 +10,17 @@ helpviewer_keywords:
 - WPF data binding [Visual Studio], walkthroughs
 - WPF Designer, data binding
 ms.assetid: 177420b9-568b-4dad-9d16-1b0e98a24d71
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 68ffb040e7d642fc2bf285f0510850edc343a5ce
-ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
+ms.openlocfilehash: 8de276bfb6d7ec8bc36380ee41d86de07fc8dd74
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72924537"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586975"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>Vytvoření vazby ovládacích prvků WPF k datové sadě
 
@@ -58,7 +58,7 @@ Vytvořte nový projekt WPF pro zobrazení záznamů produktu.
 
 ::: moniker range="vs-2017"
 
-1. Otevřete Visual Studio.
+1. Otevřít Visual Studio.
 
 2. V nabídce **soubor** vyberte **Nový** > **projekt**.
 
@@ -72,7 +72,7 @@ Vytvořte nový projekt WPF pro zobrazení záznamů produktu.
 
 ::: moniker range=">=vs-2019"
 
-1. Otevřete Visual Studio.
+1. Otevřít Visual Studio.
 
 2. V okně Start vyberte možnost **vytvořit nový projekt**.
 
@@ -86,7 +86,7 @@ Vytvořte nový projekt WPF pro zobrazení záznamů produktu.
 
 Předtím, než můžete vytvořit ovládací prvky vázané na data, je nutné pro svou aplikaci definovat datový model a přidat je do okna **zdroje dat** . V tomto návodu vytvoříte datovou sadu, která bude použita jako datový model.
 
-1. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
+1. Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
 
    Otevře se okno **zdroje dat** .
 
@@ -108,7 +108,7 @@ Předtím, než můžete vytvořit ovládací prvky vázané na data, je nutné 
 
 7. Na stránce **Zvolte vaše databázové objekty** rozbalte **tabulky**a pak vyberte tabulku **Product (tabulky SalesLT)** .
 
-8. Klikněte na tlačítko **Dokončit**.
+8. Klikněte na **Dokončit**.
 
    Visual Studio přidá nový soubor `AdventureWorksLTDataSet.xsd` do projektu a přidá odpovídající položku **AdventureWorksLTDataSet** do okna **zdroje dat** . `AdventureWorksLTDataSet.xsd` soubor definuje typovou datovou sadu s názvem `AdventureWorksLTDataSet` a TableAdapter s názvem `ProductTableAdapter`. Později v tomto návodu použijete `ProductTableAdapter` k vyplnění datové sady daty a k uložení změn zpět do databáze.
 
@@ -132,7 +132,7 @@ Chcete-li datovou sadu vyplnit daty, použijte metodu `Fill` `ProductTableAdapte
     WHERE ThumbnailPhotoFileName <> 'no_image_available_small.gif'
     ```
 
-4. Klikněte na tlačítko **Dokončit**.
+4. Klikněte na **Dokončit**.
 
 ## <a name="define-the-user-interface"></a>Definování uživatelského rozhraní
 
@@ -236,7 +236,7 @@ Sestavte a spusťte aplikaci. Ověřte, zda můžete zobrazit a aktualizovat zá
 
 1. Stiskněte klávesu **F5**.
 
-     Aplikace se vytvoří a spustí. Ověřte následující:
+     Aplikace se vytvoří a spustí. Zkontrolujte:
 
     - Textová pole zobrazují data z prvního záznamu produktu, který obsahuje fotografii. V tomto produktu je produkt s ID 713 a názvem **dlouhé logo Jersey, S**.
 

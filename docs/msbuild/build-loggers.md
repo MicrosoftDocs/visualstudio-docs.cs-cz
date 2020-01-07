@@ -1,5 +1,5 @@
 ---
-title: Protokolovací nástroje sestavení | Dokumentace Microsoftu
+title: Protokolovací nástroje sestavení | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,53 +7,53 @@ helpviewer_keywords:
 - MSBuild, logging
 - logging [MSBuild]
 ms.assetid: fa34810d-185a-4d22-92bd-9852915e5f1d
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c5bb6bbd3d05c22b7615a027ac3fcf6aa686156
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2c82b7456e0fc497b753c87f7a4d6808c81d5ab2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62823025"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593405"
 ---
 # <a name="build-loggers"></a>Protokolovací nástroje sestavení
-Protokolovací nástroje poskytují způsob, jak můžete upravit výstupní sestavení a zobrazení zprávy, chyby nebo upozornění v reakci na události v konkrétním sestavení. Každý protokolovacího nástroje je implementován jako třída rozhraní .NET, která implementuje <xref:Microsoft.Build.Framework.ILogger> rozhraní, která je definována v *Microsoft.Build.Framework.dll* sestavení.
+Protokolovací nástroje poskytují způsob, jak přizpůsobit výstup sestavení a zobrazit zprávy, chyby nebo varování v reakci na konkrétní události sestavení. Každý protokolovací nástroj je implementován jako třída .NET, která implementuje rozhraní <xref:Microsoft.Build.Framework.ILogger>, které je definováno v sestavení *Microsoft. Build. Framework. dll* .
 
-Existují dvě metody, které můžete použít při implementaci protokolovač:
+Existují dva přístupy, které můžete použít při implementaci protokolovacího nástroje:
 
-- Implementace <xref:Microsoft.Build.Framework.ILogger> rozhraní přímo.
-- Odvodit třídu z pomocná třída <xref:Microsoft.Build.Utilities.Logger>, který je definován v *Microsoft.Build.Utilities.dll* sestavení. <xref:Microsoft.Build.Utilities.Logger> implementuje <xref:Microsoft.Build.Framework.ILogger> a poskytuje výchozí implementaci některých <xref:Microsoft.Build.Framework.ILogger> členy.
+- Implementujte rozhraní <xref:Microsoft.Build.Framework.ILogger> přímo.
+- Odvodit třídu z pomocné třídy, <xref:Microsoft.Build.Utilities.Logger>, která je definována v sestavení *Microsoft. Build. Utilities. dll* . <xref:Microsoft.Build.Utilities.Logger> implementuje <xref:Microsoft.Build.Framework.ILogger> a poskytuje výchozí implementace některých <xref:Microsoft.Build.Framework.ILogger> členů.
 
-  Toto téma vysvětluje, jak napsat jednoduchý protokolovací nástroj, který je odvozen z <xref:Microsoft.Build.Utilities.Logger>, a zobrazí zprávy v konzole v reakci na určité události sestavení.
+  V tomto tématu se dozvíte, jak napsat jednoduchý protokolovací nástroj, který je odvozený z <xref:Microsoft.Build.Utilities.Logger>, a zobrazuje zprávy v konzole v reakci na určité události sestavení.
 
-## <a name="register-for-events"></a>Zaregistrovat se na události
-Účelem protokolovací nástroj je shromažďování informací o průběhu sestavení udávaný modul sestavení a potom nahlásit těchto informací užitečným způsobem. Všechny Protokolovací nástroje musí přepsat <xref:Microsoft.Build.Utilities.Logger.Initialize%2A> metodu, která je, kde se registruje protokolovací nástroj pro události. V tomto příkladu protokolovací nástroj zaregistruje <xref:Microsoft.Build.Framework.IEventSource.TargetStarted>, <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted>, a <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> události.
+## <a name="register-for-events"></a>Registrovat pro události
+Účelem protokolovacího nástroje je shromáždit informace o průběhu sestavení, když jsou hlášeny modulem sestavení, a pak tyto informace vykázat užitečným způsobem. Všechny protokolovací nástroje musí přepsat metodu <xref:Microsoft.Build.Utilities.Logger.Initialize%2A>, která je v případě, že protokolovací nástroj registruje události. V tomto příkladu protokolovací nástroj zaregistruje události <xref:Microsoft.Build.Framework.IEventSource.TargetStarted>, <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted>a <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished>.
 
 [!code-csharp[msbuild_SimpleConsoleLogger#2](../msbuild/codesnippet/CSharp/build-loggers_1.cs)]
 
 ## <a name="respond-to-events"></a>Reakce na události
-Teď, když protokolovacího nástroje je zaregistrovaný pro konkrétní události, je potřeba zpracovat tyto události, které se objeví. Pro <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted>, a <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> události, protokolovacího nástroje je zapíše jednoduše, krátké fráze a název souboru projektu zahrnutý v události. Všechny zprávy z protokolovací nástroj se zapisují do okna konzoly.
+Teď, když je protokolovací nástroj zaregistrovaný pro konkrétní události, musí tyto události zpracovávat, když k nim dojde. Pro <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted>a události <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> protokolovací nástroj jednoduše zapíše krátkou frázi a název souboru projektu, který je součástí události. Všechny zprávy z protokolovacího nástroje se zapisují do okna konzoly.
 
 [!code-csharp[msbuild_SimpleConsoleLogger#3](../msbuild/codesnippet/CSharp/build-loggers_2.cs)]
 
-## <a name="respond-to-logger-verbosity-values"></a>Reakce na hodnoty podrobnost protokolování
-V některých případech můžete chtít pouze protokolování informací z události, pokud MSBuild.exe **-podrobností** přepínač obsahuje určitou hodnotu. V tomto příkladu <xref:Microsoft.Build.Framework.IEventSource.TargetStarted> obslužné rutiny události pouze zaznamená zprávu, pokud <xref:Microsoft.Build.Utilities.Logger.Verbosity%2A> vlastnost, která se nastavuje přes **-podrobností** přepnout, je rovna <xref:Microsoft.Build.Framework.LoggerVerbosity> `Detailed`.
+## <a name="respond-to-logger-verbosity-values"></a>Reakce na hodnoty podrobností protokolovacího nástroje
+V některých případech můžete chtít protokolovat pouze informace z události, pokud přepínač MSBuild. exe **-verbose** obsahuje určitou hodnotu. V tomto příkladu obslužná rutina události <xref:Microsoft.Build.Framework.IEventSource.TargetStarted> zaznamená zprávu pouze v případě, že vlastnost <xref:Microsoft.Build.Utilities.Logger.Verbosity%2A>, která je nastavena přepínačem **-verbose** , je rovna <xref:Microsoft.Build.Framework.LoggerVerbosity>`Detailed`.
 
 [!code-csharp[msbuild_SimpleConsoleLogger#4](../msbuild/codesnippet/CSharp/build-loggers_3.cs)]
 
-## <a name="specify-a-logger"></a>Zadejte protokolovací nástroj
-Jakmile protokolovacího nástroje je zkompilovat do sestavení, je třeba sdělit [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] používat tento protokolovač během sestavení. To se provádí pomocí **-protokolovací nástroj** přepínači s *MSBuild.exe*. Další informace o přepínačích, které jsou k dispozici pro *MSBuild.exe*, naleznete v tématu [odkaz na příkazový řádek](../msbuild/msbuild-command-line-reference.md).
+## <a name="specify-a-logger"></a>Určení protokolovacího nástroje
+Jakmile je protokolovací nástroj zkompilován do sestavení, je nutné sdělit [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], aby používal tento protokolovací nástroj během sestavení. To se provádí pomocí přepínače **-protokolovacího** nástroje s nástrojem *MSBuild. exe*. Další informace o přepínačích, které jsou k dispozici pro *MSBuild. exe*, naleznete v tématu [Reference k příkazovému řádku](../msbuild/msbuild-command-line-reference.md).
 
-Následující příkaz sestaví projekt *MyProject.csproj* a používá třídu protokolovacího nástroje implementované v *SimpleLogger.dll*. **- Nologo** přepínač Zobrazovat nápis a zprávu o autorských právech a **- noconsolelogger** přepínač zakáže výchozí [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] protokolovací nástroj konzoly.
+Následující příkazový řádek sestaví projekt *MyProject. csproj* a používá třídu protokolovacího nástroje implementovanou v souboru *SimpleLogger. dll*. Přepínač **-unlogo** skryje hlavičku a zprávu o autorských právech a přepínač **-noconsolelogger** zakáže výchozí protokolovací nástroj konzoly [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].
 
 ```cmd
 MSBuild -nologo -noconsolelogger -logger:SimpleLogger.dll
 ```
 
-Následující příkaz sestaví projekt se stejným protokolovací nástroj, ale s `Verbosity` úroveň `Detailed`.
+Následující příkazový řádek sestaví projekt se stejným protokolovacím nástrojem, ale s úrovní `Verbosity` `Detailed`.
 
 ```cmd
 MSBuild -nologo -noconsolelogger -logger:SimpleLogger.dll -verbosity:Detailed
@@ -62,7 +62,7 @@ MSBuild -nologo -noconsolelogger -logger:SimpleLogger.dll -verbosity:Detailed
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
-Následující příklad obsahuje kompletní kód pro protokolovacího nástroje.
+Následující příklad obsahuje úplný kód pro protokolovací nástroj.
 
 ### <a name="code"></a>Kód
 [!code-csharp[msbuild_SimpleConsoleLogger#1](../msbuild/codesnippet/CSharp/build-loggers_4.cs)]
@@ -70,11 +70,11 @@ Následující příklad obsahuje kompletní kód pro protokolovacího nástroje
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
-Následující příklad ukazuje, jak implementovat protokolovací nástroj, který zapíše protokol do souboru místo zobrazení v okně konzoly.
+Následující příklad ukazuje, jak implementovat protokolovací nástroj, který zapisuje protokol do souboru namísto zobrazení v okně konzoly.
 
 ### <a name="code"></a>Kód
 [!code-csharp[msbuild_BasicLogger#1](../msbuild/codesnippet/CSharp/build-loggers_5.cs)]
 
 ## <a name="see-also"></a>Viz také:
-- [Získání protokolů o sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)
+- [Získat protokoly sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)

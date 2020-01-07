@@ -2,17 +2,17 @@
 title: 'Postupy: Otevření modelu ze souboru v kódu programu'
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d39543a388c112cf13a5841e4fe825717597d5c1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fae71f748f1f64480c046ae157e1fbca0dd0bec9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661182"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594614"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>Postupy: Otevření modelu ze souboru v kódu programu
 
@@ -33,7 +33,7 @@ Nastavte **cílovou architekturu** projektu aplikace na .NET Framework 4 nebo no
 > [!NOTE]
 > Cílový rámec by neměl být **.NET Framework 4 profil klienta**.
 
-## <a name="references"></a>Odkazy
+## <a name="references"></a>Reference
 
 Přidejte tyto odkazy do projektu aplikace Visual Studio:
 
@@ -41,7 +41,7 @@ Přidejte tyto odkazy do projektu aplikace Visual Studio:
 
   - Pokud to nevidíte na kartě **.NET** v dialogovém okně **Přidat odkazy** , klikněte na kartu **Procházet** a přejděte na `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\`.
 
-- Vaše sestavení DSL, které se nachází ve složce Bin vašeho projektu DSL. Jeho název má obvykle tvar: *yourcompany*. *YourProject* `.Dsl.dll`.
+- Vaše sestavení DSL, které se nachází ve složce Bin vašeho projektu DSL. Jeho název má obvykle tvar: *yourcompany*. *YourProject*`.Dsl.dll`.
 
 ## <a name="important-classes-in-the-dsl"></a>Důležité třídy v DSL
 

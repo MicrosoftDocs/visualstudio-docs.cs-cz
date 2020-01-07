@@ -5,17 +5,17 @@ ms.topic: troubleshooting
 helpviewer_keywords:
 - unrecoverable error
 - error, process
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fae832cf62b2cfc6302289352bc5a2f2afb9f13
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 206fcddca51f8e770e013ff67de6ae3d5562f633
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667051"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585792"
 ---
 # <a name="visual-studio-unrecoverable-process-error"></a>Chyba neodstranitelné procesu sady Visual Studio
 
@@ -31,18 +31,18 @@ Pokud se zobrazí tato zpráva, měli byste uložit svoji práci a pak zavřít 
 
 Následuje seznam procesů, které používá aplikace Visual Studio. Tento seznam zahrnuje procesy, které se spouštějí v konkrétních pracovních postupech nebo scénářích, a to ve většině případů, kdy nejsou spuštěné ve stejnou dobu.
 
-- Microsoft. Alm. Shared. Vzdálená komunikace. RemoteContainer. dll
-- Microsoft. CodeAnalysis. LiveUnitTesting. EntryPoint
-- PerfWatson2. exe
-- ServiceHub. Host. Node. x86. exe
-- ServiceHub. IdentityHost. exe
-- ServiceHub. VSDetouredHost. exe
-- ServiceHub. SettingsHost. exe
-- ServiceHub. Host. CLR. x86. exe
-- ServiceHub. RoslynCodeAnalysisService32. exe
-- ServiceHub. RoslynCodeAnalysisService. exe
-- WindowsAzureGuestAgent. exe
-- WindowsAzureTelemetryService. exe
-- WaAppAgent. exe
+- Microsoft.Alm.Shared.Remoting.RemoteContainer.dll
+- Microsoft.CodeAnalysis.LiveUnitTesting.EntryPoint
+- PerfWatson2.exe
+- ServiceHub.Host.Node.x86.exe
+- ServiceHub.IdentityHost.exe
+- ServiceHub.VSDetouredHost.exe
+- ServiceHub.SettingsHost.exe
+- ServiceHub.Host.CLR.x86.exe
+- ServiceHub.RoslynCodeAnalysisService32.exe
+- ServiceHub.RoslynCodeAnalysisService.exe
+- WindowsAzureGuestAgent.exe
+- WindowsAzureTelemetryService.exe
+- WaAppAgent.exe
 
 Pokud některý z těchto procesů skončí neočekávaně, některé funkce v sadě Visual Studio přestanou fungovat. U některých procesů může být ztráta funkčnosti nevýznamná. Pro jiné je ovlivněna stabilita sady Visual Studio a zobrazí se chybová zpráva.

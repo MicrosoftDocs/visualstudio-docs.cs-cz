@@ -8,15 +8,15 @@ helpviewer_keywords:
 - load tests, test mix
 - load tests, removing tests
 ms.assetid: 303e1d70-5d98-424a-b51e-e0898e16d3f8
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9a2c882d912cb46e4f61bd03b9949aaf9fd135d6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4a52d660140416ce829493a733171cfcf64ebbe4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665012"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595927"
 ---
 # <a name="edit-the-test-mix-to-specify-which-web-performance-unit-and-coded-ui-tests-to-include-in-a-load-test-scenario"></a>Úpravou kombinace testů určete, který webový výkon, jednotku a programové testy uživatelského rozhraní mají být zahrnuty do scénáře zátěžového testu.
 
@@ -53,7 +53,7 @@ Pomocí **Editor zátěžového testu**můžete přidat další testy výkonu we
 
      Testy jsou přidány do kombinace testů. Nové distribuci je automaticky přiřazeno k testům v kombinaci testů.
 
-5. Volitelné Upravte ovládací prvek míchání pro určení distribuce testu. Další informace naleznete v tématu [o ovládacím prvku míchání](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md).
+5. (Volitelné) Upravte poměr ovládacího prvku k určení distribuci testů. Další informace najdete v tématu [o ovládacím prvku kombinace](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md).
 
 ## <a name="remove-tests-from-a-scenario"></a>Odebrání testů ze scénáře
 ![Odebrání testu z existujícího zátěžového testu](../test/media/ltest_removetest.png)
@@ -62,7 +62,7 @@ Pomocí **Editor zátěžového testu**můžete přidat další testy výkonu we
 
 1. Otevřete zátěžový test.
 
-2. V **Editor zátěžového testu**ve stromu zátěžového testu klikněte pravým tlačítkem myši na scénář, ze kterého chcete odebrat test, a vyberte možnost **Upravit kombinaci testů**. Zobrazí se dialogové okno **Upravit kombinaci testů** .
+2. V **Editor zátěžového testu**ve stromu zátěžového testu klikněte pravým tlačítkem myši na scénář, ze kterého chcete odebrat test, a vyberte možnost **Upravit kombinaci testů**. **Upravit kombinaci testů** se zobrazí dialogové okno.
 
 3. V mřížce vyberte webový výkon, jednotku nebo programový test uživatelského rozhraní a pak zvolte možnost **Odebrat**.
 
@@ -72,22 +72,22 @@ Pomocí **Editor zátěžového testu**můžete přidat další testy výkonu we
 4. Po dokončení odebírání testů klikněte na **tlačítko OK**.
 
 ## <a name="EditingTestMixAboutMixControl"></a>O ovládacím prvku míchání
-Ovládací prvek mix umožňuje upravit procento zatížení, které je distribuováno mezi testy, typy prohlížečů nebo typy sítě ve scénáři zátěžového testu. Procentuální hodnoty upravíte přesunutím jezdců. Úprava kombinace pro testy určuje pravděpodobnost, že virtuální uživatel spustí určitý test ve scénáři zátěžového testu.
+Ovládací prvek kombinace umožňuje upravit procento zatížení, která je distribuovaná mezi testy, typu prohlížeče nebo typy sítí ve scénáři testu zatížení. Procentní hodnoty se upravit posunutím jezdce. Úprava kombinace pro testy určuje pravděpodobnost, že virtuální uživatel spustí určitý test ve scénáři zátěžového testu.
 
-Při přesunutí posuvníku se změní procentuální hodnoty všech dostupných položek. Pokud máte více než dvě položky, je množství, které přidáváte nebo odebíráte, rozděleno rovnoměrně mezi ostatní položky. Toto chování je možné přepsat. Pokud zaškrtnete políčko ve sloupci uzamknout pro konkrétní položku, zamknete pro tuto položku zadanou procentuální hodnotu. Když přesunete posuvník, množství, které přidáte nebo odeberete, se použije jenom u zbývajících odemčených položek.
+Při přesunutí posuvníku procentuální hodnoty všechny dostupné položky změnit. Pokud máte více než dvě položky, velikost, přidat nebo odebrat rovnoměrně distribuovaných mezi ostatní položky. Je možné toto chování přepsat. Pokud vyberete zaškrtávací políčko ve sloupci zámek pro konkrétní položku, uzamknout specifikované procentuální hodnotou pro danou položku. Pak při přesunutí posuvníku, velikost, přidat nebo odebrat platí jenom pro všechny zbývající položky odemknout.
 
-Tlačítko **rozmístit** se používá k přidělení procent rovnoměrně mezi všechny položky. Například pokud máte tři položky, volba **distribuovat** nastaví procentuální hodnoty na 34, 33 a 33.
+Tlačítko **rozmístit** se používá k přidělení procent rovnoměrně mezi všechny položky. Například pokud máte tři položky, výběrem **rozmístit** nastaví procentní hodnoty 34 33 a 33.
 
 > [!WARNING]
-> Tlačítko **distribuovat** přepisuje všechny položky, které jsou zamčené.
+> **Rozmístit** tlačítko přepíše všechny položky, které jsou zamknuté.
 
-Je také možné zadat procentuální hodnoty přímo do sloupce **%** místo použití jezdců. Pokud zadáte hodnotu v procentech přímo, ostatní položky se automaticky neupraví.
+Je také možné zadat procentní hodnoty přímo do **%** sloupce namísto použití posuvníků. Pokud zadáte hodnotu v procentech přímo, nebude se automaticky upraví další položky.
 
 > [!NOTE]
-> Když celkový součet nepřidá až 100%, nebo když jsou procentuální hodnoty zadané do sloupce **%** desetinná místa, jsou posuvníky zakázané.
+> Posuvníky jsou zakázané, pokud celkový počet nepřidá do 100 %, nebo pokud procentní hodnoty zadané do **%** sloupce jsou desetinná čísla.
 
-Když zadáte procentuální hodnoty ručně, měli byste se ujistit, že součet všech položek je 100%. Když uložíte směs, pokud součet není 100%, budete vyzváni, abyste přijali procentuální hodnoty tak, jak jsou, nebo se vrátíte a upravíte. Pokud se rozhodnete je přijmout, bude se poměrně 100%.  Pokud máte například dvě položky a ručně jste je nastavili na 80% a 40%, bude první položka nastavena na 66,67% (80 dělena 120) a druhá položka bude nastavena na 33,33% (40 dělený 120).
+Když ručně zadáte procentní hodnoty, by měl Ujistěte se, že součet všech položek je 100 %. Při ukládání kombinaci, nejsou-li součet 100 %, vyzve tak, aby přijímal procentní hodnoty, jak jsou, nebo se vrátit a upravte je tak. Pokud budete chtít nepřijmete, jak jsou, budou se poměrné přepočítání na 100 %.  Pokud máte dvě položky a je ručně nastaveno na 80 % až 40 %, nastaví se první položka % 66.67 (80 dělený 120) a nastaví se druhá položka % 33,33 (40 dělený 120).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Úpravy scénářů zátěžového testu](../test/edit-load-test-scenarios.md)
+- [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md)

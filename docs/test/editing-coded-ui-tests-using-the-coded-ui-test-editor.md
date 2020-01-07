@@ -6,17 +6,17 @@ f1_keywords:
 - vs.codedUItest.testeditor
 helpviewer_keywords:
 - coded UI test, Coded UI Test Editor
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 971b5d178a777b7a0021eda4bfccab06727981ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: 1e861c31fa2959c3bace008af7937f6686b2705f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665004"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589653"
 ---
 # <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>Úpravy programových testů uživatelského rozhraní pomocí editoru programových testů uživatelského rozhraní
 
@@ -27,7 +27,7 @@ Editor programového testu UI umožňuje snadno upravit kódované testy uživat
 **Požadavky**
 
 - Visual Studio Enterprise
-- Komponenta programového testu uživatelského rozhraní
+- Programový test komponenta uživatelského prostředí
 
 ## <a name="features-of-the-coded-ui-test-editor"></a>Funkce editoru programového testu UI
 
@@ -74,9 +74,9 @@ Pomocí editoru programového testu UI můžete rychle najít a zobrazit všechn
 
 Chcete-li upravit vlastnosti akce uživatelského rozhraní, v podokně **akce uživatelského rozhraní** rozbalte testovací metodu obsahující akci uživatelského rozhraní, pro kterou chcete upravit vlastnosti, vyberte akci uživatelského rozhraní a pak upravte vlastnosti pomocí okno Vlastnosti.
 
-Pokud například server není k dispozici a máte přidruženou akci uživatelského rozhraní k vašemu webovému prohlížeči, který uvádí stav **Přejít na webovou stránku <http://Contoso1/default.aspx>** , můžete změnit adresu URL na `'http://Contoso2/default.aspx'`.
+Pokud například server není k dispozici a máte přidruženou akci uživatelského rozhraní k vašemu webovému prohlížeči, který uvádí stav **Přejít na webovou stránku<http://Contoso1/default.aspx>** , můžete změnit adresu URL na `'http://Contoso2/default.aspx'`.
 
-![Vlastnosti ovládacího prvku](../test/media/codeduitestcontrolprop.png)
+![Vlastnosti ovládacích prvků](../test/media/codeduitestcontrolprop.png)
 
 Změna vlastností ovládacího prvku se provádí stejným způsobem jako akce uživatelského rozhraní. V podokně **Mapa ovládacího prvku uživatelského rozhraní** vyberte ovládací prvek, který chcete upravit, a upravte jeho vlastnosti pomocí okna **vlastnosti** .
 
@@ -88,7 +88,7 @@ Po dokončení úprav uložte změny do souboru *UIMap. Designer* kliknutím na 
 
 - Pokud se okno **vlastnosti** nezobrazí, stiskněte a podržte klávesu **ALT** , stiskněte klávesu **ENTER**nebo stiskněte klávesu **F4**.
 
-- Provedené změny vlastností vrátíte zpět výběrem možnosti **zpět** v nabídce **Úpravy** nebo stisknutím **kombinace kláves CTRL** +**z**.
+- Provedené změny vlastností vrátíte zpět výběrem možnosti **zpět** v nabídce **Úpravy** nebo stisknutím **kombinace kláves CTRL**+**z**.
 
 - K otevření nástroje **Najít a nahradit** v sadě Visual Studio můžete použít tlačítko **Najít** na panelu nástrojů editoru programového testu UI. Pak můžete pomocí ovládacího prvku **hledání** vyhledat akci uživatelského rozhraní v editoru programového testu UI. Například se můžete pokusit najít kliknutím na tlačítko Login. To může být užitečné při velkých testech. V editoru programového testu UI nelze použít funkci Replace v nástroji **Najít a nahradit** . Další informace najdete v tématu Vyhledání [a nahrazení textu](../ide/finding-and-replacing-text.md)v části najít ovládací prvek.
 
@@ -117,11 +117,11 @@ V podokně **akce uživatelského rozhraní** rozbalte testovací metodu, kterou
 Po dokončení rozdělení metody uložte změny do souboru *UIMap. Designer* kliknutím na tlačítko **Uložit** na panelu nástrojů sady Visual Studio.
 
 > [!WARNING]
-> Pokud rozdělíte metodu, je nutné upravit jakýkoli kód, který volá existující metodu pro volání nové metody, kterou vytváříte, pokud stále chcete tyto akce uživatelského rozhraní zahrnout. Při rozdělení metody se zobrazí dialogové okno Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který volá existující metodu pro volání nové metody, kterou vytváříte. Vyberte **Ano**.
+> Pokud rozdělíte metodu, je nutné upravit jakýkoli kód, který volá existující metodu pro volání nové metody, kterou vytváříte, pokud stále chcete tyto akce uživatelského rozhraní zahrnout. Při rozdělení metody se zobrazí dialogové okno Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který volá existující metodu pro volání nové metody, kterou vytváříte. Zvolte **Ano**.
 
 ### <a name="tips"></a>Tipy
 
-- Chcete-li rozdělení vrátit zpět, zvolte možnost **zpět** v nabídce **Úpravy** nebo stiskněte klávesovou **zkratku CTRL** +**Z**.
+- Chcete-li rozdělení vrátit zpět, zvolte možnost **zpět** v nabídce **Úpravy** nebo stiskněte klávesovou **zkratku CTRL**+**Z**.
 
 - Novou metodu můžete přejmenovat. Vyberte ji v podokně **akce uživatelského rozhraní** a klikněte na tlačítko **Přejmenovat** na panelu nástrojů editoru programového testu UI.
 
@@ -129,7 +129,7 @@ Po dokončení rozdělení metody uložte změny do souboru *UIMap. Designer* kl
 
    Otevřete místní nabídku pro novou testovací metodu a vyberte možnost **Přejmenovat**.
 
-   Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který odkazuje na metodu. Vyberte **Ano**.
+   Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který odkazuje na metodu. Zvolte **Ano**.
 
 ## <a name="move-a-test-method-to-the-uimap-file-to-facilitate-customization"></a>Přesunutí testovací metody do souboru UIMap, aby se usnadnilo přizpůsobení
 
@@ -140,11 +140,11 @@ V podokně **akce uživatelského rozhraní** vyberte testovací metodu, kterou 
 Po dokončení přesunutí metody uložte změny do souboru *UIMap. Designer* kliknutím na tlačítko **Uložit** na panelu nástrojů sady Visual Studio.
 
 > [!WARNING]
-> Po přesunutí metody již nelze upravovat pomocí editoru programového testu UI. Musíte přidat vlastní kód a spravovat jej pomocí Editoru kódu. Při přesunutí metody se zobrazí dialogové okno Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze souboru *UIMap. UITest* do souboru *UIMap.cs* nebo *UIMap. vb* a že již nebudete moci upravovat metodu pomocí editoru programového testu uživatelského rozhraní. Vyberte **Ano**.
+> Po přesunutí metody již nelze upravovat pomocí editoru programového testu UI. Musíte přidat vlastní kód a spravovat jej pomocí Editoru kódu. Při přesunutí metody se zobrazí dialogové okno Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze souboru *UIMap. UITest* do souboru *UIMap.cs* nebo *UIMap. vb* a že již nebudete moci upravovat metodu pomocí editoru programového testu uživatelského rozhraní. Zvolte **Ano**.
 
 ### <a name="tips"></a>Tipy
 
-Chcete-li zrušit přesun, vyberte možnost **zpět** v nabídce **Úpravy** nebo stiskněte klávesu **CTRL** +**Z**. Je však nutné ručně odebrat kód ze souboru *UIMap.cs* nebo *UIMap. vb* .
+Chcete-li zrušit přesun, vyberte možnost **zpět** v nabídce **Úpravy** nebo stiskněte klávesu **CTRL**+**Z**. Je však nutné ručně odebrat kód ze souboru *UIMap.cs* nebo *UIMap. vb* .
 
 ## <a name="locate-a-ui-control-in-the-application-under-test"></a>Vyhledání ovládacího prvku uživatelského rozhraní v testované aplikaci
 
@@ -193,6 +193,6 @@ Pokud potřebujete zajistit, aby byl konkrétní ovládací prvek k dispozici p�
 ## <a name="see-also"></a>Viz také:
 
 - [Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)
-- [Vytvořit kódované testy uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)
+- [Vytvoření programové testy uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)
 - [Vytvořit datově řízený programový test uživatelského rozhraní](../test/creating-a-data-driven-coded-ui-test.md)
 - [Návod: vytváření, upravování a údržba programového testu uživatelského rozhraní](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)

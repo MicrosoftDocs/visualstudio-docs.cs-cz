@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, walkthroughs
 - walkthroughs [Domain-Specific Language Tools]
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e476f1db1e30a04e67e6b53f593f55ee3867fae2
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 75805dc08eb340b3f70884d3bf5078a5b2712ed3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985133"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594731"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Postupy: Přidání příkazu do místní nabídky
 
@@ -116,7 +116,7 @@ Použijte metodu v tomto tématu, pokud:
 5. Nahraďte `{000...000}` identifikátorem GUID, který identifikuje vaše skupiny a položky nabídky. Chcete-li získat nový identifikátor GUID, použijte nástroj **Create GUID** v nabídce **nástroje** .
 
     > [!NOTE]
-    > Pokud přidáte více skupin nebo položek nabídky, můžete použít stejný identifikátor GUID. Je však nutné pro `IDSymbols` použít nové hodnoty.
+    > Pokud přidáte více skupin nebo položek nabídky, můžete použít stejný identifikátor GUID. Je však nutné pro `IDSymbols`použít nové hodnoty.
 
 6. V kódu, který jste zkopírovali z tohoto postupu, nahraďte všechny výskyty následujících řetězců vlastními řetězci:
 
@@ -222,7 +222,7 @@ Následující fragmenty jsou často užitečné v metodách stavu:
 
 - `this.CurrentSelection`. Tvar, na který uživatel klikne pravým tlačítkem, je vždy zahrnut v tomto seznamu. Pokud uživatel klikne na prázdnou část diagramu, diagram je jediným členem tohoto seznamu.
 
-- `this.IsDiagramSelected()`  -  `true`, pokud uživatel klikl na prázdnou část diagramu.
+- `this.IsDiagramSelected()` - `true`, pokud uživatel klikl na prázdnou část diagramu.
 
 - `this.IsCurrentDiagramEmpty()`
 
@@ -241,7 +241,7 @@ Metoda-status by neměla měnit stav úložiště.
 
  Pokud provedete změny prvků modelu, je nutné provést v rámci transakce. Další informace naleznete v tématu [How to: Modify a Standard a Command nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
- V tomto příkladu jsou `ClassShape`, `ModelClass` a `Comment` typy, které jsou definovány v DSL, která je odvozena od šablony třídy pro schéma DSL.
+ V tomto příkladu jsou `ClassShape`, `ModelClass`a `Comment` typy, které jsou definovány v DSL, která je odvozena od šablony třídy pro schéma DSL.
 
 ```csharp
 private void OnMenuMyContextMenuCommand(object sender, EventArgs e)
@@ -329,7 +329,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 4. Kliknutím pravým tlačítkem myši na různé položky v diagramu ověřte, zda je příkaz správně povolen nebo zakázán a odpovídajícím způsobem zobrazen nebo skryt v závislosti na vybrané položce.
 
-## <a name="troubleshoot"></a>Řešení potíží
+## <a name="troubleshoot"></a>Řešení problémů
 
 **Příkaz se nezobrazuje v nabídce:**
 

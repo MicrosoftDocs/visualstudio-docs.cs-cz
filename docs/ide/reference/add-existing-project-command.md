@@ -8,20 +8,20 @@ helpviewer_keywords:
 - Add Existing Project command
 - File.AddExistingProject
 ms.assetid: 71cf3e31-c76b-405b-ad6a-1b1bc654bd40
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 05d57024c52e0a35d7e387f5ba3cccf0697fe44a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 008802546d87bd44137c6d13ee2aef802877e308
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748850"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595875"
 ---
 # <a name="add-existing-project-command"></a>Přidat existující projekt – příkaz
-Přidá existující projekt k aktuálnímu řešení.
+Přidá existující projekt do aktuálního řešení.
 
 ## <a name="syntax"></a>Syntaxe
 

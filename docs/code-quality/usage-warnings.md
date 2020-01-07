@@ -9,17 +9,17 @@ helpviewer_keywords:
 - managed code analysis warnings, usage warnings
 - usage warnings
 ms.assetid: fe7dc2a3-289d-4bf7-a1e4-0947a81287c4
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 423367381c9b4624b9b3f4f739b017231276c76d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ca3a5efb7d75cebfd36ea6ac190f50ab90dcb06c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649059"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587183"
 ---
 # <a name="usage-warnings"></a>Upozornění využití
 
@@ -31,7 +31,7 @@ Upozornění použití podporují správné použití .NET.
 |----------|-----------------|
 |[CA1801: Revize nepoužitých parametrů](../code-quality/ca1801.md)|Podpis metody obsahuje parametr, který není použit v těle metody.|
 |[CA1806: Neignorujte výsledky metody](../code-quality/ca1806.md)|Nový objekt je vytvořen, ale nikdy se nepoužije, nebo je zavolána metoda, která vytvoří a vrátí nový řetězec a ten se nikdy nepoužije, nebo metoda modulu COM nebo P/Invoke vrací hodnotu HRESULT nebo kód chyby, který se nikdy nepoužije.|
-|[CA1816: Volejte správně GC.SuppressFinalize](../code-quality/ca1816.md)|Metoda, která je implementací metody Dispose, nevolá GC. SuppressFinalize nebo metoda, která není implementací volání Dispose, volá GC. SuppressFinalize nebo metoda volá GC. SuppressFinalize a projde něco jiného než to (já v Visual Basic).|
+|[CA1816: Volejte správně GC.SuppressFinalize](../code-quality/ca1816.md)|Metoda, která je implementací metody Dispose, nevolá uvolňování paměti. SuppressFinalize; nebo uvolňování paměti volá metodu, která není implementací metody Dispose. SuppressFinalize; nebo volání metody GC. SuppressFinalize a předává něco jiného (Me v jazyce Visual Basic).|
 |[CA2200: Znovu vyvolejte pro zachování podrobností zásobníku](../code-quality/ca2200.md)|Výjimka je znovu vyvolána a je jednoznačně uvedena v příkazu throw. Jestliže je výjimka znovu vyvolána zadáním výjimky v příkazu throw, seznam volání metody mezi původní metodou, která vyvolala výjimku, a aktuální metodou je ztracen.|
 |[CA2201: Nevyvolávejte vyhrazené typy výjimek](../code-quality/ca2201.md)|Tím je původní chybě obtížné detekovat a ladit.|
 |[CA2202: Neuvolňujte objekty několikrát](../code-quality/ca2202.md)|Implementace metody obsahuje cesty kódu, které by mohly způsobit více volání metody System.IDisposable.Dispose nebo ekvivalentní metody pro uvolnění (například metoda Close() u některých typů) stejného objektu.|
