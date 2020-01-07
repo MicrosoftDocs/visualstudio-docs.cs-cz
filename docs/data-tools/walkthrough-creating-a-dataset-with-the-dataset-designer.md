@@ -8,17 +8,17 @@ helpviewer_keywords:
 - data [Visual Studio], Dataset Designer
 - Dataset Designer, walkthroughs
 - datasets [Visual Basic], creating
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9b6c91e6074e34a8207325e25f4a48b94dd037ef
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8c525d55de16e859005b9746eb52e5516928b9e6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639447"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586026"
 ---
 # <a name="walkthrough-create-a-dataset-with-the-dataset-designer"></a>Návod: vytvoření datové sady pomocí Návrhář datových sad
 
@@ -34,17 +34,17 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
     1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (Průzkumník objektů systému SQL Server je nainstalován v rámci úlohy **úložiště dat a zpracování** v instalační program pro Visual Studio.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
 
-       Otevře se okno editoru dotazů.
+       Otevře se okno editor dotazů.
 
     2. Zkopírujte [skript Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
 
-    3. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
+    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
 
        Po krátké době se dotaz dokončí a vytvoří se databáze Northwind.
 
 ## <a name="create-a-new-windows-forms-application-project"></a>Vytvoření nového projektu model Windows Forms aplikace
 
-1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  > **projekt**.
+1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový** > **projekt**.
 
 2. V levém podokně rozbalte buď **vizuál C#**  , nebo **Visual Basic** a pak vyberte **Desktop Windows**.
 
@@ -58,7 +58,7 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
 1. V nabídce **projekt** vyberte možnost **Přidat novou položku**.
 
-     Zobrazí se dialogové okno **Přidat novou položku** .
+     **Přidat novou položku** zobrazí se dialogové okno.
 
 2. V levém podokně vyberte **data**a potom v prostředním podokně vyberte **datová sada** .
 

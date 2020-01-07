@@ -28,17 +28,17 @@ helpviewer_keywords:
 - Text Editor [Visual Studio]
 - editors, global settings
 ms.assetid: 4ac21e48-3243-4141-9058-7eaf12b3cde7
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee7d7ebab51a3edfeb84a95609c6bdad581b6753
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ebe526bbac859777edb4c2c78c65a1cdbd27fc85
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666214"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568409"
 ---
 # <a name="options-dialog-box-text-editor--general"></a>Dialogové okno Možnosti: textový editor \> obecné
 
@@ -54,7 +54,7 @@ Když je tato možnost vybraná, umožňuje přesunout text tak, že ho vyberete
 
 Je-li vybrána tato možnost, jsou zvýrazněny znaky oddělovače, které oddělují parametry nebo páry položek a hodnot a odpovídající závorky.
 
-### <a name="track-changes"></a>Sledovat změny
+### <a name="track-changes"></a>Sledování změn
 
 Když je vybrán Editor kódu, v okraji výběru se zobrazí svislá žlutá čára, která označuje kód, který se změnil od posledního uložení souboru. Při uložení změn se svislé čáry změní na zelenou.
 
@@ -68,7 +68,7 @@ Je-li vybrána tato možnost, zadané konvence kódování pro projekt přepíš
 
 ### <a name="enable-mouse-click-to-perform-go-to-definition"></a>Povolit možnost přejít k definici kliknutím myši
 
-Když vyberete tuto možnost, můžete stisknout **CTRL** a při kliknutí myší umístit ukazatel myši na prvek. Provedete to tak, že přejdete do definice vybraného elementu. Můžete také zvolit **ALT** nebo **CTRL**  + **ALT** v rozevíracím seznamu **použít klávesu modifikátoru** .
+Když vyberete tuto možnost, můžete stisknout **CTRL** a při kliknutí myší umístit ukazatel myši na prvek. Provedete to tak, že přejdete do definice vybraného elementu. Můžete také zvolit **ALT** nebo **CTRL** + **ALT** v rozevíracím seznamu **použít klávesu modifikátoru** .
 
 Zaškrtněte políčko **Otevřít definici v náhledu zobrazení** , chcete-li v okně zobrazit definici elementu, aniž byste museli přejít pryč z aktuálního umístění v editoru kódu.
 

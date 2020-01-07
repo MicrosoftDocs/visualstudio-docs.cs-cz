@@ -3,17 +3,17 @@ title: Vytvoření schématu XML
 ms.date: 03/05/2019
 ms.topic: conceptual
 ms.assetid: 1d6700a9-fd67-4794-8997-399589e99bec
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 73563d732aab48192892794c15750bc9e5d3eb6a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 857b75f22d45cbabc22062fd14b385e8f6ea5f14
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645967"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592773"
 ---
 # <a name="how-to-create-an-xml-schema-from-an-xml-document"></a>Postupy: vytvoření schématu XML z dokumentu XML
 
@@ -33,7 +33,7 @@ Další informace o modulu odvození schématu naleznete v tématu [odvození sc
 
 1. Otevřete soubor XML v aplikaci Visual Studio.
 
-2. Na panelu nabídek vyberte **XML**  > **vytvořit schéma**.
+2. Na panelu nabídek vyberte **XML** > **vytvořit schéma**.
 
    Dokument schématu XML je vytvořen a otevřen pro každý obor názvů nalezený v souboru XML. Každé schéma je otevřeno jako dočasný různé soubory. Schémata lze uložit na disk, přidat do projektu nebo zahodit.
 

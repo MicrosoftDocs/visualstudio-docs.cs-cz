@@ -1,29 +1,29 @@
 ---
-title: Přírůstková sestavení | Dokumentace Microsoftu
+title: Přírůstková sestavení | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, incremental builds
 ms.assetid: 325e28c7-4838-4e3f-b672-4586adc7500c
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 820d8b4837e2b7ae3f93a742ca8abe5962cd1893
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fb4cfc272b24bf014691b5d130f71f97e4849a31
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007026"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75573817"
 ---
 # <a name="incremental-builds"></a>Přírůstková sestavení
 
 Přírůstková sestavení jsou sestavení, která jsou optimalizována tak, aby cíle, které mají výstupní soubory, jež jsou aktuální s ohledem na jejich odpovídající vstupní soubory, již nebyly prováděny. Cílový prvek může mít atribut `Inputs`, který určuje, jaké vstupní položky jsou z hlediska cíle očekávány, a atribut `Outputs`, který určuje položky vytvořené na výstupu. Nástroj MSBuild se mezi hodnotami těchto atributů pokouší nalézt mapování 1 : 1. Pokud mapování 1 : 1 existuje, porovná nástroj MSBuild časové razítko každé vstupní položky s časovým razítkem odpovídající položky na výstupu. Výstupní soubory, které nemají mapování 1 : 1, jsou porovnány se všemi vstupními soubory. Položka je považována za aktuální, pokud je její výstupní soubor stejně starý nebo novější než její vstupní soubor(y).
 
-Jsou-li všechny výstupní položky aktuální, je cíl nástrojem MSBuild vynechán. To *přírůstkového sestavení* cíle může výrazně zlepšit rychlost sestavení. Jsou-li aktuální jen některé soubory, nástroj MSBuild spustí cíl, ale vynechá aktuální položky a tím změní všechny položky na aktuální. Tento proces se označuje jako *částečné přírůstkové sestavení*.
+Jsou-li všechny výstupní položky aktuální, je cíl nástrojem MSBuild vynechán. Toto *přírůstkové sestavení* cíle může významně zlepšit rychlost sestavení. Jsou-li aktuální jen některé soubory, nástroj MSBuild spustí cíl, ale vynechá aktuální položky a tím změní všechny položky na aktuální. Tento proces se označuje jako *částečné přírůstkové sestavení*.
 
-Mapování 1 : 1 jsou obvykle tvořena transformací položek. Další informace najdete v tématu [transformuje](../msbuild/msbuild-transforms.md).
+Mapování 1 : 1 jsou obvykle tvořena transformací položek. Další informace najdete v tématu [transformace](../msbuild/msbuild-transforms.md).
 
  Uvažujme následující cíl.
 
@@ -35,7 +35,7 @@ Mapování 1 : 1 jsou obvykle tvořena transformací položek. Další informace
 </Target>
 ```
 
-Sada souborů, které jsou reprezentována `Compile` typ položky je zkopírován do záložního adresáře. Záložní soubory mají *.bak* příponu názvu souboru. Pokud nejsou soubory, které jsou určeny typem položky `Compile`, nebo odpovídající záložní soubory odstraněny nebo změněny po spuštění cíle zálohování, dojde v následujících sestaveních k vynechání cíle zálohování.
+Sada souborů reprezentovaných typem `Compile` položky je zkopírována do záložního adresáře. Záložní soubory mají příponu názvu souboru *. bak* . Pokud nejsou soubory, které jsou určeny typem položky `Compile`, nebo odpovídající záložní soubory odstraněny nebo změněny po spuštění cíle zálohování, dojde v následujících sestaveních k vynechání cíle zálohování.
 
 ## <a name="output-inference"></a>Odvození výstupu
 
@@ -45,7 +45,7 @@ Existují tři případy:
 
 - Cíl obsahuje atribut `Condition`, který je vyhodnocen jako `false`. Cíl v tomto případě není spuštěn a nemá žádný vliv na sestavení.
 
-- Cíl obsahuje neaktuální výstupy a je spuštěn je aktuální.
+- Cíl obsahuje zastaralé výstupy a je spuštěn, aby byl aktuální.
 
 - Cíl neobsahuje žádné neaktuální výstupy a je přeskočen. Nástroj MSBuild vyhodnotí cíl a provede změny u položek a vlastností, jako kdyby byl cíl spuštěn.
 
@@ -57,15 +57,15 @@ Pro podporu přírůstkové kompilace musí úkoly zajistit, aby byla hodnota at
 </CreateProperty>
 ```
 
-Tento kód vytvoří vlastnost Easy, která má hodnotu "123", zda je cíl proveden nebo vynechán.
+Tento kód vytvoří vlastnost snadno, která má hodnotu "123", bez ohledu na to, zda je cíl proveden nebo vynechán.
 
-Při spuštění nástroje MSBuild 3.5 se u skupin položek a vlastností v cíli automaticky provede odvození výstupu. Úkoly `CreateItem` nejsou v cíli vyžadovány a je třeba se jim vyhnout. Úkoly `CreateProperty` by měly být použity v cíli pouze k určení toho, zda byl cíl spuštěn.
+Při spuštění nástroje MSBuild 3.5 se u skupin položek a vlastností v cíli automaticky provede odvození výstupu. `CreateItem` úkoly nejsou v cíli požadovány a je třeba se jim vyhnout. Úkoly `CreateProperty` by měly být použity v cíli pouze k určení toho, zda byl cíl spuštěn.
 
-Před MSBuild 3.5, lze použít [createitem –](../msbuild/createitem-task.md) úloh.
+Před nástrojem MSBuild 3,5 můžete použít úlohu [CreateItem –](../msbuild/createitem-task.md) .
 
-## <a name="determine-whether-a-target-has-been-run"></a>Určení, zda byl cíl spuštěn
+## <a name="determine-whether-a-target-has-been-run"></a>Zjištění, zda byl cíl spuštěn
 
-Vzhledem k odvození výstupu, budete muset přidat `CreateProperty` úkol do cíle pro prozkoumání vlastností a položek tak, aby bylo možné určit, zda cíl byl proveden. Přidejte úkol `CreateProperty` do cíle a přiřaďte mu prvek `Output`, jehož `TaskParameter` je „ValueSetByTask“.
+Z důvodu odvození výstupu je nutné přidat úlohu `CreateProperty` k cíli pro prohlédnutí vlastností a položek, abyste mohli určit, zda byl cíl proveden. Přidejte úkol `CreateProperty` do cíle a přiřaďte mu prvek `Output`, jehož `TaskParameter` je „ValueSetByTask“.
 
 ```xml
 <CreateProperty Value="true">
@@ -73,7 +73,7 @@ Vzhledem k odvození výstupu, budete muset přidat `CreateProperty` úkol do c�
 </CreateProperty>
 ```
 
-Tento kód vytvoří vlastnost CompileRan a dá jí hodnotu `true`, ale pouze v případě, že je cíl proveden. Pokud je cíl vynechán, nebude vlastnost CompileRan vytvořena.
+Tento kód vytvoří vlastnost CompileRan a udělí jí hodnotu `true`, ale pouze v případě, že je cíl proveden. Pokud je cíl vynechán, nebude vlastnost CompileRan vytvořena.
 
 ## <a name="see-also"></a>Viz také:
 - [Cíle](../msbuild/msbuild-targets.md)

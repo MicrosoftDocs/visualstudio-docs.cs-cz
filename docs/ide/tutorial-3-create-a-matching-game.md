@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5161f81aaf3edf654a5979f6226449bc52604167
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: 3039207cd36e1fcfedef95830fec9ebb91686491
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516578"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590264"
 ---
 # <a name="tutorial-3-create-a-matching-game"></a>Kurz 3: vytvoření porovnávací hry
 

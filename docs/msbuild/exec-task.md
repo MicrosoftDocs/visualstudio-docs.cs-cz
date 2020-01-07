@@ -1,5 +1,5 @@
 ---
-title: Exec – úloha | Dokumentace Microsoftu
+title: Úloha Exec | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,49 +13,49 @@ helpviewer_keywords:
 - Exec task [MSBuild]
 - MSBuild, Exec task
 ms.assetid: c9b7525a-b1c9-40fc-8bce-77a5b8f960d8
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ef9759c5a422a0b67cdb9e8f7dde565b732958dd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 78aef20a322ad3743ed1cb89955654456dff670e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973653"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591447"
 ---
 # <a name="exec-task"></a>Exec – úloha
 Spustí zadaný program nebo příkaz pomocí zadaných argumentů.
 
 ## <a name="parameters"></a>Parametry
-Následující tabulka popisuje parametry `Exec` úloh.
+Následující tabulka popisuje parametry pro úlohu `Exec`.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Command`|Vyžaduje `String` parametru.<br /><br /> Příkazy ke spuštění. Může jít o systémové příkazy, jako je například attrib nebo spustitelný soubor, jako například *program.exe*, *runprogram.bat*, nebo *setup.msi*.<br /><br /> Tento parametr může obsahovat více řádků příkazů. Alternativně můžete umístit více příkazů v dávkovém souboru a spuštění s použitím tohoto parametru.|
-|`ConsoleOutput`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Každou výstupní položku je řádek ze standardního výstupu nebo standardního chybového proudu, protože ho vygeneroval nástroj. To se zachycuje, jenom Pokud `ConsoleToMsBuild` je nastavena na `true`.|
-|`ConsoleToMsBuild`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, úloha zaznamenají standardní chybu a standardní výstup nástroje a zpřístupnit je `ConsoleOutput` výstupní parametr.<br /><br />Výchozí hodnota: `false`.|
-|`CustomErrorRegularExpression`|Volitelné `String` parametru.<br /><br /> Určuje regulární výraz, který se používá k přímé chyba vstupující výstup nástroje. To je užitečné pro nástroje, které neobvykle formátovaný výstup.<br /><br />Výchozí hodnota: `null` (žádné vlastní zpracování).|
-|`CustomWarningRegularExpression`|Volitelné `String` parametru.<br /><br /> Určuje regulární výraz, který se používá k přímé upozornění vstupující výstup nástroje. To je užitečné pro nástroje, které neobvykle formátovaný výstup.<br /><br />Výchozí hodnota: `null` (žádné vlastní zpracování).|
-|`EchoOff`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, úloha nebude generovat rozšířené formu `Command` protokolu MSBuild.<br /><br />Výchozí hodnota: `false`.|
-|`ExitCode`|Volitelné `Int32` výstupní parametr jen pro čtení.<br /><br /> Určuje ukončovací kód, který je poskytován provedeného příkazu.|
-|`IgnoreExitCode`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, úkol bude ignorovat ukončovací kód, který je poskytován provedeného příkazu. V opačném případě úloha vrátí `false` provedeného příkazu vrátí nenulový ukončovací kód.<br /><br />Výchozí hodnota: `false`.|
-|`IgnoreStandardErrorWarningFormat`|Volitelné `Boolean` parametru.<br /><br /> Pokud `false`, vybere řádky ve výstupu, které odpovídají formátu Standardní chyby nebo upozornění a zaznamená jako chyby a upozornění. Pokud `true`, toto chování zakázat.<br /><br />Výchozí hodnota: `false`.|
-|`Outputs`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje položky výstup z úlohy. `Exec` Úloh tyto samotné nenastaví. Místo toho je lze je zadat jako, pokud nastavena, tak, aby bylo možné později v projektu.|
-|`StdErrEncoding`|Volitelné `String` výstupní parametr.<br /><br /> Určuje kódování standardní chybový proud zachycené úloh. Výchozí hodnota je aktuální kódování výstupu konzoly.|
-|`StdOutEncoding`|Volitelné `String` výstupní parametr.<br /><br /> Určuje kódování zachycené úloh standardního výstupního datového proudu. Výchozí hodnota je aktuální kódování výstupu konzoly.|
-|`WorkingDirectory`|Volitelné `String` parametru.<br /><br /> Určuje adresář, ve kterém se spustí příkaz.<br /><br />Výchozí hodnota: V projektu aktuálního pracovního adresáře.|
+|`Command`|Vyžaduje se `String` parametr.<br /><br /> Příkazy, které mají být spuštěny. Může se jednat o systémové příkazy, jako je například attrib nebo spustitelný soubor, například *program. exe*, *runprogram. bat*nebo *Setup. msi*.<br /><br /> Tento parametr může obsahovat více řádků příkazů. Alternativně můžete do dávkového souboru vložit několik příkazů a spustit ho pomocí tohoto parametru.|
+|`ConsoleOutput`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Výstup každé položky je řádek ze standardního výstupního nebo standardního chybového datového proudu vygenerovaného nástrojem. Je zachycena pouze v případě, že je `ConsoleToMsBuild` nastaveno na `true`.|
+|`ConsoleToMsBuild`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, bude úloha zachytit standardní chybu a standardní výstup nástroje a zpřístupní je v parametru `ConsoleOutput` Output.<br /><br />Výchozí: `false`.|
+|`CustomErrorRegularExpression`|Volitelný parametr `String`.<br /><br /> Určuje regulární výraz, který se používá k zaznamenání chybových řádků ve výstupu nástroje. To je užitečné pro nástroje, které vytváří neobvykle formátovaný výstup.<br /><br />Výchozí: `null` (žádné vlastní zpracování).|
+|`CustomWarningRegularExpression`|Volitelný parametr `String`.<br /><br /> Určuje regulární výraz, který se používá k vypsání výstražných řádků ve výstupu nástroje. To je užitečné pro nástroje, které vytváří neobvykle formátovaný výstup.<br /><br />Výchozí: `null` (žádné vlastní zpracování).|
+|`EchoOff`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, úloha negeneruje rozšířenou formu `Command` do protokolu MSBuild.<br /><br />Výchozí: `false`.|
+|`ExitCode`|Volitelný `Int32` výstupní parametr jen pro čtení.<br /><br /> Určuje ukončovací kód, který je poskytnut spuštěným příkazem.|
+|`IgnoreExitCode`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, úloha ignoruje ukončovací kód, který je poskytnut spuštěným příkazem. V opačném případě úloha vrátí `false`, pokud se spustí příkaz, který vrátí nenulový ukončovací kód.<br /><br />Výchozí: `false`.|
+|`IgnoreStandardErrorWarningFormat`|Volitelný parametr `Boolean`.<br /><br /> Pokud `false`, vyberou řádky ve výstupu, které odpovídají standardnímu formátu chyb nebo upozornění, a zaprotokoluje je jako chyby nebo upozornění. Pokud `true`, toto chování vypněte.<br /><br />Výchozí: `false`.|
+|`Outputs`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Obsahuje výstupní položky úkolu. `Exec` úloha je nenastavuje. Místo toho je můžete zadat, jako by ji nastavili, aby bylo možné je použít později v projektu.|
+|`StdErrEncoding`|Volitelný výstupní parametr `String`.<br /><br /> Určuje kódování standardního streamu chyb zaznamenané úlohy. Výchozí hodnota je aktuální kódování výstupu konzoly.|
+|`StdOutEncoding`|Volitelný výstupní parametr `String`.<br /><br /> Určuje kódování standardního výstupního datového proudu zachycené úlohy. Výchozí hodnota je aktuální kódování výstupu konzoly.|
+|`WorkingDirectory`|Volitelný parametr `String`.<br /><br /> Určuje adresář, ve kterém se příkaz spustí.<br /><br />Výchozí: aktuální pracovní adresář projektu.|
 
 ## <a name="remarks"></a>Poznámky
-Tato úloha je užitečné, když konkrétní [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] úkolů pro úlohu, kterou chcete provést, není k dispozici. Ale `Exec` úkol, na rozdíl od více konkrétních úloh, nelze provést další zpracování nebo podmíněných operací na základě výsledku nástroje nebo příkaz, který běží.
+Tato úloha je užitečná v případě, že konkrétní úloha [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] úlohy, kterou chcete provést, není k dispozici. `Exec` úloha ale na rozdíl od konkrétnější úlohy ale nemůže provádět další zpracování nebo podmíněné operace na základě výsledku nástroje nebo příkazu, který spouští.
 
-`Exec` Úkolů volání *cmd.exe* namísto vyvolání přímo procesu.
+Úloha `Exec` volá program *cmd. exe* namísto přímého vyvolání procesu.
 
-Kromě uvedených v tomto dokumentu parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.ToolTaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.ToolTask> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [tooltaskextension – základní třída](../msbuild/tooltaskextension-base-class.md).
+Kromě parametrů uvedených v tomto dokumentu dědí tento úkol parametry z třídy <xref:Microsoft.Build.Tasks.ToolTaskExtension>, která sama dědí z <xref:Microsoft.Build.Utilities.ToolTask> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [ToolTaskExtension – Base Class](../msbuild/tooltaskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
-V následujícím příkladu `Exec` úkolů ke spuštění příkazu.
+Následující příklad používá úlohu `Exec` ke spuštění příkazu.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -72,4 +72,4 @@ V následujícím příkladu `Exec` úkolů ke spuštění příkazu.
 
 ## <a name="see-also"></a>Viz také:
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

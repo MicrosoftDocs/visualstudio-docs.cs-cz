@@ -9,12 +9,12 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c1316602d900fb122567b5ad50edf8e7b90c79bd
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 93ae9c58e0f9a366727f8a5aac08b8d3887f2e7f
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300947"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75406732"
 ---
 # <a name="xslt-profiler"></a>Profiler XSLT
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ Profiler XSLT je nástroj profileru pro analýzu výkonu, který pomáhá vyvíj
 
  ![Profiler XSLT](../xml-tools/media/xsltprofilermenu.gif "XSLTProfilerMenu")
 
- Profiler XSLT byl poprvé zaveden jako doplněk pro Visual Studio 2008. Další informace najdete v části související prostředky na stránce pro [profil XSLT pro Visual Studio únor 08 Community Technology Preview](https://go.microsoft.com/fwlink/?LinkId=142987) .
+ Profiler XSLT byl poprvé zaveden jako doplněk pro Visual Studio 2008. Další informace najdete v [doplňku XSLT profileru](https://marketplace.visualstudio.com/items?itemName=SinanUssakli-MSFT.XSLTProfilerAddin).
 
 > [!NOTE]
 > Některé obrazovky se mohou v aplikaci Visual Studio 2010 zobrazit jinak než v těchto dokumentech, protože některé vizuální prvky byly od sady Visual Studio 2008 změněny.

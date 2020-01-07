@@ -2,17 +2,17 @@
 title: Rozšíření vašeho DSL pomocí MEF
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f42186915ade2a518506f5f6ccc55b3599a3ba99
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b8e4898ba6c87f25b38a6c3e42032412d69d8ece
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657515"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596603"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>Rozšíření vašeho DSL pomocí MEF
 
@@ -129,21 +129,21 @@ Máte-li přístup k DSL podporujícímu MEF, kterou vytvořila nebo někomu jin
 
    - Toto sestavení obvykle má název, který končí na. DSL. dll ".
 
-   - Máte-li přístup k projektu DSL, můžete najít soubor sestavení v adresáři **dsl \\bin \\ \***
+   - Máte-li přístup k projektu DSL, můžete najít soubor sestavení v adresáři **DSL\\\\\***
 
    - Máte-li přístup k souboru VSIX DSL, můžete najít sestavení změnou přípony názvu souboru VSIX na ". zip". Dekomprimuje soubor. zip.
 
 3. Přidejte odkazy na následující sestavení .NET:
 
-   - Microsoft. VisualStudio. Modeling. SDK. 11.0. dll
+   - Microsoft.VisualStudio.Modeling.Sdk.11.0.dll
 
-   - Microsoft. VisualStudio. Modeling. SDK. Diagrams. 11.0. dll
+   - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0.dll
 
-   - Microsoft. VisualStudio. Modeling. SDK. Shell. 11.0. dll
+   - Microsoft.VisualStudio.Modeling.Sdk.Shell.11.0.dll
 
    - System.ComponentModel.Composition.dll
 
-   - System. Windows. Forms. dll
+   - System.Windows.Forms.dll
 
 4. Vytvořte nový projekt **VSIX** projektu.
 
@@ -157,7 +157,7 @@ Máte-li přístup k DSL podporujícímu MEF, kterou vytvořila nebo někomu jin
 
    1. Ve **zdroji. extension. vsixmanifest**klikněte na **Přidat odkaz** .
 
-   2. V dialogovém okně klikněte na **Přidat datovou část** a pak vyhledejte soubor VSIX pro DSL. Soubor VSIX je sestaven v řešení DSL v **DslPackage \\bin \\ \*** .
+   2. V dialogovém okně klikněte na **Přidat datovou část** a pak vyhledejte soubor VSIX pro DSL. Soubor VSIX je sestaven v řešení DSL v **DslPackage\\bin\\\*** .
 
        To umožní uživatelům instalovat DSL a rozšíření ve stejnou dobu. Pokud uživatel už má nainstalovanou DSL, nainstaluje se jenom vaše rozšíření.
 
@@ -175,7 +175,7 @@ Můžete zapisovat rozšíření v projektu kódu sestavení samostatného řeš
 
 ### <a name="menu-commands"></a>Příkazy nabídky
 
-Pro zápis příkazu nabídky Definujte třídu, která implementuje <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> a prefixujte třídu s atributem definovaným v DSL s názvem *YourDsl* `CommandExtension`. Můžete napsat více než jednu třídu příkazu nabídky.
+Pro zápis příkazu nabídky Definujte třídu, která implementuje <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> a prefixujte třídu s atributem definovaným v DSL s názvem *YourDsl*`CommandExtension`. Můžete napsat více než jednu třídu příkazu nabídky.
 
 `QueryStatus()` se volá vždycky, když uživatel klikne pravým tlačítkem myši na diagram. Měl by zkontrolovat aktuální výběr a nastavit `command.Enabled`, které určují, kdy se má příkaz použít.
 
@@ -375,6 +375,6 @@ namespace MefExtension
 ## <a name="see-also"></a>Viz také:
 
 - [Odesílání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md)
-- [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)
+- [MEF (Managed Extensibility Framework)](/dotnet/framework/mef/index)
 - [Postupy: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md)
 - [Ověřování v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md)

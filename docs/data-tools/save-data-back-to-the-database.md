@@ -15,17 +15,17 @@ helpviewer_keywords:
 - datasets [Visual Basic], constraints
 - TableAdapters
 ms.assetid: afe6cb8a-dc6a-428b-b07b-903ac02c890b
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ab2bd92b5636c89027c9c5954567be8048c1b152
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 64d46d4d662b7226dd2be15e6281a17e5b87e577
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648227"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586286"
 ---
 # <a name="save-data-back-to-the-database"></a>Ukládání dat zpět do databáze
 
@@ -73,21 +73,21 @@ Při slučování datových sad můžete předat logický argument (`preserveCha
 |DataRowVersion|Cílová datová sada|Zdrojová datová sada|
 | - | - | - |
 |Původně|James Wilson|James C. Wilson|
-|Aktivní|Jim Wilson|James C. Wilson|
+|Aktuální|Jim Wilson|James C. Wilson|
 
 Volání metody <xref:System.Data.DataSet.Merge%2A> v předchozí tabulce s `preserveChanges=false targetDataset.Merge(sourceDataset)` má za následek následující data:
 
 |DataRowVersion|Cílová datová sada|Zdrojová datová sada|
 | - | - | - |
 |Původně|James C. Wilson|James C. Wilson|
-|Aktivní|James C. Wilson|James C. Wilson|
+|Aktuální|James C. Wilson|James C. Wilson|
 
 Volání metody <xref:System.Data.DataSet.Merge%2A> s `preserveChanges = true targetDataset.Merge(sourceDataset, true)` má za následek následující data:
 
 |DataRowVersion|Cílová datová sada|Zdrojová datová sada|
 | - | - | - |
 |Původně|James C. Wilson|James C. Wilson|
-|Aktivní|Jim Wilson|James C. Wilson|
+|Aktuální|Jim Wilson|James C. Wilson|
 
 > [!CAUTION]
 > Pokud je v `preserveChanges = true` scénáři volána metoda <xref:System.Data.DataSet.RejectChanges%2A> na záznamu v cílové datové sadě, vrátí se původní data ze *zdrojové* datové sady. To znamená, že pokud se pokusíte aktualizovat původní zdroj dat cílovou datovou sadou, nemusí být možné najít původní řádek, který se má aktualizovat. Narušení souběžnosti můžete zabránit tak, že naplníte jinou datovou sadu pomocí aktualizovaných záznamů ze zdroje dat a následným sloučením zabráníte narušení souběžnosti. (K narušení souběžnosti dojde, když jiný uživatel upraví záznam ve zdroji dat poté, co byla datová sada vyplněna.)
@@ -103,9 +103,9 @@ Aby nedocházelo k předčasnému narušení omezení, můžete dočasně pozast
 - Zabrání tomu, aby se určité události aktualizace vyvolaly (události, které se často používají k ověření).
 
 > [!NOTE]
-> V model Windows Forms architektura datové vazby, která je integrována do ovládacího prvku DataGrid, pozastaví kontrolu omezení, dokud se fokus nepřesune mimo řádek, a nemusíte explicitně volat metody <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> nebo <xref:System.Data.DataRow.CancelEdit%2A>.
+> V model Windows Forms architektura datové vazby, která je integrována do ovládacího prvku DataGrid, pozastaví kontrolu omezení, dokud se fokus nepřesune mimo řádek, a nemusíte explicitně volat metody <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A>nebo <xref:System.Data.DataRow.CancelEdit%2A>.
 
-Omezení jsou automaticky zakázána, pokud je metoda <xref:System.Data.DataSet.Merge%2A> vyvolána pro datovou sadu. Pokud je sloučení dokončeno, pokud existují nějaká omezení pro datovou sadu, která nemůže být povolena, je vyvolána <xref:System.Data.ConstraintException>. V této situaci je vlastnost <xref:System.Data.DataSet.EnforceConstraints%2A> nastavena na `false,` a před resetováním vlastnosti <xref:System.Data.DataSet.EnforceConstraints%2A> na `true` je nutné vyřešit všechna porušení omezení.
+Omezení jsou automaticky zakázána, pokud je metoda <xref:System.Data.DataSet.Merge%2A> vyvolána pro datovou sadu. Pokud je sloučení dokončeno, pokud existují nějaká omezení pro datovou sadu, která nemůže být povolena, je vyvolána <xref:System.Data.ConstraintException>. V této situaci je vlastnost <xref:System.Data.DataSet.EnforceConstraints%2A> nastavena na `false,` a před resetováním vlastnosti <xref:System.Data.DataSet.EnforceConstraints%2A> na `true`je nutné vyřešit všechna porušení omezení.
 
 Po dokončení aktualizace můžete znovu povolit kontrolu omezení, která také znovu povolí události aktualizace a vyvolává je.
 
@@ -211,7 +211,7 @@ Následující tabulka popisuje, které změny jsou potvrzeny na základě objek
 
 Související metoda, <xref:System.Data.DataSet.RejectChanges%2A>, vrátí zpět účinek změn kopírováním <xref:System.Data.DataRowVersion.Original> verze zpátky do <xref:System.Data.DataRowVersion.Current> verze záznamů. Také nastaví <xref:System.Data.DataRow.RowState%2A> každého záznamu zpět na <xref:System.Data.DataRowState.Unchanged>.
 
-## <a name="data-validation"></a>Ověření dat
+## <a name="data-validation"></a>Ověřování dat
 
 Aby bylo možné ověřit, že data ve vaší aplikaci splňují požadavky procesů, do kterých je předána, často je nutné přidat ověřování. To může zahrnovat kontrolu správnosti vstupu uživatele ve formuláři, ověřování dat odesílaných do vaší aplikace jinou aplikací nebo dokonce kontrola, že informace, které jsou vypočítány v rámci vaší komponenty, spadají do omezení zdroje dat. a požadavky aplikací.
 
@@ -224,7 +224,7 @@ Data můžete ověřit několika způsoby:
 - V back-endu dat odesláním dat do zdroje dat, například databáze, a povolením, aby data přijímal nebo odmítal. Pokud pracujete s databází, která má sofistikovaná zařízení pro ověřování dat a poskytování informací o chybách, může to být praktický přístup, protože můžete ověřit data bez ohledu na to, odkud pocházejí. Tento přístup ale nemusí vyhovovat požadavkům na ověření specifickým pro aplikaci. Kromě toho je možné, že se zdrojem dat ověřit data může v závislosti na tom, jak vaše aplikace usnadňuje řešení chyb ověřování vyvolaných back-end, způsobit velký počet cest ke zdroji dat.
 
    > [!IMPORTANT]
-   > Při použití datových příkazů s vlastností <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> nastavenou na hodnotu <xref:System.Data.CommandType.Text> pečlivě zkontrolujte informace, které se odesílají z klienta před předáním do vaší databáze. Uživatelé se zlými úmysly se můžou pokusit odeslat (vložit) upravené nebo další příkazy SQL za účelem získání neoprávněného přístupu nebo poškození databáze. Před přenosem vstupu uživatele do databáze vždy ověřte, zda jsou informace platné. Osvědčeným postupem je vždy použít parametrizované dotazy nebo uložené procedury, pokud je to možné.
+   > Při použití datových příkazů s vlastností <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> nastavenou na hodnotu <xref:System.Data.CommandType.Text>pečlivě zkontrolujte informace, které se odesílají z klienta před předáním do vaší databáze. Uživatelé se zlými úmysly se můžou pokusit odeslat (vložit) upravené nebo další příkazy SQL za účelem získání neoprávněného přístupu nebo poškození databáze. Před přenosem vstupu uživatele do databáze vždy ověřte, zda jsou informace platné. Osvědčeným postupem je vždy použít parametrizované dotazy nebo uložené procedury, pokud je to možné.
 
 ## <a name="transmit-updates-to-the-data-source"></a>Odeslání aktualizací do zdroje dat
 
@@ -259,7 +259,7 @@ Pro druhý řádek však metoda `Update` automaticky vyvolá správný datový p
    > [!NOTE]
    > Pokud byla vlastnost `UpdateCommand` TableAdapter nastavena na název uložené procedury, adaptér nevytvoří příkaz SQL. Místo toho vyvolá uloženou proceduru s příslušnými parametry předanými.
 
-## <a name="pass-parameters"></a>Předat parametry
+## <a name="pass-parameters"></a>Parametry předání
 
 Obvykle používáte parametry k předání hodnot záznamů, které se budou aktualizovat v databázi. Když `Update` metoda TableAdapter spustí příkaz UPDATE, musí vyplnit hodnoty parametru. Získává tyto hodnoty z kolekce `Parameters` pro příslušný datový příkaz – v tomto případě objekt `UpdateCommand` v TableAdapter.
 

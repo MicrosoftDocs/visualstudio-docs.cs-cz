@@ -29,17 +29,17 @@ helpviewer_keywords:
 - $(ProjectName)
 - build events, macros
 ms.assetid: d49b2c57-24bf-4fb2-8351-5c4b6cca938f
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d5671a75a847d81caedeffc17ea436eade060f3e
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 38712c25718670ea15324e3daf6fadc138cb08a6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461308"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567915"
 ---
 # <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>Dialogové okno Příkazový řádek události před sestavením/po sestavení
 
@@ -55,7 +55,7 @@ Můžete zadat události před nebo po sestavení pro [stránku události sestav
 Obsahuje události pro spuštění před sestavením nebo po sestavení.
 
 > [!NOTE]
-> `call` Přidejte příkaz před všechny příkazy po sestavení, které spouštějí soubory. bat. Například `call C:\MyFile.bat` nebo `call C:\MyFile.bat call C:\MyFile2.bat`.
+> Přidejte příkaz `call` před všechny příkazy po sestavení, které spouštějí soubory. bat. Například `call C:\MyFile.bat` nebo `call C:\MyFile.bat call C:\MyFile2.bat`.
 
 **Makr**
 
@@ -100,4 +100,4 @@ Pomocí kterékoli z těchto maker můžete určit umístění souborů nebo zí
 - [Specifikace vlastních událostí sestavení v sadě Visual Studio](../../ide/specifying-custom-build-events-in-visual-studio.md)
 - [Stránka Události sestavení, Návrhář projektu (C#)](../../ide/reference/build-events-page-project-designer-csharp.md)
 - [Postupy: Určení událostí sestavení (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
-- [Postupy: Určení událostí sestavení (C#)](../../ide/how-to-specify-build-events-csharp.md)
+- [Postupy: Specifikace událostí sestavení (C#)](../../ide/how-to-specify-build-events-csharp.md)

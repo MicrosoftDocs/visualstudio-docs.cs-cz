@@ -4,17 +4,17 @@ ms.date: 09/06/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis FAQ
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: dffc3773714336162b3b863fa03a6964b68a3673
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 517a583c859870b979c89c4fe2f55cd3bc0fc913
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649587"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587612"
 ---
 # <a name="frequently-asked-questions-about-fxcop-and-fxcop-analyzers"></a>Nejčastější dotazy k analyzátorům FxCop a FxCop
 
@@ -31,11 +31,11 @@ Analyzátory FxCop jsou založené na .NET Compiler Platform ("Roslyn"). [Nainst
 
 ## <a name="does-the-run-code-analysis-command-run-fxcop-analyzers"></a>Spouští se v příkazu Run Code Analysis analyzátory FxCop?
 
-Ne. Když vyberete možnost **analyzovat**  > **Spustit analýzu kódu**, spustí se starší verze analýzy. **Spuštění analýzy kódu** nemá žádný vliv na analyzátory založené na Roslyn, včetně analyzátorů FxCop založených na Roslyn.
+Ne. Když vyberete možnost **analyzovat** > **Spustit analýzu kódu**, spustí se starší verze analýzy. **Spuštění analýzy kódu** nemá žádný vliv na analyzátory založené na Roslyn, včetně analyzátorů FxCop založených na Roslyn.
 
 ## <a name="does-the-runcodeanalysis-msbuild-project-property-run-analyzers"></a>Spouští se v nástroji RunCodeAnalysis MSBuild rutiny analyzátorů?
 
-Ne. Vlastnost **RunCodeAnalysis** v souboru projektu (například *. csproj*) se používá pouze ke spuštění starší verze FxCop. Spustí úlohu MSBuild po sestavení, která vyvolá **FxCopCmd. exe**. Jedná se o ekvivalent výběru možnosti **analyzovat**  > **Spustit analýzu kódu** v aplikaci Visual Studio.
+Ne. Vlastnost **RunCodeAnalysis** v souboru projektu (například *. csproj*) se používá pouze ke spuštění starší verze FxCop. Spustí úlohu MSBuild po sestavení, která vyvolá **FxCopCmd. exe**. Jedná se o ekvivalent výběru možnosti **analyzovat** > **Spustit analýzu kódu** v aplikaci Visual Studio.
 
 ## <a name="so-how-do-i-run-fxcop-analyzers-then"></a>Jak tedy spustím analyzátory FxCop?
 
@@ -43,7 +43,7 @@ Pokud chcete spustit analyzátory FxCop, nejdřív pro ně [nainstalujte balíč
 
 ## <a name="i-get-warning-ca0507-even-after-ive-installed-the-fxcop-analyzers-nuget-package"></a>Zobrazí se upozornění CA0507 i po instalaci balíčku NuGet analyzátory FxCop.
 
-Pokud jste nainstalovali analyzátory FxCop, ale nadále se zobrazí upozornění CA0507 **"" spuštění analýzy kódu "se už nepoužívá ve prospěch analyzátorů FxCop, které běží během sestavení**, možná budete muset nastavit vlastnost MSBuild **RunCodeAnalysis** v [projektu. soubor](../ide/solutions-and-projects-in-visual-studio.md#project-file) na **false**. V opačném případě se starší verze analýzy spustí po každém sestavení.
+Pokud jste nainstalovali analyzátory FxCop, ale nadále se zobrazí upozornění CA0507 **"" spuštění analýzy kódu "se už nepoužívá**. doporučujeme, abyste v [souboru projektu](../ide/solutions-and-projects-in-visual-studio.md#project-file) nastavili vlastnost MSBuild **RunCodeAnalysis** na **hodnotu NEPRAVDA**. V opačném případě se starší verze analýzy spustí po každém sestavení.
 
 ```xml
 <RunCodeAnalysis>false</RunCodeAnalysis>
