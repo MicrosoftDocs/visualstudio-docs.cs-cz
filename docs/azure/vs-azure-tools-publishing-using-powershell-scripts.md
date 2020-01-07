@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 6ed003df875f7fdc75278210dc3010e93d280186
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 77b26b672dc40b65823cdabb6e1a42549112de65
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911736"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75573310"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>Použití skriptů PowerShellu k publikování do vývojových a testovacích prostředí
 
@@ -25,7 +25,7 @@ Pomocí těchto skriptů můžete zřídit přizpůsobené verze (označované t
 ## <a name="prerequisites"></a>Požadavky
 
 * Visual Studio 2015 nebo novější s nainstalovanou **úlohou Azure** nebo Visual Studio 2013 a Azure SDK 2,3 nebo novější. Viz [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads). (Nepotřebujete, aby sada Azure SDK generovala skripty pro webové projekty. Tato funkce je určena pro webové projekty, nikoli pro webové role v Cloud Services.)
-* Azure PowerShell 0.7.4 nebo novější. Viz [Jak nainstalovat a nakonfigurovat Azure PowerShell](/powershell/azure/overview).
+* Azure PowerShell 0.7.4 nebo novější. Viz téma [Instalace a konfigurace prostředí Azure PowerShell](/powershell/azure/overview).
 * [Windows PowerShell 3,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770458(v=ws.10)) nebo novější.
 
 ## <a name="additional-tools"></a>Další nástroje
@@ -46,7 +46,7 @@ Skript publikování obsahuje konkrétní kroky publikování pro nasazení na w
 
 ### <a name="windows-powershell-module"></a>Modul Windows PowerShell
 
-Modul prostředí Windows PowerShell, který generuje aplikace Visual Studio, obsahuje funkce, které používá skript pro publikování. Tyto funkce Azure PowerShell nejsou určeny pro úpravy. Viz [Jak nainstalovat a nakonfigurovat Azure PowerShell](/powershell/azure/overview).
+Modul prostředí Windows PowerShell, který generuje aplikace Visual Studio, obsahuje funkce, které používá skript pro publikování. Tyto funkce Azure PowerShell nejsou určeny pro úpravy. Viz téma [Instalace a konfigurace prostředí Azure PowerShell](/powershell/azure/overview).
 
 ### <a name="json-configuration-file"></a>Konfigurační soubor JSON
 
@@ -171,9 +171,9 @@ Pokud jste nikdy nespouštěli skript prostředí Windows PowerShell, musíte ne
 
     Po zobrazení výzvy zadejte své uživatelské jméno a heslo.
 
-    Všimněte si, že při automatizaci skriptu Tato metoda poskytování přihlašovacích údajů Azure nefunguje. Místo toho byste měli použít soubor `.publishsettings` k zadání přihlašovacích údajů. Jenom jednou použijte příkaz **Get-AzurePublishSettingsFile** ke stažení souboru z Azure a pak použijte **Import-AzurePublishSettingsFile** k importu tohoto souboru. Podrobné pokyny najdete v tématu [instalace a konfigurace Azure PowerShell](/powershell/azure/overview).
+    Všimněte si, že při automatizaci skriptu Tato metoda poskytování přihlašovacích údajů Azure nefunguje. Místo toho byste měli použít soubor `.publishsettings` k zadání přihlašovacích údajů. Jenom jednou použijte příkaz **Get-AzurePublishSettingsFile** ke stažení souboru z Azure a pak použijte **Import-AzurePublishSettingsFile** k importu tohoto souboru. Podrobné pokyny najdete v tématu [Instalace a konfigurace prostředí Azure PowerShell](/powershell/azure/overview).
 
-1. Volitelné Pokud chcete vytvořit prostředky Azure, jako je třeba virtuální počítač, databáze a web bez publikování webové aplikace, použijte příkaz **Publish-WebApplication. ps1** s argumentem **-Configuration** nastaveným na konfigurační soubor JSON. . Tento příkazový řádek pomocí konfiguračního souboru JSON určí, které prostředky se mají vytvořit. Protože používá výchozí nastavení pro jiné argumenty příkazového řádku, vytvoří prostředky, ale nepublikuje webovou aplikaci. Možnost – verbose vám poskytne další informace o tom, co se děje.
+1. Volitelné Pokud chcete vytvořit prostředky Azure, jako je například virtuální počítač, databáze a web bez publikování webové aplikace, použijte příkaz **Publish-WebApplication. ps1** s argumentem **-Configuration** nastaveným na konfigurační soubor JSON. Tento příkazový řádek pomocí konfiguračního souboru JSON určí, které prostředky se mají vytvořit. Protože používá výchozí nastavení pro jiné argumenty příkazového řádku, vytvoří prostředky, ale nepublikuje webovou aplikaci. Možnost – verbose vám poskytne další informace o tom, co se děje.
 
     ```powershell
     Publish-WebApplication.ps1 -Verbose –Configuration C:\Path\WebProject-WAWS-dev.json
@@ -250,7 +250,7 @@ Chcete-li automatizovat sestavování projektu, přidejte kód, který volá MSB
         #Write a function to build and package your web application
     ```
 
-    K sestavení webové aplikace použijte nástroj MsBuild. exe. Nápovědu najdete v tématu Reference k příkazovému řádku MSBuild na adrese: [http://go.microsoft.com/fwlink/?LinkId=391339](../msbuild/msbuild-command-line-reference.md)
+    K sestavení webové aplikace použijte nástroj MsBuild. exe. Nápovědu najdete v tématu [Reference k příkazovému řádku MSBuild](../msbuild/msbuild-command-line-reference.md) .
 
     ```powershell
     Write-VerboseWithTime 'Build-WebDeployPackage: Start'
@@ -319,23 +319,23 @@ Nápovědu k funkcím, které můžete použít na příkazovém řádku prostř
 | Add-AzureVMStorage |Vytvoří nový účet úložiště Azure v aktuálním předplatném. Název účtu začíná řetězcem "DevTest" následovaným jedinečným alfanumerickým řetězcem. Funkce vrátí název nového účtu úložiště. Zadejte buď umístění, nebo skupinu vztahů pro nový účet úložiště. |
 | Add-AzureWebsite |Vytvoří web se zadaným názvem a umístěním. Tato funkce volá funkci **New-AzureWebsite** v modulu Azure. Pokud předplatné ještě neobsahuje web se zadaným názvem, tato funkce vytvoří web a vrátí objekt webu. V opačném případě vrátí `$null`. |
 | Backup – předplatné |Uloží aktuální předplatné Azure do proměnné `$Script:originalSubscription` v oboru skriptu. Tato funkce uloží aktuální předplatné Azure (získané `Get-AzureSubscription -Current`) a jeho účet úložiště a předplatné, které tento skript změnil (uložený v proměnné `$UserSpecifiedSubscription`) a jeho účet úložiště v oboru skriptu. Uložením hodnot můžete použít funkci, například `Restore-Subscription`, k obnovení původního aktuálního předplatného a účtu úložiště na aktuální stav, pokud se změní aktuální stav. |
-| Najít – AzureVM |Načte zadaný virtuální počítač Azure. |
+| Find-AzureVM |Načte zadaný virtuální počítač Azure. |
 | Format – DevTestMessageWithTime |Dořadí datum a čas do zprávy. Tato funkce je navržena pro zprávy zapsané do chyby a podrobné datové proudy. |
 | Get-AzureSQLDatabaseConnectionString |Sestaví připojovací řetězec pro připojení k databázi SQL Azure. |
 | Get-AzureVMStorage |Vrátí název prvního účtu úložiště se vzorem názvu "DevTest *" (bez rozlišení malých a velkých písmen) v zadaném umístění nebo skupině vztahů. Pokud účet úložiště "DevTest*" neodpovídá umístění nebo skupině vztahů, funkce ho ignoruje. Zadejte buď umístění, nebo skupinu vztahů. |
 | Get-MSDeployCmd |Vrátí příkaz pro spuštění nástroje MsDeploy. exe. |
 | New-AzureVMEnvironment |Najde nebo vytvoří v předplatném virtuální počítač, který odpovídá hodnotám v konfiguračním souboru JSON. |
 | Publish – balíček publikování |Používá soubor MsDeploy. exe a balíček pro publikování na webu. Soubor zip k nasazení prostředků na web. Tato funkce negeneruje žádný výstup. Pokud volání MSDeploy. exe neproběhne úspěšně, funkce vyvolá výjimku. Chcete-li získat podrobnější výstup, použijte možnost **-verbose** . |
-| Publikování – WebPackageToVM |Ověří hodnoty parametru a potom zavolá funkci **Publish-webpackage** . |
+| Publish-WebPackageToVM |Ověří hodnoty parametru a potom zavolá funkci **Publish-webpackage** . |
 | Číst – ConfigFile |Ověří konfigurační soubor JSON a vrátí zatřiďovací tabulku vybraných hodnot. |
 | Obnovení předplatného |Obnoví aktuální předplatné na původní předplatné. |
-| Test – AzureModule |Vrátí `$true`, pokud je nainstalovaná verze modulu Azure 0.7.4 nebo novější. Pokud modul není nainstalovaný nebo má starší verzi, vrátí se `$false`. Tato funkce nemá žádné parametry. |
-| Test – AzureModuleVersion |Vrátí `$true`, pokud je verze modulu Azure 0.7.4 nebo novější. Pokud modul není nainstalovaný nebo má starší verzi, vrátí se `$false`. Tato funkce nemá žádné parametry. |
-| Test – HttpsUrl |Převede vstupní adresu URL na objekt System. URI. Vrátí `$True`, pokud je adresa URL absolutní a její schéma je HTTPS. Vrátí `$false`, pokud je adresa URL relativní, její schéma není HTTPS, nebo vstupní řetězec nelze převést na adresu URL. |
+| Test-AzureModule |Vrátí `$true`, pokud je nainstalovaná verze modulu Azure 0.7.4 nebo novější. Pokud modul není nainstalovaný nebo má starší verzi, vrátí se `$false`. Tato funkce nemá žádné parametry. |
+| Test-AzureModuleVersion |Vrátí `$true`, pokud je verze modulu Azure 0.7.4 nebo novější. Pokud modul není nainstalovaný nebo má starší verzi, vrátí se `$false`. Tato funkce nemá žádné parametry. |
+| Test-HttpsUrl |Převede vstupní adresu URL na objekt System. URI. Vrátí `$True`, pokud je adresa URL absolutní a její schéma je HTTPS. Vrátí `$false`, pokud je adresa URL relativní, její schéma není HTTPS, nebo vstupní řetězec nelze převést na adresu URL. |
 | Testovací člen |Vrátí `$true`, je-li vlastnost nebo metoda členem objektu. V opačném případě vrátí `$false`. |
 | Zápis – ErrorWithTime |Zapíše chybovou zprávu s aktuálním časem. Tato funkce volá funkci **Format-DevTestMessageWithTime** , aby předpsala čas před zápisem zprávy do datového proudu chyb. |
 | Zápis – HostWithTime |Zapíše zprávu do hostitelského programu (**Write-Host**) s aktuálním časem. Účinek psaní do hostitelského programu se liší. Většina programů, které hostují Windows PowerShell, zapíše tyto zprávy do standardního výstupu. |
-| Zápis – VerboseWithTime |Zapíše podrobnou zprávu s aktuálním časem. Vzhledem k tomu, že volá metodu **Write-verbose**, zpráva se zobrazí pouze v případě, že se skript spustí s parametrem **verbose** nebo pokud je nastavená předvolby **VerbosePreference** na **pokračovat**. |
+| Write-VerboseWithTime |Zapíše podrobnou zprávu s aktuálním časem. Vzhledem k tomu, že volá metodu **Write-verbose**, zpráva se zobrazí pouze v případě, že se skript spustí s parametrem **verbose** nebo pokud je nastavená předvolby **VerbosePreference** na **pokračovat**. |
 
 **Publikování – WebApplication**
 
@@ -343,7 +343,7 @@ Nápovědu k funkcím, které můžete použít na příkazovém řádku prostř
 | --- | --- |
 | New-AzureWebApplicationEnvironment |Vytvoří prostředky Azure, jako je například web nebo virtuální počítač. |
 | New-WebDeployPackage |Tato funkce není implementovaná. Můžete přidat příkazy v této funkci pro sestavení projektu. |
-| Publikování – AzureWebApplication |Publikuje webovou aplikaci do Azure. |
+| Publish-AzureWebApplication |Publikuje webovou aplikaci do Azure. |
 | Publikování – WebApplication |Vytvoří a nasadí Web Apps, virtuální počítače, databáze SQL a účty úložiště pro webový projekt sady Visual Studio. |
 | Test – WebApplication |Tato funkce není implementovaná. K otestování aplikace můžete do této funkce přidat příkazy. |
 
