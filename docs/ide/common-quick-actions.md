@@ -3,20 +3,20 @@ title: Běžné rychlé akce
 description: Nejoblíbenější rychlé akce pro C# a Visual Basic, včetně oprav chybně napsaných klíčových slov nebo symbolů, řešení konfliktů při slučování, odebírání nezbytných importů, generování typů, představení místních proměnných atd.
 ms.date: 03/28/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: bad97ac5574afd65103263b2ce51a4dfba02741c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: db7a3a550f6bfc1250679eeefa0ba3ec6291eef0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652252"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585519"
 ---
 # <a name="common-quick-actions"></a>Běžné rychlé akce
 
@@ -30,7 +30,7 @@ Rychlé akce v této části opravují chyby v kódu, které by způsobily selh�
 
 ### <a name="correct-misspelled-symbol-or-keyword"></a>Opravit nesprávně napsaný symbol nebo klíčové slovo
 
-Pokud nechtěně napíšete typ nebo klíčové slovo v aplikaci Visual Studio omylem, tato rychlá akce je automaticky opraví za vás. Tyto položky se zobrazí v nabídce žárovky jako **"změnit" \<misspelled word > "na" \<correct wordový > ""** . Příklad:
+Pokud nechtěně napíšete typ nebo klíčové slovo v aplikaci Visual Studio omylem, tato rychlá akce je automaticky opraví za vás. Tyto položky se zobrazí v nabídce žárovky jako **"Change"\<> nesprávně napsaným slovem "na"\<správné slovo > ""** . Příklad:
 
 ```csharp
 // Before

@@ -14,17 +14,17 @@ helpviewer_keywords:
 - MSBuild, tasks
 - MSBuild, dependency diagrams
 - MSBuild, validating code
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fc852b4d5003cf809248c72ca3ac42ad3a6bf23
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 36320daf91380d0b04333b228a1d4b9d58c6693c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981124"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594016"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>Ověřování kódu pomocí diagramů závislostí
 
@@ -122,7 +122,7 @@ Pokud máte otevřený Diagram závislostí, který je propojen s položkami ře
        msbuild <FilePath+ModelProjectFileName>.modelproj /p:ValidateArchitecture=true
        ```
 
-     - ani
+     - nebo –
 
        Přejděte do složky, která obsahuje soubor projektu modelování (. modelproj) a diagram závislosti, a poté spusťte nástroj MSBuild s následující vlastní vlastností:
 
@@ -136,7 +136,7 @@ Pokud máte otevřený Diagram závislostí, který je propojen s položkami ře
        msbuild <FilePath+SolutionName>.sln /p:ValidateArchitecture=true
        ```
 
-     - ani
+     - nebo –
 
        Přejděte do složky řešení, která musí obsahovat projekt modelování, který obsahuje diagram závislosti, a poté spusťte nástroj MSBuild s následující vlastní vlastností:
 
@@ -161,7 +161,7 @@ Během procesu vývoje můžete chtít potlačit některé vykázané konflikty 
 
 Pomocí těchto úloh můžete spravovat chyby ověřování v okně **Seznam chyb** :
 
-|**Schopn**|**Postupujte podle těchto kroků**|
+|**Komu**|**Postupujte podle těchto kroků**|
 |-|-|
 |Potlačení vybraných chyb během ověřování|Klikněte pravým tlačítkem myši na jednu nebo více vybraných chyb, přejděte na položku **Spravovat chyby ověřování**a potom klikněte na **potlačit chyby**.<br /><br /> Potlačené chyby se zobrazují s přeškrtnutím. Při příštím spuštění ověřování se tyto chyby nezobrazí.<br /><br /> Potlačené chyby jsou sledovány v souboru. potlačení pro odpovídající soubor diagramu závislosti.|
 |Ukončení potlačování vybraných chyb|Klikněte pravým tlačítkem myši na potlačit chybu nebo chyby, přejděte na položku **Spravovat chyby ověřování**a potom klikněte na možnost **ukončit potlačení chyb**.<br /><br /> Vybrané potlačené chyby se při příštím spuštění ověřování zobrazí.|
@@ -180,7 +180,7 @@ K otevření souboru projektu modelování (.modelproj) použijte textový edito
 <ValidateArchitecture>true</ValidateArchitecture>
 ```
 
-\- nebo-
+\- nebo –
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt modelování, který obsahuje diagram nebo diagramy závislosti, a poté klikněte na možnost **vlastnosti**.
 
@@ -200,7 +200,7 @@ Chcete-li spravovat chyby v okně Seznam chyb, přečtěte si téma [řešení c
 
 Následující tabulka popisuje problémy s ověřením vrstvy a jejich řešení. Tyto problémy se liší od chyb, které vzniknou z konfliktů mezi kódem a návrhem. Další informace o těchto chybách najdete v tématu [řešení potíží s ověřováním vrstev](#troubleshoot-layer-validation-issues).
 
-|**Chybu**|**Možná příčina**|**Rozhodnutí**|
+|**Problém**|**Možná příčina**|**Řešení**|
 |-|-|-|
 |Chyby ověřování se nezobrazí podle očekávání.|Ověřování nefunguje na diagramech závislostí, které se zkopírují z jiných diagramů závislostí v Průzkumník řešení a které jsou ve stejném projektu modelování. diagramy závislostí, které jsou tímto způsobem zkopírovány, obsahují stejné odkazy jako původní Diagram závislostí.|Přidejte do projektu modelování nový diagram závislosti.<br /><br /> Zkopírujte prvky z diagramu závislosti zdrojového kódu do nového diagramu.|
 
@@ -216,7 +216,7 @@ Chcete-li tyto chyby odstranit, aktualizujte kód, dokud se během ověřování
 
 Následující oddíl popisuje syntaxi, která se u těchto chyb používá, vysvětluje význam těchto chyb a navrhne, jak je vyřešit nebo spravovat.
 
-|**Syntaktick**|**Popis**|
+|**Syntaxe**|**Popis**|
 |-|-|
 |*ArtifactN*(*ArtifactTypeN*)|*ArtifactN* je artefakt, který je spojen s vrstvou v diagramu závislostí.<br /><br /> *ArtifactTypeN* je typ *ArtifactN*, například **Třída** nebo **Metoda**, například:<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
 |*NamespaceNameN*|Název oboru názvů.|
@@ -229,6 +229,8 @@ Následující oddíl popisuje syntaxi, která se u těchto chyb používá, vy
 | DV1001: **neplatný název oboru názvů** | Tento problém je hlášen u elementu kódu přidruženého k vrstvě, která "povolené názvy oborů názvů" neobsahuje obor názvů, ve kterém je tento prvek kódu definován. Toto je porušení omezení pojmenování. Všimněte si, že syntaxe "povolených názvů oborů názvů" je středníkem seznam oborů názvů, ve kterých je povoleno definovat prvky kódu přidružené ke vrstvě. |
 | DV1002: **závislost na neodkazovaném oboru názvů** | Tento problém je hlášen u prvku kódu přidruženého k vrstvě a odkazování na jiný prvek kódu definovaný v oboru názvů, který je definován v vlastnosti "neodkazovaná" názvový prostor vrstvy. Toto je porušení omezení pojmenování. Všimněte si, že vlastnost "neodkazované obory názvů" je definována jako středníkem oddělený seznam oborů názvů, na které by neměly být odkazovány v prvcích kódu přidružených k této vrstvě. |
 | DV1003: **nepovolený název oboru názvů** | Tento problém je hlášen u elementu kódu přidruženého ke vrstvě, která "nepovolené názvy oborů názvů" obsahuje obor názvů, ve kterém je tento prvek kódu definován. Toto je porušení omezení pojmenování. Všimněte si, že vlastnost "nepovolený název oboru názvů" je definována jako středníkem oddělený seznam oborů názvů, ve kterých by neměly být definovány elementy kódu přidružené k této vrstvě. |
+| DV2001: **přítomnost diagramu vrstvy** | Tento problém se oznamuje v projektu, který neobsahuje soubor s diagramem závislostí, ale odkazuje na analyzátory ověřování závislostí. Pokud nebylo použito ověřování závislostí, můžete odebrat "Microsoft. DependencyValidation. Analyzers" přímo z Průzkumník řešení nebo potlačit toto upozornění. Chcete-li přidat Diagram závislostí, přečtěte si téma [vytvoření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md). |
+| DV2002: **nemapované typy Base** | Tento problém je hlášen, když prvek kódu není namapován na žádnou vrstvu. |
 | DV3001: **chybějící odkaz** | Vrstva "*propojuje" odkazuje*na*artefakt*, který nebyl nalezen. Nechybí odkaz na sestavení? |
 | DV9001: **Analýza architektury zjistila vnitřní chyby** . | Výsledky nemusí být úplné. Další informace lze nalézt v podrobném protokolu událostí sestavení nebo ve výstupním okně. |
 

@@ -12,17 +12,17 @@ helpviewer_keywords:
 - MSBuild, command line reference
 - msbuild.exe
 ms.assetid: edaa65ec-ab8a-42a1-84cb-d76d5b2f4584
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a23a82afcc484cbbe71bf167ecd0884f399e656
-ms.sourcegitcommit: 3e94d9fb6dc56fa8b23fbacd5d11cf8d6e7e18f1
+ms.openlocfilehash: e8cd04d16f35ae2cc1edaf43ae9f8803c3e424ba
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252658"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589250"
 ---
 # <a name="msbuild-command-line-reference"></a>Reference k příkazovému řádku nástroje MSBuild
 Při použití nástroje *MSBuild. exe* k sestavení projektu nebo souboru řešení můžete zahrnout několik přepínačů pro určení různých aspektů procesu.
@@ -35,7 +35,7 @@ Každý přepínač je k dispozici ve dvou formách:-Switch a/Switch. V dokument
 MSBuild.exe [Switches] [ProjectFile]
 ```
 
-## <a name="arguments"></a>Argumenty
+## <a name="arguments"></a>Arguments
 
 |Argument|Popis|
 |--------------|-----------------|
@@ -50,7 +50,7 @@ MSBuild.exe [Switches] [ProjectFile]
 |-ignoreprojectextensions: `extensions`|-Ignore: `extensions`|Ignorovat zadaná rozšíření při určování, který soubor projektu se má sestavit. Použijte středník nebo čárku pro oddělení více rozšíření, jak ukazuje následující příklad:<br /><br /> `-ignoreprojectextensions:.vcproj,.sln`|
 |-maxcpucount [:`number`]|-m[:`number`]|Určuje maximální počet souběžných procesů, které mají být použity při sestavování. Pokud tento přepínač nezadáte, výchozí hodnota je 1. Pokud tento přepínač zadáte bez zadání hodnoty, nástroj MSBuild použije množství procesorů v počítači. Další informace naleznete v tématu [Souběžné sestavování více projektů](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md).<br /><br /> Následující příklad instruuje nástroj MSBuild k sestavení pomocí tří procesů MSBuild, které umožňují sestavovat tři projekty ve stejnou dobu:<br /><br /> `msbuild myproject.proj -maxcpucount:3`|
 |-noautoresponse|-noautorsp|Nezahrnujte žádné soubory *MSBuild. rsp* automaticky.|
-|-nodeReuse:`value`|-Nr:`value`|Povolí nebo zakáže opakované použití uzlů MSBuild. Můžete zadat následující hodnoty:<br /><br /> -   **true**. Uzly zůstanou po dokončení sestavení, aby je mohli použít následné sestavení (výchozí).<br />-   **false**. Uzly po dokončení sestavení nezůstanou.<br /><br /> Uzel odpovídá projektu, který je spuštěn. Pokud zahrnete přepínač **-maxcpucount** , může být souběžně spuštěno více uzlů.|
+|-nodeReuse:`value`|-Nr:`value`|Povolí nebo zakáže opakované použití uzlů MSBuild. Můžete určit tyto hodnoty:<br /><br /> -   **true**. Uzly zůstanou po dokončení sestavení, aby je mohli použít následné sestavení (výchozí).<br />-   **false**. Uzly po dokončení sestavení nezůstanou.<br /><br /> Uzel odpovídá projektu, který je spuštěn. Pokud zahrnete přepínač **-maxcpucount** , může být souběžně spuštěno více uzlů.|
 |-nologo||Nezobrazovat úvodní nápis nebo zprávu o autorských právech.|
 |<a name="preprocess"></a>-předzpracování [:`filepath`]|-PP [:`filepath`]|Vytvořte jeden agregovaný soubor projektu tak, že zapíšete všechny soubory, které by se importovaly během sestavení, se svými hranicemi označenými. Pomocí tohoto přepínače můžete snadněji určit, které soubory se importují, odkud se soubory importují a které soubory přispívají k sestavení. Když použijete tento přepínač, projekt není sestaven.<br /><br /> Pokud zadáte `filepath`, agregovaný soubor projektu je výstupem do souboru. V opačném případě se výstup zobrazí v okně konzoly.<br /><br /> Informace o použití prvku `Import` pro vložení souboru projektu do jiného souboru projektu naleznete v tématu [Import element (MSBuild)](../msbuild/import-element-msbuild.md) a [How to: use the Target in a Multiple Project Files](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md).|
 |-Property:`name`=`value`|-p:`name`=`value`|Nastaví nebo přepíše zadané vlastnosti na úrovni projektu, kde `name` je název vlastnosti a `value` je hodnota vlastnosti. Jednotlivé vlastnosti zadejte samostatně nebo použijte středník nebo čárku pro oddělení více vlastností, jak ukazuje následující příklad:<br /><br /> `-property:WarningLevel=2;OutDir=bin\Debug`|

@@ -7,18 +7,18 @@ dev_langs:
 - VB
 helpviewer_keywords:
 - formatting conventions [EditorConfig]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 42f1ab99a82f402ef6eced09ad5e47cf54122b86
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 64f6a45b3a5cc49cd541ceb905356093ea4ec221
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652792"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589224"
 ---
 # <a name="formatting-conventions"></a>Konvence formátování
 
@@ -57,7 +57,7 @@ dotnet_sort_system_directives_first = true
 dotnet_separate_import_directive_groups = true
 ```
 
-#### <a name="dotnet_sort_system_directives_first"></a>dotnet \_sort \_system \_directives_first
+#### <a name="dotnet_sort_system_directives_first"></a>dotnet\_řazení\_systémových\_directives_first
 
 |||
 |-|-|
@@ -81,13 +81,13 @@ using Octokit;
 using System.Threading.Tasks;
 ```
 
-#### <a name="dotnet_separate_import_directive_groups"></a>dotnet \_separate \_import \_directive \_groups
+#### <a name="dotnet_separate_import_directive_groups"></a>dotnet\_oddělené\_import\_direktivy\_skupiny
 
 |||
 |-|-|
 | **Název pravidla** | dotnet_separate_import_directive_groups |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Představená verze** | Visual Studio 2017 verze 15,5 |
+| **Představená verze** | Visual Studio 2017 verze 15.5 |
 | **Hodnoty** | `true` – vložte mezi skupiny direktiv `using` prázdný řádek.<br /><br />`false` – neumísťují prázdný řádek mezi skupiny direktiv `using`. |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
@@ -170,7 +170,7 @@ csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_between_query_expression_clauses = true
 ```
 
-#### <a name="csharp_new_line_before_open_brace"></a>CSharp \_new \_line \_before \_open_brace
+#### <a name="csharp_new_line_before_open_brace"></a>csharp\_new\_line\_before\_open_brace
 
 Toto pravidlo se týká, zda by měla být otevřená `{`a složené závorky na stejném řádku jako předchozí kód, nebo na nový řádek. Pro toto pravidlo zadáte **všechny**, **žádné**nebo jeden nebo více elementů kódu, jako jsou **metody** nebo **vlastnosti**, které definují, kdy má být toto pravidlo použito. Chcete-li zadat více prvků kódu, oddělte je čárkou (,).
 
@@ -179,7 +179,7 @@ Toto pravidlo se týká, zda by měla být otevřená `{`a složené závorky na
 | **Název pravidla** | csharp_new_line_before_open_brace |
 | **Příslušné jazyky** | C# |
 | **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `all` – vyžaduje, aby byly složené závorky na novém řádku pro všechny výrazy ("Allman" stylu).<br /><br />`none` – vyžaduje, aby byly složené závorky na stejném řádku pro všechny výrazy ("K & R").<br /><br />`accessors`, `anonymous_methods`, `anonymous_types`, `control_blocks`, `events`, `indexers`, `lambdas`, `local_functions`, `methods`, `object_collection_array_initializers` 0 1 – vyžadují, aby byly složené závorky na novém řádku pro zadaný element kódu (Allman). |
+| **Hodnoty** | `all` – vyžaduje, aby byly složené závorky na novém řádku pro všechny výrazy ("Allman" stylu).<br /><br />`none` – vyžaduje, aby byly složené závorky na stejném řádku pro všechny výrazy ("K & R").<br /><br />`accessors`, `anonymous_methods`, `anonymous_types`, `control_blocks`, `events`, `indexers`, `lambdas`, `local_functions`, `methods`, `object_collection_array_initializers``properties``types` – vyžadují, aby byly složené závorky na novém řádku pro zadaný element kódu (Allman). |
 | **Výchozí nastavení sady Visual Studio** | `all` |
 
 Příklady kódu:
@@ -202,7 +202,7 @@ void MyMethod() {
 }
 ```
 
-#### <a name="csharp_new_line_before_else"></a>CSharp \_new \_line \_before_else
+#### <a name="csharp_new_line_before_else"></a>CSharp\_nové\_řádku\_before_else
 
 |||
 |-|-|
@@ -231,7 +231,7 @@ if (...) {
 }
 ```
 
-#### <a name="csharp_new_line_before_catch"></a>CSharp \_new \_line \_before_catch
+#### <a name="csharp_new_line_before_catch"></a>CSharp\_nové\_řádku\_before_catch
 
 |||
 |-|-|
@@ -260,7 +260,7 @@ try {
 }
 ```
 
-#### <a name="csharp_new_line_before_finally"></a>CSharp \_new \_line \_before_finally
+#### <a name="csharp_new_line_before_finally"></a>CSharp\_nové\_řádku\_before_finally
 
 |||
 |-|-|
@@ -294,7 +294,7 @@ try {
 }
 ```
 
-#### <a name="csharp_new_line_before_members_in_object_initializers"></a>CSharp \_new \_line \_before \_members \_in \_object_initializers
+#### <a name="csharp_new_line_before_members_in_object_initializers"></a>CSharp\_nové\_řádku\_před\_členů\_\_
 
 |||
 |-|-|
@@ -321,7 +321,7 @@ var z = new B()
 }
 ```
 
-#### <a name="csharp_new_line_before_members_in_anonymous_types"></a>CSharp \_new \_line \_before \_members \_in \_anonymous_types
+#### <a name="csharp_new_line_before_members_in_anonymous_types"></a>csharp\_new\_line\_before\_members\_in\_anonymous_types
 
 |||
 |-|-|
@@ -388,7 +388,7 @@ csharp_indent_braces = false
 csharp_indent_case_contents_when_block = true
 ```
 
-#### <a name="csharp_indent_case_contents"></a>CSharp \_indent \_case_contents
+#### <a name="csharp_indent_case_contents"></a>csharp\_indent\_case_contents
 
 |||
 |-|-|
@@ -431,7 +431,7 @@ switch(c) {
 }
 ```
 
-#### <a name="csharp_indent_switch_labels"></a>CSharp \_indent \_switch_labels
+#### <a name="csharp_indent_switch_labels"></a>csharp\_indent\_switch_labels
 
 |||
 |-|-|
@@ -471,7 +471,7 @@ default:
 }
 ```
 
-#### <a name="csharp_indent_labels"></a>CSharp \_indent_labels
+#### <a name="csharp_indent_labels"></a>csharp\_indent_labels
 
 |||
 |-|-|
@@ -634,7 +634,7 @@ csharp_space_between_empty_square_brackets = false
 csharp_space_between_square_brackets = false
 ```
 
-#### <a name="csharp_space_after_cast"></a>CSharp \_space \_after_cast
+#### <a name="csharp_space_after_cast"></a>csharp\_space\_after_cast
 
 |||
 |-|-|
@@ -684,7 +684,7 @@ for(int i;i<x;i++) { ... }
 | **Hodnoty** | `control_flow_statements` – umístit mezeru mezi kulaté závorky příkazů toku řízení<br /><br />`expressions` – umístit mezeru mezi kulaté závorky výrazů<br /><br />místo mezi závorkami v přetypováních typů `type_casts` mezera |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
-Pokud toto pravidlo vynecháte nebo použijete jinou hodnotu než `control_flow_statements`, `expressions` nebo `type_casts`, nastavení se nepoužije.
+Pokud toto pravidlo vynecháte nebo použijete jinou hodnotu než `control_flow_statements`, `expressions`nebo `type_casts`, nastavení se nepoužije.
 
 Příklady kódu:
 
@@ -699,7 +699,7 @@ var z = ( x * y ) - ( ( y - x ) * 3 );
 int y = ( int )x;
 ```
 
-#### <a name="csharp_space_before_colon_in_inheritance_clause"></a>CSharp \_space \_before \_colon \_in \_inheritance_clause
+#### <a name="csharp_space_before_colon_in_inheritance_clause"></a>CSharp\_mezeru\_před\_dvojtečkou\_v\_inheritance_clause
 
 |||
 |-|-|
@@ -735,7 +735,7 @@ class C: I
 }
 ```
 
-#### <a name="csharp_space_after_colon_in_inheritance_clause"></a>CSharp \_space \_after \_colon \_in \_inheritance_clause
+#### <a name="csharp_space_after_colon_in_inheritance_clause"></a>CSharp\_místo\_po\_dvojtečkě\_v\_inheritance_clause
 
 |||
 |-|-|
@@ -771,7 +771,7 @@ class C :I
 }
 ```
 
-#### <a name="csharp_space_around_binary_operators"></a>CSharp \_space \_around \_binary_operators
+#### <a name="csharp_space_around_binary_operators"></a>CSharp\_mezeru\_kolem\_binary_operators
 
 |||
 |-|-|
@@ -781,7 +781,7 @@ class C :I
 | **Hodnoty** | `before_and_after` – vložit mezeru před a za binární operátor<br /><br />`none` – odebrat mezery před a za binárním operátorem<br /><br />`ignore` – ignorovat mezery kolem binárních operátorů |
 | **Výchozí nastavení sady Visual Studio** | `before_and_after` |
 
-Pokud toto pravidlo vynecháte nebo použijete jinou hodnotu než `before_and_after`, `none` nebo `ignore`, nastavení se nepoužije.
+Pokud toto pravidlo vynecháte nebo použijete jinou hodnotu než `before_and_after`, `none`nebo `ignore`, nastavení se nepoužije.
 
 Příklady kódu:
 
@@ -1214,4 +1214,4 @@ public int MyProperty
 
 - [Jazykové konvence](editorconfig-language-conventions.md)
 - [Zásady vytváření názvů](editorconfig-naming-conventions.md)
-- [Nastavení konvence kódování .NET pro EditorConfig](editorconfig-code-style-settings-reference.md)
+- [EditorConfig nastavení konvence psaní kódu .NET](editorconfig-code-style-settings-reference.md)

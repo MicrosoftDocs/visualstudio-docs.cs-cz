@@ -1,5 +1,5 @@
 ---
-title: Režim celé obrazovky a virtuální prostor
+title: Zobrazení na celé obrazovce a režim virtuálního prostoru
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,49 +19,49 @@ helpviewer_keywords:
 - views, changing mode
 - views, outlining
 ms.assetid: 1fb48027-d870-439f-8b72-4a0321390748
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd3e238813c6cfd8674e5392d9ad20889e79c900
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 77f224a6e3a1b12ed17799ddf6a2fc5c23f5d4cc
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645856"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591031"
 ---
 # <a name="how-to-manage-editor-modes"></a>Postupy: Správa režimů editoru
 
 Editor kódu sady Visual Studio můžete zobrazit v různých režimech zobrazení.
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v tomto článku v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, například **Obecné** nebo  **C++ vizuální** nastavení, zvolte možnost **nástroje** > **Nastavení importu a exportu**a pak zvolte možnost **resetovat všechna nastavení**.
+> Dialogová okna a příkazy nabídek, které se zobrazí mohou lišit od těch popsaných v tomto článku v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, například k **Obecné** nebo **Visual C++** nastavení, zvolte **nástroje** > **nastavení importu a exportu**a klikněte na tlačítko **obnovit všechna nastavení**.
 
 ## <a name="enable-full-screen-mode"></a>Povolit režim zobrazení na celé obrazovce
 
-Můžete zvolit, že chcete skrýt všechna okna nástrojů a zobrazit pouze okna dokumentů tím, že povolíte režim zobrazení na **celé obrazovce** .
+Je možné skrýt všechna okna nástrojů a zobrazit pouze okna dokumentu tím, že **zobrazení na celé obrazovce** režimu.
 
-- Stisknutím klávesy **Alt** +**SHIFT** +**ENTER** zadáte nebo ukončíte režim **zobrazení na celé obrazovce** .
+- Stisknutím klávesy **Alt**+**Shift**+**Enter** a zadejte skript nebo ukončit **zobrazení na celé obrazovce** režimu.
 
      --nebo--
 
-- Vydejte příkaz `View.Fullscreen` v **příkazovém** okně.
+- Příkaz `View.Fullscreen` v **příkaz** okna.
 
 ## <a name="enable-virtual-space-mode"></a>Povolit režim virtuálního prostoru
 
-V režimu **virtuálního prostoru** jsou mezery vloženy na konci každého řádku kódu. Tuto možnost vyberte, pokud chcete umístit komentáře v konzistentním bodě vedle vašeho kódu.
+V **virtuální prostor** režimu, budou vkládány mezery na konci každého řádku kódu. Vyberte tuto možnost na pozici poznámky na bod konzistentní vzhledem k vedle vašeho kódu.
 
-1. V nabídce **nástroje** vyberte **možnost možnosti** .
+1. Vyberte **možnosti** z **nástroje** nabídky.
 
-2. Rozbalte složku **textový editor** a výběrem možnosti **všechny jazyky** nastavte globálně nebo vyberte konkrétní jazykovou složku. Chcete-li například zapnout číslování řádků pouze v Visual Basic, vyberte uzel **Basic**  > **textový editor** .
+2. Rozbalte **textový Editor** složky a zvolte **všechny jazyky** a tuto možnost nastavte, globálně nebo zvolte konkrétní jazykovou složku. Například, chcete-li zapnout čísla řádků pouze v jazyce Visual Basic, zvolte **základní** > **textový Editor** uzlu.
 
-3. Vyberte **Obecné** možnosti a v části **Nastavení**vyberte **Povolit virtuální prostor**.
+3. Vyberte **Obecné** možnosti a v části **nastavení**vyberte **povolit virtuální prostor**.
 
     > [!NOTE]
-    > **Virtuální prostor** je povolený v režimu **výběru sloupce** . Pokud není režim **virtuálního prostoru** povolený, přesune se bod vložení z konce řádku přímo na první znak dalšího.
+    > **Virtuální prostor** je povolený v **výběr sloupce** režimu. Když **virtuální prostor** není povolen režim, kurzor se přesune z konce jeden řádek přímo na první znak na další.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Přizpůsobení rozložení oken v aplikaci Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md)
+- [Přizpůsobení rozložení oken v sadě Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md)
 - [Písma a barvy, prostředí, dialogové okno Možnosti](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)

@@ -6,37 +6,37 @@ helpviewer_keywords:
 - Visual Studio templates, creating multi-file item templates
 - multi-file item templates
 - item templates, creating multi-file item templates
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 82047b4a49db4edbea4ce965d1987f87a799a9f7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e8a6e5358a87e3d64b341c89b8ffd4cd3cf3e325
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655946"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593730"
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>Postupy: vytváření šablon položek s více soubory
 
-Šablony položek mohou určovat pouze jednu položku, někdy se však položka skládá z více souborů. Například šablona model Windows Forms položky vyžaduje následující tři soubory:
+Šablony položek může zadat jenom jednu položku, ale někdy položky skládá z více souborů. Například šablonu položky Windows Forms vyžaduje následující tři soubory:
 
 - Soubor, který obsahuje kód pro formulář
 
-- Soubor, který obsahuje informace o návrháři pro formulář
+- Soubor, který obsahuje informace o návrháři formuláře
 
 - Soubor, který obsahuje vložené prostředky pro formulář
 
-Šablony položek s více soubory vyžadují parametry, aby se zajistilo, že se při vytvoření položky použijí správné přípony souborů. Vytvoříte-li šablonu položky s více soubory pomocí **Průvodce exportem šablony**, jsou tyto parametry automaticky generovány a žádné další úpravy nejsou požadovány.
+Šablony položek s více soubory vyžadují parametry k zajištění toho, že rozšíření správného souboru se používají při vytvoření položky. Pokud jste vytvořili pomocí šablon položek s více soubory **Průvodce exportem šablony**tyto parametry jsou automaticky generovány a žádné další úpravy je povinný.
 
 ## <a name="use-the-export-template-wizard"></a>Použití Průvodce exportem šablony
 
-Šablonu položky s více soubory můžete vytvořit stejným způsobem jako šablonu položky s jedním souborem. Viz [Postupy: vytváření šablon položek](../ide/how-to-create-item-templates.md). Na stránce **Vyberte položku, která má být exportována** v průvodci vyberte soubor, který obsahuje závislé soubory (například soubor formuláře model Windows Forms). Průvodce automaticky obsahuje všechny závislé soubory, jako jsou například návrháře a soubory prostředků, v šabloně.
+Stejným způsobem můžete vytvořit šablonu vícesouborové položce, stejně jako šablonu položky jedním souborem. Zobrazit [postup: Tvorba šablon položek s](../ide/how-to-create-item-templates.md). Na **vyberte položky, které chcete exportovat** stránku průvodce, vyberte soubor, který má závislé soubory (například soubor formuláře Windows Forms). Průvodce automaticky obsahuje všechny závislé soubory, jako je například návrháře a soubory prostředků v šabloně.
 
 ## <a name="manually-create-a-multi-file-item-template"></a>Ruční vytvoření šablony položek s více soubory
 
-1. Vytvořte šablonu položky, protože byste mohli ručně vytvořit šablonu položky s jedním souborem, ale zahrnout každý soubor, který tvoří položku s více soubory.
+1. Vytvořte šablonu položky, jako je by ručně vytvořit šablonu položky jeden soubor, ale zahrnout všechny soubory, které představuje vícesouborové položce.
 
-1. V souboru XML *. vstemplate* přidejte `ProjectItem` element pro každý jednotlivý soubor a přidejte do tohoto prvku atribut `TargetFileName`. Nastavte hodnotu atributu `TargetFileName` na *$fileinputname $. Přípona*souboru, kde *přípona* souboru je přípona souboru, který je součástí šablony. Příklad:
+1. V *.vstemplate* XML přidejte `ProjectItem` – element pro jednotlivé uživatele a přidejte `TargetFileName` atribut na tento element. Nastavte hodnotu `TargetFileName` atribut *$fileinputname$. FileExtension*, kde *FileExtension* je příponu souboru, který bude zahrnut v šabloně. Příklad:
 
     ```xml
     <ProjectItem TargetFileName="$fileinputname$.vb">
@@ -51,23 +51,23 @@ ms.locfileid: "72655946"
     ```
 
      > [!NOTE]
-     > Když je položka odvozená z této šablony přidána do projektu, názvy souborů budou odvozeny z názvu, který uživatel zadá v dialogovém okně **Přidat novou položku** .
+     > Když do projektu se přidá položka odvozená z této šablony, názvy souborů odvodí z názvu, který uživatel zadá **přidat novou položku** dialogové okno.
 
-1. Vyberte soubory, které chcete zahrnout do šablony, klikněte pravým tlačítkem na výběr a zvolte **Odeslat do**  > **Komprimovaná složka (ZIP)** .
+1. Vyberte soubory, které chcete zahrnout do vaší šablony, klikněte pravým tlačítkem na výběr a zvolte **odeslat** > **komprimovanou složku (ZIP)** .
 
-   Soubory, které jste vybrali, se komprimují do souboru *zip* .
+   Do jsou komprimované soubory, které jste vybrali *ZIP* souboru.
 
-1. Zkopírujte soubor *. zip* do umístění šablony položky uživatele. Ve výchozím nastavení je adresář *%UserProfile%\Documents\Visual Studio \<Version \> \templates\itemtemplates*. Další informace najdete v tématu [Postupy: hledání a organizace šablon](../ide/how-to-locate-and-organize-project-and-item-templates.md).
+1. Kopírovat *ZIP* soubor do umístění šablon položek uživatele. Ve výchozím adresáři je *%USERPROFILE%\Documents\Visual Studio \<verze\>\Templates\ItemTemplates*. Další informace najdete v tématu [postupy: hledání a organizace šablon](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
-1. Zavřete Visual Studio a potom ho znovu otevřete.
+1. Zavřete sadu Visual Studio a znovu ho otevřít.
 
-1. Vytvořte nový projekt nebo otevřete existující projekt a pak zvolte **projekt**  > **Přidat novou položku** nebo stiskněte klávesovou **zkratku CTRL** +**SHIFT** +**a**.
+1. Vytvořte nový projekt, nebo otevřete existující projekt a pak zvolte **projektu** > **přidat novou položku** nebo stiskněte klávesu **Ctrl** +  **SHIFT**+**A**.
 
-   Šablona položky s více soubory se zobrazí v dialogovém okně **Přidat novou položku** .
+   Šablony položek s více soubory se zobrazí v **přidat novou položku** dialogové okno.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje šablonu model Windows Forms. Když je na základě této šablony vytvořena položka, názvy tří vytvořených souborů budou odpovídat názvu zadanému v dialogovém okně **Přidat novou položku** .
+Následující příklad ukazuje šablonu formulářů Windows. Když je vytvořena položka na základě této šablony, názvy tři soubory vytvořené bude shodovat s názvem zadaného v **přidat novou položku** dialogové okno.
 
 ```xml
 <VSTemplate Version="2.0.0" Type="Item"
@@ -95,6 +95,6 @@ Následující příklad ukazuje šablonu model Windows Forms. Když je na zákl
 ## <a name="see-also"></a>Viz také:
 
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Postupy: vytváření šablon položek](../ide/how-to-create-item-templates.md)
+- [Postupy: Tvorba šablon položek](../ide/how-to-create-item-templates.md)
 - [Parametry šablony](../ide/template-parameters.md)
 - [Postupy: nahrazení parametrů v šabloně](../ide/how-to-substitute-parameters-in-a-template.md)

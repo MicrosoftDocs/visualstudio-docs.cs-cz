@@ -11,17 +11,17 @@ helpviewer_keywords:
 - mapping code relationships
 - code maps
 - mapping relationships in code
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0b3c65c0a7e5cb08869a6d756ce0c443fa3bf2e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e01857878f927c619529d3bbfc63728f84f0b81d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748277"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594107"
 ---
 # <a name="use-code-maps-to-debug-your-applications"></a>Použití map kódu k ladění aplikací
 
@@ -31,7 +31,7 @@ Mapy kódu vám mohou přispět k tomu, abyste se ztratili v rozsáhlých zákla
 
 **Zelená šipka ukazuje, kde se kurzor zobrazuje v editoru.**
 
-Podrobnosti o příkazech a akcích, které můžete použít při práci s mapami kódu, naleznete v tématu [procházení a změna uspořádání map kódu](../modeling/browse-and-rearrange-code-maps.md).
+Podrobnosti příkazů a akcí, které můžete použít při práci s mapami kódu najdete v tématu [Procházet a uspořádání map kódu](../modeling/browse-and-rearrange-code-maps.md).
 
 > [!NOTE]
 > Chcete-li vytvářet a upravovat mapy kódu, potřebujete Visual Studio Enterprise edici. V edicích Visual Studio Community a Professional můžete otevřít diagramy vygenerované v Enterprise Edition, ale nemůžete je upravovat.

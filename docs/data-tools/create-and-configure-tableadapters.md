@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data [Visual Studio], TableAdapters
 - data [Visual Studio], creating table adapters
 ms.assetid: 08630d69-0d6c-4e8f-b42d-2922f45f8415
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f1403d61dd7a0d36401e449806fdafa6adc533b5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4e5a557aeeee3fca2bef0367a630dfaca04b3a74
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648607"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586780"
 ---
 # <a name="create-and-configure-tableadapters"></a>Vytvoření a konfigurace objektů TableAdapter
 
@@ -66,11 +66,11 @@ Namapujte parametry z vybrané uložené procedury do odpovídajících sloupců
 
 ## <a name="configure-a-tableadapters-fill-method"></a>Konfigurace metody Fill TableAdapter
 
-Někdy možná budete chtít změnit schéma tabulky TableAdapter. K tomu je potřeba upravit primární metodu `Fill` TableAdapter. Objekty TableAdapter jsou vytvořeny pomocí primární metody `Fill` definující schéma přidružené datové tabulky. Metoda Primary `Fill` je založena na dotazu nebo uložené proceduře, kterou jste zadali při původní konfiguraci TableAdapter. Je první (nejvyšší) metodou v tabulce dat v Návrháři DataSet.
+Někdy možná budete chtít změnit schéma tabulky TableAdapter. K tomu je potřeba upravit primární metodu `Fill` TableAdapter. Objekty TableAdapter jsou vytvářeny s primární `Fill` metody, která definuje schématu přidružené tabulky dat. Metoda Primary `Fill` je založena na dotazu nebo uložené proceduře, kterou jste zadali při původní konfiguraci TableAdapter. Je první (nejvyšší) metodou v tabulce dat v Návrháři DataSet.
 
 ![TableAdapter s více dotazy](../data-tools/media/tableadapter.gif)
 
-Všechny změny, které provedete v hlavní metodě `Fill` TableAdapter, se projeví ve schématu přidružené tabulky dat. Například odebrání sloupce z dotazu v hlavní metodě `Fill` také odstraní sloupec z přidružené tabulky dat. Kromě toho odebráním sloupce z hlavní metody `Fill` odeberete sloupec z dalších dotazů pro tento TableAdapter.
+Všechny změny provedené na objektu TableAdapter je hlavní `Fill` metoda se projeví ve schématu přidružené tabulky dat. Například odebráním sloupce z dotazu v hlavním `Fill` metoda také odeberete sloupec z přidružené tabulky dat. Kromě toho odebráním sloupce z hlavní metody `Fill` odeberete sloupec z dalších dotazů pro tento TableAdapter.
 
 Průvodce konfigurací dotazu TableAdapter můžete použít k vytvoření a úpravě dalších dotazů pro TableAdapter. Tyto další dotazy musí odpovídat schématu tabulky, pokud nevrátí skalární hodnotu.  Každý další dotaz má název, který zadáte.
 
@@ -80,9 +80,9 @@ Následující příklad ukazuje, jak zavolat další dotaz s názvem `FillByCit
 
 ### <a name="to-start-the-tableadapter-query-configuration-wizard-with-a-new-query"></a>Spuštění Průvodce konfigurací dotazu TableAdapter s novým dotazem
 
-1. Otevřete datovou sadu v **Návrhář datových sad**.
+1. Otevřete svou datovou sadu v **Návrhář Dataset**.
 
-2. Pokud vytváříte nový dotaz, přetáhněte objekt **dotazu** z karty **datová sada** na **panelu nástrojů** do <xref:System.Data.DataTable> nebo vyberte možnost **Přidat dotaz** z místní nabídky TableAdapter. Objekt **dotazu** můžete také přetáhnout do prázdné oblasti **Návrhář datových sad**, která vytvoří TableAdapter bez přidružené <xref:System.Data.DataTable>. Tyto dotazy mohou vracet pouze jednotlivé (skalární) hodnoty nebo příkazy pro aktualizaci, vložení nebo odstranění v databázi.
+2. Pokud vytváříte nový dotaz, přetáhněte objekt **dotazu** z karty **datová sada** na **panelu nástrojů** do <xref:System.Data.DataTable>nebo vyberte možnost **Přidat dotaz** z místní nabídky TableAdapter. Objekt **dotazu** můžete také přetáhnout do prázdné oblasti **Návrhář datových sad**, která vytvoří TableAdapter bez přidružené <xref:System.Data.DataTable>. Tyto dotazy mohou vracet pouze jednotlivé (skalární) hodnoty nebo příkazy pro aktualizaci, vložení nebo odstranění v databázi.
 
 3. Na obrazovce **Vybrat datové připojení** vyberte nebo vytvořte připojení, které bude dotaz používat.
 

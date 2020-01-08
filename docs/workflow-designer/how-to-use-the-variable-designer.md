@@ -5,17 +5,17 @@ ms.topic: conceptual
 f1_keywords:
 - System.Activities.Presentation.View.DesignTimeVariable.UI
 ms.assetid: 0318dfb0-bf8f-4f92-9b86-ae4c1b2161ad
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 59a0da5ad0345ba0733f52d087b262bdc706cd21
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2ec5e6d16d17024b0b49f977b87ddacc275e5860
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650254"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593171"
 ---
 # <a name="how-to-use-the-variable-designer"></a>Postupy: použití návrháře proměnných
 
@@ -31,7 +31,7 @@ Návrhář proměnných se používá k vytvoření proměnných pro použití v
 
 3. Kliknutím na tlačítko **proměnné** v levém dolním rohu plátna návrhu otevřete návrhář proměnných. Zobrazí se Návrhář proměnných.
 
-4. Klikněte na prázdný řádek označený **Proměnná vytvořit proměnnou**. Tím se přidá nový řádek s novou proměnnou pomocí následujících výchozích hodnot: variablex pro **název** , kde x je celé číslo s počáteční hodnotou 1, která se automaticky zvýší a vytvoří jedinečné názvy proměnných, **řetězec** pro **proměnnou. typ**a **posloupnosti** **oboru**. Pro **výchozí**hodnotu není přidána žádná hodnota. Tyto hodnoty můžete kdykoli změnit během procesu návrhu pracovního postupu.
+4. Klikněte na prázdný řádek označený **Proměnná vytvořit proměnnou**. Tím se přidá nový řádek s novou proměnnou pomocí následujících výchozích hodnot: variablex pro **název** , kde x je celé číslo s počáteční hodnotou 1, která se automaticky zvyšuje, aby se vytvořil jedinečný název proměnné, **řetězec** pro **typ proměnné**a **sekvence** pro daný **obor**. Pro **výchozí**hodnotu není přidána žádná hodnota. Tyto hodnoty můžete kdykoli změnit během procesu návrhu pracovního postupu.
 
     > [!NOTE]
     > Pokud chcete proměnnou odstranit, vyberte ji kliknutím na ni a potom stiskněte klávesu **Delete** .

@@ -3,17 +3,17 @@ title: 'Návod: vytvoření realistické 3D Kulečníkovéové kuličky'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: af8eb0f3-bf6a-4d1c-ab47-dcd88ab04efa
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95125e2f808dde634435e4eeb2254e397fceb140
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 866f91303c224f8330a4d2be76f3d29331fcb346
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72634548"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589913"
 ---
 # <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>Návod: Vytvoření realistické trojrozměrné kulečníkové koule
 
@@ -161,15 +161,15 @@ Prvním krokem je vytvoření textury mapy krychle. V mnoha typech aplikací nem
 
 ### <a name="to-assemble-a-cube-map-by-using-the-directx-texture-tool"></a>Sestavení mapy krychle pomocí nástroje DirectX textur Tool
 
-1. V nástroji pro texturu DirectX v hlavní nabídce vyberte **soubor**  > **Nová textura**. Zobrazí se dialogové okno **Nová textura** .
+1. V nástroji pro texturu DirectX v hlavní nabídce vyberte **soubor** > **Nová textura**. Zobrazí se dialogové okno **Nová textura** .
 
 2. Ve skupině **Typ textury** vyberte **cubemap textura**.
 
 3. Ve skupině **dimenze** zadejte správnou hodnotu pro **šířku** a **výšku**a pak zvolte **OK**. Zobrazí se nový dokument textury. Ve výchozím nastavení textura zobrazená jako první v dokumentu textury odpovídá pozitivní ploše krychle **X** .
 
-4. Načtěte texturu, kterou jste vytvořili pro stranu datové krychle textury, na plochu krychle. V hlavní nabídce zvolte **soubor**  > **otevřít na tuto cubemap obličej**, vyberte texturu, kterou jste vytvořili pro stranu datové krychle, a pak zvolte **otevřít**.
+4. Načtěte texturu, kterou jste vytvořili pro stranu datové krychle textury, na plochu krychle. V hlavní nabídce zvolte **soubor** > **otevřít na tuto cubemap obličej**, vyberte texturu, kterou jste vytvořili pro stranu datové krychle, a pak zvolte **otevřít**.
 
-5. Opakujte krok 4 pro plošky krychlí **záporné X**, **kladné Z**a **záporné** . K tomu je třeba zobrazit plošku, kterou chcete načíst. Chcete-li zobrazit jinou plošku mapy krychle, zvolte v hlavní nabídce možnost **zobrazit**  > **mapa krychle**a potom vyberte plošku, kterou chcete zobrazit.
+5. Opakujte krok 4 pro plošky krychlí **záporné X**, **kladné Z**a **záporné** . K tomu je třeba zobrazit plošku, kterou chcete načíst. Chcete-li zobrazit jinou plošku mapy krychle, zvolte v hlavní nabídce možnost **zobrazit** > **mapa krychle**a potom vyberte plošku, kterou chcete zobrazit.
 
 6. Pro plošku **pozitivní osy Y** načtěte texturu, kterou jste vytvořili pro začátek datové krychle textury.
 

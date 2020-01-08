@@ -11,25 +11,25 @@ helpviewer_keywords:
 - icons [Visual Studio], Image Library
 - bitmaps [Visual Studio], Image Library
 ms.assetid: f7a2e7c8-3b9f-4f8e-a6a8-000d72e3811d
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a0fc3719f57e91ddd602bdb6eeb382bf5885a81a
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 2599238e18415fb494d3d72fdf24305d7ba1b0b4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888419"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589900"
 ---
 # <a name="the-visual-studio-image-library"></a>Knihovna obrázků sady Visual Studio
 
-Knihovna obrázků sady Visual Studio obsahuje bitové kopie aplikace, které se zobrazují v Microsoft Visual Studio, Microsoft Windows, systému Office a dalším softwaru společnosti Microsoft. Tato sada více než 1 000 imagí se dá použít k vytváření aplikací, které vypadají vizuálně konzistentně se softwarem Microsoftu.
+Knihovna obrázků Visual Studio obsahuje obrázky aplikace, které se zobrazí v aplikaci Microsoft Visual Studio, Microsoft Windows, systému Office a další software od Microsoftu. Tato sada více než 1 000 obrázků je možné vytvářet aplikace, které vypadají vizuálně konzistentně se softwarem společnosti Microsoft.
 
-[Stáhnout knihovnu imagí sady Visual Studio](http://www.microsoft.com/download/details.aspx?id=35825)
+[Stáhnout knihovna obrázků sady Visual Studio](https://www.microsoft.com/download/details.aspx?id=35825)
 
-Knihovna obrázků je rozdělena na pět kategorií: běžné prvky, akce, poznámky, ikony a objekty. Soubory Readme jsou součástí formátu PDF pro běžné prvky a typy ikon. Obsahují informace o tom, jak tyto obrázky ve svých aplikacích vhodně použít.
+Knihovna obrázků je rozdělena do pěti kategorií: společné prvky, akce, poznámky, ikony a objekty. Soubory Readme jsou u společných elementů a typů ikon zahrnuté ve formátu PDF. Obsahují informace o tom, jak pomocí těchto bitových kopií odpovídajícím způsobem ve svých aplikacích.
 
 ## <a name="see-also"></a>Viz také:
 

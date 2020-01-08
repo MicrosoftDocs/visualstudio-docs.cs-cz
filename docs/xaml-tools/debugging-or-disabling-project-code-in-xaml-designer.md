@@ -3,15 +3,15 @@ title: Ladění nebo zakázání kódu projektu v Návrháři XAML
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ac600581-8fc8-49e3-abdf-1569a3483d74
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: e6426479012ba950f261286323b166da695e9cc5
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: ce29bcef43877ec8a41235545652278645cad123
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189590"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592992"
 ---
 # <a name="debug-or-disable-project-code-in-xaml-designer"></a>Ladění nebo zakázání kódu projektu v Návrháři XAML
 
@@ -35,7 +35,7 @@ Když je kód projektu zakázán, Visual Studio zobrazí zástupné symboly. Nap
 
 1. V dialogu Neošetřená výjimka vyberte **kliknutím sem znovu načtěte odkaz návrháře** .
 
-2. Na panelu nabídek vyberte možnost **ladit** > **Spustit ladění** pro sestavení a spuštění aplikace.
+2. Na panelu nabídek vyberte možnost **ladění** > **Spustit ladění** a spusťte aplikaci.
 
      V případě úspěšného sestavení a spuštění aplikace může být výjimka v době návrhu způsobena kódem vašeho projektu spuštěným v návrháři.
 
@@ -61,7 +61,7 @@ Když je kód projektu zakázán, Visual Studio zobrazí zástupné symboly. Nap
 
      To je proces pro návrháře XAML v první instanci sady Visual Studio.
 
-8. V první instanci aplikace Visual Studio, na panelu nabídek vyberte možnost **ladit** > **Spustit ladění**.
+8. V první instanci aplikace Visual Studio na panelu nabídky vyberte možnost **ladění** > **Spustit ladění**.
 
      Nyní můžete krokovat kód, který je spuštěn v návrháři.
 

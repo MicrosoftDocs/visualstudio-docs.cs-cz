@@ -3,17 +3,17 @@ title: Okna ladicího programu XSLT
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 846fdabd-e5c3-4688-9b0d-a93fbeea1b96
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae37db21072e81a5940f09f085bf261839686a69
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bb72acf2db63e54da8a1ee001d2abfaa30850fc3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646092"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592877"
 ---
 # <a name="debugger-user-interface-xslt"></a>Uživatelské rozhraní ladicího programu (XSLT)
 
@@ -33,7 +33,7 @@ Tento sloupec obsahuje názvy všech místních proměnných v aktuálním oboru
 
 V tomto sloupci se zobrazuje hodnota obsažená v jednotlivých proměnných. V uzlech pro zpracování, instrukci, textu a CData se zobrazuje textová hodnota uzlu. Uzly oboru názvů zobrazují identifikátor URI oboru názvů.
 
-**Textový**
+**Typ**
 
 Tento sloupec Určuje datový typ každé proměnné uvedené ve sloupci **název** .
 
@@ -64,7 +64,7 @@ Okno zarážky zobrazuje všechny zarážky nastavené v aktuálním projektu. P
 
 Okno zarážky by se mělo chovat stejným způsobem jako ostatní ladicí programy sady Visual Studio.
 
-## <a name="watch-window"></a>Kukátko – okno
+## <a name="watch-window"></a>Okno kukátka
 
 Okno Kukátko slouží k vyhodnocení proměnných. Můžete také změnit hodnoty proměnných.
 

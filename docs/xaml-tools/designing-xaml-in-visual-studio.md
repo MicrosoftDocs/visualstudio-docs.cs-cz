@@ -4,23 +4,23 @@ titleSuffix: ''
 ms.date: 08/05/2019
 ms.topic: conceptual
 ms.assetid: 288e2415-9fcf-408e-bc35-9848315e14fd
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: d9cfa2d216baf89d4b7a886ff9d7b56b8b946b8b
-ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
+ms.openlocfilehash: 97946fc2ed79b83fbc7d3ce3c3dc4960934eb5ab
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73569052"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592978"
 ---
 # <a name="design-xaml-in-visual-studio-and-blend-for-visual-studio"></a>Návrh XAML v aplikaci Visual Studio a Blend pro Visual Studio
 
-Visual Studio a Blend pro Visual Studio poskytují i vizuální nástroje pro vytváření poutavých uživatelských rozhraní a bohatých mediálních prostředí pomocí XAML pro nejrůznější typy aplikací. Jak integrované vývojové prostředí (IDE) sdílí společnou sadu funkcí, včetně editoru Visual XAML (Designer). Blend pro Visual Studio, který podporuje platformy WPF a UWP, poskytuje další nástroje pro návrh vizuálních stavů a vytváření animací.
+Visual Studio a Blend for Visual Studio poskytují vizuální nástroje pro sestavování poutavější uživatelské rozhraní a bohatý mediální prostředí s XAML pro širokou škálu typů aplikací. Jak integrované vývojové prostředí (IDE) sdílí společnou sadu funkcí, včetně editoru Visual XAML (Designer). Blend pro Visual Studio, který podporuje platformy WPF a UWP, poskytuje další nástroje pro návrh vizuálních stavů a vytváření animací.
 
-Můžete přepínat mezi Visual Studio a Blend pro Visual Studio a můžete dokonce i mít stejný projekt otevřený v obou prostředích ve stejnou dobu. Změny uložené do souborů XAML v jednom rozhraní IDE lze použít prostřednictvím automatického opětovného načtení při přepnutí na jiné integrované vývojové prostředí (IDE). Způsob opětovného načtení můžete řídit tak, že přejdete na **nástroje**  > **možnosti**  > **prostředí**  > **dokumenty** v obou IDE.
+Můžete přepínat mezi Visual Studio a Blend pro Visual Studio a můžete dokonce i mít stejný projekt otevřený v obou prostředích ve stejnou dobu. Změny uložené do souborů XAML v jednom rozhraní IDE lze použít prostřednictvím automatického opětovného načtení při přepnutí na jiné integrované vývojové prostředí (IDE). Způsob opětovného načtení můžete řídit tak, že přejdete na **nástroje** > **možnosti** > **prostředí** > **dokumenty** v obou IDE.
 
-## <a name="installation"></a>Instalace
+## <a name="installation"></a>Instalace služby
 
 - Pokud chcete vytvářet aplikace WPF, nainstalujte do sady Visual Studio úlohu **vývoj desktopových** aplikací pro .NET. Nainstaluje se taky Blend pro Visual Studio.
 - Pokud chcete vytvářet aplikace pro UWP, nainstalujte **Univerzální platforma Windows vývojové** úlohy v aplikaci Visual Studio. Nainstaluje se taky Blend pro Visual Studio.
@@ -32,22 +32,22 @@ Pro většinu základních úloh vývoje aplikace Visual Studio a Blend pro Visu
 
 - **IntelliSense:** V obou prostředích podporuje funkce IntelliSense, jako je například dokončování příkazů.
 
-- **Ladění:** Můžete ladit v [aplikaci Visual Studio](../debugger/inspect-xaml-properties-while-debugging.md) a [Blend pro Visual Studio](../xaml-tools/debug-xaml-in-blend.md), včetně nastavení zarážek v kódu pro ladění spuštěné aplikace a pomocí [horkého opětovného načtení](../xaml-tools/xaml-hot-reload.md) ke změně kódu XAML v době, kdy aplikace běží. Aby bylo možné zachovat konzistentní prostředí ladění pomocí sady Visual Studio, Blend pro Visual Studio zahrnuje většinu ladění oken a panelů nástrojů sady Visual Studio.
+- **Ladění:** Můžete ladit v [aplikaci Visual Studio](../debugger/inspect-xaml-properties-while-debugging.md) a [Blend pro Visual Studio](../xaml-tools/debug-xaml-in-blend.md), včetně nastavení zarážek v kódu pro ladění spuštěné aplikace a pomocí [horkého opětovného načtení](../xaml-tools/xaml-hot-reload.md) ke změně kódu XAML v době, kdy aplikace běží. Zachování konzistentní možnosti ladění pomocí sady Visual Studio, nástroje Blend for Visual Studio obsahuje většinu ladění systému windows a panelů nástrojů sady Visual Studio.
 
-- **Opětovné načtení souboru:** Soubory XAML můžete upravovat buď v aplikaci Visual Studio, nebo v Blend pro Visual Studio. Upravené soubory, které byly uloženy, se automaticky znovu načítají při přepínání mezi prostředím IDEs. Způsob opětovného načtení můžete řídit tak, že přejdete na **nástroje**  > **možnosti**  > **prostředí**  > **dokumenty** v obou IDE.
+- **Opětovné načtení souboru:** Soubory XAML můžete upravovat buď v aplikaci Visual Studio, nebo v Blend pro Visual Studio. Upravené soubory, které byly uloženy, se automaticky znovu načítají při přepínání mezi prostředím IDEs. Způsob opětovného načtení můžete řídit tak, že přejdete na **nástroje** > **možnosti** > **prostředí** > **dokumenty** v obou IDE.
 
-- **Synchronizovaná rozložení a nastavení:** Přizpůsobené rozložení a nastavení oken nástrojů pro Visual Studio nebo Blend pro Visual Studio se synchronizují napříč vašimi zařízeními a verzemi, když se přihlásíte pomocí stejného účtu přizpůsobení. Viz [synchronizace nastavení napříč více počítači](../ide/synchronized-settings-in-visual-studio.md).
+- **Synchronizovaná rozložení a nastavení:** Přizpůsobené rozložení a nastavení oken nástrojů pro Visual Studio nebo Blend pro Visual Studio se synchronizují napříč vašimi zařízeními a verzemi, když se přihlásíte pomocí stejného účtu přizpůsobení. Zobrazit [synchronizaci nastavení mezi více počítači](../ide/synchronized-settings-in-visual-studio.md).
 
 ## <a name="advanced-capabilities-in-blend-for-visual-studio"></a>Pokročilé možnosti v Blend pro Visual Studio
 
-Pokud chcete zvýšit produktivitu, zvažte použití Blend pro Visual Studio pro následující úlohy. Jedná se o oblasti, kde Blend pro Visual Studio nabízí více funkcí, než je Návrhář sady Visual Studio nebo samotný kód.
+Pokud chcete zvýšit vaši produktivitu, vezměte v úvahu pomocí nástroje Blend for Visual Studio pro následující úlohy. Jedná se o oblasti, kde Blend pro Visual Studio nabízí více funkcí, než je Návrhář sady Visual Studio nebo samotný kód.
 
 | Úloha | Visual Studio | Blend for Visual Studio | Další informace |
 | - | - | - | - |
 | **Návrh vizuálních stavů** | Neexistuje žádný nástroj, který by vám mohl pomáhat s návrhem vizuálních stavů. je nutné je vytvořit programově. | Pomocí návrhových nástrojů můžete změnit vzhled ovládacího prvku na základě jeho stavu. | [Vizuální stavy](modify-the-style-of-objects-in-blend.md#visual-states) |
-| **Vytváření animací** |Pro animace není k dispozici žádný nástroj pro návrh; je nutné je vytvořit programově. To vyžaduje pochopení systému animace a časování v technologii WPF a rozsáhlé znalosti kódování.|Animace můžete vizuálně vytvářet a můžete je zobrazit ve Blend pro Visual Studio. To je rychlejší a přesnější než vytváření animací v kódu. Můžete přidat triggery pro zpracování interakce uživatele a můžete přepnout do kódu pro přidání obslužných rutin událostí a dalších funkcí.|[Animace objektů](../xaml-tools/animate-objects-in-xaml-designer.md)|
-|**Změnit tvar a text na cesty pro snadnější manipulaci**|Není podporováno.|Můžete provádět drobné nebo výrazné změny tvarů (například obdélníky a elipsy) jejich převodem na cesty, které poskytují lepší ovládací prvek pro úpravy. Můžete přetvarovat nebo kombinovat cesty a vytvářet složené cesty z více tvarů.<br /><br />Můžete také převést textové bloky na cesty, abyste je mohli manipulovat jako vektorové obrázky.|[Kreslení tvarů a cest](../xaml-tools/draw-shapes-and-paths.md)|
-|**Úpravy ovládacích prvků, šablon a stylů**|Vyžaduje kódování a znalosti stylů a šablon WPF.|Přepněte libovolný obrázek do ovládacího prvku.<br /><br />Pomocí nástrojů pro úpravu šablon můžete provádět změny ovládacích prvků, stylů a šablon pomocí několika kliknutí myší.<br /><br />Například můžete použít prostředky stylu Blend pro Visual Studio k implementaci běžných ovládacích prvků WPF (jako jsou tlačítka, seznamy, posuvníky, nabídky atd.) a změnit jejich barvu, styl nebo podkladovou šablonu přímo v Blend pro Visual Studio. V případě potřeby můžete přepnout na kód pro dokončení dotykového ovládání.|[Úpravy stylu objektů](modify-the-style-of-objects-in-blend.md)|
-|**Připojení uživatelského rozhraní k datům**|Můžete vytvořit zdroj dat z prostředků, jako jsou SQL Server databáze, WCF nebo webová služba, objekt nebo SharePointový seznam, a pak vytvořit propojení zdroje dat s ovládacími prvky uživatelského rozhraní.<br /><br />Data v době návrhu se musí vytvořit ručně pro interaktivní prostředí návrhu.|Pro .NET Framework aplikace Vytvářejte ukázková data snadno pro vytváření prototypů a testování. Až budete připraveni, přepněte na živá data.<br /><br />Možnosti generování dat Blend pro Visual Studio jsou nedokončené (můžete rychle přidat názvy, čísla, adresy URL a fotky) a můžete si ušetřit spoustu času.<br /><br />Pro živá data můžete navazovat ovládací prvky uživatelského rozhraní k souboru XML nebo k jakémukoli zdroji dat CLR.|[Zobrazení dat](display-data-in-blend.md)|
+| **Vytváření animací** |Neexistuje žádná návrhářský nástroj pro animace; je nutné je vytvořit prostřednictvím kódu programu. To vyžaduje pochopení animace a časování systému v projektech WPF a rozsáhlé znalosti kódování.|Vizuálně vytvářet animace a můžete si zobrazte jejich náhled v programu Blend for Visual Studio. Toto je rychlejší a přesnější, než vytváření animace v kódu. Můžete přidat aktivační události na zpracovávají interakci s uživatelem, a můžete přepnout na kód pro přidání obslužné rutiny událostí a další funkce.|[Animace objektů](../xaml-tools/animate-objects-in-xaml-designer.md)|
+|**Proměňte cesty ke snadnější práci s tvary a text**|Není podporováno.|Drobné nebo výrazné změny můžete provádět obrazce (například obdélníky a tři tečky) převedením na cesty, které poskytují lepší úprav ovládacího prvku. Můžete změnit tvar nebo kombinace cesty a vytvořit složené cesty z více tvarů.<br /><br />Bloky textu můžete také převést do cesty k manipulaci s nimi jako vektorové obrázky.|[Kreslení tvarů a cest](../xaml-tools/draw-shapes-and-paths.md)|
+|**Upravit ovládací prvky, šablony a styly**|Vyžaduje kódování a znalost WPF – styly a šablony.|Zapněte všechny bitové kopie do ovládacího prvku.<br /><br />Pomocí nástroje pro úpravy šablon provádět změny na ovládací prvky, styly a šablony pomocí několika kliknutí myší.<br /><br />Například můžete použít nástroj Blend for Visual Studio prostředků stylu k implementaci běžných ovládacích prvků WPF (například tlačítka, seznamy, posuvníky, nabídkách atd.) a změnit jejich barva, styl nebo základní šablony přímo v programu Blend for Visual Studio. Pokud chcete, můžete kód pro doladění poté přejděte.|[Úpravy stylu objektů](modify-the-style-of-objects-in-blend.md)|
+|**Vaše uživatelské rozhraní se připojit k datům**|Můžete vytvořit zdroj dat z prostředků, jako jsou SQL Server databáze, WCF nebo webová služba, objekt nebo SharePointový seznam, a pak vytvořit propojení zdroje dat s ovládacími prvky uživatelského rozhraní.<br /><br />Dat doby návrhu musí být vytvořeny ručně pro interaktivní návrhové prostředí.|Pro .NET Framework aplikace Vytvářejte ukázková data snadno pro vytváření prototypů a testování. Přepnout na živá data, jakmile budete připraveni.<br /><br />Blend pro vytvoření datové sady Visual Studio možnosti nejsou vyřízeny (můžete přidat názvy, čísla, adresy URL a fotografie snadno za chodu) a ušetřit spoustu času.<br /><br />Pro dynamická data můžete svázat ovládací prvky uživatelského rozhraní do souboru XML nebo k libovolnému zdroji dat CLR.|[Zobrazení dat](display-data-in-blend.md)|
 
-Další informace o pokročilém návrhu jazyka XAML naleznete v tématu [Vytvoření uživatelského rozhraní pomocí Blend pro Visual Studio](../xaml-tools/creating-a-ui-by-using-blend-for-visual-studio.md).
+Další informace o pokročilý design XAML najdete v tématu [vytvoření uživatelského rozhraní pomocí nástroje Blend pro Visual Studio](../xaml-tools/creating-a-ui-by-using-blend-for-visual-studio.md).

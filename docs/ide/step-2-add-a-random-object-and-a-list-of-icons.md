@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97352f60bfc40df28876731ec1e8aee1bff1773c
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 6548b86f075e5da51bea7835c93e5604f2177397
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576283"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588769"
 ---
 # <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>Krok 2: přidejte náhodný objekt a seznam ikon
 
@@ -36,13 +36,13 @@ V tomto kroku vytvoříte sadu odpovídajících symbolů pro hru. Každý symbo
      [!code-vb[VbExpressTutorial4Step2_3_4#1](../ide/codesnippet/VisualBasic/step-2-add-a-random-object-and-a-list-of-icons_1.vb)]
 
       > [!IMPORTANT]
-      > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![Programming jazykové řízení pro ](../ide/media/docs-programming-language-control.png) Docs.Microsoft.com
+      > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![programové řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
 
       Pokud používáte C#, nezapomeňte vložit kód za levou složenou závorku a hned za deklaraci třídy (`public partial class Form1 : Form`). Pokud používáte Visual Basic, vložte kód hned za deklaraci třídy (`Public Class Form1`).
 
 3. Při přidávání objektu seznamu si všimněte okna **technologie IntelliSense** , které se otevře. Následuje C# příklad, ale podobný text se zobrazí při přidání seznamu v Visual Basic.
 
-     ![Properties okno zobrazující událost Click ](../ide/media/express_listintellisense.png)<br/>*Okno **IntelliSense***
+     ![okno Vlastnosti zobrazení události Click](../ide/media/express_listintellisense.png)<br/>*Okno **IntelliSense***
 
     > [!NOTE]
     > Okno technologie IntelliSense se zobrazí pouze v případě, že zadáte kód ručně. Pokud kód zkopírujete a vložíte, nezobrazí se.

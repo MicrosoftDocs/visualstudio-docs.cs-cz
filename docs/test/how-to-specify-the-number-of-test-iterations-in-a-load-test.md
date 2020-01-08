@@ -6,44 +6,44 @@ helpviewer_keywords:
 - load tests, properties
 - load tests, run settings
 ms.assetid: 45a625db-b3e7-4d64-beda-b9a76248096d
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: aa5de5f7f9c1bfef78ad3698886e8d7af43a4812
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 446da348c1a947e6c59b8ad60d9bd0799d0d4322
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653396"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588938"
 ---
 # <a name="how-to-specify-the-number-of-test-iterations-in-a-load-test-run-setting"></a>Postupy: určení počtu testovacích iterací v nastavení spuštění zátěžového testu
 
-Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**můžete pomocí **Editor zátěžového testu** změnit vlastnosti scénářů tak, aby vyhovovaly vašim požadavkům na testování a cílům. Další informace naleznete v tématu [Návod: vytvoření a spuštění zátěžového testu](../test/walkthrough-create-and-run-a-load-test.md).
+Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**, můžete použít **editoru zátěžového testu** Chcete-li změnit vlastnosti scénářů pro splnění potřebám a cílům testování. Další informace najdete v tématu [návod: vytvoření a spuštění zátěžového testu](../test/walkthrough-create-and-run-a-load-test.md).
 
-Pomocí **Editor zátěžového testu**můžete upravit vlastnost **iterace testu** hodnoty parametrů běhu v okně **vlastnosti** . Vlastnost **iterace testu** určuje počet iterací, které se mají spustit na všech testech webového výkonu a jednotek ve všech scénářích zátěžového testu pomocí **Editor zátěžového testu**.
+Použití **editoru zátěžových testů**, můžete upravit **testovacích iterací** vlastností hodnoty parametrů spuštění v **vlastnosti** okna. **Testovací iterace** vlastnost určuje počet iterací pro spuštění na všechny webové testy výkonu a jednotky ve všech scénářích v testu zatížení pomocí **editoru zátěžového testu**.
 
 > [!NOTE]
-> Úplný seznam vlastností parametrů spuštění a jejich popis naleznete v tématu [Vlastnosti nastavení běhu zátěžového testu](../test/load-test-run-settings-properties.md).
+> Úplný seznam vlastností parametrů spuštění a jejich popis najdete v části [zátěžového testu spusťte nastavení](../test/load-test-run-settings-properties.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="to-specify-the-number-of-test-iterations-in-a-run-setting"></a>Určení počtu testovacích iterací v nastavení spuštění
+## <a name="to-specify-the-number-of-test-iterations-in-a-run-setting"></a>K určení počtu testovacích iterací v nastavení spuštění
 
 1. Otevřete zátěžový test.
 
-     Zobrazí se **Editor zátěžového testu** a zobrazí se strom zátěžového testu.
+     **Editoru zátěžového testu** zobrazí se strom zátěžového testu.
 
-2. Ve stromové struktuře zátěžového testu ve složce **parametry spuštění** vyberte nastavení spuštění.
+2. V zátěžového testování v stromu **parametrů běhu** složky, zvolte nastavení spuštění.
 
-3. V nabídce **zobrazení** vyberte **okno Vlastnosti** a zobrazte kategorie a vlastnosti nastavení spuštění zatížení.
+3. Na **zobrazení** nabídce vyberte možnost **okno vlastností** zobrazíte zatížení systémy kategorie nastavení a vlastnosti.
 
-4. Nastavte vlastnost **použít iterace testu** na **hodnotu true**.
+4. Nastavte **iterace testu použijte** vlastnost **True**.
 
-5. Do vlastnosti **iterace testu** zadejte číslo, které označuje počet iterací testu, které mají být spuštěny během zátěžového testu.
+5. V **testovací iterace** vlastnost, zadejte číslo určující počet iterací testu ke spuštění během zátěžového testu.
 
-6. Po dokončení změny vlastnosti vyberte v nabídce **soubor** možnost **Uložit** . Pak můžete spustit zátěžový test s použitím nové hodnoty **iterace testu** .
+6. Po dokončení změn vlastnosti, zvolte **Uložit** na **souboru** nabídky. Potom můžete spustit zátěžový test pomocí nového **testovací iterace** hodnotu.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Konfigurovat nastavení běhu zátěžového testu](../test/configure-load-test-run-settings.md)
+- [Konfigurace parametrů spuštění zátěžového testu](../test/configure-load-test-run-settings.md)
 - [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md)

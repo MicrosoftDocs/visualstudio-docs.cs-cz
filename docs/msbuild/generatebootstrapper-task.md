@@ -1,5 +1,5 @@
 ---
-title: GenerateBootstrapper – úloha | Dokumentace Microsoftu
+title: Úloha GenerateBootstrapper – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,59 +13,59 @@ helpviewer_keywords:
 - MSBuild, GenerateBootstrapper task
 - GenerateBootstrapper task [MSBuild]
 ms.assetid: ca3ba2c6-d2ea-41f2-b7e3-0fc2b0730460
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f18b01a6db0068b44ad9c25037e544efa8df35a
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 660f63f68435f4c4eba8d1c3dfb2438541da4841
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746589"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589289"
 ---
 # <a name="generatebootstrapper-task"></a>GenerateBootstrapper – úloha
-Poskytuje automatizovaný způsob, jak zjistit, stáhnout a nainstalovat aplikace a její požadované součásti. Slouží jako jeden instalační program, který integruje dva různé instalační programy pro všechny součásti tvořící aplikaci.
+Poskytuje automatizovaný způsob detekce, stažení a instalace aplikace a jejích požadavků. Slouží jako jediný instalační program, který integruje samostatné instalační programy pro všechny komponenty, které tvoří aplikaci.
 
 ## <a name="task-parameters"></a>Parametry úlohy
-Dále jsou parametry `GenerateBootstrapper` úloh.
+Následující popis parametrů úlohy `GenerateBootstrapper`.
 
 - `ApplicationFile`
 
-   Volitelné `String` parametru.
+   Volitelný parametr `String`.
 
-   Určuje soubor, který bude používat zaváděcí nástroj a spusťte tak instalaci aplikace poté, co jsou nainstalované veškeré požadované součásti. Způsobí chybu sestavení, pokud `BootstrapperItems` ani `ApplicationFile` je zadán parametr.
+   Určuje soubor, který zaváděcí program použije k zahájení instalace aplikace po instalaci všech požadovaných součástí. Pokud není zadán parametr `BootstrapperItems` ani `ApplicationFile`, bude chyba sestavení výsledkem.
 
 - `ApplicationName`
 
-   Volitelné `String` parametru.
+   Volitelný parametr `String`.
 
-   Určuje název aplikace, který bude instalovat zaváděcí nástroj. Tento název se zobrazí v uživatelském rozhraní používá zaváděcí nástroj během instalace.
+   Určuje název aplikace, kterou bude instalovat zaváděcí nástroj. Tento název se zobrazí v uživatelském rozhraní, které zaváděcí nástroj používá během instalace.
 
 - `ApplicationRequiresElevation`
 
-   Volitelné `Boolean` parametru.
+   Volitelný parametr `Boolean`.
 
-   Pokud `true`, komponenty běží se zvýšenými oprávněními po instalaci na cílovém počítači.
+   Pokud `true`, bude se komponenta spouštět se zvýšenými oprávněními, když je nainstalovaná na cílovém počítači.
 
 - `ApplicationUrl`
 
-   Volitelné `String` parametru.
+   Volitelný parametr `String`.
 
-   Určuje umístění na webu, který je hostitelem aplikace Instalační služby.
+   Určuje umístění webu, které hostuje instalační program aplikace.
 
 - `BootstrapperComponentFiles`
 
-   Volitelné `String[]` výstupní parametr.
+   Volitelný výstupní parametr `String[]`.
 
-   Určuje umístění sestavené soubory balíčku zaváděcího nástroje.
+   Určuje sestavené umístění souborů balíčku zaváděcího nástroje.
 
 - `BootstrapperItems`
 
-   Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.
+   Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.
 
-   Určuje produkty, které chcete sestavit zaváděcí nástroj. Položky předaných tomuto parametru by měl mít následující syntaxi:
+   Určuje produkty, které se mají sestavit do zaváděcího nástroje. Položky předané do tohoto parametru by měly mít následující syntaxi:
 
   ```xml
   <BootstrapperItem
@@ -76,83 +76,83 @@ Dále jsou parametry `GenerateBootstrapper` úloh.
   </BootstrapperItem>
   ```
 
-   `Include` Atribut představuje název požadovaných součástí, která se má nainstalovat. `ProductName` Metadata položky je volitelné a použije stroj sestavení jako popisný název Pokud balíček se nenašel. Tyto položky nejsou vyžadovány [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vstupní parametry, pokud žádné `ApplicationFile` je zadán. Měli byste zahrnout jednu položku pro každý požadavek, který musí být nainstalovaný pro vaši aplikaci.
+   Atribut `Include` představuje název předpokladu, který by měl být nainstalován. Metadata `ProductName` položky jsou volitelná a modul sestavení ho použije jako uživatelsky přívětivý název, pokud balíček nejde najít. Tyto položky nejsou požadovány [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vstupními parametry, pokud není zadána žádná `ApplicationFile`. Měli byste zahrnout jednu položku pro každý požadavek, který musí být nainstalovaný pro vaši aplikaci.
 
-   Způsobí chybu sestavení, pokud `BootstrapperItems` ani `ApplicationFile` je zadán parametr.
+   Pokud není zadán parametr `BootstrapperItems` ani `ApplicationFile`, bude chyba sestavení výsledkem.
 
 - `BootstrapperKeyFile`
 
-   Volitelné `String` výstupní parametr.
+   Volitelný výstupní parametr `String`.
 
-   Určuje umístění sestavené *setup.exe*
+   Určuje sestavené umístění souboru *Setup. exe.*
 
 - `ComponentsLocation`
 
-   Volitelné `String` parametru.
+   Volitelný parametr `String`.
 
-   Určuje umístění pro zaváděcí nástroj hledání instalační požadavky k instalaci. Tento parametr může mít následující hodnoty:
+   Určuje umístění pro zaváděcí nástroj, který bude hledat požadavky instalace pro instalaci. Tento parametr může mít následující hodnoty:
 
-  - `HomeSite`: Označuje, že kontrolu požadovaných součástí je hostovaná dodavatelem součásti.
+  - `HomeSite`: označuje, že je požadovaná součást hostována dodavatelem součásti.
 
-  - `Relative`: Označuje, že kontrolu požadovaných součástí je ve stejném umístění aplikace.
+  - `Relative`: označuje, že požadovaná součást je ve stejném umístění aplikace.
 
-  - `Absolute`: Označuje, že všechny komponenty jsou vyhledaných na centralizované adrese URL. Tato hodnota má být použita ve spojení s `ComponentsUrl` vstupního parametru.
+  - `Absolute`: označuje, že všechny součásti se mají najít na centralizované adrese URL. Tato hodnota by měla být použita ve spojení s parametrem `ComponentsUrl` Input.
 
-    Pokud `ComponentsLocation` není zadán, `HomeSite` se používá ve výchozím nastavení.
+    Pokud není zadaný `ComponentsLocation`, ve výchozím nastavení se použije `HomeSite`.
 
 - `ComponentsUrl`
 
-   Volitelné `String` parametru.
+   Volitelný parametr `String`.
 
-   Určuje adresu URL obsahující instalační požadavky.
+   Určuje adresu URL obsahující předpoklady pro instalaci.
 
 - `CopyComponents`
 
-   Volitelné `Boolean` parametru.
+   Volitelný parametr `Boolean`.
 
-   Pokud `true`, zaváděcí nástroj zkopíruje všechny výstupní soubory na cestě zadané v `OutputPath` parametru. Hodnoty `BootstrapperComponentFiles` parametr by všechny měly vycházet tuto cestu. Pokud `false`, soubory nejsou zkopírovány a `BootstrapperComponentFiles` hodnoty jsou založené na hodnotě `Path` parametru.  Výchozí hodnota tohoto parametru je `true`.
+   Pokud `true`, zaváděcí nástroj zkopíruje všechny výstupní soubory do cesty zadané v parametru `OutputPath`. Hodnoty parametru `BootstrapperComponentFiles` by měly být založené na této cestě. Pokud `false`, soubory nejsou zkopírovány a hodnoty `BootstrapperComponentFiles` jsou založeny na hodnotě parametru `Path`.  Výchozí hodnota tohoto parametru je `true`.
 
 - `Culture`
 
-   Volitelné `String` parametru.
+   Volitelný parametr `String`.
 
-   Určuje jazykovou verzi k použití pro zaváděcí nástroj uživatelského rozhraní a požadavky na instalaci. Pokud zadaná jazyková verze není k dispozici, úkol používá hodnotu `FallbackCulture` parametru.
+   Určuje jazykovou verzi, která se má použít pro uživatelské rozhraní zaváděcího nástroje a požadavky na instalaci. Pokud zadaná jazyková verze není k dispozici, úloha používá hodnotu parametru `FallbackCulture`.
 
 - `FallbackCulture`
 
-   Volitelné `String` parametru.
+   Volitelný parametr `String`.
 
-   Určuje sekundární jazykovou verzi k použití pro zaváděcí nástroj uživatelského rozhraní a požadavky na instalaci.
+   Určuje sekundární jazykovou verzi, která se má použít pro uživatelské rozhraní zaváděcího nástroje a požadavky na instalaci.
 
 - `OutputPath`
 
-   Volitelné `String` parametru.
+   Volitelný parametr `String`.
 
-   Určuje umístění pro kopírování *setup.exe* a všechny soubory balíčku.
+   Určuje umístění pro kopírování souboru *Setup. exe* a všech souborů balíčku.
 
 - `Path`
 
-   Volitelné `String` parametru.
+   Volitelný parametr `String`.
 
-   Určuje umístění k dispozici všechny požadované balíčky.
+   Určuje umístění všech dostupných balíčků požadovaných součástí.
 
 - `SupportUrl`
 
-   Volitelné `String` parametru.
+   Volitelný parametr `String`.
 
-   Určuje adresu URL zadat, pokud se nezdaří instalace zaváděcího nástroje.
+   Určuje adresu URL, která má být zadaná, pokud se instalace zaváděcího nástroje nepovede.
 
 - `Validate`
 
-   Volitelné `Boolean` parametru.
+   Volitelný parametr `Boolean`.
 
-   Pokud `true`, zaváděcí nástroj provádí ověření XSD položky zadané vstupní zaváděcího nástroje. Výchozí hodnota tohoto parametru je `false`.
+   Pokud `true`, zaváděcí nástroj provede ověření XSD na zadaných položkách zaváděcího nástroje. Výchozí hodnota tohoto parametru je `false`.
 
 ## <a name="remarks"></a>Poznámky
-Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).
+Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
-V následujícím příkladu `GenerateBootstrapper` úloh k instalaci aplikace, která musí mít jako předpoklad nainstalované rozhraní .NET Framework 2.0.
+Následující příklad používá úlohu `GenerateBootstrapper` k instalaci aplikace, která musí mít nainstalovanou .NET Framework 2,0 jako předpoklad.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -177,4 +177,4 @@ V následujícím příkladu `GenerateBootstrapper` úloh k instalaci aplikace, 
 
 ## <a name="see-also"></a>Viz také:
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

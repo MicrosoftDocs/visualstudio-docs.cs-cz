@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IntelliSense [Visual Basic]
 - IntelliSense [Visual Studio], Visual Basic
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa21939375956024a0ca16cadd99160d142a1d5d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 118de9ec05bcd5c56376376619bea0c5148d36ab
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647274"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594185"
 ---
 # <a name="intellisense-for-visual-basic-code-files"></a>IntelliSense pro Visual Basic soubory kódu
 
 Visual Basic Editor zdrojového kódu nabízí následující funkce technologie IntelliSense:
 
-## <a name="syntax-tips"></a>Tipy k syntaxi
+## <a name="syntax-tips"></a>Syntaxe tipy
 
 V popisech syntaxe se zobrazuje syntaxe příkazu, který píšete. To je užitečné pro příkazy, jako je například [Declare](/dotnet/visual-basic/language-reference/statements/declare-statement).
 
@@ -31,7 +31,7 @@ V popisech syntaxe se zobrazuje syntaxe příkazu, který píšete. To je užite
 
 - Dokončení u různých klíčových slov
 
-     Například pokud zadáte `goto` a mezeru, IntelliSense zobrazí v rozevírací nabídce seznam definovaných popisků. Mezi další podporovaná klíčová slova patří `Exit`, `Implements`, `Option` a `Declare`.
+     Například pokud zadáte `goto` a mezeru, IntelliSense zobrazí v rozevírací nabídce seznam definovaných popisků. Mezi další podporovaná klíčová slova patří `Exit`, `Implements`, `Option`a `Declare`.
 
 - Dokončení při `Enum` a `Boolean`
 
@@ -39,7 +39,7 @@ V popisech syntaxe se zobrazuje syntaxe příkazu, který píšete. To je užite
 
 Dokončení může být vypnuto ve výchozím nastavení tím, že se na stránce **Obecné** vlastnosti ve složce **Visual Basic** odhlásí **Automatické seznam členů** .
 
-Doplňování můžete ručně vyvolat vyvoláním členů seznamu, kompletního slova nebo **alternativního** +**šipky vpravo**. Další informace najdete v tématu [použití technologie IntelliSense](../ide/using-intellisense.md).
+Doplňování můžete ručně vyvolat vyvoláním členů seznamu, kompletního slova nebo **alternativního**+**šipky vpravo**. Další informace najdete v tématu [použití IntelliSense](../ide/using-intellisense.md).
 
 ## <a name="intellisense-in-zone"></a>IntelliSense v zóně
 

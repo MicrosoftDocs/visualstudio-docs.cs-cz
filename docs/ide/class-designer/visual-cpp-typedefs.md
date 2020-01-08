@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - Class Designer [Visual Studio], typedefs
 ms.assetid: c1984108-71fc-4d3a-b4d4-3eac2c6b4ebf
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94dc4a6687a2aaede7fc901884c5d3acc6fbf56f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4c57382809b7730df2d7c674c24902d70ccab647
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747997"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590693"
 ---
 # <a name="c-typedefs-in-class-designer"></a>C++definice typedef v Návrhář tříd
 
@@ -39,7 +39,7 @@ Pak můžete použít tento typ k deklaraci instance:
 
 ## <a name="class-and-struct-shapes"></a>Obrazce třídy a struktury
 
-V **Návrhář tříd**má C++ definice typedef tvar typu určeného v typedef. Pokud zdroj deklaruje `typedef class`, má obrazec zaoblené rohy a **třídu**Label. U `typedef struct` tvar má čtvercové rohy a **strukturu**popisku.
+V **Návrhář tříd**má C++ definice typedef tvar typu určeného v typedef. Pokud zdroj deklaruje `typedef class`, má obrazec zaoblené rohy a **třídu**Label. U `typedef struct`tvar má čtvercové rohy a **strukturu**popisku.
 
 Třídy a struktury mohou mít v rámci sebe vnořené definice typedef deklarované. V **Návrhář tříd**tvary třídy a struktury mohou zobrazit vnořené deklarace typedef jako vnořené tvary.
 

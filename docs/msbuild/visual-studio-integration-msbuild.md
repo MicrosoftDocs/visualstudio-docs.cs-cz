@@ -15,17 +15,17 @@ helpviewer_keywords:
 - MSBuild, in-process compilers
 - MSBuild, design-time target execution
 ms.assetid: 06cd6d7f-8dc1-4e49-8a72-cc9e331d7bca
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 00d64b060b340302107ddffaf1d69cad802a283b
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: b1ddb8bdbc913a72791144d5e9d29d206712a3d6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913277"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594419"
 ---
 # <a name="visual-studio-integration-msbuild"></a>Integrace se sadou Visual Studio (MSBuild)
 Visual Studio hostuje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] k načtení a sestavení spravovaných projektů. Protože [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] je zodpovědné za projekt, téměř každý projekt ve [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] formát může být úspěšně použit v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], i když byl autorem jiný nástroj a má vlastní proces sestavení projektu.
@@ -66,7 +66,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 > Některé názvy typů položek jsou pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , ale nejsou uvedené v tomto rozevíracím seznamu.
 
 ## <a name="in-process-compilers"></a>Vnitroprocesové kompilátory
- Pokud je to možné, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] se pokusí použít verzi v procesu [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kompilátoru pro zajištění zvýšeného výkonu. (Nevztahuje se na [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)].) Aby to fungovalo správně musí být splněny následující podmínky:
+ Pokud je to možné, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] se pokusí použít verzi v procesu [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kompilátoru pro zajištění zvýšeného výkonu. (Netýká se [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)].) Aby to fungovalo správně, musí se splnit následující podmínky:
 
 - V cíli projektu, musí být úkol s názvem `Vbc` pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projekty.
 
@@ -165,7 +165,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
   - `OriginalItemSpec`, obsahující specifikace původní položky odkazu.
 
-  - `ResolvedFrom`, nastavte na "{TargetFrameworkDirectory}", pokud byla přeložena z adresáře .NET Framework.
+  - Pokud byla přeložena z adresáře .NET Framework, je `ResolvedFrom`nastavena na hodnotu {TargetFrameworkDirectory}.
 
 - Odkazy modelu COM:
 
@@ -176,12 +176,12 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
    Projektový systém volá cíl s dobře známým názvem `ResolveNativeReferences`. Tento cíl by měl vytvářet položky s názvem položky typu `NativeReferenceFile`. Položky by měly mít všechna metadata ze vstupních položek prošla kromě nových metadat s názvem `OriginalItemSpec`, obsahující specifikace původní položky odkazu.
 
 ## <a name="performance-shortcuts"></a>Klávesové zkratky výkonu
- Použijete-li prostředí Visual Studio IDE pro spuštění ladění (buď výběrem klávesy F5, nebo výběrem možnosti **ladit** > **Spustit ladění** na panelu nabídek) nebo sestavení > projektu (například**řešení** sestavení sestavení ), proces sestavení používá rychlou aktualizaci pro zlepšení výkonu. V některých případech, kde přizpůsobená sestavení vytvoří soubory, které zase získají sestavení kontrola rychlé aktualizace nesprávně identifikuje změněné soubory. Projekty, které vyžadují důkladnější kontroly aktualizací můžete vypnout rychlé kontroly nastavením proměnné prostředí `DISABLEFASTUPTODATECHECK=1`. Alternativně projekty můžete nastavit to jako vlastnost MSBuild v projektu nebo v souboru, který importuje.
+ Použijete-li prostředí Visual Studio IDE pro spuštění ladění (buď výběrem klávesy F5, nebo výběrem možnosti **ladit** > **Spustit ladění** na panelu nabídek), nebo chcete-li sestavit projekt (například řešení **sestavení** > **sestavení**), proces sestavení používá funkci Rychlá aktualizace ke zvýšení výkonu. V některých případech, kde přizpůsobená sestavení vytvoří soubory, které zase získají sestavení kontrola rychlé aktualizace nesprávně identifikuje změněné soubory. Projekty, které vyžadují důkladnější kontroly aktualizací můžete vypnout rychlé kontroly nastavením proměnné prostředí `DISABLEFASTUPTODATECHECK=1`. Alternativně projekty můžete nastavit to jako vlastnost MSBuild v projektu nebo v souboru, který importuje.
 
  Pro pravidelná sestavení v sadě Visual Studio se nevztahuje kontrola rychlé aktualizace a projekt bude sestaven jako kdyby jste vyvolali sestavení z příkazového řádku.
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Rozšíří proces sestavení sady Visual Studio.](../msbuild/how-to-extend-the-visual-studio-build-process.md)
+- [Postupy: rozšiřování procesu sestavení sady Visual Studio](../msbuild/how-to-extend-the-visual-studio-build-process.md)
 - [Spuštění sestavení z integrovaného vývojového prostředí (IDE)](../msbuild/starting-a-build-from-within-the-ide.md)
 - [Registrovat rozšíření .NET Framework](../msbuild/registering-extensions-of-the-dotnet-framework.md)
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)

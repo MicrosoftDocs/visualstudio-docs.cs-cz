@@ -3,17 +3,17 @@ title: Úvodní zobrazení návrháře schématu XML
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: f25e7a2f-7469-4279-b2f4-ee2dfd4d3af1
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1978760aba90b884099085c995372f9612be3c8a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f05c3023a246ba193c98cb1b01984a54fdaa0ebb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72608493"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592526"
 ---
 # <a name="start-view"></a>Počáteční zobrazení
 
@@ -23,7 +23,7 @@ Zobrazení začátek obsahuje dvě hlavní části, *meze* a podokno **podrobnos
 
 ![Úvodní zobrazení návrháře schématu XML](../xml-tools/media/xsddesigner_startview.gif)
 
-## <a name="watermark"></a>Meze
+## <a name="watermark"></a>Vodoznak
 
 Podokno vodoznak obsahuje seznam odkazů na všechna zobrazení návrháře XSD, editor XML a **Průzkumník schémat XML**. Pokud má sada schémat chyby, na konci seznamu se zobrazí následující text: "pomocí Seznam chyb můžete zobrazit a opravit chyby v sadě."
 
@@ -41,9 +41,9 @@ Následující tlačítka jsou povolena na panelu nástrojů návrháře XSD, je
 
 |Možnost|Popis|
 |-|-----------------|
-|**Zobrazit úvodní zobrazení**|Přepne do zobrazení začátek. K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **Ctrl** +**1**.|
-|**Zobrazit zobrazení modelu obsahu**|Přepne do zobrazení modelu obsahu. K tomuto zobrazení lze přistupovat pomocí klávesových zkratek: **Ctrl** +**2**.|
-|**Zobrazit zobrazení grafu**|Přepne do zobrazení grafu. K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **Ctrl** +**3**.|
+|**Zobrazit úvodní zobrazení**|Přepne do zobrazení začátek. K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **Ctrl**+**1**.|
+|**Zobrazit zobrazení modelu obsahu**|Přepne do zobrazení modelu obsahu. K tomuto zobrazení lze přistupovat pomocí klávesových zkratek: **Ctrl**+**2**.|
+|**Zobrazit zobrazení grafu**|Přepne do zobrazení grafu. K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **Ctrl**+**3**.|
 
 ## <a name="see-also"></a>Viz také:
 

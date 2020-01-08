@@ -1,5 +1,5 @@
 ---
-title: Xmlpoke – úloha | Dokumentace Microsoftu
+title: Úloha XmlPoke – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,40 +11,40 @@ helpviewer_keywords:
 - XmlPoke task [MSBuild]
 - MSBuild, XmlPoke task
 ms.assetid: 6ba1953c-be3b-4df8-8561-e133408f8270
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6eb87a279da834004e599a49b33d0c1b32355269
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f44ce4736900fde35716ca3ec9dabb2d55c6df51
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777613"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588379"
 ---
 # <a name="xmlpoke-task"></a>XmlPoke – úloha
 
-Nastaví hodnoty podle specifikace dotazu XPath do souboru XML.
+Nastaví hodnoty určené dotazem XPath do souboru XML.
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry `XmlPoke` úloh.
+ Následující tabulka popisuje parametry úlohy `XmlPoke`.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Namespaces`|Volitelné `String` parametru.<br /><br /> Určuje obor názvů u předpony dotazu XPath. `Namespaces` je fragment kódu XML, který se skládá z `Namespace` elementy s atributy `Prefix` a `Uri`. Atribut `Prefix` určuje předpona, kterou chcete přidružit k oboru názvů určenému ve `Uri` atribut. Nepoužívejte prázdné `Prefix`.|
-|`Query`|Volitelné `String` parametru.<br /><br /> Určuje dotaz XPath.|
-|`Value`|Vyžaduje <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje hodnotu, která má být vložen do zadané cesty.|
-|`XmlInputPath`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje vstup XML jako cestu k souboru.|
+|`Namespaces`|Volitelný parametr `String`.<br /><br /> Určuje obory názvů pro předpony dotazů XPath. `Namespaces` je fragment kódu XML sestávající z `Namespace` prvků s atributy `Prefix` a `Uri`. Atribut `Prefix` Určuje předponu, která má být přidružena k oboru názvů určenému v atributu `Uri`. Nepoužívejte prázdné `Prefix`.|
+|`Query`|Volitelný parametr `String`.<br /><br /> Určuje dotaz XPath.|
+|`Value`|Vyžaduje se <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje hodnotu, která bude vložena do zadané cesty.|
+|`XmlInputPath`|Volitelný parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje vstup XML jako cestu k souboru.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě s parametry, které jsou uvedené v tabulce, zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).
+ Kromě toho, že mají parametry, které jsou uvedeny v tabulce, tato úloha dědí parametry z třídy <xref:Microsoft.Build.Tasks.TaskExtension>, kterou sám dědí z třídy <xref:Microsoft.Build.Utilities.Task>. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
 
-Tady je sample.xml upravit:
+Tady je ukázkový soubor. XML, který se má změnit:
 
 ```xml
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
@@ -55,7 +55,7 @@ Tady je sample.xml upravit:
 </Package>
 ```
 
-V tomto příkladu, pokud chcete upravit `/Package/mp:PhoneIdentity/PhonePublisherId`, pak použijte
+V tomto příkladu, pokud chcete upravit `/Package/mp:PhoneIdentity/PhonePublisherId`, použijte
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -77,9 +77,9 @@ V tomto příkladu, pokud chcete upravit `/Package/mp:PhoneIdentity/PhonePublish
 </Project>
 ```
 
-`dn` Zde slouží jako předponu oboru názvů umělé pro výchozí obor názvů.
+`dn` se používá jako umělá předpona oboru názvů pro výchozí obor názvů.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

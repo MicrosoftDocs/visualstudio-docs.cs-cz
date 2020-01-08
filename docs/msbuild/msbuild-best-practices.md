@@ -1,27 +1,27 @@
 ---
-title: Doporučené postupy nástroje MSBuild | Dokumentace Microsoftu
+title: Osvědčené postupy nástroje MSBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices, MSBuild
 - MSBuild, best practices
 ms.assetid: 90ef8693-e921-410a-a377-fe4d13f58c48
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ad0bd131251259b375a4300807825205da2c6ea
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b1aee1a6ae3abc06846523df9470ad75d316a50b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931496"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592084"
 ---
-# <a name="msbuild-best-practices"></a>Doporučené postupy nástroje MSBuild
-Doporučujeme následující osvědčené postupy pro psaní skriptů nástroje MSBuild:
+# <a name="msbuild-best-practices"></a>Osvědčené postupy nástroje MSBuild
+Pro psaní skriptů MSBuild doporučujeme následující osvědčené postupy:
 
-- Výchozí hodnoty vlastností jsou nejlépe odstraníte pomocí `Condition` atribut a ne pomocí deklarace vlastnost, jejíž výchozí hodnota se dá přepsat v příkazovém řádku. Například použít
+- Výchozí hodnoty vlastností jsou nejlépe zpracovávány pomocí atributu `Condition` a nikoli deklarováním vlastnosti, jejíž výchozí hodnota může být přepsána v příkazovém řádku. Například použijte
 
 ```xml
 <MyProperty Condition="'$(MyProperty)' == ''">
@@ -29,7 +29,7 @@ Doporučujeme následující osvědčené postupy pro psaní skriptů nástroje 
 </MyProperty>
 ```
 
-- Při výběru položek, vyhněte se zástupné znaky. Místo toho zadejte soubory explicitně. To usnadňuje sledování chyb, které mohou nastat při přidání nebo odstranění souborů.
+- Vyhněte se zástupným znakům při výběru položek. Místo toho zadejte soubory explicitně. To usnadňuje sledování chyb, které mohou nastat při přidávání nebo odstraňování souborů.
 
 ## <a name="see-also"></a>Viz také:
-- [Rozšířené koncepty](../msbuild/msbuild-advanced-concepts.md)
+- [Pokročilé koncepty](../msbuild/msbuild-advanced-concepts.md)

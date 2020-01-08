@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b7afdae8e98dba33184889fe314725e634e3bfa7
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: e249f2ad765063c54df08466bef15b8e443af1bf
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314050"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591720"
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>Krok 8: Zapište kód pro obslužnou rutinu události zobrazit tlačítko obrázku
 
@@ -43,7 +43,7 @@ Technologie IntelliSense se pokusí určit, co chcete udělat dále, a automatic
     > [!NOTE]
     > Váš kód nemusí zobrazit obslužné rutiny událostí ve camelCase písmenech.
 
-1. Okno **technologie IntelliSense** by mělo zvýrazňovat slovo `if`. (Pokud ne, zadejte `f` s malými písmeny a pak.) Všimněte si, jak se pole *ToolTip* vedle okna **IntelliSense** zobrazí s popisem, **fragmentem kódu pro příkaz if**. (V Visual Basic Popis také uvádí, že se jedná o fragment, ale s mírně odlišným použitím slov.) Chcete použít tento fragment kódu, proto vyberte klávesu **TAB** a vložte `if` do kódu. Potom znovu vyberte klávesu **TAB** , aby se použil fragment `if`. (Pokud jste zvolili někde jinde a okno **IntelliSense** zmizelo, je nutné na `i` a znovu ho zadat a otevře se okno **IntelliSense** znovu.)
+1. Okno **technologie IntelliSense** by mělo zvýrazňovat slovo `if`. (Pokud ne, zadejte `f`s malými písmeny a pak.) Všimněte si, jak se pole *ToolTip* vedle okna **IntelliSense** zobrazí s popisem, **fragmentem kódu pro příkaz if**. (V Visual Basic Popis také uvádí, že se jedná o fragment, ale s mírně odlišným použitím slov.) Chcete použít tento fragment kódu, proto vyberte klávesu **TAB** a vložte `if` do kódu. Potom znovu vyberte klávesu **TAB** , aby se použil fragment `if`. (Pokud jste zvolili někde jinde a okno **IntelliSense** zmizelo, je nutné na `i` a znovu ho zadat a otevře se okno **IntelliSense** znovu.)
 
     ![Kód Visual&#35; C](../ide/media/express_highlighttrue.png)
 
@@ -55,12 +55,12 @@ Dále pomocí technologie IntelliSense zadáte další kód pro otevření dialo
 
  1. Otevře se okno **IntelliSense** a zobrazí se dialog **OpenFileDialog1**. Zvolte klávesu **TAB** a vyberte ji. (V Visual Basic začíná počátečním zakončením, takže se zobrazí dialog **OpenFileDialog1**. Ujistěte se, že je vybraná možnost **OpenFileDialog1** .)
 
-     Další informace o `OpenFileDialog` naleznete v části [OpenFileDialog](<xref:System.Windows.Forms.OpenFileDialog>).
+     Další informace o `OpenFileDialog`naleznete v části [OpenFileDialog](<xref:System.Windows.Forms.OpenFileDialog>).
 
  1. Zadejte tečku (`.`) (mnoho programátorů zavolá tuto tečku.) Vzhledem k tomu, že jste zadali tečku hned po programu **OpenFileDialog1**, otevře se okno **technologie IntelliSense** , které se vyplní všemi vlastnostmi a metodami komponenty **OpenFileDialog** . Jedná se o stejné vlastnosti, které se zobrazí v okně **vlastnosti** při výběru v **Návrhář formulářů**. Můžete také zvolit metody, které instruují komponentu k provádění akcí (například otevření dialogového okna).
 
     > [!NOTE]
-    > Okno **technologie IntelliSense** může zobrazit jak vlastnosti, tak metody. Chcete-li zjistit, co se zobrazuje, podívejte se na ikonu na levé straně každé položky v okně **IntelliSense** . Vedle každé z nich se zobrazí obrázek bloku a vedle každé vlastnosti se zobrazí obrázek klíče (nebo Spanner). Vedle každé události je také Ikona blesku. <br><br>Tady jsou ikony, které se zobrazí:<br><br>ikona ![Method ](../ide/media/express_iconmethod.png)<br>ikona ![Property ](../ide/media/express_iconproperty.png)<br>ikona ![Event ](../ide/media/express_iconevent.png)
+    > Okno **technologie IntelliSense** může zobrazit jak vlastnosti, tak metody. Chcete-li zjistit, co se zobrazuje, podívejte se na ikonu na levé straně každé položky v okně **IntelliSense** . Vedle každé z nich se zobrazí obrázek bloku a vedle každé vlastnosti se zobrazí obrázek klíče (nebo Spanner). Vedle každé události je také Ikona blesku. <br><br>Tady jsou ikony, které se zobrazí:<br><br>ikona metody ![](../ide/media/express_iconmethod.png)<br>ikona vlastnosti ![](../ide/media/express_iconproperty.png)<br>ikona události ![](../ide/media/express_iconevent.png)
 
  1. Začněte psát `ShowDialog` (velká písmena se neimportují do technologie IntelliSense). Metoda `ShowDialog()` zobrazí dialogové okno **otevřít soubor** . Po zvýraznění okna **ShowDialog**klikněte na klávesu **TAB** . Můžete také zvýraznit "ShowDialog" a vybrat klávesu **F1** pro získání pro pomoc.
 

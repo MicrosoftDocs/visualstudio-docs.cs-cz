@@ -3,17 +3,17 @@ title: Vztahy mezi třídami LINQ to SQL (Návrhář O/R)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 56133e65-81f3-44c3-bc28-ffdd0671a0d2
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 13443dd25719caad5002b29a33975a0dbc5850f1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fb81cf17de86a11d2373f6a545b3efc78e65ada9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641889"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586468"
 ---
 # <a name="how-to-create-an-association-between-linq-to-sql-classes-or-designer"></a>Postupy: vytvoření přidružení mezi třídami LINQ to SQL (Návrhář O/R)
 Přidružení mezi třídami entit v [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] jsou podobná vztahům mezi tabulkami v databázi. Přidružení mezi třídami entit můžete vytvořit pomocí dialogového okna **Editor přidružení** .
@@ -30,7 +30,7 @@ Když při vytváření přidružení vyberete přidružení v **Návrháři pro
 |--------------|-----------------|
 |**Kardinalita**|Určuje, zda je přidružení typu 1: n nebo 1:1.|
 |**Podřízená vlastnost**|Určuje, zda se má vytvořit vlastnost u nadřazené položky, která je kolekcí nebo odkazem na podřízené záznamy na straně cizího klíče asociace. Například v přidružení mezi `Customer` a `Order`, pokud je **Podřízená vlastnost** nastavena na **hodnotu true**, je v nadřazené třídě vytvořená vlastnost s názvem `Orders`.|
-|**Nadřazená vlastnost**|Vlastnost u podřízené třídy, která odkazuje na přidruženou nadřazenou třídu. Například při přidružení mezi `Customer` a `Order` se vytvoří vlastnost s názvem `Customer`, která odkazuje na přidruženého zákazníka pro objednávku na `Order` třídě.|
+|**Nadřazená vlastnost**|Vlastnost u podřízené třídy, která odkazuje na přidruženou nadřazenou třídu. Například při přidružení mezi `Customer` a `Order`se vytvoří vlastnost s názvem `Customer`, která odkazuje na přidruženého zákazníka pro objednávku na `Order` třídě.|
 |**Zúčastněné vlastnosti**|Zobrazí vlastnosti přidružení a poskytne tlačítko se **třemi tečkami** (...), které znovu otevře dialogové okno **Editor přidružení** .|
 |**Tabulka**|Určuje, zda mají sloupce cizího cíle omezení jedinečnosti.|
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - custom dictionary, code analysis
 - dictionary, code analysis
 ms.assetid: 667e3b4e-beff-48be-b3d1-376e1716a895
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26629ed099eea9a1d0c73a2eaa1105525d05dcf3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c3fbcbbfd52e4715dc6ee063ae0bae905eb3e65a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649462"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587521"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>Postupy: Přizpůsobení slovníku Analýzy kódu
 
@@ -241,7 +241,7 @@ Podmínky v uzlu Dictionary/Word/DiscreteExceptions jsou aplikovány na následu
 
 ### <a name="BKMK_DictionaryAcronymsCasingExceptionsAcronym"></a>Slovníky/akronymy/CasingExceptions/akronym
 
-Chcete-li zahrnout akronym do seznamu podmínek, které analýza kódu identifikuje jako správně napsaný a který označuje, jak akronym v případě, kdy je tento výraz zkontrolován podle pravidel pro všechna velká písmena pro složená slova, přidejte termín jako vnitřní text slovníku/akronymy/CasingExceptions/ Akronym – element Akronym v prvku Dictionary/Akronyms/CasingExceptions/akronym rozlišuje velká a malá písmena.
+Chcete-li zahrnout akronym do seznamu podmínek, které analýza kódu identifikuje jako správně napsaný a který označuje, jak akronym, pokud je výraz kontrolován pravidly pro všechna velká písmena pro složená slova, přidejte termín jako vnitřní text prvku Dictionary/Akronyms/CasingExceptions/akronym. Akronym v prvku Dictionary/Akronyms/CasingExceptions/akronym rozlišuje velká a malá písmena.
 
 **Příklad**
 

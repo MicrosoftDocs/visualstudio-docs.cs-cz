@@ -9,17 +9,17 @@ helpviewer_keywords:
 - managed code analysis warnings, design warnings
 - warnings, design
 ms.assetid: 34e65a18-560c-423f-814f-519089e318cf
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bc714a4663505fe2a40cc145e8c8ca3c7bf86a1e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 301b829341eeb859030afabbf2225ea833e99a22
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649677"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587677"
 ---
 # <a name="design-warnings"></a>Upozornění ohledně návrhu
 
@@ -31,10 +31,10 @@ Upozornění na návrh podporují dodržování [pokynů pro návrh .NET](/dotne
 | - | - |
 | [CA1000: Nedeklarujte statické členy v obecných typech](../code-quality/ca1000.md) | Při volání statického členu obecného typu musí být pro tento typ zadán argument typu. Je-li zavolán obecný člen instance, který nepodporuje odvozování, musí být pro tento člen zadán argument typu. V těchto dvou případech je syntaxe zadávání argumentu typu různá a snadno zaměnitelná. |
 | [CA1001: Typy vlastních uvolnitelných polí, které by měly být uvolnitelné](../code-quality/ca1001.md) | Třída deklaruje a implementuje pole instance, které je typu System. IDisposable a třída neimplementuje rozhraní IDisposable. Třída, která deklaruje pole IDisposable nepřímo, vlastní nespravovaný zdroj a měla by rozhraní IDisposable implementovat. |
-| [CA1002: Nezveřejňujte obecné seznamy](../code-quality/ca1002.md) | System. Collections. Generic. list < (of \< (T >) >) je obecná kolekce navržená pro výkon, nikoli dědičnost. Proto třída List neobsahuje žádné virtuální členy. Místo ní by měly být vystaveny kolekce navržené pro dědičnost. |
+| [CA1002: Nezveřejňujte obecné seznamy](../code-quality/ca1002.md) | Třída System.Collections.Generic.List < (ze \<(T >) >) je obecná kolekce navržená pro výkon, nikoli dědičnost. Proto třída List neobsahuje žádné virtuální členy. Místo ní by měly být vystaveny kolekce navržené pro dědičnost. |
 | [CA1003: Použijte instance obecných obslužných rutin události](../code-quality/ca1003.md) | Typ obsahuje delegát, který vrací typ void, jehož signatura obsahuje dva parametry (první objekt a druhý typ, který lze přiřadit k EventArgs), a obsahující cíle sestavení .NET Framework 2,0. |
 | [CA1004: Obecné metody by měly poskytnout parametr typu](../code-quality/ca1004.md) | Argument typu obecné metody je z argumentu typu předávaného metodě odvozen namísto explicitního určení argumentu typu. Má-li být odvozování povoleno, musí předpis parametrů obecné metody zahrnovat parametr stejného typu jako parametr typu metody. V tomto případě nemusí být argument typu zadán. Použijete-li odvození pro všechny parametry typu, syntaxe pro volání generických a neobecných instancí je identická; To zjednodušuje použitelnost obecných metod. |
-| [CA1005: Vyhněte se nadbytečným parametrům na obecných typech](../code-quality/ca1005.md) | Čím více parametrů typu obecný typ obsahuje, tím obtížnější je vědět a zapamatovat si, co každý z parametrů typu představuje. Je obvykle zřejmé s jedním parametrem typu, jako v seznamu \<T > a v některých případech se dvěma parametry typu, jako ve slovníkovém \<TKey TValue >. Pokud však existují více než dva parametry typu, stává se pro většinu uživatelů použití příliš obtížným. |
+| [CA1005: Vyhněte se nadbytečným parametrům na obecných typech](../code-quality/ca1005.md) | Čím více parametrů typu obecný typ obsahuje, tím obtížnější je vědět a zapamatovat si, co každý z parametrů typu představuje. Je obvykle zřejmé s jedním parametrem typu, jako v seznamu\<T > a v některých případech se dvěma parametry typu, jako ve slovníku Dictionary\<TKey, TValue >. Pokud však existují více než dva parametry typu, stává se pro většinu uživatelů použití příliš obtížným. |
 | [CA1006: Nevnořujte obecné typy v signaturách členu](../code-quality/ca1006.md) | Vnořený typ argumentu je typ argumentu, který je také obecným typem. Chce-li uživatel zavolat člen, jehož předpis obsahuje vnořený argument typu, musí nejprve vytvořit instanci jednoho obecného typu a předat tento typ konstruktoru druhého obecného typu. Potřebná procedura a syntaxe je složitá a je vhodné se jí vyhnout. |
 | [CA1007: Použijte obecné typy, kde je to vhodné](../code-quality/ca1007.md) | Externě viditelná metoda obsahuje referenční parametr typu System.Object. Použitím obecných metod lze metodě předávat všechny typy (s určitými omezeními) bez předchozího přetypování typu na referenční typ parametru. |
 | [CA1008: Výčty by měly mít nulovou hodnotu](../code-quality/ca1008.md) | Výchozí hodnota neinicializovaného výčtu je stejně jako u jiných typů hodnot nula. Výčet s atributem bez příznaku by měl definovat člen pomocí nulové hodnoty, aby výchozí hodnota byla platná hodnota výčtu. Definuje-li výčet, který má aplikován atribut FlagsAttribute, člen s hodnotou nula, měl by jeho název být „None“, aby tak označoval, že ve výčtu nebyly nastaveny žádné hodnoty. |
@@ -88,7 +88,7 @@ Upozornění na návrh podporují dodržování [pokynů pro návrh .NET](/dotne
 | [CA1061: Neskrývejte metody třídy base](../code-quality/ca1061.md) | Metoda základního typu je skryta identicky pojmenovanou metodou v odvozeném typu, kde je předpis parametrů odvozené metody odlišný od odpovídajících typů v předpisu parametrů základní metody pouze ve slaběji odvozených typech. |
 | [CA1062: Ověřte argumenty veřejných metod](../code-quality/ca1062.md) | Všechny argumenty odkazu předané externě viditelným metodám by měly být porovnány s hodnotou NULL. |
 | [CA1063: Implementuje správně IDisposable](../code-quality/ca1063.md) | Všechny typy IDisposable by měly správně implementovat vzor Dispose. |
-| [CA1064: Výjimky by měly být veřejné](../code-quality/ca1064.md) | Interní výjimka je viditelná pouze uvnitř svého vlastního vnitřního rozsahu. Jakmile výjimka přesáhne hranice vnitřního rozsahu, lze pro zachycení výjimky použít pouze základní výjimku. Pokud je interní výjimka děděna z <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName> nebo <xref:System.ApplicationException?displayProperty=fullName>, externí kód nebude mít dostatek informací, aby věděl, co s výjimkou dělat. |
+| [CA1064: Výjimky by měly být veřejné](../code-quality/ca1064.md) | Interní výjimka je viditelná pouze uvnitř svého vlastního vnitřního rozsahu. Jakmile výjimka přesáhne hranice vnitřního rozsahu, lze pro zachycení výjimky použít pouze základní výjimku. Pokud je vnitřní výjimka zděděna z <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, nebo <xref:System.ApplicationException?displayProperty=fullName>, externí kód nebude mít dostatečné informace o tom, co dělat, s výjimkou. |
 | [CA1065: Nevyvolávejte výjimky v neočekávaných umístěních](../code-quality/ca1065.md) | Metoda, u které není předpokládáno vyvolání výjimky, vyvolá výjimku. |
 | [CA1068: parametry CancellationToken se musí nacházet jako poslední.](../code-quality/ca1068.md) | Metoda má parametr CancellationToken, který není posledním parametrem. |
 | [CA2210: Sestavení by měly mít platné silné názvy](../code-quality/ca2210.md) | Silný název chrání klienty před neúmyslným načtením narušeného sestavení. Sestavení bez silných názvů by kromě velmi omezených scénářů neměla být nasazována. Pokud sdílíte nebo šíříte sestavení, která nejsou správně podepsána, může být sestavení záměrně poškozeno, modul CLR je nemusí načíst nebo uživatelé mohou být nuceni vypnout na svém počítači ověřování. |

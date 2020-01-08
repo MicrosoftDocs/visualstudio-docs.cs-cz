@@ -3,22 +3,22 @@ title: Modifikační klávesy návrhové plochy v Blendu
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 50732733-ff49-41ba-8c44-4f6a3875ec1c
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fca85bd48a8fd755e7bec70216572fcfe2f84b36
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 18c9035a092854ae5b9d0cfe0fa0ad8f9aab349f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649723"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593013"
 ---
 # <a name="artboard-modifier-keys-in-blend"></a>Modifikační klávesy návrhové plochy v Blendu
 Některé klávesové zkratky nemají přidružené položky nabídky, což znamená, že nemůžete použít uživatelské rozhraní [!INCLUDE[blend_subs](../debugger/includes/blend_subs_md.md)] k jejich zjištění. Následující tabulka uvádí zástupce, které upravují akci, jako je například změna velikosti objektu.
 
-|K provedení této akce|Postup|
+|Akce|Postup|
 | - |-------------|
 |Dočasně vyberte nástroj pro **Výběr** , když zůstane vybraný jiný nástroj (tím se sníží počet pokusů, kolikrát na panelu **nástroje** kliknete, a pak mezi nástrojem pro **Výběr** a dalšími dalšími uživateli).|Podržte **klávesu CTRL**|
 |Posunout vybrané objekty, když je vybraný nástroj **Výběr**|Stiskněte klávesy se šipkami|
@@ -36,8 +36,8 @@ Některé klávesové zkratky nemají přidružené položky nabídky, což znam
 |Výběr více sousedících objektů|Při výběru prvního a posledního objektu podržte stisknutou **klávesu SHIFT** .|
 |Výběr pomocí kreslení rámečku|Podržte klávesu **SHIFT** a přetáhněte|
 |Vyberte objekt pod jiným objektem.|Podržte klávesu **ALT** a klikněte jednou pro každou vrstvu objektů.|
-|Přepínání mezi otevřenými dokumenty|Stiskněte klávesu **Ctrl** +**TAB**|
-|Otevření panelu **aktiva**|Stiskněte **Ctrl**+**perioda** .|
+|Přepínání mezi otevřenými dokumenty|Stiskněte klávesu **Ctrl**+**TAB**|
+|Otevření panelu **aktiva**|Stiskněte klávesu **Ctrl**+**perioda** .|
 
 ## <a name="see-also"></a>Viz také:
 

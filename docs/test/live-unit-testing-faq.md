@@ -4,16 +4,16 @@ ms.date: 10/03/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - Live Unit Testing FAQ
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8db8264268eb04edc3140d0e2a6ece5896692e38
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ba231e6c203197518b75a7a8c0592f01bba4ffe9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653042"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591538"
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing nejčastějších dotazech
 
@@ -85,15 +85,26 @@ Může se například jednat o cíl, který vytváří balíčky NuGet během pr
 </Target>
 ```
 
-## <a name="error-messages-with-outputpath-or-outdir"></a>Chybové zprávy s \<OutputPath > nebo \<OutDir >
+## <a name="error-messages-with-outputpath-outdir-or-intermediateoutputpath"></a>Chybové zprávy s \<OutputPath >, \<OutDir > nebo \<IntermediateOutputPath >
 
 **Proč se při Live Unit Testing pokusu o sestavení řešení zobrazí následující chyba: "... Zdá se, že se nepodmíněně nastaví `<OutputPath>` nebo `<OutDir>`. Live Unit Testing neprovede testy z výstupního sestavení?**
 
-Tato chyba se může zobrazit, pokud proces sestavení pro vaše řešení nepodmíněně Přepisuje `<OutputPath>` nebo `<OutDir>`, takže se nejedná o podadresář `<BaseOutputPath>`. V takových případech nebude Live Unit Testing fungovat, protože také přepisuje tyto hodnoty, aby bylo zajištěno, že artefakty sestavení jsou vyřazeny do složky v rámci `<BaseOutputPath>`. Pokud je nutné přepsat umístění, kde mají být artefakty sestavení vyřazeny v běžném sestavení, přepište `<OutputPath>` podmíněně na základě `<BaseOutputPath>`.
+K této chybě může dojít, pokud proces sestavení pro vaše řešení má vlastní logiku, která určuje, kde se mají vygenerovat binární soubory. Ve výchozím nastavení závisí umístění binárních souborů na `<OutputPath>`, `<OutDir>` nebo `<IntermediateOutputPath>` a také `<BaseOutputPath>` nebo `<BaseIntermediateOutputPath>`.
 
-Například pokud vaše sestavení přepíše `<OutputPath>`, jak je znázorněno níže:
+Live Unit Testing přepisuje tyto proměnné, aby bylo zajištěno, že artefakty sestavení jsou vyřazeny do složky Live Unit Testing artefakty a selže, pokud proces sestavení také přepíše tyto proměnné.
 
-```xml 
+Existují dva hlavní přístupy k úspěšnému provedení Live Unit Testing sestavení. Pro snazší konfigurace sestavení můžete na `<BaseIntermediateOutputPath>`založit výstupní cesty. V případě složitějších konfigurací můžete na `<LiveUnitTestingBuildRootPath>`založit výstupní cesty.
+
+### <a name="overriding-outputpathintermediateoutputpath-conditionally-based-on-baseoutputpath-baseintermediateoutputpath"></a>Přepisování `<OutputPath>`/`<IntermediateOutputPath>` podmíněně na základě `<BaseOutputPath>`/ `<BaseIntermediateOutputPath>`.
+
+> [!NOTE]
+> Chcete-li použít tento přístup, každý projekt musí být schopný sestavit nezávisle na sobě. Během sestavování nemusíte z jiného projektu provádět žádné artefakty odkazování na projekt. Nevytvářejte sestavení dynamicky načíst sestavení z jiného projektu za běhu (například volání `Assembly.Loadfile("..\..\Project2\Release\Project2.dll")`).
+
+Během sestavování Live Unit Testing automaticky Přepisuje `<BaseOutputPath>`/`<BaseIntermediateOutputPath>` proměnných pro cílovou složku Live Unit Testing artefakty.
+
+Například pokud vaše sestavení přepíše <OutputPath>, jak je znázorněno níže:
+
+```xml
 <Project>
   <PropertyGroup>
     <OutputPath>$(SolutionDir)Artifacts\$(Configuration)\bin\$(MSBuildProjectName)</OutputPath>
@@ -103,7 +114,7 @@ Například pokud vaše sestavení přepíše `<OutputPath>`, jak je znázorněn
 
 pak ho můžete nahradit následujícím kódem XML:
 
-```xml 
+```xml
 <Project>
   <PropertyGroup>
     <BaseOutputPath Condition="'$(BaseOutputPath)' == ''">$(SolutionDir)Artifacts\$(Configuration)\bin\$(MSBuildProjectName)\</BaseOutputPath>
@@ -115,6 +126,46 @@ pak ho můžete nahradit následujícím kódem XML:
 Tím se zajistí, že `<OutputPath>` leží v rámci `<BaseOutputPath>` složky.
 
 Nepřepisujte `<OutDir>` přímo v procesu sestavení; Přepište `<OutputPath>` místo toho, aby se artefakty sestavení vynechal na konkrétní místo.
+
+### <a name="overriding-your-properties-based-on-the-liveunittestingbuildrootpath-property"></a>Přepsání vlastností na základě vlastnosti `<LiveUnitTestingBuildRootPath>`.
+
+> [!NOTE]
+> V tomto přístupu musíte být opatrní o souborech přidaných do složky artefakty, které se během sestavení negenerují. Následující příklad ukazuje, co udělat při umístění složky Packages v části artefakty. Vzhledem k tomu, že obsah této složky není generován během sestavení, vlastnost MSBuild **by neměla být změněna**.
+
+Během Live Unit Testing sestavení je vlastnost `<LiveUnitTestingBuildRootPath>` nastavena na umístění složky Live Unit Testing artefakty.
+
+Předpokládejme například, že váš projekt má strukturu zobrazenou zde.
+
+```
+.vs\...\lut\0\b
+artifacts\{binlog,obj,bin,nupkg,testresults,packages}
+src\{proj1,proj2,proj3}
+tests\{testproj1,testproj2}
+Solution.sln
+```
+Během Live Unit Testing sestavení je vlastnost `<LiveUnitTestingBuildRootPath>` nastavena na úplnou cestu `.vs\...\lut\0\b`. Definuje-li projekt `<ArtifactsRoot>` vlastnost, která je mapována na adresář řešení, můžete projekt MSBuild aktualizovat následujícím způsobem:
+
+```xml
+<Project>
+    <PropertyGroup Condition="'$(LiveUnitTestingBuildRootPath)' == ''">
+        <SolutionDir>$([MSBuild]::GetDirectoryNameOfFileAbove(`$(MSBuildProjectDirectory)`, `YOUR_SOLUTION_NAME.sln`))\</SolutionDir>
+
+        <ArtifactsRoot>Artifacts\</ArtifactsRoot>
+        <ArtifactsRoot Condition="'$(LiveUnitTestingBuildRootPath)' != ''">$(LiveUnitTestingBuildRootPath)</ArtifactsRoot>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <BinLogPath>$(ArtifactsRoot)\BinLog</BinLogPath>
+        <ObjPath>$(ArtifactsRoot)\Obj</ObjPath>
+        <BinPath>$(ArtifactsRoot)\Bin</BinPath>
+        <NupkgPath>$(ArtifactsRoot)\Nupkg</NupkgPath>
+        <TestResultsPath>$(ArtifactsRoot)\TestResults</TestResultsPath>
+
+        <!-- Note: Given that a build doesn't generate packages, the path should be relative to the solution dir, rather than artifacts root, which will change during a Live Unit Testing build. -->
+        <PackagesPath>$(SolutionDir)\artifacts\packages</PackagesPath>
+    </PropertyGroup>
+</Project>
+```
 
 ## <a name="build-artifact-location"></a>Umístění artefaktu sestavení
 
@@ -133,8 +184,6 @@ Existuje několik rozdílů:
 - Live Unit Testing nevytváří novou doménu aplikace pro spuštění testů, ale testy spouštěné z okna **Průzkumník testů** vytvoří novou doménu aplikace.
 
 - Live Unit Testing spustí testy v každé sestavení testu postupně. V **Průzkumníku testů**můžete zvolit paralelní spuštění více testů.
-
-- Zjišťování a provádění testů v Live Unit Testing používá verzi 2 `TestPlatform`, zatímco okno **Průzkumník testů** používá verzi 1. Ve většině případů si nevšimnete rozdílu.
 
 - **Průzkumník testů** ve výchozím nastavení spouští testy v modelu STA (Single-threaded Apartment), zatímco Live Unit Testing spouští testy v modelu MTA (multi-threaded Apartment). Chcete-li spustit testy MSTest v modelu STA v Live Unit Testing, seupravte testovací metodu nebo obsahující třídu atributem `<STATestMethod>` nebo `<STATestClass>`, který lze nalézt v `MSTest.STAExtensions 1.0.3-beta` balíčku NuGet. Pro NUnit seupravte testovací metodu pomocí atributu `<RequiresThread(ApartmentState.STA)>` a pro xUnit s atributem `<STAFact>`.
 

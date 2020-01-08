@@ -3,17 +3,17 @@ title: 'Postupy: vytvoření dokumentu XML na základě schématu XSD'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 193b195f-e918-4c79-a1a1-8096a1433bde
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f423af7dc4fae7a116acbaf8497c5ee4268653e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3139df600654513912abeae64c1ef2980493574d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645979"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592799"
 ---
 # <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>Postupy: vytvoření dokumentu XML na základě schématu XSD
 
@@ -29,13 +29,13 @@ Funkce **Generovat vzor XML** je k dispozici pouze pro globální prvky a vyžad
 
 Tato funkce obvykle generuje platné dokumenty XML. Pokud však schéma obsahuje jednu nebo více z následujících možností, příklad nemusí být platný:
 
-- Omezení identity `xs:key`, `xs:keyref` a `xs:unique`.
+- Omezení identity `xs:key`, `xs:keyref`a `xs:unique`.
 
 - `xs:pattern` omezující vlastnosti.
 
 - Výčty typu `xs:QName`.
 
-- typy `xs:ENTITY`, `xs:ENTITIES` a `xs:NOTATION`.
+- typy `xs:ENTITY`, `xs:ENTITIES`a `xs:NOTATION`.
 
 Všimněte si také, že `xs:base64Binary` obsah bude vygenerován pouze v případě, že ve schématu pro daný typ dojde k výčtům.
 

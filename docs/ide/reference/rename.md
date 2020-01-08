@@ -1,9 +1,9 @@
 ---
-title: Přejmenování refaktoru
+title: Refaktorovat a přejmenovat
 ms.date: 01/26/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 f1_keywords:
 - vs.csharp.refactoring.rename
@@ -12,14 +12,14 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2991227b3c8d742da360465e6c506e7123259e2c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4dbccd4732f56d671fd74f59916885ea338136f8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655611"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565458"
 ---
-# <a name="rename-a-code-symbol-refactoring"></a>Přejmenování refaktoringu symbolů kódu
+# <a name="rename-a-code-symbol-refactoring"></a>Symbol kód refaktoring pro přejmenování
 
 Tento refaktoring platí pro:
 
@@ -27,19 +27,19 @@ Tento refaktoring platí pro:
 
 - Visual Basic
 
-**Co:** Umožňuje přejmenovat identifikátory pro symboly kódu, jako jsou pole, lokální proměnné, metody, obory názvů, vlastnosti a typy.
+**Co:** slouží k přejmenování identifikátory pro symboly kódu, jako je například pole lokálních proměnných, metod, obory názvů, vlastností a typy.
 
-**Když:** Chcete bezpečně přejmenovat bez nutnosti najít všechny instance a pak tento nový název zkopírovat a vložit.
+**Kdy:** chcete bezpečně něco přejmenovat bez nutnosti vyhledáte všechny instance a kopírovat/vložit nový název.
 
-**Proč:** Kopírování a vkládání nového názvu v celém projektu by nejspíš vedlo k chybám. Tento nástroj refaktoringu provede přesně akci přejmenování.
+**Důvod, proč:** zkopírujete a vložíte nový název přes celý projekt by pravděpodobně vést k chybám. Tento nástroj refaktoringu přesně provede akci přejmenování.
 
 ## <a name="how-to"></a>Postupy
 
-1. Zvýrazněte nebo umístěte textový kurzor do položky, která má být přejmenována:
+1. Zvýrazněte nebo umístěte kurzor textu uvnitř položky, která má být přejmenována:
 
    - C#:
 
-       ![Zvýrazněný kód –C#](media/rename-highlight-cs.png)
+       ![Zvýrazněný kód:C#](media/rename-highlight-cs.png)
 
    - Visual Basic:
 
@@ -47,26 +47,26 @@ Tento refaktoring platí pro:
 
 2. Dále proveďte jednu z následujících akcí:
 
-   - **Kombinace**
-      - Stiskněte klávesy **Ctrl + r**a pak **kombinaci kláves Ctrl + r**. (Všimněte si, že se vaše klávesová zkratka může lišit v závislosti na vybraném profilu.)
-   - **Stisknut**
-      - Vyberte možnost **upravit > refaktoring > přejmenovat**.
-      - Klikněte pravým tlačítkem na kód a vyberte **Přejmenovat**.
+   - **Klávesnice**
+      - Stisknutím klávesy **Ctrl + R**, pak **Ctrl + R**. (Všimněte si, že klávesová zkratka může být jiný platformě, na který profil vyberete.)
+   - **Myši**
+      - Vyberte **Upravit > Refaktorovat > přejmenujte**.
+      - Klikněte pravým tlačítkem na kód a vybrat **přejmenovat**.
 
-3. Přejmenujte položku jednoduše zadáním nového názvu.
+3. Přejmenujte položku jednoduše tak, že zadáte nový název.
 
    - C#:
 
-      ![Přejmenovat animaci –C#](media/rename-animated-cs.gif)
+      ![Animace – přejmenovatC#](media/rename-animated-cs.gif)
 
    - Visual Basic:
 
-      ![Přejmenování – VB](media/rename-rename-vb.png)
+      ![Rename - VB](media/rename-rename-vb.png)
 
    > [!TIP]
-   > Pomocí zaškrtávacích políček v poli **Přejmenovat** , které se zobrazí v pravém horním rohu editoru, můžete také aktualizovat komentáře a další řetězce a použít tento nový název a [Zobrazit náhled změn](../../ide/preview-changes.md) .
+   > Můžete také aktualizovat komentáře a jiných řetězců použít tento nový název, stejně jako [zobrazit náhled změn](../../ide/preview-changes.md) před uložením používání zaškrtávacích políček v **přejmenovat** pole, které se zobrazí v horní části přímo z editoru.
 
-4. Až budete s změnou spokojeni, zvolte tlačítko **použít** nebo stiskněte klávesu **ENTER** . změny budou potvrzeny.
+4. Až budete spokojení s změny, zvolte **použít** tlačítko nebo stisknutím klávesy **Enter** a změny budou potvrzeny.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -74,11 +74,11 @@ Tento refaktoring platí pro:
 
    ![Přejmenovat animaci souborem –C#](media/rename-with-file-animated-cs.gif)
 
-- Pokud použijete název, který již existuje, což by způsobilo konflikt, zobrazí se v poli pro **přejmenování** upozornění.
+- Pokud použijete název, který již existuje, která by způsobila konflikt, který **přejmenovat** vás upozorní pole.
 
-   ![Konflikt přejmenování](media/rename-conflict-cs.png)
+   ![Přejmenovat konflikt](media/rename-conflict-cs.png)
 
-- Dalším způsobem, jak přejmenovat symbol, je změnit jeho název v editoru. Pak stiskněte **klávesu Ctrl** + v názvu symbolu **.** nebo stačí rozbalit nabídku ikony žárovky, která se zobrazí, a zvolit **přejmenovat \<old název > na \<new název >** .
+- Dalším způsobem, jak přejmenovat symbol, je změnit jeho název v editoru. Pak stiskněte **klávesu Ctrl**+v názvu symbolu **.** nebo jednoduše rozbalte nabídku ikony žárovky, která se zobrazí, a vyberte možnost **přejmenovat \<Old name > na \<nový název >** .
 
 ## <a name="see-also"></a>Viz také:
 

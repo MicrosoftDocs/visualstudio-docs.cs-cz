@@ -7,43 +7,43 @@ helpviewer_keywords:
 - Web services [Visual Studio ALM], creating
 - service tests, Web
 ms.assetid: fbcd57ee-06ad-4260-8694-09f8e0f93e39
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 90dae3add4782af18763168643cfa5755d37cc2e
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 7a6e42d6d92a74a0fc8be96c966b9146b7888b9e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981273"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589094"
 ---
 # <a name="how-to-create-a-web-service-test"></a>Postupy: vytvoření testu webové služby
 
-K testování webových služeb můžete použít test výkonnosti webu. Pomocí možností **Vložení požadavku** a **vložení žádosti o webovou službu** můžete přizpůsobit jednotlivé požadavky v **Editor testu výkonnosti webu** k vyhledání stránek webové služby. Obvykle tyto stránky ve webové aplikaci nezobrazujete. Pro přístup k těmto stránkám je tedy nutné přizpůsobit požadavek.
+Test výkonnosti webu můžete použít k otestování webové služby. S použitím **vložit žádost o** a **vložit žádost webové služby** možnosti, můžete přizpůsobit jednotlivé požadavky v **editoru testu výkonnosti webu** najít web stránky služby. Tyto stránky obvykle nejsou zobrazení ve webové aplikaci. Pro přístup k těmto stránkám je tedy nutné přizpůsobit požadavek.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Následující postupy používají webovou službu, která je obsažena v sadě Commerce Starter Kit. Můžete si ho stáhnout z [ASP.NET Commerce Starter Kit](https://sourceforge.net/projects/ppcsk/).
+Následující postupy používají webovou službu, která je obsažena v sadě Commerce Starter Kit. Můžete ji stáhnout [ASP.NET commerce starter kit](https://sourceforge.net/projects/ppcsk/).
 
 **Požadavky**
 
 Visual Studio Enterprise
 
-## <a name="to-test-a-web-service"></a>Testování webové služby
+## <a name="to-test-a-web-service"></a>K otestování webové služby
 
-1. Vytvořte nový test výkonnosti webu. Jakmile se prohlížeč otevře, klikněte na tlačítko **zastavit**.
+1. Vytvoření nového testu výkonnosti webu. Poté, co v prohlížeči se otevře, zvolte **Zastavit**.
 
-2. V **Editor testu výkonnosti webu**klikněte pravým tlačítkem na test výkonnosti webu a vyberte **Přidat žádost o webovou službu**.
+2. V **editoru testu výkonnosti webu**, klikněte pravým tlačítkem na test výkonnosti webu a vyberte **přidat požadavek webové služby**.
 
-3. Do vlastnosti **Adresa URL** nového požadavku zadejte název webové služby, například **http://localhost/storecsvs/InstantOrder.asmx** .
+3. V **Url** vlastnosti nového požadavku zadejte název webové služby, například **http://localhost/storecsvs/InstantOrder.asmx** .
 
-4. Otevřete samostatnou relaci prohlížeče a na panelu nástrojů **adresa** zadejte adresu URL stránky *. asmx* . Zvolte metodu, která má být testována, a prohlédněte si zprávu protokolu SOAP. Obsahuje hlavičku `SOAPAction`.
+4. Otevřete samostatnou relaci prohlížeče a zadejte adresu URL *.asmx* stránku **adresu** nástrojů. Zvolte metodu, která má být testována, a prohlédněte si zprávu protokolu SOAP. Obsahuje hlavičku `SOAPAction`.
 
-5. V **Editor testu výkonnosti webu**klikněte pravým tlačítkem myši na požadavek a výběrem **Přidat hlavičku** přidejte novou hlavičku. Do vlastnosti **název** zadejte `SOAPAction`. Do vlastnosti **hodnota** zadejte hodnotu, která se zobrazí v `SOAPAction`, například `"http://tempuri.org/CheckStatus"`.
+5. V **editoru testu výkonnosti webu**, klikněte pravým tlačítkem na žádost a vyberte **přidat hlavičku** přidáte novou hlavičku. V **název** vlastnost, typ `SOAPAction`. V **hodnotu** vlastnost, zadejte hodnotu, která se zobrazí v `SOAPAction`, jako například `"http://tempuri.org/CheckStatus"`.
 
-6. Rozbalte uzel adresa URL v editoru, vyberte uzel **tělo řetězce** a v vlastnosti **typ obsahu** zadejte hodnotu `text/xml`.
+6. Rozbalte uzel adresy URL v editoru, zvolte **tělo řetězce** uzel a **typ obsahu** vlastnosti zadejte hodnotu `text/xml`.
 
-7. V kroku 4 se vraťte do prohlížeče, vyberte část XML požadavku SOAP ze stránky popis webové služby a zkopírujte ji do schránky.
+7. Vraťte se do prohlížeče v kroku 4, zvolte oddíl XML požadavku protokolu SOAP z stránku popisu webové služby a zkopírujte do schránky.
 
 8. Obsah kódu XML je podobný následujícímu příkladu:
 
@@ -60,19 +60,19 @@ Visual Studio Enterprise
      </soap:Envelope>
      ```
 
-9. Vraťte se do **Editor testu výkonnosti webu** a pak ve vlastnosti **tělo řetězce** zvolte tři tečky **(...)** . Vložte obsah schránky do vlastnosti.
+9. Vraťte se **editoru testu výkonnosti webu** a klikněte na tlačítko se třemi tečkami **(...)**  v **tělo řetězce** vlastnost. Vložte obsah schránky do vlastnosti.
 
-10. Aby test proběhl úspěšně, je zapotřebí všechny zástupné hodnoty v kódu XML nahradit platnými hodnotami. V předchozí ukázce by byly nahrazeny dvě instance typu `string` a jedna typu `int`. Tato operace webové služby se dokončí jenom v případě, že existuje registrovaný uživatel, který si umístil objednávku.
+10. Aby test proběhl úspěšně, je zapotřebí všechny zástupné hodnoty v kódu XML nahradit platnými hodnotami. V předchozí ukázce by byly nahrazeny dvě instance typu `string` a jedna typu `int`. Tato operace webové služby bude dokončena pouze v případě, že existuje registrovaný uživatel, který provedl objednávku.
 
-11. Klikněte pravým tlačítkem na požadavek webové služby a vyberte **Přidat parametr QueryString adresy URL**.
+11. Klikněte pravým tlačítkem na požadavek webové služby a vyberte **přidat parametr QueryString adresy URL**.
 
-12. Parametru řetězce dotazu přiřaďte název a hodnotu. V předchozím příkladu je název `op` a hodnota je `CheckStatus`. Tím se identifikuje operace webové služby, která se má provést.
+12. Parametru řetězce dotazu přiřaďte název a hodnotu. V předchozím příkladu je název `op` a hodnota je `CheckStatus`. Určuje, k provedení operace webové služby.
 
     > [!NOTE]
-    > Datovou vazbu v těle protokolu SOAP můžete použít k nahrazení libovolné zástupné hodnoty hodnotami vázanými daty pomocí syntaxe `{{DataSourceName.TableName.ColumnName}}`.
+    > Vytváření datových vazeb můžete použít v těle zprávy protokolu SOAP s použitím nahradit libovolné zástupné hodnoty hodnotami vázaných `{{DataSourceName.TableName.ColumnName}}` syntaxe.
 
-13. Spusťte test. V horním podokně **prohlížeče webového výkonu výsledky testů**vyberte požadavek webové služby. V dolním podokně vyberte kartu webový prohlížeč. Zobrazí se kód XML vrácený webovou službou a výsledky jakékoli operace.
+13. Spusťte test. V horním podokně **prohlížeče výsledků testu výkonnosti webu**, vyberte požadavek webové služby. V dolním podokně vyberte kartu webový prohlížeč. Zobrazí se kód XML vrácený webovou službou a výsledky jakékoli operace.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Vytvoření vlastního kódu a modulů plug-in pro zátěžové testy](../test/create-custom-code-and-plug-ins-for-load-tests.md)
+- [Vytvoření vlastního kódu a modulů Plugin pro zátěžové testy](../test/create-custom-code-and-plug-ins-for-load-tests.md)

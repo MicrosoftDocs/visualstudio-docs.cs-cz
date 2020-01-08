@@ -5,17 +5,17 @@ ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.WriteLine.UI
 ms.assetid: 1b5f29a8-b7fd-477e-949e-2f689cae3c96
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 475755fed96f8341c45b8260b414658967b3284c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7e3b4da69a2d9154f36e42d3b20657e204767872
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649756"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593021"
 ---
 # <a name="writeline-activity-designer"></a>Návrhář aktivity WriteLine
 
@@ -27,7 +27,7 @@ Aktivita <xref:System.Activities.Statements.WriteLine> zapisuje text do zadanéh
 
 ### <a name="using-the-writeline-activity-designer"></a>Použití návrháře aktivity WriteLine
 
-Přístup k Návrháři aktivity **WriteLine** v kategorii **primitivních** prvků sady **nástrojů** Návrhář aktivity **WriteLine** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu všude, kde jsou obvykle umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří aktivita <xref:System.Activities.Statements.WriteLine> s výchozím <xref:System.Activities.Activity.DisplayName%2A>em WriteLine. @No__t_0 lze upravit v záhlaví návrháře aktivity **WriteLine** nebo v poli **DisplayName** v mřížce vlastností.
+Přístup k Návrháři aktivity **WriteLine** v kategorii **primitivních** prvků sady **nástrojů** Návrhář aktivity **WriteLine** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu všude, kde jsou obvykle umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří aktivita <xref:System.Activities.Statements.WriteLine> s výchozím <xref:System.Activities.Activity.DisplayName%2A>em WriteLine. <xref:System.Activities.Activity.DisplayName%2A> lze upravit v záhlaví návrháře aktivity **WriteLine** nebo v poli **DisplayName** v mřížce vlastností.
 
 ### <a name="the-writeline-properties"></a>Vlastnosti WriteLine
 
@@ -35,13 +35,13 @@ V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Stateme
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název aktivity <xref:System.Activities.Statements.WriteLine>. Výchozí hodnota je WriteLine. I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je vhodné použít jeden.|
-|<xref:System.Activities.Statements.WriteLine.Text%2A>|False|Text, který se má zapsat Chcete-li nastavit vlastnost, zadejte výraz Visual Basic do **textového** pole v Návrháři aktivity **WriteLine** nebo v mřížce vlastností.|
-|<xref:System.Activities.Statements.WriteLine.TextWriter%2A>|False|@No__t_0, na kterou <xref:System.Activities.Statements.WriteLine> zapisuje <xref:System.Activities.Statements.WriteLine.Text%2A>. Výchozím nastavením je konzola.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Popisný název aktivity <xref:System.Activities.Statements.WriteLine>. Výchozí hodnota je WriteLine. I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je vhodné použít jeden.|
+|<xref:System.Activities.Statements.WriteLine.Text%2A>|Nepravda|Text, který se má zapsat Chcete-li nastavit vlastnost, zadejte výraz Visual Basic do **textového** pole v Návrháři aktivity **WriteLine** nebo v mřížce vlastností.|
+|<xref:System.Activities.Statements.WriteLine.TextWriter%2A>|Nepravda|<xref:System.IO.TextWriter>, na kterou <xref:System.Activities.Statements.WriteLine> zapisuje <xref:System.Activities.Statements.WriteLine.Text%2A>. Výchozím nastavením je konzola.|
 
 ## <a name="see-also"></a>Viz také:
 
-- [Primitivní elementy](../workflow-designer/primitives-activity-designers.md)
+- [Primitiva](../workflow-designer/primitives-activity-designers.md)
 - [Assign](../workflow-designer/assign-activity-designer.md)
 - [Delay](../workflow-designer/delay-activity-designer.md)
 - [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md)

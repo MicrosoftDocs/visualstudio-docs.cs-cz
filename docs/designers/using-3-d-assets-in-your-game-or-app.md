@@ -10,17 +10,17 @@ f1_keywords:
 - VC.Project.ShaderGraphContentTask.ContentOutput
 - VC.Project.ImageContentTask.GenerateMips
 ms.assetid: ea587909-e434-46a8-abf8-9b3e95a58b4f
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4df842f83f92afe8a8f747135632eb30a715d43f
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: d38f87970d5f9ff6d90befc61073cc4ed3d4ca92
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888505"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589822"
 ---
 # <a name="how-to-use-3d-assets-in-your-game-or-app"></a>Postupy: použití 3D prostředků ve hře nebo aplikaci
 
@@ -34,19 +34,19 @@ Před nasazením 3D prostředků v rámci sestavení je třeba, aby se v aplikac
 
 ### <a name="to-add-the-build-customizations-to-your-project"></a>Přidání vlastního nastavení sestavení do projektu
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro projekt a pak zvolte možnost **sestavení závislosti**  > **sestavení úprav**.
+1. V **Průzkumník řešení**otevřete místní nabídku pro projekt a pak zvolte možnost **sestavení závislosti** > **sestavení úprav**.
 
    Zobrazí se dialogové okno **soubory přizpůsobení Visual C++ buildu** .
 
 2. V části **Dostupné soubory vlastního nastavení sestavení**zaškrtněte políčka, která odpovídají typům assetů, které chcete použít v projektu, jak je popsáno v následující tabulce:
 
-    |Typ prostředku|Název vlastního nastavení sestavení|
+    |Typ assetu|Název vlastního nastavení sestavení|
     |----------------| - |
     |Textury a obrázky|**ImageContentTask (. targets;. props)**|
     |3D modely|**MeshContentTask (. targets;. props)**|
     |Shadery|**ShaderGraphContentTask (. targets;. props)**|
 
-3. Klikněte na tlačítko **OK** .
+3. Zvolte **OK** tlačítko.
 
 ## <a name="include-assets-in-your-build"></a>Zahrnutí prostředků do sestavení
 
@@ -65,7 +65,7 @@ Teď, když váš projekt ví o různých druzích 3D prostředků, které chcet
     > [!IMPORTANT]
     > Ve výchozím nastavení Visual Studio předpokládá, že mnoho druhů obrázkových souborů by mělo být zařazeno pomocí typu položky **obrázku** , který je součástí sady Visual Studio. Proto je třeba změnit vlastnost **typ položky** každého obrázku, který chcete zpracovat pomocí kanálu obsahu obrázku. Další typy zdrojových souborů kanálu obsahu pro 3D modely a grafiku vizuálního shaderu jsou ve výchozím nastavení správného **typu položky**.
 
-4. Klikněte na tlačítko **OK** .
+4. Zvolte **OK** tlačítko.
 
 Níže jsou uvedené tři typy položek kanálu obsahu a jejich přidružené zdrojové a výstupní typy souborů.
 
@@ -89,7 +89,7 @@ Vlastnosti kanálu obsahu jednotlivých souborů assetů můžete nastavit tak, 
 
 3. V části **Vlastnosti konfigurace**vyberte uzel Content Pipeline (například **kanál obsahu obrázku** pro prostředky textury a image) a pak v mřížce vlastností nastavte vlastnosti na příslušné hodnoty. Pokud například chcete generovat mipmapy pro prostředek textury v čase sestavení, nastavte vlastnost **Generovat MIPS** na **Ano**.
 
-4. Klikněte na tlačítko **OK** .
+4. Zvolte **OK** tlačítko.
 
 ### <a name="image-content-pipeline-configuration"></a>Konfigurace kanálu obsahu obrázku
 
@@ -97,7 +97,7 @@ Použijete-li nástroj pro vytváření textur obsahu k sestavení prostředků 
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|**Komprimují**|Určuje typ komprese, který se používá pro výstupní soubor.<br /><br /> K dispozici jsou tyto možnosti:<br /><br /> -   **bez komprese**<br />-   **Komprese BC1_UNORM**<br />-   **Komprese BC1_UNORM_SRGB**<br />-   **Komprese BC2_UNORM**<br />-   **Komprese BC2_UNORM_SRGB**<br />-   **Komprese BC3_UNORM**<br />-   **Komprese BC3_UNORM_SRGB**<br />-   **Komprese BC4_UNORM**<br />-   **Komprese BC4_SNORM**<br />-   **Komprese BC5_UNORM**<br />-   **Komprese BC5_SNORM**<br />-   **Komprese BC6H_UF16**<br />-   **Komprese BC6H_SF16**<br />-   **Komprese BC7_UNORM**<br />-   **Komprese BC7_UNORM_SRGB**<br /><br /> Informace o tom, které formáty komprese jsou podporovány v různých verzích rozhraní DirectX, najdete v tématu [Průvodce programováním pro DXGI](/windows/win32/direct3ddxgi/dx-graphics-dxgi-overviews).|
+|**Komprimují**|Určuje typ komprese, který se používá pro výstupní soubor.<br /><br /> Dostupné jsou následující možnosti:<br /><br /> -   **bez komprese**<br />**komprese BC1_UNORM** -   <br />**komprese BC1_UNORM_SRGB** -   <br />**komprese BC2_UNORM** -   <br />**komprese BC2_UNORM_SRGB** -   <br />**komprese BC3_UNORM** -   <br />**komprese BC3_UNORM_SRGB** -   <br />**komprese BC4_UNORM** -   <br />**komprese BC4_SNORM** -   <br />**komprese BC5_UNORM** -   <br />**komprese BC5_SNORM** -   <br />**komprese BC6H_UF16** -   <br />**komprese BC6H_SF16** -   <br />**komprese BC7_UNORM** -   <br />**komprese BC7_UNORM_SRGB** -   <br /><br /> Informace o tom, které formáty komprese jsou podporovány v různých verzích rozhraní DirectX, najdete v tématu [Průvodce programováním pro DXGI](/windows/win32/direct3ddxgi/dx-graphics-dxgi-overviews).|
 |Převést na předem vynásobený formát alfa|**Ano** , pokud chcete převést obrázek na předem vynásobený formát alfa ve výstupním souboru; v opačném případě **ne**. Dojde ke změně pouze výstupního souboru, zdrojový obrázek zůstane beze změny.|
 |**Generovat MIPS**|**Ano** , pokud chcete vygenerovat úplný řetěz mip v čase sestavení a zahrnout ho do výstupního souboru; v opačném případě **ne**. Pokud **ne**a zdrojový soubor již obsahuje mipmap řetězec, bude mít výstupní soubor řetězec MIP; v opačném případě výstupní soubor nebude mít žádný řetězec MIP.|
 |**Výstup obsahu**|Určuje název výstupního souboru. **Důležité informace:**  Změna přípony názvu souboru výstupního souboru nemá žádný vliv na formát souboru.|
@@ -209,7 +209,7 @@ cbuffer MiscVars : register(b3)
 };
 ```
 
-## <a name="related-topics"></a>Související témata
+## <a name="related-topics"></a>Příbuzná témata
 
 |Název|Popis|
 |-----------|-----------------|

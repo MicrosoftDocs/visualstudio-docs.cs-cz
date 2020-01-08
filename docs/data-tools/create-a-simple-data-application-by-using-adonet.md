@@ -6,26 +6,26 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 2222841f-e443-4a3d-8c70-4506aa905193
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f895bd909ec9fda496d284c163bff4a5168bd057
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8f35173ded1ba4d52e0c5a9800fa228a7f93b981
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648735"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586871"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>Vytvoření jednoduché datové aplikace pomocí ADO.NET
 
-Když vytváříte aplikaci, která pracuje s daty v databázi, provádíte základní úkoly, jako je definování připojovacích řetězců, vkládání dat a spouštění uložených procedur. Podle tohoto tématu můžete zjistit, jak pracovat s databází z jednoduchého model Windows Forms aplikace "Forms over data" pomocí vizuálů C# nebo Visual Basic a ADO.NET.  Všechny datové technologie .NET, včetně datových sad, LINQ to SQL a Entity Framework, nakonec provádějí kroky, které jsou velmi podobné těm, které jsou uvedené v tomto článku.
+Když vytvoříte aplikaci, která zpracovává data v databázi, provedete základní úlohy, jako je například definování připojovacích řetězců, vkládání dat a spouštění uložených procedur. Podle tohoto tématu můžete zjistit, jak pracovat s databází z jednoduchého "formy nad daty" aplikace Windows Forms pomocí Visual C# nebo Visual Basic a ADO.NET.  Všechna data technologie .NET, včetně datových sad, LINQ to SQL a Entity Framework – nakonec proveďte kroky, které jsou velmi podobné těm, které jsou uvedené v tomto článku.
 
-Tento článek ukazuje jednoduchý způsob, jak rychle získat data z databáze. Pokud vaše aplikace potřebuje upravovat data v netriviálních způsobech a aktualizovat databázi, měli byste zvážit použití Entity Framework a použití datových vazeb k automatické synchronizaci ovládacích prvků uživatelského rozhraní se změnami v podkladových datech.
+Tento článek ukazuje jednoduchý způsob, jak získat data z databáze v podobě rychlé. Pokud vaše aplikace potřebuje upravovat data nejsou v netriviálních způsoby a aktualizaci databáze, měli byste zvážit používající nástroj Entity Framework a použití datových vazeb se automaticky synchronizovat ovládacích prvků uživatelského rozhraní na změny v podkladových datech.
 
 > [!IMPORTANT]
-> Aby byl kód jednoduchý, nezahrnuje zpracování výjimek připravené pro produkční prostředí.
+> Chcete-li být kód jednoduchý, neměl by zahrnovat zpracování výjimek připravené pro produkční prostředí.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -33,41 +33,41 @@ Chcete-li vytvořit aplikaci, budete potřebovat:
 
 - Visual Studio.
 
-- SQL Server Express LocalDB. Pokud nemáte SQL Server Express LocalDB, můžete si ho nainstalovat ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express).
+- SQL Server Express LocalDB. Pokud nemáte SQL Server Express LocalDB, můžete ho nainstalovat [SQL Server Express stránku pro stažení](https://www.microsoft.com/sql-server/sql-server-editions-express).
 
-Toto téma předpokládá, že jste obeznámeni se základními funkcemi integrovaného vývojového prostředí (IDE) sady Visual Studio a můžete vytvořit aplikaci model Windows Forms, přidat formuláře do projektu, umístit tlačítka a další ovládací prvky do formulářů, nastavit vlastnosti ovládacích prvků a kódovat jednoduché události. Pokud s těmito úkoly nejste spokojeni, doporučujeme, abyste před zahájením tohoto návodu dokončili téma [Začínáme s jazykem Visual C# a Visual Basic](../ide/quickstart-visual-basic-console.md) .
+Toto téma předpokládá, že ovládáte základní funkce integrovaného vývojového prostředí sady Visual Studio a můžete vytvořit aplikaci Windows Forms, přidat formuláře do projektu, Vložit tlačítka a další ovládací prvky ve formulářích, nastavte vlastnosti ovládacích prvků a kódovat jednoduché události. Pokud si nejste seznámení s těmito úkoly, doporučujeme provést [Začínáme s Vizuálem C# a Visual Basic](../ide/quickstart-visual-basic-console.md) tématu před zahájením tohoto návodu.
 
 ## <a name="set-up-the-sample-database"></a>Vytvoření ukázkové databáze
 
-Vytvořte ukázkovou databázi pomocí následujících kroků:
+Vytvoření ukázkové databáze pomocí následujících kroků:
 
-1. V aplikaci Visual Studio otevřete okno **Průzkumník serveru** .
+1. V sadě Visual Studio, otevřete **Průzkumníka serveru** okna.
 
-2. Klikněte pravým tlačítkem na **datová připojení** a vyberte **vytvořit novou SQL Server databázi**.
+2. Klikněte pravým tlačítkem na **datová připojení** a zvolte **vytvořit novou databázi SQL serveru**.
 
-3. Do textového pole **název serveru** zadejte **(LocalDB) \mssqllocaldb**.
+3. V **název serveru** textové pole, zadejte **(localdb) \mssqllocaldb**.
 
-4. Do textového pole **nový název databáze** zadejte **Sales**a pak zvolte **OK**.
+4. V **nového názvu databázového** textové pole, zadejte **Sales**, klikněte na tlačítko **OK**.
 
-     Prázdná **prodejní** databáze je vytvořena a přidána do uzlu datová připojení v Průzkumník serveru.
+     Prázdné **Sales** databáze je vytvořen a přidán do uzlu datového připojení v Průzkumníku serveru.
 
-5. Klikněte pravým tlačítkem na připojení dat **prodeje** a vyberte **Nový dotaz**.
+5. Klikněte pravým tlačítkem na **Sales** datové připojení a vyberte **nový dotaz**.
 
-     Otevře se okno editoru dotazů.
+     Otevře se okno editor dotazů.
 
-6. Zkopírujte [prodejní skript Transact-SQL](https://github.com/MicrosoftDocs/visualstudio-docs/raw/master/docs/data-tools/samples/sales.sql) do schránky.
+6. Kopírovat [Sales příkazů jazyka Transact-SQL skriptů](https://github.com/MicrosoftDocs/visualstudio-docs/raw/master/docs/data-tools/samples/sales.sql) do schránky.
 
-7. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
+7. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
 
-     Po krátké době se dotaz dokončí a vytvoří se objekty databáze. Databáze obsahuje dvě tabulky: zákazník a objednávky. Tyto tabulky zpočátku neobsahují žádná data, ale při spuštění aplikace, kterou vytvoříte, můžete přidat data. Databáze obsahuje také čtyři jednoduché uložené procedury.
+     Po chvilce dotaz doběhnutí a databázové objekty jsou vytvořeny. Databáze obsahuje dvě tabulky: Customer a Orders. Tyto tabulky zpočátku neobsahují žádná data, ale přidáte data při spuštění aplikace, kterou vytvoříte. Databáze také obsahuje čtyři jednoduchých uložených procedur.
 
 ## <a name="create-the-forms-and-add-controls"></a>Vytvoření formulářů a přidání ovládacích prvků
 
-1. Vytvořte projekt pro aplikaci model Windows Forms a pojmenujte ji **SimpleDataApp**.
+1. Vytvořte projekt aplikace Windows Forms a pojmenujte jej **SimpleDataApp**.
 
-    Visual Studio vytvoří projekt a několik souborů, včetně prázdného formuláře Windows s názvem **Form1**.
+    Visual Studio vytvoří projekt a několik souborů, včetně prázdný formulář Windows s názvem **Form1**.
 
-2. Přidejte do projektu dva formuláře Windows, aby měly tři formuláře, a pak jim přidělte tyto názvy:
+2. Přidejte do projektu dva formuláře Windows, tak, aby měl tři formuláře a dejte jim následující názvy:
 
    - **Navigace**
 
@@ -75,16 +75,16 @@ Vytvořte ukázkovou databázi pomocí následujících kroků:
 
    - **FillOrCancel**
 
-3. U každého formuláře přidejte textová pole, tlačítka a další ovládací prvky, které se zobrazí na následujících obrázcích. Pro každý ovládací prvek nastavte vlastnosti, které tabulky popisují.
+3. U každého formuláře přidejte textová pole, tlačítka a další ovládací prvky, které se zobrazují na následujících obrázcích. Pro každý ovládací prvek nastavte vlastnosti, které jsou popsány v tabulce.
 
    > [!NOTE]
-   > Pole skupiny a ovládací prvky Label přidávají přehlednost, ale nepoužívají se v kódu.
+   > Skupinový rámeček a ovládací prvky popisku přehlednosti, ale nepoužívají se v kódu.
 
    **Navigační formulář**
 
-   ![Navigační dialogové okno](../data-tools/media/simpleappnav.png)
+   ![Dialogové okno navigace](../data-tools/media/simpleappnav.png)
 
-|Ovládací prvky pro navigační formulář|Vlastnosti|
+|Ovládací prvky formuláře Navigation|Vlastnosti|
 | - |----------------|
 |Tlačítko|Název = btnGoToAdd|
 |Tlačítko|Název = btnGoToFillOrCancel|
@@ -92,15 +92,15 @@ Vytvořte ukázkovou databázi pomocí následujících kroků:
 
 **Formulář NewCustomer**
 
-![Přidat nového zákazníka a umístit objednávku](../data-tools/media/simpleappnewcust.png)
+![Přidání nového odběratele a objednávky](../data-tools/media/simpleappnewcust.png)
 
-|Ovládací prvky pro formulář NewCustomer|Vlastnosti|
+|Ovládací prvky formuláře NewCustomer|Vlastnosti|
 | - |----------------|
 |TextBox|Název = txtCustomerName|
-|TextBox|Název = txtCustomerID<br /><br /> ReadOnly = true|
+|TextBox|Název = txtCustomerID<br /><br /> Jen pro čtení = True|
 |Tlačítko|Název = btnCreateAccount|
-|NumericUpdown|Počet desetinných míst = 0<br /><br /> Maximum = 5000<br /><br /> Název = numOrderAmount|
-|DateTimePicker|Formát = krátký<br /><br /> Název = dtpOrderDate|
+|NumericUpdown|Počet desetinných míst = 0<br /><br /> Maximální = 5000<br /><br /> Název = numOrderAmount|
+|Ovládacího prvku DateTimePicker|Formát = krátké<br /><br /> Název = dtpOrderDate|
 |Tlačítko|Název = btnPlaceOrder|
 |Tlačítko|Název = btnAddAnotherAccount|
 |Tlačítko|Název = btnAddFinish|
@@ -109,73 +109,73 @@ Vytvořte ukázkovou databázi pomocí následujících kroků:
 
 ![vyplnit nebo zrušit objednávky](../data-tools/media/simpleappcancelfill.png)
 
-|Ovládací prvky pro formulář FillOrCancel|Vlastnosti|
+|Ovládací prvky formuláře FillOrCancel|Vlastnosti|
 | - |----------------|
 |TextBox|Název = txtOrderID|
 |Tlačítko|Název = btnFindByOrderID|
-|DateTimePicker|Formát = krátký<br /><br /> Název = dtpFillDate|
-|DataGridView|Název = dgvCustomerOrders<br /><br /> ReadOnly = true<br /><br /> RowHeadersVisible = false|
+|Ovládacího prvku DateTimePicker|Formát = krátké<br /><br /> Název = dtpFillDate|
+|Ovládací prvek DataGridView|Název = dgvCustomerOrders<br /><br /> Jen pro čtení = True<br /><br /> RowHeadersVisible = False|
 |Tlačítko|Název = btnCancelOrder|
 |Tlačítko|Název = btnFillOrder|
 |Tlačítko|Název = btnFinishUpdates|
 
-## <a name="store-the-connection-string"></a>Uložení připojovacího řetězce
-Když se aplikace pokusí otevřít připojení k databázi, aplikace musí mít přístup k připojovacímu řetězci. Chcete-li se vyhnout zadávání řetězce ručně na každém formuláři, uložte řetězec do souboru *App. config* v projektu a vytvořte metodu, která vrátí řetězec, pokud je metoda volána z libovolného formuláře v aplikaci.
+## <a name="store-the-connection-string"></a>Store připojovací řetězec
+Když vaše aplikace se pokusí otevřít připojení k databázi, musí mít vaše aplikace přístup k připojovací řetězec. Aby se zabránilo ručním zadáním řetězce na každém formuláři, uložte řetězec v *App.config* souborů ve vašem projektu a vytvořte metodu, která vrátí řetězec, když je volána metoda z libovolného formuláře v aplikaci.
 
-Připojovací řetězec můžete najít tak, že kliknete pravým tlačítkem na připojení k datům **prodeje** v **Průzkumník serveru** a zvolíte **vlastnosti**. Vyhledejte vlastnost **ConnectionString** a potom pomocí **kombinace kláves CTRL** +**a**, **CTRL** +**C** vyberte a zkopírujte řetězec do schránky.
+Připojovací řetězec můžete najít kliknutím pravým tlačítkem na **Sales** datové připojení v **Průzkumníka serveru** a zvolíte **vlastnosti**. Vyhledejte **ConnectionString** vlastnost, pak použijte **Ctrl**+**A**, **Ctrl**+**C**  vyberte a zkopírujte řetězec do schránky.
 
-1. Pokud C#používáte, v **Průzkumník řešení**rozbalte uzel **vlastnosti** v projektu a pak otevřete soubor **Settings. Settings** .
-    Pokud používáte Visual Basic, klikněte v **Průzkumník řešení**na **Zobrazit všechny soubory**, rozbalte uzel **můj projekt** a pak otevřete soubor **Settings. Settings** .
+1. Pokud používáte C#v **Průzkumníka řešení**, rozbalte **vlastnosti** uzlu v rámci projektu a potom otevřete **Settings.settings** souboru.
+    Pokud používáte Visual Basic v **Průzkumníka řešení**, klikněte na tlačítko **zobrazit všechny soubory**, rozbalte **Můj projekt** uzlu a pak otevřete **Settings.settings** souboru.
 
-2. Do sloupce **název** zadejte `connString`.
+2. V **název** sloupce, zadejte `connString`.
 
-3. V seznamu **typ** vyberte **(připojovací řetězec)** .
+3. V **typ** seznamu vyberte **(připojovací řetězec)** .
 
-4. V seznamu **Rozsah** vyberte možnost **aplikace**.
+4. V **oboru** seznamu vyberte **aplikace**.
 
-5. Ve sloupci **hodnota** zadejte připojovací řetězec (bez žádných vnějších uvozovek) a pak změny uložte.
+5. V **hodnotu** sloupce, zadejte svůj připojovací řetězec (bez jakékoli mimo uvozovky) a pak uložte provedené změny.
 
 > [!NOTE]
-> V reálné aplikaci byste měli připojovací řetězec bezpečně ukládat, jak je popsáno v části [připojovací řetězce a konfigurační soubory](/dotnet/framework/data/adonet/connection-strings-and-configuration-files).
+> V reálné aplikaci byste měli uložit připojovací řetězec bezpečně, jak je popsáno v [připojovací řetězce a konfigurační soubory](/dotnet/framework/data/adonet/connection-strings-and-configuration-files).
 
-## <a name="write-the-code-for-the-forms"></a>Zápis kódu pro formuláře
+## <a name="write-the-code-for-the-forms"></a>Napište kód pro formuláře
 
-Tato část obsahuje Stručné přehledy o tom, co jednotlivé formuláře dělá. Poskytuje také kód, který definuje základní logiku při kliknutí na tlačítko na formuláři.
+Tato část obsahuje stručný přehled, co dělá každý formulář. Také poskytuje kód, který definuje logiku, když dojde ke kliknutí na tlačítko na formuláři.
 
 ### <a name="navigation-form"></a>Navigační formulář
 
-Navigační formulář se otevře při spuštění aplikace. Tlačítko **Přidat účet** otevře formulář NewCustomer. Tlačítko **vyplnit nebo zrušit objednávky** otevře formulář FillOrCancel. Tlačítko **ukončit** ukončí aplikaci.
+Navigační formulář se otevře při spuštění aplikace. **Přidat účet** tlačítko k otevření formuláře NewCustomer. **Vyplnit nebo zrušit objednávku** tlačítko k otevření formuláře FillOrCancel. **Ukončovací** tlačítko slouží k ukončení aplikace.
 
-#### <a name="make-the-navigation-form-the-startup-form"></a>Nastavit navigační formulář jako úvodní formulář
+#### <a name="make-the-navigation-form-the-startup-form"></a>Vytvořit formulář změna formuláře úvodního formuláře navigace
 
-Pokud používáte C#, v **Průzkumník řešení**otevřete **program.cs**a pak změňte `Application.Run` řádek na toto: `Application.Run(new Navigation());`
+Pokud používáte C#v **Průzkumníka řešení**, otevřete **Program.cs**a potom změňte `Application.Run` řádek, který toto: `Application.Run(new Navigation());`
 
-Pokud používáte Visual Basic, v **Průzkumník řešení**otevřete okno **vlastnosti** , vyberte kartu **aplikace** a pak v seznamu **spouštěcí formulář** vyberte **SimpleDataApp. Navigation** .
+Pokud používáte Visual Basic v **Průzkumníka řešení**, otevřete **vlastnosti** okna, vyberte **aplikace** kartu a potom vyberte  **SimpleDataApp.Navigation** v **úvodní formulář** seznamu.
 
-#### <a name="create-auto-generated-event-handlers"></a>Vytváření automaticky generovaných obslužných rutin událostí
+#### <a name="create-auto-generated-event-handlers"></a>Vytváření obslužných rutin událostí automaticky generované
 
-Dvojím kliknutím na tři tlačítka v navigačním formuláři Vytvořte prázdné metody obslužné rutiny události. Dvojím kliknutím na tlačítka se do souboru kódu návrháře přidá automaticky generovaný kód, který umožňuje vyvolat událost kliknutím na tlačítko.
+Dvakrát klikněte na tři tlačítka na formuláři navigace k vytvoření obslužné rutiny události prázdný. Dvojitým kliknutím na tlačítka také přidá automaticky generovaný kód v souboru kódu návrháře, který umožňuje tlačítko k vyvolání události.
 
-#### <a name="add-code-for-the-navigation-form-logic"></a>Přidat kód pro logiku pro navigační formulář
+#### <a name="add-code-for-the-navigation-form-logic"></a>Přidejte kód pro logiku formuláře navigace
 
-Na kódové stránce pro navigační formulář dokončete tělo metody pro tři obslužné rutiny události kliknutí na tlačítko, jak je znázorněno v následujícím kódu.
+Na stránce kódu pro formulář navigace dokončení těla metod pro tři tlačítka obslužné rutiny události kliknutí jak je znázorněno v následujícím kódu.
 
 [!code-csharp[Navigation#1](../data-tools/codesnippet/CSharp/SimpleDataApp/Navigation.cs#1)]
 [!code-vb[Navigation#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/Navigation.vb#1)]
 
 ### <a name="newcustomer-form"></a>Formulář NewCustomer
 
-Když zadáte název zákazníka a pak vyberete tlačítko **vytvořit účet** , vytvoří formulář NewCustomer účet zákazníka SQL Server a jako nové ID zákazníka vrátí hodnotu identity. Pak můžete umístit objednávku nového účtu zadáním částky a data objednávky a výběrem tlačítka **objednat místo** .
+Když zadáte název zákazníka a pak vyberete **vytvořit účet** tlačítko, formulář NewCustomer vytvoří účet zákazníka a SQL Server vrátí hodnotu IDENTITY jako nové ID zákazníka. Můžete poté pošlete objednávku nového účtu zadáním částku a data objednávky a výběrem **objednat** tlačítko.
 
-#### <a name="create-auto-generated-event-handlers"></a>Vytváření automaticky generovaných obslužných rutin událostí
+#### <a name="create-auto-generated-event-handlers"></a>Vytváření obslužných rutin událostí automaticky generované
 
-Vytvořte prázdnou obslužnou rutinu události Click pro každé tlačítko ve formuláři NewCustomer dvojitým kliknutím na každé ze čtyř tlačítek. Dvojím kliknutím na tlačítka se do souboru kódu návrháře přidá automaticky generovaný kód, který umožňuje vyvolat událost kliknutím na tlačítko.
+Vytvořit prázdný klikněte na obslužnou rutinu události pro každé tlačítko na formulář NewCustomer dvojitým kliknutím na každý ze čtyř tlačítek. Dvojitým kliknutím na tlačítka také přidá automaticky generovaný kód v souboru kódu návrháře, který umožňuje tlačítko k vyvolání události.
 
-#### <a name="add-code-for-the-newcustomer-form-logic"></a>Přidání kódu pro logiku formuláře NewCustomer
+#### <a name="add-code-for-the-newcustomer-form-logic"></a>Přidejte kód pro logiku formuláře NewCustomer
 
-Chcete-li dokončit logiku formuláře NewCustomer, postupujte podle těchto kroků.
+Dokončete logiky formuláře NewCustomer postupujte podle těchto kroků.
 
-1. Přiřaďte obor názvů `System.Data.SqlClient` do oboru, takže nemusíte plně kvalifikovat názvy jeho členů.
+1. Převést `System.Data.SqlClient` oboru názvů do oboru, takže není nutné plně kvalifikovat názvy z jejích členů.
 
      ```csharp
      using System.Data.SqlClient;
@@ -185,29 +185,29 @@ Chcete-li dokončit logiku formuláře NewCustomer, postupujte podle těchto kro
      Imports System.Data.SqlClient
      ```
 
-2. Přidejte do třídy některé proměnné a pomocné metody, jak je znázorněno v následujícím kódu.
+2. Přidejte několik proměnných a pomocné metody pro třídu, jak je znázorněno v následujícím kódu.
 
      [!code-csharp[NewCustomer#1](../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs#1)]
      [!code-vb[NewCustomer#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb#1)]
 
-3. Dokončete tělo metody pro čtyři obslužné rutiny události kliknutí na tlačítko, jak je znázorněno v následujícím kódu.
+3. Kompletní těla metod pro čtyři tlačítka obslužné rutiny události kliknutí jak je znázorněno v následujícím kódu.
 
      [!code-csharp[NewCustomer#2](../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs#2)]
      [!code-vb[NewCustomer#2](../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb#2)]
 
 ### <a name="fillorcancel-form"></a>Formulář FillOrCancel
 
-Formulář FillOrCancel spustí dotaz, který vrátí objednávku, když zadáte ID objednávky a kliknete na tlačítko **najít objednávku** . Vrácený řádek se zobrazí v mřížce dat, která je jen pro čtení. Pokud vyberete tlačítko pro **zrušení objednávky** , můžete objednávku označit jako zrušenou (X), nebo objednávku označit jako vyplněnou (F), pokud vyberete tlačítko **pořadí výplně** . Pokud znovu vyberete tlačítko **najít objednávku** , zobrazí se aktualizovaný řádek.
+Formulář FillOrCancel spustí dotaz a vrátit objednávku, když zadejte ID objednávky a potom klikněte na tlačítko **vyhledat objednávku** tlačítko. Vrácený řádek se zobrazí v mřížce dat jen pro čtení. Můžete označit objednávku jako zrušenou (X), pokud jste vybrali **zrušit objednávku** tlačítko, nebo můžete označit objednávku jako vyplněnou (F) Pokud jste vybrali **vyplnit objednávku** tlačítko. Pokud vyberete **vyhledat objednávku** tlačítko znovu, zobrazí se aktualizovaný řádek.
 
-#### <a name="create-auto-generated-event-handlers"></a>Vytváření automaticky generovaných obslužných rutin událostí
+#### <a name="create-auto-generated-event-handlers"></a>Vytváření obslužných rutin událostí automaticky generované
 
-Vytvořte prázdné obslužné rutiny události Click pro čtyři tlačítka ve formuláři FillOrCancel dvojitým kliknutím na tlačítka. Dvojím kliknutím na tlačítka se do souboru kódu návrháře přidá automaticky generovaný kód, který umožňuje vyvolat událost kliknutím na tlačítko.
+Vytvořit prázdné obslužné rutiny události pro čtyři tlačítka do formuláře FillOrCancel kliknutí dvojitým kliknutím na tlačítka. Dvojitým kliknutím na tlačítka také přidá automaticky generovaný kód v souboru kódu návrháře, který umožňuje tlačítko k vyvolání události.
 
-#### <a name="add-code-for-the-fillorcancel-form-logic"></a>Přidání kódu pro logiku formuláře FillOrCancel
+#### <a name="add-code-for-the-fillorcancel-form-logic"></a>Přidejte kód pro logiku formuláře FillOrCancel
 
-Chcete-li dokončit logiku formuláře FillOrCancel, postupujte podle těchto kroků.
+Dokončete logiky formuláře FillOrCancel postupujte podle těchto kroků.
 
-1. Přeneste následující dva obory názvů do oboru, takže nemusíte plně kvalifikovat názvy jejich členů.
+1. Následující dva obory názvů převeďte do rozsahu, takže není nutné k plnému určení jména jejich členů.
 
      ```csharp
      using System.Data.SqlClient;
@@ -219,19 +219,19 @@ Chcete-li dokončit logiku formuláře FillOrCancel, postupujte podle těchto kr
      Imports System.Text.RegularExpressions
      ```
 
-2. Přidejte proměnnou a pomocnou metodu do třídy, jak je znázorněno v následujícím kódu.
+2. Přidejte proměnnou a pomocné metody do třídy, jak je znázorněno v následujícím kódu.
 
      [!code-csharp[FillOrCancel#1](../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs#1)]
      [!code-vb[FillOrCancel#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb#1)]
 
-3. Dokončete tělo metody pro čtyři obslužné rutiny události kliknutí na tlačítko, jak je znázorněno v následujícím kódu.
+3. Kompletní těla metod pro čtyři tlačítka obslužné rutiny události kliknutí jak je znázorněno v následujícím kódu.
 
      [!code-csharp[FillOrCancel#2](../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs#2)]
      [!code-vb[FillOrCancel#2](../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb#2)]
 
 ## <a name="test-your-application"></a>Testování aplikace
 
-Vyberte klávesu **F5** pro sestavení a otestování aplikace po kódu každé obslužné rutiny události Click a poté po dokončení kódování.
+Vyberte **F5** klíče pro sestavení a testování vaší aplikace po kódu každé obslužné rutiny události kliknutí a potom můžete po dokončení kódování.
 
 ## <a name="see-also"></a>Viz také:
 

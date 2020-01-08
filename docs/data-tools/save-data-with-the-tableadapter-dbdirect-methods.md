@@ -11,21 +11,21 @@ helpviewer_keywords:
 - saving data, walkthroughs
 - data [Visual Studio], TableAdapter
 ms.assetid: 74a6773b-37e1-4d96-a39c-63ee0abf49b1
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b73e193f1bb3082a353e004200d437a74f508941
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 16ba6fcab6ef0f7a60f8cb8373a10a7c4383676b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641151"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586208"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>Ukládání dat pomocí metod TableAdapter DBDirect
 
-Tento návod poskytuje podrobné pokyny pro spuštění příkazů SQL přímo proti databázi pomocí metod DBDirect TableAdapter. Metody DBDirect pro TableAdapter poskytují jemnou úroveň kontroly nad aktualizacemi databáze. Můžete je použít ke spuštění specifických příkazů SQL a uložených procedur voláním individuálních metod `Insert`, `Update` a `Delete` podle potřeby vaší aplikace (na rozdíl od přetížené `Update` metody, která provádí aktualizaci, vložení a příkazy odstranit vše v jednom volání).
+Tento návod poskytuje podrobné pokyny pro spuštění příkazů SQL přímo proti databázi pomocí metod DBDirect TableAdapter. Metody DBDirect pro TableAdapter poskytují jemnou úroveň kontroly nad aktualizacemi databáze. Můžete je použít ke spuštění specifických příkazů SQL a uložených procedur voláním jednotlivých metod `Insert`, `Update`a `Delete` podle potřeby vaší aplikace (na rozdíl od přetížené `Update` metody, která provádí příkazy UPDATE, INSERT a DELETE v jednom volání).
 
 V tomto návodu se naučíte:
 
@@ -33,7 +33,7 @@ V tomto návodu se naučíte:
 
 - Vytvořte a nakonfigurujte datovou sadu pomocí [Průvodce konfigurací zdroje dat](../data-tools/media/data-source-configuration-wizard.png).
 
-- Vyberte ovládací prvek, který má být vytvořen ve formuláři při přetahování položek z okna **zdroje dat** . Další informace naleznete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetahování z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
+- Vyberte ovládací prvek, který má být vytvořen ve formuláři při přetahování položek z okna **zdroje dat** . Další informace najdete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetažení z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
 - Vytvořte formulář vázaný na data přetažením položek z okna **zdroje dat** do formuláře.
 
@@ -49,11 +49,11 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
     1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (Průzkumník objektů systému SQL Server je nainstalován v rámci úlohy **úložiště dat a zpracování** v instalační program pro Visual Studio.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
 
-       Otevře se okno editoru dotazů.
+       Otevře se okno editor dotazů.
 
     2. Zkopírujte [skript Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
 
-    3. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
+    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
 
        Po krátké době se dotaz dokončí a vytvoří se databáze Northwind.
 
@@ -61,7 +61,7 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
 Prvním krokem je vytvoření **aplikace model Windows Forms**.
 
-1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  > **projekt**.
+1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový** > **projekt**.
 
 2. V levém podokně rozbalte buď **vizuál C#**  , nebo **Visual Basic** a pak vyberte **Desktop Windows**.
 
@@ -77,7 +77,7 @@ Tento krok používá **Průvodce konfigurací zdroje dat** k vytvoření zdroje
 
 ### <a name="to-create-the-data-source"></a>Vytvoření zdroje dat
 
-1. V nabídce **data** vyberte možnost **Zobrazit zdroje dat**.
+1. Na **Data** nabídce vyberte možnost **zobrazit zdroje dat**.
 
    Otevře se okno **zdroje dat** .
 
@@ -109,7 +109,7 @@ Vytvořte ovládací prvky vázané na data přetažením položek z okna **zdro
 
 Chcete-li vytvořit ovládací prvky vázané na data ve formuláři Windows, přetáhněte hlavní uzel **oblasti** z okna **zdroje dat** do formuláře.
 
-Na formuláři se zobrazí ovládací prvek <xref:System.Windows.Forms.DataGridView> a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)`RegionTableAdapter`, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
+Na formuláři se zobrazí ovládací prvek <xref:System.Windows.Forms.DataGridView> a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)`RegionTableAdapter`, <xref:System.Windows.Forms.BindingSource>a <xref:System.Windows.Forms.BindingNavigator>.
 
 ### <a name="to-add-buttons-that-will-call-the-individual-tableadapter-dbdirect-methods"></a>Chcete-li přidat tlačítka, která budou volat jednotlivé metody DbDirect TableAdapter
 
@@ -119,7 +119,7 @@ Na formuláři se zobrazí ovládací prvek <xref:System.Windows.Forms.DataGridV
 
     |Name|Text|
     |----------|----------|
-    |`InsertButton`|**Zadat**|
+    |`InsertButton`|**Vložit**|
     |`UpdateButton`|**Aktualizace**|
     |`DeleteButton`|**Delete**|
 
@@ -127,7 +127,7 @@ Na formuláři se zobrazí ovládací prvek <xref:System.Windows.Forms.DataGridV
 
 1. Vyberte **InsertButton** a vytvořte obslužnou rutinu události pro událost Click a otevřete formulář v editoru kódu.
 
-2. @No__t_0 obslužnou rutinu události nahraďte následujícím kódem:
+2. `InsertButton_Click` obslužnou rutinu události nahraďte následujícím kódem:
 
      [!code-vb[VbRaddataSaving#1](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_1.vb)]
      [!code-csharp[VbRaddataSaving#1](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_1.cs)]
@@ -136,7 +136,7 @@ Na formuláři se zobrazí ovládací prvek <xref:System.Windows.Forms.DataGridV
 
 1. Poklikejte na **UpdateButton** a vytvořte obslužnou rutinu události pro událost Click a otevřete formulář v editoru kódu.
 
-2. @No__t_0 obslužnou rutinu události nahraďte následujícím kódem:
+2. `UpdateButton_Click` obslužnou rutinu události nahraďte následujícím kódem:
 
      [!code-vb[VbRaddataSaving#2](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_2.vb)]
      [!code-csharp[VbRaddataSaving#2](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_2.cs)]
@@ -145,7 +145,7 @@ Na formuláři se zobrazí ovládací prvek <xref:System.Windows.Forms.DataGridV
 
 1. Vyberte **DeleteButton** a vytvořte obslužnou rutinu události pro událost Click a otevřete formulář v editoru kódu.
 
-2. @No__t_0 obslužnou rutinu události nahraďte následujícím kódem:
+2. `DeleteButton_Click` obslužnou rutinu události nahraďte následujícím kódem:
 
      [!code-vb[VbRaddataSaving#3](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_3.vb)]
      [!code-csharp[VbRaddataSaving#3](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_3.cs)]

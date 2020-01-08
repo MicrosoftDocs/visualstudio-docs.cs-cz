@@ -3,17 +3,17 @@ title: 'Postupy: Výběr schémat XML k použití'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d6fda3ef-d465-4788-8514-2f2d528d658c
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 275def786a93d42e6b8e110d3b3d785a24e948b1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2acafe0c782b39bb7aa345b5456df7238703cb20
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601900"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592643"
 ---
 # <a name="how-to-select-the-xml-schemas-to-use"></a>Postupy: Výběr schémat XML k použití
 
@@ -34,7 +34,7 @@ Schémata, které zadáte, se uloží do souboru uživatelských možností (skr
 
    ![Vlastnost schemas pro soubor XML](media/properties-schemas.png)
 
-   Otevře se [dialogové okno schémata XML](xml-schemas-dialog-box.md) . Dialogové okno obsahuje seznam všech schémat s. rozšíření *XSD* v mezipaměti schématu (včetně schémat, na které se odkazuje v souboru *Catalog. XML* ) a také v jakémkoli schématu, které se nachází v aktuálním řešení, otevřené v aplikaci Visual Studio, na které odkazuje atribut `xsd:schemaLocation` nebo na který se odkazuje v **schématech** majetek.
+   Otevře se [dialogové okno schémata XML](xml-schemas-dialog-box.md) . Dialogové okno obsahuje seznam všech schémat s. rozšíření *XSD* v mezipaměti schématu (včetně schémat, na které se odkazuje v souboru *Catalog. XML* ) a také v jakémkoli schématu, které se nachází v aktuálním řešení, otevřené v aplikaci Visual Studio, na které odkazuje atribut `xsd:schemaLocation` nebo na něj odkazuje vlastnost **schemas** .
 
 3. Vyberte schémata, která chcete použít pro ověření, jedním z následujících způsobů:
 
@@ -44,7 +44,7 @@ Schémata, které zadáte, se uloží do souboru uživatelských možností (skr
 
    - Vyberte v dialogovém okně **schémata XML** více schémat a potom klikněte pravým tlačítkem myši a vyberte možnost **použít toto schéma**.
 
-4. Klikněte na **tlačítko OK**.
+4. Vyberte **OK**.
 
    Seznam vybraných schémat se zkopíruje zpátky do vlastnosti dokumentu **schémata** .
 
@@ -52,13 +52,13 @@ Schémata, které zadáte, se uloží do souboru uživatelských možností (skr
 
 1. V okně Vlastnosti dokumentu klikněte na tlačítko v poli **schémata** .
 
-2. Klikněte na tlačítko **Přidat**.
+2. Klikněte na tlačítko **Add** (Přidat).
 
    Otevře se dialogové okno **otevřít schéma XSD** .
 
 3. Procházejte a vyberte schéma, které chcete přidat do mezipaměti schémat.
 
-4. Klikněte na **otevřít**.
+4. Klikněte na tlačítko **otevřít**.
 
    Schémata se přidají do mezipaměti schémat a hodnota **použít** sloupec je nastavená na **použití tohoto schématu**.
 

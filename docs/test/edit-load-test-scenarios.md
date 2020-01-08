@@ -7,15 +7,15 @@ helpviewer_keywords:
 - load tests, user activities
 - load tests, modeling scenarios
 ms.assetid: fec04f2e-bf38-4d44-b2ec-fa50f58fd0d9
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 944b0bf52cd6a7c3459f0be2a06b437796f57b37
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8fa323d275628fe580763709884552754acfba81
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665045"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593236"
 ---
 # <a name="edit-load-test-scenarios"></a>Upravit scénáře zátěžového testu
 
@@ -43,19 +43,19 @@ Scénáře obsahují následující součásti:
 
 Scénář obsahuje několik dalších vlastností, které můžete upravovat pomocí **Editor zátěžového testu**. Další informace naleznete v tématu [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
 
-## <a name="tasks"></a>Úkoly
+## <a name="tasks"></a>Tasks
 
-|Úkoly|Související témata|
+|Tasks|Související témata|
 |-|-----------------------|
 |**Přidání pozastavení umělé lidské interakce ve vašem scénáři:** Časy přemýšlení se používají k simulaci lidského chování, které způsobuje, že lidé budou mezi interakcemi s webem čekat. Časy přemýšlení mezi požadavky v testu výkonnosti webu a mezi testovacími iteracemi ve scénáři zátěžového testu. Použití časů pomýšlení v zátěžovém testu může být užitečné při vytváření přesnějších simulací zatížení.|-   [upravit časy pomýšlení pro simulaci zpoždění lidské interakce webu](../test/edit-think-times-in-load-test-scenarios.md)|
 |**Zadejte počet virtuálních uživatelů pro váš scénář:** Můžete nakonfigurovat vlastnosti vzoru zatížení a určit, jak se během testu zatížení upraví simulované uživatelské zatížení. Získáte tři předdefinované vzory zatížení: konstanta, krok a na základě cílů. Zvolíte vzor zatížení a upravíte vlastnosti na odpovídající úrovně pro vaše cíle zátěžového testu.|-   [Úpravy vzorů zatížení pro modelování aktivit virtuálních uživatelů](../test/edit-load-patterns-to-model-virtual-user-activities.md)|
-|**Konfigurace pravděpodobnosti, že virtuální uživatel spustí test ve scénáři:** Můžete použít kombinaci testů, která určuje pravděpodobnost, že virtuální uživatel spustí daný test ve scénáři zátěžového testu. To vám umožní simulovat zatížení realističtějším způsobem. Místo toho, abyste měli v rámci svých aplikací pouze jeden pracovní postup, můžete mít několik pracovních postupů, což je bližší odhad toho, jak koncoví uživatelé pracují s vašimi aplikacemi.|-   [Upravit modely kombinace textu](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)|
+|**Konfigurace pravděpodobnosti, že virtuální uživatel spustí test ve scénáři:** Můžete použít kombinaci testů, která určuje pravděpodobnost, že virtuální uživatel spustí daný test ve scénáři zátěžového testu. To umožňuje simulovat zatížení více realisticky. Namísto toho, aby pouze jeden pracovní postup prostřednictvím aplikace, může mít několik pracovních postupů, což je užší jak koncoví uživatelé pracují s vašimi aplikacemi.|-   [Upravit modely kombinace textu](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)|
 |**Přidání nebo odebrání testu výkonnosti webu nebo jednotky z scénáře zátěžového testu:** Můžete přidat nebo odebrat test webového výkonu nebo jednotky z zátěžového testu ve scénáři. Zátěžový test obsahuje jeden nebo více scénářů, z nichž každý obsahuje jeden nebo více testů webového výkonu nebo jednotek.|-   [Upravit kombinaci testů](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)|
 |**Nakonfigurujte požadovanou kombinaci sítě pro váš scénář:** Pomocí kombinace sítě můžete simulovat zatížení sítě realističtější ve scénáři zátěžového testu. Zatížení je generováno pomocí heterogenní kombinace typů sítě namísto jednoho typu jednoduché sítě. Vytvoříte blíže přibližné informace o tom, jak koncoví uživatelé pracují s vašimi aplikacemi. Model kombinace sítě by měl odrážet cíle tohoto scénáře.|-   [Určení typů virtuálních sítí](../test/specify-virtual-network-types-in-a-load-test-scenario.md)|
 |**Vyberte odpovídající kombinaci webových prohlížečů pro váš scénář:** Pomocí kombinace prohlížečů můžete simulovat webové zatížení realističtější v rámci scénáře zátěžového testu. Načtení se vygeneruje pomocí heterogenní kombinace prohlížečů místo jednoho jediného prohlížeče. Vytvoříte blíže přibližné sblížení prohlížečů, které se budou používat s vašimi aplikacemi.|-   [Určení typů webových prohlížečů](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)|
 |**Nakonfigurujte nastavení iterace testu pro váš scénář:** Můžete upravit scénář zátěžového testu pro konfiguraci nastavení iterace testu pomocí Editor zátěžového testu a okno Vlastnosti. Ve výchozím nastavení je scénář nastaven bez maximálního počtu iterací testu. Volitelně můžete nakonfigurovat maximální počet iterací ve scénáři a dobu pozastavení mezi nimi.|-   [Konfigurace iterací testů pro scénáře](../test/configure-test-iterations-in-a-load-test-scenario.md)|
-|**Nakonfigurujte nastavení zpoždění pro váš scénář:** Pomocí **Editor zátěžového testu** a okna **vlastnosti** můžete zadat zpoždění před spuštěním scénáře v rámci zátěžového testu. Příkladem, kdy může být vhodné použít vlastnost **zpoždění spuštění** , je Pokud potřebujete jeden scénář pro zahájení výroby položek, které jiný scénář spotřebovává. Můžete zpozdit nenáročný scénář a umožnit tak scénáři výroby naplnit nějaká data.|[zpoždění spuštění scénáře -    Configureng](../test/configure-scenario-start-delays.md)|
-|**Zadejte vzdálené počítače, které se mají použít ve scénáři zátěžového testu:** Po vytvoření zátěžového testu můžete upravit vlastnosti scénáře zátěžového testu a určit, které testovací agenty chcete zahrnout. Další informace naleznete v tématu [řadiče testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md).|-   [Postupy: Určení testovacích agentů k použití](../test/how-to-specify-test-agents-to-use-in-load-test-scenarios.md)|
+|**Nakonfigurujte nastavení zpoždění pro váš scénář:** Pomocí **Editor zátěžového testu** a okna **vlastnosti** můžete zadat zpoždění před spuštěním scénáře v rámci zátěžového testu. Příkladem, kdy může být vhodné použít vlastnost **zpoždění spuštění** , je Pokud potřebujete jeden scénář pro zahájení výroby položek, které jiný scénář spotřebovává. Můžete zpozdit nenáročný scénář a umožnit tak scénáři výroby naplnit nějaká data.|[zpoždění spuštění scénáře -   Configureng](../test/configure-scenario-start-delays.md)|
+|**Zadejte vzdálené počítače, které se mají použít ve scénáři zátěžového testu:** Po vytvoření zátěžového testu můžete upravit vlastnosti scénáře zátěžového testu a určit, které testovací agenty chcete zahrnout. Další informace najdete v tématu [testovací kontrolery a testovací agenty](configure-test-agents-and-controllers-for-load-tests.md).|-   [Postupy: Určení testovacích agentů k použití](../test/how-to-specify-test-agents-to-use-in-load-test-scenarios.md)|
 
 ## <a name="see-also"></a>Viz také:
 

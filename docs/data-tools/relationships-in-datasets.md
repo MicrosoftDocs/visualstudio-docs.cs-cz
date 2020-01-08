@@ -10,17 +10,17 @@ helpviewer_keywords:
 - datasets [Visual Basic], relationships
 - relationships, datasets
 ms.assetid: cfe274f0-71fe-40f6-994e-7c7f6273c9ba
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c9fab55c020894fe87ec4dc1c31137fb7e38c204
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a9d733892b3bc62c272f31b0d7cc1aa10fbf229d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648246"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586312"
 ---
 # <a name="create-relationships-between-datasets"></a>Vytváření vztahů mezi tabulkami
 Datové sady, které obsahují tabulky s relačními tabulkami, používají <xref:System.Data.DataRelation> objekty k reprezentaci vztahu nadřazený-podřízený mezi tabulkami a k vrácení souvisejících záznamů od sebe. Přidání souvisejících tabulek do datových sad pomocí **Průvodce konfigurací zdroje dat**nebo **Návrhář datových sad**vytvoří a nakonfiguruje pro vás objekt <xref:System.Data.DataRelation>.
@@ -76,7 +76,7 @@ Relace mezi tabulkami dat se zobrazí jako řádky v **Návrhář datových sad*
 
 #### <a name="to-create-a-relationship-between-two-data-tables"></a>Vytvoření relace mezi dvěma datovými tabulkami
 
-1. Otevřete datovou sadu v **Návrhář datových sad**. Další informace najdete v tématu [Návod: vytvoření datové sady v Návrhář datových sad](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
+1. Otevřete svou datovou sadu v **Návrhář Dataset**. Další informace najdete v tématu [Návod: vytvoření datové sady v Návrhář datových sad](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
 
 2. Přetáhněte objekt **vztahu** z panelu nástrojů **datové sady** do tabulky podřízených dat v relaci.
 
@@ -92,7 +92,7 @@ Relace mezi tabulkami dat se zobrazí jako řádky v **Návrhář datových sad*
 
 7. Vyberte, zda chcete vytvořit relaci, omezení nebo obojí.
 
-8. Zaškrtněte nebo zrušte zaškrtnutí políčka **vnořené relace** . Výběrem této možnosti nastavíte vlastnost <xref:System.Data.DataRelation.Nested%2A> na `true` a dojde k tomu, že podřízené řádky relace budou vnořené do nadřazeného sloupce, když budou tyto řádky zapsány jako data XML nebo synchronizovány s <xref:System.Xml.XmlDataDocument>. Další informace najdete v tématu [vnořování datových vztahů](/dotnet/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations).
+8. Zaškrtněte nebo zrušte zaškrtnutí políčka **vnořené relace** . Výběrem této možnosti nastavíte vlastnost <xref:System.Data.DataRelation.Nested%2A> na `true`a dojde k tomu, že podřízené řádky relace budou vnořené do nadřazeného sloupce, když budou tyto řádky zapsány jako data XML nebo synchronizovány s <xref:System.Xml.XmlDataDocument>. Další informace najdete v tématu [vnořování datových vztahů](/dotnet/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations).
 
 9. Nastavte pravidla, která se mají vyhovět při provádění změn záznamů v těchto tabulkách. Další informace najdete v tématu <xref:System.Data.Rule>.
 
@@ -100,7 +100,7 @@ Relace mezi tabulkami dat se zobrazí jako řádky v **Návrhář datových sad*
 
 #### <a name="to-display-a-relation-name-in-the-dataset-designer"></a>Chcete-li zobrazit název vztahu v Návrhář datových sad
 
-1. Otevřete datovou sadu v **Návrhář datových sad**. Další informace najdete v tématu [Návod: vytvoření datové sady v Návrhář datových sad](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
+1. Otevřete svou datovou sadu v **Návrhář Dataset**. Další informace najdete v tématu [Návod: vytvoření datové sady v Návrhář datových sad](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
 
 2. V nabídce **data** vyberte příkaz **Zobrazit popisky relací** , aby se zobrazil název vztahu. Zrušením zaškrtnutí tohoto příkazu skryjte název vztahu.
 

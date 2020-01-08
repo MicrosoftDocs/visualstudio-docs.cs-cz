@@ -7,15 +7,15 @@ helpviewer_keywords:
 - load tests, adding delays
 - load tests, changing think times
 ms.assetid: 8e03bee5-ab7b-4b40-9497-9dbe91ccb90e
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 661a31411a561f15809a10fb15fd71a29e6a64fa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 887d2af9e60be914bd74141041ecc375cfea4f00
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672942"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590030"
 ---
 # <a name="edit-think-times-to-simulate-website-human-interaction-delays-in-load-tests-scenarios"></a>Úprava časů pomýšlení pro simulaci zpoždění lidské interakce webu ve scénářích zátěžových testů
 
@@ -33,7 +33,7 @@ Možnosti **profilu promýšlení** jsou popsány v následujícím seznamu:
 
 Časy přemýšlení se ignorují. Toto nastavení použijte, pokud chcete vygenerovat maximální zatížení pro vysoce zatížený webový server. Nepoužívejte ji při pokusu o vytvoření realističtějších uživatelských interakcí s webovým serverem.
 
-**Pnete**
+**On**
 
 Časy přemýšlení se používají přesně tak, jak byly zaznamenány v testu výkonnosti webu. Simuluje více uživatelů, kteří spouštějí testy výkonu webu přesně tak, jak jsou zaznamenané. Vzhledem k tomu, že zátěžový test simuluje více uživatelů, může při použití stejné doby pomýšlení vytvořit nepřirozený vzor zatížení synchronizovaných virtuálních uživatelů.
 
@@ -42,7 +42,7 @@ Možnosti **profilu promýšlení** jsou popsány v následujícím seznamu:
 Používají se časy přemýšlení, ale jsou rozlišené na normální křivce. Nabízí realističtější simulaci virtuálních uživatelů mírně proměnlivou dobu promýšlení mezi požadavky.
 
 > [!NOTE]
-> Úplný seznam vlastností scénáře zátěžového testu a jejich popis naleznete v tématu [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
+> Úplný seznam vlastnosti scénáře zátěžového testu a jejich popis najdete v části [vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
 
 ## <a name="change-the-think-profile"></a>Změna profilu přemýšleje
 
@@ -50,7 +50,7 @@ Používají se časy přemýšlení, ale jsou rozlišené na normální křivce
 
 1. Z projektu testování výkonu webu a zátěžového testu otevřete zátěžový test.
 
-2. V **Editor zátěžového testu**vyberte uzel scénář, ve kterém chcete změnit **profil promyšlenosti**. **Profil promýšlení** se zobrazí v okně **vlastnosti** . Stisknutím klávesy **F4** zobrazte okno **vlastnosti** .
+2. V **Editor zátěžového testu**vyberte uzel scénář, ve kterém chcete změnit **profil promyšlenosti**. **Profil promýšlení** se zobrazí v okně **vlastnosti** . Stisknutím klávesy **F4** zobrazíte **vlastnosti** okna.
 
 3. V okně **vlastnosti** změňte vlastnost **profil přemýšlejí** .
 
@@ -58,4 +58,4 @@ Používají se časy přemýšlení, ale jsou rozlišené na normální křivce
 
 ## <a name="see-also"></a>Viz také:
 
-- [Upravit scénáře zátěžového testu](../test/edit-load-test-scenarios.md)
+- [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md)

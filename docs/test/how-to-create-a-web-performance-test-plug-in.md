@@ -1,5 +1,5 @@
 ---
-title: Vytvoření modulu plug-in testu výkonnosti webu
+title: Vytvoření modulu Plugin pro Test výkonnosti webu
 ms.date: 10/03/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,60 +8,60 @@ helpviewer_keywords:
 - Web performance tests, creating plug-ins
 - plug-ins, creating in Web performance tests
 ms.assetid: a612f2d2-9806-477d-a126-12842f07da6e
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 318cc217bee235842ebc206b0461dcd7c9aeceaa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cc2eeafa41b953f9d853c7ff435a6a9706ae73ca
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653617"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589107"
 ---
-# <a name="how-to-create-a-web-performance-test-plug-in"></a>Postupy: Vytvoření modulu plug-in testu výkonnosti webu
+# <a name="how-to-create-a-web-performance-test-plug-in"></a>Postupy: vytvoření modulu Plugin pro test výkonnosti webu
 
-Moduly plug-in testů výkonnosti webu umožňují izolovat a znovu použít kód mimo hlavní deklarativní příkazy v testu výkonnosti webu. Přizpůsobený modul plug-in testu výkonnosti webu nabízí způsob, jak volat nějaký kód při spuštění testu výkonnosti webu. Modul plug-in testu výkonnosti webu je spuštěn jednou pro každou iteraci testu. Kromě toho, pokud přepíšete metody požadavků nebo PostRequest v modulu plug-in test, tyto moduly plug-in se spustí před nebo po každém požadavku.
+Webového výkonu testy moduly plug-in umožňují izolovat a opakovaně používat kód mimo hlavní deklarativní příkazů v testu výkonnosti webu. Modul plug-in testu výkonnosti webu přizpůsobené nabízí způsob, jak volat nějaký kód při spuštění testu výkonnosti webu. Modul plug-in testu výkonnosti webu je spustit jednou pro každou iteraci testu. Kromě toho pokud přepíšete metodu PreRequest nebo PostRequest v modulu plug-in testu, tyto moduly plug-in požadavku se spustit před nebo po každého požadavku, v uvedeném pořadí.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Můžete vytvořit přizpůsobený modul plug-in testu výkonnosti webu odvozením vlastní třídy z <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> základní třídy.
+Můžete vytvořit test výkonnosti webu vlastní modul plug-in odvozením vlastních tříd z <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> základní třídy.
 
-Můžete použít vlastní moduly plug-in testu výkonnosti webu s testy webového výkonu, které jste nahráli, což vám umožní napsat minimální množství kódu, abyste získali větší úroveň kontroly nad testy výkonnosti webu. Můžete je však také použít s kódovanými testy výkonnosti webu. Další informace naleznete v tématu [generování a spuštění kódovaného testu výkonnosti webu](../test/generate-and-run-a-coded-web-performance-test.md).
+Můžete použít vlastní web výkon testu moduly plug-in s testy výkonnosti webu, který jste nahráli, která umožňuje zapsat minimální část kódu a získat vyšší úroveň kontroly nad testy výkonu webu. Ale také můžete je s kódované testy webového výkonu. Další informace najdete v tématu [generování a spuštění programový test výkonnosti webu](../test/generate-and-run-a-coded-web-performance-test.md).
 
 > [!NOTE]
 > Můžete také vytvořit moduly plug-in zátěžového testu. Viz [Postupy: Vytvoření modulu plug-in zátěžového testu](../test/how-to-create-a-load-test-plug-in.md).
 
-## <a name="to-create-a-custom-web-performance-test-plug-in"></a>Vytvoření vlastního modulu plug-in testu výkonnosti webu
+## <a name="to-create-a-custom-web-performance-test-plug-in"></a>Můžete vytvořit modul plug-in testu výkonnosti webu vlastní
 
-1. Otevřete projekt webového výkonu a zátěžového testu, který obsahuje test výkonnosti webu.
+1. Otevřete webový výkon a projekt zátěžového testu, který obsahuje test výkonnosti webu.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a vyberte **Přidat** a pak zvolte **Nový projekt**.
+2. V **Průzkumníka řešení**, klikněte pravým tlačítkem na řešení a vyberte **přidat** a klikněte na tlačítko **nový projekt**.
 
 3. Vytvořte nový projekt **knihovny tříd** .
 
-   Nový projekt knihovny tříd je přidán do **Průzkumník řešení** a nová třída se zobrazí v **editoru kódu**.
+   Nový projekt knihovny tříd je přidána do **Průzkumníka řešení** a nová třída se objeví v **Editor kódu**.
 
-4. V **Průzkumník řešení**klikněte pravým tlačítkem myši na složku **odkazy** v nové knihovně tříd a vyberte možnost **Přidat odkaz**.
+4. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **odkazy** složku novou knihovnu tříd a vyberte **přidat odkaz**.
 
-   Zobrazí se dialogové okno **Přidat odkaz** .
+   **Přidat odkaz** se zobrazí dialogové okno.
 
-5. Zvolte kartu **.NET** , přejděte dolů a vyberte **Microsoft. VisualStudio. QualityTools. WebTestFramework.**
+5. Zvolte **.NET** kartu, posuňte se dolů a vyberte **Microsoft.VisualStudio.QualityTools.WebTestFramework**
 
-6. Klikněte na **tlačítko OK**.
+6. Vyberte **OK**.
 
-     Odkaz na **Microsoft. VisualStudio. QualityTools. WebTestFramework** se přidá do **referenční** složky v **Průzkumník řešení**.
+     Odkaz na **Microsoft.VisualStudio.QualityTools.WebTestFramework** se přidá do **odkaz** složky **Průzkumníka řešení**.
 
-7. V **Průzkumník řešení**klikněte pravým tlačítkem myši na nejvyšší uzel projektu webového výkonu a zátěžového testu, který obsahuje zátěžový test, ke kterému chcete přidat modul plug-in testu výkonnosti webu, a vyberte možnost **Přidat odkaz**.
+7. V **Průzkumníka řešení**, klikněte pravým tlačítkem na nejvyšší uzel webového výkonu a zatížení testovacího projektu, který obsahuje zátěžový test, ke kterému chcete přidat modul plug-in a vyberte test výkonnosti webu **přidat odkaz**.
 
 8. **Zobrazí se dialogové okno Přidat odkaz**.
 
-9. Zvolte kartu **projekty** a vyberte **projekt knihovny tříd**.
+9. Zvolte **projekty** kartě a vyberte **projekt knihovny tříd**.
 
-10. Klikněte na **tlačítko OK**.
+10. Vyberte **OK**.
 
-11. V **editoru kódu**napište kód modulu plug-in. Nejprve vytvořte novou veřejnou třídu, která je odvozena z <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>.
+11. V **Editor kódu**, psát kód modul plug-in. Nejprve vytvořte novou veřejnou třídu, která je odvozena z <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>.
 
-12. Implementujte kód uvnitř jedné nebo více obslužných rutin událostí. V následujícím oddílu s příklady naleznete ukázku implementace.
+12. Implementujte kód uvnitř jednoho nebo více obslužných rutin událostí. V následujícím oddílu s příklady naleznete ukázku implementace.
 
     - <xref:Microsoft.VisualStudio.TestTools.WebTesting.PostWebTestRecordingEventArgs>
 
@@ -83,36 +83,36 @@ Můžete použít vlastní moduly plug-in testu výkonnosti webu s testy webové
 
 14. Otevřete test výkonnosti webu.
 
-15. Chcete-li přidat modul plug-in testu výkonnosti webu, vyberte možnost **Přidat modul plug-in webového testu** na panelu nástrojů.
+15. Chcete-li přidat modul plug-in testu výkonnosti webu, zvolte **přidat modul Plug-in pro Test webové** na panelu nástrojů.
 
-     Zobrazí se dialogové okno **Přidat modul plug-in webového testu** .
+     **Přidat modul webového testu Plug-in** se zobrazí dialogové okno.
 
-16. V části **Vybrat modul plug-in**vyberte třídu modulu plug-in test výkonnosti webu.
+16. V části **vyberte modul plug-in**vyberte modul plug-in třídu testu výkonu webu.
 
-17. V podokně **vlastnosti pro vybraný modul plug-in** nastavte počáteční hodnoty pro modul plug-in, které se použijí v době běhu.
+17. V **vlastnosti pro vybraný modul plug-in** podokno, nastavte počáteční hodnoty pro modul plug-in pro použití v době běhu.
 
     > [!NOTE]
-    > Z modulu plug-in lze vystavit libovolný počet vlastností, ale je třeba je nastavit jako veřejné a nastavitelné a musí mít základní typ, jako je například Integer, Boolean nebo String. Vlastnosti modulu plug-in testu výkonnosti webu lze také změnit později pomocí okno Vlastnosti.
+    > Z modulu plug-in lze vystavit libovolný počet vlastností, ale je třeba je nastavit jako veřejné a nastavitelné a musí mít základní typ, jako je například Integer, Boolean nebo String. Modul plug-in vlastností testu výkonnosti webu můžete změnit taky později pomocí okna Vlastnosti.
 
-18. Klikněte na **tlačítko OK**.
+18. Vyberte **OK**.
 
-     Modul plug-in se přidá do složky **moduly plug-in webového testu** .
+     Modul plug-in je přidán do **zásuvné moduly webového testu** složky.
 
     > [!WARNING]
-    > Při spuštění testu výkonnosti webu nebo zátěžového testu, který používá modul plug-in, se může zobrazit chybová zpráva podobná následující:
+    > Vám může se objevit chyba podobná následující při spuštění testu výkonnosti webu nebo zátěžového testu, který používá modul plug-in:
     >
-    > **Požadavek se nezdařil: výjimka v \<plug > událost: Nepodařilo se načíst soubor nebo sestavení ' \< '. soubor dll >, Version = \<n. n. n. n >, Culture = neutral, PublicKeyToken = null nebo jedna z jeho závislostí. Systém nemůže najít zadaný soubor.**
+    > **Požadavek se nezdařil: výjimka v \<modul plug-in > události: Nepodařilo se načíst soubor nebo sestavení '\<'. soubor dll >, verze =\<n. n. n. n >, Culture = neutral, PublicKeyToken = null nebo jedna z jeho závislostí. Systém nemůže najít zadaný soubor.**
     >
-    > To je způsobeno tím, že provedete změny kódu v některém z modulů plug-in a vytvoříte novou verzi knihovny DLL **(verze = 0.0.0.0)** , ale modul plug-in stále odkazuje na původní verzi modulu plug-in. Chcete-li tento problém vyřešit, postupujte podle následujících kroků:
+    > Důvodem je-li změnit kód na některý z modulů plug-in a vytvořit novou verzi knihovny DLL **(verze = 0.0.0.0)** , ale modul plug-in stále odkazuje původní verzi modulu plug-in. Chcete-li tento problém, postupujte podle těchto kroků:
     >
-    > 1. V projektu webového výkonu a zátěžového testu se zobrazí upozornění v odkazech. Odeberte a znovu přidejte odkaz na knihovnu DLL modulu plug-in.
-    > 2. Odeberte modul plug-in z testu nebo příslušné umístění a pak ho přidejte zpátky.
+    > 1. Webový výkon a projekt zátěžového testu zobrazí se v odkazech zobrazí upozornění. Odeberte a znovu přidejte odkaz na knihovnu DLL Doplňku.
+    > 2. Odeberte doplněk z vašeho testu nebo vhodného místa a znovu ho přidejte.
 
 ## <a name="example"></a>Příklad
 
-Následující kód vytvoří přizpůsobený modul plug-in testu výkonnosti webu, který přidá položku do <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestContext> reprezentujícího iteraci testu.
+Následující kód vytvoří přizpůsobené testu výkonnosti webu modulu plug-in, který přidá položku do <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestContext> , která představuje iteraci testu.
 
-Po spuštění testu výkonnosti webu můžete pomocí tohoto modulu plug-in zobrazit přidanou položku s názvem **TestIteratnionNumber** na kartě **kontext** v **prohlížeči výsledků výkonu webu**.
+Po spuštění testu výkonnosti webu se prostřednictvím tohoto modulu plug-in uvidíte přidanou položku s názvem **TestIteratnionNumber** v **kontextu** kartu **prohlížeče výsledků výkonnosti webu** .
 
 ```csharp
 using System;
@@ -166,9 +166,9 @@ namespace SampleRules
 ## <a name="see-also"></a>Viz také:
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin>
-- [Vytvoření vlastního kódu a modulů plug-in pro zátěžové testy](../test/create-custom-code-and-plug-ins-for-load-tests.md)
-- [Postupy: Vytvoření modulu plug-in na úrovni požadavků](../test/how-to-create-a-request-level-plug-in.md)
-- [Kód vlastní pravidlo extrakce pro test výkonnosti webu](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
-- [Kódování vlastního ověřovacího pravidla pro test výkonnosti webu](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
-- [Postupy: Vytvoření modulu plug-in zátěžového testu](../test/how-to-create-a-load-test-plug-in.md)
-- [Generování a spuštění kódovaného testu výkonnosti webu](../test/generate-and-run-a-coded-web-performance-test.md)
+- [Vytvoření vlastního kódu a modulů Plugin pro zátěžové testy](../test/create-custom-code-and-plug-ins-for-load-tests.md)
+- [Postupy: vytvoření modulu Plugin úrovni požadavků](../test/how-to-create-a-request-level-plug-in.md)
+- [Kód vlastního pravidla extrakce pro test výkonnosti webu](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
+- [Kód vlastního ověřovacího pravidla pro test výkonnosti webu](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
+- [Postupy: vytvoření modulu Plugin pro zátěžový test](../test/how-to-create-a-load-test-plug-in.md)
+- [Generování a spuštění programový test výkonnosti webu](../test/generate-and-run-a-coded-web-performance-test.md)

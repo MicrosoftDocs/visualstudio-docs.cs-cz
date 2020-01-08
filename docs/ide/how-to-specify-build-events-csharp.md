@@ -10,17 +10,17 @@ helpviewer_keywords:
 - build events [Visual Studio]
 - builds [Visual Studio], events
 ms.assetid: b4ce1ad9-5215-4b6f-b6a2-798b249aa335
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a28f491ea5af53546f66e066bf8f78575708bc57
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 24f64cdaa52b923e288d704a10cb7a7438b028b4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656591"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591434"
 ---
 # <a name="how-to-specify-build-events-c"></a>Postupy: určení událostí sestavení (C#)
 
@@ -148,7 +148,7 @@ Dále vyvolejte tento příkaz v události po sestavení pro úpravu manifestu a
 
 4. Publikujte projekt kliknutím na **Publikovat nyní**.
 
-   Soubor manifestu je sestaven a uložen do *C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe.manifest*. Chcete-li zobrazit manifest, klikněte pravým tlačítkem myši na soubor, klikněte na možnost **otevřít**v aplikaci, vyberte **možnost vybrat program v seznamu**a pak klikněte na tlačítko **Poznámkový blok**.
+   Soubor manifestu je sestaven a uložen do *složce c:\temp\ CSWinApp_1_0_0_0 \cswinapp.exe.manifest*. Chcete-li zobrazit manifest, klikněte pravým tlačítkem myši na soubor, klikněte na možnost **otevřít**v aplikaci, vyberte **možnost vybrat program v seznamu**a pak klikněte na tlačítko **Poznámkový blok**.
 
    V souboru vyhledejte `<osVersionInfo>` element. Například verze může být:
 

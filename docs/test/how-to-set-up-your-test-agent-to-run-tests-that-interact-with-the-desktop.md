@@ -5,15 +5,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - agents, configuring for interaction with desktop
 ms.assetid: 3a94dd07-6d17-402c-ae8f-7947143755c9
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 55cf32d138d2644e2d2a7a08406eb575a2895400
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f4ef2d589e75c50a6cecb5364d5b458cffdfd145
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653432"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588964"
 ---
 # <a name="how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop"></a>Postupy: nastavení testovacího agenta pro spouštění testů, které komunikují s plochou
 
@@ -36,31 +36,31 @@ Pomocí následujícího postupu můžete nastavit všechny agenty, kteří jsou
 
 ## <a name="to-set-up-an-agent-to-run-as-a-process"></a>Nastavení agenta tak, aby běžel jako proces
 
-1. Chcete-li nakonfigurovat testovacího agenta, který jste nainstalovali pro spuštění jako proces, použijte**Nástroj pro konfiguraci testovacího agenta** **Spustit**  > .
+1. Chcete-li nakonfigurovat testovacího agenta, který jste nainstalovali pro spuštění jako proces, použijte **Nástroj pro konfiguraci testovacího agenta** **Spustit** > .
 
-   Zobrazí se dialogové okno **konfigurovat testovacího agenta** .
+   **Konfigurace testovacího agenta** se zobrazí dialogové okno.
 
    ![Konfigurace testovacího agenta pro Visual Studio](media/configure-test-agent.png)
 
-2. Vyberte **interaktivní proces**. Testovací agent bude spuštěn jako proces namísto služby. Klikněte na tlačítko **Další**.
+2. Vyberte **interaktivní proces**. Testovací agent bude spuštěn jako proces namísto služby. Zvolte **Další**.
 
 3. Zadejte uživatelské jméno a heslo pro uživatele, který spustí proces testovacího agenta.
 
    > [!NOTE]
    > - Uživatel, kterého jste přidali ke spuštění procesu, musí být také přidán jako člen skupiny TeamTestAgentService v počítači pro testovací kontrolér tohoto agenta. Pokud je tento uživatel aktuálním uživatelem, při přidání tohoto uživatele do počítače testovacího kontroléru je nutné se odhlásit nebo restartovat.
-   > - Hesla s hodnotou null nejsou pro uživatelské účty podporována.
+   > - Hesla s hodnotou Null nejsou pro uživatelské účty podporována.
    > - Pokud chcete používat IntelliTrace nebo data emulace sítě a diagnostický adaptér, musí být uživatelský účet členem skupiny Administrators. Pokud je v počítači, na kterém běží testovací agent, spuštěn operační systém, který má nejméně privilegovaný uživatelský účet, musíte ho spustit také jako správce (se zvýšenými oprávněními). Pokud uživatelské jméno agenta není ve službě agenta, pokusí se ho přidat, což vyžaduje oprávnění k testovacímu kontroléru.
    > - Uživatel, který se pokouší použít testovací kontrolér, musí být v účtu uživatele testovacího kontroléru nebo nebude moci spustit testy na řadiči.
 
-4. Chcete-li zajistit, aby počítač s testovacím agentem mohl po restartování spustit testy, můžete nastavit počítač pro automatické přihlášení jako uživatel testovacího agenta. Vyberte **automaticky přihlásit**se. Tím se uživatelské jméno a heslo uloží do šifrovaného formuláře v registru.
+4. Chcete-li zajistit, aby počítač s testovacím agentem mohl po restartování spustit testy, můžete nastavit počítač pro automatické přihlášení jako uživatel testovacího agenta. Vyberte **automatické přihlášení**. Toto uloží uživatelské jméno a heslo v zašifrované podobě v registru.
 
    > [!NOTE]
    > Když jste připojeni k testovacímu prostředí pomocí vzdálené plochy nebo připojení k hostům, může docházet k častým neočekávaným odpojením. Jednou z možných příčin ztráty připojení je to, že je počítač nakonfigurovaný tak, aby se automaticky přihlásil k síti.
 
-5. Chcete-li se ujistit, že je spořič obrazovky zakázán, protože to může narušit všechny automatizované testy, které musí s plochou pracovat, vyberte možnost **zkontrolovat, zda je spořič obrazovky zakázán**.
+5. Chcete-li mít jistotu, že spořič obrazovky je zakázán, protože to může narušit jakékoli automatizované testy, které musí spolupracovat s plochou, vyberte **Ujistěte se, že spořič obrazovky je zakázán**.
 
    > [!WARNING]
-   > Pokud se přihlašujete automaticky nebo zakážete šetřič obrazovky, dojde k bezpečnostnímu riziku. Povolením automatického přihlášení povolíte ostatním uživatelům spustit tento počítač a budete moci používat účet, který se automaticky přihlašuje. Pokud vypnete šetřič obrazovky, počítač nemusí vyzvat uživatele k přihlášení, aby mohl počítač odemknout. To umožňuje komukoli přístup k počítači, pokud mají fyzický přístup k počítači. Pokud tyto funkce povolíte v počítači, měli byste se ujistit, že tyto počítače jsou fyzicky zabezpečené. Například tyto počítače se nacházejí ve fyzicky zabezpečeném testovacím prostředí. Pokud zrušíte zaškrtnutí políčka **zkontrolovat, jestli je spořič obrazovky zakázaný**, nepovolíte spořič obrazovky.
+   > Pokud automatické přihlášení nebo zakázání spořiče obrazovky, vznikají bezpečnostní rizika. Povolením automatického protokolování na můžete povolit ostatním uživatelům spustit tento počítač a použít účet, který se přihlásí automaticky. Pokud zakážete spořič obrazovky, počítač nemusí vyzvat uživatele k přihlášení k odemknutí počítače. To umožňuje komukoli přístup k počítači, pokud mají fyzický přístup k počítači. Pokud povolíte tyto funkce v počítači, by měl Ujistěte se, že tyto počítače byly fyzicky zabezpečeny. Například tyto počítače jsou umístěny ve fyzicky zabezpečeném prostředí. Pokud zrušíte zaškrtnutí políčka **zkontrolovat, jestli je spořič obrazovky zakázaný**, nepovolíte spořič obrazovky.
 
    Chcete-li změnit agenta zpět na spuštění jako služba, můžete použít tento nástroj a vybrat **službu**.
 
@@ -71,7 +71,7 @@ Pomocí následujícího postupu můžete nastavit všechny agenty, kteří jsou
 7. Chcete-li zavřít dialogové okno **Souhrn konfigurace** , klikněte na tlačítko **Zavřít**. Pak zvolte znovu **Zavřít** a zavřete tak **Nástroj pro konfiguraci testovacího agenta**.
 
    > [!NOTE]
-   > K dispozici je ikona oznamovací oblasti, která je spuštěna v počítači pro testovacího agenta, který je spuštěn jako proces. Zobrazuje stav testovacího agenta. Můžete spustit, zastavit nebo restartovat agenta, pokud je spuštěn jako proces pomocí tohoto nástroje. Chcete-li spustit testovacího agenta jako proces, pokud není spuštěn, klikněte na tlačítko **start**  > **Visual Studio**  > **Microsoft Visual Studio testovacího agenta**.
+   > K dispozici je ikona oznamovací oblasti, která je spuštěna v počítači pro testovacího agenta, který je spuštěn jako proces. Zobrazuje stav testovacího agenta. Můžete spustit, zastavit nebo restartovat agenta, pokud je spuštěn jako proces, který používá tento nástroj. Chcete-li spustit testovacího agenta jako proces, pokud není spuštěn, klikněte na tlačítko **start** > **Visual Studio** > **Microsoft Visual Studio testovacího agenta**.
 
    Pokud je testovací kontrolér pro tohoto testovacího agenta zaregistrován ve Team Foundation Server, stav testovacího agenta, který je spuštěn jako interaktivní proces, se zobrazí v zobrazení **řadiče** v **centru testovacího prostředí** pro Microsoft Test Manager. Je uveden s předchozím symbolem hvězdičky, který označuje, že je spuštěn jako interaktivní proces. Chcete-li restartovat tohoto testovacího agenta, je nutné použít nástroj, který je spuštěn v počítači pro testovacího agenta, nikoli zobrazení **řadiče** .
 

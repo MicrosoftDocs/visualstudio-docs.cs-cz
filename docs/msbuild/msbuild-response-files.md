@@ -1,5 +1,5 @@
 ---
-title: Soubory odezvy nástroje MSBuild | Dokumentace Microsoftu
+title: Soubory odpovědí nástroje MSBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,27 +13,27 @@ helpviewer_keywords:
 - MSBuild, .rsp files
 - .rsp files
 ms.assetid: 9f53987b-20ee-470a-ab62-fce997bb5e15
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e83ed29e2caf180cdd8950b73f65f62794a8783
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ff207bdb5797cbbfb490a3b5b081ddfb1d665853
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63004843"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585805"
 ---
 # <a name="msbuild-response-files"></a>Soubory odezvy nástroje MSBuild
-Odpověď (*.rsp*) soubory jsou textové soubory, které obsahují *MSBuild.exe* přepínače příkazového řádku. Každý přepínač může být na samostatném řádku nebo všechny přepínače může být na jednom řádku. Komentář řádky jsou uvedena **#** symbol. **@** Přepínač slouží k předání jiný soubor odezvy *MSBuild.exe*.
+Soubory odpovědí ( *. rsp*) jsou textové soubory, které obsahují přepínače příkazového řádku *MSBuild. exe* . Každý přepínač může být na samostatném řádku nebo všechny přepínače mohou být na jednom řádku. Řádky komentáře jsou uvozeny symbolem **#** . Přepínač **@** slouží k předání dalšího souboru odpovědi nástroji *MSBuild. exe*.
 
 ## <a name="msbuildrsp"></a>MSBuild.rsp
-Soubor nástroj je speciální *.rsp* souboru, který *MSBuild.exe* automaticky používá při sestavování projektu. Tento soubor *MSBuild.rsp*, musí být ve stejném adresáři jako *MSBuild.exe*, jinak nebude nalezena. Můžete upravit tento soubor k určení výchozího přepínače příkazového řádku k *MSBuild.exe*. Například, pokud používáte stejný protokolovač pokaždé, když se sestavení projektu, můžete přidat **-protokolovací nástroj** přepnout na *MSBuild.rsp*, a *MSBuild.exe* bude použijte protokolovací nástroj pokaždé, když se Projekt se vytvořil.
+Soubor automatické odpovědi je speciální soubor *. rsp* , který nástroj *MSBuild. exe* automaticky používá při sestavování projektu. Tento soubor, *MSBuild. rsp*, musí být ve stejném adresáři jako *MSBuild. exe*, jinak nebude nalezen. Úpravou tohoto souboru můžete zadat výchozí přepínače příkazového řádku pro *MSBuild. exe*. Například pokud použijete stejný protokolovací nástroj při každém sestavení projektu, můžete přidat přepínač **-protokolovacího** nástroje na *MSBuild. rsp*a nástroj *MSBuild. exe* použije protokolovací nástroj při každém sestavení projektu.
 
-## <a name="directorybuildrsp"></a>Directory.Build.rsp
-Ve verzi 15.6 a vyšší než MSBuild vyhledá nadřazené adresáře projektu pro soubor s názvem *Directory.Build.rsp*.  To může být užitečné v úložiště zdrojového kódu během sestavení příkazového řádku poskytovat výchozí argumenty.  To také umožňuje zadat argumenty příkazového řádku hostovaných buildů.
+## <a name="directorybuildrsp"></a>Adresář. Build. rsp
+Ve verzi 15,6 a novější nástroj MSBuild hledá nadřazené adresáře projektu pro soubor s názvem *Directory. Build. rsp*.  To může být užitečné v úložišti zdrojového kódu k poskytnutí výchozích argumentů během sestavení příkazového řádku.  Lze ji také použít k určení argumentů příkazového řádku hostovaných sestavení.
 
 ## <a name="see-also"></a>Viz také:
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
-- [Odkaz na příkazový řádek](../msbuild/msbuild-command-line-reference.md)
+- [Reference k příkazovému řádku](../msbuild/msbuild-command-line-reference.md)

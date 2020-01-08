@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Tools.ImportandExportSettings
 - Import and Export Settings command
 ms.assetid: 94a06468-a44d-403d-a931-77bbc9d06e56
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0be61d8690c0605f6e7773efe02f5db351110f9a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 409c0f40adfd374065dedb842965d2d1237bc9a0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658779"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568825"
 ---
 # <a name="import-and-export-settings-command"></a>nastavení importu a exportu – příkaz
 
@@ -32,11 +32,11 @@ Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]
 
 ## <a name="switches"></a>Přepínače
 
-/export: `filename`
+/export:`filename`
 
 Volitelné. Exportuje aktuální nastavení do zadaného souboru.
 
-/Import: `filename`
+/Import:`filename`
 
 Volitelné. Importuje nastavení v zadaném souboru.
 
@@ -60,5 +60,5 @@ Tools.ImportandExportSettings /export:"c:\Files\MyFile.vssettings"
 
 - [Nastavení prostředí](../../ide/environment-settings.md)
 - [Synchronizovat nastavení](../../ide/synchronized-settings-in-visual-studio.md)
-- [Přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)
+- [Přizpůsobení prostředí IDE sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)

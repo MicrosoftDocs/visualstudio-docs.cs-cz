@@ -6,17 +6,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - output directory, changing
 ms.assetid: a8333c89-afb2-4b1d-b2e2-9146da852402
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 493de227174b60b4834c2732ddbf16a5586fa49e
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 732e48bf5cbea8534cc5c90ac5af80df0cc93e7b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71238189"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594380"
 ---
 # <a name="how-to-change-the-build-output-directory"></a>Postupy: Změna výstupního adresáře sestavení
 
@@ -34,7 +34,7 @@ Můžete určit umístění výstupu generovaného vaším projektem podle konfi
 
 3. V rozevíracím seznamu konfigurace v horní části vyberte konfiguraci, jejíž umístění výstupního souboru chcete změnit (**ladění**, **vydání**nebo **všechny konfigurace**).
 
-4. Najít položku výstupní cesty na stránce&mdash;, která se liší v závislosti na typu projektu:
+4. Najít položku výstupní cesty na stránce&mdash;se liší v závislosti na typu projektu:
 
    - **Výstupní cesta** pro C# projekty a projekty JavaScriptu
    - **Výstupní cesta k sestavení** pro projekty Visual Basic

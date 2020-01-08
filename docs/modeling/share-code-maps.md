@@ -2,17 +2,17 @@
 title: Export a uložení map kódu
 ms.date: 05/16/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 991773953338e38331bad45bfa1149aeb27c748b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 57989de2cca3582b3193a7b55b81d1d444dcf1c1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670807"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591928"
 ---
 # <a name="share-code-maps"></a>Sdílení map kódu
 
@@ -24,7 +24,7 @@ Uložte mapu pomocí nabídky **soubor** .
 
 -nebo-
 
-Chcete-li uložit mapu jako součást konkrétního projektu, na panelu nástrojů mapa zvolte možnost **sdílet**  > **přesunout \<CodeMapName >. dgml do**a pak zvolte projekt, kam chcete mapu Uložit.
+Chcete-li uložit mapu jako součást konkrétního projektu, na panelu nástrojů mapa zvolte možnost **sdílet** > **přesunout \<CodeMapName >. dgml do**a pak zvolte projekt, na který chcete mapu Uložit.
 
 ![Přesunout mapu do jiného projektu](../modeling/media/codemapsmovemapmenu.png)
 
@@ -43,7 +43,7 @@ Visual Studio uloží mapu jako soubor *. dgml* , který můžete sdílet s osta
 
 Když exportujete mapu kódu jako obrázek, můžete ho zkopírovat do jiných aplikací, jako je například Microsoft Word nebo PowerPoint.
 
-1. Na panelu nástrojů mapa kódu vyberte **sdílet**  > **e-mailem jako obrázek** nebo **Kopírovat obrázek**.
+1. Na panelu nástrojů mapa kódu vyberte **sdílet** > **e-mailem jako obrázek** nebo **Kopírovat obrázek**.
 
 2. Vložte obrázek do jiné aplikace.
 
@@ -51,11 +51,11 @@ Když exportujete mapu kódu jako obrázek, můžete ho zkopírovat do jiných a
 
 Pokud exportujete mapu kódu jako soubor XPS, můžete ji zobrazit v prohlížečích XML nebo XAML, jako je Internet Explorer.
 
-1. Na panelu nástrojů mapa kódu vyberte **sdílet**  > **e-maily jako přenosné XPS** nebo **uložte jako přenosný XPS**.
+1. Na panelu nástrojů mapa kódu vyberte **sdílet** > **e-maily jako přenosné XPS** nebo **uložte jako přenosný XPS**.
 
 2. Přejděte do umístění, kam chcete soubor uložit.
 
-3. Pojmenujte mapu kódu. Ujistěte se, že je pole **Uložit jako typ** nastaveno na **soubory XPS (\*. XPS)** . Klikněte na tlačítko **Uložit**.
+3. Pojmenujte mapu kódu. Ujistěte se, že je pole **Uložit jako typ** nastaveno na **soubory XPS (\*. XPS)** . Zvolte **Uložit**.
 
 ## <a name="see-also"></a>Viz také:
 

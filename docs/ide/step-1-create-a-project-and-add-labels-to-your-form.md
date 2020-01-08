@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fdda615ceea11434a4533fa2a5071a5a999c1c4
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: 9e8e306aea1615649223c96f0c5a7041574f844d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516682"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588847"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>Krok 1: vytvoření projektu a Přidání popisků do formuláře
 
@@ -39,7 +39,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
     Zobrazí se formulář s názvem *Form1.cs* nebo *Form1. vb* v závislosti na zvoleném programovacím jazyce.
 
    > [!NOTE]
-   > Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , nainstalujte úlohu **vývoj desktopových aplikací .NET** pomocí instalační program pro Visual Studio.<br/><br/>![ úlohy vývoj desktopových aplikací .NET v Instalační program pro Visual Studio ](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Další informace najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
+   > Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , nainstalujte úlohu **vývoj desktopových aplikací .NET** pomocí instalační program pro Visual Studio.<br/><br/>![úlohy vývoj desktopových aplikací .NET v Instalační program pro Visual Studio](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Další informace najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
 
 ::: moniker-end
 
@@ -62,7 +62,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
    >
    > V části Instalační program pro Visual Studio klikněte na možnost zvolit úlohu **vývoj desktopových aplikací .NET** .
    >
-   > ![Zatížení .NET Core v Instalační program pro Visual Studio](../ide/media/install-dot-net-desktop-env.png)
+   > ![Úlohy .NET core v instalačním programu sady Visual Studio](../ide/media/install-dot-net-desktop-env.png)
    >
    > Potom klikněte na tlačítko **Upravit** v instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce; Pokud ano, udělejte to. V dalším kroku vyberte **pokračovat** a nainstalujte úlohu.
 
@@ -130,9 +130,9 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 7. Nastavte vlastnost **(Name)** na **plusLeftLabel**.
 
-8. Zvolte popisek **plusLeftLabel** a pak vyberte buď klávesy **CTRL** +**C** nebo **Kopírovat** z nabídky **Upravit** .
+8. Zvolte popisek **plusLeftLabel** a pak vyberte buď klávesy **CTRL**+**C** nebo **Kopírovat** z nabídky **Upravit** .
 
-9. Vložte popisek třikrát tak, že vyberete buď klávesy **Ctrl** +**V** , nebo **Vložit** v nabídce **Upravit** .
+9. Vložte popisek třikrát tak, že vyberete buď klávesy **Ctrl**+**V** , nebo **Vložit** v nabídce **Upravit** .
 
 10. Uspořádejte tři nové popisky tak, aby byly v řádku napravo od popisku **plusLeftLabel** .
 
@@ -198,7 +198,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 6. Nastavte hodnotu vlastnosti **TabIndex** ovládacího prvku **startButton** na hodnotu **1**.
 
     > [!NOTE]
-    > Vlastnost **TabIndex** nastaví pořadí ovládacích prvků, když si autor kvízu zvolí klávesu **TAB** . Chcete-li zjistit, jak to funguje, otevřete libovolné dialogové okno (například na panelu nabídek zvolte **soubor**  > **otevřít**) a pak několikrát zvolte klávesu **TAB** . Sledujte, jak se kurzor pohybuje od ovládacího prvku a řídí se pokaždé, když vyberete klávesu **TAB** . Programátor určil pořadí při vytváření tohoto formuláře.
+    > Vlastnost **TabIndex** nastaví pořadí ovládacích prvků, když si autor kvízu zvolí klávesu **TAB** . Chcete-li zjistit, jak to funguje, otevřete libovolné dialogové okno (například na panelu nabídek zvolte **soubor** > **otevřít**) a pak několikrát zvolte klávesu **TAB** . Sledujte, jak se kurzor pohybuje od ovládacího prvku a řídí se pokaždé, když vyberete klávesu **TAB** . Programátor určil pořadí při vytváření tohoto formuláře.
 
 7. Nastavte hodnotu vlastnosti **TabIndex** pro ovládací prvek NumericUpDown suma na **2**, pro ovládací prvek rozdíl na **3**, pro řízení produktu na **4**a pro řízení podílu na **5**.
 
@@ -206,7 +206,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
      ![Počáteční formulář matematického kvízu](../ide/media/express_formlaidout.png)
 
-8. Chcete-li ověřit, zda vlastnost **TabIndex** funguje podle očekávání, uložte a spusťte program výběrem klávesy **F5** nebo výběrem možnosti **ladění**  > **Spustit ladění** na panelu nabídek a pak několikrát vyberte klávesu **TAB** .
+8. Chcete-li ověřit, zda vlastnost **TabIndex** funguje podle očekávání, uložte a spusťte program výběrem klávesy **F5** nebo výběrem možnosti **ladění** > **Spustit ladění** na panelu nabídek a pak několikrát vyberte klávesu **TAB** .
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 

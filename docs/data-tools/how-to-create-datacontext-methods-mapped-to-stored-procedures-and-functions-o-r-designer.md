@@ -3,24 +3,24 @@ title: Mapování metod DataContext na sprocs a Functions (O-R Designer)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e7ca32f1-50b3-48af-ad92-ceafd749296a
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4fa392467024a38dc447e6a5077f855d3464103b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ba4a53e81578a7b72c697e52fec923d8ecc1ecce
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648373"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586481"
 ---
 # <a name="how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-or-designer"></a>Postupy: vytváření metod DataContext mapovaných na uložené procedury a funkce (Návrhář O/R)
 
 Uložené procedury a funkce můžete přidat do **návrháře o/R** jako metody <xref:System.Data.Linq.DataContext>. Volání metody a předání požadovaných parametrů spustí uloženou proceduru nebo funkci v databázi a vrátí data v návratovém typu metody <xref:System.Data.Linq.DataContext>. Podrobné informace o metodách <xref:System.Data.Linq.DataContext> naleznete v tématu [metody DataContext (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
 
 > [!NOTE]
-> Uložené procedury lze použít také k přepsání výchozího [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] chování při spuštění, které provádí vložení, aktualizace a odstranění, když jsou změny uloženy z tříd entit do databáze. Další informace naleznete v tématu [Postupy: přiřazení uložených procedur pro provádění aktualizací, vkládání a odstraňování (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
+> Uložené procedury lze použít také k přepsání výchozího [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] chování při spuštění, které provádí vložení, aktualizace a odstranění, když jsou změny uloženy z tříd entit do databáze. Další informace najdete v tématu [postupy: přiřazení uložených procedur za účelem aktualizace, vložení a odstranění (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
 
 ## <a name="create-datacontext-methods"></a>Vytvoření metod DataContext
 

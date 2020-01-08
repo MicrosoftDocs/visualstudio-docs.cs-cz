@@ -3,17 +3,17 @@ title: Používání fragmentů kódu XML
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3a27375b-81cc-48f6-a884-e1cb8c4f78f5
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 163fcddb8553da39b035e649155e04c3da4b430e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: decc565eca9b7299761405e06c0cecf82f63319d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601799"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592604"
 ---
 # <a name="how-to-use-xml-snippets"></a>Postupy: používání fragmentů kódu XML
 
@@ -26,7 +26,7 @@ Po přidání fragmentu kódu XML do editoru jsou všechna upravitelná pole ve 
 Následující postupy popisují, jak získat přístup k příkazu **Vložit fragment** .
 
 > [!NOTE]
-> Příkaz **Vložit fragment** je také k dispozici prostřednictvím klávesové zkratky (**CTRL** +**K**a pak **CTRL** +**X**).
+> Příkaz **Vložit fragment** je také k dispozici prostřednictvím klávesové zkratky (**CTRL**+**K**a pak **CTRL**+**X**).
 
 ### <a name="to-insert-snippets-from-the-shortcut-menu"></a>Vložení fragmentů z místní nabídky
 
@@ -52,7 +52,7 @@ Následující postupy popisují, jak získat přístup k příkazu **Vložit fr
 
 1. Umístěte kurzor na místo, kam chcete vložit fragment kódu XML.
 
-2. Začněte psát fragment kódu XML, který chcete přidat do souboru. Je-li automatické dokončování zapnuté, zobrazí se seznam slov kompletních funkcí IntelliSense. Pokud se nezobrazí, stiskněte klávesu **Ctrl** +**MEZERNÍK** pro jeho aktivaci.
+2. Začněte psát fragment kódu XML, který chcete přidat do souboru. Je-li automatické dokončování zapnuté, zobrazí se seznam slov kompletních funkcí IntelliSense. Pokud se nezobrazí, stiskněte klávesu **Ctrl**+**MEZERNÍK** pro jeho aktivaci.
 
 3. Vyberte fragment kódu XML ze seznamu kompletních slov.
 
@@ -71,12 +71,12 @@ Následující postupy popisují, jak získat přístup k příkazu **Vložit fr
 
 4. Zadejte název zástupce fragmentu a stisknutím klávesy **TAB** volejte fragment XML.
 
-## <a name="surround-with"></a>Obklopit
+## <a name="surround-with"></a>Obklopit fragmentem
 
 Následující postupy popisují, jak získat přístup k příkazu **uzavřít pomocí** příkazu.
 
 > [!NOTE]
-> Příkaz **obklopit pomocí** je dostupný taky prostřednictvím klávesové zkratky (**CTRL** +**K**a pak **CTRL** +**S**).
+> Příkaz **obklopit pomocí** je dostupný taky prostřednictvím klávesové zkratky (**CTRL**+**K**a pak **CTRL**+**S**).
 
 ### <a name="to-use-surround-with-from-the-context-menu"></a>Použití Surround with v místní nabídce
 

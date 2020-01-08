@@ -6,17 +6,17 @@ helpviewer_keywords:
 - targeting .NET Framework [Visual Studio]
 - framework targeting [Visual Studio]
 - .NET framework targeting [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f393061b249fc2eb10a348bb0d2da68f4a30c4f3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ec81b38ab68c327f25c9f94b6329a700e2662383
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647188"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594120"
 ---
 # <a name="framework-targeting-overview"></a>Přehled cílení na rozhraní
 
@@ -27,11 +27,11 @@ V aplikaci Visual Studio můžete určit verzi rozhraní .NET, na kterou má bý
 Další informace o cílových rozhraních naleznete v tématu [cílová rozhraní](/dotnet/standard/frameworks).
 
 > [!TIP]
-> Můžete také cílit na aplikace pro různé platformy. Další informace najdete v tématu [cílení](../msbuild/msbuild-multitargeting-overview.md)na více verzí.
+> Můžete také směrovat aplikace pro různé platformy. Další informace najdete v tématu [cílení na více verzí](../msbuild/msbuild-multitargeting-overview.md).
 
-## <a name="framework-targeting-features"></a>Rozhraní cílící na funkce
+## <a name="framework-targeting-features"></a>Funkce cílení rozhraní Framework
 
-Cílení na rámec zahrnuje tyto funkce:
+Cílení rozhraní zahrnuje následující funkce:
 
 - Když otevřete projekt, který se zaměřuje na starší verzi rozhraní .NET Framework, Visual Studio může automaticky upgradovat projekt nebo ponechat cíl tak, jak je.
 
@@ -47,9 +47,9 @@ Cílení na rámec zahrnuje tyto funkce:
 
 Když pracujete na projektu, který se zaměřuje na předchozí verzi rozhraní, Visual Studio dynamicky změní vývojové prostředí následujícím způsobem:
 
-- Filtruje položky v dialogovém okně **Přidat novou položku** , v dialogovém okně **Přidat nový odkaz** a v dialogovém okně **Přidat odkaz na službu** k vynechání voleb, které nejsou v cílové verzi k dispozici.
+- Filtruje položky **přidat novou položku** dialogovém okně **přidat nový odkaz** dialogovém okně a **přidat odkaz na službu** kde vynechává volby, které nejsou k dispozici v Cílová verze.
 
-- Filtruje vlastní ovládací prvky v **sadě nástrojů** k odebrání těch, které nejsou k dispozici v cílové verzi, a k zobrazení pouze těch nejaktuálnějších ovládacích prvků, když je k dispozici více ovládacích prvků.
+- Filtruje vlastní ovládací prvky v **nástrojů** a odeberte ty, které nejsou dostupné v cílených verzích zobrazil pouze nejnovější ovládací prvky, když jsou k dispozici více ovládacích prvků.
 
 - Filtruje **IntelliSense** , aby vynechal funkce jazyka, které nejsou dostupné v cílové verzi.
 
@@ -57,15 +57,15 @@ Když pracujete na projektu, který se zaměřuje na předchozí verzi rozhraní
 
 - Filtruje možnosti nabídky a vynechává možnosti, které nejsou dostupné v cílové verzi.
 
-- Pro sestavení používá verzi kompilátoru a možnosti kompilátoru, které jsou vhodné pro cílovou verzi.
+- V případě sestavení používá verzi kompilátoru a možnosti kompilátoru, které jsou vhodné pro cílovou verzi.
 
 > [!NOTE]
-> - Cílení na rámec nezaručuje, že vaše aplikace bude fungovat správně. Musíte otestovat aplikaci, abyste se ujistili, že běží na cílové verzi.
+> - Cílení rozhraní není zárukou, že vaše aplikace bude pracovat správně. Je nutné otestovat vaši aplikaci a ujistit se, že běží před cílovou verzi.
 > - Verze rozhraní Framework nelze cílit .NET Framework 2,0.
 
-## <a name="select-a-target-framework-version"></a>Vyberte cílovou verzi rozhraní .NET Framework.
+## <a name="select-a-target-framework-version"></a>Vyberte cílovou verzi rozhraní framework
 
-Při vytváření projektu .NET Framework můžete po výběru šablony projektu vybrat cílovou verzi .NET Framework. Seznam dostupných architektur zahrnuje verze nainstalovaných rozhraní, které se vztahují na vybraný typ šablony. V případě šablon projektů non-.NET Framework, jako jsou například šablony .NET Core, **se rozevírací seznam rozhraní nezobrazí** .
+Při vytváření projektu .NET Framework můžete po výběru šablony projektu vybrat cílovou verzi .NET Framework. Seznam dostupných rozhraní obsahuje nainstalované verze architektur, které se dají použít pro typ vybrané šablony. V případě šablon projektů non-.NET Framework, jako jsou například šablony .NET Core, **se rozevírací seznam rozhraní nezobrazí** .
 
 ::: moniker range="vs-2017"
 
@@ -85,16 +85,16 @@ V existující Visual Basic, C#nebo F# projektu, můžete cílovou verzi rozhran
 
 1. V **Průzkumník řešení**otevřete nabídku kliknutím pravým tlačítkem u projektu, který chcete změnit, a poté zvolte možnost **vlastnosti**.
 
-1. V levém sloupci okna **vlastnosti** vyberte kartu **aplikace** .
+1. V levém sloupci **vlastnosti** okna, vyberte **aplikace** kartu.
 
    ![Karta aplikace vlastností projektu](../ide/media/vs_slnexplorer_properties_applicationtab.png)
 
    > [!NOTE]
    > Po vytvoření aplikace UWP nemůžete změnit cílovou verzi buď Windows, nebo .NET.
 
-1. V seznamu **cílové rozhraní** vyberte požadovanou verzi.
+1. V **Cílová architektura** , zvolte verzi, která chcete.
 
-1. V dialogovém okně ověření, které se zobrazí, klikněte na tlačítko **Ano** .
+1. V dialogovém okně ověřování, který se zobrazí, zvolte **Ano** tlačítko.
 
    Projekt se uvolní. Po opětovném načtení se cílí na verzi rozhraní .NET, kterou jste právě zvolili.
 
@@ -108,20 +108,20 @@ V existující Visual Basic, C#nebo F# projektu, můžete cílovou verzi rozhran
 > - Pro aplikaci .NET Standard: `<TargetFramework>netstandard2.0</TargetFramework>`
 > - Pro aplikaci .NET Framework: `<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>`
 
-## <a name="resolve-system-and-user-assembly-references"></a>Překlad systémových a uživatelských odkazů na sestavení
+## <a name="resolve-system-and-user-assembly-references"></a>Přeložit odkazy na sestavení systémových a uživatelských
 
 Chcete-li cílit na verzi rozhraní .NET, je nutné nejprve nainstalovat příslušné odkazy na sestavení. Sady Developer Pack pro různé verze rozhraní .NET si můžete stáhnout na stránce [soubory ke stažení pro rozhraní .NET](https://www.microsoft.com/net/download/windows) .
 
 Pro .NET Framework projekty, dialogové okno **Přidat odkaz** zakáže systémová sestavení, která se nevztahují na cílovou .NET Framework verzi, aby se nedala neúmyslně přidat do projektu. (Systémová sestavení jsou soubory *DLL* , které jsou součástí .NET Framework verze.) Odkazy, které patří do verze rozhraní, která je vyšší než cílová verze, nebudou přeloženy a ovládací prvky, které závisejí na takovém odkazu, nelze přidat. Pokud chcete takový odkaz povolit, resetujte .NET Framework cíl projektu na jednu, která obsahuje odkaz.
 
-Další informace o odkazech na sestavení naleznete v tématu věnovaném [překladu sestavení v době návrhu](../msbuild/resolving-assemblies-at-design-time.md).
+Další informace o odkazech na sestavení naleznete v tématu [přeložit sestavení v době návrhu](../msbuild/resolving-assemblies-at-design-time.md).
 
-## <a name="enable-linq"></a>Povolit LINQ
+## <a name="enable-linq"></a>Povolení jazyka LINQ
 
-Pokud cílíte na .NET Framework 3,5 nebo novější, přidají se automaticky odkaz na **System. Core** a import na úrovni projektu pro <xref:System.Linq> (jenom v Visual Basic). Pokud chcete používat funkce LINQ, musíte také zapnout `Option Infer` zapnuto (pouze v Visual Basic). Odkaz a import se odeberou automaticky, pokud změníte cíl na dřívější verzi .NET Framework. Další informace najdete v tématu [práce s LINQ](/dotnet/csharp/tutorials/working-with-linq).
+Pokud je cílem rozhraní .NET Framework 3.5 nebo novější, odkaz na **System.Core** a import na úrovni projektu pro <xref:System.Linq> (v pouze v jazyce Visual Basic) jsou přidány automaticky. Pokud chcete používat funkce LINQ, musíte také zapnout `Option Infer` na (v pouze v jazyce Visual Basic). Reference a import jsou automaticky odebrány při změně cíle na starší verzi rozhraní .NET Framework. Další informace najdete v tématu [pracovat s technologií LINQ](/dotnet/csharp/tutorials/working-with-linq).
 
 ## <a name="see-also"></a>Viz také:
 
 - [Cílové architektury](/dotnet/standard/frameworks)
 - [Cílení na více verzí (MSBuild)](../msbuild/msbuild-multitargeting-overview.md)
-- [Postupy: Změna cílové architektury a sady nástrojů platformy (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)
+- [Postupy: Úprava na cílové rozhraní framework a sadu nástrojů platformy (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)

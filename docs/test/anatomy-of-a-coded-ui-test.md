@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - coded UI tests
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c1757c687ea48ee1f2770fa320a18da5662f43e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d7100c6bb5c1dfb4c7d336ec110cf532f1f998d4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665314"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591200"
 ---
 # <a name="anatomy-of-a-coded-ui-test"></a>Anatomie kódovaného testu uživatelského rozhraní
 
@@ -31,9 +31,9 @@ Když vytvoříte programový test UI, Tvůrce programového **testu uživatelsk
 |[UIMap.Designer.cs](#UIMapDesignerFile)|[Oddíl deklarací](#UIMapDesignerFile)<br /><br /> [UIMap – třída](#UIMapClass) (částečně, automaticky generovaná)<br /><br /> [Metody](#UIMapMethods)<br /><br /> [Vlastnosti](#UIMapProperties)|Ne|
 |[UIMap.cs](#UIMapCS)|[UIMap – třída](#UIMapCS) (částečný)|Ano|
 |[CodedUITest1.cs](#CodedUITestCS)|[CodedUITest1 – třída](#CodedUITestCS)<br /><br /> [Metody](#CodedUITestMethods)<br /><br /> [Vlastnosti](#CodedUITestProperties)|Ano|
-|[UIMap. UITest](#UIMapuitest)|Mapa XML uživatelského rozhraní pro test.|Ne|
+|[UIMap.uitest](#UIMapuitest)|Mapa XML uživatelského rozhraní pro test.|Ne|
 
-### <a name="UIMapDesignerFile"></a>UIMap.Designer.cs
+### <a name="UIMapDesignerFile"></a> UIMap.Designer.cs
 Tento soubor obsahuje kód, který je automaticky vytvořen **tvůrcem programového testu UI** při vytvoření testu. Tento soubor se znovu vytvoří pokaždé, když se změní test, takže se nejedná o soubor, ve kterém můžete přidat nebo upravit kód.
 
 #### <a name="declarations-section"></a>Oddíl deklarací
@@ -55,7 +55,7 @@ using Mouse = Microsoft.VisualStudio.TestTools.UITesting.Mouse;
 using MouseButtons = System.Windows.Forms.MouseButtons;
 ```
 
-Obor názvů <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls> je zahrnutý v uživatelském rozhraní systému Windows. V uživatelském rozhraní webové stránky by se <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls> obor názvů. u Windows Presentation Foundation uživatelského rozhraní by byl obor názvů <xref:Microsoft.VisualStudio.TestTools.UITesting.WpfControls>.
+Obor názvů <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls> je zahrnutý v uživatelském rozhraní systému Windows. V uživatelském rozhraní webové stránky by se <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>obor názvů. u Windows Presentation Foundation uživatelského rozhraní by byl obor názvů <xref:Microsoft.VisualStudio.TestTools.UITesting.WpfControls>.
 
 #### <a name="UIMapClass"></a>UIMap – třída
 Další část souboru je třída [UIMap](/previous-versions/dd580454(v=vs.140)) .
@@ -137,7 +137,7 @@ Assert.AreEqual(
     uIItemEdit.Text);
 ```
 
-Název textového pole je uveden jako neznámý, protože vývojář aplikace kalkulačky systému Windows neposkytl veřejně dostupný název ovládacího prvku. @No__t_0 metoda selže, pokud skutečná hodnota není rovna očekávané hodnotě, což by způsobilo selhání testu. Všimněte si také, že očekávaná hodnota obsahuje desetinnou čárku, po které následuje mezera. Pokud někdy budete muset změnit funkčnost tohoto konkrétního testu, je nutné pro tuto desetinnou čárku a místo použít.
+Název textového pole je uveden jako neznámý, protože vývojář aplikace kalkulačky systému Windows neposkytl veřejně dostupný název ovládacího prvku. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=fullName> metoda selže, pokud skutečná hodnota není rovna očekávané hodnotě, což by způsobilo selhání testu. Všimněte si také, že očekávaná hodnota obsahuje desetinnou čárku, po které následuje mezera. Pokud někdy budete muset změnit funkčnost tohoto konkrétního testu, je nutné pro tuto desetinnou čárku a místo použít.
 
 ##### <a name="UIMapProperties"></a>Vlastnosti UIMap
 Kód pro každou vlastnost je také standardně v celé třídě. Následující kód pro vlastnost `AddItemsParams` se používá v metodě `AddItems()`.
@@ -282,4 +282,4 @@ Soubor *UIMap. UITest* není přímo upravitelný. Můžete však použít progr
 - [Vytváření programových testů uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)
 - [Osvědčené postupy pro programové testy uživatelského rozhraní](../test/best-practices-for-coded-ui-tests.md)
 - [Testování rozsáhlé aplikace s více mapami uživatelského rozhraní](../test/testing-a-large-application-with-multiple-ui-maps.md)
-- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a záznamy akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a zaznamenávání akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

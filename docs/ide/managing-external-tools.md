@@ -6,17 +6,17 @@ f1_keywords:
 - vs.externaltools
 helpviewer_keywords:
 - external tools [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1caf72ea2dccd9dfe2978726834e8066a9f5b56b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0f22c687f88c7736d5c088ebc28ff490c4c16b8f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652394"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591291"
 ---
 # <a name="manage-external-tools"></a>Správa externích nástrojů
 
@@ -47,7 +47,7 @@ Nabídka **nástroje** obsahuje několik integrovaných příkazů, včetně:
 
 Můžete přidat externí nástroj, který se zobrazí v nabídce **nástroje** .
 
-1. Otevřete dialogové okno **externí nástroje** výběrem **nástrojů**  > **externích nástrojů**.
+1. Otevřete dialogové okno **externí nástroje** výběrem **nástrojů** > **externích nástrojů**.
 
 1. Klikněte na **Přidat**a potom zadejte informace. Například následující položka způsobí, že **Průzkumník Windows** se otevře v adresáři souboru, který aktuálně máte otevřený v aplikaci Visual Studio:
 
@@ -72,11 +72,11 @@ Následuje úplný seznam argumentů, které lze použít při definování exte
 |Aktuální text|$(CurText)|Vybraný text.|
 |Cílová cesta|$(TargetPath)|Úplný název souboru položky, která má být sestavena (jednotka + cesta + název souboru).|
 |Cílový adresář|$(TargetDir)|Adresář položky, která má být sestavena.|
-|Cílový název|$(TargetName)|Název souboru položky, která má být sestavena.|
+|Název cíle|$(TargetName)|Název souboru položky, která má být sestavena.|
 |Cílová Přípona|$(TargetExt)|Přípona názvu souboru položky, která má být sestavena.|
 |Binární složka|$(BinDir)|Konečné umístění binárního souboru, který má být sestaven (definované jako jednotka + cesta).|
-|Adresář projektu|$ (ProjectDir)|Adresář aktuálního projektu (jednotka + cesta).|
-|Název souboru projektu|$ (ProjectFileName)|Název souboru aktuálního projektu (jednotka + cesta + název souboru).|
+|Adresář projektu|$(ProjectDir)|Adresář aktuálního projektu (jednotka + cesta).|
+|Název souboru projektu|$(ProjectFileName)|Název souboru aktuálního projektu (jednotka + cesta + název souboru).|
 |Adresář řešení|$(SolutionDir)|Adresář aktuálního řešení (jednotka + cesta).|
 |Název souboru řešení|$(SolutionFileName)|Název souboru aktuálního řešení (jednotka + cesta + název souboru).|
 

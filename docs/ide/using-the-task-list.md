@@ -9,30 +9,30 @@ f1_keywords:
 helpviewer_keywords:
 - task list
 - Visual Studio, task list
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69c0e4c3a19358d9b29e4d7d3616c6718117e059
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: db39850350f99e6c046996f6408973cbc6543868
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647316"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594224"
 ---
 # <a name="use-the-task-list"></a>Použití seznamu úkolů
 
-Použijte **seznam úkolů** ke sledování komentářů kódu, které používají tokeny, jako jsou `TODO` a `HACK` nebo vlastní tokeny, a ke správě zástupců, které vás přejímají přímo na předdefinované umístění v kódu. Kliknutím na položku v seznamu přejdete do jejího umístění ve zdrojovém kódu.
+Použijte **seznam úkolů** ke sledování komentářů kódu, které používají tokeny, jako jsou `TODO` a `HACK`nebo vlastní tokeny, a ke správě zástupců, které vás přejímají přímo na předdefinované umístění v kódu. Kliknutím na položku v seznamu přejdete do jejího umístění ve zdrojovém kódu.
 
 > [!NOTE]
-> Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [Komentáře k úkolům (Visual Studio pro Mac)](/visualstudio/mac/task-comments).
+> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [Komentáře k úkolům (Visual Studio pro Mac)](/visualstudio/mac/task-comments).
 
 ## <a name="the-task-list-window"></a>Okno Seznam úkolů
 
 Když je **seznam úkolů** otevřené, zobrazí se v dolní části okna aplikace.
 
-Chcete-li otevřít **seznam úkolů**, vyberte možnost **Zobrazit**  > **seznam úkolů**nebo stiskněte klávesovou zkratku **CTRL** + **\\** ,**t**.
+Chcete-li otevřít **seznam úkolů**, vyberte možnost **Zobrazit** > **seznam úkolů**nebo stiskněte klávesovou zkratku **CTRL**+ **\\** ,**t**.
 
 ![okno Seznam úkolů](../ide/media/vs2015_task_list.png)
 
@@ -69,11 +69,11 @@ Vzhledem k tomu, že `TODO` je předdefinovaný token, tento komentář se zobra
 
 ### <a name="custom-tokens"></a>Vlastní tokeny
 
-Ve výchozím nastavení Visual Studio zahrnuje následující tokeny: `HACK`, `TODO`, `UNDONE` a `UnresolvedMergeConflict`. Nerozlišují velká a malá písmena. Nebo lze také vytvořit vlastní tokeny.
+Ve výchozím nastavení Visual Studio zahrnuje následující tokeny: `HACK`, `TODO`, `UNDONE`a `UnresolvedMergeConflict`. Velká a malá písmena se v nich nerozlišují. Nebo lze také vytvořit vlastní tokeny.
 
 Vytvoření vlastního tokenu:
 
-1. V nabídce **nástroje** klikněte na příkaz **Možnosti**.
+1. Na **nástroje** nabídce zvolte **možnosti**.
 
 2. Otevřete složku **prostředí** a zvolte možnost **seznam úkolů**.
 
@@ -85,7 +85,7 @@ Vytvoření vlastního tokenu:
 
 4. V rozevíracím seznamu **Priorita** vyberte výchozí prioritu pro nový token.
 
-5. Klikněte na tlačítko **Přidat**.
+5. Zvolte **přidat**.
 
 > [!TIP]
 > Tlačítko **Přidat** se aktivuje po zadání názvu. Před kliknutím na **Přidat**je nutné zadat název.
@@ -94,7 +94,7 @@ Vytvoření vlastního tokenu:
 
 Ve výchozím nastavení C++ se komentáře TODO zobrazují v **seznam úkolů**.
 
-Chcete-li C++ komentáře TODO vypnout, v nabídce **nástroje** vyberte **Možnosti**  > **textový editor**  > **C/C++**   >  zobrazit 0**úkoly**a nastavte hodnotu na false **.** .
+Chcete-li C++ komentáře TODO vypnout, v nabídce **nástroje** vyberte **Možnosti** > **textový editor** > **C/C++**  > **Zobrazit** > **úkoly**a nastavte hodnotu na **false**.
 
 ## <a name="shortcuts"></a>Zástupci
 
@@ -104,7 +104,7 @@ Chcete-li C++ komentáře TODO vypnout, v nabídce **nástroje** vyberte **Možn
 
 ### <a name="create-a-shortcut"></a>Vytvoření zástupce
 
-Chcete-li vytvořit zástupce, vložte ukazatel do kódu, kam chcete umístit zástupce. Zvolte možnost **upravit**  > **záložky**  > **Přidat seznam úkolů klávesovou zkratku** nebo stiskněte klávesy **CTRL** +**K**, **CTRL** +**H**.
+Chcete-li vytvořit zástupce, vložte ukazatel do kódu, kam chcete umístit zástupce. Zvolte možnost **upravit** > **záložky** > **Přidat seznam úkolů klávesovou zkratku** nebo stiskněte klávesy **CTRL**+**K**, **CTRL**+**H**.
 
 Chcete-li procházet zástupce v kódu, zvolte zástupce v seznamu a potom v místní nabídce zvolte možnost **Další úkol** nebo **předchozí úkol** .
 

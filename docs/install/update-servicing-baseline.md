@@ -5,19 +5,19 @@ ms.date: 07/17/2019
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: ''
-author: doughall
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4e84704d4ca37dd9e36da3838b5b1b23f068568c
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 3ef0cf63f8063d543cbb8fb69a0588dc331e4c6a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888583"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590953"
 ---
 # <a name="update-visual-studio-while-on-a-servicing-baseline"></a>Aktualizace sady Visual Studio v servisním směrném plánu
 
@@ -35,7 +35,7 @@ Možnost standardních hodnot obsluhy dává vývojářům a správcům větší
 Pokud chcete začít používat směrný plán údržby, Stáhněte si z [My.VisualStudio.com](https://my.visualstudio.com/Downloads?q=visual%20studio%202019%20version%2016.0)zaváděcí nástroj pro instalaci sady Visual Studio s pevnou verzí. Zaváděcí nástroje mají odkazy na konfigurace produktů, úlohy a komponenty pro danou konkrétní verzi.
 
 > [!NOTE]
-> Buďte opatrní, abyste rozlišili zaváděcí nástroj pro pevné verze a standardní zavaděče. Standardní zaváděcí nástroje jsou nakonfigurovány k používání nejnovější dostupné verze sady Visual Studio. Standardní boostrappers má číslo v názvu souboru (například vs_enterprise__123456789-123456789. exe), když se stáhnou z My.VisualStudio.com.
+> Buďte opatrní, abyste rozlišili zaváděcí nástroj pro pevné verze a standardní zavaděče. Standardní zaváděcí nástroje jsou nakonfigurovány k používání nejnovější dostupné verze sady Visual Studio. Standardní boostrappers má v názvu souboru číslo (například vs_enterprise__123456789 -123456789. exe), když se stáhnou z My.VisualStudio.com.
 
 Během instalace musí správci organizace nakonfigurovat klienty tak, aby klientům zabránili v aktualizaci na nejnovější verzi. To lze provést několika způsoby:
 - [Změňte nastavení `channelUri` v konfiguračním souboru odpovědi](update-servicing-baseline.md#install-a-servicing-baseline-on-a-network) tak, aby používalo manifest kanálu v rozložení nebo místní složce.
@@ -83,9 +83,9 @@ Pro internetovou instalaci spusťte nový zaváděcí nástroj pro opravenou ver
 ## <a name="see-also"></a>Viz také:
 
 * [Instalace sady Visual Studio](install-visual-studio.md)
-* [Příručka pro správce sady Visual Studio](visual-studio-administrator-guide.md)
+* [Příručka pro správce aplikace Visual Studio](visual-studio-administrator-guide.md)
 * [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 * [Nástroje pro zjišťování a správu instancí sady Visual Studio](tools-for-managing-visual-studio-instances.md)
 * [Definování nastavení v souboru odpovědí](automated-installation-with-response-file.md)
-* [Řízení aktualizací pro nasazení sady Visual Studio založené na síti](controlling-updates-to-visual-studio-deployments.md)
+* [Řízení aktualizací nasazení sady Visual Studio založené na síti](controlling-updates-to-visual-studio-deployments.md)
 * [Životní cyklus produktu Visual Studio a údržba](/visualstudio/releases/2019/servicing/)

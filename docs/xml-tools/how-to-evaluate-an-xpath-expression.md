@@ -3,17 +3,17 @@ title: Vyhodnotit výraz XPath při ladění
 ms.date: 03/05/2019
 ms.topic: conceptual
 ms.assetid: 159ba4ef-75e4-4ac8-80dc-e064e0bec345
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 523c89af70c762f0cd0e31519c8c862c440c79eb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c2e0b6c84fa9447dc38aa7976fa59bb5aa67d5c3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654277"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592721"
 ---
 # <a name="evaluate-xpath-expressions"></a>Vyhodnotit výrazy XPath
 
@@ -34,7 +34,7 @@ Následující postup používá soubory *below-Average. xsl* a *Books. XML* z [
 
 1. Vložte zarážku na `xsl:if` počáteční značku.
 
-2. Chcete-li spustit ladění, zvolte **XML**  > **Spustit ladění XSLT** na řádku nabídek (nebo stiskněte klávesovou **zkratku ALT** +**F5**).
+2. Chcete-li spustit ladění, zvolte **XML** > **Spustit ladění XSLT** na řádku nabídek (nebo stiskněte klávesovou **zkratku ALT**+**F5**).
 
    Ladicí program se spustí a přeruší na značku `xsl:if`.
 
