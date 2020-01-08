@@ -1,5 +1,5 @@
 ---
-title: Třída VCToolTask | Dokumentace Microsoftu
+title: Třída VCToolTask | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 dev_langs:
@@ -7,37 +7,37 @@ dev_langs:
 - CSharp
 - C++
 - jsharp
-author: mikeblome
-ms.author: mblome
+author: ghogen
+ms.author: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bdad856a6ea0ec6cca8292bc3095f51c500bcb1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: df75bb998d2b8c6486e20c4c3ca0d80347c8f88a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970715"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591668"
 ---
 # <a name="vctooltask-base-class"></a>Základní třída VCToolTask
 
-Nakonec dědí celou řadu úloh <xref:Microsoft.Build.Utilities.Task> třídy a [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) třídy. Tato třída přidává několik parametrů na úlohy, které jsou odvozeny z nich. Tyto parametry jsou uvedeny v tomto dokumentu.
+Mnoho úloh je v konečném důsledku dědění z třídy <xref:Microsoft.Build.Utilities.Task> a třídy [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) . Tato třída přidá několik parametrů do úkolů, které jsou z nich odvozeny. Tyto parametry jsou uvedeny v tomto dokumentu.
 
 ## <a name="parameters"></a>Parametry
 
-Následující tabulka popisuje parametry **VCToolTask** základní třídy.
+Následující tabulka popisuje parametry základní třídy **VCToolTask** .
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**ActiveToolSwitchesValues**|Volitelné **slovníku\<string, ToolSwitch >** parametru.|
-|**AdditionalOptions**|Volitelné **řetězec** parametru.|
-|**EffectiveWorkingDirectory**|Volitelné **řetězec** parametru.|
-|**EnableErrorListRegex**|Volitelné **bool** parametru.<br/><br/>Výchozí hodnota je `true`.|
-|**ErrorListRegex**|Volitelné **[] ITaskItem** parametru.|
-|**ErrorListListExclusion**|Volitelné **[] ITaskItem** parametru.|
-|**GenerateCommandLine**|Volitelné **řetězec** parametru.<br/><br/>Používá hodnoty **CommandLineFormat** *formátu* [výchozí = CommandLineFormat.ForBuildLog] a **EscapeFormat** *escapeFormat* [ Výchozí = EscapeFormat.Default].|
-|**GenerateCommandLineExceptSwitches**|Volitelné **řetězec** parametru.<br/><br/>Používá hodnoty **string []** *switchesToRemove*, **CommandLineFormat** *formátu* [výchozí = CommandLineFormat.ForBuildLog], a **EscapeFormat** *escapeFormat* [výchozí = EscapeFormat.Default].|
+|**ActiveToolSwitchesValues**|Volitelný **slovník\<řetězec, parametr > ToolSwitch** .|
+|**AdditionalOptions**|Volitelný **řetězcový** parametr.|
+|**EffectiveWorkingDirectory**|Volitelný **řetězcový** parametr.|
+|**EnableErrorListRegex**|Volitelný parametr **bool** .<br/><br/>Výchozí hodnota je `true`.|
+|**ErrorListRegex**|Volitelný parametr **ITaskItem []** .|
+|**ErrorListListExclusion**|Volitelný parametr **ITaskItem []** .|
+|**GenerateCommandLine**|Volitelný **řetězcový** parametr.<br/><br/>Používá hodnoty **CommandLineFormat** *Format* [default = CommandLineFormat. ForBuildLog] a **EscapeFormat** *EscapeFormat* [default = EscapeFormat. default].|
+|**GenerateCommandLineExceptSwitches**|Volitelný **řetězcový** parametr.<br/><br/>Používá řetězec Values **[]** *switchesToRemove*, **CommandLineFormat** *Format* [default = CommandLineFormat. ForBuildLog] a **EscapeFormat** *EscapeFormat* [default = EscapeFormat. default].|
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)<br/>
+[Odkaz na úkol](../msbuild/msbuild-task-reference.md)<br/>
 [Úlohy](../msbuild/msbuild-tasks.md)

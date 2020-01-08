@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, creating solutions
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd1e3c3769f30806f7430bd32ddcb82db378093d
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 9040e65d3e9acce101ee6b481c2cd27d24285169
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984273"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597162"
 ---
 # <a name="customize-and-extend-a-domain-specific-language"></a>Přizpůsobení a rozšiřování jazyka specifického pro doménu
 
@@ -37,11 +37,11 @@ Sada Visual Studio Modeling and vizualizace SDK (VMSDK) poskytuje několik úrov
 |Různé třídy elementu modelu vypadají podobně jako v diagramu, sdílí vlastnosti, jako je počáteční výška a šířka, barva, popisy tlačítek.|Použijte dědičnost mezi tvary nebo třídami konektorů. Mapování mezi odvozenými tvary a odvozenými doménovými třídami dědí Podrobnosti mapování nadřazených objektů.<br /><br /> Nebo můžete mapovat různé třídy domény na stejnou třídu Shape.|
 |Třída prvku modelu je zobrazena v různých kontextech tvarů.|Namapujte více než jednu třídu Shape na stejnou doménovou třídu. Když sestavíte řešení, postupujte podle zprávy o chybách a poskytněte požadovaný kód pro rozhodování o tom, jaký tvar chcete použít.|
 |Barva obrazce nebo jiné funkce, jako je písmo indikuje aktuální stav.|Viz [aktualizace obrazců a konektorů, aby odrážely model](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md).<br /><br /> Vytvoří pravidlo, které aktualizuje vystavené vlastnosti. Viz [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).<br /><br /> Nebo použijte OnAssociatedPropertyChanged () k aktualizaci nezveřejněných funkcí, jako jsou šipky odkazů nebo písmo.|
-|Ikona u obrazce se změní, aby označovala stav.|Nastavte viditelnost mapování dekoratér v okně Podrobnosti DSL. Najděte několik imagí dekoratéry na stejné pozici. Viz [aktualizace obrazců a konektorů, aby odrážely model](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md).<br /><br /> Případně `ImageField.GetDisplayImage()` přepsat. Viz příklad v <xref:Microsoft.VisualStudio.Modeling.Diagrams.ImageField>.|
+|Ikona u obrazce se změní, aby označovala stav.|Nastavte viditelnost mapování dekoratér v okně Podrobnosti DSL. Najděte několik imagí dekoratéry na stejné pozici. Viz [aktualizace obrazců a konektorů, aby odrážely model](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md).<br /><br /> Případně `ImageField.GetDisplayImage()`přepsat. Viz příklad v <xref:Microsoft.VisualStudio.Modeling.Diagrams.ImageField>.|
 |Nastavení obrázku na pozadí na jakémkoli obrazci|Přepsat InitializeInstanceResources () pro přidání ukotveného ImageField.|
 |Vnořování tvarů do libovolné hloubky|Nastavte strom rekurzivního vkládání. Definujte BoundsRules pro zahrnutí tvarů.|
 |Připojit konektory na hranici elementu v pevně stanovených bodech.|Definujte vložené prvky terminálu reprezentované malými porty v diagramu. Pomocí BoundsRules opravte porty na místě. Podívejte se na ukázku diagramu okruhu na stránce [vizualizace a modelování sady SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db).|
-|Textové pole zobrazuje hodnotu odvozenou od jiných hodnot.|Namapujte text dekoratér na vypočítanou nebo vlastní doménovou vlastnost úložiště. Další informace najdete v tématu věnovaném [vypočítaným a vlastním vlastnostem úložiště](../modeling/calculated-and-custom-storage-properties.md).|
+|Textové pole zobrazuje hodnotu odvozenou od jiných hodnot.|Namapujte text dekoratér na vypočítanou nebo vlastní doménovou vlastnost úložiště. Další informace najdete v tématu [vypočtené a vlastní vlastnosti úložiště](../modeling/calculated-and-custom-storage-properties.md).|
 |Rozšířit změny mezi prvky modelu nebo mezi tvary|Viz [ověření v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md).|
 |Rozšiřte změny prostředků, jako jsou jiná rozšíření sady Visual Studio mimo obchod.|Viz [obslužné rutiny událostí rozšiřují změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md).|
 |Okno vlastností zobrazí vlastnosti souvisejícího prvku.|Nastavte předávání vlastností. Viz [přizpůsobení okna vlastností](../modeling/customizing-the-properties-window.md).|
@@ -53,7 +53,7 @@ Sada Visual Studio Modeling and vizualizace SDK (VMSDK) poskytuje několik úrov
 |Odstranit, změnit nadřazený prvek nebo znovu propojit související prvky při odstranění elementu.|Nastavte hodnotu **šířit odstranění** role vztahu. Pro složitější efekty přepište `ShouldVisitRelationship` a `ShouldVisitRolePlayer` metody ve třídě `MyDslDeleteClosure` definované v **DomainModel.cs**.|
 |Zachovat rozložení a vzhled obrazce při kopírování a přetahování myší|Přidejte obrazce a spojnice do zkopírovaných `ElementGroupPrototype`. Nejpohodlnější způsob přepsání je `ElementOperations.CreateElementGroupPrototype()`<br /><br /> Viz [přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md).|
 |Vloží tvary do zvoleného umístění, jako je například aktuální pozice kurzoru.|Přepsat `ClipboardCommandSet.ProcessOnCopy()` pro použití `ElementOperations.Merge().` verze specifické pro umístění, viz [přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md).|
-|Vytvořit další odkazy při vložení|Přepsat ClipboardCommandSet. ProcessOnPasteCommand ()|
+|Vytvořit další odkazy při vložení|Override ClipboardCommandSet.ProcessOnPasteCommand()|
 |Povolit přetahování myší z tohoto diagramu, dalších prvků DSL a Windows|Viz [Postupy: Přidání obslužné rutiny přetažení myší.](../modeling/how-to-add-a-drag-and-drop-handler.md)|
 |Umožňuje přetáhnout tvar nebo nástroj na podřízený obrazec, jako je například port, jako by byl přetažen na nadřazený objekt.|Definujte direktivu sloučení elementů pro třídu cílového objektu pro Přeposlání vyřazeného objektu na nadřazený objekt. Viz [přizpůsobení vytváření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md).|
 |Umožňuje přetáhnout tvar nebo nástroj na obrazec a vytvořit další odkazy nebo objekty. Například pokud chcete, aby byl komentář vyřazen do položky, na kterou má být propojen.|Definujte direktivu sloučení elementů pro cílovou doménovou třídu a definujte odkazy, které se mají vygenerovat. Ve složitých případech můžete přidat vlastní kód. Viz [přizpůsobení vytváření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md).|

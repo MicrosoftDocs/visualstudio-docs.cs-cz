@@ -16,21 +16,21 @@ helpviewer_keywords:
 - diagrams - modeling, layer
 - software, designing
 - software, modeling
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95df70a3458c758fb886cbe2bc5d52d3192ba7cc
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: b7015583fef2323e3c53b8e786c9e8a529e0fab6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984431"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590524"
 ---
 # <a name="create-models-for-your-app"></a>Vytváření modelů pro aplikaci
 
-Diagramy modelování vám pomůžou pochopit, objasnit a sdělovat nápady týkající se vašeho kódu a požadavky uživatelů, které musí váš softwarový systém podporovat.
+Diagramy modelování vám pomohou pochopit, objasnit a sdělovat nápady týkající se kódu a požadavky uživatelů, které váš softwarový systém musí podporovat.
 
 Chcete-li zjistit, které verze aplikace Visual Studio podporují jednotlivé typy diagramů, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -44,7 +44,7 @@ K vizualizaci architektury systému nebo existujícího kódu vytvořte následu
 
 ## <a name="related-tasks"></a>Související úlohy
 
-|**Výklad**|**Hybn**|
+|**Téma**|**Úloha**|
 |-|-|
 |[Vizualizace kódu](../modeling/visualize-code.md)|Vytváření map kódu a diagramů závislostí pro lepší pochopení neznámého kódu.|
 |[Modelování uživatelských požadavků](../modeling/model-user-requirements.md)|Použijte modely k objasnění potřeb uživatelů a jejich sdělování.|

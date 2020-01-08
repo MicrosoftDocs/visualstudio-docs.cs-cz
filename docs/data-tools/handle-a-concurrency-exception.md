@@ -13,17 +13,17 @@ helpviewer_keywords:
 - updating datasets, errors
 - concurrency control, walkthroughs
 ms.assetid: 73ee9759-0a90-48a9-bf7b-9d6fc17bff93
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6096e8919d21a93af0dbf6beea2f263bd500d26c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 462d0a9beb88a8fb6d73bf0672bb012c75b8ea93
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648434"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586598"
 ---
 # <a name="handle-a-concurrency-exception"></a>Zpracování výjimky souběžnosti
 
@@ -55,11 +55,11 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
     1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (Průzkumník objektů systému SQL Server je nainstalován v rámci úlohy **úložiště dat a zpracování** v instalační program pro Visual Studio.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
 
-       Otevře se okno editoru dotazů.
+       Otevře se okno editor dotazů.
 
     2. Zkopírujte [skript Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
 
-    3. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
+    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
 
        Po krátké době se dotaz dokončí a vytvoří se databáze Northwind.
 
@@ -67,7 +67,7 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
 Začněte vytvořením nové aplikace model Windows Forms:
 
-1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  > **projekt**.
+1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový** > **projekt**.
 
 2. V levém podokně rozbalte buď **vizuál C#**  , nebo **Visual Basic** a pak vyberte **Desktop Windows**.
 
@@ -206,7 +206,7 @@ Nyní můžete testovat formulář, abyste se ujistili, že se chová podle oče
 
 8. V prvním záznamu ve formuláři (**ALFKI**) změňte **kontakt** na **Marie Anders1**.
 
-9. Vyberte tlačítko **Uložit** .
+9. Vyberte tlačítko **Uložit**.
 
      Je vyvolána chyba souběžnosti a zobrazí se okno se zprávou.
 

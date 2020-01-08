@@ -8,17 +8,17 @@ helpviewer_keywords:
 - data [Visual Studio], displaying on Windows Forms
 - data [Visual Studio], Data Sources window
 ms.assetid: 20597ff8-0c98-43ec-8fb1-05376804ba48
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b5c57b73656f75ae9d99211ba28e38935d3164cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5193f3e3a0a1f4a06cc4830036ecf63806a1dbee
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641031"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586182"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>Nastavení ovládacího prvku, který má být vytvořen při přetažení z okna zdrojů dat
 
@@ -37,7 +37,7 @@ V tomto kontextu pojem *objekt* odkazuje na vlastní obchodní objekt, entitu (v
 2. V okně **zdroje dat** vyberte položku, která představuje datovou tabulku nebo objekt, který chcete nastavit.
 
    > [!TIP]
-   > Pokud okno **zdroje dat** není otevřeno, můžete ho otevřít výběrem možnosti **Zobrazit**  >  jiné**zdroje dat** > **Windows** .
+   > Pokud okno **zdroje dat** není otevřeno, můžete ho otevřít výběrem možnosti **Zobrazit** > jiné **zdroje dat** > **Windows** .
 
 3. Klikněte na rozevírací nabídku pro položku a potom v nabídce klikněte na jednu z následujících položek:
 

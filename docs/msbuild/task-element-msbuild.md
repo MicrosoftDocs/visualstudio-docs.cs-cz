@@ -1,5 +1,5 @@
 ---
-title: Úloha – Element (MSBuild) | Dokumentace Microsoftu
+title: Task – element (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - Task element [MSBuild]
 - <Task> element [MSBuild]
 ms.assetid: d82e2485-e5f0-4936-a357-745bacccc299
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac3e966521f77716b999203523e1620fd327b631
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 76f808c14b8459abfb3bf9c531cfff496932836c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939141"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566355"
 ---
 # <a name="task-element-msbuild"></a>Task – element (MSBuild)
-Vytvoří a spustí instanci [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] úloh. Název elementu je určen název úkolu vytváří.
+Vytvoří a spustí instanci úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Název elementu je určen názvem vytvářeného úkolu.
 
- \<Project> \<Target>
+ \<projektu > \<Target >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,29 +45,29 @@ Vytvoří a spustí instanci [!INCLUDE[vstecmsbuild](../extensibility/internals/
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Condition`|Nepovinný atribut. Podmínku, která má být vyhodnocen. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
-|`ContinueOnError`|Nepovinný atribut. Může obsahovat jednu z následujících hodnot:<br /><br /> -   **WarnAndContinue** nebo **true**. Při selhání úkolu, následné úlohy v [cílové](../msbuild/target-element-msbuild.md) elementu a sestavení budou dál spouštět a všechny chyby z úlohy jsou považovány za upozornění.<br />-   **ErrorAndContinue**. Při selhání úkolu, následné úlohy v `Target` elementu a sestavení budou dál spouštět a všechny chyby z úlohy jsou považována za chyby.<br />-   **ErrorAndStop** nebo **false** (výchozí). Při selhání úkolu, ve zbývajících úkolech v `Target` elementu a sestavení nejsou provedeny a celé `Target` elementu a sestavení se považuje za neúspěšný.<br /><br /> Verze rozhraní .NET Framework před 4.5 podporována pouze `true` a `false` hodnoty.<br /><br /> Další informace najdete v tématu [jak: Ignorování chyb v úlohách](../msbuild/how-to-ignore-errors-in-tasks.md).|
-|`Parameter`|Vyžaduje-li třída úlohy obsahuje jeden nebo více vlastností označené `[Required]` atribut.<br /><br /> Parametr uživatelského úkolu, který obsahuje hodnotu parametru jako hodnotu. Může být libovolný počet parametrů `Task` element s každý atribut je namapovaný na vlastnost ve třídě úlohy .NET.|
+|`Condition`|Nepovinný atribut. Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
+|`ContinueOnError`|Nepovinný atribut. Může obsahovat jednu z následujících hodnot:<br /><br /> -   **WarnAndContinue** nebo **true**. Pokud se úloha nezdařila, následné úkoly v [cílovém](../msbuild/target-element-msbuild.md) elementu a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za upozornění.<br />-   **ErrorAndContinue**. Pokud se úloha nezdařila, následné úkoly v prvku `Target` a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za chyby.<br />-   **ErrorAndStop** nebo **false** (výchozí). Pokud se úloha nezdařila, zbývající úkoly v prvku `Target` a sestavení nejsou provedeny a celý `Target` element a sestavení se považuje za neúspěšné.<br /><br /> Verze .NET Framework před 4,5 podporují pouze hodnoty `true` a `false`.<br /><br /> Další informace najdete v tématu [Postupy: ignorování chyb v úlohách](../msbuild/how-to-ignore-errors-in-tasks.md).|
+|`Parameter`|Vyžaduje se, pokud třída Task obsahuje jednu nebo více vlastností, které jsou označeny atributem `[Required]`.<br /><br /> Uživatelsky definovaný parametr úkolu, který obsahuje hodnotu parametru jako hodnotu. V prvku `Task` může být libovolný počet parametrů, přičemž každý atribut je mapován na vlastnost .NET ve třídě Task.|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[Output](../msbuild/output-element-msbuild.md)|Ukládá výstup z úlohy v souboru projektu. Může být nula nebo více `Output` elementů v rámci úlohy.|
+|[Output](../msbuild/output-element-msbuild.md)|Ukládá výstupy z úkolu v souboru projektu. V úloze může být nula nebo více `Output` prvků.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 | Prvek | Popis |
 | - | - |
-| [Cíl](../msbuild/target-element-msbuild.md) | Prvek kontejneru pro [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] úlohy. |
+| [Cíl](../msbuild/target-element-msbuild.md) | Element kontejneru pro úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
 
 ## <a name="remarks"></a>Poznámky
- A `Task` prvek [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] soubor projektu vytvoří instanci úlohy, nastaví vlastnosti a spustí ho. `Output` Element ukládá výstupní parametry ve vlastnostech nebo položky se použije jinde v souboru projektu.
+ Prvek `Task` v souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vytvoří instanci úlohy, nastaví v ní vlastnosti a provede ji. Element `Output` ukládá výstupní parametry do vlastností nebo položek, které mají být použity jinde v souboru projektu.
 
- Pokud tam nějaké jsou [onerror –](../msbuild/onerror-element-msbuild.md) prvky v nadřazeném prvku `Target` element úlohy, se budou vyhodnocovat pořád Pokud se úloha nezdaří a `ContinueOnError` má hodnotu `false`. Další informace o úlohách najdete v části [úlohy](../msbuild/msbuild-tasks.md).
+ Pokud jsou v nadřazené `Target` elementu úlohy nějaké prvky [Errors](../msbuild/onerror-element-msbuild.md) , budou i nadále vyhodnoceny, pokud se úloha nezdaří a `ContinueOnError` má hodnotu `false`. Další informace o úlohách najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu vytvoří instanci [CSC – úloha](../msbuild/csc-task.md) třídy, nastaví šest vlastností a spustí úlohu. Po spuštění se hodnota `OutputAssembly` vlastnosti objektu jsou umístěny do seznamu položek s názvem `FinalAssemblyName`.
+ Následující příklad kódu vytvoří instanci třídy [úlohy CSC](../msbuild/csc-task.md) , nastaví šest vlastností a spustí úlohu. Po spuštění se hodnota vlastnosti `OutputAssembly` objektu umístí do seznamu položek s názvem `FinalAssemblyName`.
 
 ```xml
 <Target Name="Compile" DependsOnTarget="Resources" >
@@ -85,5 +85,5 @@ Vytvoří a spustí instanci [!INCLUDE[vstecmsbuild](../extensibility/internals/
 
 ## <a name="see-also"></a>Viz také:
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Replace In Files command
 - ReplaceInFiles command
 ms.assetid: f116066a-4f65-4f2c-94ef-12cbd8cfb598
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fccfe696da2d38ff03ffb2f9b91de481e924a514
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 96f7d7ae0ea5eaf0de1a6fa4357e2750cdd8c22e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748670"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565471"
 ---
 # <a name="replace-in-files-command"></a>Nahradit v souborech – příkaz
 Nahradí text v souborech pomocí podmnožiny možností, které jsou k dispozici na kartě **nahradit v souborech** okna **Najít a nahradit** .
@@ -84,7 +84,7 @@ Volitelné. Zastaví aktuální operaci hledání, pokud právě probíhá. Při
 
 /Sub nebo/s
 
-Volitelné. Vyhledá podsložky v adresáři zadaném v argumentu/Lookin: `searchpath`.
+Volitelné. Vyhledá podsložky v adresáři zadaném v argumentu/Lookin:`searchpath`.
 
 /Text2 nebo/2
 

@@ -1,5 +1,5 @@
 ---
-title: Parametry šablony projektu a položky
+title: Parametry šablony projektů a položek
 ms.date: 01/02/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,78 +7,78 @@ helpviewer_keywords:
 - template parameters [Visual Studio]
 - project templates, parameters
 - item templates, parameters
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 445a4fa7847ea5c9a5cb64da09cf54c763e86d16
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 582c87eee2586eab12f70e2d27341987e7cb7e2a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647392"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585883"
 ---
 # <a name="template-parameters"></a>Parametry šablony
 
-Můžete nahradit hodnoty v šabloně při vytvoření instance šablony. Chcete-li nastavit tuto funkci, použijte *parametry šablony*. Parametry šablony lze použít k nahrazení hodnot, jako jsou názvy tříd a obory názvů v šabloně. Průvodce šablonou, který běží na pozadí, když uživatel přidá novou položku nebo projekt nahradí tyto parametry.
+Při vytváření instance šablony, můžete v šabloně nahraďte hodnoty. Chcete-li nastavit tuto funkci, použijte *parametry šablony*. Parametry šablony lze použít k nahrazení hodnoty, jako jsou názvy tříd a obory názvů v šabloně. Průvodce šablonou, která běží na pozadí, když uživatel přidá nová položka nebo projektu nahradí tyto parametry.
 
 ## <a name="declare-and-enable-template-parameters"></a>Deklarace a povolení parametrů šablony
 
-Parametry šablony jsou deklarovány ve formátu $*Parameter*$. Příklad:
+Parametry šablon jsou deklarovány ve formátu $*parametr*$. Příklad:
 
-- $safeprojectname $
+- $safeprojectname$
 
-- $guid $1
+- $guid1$
 
-- $guid $5
+- $guid5$
 
 ### <a name="enable-parameter-substitution-in-templates"></a>Povolit substituci parametrů v šablonách
 
-1. V souboru *. vstemplate* šablony vyhledejte prvek `ProjectItem`, který odpovídá položce, pro kterou chcete povolit nahrazení parametru.
+1. V *.vstemplate* soubor šablony, vyhledejte `ProjectItem` element, který odpovídá položce, pro kterou chcete povolit náhradu parametrů.
 
-1. Nastavte atribut `ReplaceParameters` `ProjectItem` elementu na `true`.
+1. Nastavte `ReplaceParameters` atribut `ProjectItem` elementu `true`.
 
-1. V souboru kódu pro položku projektu zadejte parametry tam, kde je to vhodné. Například následující parametr určuje, že název bezpečného projektu se používá pro obor názvů v souboru:
+1. V souboru kódu pro položku projektu zahrnují parametry, kde je to vhodné. Například následující parametr určuje, že se používá bezpečný název projektu pro obor názvů v souboru:
 
     ```csharp
     namespace $safeprojectname$
     ```
 
-## <a name="reserved-template-parameters"></a>Rezervované parametry šablony
+## <a name="reserved-template-parameters"></a>Vyhrazené parametry šablon
 
 Následující tabulka uvádí seznam rezervovaných parametrů šablony, které mohou být použity libovolnou šablonou:
 
 |Parametr|Popis|
 |---------------|-----------------|
-|ClrVersion|Aktuální verze modulu CLR (Common Language Runtime).|
+|clrversion|Aktuální verze modulu common language runtime (CLR).|
 |ext_*|Přidejte předponu `ext_` do libovolného parametru, abyste odkazovali na proměnné nadřazené šablony. Například `ext_safeprojectname`.|
-|GUID [1-10]|Identifikátor GUID, který slouží k nahrazení identifikátoru GUID projektu v souboru projektu. Můžete zadat až 10 jedinečných identifikátorů GUID (například `guid1`).|
-|ItemName|Název souboru, ve kterém se parametr používá|
-|názevpočítače|Aktuální název počítače (například Computer01).|
-|názevprojektu|Jméno, které uživatel zadal při vytvoření projektu.|
-|registeredorganization|Hodnota klíče registru z HKLM\Software\Microsoft\Windows NT\CurrentVersion\RegisteredOrganization.|
-|RootNamespace|Kořenový obor názvů aktuálního projektu Tento parametr platí pouze pro šablony položek.|
+|identifikátor GUID [1-10]|GUID, který se používá k nahrazení identifikátoru GUID projektu v souboru projektu. Můžete zadat až 10 jedinečných identifikátorů GUID (například `guid1`).|
+|Název položky|Název souboru, ve kterém se parametr používá|
+|MachineName|Aktuální název počítače (například Computer01).|
+|název projektu|Jméno, které uživatel zadal při vytvoření projektu.|
+|RegisteredOrganization|Hodnotu klíče registru z HKLM\Software\Microsoft\Windows NT\CurrentVersion\RegisteredOrganization.|
+|RootNamespace|Kořenový obor názvů aktuálního projektu. Tento parametr platí pouze pro šablony položek.|
 |safeitemname|Stejné jako `itemname`, ale všechny nezabezpečené znaky a mezery nahrazují znaky podtržítka.|
 |safeitemrootname|Stejné jako `safeitemname`.|
 |safeprojectname|Název zadaný uživatelem při vytvoření projektu, ale všechny nezabezpečené znaky a mezery byly odebrány.|
 |čas|Aktuální čas ve formátu DD/MM/RRRR 00:00:00.|
 |specifiedSolutionName|Název řešení. Pokud je zaškrtnuto políčko „vytvořit adresář řešení“, `specifiedSolutionName` obsahuje název řešení. Pokud není zaškrtnuto políčko „vytvořit adresář řešení“, `specifiedSolutionName` je prázdné.|
-|UserDomain|Aktuální doména uživatele.|
-|jmen|Aktuální uživatelské jméno.|
-|webnamespace|Název aktuálního webu Tento parametr se používá v šabloně webového formuláře k zaručení jedinečných názvů tříd. Pokud se web nachází v kořenovém adresáři webového serveru, tento parametr šablony se přeloží do kořenového adresáře webového serveru.|
-|jednolet|Aktuální rok ve formátu YYYY.|
+|USERDOMAIN|Aktuální uživatel domény.|
+|userName|Aktuální uživatelské jméno.|
+|webnamespace|Název aktuální webové stránky. Tento parametr se používá v šabloně webového formuláře zajistit jedinečné názvy tříd. Pokud webová stránka se v kořenovém adresáři webového serveru, tento parametr šablony přeloží do kořenového adresáře na webovém serveru.|
+|Rok|Aktuální rok ve formátu RRRR.|
 
 > [!NOTE]
-> Parametry šablony rozlišují velká a malá písmena.
+> Parametry šablony jsou malá a velká písmena.
 
 ## <a name="custom-template-parameters"></a>Parametry vlastní šablony
 
-Kromě výchozích parametrů vyhrazené šablony, které se používají při nahrazování parametrů, můžete zadat vlastní parametry a hodnoty šablon. Další informace naleznete v tématu [CustomParameters – element (šablony sady Visual Studio)](../extensibility/customparameters-element-visual-studio-templates.md).
+Můžete určit vlastní parametry a hodnoty šablony, kromě vyhrazených výchozích parametrů šablony, které se používají při nahrazení parametru. Další informace najdete v tématu [CustomParameters – element (šablony sady Visual Studio)](../extensibility/customparameters-element-visual-studio-templates.md).
 
-## <a name="example-use-the-project-name-for-a-file-name"></a>Příklad: použití názvu projektu pro název souboru
+## <a name="example-use-the-project-name-for-a-file-name"></a>Příklad: Použití názvu projektu k názvu souboru
 
-Můžete zadat názvy souborů proměnných pro položky projektu pomocí parametru v atributu `TargetFileName`.
+Můžete zadat různé názvy souborů pro položky projektu pomocí parametru `TargetFileName` atribut.
 
-Následující příklad určuje, že název spustitelného souboru používá název projektu určený `$projectname$`.
+Následující příklad určuje, že název spustitelného souboru používá název projektu, určené `$projectname$`.
 
 ```xml
 <TemplateContent>
@@ -91,9 +91,9 @@ Následující příklad určuje, že název spustitelného souboru používá n
 </TemplateContent>
 ```
 
-## <a name="example-use-the-safe-project-name-for-the-namespace-name"></a>Příklad: použijte název bezpečného projektu pro název oboru názvů
+## <a name="example-use-the-safe-project-name-for-the-namespace-name"></a>Příklad: Použití bezpečný název projektu jako název oboru názvů
 
-Chcete-li použít název bezpečného projektu pro obor názvů C# v souboru třídy, použijte následující syntaxi:
+Pokud chcete použít bezpečný název projektu pro obor názvů v souboru třídy C#, použijte následující syntaxi:
 
 ```csharp
 namespace $safeprojectname$
@@ -106,7 +106,7 @@ namespace $safeprojectname$
 }
 ```
 
-V souboru *. vstemplate* pro šablonu projektu zahrňte atribut `ReplaceParameters="true"`, když odkazujete na soubor:
+V *.vstemplate* soubor šablony projektu, zahrnují `ReplaceParameters="true"` atribut při odkazování na soubor:
 
 ```xml
 <TemplateContent>
@@ -120,6 +120,6 @@ V souboru *. vstemplate* pro šablonu projektu zahrňte atribut `ReplaceParamete
 ## <a name="see-also"></a>Viz také:
 
 - [Postupy: nahrazení parametrů v šabloně](how-to-substitute-parameters-in-a-template.md)
-- [Přizpůsobení šablon](../ide/customizing-project-and-item-templates.md)
-- [Postupy: vytváření šablon projektů](../ide/how-to-create-project-templates.md)
-- [Odkaz na schéma šablony](../extensibility/visual-studio-template-schema-reference.md)
+- [Přizpůsobení šablony](../ide/customizing-project-and-item-templates.md)
+- [Postupy: vytváření šablon projektu](../ide/how-to-create-project-templates.md)
+- [Odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)

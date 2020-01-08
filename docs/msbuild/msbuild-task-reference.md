@@ -10,17 +10,17 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild, tasks
 ms.assetid: b3144b27-a426-4259-b8ae-5f7991b202b6
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 00af44212dd142dd94629f886a50b9646488af3b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d050aa095868e229887e4928285d746e1b5906a5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747269"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593873"
 ---
 # <a name="msbuild-task-reference"></a>Referenční dokumentace úlohy nástroje MSBuild
 
@@ -30,7 +30,7 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 
 | Parametr | Popis |
 |-------------------| - |
-| `Condition` | Volitelný parametr `String`.<br /><br /> Výraz `Boolean`, který modul [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] používá k určení, zda bude tato úloha provedena. Informace o podmínkách podporovaných nástrojem [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] najdete v tématu [podmínky](../msbuild/msbuild-conditions.md). |
+| `Condition` | Volitelný parametr `String`.<br /><br /> Výraz `Boolean`, který modul [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] používá k určení, zda bude tato úloha provedena. Informace o podmínkách podporovaných nástrojem [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]najdete v tématu [podmínky](../msbuild/msbuild-conditions.md). |
 | `ContinueOnError` | Volitelný parametr. Může obsahovat jednu z následujících hodnot:<br /><br /> -   **WarnAndContinue** nebo **true**. Pokud se úloha nezdařila, následné úkoly v [cílovém](../msbuild/target-element-msbuild.md) elementu a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za upozornění.<br />-   **ErrorAndContinue**. Pokud se úloha nezdařila, následné úkoly v prvku `Target` a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za chyby.<br />-   **ErrorAndStop** nebo **false** (výchozí). Pokud se úloha nezdařila, zbývající úkoly v prvku `Target` a sestavení nejsou provedeny a celý `Target` element a sestavení se považuje za neúspěšné.<br /><br /> Verze .NET Framework před 4,5 podporují pouze hodnoty `true` a `false`.<br /><br /> Další informace najdete v tématu [Postupy: ignorování chyb v úlohách](../msbuild/how-to-ignore-errors-in-tasks.md). |
 
 ## <a name="in-this-section"></a>V tomto oddílu
@@ -83,9 +83,9 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 
  Zkopíruje soubory do nového umístění.
 
-- [CreateCSharpManifestResourceName – – úloha](../msbuild/createcsharpmanifestresourcename-task.md)
+- [CreateCSharpManifestResourceName task](../msbuild/createcsharpmanifestresourcename-task.md)
 
- Vytvoří název manifestu ve stylu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] z daného názvu souboru *. resx* nebo jiného prostředku.
+ Vytvoří název manifestu ve stylu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]z daného názvu souboru *. resx* nebo jiného prostředku.
 
 - [CreateItem – – úloha](../msbuild/createitem-task.md)
 
@@ -95,9 +95,9 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 
  Naplní vlastnosti ze vstupních hodnot a povoluje zkopírování hodnot z jedné vlastnosti nebo řetězce do jiného.
 
-- [CreateVisualBasicManifestResourceName – – úloha](../msbuild/createvisualbasicmanifestresourcename-task.md)
+- [CreateVisualBasicManifestResourceName task](../msbuild/createvisualbasicmanifestresourcename-task.md)
 
- Vytvoří název manifestu ve stylu [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] z daného názvu souboru *. resx* nebo jiného prostředku.
+ Vytvoří název manifestu ve stylu [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]z daného názvu souboru *. resx* nebo jiného prostředku.
 
 - [CSc – úloha](../msbuild/csc-task.md)
 
@@ -171,7 +171,7 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 
  Načte cestu k sestavením .NET Framework.
 
-- [GetFrameworkSdkPath – – úloha](../msbuild/getframeworksdkpath-task.md)
+- [GetFrameworkSdkPath task](../msbuild/getframeworksdkpath-task.md)
 
  Načte cestu k [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)].
 

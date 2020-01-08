@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Build options [C#]
 - Project Designer, Build page
 ms.assetid: 77ff1bfc-d633-4634-ba29-9afdb6d7e362
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab60524f854b3974d383cb7d8ab37470195fc85e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 619840f417c922b4019bafffca8d66c9b1c939e2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668213"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596863"
 ---
 # <a name="build-page-project-designer-c"></a>Stránka Sestavení, návrhář projektu (C#)
 
@@ -40,7 +40,7 @@ Následující možnosti umožňují vybrat konfiguraci a platformu pro zobrazen
 
 Určuje, která nastavení konfigurace se mají zobrazit nebo upravit. Nastavení může být **aktivní (ladění)** (Toto je výchozí nastavení), **ladění**, **vydání**nebo **všechny konfigurace**.
 
-**Platformy**
+**Platforma**
 
 Určuje, která nastavení platformy se mají zobrazit nebo upravit. Výchozí nastavení je **aktivní (libovolný procesor)** . Aktivní platformu můžete změnit pomocí **Configuration Manager**. Další informace najdete v tématu [Postup: vytváření a úpravy konfigurací](../../ide/how-to-create-and-edit-configurations.md).
 
@@ -82,7 +82,7 @@ Toto zaškrtávací políčko je k dispozici pouze v případě, že jsou splně
 
 **Povolení nezabezpečeného kódu**
 
-Umožňuje kompilaci kódu, který používá klíčové slovo [unsafe](/dotnet/csharp/language-reference/keywords/unsafe) . Další informace naleznete v tématu [/unsafe (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/unsafe-compiler-option).
+Umožňuje kompilaci kódu, který [nebezpečný](/dotnet/csharp/language-reference/keywords/unsafe) používá klíčové slovo Další informace naleznete v tématu [/unsafe (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/unsafe-compiler-option).
 
 **Optimalizovat kód**
 
@@ -119,7 +119,7 @@ Následující nastavení se používají ke konfiguraci možností výstupu pro
 
 **Výstupní cesta**
 
-Určuje umístění výstupních souborů pro tuto konfiguraci projektu. Do tohoto pole zadejte cestu k výstupu sestavení nebo klikněte na tlačítko **Procházet** a zadejte cestu. Cesta je relativní; Pokud zadáte absolutní cestu, bude uložena jako relativní. Výchozí cesta je bin\Debug nebo bin\Release \\.
+Určuje umístění výstupních souborů pro tuto konfiguraci projektu. Do tohoto pole zadejte cestu k výstupu sestavení nebo klikněte na tlačítko **Procházet** a zadejte cestu. Cesta je relativní; Pokud zadáte absolutní cestu, bude uložena jako relativní. Výchozí cesta je bin\Debug nebo bin\Release\\.
 
 V případě zjednodušených konfigurací sestavení Určuje projektový systém, zda má být vytvořena verze ladění nebo vydání. Příkaz **Build** z nabídky **ladění** (F5) vloží sestavení do umístění ladění bez ohledu na **výstupní cestu** , kterou zadáte. Příkaz **Build** v nabídce **sestavení** však vloží do umístění, které zadáte. Další informace najdete v tématu [Principy konfigurací sestavení](../../ide/understanding-build-configurations.md).
 
@@ -133,7 +133,7 @@ Označuje, že vaše spravovaná aplikace bude vystavovat objekt COM (obálka s 
 
 **Generovat sestavení serializace**
 
-Určuje, zda kompilátor použije XML Serializer Generator Tool (Sgen. exe) k vytvoření sestavení serializace XML. Sestavení serializace mohou zlepšit výkon při spuštění <xref:System.Xml.Serialization.XmlSerializer>, pokud jste tuto třídu použili k serializaci typů ve vašem kódu. Ve výchozím nastavení je tato možnost nastavena na hodnotu **auto**, která určuje, že sestavení serializace budou generována pouze v případě, že jste použili <xref:System.Xml.Serialization.XmlSerializer> ke kódování typů v kódu do XML. **Off** určuje, že sestavení serializace nikdy nebyla vygenerována bez ohledu na to, zda váš kód používá <xref:System.Xml.Serialization.XmlSerializer>. **V** určuje, zda mají být sestavení serializace vždy vygenerována. Sestavení serializace jsou pojmenovány `TypeName`. XmlSerializers. dll. Další informace najdete v tématu [XML Serializer Generator Tool (Sgen. exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe).
+Určuje, zda kompilátor použije XML Serializer Generator Tool (Sgen. exe) k vytvoření sestavení serializace XML. Sestavení serializace mohou zlepšit výkon při spuštění <xref:System.Xml.Serialization.XmlSerializer>, pokud jste tuto třídu použili k serializaci typů ve vašem kódu. Ve výchozím nastavení je tato možnost nastavena na hodnotu **auto**, která určuje, že sestavení serializace budou generována pouze v případě, že jste použili <xref:System.Xml.Serialization.XmlSerializer> ke kódování typů v kódu do XML. **Off** určuje, že sestavení serializace nikdy nebyla vygenerována bez ohledu na to, zda váš kód používá <xref:System.Xml.Serialization.XmlSerializer>. **V** určuje, zda mají být sestavení serializace vždy vygenerována. Sestavení serializace jsou pojmenována `TypeName`. XmlSerializers. dll. Další informace najdete v tématu [XML Serializer Generator Tool (Sgen. exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe).
 
 **Pokročilé**
 

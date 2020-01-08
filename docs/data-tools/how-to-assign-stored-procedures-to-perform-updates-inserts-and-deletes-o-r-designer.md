@@ -3,17 +3,17 @@ title: Použití uložených procedur v LINQ to SQL k aktualizaci dat (Návrhá�
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e88224ab-ff61-4a3a-b6b8-6f3694546cac
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 019bf6b115fc526e39a3bc65bd9d0607c1a976db
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8028171cf3255de3484bb89a374bfc22a2625b1a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648394"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586546"
 ---
 # <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>Postupy: přiřazení uložených procedur pro provádění aktualizací, vkládání a odstraňování (Návrhář O/R)
 
@@ -39,7 +39,7 @@ Ve výchozím nastavení logika aktualizace databáze (vložení, aktualizace a 
 
 3. Přetáhněte uloženou proceduru do **návrháře o/R**.
 
-     Uložená procedura je přidána do podokna metody jako metoda <xref:System.Data.Linq.DataContext>. Další informace naleznete v tématu [metody DataContext (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
+     Uložená procedura je přidána do podokna metody jako metoda <xref:System.Data.Linq.DataContext>. Další informace najdete v tématu [metod DataContext (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
 
 4. Vyberte třídu entity, pro kterou chcete použít uloženou proceduru pro provádění aktualizací.
 
@@ -61,11 +61,11 @@ Ve výchozím nastavení logika aktualizace databáze (vložení, aktualizace a 
     > [!NOTE]
     > Můžete pokračovat v konfiguraci chování pro každou kombinaci třídy a chování, pokud kliknete na **použít** po provedení každé změny. Pokud změníte třídu nebo chování předtím, než kliknete na **použít**, zobrazí se dialogové okno s upozorněním a nabídne vám možnost použít změny.
 
-Chcete-li se vrátit k používání výchozí logiky modulu runtime pro aktualizace, klikněte na tři tečky vedle příkazu **Vložit**, **aktualizovat**nebo **Odstranit** v okně **vlastnosti** a pak vyberte **použít modul runtime** v **chování konfigurace** . Dialogové okno.
+Chcete-li se vrátit k používání výchozí logiky modulu runtime pro aktualizace, klikněte na tři tečky vedle příkazu **Vložit**, **aktualizovat**nebo **Odstranit** v okně **vlastnosti** a pak v dialogovém okně **Konfigurovat chování** vyberte **použít modul runtime** .
 
 ## <a name="see-also"></a>Viz také:
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Metody DataContext](../data-tools/datacontext-methods-o-r-designer.md)
-- [LINQ to SQL (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/index)
+- [Technologie LINQ to SQL (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/index)
 - [Operace vložení, aktualizace a odstranění (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/insert-update-and-delete-operations)

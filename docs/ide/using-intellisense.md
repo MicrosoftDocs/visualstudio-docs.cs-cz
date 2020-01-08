@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Complete word
 - List members
 - IntelliSense [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 011542bc45680f6fb5b7bd2b83283605922189ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 34e038256d46909e135f8285cb1b3edc45d0ba3e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647360"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565341"
 ---
 # <a name="intellisense-in-visual-studio"></a>IntelliSense v aplikaci Visual Studio
 
@@ -38,11 +38,11 @@ V seznamu členů ikona vlevo představuje typ členu, například obor názvů,
 
 ![Seznam členů sady Visual Studio](../ide/media/vs2015_intellisense.png)
 
-Funkci **vypsat členy** můžete vyvolat ručně zadáním **kombinace kláves CTRL** +**J**, výběrem možnosti **Upravit**  > **IntelliSense**  > **seznam členů**nebo výběrem tlačítka **seznam členů** v editoru. pruhu. Při vyvolání na prázdném řádku nebo mimo podporovaný rozsah zobrazí seznam symboly v globálním oboru názvů.
+Funkci **vypsat členy** můžete vyvolat ručně zadáním **kombinace kláves CTRL**+**J**, výběrem možnosti **Upravit** > **IntelliSense** > **seznam členů**nebo výběrem tlačítka **Zobrazit členy** na panelu nástrojů editoru. Při vyvolání na prázdném řádku nebo mimo podporovaný rozsah zobrazí seznam symboly v globálním oboru názvů.
 
-Chcete-li vypnout členy seznamu ve výchozím nastavení (tak, aby se nezobrazily, pokud to není výslovně vyvoláno), v nabídce **nástroje**  > **Možnosti**  > **všechny jazyky** a zrušte výběr **členů automatických seznamů**. Pokud chcete vypnout seznam členů jenom pro určitý jazyk, přečtěte si **Obecné** nastavení daného jazyka.
+Chcete-li vypnout členy seznamu ve výchozím nastavení (tak, aby se nezobrazily, pokud to není výslovně vyvoláno), v nabídce **nástroje** > **Možnosti** > **všechny jazyky** a zrušte výběr **členů automatických seznamů**. Pokud chcete vypnout seznam členů jenom pro určitý jazyk, přečtěte si **Obecné** nastavení daného jazyka.
 
-Můžete také změnit nastavení na režim návrhu, ve kterém je do kódu vložen pouze text, který zadáte. Například pokud zadáte identifikátor, který není v seznamu a stiskněte klávesu **TAB**, v režimu dokončování by položka nahradila typový identifikátor. Chcete-li přepínat mezi režimem dokončování a režimem návrhu, stiskněte klávesu **Ctrl** +**ALT** +**mezerník**nebo zvolte možnost **Upravit**  > **IntelliSense**  > **Přepnout režim dokončení**.
+Můžete také změnit nastavení na režim návrhu, ve kterém je do kódu vložen pouze text, který zadáte. Například pokud zadáte identifikátor, který není v seznamu a stiskněte klávesu **TAB**, v režimu dokončování by položka nahradila typový identifikátor. Chcete-li přepínat mezi režimem dokončování a režimem návrhu, stiskněte klávesu **Ctrl**+**ALT**+**mezerník**nebo zvolte možnost **Upravit** > **IntelliSense** > **Přepnout režim dokončení**.
 
 ## <a name="parameter-info"></a>Informace o parametrech
 
@@ -54,7 +54,7 @@ Parametr tučně označuje další parametr, který je vyžadován při zadává
 
 Když opatřujete poznámkami funkce a parametry s komentáři XML dokumentace, komentáře se zobrazí jako informace o parametru. Další informace najdete v tématu [zadání komentářů kódu XML](reference/generate-xml-documentation-comments.md).
 
-Informace o parametrech můžete vyvolat ručně kliknutím **na upravit**  > **IntelliSense**  > **informace o parametrech**, stisknutím klávesy **CTRL** +**SHIFT** +**MEZERNÍK**nebo výběrem **informací o parametru** . tlačítko na panelu nástrojů editoru.
+Informace o parametrech lze vyvolat ručně výběrem možnosti **upravit** > **IntelliSense** > **informace o parametrech**, stisknutím klávesy **CTRL**+**SHIFT**+**MEZERNÍK**nebo výběrem tlačítka **informace o parametru** na panelu nástrojů editoru.
 
 ## <a name="quick-info"></a>Rychlé informace
 
@@ -66,19 +66,19 @@ Když vyberete člena v poli **seznam členů** , zobrazí se také pole rychlé
 
 ![Informace o parametrech v&#35; souboru kódu jazyka C](../ide/media/vs2015_paraminfo.png)
 
-Rychlé informace můžete vyvolat ručně výběrem možnosti **upravit**  > **IntelliSense**  > **rychlé informace**, stisknutím **kombinace kláves CTRL** +**I**nebo kliknutím na tlačítko **rychlé informace** na panelu nástrojů editoru.
+Rychlé informace můžete vyvolat ručně výběrem možnosti **upravit** > **IntelliSense** > **rychlé informace**, stisknutím **kombinace kláves CTRL**+**I**nebo kliknutím na tlačítko **rychlé informace** na panelu nástrojů editoru.
 
 Pokud je funkce přetížena, technologie IntelliSense nemusí zobrazit informace pro všechny formy přetížení.
 
-Rychlé informace pro C++ kód můžete vypnout tak, že přejdete na **nástroje**  > **Možnosti**  > **textový editor**  > **C/C++**   > **Pokročilé**a nastavíte **automatické rychlé informace** na 2.
+Rychlé informace pro C++ kód můžete vypnout tak, že přejdete na **nástroje** > **Možnosti** > **textový editor** > **C/C++**  > **Pokročilé**a nastavíte **automatické rychlé informace** na `false`.
 
 ## <a name="complete-word"></a>Dokončit slovo
 
-Po zadání dostatečného počtu znaků k odstranění nejednoznačného období dokončí aplikace slovo zbytek proměnné, příkazu nebo názvu funkce. Úplné slovo můžete vyvolat tak, že vyberete **upravit**  > **IntelliSense**  > **Dokončit Word**, stisknete **klávesu CTRL** +**MEZERNÍK**nebo zvolíte tlačítko **Dokončit slovo** na panelu nástrojů editoru.
+Po zadání dostatečného počtu znaků k odstranění nejednoznačného období dokončí aplikace slovo zbytek proměnné, příkazu nebo názvu funkce. Úplné slovo můžete vyvolat tak, že vyberete **upravit** > **IntelliSense** > **Dokončit Word**, stisknete **klávesu CTRL**+**MEZERNÍK**nebo zvolíte tlačítko **Dokončit slovo** na panelu nástrojů editoru.
 
 ## <a name="intellisense-options"></a>Možnosti technologie IntelliSense
 
-Možnosti technologie IntelliSense jsou standardně povoleny. Chcete-li je vypnout, zvolte **nástroje**  > **Možnosti**  > **textový editor** a zrušte výběr **informací o parametrech** nebo **Automatické seznamy členů** , pokud nechcete, aby členové seznamu měli možnost seznam.
+Možnosti technologie IntelliSense jsou standardně povoleny. Chcete-li je vypnout, zvolte **nástroje** > **Možnosti** > **textový editor** a zrušte výběr **informací o parametrech** nebo **Automatické seznamy členů** , pokud nechcete, aby členové seznamu měli možnost seznam.
 
 ## <a name="intellisense-icons"></a>Ikony IntelliSense
 Ikony v technologii IntelliSense mohou vyjádřit další význam s modifikátory ikon. Jedná se o hvězdičky, srdce a zámky nad ikonou objektu, který předává chráněné, interní nebo soukromé, v uvedeném pořadí.

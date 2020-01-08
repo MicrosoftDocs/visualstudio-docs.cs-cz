@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ListModules command
 - list modules command
 ms.assetid: 3cb73774-6ac0-43b2-b781-75ed47175bfd
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 86e479879051d38df1da3ed2677303a76ea2d289
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1e083a0e1baeefc6807dccb2199cd0e5a9bd883d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747917"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595498"
 ---
 # <a name="list-modules-command"></a>Listovat moduly – příkaz
-Vypíše moduly pro aktuální proces.
+Seznam modulů pro aktuální proces.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,39 +33,39 @@ Debug.ListModules [/Address:yes|no] [/Name:yes|no] [/Order:yes|no]
 ```
 
 #### <a name="parameters"></a>Parametry
-/Address: `yes|no`
+/Address:`yes|no`
 
 Volitelné. Určuje, zda se mají zobrazovat adresy paměti modulů. Výchozí hodnota je `yes`.
 
-/Name: `yes|no`
+/Name:`yes|no`
 
 Volitelné. Určuje, zda se mají zobrazovat názvy modulů. Výchozí hodnota je `yes`.
 
-/Order: `yes|no`
+/Order:`yes|no`
 
 Volitelné. Určuje, zda se má zobrazovat pořadí modulů. Výchozí hodnota je `no`.
 
-/Path: `yes|no`
+/Path:`yes|no`
 
 Volitelné. Určuje, zda se mají zobrazovat cesty modulů. Výchozí hodnota je `yes`.
 
-/Process: `yes|no`
+/Process:`yes|no`
 
 Volitelné. Určuje, zda se mají zobrazit procesy modulů. Výchozí hodnota je `no`.
 
-/SymbolFile: `yes|no`
+/SymbolFile:`yes|no`
 
 Volitelné. Určuje, zda se mají zobrazovat soubory symbolů modulů. Výchozí hodnota je `no`.
 
-/SymbolStatus: `yes|no`
+/SymbolStatus:`yes|no`
 
 Volitelné. Určuje, zda se mají zobrazovat stavy symbolů modulů. Výchozí hodnota je `yes`.
 
-/Timestamp: `yes|no`
+/Timestamp:`yes|no`
 
 Volitelné. Určuje, zda se mají zobrazovat časová razítka modulů. Výchozí hodnota je `no`.
 
-/Version: `yes|no`
+/Version:`yes|no`
 
 Volitelné. Určuje, zda se mají zobrazovat verze modulů. Výchozí hodnota je `no`.
 

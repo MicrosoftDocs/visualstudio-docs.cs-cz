@@ -5,20 +5,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], connecting host to processor
 - text templates, custom directive hosts
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: d474de7da459e9639e8ec9f29f34e59267388b50
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: a27b856b9c5129f725381afa34bd134009002216
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984426"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593977"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>Návod: Připojení hostitele k procesoru vygenerovaných direktiv
 
@@ -39,13 +39,13 @@ Tento návod zahrnuje následující úlohy:
 
 ## <a name="prerequisites"></a>Požadavky
 
-K definování DSL musíte mít nainstalované následující součásti:
+Pokud chcete definovat DSL, musíte mít nainstalovaný následující komponenty:
 
 | | |
 |-|-|
 | Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/) |
 | [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index) |
-| Sada SDK pro vizualizaci a modelování sady Visual Studio | |
+| Sada Visual Studio Visualization and Modeling SDK | |
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
@@ -67,12 +67,12 @@ V tomto návodu použijete Průvodce návrháře jazyka specifického pro domén
 
    Další informace o vytváření řešení jazyka specifického pro doménu najdete v tématu [Postupy: vytvoření řešení jazyka specifického pro doménu](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
-2. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+2. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
    > [!IMPORTANT]
    > Tento krok vygeneruje procesor direktiv a přidá k němu klíč v registru.
 
-3. V nabídce **ladit** klikněte na **Spustit ladění**.
+3. Na **ladění** nabídky, klikněte na tlačítko **spustit ladění**.
 
     Otevře se druhá instance aplikace Visual Studio.
 
@@ -96,17 +96,17 @@ Po vygenerování procesoru direktivy se připojíte procesor direktiv a vlastn�
 
 3. Přidejte následující odkazy:
 
-    - Microsoft. VisualStudio. Modeling. SDK. 11.0
+    - Microsoft.VisualStudio.Modeling.Sdk.11.0
 
-    - Microsoft. VisualStudio. Modeling. SDK. Diagrams. 11.0
+    - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
 
-    - Microsoft. VisualStudio. TextTemplating. 11.0
+    - Microsoft.VisualStudio.TextTemplating.11.0
 
-    - Microsoft. VisualStudio. TextTemplating. Interfaces. 11.0
+    - Microsoft.VisualStudio.TextTemplating.Interfaces.11.0
 
-    - Microsoft. VisualStudio. TextTemplating. Modelings. 11.0
+    - Microsoft.VisualStudio.TextTemplating.Modeling.11.0
 
-    - Microsoft. VisualStudio. TextTemplating. VSHost. 11.0
+    - Microsoft.VisualStudio.TextTemplating.VSHost.11.0
 
 4. V horní části Program.cs nebo Module1. vb přidejte následující řádek kódu:
 
@@ -118,7 +118,7 @@ Po vygenerování procesoru direktivy se připojíte procesor direktiv a vlastn�
     Imports Microsoft.Win32
     ```
 
-5. Vyhledejte kód vlastnosti `StandardAssemblyReferences` a nahraďte ji následujícím kódem:
+5. Vyhledejte kód vlastnosti `StandardAssemblyReferences`a nahraďte ji následujícím kódem:
 
     > [!NOTE]
     > V tomto kroku přidáte odkazy na sestavení, která jsou požadována generovaným procesorem direktiv, který bude váš hostitel podporovat.
@@ -154,7 +154,7 @@ Po vygenerování procesoru direktivy se připojíte procesor direktiv a vlastn�
     }
     ```
 
-6. Vyhledejte kód pro funkci `ResolveDirectiveProcessor` a nahraďte ji následujícím kódem:
+6. Vyhledejte kód pro funkci `ResolveDirectiveProcessor`a nahraďte ji následujícím kódem:
 
     > [!IMPORTANT]
     > Tento kód obsahuje pevně zakódované odkazy na název generovaného procesoru direktiv, ke kterému se chcete připojit. Tuto obecnější možnost si můžete snadno vytvořit. v takovém případě vyhledá všechny procesory direktiv uvedené v registru a pokusí se najít shodu. V takovém případě bude hostitel spolupracovat s jakýmkoli generovaným procesorem direktiv.
@@ -228,9 +228,9 @@ Po vygenerování procesoru direktivy se připojíte procesor direktiv a vlastn�
             }
     ```
 
-7. V nabídce **soubor** klikněte na **Uložit vše**.
+7. Na **souboru** nabídky, klikněte na tlačítko **Uložit vše**.
 
-8. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+8. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
 ## <a name="test-the-custom-host-with-the-directive-processor"></a>Test vlastního hostitele pomocí procesoru direktiv
 
@@ -312,7 +312,7 @@ Chcete-li otestovat vlastního hostitele textových šablon, musíte nejprve nap
     #>
     ```
 
-3. V kódu Nahraďte cestu \<YOUR > cestou k souboru Sample. min z jazyka specifického pro návrh, který jste vytvořili v prvním postupu.
+3. V kódu nahraďte \<cestu > s cestou k souboru Sample. min z jazyka specifického pro návrh, který jste vytvořili v prvním postupu.
 
 4. Soubor uložte a zavřete.
 

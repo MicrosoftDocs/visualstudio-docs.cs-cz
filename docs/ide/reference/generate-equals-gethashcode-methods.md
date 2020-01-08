@@ -2,21 +2,21 @@
 title: Vygenerovat C# přepsání metod Equals a GetHashCode
 ms.date: 01/26/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: e70593bc04b576237a7f9f0f51ae6c3d37e40a88
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f9b1a639dd655f4f75b21555396866858b144010
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660029"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75569280"
 ---
 # <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Generování přepisů metod Equals a GetHashCode v aplikaci Visual Studio
 
-Tato generace kódu platí pro:
+Tato generace kód platí pro:
 
 - C#
 
@@ -43,9 +43,9 @@ Tato generace kódu platí pro:
 
 1. Dále proveďte jednu z následujících akcí:
 
-   - Stiskněte klávesu **Ctrl** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
+   - Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
 
-   - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
+   - Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky.
 
    - Klikněte na ![screwdriver](../media/screwdriver-icon.png) ikona, která se zobrazí na levém okraji
 

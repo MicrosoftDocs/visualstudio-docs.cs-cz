@@ -9,17 +9,17 @@ helpviewer_keywords:
 - SQLEXPRESS
 - upgrading SQLExpress to SQLExpress
 - upgrading to LocalDB
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e0196c582fbe673d73c7aeb89280d05e11a071a5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 195cab863554bc60478df4e80319eab80124140a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639572"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586091"
 ---
 # <a name="upgrade-mdf-files"></a>Upgrade souborů .mdf
 
@@ -63,7 +63,7 @@ Před upgradem databáze Vezměte v úvahu následující kritéria:
 
     - **Zdroj dat**: `Microsoft SQL Server (SqlClient)`
 
-    - **Název serveru**:
+    - **Server Name** (Název serveru):
 
         - Chcete-li použít výchozí verzi: `(localdb)\MSSQLLocalDB`.  Tím se zadáte buď ProjectV12 nebo ProjectV13, v závislosti na tom, která verze sady Visual Studio je nainstalovaná a kdy se vytvořila první instance LocalDB. Uzel **MSSQLLocalDB** v **Průzkumník objektů systému SQL Server** ukazuje, na kterou verzi odkazuje.
 
@@ -73,7 +73,7 @@ Před upgradem databáze Vezměte v úvahu následující kritéria:
 
     - **Logický název**: název, který chcete použít se souborem.
 
-3. Klikněte na tlačítko **OK** .
+3. Vyberte tlačítko **OK**.
 
 4. Až budete vyzváni, vyberte tlačítko **Ano** pro upgrade souboru.
 
@@ -101,13 +101,13 @@ SQL Server Express připojení můžete také upravit tak, aby používalo Local
 
 ### <a name="to-make-sql-server-express-the-default-database-engine"></a>Zpřístupnění SQL Server Express výchozím databázovým strojem
 
-1. Na panelu nabídek vyberte možnost **nástroje**  > **Možnosti**.
+1. Na panelu nabídek vyberte možnost **nástroje** > **Možnosti**.
 
 2. V dialogovém okně **Možnosti** rozbalte možnosti **nástroje databáze** a pak vyberte **datová připojení**.
 
 3. Do textového pole **název instance SQL Server** zadejte název instance SQL Server Express nebo LocalDB, které chcete použít. Pokud instance není pojmenována, zadejte `.\SQLEXPRESS or (LocalDB)\MSSQLLocalDB`.
 
-4. Klikněte na tlačítko **OK** .
+4. Vyberte tlačítko **OK**.
 
     SQL Server Express budou výchozím databázovým strojem pro vaše aplikace.
 

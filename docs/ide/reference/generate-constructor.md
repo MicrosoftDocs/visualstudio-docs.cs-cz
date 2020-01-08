@@ -2,21 +2,21 @@
 title: Rychlá akce při generování konstruktoru
 ms.date: 01/26/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 41bb9a0e3921495629a10d6783432e8b4999a117
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3c8259841af4511bd782bca1be222353634638f5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661740"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75569501"
 ---
 # <a name="generate-a-constructor-in-visual-studio"></a>Generování konstruktoru v aplikaci Visual Studio
 
-Tato generace kódu platí pro:
+Tato generace kód platí pro:
 
 - C#
 
@@ -44,10 +44,10 @@ Tato generace kódu platí pro:
 
 1. Dále proveďte jednu z následujících akcí:
 
-   - **Kombinace**
-      - Stiskněte klávesu **Ctrl** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
-   - **Stisknut**
-      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
+   - **Klávesnice**
+      - Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
+   - **Myši**
+      - Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky.
       - Klikněte na ![screwdriver](media/screwdriver.png) ikona, která se zobrazí na levém okraji, pokud je textový kurzor již na prázdném řádku ve třídě.
 
    ![Generovat náhled konstruktoru](media/constructor1-preview-cs.png)
@@ -56,7 +56,7 @@ Tato generace kódu platí pro:
 
    Otevře se dialogové okno **Vybrat členy** .
 
-1. Vyberte členy, které chcete zahrnout jako parametry konstruktoru. Můžete je seřadit pomocí šipek nahoru a dolů. Klikněte na **tlačítko OK**.
+1. Vyberte členy, které chcete zahrnout jako parametry konstruktoru. Můžete je seřadit pomocí šipek nahoru a dolů. Vyberte **OK**.
 
    ![Dialog Vybrat členy](media/constructor1-dialog-cs.png)
 
@@ -75,10 +75,10 @@ Tato generace kódu platí pro:
 
 1. Dále proveďte jednu z následujících akcí:
 
-   - **Kombinace**
-      - Stiskněte klávesu **Ctrl** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
-   - **Stisknut**
-      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
+   - **Klávesnice**
+      - Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
+   - **Myši**
+      - Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky.
       - Klikněte na ![screwdriver](media/screwdriver.png) ikona, která se zobrazí na levém okraji, pokud je textový kurzor již na řádku s výběrem.
 
       ![Generovat náhled konstruktoru](media/constructor2-preview-cs.png)
@@ -91,37 +91,37 @@ Tato generace kódu platí pro:
 
 ## <a id="usage"></a>Generovat konstruktor z nového použití (C# a Visual Basic)
 
-1. Umístěte kurzor na řádek, kde je červená vlnovka. Červená vlnovka indikuje volání konstruktoru, který ještě neexistuje.
+1. Umístěte kurzor na řádek níž se nachází červená vlnovka. Červená vlnovka indikuje volání konstruktoru, který ještě neexistuje.
 
    - C#:
 
-       ![Zvýrazněný kódC#](media/constructor-highlight-cs.png)
+       ![Zvýrazněný kód jazyka C#](media/constructor-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Zvýrazněný kód VB](media/constructor-highlight-vb.png)
+       ![Zvýrazněný kód jazyka Visual Basic](media/constructor-highlight-vb.png)
 
 2. Dále proveďte jednu z následujících akcí:
 
-   - **Kombinace**
-      - Stiskněte klávesu **Ctrl** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
-   - **Stisknut**
-      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
-      - Najeďte myší na červenou vlnovkou a klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
-      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s červenou vlnovkou
+   - **Klávesnice**
+      - Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
+   - **Myši**
+      - Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky.
+      - Červená vlnovka ukazatel myši a klikněte ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
+      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí u levého okraje, pokud textový kurzor na řádek s červená vlnovka.
 
       ![Generovat náhled konstruktoru](media/constructor-preview-cs.png)
 
 3. V rozevírací nabídce vyberte **vytvořit konstruktor v '*TypeName*'** .
 
    > [!TIP]
-   > Pomocí odkazu **Náhled změn** v dolní části okna Preview [zobrazíte všechny změny](../../ide/preview-changes.md) , které budou provedeny před provedením výběru.
+   > Použití **náhled změn** odkaz v dolní části okna náhledu [zobrazíte všechny změny](../../ide/preview-changes.md) , který bude proveden před zvolení požadované možnosti.
 
    Vytvoří se konstruktor s případnými parametry odvozenými z jeho využití.
 
    - C#:
 
-       ![Generovat výsledek metodyC#](media/constructor-result-cs.png)
+       ![Generovat výsledek metody jazyka C#](media/constructor-result-cs.png)
 
    - Visual Basic:
 
@@ -137,12 +137,12 @@ Tato generace kódu platí pro:
 
 3. Dále proveďte jednu z následujících akcí:
 
-   - **Kombinace**
-      - Stiskněte klávesu **Ctrl** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
-   - **Stisknut**
-      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
-      - Najeďte myší na červenou vlnovkou a klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
-      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s červenou vlnovkou
+   - **Klávesnice**
+      - Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
+   - **Myši**
+      - Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky.
+      - Červená vlnovka ukazatel myši a klikněte ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
+      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí u levého okraje, pokud textový kurzor na řádek s červená vlnovka.
 
       ![Generovat náhled konstruktoru](media/constructor4-preview-cs.png)
 
@@ -164,10 +164,10 @@ Můžete také přidat parametr do existující metody. Další informace nalezn
 
 1. Dále proveďte jednu z následujících akcí:
 
-   - **Kombinace**
-      - Stiskněte klávesu **Ctrl** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
-   - **Stisknut**
-      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
+   - **Klávesnice**
+      - Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
+   - **Myši**
+      - Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky.
       - Klikněte na ![screwdriver](media/screwdriver.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s přidaným parametrem.
 
    ![Generovat náhled konstruktoru](media/constructor5-preview-cs.png)
@@ -181,4 +181,4 @@ Můžete také přidat parametr do existující metody. Další informace nalezn
 ## <a name="see-also"></a>Viz také:
 
 - [Generování kódu](../code-generation-in-visual-studio.md)
-- [Zobrazit náhled změn](../../ide/preview-changes.md)
+- [Náhled změn](../../ide/preview-changes.md)

@@ -13,17 +13,17 @@ helpviewer_keywords:
 - C++, class diagrams
 - C++, Class Designer
 ms.assetid: f5b40921-2ef7-4de0-b595-45b44c79ffa6
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 228785c218b1c55a1af817761821acbe11a51c8d
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 54087a719b0079ba32ff08ff1e08ad01f5e64ed0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188959"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596746"
 ---
 # <a name="work-with-c-code-in-class-designer"></a>Práce s C++ kódem v Návrhář tříd
 
@@ -64,9 +64,9 @@ Pokud diagram třídy neaktualizuje změny, které jste provedli v kódu, může
 
 **Návrhář tříd** možná nebude možné přeložit typy z následujících důvodů:
 
-- Typ je v projektu nebo sestavení, které není odkazováno z projektu, který obsahuje diagram třídy. Chcete-li opravit tuto chybu, přidejte odkaz na projekt nebo sestavení, které obsahuje daný typ. Další informace naleznete v tématu [Správa odkazů v projektu](../managing-references-in-a-project.md).
+- Typ je v projektu nebo sestavení, které není odkazováno z projektu, který obsahuje diagram třídy. Chcete-li opravit tuto chybu, přidejte odkaz na projekt nebo sestavení, které obsahuje daný typ. Další informace najdete v tématu [Správa odkazů v projektu](../managing-references-in-a-project.md).
 
-- Typ není ve správném rozsahu, takže ho **Návrhář tříd** nemůže najít. Ujistěte se, že v kódu chybí příkaz `using`, `imports` nebo `#include`. Také se ujistěte, že jste nepřesunuli typ (nebo související typ) mimo obor názvů, ve kterém byl původně umístěn.
+- Typ není ve správném rozsahu, takže ho **Návrhář tříd** nemůže najít. Ujistěte se, že v kódu chybí příkaz `using`, `imports`nebo `#include`. Také se ujistěte, že jste nepřesunuli typ (nebo související typ) mimo obor názvů, ve kterém byl původně umístěn.
 
 - Typ neexistuje (nebo byl zakomentován). Chcete-li tuto chybu opravit, ujistěte se, že jste tento typ nepřidali nebo neodstranili.
 
@@ -74,13 +74,13 @@ Pokud diagram třídy neaktualizuje změny, které jste provedli v kódu, může
 
 - Ujistěte se, že **Návrhář tříd** podporuje typ, který jste zadali. Viz [omezení pro C++ prvky kódu](#limitations-for-c-code-elements).
 
-Chyba, kterou nejčastěji vidíte pro problém s rozlišením typu, nebyl **nalezen v jednom nebo více tvarech v diagramu tříd ' \<element > '** . Tato chybová zpráva nemusí nutně znamenat, že váš kód je v chybovém prostředí. Označuje pouze to, že návrhář tříd nemůže zobrazit váš kód. Vyzkoušejte následující míry:
+Chyba, kterou nejčastěji vidíte pro problém s rozlišením typu, nebyl **nalezen v jednom nebo více tvarech v diagramu tříd '\<elementu > '** . Tato chybová zpráva nemusí nutně znamenat, že váš kód je v chybovém prostředí. Označuje pouze to, že návrhář tříd nemůže zobrazit váš kód. Vyzkoušejte následující míry:
 
 - Ujistěte se, že typ existuje. Ujistěte se, že jste neúmyslně zakomentováni nebo odstranili zdrojový kód.
 
-- Zkuste typ vyřešit. Typ může být v projektu nebo sestavení, které není odkazováno z projektu, který obsahuje diagram třídy. Chcete-li opravit tuto chybu, přidejte odkaz na projekt nebo sestavení, které obsahuje daný typ. Další informace naleznete v tématu [Správa odkazů v projektu](../managing-references-in-a-project.md).
+- Zkuste typ vyřešit. Typ může být v projektu nebo sestavení, které není odkazováno z projektu, který obsahuje diagram třídy. Chcete-li opravit tuto chybu, přidejte odkaz na projekt nebo sestavení, které obsahuje daný typ. Další informace najdete v tématu [Správa odkazů v projektu](../managing-references-in-a-project.md).
 
-- Zajistěte, aby byl typ ve správném rozsahu, aby ho Návrhář tříd mohl najít. Ujistěte se, že v kódu chybí příkaz `using`, `imports` nebo `#include`. Také se ujistěte, že jste nepřesunuli typ (nebo související typ) mimo obor názvů, ve kterém byl původně umístěn.
+- Zajistěte, aby byl typ ve správném rozsahu, aby ho Návrhář tříd mohl najít. Ujistěte se, že v kódu chybí příkaz `using`, `imports`nebo `#include`. Také se ujistěte, že jste nepřesunuli typ (nebo související typ) mimo obor názvů, ve kterém byl původně umístěn.
 
 ### <a name="troubleshoot-other-error-messages"></a>Řešení potíží s jinými chybovými zprávami
 

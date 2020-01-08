@@ -7,17 +7,17 @@ helpviewer_keywords:
 - editors, text viewing
 - Code Editor, word wrap
 ms.assetid: 442f33ef-9f52-4515-b55f-fb816d664645
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30bfe549100a06df6b9a8163cad1e3d519c3a91b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 36720588f56d7c718078dca96445eb48915a3845
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663111"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75569072"
 ---
 # <a name="how-to-manage-word-wrap-in-the-editor"></a>Postupy: Správa zalamování řádků v editoru
 
@@ -28,11 +28,11 @@ Můžete nastavit a vymazat možnost **zalamování slov** . Pokud je tato možn
 
 ## <a name="to-set-word-wrap-preferences"></a>Nastavení předvoleb zalamování řádků
 
-1. V nabídce **nástroje** vyberte možnost **Možnosti**.
+1. V nabídce **Tools** (Nástroje) vyberte **Options** (Možnosti).
 
 2. Ve složce **textový editor** výběrem možnosti **Obecné** v podsložce **všechny jazyky** nastavte tuto možnost globálně.
 
-     ani
+     – nebo –
 
      V podsložce vyberte **Obecné** možnosti pro jazyk, ve kterém programujete.
 

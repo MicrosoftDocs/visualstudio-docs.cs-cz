@@ -5,20 +5,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - text templates, custom directive processors
 - walkthroughs [text templates], directive processor
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 73473a549c774cd0f4302404e2ca3a450cc2e6d2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8e280f64cc23dc2e949e5aa896a8e20673a3f293
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666985"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596486"
 ---
 # <a name="walkthrough-create-a-custom-directive-processor"></a>Návod: Vytvoření vlastního procesoru direktiv
 
@@ -84,9 +84,9 @@ End Property
 
 2. Přidat odkazy na tato sestavení:
 
-    - **Microsoft. VisualStudio. TextTemplating. \*.0**
+    - **Microsoft.VisualStudio.TextTemplating.\*.0**
 
-    - **Microsoft. VisualStudio. TextTemplating. Interfaces. \*.0**
+    - **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0**
 
 3. Nahraďte kód v **Class1** následujícím kódem. Tento kód definuje třídu CustomDirectiveProcessor, která dědí z třídy <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> a implementuje nezbytné metody.
 
@@ -601,13 +601,13 @@ End Property
 
 4. Pouze pro Visual Basic otevřete nabídku **projekt** a klikněte na příkaz **vlastnosti CustomDP**. Na kartě **aplikace** v **kořenovém oboru názvů**odstraňte výchozí hodnotu `CustomDP`.
 
-5. V nabídce **soubor** klikněte na **Uložit vše**.
+5. Na **souboru** nabídky, klikněte na tlačítko **Uložit vše**.
 
-6. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+6. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
 ### <a name="build-the-project"></a>Sestavení projektu
 
-Sestavte projekt. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+Sestavte projekt. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
 ## <a name="register-the-directive-processor"></a>Zaregistrujte procesor direktiv.
 
@@ -637,9 +637,9 @@ V tomto oddílu přidáte na stejné místo v registru klíč pro vlastní pro
 
 1. Spusťte příkaz `regedit` pomocí nabídky Start nebo příkazového řádku.
 
-2. Přejděte do umístění **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\ \* 0 \ TextTemplating\DirectiveProcessors**a klikněte na uzel.
+2. Přejděte do umístění **HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\\\*0 \ TextTemplating\DirectiveProcessors**a klikněte na uzel.
 
-   V 64 systémech použijte **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio \\ \*.0 \ TextTemplating\DirectiveProcessors**
+   V 64 systémech použijte **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\visualstudio\\\*. 0 \ TextTemplating\DirectiveProcessors**
 
 3. Přidejte nový klíč s názvem CustomDirectiveProcessor.
 
@@ -654,15 +654,15 @@ V tomto oddílu přidáte na stejné místo v registru klíč pro vlastní pro
 
      Klíč registru by měl mít následující hodnoty:
 
-   | Name | Typ | Data |
+   | Name | Type | Datové |
    |-|-|-|
    | (Výchozí) | REG_SZ | (hodnota nenastavena) |
    | Třída | REG_SZ | CustomDP.CustomDirectiveProcessor |
-   | CodeBase | REG_SZ | <strong>\<Path k řešení ></strong> CustomDP\bin\Debug\CustomDP.dll |
+   | CodeBase | REG_SZ | <strong>\<cestu k řešení ></strong> CustomDP\bin\Debug\CustomDP.dll |
 
      Pokud jste sestavení vložili do mezipaměti GAC, měly by tyto hodnoty vypadat takto:
 
-   | Name | Typ | Data |
+   | Name | Type | Datové |
    |-|-|-|
    | (Výchozí) | REG_SZ | (hodnota nenastavena) |
    | Třída | REG_SZ | CustomDP.CustomDirectiveProcessor |
@@ -877,7 +877,7 @@ Po otestování vlastního procesoru direktiv můžete k vygenerovanému textu 
 1. Kód v *TestDP.TT* nahraďte následujícím kódem. Kód HTML je zvýrazněn. Nezapomeňte řetězec `YOUR PATH` nahradit cestou k souboru *DocFile. XML* .
 
     > [!NOTE]
-    > Další značky Open \< # a Close # > oddělují kód příkazu od značek HTML.
+    > Další značky Open \<# a Close # > oddělují kód příkazu od značek HTML.
 
     ```csharp
     <#@ assembly name="System.Xml" #>

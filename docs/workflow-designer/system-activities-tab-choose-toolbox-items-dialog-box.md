@@ -6,21 +6,21 @@ f1_keywords:
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES_COMPONENTS
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES COMPONENTS
 ms.assetid: cef390cd-eeda-42e6-9d2e-18c8325a4f06
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14ca8baa34de7763608641d9269b1721058c5af2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3f1a7030b6c351407814314ccd41e0e2ed6a880e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649863"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593106"
 ---
 # <a name="systemactivities-tab-choose-toolbox-items-dialog-box"></a>Karta System. Activities, dialogové okno zvolit položky sady nástrojů
 
-Tato karta dialogového okna **zvolit položky sady nástrojů** zobrazuje seznam aktivit programovací model Windows Workflow Foundation (WF), šablon a položek, které jsou vám k dispozici. Chcete-li zobrazit tento seznam, vyberte možnost **zvolit položky sady nástrojů** v nabídce **nástroje** nebo kliknutím pravým tlačítkem myši na **panel nástrojů** a výběrem možnosti **zvolit položky** zobrazíte dialogové okno **zvolit položky sady nástrojů** a potom vyberte jeho  **Karta System. Activities** . mimo pole obsahuje seznam aktivity pracovního postupu od sestavení System. Activities, System. ServiceModel. Activities a System. Activities. Core. Presentation. ve výchozím nastavení se ale kontrolují jenom zobrazené aktivity poskytnuté systémem a aktivity přidané prostřednictvím jiných sestavení, která jsou zobrazená v **sadě nástrojů** . Nedávno přidané aktivity jsou automaticky kontrolovány a zobrazeny v sadě **nástrojů** po kliknutí na tlačítko **OK** v dialogovém okně. Tyto položky se také zobrazí v sadě **nástrojů** v rámci nové kategorie, která odpovídá oboru názvů, kde se nachází aktivita/položka/šablona.
+Tato karta dialogového okna **zvolit položky sady nástrojů** zobrazuje seznam aktivit programovací model Windows Workflow Foundation (WF), šablon a položek, které jsou vám k dispozici. Chcete-li zobrazit tento seznam, vyberte možnost **zvolit položky sady nástrojů** v nabídce **nástroje** nebo kliknutím pravým tlačítkem myši na **panel nástrojů** a výběrem možnosti **zvolit položky** zobrazíte dialogové okno **zvolit položky sady nástrojů** a pak vyberte příslušnou kartu **System. Activities** . mimo pole seznam obsahuje aktivity pracovního postupu ze sestavení System. Activities, System. ServiceModel. Activities a System. Activities. Core. Presentation. ve výchozím nastavení se ale kontrolují jenom zobrazené aktivity poskytnuté systémem a aktivity přidané prostřednictvím jiných sestavení, která jsou zobrazená v **sadě nástrojů** . Nedávno přidané aktivity jsou automaticky kontrolovány a zobrazeny v sadě **nástrojů** po kliknutí na tlačítko **OK** v dialogovém okně. Tyto položky se také zobrazí v sadě **nástrojů** v rámci nové kategorie, která odpovídá oboru názvů, kde se nachází aktivita/položka/šablona.
 
 > [!WARNING]
 > Pokud se pokusíte přidat sestavení, které neobsahuje žádné aktivity pracovního postupu, zobrazí se chybové dialogové okno s vysvětlením, že sestavení neobsahuje žádné aktivity.
@@ -29,7 +29,7 @@ Toto dialogové okno je projekt nezávislá, takže se na kartě **System. Activ
 
 Filtrování je provedeno na každé kartě a není možné přidat aktivity pracovního postupu prostřednictvím karty **součásti .NET** . přidejte je prostřednictvím samotné karty **System. Activities** .
 
-Z této karty dialogového okna můžete zrušit kontrolu všech položek, které nechcete zobrazit v sadě **nástrojů** , nebo můžete použít možnost z nabídky **Odstranit** kliknutím pravým tlačítkem myši v **sadě nástrojů** a zrušit odkazování sestavení neodebírat položku z **Sada nástrojů**.
+Z této karty dialogového okna můžete zrušit kontrolu všech položek, které nechcete zobrazit v **sadě nástrojů** , nebo můžete použít možnost z nabídky **Odstranit** kliknutím pravým tlačítkem myši v sadě **nástrojů** a zrušit odkazování sestavení neodstranit položku ze **sady nástrojů**.
 
 Vytvoření instance aktivity přetáhnutím a přetažením v Návrháři přidáte sestavení, které obsahuje položku na seznam odkazovaných sestavení automaticky. Také Pokud aktivita odkazuje na sestavení C, nepřidá C do odkazovaného seznamu sestavení. Sestavení C musí být v globální mezipaměti sestavení (GAC) nebo ve stejném adresáři jako aktivita B. V samostatném případě musí být sestavení v globální mezipaměti sestavení (GAC) nebo cesty testu VS. Jenom potom můžete aktivitu přetáhnout na plochu návrháře pracovního postupu.
 
@@ -43,7 +43,7 @@ Zobrazuje seznam názvů aktivit pracovních postupů aktuálně registrovaných
 Hosting
 Zobrazuje hierarchii oboru názvů .NET, která definuje strukturu aktivity.
 
-Název sestavení \
+Name sestavení\
 Zobrazuje název a verzi sestavení .NET, která obsahuje aktivitu.
 
 Službě

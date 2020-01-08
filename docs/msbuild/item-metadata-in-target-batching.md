@@ -1,5 +1,5 @@
 ---
-title: Metadata položek v dávkování cíle | Dokumentace Microsoftu
+title: Metadata položek v cílové dávce | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - MSBuild, target batching
 - target batching [MSBuild]
 ms.assetid: f3cc4186-6a4c-4161-bbe5-1ec638b4925b
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff9aa4cdc2e3a406b21aeccf5538bcbfdd6b4249
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 013cf211fe9fdfb8fef07c5ac757fa5f4b35a521
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006783"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75577275"
 ---
 # <a name="item-metadata-in-target-batching"></a>Metadata položek v dávkování cíle
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] má schopnost provádět analýzu závislostí na vstupy a výstupy cíle sestavení. Pokud je zjištěno, že vstupy nebo výstupy cíle jsou aktuální, cíl se přeskočí a bude pokračovat sestavení. `Target` použití elementů `Inputs` a `Outputs` atributů zadejte položky, které chcete zkontrolovat během analýzu závislostí.
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] má schopnost provádět analýzu závislostí na vstupech a výstupech cíle sestavení. Je-li zjištěno, že vstupy nebo výstupy cíle jsou aktuální, bude cíl vynechán a sestavení bude pokračovat. prvky `Target` používají atributy `Inputs` a `Outputs` k určení položek, které se mají zkontrolovat během analýzy závislostí.
 
-Pokud cíl obsahuje úlohu, která využívá jako vstupy nebo výstupy, dávková položka `Target` element cíle by měl použití dávkování v jeho `Inputs` nebo `Outputs` atributy se mají povolit [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] přeskočit dávky položek, které jsou již aktuální.
+Pokud cíl obsahuje úkol, který používá dávkové položky jako vstupy nebo výstupy, `Target` element Target by měl používat dávkování ve svých `Inputs` nebo `Outputs` atributů, aby bylo možné [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] přeskočit dávky položek, které jsou již aktuální.
 
-## <a name="batch-targets"></a>Cíle služby batch
-Následující příklad obsahuje seznam položek s názvem `Res` , který je rozdělen do dvou dávek na základě `Culture` metadata položky. Každá z těchto dávky je předán `AL` úkol, který vytvoří výstup sestavení u každé dávky. S použitím dávkování na `Outputs` atribut `Target` elementu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] můžete zjistit, jestli každý jednotlivých dávek aktuální před spuštěním cílové. Bez použití dávkování cíle, obě dávky položek by spustit úlohy pokaždé, když byl cíl spuštěn.
+## <a name="batch-targets"></a>Cíle dávky
+Následující příklad obsahuje seznam položek s názvem `Res`, který je rozdělen na dvě dávky založené na metadatech `Culture` položky. Každá z těchto dávek je předána do úlohy `AL`, která vytvoří výstupní sestavení pro každou dávku. Pomocí dávkového zpracování u atributu `Outputs` elementu `Target` lze [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] určit, zda je každá z jednotlivých dávek v aktuálním stavu před spuštěním cíle. Bez použití cílového dávkování by úloha při každém spuštění cíle spouštěla obě dávky položek.
 
 ```xml
 <Project
@@ -66,7 +66,7 @@ Následující příklad obsahuje seznam položek s názvem `Res` , který je ro
 ```
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Přírůstkové sestavování](../msbuild/how-to-build-incrementally.md)
+- [Postupy: přírůstkové sestavení](../msbuild/how-to-build-incrementally.md)
 - [Dávkování](../msbuild/msbuild-batching.md)
 - [Target – element (MSBuild)](../msbuild/target-element-msbuild.md)
 - [Metadata položek v dávkování úloh](../msbuild/item-metadata-in-task-batching.md)

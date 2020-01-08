@@ -2,24 +2,24 @@
 title: Začínáme s jazyky specifickými pro doménu
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c86383ddc833a6b76affa451f21180ed4941ad14
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 226111f7bd2c064fa2aec3cbd4f94a0adeb0e5b8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985055"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596564"
 ---
 # <a name="get-started-with-domain-specific-languages"></a>Začínáme s jazyky specifickými pro doménu
 
 Toto téma vysvětluje základní pojmy při definování a používání jazyka DSL (Domain Specific Language) vytvořeného pomocí sady Modeling SDK pro Visual Studio.
 
 > [!NOTE]
-> Sada text Template Transform SDK a sada Visual Studio Modeling SDK jsou nainstalovány automaticky při instalaci specifických funkcí sady Visual Studio. Další podrobnosti najdete v [tomto blogovém příspěvku](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/).
+> Sada text Template Transform SDK a sada Visual Studio Modeling SDK jsou nainstalovány automaticky při instalaci specifických funkcí sady Visual Studio. Další podrobnosti najdete v tématu [tento příspěvek na blogu](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/).
 
 Pokud s DSL začínáte, doporučujeme vám pracovat přes **testovací prostředí nástrojů DSL**, které najdete na tomto webu: [vizualizace a sada SDK pro modelování](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
 
@@ -39,7 +39,7 @@ Zbytek tohoto přehledu je návod, který zavádí základní operace vytvářen
 
 ## <a name="prerequisites"></a>Požadavky
 
-K definování DSL musíte mít nainstalované následující součásti:
+Pokud chcete definovat DSL, musíte mít nainstalovaný následující komponenty:
 
 | | |
 |-|-|
@@ -119,7 +119,7 @@ Všimněte si následujících aspektů nového řešení:
 
 3. V experimentální instanci aplikace Visual Studio otevřete soubor modelu s názvem **test** z **Průzkumník řešení**.
 
-     \- nebo-
+     \- nebo –
 
      Klikněte pravým tlačítkem na projekt ladění, přejděte na **Přidat**a pak klikněte na **položka**. V dialogovém okně **Přidat položku** vyberte typ souboru vaší DSL.
 
@@ -147,7 +147,7 @@ Definice DSL může určovat způsob, jakým se model zobrazuje v diagramu. Mů�
 
 Model můžete zobrazit jako strom v zobrazení **Průzkumníka** při úpravách modelu. Při přidávání tvarů do diagramu se prvky modelu zobrazí také v Průzkumníkovi. Průzkumník lze použít i v případě, že není k dispozici žádný diagram.
 
-Pokud Průzkumník nevidíte v instanci ladění aplikace Visual Studio, v nabídce **zobrazení** přejděte na položku **ostatní okna**a potom klikněte na příkaz *\<Your Language >* **Explorer**.
+Pokud nevidíte Průzkumníka v instanci ladění aplikace Visual Studio, v nabídce **zobrazení** přejděte na položku **ostatní okna**a potom klikněte na příkaz *\<jazyka >* **Explorer**.
 
 ### <a name="the-api-of-your-dsl"></a>Rozhraní API vaší DSL
 
@@ -171,7 +171,7 @@ Při změně souboru modelu se zobrazí odpovídající změny v generovaných s
 
 3. Klikněte na možnost **transformovat všechny šablony** na panelu nástrojů **Průzkumník řešení**.
 
-     \- nebo-
+     \- nebo –
 
      Klikněte pravým tlačítkem na šablony, které chcete znovu vygenerovat, a pak klikněte na **Spustit vlastní nástroj**.
 
@@ -209,7 +209,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
     2. Otevřete okno Vlastnosti a umístěte ho, aby se zobrazily současně Průzkumník DSL a vlastnosti.
 
-    3. V Průzkumníku DSL rozbalte **Editor**, **karty nástrojů**, *\<your DSL >* a pak **nástroje**.
+    3. V Průzkumníku DSL rozbalte **Editor**, **karty nástrojů**, *\<> DSL*a pak **nástroje**.
 
     4. Klikněte na **ExampleElement**. Toto je položka sady nástrojů, která se používá k vytvoření prvků.
 
@@ -333,7 +333,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
     1. V **Průzkumníku DSL**rozbalte **Editor** a pak vyberte **karty nástrojů**.
 
-    2. Pravým tlačítkem myši klikněte na *\<your DSL >* a pak klikněte na **Přidat nový nástroj element**.
+    2. Klikněte pravým tlačítkem na *\<> DSL* a pak klikněte na **Přidat nový nástroj element**.
 
     3. Nastavte vlastnost **název** nového nástroje a vlastnost **Class** nastavte na město.
 
@@ -341,7 +341,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
 7. Vytvořte nástroj konektoru pro vytvoření propojení mezi městy a lidmi.
 
-    1. Klikněte pravým tlačítkem na *\<your DSL >* a pak klikněte na **Přidat nový nástroj konektoru**.
+    1. Klikněte pravým tlačítkem na *\<> DSL* a pak klikněte na **Přidat nový nástroj konektoru**.
 
     2. Nastavte vlastnost název nového nástroje.
 

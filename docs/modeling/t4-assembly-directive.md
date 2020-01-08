@@ -2,17 +2,17 @@
 title: T4 – direktiva Assembly
 ms.date: 11/04/2016
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f605748d4bda13567713b646f0232d684ec46fe1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8d441d74d1ddea5a7b5dd063d302ec93e75fc1c9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748191"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591889"
 ---
 # <a name="t4-assembly-directive"></a>T4 – direktiva Assembly
 
@@ -36,7 +36,7 @@ V textové šabloně návrhu sady Visual Studio načte direktiva `assembly` sest
 
 - Absolutní cesta k sestavení
 
-  Můžete použít syntaxi `$(variableName)` pro odkazování na proměnné sady Visual Studio, jako je například `$(SolutionDir)` a `%VariableName%` pro odkazování na proměnné prostředí. Příklad:
+  Můžete použít syntaxi `$(variableName)` pro odkazování na proměnné sady Visual Studio, jako je například `$(SolutionDir)`a `%VariableName%` pro odkazování na proměnné prostředí. Příklad:
 
 ```
 <#@ assembly name="$(SolutionDir)\MyProject\bin\Debug\SomeLibrary.Dll" #>

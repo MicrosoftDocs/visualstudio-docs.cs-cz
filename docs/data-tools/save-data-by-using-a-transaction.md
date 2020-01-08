@@ -11,17 +11,17 @@ helpviewer_keywords:
 - transactions, saving data
 - data [Visual Studio], saving
 ms.assetid: 8b835e8f-34a3-413d-9bb5-ebaeb87f1198
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: cfb03944743609d20d14f6104e5fadd529a5cfa6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: beadb43d7eed78f04fc60ce1307045e9badac205
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641314"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586273"
 ---
 # <a name="how-to-save-data-by-using-a-transaction"></a>Postupy: ukládání dat pomocí transakce
 

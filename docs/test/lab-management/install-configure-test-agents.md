@@ -4,17 +4,17 @@ ms.date: 04/17/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - configure test agents, test lab
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: edb10246437bff9bef0a6f76ffde95bc12855944
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 27f030fb73629172e0b5a2d5d4cb27cf186bb69f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653082"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594263"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>Instalace testovacích agentů a kontrolerů testů
 
@@ -26,10 +26,10 @@ Můžete také zvážit, jestli je vhodnější místo správy testovacího pros
 
 V následující tabulce jsou uvedeny požadavky na systém pro instalaci testovacího agenta nebo kontroleru testů pro Visual Studio:
 
-| Položkami | Požadavky |
+| Položka | Požadavky |
 | ---- | ------------ |
-| **Agenta** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard a Datacenter<br />Windows Server 2012 R2 |
-| **Kontrolér** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard a Datacenter<br />Windows Server 2012 R2 |
+| **Agent** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard a Datacenter<br />Windows Server 2012 R2 |
+| **Kontrolér** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard a Datacenter<br />Windows Server 2012 R2 |
 | **.NET Framework** | .NET Framework 4.5 |
 
 ## <a name="install-the-test-controller-and-test-agents"></a>Instalace testovacího kontroléru a testovacích agentů
@@ -44,7 +44,7 @@ Tyto instalační programy jsou k dispozici jako soubory ISO pro jednoduchou ins
 
 Můžete kombinovat různé verze serveru TFS, Microsoft Test Manager, testovací kontrolér a testovacího agenta, a to v závislosti na následující tabulce:
 
-| TFS | Microsoft Test Manager s centrem testovacího prostředí | Kontrolér | Agenta |
+| TFS | Microsoft Test Manager s centrem testovacího prostředí | Správce | Agent |
 | --- | -------------------------------------- | ---------- | ----- |
 | 2017: Upgradujte z 2015 nebo nové instalace | 2017 | 2017 | 2017 |
 | 2017: Upgradujte z 2015 nebo nové instalace | 2017 | 2013 aktualizace 5 | 2013 aktualizace 5 |

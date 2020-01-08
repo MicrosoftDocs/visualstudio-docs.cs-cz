@@ -11,23 +11,23 @@ helpviewer_keywords:
 - WPF Designer, data binding
 - data binding, WPF
 ms.assetid: 56a1fbff-c7e8-4187-a1c1-ffd17024bc1b
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a2a2179a759bc11a9466361d3c8cc2df45c12f20
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a14209d895b461c64b30d0f1690b68484f09d970
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648597"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586754"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>Vytváření vyhledávacích tabulek v aplikacích WPF
 
 *Vyhledávací tabulka* termínů (někdy označované jako *vyhledávací vazba*) popisuje ovládací prvek, který zobrazuje informace z jedné tabulky dat na základě hodnoty pole cizího klíče v jiné tabulce. Vyhledávací tabulku lze vytvořit přetažením hlavního uzlu nadřazené tabulky nebo objektu v okně **zdroje dat** do ovládacího prvku, který je již svázán se sloupcem nebo vlastností v související podřízené tabulce.
 
-Předpokládejme například tabulku `Orders` v prodejní databázi. Každý záznam v `Orders` tabulce obsahuje `CustomerID`, které označují zákazníka, který objednávku zadal. @No__t_0 je cizí klíč, který odkazuje na záznam zákazníka v tabulce `Customers`. Když zobrazíte seznam objednávek z `Orders` tabulky, možná budete chtít místo `CustomerID` zobrazit skutečný název zákazníka. Vzhledem k tomu, že se název zákazníka nachází v tabulce `Customers`, je nutné vytvořit vyhledávací tabulku pro zobrazení názvu zákazníka. Vyhledávací tabulka používá hodnotu `CustomerID` v záznamu `Orders` k navigaci mezi relacemi a vrácení názvu zákazníka.
+Předpokládejme například tabulku `Orders` v prodejní databázi. Každý záznam v `Orders` tabulce obsahuje `CustomerID`, které označují zákazníka, který objednávku zadal. `CustomerID` je cizí klíč, který odkazuje na záznam zákazníka v tabulce `Customers`. Když zobrazíte seznam objednávek z `Orders` tabulky, možná budete chtít místo `CustomerID`zobrazit skutečný název zákazníka. Vzhledem k tomu, že se název zákazníka nachází v tabulce `Customers`, je nutné vytvořit vyhledávací tabulku pro zobrazení názvu zákazníka. Vyhledávací tabulka používá hodnotu `CustomerID` v záznamu `Orders` k navigaci mezi relacemi a vrácení názvu zákazníka.
 
 ## <a name="to-create-a-lookup-table"></a>Vytvoření vyhledávací tabulky
 
@@ -75,7 +75,7 @@ Předpokládejme například tabulku `Orders` v prodejní databázi. Každý z�
 
 8. Přetáhněte podřízený uzel z okna **zdroje dat** do kontejneru v Návrháři WPF. (V předchozím příkladu je podřízený uzel uzlem **objednávky** .)
 
-     Visual Studio generuje XAML, které vytvoří nové ovládací prvky vázané na data pro každou položku, kterou přetáhnete. XAML také přidá novou <xref:System.Windows.Data.CollectionViewSource> pro podřízenou tabulku nebo objekt do prostředků cíle přetažení. U některých zdrojů dat Visual Studio také generuje kód pro načtení dat do tabulky nebo objektu. Další informace najdete v tématu [vázání ovládacích prvků WPF na data v aplikaci Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).
+     Visual Studio generuje XAML, které vytvoří nové ovládací prvky vázané na data pro každou položku, kterou přetáhnete. XAML také přidá novou <xref:System.Windows.Data.CollectionViewSource> pro podřízenou tabulku nebo objekt do prostředků cíle přetažení. U některých zdrojů dat Visual Studio také generuje kód pro načtení dat do tabulky nebo objektu. Další informace najdete v tématu [ovládací prvky WPF vytvoření vazby k datům v sadě Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).
 
 9. Přetáhněte nadřazený uzel z okna **zdroje dat** do ovládacího prvku pro vyhledávání vazeb, který jste vytvořili dříve. (V předchozím příkladu je nadřazený uzel uzel **Customers (zákazníci** )).
 

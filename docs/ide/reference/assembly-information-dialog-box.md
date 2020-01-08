@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - Assembly Information dialog box
 ms.assetid: 8f1f6449-e03d-4a5b-9076-d3b1f84ada48
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 88d86c077cf129632c78d6266e7c8146325b78fb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ae70a2bf989b73dedc5becaac6f4b49bd0108730
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651910"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595784"
 ---
 # <a name="assembly-information-dialog-box"></a>dialogové okno Informace o sestavení
 
@@ -27,39 +27,39 @@ Chcete-li získat přístup k tomuto dialogovému oknu, vyberte uzel projektu v 
 
 ## <a name="uielement-list"></a>UIElement – seznam
 
-@No__t_1 **názvu**
+\ **názvu**
 Určuje název manifestu sestavení. Odpovídá <xref:System.Reflection.AssemblyTitleAttribute>.
 
-**Popis** \
+**Popis**\
 Určuje volitelný popis manifestu sestavení. Odpovídá <xref:System.Reflection.AssemblyDescriptionAttribute>.
 
-@No__t_1 **společnosti**
+\ **společnosti**
 Určuje název společnosti pro manifest sestavení. Odpovídá <xref:System.Reflection.AssemblyCompanyAttribute>.
 
-V registru můžete nastavit nebo změnit výchozí hodnotu pro společnost. Vyhledejte hodnotu **RegisteredOrganization** pod **Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion** nebo **Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** klíč v závislosti na vaší verzi systému Windows.
+V registru můžete nastavit nebo změnit výchozí hodnotu pro společnost. V závislosti na vaší verzi Windows vyhledejte hodnotu **RegisteredOrganization** v části **počítač \ HKEY_LOCAL_MACHINE \Software\wow6432node\microsoft\windows NT\CurrentVersion** nebo **počítač \ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion** Key.
 
-@No__t_1 **produktu**
+\ **produktu**
 Určuje název produktu pro manifest sestavení. Odpovídá <xref:System.Reflection.AssemblyProductAttribute>.
 
-@No__t_1 **copyrightu**
+\ **copyrightu**
 Určuje oznámení o autorských právech pro manifest sestavení. Odpovídá <xref:System.Reflection.AssemblyCopyrightAttribute>.
 
-@No__t_1 **ochranné známky**
+\ **ochranné známky**
 Určuje ochrannou známku pro manifest sestavení. Odpovídá <xref:System.Reflection.AssemblyTrademarkAttribute>.
 
-@No__t_1 **verze sestavení**
+\ **verze sestavení**
 Určuje verzi sestavení. Odpovídá <xref:System.Reflection.AssemblyVersionAttribute>.
 
-**Verze souboru** \
+**Verze souboru**\
 Určuje číslo verze, které instruuje kompilátor, aby používal specifickou verzi pro prostředek verze souboru Win32. Odpovídá <xref:System.Reflection.AssemblyFileVersionAttribute>.
 
-@No__t_1 **GUID**
+\ **GUID**
 Jedinečný identifikátor GUID, který identifikuje sestavení. Při vytváření projektu aplikace Visual Studio generuje identifikátor GUID pro sestavení. Odpovídá <xref:System.Guid>.
 
-**Neutrální \ jazyka**
-Určuje jazykovou verzi, kterou sestavení podporuje. Odpovídá <xref:System.Resources.NeutralResourcesLanguageAttribute>. Výchozí hodnota je **(žádné)** .
+**Neutrální\ jazyka**
+Určuje jazykovou verzi, kterou sestavení podporuje. Odpovídá <xref:System.Resources.NeutralResourcesLanguageAttribute>. Výchozí hodnota je **(žádné)**.
 
-**Nastavit \ viditelné pro sestavení modelu COM**
+**Nastavit\ viditelné pro sestavení modelu COM**
 Určuje, zda typy v sestavení budou k dispozici pro model COM. Odpovídá <xref:System.Runtime.InteropServices.ComVisibleAttribute>.
 
 > [!NOTE]

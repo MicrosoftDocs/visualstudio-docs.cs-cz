@@ -2,17 +2,17 @@
 title: Zajistěte, aby zakódované testy uživatelského rozhraní čekaly na konkrétní události
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: df1e664b8574b5c362b57733dba63f45cc04cd1d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6e594a6aec3f9e3a9664c5eac829b27f96f12ea0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652956"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75584449"
 ---
 # <a name="make-coded-ui-tests-wait-for-specific-events-during-playback"></a>Zajistěte, aby kódované testy uživatelského rozhraní čekaly na konkrétní události během přehrávání.
 
@@ -27,7 +27,7 @@ Visual Studio Enterprise
 > [!TIP]
 > Můžete také přidat prodlevy před akcemi pomocí editoru programového testu UI. Další informace naleznete v tématu [How to: vložení zpoždění před akcí uživatelského rozhraní pomocí editoru programového testu UI](editing-coded-ui-tests-using-the-coded-ui-test-editor.md#insert-a-delay-before-a-ui-action).
 
-**Metody UITestControl. WaitForControlXXX ()**
+**UITestControl.WaitForControlXXX() Methods**
 
 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlReady%2A>
 
@@ -96,9 +96,9 @@ Implicitní časový limit pro operaci čekání je určen vlastností <xref:Mic
 
 Metody mají přetížení, aby v milisekundách pomohlo explicitní časový limit. Nicméně když operace čekání navede implicitní hledání ovládacího prvku nebo, pokud je aplikace zaneprázdněná, může být skutečná čekací doba delší, než je zadaný časový limit.
 
-Předchozí funkce jsou výkonné a flexibilní a měly by vyhovovat téměř všem podmínkám. Nicméně v případě, že tyto metody nevyhovuje vašim potřebám a potřebujete kód <xref:Microsoft.VisualStudio.TestTools.UITesting.Playback.Wait%2A> nebo <xref:System.Threading.Thread.Sleep%2A> v kódu, doporučuje se použít přehrávání. Wait () místo rozhraní API Thread. Sleep (). Důvody pro tyto účely:
+Předchozí funkce jsou výkonné a flexibilní a měly by vyhovovat téměř všem podmínkám. Nicméně v případě, že tyto metody nevyhovuje vašim potřebám a potřebujete kód <xref:Microsoft.VisualStudio.TestTools.UITesting.Playback.Wait%2A>nebo <xref:System.Threading.Thread.Sleep%2A> v kódu, doporučuje se použít přehrávání. Wait () místo rozhraní API Thread. Sleep (). Důvody pro tyto účely:
 
-Pomocí <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.ThinkTimeMultiplier%2A>property můžete upravit dobu trvání režimu spánku. Ve výchozím nastavení je tato proměnná 1, ale můžete ji zvětšit nebo zmenšit a změnit tak dobu čekání v kódu. Pokud například provádíte testování přes pomalou síť nebo nějaký jiný pomalý případ, můžete tuto proměnnou změnit na jednom místě (nebo dokonce i v konfiguračním souboru) na 1,5, abyste přidali 50% extra Wait na všech místech.
+Vlastnost <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.ThinkTimeMultiplier%2A>lze použít k úpravě doby trvání režimu spánku. Ve výchozím nastavení je tato proměnná 1, ale můžete ji zvětšit nebo zmenšit a změnit tak dobu čekání v kódu. Pokud například provádíte testování přes pomalou síť nebo nějaký jiný pomalý případ, můžete tuto proměnnou změnit na jednom místě (nebo dokonce i v konfiguračním souboru) na 1,5, abyste přidali 50% extra Wait na všech místech.
 
 Přehrávání. Wait () interně volá Thread. Sleep () (po výše uvedeném výpočtu) v menších blocích ve smyčce for-Loop při kontrole operace cancel\break uživatele. Jinými slovy, přehrávání. Wait () umožňuje zrušit přehrávání před koncem čekání, zatímco spánek nemusí nebo vyvolat výjimku.
 
@@ -108,8 +108,8 @@ Přehrávání. Wait () interně volá Thread. Sleep () (po výše uvedeném vý
 ## <a name="see-also"></a>Viz také:
 
 - [Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)
-- [Vytvořit kódované testy uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)
+- [Vytvoření programové testy uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)
 - [Návod: vytváření, upravování a údržba programového testu uživatelského rozhraní](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
 - [Anatomie kódovaného testu uživatelského rozhraní](../test/anatomy-of-a-coded-ui-test.md)
-- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a záznamy akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a zaznamenávání akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
 - [Postupy: vložení zpoždění před akcí uživatelského rozhraní pomocí editoru programových testů UI](editing-coded-ui-tests-using-the-coded-ui-test-editor.md#insert-a-delay-before-a-ui-action)

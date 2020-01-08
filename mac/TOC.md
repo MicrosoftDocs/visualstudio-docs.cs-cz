@@ -25,6 +25,7 @@
 ## [Vytváření nových projektů](create-new-projects.md)
 ## [Přidávání a odebírání projektových položek](add-and-remove-project-items.md)
 ## [Správa vlastností řešení a projektu](managing-solutions-and-project-properties.md)
+## [Cílení na více verzí](project-multitargeting.md)
 ## Správa odkazů v projektu
 ### [Přehled](managing-references-in-a-project.md)
 ### [Návod: Zahrnutí balíčku NuGet do projektu](nuget-walkthrough.md)
@@ -35,6 +36,8 @@
 ## [Funkce editoru](source-editor.md)
 ## [Refactoring](refactoring.md)
 ## [IntelliSense](intellisense.md)
+## [Zobrazení importovaných položek](show-imports.md)
+## [Úpravy s více kurzory](multi-caret-editing.md)
 ## [Komentáře](comments.md)
 ## [Chování editoru](editor-behavior.md)
 ## [Komentáře k úlohám](task-comments.md)
@@ -47,6 +50,7 @@
 # Ladění
 ## [Přehled](debugging.md)
 ## [Vizualizace dat](data-visualizations.md)
+## [Ladění balíčků NuGet pomocí odkazu na zdroj](source-link.md)
 
 # Kompilace a sestavení
 ## [Přehled](compiling-and-building.md)

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - log Command window output command
 - View.LogCommandWindowOutput command
 ms.assetid: d4ecec35-5af4-4954-8d60-2cd24583fbb4
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2056cf335f2cf6024e6ebb4b5daff72e54dd9d50
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b6ba8fb419726018bd089e217386ab5dbd6a9c33
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72610434"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568656"
 ---
 # <a name="log-command-window-output-command"></a>Okno výstupu příkazů protokolu – příkaz
 
@@ -40,13 +40,13 @@ Volitelné. Název souboru protokolu. Ve výchozím nastavení se soubor vytvoř
 
 ## <a name="switches"></a>Přepínače
 
-parametry/on
+/on\
 Volitelné. Spustí protokol pro **příkazové** okno v zadaném souboru a připojí soubor s novými informacemi.
 
-/off.
+/off\
 Volitelné. Zastaví protokol okna **příkazového** řádku.
 
-/overwrite
+/overwrite\
 Volitelné. Pokud soubor zadaný v argumentu `filename` odpovídá existujícímu souboru, je soubor přepsán.
 
 ## <a name="remarks"></a>Poznámky

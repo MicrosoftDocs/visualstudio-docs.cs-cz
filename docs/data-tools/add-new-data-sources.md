@@ -8,17 +8,17 @@ helpviewer_keywords:
 - data [Visual Studio], data sources
 - data sources
 ms.assetid: ed28c625-bb89-4037-bfde-cfa435d182a2
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 99e9d9d466ae32d86b64b17738c96c245bda8f96
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 555d32eb295e944060d2efe0b843e9d157b7c675
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648890"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587053"
 ---
 # <a name="add-new-data-sources"></a>Přidání nových zdrojů dat
 
@@ -37,7 +37,7 @@ V kontextu nástrojů .NET Data Tools v sadě Visual Studio pojem *zdroj dat* od
 > [!NOTE]
 > Pokud nepoužíváte funkce datových vazeb, datové sady, Entity Framework, LINQ to SQL, WCF nebo SharePoint, koncept zdroje dat se nevztahuje. Stačí se připojit přímo k databázi pomocí objektů SQLCommand a přímo komunikovat s databází.
 
-Zdroje dat můžete vytvářet a upravovat pomocí **Průvodce konfigurací zdroje dat** v aplikaci model Windows Forms nebo Windows Presentation Foundation. Pro Entity Framework nejprve vytvořte třídy entit a potom spusťte Průvodce výběrem možnosti **projekt**  > **Přidat nový zdroj dat** (podrobněji popsaný dále v tomto článku).
+Zdroje dat můžete vytvářet a upravovat pomocí **Průvodce konfigurací zdroje dat** v aplikaci model Windows Forms nebo Windows Presentation Foundation. Pro Entity Framework nejprve vytvořte třídy entit a potom spusťte Průvodce výběrem možnosti **projekt** > **Přidat nový zdroj dat** (podrobněji popsaný dále v tomto článku).
 
 ![Průvodce konfigurací zdroje dat](../data-tools/media/data-source-configuration-wizard.png)
 
@@ -46,7 +46,7 @@ Zdroje dat můžete vytvářet a upravovat pomocí **Průvodce konfigurací zdro
 Po vytvoření zdroje dat se zobrazí v okně nástroje **zdroje dat** .
 
 > [!TIP]
-> Chcete-li otevřít okno **zdroje dat** , ujistěte se, že je projekt otevřen, a poté stiskněte klávesu **Shift** +**ALT** +**D** nebo zvolte možnost **Zobrazit**  >  jiné**zdroje dat** > **Windows** .
+> Chcete-li otevřít okno **zdroje dat** , ujistěte se, že je projekt otevřen, a poté stiskněte klávesu **Shift**+**ALT**+**D** nebo zvolte možnost **Zobrazit** > jiné **zdroje dat** > **Windows** .
 
 Zdroj dat můžete přetáhnout z okna **zdroje dat** na návrhovou plochu formuláře nebo ovládací prvek. To způsobí vygenerování často používaného kódu, který zobrazí data z úložiště dat.
 
@@ -60,13 +60,13 @@ Můžete vytvořit datovou sadu nebo model Entity Framework, který se použije 
 
 ### <a name="dataset"></a>Datová sada
 
-Chcete-li vytvořit datovou sadu jako zdroj dat, spusťte **Průvodce konfigurací zdroje dat** tak, že vyberete **projekt**  > **Přidat nový zdroj dat**. Zvolte typ zdroje dat **databáze** a podle zobrazených výzev zadejte nové nebo existující připojení k databázi nebo databázový soubor.
+Chcete-li vytvořit datovou sadu jako zdroj dat, spusťte **Průvodce konfigurací zdroje dat** tak, že vyberete **projekt** > **Přidat nový zdroj dat**. Zvolte typ zdroje dat **databáze** a podle zobrazených výzev zadejte nové nebo existující připojení k databázi nebo databázový soubor.
 
 ### <a name="entity-classes"></a>Třídy entit
 
 Vytvoření modelu Entity Framework jako zdroje dat:
 
-1. Spusťte **průvodce model EDM (Entity Data Model)** a vytvořte třídy entit. Vyberte **projekt**  > **přidat novou položku**  > **ADO.NET model EDM (Entity Data Model)** .
+1. Spusťte **průvodce model EDM (Entity Data Model)** a vytvořte třídy entit. Vyberte **projekt** > **přidat novou položku** > **ADO.NET model EDM (Entity Data Model)** .
 
    ![Nová položka projektu Entity Framework modelu](../data-tools/media/raddata-new-entity-framework-model-project-item.png)
 

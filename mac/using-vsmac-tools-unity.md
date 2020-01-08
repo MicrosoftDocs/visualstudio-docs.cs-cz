@@ -3,14 +3,14 @@ title: Pomocí sady Visual Studio for Mac Tools for Unity
 description: Tato příručka popisuje, jak pomocí sady Visual Studio for Mac Tools pro Unity rozšíření
 author: therealjohn
 ms.author: johmil
-ms.date: 06/18/2019
+ms.date: 12/13/2019
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: daffb7721164ae49888a894bec7cad3ac74801a4
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 4247e5cfb936d79c2b2bea5ac68a16164f0c0ef0
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67692209"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75406670"
 ---
 # <a name="using-visual-studio-for-mac-tools-for-unity"></a>Pomocí sady Visual Studio for Mac Tools for Unity
 
@@ -29,7 +29,7 @@ Alternativně můžete otevřít Visual Studio for Mac bez skriptů, které jsou
 Visual Studio for Mac Tools for Unity obsahuje zástupce pro přístup k dokumentaci k rozhraní Unity API. Chcete-li získat přístup k dokumentaci k rozhraní API Unity v sadě Visual Studio pro Mac, umístěte kurzor přes rozhraní API Unity chcete další informace o a stiskněte klávesu **⌘ příkaz + "** .
 
 ## <a name="intellisense-for-unity-messages"></a>Technologie IntelliSense pro zprávy Unity
-Herní engine Unity vysílá zprávy do třídy MonoBehaviour. skripty, což vývojářům umožňuje psát kód, který reaguje na zprávy, jako je například StisknutiMysi, OnTriggerEnter atd. Protože se nejedná virtuální metody v základní třídě třída MonoBehaviour, chybí některé Integrovaná vývojová prostředí, jako je například MonoDevelop funkce doplňování kódu pro zprávy Unity.
+Modul Unity vysílá zprávy do skriptů MonoBehaviour a umožňuje vývojářům psát kód, který reaguje na zprávy, jako je například. MouseDown, OnTriggerEnter atd. Vzhledem k tomu, že se nejedná o virtuální metody v základní třídě MonoBehaviour, některé z nich, jako je MonoDevelop, pro zprávy Unity chybí funkce pro dokončování kódu.
 
 Visual Studio for Mac Tools for Unity však rozšiřuje funkčnost technologie IntelliSense pro zprávy Unity. To umožňuje snadno implementovat zprávy Unity skripty třídy MonoBehaviour a pomáhá při učení Unity API. Použití technologie IntelliSense pro zprávy Unity:
 
@@ -61,7 +61,7 @@ Visual Studio for Mac Tools for Unity však rozšiřuje funkčnost technologie I
 
 ## <a name="adding-new-unity-files-and-folders"></a>Přidání nové Unity soubory a složky
 
-Zatímco vždy můžete přidat nové soubory do projektu Unity v Unity editoru, Visual Studio for Mac umožňuje snadno vytvářet nové Unity skripty, shadery, struktury, výčty a složky z Visual Studia.
+I když můžete vždy přidat nové soubory do projektu Unity v editoru Unity, Visual Studio pro Mac umožňuje snadno vytvářet nové skripty Unity, shadery, struktury, výčty a složky z aplikace Visual Studio.
 
 ### <a name="add-a-new-c-monobehaviour-script"></a>Přidat nový skript jazyka C# třídy MonoBehaviour.
 
@@ -103,11 +103,11 @@ Spuštění ladění:
 
 3. Neopravňují hry v Unity editoru připojeny k sadě Visual Studio budou všechny zarážky, došlo k pozastavení provádění hry a otevřete řádek kódu, kde hru zarážce v sadě Visual Studio pro Mac.
 
-### <a name="start-debugging-in-a-single-step"></a>Spuštění ladění jedním krokem.
+### <a name="start-debugging-in-a-single-step"></a>Spustit ladění v jednom kroku
 
-Počáteční ladění a přehrávání Unity editoru lze dokončit v jediném kroku přímo ze sady Visual Studio pro Mac výběrem **připojit k Unity a hrát** konfigurace.
+Spuštění ladění a přehrání editoru Unity můžete provést v jednom kroku přímo z Visual Studio pro Mac výběrem možnosti **připojit k Unity a přehrání** .
 
-![Vyberte připojit k Unity a hrát](media/using-vsmac-tools-unity-image8.png)
+![Vybrat připojit k Unity a hrát](media/using-vsmac-tools-unity-image8.png)
 
 ### <a name="stop-debugging"></a>Zastavit ladění
 
@@ -118,6 +118,6 @@ Chcete zastavit ladění:
    ![Klikněte na tlačítko Zastavit ve Visual Studiu](media/using-vsmac-tools-unity-image7.png)
 
 > [!NOTE]
-> Pokud jste začali ladění pomocí **připojit k Unity a hrát** konfigurace, **Zastavit** tlačítka se zastaví také v Unity.
+> Pokud jste zahájili ladění pomocí konfigurace **připojit k Unity a Play** , tlačítko **zastavit** také zastaví Unity.
 
 Další informace o ladění v sadě Visual Studio for Mac najdete v tématu [pomocí ladicího programu](debugging.md).

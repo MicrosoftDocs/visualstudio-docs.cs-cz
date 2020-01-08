@@ -2,33 +2,33 @@
 title: Náhled změn kódu
 ms.date: 12/16/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 f1_keywords:
 - vs.codefix.previewchanges
 ms.workload:
 - multiple
-ms.openlocfilehash: 485a127faa8228ce5ef17a6208e9cc4e7e50e1b9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f45b186153b4cc046d35fd941f6a80e108476fc0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666800"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585766"
 ---
-# <a name="preview-changes-window"></a>Okno Náhled změn
+# <a name="preview-changes-window"></a>Okno předchozích změn
 
-Při použití různých *rychlých akcí* nebo nástrojů *refaktoringu* v aplikaci Visual Studio je často možné zobrazit náhled změn, které budou provedeny v projektu, a teprve potom je přijmout. V okně **Náhled změn** je tam, kde je to hotové.  Zde je například okno **Náhled změn** , které ukazuje, co se změní během refaktoru přejmenování v C# projektu:
+Při použití různých *rychlé akce* nebo *refaktoringu* nástroje v sadě Visual Studio, často je možné zobrazit náhled změn, které se chystáte provést do svého projektu před jejich přijetí. **Náhled změn** je okno, kde se to.  Tady je příklad, **náhled změn** okno co se změní při přejmenování Refaktorujte v C# projektu:
 
 ![Náhled změn](media/previewchanges.png)
 
-Horní polovina okna zobrazuje konkrétní řádky, které budou změněny, přičemž každý má zaškrtávací políčko. Zaškrtnutím nebo zrušením zaškrtnutí jednotlivých políček můžete v případě, že chcete selektivně použít refaktoring pouze na určité řádky.
+V horní polovině v okně zobrazí konkrétní řádky, které se změní, každý s zaškrtávací políčko. Dokáže kontrolovat nebo zrušte zaškrtnutí každé zaškrtávací políčko, pokud chcete selektivně používají refaktoring na pouze konkrétní řádky.
 
-V dolní polovině okna se zobrazuje formátovaný kód z projektu, který bude změněn, přičemž byly zvýrazněny ovlivněné oblasti. Výběrem konkrétního řádku v horní polovině okna se zvýrazní odpovídající řádek v dolní polovině. To vám umožní rychle přeskočit na příslušný řádek a zobrazit okolní kód.
+Dolní části okna zobrazuje formátovaný kód z projektu, který bude možné měnit pomocí ovlivněné oblasti zvýrazněný. Výběr konkrétního řádku v horní části okna se zvýraznit odpovídající řádek v dolní části pouze částečně. To umožňuje rychle přeskočit na příslušný řádek a zobrazit okolním kódem.
 
-Po zkontrolování změn klikněte na tlačítko **použít** a potvrďte tyto změny, nebo klikněte na tlačítko **Storno** , aby bylo možné některé z nich nechat.
+Prohlédněte si změny, klikněte na tlačítko **použít** tlačítka tyto změny potvrdit, nebo klikněte na tlačítko **zrušit** tlačítka opustíte věci, jako kdyby byly.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Refaktoring v aplikaci Visual Studio](../ide/refactoring-in-visual-studio.md)
+- [Refaktoring v sadě Visual Studio](../ide/refactoring-in-visual-studio.md)
 - [Rychlé akce](../ide/quick-actions.md)

@@ -13,21 +13,21 @@ helpviewer_keywords:
 - CPUs, targeting specific
 - 64-bit applications [Visual Studio]
 ms.assetid: 845302fc-273d-4f81-820a-7296ce91bd76
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 15799ff8b181ddcfff97f7fb7338897c6f23fee2
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 9ba79bb199bba6c606ac603816cadc2dd2042057
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188950"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595303"
 ---
 # <a name="how-to-configure-projects-to-target-platforms"></a>Postupy: konfigurace projektů pro cílové platformy
 
-Sada Visual Studio umožňuje nastavit vaše aplikace na různé platformy, včetně 64 bitů na platformě. Další informace o podpoře 64 bitových platforem v aplikaci Visual Studio naleznete v tématu [64-bitové aplikace](/dotnet/framework/64-bit-apps).
+Visual Studio umožňuje nastavení aplikací na různých platformách, včetně 64bitových platforem. Další informace o podpoře platforem 64-bit v sadě Visual Studio najdete v tématu [64bitové aplikace](/dotnet/framework/64-bit-apps).
 
 ## <a name="target-platforms-with-the-configuration-manager"></a>Cílové platformy s Configuration Manager
 
@@ -35,7 +35,7 @@ Sada Visual Studio umožňuje nastavit vaše aplikace na různé platformy, vče
 
 ### <a name="to-configure-a-project-to-target-a-64-bit-platform"></a>Konfigurace projektu pro cílení na 64 platformu
 
-1. Na panelu nabídek vyberte možnost **sestavit**  > **Configuration Manager**.
+1. Na panelu nabídek vyberte možnost **sestavit** > **Configuration Manager**.
 
 2. V seznamu **Aktivní platforma řešení** zvolte 64 platformu pro cílové řešení a pak klikněte na tlačítko **Zavřít** .
 
@@ -54,7 +54,7 @@ Vlastnosti pro všechny projekty, které cílí na 64, jsou aktualizovány a dal
 
 ## <a name="target-platforms-in-the-project-designer"></a>Cílové platformy v Návrháři projektu
 
-**Návrhář projektu** také poskytuje způsob, jak cílit na různé platformy s vaším projektem. Pokud výběr jedné z platforem zahrnutých v seznamu v dialogovém okně **Nová platforma řešení** nefunguje pro vaše řešení, můžete vytvořit vlastní název konfigurace a upravit nastavení v **Návrháři projektu** , abyste mohli cílit na správnou platformu. .
+**Návrhář projektu** také poskytuje způsob, jak cílit na různé platformy s vaším projektem. Pokud výběr jedné z platforem zahrnutých v seznamu v dialogovém okně **Nová platforma řešení** nefunguje pro vaše řešení, můžete vytvořit vlastní název konfigurace a upravit nastavení v **Návrháři projektu** , abyste mohli cílit na správnou platformu.
 
 Provádění tohoto úkolu se liší v závislosti na programovacím jazyku, který používáte. Další informace najdete na následujících odkazech:
 
@@ -116,7 +116,7 @@ Další informace o souboru projektu naleznete v tématu [Referenční dokumenta
 
 ## <a name="see-also"></a>Viz také:
 
-- [Porozumění platformám sestavení](../ide/understanding-build-platforms.md)
+- [Principy platforem sestavení](../ide/understanding-build-platforms.md)
 - [/Platform (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)
 - [64 – bitové aplikace](/dotnet/framework/64-bit-apps)
 - [Visual Studio IDE 64 – Podpora bitových procesorů](../ide/visual-studio-ide-64-bit-support.md)

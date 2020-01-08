@@ -9,17 +9,17 @@ helpviewer_keywords:
 - application manifests [Visual Studio]
 - assemblies [Visual Studio], signing
 ms.assetid: 6c1ef36b-25f7-4ad0-b29a-51801b7a5420
-author: mikejo5000
-ms.author: mikejo
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cf721e9880ce7f0b7c3191f73f16366637f0704
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4f13df00059523ca87e720a999c596e203b20e49
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748873"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593678"
 ---
 # <a name="manage-assembly-and-manifest-signing"></a>Správa podepsání sestavení a manifestu
 
@@ -48,7 +48,7 @@ Můžete podepsat sestavení .NET a manifesty aplikace:
 
 Podepište následující typy assetu:
 
-1. sestavení, pokud je chcete nasadit do globální mezipaměti sestavení (GAC).
+1. Sestavení, pokud je chcete nasadit do globální mezipaměti sestavení (GAC).
 
 2. ClickOnce aplikace a manifesty nasazení. Visual Studio umožňuje přihlášení ve výchozím nastavení pro tyto aplikace.
 

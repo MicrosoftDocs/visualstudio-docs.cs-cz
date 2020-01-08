@@ -1,10 +1,10 @@
 ---
-title: Visual Studio Desktop Express ID úloh a komponent
+title: Úlohy a ID součástí sady Visual Studio Desktop Express
 titleSuffix: ''
 description: Použití pracovního vytížení a komponenta ID pro instalaci sady Visual Studio pomocí příkazového řádku nebo v závislosti na VSIX manifest
 keywords: ''
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.date: 11/13/2018
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.assetid: a3c0cc76-e3ce-435c-a1af-a6318b5a4dbe
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: vs-2017
-ms.openlocfilehash: 2447f0eab7ee3931df70f503519f3f110f4ba272
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6d3d8e78d2a36d9a295fc114784a76641929b7d1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62818957"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588444"
 ---
-# <a name="visual-studio-desktop-express-component-directory"></a>Visual Studio Desktop Express součástí adresáře
+# <a name="visual-studio-desktop-express-component-directory"></a>Adresář komponenty Visual Studio Desktop Express
 
 Tabulky v tomto seznamu stránce ID, můžete použít k instalaci sady Visual Studio pomocí příkazového řádku nebo je můžete zadat jako závislost v manifestu VSIX. Všimněte si, že přidáme další součásti vydaných aktualizací sady Visual Studio.
 
@@ -34,7 +34,7 @@ Všimněte si také následující stránka:
 * Pokud budete chtít, můžete nainstalovat také **doporučená** a **volitelné** komponenty.
 * Přidali jsme také oddíl, který obsahuje další součásti, které nejsou pod něj nespadá u jakékoli úlohy.
 
-Když nastavíte závislosti v manifestu VSIX, je nutné zadat ID součástí pouze. Určení závislostí naše minimální součástí pomocí tabulek na této stránce. V některých případech to může znamenat, že zadáváte pouze jednu komponentu z pracovního vytížení. V jiných scénářích může znamenat, že zadáte více komponent z jedné úlohy nebo více komponent z více úloh. Další informace najdete v tématu [jak: Migrace projektů rozšíření do sady Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) stránky.
+Když nastavíte závislosti v manifestu VSIX, je nutné zadat ID součástí pouze. Určení závislostí naše minimální součástí pomocí tabulek na této stránce. V některých případech to může znamenat, že zadáváte pouze jednu komponentu z pracovního vytížení. V jiných scénářích může znamenat, že zadáte více komponent z jedné úlohy nebo více komponent z více úloh. Další informace najdete v tématu [postupy: migrace projektů rozšíření do sady Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) stránky.
 
 Další informace o tom, jak pomocí těchto identifikátorů najdete v části [pomocí parametrů příkazového řádku instalace sady Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) stránky. A seznam pracovního vytížení a komponenta ID pro ostatní produkty, naleznete v tématu [funkcí sady Visual Studio 2017 a ID součástí](workload-and-component-ids.md) stránky.
 
@@ -42,11 +42,11 @@ Další informace o tom, jak pomocí těchto identifikátorů najdete v části 
 
 **ID:** Microsoft.VisualStudio.Workload.WDExpress
 
-**Popis:** Vytvářejte nativní a spravované aplikace jako WPF, WinForms a Win32 pomocí úprav kódu podle syntaxe, správy zdrojového kódu a správy pracovních položek. Zahrnuje podporu pro C#, Visual Basic a Visual C++.
+**Popis:** vytvářet nativní a spravované aplikace jako WPF, WinForms a Win32 pomocí úprav, správy zdrojového kódu podle syntaxe kódu a správy pracovních položek. Zahrnuje podporu pro C#, Visual Basic a Visual C++.
 
 ### <a name="components-included-by-this-workload"></a>Pomocí této úlohy zahrnuté komponenty
 
-ID součásti | Název | Version | Typ závislosti
+ID součásti | Name | Version | Typ závislosti
 --- | --- | --- | ---
 Microsoft.Component.ClickOnce | Publikování ClickOnce | 15.8.27825.0 | Požadováno
 Microsoft.Component.HelpViewer | Aplikaci Help Viewer | 15.6.27323.2 | Požadováno
@@ -59,10 +59,10 @@ Microsoft.Net.Component.4.6.1.SDK | Rozhraní .NET framework 4.6.1 SDK | 15.6.27
 Microsoft.Net.Component.4.6.1.TargetingPack | Rozhraní .NET framework 4.6.1 targeting pack | 15.6.27406.0 | Požadováno
 Microsoft.Net.Component.4.6.TargetingPack | .NET framework 4.6 targeting pack | 15.6.27406.0 | Požadováno
 Microsoft.Net.Component.4.TargetingPack | .NET framework 4 targeting pack | 15.6.27406.0 | Požadováno
-Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | Vývojové nástroje .NET framework 4.6.1 | 15.8.27825.0 | Požadováno
+Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | Vývojářské nástroje .NET Framework 4.6.1 | 15.8.27825.0 | Požadováno
 Microsoft.Net.ComponentGroup.TargetingPacks.Common | Vývojové nástroje .NET framework 4 – 4.6 | 15.6.27406.0 | Požadováno
 Microsoft.VisualStudio.Component.Common.Azure.Tools | Nástroje pro připojení a publikování | 15.9.28107.0 | Požadováno
-Microsoft.VisualStudio.Component.CoreEditor | Základním editoru sady Visual Studio | 15.8.27729.1 | Požadováno
+Microsoft.VisualStudio.Component.CoreEditor | Visual Studio Core Editor | 15.8.27729.1 | Požadováno
 Microsoft.VisualStudio.Component.EntityFramework | Entity Framework 6 tools | 15.6.27406.0 | Požadováno
 Microsoft.VisualStudio.Component.NuGet | Správce balíčků NuGet | 15.9.28016.0 | Požadováno
 Microsoft.VisualStudio.Component.Roslyn.Compiler | Kompilátory C# a Visual Basic Roslyn | 15.6.27309.0 | Požadováno
@@ -87,7 +87,7 @@ Microsoft.VisualStudio.Component.Windows10SDK.17134 | Windows 10 SDK (10.0.17134
 
 Toto jsou komponenty, které nejsou zahrnuty u jakékoli úlohy, ale může vybrat jako jednotlivých komponent.
 
-ID součásti | Název | Version
+ID součásti | Name | Version
 --- | --- | ---
 není k dispozici | není k dispozici | není k dispozici
 

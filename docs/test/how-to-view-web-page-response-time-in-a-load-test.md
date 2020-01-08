@@ -7,92 +7,92 @@ helpviewer_keywords:
 - response times in load tests
 - load test results, response times
 ms.assetid: e61c49f3-3161-45b1-9220-08b5459065a2
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5fbaa3f8f322bc6633e4f5081ba4cae38b581b95
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cf8bc1205658899a51cf1a50e83a9a8b34034b25
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653286"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594315"
 ---
-# <a name="how-to-view-web-page-response-time-in-a-load-test-using-the-load-test-analyzer"></a>Postupy: zobrazení doby odezvy webové stránky v rámci zátěžového testu pomocí analyzátoru zátěžového testu
+# <a name="how-to-view-web-page-response-time-in-a-load-test-using-the-load-test-analyzer"></a>Postupy: zobrazení doby odezvy webové stránky v zátěžovém testu pomocí Analyzéru zátěžového testu
 
-Čas potřebný k načtení každé webové stránky je známý jako *Doba odezvy*. Při vytváření testu výkonnosti webu můžete nastavit cílový čas odezvy pro každou žádost webové stránky v testu výkonnosti webu.
+Čas potřebný pro každou webovou stránku pro načtení se označuje jako *doba odezvy*. Když vytvoříte test výkonnosti webu, můžete nastavit cílovou dobu odpovědi pro každý požadavek webové stránky v testu výkonnosti webu.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Pokud spustíte test výkonnosti webu při zatížení zátěžového testu, budete moci analyzovat následující informace pro každou stránku:
+Při spuštění testu výkonnosti webu ve stresu v rámci zátěžového testu, bude možné analyzovat následující informace pro každou stránku:
 
 - Průměrná doba odezvy stránky.
 
-- Procento iterací testu, které splňují cílovou dobu odezvy stránky.
+- Procento iterace testu, které splňují cílovou dobu odezvy stránky.
 
-- Doby odezvy webové stránky můžete analyzovat pomocí zobrazení tabulky nebo zobrazení grafů v **analyzátoru zátěžového testu**:
+- Doba odezvy webové stránky můžete analyzovat pomocí zobrazení tabulek nebo zobrazení grafů **Analyzéru zátěžového testu**:
 
-- Analýza dob odezvy webové stránky v zobrazení tabulek
+- Analýza odezvy webové stránky v tabulkovém zobrazení
 
-- Analýza dob odezvy webové stránky v zobrazení grafů
+- Analýza odezvy webové stránky v zobrazení grafů
 
-## <a name="view-response-time-data-in-a-table"></a>Zobrazení dat doby odezvy v tabulce
+## <a name="view-response-time-data-in-a-table"></a>Zobrazit data o době odezvy v tabulce
 
-1. V **analyzátoru zátěžového testu**klikněte na tlačítko **tabulky** na panelu nástrojů a ujistěte se, že je zobrazena mřížka tabulky.
+1. V **Analyzéru zátěžového testu**, zvolte **tabulky** na panelu nástrojů, abyste měli jistotu, že se zobrazí mřížku tabulky.
 
-2. V rozevíracím seznamu **tabulka** vyberte možnost **stránky**.
+2. V **tabulky** rozevíracího seznamu vyberte **stránky**.
 
-3. Data pro jednotlivé stránky se zobrazí v mřížce. Obvykle se zobrazují následující sloupce.
+3. Data pro jednotlivé stránky se zobrazí v mřížce. Obvykle se zobrazí následující sloupce.
 
    |Záhlaví sloupce|Popis|
    |-|-|
-   |**Page**|Název webové stránky.|
-   |**Scénář**|Název scénáře. Důležité, pokud máte více než jeden scénář v testu výkonnosti webu.|
-   |**Test**|Název testu výkonnosti webu. Důležité, pokud máte více než jeden test výkonnosti webu v rámci zátěžového testu.|
-   |**Sítě**|Typ sítě.<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
-   |**Čtení**|Celkový počet požadavků, které byly provedeny pro webovou stránku. Toto je součet všech iterací v rámci zátěžového testu.|
-   |**Ave**|Průměrná doba odezvy stránky<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
-   |**Dlouhé**|Minimální doba odezvy stránky.<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
-   |**Svisl**|Čas odezvy stránky mediánu<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
-   |**90%**|90. percentil pro dobu odezvy. To znamená, že 90% stran reagovalo rychleji než toto číslo a 10% stránek reagovalo pomaleji.<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
-   |**95%**|95. percentil pro dobu odezvy. To znamená, že 95% stran reagovalo rychleji než toto číslo a 5% stránek reagovalo pomaleji.|
-   |**99%**|99 percentil pro dobu odezvy. To znamená, že 99% stran reagovalo rychleji než toto číslo a 1% stránky reagovaly pomaleji.<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
-   |**Počet**|Maximální doba odezvy stránky.<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
-   |**STD dev**|Ve výchozím nastavení nejsou shromažďována standardní data odchylky. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
-   |**Čas stránky**|Průměrná doba odezvy všech požadavků, které byly provedeny pro webovou stránku.|
-   |**Cílový**|Cílový čas stránky. Toto je konstantní hodnota stránky. **Poznámka:**  Cílový čas stránky se zobrazí pouze v případě, že byl cíl definován pro požadavek v testu výkonnosti webu.|
-   |**% Cíle schůzky**|Procento požadavků, které byly provedeny pro webovou stránku, která splnila cílovou dobu odezvy.|
+   |**Stránka**|Název webové stránky.|
+   |**Scénář**|Název scénáře. Důležité: Pokud máte více než jeden scénář v testu výkonnosti webu.|
+   |**Test**|Název testu výkonnosti webu. Důležité: Pokud máte více než jeden výkon webového testu v zátěžovém testu.|
+   |**Sítě**|Typ sítě.<br /><br /> Ve výchozím nastavení tato data nejsou shromažďována. Shromažďování těchto dat v **editoru zátěžových testů**v části **parametrů běhu** uzlu, vyberte uzel nastavení spuštění změnit. V **vlastnosti** okně pro **úložiště podrobností časování** vlastnosti, vyberte **AllIndividualDetails**.|
+   |**Celkem**|Celkový počet požadavků, které byly provedeny pro webovou stránku. Toto je celkový součet pro všechny iterace v zátěžovém testu.|
+   |**Uložit**|Průměrnou dobu odezvy stránky.<br /><br /> Ve výchozím nastavení tato data nejsou shromažďována. Shromažďování těchto dat v **editoru zátěžových testů**v části **parametrů běhu** uzlu, vyberte uzel nastavení spuštění změnit. V **vlastnosti** okně pro **úložiště podrobností časování** vlastnosti, vyberte **AllIndividualDetails**.|
+   |**min**|Doba odezvy minimální stránky.<br /><br /> Ve výchozím nastavení tato data nejsou shromažďována. Shromažďování těchto dat v **editoru zátěžových testů**v části **parametrů běhu** uzlu, vyberte uzel nastavení spuštění změnit. V **vlastnosti** okně pro **úložiště podrobností časování** vlastnosti, vyberte **AllIndividualDetails**.|
+   |**Medián**|Doba odezvy střední stránky.<br /><br /> Ve výchozím nastavení tato data nejsou shromažďována. Shromažďování těchto dat v **editoru zátěžových testů**v části **parametrů běhu** uzlu, vyberte uzel nastavení spuštění změnit. V **vlastnosti** okně pro **úložiště podrobností časování** vlastnosti, vyberte **AllIndividualDetails**.|
+   |**90%**|Na 90. percentil dobu odezvy. To znamená, že 90 % stránky odpovědi rychleji, než tento počet a 10 % stránek odpověděl pomaleji.<br /><br /> Ve výchozím nastavení tato data nejsou shromažďována. Shromažďování těchto dat v **editoru zátěžových testů**v části **parametrů běhu** uzlu, vyberte uzel nastavení spuštění změnit. V **vlastnosti** okně pro **úložiště podrobností časování** vlastnosti, vyberte **AllIndividualDetails**.|
+   |**95%**|95. percentil dobu odezvy. To znamená, že 95 % stránky odpovědi rychleji, než tento počet a 5 % stránek odpověděl pomaleji.|
+   |**99%**|99. percentilu po dobu odezvy. To znamená, že 99 % stránky odpovědi rychleji, než tento počet a procento 1 na stránkách odpověděl pomaleji.<br /><br /> Ve výchozím nastavení tato data nejsou shromažďována. Shromažďování těchto dat v **editoru zátěžových testů**v části **parametrů běhu** uzlu, vyberte uzel nastavení spuštění změnit. V **vlastnosti** okně pro **úložiště podrobností časování** vlastnosti, vyberte **AllIndividualDetails**.|
+   |**Max**|Doba odezvy maximální stránky.<br /><br /> Ve výchozím nastavení tato data nejsou shromažďována. Shromažďování těchto dat v **editoru zátěžových testů**v části **parametrů běhu** uzlu, vyberte uzel nastavení spuštění změnit. V **vlastnosti** okně pro **úložiště podrobností časování** vlastnosti, vyberte **AllIndividualDetails**.|
+   |**Směrodatná odchylka**|Ve výchozím nastavení směrodatná odchylka data nejsou shromažďována. Shromažďování těchto dat v **editoru zátěžových testů**v části **parametrů běhu** uzlu, vyberte uzel nastavení spuštění změnit. V **vlastnosti** okně pro **úložiště podrobností časování** vlastnosti, vyberte **AllIndividualDetails**.|
+   |**Doba vytvoření stránky**|Průměrná doba odezvy pro všechny požadavky, které byly provedeny pro webovou stránku.|
+   |**Cíl**|Cílová doba stránky. Toto je konstantní hodnota pro stránku. **Poznámka:** cílová doba stránky se zobrazí jenom v případě, že cílem je definována pro požadavek v testu výkonnosti webu.|
+   |**% Cíle schůzky**|Procento požadavků, které byly provedeny pro webovou stránku, která splněny cílovou dobu odezvy.|
 
-   Další informace naleznete v tématu [Analýza výsledků zátěžových testů a chyb v zobrazení tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+   Další informace najdete v tématu [Analýza výsledků zátěžových testů a chyb v tabulkovém zobrazení](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
 
-## <a name="view-response-time-data-in-a-graph"></a>Zobrazení dat doby odezvy v grafu
+## <a name="view-response-time-data-in-a-graph"></a>Zobrazit data o době odezvy v grafu
 
-Můžete také zobrazit data doby odezvy v grafu, abyste viděli, jak se v průběhu zátěžového testu mění v čase. To je užitečné hlavně v případě, že se váš vzor zatížení zvětšuje jako testovací běhy (například pokud použijete vzor zatížení kroku). Další informace najdete v tématu [Úpravy vzorů zatížení pro modelování aktivit virtuálních uživatelů](../test/edit-load-patterns-to-model-virtual-user-activities.md).
+V grafu zobrazíte změny v průběhu času během zátěžového testu můžete také zobrazit data o době odezvy. To je obzvláště užitečné, pokud vaše vzor zatížení zvýší při spuštění testů (například pokud používáte vzor zatížení kroku). Další informace najdete v tématu [vzory zatížení úpravy aktivity virtuálního uživatele modelu](../test/edit-load-patterns-to-model-virtual-user-activities.md).
 
-Zobrazení dat doby odezvy v grafu:
+Chcete-li zobrazit data o době odezvy v grafu:
 
-1. V **analyzátoru zátěžového testu**vyberte **grafy** na panelu nástrojů a ujistěte se, že je graf zobrazen.
+1. V **Analyzéru zátěžového testu**, zvolte **grafy** na panelu nástrojů, abyste měli jistotu, že se zobrazí grafu.
 
-2. V okně **čítače** rozbalte uzel scénáře, ve kterém máte zájem (například `Scenario1`).
+2. V **čítače** okna, rozbalte uzel scénář, který vás zajímá (například `Scenario1`).
 
-3. Rozbalte uzel testu výkonnosti webu, který vás zajímá.
+3. Rozbalte uzel test výkonnosti webu, který vás zajímá.
 
-4. Rozbalte **stránky**uzlů.
+4. Rozbalte uzel **stránky**.
 
-5. Rozbalte uzel stránky, na kterou vás zajímáte.
+5. Rozbalte uzel stránky, které vás zajímají.
 
-6. Klikněte pravým tlačítkem na položku **% stránky cíl schůzky** a pak zvolte možnost **Zobrazit čítač v grafu**.
+6. Klikněte pravým tlačítkem na **% cíle schůzky stránky** a klikněte na tlačítko **zobrazit čítač v grafu**.
 
-    Data jsou přidána do grafu.
+    Data je přidána do grafu.
 
 7. Volitelné Opakujte předchozí krok pro **průměrný čas stránky**, **cíl doby odezvy stránky**a **Celkový počet stránek**.
 
    > [!NOTE]
    > **Cílová doba odezvy stránky** je konstantní.
 
-   Další informace naleznete v tématu [Analýza výsledků zátěžových testů v zobrazení grafů](../test/analyze-load-test-results-in-the-graphs-view.md).
+   Další informace najdete v tématu [výsledků zátěžového testu analyzovat v zobrazení grafů](../test/analyze-load-test-results-in-the-graphs-view.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Analýza výsledků zátěžových testů a chyb v zobrazení tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)
-- [Postupy: přístup k výsledkům zátěžového testu pro analýzu](../test/how-to-access-load-test-results-for-analysis.md)
-- [Analyzovat výsledky zátěžového testu](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Analýza výsledků zátěžových testů a chyb v tabulkovém zobrazení](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)
+- [Postupy: přístup k analýze výsledků zátěžového testu](../test/how-to-access-load-test-results-for-analysis.md)
+- [Analýza výsledků zátěžových testů](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

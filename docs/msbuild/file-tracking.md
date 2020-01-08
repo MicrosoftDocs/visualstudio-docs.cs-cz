@@ -1,39 +1,39 @@
 ---
-title: Sledování souborů | Dokumentace Microsoftu
+title: Sledování souborů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, file tracking
 ms.assetid: e6c66ac0-3464-451f-9192-3b98dca21b4a
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7770da734143b2b6185b266137eeb46ba25bd32a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7ee4620e845205a936bbdf48a9872c4dec3305ea
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968064"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596031"
 ---
 # <a name="file-tracking"></a>Sledování souborů
-Volání do systému souborů Windows pro proces a podřízené procesy protokolů sledování souborů. Voláním funkcí uvedených níže programy řídí, kdy zapnout a vypnout protokolování a určit soubor protokolu, který chcete použít.
+Protokol sledování souborů volá do systému souborů systému Windows pro proces a jeho podřízené procesy. Voláním níže uvedených funkcí programy řídí, kdy zapnout a vypnout protokolování a zadat soubor protokolu, který se má použít.
 
-- [EndTrackingContext](../msbuild/endtrackingcontext.md) zastavte sledování aktuálního kontextu.
+- [EndTrackingContext](../msbuild/endtrackingcontext.md) Zastavit sledování aktuálního kontextu.
 
-- [ResumeTracking](../msbuild/resumetracking.md) obnovte sledování po volání [SuspendTracking](../msbuild/suspendtracking.md).
+- [ResumeTracking](../msbuild/resumetracking.md) Obnoví sledování po volání [SuspendTracking](../msbuild/suspendtracking.md).
 
-- [SetThreadCount](../msbuild/setthreadcount.md) nastavte počet vláken pro sledování.
+- [SetThreadCount](../msbuild/setthreadcount.md) Nastavte počet vláken, která se mají použít pro sledování.
 
-- [StartTrackingContext](../msbuild/starttrackingcontext.md) začněte nový kontext sledování.
+- [StartTrackingContext](../msbuild/starttrackingcontext.md) Zahajte nový kontext sledování.
 
-- [StartTrackingContextWithRoot](../msbuild/starttrackingcontextwithroot.md) začněte nový kontext sledování se zadaným kořenem.
+- [StartTrackingContextWithRoot](../msbuild/starttrackingcontextwithroot.md) Zahajte nový kontext sledování se zadaným kořenem.
 
-- [StopTrackingAndCleanup](../msbuild/stoptrackingandcleanup.md) End sledování a uvolnit zdroje používá.
+- [StopTrackingAndCleanup](../msbuild/stoptrackingandcleanup.md) Ukončit sledování a uvolnit použité prostředky.
 
-- [SuspendTracking](../msbuild/suspendtracking.md) dočasně pozastavit sledování.
+- [SuspendTracking](../msbuild/suspendtracking.md) Dočasné pozastavení sledování.
 
-- [WriteAllTLogs](../msbuild/writealltlogs.md) vypsat protokoly sledování pro všechny kontexty.
+- [WriteAllTLogs](../msbuild/writealltlogs.md) Zapište protokoly sledování pro všechny kontexty.
 
-- [WriteContextTLogs](../msbuild/writecontexttlogs.md) vypsat protokol sledování pro aktuální kontext.
+- [WriteContextTLogs](../msbuild/writecontexttlogs.md) Vypište protokol sledování pro aktuální kontext.

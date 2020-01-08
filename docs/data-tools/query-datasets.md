@@ -6,17 +6,17 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 7b1a91cf-8b5a-4fc0-ac36-0dc2d336fa1b
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 056d88790cda6e763ebd0531d61f7007d16d82eb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4080866de58e17c5e11ed01d61740c2f83aed9a7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648237"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586338"
 ---
 # <a name="query-datasets"></a>Datové sady dotazů
 Chcete-li vyhledat konkrétní záznamy v datové sadě, použijte metodu `FindBy` v objektu DataTable, napište vlastní příkaz foreach pro smyčku nad kolekcí řádků tabulky nebo použijte [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset).
@@ -53,7 +53,7 @@ Rozlišování velkých a malých písmen, ale může být faktorem v tom, jak j
 
 #### <a name="to-find-rows-based-on-the-values-in-any-column"></a>Vyhledání řádků na základě hodnot v jakémkoli sloupci
 
-- Tabulky dat jsou vytvořeny pomocí metody <xref:System.Data.DataTable.Select%2A>, která vrací pole <xref:System.Data.DataRow>s na základě výrazu předaného metodě <xref:System.Data.DataTable.Select%2A>. Další informace o vytváření platných výrazů naleznete v části syntax výrazů stránky na stránce o vlastnosti <xref:System.Data.DataColumn.Expression%2A>.
+- Tabulky dat jsou vytvořeny pomocí metody <xref:System.Data.DataTable.Select%2A>, která vrací pole <xref:System.Data.DataRow>na základě výrazu předaného metodě <xref:System.Data.DataTable.Select%2A>. Další informace o vytváření platných výrazů naleznete v části syntax výrazů stránky na stránce o vlastnosti <xref:System.Data.DataColumn.Expression%2A>.
 
      Následující příklad ukazuje, jak použít metodu <xref:System.Data.DataTable.Select%2A> <xref:System.Data.DataTable> k vyhledání konkrétních řádků.
 
@@ -68,7 +68,7 @@ Objekt <xref:System.Data.DataRelation> lze použít k vyhledání souvisejícíc
 Tato stránka poskytuje příklady pomocí typových datových sad. Informace o procházení vztahů v netypových datových sadách naleznete v tématu [navigace mezi DataRelations](/dotnet/framework/data/adonet/dataset-datatable-dataview/navigating-datarelations).
 
 > [!NOTE]
-> Pokud pracujete v aplikaci model Windows Forms a pomocí funkcí pro datovou vazbu zobrazíte data, formulář generovaný návrhářem může poskytovat dostatek funkcí pro vaši aplikaci. Další informace najdete v tématu [vázání ovládacích prvků k datům v aplikaci Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md). Konkrétně najdete [v tématu relace v datových sadách](relationships-in-datasets.md).
+> Pokud pracujete v aplikaci model Windows Forms a pomocí funkcí pro datovou vazbu zobrazíte data, formulář generovaný návrhářem může poskytovat dostatek funkcí pro vaši aplikaci. Další informace najdete v tématu [vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md). Konkrétně najdete [v tématu relace v datových sadách](relationships-in-datasets.md).
 
 Následující příklady kódu ukazují, jak procházet vztahy nahoru a dolů v zadaných datových sadách. Příklady kódu používají typové <xref:System.Data.DataRow>s (`NorthwindDataSet.OrdersRow`) a generované metody FindBy*PrimaryKey* (`FindByCustomerID`) k vyhledání požadovaného řádku a vrácení souvisejících záznamů. Příklady jsou kompilovány a spouštěny správně pouze v případě, že máte:
 
@@ -76,7 +76,7 @@ Následující příklady kódu ukazují, jak procházet vztahy nahoru a dolů v
 
 - Tabulka `Orders`.
 
-- Vztah s názvem `FK_Orders_Customers`relating dvou tabulkách.
+- Vztah s názvem `FK_Orders_Customers`související s těmito dvěma tabulkami.
 
 Kromě toho musí být obě tabulky vyplněny daty pro všechny záznamy, které mají být vráceny.
 

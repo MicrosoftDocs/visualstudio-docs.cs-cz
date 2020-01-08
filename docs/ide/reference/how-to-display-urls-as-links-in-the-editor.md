@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Code Editor, displaying URLs
 - editors, displaying URLs
 ms.assetid: 7c673953-476e-4897-9c2d-1fc15556c172
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9814614ae752a670a8b707e6fd701a5fa151f481
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: aefabb480830f7fc649bc73d47a3b47594100616
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668583"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75569085"
 ---
 # <a name="how-to-display-urls-as-links-in-the-editor"></a>Postupy: Zobrazení adres URL ve formě odkazů v editoru
 
@@ -27,11 +27,11 @@ Můžete zvolit, aby Editor kódu považoval jako aktivní odkazy adresy URL (Un
 
 - Zobrazit **popisek** při najetí myší na něj
 
-- Pokuste se otevřít web, který jste uvedli, když se **Ctrl** +**kliknete** na odkaz. Ve výchozím nastavení se web zobrazuje v interním webovém prohlížeči.
+- Pokuste se otevřít web, který jste uvedli, když se **Ctrl**+**kliknete** na odkaz. Ve výchozím nastavení se web zobrazuje v interním webovém prohlížeči.
 
 ## <a name="display-urls-as-links"></a>Zobrazení adres URL jako odkazů
 
-1. V nabídce **nástroje** klikněte na příkaz **Možnosti**.
+1. Na **nástroje** nabídky, klikněte na tlačítko **možnosti**.
 
 2. Klikněte na **textový editor**.
 

@@ -2,17 +2,17 @@
 title: Strukturujte svá řešení modelování
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fecf0d146c1116e6ec6376ffd9ad929cc9179d1c
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 57edf4253840294968238793bf9f3b24326a1e3f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985225"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591941"
 ---
 # <a name="structure-your-modeling-solution"></a>Strukturujte svá řešení modelování
 
@@ -72,7 +72,7 @@ Ve středních nebo rozsáhlých projektech je struktura týmu založena na stru
 
 #### <a name="use-a-separate-package-for-each-layer"></a>Použít samostatný balíček pro každou vrstvu
 
-1. V řešení pro každou vrstvu přidejte projekt modelování architektury. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel řešení, přejděte na **Přidat**a pak klikněte na **existující projekt**. K jednomu projektu modelování se teď dá dostat z každého Řešení: projekt architektury a vývojový projekt pro každou vrstvu.
+1. V řešení pro každou vrstvu přidejte projekt modelování architektury. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel řešení, přejděte na **přidat**a potom klikněte na tlačítko **existující projekt**. K jednomu projektu modelování se teď dá dostat z každého Řešení: projekt architektury a vývojový projekt pro každou vrstvu.
 
 2. Ve sdíleném modelu vytvořte balíček pro každou vrstvu: v **Průzkumník řešení**vyberte projekt modelování. V **Průzkumníku modelů UML**klikněte pravým tlačítkem na kořenový uzel modelu, přejděte na **Přidat**a pak klikněte na **balíček**.
 
@@ -102,7 +102,7 @@ Například pokud často používáte řešení, která mají prezentační, obc
 
 4. Podle pokynů v průvodci vyberte projekty, které chcete zahrnout do šablony, zadejte název a popis šablony a zadejte umístění výstupu.
 
-## <a name="watch-a-video"></a>Přehrát video
+## <a name="watch-a-video"></a>Podívejte se na video
 
 [Uspořádání a Správa modelů](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-9-organizing-and-managing-your-models)
 

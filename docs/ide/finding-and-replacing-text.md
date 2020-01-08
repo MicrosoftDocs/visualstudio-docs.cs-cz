@@ -25,21 +25,21 @@ helpviewer_keywords:
 - find text
 - replace text
 - multi-caret selection
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e5c4bd54e71357ff6a2d667c540953bc0057b70
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ffc31a0d0e2b6878b5dd5173a35ce4f538e135be
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654236"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590342"
 ---
 # <a name="find-and-replace-text"></a>Vyhledání a nahrazení textu
 
-Text v editoru sady Visual Studio můžete vyhledat a nahradit pomocí**kláves** [Najít a nahradit](#find-and-replace-control) (CTRL +**F** nebo **CTRL** +**H**) nebo [Najít/nahradit v souborech](#find-in-files-and-replace-in-files) (**CTRL** +**SHIFT** 1 **F** nebo **CTRL** 4**SHIFT** 6**H**). Pomocí *[výběru více blikajících kurzorů](#multi-caret-selection)* můžete také vyhledat a nahradit pouze *některé* instance vzoru.
+Text v editoru sady Visual Studio můžete vyhledat a nahradit pomocí kláves [Najít a nahradit](#find-and-replace-control) (**CTRL**+**F** nebo **CTRL**+**H**) nebo [Najít/nahradit v souborech](#find-in-files-and-replace-in-files) (**CTRL**+**SHIFT**+**F** nebo **CTRL**+**SHIFT**+**H**). Pomocí *[výběru více blikajících kurzorů](#multi-caret-selection)* můžete také vyhledat a nahradit pouze *některé* instance vzoru.
 
 > [!TIP]
 > Pokud přejmenováváte symboly kódu, jako jsou proměnné a metody, je lepší je *[Refaktorovat](../ide/reference/rename.md)* , než použití hledání a nahrazení. Refaktoring je inteligentní a pochopení rozsahu, zatímco v rámci hledání a nahrazení jsou všechny instance.
@@ -53,8 +53,8 @@ Můžete určit rozsah hledání na aktuální dokument, aktuální řešení ne
 
 ## <a name="find-and-replace-control"></a>Najít a nahradit ovládací prvek
 
-- Stiskněte klávesu **Ctrl** +**F** jako zástupce pro *vyhledání* řetězce v aktuálním souboru.
-- Stisknutím **kombinace kláves Ctrl** +**H** *vyhledejte a nahraďte* řetězec v aktuálním souboru.
+- Stiskněte klávesu **Ctrl**+**F** jako zástupce pro *vyhledání* řetězce v aktuálním souboru.
+- Stisknutím **kombinace kláves Ctrl**+**H** *vyhledejte a nahraďte* řetězec v aktuálním souboru.
 
 Ovládací prvek **Najít a nahradit** se zobrazí v pravém horním rohu okna Editor kódu. Okamžitě zvýrazní všechny výskyty daného hledaného řetězce v aktuálním dokumentu. Můžete přecházet z jednoho výskytu na jiný kliknutím na tlačítko **Najít další** nebo tlačítko **Najít předchozí** v ovládacím prvku hledání.
 
@@ -66,16 +66,16 @@ Chcete-li změnit barvu zvýraznění shody, zvolte nabídku **nástroje** , vyb
 
 ### <a name="search-tool-windows"></a>Hledání v oknech nástrojů
 
-Můžete použít ovládací prvek **Najít** v okně Code nebo text, jako jsou například **výstupní** okna a okna **výsledků hledání** , a to tak, že vyberete **Upravit**  > **Najít a nahradit** nebo stisknout **CTRL + F**.
+Můžete použít ovládací prvek **Najít** v okně Code nebo text, jako jsou například **výstupní** okna a okna **výsledků hledání** , a to tak, že vyberete **Upravit** > **Najít a nahradit** nebo stisknout **CTRL + F**.
 
 Verze ovládacího prvku **find** je také k dispozici v některých oknech nástrojů. Můžete například filtrovat seznam ovládacích prvků v okně **panelu nástrojů** zadáním textu do vyhledávacího pole. Další okna nástrojů, která umožňují hledání obsahu, zahrnují **Průzkumník řešení**, okno **vlastnosti** a **Team Explorer**.
 
 ## <a name="find-in-files-and-replace-in-files"></a>Najít v souborech a nahradit v souborech
 
-- Stisknutím **kombinace kláves Ctrl** +**SHIFT** +**F** můžete *Najít* řetězec ve více souborech.
-- Stisknutím **kombinace kláves Ctrl** +**SHIFT** +**H** *vyhledejte a nahraďte* řetězec ve více souborech.
+- Stisknutím **kombinace kláves Ctrl**+**SHIFT**+**F** můžete *Najít* řetězec ve více souborech.
+- Stisknutím **kombinace kláves Ctrl**+**SHIFT**+**H** *vyhledejte a nahraďte* řetězec ve více souborech.
 
-Funkce **Najít/nahradit v souborech** funguje jako ovládací prvek **Najít a nahradit** s tím rozdílem, že můžete definovat rozsah pro hledání. V editoru můžete nejen vyhledat aktuální otevřený soubor, ale také všechny otevřené dokumenty, celé řešení, aktuální projekt a vybrané sady složek. Můžete také Hledat podle přípony názvu souboru. Chcete-li získat přístup k dialogovému oknu **Najít/nahradit v souborech** , vyberte v nabídce **Upravit** příkaz **Najít a nahradit** (nebo stiskněte klávesu **CTRL** +**SHIFT** +**F**).
+Funkce **Najít/nahradit v souborech** funguje jako ovládací prvek **Najít a nahradit** s tím rozdílem, že můžete definovat rozsah pro hledání. V editoru můžete nejen vyhledat aktuální otevřený soubor, ale také všechny otevřené dokumenty, celé řešení, aktuální projekt a vybrané sady složek. Můžete také Hledat podle přípony názvu souboru. Chcete-li získat přístup k dialogovému oknu **Najít/nahradit v souborech** , vyberte v nabídce **Upravit** příkaz **Najít a nahradit** (nebo stiskněte klávesu **CTRL**+**SHIFT**+**F**).
 
 ![Najít v souborech v aplikaci Visual Studio](media/find-in-files-box.png)
 
@@ -110,7 +110,7 @@ Na následujícím snímku obrazovky je `-0000` vybraný ve třech umístěních
 Chcete-li vybrat více blikajících kurzorů, klikněte nebo proveďte jako obvykle první výběr textu a potom stiskněte klávesu **ALT** a klikněte nebo vyberte text v každém dalším umístění. Můžete také automaticky přidat shodný text jako další výběry nebo vybrat textové pole, které lze na každém řádku upravit stejným způsobem.
 
 > [!TIP]
-> Pokud jste vybrali **ALT** jako modifikační klávesu pro možnost přejít na definici v **nabídce nástroje**  > **Možnosti**, je vícenásobný výběr vícenásobný zakázaný.
+> Pokud jste vybrali **ALT** jako modifikační klávesu pro možnost přejít na definici v **nabídce nástroje** > **Možnosti**, je vícenásobný výběr vícenásobný zakázaný.
 
 ### <a name="commands"></a>Příkazy
 
@@ -118,13 +118,13 @@ Pro chování výběru s více kurzory použijte následující klíče a akce:
 
 |Zástupce|Akce|
 |-|-|
-|**Ctrl** +**ALT** + kliknutí|Přidat sekundární blikající kurzor|
-|**Ctrl** +**ALT** + poklikejte na|Přidat sekundární výběr slova|
-|**Ctrl** +**ALT** + kliknutí a přetažením|Přidat sekundární výběr|
-|**Shift** +**ALT** + **.**|Přidat další shodný text jako výběr|
-|**Ctrl** +**Shift** +**ALT** + **,**|Přidat veškerý shodný text jako výběry|
-|**Shift** +**ALT** + **,**|Odebrat poslední vybraný výskyt|
-|**Ctrl** +**Shift** +**ALT** + **.**|Přeskočit další vyhovující výskyt|
+|**Ctrl**+**ALT** + kliknutí|Přidat sekundární blikající kurzor|
+|**Ctrl**+**ALT** + poklikejte na|Přidat sekundární výběr slova|
+|**Ctrl**+**ALT** + kliknutí a přetažením|Přidat sekundární výběr|
+|**Shift**+**ALT**+ **.**|Přidat další shodný text jako výběr|
+|**Ctrl**+**Shift**+**Alt**+ **,**|Přidat veškerý shodný text jako výběry|
+|**Shift**+**ALT**+ **,**|Odebrat poslední vybraný výskyt|
+|**Ctrl**+**Shift**+**ALT**+ **.**|Přeskočit další vyhovující výskyt|
 |**ALT** + kliknutí|Přidat výběr pole|
 |**ESC** nebo klikněte na|Vymazat všechny výběry|
 

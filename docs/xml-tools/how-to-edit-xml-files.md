@@ -3,17 +3,17 @@ title: 'Postupy: úprava souborů XML'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 07fa3ecf-6345-4d30-9d85-d5ef5b083319
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd8671bf45230ec24a37d5006a2d32e5aabe8f28
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 216718627936ac7f519c1a6a28a30886e8ae9c27
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645927"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592734"
 ---
 # <a name="how-to-edit-xml-files"></a>Postupy: úprava souborů XML
 
@@ -50,7 +50,7 @@ Chcete-li upravit soubor XML, dvakrát klikněte na soubor, který chcete upravi
 
 2. Vyberte **soubor XML** , chcete-li vytvořit nový soubor XML; nebo vyberte **soubor XSLT** pro vytvoření nové šablony stylů XSLT.
 
-3. Klikněte na **otevřít**.
+3. Klikněte na tlačítko **otevřít**.
 
 ## <a name="create-an-empty-project-for-xml-files"></a>Vytvoření prázdného projektu pro soubory XML
 
@@ -58,7 +58,7 @@ Chcete-li upravit soubor XML, dvakrát klikněte na soubor, který chcete upravi
 
 1. V nabídce **soubor** vyberte **Nový** > **projekt**.
 
-   Zobrazí se dialogové okno **Nový projekt** .
+   **Nový projekt** zobrazí se dialogové okno.
 
 2. Vyberte jazyk kódu, který chcete zvolit, a pak vyberte šablonu **prázdného projektu (.NET Framework)** .
 
@@ -72,7 +72,7 @@ Chcete-li upravit soubor XML, dvakrát klikněte na soubor, který chcete upravi
 
 2. Do vyhledávacího pole šablony zadejte **prázdný projekt** , vyberte šablonu **prázdného projektu (.NET Framework)** a pak klikněte na **Další**.
 
-3. Klikněte na **vytvořit**.
+3. Klikněte na **Vytvořit**.
 
 ::: moniker-end
 

@@ -5,20 +5,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - text templates, build tasks
 - text templates, transforming by using msbuild
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c9cc0d8a40970e2ec36030ab3121d6fc02748e2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e01136b845124d74c22ceb1c7cab877a8e2d1d04
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654202"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590550"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>Vyvolat transformaci textu v procesu sestavení
 
@@ -51,7 +51,7 @@ Pokud je [Server sestavení](/azure/devops/pipelines/agents/agents) spuštěn v 
   - Microsoft. VisualStudio. TextTemplating. Modeling. 15.0. dll
 
 > [!TIP]
-> Pokud při spouštění cílů sestavení TextTemplating na serveru sestavení získáte `MissingMethodException` pro metodu Microsoft. CodeAnalysis, ujistěte se, že jsou sestavení Roslyn v adresáři s názvem *Roslyn* , který je ve stejném adresáři jako spustitelný soubor sestavení (například  *MSBuild. exe*).
+> Pokud při spouštění cílů sestavení TextTemplating na serveru sestavení získáte `MissingMethodException` pro metodu Microsoft. CodeAnalysis, ujistěte se, že jsou sestavení Roslyn v adresáři s názvem *Roslyn* , který je ve stejném adresáři jako spustitelný soubor sestavení (například *MSBuild. exe*).
 
 ## <a name="edit-the-project-file"></a>Upravit soubor projektu
 
@@ -65,7 +65,7 @@ V souboru .vbproj nebo .csproj vyhledejte řádek podobný následujícímu:
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
 
-\- nebo-
+\- nebo –
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`
 
@@ -135,7 +135,7 @@ U příkazu TransformFile lze použít zástupné znaky:
 
 `msbuild dsl.csproj /t:Transform /p:TransformFile="GeneratedCode\**\*.tt"`
 
-## <a name="source-control"></a>Správa zdrojového kódu
+## <a name="source-control"></a>Správy zdrojového kódu
 
 Systém správy zdrojového kódu není nijak integrován. Můžete ale přidat vlastní rozšíření, například pro rezervaci a vrácení se změnami vygenerovaného souboru. Ve výchozím nastavení se úloha transformace textu vyhne přepsání souboru, který je označen jen pro čtení. Při výskytu takového souboru se v Seznam chyb sady Visual Studio zaznamená chyba a úloha se nezdařila.
 
@@ -162,7 +162,7 @@ Transformace textu se provede před všemi ostatními úlohami v procesu sestav
   </Target>
 ```
 
-V `AfterTransform` můžete odkazovat na seznamy souborů:
+V `AfterTransform`můžete odkazovat na seznamy souborů:
 
 - GeneratedFiles – seznam souborů zapsaných procesem. U souborů, které přepsaly existující soubory jen pro čtení, bude `%(GeneratedFiles.ReadOnlyFileOverwritten)` true. Tyto soubory lze rezervovat ze správy zdrojového kódu.
 
@@ -198,7 +198,7 @@ Pokud zadáte název výstupního souboru, bude mít přednost před rozšířen
 </ItemGroup>
 ```
 
-Zadání OutputFileName nebo OutputFilePath se nedoporučuje, pokud také transformují šablony v rámci sady Visual Studio pomocí **transformace vše** nebo spuštěním generátoru Single File. V závislosti na tom, jakým způsobem jste transformaci aktivovali, skončíte s různými cestami k souborům. To může být matoucí.
+Zadání OutputFileName nebo OutputFilePath se nedoporučuje, pokud také transformují šablony v rámci sady Visual Studio pomocí **transformace vše** nebo spuštěním generátoru Single File. V závislosti na tom, jakým způsobem jste transformaci aktivovali, skončíte s různými cestami k souborům. Tohle může být matoucí.
 
 ## <a name="add-reference-and-include-paths"></a>Přidat odkaz a zahrnout cesty
 
@@ -283,7 +283,7 @@ Nyní můžete vlastnost projektu použít v direktivách assembly a include:
 
 Tyto direktivy získají z T4parameterValues hodnoty v hostitelích MSBuild i Visual Studio.
 
-## <a name="q--a"></a>Otázka & A
+## <a name="q--a"></a>Dotazy a odpovědi
 
 **Proč bych chtěl transformovat šablony na serveru sestavení? V aplikaci Visual Studio už byly transformované šablony před vrácením kódu se změnami**
 

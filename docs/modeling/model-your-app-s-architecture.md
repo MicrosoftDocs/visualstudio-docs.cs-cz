@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - UML, modeling architecture
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e87759206f6d05267e2be5be25fdb8c3e9b70df
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ba455730ddac9b2a02b8f0580711499d6a779f49
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747541"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590225"
 ---
 # <a name="model-your-app39s-architecture"></a>Modelování architektury aplikace&#39;
 Aby bylo zajištěno, že váš softwarový systém nebo aplikace vyhovují potřebám vašich uživatelů, můžete vytvořit modely v aplikaci Visual Studio jako součást popisu celkové struktury a chování softwarového systému nebo aplikace. Pomocí modelů můžete také popsat vzory používané v celém návrhu. Tyto modely vám pomůžou pochopit stávající architekturu, diskutovat o změnách a jasně sdělit své záměry.
@@ -88,7 +88,7 @@ Aby bylo zajištěno, že váš softwarový systém nebo aplikace vyhovují pot�
 
  Vzor návrhu je popsán v dokumentu a obvykle zahrnuje tyto části:
 
-- Jméno.
+- Název:
 
 - Popis kontextu, ve kterém je možné ho použít. Jaká kritéria by měl vývojář zvážit při použití tohoto vzoru?
 

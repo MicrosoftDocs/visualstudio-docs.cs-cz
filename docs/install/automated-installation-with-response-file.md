@@ -1,6 +1,6 @@
 ---
-title: Automatizace instalace pomocí souboru odpovědí
-description: Naučte se vytvořit soubor odezvy JSON, který vám pomůže automatizovat instalaci sady Visual Studio.
+title: Automatizace instalace pomocí souboru odpovědí.
+description: Zjistěte, jak vytvořit soubor odpovědi JSON, která pomáhá automatizovat instalaci sady Visual Studio
 ms.date: 03/30/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -9,46 +9,46 @@ helpviewer_keywords:
 - automate
 - installation
 - command-line
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d26211f566bb8f683f3b38deade4f13defe9cb01
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 43a4212a9faf0b7fef3395a847e8c614507e56df
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189501"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588526"
 ---
-# <a name="how-to-define-settings-in-a-response-file"></a>Definování nastavení v souboru odpovědí
+# <a name="how-to-define-settings-in-a-response-file"></a>Definování nastavení v souboru odpovědí.
 
-Správci, kteří nasazují Visual Studio, mohou určit soubor odpovědí pomocí parametru `--in`, jak je uvedeno v následujícím příkladu:
+Správci, kteří si nasadí sady Visual Studio můžete určit soubor odpovědí s použitím `--in` parametr, jako v následujícím příkladu:
 
 ```cmd
 vs_enterprise.exe --in customInstall.json
 ```
 
-Soubory odpovědí jsou soubory [JSON](http://json-schema.org/) , jejichž obsah zrcadlí argumenty příkazového řádku.  Obecně platí, že pokud parametr příkazového řádku nepřijímá žádné argumenty (například `--quiet`, `--passive`atd.), musí mít hodnota v souboru odpovědí hodnotu true nebo false.  Pokud převezme argument (například `--installPath <dir>`), musí být hodnota v souboru odpovědí řetězec.  Pokud převezme argument a může se zobrazit na příkazovém řádku více než jednou (například `--add <id>`), mělo by to být pole řetězců.
+Soubory odpovědí jsou [JSON](http://json-schema.org/) soubory, jejichž obsah zrcadlí argumenty příkazového řádku.  Obecně platí, že pokud parametr příkazového řádku nepřijímá žádné argumenty (například `--quiet`, `--passive`atd), hodnota v souboru odpovědí musí být true nebo false.  Pokud má argument (například `--installPath <dir>`), hodnota v souboru odpovědí by měl být řetězec.  Pokud má argument a může být více než jednou v příkazovém řádku (například `--add <id>`), měla by být pole řetězců.
 
-Parametry, které jsou zadány v nastavení přepisu příkazového řádku ze souboru odpovědí, s výjimkou případů, kdy parametry přebírají více vstupů (například `--add`). Pokud máte více vstupů, jsou vstupy zadané v příkazovém řádku sloučeny s nastavením ze souboru odpovědí.
+Parametry, které jsou určeny na příkazový řádek přepsání nastavení ze souboru odpovědí s výjimkou při parametry trvat více vstupů (například `--add`). Pokud máte více vstupů, vstupy zadané na příkazovém řádku jsou sloučeny s nastavení ze souboru odpovědí.
 
-## <a name="setting-a-default-configuration-for-visual-studio"></a>Nastavení výchozí konfigurace pro Visual Studio
+## <a name="setting-a-default-configuration-for-visual-studio"></a>Nastavuje se výchozí konfigurace pro sadu Visual Studio
 
-Pokud jste vytvořili mezipaměť rozložení sítě s `--layout`, vytvoří se v rozložení počáteční soubor `response.json`. Pokud vytvoříte částečné rozložení, bude tento soubor odpovědí obsahovat úlohy a jazyky, které byly zahrnuty v rozložení.  Při spuštění instalačního programu z tohoto rozložení se automaticky použije tento soubor Response. JSON, který vybere úlohy a součásti zahrnuté v rozložení.  Uživatelé si stále můžou vybrat libovolné úlohy v uživatelském rozhraní instalace před instalací sady Visual Studio.
+Pokud jste vytvořili mezipaměť rozložení sítě se `--layout`, počáteční `response.json` soubor se vytvoří v rozložení. Pokud vytvoříte částečné rozložení, tento soubor odpovědí obsahuje úlohy a jazyky, které byly součástí rozložení.  Spuštění instalačního programu z tohoto rozložení automaticky používá tento soubor response.json vybere úlohy a komponenty, které jsou součástí rozložení.  Uživatelé mohou stále zaškrtněte nebo zrušte všechny úlohy v nastavení uživatelského rozhraní před instalací sady Visual Studio.
 
-Správci, kteří vytvářejí rozložení, mohou upravit soubor `response.json` v rozložení, aby bylo možné řídit výchozí nastavení, která se uživatelům zobrazí při instalaci sady Visual Studio z rozložení.  Pokud například chce správce, aby ve výchozím nastavení nastavil konkrétní úlohy a komponenty, může nakonfigurovat `response.json` soubor, aby je přidal.
+Správci, kteří vytvářejí rozložení můžete upravit `response.json` souboru v rozložení a výchozí nastavení, které jejich uživatelům zobrazit při instalaci sady Visual Studio z rozložení ovládacího prvku.  Například, pokud správce chce, aby se určité úlohy a komponenty, které jsou ve výchozím nastavení nainstalované, mohou nakonfigurovat `response.json` souboru je přidat.
 
-Když je instalační program sady Visual Studio spuštěn ze složky rozložení, _automaticky_ používá soubor odpovědí ve složce rozložení.  Nemusíte používat možnost `--in`.
+Při spuštění instalačního programu sady Visual Studio ze složky rozložení, ho _automaticky_ používá soubor odpovědí ve složce rozložení.  Není nutné použít `--in` možnost.
 
-Soubor `response.json`, který je vytvořený ve složce offline rozložení, můžete aktualizovat a definovat výchozí nastavení pro uživatele, kteří z tohoto rozložení nainstalují.
+Můžete aktualizovat `response.json` soubor, který je vytvořen ve složce aplikace offline rozložení pro definování výchozí nastavení pro uživatele, kteří si nainstalují z tohoto rozložení.
 
 > [!WARNING]
-> Je důležité, abyste nechali existující vlastnosti, které byly definovány při vytváření rozložení.
+> Je velmi důležité ponechat existující vlastnosti, která byla definována při vytváření rozložení.
 
-Základní `response.json` soubor v rozložení by měl vypadat podobně jako v následujícím příkladu, s tím rozdílem, že by obsahoval hodnotu pro produkt a kanál, který chcete nainstalovat:
+Základní `response.json` soubor v rozložení by měl vypadat podobně jako v následujícím příkladu, s tím rozdílem, že by měl obsahovat hodnotu pro produkt a kanál, který chcete nainstalovat:
 
 ::: moniker range="vs-2017"
 
@@ -78,11 +78,11 @@ Základní `response.json` soubor v rozložení by měl vypadat podobně jako v 
 
 ::: moniker-end
 
-Při vytváření nebo aktualizaci rozložení se vytvoří také soubor Response. template. JSON.  Tento soubor obsahuje všechna ID úloh, komponent a jazyků, které lze použít.  Tento soubor je k dispozici jako šablona pro to, co by bylo možné zahrnout do vlastní instalace.  Správci můžou tento soubor použít jako výchozí bod pro vlastní soubor odpovědí.  Stačí odebrat ID pro věci, které nechcete instalovat, a uložit je do vlastního souboru odpovědí.  Neupravujte soubor Response. template. JSON, jinak se provedené změny ztratí při aktualizaci rozložení.
+Při vytvoření nebo aktualizaci rozložení, je také vytvoří soubor response.template.json.  Tento soubor obsahuje všechny úlohy, komponenty a jazyků, které lze použít.  Tento soubor je k dispozici jako šablona pro co může být součástí vlastní instalace.  Správci mohou používat tento soubor jako výchozí bod pro vlastní odpovědi souboru.  Odeberte ID pro takové věci, které nechcete k instalaci a uložit v souboru odpovědí.  Neupravujte soubor response.template.json nebo vaše změny budou ztraceny, jakmile dojde k aktualizaci rozložení.
 
-## <a name="example-layout-response-file-content"></a>Příklad obsahu souboru odpovědi na rozložení
+## <a name="example-layout-response-file-content"></a>Obsah souboru odezvy příklad rozložení
 
-Následující příklad instaluje Visual Studio Enterprise se šesti běžnými úlohami a komponentami a zároveň s jazyky anglické a francouzského uživatelského rozhraní. Tento příklad můžete použít jako šablonu. Stačí změnit úlohy a komponenty na ty, které chcete nainstalovat:
+Následující příklad nainstaluje Visual Studio Enterprise s šest běžné úlohy a komponenty a jazyky angličtinu a francouzštinu uživatelského rozhraní. V tomto příkladu můžete použít jako šablonu; Stačí změňte úlohy a komponenty na ty, které chcete nainstalovat:
 
 ::: moniker range="vs-2017"
 

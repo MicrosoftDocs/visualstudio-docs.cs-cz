@@ -4,17 +4,17 @@ titleSuffix: Blend for Visual Studio
 ms.date: 03/06/2018
 ms.topic: conceptual
 ms.assetid: 87d31b6c-4607-4121-bb7d-cfc80390ab93
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ed267391565012a65f14ce675131df79e39adc6
-ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
+ms.openlocfilehash: f273294d9da0c0cf71f96ae3bde8e5e0457259c9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919220"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592971"
 ---
 # <a name="display-data-in-blend-for-visual-studio"></a>Zobrazit data v Blend pro Visual Studio
 
@@ -22,7 +22,7 @@ Ukázková data můžete zobrazit v návrháři při přizpůsobování rozlože
 
 ## <a name="generate-sample-data"></a>Generování ukázkových dat
 
-Chcete-li generovat ukázková data, otevřete dokument XAML. Na panelu **data** zvolte ikonu **Vytvořit ukázková data** ![vytvořit ukázková data](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png) tlačítko a pak zvolte **Nová ukázková data**.
+Chcete-li generovat ukázková data, otevřete dokument XAML. Na panelu **data** ![klikněte na](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png) tlačítko **vytvořit** ukázková data vytvořit ukázková data a pak zvolte **Nová ukázková data**.
 
 Na panelu **data** definujte strukturu vašich dat a potom ji navažte na prvky uživatelského rozhraní na libovolné stránce.
 
@@ -38,7 +38,7 @@ Pokud chcete, aby se vaše ukázková data zobrazovala na stránkách při spuš
 
 Pokud jste již vytvořili třídy, které popisují strukturu vašich dat, můžete z nich vygenerovat ukázková data.
 
-Chcete-li generovat ukázková data z třídy, otevřete dokument XAML a poté na panelu **data** klikněte na ikonu **Vytvořit ukázková data** ![vytvořit ukázková data](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png) tlačítko a potom klikněte na možnost **Vytvořit Ukázková data z třídy**.
+Chcete-li generovat ukázková data z třídy, otevřete dokument XAML a poté na panelu **data** ![klikněte na](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png) tlačítko **vytvořit** ukázková data vytvořit ukázková data a potom klikněte na možnost **Vytvořit Ukázková data z třídy**.
 
 **Podívejte se na krátké video:** ikona přehrát ![](../designers/media/bldadminconsoleinitialconfigicon.PNG) [v Blendu smíchá několik datových vazeb](https://www.youtube.com/watch?v=LSwPB6CAvjg).
 

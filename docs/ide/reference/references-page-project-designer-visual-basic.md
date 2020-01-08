@@ -10,17 +10,17 @@ helpviewer_keywords:
 - References page in Project Designer
 - Project Designer, References page
 ms.assetid: 5a47c595-e084-401c-86e1-74e0bf74fd86
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ca3d54a7e2643baebe44e0f2756d6ae65eb228d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b80427999ad841c493e61cd704b64435f81c3914
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747801"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565601"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>Stránka Odkazy, návrhář projektu (Visual Basic)
 
@@ -56,7 +56,7 @@ Vyberte **odkaz** pro přidání odkazu na projekt pomocí dialogového okna Př
 
 Vyberte **webový odkaz** a přidejte webový odkaz do projektu pomocí dialogového okna **Přidat webový odkaz** .
 
- **Odebrány**
+ **odebrat**
 
 V seznamu **odkazy** vyberte jeden nebo více odkazů a kliknutím na toto tlačítko jej odstraňte.
 
@@ -68,7 +68,7 @@ Vyberte webový odkaz v seznamu **odkazy** a kliknutím na toto tlačítko ho ak
 
 V tomto poli můžete zadat vlastní obor názvů a kliknutím na **Přidat import uživatele** ho přidat do seznamu oborů názvů.
 
-Můžete vytvořit aliasy pro uživatelem importované obory názvů. Provedete to tak, že zadáte alias a obor názvů ve formátu *alias* =*obor názvů*. To je užitečné, pokud používáte dlouhé obory názvů, například: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http`.
+Můžete vytvořit aliasy pro uživatelem importované obory názvů. Provedete to tak, že zadáte alias a obor názvů ve formátu *alias*=*obor názvů*. To je užitečné, pokud používáte dlouhé obory názvů, například: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http`.
 
  **Přidat import uživatele**
 

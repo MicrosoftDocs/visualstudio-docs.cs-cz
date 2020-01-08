@@ -1,5 +1,5 @@
 ---
-title: StartTrackingContext | Dokumentace Microsoftu
+title: StartTrackingContext | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 apiname:
@@ -10,20 +10,20 @@ apitype: COM
 helpviewer_keywords:
 - StartTrackingContext
 ms.assetid: 720cd295-38e7-4974-86db-b8106b1207ba
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c395df1e08f1b4e33e9cd34fec54bdd044f3b4c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4b84753974eeecb8dca85035d50635d0bee47645
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939206"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595043"
 ---
 # <a name="starttrackingcontext"></a>StartTrackingContext
-Začněte kontext sledování.
+Spusťte sledovací kontext.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,14 +34,14 @@ HRESULT WINAPI StartTrackingContext(LPCTSTR intermediateDirectory, LPCTSTR taskN
 #### <a name="parameters"></a>Parametry
 [in] `intermediateDirectory`
 
- Adresáře, ve kterém k uložení protokolu sledování.
+ Adresář, do kterého má být uložen protokol sledování.
 
 [in] `taskName`
 
- Určuje kontext sledování. Tento název se používá k vytvoření názvu souboru protokolu.
+ Identifikuje sledovací kontext. Tento název se používá k vytvoření názvu souboru protokolu.
 
 ## <a name="return-value"></a>Návratová hodnota
- **HRESULT** s **SUCCEEDED** sadu bitů, pokud byl vytvořen kontext sledování.
+ Hodnota **HRESULT** s **úspěšně** nastaveným bitem, pokud byl vytvořen sledovací kontext.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *FileTracker.h*
+ **Záhlaví:** *stoper. h*

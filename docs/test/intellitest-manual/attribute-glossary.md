@@ -4,40 +4,40 @@ ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Attribute glossary
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: dce8d33f876ee34e18812cb744d7d3d6f53a5506
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: 00d8b24d26237a3c7b4130eba4614b5ea7b7eccd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653235"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594302"
 ---
 # <a name="attribute-glossary"></a>Glosář atributů
 
 ## <a name="attributes-by-namespace"></a>Atributy podle oboru názvů
 
-* **Microsoft. Pex. Framework**
+* **Microsoft.Pex.Framework**
   * [PexAssumeNotNull](#pexassumenotnull)
   * [PexClass](#pexclass)
   * [PexGenericArguments](#pexgenericarguments)
   * [PexMethod](#pexmethod)
     * [PexExplorationAttributeBase](#pexexplorationattributebase)
 
-* **Microsoft. Pex. Framework. Settings**
+* **Microsoft.Pex.Framework.Settings**
   * [PexAssemblySettings](#pexassemblysettings)
 
-* **Microsoft. Pex. Framework. instrumentace**
+* **Microsoft.Pex.Framework.Instrumentation**
   * [PexAssemblyUnderTest](#pexassemblyundertest)
   * [PexInstrumentAssembly](#pexinstrumentassemblyattribute)
 
-* **Microsoft. Pex. Framework. using**
+* **Microsoft.Pex.Framework.Using**
   * [PexUseType](#pexusetype)
 
-* **Microsoft. Pex. Framework. Validation**
+* **Microsoft.Pex.Framework.Validation**
   * [PexAllowedException](#pexallowedexception)
   * [PexAllowedExceptionFromAssembly](#pexallowedexceptionfromassembly)
   * [PexAllowedExceptionFromType](#pexallowedexceptionfromtype)

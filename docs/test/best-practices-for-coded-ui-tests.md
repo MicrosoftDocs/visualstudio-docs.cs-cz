@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - coded UI tests, best practices
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 174059a3b5053602c7f5d21f7b663d0a48bbe709
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e71029a185d1b3fea1812b2a4b1cf7bf20effff8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665293"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565159"
 ---
 # <a name="best-practices-for-coded-ui-tests"></a>Osvědčené postupy pro programové testy uživatelského rozhraní
 
@@ -52,7 +52,7 @@ Použijte následující pokyny pro vytvoření flexibilního programového test
 
 Programové testy uživatelského rozhraní jsou automaticky přizpůsobeny mnoha změnám v uživatelském rozhraní. Pokud například prvek uživatelského rozhraní má změnu pozice nebo barvy, ve většině případů bude programový test UI stále najít správný prvek.
 
-Během testovacího běhu jsou ovládací prvky uživatelského rozhraní umístěny pomocí testovací architektury pomocí sady vlastností hledání. Vlastnosti hledání jsou aplikovány na každou třídu ovládacího prvku v definicích vytvořených **tvůrcem programového testu UI** v souboru *UIMap.Designer.cs* . Vlastnosti hledání obsahují páry název-hodnota názvů vlastností a hodnot vlastností, které lze použít k identifikaci ovládacího prvku, například <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> a <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> vlastnosti ovládacího prvku. Pokud se vlastnosti hledání nezměnily, Programový test uživatelského rozhraní úspěšně najde ovládací prvek v uživatelském rozhraní. Pokud se změní vlastnosti hledání, Programový test UI má algoritmus inteligentního porovnávání, který používá heuristiky pro hledání ovládacích prvků a oken v uživatelském rozhraní. Po změně uživatelského rozhraní může být možné upravit vlastnosti hledání dříve identifikovaných prvků, aby bylo zajištěno, že budou nalezeny.
+Během testovacího běhu jsou ovládací prvky uživatelského rozhraní umístěny pomocí testovací architektury pomocí sady vlastností hledání. Vlastnosti hledání jsou aplikovány na každou třídu ovládacího prvku v definicích vytvořených **tvůrcem programového testu UI** v souboru *UIMap.Designer.cs* . Vlastnosti hledání obsahují páry název-hodnota názvů vlastností a hodnot vlastností, které lze použít k identifikaci ovládacího prvku, například <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A>a <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> vlastnosti ovládacího prvku. Pokud se vlastnosti hledání nezměnily, Programový test uživatelského rozhraní úspěšně najde ovládací prvek v uživatelském rozhraní. Pokud se změní vlastnosti hledání, Programový test UI má algoritmus inteligentního porovnávání, který používá heuristiky pro hledání ovládacích prvků a oken v uživatelském rozhraní. Po změně uživatelského rozhraní může být možné upravit vlastnosti hledání dříve identifikovaných prvků, aby bylo zajištěno, že budou nalezeny.
 
 ## <a name="if-your-user-interface-changes"></a>Pokud se změní vaše uživatelské rozhraní
 
@@ -92,4 +92,4 @@ Playback.PlaybackSettings.WaitForReadyLevel = WaitForReadyLevel.UIThreadOnly;
 - [Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)
 - [Vytváření programových testů uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)
 - [Testování rozsáhlé aplikace s více mapami uživatelského rozhraní](../test/testing-a-large-application-with-multiple-ui-maps.md)
-- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a záznamy akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a zaznamenávání akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

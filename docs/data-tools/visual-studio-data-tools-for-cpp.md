@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
 - CPP
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
 - cplusplus
-ms.openlocfilehash: 33c91a7c21a04624d71692d12b7a7f15a16e1d67
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2be19729b61831e6f15ff40b6b4e1d7b4b0bb541
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639508"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586052"
 ---
 # <a name="visual-studio-data-tools-for-c"></a>Datové nástroje sady Visual Studio pro C++
 
@@ -41,7 +41,7 @@ Pokud chcete využít vlastní funkce v SQL Server 2005 a novějších, použijt
 
 4. Stáhněte si ukázku Windows SDK ODBC a rozbalte ji do nového umístění. Tato ukázka zobrazuje základní příkazy ODBC, které slouží k připojení k databázi a vydávání dotazů a příkazů. Další informace o těchto funkcích najdete v části [Microsoft Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc). Při prvním načtení řešení (je ve C++ složce) bude Visual Studio nabízet upgrade řešení na aktuální verzi sady Visual Studio. Klikněte na tlačítko **Ano**.
 
-5. Chcete-li použít nativního klienta, budete potřebovat soubor *hlaviček* a soubor *lib* . Tyto soubory obsahují funkce a definice, které jsou specifické pro SQL Server, nad rámec funkcí rozhraní ODBC definovaných v SQL. h. V okně**vlastnosti** **projektu**  >   > **adresáře VC + +** přidejte následující adresář include:
+5. Chcete-li použít nativního klienta, budete potřebovat soubor *hlaviček* a soubor *lib* . Tyto soubory obsahují funkce a definice, které jsou specifické pro SQL Server, nad rámec funkcí rozhraní ODBC definovaných v SQL. h. V okně **vlastnosti** **projektu** >  > **adresáře VC + +** přidejte následující adresář include:
 
    **%ProgramFiles%\Microsoft SQL Server\110\SDK\Include**
 
@@ -58,13 +58,13 @@ Pokud chcete využít vlastní funkce v SQL Server 2005 a novějších, použijt
 
     Všimněte si, že vzorek ve skutečnosti nepoužívá žádnou z nativních funkcí klienta, takže předchozí kroky není nutné, aby je bylo možné zkompilovat a spustit. Ale projekt je teď nakonfigurovaný, abyste mohli tuto funkci používat. Další informace najdete v tématu [SQL Server Native Client programování](/sql/relational-databases/native-client/sql-server-native-client).
 
-7. Určete, který ovladač se má použít v subsystému rozhraní ODBC. Ukázka předá atribut připojovacího řetězce ovladače v podobě argumentu příkazového řádku. V  > **vlastnosti** **projektu**  > **ladění**přidejte tento argument příkazu:
+7. Určete, který ovladač se má použít v subsystému rozhraní ODBC. Ukázka předá atribut připojovacího řetězce ovladače v podobě argumentu příkazového řádku. V > **vlastnosti** **projektu** > **ladění**přidejte tento argument příkazu:
 
    ```cpp
    DRIVER="SQL Server Native Client 11.0"
    ```
 
-8. Stisknutím klávesy **F5** Sestavte a spusťte aplikaci. Mělo by se zobrazit dialogové okno z ovladače, který vás vyzve k zadání databáze. Zadejte `(localdb)\MSSQLLocalDB` a ověřte **použití důvěryhodného připojení**. Stiskněte **OK**. Měla by se zobrazit konzola se zprávami, které indikují úspěšné připojení. Měl by se zobrazit také příkazový řádek, kde můžete zadat příkaz SQL. Následující obrazovka ukazuje příklad dotazu a výsledků:
+8. Stisknutím klávesy **F5** Sestavte a spusťte aplikaci. Mělo by se zobrazit dialogové okno z ovladače, který vás vyzve k zadání databáze. Zadejte `(localdb)\MSSQLLocalDB`a ověřte **použití důvěryhodného připojení**. Stisknutím klávesy **OK**. Měla by se zobrazit konzola se zprávami, které indikují úspěšné připojení. Měl by se zobrazit také příkazový řádek, kde můžete zadat příkaz SQL. Následující obrazovka ukazuje příklad dotazu a výsledků:
 
    ![Výstup ukázkového dotazu ODBC](../data-tools/media/raddata-odbc-sample-query-output.png)
 

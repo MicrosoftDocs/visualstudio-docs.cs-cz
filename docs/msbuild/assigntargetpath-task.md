@@ -1,5 +1,5 @@
 ---
-title: Assigntargetpath – úloha | Dokumentace Microsoftu
+title: Úloha AssignTargetPath – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -8,35 +8,35 @@ dev_langs:
 - C++
 - jsharp
 ms.assetid: 0e830e31-3bcf-4259-b2a8-a5df49b92d51
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3afe10d8bb912b911734437eb79684cdbfe9f78d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 41a32b914cab8626df513994a3d68c2aac3d7cb7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62823250"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593431"
 ---
-# <a name="assigntargetpath-task"></a>Assigntargetpath – úloha
-Tento úkol přijímá seznam souborů a přidá `<TargetPath>` atributy, pokud již nejsou určeny.
+# <a name="assigntargetpath-task"></a>AssignTargetPath – – úloha
+Tato úloha přijme seznam souborů a přidá atributy `<TargetPath>`, pokud již nejsou zadány.
 
 ## <a name="task-parameters"></a>Parametry úlohy
-Následující tabulka popisuje parametry `AssignTargetPath` úloh.
+Následující tabulka popisuje parametry úlohy `AssignTargetPath`.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`RootFolder`|Volitelné `string` vstupního parametru.<br /><br /> Obsahuje cestu ke složce obsahující cílové odkazy.|
-|`Files`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` vstupního parametru.<br /><br /> Obsahuje seznam příchozích souborů.|
-|`AssignedFiles`|volitelná,<br /><br /> <xref:Microsoft.Build.Framework.ITaskItem> `[]` Výstupní parametr.<br /><br /> Obsahuje výsledný seznam souborů.|
+|`RootFolder`|Volitelný vstupní parametr `string`.<br /><br /> Obsahuje cestu ke složce, která obsahuje cílové odkazy.|
+|`Files`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>vstupní parametr `[]`.<br /><br /> Obsahuje seznam příchozích souborů.|
+|`AssignedFiles`|Volitelné<br /><br /> výstupní parametr <xref:Microsoft.Build.Framework.ITaskItem> `[]`.<br /><br /> Obsahuje výsledný seznam souborů.|
 
 ## <a name="remarks"></a>Poznámky
-Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).
+Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
-Následující příklad provede `AssignTargetPath` úkolů ke konfiguraci projektu.
+Následující příklad spustí úlohu `AssignTargetPath` ke konfiguraci projektu.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -53,4 +53,4 @@ RootFolder="Resources"
 
 ## <a name="see-also"></a>Viz také:
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

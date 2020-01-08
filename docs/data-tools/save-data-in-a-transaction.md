@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Transactions namespace
 - saving data
 ms.assetid: 80260118-08bc-4b37-bfe5-9422ee7a1e4e
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0b3262b6123a496cda7025e369c99193ea8b6fd2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c0efdda51a52b18697828e1772eb4a71435753e8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641103"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586234"
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>Návod: Uložení dat do transakce
 
@@ -38,11 +38,11 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
     1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (Průzkumník objektů systému SQL Server je nainstalován v rámci úlohy **úložiště dat a zpracování** v instalační program pro Visual Studio.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
 
-       Otevře se okno editoru dotazů.
+       Otevře se okno editor dotazů.
 
     2. Zkopírujte [skript Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
 
-    3. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
+    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
 
        Po krátké době se dotaz dokončí a vytvoří se databáze Northwind.
 
@@ -50,7 +50,7 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
 Prvním krokem je vytvoření **aplikace model Windows Forms**.
 
-1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  > **projekt**.
+1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový** > **projekt**.
 
 2. V levém podokně rozbalte buď **vizuál C#**  , nebo **Visual Basic** a pak vyberte **Desktop Windows**.
 
@@ -96,7 +96,7 @@ Můžete vytvořit ovládací prvky vázané na data přetažením položek z ok
 
 2. Přetáhněte hlavní uzel **Customers** z okna **zdroje dat** do formuláře **Form1**.
 
-   Na formuláři se zobrazí ovládací prvek <xref:System.Windows.Forms.DataGridView> a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)`CustomersTableAdapter`, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
+   Na formuláři se zobrazí ovládací prvek <xref:System.Windows.Forms.DataGridView> a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)`CustomersTableAdapter`, <xref:System.Windows.Forms.BindingSource>a <xref:System.Windows.Forms.BindingNavigator>.
 
 3. Přetáhněte uzel souvisejících **objednávek** (nikoli uzel hlavní **objednávky** , ale související uzel podřízené tabulky pod sloupcem **Fax** ) do formuláře pod **customersDataGridView**.
 
@@ -122,7 +122,7 @@ Pro první tabulku, která je na formuláři vložená, se ve výchozím nastave
 
 1. Vyberte tlačítko **Uložit** na **CustomersBindingNavigator** (tlačítko s ikonou na disketě).
 
-2. Metodu `CustomersBindingNavigatorSaveItem_Click` nahraďte následujícím kódem:
+2. Nahraďte metodu `CustomersBindingNavigatorSaveItem_Click` následujícím kódem:
 
      [!code-vb[VbRaddataSaving#4](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_1.vb)]
      [!code-csharp[VbRaddataSaving#4](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_1.cs)]

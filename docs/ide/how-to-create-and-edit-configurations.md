@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Vytvoření a úprava konfigurací'
+title: 'Postupy: vytváření a úpravy konfigurací'
 ms.date: 06/21/2017
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - project build configurations, creating
 - project build configurations, editing
 ms.assetid: 19be121c-148e-4ece-bbfc-d20b08cfc3f7
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6fdf3fa790a29f94a5bf3b40bc0d2ada703bc5b
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: bb47a1b136f4f1e584b9b1b6f99fde7008ecc902
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925763"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595290"
 ---
-# <a name="how-to-create-and-edit-configurations"></a>Postupy: Vytvoření a úprava konfigurací
+# <a name="how-to-create-and-edit-configurations"></a>Postupy: vytváření a úpravy konfigurací
 
 Můžete vytvořit několik konfigurací sestavení pro řešení. Můžete například nakonfigurovat sestavení pro ladění, které můžou testeri použít k vyhledání a opravě problémů, a můžete nakonfigurovat různé druhy sestavení, které můžete distribuovat různým zákazníkům.
 
@@ -40,7 +40,7 @@ Pomocí dialogového okna **Configuration Manager** můžete vybrat nebo změnit
 Chcete-li otevřít dialogové okno **Configuration Manager** , v **Průzkumník řešení**otevřete místní nabídku řešení a zvolte možnost **Configuration Manager**.
 
 > [!NOTE]
-> Pokud se příkaz **Configuration Manager** v místní nabídce nezobrazí, podívejte se do nabídky **sestavení** na řádku nabídek. Pokud v panelu nabídek buď není, zvolte možnost **nástroje** > a v levémpodokně dialogového okna **Možnosti** rozbalte **projekty a řešení** > **Obecné**a napravo. Zaškrtněte políčko **Zobrazit pokročilé konfigurace sestavení** .
+> Pokud se příkaz **Configuration Manager** v místní nabídce nezobrazí, podívejte se do nabídky **sestavení** na řádku nabídek. Pokud se buď nezobrazí, na panelu nabídek zvolte **nástroje** > **Možnosti**a potom v levém podokně dialogového okna **možnosti** rozbalte **projekty a řešení** > **Obecné**a v pravém podokně zaškrtněte políčko **Zobrazit pokročilé konfigurace sestavení** .
 
 V dialogovém okně **Configuration Manager** můžete použít rozevírací seznam **Konfigurace aktivního řešení** k výběru konfigurace sestavení pro celé řešení, úpravě existujícího nebo vytvoření nové konfigurace. Pomocí rozevíracího seznamu **Aktivní platforma řešení** můžete vybrat platformu, kterou konfigurace cílí, upravit existující nebo přidat novou platformu. Podokno **kontexty projektu** obsahuje seznam projektů v řešení. Pro každý projekt můžete vybrat konfiguraci a platformu specifickou pro konkrétní projekt, upravit existující nebo vytvořit novou konfiguraci nebo přidat novou platformu. Můžete také zaškrtnout políčka, která určují, zda je každý projekt zahrnut při použití konfigurace pro sestavení nebo nasazení řešení v rámci řešení.
 
@@ -48,7 +48,7 @@ Po nastavení požadovaných konfigurací můžete nastavit vlastnosti projektu,
 
 ### <a name="set-properties-based-on-configurations"></a>Nastavení vlastností na základě konfigurací
 
-Chcete-li nastavit vlastnosti založené na konfiguracích, v **Průzkumník řešení**otevřete místní nabídku pro projekt a poté zvolte možnost **vlastnosti**. Můžete nastavit vlastnosti pro vaše konfigurace. Například pro konfiguraci vydané verze můžete určit, že kód je optimalizován při sestavení řešení a pro konfiguraci ladění, můžete určit, že `DEBUG` je zahrnut symbol podmíněné kompilace.
+Chcete-li nastavit vlastnosti založené na konfiguracích, v **Průzkumník řešení**otevřete místní nabídku pro projekt a poté zvolte možnost **vlastnosti**. Můžete nastavit vlastnosti pro vaše konfigurace. Například pro konfiguraci vydání můžete určit, že kód je optimalizován při sestavení řešení a pro konfiguraci ladění, můžete určit, že je zahrnut symbol `DEBUG` podmíněné kompilace.
 
 Další informace o nastavení stránky vlastností naleznete v tématu [Správa vlastností projektu a řešení](../ide/managing-project-and-solution-properties.md).
 

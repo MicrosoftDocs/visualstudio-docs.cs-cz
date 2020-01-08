@@ -7,17 +7,17 @@ helpviewer_keywords:
 - bidirectional language support
 - Arabic, creating applications
 ms.assetid: b56f9795-ed8d-4452-9d49-8ca0b0145d86
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fa91a1f3342039821dc1e0a2ea89c8b0e25f224
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 57bccfccb77c5a80fd2630680564f88f08d7ca5b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647374"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591993"
 ---
 # <a name="support-for-bidirectional-languages-in-visual-studio"></a>Podpora obousměrných jazyků v aplikaci Visual Studio
 
@@ -58,7 +58,7 @@ Následující prvky mohou být pojmenovány pomocí arabštiny nebo hebrejštin
 
 - Hodnoty vlastností.
 
-   V okně **vlastnosti** můžete použít arabský nebo Hebrejská text. Okno umožňuje přepínat mezi směry čtení zprava doleva a zleva doprava pomocí standardních klávesových úhozů systému Windows (**Ctrl** +**RightShift** pro psaní zprava doleva a **kombinací kláves CTRL** +**LeftShift** pro zleva doprava).
+   V okně **vlastnosti** můžete použít arabský nebo Hebrejská text. Okno umožňuje přepínat mezi směry čtení zprava doleva a zleva doprava pomocí standardních klávesových úhozů systému Windows (**Ctrl**+**RightShift** pro psaní zprava doleva a **kombinací kláves CTRL**+**LeftShift** pro zleva doprava).
 
 - Kód a literální text.
 
@@ -78,7 +78,7 @@ Soubory můžete ukládat a otevírat pomocí kódování pro konkrétní jazyk 
 
 ## <a name="right-to-left-reading-order"></a>Pořadí čtení zprava doleva
 
-Visual Studio má omezené podpory pro pořadí čtení zprava doleva. Ve výchozím nastavení používají ovládací prvky pro zadávání textu v aplikaci Visual Studio směr čtení zleva doprava. Ve většině případů můžete použít standardní gesta Windows k přepínání pořadí čtení. Například můžete stisknout **Ctrl** +**RightShift** a přepnout okno **vlastnosti** tak, aby podporovalo pořadí čtení zprava doleva pro hodnoty vlastností.
+Visual Studio má omezené podpory pro pořadí čtení zprava doleva. Ve výchozím nastavení používají ovládací prvky pro zadávání textu v aplikaci Visual Studio směr čtení zleva doprava. Ve většině případů můžete použít standardní gesta Windows k přepínání pořadí čtení. Například můžete stisknout **Ctrl**+**RightShift** a přepnout okno **vlastnosti** tak, aby podporovalo pořadí čtení zprava doleva pro hodnoty vlastností.
 
 Směr čtení zprava doleva není podporován na následujících místech v aplikaci Visual Studio:
 

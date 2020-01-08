@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, generated code
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 44f66ed25ab43db2d08db3cb93263bd61ac3a907
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 1196faa5831ae44a93f21ab1808915357690a0ac
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189457"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565939"
 ---
 # <a name="understanding-the-dsl-code"></a>Porozumění kódu DSL
 
@@ -70,7 +70,7 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
  (V příkladu řešení komponenty se jeden ze tvůrců připojení nazývá tvůrci propojení, jedná se o spoludopad, protože doménový vztah se nazývá připojení.)
 
- Relace je vytvořena v metodě `Builder.Connect()` *vztahu* . Výchozí verze ověří, zda jsou prvky zdrojového a cílového modelu přijatelné, a poté vytvoří instanci vztahu. Příklad:
+ Relace je vytvořena v metodě`Builder.Connect()` *vztahu* . Výchozí verze ověří, zda jsou prvky zdrojového a cílového modelu přijatelné, a poté vytvoří instanci vztahu. Příklad:
 
  `CommentReferencesSubject(sourceAccepted, targetAccepted);`
 
@@ -112,17 +112,17 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
 - Definice vlastnosti a vnořená třída obslužné rutiny pro každou doménovou vlastnost. Můžete přepsat OnValueChanging () a OnValueChanged (). Další informace najdete v tématu [obslužné rutiny změny hodnoty vlastnosti domény](../modeling/domain-property-value-change-handlers.md).
 
-   V příkladu DSL obsahuje Třída `Comment` vlastnost `Text` a `TextPropertyHandler` třídy obslužné rutiny.
+   V příkladu DSL obsahuje Třída `Comment` vlastnost `Text` a `TextPropertyHandler`třídy obslužné rutiny.
 
 - Vlastnosti přístupového objektu pro vztahy, ve kterých se tato doménová třída podílí. (Pro vlastnosti role neexistuje žádná vnořená třída.)
 
-   V příkladu DSL má třída `Comment` přistupující objekty, které přistupují k nadřazenému modelu pomocí `ComponentModelHasComments` relace vložení.
+   V příkladu DSL má třída `Comment` přistupující objekty, které přistupují k nadřazenému modelu pomocí `ComponentModelHasComments`relace vložení.
 
 - Konstruktory. Pokud je chcete přepsat, nastavte u třídy doména **vlastní konstruktor** .
 
 - Metody obslužné rutiny prototypu skupiny elementů (EGP). Ty jsou nezbytné, pokud uživatel může *Sloučit* (Přidat) jiný prvek do instancí této třídy. Uživatel to obvykle provede přetažením z nástroje prvku nebo jiného tvaru nebo vložením.
 
-   V příkladu DSL je možné do komponenty sloučit vstupní port nebo výstupní port. Součásti a komentáře lze také sloučit do modelu. Rozhraní
+   V příkladu DSL je možné do komponenty sloučit vstupní port nebo výstupní port. Součásti a komentáře lze také sloučit do modelu. Použitím parametru
 
    Metody obslužné rutiny EGP ve třídě Component umožňují komponentě přijímat porty, ale ne komentáře. Obslužná rutina EGP v kořenové třídě modelu akceptuje komentáře a komponenty, ale ne porty.
 
@@ -340,7 +340,7 @@ explorerWindow.TreeContainer.ObjectModelBrowser.SelectedNode = treeNode;
  Chcete-li tento soubor přizpůsobit, upravte soubor `.tt`.
 
 > [!WARNING]
-> Pokud upravujete soubor. TT tak, aby zahrnoval prostředky, jako jsou ikony nebo obrázky, ujistěte se, že je prostředek součástí sestavení VSIX. V Průzkumník řešení vyberte soubor a ujistěte se, že je `True` **zahrnout do vlastnosti VSIX** .
+> Pokud upravujete soubor. TT tak, aby zahrnoval prostředky, jako jsou ikony nebo obrázky, ujistěte se, že je prostředek součástí sestavení VSIX. V Průzkumník řešení vyberte soubor a ujistěte se, že je `True`**zahrnout do vlastnosti VSIX** .
 
  Tento soubor určuje, jak se DSL zabalí do rozšíření integrace sady Visual Studio (VSIX). Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md).
 

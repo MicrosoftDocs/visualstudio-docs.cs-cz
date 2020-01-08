@@ -4,17 +4,17 @@ ms.date: 03/23/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - full solution analysis
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3f7837b1e5ea5b84e1ee1197bf6f8c40d0863c3e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d699dd74315cfc36820c1cdb4120543e0290b1a1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649449"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587508"
 ---
 # <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>Postupy: povolení a zákaz úplné analýzy řešení pro spravovaný kód
 
@@ -32,9 +32,9 @@ Následující obrázek znázorňuje výsledky ze stejného řešení po zakáz�
 
 ## <a name="toggle-full-solution-analysis"></a>Přepnout úplnou analýzu řešení
 
-1. Chcete-li otevřít dialogové okno **Možnosti** , na panelu nabídek v aplikaci Visual Studio vyberte možnost **nástroje** > **Možnosti**.
+1. Chcete-li otevřít dialogové okno **Možnosti** , v panelu nabídek v aplikaci Visual Studio vyberte možnost **nástroje** > **Možnosti**.
 
-1. V dialogovém okně **Možnosti** vyberte možnost **textový editor** > **C#** nebo **Basic** > **Advanced**.
+1. V dialogovém okně **Možnosti** vyberte možnost **textový editor** > **C#** nebo **základní** > **Upřesnit**.
 
 1. Zaškrtnutím políčka **Povolit úplnou analýzu řešení** povolíte úplnou analýzu řešení, nebo zaškrtnutím políčka zakážete. Až skončíte, klikněte na **OK** .
 
@@ -44,4 +44,4 @@ Následující obrázek znázorňuje výsledky ze stejného řešení po zakáz�
 
 Pokud aplikace Visual Studio zjistí, že je k dispozici 200 MB nebo méně systémové paměti, automaticky zakáže úplnou analýzu řešení (a další funkce), pokud je povolená. V takovém případě se zobrazí výstraha informující o tom, že aplikace Visual Studio zakázala některé funkce. Tlačítko umožňuje znovu povolit úplnou analýzu řešení, pokud chcete.
 
-![Text výstrahy, která pozastavuje úplnou analýzu řešení](../code-quality/media/fsa_alert.png)
+![Upozornění text pozastavení úplné analýzy řešení](../code-quality/media/fsa_alert.png)

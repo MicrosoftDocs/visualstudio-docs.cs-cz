@@ -8,17 +8,17 @@ helpviewer_keywords:
 - code snippets [Visual Studio], schema reference
 - IntelliSense Code Snippets, XML Schema
 ms.assetid: 58a60621-725f-4763-93b7-62ea5424ef88
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff2004f11cac6d3ae44fdc61745c9e8cbab231f1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 22f84fbe5188e74acbf24256444ad11dd9c64347
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72631121"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585428"
 ---
 # <a name="code-snippets-schema-reference"></a>Referenční informace ke schématu fragmentů kódu
 
@@ -88,7 +88,7 @@ Pokud je vybráno slovo "Blue", výsledek je:
  is a great color. I love Blue.
 ```
 
-Počáteční místo se zobrazí, protože je mezi `$selected$` a `is` mezera.
+Počáteční místo se zobrazí, protože je mezi `$selected$` a `is`mezera.
 
 Všechna ostatní klíčová slova `$` jsou dynamicky definována v rámci značek `<Literal>` a `<Object>`.
 
@@ -108,7 +108,7 @@ Je vyžadována textová hodnota. Tento text Určuje kód spolu s literály a ob
 
 Pro element kódu jsou k dispozici tři atributy:
 
-- **Jazyk**  - _požadovaný_ atribut, který určuje jazyk fragmentu kódu. Hodnota může být jedna z následujících:
+- **Jazyk** - _požadovaný_ atribut, který určuje jazyk fragmentu kódu. Může jít o následující hodnoty:
 
    |Hodnota|Popis|
    |-----|-----------|
@@ -121,7 +121,7 @@ Pro element kódu jsou k dispozici tři atributy:
    |`SQL`|Identifikuje fragment kódu jazyka SQL.|
    |`HTML`|Identifikuje fragment kódu jazyka HTML.|
 
-- **Druh**  - _nepovinný_ atribut, který určuje druh kódu, který fragment obsahuje. Hodnota může být jedna z následujících:
+- **Druh** - _nepovinný_ atribut, který určuje druh kódu, který fragment obsahuje. Může jít o následující hodnoty:
 
    |Hodnota|Popis|
    |-----|-----------|
@@ -131,7 +131,7 @@ Pro element kódu jsou k dispozici tři atributy:
    |`file`|Určuje, že fragment kódu je celý soubor kódu. Tyto fragmenty kódu lze vložit samotné do souboru kódu nebo do oboru názvů.|
    |`any`|Určuje, že fragment kódu lze vložit kamkoli. Tato značka se používá pro fragmenty kódu, které jsou nezávislé na kontextu, například pro komentáře.|
 
-- **Oddělovač**  - _nepovinný_ atribut, který určuje oddělovač, který se používá k popisu literálů a objektů v kódu. Ve výchozím nastavení je oddělovač `$`.
+- **Oddělovač** - _nepovinný_ atribut, který určuje oddělovač, který se používá k popisu literálů a objektů v kódu. Ve výchozím nastavení je oddělovač `$`.
 
 ### <a name="parent-element"></a>Nadřazený element
 
@@ -503,10 +503,10 @@ Seskupí jednotlivé prvky `Reference`.
 
 ## <a name="shortcut-element"></a>Element zástupce
 
-Určuje textovou zkratku, pomocí níž lze fragment kódu vložit. Textová hodnota prvku `Shortcut` může obsahovat pouze alfanumerické znaky, spojovníky (-) a podtržítka (_).
+Určuje textovou zkratku, pomocí níž lze fragment kódu vložit. Textová hodnota prvku `Shortcut` může obsahovat pouze alfanumerické znaky a podtržítka (_).
 
 > [!CAUTION]
-> _ a-nejsou podporované znaky v C++ zástupcích fragmentů.
+> Podtržítka (_) není v C++ zástupcových zkratkách podporován znaků.
 
 ```xml
 <Shortcut>

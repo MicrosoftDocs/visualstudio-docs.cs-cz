@@ -20,6 +20,8 @@
       href: tutorial-nodejs.md
     - name: Vytvoření aplikace Node.js přes React
       href: tutorial-nodejs-with-react-and-jsx.md
+    - name: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu
+      href: tutorial-aspnet-with-typescript.md
     - name: Publikování aplikace v Node.js do služby App Service v Linuxu
       href: publish-nodejs-app-azure.md
 - name: Návody

@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - Advanced Security Settings dialog box
 ms.assetid: 2e7aefe9-6d20-4f3e-b257-aee1ebcc6f5d
-author: mikejo5000
-ms.author: mikejo
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1fcc3d09e43fc5358cbe507c5045c16cc9f8cf9
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 033c8d9c97d54b972a7bf30e9e1e04171e5b505e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461866"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595836"
 ---
-# <a name="advanced-security-settings-dialog-box"></a>dialogové okno Upřesnit nastavení zabezpečení
+# <a name="advanced-security-settings-dialog-box"></a>Dialogové okno Upřesnit nastavení zabezpečení
 
 Toto dialogové okno umožňuje zadat nastavení zabezpečení související s laděním v zóně.
 
@@ -32,7 +32,7 @@ Chcete-li získat přístup k tomuto dialogovému oknu, vyberte uzel projektu v 
 
 **Udělit aplikaci přístup k jejímu původnímu umístění**
 
-Pokud zaškrtnete toto políčko, aplikace bude mít přístup k webu nebo ke sdílené složce na serveru, na které je publikovaná. Ve výchozím nastavení je tato možnost vybraná.
+Pokud zaškrtnete toto políčko, aplikace bude mít přístup k webu nebo ke sdílené složce na serveru, na které je publikovaná. Tato možnost je vybrána ve výchozím nastavení.
 
 **Ladit tuto aplikaci, jako kdyby byla stažena z následující adresy URL**
 

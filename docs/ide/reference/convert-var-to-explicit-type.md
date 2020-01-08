@@ -2,19 +2,19 @@
 title: Refaktorovat kód pro nahrazení var pomocí explicitního typu
 ms.date: 05/15/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 566d064ac0ac1b9c48ee8e75697cef39b2ec4ee1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4ec388564e1851402f085f6bbaefba08dbea212c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661690"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595771"
 ---
 # <a name="refactoring-to-replace-var-with-an-explicit-type"></a>Refaktoring pro náhradu var pomocí explicitního typu
 
@@ -38,7 +38,7 @@ Níže jsou uvedeny některé důvody k deklaraci proměnné s explicitním type
 
 1. Umístěte blikající kurzor na klíčové slovo `var`.
 
-1. Stiskněte klávesu **Ctrl** + **.** nebo klikněte na ikonu ![screwdriver Screwdriver ](../media/screwdriver-icon.png) ikonu na okraji souboru s kódem.
+1. Stisknutím klávesy **Ctrl**+ **.** nebo klikněte na ikonu Screwdriver ![Screwdriver ikony](../media/screwdriver-icon.png) na okraji souboru s kódem.
 
    ![Použití nabídky explicitního typu pro rychlé akce](media/use-explicit-type.png)
 

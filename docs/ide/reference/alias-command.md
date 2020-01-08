@@ -11,17 +11,17 @@ helpviewer_keywords:
 - command aliases
 - alias command
 ms.assetid: bdf857df-b5d5-450f-8c10-a6fd4dccc130
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fdcc816510642c7800b6fbeacfa3fcdeff5e0b3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 031f1a4bab1acee3f3d0999b17c0b607f7808df9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748800"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596902"
 ---
 # <a name="alias-command"></a>Alias – příkaz
 Vytvoří nový alias pro úplný příkaz, úplný příkaz a argumenty nebo jiný alias.
@@ -46,7 +46,7 @@ Volitelné. Úplný název příkazu nebo existující alias a všechny parametr
 /Delete nebo/del nebo/D\
 Volitelné. Odstraní zadaný alias a odebere ho z automatického dokončování.
 
-/Reset po vyčištění
+/Reset po vyčištění\
 Volitelné. Obnoví původní nastavení seznamu předem definovaných aliasů. To znamená, že obnoví všechny předdefinované aliasy a odstraní všechny aliasy definované uživatelem.
 
 ## <a name="remarks"></a>Poznámky
@@ -57,7 +57,7 @@ Při vydávání tohoto příkazu byste měli zahrnout přepínače hned za př�
 Přepínač `/reset` před obnovením aliasů vyžádá o potvrzení. Neexistuje žádná krátká forma `/reset`.
 
 ## <a name="examples"></a>Příklady
-Tento příklad vytvoří nový alias, `upper` pro příkaz Complete. MakeUpperCase.
+Tento příklad vytvoří nový alias, `upper`pro příkaz Complete. MakeUpperCase.
 
 ```cmd
 >Tools.Alias upper Edit.MakeUpperCase

@@ -15,17 +15,17 @@ helpviewer_keywords:
 - dependency graphs, customizing
 - graph documents, grouping nodes
 - dependency graphs, assigning categories and properties
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ace7da233f135aa795d73d43a5e10e411c0d646f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2b79fd73713de535c11062fd6396abde6b1a0131
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748472"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590511"
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>Přizpůsobení map kódu úpravou souborů DGML
 
@@ -43,7 +43,7 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
 
 2. Chcete-li převést prvek kódu na skupinu, vyhledejte prvek `<Node/>` pro daný prvek kódu.
 
-    \- nebo-
+    \- nebo –
 
     Chcete-li přidat novou skupinu, vyhledejte část `<Nodes>`. Přidejte nový prvek `<Node/>`.
 
@@ -187,7 +187,7 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
     Style="Glass"
     ```
 
-     - ani
+     - nebo –
 
     ```xml
     Style="Plain"
@@ -272,13 +272,13 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
    <Condition Expression="MyCategory"/>
    ```
 
-    - ani
+    - nebo –
 
    ```xml
    <Condition Expression="MyCategory > 100"/>
    ```
 
-    - ani
+    - nebo –
 
    ```xml
    <Condition Expression="HasCategory('MyCategory')"/>
@@ -286,33 +286,33 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
 
     Tento výraz používá následující syntaxi BNF (Backus-Naur Form):
 
-    \<Expression >:: = \<BinaryExpression > &#124; \<UnaryExpression > &#124; "(" \<Expression > ")" &#124; \<MemberBindings &#124; > \<Literal > &#124; 1Number >
+    Výraz \<>:: = \<BinaryExpression > &#124; \<UnaryExpression > &#124; "("\<Expression > ")" &#124; \<MemberBindings > &#124; \<Literal &#124; > \<Number >
 
-    \<BinaryExpression >:: = \<Expression > \<Operator > \<Expression >
+    \<BinaryExpression> ::= \<Expression> \<Operator> \<Expression>
 
-    \<UnaryExpression >:: = "!"  \<Expression > &#124; "+" \<Expression > &#124; "-" \<Expression >
+    \<UnaryExpression >:: = "!" \<výraz > &#124; "+" \<výraz > &#124; "-" \<výraz >
 
-    \<Operator >:: = "<" &#124; "\< =" &#124; "=" &#124; "> =" &#124; ">" &#124; "! =" &#124; "nebo" &#124; "a" &#124; "+ &#124; " "* &#124; &#124; " "-"
+    operátor \<>:: = "<" &#124; "\<=" &#124; "=" &#124; &#124; "> =" ">" &#124; "! =" &#124; "nebo &#124; &#124; " "+ &#124; " "" * &#124; &#124; ""-"
 
-    \<MemberBindings >:: = \<MemberBindings > &#124; \<MemberBinding > "."  \<MemberBinding >
+    \<MemberBindings >:: = \<MemberBindings > &#124; \<MemberBinding > "." \<MemberBinding >
 
-    \<MemberBinding >:: = \<MethodCall > &#124; \<PropertyGet >
+    \<MemberBinding >:: = \<MethodCall > &#124; \<PropertyGet – >
 
-    \<MethodCall >:: = \<Identifier > "(" \<MethodArgs > ")"
+    \<MethodCall >:: = \<identifikátor > "(" \<MethodArgs > ")"
 
-    \<PropertyGet >:: = Identifier
+    \<PropertyGet> ::= Identifier
 
-    \<MethodArgs >:: = \<Expression > &#124; \<Expression > "," \<MethodArgs &#124; > \<empty >
+    \<MethodArgs >:: = \<výraz > &#124; \<Expression > "," \<MethodArgs > &#124; \<prázdné >
 
-    \<Identifier >:: = [^. ]*
+    Identifikátor \<>:: = [^. ]*
 
-    \<Literal >:: = řetězcový literál s jedním nebo dvojitým uvozovkami
+    \<literál >:: = jeden nebo dvojitě citovaný řetězcový literál
 
-    \<Number >:: = řetězec číslic s nepovinnou desetinnou čárkou
+    \<číslo >:: = řetězec číslic s volitelnou desetinnou čárkou
 
     Můžete zadat více `<Condition/>` prvků, které musí všechny mít hodnotu true pro použití stylu.
 
-3. Na dalším řádku po `<Condition/>` elementu přidejte jeden nebo více `<Setter/>` prvků pro určení `Property` atribut a pevný `Value` atribut nebo vypočtený atribut `Expression`, který se má použít pro mapu, prvky kódu nebo odkazy, které splňují podmínku.
+3. Na dalším řádku po `<Condition/>` elementu přidejte jeden nebo více `<Setter/>` prvků pro určení atributu `Property` a pevný `Value` atribut nebo vypočtený atribut `Expression`, který se má použít pro mapu, prvky kódu nebo odkazy, které splňují podmínku.
 
     Příklad:
 

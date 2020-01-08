@@ -1,5 +1,5 @@
 ---
-title: Findunderpath – úloha | Dokumentace Microsoftu
+title: Úloha FindUnderPath – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,37 +13,37 @@ helpviewer_keywords:
 - MSBuild, FindUnderPath task
 - FindUnderPath task [MSBuild]
 ms.assetid: 3c6d58b0-36e8-47aa-bfca-b73dd2045d91
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c22e2465b79faa68f8789cefeeb181c2e15b73b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 33912df490b148c91c2a0d152f979bd6149d8ae3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62539704"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566069"
 ---
 # <a name="findunderpath-task"></a>FindUnderPath – úloha
-Určuje, které položky v kolekci určenou položku mají cesty, které jsou v nebo nižší než zadané složky.
+Určuje, které položky v zadané kolekci položek mají cesty, které jsou v zadané složce nebo pod ní.
 
 ## <a name="parameters"></a>Parametry
-Následující tabulka popisuje parametry `FindUnderPath` úloh.
+Následující tabulka popisuje parametry úlohy `FindUnderPath`.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Files`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje soubory, jejichž cesty by měly být porovnány s Cesta zadaná položkou `Path` parametru.|
-|`InPath`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje položky, které nebyly nalezeny v zadané cestě.|
-|`OutOfPath`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje položky, které nebyly nalezeny v zadané cestě.|
-|`Path`|Vyžaduje <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje cestu složky pro použití jako odkaz.|
-|`UpdateToAbsolutePaths`|Volitelné `Boolean` parametru.<br /><br /> Při hodnotě true se cesty výstupní položky jsou aktualizované tak být absolutní cesty.|
+|`Files`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Určuje soubory, jejichž cesty by měly být porovnány s cestou určenou parametrem `Path`.|
+|`InPath`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Obsahuje položky, které byly nalezeny v zadané cestě.|
+|`OutOfPath`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Obsahuje položky, které nebyly nalezeny v zadané cestě.|
+|`Path`|Vyžaduje se <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje cestu ke složce, která se má použít jako odkaz.|
+|`UpdateToAbsolutePaths`|Volitelný parametr `Boolean`.<br /><br /> Pokud má hodnotu true, cesty výstupních položek se aktualizují tak, aby byly absolutní cesty.|
 
 ## <a name="remarks"></a>Poznámky
-Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).
+Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
-V následujícím příkladu `FindUnderPath` úloh k určení, pokud soubory obsažené v `MyFiles` položky mají cesty, které existují v cestě určené `SearchPath` vlastnost. Po dokončení úlohy `FilesNotFoundInPath` obsahuje položku *File1.txt* souboru a `FilesFoundInPath` položka obsahuje *Soubor2.txt* souboru.
+Následující příklad používá úlohu `FindUnderPath` k určení, zda soubory obsažené v `MyFiles` položce mají cesty, které existují v cestě určené vlastností `SearchPath`. Po dokončení úlohy `FilesNotFoundInPath` položka obsahuje soubor *Soubor1. txt* a položka `FilesFoundInPath` obsahuje soubor *Soubor2. txt* .
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -73,6 +73,6 @@ V následujícím příkladu `FindUnderPath` úloh k určení, pokud soubory obs
 ```
 
 ## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)

@@ -2,17 +2,17 @@
 title: T4 – direktiva Template
 ms.date: 11/04/2016
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 410bc879ff4822f19436794d3cb99732be9d413e
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: f7ada5558cfdfaadca5793d9edc61f13a6d4d11b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72983706"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591837"
 ---
 # <a name="t4-template-directive"></a>T4 – direktiva Template
 

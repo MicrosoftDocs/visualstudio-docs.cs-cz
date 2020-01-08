@@ -5,12 +5,12 @@ author: seaniyer
 ms.author: seiyer
 ms.date: 11/19/2019
 ms.topic: reference
-ms.openlocfilehash: 3bf61c1ecbed5a3da1fe7ec0bcf9c6d4b7580b8d
-ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
+ms.openlocfilehash: 57d956a426e791fcc84d5972f564cd554d6e72f8
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74903991"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75406109"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Jak zvýšit pravděpodobnost vyřešeného problému s výkonem
 
@@ -39,6 +39,8 @@ Popsané níže jsou problémy, které je obtížné diagnostikovat bez dobrých
 -   [Problémy s pomalým výkonem:](#slowness-and-high-cpu-issues) Všechny konkrétní akce v VS jsou pomalejší než požadované
 
 -   [Vysoký procesor:](#slowness-and-high-cpu-issues) Rozšířená období neočekávaného vysokého využití procesoru
+
+-   [Problémy mimo proces:](#out-of-process-issues) Problém způsobený satelitním procesem sady Visual Studio
 
 ## <a name="crashes"></a>Chybě
 Dojde k chybě při neočekávaném ukončení procesu (Visual Studio).
@@ -171,6 +173,23 @@ Nepřipojujte přímo trasování výkonu k existujícím položkám zpětné va
 **Rozšířené trasování výkonu**
 
 Ve většině scénářů jsou pro většinu scénářů dostačující možnosti shromažďování dat v nástroji Report-a-problém. Existují však situace, kdy je zapotřebí větší kontrola shromažďování trasování (například trasování s větší vyrovnávací pamětí), v takovém případě PerfView je skvělý nástroj k použití. Postup ručního zaznamenávání trasování výkonu pomocí nástroje PerfView najdete na stránce [nahrávání trasování výkonu se](https://github.com/dotnet/roslyn/wiki/Recording-performance-traces-with-PerfView) stránkou PerfView.
+
+## <a name="out-of-process-issues"></a>Problémy mimo proces
+
+> [!NOTE]
+> Počínaje verzí Visual Studio 2019 verze 16,3 jsou protokoly mimo procesy automaticky připojeny ke zpětné vazbě odeslané pomocí nástroje nahlásit problém. Pokud je však problém přímo reprodukovatelný, následující kroky mohou ještě přispět k lepšímu diagnostikování problému tím, že vám pomůžou Další informace.
+
+Existuje několik satelitních procesů, které běží paralelně se systémem Visual Studio a poskytují různé funkce mimo hlavní proces sady Visual Studio. Pokud dojde k chybě v jednom z těchto satelitních procesů, je obvykle vidět na straně sady Visual Studio jako "StreamJsonRpc. RemoteInvocationException" nebo "StreamJsonRpc. ConnectionLostException".
+
+Díky tomu, co tyto typy problémů nejvíce řeší, je poskytnout další protokoly, které se dají shromáždit pomocí následujících kroků:
+
+1.  Pokud se jedná o přímo reprodukovatelný problém, začněte tím, že odstraníte složku **% TEMP%/servicehub/logs** . Pokud tento problém nemůžete reprodukován, nechejte prosím tuto složku nedotčenou a ignorujte následující odrážky:
+
+    -   Nastavit globální proměnnou prostředí **ServiceHubTraceLevel** na **všechny**
+    -   Reprodukujte problém.
+
+2.  Stáhněte si nástroj pro shromažďování protokolů Microsoft Visual Studio a [.NET Framework.](https://aka.ms/vscollect)
+3.  Spusťte nástroj. Výstup souboru zip do **% TEMP%/Vslogs.zip**. Připojte prosím tento soubor ke své zpětné vazbě.
 
 ## <a name="see-also"></a>Viz také:
 

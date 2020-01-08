@@ -4,17 +4,17 @@ ms.date: 08/22/2017
 ms.topic: conceptual
 dev_langs:
 - CSharp
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6a8fd65c9f7c498f06b0776f0cd61ebc5ce48182
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0c83494fe6a23d4c072581c68f7b759aa9a6e6be
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72642926"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586897"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>Vytvoření jednoduché datové aplikace pomocí WPF a Entity Framework 6
 
@@ -32,11 +32,11 @@ V tomto příkladu se používá SQL Server Express LocalDB a ukázková databá
 
     1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (**Průzkumník objektů systému SQL Server** je nainstalován v rámci úlohy **úložiště dat a zpracování** v **instalační program pro Visual Studio**.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
 
-       Otevře se okno editoru dotazů.
+       Otevře se okno editor dotazů.
 
     2. Zkopírujte [skript Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
 
-    3. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
+    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
 
        Po krátké době se dotaz dokončí a vytvoří se databáze Northwind.
 
@@ -46,7 +46,7 @@ V tomto příkladu se používá SQL Server Express LocalDB a ukázková databá
 
 1. V aplikaci Visual Studio vytvořte nový C# projekt **aplikace WPF** .
 
-2. Přidejte balíček NuGet pro Entity Framework 6. V **Průzkumník řešení**vyberte uzel projektu. V hlavní nabídce vyberte **projekt**  > **Spravovat balíčky NuGet**.
+2. Přidejte balíček NuGet pro Entity Framework 6. V **Průzkumník řešení**vyberte uzel projektu. V hlavní nabídce vyberte **projekt** > **Spravovat balíčky NuGet**.
 
      ![Položka nabídky spravovat balíčky NuGet](../data-tools/media/raddata_vs2015_manage_nuget_packages.png)
 
@@ -58,7 +58,7 @@ V tomto příkladu se používá SQL Server Express LocalDB a ukázková databá
 
 ## <a name="create-the-model"></a>Vytvoření modelu
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  > **novou položku**. V levém podokně pod C# uzlem vyberte **data** a v prostředním podokně vyberte **ADO.NET model EDM (Entity Data Model)** .
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat** > **novou položku**. V levém podokně pod C# uzlem vyberte **data** a v prostředním podokně vyberte **ADO.NET model EDM (Entity Data Model)** .
 
    ![Nová položka modelu Entity Framework](../data-tools/media/raddata-ef-new-project-item.png)
 
@@ -86,7 +86,7 @@ V tomto příkladu se používá SQL Server Express LocalDB a ukázková databá
 
    - Nahradí jediný výskyt <xref:System.Collections.Generic> (kolem řádku 431) <xref:System.Collections.ObjectModel>.
 
-7. Stisknutím **Ctrl**+**SHIFT**+**B** Sestavte projekt. Po dokončení sestavení jsou třídy modelu viditelné v průvodci zdroji dat.
+7. Stisknutím **kombinace kláves Ctrl**+**SHIFT**+**B** Sestavte projekt. Po dokončení sestavení jsou třídy modelu viditelné v průvodci zdroji dat.
 
 Nyní jste připraveni připojit tento model na stránku XAML, abyste mohli zobrazit, navigovat a upravovat data.
 
@@ -94,7 +94,7 @@ Nyní jste připraveni připojit tento model na stránku XAML, abyste mohli zobr
 
 Je možné napsat vlastní kód datové vazby, ale je mnohem jednodušší, aby to Visual Studio prodali za vás.
 
-1. V hlavní nabídce vyberte možnost **projekt**  > **Přidat nový zdroj dat** a zobrazte tak **Průvodce konfigurací zdroje dat**. Vyberte **objekt** , protože vytváříte vazbu na třídy modelů, nikoli na databázi:
+1. V hlavní nabídce vyberte možnost **projekt** > **Přidat nový zdroj dat** a zobrazte tak **Průvodce konfigurací zdroje dat**. Vyberte **objekt** , protože vytváříte vazbu na třídy modelů, nikoli na databázi:
 
      ![Průvodce konfigurací zdroje dat se zdrojem objektů](../data-tools/media/raddata-data-source-configuration-wizard-with-object-source.png)
 
@@ -102,7 +102,7 @@ Je možné napsat vlastní kód datové vazby, ale je mnohem jednodušší, aby 
 
      ![Přidání tříd entit jako zdrojů dat](../data-tools/media/raddata-add-entity-classes-as-data-sources.png)
 
-3. Klikněte na tlačítko **Dokončit**.
+3. Klikněte na **Dokončit**.
 
 4. V zobrazení kód přejděte na *MainWindow. XAML* . Pro účely tohoto příkladu udržujeme kódování XAML jednoduché. Změňte název MainWindow na výstižnější a zvyšte jeho výšku a šířku na 600 x 800. Kdykoli ho můžete později změnit. Nyní přidejte tyto tři definice řádků do hlavní mřížky, jeden řádek pro navigační tlačítka, jednu pro podrobnosti o zákazníkovi a jednu pro mřížku, která zobrazuje jejich objednávky:
 
@@ -114,7 +114,7 @@ Je možné napsat vlastní kód datové vazby, ale je mnohem jednodušší, aby 
         </Grid.RowDefinitions>
     ```
 
-5. Nyní otevřete *MainWindow. XAML* , abyste si ho prohlíželi v návrháři. To způsobí, že se okno **zdroje dat** zobrazí jako možnost v okraji okna aplikace Visual Studio vedle panelu **nástrojů**. Kliknutím na kartu otevřete okno, nebo jinak stiskněte klávesu **Shift** +**ALT** +**D** nebo zvolte možnost **Zobrazit**  > **ostatní** **zdroje dat** >  Windows. Všechny vlastnosti ve třídě Customers (zákazníci) se zobrazí v samostatném textovém poli. Nejdřív klikněte na šipku v poli se seznamem **Customers (zákazníci** ) a vyberte **Podrobnosti**. Pak přetáhněte uzel do střední části návrhové plochy, aby Návrhář věděl, že má přejít na prostřední řádek. Pokud k tomu dojde, můžete řádek zadat později v jazyce XAML. Ve výchozím nastavení jsou ovládací prvky umístěny vertikálně v prvku mřížky, ale v tomto okamžiku je můžete uspořádat tak, jak chcete, například na formuláři. Může být například vhodné umístit textové pole **název** nahoře nad adresu. Ukázková aplikace pro tento článek mění pořadí polí a mění jejich uspořádání do dvou sloupců.
+5. Nyní otevřete *MainWindow. XAML* , abyste si ho prohlíželi v návrháři. To způsobí, že se okno **zdroje dat** zobrazí jako možnost v okraji okna aplikace Visual Studio vedle panelu **nástrojů**. Kliknutím na kartu otevřete okno, nebo jinak stiskněte klávesu **Shift**+**ALT**+**D** nebo zvolte možnost **Zobrazit** > **ostatní** **zdroje dat** > Windows. Všechny vlastnosti ve třídě Customers (zákazníci) se zobrazí v samostatném textovém poli. Nejdřív klikněte na šipku v poli se seznamem **Customers (zákazníci** ) a vyberte **Podrobnosti**. Pak přetáhněte uzel do střední části návrhové plochy, aby Návrhář věděl, že má přejít na prostřední řádek. Pokud k tomu dojde, můžete řádek zadat později v jazyce XAML. Ve výchozím nastavení jsou ovládací prvky umístěny vertikálně v prvku mřížky, ale v tomto okamžiku je můžete uspořádat tak, jak chcete, například na formuláři. Může být například vhodné umístit textové pole **název** nahoře nad adresu. Ukázková aplikace pro tento článek mění pořadí polí a mění jejich uspořádání do dvou sloupců.
 
      ![Vazba zdroje dat zákazníků na jednotlivé ovládací prvky](../data-tools/media/raddata-customers-data-source-binding-to-individual-controls.png)
 
@@ -417,7 +417,7 @@ Příkazová logika obsahuje čtyři části: (1) příkazy, (2) vazby, (3) tla�
 
 ### <a name="add-command-handlers-to-the-mainwindow-class"></a>Přidání obslužných rutin příkazů do třídy MainWindow
 
-Kód na pozadí je minimální s výjimkou metod Add a DELETE. Navigace je prováděna voláním metod ve vlastnosti zobrazení CollectionViewSource. @No__t_0 ukazuje, jak provést kaskádovou odstranění na základě objednávky. Musíme nejdřív odstranit Order_Details, které jsou k němu přidružené. @No__t_0 přidá do kolekce nového zákazníka nebo objednávku nebo jinak pouze aktualizuje stávajícího zákazníka nebo objednávky změnami, které uživatel provedl v textových polích.
+Kód na pozadí je minimální s výjimkou metod Add a DELETE. Navigace je prováděna voláním metod ve vlastnosti zobrazení CollectionViewSource. `DeleteOrderCommandHandler` ukazuje, jak provést kaskádovou odstranění na základě objednávky. Musíme nejdřív odstranit Order_Details, které jsou k němu přidružené. `UpdateCommandHandler` přidá do kolekce nového zákazníka nebo objednávku nebo jinak pouze aktualizuje stávajícího zákazníka nebo objednávky změnami, které uživatel provedl v textových polích.
 
 Přidejte tyto metody obslužné rutiny do třídy MainWindow v *MainWindow.XAML.cs*. Pokud má CollectionViewSource pro tabulku Customers jiný název, je nutné upravit název v každé z těchto metod:
 
@@ -425,7 +425,7 @@ Přidejte tyto metody obslužné rutiny do třídy MainWindow v *MainWindow.XAML
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
-Ladění spustíte stisknutím klávesy **F5**. Měli byste vidět, že se data o zákaznících a objednávkách v mřížce naplní, a navigační tlačítka by měla fungovat podle očekávání. Po zadání dat klikněte na **Potvrdit** a přidejte nového zákazníka nebo objednávku do modelu. Klikněte na tlačítko **Zrušit** pro zálohování nového zákazníka nebo nového formuláře objednávky bez uložení dat. Můžete provádět úpravy stávajících zákazníků a objednávek přímo v textových polích a tyto změny se zapisují do modelu automaticky.
+Chcete-li spustit ladění, stiskněte **F5**. Měli byste vidět, že se data o zákaznících a objednávkách v mřížce naplní, a navigační tlačítka by měla fungovat podle očekávání. Po zadání dat klikněte na **Potvrdit** a přidejte nového zákazníka nebo objednávku do modelu. Klikněte na tlačítko **Zrušit** pro zálohování nového zákazníka nebo nového formuláře objednávky bez uložení dat. Můžete provádět úpravy stávajících zákazníků a objednávek přímo v textových polích a tyto změny se zapisují do modelu automaticky.
 
 ## <a name="see-also"></a>Viz také:
 

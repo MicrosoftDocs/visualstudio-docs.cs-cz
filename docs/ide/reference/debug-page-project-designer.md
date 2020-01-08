@@ -9,23 +9,23 @@ helpviewer_keywords:
 - Project Designer, Debug page
 - Debug page in Project Designer
 ms.assetid: ef11eae9-df96-4e20-aabd-2678ba317140
-author: mikejo5000
-ms.author: mikejo
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a1f54485a4dd47b0aec4401f6cdfb39072e9f8cf
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: a2c3e7813e5e07a0fbb8f4ebf5838c883faa0fb8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461410"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595719"
 ---
 # <a name="debug-page-project-designer"></a>Stránka Ladění, návrhář projektu
 
 Pomocí stránky **ladění** v **Návrháři projektu** můžete nastavit vlastnosti pro chování ladění v Visual Basic nebo C# projektu.
 
-Chcete-li získat přístup ke stránce **ladění** , vyberte uzel projektu v **Průzkumník řešení**. V nabídce **projekt** vyberte  **\<ProjectName > vlastnosti**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **ladění** .
+Chcete-li získat přístup ke stránce **ladění** , vyberte uzel projektu v **Průzkumník řešení**. V nabídce **projekt** vyberte možnost **\<ProjectName > vlastnosti**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **ladění** .
 
 > [!NOTE]
 > Toto téma se nevztahuje na aplikacích pro UPW. Viz [zahájit ladicí relaci (VB, C# C++ a XAML)](../../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md) pro aplikace pro UWP.
@@ -36,19 +36,19 @@ Následující možnosti umožňují vybrat konfiguraci a platformu pro zobrazen
 
 **Konfigurace**
 
-Určuje, která nastavení konfigurace se mají zobrazit nebo upravit. Nastavení lze **ladit** (výchozí), vydávat nebo **všechny konfigurace**.
+Určuje, která nastavení konfigurace se mají zobrazit nebo upravit. Nastavení lze **ladit** (výchozí), **vydávat**nebo **všechny konfigurace**.
 
-**Platformy**
+**Platforma**
 
 Určuje, která nastavení platformy se mají zobrazit nebo upravit. Volby můžou zahrnovat **jakýkoli procesor** (výchozí), **x64**a **x86**.
 
 ## <a name="start-action"></a>Spustit akci
 
-**Akce spustit** označuje položku, která se má spustit při ladění aplikace: projekt, vlastní program, adresa URL nebo nic. Ve výchozím nastavení je tato možnost nastavena na hodnotu **spustit projekt**. Hodnota vlastnosti určuje nastavení **Akce zahájit** na stránce **ladění.** `StartAction`
+**Akce spustit** označuje položku, která se má spustit při ladění aplikace: projekt, vlastní program, adresa URL nebo nic. Ve výchozím nastavení je tato možnost nastavena na hodnotu **spustit projekt**. Nastavení **akce spustit** na stránce **ladění** Určuje hodnotu vlastnosti `StartAction`.
 
 **Spustit projekt**
 
-Tuto možnost zvolte, chcete-li určit, zda má být spuštěn spustitelný soubor (pro projekty aplikace systému Windows a Konzolová aplikace) při ladění aplikace. Tato možnost je vybrána ve výchozím nastavení.
+Tuto možnost zvolte, chcete-li určit, zda má být spuštěn spustitelný soubor (pro projekty aplikace systému Windows a Konzolová aplikace) při ladění aplikace. Tahle možnost je vybraná jako výchozí nastavení.
 
 **Spustit externí program**
 

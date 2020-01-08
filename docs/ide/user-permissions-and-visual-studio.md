@@ -7,17 +7,17 @@ helpviewer_keywords:
 - user permissions
 - administrative privileges
 - permissions
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6086485ef20330de7971297f52a112d5183ee4a2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MT
+ms.openlocfilehash: d00bc1912991992a2aeb966680c7777c47df0549
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647338"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565224"
 ---
 # <a name="user-permissions-and-visual-studio"></a>Uživatelská oprávnění a Visual Studio
 
@@ -28,9 +28,9 @@ Z důvodu zabezpečení byste měli spustit sadu Visual Studio jako normálního
 
 V integrovaném vývojovém prostředí sady Visual Studio můžete udělat skoro všechno jako normální uživatel. K dokončení následujících úloh potřebujete oprávnění správce:
 
-|Oblast|Úloha|Další informace|
+|Plošný|Úloha|Další informace|
 |----------|----------| - |
-|Instalace|Nainstalujte Visual Studio.|[Instalace sady Visual Studio](../install/install-visual-studio.md)|
+|Instalace služby|Nainstalujte Visual Studio.|[Instalace sady Visual Studio](../install/install-visual-studio.md)|
 ||Instalace, aktualizace nebo odebrání místního obsahu aplikace Help.|[Nainstalovat a spravovat místní obsah obsahu Help](../help-viewer/install-manage-local-content.md)|
 |Sada nástrojů|Přidání klasických ovládacích prvků modelu COM do **sady nástrojů**.|[Panel nástrojů](../ide/reference/toolbox.md)|
 |Sestavování|Použijte události po sestavení, které registrují komponentu.|[Porozumění vlastním postupům sestavení a událostem sestavení](/cpp/build/understanding-custom-build-steps-and-build-events)|
@@ -57,7 +57,7 @@ Pokud potřebujete spustit Visual Studio jako správce, postupujte podle těchto
 
 1. V **aplikaci Visual Studio 2017**pravým tlačítkem myši nebo v místní nabídce vyberte **Další** > **Spustit jako správce**.
 
-   Po spuštění sady Visual Studio se za názvem produktu v záhlaví zobrazí **(správce)** .
+   Při spuštění sady Visual Studio **(správce)** se zobrazí za názvem produktu v záhlaví programu.
 
 ::: moniker-end
 
@@ -67,7 +67,7 @@ Pokud potřebujete spustit Visual Studio jako správce, postupujte podle těchto
 
 1. V **aplikaci Visual Studio 2019**pravým tlačítkem myši nebo v místní nabídce vyberte **Další** > **Spustit jako správce**.
 
-   Po spuštění sady Visual Studio se za názvem produktu v záhlaví zobrazí **(správce)** .
+   Při spuštění sady Visual Studio **(správce)** se zobrazí za názvem produktu v záhlaví programu.
 
 ::: moniker-end
 

@@ -3,30 +3,30 @@ title: Mapování tříd LINQ to SQL na tabulky nebo zobrazení (O-R Designer)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0fb78bbc-7a78-4ab4-b32f-85ece912e660
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7a06d162a9f439690753f23f74ab9923c3201716
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b0e3103c1b4faa62ff82dafe8ba4aa0ef9193f06
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641954"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586494"
 ---
 # <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>Postupy: vytváření tříd LINQ to SQL mapovaných na tabulky a zobrazení (O/R Designer)
 
 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] třídy, které jsou mapovány k tabulkám a zobrazením databáze, se nazývají *třídy entit*. Třída entity se mapuje na záznam, zatímco jednotlivé vlastnosti třídy entity jsou mapovány na jednotlivé sloupce, které tvoří záznam. Vytvořte třídy entit založené na databázových tabulkách nebo zobrazeních přetažením tabulek nebo zobrazení z **Průzkumník serveru** nebo **Průzkumníka databáze** do [nástrojů LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md). **Návrhář o/R** generuje třídy a použije konkrétní atributy [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] k povolení funkcí [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] (funkce pro komunikaci a úpravy dat <xref:System.Data.Linq.DataContext>). Podrobné informace o třídách [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] naleznete v [modelu LINQ to SQL objektů](/dotnet/framework/data/adonet/sql/linq/the-linq-to-sql-object-model).
 
 > [!NOTE]
-> **Návrhář o/R** je jednoduché relační mapování objektů, protože podporuje jenom 1:1 vztahů s mapováním. Jinými slovy, Třída entity může mít pouze vztah 1:1 mapování s databázovou tabulkou nebo zobrazením. Komplexní mapování, jako je například mapování třídy entity na více tabulek, není podporováno. Třídu entity však lze namapovat na zobrazení, které spojuje více souvisejících tabulek.
+> **O/R Designer** je jednoduchý objekt relační Mapovač, protože podporuje pouze relace mapování 1:1. Jinými slovy třídu entity může mít pouze mapování 1:1 relaci s databázové tabulky nebo zobrazení. Komplexní mapování, jako je například mapování třídy entity na více tabulek, není podporováno. Třídu entity však lze namapovat na zobrazení, které spojuje více souvisejících tabulek.
 
 ## <a name="create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Vytvořit LINQ to SQL třídy, které jsou mapovány na tabulky nebo zobrazení databáze
 
 Přetahování tabulek nebo zobrazení z **Průzkumník serveru** nebo **Průzkumníka databáze** do **Návrháře relací** vytvoří třídy entit kromě <xref:System.Data.Linq.DataContext> metod, které se používají k provádění aktualizací.
 
-Ve výchozím nastavení vytvoří modul runtime [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] logiku pro uložení změn z aktualizovatelné třídy entity zpět do databáze. Tato logika je založena na schématu tabulky (definice sloupce a informace o primárním klíči). Pokud toto chování nechcete, můžete nakonfigurovat třídu entity, aby používala uložené procedury k provádění vložení, aktualizací a odstranění namísto použití výchozího [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]ho chování za běhu. Další informace naleznete v tématu [Postupy: přiřazení uložených procedur pro provádění aktualizací, vkládání a odstraňování (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
+Ve výchozím nastavení vytvoří modul runtime [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] logiku pro uložení změn z aktualizovatelné třídy entity zpět do databáze. Tato logika je založena na schématu tabulky (definice sloupce a informace o primárním klíči). Pokud toto chování nechcete, můžete nakonfigurovat třídu entity, aby používala uložené procedury k provádění vložení, aktualizací a odstranění namísto použití výchozího [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]ho chování za běhu. Další informace najdete v tématu [postupy: přiřazení uložených procedur za účelem aktualizace, vložení a odstranění (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 

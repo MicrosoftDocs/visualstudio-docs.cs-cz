@@ -8,19 +8,19 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 1AF69C0E-0AC9-451B-845D-AE4EDBCEA65C
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2157a6142f95b6ffe34503a8ee80419fcb9ca506
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 990b9541e22040b53a5f509fc358013dca777906
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018821"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594432"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Aktualizace síťové instalace sady Visual Studio
 
@@ -28,11 +28,11 @@ Je možné k aktualizaci rozložení síťové instalace sady Visual Studio s ne
 
 ## <a name="how-to-update-a-network-layout"></a>Jak aktualizovat síťový diagram
 
-Pokud chcete sdílenou síťovou instalaci aktualizovat tak, aby obsahovala nejnovější aktualizace, spusťte příkaz `--layout` a postupně stáhněte aktualizované balíčky.
+Chcete-li aktualizovat sdílenou síťovou instalaci tak, aby obsahovala nejnovější aktualizace, spusťte příkaz `--layout` pro přírůstkové stažení aktualizovaných balíčků.
 
 ::: moniker range="vs-2017"
 
-**Novinka v 15,3**: Pokud jste vybrali částečné rozložení, při prvním vytvoření rozložení sítě, se uloží. Všechny příkazy budoucí rozložení použít předchozí možnosti plus všechny nové možnosti, které zadáte. Pokud ale používáte rozložení starší verze, měli byste použít stejné parametry příkazového řádku, které jste použili při prvním vytvoření rozložení instalace sítě (jinými slovy, stejné úlohy a jazyky) k aktualizaci jejího obsahu.
+**Novinka v 15,3**: Pokud jste při prvním vytvoření rozložení sítě vybrali částečné rozložení, tato nastavení se uloží. Všechny příkazy budoucí rozložení použít předchozí možnosti plus všechny nové možnosti, které zadáte. Pokud ale používáte rozložení starší verze, měli byste použít stejné parametry příkazového řádku, které jste použili při prvním vytvoření rozložení instalace sítě (jinými slovy, stejné úlohy a jazyky) k aktualizaci jejího obsahu.
 
 ::: moniker-end
 
@@ -42,7 +42,7 @@ Pokud jste vybrali částečné rozložení, při prvním vytvoření rozložen�
 
 ::: moniker-end
 
-Pokud hostete rozložení sdílené složky, měli byste aktualizovat soukromou kopii rozložení (například c:\VSLayout) a potom po stažení veškerého aktualizovaného obsahu ho zkopírovat do sdílené složky (například \\Server \ Products \ VS). Pokud to neuděláte, existuje větší riziko, že všichni uživatelé, kteří spusťte instalační program, když aktualizujete rozložení nebudou moct získat veškerý obsah z rozložení, protože není dosud aktualizovat úplně.
+Pokud hostete rozložení sdílené složky, měli byste aktualizovat soukromou kopii rozložení (například c:\VSLayout) a potom po stažení veškerého aktualizovaného obsahu ho zkopírovat do sdílené složky (například \\server\products\VS). Pokud to neuděláte, existuje větší riziko, že všichni uživatelé, kteří spusťte instalační program, když aktualizujete rozložení nebudou moct získat veškerý obsah z rozložení, protože není dosud aktualizovat úplně.
 
 Pojďme si projít několik příkladů, jak vytvořit a následně aktualizovat rozložení:
 
@@ -64,7 +64,7 @@ Pojďme si projít několik příkladů, jak vytvořit a následně aktualizovat
   vs_enterprise.exe --layout c:\VSLayout --passive
   ```
 
-* Tady je postup pro přidání dalšímu zatížení a lokalizovaný jazyk.  (Tento příkaz přidá úlohu *vývoj pro Azure* .)  Teď Managed Desktop i Azure jsou zahrnuté v tomto rozvržení.  Jazykové prostředky pro angličtinu a němčina jsou také zahrnuté pro všechny tyto úlohy.  A rozložení se aktualizuje na nejnovější dostupnou verzi.
+* Tady je postup pro přidání dalšímu zatížení a lokalizovaný jazyk.  (Tento příkaz přidá úlohu *vývoj pro Azure* .)  V tomto rozložení jsou teď zahrnuté i spravované desktopy i Azure.  Jazykové prostředky pro angličtinu a němčina jsou také zahrnuté pro všechny tyto úlohy.  A rozložení se aktualizuje na nejnovější dostupnou verzi.
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE
@@ -73,7 +73,7 @@ Pojďme si projít několik příkladů, jak vytvořit a následně aktualizovat
     > [!IMPORTANT]
     > Operace aktualizace neinstaluje nově přidané volitelné součásti, i když tyto součásti zahrnete do oddílu "Přidání" v [souboru odpovědí](automated-installation-with-response-file.md). K tomu dochází, protože se během aktualizace nepoužívá operace přidání.
     >
-    > **Alternativní řešení**: Po upgradu na instalaci chybějících součástí spusťte samostatnou operaci úprav.
+    > **Alternativní řešení**: po upgradu pro instalaci chybějících součástí spusťte samostatnou operaci úprav.
 
 * A konečně, tady je postup přidejte další úlohy a lokalizovaných bez aktualizace na verzi. (Tento příkaz přidá úlohu *vývoje ASP.NET a webu* .)  V tomto rozložení jsou teď součástí spravovaných úloh Desktop, Azure a ASP.NET & Web Development. Jazykové prostředky pro angličtinu, němčinu a francouzštinu jsou také zahrnuté pro všechny tyto úlohy.  Rozložení však nebyl aktualizován na nejnovější dostupnou verzi, při spuštění tohoto příkazu. Zůstane na existující verze.
 
@@ -131,7 +131,7 @@ Microsoft pravidelně, dodává aktualizace sady Visual Studio tak nové rozlož
 
 ## <a name="how-to-fix-a-layout"></a>K vyřešení rozložení
 
-Použití `--fix` se provede ověření stejné jako `--verify` a také se pokusí opravit zjištěné problémy. Proces `--fix` potřebuje připojení k Internetu, proto se před vyvoláním `--fix` Ujistěte, že je počítač připojený k Internetu.
+Použití `--fix` se provede ověření stejné jako `--verify` a také se pokusí opravit zjištěné problémy. Proces `--fix` potřebuje připojení k Internetu, proto se ujistěte, že je váš počítač připojený k Internetu, než vyvoláte `--fix`.
 
 ```cmd
 vs_enterprise.exe --layout <layoutDir> --fix

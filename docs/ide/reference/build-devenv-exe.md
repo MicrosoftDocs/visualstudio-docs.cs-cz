@@ -9,17 +9,17 @@ helpviewer_keywords:
 - build Devenv switch
 - command-line builds
 ms.assetid: ced21627-7653-455b-8821-3e31c6a448cf
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9aef4dcdc9069c1bbfe71a90bbaba214ebcd18ed
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1766fe22573554b41ebfaa38fbd9e8d6c90c5790
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667885"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595758"
 ---
 # <a name="build-devenvexe"></a>/Build (devenv. exe)
 
@@ -67,7 +67,7 @@ devenv SolutionName /Build [SolnConfigName [/Project ProjName [/ProjectConfig Pr
 
 ## <a name="example"></a>Příklad
 
-Následující příkaz sestaví projekt `CSharpWinApp` pomocí `Debug` konfigurace sestavení projektu v rámci `MySolution`.
+Následující příkaz sestaví projekt `CSharpWinApp`pomocí `Debug` konfigurace sestavení projektu v rámci `MySolution`.
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug

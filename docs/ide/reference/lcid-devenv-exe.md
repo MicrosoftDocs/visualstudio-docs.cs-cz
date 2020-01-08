@@ -13,17 +13,17 @@ helpviewer_keywords:
 - LCID devenv switch
 - /LCID Devenv switch
 ms.assetid: 3a3f4e70-ea66-4351-9d62-acb1dec30e8e
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 991886289ac2c2ee06e37476169dff6d2354a52e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 80c4af137edc80166d6a652c676d5607d8c2328d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659982"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595524"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 
@@ -43,17 +43,17 @@ devenv {/LCID|/L} LocaleID
 
 ## <a name="remarks"></a>Poznámky
 
-Načte rozhraní IDE a nastaví výchozí přirozený jazyk pro prostředí. Tato změna je trvalá mezi relacemi a IDE tuto změnu zobrazuje v dialogovém okně **nástroje**  > **možnosti**  > **prostředí**  > **mezinárodní nastavení**  > **jazyk** .
+Načte rozhraní IDE a nastaví výchozí přirozený jazyk pro prostředí. Tato změna je trvalá mezi relacemi a IDE tuto změnu zobrazuje v dialogovém okně **nástroje** > **možnosti** > **prostředí** > **mezinárodní nastavení** > **jazyk** .
 
 Pokud zadaný jazyk není ve vašem systému k dispozici, přepínač `/LCID` se ignoruje.
 
 V následující tabulce jsou uvedeny identifikátory LCID jazyků, které podporuje Visual Studio.
 
-|Jazyk|IDENTIFIKÁTORY|
+|Jazyk|LCID|
 |--------------|----------|
 |Čínština (zjednodušená)|2052|
 |Čínština (tradiční)|1028|
-|Angličtina|1033|
+|angličtina|1033|
 |Francouzština|1036|
 |Němčina|1031|
 |Italština|1040|

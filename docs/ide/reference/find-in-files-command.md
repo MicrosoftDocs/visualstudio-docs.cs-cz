@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Edit.FindInFiles command
 - find in files command
 ms.assetid: 2fc78bfe-b339-4599-97f9-4cafd8a194d9
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 25342f86c545752a263d295550222e14c2aa7866
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 87d313c29be1d5fb4f1be1febe9b5b7cd32e7e11
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748764"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75569579"
 ---
 # <a name="find-in-files-command"></a>Najít v souborech – příkaz
 Vyhledejte soubory pomocí podmnožiny možností dostupných na kartě **najít v souborech** okna **Najít a nahradit** .
@@ -40,10 +40,10 @@ Požadováno. Text, který se má shodovat.
 /Case nebo/c\
 Volitelné. Shody se objeví pouze v případě, že velká a malá písmena přesně odpovídají znakům zadaným v argumentu `findwhat`.
 
-/EXT: `extensions` \
+/EXT: `extensions`\
 Volitelné. Určuje přípony souborů pro soubory, které mají být prohledány. Pokud není zadaný, použije se předchozí rozšíření, pokud se dřív zadal.
 
-/Lookin: `searchpath` \
+/Lookin: `searchpath`\
 Volitelné. Adresář, který chcete vyhledat. Pokud cesta obsahuje mezery, uzavřete celou cestu do uvozovek.
 
 /Names nebo/n\
@@ -58,7 +58,7 @@ Volitelné. Používá předem definované speciální znaky v argumentu `findwh
 /Reset po vyčištění nebo/e\
 Volitelné. Vrátí možnosti hledání do jejich výchozího nastavení a neprovádí hledání.
 
-/stop
+/stop\
 Volitelné. Zastaví aktuální operaci hledání, pokud právě probíhá. Při zadání `/stop` bude hledání ignorovat všechny ostatní argumenty. Pokud například chcete zastavit aktuální hledání, zadejte následující:
 
 ```cmd
@@ -66,7 +66,7 @@ Volitelné. Zastaví aktuální operaci hledání, pokud právě probíhá. Při
 ```
 
 /Sub nebo/s\
-Volitelné. Vyhledá podsložky v adresáři zadaném v argumentu/Lookin: `searchpath`.
+Volitelné. Vyhledá podsložky v adresáři zadaném v argumentu/Lookin:`searchpath`.
 
 /Text2 nebo/2 \
 Volitelné. Zobrazí výsledky hledání v okně výsledky hledání 2.

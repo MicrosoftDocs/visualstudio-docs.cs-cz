@@ -1,7 +1,7 @@
 ---
 title: Import a export konfigurací instalace
 titleSuffix: ''
-description: Naučte se exportovat konfiguraci instalace .vsconfig soubor pro sdílení s ostatními a importujte ho naklonujte.
+description: Naučte se Exportovat konfiguraci instalace do souboru. vsconfig, abyste mohli sdílet s ostatními a jak je naimportovat do klonování.
 ms.date: 05/18/2019
 ms.topic: conceptual
 f1_keywords:
@@ -11,83 +11,83 @@ helpviewer_keywords:
 - export installation configuration
 - install Visual Studio
 - Visual Studio installer
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 8150aa3369eb385ebad865d261f9e8c2d71d7dbe
-ms.sourcegitcommit: 2ee11676af4f3fc5729934d52541e9871fb43ee9
+ms.openlocfilehash: dddd34c9d57497a011f58bdb643c670ed84f6ded
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65849039"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596850"
 ---
 # <a name="import-or-export-installation-configurations"></a>Import a export konfigurací instalace
 
-Visual Studio můžete nakonfigurovat ve vaší organizaci pomocí instalace konfiguračních souborů. Uděláte to tak, jednoduše exportujte pracovního vytížení a komponenta informace do souboru .vsconfig pomocí instalačního programu sady Visual Studio. Můžete importovat konfiguraci do nových nebo stávajících zařízení a také sdílet s ostatními.
+Visual Studio můžete nakonfigurovat v celé organizaci pomocí konfiguračních souborů instalace. Pokud to chcete provést, jednoduše exportujte úlohy a informace o komponentách do souboru. vsconfig pomocí instalačního programu sady Visual Studio. Pak můžete importovat konfiguraci do nových nebo existujících instalací a sdílet je s ostatními.
 
 Tady je způsob.
 
 ::: moniker range="vs-2017"
 
 > [!NOTE]
-> Tato funkce je k dispozici pouze v sadě Visual Studio 2017 verze 15.9 nebo novější.
+> Tato funkce je k dispozici pouze v aplikaci Visual Studio 2017 verze 15,9 a novější.
 
 ::: moniker-end
 
-## <a name="export-a-configuration"></a>Exportovat konfiguraci
+## <a name="export-a-configuration"></a>Export konfigurace
 
-Můžete exportovat konfigurační soubor instalace z obou dříve nainstalovanou instanci sady Visual Studio nebo ten, který se právě instaluje.
+Konfigurační soubor instalace můžete exportovat buď z dříve nainstalované instance sady Visual Studio, nebo z aplikace, kterou právě instalujete.
 
-1. Spusťte instalační program sady Visual Studio.
+1. Otevřete Instalační program pro Visual Studio.
 
-1. Na kartě produktu, zvolte **Další** tlačítko a pak vyberte **exportu konfigurace**.
+1. Na kartě Produkt klikněte na tlačítko **Další** a pak vyberte **Exportovat konfiguraci**.
 
-   ![Exportovat konfiguraci z karty produktu v instalačním programu sady Visual Studio](../install/media/vs-2019/vs-installer-export-config.png)
+   ![Export konfigurace z karty produktu v instalačním programu sady Visual Studio](../install/media/vs-2019/vs-installer-export-config.png)
 
-1. Vyhledejte nebo zadejte umístění, kam chcete uložit soubor .vsconfig a klikněte na tlačítko **podrobnosti**.
+1. Vyhledejte nebo zadejte umístění, kam chcete soubor. vsconfig uložit, a pak zvolte možnost **zkontrolovat podrobnosti**.
 
-   ![Exportovat konfiguraci z instalačního programu sady Visual Studio](../install/media/vs-2019/export-configuration-confirmation.png)
+   ![Export konfigurace z instalačního programu sady Visual Studio](../install/media/vs-2019/export-configuration-confirmation.png)
 
-1. Ujistěte se, že máte úlohy a komponenty, které chcete a klikněte na tlačítko **exportovat**.
+1. Ujistěte se, že máte požadované úlohy a požadované součásti, a pak zvolte **exportovat**.
 
-## <a name="import-a-configuration"></a>Importovat konfiguraci
+## <a name="import-a-configuration"></a>Import konfigurace
 
-Až budete připraveni importovat konfigurační soubor instalace, postupujte podle těchto kroků.
+Až budete připraveni k importu konfiguračního souboru instalace, postupujte podle těchto kroků.
 
-1. Spusťte instalační program sady Visual Studio.
+1. Otevřete Instalační program pro Visual Studio.
 
-1. Na kartě produktu, zvolte **Další** tlačítko a pak vyberte **importovat konfiguraci**.
+1. Na kartě Produkt klikněte na tlačítko **Další** a pak vyberte **Importovat konfiguraci**.
 
-1. Vyhledejte .vsconfig soubor, který chcete importovat a klikněte na tlačítko **podrobnosti**.
+1. Vyhledejte soubor. vsconfig, který chcete importovat, a poté zvolte možnost **zkontrolovat podrobnosti**.
 
-1. Ujistěte se, že máte úlohy a komponenty, které chcete a klikněte na tlačítko **Zavřít**.
+1. Ujistěte se, že máte požadované úlohy a požadované součásti, a pak zvolte **Zavřít**.
 
 ::: moniker range="vs-2019"
 
-## <a name="automatically-install-missing-components"></a>Automaticky nainstalovat chybějící součásti
+## <a name="automatically-install-missing-components"></a>Automaticky instalovat chybějící součásti
 
-**Novinka ve Visual Studio 2019**: Při uložení souboru .vsconfig do kořenového adresáře vašeho řešení a pak otevřete řešení sady Visual Studio automaticky zjišťuje komponenty, které chybí a zobrazí výzvu k instalaci.
+**Novinka v aplikaci Visual Studio 2019**: Když uložíte soubor. vsconfig do kořenového adresáře řešení a pak otevřete řešení, Visual Studio automaticky zjistí, které součásti chybějí, a vyzve k jejich instalaci.
 
-![Průzkumník řešení navrhne další součásti](../install/media/vs-2019/solution-explorer-config-file.png)
+![Průzkumník řešení navrhuje další komponenty](../install/media/vs-2019/solution-explorer-config-file.png)
 
-Můžete také vygenerovat soubor .vsconfig přímo z Průzkumníka řešení.
+Soubor. vsconfig můžete také vygenerovat přímo z Průzkumník řešení.
 
 1. Klikněte pravým tlačítkem na soubor řešení.
 
-1. Zvolte **přidat** > **konfigurační soubor instalace**.
+1. Vyberte **přidat** > **konfigurační soubor instalace**.
 
-1. Potvrďte umístění, kam chcete uložit soubor .vsconfig a klikněte na tlačítko **podrobnosti**.
+1. Potvrďte umístění, kam chcete soubor. vsconfig uložit, a pak zvolte **zkontrolovat podrobnosti**.
 
-1. Ujistěte se, že máte úlohy a komponenty, které chcete a klikněte na tlačítko **exportovat**.
+1. Ujistěte se, že máte požadované úlohy a požadované součásti, a pak zvolte **exportovat**.
 
 ::: moniker-end
 
 > [!NOTE]
-> Další informace najdete v tématu [konfigurace sady Visual Studio napříč vaší organizací s .vsconfig](https://devblogs.microsoft.com/setup/configure-visual-studio-across-your-organization-with-vsconfig/) blogový příspěvek.
+> Další informace najdete v blogovém příspěvku věnovaném [konfiguraci sady Visual Studio v rámci vaší organizace](https://devblogs.microsoft.com/setup/configure-visual-studio-across-your-organization-with-vsconfig/) .
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

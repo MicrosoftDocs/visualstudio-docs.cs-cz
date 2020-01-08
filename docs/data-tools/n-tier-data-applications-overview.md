@@ -8,17 +8,17 @@ helpviewer_keywords:
 - data tier
 - n-tier applications, about n-tier applications
 ms.assetid: 1020581d-eaaa-41a2-aca4-bf4c212895f6
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 80b6f89d9c074d7d17c258263c03e97334e6fd90
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 21233b94350823b1f765aa33f9304c10c43e0535
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648276"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586377"
 ---
 # <a name="n-tier-data-applications-overview"></a>Přehled N-vrstvých datových aplikací
 *N-vrstvé* datové aplikace jsou datové aplikace, které jsou rozdělené do několika *vrstev*. Nazývají se také „distribuované aplikace“ a „vícevrstvé aplikace“. N-vrstvé aplikace oddělují zpracování do samostatných vrstev, které jsou distribuovány mezi klientem a serverem. Při vývoji aplikací s přístupem k datům by mělo být cíleno na rozdělení mezi různými úrovněmi, které aplikaci tvoří.
@@ -33,7 +33,7 @@ Aplikace Visual Studio obsahuje několik funkcí, které usnadní vývojářům 
 
 - [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index) poskytuje metodu <xref:System.Data.Linq.Table%601.Attach%2A>, která umožňuje spojování kontextu DataContext z různých vrstev v aplikaci. Další informace najdete v tématu [N-vrstvé a vzdálené aplikace s LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql).
 
-## <a name="presentation-tier"></a>Prezentační vrstva
+## <a name="presentation-tier"></a>Prezentační úroveň
 *Prezentační vrstva* je vrstva, ve které uživatelé komunikují s aplikací. Často také obsahuje další aplikační logiku. Mezi typické komponenty prezentační vrstvy patří:
 
 - Komponenty datové vazby, jako je například <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
@@ -57,7 +57,7 @@ Prezentační vrstva obvykle přistupuje k prostřední vrstvě pomocí odkazu n
 
 Následující obrázek znázorňuje funkce a technologie, které jsou k dispozici v aplikaci Visual Studio a které je možné v rámci n-vrstvé aplikace umístit do střední vrstvy.
 
-součásti ![Middle vrstev ](../data-tools/media/ntiermid.png) střední úroveň
+![komponenty střední vrstvy](../data-tools/media/ntiermid.png) střední vrstva
 
 Střední vrstva se obvykle připojuje k datové vrstvě pomocí datového připojení. Datové připojení je obvykle uloženo v komponentě datového přístupu.
 
@@ -66,7 +66,7 @@ Střední vrstva se obvykle připojuje k datové vrstvě pomocí datového při
 
 Následující obrázek znázorňuje funkce a technologie, které jsou k dispozici v aplikaci Visual Studio a které je možné v rámci n-vrstvé aplikace umístit do datové vrstvy.
 
-komponenty ![Data vrstev ](../data-tools/media/ntierdatatier.png) datovou vrstvu
+![komponenty datové vrstvy](../data-tools/media/ntierdatatier.png) datovou vrstvu
 
 K datové vrstvě nelze přistupovat přímo z klienta v prezentační vrstvě. Namísto toho je ke komunikaci mezi prezentační a datovou vrstvou použita komponenta datového přístupu ve střední vrstvě.
 

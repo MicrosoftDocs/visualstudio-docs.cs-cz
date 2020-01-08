@@ -1,10 +1,10 @@
 ---
-title: Extrakce metody
+title: Extrahovat metodu
 description: Zapněte fragment kódu do své vlastní metody, a to tak, že vyberete kód a zadáte CTRL + R, CTRL + M.
 ms.date: 01/26/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 f1_keywords:
 - vs.csharp.refactoring.extractmethod
@@ -13,14 +13,14 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: a1ec6ca273f873c82a1bb2c730a9288b5e2ae4ed
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 50f14cc2a7eafe5d65e0c6a6af54bafa2ebb5a1f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654398"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75569696"
 ---
-# <a name="extract-a-method-refactoring"></a>Extrakce refaktoringu metody
+# <a name="extract-a-method-refactoring"></a>Extrahovat metodu refaktoring
 
 Tento refaktoring platí pro:
 
@@ -28,15 +28,15 @@ Tento refaktoring platí pro:
 
 - Visual Basic
 
-**Co:** Umožňuje přepínat fragment kódu na svou vlastní metodu.
+**Co:** umožňuje zapnout fragment kódu do své vlastní metody.
 
-**Když:** Máte fragment stávajícího kódu v některé metodě, který je třeba volat z jiné metody.
+**Kdy:** máte fragment stávající kód v některé metody, která musí být volána z jiné metody.
 
-**Proč:** Tento kód můžete zkopírovat nebo vložit, ale to by vedlo k duplikaci. Lepším řešením je refaktoring, který by se měl fragmentovat na vlastní metodu, kterou může volat libovolná jiná metoda.
+**Důvod, proč:** vám může kopírovat/vložit tento kód, ale které by mohlo dojít k duplikaci. Lepším řešením je refaktorovat tohoto fragmentu do své vlastní metody, které je možné vyvolat volně jiným způsobem.
 
 ## <a name="how-to"></a>Postupy
 
-1. Zvýrazněte kód, který se má extrahovat:
+1. Zvýraznění kódu extrahovaným:
 
    - C#:
 
@@ -48,28 +48,28 @@ Tento refaktoring platí pro:
 
 2. Dále proveďte jednu z následujících akcí:
 
-   - **Kombinace**
-      - Stiskněte **kombinaci kláves CTRL + R**a potom **CTRL + M**. (Všimněte si, že se vaše klávesová zkratka může lišit v závislosti na vybraném profilu.)
-      - Stiskněte klávesu **Ctrl** + **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoring** a vybrat možnost **Extrahovat metodu** z místní nabídky okna náhledu.
-   - **Stisknut**
-      - Vyberte **upravit > refaktorovat > metoda extrahování**.
-      - Klikněte pravým tlačítkem na kód a vyberte **refaktoring > extrahovat > extrahovat metodu**.
-      - Klikněte pravým tlačítkem na kód, vyberte nabídku **rychlé akce a refaktoring** a v okně Náhled **rozbalte položku extrahovat metodu** .
+   - **Klávesnice**
+      - Stisknutím klávesy **Ctrl + R**, pak **Ctrl + M**. (Všimněte si, že klávesová zkratka může být jiný platformě, na který profil vyberete.)
+      - Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky a vybereme **extrahovat metodu** z automaticky otevíraného okna okno náhledu.
+   - **Myši**
+      - Vyberte **Upravit > Refaktorovat > extrahovat metodu**.
+      - Klikněte pravým tlačítkem na kód a vybrat **Refaktorovat > extrahovat > extrahovat metodu**.
+      - Klikněte pravým tlačítkem na kód, vyberte **rychlé akce a Refaktoringy** nabídky a vybereme **extrahovat metodu** z automaticky otevíraného okna okno náhledu.
 
-   Metoda se vytvoří okamžitě. Odsud teď můžete metodu přejmenovat jednoduše zadáním nového názvu.
+   Metoda se okamžitě vytvoří. Z tohoto místa můžete nyní přejmenovat metodu jednoduše tak, že zadáte nový název.
 
    > [!TIP]
-   > Pomocí zaškrtávacích políček v poli **Přejmenovat** , které se zobrazí v pravém horním rohu integrovaného vývojového prostředí (IDE), můžete také aktualizovat komentáře a další řetězce, aby používaly tento nový název i [Náhled změn](../../ide/preview-changes.md) .
+   > Můžete také aktualizovat komentáře a jiných řetězců použít tento nový název, stejně jako [náhled změn](../../ide/preview-changes.md) před uložením používání zaškrtávacích políček v **přejmenovat** pole, které se zobrazí v horní části napravo od prostředí (IDE).
 
    - C#:
 
-      ![Rename – metodaC#](media/extractmethod-rename-cs.png)
+      ![Přejmenovat metodu-C#](media/extractmethod-rename-cs.png)
 
    - Visual Basic:
 
-      ![Přejmenovat metodu – Visual Basic](media/extractmethod-rename-vb.png)
+      ![Přejmenovat metodu - jazyka Visual Basic](media/extractmethod-rename-vb.png)
 
-3. Až budete s změnou spokojeni, zvolte tlačítko **použít** nebo stiskněte klávesu **ENTER** . změny budou potvrzeny.
+3. Až budete spokojení s změny, zvolte **použít** tlačítko nebo stisknutím klávesy **Enter** a změny budou potvrzeny.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -4,19 +4,19 @@ ms.date: 03/19/2019
 ms.technology: vs-ide-general
 ms.custom: get-started
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4a8ea7977f73be2a38a8ac7a417c6794b567e600
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: da164414cfcca9631eaf59b5e2f6044e70ac9cc5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189112"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594861"
 ---
 # <a name="welcome-to-the-visual-studio-ide--c"></a>Vítejte v integrovaném vývojovém prostředí sady Visual Studio |\# jazyka C
 
@@ -26,7 +26,7 @@ ms.locfileid: "73189112"
 
 Pojďme aplikaci Visual Studio nakonfigurovat tak, aby používala nastavení prostředí C# , která jsou přizpůsobená vývojářům.
 
-1. Na panelu nabídek vyberte **nástroje**  > **Nastavení importu a exportu**.
+1. V panelu nabídky zvolte **nástroje** > **nastavení importu a exportu**.
 
 2. V **Průvodci importem a exportem nastavení**vyberte **Obnovit všechna nastavení** na první stránce a pak zvolte **Další**.
 
@@ -36,20 +36,20 @@ Pojďme aplikaci Visual Studio nakonfigurovat tak, aby používala nastavení pr
 
 5. Na stránce **obnovení dokončena** klikněte na tlačítko **Zavřít**.
 
-Další informace o dalších způsobech přizpůsobení rozhraní IDE naleznete v tématu [přizpůsobení sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
+Další informace o dalších způsobech mohli přizpůsobit integrovaného vývojového prostředí, najdete v článku [přizpůsobení sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="next-steps"></a>Další kroky
 
-Prozkoumejte Visual Studio dále pomocí jednoho z následujících úvodních článků:
+Prozkoumejte další Visual Studio na základě společně s některou z těchto úvodní články:
 
 > [!div class="nextstepaction"]
 > [Naučte se používat editor kódu.](tutorial-editor.md)
 
 > [!div class="nextstepaction"]
-> [Další informace o projektech a řešeních](../tutorial-projects-solutions.md)
+> [Seznamte se s projekty a řešení](../tutorial-projects-solutions.md)
 
 ## <a name="see-also"></a>Viz také:
 
-- Objevte [Další funkce sady Visual Studio](../../ide/advanced-feature-overview.md)
-- Navštívit [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/vs/)
-- Přečtěte si [blog sady Visual Studio](https://devblogs.microsoft.com/visualstudio/) .
+- Zjistit [další funkce sady Visual Studio](../../ide/advanced-feature-overview.md)
+- Navštivte [visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/)
+- Čtení [blogu sady Visual Studio](https://devblogs.microsoft.com/visualstudio/)

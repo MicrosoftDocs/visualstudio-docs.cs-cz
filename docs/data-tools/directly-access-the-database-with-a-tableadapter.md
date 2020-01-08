@@ -18,21 +18,21 @@ helpviewer_keywords:
 - saving data
 - TableAdapters
 ms.assetid: 012c5924-91f7-4790-b2a6-f51402b7014b
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e8d5d8e3091b464084df065bb7b889db9fc2194f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8fe408c090dbdc2157cd52977d4bbed66cfe9109
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648512"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586689"
 ---
 # <a name="directly-access-the-database-with-a-tableadapter"></a>Přímý přístup k databázi pomocí objektu TableAdapter
 
-Kromě `InsertCommand`, `UpdateCommand` a `DeleteCommand` jsou vytvořeny objekty TableAdapter s metodami, které lze spustit přímo proti databázi. Můžete zavolat tyto metody (`TableAdapter.Insert`, `TableAdapter.Update` a `TableAdapter.Delete`) k manipulaci s daty přímo v databázi.
+Kromě `InsertCommand`, `UpdateCommand`a `DeleteCommand`jsou vytvořeny objekty TableAdapter s metodami, které lze spustit přímo proti databázi. Můžete zavolat tyto metody (`TableAdapter.Insert`, `TableAdapter.Update`a `TableAdapter.Delete`) k manipulaci s daty přímo v databázi.
 
 Pokud nechcete vytvořit tyto přímé metody, nastavte vlastnost `GenerateDbDirectMethods` TableAdapter na `false` v okně **vlastnosti** . Pokud jsou do TableAdapter přidané nějaké dotazy kromě hlavního dotazu TableAdapter, jedná se o samostatné dotazy, které tyto metody negenerují `DbDirect`.
 

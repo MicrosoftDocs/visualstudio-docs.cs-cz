@@ -15,17 +15,17 @@ helpviewer_keywords:
 - XML documents, reading
 - datasets [Visual Basic], reading XML data
 ms.assetid: fae72958-0893-47d6-b3dd-9d42418418e4
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6dec7cad50d818d4b2418442d8196cb8b5ff046a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5f89645b9d5ec8ab0f69fad4fea5a399d8e6764d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641378"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586325"
 ---
 # <a name="read-xml-data-into-a-dataset"></a>Načtení dat XML do datové sady
 
@@ -113,9 +113,9 @@ Vzhledem k tomu, že se tento návod zaměřuje na čtení dat XML do datové sa
 
 Uživatelské rozhraní pro tuto aplikaci se skládá z těchto možností:
 
-- @No__t_0 ovládací prvek, který zobrazí obsah souboru XML jako data.
+- <xref:System.Windows.Forms.DataGridView> ovládací prvek, který zobrazí obsah souboru XML jako data.
 
-- @No__t_0 ovládací prvek, který zobrazuje schéma XML pro soubor XML.
+- <xref:System.Windows.Forms.TextBox> ovládací prvek, který zobrazuje schéma XML pro soubor XML.
 
 - Dva <xref:System.Windows.Forms.Button> ovládací prvky.
 
@@ -137,9 +137,9 @@ Uživatelské rozhraní pro tuto aplikaci se skládá z těchto možností:
 
 3. Nastavte následující vlastnosti:
 
-    |Control|Vlastnost|Nastavením|
+    |Control|Vlastnost|Nastavení|
     |-------------|--------------|-------------|
-    |`TextBox1`|**Víceřádkový**|`true`|
+    |`TextBox1`|**Multiline**|`true`|
     ||**Posuvníky**|**Svislé**|
     |`Button1`|**Jméno**|`ReadXmlButton`|
     ||**Text**|`Read XML`|
@@ -158,7 +158,7 @@ V tomto kroku vytvoříte novou datovou sadu s názvem `authors`. Další inform
 
      **DataSet1.** se přidá do zásobníku komponent.
 
-4. V okně **vlastnosti** nastavte vlastnosti **název** a <xref:System.Data.DataSet.DataSetName%2A> pro `AuthorsDataSet`.
+4. V okně **vlastnosti** nastavte vlastnosti **název** a <xref:System.Data.DataSet.DataSetName%2A> pro`AuthorsDataSet`.
 
 ## <a name="create-the-event-handler-to-read-the-xml-file-into-the-dataset"></a>Vytvoření obslužné rutiny události pro čtení souboru XML do datové sady
 
@@ -179,7 +179,7 @@ Tlačítko **číst XML** přečte soubor XML do datové sady. Poté nastaví vl
 
 ## <a name="create-the-event-handler-to-display-the-schema-in-the-textbox"></a>Vytvoření obslužné rutiny události pro zobrazení schématu v textovém poli
 
-Tlačítko **Zobrazit schéma** vytvoří objekt <xref:System.IO.StringWriter>, který je vyplněn schématem a je zobrazen v <xref:System.Windows.Forms.TextBox>control.
+Tlačítko **Zobrazit schéma** vytvoří objekt <xref:System.IO.StringWriter>, který je vyplněn schématem a je zobrazen v ovládacím prvku <xref:System.Windows.Forms.TextBox>.
 
 1. V **Průzkumník řešení**vyberte **Form1**a pak klikněte na tlačítko **Návrhář zobrazení** .
 

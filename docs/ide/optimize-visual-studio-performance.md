@@ -1,27 +1,27 @@
 ---
-title: Zvýšit výkon, pokud je Visual Studio pomalé
+title: Zlepšení výkonu při pomalém sady Visual Studio
 titleSuffix: ''
 ms.date: 04/11/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - performance [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 f1_keywords:
 - vs.performancecenter
 ms.workload:
 - multiple
-ms.openlocfilehash: ad6951179d9326a2785bee865e9bc8adbefd3f2e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6495e8506e12c0c5e5f878a23c609fe53a401bde
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667065"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596993"
 ---
 # <a name="optimize-visual-studio-performance"></a>Optimalizace výkonu sady Visual Studio
 
-Tento článek poskytuje některé návrhy, které můžete vyzkoušet, pokud zjistíte, že je aplikace Visual Studio spuštěná pomalu. Další informace o tom, jak zvýšit výkon, si můžete prohlédnout v tématu [tipy a tipy k výkonu sady Visual Studio](../ide/visual-studio-performance-tips-and-tricks.md) .
+Tento článek obsahuje několik návrhů vyzkoušet, pokud zjistíte, že Visual Studio běží pomalu. Můžete taky využít podívat [a tipy k výkonu sady Visual Studio](../ide/visual-studio-performance-tips-and-tricks.md) další návrhy na vylepšení výkonu.
 
 ## <a name="upgrade-visual-studio"></a>Upgrade sady Visual Studio
 
@@ -29,29 +29,29 @@ Pokud aktuálně používáte Visual Studio 2015, Stáhněte si [Visual studio 2
 
 ::: moniker range="vs-2017"
 
-Pokud již používáte Visual Studio 2017, ujistěte se, že používáte verzi 15,6 nebo novější. Data ukazují, že řešení ve verzi 15,6 se rychleji načítají do dvou nebo třikrát. Stáhněte si ho [sem](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download).
+Pokud již používáte Visual Studio 2017, ujistěte se, že používáte verzi 15,6 nebo novější. Dat udávají, že řešení se načtení do dvakrát nebo třikrát rychlejší ve verzi 15.6. Stáhněte si ho [tady](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download).
 
 ::: moniker-end
 
-## <a name="extensions-and-tool-windows"></a>Okna rozšíření a nástrojů
+## <a name="extensions-and-tool-windows"></a>Rozšíření a okna nástrojů
 
-Je možné, že máte nainstalovaná rozšíření, která zpomalují Visual Studio. Nápovědu ke správě rozšíření pro zlepšení výkonu najdete v tématu [Změna nastavení rozšíření za účelem zvýšení výkonu](../ide/optimize-visual-studio-startup-time.md#extensions).
+Můžete mít nainstalovaná rozšíření, které snižují sady Visual Studio. Nápověda pro správu rozšíření kvůli zvýšení výkonu, naleznete v tématu [změnit nastavení rozšíření kvůli zvýšení výkonu](../ide/optimize-visual-studio-startup-time.md#extensions).
 
-Podobně můžete mít okna nástrojů, která zpomalují Visual Studio. Nápovědu ke správě oken nástrojů najdete v tématu [Změna nastavení okna nástrojů pro zlepšení výkonu](../ide/optimize-visual-studio-startup-time.md#tool-windows).
+Podobně může mít okna nástrojů, které snižují sady Visual Studio. Nápovědu pro správu nástroje windows najdete v tématu [změnit nastavení okna nástroje pro zvýšení výkonu](../ide/optimize-visual-studio-startup-time.md#tool-windows).
 
 ## <a name="hardware"></a>Hardware
 
-Pokud uvažujete o upgradu hardwaru, má jednotka SSD (Solid State Drive) více vliv na výkon než další paměť RAM nebo rychlejší procesor.
+Pokud uvažujete o hardwaru, jednotky SSD (Solid-State Drive) má další dopad na výkon než další paměť RAM nebo na rychlejší procesor.
 
-Pokud přidáte jednotku SSD, pro optimální výkon nainstalujte systém Windows na tuto jednotku na rozdíl od jednotky pevného disku (HDD). Místo na disku vašich řešení pro Visual Studio nezáleží na velikosti.
+Pokud chcete přidat SSD, pro zajištění optimálního výkonu instalaci Windows na této jednotce, na rozdíl od pevných discích (HDD). Umístění disku řešení sady Visual Studio nefunguje co nejvíce záleží.
 
-Kromě toho nespouštějte řešení z jednotky USB. Zkopírujte ho na pevný disk nebo SSD.
+Kromě toho nespouštějte řešení z USB Flash disk. Zkopírujte ho do pevný disk nebo SSD.
 
-## <a name="help-us-improve"></a>Pomáhat nám zlepšovat
+## <a name="help-us-improve"></a>Pomozte nám zlepšovat kvalitu
 
-Vaše názory nám pomáhají zlepšit. Pomocí funkce **nahlásit problém** můžete zaznamenat trasování a odeslat ho do nás. Vyberte ikonu zpětné vazby vedle **Rychlé spuštění**nebo vyberte **help**  > **Odeslat názor**  > **nahlásit problém** z řádku nabídek. Další informace najdete v tématu [postup nahlášení problému se sadou Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md).
+Vaše zpětná vazba pomůže nám se zdokonalovat. Použití **nahlásit problém** funkci pro trasování "záznam" a odeslat společnosti Microsoft. Vyberte ikonu zpětné vazby vedle **rychlé spuštění**, nebo vyberte **pomáhají** > **odeslat zpětnou vazbu** > **nahlásit problém** z řádku nabídek. Další informace najdete v tématu [postup nahlášení problému se sadou Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Tipy a triky pro výkon](../ide/visual-studio-performance-tips-and-tricks.md)
-- [Blog sady Visual Studio – nahrávání řešení rychleji pomocí sady Visual Studio 2017 verze 15,6](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)
+- [Tipy ke zvýšení výkonu a triky](../ide/visual-studio-performance-tips-and-tricks.md)
+- [Blog Visual Studio – zátěžové řešení rychleji s využitím sady Visual Studio 2017 verze 15.6](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)

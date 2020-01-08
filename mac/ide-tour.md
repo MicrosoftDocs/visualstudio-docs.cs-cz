@@ -3,15 +3,15 @@ title: Visual Studio for Mac Tour
 description: Visual Studio pro Mac poskytuje integrované vývojové prostředí pro sestavování aplikací .NET na macOS, včetně ASP.NET Core webů a projektů Xamarin pro iOS, Android, Mac a Xamarin. Forms.
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 09/18/2019
+ms.date: 12/13/2019
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: 6d2f0f891f704d3762bc0967da466960ee5170ee
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.openlocfilehash: f7686efae903912b64d8692a823d6e82592cbec9
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74984701"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75405822"
 ---
 # <a name="visual-studio-2019-for-mac-tour"></a>Visual Studio 2019 for Mac tour
 
@@ -123,7 +123,7 @@ Visual Studio pro Mac poskytuje dva užitečné způsoby refaktorování kódu: 
 
 ## <a name="debugging"></a>Ladění
 
-Visual Studio pro Mac má nativní ladicí program umožňující ladění pro aplikace Xamarin. iOS, Xamarin. Mac a Xamarin. Android. Visual Studio pro Mac používá měkký ladicí program mono, který je implementován do Mono runtime a umožňuje rozhraní IDE ladit spravovaný kód napříč všemi platformami. Další informace o ladění naleznete v článku [ladění](/visualstudio/mac/debugging) .
+Visual Studio pro Mac mají ladicí programy, které podporují projekty .NET Core, .NET Framework, Unity a Xamarin. Visual Studio pro Mac používá ladicí program .NET Core a monofonní měkký ladicí program umožňující rozhraní IDE ladit spravovaný kód napříč všemi platformami. Další informace o ladění naleznete v článku [ladění](/visualstudio/mac/debugging) .
 
 Ladicí program obsahuje bohatých vizualizací pro speciální typy, jako jsou například řetězce, barvy, adresy URL a také velikosti, souřadnice a Bézierovy křivky.
 

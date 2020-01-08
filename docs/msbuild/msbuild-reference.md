@@ -10,17 +10,17 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild, reference
 ms.assetid: 093395e1-70da-4f74-b34d-046c5e2b32e8
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b9f3889cf1d9088f39b4efc4e4d01197ffaaaa77
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 9418143c9d93d960d3123868b89f24a97e1afafd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72912059"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593964"
 ---
 # <a name="msbuild-reference"></a>Referenční dokumentace nástroje MSBuild
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] je systém sestavení pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Následující odkazy vedou k tématům, která obsahují [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] referenčních informací.
@@ -84,8 +84,8 @@ ms.locfileid: "72912059"
 
 - [Přehled nástroje MSBuild](../msbuild/msbuild.md)
 - [Microsoft. Build. Evaluation](/dotnet/api/microsoft.build.evaluation)
-- [Microsoft. Build. Execution](/dotnet/api/microsoft.build.execution)
-- [Microsoft. Build. Framework](/dotnet/api/microsoft.build.framework)
-- [Microsoft. Build. Logging](/dotnet/api/microsoft.build.logging)
+- [Microsoft.Build.Execution](/dotnet/api/microsoft.build.execution)
+- [Microsoft.Build.Framework](/dotnet/api/microsoft.build.framework)
+- [Microsoft.Build.Logging](/dotnet/api/microsoft.build.logging)
 - [Microsoft. Build. Tasks](/dotnet/api/microsoft.build.tasks)
 - [Microsoft. Build. Utilities](/dotnet/api/microsoft.build.utilities)

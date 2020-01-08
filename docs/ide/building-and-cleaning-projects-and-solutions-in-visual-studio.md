@@ -18,21 +18,21 @@ helpviewer_keywords:
 - solution build configurations, build order
 - builds [Visual Studio], preparing
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b8676ad9dc1a3b245242687e2ea56148b83b8d56
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: f3e71fe9b6179ac8f7ac69b0cb987fdbc30459fb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416421"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596525"
 ---
 # <a name="build-and-clean-projects-and-solutions-in-visual-studio"></a>Sestavování a čištění projektů a řešení v aplikaci Visual Studio
 
-Pomocí postupů v tomto tématu můžete vytvářet, znovu sestavit nebo vyčistit všechny nebo některé projekty nebo položky projektu v řešení. Podrobný kurz najdete v tématu [Návod: Sestavování](../ide/walkthrough-building-an-application.md)aplikace.
+Pomocí postupů v tomto tématu můžete vytvářet, znovu sestavit nebo vyčistit všechny nebo některé projekty nebo položky projektu v řešení. Podrobný kurz najdete v tématu [Návod: sestavování aplikace](../ide/walkthrough-building-an-application.md).
 
 > [!NOTE]
 > Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [sestavování a čištění projektů a řešení v Visual Studio pro Mac](/visualstudio/mac/building-and-cleaning-projects-and-solutions).
@@ -71,21 +71,21 @@ Pomocí postupů v tomto tématu můžete vytvářet, znovu sestavit nebo vyčis
 
 2. V **možnosti** dialogového okna rozbalte **projekty a řešení** uzel a klikněte na tlačítko **sestavíte a spustíte** stránky.
 
-     Otevře se dialogové okno **Sestavit a spustit** > **projekty a** > **Možnosti** řešení.
+     Otevře se dialogové okno **Možnosti** **sestavení a spuštění** > **projekty a řešení** > .
 
 3. Vyberte **pouze při spuštění sestavit projekty a závislosti** zaškrtávací políčko.
 
      Když je toto políčko zaškrtnuto, pouze aktuální spouštěcí projekt a jeho závislosti jsou vytvořeny při proveďte některý z následujících kroků:
 
-    - Na řádku nabídek klikněte na tlačítko spustit **ladění** > **Start** (**F5**).
+    - Na panelu nabídek vyberte možnost **ladění** > **Spustit** (**F5**).
 
-    - Na řádku nabídek klikněte na **sestavit** > **sestavení řešení** (**CTRL**+**SHIFT**+**B**).
+    - Na panelu nabídek vyberte možnost **sestavit** > **Sestavit řešení** (**CTRL**+**SHIFT**+**B**).
 
     Když toto políčko zaškrtnuté, všechny projekty, jejich závislosti a soubory řešení jsou vytvořeny při spuštění některou z předchozích příkazů. Ve výchozím nastavení je toto políčko zaškrtnuté.
 
 ## <a name="to-build-only-the-selected-visual-c-project"></a>Sestavit jenom vybrané projektu Visual C++
 
-Zvolte projekt a pak na panelu nabídek zvolte pouze **sestavit** > projekt a jeden z následujících příkazů: [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]
+Zvolte projekt [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] a poté na panelu nabídek zvolte možnost **sestavit** > **projekt**a jeden z následujících příkazů:
 
 - **Jenom Build** *ProjectName*
 
@@ -109,15 +109,15 @@ Proveďte některý z následujících kroků:
 
 - Na panelu nabídek vyberte **vytvořit** > **Zrušit**.
 
-- Stiskněte klávesu **CTRL**+**Break**.
+- Stiskněte klávesu **Ctrl**+**Break**.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Postupy: Zobrazení, uložení a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md)
+- [Postupy: zobrazení, ukládání a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md)
 - [Získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)
 - [Kompilace a sestavování](../ide/compiling-and-building-in-visual-studio.md)
 - [Principy konfigurací sestavení](../ide/understanding-build-configurations.md)
-- [Postupy: Nastavení konfigurace ladění a vydání](../debugger/how-to-set-debug-and-release-configurations.md)
+- [Postupy: Nastavení konfigurace ladění a verzí](../debugger/how-to-set-debug-and-release-configurations.md)
 - [C/C++ sestavit odkaz](/cpp/build/reference/c-cpp-building-reference)
 - [Devenv – přepínače příkazového řádku](../ide/reference/devenv-command-line-switches.md)
 - [Řešení a projekty](../ide/solutions-and-projects-in-visual-studio.md)

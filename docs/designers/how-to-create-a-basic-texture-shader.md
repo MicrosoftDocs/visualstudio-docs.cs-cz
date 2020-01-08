@@ -3,17 +3,17 @@ title: 'Postupy: Vytvoření shaderu základní textury'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 5af113fb-6415-4be0-8b23-10fddb10e80a
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a6b4aa042e3ba51621e43ee2f531364135179c02
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ac74155b8de4669d959d9b14e9be20ada2ec51d9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72635877"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589471"
 ---
 # <a name="how-to-create-a-basic-texture-shader"></a>Postupy: Vytvoření základního shaderu textury
 
@@ -27,7 +27,7 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
 1. Vytvořte shader DGSL, se kterým chcete pracovat. Informace o tom, jak přidat DGSL shader do projektu, naleznete v části Začínáme v [Návrháři shaderu](../designers/shader-designer.md).
 
-2. Odstraňte uzel **Barva bodu** . V režimu **výběru** vyberte uzel **Barva bodu** a pak na panelu nabídek zvolte **Upravit**  > **Odstranit**. Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
+2. Odstraňte uzel **Barva bodu** . V režimu **výběru** vyberte uzel **Barva bodu** a pak na panelu nabídek zvolte **Upravit** > **Odstranit**. Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
 
 3. Přidejte do grafu uzel s **ukázkovým texturou** . V **panelu nástrojů**v části **Textura**vyberte **Ukázka textury** a přesuňte ji na návrhovou plochu.
 
@@ -39,7 +39,7 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
 7. Připojte souřadnice textury k ukázce textury. V režimu **výběru** přesuňte **výstupní** terminál uzlu **souřadnice textury** do **UV** terminálu uzlu **ukázky textury** . Toto připojení vzorkuje texturu na zadaných souřadnicích.
 
-8. Připojte ukázku textury k konečné barvě. Přesuňte terminál **RGB** uzlu **vzorku textury** do terminálu **RGB** **finálního uzlu barvy** a pak přesuňte terminál **alfa** uzlu **vzorku textury** do terminálu **alfa** **konečné barvy.** uzel.
+8. Připojte ukázku textury k konečné barvě. Přesuňte terminál **RGB** uzlu **vzorku textury** do terminálu **RGB** **konečného uzlu barvy** a poté přesuňte terminál **alfa** uzlu **ukázky textury** do terminálu **alfa** koncového uzlu **barvy** .
 
 Následující ilustrace znázorňuje dokončený graf shaderu a náhled shaderu, který se použije pro datovou krychli.
 

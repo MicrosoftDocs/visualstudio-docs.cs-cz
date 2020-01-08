@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e092e11474aa872903977e1b07c699b160bef8a2
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: 884047237652f6b69bd437b5faf47d820903b824
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516595"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588665"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>Kurz 2: vytvoření časovaného matematického kvízu
 

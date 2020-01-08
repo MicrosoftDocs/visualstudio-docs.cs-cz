@@ -11,17 +11,17 @@ helpviewer_keywords:
 - WCF services
 - WCF services, walkthrough
 ms.assetid: 5fef1a64-27a4-4f10-aa57-29023e28a2d6
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7e2954d333ae3fe0dc6ff1c221d1e450eb9bf51a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3d3f2e80ff3e2b94c46d1e2658c40bccf2e6c365
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639462"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586013"
 ---
 # <a name="walkthrough-create-a-simple-wcf-service-in-windows-forms"></a>Návod: Vytvoření jednoduché služby WCF v model Windows Forms
 
@@ -31,7 +31,7 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
 ## <a name="create-a-service"></a>Vytvoření služby
 
-1. Otevřete Visual Studio.
+1. Otevřít Visual Studio.
 
 ::: moniker range="vs-2017"
 
@@ -39,7 +39,7 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
 3. V dialogovém okně **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#**  a vyberte možnost **WCF**a pak položku **Knihovna služby WCF**.
 
-4. Kliknutím na tlačítko **OK** vytvořte projekt.
+4. Klikněte na **OK**, tím vytvoříte projekt.
 
    ![Projekt knihovny služby WCF](../data-tools/media/wcf1.png)
 
@@ -139,7 +139,7 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
      ![Přidání ovládacích prvků do formuláře](../data-tools/media/wcf9.png)
 
-3. Poklikejte na `Button` a přidejte následující kód do obslužné rutiny události `Click`:
+3. Poklikejte na `Button`a přidejte následující kód do obslužné rutiny události `Click`:
 
      [!code-csharp[WCFWalkthrough#3](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.cs)]
      [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.vb)]

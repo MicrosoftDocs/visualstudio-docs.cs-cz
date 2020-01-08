@@ -2,17 +2,17 @@
 title: Referenční dokumentace jazyka přímého značení grafů (DGML)
 ms.date: 11/04/2016
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 292ba29e1902053b04f70052989e4eb0efff5b19
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.openlocfilehash: 2363e5131dd499dd85a5822ed15e2bfe473f1e1c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983679"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596633"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>Referenční dokumentace jazyka přímého značení grafů (DGML)
 
@@ -37,7 +37,7 @@ Následující tabulka popisuje typy prvků, které jsou používány v DGML:
 
    `BackgroundImage` – umístění souboru obrázku, který se má použít jako pozadí mapy.
 
-   `GraphDirection` – Pokud je mapa nastavená na rozložení stromu (`Sugiyama`), uspořádejte uzly tak, aby většina odkazů pokračovala v zadaném směru: `TopToBottom`, `BottomToTop`, `LeftToRight` nebo `RightToLeft`. Viz [Změna rozložení mapy](../modeling/browse-and-rearrange-code-maps.md#Selecting).
+   `GraphDirection` – Pokud je mapa nastavená na rozložení stromu (`Sugiyama`), uspořádejte uzly tak, aby většina odkazů pokračovala v zadaném směru: `TopToBottom`, `BottomToTop`, `LeftToRight`nebo `RightToLeft`. Viz [Změna rozložení mapy](../modeling/browse-and-rearrange-code-maps.md#Selecting).
 
    `Layout` – nastavte mapu na následující rozložení: `None`, `Sugiyama` (rozložení stromové struktury), `ForceDirected` (rychlé clustery) nebo `DependencyMatrix`. Viz [Změna rozložení mapy](../modeling/browse-and-rearrange-code-maps.md#Selecting).
 
@@ -96,7 +96,7 @@ Následující tabulka popisuje typy prvků, které jsou používány v DGML:
 
    `Label` – zobrazovaný název uzlu.
 
-   Atributy stylu. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Atributy stylu. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    `Category` – název kategorie, která identifikuje prvky, které sdílejí tento atribut. Další informace naleznete v tématu `<Category/>` element.
 
@@ -104,7 +104,7 @@ Následující tabulka popisuje typy prvků, které jsou používány v DGML:
 
    `Group` – Pokud uzel obsahuje další uzly, nastavte tento atribut na `Expanded` nebo `Collapsed` pro zobrazení nebo skrytí jeho obsahu. Musí existovat `<Link/>` element, který obsahuje atribut `Category="Contains"` a určuje nadřazený uzel jako zdrojový uzel a podřízený uzel jako cílový uzel. Viz [prvky kódu skupiny](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes).
 
-   `Visibility` – nastavte tento atribut na `Visible`, `Hidden` nebo `Collapsed`. Používá `System.Windows.Visibility`. Viz [Skrytí nebo zobrazení uzlů a propojení](../modeling/browse-and-rearrange-code-maps.md#HidingShowing).
+   `Visibility` – nastavte tento atribut na `Visible`, `Hidden`nebo `Collapsed`. Používá `System.Windows.Visibility`. Viz [Skrytí nebo zobrazení uzlů a propojení](../modeling/browse-and-rearrange-code-maps.md#HidingShowing).
 
    `Reference` – nastavte tento atribut tak, aby se připojovat k dokumentu nebo adrese URL. Viz [odkazování dokumentů nebo adres URL na prvky kódu a odkazy](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences).
 
@@ -161,7 +161,7 @@ Následující tabulka popisuje typy prvků, které jsou používány v DGML:
 
    `Label` – zobrazovaný název odkazu
 
-   Atributy stylu. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Atributy stylu. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    `Category` – název kategorie, která identifikuje prvky, které sdílejí tento atribut. Další informace naleznete v tématu `<Category/>` element.
 
@@ -218,7 +218,7 @@ Následující tabulka popisuje typy prvků, které jsou používány v DGML:
 
    V příkladu pro tento prvek kategorie `FailedTest` dědí svůj `Stroke` atribut z kategorie `PassedTest`. Viz "vytvoření hierarchických kategorií" v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
-   Kategorie také poskytují některé základní chování šablony, které řídí vzhled uzlů a propojení, když jsou zobrazeny na mapě. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Kategorie také poskytují některé základní chování šablony, které řídí vzhled uzlů a propojení, když jsou zobrazeny na mapě. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    Příklad:
 
@@ -310,7 +310,7 @@ Nahrazení běžně používaných cest aliasy pomáhá zmenšit velikost soubor
 </Paths>
 ```
 
-Chcete-li odkazovat na alias z prvku v souboru. dgml, vložte `Id` elementu \<Path/> znakem dolaru ($) a závorkami (()):
+Chcete-li odkazovat na alias z prvku v souboru. dgml, vložte `Id` \<ho prvku cesta/> znak dolaru ($) a závorky (()):
 
 ```xml
 <Nodes>

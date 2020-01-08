@@ -1,23 +1,23 @@
 ---
-title: Možnosti, textový editor, XML, formátování
+title: Options, Text Editor, XML, Formatting
 ms.date: 10/29/2018
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Formatting
 ms.assetid: 203e60b2-7b80-4ff4-9fa1-aa9f4374377b
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: ccd5fdee974e7222d1009b508b7ef90758fafcb6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b5dabfbc4f705d7de9fa881f373994714e43d26a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666603"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568136"
 ---
-# <a name="options-text-editor-xml-formatting"></a>Možnosti, textový editor, XML, formátování
+# <a name="options-text-editor-xml-formatting"></a>Options, Text Editor, XML, Formatting
 
-Stránka možnosti **formátování** slouží k určení způsobu formátování prvků a atributů v dokumentech XML. Chcete-li získat přístup k možnostem formátování XML, zvolte **nástroje**  > **Možnosti**  > **textový editor**  > **XML**a pak zvolte možnost **formátování**.
+Stránka možnosti **formátování** slouží k určení způsobu formátování prvků a atributů v dokumentech XML. Chcete-li získat přístup k možnostem formátování XML, zvolte **nástroje** > **Možnosti** > **textový editor** > **XML**a pak zvolte možnost **formátování**.
 
 ## <a name="attributes"></a>Atributy
 

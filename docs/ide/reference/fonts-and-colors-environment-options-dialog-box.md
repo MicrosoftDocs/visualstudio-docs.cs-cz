@@ -20,21 +20,21 @@ helpviewer_keywords:
 - defaults, colors
 - printers, customizing
 ms.assetid: c767d302-51ed-47a8-a527-c07bce2aa485
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 527c01629fbff856748a50d393ca5df2a413d056
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9d5c9edd47e3db43735d3c6e8f6a4ec1a881214e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667023"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595615"
 ---
 # <a name="fonts-and-colors-environment-options-dialog-box"></a>Písma a barvy, prostředí, dialogové okno Možnosti
 
-Stránka **písma a barvy** v dialogovém okně **Možnosti** umožňuje vytvořit vlastní písmo a barevné schéma pro různé prvky uživatelského rozhraní v integrovaném vývojovém prostředí (IDE). K tomuto dialogovému oknu se dostanete tak, že kliknete na **nástroje**  > **Možnosti**a pak vyberete **prostředí**  > **písma a barvy**.
+Stránka **písma a barvy** v dialogovém okně **Možnosti** umožňuje vytvořit vlastní písmo a barevné schéma pro různé prvky uživatelského rozhraní v integrovaném vývojovém prostředí (IDE). K tomuto dialogovému oknu se dostanete tak, že kliknete na **nástroje** > **Možnosti**a pak vyberete **prostředí** > **písma a barvy**.
 
 Změny barevného schématu se neprojeví během relace, ve které jste je provedli. Změny barev můžete vyhodnotit tak, že otevřete jinou instanci aplikace Visual Studio a vydáte podmínky, za kterých očekáváte, že se vaše změny použijí.
 
@@ -42,7 +42,7 @@ Změny barevného schématu se neprojeví během relace, ve které jste je prove
 
 Obsahuje seznam všech prvků uživatelského rozhraní, u kterých můžete měnit schémata písma a barev. Po výběru položky z tohoto seznamu můžete přizpůsobit nastavení barev pro položku vybranou v **zobrazení položky**.
 
-- **Textový editor**
+- **Textový Editor**
 
      Změny stylu písma, velikosti a nastavení barev v textovém editoru ovlivňují vzhled textu ve výchozím textovém editoru. Pomocí těchto nastavení nebudou ovlivněny dokumenty otevřené v textovém editoru mimo rozhraní IDE.
 
@@ -86,7 +86,7 @@ Obnoví hodnoty písma a barev položky seznamu vybrané v **možnosti Zobrazit 
 
 Zobrazí seznam všech písem nainstalovaných ve vašem systému. Při prvním zobrazení rozevírací nabídky se zvýrazní aktuální písmo pro prvek vybraný v poli **Zobrazit nastavení pro** . Pevná písma, která jsou v editoru jednodušší, se zobrazují tučně.
 
-**Hodnota**
+**Velikost**
 
 Vypíše dostupné velikosti bodů pro zvýrazněné písmo. Změna velikosti písma má vliv na všechny **položky zobrazení** pro volbu **Zobrazit nastavení pro** výběr.
 
@@ -107,7 +107,7 @@ Mezi některé položky zobrazení patří:
 |**Okraj indikátoru**|Okraj na levé straně editoru kódu, kde se zobrazují zarážky a ikony záložek.|
 |**Čísla řádků**|Volitelná čísla, která se zobrazí vedle každého řádku kódu|
 |**Viditelné prázdné znaky**|Mezery, tabulátory a indikátory zalamování slov|
-|**Záložku**|Řádky, které mají záložky. **Záložka** je viditelná pouze v případě, že je okraj indikátoru zakázán.|
+|**záložky**|Řádky, které mají záložky. **Záložka** je viditelná pouze v případě, že je okraj indikátoru zakázán.|
 |**Spárování složených závorek (zvýraznění)**|Zvýraznění, které obvykle formátuje tučně pro odpovídající závorky.|
 |**Spárování složených závorek (obdélník)**|Zvýraznění, které je obvykle šedý obdélník na pozadí.|
 |**Zarážka (zakázaná)**|Nepoužívá se.|
@@ -127,12 +127,12 @@ Mezi některé položky zobrazení patří:
 |**Pole závislé na fragmentu kódu**|Pole, které bude aktualizováno při úpravě aktuálního upravitelného pole.|
 |**Pole fragmentu kódu**|Upravitelné pole, když je fragment kódu aktivní|
 |**Sbalitelný text**|Blok textu nebo kódu, který lze přepnout a z pohledu zobrazení v editoru kódu.|
-|**Vytvořena**|Komentáře ke kódu.|
+|**Komentování**|Komentáře ke kódu.|
 |**Chyba kompilátoru**|Modré vlnovky v editoru indikující chybu kompilátoru.|
 |**Pokrytí – nedotčená oblast**|Kód, který nebyl pokryt jednotkovým testem.|
 |**Pokrytí částečně prokryté oblasti**|Kód, který byl částečně pokryt jednotkovým testem.|
 |**Disponibilní oblast pokrytí**|Kód, který byl zcela pokryt jednotkovým testem.|
-|**Komentář CSS**|Komentář v šablony stylů CSS. Příklad:<br /><br /> /* komentář \* /|
+|**Komentář CSS**|Komentář v šablony stylů CSS. Příklad:<br /><br /> /* komentář \*/|
 |**Klíčové slovo CSS**|Klíčová slova v šabloně stylů CSS.|
 |**Název vlastnosti CSS**|Název vlastnosti, například pozadí.|
 |**Hodnota vlastnosti CSS**|Hodnota přiřazená vlastnosti, například modrá.|
@@ -154,8 +154,8 @@ Mezi některé položky zobrazení patří:
 |**Paměť změněna**|Barva textu používaná k zobrazení změněných dat v okně **paměti**|
 |**Data paměti**|Barva textu používaná k zobrazení dat v okně **paměti**|
 |**Paměť je nečitelná.**|Barva textu používaná k zobrazení nečitelných paměťových oblastí v okně **paměti**|
-|**Automatické**|Číslo v kódu, které představuje skutečnou číselnou hodnotu.|
-|**Podnikatel**|Operátory, jako jsou +,-a! =.|
+|**Číslo**|Číslo v kódu, které představuje skutečnou číselnou hodnotu.|
+|**– Operátor**|Operátory, jako jsou +,-a! =.|
 |**Jiná chyba**|Jiné typy chyb, na které se nevztahují jiné chybové vlnovky. V současné době zahrnuje úpravy hrubé v úpravách a pokračování.|
 |**Klíčové slovo preprocesoru**|Klíčová slova používaná preprocesorem, jako je například #include.|
 |**Oblast jen pro čtení**|Kód, který nelze upravovat. Například kód zobrazený v okně zobrazení definice kódu nebo kód, který nelze změnit během úprav a pokračování.|
@@ -165,7 +165,7 @@ Mezi některé položky zobrazení patří:
 |**Registrovat data**|Barva textu používaná pro zobrazení dat v okně **Registry**|
 |**Registrovat NAT**|Barva textu používaná k zobrazení nerozpoznaných dat a objektů uvnitř okna **Registry**|
 |**Inteligentní značka**|Slouží k označení obrysu při vyvolání inteligentních značek.|
-|**Značka DML SQL**|Platí pro Editor jazyka Transact-SQL. Příkazy DML v tomto editoru jsou ve výchozím nastavení označeny ohraničujícím modrým polem.|
+|**SQL DML Marker**|Platí pro Editor jazyka Transact-SQL. Příkazy DML v tomto editoru jsou ve výchozím nastavení označeny ohraničujícím modrým polem.|
 |**Zastaralý kód**|Nahrazený kód čeká na aktualizaci. V některých případech nemůže příkaz Upravit a pokračovat okamžitě použít změny kódu, ale použije se později při pokračování ladění. K tomu dochází, pokud upravíte funkci, která musí volat aktuálně prováděnou funkci, nebo pokud přidáte více než 64 bajtů nových proměnných do funkce čekající na zásobník volání. Pokud k tomu dojde, ladicí program zobrazí dialogové okno upozornění na zastaralé kódy a nahrazený kód bude pokračovat, dokud nebude dokončena funkce a bude volána znovu. Upravit a pokračovat aplikuje změny kódu v daném čase.|
 |**Řetězec**|Řetězcové literály.|
 |**Řetězec (C# @ doslovné)**|Řetězcové literály C# v, které jsou interpretovány doslovné. Příklad:<br /><br /> @"x"|
@@ -196,12 +196,12 @@ Mezi některé položky zobrazení patří:
 |**Atribut XML**|Názvy atributů.|
 |**Uvozovky atributů XML**|Znaky uvozovek pro atributy XML|
 |**Hodnota atributu XML**|Obsah atributů XML|
-|**Oddíl XML CDATA**|Obsah \<! [CDATA [...]] >.|
+|**Oddíl XML CDATA**|Obsah \<![CDATA[...]]>.|
 |**Komentář XML**|Obsah \<!---->.|
-|**Oddělovač XML**|Oddělovače syntaxe XML, včetně <, <?, <!, \<!--,-->? \> \<! [, ]] > a [,].|
-|**Atribut doc XML**|Hodnota atributu dokumentace XML, například \<param Name = "I" >, kde je "I" zabarvení.|
+|**Oddělovač XML**|Oddělovače syntaxe XML, včetně <, <?, <!, \<!--,-->?\>\<! [, ]] > a [,].|
+|**Atribut doc XML**|Hodnota atributu dokumentace XML, například \<param Name = "I" >, kde "I" jsou zabarvení.|
 |**Komentář k dokumentu XML**|Komentáře uzavřené v dokumentačních komentářích XML|
-|**Značka XML doc**|Značky v komentářích k dokumentu XML, jako např.<br /><br /> ///  \<summary >.|
+|**Značka XML doc**|Značky v komentářích k dokumentu XML, jako např.<br /><br /> > souhrn \</// .|
 |**XML – klíčové slovo**|Klíčová slova DTD jako CDATA, IDREF a NTYP datové.|
 |**Název XML**|Názvy elementů a název cíle instrukcí pro zpracování.|
 |**Instrukce pro zpracování XML**|Obsah instrukcí pro zpracování, včetně názvu cíle|
@@ -212,7 +212,7 @@ Mezi některé položky zobrazení patří:
 
 Zobrazuje dostupné barvy, které můžete zvolit pro popředí položky vybrané v části **Zobrazit položky**. Vzhledem k tomu, že některé položky souvisejí a měly by proto udržovat konzistentní schéma zobrazení, změna barvy popředí textu také změní výchozí hodnoty pro prvky, jako je chyba kompilátoru, klíčové slovo nebo operátor.
 
-**Automatické**
+**Automaticky**
 
 Položky mohou dědit barvu popředí z jiných položek zobrazení, jako je například **prostý text**. Použijete-li tuto možnost, bude při změně barvy zděděné položky zobrazení také automaticky změněna barva souvisejících položek zobrazení. Například pokud jste vybrali možnost **Automatická** hodnota pro **chybu kompilátoru** a později jste změnili barvu **prostého textu** na červenou, **Chyba kompilátoru** by také automaticky dědila červenou barvu.
 
@@ -220,7 +220,7 @@ Položky mohou dědit barvu popředí z jiných položek zobrazení, jako je nap
 
 Barva, která se zobrazí pro položku při prvním otevření sady Visual Studio. Kliknutím na tlačítko **použít výchozí** obnovíte tuto barvu.
 
-**Uživatelská**
+**Vlastní**
 
 Zobrazí dialogové okno barvy, které umožňuje nastavit vlastní barvu pro položku vybranou v seznamu zobrazit položky.
 
@@ -231,7 +231,7 @@ Zobrazí dialogové okno barvy, které umožňuje nastavit vlastní barvu pro po
 
 Poskytuje paletu barev, ze které můžete zvolit barvu pozadí pro položku vybranou v **zobrazení položky**. Vzhledem k tomu, že některé položky jsou v relaci, a měla by proto zachovat konzistentní schéma zobrazení, změna barvy pozadí textu také změní výchozí hodnoty pro prvky, jako je chyba kompilátoru, klíčové slovo nebo operátor.
 
-**Automatické**
+**Automaticky**
 
 Položky mohou dědit barvu pozadí z jiných položek zobrazení, jako je například **prostý text**. Použijete-li tuto možnost, bude při změně barvy zděděné položky zobrazení také automaticky změněna barva souvisejících položek zobrazení. Například pokud jste vybrali možnost **Automatická** hodnota pro **chybu kompilátoru** a později jste změnili barvu **prostého textu** na červenou, **Chyba kompilátoru** by také automaticky dědila červenou barvu.
 
@@ -239,15 +239,15 @@ Položky mohou dědit barvu pozadí z jiných položek zobrazení, jako je např
 
 Barva, která se zobrazí pro položku při prvním otevření sady Visual Studio. Kliknutím na tlačítko **použít výchozí** obnovíte tuto barvu.
 
-**Uživatelská**
+**Vlastní**
 
 Zobrazí dialogové okno barvy, které umožňuje nastavit vlastní barvu pro položku vybranou v seznamu zobrazit položky.
 
-**Psaného**
+**Tučné**
 
 Tuto možnost vyberte, chcete-li zobrazit text vybraných **položek zobrazení** v tučném textu. V editoru je snadnější identifikovat tučný text.
 
-**Vzorku**
+**Ukázka**
 
 Zobrazí ukázku stylu písma, velikosti a barevného schématu pro vybrané položky **Zobrazit nastavení pro** a **zobrazené položky** . Pomocí tohoto pole můžete zobrazit náhled výsledků při experimentování s různými možnostmi formátování.
 

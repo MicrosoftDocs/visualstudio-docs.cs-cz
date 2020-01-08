@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Edit.Replace command
 - Replace command
 ms.assetid: a15767f1-5a3d-44f5-8c77-7b0f1157f340
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b13dee4ec87a0a4c2735d9523bff093046c5b38c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 620e55938a9c96393d8cd7de6f238d3f98715d29
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747788"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596681"
 ---
 # <a name="replace-command"></a>Nahradit – příkaz
 Nahradí text v souborech pomocí podmnožiny možností, které jsou k dispozici na kartě **nahradit v souborech** okna **Najít a nahradit** .
@@ -51,7 +51,7 @@ Volitelné. Shody se objeví pouze v případě, že se velká a malá písmena 
 
 /doc nebo/d
 
-Volitelné. Vyhledá pouze aktuální dokument. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open` nebo `/sel`.
+Volitelné. Vyhledá pouze aktuální dokument. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open`nebo `/sel`.
 
 /Hidden nebo/h
 
@@ -59,7 +59,7 @@ Volitelné. Vyhledává skrytý a sbalený text, například metadata ovládací
 
 /Open nebo/o
 
-Volitelné. Vyhledá všechny otevřené dokumenty, jako by se jednalo o jeden dokument. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open` nebo `/sel`.
+Volitelné. Vyhledá všechny otevřené dokumenty, jako by se jednalo o jeden dokument. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open`nebo `/sel`.
 
 /Options nebo/t
 
@@ -67,7 +67,7 @@ Volitelné. Zobrazí seznam aktuálních nastavení možností hledání a nepro
 
 /Proc nebo/p
 
-Volitelné. Vyhledá pouze aktuální proceduru. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open` nebo `/sel`.
+Volitelné. Vyhledá pouze aktuální proceduru. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open`nebo `/sel`.
 
 /Regex nebo/r
 
@@ -79,7 +79,7 @@ Volitelné. Vrátí možnosti hledání do jejich výchozího nastavení a nepro
 
 /SEL nebo/s
 
-Volitelné. Vyhledá pouze aktuální výběr. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open` nebo `/sel`.
+Volitelné. Vyhledá pouze aktuální výběr. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open`nebo `/sel`.
 
 /up nebo/u
 

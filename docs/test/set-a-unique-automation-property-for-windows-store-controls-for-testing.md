@@ -2,17 +2,17 @@
 title: Nastavení jedinečné vlastnosti automatizace pro ovládací prvky UPW za účelem testování
 ms.date: 05/31/2018
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-author: jillre
-ms.openlocfilehash: 845ed1502f86f9b0de678182bd0dc77b9b7617c7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: 51e16dcaa48a08ae97bc80be1d33163c6f3af875
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660014"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590446"
 ---
 # <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>Nastavení jedinečné vlastnosti automatizace pro ovládací prvky UWP pro testování
 
@@ -56,11 +56,11 @@ Nastavte **AutomationProperties.Name** na **tlačítko** explicitně v jazyce XA
 
 V Blend pro Visual Studio můžete vybrat možnost pro přiřazení jedinečných názvů k interaktivním prvkům, jako jsou tlačítka, seznamy, pole se seznamem a textová pole, která poskytují ovládací prvky jedinečné hodnoty pro **AutomationProperties.Name**.
 
-Chcete-li přiřadit jedinečné názvy existujícím ovládacím prvkům, vyberte **nástroje**  > **název interaktivní prvky**.
+Chcete-li přiřadit jedinečné názvy existujícím ovládacím prvkům, vyberte **nástroje** > **název interaktivní prvky**.
 
 ![Pojmenování interaktivních prvků v Blend pro Visual Studio](../test/media/cuit_windowsstoreproperty_blend_1.png)
 
-Chcete-li automaticky zadat jedinečné názvy pro nové ovládací prvky, které přidáte, vyberte **nástroje**  > **Možnosti** pro otevření dialogového okna **Možnosti** . Vyberte **Návrhář XAML** a pak **při vytváření automaticky pojmenovat interaktivní prvky**. Kliknutím na **tlačítko OK** zavřete dialogové okno.
+Chcete-li automaticky zadat jedinečné názvy pro nové ovládací prvky, které přidáte, vyberte **nástroje** > **Možnosti** pro otevření dialogového okna **Možnosti** . Vyberte **Návrhář XAML** a pak **při vytváření automaticky pojmenovat interaktivní prvky**. Kliknutím na **tlačítko OK** zavřete dialogové okno.
 
 ## <a name="use-a-data-template"></a>Použití šablony dat
 

@@ -5,34 +5,34 @@ ms.topic: conceptual
 helpviewer_keywords:
 - unit tests, creating
 - unit tests, running
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 3971fe0513c98cb957d8013cdad932aa0c04bed1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: 67a614ed164b12070fe40f24cdba09a3051e36a5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646627"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566251"
 ---
 # <a name="run-a-unit-test-as-a-64-bit-process"></a>Spuštění testování částí v podobě 64bitového procesu
 
-Pokud máte 64 počítač, můžete spustit testy jednotek a zachytit informace o pokrytí kódu jako 64 proces.
+Pokud máte 64bitový počítač, můžete spustit testy jednotky a zaznamenat informace o pokrytí kódu jako 64bitový proces.
 
-## <a name="to-run-a-unit-test-as-a-64-bit-process"></a>Spuštění testu jednotek jako 64ho procesu
+## <a name="to-run-a-unit-test-as-a-64-bit-process"></a>Spuštění testování částí jako 64bitový proces
 
-1. Pokud byl váš kód nebo testy kompilován jako 32bitový/x86, ale nyní je chcete spouštět jako 64 proces, je třeba je znovu zkompilovat jako **Libovolný procesor**nebo případně jako **64-bit**.
+1. Pokud váš kód nebo testů byly kompilovány jako 32-bit/x86, ale chcete nyní spustit jako 64bitový proces, znovu zkompilovat jako **jakýkoli procesor**, nebo volitelně jako **64-bit**.
 
     > [!TIP]
-    > Pro zajištění maximální flexibility zkompilujte testovací projekty s **libovolnou konfigurací procesoru** . Pak můžete spustit na 32 i 64 bitových agentů. Neexistují žádné výhody kompilace testovacích projektů s **64** konfigurací.
+    > Kvůli maximální flexibilitě, kompilovat testovací projekty s **jakýkoli procesor** konfigurace. Poté můžete spouštět na 32bitových a 64bitových agentech. Neexistuje žádná výhoda pro kompilaci testovacích projektů s **64-bit** konfigurace.
 
-2. V nabídce aplikace Visual Studio zvolte možnost **test**, zvolte možnost **Nastavení**a potom zvolte možnost **Architektura procesoru**. Zvolením možnosti **x64** spustíte testy jako 64 proces.
+2. V nabídce sady Visual Studio zvolte **testovací**, klikněte na tlačítko **nastavení**a klikněte na tlačítko **architekturu procesoru**. Zvolte **x64** spustit testy jako 64bitový proces.
 
-   - ani
+   - nebo –
 
-   Zadejte `<TargetPlatform>x64</TargetPlatform>` v souboru *. runsettings* . Výhodou této metody je, že můžete určit skupiny nastavení v různých souborech a rychle přepínat mezi různými nastaveními. Můžete také kopírovat nastavení mezi řešeními. Další informace najdete v tématu [konfigurace testů jednotek pomocí souboru. runsettings](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
+   Zadejte `<TargetPlatform>x64</TargetPlatform>` v *s příponou .runsettings* souboru. Výhodou této metody je, že můžete zadat skupiny nastavení v různých souborů a rychle přepínat mezi různými nastaveními. Můžete také kopírovat nastavení mezi řešeními. Další informace najdete v tématu [konfigurace testů jednotek s použitím souboru .runsettings](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
 
 ## <a name="see-also"></a>Viz také:
 

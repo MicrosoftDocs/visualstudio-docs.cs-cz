@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 897c4ba0bfa46e73115f8288770d088346498dee
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: 0a1c0184c11b745ef6c83c35b524884a139bc3d8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516695"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588782"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>Krok 1: vytvoření projektu aplikace model Windows Forms
 
@@ -23,24 +23,24 @@ Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu
 
 ::: moniker range="vs-2017"
 
-## <a name="open-visual-studio-2017"></a>Otevřete Visual Studio 2017
+## <a name="open-visual-studio-2017"></a>Open Visual Studio 2017
 
-1. Na panelu nabídek vyberte možnost **soubor**  > **Nový**  > **projekt**. Dialogové okno by mělo vypadat podobně jako na následujícím snímku obrazovky.
+1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**. Dialogové okno by mělo vypadat podobně jako na následujícím snímku obrazovky.
 
-     dialog ![New projektu ](../ide/media/newprojectdialogcallouts.png)<br/>***Nový projekt*** – *dialogové okno*
+     dialog ![nový projekt](../ide/media/newprojectdialogcallouts.png)<br/>***Nový projekt*** – *dialogové okno*
 
 2. Na levé straně dialogového okna **Nový projekt** vyberte možnost **vizuál C#**  nebo **Visual Basic**a pak zvolte možnost **plocha systému Windows**.
 
 3. V seznamu šablony projektu vyberte možnost **model Windows Forms aplikace (.NET Framework)** . Pojmenujte novou formu *PictureViewer*a pak klikněte na tlačítko **OK** .
 
     >[!NOTE]
-    >Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , nainstalujte úlohu **vývoj desktopových aplikací .NET** pomocí instalační program pro Visual Studio.<br/><br/>![ úlohy vývoj desktopových aplikací .NET v Instalační program pro Visual Studio ](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Další informace najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
+    >Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , nainstalujte úlohu **vývoj desktopových aplikací .NET** pomocí instalační program pro Visual Studio.<br/><br/>![úlohy vývoj desktopových aplikací .NET v Instalační program pro Visual Studio](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Další informace najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-## <a name="open-visual-studio-2019"></a>Otevřete Visual Studio 2019
+## <a name="open-visual-studio-2019"></a>Open Visual Studio 2019
 
 1. V okně Start vyberte možnost **vytvořit nový projekt**.
 
@@ -59,7 +59,7 @@ Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu
    >
    > V části Instalační program pro Visual Studio klikněte na možnost zvolit úlohu **vývoj desktopových aplikací .NET** .
    >
-   > ![Zatížení .NET Core v Instalační program pro Visual Studio](../ide/media/install-dot-net-desktop-env.png)
+   > ![Úlohy .NET core v instalačním programu sady Visual Studio](../ide/media/install-dot-net-desktop-env.png)
    >
    > Potom klikněte na tlačítko **Upravit** v instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce; Pokud ano, udělejte to. V dalším kroku vyberte **pokračovat** a nainstalujte úlohu.
 
@@ -73,9 +73,9 @@ Visual Studio vytvoří řešení pro vaši aplikaci. Řešení funguje jako kon
 
 1. Vývojové prostředí obsahuje tři okna: hlavní okno, **Průzkumník řešení**a okno **vlastnosti** .
 
-     Pokud chybí některá z těchto oken, můžete obnovit výchozí rozložení okna. Na panelu nabídek vyberte možnost **okno**  > **obnovit rozložení okna**.
+     Pokud chybí některá z těchto oken, můžete obnovit výchozí rozložení okna. Na panelu nabídek vyberte možnost **okno** > **obnovit rozložení okna**.
 
-     Okna můžete zobrazit také pomocí příkazů nabídky. Na panelu nabídek vyberte možnost **zobrazit**  > **vlastnosti okno** nebo **Průzkumník řešení**.
+     Okna můžete zobrazit také pomocí příkazů nabídky. Na panelu nabídek vyberte možnost **zobrazit** > **vlastnosti okno** nebo **Průzkumník řešení**.
 
      Pokud jsou ostatní okna otevřená, zavřete je kliknutím na tlačítko **Zavřít** (x) v pravém horním rohu.
 
@@ -100,11 +100,11 @@ Visual Studio vytvoří řešení pro vaši aplikaci. Řešení funguje jako kon
       > [!NOTE]
       > Horní řádek v **Průzkumník řešení** zobrazuje **řešení ' PictureViewer ' (1 projekt)** , což znamená, že Visual Studio vytvořilo řešení za vás. Řešení může obsahovat více než jeden projekt, ale v současnosti budete pracovat s řešeními, která obsahují pouze jeden projekt.
 
-1. Na panelu nabídek vyberte možnost **soubor**  > **Uložit vše**.
+1. Na panelu nabídek vyberte možnost **soubor** > **Uložit vše**.
 
      Jako alternativu klikněte na tlačítko **Uložit vše** na panelu nástrojů, které ukazuje následující obrázek.
 
-     tlačítko ![Save všechna tlačítka panelu nástrojů ](../ide/media/express_iconsaveall.png)<br/>
+     ![uložit všechna tlačítka panelu nástrojů](../ide/media/express_iconsaveall.png)<br/>
      Tlačítko ***Uložit vše*** na *panelu nástrojů*
 
      Visual Studio automaticky vyplní název složky a název projektu a pak projekt uloží ve složce Projects.

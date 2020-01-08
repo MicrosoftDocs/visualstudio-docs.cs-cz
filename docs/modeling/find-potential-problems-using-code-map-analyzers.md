@@ -8,17 +8,17 @@ helpviewer_keywords:
 - code analysis, dependency graphs
 - dependency graphs, analyzing code
 - graph documents, analyzing
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f55d4d3c4470d32d9779f7adf06934f10ac618e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dd20d3c40a4fbe80ac1578275ccd8614eb018d7a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657484"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596590"
 ---
 # <a name="find-potential-problems-using-code-map-analyzers"></a>Nalezení potenciálních problémů pomocí analyzátorů mapy kódu
 
@@ -32,7 +32,7 @@ Spuštění analyzátorů v mapách kódu vám usnadní identifikaci kódu, kter
 
 ## <a name="analyze-code-maps"></a>Analyzovat mapy kódu
 
-Na panelu nástrojů mapa zvolte **rozložení**  > **analyzátory**a pak analyzátor, který chcete spustit:
+Na panelu nástrojů mapa zvolte **rozložení** > **analyzátory**a pak analyzátor, který chcete spustit:
 
 |**MBSA**|**K identifikaci uzlů, které**|
 |-|-|
@@ -40,7 +40,7 @@ Na panelu nástrojů mapa zvolte **rozložení**  > **analyzátory**a pak analyz
 |**Najít analyzátor Center**|Jsou v horním 25% uzlů s vysokou úrovní připojení<br /><br /> **Skrytí všech ostatních uzlů na mapě**<br /><br /> -Otevřete místní nabídku pro mapu, zvolte možnost **Upřesnit**, **Vybrat**a **Skrýt nevybrané**.<br />     Mapa skryje nevybrané uzly a analyzátor identifikuje nové uzly jako centra.|
 |**Analyzátor neodkazované uzly**|Nemají odkazy z jiných uzlů. **Upozornění:**  Před za předpokladu, že se kód nepoužívá, ověřte každý z těchto případů. Některé závislosti, například závislosti XAML a závislosti za běhu, nelze v kódu nalézt staticky.|
 
-Analyzátory mapování kódu budou po použití nadále spouštěny. Změníte-li mapu, všechny použité analyzátory budou automaticky znovu zpracovat aktualizované mapování. Chcete-li zastavit spuštění analyzátoru, na panelu nástrojů mapa vyberte možnost **rozložení**  > **analyzátory**. Vypněte vybraný analyzátor.
+Analyzátory mapování kódu budou po použití nadále spouštěny. Změníte-li mapu, všechny použité analyzátory budou automaticky znovu zpracovat aktualizované mapování. Chcete-li zastavit spuštění analyzátoru, na panelu nástrojů mapa vyberte možnost **rozložení** > **analyzátory**. Vypněte vybraný analyzátor.
 
 > [!TIP]
 > Pokud máte velmi velkou mapu, může spuštění analyzátoru způsobit výjimku z důvodu nedostatku paměti. Pokud k tomu dojde, upravte mapu tak, aby omezila svůj rozsah nebo vygenerovala menší hodnotu, a pak spusťte analyzátor.

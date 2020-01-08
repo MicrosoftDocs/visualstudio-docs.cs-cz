@@ -19,15 +19,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce99cd360d75472df6326cfaf6a3f4ddb198b6d2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 097405f98d1a80b8605b6773bdc675ff2c4ab773
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738351"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75404659"
 ---
 # <a name="debugbreak-and-__debugbreak"></a>DebugBreak a __debugbreak
-Funkci DebugBreak Win32 nebo vnitřní [__debugbreak](/cpp/intrinsics/debugbreak) můžete volat v jakémkoli bodě kódu. `DebugBreak` a `__debugbreak` mají stejný účinek jako nastavení zarážky v daném umístění.
+Funkci [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) Win32 nebo vnitřní [__debugbreak](/cpp/intrinsics/debugbreak) můžete volat v jakémkoli bodě kódu. `DebugBreak` a `__debugbreak` mají stejný účinek jako nastavení zarážky v daném umístění.
 
  Vzhledem k tomu, že `DebugBreak` je voláním systémové funkce, musí být nainstalovány symboly ladění systému, aby bylo zajištěno, že po přerušení budou zobrazeny správné informace o zásobníku volání. V opačném případě mohou být informace zásobníku volání zobrazené ladicím programem vypnuty jedním snímkem. Pokud používáte `__debugbreak`, symboly se nevyžadují.
 

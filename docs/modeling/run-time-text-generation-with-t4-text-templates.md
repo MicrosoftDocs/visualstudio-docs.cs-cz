@@ -10,17 +10,17 @@ helpviewer_keywords:
 - TextTemplatingFilePreprocessor custom tool
 - text templates, TransformText() method
 - text templates, generating files at run time
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1ee422ec549ced0995db22258edf9ef21540804
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 26897bee69f7c0e969cd42feb7604321294641fb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660312"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595368"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>Generování textu za běhu pomocí textových šablon T4
 
@@ -53,16 +53,16 @@ Použití šablony ve vaší aplikaci usnadňuje zobrazení konečné formy výs
 
 ### <a name="to-create-a-run-time-text-template"></a>Vytvoření textové šablony Run-Time
 
-1. V Průzkumník řešení v místní nabídce projektu vyberte možnost **přidat**  > **Nová položka**.
+1. V Průzkumník řešení v místní nabídce projektu vyberte možnost **přidat** > **Nová položka**.
 
-2. V dialogovém okně **Přidat novou položku** vyberte možnost **Textová šablona pro modul runtime**. (V Visual Basic najdete v části **běžné položky**  > **Obecné**.)
+2. V dialogovém okně **Přidat novou položku** vyberte možnost **Textová šablona pro modul runtime**. (V Visual Basic najdete v části **běžné položky** > **Obecné**.)
 
 3. Zadejte název souboru šablony.
 
     > [!NOTE]
     > Název souboru šablony bude použit jako název třídy ve vygenerovaném kódu. Proto by neměl obsahovat mezery ani interpunkční znaménka.
 
-4. Klikněte na tlačítko **Přidat**.
+4. Zvolte **přidat**.
 
     Vytvoří se nový soubor s příponou **. TT**. Jeho vlastnost **vlastního nástroje** je nastavená na **TextTemplatingFilePreprocessor**. Obsahuje následující řádky:
 
@@ -80,7 +80,7 @@ Dobrým způsobem, jak vytvořit šablonu, je převést existující příklad v
 
 ### <a name="to-convert-an-existing-text-file-to-a-run-time-template"></a>Převod existujícího textového souboru na šablonu run-time
 
-1. Zahrňte soubor do projektu sady Visual Studio. V Průzkumník řešení v místní nabídce projektu vyberte možnost **přidat**  > **existující položku**.
+1. Zahrňte soubor do projektu sady Visual Studio. V Průzkumník řešení v místní nabídce projektu vyberte možnost **přidat** > **existující položku**.
 
 2. Nastavte vlastnost **vlastních nástrojů** souboru na **TextTemplatingFilePreprocessor**. V Průzkumník řešení v místní nabídce souboru vyberte možnost **vlastnosti**.
 
@@ -144,7 +144,7 @@ Můžete vložit kód programu mezi `<#` a `#>`. Příklad:
 </table>
 ```
 
-Všimněte si, že mezi `<# ... #>` se vkládají příkazy a mezi `<#= ... #>` se vkládají výrazy. Další informace najdete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
+Všimněte si, že mezi `<# ... #>` se vkládají příkazy a mezi `<#= ... #>`se vkládají výrazy. Další informace najdete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
 
 ## <a name="using-the-template"></a>Použití šablony
 
@@ -308,7 +308,7 @@ Ve vzoru použitém v následujícím příkladu si všimněte následujících 
 
 - Odvozená třída vyvolá metody definované v `SharedFragments`.
 
-- Aplikace volá metodu `TextTransform()` odvozené třídy, ale netransformuje `SharedFragments` základní třídy.
+- Aplikace volá metodu `TextTransform()` odvozené třídy, ale netransformuje `SharedFragments`základní třídy.
 
 - Základní i odvozené třídy jsou textové šablony za běhu; To znamená, že vlastnost **Custom Tool** je nastavená na **TextTemplatingFilePreprocessor**.
 

@@ -1,5 +1,5 @@
 ---
-title: Vývoj aplikací pomocí návrháře postupu provádění
+title: Vývoj aplikací pomocí Návrháře postupu provádění
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Visual Studio Workflow Designer [WFD]
 - Workflow Designer [WFD], overview
 ms.assetid: 4cd062b1-b496-4668-bbc1-ee85545e066d
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b689628983c50fc891c5a3ebe6a0df5c952468d8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 51c38a16ddbdca376dbc9788ca49783c7956d101
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650533"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597084"
 ---
 # <a name="develop-apps-with-the-workflow-designer"></a>Vývoj aplikací pomocí Návrháře postupu provádění
 
@@ -31,7 +31,7 @@ Návrhář postupu provádění je vizuální Návrhář a ladicí program pro g
 
 Chcete-li použít šablony projektu pracovního postupu v aplikaci Visual Studio, nejprve nainstalujte **programovací model Windows Workflow Foundation** komponentu.
 
-1. Otevřete Instalační program pro Visual Studio. Rychlý způsob, jak ho otevřít, je vybrat **nástroje**  > **získat nástroje a funkce** v aplikaci Visual Studio.
+1. Otevřete Instalační program pro Visual Studio. Rychlý způsob, jak ho otevřít, je vybrat **nástroje** > **získat nástroje a funkce** v aplikaci Visual Studio.
 
 1. V Instalační program pro Visual Studio vyberte kartu **jednotlivé součásti** .
 

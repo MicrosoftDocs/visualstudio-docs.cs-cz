@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Options dialog box, General Environment
 - General Environment Options dialog box
 - Environment Options dialog box
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 36e7efa9176b2e685463330b3ca8dbd714ec4555
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 973e08ca6555f7da7873d3068e2794b8d34e3640
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660052"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75569436"
 ---
 # <a name="options-dialog-box-environment--general"></a>Dialogové okno Možnosti: prostředí \> obecné
 
@@ -74,7 +74,7 @@ Umožňuje plné vizuální prostředí sady Visual Studio, včetně přechodů 
 
 Používá hardwarovou akceleraci grafiky, je-li k dispozici, nikoli při akceleraci softwaru.
 
-## <a name="other"></a>Ostatní
+## <a name="other"></a>Další
 
 **Položky, které se mají zobrazit v nabídce okna**
 
@@ -90,7 +90,7 @@ Zobrazí stavový řádek. Stavový řádek je umístěný v dolní části okna
 
 **Tlačítko Zavřít ovlivní pouze aktivní okno nástrojů**
 
-Určuje, že když se klikne na tlačítko **Zavřít** , zavře se jenom okno nástroje, které má fokus, a ne všechna okna nástrojů v ukotvené sadě. Ve výchozím nastavení je tato možnost vybraná.
+Určuje, že když se klikne na tlačítko **Zavřít** , zavře se jenom okno nástroje, které má fokus, a ne všechna okna nástrojů v ukotvené sadě. Tato možnost je vybrána ve výchozím nastavení.
 
 **Tlačítko automaticky skrýt ovlivní pouze aktivní okno nástrojů**
 

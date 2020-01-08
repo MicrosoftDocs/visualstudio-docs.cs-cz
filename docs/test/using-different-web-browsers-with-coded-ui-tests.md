@@ -2,17 +2,17 @@
 title: Používání jiných webových prohlížečů v programových testech uživatelského rozhraní
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 24e4ee35f21b7477e9b3d601305bd6534a16d9e0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: 104bdcc7a3f609456d521e710ac6ec2aeda2bb75
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659789"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585571"
 ---
 # <a name="use-different-web-browsers-with-coded-ui-tests"></a>Použití různých webových prohlížečů s programovým testem uživatelského rozhraní
 
@@ -106,7 +106,7 @@ Tady je několik dalších věcí, které byste měli znát:
 
 Můžete nakonfigurovat výstup tak, aby obsahoval snímky obrazovky v kódovaných protokolech UI. K tomu je potřeba nastavit některá nastavení konfigurace v souboru *QTAgent32. exe. config* . Ve výchozím nastavení je tento soubor nainstalován v následujícím umístění:
 
-*% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE*
+*%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE*
 
 Nastavte následující hodnoty:
 
@@ -133,5 +133,5 @@ Další informace naleznete v tématu [Analýza programových testů uživatelsk
 ## <a name="see-also"></a>Viz také:
 
 - [Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)
-- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a záznamy akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a zaznamenávání akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
 - [Analýza programových testů uživatelského rozhraní pomocí protokolů kódovaného testu uživatelského rozhraní](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)

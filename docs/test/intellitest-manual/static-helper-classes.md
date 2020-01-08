@@ -4,17 +4,17 @@ ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Static helper classes
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: dd57ecafa0b4da56366faa83d52c39ca556e421a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: 5010761213cf79756cf8da3d2fffe60dd0b61efd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653151"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591564"
 ---
 # <a name="static-helper-classes"></a>Třídy statických pomocných rutin
 
@@ -48,7 +48,7 @@ public void TestSomething(int i, int j) {
 }
 ```
 
-**Mark**
+**Poznámky**
 
 Výše uvedený kód je skoro ekvivalent:
 
@@ -95,7 +95,7 @@ Třída **PexChoose** může fungovat ve dvou režimech:
 
 * Vygenerovaný kód pro konkrétní testovací případy nastaví poskytovatele výběru určitým způsobem, aby opětovné spuštění takového testovacího případu provedlo konkrétní volby pro aktivaci konkrétní cesty spuštění.
 
-**Využívání**
+**Využití**
 
 * Jednoduchá volání **PexChoose. Value** pro vygenerování nové hodnoty:
 
@@ -141,7 +141,7 @@ public partial class MathExTests {
 
 Statická třída, která slouží k ignorování omezení u parametrů a k vytištění symbolických informací přidružených k hodnotám.
 
-**Využívání**
+**Využití**
 
 V normálním případě se IntelliTest pokusí pokrýt všechny cesty provádění kódu během provádění. Zejména při výpočtu podmínek předpokladu a podmínky vyhodnocení by se však nemělo prozkoumat všechny možné případy.
 

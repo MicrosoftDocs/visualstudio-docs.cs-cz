@@ -1,5 +1,5 @@
 ---
-title: Analýza Výsledky testů načítání a chyb
+title: Analýza výsledků zátěžových testů a chyb
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -18,232 +18,232 @@ helpviewer_keywords:
 - Load Test Viewer, tables
 - load tests, results tables
 ms.assetid: 0a84bda3-6051-45eb-9c7f-d57419e1f97d
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f6410129d32e521adeda4b31e4b3a0f6aca903fd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c5e337c30a4b6a08f123ef7ee33dee704e9412de
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665389"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565172"
 ---
-# <a name="analyze-load-test-results-and-errors-in-the-tables-view-of-the-load-test-analyzer"></a>Analýza výsledků zátěžových testů a chyb v zobrazení tabulky analyzátoru zátěžového testu
+# <a name="analyze-load-test-results-and-errors-in-the-tables-view-of-the-load-test-analyzer"></a>Analýza výsledků zátěžových testů a chyb v tabulkovém zobrazení Analyzéru zátěžového testu
 
-Když zobrazíte výsledky spuštění zátěžového testu, můžete zobrazit různá podokna, která vám poskytnou různé způsoby analýzy dat. Data můžete zobrazit jako graf, abyste viděli, jak se v průběhu času mění, nebo můžete zobrazit data jako podrobné tabulky.
+Při zobrazení výsledků spuštění zátěžového testu můžete zobrazit různých podoken, které vám nabízí různé způsoby, jak analyzovat data. Data můžete zobrazit jako graf, chcete-li zobrazit změny v průběhu času, nebo můžete zobrazit data jako podrobné tabulky.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Chcete-li přepnout na zobrazení tabulky, vyberte možnost **tabulky** na panelu nástrojů **zátěžového testu** . Chcete-li přepínat mezi různými tabulkami, použijte rozevírací seznam **tabulka** na panelu nástrojů nad mřížkou tabulky. V tabulkovém zobrazení můžete najednou zobrazit až čtyři tabulky. Další informace najdete v [tabulkách zátěžových testů dlaždic](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#tile-load-test-tables) v tomto tématu.
+Chcete-li přepnout do zobrazení tabulky, zvolte **tabulky** na **zátěžový test** nástrojů. Chcete-li přepnout mezi jednotlivými tabulkami, použijte **tabulky** rozevíracího seznamu na panelu nástrojů nad mřížku tabulky. V zobrazení tabulky můžete zobrazit až čtyři tabulky v čase. Další informace najdete v tématu [dlaždice zátěžového testu tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#tile-load-test-tables) v tomto tématu.
 
-Většina číselných hodnot zobrazených v tabulce pro čítače výkonu je po celý běh zátěžového testu kumulativní. Sloupce s názvem **Last** jsou výjimkou a představují hodnotu z posledního intervalu vzorkování.
-
-> [!NOTE]
-> Sloupce s názvem **Last** jsou k dispozici pouze během provádění zátěžového testu. Po dokončení zátěžového testu nejsou tyto sloupce k dispozici.
-
-Většinu tabulek můžete seřadit tak, že vyberete název sloupce, který chcete seřadit. Ve výchozím nastavení některé tabulky nezobrazují všechny dostupné sloupce. Sloupce můžete přidat do tabulek, pokud jsou sloupce k dispozici. Chcete-li přidat sloupce, klikněte pravým tlačítkem myši na tabulku a zvolte možnost **Přidat nebo odebrat sloupce**.
+Většina číselné hodnoty, které se zobrazují v tabulce pro čítače výkonu jsou kumulativní přes celou zátěžového testu. Sloupce s názvem **poslední** představují výjimku a představovat hodnotu od posledního intervalu vzorkování.
 
 > [!NOTE]
-> Data z tabulky můžete kopírovat do jiných aplikací, jako je například Excel, pro další analýzu.
+> Sloupce s názvem **poslední** jsou k dispozici pouze tehdy, když je spuštěn zátěžový test. Po dokončení zátěžového testu nejsou k dispozici tyto sloupce.
 
-## <a name="the-load-test-tables"></a>Tabulky zátěžových testů
+Výběrem názvu sloupce, které chcete řadit můžete seřadit většinu tabulky. Ve výchozím nastavení nezobrazují některé tabulky všech dostupných sloupců. Sloupce můžete přidat do tabulek, pokud jsou k dispozici sloupce. Přidání sloupce, klikněte pravým tlačítkem na tabulku a pak zvolte **Přidat/odebrat sloupce**.
 
-V následující tabulce jsou uvedeny tabulky, které jsou k dispozici pro analýzu spuštění zátěžového testu.
+> [!NOTE]
+> Zkopírovat data z tabulky do jiných aplikací, jako je například aplikace Excel pro další analýzy.
+
+## <a name="the-load-test-tables"></a>Tabulky zátěžového testu
+
+Následující tabulka obsahuje seznam tabulek, které jsou k dispozici k analýze zátěžových testů.
 
 |Název tabulky|Popis|
 |-|-|
-|Vyskytl|Zobrazí seznam chyb, ke kterým došlo během běhu zátěžového testu. Další informace naleznete v [tabulce Errors](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-errors-table) v tomto tématu a v tématu [Analýza výsledků zátěžového testu](../test/analyze-load-test-results-using-the-load-test-analyzer.md).|
-|Stránky|Zobrazí seznam stránek, které byly během běhu zátěžového testu k dispozici. Některá data v této tabulce jsou k dispozici až po dokončení zátěžového testu. Další informace najdete v tématu [Postup: zobrazení odpovědi na webovou stránku](../test/how-to-view-web-page-response-time-in-a-load-test.md).|
-|požádal|Zobrazí podrobnosti o jednotlivých žádostech vydaných během zátěžového testu. To zahrnuje všechny požadavky HTTP a závislé požadavky, jako jsou například obrázky. Další informace najdete v [tabulce požadavky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-requests-table) v tomto tématu.|
-|Trasování SQL|Zobrazí výsledky trasování SQL. Tato tabulka je dostupná až po dokončení zátěžového testu a jenom v případě, že se během testu použilo trasování SQL. Další informace najdete v [tabulce dat trasování SQL](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-sql-trace-data-table) v tomto tématu.|
-|Testy|Zobrazí podrobnosti pro jednotlivé testy spouštěné během zátěžového testu. Další informace najdete v [tabulce testy](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-tests-table) v tomto tématu.|
-|Prahové hodnoty|Zobrazuje seznam porušení pravidel mezních hodnot, ke kterým došlo během běhu zátěžového testu. Další informace najdete v tématu [Analýza porušení pravidel mezních hodnot](../test/analyze-threshold-rule-violations-in-load-tests.md).|
-|Transakce|Zobrazí seznam transakcí, ke kterým došlo během běhu zátěžového testu. Další informace najdete v [tabulce transakcí](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-transactions-table) v tomto tématu.|
-|Technici|Zobrazí se pouze v případě, že zátěžový test používá testovací kontrolér a testovací agenty. Zobrazuje seznam agentů, které byly použity při spuštění zátěžového testu. Tabulka agentů obsahuje počet požadavků testovaných agentem a jejich žádostí, počet selhání. Kromě toho tabulka agentů obsahuje počet testů v poměru testů zátěžových testů, které Agent testovaný a z nich zjistil, kolik selhalo.|
-|Podrobnosti testu|Zobrazí podrobnosti o testech obsažených v poměru testů pro zátěžový test. Mezi podrobnosti patří název testu, scénář, ve kterém byl test, čas spuštění testu, doba, po kterou byl test spuštěn, a výsledek testu, který označuje, zda test proběhl úspěšně nebo selhal. Pokud se test nezdařil, nachází se odkaz ve sloupci **podrobností** . Můžete vybrat odkaz, který vás převezme na Editor testu výkonnosti webu se zvýrazněným požadavkem.|
+|Chyby|Zobrazí seznam chyb, ke kterým došlo během zátěžového testu. Další informace najdete v tématu [tabulka The chyby](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-errors-table) v tomto tématu a [výsledky zátěžového testu analyzovat](../test/analyze-load-test-results-using-the-load-test-analyzer.md).|
+|Stránky|Zobrazí seznam stránek přístup při spuštění zátěžového testu. Některá data v této tabulce je k dispozici, až po dokončení zátěžového testu. Další informace najdete v tématu [postupy: zobrazení webové stránky odpovědi](../test/how-to-view-web-page-response-time-in-a-load-test.md).|
+|Požadavky|Zobrazí podrobnosti pro jednotlivé požadavky vydané během zátěžového testu. To zahrnuje všechny požadavky HTTP a závislé požadavky, jako jsou obrázky. Další informace najdete v tématu [tabulky The Requests](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-requests-table) v tomto tématu.|
+|Trasování SQL|Zobrazí výsledky trasování jazyka SQL. Tato tabulka je k dispozici, až po dokončení zátěžového testu a pouze v případě, že během testu byl použit trasování jazyka SQL. Další informace najdete v tématu [tabulka dat trasovacího SQL](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-sql-trace-data-table) v tomto tématu.|
+|Testy|Zobrazí podrobnosti pro jednotlivé testy spuštěny během zátěžového testu. Další informace najdete v tématu [testy tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-tests-table) v tomto tématu.|
+|Mezní hodnoty|Zobrazí seznam mezních pravidel, ke kterým došlo během zátěžového testu. Další informace najdete v tématu [analýza mezních pravidel](../test/analyze-threshold-rule-violations-in-load-tests.md).|
+|Transakce|Zobrazí seznam transakcí, ke kterým došlo během spuštění zátěžového testu. Další informace najdete v tématu [The transakcí](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-transactions-table) v tomto tématu.|
+|Agenti|Zobrazí jenom v případě, že je váš zátěžový test pomocí testovacího kontroléru a testovacích agentů. Zobrazí seznam agentů, které byly použity při spuštění zátěžového testu. Agenti tabulka uvádí, kolik požadavků agenta otestovali a získali těchto požadavků, kolik se nezdařilo. Kromě toho agentů tabulka obsahuje počet testů, které v kombinaci testů testy zatížení, který agent a z nich, kolik se nezdařilo.|
+|Podrobnosti o testu|Zobrazí podrobnosti pro testy obsažené v poměru testů zátěžového testu. Podrobnosti zahrnují název testu, scénář, který byl test, čas spuštění testu, délku doba trvání test spuštěn a výsledek testu, která Pokud test úspěšný nebo neúspěšný. Pokud se test nezdařil, je k dispozici v odkazu **podrobnosti** sloupce. Můžete zvolit odkaz, kterým se dostanete do editoru testu výkonnosti webu s neúspěšným požadavkem zvýrazní.|
 
-## <a name="collect-percentile-data"></a>Shromáždit data percentilu
+## <a name="collect-percentile-data"></a>Shromažďovat data pro percentil
 
-Některé tabulky zátěžových testů mohou obsahovat další sloupce, které zahrnují data percentilu a doby odezvy rozdělené do skupin na základě emulace sítě. Ve výchozím nastavení se tato data neshromažďují. Data percentilu jsou k dispozici pouze v případě, že ukládáte výsledky do databáze a ne když ukládáte místně. Další informace najdete v tématu [Správa výsledků zátěžových testů v úložišti load výsledky testů](../test/manage-load-test-results-in-the-load-test-results-repository.md). Kromě toho ke shromáždění těchto dat v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte konkrétní uzel nastavení spuštění, který se má změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **StatisticsOnly** nebo **AllIndividualDetails**. Další informace najdete v tématu [Postup: zobrazení odpovědi na webovou stránku](../test/how-to-view-web-page-response-time-in-a-load-test.md).
+Některé tabulky testu zatížení může obsahovat další sloupce, které zahrnují percentil dat a doby odezvy rozdělen do skupin podle emulace sítě. Ve výchozím nastavení tato data nejsou shromažďována. Zobrazení dat je k dispozici pouze při ukládání výsledků do databáze, a ne při uložení místně. Další informace najdete v tématu [výsledků zátěžového testu Správa v úložiště výsledků testu zátěže](../test/manage-load-test-results-in-the-load-test-results-repository.md). Kromě toho pro shromažďování těchto dat v **editoru zátěžových testů**v části **parametrů běhu** uzlu, vyberte konkrétní spuštění uzlu nastavení změnit. V **vlastnosti** okně pro **úložiště podrobností časování** vlastnosti, vyberte **StatisticsOnly** nebo **AllIndividualDetails**. Další informace najdete v tématu [postupy: zobrazení webové stránky odpovědi](../test/how-to-view-web-page-response-time-in-a-load-test.md).
 
 ## <a name="the-requests-table"></a>Tabulka požadavků
 
-V tabulce s **požadavky** se zobrazují podrobnosti o jednotlivých žádostech vydaných během zátěžového testu. To zahrnuje všechny požadavky HTTP a závislé požadavky, jako jsou například obrázky. Tabulka obsahuje seznam požadavků podle testů a scénářů, protože jeden požadavek může být zahrnut v mnoha testech a scénářích.
+**Požadavky** tabulka obsahuje podrobnosti pro jednotlivé požadavky vydané během zátěžového testu. To zahrnuje všechny požadavky HTTP a závislé požadavky, jako jsou obrázky. V tabulce jsou uvedeny požadavky testu a scénář, protože jeden požadavek může být součástí mnoho testů a scénáře.
 
-V následující tabulce jsou uvedeny sloupce v tabulce **requests** :
+V následující tabulce jsou uvedeny ve sloupcích v **požadavky** tabulky:
 
-|Kolo|Popis|Ve výchozím nastavení viditelné|
+|Sloupec|Popis|Ve výchozím nastavení viditelné|
 |-|-|-|
-|**Request**|Adresa URL požadavku Například *Home. html*nebo *Orange-Arrow. gif*.|Ano|
+|**Požadavek**|Adresa URL požadavku. Například *home.html*, nebo *orange arrow.gif*.|Ano|
 |**Scénář**|Název scénáře.|Ano|
 |**Test**|Název testu.|Ano|
-|**Čtení**|Celkový počet této žádosti testu výkonnosti webu vydaný během běhu zátěžového testu. Celkový součet zahrnuje úspěšné a neúspěšné požadavky, ale nezahrnuje požadavky uložené v mezipaměti, protože nejsou vydané webovému serveru.|Ano|
-|**Předaný**|Počet, kolikrát byl požadavek vydán a předán.|Ne|
-|**Nepovedlo se**|Počet vydaných a neúspěšných požadavků. Položky v tomto sloupci se zobrazí jako hypertextové odkazy. Můžete vybrat libovolný hypertextový odkaz a zobrazit seznam jednotlivých chyb v dialogovém okně **chyby zátěžového testu** . Další informace naleznete v tématu [Analýza výsledků zátěžového testu](../test/analyze-load-test-results-using-the-load-test-analyzer.md).|Ano|
-|**Ukládán**|Celkový počet, kolikrát již byl požadavek uložen do mezipaměti.|Ne|
-|**Počet požadavků za sekundu**|Sazba za sekundu žádosti během běhu zátěžového testu.|Ne|
-|**Úspěšné za sekundu**|Sazba za sekundu této žádosti během běhu zátěžového testu pro instance této žádosti, které prošly.|Ne|
-|**Selhání za sekundu**|Sazba za sekundu této žádosti během běhu zátěžového testu pro instance této žádosti, která selhala.|Ne|
-|**Čas prvního bajtu**|Průměrná doba pro přijetí prvního bajtu odpovědi měřená od doby, kdy byla žádost odeslána webovému serveru. Jednotky jsou sekundy.|Ne|
-|**Doba odezvy**|Průměrná doba pro přijetí celé odpovědi na žádost měřená od doby, kdy byla žádost odeslána webovému serveru. Jednotky jsou sekundy.|Ano|
-|**Délka obsahu**|Průměrná délka obsahu odpovědi na požadavek. Jednotky jsou bajty.|Ano|
+|**Celkem**|Celkový počet tento požadavek testu výkonnosti webu vydanou v průběhu zátěžového testu spusťte. Celkový počet zahrnuje úspěšné i neúspěšné požadavky, ale nezahrnuje žádosti uložené v mezipaměti, protože nejsou vysílány webovému serveru.|Ano|
+|**Předaný**|Počet pokusů požadavku byl vystaven a předán.|Ne|
+|**Se nezdařilo**|Počet pokusů požadavku byl vystaven a se nezdařilo. Položky v tomto sloupci se zobrazí jako hypertextové odkazy. Můžete použít libovolný hypertextového odkazu pro zobrazení jednotlivých chyb v seznamu **chyby zátěžového testu** dialogové okno. Další informace najdete v tématu [výsledky zátěžového testu analyzovat](../test/analyze-load-test-results-using-the-load-test-analyzer.md).|Ano|
+|**Uložit do mezipaměti**|Celkový počet pokusů, které se již v mezipaměti požadavku.|Ne|
+|**Počet požadavků za sekundu**|Sazba za sekundu žádosti při spuštění zátěžového testu.|Ne|
+|**Předaný za sekundu**|Sazba za sekundu během zátěžového testu, pro instance této žádosti, který předá tento požadavek.|Ne|
+|**Za sekundu**|Sazba za sekundu tohoto požadavku během zátěžového testu, pro instance této žádosti, která selhala.|Ne|
+|**Čas prvního bajtu**|Průměrná doba pro přijetí prvního bajtu odpovědi, měřená od okamžiku, kdy byla vyslána žádost webovému serveru. Jednotky jsou sekund.|Ne|
+|**Doba odezvy**|Průměrná doba pro přijetí celou odpověď na žádost, měřená od okamžiku, kdy byla vyslána žádost webovému serveru. Jednotky jsou sekund.|Ano|
+|**Délka obsahu**|Průměrná délka obsahu odpovědi na požadavek. Jednotky jsou bajtů.|Ano|
 
-## <a name="the-tests-table"></a>Tabulka testů
+## <a name="the-tests-table"></a>V tabulce testy
 
-Tabulka **testy** zobrazuje podrobnosti pro jednotlivé testy spouštěné během zátěžového testu. Tabulka obsahuje seznam testů podle testů a scénářů, protože jeden test může být zahrnut v mnoha scénářích.
+**Testy** tabulka obsahuje podrobnosti pro jednotlivé testy spuštěny během zátěžového testu. V tabulce jsou uvedeny testy podle testu a scénář, protože jeden test lze zahrnout mnoho scénářů.
 
-V následující tabulce jsou uvedeny sloupce v tabulce **testy** .
+V následující tabulce jsou uvedeny ve sloupcích v **testy** tabulky.
 
-|Kolo|Popis|Ve výchozím nastavení viditelné|
+|Sloupec|Popis|Ve výchozím nastavení viditelné|
 |-|-|-|
 |**Test**|Název testu.|Ano|
 |**Scénář**|Název scénáře.|Ano|
-|**Čtení**|Celkový počet spuštění testu ve scénáři. To zahrnuje počet úspěšných a neúspěšných testů.|Ano|
-|**Předaný**|Počet spuštění testu ve scénáři a úspěch.|Ano|
-|**Nepovedlo se**|Počet spuštění testu ve scénáři a selhání. Položky v tomto sloupci se zobrazí jako hypertextové odkazy. Můžete vybrat libovolný hypertextový odkaz a zobrazit seznam jednotlivých chyb v dialogovém okně **chyby zátěžového testu** . Další informace naleznete v tématu [Analýza výsledků zátěžového testu](../test/analyze-load-test-results-using-the-load-test-analyzer.md).|Ano|
-|**Testy za sekundu**|Sazba za sekundu testu během běhu zátěžového testu.|Ano|
-|**Úspěšné za sekundu**|Sazba za sekundu tohoto testu během běhu zátěžového testu pro výskyty tohoto testu, který proběhl úspěšně.|Ne|
-|**Selhání za sekundu**|Sazba za sekundu tohoto testu během běhu zátěžového testu pro instance tohoto testu, které selhaly.|Ne|
-|**Čas testu**|Průměrná doba spuštění testu během běhu zátěžového testu. Jednotky jsou sekundy.|Ano|
-|**90% testovacího času**|Hodnota devadesáte percentilu pro dobu testování.|Ne|
-|**95% testovacího času**|Hodnota percentilu 95. pro testovací čas|Ano|
-|**Žádosti a testování**|Průměrný počet požadavků v testu, pokud se jedná o test výkonnosti webu.|Ne|
+|**Celkem**|Celkový počet, kolikrát byl spuštěn test ve scénáři. Jedná se o počet, kolikrát test předaný a se nezdařilo.|Ano|
+|**Předaný**|Počet pokusů, test byl spuštěny ve scénáři a předán.|Ano|
+|**Se nezdařilo**|Počet pokusů, test byl spuštěny ve scénáři a selhal. Položky v tomto sloupci se zobrazí jako hypertextové odkazy. Můžete použít libovolný hypertextového odkazu pro zobrazení jednotlivých chyb v seznamu **chyby zátěžového testu** dialogové okno. Další informace najdete v tématu [výsledky zátěžového testu analyzovat](../test/analyze-load-test-results-using-the-load-test-analyzer.md).|Ano|
+|**Testy za sekundu**|Sazba za sekundu testu při spuštění zátěžového testu.|Ano|
+|**Předaný za sekundu**|Sazba za sekundu během zátěžového testu, pro instance tohoto testu, který předá tento test.|Ne|
+|**Za sekundu**|Sazba za sekundu během zátěžového testu pro instance tohoto testu, který se nepodařilo spustit tento test.|Ne|
+|**Čas testu**|Průměrná doba pro spuštění testu při spuštění zátěžového testu. Jednotky jsou sekund.|Ano|
+|**90 % testovacího času**|90. percentil hodnoty pro čas testu.|Ne|
+|**95 % testovacího času**|95. percentil hodnoty pro čas testu.|Ano|
+|**Požadavky a testování**|Průměrný počet požadavků v testu, pokud je výkon webového testu.|Ne|
 
 ## <a name="the-transactions-table"></a>Tabulka transakcí
 
-Tabulka **transakcí** zobrazuje seznam transakcí, ke kterým došlo během běhu zátěžového testu. Transakce odkazují buď na transakce definované v testu výkonnosti webu, nebo na časovače definované v testu jednotek. Transakce neodkazuje na transakce databáze.
+**Transakce** tabulka uvádí seznam transakcí, ke kterým došlo během spuštění zátěžového testu. . Transakce odkazují buď transakce definované v testu výkonnosti webu, nebo na časovače definované v rámci testu jednotek. Transakce neodkazuje na transakce databáze.
 
-V následující tabulce jsou uvedeny sloupce v tabulce **transakcí** .
+V následující tabulce jsou uvedeny ve sloupcích v **transakce** tabulky.
 
 > [!NOTE]
-> Chcete-li zobrazit všechny sloupce, je nutné povolit vlastnost úložiště podrobností časování, která je přidružena k aktivnímu nastavení běhu. Další informace najdete v tématu [Postupy: určení vlastnosti úložiště podrobností časování](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md).
+> Chcete-li zobrazit všechny sloupce, je nutné povolit vlastnost úložiště podrobností časování, která je spojena s aktivní parametr spuštění. Další informace najdete v tématu [postupy: určení vlastnosti úložiště podrobností časování](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md).
 
-|Kolo|Popis|Viditelné bez podrobností časování|
+|Sloupec|Popis|Zobrazuje bez podrobnosti časování|
 |-|-|-|
 |**Transakce**|Název transakce.|Ano|
 |**Scénář**|Název scénáře.|Ano|
 |**Test**|Název testu.|Ano|
-|**Čtení**|Celkový počet transakcí vydaných během běhu zátěžového testu.|Ano|
-|**Čas transakce**|Čas spuštění transakce během zátěžového testu. V případě testů výkonnosti webu je čas zamyslení zahrnut do výpočtu. Jednotky jsou sekundy.|Ne|
-|**Doba odezvy**|Doba odezvy pro transakci testu výkonnosti webu v běhu zátěžového testu. Doba odezvy se liší od času transakce v této době odezvy nezahrnuje čas pomýšlení, ke kterému došlo během transakce. Jednotky jsou sekundy.|Ne|
-|**Ave. Transaction – čas**|Průměrná doba transakce. Tato doba zahrnuje dobu přemýšlení. Například pokud máte tři požadavky a každý z nich má čas promýšlení, bude tato doba zahrnovat tyto časy a skutečný čas pro spuštění požadavků.|Ne|
-|**Ave. doba odezvy**|Průměrná doba odezvy pro transakci testu výkonnosti webu v běhu zátěžového testu. Doba odezvy se liší od času transakce v této době odezvy nezahrnuje čas pomýšlení, ke kterému došlo během transakce. Jednotky jsou sekundy.|Ne|
-|**Minimální doba odezvy**|Nezahrnuje dobu přemýšlení.|Ne|
-|**Maximální doba odezvy**|Nezahrnuje dobu přemýšlení.|Ne|
-|**Medián doby odezvy**|Nezahrnuje dobu přemýšlení.|Ne|
-|**90% doba odezvy**|Hodnota devadesáte percentilu pro čas transakce. Nezahrnuje dobu přemýšlení. **Poznámka:**  To se liší od programu Visual Studio Team System 2008 Test Load Agent, který použil hodnotu **času transakce 90%** .|Ne|
-|**95% doba odezvy**|Hodnota percentilu 95. pro čas transakce Nezahrnuje dobu přemýšlení. **Poznámka:**  To se liší od programu Visual Studio Team System 2008 Test Load Agent, který použil hodnotu **času transakce 95%** .|Ne|
-|**99% doba odezvy**|Hodnota percentilu 99 pro čas transakce Nezahrnuje dobu přemýšlení.|Ne|
-|**Doba odezvy std pro vývojáře**|Nezahrnuje dobu přemýšlení.|Ne|
+|**Celkem**|Celkový počet transakcí vystavených během zátěžového testu.|Ano|
+|**Čas transakce**|Je čas ke spuštění transakce při spuštění zátěžového testu. Pro testy výkonnosti webu, myslíte, že čas spadá do výpočtu. Jednotky jsou sekund.|Ne|
+|**Doba odezvy**|Doba odezvy pro transakce webového testu výkonu v spuštění zátěžového testu. Doba odezvy se liší od doby transakce v tom, že doba odezvy nezahrnuje žádné zvažte čas, ke které došlo během transakce. Jednotky jsou sekund.|Ne|
+|**Ave. Transaction – čas**|Průměrná doba transakce. Tento čas zahrnuje čas přemýšlení. Například pokud máte tři požadavky a každý má čas přemýšlení, tentokrát budou zahrnovat tyto časy přemýšlení a vyžaduje skutečný čas ke spuštění.|Ne|
+|**Ave. doba odezvy**|Průměrná doba odezvy pro transakce webového testu výkonu ve spuštění zátěžového testu. Doba odezvy se liší od doby transakce v tom, že doba odezvy nezahrnuje žádné zvažte čas, ke které došlo během transakce. Jednotky jsou sekund.|Ne|
+|**Minimální doba odezvy**|To nezahrnuje čas přemýšlení.|Ne|
+|**Maximální doba odezvy**|To nezahrnuje čas přemýšlení.|Ne|
+|**Medián doby odezvy**|To nezahrnuje čas přemýšlení.|Ne|
+|**90 % doby odezvy**|90. percentil hodnoty pro čas transakce. To nezahrnuje čas přemýšlení. **Poznámka:** tím se liší od Visual Studio Team System 2008 testu zatížení Agent, který používá **90 % času transakce** hodnotu.|Ne|
+|**95 % doby odezvy**|95. percentil hodnoty pro čas transakce. To nezahrnuje čas přemýšlení. **Poznámka:** tím se liší od Visual Studio Team System 2008 testu zatížení Agent, který používá **95 % doby transakce** hodnotu.|Ne|
+|**99 % doby odezvy**|Úrovni 99. percentil hodnoty pro čas transakce. To nezahrnuje čas přemýšlení.|Ne|
+|**Směrodatná odchylka doby odezvy**|To nezahrnuje čas přemýšlení.|Ne|
 
-## <a name="the-errors-table"></a>Tabulka chyb
+## <a name="the-errors-table"></a>V tabulce chyb
 
-Při spuštění zátěžového testu můžete analyzovat chyby, ke kterým dojde. Analýza chyb a úpravy testů jsou důležitou součástí procesu zátěžového testu. Pokud dojde k chybám, zobrazí se na stavovém řádku test zátěže hypertextový odkaz **chyby** a určí počet chyb, ke kterým došlo. Chcete-li zobrazit tabulku chyb, vyberte hypertextový odkaz.
+Při spuštění zátěžového testu můžete analyzovat chyby, ke kterým dochází. Analýza chyb a nastavení testů jsou důležitou součástí procesu testu zatížení. Pokud došlo k chybám, **chyby** hypertextového odkazu se zobrazí ve stavovém řádku testu zatížení a určuje počet chyb, ke kterým došlo. Zobrazit tabulku chyby, zvolte hypertextový odkaz.
 
-Tabulka Errors seskupuje chyby, ke kterým došlo během zátěžového testu, typem a podtypem chyby. V tabulce je také **Celková** čára, která určuje celkový počet všech chyb, ke kterým došlo.
+Chyby tabulky skupiny chyb, ke kterým došlo během zátěžového testu s typem a podtypem chyby. K dispozici je také **celkový** řádek v tabulce, který určuje celkový počet všech chyb, ke kterým došlo.
 
-Tabulka Errors obsahuje následující sloupce:
+Chyby tabulka obsahuje následující sloupce:
 
-|Kolo|Popis|Ve výchozím nastavení viditelné|
+|Sloupec|Popis|Ve výchozím nastavení viditelné|
 |-|-|-|
-|Typ|Typ chyby Například HttpError.|Ano|
-|Podtyp|Podtyp chyby. Například LoadTestException.|Ano|
-|Výpočtu|Počet chyb tohoto typu, ke kterým došlo během zátěžového testu. Položky v tomto sloupci se zobrazí jako hypertextové odkazy. Můžete vybrat libovolný hypertextový odkaz a zobrazit tak seznam jednotlivých chyb.|Ano|
-|Poslední zpráva|Zpráva popisující chybu Například 404 – NotFound.|Ano|
+|Type|Typ chyby. Například HttpError.|Ano|
+|SubType|Podtyp chybu. Například LoadTestException.|Ano|
+|Počet|Číslo chyby tohoto typu, ke které došlo během zátěžového testu. Položky v tomto sloupci se zobrazí jako hypertextové odkazy. Můžete použít libovolný hypertextový odkaz, chcete-li zobrazit seznam jednotlivých chyb.|Ano|
+|Poslední zpráva|Zpráva popisující chybu Například 404 - NotFound.|Ano|
 
-Další informace naleznete v tématu [práce s tabulkami zátěžových testů](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+Další informace najdete v tématu [práce s tabulkami testu zatížení](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
 
-### <a name="drill-down-to-the-error-list"></a>Přechod k podrobnostem v seznamu chyb
+### <a name="drill-down-to-the-error-list"></a>Potom přejít na seznam chyb
 
-Tabulka Errors seskupuje chyby podle typu a podtypu chyby. Chcete-li zobrazit tabulku jednotlivých chyb, zobrazí se dialogové okno **chyby zátěžového testu** . Chcete-li zobrazit dialogové okno, vyberte hypertextový odkaz ve sloupci **počet** v tabulce chyby. Dialogové okno můžete zobrazit také tak, že kliknete pravým tlačítkem na řádek v tabulce chyby, která je naplněná, a zvolíte **chyby**.
+Chyby tabulky skupiny chyb podle typu a podtyp chyby. Chcete-li zobrazit tabulku jednotlivých chyb, zobrazí **chyby zátěžového testu** dialogové okno. Chcete-li zobrazit dialogové okno, zvolte hypertextový odkaz v **počet** sloupec tabulky chyb. Můžete také zobrazit dialogové okno kliknutím pravým tlačítkem řádek v tabulce chyb, který je vyplněný a zvolíte **chyby**.
 
 > [!NOTE]
-> Shromažďují se jenom první 1 000 instance libovolného typu chyby a kombinace podtypu. Po zobrazení dialogového okna **chyby zátěžového testu** se zobrazí maximálně prvních 1 000 instancí, u kterých došlo k chybě.
+> Jsou shromažďovány pouze prvních 1 000 instancí libovolnou kombinaci typem a podtypem chyby. Při zobrazení **chyby zátěžového testu** dialogové okno, zobrazí se maximálně prvních 1 000 instancí tuto chybu.
 
-Tabulka **chyby zátěžového testu** obsahuje následující sloupce:
+**Chyby zátěžového testu** tabulka obsahuje následující sloupce:
 
-|Kolo|Popis|
+|Sloupec|Popis|
 |-|-|
-|**Interval**|Čas v průběhu zátěžového testu, při kterém došlo k chybě.|
-|**Agenta**|Název počítače agenta, na kterém došlo k chybě. To je důležité při spuštění zátěžových testů pomocí testovacích kontrolérů a testovacích agentů. Další informace najdete v tématu [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).|
-|**Test**|Název testu výkonnosti webu, v němž došlo k chybě.|
+|**čas**|Doba během zátěžového testu na kterém došlo k chybě.|
+|**Agent**|Název počítače agenta, na kterém došlo k chybě. To je důležité, když spustíte zátěžové testování pomocí testovacích kontrolérů a testovacích agentů. Další informace najdete v tématu [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).|
+|**Test**|Název webového testu v kterém došlo k chybě.|
 |**Scénář**|Název scénáře, ve kterém došlo k chybě.|
-|**Request**|Adresa URL požadavku, ve kterém došlo k chybě.|
-|**Textový**|Typ chyby Například HttpError.|
-|**Podtyp**|Podtyp chyby. Například LoadTestException.|
-|**Text**|Text chybové zprávy Například 404 – NotFound.|
-|**Vrstvě**|Položky v tomto sloupci buď nejsou prázdné, nebo je jako hypertextový odkaz formátována **sada** Word. Kliknutím na hypertextový odkaz můžete zobrazit trasování zásobníku chyby.|
-|**Zobrazí**|Položky v tomto sloupci buď nejsou prázdné, nebo je slovo **TestLog** formátováno jako hypertextový odkaz. Tento odkaz vám může přispět k izolaci chyb v zátěžovém testu. Například volba odkazu **TestLog** na chybu žádosti testu výkonnosti webu otevře výsledky testu výkonnosti webu v prohlížeči výsledky testůho webového výkonu a zvýrazní chybu žádosti.|
+|**Požadavek**|Adresa URL požadavku, ve kterém došlo k chybě.|
+|**Typ**|Typ chyby. Například HttpError.|
+|**Podtyp**|Podtyp chybu. Například LoadTestException.|
+|**Text**|Text chybové zprávy. Například 404 - NotFound.|
+|**Zásobník**|Položky v tomto sloupci jsou buď prázdná, nebo slovo **zásobníku** je formátován jako hypertextový odkaz. Můžete použít hypertextového odkazu pro zobrazení trasování zásobníku pro chybu.|
+|**Podrobnosti**|Položky v tomto sloupci jsou buď prázdná, nebo slovo **TestLog** je formátován jako hypertextový odkaz. Tento odkaz můžete izolovat chyby v zátěžovém testu. Například výběr **TestLog** odkaz na žádost chyby webové výkonnosti testu se otevřou se výsledky testu výkonnosti webu v prohlížeči výsledků testování webového výkonu a zvýraznit Chyba žádosti.|
 
 > [!NOTE]
-> Tabulku můžete seřadit výběrem záhlaví sloupců.
+> Seřadí tabulku kliknutím na záhlaví sloupců.
 
 ## <a name="the-sql-trace-data-table"></a>Tabulka dat trasování SQL
 
-Data trasování SQL můžete shromažďovat během běhu zátěžového testu a analyzovat je později. Shromažďování dat trasování vám umožní identifikovat nejpomalejší běžící dotazy a uložené procedury v testované databázi SQL Server.
+Během spuštění k analýze později zátěžového testu lze shromažďovat data trasování SQL. Shromažďování dat trasování vám umožní identifikovat nejpomaleji spouštění dotazů a uložených procedur v databázi serveru SQL Server, který je právě testováno.
 
-Pokud je povoleno trasování SQL, vytvoří se soubor během spuštění zátěžového testu, který obsahuje data trasování. Tato data se automaticky uloží do úložiště Load Výsledky testů na konci testovacího běhu a trasovací soubor se odstraní. Data trasování můžete analyzovat v tabulce **trasování SQL** po dokončení zátěžového testu.
+Pokud je povoleno trasování SQL, soubor se vytvoří během zátěžového testu, který obsahuje data trasování. Tato data se automaticky uloží v Store výsledky zátěžového testu na konci testovacího běhu a odstraní se tento soubor trasování. Analýza dat trasování v **trasování SQL** tabulky po dokončení zátěžového testu.
 
-### <a name="to-view-sql-trace-data"></a>Zobrazení dat trasování SQL
+### <a name="to-view-sql-trace-data"></a>Chcete-li zobrazit data trasování SQL
 
-1. V analyzátoru zátěžového testu klikněte na tlačítko **tabulky** na panelu nástrojů a ujistěte se, že je zobrazena mřížka tabulky.
+1. V Analyzéru zátěžového testu, zvolte **tabulky** na panelu nástrojů, abyste měli jistotu, že se zobrazí mřížku tabulky.
 
-2. V rozevíracím seznamu **tabulka** vyberte položku **trasování SQL**.
+2. V **tabulky** rozevíracího seznamu vyberte **trasování SQL**.
 
-3. Data trasování, která byla shromážděna během běhu, se zobrazí v mřížce. V tabulce jsou uvedeny nejpomalejší běžící operace SQL seřazené podle doby trvání, která je nejpomalejší v horní části. Obvykle je sloupec **Trvání** prvním sloupcem, který chcete prošetřit. Data se zobrazí v milisekundách.
+3. Data trasování, která byla shromážděna během spuštění se zobrazí v mřížce. V tabulce jsou uvedeny nejpomaleji probíhajících operací SQL, seřazené podle doby trvání, se načítají nejpomaleji. v horní části. Obvykle **doba trvání** sloupec je první sloupec prozkoumat. Data se zobrazí v milisekundách.
 
-   Zobrazené sloupce jsou následující:
+   Zobrazení sloupců jsou následující:
 
     - **Event – třída**
 
-    - **Úkolu**
+    - **Doba trvání**
 
-    - **VČETNĚ**
+    - **CPU**
 
-    - **Operace**
+    - **Operace čtení**
 
-    - **Pisoval**
+    - **Zapíše**
 
-    - **TextData**
+    - **Textové podrobnosti**
 
-    - **Spuštění**
+    - **startTime**
 
-    - **EndTime**
+    - **Koncový čas**
 
-   Chcete-li trasovat události SQL jiné než data identifikovaná v těchto sloupcích, můžete nastavit vlastní trasování SQL pomocí nástroje SQL Profiler, který je oddělený od sady Visual Studio.
+   Pokud chcete trasovat události SQL než data podle těchto sloupců, můžete nastavit vlastní vlastní SQL trasování pomocí nástroje SQL Profiler, odděleně od sady Visual Studio.
 
-## <a name="tile-load-test-tables"></a>Tabulky zátěžových testů dlaždic
+## <a name="tile-load-test-tables"></a>Dlaždice zátěžového testu tabulky
 
-Při zobrazení výsledků zátěžového testu můžete zobrazit data jako podrobné tabulky. Chcete-li přepnout na zobrazení tabulky, vyberte možnost **tabulky** na panelu nástrojů **zátěžového testu** . Dostupné tabulky jsou **chyby**, **stránky**, **požadavky**, **trasování SQL**, **testy**, **prahové hodnoty**a **transakce**. Další informace naleznete v tématu [práce s tabulkami zátěžových testů](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+Při zobrazení výsledků spuštění zátěžového testu můžete zobrazit data jako podrobné tabulky. Chcete-li přepnout do zobrazení tabulky, zvolte **tabulky** na **zátěžový test** nástrojů. Tabulky, které jsou k dispozici jsou **chyby**, **stránky**, **požadavky**, **trasování SQL**, **testy**,  **Prahové hodnoty**, a **transakce**. Další informace najdete v tématu [práce s tabulkami testu zatížení](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
 
-V tabulkovém zobrazení můžete zobrazit až čtyři tabulky najednou, aniž by se tabulky překrývaly.
+V zobrazení tabulky můžete zobrazit až čtyři tabulky v čase bez tabulek překrývající se.
 
-### <a name="to-tile-tables"></a>K tabulkám dlaždic
+### <a name="to-tile-tables"></a>Na dlaždici tabulky
 
-1. Na panelu nástrojů **analyzátor zátěžového testu** vyberte možnost **tabulky**.
+1. Na **Analyzéru zátěžového testu** nástrojů, zvolte **tabulky**.
 
-     Otevře se zobrazení tabulky. Výchozím rozložením jsou dva horizontální panely.
+     Otevře se zobrazení tabulky. Výchozí rozložení je dva vodorovné panely.
 
-2. Na panelu nástrojů **analyzátor zátěžového testu** klikněte na tlačítko **rozložení** a pak zvolte jednu z následujících možností:
+2. Na **Analyzéru zátěžového testu** nástrojů, zvolte **rozložení** tlačítko a pak vyberte jednu z následujících možností:
 
-    - **Jeden panel**
+    - **Jeden Panel**
 
     - **Dva vodorovné panely**
 
     - **Tři horizontální panely**
 
-    - **Čtyři vodorovné panely**
+    - **Čtyři horizontální panely**
 
-3. Chcete-li přepínat mezi různými tabulkami, použijte rozevírací seznam nad mřížkou tabulky na každém panelu.
+3. Pokud chcete přepnout mezi jednotlivými tabulkami, pomocí rozevíracího seznamu výše mřížku tabulky v jednotlivých panelech.
 
     > [!NOTE]
-    > Nemůžete zobrazit stejnou tabulku ve více než jednom panelu. Změníte-li tabulku zobrazenou na jednom panelu na tabulku, která je již zobrazena na jiném panelu, tabulky přepínají panely.
+    > Ve více než jeden panel nelze zobrazit stejné tabulky. Pokud změníte zobrazí jeden panelu do tabulky již zobrazena v jiného panelu tabulku, přepněte tabulky panelů.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Analyzovat výsledky zátěžového testu](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
-- [Postupy: přístup k výsledkům zátěžového testu pro analýzu](../test/how-to-access-load-test-results-for-analysis.md)
+- [Analýza výsledků zátěžových testů](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Postupy: přístup k analýze výsledků zátěžového testu](../test/how-to-access-load-test-results-for-analysis.md)
 - [Analýza výsledků zátěžových testů v zobrazení grafů](../test/analyze-load-test-results-in-the-graphs-view.md)
-- [Analýza porušení pravidel mezních hodnot](../test/analyze-threshold-rule-violations-in-load-tests.md)
-- [Správa výsledků zátěžového testu v úložišti Výsledky testů zatížení](../test/manage-load-test-results-in-the-load-test-results-repository.md)
+- [Analýza překročení mezních pravidel](../test/analyze-threshold-rule-violations-in-load-tests.md)
+- [Správa výsledků zátěžových testů v úložiště výsledků testu zátěže](../test/manage-load-test-results-in-the-load-test-results-repository.md)
 - [Přehled souhrnu výsledků zátěžového testu](../test/load-test-results-summary-overview.md)

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - text templates, syntax
 - text templates, guide
 - text templates, functions that generate text
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: df653dbd449429b6995c987328a401866751fd5e
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 1990377bffe0c663a70520c07bd3ab60b91f8bbd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981252"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593483"
 ---
 # <a name="writing-a-t4-text-template"></a>Tvorba textové šablony T4
-Textová šablona obsahuje text, který z ní bude vygenerován. Například šablona, která vytvoří webovou stránku, bude obsahovat "\<html >..." a všechny ostatní standardní části stránky HTML. Vložení do šablony jsou *řídicí bloky*, které jsou fragmenty kódu programu. Řídicí bloky poskytují různé hodnoty a umožňují, aby části textu byly podmíněné a opakované.
+Textová šablona obsahuje text, který z ní bude vygenerován. Například šablona, která vytvoří webovou stránku, bude obsahovat "\<> HTML..." a všechny ostatní standardní části stránky HTML. Vložení do šablony jsou *řídicí bloky*, které jsou fragmenty kódu programu. Řídicí bloky poskytují různé hodnoty a umožňují, aby části textu byly podmíněné a opakované.
 
  Tato struktura usnadňuje vývoj šablon, protože lze začít s prototypem generovaného souboru a postupně vkládat řídicí bloky, které změní výsledek.
 
@@ -266,7 +266,7 @@ Lze také získat další služby, které jsou poskytovány tímto hostitelem. D
 ## <a name="editing-templates"></a>Úpravy šablon
  Speciální editory textových šablon lze stáhnout z online galerie správce rozšíření. V nabídce **nástroje** klikněte na **Správce rozšíření**. Klikněte na položku **Online galerie**a pak použijte nástroj pro hledání.
 
-## <a name="related-topics"></a>Související témata
+## <a name="related-topics"></a>Příbuzná témata
 
 |Úloha|Téma|
 |-|-|
@@ -275,4 +275,4 @@ Lze také získat další služby, které jsou poskytovány tímto hostitelem. D
 |Generování souborů v řešení sady Visual Studio.|[Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
 |Spuštění generování textu mimo Visual Studio.|[Generování souborů pomocí nástroje TextTransform](../modeling/generating-files-with-the-texttransform-utility.md)|
 |Transformujte data ve formě jazyka specifického pro doménu.|[Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)|
-|Zapište procesory direktiv pro transformaci vašich vlastních zdrojů dat.|[Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)|
+|Procesory direktiv pro transformaci zdrojích dat zápisu.|[Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)|

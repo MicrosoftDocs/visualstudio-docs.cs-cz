@@ -1,34 +1,34 @@
 ---
-title: Porovnávání vlastností a položek | Dokumentace Microsoftu
+title: Porovnávání vlastností a položek | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, msbuild properties
 ms.assetid: b9da45ae-d6a6-4399-8628-397deed31486
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8217a6aa349a31921ed454e76ddea306785dea9d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 51f7f65dd4e4d1922663ea020e55f551245a7444
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825904"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596122"
 ---
-# <a name="compare-properties-and-items"></a>Porovnávání vlastností a položek
-Vlastnosti nástroje MSBuild a položek se používají k předávání informací do úlohy, vyhodnocení podmínky a ukládat hodnoty, které může být odkazováno v celém souboru projektu.
+# <a name="compare-properties-and-items"></a>Porovnat vlastnosti a položky
+Vlastnosti a položky nástroje MSBuild se používají k předávání informací úkolům, vyhodnocení podmínek a ukládání hodnot, na které lze odkazovat v rámci souboru projektu.
 
-- Vlastnosti jsou páry název hodnota. Další informace najdete v tématu [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
+- Vlastnosti jsou páry název-hodnota. Další informace najdete v tématu [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
 
-- Položky jsou objekty, které obvykle představují soubory. Položka objekty mohou být přidruženy kolekce metadat. Metadata jsou páry název hodnota. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
+- Položky jsou objekty, které obvykle představují soubory. K objektům položky mohou být přidruženy kolekce metadat. Metadata jsou páry název-hodnota. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
 
-## <a name="scalars-and-vectors"></a>Skaláry a vektorů
-Protože vlastnosti nástroje MSBuild jsou páry název hodnota, které mají pouze jednu řetězcovou hodnotu, jsou často popisuje jako *skalární*. Protože MSBuild typů položek jsou seznamy položek, jsou často popisuje jako *vektoru*. V praxi však vlastnosti mohou představovat několik hodnot a typů položek může mít nejvýše jedno položky.
+## <a name="scalars-and-vectors"></a>Skalární a vektory
+Vzhledem k tomu, že vlastnosti MSBuild jsou páry název-hodnota, které mají pouze jednu řetězcovou hodnotu, jsou často popsány jako *skalární*. Vzhledem k tomu, že typy položek MSBuild jsou seznamy položek, jsou často popsány jako *vektor*. V praxi však vlastnosti mohou představovat více hodnot a typy položek mohou mít 0 nebo jednu položku.
 
-### <a name="target-dependency-injection"></a>Injektáž závislostí cíl
-Pokud chcete zobrazit, jak vlastnosti může představovat více hodnot, vezměte v úvahu běžným vzorem využití pro přidání cíle do seznamu cílů, které má být sestaven. Tento seznam je obvykle reprezentována hodnotu vlastnosti s cílové názvy oddělené středníky.
+### <a name="target-dependency-injection"></a>Vkládání závislostí cíle
+Chcete-li zjistit, jak vlastnosti mohou představovat více hodnot, zvažte společný vzor použití pro přidání cíle do seznamu cílů, které mají být sestaveny. Tento seznam je obvykle reprezentován hodnotou vlastnosti s cílovými názvy oddělenými středníky.
 
 ```xml
 <PropertyGroup>
@@ -40,7 +40,7 @@ Pokud chcete zobrazit, jak vlastnosti může představovat více hodnot, vezmět
 </PropertyGroup>
 ```
 
-`BuildDependsOn` Vlastnost se obvykle používá jako argument cíl `DependsOnTargets` atribut efektivně jeho převodu do seznamu položek. Tuto vlastnost lze přepsat, chcete-li přidat cíl nebo chcete-li změnit pořadí provádění cílů. Například
+Vlastnost `BuildDependsOn` se obvykle používá jako argument cílového atributu `DependsOnTargets` a efektivně ho převádí na seznam položek. Tato vlastnost může být přepsána, pokud chcete přidat cíl nebo změnit pořadí spuštění cíle. Například
 
 ```xml
 <PropertyGroup>
@@ -51,12 +51,12 @@ Pokud chcete zobrazit, jak vlastnosti může představovat více hodnot, vezmět
 </PropertyGroup>
 ```
 
-Přidá cílový CustomBuild do cílového seznamu poskytuje `BuildDependsOn` hodnota `BeforeBuild;CoreBuild;AfterBuild;CustomBuild`.
+Přidá cíl CustomBuild do cílového seznamu a uvede `BuildDependsOn` hodnotu `BeforeBuild;CoreBuild;AfterBuild;CustomBuild`.
 
-Od verze MSBuild 4.0, vkládání závislostí cíl je zastaralý. Použití `AfterTargets` a `BeforeTargets` místo toho atributy. Další informace najdete v tématu [pořadí sestavení cílové](../msbuild/target-build-order.md).
+Počínaje nástrojem MSBuild 4,0 je vkládání závislostí cíle zastaralé. Místo toho použijte atributy `AfterTargets` a `BeforeTargets`. Další informace najdete v tématu [cílové pořadí sestavení](../msbuild/target-build-order.md).
 
-### <a name="conversions-between-strings-and-item-lists"></a>Převody mezi řetězci a položek seznamů
-Nástroj MSBuild provádí převody do a z typů položek a řetězcové hodnoty podle potřeby. Pokud chcete zobrazit, jak seznam položek se může stát řetězcovou hodnotu, zvažte, co se stane, když typ položky, který se používá jako hodnotu vlastnosti nástroje MSBuild:
+### <a name="conversions-between-strings-and-item-lists"></a>Převody mezi řetězci a seznamy položek
+Nástroj MSBuild provádí převody na typy položek a hodnoty řetězců podle potřeby a z nich. Chcete-li zjistit, jakým způsobem se může seznam položek stát hodnotou řetězce, zvažte, co se stane, když je typ položky použit jako hodnota vlastnosti MSBuild:
 
 ```xml
 <ItemGroup>
@@ -67,44 +67,44 @@ Nástroj MSBuild provádí převody do a z typů položek a řetězcové hodnoty
 </PropertyGroup>
 ```
 
-Typ položky OutputDir má `Include` atributu s hodnotou "klíčového souboru\\; Certifikáty\\". Nástroj MSBuild analyzuje tento řetězec na dvě položky: KeyFiles\ a certifikáty\\. Pokud typ položky OutputDir slouží jako hodnota vlastnosti OutputDirList, MSBuild převede nebo "sloučí" typu položky do oddělených středníkem řetězec "klíčového souboru\\; Certifikáty\\".
+Typ položky OutputDir má atribut `Include` s hodnotou "\\soubory"; Certifikáty\\". Nástroj MSBuild analyzuje tento řetězec do dvou položek: souborů a certifikátů\\. Když typ položky OutputDir slouží jako hodnota vlastnosti OutputDirList, nástroj MSBuild převede nebo "sloučí" typ položky do řetězcových souborů s oddělovači středníkem\\; Certifikáty\\".
 
 ## <a name="properties-and-items-in-tasks"></a>Vlastnosti a položky v úlohách
-Vlastností a položek se používají jako vstupy a výstupy pro úlohy nástroje MSBuild. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
+Vlastnosti a položky se používají jako vstupy a výstupy pro úlohy MSBuild. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
 
-Vlastnosti jsou předány na úkoly jako atributy. V úloze vlastnost MSBuild představuje typ vlastnosti, jehož hodnota je možné převést do a z řetězce. Typy podporovaných vlastností zahrnují `bool`, `char`, `DateTime`, `Decimal`, `Double`, `int`, `string`, a jakýkoli typ, který <xref:System.Convert.ChangeType%2A> dokáže zpracovat.
+Vlastnosti jsou předány do úkolů jako atributy. V rámci úlohy je vlastnost MSBuild reprezentovaná typem vlastnosti, jejíž hodnota může být převedena na a z řetězce. Mezi podporované typy vlastností patří `bool`, `char`, `DateTime`, `Decimal`, `Double`, `int`, `string`a jakýkoli typ, který <xref:System.Convert.ChangeType%2A> může zpracovat.
 
-Položky jsou předány na úkoly jako <xref:Microsoft.Build.Framework.ITaskItem> objekty. V úloze <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> představuje hodnotu položky a <xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A> načte jeho metadata.
+Položky jsou předány úlohám jako <xref:Microsoft.Build.Framework.ITaskItem> objekty. V rámci úkolu <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> představuje hodnotu položky a <xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A> načte svá metadata.
 
-Seznam položek typu položky mohou být předány jako pole `ITaskItem` objekty. Od verze rozhraní .NET Framework 3.5, položky můžete odebrat ze seznamu položek v cíli s použitím `Remove` atribut. Protože položky je odebrat ze seznamu položek, je možné pro typ položky, který chcete obsahují nulové položky. Pokud seznam položek je předán úkolu, by měla tato možnost vyhledávat kód v úloze.
+Seznam položek typu položky lze předat jako pole objektů `ITaskItem`. Počínaje .NET Framework 3,5 lze položky odebrat ze seznamu položek v cíli pomocí atributu `Remove`. Protože položky lze odebrat ze seznamu položek, je možné, že typ položky má nulové položky. Pokud je seznam položek předán úkolu, kód v úloze by měl tuto možnost kontrolovat.
 
-## <a name="property-and-item-evaluation-order"></a>Pořadí vyhodnocování vlastností a položek
-Během fáze vyhodnocení sestavení importované soubory jsou součástí sestavení v pořadí, v jakém jsou uvedeny. Vlastnosti a položky jsou definovány v tři průchody v následujícím pořadí:
+## <a name="property-and-item-evaluation-order"></a>Pořadí vyhodnocení vlastností a položek
+Během zkušební fáze sestavení jsou importované soubory začleněny do sestavení v pořadí, ve kterém se zobrazí. Vlastnosti a položky jsou definovány ve třech průchodech v následujícím pořadí:
 
-- Vlastnosti jsou definovány a upravovat v pořadí, ve kterém jsou uvedeny.
+- Vlastnosti jsou definovány a upraveny v pořadí, ve kterém jsou zobrazeny.
 
-- Definice položek jsou definovány a upravovat v pořadí, ve kterém jsou uvedeny.
+- Definice položek jsou definovány a upraveny v pořadí, ve kterém jsou zobrazeny.
 
-- Položky jsou definovány a upravovat v pořadí, ve kterém jsou uvedeny.
+- Položky jsou definovány a upraveny v pořadí, ve kterém jsou zobrazeny.
 
-Během fáze spuštění sestavení vlastností a položek, které jsou definovány v rámci cíle jsou vyhodnocovány společně v jedné fáze v pořadí, v jakém jsou uvedeny.
+Během fáze provádění sestavení se vlastnosti a položky, které jsou definovány v rámci cílů, vyhodnocují společně v jedné fázi v pořadí, ve kterém jsou uvedeny.
 
-Ale to není celý příběh. Když je definována vlastnost, definice položky nebo položky, jeho hodnota se vyhodnocuje. Chyba při vyhodnocování výrazu rozšíří řetězec, který určuje hodnotu parametru. Řetězec rozbalení je závislé na fázi sestavení. Tady je podrobnější pořadí vyhodnocování vlastností a položek:
+Nejedná se však o úplný příběh. Je-li definována vlastnost, definice položky nebo položka, je vyhodnocena její hodnota. Vyhodnocovací filtr výrazů rozbalí řetězec, který určuje hodnotu. Rozšíření řetězce je závislé na fázi sestavení. Tady je podrobnější pořadí vyhodnocení vlastností a položek:
 
-- Během fáze vyhodnocení sestavení:
+- Během zkušební fáze sestavení:
 
-  - Vlastnosti jsou definovány a upravovat v pořadí, ve kterém jsou uvedeny. Funkce vlastností jsou spuštěny. Hodnoty vlastností ve formě $(PropertyName) rozbaleny v rámci výrazů. Hodnota vlastnosti je nastavena na rozbalené výraz.
+  - Vlastnosti jsou definovány a upraveny v pořadí, ve kterém jsou zobrazeny. Funkce vlastností jsou spuštěny. Hodnoty vlastností ve formě $ (PropertyName) jsou v rámci výrazů rozbaleny. Hodnota vlastnosti je nastavena na rozbalený výraz.
 
-  - Definice položek jsou definovány a upravovat v pořadí, ve kterém jsou uvedeny. Funkce vlastností byl rozbalen ve výrazech. Metadata hodnoty jsou nastaveny na rozbalené výrazy.
+  - Definice položek jsou definovány a upraveny v pořadí, ve kterém jsou zobrazeny. Funkce vlastností již byly v rámci výrazů rozbaleny. Hodnoty metadat jsou nastaveny na rozbalené výrazy.
 
-  - Typy položek jsou definovány a upravovat v pořadí, ve kterém jsou uvedeny. Hodnoty položek ve formuláři @(ItemType) rozbaleny. Transformace položky jsou také rozšířit. Funkce vlastností a hodnot už rozšířily ve výrazech. Hodnoty položky seznamu a metadata jsou nastaveny na rozbalené výrazy.
+  - Typy položek jsou definovány a upraveny v pořadí, ve kterém jsou zobrazeny. Hodnoty položek ve formuláři @ (ItemType) jsou rozbaleny. Transformace položek jsou také rozbaleny. Funkce vlastností a hodnoty již byly rozšířeny v rámci výrazů. Hodnoty v seznamu položek a metadatech jsou nastaveny na rozbalené výrazy.
 
-- Během fáze spuštění sestavení:
+- Během fáze provádění sestavení:
 
-  - Vlastnosti a položky, které jsou definovány v rámci cíle jsou vyhodnocovány společně v pořadí, v jakém jsou uvedeny. Vlastnosti funkcí se spustí a hodnoty vlastností jsou rozbaleny v rámci výrazů. Hodnoty položek a transformace položky jsou také rozšířit. Hodnoty vlastností, hodnoty položek typu a hodnoty metadat jsou nastaveny na rozbalené výrazy.
+  - Vlastnosti a položky, které jsou definovány v rámci cílů, jsou vyhodnocovány v pořadí, ve kterém jsou zobrazeny. Funkce vlastností jsou spouštěny a hodnoty vlastností jsou v rámci výrazů rozbaleny. Také se rozbalí hodnoty položek a transformace položek. Hodnoty vlastností, hodnoty typu položky a hodnoty metadat jsou nastaveny na rozbalené výrazy.
 
-### <a name="subtle-effects-of-the-evaluation-order"></a>Malý vliv pořadí vyhodnocování
-Vyhodnocení vlastnosti v fáze vyhodnocení sestavení předchází vyhodnocení položky. Vlastnosti však může mít hodnoty, které se zobrazují závisí na hodnoty položek. Vezměte v úvahu následující skript.
+### <a name="subtle-effects-of-the-evaluation-order"></a>Malé efekty pořadí vyhodnocování
+Ve fázi vyhodnocení sestavení předchází vyhodnocení vlastnosti před vyhodnocením položky. Vlastnosti však mohou mít hodnoty, které jsou závislé na hodnotách položek. Vezměte v úvahu následující skript.
 
 ```xml
 <ItemGroup>
@@ -120,19 +120,19 @@ Vyhodnocení vlastnosti v fáze vyhodnocení sestavení předchází vyhodnocen�
 </Target>
 ```
 
-Provádění úlohy zpráva se zobrazí tato zpráva:
+Spuštění úlohy zprávy zobrazí tuto zprávu:
 
 ```
 KeyFileVersion: 1.0.0.3
 ```
 
-Důvodem je, že hodnota `KeyFileVersion` je ve skutečnosti řetězec "\@(KeyFile -> % (verze))". Položka a transformace položky nebyly rozšířeny při prvním byla definována vlastnost, proto `KeyFileVersion` vlastnost byla přiřazena hodnota nerozbalený řetězce.
+Důvodem je skutečnost, že hodnota `KeyFileVersion` je řetězec "\@(KeyFile->"% (verze) ")". Transformace položek a položek nebyly při prvním definování vlastnosti rozbaleny, takže vlastnost `KeyFileVersion` byla přiřazena k hodnotě nerozbaleného řetězce.
 
-Během fáze spuštění sestavení po zpracování zprávy úloh, nástroj MSBuild rozšíří řetězec "\@(KeyFile -> % (verze))" na "1.0.0.3".
+Během fáze provádění sestavení při zpracovávání úlohy nástroj MSBuild rozbalí řetězec "\@(KeyFile-> '% (verze) ')", aby vydával "1.0.0.3".
 
-Všimněte si, že tato zpráva objevuje i v případě, že skupiny vlastností a položek byly vráceny zpět v pořadí.
+Všimněte si, že stejná zpráva by se zobrazila i v případě, že skupiny vlastností a položek byly vráceny v daném pořadí.
 
-Druhý příklad zvažte, co se může stát, když vlastnosti a položky skupiny se nacházejí v rámci cíle:
+V druhém příkladu zvažte, co se může stát, když se skupiny vlastností a položek nacházejí v rámci cílů:
 
 ```xml
 <Target Name="AfterBuild">
@@ -148,15 +148,15 @@ Druhý příklad zvažte, co se může stát, když vlastnosti a položky skupin
 </Target>
 ```
 
-Úloha zprávy zobrazí tato zpráva:
+Tato zpráva se zobrazí v úloze zprávy:
 
 ```
 KeyFileVersion:
 ```
 
-Důvodem je, že během fáze spuštění sestavení, jsou vyhodnocovány vlastnosti a položky skupiny definované v rámci cíle shora dolů ve stejnou dobu. Když `KeyFileVersion` je definován, `KeyFile` neznámý. Proto transformace položky rozšíří na prázdný řetězec.
+Důvodem je, že během fáze provádění sestavení, vlastností a skupin položek definovaných v rámci cílů jsou vyhodnocovány shora dolů ve stejnou dobu. Je-li definována `KeyFileVersion`, `KeyFile` je neznámá. Proto se transformace položky rozbalí do prázdného řetězce.
 
-V takovém případě obráceným pořadím porovnávaných skupiny vlastností a položek obnoví původní zprávy:
+V tomto případě převrácení pořadí vlastností a skupin položek obnoví původní zprávu:
 
 ```xml
 <Target Name="AfterBuild">
@@ -172,11 +172,11 @@ V takovém případě obráceným pořadím porovnávaných skupiny vlastností 
 </Target>
 ```
 
-Hodnota `KeyFileVersion` je nastavena na "1.0.0.3" a nikoli k "\@(KeyFile -> % (verze))". Úloha zprávy zobrazí tato zpráva:
+Hodnota `KeyFileVersion` je nastavená na "1.0.0.3", a ne na "\@(KeyFile->% (verze)"). Tato zpráva se zobrazí v úloze zprávy:
 
 ```
 KeyFileVersion: 1.0.0.3
 ```
 
 ## <a name="see-also"></a>Viz také:
-- [Rozšířené koncepty](../msbuild/msbuild-advanced-concepts.md)
+- [Pokročilé koncepty](../msbuild/msbuild-advanced-concepts.md)

@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.CodeLens
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 10a325c75179ed6917e1772bb9e17f2237e4ee17
-ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
+ms.openlocfilehash: 9859366f6e4b9a0d1c219adc2080e6415b1e44a7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74538959"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588652"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>Nalezení změn kódu a další historie pomocí CodeLensu
 
@@ -71,7 +71,7 @@ Chcete-li zobrazit vztahy mezi kódem a jeho odkazy, [vytvořte mapu kódu](../m
 
 Podívejte se na historii kódu a zjistěte, co se stalo s vaším kódem. Nebo můžete zkontrolovat změny před jejich sloučením do kódu, abyste lépe pochopili, jakým způsobem mohou změny v jiných větvích ovlivnit váš kód.
 
-Potřebuješ:
+Budete potřebovat:
 
 - Visual Studio Enterprise nebo Professional Edition
 
@@ -120,7 +120,7 @@ V indikátorech na úrovni souborů v dolní části okna Najděte změny pro ce
 
 Chcete-li získat další informace o změně, klikněte pravým tlačítkem myši na danou položku. V závislosti na tom, zda používáte TFVC nebo Git, existují možnosti pro porovnání verzí souboru, zobrazení podrobností a sledování sady změn, získání vybrané verze souboru a odeslání e-mailu autorovi této změny. Některé z těchto podrobností se zobrazí v **Team Explorer**.
 
-Můžete také zjistit, kdo změnil kód v průběhu času. To vám může pomáhat najít vzorce ve změnách týmu a posoudit jejich dopad.
+Můžete také zjistit, kdo změnil kód v průběhu času. To může pomoct najít vzory ve změnách vašeho týmu a posoudit jejich dopad.
 
 ![CodeLens: Zobrazení historie změn kódu jako grafu](../ide/media/codelens.png)
 
@@ -203,7 +203,7 @@ Vyhledejte propojené chyby tak, že vyberete indikátor **chyb** nebo stisknete
 
 ## <a name="contact-the-owner-of-an-item"></a>Obraťte se na vlastníka položky.
 
-Vyhledejte autora položky výběrem indikátoru **autorů** nebo stisknutím klávesy **ALT**+**5**.
+Najděte autora položky výběrem indikátoru **autorů** nebo stisknutím klávesy **Alt**+**5**.
 
 ![Obraťte se na vlastníka položky.](../ide/media/codelens-contact-item-owner.png)
 
@@ -246,7 +246,7 @@ Chcete-li použít klávesnici k výběru indikátorů, stiskněte a podržte kl
 > [!NOTE]
 > Chcete **-li vybrat indikátor kontrol** , stiskněte klávesu **ALT** a použijte klávesu šipka vlevo a vpravo k navigaci.
 
-## <a name="q--a"></a>Otázka & A
+## <a name="q--a"></a>Dotazy a odpovědi
 
 ### <a name="q-how-do-i-turn-codelens-off-or-on-or-choose-which-indicators-to-see"></a>Otázka: Návody CodeLens vypnout nebo zapnout nebo vyberte indikátory, které chcete zobrazit?
 
@@ -348,7 +348,7 @@ Použití klávesnice:
 
 ### <a name="q-can-i-manage-how-codelens-processes-code-to-show-history-and-linked-items"></a>Otázka: mohu spravovat způsob, jakým CodeLens zpracovává kód pro zobrazení historie a propojených položek?
 
-**A:** Ano. Pokud je váš kód v TFS, použijte [příkaz CodeIndex –](../ide/codeindex-command.md) pomocí [příkazu TFS config](/azure/devops/server/command-line/tfsconfig-cmd).
+**Odpověď:** Ano. Pokud je váš kód v TFS, použijte [příkaz CodeIndex –](../ide/codeindex-command.md) pomocí [příkazu TFS config](/azure/devops/server/command-line/tfsconfig-cmd).
 
 ### <a name="q-my-codelens-test-indicators-no-longer-appear-in-my-file-when-i-first-open-my-solution-how-can-i-load-them"></a>Otázka: moje indikátory testu CodeLens se při prvním otevření mého řešení již neobjevují v souboru my. Jak je můžu načíst?
 

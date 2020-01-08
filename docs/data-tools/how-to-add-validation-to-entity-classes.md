@@ -6,17 +6,17 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 61107da9-7fa3-4dba-b101-ae46536f52c4
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 83c6addb7aa6cf0b54398db351bee5825bc2d6f2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3ccd83662700794e60572eed923d10452595d726
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648400"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586559"
 ---
 # <a name="how-to-add-validation-to-entity-classes"></a>Postupy: Přidání ověřování do tříd entit
 *Ověřování* tříd entit je proces potvrzení, že hodnoty zadané do datových objektů vyhovují omezením ve schématu objektu a také k pravidlům stanoveným pro aplikaci. Ověřování dat před odesláním aktualizací do podkladové databáze je dobrým zvykem, který snižuje chyby. Také snižuje potenciální počet výměn mezi aplikací a databází.
@@ -123,4 +123,4 @@ Kromě kontroly hodnot během změn můžete také ověřit data při pokusu o a
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Ověřování dat](../data-tools/validate-data-in-datasets.md)
-- [LINQ to SQL (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/index)
+- [Technologie LINQ to SQL (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/index)

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Devenv, /Project switch
 - projects [Visual Studio], cleaning
 ms.assetid: 8b07859c-3439-436d-9b9a-a8ee744eee30
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d9be8cd5107b109e084fcd75bc30ae0f32ab43a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a4b57a5bd51ff20de8da87798aa398db04bc1c7d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655746"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567772"
 ---
 # <a name="project-devenvexe"></a>/Project (devenv.exe)
 
@@ -39,7 +39,7 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
   Požadováno. Úplná cesta a název souboru řešení.
 
-- {`/Build` | `/Clean` | `/Deploy` | `/Rebuild`}
+- {`/Build`|`/Clean`|`/Deploy`|`/Rebuild`}
 
   Požadováno. [Vytvoří](build-devenv-exe.md), [vyčistí](clean-devenv-exe.md), [nasadí](deploy-devenv-exe.md)nebo [znovu sestaví](rebuild-devenv-exe.md) projekt.
 
@@ -61,7 +61,7 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
 ## <a name="remarks"></a>Poznámky
 
-- Je nutné použít část `devenv` příkazu `/Build`, `/Clean`, `/Rebuild` nebo `/Deploy`.
+- Je nutné použít část `devenv` příkazu `/Build`, `/Clean`, `/Rebuild`nebo `/Deploy`.
 
 - Uzavřete řetězce, které obsahují mezery, do dvojitých uvozovek.
 
@@ -69,7 +69,7 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
 ## <a name="example"></a>Příklad
 
-Tento příklad sestaví projekt `CSharpWinApp` pomocí konfigurace sestavení projektu `Debug` v rámci `MySolution`.
+Tento příklad sestaví projekt `CSharpWinApp`pomocí konfigurace sestavení projektu `Debug` v rámci `MySolution`.
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug

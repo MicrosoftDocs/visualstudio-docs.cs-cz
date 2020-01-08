@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - Settings page in Project Designer
 - Project Designer, Settings page
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11f6f787d3799813aa526395a7137fd68e5c573d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4f4ca1def334241999445e3f11cf142aa426d962
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645268"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566771"
 ---
 # <a name="settings-page-project-designer"></a>Stránka nastavení, Návrhář projektu
 
 Stránku **Nastavení** Návrháře projektu použijte k určení nastavení aplikace projektu. Nastavení aplikace umožňují dynamicky ukládat a načítat nastavení vlastností a další informace pro aplikaci. Také umožňují udržovat vlastní aplikace a uživatelské předvolby v klientském počítači. Další informace najdete v tématu [Správa nastavení aplikace](../managing-application-settings-dotnet.md).
 
-Pro přístup na stránku **Nastavení** vyberte uzel projektu v **Průzkumník řešení**a pak vyberte**vlastnosti** **projektu**  > . Když se zobrazí Návrhář projektu, vyberte kartu **Nastavení** .
+Pro přístup na stránku **Nastavení** vyberte uzel projektu v **Průzkumník řešení**a pak vyberte **vlastnosti** **projektu** > . Když se zobrazí Návrhář projektu, vyberte kartu **Nastavení** .
 
 ## <a name="header-bar"></a>Záhlaví
 
@@ -69,7 +69,7 @@ Pro konfiguraci nastavení aplikace se používá **Mřížka nastavení** . Tat
 
 Do tohoto pole zadejte název nastavení aplikace.
 
-**Textový**
+**Typ**
 
 Pomocí rozevíracího seznamu vyberte typ nastavení. Nejčastěji používané typy se zobrazí v rozevíracím seznamu, například **řetězec**, **(připojovací řetězec)** a **System. Drawing. Font**. Můžete zvolit jiný typ výběrem možnosti **Procházet** na konci seznamu a následným výběrem typu v dialogovém okně **Vybrat typ** . Po zvolení typu se tento typ přidá do společných typů v rozevíracím seznamu (pouze pro aktuální řešení).
 

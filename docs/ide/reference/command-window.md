@@ -1,5 +1,5 @@
 ---
-title: Příkazové okno
+title: Okno Příkaz
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Command mode in Command window
 - IDE Command window
 ms.assetid: 48711628-1909-4713-a73e-d7b714c77f8a
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75792518eadc5449f070b90f3f1e8c2da38bf2b3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: cb855cbed67bffc5ff2fb63b1785c577dd9fea25
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748787"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75570346"
 ---
-# <a name="command-window"></a>Příkazové okno
+# <a name="command-window"></a>Okno Příkaz
 **Příkazové** okno se používá ke spouštění příkazů nebo aliasů přímo v integrovaném vývojovém prostředí (IDE) [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Příkazy nabídky a příkazy, které se nezobrazí v žádné nabídce, můžete spustit. Chcete-li zobrazit **příkazové** okno, zvolte možnost **Další okna** v nabídce **zobrazení** a vyberte **příkazová okna**.
 
 ## <a name="displaying-the-values-of-variables"></a>Zobrazení hodnot proměnných
@@ -78,7 +78,7 @@ Některé příkazy [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]
 Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar
 ```
 
-V tomto příkladu
+V tomhle příkladu je
 
 - `Edit.ReplaceInFiles` je příkaz
 
@@ -98,16 +98,16 @@ Skoro každý přepínač podporovaný příkazem má dvě formy: krátký tvar 
 Pokud jsou zkrácené přepínače kombinovány do skupiny a zadány hodnoty, tato hodnota se vztahuje na každý přepínač. Například `/pgm:123` bude rovno `/p:123 /g:123 /m:123`. Pokud některý z přepínačů ve skupině nepřijímá hodnotu, dojde k chybě.
 
 ## <a name="escape-characters"></a>Řídicí znaky
-Znak stříšky (^) na příkazovém řádku znamená, že znak bezprostředně za ním je interpretován doslova, nikoli jako řídicí znak. To lze použít k vložení přímých uvozovek ("), mezer, počátečních lomítek, znakových přepínačů nebo jiných literálových znaků v parametru nebo hodnotě přepínače s výjimkou názvů přepínačů. Například
+Znak stříšky (^) na příkazovém řádku znamená, že znak bezprostředně za ním je interpretován doslova, nikoli jako řídicí znak. To slouží k vložení uvozovek ("), mezer, úvodních lomítek, střížek nebo jakýmikoli literálními znaky parametru nebo hodnotě switch s výjimkou názvů switchů. Například
 
 ```cmd
 >Edit.Find ^^t /regex
 ```
 
-Blikající kurzor funguje stejně, bez ohledu na to, zda se nachází uvnitř nebo vně uvozovek. Pokud je poslední znak na řádku blikající kurzor, ignoruje se. Zde uvedený příklad ukazuje, jak vyhledat vzor "^ t".
+Stříška funguje stejně, ať už se jedná o vnitřní nebo vnější uvozovky. Pokud poslední znak na řádku stříška, je ignorován. Zde uvedený příklad ukazuje, jak vyhledat vzor "^ t".
 
 ## <a name="use-quotes-for-path-names-with-spaces"></a>Použití uvozovek pro názvy cest s mezerami
-Pokud například chcete otevřít soubor, který obsahuje cestu obsahující mezery, je nutné umístit dvojité uvozovky kolem cesty nebo segmentu cesty, který obsahuje mezery: **C: \\ "Program Files"** nebo **"C:\Program Files"** .
+Pokud například chcete otevřít soubor, který obsahuje cestu obsahující mezery, je nutné umístit dvojité uvozovky kolem cesty nebo segmentu cesty, který obsahuje mezery: **C:\\"Program Files"** nebo **"C:\Program Files"** .
 
 ## <a name="see-also"></a>Viz také:
 

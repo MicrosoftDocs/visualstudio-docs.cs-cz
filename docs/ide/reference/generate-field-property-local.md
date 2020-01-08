@@ -1,66 +1,66 @@
 ---
-title: Generovat pole, vlastnost, místní proměnná
+title: Generovat pole, vlastnost, místní proměnné
 ms.date: 01/26/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 626138341e398e67ff41ea116729dd349a1bb044
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b554aa5586150942c0fc7d7aeada9356a67029ca
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660027"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595602"
 ---
-# <a name="generate-a-field-property-or-local-variable-in-visual-studio"></a>Generování pole, vlastnosti nebo místní proměnné v aplikaci Visual Studio
+# <a name="generate-a-field-property-or-local-variable-in-visual-studio"></a>Generovat pole, vlastnost nebo místní proměnné v sadě Visual Studio
 
-Tato generace kódu platí pro:
+Tato generace kód platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co:** Umožňuje hned vygenerovat kód pro dříve nedeklarované pole, vlastnost nebo místní.
+**Co:** umožňuje okamžitě generování kódu pro dříve nedeklarovaný pole, vlastnost nebo místní.
 
-**Když:** Při psaní můžete zavést nové pole, vlastnost nebo místní, a to tak, aby je bylo možné správně deklarovat automaticky.
+**Kdy:** představují nové pole, vlastnosti nebo místní při psaní a chcete správně, automaticky deklarovat.
 
-**Proč:** Je možné deklarovat pole, vlastnost nebo místní před použitím, ale tato funkce vygeneruje deklaraci a typ automaticky.
+**Důvod, proč:** můžete deklarovat pole, vlastnost nebo místní než ho začnete využívat, ale tato funkce bude generovat deklarace a zadejte automaticky.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor na řádek, kde je červená vlnovka. Červená vlnovka indikuje pole, místní nebo vlastnost, která ještě neexistuje.
+1. Umístěte kurzor na řádek níž se nachází červená vlnovka. Červená vlnovka určuje pole, místní nebo vlastnost, která ještě neexistuje.
 
    - C#:
 
-       ![Zvýrazněný kódC#](media/field-highlight-cs.png)
+       ![Zvýrazněný kód jazyka C#](media/field-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Zvýrazněný kód VB](media/field-highlight-vb.png)
+       ![Zvýrazněný kód jazyka Visual Basic](media/field-highlight-vb.png)
 
 2. Dále proveďte jednu z následujících akcí:
 
-   - **Kombinace**
-      - Stiskněte klávesu **Ctrl** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
-   - **Stisknut**
-      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
-      - Najeďte myší na červenou vlnovkou a klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
-      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s červenou vlnovkou
+   - **Klávesnice**
+      - Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
+   - **Myši**
+      - Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky.
+      - Červená vlnovka ukazatel myši a klikněte ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
+      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí u levého okraje, pokud textový kurzor na řádek s červená vlnovka.
 
-      ![Generovat pole/vlastnost/místní náhled](media/field-preview-cs.png)
+      ![Generování pole/vlastnosti/místní funkce ve verzi preview](media/field-preview-cs.png)
 
-3. V rozevírací nabídce vyberte jednu z možností generování.
+3. Vyberte jednu z generování možností z rozevírací nabídky.
 
    > [!TIP]
-   > Pomocí odkazu **Náhled změn** v dolní části okna Preview [zobrazíte všechny změny](../../ide/preview-changes.md) , které budou provedeny před provedením výběru.
+   > Použití **náhled změn** odkaz v dolní části okna náhledu [zobrazíte všechny změny](../../ide/preview-changes.md) , který bude proveden před zvolení požadované možnosti.
 
-   Vytvoří se pole, vlastnost nebo místní typ s typem odvozeným z jeho využití.
+   Pole, vlastnost nebo místní se vytvoří s typem odvodit z jeho využití.
 
    - C#:
 
-       ![Generovat výsledek metodyC#](media/field-result-cs.png)
+       ![Generovat výsledek metody jazyka C#](media/field-result-cs.png)
 
    - Visual Basic:
 

@@ -1,26 +1,26 @@
 ### YamlMime:Landing
 title: Kurzy pro Visual Studio | JavaScript a TypeScript
-summary: Vytváření aplikací pro JavaScript a TypeScript pomocí sady Visual Studio
+summary: Vytváření aplikací v jazycích JavaScript a TypeScript pomocí sady Visual Studio
 metadata:
-  title: JavaScript a TypeScript v aplikaci Visual Studio
-  description: Naučte se používat Visual Studio k vytváření aplikací pro JavaScript a TypeScript.
+  title: JavaScript a TypeScript v sadě Visual Studio
+  description: Naučte se vytvářet aplikace v jazycích JavaScript a TypeScript pomocí sady Visual Studio.
   ms.topic: landing-page
   author: mikejo5000
   ms.author: mikejo
   manager: jillfra
   ms.date: 10/15/2019
-  ms.openlocfilehash: 1bdf2530d8e6513f57b515680410b9111cec87c6
-  ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
-  ms.translationtype: MT
+  ms.openlocfilehash: 9f81043622a48bbda93e52216a3ce2a6cd9a01b2
+  ms.sourcegitcommit: 0d8488329263cc0743a89d43f6de863028e982ff
+  ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 10/17/2019
-  ms.locfileid: "72517113"
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75678945"
 landingContent:
 - title: Začínáme
   linkLists:
   - linkListType: overview
     links:
-    - text: JavaScript a TypeScript v aplikaci Visual Studio
+    - text: JavaScript a TypeScript v sadě Visual Studio
       url: javascript-in-vs-2019.md
   - linkListType: how-to-guide
     links:
@@ -28,18 +28,20 @@ landingContent:
       url: ../install/install-visual-studio.md
   - linkListType: get-started
     links:
-    - text: Spustit prohlídku s asistencí
+    - text: Spuštění průvodce
       url: quickstart-ide-orientation-js.md
 - title: Vytváření aplikací pro JavaScript a TypeScript
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Vytvoření webové aplikace s využitím Node. js a Express
+    - text: Vytvoření webové aplikace přes Node.js a Express
       url: tutorial-nodejs.md
-    - text: Vytvoření webové aplikace s využitím Node. js a reakce
+    - text: Vytvoření webové aplikace přes Node.js a React
       url: tutorial-nodejs-with-react-and-jsx.md
-    - text: Vytvoření webové aplikace s využitím Node. js a Vue. js
+    - text: Vytvoření webové aplikace přes Node.js a Vue.js
       url: quickstart-vuejs-with-nodejs.md
+    - text: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu
+      url: tutorial-aspnet-with-typescript.md
 - title: Poznejte Visual Studio
   linkLists:
   - linkListType: how-to-guide
@@ -54,5 +56,5 @@ landingContent:
       url: debug-nodejs.md
     - text: Vývoj kódu bez projektů nebo řešení
       url: develop-javascript-code-without-solutions-projects.md
-    - text: Zápis a spouštění testů jednotek
+    - text: Zápis a spouštění testování částí
       url: unit-testing-javascript-with-visual-studio.md

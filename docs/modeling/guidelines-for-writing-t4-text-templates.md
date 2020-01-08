@@ -2,17 +2,17 @@
 title: Pokyny pro tvorbu textových šablon T4
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a0b1a8c70a0e7ec95e0545ecf3caf932f582b3c5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 24c8afd5e34d4957dac3d9f4d5b0e4409ad20895
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667280"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596538"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>Pokyny pro tvorbu textových šablon T4
 
@@ -115,7 +115,7 @@ V **MyReportText-Methods.cs**:
 
 Povolení pro vlastní kód: poskytnutí rozšiřovacích bodů.
 
-Zvažte generování virtuálních metod v \< # + třídy funkcí Blocks # >. Tato možnost umožňuje použít jedinou šablonu v mnoha kontextech bez úprav. Místo změny šablony můžete vytvořit odvozenou třídu, která poskytuje minimální další logiku. Odvozená třída může být buď pravidelný kód, nebo může být šablonou run-time.
+Zvažte generování virtuálních metod v \<# + třídy funkcí Blocks # >. Tato možnost umožňuje použít jedinou šablonu v mnoha kontextech bez úprav. Místo změny šablony můžete vytvořit odvozenou třídu, která poskytuje minimální další logiku. Odvozená třída může být buď pravidelný kód, nebo může být šablonou run-time.
 
 Například v MyStandardRunTimeTemplate.tt:
 
@@ -139,7 +139,7 @@ class FabrikamTemplate : MyStandardRunTimeTemplate
 
 Oddělení shromažďování dat od generování textu.
 
-Snažte se vyhnout smíchání výpočtů a textových bloků. V každé textové šabloně použijte první \< # Code Block # > k nastavení proměnných a provádění složitých výpočtů. Od prvního bloku textu až po konec šablony nebo první \< # + třídy bloku funkce # >, vyhněte se dlouhým výrazům a vyhněte se cyklům a podmíněným výjimkám, pokud neobsahují textové bloky. Tento postup usnadňuje čtení a údržbu šablony.
+Snažte se vyhnout smíchání výpočtů a textových bloků. V každé textové šabloně použijte první \<# Code Block # > k nastavení proměnných a provádění složitých výpočtů. Od prvního bloku textu až po konec šablony nebo první \<# + třídy bloku funkce # >, vyhněte se dlouhým výrazům a vyhněte se cyklům a podmíněným výjimkám, pokud neobsahují textové bloky. Tento postup usnadňuje čtení a údržbu šablony.
 
 Nepoužívejte `.tt` pro zahrnuté soubory.
 

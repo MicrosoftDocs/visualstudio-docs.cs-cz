@@ -2,75 +2,75 @@
 title: Implementace rozhraní
 ms.date: 01/26/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 45265c10677b8d3eadc27eb3b6e22c69bb5299be
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7d420bd0d42e89476696966f7eda94a19893fc23
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658920"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595550"
 ---
-# <a name="implement-an-interface-in-visual-studio"></a>Implementace rozhraní v aplikaci Visual Studio
+# <a name="implement-an-interface-in-visual-studio"></a>Implementovat rozhraní v sadě Visual Studio
 
-Tato generace kódu platí pro:
+Tato generace kód platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co:** Umožňuje hned vygenerovat kód potřebný k implementaci rozhraní.
+**Co:** umožňuje okamžitě generovat kód potřebný k implementaci rozhraní.
 
-**Když:** Chcete dědit z rozhraní.
+**Kdy:** chcete dědit z rozhraní.
 
-**Proč:** Všechna rozhraní můžete ručně implementovat jednou, ale tato funkce vygeneruje všechny signatury metod automaticky.
+**Důvod, proč:** ručně může implementovat všechny rozhraní jeden po druhém, ale tato funkce automaticky vygeneruje všechny podpisy metod.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor na řádek, kde je červená vlnovka, která indikuje, že jste odkazovali na rozhraní, ale neimplementovali všechny požadované členy.
+1. Umístěte kurzor na řádek níž se nachází červená vlnovka, která určuje neodkazujete rozhraní, ale neimplementovali všechny požadované členy.
 
    - C#:
 
-       ![Zvýrazněný kódC#](media/interface-highlight-cs.png)
+       ![Zvýrazněný kód jazyka C#](media/interface-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Zvýrazněný kód VB](media/interface-highlight-vb.png)
+       ![Zvýrazněný kód jazyka Visual Basic](media/interface-highlight-vb.png)
 
 2. Dále proveďte jednu z následujících akcí:
 
-   - **Kombinace**
-      - Stiskněte klávesu **Ctrl** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
-   - **Stisknut**
-      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
-      - Najeďte myší na červenou vlnovkou a klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
-      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s červenou vlnovkou
+   - **Klávesnice**
+      - Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
+   - **Myši**
+      - Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky.
+      - Červená vlnovka ukazatel myši a klikněte ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
+      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí u levého okraje, pokud textový kurzor na řádek s červená vlnovka.
 
-3. V rozevírací nabídce vyberte **implementovat rozhraní** .
+3. Vyberte **implementovat rozhraní** z rozevírací nabídky.
 
-   ![Implementovat rozhraní Preview](media/interface-preview-cs.png)
+   ![Implementovat rozhraní ve verzi preview](media/interface-preview-cs.png)
 
    > [!TIP]
-   > - Pomocí odkazu **Náhled změn** v dolní části okna Preview [zobrazíte všechny změny](../../ide/preview-changes.md) , které budou provedeny před provedením výběru.
-   > - Použijte odkazy **dokumentu**, **projektu**a **řešení** v dolní části okna Preview k vytvoření správných podpisů metody napříč více třídami, které implementují rozhraní.
+   > - Použití **náhled změn** odkaz v dolní části okna náhledu [zobrazíte všechny změny](../../ide/preview-changes.md) , který bude proveden před zvolení požadované možnosti.
+   > - Použití **dokumentu**, **projektu**, a **řešení** odkazy v dolní části okna ve verzi preview vytvořit správnou metodu podpisy v rámci více tříd, které implementují rozhraní.
 
-   Signatury metody rozhraní jsou vytvořeny a jsou připraveny k implementaci.
+   Podpisy metod rozhraní je vytvořen a připraven k implementaci.
 
    - C#:
 
-       ![Implementovat výsledek rozhraníC#](media/interface-result-cs.png)
+       ![Implementovat rozhraní výsledek C#](media/interface-result-cs.png)
 
    - Visual Basic:
 
-       ![Implementovat výsledek rozhraní VB](media/interface-result-vb.png)
+       ![Implementovat rozhraní výsledek VB](media/interface-result-vb.png)
 
    > [!TIP]
-   > (C# jenom) Použijte možnost **implementovat rozhraní explicitně k předvedení** každé vygenerované metody s názvem rozhraní, abyste se vyhnuli kolizím názvů.
+   > (C# jenom) Použití **implementovat rozhraní explicitně** možnost používaly každý vygeneruje metodu s názvem rozhraní, aby se zabránilo kolize názvů.
    >
-   > ![Výsledek implementace explicitního rozhraní](media/interface-explicitresult-cs.png);
+   > ![Implementovat rozhraní explicitně způsobit.](media/interface-explicitresult-cs.png);
 
 ## <a name="see-also"></a>Viz také:
 

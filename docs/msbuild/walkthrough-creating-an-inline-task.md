@@ -6,17 +6,17 @@ helpviewer_keywords:
 - MSBuild, tutorial
 - MSBuild, tasks
 ms.assetid: 438194cb-668c-41a9-a7e2-c118d14c1ea7
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbeba8418b3364d4e3762643a78465158f80e6fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3856c658c4d3d2598b69cc9bf77f95c219b187b4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655450"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590043"
 ---
 # <a name="walkthrough-create-an-inline-task"></a>Návod: Vytvoření vložené úlohy
 Úlohy nástroje MSBuild jsou obvykle vytvořeny kompilací třídy, která implementuje rozhraní <xref:Microsoft.Build.Framework.ITask>. Počínaje verzí .NET Framework 4 můžete vytvořit úlohy vložené do souboru projektu. Pro hostování úlohy není nutné vytvářet samostatné sestavení. Další informace najdete v tématu [vložené úkoly](../msbuild/msbuild-inline-tasks.md).
@@ -46,7 +46,7 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
 
 1. V aplikaci Visual Studio v nabídce **soubor** klikněte na položku **Nový** a poté klikněte na možnost **projekt**.
 
-2. V dialogovém okně **Nový projekt** vyberte  **C# typ projektu a** pak vyberte šablonu **aplikace model Windows Forms** . Do pole **název** zadejte `InlineTasks`. Zadejte **umístění** pro řešení, například *D: \\* . Ujistěte se, že je vybraná možnost **vytvořit adresář pro řešení** , je zrušené **přidání do správy zdrojového kódu** a **název řešení** je **InlineTasks**.
+2. V dialogovém okně **Nový projekt** vyberte  **C# typ projektu a** pak vyberte šablonu **aplikace model Windows Forms** . Do pole **Název** zadejte `InlineTasks`. Zadejte **umístění** pro řešení, například *D:\\* . Ujistěte se, že je vybraná možnost **vytvořit adresář pro řešení** , je zrušené **přidání do správy zdrojového kódu** a **název řešení** je **InlineTasks**.
 
 3. Kliknutím na tlačítko **OK** vytvořte soubor projektu.
 
@@ -61,7 +61,7 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
 
 #### <a name="to-add-a-basic-hello-task"></a>Přidání základní úlohy Hello
 
-1. V kořenovém `Project` uzlu změňte atribut `DefaultTargets` na `TestBuild`. výsledný `Project` uzel by měl vypadat podobně jako v tomto příkladu:
+1. V uzlu root `Project` změňte atribut `DefaultTargets` na `TestBuild`. Výsledný uzel `Project` by měl vypadat podobně jako v tomto příkladu:
 
    ```xml
    <Project ToolsVersion="4.0" DefaultTargets="TestBuild" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -94,7 +94,7 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
 
 1. Klikněte na tlačítko **Start**, klikněte na **všechny programy**a vyhledejte složku **Visual Studio Tools** a klikněte na **příkazový řádek sady Visual Studio**.
 
-2. V **okně příkazového řádku**Najděte složku, která obsahuje soubor projektu, v tomto případě *D:\InlineTasks\InlineTasks \\* .
+2. V **okně příkazového řádku**Najděte složku, která obsahuje soubor projektu, v tomto případě *D:\InlineTasks\InlineTasks\\* .
 
 3. Zadejte **MSBuild** bez přepínačů příkazů a potom stiskněte klávesu **ENTER**. Ve výchozím nastavení vytvoří soubor *InlineTasks. csproj* a zpracuje výchozí cílový TestBuild, který vyvolá úlohu Hello.
 

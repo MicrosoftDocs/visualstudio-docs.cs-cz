@@ -1,9 +1,9 @@
 ---
-title: Refaktorujte pole na vlastnost
+title: Refaktorovat pole na vlastnost
 ms.date: 01/26/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 f1_keywords:
 - vs.csharp.refactoring.encapsulatefield
@@ -12,14 +12,14 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0e47a62fcea8306c22564e50adde436b4f35e549
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: db0bd17cd0bead3807f857b2198b8d4ea4c72ffb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654469"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75569709"
 ---
-# <a name="encapsulate-a-field-refactoring"></a>Zapouzdření refaktoringu pole
+# <a name="encapsulate-a-field-refactoring"></a>Zapouzdřit pole refaktoring
 
 Tento refaktoring platí pro:
 
@@ -27,19 +27,19 @@ Tento refaktoring platí pro:
 
 - Visual Basic
 
-**Co:** Umožňuje změnit pole na vlastnost a aktualizovat všechna použití tohoto pole na použití nově vytvořené vlastnosti.
+**Co:** umožňuje pole do vlastností a aktualizovat všechny použití tohoto pole použít vlastnost nově vytvořený.
 
-**Když:** Chcete přesunout pole do vlastnosti a aktualizovat všechny odkazy na toto pole.
+**Kdy:** chcete přesunout do vlastnosti pole a aktualizovat všechny odkazy na pole.
 
-**Proč:** Chcete udělit přístup k poli jiným třídám, ale nechcete, aby tyto třídy měly přímý přístup.  Po zabalení pole ve vlastnosti můžete napsat kód pro ověření přiřazené hodnoty, například.
+**Důvod, proč:** chcete udělit jiným třídy přístup k poli, ale nechcete, aby tyto třídy umožňuje mít přímý přístup.  Obalením pole ve vlastnosti můžete napsat kód pro ověření přiřazené hodnoty, třeba.
 
 ## <a name="how-to"></a>Postupy
 
-1. Zvýrazněte nebo umístěte textový kurzor do názvu pole, které chcete zapouzdřit:
+1. Zvýrazněte nebo umístěte kurzor text mezi název pole k zapouzdření:
 
    - C#:
 
-       ![Zvýrazněný kód –C#](media/encapsulate-highlight-cs.png)
+       ![Zvýrazněný kód:C#](media/encapsulate-highlight-cs.png)
 
    - Visual Basic:
 
@@ -47,30 +47,30 @@ Tento refaktoring platí pro:
 
 2. Dále proveďte jednu z následujících akcí:
 
-   - **Kombinace**
-      - Stiskněte klávesy **CTRL + R**a pak **kombinaci kláves CTRL + E**.  (Všimněte si, že se vaše klávesová zkratka může lišit v závislosti na vybraném profilu.)
-      - Stiskněte klávesu **Ctrl** + **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoring** a v okně náhledu vyberte položku **zapouzdřit pole** .
-   - **Stisknut**
-      - Vyberte možnost **upravit > refaktoring > zapouzdřit pole**.
-      - Klikněte pravým tlačítkem na kód, vyberte nabídku **rychlé akce a refaktoring** a v okně Náhled vyberte možnost **zapouzdření pole** .
+   - **Klávesnice**
+      - Stisknutím klávesy **Ctrl + R**, pak **Ctrl + E**.  (Všimněte si, že klávesová zkratka může být jiný platformě, na který profil vyberete.)
+      - Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídku a vyberte buď **transakci zapouzdřit pole** položky z automaticky otevíraného okna okno náhledu.
+   - **Myši**
+      - Vyberte **Upravit > Refaktorovat > pro zapouzdření polí**.
+      - Klikněte pravým tlačítkem na kód, vyberte **rychlé akce a Refaktoringy** nabídku a vyberte buď **transakci zapouzdřit pole** položky z automaticky otevíraného okna okno náhledu.
 
    Výběr | Popis
    --------- | -----------
-   **Zapouzdřit pole (a použít vlastnost)** | Zapouzdřuje pole s vlastností a aktualizuje všechna použití pole na použití vygenerované vlastnosti.
-   **Zapouzdřit pole (ale dál používat pole)** | Zapouzdřuje pole s vlastností, ale ponechá všechna použití pole bez dotyku.
+   **Zapouzdřit pole (a použít vlastnost)** | Zapouzdřuje pole s vlastností a aktualizuje všechny použití pole pro použití vygenerované vlastnosti
+   **Zapouzdřit pole (ale dál používat pole)** | Zapouzdřuje pole s vlastností, ale ponechá beze změny všech použití pole
 
-   Vlastnost je vytvořena a odkazy na pole jsou aktualizovány, pokud jsou vybrány.
+   Vlastnost je vytvořen a odkazy na pole jsou aktualizovány, pokud vybraná.
 
    > [!TIP]
-   > Pomocí odkazu **Náhled změn** v místním okně [zjistíte, co bude výsledek](../../ide/preview-changes.md) před potvrzením.
+   > Použití **náhled změn** odkaz v automaticky otevíraném okně [chcete zobrazit, co bude výsledkem](../../ide/preview-changes.md) před potvrzením do něj.
 
    - C#:
 
-      ![Výsledek zapouzdření vlastnosti –C#](media/encapsulate-result-cs.png)
+      ![Zapouzdřit vlastnosti result-C#](media/encapsulate-result-cs.png)
 
    - Visual Basic:
 
-      ![Výsledek zapouzdření vlastnosti – Visual Basic](media/encapsulate-result-vb.png)
+      ![Zapouzdřit vlastnosti result - jazyka Visual Basic](media/encapsulate-result-vb.png)
 
 ## <a name="see-also"></a>Viz také:
 

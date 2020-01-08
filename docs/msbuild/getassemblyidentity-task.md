@@ -1,5 +1,5 @@
 ---
-title: Getassemblyidentity – úloha | Dokumentace Microsoftu
+title: GetAssemblyIdentity – úloha | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,36 +13,36 @@ helpviewer_keywords:
 - MSBuild, GetAssemblyIdentity task
 - GetAssemblyIdentity task [MSBuild]
 ms.assetid: a977e072-37ad-4941-84a6-32a4483be55d
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e2d81701ae121b4666a10b6ce15fd8ae71e8920
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7aaa963da3f17265da6ebeaed4d30cfe75aa533c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979920"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593262"
 ---
 # <a name="getassemblyidentity-task"></a>GetAssemblyIdentity – úloha
-Načte identit sestavení ze zadaných souborů a vypíše informace o identitě.
+Načte z určených souborů identity sestavení a vypíše informace o identitě.
 
 ## <a name="task-parameters"></a>Parametry úlohy
-Následující tabulka popisuje parametry `GetAssemblyIdentity` úloh.
+Následující tabulka popisuje parametry úlohy `GetAssemblyIdentity`.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Assemblies`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje načtená sestavení identit.|
-|`AssemblyFiles`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje soubory, které chcete načíst identit z.|
+|`Assemblies`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Obsahuje načtené identity sestavení.|
+|`AssemblyFiles`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje soubory, ze kterých mají být načteny identity.|
 
 ## <a name="remarks"></a>Poznámky
-Výstupní položky `Assemblies` parametr obsahovat metadata položky s názvem `Version`, `PublicKeyToken`, a `Culture`.
+Výstup položek s parametrem `Assemblies` obsahuje položky metadat položky s názvem `Version`, `PublicKeyToken`a `Culture`.
 
-Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).
+Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
-Následující příklad načte identity soubory v zadané `MyAssemblies` položky a uloží je do `MyAssemblyIdentities` položky.
+V následujícím příkladu je načtena identita souborů zadaných v `MyAssemblies` položce a jejich výstupy do položky `MyAssemblyIdentities`.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -59,4 +59,4 @@ Následující příklad načte identity soubory v zadané `MyAssemblies` polož
 
 ## <a name="see-also"></a>Viz také:
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
