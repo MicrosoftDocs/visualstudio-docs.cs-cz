@@ -18,12 +18,12 @@ caps.latest.revision: 35
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f0ad4ea108cb0ec3b874c7f360be2e1f0e25ef45
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 937e28e923c26a72940b0181da16cf34199bb9aa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299419"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852160"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>Vytvoření vazby ovládacích prvků WPF k datové sadě
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -47,7 +47,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
 
-- Přístup ke spuštěné instanci SQL Server nebo SQL Server Express, ke které je připojena ukázková databáze AdventureWorksLT. Databázi AdventureWorksLT si můžete stáhnout z webu [CodePlex](https://go.microsoft.com/fwlink/?linkid=87843).
+- Přístup ke spuštěné instanci SQL Server nebo SQL Server Express, ke které je připojena ukázková databáze AdventureWorksLT. Databázi AdventureWorksLT si můžete stáhnout z webu [CodePlex](https://codeplex.com/SqlServerSamples).
 
   Předchozí znalosti následujících konceptů jsou také užitečné, ale nevyžadují se k dokončení tohoto postupu:
 
@@ -79,7 +79,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
 #### <a name="to-create-a-dataset"></a>Vytvoření datové sady
 
-1. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
+1. Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
 
      Otevře se okno **zdroje dat** .
 
@@ -101,7 +101,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
 7. Na stránce **Zvolte vaše databázové objekty** rozbalte **tabulky**a pak vyberte tabulku **Product (tabulky SalesLT)** .
 
-8. Klikněte na tlačítko **Dokončit**.
+8. Klikněte na **Dokončit**.
 
      Visual Studio přidá do projektu nový soubor AdventureWorksLTDataSet. xsd a přidá odpovídající položku **AdventureWorksLTDataSet** do okna **zdroje dat** . Soubor AdventureWorksLTDataSet. xsd definuje typovou datovou sadu s názvem `AdventureWorksLTDataSet` a TableAdapter s názvem `ProductTableAdapter`. Později v tomto návodu použijete `ProductTableAdapter` k vyplnění datové sady daty a k uložení změn zpět do databáze.
 
@@ -126,7 +126,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
     WHERE ThumbnailPhotoFileName <> 'no_image_available_small.gif'
     ```
 
-4. Klikněte na tlačítko **Dokončit**.
+4. Klikněte na **Dokončit**.
 
 ## <a name="define-the-user-interface"></a>Definování uživatelského rozhraní
  Do okna přidejte několik tlačítek úpravou XAML v Návrháři WPF. Později v tomto návodu přidáte kód, který umožňuje uživatelům procházet a ukládat změny záznamů produktů pomocí těchto tlačítek.
@@ -235,7 +235,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
 1. Stiskněte klávesu **F5**.
 
-     Aplikace se vytvoří a spustí. Ověřte následující:
+     Aplikace se vytvoří a spustí. Zkontrolujte:
 
     - Textová pole zobrazují data z prvního záznamu produktu, který obsahuje fotografii. V tomto produktu je produkt s ID 713 a názvem **dlouhé logo Jersey, S**.
 

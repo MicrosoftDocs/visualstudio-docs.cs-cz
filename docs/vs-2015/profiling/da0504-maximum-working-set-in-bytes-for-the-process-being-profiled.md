@@ -13,12 +13,12 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 29cc7317cab2c4984a4cb0485475ff0960315cdc
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2c57e006196611b49909f3ad6bfc866a028a8621
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291500"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850874"
 ---
 # <a name="da0504-maximum-working-set-in-bytes-for-the-process-being-profiled"></a>DA0504: Maximum Pracovní sady v bajtech pro profilovaný Proces
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ ID pravidla | DA0504 |
   
  Nahlášená hodnota zahrnuje rezidentní stránky ze sdílených segmentů paměti, na které se odkazuje na daný proces. Sdílené knihovny DLL, které odkazují na procesy, jsou zahrnuté do sdílených segmentů paměti, které se počítají. Hodnota pracovní sady procesu může být vyšší než velikost virtuální paměti, kterou byl proces přidělen z důvodu sdílených segmentů paměti.  
   
- Velikost pracovní sady procesu odráží, kolik virtuální paměti proces aktivně používá. To je ovlivněno množstvím fyzické paměti (nebo paměti RAM), která je k dispozici pro spuštění aplikace a kolizí pro danou fyzickou paměť z jiných spuštěných procesů. Další informace o pracovních sadách procesů najdete v tématu [Work set](https://go.microsoft.com/fwlink/?LinkId=177830) v dokumentaci ke službě Windows Memory Management na webu MSDN.  
+ Velikost pracovní sady procesu odráží, kolik virtuální paměti proces aktivně používá. To je ovlivněno množstvím fyzické paměti (nebo paměti RAM), která je k dispozici pro spuštění aplikace a kolizí pro danou fyzickou paměť z jiných spuštěných procesů. Další informace o pracovních sadách procesů najdete v tématu [Work set](https://msdn.microsoft.com/library/cc441804.aspx) v dokumentaci ke službě Windows Memory Management na webu MSDN.  
   
 ## <a name="how-to-use-rule-data"></a>Jak používat data pravidla  
  Toto pravidlo shromáždí tato data měření z nástroje pro sledování výkonu systému Windows a sestavuje je pouze pro informace. Slouží k porovnání výkonu různých verzí nebo sestavení programu nebo pro pochopení výkonu aplikace v různých testovacích scénářích.  

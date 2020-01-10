@@ -9,12 +9,12 @@ caps.latest.revision: 8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: aeeac82b27b4b5bb71ed05ba658bf9ee048bd85d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 72c5968fccb55a265639ff05c600bd5f97a9f90a
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74292152"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852107"
 ---
 # <a name="adding-extensions-to-dsl-definitions"></a>Přidávání rozšíření do definicí DSL
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +35,7 @@ Rozšíření definice DSL umožňuje vytvořit balíček rozšíření pro jazy
 
   Uživatel rozšířené DSL může vytvořit a uložit model, který obsahuje instance dalších funkcí, a číst ho jiní uživatelé, kteří si nainstalovali odpovídající rozšíření. Uživatelé, kteří rozšíření nenainstalovali, nemohou používat další funkce, ale mohou aktualizovat a uložit model bez ztráty dalších funkcí.
 
-  Vzorový kód a další informace o této funkci najdete na webu [sady Visual Studio pro vizualizaci a modelování sady SDK](https://go.microsoft.com/fwlink/?LinkID=186128) .
+  Vzorový kód a další informace o této funkci najdete na webu [sady Visual Studio pro vizualizaci a modelování sady SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) .
 
 ## <a name="see-also"></a>Viz také
- [Sada SDK pro vizualizaci a modelování sady Visual Studio](https://go.microsoft.com/fwlink/?LinkID=186128)
+ [Sada SDK pro vizualizaci a modelování sady Visual Studio](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)

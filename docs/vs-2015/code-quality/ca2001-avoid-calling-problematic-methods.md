@@ -15,12 +15,12 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 287f83d23db75206183fb1ee1461e461a05a6182
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 6a2ed905f8291bf503217239cc287c50b970572f
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298489"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851729"
 ---
 # <a name="ca2001-avoid-calling-problematic-methods"></a>CA2001: Vyhněte se volání problematických metod
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "74298489"
 |Kategorie|Microsoft.Reliability|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
  Člen volá potencionálně nebezpečnou nebo problematickou metodu.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -42,11 +42,11 @@ ms.locfileid: "74298489"
 
 |Metoda|Popis|
 |------------|-----------------|
-|<xref:System.GC.Collect%2A?displayProperty=fullName>|Volání GC. Shromažďování může významně ovlivnit výkon aplikace a je zřídka nezbytné. Další informace najdete na blogu [Mariani Performance pikantní](https://go.microsoft.com/fwlink/?LinkId=169256) na webu MSDN.|
+|<xref:System.GC.Collect%2A?displayProperty=fullName>|Volání GC. Shromažďování může významně ovlivnit výkon aplikace a je zřídka nezbytné. Další informace najdete na blogu [Mariani Performance pikantní](https://blogs.msdn.com/ricom/archive/2004/11/29/271829.aspx) na webu MSDN.|
 |<xref:System.Threading.Thread.Resume%2A?displayProperty=fullName><br /><br /> <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>|Vlákno. Suspend a Thread. Resume bylo Zastaralé z důvodu jejich nepředvídatelného chování.  Použijte jiné třídy v oboru názvů <xref:System.Threading>, například <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex>a <xref:System.Threading.Semaphore> k synchronizaci vláken nebo ochraně prostředků.|
 |<xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A?displayProperty=fullName>|Metoda DangerousGetHandle představuje bezpečnostní riziko, protože může vrátit neplatný popisovač. Další informace o tom, jak bezpečně používat metodu DangerousGetHandle, najdete v <xref:System.Runtime.InteropServices.SafeHandle.DangerousAddRef%2A> a <xref:System.Runtime.InteropServices.SafeHandle.DangerousRelease%2A> metodách.|
-|<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName>|Tyto metody mohou načítat sestavení z neočekávaných umístění. Přečtěte si třeba informace o metodách, které načítají sestavení, na blogu Suzanne Cook – blogové příspěvky [LoadFile vs. LoadFrom](https://go.microsoft.com/fwlink/?LinkId=164450) a [Výběr kontextu vazby](https://go.microsoft.com/fwlink/?LinkId=164451) na webu MSDN.|
-|[CoSetProxyBlanket](https://go.microsoft.com/fwlink/?LinkID=169250) (Ole32)<br /><br /> [: CoInitializeSecurity](https://go.microsoft.com/fwlink/?LinkId=169255) (Ole32)|V době, kdy se uživatelský kód začne spouštět ve spravovaném procesu, je příliš pozdě spolehlivě volat CoSetProxyBlanket. Modul CLR (Common Language Runtime) provede inicializační akce, které mohou zabránit úspěšnému volání uživatelů.<br /><br /> Pokud je třeba volat CoSetProxyBlanket pro spravovanou aplikaci, doporučujeme spustit proces pomocí spustitelného souboru nativního kódu (C++), zavolat CoSetProxyBlanket v nativním kódu a pak spustit aplikaci spravovaného kódu v procesu. (Nezapomeňte zadat číslo verze modulu runtime.)|
+|<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName>|Tyto metody mohou načítat sestavení z neočekávaných umístění. Přečtěte si třeba informace o metodách, které načítají sestavení, na blogu Suzanne Cook – blogové příspěvky [LoadFile vs. LoadFrom](https://blogs.msdn.com/suzcook/archive/2003/09/19/loadfile-vs-loadfrom.aspx) a [Výběr kontextu vazby](https://blogs.msdn.com/suzcook/archive/2003/05/29/57143.aspx) na webu MSDN.|
+|[CoSetProxyBlanket](https://msdn.microsoft.com/library/ms692692.aspx) (Ole32)<br /><br /> [CoInitializeSecurity](https://msdn.microsoft.com/library/ms693736.aspx) (Ole32)|V době, kdy se uživatelský kód začne spouštět ve spravovaném procesu, je příliš pozdě spolehlivě volat CoSetProxyBlanket. Modul CLR (Common Language Runtime) provede inicializační akce, které mohou zabránit úspěšnému volání uživatelů.<br /><br /> Pokud je třeba volat CoSetProxyBlanket pro spravovanou aplikaci, doporučujeme spustit proces pomocí spustitelného souboru nativního kódu (C++), zavolat CoSetProxyBlanket v nativním kódu a pak spustit aplikaci spravovaného kódu v procesu. (Nezapomeňte zadat číslo verze modulu runtime.)|
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, odeberte nebo nahraďte volání nebezpečné nebo problematické metody.

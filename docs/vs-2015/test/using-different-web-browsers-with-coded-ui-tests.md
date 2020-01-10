@@ -8,12 +8,12 @@ ms.assetid: a859595f-6517-43f2-9d61-c706cb55a388
 caps.latest.revision: 25
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d9c86125d934c5165e3e8111fdd06631844ad1a6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 8a5034a13771c0ea1f7b6dcd2e073ad02e838e07
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297964"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851218"
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>Používání jiných webových prohlížečů v programových testech uživatelského rozhraní
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -113,7 +113,7 @@ Programové testy UI mohou automatizovat testování webových aplikací tím, �
 
 - ![Tip](../test/media/tip.png "Tip") Výstup můžete nakonfigurovat tak, aby zahrnoval snímky obrazovky v protokolech kódovaného uživatelského rozhraní. Chcete-li tak učinit, musíte provést některá nastavení konfigurace v souboru QTAgent32.exe.config. Ve výchozím nastavení je tento soubor nainstalován v následujícím umístění:
 
-   **C:\Program Files (x86) \Microsoft Visual Studio 11.0 \ Common7\IDE**
+   **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**
 
    Nastavte následující hodnoty:
 
@@ -139,17 +139,17 @@ Programové testy UI mohou automatizovat testování webových aplikací tím, �
  [Řešení potíží se selháním testů pro různé prohlížeče](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!182&authkey=!AEpS48i295B49FI)
 
 ### <a name="guidance"></a>Doprovodné materiály
- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](https://go.microsoft.com/fwlink/?LinkID=255188)
+ [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](https://msdn.microsoft.com/library/jj159340.aspx)
 
- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5: automatizace systémových testů](https://go.microsoft.com/fwlink/?LinkID=255196)
+ [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5: automatizace systémových testů](https://msdn.microsoft.com/library/jj159335.aspx)
 
 ### <a name="faq"></a>Nejčastější dotazy
- [Nejčastější dotazy k programovým testům UI – 1](https://go.microsoft.com/fwlink/?LinkID=230576)
+ [Nejčastější dotazy k programovým testům UI – 1](https://blogs.msdn.com/b/mathew_aniyan/archive/tags/faq/)
 
- [Nejčastější dotazy k programovým testům UI – 2](https://go.microsoft.com/fwlink/?LinkID=230578)
+ [Nejčastější dotazy k programovým testům UI – 2](https://social.msdn.microsoft.com/Forums/en-US/vsautotest/thread/3a74dd2c-cef8-4923-abbf-7a91f489e6c4)
 
 ### <a name="forum"></a>Fórum
- [Testování automatizace uživatelského rozhraní sady Visual Studio (včetně kódovaného uživatelského rozhraní)](https://go.microsoft.com/fwlink/?LinkID=224497)
+ [Testování automatizace uživatelského rozhraní sady Visual Studio (včetně kódovaného uživatelského rozhraní)](https://social.msdn.microsoft.com/Forums/en-US/vsautotest)
 
 ## <a name="see-also"></a>Viz také
  [Použití automatizace uživatelského rozhraní k otestování](../test/use-ui-automation-to-test-your-code.md) [Konfigurace podporovaných konfigurací a platforem pro programové testy uživatelského rozhraní a záznamy akcí při](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md) analýze programových testů uživatelského rozhraní [pomocí protokolů kódovaného testu uživatelského rozhraní](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)

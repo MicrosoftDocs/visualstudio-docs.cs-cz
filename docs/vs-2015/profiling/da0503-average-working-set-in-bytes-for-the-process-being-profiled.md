@@ -13,12 +13,12 @@ caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 898208530eb1ba71a5a1443fcb97ac1f1a1081e1
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 31d36a89473cd0c6a0b55e484fee2ce1d7045b15
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300058"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850899"
 ---
 # <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503: Průměr Pracovní sady v bajtech pro profilovaný Proces
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ ID pravidla | DA0503 |
   
  Velikost pracovní sady procesu odráží, kolik virtuální paměti proces aktivně používá. To je ovlivněno množstvím fyzické paměti (nebo paměti RAM), která je k dispozici pro spuštění aplikace a kolizí pro danou fyzickou paměť z jiných spuštěných procesů. Pokud je fyzická paměť omezená, je hodnota pracovní sady procesu apt tak, aby se významně lišila, protože operační systémy se snaží vyrovnávat využití paměti napříč aktivními procesy tím, že pravidelně vystřihuje poměrně neaktivní stránky ze procesních sad procesů.  
   
- Další informace o pracovních sadách procesů najdete v tématu [Work set](https://go.microsoft.com/fwlink/?LinkId=177830) v dokumentaci ke službě Windows Memory Management na webu MSDN.  
+ Další informace o pracovních sadách procesů najdete v tématu [Work set](https://msdn.microsoft.com/library/cc441804.aspx) v dokumentaci ke službě Windows Memory Management na webu MSDN.  
   
 ## <a name="how-to-use-rule-data"></a>Jak používat data pravidla  
  Použijte hodnotu pravidla pro porovnání výkonu různých verzí nebo sestavení programu nebo pro pochopení výkonu aplikace v rámci různých scénářů profilace.  

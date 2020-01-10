@@ -17,12 +17,12 @@ caps.latest.revision: 63
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cafc4e2a87a31603e1f8cef4174d8538be768428
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0954a38a2667331c537487a706d1d2d13a07f6c4
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296017"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850900"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>Scénář: Změna návrhu pomocí vizualizace a modelování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -182,9 +182,9 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
  Následující diagram činnosti popisuje postup, kdy zákazník vytvoří objednávku na webu večeře Now. V této verzi prvky komentářů identifikují role a řádky vytvářejí *plavecké dráhy*, které organizují kroky podle rolí:
 
- ![Diagram činnosti UML](../modeling/media/uml-dinnernowprocess.png "UML_DinnerNowProcess")
+ ![Diagram činností UML](../modeling/media/uml-dinnernowprocess.png "UML_DinnerNowProcess")
 
- **Diagram činnosti UML**
+ **Diagram činností UML**
 
  Následující diagram tříd popisuje entity, které se účastní procesu pořadí:
 
@@ -209,7 +209,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
  Následující diagram činnosti obsahuje nové prvky oranžová pro popis toku kroků v novém případu použití:
 
- ![Diagram činnosti UML](../modeling/media/uml-writereview.png "UML_WriteReview")
+ ![Diagram činností UML](../modeling/media/uml-writereview.png "UML_WriteReview")
 
  **Diagram činnosti UML**
 
@@ -270,7 +270,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
  Například následující diagram komponent zobrazuje novou komponentu, která je součástí komponenty webu večeře Now. Komponenta ReviewProcessing zpracovává funkce pro vytváření recenzí a zobrazují se zvýrazněné oranžová:
 
- ![Diagram komponent UML](../modeling/media/uml-internal.png "UML_Internal")
+ ![Diagram komponenty UML](../modeling/media/uml-internal.png "UML_Internal")
 
  **Diagram komponent UML**
 
@@ -291,7 +291,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
  ![Diagram vrstev integrovaného platebního systému](../modeling/media/layer-integrated-dnlucerne.png "Layer_Integrated_DNLucerne")
 
- **Diagram vrstev**
+ **Diagram vrstvy**
 
  Aby se zajistilo, že v konfliktu s návrhem nedochází při vývoji kódu, týmy používají ověřování vrstev na sestaveních, která jsou spuštěna v sestavení Team Foundation Build. Také vytvoří vlastní úlohu MSBuild pro vyžadování ověření vrstvy při jejich operacích vrácení se změnami. Používají sestavy sestavení ke shromáždění chyb ověřování.
 
@@ -363,7 +363,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
 - [Ověřování systému během vývoje](../modeling/validate-your-system-during-development.md)
 
-- [Použít správu verzí](https://go.microsoft.com/fwlink/?LinkID=525605)
+- [Použít správu verzí](https://docs.microsoft.com/azure/devops/repos/tfvc/overview?view=azure-devops)
 
 - [Sestavení aplikace](/azure/devops/pipelines/index)
 
@@ -643,7 +643,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
      Pro rychlý přehled zkompilovaného kódu vytvořte prázdnou mapu kódu a pak přetáhněte soubory sestavení nebo binární soubory na plochu rozvržení.
 
-- Chcete-li prozkoumat konkrétní kód nebo položky řešení, použijte Průzkumník řešení k výběru položek a relací, které chcete vizualizovat. Pak můžete buď vygenerovat novou mapu, nebo přidat vybrané položky do existující mapy. Podívejte [se na téma mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md).
+- Chcete-li prozkoumat konkrétní kód nebo položky řešení, použijte Průzkumník řešení k výběru položek a relací, které chcete vizualizovat. Pak můžete buď vygenerovat novou mapu, nebo přidat vybrané položky do existující mapy. Zobrazit [mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md).
 
 - Abychom vám pomohli prozkoumat mapu, uspořádejte rozložení tak, aby vyhovovalo typům úloh, které chcete provést.
 
@@ -880,9 +880,9 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
 ## <a name="external-resources"></a>Externí prostředky
 
-|**Kategorií**|**Odkazy**|
+|**Kategorie**|**Odkazy**|
 |------------------|---------------|
-|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://go.microsoft.com/fwlink/?LinkId=184721)|
+|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
 
 ## <a name="see-also"></a>Viz také
  [Vizualizujte kód](../modeling/visualize-code.md) [vytvoření modelů pro vaši aplikaci](../modeling/create-models-for-your-app.md) [použití modelů v procesu vývoje](../modeling/use-models-in-your-development-process.md) [použití modelů v agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f) . [při vývoji](../modeling/validate-your-system-during-development.md) [rozšíříte modely a diagramy UML](../modeling/extend-uml-models-and-diagrams.md) do systému.

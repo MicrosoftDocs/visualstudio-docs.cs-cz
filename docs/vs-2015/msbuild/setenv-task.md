@@ -20,12 +20,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7dc9b15efb8fca12382fae94912d22c39b96bd4c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 960ebb94cf03ef293011645e732a0f0379d0fd47
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295976"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852248"
 ---
 # <a name="setenv-task"></a>SetEnv – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,9 +39,9 @@ Nastaví nebo odstraní hodnotu zadané proměnné prostředí.
 |---------------|-----------------|  
 |**Jméno**|Povinný parametr **řetězce**<br /><br /> Název proměnné prostředí.|  
 |**OutputEnvironmentVariable**|Volitelný výstupní parametr **řetězce** .<br /><br /> Obsahuje hodnotu, která je přiřazena proměnné prostředí, která je určena parametrem **Name** .|  
-|**Směr**|Povinný parametr `Boolean`.<br /><br /> Pokud `true`, zřetězí hodnotu parametru **Value** před hodnotu proměnné prostředí, která je určena parametrem **Name** , a poté přiřadí výsledek proměnné prostředí. Pokud `false`, přiřadí pouze hodnotu parametru **Value** proměnné prostředí.|  
-|**Cílové**|Volitelný **řetězcový** parametr.<br /><br /> Určuje umístění, kde je uložena proměnná prostředí. Zadejte "`User`" nebo "`Machine`".<br /><br /> Další informace najdete v části "výčet EnvironmentVariableTarget" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .|  
-|**Hodnota**|Volitelný **řetězcový** parametr.<br /><br /> Hodnota přiřazená proměnné prostředí, která je určena parametrem **Name** Pokud je **hodnota** prázdná a proměnná existuje, proměnná se odstraní. Pokud proměnná neexistuje, nedošlo k žádné chybě, i když operaci nelze provést.<br /><br /> Další informace naleznete v části "prostředí:: SetEnvironmentVariable metoda" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .|  
+|**Prefix**|Povinný parametr `Boolean`.<br /><br /> Pokud `true`, zřetězí hodnotu parametru **Value** před hodnotu proměnné prostředí, která je určena parametrem **Name** , a poté přiřadí výsledek proměnné prostředí. Pokud `false`, přiřadí pouze hodnotu parametru **Value** proměnné prostředí.|  
+|**Cíl**|Volitelný **řetězcový** parametr.<br /><br /> Určuje umístění, kde je uložena proměnná prostředí. Zadejte "`User`" nebo "`Machine`".<br /><br /> Další informace najdete v části "výčet EnvironmentVariableTarget" na webu [MSDN](https://msdn.microsoft.com/) .|  
+|**Hodnota**|Volitelný **řetězcový** parametr.<br /><br /> Hodnota přiřazená proměnné prostředí, která je určena parametrem **Name** Pokud je **hodnota** prázdná a proměnná existuje, proměnná se odstraní. Pokud proměnná neexistuje, nedošlo k žádné chybě, i když operaci nelze provést.<br /><br /> Další informace naleznete v části "prostředí:: SetEnvironmentVariable metoda" na webu [MSDN](https://msdn.microsoft.com/) .|  
   
 ## <a name="remarks"></a>Poznámky  
   

@@ -9,12 +9,12 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5acbb4d2966e89f7913fa1479b882fad5c9650f7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0d9887e3c7cf283bff453e458502400a7ade1a41
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295819"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849571"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>Definování zásady zamykání pro vytváření segmentů jen pro čtení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ Rozhraní neměnnosti API sady [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vizu
 > [!NOTE]
 > Zásady zamykání lze obejít pomocí reflexe. Poskytuje jasné hranice pro vývojáře třetích stran, ale neposkytuje silné zabezpečení.
 
- Další informace a ukázky jsou k dispozici na webu [sady SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro vizualizaci a modelování](https://go.microsoft.com/fwlink/?LinkId=186128) .
+ Další informace a ukázky jsou k dispozici na webu [sady SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro vizualizaci a modelování](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) .
 
 ## <a name="setting-and-getting-locks"></a>Nastavení a získání zámků
  Zámky můžete nastavit pro úložiště, na oddíl nebo na jednotlivé prvky. Například tento příkaz zabrání odstranění prvku modelu a zároveň zabrání změně jeho vlastností:
@@ -82,11 +82,11 @@ partition.SetLocks(Locks.Delete);
 |Žádné|Bez omezení.|
 |Vlastnost|Vlastnosti domény prvků nelze změnit. Toto neplatí pro vlastnosti, které jsou generovány rolí doménové třídy v relaci.|
 |Přidejte|V oddílu nebo v úložišti nelze vytvořit nové prvky a odkazy.<br /><br /> Nedá se použít pro `ModelElement`.|
-|Přesunutí|Element nelze přesunout mezi oddíly, pokud `element.IsLocked(Move)` má hodnotu true, nebo pokud má `targetPartition.IsLocked(Move)` hodnotu true.|
-|Odstranění|Element nelze odstranit, je-li tento zámek nastaven na samotném prvku nebo na některé prvky, na které by se rozšířilo odstranění, jako jsou vložené prvky a tvary.<br /><br /> Pomocí `element.CanDelete()` můžete zjistit, zda lze prvek odstranit.|
+|Přesunout|Element nelze přesunout mezi oddíly, pokud `element.IsLocked(Move)` má hodnotu true, nebo pokud má `targetPartition.IsLocked(Move)` hodnotu true.|
+|Odstranit|Element nelze odstranit, je-li tento zámek nastaven na samotném prvku nebo na některé prvky, na které by se rozšířilo odstranění, jako jsou vložené prvky a tvary.<br /><br /> Pomocí `element.CanDelete()` můžete zjistit, zda lze prvek odstranit.|
 |Změnit pořadí|Řazení odkazů na RolePlayer se nedá změnit.|
 |RolePlayer|Sadu odkazů, které jsou nasource v tomto prvku, nelze změnit. Například nové prvky nemohou být vloženy do tohoto elementu. To nemá vliv na odkazy, pro které je tento prvek cílem.<br /><br /> Pokud je tento prvek odkazem, nebude ovlivněn jeho zdroj a cíl.|
-|Vše|Bitové nebo jiné hodnoty.|
+|Všechny|Bitové nebo jiné hodnoty.|
 
 ## <a name="locking-policies"></a>Zásady uzamykání
  Jako autor DSL můžete definovat *zásady zamykání*. Zásady zamykání rozkládají operaci SetLocks (), aby bylo možné zabránit konkrétním zámkům v nastavení nebo pověření, aby bylo možné konkrétní zámky nastavit. Obvykle byste použili zásady uzamykání k tomu, aby uživatelům nebo vývojářům nechtěně contravening zamýšlené použití DSL, a to stejným způsobem, jakým můžete deklarovat proměnnou `private`.

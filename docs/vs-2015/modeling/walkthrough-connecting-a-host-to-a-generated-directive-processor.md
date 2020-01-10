@@ -12,12 +12,12 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 10c9c6cfa1d8553c79b710239a99f8ea9e2438e5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 47e1b1f11fd885afbb5e84e1530a171442938af0
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301282"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851301"
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>Návod: Připojení hostitele k procesoru vygenerovaných direktiv
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,9 +42,9 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
-|Visual Studio Visualization and Modeling SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](https://go.microsoft.com/fwlink/?LinkID=186128)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://www.visualstudio.com/)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://docs.microsoft.com/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
+|Sada Visual Studio Visualization and Modeling SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)|
 
  Kromě toho musíte mít vytvořenou transformaci šablony vlastní text v [návodu: Vytvoření vlastního hostitele textových šablon](../modeling/walkthrough-creating-a-custom-text-template-host.md).
 
@@ -65,12 +65,12 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
 
      Další informace o vytváření řešení jazyka specifického pro doménu najdete v tématu [Postupy: vytvoření řešení jazyka specifického pro doménu](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
-2. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+2. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
    > [!IMPORTANT]
    > Tento krok vygeneruje procesor direktiv a přidá k němu klíč v registru.
 
-3. V nabídce **ladit** klikněte na **Spustit ladění**.
+3. Na **ladění** nabídky, klikněte na tlačítko **spustit ladění**.
 
     Otevře se druhá instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
@@ -227,9 +227,9 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
             }
     ```
 
-7. V nabídce **soubor** klikněte na **Uložit vše**.
+7. Na **souboru** nabídky, klikněte na tlačítko **Uložit vše**.
 
-8. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+8. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
 ## <a name="testing-the-custom-host-with-the-directive-processor"></a>Testování vlastního hostitele pomocí procesoru direktiv
  Chcete-li otestovat vlastního hostitele textových šablon, musíte nejprve napsat textovou šablonu, která volá generovaný procesor direktiv. Pak spusťte vlastního hostitele, předejte mu název textové šablony a ověřte, zda je direktiva správně zpracována.
@@ -312,7 +312,7 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
 
 3. V kódu nahraďte \<cestu > s cestou k souboru Sample. min z jazyka specifického pro návrh, který jste vytvořili v prvním postupu.
 
-4. Uložte soubor a zavřete ho.
+4. Soubor uložte a zavřete.
 
 #### <a name="to-test-the-custom-host"></a>Testování vlastního hostitele
 

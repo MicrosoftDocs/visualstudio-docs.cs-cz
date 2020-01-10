@@ -9,12 +9,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4633b32c1d59a59c91848f72403571955263472f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: c47a1583a1d4695905c0fb7067faaa6226fb2d7a
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297551"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851872"
 ---
 # <a name="analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>Analýza kvality kódu aplikací pro Store pomocí sady Visual Studio statické analýzy kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,5 +35,5 @@ Nástroj pro analýzu kódu v sadě Visual Studio prozkoumá váš kód pro sadu
 
 |||
 |-|-|
-|[Analýza kódu v knihovně MSDN](https://go.microsoft.com/fwlink/?LinkID=227580)|Najdete další informace o použití analýzy kódu v sadě Visual Studio Ultimate, Visual Studio Premium a Visual Studio Professional.|
-|[Blog týmu analýzy kódu na webu MSDN](https://go.microsoft.com/fwlink/?LinkId=227200)|Najdete další informace, včetně technické papírů a ukázky na blogu týmu analýzy kódu.|
+|[Analýza kódu v knihovně MSDN](https://msdn.microsoft.com/library/dd264897.aspx)|Najdete další informace o použití analýzy kódu v sadě Visual Studio Ultimate, Visual Studio Premium a Visual Studio Professional.|
+|[Blog týmu analysis kódu MSDN](https://blogs.msdn.com/codeanalysis/)|Najdete další informace, včetně technické papírů a ukázky na blogu týmu analýzy kódu.|

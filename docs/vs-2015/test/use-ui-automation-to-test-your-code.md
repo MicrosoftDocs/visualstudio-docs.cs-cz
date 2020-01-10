@@ -17,12 +17,12 @@ ms.assetid: ad9e3eaa-ab86-436e-95b8-dc20eb1f8b2a
 caps.latest.revision: 87
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2eb0a4ee7c69ebe2bf753d4bbde63160b6e0043e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 6478de1573a90c0a7171285df1d04675f77435e2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297989"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851271"
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>Použití automatizace uživatelského rozhraní k testování kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -161,7 +161,7 @@ Automatizované testy, které zařídí vaši aplikaci prostřednictvím uživat
 
 - ![Prerequsite](../test/media/prereq.png "Požadavků ohlásila") Pokud nechcete zaznamenávat akce pro spuštění testované aplikace, musíte aplikaci spustit před výběrem ikony **záznamu** .
 
-- ![Prerequsite](../test/media/prereq.png "Požadavků ohlásila") Na konci testu proces, ve kterém je test spuštěn, je ukončen. Pokud jste aplikaci spustili v testu, aplikace se obvykle zavře.  Pokud nechcete, aby test zavřel aplikaci při ukončení, musíte do svého řešení přidat soubor. runsettings a použít možnost `KeepExecutorAliveAfterLegacyRun`. Další informace najdete v tématu [konfigurace testů jednotek pomocí souboru. runsettings](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
+- ![Prerequsite](../test/media/prereq.png "Požadavků ohlásila") Na konci testu proces, ve kterém je test spuštěn, je ukončen. Pokud jste aplikaci spustili v testu, aplikace se obvykle zavře.  Pokud nechcete, aby test zavřel aplikaci při ukončení, musíte do svého řešení přidat soubor. runsettings a použít možnost `KeepExecutorAliveAfterLegacyRun`. Další informace najdete v tématu [konfigurace testů jednotek s použitím souboru .runsettings](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
 
 - ![Prerequsite](../test/media/prereq.png "Požadavků ohlásila") Můžete přidat metodu Initialize testu identifikovanou atributem [TestInitialize], který spouští kód na začátku každé testovací metody. Například můžete spustit aplikaci z metody TestInitialize.
 
@@ -261,7 +261,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
  `<drive letter:>\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CodedUITestBuilder.exe.config`
 
- V konfiguračním souboru změňte hodnoty pro `HoverKeyModifier` a `HoverKey` klíče pro úpravu přiřazení klávesnice:
+ V konfiguračním souboru změňte hodnoty `HoverKeyModifier` a `HoverKey` pro změnu přiřazení klávesnice:
 
 ```
 <!-- Begin : Background Recorder Settings -->
@@ -465,22 +465,22 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 - [Rozšiřování programových testů UI a záznamů akcí k podpoře Microsoft Excel](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
 
-  Programové testy uživatelského rozhraní se často používají k automatizaci ručních testů. Další pokyny naleznete v tématu [testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5: automatizace systémových testů](https://go.microsoft.com/fwlink/?LinkID=255196). Další informace o manuálních testech naleznete v [ &#91;tématu&#93; vyřazeno Vytváření manuálních testovacích případů pomocí Microsoft Test Manager](https://msdn.microsoft.com/library/9989e184-c8e4-444b-998d-a1a5ec94461e). Další informace o automatizovaných systémových testech naleznete v tématu [vytváření automatizovaných testů pomocí Microsoft Test Manager](https://msdn.microsoft.com/7b5075ee-ddfe-411d-b1d4-94283550a5d0).
+  Programové testy uživatelského rozhraní se často používají k automatizaci ručních testů. Další pokyny naleznete v tématu [testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5: automatizace systémových testů](https://msdn.microsoft.com/library/jj159335.aspx). Další informace o manuálních testech naleznete v [ &#91;tématu&#93; vyřazeno Vytváření manuálních testovacích případů pomocí Microsoft Test Manager](https://msdn.microsoft.com/library/9989e184-c8e4-444b-998d-a1a5ec94461e). Další informace o automatizovaných systémových testech naleznete v tématu [vytváření automatizovaných testů pomocí Microsoft Test Manager](https://msdn.microsoft.com/7b5075ee-ddfe-411d-b1d4-94283550a5d0).
 
 ## <a name="external-resources"></a>Externí prostředky
 
 ### <a name="guidance"></a>Doprovodné materiály
-- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](https://go.microsoft.com/fwlink/?LinkID=255188)
+- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](https://msdn.microsoft.com/library/jj159340.aspx)
 
-- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5: automatizace systémových testů](https://go.microsoft.com/fwlink/?LinkID=255196)
+- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5: automatizace systémových testů](https://msdn.microsoft.com/library/jj159335.aspx)
 
 ### <a name="faq"></a>Nejčastější dotazy
-- [Nejčastější dotazy k programovým testům UI – 1](https://go.microsoft.com/fwlink/?LinkID=230576)
+- [Nejčastější dotazy k programovým testům UI – 1](https://blogs.msdn.com/b/mathew_aniyan/archive/tags/faq/)
 
-- [Nejčastější dotazy k programovým testům UI – 2](https://go.microsoft.com/fwlink/?LinkID=230578)
+- [Nejčastější dotazy k programovým testům UI – 2](https://social.msdn.microsoft.com/Forums/en-US/vsautotest/thread/3a74dd2c-cef8-4923-abbf-7a91f489e6c4)
 
 ### <a name="forum"></a>Fórum
-- [Testování automatizace uživatelského rozhraní sady Visual Studio (zahrnuje CodedUI)](https://go.microsoft.com/fwlink/?LinkID=224497)
+- [Testování automatizace uživatelského rozhraní sady Visual Studio (zahrnuje CodedUI)](https://social.msdn.microsoft.com/Forums/en-US/vsautotest)
 
 ## <a name="see-also"></a>Viz také:
 

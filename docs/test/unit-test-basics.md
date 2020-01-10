@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e78b021e41caf584a74172cbdf00135e525df265
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 77ac5ffd14f97fd6fdd753327fe193ceb80ea57e
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590498"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846933"
 ---
 # <a name="unit-test-basics"></a>Základní informace o testování částí
 
@@ -91,13 +91,16 @@ Je často rychlejší generování projektu testování částí a zástupných 
 
    ::: moniker range="vs-2017"
    ![V okně editoru zobrazte kontextovou nabídku](../test/media/createunittestsrightclick.png)
-   ::: moniker-end
-   ::: moniker range=">=vs-2019"
-   ![V okně editoru zobrazte kontextovou nabídku](../test/media/vs-2019/basics-create-unit-tests.png)
-   ::: moniker-end
 
    > [!NOTE]
    > Příkaz nabídky **vytvořit testy jednotek** je k dispozici pouze pro spravovaný kód, který cílí na .NET Framework (ale ne .NET Core).
+   ::: moniker-end
+   ::: moniker range=">=vs-2019"
+   ![V okně editoru zobrazte kontextovou nabídku](../test/media/vs-2019/basics-create-unit-tests.png)
+
+   > [!NOTE]
+   > Příkaz nabídky **vytvořit testy jednotek** je k dispozici pouze pro spravovaný kód.
+   ::: moniker-end
 
 2. Klikněte na tlačítko **OK** přijměte výchozí hodnoty pro vytváření testů jednotek nebo změnu hodnoty použité k vytvoření a pojmenujte projekt testování částí a testy jednotek. Můžete vybrat kód, který se ve výchozím nastavení přidá do metody jednotkového testu.
 

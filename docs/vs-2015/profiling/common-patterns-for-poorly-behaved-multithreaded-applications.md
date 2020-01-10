@@ -13,12 +13,12 @@ caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b103c2611216a5024d600aafba212919592ff3b3
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 414b5ea6a6cf6bf0277ad8d2df51b20c39f558e1
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300672"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852169"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Obecné vzory pro vícevláknové aplikace s nevhodným chováním
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ Vizualizátor souběžnosti pomáhá vývojářům vizualizovat chování vícev
   
  Jak je znázorněno na následujícím obrázku, Vizualizér souběžnosti může tento příznak zobrazit také v zobrazení využití procesoru, kde navzdory přítomnosti více vláken aplikace spotřebovává pouze jeden logický jádro.  
   
- Další informace najdete v tématu "vzor výkonu 1: identifikace kolizí zámků" v blogu Hazim Shafi [Parallel Performance Tools for Windows](https://go.microsoft.com/fwlink/?LinkID=160569) na webu blogu MSDN.  
+ Další informace najdete v tématu "vzor výkonu 1: identifikace kolizí zámků" v blogu Hazim Shafi [Parallel Performance Tools for Windows](https://blogs.msdn.com/hshafi) na webu blogu MSDN.  
   
  ![Uzamknout spory](../profiling/media/lockcontention-2.png "LockContention_2")  
   

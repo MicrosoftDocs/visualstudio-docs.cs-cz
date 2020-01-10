@@ -31,12 +31,12 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 181c32017a84328037ea46d49698821fa3cb41ea
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 930cec012bfda49c61116ada2ba6df10c3a48f51
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295882"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850996"
 ---
 # <a name="link-task"></a>Úloha odkazu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -68,7 +68,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Určuje atributy, které budou umístěny v sekci `dependency` souboru manifestu.  
   
-   Další informace najdete v tématu [/MANIFESTDEPENDENCY (určení závislostí manifestu)](https://msdn.microsoft.com/library/e4b68313-33a2-4c3e-908e-ac2b9f7d6a73). Viz také "konfigurační soubory vydavatele" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+   Další informace najdete v tématu [/MANIFESTDEPENDENCY (určení závislostí manifestu)](https://msdn.microsoft.com/library/e4b68313-33a2-4c3e-908e-ac2b9f7d6a73). Viz také "konfigurační soubory vydavatele" na webu [MSDN](https://msdn.microsoft.com/) .  
   
 - **AdditionalOptions**  
   
@@ -114,7 +114,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Implicitní parametr **Boolean**  
   
-   Umožňuje hlubší sledování souborů pro funkci přírůstkového propojení při zachytávání. Vždycky vrátí `true`.  
+   Umožňuje hlubší sledování souborů pro funkci přírůstkového propojení při zachytávání. Vždy vrátí hodnotu `true`.  
   
 - **BaseAddress**  
   
@@ -228,11 +228,11 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Volitelný **logický** parametr.  
   
-   Pokud `true`, částečně podepíše sestavení. Ve výchozím nastavení je hodnota `false`.  
+   Pokud `true`, částečně podepíše sestavení. Výchozí hodnota je `false`.  
   
    Další informace naleznete v tématu [/delaysign (částečné podepsání sestavení)](https://msdn.microsoft.com/library/15244d30-3ecb-492f-a408-ffe81f38de20).  
   
-- **Faktorů**  
+- **Ovladač**  
   
    Volitelný **řetězcový** parametr.  
   
@@ -240,7 +240,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti linkeru.  
   
-  - Hodnota **NotSet** -  *\<žádná >*  
+  - **NotSet** -  *\<none>*  
   
   - **/Driver** **ovladače** -   
   
@@ -344,7 +344,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Pokud `true`, vytvoří *soubor mapy*. Přípona názvu souboru souboru mapy je. map.  
   
-   Další informace najdete v tématu [/map (Generate souboru mapování)](https://msdn.microsoft.com/library/9ccce53d-4e36-43da-87b0-7603ddfdea63).  
+   Další informace najdete v tématu [parametr/map (generování souboru mapování)](https://msdn.microsoft.com/library/9ccce53d-4e36-43da-87b0-7603ddfdea63).  
   
 - **HeapCommitSize**  
   
@@ -452,7 +452,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
   - **Vyzvat okamžitě** -  **/errorreport: prompt**  
   
-  - **QueueForNextLogin** -  **/errorreport: Queue**  
+  - **QueueForNextLogin** -  **/ERRORREPORT:QUEUE**  
   
   - **SendErrorReport** -  **/errorreport: Send**  
   
@@ -500,7 +500,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
   - **PGUpdate**  
   
-     \- **/LTCG: PGUpdate**  
+     \- **/LTCG:PGUpdate**  
   
     Další informace naleznete v tématu [/LTCG (generování kódu při propojování)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2).  
   
@@ -550,7 +550,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Další informace naleznete v tématu [/MIDL (určení možností příkazového řádku MIDL)](https://msdn.microsoft.com/library/22dc259e-b34c-4ed3-a380-4beb734482c1).  
   
-- **Určovat minimumRequiredVersion**  
+- **MinimumRequiredVersion**  
   
    Volitelný **řetězcový** parametr.  
   
@@ -572,7 +572,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Další informace najdete v tématu [/stub (název souboru zástupného kódu MS-DOS)](https://msdn.microsoft.com/library/65221ffe-4f9a-4a14-ac69-3cfb79b40b5f).  
   
-- **Parametr-EntryPoint**  
+- **NoEntryPoint**  
   
    Volitelný **logický** parametr.  
   
@@ -622,7 +622,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Další informace naleznete v tématu [/ALLOWBIND (zabránění vazbě knihoven DLL)](https://msdn.microsoft.com/library/30e37e24-12e4-407e-988a-39d357403598).  
   
-- **Profilu**  
+- **Profile**  
   
    Volitelný **logický** parametr.  
   
@@ -684,19 +684,19 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-  - Hodnota **NotSet** -  *\<žádná >*  
+  - **NotSet** -  *\<none>*  
   
-  - **LinkVerbose** -  **/verbose**  
+  - **LinkVerbose** -  **/VERBOSE**  
   
-  - **LinkVerboseLib** -  **/verbose: lib**  
+  - **LinkVerboseLib** -  **/VERBOSE:Lib**  
   
-  - **LinkVerboseICF** -  **/verbose: ICF**  
+  - **LinkVerboseICF** -  **/VERBOSE:ICF**  
   
-  - **LinkVerboseREF** -  **/verbose: ref**  
+  - **LinkVerboseREF** -  **/VERBOSE:REF**  
   
-  - **LinkVerboseSAFESEH** -  **/verbose: SAFESEH**  
+  - **LinkVerboseSAFESEH** -  **/VERBOSE:SAFESEH**  
   
-  - **LinkVerboseCLR** -  **/verbose: CLR**  
+  - **LinkVerboseCLR** -  **/VERBOSE:CLR**  
   
     Další informace najdete v tématu [/verbose (Tisk zpráv o průběhu)](https://msdn.microsoft.com/library/9c347d98-4c37-4724-a39e-0983934693ab).  
   
@@ -746,25 +746,25 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-  - Hodnota **NotSet** -  *\<žádná >*  
+  - **NotSet** -  *\<none>*  
   
   - **Konzola** -  **/SUBSYSTEM: konzola**  
   
-  - **Windows** -  **/SUBSYSTEM: Windows**  
+  - **Windows** -  **/SUBSYSTEM:WINDOWS**  
   
   - **Nativní** -  **/SUBSYSTEM: Native**  
   
   - **Aplikace rozhraní EFI** -  **/SUBSYSTEM: EFI_APPLICATION**  
   
-  - **Ovladač spouštěcí služby EFI** -  **/SUBSYSTEM: EFI_BOOT_SERVICE_DRIVER**  
+  - **EFI Boot Service Driver** -  **/SUBSYSTEM:EFI_BOOT_SERVICE_DRIVER**  
   
   - /Subsystem **EFI ROM** -  **: EFI_ROM**  
   
-  - **Běhové prostředí EFI** -  **/SUBSYSTEM: EFI_RUNTIME_DRIVER**  
+  - **EFI Runtime** -  **/SUBSYSTEM:EFI_RUNTIME_DRIVER**  
   
-  - **WindowsCE** -  **/SUBSYSTEM: WindowsCE**  
+  - **WindowsCE** -  **/SUBSYSTEM:WINDOWSCE**  
   
-  - **Posix** -  **/SUBSYSTEM: POSIX**  
+  - **POSIX** -  **/SUBSYSTEM:POSIX**  
   
     Další informace najdete v tématu [/Subsystem (určení subsystému)](https://msdn.microsoft.com/library/d7b133cf-cf22-4da8-ab46-6552702c0b9b).  
   
@@ -816,7 +816,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-  - Hodnota **NotSet** -  *\<žádná >*  
+  - **NotSet** -  *\<none>*  
   
   - **MachineARM** -  **/Machine: ARM**  
   
@@ -826,13 +826,13 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
   - **MachineMIPS** -  **/Machine: MIPS**  
   
-  - **MachineMIPS16** -  **/Machine: MIPS16**  
+  - **MachineMIPS16** -  **/MACHINE:MIPS16**  
   
   - **MachineMIPSFPU** -  **/Machine: MIPSFPU**  
   
   - **MachineMIPSFPU16** -  **/Machine: MIPSFPU16**  
   
-  - **MachineSH4** -  **/Machine: sh4**  
+  - **MachineSH4** -  **/MACHINE:SH4**  
   
   - **MachineTHUMB** -  **/Machine: palec**  
   
@@ -872,7 +872,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Další informace naleznete v tématu [/NOASSEMBLY (Vytvoření modulu MSIL)](https://msdn.microsoft.com/library/3cea4e70-f451-4395-a626-1930b1b127fe).  
   
-- **SouborKnihovnyTypů**  
+- **TypeLibraryFile**  
   
    Volitelný **řetězcový** parametr.  
   
@@ -898,7 +898,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
   - **Podle volajícího** - `level='asInvoker'`  
   
-  - **Nejvyšší dostupná** - `level='highestAvailable'`  
+  - **HighestAvailable** - `level='highestAvailable'`  
   
   - **Vyžadovat správce** - `level='requireAdministrator'`  
   

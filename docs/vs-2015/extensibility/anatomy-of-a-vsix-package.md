@@ -12,12 +12,12 @@ ms.assetid: 8b86d62f-c274-4e91-82e0-38cdb9a423d5
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 156b221265b4c3c23b795b09b9a50ccb27a63bcf
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2a769b0d04f76a2a32c00e262ff03b400af02feb
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295639"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852287"
 ---
 # <a name="anatomy-of-a-vsix-package"></a>Anatomie balíčku VSIX
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -59,4 +59,4 @@ VSIX balíček je soubor VSIX, který obsahuje jedno nebo více rozšíření sa
 ## <a name="content_typesxml"></a>[Content_Types]. XML  
  Soubor [Content_Types]. XML identifikuje typy souborů v rozbaleném souboru. VSIX. Sada Visual Studio používá tento soubor během instalace balíčku, ale neinstaluje samotný soubor. Další informace o tomto souboru naleznete v části [struktura souboru Content_types\]. XML](../extensibility/the-structure-of-the-content-types-dot-xml-file.md).  
   
- Soubor [Content_Types]. XML je vyžadován standardem OPC (Open balící konvence). Další informace o OPC naleznete v tématu [OPC: nový standard pro balení dat](https://go.microsoft.com/fwlink/?LinkID=148207) na webu MSDN.
+ Soubor [Content_Types]. XML je vyžadován standardem OPC (Open balící konvence). Další informace o OPC naleznete v tématu [OPC: nový standard pro balení dat](https://msdn.microsoft.com/magazine/cc163372.aspx) na webu MSDN.

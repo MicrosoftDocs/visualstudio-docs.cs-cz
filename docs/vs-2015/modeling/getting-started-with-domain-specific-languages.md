@@ -9,19 +9,19 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a2757201f482682b8fdf26275f510984629204f6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 71aa8b31023cedcc41a08a775f9fdf28a4489d1e
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300910"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847194"
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>Začínáme s jazyky specifickými pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Toto téma vysvětluje základní pojmy při definování a používání jazyka DSL (Domain Specific Language) vytvořeného pomocí sady Modeling SDK pro Visual Studio.
 
- Pokud s DSL začínáte, doporučujeme vám pracovat přes **testovací prostředí nástrojů DSL**, které najdete na tomto webu: [VISUALIZATON and modeling SDK](https://go.microsoft.com/fwlink/?LinkID=186128)
+ Pokud s DSL začínáte, doporučujeme vám pracovat přes **testovací prostředí nástrojů DSL**, které najdete na tomto webu: [VISUALIZATON and modeling SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
 
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>K čemu slouží jazyk specifický pro doménu?
  Jazyk specifický pro doménu je notaci, obvykle grafický, který je navržený tak, aby se použil pro konkrétní účel. Naopak jazyky, jako je například UML, jsou obecné účely. V DSL můžete definovat typy prvku modelu a jejich vztahy a jak jsou uvedeny na obrazovce.
@@ -41,8 +41,8 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://www.visualstudio.com/)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://docs.microsoft.com/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
 |Sada Modeling SDK pro Visual Studio|[Stáhnout MSDK](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-a-dsl-solution"></a>Vytvoření řešení DSL
@@ -114,7 +114,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
 3. V experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]otevřete soubor modelu s názvem **test** z **Průzkumník řešení**.
 
-    \- nebo-
+    \- nebo –
 
     Klikněte pravým tlačítkem na projekt ladění, přejděte na **Přidat**a pak klikněte na **položka**. V dialogovém okně **Přidat položku** vyberte typ souboru vaší DSL.
 
@@ -164,7 +164,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
 3. Klikněte na možnost **transformovat všechny šablony** na panelu nástrojů **Průzkumník řešení**.
 
-    \- nebo-
+    \- nebo –
 
     Klikněte pravým tlačítkem na šablony, které chcete znovu vygenerovat, a pak klikněte na **Spustit vlastní nástroj**.
 
@@ -399,4 +399,4 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 2. Znovu sestavte všechna experimentální DSL nebo jiná experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření, která chcete dál používat.
 
 ## <a name="see-also"></a>Viz také
- [Porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md) [jak definovat jazykovou](../modeling/how-to-define-a-domain-specific-language.md) [sadu Visualizaton a Modeling SDK](https://go.microsoft.com/fwlink/?LinkID=186128) specifické pro doménu
+ [Porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md) [jak definovat jazykovou](../modeling/how-to-define-a-domain-specific-language.md) [sadu Visualizaton a Modeling SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) specifické pro doménu

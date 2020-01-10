@@ -12,17 +12,17 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9c0fa4e92c62ffb5b9c41cf5e297ed11ca63c38e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: c38150dd84ef8898b2aa894a614dfb79e289b593
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298716"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850454"
 ---
 # <a name="define-and-install-a-modeling-extension"></a>Definování a instalace rozšíření modelování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagramů. Tímto způsobem můžete diagramy a modely přizpůsobit vašim potřebám. Můžete například definovat příkazy nabídky, profily UML, ověřovací omezení a položky panelu nástrojů. V jednom rozšíření můžete definovat několik komponent. Tato rozšíření můžete také distribuovat ostatním uživatelům aplikace Visual Studio ve formě [rozšíření integrace sady Visual Studio (VSIX)](https://go.microsoft.com/fwlink/?LinkId=160780). VSIX můžete vytvořit pomocí projektu VSIX v aplikaci Visual Studio.
+V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagramů. Tímto způsobem můžete diagramy a modely přizpůsobit vašim potřebám. Můžete například definovat příkazy nabídky, profily UML, ověřovací omezení a položky panelu nástrojů. V jednom rozšíření můžete definovat několik komponent. Tato rozšíření můžete také distribuovat ostatním uživatelům aplikace Visual Studio ve formě [rozšíření integrace sady Visual Studio (VSIX)](https://msdn.microsoft.com/library/dd393694(VS.100).aspx). VSIX můžete vytvořit pomocí projektu VSIX v aplikaci Visual Studio.
 
 ## <a name="requirements"></a>Požadavky
  Viz [požadavky](../modeling/extend-uml-models-and-diagrams.md#Requirements).
@@ -68,15 +68,15 @@ V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagr
 
 7. Na kartě **assets (prostředky** ) přidejte své komponenty do rozšíření sady Visual Studio.
 
-    1. Klikněte na tlačítko **Nový**.
+    1. Zvolte **Nové**.
 
     2. Pro komponentu s kódem nastavte tato pole v dialogovém okně **Přidat nový prostředek** :
 
         |||
         |-|-|
-        |**Zadejte** =|**Microsoft. VisualStudio. MefComponent**|
+        |**Zadejte** =|**Microsoft.VisualStudio.MefComponent**|
         | = **zdroje**|**Projekt v aktuálním řešení**|
-        | = **projektu**|*Váš projekt knihovny tříd*|
+        |**Project** =|*Váš projekt knihovny tříd*|
         |**Vložit do této složky** =|*obsahovat*|
 
          Další typy komponent naleznete v odkazech v následující části.
@@ -130,7 +130,7 @@ V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagr
 
 #### <a name="to-uninstall-an-extension"></a>Odinstalace rozšíření
 
-1. V nabídce **nástroje** klikněte na možnost **rozšíření a aktualizace**.
+1. Na **nástroje** nabídky, klikněte na tlačítko **rozšíření a aktualizace**.
 
 2. Rozbalte položku **nainstalovaná rozšíření**.
 
@@ -138,7 +138,7 @@ V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagr
 
    Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z následujícího umístění, kde *% localappdata%* je obvykle *jednotka*: \Users\\*username*\AppData\Local:
 
-   *% Localappdata%* **\Microsoft\VisualStudio\\[verze] \Extensions**
+   *%LocalAppData%* **\Microsoft\VisualStudio\\[version]\Extensions**
 
 ## <a name="see-also"></a>Viz také
  [Definování profilu pro rozšiřování UML](../modeling/define-a-profile-to-extend-uml.md) [Definování vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md) definování [omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md) [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md)

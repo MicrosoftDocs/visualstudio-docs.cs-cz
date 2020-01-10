@@ -6,12 +6,12 @@ manager: lank
 ms.date: 03/24/2019
 ms.topic: conceptual
 description: Podívejte se, jak zobrazit maximální počet přiřazených odběrů na portálu pro správu.
-ms.openlocfilehash: 368ca1ad0373267e9753ab223c2e200cbc87f1e0
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 76360c9843d82350a2b9929b8debfdb4aa4cde82
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491718"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852330"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>Ke sledování počtu přiřazených předplatných použijte funkci maximální využití.
 Nová funkce na portálu pro správu předplatných sady Visual Studio vám pomůže sledovat, kolik předplatných a přiřazených předplatných, a určuje nejvyšší počet předplatných jednotlivých úrovní, které jste přiřadili, v minulém roce i v rámci Doba trvání smluv 
@@ -42,7 +42,7 @@ Například v tabulce výše vidíte, že v 12/13/2018 byly k dispozici 123 Visu
 Odpověď: informace v přehledu zobrazují *aktuální* přiřazení a dostupná předplatná pro každou úroveň předplatného.  To může být velmi odlišné od maximálního počtu předplatných přiřazených k této smlouvě v aktuálním roce nebo v průběhu smlouvy.  Funkce maximální využití umožňuje zobrazit, kdy byly dosaženy maximální úrovně přiřazení a jaké úrovně byly.  Jedná se o důležité rozlišení, protože fakturace předplatných během hodnoty true je založena na maximálním počtu předplatných, která jsou přiřazena v jakémkoli bodě v roce. 
 
 ## <a name="resources"></a>Prostředky
-- [Dokument white paper k licencování sady Visual Studio](https://aka.ms/vslicensing)
+- [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [Multilicenční podmínky](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 

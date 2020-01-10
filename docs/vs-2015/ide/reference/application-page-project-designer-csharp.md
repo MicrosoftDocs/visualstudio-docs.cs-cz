@@ -15,12 +15,12 @@ caps.latest.revision: 61
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dcd9b9d5e336bfa0595ddd6d70032f7ba7fe780a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2bf9c64a55f6f3b49cb1e0a50fa532f276394dac
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299399"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851999"
 ---
 # <a name="application-page-project-designer-c"></a>Stránka Aplikace, návrhář projektu (C#)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -55,7 +55,7 @@ Použijte stránku **aplikace** **Návrháře projektu** k určení nastavení a
 
  Pro projekt webové aplikace je nutné zadat **knihovnu tříd**.
 
- Pokud zadáte možnost **soubor winmd** , typy lze promítnout do libovolného programovacího jazyka prostředí Windows Runtime. Sbalením výstupu projektu jako souboru WinMD můžete kódovat aplikaci v různých jazycích a nechat kód fungovat, jako kdybyste ho vytvořili ve stejném jazyce. Tuto možnost můžete zadat pro řešení, která cílí na knihovny prostředí Windows Runtime, včetně [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)]ch aplikací. Další informace najdete v tématu [vytváření prostředí Windows runtimech komponent C# v a Visual Basic](https://go.microsoft.com/fwlink/?LinkId=231895).
+ Pokud zadáte možnost **soubor winmd** , typy lze promítnout do libovolného programovacího jazyka prostředí Windows Runtime. Sbalením výstupu projektu jako souboru WinMD můžete kódovat aplikaci v různých jazycích a nechat kód fungovat, jako kdybyste ho vytvořili ve stejném jazyce. Tuto možnost můžete zadat pro řešení, která cílí na knihovny prostředí Windows Runtime, včetně [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)]ch aplikací. Další informace najdete v tématu [vytváření prostředí Windows runtimech komponent C# v a Visual Basic](https://msdn.microsoft.com/library/windows/apps/br230301(v=VS.85).aspx).
 
 > [!NOTE]
 > Prostředí Windows Runtime mohou být typy projektů tak, aby se zobrazily jako nativní objekty v jakémkoli jazyku, který je používá. Například aplikace jazyka JavaScript, které pracují s prostředí Windows Runtime používají jako sadu objektů jazyka JavaScript a C# aplikace používají knihovnu jako kolekci objektů rozhraní .NET. Sbalením výstupu projektu jako souboru WinMD můžete využít stejnou technologii, jakou prostředí Windows Runtime používá.

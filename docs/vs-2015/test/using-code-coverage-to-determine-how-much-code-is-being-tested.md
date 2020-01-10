@@ -10,12 +10,12 @@ ms.assetid: 800fc739-acd2-4242-84cb-1d83b4d82cf9
 caps.latest.revision: 38
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8c7ec729c81f11096a55e87cea528764e500b535
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 737311167fc1f444d5c0f8a5d2c27e2fe321da75
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297973"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851241"
 ---
 # <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>Použití pokrytí kódu k určení rozsahu testovaného kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -275,13 +275,13 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
      `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage`
 
-## <a name="troubleshooting"></a>Poradce při potížích
+## <a name="troubleshooting"></a>Odstraňování problémů
  Pokud nevidíte výsledky pokrytí kódu, přečtěte si téma [řešení potíží s pokrytím kódu](../test/troubleshooting-code-coverage.md).
 
 ## <a name="external-resources"></a>Externí zdroje
 
 ### <a name="guidance"></a>Doprovodné materiály
- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](https://go.microsoft.com/fwlink/?LinkID=255188)
+ [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](https://msdn.microsoft.com/library/jj159340.aspx)
 
 ## <a name="see-also"></a>Viz také
  [Přizpůsobení analýzy pokrytí](../test/customizing-code-coverage-analysis.md) kódu [řešení potíží](../test/troubleshooting-code-coverage.md) [testování částí](../test/unit-test-your-code.md) pokrytí kódu kód

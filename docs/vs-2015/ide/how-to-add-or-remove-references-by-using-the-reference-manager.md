@@ -23,12 +23,12 @@ caps.latest.revision: 48
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1ed9a341e1b0f7247175e62aceafc6051f83e8f9
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: d0763f2cf86d94f96f6f9c907ee306c731994f22
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300159"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852091"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Postupy: Přidání nebo odebrání odkazů pomocí správce odkazů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -54,7 +54,7 @@ Dialogové okno **Správce odkazů** můžete použít k přidání a správě o
 - Skupina Procházení s podskupinou Nedávné
 
 ## <a name="assemblies-tab"></a>Karta Sestavení
- Na kartě **sestavení** jsou uvedena všechna .NET Framework sestavení, která jsou k dispozici pro odkazování. Na kartě **sestavení** se nezobrazí žádná sestavení z globální mezipaměti sestavení (GAC), protože sestavení v mezipaměti GAC jsou součástí prostředí modulu runtime. Pokud nasadíte nebo zkopírujete aplikaci, která obsahuje odkaz na sestavení registrované v GAC, nebude toto sestavení nasazeno nebo zkopírováno spolu s aplikací, a to bez ohledu na nastavení Kopírovat místní. Další informace najdete v tématu [odkazy na projekt](https://go.microsoft.com/fwlink/?LinkId=238512).
+ Na kartě **sestavení** jsou uvedena všechna .NET Framework sestavení, která jsou k dispozici pro odkazování. Na kartě **sestavení** se nezobrazí žádná sestavení z globální mezipaměti sestavení (GAC), protože sestavení v mezipaměti GAC jsou součástí prostředí modulu runtime. Pokud nasadíte nebo zkopírujete aplikaci, která obsahuje odkaz na sestavení registrované v GAC, nebude toto sestavení nasazeno nebo zkopírováno spolu s aplikací, a to bez ohledu na nastavení Kopírovat místní. Další informace najdete v tématu [odkazy na projekt](https://msdn.microsoft.com/library/ez524kew.aspx).
 
  Pokud ručně přidáte odkaz na jakýkoli obor názvů EnvDTE (EnvDTE, EnvDTE80, EnvDTE90, EnvDTE90a nebo EnvDTE100), nastavte vlastnost Vložit typy spolupráce pro daný odkaz v okně Vlastnosti na hodnotu Nepravda. Nastavení této vlastnosti na hodnotu Pravda může způsobit problémy sestavení z důvodu určitých vlastností EnvDTE, které není možné vložit.
 
@@ -109,21 +109,21 @@ Dialogové okno **Správce odkazů** můžete použít k přidání a správě o
 
   - Další adresáře projektu ve stejném řešení. (Tato sestavení můžete najít pomocí karty **projekty** .)
 
-    \- nebo-
+    \- nebo –
 
 - Nastavte klíč registru, který určuje umístění sestavení, která se mají zobrazit:
 
    Pro 32 operační systém přidejte jeden z následujících klíčů registru.
 
-  - [HKEY_CURRENT_USER \SOFTWARE\Microsoft\\. NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies] @ = "*AssemblyLocation*"
+  - [HKEY_CURRENT_USER\SOFTWARE\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"
 
-  - [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\\. NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies] @ = "*AssemblyLocation*"
+  - [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"
 
     Pro 64 operační systém přidejte jeden z následujících klíčů registru do 32 podregistru.
 
-  - [HKEY_CURRENT_USER \SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies] @ = "*AssemblyLocation*"
+  - [HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"
 
-  - [HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies] @ = "*AssemblyLocation*"
+  - [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"
 
     *VersionMinimum* je nejnižší .NET Framework verze, která se vztahuje. Pokud je *VersionMinimum* v 3.0, složky zadané v AssemblyFoldersEx platí pro projekty, které cílí na .NET Framework 3,0 a novější.
 
@@ -209,7 +209,7 @@ Dialogové okno **Správce odkazů** můžete použít k přidání a správě o
     > [!NOTE]
     > Pokud tuto vlastnost přidáte, může být sestavení pomalejší.
 
-## <a name="recent"></a>Poslední
+## <a name="recent"></a>Nedávné
  Kartu Nedávné podporují karty Sestavení, COM, Windows a Procházet. Tato karta obsahuje seznam součástí, které byly v poslední době přidány do projektu.
 
 ## <a name="search"></a>Hledat

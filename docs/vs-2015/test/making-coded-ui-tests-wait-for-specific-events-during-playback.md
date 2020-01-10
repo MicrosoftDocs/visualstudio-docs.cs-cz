@@ -8,12 +8,12 @@ ms.assetid: 41981ad6-673e-492e-b739-9863b14157b1
 caps.latest.revision: 26
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 266c4fd418b71c61391ac3b9b20ac93e5c77428c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: dbc83731cfc1c04f33fc4de05f28ffd1a54f3e4d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302550"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851775"
 ---
 # <a name="making-coded-ui-tests-wait-for-specific-events-during-playback"></a>Zajištění čekání programových testů UI na konkrétní události při přehrávání
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +27,7 @@ V průběhu přehrávání programového testu uživatelského rozhraní můžet
 > [!TIP]
 > Můžete také přidat prodlevy před akcemi pomocí editoru programového testu UI. Další informace naleznete v tématu [How to: vložení zpoždění před akcí uživatelského rozhraní pomocí editoru programového testu UI](https://msdn.microsoft.com/library/509f8ef7-e105-4049-b11b-d64549e055b0).
 
- **Metody UITestControl. WaitForControlXXX ()**
+ **UITestControl.WaitForControlXXX() Methods**
 
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlReady%2A>
 
@@ -109,7 +109,7 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
 
  **Pokyny**
 
- Další informace najdete v tématu [testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5: automatizace systémových testů.](https://go.microsoft.com/fwlink/?LinkID=255196)
+ Další informace najdete v tématu [testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5: automatizace systémových testů.](https://msdn.microsoft.com/library/jj159335.aspx)
 
 ## <a name="see-also"></a>Viz také
  [Použití automatizace uživatelského rozhraní k otestování kódu](../test/use-ui-automation-to-test-your-code.md) vytvoření návodu pro vytváření programových [testů UI](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) [: vytváření, úpravy a údržba kódovaného testu uživatelského](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md) rozhraní pro programový [test](../test/anatomy-of-a-coded-ui-test.md) UI [podporované konfigurace a platformy pro programové testy uživatelského rozhraní a záznam akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md) [: vložení zpoždění před akcí uživatelského rozhraní pomocí editoru programového testu UI](https://msdn.microsoft.com/library/509f8ef7-e105-4049-b11b-d64549e055b0)

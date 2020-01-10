@@ -126,12 +126,12 @@ caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: jillfra
-ms.openlocfilehash: dd9a0e09d4032feff398a9ba8c7333c84cb46550
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: fb2b8120665c7eb08f1462dd7b3299538079ae9b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295848"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852385"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>Zadávání poznámek k parametrům funkcí a návratovým hodnotám
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -492,8 +492,8 @@ Tento článek popisuje typické použití poznámek pro jednoduché parametry f
   
      `min(pM->nSize, sizeof(MyStruct))`  
   
-## <a name="related-resources"></a>Související prostředky  
- [Blog týmu analýzy kódu](https://go.microsoft.com/fwlink/?LinkId=251197)  
+## <a name="related-resources"></a>Související informační zdroje  
+ [Blog týmu analýzy kódu](https://blogs.msdn.com/b/codeanalysis/)  
   
 ## <a name="see-also"></a>Viz také  
  [Použití poznámek SAL ke snížení vad CC++ /kódu](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   

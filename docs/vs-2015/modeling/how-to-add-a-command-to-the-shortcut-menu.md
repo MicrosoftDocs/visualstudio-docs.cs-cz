@@ -12,12 +12,12 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8d5373ae27797aa3bfe4627fb84ce393dce9e910
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2d5ddea477aa7295c41097177265b43483b7aa45
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300888"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850406"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Postupy: Přidání příkazu do místní nabídky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ Příkazy nabídky můžete přidat do jazyka DSL (Domain-Specific Language), ab
 
 3. [Metody zápisu do třídy CommandSet](#CommandSet) , aby příkaz byl viditelný a definoval, co má příkaz dělat.
 
-   Ukázky najdete na [webu sady SDK pro vizualizaci a modelování](https://go.microsoft.com/fwlink/?LinkID=185579).
+   Ukázky najdete na [webu sady SDK pro vizualizaci a modelování](https://www.visualstudio.com/).
 
 > [!NOTE]
 > Můžete také změnit chování některých existujících příkazů, jako je například vyjmout, vložit, vybrat vše a tisknout přepsáním metod v CommandSet.cs. Další informace naleznete v tématu [How to: Modify a Standard a Command nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
@@ -332,7 +332,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 4. Kliknutím pravým tlačítkem myši na různé položky v diagramu ověřte, zda je příkaz správně povolen nebo zakázán a odpovídajícím způsobem zobrazen nebo skryt v závislosti na vybrané položce.
 
-## <a name="troubleshooting"></a>Poradce při potížích
+## <a name="troubleshooting"></a>Odstraňování problémů
  **Příkaz se nezobrazuje v nabídce:**
 
 - Příkaz se zobrazí pouze v instancích ladění sady Visual Studio, dokud nenainstalujete balíček DSL. Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](../modeling/deploying-domain-specific-language-solutions.md).

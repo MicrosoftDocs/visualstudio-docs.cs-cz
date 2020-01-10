@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 5af4fc76fa20148495ca44cc7e9b74d4b95ecb7c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a6d6611c8ce8bdb09023794b5eca029b6b972afb
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298105"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849979"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>Použití skriptů PowerShellu k publikování do vývojových a testovacích prostředí
 
@@ -26,13 +26,13 @@ Pomocí těchto skriptů můžete zřídit přizpůsobené verze (označované t
 
 ## <a name="prerequisites"></a>Požadavky
 
-* Azure SDK 2,3 nebo novější. Viz [soubory ke stažení pro Visual Studio](https://go.microsoft.com/fwlink/?LinkID=624384). (Nepotřebujete, aby sada Azure SDK generovala skripty pro webové projekty. Tato funkce je určena pro webové projekty, nikoli pro webové role v Cloud Services.)
-* Azure PowerShell 0.7.4 nebo novější. Viz [Jak nainstalovat a nakonfigurovat Azure PowerShell](/powershell/azure/overview).
+* Azure SDK 2,3 nebo novější. Viz [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/). (Nepotřebujete, aby sada Azure SDK generovala skripty pro webové projekty. Tato funkce je určena pro webové projekty, nikoli pro webové role v Cloud Services.)
+* Azure PowerShell 0.7.4 nebo novější. Viz téma [Instalace a konfigurace prostředí Azure PowerShell](/powershell/azure/overview).
 * [Windows PowerShell 3,0](https://docs.microsoft.com/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control) nebo novější.
 
 ## <a name="additional-tools"></a>Další nástroje
 
-K dispozici jsou další nástroje a prostředky pro práci s prostředím PowerShell v aplikaci Visual Studio pro vývoj pro Azure. Viz [PowerShell Tools for Visual Studio](https://go.microsoft.com/fwlink/?LinkId=404012).
+K dispozici jsou další nástroje a prostředky pro práci s prostředím PowerShell v aplikaci Visual Studio pro vývoj pro Azure. Viz [PowerShell Tools for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/c9eb3ba8-0c59-4944-9a62-6eee37294597).
 
 ## <a name="generating-the-publish-scripts"></a>Generování publikačních skriptů
 
@@ -48,7 +48,7 @@ Skript publikování obsahuje konkrétní kroky publikování pro nasazení na w
 
 ### <a name="windows-powershell-module"></a>Modul Windows PowerShell
 
-Modul prostředí Windows PowerShell, který generuje aplikace Visual Studio, obsahuje funkce, které používá skript pro publikování. Tyto funkce Azure PowerShell nejsou určeny pro úpravy. Viz [Jak nainstalovat a nakonfigurovat Azure PowerShell](/powershell/azure/overview).
+Modul prostředí Windows PowerShell, který generuje aplikace Visual Studio, obsahuje funkce, které používá skript pro publikování. Tyto funkce Azure PowerShell nejsou určeny pro úpravy. Viz téma [Instalace a konfigurace prostředí Azure PowerShell](/powershell/azure/overview).
 
 ### <a name="json-configuration-file"></a>Konfigurační soubor JSON
 
@@ -173,7 +173,7 @@ Pokud jste nikdy nespouštěli skript prostředí Windows PowerShell, musíte ne
 
     Po zobrazení výzvy zadejte své uživatelské jméno a heslo.
 
-    Všimněte si, že při automatizaci skriptu Tato metoda poskytování přihlašovacích údajů Azure nefunguje. Místo toho byste měli použít soubor `.publishsettings` k zadání přihlašovacích údajů. Jenom jednou použijte příkaz **Get-AzurePublishSettingsFile** ke stažení souboru z Azure a pak použijte **Import-AzurePublishSettingsFile** k importu tohoto souboru. Podrobné pokyny najdete v tématu [instalace a konfigurace Azure PowerShell](/powershell/azure/overview).
+    Všimněte si, že při automatizaci skriptu Tato metoda poskytování přihlašovacích údajů Azure nefunguje. Místo toho byste měli použít soubor `.publishsettings` k zadání přihlašovacích údajů. Jenom jednou použijte příkaz **Get-AzurePublishSettingsFile** ke stažení souboru z Azure a pak použijte **Import-AzurePublishSettingsFile** k importu tohoto souboru. Podrobné pokyny najdete v tématu [Instalace a konfigurace prostředí Azure PowerShell](/powershell/azure/overview).
 
 1. Volitelné Pokud chcete vytvořit prostředky Azure, jako je například virtuální počítač, databáze a web bez publikování webové aplikace, použijte příkaz **Publish-WebApplication. ps1** s argumentem **-Configuration** nastaveným na konfigurační soubor JSON. Tento příkazový řádek pomocí konfiguračního souboru JSON určí, které prostředky se mají vytvořit. Protože používá výchozí nastavení pro jiné argumenty příkazového řádku, vytvoří prostředky, ale nepublikuje webovou aplikaci. Možnost – verbose vám poskytne další informace o tom, co se děje.
 
@@ -252,7 +252,7 @@ Chcete-li automatizovat sestavování projektu, přidejte kód, který volá MSB
         #Write a function to build and package your web application
     ```
 
-    K sestavení webové aplikace použijte nástroj MsBuild. exe. Nápovědu najdete v tématu Reference k příkazovému řádku MSBuild na adrese: [http://go.microsoft.com/fwlink/?LinkId=391339](https://go.microsoft.com/fwlink/?LinkId=391339)
+    K sestavení webové aplikace použijte nástroj MsBuild. exe. Nápovědu najdete v tématu Reference k příkazovému řádku MSBuild na adrese: [http://go.microsoft.com/fwlink/?LinkId=391339](https://msdn.microsoft.com/library/ms164311.aspx)
 
     ```powershell
     Write-VerboseWithTime 'Build-WebDeployPackage: Start'

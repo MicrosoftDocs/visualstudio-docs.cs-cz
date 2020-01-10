@@ -3,19 +3,19 @@ title: Zvýhodnění WhiteSource | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 11/18/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 description: Naučte se aktivovat předplatné WhiteSource, které je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: fb403053d101cf2edf8677c7bcce494ae4e2d21e
-ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
+ms.openlocfilehash: 8db777135e9f78321ccbc7cc9d40bf657da97589
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74174132"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75866171"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>WhiteSource v předplatných sady Visual Studio
 
-Najděte a opravte slabá místa v open source a vygenerujte obsáhlé sestavy inventáře a licencí všech open source komponent v sestavení. 
+Najděte a opravte slabá místa opensourcového kódu a vytvořte komplexní inventární a licenční sestavy všech opensourcových komponent ve vašem buildu. 
 
 ## <a name="activation-steps"></a>Kroky aktivace
 
@@ -37,8 +37,23 @@ Najděte a opravte slabá místa v open source a vygenerujte obsáhlé sestavy i
 8. Jakmile úspěšně nainstalujete WhiteSource, vraťte se na [stránku Aktivace](https://bolt.whitesourcesoftware.com/whitesource-bolt-azure-devops#activate)a podívejte se na video, ve kterém zjistíte, jak ho nakonfigurovat. 
 9. Další informace najdete na [stránce s nejčastějšími dotazy](https://bolt.whitesourcesoftware.com/azure/faq/)k WhiteSource. 
 
-## <a name="eligibility"></a>Vznik
-[WhiteSource](https://marketplace.visualstudio.com/search?term=whitesource&target=AzureDevOps&category=All%20categories&sortBy=Relevance) je teď zdarma k dispozici v [Visual Studio Marketplace. 
+## <a name="eligibility"></a>Nárok
+
+| Úroveň předplatného                                                 |     Kanály                                            | Benefit                                                          | Mlčky?    |
+|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Ano       |
+| Visual Studio Enterprise s GitHubem Enterprise | VL | 6 měsíců       |  Ano       |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                           |Není k dispozici         |
+| Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                           |Není k dispozici         |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                           |Není k dispozici         |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                                           |Není k dispozici         |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
+||
+
+<sup>1</sup>  *zahrnuje: Microsoft Partner Network (Enterprise).  Nezahrnuje se: ne pro účely opětovného prodeje (NFR), Visual Studio Industry Partner (VSIP), ekvivalent, MCT software & Services Developer, BizSpark, představte, nejčastější profesionální specialista (MVP), regionální ředitel (RD).  MCT software & služby.*
+
+> [!NOTE]
+> Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
 
 ## <a name="support-resources"></a>Prostředky podpory
 - Potřebujete pomáhat s WhiteSource?  Chat s WhiteSource zástupcem v reálném čase na https://www.whitesourcesoftware.com/vse_whitesource_bolt/
@@ -50,3 +65,9 @@ Nezapomeňte tyto skvělé výhody aktivovat, abyste mohli využít maximum vaš
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
 - [Individuální kredit v Azure DevTest](vs-azure.md)
+
+## <a name="see-also"></a>Viz také:
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)

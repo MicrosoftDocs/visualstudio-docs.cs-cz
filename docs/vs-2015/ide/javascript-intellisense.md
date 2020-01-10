@@ -26,12 +26,12 @@ caps.latest.revision: 67
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e367ff6d6abbf40cdf7efebed04aee6fc74a384c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 962c724e231275c9fa716d6c823b7451292392cf
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300743"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848388"
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -127,7 +127,7 @@ Technologie IntelliSense umožňuje napsat kód rychleji a s menším množství
 ### <a name="UserDefined"></a>Uživatelem definované proměnné, funkce a objekty
  Když změníte soubor JavaScriptu, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] prověřování otevřených a odkazovaných dokumentů k určení všech dostupných prostředků kódu. To zahrnuje proměnné, funkce a objekty, které jste vytvořili. Tyto prostředky jsou pak k dispozici technologii IntelliSense jazyka JavaScript.
 
- Další informace o uživatelem definovaných proměnných, funkcích a objektech naleznete v tématu [vytváření vlastních objektů](https://go.microsoft.com/fwlink/?LinkId=108671) na webu MSDN.
+ Další informace o uživatelem definovaných proměnných, funkcích a objektech naleznete v tématu [vytváření vlastních objektů](https://msdn.microsoft.com/library/202863ha.aspx) na webu MSDN.
 
 ### <a name="External"></a>Odkazy na externí soubory
  Můžete zahrnout různé typy odkazů na externí soubory, které má technologie IntelliSense ve vašem kódu podporovat. Odkazy na externí soubory mohou být odkazy skriptu, direktivy odkazů nebo mohou být určeny pomocí referenčních skupin.
@@ -283,6 +283,6 @@ Technologie IntelliSense umožňuje napsat kód rychleji a s menším množství
 - [Rozšíření JavaScript IntelliSense](../ide/extending-javascript-intellisense.md)
 - [Doplňování výrazů pro identifikátory](../ide/statement-completion-for-identifiers.md)
 - [Dokumentační komentáře XML](../ide/xml-documentation-comments-javascript.md)
-- [O modelu objektu DHTML](https://go.microsoft.com/fwlink/?LinkID=92344)
+- [O modelu objektu DHTML](https://msdn2.microsoft.com/library/ms533022.aspx)
 - [Seznam členů](https://msdn.microsoft.com/1b9cc469-9cd4-4d42-9999-1f9479635ff8)
-- [SRC – &#124; vlastnost src atributu](https://go.microsoft.com/fwlink/?LinkId=92345)
+- [SRC – &#124; vlastnost src atributu](https://msdn2.microsoft.com/library/ms534642.aspx)

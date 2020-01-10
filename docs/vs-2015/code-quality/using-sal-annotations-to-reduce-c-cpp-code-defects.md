@@ -13,12 +13,12 @@ caps.latest.revision: 29
 author: mikeblome
 ms.author: mblome
 manager: jillfra
-ms.openlocfilehash: d8ea7122c5dcd086d10e4b937792dd7e47f68547
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 3dd1a481a7db9739bdd847c0b6780a2b55d28469
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291896"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848302"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>Použití poznámek SAL k snížení míry výskytu závad kódu C/C++
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -59,8 +59,8 @@ SAL je jazyk poznámky ke zdrojovému kódu společnosti Microsoft. Pomocí pozn
   
      Obsahuje příklady, které ukazují, jak používat poznámky SAL. Vysvětluje také běžné nástrah.  
   
-## <a name="related-resources"></a>Související prostředky  
- [Blog týmu analýzy kódu](https://go.microsoft.com/fwlink/?LinkId=251197)  
+## <a name="related-resources"></a>Související informační zdroje  
+ [Blog týmu analýzy kódu](https://blogs.msdn.com/b/codeanalysis/)  
   
 ## <a name="see-also"></a>Viz také  
- [Poznámky SAL 2,0 pro ovladače Windows](https://go.microsoft.com/fwlink/?LinkId=250979)
+ [Poznámky SAL 2,0 pro ovladače Windows](https://msdn.microsoft.com/library/windows/hardware/hh454237.aspx)

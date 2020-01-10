@@ -14,12 +14,12 @@ ms.assetid: d9011f5a-cb53-418f-9d8f-74b15b9fc5f5
 caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: e404d569776eef1cd2146ed636177be30151aaab
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 5b1b4846bcceba2325da1c835b59a48e651190a1
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299729"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852109"
 ---
 # <a name="support-for-the-visual-studio-sdk"></a>Podpora sady Visual Studio SDK
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,19 +29,19 @@ K dispozici je několik možností podpory pro zákazníky, kteří mají dotazy
 ## <a name="free-support"></a>Bezplatná podpora  
   
 ### <a name="msdn-development-center"></a>Vývojové centrum MSDN  
- [Středisko pro vývojáře rozšiřitelnosti sady Visual Studio](https://go.microsoft.com/fwlink/?LinkID=84381) na webu MSDN obsahuje zdroje informací, které vám pomůžou zodpovědět otázky týkající se rozšíření sady Visual Studio. Například existuje několik odkazů na VSIP vývojářské Blogy.  
+ [Středisko pro vývojáře rozšiřitelnosti sady Visual Studio](https://msdn.microsoft.com/vstudio/default.aspx) na webu MSDN obsahuje zdroje informací, které vám pomůžou zodpovědět otázky týkající se rozšíření sady Visual Studio. Například existuje několik odkazů na VSIP vývojářské Blogy.  
   
 ### <a name="microsoft-newsgroups"></a>Microsoft Newsgroups  
  Členové vývojového týmu sady Visual Studio a další vývojáři, kteří sadu Visual Studio rozšířili, se často účastní diskusní skupiny Microsoft. Public. vstudio. rozšiřitelnost. Tato diskusní skupina je spravovaná. Pokud jste univerzální předplatitelem MSDN, ujistěte se, že jste zaregistrovali alias bez nevyžádané pošty, který může Microsoft reagovat.  
   
 ### <a name="msdn-forums"></a>Fóra MSDN  
- [Fóra MSDN](https://go.microsoft.com/fwlink/?LinkID=76632) poskytují jiný způsob, jak s kolegy a odborníky komunikovat. Grafické uživatelské rozhraní (UI) fór je navrženo tak, aby bylo snazší je používat než diskusní skupiny. [Fórum rozšiřitelnosti sady Visual Studio](https://go.microsoft.com/fwlink/?LinkID=121964) je dobrým místem, kde můžete začít vyhledávat odpovědi na otázky týkající se rozšiřitelnosti. Vždycky Vyhledávejte před dotazem, protože někdo jiný už mohl požádat o stejnou otázku.  
+ [Fóra MSDN](https://social.msdn.microsoft.com/forums/categories/) poskytují jiný způsob, jak s kolegy a odborníky komunikovat. Grafické uživatelské rozhraní (UI) fór je navrženo tak, aby bylo snazší je používat než diskusní skupiny. [Fórum rozšiřitelnosti sady Visual Studio](https://msdn.microsoft.com/vsx/default.aspx) je dobrým místem, kde můžete začít vyhledávat odpovědi na otázky týkající se rozšiřitelnosti. Vždycky Vyhledávejte před dotazem, protože někdo jiný už mohl požádat o stejnou otázku.  
   
 ### <a name="visual-studio-marketplace"></a>Visual Studio Marketplace  
  [Visual Studio Marketplace](https://marketplace.visualstudio.com/) je místo pro rozšíření a vzorový kód. Můžete najít nástroje, které zlepšují produktivitu a uživatelské prostředí pomocí sady Visual Studio, ukázkové aplikace, které ukazují, jak používat VSPackage a Managed Extensibility Framework (MEF) a další druhy ukázek.  
   
-### <a name="codeplex"></a>Webu  
- [CodePlex](https://go.microsoft.com/fwlink/?LinkId=76627) je web pro hostování projektu Microsoft Open Source. CodePlex můžete použít k vytvoření a sdílení nových projektů, přispívání do existujících projektů nebo k používání aplikací na webu a poskytování zpětné vazby. Všechny PowerToys (a jejich dokumentace), které byly součástí předchozích verzí [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)], jsou nyní k dispozici na webu CodePlex.  
+### <a name="codeplex"></a>Codeplex  
+ [CodePlex](https://www.codeplex.com/) je web pro hostování projektu Microsoft Open Source. CodePlex můžete použít k vytvoření a sdílení nových projektů, přispívání do existujících projektů nebo k používání aplikací na webu a poskytování zpětné vazby. Všechny PowerToys (a jejich dokumentace), které byly součástí předchozích verzí [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)], jsou nyní k dispozici na webu CodePlex.  
   
 ## <a name="included-support"></a>Zahrnutá podpora  
   
@@ -63,7 +63,7 @@ K dispozici je několik možností podpory pro zákazníky, kteří mají dotazy
   
  Dotazy týkající se nabídek Premier Support v kombinaci s programem VSIP lze odeslat do [vsipsvs@microsoft.com](mailto:vsipsvs@microsoft.com). Dotazy týkající se nového programu partner Advantage lze odeslat do [advantg@microsoft.com](mailto:advantg@microsoft.com).  
   
- Informace o jednotlivých žádostech o podporu najdete v [jednotlivých žádostech o podporu](https://go.microsoft.com/fwlink/?LinkID=82385).  
+ Informace o jednotlivých žádostech o podporu najdete v [jednotlivých žádostech o podporu](https://support.microsoft.com/oas/default.aspx?gprid=3040).  
   
 ## <a name="see-also"></a>Viz také  
  [Kontaktujte nás](../ide/talk-to-us.md)

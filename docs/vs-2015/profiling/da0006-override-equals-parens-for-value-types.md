@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: ae18d4cb69de5faa4289a99cbb53b273443b494a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: eaba2f099f2a4d04574acd5bcdd2ba8f8f44b4ce
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300990"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852366"
 ---
 # <a name="da0006-override-equals-for-value-types"></a>DA0006: Přepište Equals() pro hodnoty
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,13 +30,13 @@ ID pravidla | DA0006 |
 | Zpráva | Přepište rovnost a operátor rovnosti na hodnotových typech. |  
 | Typ messge | Upozornění |  
   
-## <a name="cause"></a>Příčina  
+## <a name="cause"></a>příčina  
  Volání metody Equals nebo operátorů rovnosti typu veřejné hodnoty jsou významným podílem dat profilování. Zvažte implementaci efektivnější metody.  
   
 ## <a name="rule-description"></a>Popis pravidla  
  V případě hodnotových typů zděděná implementace Equals používá knihovnu <xref:System.Reflection> a porovnává obsah všech polí v typu. Reflexe je výpočetně náročná a porovnání rovnosti všech polí může být zbytečné. Pokud očekáváte, že uživatelé budou porovnávat nebo třídit instance nebo je používat jako klíče zatřiďovací tabulky, váš typ hodnoty by měl implementovat Equals. Pokud váš programovací jazyk podporuje přetížení operátoru, měli byste také poskytnout implementaci operátorů rovnosti a nerovnosti.  
   
- Další informace o tom, jak přepsat rovnost a operátory rovnosti, naleznete v tématu [pokyny pro implementaci Equals a operátoru rovnosti (= =)](https://go.microsoft.com/fwlink/?LinkId=177818).  
+ Další informace o tom, jak přepsat rovnost a operátory rovnosti, naleznete v tématu [pokyny pro implementaci Equals a operátoru rovnosti (= =)](https://msdn.microsoft.com/library/7h9bszxx.aspx).  
   
 ## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění  
  Příklad implementace operátorů Equals a rovnosti naleznete v tématu pravidlo analýzy kódu [CA1815: přepište Equals a operator Equals on Value Types](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md)

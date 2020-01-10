@@ -26,12 +26,12 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f394cca9a248b5304a165f68a60b966d8e3684b2
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0d57cee8591196d12e51e58fb0e5e6a4a2cdf94a
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291372"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848365"
 ---
 # <a name="introduction-to-international-applications-based-on-the-net-framework"></a>Představení mezinárodních aplikací založených na prostředí .NET Framework
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]jsou k dispozici dvě části pro 
 
  Model lokalizace [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sestává z hlavního sestavení, které obsahuje kód aplikace a záložní prostředky – řetězce, obrázky a další objekty pro jazyk, ve kterém se aplikace původně vyvinula. Každá lokalizovaná aplikace bude mít satelitní sestavení nebo sestavení, která obsahují pouze lokalizované prostředky. Vzhledem k tomu, že hlavní sestavení vždy obsahuje záložní prostředky, pokud prostředek nebyl nalezen v lokalizovaném satelitním sestavení, <xref:System.Resources.ResourceManager> se pokusí ho načíst hierarchicky způsobem, a nakonec vrátit se k prostředku v hlavním sestavení. Záložní systém prostředků je podrobněji vysvětlen v [hierarchické organizaci prostředků k lokalizaci](../ide/hierarchical-organization-of-resources-for-localization.md).
 
- Jedním z prostředků lokalizace, které byste měli zvážit, je Glosář všech lokalizovaných produktů společnosti Microsoft. Tento soubor CSV obsahuje více než 12 000 anglických podmínek a překlady podmínek až do 59 různých jazyků. Glosář je k dispozici ke stažení na webové stránce [překlady terminologie společnosti Microsoft](https://go.microsoft.com/fwlink/?LinkId=128146) .
+ Jedním z prostředků lokalizace, které byste měli zvážit, je Glosář všech lokalizovaných produktů společnosti Microsoft. Tento soubor CSV obsahuje více než 12 000 anglických podmínek a překlady podmínek až do 59 různých jazyků. Glosář je k dispozici ke stažení na webové stránce [překlady terminologie společnosti Microsoft](https://msdn.microsoft.com/goglobal/bb688105.aspx) .
 
  Projektový systém pro model Windows Forms aplikace může generovat soubory prostředků pro záložní i každou požadovanou jazykovou verzi uživatelského rozhraní. Záložní soubor prostředků je integrován do hlavního sestavení a soubory prostředků specifické pro jazykovou verzi jsou pak integrovány do satelitních sestavení, jeden pro každou jazykovou verzi uživatelského rozhraní. Při sestavování projektu jsou soubory prostředků kompilovány z formátu XML sady Visual Studio (. resx) do mezilehlého binárního formátu (. Resources), které jsou poté vloženy do satelitních sestavení.
 

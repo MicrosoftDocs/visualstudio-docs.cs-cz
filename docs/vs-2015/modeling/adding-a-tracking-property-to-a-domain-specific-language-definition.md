@@ -13,12 +13,12 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 19d673d9d09ce95580e25033966e1a901255fd90
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 1e98a5902495528082a8328befe724c91f01a3d0
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74292639"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852401"
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>Přidání vlastnosti sledování do definice jazyka specifického pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,9 +50,9 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](https://go.microsoft.com/fwlink/?LinkID=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](https://go.microsoft.com/fwlink/?LinkID=185580)|
-|[!INCLUDE[dsl](../includes/dsl-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185581](https://go.microsoft.com/fwlink/?LinkID=185581)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](https://www.visualstudio.com/)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](https://docs.microsoft.com/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
+|[!INCLUDE[dsl](../includes/dsl-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185581](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)|
 
 ## <a name="creating-the-dsl-project"></a>Vytváření projektu DSL
  Vytvořte projekt pro jazyk specifický pro doménu.
@@ -722,9 +722,9 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 
 #### <a name="to-exercise-the-language"></a>Postup při cvičení jazyka
 
-1. V nabídce **sestavení** klikněte na příkaz **znovu sestavit řešení**.
+1. Na **sestavení** nabídky, klikněte na tlačítko **znovu sestavit řešení**.
 
-2. V nabídce **ladit** klikněte na **Spustit ladění**.
+2. Na **ladění** nabídky, klikněte na tlačítko **spustit ladění**.
 
      Experimentální sestavení [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] otevře **ladicí** řešení, které obsahuje prázdný testovací soubor.
 

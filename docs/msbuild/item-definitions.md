@@ -1,44 +1,44 @@
 ---
-title: Definice položek | Dokumentace Microsoftu
+title: Definice položek | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, item definitions
 ms.assetid: 8e3dc223-f9e5-4974-aa0e-5dc7967419cb
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8673cb816cfd03aa5bb0f2c6ffb7aa5205a8372e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 95275f90af0fbf6f002a7e3a127e7d7ca7d08a39
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006774"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75573778"
 ---
 # <a name="item-definitions"></a>Definice položek
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2.0 umožňuje statických deklarací položky v souborech projektu pomocí [ItemGroup](../msbuild/itemgroup-element-msbuild.md) elementu. Však může být přidají metadata pouze na úrovni položek, i v případě, že metadata jsou stejné pro všechny položky. Počínaje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5, prvek projektu s názvem [ItemDefinitionGroup –](../msbuild/itemdefinitiongroup-element-msbuild.md) překonává toto omezení. *ItemDefinitionGroup –* umožňuje definovat sadu definice položek, které přidávají výchozí hodnoty metadat pro všechny položky v typu s názvem položky.
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2,0 umožňuje statické deklaraci položek v souborech projektu pomocí elementu [ItemCollection](../msbuild/itemgroup-element-msbuild.md) . Metadata však mohou být přidána pouze na úrovni položky, i když jsou metadata identická pro všechny položky. Počínaje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3,5 je toto omezení předáno prvkem projektu s názvem [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) . *ItemDefinitionGroup* umožňuje definovat sadu definic položek, které přidávají výchozí hodnoty metadat všem položkám v typu pojmenované položky.
 
-*ItemDefinitionGroup –* elementu se zobrazí okamžitě po [projektu](../msbuild/project-element-msbuild.md) prvek souboru projektu. Definice položek poskytují následující funkce:
+Element *ItemDefinitionGroup* se zobrazí hned po elementu [projektu](../msbuild/project-element-msbuild.md) souboru projektu. Definice položek poskytují následující funkce:
 
-- Můžete definovat globální výchozí nastavení metadat pro položky mimo cíl. To znamená na stejná metadata platí pro všechny položky zadaného typu.
+- Můžete definovat globální výchozí metadata pro položky mimo cíl. To znamená, že stejná metadata platí pro všechny položky zadaného typu.
 
-- Typy položek může mít několik definic. Při přidání dalších metadat specifikace typu, poslední specifikace přednost. \(Metadata se řídí stejným pořadím importu následujícím způsobem vlastnosti.\)
+- Typy položek mohou mít více definicí. Při přidání dalších specifikací metadat k typu má přednost poslední specifikace. \(metadata následují po stejném pořadí importu jako vlastnosti.\)
 
-- Může být metadata sčítání. Například jsou hodnoty CDefines shromážděna podmíněně, v závislosti na vlastnosti, které jsou nastavena. Například, `MT;STD_CALL;DEBUG;UNICODE`.
+- Metadata lze přidávat. Například hodnoty CDefines se sčítají podmíněně v závislosti na vlastnostech, které se nastavují. Například `MT;STD_CALL;DEBUG;UNICODE`.
 
-- Metadata se dá odebrat.
+- Metadata je možné odebrat.
 
 - Podmínky lze použít k řízení zahrnutí metadat.
 
-## <a name="item-metadata-default-values"></a>Položka metadat výchozí hodnoty
-Metadata položky, která je definována v ItemDefinitionGroup – je jenom deklarace výchozí metadat. Metadata nelze použít, dokud nedefinujete položku, která se používá ItemGroup tak, aby obsahovala hodnoty metadat.
+## <a name="item-metadata-default-values"></a>Výchozí hodnoty metadat položky
+Metadata položky, která jsou definována v ItemDefinitionGroup, jsou pouze deklarace výchozích metadat. Metadata se nevztahují, pokud nedefinujete položku, která používá danou položku, aby obsahovala hodnoty metadat.
 
 > [!NOTE]
-> V mnoha příkladech v tomto tématu se zobrazí ItemDefinitionGroup – element, ale pro přehlednost je vynecháno jeho odpovídající ItemGroup definici.
+> V mnoha příkladech v tomto tématu je zobrazen element ItemDefinitionGroup, ale jeho odpovídající definice objektu Item je vynechána pro přehlednost.
 
-Metadata explicitně definované v ItemGroup má přednost před metadat v ItemDefinitionGroup –. Metadata v ItemDefinitionGroup – platí jenom pro nedefinovaný metadata ItemGroup. Příklad:
+Metadata explicitně definovaná v objektu ItemCollection mají přednost před metadaty v ItemDefinitionGroup. Metadata v ItemDefinitionGroup se aplikují pouze pro nedefinovaná metadata ve více položkách. Příklad:
 
 ```xml
 <ItemDefinitionGroup>
@@ -55,41 +55,41 @@ Metadata explicitně definované v ItemGroup má přednost před metadat v ItemD
 </ItemGroup>
 ```
 
-V tomto příkladu je použít výchozí metadat "m" k položce "i", protože metadata "m" není explicitně určené položky "i". Výchozí metadat "n" však není použít k položce "i", protože metadata "n" je již definován položky "i".
+V tomto příkladu se výchozí metadata "m" aplikují na položku "i", protože metadata "m" nejsou explicitně definována položkou "i". Výchozí metadata "n" však nejsou použita na položku "i", protože metadata "n" jsou již definována položkou "i".
 
 > [!NOTE]
-> Názvy – Element XML a parametru jsou případ\-citlivé. Položka metadat a položky\/názvy vlastností nejsou případu\-citlivé. ItemDefinitionGroup – položky, které mají názvy, které se liší pouze velikostí písma proto mají být považována za stejné ItemGroup.
+> V názvech elementů XML a parametrů jsou rozlišována malá a velká písmena\-. V názvech a položkách\/ch vlastností položky nejsou rozlišována velká a malá písmena\-. Proto by ItemDefinitionGroup položky, které mají názvy, které se liší pouze písmenem Case, měly být považovány za stejné pole Item.
 
-## <a name="value-sources"></a>Hodnota zdroje
-Hodnoty pro metadata, která je definována v ItemDefinitionGroup – mohou pocházet z mnoha různých zdrojů, následujícím způsobem:
+## <a name="value-sources"></a>Zdroje hodnot
+Hodnoty metadat, které jsou definovány ve ItemDefinitionGroup, mohou pocházet z mnoha různých zdrojů, a to následujícím způsobem:
 
-- PropertyGroup Property
+- Vlastnost Property
 
-- Položku ze ItemDefinitionGroup –
+- Položka z ItemDefinitionGroup
 
-- Položka transformaci ItemDefinitionGroup – položky
+- Transformace položky u položky ItemDefinitionGroup
 
 - Proměnná prostředí
 
-- Global – vlastnost (z *MSBuild.exe* příkazového řádku)
+- Globální vlastnost (z příkazového řádku *MSBuild. exe* )
 
-- Rezervované vlastnosti
+- Rezervovaná vlastnost
 
-- Metadata známé na položku ze ItemDefinitionGroup –
+- Dobře známá metadata položky z ItemDefinitionGroup
 
-- Oddíl CDATA \< \! \[CDATA\[nic tady není analyzovat\]\]\>
+- CDATA oddílu \<\!\[CDATA\[cokoli zde není analyzováno\]\]\>
 
 > [!NOTE]
-> Metadata položky ze ItemGroup není užitečné při deklaraci ItemDefinitionGroup – metadat, protože ItemDefinitionGroup – prvky se zpracovávají před ItemGroup prvky.
+> Metadata položky ze složky Item nejsou užitečná v deklaraci metadat ItemDefinitionGroup, protože prvky ItemDefinitionGroup jsou zpracovávány před prvky Item.
 
-## <a name="additive-and-multiple-definitions"></a>Additive a několik definic
-Při přidávání definic nebo používání více ItemDefinitionGroups, mějte na paměti následující:
+## <a name="additive-and-multiple-definitions"></a>Doplňková a vícenásobná definice
+Pokud přidáte definice nebo použijete více ItemDefinitionGroups, pamatujte na následující:
 
-- Specifikace další metadata se přidá do typu.
+- Do tohoto typu se přidá další specifikace metadat.
 
-- Poslední specifikace přednost.
+- Poslední specifikace má přednost.
 
-Pokud máte více ItemDefinitionGroups, každé následné specifikace přidá jeho metadata do předchozí definice. Příklad:
+Pokud máte více ItemDefinitionGroups, každá další specifikace přidá svá metadata do předchozí definice. Příklad:
 
 ```xml
 <ItemDefinitionGroup>
@@ -105,9 +105,9 @@ Pokud máte více ItemDefinitionGroups, každé následné specifikace přidá j
 </ItemDefinitionGroup>
 ```
 
-V tomto příkladu se přidají metadata "o" a "m", "n".
+V tomto příkladu se metadata "o" přidají do "m" a "n".
 
-Kromě toho je možné přidat také hodnoty dříve definovaná metadata. Příklad:
+Kromě toho je možné přidat i dříve definované hodnoty metadat. Příklad:
 
 ```xml
 <ItemDefinitionGroup>
@@ -122,12 +122,12 @@ Kromě toho je možné přidat také hodnoty dříve definovaná metadata. Pří
 </ItemDefinitionGroup>
 ```
 
-V tomto příkladu, dříve definovanou hodnotu pro metadata "m" \(m1\) přidá novou hodnotu \(m2\), tak, aby konečná hodnota "m1; m2".
+V tomto příkladu se dříve definovaná hodnota pro metadata "m" \(M1\) přidána do nové hodnoty \(m2\), takže konečná hodnota je M1; m2.
 
 > [!NOTE]
-> Tato situace může také nastat ve stejném ItemDefinitionGroup –.
+> K tomu může dojít také ve stejném ItemDefinitionGroup.
 
-Při přepsání dříve definovaných metadat poslední specifikace přednost. V následujícím příkladu přejde konečná hodnota metadat "m" z "m1" na "m1a".
+Pokud přepíšete dříve definovaná metadata, má přednost poslední specifikace. V následujícím příkladu poslední hodnota metadat "m" přechází z "M1" na "M1A".
 
 ```xml
 <ItemDefinitionGroup>
@@ -142,8 +142,8 @@ Při přepsání dříve definovaných metadat poslední specifikace přednost. 
 </ItemDefinitionGroup>
 ```
 
-## <a name="use-conditions-in-an-itemdefinitiongroup"></a>Podmínky použití v ItemDefinitionGroup –
-Podmínky v ItemDefinitionGroup – slouží k řízení zahrnutí metadat. Příklad:
+## <a name="use-conditions-in-an-itemdefinitiongroup"></a>Použití podmínek v ItemDefinitionGroup
+Můžete použít podmínky v ItemDefinitionGroup k řízení zahrnutí metadat. Příklad:
 
 ```xml
 <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
@@ -153,12 +153,12 @@ Podmínky v ItemDefinitionGroup – slouží k řízení zahrnutí metadat. Př�
 </ItemDefinitionGroup>
 ```
 
-V takovém případě je součástí výchozí metadat "m1" položka "i", pouze v případě, že hodnota vlastnosti "Konfigurace" je "Debug".
+V tomto případě je výchozí metadata "M1" u položky "i" obsažena pouze v případě, že hodnota vlastnosti "konfigurace" je "ladit".
 
 > [!NOTE]
-> V podmínkách jsou podporovány pouze odkazy na místních metadat.
+> V podmínkách jsou podporovány pouze místní odkazy na metadata.
 
-Odkazy na metadata definované v předchozích ItemDefinitionGroup – jsou místní položka není definice skupiny. To znamená oboru odkazů jsou specifické pro položku. Příklad:
+Odkazy na metadata definovaná v dřívějším ItemDefinitionGroup jsou místní pro položku, nikoli pro skupinu definic. To znamená, že rozsah odkazů je specifický pro položky. Příklad:
 
 ```xml
 <ItemDefinitionGroup>
@@ -173,7 +173,7 @@ Odkazy na metadata definované v předchozích ItemDefinitionGroup – jsou mís
 
 ```
 
-V příkladu výše položka "i" odkazuje na položku "test" v jeho stavu. Tento stav bude nikdy hodnotu true, protože MSBuild interpretuje odkaz na další položku metadat v ItemDefinitionGroup – jako prázdný řetězec. Proto se nastavuje "m" k "m0."
+Ve výše uvedeném příkladu položka "i" odkazuje na položku "test" ve své podmínce. Tato podmínka nebude nikdy pravdivá, protože nástroj MSBuild interpretuje odkaz na metadata jiné položky v ItemDefinitionGroup jako prázdný řetězec. Proto bude "m" nastaven na "M0".
 
 ```xml
   <ItemDefinitionGroup>
@@ -186,10 +186,10 @@ V příkladu výše položka "i" odkazuje na položku "test" v jeho stavu. Tento
 
 ```
 
-V příkladu výše, "m" se nastavuje na hodnotu "m1" jako odkazy na podmínky položky "i". hodnota metadat pro položku "Ano".
+Ve výše uvedeném příkladu by se hodnota "m" nastavila na hodnotu "M1", protože položka odkazuje na metadata položky "i" pro položku "Ano".
 
-## <a name="override-and-delete-metadata"></a>Přepsat a odstranění metadat
-Metadata definované v ItemDefinitionGroup – element lze přepsat v pozdější ItemDefinitionGroup – element tak, že nastavíte hodnotu metadat na prázdnou hodnotu. Můžete také fakticky odstranit položku metadat nastavením na prázdnou hodnotu. Příklad:
+## <a name="override-and-delete-metadata"></a>Přepsat a odstranit metadata
+Metadata definovaná v elementu ItemDefinitionGroup lze přepsat v pozdějším elementu ItemDefinitionGroup nastavením hodnoty metadata na prázdnou. Můžete také efektivně odstranit položku metadat tím, že ji nastavíte na prázdnou hodnotu. Příklad:
 
 ```xml
 <ItemDefinitionGroup>
@@ -204,10 +204,10 @@ Metadata definované v ItemDefinitionGroup – element lze přepsat v pozdějš�
 </ItemDefinitionGroup>
 ```
 
-Položka "i" stále obsahuje metadata "m", ale její hodnota je prázdná.
+Položka "i" stále obsahuje metadata "m", ale její hodnota je nyní prázdná.
 
-## <a name="scope-of-metadata"></a>Obor metadat
-ItemDefinitionGroups mají globální rozsah na definované a globální vlastnosti, bez ohledu na to jsou definovány. Výchozí definice metadat v ItemDefinitionGroup – můžete používat referenci na sebe. Následující příklad používá odkaz na jednoduché metadata:
+## <a name="scope-of-metadata"></a>Rozsah metadat
+ItemDefinitionGroups mají globální rozsah u definovaných a globálních vlastností bez ohledu na jejich definování. Výchozí definice metadat v ItemDefinitionGroup můžou být odkazující samy na sebe. Například následující příklad používá jednoduchou referenci metadat:
 
 ```xml
 <ItemDefinitionGroup>
@@ -218,7 +218,7 @@ ItemDefinitionGroups mají globální rozsah na definované a globální vlastno
 </ItemDefinitionGroup>
 ```
 
-Odkaz na kvalifikovaný metadata je také možné:
+Lze také použít kvalifikovaný odkaz na metadata:
 
 ```xml
 <ItemDefinitionGroup>
@@ -229,7 +229,7 @@ Odkaz na kvalifikovaný metadata je také možné:
 </ItemDefinitionGroup>
 ```
 
-Nicméně toto není platná:
+Následující jsou však neplatné:
 
 ```xml
 <ItemDefinitionGroup>
@@ -240,7 +240,7 @@ Nicméně toto není platná:
 </ItemDefinitionGroup>
 ```
 
-Počínaje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5, ItemGroups může být také odkazující na sebe. Příklad:
+Počínaje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3,5 může být ItemGroups také odkazující na sebe. Příklad:
 
 ```xml
 <ItemGroup>

@@ -11,17 +11,17 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 33689ed44f4228411243d3b9716a2407b751d32b
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 14bced870cd24badcaf2a687fc4a1a2edeb740c0
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300646"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851011"
 ---
 # <a name="concurrency-visualizer-sdk"></a>SDK Vizualizéru souběžnosti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Svůj zdrojový kód můžete instrumentovat pomocí sady Vizualizátor souběžnosti SDK pro zobrazení dalších informací v Vizualizátor souběžnosti. Můžete přidružit další data k fázím a událostem ve vašem kódu. Tyto další vizualizace se označují jako *značky*.  Úvodní návod najdete v tématu [představení sady Vizualizátor souběžnosti SDK](https://go.microsoft.com/fwlink/?LinkId=235405).
+Svůj zdrojový kód můžete instrumentovat pomocí sady Vizualizátor souběžnosti SDK pro zobrazení dalších informací v Vizualizátor souběžnosti. Můžete přidružit další data k fázím a událostem ve vašem kódu. Tyto další vizualizace se označují jako *značky*.  Úvodní návod najdete v tématu [představení sady Vizualizátor souběžnosti SDK](https://blogs.msdn.com/b/visualizeparallel/archive/2011/10/17/introducing-the-concurrency-visualizer-sdk.aspx).
 
 ## <a name="properties"></a>Vlastnosti
  Příznaky, rozsahy a zprávy obsahují dvě vlastnosti: kategorie a důležitost. V dialogovém okně [Upřesnit nastavení](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) lze pomocí těchto vlastností filtrovat sadu zobrazených značek. Kromě toho tyto vlastnosti ovlivňují vizuální znázornění značek. Například velikost příznaků se používá k reprezentaci důležitosti. Kromě toho se k označení kategorie používá barva.
@@ -123,7 +123,7 @@ V C#jazyce Visual Basic a jiném spravovaném kódu použijte výchozího poskyt
 
 ## <a name="related-topics"></a>Související témata
 
-|Titul|Popis|
+|Název|Popis|
 |-----------|-----------------|
 |[Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)|Popisuje rozhraní API Vizualizátor souběžnosti pro C++.|
 |[Referenční dokumentace knihoven jazyka C](../profiling/c-library-reference.md)|Popisuje rozhraní API Vizualizátor souběžnosti pro jazyk C.|

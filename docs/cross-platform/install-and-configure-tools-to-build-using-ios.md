@@ -12,16 +12,16 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 33adad7117678ccc5550db86baada43a1c487916
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: e869a02475917f2444bedbb1bc9b7373b893d098
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72588861"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846896"
 ---
-# <a name="install-and-configure-tools-to-build-using-ios"></a>Instalace a konfigurace nástrojů pro sestavení pomocí iOS
+# <a name="install-and-configure-tools-to-build-using-ios"></a>Instalace a konfigurace nástrojů pro vytváření pomocí iOS
 
-Můžete použít Visual Studio s **vývojem mobilních C++**  aplikací pro různé platformy s nástroji k úpravám, ladění a nasazování kódu iOS do simulátoru iOS nebo do zařízení s iOS. Z důvodu licenčních omezení se ale kód musí sestavit a spustit vzdáleně na Macu. Pokud chcete vytvářet a spouštět aplikace pro iOS pomocí sady Visual Studio, musíte na Macu nastavit a nakonfigurovat vzdáleného agenta [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988). Vzdálený Agent zpracovává požadavky na sestavení ze sady Visual Studio a spustí aplikaci na zařízení s iOS připojeném k počítači Mac nebo v simulátoru iOS na Macu.
+Můžete použít Visual Studio s **vývojem mobilních C++**  aplikací pro různé platformy s nástroji k úpravám, ladění a nasazování kódu iOS do simulátoru iOS nebo do zařízení s iOS. Z důvodu licenčních omezení se ale kód musí sestavit a spustit vzdáleně na Macu. Pokud chcete vytvářet a spouštět aplikace pro iOS pomocí sady Visual Studio, musíte na Macu nastavit a nakonfigurovat vzdáleného agenta [vcremote](https://www.npmjs.com/package/vcremote). Vzdálený Agent zpracovává požadavky na sestavení ze sady Visual Studio a spustí aplikaci na zařízení s iOS připojeném k počítači Mac nebo v simulátoru iOS na Macu.
 
 > [!NOTE]
 > Informace o použití služeb Mac hostovaných v cloudu místo Mac najdete v tématu [Konfigurace sady Visual Studio pro připojení k vašemu cloudu Mac hosta](/visualstudio/cross-platform/tools-for-cordova/tips-workarounds/host-a-mac-in-the-cloud?view=toolsforcordova-2017#configure-visual-studio-to-connect-to-your-cloud-hosted-mac). Pokyny jsou pro sestavování pomocí Visual Studio Tools pro Apache Cordova. Chcete-li použít pokyny k sestavení C++pomocí, nahraďte `vcremote` `remotebuild`.
@@ -68,7 +68,7 @@ Pokud chcete nainstalovat a používat vzdáleného agenta pro vývoj kódu pro 
 
 ## <a name="Install"></a>Instalace vzdáleného agenta pro iOS
 
-Když nainstalujete vývoj pro mobilní zařízení C++ pomocí úlohy, Visual Studio může komunikovat s [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988), vzdáleným agentem běžícím na Macu, aby přenesl soubory, vytvořil a spouštěl aplikaci pro iOS a odesílal příkazy pro ladění.
+Když nainstalujete vývoj pro mobilní zařízení C++ pomocí úlohy, Visual Studio může komunikovat s [vcremote](https://www.npmjs.com/package/vcremote), vzdáleným agentem běžícím na Macu, aby přenesl soubory, vytvořil a spouštěl aplikaci pro iOS a odesílal příkazy pro ladění.
 
 Než nainstalujete vzdáleného agenta, ujistěte se, že jste splnili [požadavky](#prerequisites) a dokončili kroky instalace v části [Instalace mobilního vývoje pro různé platformy C++pomocí ](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md#install-the-tools).
 
@@ -111,7 +111,7 @@ Můžete použít vzdáleného agenta v nezabezpečeném režimu. V nezabezpeče
 
 #### <a name="to-disable-secured-connection-mode"></a>Zakázání režimu zabezpečeného připojení
 
-- Pokud chcete v `vcremote` zakázat režim zabezpečeného připojení, zadejte tento příkaz do aplikace Terminal na vašem počítači Mac:
+- Pokud chcete v `vcremote`zakázat režim zabezpečeného připojení, zadejte tento příkaz do aplikace Terminal na vašem počítači Mac:
 
    `vcremote --secure false`
 
@@ -125,7 +125,7 @@ Jakmile spustíte vzdáleného agenta, můžete ho použít ze sady Visual Studi
 
 #### <a name="to-stop-the-remote-agent"></a>Zastavení vzdáleného agenta
 
-- V okně terminálu `vcremote` v systému zadejte **ovládací prvek** +**C**.
+- V okně terminálu `vcremote` v systému zadejte **ovládací prvek**+**C**.
 
 ## <a name="ConfigureVS"></a>Konfigurace vzdáleného agenta v aplikaci Visual Studio
 
@@ -272,7 +272,7 @@ Ověřte, že `ideviceinstaller` můžou komunikovat se zařízením tím, že s
 
 `ideviceinstaller -l`
 
-Pokud `ideviceinstaller` chyby, ke kterým nemůže přistupovat `/var/db/lockdown` složky, změňte oprávnění ve složce pomocí:
+Pokud `ideviceinstaller` chyby, ke kterým nemůže přistupovat `/var/db/lockdown`složky, změňte oprávnění ve složce pomocí:
 
 `sudo chmod 777 /var/db/lockdown`
     

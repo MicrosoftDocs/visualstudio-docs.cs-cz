@@ -9,12 +9,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 83606b56e6509f1db77b590ec44d991ef97cf82e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: d0c001ec8310759309c88c49c37050516b110b81
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298166"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850807"
 ---
 # <a name="structure-your-modeling-solution"></a>Strukturujte svá řešení modelování
 
@@ -34,7 +34,7 @@ Ve středních nebo rozsáhlých projektech je struktura týmu založena na stru
 
 #### <a name="to-divide-an-application-into-layers"></a>Rozdělení aplikace do vrstev
 
-1. Základem struktury vašich řešení ve struktuře aplikace, například webové aplikace, aplikace služby nebo aplikace klasické pracovní plochy. Celá řada běžných architektur je popsána v tématu [Application archetypes v průvodci architekturou aplikací Microsoftu](https://go.microsoft.com/fwlink/?LinkId=196681).
+1. Základem struktury vašich řešení ve struktuře aplikace, například webové aplikace, aplikace služby nebo aplikace klasické pracovní plochy. Celá řada běžných architektur je popsána v tématu [Application archetypes v průvodci architekturou aplikací Microsoftu](https://docs.microsoft.com/previous-versions/msp-n-p/ee658107(v=pandp.10)?redirectedfrom=MSDN).
 
 2. Vytvořte řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], které budeme volat na řešení architektury. Toto řešení se použije k vytvoření celkového návrhu systému. Bude obsahovat modely, ale žádný kód.
 
@@ -100,7 +100,7 @@ Například pokud často používáte řešení, která mají prezentační, obc
 
 #### <a name="to-create-a-solution-template"></a>Vytvoření šablony řešení
 
-1. Pokud jste to ještě neudělali, [Stáhněte a nainstalujte Průvodce exportem šablony](https://go.microsoft.com/fwlink/?LinkId=196686).
+1. Pokud jste to ještě neudělali, [Stáhněte a nainstalujte Průvodce exportem šablony](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ExportTemplateWizard).
 
 2. Vytvořte strukturu řešení, kterou chcete použít jako výchozí bod pro budoucí projekty.
 
@@ -109,7 +109,7 @@ Například pokud často používáte řešení, která mají prezentační, obc
 4. Podle pokynů v průvodci vyberte projekty, které chcete zahrnout do šablony, zadejte název a popis šablony a zadejte umístění výstupu.
 
 > [!NOTE]
-> Materiál v tomto tématu je abstraktní a paraphrased z pokynů k nástrojům architektury sady Visual Studio, které jsou vytvořené pomocí sady Visual Studio ALM, což je spolupráce mezi nejnáročnějšími specialisty (MVP), službami Microsoftu a Visual Studiem. produktový tým a zapisovače. [Kliknutím sem si stáhněte kompletní balíček s pokyny.](https://go.microsoft.com/fwlink/?LinkID=191984)
+> Materiál v tomto tématu je abstraktní a paraphrased z pokynů k nástrojům architektury sady Visual Studio, které jsou vytvořené pomocí sady Visual Studio ALM, což je spolupráce mezi nejnáročnějšími specialisty (MVP), službami Microsoftu a Visual Studiem. produktový tým a zapisovače. [Kliknutím sem si stáhněte kompletní balíček s pokyny.](https://archive.codeplex.com/?p=vsarchitectureguide)
 
 ## <a name="related-materials"></a>Související materiály
 
