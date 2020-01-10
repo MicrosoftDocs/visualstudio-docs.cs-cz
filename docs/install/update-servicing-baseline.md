@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 3ef0cf63f8063d543cbb8fb69a0588dc331e4c6a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 4c33420e715f2164f767ba57ff149a409d7d3627
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590953"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776177"
 ---
 # <a name="update-visual-studio-while-on-a-servicing-baseline"></a>Aktualizace sady Visual Studio v servisním směrném plánu
 
@@ -62,7 +62,7 @@ Další možností kontroly aktualizací klienta je vypnutí [oznámení o aktua
 
 Pokud je k dispozici aktualizace pro standardní hodnoty údržby, jsou soubory zaváděcího nástroje opravené verze dostupné pro servisní aktualizaci na adrese [My.VisualStudio.com](https://my.visualstudio.com/Downloads?q=visual%20studio%202019%20version%2016.0).
 
-Pro správce, kteří nasazují pomocí instalace rozložení sítě, by měl správce aktualizovat [umístění rozložení](update-a-network-installation-of-visual-studio.md). Klienti, kteří jsou nainstalováni z umístění, budou dostávat oznámení o aktualizacích. Pokud se aktualizace musí nasadit na klienty, postupujte podle [těchto pokynů](update-a-network-installation-of-visual-studio.md#how-to-deploy-an-update-to-client-machines). Když upravujete Response. JSON pro aktualizaci, nepřidáte další úlohy, součásti ani jazyky. Správa těchto nastavení se musí provádět jako nasazení úprav po aktualizaci produktu.
+Pro správce, kteří nasazují pomocí instalace rozložení sítě, by měl správce aktualizovat [umístění rozložení](update-a-network-installation-of-visual-studio.md). Klienti, kteří jsou nainstalováni z umístění, budou dostávat oznámení o aktualizacích. Pokud se aktualizace musí nasadit na klienty, postupujte podle [těchto pokynů](update-a-network-installation-of-visual-studio.md#deploy-an-update-to-client-machines). Když upravujete Response. JSON pro aktualizaci, nepřidáte další úlohy, součásti ani jazyky. Správa těchto nastavení se musí provádět jako nasazení úprav po aktualizaci produktu.
 
 Pro internetovou instalaci spusťte nový zaváděcí nástroj pro opravenou verzi s parametrem `--channelUri` odkazujícím na neexistující manifest kanálu na klientovi. Pokud je aktualizace nasazená v tichém nebo pasivním režimu, použijte dva samostatné příkazy:
 

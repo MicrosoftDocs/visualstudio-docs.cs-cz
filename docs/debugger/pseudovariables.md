@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e328e85f58e69ef1d579fd979f629c59b90caf3e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b5b0369a30e69fc69782bbc4a0f5b0c4518cac07
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72730516"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776090"
 ---
 # <a name="pseudovariables-in-the-visual-studio-debugger"></a>Pseudoproměnné v ladicím programu sady Visual Studio
 Pseudoproměnné jsou výrazy používané k zobrazení určitých informací v okně proměnných nebo v dialogovém okně **QuickWatch** . Pseudoproměnnou můžete zadat stejným způsobem, jako byste zadali normální proměnnou. Pseudoproměnné nejsou proměnné, ale neodpovídají názvům proměnných v programu.
@@ -43,11 +43,11 @@ Pseudoproměnné jsou výrazy používané k zobrazení určitých informací v 
 |`$env`|Zobrazí blok prostředí v prohlížeči řetězců.|
 |`$cmdline`|Zobrazí řetězec příkazového řádku, který spustil program.|
 |`$pid`|Zobrazí ID procesu.|
-|`$` *registru*<br /><br /> or<br /><br /> `@` *registru*|Zobrazí *obsah registru Register.*<br /><br /> V normálním případě lze obsah registru zobrazit pouze zadáním názvu registru. Jedinou dobu, kterou potřebujete použít k použití této syntaxe, je, když název registru převede název proměnné. Pokud je název registru stejný jako název proměnné v aktuálním oboru, ladicí program interpretuje název jako název proměnné. To je v případě, že se `$`*registru* nebo `@`*registru* nachází v praktických případech.|
+|`$` *registru*<br /><br /> nebo<br /><br /> `@` *registru*|Zobrazí *obsah registru Register.*<br /><br /> V normálním případě lze obsah registru zobrazit pouze zadáním názvu registru. Jedinou dobu, kterou potřebujete použít k použití této syntaxe, je, když název registru převede název proměnné. Pokud je název registru stejný jako název proměnné v aktuálním oboru, ladicí program interpretuje název jako název proměnné. To je v případě, že se `$`*registru* nebo `@`*registru* nachází v praktických případech.|
 |`$clk`|Zobrazí čas v časovém cyklu.|
 |`$user`|Zobrazí strukturu s informacemi o účtu pro účet, na kterém je aplikace spuštěná. Z bezpečnostních důvodů se nezobrazuje informace o hesle.|
 |`$exceptionstack`|Zobrazí trasování zásobníku aktuální výjimky prostředí Windows Runtime. `$ exceptionstack` funguje jenom v aplikacích pro UWP. `$ exceptionstack` se nepodporuje pro C++ výjimky a SEH.|
-|`$returnvalue`|Zobrazuje návratovou hodnotu metody .NET.|
+|`$returnvalue`|Zobrazuje návratovou hodnotu metody.|
 
  V C# nástroji můžete použít Pseudoproměnné uvedené v následující tabulce:
 
@@ -62,8 +62,8 @@ Pseudoproměnné jsou výrazy používané k zobrazení určitých informací v 
 |Pseudoproměnnou|Funkce|
 |--------------------|--------------|
 |`$exception`|Zobrazí informace o poslední výjimce. Pokud nedošlo k žádné výjimce, vyhodnocení `$exception` zobrazí chybovou zprávu.|
-|`$delete` nebo `$$delete`|Odstraní implicitní proměnnou, která byla vytvořena v **příkazovém** okně. Syntaxe je `$delete,` *proměnnou* nebo `$delete,` *proměnnou* `.`|
-|`$objectids` nebo `$listobjectids`|Zobrazí všechna aktivní ID objektů jako podřízené objekty určeného výrazu. Syntaxe je `$objectid,` *výraz* nebo *výraz* `$listobjectids,` `.`|
+|`$delete` Nebo `$$delete`|Odstraní implicitní proměnnou, která byla vytvořena v **příkazovém** okně. Syntaxe je `$delete,` *proměnnou* nebo`$delete,` *proměnnou*`.`|
+|`$objectids` Nebo `$listobjectids`|Zobrazí všechna aktivní ID objektů jako podřízené objekty určeného výrazu. Syntaxe je `$objectid,` *výraz* nebo *výraz*`$listobjectids,``.`|
 |`$` *N* `#`|Zobrazí objekt s ID objektu větším než *N*.|
 |`$dynamic`|Zobrazí speciální uzel **dynamického zobrazení** pro objekt, který implementuje `IDynamicMetaObjectProvider`. Prostředí. Syntaxe je `$dynamic,` *objekt*. Tato funkce se vztahuje pouze na kód, který používá .NET Framework verze 4 nebo novější.|
 

@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3c6eed20fc1f2b76c02865c2a5f6b21cde1ae51
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 611df946b97f97832b7debfac3d11c5b7972cdae
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589991"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776108"
 ---
 # <a name="step-6-add-a-subtraction-problem"></a>Krok 6: Přidání problému odčítání
 V šesté části tohoto kurzu přidáte problém odčítání a naučíte se, jak provádět následující úlohy:
@@ -32,9 +32,7 @@ V šesté části tohoto kurzu přidáte problém odčítání a naučíte se, j
 - Aktualizujte obslužnou rutinu události <xref:System.Windows.Forms.Timer.Tick> časovače tak, aby obslužná rutina události vyplnila správnou odpověď, když vyprší čas.
 
 > [!NOTE]
-> Toto téma je součástí série kurzů o základních konceptech kódování.
-> - Přehled tohoto kurzu najdete v tématu [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
-> - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
+> Toto téma je součástí série kurzů o základních konceptech kódování. Přehled tohoto kurzu najdete v tématu [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 ## <a name="to-add-a-subtraction-problem"></a>Přidání problému odčítání
 

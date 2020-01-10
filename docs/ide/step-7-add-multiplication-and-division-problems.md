@@ -13,21 +13,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64edeb6d6180907e6b1aa07fd5d443e8523c10b1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 773768c3329ae32edc0b8c24052dcf328b480d3d
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647473"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776136"
 ---
 # <a name="step-7-add-multiplication-and-division-problems"></a>Krok 7: přidejte problémy násobení a dělení
 
 V sedmé části tohoto kurzu přidáte problémy násobení a dělení, ale nejprve si myslíte, jak tuto změnu provést. Vezměte v úvahu počáteční krok, který zahrnuje ukládání hodnot.
 
 > [!NOTE]
-> Toto téma je součástí série kurzů o základních konceptech kódování.
-> - Přehled tohoto kurzu najdete v tématu [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
-> - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
+> Toto téma je součástí série kurzů o základních konceptech kódování. Přehled tohoto kurzu najdete v tématu [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 ## <a name="to-add-multiplication-and-division-problems"></a>Přidání problémů násobení a dělení
 
@@ -59,7 +57,7 @@ V sedmé části tohoto kurzu přidáte problémy násobení a dělení, ale nej
 
      Kvíz uživatelé vyplňující musí odpovědět na čtyři problémy, aby se dokončil kvíz, jak ukazuje následující obrázek.
 
-     ![Math kvíz se čtyřmi problémy ](../ide/media/express_finishedquiz.png)<br/>
+     ![Matematický kvíz se čtyřmi problémy](../ide/media/express_finishedquiz.png)<br/>
 ***Matematický kvíz*** *se čtyřmi problémy*
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat

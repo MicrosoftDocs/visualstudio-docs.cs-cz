@@ -10,21 +10,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e8e306aea1615649223c96f0c5a7041574f844d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c0fa7afc7262a1a78b356104f8cc206e8898f22e
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588847"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776122"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>Krok 1: vytvoření projektu a Přidání popisků do formuláře
 
 Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte popisky, tlačítko a další ovládací prvky do formuláře. Nastavili jste také vlastnosti pro každý ovládací prvek, který přidáte. Projekt bude obsahovat formulář, ovládací prvky a (dále v tomto kurzu) kódu. Tlačítko spustí kvíz, jmenovky zobrazí problémy kvízu a ostatní ovládací prvky zobrazí odpovědi kvízu a čas, který zbývá k dokončení kvízu.
 
 > [!NOTE]
-> Toto téma je součástí série kurzů o základních konceptech kódování. 
-> - Přehled tohoto kurzu najdete v tématu [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md). 
-> - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
+> Toto téma je součástí série kurzů o základních konceptech kódování. Přehled tohoto kurzu najdete v tématu [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 ## <a name="to-create-a-project-for-a-form"></a>Vytvoření projektu pro formulář
 

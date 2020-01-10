@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 8d733c41e2833eeca2a8bf8c68f5e329f0af723c
-ms.sourcegitcommit: 0d8488329263cc0743a89d43f6de863028e982ff
+ms.openlocfilehash: 40011b035afdf4a04eb760d13c001e39d9c578c4
+ms.sourcegitcommit: 91a054beb6b3a16ed5140f9f829239ec31bbbec8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75685305"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75810580"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Kurz: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu v aplikaci Visual Studio
 
@@ -68,7 +68,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro ASP.NET C
     Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **ASP.NET**a pak zvolte **ASP.NET Core webová aplikace – C#** . V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně dialogového okna **Nový projekt** rozbalte položku **JavaScript**a pak zvolte **Node. js**. V prostředním podokně zvolte **ASP.NET Core webová aplikace – C#** a pak zvolte **OK**.
+    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně dialogového okna **Nový projekt** rozbalte položku **C#Visual**a pak zvolte možnost **.NET Core**. V prostředním podokně zvolte **ASP.NET Core webová aplikace – C#** a pak zvolte **OK**.
     ::: moniker-end
     Pokud nevidíte šablonu projektu **ASP.NET Core webové aplikace** , je nutné přidat úlohu **vývoje webu ASP.NET a web** . Podrobné pokyny najdete v části [požadavky](#prerequisites).
 

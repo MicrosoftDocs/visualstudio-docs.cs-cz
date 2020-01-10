@@ -13,12 +13,12 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 52ce973f1521f3ca9ba83513f6711287c49db7bb
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: ef314cf78c685251496274309af91e3bb2108a1b
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68415773"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776110"
 ---
 # <a name="debug-live-aspnet-apps-on-azure-virtual-machines-and-azure-virtual-machine-scale-sets-using-the-snapshot-debugger"></a>Ladění živých aplikací ASP.NET na virtuálních počítačích Azure a Azure Virtual Machine Scale Sets pomocí Snapshot Debugger
 
@@ -35,13 +35,16 @@ V tomto kurzu se naučíte:
 
 ## <a name="prerequisites"></a>Požadavky
 
-* Snapshot Debugger pro Azure Virtual Machines (VM) a Azure Virtual Machine Scale Sets jsou k dispozici pouze pro Visual Studio 2019 Enterprise nebo vyšší s **úlohou vývoj pro Azure**. (Na kartě **jednotlivé součásti** najdete v části **ladění a testování** > **snímků – ladicí program**.)
+* Snapshot Debugger pro Azure Virtual Machines (VM) a Azure Virtual Machine Scale Sets jsou k dispozici pouze pro Visual Studio 2019 Enterprise nebo vyšší s **úlohou vývoj pro Azure**. (Na kartě **jednotlivé součásti** najdete v části **ladění a testování** > **Snapshot Debugger**.)
 
     Pokud ještě není nainstalovaný, nainstalujte [Visual Studio 2019 Enterprise](https://visualstudio.microsoft.com/vs/).
 
 * Kolekce snímků je k dispozici pro následující webové aplikace Azure Virtual Machines\Virtual Machine Scale Sets:
   * Aplikace ASP.NET spuštěné na rozhraní .NET Framework 4.6.1 nebo novější.
   * Aplikace ASP.NET Core na .NET Core 2.0 nebo novější na Windows.
+
+  > [!NOTE]
+  >  Visual Studio Enterprise běžící v 32ch oknech nebudou moct zobrazovat snímky.
 
 ## <a name="open-your-project-and-start-the-snapshot-debugger"></a>Otevřete svůj projekt a spusťte ladicí program snímků
 
@@ -145,7 +148,7 @@ Kromě pořízení snímku při dosažení snímkovacího bodu, můžete také n
 
     Pokud se rozhodnete **odeslat do protokolu aplikace**, když protokolovacích bodů: dosažení, zpráva se zobrazí kdekoli, zobrazí se zprávy z `System.Diagnostics.Trace` (nebo `ILogger` v .NET Core), například [App Insights](/azure/application-insights/app-insights-asp-net-trace-logs).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 V tomto kurzu jste se naučili, jak používat Snapshot Debugger pro Azure Virtual Machines a Azure Virtual Machine Scale Sets. Můžete chtít přečtěte si další podrobnosti o této funkci.
 

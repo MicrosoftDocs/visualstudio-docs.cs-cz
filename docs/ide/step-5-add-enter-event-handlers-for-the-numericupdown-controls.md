@@ -13,21 +13,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7de9fafa32922792e21eb672df0aa9128c25dbe2
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 0d9bc44cb945b8df3ca444ce09b1b5c39795d3bc
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314115"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776070"
 ---
 # <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>Krok 5: přidejte obslužné rutiny událostí Enter pro ovládací prvky NumericUpDown
 
 V páté části tohoto kurzu přidáte <xref:System.Windows.Forms.Control.Enter> obslužných rutin událostí, aby bylo možné zadat odpovědi na otázky kvízu, které jsou poněkud jednodušší. Tento kód vybere a vymaže aktuální hodnotu v každém ovládacím prvku <xref:System.Windows.Forms.NumericUpDown>, jakmile ho autor kvízu zvolí a začne zadat jinou hodnotu.
 
 > [!NOTE]
-> Toto téma je součástí série kurzů o základních konceptech kódování.
-> - Přehled tohoto kurzu najdete v tématu [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
-> - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
+> Toto téma je součástí série kurzů o základních konceptech kódování. Přehled tohoto kurzu najdete v tématu [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 ## <a name="to-verify-the-default-behavior"></a>Ověření výchozího chování
 
@@ -51,7 +49,7 @@ V páté části tohoto kurzu přidáte <xref:System.Windows.Forms.Control.Enter
 
    Karta **události** v dialogovém okně **vlastnosti** zobrazí všechny události, na které můžete reagovat (popisovač) pro položku, kterou zvolíte ve formuláři. Vzhledem k tomu, že jste zvolili ovládací prvek NumericUpDown, vztahují se na něj všechny uvedené události.
 
-2. Zvolte událost **ENTER** , zadejte `answer_Enter` a potom stiskněte klávesu **ENTER** .
+2. Zvolte událost **ENTER** , zadejte `answer_Enter`a potom stiskněte klávesu **ENTER** .
 
    ![Zadejte název metody obslužné rutiny události.](media/enter-event.png)
 

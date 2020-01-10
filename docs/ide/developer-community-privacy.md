@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 09f3e5fed93cac3a251e4b7cdcaa988e63ff8741
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1e87f35778b8aec615410312c0eb7373d4e9969f
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596265"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75775874"
 ---
 # <a name="developer-community-data-privacy"></a>Ochrana osobních údajů komunity vývojářů
 
@@ -81,7 +81,7 @@ Pokud dojde **k zahájení nahlášení problému** ze sady Visual Studio, shrom
   - Soubor výpisu paměti
 
 > [!NOTE]
-> Soubory protokolu, snímky obrazovky a záznamová data se odesílají společnosti Microsoft pouze v případě, že zadáte oprávnění odesláním sestavy problému, se kterou jsou zahrnuty. Můžete si prohlédnout, které soubory jsou zahrnuté v kroku "Souhrn" v okně nahlásit problém (viz snímek obrazovky, který je součástí této poznámky). Shromážděné protokoly a soubory jsou uložené ve složce% Temp% a pravidelně se vyčistí a po každém nahrání. Pokud nechcete do sestavy problému zahrnout protokol, odstraňte před odesláním sestavy soubor ze složky% Temp%.
+> Soubory protokolu, snímky obrazovky a záznamy zaznamenaných dat můžou významně zvýšit možnosti Microsoftu pochopit a reagovat na váš problém.  Proto je doporučujeme zahrnout. V zájmu ochrany vašich osobních údajů se všechny připojené soubory protokolů, snímky snímků obrazovky a data záznamů odesílají do Microsoftu, jenom když zadáte oprávnění tím, že odešlete hlášení o problému, se kterým jsou zahrnuté. Před odesláním sestavy můžete zobrazit, které soubory jsou zahrnuty v kroku "Souhrn" okna ohlásit problém. Soubory systémového protokolu můžete ze sestavy vyloučit zrušením kontroly "připojit systémové protokoly" v kroku "summary". Referenční informace najdete na následujícím snímku obrazovky. 
   > ![nahlásit problém – Shrnutí shromážděných protokolů](media/report-a-problem-logs-collected.png)
 
 

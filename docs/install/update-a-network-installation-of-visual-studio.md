@@ -1,7 +1,7 @@
 ---
 title: Aktualizace síťové instalace
 description: Zjistěte, jak aktualizovat síťové instalace sady Visual Studio pomocí příkazu--rozložení
-ms.date: 10/07/2019
+ms.date: 01/08/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 990b9541e22040b53a5f509fc358013dca777906
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 774e189306345187ac6a0c29b7060cb5537e8adb
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594432"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776173"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Aktualizace síťové instalace sady Visual Studio
 
@@ -28,17 +28,20 @@ Je možné k aktualizaci rozložení síťové instalace sady Visual Studio s ne
 
 ## <a name="how-to-update-a-network-layout"></a>Jak aktualizovat síťový diagram
 
+> [!IMPORTANT]
+> V těchto pokynech se předpokládá, že jste dříve vytvořili rozložení instalace sítě. Další informace o tom, jak to udělat, najdete na stránce [Vytvoření síťové instalace sady Visual Studio](create-a-network-installation-of-visual-studio.md) .
+
 Chcete-li aktualizovat sdílenou síťovou instalaci tak, aby obsahovala nejnovější aktualizace, spusťte příkaz `--layout` pro přírůstkové stažení aktualizovaných balíčků.
 
 ::: moniker range="vs-2017"
 
-**Novinka v 15,3**: Pokud jste při prvním vytvoření rozložení sítě vybrali částečné rozložení, tato nastavení se uloží. Všechny příkazy budoucí rozložení použít předchozí možnosti plus všechny nové možnosti, které zadáte. Pokud ale používáte rozložení starší verze, měli byste použít stejné parametry příkazového řádku, které jste použili při prvním vytvoření rozložení instalace sítě (jinými slovy, stejné úlohy a jazyky) k aktualizaci jejího obsahu.
+**Novinka v 15,3**: Pokud jste při [prvním vytvoření rozložení sítě](create-a-network-installation-of-visual-studio.md)vybrali částečné rozložení, tato nastavení se uloží. Všechny příkazy budoucí rozložení použít předchozí možnosti plus všechny nové možnosti, které zadáte. Pokud ale používáte rozložení starší verze, měli byste použít stejné parametry příkazového řádku, které jste použili při prvním vytvoření rozložení instalace sítě (jinými slovy, stejné úlohy a jazyky) k aktualizaci jejího obsahu.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste vybrali částečné rozložení, při prvním vytvoření rozložení sítě, se uloží. Všechny příkazy budoucí rozložení použít předchozí možnosti plus všechny nové možnosti, které zadáte.
+Pokud jste při [prvním vytvoření rozložení sítě](create-a-network-installation-of-visual-studio.md)vybrali částečné rozložení, tato nastavení se uloží. Všechny příkazy budoucí rozložení použít předchozí možnosti plus všechny nové možnosti, které zadáte.
 
 ::: moniker-end
 
@@ -81,7 +84,7 @@ Pojďme si projít několik příkladů, jak vytvořit a následně aktualizovat
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.NetWeb --lang fr-FR --keepLayoutVersion
   ```
 
-## <a name="how-to-deploy-an-update-to-client-machines"></a>Jak nasadit aktualizace do klientských počítačů
+## <a name="deploy-an-update-to-client-machines"></a>Nasazení aktualizace klientských počítačů
 
 V závislosti na konfiguraci vašeho síťového prostředí aktualizace buď dá nasadit pomocí Správce rozlehlé sítě nebo zahájeno z klientského počítače.
 
@@ -111,7 +114,7 @@ V závislosti na konfiguraci vašeho síťového prostředí aktualizace buď d�
 > [!TIP]
 > Podrobnosti o tom, jak řídit, když se zobrazí oznámení o aktualizacích pro uživatele najdete v tématu [řízení aktualizací nasazení sady Visual Studio založené na síti](controlling-updates-to-visual-studio-deployments.md).
 
-## <a name="how-to-verify-a-layout"></a>Postup ověření rozložení
+## <a name="verify-a-layout"></a>Ověření rozložení
 
 Použití `--verify` k provedení ověření v offline mezipaměti zadaný. Zkontroluje, jestli jsou soubory balíčků chybí nebo jsou neplatné. Na konci ověření vytiskne seznam chybějících souborů a souborů neplatný.
 
@@ -129,7 +132,7 @@ Microsoft pravidelně, dodává aktualizace sady Visual Studio tak nové rozlož
 > [!NOTE]
 > Ověřování funguje pouze pro nejnovější verzi konkrétní dílčí verze sady Visual Studio. Jakmile se uvolní nová verze, ověřování nebude fungovat pro předchozí verze na úrovni opravy stejné dílčí verze.
 
-## <a name="how-to-fix-a-layout"></a>K vyřešení rozložení
+## <a name="fix-a-layout"></a>Oprava rozložení
 
 Použití `--fix` se provede ověření stejné jako `--verify` a také se pokusí opravit zjištěné problémy. Proces `--fix` potřebuje připojení k Internetu, proto se ujistěte, že je váš počítač připojený k Internetu, než vyvoláte `--fix`.
 
@@ -139,7 +142,7 @@ vs_enterprise.exe --layout <layoutDir> --fix
 
 Může být vyvolána vs_enterprise.exe uvnitř layoutDir.
 
-## <a name="how-to-remove-older-versions-from-a-layout"></a>Postup odebrání starších verzí z rozložení
+## <a name="remove-older-versions-from-a-layout"></a>Odebrání starších verzí z rozložení
 
 Po provedení aktualizací rozložení pro offline mezipaměť rozložení složky mezipaměti může mít některé zastaralé balíčky, které už nejsou potřeba nejnovější instalace sady Visual Studio. Můžete použít `--clean` možnost odebrat zastaralé balíčky ze složky offline mezipaměti.
 
@@ -165,7 +168,13 @@ c:\VSLayout\vs_enterprise.exe --layout c:\VSLayout --clean c:\VSLayout\Archive\1
 
 Při spuštění tohoto příkazu analyzuje instalaci složky offline mezipaměti k nalezení seznamu souborů, které se odeberou. Potom budete mít příležitost zkontrolovat soubory, které se chystáte odstranit a potvrďte odstranění.
 
-[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
+## <a name="get-support-for-your-offline-installer"></a>Získání podpory pro offline instalátor
+
+Pokud dochází k potížím s offline instalací chcete vědět o něm. Nejlepší způsob, jak Řekněte nám, je použít [nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio.md) nástroj. Při použití tohoto nástroje můžete nám odeslat telemetrii a protokoly, musíme pomáhají diagnostikovat a opravit problém.
+
+Nabízíme také [ **živý chat** ](https://visualstudio.microsoft.com/vs/support/#talktous) (jenom v angličtině) možnost podpory pro problémy související s instalací.
+
+Další možnosti podpory dostupné, máme příliš. Seznam najdete na naší stránce s [názory na zpětnou vazbu](../ide/feedback-options.md) .
 
 ## <a name="see-also"></a>Viz také:
 
