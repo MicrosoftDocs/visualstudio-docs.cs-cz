@@ -13,12 +13,12 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c7452e8394b6397b79c49b9b706db5ba8899351e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 40806f988bec184f2cf880fc373d8fda0634dda1
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291173"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850858"
 ---
 # <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506: Maximum Nesdílených bajtů přidělených pro profilovaný Proces
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,15 +34,15 @@ ID pravidla | DA0506 |
 ## <a name="rule-description"></a>Popis pravidla  
  Tato zpráva oznamuje maximální velikost virtuální paměti, kterou proces aktuálně přidělil v bajtech (nesdílené bajty). Soukromé bajty představují umístění virtuální paměti, která byla přidělena procesu, ke kterému lze přistupovat pouze v vláknech spuštěných uvnitř procesu.  
   
- Pro 32 procesy běžící na 32 počítači je horní limit soukromé části adresního prostoru procesu 2 GB. Pomocí přepínače Boot. ini [/3 GB](https://go.microsoft.com/fwlink/?LinkId=177831) mohou 32 procesy získat až 3 GB virtuální paměti. 32 proces, který běží na 64 počítači, může získat až 4 GB privátní virtuální paměti.  
+ Pro 32 procesy běžící na 32 počítači je horní limit soukromé části adresního prostoru procesu 2 GB. Pomocí přepínače Boot. ini [/3 GB](https://msdn.microsoft.com/library/ff556232.aspx) mohou 32 procesy získat až 3 GB virtuální paměti. 32 proces, který běží na 64 počítači, může získat až 4 GB privátní virtuální paměti.  
   
  64 proces, který běží na 64 počítači, může získat až 8 TB privátní virtuální paměti.  
   
  Nahlášená hodnota je maximální hodnota ve všech intervalech měření, ve kterých je proces profilace aktivní.  
   
- Další informace o adresních prostorech procesu najdete v tématu [virtuální adresní prostor](https://go.microsoft.com/fwlink/?LinkId=177832) v dokumentaci ke službě Správa paměti systému Windows.  
+ Další informace o adresních prostorech procesu najdete v tématu [virtuální adresní prostor](https://msdn.microsoft.com/library/aa366912.aspx) v dokumentaci ke službě Správa paměti systému Windows.  
   
 ## <a name="how-to-use-rule-data"></a>Jak používat data pravidla  
  Pomocí hlášené hodnoty můžete porovnávat výkon různých verzí nebo sestavení programu nebo porozumět výkonu aplikace v rámci různých scénářů profilace.  
   
- Maximální hodnota nesdílených bajtů procesu, která se blíží omezení architektury, jak velký adresní prostor procesu může růst, může způsobit výjimky z paměti. Další informace najdete v tématu [zkoumání problémů s pamětí](https://go.microsoft.com/fwlink/?LinkID=177833) na webu MSDN Magazine.
+ Maximální hodnota nesdílených bajtů procesu, která se blíží omezení architektury, jak velký adresní prostor procesu může růst, může způsobit výjimky z paměti. Další informace najdete v tématu [zkoumání problémů s pamětí](https://msdn.microsoft.com/magazine/cc163528.aspx) na webu MSDN Magazine.

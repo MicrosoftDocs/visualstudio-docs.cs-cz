@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 1c7d9ce8382ee208b160fa5cec845c8ff9508d74
-ms.sourcegitcommit: 2148f3fd69569d8ec54fd21a66370932ce610ce4
+ms.openlocfilehash: 6577d49094cd4e2718507eb0c1f4f83ff146da05
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74853487"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847466"
 ---
 # <a name="visual-studio-feedback-options"></a>Možnosti zpětné vazby v aplikaci Visual Studio
 
@@ -73,14 +73,14 @@ Existují dva způsoby, jak nám pomoci zlepšit dokumentaci:
 * Použijte **tuto stránku: Tento nástroj je užitečný** pro odpověď v pravém horním rohu každé stránky dokumentace.
 * Použijte svůj účet GitHub k poskytnutí zpětné vazby k libovolné stránce sady Visual Studio na [docs.Microsoft.com](/visualstudio/). Uděláte to tak, že v dolní části stránky dokumentace kliknete na tlačítko **Odeslat zpětnou vazbu o** > **této stránky** .
 
-## <a name="contact-microsoft-support"></a>Kontaktujte podporu Microsoftu
+## <a name="contact-microsoft-support"></a>Obraťte se na podporu Microsoftu
 
-Informace o podpoře pro Visual Studio najdete na stránce věnované [obsluze & životní cyklus produktu](/visualstudio/releases/2019/servicing/) . Další produkty a služby Microsoftu najdete v tématu [Podpora Microsoftu](https://go.microsoft.com/fwlink/?LinkID=99019) pro online nápovědu.
+Informace o podpoře pro Visual Studio najdete na stránce věnované [obsluze & životní cyklus produktu](/visualstudio/releases/2019/servicing/) . Další produkty a služby Microsoftu najdete v tématu [Podpora Microsoftu](https://support.microsoft.com/) pro online nápovědu.
 
 > [!NOTE]
 > Podpora mimo území Spojených států a Kanady se může lišit. Seznam regionálních kontaktů najdete na [webu Microsoft celosvětově](https://www.microsoft.com/worldwide/).
 
-Pro větší organizace, které vyžadují spravovanou podporu přímo od společnosti Microsoft, jsou k dispozici smlouvy prostřednictvím různých nabídek Enterprise support. Další informace najdete v tématu [řešení Microsoft Enterprise support](https://go.microsoft.com/fwlink/?LinkId=258223).
+Pro větší organizace, které vyžadují spravovanou podporu přímo od společnosti Microsoft, jsou k dispozici smlouvy prostřednictvím různých nabídek Enterprise support. Další informace najdete v tématu [řešení Microsoft Enterprise support](https://www.microsoft.com/industry/services/support).
 
 Pokud jste produkt obdrželi již nainstalovaný s novým počítačem nebo zařízením, výrobce hardwaru poskytuje technickou podporu a odbornou pomoc k tomuto softwaru. Pro podporu se obraťte přímo na výrobce.
 

@@ -12,14 +12,14 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 25bd88886b6bed447ec7d091543fccdb478db9c5
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: bda6d8e20064ab2197408db6b9a55a86325515e8
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72588886"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846738"
 ---
-# <a name="install-cross-platform-mobile-development-with-c"></a>Instalace vývoje mobilních aplikací pro různé platformy pomocíC++
+# <a name="install-cross-platform-mobile-development-with-c"></a>Instalace pro vývoj multiplatformních mobilních řešení v jazyce C++
 
 C++ V aplikaci Visual Studio můžete vytvářet aplikace pro desktopové aplikace pro Windows, Univerzální platforma Windows (UWP), aplikace pro Linux a teď aplikace pro Android a iOS. **Vývoj mobilních aplikací pomocí C++**  úlohy je instalovatelný sada komponent v sadě Visual Studio, která zahrnuje šablony pro iOS, Android a UWP pro různé platformy. Nainstaluje nástroje pro různé platformy a sady SDK, které potřebujete, abyste mohli rychle začít, aniž byste je museli vyhledávat, stahovat a konfigurovat sami. Pomocí těchto nástrojů v aplikaci Visual Studio můžete snadno vytvářet, upravovat, ladit a testovat projekty pro různé platformy. Tento článek popisuje, jak nainstalovat nástroje a software třetích stran, které jsou potřebné pro vývoj aplikací pro různé platformy C++ pomocí sady Visual Studio. Přehled najdete v tématu [Visual C++ pro různé platformy – mobilní zařízení](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)
 
@@ -50,11 +50,11 @@ Pro vytváření aplikací pro konkrétní platformy zařízení platí několik
 
 - Emulátory Windows Phone vyžadují počítač, který může spustit technologii Hyper-V. Než budete moct nainstalovat a spustit emulátory, musí být povolená funkce Hyper-V v systému Windows. Další informace najdete v [požadavcích na systém](system-requirements-for-the-visual-studio-emulator-for-android.md)pro emulátor.
 
-## <a name="get-the-tools"></a>Získat nástroje
+## <a name="get-the-tools"></a>Získání nástrojů
 
 Vývoj pro mobilní C++ zařízení v nástroji je k dispozici v edicích Visual Studio Community, Professional a Enterprise. Chcete-li získat aplikaci Visual Studio, navštivte stránku [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) . Nástroje pro vývoj mobilních aplikací pro různé platformy jsou k dispozici od začátku v aplikaci Visual Studio 2015.
 
-## <a name="install-the-tools"></a>Instalace nástrojů
+## <a name="install-the-tools"></a>Nainstalujte si nástroje.
 
 Instalační program pro Visual Studio obsahuje **vývoj mobilních aplikací s C++**  využitím úloh. Tato úloha nainstaluje C++ jazykové nástroje, šablony a součásti požadované pro vývoj pro Android a iOS v aplikaci Visual Studio. Obsahuje sady nástrojů RSZ a Clang potřebné pro sestavení a ladění Androidu, Android SDK a komponenty pro komunikaci s počítačem Mac pro vývoj pro iOS. Nainstaluje taky všechny další sady nástrojů a vývoj softwaru třetích stran, které jsou potřebné k podpoře vývoje aplikací pro iOS a Android. Většina těchto nástrojů třetích stran je open source software vyžadovaný pro podporu platforem Androidu.
 
@@ -86,7 +86,7 @@ Instalační program pro Visual Studio obsahuje **vývoj mobilních aplikací s 
    > [!IMPORTANT]
    > Aby se zajistilo, že všechno je správně nainstalované, musíte restartovat počítač.
 
-1. Otevřete Visual Studio.
+1. Otevřít Visual Studio.
 
 ## <a name="install-tools-for-ios"></a>Nainstalovat nástroje pro iOS
 
@@ -94,7 +94,7 @@ Pomocí sady Visual Studio můžete upravovat, ladit a nasazovat kód pro iOS do
 
 ## <a name="install-or-update-dependencies-manually"></a>Ruční instalace nebo aktualizace závislostí
 
-Pokud se rozhodnete neinstalovat jednu nebo více závislostí třetích stran pomocí instalačního programu sady Visual Studio, když instalujete **mobilní vývoj C++ s** využitím úlohy (nebo v aplikaci Visual Studio C++ 2015, možnost vývoj pro Visual Mobile), můžete Nainstalujte je později pomocí postupu v části [Instalace nástrojů](#install-the-tools). Instalační program pro Visual Studio se pravidelně aktualizuje, aby se nainstalovaly nejnovější komponenty třetích stran. Můžete ji použít k instalaci aktualizovaných sad SDK a NDKs. Můžete je také nainstalovat nebo aktualizovat nezávisle na aplikaci Visual Studio.
+Pokud se rozhodnete neinstalovat jednu nebo více závislostí třetích stran pomocí instalačního programu sady Visual Studio při instalaci portálu **pro vývoj C++ mobilních aplikací pomocí** úlohy (nebo v aplikaci Visual Studio C++ 2015, možnosti vývoje pro Visual Mobile), můžete je nainstalovat později pomocí postupu v části [Instalace nástrojů](#install-the-tools). Instalační program pro Visual Studio se pravidelně aktualizuje, aby se nainstalovaly nejnovější komponenty třetích stran. Můžete ji použít k instalaci aktualizovaných sad SDK a NDKs. Můžete je také nainstalovat nebo aktualizovat nezávisle na aplikaci Visual Studio.
 
 Můžete znovu spustit aplikaci SDK správce v adresáři Android SDK pro aktualizaci sady SDK a instalaci volitelných nástrojů a dalších úrovní rozhraní API. Pokud nepoužijete **příkaz Spustit jako správce** ke spuštění aplikace SDK pro správce, aktualizace se nemusí zdařit. Pokud máte problémy při sestavování aplikace pro Android, Projděte si správce sady SDK, kde najdete aktualizace nainstalovaných sad SDK.
 
@@ -104,9 +104,9 @@ Ve většině případů může Visual Studio detekovat konfigurace softwaru tř
 
 #### <a name="to-set-the-paths-for-third-party-tools"></a>Nastavení cest pro nástroje třetích stran
 
-1. Na řádku nabídek sady Visual Studio vyberte **nástroje**  > **Možnosti**.
+1. Na řádku nabídek sady Visual Studio vyberte **nástroje** > **Možnosti**.
 
-1. V dialogovém okně **Možnosti** vyberte možnost pro **různé platformy**  > **C++**  > **Android**.
+1. V dialogovém okně **Možnosti** vyberte možnost pro **různé platformy** > **C++**  > **Android**.
 
    ![Možnosti cesty k nástrojům pro Android](../cross-platform/media/cppmdd_options_android.PNG "CPPMDD_Options_Android")
 
@@ -117,4 +117,4 @@ Ve většině případů může Visual Studio detekovat konfigurace softwaru tř
 ## <a name="see-also"></a>Viz také:
 
 - [Instalace a konfigurace nástrojů pro sestavení pomocí iOS](install-and-configure-tools-to-build-using-ios.md)
-- [Mobilní C++ aplikace pro různé platformy](https://go.microsoft.com/fwlink/p/?LinkId=536383)
+- [Mobilní C++ aplikace pro různé platformy](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)

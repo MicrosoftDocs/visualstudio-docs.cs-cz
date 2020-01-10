@@ -14,12 +14,12 @@ caps.latest.revision: 28
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5abbb647f93c991d2de626a84e82f47e03f6f71e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4d825e625313febfa67cfb85f6a9c6bccb7f3608
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299616"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844277"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>Návod: vytvoření datové služby WCF pomocí WPF a Entity Framework
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ Tento návod ukazuje, jak vytvořit jednoduchý [!INCLUDE[ss_data_service](../in
 
 - Vytvoří [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)], který představuje tabulku Customers v databázi Northwind.
 
-- Vytvořte [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)].
+- Vytvoření [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)].
 
 - Vytvořte klientskou aplikaci a přidejte odkaz na [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)].
 
@@ -45,7 +45,7 @@ Tento návod ukazuje, jak vytvořit jednoduchý [!INCLUDE[ss_data_service](../in
 
 - Ukázkovou databázi Northwind
 
-     Pokud tuto databázi ve vývojovém počítači nemáte, můžete si ji stáhnout z webu [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=98088). Pokyny najdete v tématu [stažení ukázkových databází](https://msdn.microsoft.com/library/ef9d69a1-9461-43fe-94bb-7c836754bcb5).
+     Pokud tuto databázi ve vývojovém počítači nemáte, můžete si ji stáhnout z webu [Microsoft Download Center](https://www.microsoft.com/downloads). Pokyny najdete v tématu [stažení ukázkových databází](https://msdn.microsoft.com/library/ef9d69a1-9461-43fe-94bb-7c836754bcb5).
 
 ## <a name="creating-the-service"></a>Vytvoření služby
  Chcete-li vytvořit [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)], přidejte webový projekt, vytvořte [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]a pak vytvořte službu z modelu.

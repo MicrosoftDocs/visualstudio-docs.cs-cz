@@ -12,12 +12,12 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b8b154ccd18472d0b0bca502c78a6612aeccdda6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7f4c490abbcd5b970c5bf9586ea881be4c5d62a4
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301045"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849807"
 ---
 # <a name="extend-uml-models-and-diagrams"></a>Rozšíření modelů a diagramů UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,9 +30,9 @@ V tomto tématu jsou shrnuty různé způsoby, kterými můžete roztáhnout ná
 
  Tým nástrojů společnosti Fabrikam přináší řadu vylepšení, která usnadňují vývojovým týmům. V následujících částech jsou popsány různé druhy rozšíření, která můžete definovat. Některé z těchto postupů můžete zkombinovat do jednoho rozšíření sady Visual Studio.
 
- Další informace najdete v tomto videu: ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo")[MSDN jak mám řady: nástroje a rozšiřitelnost UML](https://go.microsoft.com/fwlink/?LinkId=214467).
+ Další informace najdete v tomto videu: ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo")[MSDN jak mám řady: nástroje a rozšiřitelnost UML](https://msdn.microsoft.com/vstudio/ff859492).
 
-## <a name="Requirements"></a>Požadavků
+## <a name="Requirements"></a> Požadavky
 
 - [Sada Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
@@ -85,7 +85,7 @@ V tomto tématu jsou shrnuty různé způsoby, kterými můžete roztáhnout ná
 
  Další informace najdete v tématu [Integrace modelů UML s jinými modely a nástroji](../modeling/integrate-uml-models-with-other-models-and-tools.md).
 
-## <a name="generation"></a>Nezbytných
+## <a name="generation"></a>Generace
  Z modelu můžete generovat kód programu, skripty, konfigurace, dokumenty, nové modely nebo jiné artefakty.
 
  V systémech zavazadel, které společnost Fabrikam navrhuje, je většina programového kódu stejná jako u jednoho projektu na další. Hlavním aspektem proměnné je plán toku zavazadel kolem letiště. Po tom, co tým návrhu má zkušenosti s několika prvními projekty, vývojáři nástroje vytvoří šablonu, která generuje, z modelu toku zavazadel, většinu programového kódu proměnné a dalších souborů, jako jsou například uživatelské dokumenty. To významně snižuje dobu vývoje a četnost chyb pro každý nový projekt.
@@ -111,12 +111,12 @@ V tomto tématu jsou shrnuty různé způsoby, kterými můžete roztáhnout ná
 
 ## <a name="external-resources"></a>Externí prostředky
 
-|**Kategorií**|**Odkazy**|
+|**Kategorie**|**Odkazy**|
 |------------------|---------------|
-|**Videa**|![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN postup I série: nástroje a rozšiřitelnost UML](https://go.microsoft.com/fwlink/?LinkId=214467)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: UML se sadou Visual Studio](https://go.microsoft.com/fwlink/?LinkId=199957)|
-|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](https://go.microsoft.com/fwlink/?LinkID=201340)|
-|**Technické články a deníky**|[Centrum architektury MSDN](https://go.microsoft.com/fwlink/?LinkId=201343)|
+|**Videa**|![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN postup I série: nástroje a rozšiřitelnost UML](https://msdn.microsoft.com/vstudio/ff859492)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: UML se sadou Visual Studio](https://channel9.msdn.com/posts/clinted/)|
+|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](https://blogs.msdn.com/b/visualstudioalm)|
+|**Technické články a deníky**|[Centrum architektury MSDN](https://msdn.microsoft.com/architecture/default.aspx)|
 
 ## <a name="see-also"></a>Viz také
  [Vytváření modelů pro](../modeling/create-models-for-your-app.md) [Reference k rozhraní API vaší aplikace pro rozšíření modelování UML](../modeling/api-reference-for-uml-modeling-extensibility.md)

@@ -15,30 +15,30 @@ caps.latest.revision: 4
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1c18a08986bf8e4aa30969a9d30d740fb68e978c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0f8599348d204d149f3e28d17d681941ddf476b8
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297469"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849320"
 ---
 # <a name="how-to-create-a-policyactivity-rule-set-legacy"></a>Postupy: vytvoření sady pravidel sady (starší verze)
 Toto téma popisuje, jak vytvořit sadu pravidel aktivity zásad pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)], která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
 
- Po přetažení položky aktivity **zásad** ze **sady nástrojů** na návrhovou plochu pracovního postupu budete chtít vybrat stávající pravidlo nebo vytvořit novou sadu pravidel pro aktivitu [sady](https://go.microsoft.com/fwlink?LinkID=65019) . Existující sadu pravidel vyberete pomocí [dialogového okna vybrat sadu pravidel (starší verze)](../workflow-designer/select-rule-set-dialog-box-legacy.md) a vytvoříte sady pravidel pomocí [dialogového okna editor sad pravidel (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md).
+ Po přetažení položky aktivity **zásad** ze **sady nástrojů** na návrhovou plochu pracovního postupu budete chtít vybrat stávající pravidlo nebo vytvořit novou sadu pravidel pro aktivitu [sady](https://msdn2.microsoft.com/library/system.workflow.activities.policyactivity.aspx) . Existující sadu pravidel vyberete pomocí [dialogového okna vybrat sadu pravidel (starší verze)](../workflow-designer/select-rule-set-dialog-box-legacy.md) a vytvoříte sady pravidel pomocí [dialogového okna editor sad pravidel (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md).
 
 > [!NOTE]
-> Dialogové okno [editoru sad pravidel (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) můžete otevřít přímo Poklikáním na aktivitu [sady](https://go.microsoft.com/fwlink?LinkID=65019) , která je na návrhové ploše pracovního postupu.
+> Dialogové okno [editoru sad pravidel (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) můžete otevřít přímo Poklikáním na aktivitu [sady](https://msdn2.microsoft.com/library/system.workflow.activities.policyactivity.aspx) , která je na návrhové ploše pracovního postupu.
 
 ### <a name="to-select-or-create-a-rule-set-for-a-policyactivity-activity"></a>Výběr nebo vytvoření sady pravidel pro aktivitu sady
 
-1. Klikněte pravým tlačítkem na [sady](https://go.microsoft.com/fwlink?LinkID=65019)a potom klikněte na **vlastnosti** . tím otevřete okno **vlastnosti** .
+1. Klikněte pravým tlačítkem na [sady](https://msdn2.microsoft.com/library/system.workflow.activities.policyactivity.aspx)a potom klikněte na **vlastnosti** . tím otevřete okno **vlastnosti** .
 
 2. Klikněte na vlastnost **RuleSetReference** .
 
 3. Proveďte jednu z těchto akcí:
 
-    - Klikněte na **RuleSetReference** tři tečky **[...]** a potom vyberte existující sadu pravidel v [dialogovém okně vybrat sadu pravidel (starší verze)](../workflow-designer/select-rule-set-dialog-box-legacy.md). Pak přejít ke kroku 10.
+    - Klikněte na **RuleSetReference** tři tečky **[...]** a potom vyberte existující sadu pravidel v [dialogovém okně vybrat sadu pravidel (starší verze)](../workflow-designer/select-rule-set-dialog-box-legacy.md). Přejděte ke kroku 10.
 
          -nebo-
 
@@ -60,7 +60,7 @@ Toto téma popisuje, jak vytvořit sadu pravidel aktivity zásad pomocí starš�
 
 8. Znovu klikněte na **Přidat pravidlo** a přidejte další pravidlo.
 
-9. Až skončíte, klikněte na **OK**.
+9. Jakmile budete hotovi, klikněte na **Uložit**.
 
 ## <a name="see-also"></a>Viz také
- [Sady](https://go.microsoft.com/fwlink?LinkID=65019) [vybrat sadu pravidel](../workflow-designer/select-rule-set-dialog-box-legacy.md) – dialogové okno Editor sady pravidel (starší verze) – [dialogové okno editoru sad pravidel](../workflow-designer/rule-set-editor-dialog-box-legacy.md) [pro aktivity zásad](https://go.microsoft.com/fwlink?LinkID=65004) [starší verze pracovního postupu](../workflow-designer/legacy-workflow-activities.md)
+ [Sady](https://msdn2.microsoft.com/library/system.workflow.activities.policyactivity.aspx) [vybrat sadu pravidel](../workflow-designer/select-rule-set-dialog-box-legacy.md) – dialogové okno Editor sady pravidel (starší verze) – [dialogové okno editoru sad pravidel](../workflow-designer/rule-set-editor-dialog-box-legacy.md) [pro aktivity zásad](https://msdn2.microsoft.com/library/bb675229.aspx) [starší verze pracovního postupu](../workflow-designer/legacy-workflow-activities.md)

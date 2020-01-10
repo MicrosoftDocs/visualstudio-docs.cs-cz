@@ -12,12 +12,12 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 13f943baef21560132f2f9b9ba98c0325540fbf2
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: eaf95bdba84d116198bf332e3cf2725f5e95e614
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301087"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848233"
 ---
 # <a name="enhancing-code-quality-with-team-project-check-in-policies"></a>Zvýšení kvality kódu použitím zásad vracení se změnami týmového projektu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,16 +37,16 @@ Při použití Správa verzí Team Foundation (TFVC) můžete vytvořit zásady 
 > [!IMPORTANT]
 > Chcete-li použít zásady vracení se změnami, musíte být připojeni k [!INCLUDE[vststfsLong](../includes/vststfslong-md.md)].
 
-## <a name="common-tasks"></a>Common Tasks
+## <a name="common-tasks"></a>Běžné úkoly
 
-|Úkol|Podpůrný obsah|
+|Úloha|Podpůrný obsah|
 |----------|------------------------|
 |**Vytváření a používání zásad vrácení se změnami:** Zásady vrácení se změnami se vytvářejí pomocí nastavení týmového projektu [!INCLUDE[esprscc](../includes/esprscc-md.md)].|[Nastavení a vymáhání bran kvality](https://msdn.microsoft.com/library/bdc5666e-6cf0-45b2-a0a1-133c3f61e852)|
 |**Vytvoření a použití zásad vrácení se změnami analýzy kódu:** Můžete zvolit ze standardní sady pravidel analýzy kódu nebo můžete vytvořit vlastní sadu.|[Vytváření a používání zásad vrácení se změnami Analýzy kódu](../code-quality/creating-and-using-code-analysis-check-in-policies.md)|
 
 ## <a name="related-tasks"></a>Související úlohy
 
-|Úkol|Podpůrný obsah|
+|Úloha|Podpůrný obsah|
 |----------|------------------------|
 |**Nastavení vývojového prostředí:** Předtím, než budete moci vytvořit nebo upravit kód, je nutné nastavit vývojové a testovací prostředí pomocí příslušného zdrojového kódu. Pokud pracujete s databázemi, musíte mít také přístup k jejich reprezentaci v režimu offline.|[Nastavení vývojových prostředí](https://msdn.microsoft.com/7b686610-d379-4ca0-9608-73ef0e576e3a)|
 |**Použití analýzy kódu ve vývojovém procesu:** Členové týmu spouštějí analýzu kódu na svých vývojových počítačích. V aplikaci Visual Studio můžou vývojáři konfigurovat a spouštět analýzy kódu pro jednotlivé projekty kódu, zobrazovat a analyzovat problémy zjištěné spuštěním a vytvářet pracovní položky pro upozornění.|[Analýza kvality aplikace](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)|
@@ -56,4 +56,4 @@ Při použití Správa verzí Team Foundation (TFVC) můžete vytvořit zásady 
 ## <a name="external-resources"></a>Externí zdroje
 
 ### <a name="guidance"></a>Doprovodné materiály
- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](https://go.microsoft.com/fwlink/?LinkID=255188)
+ [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](https://msdn.microsoft.com/library/jj159340.aspx)

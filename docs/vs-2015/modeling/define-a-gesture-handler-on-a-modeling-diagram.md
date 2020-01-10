@@ -12,17 +12,17 @@ caps.latest.revision: 36
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bf749d1073faf4cf22febafce716af36b47c6484
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 67946ffb674a7f4a2346229b958ba8316d6ff919
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299310"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850493"
 ---
 # <a name="define-a-gesture-handler-on-a-modeling-diagram"></a>Definování obslužné rutiny gest v diagramu modelování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V aplikaci Visual Studio můžete definovat příkazy, které se mají provést, když uživatel dvakrát klikne nebo přetáhne položky do diagramu UML. Tato rozšíření můžete zabalit do rozšíření integrace sady Visual Studio ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) a distribuovat je ostatním uživatelům aplikace Visual Studio.
+V aplikaci Visual Studio můžete definovat příkazy, které se mají provést, když uživatel dvakrát klikne nebo přetáhne položky do diagramu UML. Tato rozšíření můžete zabalit do rozšíření integrace sady Visual Studio ([VSIX](https://msdn.microsoft.com/library/dd393694(VS.100).aspx)) a distribuovat je ostatním uživatelům aplikace Visual Studio.
 
  Pokud již existuje předdefinované chování pro typ diagramu a typ prvku, který chcete přetáhnout, pravděpodobně nebudete moci přidat nebo přepsat toto chování.
 
@@ -379,7 +379,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
    Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z:
 
-   *% Localappdata%* **\Local\Microsoft\VisualStudio\\[verze] \Extensions**
+   *%LocalAppData%* **\Local\Microsoft\VisualStudio\\[version]\Extensions**
 
 ## <a name="DragExample"></a>Případě
  Následující příklad ukazuje, jak vytvořit životnosti v sekvenčním diagramu na základě částí a portů komponenty přetažené z diagramu komponent.

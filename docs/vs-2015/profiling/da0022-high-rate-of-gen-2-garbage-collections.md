@@ -13,12 +13,12 @@ caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 067544e6b97e2709ed217ae0232771e833800e52
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0dcfa4d3522d88b58e971c0a4ff3f27649c2d21b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300120"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844633"
 ---
 # <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: Vysoká míra 2. generace uvolňování pamětí
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +31,7 @@ ID pravidla | DA0022 |
   
  Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.  
   
-## <a name="cause"></a>Příčina  
+## <a name="cause"></a>příčina  
  Údaje o výkonu systému, které byly shromážděny během profilace, naznačují, že významný podíl objektů paměťového for.NET Framework byl v generaci paměti 2 kolekce v porovnání s generace paměti 0 a 1. generace uvolňován.  
   
 ## <a name="rule-description"></a>Popis pravidla  
@@ -50,4 +50,4 @@ ID pravidla | DA0022 |
   
  Chcete-li pochopit vzor využití spravované paměti aplikací, profil znovu spusťte profil přidělení paměti a.NET a vyberte možnost profilace životnosti objektu.  
   
- Informace o tom, jak zlepšit výkon uvolňování paměti, najdete v tématu [základy systému uvolňování paměti a Nápověda ke zvýšení výkonu](https://go.microsoft.com/fwlink/?LinkId=148226) na webu společnosti Microsoft. Informace o režii automatického uvolňování paměti najdete v tématu [large object halda se nepokryla](https://go.microsoft.com/fwlink/?LinkId=177836).
+ Informace o tom, jak zlepšit výkon uvolňování paměti, najdete v tématu [základy systému uvolňování paměti a Nápověda ke zvýšení výkonu](https://msdn2.microsoft.com/library/ms973837.aspx) na webu společnosti Microsoft. Informace o režii automatického uvolňování paměti najdete v tématu [large object halda se nepokryla](https://msdn.microsoft.com/magazine/cc534993.aspx).

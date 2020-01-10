@@ -27,17 +27,17 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7e007830a91f0450f6c26c6c175196db308e3a43
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 336a02927374e856a2d6f5a55eb03c5ae1ac7037
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300215"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845180"
 ---
 # <a name="midl-task"></a>MIDL – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MIDL. exe. Další informace naleznete v tématu "Reference k příkazovému řádku" MIDL "na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MIDL. exe. Další informace naleznete v tématu "Reference k příkazovému řádku" MIDL "na webu [MSDN](https://msdn.microsoft.com/) .  
   
 ## <a name="parameters"></a>Parametry  
  Následující tabulka popisuje parametry úlohy **MIDL** . Většina parametrů úlohy a několik sad parametrů odpovídá možnosti příkazového řádku.  
@@ -48,7 +48,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Přidá adresář do seznamu adresářů, ve kterých jsou prohledány importované soubory IDL, zahrnuté hlavičkové soubory a konfigurační soubory aplikace (ACF).  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/I** v tématu Reference příkazového řádku MIDL.  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/I** v tématu Reference příkazového řádku MIDL.  
   
 - **AdditionalOptions**  
   
@@ -56,7 +56,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Seznam možností příkazového řádku Například **"** _/option1/option2/Option #_ ". Pomocí tohoto parametru můžete zadat možnosti příkazového řádku, které nejsou reprezentované žádným jiným parametrem úlohy MIDL.  
   
-     Další informace naleznete v tématu "Reference k příkazovému řádku" MIDL "na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+     Další informace naleznete v tématu "Reference k příkazovému řádku" MIDL "na webu [MSDN](https://msdn.microsoft.com/) .  
   
 - **ApplicationConfigurationMode**  
   
@@ -64,7 +64,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Pokud `true`, umožňuje použít některá klíčová slova ACF v souboru IDL.  
   
-     Další informace naleznete v tématu možnost **/app_config** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+     Další informace naleznete v tématu možnost **/app_config** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://msdn.microsoft.com/) .  
   
 - **ClientStubFile**  
   
@@ -72,7 +72,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Určuje název souboru zástupné procedury klienta pro rozhraní RPC.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/cstub** v části "Reference příkazového řádku MIDL". V této tabulce se také zobrazí parametr **ServerStubFile** .  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/cstub** v části "Reference příkazového řádku MIDL". V této tabulce se také zobrazí parametr **ServerStubFile** .  
   
 - **CPreprocessOptions**  
   
@@ -80,7 +80,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Určuje možnosti, které se mají předat CC++ /preprocesoru. Zadejte seznam možností preprocesoru oddělených mezerami.  
   
-     Další informace naleznete v tématu možnost **/cpp_opt** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+     Další informace naleznete v tématu možnost **/cpp_opt** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://msdn.microsoft.com/) .  
   
 - **DefaultCharType**  
   
@@ -94,9 +94,9 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
     |-----------|--------------------------|  
     |**Podpisy**|**/char podepsané**|  
     |**Celé**|**/char bez znaménka**|  
-    |**Abecední**|**/char ascii7**|  
+    |**Ascii**|**/char ascii7**|  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/char** v části "Reference příkazového řádku MIDL".  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/char** v části "Reference příkazového řádku MIDL".  
   
 - **DllDataFileName**  
   
@@ -104,7 +104,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Určuje název souboru vygenerovaného souboru *dlldata* pro proxy server dll.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/dlldata** v části "Reference příkazového řádku MIDL".  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/dlldata** v části "Reference příkazového řádku MIDL".  
   
 - **EnableErrorChecks**  
   
@@ -116,11 +116,11 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**NTato**|**/Error None**|  
+    |**Žádné**|**/Error None**|  
     |**EnableCustom**|**/Error**|  
-    |**Všem**|**/Error All**|  
+    |**Vše**|**/Error All**|  
   
-     Další informace naleznete v možnosti **/Error** v tématu Referenční příručka příkazového řádku MIDL na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+     Další informace naleznete v možnosti **/Error** v tématu Referenční příručka příkazového řádku MIDL na webu [MSDN](https://msdn.microsoft.com/) .  
   
 - **ErrorCheckAllocations**  
   
@@ -128,7 +128,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Pokud `true`, vyhledejte chyby nedostatku paměti.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/Error alokace** v tématu "Reference příkazového řádku MIDL".  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/Error alokace** v tématu "Reference příkazového řádku MIDL".  
   
 - **ErrorCheckBounds**  
   
@@ -136,7 +136,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Pokud `true`, zkontroluje velikost vyhovujících a proměnlivých polí podle specifikace délky přenosu.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/Error Bounds_check** v tématu Referenční příručka příkazového řádku MIDL.  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/Error Bounds_check** v tématu Referenční příručka příkazového řádku MIDL.  
   
 - **ErrorCheckEnumRange**  
   
@@ -152,7 +152,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Pokud `true`, ověřte, že neexistují žádné ukazatele odkazů s hodnotou null do zástupných procedur klienta.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/Error ref** v tématu "MIDL příkazového řádku Reference".  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/Error ref** v tématu "MIDL příkazového řádku Reference".  
   
 - **ErrorCheckStubData**  
   
@@ -160,7 +160,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Pokud `true`, vygeneruje zástupnou proceduru, která zachytává výjimky při zařazování na straně serveru a šíří je zpátky do klienta.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/Error Stub_data** v tématu Referenční příručka příkazového řádku MIDL.  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/Error Stub_data** v tématu Referenční příručka příkazového řádku MIDL.  
   
 - **GenerateClientFiles**  
   
@@ -172,10 +172,10 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**NTato**|**/Client žádné**|  
+    |**Žádné**|**/Client žádné**|  
     |**Metrik**|**/Client zástupná procedura**|  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/Client** v části "Reference příkazového řádku MIDL".  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/Client** v části "Reference příkazového řádku MIDL".  
   
 - **GenerateServerFiles**  
   
@@ -187,10 +187,10 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**NTato**|**/Server žádné**|  
+    |**Žádné**|**/Server žádné**|  
     |**Metrik**|**/Server – zástupná procedura**|  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/Server** v tématu Reference příkazového řádku MIDL.  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/Server** v tématu Reference příkazového řádku MIDL.  
   
 - **GenerateStublessProxies**  
   
@@ -198,7 +198,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Pokud `true`, vygeneruje plně interpretované zástupné procedury spolu s proxy bez zástupných procedur pro rozhraní objektů.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/oicf** v části "Reference příkazového řádku MIDL".  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/oicf** v části "Reference příkazového řádku MIDL".  
   
 - **GenerateTypeLibrary**  
   
@@ -206,7 +206,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Pokud `true`, soubor knihovny typů (. tlb) se nevygeneruje.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/notlb** v části "Reference příkazového řádku MIDL".  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/notlb** v části "Reference příkazového řádku MIDL".  
   
 - **HeaderFileName**  
   
@@ -214,7 +214,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Určuje název vygenerovaného souboru hlaviček.  
   
-     Další informace naleznete v části **/h** nebo **/header** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+     Další informace naleznete v části **/h** nebo **/header** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://msdn.microsoft.com/) .  
   
 - **IgnoreStandardIncludePath**  
   
@@ -222,7 +222,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Pokud `true`, úloha MIDL vyhledá pouze adresáře určené pomocí přepínače **AdditionalIncludeDirectories** a ignoruje aktuální adresář a adresáře určené PROMĚNNOU prostředí include.  
   
-     Další informace naleznete v tématu možnost **/no_def_idir** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+     Další informace naleznete v tématu možnost **/no_def_idir** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://msdn.microsoft.com/) .  
   
 - **InterfaceIdentifierFileName**  
   
@@ -230,7 +230,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Určuje název *souboru identifikátoru rozhraní* modelu COM. Tato možnost přepíše výchozí název získaný přidáním "_i. c" do názvu souboru IDL.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/IID** v části "Reference příkazového řádku MIDL".  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/IID** v části "Reference příkazového řádku MIDL".  
   
 - **LocaleID**  
   
@@ -238,7 +238,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Určuje *identifikátor národního prostředí* , který umožňuje použití mezinárodních znaků ve vstupních souborech, názvech souborů a cestách adresářů. Zadejte desítkový identifikátor národního prostředí.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/LCID** v části "Reference příkazového řádku MIDL". Viz také "ID národního prostředí přiřazené společností Microsoft" na webu MSDN.  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/LCID** v části "Reference příkazového řádku MIDL". Viz také "ID národního prostředí přiřazené společností Microsoft" na webu MSDN.  
   
 - **MkTypLibCompatible**  
   
@@ -246,7 +246,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Pokud `true`, vyžaduje, aby Formát vstupního souboru byl kompatibilní s MkTypLib. exe verze 2,03.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/mktyplib203** v části "Reference příkazového řádku MIDL". Viz také "syntaxe souboru jazyka ODL" na webu MSDN.  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/mktyplib203** v části "Reference příkazového řádku MIDL". Viz také "syntaxe souboru jazyka ODL" na webu MSDN.  
   
 - **OutputDirectory**  
   
@@ -254,7 +254,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Určuje výchozí adresář, ve kterém úloha MIDL zapisuje výstupní soubory.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/out** v tématu Referenční příručka příkazového řádku MIDL.  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/out** v tématu Referenční příručka příkazového řádku MIDL.  
   
 - **PreprocessorDefinitions**  
   
@@ -262,7 +262,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Určuje jednu nebo více *definicí*; To znamená, že název a volitelná hodnota, která má být předána preprocesoru jazyka C, jako by byla direktivou `#define`. Formát každé definice je, *název [= hodnota]* .  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/D** v tématu Referenční příručka příkazového řádku MIDL. Viz také parametr **UndefinePreprocessorDefinitions** v této tabulce.  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/D** v tématu Referenční příručka příkazového řádku MIDL. Viz také parametr **UndefinePreprocessorDefinitions** v této tabulce.  
   
 - **ProxyFileName**  
   
@@ -270,7 +270,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Určuje název souboru proxy rozhraní pro rozhraní COM.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/proxy** v části "Reference příkazového řádku MIDL".  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/proxy** v části "Reference příkazového řádku MIDL".  
   
 - **RedirectOutputAndErrors**  
   
@@ -278,7 +278,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Přesměruje výstup, například chybové zprávy a upozornění, ze standardního výstupu do zadaného souboru.  
   
-     Další informace naleznete v části **/o** v tématu Referenční příručka příkazového řádku MIDL na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+     Další informace naleznete v části **/o** v tématu Referenční příručka příkazového řádku MIDL na webu [MSDN](https://msdn.microsoft.com/) .  
   
 - **ServerStubFile**  
   
@@ -286,9 +286,9 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Určuje název souboru zástupné procedury serveru pro rozhraní RPC.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/sstub** v části "Reference příkazového řádku MIDL". Viz také parametr **ClientStubFile** v této tabulce.  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/sstub** v části "Reference příkazového řádku MIDL". Viz také parametr **ClientStubFile** v této tabulce.  
   
-- **Zdrojová**  
+- **Zdroj**  
   
      Vyžaduje se `ITaskItem[]` parametr.  
   
@@ -305,12 +305,12 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
     |**NotSet**|*\<žádné >*|  
-    |**první**|**/Zp1**|  
-    |**odst**|**/Zp2**|  
+    |**1**|**/Zp1**|  
+    |**2**|**/Zp2**|  
     |**4**|**/Zp4**|  
-    |**8**|**/ZP8**|  
+    |**8**|**/Zp8**|  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/zp** v části "Reference příkazového řádku MIDL". Možnost **/zp** je ekvivalentní možnosti **/Pack** a starší možnosti **/align** .  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/zp** v části "Reference příkazového řádku MIDL". Možnost **/zp** je ekvivalentní možnosti **/Pack** a starší možnosti **/align** .  
   
 - **SuppressCompilerWarnings**  
   
@@ -318,7 +318,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Pokud `true`, potlačí zprávy upozornění z úlohy MIDL.  
   
-     Další informace naleznete v tématu možnost **/no_warn** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+     Další informace naleznete v tématu možnost **/no_warn** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://msdn.microsoft.com/) .  
   
 - **SuppressStartupBanner**  
   
@@ -326,7 +326,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Pokud `true`, zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/nologo** v tématu Referenční příručka příkazového řádku MIDL.  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/nologo** v tématu Referenční příručka příkazového řádku MIDL.  
   
 - **TargetEnvironment**  
   
@@ -339,11 +339,11 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
     |**NotSet**|*\<žádné >*|  
-    |**Chyb**|**/ENV Win32**|  
+    |**Win32**|**/ENV Win32**|  
     |**Procesor**|**/ENV ia64**|  
-    |**Platformě**|**/ENV x64**|  
+    |**X64**|**/env x64**|  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/ENV** v části "Reference příkazového řádku MIDL".  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/ENV** v části "Reference příkazového řádku MIDL".  
   
 - **TrackerLogDirectory**  
   
@@ -364,15 +364,15 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
     |**NewFormat**|**/newtlb**|  
     |**OldFormat**|**/oldtlb**|  
   
-     Další informace naleznete v možnostech **/newtlb** a **/oldtlb** v tématu "MIDL příkazového řádku Reference" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+     Další informace naleznete v možnostech **/newtlb** a **/oldtlb** v tématu "MIDL příkazového řádku Reference" na webu [MSDN](https://msdn.microsoft.com/) .  
   
-- **Názevknihovnytypů**  
+- **TypeLibraryName**  
   
      Volitelný **řetězcový** parametr.  
   
      Určuje název souboru knihovny typů.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/TLB** v části "Reference příkazového řádku MIDL".  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/TLB** v části "Reference příkazového řádku MIDL".  
   
 - **UndefinePreprocessorDefinitions**  
   
@@ -380,7 +380,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Odebere všechny předchozí definice názvu předáním názvu do preprocesoru jazyka C, jako by bylo direktivou `#undefine`. Zadejte jeden nebo více dříve definovaných názvů.  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/U** v tématu Referenční příručka příkazového řádku MIDL. Viz také parametr **PreprocessorDefinitions** v této tabulce.  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/U** v tématu Referenční příručka příkazového řádku MIDL. Viz také parametr **PreprocessorDefinitions** v této tabulce.  
   
 - **ValidateAllParameters**  
   
@@ -388,9 +388,9 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Pokud `true`, vygeneruje další informace o kontrole chyb, které se používají k provádění kontrol integrity v době běhu. Pokud `false`, informace o kontrole chyb nejsou vygenerovány.  
   
-     Další informace naleznete v možnostech **/Robust** a **/no_robust** v části "referenční příručka příkazového řádku" MIDL "na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+     Další informace naleznete v možnostech **/Robust** a **/no_robust** v části "referenční příručka příkazového řádku" MIDL "na webu [MSDN](https://msdn.microsoft.com/) .  
   
-- **Warnaserror –**  
+- **WarnAsError**  
   
      Volitelný parametr `Boolean`.  
   
@@ -398,7 +398,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Pokud není zadán parametr úlohy **WarningLevel** MIDL, jsou upozornění na výchozí úrovni úrovně 1 považována za chyby.  
   
-     Další informace naleznete v tématu **/WX** Options in "MIDL příkazového řádku Reference" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) . Viz také parametr **WarningLevel** v této tabulce.  
+     Další informace naleznete v tématu **/WX** Options in "MIDL příkazového řádku Reference" na webu [MSDN](https://msdn.microsoft.com/) . Viz také parametr **WarningLevel** v této tabulce.  
   
 - **WarningLevel**  
   
@@ -410,13 +410,13 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**0,8**|**/W0**|  
-    |**první**|**/W1**|  
-    |**odst**|**/W2**|  
-    |**1**|**/W3**|  
+    |**0**|**/W0**|  
+    |**1**|**/W1**|  
+    |**2**|**/W2**|  
+    |**3**|**/W3**|  
     |**4**|**/W4**|  
   
-     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/w** v části "Reference k příkazovému řádku" MIDL. Viz také parametr **warnaserror –** v této tabulce.  
+     Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/w** v části "Reference k příkazovému řádku" MIDL. Viz také parametr **warnaserror –** v této tabulce.  
   
 ## <a name="remarks"></a>Poznámky  
   

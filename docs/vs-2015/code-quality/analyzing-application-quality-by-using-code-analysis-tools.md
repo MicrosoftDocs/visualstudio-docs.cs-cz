@@ -15,12 +15,12 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8b85bbad909a05bacab361a49cc7e029482ad606
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: d4e45ade24ce792999d1f9b0f52d9c82703fc5a0
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291200"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849883"
 ---
 # <a name="analyzing-application-quality-by-using-code-analysis-tools"></a>Analýza kvality aplikace pomocí nástrojů pro analýzu kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ V této části [Analýza spravovaného](../code-quality/analyzing-managed-code-
 
  [Analýza kvality ovladače pomocí nástrojů pro analýzu kódu](/windows-hardware/drivers/devtest/tools-for-verifying-drivers) Analýza kódu pro ovladače je nástroj pro statické ověření při kompilaci, který detekuje základní chyby kódování v jazyce C C++ a programech a obsahuje specializovaný modul, který je určen k detekci chyb v (primárně) kódu ovladače režimu jádra. SDV (static Driver Verifier) je statický ověřovací nástroj, který systematicky analyzuje zdrojový kód ovladačů režimu jádra systému Windows. SDV Určuje, zda ovladač správně spolupracuje s jádrem operačního systému Windows.
 
- [Upozornění analýzy kódu pro ovladače](https://go.microsoft.com/fwlink/?LinkId=225920) Popisuje upozornění, která analyzuje kód pro ovladače, když detekuje možnou chybu v kódu ovladače.
+ [Upozornění analýzy kódu pro ovladače](https://msdn.microsoft.com/library/windows/hardware/ff550572(v=VS.85).aspx) Popisuje upozornění, která analyzuje kód pro ovladače, když detekuje možnou chybu v kódu ovladače.
 
 ## <a name="related-tasks"></a>Související úlohy
  [Měření složitosti a udržovatelnosti spravovaného kódu](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md) Sem vložte popis.

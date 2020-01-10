@@ -17,12 +17,12 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a95392525826fcfb2595e1bac7d45ebea20317fc
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 673cc3d9b936131e6423a015af5c78486846fbe7
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74294693"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847709"
 ---
 # <a name="trusted-application-deployment-overview"></a>Přehled nasazení důvěryhodných aplikací
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,11 +39,11 @@ Toto téma poskytuje přehled o tom, jak nasadit aplikace [!INCLUDE[ndptecclick]
   
 |Objekt nebo role|Popis|  
 |--------------------|-----------------|  
-|Správce|Organizační entita zodpovědná za aktualizace a údržbu klientských počítačů|  
+|správce|Organizační entita zodpovědná za aktualizace a údržbu klientských počítačů|  
 |správce vztahu důvěryhodnosti|Podsystém v rámci modulu CLR (Common Language Runtime), který je zodpovědný za vynucování zabezpečení klientských aplikací.|  
 |publisher|Entita, která zapisuje a udržuje aplikaci.|  
 |modul pro nasazení|Entita, kterou aplikace balí a distribuuje uživatelům.|  
-|certifikát|Kryptografický podpis, který se skládá z veřejného a privátního klíče; obecně vydané certifikační autoritou (CA), která může zaručí za jeho pravost.|  
+|certificate|Kryptografický podpis, který se skládá z veřejného a privátního klíče; obecně vydané certifikační autoritou (CA), která může zaručí za jeho pravost.|  
 |Certifikát Authenticode|Certifikát s vloženými metadaty, které popisují mimo jiné použití, pro které může být certifikát zaměstnán.|  
 |certifikační autorita|Organizace, která ověřuje identitu vydavatelů a vydává jim certifikáty vložené s metadaty vydavatele.|  
 |Kořenová autorita|Certifikační autorita, která zmocňuje jiné certifikační autority k vystavování certifikátů.|  
@@ -74,7 +74,7 @@ Toto téma poskytuje přehled o tom, jak nasadit aplikace [!INCLUDE[ndptecclick]
 ### <a name="add-the-publisher-to-the-trusted-publishers-store"></a>Přidat vydavatele do úložiště důvěryhodných vydavatelů  
  Aby vaše aplikace [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] získala vyšší úroveň důvěryhodnosti, je nutné přidat certifikát jako důvěryhodného vydavatele do každého klientského počítače, na kterém bude aplikace spuštěna. Provádění této úlohy je jednorázová konfigurace. Po dokončení můžete nasadit tolik aplikací [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] podepsaných vaším vydavatelem certifikátu a všechny budou spuštěny s vysokou důvěryhodností.  
   
- Pokud nasazujete aplikaci ve spravovaném desktopovém prostředí; například podnikový intranet s operačním systémem Windows; můžete přidat důvěryhodné vydavatele do úložiště klienta vytvořením nového seznamu důvěryhodných certifikátů (CTL) pomocí Zásady skupiny. Další informace najdete v tématu [Vytvoření seznamu důvěryhodných certifikátů pro objekt Zásady skupiny](https://go.microsoft.com/fwlink/?LinkId=102576).  
+ Pokud nasazujete aplikaci ve spravovaném desktopovém prostředí; například podnikový intranet s operačním systémem Windows; můžete přidat důvěryhodné vydavatele do úložiště klienta vytvořením nového seznamu důvěryhodných certifikátů (CTL) pomocí Zásady skupiny. Další informace najdete v tématu [Vytvoření seznamu důvěryhodných certifikátů pro objekt Zásady skupiny](https://technet.microsoft.com/library/2c03582f-00b2-43e5-ae1d-493894ad0fd7).  
   
  Pokud nechcete aplikaci nasazovat do spravovaného desktopového prostředí, máte k dispozici následující možnosti pro přidání certifikátu do úložiště důvěryhodných vydavatelů:  
   

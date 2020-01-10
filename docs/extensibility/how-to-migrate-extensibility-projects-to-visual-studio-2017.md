@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Migrace projektů rozšíření do sady Visual Studio 2017 | Dokumentace Microsoftu'
+title: 'Postupy: migrace rozšiřujících projektů do sady Visual Studio 2017 | Microsoft Docs'
 ms.date: 11/09/2016
 ms.topic: conceptual
 ms.assetid: 8ca07b00-a3ff-40ab-b647-c0a93b55e86a
@@ -9,61 +9,61 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: f5edad198727ea33d3bf293fa0ee1baf3afb5b3b
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 5d32a7efa050d04c848ec8add761d0d235e95304
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823902"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849129"
 ---
-# <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Postupy: Migrace projektů rozšíření do sady Visual Studio 2017
+# <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Postupy: migrace rozšiřujících projektů do sady Visual Studio 2017
 
-Tento dokument vysvětluje, jak upgradovat projekty rozšiřitelnosti sady Visual Studio 2017. Kromě popisující, jak aktualizovat soubory projektu, je také popisuje, jak upgradovat z verze manifestu rozšíření 2 (VSIX v2) na novou verzi 3 formát manifestu VSIX (VSIX v. 3).
+Tento dokument vysvětluje, jak upgradovat projekty rozšíření na Visual Studio 2017. Kromě popisu, jak aktualizovat soubory projektu, také popisuje, jak upgradovat z manifestu rozšíření verze 2 (VSIX v2) na nový formát manifestu VSIX verze 3 (VSIX V3).
 
-## <a name="install-visual-studio-2017-with-required-workloads"></a>Instalace sady Visual Studio 2017 pomocí požadované úlohy
+## <a name="install-visual-studio-2017-with-required-workloads"></a>Instalace sady Visual Studio 2017 s požadovanými úlohami
 
 Ujistěte se, že vaše instalace zahrnuje následující úlohy:
 
-* Vývoj desktopových aplikací .NET
+* Vývoj desktopových aplikací pomocí .NET
 * Vývoj rozšíření sady Visual Studio
 
-## <a name="open-vsix-solution-in-visual-studio-2017"></a>Otevřete řešení VSIX v sadě Visual Studio 2017
+## <a name="open-vsix-solution-in-visual-studio-2017"></a>Otevřít řešení VSIX v aplikaci Visual Studio 2017
 
-Všechny projekty VSIX se vyžadují jednosměrnou aktualizaci hlavní verze Visual Studio 2017.
+Všechny projekty VSIX budou vyžadovat jednosměrný upgrade hlavní verze na Visual Studio 2017.
 
-Soubor projektu (například * *.csproj*) bude aktualizovat:
+Soubor projektu (například * *. csproj*) bude aktualizován:
 
-* MinimumVisualStudioVersion – je nyní nastaveno na 15.0
-* OldToolsVersion (Pokud již existuje) – nastaví na 14.0
+* MinimumVisualStudioVersion – teď je nastavená na 15,0.
+* OldToolsVersion (Pokud už existuje) – teď je nastavená na 14,0.
 
-## <a name="update-the-microsoftvssdkbuildtools-nuget-package"></a>Aktualizovat balíček Microsoft.VSSDK.BuildTools NuGet
-
-> [!Note]
-> Pokud vaše řešení neobsahuje odkaz na balíček Microsoft.VSSDK.BuildTools NuGet, můžete tento krok přeskočit.
-
-Aby bylo možné sestavit vaše rozšíření ve VSIX v. 3 nové formát (verze 3), vaše řešení se musela být vytvořená s novou VSSDK Build Tools. Tím se nainstaluje se sadou Visual Studio 2017, ale vaše rozšíření VSIX v2 může uchovávající odkaz na starší verzi prostřednictvím balíčku NuGet. Pokud ano, musíte ručně nainstalovat aktualizaci balíčku Microsoft.VSSDK.BuildTools NuGet pro vaše řešení.
-
-Chcete-li aktualizovat odkazy NuGet Microsoft.VSSDK.BuildTools:
-
-* Klikněte pravým tlačítkem na řešení a zvolte **spravovat balíčky NuGet pro řešení**.
-* Přejděte **aktualizace** kartu.
-* Vyberte **Microsoft.VSSDK.BuildTools (nejnovější verze)** .
-* Stisknutím klávesy **aktualizace**.
-
-![Nástroje VSSDK sestavení](media/vssdk-build-tools.png)
-
-## <a name="make-changes-to-the-vsix-extension-manifest"></a>Proveďte změny v manifestu rozšíření VSIX
-
-Pokud chcete mít jistotu, že uživatele instalace sady Visual Studio obsahuje všechna sestavení, které jsou potřebné ke spuštění rozšíření, zadejte všechny požadované součásti nebo balíčky v souboru manifestu rozšíření. Když se uživatel pokusí nainstalovat rozšíření, VSIXInstaller zkontroluje, pokud jsou nainstalované všechny požadované součásti. Pokud chybí některé, uživatel se vyzve k instalaci chybějících součástí jako součást procesu instalace rozšíření.
+## <a name="update-the-microsoftvssdkbuildtools-nuget-package"></a>Aktualizace balíčku NuGet Microsoft. VSSDK. BuildTools
 
 > [!Note]
-> Minimálně byste všechna rozšíření určit základní součást editoru sady Visual Studio jako předpoklad.
+> Pokud vaše řešení neodkazuje na balíček NuGet Microsoft. VSSDK. BuildTools, můžete tento krok přeskočit.
 
-* Upravit soubor manifestu rozšíření (obvykle nazvanou *source.extension.vsixmanifest*).
-* Zajištění `InstallationTarget` zahrnuje 15.0.
-* Přidáte požadavky pro instalaci požadované (jak je znázorněno v následujícím příkladu).
-  * Doporučujeme, abyste že zadáte jenom ID komponenty pro požadavky na instalaci.
-  * V části na konci tohoto dokumentu [pokyny k identifikaci ID součástí](#find-component-ids).
+Aby bylo možné sestavit rozšíření v novém formátu VSIX V3 (verze 3), bude nutné vaše řešení sestavit pomocí nových nástrojů pro sestavení VSSDK. Tato akce bude nainstalována se sadou Visual Studio 2017, ale rozšíření VSIX v2 může obsahovat odkaz na starší verzi prostřednictvím NuGet. Pokud ano, budete muset ručně nainstalovat aktualizaci balíčku NuGet Microsoft. VSSDK. BuildTools pro vaše řešení.
+
+Aktualizace odkazů na NuGet na Microsoft. VSSDK. BuildTools:
+
+* Klikněte pravým tlačítkem na řešení a vyberte **Spravovat balíčky NuGet pro řešení**.
+* Přejděte na kartu **aktualizace** .
+* Vyberte **Microsoft. VSSDK. BuildTools (nejnovější verze)** .
+* Stiskněte **aktualizovat**.
+
+![Nástroje pro sestavení VSSDK](media/vssdk-build-tools.png)
+
+## <a name="make-changes-to-the-vsix-extension-manifest"></a>Provedení změn v manifestu rozšíření VSIX
+
+Chcete-li zajistit, aby instalace aplikace Visual Studio pro uživatele měla všechna sestavení potřebná ke spuštění rozšíření, zadejte všechny požadované součásti nebo balíčky v souboru manifestu rozšíření. Když se uživatel pokusí nainstalovat rozšíření, VSIXInstaller zkontroluje, jestli jsou nainstalované všechny požadované součásti. Pokud chybí nějaké, zobrazí se uživateli výzva k instalaci chybějících součástí v rámci procesu instalace rozšíření.
+
+> [!Note]
+> Minimálně všechna rozšíření by měla jako předpoklad určovat komponentu základního editoru sady Visual Studio.
+
+* Upravte soubor manifestu rozšíření (obvykle se nazývá *source. extension. vsixmanifest*).
+* Zajistěte, aby `InstallationTarget` zahrnovala 15,0.
+* Přidejte požadavky na požadovanou instalaci (jak je znázorněno v následujícím příkladu).
+  * Doporučujeme zadat pouze ID součástí pro požadavky na instalaci.
+  * [Pokyny k identifikaci ID součástí](#find-component-ids)najdete v části na konci tohoto dokumentu.
 
 Příklad:
 
@@ -79,126 +79,126 @@ Příklad:
 </PackageManifest>
 ```
 
-### <a name="option-use-the-designer-to-make-changes-to-the-vsix-extension-manifest"></a>Možnost: Pomocí návrháře provádět změny v manifestu rozšíření VSIX
+### <a name="option-use-the-designer-to-make-changes-to-the-vsix-extension-manifest"></a>Možnost: použití návrháře k provádění změn manifestu rozšíření VSIX
 
-Místo Přímá úprava manifestu XML, můžete použít novou **požadavky** kartě v Návrháři manifestu vyberte požadavky a XML aktualizují za vás.
+Místo toho, abyste přímo upravovali XML manifestu, můžete použít kartu nové **požadavky** v Návrháři manifestu k výběru požadavků a kód XML bude aktualizován za vás.
 
 > [!Note]
-> Nástroj Manifest Designer pouze umožňuje vybrat součásti (ne úloh nebo balíčky), které jsou nainstalovány na aktuální instanci aplikace Visual Studio. Pokud je potřeba přidat předpokladem pro úlohy, balíček nebo komponenty, která není nainstalována, upravte přímo XML manifestu.
+> Návrhář manifestu vám umožní vybrat komponenty (ne úlohy nebo balíčky), které jsou nainstalované v aktuální instanci sady Visual Studio. Pokud potřebujete přidat předpoklad pro úlohu, balíček nebo komponentu, která není aktuálně nainstalovaná, upravte XML manifest přímo.
 
-* Otevřít *source.extension.vsixmanifest [Design]* souboru.
-* Vyberte **požadavky** kartu a stiskněte klávesu **nový** tlačítko.
+* Otevřete soubor *source. extension. vsixmanifest [Design]* .
+* Vyberte kartu **požadované součásti** a stiskněte tlačítko **Nový** .
 
    ![Návrhář manifestu VSIX](media/vsix-manifest-designer.png)
 
-* **Přidejte nové požadované** otevře se okno.
+* Otevře se okno **Přidat nové požadované součásti** .
 
-   ![přidání požadovaných součástí souboru vsix](media/add-vsix-prerequisite.png)
+   ![Přidat požadavky VSIX](media/add-vsix-prerequisite.png)
 
-* Klikněte na rozevírací seznam pro **název** a vyberte požadovaný kontrolu požadovaných součástí.
+* Klikněte na rozevírací seznam pro **název** a vyberte požadovaný požadavek.
 * V případě potřeby aktualizujte verzi.
 
    > [!Note]
-   > Budou předem vyplněná verzi aktuálně nainstalované komponenty, rozsah pokrývání uzlů až (ale bez zahrnutí) pole verze další hlavní verze komponenty.
+   > Pole verze se předem vyplní verzí aktuálně nainstalované komponenty a rozsah pokrývá až (ale ne včetně) další hlavní verze součásti.
 
-   ![přidání požadovaných součástí roslyn](media/add-roslyn-prerequisite.png)
+   ![Přidat požadavky Roslyn](media/add-roslyn-prerequisite.png)
 
 * Stisknutím klávesy **OK**.
 
 ## <a name="update-debug-settings-for-the-project"></a>Aktualizovat nastavení ladění pro projekt
 
-Pokud chcete ladit vaše rozšíření v experimentální instanci sady Visual Studio, ujistěte se, že nastavení projektu pro **ladění** > **zahájení** má **spustit externí program:** nastavenou *devenv.exe* souboru instalace sady Visual Studio 2017.
+Pokud chcete ladit rozšíření v experimentální instanci aplikace Visual Studio, ujistěte se, že nastavení projektu pro **ladění** > **Spustit akci** má hodnotu **spustit externí program:** hodnota nastavená na soubor *devenv. exe* instalace sady Visual Studio 2017.
 
-Může vypadat: *C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe*
+Může to vypadat takto: *C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe*
 
 ![spustit externí program](media/start-external-program.png)
 
 > [!Note]
-> Ladění spouštěcí akce je obvykle uložen ve *. csproj.user* souboru. Tento soubor je obvykle součástí *.gitignore* souboru a proto se neuloží, obvykle s jinými soubory projektu při potvrzené do správy zdrojového kódu. V důsledku toho pokud vaše řešení jste dali čerstvé ze správy zdrojového kódu je pravděpodobné, že projekt bude mít žádné hodnoty nastavené pro spouštěcí akci. Nové projekty VSIX vytvořené pomocí sady Visual Studio 2017 budou mít *. csproj.user* soubor vytvořený s výchozím nastavením odkazující na aktuální adresář instalace sady Visual Studio. Nicméně pokud provádíte migraci v2 rozšíření VSIX, je pravděpodobné, který *. csproj.user* soubor bude obsahovat odkazy na předchozí verze sady Visual Studio Instalační adresář. Nastavením této hodnoty pro **ladění** > **zahájení** vám umožní správné experimentální instanci sady Visual Studio ke spuštění při pokusu o ladění rozšíření.
+> Akce spustit ladění je obvykle uložena v souboru *. csproj. User* . Tento soubor je obvykle obsažen v souboru *. gitignore* , a proto není obvykle uložen s jinými soubory projektu při potvrzení do správy zdrojových kódů. V takovém případě, pokud jste řešení stáhli ze správy zdrojového kódu, je nejspíš, že projekt nebude mít nastavené žádné hodnoty pro akci spustit. Nové projekty VSIX vytvořené pomocí sady Visual Studio 2017 budou mít vytvořený soubor *. csproj. User* s výchozím nastavením, který odkazuje na aktuální instalační adresář sady Visual Studio. Pokud však migrujete rozšíření VSIX v2, je pravděpodobný, že soubor *. csproj. User* bude obsahovat odkazy na předchozí instalační adresář verze sady Visual Studio. Nastavením hodnoty pro akci **ladění** > **Spustit** umožníte, aby se při pokusu o ladění rozšíření spouštěla správná experimentální instance sady Visual Studio.
 
-## <a name="check-that-the-extension-builds-correctly-as-a-vsix-v3"></a>Zkontrolujte, že rozšíření je sestavena správně (podle VSIX v. 3)
+## <a name="check-that-the-extension-builds-correctly-as-a-vsix-v3"></a>Ověřte, zda se rozšíření správně sestavuje (jako VSIX V3).
 
-* Vytvoření projektu VSIX.
-* Rozbalte generovaného souboru VSIX.
-  * Ve výchozím nastavení, soubor VSIX umístěným uvnitř *bin/Debug* nebo *bin/Release* jako *[YourCustomExtension] VSIX*.
-  * Přejmenovat *VSIX* k *ZIP* snadno zobrazit obsah.
-* Kontrola existence tři soubory:
+* Sestavte projekt VSIX.
+* Rozbalte vygenerovaný VSIX.
+  * Ve výchozím nastavení je soubor VSIX umístěný uvnitř *bin/Debug* nebo *bin/Release* jako *[YourCustomExtension]. vsix*.
+  * Chcete-li snadno zobrazit obsah, přejmenujte soubor *. vsix* na *. zip* .
+* Kontrolovat existenci tří souborů:
   * *extension.vsixmanifest*
   * *manifest.json*
   * *catalog.json*
 
-## <a name="check-when-all-required-prerequisites-are-installed"></a>Zaškrtněte, pokud jsou nainstalované všechny požadované součásti
+## <a name="check-when-all-required-prerequisites-are-installed"></a>Zkontroluje, jestli jsou nainstalované všechny požadované součásti.
 
-Test, které VSIX nainstaluje úspěšně na počítači nainstalované všechny požadované součásti.
+Otestujte úspěšné instalace VSIX na počítači, na kterém jsou nainstalované všechny požadované součásti.
 
 > [!Note]
-> Před instalací všechna rozšíření, ukončete všechny instance sady Visual Studio.
+> Před instalací jakéhokoli rozšíření ukončete všechny instance sady Visual Studio.
 
 Pokus o instalaci rozšíření:
 
 * On Visual Studio 2017
 
-![Instalátor VSIX v sadě Visual Studio 2017](media/vsixinstaller-vs-2017.png)
+![Instalační program VSIX v aplikaci Visual Studio 2017](media/vsixinstaller-vs-2017.png)
 
-* Volitelné: Zkontrolujte v předchozích verzích sady Visual Studio.
-  * Ukáže zpětné kompatibility.
-  * By mělo fungovat pro Visual Studio 2012, Visual Studio 2013, Visual Studio 2015.
-* Volitelné: Zkontrolujte, že kontrola verze instalačního programu VSIX nabízí široký výběr verze.
-  * Zahrnuje předchozí verze sady Visual Studio (Pokud je nainstalovaná).
+* Volitelné: Projděte si předchozí verze sady Visual Studio.
+  * Ukáže zpětnou kompatibilitu.
+  * By měla fungovat pro Visual Studio 2012, Visual Studio 2013, Visual Studio 2015.
+* Volitelné: Kontrola verze instalačního programu VSIX nabízí možnost výběru verzí.
+  * Zahrnuje předchozí verze sady Visual Studio (pokud jsou nainstalovány).
   * Zahrnuje Visual Studio 2017.
 
-Pokud byl naposledy otevřen sady Visual Studio, může se zobrazit dialogové okno takto:
+Pokud se Visual Studio nedávno otevřelo, může se zobrazit dialogové okno podobné tomuto:
 
-![VS spuštěných procesů](media/vs-running-processes.png)
+![běžící procesy vs](media/vs-running-processes.png)
 
-Počkejte procesy, které chcete vypnout, nebo ručně ukončení úlohy. Procesy, které najdete pomocí uvedených názvu nebo s identifikátorem PID uvedený v závorkách.
+Počkejte, než se procesy ukončí, nebo úlohy ukončete ručně. Procesy můžete najít podle uvedeného názvu nebo pomocí identifikátoru PID uvedeného v závorkách.
 
 > [!Note]
-> Tyto procesy nebudou automaticky během vypnutý je spuštěna instance sady Visual Studio. Ujistěte se, že jste se vypnout všechny instance sady Visual Studio na počítači – včetně těch, které od jiných uživatelů, a potom pokoušet.
+> Tyto procesy nebudou automaticky vypnuty, dokud je spuštěna instance aplikace Visual Studio. Ujistěte se, že jste všechny instance sady Visual Studio vypnuli na počítači, včetně počítačů jiných uživatelů, a potom zkuste pokračovat znovu.
 
-## <a name="check-when-missing-the-required-prerequisites"></a>Zaškrtněte, pokud chybí požadované součásti
+## <a name="check-when-missing-the-required-prerequisites"></a>Zjistit, zda chybějící požadované součásti chybí
 
-* Pokuste se nainstalovat rozšíření na počítač s Visual Studio 2017 obsahuje tento nemá není všechny součásti, které jsou definované v rámci požadavků (viz výše).
-* Zkontrolujte, zda instalace identifikuje chybějící součásti/s a uvádí jako předpoklad VSIXInstaller.
-* Poznámka: Pokud všechny požadované součásti nutné k instalaci s příponou, bude se vyžadovat zvýšení oprávnění.
+* Pokuste se nainstalovat rozšíření na počítači se sadou Visual Studio 2017, který neobsahuje všechny součásti definované v požadavcích (výše).
+* Ověřte, že instalace identifikuje chybějící komponentu/s, a vypíše je jako požadavky v VSIXInstaller.
+* Poznámka: zvýšení oprávnění se bude vyžadovat, pokud je potřeba nainstalovat všechny požadované součásti s rozšířením.
 
-![Chybí požadavek vsixinstaller](media/vsixinstaller-missing-prerequisite.png)
+![VSIXInstaller chybějící požadavek](media/vsixinstaller-missing-prerequisite.png)
 
-## <a name="decide-on-components"></a>Při rozhodování o součásti
+## <a name="decide-on-components"></a>Rozhodnutí o součástech
 
-Při hledání závislostí, zjistíte, že jednu závislost namapovat na několik komponent. K určení závislostí, které je třeba zadat jako předpoklad, doporučujeme, abyste zvolili komponenty, která má funkci podobnou vaše rozšíření a také zvážit uživatelům a jaký druh komponenty by pravděpodobně nainstalovali nebo nebude vadit instalace. Doporučujeme také vytváření rozšíření způsobem, kde splňují nezbytné požadavky jenom minimální, které vám umožní rozšíření ke spuštění a další funkce, aby byly neaktivní, pokud některé součásti nejsou zjištěny.
+Při vyhledávání závislostí zjistíte, že jedna závislost může mapovat na více komponent. Chcete-li určit závislosti, které byste měli zadat jako požadované součásti, doporučujeme vám zvolit součást, která má podobnou funkci jako vaše rozšíření, a také zvážit uživatele a typy komponent, které by pravděpodobně byly nainstalovány nebo nepamatujte na instalaci. Navrhujeme také sestavení vašich rozšíření tak, aby požadované požadavky splňovaly jenom minimum, které umožní, aby bylo rozšíření spuštěné a další funkce byly neaktivní, pokud některé součásti nejsou zjištěny.
 
-Chcete-li poskytnout další pokyny, jsme identifikovali několik běžných typů rozšíření a jejich doporučené požadavky:
+Abychom vám pomohli získat další pokyny, zjistili jsme několik běžných typů rozšíření a jejich doporučené požadavky:
 
-Typ rozšíření | Zobrazovaný název | id
+Typ rozšíření | Zobrazený název | ID
 --- | --- | ---
-Editor | Základním editoru sady Visual Studio | Microsoft.VisualStudio.Component.CoreEditor
+Editor | Visual Studio Core Editor | Microsoft.VisualStudio.Component.CoreEditor
 Roslyn | C# a Visual Basic | Microsoft.VisualStudio.Component.Roslyn.LanguageServices
 WPF | Základní spravovaný úloze vývoje desktopových aplikací | Microsoft.VisualStudio.Component.ManagedDesktop.Core
 Ladicí program | Just-In-Time debugger | Microsoft.VisualStudio.Component.Debugger.JustInTime
 
-## <a name="find-component-ids"></a>Najít ID komponenty
+## <a name="find-component-ids"></a>Najít ID součástí
 
-Seznam součástí, které jsou seřazené podle produktu Visual Studio je na [ID pracovního vytížení a komponenta Visual Studio 2017](https://aka.ms/vs2017componentIDs). Pomocí těchto součástí ID pro ID vašich požadavků v manifestu.
+Seznam komponent seřazený podle produktu Visual Studio je v rámci [úloh sady Visual studio 2017 a ID komponent](https://docs.microsoft.com/visualstudio/install/workload-and-component-ids?view=vs-2019). Pro ID požadovaných součástí v manifestu použijte tato ID.
 
-Pokud si nejste jisti, která komponenta obsahuje konkrétní binární soubor, stáhněte si [komponenty -> binární mapování tabulky](https://aka.ms/vs2017componentid-binaries).
+Pokud si nejste jistí, která součást obsahuje konkrétní binární soubor, stáhněte [tabulku mapování binárních souborů Component->](https://aka.ms/vs2017componentid-binaries).
 
-### <a name="vs2017-componentbinarymappingxlsx"></a>vs2017 ComponentBinaryMapping.xlsx
+### <a name="vs2017-componentbinarymappingxlsx"></a>vs2017-ComponentBinaryMapping. xlsx
 
-Existují čtyři sloupce v Excelovém listu: **Název komponenty**, **ComponentId**, **verze**, a **binární / názvy souborů**.  Filtry můžete použít k vyhledání a najít konkrétní součásti a binární soubory.
+V excelovém listu jsou čtyři sloupce: **název komponenty**, **ComponentID**, **verze**a **binární/název souboru**.  Filtry můžete použít k vyhledání a vyhledání konkrétních komponent a binárních souborů.
 
-Pro všechny odkazy nejprve určete, které jsou v základní součást editoru (Microsoft.VisualStudio.Component.CoreEditor).  Minimálně požadujeme, aby základní součást editoru zadat jako předpoklad pro všechna rozšíření. Odkazy, které zůstávají, které nejsou v základním editoru, přidejte filtry **binární soubory / názvy souborů** vyhledejte komponenty, které mají některý z těchto podmnožin tyto odkazy.
+Pro všechny vaše odkazy nejprve určete, která z nich je v komponentě Core Editor (Microsoft. VisualStudio. Component. CoreEditor).  Minimální je, že vyžaduje, aby byla součást základního editoru zadána jako předpoklad pro všechna rozšíření. Z odkazů, které nejsou v základním editoru, přidejte filtry v části **názvy binárních souborů/souborů** , abyste našli komponenty, které mají kteroukoli z podmnožiny těchto odkazů.
 
 Příklady:
 
-* Pokud máte rozšíření ladicího programu a vědět, že váš projekt obsahuje odkaz na *VSDebugEng.dll* a *VSDebug.dll*, klikněte na tlačítko filtru v **binární soubory a názvy souborů**záhlaví.  Vyhledejte "VSDebugEng.dll" a vyberte *OK*.  Dále klikněte na tlačítko filtru v **binární soubory a názvy souborů** záhlaví znovu a vyhledejte položku "VSDebug.dll".  Zaškrtněte políčko **přidat aktuální výběr do filtru** a vyberte **OK**.  Nyní si projít **název komponenty** najít komponentu, která je nejvhodnější související typ rozšíření. V tomto příkladu byste zvolili Just-In-Time ladicího programu a přidejte ji do vašeho vsixmanifest.
-* Pokud víte, že váš projekt se zabývá prvky ladicího programu, můžete hledat "ladicí program" do vyhledávacího pole filtrovat zjistit, jaké součásti obsahují ladicí program v názvu.
+* Máte-li rozšíření ladicího programu a víte, že projekt obsahuje odkaz na *VSDebugEng. dll* a *VSDebug. dll*, klikněte na tlačítko Filtr v hlavičce **názvů binárních souborů/souborů** .  Vyhledejte "VSDebugEng. dll" a vyberte *OK*.  Potom znovu klikněte na tlačítko Filtr v záhlaví **binární soubory/soubory** a vyhledejte "VSDebug. dll".  Zaškrtněte políčko **Přidat aktuální výběr k filtrování** a vyberte **OK**.  Nyní se podívejte na **název komponenty** a vyhledejte komponentu, která se nejvíce vztahuje k vašemu typu rozšíření. V tomto příkladu jste zvolili ladicí program za běhu a přidáte ho do svého nástroje vsixmanifest.
+* Pokud víte, že projekt pracuje s prvky ladicího programu, můžete vyhledat text "Debugger" v poli hledání filtru a zjistit, jaké komponenty obsahují v názvu ladicí program.
 
 ## <a name="specify-a-visual-studio-2017-release"></a>Zadejte verzi sady Visual Studio 2017
 
-Pokud rozšíření vyžaduje určitou verzi sady Visual Studio 2017, například to závisí na nová funkce od verze 15.3, je nutné zadat číslo sestavení do VSIX **InstallationTarget**. Například verze 15.3 má sestavení počet "15.0.26730.3". Zobrazí se mapování verzí čísla sestavení [tady](../install/visual-studio-build-numbers-and-release-dates.md). Použití "15.3" číslo verze nebude fungovat správně.
+Pokud vaše rozšíření vyžaduje konkrétní verzi sady Visual Studio 2017, závisí například na funkci vydané v 15,3, je nutné zadat číslo sestavení do VSIX **InstallationTarget**. Například verze 15,3 má číslo buildu "15.0.26730.3". [Tady](../install/visual-studio-build-numbers-and-release-dates.md)vidíte mapování verzí k sestavování čísel. Použití čísla vydané verze 15,3 nebude fungovat správně.
 
-Pokud rozšíření vyžaduje 15.3 nebo novější, by deklarovat **InstallationTarget verze** jako [15.0.26730.3, 16.0):
+Pokud vaše rozšíření vyžaduje 15,3 nebo vyšší, deklarujete **verzi InstallationTarget** jako [15.0.26730.3, 16,0):
 
 ```xml
 <Installation>

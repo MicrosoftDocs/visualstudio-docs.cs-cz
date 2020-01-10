@@ -11,24 +11,24 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: jillfra
-ms.openlocfilehash: 695cbeaba5a108c61b5e81078a9651c0df9237f5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7290ba820c9b678e0b87bdbeaadf9c025162e8ae
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299817"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844466"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>Instalace a konfigurace nástrojů pro vytváření pomocí iOS
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platformy k úpravám, ladění a nasazování kódu pro iOS do simulátoru iOS nebo na zařízení s iOS, ale z důvodu licenčních omezení se musí kód sestavit a spustit vzdáleně na Macu. Pokud chcete vytvářet a spouštět aplikace pro iOS pomocí sady Visual Studio, musíte na Macu nastavit a nakonfigurovat vzdáleného agenta [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988). Vzdálený Agent zpracovává požadavky na sestavení ze sady Visual Studio a spustí aplikaci na zařízení s iOS připojeném k počítači Mac nebo v simulátoru iOS na Macu.  
+Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platformy k úpravám, ladění a nasazování kódu pro iOS do simulátoru iOS nebo na zařízení s iOS, ale z důvodu licenčních omezení se musí kód sestavit a spustit vzdáleně na Macu. Pokud chcete vytvářet a spouštět aplikace pro iOS pomocí sady Visual Studio, musíte na Macu nastavit a nakonfigurovat vzdáleného agenta [vcremote](https://www.npmjs.com/package/vcremote). Vzdálený Agent zpracovává požadavky na sestavení ze sady Visual Studio a spustí aplikaci na zařízení s iOS připojeném k počítači Mac nebo v simulátoru iOS na Macu.  
   
 > [!NOTE]
 > Informace o použití služeb Mac hostovaných v cloudu místo Mac najdete v tématu [sestavování a simulace iOS v cloudu](https://taco.visualstudio.com/docs/build_ios_cloud/). Pokyny jsou pro sestavování pomocí Visual Studio Tools pro Apache Cordova. Pokud chcete použít pokyny k sestavení pomocí vizuálu C++ pro vývoj mobilních aplikací pro různé platformy, nahraďte vcremote pro vs-MDA-Remote.  
   
  Jakmile nainstalujete nástroje pro sestavení pomocí iOS, přečtěte si toto téma, kde najdete způsoby, jak rychle nakonfigurovat a aktualizovat vzdáleného agenta pro vývoj pro iOS v aplikaci Visual Studio a na Macu.  
   
- [Požadovaný](#Prerequisites)  
+ [Požadované součásti](#Prerequisites)  
   
  [Instalace vzdáleného agenta pro iOS](#Install)  
   
@@ -42,7 +42,7 @@ Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platfo
   
  [Konfigurace vzdáleného agenta na Macu](#ConfigureMac)  
   
-## <a name="Prerequisites"></a>Požadovaný  
+## <a name="Prerequisites"></a> Požadavky  
  Pokud chcete nainstalovat a používat vzdáleného agenta pro vývoj kódu pro iOS, musíte nejdřív splnit tyto požadavky:  
   
 - Počítač Mac se systémem OS X Mavericks nebo novějším  
@@ -78,7 +78,7 @@ Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platfo
      `sudo npm install -g npm@latest`  
   
 ## <a name="Install"></a>Instalace vzdáleného agenta pro iOS  
- Když nainstalujete vizuál C++ pro vývoj mobilních aplikací pro různé platformy, Visual Studio může komunikovat s [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988), vzdáleným agentem běžícím na Macu, aby přenesl soubory, vytvořil a spouštěl aplikaci pro iOS a odesílal příkazy pro ladění.  
+ Když nainstalujete vizuál C++ pro vývoj mobilních aplikací pro různé platformy, Visual Studio může komunikovat s [vcremote](https://www.npmjs.com/package/vcremote), vzdáleným agentem běžícím na Macu, aby přenesl soubory, vytvořil a spouštěl aplikaci pro iOS a odesílal příkazy pro ladění.  
   
  Než nainstalujete vzdáleného agenta, ujistěte se, že jste splnili [požadavky](#Prerequisites) a nainstalovanou [vizuál C++ pro vývoj mobilních aplikací pro různé platformy](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md#InstallTheTools).  
   

@@ -9,17 +9,17 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9c56eb091e6d4efbe33dc8f05d5040272307c274
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 66988fa88ae347a2db08bf2f6d1b79ba3bcd80b8
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299905"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851320"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>Tutoriál 1: Vytvoření prohlížeče obrázků
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V tomto kurzu sestavíte program, který načte obrázek ze souboru a zobrazí se v okně. Naučíte se přetáhnout ovládací prvky jako tlačítka a pole obrázků ve formuláři, nastavit jejich vlastnosti a plynule změnit velikost formuláře pomocí kontejnerů. Můžete také začít psát kód. Získáte informace o těchto tématech:
+V tomto kurzu sestavíte program, který načte obrázek ze souboru a zobrazí se v okně. Naučíte se přetáhnout ovládací prvky jako tlačítka a pole obrázků ve formuláři, nastavit jejich vlastnosti a plynule změnit velikost formuláře pomocí kontejnerů. Můžete také začít psát kód. Získáte informace o následujících postupech:
 
 - Vytvořte nový projekt.
 
@@ -39,7 +39,7 @@ V tomto kurzu sestavíte program, který načte obrázek ze souboru a zobrazí s
 
   ![Obrázek, který v tomto kurzu vytvoříte](../ide/media/express-pictureviewerdone.png "Express_PictureViewerDone") Obrázek, který v tomto kurzu vytvoříte
 
-  ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu naleznete v části [How to: Create a Picture Viewer in Visual Basic?](https://go.microsoft.com/fwlink/?LinkId=205207) nebo [How to: Create a Picture Viewer in C#?](https://go.microsoft.com/fwlink/?LinkId=205198).
+  ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu naleznete v části [How to: Create a Picture Viewer in Visual Basic?](https://msdn.microsoft.com/vstudio/gg315352) nebo [How to: Create a Picture Viewer in C#?](https://msdn.microsoft.com/vcsharp/gg278960.aspx).
 
 > [!NOTE]
 > Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio. V C# tomto kurzu se zaměříte na vizuál a Visual Basic, takže se zaměřte na informace, které jsou specifické pro programovací jazyk, který používáte.
@@ -50,7 +50,7 @@ V tomto kurzu sestavíte program, který načte obrázek ze souboru a zobrazí s
 
 ## <a name="related-topics"></a>Související témata
 
-|Titul|Popis|
+|Název|Popis|
 |-----------|-----------------|
 |[Krok 1: Vytvořte projekt formulářové aplikace Windows](../ide/step-1-create-a-windows-forms-application-project.md)|Začněte vytvořením projektu model Windows Forms aplikace.|
 |[Krok 2: Spusťte svůj program](../ide/step-2-run-your-program.md)|Spusťte program model Windows Forms aplikace, který jste vytvořili v předchozím kroku.|

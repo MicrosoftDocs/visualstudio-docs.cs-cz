@@ -17,12 +17,12 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ffb1298981481bde063de898dc81c02dad548888
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: e9fa22a4ed52c3e0a1afdda0105716c0de9b3316
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297834"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851813"
 ---
 # <a name="property-pages-javascript"></a>Stránky vlastností, JavaScript
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -62,11 +62,11 @@ ms.locfileid: "74297834"
 
  **Spuštění ladicího programu** Určuje výchozího hostitele pro ladicí program.
 
-- Vyberte možnost **místní počítač** a spusťte tak aplikaci na hostitelském počítači sady Visual Studio. Další informace najdete v tématu [spuštění aplikací v místním počítači](https://go.microsoft.com/fwlink/?LinkId=234912).
+- Vyberte možnost **místní počítač** a spusťte tak aplikaci na hostitelském počítači sady Visual Studio. Další informace najdete v tématu [spuštění aplikací v místním počítači](https://msdn.microsoft.com/library/windows/apps/hh441483(v=VS.85).aspx).
 
-- Vyberte **simulátor** pro spuštění aplikace v simulátoru. Další informace najdete v tématu [spuštění aplikací v simulátoru](https://go.microsoft.com/fwlink/?LinkId=234913).
+- Vyberte **simulátor** pro spuštění aplikace v simulátoru. Další informace najdete v tématu [spuštění aplikací v simulátoru](https://msdn.microsoft.com/library/windows/apps/hh441475(v=VS.85).aspx).
 
-- Vyberte možnost **vzdálený počítač** a spusťte aplikaci ve vzdáleném počítači. Další informace o vzdáleném ladění najdete v tématu [spuštění aplikací na vzdáleném počítači](https://go.microsoft.com/fwlink/?LinkId=234914).
+- Vyberte možnost **vzdálený počítač** a spusťte aplikaci ve vzdáleném počítači. Další informace o vzdáleném ladění najdete v tématu [spuštění aplikací na vzdáleném počítači](https://msdn.microsoft.com/library/windows/apps/hh441469(v=VS.85).aspx).
 
   **Spustit aplikaci** Určuje, jestli se má aplikace spustit, když stisknete klávesu F5 nebo kliknete na **ladit**, **Spustit ladění**. Pokud chcete aplikaci spustit, vyberte **Ano** . v opačném případě vyberte možnost **ne**. Pokud vyberete **ne**, můžete aplikaci ladit i v případě, že ji chcete spustit pomocí jiné metody.
 

@@ -11,12 +11,12 @@ ms.assetid: 8fe5e2ab-a424-4173-9d39-dd082c4d58d0
 caps.latest.revision: 30
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 6d8050ea7447a67f50f42157d57c17d3f1f8a329
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d62a4c6cc45681fe6a66ae57df2e1da1d1cc12e0
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68160586"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850596"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Začínáme s vývojem rozšíření sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +35,7 @@ Pokud jste nikdy napsali před rozšíření sady Visual Studio, pravděpodobně
 
 - Ať už specifický pro doménu pro scénáře, jako je podpora návrhu nebo cloudových dat
 
-  Příklady rozšíření, podívejte se [Visual Studio Marketplace](https://marketplace.visualstudio.com/). Můžete taky využít podívat [Visual Studio otevřete zdrojový rozšíření](https://github.com/Microsoft/extendvs/blob/master/CommunityExtensions.md).
+  Příklady rozšíření najdete v [Visual Studio Marketplace](https://marketplace.visualstudio.com/). Můžete taky využít podívat [Visual Studio otevřete zdrojový rozšíření](https://github.com/Microsoft/extendvs/blob/master/CommunityExtensions.md).
 
 ## <a name="which-visual-studio-features-can-i-extend"></a>Které funkce Visual Studia můžete rozšířit?
  Teoreticky vzato můžete rozšířit téměř libovolnou část aplikace Visual Studio: nabídky, panely nástrojů, příkazy, windows, řešení, projekty, editory a tak dále.
@@ -67,25 +67,25 @@ Pokud jste nikdy napsali před rozšíření sady Visual Studio, pravděpodobně
 
  Šablona izolovaného prostředí slouží k rozšíření v prostředí nástroje Visual Studio, kterou můžete značku a distribuovat jako vlastní verzi balíčku. Následující témata ukazují, jak začít pracovat s jednotlivými typy rozšíření:
 
-- Příkazy nabídky: [Vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md)
+- Příkazy nabídky: [vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md)
 
-- Nástroje systému windows: [Vytváření rozšíření pomocí panelu nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md)
+- Nástroje systému windows: [vytváření rozšíření pomocí panelu nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md)
 
-- Rozšíření editoru: [Vytváření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md)
+- Rozšíření editoru: [vytváření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md)
 
-- Základní rozšíření VSPackages: [Vytváření rozšíření pomocí VSPackage](../extensibility/creating-an-extension-with-a-vspackage.md)
+- Základní rozšíření VSPackages: [vytváření rozšíření pomocí VSPackage](../extensibility/creating-an-extension-with-a-vspackage.md)
 
-- Šablona projektu VSIX: [Začínáme se šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md)
+- Šablona projektu VSIX: [Začínáme s šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md)
 
-- Visual Studio izolované prostředí: [Návod: Vytvoření základní aplikace izolovaného prostředí](../extensibility/walkthrough-creating-a-basic-isolated-shell-application.md)
+- Izolované prostředí sady Visual Studio: [návod: vytvoření základní aplikace izolovaného prostředí](../extensibility/walkthrough-creating-a-basic-isolated-shell-application.md)
 
 ## <a name="how-do-i-get-my-extension-to-look-like-visual-studio"></a>Jak získám mého rozšíření, aby vypadala jako Visual Studio?
  Skvělé tipy k návrhu uživatelského rozhraní pro rozšíření v [Visual Studio zkušenosti uživatelů](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).
 
 ## <a name="where-can-i-find-examples-of-vssdk-code"></a>Kde najdu příklady VSSDK kódu?
- Jednotlivé odkazy uvedené v předchozí části jste podrobné návody, které ukazují, jak implementovat konkrétní funkce. Můžete také vyhledat opensourcová VSSDK ukázky na Githubu v [ukázky sady Visual Studio](https://aka.ms/vs2015sdksamples).
+ Jednotlivé odkazy uvedené v předchozí části jste podrobné návody, které ukazují, jak implementovat konkrétní funkce. Můžete také vyhledat opensourcová VSSDK ukázky na Githubu v [ukázky sady Visual Studio](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
 
 ## <a name="how-can-i-distribute-my-extension"></a>Jak je můžete distribuovat mého rozšíření?
  Můžete nainstalovat rozšíření na jiném počítači nebo odeslat do vašich přátel jako soubor .vsix, který nainstalujete poklepáním. Můžete najít další informace o balíčků VSIX v [přesouvání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md).
 
- Můžete také publikovat vaše rozšíření v Galerii Visual Studio, díky tomu je viditelná pro velký počet zákazníků sady Visual Studio. Příklad vytvoření balíčku rozšíření pro galerii najdete v tématu [názorný postup: Publikování rozšíření sady Visual Studio](../extensibility/walkthrough-publishing-a-visual-studio-extension.md). Další informace o tom, co potřebujete udělat, aby publikovat v galerii najdete v tématu [produkty a rozšíření pro Visual Studio](https://visualstudiogallery.msdn.microsoft.com/).
+ Můžete také publikovat vaše rozšíření v Galerii Visual Studio, díky tomu je viditelná pro velký počet zákazníků sady Visual Studio. Příklad vytvoření balíčku rozšíření pro galerii najdete v tématu [názorný postup: publikování rozšíření sady Visual Studio](../extensibility/walkthrough-publishing-a-visual-studio-extension.md). Další informace o tom, co potřebujete udělat, aby publikovat v galerii najdete v tématu [produkty a rozšíření pro Visual Studio](https://visualstudiogallery.msdn.microsoft.com/).

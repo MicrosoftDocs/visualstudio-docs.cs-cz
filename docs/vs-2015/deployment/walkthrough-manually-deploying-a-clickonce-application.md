@@ -21,12 +21,12 @@ caps.latest.revision: 51
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1e1099eaf8d766088612abbb399bdf004e6378e4
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cba55c9f4a8f7436b97099b6b548b916ea6e5ecb
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74294686"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844940"
 ---
 # <a name="walkthrough-manually-deploying-a-clickonce-application"></a>Návod: Ruční nasazení aplikace ClickOnce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,7 +38,7 @@ Pokud nemůžete použít Visual Studio k nasazení [!INCLUDE[ndptecclick](../in
   
 - Nainstalujte Mage. exe a MageUI. exe.  
   
-     Mage. exe a MageUI. exe jsou součástí [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]. Musíte mít buď nainstalovanou [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)], nebo verzi [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)], která je součástí sady Visual Studio. Další informace najdete v tématu [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=158044) na webu MSDN.  
+     Mage. exe a MageUI. exe jsou součástí [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]. Musíte mít buď nainstalovanou [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)], nebo verzi [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)], která je součástí sady Visual Studio. Další informace najdete v tématu [Windows SDK](https://msdn.microsoft.com/windowsserver/bb980924.aspx) na webu MSDN.  
   
 - Poskytněte aplikaci, která se má nasadit.  
   
@@ -61,7 +61,7 @@ Pokud nemůžete použít Visual Studio k nasazení [!INCLUDE[ndptecclick](../in
   
 - Ujistěte se, že aplikace neobsahuje manifest s informacemi o nástroji Řízení uživatelských účtů.  
   
-     Musíte určit, jestli vaše aplikace obsahuje manifest s informacemi o nástroji Řízení uživatelských účtů (UAC), jako je `<dependentAssembly>` element. Chcete-li prostudovat manifest aplikace, můžete použít nástroj [Sigcheck](https://go.microsoft.com/fwlink/?LinkId=158035) Windows Sysinternals.  
+     Musíte určit, jestli vaše aplikace obsahuje manifest s informacemi o nástroji Řízení uživatelských účtů (UAC), jako je `<dependentAssembly>` element. Chcete-li prostudovat manifest aplikace, můžete použít nástroj [Sigcheck](https://technet.microsoft.com/sysinternals/bb897441.aspx) Windows Sysinternals.  
   
      Pokud vaše aplikace obsahuje manifest s podrobnostmi o nástroji Řízení uživatelských účtů, je nutné ji znovu sestavit bez informací o nástroji Řízení uživatelských účtů. Pro C# projekt v aplikaci Visual Studio otevřete vlastnosti projektu a vyberte kartu aplikace. V rozevíracím seznamu **manifest** vyberte možnost **vytvořit aplikaci bez manifestu**. Pro projekt Visual Basic v aplikaci Visual Studio otevřete vlastnosti projektu, vyberte kartu aplikace a klikněte na tlačítko **Zobrazit nastavení nástroje řízení uživatelských účtů**. V otevřeném souboru manifestu odeberte všechny prvky v rámci jednoho `<asmv1:assembly>` elementu.  
   
@@ -117,7 +117,7 @@ Pokud nemůžete použít Visual Studio k nasazení [!INCLUDE[ndptecclick](../in
     mage -Sign AppToDeploy.application -CertFile mycert.pfx -Password passwd  
     ```  
   
-     or  
+     nebo  
   
     ```  
     mage -Sign AppToDeploy.exe.manifest -CertFile cngCert.pfx  

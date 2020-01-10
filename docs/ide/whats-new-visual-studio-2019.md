@@ -2,7 +2,7 @@
 title: Novinky v sadě Visual Studio 2019
 titleSuffix: ''
 description: Seznamte se s novými funkcemi v aplikaci Visual Studio 2019.
-ms.date: 12/03/2019
+ms.date: 12/10/2019
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 975b9ca88a775e08b97cccf1d1580a96ac4d9d65
-ms.sourcegitcommit: c222052906362bf1a3762ec4d4623170e4e06702
+ms.openlocfilehash: 4a9d8babb55a615e12c575f30426c8e73aa1c6e1
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810122"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75406717"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
@@ -39,7 +39,7 @@ Tady je nejdůležitější rekapitulace, co je nového:
 
 Úplný seznam všeho, co je v této verzi nové, najdete v [poznámkách k verzi](/visualstudio/releases/2019/release-notes/).
 
-## <a name="develop"></a>Vyvinout
+## <a name="develop"></a>Vývoj
 
 Podívejte se na následující video, kde se dozvíte víc o tom, jak můžete ušetřit čas pomocí nových funkcí. <br><br>*Délka videa: 3,00 minut*
 
@@ -202,7 +202,9 @@ Další informace najdete v článku [ladění živých ASP.NET aplikací Azure 
 
    ![Animace, která ukazuje, jak připnout vlastnosti v ladicím programu sady Visual Studio pomocí nástroje Pinnable Properties Tool](media/vs-2019/debugger-pinnable-properties.gif)
 
-## <a name="whats-next"></a>A co dál?
+Další informace najdete v tématu [vlastnosti Pinnable: Debug & zobrazit spravované objekty podle svého příspěvku na](https://devblogs.microsoft.com/visualstudio/pinnable-properties-debug-display-managed-objects-your-way/) blogu.
+
+## <a name="whats-next"></a>Co dál
 
 Visual Studio 2019 aktualizujeme často o nové funkce, které můžou zlepšit vývojové prostředí. Další informace o našich nejnovějších inovacích najdete v blogu sady [Visual Studio](https://devblogs.microsoft.com/visualstudio/). A pro záznam toho, co jsme vydali v předběžné verzi Preview, se podívejte na poznámky k [verzi Preview](/visualstudio/releases/2019/release-notes-preview/).
 

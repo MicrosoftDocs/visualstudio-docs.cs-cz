@@ -12,12 +12,12 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dcb179ae80e60654c981da8c76e9a57e6fb8ed66
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: bdf1111198c7f874d03596382372fe25851e37d3
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296058"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852133"
 ---
 # <a name="programming-with-the-uml-api"></a>Programování s rozhraním API UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ Rozhraní API UML sady Visual Studio umožňuje psát kód pro vytváření, čt
 
 |Téma|Příklady popsaných typů a metod|Popsané funkce|
 |-----------|-----------------------------------------|------------------------|
-|[Procházení vztahů pomocí rozhraní API UML](../modeling/navigate-relationships-with-the-uml-api.md)|Prvky UML a jejich vlastnosti a přidružení. Například IElement a jeho potomci, včetně: IClass, IActivity, IUseCase, IComponent, IInteraction, IModel, IPackage|V aplikaci Visual Studio modely UML vyhovují specifikaci UML verze 2.1.2, která se dá získat na [stránce prostředků UML](https://go.microsoft.com/fwlink/?LinkId=160796). Každý typ je rozhraní, které má stejný název jako typ UML s předponou "I".|
+|[Procházení vztahů pomocí rozhraní API UML](../modeling/navigate-relationships-with-the-uml-api.md)|Prvky UML a jejich vlastnosti a přidružení. Například IElement a jeho potomci, včetně: IClass, IActivity, IUseCase, IComponent, IInteraction, IModel, IPackage|V aplikaci Visual Studio modely UML vyhovují specifikaci UML verze 2.1.2, která se dá získat na [stránce prostředků UML](https://www.uml.org/). Každý typ je rozhraní, které má stejný název jako typ UML s předponou "I".|
 |[Vytváření elementů a vztahů v modelech UML](../modeling/create-elements-and-relationships-in-uml-models.md)|IPackage.CreateClass()<br /><br /> IClass.CreateOperation()|Každý typ elementu obsahuje metody pro vytváření podřízených objektů.|
 |[Zobrazení modelu UML v diagramech](../modeling/display-a-uml-model-on-diagrams.md)|IShape, IDiagram<br /><br /> IShape. Move ()|Každý prvek v modelu může být reprezentován jako tvar v diagramu. V některých případech můžete vytvořit nové tvary pro každý objekt. Tyto tvary můžete přesouvat, měnit jejich velikost, měnit jejich barvy, sbalovat je nebo je rozbalit.|
 |[Procházení modelu UML](../modeling/navigate-the-uml-model.md)|IModelStore<br /><br /> IDiagramContext|Úložiště modelu ukládá model.<br /><br /> Kontext diagramu vám umožní přístup k aktuálnímu diagramu a obchodu.|
@@ -51,7 +51,7 @@ Rozhraní API UML sady Visual Studio umožňuje psát kód pro vytváření, čt
 ## <a name="the-api-assemblies"></a>Sestavení rozhraní API
  Tato tabulka shrnuje sestavení, která poskytují rozšiřitelnost pro nástroje UML, a obory názvů, které se doporučuje použít.
 
-|Assembly|Obory názvů|Poskytuje přístup k:|
+|Assembly|Jmenné prostory|Poskytuje přístup k:|
 |--------------|----------------|-------------------------|
 |Microsoft.VisualStudio.Uml.Interfaces|(vše)|Typy UML.|
 |Microsoft.VisualStudio.ArchitectureTools.Extensibility|Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost. UML|[Metody vytváření](../modeling/create-elements-and-relationships-in-uml-models.md)|

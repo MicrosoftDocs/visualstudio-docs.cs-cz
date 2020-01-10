@@ -21,12 +21,12 @@ caps.latest.revision: 84
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 596711c5c59738d5356437bb761e80caeddfbd6b
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 45b82ece15cfef4d313764027c0220453a6d4849
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301352"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845432"
 ---
 # <a name="validate-code-with-layer-diagrams"></a>Ověřování kódu pomocí diagramů vrstev
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,7 +53,7 @@ Abyste se ujistili, že kód není v konfliktu s jeho návrhem, ověřte kód po
 
   Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-  Kód lze ověřit manuálně z otevřeného diagramu vrstev v systému Visual Studio nebo z příkazového řádku. Kód lze rovněž automaticky ověřit při spuštění místních sestavení nebo procesu Team Foundation Build. Viz [video o kanálu 9: návrh a ověření architektury pomocí diagramů vrstev](https://go.microsoft.com/fwlink/?LinkID=252073).
+  Kód lze ověřit manuálně z otevřeného diagramu vrstev v systému Visual Studio nebo z příkazového řádku. Kód lze rovněž automaticky ověřit při spuštění místních sestavení nebo procesu Team Foundation Build. Viz [video o kanálu 9: návrh a ověření architektury pomocí diagramů vrstev](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture).
 
 > [!IMPORTANT]
 > Chcete-li spustit ověřování vrstvy pomocí sestavení Team Foundation Build, je nutné nainstalovat na server sestavení také stejnou verzi sady Visual Studio.
@@ -153,7 +153,7 @@ Abyste se ujistili, že kód není v konfliktu s jeho návrhem, ověřte kód po
 
   Pomocí těchto úloh můžete spravovat chyby ověřování v okně **Seznam chyb** :
 
-|**Schopn**|**Postupujte podle těchto kroků**|
+|**Komu**|**Postupujte podle těchto kroků**|
 |------------|----------------------------|
 |Potlačení vybraných chyb během ověřování|Klikněte pravým tlačítkem myši na jednu nebo více vybraných chyb, přejděte na položku **Spravovat chyby ověřování**a potom klikněte na **potlačit chyby**.<br /><br /> Potlačené chyby se zobrazují s přeškrtnutím. Při příštím spuštění ověřování se tyto chyby nezobrazí.<br /><br /> Potlačené chyby jsou sledovány v souboru .suppressions pro odpovídající soubor diagramu vrstev.|
 |Ukončení potlačování vybraných chyb|Klikněte pravým tlačítkem myši na potlačit chybu nebo chyby, přejděte na položku **Spravovat chyby ověřování**a potom klikněte na možnost **ukončit potlačení chyb**.<br /><br /> Vybrané potlačené chyby se při příštím spuštění ověřování zobrazí.|
@@ -171,7 +171,7 @@ Abyste se ujistili, že kód není v konfliktu s jeho návrhem, ověřte kód po
 <ValidateArchitecture>true</ValidateArchitecture>
 ```
 
- \- nebo-
+ \- nebo –
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt modelování, který obsahuje diagram vrstvy nebo diagramy, a poté klikněte na možnost **vlastnosti**.
 
@@ -210,7 +210,7 @@ Abyste se ujistili, že kód není v konfliktu s jeho návrhem, ověřte kód po
 ## <a name="TroubleshootingValidation"></a>Řešení potíží s ověřováním vrstev
  Následující tabulka popisuje problémy s ověřením vrstvy a jejich řešení. Tyto problémy se liší od chyb, které vzniknou z konfliktů mezi kódem a návrhem. Další informace o těchto chybách naleznete v tématu [pochopení a vyřešení chyb ověřování vrstvy](#UnderstandingValidationErrors).
 
-|**Chybu**|**Možná příčina**|**Rozhodnutí**|
+|**Problém**|**Možná příčina**|**Řešení**|
 |---------------|------------------------|--------------------|
 |Chyby ověřování se nezobrazí podle očekávání.|Ověřování nefunguje v diagramech vrstev, které jsou zkopírovány z jiných diagramů vrstev v Průzkumníku řešení a jsou ve stejném projektu modelování. Diagramy vrstev, které se tímto způsobem zkopírují, obsahují stejné odkazy jako původní diagram vrstev.|Přidejte do projektu modelování nový diagram vrstev.<br /><br /> Zkopírujte prvky ze zdrojového diagramu vrstev do nového diagramu.|
 
@@ -225,7 +225,7 @@ Abyste se ujistili, že kód není v konfliktu s jeho návrhem, ověřte kód po
 
   Následující oddíl popisuje syntaxi, která se u těchto chyb používá, vysvětluje význam těchto chyb a navrhne, jak je vyřešit nebo spravovat.
 
-|**Syntaktick**|**Popis**|
+|**Syntaxe**|**Popis**|
 |----------------|---------------------|
 |*ArtifactN*(*ArtifactTypeN*)|*ArtifactN* je artefakt, který je spojen s vrstvou v diagramu vrstev.<br /><br /> *ArtifactTypeN* je typ *ArtifactN*, například **Třída** nebo **Metoda**, například:<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
 |*NamespaceNameN*|Název oboru názvů.|
@@ -241,7 +241,7 @@ Abyste se ujistili, že kód není v konfliktu s jeho návrhem, ověřte kód po
 |AV3001: chybí propojení:*vrstva '* propojuje ' odkazuje na*artefakt*, který nebyl nalezen. Nechybí odkaz na sestavení?|*Propojování odkazuje na* artefakt, který nebyl nalezen. Odkaz na třídu může chybět například proto, že projekt modelování nemá odkaz na sestavení obsahující třídu.|
 |AV9001: Strukturální analýza nalezla vnitřní chyby. Výsledky nemusí být úplné. Další informace lze nalézt v podrobném protokolu událostí sestavení nebo ve výstupním okně.|Více podrobností lze nalézt v protokolu událostí sestavení nebo ve výstupním okně.|
 
-## <a name="security"></a>Zabezpečení
+## <a name="security"></a>Zabezpečení –
 
 ## <a name="see-also"></a>Viz také
  [Ověřování systému během vývoje](../modeling/validate-your-system-during-development.md)

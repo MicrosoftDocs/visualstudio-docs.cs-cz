@@ -9,12 +9,12 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 744b5f3c62ac2c5636ed2499653986d3b669fce3
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 090aeb83f6d0480c511acd808498953ae6c01940
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299961"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851106"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>Krok 9: Zrevidujte, okomentujte a otestujte svůj kód
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ Dál přidáte komentář k vašemu kódu. Komentář je Poznámka, která nemě
 
    Příkazy jsou to, co dělají vaše programy. V vizuálu C#příkaz vždy končí středníkem. V Visual Basic konec řádku je konec příkazu. (V Visual Basic není potřeba žádný středník.) Předchozí příkaz oznamuje vašemu ovládacímu prvku `PictureBox`, aby načetl soubor, který uživatel vybral pomocí komponenty **OpenFileDialog** .
 
-  ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 5](https://go.microsoft.com/fwlink/?LinkId=205216) nebo [kurz 1: vytvoření prohlížeče obrázků ve C# videu 5](https://go.microsoft.com/fwlink/?LinkId=205206). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
+  ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 5](https://msdn.microsoft.com/vbasic/gg315356.aspx) nebo [kurz 1: vytvoření prohlížeče obrázků ve C# videu 5](https://msdn.microsoft.com/vcsharp/gg278413.aspx). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
 
 ### <a name="to-add-comments"></a>Přidání komentářů
 

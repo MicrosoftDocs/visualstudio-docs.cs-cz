@@ -11,23 +11,23 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: f6ccc19ccc21b7cabcd553e9d040d20a89ed6ccb
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 64d60c3a18338956d4d34b0406fff061970d2974
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298081"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850011"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>Správa prostředků přidružených k účtům Azure v Průzkumníkovi cloudu sady Visual Studio
 
 Průzkumník cloudu umožňuje zobrazit prostředky a skupiny prostředků Azure, zkoumat jejich vlastnosti a provádět klíčové vývojářské akce v rámci sady Visual Studio.
 
-Podobně jako u [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040)je Cloud Explorer postaven na Azure Resource Manager Stack. Proto Průzkumník cloudu rozumí prostředky, jako jsou skupiny prostředků Azure a služby Azure, jako jsou Logic Apps a API Apps, a podporuje [řízení přístupu na základě role](/azure/role-based-access-control/role-assignments-portal) (RBAC).
+Podobně jako u [Azure Portal](https://portal.azure.com/)je Cloud Explorer postaven na Azure Resource Manager Stack. Proto Průzkumník cloudu rozumí prostředky, jako jsou skupiny prostředků Azure a služby Azure, jako jsou Logic Apps a API Apps, a podporuje [řízení přístupu na základě role](/azure/role-based-access-control/role-assignments-portal) (RBAC).
 
 ## <a name="prerequisites"></a>Požadavky
 
 * Visual Studio 2015 s [Microsoft Azure SDK pro .NET 2,9](https://www.microsoft.com/download/details.aspx?id=51657).
-* Účet Microsoft Azure – Pokud účet nemáte, můžete si [zaregistrovat bezplatnou zkušební verzi](https://go.microsoft.com/fwlink/?LinkId=623901) nebo [aktivovat výhody pro předplatitele sady Visual Studio](https://go.microsoft.com/fwlink/?LinkId=623901).
+* Účet Microsoft Azure – Pokud účet nemáte, můžete si [zaregistrovat bezplatnou zkušební verzi](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/) nebo [aktivovat výhody pro předplatitele sady Visual Studio](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/).
 
 > [!NOTE]
 > Průzkumníka cloudu zobrazíte tak, že na řádku nabídek vyberete **zobrazit** > **Průzkumník cloudu** .
@@ -78,7 +78,7 @@ Pokud chcete zobrazit prostředky Azure, můžete zvolit **typy prostředků** n
 
 1. V místní nabídce vyberte požadované zobrazení:
 
-   * Zobrazení **typů prostředků** – běžné zobrazení, které se používá na [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040), zobrazuje vaše prostředky Azure v kategoriích podle jejich typu, jako jsou webové aplikace, účty úložiště a virtuální počítače.
+   * Zobrazení **typů prostředků** – běžné zobrazení, které se používá na [Azure Portal](https://portal.azure.com/), zobrazuje vaše prostředky Azure v kategoriích podle jejich typu, jako jsou webové aplikace, účty úložiště a virtuální počítače.
    * Zobrazení **skupin prostředků** – kategorizuje prostředky Azure skupinou prostředků Azure, ke které jsou přidružené. Skupina prostředků je sada prostředků Azure, která se obvykle používá v konkrétní aplikaci. Další informace o skupinách prostředků Azure najdete v tématu [přehled Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview).
 
    Následující obrázek znázorňuje porovnání dvou zobrazení prostředků:
@@ -97,7 +97,7 @@ Následující obrázek ukazuje příklad porovnání toho, co vidíte na jednot
 
   ![Snímek obrazovky Průzkumníka cloudu](./media/vs-azure-tools-resources-managing-with-cloud-explorer/actions-and-properties.png)
 
-Každý prostředek má **otevřenou akci na portálu**. Když vyberete tuto akci, Průzkumník cloudu zobrazí vybraný prostředek v [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040). Funkce **otevřít v portálu** je užitečná pro přechod na hluboce vnořené prostředky.
+Každý prostředek má **otevřenou akci na portálu**. Když vyberete tuto akci, Průzkumník cloudu zobrazí vybraný prostředek v [Azure Portal](https://portal.azure.com/). Funkce **otevřít v portálu** je užitečná pro přechod na hluboce vnořené prostředky.
 
 V závislosti na prostředku Azure se můžou objevit i další akce a hodnoty vlastností. Například webové aplikace a aplikace logiky mají kromě **otevření na portálu**také **otevřené akce v prohlížeči** a **připojení ladicího programu** . Akce otevření editory se zobrazí při výběru objektu blob, fronty nebo tabulky účtu úložiště. Aplikace Azure mají vlastnosti **Adresa URL** a **stav** , zatímco prostředky úložiště mají vlastnosti klíče a připojovacího řetězce.
 

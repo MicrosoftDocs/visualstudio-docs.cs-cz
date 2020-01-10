@@ -3,17 +3,17 @@ title: Metody DataContext (O-R Designer)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c149f4e5-3b61-4c33-892e-3e26d47f3eeb
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0e81f2337931f565e0068a852bf9b8284350690c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b8b9d322ea9c805b7fc1ce55dbf93b72b29958af
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648544"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586702"
 ---
 # <a name="datacontext-methods-or-designer"></a>Metody DataContext (Návrhář relací objektů)
 
@@ -26,7 +26,7 @@ Třída <xref:System.Data.Linq.DataContext> je [!INCLUDE[vbtecdlinq](../data-too
 <xref:System.Data.Linq.DataContext> metody, které se mapují k uloženým procedurám a funkcím, se zobrazí v podokně **metody** **návrháře pro/R**. Podokno **metody** je podokno podél strany podokna **entity** (hlavní návrhová plocha). Podokno **metody** obsahuje seznam všech <xref:System.Data.Linq.DataContext> metod, které jste vytvořili pomocí **návrháře o/R**. Ve výchozím nastavení je podokno **metody** prázdné. Přetažením uložených procedur nebo funkcí z **Průzkumník serveru** nebo z **Průzkumníka databáze** do **návrháře o/R** vytvoříte <xref:System.Data.Linq.DataContext> metody a naplníte podokno **metody** . Další informace naleznete v tématu [How to: Create DataContext Methods namapované na uložené procedury a funkce (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md).
 
 > [!NOTE]
-> Otevřete a zavřete podokno metody kliknutím pravým tlačítkem myši na **Návrhář pro/R** a následným kliknutím na **Skrýt podokno metody** nebo **Zobrazit podokno metody**nebo pomocí klávesové zkratky **CTRL** +**1**.
+> Otevřete a zavřete podokno metody kliknutím pravým tlačítkem myši na **Návrhář pro/R** a následným kliknutím na **Skrýt podokno metody** nebo **Zobrazit podokno metody**nebo pomocí klávesové zkratky **CTRL**+**1**.
 
 ## <a name="two-types-of-datacontext-methods"></a>Dva typy metod DataContext
 
@@ -34,7 +34,7 @@ Metody DataContext jsou metody, které jsou mapovány na uložené procedury a f
 
 - <xref:System.Data.Linq.DataContext> metody, které vracejí jednu nebo více sad výsledků dotazu:
 
-   Vytvořte tento druh metody <xref:System.Data.Linq.DataContext>, když vaše aplikace stačí spustit uložené procedury a funkce v databázi a vracet výsledky. Další informace naleznete v tématu [How to: Create DataContext Methods namapované na uložené procedury a funkce (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md), System. data. Linq. ISingleResult \<T > a <xref:System.Data.Linq.IMultipleResults>.
+   Vytvořte tento druh metody <xref:System.Data.Linq.DataContext>, když vaše aplikace stačí spustit uložené procedury a funkce v databázi a vracet výsledky. Další informace naleznete v tématu [How to: Create DataContext Methods namapované na uložené procedury a funkce (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md), System. data. Linq. ISingleResult\<t > a <xref:System.Data.Linq.IMultipleResults>.
 
 - <xref:System.Data.Linq.DataContext> metody, které nevracejí sady výsledků dotazu: například vložení, aktualizace a odstranění pro konkrétní třídu entity.
 

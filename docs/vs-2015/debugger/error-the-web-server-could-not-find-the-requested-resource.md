@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 904d628b09c7add48460273ecaff7d8ac288cbc3
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 555bb56ee84b7bc48f6b6453c11daef366f97e49
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297419"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845119"
 ---
 # <a name="error-the-web-server-could-not-find-the-requested-resource"></a>Chyba: Webový server nenalezl požadovaný prostředek.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ Služba IIS kvůli bezpečnostním hlediskům vrátila obecnou chybu.
   
  Existuje mnoho možných příčin této chyby. Mezi nejběžnější příčiny patří problém s instalací nebo konfigurací služby IIS, konfigurací webu nebo oprávněními v systému souborů. Můžete se pokusit o přístup k prostředku pomocí prohlížeče. V závislosti na tom, jak je služba IIS nakonfigurovaná, možná budete muset použít místní prohlížeč na serveru nebo zkontrolovat protokol chyb služby IIS a získat podrobnou chybovou zprávu.  
   
- Další informace o řešení potíží služby IIS najdete v tématu [Správa a Správa služby IIS](https://go.microsoft.com/fwlink/?LinkId=255872).  
+ Další informace o řešení potíží služby IIS najdete v tématu [Správa a Správa služby IIS](https://www.iis.net/learn/manage/provisioning-and-managing-iis/iis-management-and-administration).  
   
 ## <a name="see-also"></a>Viz také  
  [Nástroj zabezpečení nástroje UrlScan](/iis/extensions/working-with-urlscan/urlscan-3-reference)   

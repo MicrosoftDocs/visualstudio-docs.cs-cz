@@ -9,12 +9,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e17e29e36be5636662e6105a05446a9cbe0aa724
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 791e2e077ebd2ed3e97aecd4c7c6e52316b4fe3b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301182"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845290"
 ---
 # <a name="customizing-copy-behavior"></a>Přizpůsobení chování kopírování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -55,7 +55,7 @@ Nastavte vlastnost **rozšíření kopírování** role tak, aby se **rozšíři
  **Rychlé duplikace prvků kopírováním a vložením.** V normálním případě je položka, kterou jste právě zkopírovali, stále vybrána a nelze do ní vložit stejný typ prvku.
 Přidejte do třídy domény direktivu sloučení elementů a nastavte ji tak, aby předalo sloučení do nadřazené třídy. To bude mít stejný účinek na operace přetažení. Další informace naleznete v tématu [přizpůsobení vytváření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md).
 
- \- nebo-
+ \- nebo –
 
  Před vložením prvků vyberte diagram přepsáním `ClipboardCommandSet.ProcessOnPasteCommand()`. Přidejte tento kód do vlastního souboru v projektu DslPackage:
 
@@ -80,7 +80,7 @@ partial class MyDslClipboardCommandSet
  **Vytvořte další odkazy, když uživatel vloží do vybraného cíle.** Například když je pole komentáře vloženo do prvku, je mezi nimi vytvořen odkaz.
 Přidejte direktivu sloučení elementů do cílové doménové třídy a nastavte ji pro zpracování sloučení přidáním odkazů. To bude mít stejný účinek na operace přetažení. Další informace naleznete v tématu [přizpůsobení vytváření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md).
 
- \- nebo-
+ \- nebo –
 
  Přepsat `ClipboardCommandSet.ProcessOnPasteCommand()` pro vytvoření dalších odkazů po volání základní metody.
 
@@ -91,7 +91,7 @@ Přepište *MyDsl*`ClipboardCommandSet.ProcessOnMenuCopyCommand()` v projektu Ds
 Přepište *MyDsl*`ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` v projektu DslPackage.
 
  **Zachovat rozložení obrazce pomocí kopírování a vložení**
-Když uživatel zkopíruje více obrazců, můžete při jejich vložení zachovat jejich relativní pozice. Tato technika je znázorněna příkladem na [VMSDK: Ukázka diagramů okruhů](https://go.microsoft.com/fwlink/?LinkId=213879).
+Když uživatel zkopíruje více obrazců, můžete při jejich vložení zachovat jejich relativní pozice. Tato technika je znázorněna příkladem na [VMSDK: Ukázka diagramů okruhů](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples).
 
  Pro dosažení tohoto efektu přidejte obrazce a konektory do zkopírovaného ElementGroupPrototype. Nejpohodlnější způsob přepsání je ElementOperations. CreateElementGroupPrototype (). Chcete-li to provést, přidejte do projektu DSL následující kód:
 
@@ -148,7 +148,7 @@ partial class MyDslDiagram // EDIT NAME
 ```
 
  **Vloží tvary do zvoleného umístění, jako je například aktuální pozice kurzoru.**
-Když uživatel zkopíruje více obrazců, můžete při jejich vložení zachovat jejich relativní pozice. Tato technika je znázorněna příkladem na [VMSDK: Ukázka diagramů okruhů](https://go.microsoft.com/fwlink/?LinkId=213879).
+Když uživatel zkopíruje více obrazců, můžete při jejich vložení zachovat jejich relativní pozice. Tato technika je znázorněna příkladem na [VMSDK: Ukázka diagramů okruhů](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples).
 
  Chcete-li dosáhnout tohoto efektu, přepište `ClipboardCommandSet.ProcessOnMenuPasteCommand()` pro použití verze `ElementOperations.Merge()`specifické pro umístění. Chcete-li to provést, přidejte do projektu DslPackage následující kód:
 
@@ -564,4 +564,4 @@ namespace Company.MyDsl
 ```
 
 ## <a name="see-also"></a>Viz také
- [Přizpůsobení vytvoření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md) [Postupy: Přidání obslužné rutiny přetažení,](../modeling/how-to-add-a-drag-and-drop-handler.md) [přizpůsobení chování při odstraňování](../modeling/customizing-deletion-behavior.md) [: Ukázka diagramů okruhů VMSDK](https://go.microsoft.com/fwlink/?LinkId=213879)
+ [Přizpůsobení vytvoření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md) [Postupy: Přidání obslužné rutiny přetažení,](../modeling/how-to-add-a-drag-and-drop-handler.md) [přizpůsobení chování při odstraňování](../modeling/customizing-deletion-behavior.md) [: Ukázka diagramů okruhů VMSDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)

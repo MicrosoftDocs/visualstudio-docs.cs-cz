@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0ab8aaff0ddf793fe64dd3695adc58c281290f98
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 37db8a095e8f7b420f14df29de30f265aee49bb6
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295702"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850809"
 ---
 # <a name="memory-usage-without-debugging"></a>Využití paměti bez ladění
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -207,4 +207,4 @@ Nástroj **využití paměti** bez ladění můžete použít k následujícím 
  [Analýza  výkonu aplikace](https://msdn.microsoft.com/library/58acb30b-8428-41a6-b195-b0fdedb89575)  
  [Spustit nástroje pro sledování výkonu a diagnostiky](https://msdn.microsoft.com/library/788279d8-f56b-40a0-9bef-facc3dfba471)   
  [Osvědčené postupy výkonu pro aplikace pro Windows C++Store C#, které používají, a Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh750313.aspx)   
- [Diagnostikování problémů s pamětí pomocí nového nástroje využití paměti v aplikaci Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=394706)
+ [Diagnostikování problémů s pamětí pomocí nového nástroje využití paměti v aplikaci Visual Studio](https://blogs.msdn.com/b/visualstudioalm/archive/2014/04/02/diagnosing-memory-issues-with-the-new-memory-usage-tool-in-visual-studio.aspx)

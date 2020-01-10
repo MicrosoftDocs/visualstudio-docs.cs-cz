@@ -7,19 +7,19 @@ ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
-ms.openlocfilehash: 633f8358b85b030c125bc632ff759d92e508cfaf
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 45f9756607cbb638d1f69f77bdf8cd2ee30953c5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75404954"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851940"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>Instalace sady Visual Studio 2019 pro Mac
 
 K zahájení vývoje nativních aplikací .NET pro více platforem na macOS nainstalujte Visual Studio 2019 pro Mac podle následujících kroků.
 
  > [!div class="button"]
- > [Stáhnout Visual Studio pro Mac](https://aka.ms/vsmac)
+ > [Stáhnout Visual Studio pro Mac](https://visualstudio.microsoft.com/vs/mac/)
 
 ## <a name="requirements"></a>Požadavky
 
@@ -32,7 +32,7 @@ Pro sestavování aplikací Xamarin pro iOS nebo macOS budete také potřebovat:
 
 ## <a name="installation-instructions"></a>Pokyny k instalaci
 
-1. Stáhněte instalační program ze [stránky pro stažení Visual Studio pro Mac](https://aka.ms/vsmac).
+1. Stáhněte instalační program ze [stránky pro stažení Visual Studio pro Mac](https://visualstudio.microsoft.com/vs/mac/).
 2. Po dokončení stahování kliknutím na **VisualStudioforMacInstaller. dmg** připojte instalační program a potom ho spusťte dvojitým kliknutím na logo šipky:
 
     [![kliknutím na velkou šipku spusťte instalaci.](media/install-installer-sml.png)](media/install-installer.png#lightbox)

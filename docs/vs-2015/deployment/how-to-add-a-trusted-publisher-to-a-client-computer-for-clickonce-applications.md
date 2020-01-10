@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9b535737860b846aadecb6b73b4bd26659db37b1
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 296aec3b2b5cd307400b230375a7171f158fee60
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74289710"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847699"
 ---
 # <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Postupy: Přidání důvěryhodného vydavatele na klientskou stanici pro aplikace ClickOnce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,23 +41,23 @@ Při nasazení důvěryhodných aplikací můžete nakonfigurovat klientské po�
   
 1. Získejte digitální certifikát od certifikační autority.  
   
-2. Exportujte certifikát do formátu Base64 X. 509 (. cer). Další informace o formátech certifikátů najdete v tématu [Export certifikátu](https://go.microsoft.com/fwlink/?LinkId=164793).  
+2. Exportujte certifikát do formátu Base64 X. 509 (. cer). Další informace o formátech certifikátů najdete v tématu [Export certifikátu](https://technet.microsoft.com/library/cc730988(WS.10).aspx).  
   
 3. Z příkazového řádku v klientských počítačích spusťte následující příkaz:  
   
-     **certmgr. exe – přidání certifikátu. cer-c-s-r localMachine TrustedPublisher**  
+     **certmgr.exe -add certificate.cer -c -s -r localMachine TrustedPublisher**  
   
 ### <a name="to-add-a-certificate-to-the-trusted-publishers-store-under-a-different-root"></a>Přidání certifikátu do úložiště důvěryhodných vydavatelů pod jiným kořenem  
   
 1. Získejte digitální certifikát od certifikační autority.  
   
-2. Exportujte certifikát do formátu Base64 X. 509 (. cer). Další informace o formátech certifikátů najdete v tématu [Export certifikátu](https://go.microsoft.com/fwlink/?LinkId=164793).  
+2. Exportujte certifikát do formátu Base64 X. 509 (. cer). Další informace o formátech certifikátů najdete v tématu [Export certifikátu](https://technet.microsoft.com/library/cc730988(WS.10).aspx).  
   
 3. Z příkazového řádku v klientských počítačích spusťte následující příkaz:  
   
-     **certmgr. exe – přidat dobrý soubor. cer-c-s-r localMachine root**  
+     **certmgr.exe -add good.cer -c -s -r localMachine Root**  
   
-     **certmgr. exe – přidat dobrý soubor. cer-c-s-r localMachine TrustedPublisher**  
+     **certmgr.exe -add good.cer -c -s -r localMachine TrustedPublisher**  
   
 ## <a name="see-also"></a>Viz také  
  [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)   

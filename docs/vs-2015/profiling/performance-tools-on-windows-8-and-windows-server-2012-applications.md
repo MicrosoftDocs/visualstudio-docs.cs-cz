@@ -9,12 +9,12 @@ caps.latest.revision: 20
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c65561f9a9a2ca287232b7a61bb0e07ca07a769d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a2fa9581d94b3b70ca427c292c147562a11d55a4
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299657"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847988"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Nástroje pro měření výkonu v aplikacích pro Windows 8 a Windows Server 2012
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vy
 > [!NOTE]
 > Nástroje výkonu pro jiné podporované verze systému Windows (Windows 7, Windows Server 2008 R2) se nezměnily.  
   
-## <a name="BKMK_In_this_topic"></a>V tomto tématu  
+## <a name="BKMK_In_this_topic"></a> V tomto tématu  
  [Shromažďování dat z aplikací pro Windows Store z integrovaného vývojového prostředí sady Visual Studio](#BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE)  
   
  [Shromažďování dat z aplikací běžících na desktopu Windows 8 nebo na Windows Serveru 2012 z integrovaného vývojového prostředí (IDE) sady Visual Studio](#BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE)  
@@ -100,7 +100,7 @@ Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vy
   
  Chcete-li Profilovat aplikace na zařízeních, ve kterých není nainstalována aplikace Visual Studio, proveďte jednu z následujících akcí:  
   
-- Stáhněte si nástroje jako součást Remote Tools for Visual Studio z webu [MSDN](https://go.microsoft.com/fwlink/?LinkID=219549).  
+- Stáhněte si nástroje jako součást Remote Tools for Visual Studio z webu [MSDN](https://www.microsoft.com/visualstudio/eng#downloads+d-additional-software).  
   
 - Zkopírujte a spusťte instalační program nástrojů samostatného profileru z počítače se systémem Visual Studio. Instalační programy jsou ve složce *% VSINSTALLDIR%* **\Team Tools\Performance Tools\Setups** . Vyberte instalační program operačního systému (x86/x64) vzdáleného počítače.  
   

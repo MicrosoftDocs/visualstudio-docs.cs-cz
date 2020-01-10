@@ -17,19 +17,19 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dca65fdfdfa6ad4ea27aa97033a95b4ed27e81ca
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4880f2907584504ba659c9a887173e6cd365c241
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300824"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846447"
 ---
 # <a name="the-visual-studio-image-library"></a>Knihovna obrázků sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Knihovna obrázků Visual Studio obsahuje obrázky aplikace, které se zobrazí v aplikaci Microsoft Visual Studio, Microsoft Windows, systému Office a další software od Microsoftu. Tato sada více než 1 000 obrázků je možné vytvářet aplikace, které vypadají vizuálně konzistentně se softwarem společnosti Microsoft.
 
- [Stáhnout knihovnu imagí sady Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=275090)
+ [Stáhnout knihovna obrázků sady Visual Studio](https://www.microsoft.com/download/details.aspx?id=35825)
 
  Knihovna obrázků je rozdělena do pěti kategorií: společné prvky, akce, poznámky, ikony a objekty. Soubory Readme jsou u společných elementů a typů ikon zahrnuté ve formátu PDF. Obsahují informace o tom, jak pomocí těchto bitových kopií odpovídajícím způsobem ve svých aplikacích.
 

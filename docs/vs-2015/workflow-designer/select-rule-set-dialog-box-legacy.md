@@ -13,17 +13,17 @@ caps.latest.revision: 6
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 24594edc9be8589acfbe99e92b5952e1ebfdcc9a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 9c6cc7a101a854611228b1a3bc38f63fffff45c1
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301447"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846173"
 ---
 # <a name="select-rule-set-dialog-box-legacy"></a>Dialogové okno Vybrat sadu pravidel (starší verze)
-Toto téma popisuje, jak používat dialogové okno **vybrat sadu pravidel** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak používat dialogové okno **vybrat sadu pravidel** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
 
- Dialogové okno **vybrat sadu pravidel** se používá k výběru sady pravidel, kterou můžete použít s aktivitou [sady](https://go.microsoft.com/fwlink?LinkID=65019) . Informace o tom, jak získat přístup k dialogovému oknu **vybrat sadu pravidel** , naleznete v tématu [How to: Create a sady Rule Set (starší verze)](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md).
+ Dialogové okno **vybrat sadu pravidel** se používá k výběru sady pravidel, kterou můžete použít s aktivitou [sady](https://msdn2.microsoft.com/library/system.workflow.activities.policyactivity.aspx) . Informace o tom, jak získat přístup k dialogovému oknu **vybrat sadu pravidel** , naleznete v tématu [How to: Create a sady Rule Set (starší verze)](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md).
 
  Následující tabulka popisuje prvky uživatelského rozhraní (UI) v dialogovém okně **vybrat sadu pravidel** .
 
@@ -34,14 +34,14 @@ Toto téma popisuje, jak používat dialogové okno **vybrat sadu pravidel** ve 
 |**Přejmenovat...**|Kliknutím otevřete dialogové okno, které slouží k přejmenování vybrané sady pravidel.|
 |**Delete**|Kliknutím odstraníte vybranou sadu pravidel.|
 |**Sada pravidel Preview**|Zobrazí pravidla ve vybrané sadě pravidel.|
-|**Ok**|Kliknutím přiřadíte vybranou sadu pravidel k aktivitě **sady** .|
+|**OK**|Kliknutím přiřadíte vybranou sadu pravidel k aktivitě **sady** .|
 
  Další informace o tom, jak vytvářet a upravovat sady pravidel, najdete v tématu [dialogové okno editor sad pravidel (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md).
 
 > [!WARNING]
 > Editor pravidel pro starší [!INCLUDE[wfd2](../includes/wfd2-md.md)], který se používá k cílení na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] nepodporuje cílení na více verzí.
 
- Další informace o podmínkách najdete v tématu [použití podmínek v pracovních postupech](https://go.microsoft.com/fwlink?LinkID=65009).
+ Další informace o podmínkách najdete v tématu [použití podmínek v pracovních postupech](https://msdn2.microsoft.com/library/bb628447.aspx).
 
 ## <a name="see-also"></a>Viz také
- [](https://go.microsoft.com/fwlink?LinkID=65019) [Dialogové okno Editor sady pravidel sady (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) [s použitím aktivity sady](https://go.microsoft.com/fwlink?LinkID=65004) [pomocí podmínek v pracovních postupech](https://go.microsoft.com/fwlink?LinkID=65009)
+ [](https://msdn2.microsoft.com/library/system.workflow.activities.policyactivity.aspx) [Dialogové okno Editor sady pravidel sady (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) [s použitím aktivity sady](https://msdn2.microsoft.com/library/bb675229.aspx) [pomocí podmínek v pracovních postupech](https://msdn2.microsoft.com/library/bb628447.aspx)

@@ -19,12 +19,12 @@ caps.latest.revision: 22
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 4c8c83676c8f01891aed97e931581c65b799e61e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 89afba591899b626863b0157f6d9d955d46e46cf
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299787"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851918"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>Chyba: Ladění se nezdařilo, protože integrované ověřování systému Windows není povoleno.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -61,7 +61,7 @@ Ověření uživatele, který požádalo o ladění, se zabránilo chybou ověř
   
 10. Kliknutím na tlačítko **OK** zavřete dialogové okno **metody ověřování** .  
   
-11. Kliknutím na **OK** zavřete dialogové okno **Vlastnosti**.  
+11. Kliknutím na tlačítko **OK** zavřete dialogové okno **vlastnosti** .  
   
 12. Zavřete okno **Internetová informační služba** .  
   
@@ -77,7 +77,7 @@ Ověření uživatele, který požádalo o ladění, se zabránilo chybou ověř
   
          Zobrazí se dialogové okno uživatel Access Control a zobrazí výzvu k pokračování oprávnění.  
   
-    3. Klikněte na **pokračovat**.  
+    3. Klikněte na **Pokračovat**.  
   
          Zobrazí se dialogové okno funkce systému Windows.  
   
@@ -119,5 +119,5 @@ Ověření uživatele, který požádalo o ladění, se zabránilo chybou ověř
   
 ## <a name="see-also"></a>Viz také  
  [Ladění webových aplikací: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)   
- [Zprostředkovatel zabezpečení Microsoft Digest ověřování](https://go.microsoft.com/fwlink/?LinkId=77938)   
+ [Zprostředkovatel zabezpečení Microsoft Digest ověřování](https://msdn2.microsoft.com/library/Aa378744.aspx)   
  [Spouštění webových aplikací v systému Windows Vista se službou IIS 7,0 a sadou Visual Studio](https://msdn.microsoft.com/library/262a82ac-dd0e-4096-86c6-fb463e88be66)

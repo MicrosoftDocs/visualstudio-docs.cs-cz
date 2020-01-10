@@ -1,5 +1,5 @@
 ---
-title: Hierarchie v sadě Visual Studio | Dokumentace Microsoftu
+title: Hierarchie v aplikaci Visual Studio | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 29eb35e807c467b64a89f48705c555d4083ceef7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 08005b69a1af16b07212cb29547875fad89e1d6a
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328845"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848944"
 ---
 # <a name="hierarchies-in-visual-studio"></a>Hierarchie v sadě Visual Studio
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Integrované vývojové prostředí (IDE) se zobrazí jako projekt *hierarchie*. V integrovaném vývojovém prostředí hierarchie je strom z uzlů, kde má každý uzel sadu přidružené vlastnosti. A *projektu hierarchie* je kontejner, který obsahuje položky tohoto projektu, položek relací a přidružené vlastnosti položky a příkazy.
@@ -34,5 +34,5 @@ ms.locfileid: "66328845"
 
 ## <a name="see-also"></a>Viz také:
 - [Typy projektů](../../extensibility/internals/project-types.md)
-- [Výběr a Měna v prostředí IDE](../../extensibility/internals/selection-and-currency-in-the-ide.md)
-- [Ukázky VSSDK](https://aka.ms/vs2015sdksamples)
+- [Výběr a měna v integrovaném vývojovém prostředí](../../extensibility/internals/selection-and-currency-in-the-ide.md)
+- [Ukázky VSSDK](https://github.com/Microsoft/VSSDK-Extensibility-Samples)

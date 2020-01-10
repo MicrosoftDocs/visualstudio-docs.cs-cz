@@ -9,12 +9,12 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d3a17275730cd093f8f9fa433aa28c7f9ca86e80
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 02ab48e2fcd014508277a9bc361cde65d62ef38c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298136"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850793"
 ---
 # <a name="t4-template-directive"></a>T4 – direktiva Template
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -211,7 +211,7 @@ This is the common footer.
 
  Pro textovou šablonu návrhu můžete zadat libovolnou základní třídu, která je odvozena od <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>. Použijte direktivu `<#@assembly#>` pro načtení sestavení nebo projektu, který obsahuje základní třídu.
 
- Další informace najdete v [blogu Gareth Novák v tématu "dědičnost v textových šablonách"](https://go.microsoft.com/fwlink/?LinkId=208373).
+ Další informace najdete v [blogu Gareth Novák v tématu "dědičnost v textových šablonách"](https://blogs.msdn.microsoft.com/garethj/2011/01/03/vs2010-sp1-t4-template-inheritance-part-i-sample-metadata/).
 
 ## <a name="linepragmas-attribute"></a>Atribut LinePragmas
  Příklad: `linePragmas="false"`

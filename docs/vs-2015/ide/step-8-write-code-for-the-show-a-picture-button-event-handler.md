@@ -9,12 +9,12 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c2c1b09d88de938ee4bc93b69b50d53c0d39006f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7f5d58533f6f2207d1b07883ab741eb900cdfbbf
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299997"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851113"
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>Krok 8: Zapište kód pro obslužnou rutinu události zobrazení tlačítka s obrázkem
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +27,7 @@ V tomto kroku nastavíte tlačítko **Zobrazit obrázek** jako funkční:
 
   Rozhraní IDE má výkonný nástroj nazvaný IntelliSense, který vám pomůže psát kód. Při zadávání kódu IDE otevře pole s navrhovanými dokončeními pro částečná slova, která zadáte. Pokusí se určit, co chcete udělat dále, a automaticky přejde na poslední položku, kterou zvolíte ze seznamu. Můžete použít šipky nahoru a dolů pro pohyb v seznamu nebo můžete nechat zadat písmena pro zúžení voleb. Po zobrazení požadované možnosti vyberte klávesu TAB a vyberte ji. Případně můžete návrhy ignorovat, pokud nejsou potřeba.
 
-  ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-Video 4](https://go.microsoft.com/fwlink/?LinkId=205215) nebo v [kurzu 1: vytvoření prohlížeče obrázků ve C# formátu-Video 4](https://go.microsoft.com/fwlink/?LinkId=205203). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
+  ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-Video 4](https://msdn.microsoft.com/vbasic/gg315355.aspx) nebo v [kurzu 1: vytvoření prohlížeče obrázků ve C# formátu-Video 4](https://msdn.microsoft.com/vcsharp/gg278412.aspx). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
 
 ### <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>Zápis kódu pro obslužnou rutinu události zobrazit tlačítko obrázku
 

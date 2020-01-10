@@ -14,12 +14,12 @@ caps.latest.revision: 45
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 96224b522b17ff9da520386d56d4fae7a04bd981
-ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
+ms.openlocfilehash: d072f54dfe351d54e3e115dca7a91bec77fbb9e6
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144773"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844920"
 ---
 # <a name="run-windows-store-apps-in-the-simulator"></a>Spouštění aplikací pro Windows Store v simulátoru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -86,7 +86,7 @@ Simulátor sady Visual Studio pro aplikace pro Windows Store je desktopová apli
  Orientaci zařízení mezi úrovněmi na výšku a na šířku můžete přepínat otočením simulátoru 90 stupňů v libovolném směru.  
   
 > [!NOTE]
-> Simulátor nerespektuje vlastnost [DisplayProperties. AutoRotationPreferences](https://go.microsoft.com/fwlink/?LinkId=249460) projektu. Například pokud váš projekt nastaví orientaci na `Landscape`a pak dojde k otočení simulátoru na orientaci na výšku, zobrazí se také obrázek simulátoru, který se změní na výšku. Otestujte tato nastavení na skutečném zařízení.  
+> Simulátor nerespektuje vlastnost [DisplayProperties. AutoRotationPreferences](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayproperties.autorotationpreferences.aspx) projektu. Například pokud váš projekt nastaví orientaci na `Landscape`a pak dojde k otočení simulátoru na orientaci na výšku, zobrazí se také obrázek simulátoru, který se změní na výšku. Otestujte tato nastavení na skutečném zařízení.  
   
 > [!NOTE]
 > Pokud otočíte simulátor tak, že je jeden okraj simulátoru větší než obrazovka, na které je zobrazený, simulátor se automaticky přizpůsobí velikosti obrazovky. Při opětovném otočení se simulátor nemění na původní velikost.  
@@ -142,7 +142,7 @@ Simulátor sady Visual Studio pro aplikace pro Windows Store je desktopová apli
   
    [Analýza spotřeby energie](../profiling/analyze-energy-use-in-store-apps.md)  
     
-   [Windows. Networking. Connectivity](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.aspx)  
+   [Windows.Networking.Connectivity](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.aspx)  
   
    [Postup reakce na události systému s úlohami na pozadí](https://msdn.microsoft.com/f7c86e86-a7ae-4abb-a923-76b03337a80a)  
   

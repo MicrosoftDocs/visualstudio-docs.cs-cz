@@ -22,12 +22,12 @@ caps.latest.revision: 142
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: db7430d03bbce065b75e890736253c6ba05752d0
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7bc1e36f6d5dea12a8c46e88a3e1f450cc30caa6
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298931"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847211"
 ---
 # <a name="intellitrace"></a>IntelliTrace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -57,9 +57,9 @@ Můžete strávit méně času laděním aplikace, když použijete IntelliTrace
   
 |||  
 |-|-|  
-|**Doložen**|– Visual Basic a vizuální C# aplikace, které používají .NET Framework 2,0 nebo vyšší verze.<br />     Můžete ladit většinu aplikací, včetně ASP.NET, Microsoft Azure, model Windows Forms, WCF, WPF, Windows Workflow, SharePoint 2010, SharePoint 2013 a 64-bit Apps.<br />     Chcete-li ladit aplikace služby SharePoint pomocí IntelliTrace, přečtěte si [Návod: ladění aplikace služby SharePoint pomocí IntelliTrace](https://msdn.microsoft.com/library/4bd80d2f-f680-4bf4-81c3-f14e8185f6a4).<br />     Pokud chcete ladit Microsoft Azure aplikace pomocí IntelliTrace, přečtěte si téma [Ladění publikované cloudové služby pomocí IntelliTrace a sady Visual Studio](../azure/vs-azure-tools-intellitrace-debug-published-cloud-services.md).|  
+|**Podporuje se**|– Visual Basic a vizuální C# aplikace, které používají .NET Framework 2,0 nebo vyšší verze.<br />     Můžete ladit většinu aplikací, včetně ASP.NET, Microsoft Azure, model Windows Forms, WCF, WPF, Windows Workflow, SharePoint 2010, SharePoint 2013 a 64-bit Apps.<br />     Chcete-li ladit aplikace služby SharePoint pomocí IntelliTrace, přečtěte si [Návod: ladění aplikace služby SharePoint pomocí IntelliTrace](https://msdn.microsoft.com/library/4bd80d2f-f680-4bf4-81c3-f14e8185f6a4).<br />     Pokud chcete ladit Microsoft Azure aplikace pomocí IntelliTrace, přečtěte si téma [Ladění publikované cloudové služby pomocí IntelliTrace a sady Visual Studio](../azure/vs-azure-tools-intellitrace-debug-published-cloud-services.md).|  
 |**Omezená podpora**|– F# aplikace na experimentální bázi<br />– Aplikace pro Windows Store podporované jenom pro události|  
-|**Nepodporováno**|– C++, jiné jazyky a skript<br />– Služby Windows, Silverlight, Xbox nebo [!INCLUDE[winmobile](../includes/winmobile-md.md)] aplikací|  
+|**Nepodporuje se**|– C++, jiné jazyky a skript<br />– Služby Windows, Silverlight, Xbox nebo [!INCLUDE[winmobile](../includes/winmobile-md.md)] aplikací|  
   
 > [!NOTE]
 > Pokud chcete ladit proces, který je již spuštěn, nelze použít nástroj IntelliTrace. Nástroj IntelliTrace je nutné spustit při spuštění procesu.  
@@ -95,7 +95,7 @@ Můžete strávit méně času laděním aplikace, když použijete IntelliTrace
   
 - K chybě nebo selhání dojde v nasazené aplikaci.  
   
-   Pro aplikace založené na Microsoft Azure můžete nakonfigurovat shromažďování dat IntelliTrace před publikováním aplikace. Když je vaše aplikace spuštěná, IntelliTrace ukládá data do souboru. iTrace. Viz [Ladění publikované cloudové služby pomocí IntelliTrace a sady Visual Studio](../azure/vs-azure-tools-intellitrace-debug-published-cloud-services.md).  
+   Pro aplikace založené na Microsoft Azure můžete nakonfigurovat shromažďování dat IntelliTrace před publikováním aplikace. Když je vaše aplikace spuštěná, IntelliTrace ukládá data do souboru. iTrace. Zobrazit [ladění publikované cloudové služby pomocí nástroje IntelliTrace a sady Visual Studio](../azure/vs-azure-tools-intellitrace-debug-published-cloud-services.md).  
   
    V případě webových aplikací ASP.NET hostovaných ve službě IIS 7.0, 7.5 a 8.0 a aplikací služby SharePoint 2010 a SharePoint 2013 použijte nástroj Microsoft Monitoring Agent samotný nebo s nástrojem System Center 2012 k ukládání dat nástroje IntelliTrace do souboru .iTrace.  
   
@@ -136,7 +136,7 @@ Můžete strávit méně času laděním aplikace, když použijete IntelliTrace
   
 - **Události aplikace SharePoint 2010 a SharePoint 2013**  
   
-   Můžete zaznamenat události uživatelského profilu a podmnožinu událostí sjednoceného systému protokolování (ULS) pro aplikace SharePoint 2010 a 2013 spuštěné mimo aplikaci Visual Studio. Tyto události můžete uložit do souboru .iTrace. Vyžaduje Visual Studio Enterprise 2015, předchozí verzi Visual Studio Ultimate nebo [Microsoft Monitoring Agent](https://go.microsoft.com/fwlink/?LinkId=320384) spuštěnou v režimu **trasování** .  
+   Můžete zaznamenat události uživatelského profilu a podmnožinu událostí sjednoceného systému protokolování (ULS) pro aplikace SharePoint 2010 a 2013 spuštěné mimo aplikaci Visual Studio. Tyto události můžete uložit do souboru .iTrace. Vyžaduje Visual Studio Enterprise 2015, předchozí verzi Visual Studio Ultimate nebo [Microsoft Monitoring Agent](https://go.microsoft.com/fwlink/?LinkID=309771) spuštěnou v režimu **trasování** .  
   
    Po otevření souboru .iTrace zadejte ID korelace SharePoint a najděte odpovídající webový požadavek, zobrazte zaznamenané události a spusťte ladění od určité události. Obsahuje-li soubor neošetřené výjimky, lze ID korelace vybrat pro ladění výjimky.  
   
@@ -186,7 +186,7 @@ Můžete strávit méně času laděním aplikace, když použijete IntelliTrace
  [Použití uložených dat řešení IntelliTrace](../debugger/using-saved-intellitrace-data.md)  
   
 ### <a name="blogs"></a>Blogy  
- [Visual Studio ALM + Team Foundation Server](https://go.microsoft.com/fwlink/?LinkID=201340)  
+ [Visual Studio ALM + Team Foundation Server](https://blogs.msdn.com/b/visualstudioalm)  
   
-### <a name="forums"></a>Fóra  
- [Diagnostika sady Visual Studio](https://go.microsoft.com/fwlink/?LinkId=262263)
+### <a name="forums"></a>Diskuzní fóra  
+ [Diagnostika sady Visual Studio](https://social.msdn.microsoft.com/Forums/vsdebug)

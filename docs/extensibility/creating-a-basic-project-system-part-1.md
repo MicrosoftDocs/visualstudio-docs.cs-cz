@@ -12,12 +12,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 73bacf2c5d1650da91093c92c67e6b67bbbc73a5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8f0dee8364ac16becc538fa6fc8c6f90d955c078
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72633507"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848141"
 ---
 # <a name="create-a-basic-project-system-part-1"></a>Vytvoření základního projektového systému, část 1
 V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používají k uspořádání souborů zdrojového kódu a dalších prostředků. Projekty se zobrazí jako podřízené položky řešení v **Průzkumník řešení**. Projekty umožňují organizovat, sestavovat, ladit a nasazovat zdrojový kód a vytvářet odkazy na webové služby, databáze a další prostředky.
@@ -35,7 +35,7 @@ V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používaj
  Tento návod ukazuje, jak vytvořit typ projektu, který má příponu názvu souboru projektu *. myproj*. Tento názorný postup je vypůjčen z existujícího C# systému Visual Project.
 
 > [!NOTE]
-> Další příklady rozšiřujících projektů naleznete v tématu [VSSDK Samples](https://aka.ms/vs2015sdksamples).
+> Další příklady rozšiřujících projektů naleznete v tématu [VSSDK Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
 
  Tento návod učí, jak provádět tyto úlohy:
 
@@ -56,12 +56,12 @@ V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používaj
 - Implementujte základní substituci parametrů šablony.
 
 ## <a name="prerequisites"></a>Požadavky
- Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+ Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
  Také je nutné stáhnout zdrojový kód pro [spravované balíčky architektury pro projekty](https://github.com/tunnelvisionlabs/MPFProj10). Extrahujte soubor do umístění, které je přístupné pro řešení, které budete vytvářet.
 
 ## <a name="create-a-basic-project-type"></a>Vytvoření základního typu projektu
- Vytvořte projekt C# VSIX s názvem **SimpleProject**. (**Soubor**  > **Nový**  > **projekt** a pak **Visual C#**   > **rozšiřitelnost**  > **projektu VSIX**). Přidejte šablonu položky projektu balíčku sady Visual Studio (na **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **Přidat**  > **Nová položka**a pak přejděte na **rozšíření**  > **balíček sady Visual Studio**). Název souboru *SimpleProjectPackage*.
+ Vytvořte projekt C# VSIX s názvem **SimpleProject**. (**Soubor** > **Nový** > **projekt** a pak **Visual C#**  > **rozšiřitelnost** > **projektu VSIX**). Přidejte šablonu položky projektu balíčku sady Visual Studio (na **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **Přidat** > **Nová položka**a pak přejděte na **rozšíření** > **balíček sady Visual Studio**). Název souboru *SimpleProjectPackage*.
 
 ## <a name="creating-a-basic-project-template"></a>Vytvoření základní šablony projektu
  Nyní můžete upravit tento základní VSPackage pro implementaci nového typu projektu *. myproj* . Chcete-li vytvořit projekt, který je založen na typu projektu *. myproj* , aplikace Visual Studio musí zjistit, které soubory, prostředky a odkazy mají být přidány do nového projektu. Chcete-li poskytnout tyto informace, umístěte soubory projektu do složky šablony projektu. Když uživatel použije projekt *. myproj* k vytvoření projektu, soubory se zkopírují do nového projektu.
@@ -154,7 +154,7 @@ V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používaj
 
 11. Uložte soubor.
 
-12. V okně **vlastnosti** nastavte **akci sestavení** pro *AssemblyInfo.cs*, *program.cs*, *SimpleProject. ico*a *SIMPLEPROJECT. myproj* na **obsah**a nastavte jejich **zahrnutí do vlastností VSIX** . na **hodnotu true**.
+12. V okně **vlastnosti** nastavte **akci sestavení** pro *AssemblyInfo.cs*, *program.cs*, *SimpleProject. ico*a *SIMPLEPROJECT. myproj* na **obsah**a nastavte jejich **zahrnutí do vlastností VSIX** na **hodnotu true**.
 
     Tato šablona projektu popisuje základní vizuální C# projekt, který obsahuje konfiguraci ladění a konfiguraci vydání. Projekt obsahuje dva zdrojové soubory, *AssemblyInfo.cs* a *program.cs*a několik odkazů na sestavení. Při vytvoření projektu ze šablony je hodnota ProjectGuid automaticky nahrazena novým identifikátorem GUID.
 
@@ -244,7 +244,7 @@ Templates
 
     1. Uvolněte projekt SimpleProject (v **Průzkumník řešení**vyberte uzel projektu a v místní nabídce klikněte na položku **Uvolnit projekt**.) a otevřete soubor projektu v editoru XML.
 
-    2. Přidejte následující bloky do souboru projektu (hned nad > bloky \<Import). Nastavte `ProjectBasePath` do umístění souboru *ProjectBase. Files* v kódu spravovaného balíčku, který jste právě stáhli. Je možné, že budete muset do cesty přidat zpětné lomítko. Pokud to neuděláte, projekt nemusí podařit najít zdrojový kód spravovaného balíčku.
+    2. Přidejte následující bloky do souboru projektu (hned nad \<importovat > bloky). Nastavte `ProjectBasePath` do umístění souboru *ProjectBase. Files* v kódu spravovaného balíčku, který jste právě stáhli. Je možné, že budete muset do cesty přidat zpětné lomítko. Pokud to neuděláte, projekt nemusí podařit najít zdrojový kód spravovaného balíčku.
 
         ```
         <PropertyGroup>
@@ -261,7 +261,7 @@ Templates
 
     4. Přidejte odkazy na následující sestavení:
 
-        - `Microsoft.VisualStudio.Designer.Interfaces` (v *\<VSSDK install > \VisualStudioIntegration\Common\Assemblies\v2.0*)
+        - `Microsoft.VisualStudio.Designer.Interfaces` (v *\<VSSDK instalace > \VisualStudioIntegration\Common\Assemblies\v2.0*)
 
         - `WindowsBase`
 
@@ -350,7 +350,7 @@ Templates
 4. Zrušte zarážku a zastavte ladění. Vzhledem k tomu, že jsme ještě nevytvořili uzel projektu, kód pro vytváření projektu stále vyvolává výjimky.
 
 ## <a name="extend-the-projectnode-class"></a>Rozšiřování třídy ProjectNode
- Nyní můžete implementovat třídu `SimpleProjectNode`, která je odvozena z třídy `ProjectNode`. @No__t_0 základní třída zpracovává následující úlohy při vytváření projektu:
+ Nyní můžete implementovat třídu `SimpleProjectNode`, která je odvozena z třídy `ProjectNode`. `ProjectNode` základní třída zpracovává následující úlohy při vytváření projektu:
 
 - Zkopíruje soubor šablony projektu *SimpleProject. myproj*do složky nového projektu. Kopie je přejmenována podle názvu, který je zadán v dialogovém okně **Nový projekt** . Hodnota vlastnosti `ProjectGuid` je nahrazena novým identifikátorem GUID.
 
@@ -441,11 +441,11 @@ Templates
 
 ### <a name="to-test-the-projectnode-class"></a>Otestování třídy ProjectNode
 
-1. Stisknutím klávesy **F5** spusťte ladění. V experimentální instanci vytvořte nový SimpleProject.
+1. Stisknutím klávesy **F5** pro spuštění ladění. V experimentální instanci vytvořte nový SimpleProject.
 
 2. Visual Studio by mělo volat objekt pro vytváření projektu a vytvořit tak projekt.
 
-3. Zavřete experimentální instanci sady Visual Studio.
+3. Ukončete experimentální instanci sady Visual Studio.
 
 ## <a name="add-a-custom-project-node-icon"></a>Přidat vlastní ikonu uzlu projektu
  Ikona uzlu projektu v předchozí části je výchozí ikona. Můžete ho změnit na vlastní ikonu.
@@ -508,15 +508,15 @@ Templates
 
 - *SimpleProject. Resources. Resources*
 
-- *VisualStudio. Project. Resources*
+- *VisualStudio.Project.resources*
 
-- *SimpleProject. VSPackage. Resources*
+- *SimpleProject.VSPackage.resources*
 
 - *Resources. imagelis. bmp*
 
-- *Microsoft. VisualStudio. Project. DontShowAgainDialog. Resources*
+- *Microsoft.VisualStudio.Project.DontShowAgainDialog.resources*
 
-- *Microsoft. VisualStudio. Project. SecurityWarningDialog. Resources*
+- *Microsoft.VisualStudio.Project.SecurityWarningDialog.resources*
 
 - *SimpleProject. Resources. SimpleProjectNode. bmp*
 
@@ -533,7 +533,7 @@ Templates
 
      ![Jednoduchý projekt – uzel nového projektu](../extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")
 
-3. Otevřete *program.cs* v editoru kódu. Měl by se zobrazit zdrojový kód, který se podobá následujícímu kódu.
+3. Otevřete soubor *Program.cs* v editoru kódu. Měl by se zobrazit zdrojový kód, který se podobá následujícímu kódu.
 
     ```csharp
     using System;
@@ -609,7 +609,7 @@ Templates
 
     Visual Studio by mělo dokončit vytváření projektu.
 
-5. Otevřete *program.cs* v editoru kódu. Měl by se zobrazit zdrojový kód, který se podobá následujícímu kódu.
+5. Otevřete soubor *Program.cs* v editoru kódu. Měl by se zobrazit zdrojový kód, který se podobá následujícímu kódu.
 
    ```csharp
    using System;

@@ -1,7 +1,7 @@
 ---
-title: Podpora Pythonu v aplikaci Visual Studio ve Windows
+title: Podpora Pythonu v sadě Visual Studio ve Windows
 titleSuffix: ''
-description: Souhrn funkcí Pythonu v aplikaci Visual Studio, což je nejlepší prostředí Python IDE ve Windows (známé také jako Python Tools for Visual Studio, PTVS).
+description: Přehled funkce Pythonu v sadě Visual Studio, takže nejlepší prostředí Python IDE ve Windows (označované také jako Python Tools for Visual Studio, PTVS).
 ms.date: 06/05/2019
 ms.topic: overview
 author: JoshuaPartlow
@@ -11,114 +11,114 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5f86c3b146bb74a38910b151a80c3c2d439ef023
-ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
+ms.openlocfilehash: a913fa6abdcf59a64d8514f17656b8f8531d476d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061155"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845661"
 ---
-# <a name="work-with-python-in-visual-studio-on-windows"></a>Práce s Pythonem v aplikaci Visual Studio ve Windows
+# <a name="work-with-python-in-visual-studio-on-windows"></a>Práce s využitím Pythonu v sadě Visual Studio ve Windows
 
-Python je oblíbený programovací jazyk, který je spolehlivý, flexibilní a snadný, snadno se naučíte používat na všech operačních systémech a který podporuje jak silnou komunitu vývojářů, tak i mnoho bezplatných knihoven. Python podporuje všechny způsoby vývoje, včetně webových aplikací, webových služeb, aplikací klasické pracovní plochy, skriptování a vědeckého zpracování a používá ho spousta vysokých škol, vědců, příležitostného vývojáře a profesionálních vývojářů. Další informace o jazyce v [Python.org](https://www.python.org) a [Pythonu](https://www.python.org/about/gettingstarted/)najdete v části začátečník.
+Python je oblíbený programovací jazyk, který je spolehlivé, flexibilní, snadno se jej naučíte, bezplatné použití ve všech operačních systémech a podporovaná smlouvou do komunity vývojářů silné a free mnoho knihoven. Python podporuje všechny způsoby vývoje, včetně webových aplikací, webových služeb, aplikací klasické pracovní plochy, skriptování a vědecké výpočty a používá mnoho univerzity, odborníky, příležitostné vývojáři a nabídne profesionální vývojáři. Další informace o jazyku na [python.org](https://www.python.org) a [Python pro začátečníky](https://www.python.org/about/gettingstarted/).
 
-Visual Studio je výkonné prostředí Python IDE ve Windows. Visual Studio poskytuje podporu [Open Source](https://github.com/Microsoft/ptvs) pro jazyk Pythonu prostřednictvím úloh **vývoje v Pythonu** a **datových vědy** (Visual Studio 2017 a novější) a rozšíření Free Python Tools for Visual Studio (Visual Studio 2015 a starší).
+Visual Studio je výkonné prostředí IDE Python ve Windows. Visual Studio poskytuje podporu [Open Source](https://github.com/Microsoft/ptvs) pro jazyk Pythonu prostřednictvím úloh **vývoje v Pythonu** a **datových vědy** (Visual Studio 2017 a novější) a bezplatného rozšíření Python Tools for Visual Studio (Visual Studio 2015 a starší).
 
-Python není v Visual Studio pro Mac v současnosti podporován, ale je k dispozici v systémech Mac a Linux prostřednictvím Visual Studio Code (viz [otázky a odpovědi](#questions-and-answers)).
+Python v současné době nepodporuje v sadě Visual Studio pro Mac, ale je k dispozici na Mac a Linux přes Visual Studio Code (viz [otázek a odpovědí](#questions-and-answers)).
 
-Začněte tím, že:
+Jak začít:
 
-- Postupujte podle [pokynů k instalaci](installing-python-support-in-visual-studio.md) a nastavte úlohu Pythonu.
-- Seznamte se s možnostmi Pythonu sady Visual Studio v částech v tomto článku.
+- Postupujte podle [pokyny k instalaci](installing-python-support-in-visual-studio.md) nastavit úlohou Pythonu.
+- Seznámíte se s funkcemi Python sady Visual Studio si části v tomto článku.
 ::: moniker range="vs-2017"
-- Projděte jednu nebo více rychlých startů a vytvořte projekt. Pokud si nejste jistí, začněte s [vytvořením webové aplikace s použitím baňky](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json).
+- Projděte si jeden nebo více šablon rychlý start k vytvoření projektu. Pokud si nejste jisti, začněte tématem [vytvoření webové aplikace pomocí Flask](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json).
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-- Projděte jednu nebo více rychlých startů a vytvořte projekt. Pokud si nejste jistí, začněte s [rychlým startem: otevření a spuštění kódu Pythonu ve složce](quickstart-05-python-visual-studio-open-folder.md) nebo [Vytvoření webové aplikace s použitím baňky](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json).
+- Projděte si jeden nebo více šablon rychlý start k vytvoření projektu. Pokud si nejste jistí, začněte s [rychlým startem: otevření a spuštění kódu Pythonu ve složce](quickstart-05-python-visual-studio-open-folder.md) nebo [Vytvoření webové aplikace s použitím baňky](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json).
 ::: moniker-end
-- V kurzu [práce s Pythonem v aplikaci Visual Studio](tutorial-working-with-python-in-visual-studio-step-01-create-project.md) najdete kompletní ucelené prostředí.
+- Postupujte podle [pracovat s využitím Pythonu v sadě Visual Studio](tutorial-working-with-python-in-visual-studio-step-01-create-project.md) kurzu pro prostředí úplného začátku do konce.
 
 ::: moniker range=">=vs-2019"
 > [!Note]
 > Visual Studio podporuje Python verze 2,7 a také verze 3,5 až 3,7. I když je možné použít sadu Visual Studio k úpravám kódu napsaného v jiných verzích Pythonu, tyto verze se oficiálně nepodporují a funkce, jako je například IntelliSense a ladění, nemusí fungovat. Podpora Pythonu verze 3,8 je stále ve vývoji, konkrétní podrobnosti o podpoře se dají zobrazit v tomto [problému sledování na GitHubu](https://github.com/microsoft/PTVS/issues/5822).
 ::: moniker-end
 
-## <a name="support-for-multiple-interpreters"></a>Podpora pro více překladačů
+## <a name="support-for-multiple-interpreters"></a>Podpora pro více interprety
 
-Okno **prostředí Pythonu** sady Visual Studio (zobrazené níže v celém rozšířeném zobrazení) poskytuje jediné místo pro správu všech vašich globálních prostředí Pythonu, prostředí conda a virtuálních prostředí. Visual Studio automaticky detekuje Instalace Pythonu ve standardních umístěních a umožňuje nakonfigurovat vlastní instalace. U každého prostředí můžete snadno spravovat balíčky, otevírat interaktivní okno pro toto prostředí a přistupovat ke složkám prostředí.
+Visual Studio **prostředí Pythonu** okno (viz následující obrázek v široké, rozšířené zobrazení) poskytuje jednotné místo, kde můžete spravovat všechny globální prostředí Pythonu, prostředí conda a virtuální prostředí. Visual Studio automaticky zjišťuje instalace Pythonu ve standardní umístění a umožňuje nakonfigurovat vlastní zařízení. Každé prostředí můžete snadno spravovat balíčky, otevřete interaktivní okno pro toto prostředí a přístup ke složkám na prostředí.
 
 ::: moniker range="vs-2017"
-![Rozšířené zobrazení okna prostředí Pythonu](media/environments/environments-expanded-view.png)
+![Rozšířené zobrazení okno prostředí Pythonu](media/environments/environments-expanded-view.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-![Rozšířené zobrazení okna prostředí Pythonu](media/environments/environments-expanded-view-2019.png)
+![Rozšířené zobrazení okno prostředí Pythonu](media/environments/environments-expanded-view-2019.png)
 ::: moniker-end
 
-Pomocí příkazu **otevřít interaktivní okno** spusťte Python interaktivně v rámci kontextu aplikace Visual Studio. K otevření samostatného příkazového okna ve složce vybraného prostředí použijte příkaz **otevřít v prostředí PowerShell** . Z tohoto příkazového okna můžete spustit libovolný skript Pythonu.
+Použití **otevřít interaktivní okno** příkaz interaktivní spuštění Pythonu v rámci sady Visual Studio. Použití **otevřít v PowerShell** příkaz pro otevření okna samostatný příkaz ve složce vybraného prostředí. Z tohoto okna Příkazový skript můžete spustit všechny python.
 
 Další informace:
 
-- [Spravovat prostředí Pythonu](managing-python-environments-in-visual-studio.md)
+- [Správa prostředí Pythonu](managing-python-environments-in-visual-studio.md)
 - [Referenční dokumentace prostředí Pythonu](python-environments-window-tab-reference.md)
 
-## <a name="rich-editing-intellisense-and-code-comprehension"></a>Bohatá úprava, IntelliSense a porozumění kódu
+## <a name="rich-editing-intellisense-and-code-comprehension"></a>Bohaté možnosti úpravy, technologii IntelliSense a porozumění kódu
 
-Visual Studio poskytuje prvotřídní Editor Pythonu, včetně barevného zbarvení, automatického dokončování všech vašich kódů a knihoven, formátování kódu, nápovědy k podpisům, refaktoringu, linting a pomocných parametrů typu. Visual Studio také poskytuje jedinečné funkce, jako je zobrazení tříd, **Přejít na definici**, **Najít všechny odkazy**a fragmenty kódu. Přímá integrace s [interaktivním oknem](#interactive-window) vám pomůže rychle vyvíjet kód v Pythonu, který je už uložený v souboru.
+Visual Studio poskytuje prvotřídní editor Pythonu, včetně barevné zvýrazňování syntaxe, automatické dokončování kódu a knihoven, formátování, signaturám, refaktoring, linting a typu kódu. Visual Studio také poskytuje jedinečné funkce, jako je zobrazení tříd **přejít k definici**, **najít všechny odkazy**a fragmenty kódu. Přímá integrace s [interaktivní okno](#interactive-window) vám pomůže rychle vytvořit kód Pythonu, který je již uložen v souboru.
 
-![Dokončování kódu pro kód Pythonu v aplikaci Visual Studio](media/code-editing-completions-simple.png)
+![Dokončování kódu pro kód Python v sadě Visual Studio](media/code-editing-completions-simple.png)
 
 Další informace:
 
-- Dokumenty: [Úprava kódu Pythonu](editing-python-code-in-visual-studio.md)
-- Docs: [formát kódu](formatting-python-code.md)
-- Docs: [refaktoring kódu](refactoring-python-code.md)
-- Dokumentace: [použití linter](linting-python-code.md)
-- Obecné dokumentace k funkcím sady Visual Studio: [funkce editoru kódu](../ide/writing-code-in-the-code-and-text-editor.md)
+- Dokumentace: [úpravy kódu v Pythonu](editing-python-code-in-visual-studio.md)
+- Dokumentace: [formátování kódu](formatting-python-code.md)
+- Dokumentace: [Refaktorování kódu](refactoring-python-code.md)
+- Dokumentace: [použít linter](linting-python-code.md)
+- Visual Studio – Obecné funkce dokumentace: [funkce editoru kódu](../ide/writing-code-in-the-code-and-text-editor.md)
 
 ## <a name="interactive-window"></a>Interaktivní okno
 
-Pro každé prostředí Pythonu, které je známo v sadě Visual Studio, můžete snadno otevřít stejné interaktivní prostředí (REPL) pro interpret Pythonu přímo v sadě Visual Studio namísto použití samostatného příkazového řádku. Můžete snadno přepínat mezi prostředími i. (Pokud chcete otevřít samostatný příkazový řádek, vyberte požadované prostředí v okně **prostředí Pythonu** a potom vyberte příkaz **otevřít v prostředí PowerShell** , jak je vysvětleno dříve v části [Podpora pro více překladačů](#support-for-multiple-interpreters).)
+Pro všechna prostředí Pythonu, známé sady Visual Studio můžete jednoduše otevřít stejné interaktivního prostředí (REPL) pro interpret Pythonu přímo v rámci sady Visual Studio, spíš než samostatném příkazovém řádku. Můžete snadno přepínat mezi prostředími také. (Otevřete samostatném příkazovém řádku, vyberte požadované prostředí v **prostředí Pythonu** okna, vyberte **otevřít v PowerShell** příkaz, jak je vysvětleno výše v části [podpory u více interpretů](#support-for-multiple-interpreters).)
 
-![Interaktivní okno Pythonu v aplikaci Visual Studio](media/interactive-window.png)
+![Interaktivní okno Pythonu v sadě Visual Studio](media/interactive-window.png)
 
-Visual Studio také poskytuje úzkou integraci mezi editorem kódu Python a **interaktivním** oknem. **Klávesa Ctrl**+**ENTER** klávesová zkratka umožňuje pohodlně odeslat aktuální řádek kódu (nebo blok kódu) v editoru do **interaktivního** okna a pak se přesune na další řádek (nebo blok). **Ctrl**+**ENTER** umožňuje snadno krokovat kód bez nutnosti spustit ladicí program. Můžete také odeslat vybraný kód do **interaktivního** okna se stejnou klávesovou zkratkou a snadno vložit kód z **interaktivního** okna do editoru. Tyto funkce společně umožňují pracovat s podrobnostmi pro segment kódu v **interaktivním** okně a snadno ukládat výsledky do souboru v editoru.
+Visual Studio také nabízí úzkou integraci mezi editor kódu Python a **interaktivní** okna. **Ctrl**+**Enter** klávesové zkratky pohodlně odešle aktuální řádek v editoru kódu (nebo blok kódu) **interaktivní** okno, pak přesune na další řádek (nebo blok). **CTRL**+**Enter** vám umožní snadno procházejte kódem po krocích bez nutnosti spuštění ladicího programu. Můžete také odeslat vybraný kód do **interaktivní** okna se stejnou stisknutí kláves a snadno vložte kód z **interaktivní** okno do editoru. Společně tyto funkce umožňují zjistit podrobnosti pro segment kódu **interaktivní** okno a snadno uložit výsledky do souboru v editoru.
 
-Visual Studio také podporuje IPython/Jupyter v REPL, včetně vložených ploch, .NET a Windows Presentation Foundation (WPF).
+Visual Studio také podporuje IPython/Jupyter v REPL, včetně vložené grafy, .NET a Windows Presentation Foundation (WPF).
 
 Další informace:
 
 - [Interaktivní okno](python-interactive-repl-in-visual-studio.md)
 - [IPython v aplikaci Visual Studio](interactive-repl-ipython.md)
 
-## <a name="project-system-and-project-and-item-templates"></a>Projektový systém a šablony projektů a položek
+## <a name="project-system-and-project-and-item-templates"></a>Systém projektů a šablon projektů a položek
 
 ::: moniker range=">=vs-2019"
 > [!Note]
 > Visual Studio 2019 podporuje otevření složky obsahující kód Pythonu a spuštění tohoto kódu bez vytváření projektů a souborů řešení sady Visual Studio. Další informace najdete v tématu [rychlý Start: otevření a spuštění kódu Pythonu ve složce](quickstart-05-python-visual-studio-open-folder.md). Existují však výhody použití souboru projektu, jak je vysvětleno v této části.
 ::: moniker-end
 
-Visual Studio pomáhá spravovat složitost projektu v průběhu času. *Projekt sady Visual Studio* je mnohem více než struktura složky: obsahuje informace o tom, jak se používají různé soubory a jak spolu vzájemně souvisí. Visual Studio vám pomůže rozlišit kód aplikace, otestovat kód, webové stránky, JavaScript, skripty sestavení atd. a pak povolit funkce vhodné pro soubory. Řešení sady Visual Studio navíc pomáhá spravovat více souvisejících projektů, jako je například projekt Pythonu a projekt C++ rozšíření.
+Visual Studio vám pomůže spravovat složitosti projektu roste v čase. *Projekt sady Visual Studio* je mnohem více než struktura složky: obsahuje informace o tom, jak se používají různé soubory a jak spolu vzájemně souvisí. Visual Studio umožňuje rozlišovat kód aplikace, testování kódu, webové stránky, JavaScript, skripty sestavení a tak dále, které pak povolte funkce odpovídající soubor. Řešení sady Visual Studio navíc umožňuje spravovat několik souvisejících projektů, jako je Python projektu a projekt rozšíření jazyka C++.
 
-![Řešení sady Visual Studio obsahující Python i C++ projekty](media/projects-solution-explorer-two-projects.png)
+![Visual Studio řešení obsahující projekty Python a C++](media/projects-solution-explorer-two-projects.png)
 
-Šablony projektů a položek automatizují proces nastavování různých typů projektů a souborů. ušetříte si tak cenné čas a získáte možnost spravovat komplikované a náchylnější podrobnosti k chybám. Visual Studio poskytuje šablony pro web, Azure, datové vědy, konzoly a další typy projektů, spolu se šablonami pro soubory, jako jsou třídy Pythonu, testování částí, Webová konfigurace Azure, HTML a dokonce i aplikace Django.
+Šablony projektů a položek automatizaci procesu nastavení různé typy projektů a souborů, šetří cenný čas a homogenního vám od správy podrobnosti složité a náchylné k chybě. Visual Studio poskytuje šablony pro web, Azure, datové vědy, konzoly a jiné typy projektů, spolu s šablony pro soubory, jako třídy, testy jednotek, konfigurace Azure web, HTML a dokonce i aplikace Django Python.
 
-[šablony projektů a položek ![Pythonu v aplikaci Visual Studio](media/project-and-item-templates.png)](media/project-and-item-templates.png#lightbox)
+[![Šablony projektů a položek Python v sadě Visual Studio](media/project-and-item-templates.png)](media/project-and-item-templates.png#lightbox)
 
 Další informace:
 
-- Dokumenty: [Správa projektů v Pythonu](managing-python-projects-in-visual-studio.md)
-- Docs: [Referenční dokumentace šablon položek](python-item-templates.md)
-- Dokumentace: [šablony projektů v Pythonu](managing-python-projects-in-visual-studio.md#project-templates)
-- Dokumentace: [práce s C++ a Python](working-with-c-cpp-python-in-visual-studio.md)
-- Obecné dokumentace k funkcím sady Visual Studio: [šablony projektů a položek](../ide/creating-project-and-item-templates.md#visual-studio-templates)
-- Obecné dokumentace k funkcím sady Visual Studio: [řešení a projekty v aplikaci Visual Studio](../ide/solutions-and-projects-in-visual-studio.md)
+- Dokumentace: [projektů v Pythonu spravovat](managing-python-projects-in-visual-studio.md)
+- Dokumentace: [položky referenční dokumentace k šablonám](python-item-templates.md)
+- Dokumentace: [šablony projektu Pythonu](managing-python-projects-in-visual-studio.md#project-templates)
+- Dokumentace: [pracovat s C++ a Python](working-with-c-cpp-python-in-visual-studio.md)
+- Visual Studio – Obecné funkce dokumentace: [šablony projektů a položek](../ide/creating-project-and-item-templates.md#visual-studio-templates)
+- Visual Studio – Obecné funkce dokumentace: [řešení a projekty v sadě Visual Studio](../ide/solutions-and-projects-in-visual-studio.md)
 
-## <a name="full-featured-debugging"></a>Plně funkční ladění
+## <a name="full-featured-debugging"></a>Plně vybavené ladění
 
-Jedním z možností sady Visual Studio je výkonný ladicí program. Pro Python zejména Visual Studio zahrnuje ladění Python/C++ Mixed-Mode, vzdálené ladění v systému Linux, ladění v **interaktivním** okně a ladění testů jednotek Pythonu.
+Jednou z Visual Studio předností je jeho výkonný ladicí program. Pro jazyk Python, Visual Studio zahrnuje zejména Python/C++ ve smíšeném režimu ladění, vzdálené ladění na Linuxu, ladění v rámci **interaktivní** okno a ladění testů jednotek v Pythonu.
 
-![Ladicí program sady Visual Studio pro Python zobrazující výjimku v překryvném okně](media/debugging-exception-popup.png)
+![Ladicí program sady Visual Studio pro Python k výjimce automaticky otevírané okno zobrazující](media/debugging-exception-popup.png)
 
 ::: moniker range=">=vs-2019"
 V aplikaci Visual Studio 2019 můžete spustit a ladit kód bez použití souboru projektu sady Visual Studio. Příklad najdete [v tématu rychlý Start: otevření a spuštění kódu Pythonu ve složce](quickstart-05-python-visual-studio-open-folder.md) .
@@ -127,31 +127,31 @@ V aplikaci Visual Studio 2019 můžete spustit a ladit kód bez použití soubor
 Další informace:
 
 - Dokumentace: [ladění Pythonu](debugging-python-in-visual-studio.md)
-- Dokumentace: [ladění Pythonu/C++ smíšeného režimu](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)
-- Dokumentace: [vzdálené ladění v systému Linux](debugging-python-code-on-remote-linux-machines.md)
-- Obecné dokumentace k funkcím sady Visual Studio: [prohlídka funkcí ladicího programu sady Visual Studio](../debugger/debugger-feature-tour.md)
+- Dokumentace: [ladění ve smíšeném režimu Python/C++](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)
+- Dokumentace: [vzdáleného ladění na Linuxu](debugging-python-code-on-remote-linux-machines.md)
+- Visual Studio – Obecné funkce dokumentace: [funkce tour ladicího programu sady Visual Studio](../debugger/debugger-feature-tour.md)
 
-## <a name="profiling-tools-with-comprehensive-reporting"></a>Nástroje pro profilaci s komplexními vytvářením sestav
+## <a name="profiling-tools-with-comprehensive-reporting"></a>Nástroje pro profilaci s komplexní vykazování
 
-Profilace se zabývá tím, jak je čas strávený ve vaší aplikaci. Visual Studio podporuje profilaci s Překladači založenými na CPython a nabízí možnost porovnat výkon mezi různými běhy profilace.
+Profilace zkoumá, jak je právě doba trvání v rámci vaší aplikace. Visual Studio podporuje profilace se na základě CPython interprety a nabízí možnost k porovnání výkonu mezi během různých spuštění profilování.
 
-[![výsledků profileru sady Visual Studio pro projekt v Pythonu](media/profiling-results.png)](media/profiling-results.png#lightbox)
+[![Visual Studio profiler výsledy projektu Pythonu](media/profiling-results.png)](media/profiling-results.png#lightbox)
 
 Další informace:
 
-- Dokumentace: [Nástroje pro profilaci Pythonu](profiling-python-code-in-visual-studio.md)
-- Obecné dokumentace k funkcím sady Visual Studio: [prohlídka funkcí profilace](../profiling/profiling-feature-tour.md). (Ne všechny funkce profilování sady Visual Studio jsou k dispozici pro Python).
+- Dokumentace: [Python nástroje pro profilaci](profiling-python-code-in-visual-studio.md)
+- Visual Studio – Obecné funkce dokumentace: [Průvodce funkcí profilování](../profiling/profiling-feature-tour.md). (Ne všechny funkce pro profilaci sady Visual Studio jsou k dispozici pro Python).
 
 ## <a name="unit-testing-tools"></a>Nástroje testování částí
 
-Můžete zjišťovat, spouštět a spravovat testy v **Průzkumníku testů**sady Visual Studio a snadno ladit testy jednotek.
+Zjišťování, spouštět a spravovat testy v sadě Visual Studio **Průzkumník testů**a snadno ladit testy jednotek.
 
-![Ladění testu jednotek Pythonu v aplikaci Visual Studio](media/unit-test-debugging.png)
+![Ladění test jednotky Pythonu v sadě Visual Studio](media/unit-test-debugging.png)
 
 Další informace:
 
-- Dokumentace: [Nástroje testování částí pro Python](unit-testing-python-in-visual-studio.md)
-- Obecné dokumentace k funkcím sady Visual Studio: [testování částí kódu](../test/unit-test-your-code.md).
+- Dokumentace: [testování nástroje pro Python](unit-testing-python-in-visual-studio.md)
+- Visual Studio – Obecné funkce dokumentace: [testování částí kódu](../test/unit-test-your-code.md).
 
 ## <a name="azure-sdk-for-python"></a>Azure SDK pro Python
 
@@ -163,139 +163,139 @@ Další informace najdete v tématu [sada Azure SDK pro Python](/azure/python/) 
 
 **Otázka. je podpora Pythonu k dispozici v Visual Studio pro Mac?**
 
-určitého. V tuto chvíli ne, ale můžete si hlasovat o žádosti na [komunitě vývojářů](https://developercommunity.visualstudio.com/content/idea/351820/python-tools-for-visual-studio-mac.html). V dokumentaci [Visual Studio pro Mac](/visualstudio/mac/) se identifikují aktuální typy vývoje, které podporuje. Mezitím Visual Studio Code v systémech Windows, Mac a Linux [dobře funguje s Pythonem prostřednictvím dostupných rozšíření](https://code.visualstudio.com/docs/languages/python).
+A. Není v tuto chvíli ale žádost až můžete hlasovat o [komunity vývojářů](https://developercommunity.visualstudio.com/content/idea/351820/python-tools-for-visual-studio-mac.html). [Visual Studio for Mac](/visualstudio/mac/) dokumentaci identifikuje aktuální typy vývoje, který podporuje. Do té doby, Visual Studio Code ve Windows, Mac a Linux [dobře funguje pro Python prostřednictvím rozšíření k dispozici](https://code.visualstudio.com/docs/languages/python).
 
 **Otázka. co můžu použít k sestavení uživatelského rozhraní pomocí Pythonu?**
 
-určitého. Hlavní nabídka v této oblasti je [projekt QT](https://www.qt.io/qt-for-application-development/)s vazbami pro Python označované jako [PySide (oficiální vazba)](https://wiki.qt.io/PySide) (viz také [soubory PySide ke stažení](https://download.qt.io/official_releases/pyside/.)) a [PyQt](https://wiki.python.org/moin/PyQt). V současné době podpora Pythonu v aplikaci Visual Studio nezahrnuje žádné konkrétní nástroje pro vývoj uživatelského rozhraní.
+A. Hlavní nabídka v této oblasti je [Qt projektu](https://www.qt.io/qt-for-application-development/), s vazbami pro Python, označované jako [PySide (oficiální vazby)](https://wiki.qt.io/PySide) (také naleznete v tématu [PySide stáhne](https://download.qt.io/official_releases/pyside/.)) a [ PyQt](https://wiki.python.org/moin/PyQt). V současné době podpora Pythonu v sadě Visual Studio neobsahuje žádné konkrétní nástroje pro vývoj uživatelského rozhraní.
 
 **Otázka. může projekt Pythonu vytvořit samostatný spustitelný soubor?**
 
-určitého. Python je obecně interpretovaný jazyk, se kterým se kód spouští na vyžádání v vhodném prostředí podporujícím Python, jako je například sada Visual Studio a webové servery. Visual Studio sám o sobě neposkytuje způsob vytvoření samostatného spustitelného souboru, který v podstatě znamená program s vloženým překladačem Pythonu. Komunita Pythonu však dodala různé způsoby vytváření spustitelných souborů, jak je popsáno v [StackOverflow](https://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency). CPython podporuje také vkládání do nativní aplikace, jak je popsáno v blogovém příspěvku [pomocí souboru ZIP](https://devblogs.microsoft.com/python/cpython-embeddable-zip-file/)s možnou vloženou do CPython.
+A. Python je obecně interpretovaný jazyk, se kterým je kód spuštěn na vyžádání v vhodné podporující Python prostředí, jako je Visual Studio a webové servery. Samotné sady Visual Studio v současné době neposkytuje způsob, jak vytvořit samostatný spustitelný soubor, který v podstatě znamená, že program s vložený interpret Pythonu. Python komunity, však poskytnuty jiný způsob, jak vytvořit spustitelné soubory, jak je popsáno v [StackOverflow](https://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency). CPython také podporuje se vložený do nativní aplikace, jak je popsáno v blogovém příspěvku [soubor zip Vložitelný pomocí CPython](https://devblogs.microsoft.com/python/cpython-embeddable-zip-file/).
 
 ::: moniker range="<=vs-2017"
 
-## <a name="feature-support"></a>Podpora funkcí
+## <a name="feature-support"></a>Podpora funkce
 
-Funkce Pythonu lze nainstalovat v následujících edicích sady Visual Studio, jak je popsáno v [instalační příručce](installing-python-support-in-visual-studio.md):
+Funkce Pythonu můžete nainstalovat v následujících edicích sady Visual Studio, jak je popsáno v [Průvodce instalací](installing-python-support-in-visual-studio.md):
 
 - [Visual Studio 2019 (všechny edice)](https://visualstudio.microsoft.com/vs/)
 - Visual Studio 2017 (všechny edice)
 - Visual Studio 2015 (všechny edice)
-- Edice Visual Studio 2013 Community
-- Visual Studio 2013 Express pro web, aktualizace 2 nebo vyšší
-- Visual Studio 2013 Express pro stolní počítače, aktualizace 2 nebo vyšší
-- Visual Studio 2013 (verze pro nebo vyšší)
-- Visual Studio 2012 (verze pro nebo vyšší)
-- Visual Studio 2010 SP1 (verze pro nebo vyšší; vyžaduje se .NET 4,5)
+- Visual Studio 2013 Community Edition
+- Visual Studio Express 2013 for Web, s aktualizací Update 2 nebo vyšší
+- Visual Studio 2013 Express for Desktop, s aktualizací Update 2 nebo vyšší
+- Visual Studio 2013 (verze Pro vydání nebo novější)
+- Visual Studio 2012 (Pro edice nebo vyšší)
+- Visual Studio 2010 SP1 (edice Pro nebo vyšší; vyžaduje .NET 4.5)
 
-Visual Studio 2015 a starší jsou k dispozici na adrese [VisualStudio.Microsoft.com/vs/Older-downloads/](https://visualstudio.microsoft.com/vs/older-downloads/).
+Jsou k dispozici v sadě Visual Studio 2015 a starší [visualstudio.microsoft.com/vs/older-downloads/](https://visualstudio.microsoft.com/vs/older-downloads/).
 
 > [!Important]
-> Funkce jsou plně podporované a udržované jenom pro nejnovější verzi sady Visual Studio. Funkce jsou k dispozici ve starších verzích, ale nejsou aktivně spravovány.
+> Funkce jsou plně podporované a udržovat jenom nejnovější verze sady Visual Studio. Funkce jsou k dispozici ve starších verzích ale nejsou aktivně spravovány.
 
-|          Podpora Pythonu          |   2017 +   |   2015   | 2013 komunikace | 2013 Desktop | Web 2013 | 2013 pro + | 2012 pro + | 2010 SP1 pro + |
+|          Podpora jazyka Python          |   2017+   |   2015   | Potvrd 2013 | 2013 desktop | 2013 web | Pro 2013 + | 2012 pro + | 2010 SP1 Pro + |
 |----------------------------------|----------|----------|-----------|--------------|----------|-----------|-----------|---------------|
-|   Správa více překladačů   | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-| Automatické zjišťování oblíbených překladačů | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-|     Přidat vlastní překladače      | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+|   Správa více interprety   | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+| Automatické rozpoznání oblíbených interprety | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+|     Přidat vlastní interprety      | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 |       Virtuální prostředí       | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-|         PIP/Snadná instalace         | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+|         PIP a snadná instalace         | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 
 <br/>
 
-|         Systém projektu         |   2017 +   |   2015   | 2013 komunikace | 2013 Desktop | Web 2013 | 2013 pro + |      2012 pro +       | 2010 SP1 pro + |
+|         Systém projektu         |   2017+   |   2015   | Potvrd 2013 | 2013 desktop | 2013 web | Pro 2013 + |      2012 pro +       | 2010 SP1 Pro + |
 |--------------------------------|----------|----------|-----------|--------------|----------|-----------|----------------------|---------------|
 | Nový projekt z existujícího kódu | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  |       &#10004;       |   &#10004;    |
 |         Zobrazit všechny soubory         | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  |       &#10004;       |   &#10004;    |
-|         Správa zdrojového kódu         | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  |       &#10004;       |   &#10004;    |
-|        Integrace Gitu         | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;<sup>první</sup> |   &#10007;    |
+|         Správy zdrojového kódu         | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  |       &#10004;       |   &#10004;    |
+|        Integrace Gitu         | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;<sup>1</sup> |   &#10007;    |
 
 <br/>
 
-|           Úprava            |   2017 +   |   2015   | 2013 komunikace | 2013 Desktop | Web 2013 | 2013 pro + | 2012 pro + | 2010 SP1 pro + |
+|           Úpravy            |   2017+   |   2015   | Potvrd 2013 | 2013 desktop | 2013 web | Pro 2013 + | 2012 pro + | 2010 SP1 Pro + |
 |------------------------------|----------|----------|-----------|--------------|----------|-----------|-----------|---------------|
-|     zvýrazňování syntaxe      | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+|     Zvýrazňování syntaxe      | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 |        Automatické dokončování         | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-|        Podpis – Help        | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+|        Nápověda k podpisu        | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 |          Rychlé informace          | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-|  Prohlížeč objektů/zobrazení tříd   | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+|  Zobrazení třídy a prohlížeče objektů   | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 |        Navigační panel        | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 |       Přejít k definici       | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-|         Přejít na          | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+|         Přejděte ke klíči          | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 |     Najít všechny odkazy      | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 |       Automatické odsazení       | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 |       Formátování kódu        | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-|      Refaktoring – přejmenování       | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-|  Refaktor-Extract – metoda   | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-| Refaktorovat – přidat nebo odebrat import | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-|            PyLint            | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+|      Refaktorovat – přejmenovat       | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+|  Refaktorovat – extrahování metody   | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+| Refaktorovat – přidání nebo odebrání importu | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+|            Pylintu            | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 
 <br/>
 
-|     Interaktivní okno     |   2017 +   |   2015   | 2013 komunikace | 2013 Desktop | Web 2013 | 2013 pro + | 2012 pro + | 2010 SP1 pro + |
+|     Interaktivní okno     |   2017+   |   2015   | Potvrd 2013 | 2013 desktop | 2013 web | Pro 2013 + | 2012 pro + | 2010 SP1 Pro + |
 |----------------------------|----------|----------|-----------|--------------|----------|-----------|-----------|---------------|
 |     Interaktivní okno     | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-| IPython s vloženými grafy | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+| IPython vložené grafů | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 
 <br/>
 
-|               Aplikace klasické pracovní plochy               |   2017 +   |   2015   | 2013 komunikace | 2013 Desktop | Web 2013 | 2013 pro + | 2012 pro + | 2010 SP1 pro + |
+|               Desktop               |   2017+   |   2015   | Potvrd 2013 | 2013 desktop | 2013 web | Pro 2013 + | 2012 pro + | 2010 SP1 Pro + |
 |-------------------------------------|----------|----------|-----------|--------------|----------|-----------|-----------|---------------|
-|     Konzola/aplikace systému Windows     | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-| Ironpythonu WPF (s návrhářem XAML) | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-|      Ironpythonu model Windows Forms       | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+|     Aplikace konzoly/Windows     | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+| WPF v Ironpythonu (pomocí návrháře XAML) | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+|      IronPython Windows Forms       | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 
 <br/>
 
-|         Web         |   2017 +   |   2015   | 2013 komunikace | 2013 Desktop | Web 2013 | 2013 pro + | 2012 pro + | 2010 SP1 pro + |
+|         Web         |   2017+   |   2015   | Potvrd 2013 | 2013 desktop | 2013 web | Pro 2013 + | 2012 pro + | 2010 SP1 Pro + |
 |---------------------|----------|----------|-----------|--------------|----------|-----------|-----------|---------------|
-| Webový projekt v Django  | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-| Webový projekt na láhev  | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
-|  Webový projekt v baňce  | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+| Webový projekt Django  | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+| Bottle webového projektu  | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+|  Webový projekt Flask  | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 | Obecný webový projekt | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 
 <br/>
 
-|         Azure          |   2017 +   |   2015   | 2013 komunikace | 2013 Desktop |       Web 2013       |      2013 pro +       |      2012 pro +       |    2010 SP1 pro +     |
+|         Azure          |   2017+   |   2015   | Potvrd 2013 | 2013 desktop |       2013 web       |      Pro 2013 +       |      2012 pro +       |    2010 SP1 Pro +     |
 |------------------------|----------|----------|-----------|--------------|----------------------|----------------------|----------------------|----------------------|
-|   Nasadit na web   | &#10004; | &#10004; | &#10004;  |   &#10007;   |       &#10004;       |       &#10004;       |       &#10004;       | &#10004;<sup>odst</sup> |
-|   Nasadit do webové role   | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>1</sup> |       &#10007;       |
-| Nasadit do role pracovního procesu  |    ?     |    ?     |     ?     |   &#10007;   | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>1</sup> |       &#10007;       |
-| Spustit v emulátoru Azure  |    ?     |    ?     |     ?     |   &#10007;   | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>1</sup> |       &#10007;       |
+|   Nasazení na web   | &#10004; | &#10004; | &#10004;  |   &#10007;   |       &#10004;       |       &#10004;       |       &#10004;       | &#10004;<sup>2</sup> |
+|   Nasazení do webové role   | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>3</sup> |       &#10007;       |
+| Nasazení do role pracovního procesu  |    ?     |    ?     |     ?     |   &#10007;   | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>3</sup> |       &#10007;       |
+| Spustit v emulátoru Azure  |    ?     |    ?     |     ?     |   &#10007;   | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>3</sup> |       &#10007;       |
 |    Vzdálené ladění    | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>6</sup> | &#10004;<sup>8</sup> | &#10004;<sup>8</sup> |       &#10007;       |
-| Připojit Průzkumník serveru | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>čl</sup> | &#10004;<sup>čl</sup> |       &#10007;       |       &#10007;       |
+| Připojení Průzkumníka serveru | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>7</sup> | &#10004;<sup>7</sup> |       &#10007;       |       &#10007;       |
 
 <br/>
 
-|           Šablony Django           |   2017 +   |   2015   | 2013 komunikace | 2013 Desktop |       Web 2013       |      2013 pro +       | 2012 pro + | 2010 SP1 pro + |
+|           Šablony Django           |   2017+   |   2015   | Potvrd 2013 | 2013 desktop |       2013 web       |      Pro 2013 +       | 2012 pro + | 2010 SP1 Pro + |
 |--------------------------------------|----------|----------|-----------|--------------|----------------------|----------------------|-----------|---------------|
 |              Ladění               | &#10004; | &#10004; | &#10004;  |   &#10007;   |       &#10004;       |       &#10004;       | &#10004;  |   &#10004;    |
-|            Automatické dokončování             | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>čl</sup> | &#10004;<sup>čl</sup> | &#10004;  |   &#10004;    |
-| Automatické dokončování pro CSS a JavaScript | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>čl</sup> | &#10004;<sup>čl</sup> | &#10007;  |   &#10007;    |
+|            Automatické dokončování             | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>5</sup> | &#10004;<sup>5</sup> | &#10004;  |   &#10004;    |
+| Automatické dokončování pro šablony stylů CSS a JavaScript | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>5</sup> | &#10004;<sup>5</sup> | &#10007;  |   &#10007;    |
 
 <br/>
 
-|                  Ladění                  |   2017 +   |   2015   | 2013 komunikace | 2013 Desktop | Web 2013 | 2013 pro + | 2012 pro + | 2010 SP1 pro + |
+|                  Ladění                  |   2017+   |   2015   | Potvrd 2013 | 2013 desktop | 2013 web | Pro 2013 + | 2012 pro + | 2010 SP1 Pro + |
 |---------------------------------------------|----------|----------|-----------|--------------|----------|-----------|-----------|---------------|
 |                  Ladění                  | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 |         Ladění bez projektu         | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 |        Ladění – připojení k úpravám        | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10007; | &#10004;  | &#10004;  |   &#10004;    |
 |            Ladění ve smíšeném režimu             | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10007;    |
 | Vzdálené ladění (Windows, Mac OS X, Linux) | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10007; | &#10004;  | &#10004;  |   &#10004;    |
-|          Ladit interaktivní okno           | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
+|          Interaktivní okno ladění           | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 
 <br/>
 
 <a name="matrix-profiling"></a>
 
-| Profilace |   2017 +   |   2015   | 2013 komunikace | 2013 Desktop | Web 2013 | 2013 pro + | 2012 pro + | 2010 SP1 pro + |
+| Profilace |   2017+   |   2015   | Potvrd 2013 | 2013 desktop | 2013 web | Pro 2013 + | 2012 pro + | 2010 SP1 Pro + |
 |-----------|----------|----------|-----------|--------------|----------|-----------|-----------|---------------|
 | Profilace | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10007; | &#10004;  | &#10004;  |   &#10004;    |
 
 <br/>
 
-|     Test      |   2017 +   |   2015   | 2013 komunikace | 2013 Desktop | Web 2013 | 2013 pro + | 2012 pro + | 2010 SP1 pro + |
+|     Test      |   2017+   |   2015   | Potvrd 2013 | 2013 desktop | 2013 web | Pro 2013 + | 2012 pro + | 2010 SP1 Pro + |
 |---------------|----------|----------|-----------|--------------|----------|-----------|-----------|---------------|
 | Průzkumník testů | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10007;    |
 |   Spustit test    | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10007;    |
@@ -305,17 +305,17 @@ Visual Studio 2015 a starší jsou k dispozici na adrese [VisualStudio.Microsoft
 
 1. Podpora Gitu pro Visual Studio 2012 je k dispozici v Visual Studio Tools rozšíření pro Git, které jsou k dispozici v [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TFSPowerToolsTeam.VisualStudioToolsforGit).
 
-1. Nasazení na webu Azure vyžaduje [sadu Azure SDK pro .net 2,1 – Visual Studio 2010 SP1](https://go.microsoft.com/fwlink/?LinkId=313855). Novější verze aplikaci Visual Studio 2010 nepodporují.
+1. Nasazení na webu Azure vyžaduje [sady Azure SDK pro .NET 2.1 – Visual Studio 2010 SP1](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VS2010SP1AzurePack.2E2.2E1.appids). Novější verze sady Visual Studio 2010 nepodporují.
 
-1. Podpora pro webovou roli Azure a roli pracovního procesu vyžaduje [sadu Azure SDK pro .net 2,3-VS 2012](https://go.microsoft.com/fwlink/?LinkId=323511) nebo novější.
+1. Podpora pro Azure Web Role a Role pracovního procesu vyžaduje [sady Azure SDK for .NET 2.3 – VS 2012](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs11AzurePack.appids) nebo novější.
 
-1. Podpora pro webovou roli Azure a roli pracovního procesu vyžaduje [sadu Azure SDK pro .net 2,3-VS 2013](https://go.microsoft.com/fwlink/?LinkId=323510) nebo novější.
+1. Podpora pro Azure Web Role a Role pracovního procesu vyžaduje [sady Azure SDK for .NET 2.3 – VS 2013](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs2013AzurePack.appids) nebo novější.
 
-1. Editor šablon Django v Visual Studio 2013 obsahuje některé známé problémy, které jsou vyřešeny instalací aktualizace Update 2.
+1. Editor šablon Django v sadě Visual Studio 2013 obsahuje některé známé problémy, které se vyřeší instalací aktualizace 2.
 
-1. Vyžaduje systém Windows 8 nebo novější. Visual Studio 2013 Express for Web nemá dialog **připojit k procesu** , ale vzdálené ladění webu Azure je stále možné pomocí příkazu **připojit ladicí program (Python)** v **Průzkumník serveru**. Vzdálené ladění vyžaduje [sadu Azure SDK pro .net 2,3-Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=323510) nebo novější.
+1. Vyžaduje systém Windows 8 nebo novější. Visual Studio Express 2013 for Web nemá **připojit k procesu** dialogového okna, ale Azure webového serveru vzdálené ladění je stále možné pomocí **připojit ladicí program (Python)** v příkaz **serveru Průzkumník**. Vzdálené ladění vyžaduje [sady Azure SDK for .NET 2.3 – Visual Studio 2013](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs2013AzurePack.appids) nebo novější.
 
-1. Vyžaduje systém Windows 8 nebo novější. Příkaz **připojit ladicí program (Python)** v **Průzkumník serveru** vyžaduje [sadu Azure SDK pro .NET 2,3-Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=323510) nebo novější.
+1. Vyžaduje systém Windows 8 nebo novější. **Připojit ladicí program (Python)** v příkaz **Průzkumníka serveru** vyžaduje [sady Azure SDK for .NET 2.3 – Visual Studio 2013](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs2013AzurePack.appids) nebo novější.
 
 1. Vyžaduje systém Windows 8 nebo novější.
 ::: moniker-end

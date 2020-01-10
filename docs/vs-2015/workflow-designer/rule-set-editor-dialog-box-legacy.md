@@ -13,17 +13,17 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 83cdd4f549655be524abdd2a4708b316f6747b3e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 8010bbbc38dee980ebe89dc60ccb513379103a26
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302756"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846317"
 ---
 # <a name="rule-set-editor-dialog-box-legacy"></a>Dialogové okno Editor sad pravidel (starší verze)
-Toto téma popisuje, jak používat dialogové okno **editor sad pravidel** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak používat dialogové okno **editor sad pravidel** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
 
- Dialogové okno **editor sad pravidel** se používá k vytváření a úpravám [sady](https://go.microsoft.com/fwlink?LinkID=65019) sad pravidel, které jsou serializovány do souboru. Rules.
+ Dialogové okno **editor sad pravidel** se používá k vytváření a úpravám [sady](https://msdn2.microsoft.com/library/system.workflow.activities.policyactivity.aspx) sad pravidel, které jsou serializovány do souboru. Rules.
 
 > [!NOTE]
 > Chcete-li otevřít soubor. Rules s **editorem XML s kódováním**, je nutné nejprve zavřít přidružené okno návrháře pro pracovní postup nebo aktivitu.
@@ -39,21 +39,21 @@ Toto téma popisuje, jak používat dialogové okno **editor sad pravidel** ve s
 |----------------|-----------------|
 |**Přidat pravidlo**|Přidá do sady pravidel novou definici pravidla.|
 |**Delete**|Odstraní vybrané pravidlo ze sady pravidel.|
-|**Řetězení**|Určuje, který typ předávaného řetězení použít se sadou pravidel. K dispozici jsou tyto možnosti:<br /><br /> -   **úplné řetězení**, které určuje, že se mají použít všechny mechanismy pro dopředné řetězení: implicitní, přidávané metody a explicitní pomocí funkce **Update** .<br />-   **sekvenční**, které určuje, že se nemá používat žádný řetěz dopředné řetězení.<br />-   **pouze explicitní aktualizace**, která určuje, že se má provést pouze předávací řetěz při akcích **aktualizace** .<br /><br /> Další informace o dopřední řetězení najdete v tématu [použití aktivity sady](https://go.microsoft.com/fwlink?LinkID=65004).|
+|**Řetězení**|Určuje, který typ předávaného řetězení použít se sadou pravidel. Dostupné jsou následující možnosti:<br /><br /> -   **úplné řetězení**, které určuje, že se mají použít všechny mechanismy pro dopředné řetězení: implicitní, přidávané metody a explicitní pomocí funkce **Update** .<br />-   **sekvenční**, které určuje, že se nemá používat žádný řetěz dopředné řetězení.<br />-   **pouze explicitní aktualizace**, která určuje, že se má provést pouze předávací řetěz při akcích **aktualizace** .<br /><br /> Další informace o dopřední řetězení najdete v tématu [použití aktivity sady](https://msdn2.microsoft.com/library/bb675229.aspx).|
 |**Jméno**|Záhlaví sloupce seznamu sad pravidel Kliknutím seřadíte seznam pravidel podle názvu.|
-|**Upřednostněn**|Záhlaví sloupce seznamu sad pravidel Kliknutím seřadíte seznam pravidel podle priority.|
+|**Priorita**|Záhlaví sloupce seznamu sad pravidel Kliknutím seřadíte seznam pravidel podle priority.|
 |**Nového vyhodnocení**|Záhlaví sloupce seznamu sad pravidel Kliknutím seřadíte seznam pravidel podle typu opětovného vyhodnocení.|
 |**Náhled pravidla**|Záhlaví sloupce seznamu sad pravidel Kliknutím seřadíte seznam pravidel ve verzi Preview podmínky a akcí pravidla.|
-|**Jméno:**|Zadejte název pravidla.|
+|**Název:**|Zadejte název pravidla.|
 |**Upřednostněn**|Zadejte prioritu pravidla. Výchozí priorita je 0.|
-|**Nového vyhodnocení**|Určuje typ opětovného vyhodnocení pravidla, které se má použít s pravidlem. K dispozici jsou tyto možnosti:<br /><br /> -   **vždy**, což způsobí, že pravidlo bude v případě potřeby znovu vyhodnoceno.<br />-   **nikdy**, což způsobí, že se pravidlo nikdy nevyhodnotí. V takovém případě se pravidlo spustí jenom jednou.|
-|**Aktivně**|Ověřte, že je pravidlo aktivní.|
+|**Nového vyhodnocení**|Určuje typ opětovného vyhodnocení pravidla, které se má použít s pravidlem. Dostupné jsou následující možnosti:<br /><br /> -   **vždy**, což způsobí, že pravidlo bude v případě potřeby znovu vyhodnoceno.<br />-   **nikdy**, což způsobí, že se pravidlo nikdy nevyhodnotí. V takovém případě se pravidlo spustí jenom jednou.|
+|**Aktivní**|Ověřte, že je pravidlo aktivní.|
 |**Pomocné**|Zadejte výraz pro podmínku pravidla. Informace o syntaxi výrazu naleznete v části "zadávání výrazů podmínek a akcí" na této stránce.|
 |**Pak akce:**|Zadejte výraz pro akce. Informace o syntaxi výrazu naleznete v části "zadávání výrazů podmínek a akcí" na této stránce.|
 |**Další akce:**|Zadejte výraz pro akce else. Informace o syntaxi výrazu naleznete v části "zadávání výrazů podmínek a akcí" na této stránce.|
-|**Ok**|Kliknutím uložíte sadu pravidel do souboru. Rules.|
+|**OK**|Kliknutím uložíte sadu pravidel do souboru. Rules.|
 
- Další informace o sadách pravidel najdete v tématu [použití aktivity sady](https://go.microsoft.com/fwlink?LinkID=65004).
+ Další informace o sadách pravidel najdete v tématu [použití aktivity sady](https://msdn2.microsoft.com/library/bb675229.aspx).
 
 ## <a name="entering-condition-and-action-expressions"></a>Zadání výrazů podmínky a akce
  Do příslušných textových polí v dialogovém okně **editor sad pravidel** zadáte výrazy pro podmínky a akce then a else jako text. Tuto možnost můžete zadat **.** do editoru pro odkaz na pole, vlastnosti a metody použité v pracovním postupu pomocí typu nabídky technologie IntelliSense. Případně můžete zadat název člena pracovního postupu přímo. Statické metody lze volat na odkazované typy zadáním názvu třídy následovaného názvem metody.
@@ -88,7 +88,7 @@ Update(this.Address.State)
 Update("this/Address/State")
 ```
 
- Další informace o použití **Update** s dopředné řetězení najdete v tématu [použití aktivity sady](https://go.microsoft.com/fwlink?LinkID=65004).
+ Další informace o použití **Update** s dopředné řetězení najdete v tématu [použití aktivity sady](https://msdn2.microsoft.com/library/bb675229.aspx).
 
 ## <a name="see-also"></a>Viz také
- [Sady](https://go.microsoft.com/fwlink?LinkID=65019) [– dialogové okno vybrat sadu pravidel (starší verze)](../workflow-designer/select-rule-set-dialog-box-legacy.md) [s použitím aktivity sady](https://go.microsoft.com/fwlink?LinkID=65004) [pomocí podmínek v pracovních postupech](https://go.microsoft.com/fwlink?LinkID=65009)
+ [Sady](https://msdn2.microsoft.com/library/system.workflow.activities.policyactivity.aspx) [– dialogové okno vybrat sadu pravidel (starší verze)](../workflow-designer/select-rule-set-dialog-box-legacy.md) [s použitím aktivity sady](https://msdn2.microsoft.com/library/bb675229.aspx) [pomocí podmínek v pracovních postupech](https://msdn2.microsoft.com/library/bb628447.aspx)

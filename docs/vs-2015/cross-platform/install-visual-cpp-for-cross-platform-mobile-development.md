@@ -11,12 +11,12 @@ caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: jillfra
-ms.openlocfilehash: 8046b261021a1147dbf0356c6854968b3d23a1df
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 70f1266581bb633086fa33a28b43e04befc7e6f9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299801"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844327"
 ---
 # <a name="install-visual-c-for-cross-platform-mobile-development"></a>Instalace komponenty Visual C++ for Cross-Platform Mobile Development
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ Vizuál C++ pro vývoj mobilních aplikací pro různé platformy] (https://go.m
  [Nainstalovat nástroje pro iOS](#InstallForiOS)   
  [Ruční instalace nebo aktualizace závislostí](#ThirdParty)  
   
-## <a name="Requirements"></a>Požadavků  
+## <a name="Requirements"></a> Požadavky  
   
 - Požadavky na instalaci najdete v tématu [požadavky na systém pro Visual Studio 2015](https://www.visualstudio.com/visual-studio-2015-system-requirements-vs).  
   
@@ -40,12 +40,12 @@ Vizuál C++ pro vývoj mobilních aplikací pro různé platformy] (https://go.m
   
 - Emulátory Windows Phone a Microsoft Visual Studio Emulator for Android vyžadují počítač, který může spustit technologii Hyper-V. Než budete moct nainstalovat a spustit emulátory, musí být povolená funkce Hyper-V v systému Windows. Další informace najdete v [požadavcích na systém](https://msdn.microsoft.com/4d5bb438-231a-4cd2-84b7-e9660b0e3baf)pro emulátor.  
   
-- Emulátory x86 Androidu dodávané s Android SDK fungují nejlépe na počítačích, na kterých je možné spustit ovladač Intel modul HAXM. Tento ovladač vyžaduje procesor Intel x64 s emulátorem VT-x a vykonání vypnutí bitových podpor. Další informace najdete v tématu [pokyny k instalaci pro Intel® hardware accelerated Execution Manager-Microsoft Windows](https://go.microsoft.com/fwlink/p/?LinkId=536385).  
+- Emulátory x86 Androidu dodávané s Android SDK fungují nejlépe na počítačích, na kterých je možné spustit ovladač Intel modul HAXM. Tento ovladač vyžaduje procesor Intel x64 s emulátorem VT-x a vykonání vypnutí bitových podpor. Další informace najdete v tématu [pokyny k instalaci pro Intel® hardware accelerated Execution Manager-Microsoft Windows](https://github.com/intel/haxm).  
   
 - Vytváření kódu pro iOS vyžaduje Apple ID, účet vývojářského programu pro iOS a počítač Mac, který může běžet [Xcode 6](https://go.microsoft.com/fwlink/p/?LinkId=536387) nebo novější v OS X Mavericks nebo novějších verzích. Postup pro jednoduché instalace najdete v tématu [Instalace nástrojů pro iOS](#InstallForiOS).  
   
 ## <a name="GetTheTools"></a>Získat nástroje  
- Vizuál C++ pro vývoj mobilních aplikací pro různé platformy je instalovatelný součást obsažená v edicích Visual Studio Community, Professional a Enterprise. Chcete-li získat aplikaci Visual Studio, navštivte stránku se [soubory ke stažení pro Visual studio 2015](https://go.microsoft.com/fwlink/p/?linkid=517106) a Stáhněte si visual Studio 2015 s aktualizací Update 2 nebo novější.  
+ Vizuál C++ pro vývoj mobilních aplikací pro různé platformy je instalovatelný součást obsažená v edicích Visual Studio Community, Professional a Enterprise. Chcete-li získat aplikaci Visual Studio, navštivte stránku se [soubory ke stažení pro Visual studio 2015](https://visualstudio.microsoft.com/downloads/) a Stáhněte si visual Studio 2015 s aktualizací Update 2 nebo novější.  
   
 ## <a name="InstallTheTools"></a>Instalace nástrojů  
  Instalační program sady Visual Studio 2015 obsahuje možnost instalace vizuálu C++ pro vývoj mobilních aplikací pro různé platformy. Tím se nainstaluje požadované C++ jazykové nástroje, šablony a součásti pro Visual Studio, sady nástrojů RSZ a Clang, které jsou potřeba pro sestavení a ladění Androidu, a komponenty pro komunikaci s počítačem Mac pro vývoj pro iOS. Nainstaluje taky všechny nástroje a sady pro vývoj softwaru třetích stran, které jsou potřebné k podpoře vývoje aplikací pro iOS a Android. Většina těchto nástrojů třetích stran je open source software vyžadovaný pro podporu platforem Androidu.  
@@ -68,7 +68,7 @@ Vizuál C++ pro vývoj mobilních aplikací pro různé platformy] (https://go.m
   
      Pokud chcete vytvářet univerzální aplikace pro Windows a sdílet kód mezi nimi a projekty pro Android a iOS, v nabídce **Vybrat funkce**rozbalte **Windows a webový vývoj** a zaškrtněte **Nástroje pro vývoj univerzálních aplikací pro Windows**. Pokud neplánujete sestavovat univerzální aplikace pro Windows, můžete tuto možnost přeskočit.  
   
-     Pokračujte kliknutím na tlačítko **Další** .  
+     Pokračujte výběrem položky **Další**.  
   
 3. Komponenty třetích stran mají své vlastní licenční smlouvy. Licenční smlouvu si můžete zobrazit tak, že zvolíte odkaz **licenčních podmínek** vedle každé součásti. Zvolením možnosti **nainstalovat** přidejte komponenty a nainstalujte Visual Studio a Visual C++ Studio pro vývoj mobilních aplikací pro různé platformy.  
   

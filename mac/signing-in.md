@@ -5,18 +5,18 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: E4CFD03C-03AF-48CA-B409-6DB1CA45E991
-ms.openlocfilehash: 96a113e21fe2e2e11da0e156ba9578c632e648ae
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.openlocfilehash: 9a9cf7871684e0951f66e0f20dcf156b3e625b45
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74983653"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844264"
 ---
 # <a name="sign-in-to-visual-studio-for-mac"></a>Přihlášení k Visual Studio pro Mac
 
 Přihlášení k Visual Studio pro Mac je způsob [Aktivace předplatného](enable-subscription.md). Když stahujete Visual Studio pro Mac, vždy ve výchozím nastavení dostanete edici Community. Pokud máte licenci pro [Professional nebo Enterprise](https://visualstudio.microsoft.com/vs/compare/), měli byste se při prvním spuštění přihlásit, abyste mohli odemknout všechny další funkce. Kromě toho získáte také následující:
 
-* **Přístup k Visual Studio Dev Essentials programu** – tento program zahrnuje bezplatné nabídky softwaru, školení, podporu a další. Zobrazit [Visual Studio Dev Essentials](https://aka.ms/vsdevhelp) Další informace.
+* **Přístup k Visual Studio Dev Essentials programu** – tento program zahrnuje bezplatné nabídky softwaru, školení, podporu a další. Zobrazit [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/) Další informace.
 
 * **Automatické připojení k Azure** v prostředí IDE bez opětovného zobrazení výzvy k zadání přihlašovacích údajů pro stejný účet.
 

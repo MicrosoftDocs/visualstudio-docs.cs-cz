@@ -14,17 +14,17 @@ caps.latest.revision: 57
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 51cb71d4bc2f66377b677d5be292c4eafa1dbd18
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 21376668eef88d3d8ce42ff73785b972be045cb2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299466"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850636"
 ---
 # <a name="layer-diagrams-guidelines"></a>Diagramy vrstev: Pokyny
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Popište architekturu vaší aplikace na vysoké úrovni tím, že vytvoříte *diagramy vrstev* v aplikaci Visual Studio. Ujistěte se, že váš kód zůstává v souladu s tímto návrhem ověřováním kódu pomocí diagramu vrstev. Do procesu sestavení můžete také zahrnout ověřování vrstvy. Viz [video o kanálu 9: návrh a ověření architektury pomocí diagramů vrstev](https://go.microsoft.com/fwlink/?LinkID=252073).
+Popište architekturu vaší aplikace na vysoké úrovni tím, že vytvoříte *diagramy vrstev* v aplikaci Visual Studio. Ujistěte se, že váš kód zůstává v souladu s tímto návrhem ověřováním kódu pomocí diagramu vrstev. Do procesu sestavení můžete také zahrnout ověřování vrstvy. Viz [video o kanálu 9: návrh a ověření architektury pomocí diagramů vrstev](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture).
 
  Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -66,7 +66,7 @@ Popište architekturu vaší aplikace na vysoké úrovni tím, že vytvoříte *
 ## <a name="CreateLayers"></a>Definování vrstev pro reprezentaci funkčních oblastí nebo komponent
  Vrstvy reprezentují logické skupiny *artefaktů*, jako jsou projekty, soubory kódu, obory názvů, třídy a metody. Můžete vytvářet vrstvy z artefaktů z projektů Visual C# .net a Visual Basic .NET, nebo můžete k vrstvě připojit specifikace nebo plány propojením dokumentů, jako jsou například soubory aplikace Word nebo prezentace aplikace PowerPoint. Každá vrstva se zobrazí jako obdélník v diagramu a zobrazuje počet artefaktů, které jsou s ním spojeny. Vrstva může obsahovat vnořené vrstvy, které popisují konkrétnější úlohy.
 
- V rámci obecných pokynů, názvy vrstev podle jejich funkce, například "prezentace" nebo "služby". Pokud jsou artefakty úzce závislé, umístěte je do stejné vrstvy. Pokud se artefakty dají aktualizovat samostatně nebo použít v samostatných aplikacích, umístěte je do různých vrstev. Další informace o vzorech vrstvení najdete v části vzory & postupy na webu [http://go.microsoft.com/fwlink/?LinkId=145794](https://go.microsoft.com/fwlink/?LinkId=145794).
+ V rámci obecných pokynů, názvy vrstev podle jejich funkce, například "prezentace" nebo "služby". Pokud jsou artefakty úzce závislé, umístěte je do stejné vrstvy. Pokud se artefakty dají aktualizovat samostatně nebo použít v samostatných aplikacích, umístěte je do různých vrstev. Další informace o vzorech vrstvení najdete v části vzory & postupy na webu [http://go.microsoft.com/fwlink/?LinkId=145794](https://apparch.codeplex.com/Wiki/View.aspx?title=Application Patterns&referringTitle=Home).
 
 > [!TIP]
 > Existují určité typy artefaktů, které lze propojit s vrstvami, ale které nepodporují ověřování proti diagramu vrstev. Chcete-li zjistit, zda artefakt podporuje ověřování, otevřete **Průzkumníka vrstev** a prověřte vlastnost **podporuje ověření** odkazu artefaktu. Viz [zjišťování existujících závislostí mezi vrstvami](#Generate).
@@ -96,7 +96,7 @@ Popište architekturu vaší aplikace na vysoké úrovni tím, že vytvoříte *
 ## <a name="EditArchitecture"></a>Úprava vrstev a závislostí pro zobrazení zamýšleného návrhu
  Chcete-li popsat změny, které plánujete udělat v systému nebo zamýšlené architektuře, použijte následující postup k úpravě diagramu vrstev. Můžete také zvážit provedení některých změn refaktoringu pro zlepšení struktury kódu před jeho rozšířením. Viz [vylepšení struktury kódu](#Improving).
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Komu**|**Proveďte tyto kroky**|
 |------------|-----------------------------|
 |Odstranit závislost, která neexistuje|Klikněte na závislost a potom stiskněte **Delete**.|
 |Změna nebo omezení směru závislosti|Nastavte vlastnost **Direction** .|
@@ -115,7 +115,7 @@ Popište architekturu vaší aplikace na vysoké úrovni tím, že vytvoříte *
 ## <a name="NewAreas"></a>Návrh nových oblastí aplikace
  Při zahájení vývoje nového projektu nebo nové oblasti v novém projektu lze nakreslit vrstvy a závislosti, které vám pomohou identifikovat hlavní komponenty před začátkem vývoje kódu.
 
-- Pokud je to možné, zobrazí se v diagramech vrstev **identifikovatelné modely architektury** . Například Diagram vrstev, který popisuje desktopovou aplikaci, může obsahovat vrstvy, jako je například prezentace, doménová logika a úložiště dat. Diagram vrstev, který pokrývá jednu funkci v rámci aplikace, může mít vrstvy, jako je model, zobrazení a kontroler. Další informace o těchto vzorech najdete v tématu [vzory & postupy: Architektura aplikace](https://go.microsoft.com/fwlink/?LinkId=145794).
+- Pokud je to možné, zobrazí se v diagramech vrstev **identifikovatelné modely architektury** . Například Diagram vrstev, který popisuje desktopovou aplikaci, může obsahovat vrstvy, jako je například prezentace, doménová logika a úložiště dat. Diagram vrstev, který pokrývá jednu funkci v rámci aplikace, může mít vrstvy, jako je model, zobrazení a kontroler. Další informace o těchto vzorech najdete v tématu [vzory & postupy: Architektura aplikace](https://apparch.codeplex.com/Wiki/View.aspx?title=Application Patterns&referringTitle=Home).
 
      Pokud často vytváříte podobné vzory, vytvořte si vlastní nástroj. Viz [definice vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md).
 

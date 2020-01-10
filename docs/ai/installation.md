@@ -9,14 +9,14 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: fb296346d54b0774bdd9a738581ee28fe99b1de0
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: 54239b49344a5e29e7f837d22840f997c4b9fbe2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777474"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845072"
 ---
-# <a name="installation"></a>Instalace
+# <a name="installation"></a>Instalace služby
 
 Visual Studio Tools for AI lze nainstalovat na 64bitové operační systémy 64 Windows.
 
@@ -24,9 +24,9 @@ Visual Studio Tools for AI lze nainstalovat na 64bitové operační systémy 64 
 
 Toto rozšíření spolupracuje s Visual Studiem 2015 a sadou Visual Studio 2017, Community Edition nebo vyšší.
 
-Nástroje si můžete stáhnout z [Visual Studio Marketplace](https://aka.ms/vstoolsforai)nebo z aplikace Visual Studio:
+Nástroje si můžete stáhnout z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vstoolsai-vs2017)nebo z aplikace Visual Studio:
 
-1. Vyberte **nástroje**  > **rozšíření a aktualizace**.
+1. Vyberte **nástroje** > **rozšíření a aktualizace**.
 
    ![Nabídka rozšíření a aktualizace v aplikaci Visual Studio](media/installation/extensions.png)
 
@@ -66,7 +66,7 @@ Instalace cuDNN:
 
 - Navštivte [vývojáře NVIDIA](https://developer.nvidia.com/rdp/cudnn-download) a stáhněte a nainstalujte si nejnovější balíček.
 - Zajistěte Přidání adresáře obsahujícího binární soubor cuDNN do proměnné prostředí% PATH% nebo $Path.
-- V systému Windows můžete zkopírovat cudnn64_6. dll do složky C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin.
+- Ve Windows můžete zkopírovat cudnn64_6. dll do složky C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin.
 
 > [!NOTE]
 > Předchozí architektury hloubkového učení, jako jsou CNTK 2,0 a TensorFlow 1.2.1, potřebují cuDNN v 5.1. Můžete však nainstalovat více verzí cuDNN dohromady.
@@ -82,7 +82,7 @@ Python byl primárním programovacím jazykem pro aplikace s hloubkovým učení
 
 Architektury hloubkového učení využívají PIP pro vlastní instalaci.
 
-![Instalace Pythonu ve Windows](media/installation/install_python_win.png)
+![Nainstalovat Python ve Windows](media/installation/install_python_win.png)
 
 Pak musíme ověřit, jestli je Python 3,5 nainstalovaný správně, a upgradovat PIP na nejnovější verzi spuštěním následujících příkazů v terminálu:
 
@@ -237,7 +237,7 @@ Nakonec nainstalujte torchvision na jiný systém než Windows:
 pip3.5 install torchvision
 ```
 
-### <a name="chainer"></a>chainer
+### <a name="chainer"></a>Chainer
 
 [Chainer](https://chainer.org/) je architektura pro hloubkové učení založená na Pythonu, která je zaměřená na flexibilitu. Poskytuje Automatická rozlišení rozhraní API na základě definice přístupu definovaného po spuštění (označované také jako dynamické výpočetní grafy), stejně jako rozhraní API na vysoké úrovni pro vytváření a výukové neuronové sítě.
 

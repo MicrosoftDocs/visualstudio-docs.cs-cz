@@ -9,12 +9,12 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 16a51c7fc05d51b551884f70dc514e8939962818
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: c676c57d6e6e6008611133235df8d525752f16b5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296035"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849506"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>Referenční dokumentace jazyka přímého značení grafů (DGML)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
  Všimněte si, že některé verze sady Visual Studio podporují pouze podmnožinu funkcí DGML, viz [podpora verzí pro architektury a nástroje pro modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 > [!NOTE]
-> Při úpravách souboru .dgml usnadňuje technologie IntelliSense určení atributů, které jsou k dispozici pro každý prvek, a jejich hodnot. Pro určení barvy v atributu použijte názvy pro běžné barvy, například „Blue“ (modrá) nebo šestnáctkové hodnoty ARGB, jako je například „#ffa0b1c3“. Jazyk DGML používá malou podmnožinu formátů definice barev Windows Presentation Foundation (WPF). Další informace naleznete v tématu [Třída Colors](https://go.microsoft.com/fwlink/?LinkId=182345).
+> Při úpravách souboru .dgml usnadňuje technologie IntelliSense určení atributů, které jsou k dispozici pro každý prvek, a jejich hodnot. Pro určení barvy v atributu použijte názvy pro běžné barvy, například „Blue“ (modrá) nebo šestnáctkové hodnoty ARGB, jako je například „#ffa0b1c3“. Jazyk DGML používá malou podmnožinu formátů definice barev Windows Presentation Foundation (WPF). Další informace naleznete v tématu [Třída Colors](https://msdn.microsoft.com/library/system.windows.media.colors.aspx).
 
 ## <a name="DGML"></a>Syntaxe DGML
  Následující tabulka popisuje typy prvků, které jsou používány v DGML:
@@ -98,7 +98,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
    `Label` – zobrazovaný název uzlu.
 
-   Atributy stylu. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Atributy stylu. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    `Category` – název kategorie, která identifikuje prvky, které sdílejí tento atribut. Další informace naleznete v tématu `<Category/>` element.
 
@@ -163,7 +163,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
    `Label` – zobrazovaný název odkazu
 
-   Atributy stylu. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Atributy stylu. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    `Category` – název kategorie, která identifikuje prvky, které sdílejí tento atribut. Další informace naleznete v tématu `<Category/>` element.
 
@@ -220,7 +220,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
    V příkladu pro tento prvek kategorie `FailedTest` dědí svůj `Stroke` atribut z kategorie `PassedTest`. Viz "vytvoření hierarchických kategorií" v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
-   Kategorie také poskytují některé základní chování šablony, které řídí vzhled uzlů a propojení, když jsou zobrazeny na mapě. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Kategorie také poskytují některé základní chování šablony, které řídí vzhled uzlů a propojení, když jsou zobrazeny na mapě. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    Příklad:
 

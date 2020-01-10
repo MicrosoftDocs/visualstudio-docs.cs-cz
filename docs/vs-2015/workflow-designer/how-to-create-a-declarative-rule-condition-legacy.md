@@ -13,12 +13,12 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2dc63fc58b22792e566df91bd86cac40e3fd2e65
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0c23fed64d7f3a7681fce96663262f6d633299a9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297486"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849339"
 ---
 # <a name="how-to-create-a-declarative-rule-condition-legacy"></a>Postupy: vytvoření podmínky deklarativního pravidla (starší verze)
 Toto téma popisuje, jak deklarovat podmínku pravidla pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)], která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
@@ -27,17 +27,17 @@ Toto téma popisuje, jak deklarovat podmínku pravidla pomocí starší verze [!
 
  Podmínky deklarativního pravidla se používají v následujících programovací model Windows Workflow Foundationch aktivitách, které se doplňují po box:
 
-- [Aktivitou skupiny ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65017)
+- [ConditionedActivityGroup](https://msdn2.microsoft.com/library/system.workflow.activities.conditionedactivitygroup.aspx)
 
-- [IfElseBranchActivity](https://go.microsoft.com/fwlink?LinkID=65034)
+- [IfElseBranchActivity](https://msdn2.microsoft.com/library/system.workflow.activities.ifelsebranchactivity.aspx)
 
-- [Aktivita ReplicatorActivity](https://go.microsoft.com/fwlink?LinkID=65039)
+- [Aktivita ReplicatorActivity](https://msdn2.microsoft.com/library/system.workflow.activities.replicatoractivity.aspx)
 
-- [Aktivita typu WhileActivity](https://go.microsoft.com/fwlink?LinkID=65049)
+- [Aktivita typu WhileActivity](https://msdn2.microsoft.com/library/system.workflow.activities.whileactivity.aspx)
 
-- [SequentialWorkflowActivity](https://go.microsoft.com/fwlink?LinkID=65040)
+- [SequentialWorkflowActivity](https://msdn2.microsoft.com/library/system.workflow.activities.sequentialworkflowactivity.aspx)
 
-- [StateMachineWorkflowActivity](https://go.microsoft.com/fwlink?LinkID=65045)
+- [StateMachineWorkflowActivity](https://msdn2.microsoft.com/library/system.workflow.activities.statemachineworkflowactivity.aspx)
 
 ### <a name="to-create-a-declarative-rule-condition-using-the-rule-condition-editor"></a>Vytvoření podmínky deklarativního pravidla pomocí editoru podmínek pravidla
 
@@ -64,4 +64,4 @@ Toto téma popisuje, jak deklarovat podmínku pravidla pomocí starší verze [!
      Informace o tom, jak používat dialogové okno **vybrat podmínku** , najdete v části [dialogové okno vybrat podmínku (starší verze)](../workflow-designer/select-condition-dialog-box-legacy.md).
 
 ## <a name="see-also"></a>Viz také
- [Starší aktivity pracovního postupu](../workflow-designer/legacy-workflow-activities.md) [pomocí aktivitou skupiny ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65066) s využitím [aktivity IfElseBranchActivity](https://go.microsoft.com/fwlink?LinkID=65075) pomocí aktivity [replikátoru](https://go.microsoft.com/fwlink?LinkID=65080) , která se používá v dialogovém okně Editor podmínek pro pravidlo [aktivity while](https://go.microsoft.com/fwlink?LinkID=65091) [(starší verze)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) [Vyberte možnost podmínka](../workflow-designer/select-condition-dialog-box-legacy.md) [v pracovních postupech pomocí podmínek](https://go.microsoft.com/fwlink?LinkID=65009)
+ [Starší aktivity pracovního postupu](../workflow-designer/legacy-workflow-activities.md) [pomocí aktivitou skupiny ConditionedActivityGroup](https://msdn2.microsoft.com/library/bb675237.aspx) s využitím [aktivity IfElseBranchActivity](https://msdn2.microsoft.com/library/bb628465.aspx) pomocí aktivity [replikátoru](https://msdn2.microsoft.com/library/bb628544.aspx) , která se používá v dialogovém okně Editor podmínek pro pravidlo [aktivity while](https://msdn2.microsoft.com/library/bb628552.aspx) [(starší verze)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) [Vyberte možnost podmínka](../workflow-designer/select-condition-dialog-box-legacy.md) [v pracovních postupech pomocí podmínek](https://msdn2.microsoft.com/library/bb628447.aspx)

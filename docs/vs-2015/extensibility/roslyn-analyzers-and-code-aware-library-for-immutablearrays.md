@@ -8,12 +8,12 @@ ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 9fbba44ef5ac0e531198b3569008a260118aefcf
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: fd54c5e730f757a0e198ad7cf1d8577e686b9ea9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298377"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845880"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Analyzátory Roslyn a knihovny rozlišující kódy pro řešení ImmutableArrays
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +27,7 @@ K sestavení tohoto příkladu potřebujete následující:
 
 - [Sada Visual Studio SDK](../extensibility/visual-studio-sdk.md). Při instalaci sady Visual Studio můžete také zaškrtnout Visual Studio Extensibility Tools v části společné nástroje pro instalaci sady SDK ve stejnou dobu. Pokud jste již nainstalovali aplikaci Visual Studio, můžete tuto sadu SDK nainstalovat také tak, že v levém navigačním podokně vyberete C#  **&#124; &#124;nový projekt.** Když vyberete šablonu projektu s popisem cesty "**nainstalovat Visual Studio Extensibility Tools**", zobrazí se výzva ke stažení a instalaci sady SDK.
 
-- [.NET Compiler Platform ("Roslyn") SDK](https://aka.ms/roslynsdktemplates). Tuto sadu SDK můžete nainstalovat také tak, že v hlavní nabídce zadáte  **&#124; nový &#124; projekt...** , **C#** vyberete v levém navigačním podokně a pak zvolíte **rozšiřitelnost**. Když vyberete možnost stáhnout šablonu projektu s popisem cesty **.NET COMPILER Platform SDK**, zobrazí se výzva ke stažení a instalaci sady SDK. Tato sada SDK zahrnuje [Roslyn syntax visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer). Tento extrémně užitečný nástroj vám pomůže zjistit, jaké typy modelů kódu byste měli v analyzátoru najít. Infrastruktura analyzátoru volá do vašeho kódu pro konkrétní typy modelu kódu, takže váš kód se v případě potřeby spustí pouze v případě potřeby a může se zaměřit pouze na analýzu relevantního kódu.
+- [.NET Compiler Platform ("Roslyn") SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK). Tuto sadu SDK můžete nainstalovat také tak, že v hlavní nabídce zadáte  **&#124; nový &#124; projekt...** , **C#** vyberete v levém navigačním podokně a pak zvolíte **rozšiřitelnost**. Když vyberete možnost stáhnout šablonu projektu s popisem cesty **.NET COMPILER Platform SDK**, zobrazí se výzva ke stažení a instalaci sady SDK. Tato sada SDK zahrnuje [Roslyn syntax visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer). Tento extrémně užitečný nástroj vám pomůže zjistit, jaké typy modelů kódu byste měli v analyzátoru najít. Infrastruktura analyzátoru volá do vašeho kódu pro konkrétní typy modelu kódu, takže váš kód se v případě potřeby spustí pouze v případě potřeby a může se zaměřit pouze na analýzu relevantního kódu.
 
 ## <a name="whats-the-problem"></a>Jaký je problém?
 Představte si, že zadáváte knihovnu s podporou ImmutableArray (například <xref:System.Collections.Immutable.ImmutableArray%601?displayProperty=fullName>). C#Vývojáři mají spoustu zkušeností s poli .NET. Vzhledem k povaze ImmutableArrays a optimalizačních technik používaných při implementaci však C# vývojář intuitions způsobí, že uživatelé vaší knihovny zapisují poškozený kód, jak je vysvětleno níže. Kromě toho uživatelé nevidí své chyby, dokud neproběhne doba běhu, což není prostředí kvality, které se používá v aplikaci Visual Studio s .NET.
@@ -102,7 +102,7 @@ Aby se analyzátor zobrazil správně v uživatelském rozhraní sady Visual Stu
 internal const string Category = "Naming";
 ```
 
-Změňte `"Naming"` na `"API Guidance"`.
+Změna `"Naming"` k `"API Guidance"`.
 
 Dále vyhledejte a otevřete v projektu soubor Resources. resx pomocí **Průzkumník řešení**. Můžete vložit popis pro svůj analyzátor, název atd. Můžete změnit hodnotu pro všechny z nich na `“Don’t use ImmutableArray<T> constructor”` pro teď. Můžete vložit argumenty formátování řetězce do řetězce ({0}, {1}atd.) a později při volání `Diagnostic.Create()`můžete dodat pole parametrů argumentů, které mají být předány.
 

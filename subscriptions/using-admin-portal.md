@@ -6,12 +6,12 @@ manager: lank
 ms.date: 08/07/2019
 ms.topic: conceptual
 description: Naučte se, jak začít spravovat předplatná sady Visual Studio ve vaší organizaci pomocí portálu pro správu předplatných.
-ms.openlocfilehash: 484ecdca3435ee725853932acd66e307c2eb3cbe
-ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
+ms.openlocfilehash: b7a6d93e3c284e3778d9574eb86c4e998324c559
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74879305"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850545"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Přehled portálu pro správu předplatných sady Visual Studio
 
@@ -47,7 +47,7 @@ Další informace o zobrazené smlouvě získáte výběrem karty Podrobnosti. Z
 > ![stránce podrobností portálu pro správu předplatných sady Visual Studio](_img/using-admin-portal/details-page.png)
 
 ## <a name="resources"></a>Prostředky
-- [Dokument white paper k licencování sady Visual Studio](https://aka.ms/vslicensing)
+- [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Porovnání možností a cen předplatného](https://visualstudio.microsoft.com/vs/pricing)
 - [Porovnání funkcí integrovaných vývojových prostředí (IDE) sady Visual Studio](https://visualstudio.microsoft.com/vs/compare)
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)

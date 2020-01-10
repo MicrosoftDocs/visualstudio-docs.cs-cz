@@ -9,12 +9,12 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 265dc7f84fbd1ec19b520e2e30d3554e2c66683b
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0d24fc7a01a8eebe356f37704c1a821332f5dca1
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302130"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850767"
 ---
 # <a name="events-vsperfcmd"></a>Události (VSPerfCmd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,7 +50,7 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
  **Přihlášení**  
  Zpracování událostí  
   
- **Doporučujeme**  
+ **vlákno**  
  Události vlákna  
   
  **Obrázek**  
@@ -59,7 +59,7 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
  **Disk**  
  Události v/v disku  
   
- **Souborů**  
+ **Soubor**  
  Vstupně výstupní události souboru  
   
  **Hardfault**  
@@ -86,7 +86,7 @@ C:\<path>VSPerfCmd -events on, \".NET Common Language Runtime\", 0x7fffffff, 5
 ```  
   
 > [!IMPORTANT]
-> Pokud nechcete události po spuštění vyloučit, protože tyto události nejsou uvedené v souboru formát MOF (Managed Object Format) (MOF), zobrazí se v sestavě jako identifikátory GUID. Další informace naleznete na této stránce na webu společnosti Microsoft: [vzorový soubor formát MOF (Managed Object Format) (MOF)](https://go.microsoft.com/fwlink/?linkid=37118).  
+> Pokud nechcete události po spuštění vyloučit, protože tyto události nejsou uvedené v souboru formát MOF (Managed Object Format) (MOF), zobrazí se v sestavě jako identifikátory GUID. Další informace naleznete na této stránce na webu společnosti Microsoft: [vzorový soubor formát MOF (Managed Object Format) (MOF)](https://msdn.microsoft.com/library/default.aspx).  
   
 ## <a name="see-also"></a>Viz také  
  [VSPerfCmd](../profiling/vsperfcmd.md)   

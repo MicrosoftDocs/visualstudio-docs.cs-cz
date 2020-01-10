@@ -11,17 +11,17 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5d5284bb163f474d67324c395a4342ccef6f8561
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 5952a65881a84ab131703db630f5f3b257683e45
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298254"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852185"
 ---
 # <a name="use-models-in-your-development-process"></a>Použití modelů ve vývojových procesech
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit a změnit systém, aplikaci nebo komponentu. Model vám může přispět k vizualizaci světa, ve kterém váš systém funguje, objasnit potřeby uživatelů, definovat architekturu vašeho systému, analyzovat kód a ujistit se, že váš kód splňuje požadavky. Viz [video o kanálu 9: vylepšení architektury prostřednictvím modelování](https://go.microsoft.com/fwlink/?LinkID=252078).
+V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit a změnit systém, aplikaci nebo komponentu. Model vám může přispět k vizualizaci světa, ve kterém váš systém funguje, objasnit potřeby uživatelů, definovat architekturu vašeho systému, analyzovat kód a ujistit se, že váš kód splňuje požadavky. Viz [video o kanálu 9: vylepšení architektury prostřednictvím modelování](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Improving-architecture-through-modeling).
 
  Chcete-li zjistit, které verze aplikace Visual Studio podporují jednotlivé typy modelů, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -125,17 +125,17 @@ V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit 
 |Obchodní proces<br /><br /> Pochopení kontextu, ve kterém se váš systém bude používat, vám pomůže pochopit, co uživatelé z něho potřebují.|– Diagramy aktivit popisují tok práce mezi lidmi a systémy, aby bylo možné dosáhnout obchodních cílů.<br />– Diagramy koncepčních tříd popisují obchodní koncepty používané v rámci obchodního procesu.|
 |Požadavky uživatelů<br /><br /> Definice toho, co uživatelé potřebují z vašeho systému.|– Diagramy případů použití shrnují interakce, které mají uživatelé a další externí systémy, s vámi vyvinutým systémem. K jednotlivým případům použití můžete připojit další dokumenty, abyste si ho popsali podrobněji.<br />– Diagramy tříd UML popisují typy informací, o kterých uživatelé a systémy sdělují.<br />– Obchodní pravidla a požadavky na kvalitu služeb můžete popsat v samostatných dokumentech.|
 |Návrh vysoké úrovně<br /><br /> Celková struktura systému: hlavní komponenty a jejich vzájemná spolupráce.|– Diagramy vrstev popisují, jak je systém strukturovaný, do vzájemně závislých částí. Můžete ověřit kód programu v diagramech vrstev, abyste zajistili, že bude vyhovovat architektuře.<br />-Diagramy komponent zobrazují rozhraní částí a určují zprávy a služby, které jsou k dispozici a které vyžadují jednotlivé komponenty.<br />– Sekvenční diagramy znázorňují, jak komponenty komunikují při implementaci každého případu použití.<br />– Diagramy tříd UML popisují rozhraní komponent a typy dat předaných mezi komponentami.|
-|Vzory návrhu<br /><br /> Konvence a metody řešení problémů s návrhem, které se používají ve všech částech návrhu|– Diagramy tříd UML popisují struktury vzoru<br />– Diagramy sekvence nebo aktivity zobrazují interakce a algoritmy.|
+|Způsoby návrhu<br /><br /> Konvence a metody řešení problémů s návrhem, které se používají ve všech částech návrhu|– Diagramy tříd UML popisují struktury vzoru<br />– Diagramy sekvence nebo aktivity zobrazují interakce a algoritmy.|
 |Analýza kódu<br /><br /> Z kódu lze vygenerovat několik typů diagramů.|– Sekvenční diagramy znázorňují interakci mezi objekty v kódu.<br />– Diagramy vrstev znázorňují závislosti mezi třídami. Aktualizovaný kód lze ověřit proti diagramu vrstev.<br />Diagramy tříd zobrazují třídy v kódu.|
 
 ## <a name="external-resources"></a>Externí prostředky
 
-|**Kategorií**|**Odkazy**|
+|**Kategorie**|**Odkazy**|
 |------------------|---------------|
-|**Videa**|![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN jak mám videa: jak vytvářet a používat modely a diagramy UML (Visual Studio 2010 Ultimate)](https://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: UML se sadou Visual Studio 2010](https://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN postup I série: nástroje a rozšiřitelnost UML (Visual Studio 2010 Ultimate)](https://go.microsoft.com/fwlink/?LinkID=214467)|
-|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](https://go.microsoft.com/fwlink/?LinkID=201340)|
-|**Technické články a deníky**|[Centrum architektury MSDN](https://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Pokyny k nástrojům architektury sady Visual Studio](../modeling/visual-studio-architecture-tooling-guidance.md)|
+|**Videa**|![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN jak mám videa: jak vytvářet a používat modely a diagramy UML (Visual Studio 2010 Ultimate)](https://msdn.microsoft.com/vstudio/gg418384)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: UML se sadou Visual Studio 2010](https://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-1-Brainstorming-a-Project/)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN postup I série: nástroje a rozšiřitelnost UML (Visual Studio 2010 Ultimate)](https://msdn.microsoft.com/vstudio/ff859492)|
+|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](https://blogs.msdn.com/b/visualstudioalm)|
+|**Technické články a deníky**|[Centrum architektury MSDN](https://msdn.microsoft.com/architecture/default.aspx)<br /><br /> [Pokyny k nástrojům architektury sady Visual Studio](../modeling/visual-studio-architecture-tooling-guidance.md)|
 
 ## <a name="see-also"></a>Viz také
  [Použití modelů v agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f) [vytváření modelů pro model](../modeling/create-models-for-your-app.md) [požadavků uživatelů](../modeling/model-user-requirements.md) modelu aplikace vývoj [architektury vaší aplikace](../modeling/model-your-app-s-architecture.md) při [vývoji testů ze struktury modelu](../modeling/develop-tests-from-a-model.md) v [rámci modelování vašeho řešení](../modeling/structure-your-modeling-solution.md)

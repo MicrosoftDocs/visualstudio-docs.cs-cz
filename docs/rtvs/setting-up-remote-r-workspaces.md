@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: e8cd1868e61b0691be7ea639d8b5d826c608915d
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 686f98aaaade035f1632139d255ccff8b37eddf3
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888536"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850055"
 ---
 # <a name="set-up-remote-workspaces"></a>Nastavení vzdálených pracovních prostorů
 
@@ -65,7 +65,7 @@ Vydání certifikátu podepsaného svým držitelem:
 
 Základní informace najdete v tématu [certifikáty podepsané svým držitelem](https://en.wikipedia.org/wiki/Self-signed_certificate) v Wikipedii.
 
-### <a name="install-the-certificate"></a>Instalace certifikátu
+### <a name="install-the-certificate"></a>Nainstalujte certifikát.
 
 Chcete-li nainstalovat certifikát na vzdáleném počítači, spusťte *Certlm. msc* (Správce certifikátů) z příkazového řádku. Klikněte pravým tlačítkem na **osobní** složku a vyberte příkaz **všechny úkoly** > **importovat** :
 
@@ -138,12 +138,12 @@ Aby bylo možné spustit kód R, musí mít vzdálený počítač nainstalovanou
 
 1. Stáhněte a nainstalujte jednu z následujících možností:
 
-   - [Microsoft R – otevřít](https://mran.microsoft.com/open/)
+   - [Microsoft R Open](https://mran.microsoft.com/open/)
    - [CRAN R pro Windows](https://cran.r-project.org/bin/windows/base/)
 
      Oba mají stejné funkce, ale Microsoft R Open přináší výhody z dalších hardwarových akcelerovaných lineárních algebraický knihoven, které jsou v [knihovně Intel Math kernel](https://software.intel.com/intel-mkl).
 
-2. Po zobrazení výzvy spusťte [instalační program služby R](https://aka.ms/rtvs-services) a restartujte ho. Instalační program provede následující akce:
+2. Po zobrazení výzvy spusťte [instalační program služby R](https://github.com/Microsoft/RTVS/blob/master/doc/rtvsd/rtvs-remote-downloads.md) a restartujte ho. Instalační program provede následující akce:
 
     - Vytvořte složku v *%ProgramFiles%\r Tools for Visual Studio\1.0\\* a zkopírujte všechny požadované binární soubory.
     - Nainstalovat `RHostBrokerService` a `RUserProfileService` a nakonfigurovat tak, aby se spouštěla automaticky.
@@ -163,7 +163,7 @@ Aby bylo možné spustit kód R, musí mít vzdálený počítač nainstalovanou
 
 1. Stáhněte a nainstalujte jednu z následujících možností:
 
-   - [Microsoft R – otevřít](https://mran.microsoft.com/open/)
+   - [Microsoft R Open](https://mran.microsoft.com/open/)
    - [CRAN R pro Windows](https://cran.r-project.org/bin/linux/ubuntu/)
 
      Oba mají stejné funkce, ale Microsoft R Open přináší výhody z dalších hardwarových akcelerovaných lineárních algebraický knihoven, které jsou v [knihovně Intel Math kernel](https://software.intel.com/intel-mkl).
@@ -184,7 +184,7 @@ Se službami R běžícími na vzdáleném počítači budete taky muset vytvoř
 
     Pokud však certifikát instalujete na server s přístupem k Internetu (například virtuální počítač Azure), použijte plně kvalifikovaný název domény (FQDN) serveru, protože plně kvalifikovaný název domény internetového serveru není nikdy stejný jako název NETBIOS.
 
-    Chcete-li použít plně kvalifikovaný název domény, přejděte na místo, kde je nainstalována služba R ( *% Program Files%\r Remote Service for Visual Studio\1.0* ve výchozím nastavení), otevřete soubor *Microsoft. R. Host. Broker. config. JSON* v textovém editoru a nahraďte jeho obsah následujícím kódem: přiřazení CN k libovolnému plně kvalifikovanému názvu domény vašeho serveru, například `foo.westus.cloudapp.azure.com`:
+    Chcete-li použít plně kvalifikovaný název domény, přejděte na místo, kde je nainstalováno služby R ( *% Program Files%\r Remote Service for Visual Studio\1.0* ve výchozím nastavení), otevřete soubor *Microsoft. R. Host. Broker. config. JSON* v textovém editoru a nahraďte jeho obsah následujícím kódem, který přiřadíte k libovolnému názvu domény vašeho serveru, například `foo.westus.cloudapp.azure.com`:
 
     ```json
     {
@@ -197,7 +197,7 @@ Se službami R běžícími na vzdáleném počítači budete taky muset vytvoř
 
     Uložte soubor a restartujte počítač, aby se změny projevily.
 
-## <a name="troubleshooting"></a>Poradce při potížích
+## <a name="troubleshooting"></a>Odstraňování problémů
 
 **Otázka. počítač s R serverem nereaguje, co mám dělat?**
 

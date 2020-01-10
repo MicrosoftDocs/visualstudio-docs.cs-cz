@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 67589a04b8f3c39e442b596a7a41981825bd5aa5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2d3247fb421800f87740a911563880b70abf3eed
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301105"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844735"
 ---
 # <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018: 32bitová aplikace spuštěná v limitech paměti spravovaného procesu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +31,7 @@ ID pravidla | DA0018 |
   
  Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.  
   
-## <a name="cause"></a>Příčina  
+## <a name="cause"></a>příčina  
  Systémová data shromážděná během procesu profilace označují, že haldy .NET Framework paměti dosáhly maximální velikosti, ke které mají spravované haldy přístup v 32m procesu. Tato maximální velikost je výchozí hodnota. Vychází z celkového množství adresního prostoru procesu, který se dá přidělit pro soukromé bajty. Hlášená hodnota je maximální zjištěná hodnota haldy během aktivního procesu profilace. Zvažte opětovné vytvoření profilace pomocí metody profilace paměti .NET a optimalizace použití spravovaných prostředků aplikací.  
   
  Pokud velikost spravovaných hald přiblíží výchozímu limitu, může být potřeba vyvolat častěji proces automatického uvolňování paměti. Tím se zvyšuje režie správy paměti.  
@@ -64,7 +64,7 @@ ID pravidla | DA0018 |
   
   Pomocí [zobrazení přidělení](../profiling/dotnet-memory-allocations-view.md) Určete cestu spuštění, která je výsledkem těchto přidělení.  
   
-  Další informace o tom, jak zlepšit výkon uvolňování paměti, najdete v článku .NET Framework technické články, [základy systému uvolňování paměti a tipy k výkonu](https://go.microsoft.com/fwlink/?LinkId=177946) na webu MSDN.  
+  Další informace o tom, jak zlepšit výkon uvolňování paměti, najdete v článku .NET Framework technické články, [základy systému uvolňování paměti a tipy k výkonu](https://msdn.microsoft.com/library/ms973837.aspx) na webu MSDN.  
   
   Chcete-li získat strukturální úlevy z omezení virtuální paměti na velikost soukromé části adresního prostoru procesu, zkuste spustit tento 32 proces na 64 počítači.  32 proces na 64 počítači může získat až 4 GB privátní virtuální paměti.  
   

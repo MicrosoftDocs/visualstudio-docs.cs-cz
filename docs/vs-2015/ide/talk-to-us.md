@@ -11,12 +11,12 @@ caps.latest.revision: 34
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 89f43167a12bce77ef260fcf3d72764072f80143
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b55100fa6aaf74dee6277db2a079a0a908dc265c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299935"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851065"
 ---
 # <a name="talk-to-us"></a>Kontaktujte nás
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,13 +38,13 @@ Zajímá vás vaše nápady na vylepšení naší dokumentace. Nemůžeme osobn�
  Předběžné verze sady Visual Studio mají **sazbu této** položky nabídky produktu, která vám umožní poslat zpětnou vazbu k kvalitě spouštěného sestavení. V vydaných verzích produktu to neuvidíte.
 
 ## <a name="i-need-help"></a>Potřebuji, abyste pomohli!
- Online nápovědu najdete v tématu [Podpora Microsoftu](https://go.microsoft.com/fwlink/?LinkID=99019) .
+ Online nápovědu najdete v tématu [Podpora Microsoftu](https://support.microsoft.com/) .
 
  Podpora mimo území Spojených států a Kanady se může lišit. Seznam regionálních kontaktů najdete na [webu Microsoft celosvětově](https://www.microsoft.com/worldwide/).
 
  Další možnosti najdete v tématu [Přehled podpory](https://visualstudio.microsoft.com/support/).
 
- Pro větší organizace, které vyžadují spravovanou podporu přímo od společnosti Microsoft, jsou k dispozici smlouvy prostřednictvím různých nabídek programu Premier Support. Další informace najdete v tématu [Premier Support služeb společnosti Microsoft](https://go.microsoft.com/fwlink/?LinkId=258223).
+ Pro větší organizace, které vyžadují spravovanou podporu přímo od společnosti Microsoft, jsou k dispozici smlouvy prostřednictvím různých nabídek programu Premier Support. Další informace najdete v tématu [Premier Support služeb společnosti Microsoft](https://www.microsoft.com/industry/services/support).
 
  Pokud jste produkt obdrželi již nainstalovaný s novým počítačem nebo zařízením, výrobce hardwaru poskytuje technickou podporu a odbornou pomoc k tomuto softwaru. Pro podporu se obraťte přímo na výrobce.
 

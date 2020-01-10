@@ -2,17 +2,17 @@
 title: Správa vlastností projektu a řešení
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99786cc2b646c011a0398e973e0fd3d4dd97583f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 01fcdc09c9d3ee4f5a38a95ef4304bfdf537d527
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603438"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591304"
 ---
 # <a name="manage-project-and-solution-properties"></a>Správa vlastností projektu a řešení
 
@@ -25,7 +25,7 @@ Projekty .NET mohou mít také uzel vlastností ve stromové struktuře projektu
 ![Uzel vlastností ve stromu Průzkumník řešení](../ide/media/vs2015_props_se.png)
 
 > [!NOTE]
-> Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [Správa vlastností řešení a projektu (Visual Studio pro Mac)](/visualstudio/mac/managing-solutions-and-project-properties).
+> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [Správa vlastností řešení a projektu (Visual Studio pro Mac)](/visualstudio/mac/managing-solutions-and-project-properties).
 
 ## <a name="project-properties"></a>Vlastnosti projektu
 

@@ -11,12 +11,12 @@ caps.latest.revision: 23
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5b1d8bdeb4497af57c385e73ff0dcd34041a2097
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 9e56f2d8ef72121e8b34117436019251449fbb75
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297326"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845038"
 ---
 # <a name="graphics-event-list"></a>Seznam událostí grafiky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,8 +37,8 @@ Pomocí seznamu událostí grafiky v Analyzátor grafiky sady Visual Studio mů�
   
 |Fronta Direct3D 12|Barva|  
 |-----------------------|-----------|  
-|Fronta vykreslování|Šetrn|  
-|Výpočetní fronta|Opatřen|  
+|Fronta vykreslování|Zelená|  
+|Výpočetní fronta|Yellow|  
 |Kopírovat frontu|Oranžová|  
   
  Direct3D 11 nevystavuje více front, takže při práci se zachytáváním aplikace Direct3D 11 nejsou události v seznamu událostí zakódované barevně.  
@@ -93,7 +93,7 @@ Pomocí seznamu událostí grafiky v Analyzátor grafiky sady Visual Studio mů�
 ### <a name="user-defined-events-in-direct3d-11-and-earlier"></a>Uživatelem definované události v Direct3D 11 a starších verzích  
  Chcete-li vytvořit skupiny a značky v Direct3D 11 nebo starších, použijte rozhraní API popsaná v této části. Následující tabulka shrnuje rozhraní API, která můžete použít pro různé verze Direct3D 11 a starších verzí rozhraní Direct3D.  
   
-|Popis rozhraní API|[ID3D11DeviceContext2](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) (Direct3D 11,2)|[ID3DUserDefinedAnnotation](https://go.microsoft.com/fwlink/p/?LinkID=250967) (Direct3D 11,1)|D3DPerf_ rodina rozhraní API (Direct3D 11,0 a starší)|  
+|Popis rozhraní API|[ID3D11DeviceContext2](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) (Direct3D 11,2)|[ID3DUserDefinedAnnotation](https://msdn.microsoft.com/library/windows/desktop/hh446881(v=vs.85).aspx) (Direct3D 11,1)|D3DPerf_ rodina rozhraní API (Direct3D 11,0 a starší)|  
 |---------------------|---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|--------------------------------------------------------|  
 |Zahájení skupiny událostí|`BeginEventInt`|`BeginEvent`|`D3DPerf_BeginEvent`|  
 |Ukončení skupiny událostí|`EndEventInt`|`EndEvent`|`D3DPerf_EndEvent`|  

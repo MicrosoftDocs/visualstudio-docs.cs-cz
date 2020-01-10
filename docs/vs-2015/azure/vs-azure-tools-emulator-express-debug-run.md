@@ -10,12 +10,12 @@ ms.date: 03/06/2017
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: d89762511e88e296a51c781c6a403c2dd227ed4f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 89d6662a1da987f927951937d04426b5e0b8cfa9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74293259"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846581"
 ---
 # <a name="using-emulator-express-to-run-and-debug-an-azure-cloud-service-on-a-local-machine"></a>Spuštění a ladění cloudové služby Azure na místním počítači pomocí expresního emulátoru
 Pomocí nástroje emulátor Express můžete testovat a ladit cloudovou službu bez spuštění sady Visual Studio jako správce. Nastavení projektu můžete nastavit tak, aby v závislosti na požadavcích vaší cloudové služby používala buď emulátor Express, nebo úplný emulátor. Další informace o plném emulátoru najdete v tématu [spuštění aplikace Azure v emulátoru služby COMPUTE](/azure/storage/common/storage-use-emulator).
@@ -25,7 +25,7 @@ Při vytváření projektu Azure v sadě Azure SDK 2,3 nebo novější se automa
 
 1. Vytvořte nebo otevřete v sadě Visual Studio projekt cloudové služby Azure.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte možnost **vlastnosti**.
+1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a v místní nabídce vyberte **vlastnosti**.
 
 1. Na stránkách vlastností projektů vyberte kartu **Web** .
 
@@ -47,7 +47,7 @@ Následující problémy jsou známá omezením emulátoru Express:
 - Emulátor Express není kompatibilní s webovým serverem IIS.
 - Vaše cloudová služba může obsahovat víc rolí, ale každá role je omezená na jednu instanci.
 - Nemůžete získat přístup k číslům portů nižším než 1000. Pokud používáte poskytovatele ověřování, který obvykle používá port pod 1000, může být nutné změnit tuto hodnotu na číslo portu, které je vyšší než 1000.
-- Všechna omezení, která platí pro emulátor služby Azure COMPUTE, platí také pro expresní emulátor. Například nemůžete mít více než 50 instancí role na jedno nasazení. Další informace o emulátoru výpočtů Azure najdete v tématu [spuštění aplikace Azure v emulátoru služby COMPUTE](https://go.microsoft.com/fwlink/p/?LinkId=623050).
+- Všechna omezení, která platí pro emulátor služby Azure COMPUTE, platí také pro expresní emulátor. Například nemůžete mít více než 50 instancí role na jedno nasazení. Další informace o emulátoru výpočtů Azure najdete v tématu [spuštění aplikace Azure v emulátoru služby COMPUTE](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-performance-profiling-cloud-services?view=vs-2019).
 
 ## <a name="next-steps"></a>Další kroky
 [Ladění Azure Cloud Services](vs-azure-tools-debugging-cloud-services-overview.md)

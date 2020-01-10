@@ -12,12 +12,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 01049d5ecf8710cd680278dbf95dbe70767cd5bf
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2cedc9f45d2e21684496bd882de4aa74b3bf8b3d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299898"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851071"
 ---
 # <a name="troubleshooting-the-help-viewer"></a>Řešení potíží s programem Help Viewer
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,12 +42,12 @@ Toto téma popisuje problémy, se kterými se můžete setkat v aplikaci Help Vi
 
 5. Vyberte službu role Windows Search.
 
-## <a name="additional-resources"></a>Další prostředky
+## <a name="additional-resources"></a>Další materiály a zdroje informací
  Další informace a poskytnutí zpětné vazby v aplikaci Help Viewer můžete získat pomocí následujících zdrojů:
 
-- Pokud chcete poskytnout zpětnou vazbu, přečtěte si článek [Microsoft Connect](https://go.microsoft.com/fwlink/?linkid=243983) na webu Microsoftu nebo pošlete e-mail na [hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com).
+- Pokud chcete poskytnout zpětnou vazbu, přečtěte si článek [Microsoft Connect](https://connect.microsoft.com/) na webu Microsoftu nebo pošlete e-mail na [hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com).
 
-- Další informace najdete v tématu [dokumentace pro vývojáře a](https://go.microsoft.com/fwlink/?LinkId=232741) fórum k systému pro nápovědu a [na blogu Guy](https://go.microsoft.com/fwlink/?LinkId=232743) .
+- Další informace najdete v tématu [dokumentace pro vývojáře a](https://social.msdn.microsoft.com/Forums/en-US/devdocs/threads) fórum k systému pro nápovědu a [na blogu Guy](https://blogs.msdn.com/b/thehelpguy/) .
 
 ## <a name="see-also"></a>Viz také
- [Příručka pro správce Help Viewer 2,1](https://go.microsoft.com/fwlink/?LinkId=243985)
+ [Příručka pro správce Help Viewer 2,1](https://msdn.microsoft.com/library/hh492077(VS.110).aspx)

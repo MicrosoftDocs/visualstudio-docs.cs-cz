@@ -11,12 +11,12 @@ caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8e1dbe50f3161ca80b4eabe63cbf9264210e9658
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 128327b956734f7d28e7ff88f3eb6c297544587c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300311"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849808"
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>Dialogové okno Upřesnit nastavení (Vizualizér souběžnosti)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,9 +32,9 @@ Pomocí dialogového okna **Upřesnit nastavení** v Vizualizátor souběžnosti
  Cesty k souborům. exe a. dll jsou uloženy v trasovacím souboru, když je trasování shromažďováno.  Změna tohoto nastavení neovlivní žádné dříve shromážděné trasování.  
   
 ## <a name="buffering"></a>Do vyrovnávací paměti  
- Vizualizátor souběžnosti používá trasování událostí pro Windows (ETW) při shromažďování trasování.  ETW používá k ukládání událostí různé vyrovnávací paměti.  Výchozí nastavení vyrovnávací paměti ETW nemusí být optimální ve všech případech a v některých případech může způsobit problémy, jako například ztracené události.  Pomocí karty vyrovnávací paměti můžete nakonfigurovat nastavení vyrovnávací paměti ETW. Další informace najdete v tématu [trasování událostí](https://go.microsoft.com/fwlink/?LinkId=234579) a [EVENT_TRACE_PROPERTIES struktura](https://go.microsoft.com/fwlink/?LinkId=234580).  
+ Vizualizátor souběžnosti používá trasování událostí pro Windows (ETW) při shromažďování trasování.  ETW používá k ukládání událostí různé vyrovnávací paměti.  Výchozí nastavení vyrovnávací paměti ETW nemusí být optimální ve všech případech a v některých případech může způsobit problémy, jako například ztracené události.  Pomocí karty vyrovnávací paměti můžete nakonfigurovat nastavení vyrovnávací paměti ETW. Další informace najdete v tématu [trasování událostí](https://msdn.microsoft.com/library/bb968803(VS.85).aspx) a [EVENT_TRACE_PROPERTIES struktura](https://msdn.microsoft.com/library/aa363784(VS.85).aspx).  
   
-## <a name="filter"></a>Filtr  
+## <a name="filter"></a>Filtrovat  
  Na kartě Filtr můžete vybrat sadu událostí, které shromažďuje Vizualizátor souběžnosti. Výběr podmnožiny událostí omezuje typy dat zobrazených v sestavách, snižuje velikost každého trasování a zkracuje čas potřebný ke zpracování trasování.  
   
 ### <a name="clr-events"></a>Události CLR  
@@ -55,7 +55,7 @@ Pomocí dialogového okna **Upřesnit nastavení** v Vizualizátor souběžnosti
 ### <a name="file-io-events"></a>Vstupně výstupní události souboru  
  Vstupně-výstupní události souboru reprezentují přístup k disku jménem aktuálního procesu.  Pokud zakážete vstupně-výstupní události souboru, bude velikost trasování snížena, ale zobrazení vláken nebude hlásit žádné informace o kanálech disku nebo operacích disku.  
   
-## <a name="markers"></a>Značka  
+## <a name="markers"></a>Značky  
  Na kartě značky můžete nakonfigurovat sadu zprostředkovatelů ETW, které se zobrazí jako značky v Vizualizátor souběžnosti.  Můžete také filtrovat kolekci značek na základě úrovně důležitosti a kategorie ETW.  Pokud používáte [sadu SDK Vizualizátor souběžnosti](../profiling/concurrency-visualizer-sdk.md) a používáte vlastního poskytovatele značek, můžete jej zaregistrovat zde, aby se zobrazil v zobrazení vláken.  
   
 ### <a name="adding-a-new-provider"></a>Přidává se nový poskytovatel.  

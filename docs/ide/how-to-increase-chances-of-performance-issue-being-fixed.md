@@ -5,16 +5,16 @@ author: seaniyer
 ms.author: seiyer
 ms.date: 11/19/2019
 ms.topic: reference
-ms.openlocfilehash: 57d956a426e791fcc84d5972f564cd554d6e72f8
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: bce4fa8c824b6a4f1332145c1383131eb6488b6c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75406109"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847387"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Jak zvýšit pravděpodobnost vyřešeného problému s výkonem
 
-Nástroj "[nahlásit problém](https://aka.ms/vs-rap)" se v aplikaci Visual Studio často používá k hlášení rozsahu problémů. Tým sady Visual Studio se zaměřuje na chyby a zpomalení v důsledku zpětné vazby uživatelů a řeší problémy, které mají vliv na širokou škálu uživatelů Swath. Dalším možným lístkem zpětné vazby je, tím pravděpodobněji bude diagnostikována a rychlejší vyřešena produktovým týmem. V tomto dokumentu jsou popsány osvědčené postupy při oznamování chyb nebo zpomalení, aby bylo možné je lépe dělat.
+Nástroj "[nahlásit problém](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019)" se v aplikaci Visual Studio často používá k hlášení rozsahu problémů. Tým sady Visual Studio se zaměřuje na chyby a zpomalení v důsledku zpětné vazby uživatelů a řeší problémy, které mají vliv na širokou škálu uživatelů Swath. Dalším možným lístkem zpětné vazby je, tím pravděpodobněji bude diagnostikována a rychlejší vyřešena produktovým týmem. V tomto dokumentu jsou popsány osvědčené postupy při oznamování chyb nebo zpomalení, aby bylo možné je lépe dělat.
 
 ## <a name="general-best-practices"></a>Obecné osvědčené postupy
 
@@ -188,7 +188,7 @@ Díky tomu, co tyto typy problémů nejvíce řeší, je poskytnout další prot
     -   Nastavit globální proměnnou prostředí **ServiceHubTraceLevel** na **všechny**
     -   Reprodukujte problém.
 
-2.  Stáhněte si nástroj pro shromažďování protokolů Microsoft Visual Studio a [.NET Framework.](https://aka.ms/vscollect)
+2.  Stáhněte si nástroj pro shromažďování protokolů Microsoft Visual Studio a [.NET Framework.](https://www.microsoft.com/download/details.aspx?id=12493)
 3.  Spusťte nástroj. Výstup souboru zip do **% TEMP%/Vslogs.zip**. Připojte prosím tento soubor ke své zpětné vazbě.
 
 ## <a name="see-also"></a>Viz také:

@@ -18,28 +18,28 @@ caps.latest.revision: 45
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b4bcd1f1f023c9e439fb870c9e31f07aa5be215d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 8050e0245708d855d78dbba94e1bb56399343ecf
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299559"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850700"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>Jak se definuje jazyk specifický pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ze šablony. Klíčovou součástí řešení je diagram definice DSL, který je uložený v DslDefinition. DSL. Definice DSL definuje třídy a tvary DSL. Po úpravě a přidání na tyto prvky můžete přidat programový kód pro přizpůsobení DSL.
 
- Pokud s DSL začínáte, doporučujeme vám pracovat přes **testovací prostředí nástrojů DSL**, které najdete na tomto webu: [VISUALIZATON and modeling SDK](https://go.microsoft.com/fwlink/?LinkID=186128)
+ Pokud s DSL začínáte, doporučujeme vám pracovat přes **testovací prostředí nástrojů DSL**, které najdete na tomto webu: [VISUALIZATON and modeling SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
 
 ## <a name="templates"></a>Výběr řešení šablony
  Pokud chcete definovat DSL, musíte mít nainstalovaný následující komponenty:
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
-|Visual Studio Visualization and Modeling SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](https://go.microsoft.com/fwlink/?LinkID=186128)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://www.visualstudio.com/)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://docs.microsoft.com/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
+|Sada Visual Studio Visualization and Modeling SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)|
 
  Chcete-li vytvořit nový jazyk specifický pro doménu, vytvořte nové řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pomocí šablony projektu jazyka specifického pro doménu.
 
@@ -82,7 +82,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
 4. Můžete buď upravit nastavení na ostatních stránkách, nebo ponechat výchozí hodnoty.
 
-5. Klikněte na tlačítko **Dokončit**.
+5. Klikněte na **Dokončit**.
 
     Průvodce vytvoří řešení, které obsahuje dva nebo tři projekty a generuje kód z definice DSL.
 
@@ -105,7 +105,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
  Experimentujte s nástroji. Vytvořte prvky a připojte je.
 
- Zavřete experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+ Ukončete experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
 > [!NOTE]
 > Po úpravě DSL již nebudete moci zobrazit obrazce v ukázkovém testovacím souboru. Budete však moci vytvořit nové prvky.
@@ -609,7 +609,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
  Viz také [Postupy: Změna oboru názvů jazyka specifického pro doménu](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md).
 
 ## <a name="trouble"></a>Při
- V následující tabulce jsou uvedeny některé nejběžnější problémy, které se vyskytly při návrhu DSL, spolu s návrhy na jejich řešení. Další rady jsou k dispozici na [fóru Extensibililty nástrojů pro vizualizaci](https://go.microsoft.com/fwlink/?LinkId=186074).
+ V následující tabulce jsou uvedeny některé nejběžnější problémy, které se vyskytly při návrhu DSL, spolu s návrhy na jejich řešení. Další rady jsou k dispozici na [fóru Extensibililty nástrojů pro vizualizaci](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=dslvsarchx).
 
 |Problém|Doporučení|
 |-------------|----------------|
@@ -618,7 +618,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 |V Průzkumníku DSL nejde přidat do kolekce. Například když kliknete pravým tlačítkem nástrojů, v nabídce není k dispozici příkaz Přidat nástroj.<br /><br /> V Průzkumníkovi pro moji DSL nemůžu přidat element do seznamu.|Klikněte pravým tlačítkem na položku nad uzlem, který zkoušíte. Pokud chcete přidat do seznamu, příkaz Přidat není v uzlu seznam, ale v jeho vlastníkovi.|
 |Vytvořil (a) jsem doménovou třídu, ale v Průzkumníkovi jazyka nemůžu vytvořit instance.|Každá doménová třída s výjimkou kořene musí být cílem relace vložení.|
 |V Průzkumníkovi pro moji DSL jsou elementy zobrazeny pouze s názvy jejich typů.|V definici DSL vyberte doménovou vlastnost třídy a ve okno Vlastnosti nastavte vlastnost **název elementu** na hodnotu true.|
-|Moje DSL se vždy otevírá v editoru XML.|K tomu může dojít z důvodu chyby při čtení souboru. I když tuto chybu opravíte, musíte explicitně resetovat Editor tak, aby byl vaším návrhářem DSL.<br /><br /> Klikněte pravým tlačítkem myši na položku projektu, klikněte na tlačítko **otevřít v** a vyberte _YourLanguage_**Designer (výchozí)** .|
+|Moje DSL se vždy otevírá v editoru XML.|K tomu může dojít z důvodu chyby při čtení souboru. I když tuto chybu opravíte, musíte explicitně resetovat Editor tak, aby byl vaším návrhářem DSL.<br /><br /> Klikněte pravým tlačítkem na položku projektu, klikněte na tlačítko **otevřít v** a vyberte _YourLanguage_ **návrháře (výchozí)** .|
 |Sada nástrojů moje DSL se po změně názvů sestavení nezobrazí.|Prohlédněte si a aktualizujte **DslPackage\GeneratedCode\Package.TT** , kde najdete další informace, viz [Postupy: Změna oboru názvů jazyka specifického pro doménu](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md).|
 |Sada nástrojů mého DSL se nezobrazí, ale nezměnili jste název sestavení.<br /><br /> Nebo se zobrazí okno se zprávou, která hlásí selhání načtení rozšíření.|Obnovte experimentální instanci a znovu sestavte řešení.<br /><br /> 1. v nabídce Start ve Windows klikněte na **všechny programy**, rozbalte [!INCLUDE[vssdk_current_long](../includes/vssdk-current-long-md.md)], pak **nástroje**a potom klikněte na **resetovat Microsoft Visual Studio experimentální instanci**.<br />2. v nabídce **sestavení** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]klikněte na **znovu sestavit řešení**.|
 

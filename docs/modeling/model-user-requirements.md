@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - requirements
 - stories
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68aa46b3dc07813b73921b8acb5970289c30aecc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0c09e45250ad95d50d5d2cd0ca2753a70bb95748
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658416"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590238"
 ---
 # <a name="model-user-requirements"></a>Modelování uživatelských požadavků
 
@@ -44,7 +44,7 @@ Model požadavků poskytuje nejvyšší výhody, pokud ho používáte k zaměř
 > [!NOTE]
 > V těchto tématech "systém" znamená systém nebo aplikaci, kterou vyvíjíte. Může se jednat o velkou kolekci mnoha softwarových a hardwarových komponent. nebo jedna aplikace; nebo softwarová součást v rámci většího systému. V každém případě model požadavků popisuje chování, které je viditelné mimo váš systém bez ohledu na to, jestli jde o uživatelské rozhraní nebo rozhraní API.
 
-## <a name="common-tasks"></a>Běžné úlohy
+## <a name="common-tasks"></a>Běžné úkoly
 
 Můžete vytvořit několik různých zobrazení požadavků uživatelů.  Každé zobrazení poskytuje konkrétní typ informací.  Když vytváříte tato zobrazení, je nejlepší je často přesunout z jedné do druhé. Můžete začít z libovolného zobrazení.
 
@@ -72,19 +72,19 @@ Všimněte si, že zvolený postup je o tom, jak definujete požadavky a že je 
 
 Další informace najdete v následujících tématech:
 
-|Další informace|Číst|
+|Další informace|Pro čtení|
 |-|-|
 |Postup vývoje kódu, který dodržuje obchodní pravidla|[Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|
 
 ## <a name="QoSRequirements"></a>Popisující požadavky na službu Quality of Service
 
-Existuje několik kategorií požadavků na kvalitu služeb. Jsou to tyto:
+Existuje několik kategorií požadavků na kvalitu služeb. Mezi tyto typy patří:
 
 - Výkon
 
 - Zabezpečení
 
-- Použitelnost
+- Použitelnosti
 
 - Spolehlivost
 

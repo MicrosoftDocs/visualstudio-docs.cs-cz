@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.date: 10/16/2019
 ms.technology: vs-azure
 monikerRange: vs-2019
-ms.openlocfilehash: 355a08b2ff322226d347d999f4ec8a9ebb7ba5fc
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: bdf326bc337456a0a9b4ba085d308ead2c90d49b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188720"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846943"
 ---
 # <a name="how-to-view-and-diagnose-containers-and-images-in-visual-studio"></a>Jak zobrazit a diagnostikovat kontejnery a obrázky v aplikaci Visual Studio
 
@@ -21,11 +21,11 @@ Můžete zobrazit, co se chystá v kontejnerech, které hostují vaši aplikaci 
 ## <a name="prerequisites"></a>Požadavky
 
 - [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-- [Visual studio 2019 verze 16,4 Preview 2](https://visualstudio.microsoft.com/downloads) nebo novější nebo pokud používáte starší verzi sady Visual Studio 2019, nainstalujte [rozšíření okna kontejnery](https://aka.ms/vscontainerspreview).
+- [Visual studio 2019 verze 16,4 Preview 2](https://visualstudio.microsoft.com/downloads) nebo novější nebo pokud používáte starší verzi sady Visual Studio 2019, nainstalujte [rozšíření okna kontejnery](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-containers-tools-extensions).
 
 ## <a name="view-information-about-your-containers"></a>Zobrazit informace o kontejnerech
 
-Okno **kontejnery** se automaticky otevře při spuštění kontejnerového projektu .NET. Chcete-li zobrazit kontejnery v aplikaci Visual Studio kdykoli, použijte **kombinaci kláves Ctrl** +**Q** k aktivaci vyhledávacího pole aplikace visual Studio a zadejte `Containers` a vyberte první položku. Můžete také otevřít okno **kontejnery** z hlavní nabídky. Použijte **zobrazení** cesty nabídky  >  dalších**kontejnerů** > **Windows** .  
+Okno **kontejnery** se automaticky otevře při spuštění kontejnerového projektu .NET. Chcete-li zobrazit kontejnery v aplikaci Visual Studio kdykoli, použijte **kombinaci kláves Ctrl**+**Q** k aktivaci vyhledávacího pole aplikace visual Studio a zadejte `Containers` a vyberte první položku. Můžete také otevřít okno **kontejnery** z hlavní nabídky. Použijte **zobrazení** cesty nabídky > dalších **kontejnerů** > **Windows** .  
 
 ![Snímek obrazovky s kartou prostředí v okně kontejnery](media/view-and-diagnose-containers/container-window.png)
 
@@ -60,7 +60,7 @@ Na kartě **protokoly** se zobrazují výsledky `docker logs`ho příkazu. Ve v�
 Chcete-li vymazat protokoly, použijte tlačítko **Vymazat** na kartě **protokoly** .  Chcete-li získat všechny protokoly, použijte tlačítko **aktualizovat** .
 
 > [!NOTE]
-> Visual Studio automaticky přesměruje stdout a stderr do okna **výstup** , když spouštíte bez ladění pomocí kontejnerů Windows, takže se kontejnery Windows spuštěné ze sady Visual Studio pomocí **CTRL** +**F5** nebudou zobrazovat protokoly v. Tato karta; místo toho použijte okno **výstup** .
+> Visual Studio automaticky přesměruje stdout a stderr do okna **výstup** , když spouštíte bez ladění pomocí kontejnerů Windows, takže kontejnery Windows spuštěné ze sady Visual **+** Studio nebudou na této kartě zobrazovat protokoly. místo toho použijte okno **výstup** .
 
 ## <a name="view-the-filesystem"></a>Zobrazit systém souborů
 

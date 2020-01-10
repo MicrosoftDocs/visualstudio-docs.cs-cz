@@ -9,12 +9,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6ca68005f71d642650a2d9b024a16883de5eaddf
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: f3bbb4500eb4792f77a7011bd95dd06d05d0ff8d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298937"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850423"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>Postupy: Přidání obslužné rutiny operace přetažení myší
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -23,7 +23,7 @@ Můžete přidat obslužné rutiny pro události přetažení do DSL, aby uživa
 
  Toto téma popisuje gesta přetažení, která pocházejí z jiných diagramů. Pro události přesunutí a zkopírování v rámci jednoho diagramu zvažte alternativu definování podtřídy `ElementOperations`. Další informace najdete v tématu [přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md). Můžete také přizpůsobit definici DSL.
 
-## <a name="in-this-topic"></a>V tomto tématu
+## <a name="in-this-topic"></a>V tomto tématu
 
 - První dva oddíly popisují alternativní metody definování obslužné rutiny gesta:
 
@@ -170,9 +170,9 @@ using System.Linq;
 
 1. Zpřístupněte zdrojovou DSL přístupovou pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sběrnice modelů:
 
-    1. Stáhněte a nainstalujte rozšíření sběrnice sady Visual Studio, pokud ještě není nainstalované. Další informace najdete v tématu [sada SDK pro vizualizaci a modelování](https://go.microsoft.com/fwlink/?LinkID=185579).
+    1. Stáhněte a nainstalujte rozšíření sběrnice sady Visual Studio, pokud ještě není nainstalované. Další informace najdete v tématu [Visualization and Modeling SDK](https://www.visualstudio.com/).
 
-    2. V Návrháři DSL otevřete soubor definice DSL pro zdrojovou DSL. Klikněte pravým tlačítkem myši na návrhovou plochu a pak klikněte na **povolit ModelBus**. V dialogovém okně vyberte jednu z možností.  Klikněte na tlačítko **OK**. Do řešení DSL se přidá nový projekt "ModelBus".
+    2. V Návrháři DSL otevřete soubor definice DSL pro zdrojovou DSL. Klikněte pravým tlačítkem na návrhové ploše a potom klikněte na tlačítko **povolit Modelbus**. V dialogovém okně vyberte jednu z možností.  Klikněte na tlačítko **OK**. Do řešení DSL se přidá nový projekt "ModelBus".
 
     3. Klikněte na **transformovat všechny šablony** a znovu sestavte řešení.
 

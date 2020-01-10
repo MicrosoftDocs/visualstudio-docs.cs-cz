@@ -14,24 +14,24 @@ ms.assetid: d2620e71-be9e-44c9-b5b7-03a4c8d9cf0b
 caps.latest.revision: 36
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 36491d9d590a45256e297654f71652ab5de5cd98
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 01917b9e78ee6129f09811ca2dc3e18c149c06f6
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299717"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850388"
 ---
 # <a name="visual-studio-isolated-shell"></a>Izolované prostředí sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Izolované prostředí sady Visual Studio umožňuje vytvářet samostatné aplikace, které mohou běžet souběžně s jinými verzemi sady Visual Studio. Používá se primárně pro hostování specializovaných nástrojů, které mohou používat služby sady Visual Studio, ale také vlastní vzhled a branding. Funkce sady Visual Studio a skupiny příkazů nabídky lze snadno zapnout nebo vypnout. Názvy aplikací, ikony aplikací a úvodní obrazovky jsou plně přizpůsobitelné. Seznam přizpůsobitelných funkcí najdete v tématu [přizpůsobení izolovaného prostředí](../extensibility/customizing-the-isolated-shell.md).  
+Izolované prostředí nástroje Visual Studio umožňuje vytvářet samostatné aplikace, které mohou běžet souběžně s jinými verzemi nástroje Visual Studio. Používá se primárně pro hostování specializovaných nástrojů, které mohou používat služby sady Visual Studio, ale také vlastní vzhled a branding. Funkce sady Visual Studio a skupiny příkazů nabídky lze snadno zapnout nebo vypnout. Názvy aplikací, ikony aplikací a úvodní obrazovky jsou plně přizpůsobitelné. Seznam přizpůsobitelných funkcí najdete v tématu [přizpůsobení izolovaného prostředí](../extensibility/customizing-the-isolated-shell.md).  
   
  Chcete-li pracovat s projektem izolovaného prostředí, je nutné nainstalovat sadu Visual Studio SDK. Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
- Chcete-li vytvořit aplikaci izolovaného prostředí, začněte s projektem s izolovaným prostředím sady Visual Studio. Tento projekt obsahuje vše, co potřebujete k vývoji a testování vlastní aplikace izolovaného prostředí. Až budete připraveni k napsání instalačního programu, který nasadí vaši aplikaci, musíte získat Distribuovatelný balíček izolovaného prostředí z [prostředí sady Microsoft Visual Studio (izolovaný režim) Distribuovatelný balíček](https://go.microsoft.com/fwlink/?LinkId=616022).  
+ Chcete-li vytvořit aplikaci izolovaného prostředí, začněte s projektem s izolovaným prostředím sady Visual Studio. Tento projekt obsahuje vše, co potřebujete k vývoji a testování vlastní aplikace izolovaného prostředí. Až budete připraveni k napsání instalačního programu, který nasadí vaši aplikaci, musíte získat Distribuovatelný balíček izolovaného prostředí z [prostředí sady Microsoft Visual Studio (izolovaný režim) Distribuovatelný balíček](https://docs.microsoft.com/collaborate/connect-redirect?ProgramID=8963&InvitationID=VS15-2R69-RB8J).  
   
 > [!NOTE]
-> Předtím, než budete moci získat přístup k distribuovatelnýmu balíčku izolovaného prostředí, budete požádáni o vyplnění stručného průzkumu zákazníka.  Po vyplnění průzkumu budete přesměrováni na stránku pro připojení sady Visual Studio s distribuovatelnými odkazy na stažení balíčku.  Odkazy ke stažení najdete v následujících návštěvách na webu Visual Studio Connect na kartě programy v **integrovaném a izolovaném prostředí sady &#124; Visual Studio 2015** .  
+> Předtím, než budete moci získat přístup k distribuovatelnýmu balíčku izolovaného prostředí, budete požádáni o vyplnění stručného průzkumu zákazníka.  Po jeho vyplnění budete přesměrováni na stránku Visual Studio Connect s odkazy pro stažení distribuovatelných balíčků.  Odkazy ke stažení najdete v následujících návštěvách na webu Visual Studio Connect na kartě programy v **integrovaném a izolovaném prostředí sady &#124; Visual Studio 2015** .  
   
 > [!NOTE]
 > Další informace o tom, jak nasadit izolovanou aplikaci založenou na prostředí, najdete v tématu [Návod: Vytvoření základní aplikace izolovaného prostředí](../extensibility/walkthrough-creating-a-basic-isolated-shell-application.md).  
@@ -56,10 +56,10 @@ Izolované prostředí sady Visual Studio umožňuje vytvářet samostatné apli
   
 |Kategorie funkce|Funkce|  
 |----------------------|-------------|  
-|Funkce IDE|Nastavení importu a exportu<br /><br /> Instalační program ovládacího prvku sady nástrojů<br /><br /> Seznam úkolů & Seznam chyb<br /><br /> Okno Výstup<br /><br /> Úvodní stránka<br /><br /> Okno vlastností<br /><br /> Sada nástrojů<br /><br /> Průzkumník řešení<br /><br /> Okno záložek<br /><br /> zobrazení tříd<br /><br /> prohlížeč objektů<br /><br /> Okno Příkaz<br /><br /> Osnova dokumentu<br /><br /> Prostředky<br /><br /> Externí nástroj<br /><br /> Windows Communication Foundation (WCF) Přidat odkaz na službu<br /><br /> Podpora jazyka LINQ (Language Integrated Query)|  
-|Editor/Návrhář|Nástroje pro procházení kódu (sjednocené hledání, definice zdroje, dědičnost)<br /><br /> IntelliSense<br /><br /> SmartTags<br /><br /> Správce fragmentů kódu<br /><br /> Fragmenty kódu<br /><br /> Refaktoring<br /><br /> Poměrně se seznamem<br /><br /> Filtrování IntelliSense<br /><br /> Okno Definice kódu<br /><br /> Návrhář aplikace<br /><br /> Návrhář formulářů Windows<br /><br /> Návrhář Windows Presentation Foundation (WPF)|  
+|Funkce IDE|Nastavení importu a exportu<br /><br /> Instalační program ovládacího prvku sady nástrojů<br /><br /> Seznam úkolů & Seznam chyb<br /><br /> Okno Výstup<br /><br /> Domovská stránka<br /><br /> Okno vlastností<br /><br /> Sada nástrojů<br /><br /> Průzkumník řešení<br /><br /> Okno záložek<br /><br /> zobrazení tříd<br /><br /> Prohlížeč objektů<br /><br /> Okno Příkaz<br /><br /> Osnova dokumentu<br /><br /> Prostředky<br /><br /> Externí nástroj<br /><br /> Windows Communication Foundation (WCF) Přidat odkaz na službu<br /><br /> Podpora jazyka LINQ (Language Integrated Query)|  
+|Editor/Návrhář|Nástroje pro procházení kódu (sjednocené hledání, definice zdroje, dědičnost)<br /><br /> IntelliSense<br /><br /> SmartTags<br /><br /> Správce fragmentů kódu<br /><br /> Fragmenty kódu<br /><br /> Refaktoring<br /><br /> Poměrně se seznamem<br /><br /> Filtrování IntelliSense<br /><br /> Okno definice kódu<br /><br /> Návrhář aplikace<br /><br /> Návrhář formulářů Windows<br /><br /> Návrhář Windows Presentation Foundation (WPF)|  
 |Ladění|C#Vyhodnocení výrazu<br /><br /> Místní ladění<br /><br /> Spravované ladění<br /><br /> Upravit a pokračovat<br /><br /> Ladění mezi vlákny<br /><br /> Vizualizace<br /><br /> DataTips<br /><br /> Nativní ladění<br /><br /> Ladění skriptů<br /><br /> Ladění spolupráce<br /><br /> Ladění JIT (just-in-time)<br /><br /> Ladění více procesů<br /><br /> Ladění XSLT<br /><br /> Připojit k místnímu procesu<br /><br /> Body trasování<br /><br /> Omezení zarážek|  
-|Data|Průzkumník serveru (jenom zjednodušená data)<br /><br /> Vazba dat na místní data (. MDF nebo. DATABÁZI<br /><br /> Vázání dat na objekt<br /><br /> Vázání dat na webovou službu<br /><br /> Úplná sada ovládacích prvků dat<br /><br /> Editor XML<br /><br /> Vazba dat na místní databázový server<br /><br /> okno Zdroje dat|  
+|Datové|Průzkumník serveru (jenom zjednodušená data)<br /><br /> Vazba dat na místní data (. MDF nebo. DATABÁZI<br /><br /> Vázání dat na objekt<br /><br /> Vázání dat na webovou službu<br /><br /> Úplná sada ovládacích prvků dat<br /><br /> Editor XML<br /><br /> Vazba dat na místní databázový server<br /><br /> okno Zdroje dat|  
 |Web|Editor HTML<br /><br /> Webový prohlížeč<br /><br /> Návrhář webových formulářů<br /><br /> Projekt webu<br /><br /> Projekt webové aplikace|  
 |Rozšiřitelnost|Spotřebovává VSPackage a komponenty MEF.|  
   

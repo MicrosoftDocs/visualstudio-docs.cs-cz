@@ -19,12 +19,12 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 06edf9954134a6110f9285fc744c87c2696b19d5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2e48039a618f7e8eef7f2c6e9f097da87e37d0f5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298276"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847787"
 ---
 # <a name="clickonce-and-authenticode"></a>ClickOnce a kód Authenticode
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ Authenticode * je technologie Microsoftu, která používá standardní kryptogr
 ## <a name="authenticode-and-code-signing"></a>Technologie Authenticode a podepisování kódu  
  *Digitální certifikát* je soubor, který obsahuje kryptografický pár veřejného a privátního klíče, spolu s metadaty, které popisují vydavatele, kterým byl certifikát vystavený, a agenturou, která certifikát vystavila.  
   
- Existují různé typy certifikátů technologie Authenticode. Každá z nich je nakonfigurována pro různé typy podepisování. Pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace musíte mít certifikát Authenticode, který je platný pro podepisování kódu. Pokud se pokusíte podepsat aplikaci [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] s jiným typem certifikátu, například digitálním e-mailovým certifikátem, nebude to fungovat. Další informace najdete v tématu [Úvod do podepisování kódu](https://go.microsoft.com/fwlink/?LinkId=179452).  
+ Existují různé typy certifikátů technologie Authenticode. Každá z nich je nakonfigurována pro různé typy podepisování. Pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace musíte mít certifikát Authenticode, který je platný pro podepisování kódu. Pokud se pokusíte podepsat aplikaci [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] s jiným typem certifikátu, například digitálním e-mailovým certifikátem, nebude to fungovat. Další informace najdete v tématu [Úvod do podepisování kódu](https://msdn.microsoft.com/library/ms537361.aspx).  
   
  Certifikát pro podepsání kódu můžete získat jedním ze tří způsobů:  
   
@@ -65,7 +65,7 @@ Authenticode * je technologie Microsoftu, která používá standardní kryptogr
   
 - Odinstalujte aplikaci a znovu nainstalujte novou verzi s platným certifikátem.  
   
-- Vytvořte sestavení příkazového řádku, které aktualizuje certifikát. Podrobné informace o tomto procesu najdete na [Podpora Microsoftu článku 925521](https://go.microsoft.com/fwlink/?LinkId=179454).  
+- Vytvořte sestavení příkazového řádku, které aktualizuje certifikát. Podrobné informace o tomto procesu najdete na [Podpora Microsoftu článku 925521](https://support.microsoft.com/kb/925521).  
   
 ### <a name="storing-certificates"></a>Ukládání certifikátů  
   

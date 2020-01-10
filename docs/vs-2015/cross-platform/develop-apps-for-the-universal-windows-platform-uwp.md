@@ -9,12 +9,12 @@ caps.latest.revision: 50
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ac6ce00002e40c6d8bd1d5db65b8c7bb5e6bc7cd
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b3f38f519444de7876046baf242f74a18b8c5a59
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299839"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844373"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>Vývoj aplikací pro Univerzální platformu Windows (UWP)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ Univerzální platforma Windows a naše jednoho jádra Windows můžete spustit 
 
 - [Windows 10](https://windows.microsoft.com/windows/downloads)
 
-- [Visual Studio 2015](https://go.microsoft.com/fwlink/p/?LinkId=526725). Ujistěte se, že jsou vybrané nástroje pro vývoj univerzálních aplikací pro Windows ze seznamu volitelných funkcí. Bez těchto nástrojů nebudete moct vytvářet své univerzální aplikace.
+- [Visual Studio 2015](https://visualstudio.microsoft.com/downloads/). Ujistěte se, že jsou vybrané nástroje pro vývoj univerzálních aplikací pro Windows ze seznamu volitelných funkcí. Bez těchto nástrojů nebudete moct vytvářet své univerzální aplikace.
 
   Po instalaci tohoto softwaru je potřeba povolit pro vývoj [zařízení s Windows 10](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx) . (Pro každé zařízení s Windows 10 už nebudete potřebovat vývojářskou licenci.)
 

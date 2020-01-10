@@ -6,12 +6,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 04/02/2019
 ms.assetid: 297D9094-B40F-4C1A-BF19-B14CB735003A
-ms.openlocfilehash: 119c257ef2c1120e8c97995c1fad076bae093ac0
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.openlocfilehash: cb6f9e3a41236d10b0558a508c2531b08ec7fe13
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74983504"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845823"
 ---
 # <a name="troubleshooting-why-can-i-not-see-all-available-templates"></a>Řešení potíží: Proč nemůžu Zobrazit všechny dostupné šablony?
 
@@ -27,4 +27,4 @@ V dialogovém okně Nový projekt se zobrazí pouze šablony komponent, které b
 |Mac     |macOS (kakao)         |
 |.NET Core     |.NET Core         |
 
-Spusťte znovu VisualStudioForMacInstaller. dmg a nainstalujte součásti. Pokud ho už nemáte, můžete si ho stáhnout z webové stránky [Visual Studio pro Mac](https://aka.ms/vsmac) .
+Spusťte znovu VisualStudioForMacInstaller. dmg a nainstalujte součásti. Pokud ho už nemáte, můžete si ho stáhnout z webové stránky [Visual Studio pro Mac](https://visualstudio.microsoft.com/vs/mac/) .

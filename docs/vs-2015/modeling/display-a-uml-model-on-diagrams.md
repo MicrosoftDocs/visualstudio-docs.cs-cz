@@ -11,12 +11,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 67eb1a6ce55292415da4a5c4e363941a4285d8b7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b43d4353e325bb81a29fe39106ac13e1ddcf96a9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296010"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849470"
 ---
 # <a name="display-a-uml-model-on-diagrams"></a>Zobrazení modelu UML v diagramech
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,7 +39,7 @@ V tomto tématu:
 ## <a name="Display"></a>Zobrazení prvku v diagramu
  Při vytváření prvku, jako je například případ použití nebo akce, ho uživatel uvidí v Průzkumníku modelů UML, ale v diagramu se nemusí vždy automaticky zobrazovat. V některých případech je nutné napsat kód pro zobrazení. V následující tabulce jsou shrnuty alternativy.
 
-|Typ elementu|Například|Chcete-li toto zobrazení zobrazit, váš kód musí|
+|Typ elementu|Příklad|Chcete-li toto zobrazení zobrazit, váš kód musí|
 |---------------------|-----------------|-------------------------------------|
 |Třídění|`Class`<br /><br /> `Component`<br /><br /> `Actor`<br /><br /> `Use Case`|Vytvoření přidružených tvarů na zadaných diagramech. Pro jednotlivé klasifikátory můžete vytvořit libovolný počet tvarů.<br /><br /> `diagram.Display<modelElementType>`<br /><br /> `(modelElement, parentShape,`<br /><br /> `xPosition , yPosition);`<br /><br /> Nastavte `parentShape` na `null` pro tvar na nejvyšší úrovni diagramu.<br /><br /> Zobrazení jednoho obrazce v jiném:<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `useCaseDiagram.Display`<br /><br /> `(useCase,`<br /><br /> `subsystemShape,`<br /><br /> `subsystemShape.XPosition + 5,`<br /><br /> `subsystemShape.YPosition + 5);` **Poznámka:** Pokud provedete zobrazení uvnitř transakce **ILinkedUndo** , metoda někdy nevrátí žádnou `IShape`. Ale tvar je správně vytvořený a je přístupný pomocí `IElement.Shapes().`|
 |Podřízená položka třídění|Atribut, operace,<br /><br /> Součást, port|Automatický – není vyžadován žádný kód.<br /><br /> Zobrazuje se jako součást nadřazeného objektu.|
@@ -379,4 +379,4 @@ namespace AlignCommand
 ```
 
 ## <a name="see-also"></a>Viz také
- [Rozšiřování modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md) [Navigace v modelu UML](../modeling/navigate-the-uml-model.md) ukázka [: zarovnání obrazců v nabídce diagramu ukázka příkazu](https://go.microsoft.com/fwlink/?LinkId=213809) [: vytváření elementů, tvarů a stereotypů](https://go.microsoft.com/fwlink/?LinkId=213811)
+ [Rozšiřování modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md) [Navigace v modelu UML](../modeling/navigate-the-uml-model.md) ukázka [: zarovnání obrazců v nabídce diagramu ukázka příkazu](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) [: vytváření elementů, tvarů a stereotypů](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)

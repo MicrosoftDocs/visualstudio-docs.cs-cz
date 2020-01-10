@@ -13,12 +13,12 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f27fede436ea6cabe0aab6480cd4841299c42293
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 3d70a7c8b7dbf6015e992cfabb5204f3b307238a
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302794"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844919"
 ---
 # <a name="model-user-requirements"></a>Modelování uživatelských požadavků
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,10 +48,10 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 > [!NOTE]
 > V těchto tématech "systém" znamená systém nebo aplikaci, kterou vyvíjíte. Může se jednat o velkou kolekci mnoha softwarových a hardwarových komponent. nebo jedna aplikace; nebo softwarová součást v rámci většího systému. V každém případě model požadavků popisuje chování, které je viditelné mimo váš systém bez ohledu na to, jestli jde o uživatelské rozhraní nebo rozhraní API.
 
-## <a name="common-tasks"></a>Common Tasks
+## <a name="common-tasks"></a>Běžné úkoly
  Můžete vytvořit několik různých zobrazení požadavků uživatelů.  Každé zobrazení poskytuje konkrétní typ informací.  Když vytváříte tato zobrazení, je nejlepší je často přesunout z jedné do druhé. Můžete začít z libovolného zobrazení.
 
-|Diagram nebo dokument|Jak popisuje model požadavků|Section|
+|Diagram nebo dokument|Jak popisuje model požadavků|Část|
 |-------------------------|-----------------------------------------------|-------------|
 |Použití diagramu případu|Kdo používá systém a co s ním dělat.|[Popis způsobu použití systému](#UseCases)|
 |Diagram koncepční třídy|Glosář typů, které se používají k popisu požadavků; typy viditelné v rozhraní systému.|[Definování podmínek používaných k popisu požadavků](#RequirementsClasses)|
@@ -87,7 +87,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
   Další informace najdete v následujících tématech:
 
-|Další informace|Pro čtení|
+|Další informace|Číst|
 |--------------------|----------|
 |Podrobnější informace o tom, jak vytvořit případy použití|[Diagramy případů použití UML: Pokyny](../modeling/uml-use-case-diagrams-guidelines.md)|
 |Prvky v diagramu případu použití|[Diagramy případů použití UML: Referenční dokumentace](../modeling/uml-use-case-diagrams-reference.md)|
@@ -132,13 +132,13 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
   Další informace najdete v následujících tématech:
 
-|Další informace|Pro čtení|
+|Další informace|Číst|
 |--------------------|----------|
 |Podrobnější informace o hledání tříd požadavků|[Diagramy tříd UML: Pokyny](../modeling/uml-class-diagrams-guidelines.md)|
 |Prvky v diagramu koncepční třídy|[Diagramy tříd UML: Referenční dokumentace](../modeling/uml-class-diagrams-reference.md)|
 |Vývoj kódu z koncepčních tříd|[Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|
 
- V diagramu koncepční třídy není obvykle vhodné umístit šipky na přidružení, aby představovaly schopnost navigace. Důvodem je, že diagram nepředstavuje implementaci. Asociace představuje vztahy mezi objekty reálného světa. Následující rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nastaví nesměrující se šipky výchozí: [Ukázka: funkce modelování domén UML](https://go.microsoft.com/fwlink/?LinkId=213849).
+ V diagramu koncepční třídy není obvykle vhodné umístit šipky na přidružení, aby představovaly schopnost navigace. Důvodem je, že diagram nepředstavuje implementaci. Asociace představuje vztahy mezi objekty reálného světa. Následující rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nastaví nesměrující se šipky výchozí: [Ukázka: funkce modelování domén UML](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples).
 
 ## <a name="BusinessRules"></a>Zobrazení obchodních pravidel
  Obchodní pravidlo je požadavek, který není přidružený k určitému případu použití, a měl by být pozorován v celém systému.
@@ -155,7 +155,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
  Další informace najdete v následujících tématech:
 
-|Další informace|Pro čtení|
+|Další informace|Číst|
 |--------------------|----------|
 |Podrobnější informace o hledání a záznamu statických obchodních pravidel|[Diagramy tříd UML: Pokyny](../modeling/uml-class-diagrams-guidelines.md)|
 |Prvky v diagramu koncepční třídy|[Diagramy tříd UML: Referenční dokumentace](../modeling/uml-class-diagrams-reference.md)|
@@ -166,9 +166,9 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
 - Výkon
 
-- Zabezpečení
+- Zabezpečení –
 
-- Použitelnosti
+- Použitelnost
 
 - Spolehlivost
 
@@ -180,7 +180,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
   Další informace najdete v následujících tématech:
 
-|Další informace|Pro čtení|
+|Další informace|Číst|
 |--------------------|----------|
 |Připojení dalších dokumentů k případům použití|[Propojení případu použití s dokumenty a diagramy](../modeling/link-a-use-case-to-documents-and-diagrams.md)|
 |Postup vývoje kódu, který dodržuje požadavky na kvalitu služeb|[Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|
@@ -200,7 +200,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
  Další informace najdete v následujících tématech:
 
-|Další informace|Pro čtení|
+|Další informace|Číst|
 |--------------------|----------|
 |Další informace o tom, jak definovat pracovní toky|[Diagramy činnosti UML: Pokyny](../modeling/uml-activity-diagrams-guidelines.md)|
 |Prvky v diagramu činnosti|[Diagramy činnosti UML: Referenční dokumentace](../modeling/uml-activity-diagrams-reference.md)|
@@ -217,7 +217,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
  Další informace najdete v následujících tématech:
 
-|Další informace|Pro čtení|
+|Další informace|Číst|
 |--------------------|----------|
 |Další informace o tom, jak definovat interakce|[Sekvenční diagramy UML: Pokyny](../modeling/uml-sequence-diagrams-guidelines.md)|
 |Prvky v sekvenčním diagramu|[Sekvenční diagramy UML: Referenční dokumentace](../modeling/uml-sequence-diagrams-reference.md)|
@@ -239,4 +239,4 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
   Prozkoumáním vztahů mezi zobrazeními, které různé diagramy poskytují, můžete rychle porozumět hlavním koncepcím, se kterými uživatelé pracují, a pomáhat jim pochopit, co potřebují ze systému. Také se dostanete k lepšímu porozumění požadavkům, o které mají účastníci aspoň určité informace. Můžete naplánovat vývoj těchto funkcí, alespoň ve zjednodušené podobě, v rané fázi projektu, a dovolit uživatelům experimentovat s nimi.
 
 ## <a name="see-also"></a>Viz také
- [Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md) [vyvíjejí testy z modelu](../modeling/develop-tests-from-a-model.md) [použití modelů v modelu procesu vývoje](../modeling/use-models-in-your-development-process.md) [](../modeling/model-your-app-s-architecture.md) [. Ukázka vs Extension: funkce Modelování domény UML](https://go.microsoft.com/fwlink/?LinkId=213849) [Ukázka vs: barva prvků UML podle typu stereotypu](https://go.microsoft.com/fwlink/?LinkID=213841) vs. rozšíření: [propojte elementy UML s diagramy, soubory a dalšími prvky](https://go.microsoft.com/fwlink/?LinkID=213813) [Ukázka vs Extension: zarovnání obrazců na video diagramu UML](https://go.microsoft.com/fwlink/?LinkID=213809) [: modelování obchodní domény](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)
+ [Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md) [vyvíjejí testy z modelu](../modeling/develop-tests-from-a-model.md) [použití modelů v modelu procesu vývoje](../modeling/use-models-in-your-development-process.md) [](../modeling/model-your-app-s-architecture.md) [. Ukázka vs Extension: funkce Modelování domény UML](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) [Ukázka vs: barva prvků UML podle typu stereotypu](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) vs. rozšíření: [propojte elementy UML s diagramy, soubory a dalšími prvky](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) [Ukázka vs Extension: zarovnání obrazců na video diagramu UML](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) [: modelování obchodní domény](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)

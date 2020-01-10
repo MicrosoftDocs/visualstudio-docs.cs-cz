@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9d7736365e8e2bb371a71580492401bb2660fcc3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 34ceb2ec7cc923f6642977cf4c70fbfae07bf523
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62429655"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848424"
 ---
 # <a name="how-to-select-a-python-environment-for-a-project"></a>Jak vybrat prostředí Pythonu pro projekt
 
@@ -46,22 +46,22 @@ V místní nabídce **prostředí Pythonu** uzel poskytuje také další příka
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-Chcete-li změnit prostředí pro projekt, klikněte pravým tlačítkem na **prostředí Pythonu** uzel a vyberte možnost **přidat prostředí**, nebo vyberte **přidat prostředí** z prostředí rozevírací seznam v panelu nástrojů Pythonu.
+Chcete-li změnit prostředí pro projekt, klikněte pravým tlačítkem myši na uzel **prostředí Python** a vyberte možnost **Přidat prostředí**nebo vyberte možnost **Přidat prostředí** z rozevíracího seznamu prostředí na panelu nástrojů Python.
 
-Jednou **přidat prostředí** dialogové okno, vyberte **existující prostředí** kartu a potom vyberte nové prostředí z **prostředí** rozevírací seznam:
+Jednou v dialogovém okně **Přidat prostředí** vyberte kartu **existující prostředí** a pak v rozevíracím seznamu **prostředí** vyberte nové prostředí:
 
 ![Výběr prostředí projektu v dialogovém okně Přidat prostředí](media/environments/environments-project-2019.png)
 
-Pokud jste už přidali prostředí, než globální výchozí nastavení projektu, budete muset aktivovat nově přidané prostředí. Klikněte pravým tlačítkem na příslušné prostředí v rámci **prostředí Pythonu** uzel a vyberte možnost **aktivovat prostředí**. Chcete-li odebrat prostředí z projektu, vyberte **odebrat**.
+Pokud jste už přidali jiné prostředí, než je globální výchozí nastavení projektu, možná budete muset aktivovat nově přidané prostředí. Klikněte pravým tlačítkem na toto prostředí v uzlu **prostředí Python** a vyberte **aktivovat prostředí**. Chcete-li odebrat prostředí z projektu, vyberte možnost **Odebrat**.
 
-![Aktivace a odstranění prostředí projektu](media/environments/environments-project-add-remove-2019.png)
+![Aktivace a odebrání prostředí projektu](media/environments/environments-project-add-remove-2019.png)
 ::: moniker-end
 
 ## <a name="use-virtual-environments"></a>Použití virtuálního prostředí
 
 Virtuální prostředí již není jedinečnou kombinaci konkrétní interpret Pythonu a konkrétní sadu knihoven, které se liší od jiných prostředí conda a globální. Virtuální prostředí je specifické pro projekt a je udržován ve složce projektu. Tato složka obsahuje knihovny nainstalované prostředí společně s *pyvenv.cfg* soubor, který určuje cestu k prostředí *základní interpret* jinde v systému souborů. (To znamená, do virtuálního prostředí neobsahuje kopii překladač pouze odkaz na něj.)
 
-Výhoda použití virtuální prostředí je, že při vývoji projektu v čase, virtuální prostředí vždy odráží přesné závislosti projektu. (Sdílené globální prostředí, na druhé straně obsahuje libovolný počet knihoven, zda je použijete v projektu nebo ne). Potom můžete snadno vytvořit *souboru requirements.txt* souboru z virtuálního prostředí, které se pak použije k opětovné instalaci těchto závislostí na jiném počítači vývojové nebo produkční prostředí. Další informace najdete v tématu [spravovat vyžadované balíčky pomocí souboru requirements.txt](managing-required-packages-with-requirements-txt.md).
+Výhoda použití virtuální prostředí je, že při vývoji projektu v čase, virtuální prostředí vždy odráží přesné závislosti projektu. (Sdílené globální prostředí, na druhé straně obsahuje libovolný počet knihoven, ať už je používáte v projektu, nebo ne.) Pak můžete snadno vytvořit soubor *. txt požadavků* z virtuálního prostředí, který se pak použije k přeinstalování těchto závislostí na jiném vývojovém nebo produkčním počítači. Další informace najdete v tématu [spravovat vyžadované balíčky pomocí souboru requirements.txt](managing-required-packages-with-requirements-txt.md).
 
 Když otevřete projekt v sadě Visual Studio, který obsahuje *souboru requirements.txt* souboru, Visual Studio automaticky nabízí možnost znovu vytvořit virtuální prostředí. Na počítačích, kde není nainstalovaná sada Visual Studio, můžete použít `pip install -r requirements.txt` obnovení balíčků.
 
@@ -76,7 +76,7 @@ Když do projektu se přidá do virtuálního prostředí, zobrazí se v **prost
 ::: moniker range="vs-2017"
 ### <a name="create-a-virtual-environment"></a>Vytvoření virtuálního prostředí
 
-Přímo v sadě Visual Studio můžete vytvořit nové virtuální prostředí následujícím způsobem:
+Nové virtuální prostředí můžete vytvořit přímo v aplikaci Visual Studio následujícím způsobem:
 
 1. Klikněte pravým tlačítkem na **prostředí Pythonu** v **Průzkumníka řešení** a vyberte **přidat virtuální prostředí**, který se zobrazí následující dialogové okno:
 
@@ -84,7 +84,7 @@ Přímo v sadě Visual Studio můžete vytvořit nové virtuální prostředí n
 
 1. V **umístění virtuálního prostředí** pole, zadejte cestu pro virtuální prostředí. Pokud zadáte pouze název, vytvoření virtuálního prostředí v rámci aktuálního projektu v podsložce s názvem.
 
-1. Jako základní překladač vyberte prostředí a vyberte **vytvořit**. Visual Studio zobrazí indikátor průběhu, zatímco prostředí nakonfiguruje a stáhne všechny potřebné balíčky. Po dokončení se virtuální prostředí se zobrazí v **prostředí Pythonu** okno pro projekt.
+1. Jako základní překladač vyberte prostředí a vyberte **vytvořit**. Visual Studio zobrazí indikátor průběhu, zatímco prostředí nakonfiguruje a stáhne všechny potřebné balíčky. Po dokončení se virtuální prostředí zobrazí v okně **prostředí Pythonu** pro projekt, který ho obsahuje.
 
 1. Ve výchozím nastavení není aktivován virtuální prostředí. Chcete-li aktivovat pro projekt, pravým tlačítkem myši a vyberte **aktivovat prostředí**.
 
@@ -111,30 +111,30 @@ Pokud už máte vytvořený virtuální prostředí jinde, můžete si ji můžo
 ::: moniker range=">=vs-2019"
 ### <a name="create-a-virtual-environment"></a>Vytvoření virtuálního prostředí
 
-Přímo v sadě Visual Studio můžete vytvořit nové virtuální prostředí následujícím způsobem:
+Nové virtuální prostředí můžete vytvořit přímo v aplikaci Visual Studio následujícím způsobem:
 
-1. Klikněte pravým tlačítkem na **prostředí Pythonu** v **Průzkumníka řešení** a vyberte **přidat prostředí**, nebo vyberte **přidat prostředí** z prostředí, v rozevíracím seznamu na panelu nástrojů Pythonu. V **přidat prostředí** dialogové okno, které se zobrazí, vyberte **virtuální prostředí** kartu:
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **prostředí Pythonu** a vyberte **Přidat prostředí**nebo v rozevíracím seznamu prostředí na panelu nástrojů Python vyberte **Přidat prostředí** . V dialogovém okně **Přidat prostředí** , které se zobrazí, vyberte kartu **virtuální prostředí** :
 
     ![Karta virtuální prostředí v dialogovém okně Přidat prostředí](media/environments/environments-add-virtual-1-2019.png)
 
-1. Zadejte název virtuálního prostředí, vyberte základní interpret a ověřte jeho umístění. V části **instalovat balíčky ze souboru**, zadejte cestu k *souboru requirements.txt* souborů v případě potřeby.
+1. Zadejte název virtuálního prostředí, vyberte základní interpret a ověřte jeho umístění. V části **instalovat balíčky ze souboru**zadejte cestu k souboru *požadavků. txt* , pokud je to potřeba.
 
-1. Přečtěte si další možnosti v dialogovém okně:
+1. Projděte si další možnosti v dialogovém okně:
 
     | Možnost | Popis |
     | --- | --- |
-    | Nastavit jako aktuální prostředí | Po vytvoření prostředí se aktivuje nové prostředí ve zvoleném projektu. |
-    | Nastavit jako výchozí prostředí pro nové projekty | Automaticky nastaví a aktivuje virtuální prostředí v jakékoli nové projekty vytvořené v sadě Visual Studio. Při použití této možnosti virtuální prostředí musí být umístěné ve umístění mimo konkrétním projektu.  |
-    | Zobrazit v okně prostředí Pythonu | Určuje, jestli se má otevřít **prostředí Pythonu** okno po vytvoření prostředí. |
-    | Nastavit toto prostředí globálně dostupný | Určuje, zda virtuální prostředí taky pracuje jako globálního prostředí. Při použití této možnosti virtuální prostředí musí být umístěné ve umístění mimo konkrétním projektu. |
+    | Nastavit jako aktuální prostředí | Aktivuje nové prostředí ve vybraném projektu po vytvoření prostředí. |
+    | Nastavit jako výchozí prostředí pro nové projekty | Automaticky nastaví a aktivuje virtuální prostředí v jakémkoli novém projektu vytvořeném v sadě Visual Studio. Při použití této možnosti by se mělo virtuální prostředí umístit do umístění mimo konkrétní projekt.  |
+    | Zobrazit v okně prostředí Pythonu | Určuje, jestli se po vytvoření prostředí má otevřít okno **prostředí Pythonu** . |
+    | Nastavit toto prostředí globálně jako dostupné | Určuje, jestli virtuální prostředí funguje taky jako globální prostředí. Při použití této možnosti by se mělo virtuální prostředí umístit do umístění mimo konkrétní projekt. |
 
-1. Vyberte **vytvořit** pro dokončení virtuálního prostředí. Visual Studio zobrazí indikátor průběhu, zatímco prostředí nakonfiguruje a stáhne všechny potřebné balíčky. Po dokončení se virtuální prostředí je aktivován a zobrazí se v **prostředí Pythonu** uzel v **Průzkumníka řešení** a **prostředí Pythonu** okně obsahující projekt.
+1. Výběrem **vytvořit** dokončete virtuální prostředí. Visual Studio zobrazí indikátor průběhu, zatímco prostředí nakonfiguruje a stáhne všechny potřebné balíčky. Po dokončení se virtuální prostředí aktivuje a zobrazí se v uzlu **prostředí Pythonu** v **Průzkumník řešení** a v okně **prostředí Pythonu** pro projekt, který ho obsahuje.
 
 ### <a name="activate-an-existing-virtual-environment"></a>Aktivovat existující virtuální prostředí
 
 Pokud už máte vytvořený virtuální prostředí jinde, můžete si ji můžou aktivovat pro projekt následujícím způsobem:
 
-1. Klikněte pravým tlačítkem na **prostředí Pythonu** v **Průzkumníka řešení** a vyberte **přidat prostředí**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **prostředí Pythonu** a vyberte **Přidat prostředí**.
 
 1. V **Procházet** zobrazeném dialogovém okně přejděte a vyberte složku, která obsahuje virtuální prostředí, a vyberte **OK**. Pokud sada Visual Studio zjistí *souboru requirements.txt* soubor v daném prostředí dotazem, zda k instalaci těchto balíčků.
 
@@ -154,22 +154,22 @@ V Průzkumníku řešení rozbalte uzel pro jakékoli konkrétní prostředí ry
 ![Balíčky Pythonu pro prostředí v Průzkumníku řešení](media/environments/environments-installed-packages.png)
 
 ::: moniker range="vs-2017"
-Chcete-li nainstalovat nové balíčky, klikněte pravým tlačítkem na prostředí a vyberte **instalovat balíček Pythonu** přepnout na příslušnou **balíčky** kartu **prostředí Pythonu** okno. Zadejte hledání termín (obvykle název balíčku) a Visual Studio zobrazí odpovídající balíčky.
+Chcete-li nainstalovat nové balíčky, klikněte pravým tlačítkem myši na prostředí a vyberte možnost **instalovat balíček python** a přepněte na kartu příslušné **balíčky** v okně **prostředí Pythonu** . Zadejte hledání termín (obvykle název balíčku) a Visual Studio zobrazí odpovídající balíčky.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Chcete-li nainstalovat nové balíčky, klikněte pravým tlačítkem na prostředí a vyberte **Správa balíčků Python** (nebo pomocí balíčku tlačítka na panelu nástrojů Pythonu) přejděte na příslušnou **balíčky** kartu **Prostředí Pythonu** okna. Jednou **balíčky** kartu, zadejte hledání termín (obvykle název balíčku) a Visual Studio zobrazí odpovídající balíčky.
+Pokud chcete nainstalovat nové balíčky, klikněte pravým tlačítkem na prostředí a vyberte **Spravovat balíčky Pythonu** (nebo použijte tlačítko balíček na panelu nástrojů Pythonu) a přepněte na kartu příslušné **balíčky** v okně **prostředí Pythonu** . Jednou na kartě **balíčky** zadejte hledaný termín (obvykle název balíčku) a Visual Studio zobrazí vyhovující balíčky.
 ::: moniker-end
 
-V sadě Visual Studio, balíčky (a závislosti) pro většinu prostředí se stáhnou z [indexu balíčků Pythonu (PyPI)](https://pypi.org), kde můžete také vyhledat dostupné balíčky. Stavový řádek sady Visual Studio a okno výstup zobrazí informace o instalaci. Chcete-li odinstalovat balíček, pravým tlačítkem myši a vyberte **odebrat**.
+V sadě Visual Studio se balíčky (a závislosti) pro většinu prostředí stahují z [indexu balíčku Pythonu (PyPi)](https://pypi.org), kde můžete také vyhledat dostupné balíčky. Stavový řádek sady Visual Studio a okno výstup zobrazí informace o instalaci. Chcete-li odinstalovat balíček, pravým tlačítkem myši a vyberte **odebrat**.
 
-Správce balíčků conda obecně používá `https://repo.continuum.io/pkgs/` jako výchozí kanál, ale jiné kanály jsou k dispozici. Další informace najdete v části [správě kanálů](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-channels.html) (docs.conda.io).
+Správce balíčků conda obecně používá `https://repo.continuum.io/pkgs/` jako výchozí kanál, ale další kanály jsou k dispozici. Další informace najdete v tématu [Správa kanálů](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-channels.html) (docs.conda.IO).
 
 Mějte na paměti, že zobrazené položky vždy nemusí být přesné a instalace a odinstalace nemusí být spolehlivé nebo nejsou k dispozici. Visual Studio pomocí Správce balíčků pip, pokud je k dispozici a stáhne a nainstaluje ho v případě potřeby. Visual Studio můžete také použít Správce balíčků easy_install. Balíčky nainstalované pomocí `pip` nebo `easy_install` z příkazového řádku se také zobrazují.
 
 Všimněte si také, Visual Studio nepodporuje v současné době použití `conda` nainstalovat balíčky prostředí conda. Použití `conda` příkazovém řádku místo.
 
 > [!Tip]
-> Běžné situace, ve kterém se nepodařilo nainstalovat balíček pip je, když balíček obsahuje zdrojový kód pro nativní součásti v  *\*.pyd* soubory. Bez požadovanou verzi sady Visual Studio nainstalované nejde zkompilovat pip tyto komponenty. Chybová zpráva zobrazená v této situaci je **Chyba: Nepovedlo se najít vcvarsall.bat**. `easy_install` často je možné stáhnout předem zkompilované binární soubory, a můžete si stáhnout vhodný kompilátoru pro starší verze jazyka Python z [ https://aka.ms/VCPython27 ](https://aka.ms/VCPython27). Další podrobnosti najdete v tématu [jak zacházet s usnadnit práci z "nelze najít vcvarsallbat"](https://devblogs.microsoft.com/python/unable-to-find-vcvarsall-bat/) na Pythonu blogu týmu nástroje.
+> Běžné situace, ve kterém se nepodařilo nainstalovat balíček pip je, když balíček obsahuje zdrojový kód pro nativní součásti v  *\*.pyd* soubory. Bez požadovanou verzi sady Visual Studio nainstalované nejde zkompilovat pip tyto komponenty. Chybová zpráva zobrazená v této situaci je **Chyba: nepovedlo se najít vcvarsall.bat**. `easy_install` často je možné stáhnout předem zkompilované binární soubory, a můžete si stáhnout vhodný kompilátoru pro starší verze jazyka Python z [ https://www.microsoft.com/download/details.aspx?id=44266 ](https://www.microsoft.com/download/details.aspx?id=44266). Další podrobnosti najdete v tématu [jak zacházet s usnadnit práci z "nelze najít vcvarsallbat"](https://devblogs.microsoft.com/python/unable-to-find-vcvarsall-bat/) na Pythonu blogu týmu nástroje.
 
 ## <a name="see-also"></a>Viz také:
 

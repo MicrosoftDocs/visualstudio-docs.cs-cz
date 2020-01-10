@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.workload: multiple
 ms.date: 07/25/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 48754834295a552e3b189ff05ff2d1c12cd221a3
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: b04f0e7dad4847e654560139f9a3978a4d85685b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75400908"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846921"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>Ladění aplikací v místním kontejneru Docker
 
@@ -138,6 +138,6 @@ Podrobnější informace získáte v tématu [jak Visual Studio](container-build
 ## <a name="more-about-docker-with-visual-studio-windows-and-azure"></a>Další informace o Docker se sadou Visual Studio, Windows a Azure
 
 * Další informace o [vývoji kontejnerů pomocí sady Visual Studio](/visualstudio/containers).
-* Informace o sestavení a nasazení kontejneru Docker najdete v tématu [integrace Docker pro Azure Pipelines](https://aka.ms/dockertoolsforvsts).
-* Rejstřík článků s Windows serverem a nano serverem najdete v tématu [informace o kontejnerech Windows](https://aka.ms/containers).
+* Informace o sestavení a nasazení kontejneru Docker najdete v tématu [integrace Docker pro Azure Pipelines](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker).
+* Rejstřík článků s Windows serverem a nano serverem najdete v tématu [informace o kontejnerech Windows](https://docs.microsoft.com/virtualization/windowscontainers/).
 * Přečtěte si o [službě Azure Kubernetes](https://azure.microsoft.com/services/kubernetes-service/) a Projděte si [dokumentaci ke službě Azure Kubernetes](/azure/aks).

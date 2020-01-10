@@ -9,12 +9,12 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7d740f1cc6c19e8d3b53dc084d9de01547369337
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 167fc2f80a8eaeddb121d208f714fe134c63a198
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299536"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75843881"
 ---
 # <a name="wpf-community-resources"></a>Komunitní prostředky pro WPF
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "74299536"
 Microsoft zveřejňuje celou řadu komunitních prostředků, abyste se dozvěděli o Windows Presentation Foundation (WPF), včetně blogů vyprodukovaných členy týmu WPF a vedoucí komunity, fóra a názory na Microsoft Connect. Centre.
 
 ## <a name="community"></a>Komunita
- [Fórum WPF](https://go.microsoft.com/fwlink/?LinkId=187440)
+ [Fórum WPF](https://social.msdn.microsoft.com/forums/en-US/wpf/threads/)
 
  [Stack Overflow](https://stackoverflow.com/questions/tagged/wpf)
 

@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 6c9c2e281ace3b483d1f37552fba0cc6f490978a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cd26e3d37779337ee39a1afa68aa3ba9ab56d376
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298125"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846545"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite (skript Windows PowerShellu)
 ## <a name="syntax"></a>Syntaxe
@@ -32,17 +32,17 @@ Publish-WebApplicationWebSite
 -Verbose
 ```
 
-## <a name="configuration"></a>Konfiguraci
+## <a name="configuration"></a>Konfigurace
 Cesta ke konfiguračnímu souboru JSON, který popisuje podrobnosti nasazení.
 
 | Parametr | Výchozí hodnota |
 | --- | --- |
 | Aliasy |žádná |
-| Požadováno? |true |
+| Povinné? |true |
 | Pozice |pojmenované |
 | Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false (nepravda) |
-| Přijmout zástupné znaky? |false (nepravda) |
+| Přijmout vstup kanálu? |false |
+| Přijmout zástupné znaky? |false |
 
 ## <a name="subscriptionname"></a>SubscriptionName
 Název předplatného Azure, ve kterém chcete vytvořit web.
@@ -50,23 +50,23 @@ Název předplatného Azure, ve kterém chcete vytvořit web.
 | Parametr | Výchozí hodnota |
 | --- | --- |
 | Aliasy |žádná |
-| Požadováno? |false (nepravda) |
+| Povinné? |false |
 | Pozice |pojmenované |
 | Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false (nepravda) |
-| Přijmout zástupné znaky? |false (nepravda) |
+| Přijmout vstup kanálu? |false |
+| Přijmout zástupné znaky? |false |
 
 ## <a name="webdeploypackage"></a>WebDeployPackage
-Cesta k balíčku pro nasazení webu, který má být publikován na webu. Tento balíček můžete vytvořit pomocí Průvodce publikováním webu v aplikaci Visual Studio. Další informace najdete v tématu [Začínáme s Azure Cloud Services a ASP.NET](https://go.microsoft.com/fwlink/p/?LinkID=623089).
+Cesta k balíčku pro nasazení webu, který má být publikován na webu. Tento balíček můžete vytvořit pomocí Průvodce publikováním webu v aplikaci Visual Studio. Další informace najdete v tématu [Začínáme s Azure Cloud Services a ASP.NET](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publish-webapplicationwebsite-windows-powershell-script?view=vs-2019).
 
 | Parametr | Výchozí hodnota |
 | --- | --- |
 | Aliasy |žádná |
-| Požadováno? |false (nepravda) |
+| Povinné? |false |
 | Pozice |pojmenované |
 | Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false (nepravda) |
-| Přijmout zástupné znaky? |false (nepravda) |
+| Přijmout vstup kanálu? |false |
+| Přijmout zástupné znaky? |false |
 
 ## <a name="databaseserverpassword"></a>DatabaseServerPassword
 Uživatelské jméno a heslo pro databázi SQL v Azure.
@@ -74,11 +74,11 @@ Uživatelské jméno a heslo pro databázi SQL v Azure.
 | Parametr | Výchozí hodnota |
 | --- | --- |
 | Aliasy |žádná |
-| Požadováno? |false (nepravda) |
+| Povinné? |false |
 | Pozice |pojmenované |
 | Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false (nepravda) |
-| Přijmout zástupné znaky? |false (nepravda) |
+| Přijmout vstup kanálu? |false |
+| Přijmout zástupné znaky? |false |
 
 ## <a name="sendhostmessagestooutput"></a>SendHostMessagesToOutput
 Pokud je nastaveno na true, vytiskněte zprávy ze skriptu do výstupního datového proudu.
@@ -86,11 +86,11 @@ Pokud je nastaveno na true, vytiskněte zprávy ze skriptu do výstupního datov
 | Parametr | Výchozí hodnota |
 | --- | --- |
 | Aliasy |žádná |
-| Požadováno? |false (nepravda) |
+| Povinné? |false |
 | Pozice |pojmenované |
-| Výchozí hodnota |false (nepravda) |
-| Přijmout vstup kanálu? |false (nepravda) |
-| Přijmout zástupné znaky? |false (nepravda) |
+| Výchozí hodnota |false |
+| Přijmout vstup kanálu? |false |
+| Přijmout zástupné znaky? |false |
 
 ## <a name="remarks"></a>Poznámky
 Úplné vysvětlení způsobu použití skriptu k vytváření vývojových a testovacích prostředí najdete v tématu [použití skriptů prostředí Windows PowerShell pro publikování do vývojových a testovacích prostředí](vs-azure-tools-publishing-using-powershell-scripts.md).

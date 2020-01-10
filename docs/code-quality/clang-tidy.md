@@ -8,12 +8,12 @@ author: frozenpandaman
 ms.author: efessler
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e226ac6c83839474b9d8ac6be7fb57e376de4a4f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 25320da07249abee0ab0cddd48662585a7a809dd
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745982"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846750"
 ---
 # <a name="using-clang-tidy-in-visual-studio"></a>Použití Clang-uklizený v aplikaci Visual Studio
 
@@ -28,7 +28,7 @@ Clang-uklizený se spouští po úspěšné kompilaci; Možná budete muset vyř
 
 ## <a name="msbuild"></a>MSBuild
 
-Clang-uklizený můžete nakonfigurovat tak, aby běžela jako součást analýzy kódu a sestavení pod stránkou**obecné**  >  pro **analýzu kódu** v projektu okno Vlastnosti. Možnosti pro konfiguraci tohoto nástroje najdete v podnabídce Clang-uklizený.
+Clang-uklizený můžete nakonfigurovat tak, aby běžela jako součást analýzy kódu a sestavení pod stránkou **obecné** > pro **analýzu kódu** v projektu okno Vlastnosti. Možnosti pro konfiguraci tohoto nástroje najdete v podnabídce Clang-uklizený.
 
 Další informace naleznete v tématu [Postupy: nastavení vlastností analýzy kódu pro projekty C/C++ ](../code-quality/how-to-set-code-analysis-properties-for-c-cpp-projects.md).
 
@@ -44,7 +44,7 @@ Pokud není zadána žádná z možností "Enable", sada Visual Studio vybere N�
 
 ## <a name="warning-display"></a>Zobrazení upozornění
 
-Clang-uklizený spustí výsledek v upozorněních zobrazených v Seznam chyb a jako editor vlnovek pod relevantními oddíly kódu. Použijte sloupec Category v Seznam chyb k řazení a uspořádání upozornění Clang-uklizený. Můžete nakonfigurovat upozornění v editoru tak, že v nabídce **nástroje**  > **Možnosti**zakážete nastavení zakázat vlnovky analýzy kódu.
+Clang-uklizený spustí výsledek v upozorněních zobrazených v Seznam chyb a jako editor vlnovek pod relevantními oddíly kódu. Použijte sloupec Category v Seznam chyb k řazení a uspořádání upozornění Clang-uklizený. Můžete nakonfigurovat upozornění v editoru tak, že v nabídce **nástroje** > **Možnosti**zakážete nastavení zakázat vlnovky analýzy kódu.
 
 ## <a name="clang-tidy-configuration"></a>Konfigurace Clang-uklizený
 
@@ -52,5 +52,5 @@ Můžete nakonfigurovat kontroly, které Clang-uklizený spouští v rámci sady
 
 ## <a name="see-also"></a>Viz také:
 
-- [Podpora Clang/LLVM pro projekty MSBuild](https://aka.ms/cpp/clangmsbuild)
-- [Podpora Clang/LLVM pro projekty CMake](https://aka.ms/cpp/clangcmake)
+- [Podpora Clang/LLVM pro projekty MSBuild](https://devblogs.microsoft.com/cppblog/clang-llvm-support-for-msbuild-projects/)
+- [Podpora Clang/LLVM pro projekty CMake](https://devblogs.microsoft.com/cppblog/visual-studio-cmake-support-clang-llvm-cmake-3-14-vcpkg-and-performance-improvements/)

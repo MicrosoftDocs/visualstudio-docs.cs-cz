@@ -16,12 +16,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 278858eb28e0db7edd2694397cc7b24f1cfec301
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: ac188bcf7975b8da1bbc71a90d3b6c34b095d424
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296829"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845582"
 ---
 # <a name="walkthrough-creating-a-code-snippet"></a>Návod: Vytvoření fragmentu kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "74296829"
 Fragment kódu můžete vytvořit pouze s několika kroky. Vše, co potřebujete udělat, je vytvořit soubor XML, vyplnit příslušné prvky a přidat do něj svůj kód. Do kódu lze také přidat odkazy a náhradní parametry. Fragment kódu můžete přidat do instalace sady Visual Studio pomocí tlačítka importovat na Správce fragmentů kódů (**nástroje/Správce fragmentů kódů**).
 
 > [!TIP]
-> Informace o tom, jak snadněji psát fragmenty kódu, najdete na webu CodePlex, kde najdete nástroje komunity, jako je [Editor fragmentů](https://go.microsoft.com/fwlink/?LinkId=251033).
+> Informace o tom, jak snadněji psát fragmenty kódu, najdete na webu CodePlex, kde najdete nástroje komunity, jako je [Editor fragmentů](https://snippeteditor.codeplex.com/).
 
 ## <a name="snippet-template"></a>Šablona fragmentu
  Následuje základní šablona fragmentu kódu:
@@ -75,7 +75,7 @@ Fragment kódu můžete vytvořit pouze s několika kroky. Vše, co potřebujete
 
 1. Do instalace sady Visual Studio můžete přidat vlastní fragmenty pomocí Správce fragmentů kódů. Otevřete Správce fragmentů kódů (**nástroje/Správce fragmentů kódů**).
 
-2. Klikněte na tlačítko **Import**.
+2. Klikněte na tlačítko **Import** .
 
 3. Přejděte do umístění, kam jste uložili fragment kódu v předchozím postupu, vyberte jej a klikněte na tlačítko **otevřít**.
 

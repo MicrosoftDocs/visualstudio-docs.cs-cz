@@ -29,12 +29,12 @@ caps.latest.revision: 245
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b25d23b7c65742ffddadbe178d7550dc1794414a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4395dbc212514a71f8c4119d8f0778280dee81aa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296330"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847634"
 ---
 # <a name="map-dependencies-across-your-solutions"></a>Mapování závislostí napříč vaším řešením
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,11 +45,11 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
  **Tady jsou některá videa**:
 
-- [Pochopení závislostí kódu pomocí vizualizace](https://go.microsoft.com/fwlink/?LinkID=252065)
+- [Pochopení závislostí kódu pomocí vizualizace](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Understand-your-code-dependencies-through-visualization)
 
-- [Vizualizace dopadu změny](https://go.microsoft.com/fwlink/?LinkID=252068)
+- [Vizualizace dopadu změny](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Visualize-the-impact-of-a-change)
 
-- [Porozumění komplexnímu kódu pomocí map kódu](https://go.microsoft.com/fwlink/?LinkID=259869)
+- [Porozumění komplexnímu kódu pomocí map kódu](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Understanding-complex-code-with-Code-Map-ENU)
 
 ## <a name="GetStarted"></a>Začínáme s mapami kódu
  Pokud **chcete použít mapy kódu, budete potřebovat jednu z těchto**akcí:
@@ -105,7 +105,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
 1. Otevřete nabídku **Architektura** a vyberte možnost **Nová mapa kódu**.
 
-     \- nebo-
+     \- nebo –
 
 2. Otevřete nabídku **soubor** a zvolte položku **Nový** a zvolte možnost **soubor**.
 
@@ -286,7 +286,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 ## <a name="SeeSourceHeader"></a>Zobrazit závislosti mezi zdrojovými C++ soubory C a soubory hlaviček
  Pokud chcete vytvořit více úplných map pro C++ projekty, nastavte u těchto projektů možnost Procházet informace kompilátoru ( **/fr**). Viz [/fr,/fr (Create. Soubor SBR)](https://msdn.microsoft.com/library/3fd8f88b-3924-4feb-9393-287036a28896). Jinak se objeví zpráva s dotazem, zda chcete tuto možnost nastavit. Pokud vyberete **OK**, tato možnost nastaví možnost pouze pro aktuální mapu. Můžete zvolit, že se má skrýt zpráva u všech pozdějších map. Pokud tuto zprávu skryjete, můžete ji znovu zobrazit. Nastavte následující klíč registru, který `0` nebo odstraní klíč:
 
- **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\14.0\NativeProvider: AutoEnableSbr**
+ **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\NativeProvider : AutoEnableSbr**
 
  Když otevřete řešení, které obsahuje projekty Visual C++, může trvat nějakou dobu, než se aktualizuje databáze technologie IntelliSense. Během této doby možná nebudete moci vytvořit mapy kódu pro soubory hlaviček (. h nebo `#include`), dokud nebude dokončena aktualizace databáze technologie IntelliSense. Na stavovém řádku v dolní části sady Visual Studio můžete sledovat průběh aktualizace. Chcete-li vyřešit problémy nebo zprávy, které se zobrazí, protože některá nastavení technologie IntelliSense jsou zakázaná, přečtěte si téma [řešení potíží s mapami pro C a C++ ](#Troubleshooting)
 
@@ -307,7 +307,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
   Tyto problémy se mohou vyskytnout při vytváření map kódu pro jazyk C++ C a kód:
 
-|**Chybu**|**Možná příčina**|**Rozhodnutí**|
+|**Problém**|**Možná příčina**|**Řešení**|
 |---------------|------------------------|--------------------|
 |Nepovedlo se vygenerovat mapu kódu.|V řešení nebyly úspěšně sestaveny žádné projekty.|Opravte chyby sestavení, k nimž došlo, a potom znovu vygenerujte mapu.|
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] přestane reagovat při pokusu o vygenerování mapy kódu z nabídky **Architektura** .|Soubor databáze programů (.pdb) může být poškozen.<br /><br /> Soubor .pdb ukládá informace o ladění, jako je typ, metoda a informace zdrojového souboru.|Znovu sestavte řešení a potom akci opakujte.|
@@ -329,7 +329,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
 - Vypněte automatické přidávání nadřazených položek pomocí tlačítka **Zahrnout nadřazené** položky na panelu nástrojů mapa kódu.
 
-- Upravte soubor s mapou kódu přímo pro odebrání uzlů a propojení, které nepotřebujete. Změna mapy nemá vliv na podkladový kód. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+- Upravte soubor s mapou kódu přímo pro odebrání uzlů a propojení, které nepotřebujete. Změna mapy nemá vliv na podkladový kód. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
   ![Přeskočit sestavení a zahrnout nadřízených tlačítek](../modeling/media/codemapsfilterskipbuildicons.png "CodeMapsFilterSkipBuildIcons")
 
@@ -373,7 +373,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
 2. Přejděte do umístění, kam chcete soubor uložit.
 
-3. Pojmenujte mapu kódu. Ujistěte se, že je pole **Uložit jako typ** nastaveno na **soubory XPS (\*. XPS)** . Klikněte na tlačítko **Uložit**.
+3. Pojmenujte mapu kódu. Ujistěte se, že je pole **Uložit jako typ** nastaveno na **soubory XPS (\*. XPS)** . Zvolte **Uložit**.
 
 ## <a name="what-else-can-i-do"></a>Co dalšího mohu udělat?
 

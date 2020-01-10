@@ -12,12 +12,12 @@ manager: crdun
 ms.workload:
 - azure
 - unity
-ms.openlocfilehash: 454cb3617bb918b67784ebd2a3388ac6ee9f3826
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c0a2cc0464d643fdf6f17da045b3d56ccc678fb9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62818361"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846685"
 ---
 # <a name="program-with-unity-and-azure"></a>Programování v Unity s Azure
 
@@ -30,12 +30,12 @@ Azure poskytuje škálovatelné řešení pro ukládání telemetrických dat a 
 
 Navštivte [Sandboxu](/sandbox/) vyzkoušet následující experimentální sad Azure SDK pomocí Unity:
 
-* [Azure Storage SDK pro Unity](https://aka.ms/azstoragegamedev)
-* [Azure Event Hubs sady SDK pro Unity](https://aka.ms/azeventhubsgamedev)
-* [Azure Mobile SDK aplikací pro Unity](https://aka.ms/azmobileappsgamedev)
+* [Azure Storage SDK pro Unity](https://docs.microsoft.com/sandbox/gamedev/unity/azure-storage-unity?wt.mc_id=azgamedev-sandbox-brpeek)
+* [Azure Event Hubs sady SDK pro Unity](https://docs.microsoft.com/sandbox/gamedev/unity/azure-event-hubs-unity?WT.mc_id=azgamedev-sandbox-brpeek)
+* [Azure Mobile SDK aplikací pro Unity](https://docs.microsoft.com/sandbox/gamedev/unity/azure-mobile-apps-unity?WT.mc_id=azgamedev-sandbox-brpeek)
 
 ## <a name="azure-sdk-sample"></a>Azure SDK – ukázka
 
-K dispozici je také [jednoduché ukázky hry](https://aka.ms/azmobileappsracer) pomocí snadno SDK tabulky Azure a Unity. Úložiště dat Azure jednoduché tabulky her používá ke sledování vysoké skóre tabulek výsledků a ukládání telemetrických dat v rámci her a je k dispozici pro [stáhnout z webu GitHub](https://aka.ms/azsamples-unity).
+K dispozici je také [jednoduché ukázky hry](https://docs.microsoft.com/sandbox/gamedev/unity/samples/azure-mobile-apps-unity-racer) pomocí snadno SDK tabulky Azure a Unity. Úložiště dat Azure jednoduché tabulky her používá ke sledování vysoké skóre tabulek výsledků a ukládání telemetrických dat v rámci her a je k dispozici pro [stáhnout z webu GitHub](https://github.com/BrianPeek/AzureSamples-Unity).
 
 ![Hry – snímek obrazovky ukázky](media/vstu_azure-test-sample-game-image2.png)

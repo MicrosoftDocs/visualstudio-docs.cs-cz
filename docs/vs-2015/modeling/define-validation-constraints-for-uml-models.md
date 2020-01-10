@@ -11,17 +11,17 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3dd76deb3b72d3b12d3b5892c2e5664273425c4c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 32f249b971e8a37bc5b596203cde6bc7b0bcf6f1
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295842"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849730"
 ---
 # <a name="define-validation-constraints-for-uml-models"></a>Definování omezení ověřování pro modely UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete definovat omezení ověřování, která otestuje, zda model splňuje podmínku, kterou zadáte. Můžete například definovat omezení, abyste se ujistili, že uživatel nevytvoří smyčku vztahů dědičnosti. Omezení je vyvoláno, když se uživatel pokusí otevřít nebo uložit model a lze jej také vyvolat ručně. Pokud se omezení nepovede, do okna chyby se přidá chybová zpráva, kterou definujete. Tato omezení můžete zabalit do rozšíření integrace sady Visual Studio ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) a distribuovat je ostatním uživatelům aplikace Visual Studio.
+Můžete definovat omezení ověřování, která otestuje, zda model splňuje podmínku, kterou zadáte. Můžete například definovat omezení, abyste se ujistili, že uživatel nevytvoří smyčku vztahů dědičnosti. Omezení je vyvoláno, když se uživatel pokusí otevřít nebo uložit model a lze jej také vyvolat ručně. Pokud se omezení nepovede, do okna chyby se přidá chybová zpráva, kterou definujete. Tato omezení můžete zabalit do rozšíření integrace sady Visual Studio ([VSIX](https://msdn.microsoft.com/library/dd393694(VS.100).aspx)) a distribuovat je ostatním uživatelům aplikace Visual Studio.
 
  Můžete také definovat omezení, která ověřují model proti externím prostředkům, jako jsou databáze. Pokud chcete ověřit kód programu proti diagramu vrstvy, přečtěte si téma [Přidání ověření vlastní architektury do diagramů vrstev](../modeling/add-custom-architecture-validation-to-layer-diagrams.md).
 
@@ -394,7 +394,7 @@ context.LogError(... , usecase);
 
    Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z následujícího umístění, kde *% localappdata%* je obvykle *jednotka*: \Users\\*username*\AppData\Local:
 
-   *% Localappdata%* **\Microsoft\VisualStudio\\[verze] \Extensions**
+   *%LocalAppData%* **\Microsoft\VisualStudio\\[version]\Extensions**
 
 ## <a name="Example"></a>Případě
  Tento příklad najde smyčky v relaci závislosti mezi prvky.

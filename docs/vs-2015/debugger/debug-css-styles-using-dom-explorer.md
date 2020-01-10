@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a9f07fc064a87910f59f5734d4d635aa3b5d6b77
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 676a4ef2570873998f3ebc890e06d6d5ccae4cf2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299503"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852428"
 ---
 # <a name="debug-css-styles-using-dom-explorer"></a>Ladění stylů CSS pomocí průzkumníka modelu DOM
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -100,7 +100,7 @@ Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "wi
     > [!TIP]
     > Jakmile se aplikace objeví v simulátoru, umístěte simulátor vpravo vedle okna aplikace Visual Studio, okamžitě tak uvidíte výsledky výběru a provedené změny stylů CSS.  
   
-6. Přepněte do sady Visual Studio a klikněte na **vybrat element** v Průzkumníku modelu DOM (nebo stiskněte CTRL + B). Změní se režim výběru, takže budete moci kliknutím vybrat položku a aplikace se zobrazí v popředí. Po kliknutí se režim přepne zpět. Tady je tlačítko **vybrat element** . ![Tlačítko vybrat element v Průzkumníkovi modelu DOM](../debugger/media/js-dom-select-element-button.png "JS_DOM_Select_Element_Button ")  
+6. Přepněte do sady Visual Studio a klikněte na **vybrat element** v Průzkumníku modelu DOM (nebo stiskněte CTRL + B). Změní se režim výběru, takže budete moci kliknutím vybrat položku a aplikace se zobrazí v popředí. Po kliknutí se režim přepne zpět. Tady je tlačítko **vybrat element** . ![Tlačítko vybrat element v Průzkumníkovi modelu DOM](../debugger/media/js-dom-select-element-button.png "JS_DOM_Select_Element_Button")  
   
     > [!TIP]
     > Můžete také vybrat elementy HTML přímo v průzkumníku modelu DOM. Další informace o výběru prvků naleznete v tématu [rychlý Start: ladění HTML a CSS](../debugger/quickstart-debug-html-and-css.md).  
@@ -160,4 +160,4 @@ Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "wi
  [Rychlý Start: ladění HTML a CSS](../debugger/quickstart-debug-html-and-css.md)   
  [Ladit rozložení pomocí Průzkumníka modelu DOM](../debugger/debug-layout-using-dom-explorer.md)   
  [Zobrazit naslouchací procesy událostí modelu DOM](../debugger/view-dom-event-listeners.md)   
- [Podpora produktu a usnadnění](https://go.microsoft.com/fwlink/?LinkId=253502)
+ [Podpora produktu a usnadnění](https://msdn.microsoft.com/library/tzbxw1af(VS.110).aspx)

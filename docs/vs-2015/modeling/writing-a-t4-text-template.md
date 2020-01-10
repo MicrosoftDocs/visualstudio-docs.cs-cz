@@ -13,12 +13,12 @@ caps.latest.revision: 45
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bcd5a4996db4a5e374baabe4f52d5fd1dbac2e5e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: e590af12e8979d16a946339cae530fd5ccc1b08d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301126"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850742"
 ---
 # <a name="writing-a-t4-text-template"></a>Tvorba textové šablony T4
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -203,7 +203,7 @@ private void WriteSquareLine(int i)
 
  Další informace naleznete v tématu [direktiva T4 pro sestavení](../modeling/t4-assembly-directive.md).
 
-### <a name="namespaces"></a>Obory názvů
+### <a name="namespaces"></a>Jmenné prostory
  Direktiva import je stejná jako klauzule `using` v jazyce C# nebo klauzule `imports` v jazyce Visual Basic. Umožňuje odkazovat na typy v kódu bez použití plně kvalifikovaného názvu:
 
 ```
@@ -242,7 +242,7 @@ private void WriteSquareLine(int i)
 <# string fileContent = File.ReadAllText(@"C:\myData.txt"); ...
 ```
 
- **Načte soubor jako naviguje model**. Výkonnější metodou je načíst data jako model, kterým kód textové šablony může procházet. Lze například načíst soubor XML a procházet jím pomocí výrazů XPath. Soubor [XSD. exe](https://go.microsoft.com/fwlink/?LinkId=178765) můžete také použít k vytvoření sady tříd, pomocí které můžete číst data XML.
+ **Načte soubor jako naviguje model**. Výkonnější metodou je načíst data jako model, kterým kód textové šablony může procházet. Lze například načíst soubor XML a procházet jím pomocí výrazů XPath. Soubor [XSD. exe](https://docs.microsoft.com/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) můžete také použít k vytvoření sady tříd, pomocí které můžete číst data XML.
 
  **Upravte soubor modelu v diagramu nebo ve formuláři.** [!INCLUDE[dsl](../includes/dsl-md.md)] poskytuje nástroje, které umožňují úpravu modelu jako diagramu nebo formuláře Windows. Můžete tak tento model snáze prodiskutovat s uživateli generované aplikace. [!INCLUDE[dsl](../includes/dsl-md.md)] také vytvoří sadu silně typované třídy, které odrážejí strukturu modelu. Další informace najdete v tématu [generování kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md).
 
@@ -274,9 +274,9 @@ Content of MyFile.txt is:
 ## <a name="editing-templates"></a>Úpravy šablon
  Speciální editory textových šablon lze stáhnout z online galerie správce rozšíření. V nabídce **nástroje** klikněte na **Správce rozšíření**. Klikněte na položku **Online galerie**a pak použijte nástroj pro hledání.
 
-## <a name="related-topics"></a>Související témata
+## <a name="related-topics"></a>Příbuzná témata
 
-|Úkol|Téma|
+|Úloha|Téma|
 |----------|-----------|
 |Vytvoření šablony|[Pokyny pro zápis textových šablon T4](../modeling/guidelines-for-writing-t4-text-templates.md)|
 |Generování textu pomocí kódu programu|[Struktura textových šablon](../modeling/writing-a-t4-text-template.md)|

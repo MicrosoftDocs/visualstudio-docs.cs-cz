@@ -9,17 +9,17 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: jillfra
-ms.openlocfilehash: c8f29a909f6aef75976a551546d4cbeafdf03b37
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a184ad6ebc1b3fc2dc21b7a1774b37fef8d359ec
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291874"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848464"
 ---
 # <a name="understanding-sal"></a>Porozumění SAL
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Jazyk Microsoft Source-Code Annotation (SAL) poskytuje sadu poznámek, které můžete použít k popsání toho, jak funkce používá své parametry, předpoklady, které se o nich týkají, a záruky, které při jejím dokončení vytvoří. Poznámky jsou definovány v souboru hlaviček `<sal.h>`. Analýza kódu sady Visual Studio C++ pro použití poznámek SAL pro úpravu své analýzy funkcí. Další informace o SAL 2,0 pro vývoj ovladačů Windows najdete v tématu [poznámky sal 2,0 pro ovladače Windows](https://go.microsoft.com/fwlink/?LinkId=250979).  
+Jazyk Microsoft Source-Code Annotation (SAL) poskytuje sadu poznámek, které můžete použít k popsání toho, jak funkce používá své parametry, předpoklady, které se o nich týkají, a záruky, které při jejím dokončení vytvoří. Poznámky jsou definovány v souboru hlaviček `<sal.h>`. Analýza kódu sady Visual Studio C++ pro použití poznámek SAL pro úpravu své analýzy funkcí. Další informace o SAL 2,0 pro vývoj ovladačů Windows najdete v tématu [poznámky sal 2,0 pro ovladače Windows](https://msdn.microsoft.com/library/windows/hardware/hh454237.aspx).  
   
  Nativně, C a C++ poskytují jenom omezené způsoby, jak vývojářům konzistentně vyjádřit a nerovnost. Pomocí poznámek SAL můžete své funkce popsat podrobněji, aby vývojáři, kteří je používají, lépe pochopili, jak je používat.  
   
@@ -408,8 +408,8 @@ bool GetValue(_Out_ int *pInt, bool flag)
   
   Nebo můžete opatřit všechny parametry tak, aby byl váš záměr jasný a bylo tak snazší zkontrolovat, zda byly poznámky provedeny.  
   
-## <a name="related-resources"></a>Související prostředky  
- [Blog týmu analýzy kódu](https://go.microsoft.com/fwlink/p/?LinkId=251197)  
+## <a name="related-resources"></a>Související informační zdroje  
+ [Blog týmu analýzy kódu](https://blogs.msdn.com/b/codeanalysis/)  
   
 ## <a name="see-also"></a>Viz také  
  [Použití poznámek SAL ke snížení vad CC++ /kódu](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   

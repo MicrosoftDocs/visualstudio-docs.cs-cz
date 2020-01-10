@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 54c2ec423653d1649e7bac9dd302c5f272731477
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e18e50537f35080f9796f4a090b3806953ae5170
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594055"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845813"
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a záznamy akcí
 
@@ -54,7 +54,7 @@ Podporované konfigurace a platformy pro programové testy uživatelského rozhr
 | Internet Explorer 6<br /><br /> Internet Explorer 7 | Není podporováno. |
 | Chrome<br /><br /> Firefox | Záznam kroků akcí není podporován. Programové testy UI můžete přehrát v prohlížečích Chrome a Firefox, pokud používáte sadu Visual Studio 2012 s aktualizací 4 nebo novější. Další podrobnosti najdete [zde](using-different-web-browsers-with-coded-ui-tests.md). |
 | Opera<br /><br /> Safari | Není podporováno. |
-| Silverlight | Není podporováno.<br /><br /> Pro Visual Studo 2013 však můžete stáhnout [modul plug-in programového testu uživatelského rozhraní Microsoft Visual Studio 2013 pro program Silverlight](https://go.microsoft.com/fwlink/?LinkId=691026) z galerie sady Visual Studio. |
+| Silverlight | Není podporováno.<br /><br /> Pro Visual Studo 2013 však můžete stáhnout [modul plug-in programového testu uživatelského rozhraní Microsoft Visual Studio 2013 pro program Silverlight](https://marketplace.visualstudio.com/items?itemName=PrachiBoraMSFT.MicrosoftVisualStudio2013CodedUITestPluginforSilve) z galerie sady Visual Studio. |
 | Flash nebo Java | Není podporováno. |
 | Windows Forms 2.0 a vyšší | Plně podporováno. **Poznámka:**  Ovládací prvky NetFx jsou plně podporovány, ale ne všechny ovládací prvky třetích stran jsou podporovány. |
 | WPF 3.5 a novější | Plně podporováno.<br /><br /> **Poznámka:** Ovládací prvky NetFx jsou plně podporovány, ale ne všechny ovládací prvky třetích stran jsou podporovány. |

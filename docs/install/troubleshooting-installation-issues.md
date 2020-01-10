@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 24a6a642528fbf8fed7b8000434a963e32cc85ee
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fe581d9c754ee78f66771901661e8870fd91b4b3
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594484"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849596"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Řešení potíží s instalací a upgradem sady Visual Studio
 
@@ -127,11 +127,11 @@ Další informace o řešení potíží s [instalací sítě](create-a-network-i
 
 Protokoly instalace jsou potřeba k odstranění většiny potíží instalace. Po odeslání chyby pomocí [nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio.md) ve Visual Studio Installerem. Tyto protokoly jsou automaticky obsažené v sestavě.
 
-Pokud budete kontaktovat Microsoft Support, možná budete muset poskytnout tyto protokoly instalace pomocí [sady Microsoft Visual Studio a nástroj pro shromažďování protokolů rozhraní .NET Framework](https://aka.ms/vscollect). Nástroj shromažďování protokolů shromažďuje protokoly instalace ze všech komponent nainstalovaných aplikací Visual Studio, včetně .NET Framework, Windows SDK a SQL Server. Shromáždí se také informace o počítači inventář Instalační služby systému Windows a informace v protokolu událostí Windows pro instalační program sady Visual Studio, instalační služby systému Windows a nástroj Obnovení systému.
+Pokud budete kontaktovat Microsoft Support, možná budete muset poskytnout tyto protokoly instalace pomocí [sady Microsoft Visual Studio a nástroj pro shromažďování protokolů rozhraní .NET Framework](https://www.microsoft.com/download/details.aspx?id=12493). Nástroj shromažďování protokolů shromažďuje protokoly instalace ze všech komponent nainstalovaných aplikací Visual Studio, včetně .NET Framework, Windows SDK a SQL Server. Shromáždí se také informace o počítači inventář Instalační služby systému Windows a informace v protokolu událostí Windows pro instalační program sady Visual Studio, instalační služby systému Windows a nástroj Obnovení systému.
 
 Shromažďování protokolů:
 
-1. [Stáhněte si nástroj](https://aka.ms/vscollect).
+1. [Stáhněte si nástroj](https://www.microsoft.com/download/details.aspx?id=12493).
 2. Otevřete příkazový řádek pro správu.
 3. Spustit `Collect.exe` z adresáře, kam jste nástroj uložili.
 4. Najít výsledný `vslogs.zip` ve vašich `%TEMP%` adresář, například `C:\Users\YourName\AppData\Local\Temp\vslogs.zip`.

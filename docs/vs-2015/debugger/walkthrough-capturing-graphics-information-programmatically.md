@@ -9,12 +9,12 @@ caps.latest.revision: 24
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 54097420fd212ec9057f4a968e2c6d5de199e56e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 9de8e2a2ee69911f5505937494d2912c724326e9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296907"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847813"
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>Návod: Zaznamenání grafických informací prostřednictvím kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "74296907"
     > [!NOTE]
     > Pokud je v počítači nainstalovaná sada DirectX 2010 DirectX SDK a cesta k zahrnutí vašeho projektu obsahuje `%DXSDK_DIR%includex86`, přesuňte ji na konec cesty include. Proveďte stejnou cestu ke knihovně.  
   
-#### <a name="windows-phone-81"></a>Windows Phone 8.1  
+#### <a name="windows-phone-81"></a>Windows Phone 8,1  
  Vzhledem k tomu, že sada Windows Phone 8,1 SDK neobsahuje hlavičku DXProgrammableCapture. h, bude nutné definovat rozhraní `IDXGraphicsAnalysis` sami, abyste mohli používat metody `BeginCapture()` a `EndCapture()`. Zahrňte další hlavičky, jak je popsáno v předchozí části.  
   
 ###### <a name="to-define-the-idxgraphicsanalysis-interface"></a>Definování rozhraní IDXGraphicsAnalysis  
@@ -145,7 +145,7 @@ ms.locfileid: "74296907"
 ### <a name="preparing-your-computer-to-use-programmatic-capture"></a>Příprava počítače na použití programového zachycení  
  Programové rozhraní API pro sběr dat využívá nástroje Remote Tools for [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] k zajištění funkcí zachycení. Počítač, ve kterém bude aplikace spuštěna, musí mít nainstalované vzdálené nástroje, i když používáte programové zachycení na místním počítači. Pokud provádíte Programové zachycení na místním počítači, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nemusí běžet.  
   
- Chcete-li používat rozhraní API pro vzdálené zachytávání v aplikaci, která je spuštěna v počítači, je nejprve nutné nainstalovat nástroje Remote Tools for [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] na tento počítač. Různé verze nástrojů Remote Tools podporují různé hardwarové platformy. Informace o tom, jak nainstalovat nástroje Remote Tools, najdete na [stránce stažení vzdálených nástrojů](https://go.microsoft.com/fwlink/p/?LinkId=246691) na webu Microsoft downloads.  
+ Chcete-li používat rozhraní API pro vzdálené zachytávání v aplikaci, která je spuštěna v počítači, je nejprve nutné nainstalovat nástroje Remote Tools for [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] na tento počítač. Různé verze nástrojů Remote Tools podporují různé hardwarové platformy. Informace o tom, jak nainstalovat nástroje Remote Tools, najdete na [stránce stažení vzdálených nástrojů](https://visualstudio.microsoft.com/downloads#remote-tools) na webu Microsoft downloads.  
   
  Případně [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nainstaluje potřebné komponenty pro vzdálené zachytávání pro 32 aplikace.  
   

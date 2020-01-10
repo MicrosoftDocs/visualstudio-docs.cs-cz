@@ -14,12 +14,12 @@ ms.assetid: e6c0e636-5ec3-450e-b395-fc4bb9d75918
 caps.latest.revision: 35
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 1e30be26c40834d3122d491f8d150f02b6f3b776
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4512867f636e2362aa28d52c5af28bf8eb9697f9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300688"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851154"
 ---
 # <a name="options-and-options-pages"></a>Možnosti a stránky Možnosti
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -61,7 +61,7 @@ Kliknutím na **Možnosti** v nabídce **nástroje** otevřete dialogové okno *
 - <xref:System.ComponentModel.DescriptionAttribute> Určuje popis možnosti.  
   
   > [!NOTE]
-  > Ekvivalentní atributy, SRCategory, LocDisplayName a SRDescription, používají řetězcové prostředky pro lokalizaci a jsou definovány v [ukázce spravovaného projektu](https://go.microsoft.com/fwlink/?LinkId=122774).  
+  > Ekvivalentní atributy, SRCategory, LocDisplayName a SRDescription, používají řetězcové prostředky pro lokalizaci a jsou definovány v [ukázce spravovaného projektu](https://msdn.com/vsx).  
   
   Předpokládejme následující fragment kódu:  
   

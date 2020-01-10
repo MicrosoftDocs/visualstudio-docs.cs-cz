@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/23/2019
 ms.topic: conceptual
 description: Další informace o responsibilty správců pro provádění předprodukčních inventářů
-ms.openlocfilehash: 97a7a95354cd4d5d85581830830705bc328f2311
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 8218b1802a6369aed00be63572c80cba7b5c29f3
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491709"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849826"
 ---
 # <a name="inventory-of-pre-production-environment"></a>Inventář předprodukčního prostředí
 Předplatná sady Visual Studio zjednodušují správu prostředků, a to pomocí počítání uživatelů místo zařízení.
@@ -25,7 +25,7 @@ Tady je několik způsobů, jak zjednodušit inventarizaci předprodukčního pr
 - Získejte nápovědu k ručnímu odsouhlasení. Zařadíte své zaměstnance, který vám umožní sjednotit vývoj a testování uživatelů pomocí vývojového a testovacího prostředí.
 
 ## <a name="resources"></a>Prostředky
-- [Dokument white paper k licencování sady Visual Studio](https://aka.ms/vslicensing)
+- [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [Multilicenční podmínky](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 

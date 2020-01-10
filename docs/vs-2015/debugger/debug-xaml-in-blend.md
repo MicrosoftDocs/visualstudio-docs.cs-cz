@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d90e495ba64018479758e4fa38de0035601a8f0d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: eeda91dad54cc189fba6f23ce6d21e6aa9a6c5da
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298318"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850520"
 ---
 # <a name="debug-xaml-in-blend"></a>Ladění kódu XAML v programu Blend
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,7 +42,7 @@ Pomocí nástrojů v [!INCLUDE[blend_first](../includes/blend-first-md.md)] mů�
   
 - Prvek XAML existuje v umístění, kde není povolen.  
   
-  Další informace o běžných syntaxech jazyka XAML naleznete v tématu [základní průvodce syntaxí jazyka XAML](https://go.microsoft.com/fwlink/?LinkId=329942).  
+  Další informace o běžných syntaxech jazyka XAML naleznete v tématu [základní průvodce syntaxí jazyka XAML](https://msdn.microsoft.com/library/windows/apps/hh700351.aspx).  
   
   Můžete také identifikovat a vyřešit jednoduché chyby syntaxe kódu na pozadí, chyby kompilace a běhové chyby v [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]. Chyby kódu na pozadí ale můžou být snáze identifikovatelné a řešitelné v aplikaci Visual Studio.  
   
@@ -123,7 +123,7 @@ Pomocí nástrojů v [!INCLUDE[blend_first](../includes/blend-first-md.md)] mů�
 ## <a name="debugging-in-visual-studio"></a>Ladění v sadě Visual Studio  
  Můžete otevřít [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] projekty v aplikaci Visual Studio pro snazší ladění kódu v aplikaci. Chcete-li otevřít projekt [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] v aplikaci Visual Studio, klikněte pravým tlačítkem myši na projekt na panelu **projekty** a poté klikněte na možnost **Upravit v aplikaci Visual Studio**. Po dokončení ladění relace v aplikaci Visual Studio stiskněte kombinaci kláves CTRL + SHIFT + S a uložte všechny změny a pak přepněte zpět na [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]. Zobrazí se výzva k opětovnému načtení projektu. Pokud chcete pokračovat v práci [!INCLUDE[blend_subs](../includes/blend-subs-md.md)], klikněte na **Ano** .  
   
- Další informace o ladění aplikace naleznete v tématu [ladění aplikací pro Windows Store v aplikaci Visual Studio](https://go.microsoft.com/fwlink/?LinkId=329944).  
+ Další informace o ladění aplikace naleznete v tématu [ladění aplikací pro Windows Store v aplikaci Visual Studio](https://msdn.microsoft.com/library/windows/apps/hh441472.aspx).  
   
 ## <a name="getting-help"></a>Získání nápovědy  
- Pokud potřebujete další nápovědu k ladění aplikace [!INCLUDE[blend_subs](../includes/blend-subs-md.md)], můžete ve [fórech komunity aplikací pro Windows Store](https://go.microsoft.com/fwlink/?LinkId=280308) vyhledat příspěvky související s vaším problémem nebo odeslat otázku.
+ Pokud potřebujete další nápovědu k ladění aplikace [!INCLUDE[blend_subs](../includes/blend-subs-md.md)], můžete ve [fórech komunity aplikací pro Windows Store](https://social.msdn.microsoft.com/Forums/windowsapps/home?category=windowsapps) vyhledat příspěvky související s vaším problémem nebo odeslat otázku.

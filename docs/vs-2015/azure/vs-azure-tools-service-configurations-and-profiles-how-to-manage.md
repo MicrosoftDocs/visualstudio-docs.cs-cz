@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/11/2017
 ms.author: ghogen
-ms.openlocfilehash: bcc290bfd9d646355479c2a9fe83a48f43dfa432
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2d7081fc7531c8c1c1fcf13564f9f90bc9964f17
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298042"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849990"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>Postup správy konfigurací a profilů služby
 ## <a name="overview"></a>Přehled
@@ -80,7 +80,7 @@ Při prvním spuštění Průvodce se vytvoří výchozí profil. Visual Studio 
    
     Nový profil se zobrazí v seznamu cílový profil.
 6. V seznamu **cílový profil** vyberte profil, který jste právě vytvořili. Nastavení Průvodce publikováním se vyplní možnostmi z profilu, který jste vybrali.
-7. Výběrem tlačítek **předchozí** a **Další** Zobrazte jednotlivé stránky průvodce publikováním a potom Přizpůsobte nastavení pro tento profil. Informace najdete v tématu [Průvodce publikováním aplikace Azure](https://go.microsoft.com/fwlink/p/?LinkID=623085) .
+7. Výběrem tlačítek **předchozí** a **Další** Zobrazte jednotlivé stránky průvodce publikováním a potom Přizpůsobte nastavení pro tento profil. Informace najdete v tématu [Průvodce publikováním aplikace Azure](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publish-azure-application-wizard?view=vs-2019) .
 8. Po dokončení přizpůsobení nastavení vyberte **Další** a vraťte se na stránku nastavení. Profil se uloží při publikování služby pomocí těchto nastavení nebo v případě, že vyberete možnost **Uložit** vedle seznamu profilů.
 
 ### <a name="to-rename-or-delete-a-profile"></a>Přejmenování nebo odstranění profilu
@@ -93,9 +93,9 @@ Při prvním spuštění Průvodce se vytvoří výchozí profil. Visual Studio 
 ### <a name="to-change-a-profile"></a>Změna profilu
 1. Otevřete místní nabídku pro projekt Azure a pak vyberte **publikovat**.
 2. V seznamu **cílový profil** vyberte profil, který chcete změnit.
-3. Výběrem tlačítek **předchozí** a **Další** Zobrazte jednotlivé stránky průvodce publikováním a pak změňte požadovaná nastavení. Informace najdete v tématu [Průvodce publikováním aplikace Azure](https://go.microsoft.com/fwlink/p/?LinkID=623085) .
+3. Výběrem tlačítek **předchozí** a **Další** Zobrazte jednotlivé stránky průvodce publikováním a pak změňte požadovaná nastavení. Informace najdete v tématu [Průvodce publikováním aplikace Azure](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publish-azure-application-wizard?view=vs-2019) .
 4. Po dokončení změny nastavení vyberte **Další** a vraťte se na stránku **Nastavení** .
 5. (Volitelné) vyberte **publikovat** a publikujte cloudovou službu pomocí nového nastavení. Pokud nechcete momentálně publikovat cloudovou službu a zavřete Průvodce publikováním, zobrazí se v aplikaci Visual Studio, jestli chcete změny profilu Uložit.
 
 ## <a name="next-steps"></a>Další kroky
-Další informace o konfiguraci dalších částí projektu Azure ze sady Visual Studio najdete v tématu [konfigurace projektu Azure](https://go.microsoft.com/fwlink/p/?LinkID=623075) .
+Další informace o konfiguraci dalších částí projektu Azure ze sady Visual Studio najdete v tématu [konfigurace projektu Azure](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address?view=vs-2019) .

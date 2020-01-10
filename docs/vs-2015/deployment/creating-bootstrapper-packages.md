@@ -21,12 +21,12 @@ caps.latest.revision: 47
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f90344c156ea6c012c6ac086ffa40bf30e78a682
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: daf72a4466cd0f02eb6ef3a357276ed690fd26bf
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300727"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845524"
 ---
 # <a name="creating-bootstrapper-packages"></a>Vytváření balíčků zaváděcího nástroje
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -76,7 +76,7 @@ Instalační program je obecný instalační program, který se dá nakonfigurov
 \Program Files\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages  
 ```  
   
- or  
+ nebo  
   
 ```  
 \Program Files (x86)\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages  
@@ -128,4 +128,4 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
  [Postupy: Instalace předpokladů s aplikací ClickOnce](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
  [Dialogové okno předpoklady](../ide/reference/prerequisites-dialog-box.md)   
  [Referenční  schématu produktu a balíčku](../deployment/product-and-package-schema-reference.md)  
- [Použití zaváděcího nástroje sady Visual Studio 2005 k zahájení instalace](https://go.microsoft.com/fwlink/?LinkId=107537)
+ [Použití zaváděcího nástroje sady Visual Studio 2005 k zahájení instalace](https://msdn.microsoft.com/magazine/cc163899.aspx)

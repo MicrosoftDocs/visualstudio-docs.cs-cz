@@ -8,12 +8,12 @@ ms.assetid: 51b53778-469c-4cc9-854c-4e4992d6389b
 caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 73dd0e406e8e0a00260d922e38dee70135c3645d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b44e921a8e1ba13d3f0786d4633f942f94f3eaaa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298005"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851279"
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>Testování aplikací pro SharePoint 2010 pomocí programových testů uživatelského rozhraní
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ Zahrnutí programových testů uživatelského rozhraní do aplikace SharePoint 
 - Visual Studio Enterprise
 
 ## <a name="what-else-should-i-know-about-coded-ui-tests"></a>Co dalšího by měl vědět o programových testech UI?
- Další informace o výhodách použití programových testů UI naleznete v tématu [použití automatizace uživatelského rozhraní k otestování kódu](../test/use-ui-automation-to-test-your-code.md) a [testování pro nepřetržité doručování pomocí sady Visual Studio 2012 – Kapitola 5 automatizace systémových testů](https://go.microsoft.com/fwlink/?LinkID=255196).
+ Další informace o výhodách použití programových testů UI naleznete v tématu [použití automatizace uživatelského rozhraní k otestování kódu](../test/use-ui-automation-to-test-your-code.md) a [testování pro nepřetržité doručování pomocí sady Visual Studio 2012 – Kapitola 5 automatizace systémových testů](https://msdn.microsoft.com/library/jj159335.aspx).
 
  **Poznámky**
 
@@ -114,7 +114,7 @@ uiGridKeyboardInputEdit.Text=value;
 
 #### <a name="testing-silverlight-web-parts"></a>Testování webových částí technologie Silverlight
 
-1. Spusťte Fiddler.
+1. Spusťte aplikaci Fiddler.
 
 2. Vymažte mezipaměť prohlížeče. To je nezbytné proto, že soubor XAP, který obsahuje pomocnou knihovnu DLL pro automatizaci uživatelského rozhraní Silverlight, je obvykle uložen v mezipaměti. Musíme zajistit, aby byl upravený soubor XAP vyzvednutý, a proto vymažeme mezipaměť prohlížeče.
 
@@ -138,10 +138,10 @@ uiGridKeyboardInputEdit.Text=value;
  [Index obsahu pro programový test uživatelského rozhraní](https://blogs.msdn.microsoft.com/mathew_aniyan/2013/02/18/content-index-for-coded-ui-test/)
 
 ### <a name="guidance"></a>Doprovodné materiály
- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5 automatizace systémových testů](https://go.microsoft.com/fwlink/?LinkID=255196)
+ [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5 automatizace systémových testů](https://msdn.microsoft.com/library/jj159335.aspx)
 
 ### <a name="forum"></a>Fórum
- [Blog sady Visual Studio ALM + Team Foundation Server](https://go.microsoft.com/fwlink/?LinkID=254496)
+ [Blog sady Visual Studio ALM + Team Foundation Server](https://blogs.msdn.com/b/visualstudioalm/)
 
 ## <a name="see-also"></a>Viz také
  [Použití automatizace uživatelského rozhraní k otestování](../test/use-ui-automation-to-test-your-code.md) [výkonu webu kódu a zátěžového testování aplikací sharepoint 2010 a 2013](https://msdn.microsoft.com/library/20c2e469-0e4e-4296-a739-c0e8fff36e54) [vytvoření řešení SharePoint](https://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631) [ověřování a ladění vytváření a ladění kódu SharePointu](https://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c) [](https://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae) [profilace výkonu aplikací SharePoint](https://msdn.microsoft.com/library/61ae02e7-3f37-4230-bae1-54a498c2fae8)

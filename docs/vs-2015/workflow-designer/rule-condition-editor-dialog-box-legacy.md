@@ -13,29 +13,29 @@ caps.latest.revision: 6
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a632b90e89e58c26ec72083fe3f4ed9223826dae
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 00df917b05f5073634b0956a0b44e5b0fc6026a6
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302847"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846334"
 ---
 # <a name="rule-condition-editor-dialog-box-legacy"></a>Dialogové okno Editor podmínek pravidla (starší verze)
-Toto téma popisuje, jak používat dialogové okno **Editor podmínek pravidla** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak používat dialogové okno **Editor podmínek pravidla** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
 
  Podmínky deklarativního pravidla můžete vytvořit a upravit pomocí dialogového okna **Editor podmínek pravidla** . Tyto podmínky pravidla jsou zpřístupněny jako vlastnosti v následujících programovací model Windows Workflow Foundation nedostupné aktivity:
 
-- [Aktivitou skupiny ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65017)
+- [ConditionedActivityGroup](https://msdn2.microsoft.com/library/system.workflow.activities.conditionedactivitygroup.aspx)
 
-- [IfElseBranchActivity](https://go.microsoft.com/fwlink?LinkID=65034)
+- [IfElseBranchActivity](https://msdn2.microsoft.com/library/system.workflow.activities.ifelsebranchactivity.aspx)
 
-- [Aktivita ReplicatorActivity](https://go.microsoft.com/fwlink?LinkID=65039)
+- [Aktivita ReplicatorActivity](https://msdn2.microsoft.com/library/system.workflow.activities.replicatoractivity.aspx)
 
-- [Aktivita typu WhileActivity](https://go.microsoft.com/fwlink?LinkID=65049)
+- [Aktivita typu WhileActivity](https://msdn2.microsoft.com/library/system.workflow.activities.whileactivity.aspx)
 
-- [SequentialWorkflowActivity](https://go.microsoft.com/fwlink?LinkID=65040)
+- [SequentialWorkflowActivity](https://msdn2.microsoft.com/library/system.workflow.activities.sequentialworkflowactivity.aspx)
 
-- [StateMachineWorkflowActivity](https://go.microsoft.com/fwlink?LinkID=65045)
+- [StateMachineWorkflowActivity](https://msdn2.microsoft.com/library/system.workflow.activities.statemachineworkflowactivity.aspx)
 
   K dialogovému oknu **Editor podmínek pravidla** přistupujete pomocí [dialogového okna vybrat podmínku (starší verze)](../workflow-designer/select-condition-dialog-box-legacy.md).
 
@@ -44,7 +44,7 @@ Toto téma popisuje, jak používat dialogové okno **Editor podmínek pravidla*
 |Prvek uživatelského rozhraní (UI)|Popis|
 |----------------|-----------------|
 |**Pomocné**|Zadejte výraz pro podmínku pravidla.|
-|**Ok**|Kliknutím uložíte podmínku pravidla.|
+|**OK**|Kliknutím uložíte podmínku pravidla.|
 
 ## <a name="entering-condition-expressions"></a>Vstupní výrazy podmínky
  Výrazy podmínky jsou zadány jako text. Tuto možnost můžete zadat **.** do editoru pro odkaz na pole, vlastnosti a metody použité v pracovním postupu pomocí nabídky podobné technologií IntelliSense. Případně můžete zadat název člena pracovního postupu přímo. Do podmínky můžete přidat logické operátory, jako například a, nebo, nikoli. Můžete také přidat predikáty. Predikát je binární operátor a dva operandy. Podporované binární operátory jsou **==** , **>** , **\<** , **>=** a **<=** . Podporované operandy jsou konstantní hodnota, Aritmetická funkce a obor veřejných členů.
@@ -79,7 +79,7 @@ Toto téma popisuje, jak používat dialogové okno **Editor podmínek pravidla*
 
   this. i = = 1U (překládá se jako nepodepsaný int)
 
-  Další informace o podmínkách najdete v tématu [použití podmínek v pracovních postupech](https://go.microsoft.com/fwlink?LinkID=65009).
+  Další informace o podmínkách najdete v tématu [použití podmínek v pracovních postupech](https://msdn2.microsoft.com/library/bb628447.aspx).
 
 ## <a name="see-also"></a>Viz také
- [IfElseActivity](https://go.microsoft.com/fwlink?LinkID=65033) [aktivitou skupiny ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65017) [Aktivita ReplicatorActivity](https://go.microsoft.com/fwlink?LinkID=65039) [Aktivita typu WhileActivity](https://go.microsoft.com/fwlink?LinkID=65049) [Select Condition (starší verze)](../workflow-designer/select-condition-dialog-box-legacy.md) [použijte podmínky v tématu pracovní postupy](https://go.microsoft.com/fwlink?LinkID=65009) [starší verze návrháře pro programovací model Windows Workflow Foundation nápovědu k uživatelskému rozhraní](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md) .
+ [IfElseActivity](https://msdn2.microsoft.com/library/system.workflow.activities.ifelseactivity.aspx) [aktivitou skupiny ConditionedActivityGroup](https://msdn2.microsoft.com/library/system.workflow.activities.conditionedactivitygroup.aspx) [Aktivita ReplicatorActivity](https://msdn2.microsoft.com/library/system.workflow.activities.replicatoractivity.aspx) [Aktivita typu WhileActivity](https://msdn2.microsoft.com/library/system.workflow.activities.whileactivity.aspx) [Select Condition (starší verze)](../workflow-designer/select-condition-dialog-box-legacy.md) [použijte podmínky v tématu pracovní postupy](https://msdn2.microsoft.com/library/bb628447.aspx) [starší verze návrháře pro programovací model Windows Workflow Foundation nápovědu k uživatelskému rozhraní](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md) .

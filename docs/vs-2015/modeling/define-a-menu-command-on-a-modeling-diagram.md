@@ -11,17 +11,17 @@ caps.latest.revision: 63
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 23ba1a6900559d7ee13639bb1da696127e47e536
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 5dac0a77b47f604ae5a10f4c8bcfb9d54b51f26c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299271"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850464"
 ---
 # <a name="define-a-menu-command-on-a-modeling-diagram"></a>Definování příkazu nabídky v diagramu modelování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V aplikaci Visual Studio můžete definovat další položky nabídky v místních nabídkách diagramu UML. Můžete určit, zda se příkaz nabídky zobrazí a je povolen v místní nabídce libovolného prvku v diagramu, a můžete napsat kód, který se spustí, když uživatel zvolí položku nabídky. Tato rozšíření můžete zabalit do rozšíření integrace sady Visual Studio ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) a distribuovat je ostatním uživatelům aplikace Visual Studio.
+V aplikaci Visual Studio můžete definovat další položky nabídky v místních nabídkách diagramu UML. Můžete určit, zda se příkaz nabídky zobrazí a je povolen v místní nabídce libovolného prvku v diagramu, a můžete napsat kód, který se spustí, když uživatel zvolí položku nabídky. Tato rozšíření můžete zabalit do rozšíření integrace sady Visual Studio ([VSIX](https://msdn.microsoft.com/library/dd393694(VS.100).aspx)) a distribuovat je ostatním uživatelům aplikace Visual Studio.
 
 ## <a name="requirements"></a>Požadavky
  Viz [požadavky](../modeling/extend-uml-models-and-diagrams.md#Requirements).
@@ -271,7 +271,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
    Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z:
 
-   *% Localappdata%* **\Local\Microsoft\VisualStudio\\[verze] \Extensions**
+   *%LocalAppData%* **\Local\Microsoft\VisualStudio\\[version]\Extensions**
 
 ## <a name="MenuExample"></a>Případě
  Následující příklad ukazuje kód pro příkaz nabídky, který bude zakódovat názvy dvou prvků v diagramu tříd. Tento kód musí být sestaven v projektu rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a nainstalován tak, jak je popsáno v předchozích částech.
@@ -363,4 +363,4 @@ namespace SwapClassNames
 ```
 
 ## <a name="see-also"></a>Viz také
- [Definování a instalace rozšíření modelování](../modeling/define-and-install-a-modeling-extension.md) [rozšíření modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md) [Definování obslužné rutiny gesta v diagramu modelování](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [Definování vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md) definování [omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md) [Úprava sekvenčních diagramů](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md) UML pomocí programování rozhraní API UML s ukázkou [rozhraní](../modeling/programming-with-the-uml-api.md) API UML [: příkaz pro zarovnání obrazců v diagramu UML](https://go.microsoft.com/fwlink/?LinkID=213809)
+ [Definování a instalace rozšíření modelování](../modeling/define-and-install-a-modeling-extension.md) [rozšíření modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md) [Definování obslužné rutiny gesta v diagramu modelování](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [Definování vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md) definování [omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md) [Úprava sekvenčních diagramů](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md) UML pomocí programování rozhraní API UML s ukázkou [rozhraní](../modeling/programming-with-the-uml-api.md) API UML [: příkaz pro zarovnání obrazců v diagramu UML](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)

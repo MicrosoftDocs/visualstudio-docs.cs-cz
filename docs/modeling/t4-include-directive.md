@@ -2,21 +2,21 @@
 title: T4 – direktiva Include
 ms.date: 11/04/2016
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 636260609aa535e3bc45efe0224a517fd782c040
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a1ee58c29be3c4dfb5e2148c54464a7a511d1839
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606394"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591850"
 ---
 # <a name="t4-include-directive"></a>T4 – direktiva Include
 
-V textové šabloně v aplikaci Visual Studio můžete zahrnout text z jiného souboru pomocí direktivy `<#@include#>`. Můžete umístit direktivy `include` kdekoli v textové šabloně před tím, `<#+ ... #>` blok funkce první třídy. Zahrnuté soubory mohou obsahovat také direktivy `include` a další direktivy. Díky tomu můžete kód šablony a často používaný text sdílet mezi šablonami.
+V textové šabloně v aplikaci Visual Studio můžete zahrnout text z jiného souboru pomocí direktivy `<#@include#>`. Můžete umístit direktivy `include` kdekoli v textové šabloně před tím, `<#+ ... #>`blok funkce první třídy. Zahrnuté soubory mohou obsahovat také direktivy `include` a další direktivy. Díky tomu můžete kód šablony a často používaný text sdílet mezi šablonami.
 
 ## <a name="using-include-directives"></a>Použití direktiv include
 

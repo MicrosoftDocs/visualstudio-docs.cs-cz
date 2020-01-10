@@ -14,12 +14,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 73c14c61702ec978d8ffec896b13204c238762a2
-ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
+ms.openlocfilehash: 5949a651c99c0ce45f963b5f2042cdfe6cb40b87
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73568807"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848578"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Sada Visual Studio SDK vám pomůže s rozšiřováním funkcí sady Visual Studio nebo integrací nových funkcí do sady Visual Studio. Rozšíření můžete distribuovat dalším uživatelům i Visual Studio Marketplace. Níže jsou uvedeny některé způsoby, jak můžete sadu Visual Studio rozšíří:
@@ -41,7 +41,7 @@ Sada Visual Studio SDK vám pomůže s rozšiřováním funkcí sady Visual Stud
   Pokud jste ještě nikdy nezapsali rozšíření sady Visual Studio, měli byste najít další informace o těchto funkcích a [začít vyvíjet rozšíření sady Visual Studio](../extensibility/starting-to-develop-visual-studio-extensions.md).
 
 ## <a name="install-the-visual-studio-sdk"></a>Instalace sady Visual Studio SDK
- Sada Visual Studio SDK je volitelnou funkcí instalačního programu sady Visual Studio. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+ Sada Visual Studio SDK je volitelnou funkcí instalačního programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="whats-new-in-the-visual-studio-2017-sdk"></a>Co je nového v sadě Visual Studio 2017 SDK
  Sada Visual Studio SDK obsahuje některé nové funkce, jako je například formát VSIX v3, a také zásadní změny, které mohou vyžadovat aktualizaci rozšíření. Další informace najdete v tématu [co je nového v sadě Visual Studio 2017 SDK](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md).
@@ -60,7 +60,7 @@ Sada Visual Studio SDK vám pomůže s rozšiřováním funkcí sady Visual Stud
  Referenční informace k rozhraní API sady Visual Studio SDK najdete v [referenčních informacích k sadě Visual Studio SDK](../extensibility/visual-studio-sdk-reference.md).
 
 ## <a name="visual-studio-sdk-samples"></a>Ukázky sady Visual Studio SDK
- Příklady open source rozšíření sady VS SDK najdete na webu GitHub v sadě [Visual Studio Samples](https://aka.ms/vs2015sdksamples). Toto úložiště GitHub obsahuje ukázky, které ilustrují různé rozšiřitelné funkce v aplikaci Visual Studio.
+ Příklady open source rozšíření sady VS SDK najdete na webu GitHub v sadě [Visual Studio Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples). Toto úložiště GitHub obsahuje ukázky, které ilustrují různé rozšiřitelné funkce v aplikaci Visual Studio.
 
 ## <a name="other-visual-studio-sdk-resources"></a>Další prostředky sady Visual Studio SDK
  Pokud máte dotazy týkající se VSSDK nebo chcete sdílet své zkušenosti s vývojem rozšíření, můžete použít [Fórum rozšiřitelnosti sady Visual Studio](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx) nebo [extendvs gitteru chatroom](https://gitter.im/Microsoft/extendvs).

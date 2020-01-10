@@ -8,12 +8,12 @@ ms.assetid: 620d7dcd-d462-475e-a449-fbfa06ff12c5
 caps.latest.revision: 34
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: cafdfacec24e906569d0f2b0d1a334511a75e30a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 96647f362566f0687cb04b7da4459331ac56b031
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300721"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851907"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Help Viewer SDK
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ Tento článek obsahuje následující úlohy pro integrátory aplikace Visual S
 
 - Přidání pomocníka do prostředí sady Visual Studio (integrovaný nebo izolovaný režim)
 
-- Další prostředky
+- Další materiály a zdroje informací
 
 ### <a name="creating-a-topic-f1-support"></a>Vytvoření tématu (podpora F1)
  V této části najdete Přehled součástí prezentovaného tématu, požadavky na téma, krátký popis postupu vytvoření tématu (včetně požadavků na podporu F1) a nakonec příklad tématu s jeho vykresleným výsledkem.
@@ -61,7 +61,7 @@ Tento článek obsahuje následující úlohy pro integrátory aplikace Visual S
 
   Podporované řetězce jazyka (bez rozlišení velkých a malých písmen):
 
-- JavaScriptu
+- javascript
 
 - CSharp nebo c #
 
@@ -312,13 +312,13 @@ some F# code
 
    - Pro 32 operační systémy:
 
-      HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Help\v2.1\Partner<em>\\< oboru názvů\></em>
+      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.1\Partner<em>\\<namespace\></em>
 
       "umístění" = "offline"
 
    - Pro 64 operační systémy:
 
-      HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Partner<em>\\< oboru názvů\></em>
+      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Partner<em>\\<namespace\></em>
 
       "umístění" = "offline"
 
@@ -439,8 +439,8 @@ some F# code
 |Funkce:|**CollapsibleArea**|
 |Použije|Rozbalit sbalí text ovládacího prvku obsahu.|
 |**Element**|**Hodnota**|
-|ExpandText|Expand|
-|CollapseText|Rozbalen|
+|ExpandText|Rozbalit|
+|CollapseText|Sbalit|
 |Funkce:|**CodeSnippet**|
 |Použije|Text ovládacího prvku fragmentu kódu  Poznámka: obsah fragmentu kódu s "neprůlomovým" místem bude změněn na mezeru.|
 |**Element**|**Hodnota**|
@@ -448,7 +448,7 @@ some F# code
 |ViewColorizedText|Zobrazit barevné barvy|
 |CombinedVBTabDisplayLanguage|Visual Basic (ukázka)|
 |VBDeclaration|Deklarace|
-|VBUsage|Využití|
+|VBUsage|Použití|
 |Funkce:|**Zpětná vazba, zápatí a logo**|
 |Použije|Poskytněte řízení zpětné vazby zákazníkovi, aby vám poskytl zpětnou vazbu k aktuálnímu tématu prostřednictvím e-mailu.  Text copyrightu pro obsah  Definice loga.|
 |**Element**|**Hodnota (tyto řetězce lze upravit tak, aby splňovala požadavky na přijetí obsahu.)**|
@@ -467,7 +467,7 @@ some F# code
 |MT_QualityNonEditable|Tento článek byl přeložen ručně. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem.|
 |MT_BetaContents|Tento článek byl STROJOVĚ PŘELOŽEN pro předběžnou verzi. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem.|
 |MT_BetaRecycledContents|Tento článek byl ručně přeložen pro předběžnou verzi. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem.|
-|Funkce:|**Propojování**|
+|Funkce:|**LinkTable**|
 |Použije|Podpora pro online odkazy na témata|
 |**Element**|**Hodnota**|
 |LinkTableTitle|Propojit tabulku|
@@ -512,14 +512,14 @@ some F# code
 |HomePageHelpSettingsText|\<p > aktuálním nastavením je místní nápovědě. V aplikaci Help Viewer je zobrazen obsah, který jste nainstalovali v počítači.\<br/> Chcete-li změnit zdroj obsahu aplikace, v řádku nabídek sady Visual Studio vyberte možnost \<rozpětí Style = "{0}" > nápovědě, nastavte předvolby pro\</span >.\<br/>\</p >|
 |Megabajt|MB|
 
- **Branding. js**
+ **branding.js**
 
  Soubor Branding. js obsahuje jazyk JavaScript, který je používán v aplikaci Visual Studio Help Viewer prvky branding.  Níže je uveden seznam prvků brandingu a podpůrná funkce JavaScriptu.  Všechny řetězce, které mají být lokalizovány pro tento soubor, jsou definovány v části "lokalizovatelné řetězce" v horní části tohoto souboru.  Soubor ICL byl vytvořen pro řetězce Loc v souboru brandinging. js.
 
 ||||
 |-|-|-|
 |**Funkce brandingu**|**Funkce JavaScriptu**|**Popis**|
-|Var...||Definovat proměnné|
+|Var...||Definování proměnných|
 |Získání jazyka uživatelského kódu|setUserPreferenceLang|mapuje index # na jazyk kódu|
 |Nastavení a získání hodnot souborů cookie|GetCookie, setCookie||
 |Zděděný člen|changeMembersLabel|Rozbalit/sbalit zděděný člen|
@@ -555,7 +555,7 @@ some F# code
 
 ||||
 |-|-|-|
-|**Souborů**|**Použije**|**Zobrazený zdroj obsahu**|
+|**Soubor**|**Použití**|**Zobrazený zdroj obsahu**|
 |Domovská stránka. htm|Toto je stránka, která zobrazuje aktuálně nainstalovaný obsah a všechny další zprávy, které jsou vhodné k tomu, aby uživatel mohl o svém obsahu prezentovat.  Tento soubor obsahuje další atribut meta data "Microsoft.Help.Id" content = "-1", který tento obsah umístí na začátek místního obsahu obsahu.||
 ||< META_HOME_PAGE_TITLE_ADD/>|Branding. XML, tag \<HomePageTitle >|
 ||< HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Branding. XML, tag \<HomePageIntroduction >|
@@ -590,7 +590,7 @@ some F# code
 
 ||||
 |-|-|-|
-|**Souborů**|**Použije**|**Příklady**|
+|**Soubor**|**Použití**|**Příklady**|
 |Vymazat. gif|Slouží k vykreslení sbalitelné oblasti.||
 |footer_slice.gif|Prezentace zápatí||
 |info_icon.gif|Používá se při zobrazování informací.|Právní omezení|
@@ -818,10 +818,10 @@ some F# code
 
 19. V integrovaném vývojovém prostředí společnosti Contoso vyberte klávesu F1 pro otestování funkcí F1.
 
-### <a name="additional-resources"></a>Další prostředky
+### <a name="additional-resources"></a>Další materiály a zdroje informací
 
 Rozhraní API pro modul runtime najdete v tématu [rozhraní API pro Windows Help](https://msdn.microsoft.com/library/windows/desktop/hh447318\(v=vs.85\).aspx).
 
 Další informace o tom, jak využít rozhraní API pro nápovědu, najdete v tématu [Příklady kódu pro Help Viewer](https://marketplace.visualstudio.com/items?itemName=RobChandlerHelpMVP.HelpViewer20CodeExamples).
 
-Informace o případných problémech najdete v [souboru Readme aplikace Help Viewer](https://go.microsoft.com/fwlink/?LinkID=231397&clcid=0x409).
+Informace o případných problémech najdete v [souboru Readme aplikace Help Viewer](https://go.microsoft.com/fwlink/?LinkId=255960).

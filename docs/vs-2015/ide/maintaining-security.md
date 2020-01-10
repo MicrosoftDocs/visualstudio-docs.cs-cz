@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dfff199d49bcb801b85452b37c4282ff53d01fe4
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 6111900fb4c7b12a6238046fd27c3f6dad9d15ae
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74294237"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848333"
 ---
 # <a name="maintaining-security"></a>Správa zabezpečení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "74294237"
 
  Musíte být nejen ostražití ve vztahu ke své aplikaci, ale musíte mít také přehled o aktuálních bezpečnostních hrozbách a nedostatcích v případě platformy, na které aplikace běží, a v případě ostatních produktů, na kterých vaše aplikace závisí.
 
- [Zabezpečení, ochrana osobních údajů a účty](https://go.microsoft.com/fwlink/?LinkId=72881) Získejte pomoc se zabezpečením, ochranou osobních údajů a uživatelskými účty, včetně informací o virech, heslech, rodičovské kontrole, branách firewall a šifrování jednotky.
+ [Zabezpečení, ochrana osobních údajů a účty](https://windows.microsoft.com/windows/security-privacy-accounts-help#security-privacy-accounts-help=windows-8&v0h=winrttab1&v1h=win8tab1&v2h=win7tab1&v3h=winvistatab1) Získejte pomoc se zabezpečením, ochranou osobních údajů a uživatelskými účty, včetně informací o virech, heslech, rodičovské kontrole, branách firewall a šifrování jednotky.
 
  [Hledání v bulletinu zabezpečení společnosti Microsoft](/security-updates/) Tato stránka usnadňuje vyhledání dříve vydaných bulletinů. Bulletiny zabezpečení jsou určeny pro odborníky v oblasti IT a poskytují podrobné informace o aktualizacích zabezpečení.
 

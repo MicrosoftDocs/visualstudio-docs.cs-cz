@@ -19,12 +19,12 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cb2b5a55f778b8025ea9da25713eca903f9cbf74
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 020535ac73c48be74e56100c7b6f9c49b69e50dc
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296218"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851304"
 ---
 # <a name="working-with-visual-c-code-class-designer"></a>Práce s kódem jazyka Visual C++ (návrhář tříd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +41,7 @@ Návrhář tříd zobrazuje vizuální návrhovou plochu nazvanou *Diagram tří
 
 - Struktura
 
-- Enum
+- Výčet
 
 - Makro (zobrazí zobrazení po zpracování v makru)
 
@@ -82,7 +82,7 @@ Návrhář tříd zobrazuje vizuální návrhovou plochu nazvanou *Diagram tří
 - Zajistěte, aby byl typ ve správném rozsahu, aby ho Návrhář tříd mohl najít. Ujistěte se, že v kódu chybí příkaz `using`, `imports`nebo `#include`. Také se ujistěte, že jste nepřesunuli typ (nebo související typ) mimo obor názvů, ve kterém byl původně umístěn.
 
 ### <a name="troubleshooting-other-error-messages"></a>Řešení potíží s jinými chybovými zprávami
- Pomoc s chybami a upozorněními při řešení potíží najdete ve veřejných fórech MSDN (Microsoft Developer Network). Podívejte se na [Fórum sady Visual Studio Návrhář tříd](https://go.microsoft.com/fwlink/?linkid=160754).
+ Pomoc s chybami a upozorněními při řešení potíží najdete ve veřejných fórech MSDN (Microsoft Developer Network). Podívejte se na [Fórum sady Visual Studio Návrhář tříd](https://social.msdn.microsoft.com/Forums/en-US/vsclassdesigner/threads?page=1).
 
 ## <a name="limitations"></a>Omezení pro C++ prvky kódu
 
