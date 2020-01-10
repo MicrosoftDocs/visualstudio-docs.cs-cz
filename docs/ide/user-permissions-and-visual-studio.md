@@ -1,6 +1,6 @@
 ---
 title: Spustit jako správce
-ms.date: 06/05/2018
+ms.date: 01/06/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio, user permissions
@@ -12,25 +12,25 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d00bc1912991992a2aeb966680c7777c47df0549
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
-ms.translationtype: HT
+ms.openlocfilehash: 927031b4755644aeac553367a4f8a08faa0c0992
+ms.sourcegitcommit: 5421999c9ff05b3242d33e4b0465f8bc29c7c643
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75565224"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75718633"
 ---
 # <a name="user-permissions-and-visual-studio"></a>Uživatelská oprávnění a Visual Studio
 
-Z důvodu zabezpečení byste měli spustit sadu Visual Studio jako normálního uživatele, kdykoli to bude možné.
+Z důvodu zabezpečení byste měli sadu Visual Studio spustit jako typický uživatel, kdykoli to bude možné.
 
 > [!WARNING]
 > Je třeba zajistit, aby nebylo kompilováno, spouštěno nebo laděno jakékoli řešení systému Visual Studio, které nebylo získáno od důvěryhodné osoby nebo z důvěryhodného zdroje.
 
-V integrovaném vývojovém prostředí sady Visual Studio můžete udělat skoro všechno jako normální uživatel. K dokončení následujících úloh potřebujete oprávnění správce:
+V integrovaném vývojovém prostředí sady Visual Studio můžete udělat skoro všechno. K dokončení následujících úloh potřebujete oprávnění správce:
 
 |Plošný|Úloha|Další informace|
 |----------|----------| - |
-|Instalace služby|Nainstalujte Visual Studio.|[Instalace sady Visual Studio](../install/install-visual-studio.md)|
+|Instalace služby|Instalace nebo změna sady Visual Studio.|[Instalace sady Visual Studio](../install/install-visual-studio.md), [Změna sady Visual Studio](../install/modify-visual-studio.md)|
 ||Instalace, aktualizace nebo odebrání místního obsahu aplikace Help.|[Nainstalovat a spravovat místní obsah obsahu Help](../help-viewer/install-manage-local-content.md)|
 |Sada nástrojů|Přidání klasických ovládacích prvků modelu COM do **sady nástrojů**.|[Panel nástrojů](../ide/reference/toolbox.md)|
 |Sestavování|Použijte události po sestavení, které registrují komponentu.|[Porozumění vlastním postupům sestavení a událostem sestavení](/cpp/build/understanding-custom-build-steps-and-build-events)|
