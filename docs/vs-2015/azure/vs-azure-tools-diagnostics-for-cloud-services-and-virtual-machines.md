@@ -10,12 +10,12 @@ ms.date: 06/28/2018
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 0839c69a95df4419781ece2a163071ae0e3e6930
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 96df8bbf1c991b98571a427a5118374cd6f3ba3b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74293688"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851458"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>Nastavení diagnostiky pro službu Azure Cloud Services a virtuální počítače
 Pokud potřebujete řešit potíže s cloudovou službou Azure nebo virtuálním počítačem, můžete pomocí sady Visual Studio snadněji nastavit Azure Diagnostics. Diagnostika zaznamenává systémová data a data protokolování do virtuálních počítačů a instancí virtuálních počítačů, které spouštějí vaši cloudovou službu. Diagnostická data se přenesou na účet úložiště, který zvolíte. Další informace o protokolování diagnostiky v Azure najdete v tématu [Povolení protokolování diagnostiky pro Web Apps v Azure App Service](/azure/app-service/web-sites-enable-diagnostic-log).
@@ -38,7 +38,7 @@ Připojovací řetězec funguje jinak v některých klíčových způsobech v sa
 * V Azure SDK 2,4 a starších verzích se připojovací řetězec používá modulem plug-in pro diagnostiku k získání informací o účtu úložiště pro přenos diagnostických protokolů.
 * Sada Visual Studio v sadě Azure SDK 2,6 a novějších používá připojovací řetězec pro diagnostiku k nastavení rozšíření Azure Diagnostics s příslušnými informacemi o účtu úložiště během publikování. Připojovací řetězec můžete použít k definování různých účtů úložiště pro různé konfigurace služby, které aplikace Visual Studio používá během publikování. Vzhledem k tomu, že modul plug-in Diagnostika není po sadě Azure SDK 2,5 k dispozici, nemůže soubor. cscfg sám nastavit diagnostické rozšíření. Rozšíření musíte nastavit samostatně pomocí nástrojů, jako je Visual Studio nebo PowerShell.
 * Z důvodu zjednodušení procesu nastavení diagnostického rozšíření pomocí prostředí PowerShell obsahuje výstup balíčku ze sady Visual Studio pro rozšíření diagnostiky pro každou roli kód XML pro veřejnou konfiguraci. Visual Studio používá připojovací řetězec pro diagnostiku k naplnění informací o účtu úložiště ve veřejné konfiguraci. Veřejné konfigurační soubory se vytvoří ve složce rozšíření. Veřejné konfigurační soubory používají vzor pojmenování PaaSDiagnostics.\>název&lt;role. PubConfig. XML. Jakékoli nasazení založené na prostředí PowerShell mohou pomocí tohoto modelu namapovat každou konfiguraci na roli.
-* [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040) používá připojovací řetězec v souboru. cscfg pro přístup k diagnostickým datům. Data se zobrazí na kartě **monitorování** . Připojovací řetězec je nutný k nastavení služby pro zobrazení podrobných dat monitorování na portálu.
+* [Azure Portal](https://portal.azure.com/) používá připojovací řetězec v souboru. cscfg pro přístup k diagnostickým datům. Data se zobrazí na kartě **monitorování** . Připojovací řetězec je nutný k nastavení služby pro zobrazení podrobných dat monitorování na portálu.
 
 ## <a name="migrate-projects-to-azure-sdk-26-and-later"></a>Migrace projektů do Azure SDK 2,6 a novější
 Když migrujete ze sady Azure SDK 2,5 na sadu Azure SDK 2,6 nebo novější, pokud jste v souboru. wadcfgx měli zadaný účet úložiště diagnostiky, zůstane účet úložiště v tomto souboru. Pokud chcete využít flexibilitu při používání různých účtů úložiště pro různé konfigurace úložiště, přidejte do svého projektu připojovací řetězec ručně. Pokud migrujete projekt ze sady Azure SDK 2,4 nebo starší do sady Azure SDK 2,6, připojovací řetězce diagnostiky se zachovají. Všimněte si ale změn v tématu Jak se zpracovávají připojovací řetězce v sadě Azure SDK 2,6 popsané v předchozí části.
@@ -69,7 +69,7 @@ V aplikaci Visual Studio můžete shromažďovat diagnostická data pro role, kt
 ### <a name="to-turn-on-diagnostics-in-visual-studio-before-deployment"></a>Zapnutí diagnostiky v aplikaci Visual Studio před nasazením
 
 1. V místní nabídce role vyberte možnost **vlastnosti**. V dialogovém okně **vlastnosti** role vyberte kartu **Konfigurace** .
-2. V části **Diagnostika** se ujistěte, že je zaškrtnuté políčko **Povolit diagnostiku** .
+2. V **diagnostiky** části, ujistěte se, že **povolit diagnostiku** je zaškrtnuto políčko.
 
     ![Přístup k možnosti Povolit diagnostiku](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796660.png)
 3. Chcete-li zadat účet úložiště pro diagnostická data, vyberte tlačítko se třemi tečkami (...).
@@ -141,7 +141,7 @@ Protokoly aplikací mají diagnostické informace, které jsou vytvářeny webov
 
 Další informace o protokolech aplikací najdete v tématu [Povolení protokolování diagnostiky pro Web Apps v Azure App Service](/azure/app-service/web-sites-enable-diagnostic-log).
 
-### <a name="windows-event-logs"></a>Protokoly událostí systému Windows
+### <a name="windows-event-logs"></a>Protokoly událostí Windows
 Chcete-li zaznamenat protokoly událostí systému Windows, zaškrtněte políčko **Povolit přenos protokolů událostí systému Windows** . Pokud chcete zvýšit nebo snížit interval mezi přenosem protokolů událostí do svého účtu úložiště, změňte hodnotu **Doba přenosu (min)** . Zaškrtněte políčka pro typy událostí, které chcete sledovat.
 
 ![Protokoly událostí](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796664.png)
@@ -157,10 +157,10 @@ Pokud používáte sadu Azure SDK 2,5 a chcete zadat vlastní zdroj dat, můžet
 </WindowsEventLog>
 ```
 
-### <a name="performance-counters"></a>Čítače výkonu
+### <a name="performance-counters"></a>Čítače výkonnosti
 Informace čítače výkonu vám pomůžou najít problémová místa systému a doladit výkon systému a aplikace. Další informace najdete v tématu [Vytvoření a použití čítačů výkonu v aplikaci Azure](https://msdn.microsoft.com/library/azure/hh411542.aspx). Chcete-li zachytit čítače výkonu, zaškrtněte políčko **Povolit přenos čítačů výkonu** . Pokud chcete zvýšit nebo snížit interval mezi přenosem protokolů událostí do svého účtu úložiště, změňte hodnotu **Doba přenosu (min)** . Zaškrtněte políčka pro čítače výkonu, které chcete sledovat.
 
-![Čítače výkonu](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758147.png)
+![Čítače výkonnosti](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758147.png)
 
 Chcete-li sledovat čítač výkonu, který není uveden, zadejte čítač výkonu pomocí navrhované syntaxe. a pak vyberte **Přidat**. Operační systém na virtuálním počítači určuje, které čítače výkonu můžete sledovat. Další informace o syntaxi najdete v tématu [Určení cesty čítače](https://msdn.microsoft.com/library/windows/desktop/aa373193.aspx).
 
@@ -222,7 +222,7 @@ Jakmile shromáždíte diagnostická data pro cloudovou službu nebo virtuální
    | --- | --- | --- |
    | Protokoly aplikací |Protokoluje, že váš kód generuje voláním metod třídy **System. Diagnostics. Trace** . |WADLogsTable |
    | Protokoly událostí |Data z protokolů událostí systému Windows na virtuálních počítačích. Systém Windows ukládá informace v těchto protokolech, ale aplikace a služby používají protokoly k nahlášení chyb nebo informací o protokolu. |WADWindowsEventLogsTable |
-   | Čítače výkonu |Data můžete shromažďovat na jakémkoli čítači výkonu, který je k dispozici na virtuálním počítači. Operační systém poskytuje čítače výkonu, které zahrnují řadu statistik, jako je využití paměti a čas procesoru. |WADPerformanceCountersTable |
+   | Čítače výkonnosti |Data můžete shromažďovat na jakémkoli čítači výkonu, který je k dispozici na virtuálním počítači. Operační systém poskytuje čítače výkonu, které zahrnují řadu statistik, jako je využití paměti a čas procesoru. |WADPerformanceCountersTable |
    | Protokoly infrastruktury |Protokoly, které jsou generovány přímo z diagnostické infrastruktury. |WADDiagnosticInfrastructureLogsTable |
    | Protokoly IIS |Protokoly, které zaznamenávají webové požadavky. Pokud vaše cloudová služba získá značný objem provozu, můžou být tyto protokoly zdlouhavé. Tato data je vhodné shromažďovat a ukládat pouze v případě, že je potřebujete. |V kontejneru objektů BLOB v části wad-IIS-failedreqlogs se v cestě k tomuto nasazení, roli a instanci můžete najít protokoly neúspěšných požadavků. Úplné protokoly najdete v části wad-IIS-LogFiles. Položky pro každý soubor jsou vytvořeny v tabulce WADDirectories. |
    | Výpisy stavu systému |Poskytuje binární image procesu vaší cloudové služby (obvykle role pracovního procesu). |WAD-drcení – výpis kontejneru objektů BLOB |

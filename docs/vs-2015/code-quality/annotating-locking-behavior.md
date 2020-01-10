@@ -33,12 +33,12 @@ caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: jillfra
-ms.openlocfilehash: a5b34253485da233ba6e25841b6592068de6fb69
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a40697c56468ce05bcf132e6ef2594aaa8d61569
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295823"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850159"
 ---
 # <a name="annotating-locking-behavior"></a>Zadávání poznámek o chování při zamykání
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -117,4 +117,4 @@ Aby nedocházelo k chybám souběžnosti v programu s více vlákny, vždy postu
  [Určení, kdy a kde se má Poznámka použít](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
    [vnitřních funkcí](../code-quality/intrinsic-functions.md)  
  [Osvědčené postupy a příklady](../code-quality/best-practices-and-examples-sal.md)   
- [Blog týmu analýzy kódu](https://go.microsoft.com/fwlink/p/?LinkId=251197)
+ [Blog týmu analýzy kódu](https://blogs.msdn.com/b/codeanalysis/)

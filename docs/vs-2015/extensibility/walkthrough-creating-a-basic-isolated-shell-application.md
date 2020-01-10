@@ -12,12 +12,12 @@ ms.assetid: 8b12e223-aae3-4c23-813d-ede1125f5f69
 caps.latest.revision: 55
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: b6dc84dd8d9f19012c4d09ba9bfd974ec181b9f6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 6192eb5583e7d0bc37518e995aacccad643cc9ec
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291270"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850353"
 ---
 # <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>Návod: Vytvoření základní aplikace izolovaného prostředí
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -115,7 +115,7 @@ Tento návod ukazuje, jak vytvořit řešení izolovaného prostředí, přizpů
   
 2. Odkomentujte následující řádek:  
   
-     [$RootKey $ \Packages\\{87569308-4813-40a0-9cd0-d7a30838ca3f}]  
+     [$RootKey$\Packages\\{87569308-4813-40a0-9cd0-d7a30838ca3f}]  
   
 3. Znovu sestavte řešení a spusťte ladění izolovaného prostředí. Otevřete soubor XML, například \MyVSShellStub\MyVSShellStub\MyVSShellStubUI\MyVSShellStubUI.vsct. Ověřte, že klíčová slova XML v souboru nejsou zabarvení a že při zadání "<" na řádku se nepřinesou popisy XML.  
   
@@ -163,7 +163,7 @@ Tento návod ukazuje, jak vytvořit řešení izolovaného prostředí, přizpů
 6. Znovu sestavte řešení a spusťte ladění izolovaného prostředí. Pole help/o by mělo být přibližně čtvercové.  
   
 ## <a name="before-you-deploy-the-isolated-shell-application"></a>Před nasazením aplikace izolovaného prostředí  
- Vaše aplikace izolovaného prostředí se dá nainstalovat na libovolný počítač, který má Distribuovatelný balíček prostředí Visual Studio Shell (izolovaný režim). Další informace o redistribuovatelných balíčcích najdete na webu věnovaném [stažení rozšiřitelnosti sady Visual Studio](https://go.microsoft.com/fwlink/?LinkID=119298) .  
+ Vaše aplikace izolovaného prostředí se dá nainstalovat na libovolný počítač, který má Distribuovatelný balíček prostředí Visual Studio Shell (izolovaný režim). Další informace o redistribuovatelných balíčcích najdete na webu věnovaném [stažení rozšiřitelnosti sady Visual Studio](https://msdn.microsoft.com/vstudio/bb984878.aspx) .  
   
 ## <a name="deploying-the-isolated-shell-application"></a>Nasazení aplikace izolovaného prostředí  
  Aplikaci izolovaného prostředí nasadíte do cílového počítače vytvořením projektu instalace. Je nutné zadat tyto věci:  
@@ -248,7 +248,7 @@ Tento návod ukazuje, jak vytvořit řešení izolovaného prostředí, přizpů
   
 18. V podokně **co chcete najít?** v rozevíracím seznamu vyberte **položku registru** a klikněte na **Další**.  
   
-19. V podokně **jak ho chcete vyhledat?** vyberte jako kořen registru **HKEY_LOCAL_MACHINE** . Zadejte **SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** pro 64 systémy nebo **SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** pro 32 bitové systémy a jako hodnotu registru zadejte **install** . Klikněte na **Další**.  
+19. V podokně **jak ho chcete vyhledat?** vyberte jako kořen registru **HKEY_LOCAL_MACHINE** . Zadejte **SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** pro 64 systémy nebo **SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** pro 32 bitové systémy a jako hodnotu registru zadejte **install** . Klikněte na **Další**.  
   
 20. V podokně **co chcete s hodnotou?** zadejte **Tento produkt vyžaduje instalaci sady Visual Studio 2015 Isolated Shell Redistributable.** jako text zobrazení a klikněte na tlačítko **Dokončit**.  
   

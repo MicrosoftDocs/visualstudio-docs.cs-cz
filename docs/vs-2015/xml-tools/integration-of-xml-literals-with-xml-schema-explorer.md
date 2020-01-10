@@ -9,17 +9,17 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d808fce2783d444071ea1a7976d26e3c5bf02eed
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a15767454c83604de2844e4c0a9f2e121a9a1a4f
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297466"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846127"
 ---
 # <a name="integration-of-xml-literals-with-xml-schema-explorer"></a>Integrace literálů XML s Průzkumníkem schémat XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Basic podporuje literály XML, což znamená, že můžete začlenit fragmenty XML přímo do kódu Visual Basic. Další informace najdete v tématu [Přehled literálů XML](https://go.microsoft.com/fwlink/?LinkId=140325).
+Visual Basic podporuje literály XML, což znamená, že můžete začlenit fragmenty XML přímo do kódu Visual Basic. Další informace najdete v tématu [Přehled literálů XML](https://msdn.microsoft.com/library/bb384629.aspx).
 
  Pokud soubor XSD v projektu Visual Basic obsahuje literál XML, můžete zobrazit sadu schémat XML v Průzkumníku schémat XML. Chcete-li zobrazit sadu schémat přidruženou k literálu XML, klikněte pravým tlačítkem myši na uzel XML v literálu XML nebo v importu oboru názvů XML a vyberte možnost **Zobrazit v Průzkumníku schémat**.
 

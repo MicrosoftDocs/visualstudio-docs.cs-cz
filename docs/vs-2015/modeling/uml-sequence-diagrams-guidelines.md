@@ -23,12 +23,12 @@ caps.latest.revision: 55
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8c5906084fc7db96ddf304e8362bf7692dac62d5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cdd853307bdea28c48762a6a3f0416e698b577ff
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297149"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850126"
 ---
 # <a name="uml-sequence-diagrams-guidelines"></a>Sekvenční diagramy UML: Pokyny
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,7 +39,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
  Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-## <a name="in-this-topic"></a>V tomto tématu
+## <a name="in-this-topic"></a>V tomto tématu
  [Použití sekvenčních diagramů UML](#Using)
 
  [Základní kroky pro vykreslování sekvenčních diagramů](#BasicSteps)
@@ -123,7 +123,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
 - Přetáhněte zprávu v její životnosti nahoru nebo dolů. Můžete ho přetáhnout přes jiné zprávy nebo do bloku spuštění nebo z něj.
 
-     \- nebo-
+     \- nebo –
 
 - Klikněte na zprávu a pomocí kláves ŠIPKA **nahoru** a šipka **dolů** upravte polohu zprávy. Pro změnu pořadí zpráv použijte **SHIFT + šipka nahoru** a **SHIFT + šipka dolů** .
 
@@ -165,7 +165,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
 2. Přetáhněte interakci do balíčku.
 
-     \- nebo-
+     \- nebo –
 
      Klikněte pravým tlačítkem myši na interakci a pak klikněte na **Vyjmout**. Klikněte pravým tlačítkem na balíček a pak klikněte na **Vložit**.
 
@@ -261,7 +261,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
 |**Pro tento účel**|**Použít tento formát**|
 |--------------------------|-------------------------|
-|Anonymní instance typu<br /><br /> Tuto část použijte v případě, že máte pouze jednu životnost každého typu.|*Popisuje*|
+|Anonymní instance typu<br /><br /> Tuto část použijte v případě, že máte pouze jednu životnost každého typu.|*typeName*|
 |Pojmenovaná instance typu<br /><br /> Tuto hodnotu použijte, pokud chcete zobrazit sekvenci, která zahrnuje víc než jednu instanci stejného typu.|*ObjectName*:*TypeName*|
 
 ### <a name="creating-lifelines-from-types"></a>Vytváření životností z typů
@@ -274,7 +274,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
 - Přetáhněte třídu, komponentu nebo rozhraní z Průzkumníka modelů UML do sekvenčního diagramu.
 
-   \- nebo-
+   \- nebo –
 
   1. V příslušném diagramu klikněte pravým tlačítkem na třídu, komponentu nebo rozhraní a pak klikněte na **vytvořit životnost**.
 
@@ -323,7 +323,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
          Třída nebo rozhraní se zobrazí v diagramu tříd.
 
-         \- nebo-
+         \- nebo –
 
     3. Přetáhněte nové rozhraní z **Průzkumníka modelů UML** na součást nebo port v diagramu komponent.
 
@@ -349,7 +349,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
 3. Dvakrát klikněte na název při použití interakce a přejmenujte jej, abyste popsali účinek opakovaně použitelné sekvence v tomto diagramu.
 
-     \- nebo-
+     \- nebo –
 
      Napište název jako volání funkce s parametry.
 
@@ -357,7 +357,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
      Kliknutím na **vytvořit novou sekvenci** vytvoříte nový sekvenční diagram.
 
-     \- nebo-
+     \- nebo –
 
      Kliknutím na **propojit se sekvencí** můžete propojit s existujícím diagramem.
 
@@ -384,7 +384,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
 - Dvakrát klikněte na možnost použít interakci.
 
-     \- nebo-
+     \- nebo –
 
      Klikněte pravým tlačítkem myši na použití interakce a potom klikněte na tlačítko **Přejít ke sekvenci**.
 
@@ -443,4 +443,4 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 5. Chcete-li přidat nové zprávy do fragmentu, použijte nástroje pro zprávy nebo je zkopírujte a vložte.
 
 ## <a name="see-also"></a>Viz také
- [Sekvenční diagramy UML: referenční](../modeling/uml-sequence-diagrams-reference.md) dokumentace [Upravit modely UML a diagramy](../modeling/edit-uml-models-and-diagrams.md) [případů použití UML: referenční](../modeling/uml-use-case-diagrams-reference.md) [diagramy tříd](../modeling/uml-class-diagrams-reference.md) UML: referenční diagramy UML: referenční diagramy komponent UML: referenční [](../modeling/uml-component-diagrams-reference.md) [](../modeling/uml-component-diagrams-reference.md) [video: náčrtace interakcí pomocí sekvenčních diagramů](https://go.microsoft.com/fwlink/?LinkId=201113)
+ [Sekvenční diagramy UML: referenční](../modeling/uml-sequence-diagrams-reference.md) dokumentace [Upravit modely UML a diagramy](../modeling/edit-uml-models-and-diagrams.md) [případů použití UML: referenční](../modeling/uml-use-case-diagrams-reference.md) [diagramy tříd](../modeling/uml-class-diagrams-reference.md) UML: referenční diagramy UML: referenční diagramy komponent UML: referenční [](../modeling/uml-component-diagrams-reference.md) [](../modeling/uml-component-diagrams-reference.md) [video: náčrtace interakcí pomocí sekvenčních diagramů](https://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-2-Organizing-Features-Into-Use-Cases)

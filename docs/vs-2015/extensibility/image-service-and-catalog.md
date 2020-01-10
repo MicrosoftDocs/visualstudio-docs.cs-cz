@@ -6,12 +6,12 @@ ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
 caps.latest.revision: 38
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 0f509ca93b6802fc99a21143360227d64f8db319
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 42c42a845ef98fb3a6ebe9b5e017ae2783365f1b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301177"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851366"
 ---
 # <a name="image-service-and-catalog"></a>Služba vyhledávání a katalog obrázků
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -104,11 +104,11 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 
 |||  
 |-|-|  
-|**Dílčí element**|**Definition**|  
-|Import|Importuje symboly daného souboru manifestu pro použití v aktuálním manifestu.|  
+|**Dílčí element**|**Definice**|  
+|Importovat|Importuje symboly daného souboru manifestu pro použití v aktuálním manifestu.|  
 |identifikátor GUID|Symbol představuje GUID a musí odpovídat formátování identifikátoru GUID.|  
 |ID|Symbol představuje ID a musí být nezáporné celé číslo.|  
-|Řetězec|Symbol představuje libovolnou řetězcovou hodnotu.|  
+|String|Symbol představuje libovolnou řetězcovou hodnotu.|  
 
  V symbolech rozlišuje velká a malá písmena a jsou odkazovány pomocí syntaxe $ (symbol-Name):  
 
@@ -122,7 +122,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 
 |||  
 |-|-|  
-|**Písmeno**|**Popis**|  
+|**Symbol**|**Popis**|  
 |CommonProgramFiles|Hodnota proměnné prostředí% CommonProgramFiles%|  
 |LocalAppData|Hodnota proměnné prostředí% LocalAppData%|  
 |ManifestFolder|Složka obsahující soubor manifestu|  
@@ -146,12 +146,12 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 
 |||  
 |-|-|  
-|**Atribut**|**Definition**|  
+|**Atribut**|**Definice**|  
 |identifikátor GUID|Požadovanou Část GUID monikeru image|  
 |ID|Požadovanou Část ID monikeru bitové kopie|  
 |AllowColorInversion|[Volitelné, výchozí hodnota true] Určuje, zda může být barva obrázku při použití na tmavém pozadí převrácena prostřednictvím kódu programu.|  
 
- **Zdrojová**  
+ **Zdroj**  
 
  Zdrojový element > \<definuje jeden prostředek zdroje obrázku (XAML a PNG).  
 
@@ -163,17 +163,17 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 
 |               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Atribut** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                            **Definition**                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|      Uri      |                                                                                                                                                                                                                                                                                                               Požadovanou Identifikátor URI, který definuje, ze kterého může být obrázek načten. Může být jeden z následujících akcí:<br /><br /> – [Identifikátor URI balíčku](https://msdn.microsoft.com/library/aa970069\(v=vs.100\).aspx) pomocí autority Application:///<br />– Odkaz na prostředek absolutní součásti<br />– Cesta k souboru, který obsahuje nativní prostředek                                                                                                                                                                                                                                                                                                               |
-|  Pozadí   | Volitelné Označuje, jaký typ pozadí má zdroj použít.<br /><br /> Může být jeden z následujících akcí:<br /><br /> *Světlá:* Zdroj lze použít na světlém pozadí.<br /><br /> <em>Tmavě tmavá:</em> Zdroj lze použít na tmavém pozadí.<br /><br /> *HighContrast:* Zdroj lze použít na jakémkoli pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastLight:* Zdroj lze použít na světlém pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastDark:* Zdroj lze použít na tmavém pozadí v režimu Vysoký kontrast.<br /><br /> Pokud je atribut Background vynechán, lze zdroj použít na jakémkoli pozadí.<br /><br /> Pokud je pozadí *světlé*, *tmavé*, *HighContrastLight*nebo *HighContrastDark*, barvy zdroje se nikdy nezmění. Pokud je pozadí vynecháno nebo je nastaveno na *HighContrast*, je inverze barev zdroje řízena atributem **AllowColorInversion** obrázku. |
+| **Atribut** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                            **Definice**                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|      Identifikátor URI      |                                                                                                                                                                                                                                                                                                               Požadovanou Identifikátor URI, který definuje, ze kterého může být obrázek načten. Může být jeden z následujících akcí:<br /><br /> – [Identifikátor URI balíčku](https://msdn.microsoft.com/library/aa970069\(v=vs.100\).aspx) pomocí autority Application:///<br />– Odkaz na prostředek absolutní součásti<br />– Cesta k souboru, který obsahuje nativní prostředek                                                                                                                                                                                                                                                                                                               |
+|  Podrobnosti   | Volitelné Označuje, jaký typ pozadí má zdroj použít.<br /><br /> Může být jeden z následujících akcí:<br /><br /> *Světlá:* Zdroj lze použít na světlém pozadí.<br /><br /> <em>Tmavě tmavá:</em> Zdroj lze použít na tmavém pozadí.<br /><br /> *HighContrast:* Zdroj lze použít na jakémkoli pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastLight:* Zdroj lze použít na světlém pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastDark:* Zdroj lze použít na tmavém pozadí v režimu Vysoký kontrast.<br /><br /> Pokud je atribut Background vynechán, lze zdroj použít na jakémkoli pozadí.<br /><br /> Pokud je pozadí *světlé*, *tmavé*, *HighContrastLight*nebo *HighContrastDark*, barvy zdroje se nikdy nezmění. Pokud je pozadí vynecháno nebo je nastaveno na *HighContrast*, je inverze barev zdroje řízena atributem **AllowColorInversion** obrázku. |
 |               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
  \<zdrojový > prvek může mít přesně jeden z následujících volitelných dílčích elementů:  
 
 ||||  
 |-|-|-|  
-|**Element**|**Atributy (všechny povinné)**|**Definition**|  
-|Velikost \<>|Hodnota|Zdroj se použije pro obrázky dané velikosti (v jednotkách zařízení). Obrázek bude čtvercový.|  
+|**Element**|**Atributy (všechny povinné)**|**Definice**|  
+|Velikost \<|Hodnota|Zdroj se použije pro obrázky dané velikosti (v jednotkách zařízení). Obrázek bude čtvercový.|  
 |\<SizeRange >|MinSize, MaxSize|Zdroj bude použit pro obrázky z MinSize do MaxSize (v jednotkách zařízení) včetně. Obrázek bude čtvercový.|  
 |\<dimenzí >|Width, Height|Zdroj se použije pro obrázky zadané šířky a výšky (v jednotkách zařízení).|  
 |\<DimensionRange >|MinWidth, MinHeight,<br /><br /> MaxWidth, MaxHeight|Zdroj bude použit pro obrázky z minimální šířky a výšky až po maximální šířku a výšku (v jednotkách zařízení) včetně.|  
@@ -186,8 +186,8 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 
 |||  
 |-|-|  
-|**Atribut**|**Definition**|  
-|Typ|Požadovanou Typ nativního prostředku, buď XAML, nebo PNG|  
+|**Atribut**|**Definice**|  
+|Type|Požadovanou Typ nativního prostředku, buď XAML, nebo PNG|  
 |ID|Požadovanou Část celého čísla ID nativního prostředku|  
 
  **Obrázků**  
@@ -203,7 +203,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 
 |||  
 |-|-|  
-|**Atribut**|**Definition**|  
+|**Atribut**|**Definice**|  
 |identifikátor GUID|Požadovanou Část GUID monikeru image|  
 |ID|Požadovanou Část ID monikeru bitové kopie|  
 |Externí|[Volitelné, výchozí hodnota false] Určuje, zda moniker image odkazuje na obrázek v aktuálním manifestu.|  
@@ -215,35 +215,35 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 ### <a name="first-steps-managed"></a>První kroky (spravované)  
  Chcete-li použít službu image, je nutné přidat do projektu odkazy na některá nebo všechna následující sestavení:  
 
-- **Microsoft. VisualStudio. ImageCatalog. dll**  
+- **Microsoft.VisualStudio.ImageCatalog.dll**  
 
   - Vyžaduje se, pokud použijete integrovaný katalog imagí KnownMonikers  
 
-- **Microsoft. VisualStudio. Imaging. dll**  
+- **Microsoft.VisualStudio.Imaging.dll**  
 
   - Požadováno při použití **CrispImage** a **ImageThemingUtilities** v uživatelském rozhraní WPF  
 
-- **Microsoft. VisualStudio. Imaging. Interop. 14.0. DesignTime. dll**  
+- **Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll**  
 
   - Vyžaduje se, pokud používáte typy **ImageMoniker** a **structsize** .  
 
   - **EmbedInteropTypes** by měla být nastavená na true.  
 
-- **Microsoft. VisualStudio. Shell. Interop. 14.0. DesignTime**  
+- **Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime**  
 
   - Povinné, pokud používáte typ **IVsImageService2**  
 
   - **EmbedInteropTypes** by měla být nastavená na true.  
 
-- **Microsoft. VisualStudio. Utilities. dll**  
+- **Microsoft.VisualStudio.Utilities.dll**  
 
   - Vyžaduje se, pokud použijete **BrushToColorConverter** pro ImageThemingUtilities. **ImageBackgroundColor** v UŽIVATELSKÉM rozhraní WPF  
 
-- **Microsoft. VisualStudio. Shell.\<VSVersion >. 0**  
+- **Microsoft.VisualStudio.Shell.\<VSVersion>.0**  
 
   - Povinné, pokud používáte typ **IVsUIObject**  
 
-- **Microsoft. VisualStudio. Shell. Interop. 10.0. dll**  
+- **Microsoft.VisualStudio.Shell.Interop.10.0.dll**  
 
   - Povinné, pokud používáte pomocníky uživatelského rozhraní související s WinForms  
 
@@ -252,29 +252,29 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 ### <a name="first-steps-native"></a>První kroky (nativní)  
  Chcete-li použít službu Image Service, je nutné zahrnout do projektu některá nebo všechna následující záhlaví:  
 
-- **KnownImageIds. h**  
+- **KnownImageIds.h**  
 
   - Vyžaduje se, pokud použijete vestavěný katalog imagí **KnownMonikers**, ale nemůžete použít typ **ImageMoniker** , například při vracení hodnot z **IVsHierarchy GetGuidProperty** nebo **GetProperty** volání.  
 
-- **KnownMonikers. h**  
+- **KnownMonikers.h**  
 
   - Vyžaduje se, pokud použijete integrovaný katalog imagí **KnownMonikers**.  
 
-- **ImageParameters140. h**  
+- **ImageParameters140.h**  
 
   - Vyžaduje se, pokud použijete typy **ImageMoniker** a **structsize** .  
 
-- **VSShell140. h**  
+- **VSShell140.h**  
 
   - Vyžaduje se, pokud použijete typ **IVsImageService2** .  
 
-- **ImageThemingUtilities. h**  
+- **ImageThemingUtilities.h**  
 
   - Vyžaduje se, pokud nemůžete nechat službu Image Service pokládat za vás.  
 
   - Tuto hlavičku nepoužívejte, pokud služba Image dokáže zpracovat vaše image.  
 
-- **VSUIDPIHelper. h**  
+- **VSUIDPIHelper.h**  
 
   - Vyžaduje se, pokud k získání aktuálního rozlišení DPI použijete pomocná okna.  
 
@@ -650,11 +650,11 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 3. Aktualizujte kód tak, aby používal službu image k žádosti o monikery prostřednictvím aktualizovaného mapování. (To může znamenat, že aktualizace na **CrispImages** pro spravovaný kód nebo požadavek HBITMAPs nebo HICONs z Image Service a jejich předání pro nativní kód.)  
 
 ## <a name="testing-your-images"></a>Testování imagí  
- Pomocí nástroje Prohlížeč knihovny obrázků můžete testovat manifesty imagí, abyste měli jistotu, že všechno je správně vytvořené. Tento nástroj najdete v [sadě Visual Studio 2015 SDK](https://msdn.microsoft.com/library/bb166441.aspx). Dokumentaci k tomuto nástroji a dalším uživatelům najdete [tady](https://aka.ms/VSImageThemeTools).  
+ Pomocí nástroje Prohlížeč knihovny obrázků můžete testovat manifesty imagí, abyste měli jistotu, že všechno je správně vytvořené. Tento nástroj najdete v [sadě Visual Studio 2015 SDK](https://msdn.microsoft.com/library/bb166441.aspx). Dokumentaci k tomuto nástroji a dalším uživatelům najdete [tady](https://docs.microsoft.com/visualstudio/extensibility/internals/vssdk-utilities?view=vs-2015&redirectedfrom=MSDN).  
 
-## <a name="additional-resources"></a>Další zdroje informací:  
+## <a name="additional-resources"></a>Další materiály a zdroje informací  
 
-### <a name="samples"></a>Ukázky kódu  
+### <a name="samples"></a>Ukázky  
  Několik ukázek sady Visual Studio na GitHubu bylo aktualizováno, aby ukázaly, jak používat službu Image jako součást různých bodů rozšiřitelnosti sady Visual Studio.  
 
  Nejnovější ukázky najdete [http://github.com/Microsoft/VSSDK-Extensibility-Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples) .  
@@ -949,7 +949,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphGroupError||StatusError|  
     |GlyphBscFile||ClassFile|  
     |GlyphAssembly||Odkaz|  
-    |GlyphLibrary||Knihovna|  
+    |GlyphLibrary||Knihovna nástroje|  
     |GlyphVBProject||VBProjectNode|  
     |GlyphCoolProject||CSProjectNode|  
     |GlyphCppProject||CPPProjectNode|  

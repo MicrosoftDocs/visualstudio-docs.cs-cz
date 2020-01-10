@@ -9,23 +9,23 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a9651c04c1d94459052d92cdda0afa58e344b650
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cdba2105c6b8af42d51669e0d1fc8ce49085d513
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295787"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851612"
 ---
 # <a name="step-1-create-a-windows-forms-application-project"></a>Krok 1: Vytvořte projekt formulářové aplikace Windows
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu aplikace model Windows Forms.
 
- ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 1](https://go.microsoft.com/fwlink/?LinkId=205209) nebo [kurz 1: vytvoření prohlížeče obrázků ve C# videu 1](https://go.microsoft.com/fwlink/?LinkId=205199). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
+ ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 1](https://msdn.microsoft.com/vbasic/gg315352.aspx) nebo [kurz 1: vytvoření prohlížeče obrázků ve C# videu 1](https://msdn.microsoft.com/vcsharp/gg278409.aspx). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
 
 ### <a name="to-create-a-windows-forms-application-project"></a>Vytvoření projektu aplikace model Windows Forms
 
-1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **projekt**. Dialogové okno by mělo vypadat takto.
+1. V panelu nabídky zvolte **souboru**, **nový**, **projektu**. Dialogové okno by mělo vypadat takto.
 
      ![Dialog Nový projekt](../ide/media/newprojectdialogcallouts.png "NewProjectDialogCallouts") Nový projekt – dialogové okno
 

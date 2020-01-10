@@ -24,12 +24,12 @@ caps.latest.revision: 43
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: da4e0e3bab904b660f3d843e105b7d256a63a1b5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 06e83e254cad77d4ede9716a18a51f6476fb51ad
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297217"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850179"
 ---
 # <a name="uml-class-diagrams-reference"></a>Diagramy tříd UML: Referenční dokumentace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "74297217"
 Diagram tříd UML popisuje objekty a informační struktury, které vaše aplikace používá, interně i ve spojení s uživateli. Tyto informace popisuje bez odkazů na konkrétní implementaci. Jeho třídy a vztahy mohou být implementovány mnoha způsoby, jako jsou tabulky databáze, uzly XML nebo kompozice softwarových objektů.
 
 > [!NOTE]
-> Toto téma se zabývá diagramy tříd UML. Existuje jiný druh diagramu tříd, diagram tříd .NET, který slouží k vizualizaci kódu programu. Další informace najdete v tématu [navrhování a zobrazování tříd a typů](https://go.microsoft.com/fwlink/?LinkId=142231).
+> Toto téma se zabývá diagramy tříd UML. Existuje jiný druh diagramu tříd, diagram tříd .NET, který slouží k vizualizaci kódu programu. Další informace najdete v tématu [navrhování a zobrazování tříd a typů](https://msdn.microsoft.com/library/ab7aty24.aspx).
 
  Chcete-li vytvořit diagram tříd UML, v nabídce **Architektura** vyberte možnost **Nový diagram UML nebo vrstva**. Další informace o vykreslování diagramů tříd UML naleznete v tématu [diagramy tříd UML: pokyny](../modeling/uml-class-diagrams-guidelines.md). Další informace o vytváření a kreslení diagramů modelování najdete v tématu [Úprava modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md).
 
@@ -58,12 +58,12 @@ Diagram tříd UML popisuje objekty a informační struktury, které vaše aplik
 
 | **Automatického** |       **Element**        |                                                                                                                                                             **Popis**                                                                                                                                                              |
 |-----------|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     |        **Deník**         |                                                           Definice objektů, které sdílejí dané strukturální nebo behaviorální charakteristiky. Další informace naleznete v tématu [vlastnosti typů v diagramech tříd UML](../modeling/properties-of-types-on-uml-class-diagrams.md).                                                            |
+|     1     |        **Třída**         |                                                           Definice objektů, které sdílejí dané strukturální nebo behaviorální charakteristiky. Další informace naleznete v tématu [vlastnosti typů v diagramech tříd UML](../modeling/properties-of-types-on-uml-class-diagrams.md).                                                            |
 |     1     |        Třídění        |                                                                                                             Obecný název třídy, rozhraní nebo výčtu. Komponenty, případy použití a objekty actor jsou také třídění.                                                                                                             |
 |     2     | Sbalit/rozbalit ovládací prvek |                                                                                         Pokud nevidíte podrobnosti o třídění, klikněte na rozšíření v levém horním rohu třídění. Může být také nutné kliknout na [+] v každém segmentu.                                                                                         |
 |     3     |      **Atribut**       |   Zadaná hodnota připojená k každé instanci klasifikátoru.<br /><br /> Chcete-li přidat atribut, klikněte na oddíl **atributy** a potom stiskněte klávesu **ENTER**. Zadejte signaturu atributu. Další informace naleznete v tématu [vlastnosti atributů v diagramech tříd UML](../modeling/properties-of-attributes-on-uml-class-diagrams.md).   |
-|     4     |      **NázevOperace**       | Metoda nebo funkce, které mohou být provedeny instancemi klasifikátoru. Chcete-li přidat operaci, klikněte na část **operace** a potom stiskněte klávesu **ENTER**. Zadejte podpis operace. Další informace najdete v tématu [vlastnosti operací v diagramech tříd UML](../modeling/properties-of-operations-on-uml-class-diagrams.md). |
-|     5     |     **Řídí**      |                                                                  Vztah mezi členy dvou klasifikátorů. Další informace najdete v tématu [Vlastnosti přidružení v diagramech tříd UML](../modeling/properties-of-associations-on-uml-class-diagrams.md).                                                                   |
+|     4     |      **Operace**       | Metoda nebo funkce, které mohou být provedeny instancemi klasifikátoru. Chcete-li přidat operaci, klikněte na část **operace** a potom stiskněte klávesu **ENTER**. Zadejte podpis operace. Další informace najdete v tématu [vlastnosti operací v diagramech tříd UML](../modeling/properties-of-operations-on-uml-class-diagrams.md). |
+|     5     |     **Přidružení**      |                                                                  Vztah mezi členy dvou klasifikátorů. Další informace najdete v tématu [Vlastnosti přidružení v diagramech tříd UML](../modeling/properties-of-associations-on-uml-class-diagrams.md).                                                                   |
 |    5a     |     **Agregace**      |                                                                                                    Přidružení představující vztah sdíleného vlastnictví. Vlastnost **agregace** role vlastníka je nastavena na hodnotu **Shared**.                                                                                                     |
 |    5b     |     **Složení**      |                                                                                                      Přidružení představující relaci celé části. Vlastnost **agregace** role vlastníka je nastavena na hodnotu **složené**.                                                                                                      |
 |     6     |   **Název přidružení**   |                                                                                                                                         Název přidružení. Název může být ponechán prázdný.                                                                                                                                          |
@@ -75,11 +75,11 @@ Diagram tříd UML popisuje objekty a informační struktury, které vaše aplik
 
 |Obrazec|Prvek|Popis|
 |-----------|-------------|-----------------|
-|10|**Prostředí**|Definice části externě viditelného chování objektu. Další informace naleznete v tématu [vlastnosti typů v diagramech tříd UML](../modeling/properties-of-types-on-uml-class-diagrams.md).|
-|11|**Enumeration**|Klasifikátor, který se skládá ze sady hodnot literálů.|
+|10|**Rozhraní**|Definice části externě viditelného chování objektu. Další informace naleznete v tématu [vlastnosti typů v diagramech tříd UML](../modeling/properties-of-types-on-uml-class-diagrams.md).|
+|11|**Výčet**|Klasifikátor, který se skládá ze sady hodnot literálů.|
 |12|**Balíček**|Skupina klasifikátorů, přidružení, akcí, životností, komponent a balíčků. Diagram logické třídy ukazuje, že jsou v balíčku obsaženy klasifikátory členů a balíčky.<br /><br /> Názvy jsou v rámci balíčků vymezeny tak **, aby** se v rámci **PACKAGE1** liší od **Class1** mimo daný balíček. Název balíčku se zobrazí jako součást vlastností **kvalifikovaného názvu** jeho obsahu.<br /><br /> Vlastnost **propojený balíček** libovolného diagramu UML můžete nastavit tak, aby odkazovala na balíček. Všechny prvky, které vytvoříte v tomto diagramu, se pak stanou součástí balíčku. Budou zobrazeny pod balíčkem v **Průzkumníkovi modelů UML**.|
-|13|**Importovat**|Vztah mezi balíčky, což značí, že jeden balíček obsahuje všechny definice jiné.|
-|14|**Závislosti**|Definice nebo implementace závislého klasifikátoru se může změnit, pokud se změní klasifikátor na konci šipky.|
+|13|**Import**|Vztah mezi balíčky, což značí, že jeden balíček obsahuje všechny definice jiné.|
+|14|**Závislost**|Definice nebo implementace závislého klasifikátoru se může změnit, pokud se změní klasifikátor na konci šipky.|
 
  ![Realizace zobrazená pomocí konektor a lupy](../modeling/media/uml-classovrealize.png "UML_ClassOvRealize")
 

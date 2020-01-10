@@ -94,12 +94,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3d3048d16da507d9d63ea9d3df77b4e88d5a5e59
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 07a84648a24a709b47b60ee9e2a6e5d342777d77
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297761"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851642"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Zdroje pro řešení potíží obsahovaly chyby vývojového prostředí.
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "74297761"
 Ne všechny chybové zprávy mají konkrétní související téma nápovědy. Pokud informace v chybové zprávě při řešení tohoto problému neumožňují, můžete si prostudovat jiné prostředky, jako jsou články znalostní báze, komunita vývojářů nebo Podpora produktů.
 
 ## <a name="knowledge-base-articles"></a>Články znalostní báze
- Ve znalostní bázi (KB) je možné hledat online články týkající se problémů s produktem. Ne všechny problémy mají odpovídající článek ve znalostní bázi, ale chyby, se kterými se setkal velký počet zákazníků, jsou obvykle uvedeny. Na webu [Podpora Microsoftu](https://go.microsoft.com/fwlink/?linkid=1782) můžete získat přístup k článkům znalostní báze.
+ Ve znalostní bázi (KB) je možné hledat online články týkající se problémů s produktem. Ne všechny problémy mají odpovídající článek ve znalostní bázi, ale chyby, se kterými se setkal velký počet zákazníků, jsou obvykle uvedeny. Na webu [Podpora Microsoftu](https://support.microsoft.com/) můžete získat přístup k článkům znalostní báze.
 
 ## <a name="the-developer-community"></a>Komunita vývojářů
  Fóra umožňují interakci s dalšími vývojáři a také zaměstnanci společnosti Microsoft. Pokud narazíte na chybu, pro kterou nelze nalézt řešení, je možné poslat otázky týkající se problému na fórum. Také je možné prohledat diskusní skupiny a zjistit, zda někdo z ostatních psal o stejném problému.
@@ -115,4 +115,4 @@ Ne všechny chybové zprávy mají konkrétní související téma nápovědy. P
  K fórům, blogům, chatům a dalším prostředkům můžete přistupovat na webu [technické komunity Microsoftu](https://techcommunity.microsoft.com/) .
 
 ## <a name="product-support"></a>Podpora produktu
- Pokud máte i po vyzkoušení dalších prostředků nějaké dotazy, můžete kontaktovat služby podpory společnosti Microsoft na webu [Podpora Microsoftu](https://go.microsoft.com/fwlink/?linkid=1782) . Informace o podpoře produktu dostupné ve vaší oblasti najdete v tématu o [komunikaci s námi](../../ide/talk-to-us.md).
+ Pokud máte i po vyzkoušení dalších prostředků nějaké dotazy, můžete kontaktovat služby podpory společnosti Microsoft na webu [Podpora Microsoftu](https://support.microsoft.com/) . Informace o podpoře produktu dostupné ve vaší oblasti najdete v tématu o [komunikaci s námi](../../ide/talk-to-us.md).

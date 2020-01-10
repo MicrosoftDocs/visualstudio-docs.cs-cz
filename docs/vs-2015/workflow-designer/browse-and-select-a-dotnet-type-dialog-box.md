@@ -12,12 +12,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d8e25ad181202a2c7994c116e2220426ca3d8509
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 922be22619ee0bd16e2e5ac563999be7db81d45e
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297621"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851426"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>Dialogové okno Procházet a vybrat typ .NET
 V okně **vlastnosti** , v dialogových oknech nebo návrhářích, jako je například Návrhář proměnných, vyberte možnost **Vyhledat typy...** ze seznamu datových typů je dialogové okno **Procházet a vybrat typ .NET** (označované ve zkrácené podobě jako prohlížeč typu). V tomto dialogovém okně můžete zvolit typ ze stromového zobrazení sestavení a projektů.
@@ -31,7 +31,7 @@ V okně **vlastnosti** , v dialogových oknech nebo návrhářích, jako je nap�
 - Při přidávání catch na aktivitu <xref:System.Activities.Statements.TryCatch>.
 
 > [!NOTE]
-> Prohlížeč typů se může zobrazit Visual Basic vícenásobné typy polí, ale ne typy multidimenzionálního pole. Podrobnosti najdete v tématu [vícenásobná pole](https://go.microsoft.com/fwlink/?LinkId=195226) a [multidimenzionální pole](https://go.microsoft.com/fwlink/?LinkId=195227) .
+> Prohlížeč typů se může zobrazit Visual Basic vícenásobné typy polí, ale ne typy multidimenzionálního pole. Podrobnosti najdete v tématu [vícenásobná pole](https://msdn.microsoft.com/library/hkhhsz9t(VS.90).aspx) a [multidimenzionální pole](https://msdn.microsoft.com/library/d2de1t93(VS.90).aspx) .
 
 ## <a name="selecting-a-value-or-reference-type-from-the-type-browser"></a>Výběr hodnoty nebo typu odkazu z prohlížeče typu
 

@@ -61,12 +61,12 @@ ms.assetid: c0e12b0a-8009-4a4a-979f-c804a91a5d9b
 caps.latest.revision: 11
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d0865e06c5abb5faccce51a2bc38bb223f7fa3eb
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: eec40bc584e831f8b43b79c9bc7cee5a48a291aa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299279"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850975"
 ---
 # <a name="edit-and-continue-errors-and-warnings-c"></a>Chyby a upozornění operace Upravit a pokračovat (C#)
 Provedli jste úpravy oddílu kódu, který není povolený pro vizuální C# úpravu a pokračování.  
@@ -75,7 +75,7 @@ Provedli jste úpravy oddílu kódu, který není povolený pro vizuální C# ú
   
  Deklarativní úpravy kódu, které mají vliv na veřejnou strukturu třídy, jsou obecně zakázané a některé úpravy, které lze provést v metodě, tělo vlastnosti nebo soukromé deklarace v rámci třídy, nejsou povoleny. Kdykoli je to možné, kód pro úpravu a pokračování značky, který se nedá upravovat jako světle šedý, a zobrazí chybovou zprávu.  
   
- Další informace o podporovaných úpravách v části Upravit a pokračovat pro [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)]najdete v tématu [podporované změnyC#kódu ()](../debugger/supported-code-changes-csharp.md). Pokud potřebujete další informace o konkrétní chybě nebo upozornění, můžete vyhledávat nebo publikovat na [fóru MSDN Visual C# IDE](https://go.microsoft.com/fwlink/?LinkId=214693).  
+ Další informace o podporovaných úpravách v části Upravit a pokračovat pro [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)]najdete v tématu [podporované změnyC#kódu ()](../debugger/supported-code-changes-csharp.md). Pokud potřebujete další informace o konkrétní chybě nebo upozornění, můžete vyhledávat nebo publikovat na [fóru MSDN Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/csharpide/threads).  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   

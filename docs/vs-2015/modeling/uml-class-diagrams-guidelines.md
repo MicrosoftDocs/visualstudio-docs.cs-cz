@@ -17,12 +17,12 @@ caps.latest.revision: 56
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c170827825d772f4d97cd22f0b5754232e8d2257
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4f4fd6eed634da3aea956cddca8d2e1ff6220a94
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297287"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850192"
 ---
 # <a name="uml-class-diagrams-guidelines"></a>Diagramy tříd UML: Pokyny
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
  Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 > [!NOTE]
-> Toto téma se zabývá diagramy tříd UML. Existuje jiný typ diagramu tříd, který lze vytvořit a použít jej k vizualizaci kódu programu. Viz [Návrh a zobrazení tříd a typů](https://go.microsoft.com/fwlink/?LinkId=142231).
+> Toto téma se zabývá diagramy tříd UML. Existuje jiný typ diagramu tříd, který lze vytvořit a použít jej k vizualizaci kódu programu. Viz [Návrh a zobrazení tříd a typů](https://msdn.microsoft.com/library/ab7aty24.aspx).
 
 ## <a name="Using"></a>Použití diagramů tříd UML
  Diagram tříd UML lze použít pro různé účely:
@@ -256,7 +256,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 visibility attribute-name : Type
 ```
 
- \- nebo-
+ \- nebo –
 
 ```
 visibility operation-name (parameter1 : Type1, ...) : Type
@@ -367,7 +367,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 - Vztah *generalizace* mezi specializovaným typem a obecným typem
 
-   \- nebo-
+   \- nebo –
 
 - Vztah *realizace* mezi třídou a rozhraním, které implementuje.
 
@@ -422,7 +422,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
     Zobrazí se dialogové okno **Editor kolekce parametrů šablony** .
 
-4. Klikněte na tlačítko **Přidat**.
+4. Zvolte **přidat**.
 
 5. Nastavte vlastnost název na název parametru pro typ šablony, například `Key`.
 

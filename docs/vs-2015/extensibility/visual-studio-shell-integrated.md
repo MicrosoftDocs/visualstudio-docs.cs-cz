@@ -11,22 +11,22 @@ ms.assetid: 0b40d495-f17f-4bb9-ace8-b365a7172784
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 78ccba3ab8c2dda531614fa791eac3100813840a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4f6e88e5c430129faa80f34a45f9b6620d5b0d13
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299699"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850363"
 ---
 # <a name="visual-studio-shell-integrated"></a>Prostředí sady Visual Studio Shell (integrované)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Integrované prostředí sady Visual Studio zahrnuje integrované vývojové prostředí (IDE), ladicí program a integraci správy zdrojového kódu. Není zahrnutý žádný programovací jazyk. Integrované prostředí však poskytuje rozhraní, které umožňuje přidat programovací jazyky.  
+Integrované prostředí nástroje Visual Studio zahrnuje integrované vývojové prostředí (IDE), ladicí program a integraci správy zdrojového kódu. Není zahrnutý žádný programovací jazyk. Integrované prostředí však poskytuje rozhraní, které umožňuje přidat programovací jazyky.  
   
- Integrované prostředí sady Visual Studio je ve skutečnosti kombinací izolovaného prostředí sady Visual Studio a další instalace, která zahrnuje integrované specifické součásti prostředí.  Integrovaná aplikace prostředí by měla obsahovat Distribuovatelný balíček prostředí pro distribuci z [prostředí sady Microsoft Visual Studio (izolovaný režim) Distribuovatelný balíček](https://go.microsoft.com/fwlink/?LinkId=616022) i integrovaný Distribuovatelný balíček prostředí z [prostředí sady Microsoft Visual Studio (integrovaný režim) Distribuovatelný balíček](https://go.microsoft.com/fwlink/?LinkId=616021).  
+ Integrované prostředí sady Visual Studio je ve skutečnosti kombinací izolovaného prostředí sady Visual Studio a další instalace, která zahrnuje integrované specifické součásti prostředí.  Integrovaná aplikace prostředí by měla obsahovat Distribuovatelný balíček prostředí pro distribuci z [prostředí sady Microsoft Visual Studio (izolovaný režim) Distribuovatelný balíček](https://docs.microsoft.com/collaborate/connect-redirect?ProgramID=8963&InvitationID=VS15-2R69-RB8J) i integrovaný Distribuovatelný balíček prostředí z [prostředí sady Microsoft Visual Studio (integrovaný režim) Distribuovatelný balíček](https://docs.microsoft.com/collaborate/connect-redirect?ProgramID=8963&InvitationID=VS15-2R69-RB8J).  
   
 > [!NOTE]
-> Předtím, než budete moci získat přístup k distribuovatelným a integrovaným redistribuovatelným balíčkům prostředí, budete požádáni o vyplnění stručného průzkumu zákazníka.  Po vyplnění průzkumu budete přesměrováni na stránku pro připojení sady Visual Studio s distribuovatelnými odkazy na stažení balíčku.  Odkazy ke stažení najdete v následujících návštěvách na webu Visual Studio Connect na kartě programy v **integrovaném a izolovaném prostředí sady &#124; Visual Studio 2015** .  
+> Než získáte přístup k distribuovatelným balíčkům izolovaného a integrovaného prostředí, budete požádáni o vyplnění stručného zákaznického dotazníku.  Po jeho vyplnění budete přesměrováni na stránku Visual Studio Connect s odkazy pro stažení distribuovatelných balíčků.  Odkazy ke stažení najdete v následujících návštěvách na webu Visual Studio Connect na kartě programy v **integrovaném a izolovaném prostředí sady &#124; Visual Studio 2015** .  
   
  Pokud nainstalujete integrovanou aplikaci prostředí do stejného počítače jako plnou verzi sady Visual Studio, komponenty vaší aplikace budou integrovány přímo do sady Visual Studio.  
   
@@ -38,10 +38,10 @@ Integrované prostředí sady Visual Studio zahrnuje integrované vývojové pro
 |Podpora jazyků|-None|  
 |IDE – integrované vývojové prostředí|<ul><li>Nastavení<br /><br /> <ul><li>Vytvořit nastavení</li><li>Nastavení importu a exportu</li><li>Resetovat nastavení</li></ul></li><li>Integrace **nástrojů**</li><li>Integrace **seznam úkolů**</li><li>Integrace s usnadněním</li><li>Dialogové okno **Možnosti**</li><li>Správa písem a barev</li><li>Okno **výstup**</li><li>**Příkazové** okno</li><li>Správa oken</li><li>Příkazy, nabídky a klíčové vazby</li><li>Modul runtime DSL (Domain-Specific Language)</li></ul>|  
 |Systém projektů a typy projektů|– Řešení a složky řešení<br />– Řešení Configuration Manager<br />– Správa položek<br />– Single-Project a multi-project řešení<br />-Návrhář aplikací (zjednodušené vlastnosti projektu)<br />-Přidat webový odkaz<br />-Přidat odkaz na službu<br />– Jeden projekt<br />– Typy projektů webu<br />– Projekty webové aplikace|  
-|Sestavení|– Vlastní kroky sestavení v integrovaném vývojovém prostředí<br />– Předběžná kompilace pro ochranu duševního vlastnictví (IP)<br />-Podepisování kódu<br />     MSBuild|  
+|Sestavit|– Vlastní kroky sestavení v integrovaném vývojovém prostředí<br />– Předběžná kompilace pro ochranu duševního vlastnictví (IP)<br />-Podepisování kódu<br />     MSBuild|  
 |Editor|– Nástroje pro procházení kódu (sjednocené hledání, definice zdroje, dědičnost)<br />– Navigace v kódu<br />– IntelliSense<br />– Inteligentní značky<br />– Refaktoring<br />– Seznam s hodně<br />– Filtrování IntelliSense<br />-   okno **definice kódu**|  
-|Designer|– Návrhář Windows Presentation Foundation<br />-Návrhář formulářů<br />– Návrhář webu a editor HTML|  
-|Data|-   **Průzkumník serveru** (zjednodušené: pouze data). Viz Poznámka 1.<br />-   okno **zdroje dat**<br />-Úplná sada ovládacích prvků dat<br />– Editor XML<br />-Vazba dat na místní zdroj dat (. MDF nebo. DATABÁZI<br />-Vazba dat na objekt<br />-Data BIND k webové službě<br />-Vazba dat na místní databázový server<br />-Vazba dat na vzdálený databázový server<br />– Nástroje DDL pro vzdálená data<br />Rozšiřitelnost -   **Průzkumník serveru** (ukázky[!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)])|  
+|Návrhář|– Návrhář Windows Presentation Foundation<br />-Návrhář formulářů<br />– Návrhář webu a editor HTML|  
+|Datové|-   **Průzkumník serveru** (zjednodušené: pouze data). Viz Poznámka 1.<br />-   okno **zdroje dat**<br />-Úplná sada ovládacích prvků dat<br />– Editor XML<br />-Vazba dat na místní zdroj dat (. MDF nebo. DATABÁZI<br />-Vazba dat na objekt<br />-Data BIND k webové službě<br />-Vazba dat na místní databázový server<br />-Vazba dat na vzdálený databázový server<br />– Nástroje DDL pro vzdálená data<br />Rozšiřitelnost -   **Průzkumník serveru** (ukázky[!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)])|  
 |Ladicí program|– Místní ladění. Viz poznámku 2.<br />– Spravované ladění<br />– Místní ladění<br />– Připojit k místnímu procesu<br />-Připojit ke vzdálenému procesu<br />– Anonymní delegát<br />– Aplikační domény<br />– Ladění ASPX<br />– Atributy<br />– Přerušení během vyhodnocení funkce<br />– Zarážky<br />-Omezení zarážek<br />– Zásobník volání<br />**příkazové** okno -   <br />– Ladění mezi vlákny<br />– Tipy pro data<br />– Vizualizér dat<br />– Podpora ladicího programu pro pomocníka spravovaného ladění (MDA)<br />-Podpora ladicího programu pro přeposílání typů<br />– Podpora DTEEvents spouští pro OTB<br />– JMC stepper<br />-Test AppID pro ladění (DBGCLR)<br />– Profil ladicího programu<br />– Nástroje a možnosti ladicího programu<br />-Iterátor ladění<br />-Vyhodnocení výrazu pro dobu návrhu<br />– C# Vyhodnocovací filtr výrazů<br />-Zpětný překlad<br />-Upravit a pokračovat<br />– Okna vyhodnocovacího filtru výrazů (kukátko, místní hodnoty, automatické hodnoty)<br />– Pomocník výjimek<br />– Výjimky<br />-Provedení<br />– Obecné typy<br />– Získání správného zdroje<br />– HPC/cluster ladění<br />-Integrované ladění více jazyků<br />– Ladění vzájemné spolupráce<br />– Ladění za běhu<br />– Místní ladění<br />– Spravované ladění<br />-Manual Control (okno procesů)<br />– Paměť<br />– Podpora S minimálním výpisem<br />– Moduly<br />– Ladění více procesů<br />– Nativní ladění<br />– Nová podpora ladicího stroje<br />– Ladění optimalizovaného kódu<br />-Output Filtering Windows<br />– Proces hostování pro spravované ladění<br />– Procesy<br />– QuickWatch<br />-Registry<br />– Registruje se v zásobníku.<br />– Vzdálené ladění<br />– Návratové hodnoty<br />-Ladění skriptů<br />– Podpora zdrojové služby<br />– Zabezpečení<br />– Vedle sebe<br />– SQL<br />– Symbol server<br />– Body trasování<br />– Vlákno<br />– Vizualizace<br />– Ladicí program XSLT (Extensible Stylesheet Language Transforming)|  
 |64-bitová podpora|-64-bitové ladění pro spravovaný i nativní kód, všechny jazyky<br />– x64 – nativní podpora|  
 |Správa zdrojového kódu (SCC)|– Základní integrace SCC. Viz Poznámka 3.<br />– Ověřování nástrojů a možností|  

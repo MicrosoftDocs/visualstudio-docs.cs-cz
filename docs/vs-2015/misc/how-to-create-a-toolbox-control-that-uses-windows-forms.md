@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: abbd3c3c-3a6e-4539-bd6c-a5891dead234
 caps.latest.revision: 12
 manager: jillfra
-ms.openlocfilehash: 8436b8eee0193715e4ae886db18f91f7148dcb3b
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 1f3b0c173d5d1f4b3642bf61d2cca9fb6fd231e6
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300427"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850315"
 ---
 # <a name="how-to-create-a-toolbox-control-that-uses-windows-forms"></a>Postupy: vytvoření ovládacího prvku panelu nástrojů, který používá model Windows Forms
 Šablona ovládacího prvku panelu nástrojů model Windows Forms, která je obsažena v [!INCLUDE[vssdk_dev11_long](../includes/vssdk-dev11-long-md.md)] umožňuje vytvořit model Windows Forms ovládací prvky, které jsou automaticky přidány do **sady nástrojů** při instalaci rozšíření. V tomto tématu se dozvíte, jak použít šablonu k vytvoření ovládacího prvku **sady nástrojů** , který můžete distribuovat dalším uživatelům.  
   
 > [!NOTE]
-> Chcete-li zjistit, jak stáhnout sadu Visual Studio SDK, přečtěte si téma [středisko pro vývojáře rozšiřitelnosti sady Visual Studio](https://go.microsoft.com/fwlink/?linkid=121964) na webu MSDN.  
+> Chcete-li zjistit, jak stáhnout sadu Visual Studio SDK, přečtěte si téma [středisko pro vývojáře rozšiřitelnosti sady Visual Studio](https://msdn.microsoft.com/vsx/default.aspx) na webu MSDN.  
   
 ## <a name="creating-a-toolbox-control"></a>Vytvoření ovládacího prvku panelu nástrojů  
  Pro vytvoření projektu použijte šablonu ovládacího prvku panelu nástrojů model Windows Forms a potom v Návrháři Sestavte uživatelské rozhraní (UI).  
   
 #### <a name="to-create-a-windows-forms-toolbox-control-project"></a>Vytvoření projektu ovládacího prvku model Windows Forms Toolbox  
   
-1. V nabídce **soubor** klikněte na příkaz **Nový**a potom klikněte na **projekt**.  
+1. V nabídce **Soubor** klikněte na položku **Nový** a poté klikněte na položku **Projekt**.  
   
 2. V dialogovém okně **Nový projekt** v části **Nainstalované šablony**klikněte na uzel pro preferovaný programovací jazyk a pak klikněte na **rozšiřitelnost**. V seznamu typů projektů vyberte **model Windows Forms ovládací prvek panelu nástrojů**.  
   

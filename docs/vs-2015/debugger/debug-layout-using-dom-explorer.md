@@ -18,19 +18,19 @@ caps.latest.revision: 36
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5dd40381b8f5ba4807e95cfcf5e5b7d54afd77e2
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 1a3c9b3a6ae2ed11e8512f8cf8857d27b3d0043b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298391"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850075"
 ---
 # <a name="debug-layout-using-dom-explorer"></a>Ladění rozložení pomocí průzkumníka modelu DOM
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "windows_and_phone_content")  
   
- Karta **rozložení** v Průzkumníkovi modelu DOM zobrazuje [model pole CSS](https://go.microsoft.com/fwlink/?LinkID=238778) pro vybraný prvek v aplikaci [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)], aplikaci Windows Phone Storu nebo aplikaci vytvořenou pomocí Visual Studio Tools pro Apache Cordova. Tato vizuální reprezentace modelu box slouží k identifikaci a úpravám hodnot souvisejících s rozložením, které mají vliv na vzhled prvků.  
+ Karta **rozložení** v Průzkumníkovi modelu DOM zobrazuje [model pole CSS](https://www.w3.org/TR/CSS2/box.html) pro vybraný prvek v aplikaci [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)], aplikaci Windows Phone Storu nebo aplikaci vytvořenou pomocí Visual Studio Tools pro Apache Cordova. Tato vizuální reprezentace modelu box slouží k identifikaci a úpravám hodnot souvisejících s rozložením, které mají vliv na vzhled prvků.  
   
 > [!TIP]
 > Změny, které provedete na kartě **rozložení** , nejsou trvalé. Můžete provádět trvalé změny ve zdrojovém kódu a pak aktualizovat aplikaci pomocí tlačítka **aktualizovat aplikaci pro Windows** (pouze aplikace pro Windows store a Windows Phone Store) na panelu nástrojů ladění. Tímto způsobem se můžete vyhnout restartování ladicího programu.  
@@ -120,7 +120,7 @@ Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "wi
   
 12. Na kartě **rozložení** vyberte buď **66,66** nebo **146,66**, který se zobrazí v poli **okraj** na levé straně pole.  
   
-13. Zadejte `0` a stiskněte klávesu ENTER. (Můžete také změnit hodnotu pomocí kláves Šipka nahoru a šipka dolů.)  
+13. Zadejte `0` a stiskněte Enter. (Můžete také změnit hodnotu pomocí kláves Šipka nahoru a šipka dolů.)  
   
 14. V Průzkumníku modelu DOM vyberte jiné prvky \<img > a změňte jejich hodnoty vlevo na 0.  
   

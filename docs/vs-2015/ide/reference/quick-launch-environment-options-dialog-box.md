@@ -15,12 +15,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2439f280ee590f1b13e339b69c6f3f147bb1ea39
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: abd8f8e9ee35c234a79af74199b11d5491e6fbee
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297806"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851639"
 ---
 # <a name="quick-launch-environment-options-dialog-box"></a>Dialogové okno Snadné spuštění, Prostředí, Možnosti
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "74297806"
 ## <a name="show-previous-results"></a>Zobrazit předchozí výsledky
  Ve výchozím nastavení se hledaný termín, který zadáte, netrval mezi vyhledávacími relacemi. Hledaný řetězec je při hledání termínu vymazán, přesuňte kurzor mimo oblast snadné **spuštění** a pak se vraťte zpět. Chcete-li zachovat výsledky hledání, otevřete dialogové okno **Možnosti** , zvolte možnost **Snadné spuštění**a pak vyberte možnost **Zobrazit výsledky hledání z předchozího hledání, když je aktivováno snadné spuštění.** . Při příštím hledání ponechte oblast snadné spuštění a vraťte se zpátky. rychlé spuštění zachová hledaný termín a také zobrazí výsledky hledání.
 
- Nejaktuálnější tipy a triky pro použití **panelu snadného spuštění**najdete v [blogu sady Visual Studio](https://go.microsoft.com/fwlink/?LinkId=236054).
+ Nejaktuálnější tipy a triky pro použití **panelu snadného spuštění**najdete v [blogu sady Visual Studio](https://blogs.msdn.com/b/visualstudio/).
 
 ## <a name="see-also"></a>Viz také
  Obecné možnosti prostředí pro [prvky uživatelského rozhraní (Visual Studio)](../../ide/reference/general-user-interface-elements-visual-studio.md) – [dialogové okno](../../ide/reference/environment-options-dialog-box.md)

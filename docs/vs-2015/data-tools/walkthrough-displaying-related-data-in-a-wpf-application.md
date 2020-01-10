@@ -19,12 +19,12 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
-ms.openlocfilehash: 787be52eeb546d2ab184a172464862d10cb43288
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 8116d4ab4a2f20f79f3849ae7f8b324af9832dd5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299576"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850244"
 ---
 # <a name="walkthrough-displaying-related-data-in-a-wpf-application"></a>Návod: Zobrazování souvisejících dat v aplikaci WPF
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,7 +46,7 @@ V tomto návodu vytvoříte aplikaci WPF, která bude zobrazovat data z databáz
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
-- Přístup ke spuštěné instanci SQL Server nebo SQL Server Express, ke které je připojena ukázková databáze AdventureWorksLT. Databázi AdventureWorksLT si můžete stáhnout z webu [CodePlex](https://go.microsoft.com/fwlink/?linkid=87843).
+- Přístup ke spuštěné instanci SQL Server nebo SQL Server Express, ke které je připojena ukázková databáze AdventureWorksLT. Databázi AdventureWorksLT si můžete stáhnout z webu [CodePlex](https://codeplex.com/SqlServerSamples).
 
   Předchozí znalosti následujících konceptů jsou také užitečné, ale nevyžadují se k dokončení tohoto postupu:
 
@@ -71,7 +71,7 @@ V tomto návodu vytvoříte aplikaci WPF, která bude zobrazovat data z databáz
 
 5. Vyberte šablonu projektu **aplikace WPF** .
 
-6. Do pole **název** zadejte `AdventureWorksOrdersViewer`.
+6. Do pole **Název** zadejte `AdventureWorksOrdersViewer`.
 
 7. Klikněte na tlačítko **OK**.
 
@@ -106,7 +106,7 @@ V tomto návodu vytvoříte aplikaci WPF, která bude zobrazovat data z databáz
 
    - **SalesOrderHeader**
 
-7. Klikněte na tlačítko **Dokončit**.
+7. Klikněte na **Dokončit**.
 
 8. Sestavte projekt.
 
@@ -194,7 +194,7 @@ V tomto návodu vytvoříte aplikaci WPF, která bude zobrazovat data z databáz
 
 1. Stiskněte klávesu **F5**.
 
-     Aplikace se vytvoří a spustí. Ověřte následující:
+     Aplikace se vytvoří a spustí. Zkontrolujte:
 
     - V poli se seznamem **ID prodejní objednávky** se zobrazí **71774**. Toto je první ID objednávky v entitě.
 

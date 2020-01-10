@@ -16,12 +16,12 @@ caps.latest.revision: 24
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a510c522723cf991c7a3fff21542a069a3de000a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 63390672b246add079806c68a23b69f0e0132c2d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299492"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850208"
 ---
 # <a name="create-custom-views-of-native-objects"></a>Vytváření vlastních zobrazení nativních objektů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ Rozhraní Visual Studio Natvis umožňuje přizpůsobit způsob, jakým Visual S
 ## <a name="BKMK_Why_create_visualizations_"></a>Proč vytvářet vizualizace Natvis?  
  Pomocí architektury Natvis můžete vytvořit pravidla vizualizace pro typy, které vytvoříte, aby je vývojáři mohli snadno zobrazit během ladění.  
 
- Například obrázek níže ukazuje proměnnou typu [Windows:: UI:: XAML:: Controls:: TextBox](https://go.microsoft.com/fwlink/?LinkId=258422) , který se zobrazí v ladicím programu bez použití vlastních vizualizací.  
+ Například obrázek níže ukazuje proměnnou typu [Windows:: UI:: XAML:: Controls:: TextBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.aspx) , který se zobrazí v ladicím programu bez použití vlastních vizualizací.  
 
  ![Výchozí vizualizace textového pole](../debugger/media/dbg-natvis-textbox-default.png "DBG_NATVIS_TextBox_Default")  
 

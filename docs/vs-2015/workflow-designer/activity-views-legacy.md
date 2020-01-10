@@ -13,27 +13,27 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9b65a46d5d0061eeaf3ad707affea1423e5fca5d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7546f752ef7ee1053d1b0b785334a8da814720c6
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297532"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851482"
 ---
 # <a name="activity-views-legacy"></a>Zobrazení aktivit (starší verze)
 Mnohé z aktivit poskytovaných [!INCLUDE[wf](../includes/wf-md.md)], ze kterých se skládají pracovní postupy, mají ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]ch k dispozici několik zobrazení návrhu. Když přetáhnete návrháře aktivity z **panelu nástrojů** na návrhovou plochu a potom kdykoli vyberete aktivitu, můžete přepínat mezi různými zobrazeními návrhu pomocí nabídky **pracovní postup** nebo kliknutím pravým tlačítkem myši na vybranou aktivitu. I když přesunete ukazatel myši na název vybrané aktivity, zobrazí se rozevírací sada karet, kterou můžete použít k přepínání mezi různými zobrazeními.
 
- Každá aktivita má alespoň jedno zobrazení; Toto je výchozí zobrazení zobrazené při přetahování návrháře aktivit ze sady **nástrojů** na návrhovou plochu. Toto výchozí zobrazení aktivity je k dispozici jako možnost **zobrazení [typ aktivity]** v nabídkách a na kartě, například **Zobrazit paralelní**. Většina aktivit má další zobrazení a různé aktivity mohou mít různá zobrazení. Například aktivita [aktivitě typu TransactionScopeActivity](https://go.microsoft.com/fwlink?LinkID=65093) má zobrazení kompenzace a aktivita [EventHandlingScopeActivity](https://go.microsoft.com/fwlink?LinkID=65030) má zobrazení události. Mnohé z aktivit, které se dodávají s programovací model Windows Workflow Foundation, mají zobrazení pro **zrušení obslužné rutiny zrušit** a zobrazení návrhu **chyb** , aby se zobrazila [CancellationHandlerActivity](https://go.microsoft.com/fwlink?LinkID=65050) a [FaultHandlersActivity](https://go.microsoft.com/fwlink?LinkID=65055) s ním spojené.
+ Každá aktivita má alespoň jedno zobrazení; Toto je výchozí zobrazení zobrazené při přetahování návrháře aktivit ze sady **nástrojů** na návrhovou plochu. Toto výchozí zobrazení aktivity je k dispozici jako možnost **zobrazení [typ aktivity]** v nabídkách a na kartě, například **Zobrazit paralelní**. Většina aktivit má další zobrazení a různé aktivity mohou mít různá zobrazení. Například aktivita [aktivitě typu TransactionScopeActivity](https://msdn2.microsoft.com/library/system.workflow.componentmodel.transactionscopeactivity.aspx) má zobrazení kompenzace a aktivita [EventHandlingScopeActivity](https://msdn2.microsoft.com/library/system.workflow.activities.eventhandlingscopeactivity.aspx) má zobrazení události. Mnohé z aktivit, které se dodávají s programovací model Windows Workflow Foundation, mají zobrazení pro **zrušení obslužné rutiny zrušit** a zobrazení návrhu **chyb** , aby se zobrazila [CancellationHandlerActivity](https://msdn2.microsoft.com/library/system.workflow.componentmodel.cancellationhandleractivity.aspx) a [FaultHandlersActivity](https://msdn2.microsoft.com/library/system.workflow.componentmodel.faulthandlersactivity.aspx) s ním spojené.
 
  V následující tabulce je uveden seznam názvů a popisů jednotlivých zobrazení.
 
 |Možnost nabídky/karty|Popis|
 |----------------------|-----------------|
 |**Zobrazení [typ aktivity]**|Tuto nabídku nebo možnost tabulátoru vyberte, pokud chcete zobrazit výchozí grafické znázornění vybrané aktivity.|
-|**Zobrazit obslužnou rutinu pro zrušení**|Chcete-li zobrazit [CancellationHandlerActivity](https://go.microsoft.com/fwlink?LinkID=65050) přidružené k vybrané aktivitě, vyberte tuto nabídku nebo zobrazení možností na kartě.|
-|**Zobrazit obslužnou rutinu chyb**|Chcete-li zobrazit [FaultHandlersActivity](https://go.microsoft.com/fwlink?LinkID=65055) přidružené k vybrané aktivitě, vyberte tuto nabídku nebo zobrazení možností na kartě.|
-|**Zobrazit obslužnou rutinu kompenzace**|Vyberte tuto nabídku nebo zobrazení možností karet k zobrazení [CompensationHandlerActivity](https://go.microsoft.com/fwlink?LinkID=65053) přidruženého k vybranému [aktivitě typu TransactionScopeActivity](https://go.microsoft.com/fwlink?LinkID=65093).|
-|**Zobrazit obslužnou rutinu událostí**|Vyberte tuto nabídku nebo zobrazení možností karet k zobrazení [EventHandlersActivity](https://go.microsoft.com/fwlink?LinkID=65018) přidruženého k vybranému [EventHandlingScopeActivity](https://go.microsoft.com/fwlink?LinkID=65030).|
+|**Zobrazit obslužnou rutinu pro zrušení**|Chcete-li zobrazit [CancellationHandlerActivity](https://msdn2.microsoft.com/library/system.workflow.componentmodel.cancellationhandleractivity.aspx) přidružené k vybrané aktivitě, vyberte tuto nabídku nebo zobrazení možností na kartě.|
+|**Zobrazit obslužnou rutinu chyb**|Chcete-li zobrazit [FaultHandlersActivity](https://msdn2.microsoft.com/library/system.workflow.componentmodel.faulthandlersactivity.aspx) přidružené k vybrané aktivitě, vyberte tuto nabídku nebo zobrazení možností na kartě.|
+|**Zobrazit obslužnou rutinu kompenzace**|Vyberte tuto nabídku nebo zobrazení možností karet k zobrazení [CompensationHandlerActivity](https://msdn2.microsoft.com/library/system.workflow.componentmodel.compensationhandleractivity.aspx) přidruženého k vybranému [aktivitě typu TransactionScopeActivity](https://msdn2.microsoft.com/library/system.workflow.componentmodel.transactionscopeactivity.aspx).|
+|**Zobrazit obslužnou rutinu událostí**|Vyberte tuto nabídku nebo zobrazení možností karet k zobrazení [EventHandlersActivity](https://msdn2.microsoft.com/library/system.workflow.activities.eventhandlersactivity.aspx) přidruženého k vybranému [EventHandlingScopeActivity](https://msdn2.microsoft.com/library/system.workflow.activities.eventhandlingscopeactivity.aspx).|
 
  Informace o podobných zobrazeních naleznete v tématu [zobrazení sekvenčních pracovních postupů (starší verze)](../workflow-designer/sequential-workflow-views-legacy.md).
 

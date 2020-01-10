@@ -18,12 +18,12 @@ caps.latest.revision: 44
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a3d1aab68e3dc9f33e0b3e9f9a5665d59f6f2ddc
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 3589f409efe2a104391eb62f939ef76d140e5224
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299416"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850145"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>Vytvoření vazby ovládacích prvků WPF k datové službě WCF
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +49,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
 
-- Přístup ke spuštěné instanci SQL Server nebo SQL Server Express, ke které je připojena ukázková databáze AdventureWorksLT. Databázi AdventureWorksLT si můžete stáhnout z webu [CodePlex](https://go.microsoft.com/fwlink/?linkid=87843).
+- Přístup ke spuštěné instanci SQL Server nebo SQL Server Express, ke které je připojena ukázková databáze AdventureWorksLT. Databázi AdventureWorksLT si můžete stáhnout z webu [CodePlex](https://codeplex.com/SqlServerSamples).
 
   Předchozí znalosti následujících konceptů jsou také užitečné, ale nevyžadují se k dokončení tohoto postupu:
 
@@ -107,7 +107,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
 7. Na stránce **Zvolte vaše databázové objekty** rozbalte **tabulky**a potom vyberte tabulku **SalesOrderHeader** .
 
-8. Klikněte na tlačítko **Dokončit**.
+8. Klikněte na **Dokončit**.
 
 ## <a name="create-the-service"></a>Vytvoření služby
  Vytvořte [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] k vystavení dat v model EDM (Entity Data Model) do aplikace WPF.
@@ -151,7 +151,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
      Visual Studio přidá do řešení `AdventureWorksSalesEditor` projekt.
 
-5. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
+5. Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
 
      Otevře se okno **zdroje dat** .
 
@@ -301,7 +301,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
 4. V místní nabídce v části **ladění**klikněte na **spustit novou instanci**.
 
-     Aplikace se spustí. Ověřte následující:
+     Aplikace se spustí. Zkontrolujte:
 
     - Textová pole zobrazují různá pole dat z prvního záznamu prodeje, který má ID prodejní objednávky **71774**.
 

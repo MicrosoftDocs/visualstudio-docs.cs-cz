@@ -15,12 +15,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b7ca3179d3e4883f8a2867e13cbdd5e874d60462
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4474f2a0823b5599da30706daedff6e5cd1fc0f5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297775"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851664"
 ---
 # <a name="toolbox-html-tab"></a>Sada nástrojů, karta HTML
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ Karta **HTML** v sadě nástrojů poskytuje komponenty, které jsou užitečné 
 
  Chcete-li vytvořit instanci nástroje na kartě **HTML** , buď poklikejte na nástroj a přidejte ho do dokumentu v aktuálním místě vložení, nebo ho vyberte a přetáhněte ho na požadovanou pozici na ploše pro úpravy.
 
-## <a name="tasks"></a>Úlohy
+## <a name="tasks"></a>Tasks
 
 - [Postupy: Správa okna nástrojů](https://msdn.microsoft.com/a022c3fe-298c-4a59-a48f-b050da90ebc2)
 
@@ -121,7 +121,7 @@ Karta **HTML** v sadě nástrojů poskytuje komponenty, které jsou užitečné 
  Další informace naleznete v tématu [ovládací prvky vstupu HTML](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de), [deklarativní syntaxe ovládacího prvku HtmlInputPassword serveru](https://msdn.microsoft.com/df703dd0-1624-4e5a-a547-c97f2f331b9f), [Postupy: nastavení ovládacího prvku webového serveru TextBox pro zadání hesla](https://msdn.microsoft.com/library/5b5069f3-64a1-435a-aee6-da263f4e6310)a [Návod: ověřování vstupu uživatele na stránce webových formulářů](https://msdn.microsoft.com/library/7141d6ba-34f3-410b-b5cd-2102a24cb436).
 
 > [!IMPORTANT]
-> Pokud vaše aplikace přenáší uživatelská jména a hesla, měli byste web nakonfigurovat tak, aby používal SSL (Secure Sockets Layer) (SSL) k šifrování přenosu. Další informace najdete v části zabezpečení připojení pomocí SSL v [provozní příručce služby IIS](https://go.microsoft.com/fwlink/?linkid=47856). Kromě toho se doporučuje ověřit všechny vstupy uživatelů. Další informace najdete v tématu [ověření vstupu uživatele na webových stránkách ASP.NET](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).
+> Pokud vaše aplikace přenáší uživatelská jména a hesla, měli byste web nakonfigurovat tak, aby používal SSL (Secure Sockets Layer) (SSL) k šifrování přenosu. Další informace najdete v části zabezpečení připojení pomocí SSL v [provozní příručce služby IIS](https://technet.microsoft.com/library/cc732976(v=WS.10).aspx). Kromě toho se doporučuje ověřit všechny vstupy uživatelů. Další informace najdete v tématu [ověření vstupu uživatele na webových stránkách ASP.NET](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).
 
  **Input (zaškrtávací políčko)** ![možnost panelu nástrojů HTML webové stránky](../../ide/reference/media/vxcheckbox.gif "vxCheckbox")
 

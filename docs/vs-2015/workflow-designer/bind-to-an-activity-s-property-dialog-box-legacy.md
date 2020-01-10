@@ -13,17 +13,17 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 451544a84237bc6fa4e069df9dd1e17feccf86f7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: f88d7ebe714fcdc9bf404e1cf58c4c86cf37047d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301020"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851471"
 ---
 # <a name="bind-to-an-activity39s-property-dialog-box-legacy"></a>Vytvoření vazby k dialogovému oknu aktivity&#39;s vlastností (starší verze)
-Toto téma popisuje, jak používat dialogové okno **vazba na vlastnost aktivity** ve starším [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak používat dialogové okno **vazba na vlastnost aktivity** ve starším [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
 
- Typ instance vlastnosti závislosti může být vázán na veřejnou vlastnost nebo událost jiné aktivity. Další informace o vytváření vazeb aktivit najdete v tématu [použití vlastností závislosti](https://go.microsoft.com/fwlink?LinkID=65007).
+ Typ instance vlastnosti závislosti může být vázán na veřejnou vlastnost nebo událost jiné aktivity. Další informace o vytváření vazeb aktivit najdete v tématu [použití vlastností závislosti](https://msdn2.microsoft.com/library/bb675255.aspx).
 
  Vyberte vlastnost, pro kterou chcete vytvořit vazby, pomocí dialogového okna **vazba na vlastnost této aktivity** . Toto dialogové okno otevřete kliknutím na tři tečky **[...]** na konci textového pole vybrané vlastnosti v okně **vlastnosti** , nebo kliknutím na ikonu modrého vykřičníku, která se zobrazí vedle názvu vlastnosti v prohlížeči vlastností.
 
@@ -35,4 +35,4 @@ Toto téma popisuje, jak používat dialogové okno **vazba na vlastnost aktivit
 |**Vytvořit propojení s novým členem**|Vytvořte nové pole člena nebo vlastnost, ke které se má vytvořit vazba. Zadejte **nový název člena**. Zvolte, zda chcete vytvořit vlastnost závislosti nebo veřejné pole, a vyberte možnost **vytvořit pole** nebo **vytvořit vlastnost**. Kliknutím na tlačítko **OK** vytvořte nového člena.|
 
 ## <a name="see-also"></a>Viz také
- [Použití vlastností aktivity](https://go.microsoft.com/fwlink?LinkID=65013) [pomocí vlastnosti závislostí](https://go.microsoft.com/fwlink?LinkID=65007) [starší verze návrháře pro programovací model Windows Workflow Foundation nápovědu k uživatelskému rozhraní](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)
+ [Použití vlastností aktivity](https://msdn2.microsoft.com/library/bb628510.aspx) [pomocí vlastnosti závislostí](https://msdn2.microsoft.com/library/bb675255.aspx) [starší verze návrháře pro programovací model Windows Workflow Foundation nápovědu k uživatelskému rozhraní](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)

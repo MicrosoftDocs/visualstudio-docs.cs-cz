@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: Otázky fakturace pro cloudová předplatná.
-ms.openlocfilehash: 12ff77a052e54520885642cb3cd6ed1dea31506b
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: c4544df196d3e861522dfcbb877a90a5656ad7ba
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491271"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851411"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Nejčastější dotazy k fakturaci pro cloudové předplatné sady Visual Studio
 Nezapomeňte porovnat výhody [a ceny cloudového předplatného](https://visualstudio.microsoft.com/vs/pricing/) , abyste porozuměli výhodám každého předplatného sady Visual Studio, s porovnáním předplatných v cloudu a standardním prostředím, podrobnosti o výhodách pro předplatitele a další.
@@ -37,7 +37,7 @@ Odpověď: Nejjednodušší způsob, jak zjistit, jestli máte správná oprávn
 Musíte vybrat předplatné Azure (což je fakturační účet) z prezentovaného seznamu předplatných Azure, která jsou aktuálně propojená s vaším účtem.
 Vzhledem k tomu, že se název předplatného Azure nastaví jako výchozí typ fakturačního účtu ("průběžné platby", "smlouva Enterprise" atd.), často je jasné, jestli je předplatné Azure součástí vaší smlouva Enterprise.
 
-Další možností je zkusit navštívit [Azure Enterprise Portal](https://ea.azure.com).  Pokud se k tomu budete moct úspěšně připojit, pak už máte roli správce podniku nebo vlastníka účtu. V smlouva Enterprise můžou vytvořit nové fakturační účty Azure jenom vlastníci účtu. Pokud nemůžete získat přístup k Azure Enterprise Portal, zeptejte se ve své organizaci, jestli je to váš podnikový správce, a požádejte ji, aby vás přidala jako vlastníka účtu v rámci Azure Enterprise Portal.  Pokud tuto osobu nemůžete najít, můžete [Odeslat lístek podpory](https://aka.ms/AzureEntSupport) a požádat o kontaktní údaje.  Pro lístek podpory budete potřebovat název vaší organizace a smlouva Enterprise číslo registrace.
+Další možností je zkusit navštívit [Azure Enterprise Portal](https://ea.azure.com).  Pokud se k tomu budete moct úspěšně připojit, pak už máte roli správce podniku nebo vlastníka účtu. V smlouva Enterprise můžou vytvořit nové fakturační účty Azure jenom vlastníci účtu. Pokud nemůžete získat přístup k Azure Enterprise Portal, zeptejte se ve své organizaci, jestli je to váš podnikový správce, a požádejte ji, aby vás přidala jako vlastníka účtu v rámci Azure Enterprise Portal.  Pokud tuto osobu nemůžete najít, můžete [Odeslat lístek podpory](https://support.microsoft.com/supportrequestform/cf791efa-485b-95a3-6fad-3daf9cd4027c) a požádat o kontaktní údaje.  Pro lístek podpory budete potřebovat název vaší organizace a smlouva Enterprise číslo registrace.
 
 ### <a name="q-can-i-use-the-azure-monetary-commitment-funds-from-my-enterprise-agreement-to-buy-visual-studio-cloud-subscriptions"></a>Otázka: můžu použít prostředky peněžních závazků Azure z mého smlouva Enterprise k nákupu cloudových předplatných sady Visual Studio?
 Odpověď: Ne, tyto předplacené prostředky nemají nárok na zakoupení cloudových předplatných sady Visual Studio. Když zvolíte předplatné Azure, které jste vytvořili pro EA, abyste si mohli koupit cloudové předplatné sady Visual Studio, poplatky se zobrazí ve vaší další faktuře za nadlimitní využití. Obvykle se jedná o každý měsíc, ale kvůli historickým pravidlům pro některé zákazníky EA se faktura za nadlimitní využití nemusí vydávat několik měsíců. Pokud potřebujete zjistit, kolik dalších nákupů (nákupů, které nejsou způsobilé pro prostředky peněžních závazků Azure), obraťte se na odborníka na licencování pro vašeho EA.
@@ -90,7 +90,7 @@ Odpověď: Ano. Při vydání nových verzí je můžete stáhnout a spustit. Na
 ### <a name="q-can-i-buy-visual-studio-cloud-subscriptions-from-my-software-reseller"></a>Otázka: Můžu si koupit cloudová předplatná sady Visual Studio z mého prodejce softwaru?
 Odpověď: Ano, pokud se prodejce účastní programu Cloud Solution Provider (CSP). Stačí se zeptat.
 
-## <a name="related-resources"></a>Související prostředky
+## <a name="related-resources"></a>Související informační zdroje
 - [Portál pro správu předplatných sady Visual Studio](https://manage.visualstudio.com/)
 - [Podpora předplatných sady Visual Studio](https://visualstudio.microsoft.com/vs/support/)
 - [Nákupy cloudového předplatného sady Visual Studio pro zprostředkovatele CSP](vscloud-csp.md)

@@ -11,12 +11,12 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2fa11cd0b29f3b8ee6008b8c0b3369b16812f0e5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 72c92b4431c21c27bc1fe2ff86b24c850cc34694
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302782"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846085"
 ---
 # <a name="using-the-legacy-workflow-designer"></a>Používání starší verze návrháře postupu provádění
 Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] poskytované pomocí [!INCLUDE[vs2010](../includes/vs2010-md.md)] lze použít k cílení na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
@@ -54,4 +54,4 @@ Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] poskytované pomocí [!I
  [Nápověda k uživatelskému rozhraní návrháře pro programovací model Windows Workflow Foundation](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)
 
 ## <a name="see-also"></a>Viz také
- [Vývoj pracovních postupů](https://go.microsoft.com/fwlink?LinkID=65010)
+ [Vývoj pracovních postupů](https://msdn2.microsoft.com/library/bb628448.aspx)

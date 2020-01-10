@@ -11,12 +11,12 @@ caps.latest.revision: 33
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ac299f18e544ef4f3215707abbdc3d9e8d266de6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0a038150519ea7a40a52fb1be16ed93045c09eed
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299291"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851520"
 ---
 # <a name="define-a-custom-modeling-toolbox-item"></a>Definování vlastní položky sady nástrojů pro modelování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -113,7 +113,7 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 
 - Jak je znázorněno v příkladu, `<bmp fileName="…"/>` pro ikonu panelu nástrojů a `<value>string</value>` pro ostatní položky.
 
-  \- nebo-
+  \- nebo –
 
 - `<resource fileName="Resources.dll"`
 
@@ -125,11 +125,11 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 
   Uzly v souboru **. tbxinfo** jsou následující. Pro každý uzel existuje výchozí hodnota.
 
-|Název uzlu|definuje|
+|Název uzlu|Definuje|
 |---------------|-------------|
 |displayName|Název položky sady nástrojů|
 |tabName|Karta panelu nástrojů, na které se má položka zobrazit Pro tento typ diagramu můžete zadat buď název regulární karty, nebo samostatný název.|
-|image|Umístění souboru rastrového obrázku ( **. bmp**), který musí mít výšku a šířku 16 a barevnou hloubku 24 bitů.|
+|obrázek|Umístění souboru rastrového obrázku ( **. bmp**), který musí mít výšku a šířku 16 a barevnou hloubku 24 bitů.|
 |f1Keyword|Klíčové slovo, které vyhledává téma nápovědy.|
 |okna|Popis tlačítka pro tento nástroj|
 
@@ -139,7 +139,7 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 > Pokud začnete používat soubor. tbxinfo po experimentování s použitím souborů diagramu sami, můžete zjistit, že sada nástrojů obsahuje jak starou, tak i nové verze položky sady nástrojů. K tomu může dojít také v případě, že název souboru diagramu byl v souboru. tbxinfo chybně natypový. Pokud k tomu dojde, v místní nabídce panelu nástrojů vyberte **obnovit sadu nástrojů**. Vlastní položky panelu nástrojů zmizí. Restartujte Visual Studio a zobrazí se správné vlastní položky.
 
 ## <a name="Extension"></a>Postup distribuce položek panelu nástrojů v rozšíření sady Visual Studio
- Položky panelu nástrojů lze distribuovat jiným [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uživatelům jejich zabalením do rozšíření sady Visual Studio (VSIX). Příkazy, profily a další rozšíření můžete zabalit do stejného souboru VSIX. Další informace najdete v tématu [nasazení rozšíření sady Visual Studio](https://go.microsoft.com/fwlink/?LinkId=160780).
+ Položky panelu nástrojů lze distribuovat jiným [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uživatelům jejich zabalením do rozšíření sady Visual Studio (VSIX). Příkazy, profily a další rozšíření můžete zabalit do stejného souboru VSIX. Další informace najdete v tématu [nasazení rozšíření sady Visual Studio](https://msdn.microsoft.com/library/dd393694(VS.100).aspx).
 
  Běžný způsob, jak sestavit rozšíření sady Visual Studio, je použít šablonu projektu VSIX. K tomu je potřeba mít nainstalovanou [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)].
 
@@ -151,7 +151,7 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 
 3. Otevřete existující projekt rozšíření aplikace Visual Studio.
 
-     \- nebo-
+     \- nebo –
 
      Definujte nový projekt rozšíření sady Visual Studio.
 
@@ -170,7 +170,7 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 
      **Kopírovat do výstupního adresáře** = **Kopírovat vždycky**
 
-      = **obsahu** **Akce sestavení**
+     **Akce sestavení** = **Obsah**
 
      **Zahrnout do VSIX** = **true**
 
@@ -220,7 +220,7 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 
 3. Každé další sestavení umístěte do složky, jejíž název je kód jazykové verze pro jazyk. Například vložte francouzskou verzi sestavení do složky s názvem **fr**.
 
-4. Měli byste použít neutrální kód kultury, obvykle dvě písmena, nikoli konkrétní jazykovou verzi, například `fr-CA`. Další informace o kódech kultury naleznete v tématu [CultureInfo. GetCultures](https://go.microsoft.com/fwlink/?LinkId=160782), který poskytuje úplný seznam kódů jazykové verze.
+4. Měli byste použít neutrální kód kultury, obvykle dvě písmena, nikoli konkrétní jazykovou verzi, například `fr-CA`. Další informace o kódech kultury naleznete v tématu [CultureInfo. GetCultures](https://msdn.microsoft.com/library/system.globalization.cultureinfo.getcultures(VS.100).aspx), který poskytuje úplný seznam kódů jazykové verze.
 
 5. Sestavte rozšíření sady Visual Studio a distribuujte ho.
 

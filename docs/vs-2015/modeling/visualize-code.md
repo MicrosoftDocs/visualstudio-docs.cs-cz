@@ -13,17 +13,17 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 955103b6d28e90321fb45c23825f0c2a25362208
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 9dcb6edf8ce69d48805c3ad8c3c25ef9cc0ed591
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301311"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851342"
 ---
 # <a name="visualize-code"></a>Vizualizace kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pomocí nástrojů pro vizualizaci a modelování v aplikaci Visual Studio můžete pochopit existující kód a popsat svou aplikaci. To vám umožní vizuálně zjistit, jak změny můžou ovlivnit kód, a pomohou vám posoudit práci a rizika vyplývající z těchto změn. Příklad:
+Pomocí nástrojů pro vizualizaci a modelování v aplikaci Visual Studio můžete pochopit existující kód a popsat svou aplikaci. To vám umožní vizuálně zjistit, jak by mohly vaše změny ovlivnit kód, a pomůže vám to posoudit práci a rizika vyplývající z těchto změn. Příklad:
 
 - Chcete-li pochopit vztahy v kódu, namapujte tyto vztahy vizuálně.
 
@@ -48,11 +48,11 @@ Pomocí nástrojů pro vizualizaci a modelování v aplikaci Visual Studio můž
 
 ## <a name="external-resources"></a>Externí prostředky
 
-|**Kategorií**|**Odkazy**|
+|**Kategorie**|**Odkazy**|
 |------------------|---------------|
-|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](https://go.microsoft.com/fwlink/?LinkID=201340)|
-|**Technické články a deníky**|[Fórum architektury MSDN](https://go.microsoft.com/fwlink/?LinkId=201343)|
+|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](https://blogs.msdn.com/b/visualstudioalm)|
+|**Technické články a deníky**|[Fórum architektury MSDN](https://msdn.microsoft.com/architecture/default.aspx)|
 
 ## <a name="see-also"></a>Viz také
  [Scénář: Změna návrhu pomocí vizualizace a modelování](../modeling/scenario-change-your-design-using-visualization-and-modeling.md) [analýzy a modelování](../modeling/analyze-and-model-your-architecture.md) [vytváření modelů pro](../modeling/create-models-for-your-app.md) model [požadavků na uživatele](../modeling/model-user-requirements.md) modelu [vaší](../modeling/model-your-app-s-architecture.md) aplikace [použití modelů v procesu vývoje](../modeling/use-models-in-your-development-process.md)
