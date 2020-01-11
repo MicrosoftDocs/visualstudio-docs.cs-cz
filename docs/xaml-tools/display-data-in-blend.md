@@ -9,16 +9,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f273294d9da0c0cf71f96ae3bde8e5e0457259c9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0614552bbbadd9a472e0780db6f277d423446966
+ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592971"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886452"
 ---
 # <a name="display-data-in-blend-for-visual-studio"></a>Zobrazit data v Blend pro Visual Studio
 
 Ukázková data můžete zobrazit v návrháři při přizpůsobování rozložení stránek. Můžete vygenerovat ukázková data od začátku nebo pomocí existující třídy. Můžete se také připojit k *živým datům* , která se zobrazí v aplikaci při jejím spuštění.
+
+> [!NOTE]
+> Panel **data** v Blendu je podporován pouze pro projekty, které cílí na .NET Framework. Pro projekty UWP nebo projekty, které cílí na .NET Core, se nepodporuje. 
 
 ## <a name="generate-sample-data"></a>Generování ukázkových dat
 

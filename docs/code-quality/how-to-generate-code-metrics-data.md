@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a71f507aa5ce524e01b2120594ace634056d0850
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a43f11df65286e25d0ea19990fa56620695e69df
+ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587469"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886440"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Postupy: generování dat metrik kódu
 
@@ -162,6 +162,63 @@ Build succeeded.
 
 Generovaný výstup XML má následující formát:
 
+::: moniker range=">=vs-2019"
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="1.0">
+  <Targets>
+    <Target Name="ConsoleApp20.csproj">
+      <Assembly Name="ConsoleApp20, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Metrics>
+          <Metric Name="MaintainabilityIndex" Value="100" />
+          <Metric Name="CyclomaticComplexity" Value="1" />
+          <Metric Name="ClassCoupling" Value="1" />
+          <Metric Name="DepthOfInheritance" Value="1" />
+          <Metric Name="SourceLines" Value="11" />
+          <Metric Name="ExecutableLines" Value="1" />
+        </Metrics>
+        <Namespaces>
+          <Namespace Name="ConsoleApp20">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="100" />
+              <Metric Name="CyclomaticComplexity" Value="1" />
+              <Metric Name="ClassCoupling" Value="1" />
+              <Metric Name="DepthOfInheritance" Value="1" />
+              <Metric Name="SourceLines" Value="11" />
+              <Metric Name="ExecutableLines" Value="1" />
+            </Metrics>
+            <Types>
+              <NamedType Name="Program">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="1" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="7" />
+                  <Metric Name="ExecutableLines" Value="1" />
+                </Metrics>
+                <Members>
+                  <Method Name="void Program.Main(string[] args)" File="C:\source\repos\ConsoleApp20\ConsoleApp20\Program.cs" Line="7">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="4" />
+                      <Metric Name="ExecutableLines" Value="1" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+        </Namespaces>
+      </Assembly>
+    </Target>
+  </Targets>
+</CodeMetricsReport>
+```
+::: moniker-end
+::: moniker range="vs-2017"
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <CodeMetricsReport Version="1.0">
@@ -212,6 +269,7 @@ Generovaný výstup XML má následující formát:
   </Targets>
 </CodeMetricsReport>
 ```
+::: moniker-end
 
 ### <a name="metricsexe"></a>Metriky. exe
 
@@ -253,13 +311,24 @@ Další informace najdete v tématu [Povolení generování metrik kódu v reži
 
 ### <a name="previous-versions"></a>Předchozí verze
 
+::: moniker range=">=vs-2019"
+Visual Studio 2015 zahrnovalo nástroj příkazového řádku pro metriky kódu, který se také nazývá *metrika. exe*. Tato předchozí verze nástroje obsahovala binární analýzu, tedy analýzu založenou na sestavení. Novější verze nástroje *Metrics. exe* analyzuje místo toho zdrojový kód. Vzhledem k tomu, že novější *metrika. exe* je založen na zdrojovém kódu, výsledky metrik kódu příkazového řádku mohou být odlišné od těch generovaných IDE sady Visual Studio a předchozími verzemi *metrik. exe*. Počínaje verzí Visual Studio 2019 rozhraní IDE sady Visual Studio analyzuje zdrojový kód, jako je nástroj příkazového řádku, a výsledky by měly být stejné.
+
+::: moniker-end
+::: moniker range="vs-2017"
 Visual Studio 2015 zahrnovalo nástroj příkazového řádku pro metriky kódu, který se také nazývá *metrika. exe*. Tato předchozí verze nástroje obsahovala binární analýzu, tedy analýzu založenou na sestavení. Nový nástroj *metriky. exe* analyzuje místo toho zdrojový kód. Vzhledem k tomu, že nový nástroj *metriky. exe* je založen na zdrojovém kódu, jsou výsledky metrik kódu příkazového řádku odlišné od hodnot generovaných IDE sady Visual Studio a předchozími verzemi *metrik. exe*.
+::: moniker-end
 
 Nástroj metriky kódu nového příkazového řádku počítá metriky i v přítomnosti chyb zdrojového kódu, pokud je možné řešení a projekt načíst.
 
 #### <a name="metric-value-differences"></a>Rozdíly v hodnotách metriky
 
+::: moniker range=">=vs-2019"
+Od verze Visual Studio 2019 verze 16,4 a Microsoft. CodeAnalysis. metics (2.9.5) `SourceLines` a `ExecutableLines` nahradí předchozí metriku `LinesOfCode`. Popisy nové metriky najdete v tématu [hodnoty metrik kódu](../code-quality/code-metrics-values.md). Metrika `LinesOfCode` je k dispozici v režimu starší verze.
+::: moniker-end
+::: moniker range="vs-2017"
 Metrika `LinesOfCode` je přesnější a spolehlivá v novém nástroji příkazového řádku pro metriky kódu. Nezávisí na žádných rozdílech CODEGEN a nemění se, když se změní sada nástrojů nebo modul runtime. Nový nástroj počítá skutečné řádky kódu, včetně prázdných řádků a komentářů.
+::: moniker-end
 
 Jiné metriky, jako je například `CyclomaticComplexity` a `MaintainabilityIndex`, používají stejné vzorce jako předchozí verze *metrik. exe*, ale nový nástroj počítá počet `IOperations` (instrukcí logických zdrojů) místo instrukcí zprostředkujícího jazyka (IL). Čísla budou mírně odlišná na ta, která jsou vygenerována v integrovaném vývojovém prostředí sady Visual Studio a v předchozích verzích *metrik. exe*.
 

@@ -3,15 +3,15 @@ title: Kurz pro více kontejnerů pomocí Docker Compose & ASP.NET Core
 author: ghogen
 description: Naučte se používat více kontejnerů s Docker Compose
 ms.author: ghogen
-ms.date: 02/21/2019
+ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 298ac91a7e7cf89f7723a3fd8bb3e8056da798ba
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: ebc0d8efb0d78dda45bba06dba8a497287b3597d
+ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75399756"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886460"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Kurz: Vytvoření aplikace s více kontejnery pomocí Docker Compose
 
@@ -114,7 +114,7 @@ Přidejte projekt do stejného řešení a zavolejte ho *MyWebAPI*. Jako typ pro
         }
       ```
 
-    S .NET Core 3,1 to není potřeba, protože můžete použít rozhraní WeatherForecast API, které už existuje. Je však třeba odkomentovat volání `UseHttpsRedirections` v metodě `Configure` v *Startup.cs*, protože tento kód používá pro volání webového rozhraní API http not https.
+    S .NET Core 3,1 to není potřeba, protože můžete použít rozhraní WeatherForecast API, které už existuje. Je však třeba odkomentovat volání <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*> v metodě `Configure` v *Startup.cs*, protože tento kód používá protokol HTTP, nikoli HTTPS pro volání webového rozhraní API.
 
     ```csharp
                 //app.UseHttpsRedirection();
