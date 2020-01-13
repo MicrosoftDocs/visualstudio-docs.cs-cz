@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5ca4d6a4097848021073bb77323fd0456f3dddc1
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 42e3a4afec71b90a087ac927f5cbbbc0b181fadd
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74289814"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917545"
 ---
 # <a name="deploying-applications-services-and-components"></a>Nasazení aplikací, služeb a komponent
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,7 +43,7 @@ Nasazením aplikace, služby nebo komponenty ji budete distribuovat pro instalac
 |**Publikování do cloudu:** Aplikace, služby a data můžete zpřístupnit odkudkoli pomocí sady Visual Studio a nasadit je do Microsoft Azure.|[Publikování aplikací pro Microsoft Azure](/visualstudio/deployment/quickstart-deploy-to-azure)|  
 |**Publikování aplikace pro Windows Store:** Své aplikace můžete snadno sestavovat, odesílat a prodávat z Windows Storu zákazníkům po celém světě.|[Balení, nasazování a dotazování aplikací pro Windows Store](https://msdn.microsoft.com/library/hh446593\(v=vs.85\).aspx)|  
 |**Publikování Windows Phone aplikace:** Můžete odeslat novou aplikaci nebo aktualizaci do existující aplikace pro certifikaci na Windows Phone Dev Center.|[Publikování aplikace Windows Phone](https://developer.microsoft.com/)|  
-|**Nasazení aplikace nebo služby ASP.NET:** Aplikace a služby ASP.NET můžete nasadit mnoha různými způsoby.|[Nasazení webových aplikací a služeb ASP.NET](https://docs.microsoft.com/aspnet/mvc/overview/deployment/)|  
+|**Nasazení aplikace nebo služby ASP.NET:** Aplikace a služby ASP.NET můžete nasadit mnoha různými způsoby.|[Nasazení webových aplikací a služeb ASP.NET](/aspnet/mvc/overview/deployment/)|  
 |**Nasazení aplikace nebo služby LightSwitch:** Po vytvoření aplikací a služeb OData pomocí LightSwitch je můžete nasadit na webový server nebo do Microsoft Azure.|[Nasazení aplikací LightSwitch](https://msdn.microsoft.com/library/4818d933-295c-4ecc-9148-7ad9ca28dcdb)|  
 |**Publikování aplikace pro SharePoint:** Aplikaci pro SharePoint můžete publikovat na Office Store nebo do katalogu aplikací pro interní organizaci.|[Publikování aplikace pro SharePoint pomocí sady Visual Studio](https://msdn.microsoft.com/library/office/jj220044\(v=office.15\).aspx)|  
 |**Publikování aplikace pro Office:** Aplikaci pro Office můžete publikovat na Office Store nebo do katalogu aplikací pro interní organizaci.|[Publikování aplikace pro Office](https://msdn.microsoft.com/library/office/fp123515.aspx)|  

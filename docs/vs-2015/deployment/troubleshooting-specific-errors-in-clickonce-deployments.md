@@ -20,12 +20,12 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9a27a2fc17f9d3450a20596d53695070bd84f0f2
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 81bb9bcecf37d2ed3fca29a4edc57738732de1a5
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850601"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917281"
 ---
 # <a name="troubleshooting-specific-errors-in-clickonce-deployments"></a>Řešení konkrétních chyb v nasazeních ClickOnce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -105,7 +105,7 @@ Toto téma uvádí následující běžné chyby, ke kterým může dojít při 
  Pokud publikujete s adresou URL, ujistěte se, že cílový počítač má povolená rozšíření serveru FrontPage.  
   
 #### <a name="error-message-unable-to-create-the-web-site-site-the-components-for-communicating-with-frontpage-server-extensions-are-not-installed"></a>Chybová zpráva: nelze vytvořit web\<> webu. Komponenty pro komunikaci s rozšířeními serveru FrontPage nejsou nainstalovány.  
- Ujistěte se, že na počítači, ze kterého publikujete, máte nainstalovanou komponentu Microsoft Visual Studio Web Authoring. Pro uživatele Express není tato součást nainstalována ve výchozím nastavení. Další informace najdete na webu [http://go.microsoft.com/fwlink/?LinkId=102310](https://support.microsoft.com/kb/945358/en-us).  
+ Ujistěte se, že na počítači, ze kterého publikujete, máte nainstalovanou komponentu Microsoft Visual Studio Web Authoring. Pro uživatele Express není tato součást nainstalována ve výchozím nastavení.  
   
 #### <a name="error-message-could-not-find-file-microsoftwindowscommon-controls-version6000-culture-publickeytoken6595b64144ccf1df-processorarchitecture-typewin32"></a>Chybová zpráva: Nelze najít soubor ' Microsoft.Windows.Common – ovládací prvky, verze=  6.0.0.0, Culture=\*, PublicKeyToken = 6595b64144ccf1df, ProcessorArchitecture =\*, typ = win32.  
  Tato chybová zpráva se zobrazí při pokusu o publikování aplikace WPF s povolenými vizuálními styly. Chcete-li vyřešit tento problém, přečtěte si téma [Postupy: publikování aplikace WPF s povolenými vizuálními styly](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md).  

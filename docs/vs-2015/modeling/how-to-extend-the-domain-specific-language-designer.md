@@ -9,19 +9,17 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 023559143a526732cb92bd72e06e19147261fba7
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: faac29c59b78d8f3f1a0260b0b7a8ace16169f9d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850685"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916803"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>Postupy: Rozšíření návrháře jazyka specifického pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Můžete nastavit rozšíření pro návrháře, který použijete k úpravám definic DSL. Mezi typy rozšíření, které lze provést, patří přidávání příkazů nabídky, přidávání obslužných rutin pro gesta přetažení a pravidla, která jsou aktivována při změně konkrétního typu hodnot nebo relací. Rozšíření mohou být zabalena jako rozšíření integrace sady Visual Studio (VSIX) a distribuována jiným uživatelům.
-
- Vzorový kód a další informace o této funkci najdete na webu Visual Studio [vizualizace and MODELING SDK (VMSDK)](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples).
 
 ## <a name="setting-up-the-solution"></a>Nastavení řešení
  Nastavte projekt, který obsahuje kód vašeho rozšíření a projekt VSIX, který projekt exportuje. Vaše řešení může obsahovat další projekty, které jsou začleněny do stejného VSIX.

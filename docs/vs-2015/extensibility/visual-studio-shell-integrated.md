@@ -11,19 +11,19 @@ ms.assetid: 0b40d495-f17f-4bb9-ace8-b365a7172784
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 4f6e88e5c430129faa80f34a45f9b6620d5b0d13
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 6220afc2bdf75cc22529c65d5514f5f9e0766555
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850363"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919216"
 ---
 # <a name="visual-studio-shell-integrated"></a>Prostředí sady Visual Studio Shell (integrované)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Integrované prostředí nástroje Visual Studio zahrnuje integrované vývojové prostředí (IDE), ladicí program a integraci správy zdrojového kódu. Není zahrnutý žádný programovací jazyk. Integrované prostředí však poskytuje rozhraní, které umožňuje přidat programovací jazyky.  
   
- Integrované prostředí sady Visual Studio je ve skutečnosti kombinací izolovaného prostředí sady Visual Studio a další instalace, která zahrnuje integrované specifické součásti prostředí.  Integrovaná aplikace prostředí by měla obsahovat Distribuovatelný balíček prostředí pro distribuci z [prostředí sady Microsoft Visual Studio (izolovaný režim) Distribuovatelný balíček](https://docs.microsoft.com/collaborate/connect-redirect?ProgramID=8963&InvitationID=VS15-2R69-RB8J) i integrovaný Distribuovatelný balíček prostředí z [prostředí sady Microsoft Visual Studio (integrovaný režim) Distribuovatelný balíček](https://docs.microsoft.com/collaborate/connect-redirect?ProgramID=8963&InvitationID=VS15-2R69-RB8J).  
+ Integrované prostředí sady Visual Studio je ve skutečnosti kombinací izolovaného prostředí sady Visual Studio a další instalace, která zahrnuje integrované specifické součásti prostředí.  Integrovaná aplikace prostředí by měla zahrnovat Distribuovatelný balíček prostředí pro izolovaný Shell i integrovaný balíček prostředí pro distribuci v [prostředí Microsoft Visual Studio Distribuovatelné balíčky](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/).  
   
 > [!NOTE]
 > Než získáte přístup k distribuovatelným balíčkům izolovaného a integrovaného prostředí, budete požádáni o vyplnění stručného zákaznického dotazníku.  Po jeho vyplnění budete přesměrováni na stránku Visual Studio Connect s odkazy pro stažení distribuovatelných balíčků.  Odkazy ke stažení najdete v následujících návštěvách na webu Visual Studio Connect na kartě programy v **integrovaném a izolovaném prostředí sady &#124; Visual Studio 2015** .  

@@ -15,23 +15,23 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5988d472317540ca1b1a7f91acd75a48fa9743b4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1e85929202d36be2e6dcc2b08b5b2a60e7656b27
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669108"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919193"
 ---
 # <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715: Identifikátory by měly mít správnou předponu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1715: identifikátory by měly mít správnou předponu](https://docs.microsoft.com/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix).
+Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1715: identifikátory by měly mít správnou předponu](/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix).
 
 |||
 |-|-|
 |TypeName|IdentifiersShouldHaveCorrectPrefix|
 |CheckId|CA1715|
-|Kategorie|Microsoft. pojmenování|
+|Kategorie|Microsoft.Naming|
 |Narušující změna|Přerušení – při vyvolání na rozhraní.<br /><br /> Nerozdělitelné – při vyvolání v parametrech obecného typu.|
 
 ## <a name="cause"></a>příčina

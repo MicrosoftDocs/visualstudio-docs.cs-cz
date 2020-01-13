@@ -16,63 +16,63 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a2c35befa92e72e08fe2e058afe10d19ac116e0
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: cc9558ff4d470d30df19ea5982eb6acbcc708eea
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188144"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916264"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>Chyba: Zdá se, že Microsoft Visual Studio Remote Debugging Monitor (MSVSMON.EXE) na vzdáleném počítači neběží.
-Tato chybová zpráva znamená, že Visual Studio nemohlo najít správnou instanci sady Visual Studio Sledování vzdáleného ladění na vzdáleném počítači. Aby mohla vzdálené ladění fungovat, musí být nainstalovaná aplikace Visual Studio Sledování vzdáleného ladění. Informace o stažení a nastavení vzdáleného ladicího programu naleznete v tématu [vzdálené ladění](../debugger/remote-debugging.md).
+Tato chybová zpráva znamená, že Visual Studio nemůže najít správné instanci Visual Studio Remote Debugging Monitor na vzdáleném počítači. Pro vzdálené ladění pro práci, musí být nainstalován Visual Studio Remote Debugging Monitor. Informace o stažení a nastavení vzdáleného ladicího programu, najdete v části [vzdálené ladění](../debugger/remote-debugging.md).
 
 > [!IMPORTANT]
-> Pokud se domníváte, že jste tuto zprávu dostali kvůli chybě produktu, [ohlaste prosím tento problém aplikaci Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md). Pokud potřebujete další nápovědu, přečtěte si článek o způsobech, jak kontaktovat Microsoft, v článku kontaktujte [nás](../ide/feedback-options.md) .
+> Pokud se domníváte, že jste tuto zprávu dostali kvůli chybě produktu, [ohlaste prosím tento problém aplikaci Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md). Pokud potřebujete další pomoc, přečtěte si téma [kontaktujte nás](../ide/feedback-options.md) způsoby, jak kontaktovat Microsoft.
 
-## <a name="i-got-this-message-while-i-was-debugging-in-visual-studio-2010-or-earlier"></a>Zobrazila se mi zpráva při ladění v aplikaci Visual Studio 2010 nebo starší
- Pokud je verze sady Visual Studio, kterou používáte, sady Visual Studio 2010 nebo starší, může se tato chyba zobrazit také v případě, že není povoleno sdílení souborů a tiskáren. Chcete-li získat další informace o tomto problému, přečtěte si prosím verzi sady Visual Studio 2010 této dokumentace: [Chyba: Microsoft Visual Studio sledování vzdáleného ladění (Msvsmon. EXE) Zdá se, že na vzdáleném počítači neběží. – Visual Studio 2010](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms164726(v=vs.100))
+## <a name="i-got-this-message-while-i-was-debugging-in-visual-studio-2010-or-earlier"></a>Tato zpráva zobrazila, když mi bylo ladění v sadě Visual Studio 2010 nebo starší
+ Pokud je verze sady Visual Studio, kterou používáte Visual Studio 2010 nebo starší, může také tato chyba se zobrazí v případě, že sdílení souborů a tiskáren není povolená. Další informace o tomto problému najdete na verzi sady Visual Studio 2010 této dokumentace: [Chyba: Microsoft Visual Studio Remote Debugging Monitor (MSVSMON. (EXE) zřejmě není spuštěn ve vzdáleném počítači. – Visual Studio 2010](/previous-versions/visualstudio/visual-studio-2010/ms164726(v=vs.100))
 
-## <a name="i-got-this-message-while-i-was-debugging-locally"></a>Zobrazila se mi tato zpráva při místním ladění
- Pokud se tato zpráva zobrazuje při místním ladění, může být antivirový software nebo brána firewall jiného výrobce viny. Visual Studio je 32 aplikace, takže používá 64 verzi vzdáleného ladicího programu k ladění aplikací v 64. Tyto dva procesy komunikují pomocí místní sítě v rámci místního počítače. Žádný provoz neopouští počítač, ale je možné, že by bezpečnostní software jiného výrobce mohl komunikaci zablokovat.
+## <a name="i-got-this-message-while-i-was-debugging-locally"></a>Tato zpráva zobrazila, když mi bylo místním ladění
+ Pokud se tato zpráva se zobrazuje při ladění místně, může být na straně zmocnitele antivirový software nebo brány firewall třetích stran. Visual Studio je 32bitová aplikace, aby používalo 64bitovou verzi vzdáleného ladicího programu pro ladění 64bitových aplikací. Dva procesy komunikovat prostřednictvím místní sítě v místním počítači. Žádný provoz nechá počítač, ale je možné, že zabezpečovací software třetí strany může blokovat komunikaci.
 
- V následujících částech jsou uvedeny některé další důvody, proč se vám může zobrazit tato zpráva a co můžete udělat k vyřešení problému.
+ Následující části uvádějí některé z jiných důvodů, proč jste možná jste získali tuto zprávu, a můžete provést k vyřešení problému.
 
-## <a name="the-remote-machine-is-not-reachable"></a>Vzdálený počítač není dosažitelný.
- Zkuste provést [test testu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee624059(v=ws.10)) na vzdáleném počítači. Pokud neodpovídá na příkaz pro odeslání odpovědi na adresu příkazového testu, nástroje Remote Tools se nebudou moci připojit ani. Zkuste restartovat vzdálený počítač a jinak se ujistěte, že je správně nakonfigurovaný v síti.
+## <a name="the-remote-machine-is-not-reachable"></a>Vzdálený počítač není dostupný
+ Zkuste [ping](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee624059(v=ws.10)) vzdálený počítač. Pokud je odpověď na příkaz ping, nástroje pro vzdálenou nebude možné se připojit buď. Akci restartování vzdáleném počítači a v opačném případě se ujistěte, zda je správně nakonfigurován v síti.
 
-## <a name="the-version-of-the-remote-debugger-doesnt-match-the-version-of-visual-studio"></a>Verze vzdáleného ladicího programu se neshoduje s verzí sady Visual Studio.
- Verze sady Visual Studio, kterou používáte místně, musí odpovídat verzi sledování vzdáleného ladění, která běží na vzdáleném počítači. Chcete-li tento problém vyřešit, Stáhněte a nainstalujte si verzi sledování vzdáleného ladění. Pro vyhledání správné verze vzdáleného ladicího programu navštivte [Centrum stahování](https://www.microsoft.com/download) .
+## <a name="the-version-of-the-remote-debugger-doesnt-match-the-version-of-visual-studio"></a>Verze vzdáleného ladicího programu neodpovídá verzi sady Visual Studio
+ Verze sady Visual Studio, které spouštíte místně musí odpovídat verzi sledování vzdáleného ladění, na kterém běží na vzdáleném počítači. Chcete-li to vyřešit, stáhněte a nainstalujte odpovídající verzi sledování vzdáleného ladění. Přejděte [Download Center](https://www.microsoft.com/download) najít správnou verzi vzdáleného ladicího programu.
 
-## <a name="the-local-and-remote-machines-have-different-authentication-modes"></a>Místní a vzdálené počítače mají odlišné režimy ověřování.
- Místní a vzdálené počítače musí používat stejný režim ověřování. Pokud to chcete opravit, ujistěte se, že oba počítače používají stejný režim ověřování. Další informace o režimech ověřování najdete v tématu [Přehled ověřování systému Windows](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831472(v=ws.11)).
+## <a name="the-local-and-remote-machines-have-different-authentication-modes"></a>Místní a vzdálené počítače mají různá ověřovací režimy
+ Místní a vzdálené počítače musí používat stejný režim ověřování. Problém odstranit, ujistěte se, že oba počítače používají stejný režim ověřování. Další informace o režimech ověřování najdete v tématu [Přehled ověřování Windows](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831472(v=ws.11)).
 
-## <a name="the-remote-debugger-is-running-under-a-different-user-account"></a>Vzdálený ladicí program je spuštěný pod jiným uživatelským účtem.
- Můžete to vyřešit jedním z následujících způsobů:
+## <a name="the-remote-debugger-is-running-under-a-different-user-account"></a>Vzdálený ladicí program je spuštěn pod účtem jiného uživatele
+ Tento problém můžete vyřešit jedním z následujících způsobů:
 
-- Můžete zastavit vzdálený ladicí program a restartovat ho s účtem, který používáte v místním počítači.
+- Můžete zastavit vzdáleného ladicího programu a restartujte ji pomocí účtu, který používáte v místním počítači.
 
-- Vzdálený ladicí program můžete spustit z příkazového řádku s parametrem **/allow \<username >** : `msvsmon /allow <username@computer>`
+- Vzdálený ladicí program lze spustit z příkazového řádku pomocí **/ allow \<uživatelské jméno >** parametr: `msvsmon /allow <username@computer>`
 
-- Uživatele můžete přidat do oprávnění vzdáleného ladicího programu (v okně vzdáleného ladicího programu, **nástroje > oprávnění**).
+- Je-li přidat uživatele na oprávnění vzdáleného ladicího programu (v okně vzdáleného ladicího programu **nástroje > oprávnění**).
 
-- Pokud nemůžete použít metody v předchozích krocích, můžete každému uživateli povolit vzdálené ladění. V okně vzdáleného ladicího programu přejdete do dialogového okna **Možnosti nástrojů >** . Vyberete-li možnost **bez ověřování**, můžete zaškrtnout políčko **umožňuje všem uživatelům ladit**. Tuto možnost byste ale měli použít jenom v případě, že nemáte žádnou volbu, nebo pokud jste v privátní síti.
+- Pokud nemůžete použít metody v předchozích krocích, můžete povolit všem uživatelům provádět vzdálené ladění. V okně vzdáleného ladicího programu, pokračujte **nástroje > Možnosti** dialogového okna. Když vyberete **bez ověřování**, můžete zkontrolovat **dovolit ladění jakémukoliv uživateli**. Tuto možnost byste však použít jenom v případě, že máte žádný výběr nebo pokud jste v privátní síti.
 
-## <a name="the-firewall-on-the-remote-machine-doesnt-allow-incoming-connections-to-the-remote-debugger"></a>Brána firewall na vzdáleném počítači nepovoluje příchozí připojení ke vzdálenému ladicímu programu.
- Brána firewall na počítači sady Visual Studio a brána firewall na vzdáleném počítači musí být nakonfigurované tak, aby umožňovaly komunikaci mezi Visual Studio a vzdáleným ladícím programem. Informace o portech, které používá vzdálený ladicí program, najdete v tématu [Přiřazení portů vzdáleného ladicího programu](../debugger/remote-debugger-port-assignments.md). Informace o konfiguraci brány Windows Firewall najdete v tématu [Konfigurace brány Windows Firewall pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md).
+## <a name="the-firewall-on-the-remote-machine-doesnt-allow-incoming-connections-to-the-remote-debugger"></a>Brány firewall na vzdáleném počítači nebude povolovat příchozí připojení vzdáleného ladicího programu
+ Brány firewall na počítači aplikace Visual Studio a brány firewall na vzdáleném počítači musí být nakonfigurovány umožňujícím komunikaci mezi Visual Studio a vzdálený ladicí program. Informace o portech používá vzdálený ladicí program najdete v tématu [přiřazení portů vzdáleného ladicího programu](../debugger/remote-debugger-port-assignments.md). Informace o konfiguraci brány Windows firewall najdete v tématu [konfigurace brány Windows Firewall pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md).
 
-## <a name="anti-virus-software-is-blocking-the-connections"></a>Antivirový software blokuje připojení.
- Antivirový software systému Windows umožňuje připojení vzdáleného ladicího programu, ale antivirový software jiných výrobců je může blokovat. Podívejte se na dokumentaci k antivirovému softwaru, abyste zjistili, jak tato připojení povolíte.
+## <a name="anti-virus-software-is-blocking-the-connections"></a>Antivirový software blokuje připojení
+ Antivirový software Windows povoluje připojení vzdáleného ladicího programu, ale některé třetích stran antivirový software blokuje. V dokumentaci pro váš antivirový software a zjistěte, jak umožnit tato připojení.
 
-## <a name="network-security-policy-is-blocking-communication-between-the-remote-machine-and-visual-studio"></a>Zásady zabezpečení sítě blokují komunikaci mezi vzdáleným počítačem a sady Visual Studio.
- Zkontrolujte zabezpečení sítě, abyste se ujistili, že neblokuje komunikaci. Další informace o zásadách zabezpečení sítě Windows najdete v tématu [nastavení zásad zabezpečení](/windows/device-security/security-policy-settings/security-policy-settings).
+## <a name="network-security-policy-is-blocking-communication-between-the-remote-machine-and-visual-studio"></a>Zásady zabezpečení sítě blokuje komunikaci mezi vzdáleného počítače a sady Visual Studio
+ Kontrola zabezpečení vaší sítě, abyste měli jistotu, že neblokuje komunikaci. Další informace o zásadách zabezpečení sítě Windows najdete v tématu [nastavení zásad zabezpečení](/windows/device-security/security-policy-settings/security-policy-settings).
 
-## <a name="the-network-is-too-busy-to-support-remote-debugging"></a>Síť je příliš zaneprázdněna, aby podporovala vzdálené ladění.
- Je možné, že budete muset vzdálené ladění provést v jinou dobu nebo znovu naplánovat práci v síti na jinou dobu.
+## <a name="the-network-is-too-busy-to-support-remote-debugging"></a>Síť je příliš zaneprázdněn a nemůže podporovat vzdálené ladění
+ Budete muset provádět vzdálené ladění v jinou dobu nebo změnit plán práce v síti pro jiný čas.
 
-## <a name="more-help"></a>Další informace
- Pokud chcete získat další nápovědu ke vzdálenému ladicímu programu, včetně přepínačů příkazového řádku, klikněte na **nápověda > využití** v okně vzdáleného ladicího programu. Pokud ho ještě nemáte, můžete zobrazit webovou stránku tak, že zkopírujete následující řádek do okna **Průzkumníka souborů** . (K umístění instalace sady Visual Studio je potřeba nahradit instalační adresář aplikace \<Visual Studio >.)
+## <a name="more-help"></a>Další nápovědu
+ Pomoc s více vzdáleného ladicího programu, včetně přepínače příkazového řádku, klikněte na tlačítko **Nápověda > využití** v okně vzdáleného ladicího programu. Pokud nemáte ji otevřete webovou stránku uvidíte tak, že zkopírujete následující řádek, který **Průzkumníka souborů** okna. (Je třeba nahradit \<instalačního adresáře sady Visual Studio > umístění instalace sady Visual Studio.)
 
- res:// *\<instalační adresář sady Visual Studio >* \ COMMON7 \ IDE \ Remote %2 0 Debugger \ x64 \ msvsmon. exe/help. htm
+ res: / / *\<instalačního adresáře sady Visual Studio >* \Common7\IDE\Remote%20Debugger\x64\msvsmon.exe/help.htm
 
 ## <a name="see-also"></a>Viz také:
 - [Chyby při vzdáleném ladění a jejich řešení](../debugger/remote-debugging-errors-and-troubleshooting.md)

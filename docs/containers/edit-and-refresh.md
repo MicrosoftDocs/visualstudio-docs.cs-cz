@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.workload: multiple
 ms.date: 07/25/2019
 ms.technology: vs-azure
-ms.openlocfilehash: b04f0e7dad4847e654560139f9a3978a4d85685b
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 9f1d80d540e9a25a3ef62ee0819c6f6655b9b3ab
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846921"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916525"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>Ladění aplikací v místním kontejneru Docker
 
@@ -60,6 +60,28 @@ Pokud máte projekt a Přidali jste podporu Docker, jak je popsáno v [přehledu
 Chcete-li rychle iterovat změny, můžete aplikaci spustit v kontejneru. Pak můžete pokračovat v provádění změn a zobrazit je stejně jako u IIS Express.
 
 1. Ujistěte se, že je Docker nastavený tak, aby používal typ kontejneru (Linux nebo Windows), který používáte. Pravým tlačítkem myši klikněte na ikonu Docker na hlavním panelu a vyberte možnost **Přepnout na kontejnery Linux** nebo podle potřeby **Přepnout na kontejnery Windows** .
+
+1. (Jenom .NET Core 3 a novější) Úprava kódu a aktualizace běžící lokality, jak je popsáno v této části, nejsou povoleny ve výchozích šablonách v rozhraní .NET Core > = 3,0. Pokud ho chcete povolit, přidejte balíček NuGet [Microsoft. AspNetCore. Mvc. Razor. RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/). V *Startup.cs*přidejte volání metody rozšíření `IMvcBuilder.AddRazorRuntimeCompilation` do kódu v metodě `ConfigureServices`. Tuto možnost potřebujete jenom v režimu ladění, proto ho zakódovat takto:
+
+    ```csharp
+    public IWebHostEnvironment Env { get; set; }
+    
+    public void ConfigureServices(IServiceCollection services)
+    {
+        IMvcBuilder builder = services.AddRazorPages();
+    
+    #if DEBUG
+        if (Env.IsDevelopment())
+        {
+            builder.AddRazorRuntimeCompilation();
+        }
+    #endif
+    
+        // code omitted for brevity
+    }
+    ```
+
+   Další informace naleznete v tématu [kompilace souborů Razor v ASP.NET Core](/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.1).
 
 1. Nastavte **konfiguraci řešení** na **ladit**. Potom stisknutím klávesy **Ctrl**+**F5** Sestavte image Docker a spusťte ji místně.
 
@@ -139,5 +161,5 @@ Podrobnější informace získáte v tématu [jak Visual Studio](container-build
 
 * Další informace o [vývoji kontejnerů pomocí sady Visual Studio](/visualstudio/containers).
 * Informace o sestavení a nasazení kontejneru Docker najdete v tématu [integrace Docker pro Azure Pipelines](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker).
-* Rejstřík článků s Windows serverem a nano serverem najdete v tématu [informace o kontejnerech Windows](https://docs.microsoft.com/virtualization/windowscontainers/).
+* Rejstřík článků s Windows serverem a nano serverem najdete v tématu [informace o kontejnerech Windows](/virtualization/windowscontainers/).
 * Přečtěte si o [službě Azure Kubernetes](https://azure.microsoft.com/services/kubernetes-service/) a Projděte si [dokumentaci ke službě Azure Kubernetes](/azure/aks).

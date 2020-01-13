@@ -6,12 +6,12 @@ ms.assetid: 2cfcad00-352c-4161-814c-f5ae32d8ada8
 caps.latest.revision: 19
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 430c54527ad0a4647bb750c505942242688aaa17
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: dbdeeab49da1a63562bb9a4188a264a8d3d99da2
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297730"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917050"
 ---
 # <a name="setup-and-install"></a>Nastavení a instalace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -97,8 +97,8 @@ Máte-li po dokončení tohoto instalačního programu a instalace problémy s n
   
 2. Stáhněte si a nainstalujte Xcode z [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/)a přidejte své Apple ID, jak je popsáno v tématu [Přidání účtu do Xcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1) (Apple.com).  
   
-3. Stáhněte a nainstalujte Xamarin podle pokynů v tématu [instalace a konfigurace Xamarin. iOS](https://docs.microsoft.com/xamarin/ios/get-started/installation/mac) (Xamarin.com).  
+3. Stáhněte a nainstalujte Xamarin podle pokynů v tématu [instalace a konfigurace Xamarin. iOS](/xamarin/ios/get-started/installation/mac) (Xamarin.com).  
   
-4. Po dokončení instalace Xamarin na počítačích s Windows i Mac postupujte podle pokynů v tématu [připojení k Macu](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/connecting-to-mac/) (Xamarin.com), abyste mohli pracovat s iOS a Mac ze sady Visual Studio na počítači s Windows.  
+4. Po dokončení instalace Xamarin na počítačích s Windows i Mac postupujte podle pokynů v tématu [připojení k Macu](/xamarin/ios/get-started/installation/windows/connecting-to-mac/) (Xamarin.com), abyste mohli pracovat s iOS a Mac ze sady Visual Studio na počítači s Windows.  
   
      Všimněte si, že oba počítače musí být ve stejné místní síti.

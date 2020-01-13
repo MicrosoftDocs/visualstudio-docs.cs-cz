@@ -9,12 +9,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 791e2e077ebd2ed3e97aecd4c7c6e52316b4fe3b
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 5e4cb74b075a0dc9fe538ec8a09a455b30d2964b
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75845290"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918910"
 ---
 # <a name="customizing-copy-behavior"></a>Přizpůsobení chování kopírování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -91,7 +91,7 @@ Přepište *MyDsl*`ClipboardCommandSet.ProcessOnMenuCopyCommand()` v projektu Ds
 Přepište *MyDsl*`ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` v projektu DslPackage.
 
  **Zachovat rozložení obrazce pomocí kopírování a vložení**
-Když uživatel zkopíruje více obrazců, můžete při jejich vložení zachovat jejich relativní pozice. Tato technika je znázorněna příkladem na [VMSDK: Ukázka diagramů okruhů](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples).
+Když uživatel zkopíruje více obrazců, můžete při jejich vložení zachovat jejich relativní pozice. 
 
  Pro dosažení tohoto efektu přidejte obrazce a konektory do zkopírovaného ElementGroupPrototype. Nejpohodlnější způsob přepsání je ElementOperations. CreateElementGroupPrototype (). Chcete-li to provést, přidejte do projektu DSL následující kód:
 
@@ -148,7 +148,7 @@ partial class MyDslDiagram // EDIT NAME
 ```
 
  **Vloží tvary do zvoleného umístění, jako je například aktuální pozice kurzoru.**
-Když uživatel zkopíruje více obrazců, můžete při jejich vložení zachovat jejich relativní pozice. Tato technika je znázorněna příkladem na [VMSDK: Ukázka diagramů okruhů](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples).
+Když uživatel zkopíruje více obrazců, můžete při jejich vložení zachovat jejich relativní pozice.
 
  Chcete-li dosáhnout tohoto efektu, přepište `ClipboardCommandSet.ProcessOnMenuPasteCommand()` pro použití verze `ElementOperations.Merge()`specifické pro umístění. Chcete-li to provést, přidejte do projektu DslPackage následující kód:
 
@@ -564,4 +564,5 @@ namespace Company.MyDsl
 ```
 
 ## <a name="see-also"></a>Viz také
- [Přizpůsobení vytvoření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md) [Postupy: Přidání obslužné rutiny přetažení,](../modeling/how-to-add-a-drag-and-drop-handler.md) [přizpůsobení chování při odstraňování](../modeling/customizing-deletion-behavior.md) [: Ukázka diagramů okruhů VMSDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+ [Přizpůsobení vytváření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md) [Postupy: Přidání obslužné rutiny přetažení,](../modeling/how-to-add-a-drag-and-drop-handler.md) [přizpůsobení chování při odstraňování](../modeling/customizing-deletion-behavior.md)
+ 

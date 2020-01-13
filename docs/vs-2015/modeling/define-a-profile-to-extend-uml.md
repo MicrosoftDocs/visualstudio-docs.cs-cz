@@ -16,12 +16,12 @@ caps.latest.revision: 44
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b680c2e27b871e654618b4c0ada0904744751282
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: a495a566f78ceb2b89f8e2070837f038da352a4d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850471"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918883"
 ---
 # <a name="define-a-profile-to-extend-uml"></a>Definování profilu pro rozšíření UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -220,7 +220,8 @@ Můžete definovat *profil UML* pro přizpůsobení standardních prvků modelu 
 7. Sestavte rozšíření sady Visual Studio, a to buď sestavením projektu rozšíření, nebo kompresí všech souborů, jak je popsáno v předchozích částech.
 
 ## <a name="Schema"></a>Struktura profilu
- Soubor XSD pro profily UML najdete v následující ukázce: [Nastavení stereotypů a profilů XSD](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples). Pro usnadnění úprav souborů profilu nainstalujte `.xsd` soubor v nástroji:
+
+ Pro usnadnění úprav souborů profilu nainstalujte `.xsd` soubor v nástroji:
 
  **%ProgramFiles%\Microsoft Visual Studio [version]\Xml\Schemas**
 
@@ -365,4 +366,5 @@ Musíte vybrat profil v balíčku nebo modelu. Stereotypy se pak zobrazí na prv
 6. Restartujte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
 ## <a name="see-also"></a>Viz také
- [Přidání stereotypů do prvků modelu UML](../modeling/add-stereotypes-to-uml-model-elements.md) [Přizpůsobení modelu pomocí profilů a](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [standardních stereotypů pro modely UML](../modeling/standard-stereotypes-for-uml-models.md) [Ukázka: barevné prvky UML podle stereotypu](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) [Ukázka: nastavení stereotypů, profily XSD](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+ [Přidání stereotypů do prvků modelu UML](../modeling/add-stereotypes-to-uml-model-elements.md) [Přizpůsobení modelu pomocí profilů a stereotypů](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [standardní stereotypy pro modely UML](../modeling/standard-stereotypes-for-uml-models.md)
+ 

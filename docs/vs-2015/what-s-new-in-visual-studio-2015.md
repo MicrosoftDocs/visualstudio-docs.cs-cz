@@ -14,12 +14,12 @@ caps.latest.revision: 364
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f7065967ec86f7cde63c90de816fca95afce2171
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 758e2bbf69c7b48a1027819377839cbdce9204fe
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851492"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919256"
 ---
 # <a name="what39s-new-in-visual-studio-2015"></a>Co&#39;nového v sadě Visual Studio 2015
 [!INCLUDE[vs2017banner](./includes/vs2017banner.md)]
@@ -129,7 +129,7 @@ Další informace o řadě vylepšení a nových funkcí v prostředí Visual St
 
 - **C# a Xamarin**. Použití [Xamarin](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) můžete vytvářet nativní aplikace pro Windows, iOS a Android v sadě Visual Studio s C#.
 
-     [Ladění](https://docs.microsoft.com/xamarin/ios/deploy-test/debugging-in-xamarin-ios?tabs=windows) (iOS) a [ladění na zařízení](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-device?tabs=windows) v [příručky pro vývojáře Xamarinu](https://docs.microsoft.com/xamarin/) popisují možnosti ladění.
+     [Ladění](/xamarin/ios/deploy-test/debugging-in-xamarin-ios?tabs=windows) (iOS) a [ladění na zařízení](/xamarin/android/deploy-test/debugging/debug-on-device?tabs=windows) v [příručky pro vývojáře Xamarinu](/xamarin/) popisují možnosti ladění.
 
 - **C++ / Android**. Použití [Visual C++ pro vývoj mobilních řešení napříč platformami](cross-platform/visual-cpp-for-cross-platform-mobile-development.md) šablony společně s nástroji třetích stran, jako jsou [sady Android NDK](https://developer.android.com/tools/sdk/ndk/index.html) vytvářet nativní aplikace pro Windows a Android.
 

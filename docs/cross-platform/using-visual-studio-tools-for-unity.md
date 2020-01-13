@@ -10,12 +10,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 39be02226a46aaa95742caa760e94fe6be4efdf4
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 5a0595fdf7331c8b2825c6092b5b29a19974887b
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253045"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916570"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>Používání Visual Studio Tools for Unity
 
@@ -83,17 +83,17 @@ Vytvoření prázdné definice metod MonoBehavior pomocí Průvodce MonoBehavior
 
 6. Zvolte **OK** tlačítko Ukončit průvodce a vložení metody do kódu.
 
-   ![Dialogové okno Průvodce monobehavior. ](../cross-platform/media/vstu_monobehavior_wizard_full.png "vstu_monobehavior_wizard_full")
+   ![Dialog Průvodce MonoBehavior](../cross-platform/media/vstu_monobehavior_wizard_full.png "vstu_monobehavior_wizard_full")
 
 ## <a name="unity-project-explorer"></a>Průzkumník projektů Unity
 
-![Okno Průzkumník projektů Unity. ](../cross-platform/media/vstu_unity_project_explorer.png "vstu_unity_project_explorer")
+![Okno Průzkumník projektů Unity.](../cross-platform/media/vstu_unity_project_explorer.png "vstu_unity_project_explorer")
 
 Unity Project Exploreru zobrazí všechny soubory projektů Unity a adresáře stejným způsobem, který jako Unity Editor. To se liší od navigace Unity skripty s normální Visual Studio Průzkumníku řešení, které uspořádány do projektů a řešení vygenerované sadou Visual Studio.
 
-- V hlavní nabídce sady Visual Studio, zvolte **zobrazení > Unity Project Exploreru**. Klávesová zkratka: **ALT**+**Shift**+**E**
+- V hlavní nabídce sady Visual Studio, zvolte **zobrazení > Unity Project Exploreru**. Klávesová zkratka: **Alt**+**Shift**+**E**
 
-   ![Zobrazte okno Průzkumníka projektů Unity. ](../cross-platform/media/vstu_view_unity_project_explorer.png "vstu_view_unity_project_explorer")
+   ![Zobrazí okno Průzkumník projektů Unity.](../cross-platform/media/vstu_view_unity_project_explorer.png "vstu_view_unity_project_explorer")
 
 ## <a name="unity-debugging"></a>Ladění Unity
 
@@ -145,17 +145,17 @@ Můžete ladit sestavení vývoj pro různé přehrávače Unity pomocí sady Vi
 
 2. V okně nastavení sestavení označit **vývoj sestavení** a **ladění skriptů** zaškrtávací políčka.
 
-   ![Konfigurace nastavení buildu Unity pro ladění. ](../cross-platform/media/vstu_debugging_build_settings.png "vstu_debugging_build_settings")
+   ![Nakonfigurujte nastavení sestavení Unity pro ladění.](../cross-platform/media/vstu_debugging_build_settings.png "vstu_debugging_build_settings")
 
 #### <a name="select-a-unity-instance-to-attach-the-debugger-to"></a>Vybrat instanci Unity připojit ladicí program
 
 - V sadě Visual Studio, zvolte v hlavní nabídce **ladit > připojit ladicí program Unity**.
 
-   ![Připojte ladicí program Unity. ](../cross-platform/media/vstu_debugging_attach_unity_debugger.png "vstu_debugging_attach_unity_debugger")
+   ![Připojte ladicí program Unity.](../cross-platform/media/vstu_debugging_attach_unity_debugger.png "vstu_debugging_attach_unity_debugger")
 
    **Vybrat instanci Unity** některé informace o jednotlivých Unity, jež se můžete připojit k zobrazí se dialogové okno.
 
-   ![Vyberte instanci Unity pro připojení k. ](../cross-platform/media/vstu_attach-debugger.png "vstu_connection_to_unity")
+   ![Vyberte instanci Unity, ke které se chcete připojit.](../cross-platform/media/vstu_attach-debugger.png "vstu_connection_to_unity")
 
    **Projekt**
 
@@ -181,9 +181,9 @@ Všimněte si, že podle scénáře popsaného zde předpokládá, že máte zdr
 
 #### <a name="to-debug-a-managed-dll-project-used-in-your-unity-project"></a>Chcete-li ladit spravovaný projekt knihovny DLL použít ve vašem Unity projektu
 
-1. Přidáte do existujícího projektu knihovny DLL do řešení sady Visual Studio vygenerovaná aplikace Visual Studio Tools for Unity. Ne tak často může být spuštění nového spravovaného projektu knihovny DLL tak, aby obsahovala kód komponent ve vašem Unity projektu; Pokud je to tento případ, můžete přidat nový projekt spravované knihovny DLL do řešení sady Visual Studio místo. Další informace o přidání nového nebo existujícího projektu k řešení najdete v tématu [How to: Přidejte projekty do řešení](https://msdn.microsoft.com/library/ff460187.aspx).
+1. Přidáte do existujícího projektu knihovny DLL do řešení sady Visual Studio vygenerovaná aplikace Visual Studio Tools for Unity. Ne tak často může být spuštění nového spravovaného projektu knihovny DLL tak, aby obsahovala kód komponent ve vašem Unity projektu; Pokud je to tento případ, můžete přidat nový projekt spravované knihovny DLL do řešení sady Visual Studio místo. Další informace o přidání nového nebo existujícího projektu k řešení najdete v tématu [postupy: Přidání projektů do řešení](https://msdn.microsoft.com/library/ff460187.aspx).
 
-   ![Přidáte do existujícího projektu knihovny DLL do řešení. ](../cross-platform/media/vstu_debugging_dll_add_existing.png "vstu_debugging_dll_add_existing")
+   ![Přidejte svůj existující projekt knihovny DLL do řešení.](../cross-platform/media/vstu_debugging_dll_add_existing.png "vstu_debugging_dll_add_existing")
 
    V obou případech se Visual Studio Tools for Unity udržuje odkaz na projekt, i když bylo potřeba znovu generovat soubory projektu a řešení znovu, takže vám stačí jednou provést tyto kroky.
 
@@ -192,7 +192,7 @@ Všimněte si, že podle scénáře popsaného zde předpokládá, že máte zdr
 > [!NOTE]
 > Toto je nutné jenom v případě, že používáte starší verzi modulu runtime Unity. Pokud používáte nový modul runtime Unity, nemusíte už tyto vyhrazené profily 3,5 používat. Použijte profil .NET 4. x kompatibilní s vaší verzí Unity.
 
-   ![Nastavte cílové rozhraní DLL architektury Unity. ](../cross-platform/media/vstu_debugging_dll_target_framework.png "vstu_debugging_dll_target_framework")
+   ![Nastavte cílové rozhraní knihovny DLL na architekturu Unity.](../cross-platform/media/vstu_debugging_dll_target_framework.png "vstu_debugging_dll_target_framework")
 
 3. Knihovnu DLL zkopírujte do složky Asset Unity projektu. Prostředky v Unity, jsou soubory, které jsou zabaleny a nasazeny společně s vaší aplikace Unity tak, aby mohly být načteny v době běhu. Vzhledem k tomu, že knihovny DLL jsou propojeny v době běhu, knihovny DLL musí být nasazeny jako prostředky. Nástroje Unity Editor umožňující nasadit ho jako prostředek, vyžaduje knihovny DLL, které budou umístěny ve složce prostředky ve vašem Unity projektu. Můžete to provést dvěma způsoby:
 
@@ -202,7 +202,7 @@ Všimněte si, že podle scénáře popsaného zde předpokládá, že máte zdr
 
    Soubory PDB jsou potřeba pro ladění, protože mohou obsahovat symboly pro ladění knihovny DLL a mapování kód knihovny DLL na jeho formě zdrojového kódu. Pokud cílíte na starší verzi modulu runtime, Visual Studio Tools for Unity použije informace z knihovny DLL a PDB k vytvoření knihovny DLL. Soubor MDB, což je formát symbolu ladění používaný starším skriptovacím modulem Unity. Pokud cílíte na nový modul runtime a použijete přenositelného PDB, Visual Studio Tools for Unity se nebude pokoušet provést žádný převod symbolů, protože nový modul runtime Unity dokáže nativně spotřebovávat přenosné-soubory PDB.
 
-   Další informace o generování PDB najdete [tady](https://docs.microsoft.com/visualstudio/debugger/how-to-set-debug-and-release-configurations). Pokud cílíte na nový modul runtime, ujistěte se, že je "ladicí informace" nastavené na "přenosné", aby bylo možné správně vygenerovat přenosné soubor PDB. Pokud cílíte na starší verzi modulu runtime, je nutné použít úplný.
+   Další informace o generování PDB najdete [tady](/visualstudio/debugger/how-to-set-debug-and-release-configurations). Pokud cílíte na nový modul runtime, ujistěte se, že je "ladicí informace" nastavené na "přenosné", aby bylo možné správně vygenerovat přenosné soubor PDB. Pokud cílíte na starší verzi modulu runtime, je nutné použít úplný.
 
 4. Ladění kódu. Teď můžete ladit knihovnu DLL zdrojový kód společně se svým projektem Unity zdrojový kód a použít všechny ladění funkcí, které jste zvyklí, jako například zarážky a krokování kódu.
 

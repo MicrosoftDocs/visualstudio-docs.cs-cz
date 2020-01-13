@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ee3cace6940b4fe402595cfba7b316a273c1d50
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a0f63ac8fa782dcb504b8bd00ad7e32ce96e1eab
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593392"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917815"
 ---
 # <a name="build-multiple-projects-in-parallel-with-msbuild"></a>Paralelní sestavení více projektů pomocí MSBuild
 Nástroj MSBuild lze použít pro rychlejší sestavení více projektů tak, že budou tyto projekty spuštěny paralelně. Pro paralelní spuštění sestavení je možné na počítači s více jádry nebo s více procesory použít následující nastavení:
@@ -43,7 +43,7 @@ msbuild.exe myproj.proj -maxcpucount:3
 ```
 
 ## <a name="buildinparallel-task-parameter"></a>BuildInParallel – parametr úlohy
-`BuildInParallel` je volitelný logický parametr u úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Pokud je `BuildInParallel` nastaveno na `true` (jeho výchozí hodnota je `false`), vygeneruje se více pracovních procesů, aby se sestavilo co nejvíce projektů. Aby tento postup správně fungoval, musí být přepínač `-maxcpucount` nastaven na hodnotu větší než 1 a systém musí být alespoň dvoujádrový nebo mít dva nebo více procesorů.
+`BuildInParallel` je volitelný logický parametr u úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Pokud je `BuildInParallel` nastaveno na `true` (jeho výchozí hodnota je `true`), vygeneruje se více pracovních procesů, aby se sestavilo co nejvíce projektů. Aby tento postup správně fungoval, musí být přepínač `-maxcpucount` nastaven na hodnotu větší než 1 a systém musí být alespoň dvoujádrový nebo mít dva nebo více procesorů.
 
 Následuje příklad, který je pořízen od *společnosti Microsoft. Common. targets*, o tom, jak nastavit parametr `BuildInParallel`.
 

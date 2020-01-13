@@ -6,14 +6,14 @@ ms.author: ghogen
 ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: e1b2f332563503dcb4d63faf301000db83eed5ea
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+ms.openlocfilehash: 6f11082a0e309d4e34dd25a1085c1f8c971f28f7
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74706822"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916944"
 ---
-# <a name="how-visual-studio-builds-containerized-apps"></a>Jak Visual Studio vytváří kontejnery aplikací
+# <a name="how-visual-studio-builds-containerized-apps"></a>Jak Visual Studio vytváří kontejnerizované aplikace
 
 Ať už vytváříte z integrovaného vývojového prostředí sady Visual Studio, nebo nastavíte sestavení příkazového řádku, musíte znát, jak Visual Studio používá souboru Dockerfile k sestavení vašich projektů.  Z důvodů výkonu aplikace Visual Studio dodržuje zvláštní proces pro kontejnerové aplikace. Porozumění způsobu sestavení projektů v aplikaci Visual Studio je obzvláště důležité při přizpůsobení procesu sestavení úpravou souboru Dockerfile.
 
@@ -64,7 +64,7 @@ Poslední fáze se znovu spustí z `base`a obsahuje `COPY --from=publish` ke zko
 
 Pokud chcete sestavit mimo sadu Visual Studio, můžete použít `docker build` nebo `MSBuild` k sestavení z příkazového řádku.
 
-### <a name="docker-build"></a>sestavení Docker
+### <a name="docker-build"></a>docker build
 
 Chcete-li vytvořit kontejnerové řešení z příkazového řádku, můžete obvykle použít příkaz `docker build <context>` pro každý projekt v řešení. Zadáte argument *kontextu sestavení* . *Kontext sestavení* pro souboru Dockerfile je složka v místním počítači, která se používá jako pracovní složka k vygenerování bitové kopie. Například složka, ze které kopírujete soubory při kopírování do kontejneru.  V projektech .NET Core použijte složku, která obsahuje soubor řešení (. sln).  Vyjádřeno jako relativní cesta, tento argument obvykle je ".." pro souboru Dockerfile ve složce projektu a soubor řešení v nadřazené složce.  Pro .NET Framework projekty je kontextem sestavení složka projektu, nikoli složka řešení.
 
@@ -103,7 +103,7 @@ Zahřívání bude k dispozici pouze v **rychlém** režimu, takže v běžící
 
 ## <a name="volume-mapping"></a>Mapování svazků
 
-Pro ladění pro práci v kontejnerech používá Visual Studio mapování svazků pro mapování ladicího programu a složek NuGet z hostitelského počítače. Tady jsou svazky, které jsou připojené do vašeho kontejneru:
+Pro ladění pro práci v kontejnerech používá Visual Studio mapování svazků pro mapování ladicího programu a složek NuGet z hostitelského počítače. Mapování svazků je popsané [v dokumentaci k](https://docs.docker.com/storage/volumes/)Docker. Tady jsou svazky, které jsou připojené do vašeho kontejneru:
 
 |||
 |-|-|
@@ -116,11 +116,11 @@ Pro webové aplikace ASP.NET Core můžou existovat dvě další složky pro cer
 
 ## <a name="ssl-enabled-aspnet-core-apps"></a>ASP.NET Core aplikace s povoleným protokolem SSL
 
-Nástroje kontejneru v aplikaci Visual Studio podporují ladění aplikace ASP.NET Core s povoleným protokolem SSL pomocí vývojového certifikátu stejným způsobem, jako byste očekávali, že bude pracovat bez kontejnerů. Aby k tomu mohlo dojít, Visual Studio přidá několik dalších kroků pro Export certifikátu a zpřístupní ho kontejneru. Tady je tok:
+Nástroje kontejneru v aplikaci Visual Studio podporují ladění aplikace ASP.NET Core s povoleným protokolem SSL pomocí vývojového certifikátu stejným způsobem, jako byste očekávali, že bude pracovat bez kontejnerů. Aby k tomu mohlo dojít, Visual Studio přidá několik dalších kroků pro Export certifikátu a zpřístupní ho kontejneru. Zde je tok, který aplikace Visual Studio zpracuje při ladění v kontejneru:
 
-1. Zajistěte, aby byl místní vývojový certifikát přítomen a důvěryhodný na hostitelském počítači prostřednictvím nástroje pro `dev-certs`.
-2. Exportujte certifikát do%APPDATA%\ASP.NET\Https se zabezpečeným heslem uloženým v úložišti tajných klíčů uživatelů pro tuto konkrétní aplikaci.
-3. Připojit ke svazku následující adresáře:
+1. Zajistí, aby byl místní vývojový certifikát přítomen a důvěryhodný na hostitelském počítači prostřednictvím nástroje pro `dev-certs`.
+2. Exportuje certifikát do%APPDATA%\ASP.NET\Https se zabezpečeným heslem uloženým v úložišti tajných klíčů uživatelů pro tuto konkrétní aplikaci.
+3. Volume-připojí následující adresáře:
 
    - *%APPDATA%\Microsoft\UserSecrets*
    - *%APPDATA%\ASP.NET\Https*
@@ -140,7 +140,9 @@ ASP.NET Core vyhledá certifikát, který odpovídá názvu sestavení ve složc
 }
 ```
 
-Další informace o použití protokolu SSL s ASP.NET Core aplikacemi v kontejnerech najdete v tématu [hostování ASP.NET Core imagí pomocí Docker přes protokol HTTPS](https://docs.microsoft.com/aspnet/core/security/docker-https).
+Pokud vaše konfigurace podporuje kontejnery i sestavení bez kontejnerů, měli byste použít proměnné prostředí, protože cesty jsou specifické pro prostředí kontejneru.
+
+Další informace o použití protokolu SSL s ASP.NET Core aplikacemi v kontejnerech najdete v tématu [hostování ASP.NET Core imagí pomocí Docker přes HTTPS](/aspnet/core/security/docker-https)).
 
 ## <a name="debugging"></a>Ladění
 
@@ -178,7 +180,7 @@ Visual Studio používá vlastní vstupní bod kontejneru v závislosti na typu 
 
 |||
 |-|-|
-| **Kontejnery platformy Linux** | Vstupním bodem je `tail -f /dev/null`, což je nekonečná čekání na udržení běhu kontejneru. Když se aplikace spustí prostřednictvím ladicího programu, je to ladicí program, který zodpovídá za spuštění aplikace (tj. `dotnet webapp.dll`). Pokud se spustí bez ladění, nástroj spustí `docker exec -i {containerId} dotnet webapp.dll` pro spuštění aplikace.|
+| **Kontejnery Linuxu** | Vstupním bodem je `tail -f /dev/null`, což je nekonečná čekání na udržení běhu kontejneru. Když se aplikace spustí prostřednictvím ladicího programu, je to ladicí program, který zodpovídá za spuštění aplikace (tj. `dotnet webapp.dll`). Pokud se spustí bez ladění, nástroj spustí `docker exec -i {containerId} dotnet webapp.dll` pro spuštění aplikace.|
 | **Kontejnery Windows**| Vstupní bod je podobný `C:\remote_debugger\x64\msvsmon.exe /noauth /anyuser /silent /nostatus`, který spouští ladicí program, takže naslouchá připojení. Totéž platí, že ladicí program spustí aplikaci a příkaz `docker exec` při spuštění bez ladění. U .NET Frameworkch webových aplikací se vstupní bod mírně liší, kde se do příkazu přidá `ServiceMonitor`.|
 
 Vstupní bod kontejneru lze upravit pouze v projektech Docker – vytváření, nikoli v projektech s jedním kontejnerem.

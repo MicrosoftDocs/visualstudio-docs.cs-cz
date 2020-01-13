@@ -8,18 +8,18 @@ manager: jillfra
 ms.technology: vs-azure
 ms.workload:
 - azure
-ms.openlocfilehash: 7556bf2e8568b8685cb92209bb1ae6bbfb3d211e
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: f5868f97301eba62d16ea68cdaa0c97c8e20edd1
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75847097"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916953"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Začínáme s nástroji Visual Studio Kubernetes Tools
 
 Nástroje Visual Studio Kubernetes vám pomůžou zjednodušit vývoj kontejnerových aplikací cílících na Kubernetes. Visual Studio může automaticky vytvořit soubory konfigurace s konfigurací, které jsou potřebné k podpoře nasazení Kubernetes, jako jsou fázemi a Helm grafy. Svůj kód můžete ladit v rámci živého clusteru Azure Kubernetes Service (AKS) pomocí Azure Dev Spaces nebo publikovat přímo do clusteru AKS z aplikace Visual Studio.
 
-Tento kurz se zabývá používáním sady Visual Studio pro přidání podpory Kubernetes do projektu a publikování do AKS. Pokud se primárně zajímá použití [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) k ladění a testování projektu běžícího na AKS, můžete místo toho přejít na [Azure dev Spaces kurz](/azure/dev-spaces/get-started-netcore-visualstudio) .
+Tento kurz se zabývá používáním sady Visual Studio pro přidání podpory Kubernetes do projektu a publikování do AKS. Pokud se primárně zajímá použití [Azure dev Spaces](/azure/dev-spaces/) k ladění a testování projektu běžícího na AKS, můžete místo toho přejít na [Azure dev Spaces kurz](/azure/dev-spaces/get-started-netcore-visualstudio) .
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -121,13 +121,13 @@ Přidané soubory jsou:
 
 - graf Helm a složka *grafů* . Tyto soubory YAML tvoří graf Helm pro aplikaci, který můžete použít k jejímu nasazení na Kubernetes. Další informace o Helm najdete v tématu [https://www.helm.sh](https://www.helm.sh).
 
-- *azds.yaml*. Obsahuje nastavení pro Azure Dev Spaces, které poskytuje rychlé a iterativní možnosti ladění ve službě Azure Kubernetes. Další informace najdete [v dokumentaci k Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces).
+- *azds.yaml*. Obsahuje nastavení pro Azure Dev Spaces, které poskytuje rychlé a iterativní možnosti ladění ve službě Azure Kubernetes. Další informace najdete [v dokumentaci k Azure dev Spaces](/azure/dev-spaces/azure-dev-spaces).
 
 ::: moniker range="vs-2017"
 
 ## <a name="publish-to-azure-kubernetes-service-aks"></a>Publikování do služby Azure Kubernetes (AKS)
 
-U všech těchto souborů můžete použít integrované vývojové prostředí (IDE) sady Visual Studio k psaní a ladění kódu aplikace, stejně jako vždy. [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) můžete použít také k rychlému spuštění a ladění kódu spuštěného v clusteru AKS v reálném čase. Další informace najdete v [kurzu Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/get-started-netcore-visualstudio) .
+U všech těchto souborů můžete použít integrované vývojové prostředí (IDE) sady Visual Studio k psaní a ladění kódu aplikace, stejně jako vždy. [Azure dev Spaces](/azure/dev-spaces/) můžete použít také k rychlému spuštění a ladění kódu spuštěného v clusteru AKS v reálném čase. Další informace najdete v [kurzu Azure dev Spaces](/azure/dev-spaces/get-started-netcore-visualstudio) .
 
 Jakmile budete mít kód spuštěný požadovaným způsobem, můžete publikovat přímo ze sady Visual Studio do clusteru AKS.
 
@@ -171,4 +171,4 @@ Blahopřejeme! Nyní můžete využívat plnou sílu sady Visual Studio pro vše
 
 Další informace o vývoji Kubernetes v Azure najdete v [dokumentaci k AKS](/azure/aks).
 
-Další informace o Azure Dev Spaces najdete v [dokumentaci k Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/)
+Další informace o Azure Dev Spaces najdete v [dokumentaci k Azure dev Spaces](/azure/dev-spaces/)

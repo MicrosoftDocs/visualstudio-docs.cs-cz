@@ -10,12 +10,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c56e6fdb6d841f32a056fc77f4928b09d386e036
-ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
+ms.openlocfilehash: affad69f6821addb50686d4f41d0bdb3bd816e8e
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75886435"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919014"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe – možnosti příkazového řádku
 
@@ -25,6 +25,8 @@ ms.locfileid: "75886435"
 > Adaptér MSTest v sadě Visual Studio funguje také v režimu starší verze (ekvivalent spuštění testů s *MSTest. exe*) kvůli kompatibilitě. V režimu starší verze nemůže využít funkci TestCaseFilter. Adaptér může přepnout do režimu starší verze, pokud je zadán soubor *testsettings* , **forcelegacymode** je nastaven na **hodnotu true** v souboru *runsettings* nebo pomocí atributů jako **HostType**.
 >
 > Chcete-li spustit automatizované testy na počítači založeném na architektuře ARM, je nutné použít *VSTest. Console. exe*.
+
+Otevřete [Developer Command Prompt](/dotnet/framework/tools/developer-command-prompt-for-vs) pro použití nástroje příkazového řádku nebo můžete najít tento nástroj v *% Program Files (x86)% \ Microsoft Visual Studio\\< verze\>\\< edition\>\Common7\ide\CommonExtensions\\< Platform | Microsoft >* .
 
 ## <a name="general-command-line-options"></a>Obecné možnosti příkazového řádku
 

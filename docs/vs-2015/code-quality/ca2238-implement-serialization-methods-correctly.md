@@ -15,23 +15,23 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 57e735db68d90130b537f9f5f4b220bd688c7675
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0f5239ca22a30b171c53c96f3be33062b860f78b
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666672"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918766"
 ---
 # <a name="ca2238-implement-serialization-methods-correctly"></a>CA2238: Implementujte správně metody serializace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA2238: Implementujte správně metody serializace](https://docs.microsoft.com/visualstudio/code-quality/ca2238-implement-serialization-methods-correctly).
+Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA2238: Implementujte správně metody serializace](/visualstudio/code-quality/ca2238-implement-serialization-methods-correctly).
 
 |||
 |-|-|
 |TypeName|ImplementSerializationMethodsCorrectly|
 |CheckId|CA2238|
-|Kategorie|Microsoft. Usage|
+|Kategorie|Microsoft.Usage|
 |Narušující změna|Přerušení – Pokud je metoda viditelná vně sestavení.<br /><br /> Bez přerušení – Pokud metoda není viditelná vně sestavení.|
 
 ## <a name="cause"></a>příčina
@@ -48,7 +48,7 @@ Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA2238: Imp
 
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute?displayProperty=fullName>
 
-  Obslužné rutiny událostí serializace přebírají jeden parametr typu <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>, vrátí `void` a mají viditelnost `private`.
+  Obslužné rutiny událostí serializace přebírají jeden parametr typu <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>, vrátí `void`a mají `private` viditelnost.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, opravte podpis, návratový typ nebo viditelnost obslužné rutiny události serializace.

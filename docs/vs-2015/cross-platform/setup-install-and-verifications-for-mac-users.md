@@ -6,12 +6,12 @@ ms.assetid: 22725520-59ba-4f6f-80e4-097b1287a34b
 caps.latest.revision: 14
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 703ee752a9f16f0abc5e4813707890a6d17947af
-ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
+ms.openlocfilehash: 5a3a05e50cfa17432bb2f31274c9b62c6b843687
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74538942"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917951"
 ---
 # <a name="setup-install-and-verifications-for-mac-users"></a>Nastavení, instalace a ověření pro uživatele počítačů Mac
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,7 +46,7 @@ Toto téma je určeno pro vývojáře, kteří pracují hlavně na Macu, který 
   
 2. Stáhněte a nainstalujte Xcode z [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/).  
   
-3. Stáhněte a nainstalujte Xamarin podle pokynů v tématu [instalace a konfigurace Xamarin. iOS](https://docs.microsoft.com/xamarin/ios/get-started/installation/mac) (Xamarin.com).  
+3. Stáhněte a nainstalujte Xamarin podle pokynů v tématu [instalace a konfigurace Xamarin. iOS](/xamarin/ios/get-started/installation/mac) (Xamarin.com).  
   
 4. Po dokončení instalace Xamarin na počítačích s Windows i Mac postupujte podle pokynů v tématu [připojení k počítači Mac pomocí XMA](/xamarin/ios/get-started/installation/windows/connecting-to-mac) (Xamarin.com), abyste mohli pracovat s iOS a Mac ze sady Visual Studio v počítači s Windows.  
   
@@ -112,7 +112,7 @@ Toto téma je určeno pro vývojáře, kteří pracují hlavně na Macu, který 
   
    - Pokud se zobrazí chyba "instalovaný Android SDK je příliš starý", klikněte v této zprávě na **otevřít Android SDK** a vyberte nejnovější dostupnou verzi sady SDK. Všimněte si, že musíte mít aplikaci Visual Studio spuštěnou jako správce, aby bylo možné aktualizovat sadu SDK.  
   
-3. Ověřte, že se můžete připojit ze sady Visual Studio k emulátoru, který je nainstalovaný na vašem počítači Mac.  Výsledkem je, že v seznamu emulátorů, které můžete vybrat v sadě Visual Studio pro ladění, se zobrazí Xamarin Player.  Pokud to chcete provést, postupujte podle pokynů v tématu [připojení sady Visual Studio k Xamarin Android Player](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (Xamarin.com).  
+3. Ověřte, že se můžete připojit ze sady Visual Studio k emulátoru, který je nainstalovaný na vašem počítači Mac.  Výsledkem je, že v seznamu emulátorů, které můžete vybrat v sadě Visual Studio pro ladění, se zobrazí Xamarin Player.  Pokud to chcete provést, postupujte podle pokynů v tématu [připojení sady Visual Studio k Xamarin Android Player](/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (Xamarin.com).  
   
    **iOS**  
   

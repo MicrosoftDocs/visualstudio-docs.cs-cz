@@ -12,12 +12,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 89f78e129d64b313de7bada3c72a449f1fb2aece
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 43b9d201a146538cd74e9528340845fd9fd92597
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849932"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918576"
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>Návod: Vytvoření kódu pomocí textových šablon
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ Generování kódu umožňuje vytvářet kód programu, který je silného typu 
  V tomto příkladu projektu šablona čte ukázkový soubor XML a generuje třídy, které odpovídají každému typu uzlu. V kódu psané rukou můžete použít tyto třídy pro navigaci v souboru XML. Můžete také spustit aplikaci na všech ostatních souborech, které používají stejné typy uzlů. Účelem ukázkového souboru XML je poskytnout příklady všech typů uzlů, se kterými se má aplikace zabývat.
 
 > [!NOTE]
-> Aplikace [XSD. exe](https://docs.microsoft.com/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe), která je součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], může generovat třídy silného typu ze souborů XML. Zde uvedená šablona je uvedena jako příklad.
+> Aplikace [XSD. exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe), která je součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], může generovat třídy silného typu ze souborů XML. Zde uvedená šablona je uvedena jako příklad.
 
  Tady je ukázkový soubor:
 

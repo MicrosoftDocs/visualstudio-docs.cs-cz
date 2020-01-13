@@ -9,12 +9,12 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f84051e4450926136064b9af7f3c09e2e91a2f9
-ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
+ms.openlocfilehash: d5e73757e10eec5e7e8c290772822f49129fd1e5
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188570"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915903"
 ---
 # <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Vytvoření projektu AI z Galerie Azure Machine Learning v aplikaci Visual Studio
 
@@ -23,7 +23,7 @@ Azure Machine Learning je integrována s Visual Studio Tools for AI. Můžete ji
 Po [instalaci Visual Studio Tools for AI](installation.md)je snadné vytvořit nový projekt v Pythonu pomocí předem připraveného recepty v galerii Azure Machine Learning Sample Gallery.
 
 > [!NOTE]
-> Azure Machine Learning Workbench musí být nainstalované. Pokud ho chcete nainstalovat, přečtěte si [rychlý Start k instalaci Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/preview/quickstart-installation) .
+> Azure Machine Learning Workbench musí být nainstalované. Pokud ho chcete nainstalovat, přečtěte si [rychlý Start k instalaci Azure Machine Learning](/azure/machine-learning/preview/quickstart-installation) .
 
 1. Spusťte sadu Visual Studio. Otevřete **Průzkumník serveru** otevřením nabídky **nástroje AI** a výběrem možnosti **Vybrat cluster** .
 
@@ -31,7 +31,7 @@ Po [instalaci Visual Studio Tools for AI](installation.md)je snadné vytvořit n
 
 2. Přihlaste se k předplatnému Azure Machine Learning tak, že kliknete pravým tlačítkem na uzel **Azure Machine Learning** v Průzkumník serveru pak vyberete **přihlášení** a postupujte podle pokynů.
 
-    ![hlas](media/create-project-gallery/azureml-login.png)
+    ![Přihlásit](media/create-project-gallery/azureml-login.png)
 
 3. Vyberte možnost **nástroje AI > Azure Machine Learning Galerie ukázek**.
 

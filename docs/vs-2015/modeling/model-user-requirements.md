@@ -13,12 +13,12 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3d70a7c8b7dbf6015e992cfabb5204f3b307238a
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: a94a4bd479c3ad48efe44d3a92e91dc3a050efcd
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75844919"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918261"
 ---
 # <a name="model-user-requirements"></a>Modelování uživatelských požadavků
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -138,7 +138,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 |Prvky v diagramu koncepční třídy|[Diagramy tříd UML: Referenční dokumentace](../modeling/uml-class-diagrams-reference.md)|
 |Vývoj kódu z koncepčních tříd|[Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|
 
- V diagramu koncepční třídy není obvykle vhodné umístit šipky na přidružení, aby představovaly schopnost navigace. Důvodem je, že diagram nepředstavuje implementaci. Asociace představuje vztahy mezi objekty reálného světa. Následující rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nastaví nesměrující se šipky výchozí: [Ukázka: funkce modelování domén UML](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples).
+ V diagramu koncepční třídy není obvykle vhodné umístit šipky na přidružení, aby představovaly schopnost navigace. Důvodem je, že diagram nepředstavuje implementaci. Asociace představuje vztahy mezi objekty reálného světa.
 
 ## <a name="BusinessRules"></a>Zobrazení obchodních pravidel
  Obchodní pravidlo je požadavek, který není přidružený k určitému případu použití, a měl by být pozorován v celém systému.
@@ -239,4 +239,4 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
   Prozkoumáním vztahů mezi zobrazeními, které různé diagramy poskytují, můžete rychle porozumět hlavním koncepcím, se kterými uživatelé pracují, a pomáhat jim pochopit, co potřebují ze systému. Také se dostanete k lepšímu porozumění požadavkům, o které mají účastníci aspoň určité informace. Můžete naplánovat vývoj těchto funkcí, alespoň ve zjednodušené podobě, v rané fázi projektu, a dovolit uživatelům experimentovat s nimi.
 
 ## <a name="see-also"></a>Viz také
- [Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md) [vyvíjejí testy z modelu](../modeling/develop-tests-from-a-model.md) [použití modelů v modelu procesu vývoje](../modeling/use-models-in-your-development-process.md) [](../modeling/model-your-app-s-architecture.md) [. Ukázka vs Extension: funkce Modelování domény UML](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) [Ukázka vs: barva prvků UML podle typu stereotypu](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) vs. rozšíření: [propojte elementy UML s diagramy, soubory a dalšími prvky](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) [Ukázka vs Extension: zarovnání obrazců na video diagramu UML](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) [: modelování obchodní domény](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)
+ [Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md) [vyvíjejí testy z modelu](../modeling/develop-tests-from-a-model.md) [použití modelů v modelu procesu vývoje,](../modeling/use-models-in-your-development-process.md) video [architektury vaší aplikace](../modeling/model-your-app-s-architecture.md) [: modelování obchodní domény](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)

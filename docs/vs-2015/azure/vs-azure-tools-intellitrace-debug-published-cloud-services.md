@@ -11,26 +11,26 @@ ms.date: 03/21/2017
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: b1617ab8bd61857b29d78dc800ca70e26a7c8ff2
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 033e682344cbd255c8cbf41d7527ec7d08a5db20
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852275"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915615"
 ---
 # <a name="debugging-a-published-azure-cloud-service-with-visual-studio-and-intellitrace"></a>Ladění publikované cloudové služby Azure pomocí sady Visual Studio a nástroje IntelliTrace
 Pomocí nástroje IntelliTrace můžete protokolovat podrobné ladicí informace pro instanci role při spuštění v Azure. Pokud je potřeba najít příčinu problému, můžete protokoly IntelliTrace ke krokování kódu ze sady Visual Studio, jako kdyby byly spuštěné v Azure. Nástroj IntelliTrace zaznamenává v důsledku toho klíčů provádění kódu a dat prostředí, když vaše aplikace Azure běží jako cloudová služba v Azure a umožňuje přehrát zaznamenaná data ze sady Visual Studio. 
 
 Můžete použít nástroj IntelliTrace, pokud máte nainstalované Visual Studio Enterprise a vaše aplikace Azure cílí rozhraní .NET Framework 4 nebo novější. Nástroj IntelliTrace shromažďuje informace o Azure role. Virtuální počítače pro tyto role ke spuštění vždy 64bitové operační systémy.
 
-Jako alternativu můžete použít [vzdálené ladění](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-debugging-cloud-services-overview?view=vs-2019) připojit přímo do cloudové služby, na kterém běží v Azure.
+Jako alternativu můžete použít [vzdálené ladění](vs-azure-tools-debugging-cloud-services-overview.md) připojit přímo do cloudové služby, na kterém běží v Azure.
 
 > [!IMPORTANT]
 > Nástroj IntelliTrace je určená pro účely ladění pouze a neměl by se používat pro produkční nasazení.
 > 
 
 ## <a name="configure-an-azure-application-for-intellitrace"></a>Konfigurace aplikace Azure pro technologii IntelliTrace
-K povolení technologie IntelliTrace pro aplikaci Azure, musíte vytvořit a publikovat aplikace z projektu sady Visual Studio v Azure. Před publikováním na Azure, je nutné nakonfigurovat nástroj IntelliTrace pro vaše aplikace Azure. Pokud publikujete aplikaci bez nástroje IntelliTrace, budete muset znovu publikujte projekt. Další informace najdete v tématu [publikování Azure cloud services projektů s použitím sady Visual Studio](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publishing-a-cloud-service?view=vs-2019).
+K povolení technologie IntelliTrace pro aplikaci Azure, musíte vytvořit a publikovat aplikace z projektu sady Visual Studio v Azure. Před publikováním na Azure, je nutné nakonfigurovat nástroj IntelliTrace pro vaše aplikace Azure. Pokud publikujete aplikaci bez nástroje IntelliTrace, budete muset znovu publikujte projekt. Další informace najdete v tématu [publikování Azure cloud services projektů s použitím sady Visual Studio](vs-azure-tools-publishing-a-cloud-service.md).
 
 1. Až budete připravení nasadit vaše aplikace Azure, ověřte, že váš projekt cílí sestavení jsou nastaveny na **ladění**.
 

@@ -10,12 +10,12 @@ ms.date: 06/28/2018
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 96df8bbf1c991b98571a427a5118374cd6f3ba3b
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: d7099eb47007b1fc657164d085e8a5bb6f09e1db
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851458"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915656"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>Nastavení diagnostiky pro službu Azure Cloud Services a virtuální počítače
 Pokud potřebujete řešit potíže s cloudovou službou Azure nebo virtuálním počítačem, můžete pomocí sady Visual Studio snadněji nastavit Azure Diagnostics. Diagnostika zaznamenává systémová data a data protokolování do virtuálních počítačů a instancí virtuálních počítačů, které spouštějí vaši cloudovou službu. Diagnostická data se přenesou na účet úložiště, který zvolíte. Další informace o protokolování diagnostiky v Azure najdete v tématu [Povolení protokolování diagnostiky pro Web Apps v Azure App Service](/azure/app-service/web-sites-enable-diagnostic-log).
@@ -110,7 +110,7 @@ V aplikaci Visual Studio můžete shromažďovat diagnostická data pro virtuál
     ![Nainstalovat rozšíření virtuálního počítače Azure](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766024.png)
 
     > [!NOTE]
-   > K dispozici jsou další diagnostická rozšíření pro vaše virtuální počítače. Další informace najdete v tématu [rozšíření virtuálních počítačů a funkce pro Windows](https://docs.microsoft.com/azure/virtual-machines/windows/extensions-features).
+   > K dispozici jsou další diagnostická rozšíření pro vaše virtuální počítače. Další informace najdete v tématu [rozšíření virtuálních počítačů a funkce pro Windows](/azure/virtual-machines/windows/extensions-features).
    >
    >
 5. Chcete-li přidat rozšíření a zobrazit dialogové okno **Konfigurace diagnostiky** , vyberte možnost **Přidat**.

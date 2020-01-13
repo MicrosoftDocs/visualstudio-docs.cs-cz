@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: ae6449613d273c6e0f8302b8a0b604fe91ebc847
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: d8257e0833da470554ce331c30cd0edf74122093
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911759"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915958"
 ---
 # <a name="publishing-a-cloud-service-using-visual-studio"></a>Publikování cloudové služby pomocí sady Visual Studio
 
@@ -45,17 +45,17 @@ Při publikování aplikace Azure můžete provést jednu z následujících úl
 
    b. V dialogovém okně **balíček aplikace Azure** zvolte konfiguraci služby, pro kterou chcete vytvořit balíček, a pak zvolte konfiguraci sestavení.
 
-   r. Volitelné Pokud chcete zapnout službu Vzdálená plocha pro cloudovou službu po jejím publikování, vyberte **Povolit vzdálenou plochu pro všechny role**a pak vyberte **Nastavení** a nakonfigurujte přihlašovací údaje vzdálené plochy. Další informace najdete v tématu [povolení připojení ke vzdálené ploše pro roli v Azure Cloud Services pomocí sady Visual Studio](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
+   c. Volitelné Pokud chcete zapnout službu Vzdálená plocha pro cloudovou službu po jejím publikování, vyberte **Povolit vzdálenou plochu pro všechny role**a pak vyberte **Nastavení** a nakonfigurujte přihlašovací údaje vzdálené plochy. Další informace najdete v tématu [povolit připojení ke vzdálené ploše pro roli v cloudových službách Azure pomocí sady Visual Studio](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
 
       Pokud chcete po publikování cloudové služby ladit, zapněte vzdálené ladění tak, že vyberete **Povolit vzdálený ladicí program pro všechny role**.
 
-   trojrozměrné. Chcete-li vytvořit balíček, klikněte na odkaz **balíček** .
+   d. Chcete-li vytvořit balíček, klikněte na odkaz **balíček** .
 
       Průzkumník souborů zobrazuje umístění souboru nově vytvořeného balíčku. Toto umístění můžete zkopírovat, abyste ho mohli použít Azure Portal.
 
-   Cerebrální. Chcete-li tento balíček publikovat do prostředí nasazení, je nutné použít toto umístění jako umístění balíčku při vytváření cloudové služby a nasazení tohoto balíčku do prostředí s Azure Portal.
+   e. Chcete-li tento balíček publikovat do prostředí nasazení, je nutné použít toto umístění jako umístění balíčku při vytváření cloudové služby a nasazení tohoto balíčku do prostředí s Azure Portal.
 
-1. Volitelné Proces nasazení zrušíte tak, že v místní nabídce pro položku řádku v protokolu aktivit kliknete na **zrušit a odebrat**. Tento příkaz zastaví proces nasazení a odstraní prostředí nasazení z Azure. Pokud chcete prostředí po nasazení odebrat, použijte Azure Portal.
+1. Volitelné Proces nasazení zrušíte tak, že v místní nabídce pro položku řádku v protokolu aktivit kliknete na **zrušit a odebrat**. Tento příkaz celý proces nasazení zastaví a odstraní prostředí nasazení z Azure. Pokud chcete prostředí po nasazení odebrat, použijte Azure Portal.
 
 1. Volitelné Po spuštění instancí rolí Visual Studio automaticky zobrazí prostředí nasazení v uzlu **Cloud Services** v Průzkumník serveru. Tady můžete zobrazit stav jednotlivých instancí rolí. Viz [Správa prostředků Azure pomocí Průzkumníka cloudu](vs-azure-tools-resources-managing-with-cloud-explorer.md). Následující ilustrace znázorňuje instance rolí, když jsou stále ve stavu inicializace:
 
@@ -90,7 +90,7 @@ Následující postup předpokládá, že používáte Průvodce **publikování
     Cloudová služba je publikovaná. Virtuální počítač, který je vytvořen, má vzdálená připojení povolená pro službu IIS, aby se Nasazení webu mohl použít k aktualizaci webových rolí bez nutnosti jejich opětovného publikování.
 
    > [!NOTE]
-   > Pokud máte pro webovou roli nakonfigurovanou víc než jednu instanci, zobrazí se varovná zpráva s oznámením, že každá webová role je omezená na jednu instanci jenom v balíčku, který se vytvořil pro publikování vaší aplikace. Pokračujte výběrem **OK** . Jak je uvedeno v části požadavky, můžete mít více než jednu webovou roli, ale pouze jednu instanci každé role.
+   > Pokud máte pro webovou roli nakonfigurovanou víc než jednu instanci, zobrazí se varovná zpráva s oznámením, že každá webová role je omezená na jednu instanci jenom v balíčku, který se vytvořil pro publikování vaší aplikace. Pokračujte výběrem tlačítka **OK**. Jak je uvedeno v části požadavky, můžete mít více než jednu webovou roli, ale pouze jednu instanci každé role.
 
 ### <a name="update-your-web-role-by-using-web-deploy"></a>Aktualizace webové role pomocí Nasazení webu
 
@@ -104,7 +104,7 @@ Následující postup předpokládá, že používáte Průvodce **publikování
 
    b. Do pole **heslo**zadejte heslo.
 
-   r. Volitelné Pokud chcete toto heslo uložit v tomto profilu, vyberte **Uložit heslo**.
+   c. Volitelné Pokud chcete toto heslo uložit v tomto profilu, vyberte **Uložit heslo**.
 
 1. Chcete-li publikovat změny webové role, klikněte na tlačítko **publikovat**.
 
@@ -120,7 +120,7 @@ Následující postup předpokládá, že používáte Průvodce **publikování
 
    a. Pokud se chcete připojit k virtuálnímu počítači, na kterém běží webová role, vyberte instanci webové role v **Průzkumníku cloudu** nebo **Průzkumník serveru**a pak zvolte příkaz **připojit pomocí vzdálené plochy** . Podrobné pokyny, jak se připojit k virtuálnímu počítači, najdete v tématu [povolení připojení ke vzdálené ploše pro roli v Azure Cloud Services pomocí sady Visual Studio](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio). V prohlížeči se zobrazí výzva ke stažení souboru `.rdp`.
 
-   b. Chcete-li přidat certifikát protokolu SSL, otevřete službu správy ve Správci služby IIS. V nástroji Správce služby IIS povolte SSL otevřením odkazu **vazby** v podokně **Akce** . Zobrazí se dialogové okno **Přidat vazbu webu** . Zvolte **Přidat**a pak v rozevíracím seznamu **typ** zvolte https. V seznamu **certifikát SSL** vyberte certifikát SSL, který jste podepsali certifikační autoritou a který jste nahráli do Azure Portal. Další informace najdete v tématu [Konfigurace nastavení připojení pro službu správy](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770458(v=ws.10)).
+   b. Chcete-li přidat certifikát protokolu SSL, otevřete službu správy ve Správci služby IIS. V nástroji Správce služby IIS povolte SSL otevřením odkazu **vazby** v podokně **Akce** . Zobrazí se dialogové okno **Přidat vazbu webu** . Zvolte **Přidat**a pak v rozevíracím seznamu **typ** zvolte https. V seznamu **certifikát SSL** vyberte certifikát SSL, který jste podepsali certifikační autoritou a který jste nahráli do Azure Portal. Další informace najdete v tématu [Konfigurace nastavení připojení pro službu správy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770458(v=ws.10)).
 
       > [!NOTE]
       > Pokud přidáte důvěryhodný certifikát SSL, žlutý výstražný trojúhelník se už nebude zobrazovat v **Průvodci publikováním**.
@@ -133,8 +133,8 @@ Je možné, že budete muset zahrnout konkrétní soubory do balíčku služby, 
 
    a. V **Průzkumník řešení**otevřete uzel projektu pro projekt, ve kterém chybí odkazované sestavení.
    b. Chcete-li přidat sestavení do projektu, otevřete místní nabídku složky **odkazy** a pak zvolte možnost **Přidat odkaz**. Zobrazí se dialogové okno Přidat odkaz.
-   r. Zvolte odkaz, který chcete přidat, a klikněte na **tlačítko OK**. Odkaz se přidá do seznamu ve složce **odkazy** .
-   trojrozměrné. Otevřete místní nabídku pro sestavení, které jste přidali, a vyberte možnost **vlastnosti**. Zobrazí se okno **vlastnosti** .
+   c. Zvolte odkaz, který chcete přidat, a klikněte na **tlačítko OK**. Odkaz se přidá do seznamu ve složce **odkazy** .
+   d. Otevřete místní nabídku pro sestavení, které jste přidali, a vyberte možnost **vlastnosti**. Zobrazí se okno **vlastnosti** .
 
       Chcete-li zahrnout toto sestavení do balíčku služby, klikněte v **seznamu Kopírovat místní** na **hodnotu true**.
 1. V **Průzkumník řešení** otevřete uzel projektu pro projekt, ve kterém chybí odkazované sestavení.

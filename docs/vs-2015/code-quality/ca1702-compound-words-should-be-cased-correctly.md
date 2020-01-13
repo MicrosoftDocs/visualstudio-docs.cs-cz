@@ -15,23 +15,23 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 76ce346430a249b562f00e17c3173e79128d1708
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 854e9a492f422957e64e1a4b6a00bc7c39b81c46
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669258"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919242"
 ---
 # <a name="ca1702-compound-words-should-be-cased-correctly"></a>CA1702: Malá a velká písmena složených slov by měla být použita správně
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1702: složená slova by měla být použita správně](https://docs.microsoft.com/visualstudio/code-quality/ca1702-compound-words-should-be-cased-correctly).
+Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1702: složená slova by měla být použita správně](/visualstudio/code-quality/ca1702-compound-words-should-be-cased-correctly).
 
 |||
 |-|-|
 |TypeName|CompoundWordsShouldBeCasedCorrectly|
 |CheckId|CA1702|
-|Kategorie|Microsoft. pojmenování|
+|Kategorie|Microsoft.Naming|
 |Narušující změna|Přerušení – při vyvolání na sestavení.<br /><br /> Bez přerušení – při vyvolání v parametrech typu.|
 
 ## <a name="cause"></a>příčina

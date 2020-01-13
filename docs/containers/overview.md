@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: d785ed9416959484f9829e12e1cd20cd2924adb8
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 0d5859016a02de259c24c213c6cfef8cb5fce005
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846759"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916568"
 ---
 # <a name="container-tools-in-visual-studio"></a>Nástroje kontejneru v sadě Visual Studio
 
@@ -44,7 +44,7 @@ V rámci sady Visual Studio 2017 můžete použít Docker Compose a Service Fabr
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) s nainstalovanou úlohou **vývoje pro web**, úlohy **nástrojů Azure** a/nebo **.NET Core pro vývoj pro různé platformy**
-* [Vývojové nástroje .NET core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2) pro vývoj pomocí .net Core 2,2
+* [Vývojové nástroje .NET Core](https://dotnet.microsoft.com/download/dotnet-core/) pro vývoj pomocí .NET Core.
 * Pokud chcete publikovat Azure Container Registry, předplatné Azure. [Zaregistrujte si bezplatnou zkušební verzi](https://azure.microsoft.com/offers/ms-azr-0044p/).
 
 ## <a name="docker-support-in-visual-studio"></a>Podpora Docker v aplikaci Visual Studio
@@ -56,7 +56,7 @@ Podpora Docker v aplikaci Visual Studio se v reakci na potřeby zákazníka změ
 Pomocí sady Visual Studio 2019 můžete použít Docker Compose, Kubernetes a Service Fabric jako služby pro orchestraci kontejnerů.
 
 > [!NOTE]
-> Pokud používáte úplnou šablonu projektu .NET Framework konzolu, když přidáte podporu Docker, automaticky se přidá podpora orchestrace pomocí Docker Compose.
+> Používáte-li úplnou .NET Framework šablonu projektu konzoly, je podporovaná možnost **Přidat kontejner Orchestrator support** po vytvoření projektu s možnostmi pro použití Service Fabric nebo Docker Compose. Přidání podpory při vytváření projektu a **Přidání podpory Docker** pro jeden projekt bez orchestrace nejsou k dispozici možnosti.
 
 V aplikaci Visual Studio 2019 verze 16,4 a novější je k dispozici okno **kontejnery** , které umožňuje zobrazit spuštěné kontejnery, procházet dostupné obrázky, zobrazit proměnné prostředí, protokoly a mapování portů, zkontrolovat systém souborů, připojit ladicí program nebo otevřít okno terminálu v prostředí kontejneru. Viz [zobrazení a diagnostika kontejnerů a imagí v aplikaci Visual Studio](view-and-diagnose-containers.md).
 

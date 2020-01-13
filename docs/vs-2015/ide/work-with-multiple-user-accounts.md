@@ -9,12 +9,12 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2f68328fb243c00c43c8ef454f10ad94c7d004a4
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7dc2ba585c500fe045d143a2b8baa2d193466fdf
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296780"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917787"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Práce s několika uživatelskými účty
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -56,7 +56,7 @@ Pokud máte více účtů Microsoft a/nebo pracovní nebo školní účty, můž
 
  ![Dialog pro změnu ověřování pro ASP.NET](../ide/media/vs2015-change-authentication.png "VS2015_change_authentication")
 
- Další informace o různých typech ověřování v ASP.NET najdete v tématu [vytváření webových projektů ASP.NET v Visual Studio 2013](https://docs.microsoft.com/aspnet/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth) (informace o ověřování stále platí pro sadu Visual Studio 2015).
+ Další informace o různých typech ověřování v ASP.NET najdete v tématu [vytváření webových projektů ASP.NET v Visual Studio 2013](/aspnet/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth) (informace o ověřování stále platí pro sadu Visual Studio 2015).
 
 ### <a name="access-your-visual-studio-team-services-account"></a>Přístup k účtu Visual Studio Team Services
  V hlavní nabídce vyberte možnost **Team > připojit k Team Foundation Server** a zobrazte okno **Team Explorer** . Klikněte na **Vybrat týmové projekty**a potom v poli se seznamem v části **Vybrat Team Foundation Server**by se měla zobrazit adresa URL pro váš účet Visual Studio Team Services. Když vyberete adresu URL, kterou budete přihlášeni, aniž byste museli znovu zadat svoje přihlašovací údaje.

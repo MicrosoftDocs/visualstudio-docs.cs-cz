@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f84e334409f4e3546d8963a51bb5cf79b31f0afd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a88f0382a93027cc952dfe44f0027e6ab1076a45
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585961"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916497"
 ---
 # <a name="walkthrough-create-an-n-tier-data-application"></a>Návod: Vytvoření n-vrstvých datových aplikací
 *N-vrstvé* datové aplikace jsou aplikace, které přistupují k datům a jsou rozdělené do několika logických vrstev nebo *vrstev*. Oddělení součástí aplikace do diskrétních vrstev zvyšuje udržovatelnost a škálovatelnost aplikace. Je to díky tomu, že umožňuje snazší přijímání nových technologií, které se dají použít na jednu vrstvu, aniž byste museli přenavrhovat celé řešení. N-vrstvá architektura zahrnuje prezentační vrstvu, střední vrstvu a datovou vrstvu. Střední vrstva obvykle zahrnuje vrstvu přístupu k datům, vrstvu obchodní logiky a sdílené komponenty, jako je ověřování a ověřování. Datová vrstva zahrnuje relační databázi. N-vrstvé aplikace obvykle ukládají citlivé informace do vrstvy přístupu k datům střední vrstvy, aby zachovaly izolaci od koncových uživatelů, kteří přistupují k prezentační vrstvě. Další informace najdete v tématu [N-vrstvých datových aplikací – přehled](../data-tools/n-tier-data-applications-overview.md).
@@ -48,7 +48,7 @@ Během tohoto Názorného postupu provedete následující kroky:
 
 - Napište kód pro naplnění tabulek dat.
 
-![odkaz na video](../data-tools/media/playvideo.gif) ve verzi videa tohoto tématu, najdete v tématu [Video postupy: vytváření n-vrstvých datových aplikací](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cc178916(v=vs.90)).
+![odkaz na video](../data-tools/media/playvideo.gif) ve verzi videa tohoto tématu, najdete v tématu [Video postupy: vytváření n-vrstvých datových aplikací](/previous-versions/visualstudio/visual-studio-2008/cc178916(v=vs.90)).
 
 ## <a name="prerequisites"></a>Požadavky
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.

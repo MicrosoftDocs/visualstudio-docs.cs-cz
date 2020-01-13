@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f261eac1c3cbc73bb12323c089ae88f4ffc6b120
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: d9c52c76bbd8623f9ec9b0ce8f3e5463c638d8f7
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72431673"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916447"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>Ladění chyb a dialogových oken s upozorněním
 Níže jsou uvedená dialogová okna chyby a varování, se kterými se můžete setkat při ladění aplikace.
@@ -63,9 +63,9 @@ Níže jsou uvedená dialogová okna chyby a varování, se kterými se můžete
 
  [Chyby vzdáleného ladění](../debugger/remote-debugging-errors-and-troubleshooting.md)
 
- [Chyby připojení](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/8dbb3we5(v=vs.100))
+ [Chyby připojení](/previous-versions/visualstudio/visual-studio-2010/8dbb3we5(v=vs.100))
 
- [Řešení potíží s nastavením ladění SQL](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s7ahaxtd(v=vs.100))
+ [Řešení potíží s nastavením ladění SQL](/previous-versions/visualstudio/visual-studio-2010/s7ahaxtd(v=vs.100))
 
  [Nejčastější dotazy k ladění nativního kódu](../debugger/debugging-native-code-faqs.md)
 

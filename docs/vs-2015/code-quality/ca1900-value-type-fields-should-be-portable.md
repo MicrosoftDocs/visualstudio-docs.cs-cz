@@ -15,17 +15,17 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ff56c89a56af54288284d9cc62c71d0c9b2179b4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 23b5705b7ee81e56945050fe63dd2f086894bd08
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661095"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917935"
 ---
 # <a name="ca1900-value-type-fields-should-be-portable"></a>CA1900: Pole hodnot by měla být přenosná
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1900: pole typu hodnoty by měly být přenosné](https://docs.microsoft.com/visualstudio/code-quality/ca1900-value-type-fields-should-be-portable).
+Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1900: pole typu hodnoty by měly být přenosné](/visualstudio/code-quality/ca1900-value-type-fields-should-be-portable).
 
 |||
 |-|-|

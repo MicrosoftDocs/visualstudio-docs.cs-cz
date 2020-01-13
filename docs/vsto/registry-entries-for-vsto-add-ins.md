@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 464820258e5c20474d74f92eb108344deccc49f1
-ms.sourcegitcommit: 0a8855572c6c88f4b2ece232c04aa124fbd9cec3
+ms.openlocfilehash: 6f814aabc4a6de4806fd419f16599758799c7538
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955046"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919118"
 ---
 # <a name="registry-entries-for-vsto-add-ins"></a>Položky registru pro doplňky VSTO
   Pokud nasazujete doplňky VSTO vytvořené pomocí sady Visual Studio, musíte vytvořit konkrétní sadu položek registru. Tyto položky registru obsahují informace, které umožní aplikaci systém Microsoft Office vyhledat a načíst doplněk VSTO.
@@ -62,7 +62,7 @@ ms.locfileid: "74955046"
 >
 >Pokud instalační program cílí na aktuálního uživatele, není nutné ho instalovat do WOW6432Node, protože je sdílená cesta HKEY_CURRENT_USER \Software.
 >
->Další informace najdete v části [32 a 64 data aplikace v registru](https://docs.microsoft.com/windows/win32/sysinfo/32-bit-and-64-bit-application-data-in-the-registry) .
+>Další informace najdete v části [32 a 64 data aplikace v registru](/windows/win32/sysinfo/32-bit-and-64-bit-application-data-in-the-registry) .
 
  V následující tabulce jsou uvedeny položky v rámci tohoto klíče registru.
 

@@ -14,12 +14,12 @@ ms.assetid: d2620e71-be9e-44c9-b5b7-03a4c8d9cf0b
 caps.latest.revision: 36
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 01917b9e78ee6129f09811ca2dc3e18c149c06f6
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: ef2d1cbffab5e38e603b0e50beb896f1c6efa23d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850388"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919206"
 ---
 # <a name="visual-studio-isolated-shell"></a>Izolované prostředí sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ Izolované prostředí nástroje Visual Studio umožňuje vytvářet samostatné
   
  Chcete-li pracovat s projektem izolovaného prostředí, je nutné nainstalovat sadu Visual Studio SDK. Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
- Chcete-li vytvořit aplikaci izolovaného prostředí, začněte s projektem s izolovaným prostředím sady Visual Studio. Tento projekt obsahuje vše, co potřebujete k vývoji a testování vlastní aplikace izolovaného prostředí. Až budete připraveni k napsání instalačního programu, který nasadí vaši aplikaci, musíte získat Distribuovatelný balíček izolovaného prostředí z [prostředí sady Microsoft Visual Studio (izolovaný režim) Distribuovatelný balíček](https://docs.microsoft.com/collaborate/connect-redirect?ProgramID=8963&InvitationID=VS15-2R69-RB8J).  
+ Chcete-li vytvořit aplikaci izolovaného prostředí, začněte s projektem s izolovaným prostředím sady Visual Studio. Tento projekt obsahuje vše, co potřebujete k vývoji a testování vlastní aplikace izolovaného prostředí. Až budete připraveni k napsání instalačního programu, který nasadí vaši aplikaci, musíte získat Distribuovatelný balíček izolovaného prostředí z [prostředí sady Microsoft Visual Studio (izolovaný režim) Distribuovatelný balíček](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/).  
   
 > [!NOTE]
 > Předtím, než budete moci získat přístup k distribuovatelnýmu balíčku izolovaného prostředí, budete požádáni o vyplnění stručného průzkumu zákazníka.  Po jeho vyplnění budete přesměrováni na stránku Visual Studio Connect s odkazy pro stažení distribuovatelných balíčků.  Odkazy ke stažení najdete v následujících návštěvách na webu Visual Studio Connect na kartě programy v **integrovaném a izolovaném prostředí sady &#124; Visual Studio 2015** .  

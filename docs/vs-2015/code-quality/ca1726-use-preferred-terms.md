@@ -14,23 +14,23 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f5d184684a6ec30c216b7274313905781843071b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 639a42e26442e31f7bbbbb2245af0289c6a04fd8
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671563"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918225"
 ---
 # <a name="ca1726-use-preferred-terms"></a>CA1726: Použijte upřednostňované výrazy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [CA1726: Používejte preferované výrazy](https://docs.microsoft.com/visualstudio/code-quality/ca1726-use-preferred-terms).
+Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [CA1726: Používejte preferované výrazy](/visualstudio/code-quality/ca1726-use-preferred-terms).
 
 |||
 |-|-|
 |TypeName|UsePreferredTerms|
 |CheckId|CA1726|
-|Kategorie|Microsoft. pojmenování|
+|Kategorie|Microsoft.Naming|
 |Narušující změna|Přerušení – při vyvolání u sestavení<br /><br /> Nerozdělitelné – při vyvolání u parametrů typu|
 
 ## <a name="cause"></a>příčina
@@ -49,7 +49,7 @@ Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [CA1726: Použ
 |`Didnt`|`DidNot`|
 |`Doesnt`|`DoesNot`|
 |`Dont`|`DoNot`|
-|`Flag` nebo `Flags`|Neexistuje žádný náhradní termín. Nepoužívejte.|
+|`Flag` Nebo `Flags`|Neexistuje žádný náhradní termín. Nepoužívejte.|
 |`Hadnt`|`HadNot`|
 |`Hasnt`|`HasNot`|
 |`Havent`|`HaveNot`|

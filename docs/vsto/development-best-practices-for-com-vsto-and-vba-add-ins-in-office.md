@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 24cc456058f4a87426261ce53fbecb2d919d6a2d
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 716345cd2df3e941ea3d50cfc1519dc86dcd7077
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846351"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918629"
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>Osvědčené postupy vývoje pro Doplňky modelu COM, VSTO a VBA v Office
   Pokud vyvíjíte doplňky modelu COM, VSTO nebo VBA pro Office, postupujte podle osvědčených postupů pro vývoj popsaných v tomto článku.   To vám pomůže zajistit:
@@ -61,7 +61,7 @@ Zákazníci žádají nezávislé výrobce softwaru, aby poskytovali příkazy p
 
 Chcete-li poskytnout příkazy podpory pro klientské aplikace Office (například Word nebo Excel), nejprve ověřte, zda se doplňky spouštějí v aktuální verzi sady Office, a pak potvrďte poskytnutí aktualizací, pokud je doplněk v budoucí verzi. Nemusíte testovat doplňky, když společnost Microsoft uvolňuje nové sestavení nebo aktualizuje sadu Office. Microsoft zřídka mění platformu rozšiřitelnosti COM, VSTO a VBA v Office a tyto změny budou dobře zdokumentovány.
 
->Důležité: Microsoft udržuje seznam podporovaných doplňků pro sestavy připravenosti a kontaktní informace ISV. Chcete-li získat uvedený doplněk, přečtěte si téma [https://docs.microsoft.com/configmgr/desktop-analytics/ready-for-windows](https://docs.microsoft.com/configmgr/desktop-analytics/ready-for-windows).
+>Důležité: Microsoft udržuje seznam podporovaných doplňků pro sestavy připravenosti a kontaktní informace ISV. Chcete-li získat uvedený doplněk, přečtěte si téma [/ConfigMgr/Desktop-Analytics/Ready-for-Windows](/configmgr/desktop-analytics/ready-for-windows).
 
 ## <a name="use-process-monitor-to-help-debug-installation-or-loading-issues"></a>Použití monitorování procesů k ladění problémů s instalací nebo načítáním
 Pokud má váš doplněk problémy s kompatibilitou při instalaci nebo načítání, může souviset s problémy s přístupem k souborům nebo k registru. Použijte [monitorování procesů](/sysinternals/downloads/procmon) nebo podobný ladicí nástroj k protokolování a porovnání chování s pracovním prostředím, abyste mohli problém identifikovat.

@@ -9,12 +9,12 @@ caps.latest.revision: 13
 author: kraigb
 ms.author: kraigb
 manager: jillfra
-ms.openlocfilehash: 21e724e585f2a5bf0e1fe2a6b70f89c1bd5f5eec
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 960511fcfb83dfc6ac3c58a806d8a23f1ff61597
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298189"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918767"
 ---
 # <a name="getting-started-with-python"></a>Začínáme s Pythonem
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -60,7 +60,7 @@ Následující materiály vám pomůžou začít:
 
 - [Průvodce instalací](https://github.com/Microsoft/PTVS/wiki/PTVS-Installation)    
 - [Začínáme a rozsáhlá podrobně krátká videa](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)  
-- Ukázka instalace a funkcí (27 min)] (https://www.youtube.com/watch?v=JNNAOypc6Ek)  
+- Instalace a funkce ukázka (27 min)]( https://www.youtube.com/watch?v=JNNAOypc6Ek)  
 - [Dokumentace](https://github.com/Microsoft/PTVS/wiki)  
 
 Všimněte si, že Visual Studio v současné době neposkytuje způsob vytvoření samostatného spustitelného souboru pomocí Pythonu, což v podstatě znamená program s vloženým překladačem Pythonu. V komunitě Pythonu ale existují různé způsoby, jak je popsáno v [StackOverflow](https://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency). CPython podporuje také vkládání do nativní aplikace, jak je popsáno v blogovém příspěvku [pomocí souboru ZIP](https://devblogs.microsoft.com/python/cpython-embeddable-zip-file/)s možnou vloženou do CPython.
@@ -73,13 +73,13 @@ Hlavní nabídka pro vytváření uživatelského rozhraní s Pythonem je [proje
   
 Sada Azure SDK pro Python, která podporuje Windows, Mac a Linux, usnadňuje využívání a správu Microsoft Azure služeb. Podrobnosti najdete v následujících zdrojích informací: 
 
-- Chcete-li nainstalovat sadu SDK, použijte [index balíčku Python](https://pypi.python.org/pypi/azure) nebo proveďte [instalaci PYTHONU a sadu SDK](https://docs.microsoft.com/azure/python/python-sdk-azure-install) v dokumentaci k Azure. 
+- Chcete-li nainstalovat sadu SDK, použijte [index balíčku Python](https://pypi.python.org/pypi/azure) nebo proveďte [instalaci PYTHONU a sadu SDK](/azure/python/python-sdk-azure-install) v dokumentaci k Azure. 
 - [Sada Azure SDK for Python Developer Center](https://azure.microsoft.com/develop/python/) obsahuje spoustu lepších ustanovení o instalaci v dokumentaci s kurzy.  Některé nejdůležitější kroky:  
 - Praktičtí průvodci:
   - [Objekt BLOB úložiště](https://azure.microsoft.com/develop/python/how-to-guides/blob-service/)  
   - [Fronta úložiště](https://azure.microsoft.com/develop/python/how-to-guides/queue-service/)  
   - [Tabulka úložiště](https://azure.microsoft.com/develop/python/how-to-guides/table-service/)  
-  - [Fronty Service Bus](https://azure.microsoft.com/develop/python/how-to-guides/service-bus-queues/)
+  - [Fronty služby Service Bus](https://azure.microsoft.com/develop/python/how-to-guides/service-bus-queues/)
   - [Service Bus témata/předplatná](https://azure.microsoft.com/develop/python/how-to-guides/service-bus-topics/) 
   - [Správa služeb](https://azure.microsoft.com/develop/python/how-to-guides/service-management/)  
 

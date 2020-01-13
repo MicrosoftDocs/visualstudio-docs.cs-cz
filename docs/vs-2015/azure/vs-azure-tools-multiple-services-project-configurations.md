@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: a151e16537eb143f27e9fd518cdc2495ac954563
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 59996180661806eee60d18ab4b7b5fd26f4a2e7b
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851373"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915589"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>Konfigurace projektu Azure v sadě Visual Studio za účelem použití více konfigurací služby
 
@@ -57,7 +57,7 @@ Ve výchozím nastavení jsou pro webovou roli povoleny diagnostiky. Projekt clo
 
 ## <a name="settings-page"></a>Stránka Nastavení
 
-Na stránce **Nastavení** můžete přidat nastavení do konfigurace jako páry název-hodnota. Kód spuštěný v roli může číst hodnoty nastavení konfigurace za běhu pomocí tříd poskytovaných [spravovanou knihovnou Azure](https://msdn.microsoft.com/library/azure/dn602775(v=azure.11).aspx), konkrétně metodou [GetConfigurationSettingValue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx) .
+Na stránce **Nastavení** můžete přidat nastavení do konfigurace jako páry název-hodnota. Kód spuštěný v roli může číst hodnoty nastavení konfigurace za běhu pomocí tříd poskytovaných [spravovanou knihovnou Azure](/previous-versions/azure/dn602775(v=azure.11)), konkrétně metodou [GetConfigurationSettingValue](/previous-versions/azure/reference/ee772857(v=azure.100)) .
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>Konfigurace připojovacího řetězce pro účet úložiště
 

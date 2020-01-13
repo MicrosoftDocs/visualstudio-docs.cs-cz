@@ -11,12 +11,12 @@ caps.latest.revision: 63
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5dac0a77b47f604ae5a10f4c8bcfb9d54b51f26c
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: fc633c0cad752203b8dadca81de0f18f4e9b1b3e
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850464"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918838"
 ---
 # <a name="define-a-menu-command-on-a-modeling-diagram"></a>Definování příkazu nabídky v diagramu modelování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -363,4 +363,5 @@ namespace SwapClassNames
 ```
 
 ## <a name="see-also"></a>Viz také
- [Definování a instalace rozšíření modelování](../modeling/define-and-install-a-modeling-extension.md) [rozšíření modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md) [Definování obslužné rutiny gesta v diagramu modelování](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [Definování vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md) definování [omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md) [Úprava sekvenčních diagramů](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md) UML pomocí programování rozhraní API UML s ukázkou [rozhraní](../modeling/programming-with-the-uml-api.md) API UML [: příkaz pro zarovnání obrazců v diagramu UML](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+ [Definování a instalace rozšíření modelování](../modeling/define-and-install-a-modeling-extension.md) [rozšíření modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md) [Definování obslužné rutiny gesta v diagramu modelování](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [Definování vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md) definování [omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md) [Úprava sekvenčních DIAGRAMů](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md) UML pomocí rozhraní API UML [s rozhraním API UML](../modeling/programming-with-the-uml-api.md)
+ 

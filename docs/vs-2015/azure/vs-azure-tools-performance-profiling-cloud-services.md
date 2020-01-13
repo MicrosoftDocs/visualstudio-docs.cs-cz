@@ -11,18 +11,18 @@ ms.date: 11/11/2016
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 0f4e7635e62c8d21b6bdb3b1fd28a2fed0c60262
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: b1e5a5d4d5312968571965df8c9e28d31379720d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851900"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915606"
 ---
 # <a name="testing-the-performance-of-a-cloud-service"></a>Testování výkonu cloudové služby
 ## <a name="overview"></a>Přehled
 Testování výkonu cloudové služby následujícími způsoby:
 
-* Pomocí diagnostiky Azure shromažďovat informace o požadavcích a připojení a ke kontrole Statistika webu, která ukazuje, jak služba provádí z hlediska zákazníků. Chcete-li začít používat, naleznete v tématu [konfigurace diagnostiky pro Azure Cloud Services a Virtual Machines](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?view=vs-2019).
+* Pomocí diagnostiky Azure shromažďovat informace o požadavcích a připojení a ke kontrole Statistika webu, která ukazuje, jak služba provádí z hlediska zákazníků. Chcete-li začít používat, naleznete v tématu [konfigurace diagnostiky pro Azure Cloud Services a Virtual Machines](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md).
 * Pomocí profileru sady Visual Studio můžete získat podrobné analýzy výpočetní aspektů jak je služba spuštěna. Toto téma popisuje, jak můžete použít profilování k měření výkonu služby běží v Azure. Informace o tom, jak měřit výkon, protože je služba spuštěna místně v emulátoru compute pomocí profileru, naleznete v tématu [testování výkonu Azure Cloud Service místně v výpočetní emulátor pomocí Visual Studio Profiler](https://azure.microsoft.com/documentation/articles/cloud-services-performance-testing-visual-studio-profiler/).
 
 ## <a name="choosing-a-performance-testing-method"></a>Volba metody pro testování výkonu
@@ -84,7 +84,7 @@ Následující obrázek ukazuje, jak konfigurovat nastavení profilování v dia
 > 
 
 ### <a name="to-configure-profiling-settings"></a>Chcete-li konfigurovat nastavení profilování
-1. V Průzkumníku řešení otevřete místní nabídku pro projekt Azure a klikněte na tlačítko **publikovat**. Podrobné pokyny o tom, jak publikovat cloudovou službu, naleznete v tématu [publikování cloudové služby pomocí nástroje Azure](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publishing-a-cloud-service?view=vs-2019).
+1. V Průzkumníku řešení otevřete místní nabídku pro projekt Azure a klikněte na tlačítko **publikovat**. Podrobné pokyny o tom, jak publikovat cloudovou službu, naleznete v tématu [publikování cloudové služby pomocí nástroje Azure](vs-azure-tools-publishing-a-cloud-service.md).
 2. V **publikování aplikaci Azure** dialogové okno, zvolili **Upřesnit nastavení** kartu.
 3. Chcete-li povolit profilaci, vyberte **povolit profilaci** zaškrtávací políčko.
 4. Chcete-li konfigurovat nastavení profilování, zvolte **nastavení** hypertextový odkaz. Zobrazí se dialogové okno nastavení profilace.

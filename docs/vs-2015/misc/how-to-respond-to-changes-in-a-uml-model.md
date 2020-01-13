@@ -9,12 +9,12 @@ caps.latest.revision: 3
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 12c3dca7cded0742da367e8b17e3f9d52a3e30a9
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: cf88661f9ec15e1a3a25e7eb6a40bbd82335a7f4
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850296"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918722"
 ---
 # <a name="how-to-respond-to-changes-in-a-uml-model"></a>Postupy: Reakce na změny v modelu UML
 Je možné napsat kód, který se spustí pokaždé, když dojde ke změně v modelu UML v aplikaci Visual Studio. Bude reagovat rovnoměrně na změny provedené přímo uživatelem a dalších rozšířeních sady Visual Studio. Chcete-li zjistit, které verze aplikace Visual Studio podporují modely UML, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
@@ -23,4 +23,5 @@ Je možné napsat kód, který se spustí pokaždé, když dojde ke změně v mo
 > Tyto techniky nejsou podporovány rozhraním API UML. Nemusí fungovat v budoucích verzích sady Visual Studio.
 
 ## <a name="see-also"></a>Viz také
- [Navigace v rámci](../modeling/navigate-the-uml-model.md) [obslužných rutin událostí modelu UML rozšíří změny mimo Vzorový model](../modeling/event-handlers-propagate-changes-outside-the-model.md) [: Color by stereotyp](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+ [Navigace](../modeling/navigate-the-uml-model.md) mezi [obslužnými rutinami událostí modelu UML rozšíření změn mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md)
+ 

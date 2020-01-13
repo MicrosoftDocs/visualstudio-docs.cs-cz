@@ -17,12 +17,12 @@ caps.latest.revision: 63
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0954a38a2667331c537487a706d1d2d13a07f6c4
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 70cc3c81c426ec55d0afb36360155786ec97d937
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850900"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918984"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>Scénář: Změna návrhu pomocí vizualizace a modelování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -363,7 +363,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
 - [Ověřování systému během vývoje](../modeling/validate-your-system-during-development.md)
 
-- [Použít správu verzí](https://docs.microsoft.com/azure/devops/repos/tfvc/overview?view=azure-devops)
+- [Použít správu verzí](/azure/devops/repos/tfvc/overview?view=azure-devops)
 
 - [Sestavení aplikace](/azure/devops/pipelines/index)
 

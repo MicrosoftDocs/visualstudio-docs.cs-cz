@@ -11,12 +11,12 @@ caps.latest.revision: 50
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 37ac181c2e2182dc8ff57931fbbb51a4f7fc9fc4
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 55ec2cf2f2a6ebf4186f81f6f3dd61766acd7958
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852418"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918895"
 ---
 # <a name="customizing-and-extending-a-domain-specific-language"></a>Přizpůsobení a rozšíření jazyka specifického pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ Sada Visual Studio Modeling and vizualizace SDK (VMSDK) poskytuje několik úrov
 |Ikona u obrazce se změní, aby označovala stav.|Nastavte viditelnost mapování dekoratér v okně Podrobnosti DSL. Najděte několik imagí dekoratéry na stejné pozici. Viz [aktualizace obrazců a konektorů, aby odrážely model](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md).<br /><br /> Případně `ImageField.GetDisplayImage()`přepsat. Viz příklad v <xref:Microsoft.VisualStudio.Modeling.Diagrams.ImageField>.|
 |Nastavení obrázku na pozadí na jakémkoli obrazci|Přepsat InitializeInstanceResources () pro přidání ukotveného ImageField. Viz [přizpůsobení prezentace v diagramu](../modeling/customizing-presentation-on-the-diagram.md).|
 |Vnořování tvarů do libovolné hloubky|Nastavte strom rekurzivního vkládání. Definujte BoundsRules pro zahrnutí tvarů. Viz [přizpůsobení prezentace v diagramu](../modeling/customizing-presentation-on-the-diagram.md).|
-|Připojit konektory na hranici elementu v pevně stanovených bodech.|Definujte vložené prvky terminálu reprezentované malými porty v diagramu. Pomocí BoundsRules opravte porty na místě. Podívejte se na ukázku diagramu okruhu na stránce [vizualizace a modelování sady SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples).|
+|Připojit konektory na hranici elementu v pevně stanovených bodech.|Definujte vložené prvky terminálu reprezentované malými porty v diagramu. Pomocí BoundsRules opravte porty na místě.|
 |Textové pole zobrazuje hodnotu odvozenou od jiných hodnot.|Namapujte text dekoratér na vypočítanou nebo vlastní doménovou vlastnost úložiště. Další informace najdete v tématu [vypočtené a vlastní vlastnosti úložiště](../modeling/calculated-and-custom-storage-properties.md).|
 |Rozšířit změny mezi prvky modelu nebo mezi tvary|Viz [ověření v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md).|
 |Rozšiřte změny prostředků, jako jsou jiná rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] mimo obchod.|Viz [obslužné rutiny událostí rozšiřují změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md).|

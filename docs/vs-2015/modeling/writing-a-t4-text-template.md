@@ -13,12 +13,12 @@ caps.latest.revision: 45
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e590af12e8979d16a946339cae530fd5ccc1b08d
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: c3e970ac2d6f7de86908a88aff6235c598ead810
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850742"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918468"
 ---
 # <a name="writing-a-t4-text-template"></a>Tvorba textové šablony T4
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -242,7 +242,7 @@ private void WriteSquareLine(int i)
 <# string fileContent = File.ReadAllText(@"C:\myData.txt"); ...
 ```
 
- **Načte soubor jako naviguje model**. Výkonnější metodou je načíst data jako model, kterým kód textové šablony může procházet. Lze například načíst soubor XML a procházet jím pomocí výrazů XPath. Soubor [XSD. exe](https://docs.microsoft.com/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) můžete také použít k vytvoření sady tříd, pomocí které můžete číst data XML.
+ **Načte soubor jako naviguje model**. Výkonnější metodou je načíst data jako model, kterým kód textové šablony může procházet. Lze například načíst soubor XML a procházet jím pomocí výrazů XPath. Soubor [XSD. exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) můžete také použít k vytvoření sady tříd, pomocí které můžete číst data XML.
 
  **Upravte soubor modelu v diagramu nebo ve formuláři.** [!INCLUDE[dsl](../includes/dsl-md.md)] poskytuje nástroje, které umožňují úpravu modelu jako diagramu nebo formuláře Windows. Můžete tak tento model snáze prodiskutovat s uživateli generované aplikace. [!INCLUDE[dsl](../includes/dsl-md.md)] také vytvoří sadu silně typované třídy, které odrážejí strukturu modelu. Další informace najdete v tématu [generování kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md).
 

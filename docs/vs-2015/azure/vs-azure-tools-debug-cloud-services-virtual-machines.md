@@ -11,12 +11,12 @@ ms.date: 11/11/2016
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
-ms.openlocfilehash: a22d16606cad7ecbfcf3862d6b7e85b65e7aafe4
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: ac1f47d3daabf800a308d73727f750f971ace4e6
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850399"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919168"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>Ladění Azure cloudové služby nebo virtuálního počítače v sadě Visual Studio
 
@@ -50,7 +50,7 @@ Ladění cloudové služby ze vzdáleného počítače, je nutné povolit tuto f
 Pokud povolíte vzdálené ladění pro cloudovou službu, není je důvodem sníženého výkonu nebo účtovat další poplatky. Nepoužívejte vzdáleného ladění na služby v produkčním prostředí, protože klienti, kteří používají službu může být nepříznivě ovlivněn.
 
 > [!NOTE]
-> Když publikujete do cloudového ze sady Visual Studio, můžete povolit **IntelliTrace** pro všechny role v dané služby, které jsou cíleny na rozhraní .NET Framework 4 nebo .NET Framework 4.5. S použitím **IntelliTrace**, můžete zkoumat události, ke kterým došlo v minulosti v instanci role a reprodukovat kontextu v čase. Zobrazit [ladění publikované cloudové služby pomocí nástroje IntelliTrace a sady Visual Studio](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-intellitrace-debug-published-cloud-services?view=vs-2019) a [pomocí IntelliTrace](https://msdn.microsoft.com/library/dd264915.aspx).
+> Když publikujete do cloudového ze sady Visual Studio, můžete povolit **IntelliTrace** pro všechny role v dané služby, které jsou cíleny na rozhraní .NET Framework 4 nebo .NET Framework 4.5. S použitím **IntelliTrace**, můžete zkoumat události, ke kterým došlo v minulosti v instanci role a reprodukovat kontextu v čase. Zobrazit [ladění publikované cloudové služby pomocí nástroje IntelliTrace a sady Visual Studio](vs-azure-tools-intellitrace-debug-published-cloud-services.md) a [pomocí IntelliTrace](../debugger/intellitrace.md).
 
 ### <a name="to-enable-remote-debugging-for-a-cloud-service"></a>Jak aktivovat vzdálené ladění pro cloudovou službu
 
@@ -150,7 +150,7 @@ Projekty aplikace Visual Studio ASP.NET nabízejí možnost vytvoření virtuál
     > [!NOTE]
     > Pokud ještě nejste přihlášení, zobrazí se výzva, abyste se přihlásili ke svému účtu Azure.
 
-3. Vyberte různá nastavení pro virtuální počítač a pak vyberte **OK**. Zobrazit [virtuálních počítačů](https://docs.microsoft.com/previous-versions/azure/jj156003(v=azure.100)?redirectedfrom=MSDN) Další informace.
+3. Vyberte různá nastavení pro virtuální počítač a pak vyberte **OK**. Zobrazit [virtuálních počítačů](/previous-versions/azure/jj156003(v=azure.100)) Další informace.
 
     Název, který zadáte pro název DNS bude název virtuálního počítače.
 
@@ -188,6 +188,6 @@ Projekty aplikace Visual Studio ASP.NET nabízejí možnost vytvoření virtuál
 
 ## <a name="next-steps"></a>Další kroky
 
-* Pomocí **IntelliTrace** můžete shromažďovat protokol volání a událostí ze serveru vydaných verzí. Zobrazit [ladění publikované cloudové služby pomocí nástroje IntelliTrace a sady Visual Studio](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-intellitrace-debug-published-cloud-services?view=vs-2019).
+* Pomocí **IntelliTrace** můžete shromažďovat protokol volání a událostí ze serveru vydaných verzí. Zobrazit [ladění publikované cloudové služby pomocí nástroje IntelliTrace a sady Visual Studio](vs-azure-tools-intellitrace-debug-published-cloud-services.md).
 
 * Použití **Azure Diagnostics** můžete protokolovat podrobné informace z spouštění kódu v rámci rolí, zda role běží ve vývojovém prostředí nebo v Azure. Zobrazit [shromažďování dat protokolování pomocí diagnostiky Azure](https://msdn.microsoft.com/library/gg433048.aspx).

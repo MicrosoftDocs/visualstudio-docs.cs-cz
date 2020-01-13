@@ -9,12 +9,12 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0d9887e3c7cf283bff453e458502400a7ade1a41
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 85573309e594fab49db75115a48b5a4e98e44de3
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849571"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918845"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>Definování zásady zamykání pro vytváření segmentů jen pro čtení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ Rozhraní neměnnosti API sady [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vizu
 > [!NOTE]
 > Zásady zamykání lze obejít pomocí reflexe. Poskytuje jasné hranice pro vývojáře třetích stran, ale neposkytuje silné zabezpečení.
 
- Další informace a ukázky jsou k dispozici na webu [sady SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro vizualizaci a modelování](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) .
+ Další informace jsou k dispozici na webu [sady SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro vizualizaci a modelování](https://www.microsoft.com/download/details.aspx?id=48148) .
 
 ## <a name="setting-and-getting-locks"></a>Nastavení a získání zámků
  Zámky můžete nastavit pro úložiště, na oddíl nebo na jednotlivé prvky. Například tento příkaz zabrání odstranění prvku modelu a zároveň zabrání změně jeho vlastností:

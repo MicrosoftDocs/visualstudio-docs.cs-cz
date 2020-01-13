@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4087541b11b240f455dc6c0109ef44c0cb8d72ad
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3a53561e8c62fcf523f13d17d5228d33a6a0af6d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587092"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916723"
 ---
 # <a name="access-data-in-visual-studio"></a>Přístup k datům v sadě Visual Studio
 
@@ -108,7 +108,7 @@ Neexistuje žádný požadavek k používání některé z těchto technologií.
 
 ## <a name="native-c"></a>Nativní kód C++
 
-C++aplikace, které se připojují k SQL Server, by měly ve většině případů používat [ovladač Microsoft® ODBC 13,1 pro SQL Server](https://www.microsoft.com/download/details.aspx?id=53339) . Pokud jsou servery propojené, OLE DB nutné a pro použití [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client). K ostatním databázím můžete přistupovat přímo pomocí [rozhraní ODBC](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc?view=sql-server-2017) nebo ovladače OLE DB. ODBC je aktuální databáze standard rozhraní, ale většina databázových systémů poskytují vlastní funkce, která není přístupná přes rozhraní ODBC. OLE DB je starou technologií přístupu k datům modelu COM, který je stále podporovány, ale nedoporučuje se u nových aplikací. Další informace najdete v tématu [přístup k datům v C++vizuálu ](/cpp/data/data-access-in-cpp).
+C++aplikace, které se připojují k SQL Server, by měly ve většině případů používat [ovladač Microsoft® ODBC 13,1 pro SQL Server](https://www.microsoft.com/download/details.aspx?id=53339) . Pokud jsou servery propojené, OLE DB nutné a pro použití [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client). K ostatním databázím můžete přistupovat přímo pomocí [rozhraní ODBC](/sql/odbc/microsoft-open-database-connectivity-odbc?view=sql-server-2017) nebo ovladače OLE DB. ODBC je aktuální databáze standard rozhraní, ale většina databázových systémů poskytují vlastní funkce, která není přístupná přes rozhraní ODBC. OLE DB je starou technologií přístupu k datům modelu COM, který je stále podporovány, ale nedoporučuje se u nových aplikací. Další informace najdete v tématu [přístup k datům v C++vizuálu ](/cpp/data/data-access-in-cpp).
 
 Můžete použít programy v jazyce C++, které využívají služby REST [C++ REST SDK](https://github.com/Microsoft/cpprestsdk).
 

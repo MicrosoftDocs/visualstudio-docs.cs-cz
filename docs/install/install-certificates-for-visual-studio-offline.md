@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4db5de36e9982ac3d708f8826f441751c2fd0891
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 840ea8f701bbc602292bd7c0cf602a24944ed74a
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594068"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918521"
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>Instalace certifikátů vyžadovaných pro offline instalace sady Visual Studio
 
@@ -50,7 +50,7 @@ Při vytváření rozložení sítě potřebné certifikáty se stáhnou do slo�
 
 ### <a name="option-2---distribute-trusted-root-certificates-in-an-enterprise-environment"></a>Možnost 2 - distribuci důvěryhodných kořenových certifikátů v podnikovém prostředí
 
-Pro podniky s offline počítače, které nemají nejnovější kořenové certifikáty, Správce může pomocí pokynů na [konfigurovat Důvěryhodné kořeny a zakázané certifikáty](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) stránky je aktualizovat.
+Pro podniky s offline počítače, které nemají nejnovější kořenové certifikáty, Správce může pomocí pokynů na [konfigurovat Důvěryhodné kořeny a zakázané certifikáty](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) stránky je aktualizovat.
 
 ### <a name="option-3---install-certificates-as-part-of-a-scripted-deployment-of-visual-studio"></a>Možnost 3 – certifikáty nainstalovat jako součást skriptů nasazení sady Visual Studio
 
@@ -182,7 +182,7 @@ Jedním ze způsobů můžete zkontrolovat na instalaci systému je postupujte p
   a. Klikněte na **soubor**a pak vyberte **Přidat nebo odebrat modul snap-in**.<br/>
   b. Dvakrát klikněte na panel **certifikáty**vyberte **účet počítače**a potom klikněte na tlačítko **Další**.<br/>
   c. Vyberte **místního počítače**, klikněte na tlačítko **Dokončit**a potom klikněte na tlačítko **OK**.<br/>
-  d. Rozbalte **certifikáty (místní počítač)**.<br/>
+  d. Rozbalte **certifikáty (místní počítač)** .<br/>
   e. Rozbalte **důvěryhodných kořenových certifikačních autorit**a pak vyberte **certifikáty**.<br/>
     * Najdete v tomto seznamu nezbytné kořenové certifikáty.<br/>
 

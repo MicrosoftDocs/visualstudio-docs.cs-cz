@@ -15,17 +15,17 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a571be6b713cd59ca290906e9398b78c8c021ba8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0ce4aa6aef9c70d0d628603afa7a256c309f280d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661171"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917948"
 ---
 # <a name="ca1822-mark-members-as-static"></a>CA1822: Označte členy jako statické
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1822: označte členy jako statické](https://docs.microsoft.com/visualstudio/code-quality/ca1822-mark-members-as-static).
+Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1822: označte členy jako statické](/visualstudio/code-quality/ca1822-mark-members-as-static).
 
 |||
 |-|-|
@@ -38,7 +38,7 @@ Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1822: ozn
  Člen, který nemá přístup k datům instance, není označený jako static (Shared in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]).
 
 ## <a name="rule-description"></a>Popis pravidla
- Členy, kteří nemají přístup k datům instance nebo metodám instance volání, mohou být označeny jako statické (sdílené v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]). Po označení metod jako statických bude kompilátor generovat těmto členům nevirtuální místa volání. Vygenerování nevirtuálních lokalit volání zabrání v běhu kontrolu za běhu pro každé volání, které zajistí, že aktuální ukazatel na objekt je jiný než null. To může dosáhnout měřitelného nárůstu výkonu pro kód citlivý na výkon. V některých případech představuje selhání přístupu k aktuální instanci objektu problém se správností.
+ Členové, kteří nemají přístup k instanci dat nebo metodám instance volání může být označený jako statické (sdílené v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]). Po označení metod jako statických bude kompilátor generovat těmto členům nevirtuální místa volání. Vygenerování nevirtuálních lokalit volání zabrání v běhu kontrolu za běhu pro každé volání, které zajistí, že aktuální ukazatel na objekt je jiný než null. To může dosáhnout měřitelného nárůstu výkonu pro kód citlivý na výkon. V některých případech představuje selhání přístupu k aktuální instanci objektu problém se správností.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Označte člen jako statický (nebo sdílený ve [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) nebo použijte ' this '/' já ' v těle metody, pokud je to vhodné.

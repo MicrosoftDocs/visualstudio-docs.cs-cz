@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/26/2017
 ms.author: ghogen
-ms.openlocfilehash: 8b03d1e698108fac2f81d1e3263d7b38ff82b1dc
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 3acb009d27a9fa47f890235f6957d1f29ed2f4a0
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852353"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916696"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Přidání služby Azure storage pomocí připojených služeb sady Visual Studio
 Pomocí sady Visual Studio, můžete připojit cokoli z následujícího do služby Azure Storage s použitím **přidání připojené služby** dialogové okno:
@@ -63,12 +63,12 @@ Po dokončení **přidání připojené služby** dialogové okno automaticky zo
 ## <a name="how-your-project-is-modified"></a>Jak se váš projekt změnil
 Po dokončení dialogové okno sady Visual Studio přidá odkazy a změní některé konfigurační soubory. Konkrétní změny závisí na typu projektu:
 
-- Projekt ASP.NET – [co se stalo – projekty ASP.NET](https://docs.microsoft.com/azure/visual-studio/vs-storage-aspnet-getting-started-blobs)
-- Projekt ASP.NET Core – [co se stalo – projekty ASP.NET 5](https://docs.microsoft.com/azure/visual-studio/vs-storage-aspnet5-getting-started-blobs)
-- Projekt cloudové služby (webové role a role pracovního procesu) - [co se stalo – projekty cloudových služeb](https://docs.microsoft.com/azure/visual-studio/vs-storage-cloud-services-getting-started-blobs)
+- Projekt ASP.NET – [co se stalo – projekty ASP.NET](/azure/visual-studio/vs-storage-aspnet-getting-started-blobs)
+- Projekt ASP.NET Core – [co se stalo – projekty ASP.NET 5](/azure/visual-studio/vs-storage-aspnet5-getting-started-blobs)
+- Projekt cloudové služby (webové role a role pracovního procesu) - [co se stalo – projekty cloudových služeb](/azure/visual-studio/vs-storage-cloud-services-getting-started-blobs)
 - Projektu úlohy WebJob - [co se stalo – projekty webové úlohy](/azure/visual-studio/vs-storage-webjobs-what-happened)
 
 ## <a name="next-steps"></a>Další kroky
 - [Fórum na webu MSDN: Azure Storage](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
 - [Blog týmu Microsoft Azure Storage](https://blogs.msdn.microsoft.com/windowsazurestorage/)
-- [Dokumentace ke službě Azure Storage](https://docs.microsoft.com/azure/storage/)
+- [Dokumentace ke službě Azure Storage](/azure/storage/)

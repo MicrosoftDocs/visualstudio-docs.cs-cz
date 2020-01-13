@@ -11,12 +11,12 @@ caps.latest.revision: 29
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0692efefcc92e3316ccf725c586fc6566b09a6ef
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 227c2871f68545c9f9fe5fa1ea3ceee827ccdc6a
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850781"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917310"
 ---
 # <a name="supported-visual-studio-editions-for-visualization-amp-modeling-sdk"></a>Verze Visual Studia podporované pro Visualization &amp; Modeling SDK
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,10 +28,9 @@ Toto jsou seznamy edice sady Visual Studio, které jsou podporovány [!INCLUDE[d
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://www.visualstudio.com/)|
-|Visual Studio SDK|[http://go.microsoft.com/fwlink/?LinkId=185580](https://docs.microsoft.com/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
-|Sada Visual Studio Visualization and Modeling SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)|
-
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[https://www.visualstudio.com/](https://www.visualstudio.com/)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[Visual Studio SDK](../extensibility/visual-studio-sdk.md)|
+|Sada Visual Studio Visualization and Modeling SDK|[Stažení sady SDK pro modelování](https://www.microsoft.com/download/details.aspx?id=48148)|
 ## <a name="deployment-editions"></a>Edice nasazení
  [!INCLUDE[dsl](../includes/dsl-md.md)] podporuje následující konfigurace pro jazyky specifické pro doménu, která bude sestavena nasazení:
 

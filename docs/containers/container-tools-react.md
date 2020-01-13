@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 10/16/2019
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: 8083d2d6446c872791501f76cb0167a92a9ef660
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: af859c1c06820aa477869f6968e9c652bd525de6
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516442"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916739"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>Rychlý Start: použití Docker s nareagující jednostránkové aplikace v aplikaci Visual Studio
 
@@ -49,7 +49,7 @@ Pro instalaci Docker si nejdřív přečtěte informace v části [Docker Deskto
 
 1. Klikněte pravým tlačítkem na uzel projektu a vyberte **Přidat** podporu > **Docker** pro přidání souboru Dockerfile do projektu.
 
-   ![Přidat podporu Docker](media/container-tools-react/vs2017/add-docker-support.png)
+   ![Přidání podpory Dockeru](media/container-tools-react/vs2017/add-docker-support.png)
 
 1. Vyberte typ kontejneru a klikněte na tlačítko **OK**.
 ::: moniker-end
@@ -61,7 +61,7 @@ Pro instalaci Docker si nejdřív přečtěte informace v části [Docker Deskto
 
 1. Klikněte pravým tlačítkem na uzel projektu a vyberte **Přidat** podporu > **Docker** pro přidání souboru Dockerfile do projektu.
 
-   ![Přidat podporu Docker](media/container-tools-react/vs2017/add-docker-support.png)
+   ![Přidání podpory Dockeru](media/container-tools-react/vs2017/add-docker-support.png)
 
 1. Vyberte typ kontejneru.
 ::: moniker-end
@@ -222,17 +222,17 @@ Jakmile se cyklus vývoje a ladění aplikace dokončí, můžete vytvořit prov
 1. Vyberte **vytvořit novou Azure Container Registry** a klikněte na **publikovat**.
 1. Do pole **vytvořit nový Azure Container Registry**zadejte požadované hodnoty.
 
-    | Nastavením      | Navrhovaná hodnota  | Popis                                |
+    | Nastavení      | Navrhovaná hodnota  | Popis                                |
     | ------------ |  ------- | -------------------------------------------------- |
     | **Předpona DNS** | Globálně jedinečný název | Název, který jedinečně identifikuje váš registr kontejneru. |
-    | **Formě** | Výběr předplatného | Předplatné Azure, které se má použít. |
-    | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | MyResourceGroup |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, vyberte možnost **nové** .|
-    | **[SKLADOVÉ](https://docs.microsoft.com/azure/container-registry/container-registry-skus)** | Standardní | Úroveň služby registru kontejneru  |
+    | **Předplatné** | Zvolte vaše předplatné. | Předplatné Azure, které se má použít. |
+    | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | mojeSkupinaProstředků |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, zvolte **Nová**.|
+    | **[SKLADOVÉ](/azure/container-registry/container-registry-skus)** | Standardní | Úroveň služby registru kontejneru  |
     | **Umístění registru** | Umístění, které je blízko vás | Vyberte umístění v [oblasti](https://azure.microsoft.com/regions/) poblíž nebo v blízkosti jiných služeb, které budou používat váš registr kontejneru. |
 
     ![Dialog pro vytváření Azure Container Registry v aplikaci Visual Studio][0]
 
-1. Klikněte na **vytvořit**.
+1. Klikněte na **Vytvořit**.
 
    ![Snímek obrazovky znázorňující úspěšné publikování](media/container-tools/publish-succeeded.png)
 
@@ -240,7 +240,7 @@ Jakmile se cyklus vývoje a ladění aplikace dokončí, můžete vytvořit prov
 
 Kontejner teď můžete načíst z registru do libovolného hostitele, který podporuje spouštění imagí Docker, například [Azure Container Instances](/azure/container-instances/container-instances-tutorial-deploy-app).
 
-## <a name="additional-resources"></a>Další zdroje
+## <a name="additional-resources"></a>Další materiály a zdroje informací
 
 * [Vývoj kontejnerů pomocí sady Visual Studio](/visualstudio/containers)
 * [Řešení potíží s vývojem pro Visual Studio pomocí Docker](troubleshooting-docker-errors.md)

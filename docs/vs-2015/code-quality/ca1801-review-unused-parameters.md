@@ -16,23 +16,23 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: caf1ec865d604545940b0a5442947ef61bd60f9a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0f5789b514d645fc670acf9307e4714c160c3b4c
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671534"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918175"
 ---
 # <a name="ca1801-review-unused-parameters"></a>CA1801: Zkontrolujte nepoužité parametry
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1801: Projděte si nepoužité parametry](https://docs.microsoft.com/visualstudio/code-quality/ca1801-review-unused-parameters).
+Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1801: Projděte si nepoužité parametry](/visualstudio/code-quality/ca1801-review-unused-parameters).
 
 |||
 |-|-|
 |TypeName|ReviewUnusedParameters|
 |CheckId|CA1801|
-|Kategorie|Microsoft. Usage|
+|Kategorie|Microsoft.Usage|
 |Narušující změna|Bez přerušení – Pokud člen není viditelný mimo sestavení, bez ohledu na změnu, kterou provedete.<br /><br /> Bez přerušení – Pokud změníte člena tak, aby používal parametr v rámci jeho těla.<br /><br /> Přerušení – Pokud odeberete parametr a je viditelný mimo sestavení.|
 
 ## <a name="cause"></a>příčina

@@ -13,17 +13,17 @@ caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 28a2998f1521c612823ee59dcfe8484f2213e026
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: d323a520ae6c516630cb98f4ab0cdb6a7ccf1a5c
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850936"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917295"
 ---
 # <a name="da0038-high-rate-of-lock-contentions"></a>DA0038: Vysoká míra kolizí zámků
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [DA0038: vysoká míra kolizí zámků](https://docs.microsoft.com/visualstudio/profiling/da0038-high-rate-of-lock-contentions).  
+Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [DA0038: vysoká míra kolizí zámků](/visualstudio/profiling/da0038-high-rate-of-lock-contentions).  
   
 |||  
 |-|-|  

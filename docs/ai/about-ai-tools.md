@@ -10,18 +10,18 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 497287e2f281a5884ba50a850169770f6750bbed
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: 0c16a51381a1ef22d780f7d3c2b26821d7029e8f
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777465"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915960"
 ---
 # <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools for AI
 
 Visual Studio Tools for AI je rozšíření pro sestavování, testování a nasazení řešení hloubkového učení a AI. Bez problémů se integruje s Azure Machine Learning pro robustní možnosti experimentování, mimo jiné, aby se úlohy přípravy na přípravu dat a modelování transparently transparentně do různých výpočetních cílů. Kromě toho poskytuje podporu pro vlastní metriky a sledování historie spuštění, povolení srovnatelnosti a auditování pro datové vědy. Spolupráce připravená pro podnik, umožňuje zabezpečenou práci na projektu s dalšími lidmi.
 
-Začínáme s hloubkovým učením s využitím [Microsoft Cognitive Toolkit (CNTK)](https://docs.microsoft.com/cognitive-toolkit/), [Google TensorFlow](https://www.tensorflow.org)nebo dalších rozhraní pro hloubkové učení ještě dnes.
+Začínáme s hloubkovým učením s využitím [Microsoft Cognitive Toolkit (CNTK)](/cognitive-toolkit/), [Google TensorFlow](https://www.tensorflow.org)nebo dalších rozhraní pro hloubkové učení ještě dnes.
 
 ## <a name="develop-debug-and-deploy-deep-learning-models-and-ai-solutions"></a>Vývoj, ladění a nasazení modelů hloubkového učení a řešení AI
 Využijte funkce produktivity sady Visual Studio k urychlení inovací AI ještě dnes. Používejte integrované funkce editoru kódu, jako je zvýrazňování syntaxe, IntelliSense a automatické formátování textu. V místním prostředí můžete interaktivně testovat aplikaci hloubkového učení s využitím podrobných ladění místních proměnných a modelů.

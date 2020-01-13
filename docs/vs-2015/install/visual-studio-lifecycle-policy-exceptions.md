@@ -9,12 +9,12 @@ caps.latest.revision: 3
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 246ffa914ba21b9b2813abca1bae063162576486
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: cc3a18fe1ce76b6214766ba45fc5441e80c56cef
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852147"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918492"
 ---
 # <a name="visual-studio-lifecycle-policy-exceptions"></a>Výjimky ze zásad životního cyklu sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ Visual Studio obsahuje sbírku kompilátorů, jazyků, modulů runtime, prostře
 |[Exchange 2013](https://support.microsoft.com/kb/2902020)|Webové služby Exchange|  
 |[Microsoft OWIN](https://support.microsoft.com/kb/2902020)|Microsoft OWIN|  
 |[Microsoft Web Developer Tools 2013](https://support.microsoft.com/kb/2902020)|Microsoft Web Developer Tools 2013|  
-|Aktualizace těchto komponent se distribuují prostřednictvím rozšíření NuGet a jejich životní cyklus se neřídí standardními zásadami společnosti Microsoft.  Další informace najdete tady: [http://docs.nuget.org/](https://docs.microsoft.com/nuget/).|Obslužná rutina JSON Web Token pro Microsoft .NET Framework 4,5<br /><br /> NuGet 2.7<br /><br /> SignalR<br /><br /> Web Optimization Framework<br /><br /> WebGrease|  
+|Aktualizace těchto komponent se distribuují prostřednictvím rozšíření NuGet a jejich životní cyklus se neřídí standardními zásadami společnosti Microsoft.  Další informace najdete tady: [http://docs.nuget.org/](/nuget/).|Obslužná rutina JSON Web Token pro Microsoft .NET Framework 4,5<br /><br /> NuGet 2.7<br /><br /> SignalR<br /><br /> Web Optimization Framework<br /><br /> WebGrease|  
 |[ODataLib](https://support.microsoft.com/kb/2902020)|ODataLib|  
 |[Office 2013](https://support.microsoft.com/lifecycle/search/?p1=16674)|Open XML SDK|  
 |[Zásady služeb Online Services](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy)|Microsoft Ads SDK|  

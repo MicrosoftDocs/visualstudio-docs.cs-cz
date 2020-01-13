@@ -11,16 +11,16 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
-ms.openlocfilehash: c76113f014d8be3bd706ef02ec1135a84cbcae82
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 571f7bf825583b3094e07ea4404437f2fb2d62de
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849963"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917604"
 ---
 # <a name="constructing-filter-strings-for-the-table-designer"></a>Vytváření filtračních řetězců pro Návrháře tabulky
 ## <a name="overview"></a>Přehled
-Chcete-li filtrovat data v tabulce Azure, která je zobrazena v **Návrháři tabulky**aplikace Visual Studio, sestavíte řetězec filtru a zadáte ho do pole Filter. Syntaxe řetězce filtru je definována WCF Data Services a je podobná klauzuli WHERE jazyka SQL, ale je odeslána do Table service prostřednictvím požadavku HTTP. **Návrhář tabulky** zpracovává správné kódování, takže Chcete-li filtrovat podle požadované hodnoty vlastnosti, je nutné zadat pouze název vlastnosti, operátor porovnání, hodnotu kritéria a volitelně logický operátor v poli Filter. Nemusíte zahrnovat možnost dotazu $filter, protože byste vytvořili adresu URL pro dotazování tabulky prostřednictvím [služby Storage REST API Reference](https://msdn.microsoft.com/library/dd179355.aspx).
+Chcete-li filtrovat data v tabulce Azure, která je zobrazena v **Návrháři tabulky**aplikace Visual Studio, sestavíte řetězec filtru a zadáte ho do pole Filter. Syntaxe řetězce filtru je definována WCF Data Services a je podobná klauzuli WHERE jazyka SQL, ale je odeslána do Table service prostřednictvím požadavku HTTP. **Návrhář tabulky** zpracovává správné kódování, takže Chcete-li filtrovat podle požadované hodnoty vlastnosti, je nutné zadat pouze název vlastnosti, operátor porovnání, hodnotu kritéria a volitelně logický operátor v poli Filter. Nemusíte zahrnovat možnost dotazu $filter, protože byste vytvořili adresu URL pro dotazování tabulky prostřednictvím [služby Storage REST API Reference](/rest/api/storageservices).
 
 WCF Data Services jsou založené na protokolu OData ( [Open Data Protocol](https://www.odata.org/) ). Podrobnosti o možnosti dotazu systému filtru ( **$Filter**) najdete v tématu specifikace pro [konvenci identifikátorů URI OData](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
 
@@ -43,7 +43,7 @@ Při sestavování řetězce filtru jsou důležité následující pravidla:
 
 * Pomocí logických operátorů Porovnejte vlastnost s hodnotou. Všimněte si, že není možné porovnat vlastnost s dynamickou hodnotou; jedna strana výrazu musí být konstanta.
 * Ve všech částech řetězce filtru se rozlišují malá a velká písmena.
-* Hodnota konstanty musí být stejného datového typu jako vlastnost, aby filtr vrátil platné výsledky. Další informace o podporovaných typech vlastností najdete v tématu [Vysvětlení datového modelu služby Table Service](https://msdn.microsoft.com/library/dd179338.aspx).
+* Hodnota konstanty musí být stejného datového typu jako vlastnost, aby filtr vrátil platné výsledky. Další informace o podporovaných typech vlastností najdete v tématu [Vysvětlení datového modelu služby Table Service](/rest/api/storageservices/Understanding-the-Table-Service-Data-Model).
 
 ## <a name="filtering-on-string-properties"></a>Filtrování vlastností řetězce
 Při filtrování vlastností řetězce uzavřete řetězcovou konstantu do jednoduchých uvozovek.
@@ -103,7 +103,7 @@ not IsActive
 ```
 
 ## <a name="filtering-on-datetime-properties"></a>Filtrování podle vlastností data a času
-Chcete-li filtrovat hodnotu DateTime, zadejte klíčové slovo **DateTime** následovaný konstantou data a času v jednoduchých uvozovkách. Konstanta data a času musí být v kombinovaném formátu UTC, jak je popsáno v části [formátování hodnot vlastnosti DateTime](https://msdn.microsoft.com/library/azure/dd894027.aspx).
+Chcete-li filtrovat hodnotu DateTime, zadejte klíčové slovo **DateTime** následovaný konstantou data a času v jednoduchých uvozovkách. Konstanta data a času musí být v kombinovaném formátu UTC, jak je popsáno v části [formátování hodnot vlastnosti DateTime](/rest/api/storageservices/Formatting-DateTime-Property-Values).
 
 Následující příklad vrátí entity, kde je vlastnost CustomerSince rovna 10. července 2008:
 

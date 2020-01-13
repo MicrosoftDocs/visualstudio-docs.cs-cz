@@ -1,7 +1,7 @@
 ---
 title: Ladění v době návrhu | Dokumentace Microsoftu
-ms.custom: seodec18
-ms.date: 11/21/2018
+ms.custom: ''
+ms.date: 01/10/2019
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,24 +16,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82e82a75ce5ecff8e9b7e6d0b6aaf2e29728fc45
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: beb16ae52f880e31bd19a185d47b13c02026752f
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62901056"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916147"
 ---
-# <a name="debug-at-design-time-in-visual-studio-c-c-visual-basic-f"></a>Ladění v době návrhu v sadě Visual Studio (C#, C++, Visual Basic, F#)
+# <a name="debug-at-design-time-in-visual-studio-c-ccli-visual-basic-f"></a>Ladění v době návrhu v aplikaci Visual StudioC#( C++,/CLI, Visual Basic F#)
 
 Postup ladění kódu v době návrhu namísto při aplikace běží, můžete použít **okamžité** okna.
 
-Postup ladění kódu XAML za aplikace z Návrháře XAML, jako je například data vazební kód, můžete použít **ladění** > **připojit k procesu**.
+Chcete-li ladit kód XAML za aplikací z návrháře XAML, například pomocí deklarativních scénářů vázání dat, můžete použít **ladění** > **připojit k procesu**.
 
 ## <a name="use-the-immediate-window"></a>Použijte příkazové podokno
 
 Můžete použít Visual Studio **okamžité** okna spuštění funkce nebo podprogram bez spuštění vaší aplikace. Pokud funkce nebo podprogram obsahuje zarážku, sada Visual Studio přeruší na zarážce. Potom můžete ladicí program windows prozkoumat stav vaší aplikace. Tato funkce se nazývá *ladění v době návrhu*.
 
-V následujícím příkladu je v jazyce Visual Basic. Můžete také použít **okamžité** okno v době návrhu v C#, F#a aplikací v jazyce C++.
+V následujícím příkladu je v jazyce Visual Basic. Můžete také použít **okamžité** okno v době návrhu v C#aplikacích, F#a C++/CLI.
 
 1. Následující kód vložte do prázdné konzolové aplikace jazyka Visual Basic:
 
@@ -75,35 +75,37 @@ V následujícím příkladu je v jazyce Visual Basic. Můžete také použít *
 
 1. Vymazat obsah **okamžité** okna, klikněte pravým tlačítkem a vyberte **Vymazat vše**.
 
-## <a name="attach-to-an-app-from-the-xaml-designer"></a>Připojit k aplikaci z Návrháře XAML
+## <a name="debug-a-custom-xaml-control-at-design-time-by-attaching-to-xaml-designer"></a>Ladění vlastního ovládacího prvku XAML v době návrhu připojením k Návrháři XAML
 
-V některých scénářích vazby deklarativní data může pomoct k ladění kódu na pozadí v Návrháři XAML.
+1. Otevřete své řešení nebo projekt v aplikaci Visual Studio.
 
-1. V projektu sady Visual Studio, přidejte novou stránku XAML, jako například *temp.xaml*. Nová stránka XAML nechte prázdné.
+1. Sestavte řešení/projekt.
 
-1. Sestavte řešení.
+1. Otevřete stránku XAML obsahující vlastní ovládací prvek, který chcete ladit.
 
-1. Otevřít *temp.xaml*, což způsobí načtení návrháře XAML *XDesProc.exe*, nebo *UwpSurface.exe* v aplikaci UWP.
+   V případě projektů UWP cílících na Windows Build 16299 nebo vyšší se v tomto kroku spustí proces *UwpSurface. exe* . U verzí WPF a UWP starších než Windows Build 16299 se v tomto kroku spustí proces *XDesProc. exe* .
 
-1. Otevřete novou instanci sady Visual Studio. V nové instanci vyberte **ladění** > **připojit k procesu**.
+1. Otevřete druhou instanci aplikace Visual Studio. Neotevírejte řešení nebo projekt ve druhé instanci.
 
-1. V **připojit k procesu** dialogovém okně Návrhář zpracovat od **procesy k dispozici** seznamu.
+1. Ve druhé instanci aplikace Visual Studio otevřete nabídku **ladění** a vyberte možnost **připojit k procesu...** .
 
-   Pro UPW cílení na Windows sestavení 16299 nebo novější, je proces návrháře *UwpSurface.exe*. Pro WPF nebo UWP verzím 16299, proces návrháře je *XDesProc.exe*.
+1. V závislosti na typu projektu (viz předchozí kroky) vyberte v seznamu dostupných procesů buď proces *UwpSurface. exe* , nebo *XDesProc. exe* .
 
-1. Ujistěte se, že **připojit k** je nastaveno na typ správný kód pro vaši verzi .NET, jako například **spravovaného kódu (CoreCLR)**.
+1. V dialogovém okně **připojit k** **procesu** vyberte pro vlastní ovládací prvek, který chcete ladit, správný typ kódu.
 
-1. Vyberte **připojit**.
+   Pokud vlastní ovládací prvek byl napsán v jazyce .NET, vyberte odpovídající typ kódu .NET, například **Managed (CoreCLR)** . Pokud vlastní ovládací prvek byl napsán v C++, vyberte možnost **nativní**.
 
-1. Zatímco připojen k procesu, přepněte na jiné instanci sady Visual Studio a nastavit zarážky, ve kterém chcete ladit kód vaší aplikace.
+1. Připojte druhou instanci aplikace Visual Studio kliknutím na tlačítko **připojit** .
 
-   Například můžete nastavit zarážku v kódu konvertor typu pro následující XAML, který váže objektech TextBlock v době návrhu.
+1. Ve druhé instanci aplikace Visual Studio otevřete soubory kódu přidružené k vlastnímu ovládacímu prvku, který chcete ladit. Nezapomeňte pouze otevřít soubory, ne celé řešení nebo projekt.
 
-    ```xaml
-    <TextBlock Text="{Binding title, ConverterParameter=lower, Converter={StaticResource StringFormatConverter}, Mode=TwoWay}"  />
-    ```
+1. Požadované zarážky umístěte do dříve otevřených souborů.
 
-   Když se stránka načte, zarážka se projeví.
+1. V první instanci aplikace Visual Studio zavřete stránku XAML obsahující vlastní ovládací prvek, který chcete ladit (stejnou stránku jste otevřeli v předchozích krocích).
+
+1. V první instanci sady Visual Studio otevřete stránku XAML, kterou jste uzavřeli v předchozím kroku. To způsobí, že se ladicí program zastaví na první zarážce, kterou jste nastavili ve druhé instanci aplikace Visual Studio.
+
+1. Ladit kód ve druhé instanci aplikace Visual Studio.
 
 ## <a name="see-also"></a>Viz také:
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

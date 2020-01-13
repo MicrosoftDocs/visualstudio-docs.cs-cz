@@ -6,12 +6,12 @@ ms.assetid: fd39882e-06d1-4b39-80d2-4d07b6e4f8f5
 caps.latest.revision: 15
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 134ed47d26fb7afb50bb50ac18418b436a563eb6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 98925402b91bea62e10b47312e7834ed92a1a178
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297588"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918743"
 ---
 # <a name="verify-your-xamarin-environment"></a>Ověření prostředí Xamarinu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -56,10 +56,10 @@ Po dokončení instalačních programů (viz téma [instalace a instalace](../cr
   
              Poznámka: Pokud nevidíte možnost **nástroje > emulátor sady Visual Studio pro Android...** , možná nemáte nainstalovaného emulátoru. Přejděte na **Ovládací panely > programy a funkce**, vyberte **Microsoft Visual Studio**a kliknutím na **změnit** spusťte instalační program znovu. V instalačním programu klikněte na **Upravit** , zaškrtněte políčko pro **vývoj mobilních aplikací pro různé platformy > Microsoft Visual Studio Emulator for Android**a klikněte na **aktualizovat**.  
   
-        - Pro Windows 7 a starší: v rozevíracím seznamu vyberte Xamarin Player pro Android a spusťte klávesu F5. Podrobnosti o Xamarin Playeru, jeho Správci zařízení a tipy pro řešení potíží najdete [Xamarin Android Player](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (Xamarin.com).  
+        - Pro Windows 7 a starší: v rozevíracím seznamu vyberte Xamarin Player pro Android a spusťte klávesu F5. Podrobnosti o Xamarin Playeru, jeho Správci zařízení a tipy pro řešení potíží najdete [Xamarin Android Player](/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (Xamarin.com).  
   
 > [!NOTE]
-> V sadě Visual Studio si můžete všimnout přítomnosti tlačítka Android Emulator Manager (AVD) na panelu nástrojů (Zobrazit níže), který otevře Správce zařízení, který se konkrétně používá ke konfiguraci emulátoru Google Android.  Nemá žádný vliv na emulátor sady Visual Studio pro Android ani Xamarin Player, z nichž každá má vlastní Správce zařízení pro konfiguraci profilů.  Podrobnosti najdete v tématu [představení emulátoru sady Visual Studio pro Android](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/) (Visual Studio ALM blog) a [Xamarin Android Player](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (Xamarin.com).  
+> V sadě Visual Studio si můžete všimnout přítomnosti tlačítka Android Emulator Manager (AVD) na panelu nástrojů (Zobrazit níže), který otevře Správce zařízení, který se konkrétně používá ke konfiguraci emulátoru Google Android.  Nemá žádný vliv na emulátor sady Visual Studio pro Android ani Xamarin Player, z nichž každá má vlastní Správce zařízení pro konfiguraci profilů.  Podrobnosti najdete v tématu [představení emulátoru sady Visual Studio pro Android](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/) (Visual Studio ALM blog) a [Xamarin Android Player](/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (Xamarin.com).  
 > ![CrossPlat Xamarin s ověřením 7](../cross-platform/media/crossplat-xamarin-verify-7.png "CrossPlat Xamarin s ověřením 7")  
   
 ## <a name="windows-phone"></a>Windows Phone  
@@ -78,7 +78,7 @@ Po dokončení instalačních programů (viz téma [instalace a instalace](../cr
   
 ## <a name="ios"></a>iOS  
   
-1. Ujistěte se, že je váš počítač Mac dostupný v síti a spárovaný se sadou Visual Studio, jak je popsáno v tématu [připojení k Macu](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/connecting-to-mac/) (Xamarin.com).  
+1. Ujistěte se, že je váš počítač Mac dostupný v síti a spárovaný se sadou Visual Studio, jak je popsáno v tématu [připojení k Macu](/xamarin/ios/get-started/installation/windows/connecting-to-mac/) (Xamarin.com).  
   
 2. Ověřit návrháře scénářů: v projektu iOS v Průzkumník řešení otevřete soubor **Main. scénář** . V tomto příkladu je aplikace Visual Studio hostitelem návrháře, který je spuštěn vzdáleně na Macu.  
   
@@ -94,7 +94,7 @@ Po dokončení instalačních programů (viz téma [instalace a instalace](../cr
   
          ![Výběr cíle ladění pro iPhone](../cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin ověřit 6")  
   
-    4. Pokud narazíte na problémy s připojením k počítači Mac, přečtěte si téma [řešení potíží s připojením](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/connecting-to-mac/troubleshooting) (Xamarin.com).  
+    4. Pokud narazíte na problémy s připojením k počítači Mac, přečtěte si téma [řešení potíží s připojením](/xamarin/ios/get-started/installation/windows/connecting-to-mac/troubleshooting) (Xamarin.com).  
   
     5. Pokud se zobrazí chyba "žádné nainstalované zřizovací profily neodpovídají nainstalovaným podpisovým klíčům iOS, udělejte toto:  
   

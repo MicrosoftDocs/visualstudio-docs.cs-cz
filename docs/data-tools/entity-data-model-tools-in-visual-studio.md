@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4af96ad0f76414468fd194b7079b3c4dbdaf2a4c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 250f1ad55f8d60396b8423098e58801d0ed81e77
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586663"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916726"
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Entity Framework Tools v sadě Visual Studio
 
@@ -43,7 +43,7 @@ Toto jsou konkrétní nástroje, které tvoří rozhraní Entity Framework tools
 
 Nástroje pro generování nebo upravit *edmx* souboru. To *edmx* soubor obsahuje informace, které popisují konceptuálního modelu, model úložiště a mapování mezi nimi. Další informace najdete v tématu [EDMX](/ef/ef6/).
 
-[Entity Framework Power Tools](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4) vám pomůže vytvářet aplikace, které používají modelu Entity Data Model. Nástroje pro výkon můžete generovat Koncepční model, ověření existující model, vytvářejí soubory zdrojového kódu, které obsahují objekt třídy založené na konceptuální model a vytvoření soubory zdrojového kódu, které obsahují zobrazení, která generuje modelu. Podrobné informace najdete v tématu [zobrazení mapování Pre-Generated](https://docs.microsoft.com/ef/ef6/fundamentals/performance/pre-generated-views).
+[Entity Framework Power Tools](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4) vám pomůže vytvářet aplikace, které používají modelu Entity Data Model. Nástroje pro výkon můžete generovat Koncepční model, ověření existující model, vytvářejí soubory zdrojového kódu, které obsahují objekt třídy založené na konceptuální model a vytvoření soubory zdrojového kódu, které obsahují zobrazení, která generuje modelu. Podrobné informace najdete v tématu [zobrazení mapování Pre-Generated](/ef/ef6/fundamentals/performance/pre-generated-views).
 
 ## <a name="related-topics"></a>Příbuzná témata
 

@@ -1,5 +1,5 @@
 ---
-title: 'DA0010: Náročná metoda GetHashCode | Dokumentace Microsoftu'
+title: 'DA0010: nákladný GetHashCode | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,31 +14,31 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1055136562d59412a6187524dc6023c55ef2dc3c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a0a2947f0bd6758de62a4a11d78390d38a503271
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158665"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919034"
 ---
-# <a name="da0010-expensive-gethashcode"></a>DA0010: Náročná funkce GetHashCode
+# <a name="da0010-expensive-gethashcode"></a>DA0010: Náročná metoda GetHashCode
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio, naleznete v tématu [DA0010: Náročná metoda GetHashCode](https://docs.microsoft.com/visualstudio/profiling/da0010-expensive-gethashcode).  
+Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [DA0010: nákladný GetHashCode](/visualstudio/profiling/da0010-expensive-gethashcode).  
 
 |||  
 |-|-|  
 |Id pravidla|DA0010|  
-|Kategorie|Použití rozhraní .NET framework|  
-|Metod profilace|Vzorkování<br /><br /> Paměť .NET|  
-|Message|Funkce GetHashCode by měly být levné a nepřidělovat paměti. Pokud je to možné snížit složitost funkce hodnoty hash.|  
+|Kategorie|Využití .NET Framework|  
+|Metody profilace|Vzorkování<br /><br /> Paměť .NET|  
+|Zpráva|Funkce GetHashCode by měly být levné a nesmí přidělit žádnou paměť. Pokud je to možné, snižte složitost funkce kódu hash.|  
 |Typ zprávy|Upozornění|  
   
 ## <a name="cause"></a>příčina  
- Volání metody GetHashCode typu jsou podstatnou část dat profilování nebo metodu přidělí paměť.  
+ Volání metody GetHashCode typu jsou významným podílem dat profilování nebo metoda přiděluje paměť.  
   
 ## <a name="rule-description"></a>Popis pravidla  
- Generování hodnoty hash je postup pro rychlé vyhledání určité položky v kolekci velké. Protože zatřiďovacích tabulek můžou být hodně velké a musí podporovat vysoký objem přístup, musí být velmi efektivní zatřiďovacích tabulek. Nepřímo tento požadavek je, že metoda GetHashCode metody v rozhraní .NET Framework by neměl přidělení paměti. Přidělování paměti zvyšuje zatížení systému uvolňování paměti a zpřístupňuje metodu pro potenciální zpoždění, když bude nutné spustit uvolňování paměti jako výsledek požadavku na přidělení.  
+ Hashing je technika, jak rychle vyhledat konkrétní položku ve velké kolekci. Vzhledem k tomu, že tabulky hash můžou být velmi velké a musí podporovat vysoké míry přístupu, měly by být zatřiďovací tabulky extrémně efektivní. Nemnožení tohoto požadavku je, že metody GetHashCode v .NET Framework by neměly přidělit paměť. Přidělování paměti zvyšuje zatížení systému uvolňování paměti a zpřístupňuje metodu potenciálním zpožděním, pokud bude nutné spustit uvolňování paměti v důsledku žádosti o přidělení.  
   
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení  
- Zjednodušit metody.
+ Snižte složitost metody.

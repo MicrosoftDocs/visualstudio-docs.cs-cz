@@ -9,19 +9,17 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 71aa8b31023cedcc41a08a775f9fdf28a4489d1e
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: c7e8ca0fa1558ce0a2d37d4e11a35ba10a27fd2d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75847194"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919079"
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>Začínáme s jazyky specifickými pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Toto téma vysvětluje základní pojmy při definování a používání jazyka DSL (Domain Specific Language) vytvořeného pomocí sady Modeling SDK pro Visual Studio.
-
- Pokud s DSL začínáte, doporučujeme vám pracovat přes **testovací prostředí nástrojů DSL**, které najdete na tomto webu: [VISUALIZATON and modeling SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
 
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>K čemu slouží jazyk specifický pro doménu?
  Jazyk specifický pro doménu je notaci, obvykle grafický, který je navržený tak, aby se použil pro konkrétní účel. Naopak jazyky, jako je například UML, jsou obecné účely. V DSL můžete definovat typy prvku modelu a jejich vztahy a jak jsou uvedeny na obrazovce.
@@ -42,7 +40,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 |||
 |-|-|
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://www.visualstudio.com/)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://docs.microsoft.com/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
 |Sada Modeling SDK pro Visual Studio|[Stáhnout MSDK](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-a-dsl-solution"></a>Vytvoření řešení DSL
@@ -399,4 +397,4 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 2. Znovu sestavte všechna experimentální DSL nebo jiná experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření, která chcete dál používat.
 
 ## <a name="see-also"></a>Viz také
- [Porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md) [jak definovat jazykovou](../modeling/how-to-define-a-domain-specific-language.md) [sadu Visualizaton a Modeling SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples) specifické pro doménu
+ [Porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md) [jak definovat jazykovou](../modeling/how-to-define-a-domain-specific-language.md) [sadu Visualizaton a Modeling SDK](https://www.microsoft.com/download/details.aspx?id=48148) specifické pro doménu

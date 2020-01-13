@@ -12,12 +12,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: bda6d8e20064ab2197408db6b9a55a86325515e8
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: c3ea8c91c54586cf54b82566a4803b464e01750c
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846738"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916484"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>Instalace pro vývoj multiplatformních mobilních řešení v jazyce C++
 
@@ -98,7 +98,7 @@ Pokud se rozhodnete neinstalovat jednu nebo více závislostí třetích stran p
 
 Můžete znovu spustit aplikaci SDK správce v adresáři Android SDK pro aktualizaci sady SDK a instalaci volitelných nástrojů a dalších úrovní rozhraní API. Pokud nepoužijete **příkaz Spustit jako správce** ke spuštění aplikace SDK pro správce, aktualizace se nemusí zdařit. Pokud máte problémy při sestavování aplikace pro Android, Projděte si správce sady SDK, kde najdete aktualizace nainstalovaných sad SDK.
 
-Pokud chcete použít některé z emulátorů Androidu, které jsou součástí Android SDK, možná budete muset nastavit hardwarovou akceleraci. Další informace najdete v tématu [hardwarová akcelerace pro výkon emulátoru (Hyper-V & modul HAXM)](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin).
+Pokud chcete použít některé z emulátorů Androidu, které jsou součástí Android SDK, možná budete muset nastavit hardwarovou akceleraci. Další informace najdete v tématu [hardwarová akcelerace pro výkon emulátoru (Hyper-V & modul HAXM)](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin).
 
 Ve většině případů může Visual Studio detekovat konfigurace softwaru třetí strany, kterého jste nainstalovali, a udržuje cesty instalace ve vnitřních proměnných prostředí. Můžete přepsat výchozí cesty těchto nástrojů pro vývoj pro různé platformy v integrovaném vývojovém prostředí sady Visual Studio.
 

@@ -12,12 +12,12 @@ ms.technology: vs-azure
 ms.custom: vs-azure
 ms.date: 12/16/2015
 ms.author: mlearned
-ms.openlocfilehash: 83f908876b2e0de774443084d830f20d121e33d0
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 0a8f6fab3c8f30834a467e2ad98843b16a9245b4
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75844849"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916701"
 ---
 # <a name="adding-mobile-services-by-using-visual-studio-connected-services"></a>Přidání Mobile Services pomocí připojených služeb sady Visual Studio
 Pomocí sady Visual Studio 2015, můžete připojit pomocí Azure Mobile Services **přidat připojenou službu** dialogového okna. Můžete připojit z jakékoli klientské aplikace C#, všechny Javascriptové aplikace nebo aplikace Cordova pro různé platformy. Když se připojíte, můžete vytvořit a přístup k datům, vytvořte vlastní rozhraní API a naplánované úlohy nebo přidat podporu pro nabízená oznámení.  Operace připojené služby přidá všechny příslušné odkazy a připojovací kód. Můžete také využít výhody integrované podpory pro ověřování s řadou oblíbených schémat identity, jako je Azure AD, Facebook, Twitter a Microsoft Accounts.
@@ -63,9 +63,6 @@ Dialogové okno připojené služby můžete použít pro připojení k Azure Mo
    5. Nové mobilní služby by se měla zobrazit v seznamu služeb na **Azure Mobile Services** dialogové okno. V seznamu vyberte novou mobilní službu a pak zvolte **přidat** tlačítko pro přidání služby do projektu.
 5. Zkontrolujte na stránce Začínáme, který se zobrazí a zjistěte, jak se váš projekt změnil. Pokaždé, když přidáte připojenou službu ve vašem prohlížeči zobrazí stránku Začínáme. Můžete zkontrolovat další navrhované kroky a příklady kódu, nebo přepněte na stránku co se stalo a podívejte se, jaké odkazy byly přidány do projektu a jak váš kód a konfigurační soubory byly změněny.
 6. Pomocí ukázky kódu a jako vodítko, začněte psát kód pro přístup k mobilní službě.
-
-## <a name="how-your-project-is-modified"></a>Jak se váš projekt změnil
-Jak Visual Studio změní projekt, závisí na typu projektu. C# klientských aplikací, najdete v části [co se stalo – projekty jazyka C#](https://docs.microsoft.com/azure/). JavaScript klientských aplikací, najdete v části [co se stalo – projekty jazyka JavaScript](https://docs.microsoft.com/azure/). Aplikace Cordova, naleznete v tématu [co se stalo – projekty Cordova](https://docs.microsoft.com/azure/).
 
 ## <a name="next-steps"></a>Další kroky
 Klást otázky a nechat si pomoct:

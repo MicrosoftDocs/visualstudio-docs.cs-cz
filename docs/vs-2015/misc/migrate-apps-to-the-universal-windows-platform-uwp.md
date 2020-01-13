@@ -9,12 +9,12 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5794aa5ab7dc14932c65a9156ea9252e71731155
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 60951091914474f07f19672799fb59c8b2d0aa56
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299480"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919139"
 ---
 # <a name="migrate-apps-to-the-universal-windows-platform-uwp"></a>Migrace aplikací do Univerzální platformy Windows (UWP)
 Proveďte potřebné ruční změny stávajících souborů projektu pro aplikace Windows Store 8,1, Windows Phone 8,1 aplikace nebo univerzální aplikace pro Windows vytvořené pomocí sady Visual Studio 2015 RC, aby je bylo možné použít se sadou Visual Studio 2015 RTM. (Pokud máte Windows 8.1 univerzální aplikace s projektem aplikace pro Windows a projektem Windows Phone, budete muset při migraci každého projektu použít postup.)
@@ -691,7 +691,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-8. Vyhledejte > \<položky, které mají \<odkaz na > podřízených elementů na balíčky NuGet. Poznamenejte si balíčky NuGet, na které se odkazuje, protože tyto informace budete potřebovat pro budoucí krok. Jedním z významných rozdílů mezi formátem projektu Windows 10 mezi Visual Studio 2015 RC a Visual Studio 2015 RTM je, že formát RTM používá [NuGet](https://docs.microsoft.com/nuget/) verze 3.
+8. Vyhledejte > \<položky, které mají \<odkaz na > podřízených elementů na balíčky NuGet. Poznamenejte si balíčky NuGet, na které se odkazuje, protože tyto informace budete potřebovat pro budoucí krok. Jedním z významných rozdílů mezi formátem projektu Windows 10 mezi Visual Studio 2015 RC a Visual Studio 2015 RTM je, že formát RTM používá [NuGet](/nuget/) verze 3.
 
     Odeberte > \<a všechny její podřízené položky. Například projekt UWP vytvořený pomocí sady Visual Studio RC bude mít následující balíčky NuGet, které je třeba odebrat:
 
@@ -739,7 +739,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     2. Uložte provedené změny.
 
-14. Pomocí Správce NuGet přidejte balíčky, které jste odstranili v předchozím kroku. Jedním z významných rozdílů mezi formátem projektu Windows 10 mezi Visual Studio 2015 RC a Visual Studio 2015 RTM je, že formát RTM používá [NuGet](https://docs.microsoft.com/nuget/) verze 3.
+14. Pomocí Správce NuGet přidejte balíčky, které jste odstranili v předchozím kroku. Jedním z významných rozdílů mezi formátem projektu Windows 10 mezi Visual Studio 2015 RC a Visual Studio 2015 RTM je, že formát RTM používá [NuGet](/nuget/) verze 3.
 
     Nyní můžete vytvářet kód, sestavovat a ladit aplikaci.
 
