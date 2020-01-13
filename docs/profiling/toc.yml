@@ -30,6 +30,8 @@
       items:
         - name: Analýza využití paměti
           href: analyze-memory-usage.md
+        - name: Analýza využití paměti u objektů .NET
+          href: dotnet-alloc-tool.md
         - name: Vlastní nativní události haldy Trasování událostí pro Windows
           href: custom-native-etw-heap-events.md
         - name: Využití paměti bez ladicího programu

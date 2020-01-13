@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - data-science
 monikerRange: vs-2017
-ms.openlocfilehash: 38082d854a6c817503d2765c48c5b08c0bd2a5b3
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 5a09b3f78b929fd60764be36f56c0b580c7a42d7
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888527"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75843727"
 ---
 # <a name="how-to-install-r-tools-for-visual-studio"></a>Postup instalace Nástroje R pro Visual Studio
 
@@ -46,7 +46,7 @@ RTVS se neinstaluje, pokud máte pouze prostředí sady Visual Studio, které je
 
 1. Nastavte další možnosti na pravé straně pod stejným názvem úlohy. Ve výchozím nastavení toto zatížení zahrnuje F# i podporu Pythonu. Pro R je minimální požadavky **Podpora jazyka r**, **Podpora modulu runtime pro vývoj**v jazyce r a **Microsoft R Client**.
 
-RTVS je nainstalován v: *% ProgramFiles (x86)% \ Microsoft Visual Studio\<verze >\<edice > Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio* , kde\<*verze >* obvykle `2017` a  *>\<Edition* je `Community`, `Professional`nebo `Enterprise`.
+RTVS je nainstalován v: *% ProgramFiles (x86)% \ Microsoft Visual Studio\<verze >\<edice > Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio* , kde *\<verze >* obvykle `2017` a\<*edice* > je `Community`, `Professional`nebo `Enterprise`.
 
 ## <a name="install-rtvs-in-visual-studio-2015"></a>Instalace RTVS v aplikaci Visual Studio 2015
 
@@ -56,7 +56,7 @@ V rámci sady Visual Studio 2015 je nutné nainstalovat Interpret R a nástroje 
 
 RTVS vyžaduje 64 verze R verze 3.2.1 nebo vyšší z jednoho nebo více následujících zdrojů:
 
-- [Microsoft R – otevřít](https://mran.microsoft.com/download/)
+- [Microsoft R Open](https://mran.microsoft.com/download/)
 - [Microsoft R Client](/machine-learning-server/r-client/what-is-microsoft-r-client)
 - [CRAN R](https://cran.r-project.org/bin/windows/base/)
 
@@ -64,7 +64,7 @@ Microsoft R Open a CRAN R obě umožňují více souběžných verzí. Microsoft
 
 ### <a name="install-the-r-tools"></a>Instalace nástrojů R
 
-Stáhněte si aktuální RTVS pro Visual Studio 2015 z [https://aka.ms/rtvs-current](https://aka.ms/rtvs-current). RTVS vyhledá vhodnou verzi sady Visual Studio a pomůže vám nainstalovat překladač R, pokud jste to ještě neudělali.
+Stáhněte si aktuální RTVS pro Visual Studio 2015 z [https://rtvs.blob.core.windows.net/download/RTVS_2017-12-18.1.exe](https://rtvs.blob.core.windows.net/download/RTVS_2017-12-18.1.exe). RTVS vyhledá vhodnou verzi sady Visual Studio a pomůže vám nainstalovat překladač R, pokud jste to ještě neudělali.
 
 > [!Note]
 > Samostatný instalační program RTVS funguje pouze se sadou Visual Studio 2015; pomocí sady Visual Studio 2017 nainstalujte podporu R prostřednictvím [úlohy pro datové vědy a analytické aplikace](#install-rtvs-in-visual-studio-2017) popsané výše.
@@ -81,7 +81,7 @@ Offline instalace je vhodná pro počítače, které nejsou připojené k Intern
 
 1. Postupujte podle pokynů pro vytvoření offline instalace na webové stránce.
 
-1. V případě sady Visual Studio 2015 Stáhněte offline instalační programy RTVS z [https://aka.ms/rtvs-current-zip](https://aka.ms/rtvs-current-zip) a [https://aka.ms/rtvs-remote-zip](https://aka.ms/rtvs-remote-zip).
+1. V případě sady Visual Studio 2015 Stáhněte offline instalační programy RTVS z [https://rtvs.blob.core.windows.net/download/RTVS_2017-12-18.1.zip](https://rtvs.blob.core.windows.net/download/RTVS_2017-12-18.1.zip) a [https://rtvs.blob.core.windows.net/download/RTVS_Remote_2017-12-12.1.zip](https://rtvs.blob.core.windows.net/download/RTVS_Remote_2017-12-12.1.zip).
 
 1. Nainstalujte Visual Studio a RTVS z instalačních programů pro offline instalaci.
 

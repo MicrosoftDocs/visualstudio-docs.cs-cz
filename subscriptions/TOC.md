@@ -88,7 +88,7 @@
 ### [Předplatitelé s přihlášením pomocí osobního e-mailu](personal-email-sign-ins.md)
 ### [Správa sady Visual Studio s GitHub Enterprise](assign-github.md)
 # Prostředky
-## [Dokument white paper k licencování sady Visual Studio](https://aka.ms/vslicensing)
+## [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 ## [Porovnání možností a cen předplatného](https://visualstudio.microsoft.com/vs/pricing)
 ## [Porovnání funkcí integrovaných vývojových prostředí (IDE) sady Visual Studio](https://visualstudio.microsoft.com/vs/compare)
 ## [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
