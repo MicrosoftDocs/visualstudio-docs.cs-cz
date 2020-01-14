@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - text templates, in application or VS extension
 - text templates, custom directive hosts
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 171eb8810d74df5c1058ba055e598d04f9164633
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0f7ecd6508df780f570d10b3d615094fae15209d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658293"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591681"
 ---
 # <a name="process-text-templates-by-using-a-custom-host"></a>Zpracování textových šablon pomocí vlastního hostitele
 
@@ -48,12 +48,12 @@ string output = engine.ProcessTemplate(templateString, host);
 
  Hostitel musí být schopen protokolovat chyby, překládat odkazy na sestavení a vkládané soubory, poskytovat doménu aplikace, ve které se šablona spouští, a volat odpovídající procesor pro jednotlivé direktivy.
 
- <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> je definováno v souboru **Microsoft. VisualStudio. TextTemplating. \* 0. dll**a [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) je definováno v souboru **Microsoft. VisualStudio. TextTemplating. Interfaces. \*.0. dll**.
+ <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> je definováno v souboru **Microsoft. VisualStudio. TextTemplating.\*0. dll**a [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) je definováno v souboru **Microsoft. VisualStudio. TextTemplating. Interfaces.\*. 0. dll**.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Návod: Vytvoření vlastního hostitele textových šablon](../modeling/walkthrough-creating-a-custom-text-template-host.md) Ukazuje, jak vytvořit vlastního hostitele textových šablon, který zpřístupňuje funkce textových šablon mimo aplikaci Visual Studio.
+ [Návod: Vytvoření vlastní hostitelské šablony textových šablon](../modeling/walkthrough-creating-a-custom-text-template-host.md) ukazuje, jak vytvořit vlastního hostitele textových šablon, který zpřístupňuje funkčnost textové šablony mimo aplikaci Visual Studio.
 
-## <a name="reference"></a>Odkaz
+## <a name="reference"></a>Reference
  [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))
 
 ## <a name="related-sections"></a>Související oddíly
