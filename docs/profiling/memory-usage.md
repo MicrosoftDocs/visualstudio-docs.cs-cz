@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c72b6749dcba857d9a5059a36adc0fae6e0bacf
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 2876e1b25380719a4424c5828c8b37fb5bb72b41
+ms.sourcegitcommit: 9a5cf730d8e43eed6eba25369b7b44cae0b26b98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254618"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75929235"
 ---
 # <a name="measure-memory-usage-in-visual-studio"></a>Míra využití paměti v aplikaci Visual Studio
 
@@ -22,7 +22,7 @@ Vyhledání nevrácené paměti a neefektivní paměti během ladění s integro
 
 Následující grafické ukazuje **diagnostické nástroje** okno (k dispozici v aplikaci Visual Studio 2015 Update 1 a novější):
 
-![DiagnosticTools&#45;Update1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Update1")
+![DiagnosticTools&#45;-datum1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-v-datum1")
 
 I když můžete shromažďovat snímky paměti v kdykoli **využití paměti** nástroj, ladicího programu sady Visual Studio můžete použít k řízení, jak vaše aplikace provádí při zkoumání problémů s výkonem. Nastavení zarážek, krokování, příkaz Pozastavit vše a další ladicí program akce pomáhá soustředit vaše vyšetřování výkonu cesty kódu, které jsou nejrelevantnější. Provádění těchto akcí, když vaše aplikace spuštěna, můžete eliminovat zbytečných kód, který vás nezajímají a můžete výrazně zkrátit čas potřebný k diagnostice problému.
 
@@ -54,20 +54,20 @@ V tomto kurzu se naučíte:
 
 4. Zvolte **využití paměti** s **vyberte nástroje** nastavení na panelu nástrojů.
 
-     ![Zobrazení diagnostických nástrojů](../profiling/media/diag-tools-select-tool-2.png "DiagToolsSelectTool")
+     ![Zobrazit diagnostické nástroje](../profiling/media/diag-tools-select-tool-2.png "DiagToolsSelectTool")
 
 5. Klikněte na **Ladit / Spustit ladění** (nebo na panelu nástrojů stiskněte **Start** nebo **F5**).
 
      Jakmile se aplikace načte, zobrazí se souhrnný přehled diagnostických nástrojů.
 
-     ![Karta Souhrn v diagnostických nástrojích](../profiling/media/diag-tools-summary-tab-2.png "DiagToolsSummaryTab")
+     ![Karta souhrn nástrojů pro diagnostiku](../profiling/media/diag-tools-summary-tab-2.png "DiagToolsSummaryTab")
 
      > [!NOTE]
-     > Protože shromažďování paměti, že data může ovlivnit výkon ladění ve smíšeném režimu nebo nativní aplikace, jsou ve výchozím nastavení zakázané snímky paměti. Pokud chcete povolit snímky v nativních nebo smíšených aplikacích, spusťte relaci ladění (Klávesová zkratka: **F5**). Když **diagnostické nástroje** okna se zobrazí, zvolte **využití paměti** kartu a klikněte na tlačítko **profilace haldy**.
+     > Protože shromažďování paměti, že data může ovlivnit výkon ladění ve smíšeném režimu nebo nativní aplikace, jsou ve výchozím nastavení zakázané snímky paměti. Pokud chcete povolit snímky v aplikacích pro nativní nebo smíšený režim, spustíte relaci ladění (Klávesová zkratka: **F5**). Když **diagnostické nástroje** okna se zobrazí, zvolte **využití paměti** kartu a klikněte na tlačítko **profilace haldy**.
      >
      >  ![Povolit snímky](../profiling/media/dbgdiag_mem_mixedtoolbar_enablesnapshot.png "DBGDIAG_MEM_MixedToolbar_EnableSnapshot")
      >
-     >  Stop (Klávesová zkratka:SHIFT+**F5**) a restartujte ladění.
+     >  Zastavit (Klávesová zkratka: **Shift**+**F5**) a znovu spusťte ladění.
 
 6. K vytvoření snímku na začátku ladicí relaci, zvolte **pořídit snímek** na **využití paměti** souhrnný panel nástrojů. (To může pomoct s nastavte zarážku zde také).
 
@@ -101,7 +101,7 @@ Pokud jste provedli několik snímků, buňky ovládacího prvku souhrnnou tabul
 
 Analýza využití paměti, klikněte na jeden z odkazů, které se otevře podrobnou sestavu využití paměti:
 
-- Chcete-li zobrazit podrobnosti o rozdílu mezi aktuálním snímkem a předchozím snímkem, zvolte odkaz změnit na levé straně na šipku (![zvýšit využití paměti](../profiling/media/prof-tour-mem-usage-up-arrow.png "zvýšit využití paměti")). Červená šipka označuje zvýšení využití paměti a zelenou šipku znamená snížení.
+- Chcete-li zobrazit podrobnosti o rozdílu mezi aktuálním snímkem a předchozím snímkem, klikněte na odkaz změnit nalevo od šipky (![zvýšení využití paměti](../profiling/media/prof-tour-mem-usage-up-arrow.png "Zvýšení využití paměti")). Červená šipka označuje zvýšení využití paměti a zelenou šipku znamená snížení.
 
 > [!TIP]
 > K identifikaci problémů paměti rychleji, diff sestavy jsou seřazeny podle typů objektů, které nejvíce zvýšit celkový počet (klikněte na odkaz změnit v **objekty (rozdíl)** sloupce) nebo, která zvýšil na maximum v celkovou velikost haldy (kliknutím odkaz změnit v **velikost haldy (rozdíl)** sloupec).
@@ -113,17 +113,17 @@ Analýza využití paměti, klikněte na jeden z odkazů, které se otevře podr
 ### <a name="managed-types-reports"></a>Spravované typy sestav
  Vyberte aktuální propojení **objekty (rozdíl)** nebo **přidělení (rozdíl)** buňku v tabulce souhrnu využití paměti.
 
- ![Ladicí program spravovaného typu sestavy &#45; cesty ke kořenu](../profiling/media/dbgdiag_mem_managedtypesreport_pathstoroot.png "DBGDIAG_MEM_ManagedTypesReport_PathsToRoot")
+ ![Správa cest sestav &#45; spravovaného typu ladicího programu do kořenového adresáře](../profiling/media/dbgdiag_mem_managedtypesreport_pathstoroot.png "DBGDIAG_MEM_ManagedTypesReport_PathsToRoot")
 
  Horní podokno zobrazuje počet a velikost typů ve snímku, včetně velikosti všech objektů, na které odkazuje typ (**celkové velikosti**).
 
  **Cesty ke kořenu** stromu v dolním podokně zobrazí objekty, které odkazují na vybraném v horním podokně typu. Paměť pro objekt vyčistí systému uvolňování paměti rozhraní .NET Framework, pouze v případě, že byly vydány poslední typ, který na ni odkazuje.
 
- **Odkazované typy** Strom zobrazuje odkazy, které jsou uloženy ve vybraném v horním podokně typu.
+ Strom **odkazovaných objektů** zobrazuje odkazy, které jsou uchovávány typem vybraným v horním podokně.
 
- ![Zobrazení sestavy spravovaných odkazovaných typů](../profiling/media/dbgdiag_mem_managedtypesreport_referencedtypes.png "DBGDIAG_MEM_ManagedTypesReport_ReferencedTypes")
+ ![Zobrazení sestavy spravovaných odkazovaných objektů](../profiling/media/dbgdiag_mem_managedtypesreport_referencedtypes.png "DBGDIAG_MEM_ManagedTypesReport_ReferencedTypes")
 
- K zobrazení instance vybraného typu v horním podokně, vyberte ![Instance ikonu](../profiling/media/dbgdiag_mem_instanceicon.png "DBGDIAG_MEM_InstanceIcon") ikonu.
+ Chcete-li zobrazit instance vybraného typu v horním podokně, klikněte na ikonu ![ikony instance](../profiling/media/dbgdiag_mem_instanceicon.png "DBGDIAG_MEM_InstanceIcon") .
 
  ![Zobrazení instancí](../profiling/media/dbgdiag_mem_managedtypesreport_instances.png "DBGDIAG_MEM_ManagedTypesReport_Instances")
 
@@ -132,11 +132,11 @@ Analýza využití paměti, klikněte na jeden z odkazů, které se otevře podr
 ### <a name="native-type-reports"></a>Nativní typ sestavy
  Vyberte aktuální propojení **přidělení (rozdíl)** nebo **velikost haldy (rozdíl)** buňku v tabulce souhrnu využití paměti z **diagnostické nástroje** okna.
 
- ![Nativní typ zobrazení](../profiling/media/dbgdiag_mem_native_typesview.png "DBGDIAG_MEM_Native_TypesView")
+ ![Zobrazení nativního typu](../profiling/media/dbgdiag_mem_native_typesview.png "DBGDIAG_MEM_Native_TypesView")
 
  **Zobrazení typů** zobrazuje počet a velikost typů ve snímku.
 
-- Zvolte ikonu instance (![ikonu instance ve sloupci Typ objektu](../profiling/media/dbg_mma_instancesicon.png "DBG_MMA_InstancesIcon")) z vybraného typu k zobrazení informací o objektech vybraného typu ve snímku.
+- Vyberte ikonu instance (![ikona instance ve sloupci Typ objektu](../profiling/media/dbg_mma_instancesicon.png "DBG_MMA_InstancesIcon")) vybraného typu pro zobrazení informací o objektech vybraného typu ve snímku.
 
      **Instance** zobrazení zobrazí každou instanci daného typu. Výběr instance zobrazí, které vedlo k vytvoření instance v zásobníku volání **zásobník volání přidělení** podokně.
 
@@ -144,7 +144,7 @@ Analýza využití paměti, klikněte na jeden z odkazů, které se otevře podr
 
 - Zvolte **zobrazení zásobníků** v **režim zobrazení** seznamu zobrazíte zásobník přidělení pro vybraný typ.
 
-     ![Stacks View](../profiling/media/dbgdiag_mem_native_stacksview.png "DBGDIAG_MEM_Native_StacksView")
+     ![Zobrazení zásobníků](../profiling/media/dbgdiag_mem_native_stacksview.png "DBGDIAG_MEM_Native_StacksView")
 
 ### <a name="change-diff-reports"></a>Změnit sestavy (rozdíl)
 
@@ -154,17 +154,17 @@ Analýza využití paměti, klikněte na jeden z odkazů, které se otevře podr
 
 - Zvolte snímek v **porovnat** seznam spravované nebo nativní sestavy.
 
-   ![Zvolte snímek ze seznamu porovnat](../profiling/media/dbgdiag_mem_choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")
+   ![Výběr snímku ze seznamu porovnat s](../profiling/media/dbgdiag_mem_choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")
 
 Sestava změn přidává sloupce (označené **(rozdíl)** ) základní sestavy, které zobrazují rozdíl mezi hodnotami základní snímek a snímek porovnání. Zde je, jak může vypadat sestavy rozdílu nativní typ zobrazení:
 
-![Native Types Diff View](../profiling/media/dbgdiag_mem_native_typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")
+![Zobrazení rozdílu nativních typů](../profiling/media/dbgdiag_mem_native_typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")
 
 ## <a name="blogs-and-videos"></a>Blogy a videa
 
 [Analýza využití procesoru a paměti během ladění](https://devblogs.microsoft.com/visualstudio/analyze-cpu-memory-while-debugging/)
 
-[Blog C++ vizuálu: Profilace paměti v jazyce C++ Visual 2015](https://devblogs.microsoft.com/cppblog/memory-profiling-in-visual-c-2015/)
+[Visual C++ Blog: Profilace paměti v aplikaci Visual C++ 2015](https://devblogs.microsoft.com/cppblog/memory-profiling-in-visual-c-2015/)
 
 ## <a name="next-steps"></a>Další kroky
 

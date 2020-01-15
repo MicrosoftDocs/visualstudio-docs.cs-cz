@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/11/2019
 ms.topic: conceptual
 description: Přečtěte si, jak se přihlásit k předplatným sady Visual Studio s vaším účtem GitHub.
-ms.openlocfilehash: 8a1c2884dbc5570ab18cf7496c699774702b5b62
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: ffafd3821112a62ec1f86666f8c0fe6571bbb335
+ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850534"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75944202"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-github-account"></a>Přihlášení k předplatným sady Visual Studio s vaším účtem GitHubu 
 
@@ -49,7 +49,7 @@ Odpověď: ne všechny produkty společnosti Microsoft mohou přistupovat k GitH
 Odpověď: ne vůbec. Tím se nezmění vaše heslo GitHubu. budete mít jenom jiný způsob, jak se přihlásit k vašemu účet Microsoft. Kdykoli se přihlásíte pomocí své e-mailové adresy, nabídneme vám možnost přihlašování s vaším účet Microsoft heslem nebo se budete muset přihlásit k GitHubu. Důrazně doporučujeme, abyste v případě potřeby přidání hesla měli jistotu, že se liší od hesla k vašemu účtu GitHub.
 
 #### <a name="q-i-want-to-add-the-authenticator-app-to-the-account-i-created-using-github--can-i-do-that"></a>Otázka: Chci přidat ověřovací aplikaci k účtu, který jste vytvořili pomocí GitHubu.  Mohu to udělat?
-Odpověď: žádný problém – stačí stáhnout aplikaci a přihlásit se pomocí své e-mailové adresy. Když se přihlásíte pomocí své e-mailové adresy, zobrazí se výzva, abyste jako přihlašovací údaje zvolili [aplikaci ověřovatele](https://www.microsoft.com/account/authenticator#getapp) nebo GitHub.
+Odpověď: žádný problém – stačí stáhnout aplikaci a přihlásit se pomocí své e-mailové adresy. Když se přihlásíte pomocí své e-mailové adresy, zobrazí se výzva, abyste jako přihlašovací údaje zvolili [aplikaci ověřovatele](https://www.microsoft.com/p/microsoft-authenticator/9nblgggzmcj6) nebo GitHub.
 
 #### <a name="q-ive-enabled-two-factor-authentication-on-both-my-github-and-microsoft-accounts-msa-but-when-i-sign-in-to-my-msa-im-still-asked-to-authenticate-twice--why"></a>Otázka: Mám povolené dvojúrovňové ověřování na mém účtu GitHub i na účtu Microsoft (MSA), ale když se přihlásím k MSA, pořád se zobrazí výzva k ověření dvakrát.  Proč?
 Odpověď: z důvodu omezení zabezpečení se společnost Microsoft přihlásí pomocí služby GitHub jako ověřování jedním faktorem, i když je tam zapnuté dvoustupňové ověřování. Proto bude nutné znovu provést ověření pro účet Microsoft. 

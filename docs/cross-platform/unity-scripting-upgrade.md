@@ -8,12 +8,12 @@ ms.assetid: E2C9420F-A5D5-4472-9020-2B63FB27A133
 ms.technology: vs-unity-tools
 ms.workload:
 - unity
-ms.openlocfilehash: 01f604de756ca86e40426a97776f1a1d43b024f1
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 5fb521ff1769f1d742dc1ce67080e98aecb417ad
+ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916856"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75944239"
 ---
 # <a name="using-net-4x-in-unity"></a>Používání .NET 4.x v Unity
 
@@ -346,6 +346,6 @@ Ukázka obsahuje příklady několik funkcí .NET 4.x. Můžete stáhnout projek
 * [Blog Unity – vylepšení modulu Runtime v Unity 2018.2 skriptování](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/)
 * [Historie jazyka C#](/dotnet/csharp/whats-new/csharp-version-history)
 * [Co je nového v jazyce C# 6](/dotnet/csharp/whats-new/csharp-6)
-* [Asynchronní programování v Unity, použití pomocné rutiny a klepněte na](https://blogs.msdn.microsoft.com/appconsult/2017/09/01/unity-coroutine-tap)
+* [Asynchronní programování v Unity, použití pomocné rutiny a klepněte na](/archive/blogs/appconsult/unity-coroutine-tap-en-us)
 * [Async-Await namísto Korutiny v Unity 2017](http://www.stevevermeulen.com/index.php/2017/09/using-async-await-in-unity3d-2017/)
 * [Fórum Unity - experimentální skriptovací verze Preview](https://forum.unity.com/forums/experimental-scripting-previews.107/)

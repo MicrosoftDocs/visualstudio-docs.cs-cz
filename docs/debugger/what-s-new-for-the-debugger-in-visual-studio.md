@@ -20,12 +20,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 130387fedce065948ebe09ea605e32cf89ad820b
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 523867a8f9aa074e9122c74deb8bcd91cddd8bee
+ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71210586"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75944220"
 ---
 # <a name="whats-new-for-the-debugger-in-visual-studio-2017"></a>Novinky v ladicím programu v aplikaci Visual Studio 2017
 
@@ -46,7 +46,7 @@ Ladicí program zahrnuje tyto nové funkce:
 
     ![Krokovat tlačítka zpět a dopředu](../debugger/media/intellitrace-step-back-icons-description.png  "Krokovat tlačítka zpět a dopředu")
 
-    Další informace najdete v tématu [Kontrola stavů předchozích aplikací pomocí stránky IntelliTrace](../debugger/view-historical-application-state.md) .
+    Další informace najdete v tématu [Kontrola stavů předchozích aplikací pomocí stránky IntelliTrace](view-historical-application-state.md) .
 
 - Pomocník pro **výjimky** nahradí pomocníka výjimky a zobrazí se v nemodálním dialogovém okně, kde došlo k chybě. **Pomocník pro výjimky** poskytuje rychlejší přístup k jakýmkoli vnitřním výjimkám, další analýzu ladicího programu (Pokud je k dispozici) a okamžitý přístup k **nastavení výjimky** pro výjimku. Pomocníka výjimky lze také přetáhnout do plovoucího zobrazení, pokud blokuje něco, co potřebujete vidět.
 
@@ -54,13 +54,13 @@ Ladicí program zahrnuje tyto nové funkce:
 
     ![Pomocník pro výjimky ladicího programu](../debugger/media/dbg-exception-helper.png "DbgExceptionHelper")
 
-    Další informace naleznete v příspěvku na blogu o [použití nového pomocníka výjimky v rámci sady Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/) .
+    Další informace naleznete v příspěvku na blogu o [použití nového pomocníka výjimky v rámci sady Visual Studio](https://devblogs.microsoft.com/devops/using-the-new-exception-helper-in-visual-studio-15-preview/) .
 
 - V ladicím programu teď můžete spustit na řádek kódu, a to tak, že vyberete ikonu **Spustit** po, zelená ikona šipky (při najetí myší na řádek kódu se zobrazí ikona). Tím se eliminuje nutnost nastavování dočasných zarážek.
 
     ![Spuštění ladicího programu pro kliknutí](../debugger/media/dbg-run-to-click.png "DbgRunToClick")
 
-- Můžete nastavit podmínky pro výjimky v dialogovém okně **Nastavení výjimek** (to můžete provést pomocí ikony **Upravit podmínku** v dialogovém okně nastavení výjimky nebo pomocí místní nabídky na výjimce.) Aktuálně se podporují příkladem podmínek může být její název modulu pro zahrnutí nebo vyloučení pro výjimku.
+- Můžete nastavit podmínky pro výjimky v dialogovém okně **Nastavení výjimek** (to můžete provést pomocí ikony **Upravit podmínku** v dialogovém okně nastavení výjimky nebo pomocí místní nabídky na výjimce.) Aktuálně podporované podmínky zahrnují názvy modulů, které se mají pro výjimku zahrnout nebo vyloučit.
 
     ![Podmínky pro výjimku](../debugger/media/dbg-conditional-exception.png "DbgConditionalException")
 
@@ -68,7 +68,7 @@ Ladicí program zahrnuje tyto nové funkce:
 
     ![Hledat v procesu připojit k procesu](../debugger/media/dbg-attach-to-process-search.png "DbgAttachToProcessSearch")
 
-Další informace o těchto nových funkcích naleznete v [poznámkách k verzi [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]pro ](/visualstudio/releasenotes/vs2017-relnotes).
+Další informace o těchto nových funkcích najdete v [poznámkách k verzi pro [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]](/visualstudio/releasenotes/vs2017-relnotes).
 
 ## <a name="see-also"></a>Viz také:
 

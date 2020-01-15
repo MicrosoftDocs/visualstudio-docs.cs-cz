@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cc8ab1ac26f4aa01342d9949243772edd3de91f
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: b1928176ef1c2612585c7fa46ea653f3ff800050
+ms.sourcegitcommit: 9a5cf730d8e43eed6eba25369b7b44cae0b26b98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189408"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75929254"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>Rychlý Start: první pohled na nástroje pro profilaci
 
@@ -34,11 +34,11 @@ Při ladění můžete použít okno **diagnostické nástroje** k analýze vyu�
 **Diagnostické nástroje** okno je často upřednostňovaným způsobem, jak Profilovat aplikace, ale pro buildy vydaných verzí můžete místo toho provést i analýzu aplikace po porážce. Pokud chcete získat další informace o různých přístupech, přečtěte si téma [spuštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). Pokud chcete zobrazit podporu nástrojů pro profilaci pro různé typy aplikací, přečtěte si téma [který nástroj mám použít?](#which-tool-should-i-use).
 
 > [!NOTE]
-> Můžete použít nástroje po porážce v systému Windows 7 nebo novějším. Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější.
+> Můžete použít nástroje po porážce v systému Windows 7 nebo novějším. Windows 8 a novější se vyžaduje pro spuštění nástrojů pro profilaci s ladicím programem (**diagnostické nástroje** okno).
 
 ## <a name="analyze-cpu-usage"></a>Analýza využití procesoru
 
-Nástroj využití CPU je vhodným místem pro zahájení analýzy výkonu vaší aplikace. Dozvíte se víc o prostředcích procesoru, které vaše aplikace spotřebovává. Podrobnější návod k nástroji využití CPU najdete v tématu [Příručka pro začátečníky k profilaci výkonu](../profiling/beginners-guide-to-performance-profiling.md).
+Nástroj využití CPU je vhodným místem pro zahájení analýzy výkonu vaší aplikace. Dozvíte se víc o prostředcích procesoru, které vaše aplikace spotřebovává. Podrobnější návod k nástroji využití CPU najdete v tématu [měření výkonu aplikace analýzou využití CPU](../profiling/beginners-guide-to-performance-profiling.md).
 
 V zobrazení **souhrnu** diagnostické nástroje vyberte **Povolit profilaci procesoru** (musíte být v relaci ladění).
 
@@ -136,11 +136,11 @@ K diagnostikování odezvy uživatelského rozhraní, pomalé doby načítání 
 ::: moniker range="vs-2017"
 ## <a name="analyze-network-usage-uwp"></a>Analýza využití sítě (UWP)
 
-V aplikacích pro UWP můžete analyzovat síťové operace prováděné pomocí rozhraní `Windows.Web.Http` API. Tento nástroj vám může pomáhat vyřešit problémy, jako jsou problémy s přístupem a ověřováním, nesprávné použití mezipaměti a špatný výkon zobrazení a stahování. Chcete-li použít nástroj, zvolte v profileru výkonu položku **síť** a pak zvolte možnost **Spustit**. Ve své aplikaci Projděte scénář, který používá `Windows.Web.Http` a pak zvolte možnost **Zastavit shromažďování** pro vygenerování sestavy.
+V aplikacích pro UWP můžete analyzovat síťové operace prováděné pomocí rozhraní `Windows.Web.Http` API. Tento nástroj vám může pomáhat vyřešit problémy, jako jsou problémy s přístupem a ověřováním, nesprávné použití mezipaměti a špatný výkon zobrazení a stahování. Chcete-li použít nástroj, zvolte v profileru výkonu položku **síť** a pak zvolte možnost **Spustit**. Ve vaší aplikaci, projděte si scénáře, který používá `Windows.Web.Http`a klikněte na tlačítko **zastavit shromažďování** generování sestav.
 
 ![Nástroj pro profilaci využití sítě](../profiling/media/prof-tour-network-usage.png "Využití sítě diag")
 
-Výběrem operace v souhrnném zobrazení zobrazíte další podrobnosti.
+Vyberte operaci v souhrnné zobrazení zobrazte další podrobnosti.
 
 ![Podrobné informace v nástroji využití sítě](../profiling/media/prof-tour-network-usage-details.png "Podrobnosti použití diagnostiky sítě")
 
@@ -160,28 +160,28 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 ::: moniker range=">=vs-2019"
 |Nástroj Performance Tool|Plocha Windows|UWP|Jádro ASP.NET/ASP.NET|
 |----------------------|---------------------|-------------|-------------|
-|[Využití procesoru](../profiling/cpu-usage.md)|Ano|Ano|Ano|
-|[Využití paměti](../profiling/memory-usage.md)|Ano|Ano|Ano|
-|[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|Ano|Ano|Ne|
-|[Časová osa aplikace](../profiling/application-timeline.md)|Ano|Ano|Ne|
-|[Tipy pro výkon](../profiling/perftips.md)|Ano|Ano pro XAML, ne pro HTML|Ano|
-|[Prohlížeč výkonu](../profiling/performance-explorer.md)|Ano|Ne|Ano|
+|[Využití procesoru](../profiling/cpu-usage.md)|ano|ano|ano|
+|[Využití paměti](../profiling/memory-usage.md)|ano|ano|ano|
+|[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|ano|ano|ne|
+|[Časová osa aplikace](../profiling/application-timeline.md)|ano|ano|ne|
+|[Tipy pro výkon](../profiling/perftips.md)|ano|Ano pro XAML, ne pro HTML|ano|
+|[Prohlížeč výkonu](../profiling/performance-explorer.md)|ano|ne|ano|
 |[IntelliTrace](../debugger/intellitrace.md)|.NET jenom s Visual Studio Enterprise|.NET jenom s Visual Studio Enterprise|.NET jenom s Visual Studio Enterprise|
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 |Nástroj Performance Tool|Plocha Windows|UWP|Jádro ASP.NET/ASP.NET|
 |----------------------|---------------------|-------------|-------------|
-|[Využití procesoru](../profiling/cpu-usage.md)|Ano|Ano|Ano|
-|[Využití paměti](../profiling/memory-usage.md)|Ano|Ano|Ano|
-|[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|Ano|Ano|Ne|
-|[Časová osa aplikace](../profiling/application-timeline.md)|Ano|Ano|Ne|
-|[Tipy pro výkon](../profiling/perftips.md)|Ano|Ano pro XAML, ne pro HTML|Ano|
-|[Prohlížeč výkonu](../profiling/performance-explorer.md)|Ano|Ne|Ano|
+|[Využití procesoru](../profiling/cpu-usage.md)|ano|ano|ano|
+|[Využití paměti](../profiling/memory-usage.md)|ano|ano|ano|
+|[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|ano|ano|ne|
+|[Časová osa aplikace](../profiling/application-timeline.md)|ano|ano|ne|
+|[Tipy pro výkon](../profiling/perftips.md)|ano|Ano pro XAML, ne pro HTML|ano|
+|[Prohlížeč výkonu](../profiling/performance-explorer.md)|ano|ne|ano|
 |[IntelliTrace](../debugger/intellitrace.md)|.NET jenom s Visual Studio Enterprise|.NET jenom s Visual Studio Enterprise|.NET jenom s Visual Studio Enterprise|
-|[Využití sítě](../profiling/network-usage.md)|Ne|Ano|Ne|
-|[Rychlost odezvy uživatelského rozhraní HTML](../profiling/html-ui-responsiveness.md)|Ne|Ano pro HTML, ne pro XAML|Ne|
-|[Paměť JavaScriptu](../profiling/javascript-memory.md)|Ne|Ano pro HTML, ne pro XAML|Ne|
+|[Využití sítě](../profiling/network-usage.md)|ne|ano|ne|
+|[Rychlost odezvy uživatelského rozhraní HTML](../profiling/html-ui-responsiveness.md)|ne|Ano pro HTML, ne pro XAML|ne|
+|[Paměť JavaScriptu](../profiling/javascript-memory.md)|ne|Ano pro HTML, ne pro XAML|ne|
 ::: moniker-end
 
 

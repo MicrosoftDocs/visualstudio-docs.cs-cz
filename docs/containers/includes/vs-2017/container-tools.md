@@ -1,46 +1,46 @@
 ---
-title: Nástroje kontejneru sady Visual Studio pomocí ASP.NET Core
+title: Nástroje kontejneru sady Visual Studio s ASP.NET Core
 author: ghogen
-description: Naučte se používat nástroje Visual Studio 2017 a Docker pro Windows
+description: Naučte se používat nástroje sady Visual Studio 2017 a Docker for Windows
 ms.author: ghogen
 ms.date: 02/01/2019
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 0555aeb722132ba7b9628be9096847d45efb66ef
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.openlocfilehash: 63d2f021aabc3d9152900ad62f072ec1a35a8e5b
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68146999"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75928109"
 ---
-Pomocí sady Visual Studio můžete snadno vytvářet, ladit a spouštění kontejnerizovaných aplikací ASP.NET Core a publikujte je na Azure Container Registry (ACR), Docker Hub, Azure App Service nebo vlastního registru kontejneru. V tomto článku budeme publikovat do služby ACR.
+Pomocí sady Visual Studio můžete snadno sestavovat, ladit a spouštět kontejnerové ASP.NET Core aplikace a publikovat je do Azure Container Registry (ACR), Docker Hub, Azure App Service nebo vlastního registru kontejneru. V tomto článku budeme publikovat na ACR.
 
 ## <a name="prerequisites"></a>Požadavky
 
-* [Desktop dockeru](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) s **vývoj pro Web**, **nástroje Azure** úlohy, a/nebo **vývoj pro různé platformy .NET Core** nainstalovaná úloha
-* Chcete-li publikovat do služby Azure Container Registry, předplatné Azure. [Zaregistrujte si bezplatnou zkušební verzi](https://azure.microsoft.com/offers/ms-azr-0044p/).
+* [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) s nainstalovanou úlohou **vývoje pro web**, úlohy **nástrojů Azure** a/nebo **.NET Core pro vývoj pro různé platformy**
+* Pokud chcete publikovat Azure Container Registry, předplatné Azure. [Zaregistrujte si bezplatnou zkušební verzi](https://azure.microsoft.com/offers/ms-azr-0044p/).
 
 ## <a name="installation-and-setup"></a>Instalace a nastavení
 
-Pro instalaci Dockeru, nejprve zkontrolujte informace na [Desktop Docker pro Windows: Co potřebujete vědět před instalací](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install). Dále nainstalujte [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
+Pro instalaci Docker si nejdřív přečtěte informace v části [Docker Desktop for Windows: co je potřeba před instalací](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install)nástroje. Dále nainstalujte [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
 
-## <a name="add-a-project-to-a-docker-container"></a>Přidat projekt do kontejneru Dockeru
+## <a name="add-a-project-to-a-docker-container"></a>Přidání projektu do kontejneru Docker
 
-1. V nabídce sady Visual Studio vyberte **soubor > Nový > projekt**.
-1. V části **šablony** část **nový projekt** dialogu **Visual C# > Web**.
+1. V nabídce aplikace Visual Studio vyberte **soubor > nový > projekt**.
+1. V části **šablony** v dialogovém okně **Nový projekt** vyberte **Visual C# > Web**.
 1. Vyberte **webová aplikace ASP.NET Core**.
-1. Pojmenujte novou aplikaci (nebo přijmout výchozí nastavení) a vyberte **OK**.
+1. Dejte nové aplikaci název (nebo pojmenujte výchozí) a vyberte **OK**.
 1. Vyberte **webovou aplikaci**.
-1. Zkontrolujte, **povolit podporu Dockeru** zaškrtávací políčko.
+1. Zaškrtněte políčko **Povolit podporu Docker** .
 
-   ![Povolit podporu Dockeru zaškrtávací políčko](../../media/container-tools/enable-docker-support.PNG)
+   ![Zaškrtávací políčko Povolit podporu Docker](../../media/container-tools/enable-docker-support.PNG)
 
-1. Vyberte typ kontejneru (Windows nebo Linux) a klikněte na **OK**.
+1. Vyberte požadovaný typ kontejneru (Windows nebo Linux) a klikněte na tlačítko **OK**.
 
-## <a name="dockerfile-overview"></a>Přehled souboru Dockerfile
+## <a name="dockerfile-overview"></a>Souboru Dockerfile – přehled
 
-A *soubor Dockerfile*, předpisu pro vytvoření finální image Dockeru, je vytvořen v projektu. Odkazovat na [odkaz na soubor Dockerfile](https://docs.docker.com/engine/reference/builder/) pro příkazy v rámci jeho pochopení.:
+*Souboru Dockerfile*je v projektu vytvořen recept pro vytvoření finální image Docker. Porozumění příkazům, které jsou v něm, najdete v [referenčních informacích k souboru Dockerfile](https://docs.docker.com/engine/reference/builder/) :
 
 ```
 FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
@@ -65,19 +65,19 @@ COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "HelloDockerTools.dll"]
 ```
 
-Předchozí *soubor Dockerfile* vychází [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) obrázků a obsahuje pokyny pro úpravu základní image tak, že sestavení vašeho projektu a jeho přidání do tohoto kontejneru.
+Předchozí *souboru Dockerfile* vychází z image [Microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) a obsahuje pokyny pro úpravu základní image sestavením projektu a jeho přidáním do kontejneru.
 
-Při nové dialogu projekt **konfigurace pro protokol HTTPS** zaškrtávací políčko zaškrtnuto, *soubor Dockerfile* poskytuje dva porty. Jeden port se používá pro přenos HTTP; jiný port se používá pro protokol HTTPS. Pokud políčko není zaškrtnuto, jeden port (80) je přístupný pro přenosy pomocí protokolu HTTP.
+Když je zaškrtnuté políčko **Konfigurovat pro protokol HTTPS** v dialogovém okně Nový projekt, *souboru Dockerfile* zpřístupňuje dva porty. Pro přenosy HTTP se používá jeden port; druhý port se používá pro protokol HTTPS. Pokud políčko není zaškrtnuté, bude pro přenosy HTTP vystaven jeden port (80).
 
-## <a name="debug"></a>Ladění
+## <a name="debug"></a>Ladit
 
-Vyberte **Docker** z ladění rozevírací seznam v panelu nástrojů a spusťte ladění aplikace. Může se zobrazit zpráva s výzvou o důvěřovat certifikátu; rozhodnete důvěřovat certifikátům, abyste mohli pokračovat.
+V rozevíracím seznamu ladění na panelu nástrojů vyberte **Docker** a spusťte ladění aplikace. Může se zobrazit zpráva s výzvou k důvěřování certifikátu. Chcete-li pokračovat, vyberte možnost důvěryhodného certifikátu.
 
-**Výstup** okno zobrazuje, jaké akce probíhá.
+V okně **výstup** se zobrazí akce, které probíhají.
 
-Otevřít **Konzola správce balíčků** (PMC) v nabídce **nástroje**> Správce balíčků NuGet, **Konzola správce balíčků**.
+Otevřete **konzolu Správce balíčků** (PMC) z **nástrojů**nabídky > Správce balíčků NuGet, **Konzola správce balíčků**.
 
-Výsledný image Dockeru aplikace je označený jako *dev*. Na obrázku je založen na *modulu runtime 2.1 aspnetcore* značku *microsoft/dotnet* základní image. Spustit `docker images` v příkaz **Konzola správce balíčků** okno (PMC). Image na počítači se zobrazí:
+Výsledná image Docker aplikace je označená jako *vývoj*. Obrázek je založen na značce *2,1-aspnetcore-runtime* základní image *Microsoft/dotNET* . Spusťte příkaz `docker images` v okně **konzoly Správce balíčků** (PMC). Zobrazí se obrázky na počítači:
 
 ```console
 REPOSITORY        TAG                     IMAGE ID      CREATED         SIZE
@@ -86,39 +86,39 @@ microsoft/dotnet  2.1-aspnetcore-runtime  fcc3887985bb  6 days ago      255MB
 ```
 
 > [!NOTE]
-> **Dev** image neobsahuje binární soubory aplikace a další obsah, jako **ladění** konfigurace použít k poskytnutí iterace editace a ladění prostředí připojení svazku. Chcete-li vytvořit bitovou kopii produkčního prostředí obsahující veškerý obsah, použijte **vydání** konfigurace.
+> **Vývojová** image neobsahuje binární soubory aplikace a další obsah, protože konfigurace **ladění** používá k zajištění iterativního prostředí pro iterativní úpravu a ladění připojení svazků. Pokud chcete vytvořit produkční image obsahující veškerý obsah, použijte konfiguraci **vydané verze** .
 
-Spustit `docker ps` příkazu v konzole PMC. Všimněte si, že je aplikace spuštěna pomocí kontejneru:
+Spusťte příkaz `docker ps` v PMC. Všimněte si, že aplikace je spuštěná pomocí kontejneru:
 
 ```console
 CONTAINER ID        IMAGE                  COMMAND                   CREATED             STATUS              PORTS                   NAMES
 baf9a678c88d        hellodockertools:dev   "C:\\remote_debugge..."   21 seconds ago      Up 19 seconds       0.0.0.0:37630->80/tcp   dockercompose4642749010770307127_hellodockertools_1
 ```
 
-## <a name="publish-docker-images"></a>Publikování Image Dockeru
+## <a name="publish-docker-images"></a>Publikování imagí Docker
 
-Po dokončení cyklu vývoje a ladění aplikace můžete vytvořit image produkční aplikace.
+Jakmile se cyklus vývoje a ladění aplikace dokončí, můžete vytvořit provozní image aplikace.
 
-1. Změna konfigurace rozevíracího seznamu **vydání** a sestavení aplikace.
-1. Klikněte pravým tlačítkem na projekt v **Průzkumníka řešení** a zvolte **publikovat**.
-1. V dialogovém okně Publikovat cíl, vyberte **Container Registry** kartu.
-1. Zvolte **vytvořit nový registr kontejneru Azure** a klikněte na tlačítko **publikovat**.
-1. Vyplňte požadované hodnoty v **vytvořit nový registr kontejneru Azure**.
+1. Změňte rozevírací seznam konfigurace na **vydaná** a sestavte aplikaci.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **publikovat**.
+1. V dialogovém okně Publikovat cíl vyberte kartu **Container Registry** .
+1. Vyberte **vytvořit novou Azure Container Registry** a klikněte na **publikovat**.
+1. Do pole **vytvořit nový Azure Container Registry**zadejte požadované hodnoty.
 
     | Nastavení      | Navrhovaná hodnota  | Popis                                |
     | ------------ |  ------- | -------------------------------------------------- |
-    | **Předpona DNS** | Globálně jedinečný název | Název, který jednoznačně identifikuje vašeho registru kontejneru. |
-    | **Předplatné** | Vaše předplatné | Předplatné Azure používat. |
-    | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Název skupiny prostředků, ve kterém chcete vytvořit registr kontejnerů. Zvolte **nový** vytvořit novou skupinu prostředků.|
-    | **[SKLADOVÁ POLOŽKA](https://docs.microsoft.com/azure/container-registry/container-registry-skus)** | Standard | Úrovně služby do registru kontejneru  |
-    | **Umístění registru** | Vám nejbližším místě | Zvolte umístění, do [oblasti](https://azure.microsoft.com/regions/) vaší blízkosti nebo v blízkosti jiných služeb, které budou používat službu container registry. |
+    | **Předpona DNS** | Globálně jedinečný název | Název, který jedinečně identifikuje váš registr kontejneru. |
+    | **Předplatné** | Zvolte vaše předplatné. | Předplatné Azure, které se má použít. |
+    | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | mojeSkupinaProstředků |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, zvolte **Nová**.|
+    | **[SKLADOVÉ](/azure/container-registry/container-registry-skus)** | Standardní | Úroveň služby registru kontejneru  |
+    | **Umístění registru** | Umístění, které je blízko vás | Vyberte umístění v [oblasti](https://azure.microsoft.com/regions/) poblíž nebo v blízkosti jiných služeb, které budou používat váš registr kontejneru. |
 
-    ![Visual Studio vytvořit dialogové okno Azure Container Registry][0]
+    ![Dialog pro vytváření Azure Container Registry v aplikaci Visual Studio][0]
 
 1. Klikněte na **Vytvořit**.
 
 ## <a name="next-steps"></a>Další kroky
 
-Můžete nyní využít kontejneru z registru na každém hostiteli podporuje spuštění imagí Dockeru, například [Azure Container Instances](/azure/container-instances/container-instances-tutorial-deploy-app).
+Kontejner teď můžete načíst z registru do libovolného hostitele, který podporuje spouštění imagí Docker, například [Azure Container Instances](/azure/container-instances/container-instances-tutorial-deploy-app).
 
 [0]:../../media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog.png

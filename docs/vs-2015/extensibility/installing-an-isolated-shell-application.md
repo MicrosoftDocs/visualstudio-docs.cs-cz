@@ -11,12 +11,12 @@ ms.assetid: 33416226-9083-41b5-b153-10d2bf35c012
 caps.latest.revision: 41
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 4d9a7b39dc322ab92458dbd6c7304f672468db17
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 0adc81cfe9ea4462940c31a02c6429be89709565
+ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851716"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75944266"
 ---
 # <a name="installing-an-isolated-shell-application"></a>Instalace aplikací izolovaného prostředí
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ Pokud chcete nainstalovat aplikaci prostředí, musíte provést následující 
   
 - Visual Studio SDK  
   
-- [Sada nástrojů XML Instalační služba systému Windows](http://wix.sourceforge.net/) verze 3,6  
+- [Sada nástrojů XML Instalační služba systému Windows](https://documentation.help/WiX-Toolset/index.html/) verze 3,6  
   
   Ukázka také vyžaduje sadu Microsoft vizualizace and modeling SDK, která nevyžaduje všechny prostředí.  
   
@@ -54,7 +54,7 @@ Pokud chcete nainstalovat aplikaci prostředí, musíte provést následující 
 2. Pro každý projekt, který obsahuje manifest VSIX, upravte úkoly sestavení pro výstup obsahu do umístění, ze kterého bude nainstalována služba MSI. Zahrňte manifest VSIX do výstupu sestavení, ale Sestavte soubor. VSIX.  
   
 ## <a name="creating-an-msi-for-your-shell"></a>Vytvoření MSI pro prostředí  
- Pro sestavení balíčku MSI doporučujeme použít [sadu nástrojů Instalační služba systému Windows XML](http://wix.sourceforge.net/) , protože poskytuje větší flexibilitu než standardní projekt instalace.  
+ Pro sestavení balíčku MSI doporučujeme použít [sadu nástrojů Instalační služba systému Windows XML](https://documentation.help/WiX-Toolset/index.html) , protože poskytuje větší flexibilitu než standardní projekt instalace.  
   
  V souboru Product. wxs nastavte bloky detekce a rozložení komponent prostředí.  
   
