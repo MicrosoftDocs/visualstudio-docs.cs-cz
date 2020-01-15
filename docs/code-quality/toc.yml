@@ -721,6 +721,8 @@
                   href: ca3077.md
                 - name: 'CA3147: Označte obslužné rutiny příkazů pomocí ValidateAntiForgeryToken'
                   href: ca3147.md
+                - name: 'CA5358: Nepoužívat nezabezpečené režimy šifrování'
+                  href: ca5358.md
                 - name: 'CA5361: Nezakazovat zprostředkovateli SChannel použití silného šifrování'
                   href: ca5361.md
                 - name: 'CA5363: Nezakazovat ověřování požadavků'
