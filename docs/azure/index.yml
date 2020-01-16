@@ -71,8 +71,14 @@ landingContent:
             url: /azure/key-vault/vs-key-vault-add-connected-service
           - text: Azure Active Directory
             url: /azure/active-directory/develop/vs-active-directory-add-connected-service
-          - text: Cognitive Services
-            url: /visualstudio/azure/cognitive-services-connected-services
+          - text: Cognitive Services – Analýza textu
+            url: /azure/cognitive-services/text-analytics/vs-text-connected-service
+          - text: Cognitive Services – Vyhledávání zpráv Bingu
+            url: /azure/cognitive-services/bing-news-search/vs-bing-news-search-connected-service
+          - text: Cognitive Services – Rozhraní API pro rozpoznávání tváře
+            url: /azure/cognitive-services/face/vs-face-connected-service
+          - text: Cognitive Services – Počítačové zpracování obrazu
+            url: /azure/cognitive-services/computer-vision/vs-computer-vision-connected-service
   - title: Azure Cloud Services
     linkLists:
       - linkListType: how-to-guide
