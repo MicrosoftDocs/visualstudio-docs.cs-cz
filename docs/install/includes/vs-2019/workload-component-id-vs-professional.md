@@ -3,19 +3,19 @@ title: ID úlohy a ID součástí Visual Studio Professional 2019
 titleSuffix: ''
 description: Použití pracovního vytížení a komponenta ID pro instalaci sady Visual Studio pomocí příkazového řádku nebo v závislosti na VSIX manifest
 keywords: ''
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.date: 12/03/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 414c68f544c88b1ee4de7ed1290b55be0000959e
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: a785f03f5588b951f9473ef6c4a88099c33d44f1
+ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74795604"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76159360"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-professional-2019"></a>Základní editor sady Visual Studio (zahrnutý v Visual Studio Professional 2019)
 
@@ -237,7 +237,7 @@ Microsoft.VisualStudio.Component.DiagnosticTools | Nástroje pro profilaci .NET 
 Microsoft.VisualStudio.Component.EntityFramework | Entity Framework 6 tools | 16.0.28315.86 | Doporučeno
 Microsoft.VisualStudio.Component.FSharp | F#podpora jazyků | 16.0.28315.86 | Doporučeno
 Microsoft.VisualStudio.Component.NuGet | Správce balíčků NuGet | 16.1.28829.92 | Doporučeno
-Component.Dotfuscator | PreEmptive ochranu – řešení Dotfuscator | 16.0.28528.71 | Volitelné
+Component.Dotfuscator | PreEmptive Protection – Dotfuscator | 16.0.28528.71 | Volitelné
 Component.Microsoft.VisualStudio.RazorExtension | Jazykové služby Razor | 16.0.28714.129 | Volitelné
 Component.Microsoft.Web.LibraryManager | Správce knihovny | 16.0.28315.86 | Volitelné
 Microsoft.Net.Component.4.6.2.TargetingPack | Rozhraní .NET framework 4.6.2 targeting pack | 16.0.28517.75 | Volitelné

@@ -3,19 +3,19 @@ title: Úlohy a ID komponent sady Visual Studio Team Explorer 2019
 titleSuffix: ''
 description: Pomocí ID pracovního vytížení a komponenta Visual Studio poskytuje integrované testovací nástroje pro všeobecně testery
 keywords: ''
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.date: 12/03/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 8918f1424c227d73ff5280fe6a5ae18d92a2e852
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: 6a602da63f86ee1a2a61054e5c3aa3b011541ba6
+ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74796207"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76159526"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2019"></a>Základní editor Visual Studio (zahrnutý v rámci sady Visual Studio Team Explorer 2019)
 

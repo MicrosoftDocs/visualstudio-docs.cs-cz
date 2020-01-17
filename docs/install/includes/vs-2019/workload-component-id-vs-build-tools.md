@@ -3,19 +3,19 @@ title: ID úlohy a ID součástí Visual Studio Build Tools 2019
 titleSuffix: ''
 description: Pomocí ID pracovního vytížení a komponenta Visual Studio můžete vytvářet klasické aplikace pro Windows
 keywords: ''
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.date: 12/03/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 1e9fa33bbd8604f4260b61767f69b85e3263198b
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: 9f3920b7b746e4329cf94760e983d43e3579e8d3
+ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74795626"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76159010"
 ---
 ## <a name="azure-development-build-tools"></a>Nástroje sestavení pro vývoj pro Azure
 
@@ -292,7 +292,7 @@ Microsoft.VisualStudio.Component.NuGet.BuildTools | NuGet cíle a úlohy sestave
 Microsoft.VisualStudio.Component.Roslyn.Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Požadováno
 Microsoft.VisualStudio.Component.VSSDKBuildTools | Základní nástroje pro sestavení sady Visual Studio SDK | 16.0.28315.86 | Požadováno
 Microsoft.VisualStudio.ComponentGroup.VisualStudioExtensionBuildTools.Prerequisites | Visual Studio předpoklady pro vývoj rozšíření | 16.4.29318.151 | Požadováno
-Component.Dotfuscator | PreEmptive ochranu – řešení Dotfuscator | 16.0.28528.71 | Volitelné
+Component.Dotfuscator | PreEmptive Protection – Dotfuscator | 16.0.28528.71 | Volitelné
 Microsoft.Component.VC.Runtime.OSSupport | C++Modul runtime Univerzální platforma Windows pro nástroje V142 Build | 16.4.29409.204 | Volitelné
 Microsoft.VisualStudio.Component.VC.ATL | C++ATL pro nejnovější nástroje V142 Build (x86 & x64) | 16.4.29313.120 | Volitelné
 Microsoft.VisualStudio.Component.VC.ATLMFC | C++MFC pro nejnovější nástroje V142 Build (x86 & x64) | 16.4.29313.120 | Volitelné
