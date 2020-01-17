@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Code Analysis page in Project Designer
 - Project Designer, Code Analysis page
 ms.assetid: 71743d26-4da5-4f7d-a403-7ab96cf2ef2e
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de941e6b1a07873c2c160351cce561721e845cdb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6b9b61d25d0a08763d55dcfb5d5ddb245471effc
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72609846"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76113784"
 ---
 # <a name="code-analysis-project-designer"></a>Analýza kódu, návrhář projektu
 
@@ -26,40 +26,40 @@ Obsahuje nástroj pro analýzu kódu, který se můžete rozhodnout pro spuště
 
 ## <a name="uielement-list"></a>UIElement – seznam
 
-Povolit analýzu kódu \
+Povolit Analysis kódu\
 Povoluje nebo zakazuje analýzu kódu pro váš projekt.
 
-Pravidla návrhu \
+Návrh Rules\
 Povoluje nebo zakazuje pravidla návrhu. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
 
-Pravidla globalizace \
+Globalizace Rules\
 Povolí nebo zakáže pravidla globalizace. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
 
-Pravidla interoperability \
+Vzájemná funkční spolupráce Rules\
 Povolí nebo zakáže pravidla interoperability. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
 
-Pravidla udržovatelnosti \
+Rules udržovatelnosti\
 Povoluje nebo zakazuje pravidla údržby. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
 
-Pravidla mobility \
+Mobility Rules\
 Povolí nebo zakáže pravidla mobility. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
 
-Pravidla pojmenování \
+Pojmenování Rules\
 Povolí nebo zakáže pravidla pojmenování. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
 
-Pravidla výkonu \
+Rules výkonu\
 Povoluje nebo zakazuje pravidla výkonu. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
 
-Pravidla přenositelnosti \
+Přenositelnost Rules\
 Povolí nebo zakáže pravidla přenositelnosti. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
 
-Pravidla spolehlivosti \
+Spolehlivost Rules\
 Povoluje nebo zakazuje pravidla spolehlivosti. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
 
-Pravidla zabezpečení \
+Rules zabezpečení\
 Povoluje nebo zakazuje pravidla zabezpečení. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
 
-Pravidla použití \
+Využití Rules\
 Povoluje nebo zakazuje pravidla použití. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
 
 ## <a name="see-also"></a>Viz také:

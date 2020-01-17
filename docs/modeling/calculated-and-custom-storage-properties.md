@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain properties
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: def432c5c2861716b4b3fb6e2f93f20a93a54a28
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 52915f0bac2bd172daf909541ecfa86396d90a5d
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748542"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115194"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>Vypočtené a vlastní vlastnosti úložiště
 Všechny vlastnosti domény v jazyce DSL (Domain Specific Language) lze zobrazit uživateli v diagramu a ve vašem jazykovém Průzkumníku a lze k němu přistupovat prostřednictvím kódu programu. Vlastnosti se ale liší ve způsobu, jakým jsou uložené jejich hodnoty.
@@ -25,8 +25,8 @@ Všechny vlastnosti domény v jazyce DSL (Domain Specific Language) lze zobrazit
 |Druh doménové vlastnosti|Popis|
 |-|-|
 |**Standardní** (výchozí)|Doménová vlastnost, která je uložena v *úložišti* a serializována do souboru.|
-|**Vypočíst**|Vlastnost domény jen pro čtení, která není uložena v úložišti, ale je počítána z jiných hodnot.<br /><br /> @No__t_0 lze například vypočítat z `Person.BirthDate`.<br /><br /> Je nutné zadat kód, který provede výpočet. Obvykle se počítá hodnota z jiných doménových vlastností. Můžete ale také použít externí prostředky.|
-|**Vlastní úložiště**|Doménová vlastnost, která se neukládá přímo do úložiště, ale může být Get i set.<br /><br /> Je nutné zadat metody, které získají a nastavují hodnotu.<br /><br /> Například `Person.FullAddress` mohl být uložen v `Person.StreetAddress`, `Person.City` a `Person.PostalCode`.<br /><br /> Můžete také získat přístup k externím prostředkům, například k získání a nastavení hodnot z databáze.<br /><br /> Váš kód by neměl nastavovat hodnoty v úložišti, pokud je `Store.InUndoRedoOrRollback` true. Viz [transakce a vlastní settery](#setters).|
+|**Vypočíst**|Vlastnost domény jen pro čtení, která není uložena v úložišti, ale je počítána z jiných hodnot.<br /><br /> `Person.Age` lze například vypočítat z `Person.BirthDate`.<br /><br /> Je nutné zadat kód, který provede výpočet. Obvykle se počítá hodnota z jiných doménových vlastností. Můžete ale také použít externí prostředky.|
+|**Vlastní úložiště**|Doménová vlastnost, která se neukládá přímo do úložiště, ale může být Get i set.<br /><br /> Je nutné zadat metody, které získají a nastavují hodnotu.<br /><br /> Například `Person.FullAddress` mohl být uložen v `Person.StreetAddress`, `Person.City`a `Person.PostalCode`.<br /><br /> Můžete také získat přístup k externím prostředkům, například k získání a nastavení hodnot z databáze.<br /><br /> Váš kód by neměl nastavovat hodnoty v úložišti, pokud je `Store.InUndoRedoOrRollback` true. Viz [transakce a vlastní settery](#setters).|
 
 ## <a name="providing-the-code-for-a-calculated-or-custom-storage-property"></a>Poskytnutí kódu pro vypočítanou nebo vlastní vlastnost úložiště
  Pokud nastavíte druh doménové vlastnosti na počítané nebo vlastní úložiště, budete muset zadat přístupové metody. Při sestavování řešení vám zpráva o chybě bude informovat o tom, co je potřeba.
@@ -41,7 +41,7 @@ Všechny vlastnosti domény v jazyce DSL (Domain Specific Language) lze zobrazit
 
 3. Klikněte na možnost **transformovat všechny šablony** na panelu nástrojů **Průzkumník řešení**.
 
-4. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+4. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
      Zobrazí se následující chybová zpráva: "*YourClass* neobsahuje definici pro Get*YourProperty*".
 
@@ -52,7 +52,7 @@ Všechny vlastnosti domény v jazyce DSL (Domain Specific Language) lze zobrazit
     > [!NOTE]
     > Tento soubor je vygenerovaný z DslDefinition. DSL. Pokud tento soubor upravíte, změny budou při příštím kliknutí na **transformovat všechny šablony**ztraceny. Místo toho přidejte požadovanou metodu do samostatného souboru.
 
-6. Vytvořte nebo otevřete soubor třídy v samostatné složce, například CustomCode \\*YourDomainClass*. cs.
+6. Vytvořte nebo otevřete soubor třídy v samostatné složce, například CustomCode\\*YourDomainClass*. cs.
 
      Ujistěte se, že obor názvů je stejný jako ve vygenerovaném kódu.
 

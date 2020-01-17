@@ -2,17 +2,17 @@
 title: Přizpůsobení chování kopírování
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e33ab59660263a5053642c95ec62ab36663f8e7b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 4e3ab9a30b373e2421607f6dd1609b13adad3087
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984308"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115347"
 ---
 # <a name="customizing-copy-behavior"></a>Přizpůsobení chování kopírování
 V sadě DSL (Domain-Specific Language) vytvořené pomocí sady Visual Studio vizualizace and modeling SDK můžete změnit, co se stane, když uživatel zkopíruje a vloží prvky.
@@ -51,7 +51,7 @@ Nastavte vlastnost **rozšíření kopírování** role tak, aby se **rozšíři
  **Rychlé duplikace prvků kopírováním a vložením.** V normálním případě je položka, kterou jste právě zkopírovali, stále vybrána a nelze do ní vložit stejný typ prvku.
 Přidejte do třídy domény direktivu sloučení elementů a nastavte ji tak, aby předalo sloučení do nadřazené třídy. To bude mít stejný účinek na operace přetažení. Další informace naleznete v tématu [přizpůsobení vytváření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md).
 
- \- nebo-
+ \- nebo –
 
  Před vložením prvků vyberte diagram přepsáním `ClipboardCommandSet.ProcessOnPasteCommand()`. Přidejte tento kód do vlastního souboru v projektu DslPackage:
 
@@ -75,15 +75,15 @@ partial class MyDslClipboardCommandSet
  **Vytvořte další odkazy, když uživatel vloží do vybraného cíle.** Například když je pole komentáře vloženo do prvku, je mezi nimi vytvořen odkaz.
 Přidejte direktivu sloučení elementů do cílové doménové třídy a nastavte ji pro zpracování sloučení přidáním odkazů. To bude mít stejný účinek na operace přetažení. Další informace naleznete v tématu [přizpůsobení vytváření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md).
 
- \- nebo-
+ \- nebo –
 
  Přepsat `ClipboardCommandSet.ProcessOnPasteCommand()` pro vytvoření dalších odkazů po volání základní metody.
 
  **Přizpůsobení formátů, ve kterých mohou být prvky zkopírovány** do externích aplikací – například pro přidání ohraničení do formuláře rastrového obrázku.
-Přepište *MyDsl* `ClipboardCommandSet.ProcessOnMenuCopyCommand()` v projektu DslPackage.
+Přepište *MyDsl*`ClipboardCommandSet.ProcessOnMenuCopyCommand()` v projektu DslPackage.
 
  **Upravte způsob, jakým se zkopírují prvky do schránky pomocí příkazu copy, ale ne v operaci přetažení.**
-Přepište *MyDsl* `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` v projektu DslPackage.
+Přepište *MyDsl*`ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` v projektu DslPackage.
 
  **Zachovat rozložení obrazce pomocí kopírování a vložení**
 Když uživatel zkopíruje více obrazců, můžete při jejich vložení zachovat jejich relativní pozice. Tato technika je znázorněna příkladem na [VMSDK: Ukázka diagramů okruhů](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8).
@@ -144,7 +144,7 @@ partial class MyDslDiagram // EDIT NAME
  **Vloží tvary do zvoleného umístění, jako je například aktuální pozice kurzoru.**
 Když uživatel zkopíruje více obrazců, můžete při jejich vložení zachovat jejich relativní pozice. Tato technika je znázorněna příkladem na [VMSDK: Ukázka diagramů okruhů](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8).
 
- Chcete-li dosáhnout tohoto efektu, přepište `ClipboardCommandSet.ProcessOnMenuPasteCommand()` pro použití verze `ElementOperations.Merge()` specifické pro umístění. Chcete-li to provést, přidejte do projektu DslPackage následující kód:
+ Chcete-li dosáhnout tohoto efektu, přepište `ClipboardCommandSet.ProcessOnMenuPasteCommand()` pro použití verze `ElementOperations.Merge()`specifické pro umístění. Chcete-li to provést, přidejte do projektu DslPackage následující kód:
 
 ```csharp
 
@@ -367,7 +367,7 @@ private ElementGroupPrototype ConvertDraggedTypeToLocal (MyTargetShape snapshot,
 
  Když uživatel stiskne kombinaci kláves CTRL + C nebo použije příkaz Kopírovat nabídku, je volána metoda <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A>. Můžete vidět, jak se nastavuje v **DslPackage\Generated Code\CommandSet.cs**. Další informace o tom, jak jsou nastaveny příkazy, naleznete v tématu [How to: Add a Command to a příkaz do místní nabídky](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
 
- ProcessOnMenuCopyCommand můžete přepsat přidáním částečné třídy definice *MyDsl* `ClipboardCommandSet` v projektu DslPackage.
+ ProcessOnMenuCopyCommand můžete přepsat přidáním částečné třídy definice *MyDsl*`ClipboardCommandSet` v projektu DslPackage.
 
 ```csharp
 using System.Collections.Generic;

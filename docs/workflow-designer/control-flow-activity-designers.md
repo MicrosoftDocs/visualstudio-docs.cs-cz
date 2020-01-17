@@ -3,17 +3,17 @@ title: Návrháři aktivity toku řízení Návrhář postupu provádění
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: ba74af23-5398-4e62-bd90-c50612e3bfef
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 36c2790378f91c4217dbca2cf190ae6e649a03c3
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 84f9de21dbf0529823690effb4285b63a3b226fa
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189763"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114680"
 ---
 # <a name="control-flow-activity-designers"></a>Návrháři aktivit toku řízení
 
@@ -55,7 +55,7 @@ Další typy návrháře aktivit najdete v následujících tématech:
 
  [Modul runtime](../workflow-designer/runtime-activity-designers.md)
 
- [Primitivní elementy](../workflow-designer/primitives-activity-designers.md)
+ [Primitiva](../workflow-designer/primitives-activity-designers.md)
 
  [Transakce](../workflow-designer/transaction-activity-designers.md)
 
@@ -63,6 +63,6 @@ Další typy návrháře aktivit najdete v následujících tématech:
 
  [Zpracování chyb](../workflow-designer/error-handling-activity-designers.md)
 
-## <a name="external-resources"></a>Externí zdroje
+## <a name="external-resources"></a>Externí prostředky
 
 - [Používání návrhářů aktivit](control-flow-activity-designers.md)

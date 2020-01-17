@@ -9,17 +9,17 @@ helpviewer_keywords:
 - reliability warnings
 - managed code analysis warnings, reliability warnings
 ms.assetid: 77886846-10a2-4585-968a-7eb60ebe07e8
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 602f372e11c4a9a8506186535958fc4f22da7806
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e936222a95681796f5c5ca423d122995e1ea5f79
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649119"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76113253"
 ---
 # <a name="reliability-warnings"></a>Upozornění spolehlivosti
 
@@ -33,4 +33,4 @@ Upozornění na spolehlivost podporují spolehlivost knihovny a aplikace, jako j
 |[CA2003: Rozlišujte vlákénka od vláken](../code-quality/ca2003.md)|Spravované vlákno je považováno za vlákno Win32.|
 |[CA2004: Odeberte volání GC.KeepAlive](../code-quality/ca2004.md)|Pokud převádíte na použití SafeHandle, odeberte všechna volání GC. Naživu (objekt). V takovém případě třídy by neměly muset volat GC. Udržení naživu za předpokladu, že nemají finalizační metodu, ale spoléhají na SafeHandle k finalizaci popisovače operačního systému pro ně.|
 |[CA2006: Použijte SafeHandle pro zapouzdření nativních prostředků](../code-quality/ca2006.md)|Použití IntPtr ve spravovaném kódu může znamenat možný problém zabezpečení a spolehlivosti. Všechna použití IntPtr musí být přezkoumána za účelem určení, zda je použití SafeHandle (nebo podobné technologie) na tomto místě vyžadováno.|
-|[CA2007: nečekat přímo na úlohu](../code-quality/ca2007.md)|Asynchronní metoda [čeká](/dotnet/csharp/language-reference/keywords/await) přímo <xref:System.Threading.Tasks.Task>.|
+|[CA2007: nečekat přímo na úlohu](../code-quality/ca2007.md)|Asynchronní metoda [očekává](/dotnet/csharp/language-reference/keywords/await) <xref:System.Threading.Tasks.Task> přímo.|

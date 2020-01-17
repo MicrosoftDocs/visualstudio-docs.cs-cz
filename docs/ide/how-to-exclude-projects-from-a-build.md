@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e72b072ad2cabab643d64f149a31b1b8dbb2a054
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: a19c49482c45aa0a3cf5d7cb33eb106adb65b83b
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713939"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114800"
 ---
 # <a name="how-to-exclude-projects-from-a-build"></a>Postupy: vyloučení projektů ze sestavení
 
@@ -30,7 +30,7 @@ Další informace najdete v tématu [Principy konfigurací sestavení](../ide/un
 
 ## <a name="to-temporarily-remove-a-project-from-the-active-solution-configuration"></a>Dočasné odebrání projektu z aktivní konfigurace řešení
 
-1. Na panelu nabídek vyberte možnost **sestavit**  > **Configuration Manager**.
+1. Na panelu nabídek vyberte možnost **sestavit** > **Configuration Manager**.
 
 2. V tabulce **kontexty projektu** vyhledejte projekt, který chcete ze sestavení vyloučit.
 
@@ -40,9 +40,9 @@ Další informace najdete v tématu [Principy konfigurací sestavení](../ide/un
 
 ## <a name="to-create-a-solution-configuration-that-excludes-a-project"></a>Vytvoření konfigurace řešení, která vylučuje projekt
 
-1. Na panelu nabídek vyberte možnost **sestavit**  > **Configuration Manager**.
+1. Na panelu nabídek vyberte možnost **sestavit** > **Configuration Manager**.
 
-2. V seznamu **aktivní konfigurace řešení** vyberte možnost **\<New >** .
+2. V seznamu **aktivní konfigurace řešení** vyberte možnost **\<nový >** .
 
 3. Do pole **název** zadejte název pro konfiguraci řešení.
 
@@ -52,7 +52,7 @@ Další informace najdete v tématu [Principy konfigurací sestavení](../ide/un
 
 6. Na **standardním** panelu nástrojů ověřte, zda je nová konfigurace řešení aktivní konfigurace v poli **Konfigurace řešení** .
 
-7. Na panelu nabídek vyberte možnost **sestavit**  >  znovu**Sestavit řešení**.
+7. V panelu nabídky zvolte **sestavení** > **znovu sestavit řešení**.
 
 ## <a name="skipped-projects"></a>Přeskočené projekty
 

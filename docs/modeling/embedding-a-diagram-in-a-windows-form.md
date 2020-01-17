@@ -2,17 +2,17 @@
 title: Vložení diagramu do formuláře Windows
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b0f6bbcfdfcf57902979d73b0181547cf779777b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 94425c9f3bc586847f43589f7abdcef2295cf1b9
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653754"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114622"
 ---
 # <a name="embed-a-diagram-in-a-windows-form"></a>Vložení diagramu do formuláře Windows
 

@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 620ffa1ea23c2c892e8385bd9e81a07fb640411a
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: fda60ffb97ecb44bd4a881cb42e4d9199cc958b8
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918900"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115341"
 ---
 # <a name="specify-custom-build-events-in-visual-studio"></a>Určení vlastních událostí sestavení v sadě Visual Studio
 
@@ -24,9 +24,9 @@ Zadání vlastního sestavení události, můžete automaticky spustit příkazy
 
 Konkrétní informace o programovacím jazyce, který používáte naleznete v následujících tématech:
 
-- Visual Basic--[postupy: Zadejte události sestavení (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md).
+- Visual Basic –[postupy: určení události (Visual Basic) sestavení](../ide/how-to-specify-build-events-visual-basic.md).
 
-- C#a F#--[postupy: Zadejte události sestavení (C#)](../ide/how-to-specify-build-events-csharp.md).
+- C#a F#--[postupy: určení událostí sestavení (C#)](../ide/how-to-specify-build-events-csharp.md).
 
 - Visual C++ –[události sestavení zadejte](/cpp/build/specifying-build-events).
 

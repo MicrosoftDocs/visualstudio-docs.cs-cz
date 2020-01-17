@@ -1,5 +1,5 @@
 ---
-title: Kombinace testů prohlížeče pro zátěžové testování
+title: Prohlížeč poměru testů pro zátěžové testování
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,79 +8,79 @@ helpviewer_keywords:
 - load tests, adding browsers
 - load tests, removing browsers
 ms.assetid: 47f981d9-3038-45cc-a486-82b9daf9a9a1
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b3f80da91181e4cb555d0ce96a5b4d2fb797eb0d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 394331ae06760e0547cfc2b5a37a6dcd357e3614
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664992"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114531"
 ---
-# <a name="edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario"></a>Upravit poměr testů pro určení typů webových prohlížečů ve scénáři zátěžového testu
+# <a name="edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario"></a>Úpravy poměru testů určující typy webových prohlížečů ve scénáři zátěžového testu
 
-*Kombinace prohlížečů* nabízí způsob, jak simulovat zatížení realističtější v rámci scénáře zátěžového testu. Zatížení je generováno pomocí heterogenní kombinace webových prohlížečů místo jednoho jediného webového prohlížeče. Vytvoříte užší přibližný odhad webových prohlížečů, které budou použity s vašimi aplikacemi.
+*Kombinace prohlížečů* poskytuje způsob, jak simulovat zatížení více realisticky v případě zkušebního scénáře. Zatížení je generováno pomocí heterogenní kombinace prohlížečů místo jednoho jediného webového prohlížeče. Můžete vytvořit užší odhad prohlížečů, které budou použity s vašimi aplikacemi.
 
-Kombinace prohlížečů určuje pravděpodobnost, že virtuální uživatel spustí určitý typ webového prohlížeče v rámci scénáře zátěžového testu. Při vytváření zátěžového testu může být vhodné simulovat, že se zatížení generuje prostřednictvím více než jednoho webového prohlížeče. Když do směsi přidáte typ webového prohlížeče ze sady webových prohlížečů, které jsou k dispozici, přidají se do každého požadavku HTTP, který odešle test výkonnosti webu, sadu přidružených hlaviček pro vybraný webový prohlížeč.
+Kombinace prohlížečů určuje pravděpodobnost, že virtuální uživatel spustí typ konkrétní webové prohlížeče ve scénáři testu zatížení. Když vytvoříte zátěžový test, můžete simulovat, zatížení je generováno pomocí více než jeden webový prohlížeč. Když přidáte typ webového prohlížeče do kombinaci ze sady webových prohlížečů, které jsou k dispozici, sadu přidružená záhlaví pro vybraný webový prohlížeč se přidá do každého požadavku HTTP, který se odešle podle testu výkonnosti webu.
 
-Kombinace prohlížečů funguje podobně jako další možnosti kombinace. Typ webového prohlížeče je náhodně přidružen k virtuálnímu uživateli na základě kombinace prohlížečů. Testy tohoto uživatele se spouštějí v konkrétním webovém prohlížeči na základě pravděpodobnosti, kterou jste zadali v kombinaci.
+Kombinace prohlížečů funguje stejně jako jiné kombinace možností. Typ webového prohlížeče náhodně souvisí s virtuálního uživatele, založené na kombinaci prohlížečů. Spuštění testů daného uživatele na konkrétní webový prohlížeč, podle pravděpodobnost, že jste zadali v kombinaci.
 
-Po zadání kombinace prohlížečů můžete později do kombinace přidat a odebrat typy webového prohlížeče. Můžete také změnit rozdělení kombinace prohlížečů pomocí ovládacího prvku míchání. Ovládací prvek míchání umožňuje snadno upravit distribuci prohlížečů ve scénáři.
+Po zadání kombinace prohlížečů, můžete později přidat a odebrat typy webových prohlížečů na kombinaci. Distribuce kombinace prohlížečů můžete také změnit pomocí kombinace ovládacího prvku. Kombinace řízení umožňuje snadno upravit kombinace prohlížečů ve scénáři.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="add-new-browsers-to-a-scenario"></a>Přidání nových prohlížečů do scénáře
+## <a name="add-new-browsers-to-a-scenario"></a>Přidat nové prohlížeče do scénáře
 
-### <a name="to-add-new-browsers-to-a-scenario"></a>Přidání nových prohlížečů do scénáře
+### <a name="to-add-new-browsers-to-a-scenario"></a>Chcete-li přidat nové prohlížeče do scénáře
 
-1. Když v procesu zadávání kombinace prohlížečů pro scénář zvolíte **Přidat**.
+1. Zatímco probíhá zadání kombinace prohlížečů pro scénáře vyberte **přidat**.
 
-     Do mřížky se přidá nová položka prohlížeče.
+     Přidání nové položky prohlížeče do mřížky.
 
     > [!NOTE]
-    > Chcete-li zobrazit dialogové okno **Upravit kombinaci prohlížečů** , klikněte pravým tlačítkem myši na existující scénář a zvolte možnost **Upravit kombinaci prohlížečů**.
+    > Chcete-li zobrazit **upravit poměr prohlížečů** dialogové okno, klikněte pravým tlačítkem na existující scénář a pak vyberte **upravit poměr prohlížečů**.
 
-2. Ve sloupci **typ prohlížeče** klikněte na šipku pro novou položku a vyberte požadovaný typ prohlížeče.
+2. V **typ prohlížeče** sloupce, klikněte na šipku pro novou položku a zvolte typ požadované prohlížeče.
 
-3. Volitelné Upravte ovládací prvek míchání pro určení distribuce testu.
+3. (Volitelné) Upravte poměr ovládacího prvku k určení distribuci testů.
 
-4. Až skončíte s přidáváním prohlížečů, klikněte na **tlačítko OK**.
+4. Po dokončení přidávání prohlížečů, zvolte **OK**.
 
-## <a name="remove-browsers-from-a-scenario"></a>Odebrání prohlížečů ze scénáře
+## <a name="remove-browsers-from-a-scenario"></a>Odebrání scénáři prohlížeče
 
-### <a name="to-remove-browsers-from-a-scenario"></a>Odebrání prohlížečů ze scénáře
+### <a name="to-remove-browsers-from-a-scenario"></a>Chcete-li odebrat prohlížečů ze scénáře
 
 1. Otevřete zátěžový test.
 
-2. Klikněte pravým tlačítkem na scénář, ze kterého chcete odebrat prohlížeč, a pak zvolte **Upravit kombinaci prohlížečů**.
+2. Klikněte pravým tlačítkem na scénář, ze kterého chcete odebrat prohlížeče a klikněte na tlačítko **upravit poměr prohlížečů**.
 
-     Zobrazí se dialogové okno **Upravit kombinaci prohlížečů** .
+     **Upravit poměr prohlížečů** se zobrazí dialogové okno.
 
-3. V mřížce vyberte prohlížeč a pak zvolte **Odebrat**.
+3. Vyberte prohlížeče v mřížce a potom zvolte **odebrat**.
 
-4. Volitelné Upravte ovládací prvek míchání pro určení distribuce testu.
+4. (Volitelné) Upravte poměr ovládacího prvku k určení distribuci testů.
 
-5. Po dokončení odebírání prohlížečů klikněte na **tlačítko OK**.
+5. Po dokončení odebírání prohlížečů, zvolte **OK**.
 
-## <a name="about-the-mix-control"></a>O ovládacím prvku míchání
+## <a name="about-the-mix-control"></a>O ovládacím prvku kombinace
 
-Ovládací prvek mix umožňuje upravit procento zatížení, které je distribuováno mezi testy, typy prohlížečů nebo typy sítě ve scénáři zátěžového testu. Procentuální hodnoty upravíte přesunutím jezdců. Úprava kombinace typů prohlížečů určuje pravděpodobnost, že virtuální uživatel spustí určitý typ prohlížeče v rámci scénáře zátěžového testu.
+Ovládací prvek kombinace umožňuje upravit procento zatížení, která je distribuovaná mezi testy, typu prohlížeče nebo typy sítí ve scénáři testu zatížení. Procentní hodnoty se upravit posunutím jezdce. Úprava kombinaci pro typy prohlížečů určuje pravděpodobnost, že virtuální uživatel spustí typu určitého webového prohlížeče ve scénáři testu zatížení.
 
-Při přesunutí posuvníku se změní procentuální hodnoty všech dostupných položek. Pokud máte více než dvě položky, je množství, které přidáváte nebo odebíráte, rozděleno rovnoměrně mezi ostatní položky. Toto chování je možné přepsat. Pokud zaškrtnete políčko ve sloupci uzamknout pro konkrétní položku, zamknete pro tuto položku zadanou procentuální hodnotu. Když přesunete posuvník, množství, které přidáte nebo odeberete, se použije jenom u zbývajících odemčených položek.
+Při přesunutí posuvníku procentuální hodnoty všechny dostupné položky změnit. Pokud máte více než dvě položky, velikost, přidat nebo odebrat rovnoměrně distribuovaných mezi ostatní položky. Je možné toto chování přepsat. Pokud vyberete zaškrtávací políčko ve sloupci zámek pro konkrétní položku, uzamknout specifikované procentuální hodnotou pro danou položku. Pak při přesunutí posuvníku, velikost, přidat nebo odebrat platí jenom pro všechny zbývající položky odemknout.
 
-Tlačítko **rozmístit** se používá k přidělení procentuálních hodnot rovnoměrně mezi všechny položky. Například pokud máte tři položky, volba **distribuovat** nastaví procentuální hodnoty na 34, 33 a 33.
+**Rozmístit** tlačítko slouží k přidělení procentní hodnoty rovnoměrně mezi všechny položky. Například pokud máte tři položky, výběrem **rozmístit** nastaví procentní hodnoty 34 33 a 33.
 
 > [!WARNING]
-> Tlačítko **distribuovat** přepisuje všechny položky, které jsou zamčené.
+> **Rozmístit** tlačítko přepíše všechny položky, které jsou zamknuté.
 
-Je také možné zadat procentuální hodnoty přímo do sloupce **%** místo použití jezdců. Pokud zadáte hodnotu v procentech přímo, ostatní položky se automaticky neupraví.
+Je také možné zadat procentní hodnoty přímo do **%** sloupce namísto použití posuvníků. Pokud zadáte hodnotu v procentech přímo, nebude se automaticky upraví další položky.
 
 > [!NOTE]
-> Když celkový součet nepřidá až 100%, nebo když jsou procentuální hodnoty zadané do sloupce **%** desetinná místa, jsou posuvníky zakázané.
+> Posuvníky jsou zakázané, pokud celkový počet nepřidá do 100 %, nebo pokud procentní hodnoty zadané do **%** sloupce jsou desetinná čísla.
 
-Když zadáte procentuální hodnoty ručně, měli byste se ujistit, že součet všech položek je 100%. Když uložíte směs, pokud součet není 100%, budete vyzváni, abyste přijali procentuální hodnoty tak, jak jsou, nebo se vrátíte a upravíte. Pokud se rozhodnete je přijmout, bude se poměrně 100%.  Pokud máte například dvě položky a ručně jste je nastavili na 80% a 40%, bude první položka nastavena na 66,67% (80 dělena 120) a druhá položka bude nastavena na 33,33% (40 dělený 120).
+Když ručně zadáte procentní hodnoty, by měl Ujistěte se, že součet všech položek je 100 %. Při ukládání kombinaci, nejsou-li součet 100 %, vyzve tak, aby přijímal procentní hodnoty, jak jsou, nebo se vrátit a upravte je tak. Pokud budete chtít nepřijmete, jak jsou, budou se poměrné přepočítání na 100 %.  Pokud máte dvě položky a je ručně nastaveno na 80 % až 40 %, nastaví se první položka % 66.67 (80 dělený 120) a nastaví se druhá položka % 33,33 (40 dělený 120).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Upravit scénáře zátěžového testu](../test/edit-load-test-scenarios.md)
+- [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md)

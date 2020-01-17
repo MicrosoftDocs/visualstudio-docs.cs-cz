@@ -5,17 +5,17 @@ ms.topic: reference
 f1_keywords:
 - WFDKeyboardShortcuts.UI
 ms.assetid: 9be75438-a4a3-4781-94e5-45b7ec082358
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f36e8b6d67d2405fbc74c0b1bf854b3a3baaf4da
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a8892f46585179ae5857d48deffd982e1cfc0dee
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650160"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115396"
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>Klávesové zkratky v návrháři postupu provádění
 
@@ -31,19 +31,19 @@ Následující tabulka shrnuje výchozí klávesové zkratky přiřazené k př�
 
 |Zástupce|Účel|
 |-|-------------|
-|CTRL + E, A|Zobrazí nebo skryje návrháře argumentů.|
-|CTRL + E, C|Sbalí vybranou aktivitu na místě.|
-|CTRL + E, E|Rozšíří vybranou aktivitu na místo.|
+|CTRL+E, A|Zobrazí nebo skryje návrháře argumentů.|
+|CTRL+E, C|Sbalí vybranou aktivitu na místě.|
+|CTRL+E, E|Rozšíří vybranou aktivitu na místo.|
 |CTRL + E, F|Propojí vybrané aktivity ve vývojovém diagramu.|
 |CTRL + E, I|Zobrazí nebo skryje návrháře importu.|
 |CTRL + E, M|Přesune fokus klávesnice na další položku v pořadí prvků.|
-|CTRL + E, N|Vytvoří novou proměnnou v rozsahu vybrané aktivity (nebo nejbližší).|
-|CTRL + E, O|Zobrazí nebo skryje přehledovou mapu.|
+|CTRL+E, N|Vytvoří novou proměnnou v rozsahu vybrané aktivity (nebo nejbližší).|
+|CTRL+E, O|Zobrazí nebo skryje přehledovou mapu.|
 |CTRL + E, P|Přejde k nadřazené položce vybrané aktivity. Tím se v navigaci s popisem cesty prochází jedna úroveň a změní se kořenová aktivita na návrhové ploše.|
 |CTRL + E, S|Přidá položku s fokusem klávesnice na aktuální výběr.|
-|CTRL + E, V|Zobrazí nebo skryje Návrhář proměnných.|
+|CTRL+E, V|Zobrazí nebo skryje Návrhář proměnných.|
 |CTRL + E, X|Rozbalí všechny aktivity v pracovním postupu.|
-|CTRL + ALT + F6|Přesune fokus klávesnice z aktuální oblasti uživatelského rozhraní do další oblasti v sekvenci. Pořadí je následující:<br /><br /> 1. navigační panel s popisem cesty<br />2. návrhová plocha<br />3. argumenty/proměnné/Imports Designer, pokud je otevřený<br />4. Shell|
+|CTRL+ALT+F6|Přesune fokus klávesnice z aktuální oblasti uživatelského rozhraní do další oblasti v sekvenci. Pořadí je následující:<br /><br /> 1. navigační panel s popisem cesty<br />2. návrhová plocha<br />3. argumenty/proměnné/Imports Designer, pokud je otevřený<br />4. Shell|
 
 ### <a name="flowchart"></a>Vývojový diagram
 
@@ -80,10 +80,10 @@ Ve výchozím nastavení se výchozí klávesové zkratky pro Visual Basic úpra
 - Přemapování klávesových zkratek pro následující příkazy nemá žádný vliv. K přístupu k těmto příkazům při úpravě výrazu lze použít pouze výchozí klávesové zkratky.
 
   - Vyjmout
-  - Kopírovat
+  - Kopírování
   - Vložit
   - Vybrat vše
-  - Vrátit zpět
-  - Proveďte
+  - Vrácení zpět
+  - Znovu:
 
 - Chcete-li změnit mapování klávesových zkratek pro příkazy pro úpravu výrazů uvnitř Návrhář postupu provádění v aplikaci Visual Studio, upravte zástupce v oboru Návrhář postupu provádění. Změny provedené v oboru textového editoru se automaticky nevztahují na Návrhář postupu provádění. Pokud chcete přemapovat zástupce na obou místech, musíte tyto změny použít dvakrát (jednou pro každý obor).

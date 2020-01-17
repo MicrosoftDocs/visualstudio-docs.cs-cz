@@ -2,17 +2,17 @@
 title: Sdílení tříd mezi DSL pomocí knihovny DSL
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a09622a2cc7ae6d2a2451ac1de6b628020cff19f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4bfadc1777dfb4ba0c8ea712cfd39becc47f54a1
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747411"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76111361"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>Sdílení tříd mezi DSL pomocí knihovny DSL
 V sadě Visual Studio vizualizace and modeling SDK můžete vytvořit nekompletní definici DSL, kterou můžete importovat do jiné DSL. To vám umožní zvážit společné části podobných modelů.
@@ -37,7 +37,7 @@ V sadě Visual Studio vizualizace and modeling SDK můžete vytvořit nekompletn
 
 4. Můžete přidat vlastní nastavení, která vyžadují další kód, například omezení ověřování.
 
-5. Klikněte na **transformovat všechny šablony**.
+5. Klikněte na tlačítko **Transformovat všechny šablony**.
 
 6. Sestavte projekt.
 

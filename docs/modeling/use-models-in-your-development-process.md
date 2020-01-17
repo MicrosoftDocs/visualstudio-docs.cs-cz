@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - UML, using models
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d30efd450f18832caadcc9a0008facc4388cd70a
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 601a49126dd266b6c080b4d79cd215616321837a
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986282"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115052"
 ---
 # <a name="use-models-in-your-development-process"></a>Použití modelů ve vývojových procesech
 
@@ -129,7 +129,7 @@ Různé druhy diagramů jsou užitečné pro popis návrhu na různých úrovní
 
 ## <a name="external-resources"></a>Externí zdroje
 
-|**Kategorií**|**Odkazy**|
+|**Kategorie**|**Odkazy**|
 |-|-|
 |**Videa**|![odkaz na video](../data-tools/media/playvideo.gif) [MSDN jak mám videa: jak vytvářet a používat modely a diagramy UML (Visual Studio 2010 Ultimate)](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif) [Channel 9: UML se sadou Visual Studio 2010](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-1-brainstorming-a-project)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif) [MSDN jak se řady: nástroje a rozšiřitelnost UML (Visual Studio 2010 Ultimate)](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))|
 |**Fóra**|- [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|

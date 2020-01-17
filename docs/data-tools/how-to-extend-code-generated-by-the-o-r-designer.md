@@ -3,17 +3,17 @@ title: 'Postupy: rozšiřování kódu generovaného návrhářem O-R'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d6d1122e-2f55-4607-8d8b-48c3c22600fb
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e89410d224adf0980e51c691dbf581655cc2ff3e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 588eb0f61dbc16fb1625752417ac5257bf48320f
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648349"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76113685"
 ---
 # <a name="how-to-extend-code-generated-by-the-or-designer"></a>Postupy: rozšiřování kódu generovaného návrhářem O/R
 Kód generovaný **návrhářem O/R** se znovu vygeneruje při změnách tříd entit a dalších objektů na návrhové ploše. Z důvodu tohoto opětovného generování kódu je kód, který přidáte do generovaného kódu, obvykle přepsán, když Návrhář znovu vygeneruje kód. **Návrhář o/R** poskytuje možnost generovat soubory částečné třídy, ve kterých můžete přidat kód, který není přepsán. Jedním z příkladů Přidání vlastního kódu do kódu generovaného **návrhářem o/R** je přidání ověření dat do tříd LINQ to SQL (entita). Další informace najdete v tématu [Postup: Přidání ověřování do tříd entit](../data-tools/how-to-add-validation-to-entity-classes.md).

@@ -5,17 +5,17 @@ ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.FlowDecision.UI
 ms.assetid: 4a49edc3-3662-4b7b-812e-0a5ba00d6c94
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2274333de9255ff818b4ee6952bfa1b2a99c59b3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 79e405f82bcf33bc01ad07f1092879c17dec5849
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650430"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76111433"
 ---
 # <a name="flowdecision-activity-designer"></a>Návrhář aktivity FlowDecision
 
@@ -23,11 +23,11 @@ Uzel <xref:System.Activities.Statements.FlowDecision> je podmíněný uzel, kter
 
 ## <a name="the-flowdecision-node"></a>Uzel použitím objektu FlowDecision
 
-Použijte <xref:System.Activities.Statements.FlowDecision>, když se tok může rozvětvit do dvou cest. Uzel <xref:System.Activities.Statements.FlowDecision> má <xref:System.Activities.Statements.FlowDecision.Condition%2A> a <xref:System.Activities.Statements.FlowNode> přidružený ke každému ze dvou možných výsledků: <xref:System.Activities.Statements.FlowDecision.True%2A> nebo <xref:System.Activities.Statements.FlowDecision.False%2A>. @No__t_0 se vyhodnotí a hodnota tohoto vyhodnocení Určuje další <xref:System.Activities.Statements.FlowNode>, který se má zpracovat v rámci <xref:System.Activities.Statements.Flowchart>.
+Použijte <xref:System.Activities.Statements.FlowDecision>, když se tok může rozvětvit do dvou cest. Uzel <xref:System.Activities.Statements.FlowDecision> má <xref:System.Activities.Statements.FlowDecision.Condition%2A> a <xref:System.Activities.Statements.FlowNode> přidružený ke každému ze dvou možných výsledků: <xref:System.Activities.Statements.FlowDecision.True%2A> nebo <xref:System.Activities.Statements.FlowDecision.False%2A>. <xref:System.Activities.Statements.FlowDecision.Condition%2A> se vyhodnotí a hodnota tohoto vyhodnocení Určuje další <xref:System.Activities.Statements.FlowNode>, který se má zpracovat v rámci <xref:System.Activities.Statements.Flowchart>.
 
 ### <a name="using-the-flowdecision-designer"></a>Použití návrháře použitím objektu FlowDecision
 
-Návrháře **použitím objektu FlowDecision** lze najít v kategorii **vývojové diagramy** v **sadě nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** na Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** +**ALT** +**X**.
+Návrháře **použitím objektu FlowDecision** lze najít v kategorii **vývojové diagramy** v **sadě nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** na Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL**+**ALT**+**X**.
 
 Návrhář **použitím objektu FlowDecision** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu v Návrháři aktivity **vývojového diagramu** . Tím se vytvoří <xref:System.Activities.Statements.FlowDecision> s označením **rozhodnutí** v rámci aktivity <xref:System.Activities.Statements.Flowchart>. Myš nad návrhářem a čtvercové táhlo **true** a **false** pro dvě větve se zobrazí.
 
@@ -41,9 +41,9 @@ V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Stateme
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Statements.FlowDecision.Condition%2A>|Podmínka|Podmínka, která určuje, která cesta má řízení toku trvat.|
-|<xref:System.Activities.Statements.FlowDecision.True%2A>|False|Cesta provedená řízením toku, pokud je splněna <xref:System.Activities.Statements.FlowDecision.Condition%2A>.|
-|<xref:System.Activities.Statements.FlowDecision.False%2A>|False|Cesta provedená ovládacím prvkem flow, pokud <xref:System.Activities.Statements.FlowDecision.Condition%2A> není splněna.|
+|<xref:System.Activities.Statements.FlowDecision.Condition%2A>|Pravda|Podmínka, která určuje, která cesta má řízení toku trvat.|
+|<xref:System.Activities.Statements.FlowDecision.True%2A>|Nepravda|Cesta provedená řízením toku, pokud je splněna <xref:System.Activities.Statements.FlowDecision.Condition%2A>.|
+|<xref:System.Activities.Statements.FlowDecision.False%2A>|Nepravda|Cesta provedená ovládacím prvkem flow, pokud <xref:System.Activities.Statements.FlowDecision.Condition%2A> není splněna.|
 
 ## <a name="see-also"></a>Viz také:
 

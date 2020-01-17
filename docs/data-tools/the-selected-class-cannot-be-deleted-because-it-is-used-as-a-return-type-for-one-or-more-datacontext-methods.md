@@ -3,23 +3,23 @@ title: Vybranou třídu nejde odstranit, protože se používá jako návratový
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: d68254a0-f3a1-47e2-aed3-a83471e1d711
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: aff8d7c01291c410f81b00c689f600507841965b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 249a5338985983509f04e0ff268b2f30e2773f71
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72640058"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76113558"
 ---
 # <a name="the-selected-class-cannot-be-deleted-because-it-is-used-as-a-return-type-for-one-or-more-datacontext-methods"></a>Vybranou třídu nejde odstranit, protože se používá jako návratový typ pro minimálně jednu metodu DataContext.
 
 Návratový typ jedné nebo více metod <xref:System.Data.Linq.DataContext> je vybraná třída entity. Odstranění třídy entity, která se používá jako návratový typ pro metodu <xref:System.Data.Linq.DataContext> způsobí, že se kompilace projektu nezdařila. Chcete-li odstranit vybranou třídu entity, identifikujte <xref:System.Data.Linq.DataContext> metody, které ji používají, a nastavte jejich návratové typy na jinou třídu entity.
 
-Chcete-li vrátit návratové typy <xref:System.Data.Linq.DataContext> metody do jejich původních automaticky generovaných typů, nejprve odstraňte metodu <xref:System.Data.Linq.DataContext> z podokna **metody** a potom objekt přetáhněte z **Průzkumník serveru** /**Průzkumník databáze** na hodnotu **o/R. Návrhář** znovu.
+Chcete-li vrátit návratové typy <xref:System.Data.Linq.DataContext> metody do jejich původních automaticky generovaných typů, nejprve odstraňte metodu <xref:System.Data.Linq.DataContext> z podokna **metody** a pak objekt přetáhněte z **Průzkumník serveru**/**Průzkumník databáze** do **Návrháře relací** objektů.
 
 ## <a name="to-correct-this-error"></a>Oprava této chyby
 

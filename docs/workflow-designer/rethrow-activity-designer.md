@@ -5,17 +5,17 @@ ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Rethrow.UI
 ms.assetid: 9cfa2eda-395f-4cf3-9154-83fadd4f7452
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d015ad500537a17cfc2c48c8076df43a38534ea
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3cb73a674e702d54f970c5dea7ec051f100382c9
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650007"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114749"
 ---
 # <a name="rethrow-activity-designer"></a>Návrhář aktivity Rethrow
 
@@ -35,7 +35,7 @@ Následující tabulka ukazuje vlastnosti <xref:System.Activities.Statements.Ret
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje nepovinný popisný název aktivity <xref:System.Activities.Statements.Rethrow>. Výchozí hodnota je znovu vyvolána.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Určuje nepovinný popisný název aktivity <xref:System.Activities.Statements.Rethrow>. Výchozí hodnota je znovu vyvolána.|
 
 ## <a name="see-also"></a>Viz také:
 

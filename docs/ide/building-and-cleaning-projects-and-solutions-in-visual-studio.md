@@ -18,17 +18,17 @@ helpviewer_keywords:
 - solution build configurations, build order
 - builds [Visual Studio], preparing
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
-author: TerryGLee
-ms.author: tglee
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3e71fe9b6179ac8f7ac69b0cb987fdbc30459fb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b1cf71abb19f6d4a3a459b4e5559e536f18f41c8
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596525"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114555"
 ---
 # <a name="build-and-clean-projects-and-solutions-in-visual-studio"></a>Sestavování a čištění projektů a řešení v aplikaci Visual Studio
 
@@ -81,7 +81,7 @@ Pomocí postupů v tomto tématu můžete vytvářet, znovu sestavit nebo vyčis
 
     - Na panelu nabídek vyberte možnost **sestavit** > **Sestavit řešení** (**CTRL**+**SHIFT**+**B**).
 
-    Když toto políčko zaškrtnuté, všechny projekty, jejich závislosti a soubory řešení jsou vytvořeny při spuštění některou z předchozích příkazů. Ve výchozím nastavení je toto políčko zaškrtnuté.
+    Když toto políčko zaškrtnuté, všechny projekty, jejich závislosti a soubory řešení jsou vytvořeny při spuštění některou z předchozích příkazů. Toto políčko není ve výchozím nastavení zaškrtnuté.
 
 ## <a name="to-build-only-the-selected-visual-c-project"></a>Sestavit jenom vybrané projektu Visual C++
 
