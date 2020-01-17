@@ -2,17 +2,17 @@
 title: Aktualizace obrazců a konektorů k vyjádření modelu
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84c26295461fa062faf88872dbc043048c26479a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 83a43e8570ea65373b8cac0bd3e3e7a8dc1f5791
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663798"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115021"
 ---
 # <a name="update-shapes-and-connectors-to-reflect-the-model"></a>Aktualizace obrazců a konektorů k vyjádření modelu
 
@@ -37,7 +37,7 @@ Tvar má nyní doménovou vlastnost, kterou můžete nastavit v programovém kó
 
 `shape.FillColor = System.Drawing.Color.Red;`
 
-Chcete-li nastavit proměnnou vlastnosti pouze v rámci řízení programu a nikoli podle uživatele, vyberte v diagramu definice DSL vlastnost Nová doména, jako je **Barva výplně** . Pak v okno Vlastnosti lze nastavit procházení, **aby bylo možné** `true` `false` nebo nastaveno na hodnotu **jen pro čtení uživatelského rozhraní** .
+Chcete-li nastavit proměnnou vlastnosti pouze v rámci řízení programu a nikoli podle uživatele, vyberte v diagramu definice DSL vlastnost Nová doména, jako je **Barva výplně** . Pak v okno Vlastnosti lze nastavit procházení, **aby bylo možné** `true``false` nebo nastaveno na hodnotu **jen pro čtení uživatelského rozhraní** .
 
 ## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>Definování pravidel změny pro barvu, styl nebo umístění závisí na vlastnostech elementu modelu.
  Můžete definovat pravidla, která aktualizují vzhled obrazce závislého na jiných částech modelu. Můžete například definovat pravidlo změny u prvku modelu, který aktualizuje barvu jeho tvaru závislých na vlastnostech elementu modelu. Další informace o pravidlech změn najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).

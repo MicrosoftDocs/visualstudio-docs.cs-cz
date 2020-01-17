@@ -6,16 +6,16 @@ manager: lank
 ms.date: 01/06/2020
 ms.topic: conceptual
 description: Naučte se aktivovat předplatné WhiteSource, které je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 8db777135e9f78321ccbc7cc9d40bf657da97589
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: edfc4c01908a6ce3bf5466a812ab7cf2608a62f7
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75866171"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114318"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>WhiteSource v předplatných sady Visual Studio
 
-Najděte a opravte slabá místa opensourcového kódu a vytvořte komplexní inventární a licenční sestavy všech opensourcových komponent ve vašem buildu. 
+Najděte a opravte slabá místa opensourcového kódu a vytvořte komplexní inventární a licenční sestavy všech opensourcových komponent ve vašem buildu. Předplatná Visual Studio Enterprise přijímají šest měsíců neomezených kontrol.
 
 ## <a name="activation-steps"></a>Kroky aktivace
 

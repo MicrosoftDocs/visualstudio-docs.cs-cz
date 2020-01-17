@@ -4,49 +4,49 @@ ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Warnings and errors
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: b9349e2c1c9ebb52e6172cc37ab1113aff95d511
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: b948aa83d5055fdf3d628a84002881eba9c91ac2
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653130"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76112525"
 ---
 # <a name="warnings-and-errors"></a>Upozornění a chyby
 
 ## <a name="warnings-and-errors-by-category"></a>Upozornění a chyby podle kategorie
 
-* **Mimo**
-  * [MaxBranches překročil](#maxbranches-exceeded)
-  * [MaxConstraintSolverTime překročil](#maxconstraintsolvertime-exceeded)
-  * [MaxConditions překročil](#maxconditions-exceeded)
-  * [MaxCalls překročil](#maxcalls-exceeded)
-  * [MaxStack překročil](#maxstack-exceeded)
-  * [MaxRuns překročil](#maxruns-exceeded)
-  * [MaxRunsWithoutNewTests překročil](#maxrunswithoutnewtests-exceeded)
+* **Hranice**
+  * [MaxBranches – překročeno](#maxbranches-exceeded)
+  * [MaxConstraintSolverTime exceeded – překročeno](#maxconstraintsolvertime-exceeded)
+  * [MaxConditions – překročeno](#maxconditions-exceeded)
+  * [MaxCalls – překročeno](#maxcalls-exceeded)
+  * [MaxStack – překročeno](#maxstack-exceeded)
+  * [MaxRuns – překročeno](#maxruns-exceeded)
+  * [MaxRunsWithoutNewTests – překročeno](#maxrunswithoutnewtests-exceeded)
 
 * **Řešení omezení**
   * [Nejde Konkretizovatovat řešení](#cannot-concretize-solution)
 
-* **Doménu**
+* **Domény**
   * [Potřebujete pomáhat s konstrukcí objektu.](#help-construct)
   * [Potřebujete pomáhat najít typy](#help-types)
   * [Byl vyodhadnut použitelný typ](#usable-type-guessed)
 
 * **Spuštění**
   * [Neočekávaná chyba při průzkumu](#unexpected-exploration)
-  * [TargetInvocationException –](#targetinvocationexception)
+  * [TargetInvocationException](#targetinvocationexception)
 
 * **Instrumentace**
   * [Neinstrumentovaná metoda s názvem](#uninstrumented-method-called)
   * [Externí metoda je volána](#external-method-called)
   * [Neinstrumentovaná metoda s názvem](#uninstrumentable-method-called)
   * [Problém s testováním](#testability-issue)
-  * [Omezené](#limitation)
+  * [Omezení](#limitation)
 
 * **Interpret**
   * [Pozorovaná neshoda volání](#observed-call-mismatch)
@@ -209,7 +209,7 @@ public void MyTest(...) {
 <a name="cannot-concretize-solution"></a>
 ## <a name="cannot-concretize-solution"></a>Nejde konkretizovatovat řešení
 
-Tato chyba je často v důsledku předchozí chyby. IntelliTest pomocí [řešitele omezení](input-generation.md#constraint-solver) určí nové vstupy testu. Testovací vstupy navržené [řešitelem omezení](input-generation.md#constraint-solver) jsou někdy neplatné. K tomu může dojít v těchto případech:
+Tato chyba je často v důsledku předchozí chyby. IntelliTest pomocí [řešitele omezení](input-generation.md#constraint-solver) určí nové vstupy testu. Testovací vstupy navržené [řešitelem omezení](input-generation.md#constraint-solver) jsou někdy neplatné. K této situaci mohlo dojít, pokud:
 
 * některá omezení nejsou známa.
 * Pokud jsou hodnoty vytvořeny uživatelem definovaným způsobem, způsobujících chyby v uživatelském kódu
@@ -301,7 +301,7 @@ IntelliTest [vygeneruje testovací vstupy](input-generation.md) monitorováním 
 Toto upozornění se zobrazí, protože během provádění testovacího případu byla volána metoda, která se buď chová jako nedeterministické, nebo spolupracuje s prostředím. Příklady jsou metody **System. Random** a **System. IO. File**. Pokud chcete, aby IntelliTest vytváření smysluplných testovacích vstupů, je nutné napodobovat metody, které IntelliTest příznaky jako problémy s testováním.
 
 <a name="limitation"></a>
-## <a name="limitation"></a>Omezené
+## <a name="limitation"></a>Omezení
 
 IntelliTest [generuje testovací vstupy](input-generation.md) pomocí [řešitele omezení](input-generation.md#constraint-solver).
 Existují však některé operace, které překračují rozsah [řešitele omezení](input-generation.md#constraint-solver).
@@ -344,4 +344,4 @@ V některých situacích je změna statického pole přijatelná:
 
 ## <a name="got-feedback"></a>Máte zpětnou vazbu?
 
-Publikujte své nápady a žádosti o funkce na [komunitě vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
+Své nápady a žádosti o funkce můžete zadávat na webu [Developer Community](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

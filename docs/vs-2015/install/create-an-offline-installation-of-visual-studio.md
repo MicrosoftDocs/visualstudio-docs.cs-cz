@@ -13,17 +13,17 @@ caps.latest.revision: 22
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 197ae2a168f7f14f7d0ea3d9b82b5943c1af82f4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 72bf11519ec500082304fde431122d05ee65db54
+ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68186011"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76124514"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Vytvoření offline instalace sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio, naleznete v tématu [vytvoření offline instalace sady Visual Studio](/visualstudio/install/create-an-offline-installation-of-visual-studio) nebo [vytvoření síťové instalace sady Visual Studio](/visualstudio/install/create-a-network-installation-of-visual-studio).
+Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [vytvoření offline instalace sady Visual Studio](/visualstudio/install/create-an-offline-installation-of-visual-studio) nebo [Vytvoření síťové instalace sady Visual Studio](/visualstudio/install/create-a-network-installation-of-visual-studio).
 
 Tato stránka popisuje postup instalace sady Visual Studio 2015, když nejsou připojeni k Internetu. Však "odpojené" instalace, musíte nejprve vytvoříte rozložení pro offline instalaci pomocí počítač, který je připojený k Internetu. Tady je postup.
 
@@ -44,9 +44,9 @@ Tato stránka popisuje postup instalace sady Visual Studio 2015, když nejsou p�
 
 3. Po spuštění tohoto příkazu se zobrazí dialogové okno, které je možné změnit složku offline instalace rozložení uložená.   Klikněte **Stáhnout** tlačítko.
 
-     Je-li stažení balíčku úspěšné, zobrazí se zpráva, že **instalace úspěšná! Všechny zadané součásti byly úspěšně získány.**
+     Po úspěšném stažení balíčku by se měla zobrazit zpráva, že **instalační program byl úspěšný. Všechny zadané součásti byly úspěšně získány.**
 
-4. Vyhledejte složku, kterou jste zadali dříve. (Vyhledejte například D:\VisualStudio2015.) Tato složka obsahuje všechno, co potřebujete zkopírovat do sdíleného umístění nebo instalační médium.
+4. Vyhledejte složku, kterou jste zadali dříve. (Například vyhledat D:\VisualStudio2015.) Tato složka obsahuje všechno, co potřebujete ke zkopírování do sdíleného umístění nebo instalačního média.
 
     > [!CAUTION]
     > Sady Android SDK v současné době nepodporuje prostředí offline instalace. Pokud nainstalujete na počítač, který není připojený k Internetu položky instalace sady Android SDK, instalace se nemusí podařit. Další informace najdete v části "Řešení potíží s offline instalace" v tomto tématu.
@@ -61,28 +61,28 @@ Tato stránka popisuje postup instalace sady Visual Studio 2015, když nejsou p�
 
 | Součásti nebo balíčku | Řešení |
 |-|-|
-| Nástroj Dotfuscator a Analytics Community Edition 5.19.1 (pro edice Community, Professional a Enterprise sady Visual Studio, jako nainstalovanou v **Windows 7 SP1** a **systému Windows Server 2008 R2**) | Pokud je offline počítač spuštěný **Windows 7 SP1** nebo **systému Windows Server 2008 R2**, musíte provést následující kroky před instalací sady Visual Studio 2015:<br /><br /> 1.  Nakonfigurujte souborový nebo webový server pro stahování seznamů CTL.<br /><br /> 2.    Přesměrujte Microsoft URL adresy automatických aktualizací pro odpojené prostředí.<br /><br /> Další informace najdete v tématu [konfigurovat Důvěryhodné kořeny a zakázané certifikáty](https://technet.microsoft.com/library/dn265983.aspx) stránky na webu Microsoft TechNet. |
-| Instalace sady Android SDK (úroveň rozhraní API) | Musíte mít internetové připojení k instalaci balíčků sady Android SDK (úroveň rozhraní API). Pokud jste v síti s omezeným přístupem, musí umožňovat přístup k následujícím adresám URL, když instalujete Visual Studio:<br /><br /> -   http://dl.google.com:443<br />-   http://dl-ssl.google.com:443<br />-   https://dl-ssl.google.com/android/repository/*<br /> <br />Další informace o tom, jak vyřešit možné problémy s nastavením proxy serveru, najdete v článku [selháním (instalace sady Android SDK) za proxy serverem instalace sady Visual Studio 2015](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/) blogový příspěvek. |
-| Šablony pro rozšiřující položky sady Visual Studio<br /><br /> Rozšíření GitHub pro Visual Studio<br /><br /> Nástroje Powershellu pro Visual Studio | Pokud nemáte připojení k Internetu při instalaci sady Visual Studio 2015, můžete použít speciální offline kanál ke generování rozložení pro offline instalaci. **Poznámka:**  Tento speciální kanál obsahuje nejnovější aktualizace pro sadu Visual Studio 2015. <br /><br /> Vytvořte offline kanál speciální, spusťte následující příkaz: / Layout *jednotka:* \VisualStudio2015 /overridefeeduri *adresu URL pro informační kanál xml*<br /><br /> Například pro anglickou speciální offline kanál sady Visual Studio 2015 Enterprise, spusťte tento příkaz:<br /><br /> `vs_enterprise_ENU.exe /layout D:\VisualStudio2015 /overridefeeduri "http://go.microsoft.com/fwlink/?LinkID=785882&clcid0x409"`<br /><br /> Úplný seznam adres URL, které můžete použít k vytvoření speciální offline kanálu v jazyce podle vašeho výběru najdete v následující tabulce. |
+| Nástroj Dotfuscator a Analytics Community Edition 5.19.1 (pro edice Community, Professional a Enterprise sady Visual Studio, jako nainstalovanou v **Windows 7 SP1** a **systému Windows Server 2008 R2**) | Pokud je offline počítač spuštěný **Windows 7 SP1** nebo **systému Windows Server 2008 R2**, musíte provést následující kroky před instalací sady Visual Studio 2015:<br /><br /> 1. Nakonfigurujte soubor nebo webový server tak, aby stahoval soubory CTL.<br /><br /> 2. přesměrujte adresu URL automatické aktualizace Microsoftu pro odpojené prostředí.<br /><br /> Další informace najdete v tématu [konfigurovat Důvěryhodné kořeny a zakázané certifikáty](https://technet.microsoft.com/library/dn265983.aspx) stránky na webu Microsoft TechNet. |
+| Instalace sady Android SDK (úroveň rozhraní API) | Musíte mít internetové připojení k instalaci balíčků sady Android SDK (úroveň rozhraní API). Pokud jste v síti s omezeným přístupem, musí umožňovat přístup k následujícím adresám URL, když instalujete Visual Studio:<br /><br /> -   https://dl.google.com:443<br />-   https://dl-ssl.google.com:443<br />-   https://dl-ssl.google.com/android/repository/*<br /> <br />Další informace o tom, jak vyřešit možné problémy s nastavením proxy serveru, najdete v článku [selháním (instalace sady Android SDK) za proxy serverem instalace sady Visual Studio 2015](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/) blogový příspěvek. |
+| Šablony pro rozšiřující položky sady Visual Studio<br /><br /> Rozšíření GitHub pro Visual Studio<br /><br /> Nástroje Powershellu pro Visual Studio | Pokud nemáte připojení k Internetu při instalaci sady Visual Studio 2015, můžete použít speciální offline kanál ke generování rozložení pro offline instalaci. **Poznámka:** tento speciální kanál obsahuje nejnovější aktualizace pro sadu Visual Studio 2015. <br /><br /> Vytvořte offline kanál speciální, spusťte následující příkaz: / Layout *jednotka:* \VisualStudio2015 /overridefeeduri *adresu URL pro informační kanál xml*<br /><br /> Například pro anglickou speciální offline kanál sady Visual Studio 2015 Enterprise, spusťte tento příkaz:<br /><br /> `vs_enterprise_ENU.exe /layout D:\VisualStudio2015 /overridefeeduri "https://go.microsoft.com/fwlink/?LinkID=785882&clcid0x409"`<br /><br /> Úplný seznam adres URL, které můžete použít k vytvoření speciální offline kanálu v jazyce podle vašeho výběru najdete v následující tabulce. |
 
  Pomocí následující adresy URL vytvoření specifické pro jazyk speciální offline informačního kanálu, jak je popsáno v předchozí tabulce.
 
-|       Jazyk        |                            Adresa URL                            |
+|       Jazyk        |                            URL                            |
 |-----------------------|-----------------------------------------------------------|
-| Čínština (zjednodušená)  | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x804 |
-| Čínština (tradiční) | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x404 |
-|         Čeština         | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x405 |
-|        Němčina         | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x407 |
-|        Angličtina        | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x409 |
-|        Španělština        | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0xC0A |
-|        Francouzština         | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x40C |
-|        Italština        | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x410 |
-|       Japonština        | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x411 |
-|        Korejština         | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x412 |
-|        Polština         | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x415 |
-|      Portugalština       | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x416 |
-|        Ruština        | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x419 |
-|        Turečtina        | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x41F |
+| Čínština (zjednodušená)  | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x804 |
+| Čínština (tradiční) | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x404 |
+|         Čeština         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x405 |
+|        Němčina         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x407 |
+|        angličtina        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x409 |
+|        Španělština        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0xC0A |
+|        Francouzština         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x40C |
+|        Italština        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x410 |
+|       Japonština        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x411 |
+|        Korejština         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x412 |
+|        Polština         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x415 |
+|      Portugalština       | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x416 |
+|        Ruština        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x419 |
+|        Turečtina        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x41F |
 
 ## <a name="see-also"></a>Viz také
 

@@ -2,17 +2,17 @@
 title: Vytvoření doménově specifického jazyka založeného na Windows Forms
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc9d043f64204c50be06952ecc39be75e15087cf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f565184dcb9570ecc34b61f1f2d4d0e2ce2a4110
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654110"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114878"
 ---
 # <a name="create-a-windows-forms-based-domain-specific-language"></a>Vytvoření jazyka specifického pro doménu založeného na model Windows Forms
 
@@ -33,13 +33,13 @@ Následující obrázek ukazuje uživatelské rozhraní formuláře Windows a Pr
    | | |
    |-|-|
    | Název řešení a DSL | FarmApp |
-   | Obor názvů | Společnost. FarmApp |
+   | Názvový prostor | Společnost. FarmApp |
 
 2. Experimentujte s úvodním příkladem, který šablona poskytuje:
 
    1. Transformujte všechny šablony.
 
-   2. Sestavte a spusťte ukázku (**Ctrl** +**F5**).
+   2. Sestavte a spusťte ukázku (**Ctrl**+**F5**).
 
    3. V experimentální instanci aplikace Visual Studio otevřete soubor `Sample` v ladění projektu.
 
@@ -53,11 +53,11 @@ Následující obrázek ukazuje uživatelské rozhraní formuláře Windows a Pr
 
 - `DslDefinition.dsl` neobsahuje žádné prvky diagramu. Důvodem je, že nebudete používat diagramy DSL k zobrazení modelů instancí této DSL. Místo toho navážete formulář Windows na model a prvky ve formuláři zobrazí model.
 
-- Kromě projektů `Dsl` a `DslPackage` obsahuje řešení také třetí projekt s názvem `UI.` projekt**uživatelského rozhraní** obsahuje definici model Windows Formsho ovládacího prvku. `DslPackage` závisí na `UI` a `UI` závisí na `Dsl`.
+- Kromě projektů `Dsl` a `DslPackage` obsahuje řešení také třetí projekt s názvem `UI.`projekt **uživatelského rozhraní** obsahuje definici model Windows Formsho ovládacího prvku. `DslPackage` závisí na `UI`a `UI` závisí na `Dsl`.
 
 - V projektu `DslPackage` `UI\DocView.cs` obsahuje kód, který zobrazuje ovládací prvek model Windows Forms, který je definován v projektu `UI`.
 
-- @No__t_0 projekt obsahuje pracovní ukázku ovládacího prvku formuláře vázaného na DSL. Po změně definice DSL ale nebude fungovat. @No__t_0 projekt obsahuje:
+- `UI` projekt obsahuje pracovní ukázku ovládacího prvku formuláře vázaného na DSL. Po změně definice DSL ale nebude fungovat. `UI` projekt obsahuje:
 
   - Model Windows Forms třídy s názvem `ModelViewControl`.
 
@@ -123,7 +123,7 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
 2. Vyberte **objekt**, **Další**.
 
-     Rozbalte **DSL**, **Company. FarmApp**a vyberte **farmu**, která je kořenovou třídou vašeho modelu. Klikněte na tlačítko **Dokončit**.
+     Rozbalte **DSL**, **Company. FarmApp**a vyberte **farmu**, která je kořenovou třídou vašeho modelu. Zvolte **Dokončit**.
 
      V Průzkumník řešení projekt **uživatelského rozhraní** nyní obsahuje **Properties\DataSources\Farm.DataSource**
 
@@ -162,7 +162,7 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
      Nastavte vlastnost **DataMember** na hodnotu **zvířata** nebo **pole**.
 
-10. Nastavte vlastnosti **DataSource** `AnimalGridView` na `AnimalBinding` a `FieldGridView` na `FieldBinding`.
+10. Nastavte vlastnosti **DataSource** `AnimalGridView` na `AnimalBinding`a `FieldGridView` na `FieldBinding`.
 
 11. Upravte rozložení ovládacího prvku farmy na svou chuť.
 
@@ -174,7 +174,7 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
 - Zajistí, že když uživatel vybere řádek, okno Vlastnosti zobrazí vlastnosti odpovídajícího prvku modelu namísto řádku datové mřížky.
 
-  ![DslWpf4 ](../modeling/media/dslwpf4.png) schéma propojení mezi zdroji dat a zobrazeními.
+  ![DslWpf4](../modeling/media/dslwpf4.png) schéma propojení mezi zdroji dat a zobrazeními.
 
 ### <a name="complete-the-bindings-to-the-dsl"></a>Dokončete vazby na DSL.
 

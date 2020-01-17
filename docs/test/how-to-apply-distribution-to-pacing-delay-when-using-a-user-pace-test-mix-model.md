@@ -5,15 +5,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - load tests, test mix model
 ms.assetid: ae8b35f9-d465-4d72-8d7d-7b56ae6ffd22
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3241017a381370f215ed4f9211ae646dc6c80b65
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 953c1ac4cb6e0f87d2a36080cc751ea26f66d63e
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664832"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114488"
 ---
 # <a name="how-to-apply-distribution-to-pacing-delay-for-a-user-pace-test-mix-model"></a>Postupy: použití distribuce na zpoždění stimulace pro model kombinace testů tempa uživatele
 
@@ -40,21 +40,21 @@ Hodnotu pro **zpoždění použití rozdělení na stimulace** lze nastavit buď
 
 1. Otevřete zátěžový test.
 
-   Zobrazí se **Editor zátěžového testu** . Zobrazí se strom zátěžového testu.
+   **Editoru zátěžových testů** se zobrazí. Zobrazí se strom zátěžového testu.
 
 2. Ve složce **scénáře** ve stromové struktuře zátěžového testu vyberte uzel scénáře, pro který chcete stimulace distribuci použít.
 
-3. V nabídce **zobrazení** vyberte **okno Vlastnosti**.
+3. Na **zobrazení** nabídce vyberte možnost **okno vlastností**.
 
-   Kategorie a vlastnosti scénáře se zobrazí v okně **vlastnosti** .
+   Kategorie a vlastnosti scénáře jsou zobrazeny v **vlastnosti** okna.
 
 4. V hodnotě vlastnosti pro **zpoždění použít rozdělení na stimulace**vyberte **true** nebo **false**.
 
-5. Vyberte **soubor**  > **Uložit**. Nyní můžete spustit zátěžový test s novou hodnotou **zpoždění použít rozdělení na stimulace** .
+5. Vyberte **soubor** > **Uložit**. Nyní můžete spustit zátěžový test s novou hodnotou **zpoždění použít rozdělení na stimulace** .
 
 ## <a name="see-also"></a>Viz také:
 
-- [Upravit scénáře zátěžového testu](../test/edit-load-test-scenarios.md)
+- [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md)
 - [Návod: Vytvoření a spuštění zátěžového testu](../test/walkthrough-create-and-run-a-load-test.md)
 - [Kontrolery testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md)
 - [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md)

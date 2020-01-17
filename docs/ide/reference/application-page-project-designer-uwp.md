@@ -6,17 +6,17 @@ f1_keywords:
 - AppPackage.Properties.Application
 helpviewer_keywords:
 - Application page [UWP project]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 01edb1871388cdc31f6c92ff25d10c876dfebc64
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 85ee317b315f8f8d21f5a2d97d91a9950fd395f9
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651944"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114405"
 ---
 # <a name="application-property-page-uwp-projects"></a>Stránka vlastností aplikace (projekty UWP)
 
@@ -24,21 +24,21 @@ Pomocí stránky vlastností **aplikace** zadejte sestavení a informace balíč
 
 ![Stránka vlastností aplikace](media/application-page-uwp.png)
 
-Chcete-li získat přístup ke stránce **aplikace** , vyberte uzel projektu v **Průzkumník řešení**. Pak zvolte **projekt**  > **vlastnosti** na řádku nabídek. Stránky vlastností otevřené na kartě **aplikace**
+Chcete-li získat přístup ke stránce **aplikace** , vyberte uzel projektu v **Průzkumník řešení**. Pak zvolte **projekt** > **vlastnosti** na řádku nabídek. Stránky vlastností otevřené na kartě **aplikace**
 
 ## <a name="general-section"></a>Oddíl obecné
 
-**Název sestavení** &mdash;Specifies název výstupního souboru, který bude obsahovat manifest sestavení.
+**Název sestavení**&mdash;Určuje název výstupního souboru, který bude obsahovat manifest sestavení.
 
 Chcete-li získat přístup k této vlastnosti programově, přečtěte si téma <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.
 
-**Výchozí obor názvů** &mdash;Specifies základní obor názvů pro soubory přidané do projektu. Další informace o oborech názvů najdete v tématu [obory názvů (C# Průvodce programováním)](/dotnet/csharp/programming-guide/namespaces/), [obory názvů (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/namespaces)nebo [obory názvů (C++)](/cpp/cpp/namespaces-cpp).
+**Výchozí obor názvů**&mdash;určuje základní obor názvů pro soubory přidané do projektu. Další informace o oborech názvů najdete v tématu [obory názvů (C# Průvodce programováním)](/dotnet/csharp/programming-guide/namespaces/), [obory názvů (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/namespaces)nebo [obory názvů (C++)](/cpp/cpp/namespaces-cpp).
 
 Chcete-li získat přístup k této vlastnosti programově, přečtěte si téma <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.
 
-**Informace o sestavení** &mdash;Choosing tomto tlačítku se zobrazí [dialogové okno informace o sestavení](../../ide/reference/assembly-information-dialog-box.md).
+**Informace o sestavení**&mdash;kliknutím na toto tlačítko zobrazíte [dialogové okno informace o sestavení](../../ide/reference/assembly-information-dialog-box.md).
 
-**Manifest balíčku** &mdash;Choosing toto tlačítko otevře návrháře manifestu. K nástroji manifest Designer lze také přistupovat výběrem souboru _Package. appxmanifest_ v **Průzkumník řešení**. Další informace najdete v tématu [konfigurace balíčku pomocí nástroje manifest Designer](/windows/uwp/packaging/packaging-uwp-apps#configure-an-app-package).
+**Manifest balíčku**&mdash;kliknutím na toto tlačítko Otevřete návrháře manifestu. K nástroji manifest Designer lze také přistupovat výběrem souboru _Package. appxmanifest_ v **Průzkumník řešení**. Další informace najdete v tématu [konfigurace balíčku pomocí nástroje manifest Designer](/windows/uwp/packaging/packaging-uwp-apps#configure-an-app-package).
 
 ## <a name="targeting-section"></a>Oddíl cílení
 

@@ -6,17 +6,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.xmlbehavior
 helpviewer_keywords:
 - Domain-Specific Language, serialization
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27d8672ea94cf2a1547904f313ac36509f111462
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d8fe9fb5086b93861c7ca12a208affe7aa979df2
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748462"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114434"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>Přizpůsobení úložiště souborů a serializace XML
 
@@ -124,13 +124,13 @@ Kvalifikované monikery klíčů je snazší číst než monikery ID. Pokud mát
 
 1. Ujistěte se, že **je klíč monikeru** `false` pro každou doménovou vlastnost ve třídě a jejích základních třídách.
 
-    1. V Průzkumníku DSL rozbalte **Behavior\Class data serializace Xml \\ \<the doménová třída > data \Element**.
+    1. V Průzkumníku DSL rozbalte **Behavior\Class data serializace Xml\\\<doménová třída > data \Element**.
 
     2. Ověřte, že **je klíč monikeru** `false` pro každou doménovou vlastnost.
 
     3. Pokud má doménová třída základní třídu, opakujte proceduru v této třídě.
 
-2. Nastavte **ID serializace**  =  `true` pro doménovou třídu.
+2. Nastavte **ID serializace** = `true` pro doménovou třídu.
 
      Tato vlastnost je k dispozici v rámci **chování serializace XML**.
 
@@ -138,17 +138,17 @@ Kvalifikované monikery klíčů je snazší číst než monikery ID. Pokud mát
 
 - Set **je klíč monikeru** pro doménovou vlastnost existující doménové třídy. Typ vlastnosti musí být `string`.
 
-    1. V Průzkumníku DSL rozbalte **Behavior\Class data serializace Xml \\ \<the doménová třída > data \Element**a pak vyberte doménovou vlastnost.
+    1. V Průzkumníku DSL rozbalte **Behavior\Class data serializace Xml\\\<doménová třída > data \Element**a pak vyberte doménovou vlastnost.
 
-    2. V okno Vlastnosti nastavte pro `true` **klíč moniker** .
+    2. V okno Vlastnosti nastavte pro `true`**klíč moniker** .
 
-- \- nebo-
+- \- nebo –
 
      Pomocí nástroje **s pojmenovanou doménovou třídou** vytvořte novou doménovou třídu.
 
      Tento nástroj vytvoří novou třídu, která má vlastnost domény nazvanou název. **Je název elementu** a **je vlastnosti klíče monikeru** této doménové vlastnosti inicializována na `true`.
 
-- \- nebo-
+- \- nebo –
 
      Vytvořte vztah dědičnosti z doménové třídy na jinou třídu, která má vlastnost klíče monikeru.
 
@@ -158,7 +158,7 @@ Použijete-li kvalifikované monikery klíčů, je možné, že dva prvky v mode
 
 Existuje několik metod, které se mohou vyhnout této situaci:
 
-- Vlastnost Set **je název elementu**  =  `true` vlastnosti klíčová doména. Vyberte vlastnost doména v diagramu definice DSL a pak nastavte hodnotu v okno Vlastnosti.
+- Vlastnost Set **je název elementu** = `true` vlastnosti klíčová doména. Vyberte vlastnost doména v diagramu definice DSL a pak nastavte hodnotu v okno Vlastnosti.
 
      Když uživatel vytvoří novou instanci třídy, tato hodnota způsobí, že se vlastnost domain automaticky přiřadí jiné hodnotě. Výchozí chování přidá číslo na konec názvu třídy. To uživateli nebrání v změně názvu na duplicitní, ale v případě, že uživatel nenastavuje hodnotu před uložením modelu, pomáhá.
 
@@ -230,7 +230,7 @@ Chcete-li provést následující přizpůsobení, rozbalte uzel **chování ser
     </familyTreeModel>
     ```
 
-- Nastavte **reprezentaci**  = **element** tak, aby byla doménová vlastnost uložena jako prvek namísto hodnoty atributu.
+- Nastavte **reprezentaci** = **element** tak, aby byla doménová vlastnost uložena jako prvek namísto hodnoty atributu.
 
     ```xml
     <person name="Elizabeth I" birthYear="1533">
@@ -272,10 +272,10 @@ Tyto prvky se nacházejí v Průzkumníkovi DSL pod **daty serializace XML Behav
 |Má vlastní schéma elementů|Pokud má hodnotu true, znamená to, že doménová třída má schéma vlastního elementu.|
 |Je vlastní|Nastavte na **hodnotu true** , pokud chcete zapsat vlastní serializaci a kód deserializace pro tuto doménovou třídu.<br /><br /> Sestavte řešení a prozkoumejte chyby a zjistěte podrobné pokyny.|
 |Domain – třída|Doménová třída, na kterou se vztahuje tento uzel dat třídy Jen pro čtení.|
-|Název elementu|Název uzlu XML pro prvky této třídy. Výchozí hodnota je nižší verze názvu doménové třídy.|
+|Název prvku|Název uzlu XML pro prvky této třídy. Výchozí hodnota je nižší verze názvu doménové třídy.|
 |Název atributu monikeru|Název atributu použitého v elementech monikeru, který má obsahovat odkaz. Pokud je pole prázdné, použije se název vlastnosti klíče nebo ID.<br /><br /> V tomto příkladu je to "Name": `<personMoniker name="/Mike Nash"/>`|
 |Název elementu monikeru|Název XML elementu, který se používá pro monikery, které odkazují na prvky této třídy.<br /><br /> Výchozí hodnota je malá verze názvu třídy s příponou "moniker". Například `personMoniker`.|
-|Název typu monikeru|Název typu XSD vygenerovaného pro monikery v elementech této třídy XSD je v **kódu Dsl\Generated \\ \*Schema. xsd.**|
+|Název typu monikeru|Název typu XSD vygenerovaného pro monikery v elementech této třídy XSD je v **kódu Dsl\Generated\\\*Schema. xsd**|
 |ID serializace|Je-li nastavena hodnota true, je identifikátor GUID elementu obsažen v souboru. Tato hodnota musí být true, pokud neexistuje žádná vlastnost, která je označena **klíčovým** slovem MONIKER a DSL definuje referenční vztahy k této třídě.|
 |Název typu|Název typu XML vygenerovaného v XSD z určené doménové třídy|
 |Poznámky|Neformální poznámky přidružené k tomuto elementu|

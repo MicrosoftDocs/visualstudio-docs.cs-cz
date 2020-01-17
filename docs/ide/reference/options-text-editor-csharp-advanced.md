@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c2f4c01a627fb2cd1b581331dd086e2d783d475f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8f6bd03b9d652909022adab169682160ae541677
+ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596226"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76124501"
 ---
 # <a name="options-text-editor-c-advanced"></a>Možnosti, textový editor, C#, upřesnit
 
@@ -87,7 +87,7 @@ Stránka **Upřesnit** možnosti slouží k úpravě nastavení formátování e
    using System.Linq;
    ```
 
-- Navrhnout použití typů v referenčních sestaveních
+- Navrhnout použití typů v .NET Framework sestaveních
 - Navrhnout použití typů v balíčcích NuGet
 
    Pokud jsou tyto možnosti vybrány, je k dispozici [rychlá akce](../quick-actions.md) pro instalaci balíčku NuGet a přidání direktivy `using` pro neodkazované typy.

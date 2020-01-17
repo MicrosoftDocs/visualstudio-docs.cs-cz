@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, definition file
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99145768ef4e0c37f729477ee598628a3b8d0e9a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 97736dd9893f3a5d0c07f464ae75849395270d4b
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605993"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114919"
 ---
 # <a name="the-dsldefinitiondsl-file"></a>Soubor DslDefinition.dsl
 
@@ -26,9 +26,9 @@ Příklady v tomto tématu jsou pořízeny ze šablony řešení diagramu kompon
 
 ## <a name="sections-of-the-dsldefinitiondsl-file"></a>Části souboru DslDefinition. DSL
 
-Kořenový prvek je \<Dsl > a jeho atributy identifikují název jazyka specifického pro doménu, obor názvů a číslo hlavní a dílčí verze pro správu verzí. Schéma `DslDefinitionModel` definuje obsah a strukturu pro platný soubor DslDefinition. DSL.
+Kořenový element je \<DSL > a jeho atributy identifikují název jazyka specifického pro doménu, obor názvů a číslo hlavní a dílčí verze pro správu verzí. Schéma `DslDefinitionModel` definuje obsah a strukturu pro platný soubor DslDefinition. DSL.
 
-Podřízené prvky \<Dsl > kořenového prvku jsou následující:
+Podřízené prvky \<DSL > kořenový element jsou následující:
 
 ### <a name="classes"></a>Třídy
 
@@ -46,7 +46,7 @@ Tato část definuje každý typ a jeho obor názvů. Doménové vlastnosti maj�
 
 Tato část definuje tvary, které popisují, jak se model zobrazuje v návrháři. Tyto geometrické obrazce jsou mapovány na třídy v modelu v oddílu diagramu.
 
-### <a name="connectors"></a>Spolu
+### <a name="connectors"></a>Konektory
 
 Tato část definuje vzhled konektorů, které se zobrazují v návrháři. Tyto popisy geometrického stylu jsou mapovány na konkrétní vztahy v modelu v oddílu diagramu.
 
@@ -70,7 +70,7 @@ Tato část definuje diagram a použijete jej k určení vlastností, jako je na
 
 Tato část definuje návrháře (Editor), který spojuje sadu **nástrojů**, nastavení ověřování, diagram a schéma serializace. Oddíl návrháře také definuje kořenovou třídu modelu, která je obvykle také kořenovou třídou diagramu.
 
-### <a name="explorer"></a>Prohlížeč
+### <a name="explorer"></a>Explorer
 
 Tato část identifikuje chování **Průzkumníka DSL** (definované v části XmlSerializationBehavior).
 
@@ -132,7 +132,7 @@ Atribut `IsFlags` určuje, zda je generovaný kód předponou `[Flags]` modulu C
 
 ## <a name="classes"></a>Třídy
 
-Většina prvků v jakékoli definici jazyka specifického pro doménu je buď přímo, nebo nepřímo instance `DomainClass`. Podtřídy `DomainClass` zahrnují `DomainRelationship`, `Shape`, `Connector` a `Diagram`. Oddíl `Classes` v souboru DslDefinition. DSL obsahuje seznam tříd domény.
+Většina prvků v jakékoli definici jazyka specifického pro doménu je buď přímo, nebo nepřímo instance `DomainClass`. Podtřídy `DomainClass` zahrnují `DomainRelationship`, `Shape`, `Connector`a `Diagram`. Oddíl `Classes` v souboru DslDefinition. DSL obsahuje seznam tříd domény.
 
 Každá třída má sadu vlastností a může mít základní třídu. V příkladu diagramu komponent je `NamedElement` abstraktní třída, která má vlastnost `Name`, jejíž typ je řetězec:
 
@@ -244,13 +244,13 @@ Každý vztah obsahuje zdrojové a cílové role, které mají následující at
     ComponentPort p = ...; Component c = p.Component; if (c != null) ...
     ```
 
-- @No__t_0 role je název, který se používá v rámci třídy Relationship k odkazování na tento konec odkazu. Podle konvence je název role vždycky v jednotném čísle, protože každý odkaz má na každém konci jenom jednu instanci. Následující kód bude fungovat:
+- `Name` role je název, který se používá v rámci třídy Relationship k odkazování na tento konec odkazu. Podle konvence je název role vždycky v jednotném čísle, protože každý odkaz má na každém konci jenom jednu instanci. Následující kód bude fungovat:
 
     ```
     Connection connectionLink = ...; OutPort op = connectionLink.Source;
     ```
 
-- Ve výchozím nastavení je atribut `IsPropertyGenerator` nastaven na hodnotu true. Pokud je nastavená na false, není ve třídě aktéra role vytvořená žádná vlastnost. (V takovém případě `op.Targets` například nefungují). Je však stále možné použít vlastní kód k procházení vztahu nebo získat přístup k vlastním odkazům, pokud vlastní kód používá vztah explicitně:
+- Ve výchozím nastavení je atribut `IsPropertyGenerator` nastaven na hodnotu true. Pokud je nastavená na false, není ve třídě aktéra role vytvořená žádná vlastnost. (V takovém případě `op.Targets`například nefungují). Je však stále možné použít vlastní kód k procházení vztahu nebo získat přístup k vlastním odkazům, pokud vlastní kód používá vztah explicitně:
 
     ```
     OutPort op = ...; foreach (InPort ip in Connection.GetTargets(op)) ...
@@ -275,7 +275,7 @@ Každý nástroj pro připojení může vyvolat konkrétní Tvůrce připojení.
 
 Žádný typ nástroje přímo nevytváří tvary ani konektory. Každá vytvoří instanci doménové třídy nebo doménového vztahu. mapování obrazce a konektoru pak určuje, jak se zobrazí tato doménová třída nebo doménový vztah.
 
-## <a name="paths"></a>Ruky
+## <a name="paths"></a>Cesty
 
 Cesty k doméně se zobrazí v několika umístěních v souboru DslDefinition. DSL. Tyto cesty určují řadu odkazů z jednoho prvku v modelu (to znamená instance jazyka specifického pro doménu) do jiného. Syntaxe cesty je jednoduchá, ale je podrobná.
 
@@ -352,7 +352,7 @@ Tuto direktivu sloučení elementu můžete například přidat do třídy kompo
 
 Uživatelé jazyka potom můžou přidat komentář do komponenty a automaticky vytvořit nový komentář s odkazem na komponentu.
 
-První cesta pro vytvoření propojení přejde z `Component` na `ComponentModel` a pak vytvoří instanci `ComponentModelHasComments` vztahu vložení. Druhá cesta pro vytvoření propojení vytvoří odkaz na odkazový vztah CommentsReferenceComponents z hostitelské součásti na nový komentář. Všechny cesty vytváření odkazů musí začínat třídou host a musí končit odkazem, který se zakládá na nově vytvořenou instanci třídy.
+První cesta pro vytvoření propojení přejde z `Component` na `ComponentModel` a pak vytvoří instanci `ComponentModelHasComments`vztahu vložení. Druhá cesta pro vytvoření propojení vytvoří odkaz na odkazový vztah CommentsReferenceComponents z hostitelské součásti na nový komentář. Všechny cesty vytváření odkazů musí začínat třídou host a musí končit odkazem, který se zakládá na nově vytvořenou instanci třídy.
 
 ## <a name="xmlclassdata"></a>XmlClassData
 
@@ -498,7 +498,7 @@ Soubor DslDefinition. DSL je sám serializovaným souborem a odpovídá definici
       <XmlClassData ...>...</XmlClassData>
 ```
 
-- ConnectorHasDecorators je vztah vkládání mezi `Connector` a `Decorator`. `UseFullForm` byla nastavena tak, aby se název relace zobrazil s jeho seznamem vlastností pro každý odkaz z objektu Connector. @No__t_0 však také nastaveno, aby žádné `RoleElementName` zahrnovalo více odkazů, které jsou vloženy v `Connector`:
+- ConnectorHasDecorators je vztah vkládání mezi `Connector` a `Decorator`. `UseFullForm` byla nastavena tak, aby se název relace zobrazil s jeho seznamem vlastností pro každý odkaz z objektu Connector. `OmitElement` však také nastaveno, aby žádné `RoleElementName` zahrnovalo více odkazů, které jsou vloženy v `Connector`:
 
 ```xml
 <Connector Name="AssociationLink" ...>
@@ -539,7 +539,7 @@ Jak je znázorněno v následujícím příkladu, prvky `ShapeMap` mají minimá
 
 Primární funkce prvku `ParentElementPath` je tak, že se stejná třída objektů může zobrazit jako jiný tvar v různých kontextech. Například pokud může být do komentáře vložena také `InPort`, `InPort` se může zobrazit jako jiný tvar pro tento účel.
 
-Následně cesta Určuje, jak se tvar vztahuje k nadřazenému objektu. Mezi tvary v souboru DslDefinition. DSL není definována žádná struktura vkládání. Musíte odvodit strukturu z map obrazců. Nadřazený prvek obrazce je tvar, který je namapován na prvek domény, který určuje cesta k nadřazenému elementu. V tomto případě cesta identifikuje komponentu, ke které patří `InPort`. V jiném mapě obrazce je třída komponenty mapována na ComponentShape. Proto je nový tvar `InPort` vytvořen jako podřízený tvar `ComponentShape` jeho komponenty.
+Následně cesta Určuje, jak se tvar vztahuje k nadřazenému objektu. Mezi tvary v souboru DslDefinition. DSL není definována žádná struktura vkládání. Musíte odvodit strukturu z map obrazců. Nadřazený prvek obrazce je tvar, který je namapován na prvek domény, který určuje cesta k nadřazenému elementu. V tomto případě cesta identifikuje komponentu, ke které patří `InPort`. V jiném mapě obrazce je třída komponenty mapována na ComponentShape. Proto je nový tvar `InPort` vytvořen jako podřízený tvar `ComponentShape`jeho komponenty.
 
 Pokud jste místo toho připojili tvar portu k diagramu, cesta k nadřazenému elementu by musela provést jiný krok, do modelu komponenty, který je namapován na diagram:
 
@@ -579,6 +579,6 @@ Mapy konektorů můžou také obsahovat mapy dekoratér.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
 - [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)
 - [Porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md)
