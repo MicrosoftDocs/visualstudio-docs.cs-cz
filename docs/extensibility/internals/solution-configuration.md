@@ -10,12 +10,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 243af2549862f1d29c44ba5bfc3060d87d5c6f85
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4d0a4243d0d64fbd9a436b49f42c99c275e9714b
+ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72723832"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76269110"
 ---
 # <a name="solution-configuration"></a>Konfigurace řešení
 Konfigurace řešení ukládají vlastnosti na úrovni řešení. Nasměrují chování klávesy **Spustit** (F5) a příkazu **sestavení** . Ve výchozím nastavení tyto příkazy sestaví a spustí konfiguraci ladění. Oba příkazy jsou spouštěny v kontextu konfigurace řešení. To znamená, že uživatel může očekávat, že F5 spustí a sestaví jakékoli aktivní řešení, které se nakonfiguruje prostřednictvím nastavení. Prostředí je navrženo pro optimalizaci pro řešení spíše než při sestavování a spouštění.
@@ -23,11 +23,11 @@ Konfigurace řešení ukládají vlastnosti na úrovni řešení. Nasměrují ch
  Standardní panel nástrojů sady Visual Studio obsahuje tlačítko Start a rozevírací seznam konfigurace řešení napravo od tlačítka Start. Tento seznam umožňuje uživatelům zvolit konfiguraci, která se má spustit při stisknutí klávesy F5, vytvořit vlastní konfigurace řešení nebo upravit existující konfiguraci.
 
 > [!NOTE]
-> Nejsou k dispozici žádná rozhraní rozšíření pro vytvoření nebo úpravu konfigurace řešení. Je nutné použít `DTE.SolutionBuilder`. Existují však rozhraní API rozšíření pro správu sestavení řešení. Další informace najdete v tématu <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2>.
+> Nejsou k dispozici žádná rozhraní rozšíření pro vytvoření nebo úpravu konfigurace řešení. Je nutné použít `DTE.SolutionBuild`. Existují však rozhraní API rozšíření pro správu sestavení řešení. Další informace najdete v tématu <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2>.
 
  Tady je postup, jak můžete implementovat konfigurace řešení podporované vaším typem projektu:
 
-- Project
+- Projekt
 
    Zobrazuje názvy projektů nalezených v aktuálním řešení.
 
@@ -45,7 +45,7 @@ Konfigurace řešení ukládají vlastnosti na úrovni řešení. Nasměrují ch
 
    Pokud projekt nepodporuje platformy, zobrazí se ve sloupci platforma pro daný projekt možnost žádný a je zakázán.
 
-- Sestavení
+- Sestavit
 
    Určuje, jestli je projekt sestavený aktuální konfigurací řešení nebo ne. Nevybrané projekty nejsou sestaveny, když jsou příkazy sestavení na úrovni řešení vyvolány bez ohledu na závislosti projektu, které obsahují. Projekty, které nejsou vybrány pro sestavení, jsou stále zahrnuty do ladění, spuštění, balení a nasazení řešení.
 

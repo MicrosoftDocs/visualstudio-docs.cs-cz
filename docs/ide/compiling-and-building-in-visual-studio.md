@@ -12,26 +12,23 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d8cb2a8a7a1711b01bcb167fceb13faa30e571c
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 8b5f00b3e71f0deb15d6266640db39751f2ae22f
+ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114712"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76269106"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>Kompilace a sestavení v sadě Visual Studio
 
-Při sestavování zdrojového kódu se jádro sestavení vytvoří sestavení a spustitelný soubor aplikace. Proces sestavení je obecně velmi podobné napříč mnoha různých typech projektů jako je například Windows, ASP.NET, mobilní aplikace a další. Proces sestavení je také podobné jako napříč programovacími jazyky, jako C#, Visual Basic, C++, a F#.
-
-Podle častým sestavováním kódu, můžete rychle identifikovat chyby kompilace, jako je nesprávná syntaxe, překlepy v klíčových slovech a neshody typu. Můžete také zjistit a opravit chyby za běhu, jako jsou logické a sémantické chyby, sestavováním a spouštěním ladicí verze kódu.
-
-Úspěšné sestavení ověří, že zdrojový kód aplikace obsahuje správnou syntaxi a, umí přeložit všechny statické odkazy na knihovny, sestavení a další komponenty. Je vytvořen spustitelný soubor aplikace, které můžete testovat pro správné fungování v obou [ladicí prostředí](../debugger/index.yml) a s celou řadou ručních a automatizovaných testů, které [ověření kvality kódu](../test/improve-code-quality.md). Jakmile aplikace byly plně testovány, můžete kompilaci verze vydání k nasazení na vaše zákazníky. Úvod k tomuto procesu najdete v tématu [názorný postup: Tvorba aplikace](../ide/walkthrough-building-an-application.md).
+První Úvod do vytváření integrovaného vývojového prostředí, najdete v části [názorný postup: Tvorba aplikace](walkthrough-building-an-application.md).
 
 Pro vytvoření aplikace můžete použít některý z následujících metod: integrované vývojové prostředí sady Visual Studio, nástroje příkazového řádku MSBuild a kanály Azure:
 
 | Metoda sestavení | Výhody |
 | --- |--- | --- |
 | IDE – integrované vývojové prostředí |-Okamžité sestavení a testování v ladicí program.<br />-Spusťte víceprocesorová sestavení pro projekty jazyka C++ a C#.<br />-Přizpůsobení různé aspekty systému sestavení. |
+| CMake | – Sestavení projektů pomocí nástroje CMake<br />– Použijte stejný systém sestavení napříč platformami Linux a Windows. |
 | Příkazového řádku MSBuild| -Projekty sestavit bez instalace sady Visual Studio.<br />-Spustit víceprocesorová sestavení pro všechny typy projektů.<br />-Přizpůsobte většinu oblastí systému sestavení.|
 | Azure Pipelines | -Automatizujte proces sestavení jako součást kanálu průběžné integrace a doručování.<br />-Použijte automatizované testy s každým sestavením.<br />-Využívejte skoro neomezené cloudové prostředky pro procesy sestavení.<br />-Upravte pracovní postup sestavení a vytvořit aktivity sestavení, chcete-li provést hluboce přizpůsobené úkoly.|
 
@@ -60,3 +57,4 @@ Odtud můžete prozkoumat celou řadu dalších úloh:
 
 - [Sestavení (kompilace) webu projektů](https://msdn.microsoft.com/Library/a9cbb88c-8fff-4c67-848b-98fbfd823193)
 - [Kompilace a sestavení (Visual Studio for Mac)](/visualstudio/mac/compiling-and-building)
+- [Projekty CMake v sadě Visual Studio](/cpp/build/cmake-projects-in-visual-studio)

@@ -8,18 +8,18 @@ ms.author: madsk
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: 44b5c5c58c46017730f06142548505c628894a11
-ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
+ms.openlocfilehash: d6de945e7221d2239e1b4f00185a5b16c04b717d
+ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74316492"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76269065"
 ---
-# <a name="how-to-make-extensions-compatible-with-visual-studio-2017-and-visual-studio-2015"></a>Postupy: zajištění kompatibility rozšíření se sadou Visual Studio 2017 a sadou Visual Studio 2015
+# <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>Postupy: zajištění kompatibility rozšíření se sadou Visual Studio 2019/2017 a sadou Visual Studio 2015
 
-Tento dokument vysvětluje, jak vytvořit rozšiřitelné projekty pro rozšíření mezi Visual Studio 2015 a Visual Studio 2017. Po dokončení tohoto upgradu bude projekt moci otevřít, sestavit, nainstalovat a spustit jak v rámci sady Visual Studio 2015, tak i v aplikaci Visual Studio 2017. V rámci reference se můžou některá rozšíření, která se můžou odkázat mezi Visual Studio 2015 a Visual Studio 2017, najít v [ukázkách rozšiřitelnosti sady vs SDK](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
+Tento dokument vysvětluje, jak zajistit, aby se projekty rozšiřitelnosti mezi Visual Studio 2015 a Visual Studio 2019 nebo Visual Studio 2017. Po dokončení tohoto upgradu bude projekt moci otevřít, sestavit, nainstalovat a spustit jak v rámci sady Visual Studio 2015, tak v systému Visual Studio 2019 nebo 2017. V rámci reference se můžou některá rozšíření, která se můžou odkázat mezi Visual Studio 2015 a Visual Studio 2019 nebo 2017, najít v [ukázkách rozšiřitelnosti sady vs SDK](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
 
-Pokud máte v úmyslu pouze sestavit v aplikaci Visual Studio 2017, ale chcete, aby výstupní VSIX běželo jak v rámci sady Visual Studio 2015, tak i v aplikaci Visual Studio 2017, přečtěte si [dokument migrace rozšíření](how-to-migrate-extensibility-projects-to-visual-studio-2017.md).
+Pokud máte v úmyslu pouze sestavit v aplikaci Visual Studio 2019/2017, ale chcete, aby výstupní VSIX běželo jak v rámci sady Visual Studio 2015, tak i v aplikaci Visual Studio 2019/2017, přečtěte si [dokument migrace rozšíření](how-to-migrate-extensibility-projects-to-visual-studio-2017.md).
 
 > [!NOTE]
 > V důsledku změn v aplikaci Visual Studio mezi verzemi některé věci, které pracovaly v jedné verzi, nefungují v jiné. Ujistěte se, že funkce, ke kterým se snažíte získat přístup, jsou k dispozici v obou verzích nebo rozšíření budou mít neočekávané výsledky.
@@ -31,7 +31,7 @@ Tady je přehled kroků, které v tomto dokumentu dokončíte k tomu, abyste se 
     * Cíl instalace
     * Požadavky
 3. Aktualizovat CSProj:
-    * `<MinimumVisualStudioVersion>`aktualizace.
+    * Aktualizace `<MinimumVisualStudioVersion>`.
     * Přidejte vlastnost `<VsixType>`.
     * Přidejte vlastnost ladění `($DevEnvDir)` 3 časy.
     * Přidejte podmínky pro import nástrojů sestavení a cílů.
@@ -43,11 +43,11 @@ Tady je přehled kroků, které v tomto dokumentu dokončíte k tomu, abyste se 
 V tomto dokumentu se předpokládá, že máte na svém počítači nainstalovanou následující:
 
 * Sada Visual Studio 2015 s nainstalovanou sadou VS SDK
-* Visual Studio 2017 s nainstalovanou úlohou rozšíření
+* Visual Studio 2019 nebo 2017 s nainstalovanou úlohou rozšíření
 
 ## <a name="recommended-approach"></a>Doporučený postup
 
-Důrazně doporučujeme spustit tento upgrade se sadou Visual Studio 2015 místo sady Visual Studio 2017. Hlavní výhodou vývoje v aplikaci Visual Studio 2015 je zajistit, aby neodkazovala na sestavení, která nejsou k dispozici v aplikaci Visual Studio 2015. Pokud vyvíjíte v aplikaci Visual Studio 2017, existuje riziko, že můžete zavést závislost na sestavení, které existuje pouze v aplikaci Visual Studio 2017.
+Důrazně doporučujeme tento upgrade spustit pomocí sady Visual Studio 2015 místo sady Visual Studio 2019 nebo 2017. Hlavní výhodou vývoje v aplikaci Visual Studio 2015 je zajistit, aby neodkazovala na sestavení, která nejsou k dispozici v aplikaci Visual Studio 2015. Pokud vyvíjíte v aplikaci Visual Studio 2019 nebo 2017, existuje riziko, že můžete zavést závislost na sestavení, které existuje pouze v aplikaci Visual Studio 2019 nebo 2017.
 
 ## <a name="ensure-there-is-no-reference-to-projectjson"></a>Ujistěte se, že neexistuje odkaz na Project. JSON.
 
@@ -67,12 +67,12 @@ Pokud projekt obsahuje soubor *Project. JSON* :
 
 Musíme přidat nástroje pro sestavení, které nám umožní sestavení a ladění odpovídajícím způsobem. Společnost Microsoft vytvořila sestavení pro tento název s názvem Microsoft. VisualStudio. SDK. BuildTasks.
 
-K sestavení a nasazení nového vsixv3 v rámci sady Visual Studio 2015 a 2017 budete potřebovat následující balíčky NuGet:
+K sestavení a nasazení nového vsixv3 v rámci sady Visual Studio 2015 a 2019/2017 budete potřebovat následující balíčky NuGet:
 
-Verze | Sestavené nástroje
+Version | Sestavené nástroje
 --- | ---
 Visual Studio 2015 | Microsoft.VisualStudio.Sdk.BuildTasks.14.0
-Visual Studio 2017 | Microsoft.VSSDK.BuildTool
+Visual Studio 2019 nebo 2017 | Microsoft.VSSDK.BuildTool
 
 Postup:
 
@@ -109,10 +109,10 @@ Postup ručního provedení:
 </Prerequisites>
 ```
 
-* Uložte soubor a zavřete ho.
+* Soubor uložte a zavřete.
 
 > [!NOTE]
-> Možná budete muset ručně upravit požadovanou verzi, abyste zajistili, že je kompatibilní se všemi verzemi sady Visual Studio 2017. Důvodem je, že návrhář vloží minimální verzi jako aktuální verzi sady Visual Studio (například 15.0.26208.0). Ale vzhledem k tomu, že jiní uživatelé můžou mít starší verzi, budete ji chtít ručně upravit na 15,0.
+> Možná budete muset ručně upravit požadovanou verzi, abyste zajistili, že je kompatibilní se všemi verzemi sady Visual Studio 2019 nebo 2017. Důvodem je, že návrhář vloží minimální verzi jako aktuální verzi sady Visual Studio (například 15.0.26208.0). Ale vzhledem k tomu, že jiní uživatelé můžou mít starší verzi, budete ji chtít ručně upravit na 15,0.
 
 V tomto okamžiku by měl váš soubor manifestu vypadat přibližně takto:
 
@@ -195,9 +195,10 @@ Příklad:
 <Error Condition="'$(VisualStudioVersion)' == '14.0' And Exists('packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" />
 ```
 
-* Uložte soubor CSPROJ a zavřete jej.
+* Uložte soubor CSPROJ a zavřete jej. 
+  * Všimněte si, že pokud používáte více než jeden projekt v řešení, nastavte tento projekt jako spouštěný projekt pomocí možnosti "nastavit jako spouštěný projekt" v místní nabídce projekt). Tím zajistíte, že Visual Studio po uvolnění znovu otevře tento projekt.
 
-## <a name="test-the-extension-installs-in-visual-studio-2015-and-visual-studio-2017"></a>Test instalace rozšíření v aplikaci Visual Studio 2015 a Visual Studio 2017
+## <a name="test-the-extension-installs-in-visual-studio-2015-and-visual-studio-2019-or-2017"></a>Test instalace rozšíření v aplikaci Visual Studio 2015 a Visual Studio 2019 nebo 2017
 
 V tomto okamžiku by měl být projekt připravený k vytvoření nového vsixv3, který se dá nainstalovat na Visual Studio 2015 i Visual Studio 2017.
 
@@ -205,7 +206,7 @@ V tomto okamžiku by měl být projekt připravený k vytvoření nového vsixv3
 * Sestavte projekt a potvrďte výstup, který VSIX vytvoří správně.
 * Přejděte do adresáře projektu.
 * Otevřete složku *\bin\debug* .
-* Dvakrát klikněte na soubor VSIX a nainstalujte své rozšíření do sady Visual Studio 2015 a Visual Studio 2017.
+* Dvakrát klikněte na soubor VSIX a nainstalujte své rozšíření do sady Visual Studio 2015 a Visual Studio 2019/2017.
 * Ujistěte se, že se vám rozšíření v části **nástroje** > **rozšíření a aktualizace** zobrazí v části **nainstalováno** .
 * Pokuste se spustit nebo použít rozšíření pro kontrolu, že funguje.
 
