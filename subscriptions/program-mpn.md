@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: Podrobnosti o tom, jaká předplatná jsou nabízená, jaká pravidla se použijí a kolik předplatných se nabízí v programu MPN.
-ms.openlocfilehash: 8847d320ec950b6601f99875e2c35ca80105e5b4
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 1a103f76b56df72b5829f9ce87f587070519726e
+ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491666"
+ms.lasthandoff: 01/20/2020
+ms.locfileid: "76281695"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Předplatná sady Visual Studio nabízená partnerům v Microsoft Partner Network (MPN)
 
@@ -47,7 +47,7 @@ Počet předplatných sady Visual Studio bez ohledu na to, kolik kompetence part
 
 ## <a name="subscriptions-for-partners-purchasing-the-action-pack"></a>Předplatná pro partnery, kteří kupují sadu Action Pack
 
-Partneři s kompetencí nemají nárok na zakoupení sady Action Pack. Na jednoho partnera se dá zakoupit jenom jedna sada akcí.
+Partneři s kompetencí mají nárok na zakoupení sady Action Pack. Na jednoho partnera se dá zakoupit jenom jedna sada akcí.
 
 Pomocí sady Action Pack získají partneři **3 Visual Studio Professional (MPN) předplatná**. Visual Studio Professional (MPN) je vlastní nabídka bez komerčně dostupného ekvivalentu na trhu. Tady je popis toho, co je zahrnuto:
 
