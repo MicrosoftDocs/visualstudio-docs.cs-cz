@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Spuštění nástroje Spy ++ | Dokumentace Microsoftu'
+title: 'Postupy: spuštění nástroje Spy + + | Microsoft Docs'
 ms.date: 12/16/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,45 +10,45 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc247a6391df0357905e2cbdb895bec4e469a248
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 70874d70dd5f845e7b627f2aeb7ae51bafe45995
+ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387542"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76542617"
 ---
 # <a name="how-to-start-spy"></a>Postupy: Spuštění nástroje Spy++
 
-Můžete spustit nástroje Spy ++ ze sady Visual Studio nebo příkazového řádku.
+Můžete spustit Spy + + buď ze sady Visual Studio, nebo na příkazovém řádku.
 
- Při spuštění nástroje Spy ++, pokud se zobrazí zpráva požádat oprávnění k provádění změn do počítače, vyberte **Ano**.
+ Pokud spustíte příkaz Spy + +, zobrazí se zpráva s dotazem, zda chcete provést změny v počítači. Vyberte **Ano**.
 
 > [!NOTE]
-> Můžete spustit pouze jedna instance nástroje Spy ++. Pokud se pokusíte spustit druhé instance, způsobí pouze aktuálně spuštěnou instanci získat fokus.
+> Můžete spustit jenom jednu instanci nástroje Spy + +. Pokud se pokusíte spustit druhou instanci, stačí, když právě spuštěná instance získá fokus.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Spy ++ vyžaduje následující součásti. Tyto součásti můžete vybrat z instalačního programu sady Visual Studio tak, že vyberete **jednotlivé komponenty** kartu a pak vyberete následující součásti.
+Spy + + vyžaduje následující součásti. Tyto komponenty můžete vybrat z Instalační program pro Visual Studio výběrem karty **jednotlivé součásti** a následným výběrem následujících součástí.
 
-* V části ladění a testování, vyberte **nástroje pro profilaci v C++**
-* V části vývojových aktivit, vyberte **Visual Studio C++ – základní funkce**
+* V části ladění a testování vyberte  **C++ nástroje pro profilaci**
+* V části vývojové aktivity vyberte  **C++ základní funkce.**
 
-Pokud jste provedli změny, postupujte podle pokynů k instalaci těchto součástí.
+Pokud jste provedli nějaké změny, postupujte podle pokynů k instalaci těchto součástí.
 
-## <a name="start-spy-from-visual-studio"></a>Spuštění nástroje Spy ++ ze sady Visual Studio
+## <a name="start-spy-from-visual-studio"></a>Spuštění nástroje Spy + + ze sady Visual Studio
 
-Na **nástroje** nabídce vyberte možnost **nástroje Spy ++**.
+V nabídce **nástroje** vyberte **Spy + +** .
 
-Protože nástroje Spy ++ běží nezávisle na sobě po spuštění sady Visual Studio můžete zavřít.
+Protože Spy + + běží nezávisle, po jeho spuštění můžete aplikaci Visual Studio zavřít.
 
 > [!NOTE]
-> Při protokolování zpráv pomocí nástroje Spy ++, může to způsobit pomalejší operačního systému.
+> Když protokoluje zprávy pomocí nástroje Spy + +, může to způsobit, že operační systém bude pracovat pomaleji.
 
-## <a name="start-spy-at-a-command-prompt"></a>Spuštění nástroje Spy ++ z příkazového řádku
+## <a name="start-spy-at-a-command-prompt"></a>Spuštění nástroje Spy + + v příkazovém řádku
 
-1. V okně příkazového řádku přejděte do složky, která obsahuje spyxx.exe. Obvykle je cesta k této složce... \\ *Instalační složky sady visual Studio*\Common7\Tools\\.
+1. V okně příkazového řádku změňte adresáře do složky, která obsahuje Spyxx. exe. Cesta k této složce je obvykle..\\\\\Common7\Tools *instalační složky sady Visual Studio*.
 
-2. Enter **spyxx.exe**.
+2. Zadejte **Spyxx. exe**.
 
 ## <a name="see-also"></a>Viz také:
 - [Použití nástroje Spy++](../debugger/using-spy-increment.md)

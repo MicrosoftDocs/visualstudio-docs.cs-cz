@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/15/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: b8c732fb847e4d9944e0d6a5405a29e7879cbdc9
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 1c9786c29573da3b0149a9ec6578f2ce58c4de9f
+ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75400867"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76542591"
 ---
 # <a name="container-tools-launch-settings"></a>Nastavení spuštění nástrojů kontejneru
 
@@ -53,7 +53,7 @@ Nastavení příkazového řádku označuje, že tato část se vztahuje na nás
 |Název nastavení|Version|Příklad|Popis|
 |------------|-------|-------|---------------|
 |launchBrowser|Visual Studio 2017|"launchBrowser": true|Označuje, zda se má po úspěšném spuštění projektu spustit prohlížeč.|
-|launchUrl|Visual Studio 2017|"launchUrl": "schéma\<>://\<serviceHost >:\<servicePort >"|Tato adresa URL se používá při spuštění prohlížeče.  Podporované náhradní tokeny pro tento řetězec jsou:<br>   > schématu \<– v závislosti na tom, jestli se používá SSL, nahradí buď http nebo HTTPS.<br>   \<serviceHost > – obvykle nahrazuje "localhost". Pokud cílíte na kontejnery Windows ve Windows 10 RS3 nebo starší, nahradí se tím i IP adresou kontejneru.<br>   \<servicePort > – obvykle nahrazuje buď sslPort nebo httpPort, v závislosti na tom, jestli se používá protokol SSL.  Při cílení na kontejnery Windows ve Windows 10 RS3 nebo starší se ale v závislosti na tom, jestli se používá SSL, nahradí buď "443", nebo "80".|
+|launchUrl|Visual Studio 2017|"launchUrl": "{schéma}://{ServiceHost}: {ServicePort}"|Tato adresa URL se používá při spuštění prohlížeče.  Podporované náhradní tokeny pro tento řetězec jsou:<br>   {Schéma} – v závislosti na tom, jestli se používá SSL, nahradí buď http, nebo HTTPS.<br>   {ServiceHost} – obvykle se nahrazuje řetězcem "localhost". Pokud cílíte na kontejnery Windows ve Windows 10 RS3 nebo starší, nahradí se tím i IP adresou kontejneru.<br>   {ServicePort} – obvykle se nahrazuje buď sslPort nebo httpPort, v závislosti na tom, jestli se používá SSL.  Při cílení na kontejnery Windows ve Windows 10 RS3 nebo starší se ale v závislosti na tom, jestli se používá SSL, nahradí buď "443", nebo "80".|
 
 ::: moniker-end
 
@@ -69,11 +69,11 @@ Nastavení příkazového řádku označuje, že tato část se vztahuje na nás
 | httpPort             | "httpPort": 24051                                     | Tento port na hostiteli je při spuštění kontejneru mapován na port 80 kontejneru.                                |
 |                      |                                                       | Pokud tento parametr nezadáte, hodnota se převezme z hodnoty iisSettings.                                                          |
 | launchBrowser        | "launchBrowser": true                                 | Označuje, zda se má po úspěšném spuštění projektu spustit prohlížeč.                                       |
-| launchUrl            | "launchUrl": "<scheme>://<serviceHost>:<servicePort>" | Tato adresa URL se používá při spuštění prohlížeče. Podporované náhradní tokeny pro tento řetězec jsou:                          |
-|                      |                                                       | - <scheme> – v závislosti na tom, jestli se používá SSL, nahradí buď http nebo HTTPS.                                   |
-|                      |                                                       | - <serviceHost> – obvykle nahrazuje "localhost".                                                                    |
+| launchUrl            | "launchUrl": "{schéma}://{ServiceHost}: {ServicePort}" | Tato adresa URL se používá při spuštění prohlížeče. Podporované náhradní tokeny pro tento řetězec jsou:                          |
+|                      |                                                       | -{Schéma} – v závislosti na tom, jestli se používá SSL, nahradí buď http, nebo HTTPS.                                   |
+|                      |                                                       | – {ServiceHost} – obvykle se nahrazuje řetězcem "localhost".                                                                    |
 |                      |                                                       | Pokud cílíte na kontejnery Windows ve Windows 10 RS3 nebo starší, nahradí se tím i IP adresou kontejneru.           |
-|                      |                                                       | - <servicePort> – obvykle nahrazuje buď sslPort nebo httpPort, v závislosti na tom, zda se používá protokol SSL.                   |
+|                      |                                                       | -{ServicePort} – obvykle se nahrazuje buď sslPort nebo httpPort, v závislosti na tom, jestli se používá SSL.                   |
 |                      |                                                       | Pokud cílíte na kontejnery Windows ve Windows 10 RS3 nebo starším, je ale nahrazuje se buď "443", nebo "80".         |
 |                      |                                                       | záleží na tom, jestli se používá protokol SSL.                                                                                       |
 | sslPort              | "sslPort": 44381                                      | Tento port na hostiteli je při spuštění kontejneru mapován na port 443 kontejneru.                               |

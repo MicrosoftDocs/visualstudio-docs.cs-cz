@@ -17,14 +17,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 392afc210798611442a12d5f51f150ddc79f85ba
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 293e7dd99ea2c4d440153797fcc5e9a15083e93c
+ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63408367"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76542604"
 ---
-# <a name="walkthrough-writing-a-visualizer-in-visual-basic"></a>Návod: Zápis Vizualizéru v jazyce Visual Basic
+# <a name="walkthrough-writing-a-visualizer-in-visual-basic"></a>Návod: Zápis vizualizéru v jazyce Visual Basic
 Tento návod ukazuje, jak napsat Jednoduchý vizualizér pomocí [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]. Vizualizaci, kterou vytvoříte v tomto názorném postupu se zobrazí obsah řetězce pomocí Windows Forms okno se zprávou. Tento vizualizér jednoduchým řetězcem je základní příklad, který znázorňuje, jak můžete vytvořit vizualizéry pro ostatní typy dat pro více projektů.
 
 > [!NOTE]
@@ -39,13 +39,13 @@ Kód vizualizéru musí být umístěn v knihovně DLL, který bude číst ladic
 1. Vytvořte nový projekt knihovny tříd.
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **Esc** zavřete okno start. Typ **Ctrl + Q** otevřete do vyhledávacího pole zadejte **jazyka visual basic**, zvolte **šablony**, klikněte na tlačítko **vytvořte novou knihovnu tříd (.NET Standard)**. V dialogovém okně, které se zobrazí, zvolte **vytvořit**.
+    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **Visual Basic**, zvolte **šablony**a pak zvolte **vytvořit novou knihovnu tříd (.NET Framework)** . V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně **nový projekt** dialogovém okně **jazyka Visual Basic**, zvolte **.NET Standard**a potom v prostředním podokně vyberte **knihovna tříd (.NET Standardní)**.
+    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual Basic**zvolte možnost **.NET Standard**a potom v prostředním podokně zvolte možnost **Knihovna tříd (.NET Standard)** .
     ::: moniker-end
 
-2. Zadejte vhodný název pro knihovny tříd rozhraní, například `MyFirstVisualizer`a potom klikněte na tlačítko **vytvořit** nebo **OK**.
+2. Zadejte vhodný název knihovny tříd, například `MyFirstVisualizer`, a pak klikněte na tlačítko **vytvořit** nebo **OK**.
 
    Po vytvoření knihovny tříd musíte přidat odkaz na Microsoft.VisualStudio.DebuggerVisualizers.DLL, aby mohli používat třídy definované existuje. Nejprve však je dejte projektu smysluplný název.
 
@@ -60,11 +60,11 @@ Kód vizualizéru musí být umístěn v knihovně DLL, který bude číst ladic
 
 3. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **Moje první Vizualizéru**a v místní nabídce klikněte na tlačítko **přidat odkaz**.
 
-4. V **přidat odkaz** dialogovém okně **Procházet** kartu, vyberte možnost **Procházet** a najít Microsoft.VisualStudio.DebuggerVisualizers.DLL.
+4. V dialogovém okně **Přidat odkaz** na kartě **Procházet** vyberte **Procházet** a vyhledejte Microsoft. VisualStudio. DebuggerVisualizers. dll.
 
-    Můžete najít DLL v  *\<Visual Studio Instalační adresář > \Common7\IDE\PublicAssemblies* podadresáři instalačního adresáře sady Visual Studio.
+    Knihovnu DLL můžete najít v *\<instalační adresář sady Visual studio > \Common7\IDE\PublicAssemblies* podadresář instalačního adresáře aplikace Visual Studio.
 
-5. Klikněte na **OK**.
+5. Klikněte na tlačítko **OK**.
 
 6. V DebuggerSide.vb, přidejte následující příkaz, kterým `Imports` příkazy:
 
@@ -108,11 +108,11 @@ Kód vizualizéru musí být umístěn v knihovně DLL, který bude číst ladic
 
 1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **odkazy**a v místní nabídce klikněte na tlačítko **přidat odkaz**.
 
-2. V **přidat odkaz** dialogovém okně **Procházet** kartu, vyberte možnost **Procházet**a najít System.Windows.Forms.DLL.
+2. V dialogovém okně **Přidat odkaz** vyberte na kartě **Procházet** možnost **Procházet**a vyhledejte System. Windows. Forms. dll.
 
-    Můžete najít DLL v *C:\Windows\Microsoft.NET\Framework\v4.0.30319*.
+    Knihovnu DLL můžete najít v *C:\Windows\Microsoft.NET\Framework\v4.0.30319*.
 
-3. Klikněte na **OK**.
+3. Klikněte na tlačítko **OK**.
 
 4. V DebuggerSide.cs, přidejte následující příkaz, kterým `Imports` příkazy:
 
@@ -168,16 +168,16 @@ Kód vizualizéru musí být umístěn v knihovně DLL, který bude číst ladic
 
 ### <a name="to-add-a-console-application-project-to-the-solution"></a>Chcete-li přidat do řešení projekt konzolové aplikace
 
-1. V Průzkumníku řešení klikněte pravým tlačítkem na řešení, zvolte **přidat**a potom klikněte na tlačítko **nový projekt**.
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na řešení, vyberte možnost **Přidat**a poté klikněte na možnost **Nový projekt**.
 
     ::: moniker range=">=vs-2019"
-    Do vyhledávacího pole zadejte **jazyka visual basic**, zvolte **šablony**, klikněte na tlačítko **vytvoření nové aplikace konzoly (.NET Framework)**. V dialogovém okně, které se zobrazí, zvolte **vytvořit**.
+    Do vyhledávacího pole zadejte **Visual Basic**, zvolte **šablony**a pak zvolte **vytvořit novou konzolovou aplikaci (.NET Framework)** . V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně **nový projekt** dialogovém okně **jazyka Visual Basic**, zvolte **Windows Desktop**a potom v prostředním podokně vyberte **aplikace konzoly (.NET Rozhraní Framework)**.
+    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual Basic**zvolte **plocha Windows**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)** .
     ::: moniker-end
 
-2. Zadejte vhodný název pro knihovny tříd rozhraní, například `MyTestConsole`a potom klikněte na tlačítko **vytvořit** nebo **OK**.
+2. Zadejte vhodný název knihovny tříd, například `MyTestConsole`, a pak klikněte na tlačítko **vytvořit** nebo **OK**.
 
    Nyní je třeba přidat že nezbytné odkazuje, takže MyTestConsole můžete volat MyFirstVisualizer.
 
@@ -185,9 +185,9 @@ Kód vizualizéru musí být umístěn v knihovně DLL, který bude číst ladic
 
 1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **MyTestConsole**a v místní nabídce klikněte na tlačítko **přidat odkaz**.
 
-2. V **přidat odkaz** dialogovém okně **Procházet** klikněte na tlačítko Microsoft.VisualStudio.DebuggerVisualizers.
+2. V dialogovém okně **Přidat odkaz** na kartě **Procházet** klikněte na Microsoft. VisualStudio. DebuggerVisualizers.
 
-3. Klikněte na **OK**.
+3. Klikněte na tlačítko **OK**.
 
 4. Klikněte pravým tlačítkem na **MyTestConsole**a potom klikněte na tlačítko **přidat odkaz** znovu.
 
@@ -231,7 +231,7 @@ Kód vizualizéru musí být umístěn v knihovně DLL, který bude číst ladic
 
    Blahopřejeme. Stačí mít vytvořené a testovat vaše první vizualizéru.
 
-   Pokud chcete používat vaše vizualizéru v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] místo jen volání z testovací prostředí, je nutné ji nainstalovat. Další informace najdete v tématu [jak: Instalace Vizualizéru](../debugger/how-to-install-a-visualizer.md).
+   Pokud chcete používat vaše vizualizéru v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] místo jen volání z testovací prostředí, je nutné ji nainstalovat. Další informace najdete v tématu [postupy: instalace Vizualizéru](../debugger/how-to-install-a-visualizer.md).
 
 ## <a name="see-also"></a>Viz také:
 

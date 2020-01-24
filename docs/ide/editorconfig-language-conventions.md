@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d03af1625086a56a6f36e48d59fd00c2461c0751
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 471932f6a097879da194dc6bb4f18807f2323397
+ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588626"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76542656"
 ---
 # <a name="language-conventions"></a>Konvence jazyka
 
@@ -1558,7 +1558,7 @@ csharp_prefer_braces = true:silent
 | **Název pravidla** | csharp_prefer_braces |
 | **ID pravidla** | IDE0011 |
 | **Příslušné jazyky** | C# |
-| **Hodnoty** | `true` – preferovat složené závorky i pro jeden řádek kódu<br /><br />`false` – nepreferovat žádné složené závorky, pokud je povoleno |
+| **Hodnoty** | `true` – preferovat složené závorky i pro jeden řádek kódu<br /><br />`false` – nepreferovat žádné složené závorky, pokud je povoleno<br /><br />`when_multiline` – preferovat složené závorky na více řádcích |
 | **Výchozí nastavení sady Visual Studio** | `true:silent` |
 
 Příklady kódu:
