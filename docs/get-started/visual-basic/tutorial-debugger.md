@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b38089a088186a30ebd13cae68d19ac23235bf9
-ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
+ms.openlocfilehash: df27ca8ccae6795750dbd1f10b5e1f0199c17330
+ms.sourcegitcommit: 0c3c4bd38455f7046c5c5a448eaaa5e407ad5bf4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74829976"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76726048"
 ---
 # <a name="tutorial-learn-to-debug-visual-basic-code-using-visual-studio"></a>Kurz: Naučte se ladit kód Visual Basic pomocí sady Visual Studio
 
@@ -63,18 +63,46 @@ Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete p�
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-1. Otevřít Visual Studio.
+Nejprve vytvoříte projekt konzolové aplikace .NET Core. Typ projektu se dodává se všemi soubory šablon, které budete potřebovat, než dokonce cokoli přidáte.
 
-    ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **Visual Basic**, zvolte **šablony**a pak zvolte buď **vytvořit novou konzolovou aplikaci (.NET Core) projekt** , nebo **vytvořte nový projekt Konzolová aplikace (.NET Framework)** . V dialogovém okně, které se zobrazí, zadejte název, jako je například **Get-Started**, a pak zvolte **vytvořit**.
-    ::: moniker-end
-    ::: moniker range="vs-2017"
-    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual Basic**zvolte **plocha Windows**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)** . Pak zadejte název, jako je například **Get-Started-Debugging** a klikněte na **OK**.
-    ::: moniker-end
+::: moniker range="vs-2017"
 
-    Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Framework)** , přejděte do části **nástroje** > **získat nástroje a funkce...** , který otevře instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací .NET** úloh, klikněte na tlačítko **změnit**.
+1. Otevřete Visual Studio 2017.
 
-    Visual Studio vytvoří projekt.
+2. V horním řádku nabídek vyberte **soubor** > **Nový** > **projekt**.
+
+3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic**a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)** . Potom pojmenujte projekt *Get-Started-Debugging*.
+
+     Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , vyberte odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** .
+
+     Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. Otevřete Visual Studio 2019.
+
+   Pokud okno Start není otevřeno, vyberte **soubor** > **Spustit okno**.
+
+1. V okně Start vyberte možnost **vytvořit nový projekt**.
+
+1. V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Dále v seznamu jazyk vyberte možnost **Visual Basic** a v seznamu platforma zvolte možnost **Windows** . 
+
+   Po použití filtrů jazyků a platforem zvolte šablonu **aplikace konzoly (.NET Core)** a pak zvolte možnost **Další**.
+
+   ![Volba C# šablony aplikace konzoly (.NET Core)](../../debugger/media/vs-2019/get-started-create-console-project-vb.png)
+
+   > [!NOTE]
+   > Pokud nevidíte šablonu **Konzolová aplikace (.NET Core)** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** . Pak v Instalační program pro Visual Studio zvolte úlohu **vývoje .NET Core pro různé platformy** .
+
+1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *příkaz Get-Started-Debugging* do pole **název projektu** . Pak zvolte **vytvořit**.
+
+   Visual Studio otevře nový projekt.
+
+::: moniker-end
+
+## <a name="create-the-application"></a>Vytvoření aplikace
 
 1. V *Module1. vb*nahraďte veškerý výchozí kód.
 
@@ -214,6 +242,8 @@ Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete p�
 
 2. Ukončete ladicí program stisknutím tlačítka červené zastavení ![Zastavit ladění](../../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") .
 
+3. Zavřete okno konzoly.
+
 ## <a name="set-a-breakpoint-and-start-the-debugger"></a>Nastavte zarážku a spuštění ladicího programu
 
 1. V `For Each` smyčku z `Main` fungovat, nastavte zarážku kliknutím na levém okraji následující řádek kódu:
@@ -254,6 +284,8 @@ Většinou, klávesové zkratky tady používáme, protože je dobrým způsobem
 
 ## <a name="navigate-code-using-run-to-click"></a>Vyhledání kódu pomocí běžet do kliknutí
 
+1. Klikněte pravým tlačítkem na zarážku, kterou jste nastavili dříve, zvolte **Odstranit zarážku** (nebo stiskněte klávesu **Ctrl** + **SHIFT** + **F9** , čímž odstraníte všechny zarážky).
+
 1. V editoru kódu se posuňte dolů a najeďte myší na `Console.WriteLine`ovou metodu ve třídě `Triangle`, dokud se na tlačítko, které se zobrazí na levé straně, ![klikne](../../debugger/media/dbg-tour-run-to-click.png "RunToClick") na tlačítko zeleného **spuštění** , které se spustí. V popisu tlačítka se zobrazí text spustit provádění na tomto místě.
 
      ![Použití funkce spustit pro kliknutí](../visual-basic/media/get-started-run-to-click-vb.png "Běžet do kliknutí")
@@ -287,6 +319,8 @@ Většinou, klávesové zkratky tady používáme, protože je dobrým způsobem
      Tento příkaz pokračuje v provádění aplikace (a přejde ladicí program) až do aktuálního funkce vrátí.
 
      Měli byste se vrátit `For Each` smyčky v `Main` – metoda. Pokud ne, stiskněte klávesu **Shift** + **F11** ještě jednou.
+
+1. Kliknutím na levý okraj přidáte novou zarážku ve smyčce `for`.
 
 ## <a name="restart-your-app-quickly"></a>Rychlé restartování aplikace
 

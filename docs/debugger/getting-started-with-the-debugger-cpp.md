@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 070cbcc79a79aea16e37f17ea775ce7838b41d59
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: aeef905b2372b22be7aee157c4d0249109ea3749
+ms.sourcegitcommit: 0c3c4bd38455f7046c5c5a448eaaa5e407ad5bf4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70179820"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725859"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Další informace k ladění kódu jazyka C++ pomocí sady Visual Studio
 
@@ -52,18 +52,43 @@ Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete p�
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-1. Otevřít Visual Studio.
+::: moniker range="vs-2017"
 
-    ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **C++** , zvolte **šablony**a pak zvolte **vytvořit nový projekt konzolové aplikace**. V dialogovém okně, které se zobrazí, zadejte název, jako je například **Get-Started**, a pak zvolte **vytvořit**.
-    ::: moniker-end
-    ::: moniker range="vs-2017"
-    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně dialogového okna **Nový projekt** , v části **vizuál C++** zvolte možnost **plocha systému Windows**a potom v prostředním podokně zvolte možnost **Konzolová aplikace systému Windows**. Pak zadejte název jako **MyDbgApp** a klikněte na **OK**.
-    ::: moniker-end
+1. Otevřete Visual Studio 2017.
 
-    Pokud nevidíte šablonu projektu **Konzolová aplikace systému Windows** , přejděte do části **nástroje** > **získat nástroje a funkce**, které otevřou instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací pomocí C++** úloh, klikněte na tlačítko **změnit**.
+2. V horním řádku nabídek vyberte **soubor** > **Nový** > **projekt**.
 
-    Visual Studio vytvoří projekt.
+3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **vizuál C++** a pak zvolte možnost **plocha systému Windows**. V prostředním podokně vyberte **Konzolová aplikace systému Windows**. Potom pojmenujte projekt *Get-Started-Debugging*.
+
+   > [!NOTE]
+   > Pokud nevidíte šablonu projektu **Konzolová aplikace systému Windows** , přejděte do části **nástroje** > **získat nástroje a funkce**, které otevřou instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací pomocí C++** úloh, klikněte na tlačítko **změnit**.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. Otevřete Visual Studio 2019.
+
+   Pokud okno Start není otevřeno, vyberte **soubor** > **Spustit okno**.
+
+1. V okně Start vyberte možnost **vytvořit nový projekt**.
+
+1. V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Dále zvolte **C++** ze seznamu jazyk a v seznamu platforma zvolte možnost **Windows** . 
+
+   Po použití filtrů jazyků a platforem zvolte šablonu **aplikace konzoly** a klikněte na tlačítko **Další**.
+
+   ![Volba C# šablony aplikace konzoly (.NET Core)](../debugger/media/vs-2019/get-started-create-console-project-cpp.png)
+
+   > [!NOTE]
+   > Pokud nevidíte šablonu **konzolové aplikace** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** . Pak v instalační program pro Visual Studio zvolte **vývoj desktopových aplikací C++ pomocí** úlohy.
+
+1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *příkaz Get-Started-Debugging* do pole **název projektu** . Pak zvolte **vytvořit**.
+
+   Visual Studio otevře nový projekt.
+
+::: moniker-end
+
+## <a name="create-the-application"></a>Vytvoření aplikace
 
 1. V *get spuštění debugging.cpp*, nahraďte následující kód
 
@@ -170,7 +195,7 @@ Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete p�
 
 ## <a name="start-the-debugger"></a>Spuštění ladicího programu!
 
-1. Stisknutím klávesy **F5** (**ladit > Spustit ladění**) nebo **spustit ladění** tlačítko ![spustit ladění](../debugger/media/dbg-tour-start-debugging.png "spustit ladění ") na panelu nástrojů ladění.
+1. Stiskněte klávesu **F5** (**ladění > Spustit ladění**) nebo klikněte na tlačítko **Spustit** ladění ![Spustit ladění](../debugger/media/dbg-tour-start-debugging.png "Spustit ladění") na panelu nástrojů ladění.
 
      **F5** spustí aplikaci se ladicí program připojen k aplikaci zpracování, ale v tuto chvíli jsme neprovedli nic zvláštního prozkoumat kód. Proto pouze načítání aplikace a zobrazí výstup konzoly.
 
@@ -185,7 +210,9 @@ Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete p�
 
      V tomto kurzu vytvoříme podrobněji podíváme na tuto aplikaci pomocí ladicího programu a získejte funkce, podívejte se na ladicí program.
 
-2. Zastavení ladicího programu stisknutím klávesy red stop ![Zastavit ladění](../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") tlačítko.
+2. Ukončete ladicí program stisknutím tlačítka červené zastavení ![Zastavit ladění](../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") .
+
+3. Zavřete okno konzoly.
 
 ## <a name="set-a-breakpoint-and-start-the-debugger"></a>Nastavte zarážku a spuštění ladicího programu
 
@@ -213,26 +240,28 @@ Většinou, klávesové zkratky tady používáme, protože je dobrým způsobem
 
 1. Během pozastavení v `shape->Draw` volání metody `main` funkci, stiskněte klávesu **F11** (nebo zvolte **ladění > Krokovat s vnořením**) pro přechod do kódu pro `Rectangle` třídy.
 
-     ![Můžete krokovat s vnořením kód F11](../debugger/media/get-started-f11-cpp.png "F11 Krokovat s vnořením")
+     ![Krokovat s vnořením kódu pomocí klávesy F11](../debugger/media/get-started-f11-cpp.png "F11 Krokovat s vnořením")
 
      Je F11 **Krokovat s vnořením** příkazu a posune jeden příkaz spuštění aplikace v čase. F11 je dobrým způsobem, jak prozkoumat provádění toku v nejvíce podrobností. (K rychlejšímu přesunu kódu vám ukážeme i některé další možnosti.) Ve výchozím nastavení přeskočí ladicí program neuživatelský kód (Pokud chcete více podrobností, přečtěte si téma [pouze můj kód](../debugger/just-my-code.md)).
 
 2. Stisknutím klávesy **F10** (nebo zvolte **ladit > Krokovat s přeskočením**) několikrát, dokud ladicí program se zastaví na `Shape::Draw` volání metody a poté stiskněte klávesu **F10** ještě jednou.
 
-     ![F10 můžete krokovat s přeskočením kód](../debugger/media/get-started-step-over-cpp.png "F10 Krokovat s přeskočením")
+     ![Pro krokování kódu použijte F10](../debugger/media/get-started-step-over-cpp.png "F10 krok přes")
 
      Všimněte si, že tento čas, který ladicí program Nekrokovat s vnořením do `Draw` metody základní třídy (`Shape`). **F10** přejde ladicí program bez krokování do funkce nebo metody v kódu vaší aplikace (kód stále provádí). Stisknutím klávesy F10 na `Shape::Draw` volání metody (místo **F11**), jsme přeskočil implementační kód pro `Draw` v základní třídě (který možná nás zajímá není nyní).
 
 ## <a name="navigate-code-using-run-to-click"></a>Vyhledání kódu pomocí běžet do kliknutí
 
-1. V editoru kódu, přejděte dolů a najeďte myší `std::cout` v `Triangle` třídy do zelené **běžet do kliknutí** tlačítko ![běžet do kliknutí](../debugger/media/dbg-tour-run-to-click.png "RunToClick") Zobrazí se na levé straně.
+1. Klikněte pravým tlačítkem na zarážku, kterou jste nastavili dříve, zvolte **Odstranit zarážku** (nebo stiskněte klávesu **Ctrl** + **SHIFT** + **F9** , čímž odstraníte všechny zarážky).
 
-     ![Použít Run to Click funkce](../debugger/media/get-started-run-to-click-cpp.png "běžet do kliknutí")
+1. V editoru kódu se posuňte dolů a najeďte myší na `std::cout` ve třídě `Triangle`, dokud se na tlačítko, které ![se zobrazí na](../debugger/media/dbg-tour-run-to-click.png "RunToClick") levé straně, klikne na tlačítko zelený **běh** .
+
+     ![Použití funkce spustit pro kliknutí](../debugger/media/get-started-run-to-click-cpp.png "Běžet do kliknutí")
 
    > [!NOTE]
    > Tlačítko **spustit do klikněte** je k dispozici od [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]. Pokud nevidíte tlačítko zelenou šipku, použijte **F11** v tomto příkladu místo toho k přechodu na správném místě ladicí program.
 
-2. Klikněte na tlačítko **běžet do kliknutí** tlačítko ![běžet do kliknutí](../debugger/media/dbg-tour-run-to-click.png "RunToClick").
+2. Kliknutím na tlačítko **Spustit pro** klikněte na tlačítko ![Spustit](../debugger/media/dbg-tour-run-to-click.png "RunToClick").
 
     Pomocí tohoto tlačítka je podobné nastavení dočasné zarážky. **Běžet do kliknutí** je užitečné pro rychlé navigace v rámci viditelné oblasti kódu aplikace (můžete kliknout na jakékoli otevření souboru).
 
@@ -259,9 +288,11 @@ Většinou, klávesové zkratky tady používáme, protože je dobrým způsobem
 
      Měli byste se vrátit `for` smyčky v `main` – metoda.
 
+1. Kliknutím na levý okraj přidáte novou zarážku ve smyčce `for`.
+
 ## <a name="restart-your-app-quickly"></a>Rychlé restartování aplikace
 
-Klikněte na tlačítko **restartovat** ![restartovat aplikaci](../debugger/media/dbg-tour-restart.png "RestartApp") tlačítko na panelu nástrojů ladění (**Ctrl** + **Shift**   +  **F5**).
+Klikněte na tlačítko **restartovat** ![aplikaci](../debugger/media/dbg-tour-restart.png "RestartApp") na panelu nástrojů ladění (**CTRL** + **SHIFT** + **F5**).
 
 Když stisknete klávesu **restartovat**, šetří čas a zastavuje se aplikace a restartování ladicího programu. Ladicí program pozastaví na první zarážce, kterou dosáhnete spuštěním kódu.
 
@@ -279,7 +310,7 @@ Funkce, které umožňují kontrolovat proměnné jsou jedním z nejužitečněj
 
 1. Rozbalte první index `[0]` zobrazíte `privateHeight` vlastnosti obdélníku.
 
-     ![Zobrazení datového tipu](../debugger/media/get-started-data-tip-cpp.png "zobrazení popisu dat.")
+     ![Zobrazit Tip pro data](../debugger/media/get-started-data-tip-cpp.png "Zobrazit Tip pro data")
 
      Často při ladění, chcete rychle zkontrolovat hodnoty vlastností pro objekty a datové tipy jsou dobrým způsobem, jak to udělat.
 
@@ -287,7 +318,7 @@ Funkce, které umožňují kontrolovat proměnné jsou jedním z nejužitečněj
 
 1. Podívejte se na **automatické hodnoty** okno v dolní části editoru kódu.
 
-     ![Kontrolovat proměnné v okně Automatické hodnoty](../debugger/media/get-started-autos-window-cpp.png "okno Automatické hodnoty")
+     ![Kontrola proměnných v okně Automatické hodnoty](../debugger/media/get-started-autos-window-cpp.png "Okno Automatické hodnoty")
 
     V **automatické hodnoty** okně se zobrazí proměnné a jejich aktuální hodnoty. Pro jazyk C++ **automatické hodnoty** okno zobrazuje proměnné v předchozí tři řádky kódu.
 
@@ -309,7 +340,7 @@ Funkce, které umožňují kontrolovat proměnné jsou jedním z nejužitečněj
 
 2. Klikněte na tlačítko **F11** několikrát, dokud se nezobrazí pozastavení v ladicím programu `Shape::Draw` metodu `Rectangle` třídy v editoru kódu. Podívejte se na **zásobník volání** okna.
 
-    ![Prozkoumat zásobník volání](../debugger/media/get-started-call-stack-cpp.png "ExamineCallStack")
+    ![Kontrola zásobníku volání](../debugger/media/get-started-call-stack-cpp.png "ExamineCallStack")
 
     **Zásobník volání** okno zobrazuje pořadí, ve kterém jsou získávání volány metody a funkce. Na horní zobrazený řádek zobrazuje aktuální funkci ( `Rectangle::Draw` metoda v tomto příkladu). Druhý řádek ukazuje, že `Rectangle::Draw` byla volána `main` funkce a tak dále.
 
