@@ -8,12 +8,12 @@ ms.devlang: dotnet
 ms.topic: article
 ms.date: 03/08/2019
 ms.author: ghogen
-ms.openlocfilehash: 5d1f160435fd8c62a44d3e5d3192870143558de4
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 9952ade8cae70b7e542b9de0b9ca36967f3bd8bb
+ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188790"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76826552"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>Nasazení kontejneru ASP.NET Core pro Azure App Service pomocí sady Visual Studio
 
@@ -23,7 +23,7 @@ Pokud ještě nemáte předplatné Azure, vytvořte si [bezplatný účet](https
 
 ## <a name="prerequisites"></a>Požadavky
 
-Postup dokončení tohoto kurzu:
+K provedení kroků v tomto kurzu je potřeba:
 
 ::: moniker range="vs-2017"
 - Nainstalujte si nejnovější verzi sady [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) s úlohou vývoj ASP.NET a webu.
@@ -40,9 +40,9 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
 ::: moniker range="vs-2017"
 1. V nabídce aplikace Visual Studio vyberte **soubor > nový > projekt**.
 2. V části **šablony** v dialogovém okně **Nový projekt** vyberte **Visual C# > Web**.
-3. Vyberte **ASP.NET Core webové aplikace**.
+3. Vyberte **webová aplikace ASP.NET Core**.
 4. Dejte nové aplikaci název (nebo pojmenujte výchozí) a vyberte **OK**.
-5. Vyberte **Webová aplikace**.
+5. Vyberte **webovou aplikaci**.
 6. Zaškrtněte políčko **Povolit podporu Docker** .
 7. Vyberte typ kontejneru **Linux** a klikněte na tlačítko **OK**. Nasazení kontejnerů Windows do Azure App Service jako kontejneru se nepodporuje.
 ::: moniker-end
@@ -53,13 +53,13 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
 1. Vyberte možnost **Webová aplikace**.
 1. Určete, jestli chcete, aby podpora SSL používala zaškrtávací políčko **Konfigurovat pro protokol HTTPS** .
 1. Zaškrtněte políčko **Povolit podporu Docker** .
-1. Vyberte typ kontejneru **Linux** a klikněte na **vytvořit**. Nasazení kontejnerů Windows do Azure App Service jako kontejneru se nepodporuje.
+1. Vyberte typ kontejneru a klikněte na **vytvořit**. Nasazení kontejnerů Windows do Azure App Service jako kontejneru se nepodporuje.
 ::: moniker-end
 
 ## <a name="deploy-the-container-to-azure"></a>Nasazení kontejneru do Azure
 
 1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **publikovat**.
-1. V dialogovém okně Publikovat cíl vyberte možnost **App Service Linux**.
+1. V dialogovém okně Publikovat cíl vyberte možnost **App Service Linux** nebo **App Service**. Toto je operační systém, který bude hostitelem webového serveru.
 1. Můžete publikovat pouze pro App Service, nebo můžete publikovat do App Service a Azure Container Registry (ACR). Chcete-li publikovat kontejner v Azure Container Registry (ACR), vyberte možnost **vytvořit novou App Service pro kontejnery**a klikněte na tlačítko **publikovat**.
 
    ![Snímek obrazovky s dialogovým oknem pro publikování](media/deploy-app-service/publish-app-service-linux.PNG)
@@ -70,7 +70,7 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
 
    ![Snímek obrazovky s nastavením publikování](media/deploy-app-service/publish-app-service-linux2.png)
 
-1. Vyberte **vytvořit**. Váš kontejner se do Azure nasadí v rámci skupiny prostředků a registru kontejneru, který jste vybrali. Tento proces trvá trochu času. Po dokončení se na kartě **publikovat** zobrazí informace o tom, co bylo publikováno, včetně adresy URL webu.
+1. Zvolte **Vytvořit**. Váš kontejner se do Azure nasadí v rámci skupiny prostředků a registru kontejneru, který jste vybrali. Tento proces trvá trochu času. Po dokončení se na kartě **publikovat** zobrazí informace o tom, co bylo publikováno, včetně adresy URL webu.
 
    ![Snímek obrazovky s kartou publikovat](media/deploy-app-service/publish-succeeded.PNG)
 
@@ -79,7 +79,18 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
    ![Snímek obrazovky webové aplikace](media/deploy-app-service/web-application-running.png)
 
 1. Profil publikování se uloží se všemi podrobnostmi, které jste vybrali, například skupiny prostředků a registru kontejnerů.
-1. Chcete-li znovu nasadit se stejným publikačním profilem, **použijte tlačítko** **publikovat** v okně **aktivity publikování webu** nebo klikněte pravým tlačítkem myši na projekt v **Průzkumník řešení** a vyberte položku **publikovat** na Kontextová nabídka
+
+1. Chcete-li znovu nasadit se stejným publikačním profilem, **použijte tlačítko** **publikovat** v okně **aktivity publikování webu** nebo klikněte pravým tlačítkem myši na projekt v **Průzkumník řešení** a vyberte položku **publikovat** v kontextové nabídce.
+
+## <a name="view-container-settings"></a>Zobrazit nastavení kontejneru
+
+V [Azure Portal](https://portal.azure.com)můžete otevřít nasazenou App Service.
+
+Nastavení pro nasazený App Service můžete zobrazit otevřením nabídky **nastavení kontejneru* (Pokud používáte Visual Studio 2019 verze 16,4 nebo novější).
+
+![Snímek nabídky nastavení kontejneru v Azure Portal](media/deploy-app-service/container-settings-menu.png)
+
+Odtud můžete zobrazit informace o kontejneru, zobrazit nebo stáhnout protokoly nebo nastavit průběžné nasazování. Viz [Azure App Service CI/CD průběžného nasazování](/azure/app-service/containers/app-service-linux-ci-cd).
 
 ## <a name="clean-up-resources"></a>Vyčištění prostředků
 
@@ -89,7 +100,7 @@ V Azure Portal zvolte **skupiny prostředků**, vyberte skupinu prostředků a o
 
 ## <a name="next-steps"></a>Další kroky
 
-Pomocí [Azure Pipelines](/azure/devops/pipelines/?view=azure-devops)nastavte průběžnou integraci a doručování (CI/CD).
+Přečtěte si další informace o [Azure App Service Linux](/azure/app-service/containers/app-service-linux-intro).
 
 ## <a name="see-also"></a>Viz také:
 

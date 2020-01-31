@@ -1,18 +1,18 @@
 ---
 title: Vložit komentáře dokumentace XML
-ms.date: 01/26/2018
+ms.date: 01/22/2020
 ms.topic: reference
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ad29957cc31247c16ca38038ad4880ea75a85182
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 20381dd78f169e2b549e077992ac0d1dc1b5c44c
+ms.sourcegitcommit: 6375001ab26786af8d4d449f5846f8a49779ed18
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595576"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76892130"
 ---
 # <a name="how-to-insert-xml-comments-for-documentation-generation"></a>Postupy: vložení komentáře XML pro generování dokumentace
 
@@ -30,7 +30,7 @@ XML souboru generovaného kompilátorem můžete distribuovat spolu s sestavení
 
 1. Umístěte kurzor nad element, který má k dokumentu, například metoda text.
 
-1. Proveďte jednu z těchto akcí:
+2. Proveďte jednu z těchto akcí:
 
    - Typ `///` v C#, nebo `'''` v jazyce Visual Basic
 
@@ -44,9 +44,13 @@ XML souboru generovaného kompilátorem můžete distribuovat spolu s sestavení
 
    ![Šablona komentáře XML – Visual Basic](media/doc-preview-vb.png)
 
-1. Zadejte popis jednotlivých prvků XML do plně dokumentu na prvek kódu.
+3. Zadejte popis jednotlivých prvků XML do plně dokumentu na prvek kódu.
 
    ![Dokončené komentář](media/doc-result-cs.png)
+
+Můžete použít styly v komentářích XML, které budou vykresleny rychle informace při přechodu na prvek. Mezi tyto styly patří kurzíva, tučné, odrážky a odkaz s odkazem.
+
+   ![Dokončené komentář](media/doc-styles-cs.png) 
 
 > [!NOTE]
 > Je [možnost](../../ide/reference/options-text-editor-csharp-advanced.md) pro dokumentační komentáře XML přepnout po zadání `///` v C# nebo `'''` jazyka Visual Basic. Na panelu nabídek zvolte **nástroje** > **možnosti** otevřít **možnosti** dialogové okno. Pak přejděte do **textový Editor**  >  **C#** nebo **základní** > **Upřesnit**. V **Nápověda k editoru** části, vyhledejte **generovat komentáře dokumentace XML** možnost.

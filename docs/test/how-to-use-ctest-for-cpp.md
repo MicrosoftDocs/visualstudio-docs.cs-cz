@@ -1,18 +1,18 @@
 ---
 title: Postup použití testu CTest jazyka C++
-ms.date: 05/01/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
-ms.author: mblome
+ms.author: corob
 manager: jillfra
 ms.workload:
 - cplusplus
-author: mikeblome
-ms.openlocfilehash: cc0ced6205444e1436ffbffa73ba647a6b682c5c
-ms.sourcegitcommit: 628eb202a1153ebfe69c668f966f821b98b34b34
+author: corob-msft
+ms.openlocfilehash: 78759a017575916bce3b3fff643cbce8ff303fd6
+ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71720553"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76826520"
 ---
 # <a name="how-to-use-ctest-for-c-in-visual-studio-2017-and-later"></a>Jak používat CTest pro C++ v aplikaci Visual Studio 2017 a novější
 
@@ -20,7 +20,7 @@ Cmake (která zahrnuje CTest) je integrovaná do integrovaného vývojového pro
 
 ## <a name="to-write-tests"></a>K psaní testů
 
-Podpora CMake v sadě Visual Studio nezahrnuje projektu systému Visual Studio. Proto zápisu a nakonfigurujte testy CTest, stejně jako v jakémkoli prostředí CMake. K povolení testování použijte příkaz `enable_testing()` a pomocí příkazu `add_test()` přidejte nový test. Další informace o CTest najdete v dokumentaci k [cmaki](https://gitlab.kitware.com/cmake/community/wikis/doc/ctest/Testing-With-CTest). 
+Podpora CMake v sadě Visual Studio nezahrnuje projektu systému Visual Studio. Proto zápisu a nakonfigurujte testy CTest, stejně jako v jakémkoli prostředí CMake. Použijte příkaz `enable_testing()` pro povolení testování a příkaz `add_test()` nebo `gtest_discover_tests()` pro přidání nového testu. Další informace o CTest najdete v dokumentaci k [cmaki](https://gitlab.kitware.com/cmake/community/wikis/doc/ctest/Testing-With-CTest). 
 
 Další informace o použití CMake v sadě Visual Studio najdete v tématu [projekty cmake v sadě Visual Studio](/cpp/build/cmake-projects-in-visual-studio).
 

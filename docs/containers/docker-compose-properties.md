@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: c528d1ca2d767b914bba2fd554699985c37d6ba1
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 226078127d2fe61675a592bbafa06d732afc7c49
+ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916921"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76826455"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose vlastnosti sestavení
 
@@ -109,6 +109,20 @@ Použijte dvojité uvozovky kolem hodnot, jako v předchozím příkladu, a pou�
 |com. Microsoft. VisualStudio. laděného procesu. killprogram|Tento příkaz slouží k zastavení programu laděného procesu, který běží uvnitř kontejneru (v případě potřeby).|
 |com. Microsoft. VisualStudio. laděného procesu. program|Program byl spuštěn při spuštění ladění. Pro aplikace .NET Core je toto nastavení obvykle **dotnet**.|
 |com. Microsoft. VisualStudio. laděného procesu. WorkingDirectory|Adresář používaný jako spouštěcí adresář při spuštění ladění. Toto nastavení je obvykle */App* pro kontejnery Linux nebo *C:\app* pro kontejnery Windows.|
+
+## <a name="customize-the-app-startup-process"></a>Přizpůsobení procesu spuštění aplikace
+
+Můžete spustit příkaz nebo vlastní skript před spuštěním aplikace pomocí nastavení `entrypoint` a tím, že bude závislá na konfiguraci. Například pokud potřebujete nastavit certifikát pouze v režimu **ladění** spuštěním `update-ca-certificates`, ale ne v režimu **vydání** , můžete přidat následující kód pouze v *Docker-Compose. vs. Debug. yml*:
+
+```yml
+services:
+  webapplication1:
+    entrypoint: "sh -c 'update-ca-certificates && tail -f /dev/null'"
+    labels:
+      ...
+```
+
+Pokud vynecháte *Docker-Compose. vs. Release. yml* nebo *Docker-Compose. vs. Debug. yml,* Visual Studio vygeneruje jedno na základě výchozího nastavení.
 
 ## <a name="next-steps"></a>Další kroky
 

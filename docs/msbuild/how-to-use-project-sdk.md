@@ -9,16 +9,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d40e437763ba3eb75daa80a3a1bbf55ba9d896c9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 74ccc29417cdee7a9f93c39509c0f7d06a5c72ff
+ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75574454"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76826468"
 ---
 # <a name="how-to-use-msbuild-project-sdks"></a>Postupy: použití sad SDK projektů MSBuild
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 15,0 představil koncept "projektové sady SDK", který zjednodušuje používání sad pro vývoj softwaru, které vyžadují Import vlastností a cílů.
+MSBuild 15,0 představil koncept "projektové sady SDK", který zjednodušuje používání sad pro vývoj softwaru, které vyžadují Import vlastností a cílů.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -28,7 +28,7 @@ ms.locfileid: "75574454"
 </Project>
 ```
 
-Během hodnocení projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] přidá implicitní importy v horní a dolní části projektu:
+Během hodnocení projektu nástroj MSBuild přidá implicitní importy v horní a dolní části souboru projektu:
 
 ```xml
 <Project>
@@ -46,9 +46,9 @@ Během hodnocení projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/in
 
 ## <a name="reference-a-project-sdk"></a>Odkaz na sadu SDK projektu
 
- Existují tři způsoby, jak odkazovat na sadu SDK projektu:
+Existují tři způsoby, jak odkazovat na sadu SDK projektu:
 
-1. Použijte atribut `Sdk` u elementu `<Project/>`:
+- Použijte atribut `Sdk` u elementu `<Project/>`:
 
     ```xml
     <Project Sdk="My.Custom.Sdk">
@@ -58,7 +58,7 @@ Během hodnocení projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/in
 
     Do horní a dolní části projektu se přidá implicitní import, jak je popsáno výše.
     
-    K určení konkrétní verze sady SDK ji můžete připojit k atributu `Sdk`:
+    Chcete-li zadat konkrétní verzi sady SDK, přidejte ji do atributu `Sdk`:
 
     ```xml
     <Project Sdk="My.Custom.Sdk/1.2.3">
@@ -69,7 +69,7 @@ Během hodnocení projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/in
     > [!NOTE]
     > Toto je momentálně jediný podporovaný způsob, jak odkazovat na sadu SDK projektu v Visual Studio pro Mac.
 
-2. Použijte `<Sdk/>` element nejvyšší úrovně:
+- Použijte `<Sdk/>` element nejvyšší úrovně:
 
     ```xml
     <Project>
@@ -78,9 +78,11 @@ Během hodnocení projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/in
     </Project>
    ```
 
-   Do horní a dolní části projektu se přidá implicitní import, jak je popsáno výše.  Atribut `Version` není povinný.
+   Do horní a dolní části projektu se přidá implicitní import, jak je popsáno výše.
+   
+   Atribut `Version` není povinný.
 
-3. Použijte `<Import/>` element kdekoli v projektu:
+- Použijte `<Import/>` element kdekoli v projektu:
 
     ```xml
     <Project>
@@ -95,19 +97,23 @@ Během hodnocení projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/in
 
    Explicitní zahrnutí importů do projektu vám umožní plnou kontrolu nad objednávkou.
 
-   Při použití prvku `<Import/>` můžete zadat také volitelný atribut `Version`.  Můžete například zadat `<Import Project="Sdk.props" Sdk="My.Custom.Sdk" Version="1.2.3" />`.
+   Při použití prvku `<Import/>` můžete zadat také volitelný atribut `Version`. Můžete například zadat `<Import Project="Sdk.props" Sdk="My.Custom.Sdk" Version="1.2.3" />`.
 
 ## <a name="how-project-sdks-are-resolved"></a>Jak se řeší sady SDK projektu
 
-Při vyhodnocování importu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] dynamicky vyřeší cestu k projektové sadě SDK na základě názvu a verze, kterou jste zadali.  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] taky obsahuje seznam registrovaných překladačů SDK, které jsou moduly plug-in, které na vašem počítači hledají sady Project SDK.  Mezi tyto moduly plug-in patří:
+Při vyhodnocování importu nástroj MSBuild dynamicky vyřeší cestu k projektové sadě SDK na základě názvu a verze, kterou jste zadali.  Nástroj MSBuild obsahuje také seznam registrovaných překladačů sady SDK, které jsou moduly plug-in, které na vašem počítači hledají sady SDK projektu. Mezi tyto moduly plug-in patří:
 
-1. Překladač založený na NuGetu, který se dotazuje na vaše nakonfigurované kanály balíčků pro balíčky NuGet, které odpovídají ID a verzi sady SDK, kterou jste určili.<br/>
-   Tento překladač je aktivní pouze v případě, že jste zadali volitelnou verzi a je možné ji použít pro vlastní projektové sady SDK.
-2. Překladač rozhraní .NET CLI, který řeší sady SDK, které jsou nainstalovány s rozhraním .NET CLI.<br/>
+- Překladač založený na NuGetu, který se dotazuje na vaše nakonfigurované kanály balíčků pro balíčky NuGet, které odpovídají ID a verzi sady SDK, kterou jste určili.
+
+   Tento překladač je aktivní pouze v případě, že jste zadali volitelnou verzi. Dá se použít pro libovolnou vlastní sadu SDK projektu.
+   
+- Překladač rozhraní .NET CLI, který řeší sady SDK, které jsou nainstalovány s [rozhraním .NET CLI](/dotnet/core/tools/).
+
    Tento překladač vyhledá sady SDK projektu, například `Microsoft.NET.Sdk` a `Microsoft.NET.Sdk.Web`, které jsou součástí produktu.
-3. Výchozí překladač, který řeší sady SDK, které byly nainstalovány s nástrojem MSBuild.
+   
+- Výchozí překladač, který řeší sady SDK, které byly nainstalovány s nástrojem MSBuild.
 
-Překladač SDK na základě NuGet podporuje určení verze v [globálním formátu. JSON](/dotnet/core/tools/global-json) , který umožňuje řídit verzi SDK projektu na jednom místě, a ne v jednotlivých projektech:
+Překladač SDK na základě NuGet podporuje určení verze v souboru [Global. JSON](/dotnet/core/tools/global-json) , který umožňuje řídit verzi sady SDK projektu na jednom místě a nikoli v jednotlivých projektech:
 
 ```json
 {
@@ -118,7 +124,7 @@ Překladač SDK na základě NuGet podporuje určení verze v [globálním form�
 }
 ```
 
-Během sestavení lze použít pouze jednu verzi sady SDK projektu.  Pokud odkazujete na dvě různé verze stejné projektové sady SDK, nástroj MSBuild vygeneruje upozornění.  Pokud je ve vašem *globálním formátu. JSON*zadaná verze, **doporučuje se v projektech nespecifikovat** verze.
+Během sestavení lze použít pouze jednu verzi sady SDK projektu. Pokud odkazujete na dvě různé verze stejné projektové sady SDK, nástroj MSBuild vygeneruje upozornění. V případě, že je v souboru *Global. JSON* uvedena verze **, není doporučeno zadat verzi** v projektech.
 
 ## <a name="see-also"></a>Viz také:
 
