@@ -52,6 +52,8 @@
       items:
         - name: Kontrola dat v oknech ladicího programu
           href: debugger-windows.md
+        - name: Kontrola výjimek
+          href: exception-helper.md
         - name: Kontrola proměnných
           href: autos-and-locals-windows.md
         - name: Sledování proměnných

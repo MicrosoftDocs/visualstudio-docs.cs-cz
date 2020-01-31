@@ -1,4 +1,4 @@
-- name: MsBuild
+- name: MSBuild
   items:
     - name: MsBuild
       href: msbuild.md
@@ -8,7 +8,8 @@
       href: what-s-new-in-msbuild-15-0.md
     - name: Koncepty nástroje MSBuild
       items:
-        - name: Koncepty nástroje MSBuild – přehled
+        - name: Přehled
+          displayName: msbuild concepts
           href: msbuild-concepts.md
         - name: Vlastnosti
           items:
@@ -134,7 +135,7 @@
               href: resolving-assemblies-at-design-time.md
             - name: Cíle a konfigurace úlohy
               items:
-                - name: Konfigurace cílů a úloh
+                - name: Přehled
                   href: configuring-targets-and-tasks.md
                 - name: Konfigurace cílů a úloh
                   href: how-to-configure-targets-and-tasks.md
@@ -142,7 +143,8 @@
               href: troubleshooting-dotnet-framework-targeting-errors.md
         - name: Sledování souborů
           items:
-            - name: Sledování souborů – přehled
+            - name: Přehled
+              displayName: file tracking
               href: file-tracking.md
             - name: EndTrackingContext
               href: endtrackingcontext.md
@@ -168,7 +170,8 @@
           href: msbuild-best-practices.md
     - name: protokolování
       items:
-        - name: "Protokolování v\_nástroji MSBuild – přehled"
+        - name: Přehled
+          displayName: logging
           href: logging-in-msbuild.md
         - name: "Získávání protokolů o\_sestavení pomocí nástroje MSBuild"
           href: obtaining-build-logs-with-msbuild.md
@@ -186,63 +189,67 @@
       href: walkthrough-creating-an-msbuild-project-file-from-scratch.md
     - name: Referenční dokumentace nástroje MSBuild
       items:
-        - name: Referenční dokumentace nástroje MSBuild – přehled
+        - name: Přehled
+          displayName: msbuild reference
           href: msbuild-reference.md
         - name: Referenční dokumentace schématu souboru projektu nástroje MSBuild
           items:
-            - name: Referenční dokumentace schématu souboru projektu nástroje MSBuild – přehled
+            - name: Přehled
+              displayName: Project File Schema Reference
               href: msbuild-project-file-schema-reference.md
-            - name: Choose – element (MSBuild)
+            - name: Choose – element
               href: choose-element-msbuild.md
-            - name: Import – element (MSBuild)
+            - name: Import – element
               href: import-element-msbuild.md
             - name: ImportGroup – element
               href: importgroup-element.md
-            - name: Item – prvek (MSBuild)
+            - name: Item – element
               href: item-element-msbuild.md
-            - name: ItemDefinitionGroup – element (MSBuild)
+            - name: ItemDefinitionGroup – element
               href: itemdefinitiongroup-element-msbuild.md
-            - name: ItemGroup – element (MSBuild)
+            - name: ItemGroup – element
               href: itemgroup-element-msbuild.md
-            - name: ItemMetadata – element (MSBuild)
+            - name: ItemMetadata – element
               href: itemmetadata-element-msbuild.md
-            - name: OnError – element (MSBuild)
+            - name: OnError – element
               href: onerror-element-msbuild.md
-            - name: Otherwise – element (MSBuild)
+            - name: Otherwise – element
               href: otherwise-element-msbuild.md
-            - name: Output – element (MSBuild)
+            - name: Output – element
               href: output-element-msbuild.md
             - name: Parameter – element
               href: parameter-element.md
             - name: ParameterGroup – element
               href: parametergroup-element.md
-            - name: Project – element (MSBuild)
+            - name: Project – element
               href: project-element-msbuild.md
-            - name: ProjectExtensions – element (MSBuild)
+            - name: ProjectExtensions – element
               href: projectextensions-element-msbuild.md
-            - name: Property – element (MSBuild)
+            - name: Property – element
               href: property-element-msbuild.md
-            - name: PropertyGroup – element (MSBuild)
+            - name: PropertyGroup – element
               href: propertygroup-element-msbuild.md
-            - name: Sdk – element (MSBuild)
+            - name: Sdk – element
               href: sdk-element-msbuild.md
-            - name: Target – element (MSBuild)
+            - name: Target – element
               href: target-element-msbuild.md
-            - name: Task – element (MSBuild)
+            - name: Task – element
               href: task-element-msbuild.md
-            - name: TaskBody – element (MSBuild)
+            - name: TaskBody – element
               href: taskbody-element-msbuild.md
-            - name: UsingTask – element (MSBuild)
+            - name: UsingTask – element
               href: usingtask-element-msbuild.md
-            - name: When – prvek (MSBuild)
+            - name: When – element
               href: when-element-msbuild.md
         - name: Referenční dokumentace úlohy
           items:
-            - name: Referenční dokumentace úlohy nástroje MSBuild – přehled
+            - name: Přehled
+              displayName: Task Reference
               href: msbuild-task-reference.md
-            - name: Úlohy specifické pro Visual C++
+            - name: Úlohy specifické pro C++
               items:
-                - name: Úlohy nástroje MSBuild specifické pro Visual C++ – přehled
+                - name: Přehled
+                  displayName: C++ tasks
                   href: msbuild-tasks-specific-to-visual-cpp.md
                 - name: BscMake – úloha
                   href: bscmake-task.md
@@ -442,13 +449,15 @@
           href: msbuild-response-files.md
         - name: Referenční dokumentace WPF
           items:
-            - name: Referenční dokumentace nástroje WPF MSBuild – přehled
+            - name: Přehled
+              displayName: WPF MSBuild Reference
               href: wpf-msbuild-reference.md
             - name: WPF – soubory .Targets
               href: wpf-dot-targets-files.md
             - name: Referenční dokumentace úlohy WPF
               items:
-                - name: Referenční dokumentace úlohy nástroje WPF MSBuild – přehled
+                - name: Přehled
+                  displayName: WPF MSBuild Task Reference
                   href: wpf-msbuild-task-reference.md
                 - name: FileClassifier – úloha
                   href: fileclassifier-task.md
@@ -472,7 +481,8 @@
           href: special-characters-to-escape.md
     - name: Programové používání MSBuildu
       items:
-        - name: Programové používání MSBuildu
+        - name: Přehled
+          displayName: Use MSBuild Programmatically
           href: msbuild-api.md
         - name: Aktualizace na MSBuild 15
           href: updating-an-existing-application.md
