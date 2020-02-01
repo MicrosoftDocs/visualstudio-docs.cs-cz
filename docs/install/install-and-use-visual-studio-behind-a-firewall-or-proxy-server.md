@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d74cb5b1594c0e4d347e2f8a4e1924cf68d64eed
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 3ba3ca41fe1bf675bc4f17e9932525921060aaa9
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114936"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922874"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Instalace a používání sady Visual Studio a služeb Azure za bránou firewall nebo proxy serverem
 
@@ -76,6 +76,10 @@ Vzhledem k tomu, že Instalační program pro Visual Studio stahuje soubory z r�
 | WWW\.incredibuild.com | Vývoj her v C++ (IncrediBuild) |
 | incredibuildvs2017i.azureedge.net | Vývoj her v C++ (IncrediBuild) |
 | WWW\.python.org | Vývoj v jazyce Python (Python) <br /><br />Pro datové vědy a analytické aplikace (Python) |
+| developerservices2.apple.com | Zřizování Xamarin. iOS |
+| developer.apple.com | Zřizování Xamarin. iOS |
+| appstoreconnect.apple.com | Zřizování Xamarin. iOS |
+| idmsa.apple.com | Zřizování Xamarin. iOS |
 | | |
 
 ## <a name="use-visual-studio-and-azure-services"></a>Použijte sadu Visual Studio a službami Azure

@@ -1,71 +1,99 @@
 ---
-title: Jak používat zvýšení. test proC++
+title: Jak používat Boost.Test pro C++
 description: Použijte zvýšení. test k vytvoření testování částí v aplikaci Visual Studio.
-ms.date: 05/06/2019
+ms.date: 01/29/2020
 ms.topic: conceptual
-author: mikeblome
-ms.author: mblome
-manager: jillfra
+author: corob-msft
+ms.author: corob
+manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 966983fa15b60db33f11645b25561a74ad5fadbe
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 0a1a621c7ee7175d86b2cbcf9a6e2c02c0aecbb3
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72983437"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922912"
 ---
-# <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Jak používat zvýšení. test pro C++ v aplikaci Visual Studio
+# <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Jak používat Boost.Test pro C++ v sadě Visual Studio
 
-V aplikaci Visual Studio 2017 a novějších se testovací adaptér pro zvýšení zátěže integruje do integrovaného vývojového prostředí (IDE) sady Visual Studio jako součást **vývoje plochy s C++**  úlohou.
+V aplikaci Visual Studio 2017 a novějších se testovací adaptér pro zvýšení a testování integruje do integrovaného vývojového prostředí (IDE) sady Visual Studio. Je to součást **vývoje plochy s C++**  úlohou.
 
-![Testovací adaptér pro zvýšení. test](media/cpp-boost-component.png)
+![Testovací adaptér pro Boost.Test](media/cpp-boost-component.png)
 
-Pokud nemáte nainstalovanou úlohu **vývoj C++ desktopových** aplikací, otevřete **instalační program pro Visual Studio**. Vyberte **desktopový vývoj s C++**  úlohou a pak klikněte na tlačítko **Upravit** .
+Pokud nemáte nainstalovanou úlohu **vývoj C++ desktopových** aplikací, otevřete **instalační program pro Visual Studio**. Vyberte **vývoj desktopových aplikací pomocí C++** úloh, klikněte na tlačítko **změnit** tlačítko.
 
-## <a name="install-boost"></a>Zesílení instalace
+## <a name="install-boost"></a>Nainstalujte Boost
 
-Zvýšení. test vyžaduje [zvýšení](https://www.boost.org/)! Pokud nemáte nainstalovanou posílení, doporučujeme použít Správce balíčků Vcpkg.
+Vyžaduje Boost.Test [Boost](https://www.boost.org/)! Pokud nemáte nainstalovanou posílení, doporučujeme použít Správce balíčků Vcpkg.
 
-1. Postupujte podle pokynů na adrese [Vcpkg: C++ správce balíčků pro Windows](/cpp/vcpkg) , který nainstaluje Vcpkg (pokud ho ještě nemáte).
+1. Postupujte podle pokynů na adrese [Vcpkg: Správce balíčků jazyka C++ pro Windows](/cpp/vcpkg) instalace vcpkg (pokud ho nemáte).
 
-1. Nainstalujte dynamickou nebo statickou knihovnu s přízvýšením. test:
+1. Nainstalujte Boost.Test dynamické nebo statické knihovny:
 
-    - Spusťte příkaz pro **zvýšení a testování vcpkg instalace** a nainstalujte dynamickou knihovnu pro zvýšení. testování.
+    - Spusťte `vcpkg install boost-test` pro instalaci dynamické knihovny pro zvýšení. testování.
 
-       Ani
+       -OR-
 
-    - Spusťte příkaz **vcpkg Install dis-test: x86-Windows-static** pro instalaci statické knihovny pro zvýšení. testování.
+    - Spusťte `vcpkg install boost-test:x86-windows-static` pro instalaci statické knihovny pro zvýšení. testování.
 
-1. Spusťte **integraci vcpkg Integration** pro konfiguraci sady Visual Studio s knihovnou a přidejte cesty k hlavičkám a binárním souborům pro zvýšení úrovně.
+1. Spusťte `vcpkg integrate install` pro konfiguraci sady Visual Studio s knihovnou a zahrnutí cest k hlavičkám a binárním souborům pro zvýšení úrovně.
 
-## <a name="add-the-item-template-visual-studio-2017-version-156-and-later"></a>Přidat šablonu položky (Visual Studio 2017 verze 15,6 a novější)
+Můžete si vybrat, jak nakonfigurovat testy v rámci řešení v sadě Visual Studio: můžete do testovaného projektu zahrnout testovací kód, nebo můžete vytvořit samostatný testovací projekt pro vaše testy. Obě možnosti mají své výhody i nevýhody.
 
-1. Chcete-li vytvořit soubor *. cpp* pro testy, klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte možnost **Přidat novou položku**.
+## <a name="add-tests-inside-your-project"></a>Přidat testy do projektu
 
-   ![Zvýšení šablony testovací položky](media/boost_test_item_template.png)
+V aplikaci Visual Studio 2017 verze 15,6 a novější můžete přidat šablonu položky pro testy do projektu. Testy i váš kód jsou aktivní ve stejném projektu. Budete muset vytvořit samostatnou konfiguraci sestavení pro vygenerování testovacího sestavení. A, budete muset zachovávat testy z buildů pro ladění a vydaných verzí.
 
-1. Nový soubor obsahuje ukázkovou testovací metodu. Sestavte projekt, aby bylo možné zjistit metodu v **Průzkumníku testů** .
+V sadě Visual Studio 2017 verze 15.5 jsou k dispozici pro Boost.Test žádná předem nakonfigurované testovací projekt nebo šablony položek. Použijte pokyny k vytvoření a konfiguraci samostatného testovacího projektu.
 
-Šablona položky používá variantu s jednou hlavičkou zvýšení. test, ale můžete upravit #include cestu pro použití proměnné variant samostatné knihovny. Další informace najdete v tématu [Přidání direktiv include](#add-include-directives).
+### <a name="create-a-boosttest-item"></a>Vytvořit zvýšení testovací položky
 
-## <a name="create-a-test-project"></a>Vytvoření testovacího projektu
+1. Chcete-li vytvořit soubor *. cpp* pro testy, klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte možnost **Přidat** > **novou položku**.
 
-V aplikaci Visual Studio 2017 verze 15,5 nejsou k dispozici žádné předem nakonfigurované testovací projekty ani šablony položek pro zvýšení. test. Proto je nutné vytvořit a nakonfigurovat projekt konzolové aplikace pro uložení testů.
+1. V dialogovém okně **Přidat novou položku** rozbalte položku **nainstalované** > **Visual C++**  > **test**. Vyberte **zvýšit. test**a pak zvolte **Přidat** a přidejte do projektu *test. cpp* .
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel řešení a vyberte **Přidat** > **Nový projekt**.
+   ![Šablony položek Boost.Test](media/boost_test_item_template.png)
 
-1. V levém podokně vyberte **Visual C++**  > **Desktop Windows**a pak zvolte šablonu **Konzolová aplikace pro Windows** .
+Nový soubor *test. cpp* obsahuje ukázkovou testovací metodu. Do tohoto souboru můžete zahrnout vlastní hlavičkové soubory a napsat testy pro vaši aplikaci.
 
-1. Zadejte název projektu a klikněte na **tlačítko OK**.
+Testovací soubor také používá makra k definování nové rutiny `main` pro konfigurace testu. Pokud projekt sestavíte nyní, zobrazí se chyba LINKERŮ LNK2005, například "_main již byla definována v Main. obj".
 
-1. Odstraňte funkci `main` v souboru *. cpp* .
+### <a name="create-and-update-build-configurations"></a>Vytvoření a aktualizace konfigurací sestavení
+
+1. Chcete-li vytvořit konfiguraci testu, v řádku nabídek vyberte možnost **sestavit** > **Configuration Manager**. V dialogovém okně **Configuration Manager** otevřete rozevírací nabídku v části **Konfigurace aktivního řešení** a vyberte možnost **Nový**. V dialogovém okně **Nová konfigurace řešení** zadejte název, například "Debug UnitTests". V části **Kopírovat nastavení** vyberte **ladění**a pak zvolte **OK**.
+
+1. Vylučte testovací kód z vašich konfigurací ladění a vydání: v **Průzkumník řešení**klikněte pravým tlačítkem na test. cpp a vyberte **vlastnosti**. V dialogovém okně **stránky vlastností** vyberte v rozevíracím seznamu **Konfigurace** možnost **všechny konfigurace** . Vyberte **Vlastnosti konfigurace** > **Obecné** a otevřete rozevírací seznam pro **vyloučení z vlastnosti Build** . Vyberte **Ano**a pak změny uložte kliknutím na **použít** .
+
+1. Chcete-li zahrnout kód testu do konfigurace UnitTests ladění, v dialogovém okně **stránky vlastností** vyberte v rozevíracím seznamu **Konfigurace** položku **ladit UnitTests** . Ve vlastnosti **vyloučeno ze sestavení** vyberte **ne** a pak změny uložte kliknutím na **tlačítko OK** .
+
+1. Vylučte z konfigurace UnitTests pro ladění hlavní kód. V **Průzkumník řešení**klikněte pravým tlačítkem na soubor, který obsahuje vaši funkci `main` a vyberte **vlastnosti**. V dialogovém okně **stránky vlastností** vyberte v rozevíracím seznamu **Konfigurace** možnost **ladění UnitTests** . Vyberte **Vlastnosti konfigurace** > **Obecné** a otevřete rozevírací seznam pro **vyloučení z vlastnosti Build** . Pokud chcete změny uložit, vyberte **Ano**a pak zvolte **OK** .
+
+1. Nastavte konfiguraci řešení tak, aby **UnitTests ladit**, a pak Sestavte projekt, aby bylo možné zjistit metodu v **Průzkumníku testů** .
+
+Dokud název konfigurace, který vytvoříte, začíná slovy "debug" nebo "Release", odpovídající zvýšení. knihovny testů se vystaví automaticky.
+
+Šablona položky používá variantu single-header Boost.Test, ale můžete změnit #include cesta pro variantu samostatné knihovny. Další informace najdete v tématu [přidat direktiv](#add-include-directives).
+
+## <a name="create-a-separate-test-project"></a>Vytvoření samostatného testovacího projektu
+
+V mnoha případech je snazší použít samostatný projekt pro testy. Pro váš projekt nebudete muset vytvořit speciální konfiguraci testu. Nebo vylučte testovací soubory z sestavení pro ladění a vydání.
+
+### <a name="to-create-a-separate-test-project"></a>Vytvoření samostatného testovacího projektu
+
+1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel řešení a zvolte **přidat** > **nový projekt**.
+
+1. V dialogovém okně **Přidat nový projekt** vyberte možnost **C++** , **Windows**a **Konzola** v rozevíracích seznamech filtru. Vyberte šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**.
+
+1. Zadejte název projektu a klikněte na **vytvořit**.
+
+1. Odstranit `main` fungovat v *.cpp* souboru.
 
 1. Pokud používáte verzi s jedním hlavičkou nebo dynamickou knihovnou, použijte příkaz [Přidat direktivy include](#add-include-directives). Pokud používáte statickou verzi knihovny, musíte provést nějakou další konfiguraci:
 
-   a. Chcete-li upravit soubor projektu, nejprve ho uvolněte. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **Uvolnit projekt**. Poté klikněte pravým tlačítkem myši na uzel projektu a zvolte možnost **upravit < název\>. vcxproj**.
+   a. Chcete-li upravit soubor projektu, nejprve uvolněn. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a zvolte **uvolnit projekt**. Potom klikněte pravým tlačítkem na uzel projektu a zvolte **upravit < název\>.vcxproj**.
 
-   b. Přidejte dva řádky do skupiny vlastností **Globals** , jak je znázorněno zde:
+   b. Přidejte dva řádky **Globals** skupiny vlastností, jak je znázorněno zde:
 
     ```xml
     <PropertyGroup Label="Globals">
@@ -75,37 +103,37 @@ V aplikaci Visual Studio 2017 verze 15,5 nejsou k dispozici žádné předem nak
     </PropertyGroup>
     ```
 
-   r. Uložte a zavřete soubor *\*. vcxproj* a pak znovu načtěte projekt.
+   c. Uložte a zavřete  *\*.vcxproj* souboru a pak znovu načtěte projekt.
 
-   trojrozměrné. Chcete-li otevřít **stránky vlastností**, klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **vlastnosti**.
+   d. Chcete-li otevřít **stránky vlastností**, klikněte pravým tlačítkem na uzel projektu a zvolte **vlastnosti**.
 
-   trojrozměrné. Rozbalte položku **CC++ /**  > **generování kódu**a pak vyberte **Knihovna prostředí runtime**. Vyberte **/MTD** pro ladění knihovny statických runtime nebo **/Mt** pro vydanou verzi statického modulu runtime.
+   e. Rozbalte **C/C++**  > **generování kódu**a pak vyberte **knihovny prostředí Runtime**. Vyberte **/MTD** pro statické běhovou ladicí knihovnou nebo **/MT** verze runtime statické knihovny.
 
-   FJ. Rozbalte **Linker** > **systém**. Ověřte, zda je **podsystém** nastaven na hodnotu **Konzola**.
+   f. Rozbalte **Linkeru** > **systému**. Ověřte, zda je **podsystém** nastaven na hodnotu **Console**.
 
-   věcn. Kliknutím na **tlačítko OK** zavřete stránky vlastností.
+   g. Zvolte **OK** stránku vlastností zavřete.
 
-## <a name="add-include-directives"></a>Přidat direktivy include
+## <a name="add-include-directives"></a>Přidání direktiv
 
-1. V souboru Test *. cpp* přidejte všechny potřebné `#include` direktivy, aby byly typy a funkce programu viditelné pro testovací kód. Obvykle je program o jednu úroveň v hierarchii složek. Pokud zadáte `#include "../"`, zobrazí se okno technologie IntelliSense, které umožňuje vybrat úplnou cestu k souboru hlaviček.
+1. V testu *.cpp* přidejte všechny potřebné `#include` direktivy zviditelnit typy a funkce vaší aplikace k testovacímu kódu. Pokud používáte samostatný testovací projekt, je obvykle program na úrovni stejné úrovně v hierarchii složek. Pokud zadáte `#include "../"`, zobrazí se okno technologie IntelliSense a umožňuje vybrat úplná cesta k souboru hlaviček.
 
-   ![Přidat direktivy #include](media/cpp-gtest-includes.png)
+   ![Přidejte #include](media/cpp-gtest-includes.png)
 
-   Samostatnou knihovnu můžete použít k těmto akcím:
+   Můžete použít samostatné knihovně:
 
    ```cpp
    #include <boost/test/unit_test.hpp>
    ```
 
-   Nebo použijte jednu hlavičkovou verzi s:
+   Nebo použijte verzi jedním záhlaví pomocí:
 
    ```cpp
    #include <boost/test/included/unit_test.hpp>
    ```
 
-   Pak definujte `BOOST_TEST_MODULE`.
+   Poté definujte `BOOST_TEST_MODULE`.
 
-Následující příklad je dostačující pro to, aby byl test zjistitelný v **Průzkumníku testů**:
+V následujícím příkladu je dostatečná pro test zjistitelné v **Průzkumníka testů**:
 
 ```cpp
 #define BOOST_TEST_MODULE MyTest
@@ -124,9 +152,9 @@ BOOST_AUTO_TEST_CASE(my_boost_test)
 }
 ```
 
-## <a name="write-and-run-tests"></a>Zápis a spouštění testů
+## <a name="write-and-run-tests"></a>Psání a spouštění testů
 
-Nyní jste připraveni napsat a spustit testy zvýšení úrovně. Informace o makrech testu naleznete v [dokumentaci ke knihovně pro zvýšení úrovně](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html) . Informace o zjišťování, spouštění a seskupování testů pomocí **Průzkumníka testů**naleznete v tématu [spuštění testů jednotek pomocí Průzkumníka testů](run-unit-tests-with-test-explorer.md) .
+Teď jste připravení psát a spouštět testy Boost test. Najdete v článku [dokumentaci ke knihovně Boost test](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html) informace o makra testu. Zobrazit [spouštění testů jednotek pomocí Průzkumníka testů](run-unit-tests-with-test-explorer.md) informace o zjišťování, spouštění a seskupení testů s použitím **Průzkumník testů**.
 
 ## <a name="see-also"></a>Viz také:
 

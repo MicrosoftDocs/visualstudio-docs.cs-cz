@@ -22,10 +22,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f79ece781db19f2483ef1dd6cb0a81ff7cf78e06
-ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "64836314"
 ---
 # <a name="navigating-through-code-with-the-debugger"></a>Procházení kódu s ladicím programem

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Tools for Docker s ASP.NET Core
+title: Visual Studio Tools for Docker s ASP.NET
 author: ghogen
 description: Naučte se používat nástroje sady Visual Studio 2019 a Docker for Windows
 ms.author: ghogen
@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.prod: visual-studio-dev16
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: d0da02773913a610c77d7165fdb0f9becfc59e9c
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 3869cf025b4ed0e744a7fea929aac38acb7dd816
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75928111"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922997"
 ---
 Pomocí sady Visual Studio můžete snadno sestavovat, ladit a spouštět aplikace s podporou aplikací .NET, ASP.NET a ASP.NET Core a publikovat je do Azure Container Registry (ACR), Docker Hub, Azure App Service nebo vlastního registru kontejneru. V tomto článku publikujeme aplikaci ASP.NET Core do ACR.
 
@@ -20,7 +20,7 @@ Pomocí sady Visual Studio můžete snadno sestavovat, ladit a spouštět aplika
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) s nainstalovanou úlohou **vývoje pro web**, úlohy **nástrojů Azure** a/nebo **.NET Core pro vývoj pro různé platformy**
-* [Vývojové nástroje .NET core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2) pro vývoj pomocí .net Core 2,2
+* [Vývojové nástroje .NET Core](https://dotnet.microsoft.com/download/dotnet-core/) pro vývoj pomocí .NET Core
 * Pokud chcete publikovat Azure Container Registry, předplatné Azure. [Zaregistrujte si bezplatnou zkušební verzi](https://azure.microsoft.com/offers/ms-azr-0044p/).
 
 ## <a name="installation-and-setup"></a>Instalace a nastavení
@@ -29,10 +29,12 @@ Pro instalaci Docker si nejdřív přečtěte informace v části [Docker Deskto
 
 ## <a name="add-a-project-to-a-docker-container"></a>Přidání projektu do kontejneru Docker
 
-1. Vytvořte nový projekt pomocí šablony **ASP.NET Core webové aplikace** .
+1. Vytvořte nový projekt pomocí šablony **ASP.NET Core webové aplikace** , nebo pokud chcete použít .NET Framework namísto .NET Core, vyberte **ASP.NET webová aplikace (.NET Framework)** .
 1. Vyberte **Webová aplikace**a ujistěte se, že je zaškrtnuté políčko **Povolit podporu Docker** .
 
    ![Zaškrtávací políčko Povolit podporu Docker](../../media/container-tools/vs-2019/create-new-web-application.PNG)
+
+   Snímek obrazovky ukazuje .NET Core; Pokud používáte .NET Framework, vypadá to trochu odlišně.
 
 1. Vyberte požadovaný typ kontejneru (Windows nebo Linux) a klikněte na **vytvořit**.
 
@@ -63,7 +65,7 @@ COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "HelloDockerTools.dll"]
 ```
 
-Předchozí *souboru Dockerfile* vychází z image [Microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) a obsahuje pokyny pro úpravu základní image sestavením projektu a jeho přidáním do kontejneru.
+Předchozí *souboru Dockerfile* vychází z image [Microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) a obsahuje pokyny pro úpravu základní image sestavením projektu a jeho přidáním do kontejneru. Pokud používáte .NET Framework, bude základní image odlišná.
 
 Když je zaškrtnuté políčko **Konfigurovat pro protokol HTTPS** v dialogovém okně Nový projekt, *souboru Dockerfile* zpřístupňuje dva porty. Pro přenosy HTTP se používá jeden port; druhý port se používá pro protokol HTTPS. Pokud políčko není zaškrtnuté, bude pro přenosy HTTP vystaven jeden port (80).
 
@@ -71,7 +73,7 @@ Když je zaškrtnuté políčko **Konfigurovat pro protokol HTTPS** v dialogové
 
 V rozevíracím seznamu ladění na panelu nástrojů vyberte **Docker** a spusťte ladění aplikace. Může se zobrazit zpráva s výzvou k důvěřování certifikátu. Chcete-li pokračovat, vyberte možnost důvěryhodného certifikátu.
 
-V okně **výstup** se zobrazí možnost **nástroje kontejneru** , kde se zobrazují akce, které probíhají.
+V okně **výstup** se zobrazí možnost **nástroje kontejneru** , kde se zobrazují akce, které probíhají. Poprvé může chvíli trvat, než se stáhne základní image, ale v dalších spuštěních je mnohem rychlejší.
 
 ## <a name="containers-window"></a>Okno kontejnery
 
@@ -100,8 +102,8 @@ Jakmile se cyklus vývoje a ladění aplikace dokončí, můžete vytvořit prov
     | Nastavení      | Navrhovaná hodnota  | Popis                                |
     | ------------ |  ------- | -------------------------------------------------- |
     | **Předpona DNS** | Globálně jedinečný název | Název, který jedinečně identifikuje váš registr kontejneru. |
-    | **Předplatné** | Zvolte vaše předplatné. | Předplatné Azure, které se má použít. |
-    | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | mojeSkupinaProstředků |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, zvolte **Nová**.|
+    | **Předplatné** | Výběr předplatného | Předplatné Azure, které se má použít. |
+    | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | mojeSkupinaProstředků |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, vyberte možnost **nové** .|
     | **[SKLADOVÉ](/azure/container-registry/container-registry-skus)** | Standardní | Úroveň služby registru kontejneru  |
     | **Umístění registru** | Umístění, které je blízko vás | Vyberte umístění v [oblasti](https://azure.microsoft.com/regions/) poblíž nebo v blízkosti jiných služeb, které budou používat váš registr kontejneru. |
 
