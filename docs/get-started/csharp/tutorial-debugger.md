@@ -2,7 +2,7 @@
 title: 'Kurz: ladění C# kódu'
 description: Zjistěte, jak ke spuštění ladicího programu sady Visual Studio, krokovat kód a kontrolovat data.
 ms.custom: debug-experiment, seodec18, get-started
-ms.date: 11/27/2018
+ms.date: 01/31/2020
 ms.technology: vs-ide-debug
 ms.topic: tutorial
 dev_langs:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e19672ccc13b94f93bd21fc02701aa54648199e
-ms.sourcegitcommit: 0c3c4bd38455f7046c5c5a448eaaa5e407ad5bf4
+ms.openlocfilehash: c2890ee9879d3cab2ff134fdbfcd4edabb36d512
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76726074"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76923157"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Zjistěte, jak ladit C# kódu pomocí sady Visual Studio
 
@@ -93,7 +93,7 @@ Nejprve vytvoříte projekt konzolové aplikace .NET Core. Typ projektu se dodá
 
    Po použití filtrů jazyků a platforem zvolte šablonu **aplikace konzoly (.NET Core)** a pak zvolte možnost **Další**.
 
-   ![Volba C# šablony aplikace konzoly (.NET Core)](../../debugger/media/vs-2019/get-started-create-console-project.png)
+   ![Volba C# šablony aplikace konzoly (.NET Core)](../csharp/media/vs-2019/get-started-create-console-project.png)
 
    > [!NOTE]
    > Pokud nevidíte šablonu **Konzolová aplikace (.NET Core)** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** . Pak v Instalační program pro Visual Studio zvolte úlohu **vývoje .NET Core pro různé platformy** .
@@ -106,106 +106,30 @@ Nejprve vytvoříte projekt konzolové aplikace .NET Core. Typ projektu se dodá
 
 ## <a name="create-the-application"></a>Vytvoření aplikace
 
-1. V *program.cs*nahraďte všechny výchozí kódy, které jsou zde zobrazeny:
+1. V *program.cs*místo toho nahraďte veškerý výchozí kód následujícím kódem:
 
     ```csharp
     using System;
-    // ...
-
-    namespace get_started_debugging
+    class ArrayExample
     {
-        class Program
+        static void Main()
         {
-            static void Main(string[] args)
+            char[] letters = { 'f', 'r', 'e', 'd', ' ', 's', 'm', 'i', 't', 'h'};
+            string name = "";
+            int[] a = new int[10];
+            for (int i = 0; i < letters.Length; i++)
             {
+                name += letters[i];
+                a[i] = i + 1;
+                SendMessage(name, a[i]);
             }
-        }
-    }
-    ```
-
-    s tímto kódem:
-
-    ```csharp
-    using System;
-    using System.Collections.Generic;
-
-    public class Shape
-    {
-        // A few example members
-        public int X { get; private set; }
-        public int Y { get; private set; }
-        public int Height { get; set; }
-        public int Width { get; set; }
-
-        // Virtual method
-        public virtual void Draw()
-        {
-            Console.WriteLine("Performing base class drawing tasks");
-        }
-    }
-
-    class Circle : Shape
-    {
-        public override void Draw()
-        {
-            // Code to draw a circle...
-            Console.WriteLine("Drawing a circle");
-            base.Draw();
-        }
-    }
-
-    class Rectangle : Shape
-    {
-        public override void Draw()
-        {
-            // Code to draw a rectangle...
-            Console.WriteLine("Drawing a rectangle");
-            base.Draw();
-        }
-    }
-
-    class Triangle : Shape
-    {
-        public override void Draw()
-        {
-            // Code to draw a triangle...
-            Console.WriteLine("Drawing a trangle");
-            base.Draw();
-        }
-    }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-
-            var shapes = new List<Shape>
-            {
-                new Rectangle(),
-                new Triangle(),
-                new Circle()
-            };
-
-            foreach (var shape in shapes)
-            {
-                shape.Draw();
-            }
-
-            // Keep the console open in debug mode.
-            Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
-
+        static void SendMessage(string name, int msg)
+        {
+            Console.WriteLine("Hello, " + name + "! Count to " + msg);
+        }
     }
-
-    /* Output:
-        Drawing a rectangle
-        Performing base class drawing tasks
-        Drawing a triangle
-        Performing base class drawing tasks
-        Drawing a circle
-        Performing base class drawing tasks
-    */
     ```
 
 ## <a name="start-the-debugger"></a>Spuštění ladicího programu!
@@ -215,95 +139,90 @@ Nejprve vytvoříte projekt konzolové aplikace .NET Core. Typ projektu se dodá
      **F5** spustí aplikaci se ladicí program připojen k aplikaci zpracování, ale v tuto chvíli jsme neprovedli nic zvláštního prozkoumat kód. Proto pouze načítání aplikace a zobrazí výstup konzoly.
 
     ```cmd
-    Drawing a rectangle
-    Performing base class drawing tasks
-    Drawing a triangle
-    Performing base class drawing tasks
-    Drawing a circle
-    Performing base class drawing tasks
+    Hello, f! Count to 1
+    Hello, fr! Count to 2
+    Hello, fre! Count to 3
+    Hello, fred! Count to 4
+    Hello, fred ! Count to 5
+    Hello, fred s! Count to 6
+    Hello, fred sm! Count to 7
+    Hello, fred smi! Count to 8
+    Hello, fred smit! Count to 9
+    Hello, fred smith! Count to 10
     ```
 
      V tomto kurzu vytvoříme podrobněji podíváme na tuto aplikaci pomocí ladicího programu a získejte funkce, podívejte se na ladicí program.
 
-2. Ukončete ladicí program stisknutím tlačítka červené zastavení ![Zastavit ladění](../../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") .
+2. Ukončete ladicí program stisknutím tlačítka červené zastavení ![Zastavit ladění](../../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") (**SHIFT** + **F5**).
 
-3. Zavřete okno konzoly.
+3. V okně konzoly stisknutím klávesy zavřete okno konzoly.
 
 ## <a name="set-a-breakpoint-and-start-the-debugger"></a>Nastavte zarážku a spuštění ladicího programu
 
-1. V `foreach` smyčku z `Main` fungovat, nastavte zarážku kliknutím na levém okraji následující řádek kódu:
+1. V `for` smyčku z `Main` fungovat, nastavte zarážku kliknutím na levém okraji následující řádek kódu:
 
-    `shape.Draw()`
+    `name += letters[i];`
 
-    Se zobrazí červený kruh, kde nastavit zarážku.
+    Zarážka ![červeného kruhu se](../../debugger/media/dbg-breakpoint.png "Bod přerušení") zobrazí tam, kde jste nastavili zarážku.
 
-    Zarážky jsou základní a nejjednodušší funkcí spolehlivého ladění. Zarážka určuje, kde má Visual Studio spuštěný kód pozastavit, abyste mohli zkontrolovat hodnoty proměnných či chování paměti, nebo abyste zjistili, jestli se nějaká větev kódu spouští.
+    Zarážky jsou jednou ze základních a základních funkcí spolehlivého ladění. Zarážka určuje, kde má Visual Studio spuštěný kód pozastavit, abyste mohli zkontrolovat hodnoty proměnných či chování paměti, nebo abyste zjistili, jestli se nějaká větev kódu spouští.
 
 2. Stiskněte klávesu **F5** nebo tlačítko **Spustit ladění** ![Spustit ladění](../../debugger/media/dbg-tour-start-debugging.png "Spustit ladění"), spustí se aplikace a ladicí program se spustí na řádek kódu, kde jste nastavili zarážku.
 
-    ![Nastavte a použijte zarážku](../csharp/media/get-started-set-breakpoint.gif)
+    ![Nastavte a použijte zarážku](../csharp/media/get-started-set-breakpoint.png)
 
     Žlutá šipka označuje příkaz na které ladicí program pozastaví, což také pozastaví provádění aplikace na stejném místě (Tento příkaz nebyl dosud proveden).
 
      Pokud ještě není aplikace spuštěna, **F5** spustí ladicí program a k první zarážce se zastaví. V opačném případě **F5** bude pokračovat spuštěním aplikace až k další zarážce.
 
-    Zarážky jsou užitečná funkce, když znáte řádek kódu nebo části kódu, který chcete prozkoumat podrobněji.
+    Zarážky jsou užitečná funkce, když znáte řádek kódu nebo části kódu, který chcete prozkoumat podrobněji. Informace o různých typech zarážek, které lze nastavit, například podmíněné zarážky, naleznete v tématu [using zarážek](../../debugger/using-breakpoints.md).
 
 ## <a name="navigate-code-in-the-debugger-using-step-commands"></a>Vyhledání kódu v ladicím programu pomocí příkazů kroku
 
 Většinou, klávesové zkratky tady používáme, protože je dobrým způsobem, jak získat rychlé při spuštění aplikace v ladicím programu (ekvivalentní příkazy jako je například nabídka příkazy jsou uvedeny v závorkách).
 
-1. Během pozastavení v `shape.Draw` volání metody `Main` metody, stiskněte klávesu **F11** (nebo zvolte **ladění > Krokovat s vnořením**) pro přechod do kódu pro `Rectangle` třídy.
+1. Při pozastavení ve smyčce `for` v metodě `Main` stiskněte klávesu **F11** (nebo zvolte možnost **ladit > Krokovat s vnořením**), aby bylo možné přejít na `SendMessage` volání metody.
 
-     ![Krokovat s vnořením kódu pomocí klávesy F11](../csharp/media/get-started-f11.png "F11 Krokovat s vnořením")
+     Po stisknutí klávesy **F11** dvakrát byste měli být na tomto řádku kódu:
+
+     `SendMessage(name, a[i]);`
+
+2. Stiskněte klávesu **F11** ještě jednou pro krokování do `SendMessage` metody.
+
+     Žlutý ukazatel se přesune do metody `SendMessage`.
+
+     ![Krokovat s vnořením kódu pomocí klávesy F11](../csharp/media/get-started-f11.png "F10 Krokovat s vnořením")
 
      Je F11 **Krokovat s vnořením** příkazu a posune jeden příkaz spuštění aplikace v čase. F11 je dobrým způsobem, jak prozkoumat provádění toku v nejvíce podrobností. (K rychlejšímu přesunu kódu vám ukážeme i některé další možnosti.) Ve výchozím nastavení přeskočí ladicí program neuživatelský kód (Pokud chcete více podrobností, přečtěte si téma [pouze můj kód](../../debugger/just-my-code.md)).
 
-2. Stisknutím klávesy **F10** (nebo zvolte **ladit > Krokovat s přeskočením**) několikrát, dokud ladicí program se zastaví na `base.Draw` volání metody a poté stiskněte klávesu **F10** ještě jednou.
+     Řekněme, že jste dokončili zkoumání `SendMessage` metody a chcete získat z metody, ale zůstat v ladicím programu. Můžete provést pomocí **Krokovat s Vystoupením** příkazu.
+
+1. Stisknutím klávesy **Shift** + **F11** (nebo **ladit > Krokovat s Vystoupením**).
+
+     Tento příkaz obnoví spuštění aplikace (a posune ladicí program), dokud se nevrátí aktuální metoda nebo funkce.
+
+     Měli byste se vrátit ve smyčce `for` v metodě `Main`, která je pozastavena při volání metody `SendMessage`.
+
+3. Když jste pozastavili volání metody, stiskněte **F10** (nebo zvolte **ladění > krokovat**s) jednou.
 
      ![Pro krokování kódu použijte F10](../csharp/media/get-started-step-over.png "F10 krok přes")
 
-     Všimněte si, že tento čas, který ladicí program Nekrokovat s vnořením do `Draw` metody základní třídy (`Shape`). **F10** přejde ladicí program bez krokování do funkce nebo metody v kódu vaší aplikace (kód stále provádí). Stisknutím klávesy **F10** ve volání metody `base.Draw` (namísto **klávesy F11**) přeskočíme na implementační kód pro `base.Draw` (což by mohlo být v současnosti nedotčeno).
+     Všimněte si, že ladicí program nekrokuje do metody `SendMessage`. **F10** přejde ladicí program bez krokování do funkce nebo metody v kódu vaší aplikace (kód stále provádí). Stisknutím klávesy **F10** ve volání metody `SendMessage` (namísto **klávesy F11**) přeskočíme na implementační kód pro `SendMessage` (což by mohlo být v současnosti nedotčeno). Další informace o různých způsobech, jak přesouvat kód, naleznete v tématu [Navigace v kódu v ladicím programu](../../debugger/navigating-through-code-with-the-debugger.md).
 
 ## <a name="navigate-code-using-run-to-click"></a>Vyhledání kódu pomocí běžet do kliknutí
 
-1. Klikněte pravým tlačítkem na zarážku, kterou jste nastavili dříve, zvolte **Odstranit zarážku** (nebo stiskněte klávesu **Ctrl** + **SHIFT** + **F9** , čímž odstraníte všechny zarážky).
-
-1. V editoru kódu se posuňte dolů a najeďte myší na `Console.WriteLine`ovou metodu ve třídě `Triangle`, dokud se na tlačítko, které se zobrazí na levé straně, ![klikne](../../debugger/media/dbg-tour-run-to-click.png "RunToClick") na tlačítko zeleného **spuštění** , které se spustí. V popisu tlačítka se zobrazí text spustit provádění na tomto místě.
+1. V editoru kódu se posuňte dolů a najeďte myší na `Console.WriteLine`ovou zprávu ve zprávě `SendMessage`, dokud ![se na tlačítko](../../debugger/media/dbg-tour-run-to-click.png "RunToClick") neotevře **zelené tlačítko spustit pro** kliknutí. V popisu tlačítka se zobrazí text spustit provádění na tomto místě.
 
      ![Použití funkce spustit pro kliknutí](../csharp/media/get-started-run-to-click.png "Běžet do kliknutí")
 
    > [!NOTE]
-   > **Běžet do kliknutí** je novinkou systémů tlačítko [!include[vs_dev15](../../misc/includes/vs_dev15_md.md)]. Pokud nevidíte tlačítko zelenou šipku, použijte **F11** v tomto příkladu místo toho k přechodu na správném místě ladicí program.
+   > **Běžet do kliknutí** je novinkou systémů tlačítko [!include[vs_dev15](../../misc/includes/vs_dev15_md.md)]. (Pokud nevidíte zelenou šipku tlačítka, použijte klávesu **F11** v tomto příkladu, aby se ladicí program napředal na správné místo.)
 
 2. Kliknutím na tlačítko **Spustit pro** klikněte na tlačítko ![Spustit](../../debugger/media/dbg-tour-run-to-click.png "RunToClick").
 
+    Ladicí program přejde do metody `Console.WriteLine`.
+
     Pomocí tohoto tlačítka je podobné nastavení dočasné zarážky. **Běžet do kliknutí** je užitečné pro rychlé navigace v rámci viditelné oblasti kódu aplikace (můžete kliknout na jakékoli otevření souboru).
-
-    Ladicí program přejde `Console.WriteLine` implementace metody pro `Triangle` třídy. (Pokud ladicí program nejprve pozastaví na zarážce, kterou jste nastavili dříve, pomocí **příkazu spustit znovu spusťte** ladicí program na `Console.WriteLine`.)
-
-    Během pozastavení, si všimnete překlep! Je zadáno chybně výstupu "Kreslení trangle". Jsme tady ho můžou opravit při spuštění aplikace v ladicím programu.
-
-## <a name="edit-code-and-continue-debugging"></a>Úprava kódu a pokračování ladění
-
-1. Klikněte na tlačítko do "Kreslení trangle" a zadejte opravu, změna "trangle" na "trojúhelník".
-
-1. Stisknutím klávesy **F11** jednou a můžete zobrazit znovu přejde ladicí program.
-
-    > [!NOTE]
-    > V závislosti na tom, jaký typ kódu upravit v ladicím programu může se zobrazit zpráva upozornění. V některých případech kód potřeba překompilovat, než budete moct pokračovat.
-
-## <a name="step-out"></a>Krokovat s Vystoupením
-
-Řekněme, že skončíte zkoumání `Draw` metodu `Triangle` třídy a chcete využít funkce ale zůstávají v ladicím programu. Můžete provést pomocí **Krokovat s Vystoupením** příkazu.
-
-1. Stisknutím klávesy **Shift** + **F11** (nebo **ladit > Krokovat s Vystoupením**).
-
-     Tento příkaz pokračuje v provádění aplikace (a přejde ladicí program) až do aktuálního funkce vrátí.
-
-     Měli byste se vrátit `foreach` smyčky v `Main` – metoda. Pokud ne, stiskněte klávesu **Shift** + **F11** ještě jednou.
-
-1. Kliknutím na levý okraj přidáte novou zarážku ve smyčce `for`.
 
 ## <a name="restart-your-app-quickly"></a>Rychlé restartování aplikace
 
@@ -311,23 +230,25 @@ Klikněte na tlačítko **restartovat** ![aplikaci](../../debugger/media/dbg-tou
 
 Když stisknete klávesu **restartovat**, šetří čas a zastavuje se aplikace a restartování ladicího programu. Ladicí program pozastaví na první zarážce, kterou dosáhnete spuštěním kódu.
 
-Ladicí program se znovu zastaví na zarážce, nastavíte na `shape.Draw()` metody.
+Ladicí program se znovu zastaví na zarážce, kterou jste předtím nastavili ve smyčce `for`.
 
 ## <a name="inspect-variables-with-data-tips"></a>Kontrolovat proměnné s datových tipech
 
 Funkce, které umožňují kontrolovat proměnné jsou jedním z nejužitečnějších funkce ladicího programu, a to různými způsoby. Při pokusu o ladění chyby se často, pokoušíte zjistit, zda jsou proměnné ukládání hodnot, které očekáváte, že ho, aby v určitou dobu.
 
-1. Během pozastavení na `shape.Draw()` metoda, najeďte myší `shape` objektu a zobrazit jeho výchozí hodnota vlastnosti, což je typ objektu `Rectangle`.
+1. Při pozastavení na příkazu `name += letters[i]`, najeďte myší na proměnnou `letters` a uvidíte, že je to výchozí hodnota, hodnota prvního prvku v poli `char[10]`.
 
-1. Rozbalte `shape` objektu zobrazíte její vlastnosti, jako `Height` vlastnost, která má hodnotu 0.
+1. Rozbalením proměnné `letters` zobrazíte její vlastnosti, které zahrnují všechny prvky, které proměnná obsahuje.
 
-1. Stisknutím klávesy **F10** (nebo **ladění** > **Krokovat s přeskočením**) několikrát k iteraci v rámci jednou `foreach` smyčku pozastavení znovu na `shape.Draw()`.
+1. Potom najeďte myší na proměnnou `name` a zobrazí se její aktuální hodnota, prázdný řetězec.
 
-1. Najeďte myší tvar objektu znovu ale tentokrát uvidíte, že máte nového objektu s typem `Triangle`.
+1. Několikrát stisknutím klávesy **F5** (nebo **ladění** > **pokračovat**) několikrát Iterujte pomocí `for` smyčky, opětovným pozastavením na zarážce a pokaždé, když se vrátíte na `name` proměnnou, a pokaždé, když chcete ověřit její hodnotu.
 
      ![Zobrazit Tip pro data](../csharp/media/get-started-data-tip.gif "Zobrazit Tip pro data")
 
-    Často při ladění, chcete rychle zkontrolovat hodnoty vlastností pro proměnné, chcete-li zobrazit, jestli jsou jejich ukládání hodnoty, které očekáváte, že je pro uložení, a datových tipech jsou dobrým způsobem, jak to udělat.
+     Hodnota proměnné se mění u každé iterace `for` smyčky, zobrazuje hodnoty `f`a pak `fr`, `fre`a tak dále.
+
+     Často při ladění, chcete rychle zkontrolovat hodnoty vlastností pro proměnné, chcete-li zobrazit, jestli jsou jejich ukládání hodnoty, které očekáváte, že je pro uložení, a datových tipech jsou dobrým způsobem, jak to udělat.
 
 ## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>Kontrolovat proměnné s okna Automatické hodnoty a místní hodnoty
 
@@ -335,35 +256,35 @@ Funkce, které umožňují kontrolovat proměnné jsou jedním z nejužitečněj
 
     Pokud se zavře, otevřete ho během pozastavení v ladicím programu výběrem **ladění** > **Windows** > **automatické hodnoty**.
 
-1. Rozbalte `shapes` objektu.
-
-     ![Kontrola proměnných v okně Automatické hodnoty](../csharp/media/get-started-autos-window.png "Okno Automatické hodnoty")
-
     V **automatické hodnoty** okně se zobrazí proměnné a jejich aktuální hodnoty. **Automatické hodnoty** okně se zobrazí všechny proměnné používané v aktuálním řádkem nebo předchozí řádku (v dokumentaci pro konkrétní jazyk chování).
 
 1. Dále, podívejte se na **lokální** okno na kartě vedle **automatické hodnoty** okna.
+
+1. Rozbalte proměnnou `letters` pro zobrazení prvků, které obsahuje.
+
+     ![Kontrola proměnných v okně Automatické hodnoty](../csharp/media/get-started-locals-window.png "Okno Automatické hodnoty")
 
     **Lokální** v okně se zobrazí proměnné, které jsou v aktuálním [oboru](https://www.wikipedia.org/wiki/Scope_(computer_science)), to znamená, aktuální kontext spuštění.
 
 ## <a name="set-a-watch"></a>Nastavení sledování
 
-1. V okně editoru hlavní kód, klikněte pravým tlačítkem myši `shapes` objektu a zvolte **Přidat kukátko**.
+1. V hlavním okně editoru kódu klikněte pravým tlačítkem myši na proměnnou `name` a vyberte možnost **Přidat kukátko**.
 
     **Watch** otevře se okno v dolní části editoru kódu. Můžete použít **Watch** okno zadat proměnné (nebo výraz), který chcete sledovat.
 
-    Teď máte nastavit na sledování `shapes` objekt kde můžete zobrazit její hodnotu změnit při procházení ladicí program. Na rozdíl od jiných proměnných oknech **Watch** okno vždy zobrazuje proměnné, že se díváte (jsou sice zobrazené šedě, když mimo rozsah).
+    Teď máte pro `name` proměnnou nastavenou kukátko a při procházení ladicího programu uvidíte její změnu hodnoty. Na rozdíl od jiných proměnných oknech **Watch** okno vždy zobrazuje proměnné, že se díváte (jsou sice zobrazené šedě, když mimo rozsah).
 
 ## <a name="examine-the-call-stack"></a>Prozkoumat zásobník volání
 
-1. Během pozastavení v `foreach` opakovat, klikněte na tlačítko **zásobník volání** okna, která je ve výchozím nastavení, otevřete v pravém dolním podokně.
+1. Během pozastavení v `for` opakovat, klikněte na tlačítko **zásobník volání** okna, která je ve výchozím nastavení, otevřete v pravém dolním podokně.
 
     Pokud se zavře, otevřete ho během pozastavení v ladicím programu výběrem **ladění** > **Windows** > **zásobník volání**.
 
-2. Klikněte na tlačítko **F11** několikrát, dokud se nezobrazí pozastavení v ladicím programu `Base.Draw` metodu `Triangle` třídy v editoru kódu. Podívejte se na **zásobník volání** okna.
+2. Klikněte několikrát na klávesu **F11** , dokud se nezobrazí pozastavení ladicího programu v metodě `SendMessage`. Podívejte se na **zásobník volání** okna.
 
     ![Kontrola zásobníku volání](../csharp/media/get-started-call-stack.png "ExamineCallStack")
 
-    **Zásobník volání** okno zobrazuje pořadí, ve kterém jsou získávání volány metody a funkce. Na horní zobrazený řádek zobrazuje aktuální funkci ( `Triangle.Draw` metody v této aplikaci). Druhý řádek ukazuje, že `Triangle.Draw` byla volána `Main` metody a tak dále.
+    **Zásobník volání** okno zobrazuje pořadí, ve kterém jsou získávání volány metody a funkce. Na horní zobrazený řádek zobrazuje aktuální funkci ( `SendMessage` metody v této aplikaci). Druhý řádek ukazuje, že `SendMessage` byla volána `Main` metody a tak dále.
 
    > [!NOTE]
    > **Zásobník volání** okno je podobné ladění perspektivy v některých prostředí IDE, jako je Eclipse.
@@ -376,7 +297,9 @@ Funkce, které umožňují kontrolovat proměnné jsou jedním z nejužitečněj
 
 ## <a name="change-the-execution-flow"></a>Změna toku provádění
 
-1. Pomocí ladicího programu v pozastavena `Circle.Draw` volání metody, pomocí myši a zkopírovat žlutá šipka (spuštění ukazatele) na levé straně a přesunout žlutou šipku na jeden řádek nahoru `Console.WriteLine` volání metody.
+1. Stisknutím klávesy **F11** dvakrát spusťte metodu `Console.WriteLine`.
+
+1. Když je ladicí program pozastaven ve volání metody `SendMessage`, použijte myš k navýšení žluté šipky (ukazatel spuštění) na levé straně a přesuňte žlutou šipku o jeden řádek po návratu na `Console.WriteLine`.
 
 1. Stisknutím klávesy **F11**.
 

@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 619840f417c922b4019bafffca8d66c9b1c939e2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 85bf50c653d82a7de22d5a81fd81c38db0db1be8
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596863"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76923269"
 ---
 # <a name="build-page-project-designer-c"></a>Stránka Sestavení, návrhář projektu (C#)
 
@@ -65,6 +65,12 @@ Definuje TRACE jako symbol ve všech souborech zdrojového kódu ve vaší aplik
 Určuje procesor, na který má výstupní soubor cílit. Zvolte **x86** pro libovolný 32 procesor kompatibilní s procesorem Intel, zvolte **x64** pro libovolný 64 procesor kompatibilního s procesorem Intel, zvolte **ARM** pro PROCESORy ARM nebo zvolte **Libovolný procesor** , abyste určili, že je přípustný libovolný procesor. **Libovolný procesor** je výchozí hodnota pro projekty, protože umožňuje aplikaci běžet na nejširší škále hardwaru.
 
 Další informace naleznete v tématu [/Platform (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option).
+
+**Povoleno**
+
+Určuje kontext s C# možnou hodnotou null v rámci projektu. Tato možnost uživatelského rozhraní byla představena v aplikaci Visual Studio 16,5 a je povolena pouze pro projekty C# , které používají 8,0 nebo novější.
+
+Další informace najdete v tématu s [přítexty s možnou hodnotou null](/dotnet/csharp/nullable-references#nullable-contexts).
 
 **Preferovat 32 – bit**
 
