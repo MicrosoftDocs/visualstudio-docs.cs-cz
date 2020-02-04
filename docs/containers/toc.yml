@@ -7,7 +7,7 @@
     - name: Rychlý start
       expanded: true
       items:
-        - name: Aplikace ASP.NET Core v kontejneru
+        - name: Aplikace ASP.NET v kontejneru
           href: container-tools.md
         - name: Jednostránková aplikace React.js v kontejneru
           href: container-tools-react.md

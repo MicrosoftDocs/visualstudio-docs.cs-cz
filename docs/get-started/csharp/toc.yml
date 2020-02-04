@@ -38,6 +38,8 @@
 - name: Poznejte Visual Studio
   expanded: true
   items:
+    - name: Spuštění programu
+      href: run-program.md
     - name: Otevření projektu z úložiště
       href: ../tutorial-open-project-from-repo.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
     - name: Psaní kódu a jeho úpravy

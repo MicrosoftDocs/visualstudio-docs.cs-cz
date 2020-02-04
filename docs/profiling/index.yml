@@ -1,26 +1,26 @@
 ### YamlMime:Landing
-title: Měření výkonu aplikace v aplikaci Visual Studio
-summary: Nástroje pro profilaci a diagnostiku vám pomůžou diagnostikovat využití paměti a procesoru a dalších problémů na úrovni aplikace. Pomocí těchto nástrojů můžete shromažďovat údaje o výkonu při spuštění aplikace.
+title: Měření výkonu aplikace v sadě Visual Studio
+summary: Nástroje pro profilaci a diagnostiku vám pomohou diagnostikovat využití paměti a procesoru a další problémy na úrovni aplikace. Pomocí těchto nástrojů můžete shromažďovat údaje o výkonu spuštěné aplikace.
 metadata:
-  title: Měření výkonu v aplikaci Visual Studio
+  title: Měření výkonu v sadě Visual Studio
   description: Naučte se používat Visual Studio k měření výkonu pomocí nástrojů pro profilaci.
   ms.topic: landing-page
   author: mikejo5000
   ms.author: mikejo
   manager: jillfra
   ms.date: 10/30/2019
-  ms.openlocfilehash: c8a6adc0857924fb790231ccf5dd70635290b77e
-  ms.sourcegitcommit: 4b911e768601992ad42dd5911dc6a01e1fe48588
-  ms.translationtype: MT
+  ms.openlocfilehash: 4c5a2cfb7d3ef7a8ad71dd7591bc147932ff0535
+  ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
+  ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 11/01/2019
-  ms.locfileid: "73413573"
+  ms.lasthandoff: 02/01/2020
+  ms.locfileid: "76923366"
 landingContent:
-- title: O profilaci
+- title: Informace o profilaci
   linkLists:
   - linkListType: overview
     links:
-    - text: První pohled na nástroje pro profilaci
+    - text: První seznámení s nástroji pro profilaci
       url: profiling-feature-tour.md
   - linkListType: concept
     links:
@@ -38,21 +38,23 @@ landingContent:
       url: quickstart-cpu-usage-aspnet.md
   - linkListType: tutorial
     links:
-    - text: Začínáme s analýzou využití CPU
+    - text: Začínáme s analýzou využití procesoru
       url: beginners-guide-to-performance-profiling.md
-    - text: Začít s měřením využití paměti
+    - text: Začínáme s měřením využití paměti
       url: memory-usage.md
-- title: Další nástroje pro výkon
+- title: Další nástroje pro měření výkonu
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Měření využití procesoru z příkazového řádku
+      url: profile-apps-from-command-line.md
     - text: Tipy pro výkon
       url: perftips.md
-    - text: Analyzovat spotřebu prostředků (XAML)
+    - text: Analýza spotřeby prostředků (XAML)
       url: application-timeline.md
     - text: Analýza využití GPU (Direct3D)
       url: gpu-usage.md
-    - text: Analýza využití sítě (UWP)
+    - text: Analýza využití sítě (UPW)
       url: network-usage.md
-    - text: Analýza využití energie (UWP)
+    - text: Analýza spotřeby energie (UPW)
       url: analyze-energy-use-in-store-apps.md

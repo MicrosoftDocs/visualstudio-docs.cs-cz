@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Kurzy pro Visual Studio |C#
-summary: Vytvářejte C# aplikace pomocí sady Visual Studio.
+title: Kurzy pro Visual Studio | C#
+summary: Vytváření aplikací v jazyce C# pomocí sady Visual Studio
 metadata:
-  title: C#vývoj pomocí sady Visual Studio
-  description: Vytvářejte C# aplikace pomocí sady Visual Studio.
+  title: Vývoj v jazyce C# pomocí sady Visual Studio
+  description: Vytváření aplikací v jazyce C# s využitím sady Visual Studio
   ms.custom: seodec18
   ms.topic: landing-page
   ms.date: 11/19/2019
@@ -14,12 +14,12 @@ metadata:
   ms.technology: vs-acquisition
   dev_langs:
   - CSharp
-  ms.openlocfilehash: b364716f87999272030e48a88af5a06cbff012e4
-  ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
+  ms.openlocfilehash: 0e5519756bebafd91b72186e001ca6af7f53c254
+  ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 11/19/2019
-  ms.locfileid: "74188640"
+  ms.lasthandoff: 02/01/2020
+  ms.locfileid: "76923130"
 landingContent:
 - title: Začínáme
   linkLists:
@@ -29,38 +29,40 @@ landingContent:
       url: ../../install/install-visual-studio.md
   - linkListType: get-started
     links:
-    - text: Spustit prohlídku s asistencí
+    - text: Spuštění průvodce
       url: visual-studio-ide.md
   - linkListType: quickstart
     links:
-    - text: Vytvoření konzolové aplikace "Hello World"
+    - text: Vytvoření konzolové aplikace Hello World
       url: ../../ide/quickstart-csharp-console.md
-    - text: Vytvoření webové aplikace "Hello World"
+    - text: Vytvoření webové aplikace Hello World
       url: ../../ide/quickstart-aspnet-core.md
-- title: Vytváření C# aplikací
+- title: Vytváření aplikací v jazyce C#
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Vytvoření aplikace konzoly
+    - text: Vytvoření konzolové aplikace
       url: tutorial-console.md
     - text: Vytvoření webové aplikace
       url: tutorial-aspnet-core.md
-    - text: Vytvoření aplikace Univerzální platforma Windows
+    - text: Vytvoření aplikace pro Univerzální platformu Windows
       url: tutorial-uwp.md
     - text: Vytvoření desktopové aplikace pro Windows
       url: tutorial-wpf.md
     - text: Vytvoření aplikace modelu Windows Forms
       url: ../../ide/create-csharp-winform-visual-studio.md
-    - text: Další informace o C# jazyku
+    - text: Informace o jazyce C#
       url: /dotnet/csharp/tutorials/intro-to-csharp/
   - linkListType: video
     links:
-    - text: Vytvoření aplikace ASP.NET Core
+    - text: Vytvoření aplikace v ASP.NET Core
       url: tutorial-aspnet-core-ef-step-01.md
 - title: Poznejte Visual Studio
   linkLists:
   - linkListType: tutorial
     links:
+    - text: Spuštění programu
+      url: run-program.md
     - text: Otevření kódu z úložiště
       url: ../tutorial-open-project-from-repo.md
     - text: Psaní kódu a jeho úpravy
