@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2890ee9879d3cab2ff134fdbfcd4edabb36d512
-ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
+ms.openlocfilehash: e81d1c50f66925064dc008d7d50bcdbe69606914
+ms.sourcegitcommit: 4a4eed115525c6d34a1fbdf87b793893cd43b70d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76923157"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77001522"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Zjistěte, jak ladit C# kódu pomocí sady Visual Studio
 
@@ -187,7 +187,7 @@ Většinou, klávesové zkratky tady používáme, protože je dobrým způsobem
 
      `SendMessage(name, a[i]);`
 
-2. Stiskněte klávesu **F11** ještě jednou pro krokování do `SendMessage` metody.
+1. Stiskněte klávesu **F11** ještě jednou pro krokování do `SendMessage` metody.
 
      Žlutý ukazatel se přesune do metody `SendMessage`.
 
@@ -203,7 +203,9 @@ Většinou, klávesové zkratky tady používáme, protože je dobrým způsobem
 
      Měli byste se vrátit ve smyčce `for` v metodě `Main`, která je pozastavena při volání metody `SendMessage`.
 
-3. Když jste pozastavili volání metody, stiskněte **F10** (nebo zvolte **ladění > krokovat**s) jednou.
+1. Stiskněte klávesu **F11** , dokud se znovu nevrátíte do volání metody `SendMessage`.
+
+1. Když jste pozastavili volání metody, stiskněte **F10** (nebo zvolte **ladění > krokovat**s) jednou.
 
      ![Pro krokování kódu použijte F10](../csharp/media/get-started-step-over.png "F10 krok přes")
 
@@ -262,7 +264,7 @@ Funkce, které umožňují kontrolovat proměnné jsou jedním z nejužitečněj
 
 1. Rozbalte proměnnou `letters` pro zobrazení prvků, které obsahuje.
 
-     ![Kontrola proměnných v okně Automatické hodnoty](../csharp/media/get-started-locals-window.png "Okno Automatické hodnoty")
+     ![Kontrola proměnných v okně místních hodnot](../csharp/media/get-started-locals-window.png "Okno místních hodnot")
 
     **Lokální** v okně se zobrazí proměnné, které jsou v aktuálním [oboru](https://www.wikipedia.org/wiki/Scope_(computer_science)), to znamená, aktuální kontext spuštění.
 
