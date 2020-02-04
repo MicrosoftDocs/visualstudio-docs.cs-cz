@@ -6,29 +6,29 @@ manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
 description: Přečtěte si o výhodách Office 365 zahrnutých v některých předplatných sady Visual Studio.
-ms.openlocfilehash: 2dde8489f15d8bd2e6a5d04045b99aea2245f73d
-ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
+ms.openlocfilehash: b9834411c4b951fb7cdb09ac48dad651d109d618
+ms.sourcegitcommit: bb72ce6ec173f3ae06c7ae57322c43690f27553c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74099609"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76967343"
 ---
-# <a name="office-365-proplus-in-visual-studio-subscriptions"></a>Office 365 ProPlus v předplatných sady Visual Studio
+# <a name="office-365-in-visual-studio-subscriptions"></a>Office 365 v předplatných sady Visual Studio
 
-Vytvořte nejlepší práci. Pracujte odkudkoli s aplikacemi, které se vždycky aktualizují. Office 365 ProPlus je předplatné, které přináší aplikace Premium, jako je Word, Excel, PowerPoint, OneNote, Outlook, Publisher a Access (Vydavatel a přístup k dispozici jenom na počítači). Aplikace se dají instalovat na víc zařízení, včetně počítačů PC, Mac, iPady, iPhone, tabletů s Androidem a telefonů s Androidem. V rámci předplatného získáte nejnovější verze aplikací a automaticky obdržíte aktualizace, když k nim dojde.
+Vytvořte nejlepší práci. Pracujte odkudkoli s aplikacemi, které se vždycky aktualizují. Office 365 je předplatné, které nabízí aplikace Premium, jako je Word, Excel, PowerPoint, OneNote, Outlook, Publisher a Access (Vydavatel a přístup k dispozici jenom na počítači). Aplikace se dají instalovat na víc zařízení, včetně počítačů PC, Mac, iPady, iPhone, tabletů s Androidem a telefonů s Androidem. V rámci předplatného získáte nejnovější verze aplikací a automaticky obdržíte aktualizace, když k nim dojde.
 
 > [!NOTE]
 > Vaše předplatné sady Visual Studio vám opravňuje k použití Office 365 pro produkční použití.  
 
-## <a name="getting-started-with-office-365-proplus"></a>Začínáme se sadou Office 365 ProPlus
+## <a name="getting-started-with-office-365"></a>Začínáme se sadou Office 365 
 
-Pomocí těchto kroků si stáhněte a aktivujte Office 365 ProPlus:
+Pomocí těchto kroků si stáhněte a aktivujte Office 365:
 1. Přihlaste se k předplatnému Visual Studio Enterprise.
 2. Klikněte na kartu **stažené soubory** .
 3. Zobrazí se seznam doporučených souborů ke stažení. V seznamu kancelář vyberte možnost **Office 365**.
    > [!div class="mx-imgBorder"]
    > ![Office 365 stahuje](_img/vs-office365/vs-office365-downloads.png)
-0. K instalaci Office 365 ProPlus budete potřebovat kód Product Key.  V seznamu Office 365 klikněte na odkaz **získat klíč** .
+0. K instalaci Office 365 budete potřebovat kód Product Key.  V seznamu Office 365 klikněte na odkaz **získat klíč** .
    > [!div class="mx-imgBorder"]
    > ![Office 365 získat kód Product Key](_img/vs-office365/vs-office365-get-key.png)
 0. V okně se zobrazí všechny klíče, které jste už uvedli, a také ty, které máte k dispozici.  Pokud chcete získat nový klíč, klikněte na **klíč deklarací** v seznamu **Office Professional Plus 2019** .
@@ -50,17 +50,17 @@ Pomocí těchto kroků si stáhněte a aktivujte Office 365 ProPlus:
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail| K dispozici       |  Ano          |
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici       |  Ano          |
-| Visual Studio Enterprise (Standard)   | NFR<sup>1</sup> | Není k dispozici       |  Není k dispozici          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                            |  Není k dispozici          |
-| Visual Studio Professional s GitHubem Enterprise | VL | Není k dispozici         |  Není k dispozici          |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                             |  Není k dispozici          |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  Není k dispozici          |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | Není k dispozici |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail| Dostupné       |  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | Dostupné       |  Ano          |
+| Visual Studio Enterprise (Standard)   | NFR<sup>1</sup> | Není k dispozici       |  NEUŽÍVÁ SE.          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                            |  NEUŽÍVÁ SE.          |
+| Visual Studio Professional s GitHubem Enterprise | VL | Není k dispozici         |  NEUŽÍVÁ SE.          |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                             |  NEUŽÍVÁ SE.          |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  NEUŽÍVÁ SE.          |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | NEUŽÍVÁ SE. |
 |  |
 
-<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), ekvivalent, MCT software & Services Developer, BizSpark, nejvíc HODNOTNÝ Professional (MVP), oblastní ředitel (RD), MCT software & Služby, Představte si Microsoft Partner Network.*
+<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), FTE, MCT software & Services Developer, BizSpark, nejcennějšího Professional (MVP), oblastní ředitel (RD), MCT software & Services, Představte si, Microsoft Partner Network.*
 
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
