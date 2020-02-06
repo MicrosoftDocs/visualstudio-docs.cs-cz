@@ -1,63 +1,67 @@
 ---
-title: Zvýhodnění Office 365 | Microsoft Docs
+title: Výhody Office 365 pro plus | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
-description: Přečtěte si o výhodách Office 365 zahrnutých v některých předplatných sady Visual Studio.
-ms.openlocfilehash: b9834411c4b951fb7cdb09ac48dad651d109d618
-ms.sourcegitcommit: bb72ce6ec173f3ae06c7ae57322c43690f27553c
+description: Přečtěte si o výhodách Office 365 pro plus, které jsou součástí některých předplatných sady Visual Studio.
+ms.openlocfilehash: 4ff521651e25fd1ad73bd629a111c7f8378fbfe3
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76967343"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036735"
 ---
-# <a name="office-365-in-visual-studio-subscriptions"></a>Office 365 v předplatných sady Visual Studio
+# <a name="office-365-pro-plus-in-visual-studio-subscriptions"></a>Office 365 pro plus v předplatných sady Visual Studio
 
-Vytvořte nejlepší práci. Pracujte odkudkoli s aplikacemi, které se vždycky aktualizují. Office 365 je předplatné, které nabízí aplikace Premium, jako je Word, Excel, PowerPoint, OneNote, Outlook, Publisher a Access (Vydavatel a přístup k dispozici jenom na počítači). Aplikace se dají instalovat na víc zařízení, včetně počítačů PC, Mac, iPady, iPhone, tabletů s Androidem a telefonů s Androidem. V rámci předplatného získáte nejnovější verze aplikací a automaticky obdržíte aktualizace, když k nim dojde.
+Vytvořte nejlepší práci. Pracujte odkudkoli s aplikacemi, které se vždycky aktualizují. Office 365 pro plus je předplatné, které přináší aplikace Premium, jako je Word, Excel, PowerPoint, OneNote, Outlook, Publisher a Access (Vydavatel a přístup k dispozici jenom na počítači). Aplikace se dají instalovat na víc zařízení, včetně počítačů PC, Mac, iPady, iPhone, tabletů s Androidem a telefonů s Androidem. V rámci předplatného získáte nejnovější verze aplikací a automaticky obdržíte aktualizace, když k nim dojde.
 
 > [!NOTE]
-> Vaše předplatné sady Visual Studio vám opravňuje k použití Office 365 pro produkční použití.  
+> Vaše předplatné sady Visual Studio vám opravňuje k použití Office 365 pro plus pro produkční použití.  
 
-## <a name="getting-started-with-office-365"></a>Začínáme se sadou Office 365 
+> [!IMPORTANT]
+> Zjistili jsme, že jsme se dozvěděli o problému s získáním kódů Product Key pro Office 365 pro plus.  Pracujeme na problému a nabídne aktualizace, když se problém vyřeší. 
 
-Pomocí těchto kroků si stáhněte a aktivujte Office 365:
+
+## <a name="getting-started-with-office-365-pro-plus"></a>Začínáme se sadou Office 365 pro plus
+
+Pomocí těchto kroků si stáhněte a aktivujte Office 365 pro plus:
 1. Přihlaste se k předplatnému Visual Studio Enterprise.
 2. Klikněte na kartu **stažené soubory** .
-3. Zobrazí se seznam doporučených souborů ke stažení. V seznamu kancelář vyberte možnost **Office 365**.
+3. Zobrazí se seznam doporučených souborů ke stažení. V seznamu Office vyberte možnost **Office 365 pro plus**.
    > [!div class="mx-imgBorder"]
-   > ![Office 365 stahuje](_img/vs-office365/vs-office365-downloads.png)
-0. K instalaci Office 365 budete potřebovat kód Product Key.  V seznamu Office 365 klikněte na odkaz **získat klíč** .
+   > ![Office 365 pro plus ke stažení](_img/vs-office365/vs-office365-downloads.png)
+0. Pokud chcete nainstalovat Office 365 pro plus, budete potřebovat kód Product Key.  V seznamu Office 365 pro plus klikněte na odkaz **získat klíč** .
    > [!div class="mx-imgBorder"]
-   > ![Office 365 získat kód Product Key](_img/vs-office365/vs-office365-get-key.png)
+   > ![Office 365 pro plus získat kód Product Key](_img/vs-office365/vs-office365-get-key.png)
 0. V okně se zobrazí všechny klíče, které jste už uvedli, a také ty, které máte k dispozici.  Pokud chcete získat nový klíč, klikněte na **klíč deklarací** v seznamu **Office Professional Plus 2019** .
    > [!div class="mx-imgBorder"]
-   > ![produktového kódu deklarace identity Office 365](_img/vs-office365/vs-office365-claim-key.png)
+   > ![kód Product Key pro deklaraci identity Office 365 pro plus](_img/vs-office365/vs-office365-claim-key.png)
 0. Poznamenejte si klíč, který jste právě nažádali. (Pokud se chcete podívat znovu, můžete se kdykoli vrátit do tohoto seznamu.)
 0. Zavřete okno pro rozběhu.
 0. Klikněte na tlačítko **Stáhnout** .
    > [!div class="mx-imgBorder"]
-   > ![Office 365 Start stažení](_img/vs-office365/vs-office365-download-button.png)
+   > ![Office 365 pro a začněte stahovat](_img/vs-office365/vs-office365-download-button.png)
 0. Přihlaste se pomocí svého účet Microsoft. (Pokud už jste přihlášení, klikněte na **Další**.)
 0. Zadejte kód Product Key, zemi nebo oblast a pak klikněte na **Další**.
    > [!div class="mx-imgBorder"]
-   > ![Office 365 zadejte kód Product Key](_img/vs-office365/vs-office365-enter-key.png)
+   > ![Office 365 pro plus zadejte kód Product Key](_img/vs-office365/vs-office365-enter-key.png)
 0. Znovu klikněte na tlačítko **Další** .
 0. Kliknutím na **instalovat** nainstalujete aplikace Office.
 
 ## <a name="eligibility"></a>Vznik
 
-| Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
+| Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail| Dostupné       |  Ano          |
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | Dostupné       |  Ano          |
-| Visual Studio Enterprise (Standard)   | NFR<sup>1</sup> | Není k dispozici       |  NEUŽÍVÁ SE.          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                            |  NEUŽÍVÁ SE.          |
-| Visual Studio Professional s GitHubem Enterprise | VL | Není k dispozici         |  NEUŽÍVÁ SE.          |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                             |  NEUŽÍVÁ SE.          |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  NEUŽÍVÁ SE.          |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | NEUŽÍVÁ SE. |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail| K dispozici.       |  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici.       |  Ano          |
+| Visual Studio Enterprise (Standard)   | NFR<sup>1</sup> | Není k dispozici.       |  Není k dispozici          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici.                                                            |  Není k dispozici          |
+| Visual Studio Professional s GitHubem Enterprise | VL | Není k dispozici.         |  Není k dispozici          |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici.                                             |  Není k dispozici          |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici.                                              |  Není k dispozici          |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici. | Není k dispozici |
 |  |
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), FTE, MCT software & Services Developer, BizSpark, nejcennějšího Professional (MVP), oblastní ředitel (RD), MCT software & Services, Představte si, Microsoft Partner Network.*
@@ -77,3 +81,9 @@ Nezapomeňte tyto skvělé výhody aktivovat, abyste mohli využít maximum vaš
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
 - [Individuální kredit Azure DevTest](vs-azure.md) Pokud plánujete vývoj aplikací pro Office, budete chtít aktivovat [předplatné vývojářů pro Office](vs-office-dev.md) .
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
