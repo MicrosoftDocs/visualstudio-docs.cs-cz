@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2797e8b51bba0e71db07ec748d7a6813183250fb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e8f99bc18f4fdc834d0c5fdc7818d945d116251e
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596187"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027631"
 ---
 # <a name="common-msbuild-project-properties"></a>Obecné vlastnosti projektu nástroje MSBuild
 V následující tabulce jsou uvedeny často používané vlastnosti, které jsou definovány v souborech projektu sady Visual Studio nebo zahrnuté v souborech *. targets* , které poskytuje MSBuild.
@@ -50,7 +50,7 @@ V následující tabulce jsou uvedeny často používané vlastnosti, které jso
 | CleanFile | Název souboru, který se použije jako "čistá mezipaměť". Čistá mezipaměť je seznam generovaných souborů, které mají být odstraněny během operace čištění. Soubor je umístěn do mezilehlé výstupní cesty procesem sestavení.<br /><br /> Tato vlastnost určuje pouze názvy souborů, které nemají informace o cestě. |
 | Stránky | Určuje znakovou stránku, která se má použít pro všechny soubory zdrojového kódu v kompilaci. Tato vlastnost je ekvivalentní k přepínači `/codepage` kompilátoru. |
 | CompilerResponseFile | Volitelný soubor odpovědí, který lze předat úlohám kompilátoru. |
-| Konfigurace | Konfigurace, kterou vytváříte, buď "ladit" nebo "Release". |
+| Konfiguraci | Konfigurace, kterou vytváříte, buď "ladit" nebo "Release". |
 | CscToolPath | Cesta k souboru *CSc. exe*, [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] kompilátorem. |
 | CustomBeforeMicrosoftCommonTargets | Název souboru projektu nebo souboru cílů, který má být importován automaticky před importem běžných cílů. |
 | DebugSymbols | Logická hodnota, která určuje, zda jsou symboly generovány sestavením.<br /><br /> Nastavení **-p:DebugSymbols = false** na příkazovém řádku zakáže generování souborů symbolů databáze programu (*PDB*). |
@@ -83,6 +83,7 @@ V následující tabulce jsou uvedeny často používané vlastnosti, které jso
 | OptionExplicit – | Logická hodnota, která Pokud je nastavena na `true`, vyžaduje explicitní deklaraci proměnných ve zdrojovém kódu. Tato vlastnost je ekvivalentní k přepínači `/optionexplicit` kompilátoru. |
 | Optioninfer – | Logická hodnota, která Pokud je nastavena na `true`, umožňuje odvozování typů proměnných. Tato vlastnost je ekvivalentní k přepínači `/optioninfer` kompilátoru. |
 | OptionStrict – | Logická hodnota, která Pokud je nastavena na `true`, způsobí, že úloha sestavení vynutí striktní sémantiku typu pro omezení implicitních převodů typu. Tato vlastnost je ekvivalentní `/optionstrict` přepínači kompilátoru *Vbc. exe* . |
+| OutDir | Označuje konečné výstupní umístění projektu nebo řešení. Při sestavování řešení lze OutDir použít ke shromáždění více výstupů projektu na jednom místě. Kromě toho je OutDir zahrnut v AssemblySearchPaths, který se používá pro překládání odkazů. Například *bin\Debug*. |
 | OutputPath | Určuje cestu k výstupnímu adresáři vzhledem k adresáři projektu, například *bin\Debug*. |
 | OutputType | Určuje formát výstupního souboru. Tento parametr může mít jednu z následujících hodnot:<br /><br /> Knihovna. Vytvoří knihovnu kódu. (Výchozí hodnota.)<br />Programu. Vytvoří konzolovou aplikaci.<br />Čipu. Vytvoří modul.<br />Winexe. Vytvoří program založený na systému Windows.<br /><br /> Tato vlastnost je ekvivalentní `/target` přepínači kompilátoru *Vbc. exe* . |
 | OverwriteReadOnlyFiles | Logická hodnota, která označuje, zda chcete povolit sestavení pro přepsání souborů jen pro čtení nebo spuštění chyby. |

@@ -2,17 +2,17 @@
 title: Práce s několika uživatelskými účty
 ms.date: 07/23/2019
 ms.topic: conceptual
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd265d24fad683e031436d7cc81fa7fa74034ddc
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 872089158b6e4dc0b55c26ad187e3b68d0501f26
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115262"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027598"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Práce s několika uživatelskými účty
 
@@ -123,7 +123,7 @@ Přihlášení pomocí toku kódu zařízení:
 
    ![Přihlášení do sady Visual Studio prostřednictvím prohlížeče bylo dokončeno.](media/work-with-multiple-user-accounts/sign-in-browser-complete.png)
 
-1. Vraťte se na stránku Správa účtů v sadě Visual Studio a zobrazí se nově přidaný účet v seznamu **všechny účty**. Zvolte **Zavřít**.
+1. Vraťte se na stránku Správa účtů v sadě Visual Studio a zobrazí se nově přidaný účet v seznamu **všechny účty**. Klikněte na tlačítko **Zavřít**.
 
 ## <a name="see-also"></a>Viz také:
 

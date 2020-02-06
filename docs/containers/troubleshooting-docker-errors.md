@@ -9,14 +9,14 @@ ms.assetid: 346f70b9-7b52-4688-a8e8-8f53869618d3
 ms.devlang: dotnet
 ms.topic: conceptual
 ms.workload: multiple
-ms.date: 10/13/2017
+ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: ce7645b8b4f71cf94d7320a0072d15b2b8083dec
-ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
+ms.openlocfilehash: d8aa3028a12bcfb49f2663b2bea688baf14fd7f2
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76923009"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027272"
 ---
 # <a name="troubleshoot-visual-studio-development-with-docker"></a>Řešení potíží při vývoji v sadě Visual Studio pomocí Dockeru
 
@@ -26,8 +26,8 @@ Při práci s nástroji kontejneru sady Visual Studio může při sestavování 
 
 K vyřešení tohoto problému:
 
-1. Klikněte pravým tlačítkem na **Docker pro Windows** v oznamovací oblasti a pak vyberte **nastavení**.
-1. Vyberte **sdílené jednotky** a sdílené složky systémové jednotce spolu s na jednotku, ve které se nachází projektu.
+1. V oznamovací oblasti klikněte pravým tlačítkem na **Docker for Windows** a pak vyberte **Nastavení**.
+1. Vyberte **sdílené jednotky** a nasdílejte systémovou jednotku společně s jednotkou, ve které se nachází projekt.
 
 > [!NOTE]
 > Pokud se zdá, že sdílené soubory, můžete stále chcete-li znovu povolit sdílení svazků, klikněte na odkaz "Resetovat přihlašovací údaje …" v dolní části dialogového okna. Chcete-li pokračovat po resetování přihlašovacích údajů, budete muset restartovat Visual Studio.
@@ -41,7 +41,7 @@ K vyřešení tohoto problému:
 
 Když do projektu přidáte podporu Docker, zvolíte buď kontejner Windows, nebo Linux. Hostitel Docker musí používat stejný typ kontejneru. Chcete-li změnit typ kontejneru v běžící instanci Docker, klikněte pravým tlačítkem myši na ikonu Docker panelu systému a vyberte možnost **Přepnout na kontejnery Windows...** nebo **Přepnout na kontejnery platformy Linux..** ..
 
-## <a name="unable-to-start-debugging"></a>Nejde spustit ladění
+## <a name="unable-to-start-debugging"></a>Nelze spustit ladění
 
 Jedním z důvodů může souviset s tím, že komponenty zastaralé ladění ve složce profilu uživatele. Spusťte následující příkazy k odebrání těchto složek tak, aby se stáhnou nejnovější ladění komponenty na příští relaci ladění.
 
@@ -50,7 +50,7 @@ Jedním z důvodů může souviset s tím, že komponenty zastaralé ladění ve
 
 ## <a name="errors-specific-to-networking-when-debugging-your-application"></a>Chyby specifické pro sítě při ladění aplikace
 
-Pokuste se spustit skript ke stažení z [sítě hostitele kontejneru vyčištění](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/master/windows-server-container-tools/CleanupContainerHostNetworking), která obnoví komponenty související se sítí na hostitelském počítači.
+Zkuste provést stažení skriptu z části [vyčistit síťové hostitele kontejneru](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/master/windows-server-container-tools/CleanupContainerHostNetworking), čímž aktualizujete součásti související se sítí na hostitelském počítači.
 
 ## <a name="mounts-denied"></a>Připojení byl odepřen
 
@@ -95,4 +95,4 @@ Klikněte na **použít** a restartujte Docker. Tyto kroky upraví konfiguračn�
 
 ## <a name="microsoftdockertools-github-repo"></a>Úložiště GitHub Microsoft/DockerTools
 
-V případě jiných problémů dojde, naleznete v tématu [Microsoft/DockerTools](https://github.com/microsoft/dockertools/issues) problémy.
+Další problémy, se kterými se setkáte, najdete v článku problémy s [Microsoftem a DockerTools](https://github.com/microsoft/dockertools/issues) .

@@ -4,15 +4,15 @@ description: Popisuje, jak vylepšit schopnost ladit a diagnostikovat aplikace z
 author: ghogen
 ms.author: ghogen
 ms.topic: conceptual
-ms.date: 10/16/2019
+ms.date: 01/20/2020
 ms.technology: vs-azure
 monikerRange: vs-2019
-ms.openlocfilehash: bdf326bc337456a0a9b4ba085d308ead2c90d49b
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: b4670c003c06f8d16979589a4dce5abf33d5e27d
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846943"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027297"
 ---
 # <a name="how-to-view-and-diagnose-containers-and-images-in-visual-studio"></a>Jak zobrazit a diagnostikovat kontejnery a obrázky v aplikaci Visual Studio
 
@@ -51,7 +51,7 @@ Na kartě **porty** můžete kontrolovat mapování portů, které jsou platné 
 
 Dobře známé porty jsou propojené, takže pokud je na portu dostupný obsah, můžete kliknutím na odkaz otevřít prohlížeč.
 
-## <a name="view-logs"></a>Zobrazit protokoly
+## <a name="view-logs"></a>Zobrazení protokolů
 
 Na kartě **protokoly** se zobrazují výsledky `docker logs`ho příkazu. Ve výchozím nastavení karta zobrazuje streamy stdout a stderr na kontejneru, ale můžete nakonfigurovat výstup. Podrobnosti najdete v tématu [protokolování Docker](https://docs.docker.com/config/containers/logging/).  Ve výchozím nastavení zaproudí protokoly na kartě **protokoly** , ale můžete ji zakázat kliknutím na tlačítko **zastavit** na kartě.
 
