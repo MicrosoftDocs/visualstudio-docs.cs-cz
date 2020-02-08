@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 90a440ce88690c12792c17729e93f9fa287dabb6
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 792c74a3b5da5ed6528fa3919a0c60625d1a38ef
+ms.sourcegitcommit: 5806d463780368515e59c2614ed9cfaaa4ab4b91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888634"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77071944"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Testování částí JavaScriptu a TypeScript v aplikaci Visual Studio
 
@@ -65,7 +65,7 @@ describe('Test Suite 1', function() {
 
 Pokud jste nenastavili možnosti testu jednotek ve vlastnostech projektu, je nutné zajistit, aby vlastnost **testovacího rozhraní** v okně **vlastnosti** byla nastavena na správné testovací rozhraní pro soubory testů jednotek. To se provádí automaticky pomocí šablon souborů testu jednotek.
 
-![Testovací rozhraní](../javascript/media/UnitTestsFrameworkMocha.png)
+![Rozhraní pro testování](../javascript/media/UnitTestsFrameworkMocha.png)
 
 > [!Note]
 > Možnosti testu jednotek budou mít přednost před nastaveními pro jednotlivé soubory.
@@ -173,3 +173,5 @@ Kromě výše uvedených vlastností také budete muset nainstalovat balíček N
     <GenerateProgramFile>false</GenerateProgramFile>
 </PropertyGroup>
 ```
+
+Některé testovací architektury mohou vyžadovat další balíčky npm pro detekci testů. Například jest vyžaduje balíček npm podpory jest-Editor. V případě potřeby si přečtěte dokumentaci pro konkrétní rozhraní.

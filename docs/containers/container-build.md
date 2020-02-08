@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 6f11082a0e309d4e34dd25a1085c1f8c971f28f7
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: d91dd01879ac3bb62b981109463f6762046382ef
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916944"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027264"
 ---
 # <a name="how-visual-studio-builds-containerized-apps"></a>Jak Visual Studio vytváří kontejnerizované aplikace
 
@@ -32,7 +32,7 @@ EXPOSE 80
 EXPOSE 443
 ```
 
-Řádky v souboru Dockerfile začínají s imagí nano serveru z Microsoft Container Registry (mcr.microsoft.com) a vytvářejí mezilehlé image `base`, která zveřejňuje porty 80 a 443 a nastavuje pracovní adresář na `/app`.
+Řádky v souboru Dockerfile začínají s obrázkem Debian z Microsoft Container Registryu (mcr.microsoft.com) a vytvářejí mezilehlé image `base`, která zveřejňuje porty 80 a 443 a nastavuje pracovní adresář na `/app`.
 
 Další fáze je `build`, což se zobrazí takto:
 
@@ -64,7 +64,7 @@ Poslední fáze se znovu spustí z `base`a obsahuje `COPY --from=publish` ke zko
 
 Pokud chcete sestavit mimo sadu Visual Studio, můžete použít `docker build` nebo `MSBuild` k sestavení z příkazového řádku.
 
-### <a name="docker-build"></a>docker build
+### <a name="docker-build"></a>sestavení Docker
 
 Chcete-li vytvořit kontejnerové řešení z příkazového řádku, můžete obvykle použít příkaz `docker build <context>` pro každý projekt v řešení. Zadáte argument *kontextu sestavení* . *Kontext sestavení* pro souboru Dockerfile je složka v místním počítači, která se používá jako pracovní složka k vygenerování bitové kopie. Například složka, ze které kopírujete soubory při kopírování do kontejneru.  V projektech .NET Core použijte složku, která obsahuje soubor řešení (. sln).  Vyjádřeno jako relativní cesta, tento argument obvykle je ".." pro souboru Dockerfile ve složce projektu a soubor řešení v nadřazené složce.  Pro .NET Framework projekty je kontextem sestavení složka projektu, nikoli složka řešení.
 
@@ -180,7 +180,7 @@ Visual Studio používá vlastní vstupní bod kontejneru v závislosti na typu 
 
 |||
 |-|-|
-| **Kontejnery Linuxu** | Vstupním bodem je `tail -f /dev/null`, což je nekonečná čekání na udržení běhu kontejneru. Když se aplikace spustí prostřednictvím ladicího programu, je to ladicí program, který zodpovídá za spuštění aplikace (tj. `dotnet webapp.dll`). Pokud se spustí bez ladění, nástroj spustí `docker exec -i {containerId} dotnet webapp.dll` pro spuštění aplikace.|
+| **Kontejnery platformy Linux** | Vstupním bodem je `tail -f /dev/null`, což je nekonečná čekání na udržení běhu kontejneru. Když se aplikace spustí prostřednictvím ladicího programu, je to ladicí program, který zodpovídá za spuštění aplikace (tj. `dotnet webapp.dll`). Pokud se spustí bez ladění, nástroj spustí `docker exec -i {containerId} dotnet webapp.dll` pro spuštění aplikace.|
 | **Kontejnery Windows**| Vstupní bod je podobný `C:\remote_debugger\x64\msvsmon.exe /noauth /anyuser /silent /nostatus`, který spouští ladicí program, takže naslouchá připojení. Totéž platí, že ladicí program spustí aplikaci a příkaz `docker exec` při spuštění bez ladění. U .NET Frameworkch webových aplikací se vstupní bod mírně liší, kde se do příkazu přidá `ServiceMonitor`.|
 
 Vstupní bod kontejneru lze upravit pouze v projektech Docker – vytváření, nikoli v projektech s jedním kontejnerem.
