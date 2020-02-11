@@ -10,16 +10,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb4cfc272b24bf014691b5d130f71f97e4849a31
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 43c739cc24d453ad4129d8cb7cc4bfbebec07aa4
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573817"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091818"
 ---
 # <a name="incremental-builds"></a>Přírůstková sestavení
 
 Přírůstková sestavení jsou sestavení, která jsou optimalizována tak, aby cíle, které mají výstupní soubory, jež jsou aktuální s ohledem na jejich odpovídající vstupní soubory, již nebyly prováděny. Cílový prvek může mít atribut `Inputs`, který určuje, jaké vstupní položky jsou z hlediska cíle očekávány, a atribut `Outputs`, který určuje položky vytvořené na výstupu. Nástroj MSBuild se mezi hodnotami těchto atributů pokouší nalézt mapování 1 : 1. Pokud mapování 1 : 1 existuje, porovná nástroj MSBuild časové razítko každé vstupní položky s časovým razítkem odpovídající položky na výstupu. Výstupní soubory, které nemají mapování 1 : 1, jsou porovnány se všemi vstupními soubory. Položka je považována za aktuální, pokud je její výstupní soubor stejně starý nebo novější než její vstupní soubor(y).
+
+> [!NOTE]
+> Když MSBuild vyhodnotí vstupní soubory, bude se brát v úvahu jenom obsah seznamu v aktuálním spuštění. Změny v seznamu od posledního sestavení automaticky nedělají cíl v aktuálním stavu.
 
 Jsou-li všechny výstupní položky aktuální, je cíl nástrojem MSBuild vynechán. Toto *přírůstkové sestavení* cíle může významně zlepšit rychlost sestavení. Jsou-li aktuální jen některé soubory, nástroj MSBuild spustí cíl, ale vynechá aktuální položky a tím změní všechny položky na aktuální. Tento proces se označuje jako *částečné přírůstkové sestavení*.
 
@@ -49,7 +52,7 @@ Existují tři případy:
 
 - Cíl neobsahuje žádné neaktuální výstupy a je přeskočen. Nástroj MSBuild vyhodnotí cíl a provede změny u položek a vlastností, jako kdyby byl cíl spuštěn.
 
-Pro podporu přírůstkové kompilace musí úkoly zajistit, aby byla hodnota atributu `TaskParameter` jakéhokoli prvku `Output` rovna vstupnímu parametru úkolu. Následuje několik příkladů:
+Pro podporu přírůstkové kompilace musí úkoly zajistit, aby byla hodnota atributu `TaskParameter` jakéhokoli prvku `Output` rovna vstupnímu parametru úkolu. Zde je několik příkladů:
 
 ```xml
 <CreateProperty Value="123">
@@ -75,5 +78,5 @@ Z důvodu odvození výstupu je nutné přidat úlohu `CreateProperty` k cíli p
 
 Tento kód vytvoří vlastnost CompileRan a udělí jí hodnotu `true`, ale pouze v případě, že je cíl proveden. Pokud je cíl vynechán, nebude vlastnost CompileRan vytvořena.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Cíle](../msbuild/msbuild-targets.md)

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - warnings, interoperability
 ms.assetid: 95de6eb3-40c4-4063-9f59-25cb70e3b2b3
 author: jillre
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ba2f717c4bdccd662764b73530d3ae416f8b95b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a1eb65f52df4b27837c00b7557db0c5e15e6c187
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649288"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091753"
 ---
 # <a name="interoperability-warnings"></a>Upozornění interoperability
 
@@ -35,7 +35,7 @@ Upozornění na interoperabilitu podporují interakci s klienty modelu COM.
 | [CA1403: Typy automatického rozložení by neměly být viditelné modelu COM](../code-quality/ca1403.md) | Typ hodnoty viditelný v modelu COM je označen pomocí atributu System. Runtime. InteropServices. StructLayoutAttribute nastaveného na hodnotu LayoutKind. auto. Rozložení těchto typů se může změnit mezi verzemi .NET, čímž dojde k přerušení klientů modelu COM, které očekávají konkrétní rozložení. |
 | [CA1404: Volejte GetLastError ihned po volání nespravovaného kódu](../code-quality/ca1404.md) | Bylo provedeno volání metody Marshal. GetLastWin32Error nebo ekvivalentní [!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)] Funkce GetLastError a bezprostředně předchozí volání není k metodě vyvolání platformy. |
 | [CA1405: Základní typy viditelného typu modelu COM by měly být viditelné modelu COM](../code-quality/ca1405.md) | Typ viditelný modulem COM je odvozen od typu, který není viditelný modulem COM. |
-| [CA1406: Vyhněte se argumentům Int64 pro klienty jazyka Visual Basic 6](../code-quality/ca1406.md) | Klienti modelu COM Visual Basic 6 nemají přístup k 64 celých čísel. |
+| [CA1406: Vyhněte se argumentům Int64 pro klienty jazyka Visual Basic 6](../code-quality/ca1406.md) | Klienty modulu COM jazyka Visual Basic 6 nemohou přistupovat k 64bitová celá čísla. |
 | [CA1407: Vyhněte se statickým členům ve viditelných typech modelu COM](../code-quality/ca1407.md) | Modul COM nepodporuje statické metody. |
 | [CA1408: Nepoužívejte AutoDual ClassInterfaceType](../code-quality/ca1408.md) | Typy, které používají duální rozhraní, umožňují klientům navázat se na určité rozložení rozhraní. Změny v budoucí verzi rozložení typu nebo jakéhokoli základního typu přeruší klienty modulu COM, kteří jsou navázáni na toto rozhraní. Pokud ve výchozím nastavení není zadán atribut ClassInterfaceAttribute, použije se pouze rozhraní určené pro odesílání. |
 | [CA1409: Viditelné typy modelu COM by měly být vytvořitelné](../code-quality/ca1409.md) | Odkazový typ, který je označen jako viditelný modulům COM, obsahuje veřejný parametrizovaný konstruktor, ale neobsahuje veřejný výchozí konstruktor (bez parametrů). Typ bez veřejného výchozího konstruktoru není možné vytvořit klienty typu COM. |

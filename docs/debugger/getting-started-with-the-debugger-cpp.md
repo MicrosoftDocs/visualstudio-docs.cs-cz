@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96c928606c0fbc306a72347f85841677d0f69ec8
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.openlocfilehash: 47b1a031a6c4e4e823a1fcc12aba228750aee27e
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77027429"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091805"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Další informace k ladění kódu jazyka C++ pomocí sady Visual Studio
 
@@ -27,7 +27,7 @@ Tento článek obsahuje představení funkcí v ladicím programu sady Visual St
 
 I C++když je ukázková aplikace, většina funkcí platí C#pro, Visual Basic, F#, Python, JavaScript a další jazyky, které podporuje Visual Studio (F# nepodporuje úpravy a pokračování. F#a jazyk JavaScript nepodporuje okno **Automatické** hodnoty. Snímky obrazovky jsou v C++.
 
-V tomto kurzu se naučíte:
+V tomto kurzu provedete následující:
 
 > [!div class="checklist"]
 > * Spuštění ladicího programu a dosažení zarážky.
@@ -35,7 +35,7 @@ V tomto kurzu se naučíte:
 > * Kontrolovat proměnné v datových tipech a okno ladicího programu
 > * Prozkoumat zásobník volání
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 ::: moniker range=">=vs-2019"
 
@@ -68,15 +68,17 @@ Nejprve vytvoříte projekt C++ konzolové aplikace. Typ projektu se dodává se
 
 ::: moniker range="vs-2017"
 
-1. Otevřete Visual Studio 2017.
+1. Otevřete sadu Visual Studio 2017.
 
 2. V horním řádku nabídek vyberte **soubor** > **Nový** > **projekt**.
 
 3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **vizuál C++**  a pak zvolte možnost **plocha systému Windows**. V prostředním podokně vyberte **Konzolová aplikace systému Windows**. Potom pojmenujte projekt *Get-Started-Debugging*.
 
-     Pokud nevidíte šablonu projektu **Konzolová aplikace** , vyberte odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** .
+     Pokud nevidíte šablonu projektu **Konzolová aplikace** , vyberte odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** . Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
 
-     Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
+4. Klikněte na tlačítko **OK**.
+
+   Visual Studio otevře nový projekt.
 
 ::: moniker-end
 

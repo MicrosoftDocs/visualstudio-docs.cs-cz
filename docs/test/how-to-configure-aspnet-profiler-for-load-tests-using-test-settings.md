@@ -1,48 +1,48 @@
 ---
-title: Konfigurace profileru ASP.NET pro zátěžové testy
+title: Konfigurace technologie ASP.NET Profiler pro zátěžové testy
 ms.date: 10/13/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - test settings, ASP.NET
 ms.assetid: 6832fe39-04d5-4d94-8a18-3e2730bad423
 author: jillre
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1de7e890c60374730e297296116cb56828fa256b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 77c501f6c7915c7eff1ebd8a4f9308c89bd46e8d
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72643760"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091701"
 ---
-# <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>Postupy: Konfigurace profileru ASP.NET pro zátěžové testy pomocí nastavení testu v aplikaci Visual Studio
+# <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>Postupy: Konfigurace služby ASP.NET profiler pro zátěžové testy pomocí nastavení testu v sadě Visual Studio
 
-Adaptér diagnostiky dat profileru ASP.NET můžete použít ke shromažďování informací o profileru ASP.NET. Tento adaptér diagnostických dat shromažďuje údaje o výkonu pro aplikace ASP.NET.
+Můžete použít adaptér diagnostiky dat profiler technologie ASP.NET ke shromažďování informací nástroje profilování technologie ASP.NET. Tento adaptér diagnostických dat shromažďuje údaje o výkonu pro aplikace ASP.NET.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
-> Tento adaptér diagnostických dat nelze použít pro testy, které jsou spouštěny pomocí Microsoft Test Manager. Můžete použít diagnostický adaptér ASP.NET Profiler s testy zatížení pouze pomocí webů, které vyžadují Visual Studio Enterprise.
+> Tento adaptér diagnostických dat nelze použít pro testy, které jsou spouštěny pomocí nástroje Microsoft Test Manager. Můžete použít diagnostický adaptér Profiler technologie ASP.NET se zátěžovými testy pomocí webů, což vyžaduje Visual Studio Enterprise.
 
-Adaptér diagnostiky dat profileru ASP.NET umožňuje shromažďovat data profileru ASP.NET z aplikační vrstvy při spuštění zátěžového testu. Profiler by neměl být spouštěn pro dlouho trvající testy, například pro zátěžové testy, které trvají déle než jednu hodinu. Důvodem je, že soubor profileru může dosáhnout velikosti až stovek megabajtů. Místo toho spouštějte kratší zátěžové testy pomocí profileru ASP.NET, který vám pořád poskytne výhody hloubkové diagnostiky problémů s výkonem.
+Adaptér diagnostiky dat profiler technologie ASP.NET umožňuje shromažďovat data profiler technologie ASP.NET z aplikační vrstvy, při spuštění zátěžového testu. Profiler by neměl být spouštěn pro dlouho trvající testy, například pro zátěžové testy, které trvají déle než jednu hodinu. Důvodem je, že soubor profileru může dosáhnout velikosti až stovek megabajtů. Spusťte místo toho kratší zátěžové testy s použitím profiler technologie ASP.NET, které získáte výhodu hloubkové diagnostiky problémů s výkonem.
 
 > [!NOTE]
-> Adaptér diagnostiky dat profileru ASP.NET profiluje proces Internetová informační služba (IIS). Proto nebude fungovat na vývojovém webovém serveru. Chcete-li profilovat web v rámci zátěžového testu, je nutné nainstalovat testovacího agenta na počítači, na kterém je služba IIS spuštěna. Testovací agent nebude generovat zátěž, ale bude to agent pouze pro sběr. Další informace najdete v tématu [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
+> Adaptér diagnostiky dat profiler technologie ASP.NET profiluje proces Internetové informační služby (IIS). Proto nebude fungovat proti vývojovému webovému serveru. Chcete-li Profilovat webu v zátěžovém testu, budete muset nainstalovat testovacího agenta na počítači, na kterém běží služby IIS. Testovací agent nebude generovat zátěž, ale bude to agent pouze pro sběr. Další informace najdete v tématu [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
 
 Další informace naleznete v tématu [Postupy: Vytvoření nastavení testu pro distribuovaný zátěžový test](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md).
 
-## <a name="configure-the-aspnet-profiler-for-your-test-settings"></a>Konfigurace profileru ASP.NET pro nastavení testu
+## <a name="configure-the-aspnet-profiler-for-your-test-settings"></a>Konfigurace profileru technologie ASP.NET pro nastavení testu
 
 Před provedením kroků v tomto postupu je nutné otevřít nastavení testu ze sady Visual Studio a vybrat stránku **data a diagnostika** .
 
-1. Vyberte roli, která se má použít ke shromáždění dat profileru ASP.NET.
+1. Vyberte roli pro shromažďování dat profiler technologie ASP.NET.
 
     > [!WARNING]
-    > Tato role musí být webovým serverem.
+    > Tato role musí být webový server.
 
 2. Vyberte **ASP.NET Profiler** pro povolení shromažďování dat profilování ASP.NET a pak zvolte **Konfigurovat**.
 
-     Zobrazí se dialogové okno pro konfiguraci shromažďování dat profilování ASP.NET.
+     Zobrazí se dialogové okno Konfigurace shromažďování dat profilování ASP.NET.
 
 3. Do **číselníku interval vzorkování profileru**zadejte hodnotu, která indikuje počet nezastavených cyklů hodin procesoru, které se mají čekat mezi pořizováním ukázek ASP.NET profilace.
 
@@ -56,9 +56,9 @@ Před provedením kroků v tomto postupu je nutné otevřít nastavení testu ze
 
     - Informace o časování (minimum, maximum, průměr a součet) spuštění každého dotazu.
 
-Pomocí adaptéru diagnostických dat profileru ASP.NET, který je nakonfigurovaný v nastavení testu, teď můžete shromažďovat data ASP.NET profilování ve vaší webové aplikaci ASP.NET.
+Pomocí technologie ASP.NET profiler diagnostických dat adaptéru nakonfigurované v nastavení testu lze shromažďovat data ve webové aplikaci ASP.NET profilování technologie ASP.NET.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Shromažďování diagnostických informací pomocí nastavení testu](../test/collect-diagnostic-information-using-test-settings.md)
 - [Postupy: Vytvoření nastavení testu pro distribuovaný zátěžový test](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)

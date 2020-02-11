@@ -7,24 +7,24 @@ helpviewer_keywords:
 - virtual user activity chart, isolating performance issues
 ms.assetid: d1c10fb9-cfeb-4e7f-9991-2d1e1103699e
 author: jillre
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: ebd779ed2c78f48c75d29297fba862ffda142e23
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a437da5d95b758b908f1f1d4f7b76c50b6488a3c
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659626"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091844"
 ---
 # <a name="walkthrough-using-the-virtual-user-activity-chart-to-isolate-issues"></a>Návod: použití grafu aktivity virtuálního uživatele k izolaci problémů
 
 V tomto návodu se dozvíte, jak pomocí grafu aktivity virtuálního uživatele izolovat chyby, ke kterým došlo u jednotlivých virtuálních uživatelů, kteří spustili zátěžový test.
 
-Graf aktivity virtuálního uživatele umožňuje vizualizovat aktivitu virtuálního uživatele, která je přidružena k vašemu testu zatížení. Každý řádek v grafu představuje jednotlivého virtuálního uživatele. Graf aktivity virtuálního uživatele zobrazuje přesně to, co každý virtuální uživatel vykonává během testu. To vám umožní izolovat problémy s výkonem zobrazením vzorců aktivity uživatelů, vzorů zatížení, korelacemi neúspěšných nebo pomalých testů a zobrazit žádosti s jinou aktivitou virtuálního uživatele. Graf aktivity virtuálního uživatele je k dispozici až po dokončení zatížení po jeho spuštění.
+Graf aktivity virtuálního uživatele umožňuje vizualizovat aktivitu virtuálního uživatele, která je přidružena k vašemu testu zatížení. Každý řádek v tabulce představuje jednotlivého virtuálního uživatele. Graf aktivity virtuálního uživatele zobrazuje přesně to, co každý virtuální uživatel vykonává během testu. To vám umožní izolovat problémy s výkonem zobrazením vzorců aktivity uživatelů, vzorů zatížení, korelacemi neúspěšných nebo pomalých testů a zobrazit žádosti s jinou aktivitou virtuálního uživatele. Graf aktivity virtuálního uživatele je k dispozici až po dokončení zatížení po jeho spuštění.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Visual Studio Enterprise
 
@@ -36,13 +36,13 @@ Graf aktivity virtuálního uživatele umožňuje vizualizovat aktivitu virtuál
 
 ## <a name="open-the-colorwebapp-solution-created-in-the-previous-walkthroughs"></a>Otevřete řešení ColorWebApp vytvořené v předchozích návodech.
 
-1. Otevřete Visual Studio.
+1. Otevřete sadu Visual Studio.
 
 2. Otevřete řešení **ColorWebApp** , které obsahuje *LoadTest1. LoadTest*. Výsledkem tohoto zátěžového testu je provedení kroků ve třech návodech uvedených na začátku tohoto tématu v části požadavky.
 
      Zbývající kroky v tomto návodu předpokládají webovou aplikaci s názvem ColorWebApp, test výkonnosti webu s názvem *ColorWebAppTest. webtest* a zátěžový test s názvem *LoadTest1. LoadTest*.
 
-## <a name="run-the-load-test"></a>Spustit zátěžový test
+## <a name="run-the-load-test"></a>Spusťte zátěžový test
 
 Spusťte zátěžový test pro shromažďování dat o aktivitě virtuálního uživatele.
 
@@ -87,13 +87,13 @@ Po spuštění zátěžového testu a shromáždění dat aktivity virtuálního
 
     - **Zaznamenaný**
 
-    - **Sítě**
+    - **Síť**
 
     - **Čas spuštění**
 
     - **Úkolu**
 
-    - **Agenta**
+    - **Agent**
 
     - **Protokol testu**
 
@@ -103,7 +103,7 @@ Po spuštění zátěžového testu a shromáždění dat aktivity virtuálního
 
      Můžete použít různá nastavení na panelech podrobností v **legendě podrobnosti** a **filtrovat** , které vám pomohou izolovat problémy s výkonem a chyby v zátěžových testech. Experimentujte s těmito nastaveními a nástrojem pro **přiblížení do časového období** , abyste viděli, jak se data virtuálního uživatele zobrazují v **grafu aktivity virtuálního uživatele**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Analýza aktivity virtuálních uživatelů v zobrazení podrobností](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)
 - [Kontrolery testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md)
