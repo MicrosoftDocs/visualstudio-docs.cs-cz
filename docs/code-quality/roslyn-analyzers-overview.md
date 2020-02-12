@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 77ee96272733eb519e92262cece405de21c06fa3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 34225858e88f4ee969f0e51013bcdb04812d425f
+ms.sourcegitcommit: a86ee68e3ec23869b6eaaf6c6b7946b1d9a88d01
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587274"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144770"
 ---
 # <a name="overview-of-source-code-analyzers"></a>Přehled analyzátorů zdrojového kódu
 
@@ -25,10 +25,10 @@ Analyzátory kódu .NET Compiler Platform ("Roslyn") kontrolují C# svůj kód n
 
 - Některé analyzátory jsou integrované do sady Visual Studio. ID diagnostiky nebo kód pro tyto analyzátory mají formát IDExxxx, například IDE0067. Většina těchto vestavěných analyzátorů kontroluje [styl kódu](../ide/code-styles-and-code-cleanup.md)a můžete nakonfigurovat předvolby na [stránce Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) nebo v [souboru EditorConfig](../ide/editorconfig-code-style-settings-reference.md). Několik předdefinovaných analyzátorů se podívejte na kvalitu kódu.
 
-- Další analyzátory můžete nainstalovat jako balíček NuGet nebo rozšíření sady Visual Studio. Příklad:
+- Další analyzátory můžete nainstalovat jako balíček NuGet nebo rozšíření sady Visual Studio. Například:
 
   - [Analyzátory FxCop](../code-quality/install-fxcop-analyzers.md), Doporučené analyzátory kvality kódu Microsoftu
-  - Analyzátory třetích stran, například [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/), [Roslynator](https://www.nuget.org/packages/Roslynator/), [analyzátory XUnit](https://www.nuget.org/packages/xunit.analyzers/)a [analyzátor sonar](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)
+  - Analyzátory třetích stran, například [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/), [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [analyzátory XUnit](https://www.nuget.org/packages/xunit.analyzers/)a [analyzátor sonar](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)
 
 Pokud je v analyzátoru zjištěna porušení pravidla, jsou uvedena v editoru kódu (jako *vlnovku* pod problematickým kódem) a v okně Seznam chyb.
 
@@ -69,7 +69,7 @@ Chcete-li rozlišovat mezi porušením analyzátorů kódu a analýzou starší 
 
 Analyzátory kódu Roslyn se dají nainstalovat na projekt prostřednictvím balíčku NuGet. Některé jsou také k dispozici jako rozšíření sady Visual Studio. v takovém případě se vztahují na jakékoli řešení, které jste otevřeli v aplikaci Visual Studio. Existují některé rozdíly v chování při [instalaci analyzátorů](../code-quality/install-roslyn-analyzers.md)mezi těmito dvěma způsoby.
 
-### <a name="scope"></a>Obor
+### <a name="scope"></a>Rozsah
 
 Pokud nainstalujete analyzátory jako rozšíření sady Visual Studio, budou použity na úrovni řešení a na všechny instance aplikace Visual Studio. Pokud nainstalujete analyzátory jako balíček NuGet, což je upřednostňovaná metoda, vztahují se pouze na projekt, ve kterém byl balíček NuGet nainstalován. V týmových prostředích jsou analyzátory nainstalované jako balíčky NuGet v oboru pro *všechny vývojáře* , kteří na daném projektu pracují.
 
@@ -93,8 +93,8 @@ Nemůžete nakonfigurovat závažnost pravidel z analyzátorů, které se nainst
 > [!div class="nextstepaction"]
 > [Použití analyzátorů kódu v aplikaci Visual Studio](../code-quality/use-roslyn-analyzers.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nejčastější dotazy k analyzátorům](analyzers-faq.md)
 - [Zápis vlastního analyzátoru kódu](../extensibility/getting-started-with-roslyn-analyzers.md)
-- [.NET Compiler Platform SDK](/dotnet/csharp/roslyn-sdk/)
+- [Sada .NET Compiler Platform SDK](/dotnet/csharp/roslyn-sdk/)

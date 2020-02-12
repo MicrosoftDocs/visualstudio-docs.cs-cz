@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: ffd5f2e4bfc13f79b519fbdf9b3cf517793cd324
-ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
+ms.openlocfilehash: 5087c439533aa447708d0f1bfae653054fd16089
+ms.sourcegitcommit: a86ee68e3ec23869b6eaaf6c6b7946b1d9a88d01
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77091931"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144789"
 ---
 # <a name="generate-source-code-from-net-assemblies-while-debugging"></a>Generovat zdrojový kód ze sestavení .NET během ladění
 
@@ -80,8 +80,27 @@ Při ladění kódu, který byl dekompilován ze sestavení, které bylo zkompil
 - Zarážky se nemusí vždy navazovat na umístění odpovídajícího zdroje.
 - Krokování nemusí vždy krokovat se správným umístěním.
 - Místní proměnné nemohou mít přesné názvy.
+- Některé proměnné nemusí být k dispozici pro vyhodnocení.
 
 Další podrobnosti najdete v problému GitHubu: [integrace IChsarpCompiler. Decompiler do ladicího programu vs](https://github.com/icsharpcode/ILSpy/issues/1901).
+
+### <a name="decompilation-reliability"></a>Spolehlivost dekompilace
+
+Poměrně malé procento pokusů o dekompilaci může vést k selhání. Důvodem je chyba referenčního bodu sekvence null v ILSpy.  Toto selhání jsme zmírnili zachycením těchto problémů a řádným selháním pokusu o dekompilaci.
+
+Další podrobnosti najdete v problému GitHubu: [integrace IChsarpCompiler. Decompiler do ladicího programu vs](https://github.com/icsharpcode/ILSpy/issues/1901).
+
+### <a name="limitations-with-async-code"></a>Omezení s asynchronním kódem
+
+Výsledky dekompilace modulů s modifikátory kódu Async/await mohou být neúplné nebo selžou zcela. Implementace ILSpy typu Async/await a yield – počítače jsou pouze částečně implementovány. 
+
+Další podrobnosti najdete v problému GitHubu: [stav generátoru PDB](https://github.com/icsharpcode/ILSpy/issues/1422).
+
+### <a name="just-my-code"></a>Pouze můj kód
+
+Nastavení [pouze můj kód (JMC)](https://docs.microsoft.com/visualstudio/debugger/just-my-code) umožňuje Visual Studiu krokovat se systémem, architekturou, knihovnou a dalšími neuživatelskými voláními. Během relace ladění zobrazuje okno **moduly** , které kódové moduly ladicí program zpracovává jako můj kód (uživatelský kód).
+
+Dekompilace optimalizovaných nebo vydaných modulů vytváří jiný než uživatelský kód. Pokud ladicí program přeruší v kódu nekompilovaného uživatele, například, nezobrazí se **žádné okno zdroje** . Pokud chcete Pouze můj kód zakázat, přejděte na **nástroje** > **Možnosti** (nebo **ladění** **možností** > ) > **ladění** > **Obecné**a pak zrušte výběr možnosti **Povolit pouze můj kód**.
 
 ### <a name="extracted-sources"></a>Extrahované zdroje
 
@@ -92,4 +111,4 @@ Zdrojový kód extrahovaný ze sestavení má následující omezení:
 - Název souboru pro každý soubor obsahuje hodnotu hash kontrolního součtu souboru.
 
 ### <a name="generated-code-is-c-only"></a>Generovaný kód je C# pouze
-Dekompilace generuje soubory zdrojového kódu pouze v C#. Neexistuje žádný způsob, jak vygenerovat soubory v jiném jazyce.
+Dekompilace generuje pouze soubory zdrojového kódu v C#. Neexistuje žádný způsob, jak vygenerovat soubory v jiném jazyce.

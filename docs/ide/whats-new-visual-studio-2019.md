@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a9d8babb55a615e12c575f30426c8e73aa1c6e1
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 35891f081e19420374a1579e73c68d7b93930e54
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75406717"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125361"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
@@ -120,7 +120,7 @@ Podívejte se na následující video, kde se dozvíte víc o tom, jak se dá t�
 
 > [!VIDEO https://www.youtube.com/embed/dKLJsiK1QU8]
 
-### <a name="cloud-first-workflow"></a>Cloud – první pracovní postup
+### <a name="git-first-workflow"></a>Pracovní postup Git – první
 
 Něco, co si všimnete při otevření sady Visual Studio 2019, je nové úvodní okno.
 
@@ -152,7 +152,7 @@ Zavádíme nové rozšíření, které můžete stáhnout pro použití se sadou
 
 Další informace najdete v příspěvku na blogu o [revizích kódu pomocí rozšíření pro žádosti o získání dat v aplikaci Visual Studio](https://devblogs.microsoft.com/visualstudio/code-reviews-using-the-visual-studio-pull-requests-extension/) .
 
-## <a name="debug"></a>Ladit
+## <a name="debug"></a>Ladění
 
 Podívejte se na následující video, kde se dozvíte víc o tom, jak můžete s přesným cílem v průběhu ladění vynulovat. <br><br>*Délka videa: 3,54 minut*
 
@@ -180,7 +180,7 @@ Můžete také formátovat, jak se hodnota zobrazuje v oknech kukátko, místní
 
 Další informace najdete v tématu [Vylepšená v aplikaci Visual Studio 2019: hledání objektů a vlastností v příspěvku na blogu sledování, automatické hodnoty a místní hodnoty v systému Windows](https://devblogs.microsoft.com/visualstudio/enhanced-in-visual-studio-2019-search-for-objects-and-properties-in-the-watch-autos-and-locals-windows/) .
 
-### <a name="snapshot-debugger"></a>Snapshot Debugger
+### <a name="snapshot-debugger"></a>Ladicí program snímků
 
 Získejte snímek provádění vaší aplikace v cloudu, abyste viděli přesně to, co se děje. (Tato funkce je k dispozici pouze v Visual Studio Enterprise.)
 
@@ -204,7 +204,7 @@ Další informace najdete v článku [ladění živých ASP.NET aplikací Azure 
 
 Další informace najdete v tématu [vlastnosti Pinnable: Debug & zobrazit spravované objekty podle svého příspěvku na](https://devblogs.microsoft.com/visualstudio/pinnable-properties-debug-display-managed-objects-your-way/) blogu.
 
-## <a name="whats-next"></a>Co dál
+## <a name="whats-next"></a>Kam dál
 
 Visual Studio 2019 aktualizujeme často o nové funkce, které můžou zlepšit vývojové prostředí. Další informace o našich nejnovějších inovacích najdete v blogu sady [Visual Studio](https://devblogs.microsoft.com/visualstudio/). A pro záznam toho, co jsme vydali v předběžné verzi Preview, se podívejte na poznámky k [verzi Preview](/visualstudio/releases/2019/release-notes-preview/).
 
@@ -218,7 +218,7 @@ Proč odeslat zpětnou vazbu týmu sady Visual Studio? Protože jsme vážně tr
 
 * Pokud dojde k zablokování, zhroucení nebo jinému problému s výkonem, můžete snadno sdílet kroky reprodukci a podpůrné soubory s námi pomocí nástroje [nahlásit problém](how-to-report-a-problem-with-visual-studio.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Zpráva k vydání verze pro Visual Studio 2019](/visualstudio/releases/2019/release-notes/)
 * [Co je nového v sadě Visual Studio 2019 SDK](../extensibility/whats-new-visual-studio-2019-sdk.md)

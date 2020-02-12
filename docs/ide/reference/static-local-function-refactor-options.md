@@ -1,6 +1,6 @@
 ---
-title: Refaktoring statických lokálních funkcí
-ms.date: 09/28/2019
+title: Možnosti refaktoru statických lokálních funkcí
+ms.date: 02/10/2020
 ms.topic: reference
 author: governesss
 ms.author: midumont
@@ -11,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: adbf84b9ae7566cd5e58a7c757ce09a37252b754
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: c297457c910c484c05c974c581e89c75e0ad44e5
+ms.sourcegitcommit: a86ee68e3ec23869b6eaaf6c6b7946b1d9a88d01
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74782277"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144840"
 ---
 # <a name="static-local-function-refactorings-and-quick-actions"></a>Refaktoring statických místních funkcí a rychlé akce
 
@@ -66,6 +66,6 @@ Tato rychlá akce platí pro:
 
 3. Vyberte **Předat proměnnou explicitně v místní statické funkci**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Refactoring](../refactoring-in-visual-studio.md)
+- [Refaktoring](../refactoring-in-visual-studio.md)
