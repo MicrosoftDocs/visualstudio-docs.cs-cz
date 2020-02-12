@@ -382,6 +382,8 @@
                   href: ide/reference/invert-conditional-logical.md
                 - name: Invertování příkazů if
                   href: ide/reference/invert-if-statement.md
+                - name: Možnosti refaktoringu statických lokálních funkcí
+                  href: ide/reference/static-local-function-refactor-options.md
                 - name: Přesunutí deklarace do blízkosti odkazu
                   href: ide/reference/move-declaration-near-reference.md
                 - name: Přesunutí typu do odpovídajícího souboru
