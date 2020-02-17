@@ -2,24 +2,24 @@
 title: Doporučené postupy a příklady (poznámky SAL)
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: eb95e793421ecede6d4583d8d7f4730eb56df1a0
-ms.sourcegitcommit: 58000baf528da220fdf7a999d8c407a4e86c1278
+ms.openlocfilehash: 601d90ed7e310f058fbf816469fef7374363951f
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72789783"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77265150"
 ---
 # <a name="best-practices-and-examples-sal"></a>Doporučené postupy a příklady (poznámky SAL)
 Tady je několik způsobů, jak využít jazyk pro poznámky ke zdrojovému kódu (SAL) a vyhnout se některým běžným problémům.
 
 ## <a name="_in_"></a>\_v\_
 
-Pokud má být funkce zapsána do prvku, použijte `_Inout_` místo `_In_`. To je zvlášť důležité v případech automatizovaného převodu ze starších maker do SAL. Před SAL, mnoho programátorů použili makra jako komentáře – makra s názvem `IN`, `OUT`, `IN_OUT`nebo varianty těchto názvů. I když doporučujeme převést tato makra na SAL, doporučujeme vám, abyste byli opatrní při jejich převodu, protože došlo ke změně kódu od chvíle, kdy byl napsán původní prototyp, a staré makro již nemusí odrážet, co kód dělá. Buďte obzvláště opatrní na makru s komentářem `OPTIONAL`, protože je často nesprávně umístěný – například na nesprávné straně čárky.
+Pokud má být funkce zapsána do prvku, použijte `_Inout_` místo `_In_`. To je zvlášť důležité v případech automatizovaného převodu ze starších maker do SAL. Před SAL, mnoho programátorů použili makra jako komentáře – makra s názvem `IN`, `OUT`, `IN_OUT`nebo varianty těchto názvů. I když doporučujeme převést tato makra na SAL, doporučujeme vám, abyste byli opatrní při jejich převodu, protože došlo ke změně kódu od chvíle, kdy byl napsán původní prototyp, a staré makro již nemusí odrážet, co kód dělá. Buďte obzvláště opatrní na makru `OPTIONAL` komentářů, protože je často nesprávně umístěný – například na nesprávné straně čárky.
 
 ```cpp
 
@@ -63,7 +63,7 @@ void Func2(_Out_ int *p1)
 
 ## <a name="_pre_defensive_-and-_post_defensive_"></a>\_pre\_obrannou linií\_ a \_post\_obrannou linií\_
 
-Pokud se funkce objeví na hranici vztahu důvěryhodnosti, doporučujeme použít `_Pre_defensive_` anotace.  Modifikátor "obrannou linií" mění určité poznámky, což znamená, že v bodě volání by mělo být rozhraní kontrolováno striktně, ale v těle implementace by mělo předpokládat, že mohou být předány nesprávné parametry. V takovém případě je `_In_ _Pre_defensive_` upřednostňována na hranici vztahu důvěryhodnosti, což znamená, že i když se volající dostane chyba, pokud se pokusí předat hodnotu NULL, tělo funkce bude analyzováno, jako by parametr může mít hodnotu NULL a všechny pokusy o zrušení odkazu na ukazatel bez předchozího zaškrtnutí pro hodnotu NULL bude označeno příznakem.  K dispozici je také anotace `_Post_defensive_` pro použití ve zpětných voláních, kde se považuje důvěryhodná strana jako volající a nedůvěryhodný kód je pojmenovaný kód.
+Pokud se funkce objeví na hranici vztahu důvěryhodnosti, doporučujeme použít `_Pre_defensive_` anotace.  Modifikátor "obrannou linií" mění určité poznámky, což znamená, že v bodě volání by mělo být rozhraní kontrolováno striktně, ale v těle implementace by mělo předpokládat, že mohou být předány nesprávné parametry. V takovém případě je `_In_ _Pre_defensive_` upřednostňována na hranici vztahu důvěryhodnosti, což znamená, že i když se volající dostane chyba, pokud se pokusí předat hodnotu NULL, tělo funkce se analyzuje, protože parametr může mít hodnotu NULL a všechny pokusy o zrušení odkazu na ukazatel bez prvotního ověření pro hodnotu NULL budou označeny příznakem.  K dispozici je také anotace `_Post_defensive_` pro použití ve zpětných voláních, kde se považuje důvěryhodná strana jako volající a nedůvěryhodný kód je pojmenovaný kód.
 
 ## <a name="_out_writes_"></a>za\_\_zapisuje\_
 
@@ -126,7 +126,7 @@ void Func1(_In_ WCHAR* wszFileName);
 void Func2(_In_ PWSTR wszFileName);
 ```
 
-Není k dispozici správná specifikace ukončení hodnoty NULL je běžné. Použijte příslušnou verzi `STR` k nahrazení typu, jak je znázorněno v následujícím příkladu.
+Není k dispozici správná specifikace ukončení hodnoty NULL je běžné. Použijte odpovídající verzi `STR` k nahrazení typu, jak je znázorněno v následujícím příkladu.
 
 ```cpp
 
@@ -185,7 +185,7 @@ Výraz `result` odkazuje na hodnotu po stavu, která není k dispozici v předb�
 
 ## <a name="true-in-_success_"></a>TRUE v \_úspěch\_
 
-Pokud je funkce úspěšná, když je vrácená hodnota nenulová, místo `return == TRUE` použijte `return != 0` jako podmínku úspěch. Nenulové hodnota nutně neznamená rovnocennosti skutečné hodnoty, kterou kompilátor poskytuje pro `TRUE`. Parametr pro `_Success_` je výraz a následující výrazy jsou vyhodnoceny jako ekvivalentní: `return != 0`, `return != false`, `return != FALSE`a `return` bez parametrů nebo porovnání.
+Pokud je funkce úspěšná, když je vrácená hodnota nenulová, použijte místo `return == TRUE``return != 0` jako podmínku úspěch. Nenulové hodnota nutně neznamená rovnocennosti s skutečnou hodnotou, kterou kompilátor poskytuje pro `TRUE`. Parametr pro `_Success_` je výraz a následující výrazy jsou vyhodnoceny jako ekvivalentní: `return != 0`, `return != false`, `return != FALSE`a `return` bez parametrů nebo porovnání.
 
 ```cpp
 // Incorrect
@@ -235,7 +235,7 @@ _Ret_maybenull_ void *MightReturnNullPtr2();
 
 V tomto příkladu `_Out_opt_` říká, že ukazatel může mít jako součást představ hodnotu NULL. Pro návratovou hodnotu však nelze použít předběžné podmínky. V takovém případě je správná Poznámka `_Ret_maybenull_`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití poznámek SAL k snížení míry výskytu závad kódu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)  
 [Porozumění SAL](../code-quality/understanding-sal.md)  

@@ -27,17 +27,17 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: ce5e4d1e8ed3505d1f971ef209c7e05ba85e0d69
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: ae15230557ee0c415082f981a7ad3588694eadea
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75402036"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77265130"
 ---
 # <a name="annotating-locking-behavior"></a>Zadávání poznámek o chování při zamykání
 Aby nedocházelo k chybám souběžnosti v programu s více vlákny, vždy postupujte podle příslušného pravidla uzamykání a použijte poznámky SAL.
@@ -117,7 +117,7 @@ Inteligentní Zámky obvykle zabalí Nativní zámky a spravují jejich životno
 |`_Swaps_locks_(left, right)`|Popisuje standardní `swap` chování, které předpokládá, že objekty `left` a `right` vyměňují svůj stav. Výměna stavu zahrnuje počet zámků a cíl aliasů, pokud je k dispozici. Aliasy, které ukazují na `left` a objekty `right` zůstávají beze změny.|
 |`_Detaches_lock_(detached, lock)`|Popisuje scénář, ve kterém typ zámku obálky umožňuje zrušení bylo s jeho obsaženým prostředkem. To se podobá tomu, jak `std::unique_ptr` pracuje s vnitřním ukazatelem: umožňuje programátorům extrahovat ukazatel a opustit jeho kontejner inteligentního ukazatele v čistém stavu. Podobná logika je podporována nástrojem `std::unique_lock` a lze ji implementovat ve vlastních obálkách zámku. Odpojený zámek si zachová svůj stav (počet zámků a cíl aliasů), zatímco obálka je resetována tak, aby obsahovala nulový počet zámků a žádný cíl pro vytváření aliasů a současně si zachovává vlastní aliasy. Neexistují žádné operace na počtu zámků (uvolnění a získání). Tato poznámka se chová stejně jako `_Moves_lock_` s tím rozdílem, že odpojený argument by měl být `return` spíše než `this`.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Použití poznámek SAL k snížení míry výskytu závad kódu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Porozumění SAL](../code-quality/understanding-sal.md)
