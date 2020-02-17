@@ -18,22 +18,23 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 588118bf31c5d310e947b02fda476a63d0d9df7a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: cd21d7da710a82d9396766971244aa5f7f9bbd4d
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573440"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278788"
 ---
 # <a name="itemgroup-element-msbuild"></a>Item – Element (MSBuild)
 Obsahuje sadu uživatelsky definovaných prvků [položky](../msbuild/item-element-msbuild.md) . Každá položka, která se používá v projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], musí být zadána jako podřízená `ItemGroup` elementu.
 
-\<Project> \<ItemGroup>
+\<projektu > \<položky >
 
 ## <a name="syntax"></a>Syntaxe
 
 ```xml
-<ItemGroup Condition="'String A' == 'String B'">
+<ItemGroup Condition="'String A' == 'String B'"
+           Label="Label">
     <Item1>... </Item1>
     <Item2>... </Item2>
 </ItemGroup>
@@ -47,6 +48,7 @@ Následující části popisují atributy, podřízené prvky a nadřazené prvk
 |Atribut|Popis|
 |---------------|-----------------|
 |`Condition`|Nepovinný atribut. Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
+|`Label`|Nepovinný atribut. Identifikuje `ItemGroup`.|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
@@ -58,7 +60,7 @@ Následující části popisují atributy, podřízené prvky a nadřazené prvk
 
 | Prvek | Popis |
 | - | - |
-| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| [Projektem](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
 | [Cíl](../msbuild/target-element-msbuild.md) | Počínaje .NET Framework 3,5 se element `ItemGroup` může objevit uvnitř elementu `Target`. Další informace najdete v tématu [cíle](../msbuild/msbuild-targets.md). |
 
 ## <a name="example"></a>Příklad
@@ -81,7 +83,7 @@ Následující příklad kódu ukazuje uživatelsky definované kolekce položek
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Položky](../msbuild/msbuild-items.md)
 - [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md)

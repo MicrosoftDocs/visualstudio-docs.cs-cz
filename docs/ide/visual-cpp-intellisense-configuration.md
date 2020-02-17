@@ -2,17 +2,17 @@
 title: Konfigurace projektu C++ pro IntelliSense
 ms.date: 10/08/2018
 ms.topic: conceptual
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0a909c25af3de22019327bb890da9e26bcce1c8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8c43c48a797619f86f81e219e31ccf2afab5ba87
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748583"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77279310"
 ---
 # <a name="configure-a-c-project-for-intellisense"></a>Konfigurace projektu C++ pro IntelliSense
 
@@ -38,7 +38,7 @@ Pokud spustíte vaše sestavení mimo prostředí Visual Studio IDE a vaše sest
 
 ![Adresáře zahrnutí VC + +](media/vcpp-intellisense-include-paths.png)
 
-Chcete-li zobrazit aktuální hodnoty pro makra sestavení, jako je například **VC_IncludePath**, vyberte řádek zahrnout adresáře a klikněte na rozevírací seznam na pravé straně. Pak zvolte **\<Edit >** a klikněte na tlačítko **makra** .
+Chcete-li zobrazit aktuální hodnoty pro makra sestavení, například **VC_IncludePath**, vyberte řádek zahrnout adresáře a klikněte na rozevírací seznam na pravé straně. Pak zvolte **\<upravit >** a klikněte na tlačítko **makra** .
 
 ### <a name="makefile-projects"></a>Projekty makefile
 
@@ -74,7 +74,7 @@ V okně **Seznam chyb** se zobrazí chyby analyzátoru značek.
 
 ## <a name="validate-project-settings-with-diagnostic-logging"></a>Ověření nastavení projektu pomocí diagnostického protokolování
 
-Chcete-li ověřit, zda kompilátor technologie IntelliSense používá správné možnosti kompilátoru, včetně zahrnutí cest a makra preprocesoru, zapněte diagnostické protokolování příkazového řádku technologie IntelliSense v **nástrojích > možnosti > textovýC++ Editor > C/> Advanced > Protokolování diagnostiky**. Nastavte **Povolit protokolování** na hodnotu true, **úroveň protokolování** na 5 (nejvíc verbose) a **Filtr protokolování** na 8 (protokolování IntelliSense).
+Chcete-li ověřit, zda kompilátor technologie IntelliSense používá správné možnosti kompilátoru, včetně zahrnutí cest a makra preprocesoru, zapněte diagnostické protokolování příkazového řádku technologie IntelliSense v **nástrojích > možnosti > textovýC++ Editor > C/> rozšířené > diagnostické protokolování**. Nastavte **Povolit protokolování** na hodnotu true, **úroveň protokolování** na 5 (nejvíc verbose) a **Filtr protokolování** na 8 (protokolování IntelliSense).
 
 Okno Výstup nyní zobrazí příkazové řádky, které jsou předány kompilátoru technologie IntelliSense. Tady je ukázkový výstup:
 
@@ -93,7 +93,7 @@ Okno Výstup nyní zobrazí příkazové řádky, které jsou předány kompilá
 /Yustdafx.h
 ```
 
-Tyto informace vám pomohou pochopit, proč technologie IntelliSense poskytuje nepřesné informace. Například Pokud adresář include vašeho projektu obsahuje **$ (MojePromenna) \Include**a diagnostický protokol ukazuje **/I\Include** jako cestu include, znamená to, že **$ (MojePromenna)** se nevyhodnotila a byla odebrána z poslední cesty include. .
+Tyto informace vám pomohou pochopit, proč technologie IntelliSense poskytuje nepřesné informace. Například Pokud adresář include vašeho projektu obsahuje **$ (MojePromenna) \Include**a diagnostický protokol ukazuje **/I\Include** jako cestu include, znamená to, že **$ (MojePromenna)** se nevyhodnotila a byla odebrána z poslední cesty include.
 
 ## <a name="about-the-intellisense-build"></a>O sestavení IntelliSense
 
@@ -120,6 +120,6 @@ Pokud nastavíte proměnnou prostředí TRACEDESIGNTIME na hodnotu true a restar
 
 Další informace o proměnné prostředí TRACEDESIGNTIME naleznete v tématu [Roslyn](https://github.com/dotnet/roslyn/wiki/Diagnosing-Project-System-Build-Errors) a [Common Project System](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md). Informace v těchto článcích jsou relevantní pro C++ projekty.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Visual C++ IntelliSense](visual-cpp-intellisense.md)

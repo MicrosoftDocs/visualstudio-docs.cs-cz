@@ -2,29 +2,29 @@
 title: Microsoft.VisualStudio.TestTools.CppUnitTestFramework API
 ms.date: 09/27/2019
 ms.topic: reference
-ms.author: mblome
+ms.author: corob
 manager: jillfra
 ms.workload:
 - multiple
-author: mikeblome
-ms.openlocfilehash: 327aa6f79f7eda6ecc3f1c0a7b2576a87287b1c0
-ms.sourcegitcommit: 628eb202a1153ebfe69c668f966f821b98b34b34
+author: corob-msft
+ms.openlocfilehash: 8a71b6d406b7507930a5d1a7ce593a296220d5a6
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71720516"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278645"
 ---
 # <a name="microsoftvisualstudiotesttoolscppunittestframework-api-reference"></a>Reference k rozhraní API Microsoft. VisualStudio. TestTools. CppUnitTestFramework
 
 Toto téma obsahuje seznam veřejných členů oboru názvů `Microsoft::VisualStudio::CppUnitTestFramework`. Pomocí těchto rozhraní API zapište C++ testy jednotek založené na nativním rozhraní testování částí společnosti Microsoft. Na konci tématu je [Příklad použití](#example) .
 
-Soubory hlaviček a lib jsou umístěné v části *\<Visual Studio instalační složka > \VC\Auxiliary\VS\UnitTest*.
+Soubory hlaviček a lib jsou umístěné v části *\<instalační složky sady Visual Studio > \VC\Auxiliary\VS\UnitTest*.
 
 Cesty k hlavičkám a lib jsou automaticky nakonfigurované v nativním testovacím projektu.
 
-## <a name="In_this_topic"></a> V tomto tématu
+## <a name="In_this_topic"></a>V tomto tématu
 
-[CppUnitTest.h](#cppUnitTest_h)
+[CppUnitTest. h](#cppUnitTest_h)
 
 - [Vytváření testovacích tříd a metod](#create_test_classes_and_methods)
 
@@ -46,7 +46,7 @@ Cesty k hlavičkám a lib jsou automaticky nakonfigurované v nativním testovac
 
   - [Předdefinované atributy](#pre_defined_attributes)
 
-    [CppUnitTestAssert.h](#cppUnitTestAssert_h)
+    [CppUnitTestAssert. h](#cppUnitTestAssert_h)
 
   - [Obecné kontrolní výrazy](#general_asserts)
 
@@ -86,9 +86,9 @@ Cesty k hlavičkám a lib jsou automaticky nakonfigurované v nativním testovac
 
     - [Očekávat výjimku](#expect_exception)
 
-      [CppUnitTestLogger.h](#cppunittestlogger_h)
+      [CppUnitTestLogger. h](#cppunittestlogger_h)
 
-    - [Logger](#logger)
+    - [Nástroj](#logger)
 
     - [Zapsat zprávu](#write_message)
 
@@ -102,7 +102,7 @@ Cesty k hlavičkám a lib jsou automaticky nakonfigurované v nativním testovac
 TEST_CLASS(className)
 ```
 
-Vyžaduje se pro každou třídu obsahující testovací metody. Identifikuje *ClassName* jako testovací třídu. `TEST_CLASS` se musí deklarovat v oboru namescape.
+Vyžaduje se pro každou třídu obsahující testovací metody. Identifikuje *ClassName* jako testovací třídu. `TEST_CLASS` musí být deklarované v oboru namescape.
 
 ```cpp
 TEST_METHOD(methodName)
@@ -111,7 +111,7 @@ TEST_METHOD(methodName)
 }
 ```
 
-Definuje *methodName* jako testovací metodu. `TEST_METHOD` musí být deklarován v rozsahu třídy metody.
+Definuje *methodName* jako testovací metodu. `TEST_METHOD` musí být deklarované v rozsahu třídy metody.
 
 ### <a name="Initialize_and_cleanup"></a>Inicializovat a vyčistit
 
@@ -124,7 +124,7 @@ TEST_METHOD_INITIALIZE(methodName)
 }
 ```
 
-Definuje *methodName* jako metodu, která se spustí před spuštěním každé testovací metody. `TEST_METHOD_INITIALIZE` lze v testovací třídě definovat pouze jednou a musí být definovány v rozsahu třídy testu.
+Definuje *methodName* jako metodu, která se spustí před spuštěním každé testovací metody. `TEST_METHOD_INITIALIZE` lze definovat pouze jednou v testovací třídě a musí být definovány v oboru třídy testu.
 
 ```cpp
 TEST_METHOD_CLEANUP(methodName)
@@ -133,7 +133,7 @@ TEST_METHOD_CLEANUP(methodName)
 }
 ```
 
-Definuje *methodName* jako metodu, která se spustí po spuštění každé testovací metody. `TEST_METHOD_CLEANUP` lze v testovací třídě definovat pouze jednou a musí být definovány v rozsahu třídy testu.
+Definuje *methodName* jako metodu, která se spustí po spuštění každé testovací metody. `TEST_METHOD_CLEANUP` lze definovat pouze jednou v testovací třídě a musí být definovány v oboru třídy testu.
 
 #### <a name="test_classes"></a>Testovací třídy
 
@@ -144,7 +144,7 @@ TEST_CLASS_INITIALIZE(methodName)
 }
 ```
 
-Definuje *methodName* jako metodu, která se spustí před vytvořením každé testovací třídy. `TEST_CLASS_INITIALIZE` lze v testovací třídě definovat pouze jednou a musí být definovány v rozsahu třídy testu.
+Definuje *methodName* jako metodu, která se spustí před vytvořením každé testovací třídy. `TEST_CLASS_INITIALIZE` lze definovat pouze jednou v testovací třídě a musí být definovány v oboru třídy testu.
 
 ```cpp
 TEST_CLASS_CLEANUP(methodName)
@@ -153,7 +153,7 @@ TEST_CLASS_CLEANUP(methodName)
 }
 ```
 
-Definuje *methodName* jako metodu, která se spustí po vytvoření každé třídy testu. `TEST_CLASS_CLEANUP` lze v testovací třídě definovat pouze jednou a musí být definovány v rozsahu třídy testu.
+Definuje *methodName* jako metodu, která se spustí po vytvoření každé třídy testu. `TEST_CLASS_CLEANUP` lze definovat pouze jednou v testovací třídě a musí být definovány v oboru třídy testu.
 
 #### <a name="test_modules"></a>Testovací moduly
 
@@ -183,7 +183,7 @@ BEGIN_TEST_METHOD_ATTRIBUTE(testMethodName)
 END_TEST_METHOD_ATTRIBUTE()
 ```
 
-Přidá atributy definované jedním nebo více makry `TEST_METHOD_ATTRIBUTE` do metody testu *testMethodName*.
+Přidá atributy definované s jedním nebo více `TEST_METHOD_ATTRIBUTE` makry do metody testu *testMethodName*.
 
 Makro `TEST_METHOD_ATTRIBUTE` definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
 
@@ -196,7 +196,7 @@ BEGIN_TEST_CLASS_ATTRIBUTE(testClassName)
 END_TEST_CLASS_ATTRIBUTE()
 ```
 
-Přidá atributy definované s jedním nebo více makry `TEST_CLASS_ATTRIBUTE` do testovací třídy *testClassName*.
+Přidá atributy definované s jedním nebo více `TEST_CLASS_ATTRIBUTE` makry do testovací třídy *testClassName*.
 
 Makro `TEST_CLASS_ATTRIBUTE` definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
 
@@ -209,7 +209,7 @@ BEGIN_TEST_MODULE_ATTRIBUTE(testModuleName)
 END_TEST_MODULE_ATTRIBUTE()
 ```
 
-Přidá atributy definované s jedním nebo více makry `TEST_MODULE_ATTRIBUTE` do modulu testu *testModuleName*.
+Přidá atributy definované s jedním nebo více `TEST_MODULE_ATTRIBUTE` makry do modulu testu *testModuleName*.
 
 Makro `TEST_MODULE_ATTRIBUTE` definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
 
@@ -247,7 +247,7 @@ TEST_IGNORE()
 
 Definuje `TEST_METHOD_ATTRIBUTE` s názvem `Ignore` a hodnotou atributu `true`.
 
-## <a name="cppUnitTestAssert_h"></a> CppUnitTestAssert.h
+## <a name="cppUnitTestAssert_h"></a>CppUnitTestAssert. h
 
 ### <a name="general_asserts"></a>Obecné kontrolní výrazy
 
@@ -341,7 +341,7 @@ static void Assert::AreNotEqual(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-Ověřte, že se neshodují dva řetězce w_char *.
+Ověřte, že se neshodují dva w_char * řetězce.
 
 ```cpp
 static void Assert::AreNotEqual(
@@ -555,7 +555,7 @@ template<typename _EXPECTEDEXCEPTION, typename _RETURNTYPE>
     const __LineInfo* pLineInfo = NULL)
 ```
 
-## <a name="cppunittestlogger_h"></a> CppUnitTestLogger.h
+## <a name="cppunittestlogger_h"></a>CppUnitTestLogger. h
 
 ### <a name="logger"></a>Nástroj
 Třída protokolovacího nástroje obsahuje statické metody pro zápis do **okno výstup**.
@@ -638,7 +638,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Testování částí kódu](../test/unit-test-your-code.md)
 - [Zápis testů jednotek pro C/C++](writing-unit-tests-for-c-cpp.md)

@@ -27,7 +27,7 @@
 ### Nástroje
 #### [Individuální kredit v Azure DevTest](vs-azure.md)
 #### [Azure DevOps](vs-azure-devops.md)
-#### [Průběžné platby za Azure](vs-azure-payg.md)
+#### [Průběžné platby za Azure DevTest](vs-azure-payg.md)
 #### [CAST Highlight](vs-cast.md)
 #### [CloudPilot](vs-cloudpilot.md)
 #### [Enterprise Mobility + Security](vs-ems.md)
@@ -84,7 +84,7 @@
 ### [Nadměrná přidělení](handle-overclaimed-license.md)
 ### [Maximální využití](maximum-usage.md)
 ### [Předplatná po konci platnosti](handle-expired-license.md)
-### [Aliasy Using pro předplatitele](aliasing.md)
+### [Scénáře přihlášení předplatitele](aliasing.md)
 ### [Předplatitelé s přihlášením pomocí osobního e-mailu](personal-email-sign-ins.md)
 ### [Správa sady Visual Studio s GitHub Enterprise](assign-github.md)
 # Prostředky

@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2a0b9a69d035db5b1d2d638d97995613b50def0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1b183c1939ed48351bc15dacff31c85af46286ad
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585441"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278518"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 
@@ -28,7 +28,7 @@ Visual Studio obsahuje rozhraní pro testování částí společnosti Microsoft
 ## <a name="run-tests-in-test-explorer"></a>Spustit testy v Průzkumníku testů
 
 
-Když sestavíte testovací projekt, testy se zobrazí v Průzkumníku testů. Pokud se nezobrazí Průzkumník testů, zvolte **testovací** v nabídce sady Visual Studio, zvolte **Windows**a klikněte na tlačítko **Průzkumník testů**.
+Když sestavíte testovací projekt, testy se zobrazí v Průzkumníku testů. Pokud není Průzkumník testů viditelný, zvolte možnost **test** v nabídce aplikace Visual Studio, zvolte možnost **Windows**a pak zvolte možnost **Průzkumník testů**.
 
 
 ::: moniker range="vs-2017"
@@ -39,7 +39,7 @@ Když sestavíte testovací projekt, testy se zobrazí v Průzkumníku testů. P
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-Jak spustit, zápis a znovu spouštěny, zobrazuje Průzkumník testů výsledky ve výchozích skupinách **neúspěšné testy**, **úspěšné testy**, **přeskočené testy** a  **Nespuštěné testy**. Můžete změnit způsob, jakým Průzkumník testů seskupuje vaše testy.
+Při spuštění, zápisu a opětovném spuštění testů se v Průzkumníku testů zobrazí výsledky ve výchozích skupinách **neúspěšných testů**, **Úspěšné testy**, **přeskočené testy** a **nespouštějí se testy**. Můžete změnit způsob, jakým Průzkumník testů seskupuje vaše testy.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 Při spuštění, zápisu a opětovném spuštění testů zobrazuje Průzkumník testů výsledky ve výchozím seskupení **projektu**, **oboru názvů**a **třídy**. Můžete změnit způsob, jakým Průzkumník testů seskupí testy.
@@ -59,7 +59,7 @@ Na panelu nástrojů **Průzkumníka testů** můžete provádět spoustu práce
 ::: moniker range="vs-2017"
 Spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které jste vybrali. Proveďte jednu z těchto akcí:
 
-- Chcete-li spustit všechny testy v řešení, zvolte **spustit všechny**.
+- Chcete-li spustit všechny testy v řešení, vyberte možnost **Spustit vše**.
 
 - Chcete-li spustit všechny testy ve výchozí skupině, zvolte možnost **Spustit** a poté vyberte skupinu v nabídce.
 
@@ -94,9 +94,9 @@ Spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů,
 Chcete-li spustit testy jednotek po každém místním sestavení, otevřete ikonu nastavení na panelu nástrojů Průzkumníka testů a vyberte možnost **Spustit testy po sestavení**.
 ::: moniker-end
 
-## <a name="view-test-results"></a>Zobrazení výsledků testů
+## <a name="view-test-results"></a>Zobrazit výsledky testu
 
-Jak spustit, zápis a znovu spouštěny, zobrazuje Průzkumník testů výsledky ve skupinách **neúspěšné testy**, **úspěšné testy**, **přeskočené testy** a **není spuštěn Testy**. Podokno podrobností v dolní nebo boční části Průzkumníka testů zobrazuje souhrn testovacího běhu.
+Když spouštíte, píšete a znovu spustíte testy, Průzkumník testů zobrazí výsledky ve skupinách **neúspěšných testů**, **úspěšných testů**, **přeskočených testů** a **nespustí testy**. Podokno podrobností v dolní nebo boční části Průzkumníka testů zobrazuje souhrn testovacího běhu.
 
 ### <a name="view-test-details"></a>Zobrazit podrobnosti testu
 
@@ -153,20 +153,20 @@ Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak
 ::: moniker range="vs-2017"
 |Skupina|Popis|
 |-|-----------------|
-|**Doba trvání**|Seskupuje test podle doby spuštění: **rychlá**, **střední**a **pomalá**.|
-|**Výsledek**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
+|**Úkolu**|Seskupuje test podle doby spuštění: **rychlá**, **střední**a **pomalá**.|
+|**Zaznamenaný**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 |**Traits**|Seskupí testy podle párů kategorií/hodnot, které definujete. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
-|**Projekt**|Seskupí testy podle názvu projektů.|
+|**Projektem**|Seskupí testy podle názvu projektů.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 |Skupina|Popis|
 |-|-----------------|
-|**Doba trvání**|Seskupí testy podle doby spuštění: **rychlá**, **střední**a **pomalá**.|
+|**Úkolu**|Seskupí testy podle doby spuštění: **rychlá**, **střední**a **pomalá**.|
 |**Stav**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**, **Nespuštěné** .|
 |**Cílová architektura** | Seskupí testy podle cíle v rámci svých projektů. |
-|**Namespace**|Seskupí testy podle obsahujícího oboru názvů.|
-|**Projekt**|Seskupí testy podle obsahujícího projektu.|
-|**Třída**|Seskupí testy pomocí obsahující třídy.|
+|**Hosting**|Seskupí testy podle obsahujícího oboru názvů.|
+|**Projektem**|Seskupí testy podle obsahujícího projektu.|
+|**Deník**|Seskupí testy pomocí obsahující třídy.|
 ::: moniker-end
 
 ### <a name="traits"></a>Traits
@@ -236,7 +236,7 @@ Sloupce lze filtrovat, seřadit a změnit jejich uspořádání.
 
 * Chcete-li změnit pořadí sloupců, klikněte na záhlaví sloupce a přetáhněte je doleva nebo doprava.
 
-* Pokud chcete sloupec seřadit, klikněte na záhlaví sloupce. Ne všechny sloupce lze seřadit. Můžete také řadit podle sekundárního sloupce podržením klávesy **SHIFT** a kliknutím na další záhlaví sloupce.
+* Pokud chcete sloupec seřadit, klikněte na záhlaví sloupce. Nedají se seřadit všechny sloupce. Můžete také řadit podle sekundárního sloupce podržením klávesy **SHIFT** a kliknutím na další záhlaví sloupce.
 
   ![Řazení sloupců](../test/media/vs-2019/test-explorer-sort-column-16-2.png)
 ::: moniker-end
@@ -269,12 +269,12 @@ Filtrování podle různých kritérií:
 |Kvalifikátor|Popis|
 |-|-----------------|
 |**Znak**|Vyhledá shody v kategorii a hodnotě vlastností. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
-|**Projekt**|Vyhledá shody v názvech projektů testů.|
+|**Projektem**|Vyhledá shody v názvech projektů testů.|
 |**Chybová zpráva**|Vyhledá shodu v uživatelsky definovaných chybových zprávách vrácených neúspěšnými kontrolními výrazy.|
 |**Cesta k souboru**|Vyhledá shody v plně kvalifikovaném názvu souboru zdrojových souborů testu.|
 |**Plně kvalifikovaný název**|Vyhledá plně kvalifikovaný název testovacích oborů názvů, tříd a metod pro shody.|
-|**Output**|Vyhledá chybové zprávy definované uživatelem, které jsou zapsány do standardního výstupu (stdout) nebo standardní chyby (stderr). Syntaxe pro určení výstupních zpráv je definována v rámci testovacího rozhraní jednotky.|
-|**Výsledek**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
+|**Výstup**|Vyhledá chybové zprávy definované uživatelem, které jsou zapsány do standardního výstupu (stdout) nebo standardní chyby (stderr). Syntaxe pro určení výstupních zpráv je definována v rámci testovacího rozhraní jednotky.|
+|**Zaznamenaný**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 |Kvalifikátor|Popis|
@@ -282,10 +282,10 @@ Filtrování podle různých kritérií:
 |**Stav**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 |**Traits**|Vyhledá shody v kategorii a hodnotě vlastností. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
 |**Plně kvalifikovaný název**|Vyhledá plně kvalifikovaný název testovacích oborů názvů, tříd a metod pro shody.|
-|**Projekt**|Vyhledá shody v názvech projektů testů.|
+|**Projektem**|Vyhledá shody v názvech projektů testů.|
 |**Cílová architektura**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
-|**Namespace**|Vyhledá shody v oborech názvů testu.|
-|**Třída**|Vyhledá shody v názvech testovacích tříd.|
+|**Hosting**|Vyhledá shody v oborech názvů testu.|
+|**Deník**|Vyhledá shody v názvech testovacích tříd.|
 ::: moniker-end
 
 K vyloučení podmnožiny výsledků filtru použijte následující syntaxi:
@@ -311,7 +311,7 @@ Průzkumník testů můžete použít ke spuštění relace ladění pro testy. 
 
 ### <a name="diagnose-test-method-performance-issues"></a>Diagnostika problémů s výkonem testovacích metod
 
-Chcete-li diagnostikovat, proč testovací metoda trvá příliš dlouho, vyberte metodu v Průzkumníku testů a pak zvolte možnost **profilovat vybraný test** v místní nabídce kliknutím pravým tlačítkem myši. Viz [prohlížeč výkonu](../profiling/performance-explorer.md).
+Chcete-li diagnostikovat, proč testovací metoda trvá příliš dlouho, vyberte metodu v Průzkumníku testů a pak zvolte možnost **profilovat vybraný test** v místní nabídce kliknutím pravým tlačítkem myši. Viz [Sestava profilace instrumentace](../profiling/understanding-instrumentation-data-values.md?view=vs-2017).
 
 ### <a name="analyze-unit-test-code-coverage"></a>Analýza pokrytí kódu testu jednotek
 
@@ -337,9 +337,9 @@ Spuštění pokrytí kódu pro testovací metody v řešení:
 
 ::: moniker-end
 
-**Výsledky pokrytí kódu** okno zobrazuje procento bloků kódu produktu, které byly vykonány podle řádku, funkce, třídy, oboru názvů a modulu.
+V okně **výsledky pokrytí kódu** se zobrazí procentuální podíl bloků kódu produktu, které byly uplatněny pomocí řádku, funkce, třídy, oboru názvů a modulu.
 
-Další informace najdete v tématu [použití pokrytí kódu k určení, kolik kódu je právě testováno](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
+Další informace naleznete v tématu [Použití pokrytí kódu k určení, kolik kódu je testováno](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
 
 ## <a name="test-shortcuts"></a>Zástupci testů
 
@@ -347,15 +347,15 @@ Testy lze spustit z Průzkumníka testů kliknutím pravým tlačítkem myši v 
 
 |Časté příkazy| Klávesové zkratky|
 |-|------------------------|
-|TestExplorer.DebugAllTestsInContext|**Ctrl**+**R**, **Ctrl**+**T**|
-|TestExplorer.RunAllTestsInContext|**Ctrl**+**R**, **T**|
+|TestExplorer.DebugAllTestsInContext|**Ctrl**+**R**, **CTRL**+**t**|
+|TestExplorer.RunAllTestsInContext|**Ctrl**+**R**, **t**|
 |TestExplorer.RunAllTests|**Ctrl**+**R**, **a**|
 |TestExplorer.RepeatLastRun|**Ctrl**+**R**, **L**|
 
 > [!NOTE]
 > Nemůžete spustit test v abstraktní třídě, protože testy jsou definovány pouze v abstraktních třídách a nikoli v instanci. Chcete-li spustit testy v abstraktních třídách, vytvořte třídu, která je odvozena z abstraktní třídy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Testování částí kódu](../test/unit-test-your-code.md)
 - [Spuštění testování částí v podobě 64bitového procesu](../test/run-a-unit-test-as-a-64-bit-process.md)

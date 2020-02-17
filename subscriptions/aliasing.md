@@ -3,147 +3,110 @@ title: Přihlášení k předplatným sady Visual Studio může při použití a
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/19/2019
+ms.date: 02/14/2020
 ms.topic: conceptual
 description: Přihlášení se nemusí zdařit, pokud se používají aliasy nebo popisné názvy.
-ms.openlocfilehash: 392b86699b1116f45ca75df3b611fff6a2aebc62
-ms.sourcegitcommit: 485881e6ba872c7b28a7b17ceaede845e5bea4fe
+ms.openlocfilehash: dff48852e566522ad01ee07bd46cda72b8e1e249
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68378021"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77276617"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Přihlášení k předplatným sady Visual Studio může při použití aliasů selhat.
-V závislosti na typu účtu použitého k přihlášení nemusí být dostupné odběry při přihlášení ke [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)správnému zobrazení. Jednou z možných příčin je použití "aliasů" nebo "popisných názvů" místo přihlašovací identity, ke které je předplatné přiřazeno. Tento název se nazývá "aliasing".
+V závislosti na typu účtu použitého k přihlášení se nemusí při přihlašování k [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)správně zobrazit dostupná předplatná. Jednou z možných příčin je použití "aliasů" nebo "popisných názvů" místo přihlašovací identity, ke které je předplatné přiřazeno. Tento název se nazývá "aliasing".
 
 ## <a name="what-is-aliasing"></a>Co je aliasing?
 Pojem "aliasing" odkazuje na uživatele, kteří mají různé identity pro přihlášení k Windows (nebo službě Active Directory) a pro přístup k e-mailu.
 
-Aliasing se může vyskytnout, když má společnost Microsoft Online Service pro své adresáře, jakoJohnD@contoso.comje, ale uživatelé mají přístup k e-mailovým účtům pomocí aliasů nebo popisných názvů,John.Doe@contoso.comjako je například. Pro mnoho zákazníků, kteří spravují své odběry prostřednictvím služby Volume Licensing Service Center (VLSC), může dojít k neúspěšnému přihlášení, protože zadaná e-mailová adresa (John.Doe@contoso.com') neodpovídá adrese adresářeJohnD@contoso.com(' '. ) vyžadované k úspěšnému ověření prostřednictvím možnosti pracovní nebo školní účet.
+Aliasing se dá využít, když má společnost Microsoft Online Service pro své adresáře, jako je napříkladolivia@contoso.com, ale uživatelé mají přístup k e-mailovým účtům pomocí aliasů nebo popisných názvů, jako je například "OliviaG@contoso.com". Zajistěte, aby se uživatelé přihlásili pomocí e-mailové adresy pro přihlášení, jak je uvedeno na portálu pro správu předplatných sady Visual Studio na https://manage.visualstudio.com pro přístup ke svým předplatným.
 
 ## <a name="as-an-administrator-what-options-do-i-have"></a>Jaké možnosti mám k dispozici jako správce?
-Jako správce máte k dispozici dvě možnosti, jak zajistit, aby vaši předplatitelé měli úspěšné prostředí pro [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)přihlášení.
-- První možností (doporučeno) je použít účet adresáře jako přiřazenou adresu na portálu Volume Licensing Service Center (VLSC). Další podrobnosti najdete v části [přiřazení předplatitelů k účtu adresáře](#assigning-subscribers-to-a-directory-account) v tomto článku.
-- Druhá možnost (méně bezpečná) znamená, že předplatitelům umožní přidružit svou pracovní nebo školní e-mailovou adresu k osobnímu účtu (označuje se také jako Účet Microsoft nebo MSA). Další podrobnosti najdete v části [definování pracovního nebo školního účtu jako osobního účtu](#defining-a-work-or-school-account-as-a-personal-account) v tomto článku.
 
-> [!NOTE]
-> Jakmile se vaše společnost migruje na nový [portál pro správu](https://manage.visualstudio.com)předplatných sady Visual Studio, budete moct využít nové prostředí pro správu, které umožní poskytovat adresář i e-mailové adresy jako součást předplatitele. profilu. Přečtěte si další informace o [migraci](https://support.microsoft.com/help/4013930/visual-studio-subscriptions-administrator-migration-details).
+V závislosti na typu účtu předplatitele Najděte příslušné řešení níže:
 
-## <a name="assigning-subscribers-to-a-directory-account"></a>Přiřazení předplatitelů k účtu adresáře
-Ve všech případech musí správce předplatného v rámci multilicenčního programu VLSC (Volume Licensing Service Center) používat adresu adresáře pro nové předplatitele nebo aktualizovat e-mailovou adresu pro stávající předplatitele. Je důležité si uvědomit, že použití adresy adresáře bude znamenat, že noví předplatitelé nebudou dostávat uvítací E-mail a správce bude muset upozornit předplatitele, že k nim byl přiřazen odběr. Až budete postupovat podle následujících kroků, můžete také používat e-mailovou [šablonu](#notifying-your-subscribers-with-directory-addresses) k upozorňování předplatitelů a pomáhat jim prostřednictvím procesu přihlašování.
+### <a name="work-or-school-account-upn-mismatch-issue"></a>Problém s neshodou uživatelského jména v pracovním nebo školním účtu
 
-### <a name="adding-new-subscribers"></a>Přidávání nových předplatitelů
-Pokud chcete přidat nového předplatitele s adresářovým účtem, postupujte prosím podle těchto kroků.
+Neshoda hlavního názvu uživatele (UPN) se může vyskytnout, když má compnay aktivní Diretory, kde hlavní název uživatele není stejný jako primární adresa SMTP. 
 
-1. Přejděte na web [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) (VLSC) a přihlaste se.
-2. Na stránce Správce VLSC klikněte na **odběry** a pak na předplatná sady **Visual Studio**.
+#### <a name="how-to-detect-if-a-users-sign-in-address-has-a-upn-mismatch"></a>Jak zjistit, jestli má přihlašovací adresa uživatele neshodu hlavního názvu uživatele
 
-    > [!div class="mx-imgBorder"]
-    > ![Nabídka odběry](_img//vlsc/vlsc-subscriptions.png)
+Dokončete uživatele podle následujících kroků:
 
-3. Klikněte na **číslo smlouvy** přidružené k Visual Studio Subscription.
+1. Přihlaste se k https://my.visualstudio.com pomocí přihlašovací adresy uvedené v e-mailu s přiřazením předplatného.  
 
-    > [!div class="mx-imgBorder"]
-    > ![Vybrat smlouvu](_img/vlsc/vlsc-agreement.png)
+    > [!NOTE]
+    > Pokud nemají e-maily s přiřazením předplatného, můžete je znovu odeslat z portálu pro správu.  
 
-4. Klikněte na **přiřadit předplatné**.
-5. Vyberte požadovanou **úroveň**předplatného.
-6. Ověřte, že máte k dispozici odběry k přiřazení, a klikněte na tlačítko **Další**.
-7. Do pole e-mailová adresa zadejte podrobnosti předplatitele a adresu adresáře a klikněte na **Další**.
-8. Ověřte informace o odběrateli a klikněte na tlačítko **Dokončit**.
-9. Informujte předplatitele o zřízení jejich předplatného pomocí níže uvedené [šablony](#notifying-your-subscribers-with-directory-addresses).
+2. Klikněte na kartu **předplatná** .
+3. Ověřte, že se e-mailová adresa zobrazuje v pravém horním rohu, kde se zobrazí zpráva "jste přihlášení jako...". je stejná jako e-mailová adresa přihlášení v e-mailu přiřazení předplatného.  Pokud ne, nebudou mít přístup k výhodám jejich předplatného. 
 
-### <a name="updating-an-existing-subscriber"></a>Aktualizace existujícího předplatitele
-Chcete-li aktualizovat stávajícího předplatitele pomocí účet adresáře, postupujte prosím podle následujících pokynů.
+   > [!div class="mx-imgBorder"]
+   > Stránka předplatná ![](_img/aliasing/aliasing-subscriptions-page.png)
 
-1. Přejděte na web [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) (VLSC) a přihlaste se.
-2. Na stránkách správce VLSC klikněte na **odběry** a pak na předplatná sady **Visual Studio**.
-3. Klikněte na **číslo smlouvy** přidružené k Visual Studio Subscription.
-4. Klikněte na **šipku dolů** na panelu hledání.
-5. Vyhledejte předplatitele pomocí pole e-mailová adresa.
-6. V seznamu výsledků klikněte na **poslední jméno** předplatitele.
-7. Klikněte na **Upravit**.
-8. Změňte pole e-mailové adresy na požadovanou adresu adresáře a klikněte na **Uložit**.
-9. Informujte předplatitele o zřízení jejich předplatného pomocí e-mailové šablony.
+#### <a name="how-to-correct-the-upn-mismatch"></a>Oprava neshody hlavního názvu uživatele (UPN)
 
-### <a name="notifying-your-subscribers-with-directory-addresses"></a>Informování o předplatitelích s adresami adresáře
-Vzhledem k tomu, že uvítací E-mail nebude úspěšně dostupný vašemu předplatiteli, zkopírujte a vložte níže uvedenou zprávu do e-mailu a pošlete ji předplatiteli. Nahraďte% WORD% příslušnými informacemi pro každého předplatitele.
+1. Přístup k portálu pro správu sady Visual Studio na https://manage.visualstudio.com 
 
-```
------------ Copy Below (Ctrl+C) -----------
+2. Vyhledejte uživatele, který má neshodu hlavního názvu uživatele (UPN).  Funkce [Filter](search-license.md) může tuto funkci usnadnit, pokud máte spoustu předplatných. 
 
-Hello %SUBSCRIBER NAME%
+3. Změňte přihlašovací e-mailovou adresu na hlavní název uživatele (UPN).
 
-You have been assigned a Visual Studio subscription. Please visit https://my.visualstudio.com, and log in with your %DIRECTORY ADDRESS% address to activate and access your subscription.
+4. Uložit změny 
 
-If you’re having trouble, please contact the support team (https://visualstudio.microsoft.com/subscriptions/support/).
+5. Požádejte uživatele, aby si odhlásil portál odběratele a znovu se přihlásil pomocí hlavního názvu uživatele (UPN).   
 
-At the bottom of the page, select the following:
-   - Accounts, Subscriptions, and Billing Support
-   - From Issue, choose Subscription sign in support
-   - Choose the appropriate Country
-   - Select the desired Assisted Support option
+### <a name="personal-account-aliasing-issue"></a>Problém s aliasem osobního účtu
 
------------ End Copy -----------
-```
+Problémy s aliasy můžou mít dopad i na osobní účty. 
 
-## <a name="defining-a-work-or-school-account-as-a-personal-account"></a>Definování pracovního nebo školního účtu jako osobního účtu
-Pokud chcete přidat nového uživatele nebo aktualizovat e-mailovou adresu uživatele na portálu Volume Licensing Service Center (VLSC), postupujte podle pokynů popsaných v části [přiřazení předplatitelů k účtu adresáře](#assigning-subscribers-to-a-directory-account) .  V případech, kdy je e-mailová adresa rozpoznána v adresáři, bude uživatel muset projít procesem vytvoření nového účtu pro definování e-mailové adresy jako osobního účtu.  Pro krátkou dobu tým předplatných sady Visual Studio zabezpečuje výjimku ze zásad identity definovaných níže, ale poskytujeme možnostem, které jsou nezbytné k odebrání této zásady.
+#### <a name="how-to-detect-if-a-personal-account-has-an-aliasing-issue"></a>Jak zjistit, jestli má osobní účet problém s aliasem
 
-> [!WARNING]
-> Microsoft nedoporučuje kombinaci "pracovních nebo školních" identit s "osobními" identitami.  Tato akce způsobí, že organizace ztratí vlastnictví a kontrolu nad účtem a zaměstnanec může i nadále přistupovat k určitým produktům nebo službám, i když opustí společnost.  
+1. Přihlaste se https://my.visualstudio.com.
 
-### <a name="defining-an-email-address-as-a-personal-account"></a>Definování e-mailové adresy jako osobního účtu
-Po přiřazení předplatného k předplatiteli obdrží e-mail s žádostí, aby [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) mohli využít výhody jejich předplatného.  Při pokusu o přihlášení se Visual Studio Subscription přihlášení nezdaří s chybou informující o tom, že účet není známý.  Než se přihlásíte [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) k prostředí, požádejte předplatitele, aby postupoval podle těchto pokynů.  V případě potřeby můžete tuto [šablonu](#notifying-your-subscribers-using-personal-accounts) použít k informování předplatitele po přiřazení předplatného.
+2. Klikněte na kartu **předplatná** a ověřte adresu, ke které jste se přihlásili. 
 
-1. Přejděte na https://my.visualstudio.com a klikněte na **vytvořit novou účet Microsoft**.
+3. Pokud se e-mailová adresa, která se přihlásila, neshoduje s e-mailovou adresou použitou pro přístup na web, dojde ke konfliktu mezi vaším účtem a aliasem. 
 
-2. Vyplňte pole:
-   - Zadejte e-mailovou adresu, na kterou se v Someone@example.com boxu dostal uvítací e-mail.
-   - Vytvoření hesla
-   - Volba nastavení propagační akce
-   - Klikněte na **Další** .
+#### <a name="how-to-fix-a-personal-account-aliasing-issue"></a>Oprava potíží s aliasem osobního účtu
 
-3. Dokončete kroky ověření a klikněte na tlačítko **Další**.
+Platforma předplatných sady Visual Studio nastaví prioritu primárního aliasu pro zobrazení podrobností o předplatném.  Chcete-li tento problém vyřešit, je třeba vytvořit jiný alias e-mailu, který váš primární alias pro přihlášení. 
 
-4. Noví uživatelé možná budou muset dokončit profil sady Visual Studio.
+1. Přejít ke [správě způsobu přihlášení k Microsoftu](https://go.microsoft.com/fwlink/p/?linkid=842796)
+2. Pokud se zobrazí výzva, přihlaste se ke svému účet Microsoft. 
+3. V části Aliasy účtu vyberte **nastavit jako primární** vedle e-mailové adresy, která se používá k přiřazení předplatného. 
+4. V části Aliasy účtu vyberte nastavit jako primární vedle e-mailové adresy, která se používá k přiřazení předplatného. 
+5. Odhlaste se z portálu pro předplatitele sady Visual Studio (https://my.visualstudio.com) 
+6. Znovu přistoupit k portálu pomocí nového primárního aliasu. 
 
-5. Předplatné a výhody by teď mělo být viditelné.
+### <a name="ensure-a-successful-experience-for-your-users"></a>Zajištění úspěšného prostředí pro uživatele
 
-### <a name="notifying-your-subscribers-using-personal-accounts"></a>Informování o předplatitelích pomocí osobních účtů
-Ve scénáři uvedeném výše vám předplatitel obdrží "uvítací E-mail", ale kvůli aliasům by se mu nemohli přihlásit.  Následující text můžete použít k informování předplatitele výše uvedeného postupu a Doporučené možnosti podpory v případě potřeby.  Nahraďte% WORD% příslušnými informacemi pro každého předplatitele.
+Jako správce máte dvě možnosti, jak zajistit, aby vaši předplatitelé měli úspěšné přihlašování na https://my.visualstudio.com. 
 
-```
------------ Copy Below (Ctrl+C) -----------
+- První možnost (doporučeno) je využití účtu adresáře jako přihlašovací adresy v https://manage.visualstudio.com.
+- Druhá možnost, která je méně bezpečná, druhá možnost (méně bezpečná) znamená, že se předplatitelům umožní přihlásit pomocí jiné e-mailové adresy, než je jejich e-mailová adresa adresáře.
 
-Hello %SUBSCRIBER NAME%
+Obě možnosti se konfigurují na portálu pro správu, a to provedením následujících kroků:
 
-You have been assigned a Visual Studio subscription, and may have been directed to log into https://my.visualstudio.com based on your Welcome email.  While this is the correct website for consuming benefits, our organization requires you to take a few extra steps before you can access the site.  Please follow the below instructions to help you create a “Microsoft Account” that is tied to our corporate email address.  Once these steps are completed, you will use your email address to access the Subscription benefits.
-1. Visit https://my.visualstudio.com
+1. Přihlaste se https://manage.visualstudio.com 
 
-2. Click Create new Microsoft Account on the right hand side
+2. Pokud upravujete jednoho uživatele, vyberte tohoto uživatele v tabulce a klikněte pravým tlačítkem na Upravit. Otevře se panel, kde můžete upravit e-mailovou adresu přihlášení.  
 
-3. Complete the Form:
-   - Use your corporate email address in the someone@example.com box
-   - Enter a password
-   - Select your promotional preference
-   - Click Next
+3. V poli e-mailová adresa pro přihlášení proveďte potřebné aktualizace. 
 
-4. Complete the account validation steps
+4. Klikněte na Uložit a změny se projeví.  
+Pokud potřebujete provést tyto změny velkému počtu uživatelů, můžete využít funkci hromadného úprav. Další informace o tomto procesu najdete v části **Úprava více předplatitelů pomocí hromadného úprav** v článku [Edit Subscriptions]] (edit-License.MD).  
 
-5. If necessary, complete the Visual Studio profile
+## <a name="next-steps"></a>Další kroky
+Přečtěte si další informace o správě předplatných sady Visual Studio.
+- [Přiřazení jednotlivých předplatných](assign-license.md)
+- [Přiřazení více předplatných](assign-license-bulk.md)
+- [Úprava předplatných](edit-license.md)
+- [Odstranění předplatných](delete-license.md)
+- [Určení maximálního využití](maximum-usage.md)
 
-6. You should now see your benefits
-
-Note:  When visiting https://my.visualstudio.com in the future, you may be prompted to select which account you’d like to use (e.g. “Work or School Account” or “Personal Account”).  After following the steps above, you will need to leverage the “Personal Account” option.
-
-If you’re having trouble, please contact the support team (https://visualstudio.microsoft.com/subscriptions/support/).
-
-At the bottom of the page, select the following:
-   - Accounts, Subscriptions, and Billing Support
-   - From Issue, choose Subscription sign in support
-   - Choose the appropriate Country
-   - Select the desired Assisted Support option
-
------------ End Copy -----------
-```
+## <a name="see-also"></a>Viz také
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)

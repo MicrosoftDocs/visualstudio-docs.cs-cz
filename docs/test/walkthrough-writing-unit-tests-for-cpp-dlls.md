@@ -1,20 +1,20 @@
 ---
-title: 'Postupy: Zápis testů jednotek pro C++ knihovny DLL'
+title: 'Postupy: zápis testů jednotek pro C++ knihovny DLL'
 ms.date: 06/13/2019
 ms.topic: conceptual
-ms.author: mblome
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-author: mikeblome
-ms.openlocfilehash: 1e9e77cd3b6cd02810873127bf9173eac80d7e74
-ms.sourcegitcommit: 044bb54cb4552c8f4651feb11d62e52726117e75
+author: corob-msft
+ms.openlocfilehash: 752a2bb53e25954824a1400ee178cd0cbf4adcf2
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661897"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77275421"
 ---
-# <a name="how-to-write-unit-tests-for-c-dlls"></a>Postupy: Zápis testů jednotek pro C++ knihovny DLL
+# <a name="how-to-write-unit-tests-for-c-dlls"></a>Postupy: zápis testů jednotek pro C++ knihovny DLL
 
 Tento návod popisuje, jak vyvíjet nativní C++ knihovny DLL pomocí metodologie test-First. Základní postup je následující:
 
@@ -36,14 +36,14 @@ Tento návod popisuje, jak vyvíjet nativní C++ knihovny DLL pomocí metodologi
 
 ## <a name="create_test_project"></a>Vytvořit nativní projekt testu jednotek
 
-1. Na **souboru** nabídce zvolte **nový** > **projektu**.
+1. V nabídce **soubor** vyberte možnost **Nový** > **projekt**.
 
-     **Visual Studio 2017 a starší**: Rozbalte položku **instalované** > **šablony** > **vizuální C++** test.  > 
-     **Visual Studio 2019**: Nastavte **jazyk** na C++ a do vyhledávacího pole zadejte "test".
+     **Visual Studio 2017 a starší**: rozbalte položku **nainstalované** > **šablony** > **Visual C++**  > **test**.
+     **Visual Studio 2019**: nastavte **jazyk** na C++ a do vyhledávacího pole zadejte "test".
 
      Vyberte šablonu **projektu nativní testování částí** nebo libovolné nainstalované rozhraní, které dáváte přednost. Pokud zvolíte jinou šablonu, například Google Test nebo zvýšení. test, jsou základní principy stejné, i když se některé podrobnosti budou lišit.
 
-     V tomto návodu se projekt testu jmenuje `NativeRooterTest`.
+     V tomto návodu se projekt testů jmenuje `NativeRooterTest`.
 
 2. V novém projektu zkontrolujte **UnitTest1. cpp.**
 
@@ -51,11 +51,11 @@ Tento návod popisuje, jak vyvíjet nativní C++ knihovny DLL pomocí metodologi
 
      Všimněte si, že:
 
-    - Každý test se definuje pomocí `TEST_METHOD(YourTestName){...}`.
+    - Každý test je definován pomocí `TEST_METHOD(YourTestName){...}`.
 
          Není nutné zapsat signaturu konvenční funkce. Podpis je makro TEST_METHOD vytvořil. Makro generuje instance funkce vracející typ void. Zároveň vytvoří statickou funkci, která vrací informace o testovací metody. Tyto informace umožňují Průzkumníka testů se najít metodu.
 
-    - Testovací metody jsou seskupené do třídy pomocí `TEST_CLASS(YourClassName){...}`.
+    - Testovací metody jsou seskupeny do tříd pomocí `TEST_CLASS(YourClassName){...}`.
 
          Při spuštění testů, je vytvořena instance každé testovací třídy. Testovací metody jsou zavolány v nespecifikovaném pořadí. Můžete definovat speciální metody, které jsou vyvolány před a za každého modulu, třídy nebo metody.
 
@@ -70,7 +70,7 @@ Tento návod popisuje, jak vyvíjet nativní C++ knihovny DLL pomocí metodologi
         }
         ```
 
-         Všimněte si, že `Assert` třída poskytuje několik statických metod, které slouží k ověření výsledků v testovacích metod.
+         Všimněte si, že třída `Assert` poskytuje několik statických metod, které lze použít k ověření výsledků v testovacích metodách.
 
     2. V nabídce **test** vyberte možnost **Spustit** > **všechny testy**.
 
@@ -88,11 +88,11 @@ Tento návod popisuje, jak vyvíjet nativní C++ knihovny DLL pomocí metodologi
 
 Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Visual Studio 2019.
 
-1. Vytvoření C++ projektu pomocí **Průvodce desktopovou aplikací Windows**: Klikněte pravým tlačítkem myši na název řešení v **Průzkumník řešení** a vyberte možnost **Přidat** > **Nový projekt**. Nastavte **jazyk** na C++ a do vyhledávacího pole zadejte "Windows". V seznamu výsledků vyberte možnost **Průvodce desktopovou plochou systému Windows** .
+1. Vytvoření C++ projektu pomocí **Průvodce desktopovou aplikací Windows**: klikněte pravým tlačítkem myši na název řešení v **Průzkumník řešení** a vyberte **Přidat** > **Nový projekt**. Nastavte **jazyk** na C++ a do vyhledávacího pole zadejte "Windows". V seznamu výsledků vyberte možnost **Průvodce desktopovou plochou systému Windows** .
 
      V tomto návodu se projekt jmenuje `RootFinder`.
 
-2. Stiskněte **vytvořit**. V dalším dialogovém okně v části **Typ aplikace** vyberte **dynamická knihovna (DLL)** a také zaškrtněte políčko **exportovat symboly**.
+2. Stiskněte **Vytvořit**. V dalším dialogovém okně v části **Typ aplikace** vyberte **dynamická knihovna (DLL)** a také zaškrtněte políčko **exportovat symboly**.
 
      Možnost **exportovat symboly** generuje pohodlné makro, které lze použít k deklaraci exportovaných metod.
 
@@ -152,7 +152,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 
 1. Přidejte projekt knihovny DLL do odkazů projektu testovacího projektu:
 
-   1. Klikněte pravým tlačítkem na uzel projektu testu v **Průzkumníka řešení** a zvolte **přidat** > **odkaz**.
+   1. Klikněte pravým tlačítkem myši na uzel testovací projekt v **Průzkumník řešení** a vyberte možnost **Přidat** > **odkaz**.
 
    2. V dialogovém okně **Přidat odkaz** vyberte projekt knihovny DLL a zvolte možnost **Přidat**.
 
@@ -188,13 +188,13 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 
     Nový test se zobrazí v **Průzkumníku testů**.
 
-5. V **Průzkumník testů**, zvolte **spustit všechny**.
+5. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
 
     ![Test jednotek – &#45; základní test Průzkumníka testů byl úspěšný](../test/media/utecpp10.png)
 
    Máte nastavení testu a kódové projekty a ověřit, že je možné spustit testy, na kterých běží funkce v projektu kódu. Teď můžete začít psát skutečné testů a kódu.
 
-## <a name="iterate"></a> Využívejte iterativní posílit testy a daly se předat
+## <a name="iterate"></a>Iterativní rozšíření testů a jejich předání
 
 1. Přidáte nový test:
 
@@ -243,7 +243,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
     }
     ```
 
-4. Sestavte řešení a potom v **Průzkumník testů**, zvolte **spustit všechny**.
+4. Sestavte řešení a potom v **Průzkumníku testů**zvolte možnost **Spustit vše**.
 
      Oba testy jsou úspěšné.
 
@@ -252,7 +252,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
     > [!TIP]
     > Vývoj kódu tak, že přidáte testy jeden po druhém. Ujistěte se, že všechny testy jsou úspěšné po každé iteraci.
 
-## <a name="debug"></a> Ladit test chybou
+## <a name="debug"></a>Ladění neúspěšného testu
 
 1. Přidat další test:
 
@@ -291,7 +291,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 
 3. Otevřete (nebo dvakrát klikněte) na neúspěšný test.
 
-     Neplatnost kontrolního výrazu je zvýrazněn. Zpráva o selhání je viditelný v podokně podrobností **Průzkumník testů**.
+     Neplatnost kontrolního výrazu je zvýrazněn. Zpráva o selhání je zobrazena v podokně podrobností v **Průzkumníku testů**.
 
      ![NegativeRangeTests se nezdařilo](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
@@ -299,7 +299,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 
     1. Nastavte zarážku na začátku funkce SquareRoot.
 
-    2. V místní nabídce neúspěšných testů, zvolte **ladit vybrané testy**.
+    2. V místní nabídce neúspěšného testu vyberte možnost **ladit vybrané testy**.
 
          Při spuštění se zastaví na zarážce, krokovat kód.
 
@@ -326,7 +326,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Pokud jednotlivé testy neobsahují žádné závislosti, které brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů ![pomocí&#95;malého&#45;](../test/media/ute_parallelicon-small.png) přepínacího tlačítka ustit parallelicon na panelu nástrojů. To může výrazně snížit čas potřebný ke spuštění všech testů.
+> Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní spuštění testu pomocí&#95;tlačítka&#45;![ustit parallelicon Small](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může výrazně snížit čas potřebný ke spuštění všech testů.
 
 ::: moniker-end
 
@@ -337,7 +337,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 
 ::: moniker-end
 
-## <a name="refactor"></a> Refaktorujte kód beze změn testů
+## <a name="refactor"></a>Refaktoring kódu bez změny testů
 
 1. Zjednodušení centrálního výpočtu ve funkci SquareRoot:
 
@@ -356,7 +356,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
     >
     > Zachovat refaktorování odděleně od jiných změn.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - **Oddělení.** Většina knihoven DLL je závislá na jiných subsystémech, jako jsou databáze a jiné knihovny DLL. Tyto ostatní komponenty jsou často vyvíjeny paralelně. Aby bylo možné provádět testování jednotek i v případě, že ostatní komponenty ještě nejsou k dispozici, je nutné nahradit ho přípravou nebo
 
@@ -366,10 +366,10 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 
    Můžete také pověřit minimální úroveň pokrytí kódu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přidat testy částí do stávajících C++ aplikací](../test/how-to-use-microsoft-test-framework-for-cpp.md)
 - [Používání atributu Microsoft.VisualStudio.TestTools.CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md)
 - [Ladění nativního kódu](../debugger/debugging-native-code.md)
-- [Návod: Vytvoření a použití dynamické knihovny DLL (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)
+- [Návod: vytvoření a použití dynamické knihovny DLL (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)
 - [Import a export](/cpp/build/importing-and-exporting)

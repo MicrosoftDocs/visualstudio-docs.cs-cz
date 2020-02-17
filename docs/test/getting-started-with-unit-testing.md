@@ -1,6 +1,6 @@
 ---
 title: Začínáme s testováním částí
-ms.date: 04/01/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit test plans
@@ -9,34 +9,35 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72ab0a6664740f2d772d79f9c77fddfbc12fb82f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7ffbc5c6730fb4ca4d2f39732ad2a595de15bbf2
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596473"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77279328"
 ---
 # <a name="get-started-with-unit-testing"></a>Začínáme s testováním částí
 
 Pomocí sady Visual Studio definujte a spusťte testy jednotek, abyste zachovali stav kódu, zajistili pokrytí kódu a vyhledali chyby a chyby před vašimi zákazníky. Pravidelně spouštějte testy jednotek, abyste se ujistili, že váš kód funguje správně.
 
-## <a name="create-unit-tests"></a>Create unit tests
-(Vytvořit testy jednotek)
+## <a name="create-unit-tests"></a>Vytvořit testy jednotek
 
 Tato část popisuje na vysoké úrovni, jak vytvořit projekt testování částí.
 
 1. Otevřete projekt, který chcete testovat v aplikaci Visual Studio.
 
-   Pro účely demonstrace ukázkového testu jednotek Tento článek testuje jednoduchý projekt "Hello World". Vzorový kód pro takový projekt je následující:
+   Pro účely demonstrace ukázkového testu jednotek Tento článek testuje jednoduchý projekt "Hello World" s názvem **HelloWorldCore**. Vzorový kód pro takový projekt je následující:
 
    ```csharp
-   public class Program
-   {
-       public static void Main()
-       {
-           Console.WriteLine("Hello World!");
-       }
-   }
+   namespace HelloWorldCore
+
+      public class Program
+      {
+         public static void Main()
+         {
+            Console.WriteLine("Hello World!");
+         }
+      }
    ```
 
 1. V **Průzkumník řešení**vyberte uzel řešení. Pak na horním panelu nabídek vyberte **soubor** > **Přidat** > **Nový projekt**.
@@ -71,14 +72,48 @@ Tato část popisuje na vysoké úrovni, jak vytvořit projekt testování čás
 
 1. Přidejte kód do metody testování částí.
 
-   ![Přidání kódu k metodě testování částí v aplikaci Visual Studio](media/vs-2019/unit-test-method.png)
+   Například pro projekt testování MSTest nebo NUnit můžete použít následující kód.
+
+   ```csharp
+   using Microsoft.VisualStudio.TestTools.UnitTesting;
+   using System.IO;
+   using System;
+
+   namespace HelloWorldTests
+   {
+      [TestClass]
+      public class UnitTest1
+      {
+         private const string Expected = "Hello World!";
+         [TestMethod]
+         public void TestMethod1()
+         {
+            using (var sw = new StringWriter())
+            {
+               Console.SetOut(sw);
+               HelloWorldCore.Program.Main();
+
+               var result = sw.ToString().Trim();
+               Assert.AreEqual(Expected, result);
+            }
+         }
+      }
+   }
+   ```
 
 > [!TIP]
 > Podrobnější návod k vytváření testů jednotek najdete v tématu [Vytvoření a spuštění testů jednotek pro spravovaný kód](walkthrough-creating-and-running-unit-tests-for-managed-code.md).
 
-## <a name="run-unit-tests"></a>Spuštění testů jednotek
+## <a name="run-unit-tests"></a>Spouštění testů jednotek
 
-1. Otevřete [Průzkumník testů](../test/run-unit-tests-with-test-explorer.md) výběrem možnosti **test** > **Windows** > **Průzkumník testů** v horním řádku nabídek.
+1. Otevřete [Průzkumník testů](../test/run-unit-tests-with-test-explorer.md).
+
+   ::: moniker range=">=vs-2019"
+   Chcete-li otevřít Průzkumníka testů, vyberte v horním řádku nabídky možnost **test** > **Průzkumník testů** .
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   Chcete-li otevřít Průzkumníka testů, vyberte v horním řádku nabídky možnost **test** > **Windows** > **Test Explorer** .
+   ::: moniker-end
 
 1. Spusťte testy jednotek kliknutím na **Spustit vše**.
 
@@ -175,9 +210,9 @@ Postup vytvoření jednotkových testů, které používají [nunit](https://nun
 
 6. Spusťte test z **Průzkumníka testů** nebo kliknutím pravým tlačítkem na testovací kód a výběrem možnosti **Spustit testy**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-* [Návod: Vytvoření a spuštění testů jednotek pro spravovaný kód](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+* [Návod: vytvoření a spuštění testů jednotek pro spravovaný kód](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
 * [Vytvoření příkazu pro testování částí](create-unit-tests-menu.md)
 * [Generování testů pomocí IntelliTest](generate-unit-tests-for-your-code-with-intellitest.md)
 * [Spuštění testů pomocí Průzkumníka testů](run-unit-tests-with-test-explorer.md)

@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild (C++), FXC task
 - FXC task (MSBuild (C++))
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 ms.workload:
 - multiple
-ms.openlocfilehash: 766a3dc35d72e21fc0aca9436ebff25dc3193a2e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 67958a1a1ebb2ff382d0896e2fbaec6105c0c785
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747328"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77279294"
 ---
 # <a name="fxc-task"></a>FXC – úloha
 
@@ -53,12 +53,12 @@ Následující tabulka popisuje parametry úlohy **fxc** .
 |**SetRootSignature**|Volitelný **řetězcový** parametr.<br/><br/>Připojte kořenový podpis k bytovému kódu shaderu. K dispozici pro shader model 5,0 a vyšší.<br/><br/>Použijte `/setrootsignature`.|
 |**ShaderModel**|Volitelný **řetězcový** parametr.<br/><br/>Určuje model shaderu. Některé typy shaderů lze použít pouze s nejnovějšími modely shaderů.<br/><br/>Použijte `/T [type]_[model]`.|
 |**ShaderType**|Volitelný **řetězcový** parametr.<br/><br/>Určuje typ shaderu.<br/><br/>Použijte `/T [type]_[model]`.<br/><br/>**Efekt**použijte `fx`.<br/>**Vrchol**použijte `vs`.<br/>**Pixel**, použijte `ps`.<br/>**Geometrie**, použijte `gs`.<br/>**Trup**použijte `hs`.<br/>**Doména**, použijte `ds`.<br/>**COMPUTE**, použijte `cs`.<br/>**Knihovny**, použijte `lib`.<br/>**RootSignature**, vygenerujte objekt kořenového podpisu.|
-|**Zdrojová**|Povinný parametr **ITaskItem**|
+|**Zdroj**|Povinný parametr **ITaskItem**|
 |**SuppressStartupBanner**|Volitelný parametr **bool** .<br/><br/>Potlačí zobrazení úvodního nápisu a informační zprávy.<br/><br/>Použijte `/nologo`.|
 |**TrackerLogDirectory**|Volitelný **řetězcový** parametr.|
 |**TreatWarningAsError**|Volitelný parametr **bool** .<br/><br/>Zpracovává všechna upozornění kompilátoru jako chyby.<br/><br/>Pro nový projekt může být nejvhodnější použít `/WX` ve všech kompilacích; řešení všech upozornění zajistí nejmenší možné nedostatky v obtížném hledání kódu.|
 |**VariableName**|Volitelný **řetězcový** parametr.<br/><br/>Určuje název proměnné v hlavičkovém souboru.<br/><br/>Použijte `/Vn [name]`.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

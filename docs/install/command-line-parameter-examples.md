@@ -12,24 +12,24 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 095fbcf35337ff2a619b6f3dcc6d5c28773ae975
-ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
+ms.openlocfilehash: 8fc43cef8526b2ca79bb0b88a1d56ef4f4a2a65a
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76542643"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77275264"
 ---
 # <a name="command-line-parameter-examples-for-visual-studio-installation"></a>Příklady parametrů příkazového řádku pro instalaci sady Visual Studio
 
-Pro ilustraci jak [použít parametry příkazového řádku instalace sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md), tady je několik příkladů, které můžete přizpůsobit tak, aby odpovídala vašim potřebám.
+Pro ilustraci, jak [použít parametry příkazového řádku k instalaci sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md), je zde několik příkladů, které můžete přizpůsobit, aby odpovídaly vašim potřebám.
 
-V obou příkladech `vs_enterprise.exe`, `vs_professional.exe` a `vs_community.exe` představují příslušné verzi zaváděcí nástroj Visual Studio, což je soubor malé (přibližně 1 MB), který zahájí proces stahování. Pokud používáte jinou verzi, nahraďte název odpovídající zaváděcího nástroje.
+V každém příkladu `vs_enterprise.exe`, `vs_professional.exe` a `vs_community.exe` představuje příslušnou edici zaváděcího nástroje sady Visual Studio, což je malý (přibližně 1 MB) soubor, který iniciuje proces stahování. Pokud používáte jinou verzi, nahraďte název odpovídající zaváděcího nástroje.
 
 > [!NOTE]
 > Všechny příkazy vyžadovat zvýšení oprávnění pro správu a řízení uživatelských účtů, výzva se zobrazí, pokud proces není spuštěn řádku se zvýšenými oprávněními.
 >
 > [!NOTE]
-> Můžete použít `^` znak na konci příkazového řádku ke zřetězení více řádků do jediného příkazu. Alternativně můžete umístit společně na jediném řádku tyto řádky. V prostředí PowerShell, je ekvivalentní prvními (`` ` ``) znaků.
+> Můžete použít `^` znak na konci příkazového řádku, chcete-li zřetězit více řádků do jediného příkazu. Alternativně můžete umístit společně na jediném řádku tyto řádky. V PowerShellu je ekvivalentní znak pro`` ` ``(. zaškrtnutí).
 
 Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového řádku, najdete na stránce s [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md) .
 
@@ -51,7 +51,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
    ```
 
   > [!NOTE]
-  > Oba příkazy jsou povinné. První příkaz aktualizuje instalační program sady Visual Studio. Druhý příkaz aktualizuje instanci sady Visual Studio. Aby se zabránilo dialogové okno Řízení uživatelských účtů, spusťte příkazový řádek jako správce.
+  > Oba příkazy jsou doporučené. První příkaz aktualizuje instalační program sady Visual Studio. Druhý příkaz aktualizuje instanci sady Visual Studio. Aby se zabránilo dialogové okno Řízení uživatelských účtů, spusťte příkazový řádek jako správce.
 
 * Klasické pracovní plochy instanci sady Visual Studio tichou instalaci, Francouzská jazyková sada, vrací pouze v případě, že je nainstalován produkt.
 
@@ -159,7 +159,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
 
 ::: moniker range="vs-2017"
 
-Tyto parametry příkazového řádku jsou **nové ve verzi 15.7**. Další informace o nich najdete v tématu [použít parametry příkazového řádku instalace sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md) stránky.
+Tyto parametry příkazového řádku jsou **v 15,7 nové**. Další informace o těchto možnostech naleznete na stránce [použití parametrů příkazového řádku pro instalaci sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md) .
 
 ::: moniker-end
 
@@ -183,7 +183,7 @@ Tyto parametry příkazového řádku jsou **nové ve verzi 15.7**. Další info
 
 ::: moniker range="vs-2017"
 
-Tento příkaz příkazového řádku je **novinkou 15.9**. Další informace o tom, najdete v článku [použít parametry příkazového řádku instalace sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md) stránky.
+Tento příkaz příkazového řádku je **v 15,9 nový**. Další informace o tom, jak nainstalovat stránku sady Visual Studio, najdete v tématu [použití parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md) .
 
 ::: moniker-end
 
@@ -203,7 +203,7 @@ Tento příkaz příkazového řádku je **novinkou 15.9**. Další informace o 
 
 ::: moniker range="vs-2017"
 
-Tento parametr příkazového řádku **novinkou 15.9**. Další informace o tom, najdete v článku [použít parametry příkazového řádku instalace sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md) stránky.
+Tento parametr příkazového řádku je **v 15,9 nový**. Další informace o tom, jak nainstalovat stránku sady Visual Studio, najdete v tématu [použití parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md) .
 
 ::: moniker-end
 
@@ -221,7 +221,7 @@ Tento parametr příkazového řádku **novinkou 15.9**. Další informace o tom
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)
 * [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)

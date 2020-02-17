@@ -6,17 +6,17 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C/C++.Experimental
 - VS.ToolsOptionsPages.Text_Editor.C%2FC%2B%2B.Experimental
 - VS.ToolsOptionsPages.Text_Editor.C\C++.Experimental
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75f36d66ea46e7a0474c3b76ae000f745337fc45
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 7e239ad3d2091f334f18ec00a367fc47d5c21db3
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461373"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278697"
 ---
 # <a name="options-text-editor-cc-experimental"></a>Možnosti, textový editor, C/C++, experimentální
 
@@ -28,7 +28,7 @@ Tento článek popisuje možnosti sady Visual Studio 2017. V případě sady Vis
 
 ::: moniker-end
 
-Chcete-li získat přístup k této stránce vlastností, stiskněte klávesu **CTRL**+**Q** pro aktivaci vyhledávacího pole a pak zadejte **experimentální**. Hledání najde stránku za několika prvních písmeny. K tomu se můžete dostat taky tak, že vyberete**Možnosti** **nástrojů** > a rozbalíte **textový editor**, pak **C/C++** a pak zvolíte **experimentální**.
+Chcete-li získat přístup k této stránce vlastností, stiskněte klávesu **Ctrl**+**Q** pro aktivaci vyhledávacího pole a pak zadejte **experimentální**. Hledání najde stránku za několika prvních písmeny. K tomu se můžete dostat taky tak, že vyberete **nástroje** > **Možnosti** a rozbalíte **textový editor**, pak **C/C++** a pak zvolíte **experimentální**.
 
 Tyto funkce jsou k dispozici v instalaci sady Visual Studio.
 
@@ -63,7 +63,7 @@ V [Visual Studio Marketplace](https://marketplace.visualstudio.com/search?target
 
 - a další...
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nastavení možností editoru pro konkrétní jazyk](../../ide/reference/setting-language-specific-editor-options.md)
 - [Refaktoring v C++ (blog VC)](https://devblogs.microsoft.com/cppblog/all-about-c-refactoring-in-visual-studio-2015-preview/

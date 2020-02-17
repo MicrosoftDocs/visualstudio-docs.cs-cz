@@ -9,18 +9,18 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: b948aa83d5055fdf3d628a84002881eba9c91ac2
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: c3f5fe55a4e1afb1a9551d43d0d61ae9f76b81e4
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76112525"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77275438"
 ---
 # <a name="warnings-and-errors"></a>Upozornění a chyby
 
 ## <a name="warnings-and-errors-by-category"></a>Upozornění a chyby podle kategorie
 
-* **Hranice**
+* **Mimo**
   * [MaxBranches – překročeno](#maxbranches-exceeded)
   * [MaxConstraintSolverTime exceeded – překročeno](#maxconstraintsolvertime-exceeded)
   * [MaxConditions – překročeno](#maxconditions-exceeded)
@@ -32,7 +32,7 @@ ms.locfileid: "76112525"
 * **Řešení omezení**
   * [Nejde Konkretizovatovat řešení](#cannot-concretize-solution)
 
-* **Domény**
+* **Domény nebo modul runtime**
   * [Potřebujete pomáhat s konstrukcí objektu.](#help-construct)
   * [Potřebujete pomáhat najít typy](#help-types)
   * [Byl vyodhadnut použitelný typ](#usable-type-guessed)
@@ -114,7 +114,7 @@ void ParameterizedTest(int n) {
 }
 ```
 
-Můžete upravit možnost **MaxConditions** atributu odvozeného z **PexSettingsAttributeBase**, jako je například [PexClass](attribute-glossary.md#pexclass) nebo [PexMethod](attribute-glossary.md#pexmethod). Příklad:
+Můžete upravit možnost **MaxConditions** atributu odvozeného z **PexSettingsAttributeBase**, jako je například [PexClass](attribute-glossary.md#pexclass) nebo [PexMethod](attribute-glossary.md#pexmethod). Například:
 
 ```csharp
 [PexMethod(MaxConditions=10000)]
@@ -254,7 +254,7 @@ IntelliTest můžete přispět tak, že odkazujete na jeden nebo více typů, kt
 
 IntelliTest [vygeneruje testovací vstupy](input-generation.md) pro všechny typy rozhraní .NET. Pokud je typ abstraktní nebo rozhraní, musí IntelliTest zvolit konkrétní implementaci tohoto typu. Chcete-li provést tuto volbu, je nutné zjistit, které typy existují.
 
-Pokud se zobrazí toto upozornění, indiicates, že IntelliTest prohlédlo na některých odkazovaných sestaveních a nalezla typ implementace, ale není vhodné, pokud by měl používat daný typ nebo pokud jsou k dispozici vhodnější typy jinde. IntelliTest jednoduše zvolí typ, který prohlédlo jako slíbených.
+Pokud se zobrazí toto upozornění, znamená to, že IntelliTest prohlédlo na některých odkazovaných sestaveních a našel typ implementace, ale není vhodné, pokud by měl používat daný typ, nebo pokud jsou k dispozici vhodnější typy jinde. IntelliTest jednoduše zvolí typ, který prohlédlo jako slíbených.
 
 Aby se zabránilo tomuto upozornění, můžete buď přijmout volbu typu IntelliTest, nebo pomáhat IntelliTest v používání jiných typů přidáním odpovídajícího [PexUseType](attribute-glossary.md#pexusetype).
 

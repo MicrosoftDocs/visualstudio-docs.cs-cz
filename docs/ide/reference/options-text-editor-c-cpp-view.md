@@ -6,17 +6,17 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C/C++.View
 - VS.ToolsOptionsPages.Text_Editor.C%2FC%2B%2B.View
 - VS.ToolsOptionsPages.Text_Editor.C\C++.View
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b867d81e4f0719ebf239bc89a6200fe833bc27b1
-ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
+ms.openlocfilehash: 95963245b15828f374e9812a9bb09d015b21a94b
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919032"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278691"
 ---
 # <a name="options-text-editor-cc-view"></a>Možnosti, textový editor, C/C++, zobrazení
 
@@ -54,7 +54,7 @@ Můžete povolit nebo zakázat následující nastavení pro správu způsobu, j
 
 - **Bloky příkazů osnovy** – automatické bloky příkazů osnovy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nastavení možností editoru pro konkrétní jazyk](../../ide/reference/setting-language-specific-editor-options.md)
 - [Refaktoring v C++ (blog VC)](https://devblogs.microsoft.com/cppblog/all-about-c-refactoring-in-visual-studio-2015-preview/)

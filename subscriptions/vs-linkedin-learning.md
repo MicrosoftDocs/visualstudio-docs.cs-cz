@@ -3,15 +3,15 @@ title: Zvýhodnění učení LinkedInu v předplatných sady Visual Studio | Mic
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 08/02/2019
+ms.date: 02/12/2020
 ms.topic: conceptual
 description: Seznamte se s výhodou LinkedIn Learning zahrnutou jako součást předplatného LinkedIn Premium, které jsou součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: b91db8c5b8ec27e947e2c73ac59ab3b07502f9d2
-ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
+ms.openlocfilehash: f6c5206055835605ae529f1f07159611bcd6bf7d
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74099646"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278845"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Zvýhodnění učení LinkedInu v předplatných sady Visual Studio
 
@@ -22,7 +22,7 @@ Budete potřebovat účet LinkedIn, abyste mohli využít výhod učení LinkedI
 
 ## <a name="activation-steps"></a>Kroky aktivace
 Jak aktivovat předplatné LinkedIn Premium a zvýhodněné učení LinkedInu:
-1. Přihlaste se k [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
+1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 
 2. V kategorii vzdělávání Najděte dlaždici LinkedIn Learning a klikněte na odkaz **získat kód** .
    > [!div class="mx-imgBorder"]
@@ -68,15 +68,15 @@ Jak aktivovat předplatné LinkedIn Premium a zvýhodněné učení LinkedInu:
 
 ## <a name="eligibility"></a>Vznik
 
-| Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
+| Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Ne.  Dostupné jenom pro nové předplatitele          |
 | Visual Studio Enterprise s GitHubem Enterprise   | VL | 6 měsíců       |  Ne.  Dostupné jenom pro nové předplatitele          |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | 3 měsíce                                                            |Ne.  Dostupné jenom pro nové předplatitele         |
 | Visual Studio Professional s GitHubem Enterprise | VL | 3 měsíce      | Ne.  Dostupné jenom pro nové předplatitele         |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | 3 měsíce                                             |  Ne.  Dostupné jenom pro nové předplatitele         |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | 3 měsíce                                              | Ne.  Dostupné jenom pro nové předplatitele         |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |NÁ|
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici.                                            |  Není k dispozici         |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici.                                              | Není k dispozici         |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici.                                                           |Není k dispozici|
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP).  Vyloučení: Microsoft Partner Network (MPN), FTE, MCT software & Services Developer, BizSpark, představte, Nejlepší profesionální specialista (MVP), regionální ředitel (RD).  MCT software & služby.*
 

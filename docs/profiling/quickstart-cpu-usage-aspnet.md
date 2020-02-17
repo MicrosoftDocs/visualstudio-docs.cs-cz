@@ -1,8 +1,8 @@
 ---
-title: Analýza dat využití procesoru (ASP.NET)
-description: Měření výkonu aplikací v aplikacích ASP.NET pomocí nástroje Diagnostika využití CPU
+title: Analýza dat využití procesoru (ASP.NET Core)
+description: Měření výkonu aplikací v aplikacích ASP.NET Core pomocí nástroje Diagnostika využití CPU
 ms.custom: mvc
-ms.date: 08/06/2018
+ms.date: 02/14/2020
 ms.topic: quickstart
 helpviewer_keywords:
 - Profiling Tools, quick start
@@ -12,40 +12,60 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: cbaaa53fe737761fdd938b7861c371e8e5619acc
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: 367d789513e8ac220566cb4e451bcea015ec5a2a
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128165"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77275079"
 ---
-# <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet"></a>Rychlý start: Analýza dat využití procesoru v aplikaci Visual Studio (ASP.NET)
+# <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet-core"></a>Rychlý Start: Analýza dat využití procesoru v aplikaci Visual Studio (ASP.NET Core)
 
 Visual Studio poskytuje mnoho výkonných funkcí, které vám pomůžou analyzovat problémy s výkonem ve vaší aplikaci. Toto téma nabízí rychlý způsob, jak se naučit některé základní funkce. Tady se podíváme na nástroj, který identifikuje problémová místa výkonu kvůli vysokému využití procesoru. Diagnostické nástroje jsou podporované pro vývoj rozhraní .NET v sadě Visual Studio, včetně ASP.NET, nativního vývoje a vývoje v jazyce C++.
 
 Diagnostické centrum nabízí řadu dalších možností, jak spustit a spravovat diagnostické relace. Pokud nástroj **využití procesoru** , který je zde popsaný, neposkytuje potřebná data, [ostatní nástroje pro profilaci](../profiling/profiling-feature-tour.md) poskytují různé druhy informací, které vám mohou být užitečné. V řadě případů může být kritickým bodem aplikace něco jiného než procesor, třeba paměť, vykreslování uživatelského rozhraní nebo dlouhá odezva síťového požadavku.
 
-Windows 8 a novější se vyžaduje pro spuštění nástrojů pro profilaci s ladicím programem (**diagnostické nástroje** okno). Ve Windows 7 a novějších verzích můžete použít nástroj pro následné povýšení, [Profiler výkonu](../profiling/profiling-feature-tour.md).
+Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější. Ve Windows 7 a novějších verzích můžete použít nástroj pro následné povýšení, [Profiler výkonu](../profiling/profiling-feature-tour.md).
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-1. V aplikaci Visual Studio vyberte **soubor** > **Nový projekt**.
+1. Otevřete Visual Studio a vytvořte projekt.
 
-1. V **části C#vizuál** zvolte **Web**a potom v prostředním podokně zvolte **ASP.NET webová aplikace (.NET Framework)** .
+   ::: moniker range="vs-2017"
+   V horním řádku nabídek vyberte **soubor** > **Nový** > **projekt**.
 
-    Pokud nevidíte šablonu projektu **webové aplikace ASP.NET** , klikněte na odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** . Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje ASP.NET a webu a** pak zvolte **Upravit**.
+   V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **vizuál C#** a pak zvolte možnost **Web**. V prostředním podokně vyberte **ASP.NET webová aplikace (.NET Core)** . Pak zadejte název projektu *MyProfilingApp_MVC*.
 
-1. Zadejte název jako **MyProfilingApp_MVC** a klikněte na **OK**.
+   > [!NOTE]
+   > Pokud nevidíte šablonu projektu **Webová aplikace ASP.NET (.NET Core)** , vyberte odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** . Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje ASP.NET a webu** a pak zvolte možnost **Upravit**.
 
-1. V dialogovém okně, které se zobrazí, zvolte **MVC** v prostředním podokně a pak klikněte na **OK**.
+   V dialogovém okně, které se zobrazí, zvolte **MVC** v prostředním podokně a pak klikněte na **OK**.
+   ::: moniker-end
+   ::: moniker range="vs-2019"
+   Pokud okno Start není otevřeno, vyberte **soubor** > **Spustit okno**.
 
-    Visual Studio vytvoří projekt. Průzkumník řešení (pravé podokno) zobrazí soubory projektu.
+   V okně Start vyberte možnost **vytvořit nový projekt**.
 
-1. V Průzkumník řešení klikněte pravým tlačítkem na složku modely a vyberte **Přidat** > **třídu**.
+   V okně **vytvořit nový projekt** zadejte nebo do vyhledávacího pole zadejte *ASP.NET* . Dále zvolte **C#** ze seznamu jazyk a v seznamu platforma zvolte možnost **Windows** .
 
-1. Pojmenujte novou `Data.cs` třídu a klikněte na **Přidat**.
+   Po použití filtrů jazyků a platforem zvolte šablonu **Webová aplikace ASP.NET (.NET Core)** a pak zvolte možnost **Další**.
 
-1. V Průzkumník řešení otevřete `Models/Data.cs` a přidejte na začátek souboru `using` následující příkaz:
+   > [!NOTE]
+   > Pokud nevidíte šablonu **webové aplikace ASP.NET (.NET Core)** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** . Pak v Instalační program pro Visual Studio zvolte úlohu **vývoje ASP.NET a web** .
+
+   V okně **Konfigurovat nový projekt** zadejte nebo zadejte *MyProfilingApp_MVC* do pole **název projektu** . Pak zvolte **vytvořit**.
+
+   V okně, které se zobrazí, zvolte možnost **Webová aplikace (model-zobrazení-kontroler)** a pak zvolte možnost **vytvořit**.
+
+   ::: moniker-end
+
+   Visual Studio otevře nový projekt.
+
+1. V Průzkumník řešení klikněte pravým tlačítkem na složku modely a vyberte **přidat** > **třídu**.
+
+1. Pojmenujte novou třídu `Data.cs` a klikněte na tlačítko **Přidat**.
+
+1. V Průzkumník řešení otevřete `Models/Data.cs` a do horní části souboru přidejte následující příkaz `using`:
 
     ```csharp
     using System.Threading;
@@ -131,6 +151,8 @@ Windows 8 a novější se vyžaduje pro spuštění nástrojů pro profilaci s l
 
 1. V Průzkumník řešení otevřete *Controller/HomeControllers. cs*a nahraďte následující kód:
 
+   ::: moniker range="vs-2017"
+
     ```csharp
     public ActionResult About()
     {
@@ -153,26 +175,57 @@ Windows 8 a novější se vyžaduje pro spuštění nástrojů pro profilaci s l
     }
     ```
 
-## <a name="step-1-collect-profiling-data"></a>Krok 1: Shromažďování dat profilace
+    ::: moniker-end
+    ::: moniker range="vs-2019"
 
-1. Nejdřív v aplikaci nastavte zarážku na tomto řádku kódu v `Simple` konstruktoru:
+    ```csharp
+    public IActionResult Privacy()
+    {
+        return View();
+    }
+    ```
+
+    s tímto kódem:
+
+    ```csharp
+    public IActionResult Privacy()
+    {
+        Models.Simple s = new Models.Simple();
+
+        return View(s.GetData());
+    }
+    ```
+
+    ::: moniker-end
+
+
+## <a name="step-1-collect-profiling-data"></a>Krok 1: Shromáždění profilačních dat
+
+1. Nejdřív v aplikaci nastavte zarážku na tomto řádku kódu v konstruktoru `Simple`:
 
     `for (int i = 0; i < 200; i++)`
 
     Nastavte zarážku kliknutím na hřbet nalevo od řádku kódu.
 
-1. Dále nastavte druhou zarážku na pravou složenou závorku na konci `Simple` konstruktoru:
+1. Dále nastavte druhou zarážku na pravou složenou závorku na konci konstruktoru `Simple`:
 
      ![Nastavení zarážek pro profilaci](../profiling/media/quickstart-cpu-usage-breakpoints-aspnet.png)
 
     > [!TIP]
     > Nastavením dvou zarážek omezíte shromažďování dat jenom na analyzovanou část kódu.
 
-1. **Diagnostické nástroje** okno je již viditelné, pokud jste ho neaktivovali. Otevřete okno znovu, klikněte na tlačítko **ladění** > **Windows** > **zobrazit diagnostické nástroje**.
+1. **Diagnostické nástroje** okno je již viditelné, pokud jste ho neaktivovali. Chcete-li okno znovu zobrazit, klikněte na tlačítko **ladění** > **Windows** > **Zobrazit diagnostické nástroje**.
 
-1. Klikněte na tlačítko **ladění** > **spustit ladění** (nebo **Start** na panelu nástrojů nebo **F5**).
+1. Klikněte na **ladění** > **Spustit ladění** (nebo **Spustit** na panelu nástrojů nebo **F5**).
 
-1. Po dokončení načítání aplikace klikněte na odkaz **o informace** v horní části webové stránky a začněte používat nový kód.
+1. Po dokončení načítání aplikace klikněte na příslušný odkaz v horní části webové stránky a spusťte nový kód.
+
+   ::: moniker range="vs-2017"
+   V aplikaci Visual Studio 2017 klikněte na odkaz **informace** a spusťte kód.
+   ::: moniker-end
+   ::: moniker range="vs-2019"
+   V aplikaci Visual Studio 2019 klikněte na odkaz **Ochrana osobních údajů** a spusťte kód.
+   ::: moniker-end
 
 1. Podívejte se na **souhrnné** zobrazení diagnostických nástrojů.
 
@@ -194,7 +247,7 @@ Windows 8 a novější se vyžaduje pro spuštění nástrojů pro profilaci s l
 
      Teď můžete začít analyzovat data.
 
-## <a name="step-2-analyze-cpu-usage-data"></a>Krok 2: Analyzovat data o využití procesoru
+## <a name="step-2-analyze-cpu-usage-data"></a>Krok 2: Analýza dat o využití procesoru
 
 Analýzu dat doporučujeme začít tím, že zkontrolujete seznam funkcí na kartě Využití procesoru. Zjistěte nejaktivnější funkce a pak se na každou z nich podívejte podrobněji.
 
@@ -205,13 +258,13 @@ Analýzu dat doporučujeme začít tím, že zkontrolujete seznam funkcí na kar
     > [!TIP]
     > Funkce jsou seřazené od nejvíce pracujících po nejméně pracující (nejsou seřazené podle pořadí, v jakém byly volány). Pomůže vám to rychle identifikovat funkce, které běží nejdéle.
 
-2. V seznamu funkcí dvakrát klikněte `MyProfilingApp_MVC.Models.ServerClass::GetNumber` na funkci.
+2. V seznamu funkce poklikejte na funkci `MyProfilingApp_MVC.Models.ServerClass::GetNumber`.
 
     Když dvakrát kliknete na funkci, otevře se zobrazení **volající/volaný** v levém podokně.
 
     ![Zobrazení volající/volaný diagnostické nástroje](../profiling/media/quickstart-cpu-usage-caller-callee-aspnet.png)
 
-    V tomto zobrazení se vybraná funkce zobrazí v záhlaví a v poli **aktuální funkce** (`ServerClass::GetNumber`v tomto příkladu). Funkce, která volala aktuální funkci, se zobrazí vlevo v části **Volající funkce** a všechny funkce volané aktuální funkcí se zobrazí vpravo v poli **Volané funkce**. (Pokud chcete aktuální funkci změnit, vyberte libovolné pole.)
+    V tomto zobrazení se vybraná funkce zobrazí v záhlaví a v poli **aktuální funkce** (`ServerClass::GetNumber`, v tomto příkladu). Funkce, která volala aktuální funkci, se zobrazí vlevo v části **Volající funkce** a všechny funkce volané aktuální funkcí se zobrazí vpravo v poli **Volané funkce**. (Pokud chcete aktuální funkci změnit, vyberte libovolné pole.)
 
     V tomto zobrazení vidíte celkový čas (ms) a procento z celkové doby spuštění aplikace, kterou funkce potřebovala k dokončení.
 
@@ -222,11 +275,11 @@ Analýzu dat doporučujeme začít tím, že zkontrolujete seznam funkcí na kar
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Analýza využití paměti](../profiling/memory-usage.md)identifikovat kritické body výkonu.
-- [Analýza využití procesoru](../profiling/cpu-usage.md) další podrobné informace o nástroj využití procesoru.
+- [Analyzujte využití paměti](../profiling/memory-usage.md)a Identifikujte problém s výkonem.
+- Podrobné informace o nástroji využití CPU najdete v části [Analýza využití procesoru](../profiling/cpu-usage.md) .
 - Analýza využití procesoru bez připojeného ladicího programu nebo zacílení na spuštěnou aplikaci – další informace najdete v tématu [shromažďování dat profilace bez ladění](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging) v [nástrojích pro profilaci spuštění s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Profilace v sadě Visual Studio](../profiling/index.yml)
-- [Nejdřív se podívejte na nástroje pro profilaci](../profiling/profiling-feature-tour.md)
+- [První pohled na nástroje pro profilaci](../profiling/profiling-feature-tour.md)

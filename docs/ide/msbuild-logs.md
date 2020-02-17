@@ -5,8 +5,8 @@ ms.technology: vs-ide-compile
 ms.topic: conceptual
 helpviewer_keywords:
 - msbuild logs"
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
 dev_langs:
 - CSharp
@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - multiple
 ms.description: Generate build logs for msbuild projects to collect helpful information when troubleshooting issues.
-ms.openlocfilehash: 8e302814571a5f7f37cfe02b2750f57dacb54c25
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 07b2c5e941d31ab1be853f9a89af94462329bdf2
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461483"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278807"
 ---
 # <a name="troubleshoot-and-create-logs-for-msbuild-problems"></a>Řešení potíží a vytváření protokolů pro problémy nástroje MSBuild
 
@@ -106,7 +106,7 @@ Pokud sestavíte v integrovaném vývojovém prostředí (IDE) sady Visual Studi
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /bl MySolution.sln
     ```
 
-    or
+    nebo
 
     ```cmd
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /bl MyProject.vcxproj
@@ -116,15 +116,15 @@ Soubor MSBuild. binlog bude vytvořen v adresáři, ze kterého jste spustili n�
 
 ## <a name="create-a-detailed-log"></a>Vytvořit podrobný protokol
 
-1. V hlavní nabídce sady Visual Studio přejděte na **nástroje** > **Možnosti** > **projekty a řešení** >sestavování**a spouštění**.
-1. Nastavte **Podrobnosti sestavení projektu MSBuild** na **podrobné** v obou polích se seznamem. Hlavní ovládací prvek má v **okno výstup** podrobnost sestavení a druhá z nich kontroluje podrobnosti sestavení v \<souboru ProjectName\>. log, který je vytvořen v zprostředkujícím adresáři každého projektu během sestavení.
+1. V hlavní nabídce sady Visual Studio přejděte na **nástroje** > **Možnosti** > **projekty a řešení** >**sestavování a spouštění**.
+1. Nastavte **Podrobnosti sestavení projektu MSBuild** na **podrobné** v obou polích se seznamem. Horní jeden ovládací prvek má v **okno výstup** podrobnost sestavení a druhá z nich je podrobností sestavení v souboru \<ProjectName\>. log, který je vytvořen v zprostředkujícím adresáři každého projektu během sestavení.
 2. Z příkazového řádku pro vývojáře sady Visual Studio zadejte jeden z těchto příkazů a nahraďte svou skutečnou cestu a konfigurační hodnoty:
 
     ```cmd
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /fl MySolution.sln
     ```
 
-    or
+    nebo
 
     ```cmd
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /fl MyProject.vcxproj

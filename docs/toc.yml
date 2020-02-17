@@ -362,6 +362,8 @@
                   href: ide/reference/convert-local-function-method.md
                 - name: Převod smyčky foreach na LINQ
                   href: ide/reference/convert-foreach-linq.md
+                - name: Převod příkazu if na příkaz switch nebo výraz switch
+                  href: ide/reference/convert-if-statement-to-switch-statement-or-switch-expression.md
                 - name: Konverze dotazu LINQ na příkaz foreach
                   href: ide/reference/convert-linq-to-foreach.md
                 - name: Převedení příkazu switch na výraz switch
@@ -398,6 +400,8 @@
                   href: ide/reference/remove-unreachable-code.md
                 - name: přejmenování
                   href: ide/reference/rename.md
+                - name: Zjednodušení interpolace řetězců
+                  href: ide/reference/simplify-string-interpolation.md
                 - name: Řazení direktiv using
                   href: ide/reference/sort-usings.md
                 - name: Dělení a slučování příkazů if

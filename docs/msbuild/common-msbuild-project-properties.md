@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e8f99bc18f4fdc834d0c5fdc7818d945d116251e
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.openlocfilehash: dd3ccd23775c93fb7222960c4db3ae5d35eb349f
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77027631"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77275492"
 ---
 # <a name="common-msbuild-project-properties"></a>Obecné vlastnosti projektu nástroje MSBuild
 V následující tabulce jsou uvedeny často používané vlastnosti, které jsou definovány v souborech projektu sady Visual Studio nebo zahrnuté v souborech *. targets* , které poskytuje MSBuild.
@@ -43,14 +43,14 @@ V následující tabulce jsou uvedeny často používané vlastnosti, které jso
 | AssemblySearchPaths | Seznam umístění, která se mají hledat během překladu referenčního sestavení v době sestavení Pořadí, ve kterém se cesty zobrazují v tomto seznamu, je smysluplné, protože cesty uvedené dříve mají přednost před pozdějšími položkami. |
 | Doplňk | Název konečného výstupního sestavení po sestavení projektu. |
 | BaseAddress | Určuje základní adresu hlavního výstupního sestavení. Tato vlastnost je ekvivalentní k přepínači `/baseaddress` kompilátoru. |
-| BaseOutputPath | Určuje základní cestu pro výstupní soubor. Pokud je nastavená, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] použije `OutputPath = $(BaseOutputPath)\$(Configuration)\`. Příklad syntaxe: `<BaseOutputPath>c:\xyz\bin\</BaseOutputPath>` |
 | BaseIntermediateOutputPath | Složka na nejvyšší úrovni, kde jsou vytvořeny všechny přechodné výstupní složky specifické pro konfiguraci. Výchozí hodnota je `obj\`. Následující kód je příklad: `<BaseIntermediateOutputPath>c:\xyz\obj\</BaseIntermediateOutputPath>` |
+| BaseOutputPath | Určuje základní cestu pro výstupní soubor. Pokud je nastavená, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] použije `OutputPath = $(BaseOutputPath)\$(Configuration)\`. Příklad syntaxe: `<BaseOutputPath>c:\xyz\bin\</BaseOutputPath>` |
 | BuildInParallel | Logická hodnota, která označuje, zda jsou odkazy na projekt vytvářeny nebo čištěny paralelně při použití [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] více procesů. Výchozí hodnota je `true`, což znamená, že projekty budou sestaveny paralelně, pokud má systém více jader nebo procesorů. |
 | BuildProjectReferences | Logická hodnota, která určuje, zda jsou odkazy na projekt vytvořeny pomocí [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Automaticky nastaveno na `false`, pokud sestavíte projekt v integrovaném vývojovém prostředí (IDE) [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], `true` Pokud jinak. `-p:BuildProjectReferences=false` můžete zadat na příkazovém řádku, abyste se vyhnuli kontrole, jestli jsou odkazované projekty aktuální. |
 | CleanFile | Název souboru, který se použije jako "čistá mezipaměť". Čistá mezipaměť je seznam generovaných souborů, které mají být odstraněny během operace čištění. Soubor je umístěn do mezilehlé výstupní cesty procesem sestavení.<br /><br /> Tato vlastnost určuje pouze názvy souborů, které nemají informace o cestě. |
 | Stránky | Určuje znakovou stránku, která se má použít pro všechny soubory zdrojového kódu v kompilaci. Tato vlastnost je ekvivalentní k přepínači `/codepage` kompilátoru. |
 | CompilerResponseFile | Volitelný soubor odpovědí, který lze předat úlohám kompilátoru. |
-| Konfiguraci | Konfigurace, kterou vytváříte, buď "ladit" nebo "Release". |
+| Konfigurace | Konfigurace, kterou vytváříte, buď "ladit" nebo "Release". |
 | CscToolPath | Cesta k souboru *CSc. exe*, [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] kompilátorem. |
 | CustomBeforeMicrosoftCommonTargets | Název souboru projektu nebo souboru cílů, který má být importován automaticky před importem běžných cílů. |
 | DebugSymbols | Logická hodnota, která určuje, zda jsou symboly generovány sestavením.<br /><br /> Nastavení **-p:DebugSymbols = false** na příkazovém řádku zakáže generování souborů symbolů databáze programu (*PDB*). |
@@ -72,8 +72,8 @@ V následující tabulce jsou uvedeny často používané vlastnosti, které jso
 | IntermediateOutputPath | Úplná zprostředkující výstupní cesta odvozená od `BaseIntermediateOutputPath`, pokud není zadána žádná cesta. Například *\obj\debug\\* . |
 | KeyContainerName | Název kontejneru klíčů se silným názvem. |
 | KeyOriginatorFile | Název souboru klíče se silným názvem. |
-| MSBuildProjectExtensionsPath | Určuje cestu, kde se nachází rozšíření projektu. Ve výchozím nastavení má tato hodnota stejnou hodnotu jako `BaseIntermediateOutputPath`. |
 | ModuleAssemblyName | Název sestavení, do kterého má být kompilovaný modul začleněn. Vlastnost je ekvivalentní k přepínači `/moduleassemblyname` kompilátoru. |
+| MSBuildProjectExtensionsPath | Určuje cestu, kde se nachází rozšíření projektu. Ve výchozím nastavení má tato hodnota stejnou hodnotu jako `BaseIntermediateOutputPath`. |
 | NoLogo | Logická hodnota, která označuje, zda má být vypnuto logo kompilátoru. Tato vlastnost je ekvivalentní k přepínači `/nologo` kompilátoru. |
 | NoStdLib | Logická hodnota, která označuje, zda se má vyhýbat odkazování na standardní knihovnu (*mscorlib. dll*). Výchozí hodnota je `false`. |
 | NoVBRuntimeReference | Logická hodnota, která označuje, zda [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] modul runtime (*Microsoft. VisualBasic. dll*) by měl být zahrnut jako odkaz v projektu. |
@@ -90,13 +90,10 @@ V následující tabulce jsou uvedeny často používané vlastnosti, které jso
 | PathMap | Určuje, jak namapovat fyzické cesty na výstup názvů zdrojových cest kompilátorem. Tato vlastnost je ekvivalentní `/pathmap` přepínači kompilátoru *CSc. exe* . |
 | PdbFile | Název souboru *. pdb* , který vysíláte. Tato vlastnost je ekvivalentní `/pdb` přepínači kompilátoru *CSc. exe* . |
 | Platforma | Operační systém, pro který sestavíte. Platné hodnoty jsou "any CPU", "x86" a "x64". |
-| ProduceReferenceAssembly | Logická hodnota, která Pokud je nastavena na `true` povolí výrobu [referenčních sestavení](/dotnet/standard/assembly/reference-assemblies) pro aktuální sestavení. Při použití této funkce by se měla `true` `Deterministic`. Tato vlastnost odpovídá `/refout`mu přepínači kompilátorů *Vbc. exe* a *CSc. exe* . |
-| ProduceOnlyReferenceAssembly | Logická hodnota, která instruuje kompilátor, aby vygenerovala pouze referenční sestavení namísto zkompilovaného kódu. Nelze použít ve spojení s `ProduceReferenceAssembly`.  Tato vlastnost odpovídá `/refonly`mu přepínači kompilátorů *Vbc. exe* a *CSc. exe* . |
-| RemoveIntegerChecks | Logická hodnota, která označuje, zda se mají zakázat kontroly chyb přetečení celých čísel. Výchozí hodnota je `false`. Tato vlastnost je ekvivalentní `/removeintchecks` přepínači kompilátoru *Vbc. exe* . |
-| SGenUseProxyTypes | Logická hodnota, která určuje, zda mají být typy proxy generovány pomocí *Sgen. exe*. To platí jenom v případě, že je *GenerateSerializationAssemblies* nastavené na zapnuto a jenom pro .NET Framework.<br /><br /> Cíl SGen používá tuto vlastnost k nastavení příznaku UseProxyTypes. Tato vlastnost je nastavena na hodnotu true a neexistuje žádné uživatelské rozhraní, které by bylo možné změnit. Chcete-li vygenerovat sestavení serializace pro typy non-WebService, přidejte tuto vlastnost do souboru projektu a nastavte ji na false před importem *Microsoft. Common. targets* nebo  *C#/VB.targets*. |
-| SGenToolPath | Volitelná cesta nástroje, která označuje, kde získat *Sgen. exe* , když je aktuální verze *Sgen. exe* přepsána. Tato vlastnost se používá jenom pro .NET Framework.|
-| StartupObject | Určuje třídu nebo modul, který obsahuje metodu Main nebo Sub Main Procedure. Tato vlastnost je ekvivalentní k přepínači `/main` kompilátoru. |
 | ProcessorArchitecture | Architektura procesoru, která se používá, když jsou přeloženy odkazy na sestavení. Platné hodnoty jsou "MSIL", "x86", "amd64" nebo "ia64". |
+| ProduceOnlyReferenceAssembly | Logická hodnota, která instruuje kompilátor, aby vygenerovala pouze referenční sestavení namísto zkompilovaného kódu. Nelze použít ve spojení s `ProduceReferenceAssembly`.  Tato vlastnost odpovídá `/refonly`mu přepínači kompilátorů *Vbc. exe* a *CSc. exe* . |
+| ProduceReferenceAssembly | Logická hodnota, která Pokud je nastavena na `true` povolí výrobu [referenčních sestavení](/dotnet/standard/assembly/reference-assemblies) pro aktuální sestavení. Při použití této funkce by se měla `true` `Deterministic`. Tato vlastnost odpovídá `/refout`mu přepínači kompilátorů *Vbc. exe* a *CSc. exe* . |
+| RemoveIntegerChecks | Logická hodnota, která označuje, zda se mají zakázat kontroly chyb přetečení celých čísel. Výchozí hodnota je `false`. Tato vlastnost je ekvivalentní `/removeintchecks` přepínači kompilátoru *Vbc. exe* . |
 | RootNamespace | Kořenový obor názvů, který se má použít při pojmenování vloženého prostředku. Tento obor názvů je součástí názvu vloženého manifestu prostředku. |
 | Satellite_AlgorithmId | ID algoritmu hash *Al. exe* , který má být použit při vytváření satelitních sestavení. |
 | Satellite_BaseAddress | Základní adresa, která se použije v případě satelitních sestavení specifických pro jazykovou verzi, se vytváří pomocí cíle `CreateSatelliteAssemblies`. |
@@ -117,6 +114,9 @@ V následující tabulce jsou uvedeny často používané vlastnosti, které jso
 | Satellite_Version | Určuje informace o verzi satelitního sestavení. |
 | Satellite_Win32Icon | Vloží soubor ikony *. ico* do satelitního sestavení. |
 | Satellite_Win32Resource | Vloží prostředek systému Win32 (soubor *. res* ) do satelitního sestavení. |
+| SGenToolPath | Volitelná cesta nástroje, která označuje, kde získat *Sgen. exe* , když je aktuální verze *Sgen. exe* přepsána. Tato vlastnost se používá jenom pro .NET Framework.|
+| SGenUseProxyTypes | Logická hodnota, která určuje, zda mají být typy proxy generovány pomocí *Sgen. exe*. To platí jenom v případě, že je *GenerateSerializationAssemblies* nastavené na zapnuto a jenom pro .NET Framework.<br /><br /> Cíl SGen používá tuto vlastnost k nastavení příznaku UseProxyTypes. Tato vlastnost je nastavena na hodnotu true a neexistuje žádné uživatelské rozhraní, které by bylo možné změnit. Chcete-li vygenerovat sestavení serializace pro typy non-WebService, přidejte tuto vlastnost do souboru projektu a nastavte ji na false před importem *Microsoft. Common. targets* nebo  *C#/VB.targets*. |
+| StartupObject | Určuje třídu nebo modul, který obsahuje metodu Main nebo Sub Main Procedure. Tato vlastnost je ekvivalentní k přepínači `/main` kompilátoru. |
 | SubsystemVersion | Určuje minimální verzi subsystému, kterou může vygenerovaný spustitelný soubor použít. Tato vlastnost je ekvivalentní k přepínači `/subsystemversion` kompilátoru. Informace o výchozí hodnotě této vlastnosti naleznete v tématu [/subsystemversion (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/subsystemversion) nebo [/subsystemversion (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/subsystemversion-compiler-option). |
 | TargetCompactFramework | Verze prostředí .NET Compact Framework potřebná ke spuštění aplikace, kterou vytváříte. Zadáním této možnosti můžete odkazovat na konkrétní sestavení rozhraní, která pravděpodobně nebudete moci odkazovat jinak. |
 | TargetFrameworkVersion | Verze .NET Framework potřebná ke spuštění aplikace, kterou vytváříte. Zadáním této možnosti můžete odkazovat na konkrétní sestavení rozhraní, která pravděpodobně nebudete moci odkazovat jinak. |
@@ -131,5 +131,5 @@ V následující tabulce jsou uvedeny často používané vlastnosti, které jso
 | Win32Manifest | Název souboru manifestu, který má být vložen do konečného sestavení. Tento parametr je ekvivalentní k přepínači `/win32Manifest` kompilátoru. |
 | Win32Resource | Název souboru prostředku Win32, který se má vložit do konečného sestavení Tento parametr je ekvivalentní k přepínači `/win32resource` kompilátoru. |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md)

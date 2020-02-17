@@ -15,19 +15,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4d3afc8ff48355c74544edf123689495bfde1302
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 27024f3b28b97a1a5d0befc3d70dbf8144fb9e24
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189134"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77277646"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>Návod: profilování aplikace SharePoint
   Tento návod ukazuje, jak používat nástroje pro profilaci v aplikaci Visual Studio k optimalizaci výkonu aplikace služby SharePoint. Ukázková aplikace je přijímač událostí funkce SharePointu, který obsahuje smyčku nečinnosti, která snižuje výkon přijímače událostí funkce. Profiler sady Visual Studio umožňuje vyhledat a eliminovat nejnákladný (nejpomalejší) část projektu, označovanou také jako *horká cesta*.
 
  Tento názorný postup ukazuje následující úlohy:
 
-- [Addg se funkce a přijímač událostí funkcí](#add-a-feature-and-feature-event-receiver).
+- [Přidejte přijímač událostí funkce a funkce](#add-a-feature-and-feature-event-receiver).
 
 - [Nakonfigurujte a nasaďte aplikaci SharePoint](#configure-and-deploy-the-sharepoint-application).
 
@@ -37,7 +37,7 @@ ms.locfileid: "73189134"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice Microsoft Windows a SharePointu.
@@ -49,7 +49,7 @@ ms.locfileid: "73189134"
 
 ### <a name="to-create-a-sharepoint-project"></a>Vytvoření projektu služby SharePoint
 
-1. Na panelu nabídek vyberte možnost **soubor**  > **Nový**  > **projekt** . zobrazí se dialogové okno **Nový projekt** .
+1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt** . zobrazí se dialogové okno **Nový projekt** .
 
 2. Rozbalte uzel **služby SharePoint** pod možností **vizuál C#**  nebo **Visual Basic**a pak vyberte uzel **2010** .
 
@@ -272,8 +272,7 @@ ms.locfileid: "73189134"
 
      Tato funkce by se měla aktivovat mnohem rychleji, když se neodstraní volání do nečinné smyčky. Sestava profilace vzorku by se měla odrážet.
 
-## <a name="see-also"></a>Viz také:
-- [Prohlížeč výkonu](../profiling/performance-explorer.md)
+## <a name="see-also"></a>Viz také
 - [Přehled výkonnostní relace](../profiling/performance-session-overview.md)
 - [Průvodce začátečníka profilací výkonu](../profiling/beginners-guide-to-performance-profiling.md)
 - [Hledání kritických bodů aplikace pomocí profileru sady Visual Studio](https://msdn.microsoft.com/magazine/cc337887.aspx)

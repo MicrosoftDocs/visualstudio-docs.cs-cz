@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild (C++), ClangCompile task
 - ClangCompile task (MSBuild (C++))
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bd1d749461c423d51e0f5b736563a9f9aa757c5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c1526fbd3c2c0822781f0e011999ddcb9c679170
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747346"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77275462"
 ---
 # <a name="clangcompile-task"></a>ClangCompile – úloha
 
@@ -40,14 +40,14 @@ Následující tabulka popisuje parametry úlohy **ClangCompile** .
 |**BuildingInIde**|Volitelný parametr **bool** .|
 |**CLanguageStandard**|Volitelný **řetězcový** parametr.<br/><br/>Určuje standard jazyka C.<br/><br/>Použijte `std=[value]` s hodnotou **c89**, **C99**, **C11**, **gnu99**nebo **gnu11**.|
 |**ClangVersion**|Volitelný **řetězcový** parametr.|
-|**CompileAs**|Volitelný **řetězcový** parametr.<br/><br/>Umožňuje vybrat možnost jazyka kompilace pro soubory. c a. cpp. Výchozí hodnota se detekuje na základě rozsahu. c nebo. cpp.<br/><br/>Použijte `-x c` `-x c++`.|
+|**CompileAs**|Volitelný **řetězcový** parametr.<br/><br/>Umožňuje vybrat možnost jazyka kompilace pro soubory. c a. cpp. Výchozí hodnota se detekuje na základě rozsahu. c nebo. cpp.<br/><br/>Použijte `-x c``-x c++`.|
 |**CppLanguageStandard**|Volitelný **řetězcový** parametr.<br/><br/>Určuje standardní C++ jazyk.<br/><br/>Použijte `std=[value]` s hodnotou **c++ 98**, **c++ 11**, **c + + 1Y**, **GNU + + 98**, **GNU + + 11**nebo **GNU + + 1Y**.|
 |**DataLevelLinking**|Volitelný parametr **bool** .<br/><br/>Umožňuje optimalizaci linkeru odebrat nepoužívaná data vygenerováním jednotlivých datových položek v samostatné části.|
 |**DebugInformationFormat**|Volitelný **řetězcový** parametr.<br/><br/>Určuje typ ladicích informací generovaných kompilátorem.<br/><br/>**Žádné**, nevytváří žádné ladicí informace, takže kompilace může být rychlejší (použijte `g0`).<br/>**FullDebug**, generování informací o ladění DWARF2 (použití `g2 -gdwarf-2`).<br/>**Číslo řádku**, generovat jenom informace o číslech řádků (použijte `gline-tables-only`).|
 |**EnableNeonCodegen**|Volitelný parametr **bool** .<br/><br/>Povoluje generování kódu pro hardware s plovoucí desetinnou čárkou NEON. To platí jenom pro architekturu ARM.|
 |**ExceptionHandling**|Volitelný **řetězcový** parametr.<br/><br/>Určuje model zpracování výjimek, který má kompilátor použít.<br/><br/>**Disabled**, Disable zpracování výjimek (použijte `fno-exceptions`).<br/>**Povoleno**, povolit zpracování výjimek (použijte `fexceptions`).<br/>**UnwindTables**vygeneruje všechna potřebná statická data, ale neovlivňuje generovaný kód (použijte `funwind-tables`).|
 |**FloatABI**|Volitelný **řetězcový** parametr.<br/><br/>Možnost výběru pro výběr plovoucí desetinné čárky.<br/><br/>**Soft**, způsobí, že kompilátor generuje výstup obsahující volání knihovny pro operace s plovoucí desetinnou čárkou (použijte `mfloat-abi=soft`).<br/>**softfp**umožňuje generování kódu pomocí hardwarových instrukcí s plovoucí desetinnou čárkou, ale stále používá konvence volání Soft-float (použijte `mfloat-abi=softfp`).<br/>**těžko**, umožňuje generování instrukcí s plovoucí desetinnou čárkou a používá konvence volání specifické pro FPU (použijte `mfloat-abi=hard`).|
-|**ForcedIncludeFiles**|Parametr volitelného **řetězce []** .<br/><br/>Jeden nebo více souborů s vynuceným zahrnutím.<br/><br/>Použijte `-include [name]`.|
+|**ForcedIncludeFiles**|Parametr volitelného **řetězce []** .<br/><br/>jeden nebo více souborů s vynuceným zahrnutím.<br/><br/>Použijte `-include [name]`.|
 |**FunctionLevelLinking**|Volitelný parametr **bool** .<br/><br/>Umožňuje kompilátoru zabalit jednotlivé funkce ve formě zabalených funkcí (sekvence COMDAT). Vyžaduje se pro úpravy a pokračování v práci.<br/><br/>Použijte `ffunction-sections`.|
 |**GccToolChain**|Volitelný **řetězcový** parametr.<br/><br/>Cesta ke složce pro řetězec nástroje RSZ|
 |**GNUMode**|Volitelný parametr **bool** .<br/><br/>|
@@ -63,10 +63,10 @@ Následující tabulka popisuje parametry úlohy **ClangCompile** .
 |**PrecompiledHeader**|Volitelný **řetězcový** parametr.<br/><br/>Povolí vytvoření nebo použití předkompilované hlavičky během sestavení.|
 |**PrecompiledHeaderFile**|Volitelný **řetězcový** parametr.<br/><br/>Určuje název hlavičkového souboru, který se má použít pro soubor předkompilované hlavičky. Tento soubor bude také přidán do **vynucených souborů k zahrnutí** během sestavení.|
 |**PrecompiledHeaderOutputFileDirectory**|Volitelný **řetězcový** parametr.<br/><br/>Určuje adresář pro generovanou předkompilovanou hlavičku. Tento adresář se přidá také k **dalším adresářům include** během sestavování.|
-|**PrecompiledHeaderCompileAs**|Volitelný **řetězcový** parametr.<br/><br/>Umožňuje vybrat možnost jazyka kompilace pro soubor předkompilované hlavičky.<br/><br/>Použijte `-x c-header` `-x c++-header`.|
+|**PrecompiledHeaderCompileAs**|Volitelný **řetězcový** parametr.<br/><br/>Umožňuje vybrat možnost jazyka kompilace pro soubor předkompilované hlavičky.<br/><br/>Použijte `-x c-header``-x c++-header`.|
 |**PreprocessorDefinitions**|Parametr volitelného **řetězce []** .<br/><br/>Definuje symboly předzpracování pro zdrojový soubor.<br/><br/>Použijte `-D`.|
-|**RuntimeLibrary**|Volitelný **řetězcový** parametr.<br/><br/>Zadejte běhovou knihovnu pro propojování.<br/><br/>Použijte přepínače `MSVC /MT`, `/MTd`, `/MD` a `/MDd`.<br/><br/>**Multithreading**, způsobí, že aplikace použije vícevláknovou a statickou verzi knihovny run-time.<br/>**MultiThreadedDebug**definuje _DEBUG a _MT. Tento parametr navíc způsobí, že kompilátor umístí knihovnu s názvem LIBCMTD.lib do souboru .obj, aby linker použil k překladu externích symbolů soubor LIBCMTD.lib.<br/>**MultiThreadedDLL**způsobí, že aplikace bude používat knihovnu run-time specifickou pro vícevláknovou a DLL. Definuje _MT a _DLL a způsobí, že kompilátor umístí do souboru. obj název knihovny MSVCRT. lib.<br/>**MultiThreadedDebugDLL**, definuje _DEBUG, _MT a _DLL a způsobí, že vaše aplikace bude používat běhovou verzi knihovny run-time, která je specifická pro knihovnu DLL. Navíc způsobí, že kompilátor umístí knihovnu s názvem MSVCRTD.lib do souboru .obj.|
-|**RuntimeTypeInfo**|Volitelný parametr **bool** .<br/><br/>Přidá kód pro kontrolu C++ typů objektů v době běhu (informace o typu modulu runtime).<br/><br/>Použijte `frtti` `fno-rtti`.|
+|**RuntimeLibrary**|Volitelný **řetězcový** parametr.<br/><br/>Zadejte běhovou knihovnu pro propojování.<br/><br/>Použijte přepínače `MSVC /MT`, `/MTd`, `/MD`a `/MDd`.<br/><br/>**Multithreading**, způsobí, že aplikace použije vícevláknovou a statickou verzi knihovny run-time.<br/>**MultiThreadedDebug**definuje _DEBUG a _MT. Tento parametr navíc způsobí, že kompilátor umístí knihovnu s názvem LIBCMTD.lib do souboru .obj, aby linker použil k překladu externích symbolů soubor LIBCMTD.lib.<br/>**MultiThreadedDLL**způsobí, že aplikace bude používat knihovnu run-time specifickou pro vícevláknovou a DLL. Definuje _MT a _DLL a způsobí, že kompilátor umístí do souboru. obj název knihovny MSVCRT. lib.<br/>**MultiThreadedDebugDLL**, definuje _DEBUG, _MT a _DLL a způsobí, že vaše aplikace bude používat běhovou verzi knihovny run-time, která je specifická pro knihovnu DLL. Navíc způsobí, že kompilátor umístí knihovnu s názvem MSVCRTD.lib do souboru .obj.|
+|**RuntimeTypeInfo**|Volitelný parametr **bool** .<br/><br/>Přidá kód pro kontrolu C++ typů objektů v době běhu (informace o typu modulu runtime).<br/><br/>Použijte `frtti``fno-rtti`.|
 |**ShowIncludes –**|Volitelný parametr **bool** .<br/><br/>Generuje seznam souborů k zahrnutí s výstupem kompilátoru.<br/><br/>Použijte `-H`.|
 |**Prostředky**|Povinný parametr **ITaskItem []** .|
 |**StrictAliasing**|Volitelný parametr **bool** .<br/><br/>Předpokládají nejpřísnější pravidla aliasování. U objektu jednoho typu se nikdy nepředpokládá, že se nachází na stejné adrese jako objekt jiného typu.|
@@ -80,8 +80,8 @@ Následující tabulka popisuje parametry úlohy **ClangCompile** .
 |**UseMultiToolTask**|Volitelný parametr **bool** .<br/><br/>Kompilace s více procesory.|
 |**UseShortEnums**|Volitelný parametr **bool** .<br/><br/>Typ výčtu používá pouze tolik bajtů, kolik vyžaduje vstupní sada možných hodnot.|
 |**Podrobné**|Volitelný parametr **bool** .<br/><br/>Zobrazit příkazy ke spuštění a použití podrobného výstupu.|
-|**WarningLevel**|Volitelný **řetězcový** parametr.<br/><br/>Vyberte, jak striktní má kompilátor obsahovat chyby kódu. Další příznaky by se měly přidat přímo k **dalším možnostem** (se `/w` `/Weverything`).<br/><br/>**TurnOffAllWarnings**zakáže všechna upozornění kompilátoru (použijte `w`).<br/>**Povolit všechna upozornění**povolí všechna upozornění, včetně těch, která jsou ve výchozím nastavení zakázaná (použijte `Wall`).|
+|**WarningLevel**|Volitelný **řetězcový** parametr.<br/><br/>Vyberte, jak striktní má kompilátor obsahovat chyby kódu. Další příznaky by se měly přidat přímo k **dalším možnostem** (se `/w``/Weverything`).<br/><br/>**TurnOffAllWarnings**zakáže všechna upozornění kompilátoru (použijte `w`).<br/>**Povolit všechna upozornění**povolí všechna upozornění, včetně těch, která jsou ve výchozím nastavení zakázaná (použijte `Wall`).|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

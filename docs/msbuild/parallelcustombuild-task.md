@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild (C++), ParallelCustomBuild task
 - ParallelCustomBuild task (MSBuild (C++))
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 ms.workload:
 - multiple
-ms.openlocfilehash: c6ea14e61eb2d62f3fc9ccdac3a17010ccc9194f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0d8a171d393f629d0b6ab3a7fc61ad37862b0da1
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747222"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77279263"
 ---
 # <a name="parallelcustombuild-task"></a>ParallelCustomBuild – úloha
 
@@ -39,6 +39,6 @@ Následující tabulka popisuje parametry úlohy **ParallelCustomBuild** .
 |**MaxProcesses**|Volitelný parametr **int**|
 |**Prostředky**|Povinný parametr **ITaskItem []** .|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
