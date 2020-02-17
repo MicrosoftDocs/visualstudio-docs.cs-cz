@@ -1,5 +1,5 @@
 ---
-title: Přístup k datům a nástroje
+title: Práce s daty v aplikaci Visual Studio
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,20 +12,25 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3a53561e8c62fcf523f13d17d5228d33a6a0af6d
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 7c7aa1544f998a88424c0087fadceab63757d23b
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916723"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77272085"
 ---
-# <a name="access-data-in-visual-studio"></a>Přístup k datům v sadě Visual Studio
+# <a name="work-with-data-in-visual-studio"></a>Práce s daty v aplikaci Visual Studio
 
 V sadě Visual Studio můžete vytvářet aplikace, které se připojují k datům v téměř jakoukoli databázový produkt nebo službu, v libovolném formátu, kdekoli – v místním počítači, v místní síti, nebo veřejné, privátní nebo hybridní cloud.
 
 Pro aplikace v jazyce JavaScript, Python, PHP, Ruby nebo C++ můžete připojit k datům stejným způsobem jako cokoli jiného, získání knihovny a psaní kódu. Pro aplikace .NET nabízí Visual Studio nástroje, které můžete použít k prozkoumávání zdrojů dat, vytváření objektových modelů pro ukládání a manipulaci s daty v paměti a k vytvoření vazby dat k uživatelskému rozhraní. Microsoft Azure poskytuje sady SDK pro .NET, Java, Node.js, PHP, Python, Ruby a mobilní aplikace a nástroje v sadě Visual Studio pro připojení k Azure Storage.
 
+::: moniker range="vs-2017"
 Následující seznamy shrnují jenom některé z mnoha systémů databáze a úložišť, se dají ze sady Visual Studio. Nabídky [Microsoft Azure](https://azure.microsoft.com/) jsou datové služby, které zahrnují všechna zřizování a správu základního úložiště dat. Úlohy **vývoje Azure** v [aplikaci Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) umožňují pracovat s úložišti dat Azure přímo ze sady Visual Studio.
+::: moniker-end
+::: moniker range=">=vs-2019"
+Následující seznamy shrnují jenom některé z mnoha systémů databáze a úložišť, se dají ze sady Visual Studio. Nabídky [Microsoft Azure](https://azure.microsoft.com/) jsou datové služby, které zahrnují všechna zřizování a správu základního úložiště dat. Úlohy **vývoje Azure** v [aplikaci Visual Studio 2019](https://visualstudio.microsoft.com/downloads) umožňují pracovat s úložišti dat Azure přímo ze sady Visual Studio.
+::: moniker-end
 
 ![Úloha vývoj pro Azure](media/azure-development-workload.png)
 
@@ -33,8 +38,8 @@ Většinu ostatních SQL a NoSQL databáze produktů, které jsou zde uvedeny, j
 
 **Microsoft Azure**
 
-- Databáze SQL
-- Azure Cosmos DB
+- SQL Database
+- Databáze Azure Cosmos
 - Storage (objekty BLOB, tabulky, fronty, soubory)
 - SQL Data Warehouse
 - SQL Server Stretch Database
@@ -65,34 +70,34 @@ Většinu ostatních SQL a NoSQL databáze produktů, které jsou zde uvedeny, j
 
 ::: moniker range="vs-2017"
 
-Mnoho dodavatelů databáze a třetí strany nepodporují integraci s Visual Studio pomocí balíčků NuGet. Můžete prozkoumat nabídky na nuget.org nebo prostřednictvím aplikaci Správce balíčků NuGet v sadě Visual Studio (**nástroje** > **Správce balíčků NuGet** > **spravovat balíčky NuGet Balíčky pro řešení**). Produkty databáze můžete integrovat s aplikací Visual Studio jako rozšíření. Tyto nabídky můžete procházet v [Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo pomocí přechodu na **nástroje** > **rozšíření a aktualizace** a následným výběrem možnosti **online** v levém podokně dialogového okna. Další informace najdete v tématu [kompatibilní databázové systémy pro Visual Studio](../data-tools/installing-database-systems-tools-and-samples.md).
+Mnoho dodavatelů databáze a třetí strany nepodporují integraci s Visual Studio pomocí balíčků NuGet. Nabídky můžete prozkoumat v nuget.org nebo pomocí Správce balíčků NuGet v aplikaci Visual Studio (**nástroje** > **správce balíčků NuGet** > **Spravovat balíčky NuGet pro řešení**). Produkty databáze můžete integrovat s aplikací Visual Studio jako rozšíření. Tyto nabídky můžete procházet v [Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo pomocí přechodu na **nástroje** > **rozšíření a aktualizace** a následným výběrem možnosti **online** v levém podokně dialogového okna. Další informace najdete v tématu [kompatibilní databázové systémy pro Visual Studio](../data-tools/installing-database-systems-tools-and-samples.md).
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Mnoho dodavatelů databáze a třetí strany nepodporují integraci s Visual Studio pomocí balíčků NuGet. Můžete prozkoumat nabídky na nuget.org nebo prostřednictvím aplikaci Správce balíčků NuGet v sadě Visual Studio (**nástroje** > **Správce balíčků NuGet** > **spravovat balíčky NuGet Balíčky pro řešení**). Produkty databáze můžete integrovat s aplikací Visual Studio jako rozšíření. Tyto nabídky můžete procházet v [Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo tak, že přejdete na **rozšíření** > **Spravovat rozšíření** a pak vyberete **online** v levém podokně dialogového okna. Další informace najdete v tématu [kompatibilní databázové systémy pro Visual Studio](../data-tools/installing-database-systems-tools-and-samples.md).
+Mnoho dodavatelů databáze a třetí strany nepodporují integraci s Visual Studio pomocí balíčků NuGet. Nabídky můžete prozkoumat v nuget.org nebo pomocí Správce balíčků NuGet v aplikaci Visual Studio (**nástroje** > **správce balíčků NuGet** > **Spravovat balíčky NuGet pro řešení**). Produkty databáze můžete integrovat s aplikací Visual Studio jako rozšíření. Tyto nabídky můžete procházet v [Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo tak, že přejdete na **rozšíření** > **Spravovat rozšíření** a pak vyberete **online** v levém podokně dialogového okna. Další informace najdete v tématu [kompatibilní databázové systémy pro Visual Studio](../data-tools/installing-database-systems-tools-and-samples.md).
 
 ::: moniker-end
 
 > [!NOTE]
-> Rozšířená podpora pro SQL Server 2005 skončila 12. dubna 2016. Není zaručeno, že datové nástroje v aplikaci Visual Studio 2015 a novější budou nadále fungovat s SQL Server 2005. Další informace najdete v tématu [oznámení ukončení podpory pro SQL Server 2005](https://www.microsoft.com/sql-server/sql-server-2005).
+> Rozšířená podpora pro SQL Server 2005 skončila 12. dubna 2016. Není zaručeno, že datové nástroje v aplikaci Visual Studio 2015 a novější budou nadále fungovat s SQL Server 2005. Další informace najdete v tématu [oznámení ukončení podpory SQL Server 2005](https://www.microsoft.com/sql-server/sql-server-2005).
 
 ## <a name="net-languages"></a>Jazyky rozhraní .NET
 
 Veškerý přístup k datům .NET, včetně rozhraní .NET Core, je založen na ADO.NET, sadě tříd, které definují rozhraní pro přístup k jakémukoli typu zdroje dat, relačním i nerelačním. Visual Studio obsahuje několik nástrojů a návrhářů, které pracují s ADO.NET připojení k databázím, vám usnadní pracuje s daty a prezentovat uživateli. Dokumentace v této části popisuje, jak pomocí těchto nástrojů. Také můžete programovat přímo proti objekty příkazů ADO.NET. Další informace o přímém volání rozhraní API ADO.NET naleznete v tématu [ADO.NET](/dotnet/framework/data/adonet/index).
 
-Dokumentaci k datům související s ASP.NET najdete v tématu [práce s daty](https://www.asp.net/web-forms/overview/presenting-and-managing-data) na webu ASP.NET. Kurz týkající se používá nástroj Entity Framework s architekturou ASP.NET MVC, naleznete v tématu [Začínáme s Entity Framework 6 Code First pomocí MVC 5](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application).
+Dokumentaci k datům související s ASP.NET najdete v tématu [práce s daty](https://www.asp.net/web-forms/overview/presenting-and-managing-data) na webu ASP.NET. Kurz použití Entity Framework s ASP.NET MVC najdete v článku [Začínáme s Entity Framework 6 Code First pomocí MVC 5](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application).
 
 Aplikace Univerzální platforma Windows (UWP) v C# nebo Visual Basic můžou používat Microsoft Azure SDK pro .NET pro přístup k Azure Storage a dalším službám Azure. Třída Windows.Web.HttpClient umožňuje komunikaci se všemi službami, RESTful. Další informace najdete v tématu [jak se připojit k serveru HTTP pomocí Windows. Web. http](https://msdn.microsoft.com/library/windows/apps/dn469430.aspx).
 
-Doporučený postup pro ukládání dat v místním počítači, je použít SQLite, která běží ve stejném procesu jako aplikace. Pokud vrstvu objektově relační mapování (ORM) je potřeba, můžete použít Entity Framework. Další informace najdete v tématu [přístup k datům](/windows/uwp/data-access/index) v Centru pro vývojáře Windows.
+Doporučený postup pro ukládání dat v místním počítači, je použít SQLite, která běží ve stejném procesu jako aplikace. Pokud vrstvu objektově relační mapování (ORM) je potřeba, můžete použít Entity Framework. Další informace najdete v tématu [přístup k datům](/windows/uwp/data-access/index) v centru pro vývojáře v systému Windows.
 
-Pokud se připojujete ke službám Azure, je nutné stáhnout nejnovější [sady Azure SDK tools](https://azure.microsoft.com/downloads/).
+Pokud se připojujete ke službám Azure, nezapomeňte si stáhnout nejnovější [nástroje Azure SDK](https://azure.microsoft.com/downloads/).
 
 ### <a name="data-providers"></a>Zprostředkovatelé dat
 
-Aby databáze mohla být použitelné v ADO.NET, musí mít vlastní *zprostředkovatele dat ADO.NET* nebo jinak musí vystavit rozhraní ODBC nebo Oledb. Společnost Microsoft poskytuje [seznam zprostředkovatelů ADO.NET dat](/dotnet/framework/data/adonet/ado-net-overview) pro produkty SQL Server a také poskytovatele rozhraní ODBC a OLE DB.
+Aby databáze byla v ADO.NET spotřební, musí mít vlastního *poskytovatele dat ADO.NET* nebo jinak musí vystavit rozhraní ODBC nebo OLE DB. Společnost Microsoft poskytuje [seznam zprostředkovatelů ADO.NET dat](/dotnet/framework/data/adonet/ado-net-overview) pro produkty SQL Server a také poskytovatele rozhraní ODBC a OLE DB.
 
 ### <a name="data-modeling"></a>Modelování dat
 
@@ -104,23 +109,23 @@ V rozhraní .NET máte tři možnosti pro modelování a manipulace s daty v pam
 
 [Datové sady](../data-tools/dataset-tools-in-visual-studio.md) Nejstarší ze tří technologií modelování. Je určená primárně pro rychlý vývoj aplikací "formy nad daty", ve kterých nejsou zpracování obrovské objemy dat nebo provádění složitých dotazů nebo transformací. Objekt DataSet se skládá z objektů DataTable a DataRow, které logicky připomínají objekty databáze SQL mnohem více než objekty .NET. U relativně jednoduchých aplikací založených na zdrojích dat SQL může být v datových sadách stále vhodná volba.
 
-Neexistuje žádný požadavek k používání některé z těchto technologií. V některých případech, zejména v případě, že je nejdůležitější, výkon jednoduše vám pomůže objektu DataReader čtení z databáze a zkopírujte hodnoty, které je třeba do objektu kolekce, jako je například seznam\<T >.
+Neexistuje žádný požadavek k používání některé z těchto technologií. V některých případech, zejména v případě, že je výkon kritický, můžete jednoduše použít objekt DataReader ke čtení z databáze a zkopírovat hodnoty, které potřebujete do objektu kolekce, jako je například seznam\<T >.
 
 ## <a name="native-c"></a>Nativní kód C++
 
 C++aplikace, které se připojují k SQL Server, by měly ve většině případů používat [ovladač Microsoft® ODBC 13,1 pro SQL Server](https://www.microsoft.com/download/details.aspx?id=53339) . Pokud jsou servery propojené, OLE DB nutné a pro použití [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client). K ostatním databázím můžete přistupovat přímo pomocí [rozhraní ODBC](/sql/odbc/microsoft-open-database-connectivity-odbc?view=sql-server-2017) nebo ovladače OLE DB. ODBC je aktuální databáze standard rozhraní, ale většina databázových systémů poskytují vlastní funkce, která není přístupná přes rozhraní ODBC. OLE DB je starou technologií přístupu k datům modelu COM, který je stále podporovány, ale nedoporučuje se u nových aplikací. Další informace najdete v tématu [přístup k datům v C++vizuálu ](/cpp/data/data-access-in-cpp).
 
-Můžete použít programy v jazyce C++, které využívají služby REST [C++ REST SDK](https://github.com/Microsoft/cpprestsdk).
+C++programy, které využívají služby REST, můžou používat [ C++ sadu REST SDK](https://github.com/Microsoft/cpprestsdk).
 
-Programy v jazyce C++, které fungují s Microsoft Azure Storage můžete použít [Microsoft Azure Storage Client](https://www.nuget.org/packages/Microsoft.Azure.Storage.CPP).
+C++programy, které pracují se Microsoft Azure Storage můžou používat [klienta Microsoft Azure Storage](https://www.nuget.org/packages/Microsoft.Azure.Storage.CPP).
 
-Modelování dat&mdash;Visual Studiu neposkytuje vrstvu ORM pro C++. [TYPU](https://www.codesynthesis.com/products/odb/) je oblíbený open source ORM pro jazyk C++.
+Modelování dat&mdash;Visual Studiu neposkytuje vrstvu ORM pro C++. [ODB](https://www.codesynthesis.com/products/odb/) je oblíbený Open Source ORM pro C++.
 
 Další informace o připojení k databázím z C++ aplikací naleznete v tématu [Visual Studio Data Tools C++for ](../data-tools/visual-studio-data-tools-for-cpp.md). Další informace o starších technologiích C++ vizuálního přístupu k datům najdete v tématu [přístup k datům](/cpp/data/data-access-in-cpp).
 
 ## <a name="javascript"></a>JavaScript
 
-[JavaScript v sadě Visual Studio](/scripting/javascript/javascript-language-reference) je prvotřídní jazyk pro vytváření aplikací pro různé platformy, aplikací pro UWP, cloudové služby, weby a webové aplikace. V sadě Visual Studio můžete pomocí Bower, grunt, Gulp, npm a NuGet nainstalovat své oblíbené knihovny JavaScript a databázové produkty. Připojení k úložišti Azure a službám stažením sady SDK z [web Azure](https://azure.microsoft.com/). Edge.js je knihovna, která se připojuje ke zdrojům dat ADO.NET JavaScript na straně serveru (Node.js).
+[JavaScript v aplikaci Visual Studio](/scripting/javascript/javascript-language-reference) je prvotřídní jazyk pro vytváření aplikací pro různé platformy, aplikací pro UWP, cloudových služeb, webů a webových aplikací. V sadě Visual Studio můžete pomocí Bower, grunt, Gulp, npm a NuGet nainstalovat své oblíbené knihovny JavaScript a databázové produkty. Stáhněte si sady SDK z [webu Azure](https://azure.microsoft.com/)a připojte se k Azure Storage a službám. Edge.js je knihovna, která se připojuje ke zdrojům dat ADO.NET JavaScript na straně serveru (Node.js).
 
 ## <a name="python"></a>Python
 
@@ -130,7 +135,7 @@ Pokud chcete vytvářet aplikace v Pythonu, nainstalujte [podporu Pythonu v apli
 - [Django a MySQL v Azure](/azure/app-service-web/web-sites-python-ptvs-django-mysql)
 - Práce s [objekty blob](/azure/storage/blobs/storage-quickstart-blobs-python), [soubory](/azure/storage/files/storage-python-how-to-use-file-storage), [frontami](/azure/storage/queues/storage-python-how-to-use-queue-storage)a [tabulkami (Cosmo DB)](/azure/cosmos-db/table-storage-how-to-use-python)
 
-## <a name="related-topics"></a>Příbuzná témata
+## <a name="related-topics"></a>Související témata
 
 [Microsoft AI platform](https://azure.microsoft.com/overview/ai-platform/?v=17.42w)&mdash;poskytuje Úvod do inteligentního cloudu Microsoft, včetně Cortana Analytics Suite a podpory pro Internet věcí.
 

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - demo sample [Visual Studio ALM]
 - code analysis, samples
 ms.assetid: 09e1b9f7-5916-4ed6-a001-5c2d7e710682
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 84f6ddc2012617a5216c58fa0761dc100fb8942f
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: a7e06b29b4778bf2a9b1b327d015bb7eb12e8ec5
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75402747"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271281"
 ---
 # <a name="sample-c-project-for-code-analysis"></a>Ukázkový C++ projekt pro analýzu kódu
 
@@ -42,7 +42,7 @@ Procedury také poskytují kód pro hlavičku a soubory *. cpp* pro statické kn
 
 5. Do textového pole **název řešení** zadejte **CppDemo** .
 
-6. Klikněte na **Vytvořit**.
+6. Klikněte na **Vytvořit**
 
 ## <a name="configure-the-codedefects-project-as-a-static-library"></a>Konfigurace projektu CodeDefects jako statické knihovny
 

@@ -3,21 +3,21 @@ title: Porozumění SAL
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: df04186fd7524649dfe7ac89e53ca4ca907cc5c4
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: e2cb2cb263344e45d83a2b143f6c56f138f77bf5
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807085"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271820"
 ---
 # <a name="understanding-sal"></a>Porozumění SAL
 
-Jazyk Microsoft Source-Code Annotation (SAL) poskytuje sadu poznámek, které můžete použít k popsání toho, jak funkce používá své parametry, předpoklady, které se o nich týkají, a záruky, které při jejím dokončení vytvoří. Poznámky jsou definovány v hlavičkovém souboru `<sal.h>`. Analýza kódu sady Visual Studio C++ pro použití poznámek SAL pro úpravu své analýzy funkcí. Další informace o SAL 2,0 pro vývoj ovladačů Windows najdete v tématu [poznámky sal 2,0 pro ovladače Windows](/windows-hardware/drivers/devtest/sal-2-annotations-for-windows-drivers).
+Jazyk Microsoft Source-Code Annotation (SAL) poskytuje sadu poznámek, které můžete použít k popsání toho, jak funkce používá své parametry, předpoklady, které se o nich týkají, a záruky, které při jejím dokončení vytvoří. Poznámky jsou definovány v souboru hlaviček `<sal.h>`. Analýza kódu sady Visual Studio C++ pro použití poznámek SAL pro úpravu své analýzy funkcí. Další informace o SAL 2,0 pro vývoj ovladačů Windows najdete v tématu [poznámky sal 2,0 pro ovladače Windows](/windows-hardware/drivers/devtest/sal-2-annotations-for-windows-drivers).
 
 Nativně, C a C++ poskytují jenom omezené způsoby, jak vývojářům konzistentně vyjádřit a nerovnost. Pomocí poznámek SAL můžete své funkce popsat podrobněji, aby vývojáři, kteří je používají, lépe pochopili, jak je používat.
 
@@ -27,7 +27,7 @@ SAL je pouze nenákladný způsob, jak nechat kompilátor kontrolovat váš kód
 
 ### <a name="sal-makes-code-more-valuable"></a>SAL dělá kód užitečnější
 
-SAL vám může usnadnit návrh kódu pro lidi i pro nástroje pro analýzu kódu. Vezměte v úvahu tento příklad, který ukazuje běhovou funkci jazyka C `memcpy`:
+SAL vám může usnadnit návrh kódu pro lidi i pro nástroje pro analýzu kódu. Vezměte v úvahu tento příklad, který ukazuje `memcpy`běhové funkce jazyka C:
 
 ```cpp
 
@@ -38,7 +38,7 @@ void * memcpy(
 );
 ```
 
-Můžete zjistit, co tato funkce dělá? Pokud je funkce implementována nebo volána, je nutné zachovat určité vlastnosti, aby bylo zajištěno správnost programu. Pouhým zobrazením deklarace, jako je například v příkladu, neznáte, co jsou. Bez poznámek SAL byste se museli spoléhat na dokumentaci nebo komentáře ke kódu. Tady je dokumentace MSDN pro `memcpy` říká:
+Můžete zjistit, co tato funkce dělá? Pokud je funkce implementována nebo volána, je nutné zachovat určité vlastnosti, aby bylo zajištěno správnost programu. Pouhým zobrazením deklarace, jako je například v příkladu, neznáte, co jsou. Bez poznámek SAL byste se museli spoléhat na dokumentaci nebo komentáře ke kódu. V dokumentaci MSDN pro `memcpy` se říkáme:
 
 > "Kopíruje počet bajtů src na cíl. Pokud se zdrojový a cílový překrývají, chování memcpy není definováno. Použijte memmove k obsluze překrývajících se oblastí.
 > **Poznámka k zabezpečení:** Ujistěte se, že cílová vyrovnávací paměť má stejnou velikost nebo je větší než zdrojová vyrovnávací paměť. Další informace najdete v tématu předcházení přetečení vyrovnávací paměti.
@@ -49,7 +49,7 @@ Dokumentace obsahuje několik bitů informací, které naznačují, že váš k�
 
 - Cílová vyrovnávací paměť musí být alespoň stejně velká jako zdrojová vyrovnávací paměť.
 
-Kompilátor ale nemůže přečíst dokumentaci nebo neformální komentáře. Neví, že mezi těmito dvěma vyrovnávacími paměťmi a `count` existuje vztah, a nemůže efektivně odhadnout relaci. SAL může poskytnout přehlednější informace o vlastnostech a implementaci funkce, jak je znázorněno zde:
+Kompilátor ale nemůže přečíst dokumentaci nebo neformální komentáře. Neví, že existuje vztah mezi dvěma vyrovnávacími paměťmi a `count`a nedokáže ani efektivně odhadnout relaci. SAL může poskytnout přehlednější informace o vlastnostech a implementaci funkce, jak je znázorněno zde:
 
 ```cpp
 
@@ -154,7 +154,7 @@ void BadInCaller()
 }
 ```
 
-Použijete-li analýzu Visual Studio Code v tomto příkladu, ověří, že volající přecházejí ukazatel, který není null, do inicializované vyrovnávací paměti pro `pInt`. V takovém případě ukazatel `pInt` nemůže mít hodnotu NULL.
+Použijete-li analýzu Visual Studio Code v tomto příkladu, ověří, že volající předají ukazatel, který nemá hodnotu null, do inicializované vyrovnávací paměti pro `pInt`. V takovém případě `pInt` ukazatel nesmí mít hodnotu NULL.
 
 ### <a name="example-the-_in_opt_-annotation"></a>Příklad: \_v\_opt\_ anotaci.
 
@@ -208,7 +208,7 @@ void OutCaller()
 }
 ```
 
-Nástroj pro analýzu Visual Studio Code ověřuje, zda volající předává ukazatel bez hodnoty NULL do vyrovnávací paměti pro `pInt` a zda je vyrovnávací paměť inicializována funkcí před tím, než se vrátí.
+Nástroj pro analýzu Visual Studio Code ověřuje, že volající předává ukazatel bez hodnoty NULL do vyrovnávací paměti pro `pInt` a že vyrovnávací paměť je inicializována funkcí před vrácením.
 
 ### <a name="example-the-_out_opt_-annotation"></a>Příklad: \_\_ anotace\_opt
 
@@ -235,7 +235,7 @@ void OutOptCaller()
 }
 ```
 
-Visual Studio Code Analysis ověří, že tato funkce kontroluje hodnotu NULL před tím, než `pInt` je zpětně odkazovaná, a pokud `pInt` nemá hodnotu NULL, je vyrovnávací paměť inicializována funkcí před tím, než se vrátí.
+Visual Studio Code Analysis ověří, že tato funkce před tím, `pInt` než se vrátí, vyhledá hodnotu NULL, a pokud `pInt` není NULL, bude vyrovnávací paměť inicializována funkcí.
 
 ### <a name="example-the-_inout_-annotation"></a>Příklad: \_InOut\_ anotaci
 
@@ -266,7 +266,7 @@ void BadInOutCaller()
 }
 ```
 
-Visual Studio Code Analysis ověřuje, že volající přecházejí ukazatel, který není NULL, do inicializované vyrovnávací paměti pro `pInt` a to před vrácením, `pInt` je stále NULL a je inicializována vyrovnávací paměť.
+Visual Studio Code Analysis ověřuje, že volající předají ukazatel, který nemá hodnotu NULL, do inicializované vyrovnávací paměti pro `pInt`a který před vrácením `pInt` stále není NULL a je inicializována vyrovnávací paměť.
 
 ### <a name="example-the-_inout_opt_-annotation"></a>Příklad: \_InOut\_opt\_ anotace
 
@@ -295,7 +295,7 @@ void InOutOptCaller()
 }
 ```
 
-Analýza Visual Studio Code ověří, že tato funkce před přístupem k vyrovnávací paměti kontroluje hodnotu NULL, a pokud `pInt` není NULL, tato vyrovnávací paměť je inicializována funkcí před tím, než se vrátí.
+Visual Studio Code Analysis ověří, že tato funkce před přístupem k vyrovnávací paměti kontroluje, jestli má hodnotu NULL, a pokud `pInt` není NULL, tato vyrovnávací paměť se před vrácením funkce inicializuje.
 
 ### <a name="example-the-_outptr_-annotation"></a>Příklad: \_Outptr\_ anotaci
 
@@ -325,7 +325,7 @@ void OutPtrCaller()
 }
 ```
 
-Analýza Visual Studio Code ověřuje, že volající předává ukazatel bez hodnoty NULL pro `*pInt` a že je vyrovnávací paměť inicializována funkcí před tím, než se vrátí.
+Analýza Visual Studio Code ověřuje, že volající předává ukazatel bez hodnoty NULL pro `*pInt`a že vyrovnávací paměť je inicializována funkcí před tím, než se vrátí.
 
 ### <a name="example-the-_outptr_opt_-annotation"></a>Příklad: \_Outptr\_opt\_ anotace
 
@@ -357,7 +357,7 @@ void OutPtrOptCaller()
 }
 ```
 
-Analýza Visual Studio Code ověřuje, že tato funkce kontroluje hodnotu NULL před tím, než se odhlásí `*pInt` a že je vyrovnávací paměť inicializována funkcí, než se vrátí.
+Analýza Visual Studio Code ověří, že tato funkce kontroluje hodnotu NULL před tím, než je `*pInt` zpětně odkazovaná a že je vyrovnávací paměť inicializována funkcí, než se vrátí.
 
 ### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>Příklad: \_úspěch\_ poznámky v kombinaci s \_em\_
 
@@ -404,7 +404,7 @@ Nebo můžete opatřit všechny parametry tak, aby byl váš záměr jasný a by
 
 [Blog týmu analýzy kódu](https://blogs.msdn.microsoft.com/codeanalysis/)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Použití poznámek SAL k snížení míry výskytu závad kódu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Zadávání poznámek k parametrům funkcí a návratovým hodnotám](../code-quality/annotating-function-parameters-and-return-values.md)

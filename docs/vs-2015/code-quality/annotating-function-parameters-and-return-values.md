@@ -123,15 +123,15 @@ f1_keywords:
 - _Ret_null_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
 caps.latest.revision: 17
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
-ms.openlocfilehash: fb2b8120665c7eb08f1462dd7b3299538079ae9b
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: bd9107bed68b9b5b6f88a239b3b155440b0e654c
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852385"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271615"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>Zadávání poznámek k parametrům funkcí a návratovým hodnotám
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -219,7 +219,7 @@ Tento článek popisuje typické použití poznámek pro jednoduché parametry f
   
      `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`  
   
-     Jinými slovy, každý prvek, který existuje ve vyrovnávací paměti až do `s` v předběžném stavu, je platný v příspěvku.  Příklad:  
+     Jinými slovy, každý prvek, který existuje ve vyrovnávací paměti až do `s` v předběžném stavu, je platný v příspěvku.  Například:  
   
      `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`  
   
@@ -247,7 +247,7 @@ Tento článek popisuje typické použití poznámek pro jednoduché parametry f
   
      `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`  
   
-     Jinými slovy, každý prvek, který existuje ve vyrovnávací paměti až do `s` v předběžném stavu, je platný v příspěvku.  Příklad:  
+     Jinými slovy, každý prvek, který existuje ve vyrovnávací paměti až do `s` v předběžném stavu, je platný v příspěvku.  Například:  
   
      `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`  
   
@@ -484,7 +484,7 @@ Tento článek popisuje typické použití poznámek pro jednoduché parametry f
   
 - `_Struct_size_bytes_(size)`  
   
-     Platí pro strukturu nebo deklaraci třídy.  Označuje, že platný objekt tohoto typu může být větší než deklarovaný typ, s počtem bajtů předávaných pomocí `size`.  Příklad:  
+     Platí pro strukturu nebo deklaraci třídy.  Označuje, že platný objekt tohoto typu může být větší než deklarovaný typ, s počtem bajtů předávaných pomocí `size`.  Například:  
   
      `typedef _Struct_size_bytes_(nSize) struct MyStruct {    size_t nSize;    ... };`  
   
@@ -492,7 +492,7 @@ Tento článek popisuje typické použití poznámek pro jednoduché parametry f
   
      `min(pM->nSize, sizeof(MyStruct))`  
   
-## <a name="related-resources"></a>Související informační zdroje  
+## <a name="related-resources"></a>Související prostředky  
  [Blog týmu analýzy kódu](https://blogs.msdn.com/b/codeanalysis/)  
   
 ## <a name="see-also"></a>Viz také  

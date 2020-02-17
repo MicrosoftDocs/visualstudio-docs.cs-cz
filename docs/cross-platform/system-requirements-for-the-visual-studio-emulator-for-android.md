@@ -1,6 +1,7 @@
 ---
 title: Požadavky na systém pro emulátor sady Visual Studio pro Android | Microsoft Docs
 ms.custom: ''
+ms.prod: visual-studio-dev15
 ms.date: 11/04/2016
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
@@ -8,20 +9,21 @@ ms.assetid: 35e766ad-269f-41e4-ba23-74a556c315f3
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ee89472ba4773e3b8692b293118bea154504fb55
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: f1462769a4ba9929a000bca998c1fe3708908798
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916810"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77272053"
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>Požadavky na systém pro emulátor sady Visual Studio pro Android
 
 Emulátor Visual Studia pro Android běží jako virtuální počítač na Hyper-V, technologie virtualizace pro Windows 8 a novějších verzích. Pokud chcete spustit emulátor, musí počítač splňovat požadavky na spuštění technologie Hyper-V, jak je popsáno v tomto tématu.
 
-Instalační program se pokusí o konfiguraci těchto předpokladů pro vás tiše při instalaci emulátoru. Když instalační program úspěšně nakonfiguruje požadavky, emulátor jednoduše funguje podle očekávání. Jinak budete muset ručně povolte tyto požadavky. Pokud máte ručně konfigurovat požadavky související s postupy a nástroje se o tytéž kroky popsané [tady](/previous-versions/windows/apps/jj863509\(v=vs.105\)) pro emulátor Windows Phone.
+Instalační program se pokusí o konfiguraci těchto předpokladů pro vás tiše při instalaci emulátoru. Když instalační program úspěšně nakonfiguruje požadavky, emulátor jednoduše funguje podle očekávání. Jinak budete muset ručně povolte tyto požadavky. Pokud je nutné požadavky nakonfigurovat ručně, postupy a nástroje jsou stejný postup, který je popsaný [tady](/previous-versions/windows/apps/jj863509\(v=vs.105\)) pro emulátor Windows Phone.
 
 > [!IMPORTANT]
 > Instalační program pro emulátor zkontroluje požadavky pro spuštění emulátoru Visual Studia pro Android. Pokud požadavky nejsou k dispozici, ale nevyžaduje je zobrazí upozornění.
@@ -40,7 +42,7 @@ Požadavky na systém
 
 - Procesor, který podporuje SSSE3 nebo novější.
 
-Požadavky na síť
+Požadavky sítě
 
 - DHCP
 
@@ -63,7 +65,7 @@ Požadavky technologie Hyper-V
 ## <a name="system-requirements"></a>Požadavky na systém
  Počítač musí splňovat následující požadavky:
 
-- Podpora technologie Hyper-V (viz [požadavky technologie Hyper-V](#hyper-v-requirements))
+- Podpora technologie Hyper-V (viz [požadavky technologie Hyper-v](#hyper-v-requirements))
 
 - 6 GB nebo více paměti RAM.
 
@@ -73,7 +75,7 @@ Chcete-li zkontrolovat požadavky na paměť RAM a Windows v Ovládacích panele
 
 ![Ověření systémových požadavků](../cross-platform/media/android_emu_system_requirements.png "Android_Emu_System_Requirements")
 
-## <a name="network-requirements"></a>Požadavky na síť
+## <a name="network-requirements"></a>Požadavky sítě
 
 Síť musí splňovat následující požadavky:
 
@@ -107,8 +109,8 @@ Pokud váš počítač a nastavení systému BIOS jsou již nakonfigurována pro
 
 |Požadavek|Zkontrolujte a povolte tento požadavek|
 |-----------------|----------------------------------------------|
-|Musí být nainstalována technologie Hyper-V|Použijte stejné pokyny jako pro [povolení technologie Hyper-V pro Windows Phone emulator](/previous-versions/windows/apps/jj863509(v=vs.105)).<br /><br /> Zkontrolujte stav **Správa virtuálních počítačů Hyper-V** služby v modulu snap-in služby.|
-|Technologie Hyper-V musí běžet.|Další informace o správě služby najdete v následujících tématech:<br /><br /> -   [Spustit, zastavit, pozastavit, obnovit nebo restartovat službu](https://technet.microsoft.com/library/cc736564\(v=WS.10\).aspx)<br />-   [Konfigurace spuštění služby](https://technet.microsoft.com/%20library/cc739213\(v=ws.10\))|
+|Musí být nainstalována technologie Hyper-V|Použijte stejné pokyny jako pro [Povolení technologie Hyper-V pro emulátor Windows Phone](/previous-versions/windows/apps/jj863509(v=vs.105)).<br /><br /> V modulu snap-in služby ověřte stav služby **správy virtuálních počítačů Hyper-v** .|
+|Technologie Hyper-V musí běžet.|Další informace o správě služby najdete v následujících tématech:<br /><br /> -   [Spustit, zastavit, pozastavit, obnovit nebo restartovat službu](https://technet.microsoft.com/library/cc736564\(v=WS.10\).aspx)<br />-   [Konfigurace způsobu spuštění služby](https://technet.microsoft.com/%20library/cc739213\(v=ws.10\))|
 
  Musíte být členem místní skupiny Správci Hyper-V.
 

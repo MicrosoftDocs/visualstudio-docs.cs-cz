@@ -7,17 +7,17 @@ helpviewer_keywords:
 - code analysis, walkthroughs
 - code, analyzing C/C++
 - code analysis tool, walkthroughs
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2154a07d498012c9c45f992ebed51b0218e823a
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 74a878b8c64955927357e45c668c4d100007d373
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75401021"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271808"
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>Návod: Analýza kódu C/C++ na výskyt závad
 
@@ -28,7 +28,7 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
 - Považovat upozornění za chybu.
 - Opatřit zdrojový kód poznámkami, aby se zlepšila analýza vad kódu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Kopie [ukázkové ukázky](../code-quality/demo-sample.md).
 - Základní porozumění C/C++.
@@ -39,7 +39,7 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
 
      Ukázkové řešení nyní naplňuje **Průzkumník řešení**.
 
-2. Na **sestavení** nabídky, klikněte na tlačítko **znovu sestavit řešení**.
+2. V nabídce **sestavení** klikněte na příkaz **znovu sestavit řešení**.
 
      Řešení se sestaví bez chyb nebo upozornění.
 
@@ -169,7 +169,7 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
 
      Projekt se teď sestaví bez jakýchkoli upozornění nebo chyb.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Návod: Analýza spravovaného kódu pro chyby kódu](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)
 [analýze kódu pro CC++ /](../code-quality/code-analysis-for-c-cpp-overview.md)

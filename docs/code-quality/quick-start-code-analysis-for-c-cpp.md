@@ -6,21 +6,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - C/C++ code analysis
 - code analysis,C/C++
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4beaff14e896eae15d4ce68acf35331d03203246
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 41d5c5a5ea966d1e092e7038d2fc3734c9bd9f15
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445645"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77272316"
 ---
 # <a name="quickstart-code-analysis-for-cc"></a>Rychlý start: Analýza kódu pro C/C++
 
-Kvalitu aplikace můžete zlepšit spuštěním analýzy kódu pravidelně na jazyku C nebo C++ kódu. To vám může pomáhat najít běžné problémy, porušení dobrého programovacího postupu nebo vady, které se obtížně zjišťují prostřednictvím testování. Upozornění analýzy kódu se liší od chyb kompilátoru a upozornění, protože analýza kódu hledá konkrétní vzorové kódy, které jsou platné, ale může stále vytvářet problémy pro vás nebo jiné uživatele, kteří používají váš kód.
+Kvalitu aplikace můžete zlepšit spuštěním analýzy kódu pravidelně na jazyku C nebo C++ kódu. To vám může pomáhat najít běžné problémy, porušení dobrého programovacího postupu nebo vady, které se obtížně zjišťují prostřednictvím testování. Upozornění analýzy kódu se liší od kompilátoru chyby a upozornění, protože analýza kódu hledá vzory v konkrétním kódu, které jsou platné, ale přesto vytvořit problémy pro vy nebo ostatní uživatelé, kteří používají váš kód.
 
 ## <a name="configure-rule-sets-for-a-project"></a>Konfigurace sad pravidel pro projekt
 
@@ -69,11 +69,11 @@ Chcete-li analyzovat konkrétní upozornění, vyberte název upozornění v Sez
 
 Když vyberete upozornění, zvýrazní se řádek kódu, který způsobil upozornění, v editoru kódu sady Visual Studio.
 
-Po pochopení problému ho můžete vyřešit ve svém kódu. Pak znovu spusťte analýzu kódu, abyste se ujistili, že se už nezobrazuje v Seznam chyb a že vaše oprava nevyvolala žádná nová upozornění.
+Po zjištění problému ho mohli vyřešit ve vašem kódu. Pak znovu spusťte analýzu kódu, abyste se ujistili, že se už nezobrazuje v Seznam chyb a že vaše oprava nevyvolala žádná nová upozornění.
 
 ## <a name="suppress-code-analysis-warnings"></a>Potlačit upozornění analýzy kódu
 
-Existují situace, kdy se můžete rozhodnout, že nechcete opravit upozornění analýzy kódu. Můžete se rozhodnout, že vyřešení upozornění vyžaduje příliš mnoho překódování ve vztahu k pravděpodobnosti, že problém nastane v jakékoli implementaci kódu reálného světa. Nebo se můžete domnívat, že analýza, která se používá v upozornění, je pro konkrétní kontext nevhodná. Jednotlivá upozornění můžete potlačit, aby se už nezobrazovala v Seznam chyb.
+Existují situace, kdy byste se mohli rozhodnot Neopravovat upozornění analýzy kódu. Můžete se rozhodnout, že řešení upozornění vyžaduje příliš mnoho nahrávání ve vztahu k pravděpodobnost, že problém vzniknou v žádné Skutečná implementace kódu. Nebo může domnívat, že je nevhodná pro konkrétní kontext, který se používá v tomto upozornění analýzy. Jednotlivá upozornění můžete potlačit, aby se už nezobrazovala v Seznam chyb.
 
 Chcete-li potlačit upozornění:
 
@@ -83,7 +83,7 @@ Chcete-li potlačit upozornění:
 
 3. Zvolte možnost **potlačit zprávu** a pak zvolte možnost **zdroj**.
 
-   Potlačení vložení zprávy `#pragma warning (disable:[warning ID])`, které potlačí upozornění na řádek kódu.
+   Potlačení vkládání zprávy `#pragma warning (disable:[warning ID])`, které potlačí upozornění na řádek kódu.
 
 ## <a name="create-work-items-for-code-analysis-warnings"></a>Vytváření pracovních položek pro upozornění analýzy kódu
 
@@ -101,7 +101,7 @@ Funkci sledování pracovní položky můžete použít k protokolování chyb z
 
 ## <a name="search-and-filter-code-analysis-results"></a>Hledání a filtrování výsledků analýzy kódu
 
-Můžete vyhledávat dlouhé seznamy varovných zpráv a můžete filtrovat upozornění v řešeních s více projekty.
+Můžete hledat dlouhé seznamy varovné zprávy a upozornění v řešení vícenásobného projektu můžete filtrovat.
 
 - **Filtrování upozornění podle názvu nebo ID upozornění**: zadejte klíčové slovo do vyhledávacího pole.
 

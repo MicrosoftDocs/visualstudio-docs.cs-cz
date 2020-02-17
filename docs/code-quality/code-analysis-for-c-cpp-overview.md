@@ -16,17 +16,17 @@ helpviewer_keywords:
 - '#pragma directives, code analysis'
 - C, code analysis
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515b9b7eb1b1a4d2dbee6329be782386b8370338
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 4991a72b2761e96e143bfa33e0b55f9a4e9467c6
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806307"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271213"
 ---
 # <a name="code-analysis-for-cc-overview"></a>Analýza kódu pro C/C++ přehled
 
@@ -64,7 +64,7 @@ Možná budete chtít vyžadovat, aby všechna vrácení se změnami zdrojového
 
 Pomocí integrovaných funkcí systému sestavení lze nástroj pro analýzu kódu spustit jako krok procesu [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] sestavení. Další informace najdete v tématu [Azure Pipelines](/azure/devops/pipelines/index?view=vsts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Rychlý Start: Analýza kódu pro C/C++](quick-start-code-analysis-for-c-cpp.md)
 - [Návod: Analýza kódu CC++ /pro vady](walkthrough-analyzing-c-cpp-code-for-defects.md)

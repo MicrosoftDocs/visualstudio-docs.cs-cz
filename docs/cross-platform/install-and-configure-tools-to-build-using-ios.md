@@ -12,12 +12,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: e869a02475917f2444bedbb1bc9b7373b893d098
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 37ef83cc968276fb29ae5380544ee9c27ffd485d
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846896"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77272278"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>Instalace a konfigurace nástrojů pro vytváření pomocí iOS
 
@@ -62,9 +62,9 @@ Pokud chcete nainstalovat a používat vzdáleného agenta pro vývoj kódu pro 
 
    Pokud chcete provést ruční podepisování, musíte pro svoji aplikaci vytvořit zřizovací profil. Podrobné informace o vytváření zřizovacích profilů najdete v tématu [Vytvoření vývojového zřizovacího profilu](https://help.apple.com/developer-account/#/devf2eb157f8). 
 
-- [Node. js](https://nodejs.org/) verze 8.11.3 a npm verze 5.6.0
+- [Node. js](https://nodejs.org/) verze 12.14.1 a npm verze 6.13.4
 
-   Nainstalujte 8.11.3 verze Node. js na Macu. Při instalaci balíčku Node. js by měl být součástí npm verze 5.6.0. Jiné verze Node. js a npm nemusí podporovat některé moduly používané ve vzdáleném agentovi `vcremote`, což může způsobit selhání instalace `vcremote`.
+   Nainstalujte 12.14.1 verze Node. js na Macu. Při instalaci balíčku Node. js by měl být součástí npm verze 6.13.4. Jiné verze Node. js a npm nemusí podporovat některé moduly používané ve vzdáleném agentovi `vcremote`, což může způsobit selhání instalace `vcremote`. Doporučujeme nainstalovat Node. js pomocí Správce balíčků, jako je třeba [Node Version Manager](https://nodejs.org/en/download/package-manager/#nvm). Nepoužívejte příkaz `sudo` k instalaci Node. js, protože některé moduly se můžou při použití `sudo`nepodaří nainstalovat.
 
 ## <a name="Install"></a>Instalace vzdáleného agenta pro iOS
 
@@ -74,11 +74,17 @@ Než nainstalujete vzdáleného agenta, ujistěte se, že jste splnili [požadav
 
 ### <a name="DownloadInstall"></a>Stažení a instalace vzdáleného agenta
 
-- Z aplikace terminálu na Macu zadejte:
+- Z aplikace terminálu na Macu ověřte, zda je aktuálně používána verze Node. js požadovaná verze 12.14.1. Verzi ověříte spuštěním příkazu:
 
-   `sudo npm install -g --unsafe-perm vcremote`
+  `node -v`
+  
+  Pokud se nejedná o správnou verzi, může být nutné postupovat podle pokynů k instalaci Node. js v části požadavky. Pak restartujte Node. js.
 
-   Přepínač globální instalace ( **-g**) se doporučuje, ale není povinný.
+- Po ověření, že se požadovaný Node. js používá, spusťte tento příkaz, který nainstaluje vcremote do této verze Node. js:
+
+   `npm install -g --unsafe-perm vcremote`
+
+   Doporučuje se přepínač globální instalace ( **-g**), ale není to nutné. Pokud nepoužijete globální přepínač instalace, vcremote se nainstaluje do aktuální aktivní cesty v aplikaci Terminal.
 
    Během instalace se `vcremote` nainstaluje a v počítači Mac se aktivuje vývojářský režim. Nainstalují se taky [homebrew](https://brew.sh/) a dva balíčky npm, `vcremote-lib` a `vcremote-utils`. Po dokončení instalace je bezpečné ignorovat všechna upozornění týkající se přeskočení volitelných závislostí.
 

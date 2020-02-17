@@ -9,18 +9,18 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 8d6cbdee57d2f1edf7d696ad9a4053ddcb08bce3
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: 5a1c449a77e3000205ee81f5414949743b6035c4
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777738"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77272273"
 ---
 # <a name="devops-with-unity-apps"></a>DevOps s aplikacemi Unity
 
 Vývoj aplikací pro moderní platformy zahrnuje mnoho dalších aktivit než jenom psaní kódu. Tyto aktivity, označované jako DevOps (vývoj a operace), zahrnují celý životní cyklus aplikace a zahrnují plánování a sledování práce, návrh a implementaci kódu, správu úložiště zdrojového kódu, spouštění sestavení a správu průběžných integrací. a nasazení, testování (včetně testů jednotek a testů uživatelského rozhraní), spouštění různých forem diagnostiky ve vývojovém i produkčním prostředí a monitorování výkonu aplikací a chování uživatelů v reálném čase prostřednictvím telemetrie a analýz.
 
-Visual Studio společně s Azure DevOps Services a Team Foundation Server poskytuje celou řadu funkcí DevOps. Mnohé z nich se vztahují na projekty pro různé platformy, včetně her a moderních grafických aplikací vytvořených pomocí Unity &mdash;especially při použití C# jako skriptovací jazyk. Vzhledem k tomu, že Unity má své vlastní vývojové prostředí a modul modulu runtime, není množství DevOpsch funkcí použito, protože by to bylo pro jiné druhy projektů sestavené v aplikaci Visual Studio.
+Visual Studio společně s Azure DevOps Services a Team Foundation Server poskytuje celou řadu funkcí DevOps. Mnohé z nich se vztahují na projekty pro různé platformy, včetně her a moderních grafických aplikací vytvořených pomocí Unity&mdash;obzvláště při použití C# jako skriptovací jazyk. Vzhledem k tomu, že Unity má své vlastní vývojové prostředí a modul modulu runtime, není množství DevOpsch funkcí použito, protože by to bylo pro jiné druhy projektů sestavené v aplikaci Visual Studio.
 
 Následující tabulky popisují, jak se DevOps funkce v aplikaci Visual Studio používají nebo nepoužívají při práci s Unity. Podrobnosti o samotných funkcích najdete v odkazované dokumentaci.
 
@@ -92,7 +92,7 @@ Odkaz na odkaz:  **[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)**
 |Plánování testů, vytváření testovacích případů a organizování testovacích sad|Ano||
 |Manuální testování|Ano||
 |Test Manager (testy záznamů a přehrávání)|Jenom zařízení s Windows a emulátory pro Android||
-|Pokrytí kódu|není k dispozici|Nedá se použít jako testování částí v Unity a ne v sadě Visual Studio, viz níže.|
+|Pokrytí kódu|neuvedeno|Nedá se použít jako testování částí v Unity a ne v sadě Visual Studio, viz níže.|
 |[Testování částí kódu](../test/unit-test-your-code.md)|V Unity, ale ne v sadě Visual Studio|Unity poskytuje vlastní testovací architekturu jednotek jako součást [testovacích nástrojů Unity](https://www.assetstore.unity3d.com/en/#!/content/13802) (úložiště assetů Unity). Výsledky testování částí jsou hlášeny v rámci Unity a nebudou se v sadě Visual Studio rozplochy.|
 |[Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)|Ne|Programové testy uživatelského rozhraní spoléhají na čitelné ovládací prvky v uživatelském rozhraní aplikace. Aplikace Unity jsou grafické, takže obsah není čitelný pomocí nástrojů programového testu uživatelského rozhraní.|
 
@@ -105,7 +105,7 @@ Odkaz na odkaz:  **[vylepšení kvality kódu](../test/improve-code-quality.md)*
 |[Analýza kvality spravovaného kódu](../code-quality/code-analysis-for-managed-code-overview.md)|Ano|Může analyzovat kód C# skriptu v sadě Visual Studio.|
 |[Hledání duplicitního kódu pomocí zjišťování klonování kódu](https://msdn.microsoft.com/library/hh205279.aspx)|Ano|Může analyzovat kód C# skriptu v sadě Visual Studio.|
 |[Měření složitosti a udržovatelnosti spravovaného kódu](../code-quality/code-metrics-values.md)|Ano|Může analyzovat kód C# skriptu v sadě Visual Studio.|
-|[Prohlížeč výkonu](../profiling/performance-explorer.md)|Ne|Používejte [Profiler Unity](https://docs.unity3d.com/Manual/Profiler.html) (Web Unity).|
+|[Nástroje pro sledování výkonu](../profiling/performance-explorer.md)|Ne|Používejte [Profiler Unity](https://docs.unity3d.com/Manual/Profiler.html) (Web Unity).|
 |[Analýza problémů s .NET Framework paměti](https://msdn.microsoft.com/library/dn342825.aspx)|Ne|Nástroje sady Visual Studio se nepřipojily k rozhraní Mono (jak je používáno v Unity) k profilaci. Použijte [Profiler Unity](http://docs.unity3d.com/Manual/Profiler.html) (dokumentace Unity).|
 
 ## <a name="release-management"></a>Správa vydaných verzí
@@ -116,7 +116,7 @@ Odkaz na odkaz: [sestavení a vydání v Azure Pipelines a TFS](/azure/devops/pi
 |-------------|--------------------------|-------------------------|
 |Správa procesů vydaných verzí|Ano||
 |Nasazení na servery pro souběžné načítání prostřednictvím skriptů|Ano||
-|Nahrát do App Storu|Částečné|K dispozici jsou rozšíření, která mohou tento proces automatizovat pro některé obchody s aplikacemi. Viz [rozšíření pro Azure DevOps Services](https://marketplace.visualstudio.com/VSTS); například [rozšíření pro Google Play](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play).|
+|Nahrát do App Storu|Částečně|K dispozici jsou rozšíření, která mohou tento proces automatizovat pro některé obchody s aplikacemi. Viz [rozšíření pro Azure DevOps Services](https://marketplace.visualstudio.com/VSTS); například [rozšíření pro Google Play](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play).|
 
 ## <a name="monitor-with-hockeyapp"></a>Monitorování pomocí HockeyApp
 

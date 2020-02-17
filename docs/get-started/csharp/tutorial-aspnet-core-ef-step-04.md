@@ -1,8 +1,8 @@
 ---
-title: 'Krok 4: Vystavení webového rozhraní API z vaše aplikace ASP.NET Core'
-description: Přidání webového rozhraní API do webové aplikace ASP.NET Core s touto Výukové video a podrobné pokyny.
+title: 'Krok 4: zpřístupnění webového rozhraní API z aplikace ASP.NET Core'
+description: Pomocí tohoto výukového kurzu a podrobného postupu přidejte do své ASP.NET Core webové aplikace webové rozhraní API.
 ms.custom: get-started
-ms.date: 03/31/2019
+ms.date: 02/13/2020
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 monikerRange: vs-2019
@@ -16,34 +16,34 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 93e3b0af04060c3a3805b29e5d1da71c4f60ec31
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 67d3887c7cf665f9fd8d2789d460cc1a595e2bff
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62553854"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271500"
 ---
-# <a name="step-4-expose-a-web-api-from-your-aspnet-core-app"></a>Krok 4: Vystavení webového rozhraní API z aplikace ASP.NET Core
+# <a name="step-4-expose-a-web-api-from-your-aspnet-core-app"></a>Krok 4: vystavení webového rozhraní API z aplikace ASP.NET Core
 
-Postupujte podle těchto kroků přidejte webového rozhraní API do stávající aplikace ASP.NET Core.
+Pomocí těchto kroků přidáte webové rozhraní API do existující aplikace ASP.NET Core.
 
-_Podívejte se na video a můžete pokračovat k přidání podpory webového rozhraní API do vaší první aplikace ASP.NET Core._
+_Podívejte se na toto video a sledujte společně a přidejte podporu webového rozhraní API do vaší první ASP.NET Core aplikace._
 
 > [!VIDEO https://www.youtube.com/embed/o_fYPOsAXts]
 
-## <a name="open-your-project"></a>Otevřete svůj projekt
+## <a name="open-your-project"></a>Otevřete projekt
 
-Otevřete aplikaci ASP.NET Core v aplikaci Visual Studio 2019. Aplikace by již být pomocí EF Core ke správě vašich typů modelu podle konfigurace v [kroku 3 v této sérii kurzů](tutorial-aspnet-core-ef-step-03.md).
+Otevřete aplikaci ASP.NET Core v aplikaci Visual Studio 2019. Aplikace by už měla používat EF Core ke správě typů modelů, jak je nakonfigurované v [kroku 3 této série kurzů](tutorial-aspnet-core-ef-step-03.md).
 
-## <a name="add-an-api-controller"></a>Přidat kontroler API
+## <a name="add-an-api-controller"></a>Přidat kontroler rozhraní API
 
-Klikněte pravým tlačítkem na projekt a přidejte novou složku s názvem *Api*. Potom klikněte pravým tlačítkem na tuto složku a zvolte **přidat** > **novou vygenerovanou položku**. Zvolte **kontroler API s akcemi používající nástroj Entity Framework.** Teď zvolte existující třídy modelu a klikněte na tlačítko **přidat**.
+Klikněte pravým tlačítkem na projekt a přidejte novou složku s názvem *rozhraní API*. Potom klikněte pravým tlačítkem na tuto složku a zvolte **přidat** > **Nová vygenerovaná položka**. **Pomocí Entity Framework vyberte možnost kontroler API s akcemi.** Nyní vyberte existující třídu modelu a klikněte na **Přidat**.
 
-![Visual Studio. 2019 ASP.NET Core, automaticky generovaný kontroler API](media/vs-2019/vs2019-add-scaffold-api.png)
+![Visual Studio 2019 ASP.NET Core vygenerovaného kontroleru rozhraní API](media/vs-2019/vs2019-add-scaffold-api.png)
 
-## <a name="reviewing-the-generated-controller"></a>Kontrola vytvořeném kontroleru
+## <a name="reviewing-the-generated-controller"></a>Kontrola vygenerovaného kontroleru
 
-Generovaný kód obsahuje novou třídu kontroleru. V horní části definice třídy jsou dva atributy.
+Vygenerovaný kód zahrnuje novou třídu kontroleru. V horní části definice třídy jsou dva atributy.
 
 ```csharp
 [Route("api/[controller]")]
@@ -51,9 +51,9 @@ Generovaný kód obsahuje novou třídu kontroleru. V horní části definice t�
 public class GamesController : ControllerBase
 ```
 
-První z nich určuje trasu pro akce v tomto kontroleru jako `api/[controller]` to znamená, že pokud je název kontroleru `GamesController` trasy bude `api/Games`.
+První z nich určuje trasu pro akce v tomto kontroleru jako `api/[controller]` což znamená, že pokud se kontroler jmenuje `GamesController` bude trasa `api/Games`.
 
-Druhý atribut `[ApiController]`, některé užitečné ověření přidá do třídy, jako je zajištění každá akce, metoda obsahuje vlastní `[Route]` atribut.
+Druhý atribut, `[ApiController]`, přidá do třídy několik užitečných ověření, jako je například zajistěte, aby každá metoda Action zahrnovala vlastní atribut `[Route]`.
 
 ```csharp
 public class GamesController : ControllerBase
@@ -66,7 +66,7 @@ public class GamesController : ControllerBase
     }
 ```
 
-Kontroler používá stávající `AppDbContext`, předaná do konstruktoru. Každá akce bude toto pole použít pro práci s daty vaší aplikace.
+Kontroler používá existující `AppDbContext`předaný do svého konstruktoru. Každá akce použije toto pole pro práci s daty aplikace.
 
 ```csharp
 // GET: api/Games
@@ -77,7 +77,7 @@ public IEnumerable<Game> GetGame()
 }
 ```
 
-Prvním způsobem je jako zadaný pomocí jednoduchého požadavek GET `[HttpGet]` atribut. Nepřijímá žádné parametry a vrátí seznam všech her v databázi.
+První metoda je jednoduchý požadavek GET, jak je uvedeno pomocí atributu `[HttpGet]`. Nepřijímá žádné parametry a vrací seznam všech her v databázi.
 
 ```csharp
 // GET: api/Games/5
@@ -100,7 +100,7 @@ public async Task<IActionResult> GetGame([FromRoute] int id)
 }
 ```
 
-Určuje další metoda `{id}` v trase, které se přidají do následující trasy `/` tak úplnou směrování bude vypadat `api/Games/5` jak je znázorněno v komentáři v horní části. `id` Vstup je namapována na `id` parametr metody. Uvnitř metody, pokud model není platný `BadRequest` vrátí výsledek. V opačném případě se pokusí EF najít záznam odpovídající zadané `id`. V případě nedostupnosti `NotFound` se vrátí výsledek, jinak odpovídající `Game` vrátí záznam.
+Další metoda určuje `{id}` v trase, která se přidá do trasy za `/`, takže kompletní trasa bude podobná `api/Games/5`, jak je znázorněno v komentáři nahoře. Vstup `id` je mapován na parametr `id` v metodě. V případě, že je model neplatný, je v rámci metody vrácen `BadRequest` výsledek. V opačném případě se EF pokusí najít záznam, který odpovídá poskytnuté `id`. Pokud se nedaří vrátit výsledek `NotFound`, jinak se vrátí odpovídající záznam `Game`.
 
 ```csharp
 // PUT: api/Games/5
@@ -139,7 +139,7 @@ public async Task<IActionResult> PutGame([FromRoute] int id, [FromBody] Game gam
 }
 ```
 
-Další `[HttpPut]` požadavku na rozhraní API se používá k provedení aktualizace. Nové `Game` záznamu je k dispozici v textu požadavku. Některá ověřování a kontroly chyb provádí, a pokud vše, co je úspěšné aktualizaci záznamu v databázi s hodnotami v textu požadavku. Jinak se vrátí odpovídající chybové odpovědi.
+V dalším kroku se k provedení aktualizací používá `[HttpPut]` požadavek na rozhraní API. Nový záznam `Game` je k dispozici v těle žádosti. Provede se kontrola ověřování a chyb a pokud je vše úspěšné, záznam v databázi se aktualizuje o hodnoty uvedené v těle žádosti. V opačném případě se vrátí vhodná chybová odpověď.
 
 ```csharp
 // POST: api/Games
@@ -158,7 +158,7 @@ public async Task<IActionResult> PostGame([FromBody] Game game)
 }
 ```
 
-`[HttpPost]` Požadavku se používá k přidání nových záznamů do systému. Stejně jako u `[HttpPut]`, se přidá tento záznam v textu požadavku. Pokud je platný, EF Core přidá záznam do databáze a akce vrátí aktualizovaný záznam (s jeho databáze, vygeneruje ID) a odkaz na záznam v rozhraní API.
+K přidání nových záznamů do systému se použije `[HttpPost]` požadavek. Stejně jako u `[HttpPut]`se záznam přidá do těla žádosti. Pokud je platný, EF Core přidá záznam do databáze a akce vrátí aktualizovaný záznam (s vygenerovaným ID databáze) a odkaz na záznam v rozhraní API.
 
 ```csharp
 // DELETE: api/Games/5
@@ -183,15 +183,15 @@ public async Task<IActionResult> DeleteGame([FromRoute] int id)
 }
 ```
 
-A konečně `[HttpDelete]` trasy s ID slouží k odstranění záznamu. Pokud je požadavek platný a existuje záznam se zadaným ID., EF Core ho odstranit z databáze.
+Nakonec se k odstranění záznamu používá `[HttpDelete]` trasa s ID. Pokud je požadavek platný a záznam s daným ID existuje, EF Core jej odstranit z databáze.
 
-## <a name="adding-swagger"></a>Přidání Swagger
+## <a name="adding-swagger"></a>Přidává se Swagger.
 
-Swagger je dokumentace k rozhraní API a testovací nástroj, který se dá přidat jako sadu služeb a middleware pro aplikace ASP.NET Core. Chcete-li to provést, klikněte pravým tlačítkem na projekt a zvolte **spravovat balíčky NuGet**. Klikněte na **Procházet** a vyhledejte `Swashbuckle.AspNetCore` a nainstalovat odpovídající balíček.
+Swagger je dokumentace a nástroj pro testování rozhraní API, které je možné přidat jako sadu služeb a middlewaru do ASP.NET Core aplikace. Provedete to tak, že kliknete pravým tlačítkem na projekt a zvolíte **Spravovat balíčky NuGet**. Pak klikněte na tlačítko **Procházet**, vyhledejte `Swashbuckle.AspNetCore`a nainstalujte verzi 4.0.1.
 
-![Visual Studio 2019 přidat z Nuget Swashbuckle](media/vs-2019/vs2019-nuget-swashbuckle.png)
+![Visual Studio 2019 přidání swashbuckle z NuGet](media/vs-2019/vs2019-nuget-swashbuckle.png)
 
-Po instalaci otevřete `Startup.cs` a přidejte následující na konec objektu `ConfigureServices` metody:
+Po instalaci otevřete `Startup.cs` a na konec `ConfigureServices` metody přidejte následující:
 
 ```csharp
 services.AddSwaggerGen(c =>
@@ -200,9 +200,9 @@ services.AddSwaggerGen(c =>
 });
 ```
 
-Také budete muset přidat `using Swashbuckle.AspNetCore.Swagger;` v horní části souboru.
+V horní části souboru budete taky muset přidat `using Swashbuckle.AspNetCore.Swagger;`.
 
-V dalším kroku přidejte následující text do `Configure` metoda, těsně před `UseMvc`:
+Dále přidejte následující do metody `Configure` těsně před `UseMvc`:
 
 ```csharp
 // Enable middleware to serve generated Swagger as a JSON endpoint.
@@ -216,19 +216,19 @@ app.UseSwaggerUI(c =>
 });
 ```
 
-Teď byste měli moct sestavit a spustit aplikaci. V prohlížeči přejděte na `/swagger` do adresního řádku. Zobrazí se seznam koncových bodů rozhraní API vaší aplikace a modely. 
+Nyní byste měli být schopni sestavit a spustit vaši aplikaci. V prohlížeči přejděte na adresu `/swagger` na panelu Adresa. Měl by se zobrazit seznam koncových bodů a modelů rozhraní API vaší aplikace. 
 
-![Visual Studio. 2019 Swagger stránku v prohlížeči](media/vs-2019/vs2019-swagger-browser.png)
+![Stránka Swagger sady Visual Studio 2019 v prohlížeči](media/vs-2019/vs2019-swagger-browser.png)
 
-Klikněte na koncový bod v rámci her, pak `Try it out` a `Execute` zobrazíte chování různých koncových bodů.
+Klikněte na koncový bod v části hry a pak `Try it out` a `Execute`, abyste viděli, jak se chovají různé koncové body.
 
 ## <a name="next-steps"></a>Další kroky
 
-V dalším videu se dozvíte, jak nasadit aplikaci do Azure.
+V dalším videu se naučíte, jak nasadit aplikaci do Azure.
 
-[Krok 5: Nasazení aplikace ASP.NET Core do Azure](tutorial-aspnet-core-ef-step-05.md)
+[Krok 5: nasazení aplikace ASP.NET Core do Azure](tutorial-aspnet-core-ef-step-05.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Začínáme se službou Swashbuckle a ASP.NET Core](/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.2&tabs=visual-studio)
-- [ASP.NET Core webové rozhraní API nápovědy stránky ve Swaggeru / OpenAPI](/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-2.2)
+- [Začínáme s swashbuckle a ASP.NET Core](/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.2&tabs=visual-studio)
+- [Stránky s OpenAPI s webovým rozhraním API pomocí Swagger/ASP.NET Core](/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-2.2)

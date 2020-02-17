@@ -19,17 +19,17 @@ f1_keywords:
 - _Field_size_full_opt_
 - _Field_z_
 ms.assetid: b8278a4a-c86e-4845-aa2a-70da21a1dd52
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 70dc130633e9f191811748b2ab316ad339ad4277
-ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
+ms.openlocfilehash: 0ebcd88df8508ae534ab51289016261193f54380
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74879253"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271031"
 ---
 # <a name="annotating-structs-and-classes"></a>Zadávání poznámek ke strukturám a třídám
 
@@ -45,7 +45,7 @@ ms.locfileid: "74879253"
 
      Pole, které má zapisovatelné velikosti v prvcích (nebo bajtech), jak je určeno `size`.
 
-- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
+- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`, `_Field_size_bytes_part_(size, count)``_Field_size_bytes_part_opt_(size, count)`
 
      Pole, které má zapisovatelné velikosti v prvcích (nebo bajtech), jak je určeno `size`a `count` těch prvků (bajtů), které jsou čitelné.
 
@@ -59,7 +59,7 @@ ms.locfileid: "74879253"
 
 - `_Struct_size_bytes_(size)`
 
-     Platí pro strukturu nebo deklaraci třídy.  Označuje, že platný objekt tohoto typu může být větší než deklarovaný typ, s počtem bajtů určených `size`.  Příklad:
+     Platí pro strukturu nebo deklaraci třídy.  Označuje, že platný objekt tohoto typu může být větší než deklarovaný typ, s počtem bajtů určených `size`.  Například:
 
     ```cpp
 
@@ -109,7 +109,7 @@ Poznámky k tomuto příkladu:
 - `_Field_range_` pro `bufferSize` určuje, že hodnota `bufferSize` by měla být v rozmezí od 1 do `MaxBufferSize` (včetně).
 - Konečné výsledky `_Struct_size_bytes_` a `_Field_size_` poznámek jsou ekvivalentní. U struktur nebo tříd, které mají podobné rozložení, `_Field_size_` je snazší je číst a udržovat, protože má méně odkazů a výpočtů než ekvivalentní `_Struct_size_bytes_` anotace. `_Field_size_` nevyžaduje převod na velikost bajtu. Je-li velikost bajtu jedinou možností, například pro pole typu void, lze použít `_Field_size_bytes_`. Pokud existují `_Struct_size_bytes_` i `_Field_size_`, bude k dispozici pro nástroje. V případě nesouhlasu dvou poznámek se jedná o nástroj.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Použití poznámek SAL k snížení míry výskytu závad kódu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Porozumění SAL](../code-quality/understanding-sal.md)

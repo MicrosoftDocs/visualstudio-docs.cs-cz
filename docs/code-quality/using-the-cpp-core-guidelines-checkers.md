@@ -2,17 +2,17 @@
 title: Použití kontrolních mechanismů C++ Core Guidelines
 ms.date: 08/14/2018
 ms.topic: conceptual
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 dev_langs:
 - CPP
-ms.openlocfilehash: 762ba639c1443bb737087233d04c9e3753f2f455
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 95b3af7db7fc0e4c71d78716714031fd07dbdab5
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807082"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271769"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Použití kontrolních mechanismů C++ Core Guidelines
 
@@ -59,7 +59,7 @@ Tento příklad ukazuje několik upozornění, která mohou C++ základní pravi
 
 - C26485 je vázáno na pravidlo. 3: žádné Decay pole na ukazatel.
 
-- C26481 je rozsahy pravidel. 1: Nepoužívejte aritmetický ukazatel. Místo nich se používá `span`.
+- C26481 je rozsahy pravidel. 1: Nepoužívejte aritmetický ukazatel. Místo toho použijte `span`.
 
 Pokud je C++ při kompilování tohoto kódu nainstalována a povolená základní analýza kódu RuleSets, první dvě upozornění jsou výstup, ale třetí se potlačí. Zde je výstup sestavení z příkladu kódu:
 
@@ -73,7 +73,7 @@ c:\users\username\documents\visual studio 2015\projects\corecheckexample\coreche
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-C++ Základní pokyny jsou tam, kde vám pomůžou psát lepší a bezpečnější kód. Pokud však máte instanci, kde pravidlo nebo profil nepoužijete, je snadné ho potlačit přímo v kódu. Můžete použít atribut `gsl::suppress`, chcete-li C++ , aby základní kontroly zjistily a nahlášeny jakékoli porušení pravidla v následujícím bloku kódu. Jednotlivé příkazy můžete označit pro potlačení specifických pravidel. Můžete dokonce potlačit celý profil s mezemi, a to tak, že zapíšete `[[gsl::suppress(bounds)]]` bez zahrnutí konkrétního čísla pravidla.
+C++ Základní pokyny jsou tam, kde vám pomůžou psát lepší a bezpečnější kód. Pokud však máte instanci, kde pravidlo nebo profil nepoužijete, je snadné ho potlačit přímo v kódu. Atribut `gsl::suppress` lze použít k zajištění C++ , že základní kontrolu před detekcí a vykazováním jakéhokoliv porušení pravidla v následujícím bloku kódu. Jednotlivé příkazy můžete označit pro potlačení specifických pravidel. Můžete dokonce potlačit celý profil s mezemi, a to tak, že zapíšete `[[gsl::suppress(bounds)]]` bez zahrnutí konkrétního čísla pravidla.
 
 ## <a name="supported-rule-sets"></a>Podporované sady pravidel
 Při přidání nových pravidel do nástroje pro C++ kontrolu základních pokynů se může zvýšit počet upozornění vytvořených pro stávající kód. Předdefinované sady pravidel můžete použít k filtrování, které typy pravidel se mají povolit.
@@ -174,7 +174,7 @@ V některých případech může být užitečné provádět analýzu kódu a d�
 3. Načtěte projekt a otevřete jeho vlastnosti.
 4. Povolte analýzu kódu, vyberte příslušné sady pravidel, ale nepovolujte rozšíření pro analýzu kódu.
 5. Do souboru, který chcete analyzovat, použijte kontrolu C++ základních pokynů a otevřete jeho vlastnosti.
-6. Zvolit **možnostiC++\command čáry** a přidat `/analyze:plugin EspXEngine.dll`
+6. Vyberte **Možnosti řádkuC++C/\command** a přidejte `/analyze:plugin EspXEngine.dll`
 7. Zakázat použití předkompilované hlavičky (**hlavičky C/C++\Precompiled**). To je nezbytné, protože modul rozšíření se může pokusit přečíst své interní informace z předkompilované hlavičky (PCH); Pokud se soubor PCH zkompiluje s výchozími možnostmi projektu, nebude kompatibilní.
 8. Znovu sestavte projekt. Společné kontroly před rychlým spuštěním by se měly spouštět na všech souborech. Vzhledem k C++ tomu, že kontrola základních pokynů není ve výchozím nastavení povolená, měla by běžet jenom pro soubor, který je nakonfigurovaný tak, aby ho používal.
 
@@ -223,15 +223,15 @@ Použijete-li systém sestavení, který nespoléhá na nástroj MSBuild, může
 Je nutné nastavit několik proměnných prostředí a použít pro kompilátor správné možnosti příkazového řádku. Je lepší pracovat v prostředí "nativní nástroje" příkazového řádku, takže nemusíte hledat konkrétní cesty pro kompilátor, zahrnout adresáře atd.
 
 1. **Proměnné prostředí**
-   - `set esp.extensions=cppcorecheck.dll` znamená to, že modul načte C++ základní pokyny.
+   - `set esp.extensions=cppcorecheck.dll` to oznamuje modulu, aby načetl C++ základní pokyny.
    - `set esp.annotationbuildlevel=ignore` tím zakážete logiku, která zpracovává poznámky SAL. Poznámky neovlivňují analýzu kódu v nástroji C++ kontrola základních pokynů, jejich zpracování ale trvá čas (někdy dlouhou dobu). Toto nastavení je volitelné, ale důrazně se doporučuje.
    - `set caexcludepath=%include%` důrazně doporučujeme, abyste zakázali upozornění, která se aktivují ve standardních hlavičkách. Sem můžete přidat další cesty, například cestu k běžným hlavičkám v projektu.
 2. **Možnosti příkazového řádku**
-   - `/analyze` povolí analýzu kódu (Zvažte také použití/analyze: Only a/analyze: quiet).
+   - `/analyze` povoluje analýzu kódu (Zvažte také použití/analyze: Only a/analyze: quiet).
    - `/analyze:plugin EspXEngine.dll` Tato možnost načte modul rozšíření analýzy kódu do rychlého režimu. Tento modul zase načte základní pokyny pro C++ kontrolu.
 
 ## <a name="use-the-guideline-support-library"></a>Použití knihovny podpory zásad
-Knihovna podpory směrnic je navržená tak, aby vám pomohla postupovat podle základních pokynů. GSL obsahuje definice, které umožňují nahradit konstrukce náchylné k chybám s bezpečnějšími alternativami. Můžete například nahradit pár parametrů `T*, length` pomocí typu `span<T>`. GSL je k dispozici na adrese [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl). Knihovna je open source, takže můžete zobrazit zdroje, vytvářet komentáře nebo přispívat. Projekt najdete na adrese [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
+Knihovna podpory směrnic je navržená tak, aby vám pomohla postupovat podle základních pokynů. GSL obsahuje definice, které umožňují nahradit konstrukce náchylné k chybám s bezpečnějšími alternativami. Můžete například nahradit dvojici `T*, length` parametrů s typem `span<T>`. GSL je k dispozici na adrese [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl). Knihovna je open source, takže můžete zobrazit zdroje, vytvářet komentáře nebo přispívat. Projekt najdete na adrese [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
 
 ## <a name="vs2015_corecheck"></a>Použití C++ základních pokynů pro kontrolu v projektech sady Visual Studio 2015
 
@@ -253,6 +253,6 @@ Z důvodu způsobu, jakým jsou načtena pravidla analýzy kódu, je nutné nain
 
    Balíček NuGet přidá další soubor MSBuild *. targets* do projektu, který je vyvolán při povolení analýzy kódu v projektu. Tento soubor *. targets* přidá C++ pravidla základní kontroly jako další rozšíření nástroje Visual Studio Code Analysis Tool. Po instalaci balíčku můžete použít dialogové okno stránky vlastností k povolení nebo zakázání vydaných a experimentálních pravidel.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Základní informace C++ o kontrole sady Visual Studio](code-analysis-for-cpp-corecheck.md)
