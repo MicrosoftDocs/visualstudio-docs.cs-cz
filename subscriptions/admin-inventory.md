@@ -3,15 +3,15 @@ title: Inventář předprodukčních prostředí | Visual Studio Marketplace
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/23/2019
+ms.date: 02/17/2020
 ms.topic: conceptual
 description: Další informace o responsibilty správců pro provádění předprodukčních inventářů
-ms.openlocfilehash: 8218b1802a6369aed00be63572c80cba7b5c29f3
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 0eacd177b0901d866bbb974aca81a0e77cdaf25d
+ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849826"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77439113"
 ---
 # <a name="inventory-of-pre-production-environment"></a>Inventář předprodukčního prostředí
 Předplatná sady Visual Studio zjednodušují správu prostředků, a to pomocí počítání uživatelů místo zařízení.
@@ -35,3 +35,9 @@ Další informace o zodpovědnostech pro správce:
 - [Správa velkých týmů a externích dodavatelů](manage-teams.md)
 - [Sledování přiřazení uživatelů a zpracování objednávek](assignments-orders.md)
 - Použití [maximálního využití](maximum-usage.md) ke sledování závazků nákupu
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
