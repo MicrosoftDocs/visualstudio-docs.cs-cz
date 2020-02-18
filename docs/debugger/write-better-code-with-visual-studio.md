@@ -4,7 +4,7 @@ description: Pomocí sady Visual Studio můžete napsat lepší kód s méně ch
 ms.custom:
 - debug-experiment
 - seodec18
-ms.date: 01/24/2019
+ms.date: 02/14/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - debugger
@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b1fe0a9bb1e966bd1451bb5d816eaab814071fb5
-ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
+ms.openlocfilehash: 2ac595098d793e44d65312a09fc8857225f150ef
+ms.sourcegitcommit: 6ef52c2030b37ea7a64fddb32f050ecfb77dd918
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72000172"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416383"
 ---
 # <a name="debugging-techniques-and-tools-to-help-you-write-better-code"></a>Techniky a nástroje ladění, které vám pomůžou psát lepší kód
 
@@ -42,14 +42,26 @@ Následující kód obsahuje chyby, které můžete vyřešit pomocí integrovan
 
 Vytvoření aplikace:
 
-1. Otevřete Visual Studio a vyberte **soubor** > **Nový** **projekt** > . V části **Visual C#** , zvolte **Windows Desktop** nebo **.NET Core**a potom v prostředním podokně vyberte **konzolovou aplikaci**.
+1. Musíte mít nainstalovanou aplikaci Visual Studio a nainstalovanou aplikaci **.NET Core pro vývoj pro různé platformy** nebo **desktopové vývojové prostředí .NET** v závislosti na typu aplikace, kterou chcete vytvořit.
 
-    > [!NOTE]
-    > Pokud se nezobrazí **konzolovou aplikaci** šablony projektu, klikněte na tlačítko **otevřít instalační program Visual Studio** odkaz v levém podokně **nový projekt** dialogové okno. Spustí se instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací .NET** nebo **vývoj pro různé platformy .NET Core** úloh, klikněte na tlačítko **změnit**.
+    Pokud jste ještě nenainstalovali aplikaci Visual Studio, můžete ji nainstalovat zdarma na stránce pro [Stažení sady Visual studio](https://visualstudio.microsoft.com/downloads/) .
 
-2. Do pole **název** zadejte **Console_Parse_JSON** a klikněte na **OK**. Visual Studio vytvoří projekt.
+    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, klikněte na **nástroje** > **získat nástroje a funkce**. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoj pro různé platformy .NET Core** nebo **vývoj desktopových aplikací .NET** a pak zvolte **Upravit**.
 
-3. Nahraďte výchozí kód v souboru *program.cs* projektu následujícím ukázkovým kódem.
+1. Otevřete sadu Visual Studio.
+
+    ::: moniker range=">=vs-2019"
+    V okně Start vyberte možnost **vytvořit nový projekt**. Do vyhledávacího pole zadejte **Console** a pak zvolte buď **Konzolová aplikace (.NET Core)** , nebo **aplikace konzoly (.NET Framework)** . Zvolte **Další**. Zadejte název projektu, například **Console_Parse_JSON** a klikněte na **vytvořit**.
+    ::: moniker-end
+    ::: moniker range="vs-2017"
+    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně dialogového okna **Nový projekt** , v části **C#vizuál**zvolte **Konzolová aplikace**a pak v prostředním podokně zvolte buď **Konzolová aplikace (.NET Core)** nebo **aplikace konzoly (.NET Framework)** . Zadejte název, například **Console_Parse_JSON** a klikněte na tlačítko **OK**.
+    ::: moniker-end
+
+    Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** nebo **aplikace konzoly (.NET Framework)** , přejděte do části **nástroje** > **získat nástroje a funkce**, které otevřou instalační program pro Visual Studio. Zvolte buď možnost **vývoj pro různé platformy .NET Core** , nebo **desktopový vývoj** pro platformu .NET a pak zvolte možnost **Upravit**.
+
+    Visual Studio vytvoří projekt konzoly, který se zobrazí v Průzkumník řešení v pravém podokně.
+
+1. Nahraďte výchozí kód v souboru *program.cs* projektu následujícím ukázkovým kódem.
 
 ```csharp
 using System;
@@ -174,7 +186,7 @@ namespace Console_Parse_JSON
 
 ## <a name="find-the-red-and-green-squiggles"></a>Najdete červenou a zelenou vlnovkou!
 
-Předtím, než se pokusíte spustit ukázkovou aplikaci a spustit ladicí program, zkontrolujte kód v editoru kódu pro červenou a zelenou vlnovkou. Představují chyby a upozornění, které jsou označeny analyzátor kódu rozhraní IDE. Červenou vlnovkou jsou chyby při kompilaci, která je nutné opravit před spuštěním kódu. Zelenou vlnovkou se upozornění. I když často moci spustit vaši aplikaci bez opravy problémů upozornění, je možné příčiny chyb a můžete často ušetřit čas a potíže s zjišťováním je. Tato upozornění a chyby zobrazí také v **seznam chyb** okno, pokud chcete zobrazit seznam.
+Předtím, než se pokusíte spustit ukázkovou aplikaci a spustit ladicí program, zkontrolujte kód v editoru kódu pro červenou a zelenou vlnovkou. Představují chyby a upozornění, které jsou označeny analyzátor kódu rozhraní IDE. Červenou vlnovkou jsou chyby při kompilaci, která je nutné opravit před spuštěním kódu. Zelenou vlnovkou se upozornění. I když často moci spustit vaši aplikaci bez opravy problémů upozornění, je možné příčiny chyb a můžete často ušetřit čas a potíže s zjišťováním je. Tato upozornění a chyby se také zobrazí v okně **Seznam chyb** , pokud dáváte přednost zobrazení seznamu.
 
 V ukázkové aplikaci zobrazí se několik červenou vlnovkou, které je potřeba opravit a jednoho zelené, který budete podíváte na. Zde je první chyba.
 
@@ -184,15 +196,15 @@ Pokud chcete tuto chybu opravit, budete prohlédněte Další funkcí IDE, repre
 
 ## <a name="check-the-light-bulb"></a>Podívejte se, žárovky.
 
-První červená vlnovka představuje chybu v době kompilace. Najeďte myší nad ním a zobrazí se zpráva ```The name `Encoding` does not exist in the current context```.
+První červená vlnovka představuje chybu v době kompilace. Najeďte myší na ni a zobrazí se zpráva ```The name `Encoding` does not exist in the current context```.
 
-Všimněte si, že tato chyba zobrazuje ikonou žárovky do levé dolní části. Spolu s ikonu šroubovák ![šroubovák ikonu](../ide/media/screwdriver-icon.png), ikonou žárovky ![ikonou žárovky](../ide/media/light-bulb-icon.png) představuje rychlé akce, které vám pomohou opravit nebo Refaktorujte kód vložený. Představuje žárovky problémy, které *by měl* opravit. Šroubovák se na problémy, které je možné opravit. Použít první navrhované opravy pro vyřešení této chyby kliknutím **pomocí System.Text** na levé straně.
+Všimněte si, že tato chyba zobrazuje ikonou žárovky do levé dolní části. Společně s ikonou Screwdriver ![](../ide/media/screwdriver-icon.png)ikonu Screwdriver, ikona žárovky ![ikona žárovky](../ide/media/light-bulb-icon.png) představuje rychlé akce, které vám pomůžou s opravou nebo refaktorem vloženého kódu. Žárovka představuje problémy, které *byste měli* opravit. Šroubovák se na problémy, které je možné opravit. Pokud chcete tuto chybu vyřešit, použijte první navrhovanou opravu, která se zobrazí po kliknutí na tlačítko **použít System. text** na levé straně.
 
 ![Oprava kódu pomocí žárovky](../debugger/media/write-better-code-missing-include.png)
 
-Po kliknutí na tuto položku, sada Visual Studio přidá `using System.Text` příkazu v horní části *Program.cs* souboru a červená vlnovka zmizí. (Pokud si nejste jistí, jakou navrhované opravy funkci, zvolte **náhled změn** odkaz na pravé straně před použitím opravy.)
+Po kliknutí na tuto položku Visual Studio přidá příkaz `using System.Text` v horní části souboru *program.cs* a červená vlnovka zmizí. (Pokud si nejste jistí, co Navrhovaná oprava udělá, před použitím opravy klikněte na odkaz **Náhled změn** na pravé straně.)
 
-Předchozí chybu je běžné, která obvykle opravit tak, že přidáte nový `using` příkaz do vašeho kódu. Existuje několik běžných podobných chyb, například ```The type or namespace `Name` cannot be found.``` tyto druhy chyb mohou označovat chybějící odkaz na sestavení (klikněte pravým tlačítkem myši na projekt, vyberte možnost **Přidat** **odkaz** > ), nesprávně napsaný název nebo chybějící knihovna, kterou potřebujete. Chcete-li přidat C#(pro, klikněte pravým tlačítkem myši na projekt a vyberte možnost **Spravovat balíčky NuGet**).
+Předchozí chyba je běžně ta, kterou obvykle opravíte přidáním nového příkazu `using` do kódu. Existuje několik běžných podobných chyb, například ```The type or namespace `Name` cannot be found.``` tyto druhy chyb mohou indikovat chybějící odkaz na sestavení (klikněte pravým tlačítkem myši na projekt, vyberte **přidat** > **odkaz**), nesprávně napsaný název nebo chybějící knihovna, kterou potřebujete přidat (pro C#klikněte pravým tlačítkem myši na projekt a vyberte možnost **Spravovat balíčky NuGet**).
 
 ## <a name="fix-the-remaining-errors-and-warnings"></a>Oprava zbývajících chyb a upozornění
 
@@ -200,16 +212,16 @@ Existuje několik další podtržení vlnovkou podívat se na tento kód. Tady v
 
 ![Chyba převodu typu](../debugger/media/write-better-code-conversion-error.png)
 
-Vzhledem k tomu, že nástroj code analyzer nelze odhadl váš záměr, nejsou žádné návrhy, které vám pomůžou této doby. Chcete-li vyřešit tuto chybu, je potřeba vědět záměru kódu. V tomto příkladu není příliš obtížné zjistit, která `points` by měl být číselné (integer) hodnotu, protože se snažíte přidat `points` k `totalpoints`.
+Vzhledem k tomu, že nástroj code analyzer nelze odhadl váš záměr, nejsou žádné návrhy, které vám pomůžou této doby. Chcete-li vyřešit tuto chybu, je potřeba vědět záměru kódu. V tomto příkladu není příliš obtížné zjistit, že `points` by měla být číselná (celočíselná) hodnota, protože se pokoušíte přidat `points` do `totalpoints`.
 
-Chcete-li tuto chybu vyřešit, změňte `points` člena `User` třídy z tohoto:
+Chcete-li tuto chybu opravit, změňte `points` člena třídy `User` z tohoto:
 
 ```csharp
 [DataMember]
 internal string points;
 ```
 
-K tomuto:
+měli změnit na:
 
 ```csharp
 [DataMember]
@@ -218,11 +230,11 @@ internal int points;
 
 Červená vlnovka řádků v editoru kódu zmizet.
 
-Dále umístěte ukazatel myši na zelenou vlnovku v deklaraci datového členu `points`. Analyzátor kódu zjistíte, že proměnná nikdy přiřazena hodnota.
+Dále najeďte na zelenou vlnovku v deklaraci datového člena `points`. Analyzátor kódu zjistíte, že proměnná nikdy přiřazena hodnota.
 
 ![Upozornění pro Nepřiřazené proměnnou](../debugger/media/write-better-code-warning-message.png)
 
-Obvykle to představuje problém, který je potřeba opravit. Ale v ukázkové aplikaci ve skutečnosti ukládáte data do `points` proměnné během procesu serializace a následným přidáním tuto hodnotu `totalpoints` datový člen. V tomto příkladu vědět záměru kódu a můžete upozornění ignorovat. Pokud chcete odstranit toto upozornění, ale můžete nahradit následující kód:
+Obvykle to představuje problém, který je potřeba opravit. Nicméně v ukázkové aplikaci, ve které jste ve skutečnosti ukládáte data do proměnné `points` během procesu deserializace a následně přidáte tuto hodnotu do datového členu `totalpoints`. V tomto příkladu vědět záměru kódu a můžete upozornění ignorovat. Pokud chcete odstranit toto upozornění, ale můžete nahradit následující kód:
 
 ```csharp
 item.totalpoints = users[i].points;
@@ -241,21 +253,21 @@ Zelená vlnovku zmizí.
 
 Pokud byla opravena červenou vlnovkou a vyřešit--nebo alespoň prozkoumat – všechny zelenou vlnovkou, budete chtít spustit ladicí program a spusťte aplikaci.
 
-Stisknutím klávesy **F5** (**ladit > Spustit ladění**) nebo **spustit ladění** tlačítko ![spustit ladění](../debugger/media/dbg-tour-start-debugging.png "spustit ladění ") na panelu nástrojů ladění.
+Stiskněte klávesu **F5** (**ladění > Spustit ladění**) nebo klikněte na tlačítko **Spustit** ladění ![Spustit ladění](../debugger/media/dbg-tour-start-debugging.png "Spustit ladění") na panelu nástrojů ladění.
 
-V tomto okamžiku vyvolá ukázkovou aplikaci `SerializationException` výjimce (Chyba za běhu). To znamená, že aplikace potlačuje na data, která se pokouší serializovat. Protože jste aplikaci spustili v režimu ladění (ladicí program se připojil), pomocníka výjimky ladicího programu přejdete přímo na kód, který vyvolal výjimku a poskytuje užitečné chybovou zprávu.
+V tomto okamžiku ukázková aplikace vyvolá výjimku `SerializationException` (Chyba za běhu). To znamená, že aplikace potlačuje na data, která se pokouší serializovat. Protože jste aplikaci spustili v režimu ladění (ladicí program se připojil), pomocníka výjimky ladicího programu přejdete přímo na kód, který vyvolal výjimku a poskytuje užitečné chybovou zprávu.
 
 ![Vyvolá SerializationException](../debugger/media/write-better-code-serialization-exception.png)
 
-Dává pokyn chybová zpráva, která hodnota `4o` nelze analyzovat jako celé číslo. Proto v tomto příkladu víte, data je chybný: `4o` by měl být `40`. Nicméně pokud nepoužíváte kontrolu nad daty v reálné scénáře (například získávají z webové služby), co můžete dělat o něm? Jak to můžete vyřešit?
+Chybová zpráva vás instruuje, že `4o` hodnoty nelze analyzovat jako celé číslo. Proto v tomto příkladu víte, že data jsou chybná: `4o` by měl být `40`. Nicméně pokud nepoužíváte kontrolu nad daty v reálné scénáře (například získávají z webové služby), co můžete dělat o něm? Jak to můžete vyřešit?
 
 Až se dostanete k výjimce, potřebujete (a odpovědí) několik otázek:
 
-* Tato výjimka je právě chybu, která můžete opravit? nebo,
+* Tato výjimka je právě chybu, která můžete opravit? Nebo:
 
 * Je tato výjimka něco, co vaši uživatelé setkat?
 
-Pokud je první, opravte chyby. (V ukázkové aplikaci, která znamená, že oprava chybná data.) Pokud je to druhá, může být nutné zpracovat výjimku v kódu pomocí bloku `try/catch` (v další části se podíváme na další možné strategie). V ukázkové aplikaci nahraďte následujícím kódem:
+Pokud je první, opravte chyby. (V ukázkové aplikaci to znamená opravit chybná data.) Pokud je to ten, může být nutné zpracovat výjimku v kódu pomocí `try/catch` bloku (v další části se podíváme na další možné strategie). V ukázkové aplikaci nahraďte následujícím kódem:
 
 ```csharp
 users = ser.ReadObject(ms) as User[];
@@ -275,13 +287,13 @@ catch (SerializationException)
 }
 ```
 
-A `try/catch` blok má některé náklady na výkon, proto je pouze pro jejich použití když ve skutečnosti je budete potřebovat, to znamená, pokud (a), může dojít k ve vydané verzi aplikace a tam, kde (b) v dokumentaci pro metodu označuje, že by měla vyhledávat došlo k výjimce (za předpokladu, že v dokumentaci k dokončení!). V mnoha případech je odpovídajícím způsobem zpracovat výjimku a uživatel nepotřebuje vědět o něm.
+`try/catch` blok má určité náklady na výkon, takže je budete chtít používat pouze v případě, že je skutečně potřebujete, to znamená, kde (a) mohou nastat ve verzi aplikace a kde (b) dokumentace k metodě označuje, že byste měli vyhledat výjimku (za předpokladu, že je dokumentace dokončena). V mnoha případech je odpovídajícím způsobem zpracovat výjimku a uživatel nepotřebuje vědět o něm.
 
 Tady je několik důležitých tipů pro zpracování výjimek:
 
-* Vyhněte se použití prázdný blok catch, jako je třeba `catch (Exception) {}`, které nepřijímá odpovídající akci chcete vystavit nebo zpracování chyb. Blok catch prázdný nebo informativní můžete skrýt výjimky a může ztížit váš kód ladit místo snazší.
+* Vyhněte se použití prázdného bloku catch, například `catch (Exception) {}`, který neprovádí odpovídající akci k vystavení nebo zpracování chyby. Blok catch prázdný nebo informativní můžete skrýt výjimky a může ztížit váš kód ladit místo snazší.
 
-* Použití `try/catch` bloku kolem konkrétní funkce, která vyvolá výjimku (`ReadObject`, v ukázkové aplikaci). Když ho používáte kolem větší blok kódu, skončíte skrytí umístění chyby. Například nepoužívejte `try/catch` blok po volání funkce nadřazené `ReadToObject`, je vidět tady, nebo vy nepoznáte, ve kterém k výjimce přesně došlo.
+* Použijte `try/catch` blok kolem konkrétní funkce, která vyvolá výjimku (`ReadObject`v ukázkové aplikaci). Když ho používáte kolem větší blok kódu, skončíte skrytí umístění chyby. Nepoužívejte například `try/catch` blok kolem volání nadřazené funkce `ReadToObject`, zobrazená zde, nebo neznáte přesně, kde k výjimce došlo.
 
     ```csharp
     // Don't do this
@@ -296,17 +308,17 @@ Tady je několik důležitých tipů pro zpracování výjimek:
 
 * V případě neznámých funkcí, které zahrnete do aplikace, zejména při interakci s externími daty (například webovými požadavky), Projděte si dokumentaci, kde najdete výjimky, které funkce může vyvolat. To může být důležité informace pro zpracování chyb správné a pro ladění vaší aplikace.
 
-Ukázkovou aplikaci, opravte `SerializationException` v `GetJsonData` metodu tak, že změníte `4o` k `40`.
+Pro ukázkovou aplikaci opravte `SerializationException` v metodě `GetJsonData` změnou `4o` na `40`.
 
 ## <a name="clarify-your-code-intent-by-using-assert"></a>Upřesněte svůj záměr váš kód s využitím assert
 
-Klikněte na tlačítko **restartovat** ![restartovat aplikaci](../debugger/media/dbg-tour-restart.png "RestartApp") tlačítko na panelu nástrojů ladění (**Ctrl** + **Shift**   +  **F5**). Tím se znovu spustí aplikaci v méně kroků. Zobrazí se následující výstup v okně konzoly.
+Klikněte na tlačítko **restartovat** ![aplikaci](../debugger/media/dbg-tour-restart.png "RestartApp") na panelu nástrojů ladění (**CTRL** + **SHIFT** + **F5**). Tím se znovu spustí aplikaci v méně kroků. Zobrazí se následující výstup v okně konzoly.
 
 ![Hodnotu Null ve výstupu](../debugger/media/write-better-code-using-assert-null-output.png)
 
-Můžete zobrazit něco tento výstup, který není úplně vpravo. **název** a **lastname** třetí záznamu jsou prázdné.
+Můžete zobrazit něco tento výstup, který není úplně vpravo. **jméno** a **příjmení** třetího záznamu je prázdné.
 
-Toto je vhodná doba mluvit o užitečné způsobem kódování, často nevyužité, který je určený `assert` příkazy ve vašich funkcí. Přidáním následujícího kódu zahrnete kontrolu za běhu programu, abyste měli jistotu, že `firstname` a `lastname` nejsou `null`. Nahraďte následující kód `UpdateRecords` metody:
+To je dobrý čas na komunikaci s užitečným postupem kódování, který je často nevyužitý, což je použití příkazů `assert` ve vašich funkcích. Přidáním následujícího kódu zahrnete kontrolu za běhu, abyste se ujistili, že `firstname` a `lastname` nejsou `null`. V metodě `UpdateRecords` nahraďte následující kód:
 
 ```csharp
 if (existingUser == false)
@@ -329,28 +341,28 @@ if (existingUser == false)
     user.lastname = users[i].lastname;
 ```
 
-Přidáním `assert` příkazy takto vašich funkcí během procesu vývoje, vám může pomoct určit záměr kódu. V předchozím příkladu jsme zadejte následující informace:
+Přidáním `assert`ch příkazů, jako je to pro vaše funkce během procesu vývoje, můžete určit záměr kódu. V předchozím příkladu jsme zadejte následující informace:
 
 * Platný řetězec pro se vyžaduje jméno
 * Platný řetězec pro se vyžaduje příjmení
 
-Zadáním záměr tímto způsobem vynutit vašim požadavkům. Toto je jednoduchý a užitečný metodu, která vám pomůže surface chyb během vývoje. (`assert` příkazy slouží také jako hlavní prvek při testech jednotek.)
+Zadáním záměr tímto způsobem vynutit vašim požadavkům. Toto je jednoduchý a užitečný metodu, která vám pomůže surface chyb během vývoje. (příkazy`assert` jsou také použity jako hlavní prvek v testování částí.)
 
-Klikněte na tlačítko **restartovat** ![restartovat aplikaci](../debugger/media/dbg-tour-restart.png "RestartApp") tlačítko na panelu nástrojů ladění (**Ctrl** + **Shift**   +  **F5**).
+Klikněte na tlačítko **restartovat** ![aplikaci](../debugger/media/dbg-tour-restart.png "RestartApp") na panelu nástrojů ladění (**CTRL** + **SHIFT** + **F5**).
 
 > [!NOTE]
-> `assert` Kódu je aktivní jenom v sestavení pro ladění.
+> Kód `assert` je aktivní pouze v sestavení ladění.
 
-Po restartování, ladicí program pozastaví na `assert` příkaz, protože výraz `users[i].firstname != null` vyhodnotí jako `false` místo `true`.
+Po restartování bude ladicí program pozastaven na příkaz `assert`, protože výraz `users[i].firstname != null` vyhodnocen jako `false` namísto `true`.
 
 ![Vyhodnocení překládá na hodnotu false](../debugger/media/write-better-code-using-assert.png)
 
-`assert` Chyby se říká, že dojde k nějakému problému, které potřebujete k prozkoumání. `assert` můžete pokrývají množství scénářů, ve kterém se nutně výjimku. V tomto příkladu uživatel neuvidí výjimku a `null` přidá hodnotu jako `firstname` v seznamu záznamů. Může to způsobit potíže později (například se zobrazí ve výstupu konzoly) a může být obtížnější, chcete-li ladit.
+Při `assert` chybě se dozvíte, že došlo k problému, který je třeba prozkoumat. `assert` může pokrývat mnoho scénářů, kde se nemusí nutně zobrazovat výjimka. V tomto příkladu se uživateli nezobrazí výjimka a hodnota `null` se přidá jako `firstname` v seznamu záznamů. Může to způsobit potíže později (například se zobrazí ve výstupu konzoly) a může být obtížnější, chcete-li ladit.
 
 > [!NOTE]
-> V situacích, kdy zavoláte metodu na `null` hodnotu, `NullReferenceException` výsledky. Obvykle chcete se vyhnout použití `try/catch` bloku pro obecné výjimky, to znamená, výjimku, která se neváže na konkrétní knihovnu funkce. Libovolný objekt může vyvolat `NullReferenceException`. Pokud si nejste jisti, naleznete v dokumentaci k funkci knihovny.
+> Ve scénářích, kde zavoláte metodu `null` hodnoty, `NullReferenceException` výsledky. Obvykle se chcete vyhnout použití `try/catch`ho bloku pro obecnou výjimku, tedy výjimku, která není vázána na konkrétní funkci knihovny. Libovolný objekt může vyvolat `NullReferenceException`. Pokud si nejste jisti, naleznete v dokumentaci k funkci knihovny.
 
-Během procesu ladění, je vhodné zachovat konkrétní `assert` příkaz, dokud nebude vědět, budete muset nahraďte skutečný kód opravy. Řekněme, že se že rozhodnete, že uživatel může dojít k výjimce v sestavení pro vydání aplikace. V takovém případě musíte Refaktorovat kód, abyste měli jistotu, že vaše aplikace nebude závažnou výjimku nebo mít za následek některých chyb. Ano tento kód opravit, nahraďte následující kód:
+Během procesu ladění je vhodné zachovat konkrétní příkaz `assert`, dokud nevíte, že ho nebudete muset nahradit skutečnou opravou kódu. Řekněme, že se že rozhodnete, že uživatel může dojít k výjimce v sestavení pro vydání aplikace. V takovém případě musíte Refaktorovat kód, abyste měli jistotu, že vaše aplikace nebude závažnou výjimku nebo mít za následek některých chyb. Ano tento kód opravit, nahraďte následující kód:
 
 ```csharp
 if (existingUser == false)
@@ -366,9 +378,9 @@ if (existingUser == false && users[i].firstname != null && users[i].lastname != 
     User user = new User();
 ```
 
-Pomocí tohoto kódu splnění požadavků na kód a ujistěte se, že záznam s `firstname` nebo `lastname` hodnotu `null` není přidaná k datům.
+Pomocí tohoto kódu splníte požadavky na kód a zajistěte, aby se do dat nepřidal záznam s `firstname` nebo `lastname` hodnota `null`.
 
-V tomto příkladu jsme přidali dvě `assert` příkazy uvnitř smyčka. Obvykle při použití `assert`, je vhodné přidat `assert` příkazy ve vstupním bodu (od), funkce nebo metody. Aktuálně sledujete `UpdateRecords` metoda v ukázkové aplikaci. V této metodě znáte, jste v potíže, pokud platí některá z argumentů metody `null`, proto zkontrolujte jejich obě `assert` příkazu na vstupní bod funkce.
+V tomto příkladu jsme přidali dva příkazy `assert` do smyčky. Obvykle je při použití `assert`nejvhodnější přidat `assert` příkazy na vstupním bodu (začátek) funkce nebo metody. V tuto chvíli se v ukázkové aplikaci díváte na metodu `UpdateRecords`. V této metodě víte, že máte potíže, pokud je `null`některý z argumentů metody, takže je můžete zaškrtnout jak pomocí příkazu `assert` v vstupním bodě funkce.
 
 ```csharp
 public static void UpdateRecords(List<User> db, User[] users)
@@ -377,9 +389,9 @@ public static void UpdateRecords(List<User> db, User[] users)
     Debug.Assert(users != null);
 ```
 
-Předchozí příkazy vaším záměrem je, že můžete načíst existující data (`db`) a načítání nových dat (`users`) před aktualizací cokoli.
+Pro předchozí příkazy je vaším záměrem načíst existující data (`db`) a načíst nová data (`users`) před aktualizací cokoli.
 
-Můžete použít `assert` s jakýmkoli výraz, který se přeloží na `true` nebo `false`. Takže například můžete přidat `assert` příkaz následujícím způsobem.
+`assert` můžete použít s jakýmkoli druhem výrazu, který se překládá na `true` nebo `false`. Takže můžete například přidat příkaz `assert` podobný tomuto.
 
 ```csharp
 Debug.Assert(users[0].points > 0);
@@ -399,15 +411,15 @@ Jsme vám ukázali, pomocníka výjimky ladicího programu ladicí program je v�
 
     Je poučné jak váš kód při spuštění. Další informace o váš kód tímto způsobem a lze často určit chyby v dříve, než se manifest jakékoli zřejmé příznaky.
 
-Naučte se používat základní funkce ladicího programu, najdete v článku [ladění pro naprosté začátečníky](../debugger/debugging-absolute-beginners.md).
+Informace o tom, jak používat základní funkce ladicího programu, najdete v tématu [ladění pro absolutní začátečníky](../debugger/debugging-absolute-beginners.md).
 
 ## <a name="fix-performance-issues"></a>Řešení problémů s výkonem
 
-Chyby jiného druhu zahrnují neefektivní kód, který způsobí, že vaše aplikace běží pomalu nebo používá příliš mnoho paměti. Obecně platí optimalizace výkonu je něco, co můžete udělat později v vývoje aplikací. Však můžete spustit do problémy s výkonem již v rané fázi (například vidíte, že některá část aplikace běží pomalu), a možná budete muset raném stádiu testováním aplikace s nástroji pro profilaci. Další informace o profilování nástroje, jako je nástroj využití CPU a kontejner analyzátoru paměti najdete v tématu [nejdřív se podívejte na nástrojů pro profilaci](../profiling/profiling-feature-tour.md).
+Chyby jiného druhu zahrnují neefektivní kód, který způsobí, že vaše aplikace běží pomalu nebo používá příliš mnoho paměti. Obecně platí optimalizace výkonu je něco, co můžete udělat později v vývoje aplikací. Však můžete spustit do problémy s výkonem již v rané fázi (například vidíte, že některá část aplikace běží pomalu), a možná budete muset raném stádiu testováním aplikace s nástroji pro profilaci. Další informace o nástrojích pro profilaci, jako je nástroj využití CPU a analyzátor paměti, najdete v tématu [první pohled na nástroje pro profilaci](../profiling/profiling-feature-tour.md).
 
 ## <a name="next-steps"></a>Další kroky
 
 V tomto článku jste zjistili, jak se vyhnout a opravte mnoho běžných chyb v kódu a kdy použít ladicí program. V dalším kroku Další informace o opravě problémů pomocí ladicího programu sady Visual Studio.
 
 > [!div class="nextstepaction"]
-> [Ladění pro naprosté začátečníky](../debugger/debugging-absolute-beginners.md)
+> [Ladění pro absolutní začátečníky](../debugger/debugging-absolute-beginners.md)

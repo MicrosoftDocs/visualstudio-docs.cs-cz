@@ -2,7 +2,7 @@
 title: Naučte se ladit vícevláknové aplikace
 description: Ladění pomocí paralelních zásobníků a oken paralelního kukátka v sadě Visual Studio
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 02/14/2020
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e21d5174c9a909e9ad8031dfb7585abc52a7e78
-ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
+ms.openlocfilehash: f280a93022342fd9ca4dcae5cdac1de919fe1657
+ms.sourcegitcommit: 6ef52c2030b37ea7a64fddb32f050ecfb77dd918
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77091792"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416402"
 ---
 # <a name="get-started-debugging-multithreaded-applications-c-visual-basic-c"></a>Začínáme s laděním vícevláknových aplikací (C#, Visual Basic, C++)
 
