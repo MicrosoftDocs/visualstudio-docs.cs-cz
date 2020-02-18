@@ -64,7 +64,7 @@ Možná budete chtít vyžadovat, aby všechna vrácení se změnami zdrojového
 
 Pomocí integrovaných funkcí systému sestavení lze nástroj pro analýzu kódu spustit jako krok procesu [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] sestavení. Další informace najdete v tématu [Azure Pipelines](/azure/devops/pipelines/index?view=vsts).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Rychlý Start: Analýza kódu pro C/C++](quick-start-code-analysis-for-c-cpp.md)
 - [Návod: Analýza kódu CC++ /pro vady](walkthrough-analyzing-c-cpp-code-for-defects.md)

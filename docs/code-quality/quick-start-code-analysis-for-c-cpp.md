@@ -107,6 +107,6 @@ Můžete hledat dlouhé seznamy varovné zprávy a upozornění v řešení víc
 
 - **Filtrování upozornění podle závažnosti**: ve výchozím nastavení se zprávám analýzy kódu přiřadí závažnost **Upozornění**. Závažnost jedné nebo více zpráv můžete přiřadit jako **chybu** v sadě vlastních pravidel. Ve sloupci **závažnost** **Seznam chyb**klikněte na šipku rozevíracího seznamu a pak na ikonu filtru. Chcete-li zobrazit pouze zprávy, které jsou přiřazeny příslušné závažnosti, vyberte možnost **Upozornění** nebo **Chyba** . Zvolte **možnost Vybrat vše** , chcete-li zobrazit všechny zprávy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Analýza kódu pro C/C++](../code-quality/code-analysis-for-c-cpp-overview.md)

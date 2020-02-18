@@ -256,7 +256,7 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
 </Code>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Vložené úkoly](../msbuild/msbuild-inline-tasks.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Cíle](../msbuild/msbuild-targets.md)

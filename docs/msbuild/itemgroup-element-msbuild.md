@@ -83,7 +83,7 @@ Následující příklad kódu ukazuje uživatelsky definované kolekce položek
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Položky](../msbuild/msbuild-items.md)
 - [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md)

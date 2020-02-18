@@ -28,7 +28,7 @@ Můžete použít Visual Studio s **vývojem mobilních C++**  aplikací pro rů
 
 Až nainstalujete nástroje pro sestavení pomocí iOS, přečtěte si tento článek, kde najdete způsoby, jak rychle nakonfigurovat a aktualizovat vzdáleného agenta pro vývoj pro iOS v aplikaci Visual Studio a na Macu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Pokud chcete nainstalovat a používat vzdáleného agenta pro vývoj kódu pro iOS, musíte nejdřív splnit tyto požadavky:
 
@@ -284,6 +284,6 @@ Pokud `ideviceinstaller` chyby, ke kterým nemůže přistupovat `/var/db/lockdo
     
 Pak znovu ověřte, jestli `ideviceinstaller` může komunikovat se zařízením.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Instalace vývoje mobilních aplikací pro různé platformy pomocíC++](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)
