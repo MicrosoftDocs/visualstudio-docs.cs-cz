@@ -59,7 +59,7 @@ ms.locfileid: "77271031"
 
 - `_Struct_size_bytes_(size)`
 
-     Platí pro strukturu nebo deklaraci třídy.  Označuje, že platný objekt tohoto typu může být větší než deklarovaný typ, s počtem bajtů určených `size`.  Například:
+     Platí pro strukturu nebo deklaraci třídy.  Označuje, že platný objekt tohoto typu může být větší než deklarovaný typ, s počtem bajtů určených `size`.  Příklad:
 
     ```cpp
 
@@ -109,7 +109,7 @@ Poznámky k tomuto příkladu:
 - `_Field_range_` pro `bufferSize` určuje, že hodnota `bufferSize` by měla být v rozmezí od 1 do `MaxBufferSize` (včetně).
 - Konečné výsledky `_Struct_size_bytes_` a `_Field_size_` poznámek jsou ekvivalentní. U struktur nebo tříd, které mají podobné rozložení, `_Field_size_` je snazší je číst a udržovat, protože má méně odkazů a výpočtů než ekvivalentní `_Struct_size_bytes_` anotace. `_Field_size_` nevyžaduje převod na velikost bajtu. Je-li velikost bajtu jedinou možností, například pro pole typu void, lze použít `_Field_size_bytes_`. Pokud existují `_Struct_size_bytes_` i `_Field_size_`, bude k dispozici pro nástroje. V případě nesouhlasu dvou poznámek se jedná o nástroj.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Použití poznámek SAL k snížení míry výskytu závad kódu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Porozumění SAL](../code-quality/understanding-sal.md)

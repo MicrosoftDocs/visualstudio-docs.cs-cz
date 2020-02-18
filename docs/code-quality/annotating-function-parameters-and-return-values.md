@@ -220,7 +220,7 @@ Pro poznámky v následující tabulce, pokud je parametr ukazatele označen př
 
      Ukazatel na pole `s` prvků.  Elementy nemusí být platné v předběžném stavu.  V rámci po stavu musí být prvky až do `c`-tém elementu platné.  `_bytes_` variant lze použít, pokud je velikost známa v bajtech, nikoli v počtu prvků.
      
-     Například:
+     Příklad:
 
      ```cpp
      void *memcpy(_Out_writes_bytes_all_(s) char *p1, _In_reads_bytes_(s) char *p2, _In_ int s); 
@@ -516,7 +516,7 @@ Návratová hodnota funkce se podobá parametru `_Out_`, ale je na jiné úrovni
 
 - `_Struct_size_bytes_(size)`
 
-     Platí pro strukturu nebo deklaraci třídy.  Označuje, že platný objekt tohoto typu může být větší než deklarovaný typ, s počtem bajtů předávaných pomocí `size`.  Například:
+     Platí pro strukturu nebo deklaraci třídy.  Označuje, že platný objekt tohoto typu může být větší než deklarovaný typ, s počtem bajtů předávaných pomocí `size`.  Příklad:
 
      `typedef _Struct_size_bytes_(nSize) struct MyStruct {    size_t nSize;    ... };`
 
@@ -528,7 +528,7 @@ Návratová hodnota funkce se podobá parametru `_Out_`, ale je na jiné úrovni
 
 [Blog týmu analýzy kódu](https://blogs.msdn.microsoft.com/codeanalysis/)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Použití poznámek SAL k snížení míry výskytu závad kódu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Porozumění SAL](../code-quality/understanding-sal.md)

@@ -44,6 +44,6 @@ Následující tabulka popisuje parametry úlohy **GetOutOfDateItems** .
 |**TLogDirectory**|Povinný parametr **řetězce**|
 |**TLogNamePrefix**|Povinný parametr **řetězce**|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

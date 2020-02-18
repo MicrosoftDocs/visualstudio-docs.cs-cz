@@ -106,7 +106,7 @@ Pokud sestavíte v integrovaném vývojovém prostředí (IDE) sady Visual Studi
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /bl MySolution.sln
     ```
 
-    nebo
+    or
 
     ```cmd
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /bl MyProject.vcxproj
@@ -124,7 +124,7 @@ Soubor MSBuild. binlog bude vytvořen v adresáři, ze kterého jste spustili n�
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /fl MySolution.sln
     ```
 
-    nebo
+    or
 
     ```cmd
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /fl MyProject.vcxproj

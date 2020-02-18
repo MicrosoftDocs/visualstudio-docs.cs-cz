@@ -38,7 +38,7 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
   
 - Opatřit zdrojový kód poznámkami, aby se zlepšila analýza vad kódu.  
   
-## <a name="prerequisites"></a>Požadavky  
+## <a name="prerequisites"></a>Předpoklady  
   
 - [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] nebo [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)].  
   
