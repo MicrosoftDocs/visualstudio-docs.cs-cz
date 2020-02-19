@@ -10,7 +10,7 @@
       href: quickstart-cpu-usage-managed.md
     - name: Analýza využití procesoru (nativní)
       href: quickstart-cpu-usage-native.md
-    - name: Analýza využití procesoru (ASP.NET)
+    - name: Analýza využití procesoru (ASP.NET Core)
       href: quickstart-cpu-usage-aspnet.md
 - name: Kurzy
   items:

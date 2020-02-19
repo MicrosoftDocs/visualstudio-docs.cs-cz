@@ -16,7 +16,7 @@
       href: quickstart-debug-with-managed.md
     - name: Ladění aplikací v C++
       href: quickstart-debug-with-cplusplus.md
-    - name: Ladění aplikace ASP.NET
+    - name: Ladění aplikace ASP.NET Core
       href: quickstart-debug-aspnet.md
 - name: Kurzy
   items:
