@@ -6,12 +6,12 @@ manager: lank
 ms.date: 02/17/2020
 ms.topic: conceptual
 description: Další informace o nové nabídce aplikace Visual Studio + GitHub
-ms.openlocfilehash: d8507667f214430513ba2ad84bbe787e5a042899
-ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
+ms.openlocfilehash: 5ae209bc0f6b3dcef99f15abd2cfb67d65f655d0
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77439137"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476753"
 ---
 # <a name="introducing-visual-studio-subscriptions-with-github-enterprise"></a>Představení předplatných sady Visual Studio s GitHubem Enterprise  
 
@@ -50,7 +50,7 @@ Vzhledem k tomu, že předplatné GitHub Enterprise se přiřazují samostatně,
 
 Pokud s GitHubem začínáte, najdete tady některé materiály, které vám můžou pomoct:
 
-| Předmět                                  | Téma nápovědy GitHubu                                     |
+| Subjekt                                  | Téma nápovědy GitHubu                                     |
 |------------------------------------------|-------------------------------------------------------|
 | Obecné otázky a informace          | [Pomocník pro GitHub](https://help.github.com/en)             |
 | Co je GitHub?  Návody Další informace?  | [Informace o GitHubu](https://help.github.com/en/categories/about-github)                                       |
@@ -81,8 +81,8 @@ Odpověď: společně s předplatným webu GitHub Enterprise obdržíte plné p�
 Pokud s GitHubem začínáte, Projděte si [výukové cvičení GitHubu](https://lab.github.com/), které vás provede řadou zábavnéch a praktických projektů, které vám umožní sdílet užitečnou zpětnou vazbu na cestě.
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
-- [Dokumentace k Azure](/azure/)
-- [Dokumentace k Microsoft 365](/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 

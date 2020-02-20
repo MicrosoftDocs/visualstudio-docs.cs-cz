@@ -6,18 +6,21 @@ manager: lank
 ms.date: 02/17/2020
 ms.topic: conceptual
 description: Naučte se vyhledávat a stahovat tituly softwaru Microsoftu v předplatných sady Visual Studio.
-ms.openlocfilehash: d6ce32b0478b145b7d1814efa3738664ee622cf5
-ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
+ms.openlocfilehash: 053e6d7171f8983def3675e42fb661172a381284
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77439163"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476827"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Stažení softwarových titulů v předplatných sady Visual Studio
 V závislosti na tom, jaké Předplatné sady Visual Studio máte, může být k dispozici celá řada softwarových titulů Microsoftu.  V tomto článku se dozvíte, jak vyhledat a stáhnout software, který potřebujete k tomu, abyste mohli využít své předplatné na maximum. 
 
 > [!NOTE]
 > Na stránce [ke stažení](https://my.visualstudio.com/downloads/featured) se zobrazí pouze soubory ke stažení, které jsou součástí vašeho předplatného.  Pokud máte více než jedno členství v předplatném nebo programu, zobrazí se pro **nejvyšší předplatné** , které jste si podržíte, a to i v případě, že aktuálně zobrazujete jiné předplatné.  Pokud máte například předplatné Visual Studio Enterprise a předplatné Visual Studio Professional, které je přidruženo ke stejnému přihlašovacímu ID, budou se zde uvedené položky ke stažení zobrazovat v rámci podnikového předplatného, a to i v případě, že právě prohlížíte. výhody vašeho profesionálního předplatného.
+
+> [!NOTE]
+> Máme na problému informace týkající se dostupnosti kódů Product Key pro Office 365.  Zkoumáme příčinu a tento článek aktualizujeme, až bude problém vyřešen. 
 
 ## <a name="how-do-i-find-downloads-in-the-subscriber-portal"></a>Návody najít soubory ke stažení na portálu odběratele?
 Když navštívíte stránku se [soubory ke stažení](https://my.visualstudio.com/downloads/featured?wt.mc_id=o~msft~docs) , uvidíte oblíbené soubory ke stažení uspořádané do skupin podle typu produktu.  Můžete vybrat jeden z oblíbených souborů ke stažení nebo vyhledat libovolný produkt pomocí panelu hledání v horní části stránky.
@@ -53,7 +56,8 @@ Další informace o hledání, nárokování a exportování kódů Product Key 
 - [Vyhledání a deklarace klíčů](find-keys.md)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
-- [Dokumentace k Azure](/azure/)
-- [Dokumentace k Microsoft 365](/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+

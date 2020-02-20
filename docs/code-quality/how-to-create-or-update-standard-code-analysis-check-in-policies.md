@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d034d65cd356ff44a42d10840ae064d81713457f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 11f64d2776b0d442d074c99c82287f1e7c482f1e
+ms.sourcegitcommit: 260d093d2287ba791f28bdc7103493beabf80b2e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587534"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506504"
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>Postupy: Vytváření nebo aktualizace standardních zásad vracení se změnami Analýzy kódu
 
@@ -29,7 +29,7 @@ Zásady vrácení se změnami analýzy kódu jsou nastaveny v nastavení projekt
 
 - Pro spravovaný kód nastavíte zásadu vrácení se změnami zadáním *sady pravidel* , která obsahuje podmnožinu pravidel analýzy kódu.
 
-- V případě jazykaC++ C/kódu v aplikaci Visual Studio 2017 verze 15,6 a dřívější zásada vracení se změnami vyžaduje, aby byla spuštěna všechna pravidla analýzy kódu. Můžete přidat direktivy pre-Processor, které zakazují specifická pravidla pro jednotlivé projekty kódu v projektu Azure DevOps. V 15,7 a novějších verzích můžete pomocí **/analyze: RuleSet** určit, která pravidla se mají spustit. Další informace najdete v tématu [použití sad pravidel k určení C++ pravidel ke spuštění](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+- V případě jazykaC++ C/kódu v aplikaci Visual Studio 2017 verze 15,6 a dřívější zásada vracení se změnami vyžaduje, aby byla spuštěna všechna pravidla analýzy kódu. Můžete přidat direktivy pre-Processor, které zakazují specifická pravidla pro jednotlivé projekty kódu v projektu Azure DevOps. V 15,7 a novějších verzích můžete pomocí **/analyze: RuleSet** určit, která pravidla se mají spustit. Další informace najdete v tématu [použití sad pravidel k určení C++ pravidel ke spuštění](/cpp/code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run).
 
 Až zadáte zásadu vrácení se změnami pro spravovaný kód, členové týmu mohou synchronizovat nastavení analýzy kódu pro projekty kódu do nastavení zásad projektu Azure DevOps.
 
@@ -67,6 +67,6 @@ V seznamu **Spustit tuto sadu pravidel** použijte jednu z následujících meto
 
 Další informace o tom, jak vytvořit a implementovat sadu pravidel pro vlastní vracení se změnami, najdete v tématu [implementace vlastních zásad vrácení se změnami pro spravovaný kód](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Implementace vlastních zásad vracení zpět se změnami analýzy kódu pro spravovaný kód](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md)

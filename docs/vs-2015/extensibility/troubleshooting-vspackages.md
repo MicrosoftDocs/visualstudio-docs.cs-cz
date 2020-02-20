@@ -1,5 +1,5 @@
 ---
-title: Řešení potíží s rozšířením VSPackages | Dokumentace Microsoftu
+title: Řešení potíží s VSPackage | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,119 +11,119 @@ ms.assetid: 274673e7-72e7-476f-a263-3411b5b874be
 caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 62c1847e9ff476e364ed99cabc4b47a970c4c4da
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: b092c910b0303a62289e75b168e39628cbd0314b
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65695507"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476996"
 ---
 # <a name="troubleshooting-vspackages"></a>Řešení potíží s rozšířením VSPackages
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tady jsou běžné problémy, které může mít s vaší VSPackage a tipy pro řešení problémů.  
+Níže jsou uvedené běžné problémy, se kterými se můžete setkat se sadou VSPackage a tipy k řešení těchto problémů.  
   
-### <a name="to-troubleshoot-a-vspackage-that-keeps-visual-studio-from-starting"></a>Řešení potíží s VSPackage, která zajišťuje spuštění sady Visual Studio  
+### <a name="to-troubleshoot-a-vspackage-that-keeps-visual-studio-from-starting"></a>Řešení potíží VSPackage, který brání spuštění sady Visual Studio  
   
-- Spustit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v nouzovém režimu.  
+- Spusťte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v nouzovém režimu.  
   
-     Chcete-li spustit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v nouzovém režimu, na příkazovém řádku, zadejte **/safemode devenv.exe**.  
+     Chcete-li spustit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v nouzovém režimu, zadejte do příkazového řádku **devenv. exe/safemode**.  
   
-     Během tohoto procesu jsou načteny žádné balíčky VSPackages, s výjimkou rozšíření VSPackages, které jsou součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+     Během tohoto procesu nejsou načteny žádné sady VSPackage s výjimkou VSPackage, které jsou součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
-### <a name="to-troubleshoot-a-vspackage-that-does-not-load"></a>Řešení potíží s VSPackage, která se nenačte  
+### <a name="to-troubleshoot-a-vspackage-that-does-not-load"></a>Řešení potíží s VSPackage, který se nenačte  
   
-1. Ujistěte se, že používáte kořenový klíč registru, ve které je zaregistrovaný sady VSPackage ke spuštění, obvykle kořenový klíč registru experimentální.  
+1. Ujistěte se, že používáte kořen registru, ve kterém je rozhraní VSPackage registrováno pro spuštění, obvykle pro experimentální kořen registru.  
   
-     Další informace najdete v tématu [experimentální instanci](../extensibility/the-experimental-instance.md).  
+     Další informace najdete v [experimentální instanci](../extensibility/the-experimental-instance.md).  
   
-2. Pokud sady VSPackage cílí na spouštění v kořenovém adresáři registru experimentální, ujistěte se, že spustíte experimentální verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+2. Pokud je rozhraní VSPackage cíleno na spuštění v kořenovém adresáři experimentálního registru, ujistěte se, že používáte experimentální verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
-     Chcete-li spustit experimentální verzi, zadejte následující příkaz v příkazovém okně: **devenv /rootsuffix exp**.  
+     Chcete-li spustit experimentální verzi, zadejte následující příkaz v příkazovém okně: **devenv/rootsuffix exp**.  
   
-3. Zkontrolujte položky registru VSPackage.  
+3. Ověřte položky registru VSPackage.  
   
-     Další informace najdete v tématu [registrace rozšíření VSPackages](internals/registering-vspackages.md) a [Správa balíčky VSPackages](../extensibility/managing-vspackages.md).  
+     Další informace najdete v tématu [Registrace VSPackage](internals/registering-vspackages.md) a [Správa VSPackage](../extensibility/managing-vspackages.md).  
   
-4. Otevřít **výstup** okno instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , které se nedaří načíst sady VSPackage. Informace o proč sady VSPackage nedaří se načíst může být zobrazen v tomto okně.  
+4. Otevřete okno **výstup** instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], který nedaří načíst VSPackage. Informace o tom, proč se rozhraní VSPackage nedaří načíst, může být zobrazeno v tomto okně.  
   
     > [!NOTE]
-    > Pokud začínáte experimentální verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrované vývojové prostředí (IDE), zkontrolujte **výstup** okno obě verze.  
+    > Pokud spouštíte experimentální verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrovaného vývojového prostředí (IDE), zkontrolujte okno **výstup** obou verzí.  
   
-5. Vyhledejte v protokolu aktivit.  
+5. Projděte si protokol aktivit.  
   
-     Další informace najdete v tématu [jak: Použití protokolu aktivit](../extensibility/how-to-use-the-activity-log.md).  
+     Další informace najdete v tématu [Postupy: použití protokolu aktivit](../extensibility/how-to-use-the-activity-log.md).  
   
-6. Další informace o výjimky vyvolané z integrovaného vývojového prostředí, klikněte na tlačítko **výjimky** na **ladění** nabídka umožňující výjimky. V **výjimky** dialogové okno Vybrat typy výjimek, které chcete získat další informace.  
+6. Další informace o výjimkách vyvolaných rozhraním IDE získáte tak, že kliknete na **výjimky** v nabídce **ladění** a povolíte výjimky. V dialogovém okně **výjimky** vyberte typy výjimek, o kterých chcete získat další informace.  
   
-### <a name="to-troubleshoot-a-vspackage-that-does-not-register"></a>Řešení potíží s VSPackage, která nezaregistruje  
+### <a name="to-troubleshoot-a-vspackage-that-does-not-register"></a>Řešení potíží s VSPackage, který se neregistruje  
   
-1. Ujistěte se, že VSPackage sestavení se nachází v důvěryhodném umístění. RegPkg nejde zaregistrovat sestavení v částečně důvěryhodných nebo nedůvěryhodných umístění, například sdílené síťové složky ve výchozí konfiguraci zabezpečení rozhraní .net. I když se upozornění zobrazí vždycky, když uživatel vytvoří projekt v nedůvěryhodném umístění, můžete toto upozornění nevyskytla zabránit zaškrtávací políčko "tuto zprávu znovu nezobrazovat".  
+1. Ujistěte se, že se sestavení VSPackage nachází v důvěryhodném umístění. RegPkg nemůže registrovat sestavení v nedůvěryhodném nebo částečně důvěryhodném umístění, například v síťové sdílené složce ve výchozí konfiguraci zabezpečení .NET. I když se zobrazí upozornění pokaždé, když uživatel vytvoří projekt v nedůvěryhodném umístění, zaškrtávací políčko znovu nezobrazovat tuto zprávu může zabránit opětovnému výskytu tohoto upozornění.  
   
-### <a name="to-troubleshoot-a-command-that-is-not-visible-or-that-generates-an-error-when-you-click-a-command"></a>Řešení potíží s příkaz, který není viditelný, nebo po kliknutí na příkaz, který generuje chybu  
+### <a name="to-troubleshoot-a-command-that-is-not-visible-or-that-generates-an-error-when-you-click-a-command"></a>Řešení potíží s příkazem, který není viditelný nebo který při kliknutí na příkaz vygeneruje chybu  
   
-1. Sloučit příkazy nabídky nové nebo změněné. ti se již v integrovaném vývojovém prostředí pomocí následujícího příkazu na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] příkazového řádku: **/rootsuffix devenv/Setup Exp**.  
+1. Slučte nové nebo změněné příkazy nabídky a těch, které jsou již v integrovaném vývojovém prostředí, zadáním následujícího příkazu na příkazovém řádku [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]: **devenv/rootsuffix exp/Setup**.  
   
-2. Ujistěte se, že [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] UI.dll vyhledat vašeho balíčku VSPackage.  
+2. Ujistěte se, že [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] najít UI. dll pro VSPackage.  
   
-    1. Identifikátor CLSID sady VSPackage najdete v části balíčků z registru:  
+    1. Vyhledejte CLSID sady VSPackage v oddílu Packages v registru:  
   
-         HKLM\Software\Microsoft\Visual Studio\\*\<version>* \Packages  
+         HKLM\Software\Microsoft\Visual Studio\\ *\<verze >* \Packages  
   
-    2. Ověřte správnost cesty Dal podklíč SatelliteDll.  
+    2. Ověřte, zda je cesta daného podklíče SatelliteDll správná.  
   
-### <a name="to-troubleshoot-a-vspackage-that-behaves-unexpectedly"></a>Řešení potíží s, který se chová neočekávaně VSPackage  
+### <a name="to-troubleshoot-a-vspackage-that-behaves-unexpectedly"></a>Řešení potíží s VSPackage, který se chová neočekávaně  
   
 1. Nastavte zarážky v kódu.  
   
-     Dobrým výchozím bodem pro ladění jsou konstruktor a inicializační metoda. Můžete také nastavit zarážky v oblasti, kterou chcete vyhodnotit, například příkaz nabídky. Pokud chcete povolit zarážky, je nutné spustit v ladicím programu.  
+     Dobrým počátečním bodem pro ladění jsou konstruktor a inicializační metoda. Můžete také nastavit zarážky v oblasti, kterou chcete vyhodnotit, jako je například příkaz nabídky. Chcete-li povolit zarážky, je nutné spustit v ladicím programu.  
   
-    1. Na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+    1. V nabídce **projekt** klikněte na příkaz **vlastnosti**.  
   
-    2. Na **stránky vlastností** dialogové okno, vyberte **ladění** kartu.  
+    2. V dialogovém okně **stránky vlastností** vyberte kartu **ladění** .  
   
-    3. V **argumenty příkazového řádku** zadejte příponu kořenové vývojového prostředí, které vaše cíle VSPackage. Pokud chcete vybrat experimentální sestavení, zadejte například: **RootSuffix Exp**.  
+    3. V poli **argumenty příkazového řádku** zadejte kořenovou příponu vývojového prostředí, které vaše rozhraní VSPackage cílí. Chcete-li například vybrat experimentální sestavení, zadejte: **/rootsuffix exp**.  
   
-    4. Na **ladění** nabídky, klikněte na tlačítko **spustit ladění** nebo stiskněte klávesu F5.  
+    4. V nabídce **ladění** klikněte na příkaz **Spustit ladění** nebo stiskněte klávesu F5.  
   
         > [!NOTE]
-        > Když provádíte ladění projektu, vytvořit nebo načíst existující instanci projektu nyní.  
+        > Pokud ladíte projekt, vytvořte nebo Načtěte existující instanci projektu nyní.  
   
-2. Použití protokolu aktivit.  
+2. Použijte protokol aktivit.  
   
-     Sledujte chování balíčku VSPackage pomocí zápisu informací do protokolu aktivit se zapsaly klíčové body. Tato technika je užitečná při spuštění v prostředí maloobchodu VSPackage. Další informace najdete v tématu [jak: Použití protokolu aktivit](../extensibility/how-to-use-the-activity-log.md).  
+     Sledujte chování VSPackage zápisem informací do protokolu aktivit v klíčových bodech. Tato technika je užitečná hlavně při spuštění sady VSPackage v maloobchodním prostředí. Další informace najdete v tématu [Postupy: použití protokolu aktivit](../extensibility/how-to-use-the-activity-log.md).  
   
-3. Použití veřejných symbolů.  
+3. Používejte veřejné symboly.  
   
-     Aby se zlepšila čitelnost při ladění, můžete připojit symboly v ladicím programu.  
+     Pro zlepšení čitelnosti při ladění můžete k ladicímu programu připojit symboly.  
   
-    1. Z **Nástroje/možnosti** nabídky, přejděte **ladění/symboly** dialogové okno.  
+    1. V nabídce **Nástroje/možnosti** přejděte do dialogového okna **ladění/symboly** .  
   
-    2. Přidejte tuto **Symbol umístění souboru souborů (.pdb)**:  
+    2. Přidat toto **umístění souboru se symboly (. pdb)** :  
   
-         [http://msdl.microsoft.com/download/symbols](http://msdl.microsoft.com/download/symbols)  
+         `https://msdl.microsoft.com/download/symbols`  
   
-    3. Ke zlepšení výkonu, zadejte složku mezipaměti symbolů, například:  
+    3. Chcete-li zvýšit výkon, zadejte složku mezipaměti symbolů, například:  
   
         ```  
         C:\symbols  
         ```  
   
-### <a name="to-troubleshoot-a-missing-vspackage-or-one-of-its-dependencies"></a>Řešení potíží s chybějící VSPackage nebo některá z jeho závislostí  
+### <a name="to-troubleshoot-a-missing-vspackage-or-one-of-its-dependencies"></a>Řešení potíží s chybějícím VSPackage nebo některou z jeho závislostí  
   
-1. Pro spravovaný kód Ujistěte se, že cesty odkazů jsou správné.  
+1. Pro spravovaný kód zkontrolujte, zda jsou cesty odkazů správné.  
   
-   1. Na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+   1. V nabídce **projekt** klikněte na příkaz **vlastnosti**.  
   
-   2. Vyberte **odkazy** kartu **stránky vlastností** dialogové okno a ujistěte se, že všechny cesty mají správný. Alternativně můžete použít **prohlížeče objektů** a vyhledejte odkazované objekty.  
+   2. V dialogovém okně **stránky vlastností** vyberte kartu **odkazy** a ujistěte se, že jsou všechny cesty správné. Alternativně můžete použít **Prohlížeč objektů** k procházení odkazovaných objektů.  
   
-        Pro spravovaný kód, můžete použít [Fuslogvw.exe (Assembly Binding Log Viewer)](https://msdn.microsoft.com/library/e32fa443-0778-4cc3-bf36-5c8ea297d296) zobrazíte podrobnosti o načtení sestavení se nezdařilo.  
+        Pro spravovaný kód můžete použít [Fuslogvw. exe (Prohlížeč protokolu vazby sestavení)](https://msdn.microsoft.com/library/e32fa443-0778-4cc3-bf36-5c8ea297d296) k zobrazení podrobností o neúspěšném načtení sestavení.  
   
-2. Nespravovaný kód, najít identifikátor CLSID VSPackage v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzlu registru CLSID:  
+2. Pro nespravovaný kód vyhledejte identifikátor CLSID sady VSPackage v uzlu registru [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] CLSID:  
   
-    HKLM\Software\Microsoft\Visual Studio\\*\<version>* \CLSID  
+    HKLM\Software\Microsoft\Visual Studio\\ *\<verze >* \CLSID  
   
-   Ujistěte se, že položka InprocServer32 má správnou cestu knihovny dll balíčku VSPackage.  
+   Ujistěte se, že položka InprocServer32 má správnou cestu k knihovně VSPackage dll.  
   
 ## <a name="see-also"></a>Viz také  
  [Balíčky VSPackage](../extensibility/internals/vspackages.md)

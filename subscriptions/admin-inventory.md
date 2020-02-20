@@ -6,12 +6,12 @@ manager: lank
 ms.date: 02/17/2020
 ms.topic: conceptual
 description: Další informace o responsibilty správců pro provádění předprodukčních inventářů
-ms.openlocfilehash: 0eacd177b0901d866bbb974aca81a0e77cdaf25d
-ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
+ms.openlocfilehash: 6d7dd3b49c11e94ffa09bc07bd745582f348763d
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77439113"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476732"
 ---
 # <a name="inventory-of-pre-production-environment"></a>Inventář předprodukčního prostředí
 Předplatná sady Visual Studio zjednodušují správu prostředků, a to pomocí počítání uživatelů místo zařízení.
@@ -24,7 +24,7 @@ Tady je několik způsobů, jak zjednodušit inventarizaci předprodukčního pr
 - Pro inventarizaci systémů použijte automatizované nástroje. Je také možné, že budete muset použít nástroj inventáře softwaru, který vám umožní spravovat softwarové prostředky a rozlišovat předprodukční prostředí z produkčních prostředí. Mnoho zákazníků s Microsoft System Center vytvoří konvence pro pojmenování, které vám pomůžou automatizovat tuto část procesu inventarizace.
 - Získejte nápovědu k ručnímu odsouhlasení. Zařadíte své zaměstnance, který vám umožní sjednotit vývoj a testování uživatelů pomocí vývojového a testovacího prostředí.
 
-## <a name="resources"></a>Prostředky
+## <a name="resources"></a>Zdroje a prostředky
 - [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [Multilicenční podmínky](https://www.microsoft.com/licensing/product-licensing/products.aspx)
@@ -37,7 +37,8 @@ Další informace o zodpovědnostech pro správce:
 - Použití [maximálního využití](maximum-usage.md) ke sledování závazků nákupu
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
-- [Dokumentace k Azure](/azure/)
-- [Dokumentace k Microsoft 365](/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+

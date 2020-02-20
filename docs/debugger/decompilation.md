@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 5087c439533aa447708d0f1bfae653054fd16089
-ms.sourcegitcommit: a86ee68e3ec23869b6eaaf6c6b7946b1d9a88d01
+ms.openlocfilehash: 46c6110cb977e3a309f27fc5a014522494f18c9a
+ms.sourcegitcommit: 260d093d2287ba791f28bdc7103493beabf80b2e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77144789"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506510"
 ---
 # <a name="generate-source-code-from-net-assemblies-while-debugging"></a>Generovat zdrojový kód ze sestavení .NET během ladění
 
@@ -82,13 +82,13 @@ Při ladění kódu, který byl dekompilován ze sestavení, které bylo zkompil
 - Místní proměnné nemohou mít přesné názvy.
 - Některé proměnné nemusí být k dispozici pro vyhodnocení.
 
-Další podrobnosti najdete v problému GitHubu: [integrace IChsarpCompiler. Decompiler do ladicího programu vs](https://github.com/icsharpcode/ILSpy/issues/1901).
+Další podrobnosti najdete v problému GitHubu: [integrace ICSharpCode. Decompiler do ladicího programu vs](https://github.com/icsharpcode/ILSpy/issues/1901).
 
 ### <a name="decompilation-reliability"></a>Spolehlivost dekompilace
 
 Poměrně malé procento pokusů o dekompilaci může vést k selhání. Důvodem je chyba referenčního bodu sekvence null v ILSpy.  Toto selhání jsme zmírnili zachycením těchto problémů a řádným selháním pokusu o dekompilaci.
 
-Další podrobnosti najdete v problému GitHubu: [integrace IChsarpCompiler. Decompiler do ladicího programu vs](https://github.com/icsharpcode/ILSpy/issues/1901).
+Další podrobnosti najdete v problému GitHubu: [integrace ICSharpCode. Decompiler do ladicího programu vs](https://github.com/icsharpcode/ILSpy/issues/1901).
 
 ### <a name="limitations-with-async-code"></a>Omezení s asynchronním kódem
 

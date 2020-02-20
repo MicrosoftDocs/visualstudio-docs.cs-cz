@@ -2,7 +2,7 @@
 title: 'Kurz: Vytvoření jednoduché C# konzolové aplikace'
 description: Naučte se, jak C# vytvořit konzolovou aplikaci v aplikaci Visual Studio, krok za krokem.
 ms.custom: seodec18, get-started
-ms.date: 03/23/2019
+ms.date: 02/18/2020
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 740968740306bed4c2cf52191c4ff661b6247bd0
-ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
+ms.openlocfilehash: e72cba384d3780c738c29698f74cbc3b4898bb04
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830011"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476727"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Kurz: Vytvoření jednoduché C# konzolové aplikace v aplikaci Visual Studio
 
@@ -28,13 +28,13 @@ V tomto kurzu pro C#můžete pomocí sady Visual Studio vytvořit a spustit konz
 
 ::: moniker range="vs-2017"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) stránku a nainstalovat zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/downloads) stránku a nainstalovat zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
@@ -44,7 +44,7 @@ Začněte tím, že C# vytvoříte projekt aplikace. Typ projektu se dodává se
 
 ::: moniker range="vs-2017"
 
-1. Otevřete Visual Studio 2017.
+1. Otevřete sadu Visual Studio 2017.
 
 2. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
    (Případně stiskněte **kombinaci kláves Ctrl**+**SHIFT**+**N**).
@@ -112,7 +112,7 @@ Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete
 
 Nejprve prozkoumáme některé základní celočíselné matematické výrazy C#v. Pak přidáme kód pro vytvoření základní kalkulačky. Potom budeme ladit aplikaci, abychom našli a opravili chyby. A nakonec kód Vylepšete, aby bylo efektivnější.
 
-### <a name="explore-integer-math"></a>Seznámení s matematikou celých čísel
+### <a name="explore-integer-math"></a>Prozkoumat celočíselné matematické
 
 Pojďme začít s některými základní celočíselnou matematickou C#v.
 
@@ -133,6 +133,9 @@ Pojďme začít s některými základní celočíselnou matematickou C#v.
     ```
 
     Všimněte si, že když to uděláte, funkce IntelliSense v aplikaci Visual Studio vám nabídne možnost automatického dokončování záznamu.
+
+    > [!NOTE]
+    > Následující animace není určena k duplikování předchozího kódu. Je určena pouze k zobrazení, jak funguje funkce automatického dokončování.
 
     ![Animace celočíselného matematického kódu, který zobrazuje funkci automatického dokončování IntelliSense v integrovaném vývojovém prostředí sady Visual Studio](./media/integer-math-intellisense.gif)
 
@@ -268,18 +271,21 @@ Aplikace ale produkuje jenom desítkový výsledek. Pojďme udělat ještě něk
 
 Vylepšili jsme základní aplikaci kalkulačky, ale ještě nedošlo k jejich bezpečnému selhání, aby bylo možné zpracovávat výjimky, například chyby vstupu uživatele.
 
-Například pokud se pokusíte dělit číslo nulou nebo zadat alfa znak, když aplikace očekává číselný znak (nebo naopak), aplikace přestane fungovat a vrátí chybu.
+Například pokud se pokusíte dělit číslo nulou nebo zadat alfa znak, když aplikace očekává číselný znak (nebo naopak), může aplikace přestat pracovat, vracet chybu nebo vracet neočekávaný nečíselný výsledek.
 
-Pojďme si projít několik běžných chyb vstupu uživatele, vyhledat je v ladicím programu a opravit je v kódu.
+Pojďme si projít několik běžných chyb vstupu uživatele, vyhledat je v ladicím programu, pokud se tam objeví, a opravit je v kódu.
 
->[!TIP]
->Další informace o ladicím programu a jeho fungování najdete na stránce [ladicího programu sady Visual Studio na první pohled](../../debugger/debugger-feature-tour.md) .
+> [!TIP]
+> Další informace o ladicím programu a jeho fungování najdete na stránce [ladicího programu sady Visual Studio na první pohled](../../debugger/debugger-feature-tour.md) .
 
 ### <a name="fix-the-divide-by-zero-error"></a>Opravit chybu dělení nulou
 
-Když se pokusíte dělit číslo nulou, aplikace konzoly se zablokuje. Visual Studio potom ukáže, co je v editoru kódu chybné.
+Když se pokusíte dělit číslo nulou, aplikace konzoly se může ukotvit a pak se zobrazí informace o tom, co je v editoru kódu chybné.
 
    ![V editoru kódu sady Visual Studio se zobrazí chyba dělení nulou.](./media/csharp-console-calculator-dividebyzero-error.png)
+
+> [!NOTE]
+> V některých případech se aplikace neblokuje a ladicí program nebude zobrazovat chybu s dělením nulou. Místo toho může aplikace vracet neočekávaný nenumerický výsledek, jako je například symbol nekonečno. Následující oprava kódu se pořád používá.
 
 Pojďme změnit kód pro zpracování této chyby.
 
@@ -321,7 +327,7 @@ Místo toho, aby se při zpracování veškerého kódu spoléhá na třídu `pr
 
 Třída `Calculator` zpracuje hromadnou práci výpočtu a `Program` třída zpracuje uživatelské rozhraní a zachytávání chyb.
 
-Pustíme se do toho.
+Pusťme se do toho.
 
 1. Odstraňte vše *za* následujícím blokem kódu:
 
@@ -599,7 +605,7 @@ Blahopřejeme k dokončení tohoto kurzu! Pokud se chcete dozvědět ještě ví
 > [!div class="nextstepaction"]
 > [Pokračovat s dalšími C# kurzy](/dotnet/csharp/tutorials/)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
 * [Naučte se C# ladit kód v aplikaci Visual Studio.](tutorial-debugger.md)

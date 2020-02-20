@@ -1,5 +1,5 @@
 ---
-title: Element MoreInfoURL (VSIX Language Pack Schema) | Dokumentace Microsoftu
+title: Element MoreInfoURL (schéma jazykové sady VSIX) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -8,14 +8,14 @@ ms.assetid: 3f07b67b-95c5-4ae8-8b7e-d643cbbb0348
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 3b80f1f90f3e661b0bbd09fadf173cb171cd97df
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: c583d67e1920080f11158a4001e191e93e234006
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65695491"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476844"
 ---
-# <a name="moreinfourl-element-vsix-language-pack-schema"></a>Element MoreInfoURL (VSIX Language Pack Schema)
+# <a name="moreinfourl-element-vsix-language-pack-schema"></a>MoreInfoURL – element (schéma jazykové sady VSIX)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Volitelné. Odkaz na lokalizované informace o rozšíření.  
@@ -33,33 +33,33 @@ Volitelné. Odkaz na lokalizované informace o rozšíření.
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|Žádný||  
+|Žádná||  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|Žádný||  
+|Žádná||  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[LanguagePack – element VSIX](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)|Povinný parametr. Obsahuje kořenový prvek pro jazykové sady VSIX.|  
+|[LanguagePack – element VSIX](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)|Povinná hodnota. Poskytuje kořenový prvek pro jazykovou sadu VSIX.|  
   
 ## <a name="text-value"></a>Textová hodnota  
- Volitelné. Odkaz na webovou stránku. Odkaz je textový řetězec.  
+ Volitelné. Odkaz na web. Odkaz je textový řetězec.  
   
 ## <a name="element-information"></a>Informace o elementu  
   
 |                 |                                                           |
 |-----------------|-----------------------------------------------------------|
-|    Obor názvů    | http://schemas.microsoft.com/developer/vsx-schema-lp/2010 |
-|   Název schématu   |                 VSIX Language Pack Schema                 |
-| Soubor ověření |                VSIXLanguagePackSchema.xsd                 |
-|  Může být prázdné.   |                      Nelze použít                       |
+|    Obor názvů    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
+|   Název schématu   |                 Schéma jazykové sady VSIX                 |
+| Soubor ověření |                VSIXLanguagePackSchema. xsd                 |
+|  Může být prázdné   |                      Neuvedeno                       |
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace schématu VSX Language Pack](../extensibility/vsx-language-pack-schema-reference.md)   
+ [Referenční  schématu VSX Language Pack](../extensibility/vsx-language-pack-schema-reference.md)  
  [Lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md)   
- [Referenční dokumentace schématu 1.0 rozšíření VSIX](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)
+ [Referenční dokumentace schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110))

@@ -9,12 +9,12 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: feae3dbc18f0b009b88872c05d43e9a6c280aef5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d590bf618693a5ced1aa17969b888c0fff130c4c
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656171"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476963"
 ---
 # <a name="schema-cache"></a>Mezipaměť schémat
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,25 +25,25 @@ Editor XML poskytuje mezipaměť schématu umístěnou v adresáři%InstallRoot%
 
  Následující tabulka popisuje schémata, která jsou nainstalována s editorem XML.
 
-|     Bitmap      |                                                      Popis                                                      |
+|     Název souboru      |                                                      Popis                                                      |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------|
 |    Catalog. xsd    |             Schéma pro soubory katalogu schématu editoru XML Informace o katalozích schématu najdete níže.             |
-| Soubor DotNetConfig. xsd  |                 Schéma pro soubory Web. config, "<http://schemas.microsoft.com/.NETConfiguration/v2.0>".                 |
-|    MSBuild. xsd    |              Schéma pro MSBuild vytvořit soubory "<http://schemas.microsoft.com/developer/msbuild/2003>".              |
-|    msdata. xsd     | Schéma pro poznámky XSD přidané třídou <xref:System.Data.DataSet>, "urn: schemas-microsoft-com: XML-msdata". |
-|     msxsl. xsd     |                  Schéma pro rozšíření bloků skriptu Microsoft XSLT, urn: schemas-microsoft-com: XSLT.                   |
+| Soubor DotNetConfig. xsd  |                 Schéma pro soubory Web. config `http://schemas.microsoft.com/.NETConfiguration/v2.0`.                 |
+|    msbuild.xsd    |              Schéma pro nástroj MSBuild k vytváření souborů `http://schemas.microsoft.com/developer/msbuild/2003`.              |
+|    msdata.xsd     | Schéma pro poznámky XSD přidané třídou <xref:System.Data.DataSet>, "urn: schemas-microsoft-com: XML-msdata". |
+|     msxsl.xsd     |                  Schéma pro rozšíření bloků skriptu Microsoft XSLT, urn: schemas-microsoft-com: XSLT.                   |
 | SnippetFormat. xsd |                 Schéma pro soubory XML fragmentu kódu. Příklady najdete v tématu% InstallDir% \VC#\Expansions.                 |
-|    SOAP 1.1. xsd    |            Schéma pro protokol SOAP (Simple Object Access Protocol) 1,1, http://schemas.xmlsoap.org/soap/envelope/.            |
+|    SOAP 1.1. xsd    |            Schéma pro protokol SOAP (Simple Object Access Protocol) 1,1, `http://schemas.xmlsoap.org/soap/envelope/`.            |
 |    SOAP 1.2. xsd    |                                     Schéma pro Simple Object Access Protocol 1,2.                                     |
-| SiteMapSchema. xsd |            Schéma pro soubor XML mapy webu ASP.NET "<http://schemas.microsoft.com/AspNet/SiteMap-File-1.0>".             |
-|     WSDL. xsd      |                    Schéma pro jazyk popisu webové služby http://schemas.xmlsoap.org/wsdl/.                     |
-|     xenc. xsd      |                            Schéma pro šifrování XML http://www.w3.org/2000/09/xmldsig#.                             |
-|     XHTML. xsd     |                                    Schéma pro XHTML http://www.w3.org/1999/xhtml.                                     |
-|     XLink. xsd     |                                  Schéma pro XLink 1.0 http://www.w3.org/1999/xlink.                                   |
-|      XML. xsd      |              Schéma popisující XML: Space a XML: lang atributy, http://www.w3.org/XML/1998/namespace.               |
-|    xmlsig. xsd     |                        Schéma pro digitální podpisy XML http://www.w3.org/2000/09/xmldsig#.                         |
-|   xsdschema. xsd   |                            Schéma popisující samotný XSD, http://www.w3.org/2001/XMLSchema.                            |
-|     XSLT. xsd      |                           Schéma pro transformace XML http://www.w3.org/1999/XSL/Transform.                            |
+| SiteMapSchema.xsd |            Schéma pro soubor XML mapy webu ASP.NET `http://schemas.microsoft.com/AspNet/SiteMap-File-1.0`.             |
+|     wsdl.xsd      |                    Schéma pro jazyk popisu webové služby `http://schemas.xmlsoap.org/wsdl/`.                     |
+|     xenc. xsd      |                            Schéma pro šifrování XML `http://www.w3.org/2000/09/xmldsig#`.                             |
+|     xhtml.xsd     |                                    Schéma pro XHTML `http://www.w3.org/1999/xhtml`.                                     |
+|     XLink. xsd     |                                  Schéma pro XLink 1.0 `http://www.w3.org/1999/xlink`.                                   |
+|      xml.xsd      |              Schéma popisující XML: Space a XML: lang atributy, `http://www.w3.org/XML/1998/namespace`.               |
+|    xmlsig. xsd     |                        Schéma pro digitální podpisy XML `http://www.w3.org/2000/09/xmldsig#`.                         |
+|   xsdschema. xsd   |                            Schéma popisující samotný XSD, `http://www.w3.org/2001/XMLSchema`.                            |
+|     XSLT. xsd      |                           Schéma pro transformace XML `http://www.w3.org/1999/XSL/Transform`.                            |
 
 ## <a name="updating-schemas-in-the-cache"></a>Aktualizace schémat v mezipaměti
  Editor načte adresář mezipaměti schématu, když je načten balíček editoru XML a sleduje všechny změny při spuštění. Pokud bylo schéma přidáno, je automaticky načteno do indexu v paměti známých schémat. Pokud se schéma odebralo, automaticky se odebere z indexu v paměti. Pokud se schéma aktualizovalo, automaticky neověřuje mezipaměť v paměti tohoto schématu.
@@ -65,7 +65,7 @@ Editor XML poskytuje mezipaměť schématu umístěnou v adresáři%InstallRoot%
 
 - InstallDir
 
-- Systém
+- Systémový
 
 - ProgramFiles
 
@@ -96,7 +96,7 @@ Editor XML poskytuje mezipaměť schématu umístěnou v adresáři%InstallRoot%
 
  V následujícím příkladu byl vytvořen nový prvek `Schema`, který používá proměnnou% LCID%, aby odkazovala na lokalizované schéma.
 
-```
+```xml
 <Schema href="%InstallRoot%/Common7/IDE/Policy/Schemas/%LCID%/TDLSchema.xsd"
   targetNamespace="http://www.microsoft.com/schema/EnterpriseTemplates/TDLSchema"/>
 ```

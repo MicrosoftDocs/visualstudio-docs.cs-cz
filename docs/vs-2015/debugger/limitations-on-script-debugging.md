@@ -1,5 +1,5 @@
 ---
-title: Omezení ladění skriptů | Dokumentace Microsoftu
+title: Omezení ladění skriptů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,33 +18,33 @@ caps.latest.revision: 25
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5ea088eadc09d45d576dd3c9cd33e5d9e2d79fc8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9f4f8f1e2fb014dc812bb5980d333e0a851f9222
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68160631"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476818"
 ---
 # <a name="limitations-on-script-debugging"></a>Omezení ladění skriptů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] podporuje ladění skriptů na straně klienta, v souladu s omezeními v tomto tématu.  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] podporuje ladění skriptu na straně klienta v souladu s omezeními v tomto tématu.  
   
-## <a name="limitations-on-breakpoint-mapping-with-client-side-script"></a>Omezení mapování zarážek pomocí skriptu na straně klienta  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Umožňuje nastavit zarážku na straně serveru ASPX nebo HTML soubor, který se transformuje do souboru na straně klienta v době běhu. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] mapuje zarážku ze souboru na straně serveru pro odpovídající zarážky v souboru straně klienta, v souladu s těmito omezeními:  
+## <a name="limitations-on-breakpoint-mapping-with-client-side-script"></a>Omezení mapování zarážek u skriptu na straně klienta  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] umožňuje nastavit zarážku v souboru ASPX nebo HTML na straně serveru, který se transformuje na soubor na straně klienta v době běhu. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] mapuje zarážku ze souboru na straně serveru na odpovídající zarážku v souboru na straně klienta v závislosti na následujících omezeních:  
   
-- Zarážky nastavené v `<script>` bloky. Zarážky v zpracování vloženého skriptu nebo `<% %>` bloky nelze mapovat.  
+- V blocích `<script>` musí být nastavené zarážky. Zarážky ve vloženém skriptu nebo `<% %>` bloky nelze namapovat.  
   
-- Adresa URL prohlížeče na stránce musí obsahovat název stránky. Například, http://microsoft.com/default.apsx. Mapování zarážek nemůže rozpoznat jako například přesměrování z adresy http://microsoft.com na výchozí stránku.  
+- Adresa URL prohlížeče stránky musí obsahovat název stránky. například `http://microsoft.com/default.apsx`. Mapování zarážek nemůže rozpoznat přesměrování z adresy, jako je například `http://microsoft.com` na výchozí stránku.  
   
-- Zarážky musí být nastavena na stránce určeného v adrese URL prohlížeče, nikoli v souboru ASPX ovládací prvek (ascx), hlavní stránky nebo jiný soubor součástí této stránce. Zarážky nastavené v zahrnuté stránky nelze mapovat.  
+- Zarážka musí být nastavena na stránce zadané v adrese URL prohlížeče, nikoli v souboru ovládacího prvku ASPX (ASCX), na stránce předlohy nebo v jiném souboru, který je součástí této stránky. Zarážky nastavené v zahrnutých stránkách nejde namapovat.  
   
-- Zarážky nastavené v `<script defer=true>` bloky nelze mapovat.  
+- Zarážky nastavené v blocích `<script defer=true>` nelze namapovat.  
   
-- Pro zarážky nastavené v `<script id="">` bloky, ignoruje mapování zarážek `id` atribut.  
+- Pro zarážky nastavené v blocích `<script id="">`, mapování zarážek ignoruje atribut `id`.  
   
 ## <a name="breakpoint-mapping-and-duplicate-lines"></a>Mapování zarážek a duplicitní řádky  
- Algoritmus mapování zarážek ve skriptu na straně serveru a na straně klienta najít odpovídající umístění, kontroluje kód na každém řádku. Algoritmus předpokládá, že každý řádek představuje jedinečný. Pokud dva nebo více řádky obsahují stejný kód a nastavte zarážku v jednom z těchto duplicitní řádky, algoritmus mapování zarážky vybrat nesprávné duplicitní v souboru straně klienta. Chcete-li tomu zabránit, přidejte komentář k řádku, kde jste nastavili zarážku. Příklad:  
+ Chcete-li najít odpovídající umístění na straně serveru a na straně klienta, algoritmus mapování zarážek kontroluje kód na každém řádku. Algoritmus předpokládá, že každý řádek je jedinečný. Pokud dva nebo více řádků obsahují stejný kód a nastavili jste zarážku na jednom z těchto duplicitních řádků, algoritmus mapování zarážek může v souboru na straně klienta vybrat chybnou duplicitu. Chcete-li tomu zabránit, přidejte komentář na řádek, kde jste nastavili zarážku. Například:  
   
 ```  
 i++ ;  

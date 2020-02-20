@@ -6,12 +6,12 @@ manager: lank
 ms.date: 02/17/2020
 ms.topic: conceptual
 description: Naučte se aktivovat předplatná sady Visual Studio, kterou jste zakoupili v Microsoft Store.
-ms.openlocfilehash: 8df8125280e17eba941e099d8d27b37a19de79b1
-ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
+ms.openlocfilehash: 2fb3d958206cd3fcd76654b95d5be4b8d8e8a3a4
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77439150"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476765"
 ---
 # <a name="how-do-i-activate-a-subscription-acquired-from-the-microsoft-store"></a>Návody aktivovat předplatné získané z Microsoft Store?
 Pokud jste si zakoupili předplatné sady Visual Studio prostřednictvím Microsoft Store, můžete aktivační kroky iniciovat na stránce s potvrzením platby nebo v potvrzovacím e-mailu, kterou jste dostali po nákupu.
@@ -35,7 +35,8 @@ Pokud jste si zakoupili předplatné sady Visual Studio prostřednictvím Micros
 Na stránce [výhody](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) můžete zobrazit všechny nástroje, služby, školení a výhody, které jsou součástí vašeho předplatného.  Doporučujeme, abyste si nastavili [Visual Studio](vs-ide-benefit.md) a [Azure DevOps](vs-azure-devops.md) , abyste mohli začít. 
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
-- [Dokumentace k Azure](/azure/)
-- [Dokumentace k Microsoft 365](/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+

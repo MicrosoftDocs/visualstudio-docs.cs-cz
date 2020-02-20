@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2::Stop | Dokumentace Microsoftu
+title: 'IDebugEngineProgram2:: stop | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ba93c88eb3d7e996b2a5f19dda605653af090c94
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9d7213dcd2484ba69caf51fdc21f52bba5bb3361
+ms.sourcegitcommit: 260d093d2287ba791f28bdc7103493beabf80b2e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345216"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506449"
 ---
 # <a name="idebugengineprogram2stop"></a>IDebugEngineProgram2::Stop
-Zastaví všechna vlákna spuštěná v rámci tohoto programu.
+Zastaví všechna vlákna spuštěná v tomto programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,13 +38,13 @@ int Stop();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je volána, když je tento program laděn v prostředí s více programu. Když je obdržena událostí ukončení z některé aplikace, tato metoda je volána v této aplikaci. Implementace této metody by měla být asynchronní; To znamená, že ne všechna vlákna by měl být musí být zastaven předtím, než tato metoda vrátí hodnotu. Implementace této metody může být stejně jednoduché jako volání funkce [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) metody v této aplikaci.
+ Tato metoda je volána, když je tento program laděn v prostředí s více programy. Je-li přijata událost zastavení z nějakého jiného programu, je tato metoda volána v tomto programu. Implementace této metody by měla být asynchronní; To znamená, že před vrácením této metody musí být nutné zastavit všechna vlákna. Implementace této metody může být jednoduchá jako volání metody [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) v tomto programu.
 
- Žádná událost ladění je odeslaný v odpovědi na tuto metodu.
+ Implementátor by měl při zastavení programu odeslat [IDebugStopCompleteEvent2](../../../extensibility/debugger/reference/idebugstopcompleteevent2.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)
 - [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)

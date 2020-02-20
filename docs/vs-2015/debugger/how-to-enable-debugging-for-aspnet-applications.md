@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Povolit ladění pro aplikace ASP.NET | Dokumentace Microsoftu'
+title: 'Postupy: povolení ladění pro aplikace ASP.NET | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,28 +18,28 @@ caps.latest.revision: 40
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 07036fd7c1db7dc8b56502ab9c914f1ba808e876
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 5726e964a0db2fae1b902f54a14e206dbc03a148
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65703667"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77477013"
 ---
-# <a name="how-to-enable-debugging-for-aspnet-applications"></a>Postupy: Povolit ladění pro aplikace ASP.NET
+# <a name="how-to-enable-debugging-for-aspnet-applications"></a>Postupy: Povolení ladění pro aplikace ASP.NET
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pokud chcete povolit ladění, je nutné ho povolit jak **vlastnosti projektu** stránky a v souboru web.config aplikace.  
+Chcete-li povolit ladění, je nutné jej povolit na stránce **vlastností projektu** i v souboru Web. config aplikace.  
   
 > [!NOTE]  
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](/previous-versions/zbhkx167(v=vs.140)).  
   
 ### <a name="to-enable-aspnet-debugging-in-the-project-properties-visual-basicc"></a>Povolení ladění ASP.NET ve vlastnostech projektu (jazyk Visual Basic nebo C#)  
   
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na název webového projektu a vyberte **vlastnosti**.  
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na název webového projektu a vyberte možnost **vlastnosti**.  
   
-2. Na stránce vlastností projektu klikněte na tlačítko **webové** kartu.  
+2. Na stránce vlastností projektu klikněte na kartu **Web** .  
   
-3. V části **ladicí programy**, vyberte **ASP.NET** zaškrtávací políčko.  
+3. V části **ladicí programy**zaškrtněte políčko **ASP.NET** .  
   
 ### <a name="to-enable-debugging-in-the-webconfig-file"></a>Povolení ladění v souboru web.config  
   
@@ -79,11 +79,11 @@ Soubor web.config by měl vypadat jako následující příklad. Mezi elementy c
 ```  
   
 ## <a name="robust-programming"></a>Robustní programování  
-[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] automaticky detekuje jakékoli změny do souborů Web.config a aplikuje nové nastavení konfigurace. Není nutné restartovat počítač nebo restartujte server IIS se změny projevily.  
+[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] automaticky detekuje všechny změny v souborech Web. config a aplikuje nové nastavení konfigurace. Změny se projeví až po restartování počítače nebo restartování serveru služby IIS.  
   
-Webová stránka může obsahovat více virtuálních adresářů a podadresářů a soubory Web.config mohou existovat v každém z nich. Aplikace [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] dědí nastavení ze souborů Web.config, které jsou v cestě adresy URL výše. Hierarchické konfigurační soubory umožňují změnit nastavení pro několik aplikací [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] současně, jako například pro všechny aplikace v hierarchii pod ní. Je-li však element `debug` nastaven v souboru v nižší hierarchii, přepíše vyšší hodnotu.  
+Webová stránka může obsahovat více virtuálních adresářů a podadresářů a soubory Web.config mohou existovat v každém z nich. [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] aplikace dědí nastavení ze souborů Web. config na vyšších úrovních v cestě URL. Hierarchické konfigurační soubory umožňují změnit nastavení pro několik aplikací [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] současně, jako například pro všechny aplikace v hierarchii pod ní. Je-li však element `debug` nastaven v souboru v nižší hierarchii, přepíše vyšší hodnotu.  
   
-Například lze zadat `debug="true"` v www.microsoft.com/aaa/Web.config a jakékoli aplikace ve složce aaa nebo v libovolné podsložce aaa zdědí toto nastavení. Takže je-li aplikace [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] na www.microsoft.com/aaa/bbb, zdědí toto nastavení, stejně jako aplikace [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] v www.microsoft.com/aaa/ccc, www.microsoft.com/aaa/ddd a tak dále. Jedinou výjimkou je, pokud jedna z těchto aplikací přepíše nastavení pomocí vlastního nižšího souboru Web.config.  
+Můžete například zadat `debug="true"` v `www.microsoft.com/aaa/Web.config`a libovolná aplikace ve složce AAA nebo v jakékoli podsložce AAA zdědí toto nastavení. Takže pokud je vaše aplikace [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] v `www.microsoft.com/aaa/bbb`, zdědí toto nastavení, stejně jako všechny [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] aplikace v `www.microsoft.com/aaa/ccc`, `www.microsoft.com/aaa/ddd`a tak dále. Jedinou výjimkou je, pokud jedna z těchto aplikací přepíše nastavení pomocí vlastního nižšího souboru Web.config.  
   
 Povolení ladění výrazně ovlivní výkon aplikace [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]. Nezapomeňte vypnout režim ladění před nasazením vydání aplikace nebo před měřením výkonu.  
   

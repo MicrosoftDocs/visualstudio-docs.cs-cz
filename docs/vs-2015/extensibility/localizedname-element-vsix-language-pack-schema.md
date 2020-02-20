@@ -1,5 +1,5 @@
 ---
-title: Element LocalizedName (VSIX Language Pack Schema) | Dokumentace Microsoftu
+title: Lokalizovaný element a (schéma jazykové sady VSIX) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -8,17 +8,17 @@ ms.assetid: 57b7f502-3b04-42d9-90d5-f57772a7c757
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: fcbda9f8c7a98d0830c898c81471854efc3a6403
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 58e491290122a9d525ff8129333ac0f52ac5f778
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65686143"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77477041"
 ---
-# <a name="localizedname-element-vsix-language-pack-schema"></a>Element LocalizedName (VSIX Language Pack Schema)
+# <a name="localizedname-element-vsix-language-pack-schema"></a>Lokalizovaný element (schéma jazykové sady VSIX)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Povinný parametr. Lokalizovaný název rozšíření k instalaci.  
+Povinná hodnota. Lokalizovaný název rozšíření, které má být nainstalováno.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,33 +33,33 @@ Povinný parametr. Lokalizovaný název rozšíření k instalaci.
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|Žádný||  
+|Žádná||  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|Žádné||  
+|Žádná||  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[LanguagePack – element VSIX](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)|Povinný parametr. Obsahuje kořenový prvek pro jazykové sady VSIX.|  
+|[LanguagePack – element VSIX](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)|Povinná hodnota. Poskytuje kořenový prvek pro jazykovou sadu VSIX.|  
   
 ## <a name="text-value"></a>Textová hodnota  
- Povinný parametr. Název této jazykové sady v cílovém jazyce.  
+ Povinná hodnota. Název jazykové sady v cílovém jazyce.  
   
 ## <a name="element-information"></a>Informace o elementu  
   
 |                 |                                                           |
 |-----------------|-----------------------------------------------------------|
-|    Obor názvů    | http://schemas.microsoft.com/developer/vsx-schema-lp/2010 |
-|   Název schématu   |                 VSIX Language Pack Schema                 |
-| Soubor ověření |                VSIXLanguagePackSchema.xsd                 |
-|  Může být prázdné.   |                      Nelze použít                       |
+|    Obor názvů    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
+|   Název schématu   |                 Schéma jazykové sady VSIX                 |
+| Soubor ověření |                VSIXLanguagePackSchema. xsd                 |
+|  Může být prázdné   |                      Neuvedeno                       |
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace schématu VSX Language Pack](../extensibility/vsx-language-pack-schema-reference.md)   
+ [Referenční  schématu VSX Language Pack](../extensibility/vsx-language-pack-schema-reference.md)  
  [Lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md)   
- [Referenční dokumentace schématu 1.0 rozšíření VSIX](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)
+ [Referenční dokumentace schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110))

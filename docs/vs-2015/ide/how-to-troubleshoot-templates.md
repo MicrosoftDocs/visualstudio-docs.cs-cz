@@ -11,17 +11,17 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: acee84f582f2d6b8e2905e50db352cde794b73e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c481b2b9c90b15f4cbc709cad89e5b772ad95cee
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670603"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77477087"
 ---
 # <a name="how-to-troubleshoot-templates"></a>Postupy: Řešení problémů se šablonami
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pokud se šablonu nepovede načíst ve vývojovém prostředí, existuje několik způsobů, jak tento problém najít.
+Pokud šablonu se nepodaří načíst ve vývojovém prostředí, nalezení problému několika způsoby.
 
 ## <a name="validating-the-vstemplate-file"></a>Ověřování souboru. vstemplate
  Pokud soubor. vstemplate v šabloně nedodržuje schéma šablony [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], šablona se nemusí zobrazit v dialogovém okně **Nový projekt** .
@@ -32,14 +32,14 @@ Pokud se šablonu nepovede načíst ve vývojovém prostředí, existuje několi
 
 2. Extrahujte soubor. zip.
 
-3. V nabídce **soubor** v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] klikněte na **otevřít**a pak klikněte na **soubor**.
+3. V nabídce **soubor** v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]klikněte na **otevřít**a pak klikněte na **soubor**.
 
 4. Vyberte soubor. vstemplate pro šablonu a klikněte na **otevřít**.
 
 5. Ověřte, zda soubor XML souboru. vstemplate dodržuje schéma šablony [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Další informace o schématu. vstemplate naleznete v tématu [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md).
 
     > [!NOTE]
-    > Chcete-li získat podporu technologie IntelliSense při vytváření souboru. vstemplate, přidejte atribut `xmlns` do prvku `VSTemplate` a přiřaďte mu hodnotu http://schemas.microsoft.com/developer/vstemplate/2005.
+    > Chcete-li získat podporu technologie IntelliSense při vytváření souboru. vstemplate, přidejte atribut `xmlns` do prvku `VSTemplate` a přiřaďte mu hodnotu `http://schemas.microsoft.com/developer/vstemplate/2005`.
 
 6. Uložte a zavřete soubor. vstemplate.
 

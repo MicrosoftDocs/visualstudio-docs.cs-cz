@@ -11,19 +11,19 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2c080f1b5d4b36093cca44daaac644276039718e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e1a692ee29ea9d43e1a0a4fbed5c52934d69256d
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667954"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476984"
 ---
 # <a name="how-to-distribute-code-snippets"></a>Postupy: Distribuce fragmentů kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Můžete jednoduše poskytnout vašim přátelům fragmenty kódu a nechat je nainstalovat do svých vlastních počítačů pomocí Správce fragmentů kódů. Nicméně pokud máte několik fragmentů kódu k distribuci nebo chcete více rozšířit, zahrnete soubor s fragmenty do rozšíření sady Visual Studio, které mohou instalovat uživatelé sady Visual Studio.
 
- Aby bylo možné vytvořit rozšíření sady Visual Studio, je nutné nainstalovat sadu Visual Studio SDK. Vyhledejte verzi VSSDK, která odpovídá vaší instalaci sady Visual Studio, na webu [Visual studio 2015 ke stažení](http://www.visualstudio.com/downloads/visual-studio-2015-downloads-vs.aspx).
+ Aby bylo možné vytvořit rozšíření sady Visual Studio, je nutné nainstalovat sadu Visual Studio SDK. Vyhledejte verzi VSSDK, která odpovídá vaší instalaci sady Visual Studio, na webu [Visual studio 2015 ke stažení](https://visualstudio.microsoft.com/vs/older-downloads/).
 
 ## <a name="setting-up-the-extension"></a>Nastavení rozšíření
  V tomto postupu použijeme stejný fragment kódu Hello World vytvořený v [návodu: Vytvoření fragmentu kódu](../ide/walkthrough-creating-a-code-snippet.md). Budeme poskytovat text. fragment, takže nemusíte se vracet a vytvořit ho.
@@ -62,7 +62,7 @@ Můžete jednoduše poskytnout vašim přátelům fragmenty kódu a nechat je na
 
 2. Přesuňte soubor. fragmentů do složky **HelloWorldVB** .
 
-3. V Průzkumník řešení vyberte soubor. fragment a v okně **vlastnosti** se ujistěte, že je **Akce sestavení** nastavena na **obsah**. možnost **Kopírovat do výstupního adresáře** je nastavena na hodnotu **vždy kopírovat**a možnost **zahrnout do souboru VSIX** je nastavena na **hodnotu true.** .
+3. Vyberte soubor. fragmentů v Průzkumník řešení a v okně **vlastnosti** se ujistěte, že je **Akce sestavení** nastavena na **obsah**, možnost **Kopírovat do výstupního adresáře** je nastavena na hodnotu **vždy kopírovat**a možnost **zahrnout do souboru VSIX** je nastavena na **hodnotu true**.
 
 #### <a name="adding-the-pkgdef-file"></a>Přidání souboru. pkgdef
 
@@ -80,7 +80,7 @@ Můžete jednoduše poskytnout vašim přátelům fragmenty kódu a nechat je na
 
      Pokud prohlížíte tento klíč, můžete se podívat, jak zadat různé jazyky.
 
-3. V Průzkumník řešení vyberte soubor. pkgdef a v okně **vlastnosti** se ujistěte, že je **Akce sestavení** nastavena na **obsah**, možnost **Kopírovat do výstupního adresáře** je nastavena na hodnotu **vždy kopírovat**a možnost **zahrnout do souboru VSIX** je nastavena na **hodnotu true.** .
+3. V Průzkumník řešení vyberte soubor. pkgdef a v okně **vlastnosti** se ujistěte, že je **Akce sestavení** nastavena na **obsah**, možnost **Kopírovat do výstupního adresáře** je nastavena na hodnotu **vždy kopírovat**a **v souboru VSIX** je nastavena **hodnota true**.
 
 4. Přidejte soubor. pkgdef jako prostředek do manifestu VSIX. V souboru source. extension. vsixmanifest přejděte na kartu **assets (prostředky** ) a klikněte na **Nový**.
 
@@ -96,7 +96,7 @@ Můžete jednoduše poskytnout vašim přátelům fragmenty kódu a nechat je na
 
 4. Otestujte fragment. V experimentální instanci otevřete Visual Basic projekt a otevřete jeden ze souborů kódu. Umístěte kurzor někam do kódu, klikněte pravým tlačítkem myši a v místní nabídce vyberte **Vložit fragment**.
 
-5. Měli byste vidět HelloWorldVB jako jednu ze složek. Poklikejte na ni. Měl by se zobrazit překryvný **fragment vložení: HellowWorldVB >** , který má rozevírací seznam **HelloWorldVB**. Klikněte na rozevírací seznam HelloWorldVB. Měl by se zobrazit následující řádek přidaný do souboru:
+5. Měli byste vidět HelloWorldVB jako jednu ze složek. Poklepejte na něj. Měl by se zobrazit překryvný **fragment vložení: HellowWorldVB >** , který má rozevírací seznam **HelloWorldVB**. Klikněte na rozevírací seznam HelloWorldVB. Měl by se zobrazit následující řádek přidaný do souboru:
 
     ```vb
     Console.WriteLine("Hello, World!")

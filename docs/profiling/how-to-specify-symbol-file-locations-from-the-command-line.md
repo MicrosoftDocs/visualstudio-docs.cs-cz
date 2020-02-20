@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b4c4230ca2539b55f57990b90ae33d1f53726dc
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: 604863cbef5e42b31450ea09dffa56a1a00ae992
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74778723"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476890"
 ---
 # <a name="how-to-specify-symbol-file-locations-from-the-command-line"></a>Postupy: určení umístění souborů symbolů z příkazového řádku
 Chcete-li zobrazit informace o symbolech, jako jsou názvy funkcí a čísla řádků, nástroj příkazového řádku VSPerfReport vyžaduje přístup k symbolu (. *PDB*) soubory profilované komponenty a systémové soubory systému Windows. Soubory symbolů se vytvoří, když je komponenta zkompilována. Další informace najdete v tématu [VSPerfReport](../profiling/vsperfreport.md). VSPerfReport automaticky hledá v těchto umístěních soubory symbolů:
@@ -46,9 +46,9 @@ Chcete-li zobrazit informace o symbolech, jako jsou názvy funkcí a čísla ř�
 
 2. Pomocí následující syntaxe nastavte proměnnou prostředí **_NT_SYMBOL_PATH** nebo možnost VSPerfReport/SymbolPath:
 
-    **srv\\** * *localstore* **\*http://msdl.microsoft.com/download/symbols**
+    `srv*<LocalStore>*https://msdl.microsoft.com/download/symbols`
 
-    kde *localstore* je cesta k místnímu adresáři, který jste vytvořili.
+    kde *<LocalStore>* je cesta k místnímu adresáři, který jste vytvořili.
 
 ## <a name="specify-component-symbol-files"></a>Zadat soubory symbolů součásti
  Nástroje pro profilaci vyhledá. soubory *PDB* komponent, které chcete profilovat v původních umístěních uložených v součástech, nebo ve složce, která obsahuje soubor dat profilování. Přidáním jedné nebo více cest k **_NT_SYMBOL_PATH** nebo k možnosti **/SymbolPath** můžete určit další umístění pro hledání. Jednotlivé cesty oddělte středníkem.
@@ -56,7 +56,9 @@ Chcete-li zobrazit informace o symbolech, jako jsou názvy funkcí a čísla ř�
 ## <a name="example"></a>Příklad
  Následující příkazový řádek nastaví proměnnou prostředí **_NT_SYMBOL_PATH** na server symbolů systému Windows a místní adresář na **C:\Symbols**.
 
- **nastavení _NT_SYMBOL_PATH = SRV\*C:\Symbols\*http://msdl.microsoft.com/download/symbols**
+ ```cmd
+  set  _NT_SYMBOL_PATH=srv*C:\symbols*https://msdl.microsoft.com/download/symbols
+ ```
 
  Následující příkazový řádek VSPerfReport přidá adresář *C:\Projects\Symbols* do cesty pro hledání pomocí možnosti **/SymbolPath** .
 

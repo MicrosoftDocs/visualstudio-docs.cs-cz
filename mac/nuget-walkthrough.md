@@ -1,6 +1,6 @@
 ---
-title: プロジェクトに NuGet パッケージを含める
-description: このドキュメントでは、Visual Studio for Mac を使用してプロジェクトに NuGet パッケージを含める方法について説明します。 パッケージの検索およびダウンロードの手順を説明し、IDE 統合機能の概要を示します。
+title: Zahrnutí balíčku NuGet do projektu
+description: Tento dokument popisuje, jak zahrnout balíček NuGet do projektu pomocí Visual Studio pro Mac. Provede vás tím, že najde a stáhne balíček a také zavádí funkce integrace IDE.
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 11/01/2019
@@ -13,43 +13,43 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/16/2019
 ms.locfileid: "74127241"
 ---
-# <a name="install-and-manage-nuget-packages-in-visual-studio-for-mac"></a>Visual Studio for Mac に NuGet パッケージをインストールして管理する
+# <a name="install-and-manage-nuget-packages-in-visual-studio-for-mac"></a>Instalace a Správa balíčků NuGet v Visual Studio pro Mac
 
-Visual Studio for Mac 内で NuGet パッケージ マネージャー UI を使用すると、プロジェクトやソリューション内で NuGet パッケージを簡単にインストール、アンインストール、更新することができます。 パッケージを検索し、.NET Core、ASP.NET Core、Xamarin プロジェクトに追加することができます。
+Uživatelské rozhraní Správce balíčků NuGet v Visual Studio pro Mac umožňuje snadno nainstalovat, odinstalovat a aktualizovat balíčky NuGet v projektech a řešeních. Balíčky můžete vyhledat a přidat do projektů .NET Core, ASP.NET Core a Xamarin.
 
-この記事では、プロジェクトに NuGet パッケージを含める方法について説明し、プロセスをシームレスにするツール チェーンを示します。
+Tento článek popisuje, jak zahrnout balíček NuGet do projektu a demonstruje řetěz nástrojů, který tento proces způsobuje bez problémů.
 
-For an intro to using NuGet in Visual Studio for Mac, see [Quickstart: Install and use a package in Visual Studio for Mac](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
+Úvod k použití NuGet v Visual Studio pro Mac najdete v tématu [rychlý Start: instalace a použití balíčku v Visual Studio pro Mac](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
-## <a name="find-and-install-a-package"></a>パッケージを検索してインストールする
+## <a name="find-and-install-a-package"></a>Vyhledání a instalace balíčku
 
-1. Visual Studio for Mac でプロジェクトを開いた状態で、**Solution Pad** 内の **[依存関係]** フォルダー (Xamarin プロジェクトを使用する場合は **[パッケージ]** フォルダー) を右クリックし、 **[NuGet パッケージの管理]** を選択します。
+1. Otevřete-li projekt v Visual Studio pro Mac, klikněte pravým tlačítkem myši na složku **závislosti** (složka**balíčky** , pokud používáte projekt Xamarin) v **oblast řešení** a vyberte možnost **Spravovat balíčky NuGet...** .
 
-    ![新しい NuGet パッケージのコンテキスト アクションを追加する](media/nuget-walkthrough-packages-menu.png)
+    ![Akce kontextu přidání nového balíčku NuGet](media/nuget-walkthrough-packages-menu.png)
 
-2. **[NuGet パッケージの管理]** ウィンドウが起動します。 Ensure that the Source drop-down in the top left corner of the dialog is set to `nuget.org`, so that you're searching the central NuGet package repository.
+2. Tím se spustí okno **Spravovat balíčky NuGet** . Ujistěte se, že rozevírací seznam zdroj v levém horním rohu dialogového okna je nastaven na `nuget.org`, takže prohledáváte úložiště balíčků centrálního NuGet.
 
-    ![Nuget パッケージのリスト](media/nuget-walkthrough-add-packages1.png)
+    ![Výpis balíčků NuGet](media/nuget-walkthrough-add-packages1.png)
 
-3. `EntityFramework` などの特定のパッケージを検索するには、右上隅の検索ボックスを使用します。 使用するパッケージが見つかったら、それを選択し、 **[パッケージを追加]** ボタンをクリックしてインストールを開始します。
+3. Pomocí vyhledávacího pole v pravém horním rohu Najděte konkrétní balíček, například `EntityFramework`. Po nalezení balíčku, který chcete použít, ho vyberte a kliknutím na tlačítko **Přidat balíček** zahajte instalaci.
 
-    ![EntityFramework NuGet パッケージの追加](media/nuget-walkthrough-add-packages2.png)
+    ![Přidat balíček NuGet EntityFramework](media/nuget-walkthrough-add-packages2.png)
 
-4. パッケージはダウンロードされた後、プロジェクトに追加されます。 ソリューションは、編集中のプロジェクトの種類に応じて変化します。
+4. Po stažení balíčku se do projektu přidá. Řešení se změní v závislosti na typu projektu, který upravujete:
 
-    **Xamarin プロジェクト**
-    * **[参照]** ノードには、NuGet パッケージの一部であるすべてのアセンブリのリストが含まれます。
-    * **[パッケージ]** ノードには、ダウンロードした各 NuGet パッケージが表示されます。 このリストのパッケージを更新したり、削除したりすることができます。
+    **Projekty Xamarin**
+    * Uzel **odkazy** bude obsahovat seznam všech sestavení, která jsou součástí balíčku NuGet.
+    * Uzel **balíčky** zobrazí každý balíček NuGet, který jste stáhli. Balíček můžete aktualizovat nebo odebrat z tohoto seznamu.
     
-    **.NET Core プロジェクト**
+    **Projekty .NET Core**
 
-    * **[依存関係] > [NuGet]** ノードには、ダウンロードした各 NuGet パッケージが表示されます。 このリストのパッケージを更新したり、削除したりすることができます。
+    * Uzel **nuget > Node NuGet** zobrazí každý balíček NuGet, který jste stáhli. Balíček můžete aktualizovat nebo odebrat z tohoto seznamu.
 
-## <a name="using-nuget-packages"></a>NuGet パッケージの使用
+## <a name="using-nuget-packages"></a>Používání balíčků NuGet
 
-NuGet パッケージが追加され、プロジェクト参照が更新されたら、他のプロジェクト参照の場合と同じように API に対してプログラミングできます。
+Po přidání balíčku NuGet a aktualizace odkazů na projekt můžete programovat s rozhraními API stejně jako v případě jakýchkoli odkazů na projekt.
 
-必ず、必要な `using` ディレクティブをファイルの先頭に追加してください。
+Zajistěte, abyste do horní části souboru přidali všechny požadované direktivy `using`:
 
 ```csharp
 using Newtonsoft.Json;
@@ -57,88 +57,88 @@ using Newtonsoft.Json;
 
 <a name="Package_Updates" class="injected"></a>
 
-## <a name="updating-packages"></a>パッケージの更新
+## <a name="updating-packages"></a>Aktualizace balíčků
 
-パッケージの更新は、 **[依存関係]** ノード (または、Xamarin プロジェクトの場合は **[パッケージ]** ノード) を右クリックすることで、すべて一度に行うことも、パッケージごとに個別に行うこともできます。 新しいバージョンの NuGet パッケージが使用可能になると、更新アイコンが表示されます ![丸で囲まれた上向きの矢印](media/nuget-walkthrough-update-icon.png)。
+Aktualizace balíčků lze provést buď najednou, kliknutím pravým tlačítkem myši na uzel **závislosti** (uzel**balíčky** pro projekty Xamarin) nebo jednotlivě na každém balíčku. Když je k dispozici nová verze balíčku NuGet, zobrazí se ikona aktualizace ![šipka nahoru s](media/nuget-walkthrough-update-icon.png)em kroužku.
 
-コンテキスト メニューにアクセスするには、 **[依存関係]** を右クリックして、 **[更新]** を選択し、すべてのパッケージを更新します。
+Kliknutím pravým tlačítkem na **závislosti** přistupujete k kontextové nabídce a kliknutím na **aktualizovat** aktualizujte všechny balíčky:
 
-![パッケージ メニュー](media/nuget-walkthrough-packages-menu-update.png)
+![Nabídka balíčky](media/nuget-walkthrough-packages-menu-update.png)
 
-* **[NuGet パッケージの管理]** - プロジェクトにさらにパッケージを追加するためのウィンドウが開きます。
-* **[更新]** - 各パッケージのソース サーバーを確認し、新しいバージョンをダウンロードします。
-* **[復元]** - 不足しているパッケージをダウンロードします (既存のパッケージを新しいバージョンに更新しません)。
+* **Spravovat balíčky NuGet** – otevře okno pro přidání dalších balíčků do projektu.
+* **Aktualizace** – zkontroluje zdrojový server pro každý balíček a stáhne všechny novější verze.
+* **Obnovit** – stáhne všechny chybějící balíčky (bez aktualizace existujících balíčků na novější verze).
 
-更新オプションと復元オプションはソリューション レベルでも使用でき、ソリューション内のすべてのプロジェクトに影響します。
+Možnosti aktualizace a obnovení jsou také k dispozici na úrovni řešení a mají vliv na všechny projekty v řešení.
 
-### <a name="locating-outdated-packages"></a>Locating outdated packages
-Solution Pad から、現在インストールされているパッケージのバージョンを表示し、更新するパッケージを右クリックすることができます。
+### <a name="locating-outdated-packages"></a>Hledání zastaralých balíčků
+Z panelu řešení můžete zobrazit aktuálně nainstalovanou verzi balíčku a kliknutím pravým tlačítkem na balíček aktualizovat.
 
-![[更新]、[削除]、[更新] のオプションが表示されている [パッケージ] メニュー](media/nuget-walkthrough-PackageMenu.png)
+![Nabídka balíčky s možnostmi aktualizace, odebrání a aktualizace](media/nuget-walkthrough-PackageMenu.png)
 
-パッケージの新しいバージョンが利用可能な場合は、パッケージ名の横に通知が表示されるので、更新するかどうかを決定できます。
+V případě, že je k dispozici nová verze balíčku, se zobrazí také oznámení vedle názvu balíčku, takže se můžete rozhodnout, jestli ho budete chtít aktualizovat.
 
-![新しいパッケージ バージョンが利用可能になったときに表示される通知](media/nuget-walkthrough-package-update-available.png)
+![Oznámení zobrazené v případě, že je k dispozici nová verze balíčku](media/nuget-walkthrough-package-update-available.png)
 
-表示されるメニューには、次の 2 つのオプションがあります。
+V zobrazené nabídce máte dvě možnosti:
 
-* **[更新]** - ソース サーバーを確認し、新しいバージョン (存在する場合) をダウンロードします。
-* **[削除]** - このプロジェクトからパッケージを削除し、プロジェクトの参照から関連するアセンブリを削除します。
+* **Aktualizace** – zkontroluje zdrojový server a stáhne novější verzi (pokud existuje).
+* **Odebrat** – odebere balíček z tohoto projektu a odebere příslušná sestavení z odkazů projektu.
 
-## <a name="manage-packages-for-the-solution"></a>ソリューションのパッケージの管理
+## <a name="manage-packages-for-the-solution"></a>Spravovat balíčky pro řešení
 
-ソリューションのパッケージの管理は、複数のプロジェクトを同時に操作するための便利な手段です。
+Správa balíčků pro řešení je pohodlný způsob práce s více projekty současně.
 
-1. Right-click the solution and select **Manage NuGet Packages...** :
+1. Klikněte pravým tlačítkem na řešení a vyberte **Spravovat balíčky NuGet...** :
 
-    ![ソリューションの NuGet パッケージの管理](media/nuget-walkthrough-manage-packages-solution.png)
+    ![Spravovat balíčky NuGet pro řešení](media/nuget-walkthrough-manage-packages-solution.png)
 
-1. ソリューションのパッケージを管理する場合、UI を利用して、操作によって影響を与えるプロジェクトを選択できます。
+1. Při správě balíčků pro řešení vám uživatelské rozhraní umožní vybrat projekty, které jsou ovlivněné operacemi:
 
-    ![ソリューションのパッケージを管理する場合のプロジェクト セレクター](media/nuget-walkthrough-add-to-projects.png)
+    ![Selektor projektu při správě balíčků pro řešení](media/nuget-walkthrough-add-to-projects.png)
 
-### <a name="consolidate-tab"></a>[統合] タブ
+### <a name="consolidate-tab"></a>Karta konsolidovat
 
-When working in a solution with multiple projects, it's considered a best practice to make sure that anywhere you use the same NuGet package in each project, you're also using the same version number of that package. Visual Studio for Mac helps make this easier by providing a **Consolidate** tab in the Package Manager UI when you choose to manage packages for a solution. Using this tab, you can easily see where packages with distinct version numbers are used by different projects in the solution:
+Když pracujete v řešení s více projekty, považuje se za osvědčený postup, abyste se ujistili, že kdekoli použijete stejný balíček NuGet v každém projektu, ale také použijete stejné číslo verze tohoto balíčku. Visual Studio pro Mac to usnadňuje tím, že poskytuje kartu **konsolidace** v uživatelském rozhraní Správce balíčků, když se rozhodnete spravovat balíčky pro řešení. Pomocí této karty můžete snadno zobrazit, kde jsou balíčky s různými čísly verzí používány různými projekty v řešení:
 
-![パッケージ マネージャー UI の [統合] タブ](media/nuget-walkthrough-consolidate-tab.png)
+![Karta konsolidace uživatelského rozhraní Správce balíčků](media/nuget-walkthrough-consolidate-tab.png)
 
-In this example, the NuGetDemo project is using Microsoft.EntityFrameworkCore 2.20, whereas NuGetDemo.Shared is using Microsoft.EntityFrameworkCore 2.2.6. パッケージ バージョンを統合するには、次を実行します。
+V tomto příkladu projekt NuGetDemo používá Microsoft. EntityFrameworkCore 2,20, zatímco NuGetDemo. Shared používá Microsoft. EntityFrameworkCore 2.2.6. Chcete-li konsolidovat verze balíčků, postupujte následovně:
 
-- プロジェクトの一覧で、更新するプロジェクトを選択します。
-- Select the version to use in all those projects in the **New Version** list, such as Microsoft.EntityFrameworkCore 3.0.0.
-- Select the **Consolidate Package** button.
+- Vyberte projekty, které chcete aktualizovat v seznamu projektu.
+- Vyberte verzi, kterou chcete použít ve všech těchto projektech v seznamu **Nová verze** , například Microsoft. EntityFrameworkCore 3.0.0.
+- Klikněte na tlačítko **konsolidovat balíček** .
 
-パッケージ マネージャーによって、選択されたすべてのプロジェクトに対して、選択されたパッケージ バージョンがインストールされます。パッケージは **[統合]** タブ上には表示されなくなります。
+Správce balíčků nainstaluje vybranou verzi balíčku do všech vybraných projektů, po kterém se balíček už nebude zobrazovat na kartě **konsolidace** .
 
-## <a name="adding-package-sources"></a>パッケージ ソースの追加
+## <a name="adding-package-sources"></a>Přidávání zdrojů balíčků
 
-Packages available for installation are initially retrieved from nuget.org. However, you can add other package locations to Visual Studio for Mac. これは、開発中の独自の NuGet パッケージをテストする場合や、会社または組織内でプライベートの NuGet サーバーを使用する場合に便利です。
+Balíčky dostupné pro instalaci se zpočátku načítají z nuget.org. Do Visual Studio pro Mac však můžete přidat další umístění balíčků. To může být užitečné při testování vlastních balíčků NuGet ve vývoji nebo při používání privátního serveru NuGet v rámci vaší společnosti nebo organizace.
 
-Visual Studio for Mac で、 **[Visual Studio]、[基本設定]、[NuGet]、[ソース]** の順に移動し、パッケージ ソースのリストを表示して編集します。 ソースはリモート サーバー (URL で指定) またはローカル ディレクトリである場合があります。
+V Visual Studio pro Mac přejděte do části **Visual Studio > předvolby > > zdrojů NuGet** , abyste mohli zobrazit a upravit seznam zdrojů balíčků. Všimněte si, že zdrojem může být vzdálený server (určený adresou URL) nebo místní adresář.
 
-![パッケージ ソース](media/nuget-walkthrough-PackageSource.png)
+![Zdroje balíčků](media/nuget-walkthrough-PackageSource.png)
 
-**[追加]** をクリックして新しいソースをセットアップします。 パッケージ ソースのフレンドリ名と URL (またはファイル パス) を入力します。 ソースがセキュリティで保護された Web サーバーの場合は、ユーザー名とパスワードも入力します。それ以外の場合はこれらの項目を空白のままにします。
+Klikněte na tlačítko **Přidat** a nastavte nový zdroj. Zadejte popisný název a adresu URL (nebo cestu k souboru) do zdroje balíčku. Pokud je zdrojem zabezpečený webový server, zadejte taky uživatelské jméno a heslo. jinak ponechte prázdné tyto položky:
 
-![パッケージ ソースを追加する](media/nuget-walkthrough-PackageSource2.png)
+![Přidat zdroje balíčků](media/nuget-walkthrough-PackageSource2.png)
 
-パッケージを検索する際に、以下のようにさまざまなソースを選択することができます。
+Při hledání balíčků se pak dají vybrat různé zdroje:
 
-![パッケージ ソースを追加する](media/nuget-walkthrough-PackageSource3.png)
+![Přidat zdroje balíčků](media/nuget-walkthrough-PackageSource3.png)
 
-## <a name="version-control"></a>バージョン コントロール
+## <a name="version-control"></a>Správa verzí
 
-NuGet のドキュメントでは、[ソース管理にパッケージをコミットせずに NuGet を使用する方法](/nuget/consume-packages/packages-and-source-control)について説明しています。 ソース管理でバイナリおよび未使用の情報を格納しない場合は、自動的にサーバーからパッケージを復元するように Visual Studio for Mac を構成することができます。 これは、開発者が初めてソース管理からプロジェクトを取得するときに、Visual Studio for Mac が自動的に必要なパッケージをダウンロードしてインストールすることを意味します。
+Dokumentace k NuGet popisuje [použití NuGet bez potvrzení balíčků do správy zdrojových kódů](/nuget/consume-packages/packages-and-source-control). Pokud si nepřejete ukládat binární soubory a nepoužívané informace ve správě zdrojového kódu, můžete nakonfigurovat Visual Studio pro Mac pro automatické obnovení balíčků ze serveru. To znamená, že když vývojář poprvé načte projekt ze správy zdrojového kódu, Visual Studio pro Mac bude automaticky stahovat a instalovat požadované balíčky.
 
-![パッケージを自動的に復元する](media/nuget-walkthrough-AutoRestore.png)
+![Automaticky obnovit balíčky](media/nuget-walkthrough-AutoRestore.png)
 
-`packages` ディレクトリを追跡対象から除外する方法の詳細については、特定のソース管理のドキュメントを参照してください。
+Podrobnosti o tom, jak vyloučit `packages` adresář ze sledování, najdete v dokumentaci ke správě zdrojového kódu.
 
-## <a name="related-video"></a>関連ビデオ
+## <a name="related-video"></a>Související video
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Using-NuGet/player]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>Viz také
 
-* [Visual Studio でパッケージをインストールして使用する (Windows)](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+* [Instalace a použití balíčku v aplikaci Visual Studio (v systému Windows)](/nuget/quickstart/install-and-use-a-package-in-visual-studio)

@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e66d0d1ed8115b214b1da1654cbefdc96f7d1774
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 48fa03dec65bcdc1e6c3af94200cfb6c46907e49
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588613"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476860"
 ---
 # <a name="make-code-work-in-visual-studio"></a>Udělejte v aplikaci Visual Studio práci s kódem
 
@@ -24,7 +24,7 @@ Načetli jste Editor a vytvořili nějaký kód. Nyní se chcete ujistit, že k�
 
 ## <a name="build-your-code"></a>Sestavení kódu
 
-Existují dva základní druhy konfigurace sestavení: **ladění** a **vydání**. Konfigurace **ladění** vytváří pomalejší a větší spustitelný soubor, který umožňuje bohatší interaktivní prostředí ladění za běhu. Spustitelný soubor **ladění** by nikdy neměl být dodán. Konfigurace **vydané verze** vytváří rychlejší a optimalizovaný spustitelný soubor, který je vhodný k odeslání (alespoň z perspektivy kompilátoru). Výchozí konfigurace sestavení **ladění**.
+Existují dva základní typy konfigurace sestavení: **ladění** a **vydání**. Konfigurace **ladění** vytváří pomalejší a větší spustitelný soubor, který umožňuje bohatší interaktivní prostředí ladění za běhu. Spustitelný soubor **ladění** by nikdy neměl být dodán. Konfigurace **vydané verze** vytváří rychlejší a optimalizovaný spustitelný soubor, který je vhodný k odeslání (alespoň z perspektivy kompilátoru). Výchozí konfigurace sestavení je **ladit**.
 
 Nejjednodušší způsob, jak sestavit projekt, je stisknout **F7**, ale můžete také spustit sestavení výběrem možnosti **sestavit** > sestavit **řešení** z hlavní nabídky.
 
@@ -78,7 +78,7 @@ Sada Visual Studio obsahuje integrovanou sadu [.NET Compiler Platform analyzáto
 
 ### <a name="c-code-analysis"></a>C++Analýza kódu
 
-Chcete- C++ li analyzovat kód, spusťte [statickou analýzu kódu](../code-quality/quick-start-code-analysis-for-c-cpp.md). Buďte ve chvíli, kdy jste vyčistili zjevné chyby, které brání úspěšnému sestavení, a nějakou dobu chvíli vyřešíte, aby se zobrazila upozornění, která může vytvořit. Ušetříte si pár souvisejícím problémům správou po silnici a můžete se seznámit s několika technikami stylu kódu.
+Chcete- C++ li analyzovat kód, spusťte [statickou analýzu kódu](/cpp/code-quality/quick-start-code-analysis-for-c-cpp). Buďte ve chvíli, kdy jste vyčistili zjevné chyby, které brání úspěšnému sestavení, a nějakou dobu chvíli vyřešíte, aby se zobrazila upozornění, která může vytvořit. Ušetříte si pár souvisejícím problémům správou po silnici a můžete se seznámit s několika technikami stylu kódu.
 
 Stiskněte **Alt**+**F11** (nebo vyberte **analyzovat** > **Spustit analýzu kódu v rámci řešení** v horní nabídce) a spusťte tak statickou analýzu kódu.
 
@@ -158,15 +158,15 @@ Pokud chcete zobrazit aktuální hodnotu a odkazy, najeďte myší na proměnnou
 
 Kromě toho Visual Studio zobrazí okno **diagnostické nástroje** , kde můžete sledovat využití procesoru a paměti vaší aplikace v průběhu času. Později ve vývoji aplikací můžete pomocí těchto nástrojů vyhledat neočekávané vysoké využití procesoru nebo přidělení paměti. Použijte ji ve spojení s oknem **kukátka** a zarážkami k určení toho, co způsobuje neočekávané vysoké využití nebo uvolnění prostředků. Další informace najdete v tématu [prohlídka funkcí profilace](../profiling/profiling-feature-tour.md).
 
-## <a name="run-unit-tests"></a>Spuštění testů jednotek
+## <a name="run-unit-tests"></a>Spouštění testů jednotek
 
 Testování částí jsou vaše první linií obrany proti chybám kódu, protože při správném provedení otestuje jednu "jednotku" kódu, obvykle jedinou funkci a je snazší ladit než úplný program. Visual Studio nainstaluje architektury testování částí od společnosti Microsoft pro spravovaný i nativní kód. Použití jednotkových testů vytvořit testy jednotek, spustit je a ohlásí výsledky těchto testů. Po provedení změn znovu spusťte testy jednotek, abyste otestovali, že váš kód stále pracuje správně. Pomocí edice Visual Studio Enterprise můžete testy spouštět automaticky po každém sestavení.
 
-Abyste mohli začít, přečtěte si [generování testů jednotek pro kód pomocí funkce IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md).
+Chcete-li začít, přečtěte si téma [generování testů jednotek pro kód pomocí IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md).
 
 Chcete-li získat další informace o testování částí v aplikaci Visual Studio a o tom, jak vám pomohou vytvořit lepší kód kvality, přečtěte si [základy testování částí](../test/unit-test-basics.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [Další informace o používání ladicího programu](../debugger/index.yml)
