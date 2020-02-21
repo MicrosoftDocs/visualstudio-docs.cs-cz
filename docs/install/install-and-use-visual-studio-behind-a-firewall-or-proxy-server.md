@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 129a5551d04e8e9552b6d788f066c7c9df636f67
-ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
-ms.translationtype: HT
+ms.openlocfilehash: 4058c75b2282b6fb77c3026c3667a470d6b9fd92
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453366"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476873"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Instalace a používání sady Visual Studio a služeb Azure za bránou firewall nebo proxy serverem
 
@@ -135,7 +135,7 @@ Pokud chcete mít jistotu, že máte přístup ke všemu, co potřebujete, když
 | Visual Studio Online | \*. online.visualstudio.com | HTTPS | 443 | Používá se pro volání rozhraní API služby Visual Studio Online. |
 | Automatické získání typu JavaScriptu | registry.npmjs.org | HTTPS | 443 | Slouží k instalaci definic typů TypeScript pro poskytování IntelliSense pro oblíbené knihovny JavaScriptu. |
 | Licenční služba předplatných sady Visual Studio | app.vssps.visualstudio.com/apis/Licensing/ClientRights | HTTPS | 443 | Licencování pro online aktivaci |
-| Ladicí program | 1. <br>vsdebugger.blob.core.windows.net <br>vsdebugger.azureedge.net <br><br>2. <br>download.visualstudio.com/\*/OneCore.msvsmon.\*.zip<br><br> 3. referencesource.microsoft.com/symbols <br><br> 4. <br>symbols.nuget.org/download/symbols<br><br> 5. visualstudio.commsdl.microsoft.com/download/symbols | HTTPS | 443 | 1. <br>Používá se ke stahování bitů ladicího programu pro ladění .NET Core v systému UNIX/MacOS přes SSH. <br><br>2. <br>Používá se ke stahování bitů ladicího programu pro vzdálené ladění kontejneru Windows Docker.<br><br> 3. používá se pro krokování zdrojových prostředků .NET Framework <br><br> 4. <br>(Pokud uživatel výslovný) Používá se pro stahování symbolů publikovaných na serveru symbolů nuget.org.<br><br> 5. (Pokud se uživatel výslovný), který se používá pro stahování symbolů a binárních souborů MS, může být taky potřeba pro ladění spravovaného kódu ve výpisech paměti. |
+| Ladicí program | 1. <br>vsdebugger.blob.core.windows.net <br>vsdebugger.azureedge.net <br><br>2. <br>download.visualstudio.com/\*/OneCore.msvsmon.\*.zip<br><br> 3. referencesource.microsoft.com/symbols <br><br> 4. <br>symbols.nuget.org/download/symbols<br><br> 5. visualstudio.com<br><br>6. msdl.microsoft.com/download/symbols | HTTPS | 443 | 1. <br>Používá se ke stahování bitů ladicího programu pro ladění .NET Core v systému UNIX/MacOS přes SSH. <br><br>2. <br>Používá se ke stahování bitů ladicího programu pro vzdálené ladění kontejneru Windows Docker.<br><br> 3. používá se pro krokování zdrojových prostředků .NET Framework <br><br> 4. <br>(Pokud uživatel výslovný) Používá se pro stahování symbolů publikovaných na serveru symbolů nuget.org.<br><br> 5. (Pokud se uživatel výslovný), který se používá pro stahování symbolů a binárních souborů MS, může být taky potřeba pro ladění spravovaného kódu ve výpisech paměti. |
 | Visual Studio Online| \*. online.visualstudio.com | HTTPS | 443 | Používá se pro volání rozhraní API služby Visual Studio Online. |
 | Publikování aplikace Xamarin Android | \*. googleapis.com <br/> play.google.com <br/>accounts.google.com | HTTPS | 443 | Slouží k interakci se službou Obchod Google Play k publikování a nahrávání aplikací pro Xamarin Android přímo ze sady Visual Studio. |
 | Azure Container Registry | *. azurecr.io | HTTPS | 443 | Přístup k registrům kontejnerů hostovaným v Azure pro konfiguraci kanálů CICD |
