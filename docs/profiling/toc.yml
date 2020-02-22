@@ -466,9 +466,7 @@
                       href: how-to-attach-the-profiler-to-a-dotnet-framework-app-to-collect-memory-data.md
                     - name: Instrumentace samostatné součásti rozhraní .NET Framework a shromažďování dat paměti s profilerem z příkazového řádku
                       href: how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md
-                - name: 'Návod: Profilace z příkazového řádku s použitím vzorkování'
-                  href: walkthrough-command-line-profiling-using-sampling.md
-            - name: Webové aplikace ASP.NET
+            - name: ASP.NET – webové aplikace
               items:
                 - name: Profilace webových aplikací ASP.NET z příkazového řádku
                   href: command-line-profiling-of-aspnet-web-applications.md
