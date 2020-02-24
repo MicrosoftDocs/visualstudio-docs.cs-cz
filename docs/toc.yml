@@ -374,6 +374,8 @@
                   href: ide/reference/extract-interface.md
                 - name: Extrahování metody
                   href: ide/reference/extract-method.md
+                - name: Extrahování lokálních funkcí
+                  href: ide/reference/extract-local-function.md
                 - name: Vygenerování parametru
                   href: ide/reference/generate-parameter.md
                 - name: Vložená dočasná proměnná
@@ -386,6 +388,8 @@
                   href: ide/reference/invert-if-statement.md
                 - name: Možnosti refaktoringu statických lokálních funkcí
                   href: ide/reference/static-local-function-refactor-options.md
+                - name: Označení členů jako statických
+                  href: ide/reference/make-member-static.md
                 - name: Přesunutí deklarace do blízkosti odkazu
                   href: ide/reference/move-declaration-near-reference.md
                 - name: Přesunutí typu do odpovídajícího souboru
