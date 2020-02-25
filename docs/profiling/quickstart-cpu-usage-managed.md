@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 92287c052282553a33222deb548609101d839291
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: 8fd77fe5fc00e8c1a3b487c93a6004b2f8cf7060
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77278676"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558195"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c-visual-basic"></a>Rychlý Start: Analýza dat využití procesoru v aplikaci VisualC#Studio (Visual Basic)
 

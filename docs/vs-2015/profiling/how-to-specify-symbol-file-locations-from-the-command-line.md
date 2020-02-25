@@ -9,12 +9,12 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5ed6ddc11a998d97a193c2ab01ff69d386ed4ffe
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.openlocfilehash: 01fbb6cfd1717562af79c067ede0cad9753ad5dd
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77476970"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557901"
 ---
 # <a name="how-to-specify-symbol-file-locations-from-the-command-line"></a>Postupy: Určení umístění souboru se symboly z příkazového řádku
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,20 +48,20 @@ Chcete-li zobrazit informace o symbolech, jako jsou názvy funkcí a čísla ř�
   
 2. Pomocí následující syntaxe nastavte proměnnou prostředí **_NT_SYMBOL_PATH** nebo možnost VSPerfReport/SymbolPath:  
   
-    `srv*<LocalStore>*https://msdl.microsoft.com/downloads/symbols`  
+   `srv*<LocalStore>*https://msdl.microsoft.com/downloads/symbols`  
   
-    kde *<LocalStore>* je cesta k místnímu adresáři, který jste vytvořili.  
+   kde *<LocalStore>* je cesta k místnímu adresáři, který jste vytvořili.  
   
 ## <a name="specifying-component-symbol-files"></a>Určení souborů symbolů součásti  
  Nástroje pro profilaci vyhledá soubory. pdb komponent, které chcete profilovat, v původních umístěních uložených v součástech nebo ve složce, která obsahuje soubor dat profilování. Přidáním jedné nebo více cest k **_NT_SYMBOL_PATH** nebo k možnosti **/SymbolPath** můžete určit další umístění pro hledání. Jednotlivé cesty oddělte středníkem.  
   
 ## <a name="example"></a>Příklad  
  Následující příkazový řádek nastaví proměnnou prostředí **_NT_SYMBOL_PATH** na server symbolů systému Windows a místní adresář na **C:\Symbols**.  
-  
+
  ```cmd
- set  _NT_SYMBOL_PATH=srv*C:\symbols*https://msdl.microsoft.com/downloads/symbols`  
+ set  _NT_SYMBOL_PATH=srv*C:\symbols*https://msdl.microsoft.com/downloads/symbols
  ```
-  
+
  Následující příkazový řádek VSPerfReport přidá adresář C:\Projects\Symbols do cesty pro hledání pomocí možnosti **/SymbolPath** .  
   
  **VSPerfReport**  *MyApp* **. exe/SymbolPath: C:\Projects\Symbols/Summary: vše**

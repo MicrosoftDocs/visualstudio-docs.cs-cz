@@ -21,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bed57982fb177a49ed89bbe601d753fe155aba22
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 31ec191345e1a232e79a2eea21563bf41e5d555c
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596083"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558162"
 ---
 # <a name="copy-task"></a>Copy – úloha
 Zkopíruje soubory do nového umístění v systému souborů.
@@ -36,7 +36,7 @@ Následující tabulka popisuje parametry úlohy `Copy`.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`CopiedFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Obsahuje položky, které byly úspěšně zkopírovány.|
+|`CopiedFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Obsahuje položky, které byly úspěšně zkopírovány, *včetně* těch, které nebyly skutečně zkopírovány, ale byly přeskočeny, protože již byly aktuální a `SkipUnchangedFiles` byly `true`.|
 |`DestinationFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Určuje seznam souborů, do kterého se mají kopírovat zdrojové soubory. Tento seznam by měl být se seznamem uvedeným v parametru `SourceFiles` v relaci 1 : 1. To znamená, že první soubor zadaný v části `SourceFiles` bude zkopírován na první místo zadané v části `DestinationFiles` a tak dále.|
 |`DestinationFolder`|Volitelný parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje adresář, do kterého se mají soubory kopírovat. Musí se jednat o adresář, nikoli o soubor. Pokud adresář neexistuje, je automaticky vytvořen.|
 |`OverwriteReadOnlyFiles`|Volitelný parametr `Boolean`.<br /><br /> Přepsat soubory i v případě, že jsou označeny jako soubory určené pouze pro čtení|
@@ -110,6 +110,6 @@ Následující příklad znázorňuje postup rekurzivního kopírování. Tento 
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

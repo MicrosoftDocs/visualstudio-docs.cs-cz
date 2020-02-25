@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b89e7238be3440e260e95f305274304e31fe20e7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 69f6be4c80519b023d3f11c28f3d5f5b2bf8f8e1
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75567460"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557964"
 ---
 # <a name="delete-task"></a>Delete – úloha
 Odstraní zadané soubory.
@@ -39,6 +39,9 @@ Následující tabulka popisuje parametry úlohy `Delete`.
 
 ## <a name="remarks"></a>Poznámky
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
+
+> [!WARNING]
+> Při použití zástupných znaků s úkolem `Delete` buďte opatrní. Nesprávné soubory můžete snadno odstranit pomocí výrazů jako `$(SomeProperty)\**\*.*` nebo `$(SomeProperty)/**/*.*`, zejména pokud je vlastnost vyhodnocena jako prázdný řetězec. v takovém případě se parametr `Files` může vyhodnotit na kořenový adresář jednotky a odstranit mnohem více, než jste chtěli odstranit.
 
 ## <a name="example"></a>Příklad
 Následující příklad odstraní soubor *MyApp. pdb*.
@@ -56,6 +59,6 @@ Následující příklad odstraní soubor *MyApp. pdb*.
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

@@ -18,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 80c4af137edc80166d6a652c676d5607d8c2328d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: cabbf36adb5019543b3cfb72b0b0e56976517d2d
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595524"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557930"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 
@@ -35,11 +35,11 @@ Nastaví výchozí jazyk, který se používá pro text, měnu a jiné hodnoty v
 devenv {/LCID|/L} LocaleID
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 
 - *LocaleID*
 
-  Požadováno. Identifikátor národního prostředí (LCID) jazyka, který zadáte.
+  Povinná hodnota. Identifikátor národního prostředí (LCID) jazyka, který zadáte.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -49,17 +49,22 @@ Pokud zadaný jazyk není ve vašem systému k dispozici, přepínač `/LCID` se
 
 V následující tabulce jsou uvedeny identifikátory LCID jazyků, které podporuje Visual Studio.
 
-|Jazyk|LCID|
+|Jazyk|IDENTIFIKÁTORY|
 |--------------|----------|
 |Čínština (zjednodušená)|2052|
 |Čínština (tradiční)|1028|
-|angličtina|1033|
+|Čeština|1029|
+|Angličtina|1033|
 |Francouzština|1036|
 |Němčina|1031|
 |Italština|1040|
 |Japonština|1041|
 |Korejština|1042|
+|Polština|1045|
+|Portugalština (Brazílie)|1046|
+|Ruština|1049|
 |Španělština|3082|
+|Turečtina|1055
 
 ## <a name="example"></a>Příklad
 
@@ -69,7 +74,7 @@ Tento příklad načte integrované vývojové prostředí (IDE) s řetězci Če
 devenv /LCID 1033
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)
 - [Mezinárodní nastavení, Prostředí, dialogové okno Možnosti](../../ide/reference/international-settings-environment-options-dialog-box.md)

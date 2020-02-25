@@ -1,5 +1,5 @@
 ---
-title: Commandtable – Element | Dokumentace Microsoftu
+title: Element příkazu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,15 +13,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9bb10232c725eb2f538df73f6a7ca98e534a4c14
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f577b52ad2a9b1fd66ed9c24fb2737621aa8554c
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341810"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557778"
 ---
-# <a name="commandtable-element"></a>Commandtable – element
-Je kořenový element z commandtable – *.vsct* souboru. Toto je soubor, který definuje skutečný rozložení a typ příkazů, které poskytuje VSPackage pro prostředí IDE. Příkazy mohou být položky nabídky, nabídky, panely nástrojů a pole se seznamem. Další informace najdete v tématu [soubory tabulky (.vsct) příkazů sady Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
+# <a name="commandtable-element"></a>Element v příkazu
+Příkaz je kořenovým prvkem souboru *. vsct* . Jedná se o soubor, který definuje skutečné rozložení a typ příkazů, které rozhraní VSPackage poskytuje rozhraní IDE. Příkazy mohou zahrnovat položky nabídky, nabídky, panely nástrojů a pole se seznamem. Další informace naleznete v tématu [soubory tabulek příkazů sady Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,28 +46,28 @@ Je kořenový element z commandtable – *.vsct* souboru. Toto je soubor, který
 
 | Atribut | Popis |
 |-----------| - |
-| xmlns | Povinný parametr. Obory názvů XML:<br /><br /> xmlns="<http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable>"<br /><br /> xmlns:xs="<http://www.w3.org/2001/XMLSchema>" |
-| jazyk | Volitelné. Atribut language slouží k určení výchozí jazyk všech \<řetězce > prvků v tabulce příkazu.  Pokud jazyk není zadán, použije se jazyk aktuálního procesu:<br /><br /> jazyk = "en-us" |
+| xmlns | Povinná hodnota. Obory názvů XML:<br /><br /> `xmlns=http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable`<br /><br /> xmlns: XS = "<http://www.w3.org/2001/XMLSchema>" |
+| language | Volitelné. Atribut Language lze použít k určení výchozího jazyka všech \<řetězců > prvků v tabulce příkazů.  Pokud není zadán jazyk, bude použit jazyk aktuálního procesu:<br /><br /> Language = "en-US" |
 
 ### <a name="child-elements"></a>Podřízené elementy
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[Extern – element](../extensibility/extern-element.md)|Volitelné. Obsahuje direktivy preprocesoru kompilátoru jazyka.|
-|[Prvek direktivy include](../extensibility/include-element.md)|Volitelné. Obsahuje cesty k souborům, které chcete zahrnout do kompilace.|
-|[Define – element](../extensibility/define-element.md)|Volitelné. Definuje symbol zadanou její název a hodnotu.|
-|[Commands – element](../extensibility/commands-element.md)|Volitelné. Definování všechny příkazy pro sady VSPackage, která obsahuje všechny ostatní prvky nadřazeného elementu.|
-|[Commandplacements – element](../extensibility/commandplacements-element.md)|Volitelné. Definuje, kde na panelu příkazů příkazy mají být umístěny.|
-|[Visibilityconstraints – element](../extensibility/visibilityconstraints-element.md)|Volitelné. Určuje statické viditelnost příkazů a panely nástrojů.|
-|[Keybindings – element](../extensibility/keybindings-element.md)|Volitelné. Určuje kombinace klávesových zkratek, pokud existuje, pro příkazy.|
-|[Usedcommands – element](../extensibility/usedcommands-element.md)|Volitelné. Umožňuje VSPackage volitelně implementovat svou vlastní verzi funkce původně podporuje další rozšíření VSPackages.|
-|[Symbols – element](https://www.microsoft.com/download/details.aspx?id=55984)|Volitelné. Obsahuje všechna data symbol--identifikátory GUID, ID a tak dále--pro kompilátor.|
+|[Extern – element](../extensibility/extern-element.md)|Volitelné. Obsahuje direktivy preprocesoru pro kompilátor.|
+|[Include – element](../extensibility/include-element.md)|Volitelné. Obsahuje cesty k jakýmkoli souborům, které mají být zahrnuty do kompilace.|
+|[Definovat element](../extensibility/define-element.md)|Volitelné. Definuje symbol zadaný jako název a hodnotu.|
+|[Command – element](../extensibility/commands-element.md)|Volitelné. Nadřazený element definující všechny příkazy pro VSPackage, který obsahuje všechny ostatní prvky.|
+|[Element CommandPlacements](../extensibility/commandplacements-element.md)|Volitelné. Určuje, kam se mají na panelu příkazů umístit příkazy.|
+|[Element VisibilityConstraints](../extensibility/visibilityconstraints-element.md)|Volitelné. Určuje statickou viditelnost příkazů a panelů nástrojů.|
+|[Element Bindings elementu](../extensibility/keybindings-element.md)|Volitelné. Určuje kombinace klávesových zkratek (pokud existují) pro příkazy.|
+|[Element UsedCommands](../extensibility/usedcommands-element.md)|Volitelné. Umožňuje VSPackage volitelně implementovat svou vlastní verzi funkcí, které původně podporovaly jiné sady VSPackage.|
+|[SYMBOLS – element](https://www.microsoft.com/download/details.aspx?id=55984)|Volitelné. Obsahuje jakákoli data symbolů – identifikátory GUID, ID a tak dále – pro kompilátor.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Prvek|Popis|
 |-------------|-----------------|
-|Žádný||
+|Žádná||
 
-## <a name="see-also"></a>Viz také:
-- [Soubory tabulky (.vsct) příkaz pro Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také
+- [Soubory tabulek příkazů sady Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

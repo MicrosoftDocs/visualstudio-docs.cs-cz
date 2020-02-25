@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd3ccd23775c93fb7222960c4db3ae5d35eb349f
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: b4fd82cee49c698c9244a2851d4e671ae6a94508
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77275492"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557883"
 ---
 # <a name="common-msbuild-project-properties"></a>Obecné vlastnosti projektu nástroje MSBuild
 V následující tabulce jsou uvedeny často používané vlastnosti, které jsou definovány v souborech projektu sady Visual Studio nebo zahrnuté v souborech *. targets* , které poskytuje MSBuild.
@@ -68,6 +68,7 @@ V následující tabulce jsou uvedeny často používané vlastnosti, které jso
 | Zarovnání. | Určuje, kam se v bajtech mají zarovnat oddíly výstupního souboru. Platné hodnoty jsou 512, 1024, 2048, 4096, 8192. Tato vlastnost je ekvivalentní k přepínači `/filealignment` kompilátoru. |
 | FrameworkPathOverride | Určuje umístění *knihovny mscorlib. dll* a *Microsoft. VisualBasic. dll*. Tento parametr je ekvivalentní `/sdkpath` přepínači kompilátoru *Vbc. exe* . |
 | GenerateDocumentation | (C#, Visual Basic) Logický parametr, který označuje, zda je dokumentace generována sestavením. Pokud `true`, sestavení vygeneruje informace o dokumentaci a umístí je do souboru *. XML* spolu s názvem spustitelného souboru nebo knihovny, kterou vytvořil úkol sestavení. |
+| GenerateFullPaths | (C#) Vygenerujte úplné cesty pro názvy souborů ve výstupu pomocí možnosti kompilátoru [-fullpaths –](/dotnet/csharp/language-reference/compiler-options/fullpaths-compiler-option) . |
 | GenerateSerializationAssemblies | Určuje, zda by měla být sestavení serializace XML generována nástrojem *Sgen. exe*, který lze nastavit na hodnotu on, auto nebo off. Tato vlastnost se používá pouze pro sestavení, která cílí pouze na .NET Framework. Chcete-li generovat sestavení serializace XML pro sestavení .NET Standard nebo .NET Core, odkazujte na balíček NuGet *Microsoft. XmlSerializer. Generator* . |
 | IntermediateOutputPath | Úplná zprostředkující výstupní cesta odvozená od `BaseIntermediateOutputPath`, pokud není zadána žádná cesta. Například *\obj\debug\\* . |
 | KeyContainerName | Název kontejneru klíčů se silným názvem. |

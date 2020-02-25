@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6826ae1f957778ac6eea556fdbbe9589ab3390b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 94ed90b9fcdd0c4ffe35789d00de4bbbd4aaa355
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72727897"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557642"
 ---
 # <a name="how-to-include-prerequisites-with-a-clickonce-application"></a>Postupy: zahrnutí požadavků do aplikace ClickOnce
 Předtím, než budete moci distribuovat požadovaný software do aplikace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], je nutné nejprve stáhnout instalační balíčky pro tyto požadavky do vašeho vývojového počítače. Když publikujete aplikaci a zvolíte možnost **Stáhnout požadavky ze stejného umístění jako moje aplikace**, dojde k chybě, pokud instalační balíčky nejsou ve složce **Packages** .
@@ -31,10 +31,10 @@ Předtím, než budete moci distribuovat požadovaný software do aplikace [!INC
 
 3. V programu Poznámkový blok otevřete soubor *Package. XML* .
 
-4. Vyhledejte prvek **název** , který obsahuje **http://go.microsoft.com/fwlink** a zkopírujte adresu URL. Zahrňte část **LinkId** .
+4. Vyhledejte prvek **název** , který obsahuje `http://go.microsoft.com/fwlink`a zkopírujte adresu URL. Zahrňte část **LinkId** .
 
    > [!NOTE]
-   > Pokud žádný element **Name** neobsahuje **http://go.microsoft.com/fwlink** , otevřete soubor **Product. XML** v kořenové složce pro požadovanou součást a vyhledejte řetězec **fwlink** .
+   > Pokud žádný element **Name** neobsahuje `http://go.microsoft.com/fwlink`, otevřete soubor **Product. XML** v kořenové složce pro požadovanou součást a vyhledejte řetězec **fwlink** .
 
    > [!IMPORTANT]
    > Některé požadované softwarové programy mohou mít několik instalačních balíčků (například v 32bitových nebo 64bitových systémech). Pokud více elementů **Name** obsahuje **fwlink**, je nutné zopakovat zbývající kroky pro každý z nich.
@@ -45,9 +45,9 @@ Předtím, než budete moci distribuovat požadovaný software do aplikace [!INC
 
 6. Zkopírujte soubor do kořenové složky požadovaného softwaru.
 
-    Například pro požadavek Instalační služba systému Windows 4,5 Zkopírujte soubor do složky *\Packages\WindowsInstaller4_5* .
+    Například pro požadavek Instalační služba systému Windows 4,5 Zkopírujte soubor do složky *WindowsInstaller4_5 \Packages\* .
 
     Nyní můžete instalační balíček distribuovat spolu s aplikací.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Postupy: Instalace předpokladů s aplikací ClickOnce](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)

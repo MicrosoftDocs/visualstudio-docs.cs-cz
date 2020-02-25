@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření sady SDK pomocí C# nebo Visual Basic | Dokumentace Microsoftu'
+title: 'Návod: vytvoření sady SDK pomocí C# nebo Visual Basic | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -8,172 +8,172 @@ ms.assetid: ef96a249-5eef-402a-a8d5-d74cb49239bd
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 44b1083a9de4a5fe3e86ae37814f6df85f8c1e56
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a604e3500c0ea438c987c4cf07ded98a5e03dd61
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435492"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558206"
 ---
 # <a name="walkthrough-creating-an-sdk-using-c-or-visual-basic"></a>Návod: Vytvoření sady SDK pomocí jazyka C# nebo Visual Basic
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V tomto podrobném návodu se dozvíte, jak pomocí Visual C# vytvořit na sadu SDK jednoduché matematické knihovny a pak balíček sady SDK jako Visual Studio Extension (VSIX). Dokončíte následující postupy:  
+V tomto návodu se dozvíte, jak vytvořit jednoduchou sadu SDK pro matematické knihovny pomocí vizuálu C# a pak zabalit sadu SDK jako rozšíření sady Visual Studio (VSIX). Dokončete následující postupy:  
   
-- [Chcete-li vytvořit komponentu SimpleMath Windows Runtime](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createClassLibrary)  
+- [Vytvoření součásti prostředí Windows Runtime SimpleMath](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createClassLibrary)  
   
-- [Chcete-li vytvořit projekt rozšíření SimpleMathVSIX](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createVSIX)  
+- [Vytvoření projektu rozšíření SimpleMathVSIX](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createVSIX)  
   
-- [K vytvoření ukázkové aplikace, která používá knihovnu tříd](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createSample)  
+- [Vytvoření ukázkové aplikace, která používá knihovnu tříd](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createSample)  
   
-## <a name="prerequisites"></a>Požadavky  
+## <a name="prerequisites"></a>Předpoklady  
  Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
   
-## <a name="createClassLibrary"></a> Chcete-li vytvořit komponentu SimpleMath Windows Runtime  
+## <a name="createClassLibrary"></a>Vytvoření součásti prostředí Windows Runtime SimpleMath  
   
-1. V panelu nabídky zvolte **souboru**, **nový**, **nový projekt**.  
+1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **Nový projekt**.  
   
-2. V seznamu šablon rozbalte **Visual C#** nebo **jazyka Visual Basic**, zvolte **Windows Store** uzel a klikněte na tlačítko **součástprostředíWindowsRuntime** šablony.  
+2. V seznamu šablon rozbalte položku  **C# Visual** nebo **Visual Basic**, zvolte uzel **Windows Store** a poté vyberte šablonu **součásti prostředí Windows Runtime** .  
   
-3. V **název** zadejte **SimpleMath**a klikněte na tlačítko **OK** tlačítko.  
+3. Do pole **název** zadejte **SimpleMath**a poté klikněte na tlačítko **OK** .  
   
-4. V **Průzkumníka řešení**, otevřete místní nabídku **SimpleMath** uzel projektu a klikněte na tlačítko **vlastnosti**.  
+4. V **Průzkumník řešení**otevřete místní nabídku uzlu projektu **SimpleMath** a poté zvolte možnost **vlastnosti**.  
   
-5. Přejmenovat **Class1.cs** k **Arithmetic.cs** a aktualizovat ho tak, aby odpovídala následující kód:  
+5. Přejmenujte **Class1.cs** na **arithmetic.cs** a aktualizujte ji tak, aby odpovídala následujícímu kódu:  
   
      [!code-csharp[CreatingAnSDKUsingWinRT#3](../snippets/csharp/VS_Snippets_VSSDK/creatingansdkusingwinrt/cs/winrtmath/arithmetic.cs#3)]
      [!code-vb[CreatingAnSDKUsingWinRT#3](../snippets/visualbasic/VS_Snippets_VSSDK/creatingansdkusingwinrt/vb/winrtmath/arithmetic.vb#3)]  
   
-6. V **Průzkumníka řešení**, otevřete místní nabídku **řešení "SimpleMath"** uzel a klikněte na tlačítko **nástroje Configuration Manager**.  
+6. V **Průzkumník řešení**otevřete místní nabídku uzlu **řešení ' SimpleMath '** a pak zvolte možnost **Configuration Manager**.  
   
-     **Nástroje Configuration Manager** zobrazí se dialogové okno.  
+     Otevře se dialogové okno **Configuration Manager** .  
   
-7. V **konfigurace aktivního řešení** klikněte na položku **vydání**.  
+7. V seznamu **aktivní konfigurace řešení** vyberte možnost **verze**.  
   
-8. V **konfigurace** sloupce, ověřte, že **SimpleMath** řádek je nastavena na **vydání**a klikněte na tlačítko **Zavřít** tlačítko tak, aby přijímal Změňte.  
+8. Ve sloupci **Konfigurace** ověřte, že je na řádku **SimpleMath** nastavená **verze**, a pak kliknutím na tlačítko **Zavřít** tuto změnu potvrďte.  
   
     > [!IMPORTANT]
-    > Sada SDK pro komponentu SimpleMath obsahuje pouze jednu konfiguraci. Tato konfigurace musí být sestavení pro vydání, nebo aplikace, které používají součást nebudou předávat certifikaci[!INCLUDE[win8_appstore_long](../includes/win8-appstore-long-md.md)].  
+    > Sada SDK pro komponentu SimpleMath zahrnuje pouze jednu konfiguraci. Tato konfigurace musí být sestavení pro vydání, nebo aplikace, které tuto komponentu používají, neprojde certifikací pro[!INCLUDE[win8_appstore_long](../includes/win8-appstore-long-md.md)].  
   
-9. V **Průzkumníka řešení**, otevřete místní nabídku **SimpleMath** uzel projektu a klikněte na tlačítko **sestavení**.  
+9. V **Průzkumník řešení**otevřete místní nabídku uzlu projektu **SimpleMath** a pak zvolte možnost **sestavit**.  
   
-## <a name="createVSIX"></a> Chcete-li vytvořit projekt rozšíření SimpleMathVSIX  
+## <a name="createVSIX"></a>Vytvoření projektu rozšíření SimpleMathVSIX  
   
-1. V místní nabídce pro **řešení "SimpleMath"** uzlu, vyberte **přidat**, **nový projekt**.  
+1. V místní nabídce uzlu **řešení ' SimpleMath '** vyberte možnost **Přidat**, **Nový projekt**.  
   
-2. V seznamu šablon rozbalte **Visual C#** nebo **jazyka Visual Basic**, zvolte **rozšiřitelnost** uzel a klikněte na tlačítko **projekt VSIX** Šablona.  
+2. V seznamu šablon rozbalte položku  **C# Visual** nebo **Visual Basic**, zvolte uzel **rozšiřitelnost** a pak zvolte šablonu **projektu VSIX** .  
   
-3. V **název** zadejte **SimpleMathVSIX**a klikněte na tlačítko **OK** tlačítko.  
+3. Do pole **název** zadejte **SimpleMathVSIX**a poté klikněte na tlačítko **OK** .  
   
-4. V **Průzkumníka řešení**, zvolte **source.extension.vsixmanifest** položky.  
+4. V **Průzkumník řešení**vyberte položku **zdroj. extension. vsixmanifest** .  
   
-5. V panelu nabídky zvolte **zobrazení**, **kód**.  
+5. Na panelu nabídek vyberte možnost **zobrazení**, **kód**.  
   
-6. Nahraďte stávající kód XML následující kód XML:  
+6. Existující XML nahraďte následujícím kódem XML:  
   
      [!code-xml[CreatingAnSDKUsingWinRT#1](../../extensibility/codesnippet/XML/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_2.xml)]
   
-7. V **Průzkumníka řešení**, zvolte **SimpleMathVSIX** projektu.  
+7. V **Průzkumník řešení**vyberte projekt **SimpleMathVSIX** .  
   
-8. V panelu nabídky zvolte **projektu**, **přidat novou položku**.  
+8. Na panelu nabídek vyberte možnost **projekt**, **Přidat novou položku**.  
   
-9. V seznamu **společné položky**, rozbalte **Data**a klikněte na tlačítko **soubor XML**.  
+9. V seznamu **běžných položek**rozbalte položku **data**a pak zvolte možnost **soubor XML**.  
   
-10. V **název** zadejte `SDKManifest.xml`a klikněte na tlačítko **přidat** tlačítko.  
+10. Do pole **název** zadejte `SDKManifest.xml`a pak klikněte na tlačítko **Přidat** .  
   
-11. V **Průzkumníka řešení**, otevřete místní nabídku pro `SDKManifest.xml`, zvolte **vlastnosti**a potom změňte hodnotu **zahrnout do VSIX** vlastnost **True**.  
+11. V **Průzkumník řešení**otevřete místní nabídku pro `SDKManifest.xml`, zvolte **vlastnosti**a pak změňte hodnotu vlastnosti **zahrnout do VSIX** na **true**.  
   
-12. Nahraďte obsah souboru následující kód XML:  
+12. Obsah souboru nahraďte následujícím kódem XML:  
   
      [!code-xml[CreatingAnSDKUsingWinRT#1](../snippets/csharp/VS_Snippets_VSSDK/creatingansdkusingwinrt/cs/winrtmathvsix/sdkmanifest.xml#1)]
      [!code-xml[CreatingAnSDKUsingWinRT#1](../snippets/visualbasic/VS_Snippets_VSSDK/creatingansdkusingwinrt/vb/winrtmathvsix/sdkmanifest.xml#1)]  
   
-13. V **Průzkumníka řešení**, otevřete místní nabídku **SimpleMathVSIX** projektu, zvolte **přidat**a klikněte na tlačítko **novou složku**.  
+13. V **Průzkumník řešení**otevřete místní nabídku pro projekt **SimpleMathVSIX** , zvolte možnost **Přidat**a pak zvolte možnost **Nová složka**.  
   
-14. Přejmenovat složku, do které `references`.  
+14. Přejmenujte složku na `references`.  
   
-15. Otevřete místní nabídku **odkazy** složky, zvolte **přidat**a klikněte na tlačítko **novou složku**.  
+15. Otevřete místní nabídku složky **odkazy** , zvolte možnost **Přidat**a pak zvolte možnost **Nová složka**.  
   
-16. Přejmenovat podsložky `commonconfiguration`, vytvořte podsložku v rámci něj a název podsložky `neutral`.  
+16. Přejmenujte podsložku na `commonconfiguration`, vytvořte její podsložku a pojmenujte podsložku `neutral`.  
   
-17. Zopakujte předchozí čtyři kroky, tentokrát přejmenování složce první `redist`.  
+17. Opakujte předchozí čtyři kroky, tentokrát se přejmenováním první složky na `redist`.  
   
-     Projekt nyní obsahuje následující strukturu složek:  
+     Projekt teď obsahuje následující strukturu složek:  
   
     ```  
     references\commonconfiguration\neutral  
     redist\commonconfiguration\neutral  
     ```  
   
-18. V **Průzkumníka řešení**, otevřete místní nabídku **SimpleMath** projektu a klikněte na tlačítko **otevřít složku v Průzkumníku souborů**.  
+18. V **Průzkumník řešení**otevřete místní nabídku pro projekt **SimpleMath** a pak zvolte možnost **Otevřít složku v Průzkumníku souborů**.  
   
-19. V **Průzkumníka souborů**, přejděte ke složce bin\Release, otevřete místní nabídku pro soubor SimpleMath.winmd a klikněte na tlačítko **kopírování**.  
+19. V **Průzkumníku souborů**přejděte do složky bin\Release, otevřete místní nabídku pro soubor SimpleMath. winmd a pak zvolte **Kopírovat**.  
   
-20. V **Průzkumníka řešení**, vložte ho do složky references\commonconfiguration\neutral **SimpleMathVSIX** projektu.  
+20. V **Průzkumník řešení**vložte soubor do složky references\commonconfiguration\neutral v projektu **SimpleMathVSIX** .  
   
-21. Opakujte předchozí krok, vkládání SimpleMath.pri soubor do složky redist\commonconfiguration\neutral **SimpleMathVSIX** projektu.  
+21. Opakujte předchozí krok a vložte soubor SimpleMath. pri do složky redist\commonconfiguration\neutral v projektu **SimpleMathVSIX** .  
   
-22. V **Průzkumníka řešení**, zvolte **SimpleMath.winmd**.  
+22. V **Průzkumník řešení**vyberte **SimpleMath. winmd**.  
   
-23. V panelu nabídky zvolte **zobrazení**, **vlastnosti** (klávesnice: Stisknutím klávesy F4).  
+23. Na panelu nabídek vyberte možnost **zobrazení**, **vlastnosti** (klávesnice: vyberte klávesu F4).  
   
-24. V **vlastnosti** okno Změnit **akce sestavení** vlastnost **obsahu**a potom změňte **zahrnout do VSIX** vlastnost  **Hodnota TRUE**.  
+24. V okně **vlastnosti** změňte vlastnost **Akce sestavení** na **obsah**a poté změňte vlastnost **Zahrnout v souboru VSIX** na **hodnotu true**.  
   
-25. V **Průzkumníka řešení**, opakujte tento postup u **SimpleMath.pri**.  
+25. V **Průzkumník řešení**opakujte tento postup pro **SimpleMath. pri**.  
   
-26. V **Průzkumníka řešení**, zvolte **SimpleMathVSIX** projektu.  
+26. V **Průzkumník řešení**vyberte projekt **SimpleMathVSIX** .  
   
-27. V panelu nabídky zvolte **sestavení**, **sestavení SimpleMathVSIX**.  
+27. Na řádku nabídek klikněte na položku **sestavit**, **sestavit SimpleMathVSIX**.  
   
-28. V **Průzkumníka řešení**, otevřete místní nabídku **SimpleMathVSIX** projektu a klikněte na tlačítko **otevřít složku v Průzkumníku souborů**.  
+28. V **Průzkumník řešení**otevřete místní nabídku pro projekt **SimpleMathVSIX** a pak zvolte možnost **Otevřít složku v Průzkumníku souborů**.  
   
-29. V **Průzkumníka souborů**, přejděte do složky \bin\Release, a pak spusťte SimpleMathVSIX.vsix k její instalaci.  
+29. V **Průzkumníku souborů**přejděte do složky \bin\Release a potom spusťte SimpleMathVSIX. vsix a nainstalujte ji.  
   
-30. Zvolte **nainstalovat** tlačítko, počkejte na dokončení instalace a potom restartujte Visual Studio.  
+30. Klikněte na tlačítko **instalovat** , počkejte na dokončení instalace a pak restartujte aplikaci Visual Studio.  
   
-## <a name="createSample"></a> K vytvoření ukázkové aplikace, která používá knihovnu tříd  
+## <a name="createSample"></a>Vytvoření ukázkové aplikace, která používá knihovnu tříd  
   
-1. V panelu nabídky zvolte **souboru**, **nový**, **nový projekt**.  
+1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **Nový projekt**.  
   
-2. V seznamu šablon rozbalte **Visual C#** nebo **jazyka Visual Basic**a klikněte na tlačítko **Windows Store** uzlu.  
+2. V seznamu šablon rozbalte položku **Visual C#**  nebo **Visual Basic**a pak vyberte uzel **Windows Store** .  
   
-3. Zvolte **prázdnou aplikaci** šablony, pojmenujte projekt **ArithmeticUI**a klikněte na tlačítko **OK** tlačítko.  
+3. Zvolte šablonu **prázdná aplikace** , pojmenujte projekt **ArithmeticUI**a pak klikněte na tlačítko **OK** .  
   
-4. V **Průzkumníka řešení**, otevřete místní nabídku **ArithmeticUI** projektu a klikněte na tlačítko **přidat**, **odkaz**.  
+4. V **Průzkumník řešení**otevřete místní nabídku pro projekt **ArithmeticUI** a pak zvolte možnost **Přidat**, **odkaz**.  
   
-5. V seznamu typů odkazů, rozbalte **Windows**a klikněte na tlačítko **rozšíření**.  
+5. V seznamu typů odkazů rozbalte **okna**a pak zvolte **rozšíření**.  
   
-6. V podokně podrobností vyberte **jednoduché matematické SDK** rozšíření.  
+6. V podokně podrobností vyberte **jednoduché rozšíření matematické sady SDK** .  
   
-    Zobrazí se další informace o vaši sadu SDK. Můžete použít **. Další informace** odkaz k otevření http://www.msdn.microsoft.com, jak jste zadali v souboru SDKManifest.xml dříve v tomto návodu.  
+    Zobrazí se další informace o sadě SDK. Můžete zvolit odkaz **Další informace** pro otevření https://docs.microsoft.com, jak jste zadali v souboru SDKManifest. XML dříve v tomto návodu.  
   
-7. V **správce odkazů** dialogové okno, vyberte **jednoduché matematické SDK** zaškrtněte políčko a klikněte na tlačítko **OK** tlačítko.  
+7. V dialogovém okně **Správce odkazů** zaškrtněte políčko **Jednoduchá sada Math SDK** a pak klikněte na tlačítko **OK** .  
   
-8. V panelu nabídky zvolte **zobrazení**, **prohlížeče objektů**.  
+8. Na panelu nabídek vyberte možnost **zobrazení**, **Prohlížeč objektů**.  
   
-9. V **Procházet** klikněte na položku **jednoduchých matematických**.  
+9. V seznamu **Procházet** vyberte **jednoduché matematické**.  
   
-     Nyní můžete prozkoumat, co je v sadě SDK.  
+     Teď můžete prozkoumat, co je v sadě SDK.  
   
-10. V **Průzkumníka řešení**, otevřete MainPage.xaml a jeho obsah nahraďte následujícím XAML:  
+10. V **Průzkumník řešení**otevřete MainPage. XAML a nahraďte jeho obsah následujícím XAML:  
   
      [!code-xml[CreatingAnSDKUsingWinRTDemoApp#1](../snippets/csharp/VS_Snippets_VSSDK/creatingansdkusingwinrtdemoapp/cs/winrtmathtest/mainpage.xaml#1)]
      [!code-xml[CreatingAnSDKUsingWinRTDemoApp#1](../snippets/visualbasic/VS_Snippets_VSSDK/creatingansdkusingwinrtdemoapp/vb/winrtmathtest/mainpage.xaml#1)]  
   
-11. Aktualizace MainPage.xaml.cs tak, aby odpovídala následující kód:  
+11. Aktualizujte MainPage.xaml.cs tak, aby odpovídaly následujícímu kódu:  
   
      [!code-csharp[CreatingAnSDKUsingWinRTDemoApp#2](../snippets/csharp/VS_Snippets_VSSDK/creatingansdkusingwinrtdemoapp/cs/winrtmathtest/mainpage.xaml.cs#2)]
      [!code-vb[CreatingAnSDKUsingWinRTDemoApp#2](../snippets/visualbasic/VS_Snippets_VSSDK/creatingansdkusingwinrtdemoapp/vb/winrtmathtest/mainpage.xaml.vb#2)]  
   
-12. Stisknutím klávesy F5 spusťte aplikaci.  
+12. Kliknutím na klávesu F5 spusťte aplikaci.  
   
-13. V aplikaci, zadejte jakékoli dvě čísla, zvolit operaci a klikněte na tlačítko **=** tlačítko.  
+13. V aplikaci zadejte dvě čísla, zvolte operaci a pak klikněte na tlačítko **=** .  
   
-     Správný výsledek se zobrazí.  
+     Zobrazí se správný výsledek.  
   
-    Úspěšně jste vytvořili a používat sady SDK rozšíření.  
+    Úspěšně jste vytvořili a použili sadu SDK rozšíření.  
   
 ## <a name="see-also"></a>Viz také  
- [Návod: Vytvoření sady SDK pomocí jazyka C++](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)   
- [Návod: Vytvoření sady SDK pomocí jazyka JavaScript](walkthrough-creating-an-sdk-using-javascript.md)   
+ [Návod: vytvoření sady SDK pomocí C++ ](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)   
+ [Návod: vytvoření sady SDK pomocí javascriptu](walkthrough-creating-an-sdk-using-javascript.md)   
  [Vytvoření sady SDK (Software Development Kit)](../extensibility/creating-a-software-development-kit.md)

@@ -11,12 +11,12 @@ ms.assetid: 274673e7-72e7-476f-a263-3411b5b874be
 caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: b092c910b0303a62289e75b168e39628cbd0314b
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.openlocfilehash: e740860046ee9d18a137dbd513202e259e90bf79
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77476996"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557970"
 ---
 # <a name="troubleshooting-vspackages"></a>Řešení potíží s rozšířením VSPackages
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -101,13 +101,11 @@ Níže jsou uvedené běžné problémy, se kterými se můžete setkat se sadou
   
     2. Přidat toto **umístění souboru se symboly (. pdb)** :  
   
-         `https://msdl.microsoft.com/download/symbols`  
+       `https://msdl.microsoft.com/download/symbols`  
   
     3. Chcete-li zvýšit výkon, zadejte složku mezipaměti symbolů, například:  
-  
-        ```  
-        C:\symbols  
-        ```  
+
+       `C:\symbols`  
   
 ### <a name="to-troubleshoot-a-missing-vspackage-or-one-of-its-dependencies"></a>Řešení potíží s chybějícím VSPackage nebo některou z jeho závislostí  
   
@@ -117,7 +115,7 @@ Níže jsou uvedené běžné problémy, se kterými se můžete setkat se sadou
   
    2. V dialogovém okně **stránky vlastností** vyberte kartu **odkazy** a ujistěte se, že jsou všechny cesty správné. Alternativně můžete použít **Prohlížeč objektů** k procházení odkazovaných objektů.  
   
-        Pro spravovaný kód můžete použít [Fuslogvw. exe (Prohlížeč protokolu vazby sestavení)](https://msdn.microsoft.com/library/e32fa443-0778-4cc3-bf36-5c8ea297d296) k zobrazení podrobností o neúspěšném načtení sestavení.  
+        Pro spravovaný kód můžete použít [Fuslogvw. exe (Prohlížeč protokolu vazby sestavení)](/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer) k zobrazení podrobností o neúspěšném načtení sestavení.  
   
 2. Pro nespravovaný kód vyhledejte identifikátor CLSID sady VSPackage v uzlu registru [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] CLSID:  
   

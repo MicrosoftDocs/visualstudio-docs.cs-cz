@@ -18,12 +18,12 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a8f068099ec77f35919f880512e6c66f8e648cbe
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: f8e5054b4da0122c40c3ad62cfebcace973f7b20
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918818"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558019"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>Problémy s konfigurací serveru a klienta v nasazeních ClickOnce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,7 +52,7 @@ Pokud používáte službu Internetová informační služba (IIS) v systému Wi
 ## <a name="clickonce-and-proxy-authentication"></a>ClickOnce a ověřování proxy  
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] poskytuje podporu pro ověřování integrovaného proxy serveru Windows počínaje verzí .NET Framework 3,5. Nejsou vyžadovány žádné konkrétní direktivy Machine. config. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] neposkytuje podporu pro jiné protokoly ověřování, jako je například Basic nebo Digest.  
   
- K povolení této funkce můžete také použít opravu hotfix .NET Framework 2,0. Další informace najdete v tématu https://go.microsoft.com/fwlink/?LinkId=158730.  
+ K povolení této funkce můžete také použít opravu hotfix .NET Framework 2,0. Další informace najdete v tématu [Oprava: chybová zpráva při pokusu o instalaci aplikace ClickOnce, kterou jste vytvořili v .NET Framework 2,0, do klientského počítače, který je nakonfigurovaný tak, aby používal proxy server: "ověření proxy požadováno"](https://support.microsoft.com/en-in/help/917952/fix-error-message-when-you-try-to-install-a-clickonce-application-that). 
   
  Další informace najdete v tématu [\<defaultProxy > elementu (nastavení sítě)](https://msdn.microsoft.com/library/9d663c4b-07b4-4f6f-9b12-efbd3630354f).  
   
@@ -121,7 +121,7 @@ Pokud používáte službu Internetová informační služba (IIS) v systému Wi
   
 - Pokud vytvoříte typ MIME s příponou "*" a typem MIME "Application/oktet-Stream", bude možné stáhnout soubory neblokovaného typu souboru. (Nicméně blokované typy souborů, jako např. aspx a. asmx, se nedají stáhnout.)  
   
-  Konkrétní pokyny týkající se konfigurace typů MIME na Windows serveru najdete v článku znalostní báze Microsoft Knowledge Base KB326965, "IIS 6,0 neobsluhuje neznámé typy MIME" na adrese [https://support.microsoft.com/default.aspx?scid=kb; en-US; 326965](https://support.microsoft.com/default.aspx?scid=kb;en-us;326965).  
+  Konkrétní pokyny týkající se konfigurace typů MIME na Windows serveru najdete v tématu [Postup přidání typu MIME na web nebo do aplikace](/iis/configuration/system.webserver/staticcontent/mimemap#how-to-add-a-mime-type-to-a-web-site-or-application).  
   
 ## <a name="content-type-mappings"></a>Mapování typu obsahu  
  Při publikování přes protokol HTTP by měl být typ obsahu (označovaný také jako typ MIME) pro soubor. Application aplikace "application/x-MS-Application". Pokud máte na serveru nainstalovanou [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)], automaticky se nastaví. Pokud není tato instalace nainstalována, je třeba vytvořit přidružení typu MIME pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace vroot (nebo celý server).  
