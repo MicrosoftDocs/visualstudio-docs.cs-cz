@@ -331,6 +331,8 @@
                   href: ide/reference/generate-deconstructor.md
                 - name: Přidání parametru do metody
                   href: ide/reference/add-parameter.md
+                - name: Generování soukromého pole z konstruktoru
+                  href: ide/reference/generate-private-field-from-constructor.md
                 - name: Generování přepisu
                   href: ide/reference/generate-override.md
                 - name: Generování přepisů metod Equals a GetHashCode
@@ -420,10 +422,8 @@
                   href: ide/reference/use-block-body-lambda.md
                 - name: 'Přiřazení nepoužitých hodnot, proměnné a parametry'
                   href: ide/reference/unused-values-parameters.md
-                - name: Zalamování a zarovnávání posloupností volání
-                  href: ide/reference/wrap-and-align-call-chains.md
-                - name: 'Zabalení, odsazení a zarovnání parametrů'
-                  href: ide/reference/wrap-align-indent-parameters.md
+                - name: 'Zabalení, odsazení a zarovnání refaktoringu'
+                  href: ide/reference/wrap-indent-align-refactorings.md
             - name: 'Návod: Generování kódu z využití'
               href: ide/walkthrough-test-first-support-with-the-generate-from-usage-feature.md
         - name: IntelliSense
