@@ -5,17 +5,17 @@ ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.assetid: 1b0c5c80-e5a6-4f69-a4a4-0e89a82d4de0
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 07c0a3e24ac089bf29501dfd4e101baef73318fb
-ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
+ms.openlocfilehash: 32ac2f1977bb0b8b391651ed7ed459b9dc560330
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919139"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579730"
 ---
 # <a name="step-9-try-other-features"></a>Krok 9: Vyzkoušejte jiné funkce
 Chcete-li získat další informace, zkuste změnit ikony a barvy, přidat časovač hry a zvuky. Chcete-li, aby hra byla náročnější, zkuste zvětšit hrací plochu a upravte časovač.
@@ -32,7 +32,7 @@ Pokud si chcete stáhnout dokončenou verzi ukázky, přečtěte si [ukázku s k
 - Přidejte časovač hry, který sleduje, jak dlouho hráči trvá, než vyhraje.
 
     > [!TIP]
-    > K tomu můžete přidat popisek, který zobrazí uplynulý čas ve formuláři nad <xref:System.Windows.Forms.TableLayoutPanel> a do formuláře přidejte další časovač, abyste mohli sledovat čas. Použijte kód ke spuštění časovače, když hráč zahájí hru, a zastavení časovače, jakmile hráč spojí poslední dvě ikony.
+    > K tomu můžete přidat popisek, který zobrazí uplynulý čas ve formuláři nad <xref:System.Windows.Forms.TableLayoutPanel>a do formuláře přidejte další časovač, abyste mohli sledovat čas. Použijte kód ke spuštění časovače, když hráč zahájí hru, a zastavení časovače, jakmile hráč spojí poslední dvě ikony.
 
 - Pokud hráč najde shodu, přidejte zvuk, jiný zvuk, když hráč odkryje dvě ikony, které neodpovídají, a třetí zvuk, když program znovu skryje ikony.
 

@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b1928176ef1c2612585c7fa46ea653f3ff800050
-ms.sourcegitcommit: 9a5cf730d8e43eed6eba25369b7b44cae0b26b98
+ms.openlocfilehash: 8e4868899af67ebeb25ae508cbe7e5b0c83137bf
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75929254"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578078"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>Rychlý Start: první pohled na nástroje pro profilaci
 
@@ -34,7 +34,7 @@ Při ladění můžete použít okno **diagnostické nástroje** k analýze vyu�
 **Diagnostické nástroje** okno je často upřednostňovaným způsobem, jak Profilovat aplikace, ale pro buildy vydaných verzí můžete místo toho provést i analýzu aplikace po porážce. Pokud chcete získat další informace o různých přístupech, přečtěte si téma [spuštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). Pokud chcete zobrazit podporu nástrojů pro profilaci pro různé typy aplikací, přečtěte si téma [který nástroj mám použít?](#which-tool-should-i-use).
 
 > [!NOTE]
-> Můžete použít nástroje po porážce v systému Windows 7 nebo novějším. Windows 8 a novější se vyžaduje pro spuštění nástrojů pro profilaci s ladicím programem (**diagnostické nástroje** okno).
+> Můžete použít nástroje po porážce v systému Windows 7 nebo novějším. Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější.
 
 ## <a name="analyze-cpu-usage"></a>Analýza využití procesoru
 
@@ -58,7 +58,7 @@ Dvakrát klikněte na funkci, kterou vás zajímá, a zobrazí se podrobnější
 
 Okno **diagnostické nástroje** také umožňuje vyhodnotit využití paměti ve vaší aplikaci. Například můžete se podívat na počet a velikost objektů v haldě. Podrobnější pokyny k analýze paměti najdete v tématu [Analýza využití paměti](../profiling/memory-usage.md).
 
-Chcete-li analyzovat využití paměti, je třeba při ladění provést alespoň jeden snímek paměti. Nejlepším způsobem, jak analyzovat paměť, je často provedení dvou snímků. první napravo před problémem s podezřelou pamětí a druhý snímek hned po výskytu problému s podezřelou pamětí. Pak můžete zobrazit rozdíl dvou snímků a podívat se přesně, co se změnilo.
+Chcete-li analyzovat využití paměti při ladění, je nutné provést alespoň jeden snímek paměti. Nejlepším způsobem, jak analyzovat paměť, je často provedení dvou snímků. první napravo před problémem s podezřelou pamětí a druhý snímek hned po výskytu problému s podezřelou pamětí. Pak můžete zobrazit rozdíl dvou snímků a podívat se přesně, co se změnilo.
 
 ![Pořídit snímek v Diagnostické nástroje](../profiling/media/prof-tour-take-snapshots.gif "Diagnostické nástroje pořizování snímků")
 
@@ -81,23 +81,23 @@ Stejné události jsou také zobrazeny v editoru kódu, které lze zobrazit jako
 
 ![Tipy pro výkon Tour profilace](../profiling/media/prof-tour-perf-tips.png "Tipy pro výkon Tour profilace")
 
+## <a name="post_mortem"></a>Sestavení pro vydání profilu bez ladicího programu
+
+Nástroje pro profilaci, jako je využití procesoru a využití paměti, se dají použít spolu s ladicím programem (viz předchozí části) nebo můžete spouštět nástroje pro profilaci po porážce pomocí profileru výkonu, který je určený k poskytnutí analýzy pro sestavení vydaných **verzí** . V profileru výkonu můžete shromažďovat diagnostické informace, když je aplikace spuštěná, a potom po zastavení aplikace prohlédnout shromážděné informace. Další informace o těchto různých přístupůch naleznete v tématu [spuštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). V profileru výkonu jsou také k dispozici další nástroje, například [Nástroj pro přidělování objektů rozhraní .NET](../profiling/dotnet-alloc-tool.md) .
+
+![Profiler výkonu](../profiling/media/prof-tour-performance-profiler.png "Profiler výkonu")
+
+Kliknutím na **ladit** > **Performance Profiler**otevřete Profiler výkonu.
+
+V některých scénářích můžete v tomto okně vybrat více nástrojů pro profilaci. Nástroje, jako je využití CPU, můžou poskytovat doplňková data, která můžete použít k usnadnění analýzy. Pomocí [profileru příkazového řádku](../profiling/profile-apps-from-command-line.md) můžete také povolit scénáře zahrnující více nástrojů pro profilaci.
+
 ## <a name="examine-ui-performance-and-accessibility-events-uwp"></a>Kontrola výkonu uživatelského rozhraní a událostí přístupnosti (UWP)
 
 V aplikacích pro UWP můžete v **diagnostické nástroje** okně Povolit **analýzu uživatelského rozhraní** . Nástroj vyhledává běžné problémy s výkonem nebo přístupností a při ladění je zobrazuje v zobrazení **událostí** . Popis události poskytuje informace, které mohou pomáhat při řešení problémů.
 
 ![Zobrazení událostí analýzy uživatelského rozhraní v diagnostických nástrojích](../profiling/media/prof-tour-ui-analysis.png "Diagnostické nástroje zobrazit události analýzy uživatelského rozhraní")
 
-## <a name="post_mortem"></a>Sestavení pro vydání profilu bez ladicího programu
-
-Nástroje pro profilaci, jako je využití procesoru a využití paměti, se dají použít spolu s ladicím programem (viz předchozí části) nebo můžete spouštět nástroje pro profilaci po porážce pomocí profileru výkonu, který je určený k poskytnutí analýzy pro sestavení vydaných **verzí** . V profileru výkonu můžete shromažďovat diagnostické informace, když je aplikace spuštěná, a potom po zastavení aplikace prohlédnout shromážděné informace. Další informace o těchto různých přístupůch naleznete v tématu [spuštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
-
-![Profiler výkonu](../profiling/media/prof-tour-performance-profiler.png "Profiler výkonu")
-
-Kliknutím na **ladit** > **Performance Profiler**otevřete Profiler výkonu.
-
-V některých scénářích můžete v tomto okně vybrat více nástrojů pro profilaci. Nástroje, jako je využití CPU, můžou poskytovat doplňková data, která můžete použít k usnadnění analýzy.
-
-## <a name="analyze-resource-consumption-xaml"></a>Analyzovat spotřebu prostředků (XAML)
+## <a name="analyze-resource-consumption-xaml"></a>Analýza spotřeby prostředků (XAML)
 
 V aplikacích XAML, jako jsou aplikace WPF pro Windows Desktop a aplikace pro UWP, můžete pomocí nástroje Časová osa aplikace analyzovat spotřebu prostředků. Můžete například analyzovat čas strávený vaší aplikací při přípravě rámců uživatelského rozhraní (rozložení a vykreslování), obsluhování síťových a diskových požadavků a ve scénářích, jako je spuštění aplikace, načítání stránky a změna velikosti okna. Chcete-li použít nástroj, zvolte možnost **Časová osa aplikace** v profileru výkonu a pak zvolte možnost **Spustit**. Ve své aplikaci Projděte scénář s podezřelým problémem spotřeby prostředků a pak zvolte možnost **Zastavit shromažďování** pro vygenerování sestavy.
 
@@ -105,7 +105,7 @@ Nízká framerates v grafu **propustnosti vizuálů** může odpovídat vizuáln
 
 ![Nástroj pro profilaci Časová osa aplikace](../profiling/media/prof-tour-application-timeline.gif "Časová osa aplikace prohlídka profilace")
 
-V zobrazení podrobností časové osy můžete najít informace, jako je například typ activitiy (nebo související prvek uživatelského rozhraní) spolu s dobou trvání aktivity. Například na obrázku je událost **rozložení** ovládacího prvku mřížky převzata 57,53 MS.
+V zobrazení podrobností časové osy můžete najít informace, jako je například typ aktivity (nebo související prvek uživatelského rozhraní) spolu s dobou trvání aktivity. Například na obrázku je událost **rozložení** ovládacího prvku mřížky převzata 57,53 MS.
 
 Další informace najdete v tématu [Časová osa aplikace](../profiling/application-timeline.md).
 
@@ -134,9 +134,9 @@ K diagnostikování odezvy uživatelského rozhraní, pomalé doby načítání 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-## <a name="analyze-network-usage-uwp"></a>Analýza využití sítě (UWP)
+## <a name="analyze-network-usage-uwp"></a>Analýza využití sítě (UPW)
 
-V aplikacích pro UWP můžete analyzovat síťové operace prováděné pomocí rozhraní `Windows.Web.Http` API. Tento nástroj vám může pomáhat vyřešit problémy, jako jsou problémy s přístupem a ověřováním, nesprávné použití mezipaměti a špatný výkon zobrazení a stahování. Chcete-li použít nástroj, zvolte v profileru výkonu položku **síť** a pak zvolte možnost **Spustit**. Ve vaší aplikaci, projděte si scénáře, který používá `Windows.Web.Http`a klikněte na tlačítko **zastavit shromažďování** generování sestav.
+V aplikacích pro UWP můžete analyzovat síťové operace prováděné pomocí rozhraní `Windows.Web.Http` API. Tento nástroj vám může pomáhat vyřešit problémy, jako jsou problémy s přístupem a ověřováním, nesprávné použití mezipaměti a špatný výkon zobrazení a stahování. Chcete-li použít nástroj, zvolte v profileru výkonu položku **síť** a pak zvolte možnost **Spustit**. Ve své aplikaci Projděte scénář, který používá `Windows.Web.Http`a pak zvolte možnost **Zastavit shromažďování** pro vygenerování sestavy.
 
 ![Nástroj pro profilaci využití sítě](../profiling/media/prof-tour-network-usage.png "Využití sítě diag")
 
@@ -149,7 +149,13 @@ Další informace najdete v tématu [využití sítě](../profiling/network-usag
 
 ## <a name="analyze-performance-legacy-tools"></a>Analýza výkonu (starší nástroje)
 
+::: moniker range="vs-2017"
 Pokud potřebujete funkce, jako je instrumentace, které aktuálně nejsou k dispozici v nástroji využití procesoru nebo paměti, a máte spuštěné aplikace Desktop nebo ASP.NET, můžete k profilaci použít Prohlížeč výkonu. (Nepodporováno v aplikacích pro UWP) Další informace najdete v tématu [prohlížeč výkonu](../profiling/performance-explorer.md).
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+V aplikaci Visual Studio 2019 se starší Prohlížeč výkonu a související nástroje pro profilaci, jako je Průvodce výkonem, přeložily do profileru výkonu, který můžete otevřít pomocí nástroje **Debug** > **Performance Profiler**. V profileru výkonu jsou dostupné diagnostické nástroje závislé na vybraném cíli a na aktuálním otevřeném projektu po spuštění. Nástroj využití CPU nabízí funkci vzorkování, která byla dříve podporovaná v průvodci výkonem. Nástroj Instrumentace poskytuje instrumentované možnosti profilování (pro přesné počty volání a trvání), které byly v průvodci výkonem. V profileru výkonu se také zobrazí další nástroje paměti.
+::: moniker-end
 
 ![Nástroj Prohlížeč výkonu](../profiling/media/prof-tour-performance-explorer.png "Prohlížeč výkonu")
 
@@ -162,6 +168,7 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 |----------------------|---------------------|-------------|-------------|
 |[Využití procesoru](../profiling/cpu-usage.md)|ano|ano|ano|
 |[Využití paměti](../profiling/memory-usage.md)|ano|ano|ano|
+|[Alokace objektů .NET](../profiling/dotnet-alloc-tool.md)|Ano (jenom .NET)|ano|ano|
 |[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|ano|ano|ne|
 |[Časová osa aplikace](../profiling/application-timeline.md)|ano|ano|ne|
 |[Tipy pro výkon](../profiling/perftips.md)|ano|Ano pro XAML, ne pro HTML|ano|
@@ -185,5 +192,5 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 ::: moniker-end
 
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění v sadě Visual Studio](../debugger/debugger-feature-tour.md)

@@ -7,19 +7,19 @@ ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
 ms.devlang: vb
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 684cd4762eed38d947d76655bd9632fc10d0aacd
-ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
+ms.openlocfilehash: 279bfb00a2466120d21c5c868c0987ec19202acc
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74829996"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579933"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Kurz: Začínáme s Visual Basic v aplikaci Visual Studio
 
@@ -27,13 +27,13 @@ V tomto kurzu pro Visual Basic (VB) použijete Visual Studio k vytvoření a spu
 
 ::: moniker range="vs-2017"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) stránku a nainstalovat zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/downloads) stránku a nainstalovat zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
@@ -43,7 +43,7 @@ Nejprve vytvoříme projekt aplikace Visual Basic. Typ projektu se dodává se v
 
 ::: moniker range="vs-2017"
 
-1. Otevřete Visual Studio 2017.
+1. Otevřete sadu Visual Studio 2017.
 
 2. V horním řádku nabídek vyberte **soubor** > **Nový** > **projekt**.
 
@@ -76,7 +76,7 @@ Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete
 ::: moniker range="vs-2019"
 
 > [!NOTE]
-> Některé snímky obrazovky v tomto kurzu používají tmavý motiv. Pokud nepoužíváte tmavý motiv, ale chtěli, najdete v článku [přizpůsobit IDE sady Visual Studio a Editor](../../ide/quickstart-personalize-the-ide.md) stránku a zjistěte, jak.
+> Některé snímky obrazovky v tomto kurzu používají tmavý motiv. Pokud nepoužíváte tmavý motiv, ale chcete, přečtěte si téma [přizpůsobení stránky IDE a editoru sady Visual Studio](../../ide/quickstart-personalize-the-ide.md) , kde se dozvíte, jak.
 
 1. Otevřete Visual Studio 2019.
 
@@ -111,7 +111,7 @@ Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete
 
 ## <a name="create-a-what-is-your-name-application"></a>Vytvoření aplikace "Co je vaše jméno"
 
-Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobrazí se spolu s datem a časem. Tady je postup:
+Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobrazí se spolu s datem a časem. Zde je uveden postup:
 
  ::: moniker range="vs-2017"
 
@@ -268,7 +268,7 @@ Blahopřejeme k dokončení tohoto kurzu! Další informace najdete v následuj�
 > [!div class="nextstepaction"]
 > [Sestavení knihovny pomocí Visual Basic a .NET Core SDK v aplikaci Visual Studio](/dotnet/core/tutorials/vb-library-with-visual-studio)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Názorné postupy Visual Basic jazyka](/dotnet/visual-basic/walkthroughs)
 * [Reference jazyka Visual Basic](/dotnet/visual-basic/language-reference/index)

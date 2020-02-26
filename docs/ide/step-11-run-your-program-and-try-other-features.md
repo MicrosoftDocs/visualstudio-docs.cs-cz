@@ -1,25 +1,25 @@
 ---
-title: 'Krok 11: Spusťte aplikaci pro prohlížení obrázků a zkuste jiné funkce.'
+title: 'Krok 11: spuštění aplikace pro prohlížeč obrázků a vyzkoušejte jiné funkce'
 ms.date: 09/11/2019
 ms.assetid: 656614d0-4fe7-4a67-8edc-c10919377d09
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad0489cce76642df0dd069e0a05e1e50b55d5d8f
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 865064bd85d45ccb24129d289b48143321486ca1
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118798"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579903"
 ---
-# <a name="step-11-run-your-picture-viewer-app-and-try-other-features"></a>Krok 11: Spusťte aplikaci pro prohlížení obrázků a zkuste jiné funkce.
+# <a name="step-11-run-your-picture-viewer-app-and-try-other-features"></a>Krok 11: spuštění aplikace pro prohlížeč obrázků a vyzkoušejte jiné funkce
 
-Vaše aplikace pro prohlížení obrázků je dokončená a připravená ke spuštění. Můžete spustit aplikaci a nastavit barvu <xref:System.Windows.Forms.PictureBox>pozadí. Pokud se chcete dozvědět víc, zkuste aplikaci vylepšit změnou barvy formuláře, přizpůsobením tlačítek a zaškrtávacím políčkem a změnou vlastností formuláře.
+Vaše aplikace pro prohlížení obrázků je dokončená a připravená ke spuštění. Můžete spustit aplikaci a nastavit barvu pozadí <xref:System.Windows.Forms.PictureBox>. Pokud se chcete dozvědět víc, zkuste aplikaci vylepšit změnou barvy formuláře, přizpůsobením tlačítek a zaškrtávacím políčkem a změnou vlastností formuláře.
 
 ## <a name="how-to-run-your-app-and-set-the-background-color"></a>Jak spustit aplikaci a nastavit barvu pozadí
 
@@ -27,10 +27,10 @@ Vaše aplikace pro prohlížení obrázků je dokončená a připravená ke spu�
 
 1. Než otevřete obrázek, klikněte na tlačítko **nastavit barvu pozadí** . Otevře se dialogové okno **Barva** .
 
-     ![Dialogové okno barvy](../ide/media/express_colordialog.png)<br/>
-***Barva*** *dialogové okno*
+     Dialogové okno ![barvy](../ide/media/express_colordialog.png)<br/>
+*Dialogové okno* barvy
 
-1. Vyberte barvu pro nastavení barvy pozadí ovládacího prvku PictureBox. Prohlédněte si úzce `backgroundButton_Click()` na metodě ( `BackgroundButton_Click()`nebo), abyste pochopili, jak funguje.
+1. Vyberte barvu pro nastavení barvy pozadí ovládacího prvku PictureBox. Prohlédněte si úzce na metodě `backgroundButton_Click()` (nebo, `BackgroundButton_Click()`), abyste pochopili, jak funguje.
 
     > [!NOTE]
     > Obrázek můžete načíst z Internetu vložením jeho adresy URL do dialogového okna **otevřít soubor** . Zkuste najít obrázek s průhledným pozadím, aby se zobrazila barva pozadí.
@@ -52,11 +52,11 @@ Vaše aplikace pro prohlížení obrázků je dokončená a připravená ke spu�
 Další informace najdete v následujícím kurzu:
 
 > [!div class="nextstepaction"]
-> [Kurz 2: Vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md)
+> [Kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md)
 
-Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si krok 10: Napište kód pro další tlačítka a zaškrtávací políčko](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md).
+Chcete-li se vrátit k předchozímu kroku kurzu, přečtěte si část [Krok 10: psaní kódu pro další tlačítka a zaškrtávací políčko](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Další C# kurzy](/visualstudio/get-started/csharp/)
 * [Další kurzy Visual Basic](/visualstudio/get-started/visual-basic/)

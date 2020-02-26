@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d99a6ae3d2b1a2c0acfe4aee160801181c72cbe7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c0d1c8cfb94b74f54eaaddd6b8d6d0fd17216b94
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62994920"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77577959"
 ---
 # <a name="overview-of-tools-for-measuring-performance-in-visual-studio"></a>Přehled nástrojů pro měření výkonu v sadě Visual Studio
 
@@ -21,8 +21,10 @@ Profilace a Diagnostika nástroje pomáhají diagnostikovat paměť a využití 
 
 ## <a name="next-steps"></a>Další kroky
 
-* [Nejdřív se podívejte na nástroje pro profilaci](../profiling/profiling-feature-tour.md) Další informace o mnoha různými způsoby pro měření výkonu aplikace.
+* [Nejprve se podívejte na nástroje profilace](../profiling/profiling-feature-tour.md) , kde se dozvíte mnoho různých způsobů měření výkonu aplikace.
 
-* [Analýza využití procesoru](../profiling/cpu-usage.md) další podrobné informace o nástroj využití procesoru.
+* Podrobné informace o nástroji využití CPU najdete v části [Analýza využití procesoru](../profiling/cpu-usage.md) .
 
-* [Analýza využití paměti](../profiling/memory-usage.md) identifikovat kritické body výkonu.
+* [Analyzujte využití paměti](../profiling/memory-usage.md) a Identifikujte problém s výkonem.
+
+* [Analyzujte využití paměti pomocí nástroje pro přidělování objektů .NET](../profiling/dotnet-alloc-tool.md) k identifikaci problémových míst výkonu v aplikacích .NET.

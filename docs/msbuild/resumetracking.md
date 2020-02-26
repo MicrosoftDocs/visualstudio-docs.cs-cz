@@ -1,5 +1,5 @@
 ---
-title: ResumeTracking | Dokumentace Microsoftu
+title: ResumeTracking | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 apiname:
@@ -10,20 +10,20 @@ apitype: COM
 helpviewer_keywords:
 - ResumeTracking
 ms.assetid: d637e019-7c50-4b0a-812e-bc822001e697
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e2ff32a4eb2218a8b3d09188c787156e484147f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6bb4663013a73d88ed7c2118816007705834162c
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62996700"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578447"
 ---
 # <a name="resumetracking"></a>ResumeTracking
-Obnoví sledování v rámci aktuálního kontextu.
+Pokračuje v sledování v aktuálním kontextu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,10 +32,10 @@ HRESULT WINAPI ResumeTracking();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- **HRESULT** s **SUCCEEDED** sadu bitů, pokud bylo obnoveno sledování. **E_FAIL** je vrácena, pokud sledování nelze obnovit, protože kontext nebyl dostupný.
+ Hodnota **HRESULT** s **úspěšným** bitem nastaveným v případě, že sledování bylo obnoveno. **E_FAIL** se vrátí, pokud sledování nejde obnovit, protože kontext není dostupný.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *FileTracker.h*
+ **Záhlaví:** *stoper. h*
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [SuspendTracking](../msbuild/suspendtracking.md)

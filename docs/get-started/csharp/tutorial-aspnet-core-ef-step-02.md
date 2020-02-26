@@ -9,19 +9,19 @@ monikerRange: vs-2019
 ms.topic: tutorial
 ms.devlang: CSharp
 author: ardalis
-ms.author: tglee
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 21959c4a0cc2b961eca43ab9724369c7aea8444b
-ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
+ms.openlocfilehash: 1d382e83aa9672cfdcbdca64b89be79d090f2aac
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061139"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77580085"
 ---
 # <a name="step-2-create-your-first-aspnet-core-web-app"></a>Krok 2: Vytvoření první ASP.NET Core webové aplikace
 
@@ -33,7 +33,7 @@ _Podívejte se na toto video a sledujte společně a vytvořte svou první aplik
 
 ## <a name="start-visual-studio-2019-and-create-a-new-project"></a>Spusťte Visual Studio 2019 a vytvořte nový projekt.
 
-Spusťte Visual Studio 2019 a klikněte na **vytvořit nový projekt**. Vyberte **ASP.NET Core webové aplikace**. Vyberte šablonu **webové aplikace** a ponechejte výchozí název projektu a umístění. V rozevíracím seznamu s verzí ASP.NET Core vyberte **ASP.NET Core 2,1** nebo **ASP.NET Core 2,2**. Klikněte na **vytvořit**. Podrobnější pokyny najdete [v předchozím videu v této sérii kurzů](tutorial-aspnet-core-ef-step-01.md).
+Spusťte Visual Studio 2019 a klikněte na **vytvořit nový projekt**. Vyberte **ASP.NET Core webové aplikace**. Vyberte šablonu **webové aplikace** a ponechejte výchozí název projektu a umístění. V rozevíracím seznamu s verzí ASP.NET Core vyberte **ASP.NET Core 2,1** nebo **ASP.NET Core 2,2**. Klikněte na možnost **Vytvořit**. Podrobnější pokyny najdete [v předchozím videu v této sérii kurzů](tutorial-aspnet-core-ef-step-01.md).
 
 ![Visual Studio 2019 volba možností projektu ASP.NET Core](media/vs-2019/vs2019-choose-aspnetcore-project.png)
 
@@ -54,7 +54,7 @@ Složka *wwwroot* obsahuje statické soubory, které budou veřejně přístupn�
 
 Složka *Pages* obsahuje Razor Pages webu. Výchozí šablona poskytuje několik stránek, včetně stránky *index. cshtml* , která je domovskou stránkou aplikace, a také o kontaktu, kontaktu atd.
 
-### <a name="appsettingsjson"></a>appSettings. JSON
+### <a name="appsettingsjson"></a>appsettings.json
 
 Tento soubor obsahuje nastavení konfigurace pro lokalitu ve formátu JSON.
 
@@ -66,7 +66,7 @@ Tento soubor slouží jako vstupní bod pro aplikaci. Při spuštění aplikace 
 
 Webový hostitel vytvořený v *program.cs* odkazuje na spouštěcí třídu a volá její metody pro konfiguraci aplikace. Metoda ConfigureServices zodpovídá za nastavení všech služeb, které bude aplikace používat. Metoda `Configure` nastaví kanál požadavku HTTP aplikace. Každý požadavek prochází tímto kanálem a pracuje s jednotlivými *middlewari* .
 
-### <a name="indexcshtml"></a>Index. cshtml
+### <a name="indexcshtml"></a>Soubor Index.cshtml
 
 Domovská stránka webu obsahuje několik značek HTML a některé kód Razor na straně serveru. Pomocí Razor určí model stránky `IndexModel`, který se nachází v přidruženém souboru *index.cshtml.cs* . Také nastaví název stránky nastavením hodnoty v ViewData. Tato hodnota ViewData je čtena\_v souboru *layout. cshtml* , který je umístěn ve sdílené složce ve složce stránky. Soubor rozložení je sdílen mnoha Razor Pages a poskytuje běžný vzhled a chování aplikace. Obsah každé stránky se vykreslí v HTML souboru rozložení.
 
@@ -116,7 +116,7 @@ public void OnGet()
 V prohlížeči by se teď měl zobrazit skutečný čas serveru, když přejdete do aplikace.
 
 > [!NOTE]
-> Výstup se může od obrázku lišit, protože výstupní formát ToShortDateTimeString závisí na aktuálním nastavení jazykové verze. Viz <xref:System.DateTime.ToShortTimeString>.
+> Výstup se může od obrázku lišit, protože výstupní formát ToShortDateTimeString závisí na aktuálním nastavení jazykové verze. Viz třída <xref:System.DateTime.ToShortTimeString>.
 
 ![Projekt sady Visual Studio 2019 ASP.NET Core v prohlížeči](media/vs-2019/vs2019-app-fixed-in-browser.png)
 
@@ -126,6 +126,6 @@ V dalším videu se dozvíte, jak přidat podporu dat do aplikace.
 
 [Kurz: práce s daty v aplikaci ASP.NET Core](tutorial-aspnet-core-ef-step-03.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Kurz: Vytvoření webové aplikace v Razor Pages s využitím ASP.NET Core](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1)

@@ -8,17 +8,17 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 0ba5ed7a-9aaa-41f4-95d2-e3c2d567bc79
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 115220a33fda1a8c65beec9b712481604c88e483
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 366f6d7a07d2f30b5b8110fb7dae7a2311fcce23
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72621543"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579392"
 ---
 # <a name="step-3-assign-a-random-icon-to-each-label"></a>Krok 3: přiřazení náhodné ikony každému popisku
 
@@ -32,11 +32,11 @@ Pokud se ikony každou hru zobrazí ve stejných buňkách, není to zrovna nár
      [!code-vb[VbExpressTutorial4Step2_3_4#2](../ide/codesnippet/VisualBasic/step-3-assign-a-random-icon-to-each-label_1.vb)]
 
       > [!IMPORTANT]
-      > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![Programming jazykové řízení pro ](../ide/media/docs-programming-language-control.png) Docs.Microsoft.com
+      > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![programové řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
 
 2. Přidejte metodu `AssignIconsToSquares()`, jak je znázorněno v předchozím kroku. Můžete ji umístit hned pod kód, který jste přidali v [kroku 2: přidejte náhodný objekt a seznam ikon](../ide/step-2-add-a-random-object-and-a-list-of-icons.md).
 
-     Jak bylo zmíněno dříve, je něco nového ve vaší `AssignIconsToSquares()` metodě: `foreach` smyčka C# v a `For Each` v Visual Basic. @No__t_0 cyklus můžete použít kdykoli, když chcete provést stejnou akci několikrát. V takovém případě chcete spustit stejné příkazy pro každý popisek na <xref:System.Windows.Forms.TableLayoutPanel>, jak je vysvětleno v následujícím kódu. První řádek vytvoří proměnnou s názvem `control`, která každý ovládací prvek uloží po jednom v okamžiku, kdy tento ovládací prvek obsahuje příkazy ve smyčce, která je v něm spuštěna.
+     Jak bylo zmíněno dříve, je něco nového ve vaší `AssignIconsToSquares()` metodě: `foreach` smyčka C# v a `For Each` v Visual Basic. `For Each` cyklus můžete použít kdykoli, když chcete provést stejnou akci několikrát. V takovém případě chcete spustit stejné příkazy pro každý popisek na <xref:System.Windows.Forms.TableLayoutPanel>, jak je vysvětleno v následujícím kódu. První řádek vytvoří proměnnou s názvem `control`, která každý ovládací prvek uloží po jednom v okamžiku, kdy tento ovládací prvek obsahuje příkazy ve smyčce, která je v něm spuštěna.
 
      [!code-csharp[VbExpressTutorial4Step2_3_4#14](../ide/codesnippet/CSharp/step-3-assign-a-random-icon-to-each-label_2.cs)]
      [!code-vb[VbExpressTutorial4Step2_3_4#14](../ide/codesnippet/VisualBasic/step-3-assign-a-random-icon-to-each-label_2.vb)]
@@ -71,7 +71,7 @@ Pokud se ikony každou hru zobrazí ve stejných buňkách, není to zrovna nár
 
 5. Ukončete program a znovu jej spusťte. Všimněte si, že každému popisku jsou přiřazeny jiné ikony, viz následující obrázek.
 
-     ![Matching hry s náhodnými ikonami ](../ide/media/express_tut4step3.png)<br/>
+     ![porovnávací hru s náhodnými ikonami](../ide/media/express_tut4step3.png)<br/>
 *Porovnávací hra s náhodnými ikonami*
 
      Ikony jsou nyní viditelné, protože jste je neskryli. Pokud je chcete skrýt z přehrávače, můžete nastavit vlastnost **ForeColor** každé jmenovky na stejnou barvu jako vlastnost **BackColor** .

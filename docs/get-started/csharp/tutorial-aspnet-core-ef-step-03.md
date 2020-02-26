@@ -1,5 +1,5 @@
 ---
-title: 'Krok 3: Práce s daty v aplikaci ASP.NET Core'
+title: 'Krok 3: práce s daty v aplikaci ASP.NET Core'
 description: Pomocí tohoto výukového kurzu a podrobného postupu začněte pracovat s daty pomocí Entity Framework Core v ASP.NET Core webové aplikaci.
 ms.custom: get-started
 ms.date: 03/31/2019
@@ -9,21 +9,21 @@ monikerRange: vs-2019
 ms.topic: tutorial
 ms.devlang: CSharp
 author: ardalis
-ms.author: tglee
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: e27155cd6504ab66cf52c4ddb0659a84936037a0
-ms.sourcegitcommit: 2bbcba305fd0f8800fd3d9aa16f7647ee27f3a4b
+ms.openlocfilehash: cef0db7e5615d08fb5b22c38604a24124c853ebd
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68300592"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77580064"
 ---
-# <a name="step-3-work-with-data-using-entity-framework"></a>Krok 3: Práce s daty pomocí Entity Framework
+# <a name="step-3-work-with-data-using-entity-framework"></a>Krok 3: práce s daty pomocí Entity Framework
 
 Pomocí následujícího postupu můžete začít pracovat s daty pomocí Entity Framework Core ve webové aplikaci ASP.NET Core.
 
@@ -54,7 +54,7 @@ public class Game
 
 Teď jsme připraveni vytvořit stránky, které budeme používat ke správě naší knihovny her. To může být zvuk těžké, ale ve skutečnosti je to úžasné snadné. Nejdřív musíme rozhodnout, kde v naší aplikaci by měla být tato funkce živá. Otevřete složku stránky ve webovém projektu a přidejte do ní novou složku. Zavolejte IT *hry*.
 
-Nyní klikněte pravým tlačítkem na hry a vyberte **Přidat** > **novou vygenerované položky**. Vyberte možnost Razor Pages pomocí **Entity Framework (CRUD)** . CRUD představuje možnost vytvořit, číst, aktualizovat, odstranit a tato šablona vytvoří stránky pro každou z těchto operací (včetně stránky seznam všech) a "zobrazení podrobností jedné položky".
+Nyní klikněte pravým tlačítkem na hry a vyberte **přidat** > **Nová vygenerovaná položka**. Vyberte možnost Razor Pages pomocí **Entity Framework (CRUD)** . CRUD představuje možnost vytvořit, číst, aktualizovat, odstranit a tato šablona vytvoří stránky pro každou z těchto operací (včetně stránky seznam všech) a "zobrazení podrobností jedné položky".
 
 ![Visual Studio 2019 ASP.NET Core Přidání vygenerovaných stránek](media/vs-2019/vs2019-add-scaffold.png)
 
@@ -66,18 +66,18 @@ Na složku hry se zobrazí následující Razor Pages:
 - Delete.cshtml
 - Podrobnosti. cshtml
 - Edit.cshtml
-- Index.cshtml
+- Soubor Index.cshtml
 
 ![Sady Visual Studio 2019 ASP.NET Core vygenerované stránky](media/vs-2019/vs2019-scaffolded-pages.png)
 
-Kromě přidávání stránek ve složce *hry* , operace generování uživatelského rozhraní přidala kód do třídy *Startup.cs* . Při hledání v `ConfigureServices` metodě v této třídě se zobrazí tento kód:
+Kromě přidávání stránek ve složce *hry* , operace generování uživatelského rozhraní přidala kód do třídy *Startup.cs* . Při hledání v metodě `ConfigureServices` v této třídě uvidíte, že se přidal tento kód:
 
 ```csharp
 services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
 ```
 
-Také najdete `AppDbContext` připojovací řetězec, který byl přidán do souboru *appSettings. JSON* projektu.
+Do souboru *appSettings. JSON* pro projekt se taky zjistí, že se přidal připojovací řetězec `AppDbContext`.
 
 Pokud aplikaci teď spustíte, může selhat, protože se ještě nevytvořila žádná databáze. Aplikaci můžete nakonfigurovat tak, aby v případě potřeby automaticky vytvořila databázi, a to tak, že [do program.cs přidáte nějaký kód](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio#update-main):
 
@@ -115,11 +115,11 @@ using WebApplication1.Models;
 
 Nezapomeňte použít název projektu místo WebApplication1 ve vašem kódu.
 
-Většina kódu je jenom pro zpracování chyb a poskytuje přístup k EF Core `AppDbContext` před spuštěním aplikace. Důležitý řádek je ten, který říká `context.Database.EnsureCreated()`, že databáze bude vytvořena, pokud ještě neexistuje. Aplikace je teď připravená ke spuštění.
+Většina kódu je jenom pro zpracování chyb a poskytuje přístup k EF Core `AppDbContext` předtím, než aplikace běží. Důležité je řádek, který říká `context.Database.EnsureCreated()`, který vytvoří databázi, pokud ještě neexistuje. Aplikace je teď připravená ke spuštění.
 
 ## <a name="test-it-out"></a>Otestovat
 
-Spusťte aplikaci a v adresním `/Games` řádku přejděte na adresu. Zobrazí se prázdná stránka seznamu. Kliknutím na **vytvořit novou** přidejte do kolekce `Game` nový. Vyplňte formulář a klikněte na **vytvořit**. Měla by se zobrazit v zobrazení seznamu. Kliknutím na **Podrobnosti** zobrazíte podrobnosti o jednom záznamu.
+Spusťte aplikaci a v adresním řádku přejděte na `/Games`. Zobrazí se prázdná stránka seznamu. Kliknutím na **vytvořit novou** přidejte novou `Game` do kolekce. Vyplňte formulář a klikněte na **vytvořit**. Měla by se zobrazit v zobrazení seznamu. Kliknutím na **Podrobnosti** zobrazíte podrobnosti o jednom záznamu.
 
 Přidejte další záznam. Můžete kliknout na *Upravit* a změnit podrobnosti záznamu nebo **Odstranit** , abyste ho odebrali, což vás vyzve k potvrzení před skutečným odstraněním záznamu.
 
@@ -131,9 +131,9 @@ To je všechno, co trvalo začít pracovat s daty v aplikaci ASP.NET Core pomoc�
 
 V dalším videu se dozvíte, jak do vaší aplikace přidat podporu webového rozhraní API.
 
-[Krok 4: Zpřístupnění webového rozhraní API z aplikace ASP.NET Core](tutorial-aspnet-core-ef-step-04.md)
+[Krok 4: zpřístupnění webového rozhraní API z aplikace ASP.NET Core](tutorial-aspnet-core-ef-step-04.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Razor Pages s Entity Framework Core v ASP.NET Core](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio)
 - [ASP.NET Core Razor Pages s EF Core](/aspnet/core/data/?view=aspnetcore-2.1)

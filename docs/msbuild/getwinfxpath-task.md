@@ -1,5 +1,5 @@
 ---
-title: Getwinfxpath – úloha | Dokumentace Microsoftu
+title: Úloha GetWinFXPath – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,34 +13,34 @@ helpviewer_keywords:
 - GetWinFXPath task [WPF MSBuild]
 - obtaining the path to the current .NET Framework runtime [WPF MSBuild]
 ms.assetid: b1dfb467-f3d3-47f3-83ef-af7b0e33a772
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c95e5ad882d7021b597d7ba0ad8c38177f4a5136
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 894cfe9fd6e116e983a5290e5817211182b073c7
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62996343"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578612"
 ---
-# <a name="getwinfxpath-task"></a>Getwinfxpath – úloha
-<xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> Vrácený obsah úkolů adresář aktuálního [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)] modulu runtime.
+# <a name="getwinfxpath-task"></a>GetWinFXPath – – úloha
+Úloha <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> vrátí adresář aktuálního modulu runtime [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)].
 
 ## <a name="task-parameters"></a>Parametry úlohy
 
 | Parametr | Popis |
 |-------------------| - |
-| `WinFXPath` | Volitelné **řetězec** výstupní parametr.<br /><br /> Určuje skutečné cesty k [!INCLUDE[TLA2#tla_winfx](../msbuild/includes/tla2sharptla_winfx_md.md)] modulu runtime. |
-| `WinFXNativePath` | Vyžaduje **řetězec** parametru.<br /><br /> Určuje cestu k nativní [!INCLUDE[TLA2#tla_titlewinfx](../msbuild/includes/tla2sharptla_titlewinfx_md.md)] modulu runtime. |
-| `WinFXWowPath` | Vyžaduje **řetězec** parametru.<br /><br /> Určuje cestu k [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)] sestavení v 32bitovém základě **Windows na Windows** modulu v 64bitových systémech. |
+| `WinFXPath` | Volitelný výstupní parametr **řetězce** .<br /><br /> Určuje skutečnou cestu k modulu runtime [!INCLUDE[TLA2#tla_winfx](../msbuild/includes/tla2sharptla_winfx_md.md)]. |
+| `WinFXNativePath` | Povinný parametr **řetězce**<br /><br /> Určuje cestu k nativnímu modulu runtime [!INCLUDE[TLA2#tla_titlewinfx](../msbuild/includes/tla2sharptla_titlewinfx_md.md)]. |
+| `WinFXWowPath` | Povinný parametr **řetězce**<br /><br /> Určuje cestu k [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)] sestavení v 32 **Windows** v modulu windows na 64 bitových systémech. |
 
 ## <a name="remarks"></a>Poznámky
- Pokud <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> 64bitový procesor, je spuštěn úkol **WinFXPath** parametr je nastaven na cestu, která je uložena v **WinFXWowPath** parametr; v opačném případě **WinFXPath**  parametr je nastaven na cestu, která je uložena v **WinFXNativePath** parametru.
+ Pokud je úloha <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> prováděna na 64ovém procesoru, parametr **WinFXPath** je nastaven na cestu, která je uložena v parametru **WinFXWowPath** ; v opačném případě je parametr **WinFXPath** nastaven na cestu, která je uložena v parametru **WinFXNativePath** .
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje způsob použití **getwinfxpath –** úloh ke zjištění nativní cestou k [!INCLUDE[TLA2#tla_titlewinfx](../msbuild/includes/tla2sharptla_titlewinfx_md.md)] modulu runtime.
+ Následující příklad ukazuje, jak použít úlohu **GetWinFXPath –** k detekci nativní cesty k modulu runtime [!INCLUDE[TLA2#tla_titlewinfx](../msbuild/includes/tla2sharptla_titlewinfx_md.md)].
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -56,9 +56,9 @@ ms.locfileid: "62996343"
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)
-- [Referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/wpf-msbuild-task-reference.md)
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Sestavení aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

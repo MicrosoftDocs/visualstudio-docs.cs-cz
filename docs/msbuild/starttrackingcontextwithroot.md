@@ -1,5 +1,5 @@
 ---
-title: StartTrackingContextWithRoot | Dokumentace Microsoftu
+title: StartTrackingContextWithRoot | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 apiname:
@@ -10,20 +10,20 @@ apitype: COM
 helpviewer_keywords:
 - StartTrackingContextWithRoot
 ms.assetid: f6ef2b76-8035-4a14-8195-aa221c46ef48
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 53f2c1ebd5896eaa8a4b9d5ff4e5cb7856a1f8e2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 36b48529f82a908ea765151561a71c58cd2c7bc5
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939102"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578417"
 ---
 # <a name="starttrackingcontextwithroot"></a>StartTrackingContextWithRoot
-Spouští kontext sledování pomocí souboru odpovědí. určení kořenové značky.
+Spustí sledovací kontext pomocí souboru odezvy určujícího kořenovou značku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,21 +34,21 @@ HRESULT WINAPI StartTrackingContextWithRoot(LPCTSTR intermediateDirectory, LPCTS
 #### <a name="parameters"></a>Parametry
 [in] `intermediateDirectory`
 
- Adresáře, ve kterém k uložení protokolu sledování.
+ Adresář, do kterého má být uložen protokol sledování.
 
 [in] `taskName`
 
- Určuje kontext sledování. Tento název se používá k vytvoření názvu souboru protokolu.
+ Identifikuje sledovací kontext. Tento název se používá k vytvoření názvu souboru protokolu.
 
 [in] `rootMarkerResponseFile`
 
- Cesta souboru odpovědí obsahující kořenové značky. Název kořenového slouží k seskupení všech sledování pro kontext, společně.
+ Cesta k souboru odpovědí, který obsahuje kořenovou značku. Kořenový název slouží k seskupení všech sledování kontextu.
 
 ## <a name="return-value"></a>Návratová hodnota
- **HRESULT** s **SUCCEEDED** sadu bitů, pokud byl vytvořen kontext sledování.
+ Hodnota **HRESULT** s **úspěšně** nastaveným bitem, pokud byl vytvořen sledovací kontext.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *FileTracker.h*
+ **Záhlaví:** *stoper. h*
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [StartTrackingContext](../msbuild/starttrackingcontext.md)

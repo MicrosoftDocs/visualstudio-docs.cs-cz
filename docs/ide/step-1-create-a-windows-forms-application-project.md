@@ -5,17 +5,17 @@ ms.assetid: 16ac2422-e720-4e3a-b511-bc2a54201a86
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a1c0184c11b745ef6c83c35b524884a139bc3d8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2d5e34d825d2a4d296a8a394105b412195b4e3fb
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588782"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579910"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>Krok 1: vytvoření projektu aplikace model Windows Forms
 
@@ -25,7 +25,7 @@ Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu
 
 ## <a name="open-visual-studio-2017"></a>Open Visual Studio 2017
 
-1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**. Dialogové okno by mělo vypadat podobně jako na následujícím snímku obrazovky.
+1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt**. Dialogové okno by mělo vypadat podobně jako na následujícím snímku obrazovky.
 
      dialog ![nový projekt](../ide/media/newprojectdialogcallouts.png)<br/>***Nový projekt*** – *dialogové okno*
 
@@ -115,7 +115,7 @@ Visual Studio vytvoří řešení pro vaši aplikaci. Řešení funguje jako kon
 
 * Pokud se chcete vrátit k tématu Přehled, přečtěte si téma [kurz 1: vytvoření prohlížeče obrázků](../ide/tutorial-1-create-a-picture-viewer.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Kurz 2: vytvoření časovaného matematického kvízu](tutorial-2-create-a-timed-math-quiz.md)
 * [Kurz 3: vytvoření porovnávací hry](tutorial-3-create-a-matching-game.md)

@@ -5,17 +5,17 @@ ms.assetid: ea98c55e-6213-4893-ba7b-f19d7f119527
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 319cfee254aa0b0f1709fa566e4e1bbca208eb9a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a9697bf6cf84c2a74daac2017b4f63d52a7019b6
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589952"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579276"
 ---
 # <a name="step-7-add-dialog-components-to-your-form"></a>Krok 7: přidejte do svého formuláře komponenty dialogových oken
 
@@ -55,7 +55,7 @@ Komponenta je jako ovládací prvek v některých způsobech. Pomocí **panelu n
 
 * Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si část [Krok 6: Pojmenujte své ovládací prvky tlačítek](../ide/step-6-name-your-button-controls.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Kurz 2: vytvoření časovaného matematického kvízu](tutorial-2-create-a-timed-math-quiz.md)
 * [Kurz 3: vytvoření porovnávací hry](tutorial-3-create-a-matching-game.md)

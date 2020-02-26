@@ -5,17 +5,17 @@ ms.assetid: 3071d6df-2b2f-4e95-ab68-bef727323136
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9af5a3e8796af3aeaefae569d61e78a1039d84e
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 5f1431d56516c749004cef1b35ada482a6c53446
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115090"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579720"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>Kurz 1: vytvoření prohlížeče obrázků
 
@@ -26,7 +26,7 @@ V tomto kurzu sestavíte aplikaci, která načte obrázek ze souboru a zobrazí 
 
 Tento kurz vás provede následujícími úlohami:
 
-* Vytvořte nový projekt.
+* Vytvoření nového projektu
 
 * Otestujte (Ladit) aplikaci.
 
@@ -66,7 +66,7 @@ K dispozici jsou také skvělé a bezplatné studijní materiály pro video. Dal
 
 Chcete-li začít s kurzem, začněte v **[kroku 1: vytvoření projektu aplikace model Windows Forms](../ide/step-1-create-a-windows-forms-application-project.md)** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Další C# kurzy](/visualstudio/get-started/csharp/)
 * [Kurzy Visual Basic](/visualstudio/get-started/visual-basic/)

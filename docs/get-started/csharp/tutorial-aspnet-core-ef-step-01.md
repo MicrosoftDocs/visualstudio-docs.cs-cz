@@ -10,33 +10,33 @@ monikerRange: vs-2019
 ms.topic: tutorial
 ms.devlang: CSharp
 author: ardalis
-ms.author: tglee
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 1851c497579d45aa45c36dc1cd20945ce2b9c1e1
-ms.sourcegitcommit: 6c55c40da74ed8969dcba56acbd30458fdb69c5a
+ms.openlocfilehash: d900c0f51b14450f38caf06738739daef2549235
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70977444"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77580098"
 ---
 # <a name="tutorial-create-your-first-aspnet-core-app-using-entity-framework-with-visual-studio-2019"></a>Kurz: Vytvoření první aplikace ASP.NET Core pomocí Entity Framework se sadou Visual Studio 2019
 
 V tomto kurzu vytvoříte ASP.NET Core webovou aplikaci, která používá data, a nasadíte ji do Azure. Tento kurz se skládá z následujících kroků:
 
-- [Krok 1: Instalace sady Visual Studio 2019](#step-1-install-visual-studio-2019)
+- [Krok 1: instalace sady Visual Studio 2019](#step-1-install-visual-studio-2019)
 - [Krok 2: Vytvoření první ASP.NET Core webové aplikace](tutorial-aspnet-core-ef-step-02.md)
-- [Krok 3: Práce s daty pomocí Entity Framework](tutorial-aspnet-core-ef-step-03.md)
-- [Krok 4: Vystavení webového rozhraní API z aplikace ASP.NET Core](tutorial-aspnet-core-ef-step-04.md)
-- [Krok 5: Nasazení aplikace ASP.NET Core do Azure](tutorial-aspnet-core-ef-step-05.md)
+- [Krok 3: práce s daty pomocí Entity Framework](tutorial-aspnet-core-ef-step-03.md)
+- [Krok 4: vystavení webového rozhraní API z aplikace ASP.NET Core](tutorial-aspnet-core-ef-step-04.md)
+- [Krok 5: nasazení aplikace ASP.NET Core do Azure](tutorial-aspnet-core-ef-step-05.md)
 
-## <a name="step-1-install-visual-studio-2019"></a>Krok 1: Instalace sady Visual Studio 2019
+## <a name="step-1-install-visual-studio-2019"></a>Krok 1: instalace sady Visual Studio 2019
 
-Přečtěte si, jak nainstalovat Visual Studio 2019 s tímto výukovým kurzem a podrobnými pokyny. Pokud jste již nainstalovali aplikaci Visual Studio, přeskočte dopředu [ke kroku 2: Vytvořte svou první webovou aplikaci](tutorial-aspnet-core-ef-step-02.md)ASP.NET Core.
+Přečtěte si, jak nainstalovat Visual Studio 2019 s tímto výukovým kurzem a podrobnými pokyny. Pokud jste již nainstalovali aplikaci Visual Studio, přeskočte dopředu ke [kroku 2: Vytvoření první webové aplikace ASP.NET Core](tutorial-aspnet-core-ef-step-02.md).
 
 _Podívejte se na toto video a postupujte podle pokynů k instalaci sady Visual Studio a vytvoření první aplikace ASP.NET Core._
 
@@ -70,7 +70,7 @@ Po dokončení instalačního programu se aplikace Visual Studio spustí automat
 
 ## <a name="explore-aspnet-core-project-types"></a>Prozkoumat ASP.NET Core typy projektů
 
-Můžete zvolit název projektu a umístění a pak vybrat **vytvořit**. Teď vyberte šablonu, která se má použít pro vaši aplikaci ASP.NET Core. Můžete si vybrat z těchto možností:
+Můžete zvolit název projektu a umístění a pak vybrat **vytvořit**. Teď vyberte šablonu, která se má použít pro vaši aplikaci ASP.NET Core. Máte na výběr z následujících možností:
 
 - Obsahovat. Prázdná šablona projektu, která vám umožní začít od začátku.
 - API. Nejvhodnější pro webová rozhraní API.
@@ -86,7 +86,7 @@ Všimněte si, že pro většinu šablon projektů můžete také vybrat možnos
 - Bez ověřování.
 - Jednotlivé uživatelské účty. Tyto jsou uložené v místní databázi nebo databázi založené na Azure.
 - Pracovní nebo školní účty. Tato možnost pro ověřování používá službu Active Directory, Azure AD nebo Office 365.
-- Ověřování systému Windows. Vhodné pro intranetové aplikace.
+- Ověřování systému Windows: Vhodné pro intranetové aplikace.
 
 Vyberte šablonu standardní webové aplikace bez ověřování a klikněte na **vytvořit**.
 
@@ -98,6 +98,6 @@ V dalším videu se dozvíte víc o vašem prvním ASP.NET Core projektu.
 
 [Kurz: Vytvoření první ASP.NET Core webové aplikace](tutorial-aspnet-core-ef-step-02.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Kurz: Začínáme s C# a ASP.NET Core](tutorial-aspnet-core.md) Podrobnější kurz bez návodu k videu

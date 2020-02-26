@@ -1,5 +1,5 @@
 ---
-title: Requiresframework35sp1assembly – úloha | Dokumentace Microsoftu
+title: Úloha Requiresframework35sp1assembly – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,41 +11,41 @@ helpviewer_keywords:
 - RequiresFramework35SP1Assembly task [MSBuild]
 - MSBuild, RequiresFramework35SP1Assembly task
 ms.assetid: 755c018a-8a8b-4c94-8aee-3f171fc419e5
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56c1e640c3b6f7a285c10b2487f9758520facf11
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3d94d6ab4840163e8379e53da435a97a69381aed
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974615"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578470"
 ---
 # <a name="requiresframework35sp1assembly-task"></a>RequiresFramework35SP1Assembly – úloha
-Určuje, zda aplikace požaduje instalaci rozhraní .NET Framework 3.5 SP1.
+Určuje, jestli aplikace vyžaduje .NET Framework 3,5 SP1.
 
 ## <a name="parameters"></a>Parametry
- Následující tabulka popisuje parametry `RequiresFramework35SP1Assembly` úloh.
+ Následující tabulka popisuje parametry úlohy `RequiresFramework35SP1Assembly`.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Assemblies`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje sestavení, které jsou odkazovány v aplikaci.|
-|`CreateDesktopShortcut`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, vytvoří ikonu zástupce na ploše během instalace.|
-|`DeploymentManifestEntryPoint`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje název souboru manifestu aplikace.|
-|`EntryPoint`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje sestavení, která má být spuštěn při spuštění aplikace.|
-|`ErrorReportUrl`|Volitelné `String` parametru.<br /><br /> Určuje web, který se zobrazí v dialogových oknech, které se vyskytují během instalace ClickOnce.|
-|`Files`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje seznam souborů, které se nasadí, když je aplikace publikována.|
-|`ReferencedAssemblies`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje sestavení, které je odkazováno v projektu.|
-|`RequiresMinimumFramework35SP1`|Volitelné `Boolean` výstupní parametr.<br /><br /> Pokud `true`, aplikace požaduje instalaci rozhraní .NET Framework 3.5 SP1.|
-|`SigningManifests`|Volitelné `Boolean` výstupní parametr.<br /><br /> Pokud `true`, jsou podepsané manifesty ClickOnce.|
-|`SuiteName`|Volitelné `String` parametru.<br /><br /> Určuje název složky **Start** nabídka, ve kterém se aplikace nainstaluje.|
-|`TargetFrameworkVersion`|Volitelné `String` parametru.<br /><br /> Určuje verzi rozhraní .NET Framework, který tato aplikace cílena.|
+|`Assemblies`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Určuje sestavení, na která jsou odkazována v aplikaci.|
+|`CreateDesktopShortcut`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, během instalace vytvoří ikonu zástupce na ploše.|
+|`DeploymentManifestEntryPoint`|Volitelný parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje název souboru manifestu pro aplikaci.|
+|`EntryPoint`|Volitelný parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje sestavení, které se má provést při spuštění aplikace.|
+|`ErrorReportUrl`|Volitelný parametr `String`.<br /><br /> Určuje web, který se zobrazí v dialogových oknech, které se vyskytují během instalace ClickOnce.|
+|`Files`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Určuje seznam souborů, které budou nasazeny při publikování aplikace.|
+|`ReferencedAssemblies`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Určuje sestavení, která jsou odkazována v projektu.|
+|`RequiresMinimumFramework35SP1`|Volitelný výstupní parametr `Boolean`.<br /><br /> Pokud `true`, vyžaduje aplikace .NET Framework 3,5 SP1.|
+|`SigningManifests`|Volitelný výstupní parametr `Boolean`.<br /><br /> Pokud `true`, manifesty ClickOnce jsou podepsány.|
+|`SuiteName`|Volitelný parametr `String`.<br /><br /> Určuje název složky v nabídce **Start** , do které se aplikace nainstaluje.|
+|`TargetFrameworkVersion`|Volitelný parametr `String`.<br /><br /> Určuje verzi .NET Framework, na kterou se tato aplikace zaměřuje.|
 
 ## <a name="remarks"></a>Poznámky
- Kromě s parametry, které jsou uvedené v tabulce, zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).
+ Kromě toho, že mají parametry, které jsou uvedeny v tabulce, tato úloha dědí parametry z třídy <xref:Microsoft.Build.Tasks.TaskExtension>, kterou sám dědí z třídy <xref:Microsoft.Build.Utilities.Task>. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

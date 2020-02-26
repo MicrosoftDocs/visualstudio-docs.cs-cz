@@ -1,5 +1,5 @@
 ---
-title: Úloha GetFileHash | Dokumentace Microsoftu
+title: Úloha GetFileHash | Microsoft Docs
 ms.date: 01/28/2019
 ms.topic: reference
 dev_langs:
@@ -10,40 +10,40 @@ dev_langs:
 helpviewer_keywords:
 - GetFileHash task [MSBuild]
 - MSBuild, GetFileHash task
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab5da58b125f86627d54547bd9f6f7cddc16c4de
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a8f3de9a4f2fe848e1cbd41e14e82498845ca2cf
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977500"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578661"
 ---
-# <a name="getfilehash-task"></a>GetFileHash úkolu
+# <a name="getfilehash-task"></a>GetFileHash – úloha
 
-Vypočítá kontrolních součtů obsah souboru nebo sady souborů.
+Vypočítá kontrolní součet obsahu souboru nebo sady souborů.
 
-Tato úloha byla přidána do 15.8, ale vyžaduje [řešení](https://github.com/Microsoft/msbuild/pull/3999#issuecomment-458193272) pro MSBuild starším než 16.0.
+Tato úloha se přidala do 15,8, ale vyžaduje [alternativní řešení](https://github.com/Microsoft/msbuild/pull/3999#issuecomment-458193272) pro použití ve verzích MSBuild pod 16,0.
 
 ## <a name="task-parameters"></a>Parametry úlohy
 
- Následující tabulka popisuje parametry `GetFileHash` úloh.
+ Následující tabulka popisuje parametry úlohy `GetFileHash`.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Files`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br />Soubory, které chcete použít algoritmus hash.|
-|`Items`|<xref:Microsoft.Build.Framework.ITaskItem>`[]` Výstupní parametr.<br /><br />`Files` Vstup dalšími metadaty nastavena na hodnotu hash souboru.|
-|`Hash`|`String` Výstupní parametr.<br /><br />Hodnota hash souboru. Tímto výstupem je nastavte pouze v případě byl předaný přesně jednu položku.|
-|`Algorithm`|Volitelné `String` parametru.<br /><br />Algoritmus. Povolené hodnoty: `SHA256`, `SHA384`, `SHA512`. Výchozí = `SHA256`.|
-|`MetadataName`|Volitelné `String` parametru.<br /><br />Název metadat ukládat hodnoty hash v každé položce. Výchozí hodnota je `FileHash`.|
-|`HashEncoding`|Volitelné `String` parametru.<br /><br />Kódování určené k použití pro generované hodnoty hash. Výchozí hodnota je `hex`. Povolené hodnoty = `hex`, `base64`.|
+|`Files`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br />Soubory, které se mají vyhodnotit.|
+|`Items`|výstupní parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br />Vstupní `Files` s dalšími metadaty nastavenými na hodnotu hash souboru.|
+|`Hash`|výstupní parametr `String`.<br /><br />Hodnota hash souboru Tento výstup je nastaven pouze v případě, že byla předána právě jedna položka.|
+|`Algorithm`|Volitelný parametr `String`.<br /><br />Algoritmus. Povolené hodnoty: `SHA256`, `SHA384``SHA512`. Výchozí hodnota = `SHA256`.|
+|`MetadataName`|Volitelný parametr `String`.<br /><br />Název metadat, ve kterém je hodnota hash uložena v každé položce. Výchozí hodnota je `FileHash`.|
+|`HashEncoding`|Volitelný parametr `String`.<br /><br />Kódování, které má být použito pro vygenerované hodnoty hash. Výchozí hodnota je `hex`. Povolené hodnoty = `hex`, `base64`.|
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu `GetFileHash` úloh na určení a vytisknout kontrolní součet `FilesToHash` položky.
+Následující příklad používá úlohu `GetFileHash` k určení a tisku kontrolního součtu položek `FilesToHash`.
 
 ```xml
 <Project>
@@ -63,8 +63,8 @@ V následujícím příkladu `GetFileHash` úloh na určení a vytisknout kontro
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
 
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

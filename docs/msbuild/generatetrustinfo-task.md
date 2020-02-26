@@ -1,5 +1,5 @@
 ---
-title: Generatetrustinfo – úloha | Dokumentace Microsoftu
+title: Úloha GenerateTrustInfo – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,35 +11,35 @@ helpviewer_keywords:
 - MSBuild, GenerateTrustInfo task
 - GenerateTrustInfo task [MSBuild]
 ms.assetid: 3ca60816-4bb0-4fef-ae43-ca0bfb63def3
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9eda4e54c67a9e9e80b4fd8f59266bc4bc5f27a4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5b9c32681af56595f8b00feab4979a3ec45f1588
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62577460"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578692"
 ---
 # <a name="generatetrustinfo-task"></a>GenerateTrustInfo – úloha
-Generuje důvěryhodnost aplikace z manifestu základní a `TargetZone` a `ExcludedPermissions` parametry.
+Generuje vztah důvěryhodnosti aplikace ze základního manifestu a z parametrů `TargetZone` a `ExcludedPermissions`.
 
 ## <a name="parameters"></a>Parametry
- Následující tabulka popisuje parametry `GenerateTrustInfo` úloh.
+ Následující tabulka popisuje parametry úlohy `GenerateTrustInfo`.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`ApplicationDependencies`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje závislá sestavení.|
-|`BaseManifest`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje základní manifest generovat důvěryhodnost aplikace z.|
-|`ExcludedPermissions`|Volitelné `String` parametru.<br /><br /> Určuje jednu nebo více hodnot identity oddělených středníkem oprávnění mají být vyloučeny ze sady zóny výchozí oprávnění.|
-|`TargetZone`|Volitelné `String` parametru.<br /><br /> Určuje výchozí oprávnění sadě, který získáte od zásady počítače.|
-|`TrustInfoFile`|Vyžaduje <xref:Microsoft.Build.Framework.ITaskItem> výstupní parametr.<br /><br /> Určuje soubor, který obsahuje informace o vztahu důvěryhodnosti zabezpečení aplikace.|
+|`ApplicationDependencies`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Určuje závislá sestavení.|
+|`BaseManifest`|Volitelný parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje základní manifest, ze kterého se má vygenerovat vztah důvěryhodnosti aplikace.|
+|`ExcludedPermissions`|Volitelný parametr `String`.<br /><br /> Určuje jednu nebo víc hodnot identity oprávnění oddělených středníkem, které se mají vyloučit ze sady výchozích oprávnění zóny.|
+|`TargetZone`|Volitelný parametr `String`.<br /><br /> Určuje výchozí sadu oprávnění zóny, která se získá ze zásad počítače.|
+|`TrustInfoFile`|Požadovaný výstupní parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje soubor, který obsahuje informace o vztahu důvěryhodnosti zabezpečení aplikace.|
 
 ## <a name="remarks"></a>Poznámky
- Kromě s parametry, které jsou uvedené v tabulce, zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).
+ Kromě toho, že mají parametry, které jsou uvedeny v tabulce, tato úloha dědí parametry z třídy <xref:Microsoft.Build.Tasks.TaskExtension>, kterou sám dědí z třídy <xref:Microsoft.Build.Utilities.Task>. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

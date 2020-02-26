@@ -7,33 +7,33 @@ ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: quickstart
 ms.devlang: vb
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: c7da73ac3f47b6b63817ff905923b71e3354b06c
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 34f3dc8642e2cf8e965e2ad303bed79931d2645c
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180092"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579494"
 ---
-# <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>Rychlý start: Vytvořte svou první konzolovou aplikaci v aplikaci Visual Studio pomocí Visual Basic
+# <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>Rychlý Start: Vytvoření první konzolové aplikace v aplikaci Visual Studio pomocí Visual Basic
 
 V této 5-10 minut Úvod do integrovaného vývojového prostředí (IDE) sady Visual Studio vytvoříte jednoduchou Visual Basic aplikaci, která se spouští v konzole nástroje.
 
 ::: moniker range="vs-2017"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) stránku a nainstalovat zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/downloads) stránku a nainstalovat zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
@@ -43,11 +43,11 @@ Nejprve vytvoříte projekt aplikace Visual Basic. Typ projektu se dodává se v
 
 ::: moniker range="vs-2017"
 
-1. Otevřete Visual Studio 2017.
+1. Otevřete sadu Visual Studio 2017.
 
 2. V horním řádku nabídek vyberte **soubor** > **Nový** > **projekt**.
 
-3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic**a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)** . Pak pojmenujteprojekt Hello.
+3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic**a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)** . Pak pojmenujte projekt *Hello*.
 
    ![Šablona projektu Konzolová aplikace (.NET Core) v dialogovém okně Nový projekt v integrovaném vývojovém prostředí sady Visual Studio](../ide/media/new-project-vb-dotnetcore-helloworld-console-app.png)
 
@@ -64,7 +64,7 @@ Nejprve vytvoříte projekt aplikace Visual Basic. Typ projektu se dodává se v
 ::: moniker range="vs-2019"
 
 > [!NOTE]
-> Některé snímky obrazovky v tomto rychlém startu používají tmavý motiv. Pokud nepoužíváte tmavý motiv, ale chtěli, najdete v článku [přizpůsobit IDE sady Visual Studio a Editor](quickstart-personalize-the-ide.md) stránku a zjistěte, jak.
+> Některé snímky obrazovky v tomto rychlém startu používají tmavý motiv. Pokud nepoužíváte tmavý motiv, ale chcete, přečtěte si téma [přizpůsobení stránky IDE a editoru sady Visual Studio](quickstart-personalize-the-ide.md) , kde se dozvíte, jak.
 
 1. Otevřete Visual Studio 2019.
 
@@ -99,7 +99,7 @@ Nejprve vytvoříte projekt aplikace Visual Basic. Typ projektu se dodává se v
 
 ## <a name="create-the-application"></a>Vytvoření aplikace
 
-Po výběru šablony projektu Visual Basic a pojmenování projektu vytvoří Visual Studio jednoduchou aplikaci "Hello World". Volá <xref:System.Console.WriteLine%2A> metodu pro zobrazení řetězcového literálu "Hello World!" v okně konzoly.
+Po výběru šablony projektu Visual Basic a pojmenování projektu vytvoří Visual Studio jednoduchou aplikaci "Hello World". Volá metodu <xref:System.Console.WriteLine%2A> pro zobrazení řetězcového literálu "Hello World!". v okně konzoly.
 
 ![Zobrazit výchozí kód Hello World ze šablony](../ide/media/vb-console-helloworld-template.png)
 
@@ -107,13 +107,13 @@ Pokud kliknete na tlačítko **HelloWorld** v integrovaném vývojovém prostře
 
   ![Kliknutím na tlačítko Hello World spustíte program v režimu ladění.](../ide/media/vb-console-hello-world-button.png)
 
-Když to uděláte, okno konzoly bude viditelné pouze chvilku před jeho zavřením. K tomu dochází, `Main` protože metoda se ukončí po provedení samostatného příkazu a aplikace skončí.
+Když to uděláte, okno konzoly bude viditelné pouze chvilku před jeho zavřením. K tomu dochází, protože metoda `Main` se ukončí po spuštění jednoho příkazu, takže aplikace skončí.
 
 ### <a name="add-some-code"></a>Přidat kód
 
 Pojďme přidat nějaký kód pro pozastavení aplikace a pak požádat o vstup uživatele.
 
-1. Přidejte následující kód hned za volání <xref:System.Console.WriteLine%2A> metody:
+1. Přidejte následující kód hned za volání metody <xref:System.Console.WriteLine%2A>:
 
    ```vb
    Console.Write("Press any key to continue...")
@@ -122,7 +122,7 @@ Pojďme přidat nějaký kód pro pozastavení aplikace a pak požádat o vstup 
 
     Tím se program pozastaví, dokud nestisknete klávesu.
 
-2. Na řádku nabídek vyberte **sestavení** > **sestavení**.
+2. Na panelu nabídek vyberte **sestavení** **řešení**Build > .
 
    Tím se program zkompiluje do mezilehlého jazyka (IL), který je převeden do binárního kódu pomocí kompilátoru JIT (just-in-time).
 

@@ -5,17 +5,17 @@ ms.assetid: 61acde79-e115-4bad-bb06-1fbe37717a3e
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b3f4ca58506e99331c48b33717903d1925874912
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d827077266adbe0a1ba8cabd1f19ae6d815df833
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590017"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579381"
 ---
 # <a name="step-4-lay-out-your-form-with-a-tablelayoutpanel-control"></a>Krok 4: rozložení formuláře pomocí ovládacího prvku TableLayoutPanel
 
@@ -76,14 +76,14 @@ Okno ***vlastností*** *s* *vybraným* výplní
      ![úlohy TableLayoutPanel](../ide/media/express_tablepanel.png)<br>
 *Úlohy* TableLayoutPanel
 
-1. Vyberte úlohu **Upravit řádky a sloupce** , aby se zobrazilo okno **styly sloupců a řádků** . Vyberte **sloupec Sloupec1**a nastavte jeho velikost na 15 procent, a to tak, že vyberete tlačítko **procento** a do pole **procenta** zadáte **15** . (Jedná se o ovládací prvek <xref:System.Windows.Forms.NumericUpDown>, který budete používat v pozdějším kurzu.) Vyberte hodnotu **Sloupec2** a nastavte ji na 85 procent. Nevybírejte ještě tlačítko **OK** , protože okno se zavře. (Pokud to ale uděláte, můžete ho znovu otevřít pomocí seznamu úkolů.)
+1. Vyberte úlohu **Upravit řádky a sloupce** , aby se zobrazilo okno **styly sloupců a řádků** . Vyberte **sloupec Sloupe**a nastavte jeho velikost na 15 procent, a to tak, že vyberete tlačítko **procento** a do pole **procenta** zadáte **15** . (Jedná se o ovládací prvek <xref:System.Windows.Forms.NumericUpDown>, který budete používat v pozdějším kurzu.) Vyberte hodnotu **Sloupe** a nastavte ji na 85 procent. Nevybírejte ještě tlačítko **OK** , protože okno se zavře. (Pokud to ale uděláte, můžete ho znovu otevřít pomocí seznamu úkolů.)
 
      ![styly řádků a sloupců TableLayoutPanel](../ide/media/vs_tablelayoutpanel_setup.png)<br>
 *Styly sloupců a řádků* TableLayoutPanel
 
 1. V rozevíracím seznamu **Zobrazit** v horní části okna **a styly řádků** vyberte možnost **řádky**. Nastavte **řádek1** na 90 procent a **řádek2** na 10 procent.
 
-1. Zvolte **OK** tlačítko. Váš kontejner TableLayoutPanel by teď měl mít velký horní řádek, malý dolní řádek, malý levý sloupec a velký pravý sloupec. (Můžete změnit velikost řádků a sloupců v kontejneru TableLayoutPanel výběrem **tableLayoutPanel1** ve formuláři a následným přetažením ohraničení jeho řádku a sloupce.)
+1. Klikněte na tlačítko **OK** . Váš kontejner TableLayoutPanel by teď měl mít velký horní řádek, malý dolní řádek, malý levý sloupec a velký pravý sloupec. (Můžete změnit velikost řádků a sloupců v kontejneru TableLayoutPanel výběrem **tableLayoutPanel1** ve formuláři a následným přetažením ohraničení jeho řádku a sloupce.)
 
      ![Form1 se změněnou velikostí TableLayoutPanel](../ide/media/vs_formafterlayoutpanel.png)<br>
 ***Form1*** *(prohlížeč obrázků) se změněnou velikostí* ***kontejneru TableLayoutPanel***
@@ -94,7 +94,7 @@ Okno ***vlastností*** *s* *vybraným* výplní
 
 * Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si [Krok 3: nastavení vlastností formuláře](../ide/step-3-set-your-form-properties.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Kurz 2: vytvoření časovaného matematického kvízu](tutorial-2-create-a-timed-math-quiz.md)
 * [Kurz 3: vytvoření porovnávací hry](tutorial-3-create-a-matching-game.md)

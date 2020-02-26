@@ -1,5 +1,5 @@
 ---
-title: Signfile – úloha | Dokumentace Microsoftu
+title: Úloha SignFile – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,45 +13,45 @@ helpviewer_keywords:
 - MSBuild, SignFile task
 - SignFile task [MSBuild]
 ms.assetid: edef1819-ddeb-4e09-95de-fc7063ba9388
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 496017f386e731e553bfce237bd1d2eabea46f49
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 397366a7dac601cd11dc1c70efc352edf303a92e
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976457"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579579"
 ---
 # <a name="signfile-task"></a>SignFile – úloha
 
-Zaregistruje zadaného souboru pomocí zadaného certifikátu.
+Podepíše zadaný soubor pomocí zadaného certifikátu.
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry `SignFile` úloh.
+ Následující tabulka popisuje parametry úlohy `SignFile`.
 
- Všimněte si, že jsou certifikáty SHA-256 povolených jenom na počítače, které mají rozhraní .NET 4.5 a vyšší.
+ Certifikáty SHA-256 jsou povoleny pouze v počítačích s rozhraním .NET 4,5 a vyšším.
 
 > [!WARNING]
-> Od verze Visual Studio 2013 Update 3, tento úkol má nový podpis, který vám umožní určit cílovou architekturu na verzi souboru. Jste ukončena. doporučujeme používat nový podpis, bez ohledu na to možné, protože procesu MSBuild používá algoritmus SHA-256 hashuje pouze pokud je cílové rozhraní .NET 4.5 nebo vyšší. Pokud je verze cílového rozhraní .NET 4.0 nebo dole, se nepoužije hashovací algoritmus SHA-256.
+> Počínaje Visual Studio 2013 Update 3 má tento úkol nový podpis, který umožňuje zadat cílovou verzi rozhraní .NET Framework pro daný soubor. Pokud je to možné, doporučujeme používat nový podpis, protože proces MSBuild používá hodnoty hash SHA-256 pouze v případě, že je cílovým rozhraním .NET 4,5 nebo vyšší. Pokud je cílová architektura rozhraní .NET 4,0 nebo nižší, nebude použita hodnota hash SHA-256.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`CertificateThumbprint`|Vyžaduje `String` parametru.<br /><br /> Určuje certifikát, který chcete použít pro podepisování. Tento certifikát musí být v osobním úložišti aktuálního uživatele.|
-|`SigningTarget`|Vyžaduje <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje soubory, které chcete podepsat pomocí certifikátu.|
-|`TimestampUrl`|Volitelné `String` parametru.<br /><br /> Určuje adresu URL časového razítka serveru.|
-|`TargetFrameworkVersion`|Verze rozhraní .NET Framework, který se používá pro cíl.|
+|`CertificateThumbprint`|Vyžaduje se `String` parametr.<br /><br /> Určuje certifikát, který se má použít pro podepisování. Tento certifikát se musí nacházet v osobním úložišti aktuálního uživatele.|
+|`SigningTarget`|Vyžaduje se <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje soubory, které se mají podepsat pomocí certifikátu.|
+|`TimestampUrl`|Volitelný parametr `String`.<br /><br /> Určuje adresu URL serveru časového razítka.|
+|`TargetFrameworkVersion`|Verze .NET Framework, která se používá pro cíl.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [Task – základní třída](../msbuild/task-base-class.md).
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisů naleznete v tématu [základní třída Task](../msbuild/task-base-class.md).
 
 ## <a name="example"></a>Příklad
 
- Následující příklad používá `SignFile` úloh se soubory v zadané `FilesToSign` kolekci položek s certifikátem určené `Certificate` vlastnost.
+ Následující příklad používá úlohu `SignFile` k podepsání souborů určených v kolekci `FilesToSign` položky s certifikátem zadaným vlastností `Certificate`.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -71,8 +71,8 @@ Zaregistruje zadaného souboru pomocí zadaného certifikátu.
 ```
 
 > [!NOTE]
-> Kryptografický otisk certifikátu je hodnota hash SHA-1 certifikátu. Další informace najdete v tématu [získat hodnota hash certifikátu důvěryhodné kořenové certifikační Autority SHA-1](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733076\(v\=ws.10\)). Pokud zkopírujete a vložíte kryptografický otisk z podrobnosti o certifikátu, ujistěte se, že nezahrnují nadbytečné (3F) neviditelné znaků, které mohou zabránit `SignFile` nalézt certifikát.
+> Kryptografický otisk certifikátu je hodnota hash SHA-1 certifikátu. Další informace najdete v tématu [získání hodnoty hash SHA-1 certifikátu důvěryhodné kořenové certifikační autority](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733076\(v\=ws.10\)). Pokud zkopírujete a vložíte kryptografický otisk z podrobností certifikátu, ujistěte se, že jste nezahrnuli neviditelný znak (3F), což by mohlo zabránit `SignFile` vyhledání certifikátu.
 
-## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

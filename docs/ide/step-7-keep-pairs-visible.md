@@ -8,20 +8,20 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 42e1d08c-7b2e-4efd-9f47-85d6206afe35
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 60b058883e30587ed656690796732b15750b6277
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: eeca594849625b548857a23b9d5c8e278dcdf07c
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647436"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579292"
 ---
 # <a name="step-7-keep-pairs-visible"></a>Krok 7: zůstat páry viditelné
-Hra funguje dobře tak dlouho, dokud hráč vybírá pouze dvojice ikon, které neodpovídají. Ale zvažte, co by mělo nastat, pokud hráč vybere shodnou dvojici. Místo toho, aby se ikony ztratily zapnutím časovače (pomocí <xref:System.Windows.Forms.Timer.Start> metody), by se hra měla resetovat, aby už nesledovala popisky pomocí `firstClicked` a `secondClicked` referenčních proměnných, aniž byste museli resetovat barvy pro tyto dvě. zvolené popisky.
+Hra funguje dobře tak dlouho, dokud hráč vybírá pouze dvojice ikon, které neodpovídají. Ale zvažte, co by mělo nastat, pokud hráč vybere shodnou dvojici. Místo toho, aby se ikony ztratily zapnutím časovače (pomocí <xref:System.Windows.Forms.Timer.Start> metody), by se hra měla resetovat sama, takže už nebude sledovat žádné popisky pomocí `firstClicked` a `secondClicked` referenčních proměnných, aniž byste museli resetovat barvy pro dva popisky, které jste zvolili.
 
 ## <a name="to-keep-pairs-visible"></a>Zachování dvojic viditelných
 
@@ -61,7 +61,7 @@ Hra funguje dobře tak dlouho, dokud hráč vybírá pouze dvojice ikon, které 
 
 2. Uložte a spusťte program a začněte vybírat ikony ve formuláři. Pokud zvolíte dvojici, která neodpovídá, událost časovače Tick se aktivuje a obě ikony zmizí. Pokud zvolíte odpovídající dvojici, příkaz New `if` se spustí a příkaz return způsobí, že metoda přeskočí kód, který spouští časovač, takže ikony zůstanou viditelné, jak je znázorněno na následujícím obrázku.
 
-     ![Game, které v tomto kurzu vytvoříte ](../ide/media/express_finishedgame.png)<br/>
+     ![hry, kterou v tomto kurzu vytvoříte](../ide/media/express_finishedgame.png)<br/>
 ***Porovnávací hra*** *s viditelnými páry ikon*
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat

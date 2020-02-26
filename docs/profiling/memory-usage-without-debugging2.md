@@ -13,22 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56ecf4cb1d777362daf381646094c20f82f30f85
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: eaf853cd19a44af4cb8510fde11da95bfa7de5c1
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72910350"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578343"
 ---
 # <a name="analyze-memory-usage-without-the-debugger"></a>Analýza využití paměti bez ladicího programu
 
 Nástroj **využití paměti** monitoruje využití paměti vaší aplikace. Pomocí tohoto nástroje můžete zkoumat účinky v paměti v reálném čase scénářů, které aktivně vyvíjíte v aplikaci Visual Studio. Můžete pořizovat podrobné snímky stavů paměti aplikace a porovnat snímky a najít hlavní příčiny problémů s pamětí.
 
 Nástroj **využití paměti** lze spustit s ladicím programem nebo bez něj. Následující pokyny ukazují, jak používat nástroj **využití paměti** bez ladicího programu v **profileru výkonu**sady Visual Studio.
-
->[!NOTE]
->- Chcete-li změřit využití paměti pro aplikaci .NET Core, je nutné použít nástroj **využití paměti** v ladicím programu. Pokyny najdete v tématu [profilace využití paměti v aplikaci Visual Studio](memory-usage.md).
->- Chcete-li analyzovat využití paměti v aplikacích pro UWP v jazyce JavaScript nebo HTML, použijte nástroj [JavaScript Memory](../profiling/javascript-memory.md) Tool v **profileru výkonu**.
 
 ## <a name="memory-usage-diagnostic-sessions"></a>Relace diagnostiky využití paměti
 
@@ -214,7 +210,7 @@ Pro typ v **cestě ke stromu kořene** se počet objektů, které obsahují odka
 |**Rozdíl celkové velikosti (bajty)**|V případě typu se jedná o rozdíl mezi velikostí všech instancí typu mezi primárním snímkem a předchozím snímkem, včetně velikosti objektů v objektech.|
 |**Modul**|Modul, který obsahuje objekt.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Paměť JavaScriptu](../profiling/javascript-memory.md)
 - [Profilace v sadě Visual Studio](../profiling/index.yml)
 - [První pohled na nástroje pro profilaci](../profiling/profiling-feature-tour.md)

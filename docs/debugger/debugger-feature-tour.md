@@ -12,20 +12,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 89debcfdeec2c9d363c6935bd2cfdd1ebf403f76
-ms.sourcegitcommit: d55438841123aad56a524a65332a86ad67af386b
+ms.openlocfilehash: 93973322c40ca62396414317c2ad8875e9b94854
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73599305"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578955"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>První pohled na ladicí program sady Visual Studio
 
-Toto téma představuje nástroje ladicího programu, které poskytuje Visual Studio. V kontextu sady Visual Studio se při *ladění aplikace*obvykle to znamená, že spouštíte aplikaci s připojeným ladicím programem (tj. v režimu ladění). Když to uděláte, ladicí program poskytuje mnoho způsobů, jak zjistit, co váš kód při spuštění dělá. Můžete si projít kód a prohlédnout si hodnoty uložené v proměnných, můžete nastavit hodinky pro proměnné, abyste viděli, kdy se hodnoty mění, můžete zkontrolovat cestu provádění vašeho kódu, a to et al. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete toto téma, přečíst [ladění pro absolutní začátečníky](../debugger/debugging-absolute-beginners.md) .
+Toto téma představuje nástroje ladicího programu, které poskytuje Visual Studio. V kontextu sady Visual Studio se při *ladění aplikace*obvykle to znamená, že spouštíte aplikaci s připojeným ladicím programem (tj. v režimu ladění). Když toto provedete, ladicí program poskytuje mnoho způsobů, jak zjistit, co kód dělá, při spuštění. Můžete si projít kód a prohlédnout si hodnoty uložené v proměnných, můžete nastavit hodinky pro proměnné, abyste viděli, kdy se hodnoty mění, můžete zkontrolovat cestu provádění vašeho kódu, a to et al. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete toto téma, přečíst [ladění pro absolutní začátečníky](../debugger/debugging-absolute-beginners.md) .
 
 Zde popsané funkce platí pro C#, C++, Visual Basic, JavaScript a další jazyky, které podporuje Visual Studio (s výjimkou popsaných případů).
 
-## <a name="set-a-breakpoint-and-start-the-debugger"></a>Nastavit zarážku a spustit ladicí program
+## <a name="set-a-breakpoint-and-start-the-debugger"></a>Nastavte zarážku a spuštění ladicího programu
 
 Pro ladění musíte aplikaci spustit pomocí ladicího programu připojeného k procesu aplikace. **F5** (**ladění > Spustit ladění**) je nejběžnější způsob, jak to provést. V současné době ale nemůžete mít nastavené žádné zarážky pro kontrolu kódu vaší aplikace, proto to provedeme a pak spustíte ladění. Zarážky jsou základní a nejjednodušší funkcí spolehlivého ladění. Zarážka určuje, kde má Visual Studio spuštěný kód pozastavit, abyste mohli zkontrolovat hodnoty proměnných či chování paměti, nebo abyste zjistili, jestli se nějaká větev kódu spouští.
 
@@ -35,7 +35,7 @@ Pokud máte otevřený soubor v editoru kódu, můžete nastavit zarážku klikn
 
 Stiskněte **F5** (**ladění > Spustit ladění**) nebo tlačítko **Spustit ladění** ![Spustit ladění](../debugger/media/dbg-tour-start-debugging.png "Spustit ladění") na panelu nástrojů ladění a ladicí program se spustí na první zarážku, ke které dojde. Pokud aplikace ještě není spuštěná, spustí F5 ladicí program a zastaví se na první zarážce.
 
-Zarážky jsou užitečnou funkcí, když znáte řádek kódu nebo oddíl kódu, který chcete podrobně prošetřit.
+Zarážky jsou užitečná funkce, když znáte řádek kódu nebo části kódu, který chcete prozkoumat podrobněji.
 
 ## <a name="navigate"></a>Procházení kódu v ladicím programu pomocí příkazů Step
 
@@ -45,9 +45,9 @@ Pokud chcete aplikaci spustit pomocí připojeného ladicího programu, stiskně
 
 ![F11 Krokovat s vnořením](../debugger/media/dbg-tour-f11.png "F11 Krokovat s vnořením")
 
-Žlutá šipka představuje příkaz, na kterém je ladicí program pozastaven, což také pozastavuje spuštění aplikace ve stejném bodě (Tento příkaz ještě nebyl proveden).
+Žlutá šipka označuje příkaz na které ladicí program pozastaví, což také pozastaví provádění aplikace na stejném místě (Tento příkaz nebyl dosud proveden).
 
-Klávesa F11 je dobrým způsobem, jak prostudovat tok spouštění v nejpodrobnějším podrobnostech. (K rychlejšímu přesunu kódu vám ukážeme i některé další možnosti.) Ve výchozím nastavení přeskočí ladicí program neuživatelský kód (Pokud chcete více podrobností, přečtěte si téma [pouze můj kód](../debugger/just-my-code.md)).
+F11 je dobrým způsobem, jak prozkoumat provádění toku v nejvíce podrobností. (K rychlejšímu přesunu kódu vám ukážeme i některé další možnosti.) Ve výchozím nastavení přeskočí ladicí program neuživatelský kód (Pokud chcete více podrobností, přečtěte si téma [pouze můj kód](../debugger/just-my-code.md)).
 
 >[!NOTE]
 > Ve spravovaném kódu se zobrazí dialogové okno s dotazem, zda chcete být upozorněni, když automaticky provedete krok nad vlastnostmi a operátory (výchozí chování). Chcete-li změnit nastavení později, v nabídce **nástroje > možnosti** v části **ladění**zakažte možnost **Krokovat přes vlastnosti a operátory** .
@@ -81,7 +81,7 @@ Když jste v ladicím programu, najeďte myší na řádek kódu, dokud **na ně
 
 Klikněte na tlačítko **Spustit pro kliknutím** (spustit do tohoto umístění). Ladicí program přejde na řádek kódu, na který jste klikli.
 
-Použití tohoto tlačítka je podobné nastavení dočasné zarážky. Tento příkaz je také užitečný pro rychlé seznámení v rámci viditelné oblasti kódu aplikace. Pomocí rutiny **Run můžete kliknout** na libovolný otevřený soubor.
+Pomocí tohoto tlačítka je podobné nastavení dočasné zarážky. Tento příkaz je také užitečný pro rychlé seznámení v rámci viditelné oblasti kódu aplikace. Pomocí rutiny **Run můžete kliknout** na libovolný otevřený soubor.
 
 ## <a name="advance-the-debugger-out-of-the-current-function"></a>Posunutí ladicího programu z aktuální funkce
 
@@ -89,11 +89,11 @@ V některých případech možná budete chtít pokračovat v relaci ladění, a
 
 Stiskněte **SHIFT + F11** (nebo **ladění > krokovat**).
 
-Tento příkaz obnoví spuštění aplikace (a ladicí program posune), dokud aktuální funkce nevrátí.
+Tento příkaz pokračuje v provádění aplikace (a přejde ladicí program) až do aktuálního funkce vrátí.
 
 ## <a name="run-to-cursor"></a>Spustit ke kurzoru
 
-Ukončete ladicí program stisknutím tlačítka **Zastavit ladění** červeně ![Zastavit ladění](../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") nebo **SHIFT**  + **F5**.
+Ukončete ladicí program stisknutím tlačítka **Zastavit ladění** červeně ![Zastavit ladění](../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") nebo **SHIFT** + **F5**.
 
 Klikněte pravým tlačítkem na řádek kódu v aplikaci a vyberte možnost **Spustit ke kurzoru**. Tento příkaz spustí ladění a nastaví dočasnou zarážku na aktuálním řádku kódu.
 
@@ -112,13 +112,13 @@ Tento příkaz je užitečný při úpravách kódu a chcete rychle nastavit do�
 
 Klikněte na tlačítko **restartovat** ![aplikaci](../debugger/media/dbg-tour-restart.png "Restartovat aplikaci") na panelu nástrojů ladění (**CTRL + SHIFT + F5**).
 
-Po stisknutí tlačítka **restartovat**ušetří čas oproti zastavování aplikace a restartování ladicího programu. Ladicí program se pozastaví na první zarážce, která je dosaženo spuštěním kódu.
+Po stisknutí tlačítka **restartovat**ušetří čas oproti zastavování aplikace a restartování ladicího programu. Ladicí program pozastaví na první zarážce, kterou dosáhnete spuštěním kódu.
 
 Pokud chcete zastavit ladicí program a vrátit se zpět do editoru kódu, můžete stisknout červené tlačítko Zastavit ![ladění](../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") namísto **restartu**.
 
 ## <a name="edit-your-code-and-continue-debugging-c-vb-c-xaml"></a>Úprava kódu a pokračování ladění (C#, VB, C++, XAML)
 
-Ve většině jazyků podporovaných v rámci sady Visual Studio můžete upravit kód uprostřed relace ladění a pokračovat v ladění. Chcete-li použít tuto funkci, klikněte na svůj kód v průběhu pozastaveného ladicího programu, proveďte úpravy a stisknutím klávesy **F5**, **F10**nebo **F11** pokračujte v ladění.
+Ve většině jazyky podporované v aplikaci Visual Studio můžete upravit kódu během relace ladění a pokračovat v ladění. Chcete-li použít tuto funkci, klikněte na svůj kód v průběhu pozastaveného ladicího programu, proveďte úpravy a stisknutím klávesy **F5**, **F10**nebo **F11** pokračujte v ladění.
 
 ![Upravit a pokračovat v ladění](../debugger/media/dbg-tips-edit-and-continue.gif "EditAndContinue")
 
@@ -126,7 +126,7 @@ Další informace o používání funkce a omezení funkcí najdete v tématu [U
 
 Chcete-li upravit kód XAML během relace ladění, [Přečtěte si téma zápis a ladění spouštění kódu XAML pomocí programu XAML Hot reloading](../xaml-tools/xaml-hot-reload.md).
 
-## <a name="inspect-variables-with-data-tips"></a>Kontrola proměnných pomocí tipů k datům
+## <a name="inspect-variables-with-data-tips"></a>Kontrolovat proměnné s datových tipech
 
 Když teď víte, že jste trochu, měli byste mít dobrou možnost začít kontrolovat stav vaší aplikace (proměnné) pomocí ladicího programu. Funkce, které umožňují kontrolu proměnných, jsou některé z nejužitečnějších funkcí ladicího programu a existují různé způsoby, jak to provést. Při pokusu o ladění problému se často snažíte zjistit, jestli proměnné ukládají hodnoty, které očekáváte v určitém stavu aplikace.
 
@@ -136,12 +136,12 @@ Při pozastavení v ladicím programu, najeďte myší na objekt pomocí myši a
 
 Rozbalením objektu zobrazíte všechny jeho vlastnosti (například vlastnost `FullPath` v tomto příkladu).
 
-Často se při ladění požaduje rychlý způsob kontroly hodnot vlastností u objektů a tipy k datům představují dobrý způsob, jak to provést.
+Často při ladění, chcete rychle zkontrolovat hodnoty vlastností pro objekty a datové tipy jsou dobrým způsobem, jak to udělat.
 
 > [!TIP]
 > V nejvíce podporovaných jazycích můžete kód upravit uprostřed relace ladění. Další informace najdete v tématu [Upravit a pokračovat](../debugger/edit-and-continue.md).
 
-## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>Kontrola proměnných pomocí oken automatické hodnoty a místní hodnoty
+## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>Kontrolovat proměnné s okna Automatické hodnoty a místní hodnoty
 
 Během ladění se v dolní části editoru kódu podívejte na okno **Automatické** hodnoty.
 
@@ -158,7 +158,7 @@ Potom se podívejte do okna **místní** hodnoty. V okně **místní** hodnoty s
 
 V tomto příkladu je objekt `this` a objekt `f` v oboru. Další informace najdete v tématu [Kontrola proměnných v oknech automatické hodnoty a místní](../debugger/autos-and-locals-windows.md)hodnoty.
 
-## <a name="set-a-watch"></a>Nastavení kukátka
+## <a name="set-a-watch"></a>Nastavení sledování
 
 Okno **kukátka** můžete použít k určení proměnné (nebo výrazu), pro kterou chcete zachovat oči.
 
@@ -170,18 +170,18 @@ V tomto příkladu máte nastavenou kukátko pro objekt `f` a při přesunu pros
 
 Další informace najdete v tématu [Nastavení kukátka pomocí oken kukátka a QuickWatch](../debugger/watch-and-quickwatch-windows.md) .
 
-## <a name="examine-the-call-stack"></a>Kontrola zásobníku volání
+## <a name="examine-the-call-stack"></a>Prozkoumat zásobník volání
 
 Při ladění klikněte na okno **zásobník volání** , což je ve výchozím nastavení otevřené v pravém dolním podokně.
 
-![Kontrola zásobníku volání](../debugger/media/dbg-tour-call-stack.png "Kontrola zásobníku volání")
+![Kontrola zásobníku volání](../debugger/media/dbg-tour-call-stack.png "Prozkoumat zásobník volání")
 
-Okno **zásobník volání** zobrazuje pořadí, ve kterém jsou metody a funkce volány. V horním řádku se zobrazuje aktuální funkce (metoda `Update` v tomto příkladu). Druhý řádek ukazuje, že `Update` bylo voláno z vlastnosti `Path.set` atd. Zásobník volání je dobrým způsobem, jak prostudovat a pochopit tok spuštění aplikace.
+Okno **zásobník volání** zobrazuje pořadí, ve kterém jsou metody a funkce volány. V horním řádku se zobrazuje aktuální funkce (metoda `Update` v tomto příkladu). Druhý řádek ukazuje, že `Update` bylo voláno z vlastnosti `Path.set` atd. Zásobník volání je dobrým způsobem, jak zkoumat a pochopit provádění toku aplikace.
 
 > [!NOTE]
 > Okno **zásobník volání** je podobné perspektivě ladění v některých prostředích, jako je například zatmění.
 
-Dvakrát klikněte na řádek kódu, abyste se mohli podívat na zdrojový kód a zároveň změnit aktuální rozsah, který je kontrolován ladicím programem. Toto nepokročilý ladicí program.
+Dvojitým kliknutím na řádek kódu go, podívejte se na tento zdrojový kód a také změny v aktuálním oboru kontrolován ladicím programem. Toto nepokročilý ladicí program.
 
 Můžete také použít nabídky kliknutím pravým tlačítkem z okna **zásobník volání** k provedení dalších akcí. Například můžete vložit zarážky do konkrétních funkcí, restartovat aplikaci pomocí funkce **Spustit na kurzor**a přejít na zdrojový kód. Viz [Postupy: prohlédnutí zásobníku volání](../debugger/how-to-use-the-call-stack-window.md).
 
@@ -212,9 +212,9 @@ Vlastnosti ladění jsou specifické pro každý typ projektu. Můžete napřík
 
 ## <a name="debug-live-aspnet-apps-in-azure-app-service"></a>Ladění živých aplikací ASP.NET v Azure App Service
 
-**Snapshot Debugger** pořizování snímku vašich aplikací v produkčním prostředí, když máte spuštěný kód. Chcete-li ladicímu programu dát pokyn k pořízení snímku, nastavte snímkovací body a protokolovacích bodů ve svém kódu. Ladicí program vám umožní zobrazit přesně to, co se nepovedlo, aniž by to ovlivnilo provoz vaší produkční aplikace. Snapshot Debugger vám může výrazně zkrátit dobu potřebnou k vyřešení problémů, ke kterým dochází v produkčních prostředích.
+**Snapshot Debugger** pořizování snímku vašich aplikací v produkčním prostředí, když máte spuštěný kód. Dáte pokyn, aby ladicí program k vytvoření snímku, můžete nastavit snímkovací a protokolovací body ve vašem kódu. Ladicí program umožňuje zobrazit přesně toho, co nefunguje, aniž by to ovlivnilo provozu aplikace v produkčním prostředí. Snapshot Debugger můžete výrazně zkrátit čas potřebný k vyřešení problémů, ke kterým dochází v produkčním prostředí.
 
-![Spustit ladicí program snímků](../debugger/media/snapshot-launch.png "Spustit ladicí program snímků")
+![Spustit ladicí program snímků](../debugger/media/snapshot-launch.png "Spuštění ladicího programu snímků")
 
 Kolekce snímků je k dispozici pro aplikace ASP.NET běžící v Azure App Service. ASP.NET aplikace musí běžet na .NET Framework 4.6.1 nebo novějším. ASP.NET Core aplikace musí běžet na .NET Core 2,0 nebo novějším ve Windows.
 
@@ -222,13 +222,17 @@ Další informace najdete v tématu [ladění živých aplikací ASP.NET pomocí
 
 ## <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise"></a>Zobrazení snímků pomocí IntelliTrace kroků zpět (Visual Studio Enterprise)
 
-**IntelliTraceý krok zpět** automaticky provede snímek vaší aplikace při každé události krok zarážky a ladicího programu. Zaznamenané snímky vám umožní přejít zpět na předchozí zarážky nebo kroky a zobrazit stav aplikace, stejně jako v minulosti. IntelliTraceý krok zpátky vám ušetří čas, když chcete zobrazit předchozí stav aplikace, ale nechcete znovu spustit ladění nebo znovu vytvořit požadovaný stav aplikace.
+**IntelliTraceý krok zpět** automaticky provede snímek vaší aplikace při každé události krok zarážky a ladicího programu. Zaznamenané snímky umožňují snadno vrátit k předchozím zarážkám nebo krokům a zobrazit stav aplikace jako v minulosti. IntelliTrace zpětným krokem vám může ušetřit čas při chcete zobrazit předchozí stav aplikace, ale nebudete chtít znovu spusťte ladění nebo znovu vytvořit stav požadované aplikace.
 
 Snímky můžete procházet a zobrazovat pomocí tlačítek **krok zpět** a **krok vpřed** na panelu nástrojů ladění. Tato tlačítka přecházejí na události, které se zobrazí na kartě **události** v okně **diagnostické nástroje** .
 
 ![Krokovat tlačítka zpět a dopředu](../debugger/media/intellitrace-step-back-icons-description.png  "Krokovat tlačítka zpět a dopředu")
 
 Další informace najdete v tématu [Kontrola stavů předchozích aplikací pomocí stránky IntelliTrace](../debugger/view-historical-application-state.md) .
+
+## <a name="debug-performance-issues"></a>Ladění problémů s výkonem
+
+Pokud vaše aplikace běží příliš pomalu nebo používá příliš mnoho paměti, možná budete muset otestovat aplikaci pomocí nástrojů pro profilaci v počátečním prostředí. Další informace o nástrojích pro profilaci, jako je nástroj využití CPU a analyzátor paměti, najdete v tématu [první pohled na nástroje pro profilaci](../profiling/profiling-feature-tour.md).
 
 ## <a name="next-steps"></a>Další kroky
 

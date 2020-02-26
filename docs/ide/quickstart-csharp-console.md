@@ -8,33 +8,33 @@ ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: quickstart
 ms.devlang: vb
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 94e7a0917a07a3e36ec46b0f9e530dd55728e4ee
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 20b2cf2bf12e9b24ca12d0a73b43e4a56e8246f4
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180108"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579488"
 ---
-# <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>Rychlý start: Vytvoření první C# konzolové aplikace pomocí sady Visual Studio
+# <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření C# první konzolové aplikace
 
 V této 5-10 minut Úvod do integrovaného vývojového prostředí (IDE) sady Visual Studio vytvoříte jednoduchou C# aplikaci, která bude spuštěna v konzole nástroje.
 
 ::: moniker range="vs-2017"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) stránku a nainstalovat zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/downloads) stránku a nainstalovat zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
@@ -44,11 +44,11 @@ Nejprve vytvoříte projekt C# aplikace. Typ projektu se dodává se všemi soub
 
 ::: moniker range="vs-2017"
 
-1. Otevřete Visual Studio 2017.
+1. Otevřete sadu Visual Studio 2017.
 
 2. V horním řádku nabídek vyberte **soubor** > **Nový** > **projekt**.
 
-3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **C#** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)** . Pak pojmenujteprojekt Hello.
+3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **C#** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)** . Pak pojmenujte projekt *Hello*.
 
    ![Šablona projektu Konzolová aplikace (.NET Core) v dialogovém okně Nový projekt v integrovaném vývojovém prostředí sady Visual Studio](../ide/media/new-project-csharp-dotnetcore-helloworld-console-app.png)
 
@@ -109,19 +109,19 @@ Visual Studio obsahuje výchozí kód "Hello World" v projektu.
 
 ::: moniker-end
 
-(K tomu je volána <xref:System.Console.WriteLine%2A> metoda pro zobrazení řetězcového literálu "Hello World!" v okně konzoly.)
+(K tomu je volána metoda <xref:System.Console.WriteLine%2A> pro zobrazení řetězcového literálu "Hello World!" v okně konzoly.)
 
    ![Zobrazit výchozí kód Hello World ze šablony](../ide/media/csharp-console-helloworld-template.png)
 
 Pokud stisknete klávesu **F5**, můžete spustit program v režimu ladění. Okno konzoly je však viditelné pouze v okamžiku před jeho zavřením.
 
-(K tomuto chování dochází, `Main` protože metoda se ukončí po provedení jednoho příkazu, a proto aplikace skončí.)
+(K tomuto chování dochází, protože metoda `Main` se ukončí po spuštění jednoho příkazu, a proto aplikace skončí.)
 
 ### <a name="add-some-code"></a>Přidat kód
 
 Pojďme přidat nějaký kód pro pozastavení aplikace, aby okno konzoly nebylo ukončeno, dokud nestisknete klávesu **ENTER**.
 
-1. Přidejte následující kód hned za volání <xref:System.Console.WriteLine%2A> metody:
+1. Přidejte následující kód hned za volání metody <xref:System.Console.WriteLine%2A>:
 
    ```csharp
    Console.ReadLine();
@@ -151,7 +151,7 @@ Pojďme přidat nějaký kód pro pozastavení aplikace, aby okno konzoly nebylo
 
 1. Zavřete Visual Studio.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Blahopřejeme k dokončení tohoto rychlého startu! Doufáme, že jste se dozvěděli C# o a prostředí Visual Studio IDE. Další informace najdete v následujících kurzech.
 

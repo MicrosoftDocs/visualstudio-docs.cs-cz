@@ -1,5 +1,5 @@
 ---
-title: WriteAllTLogs | Dokumentace Microsoftu
+title: WriteAllTLogs | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 apiname:
@@ -10,20 +10,20 @@ apitype: COM
 helpviewer_keywords:
 - WriteAllTLogs
 ms.assetid: 1fa3e10b-263c-4960-a9ad-485c02a7a872
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee3f02be5494f85c0fa36be510f0a0c25caf53b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7c64f0079a03b730fb700cfbc6320c5dffa05d7a
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778440"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579512"
 ---
 # <a name="writealltlogs"></a>WriteAllTLogs
-Zapisuje protokoly sledování pro všechna vlákna a kontext.
+Zapisuje protokoly sledování pro všechna vlákna a kontexty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,17 +34,17 @@ HRESULT WINAPI WriteAllTLogs(LPCTSTR intermediateDirectory, LPCTSTR tlogRootName
 #### <a name="parameters"></a>Parametry
 [in] `intermediateDirectory`
 
- Adresáře, ve kterém k uložení protokolu sledování.
+ Adresář, do kterého má být uložen protokol sledování.
 
 [in] `tlogRootName`
 
- Název kořenového názvu souboru protokolu.
+ Název kořenového souboru protokolu
 
 ## <a name="return-value"></a>Návratová hodnota
- **HRESULT** s **SUCCEEDED** sadu bitů, pokud byl vytvořen kontext sledování.
+ Hodnota **HRESULT** s **úspěšně** nastaveným bitem, pokud byl vytvořen sledovací kontext.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *FileTracker.h*
+ **Záhlaví:** *stoper. h*
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [WriteContextTLogs](../msbuild/writecontexttlogs.md)
