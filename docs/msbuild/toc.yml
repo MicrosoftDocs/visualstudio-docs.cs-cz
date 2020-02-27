@@ -1,6 +1,6 @@
 - name: MSBuild
   items:
-    - name: MsBuild
+    - name: MSBuild
       href: msbuild.md
     - name: Novinky ve verzi 16.0 nástroje MSBuild
       href: whats-new-msbuild-16-0.md
@@ -13,11 +13,11 @@
           href: msbuild-concepts.md
         - name: Vlastnosti
           items:
-            - name: Vlastnosti nástroje MSBuild
+            - name: vlastnosti nástroje MSBuild
               href: msbuild-properties.md
             - name: Použití proměnných prostředí v sestavení
               href: how-to-use-environment-variables-in-a-build.md
-            - name: Odkazy na název nebo umístění souboru projektu
+            - name: Odkazování na název nebo umístění souboru projektu
               href: how-to-reference-the-name-or-location-of-the-project-file.md
             - name: "Sestavení stejných zdrojových souborů s\_různými možnostmi"
               href: how-to-build-the-same-source-files-with-different-options.md
@@ -27,7 +27,7 @@
           items:
             - name: Položky nástroje MSBuild
               href: msbuild-items.md
-            - name: Výběr souborů k sestavení
+            - name: Výběr souborů pro sestavení
               href: how-to-select-the-files-to-build.md
             - name: Vyloučení souborů ze sestavení
               href: how-to-exclude-files-from-the-build.md
@@ -35,7 +35,7 @@
               href: how-to-display-an-item-list-separated-with-commas.md
             - name: Definice položek
               href: item-definitions.md
-            - name: Funkce položek
+            - name: funkce položek
               href: item-functions.md
         - name: Cíle
           items:
@@ -49,9 +49,9 @@
               href: how-to-specify-which-target-to-build-first.md
             - name: Použití stejného cíle ve více souborech projektu
               href: how-to-use-the-same-target-in-multiple-project-files.md
-            - name: Sestavování určitých cílů do řešení nástrojem MSBuild.exe
+            - name: "Sestavování specifických cílů v\_řešení pomocí nástroje MSBuild.exe"
               href: how-to-build-specific-targets-in-solutions-by-using-msbuild-exe.md
-            - name: Přírůstkové sestavení
+            - name: Přírůstkové sestavování
               href: how-to-build-incrementally.md
             - name: Vyčištění sestavení
               href: how-to-clean-a-build.md
@@ -59,13 +59,13 @@
               href: how-to-use-project-sdk.md
         - name: Úkoly
           items:
-            - name: Úlohy nástroje MSBuild
+            - name: úlohy nástroje MSBuild
               href: msbuild-tasks.md
             - name: Zápis úloh
               href: task-writing.md
             - name: Ignorování chyb v úlohách
               href: how-to-ignore-errors-in-tasks.md
-            - name: Sestavení projektu s prostředky
+            - name: 'Sestavení projektu, který má prostředky'
               href: how-to-build-a-project-that-has-resources.md
             - name: Vložené úlohy
               items:
@@ -81,11 +81,11 @@
           items:
             - name: Speciální znaky nástroje MSBuild
               href: msbuild-special-characters.md
-            - name: "Zápis speciálních znaků pomocí escape sekvence v\_MSBuildu"
+            - name: "Zápis speciálních znaků pomocí escape sekvence v\_nástroji MSBuild"
               href: how-to-escape-special-characters-in-msbuild.md
             - name: "Použití vyhrazených znaků XML v\_souborech projektu"
               href: how-to-use-reserved-xml-characters-in-project-files.md
-    - name: Rozšířené koncepty
+    - name: Pokročilé koncepty
       items:
         - name: Rozšířené koncepty nástroje MSBuild
           href: msbuild-advanced-concepts.md
@@ -99,11 +99,11 @@
               href: item-metadata-in-target-batching.md
         - name: Transformace nástroje MSBuild
           href: msbuild-transforms.md
-        - name: Integrace sady Visual Studio
+        - name: integrace sady Visual Studio
           items:
             - name: Integrace sady Visual Studio (MSBuild)
               href: visual-studio-integration-msbuild.md
-            - name: Rozšíření procesu sestavení v sadě Visual Studio
+            - name: Rozšíření procesu sestavení sady Visual Studio
               href: how-to-extend-the-visual-studio-build-process.md
             - name: "Spuštění sestavení z\_prostředí IDE"
               href: starting-a-build-from-within-the-ide.md
@@ -244,7 +244,7 @@
         - name: Referenční dokumentace úlohy
           items:
             - name: Přehled
-              displayName: Task Reference
+              displayName: task reference
               href: msbuild-task-reference.md
             - name: Úlohy specifické pro C++
               items:
@@ -269,7 +269,7 @@
                   href: getoutputfilename-task.md
                 - name: LIB – úloha
                   href: lib-task.md
-                - name: Úloha odkazu
+                - name: odkaz – úloha
                   href: link-task.md
                 - name: MIDL – úloha
                   href: midl-task.md
@@ -293,7 +293,7 @@
                   href: xdcmake-task.md
                 - name: XSD – úloha
                   href: xsd-task.md
-            - name: Třída Base úlohy
+            - name: Task – základní třída
               href: task-base-class.md
             - name: TaskExtension – základní třída
               href: taskextension-base-class.md
@@ -331,7 +331,7 @@
               href: csc-task.md
             - name: Delete – úloha
               href: delete-task.md
-            - name: Úloha DownloadFile
+            - name: DownloadFile – úloha
               href: downloadfile-task.md
             - name: Error – úloha
               href: error-task.md
@@ -371,7 +371,7 @@
               href: lc-task.md
             - name: MakeDir – úloha
               href: makedir-task.md
-            - name: Úlohy zpráv
+            - name: úloha zprávy
               href: message-task.md
             - name: Move – úloha
               href: move-task.md
@@ -407,7 +407,7 @@
               href: touch-task.md
             - name: UnregisterAssembly – úloha
               href: unregisterassembly-task.md
-            - name: Úloha Unzip
+            - name: Unzip – úloha
               href: unzip-task.md
             - name: UpdateManifest – úloha
               href: updatemanifest-task.md
@@ -427,7 +427,7 @@
               href: xmlpoke-task.md
             - name: XslTransformation – úloha
               href: xsltransformation-task.md
-            - name: Úloha ZipDirectory
+            - name: ZipDirectory – úloha
               href: zipdirectory-task.md
         - name: Podmínky nástroje MSBuild
           href: msbuild-conditions.md
@@ -441,7 +441,7 @@
           href: common-msbuild-project-items.md
         - name: "Referenční dokumentace pro použití nástroje MSBuild v\_příkazovém řádku"
           href: msbuild-command-line-reference.md
-        - name: MSBuild – soubory .Targets
+        - name: MSBuild – soubory .targets
           href: msbuild-dot-targets-files.md
         - name: Metadata známé položky nástroje MSBuild
           href: msbuild-well-known-item-metadata.md
@@ -450,14 +450,14 @@
         - name: Referenční dokumentace WPF
           items:
             - name: Přehled
-              displayName: WPF MSBuild Reference
+              displayName: WPF MSBuild reference
               href: wpf-msbuild-reference.md
-            - name: WPF – soubory .Targets
+            - name: WPF – soubory .targets
               href: wpf-dot-targets-files.md
             - name: Referenční dokumentace úlohy WPF
               items:
                 - name: Přehled
-                  displayName: WPF MSBuild Task Reference
+                  displayName: WPF MSBuild task reference
                   href: wpf-msbuild-task-reference.md
                 - name: FileClassifier – úloha
                   href: fileclassifier-task.md
@@ -482,7 +482,7 @@
     - name: Programové používání MSBuildu
       items:
         - name: Přehled
-          displayName: Use MSBuild Programmatically
+          displayName: Use MSBuild programmatically
           href: msbuild-api.md
         - name: Aktualizace na MSBuild 15
           href: updating-an-existing-application.md
