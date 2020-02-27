@@ -16,27 +16,30 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bad6ab828af1f62818636b3af11232294256c03
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 831153a734fa88c045f7b8397db0a033e53862c7
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593379"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634484"
 ---
 # <a name="calltarget-task"></a>CallTarget – úloha
+
 Vyvolá zadané cíle v rámci souboru projektu.
 
 ## <a name="task-parameters"></a>Parametry úlohy
+
  Následující tabulka popisuje parametry úlohy `CallTarget`.
 
 | Parametr | Popis |
 |---------------------------| - |
-| `RunEachTargetSeparately` | Volitelný vstupní parametr `Boolean`.<br /><br /> Pokud `true`, modul [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] se pro každý cíl zavolá jednou. Pokud `false`, modul [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] se volá jednou pro sestavení všech cílů. Výchozí hodnota je `false`. |
+| `RunEachTargetSeparately` | Volitelný vstupní parametr `Boolean`.<br /><br /> Pokud `true`, modul MSBuild se pro každý cíl zavolá jednou. Pokud `false`, modul MSBuild se volá jednou pro sestavení všech cílů. Výchozí hodnota je `false`. |
 | `TargetOutputs` | Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Obsahuje výstupy všech sestavených cílů. |
 | `Targets` | Volitelný parametr `String[]`.<br /><br /> Určuje cíl nebo cíle, které se mají sestavit. |
 | `UseResultsCache` | Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, vrátí výsledek uložený v mezipaměti, pokud je k dispozici.<br /><br /> **Poznámka:** Je-li spuštěn úkol MSBuild, jeho výstup je uložen do mezipaměti v oboru (ProjectFileName, GlobalProperties) [Cílový_názevs] jako seznam položek sestavení. |
 
 ## <a name="remarks"></a>Poznámky
+
  Pokud cíl zadaný v `Targets` selhává a `RunEachTargetSeparately` je `true`, úloha pokračuje v sestavování zbývajících cílů.
 
  Pokud chcete sestavit výchozí cíle, použijte [úlohu MSBuild](../msbuild/msbuild-task.md) a nastavte parametr `Projects` na hodnotu `$(MSBuildProjectFile)`.
@@ -44,6 +47,7 @@ Vyvolá zadané cíle v rámci souboru projektu.
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
  Následující příklad volá `TargetA` zevnitř `CallOtherTargets`.
 
 ```xml
@@ -61,6 +65,7 @@ Vyvolá zadané cíle v rámci souboru projektu.
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Cíle](../msbuild/msbuild-targets.md)

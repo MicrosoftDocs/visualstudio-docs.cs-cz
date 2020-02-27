@@ -15,14 +15,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a80fcde7aeab601791c033bd21effce175b2cb9
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: ee30bf031761fa7920dadad04d8f17a1bcc0b3a2
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579562"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631988"
 ---
 # <a name="stoptrackingandcleanup"></a>StopTrackingAndCleanup
+
 Zastaví všechna sledování a uvolní veškerou paměť využívanou relací sledování.
 
 ## <a name="syntax"></a>Syntaxe
@@ -32,10 +33,13 @@ HRESULT WINAPI StopTrackingAndCleanup(void);
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
+
  Vrátí hodnotu **HRESULT** s **úspěšně** nastaveným bitem, pokud bylo sledování zastaveno.
 
 ## <a name="requirements"></a>Požadavky
+
  **Záhlaví:** *stoper. h*
 
 ## <a name="see-also"></a>Viz také
+
 - [StartTrackingContext](../msbuild/starttrackingcontext.md)

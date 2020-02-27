@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 235f96b3d67b0ad2e3c3bd1c486c5c9f2eeb86c2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 90366bab14eefd1be4edac81d6b09b3f57aa3332
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596005"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632781"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates – úloha
+
 Odstraní duplicitní položky ze zadané kolekce položek.
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy `RemoveDuplicates`.
 
 |Parametr|Popis|
@@ -37,11 +39,13 @@ Odstraní duplicitní položky ze zadané kolekce položek.
 |`Inputs`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Kolekce položek, ze které se mají odebrat duplicitní položky|
 
 ## <a name="remarks"></a>Poznámky
+
  U této úlohy se nerozlišují malá a velká písmena a při určování duplicitních hodnot se neshodují metadata položek.
 
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
  Následující příklad používá úlohu `RemoveDuplicates` k odebrání duplicitních položek z kolekce `MyItems` Item. Po dokončení úkolu obsahuje kolekce `FilteredItems` položky jednu položku.
 
 ```xml
@@ -89,7 +93,8 @@ Odstraní duplicitní položky ze zadané kolekce položek.
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

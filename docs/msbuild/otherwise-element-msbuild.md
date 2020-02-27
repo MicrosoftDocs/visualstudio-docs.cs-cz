@@ -18,14 +18,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 460a02b3e2115c7ccb91258ffe960668e64fb363
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 384886ad4292661648f5cbfde1a583d8d75b1c03
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594839"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633041"
 ---
 # <a name="otherwise-element-msbuild"></a>Jinak – element (MSBuild)
+
 Určuje blok kódu, který se má provést, pokud a jenom v případě, že se vyhodnotí podmínky `When`ch prvků `false`.
 
  \<projektu \<> vyberte možnost > \<, když > \<vyberte >... \<jinak > \<zvolit >...
@@ -41,10 +42,12 @@ Určuje blok kódu, který se má provést, pokud a jenom v případě, že se v
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené prvky
 
@@ -61,11 +64,13 @@ Určuje blok kódu, který se má provést, pokud a jenom v případě, že se v
 |[Výběrem](../msbuild/choose-element-msbuild.md)|Vyhodnotí podřízené prvky a vybere jeden oddíl kódu, který se má provést.|
 
 ## <a name="remarks"></a>Poznámky
+
  V elementu `Choose` může být pouze jeden prvek `Otherwise` a musí se jednat o poslední prvek.
 
  Prvky `Choose`, `When`a `Otherwise` slouží společně k tomu, aby poskytovala možnost výběru jedné části kódu pro provedení několika možných alternativ. Další informace naleznete v tématu [podmíněné konstrukce](../msbuild/msbuild-conditional-constructs.md).
 
 ## <a name="example"></a>Příklad
+
  Následující projekt používá prvek `Choose` k výběru sady hodnot vlastností v prvcích `When`, které chcete nastavit. Pokud `Condition` atributy `When` prvků vyhodnoceny jako `false`, jsou nastaveny hodnoty vlastností v elementu `Otherwise`.
 
 ```xml
@@ -113,6 +118,7 @@ Určuje blok kódu, který se má provést, pokud a jenom v případě, že se v
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Podmíněné konstrukce](../msbuild/msbuild-conditional-constructs.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

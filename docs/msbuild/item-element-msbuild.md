@@ -16,17 +16,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 730e7d317ffa3fd5a450978f35659df3fe5629f3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3da51c16645d0c44128b0a5fe1b19053062673c1
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573661"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633691"
 ---
 # <a name="item-element-msbuild"></a>Item – Element (MSBuild)
-Obsahuje uživatelem definovanou položku a její metadata. Každá položka, která je použita v projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], musí být zadána jako podřízená `ItemGroup` elementu.
 
-\<Project> \<ItemGroup> \<Item>
+Obsahuje uživatelem definovanou položku a její metadata. Každá položka, která je použita v projektu MSBuild, musí být zadána jako podřízený prvku `ItemGroup`.
+
+\<projektu > \<položka > \<položka >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,6 +42,7 @@ Obsahuje uživatelem definovanou položku a její metadata. Každá položka, kt
 ```
 
 ## <a name="specify-metadata-as-attributes"></a>Zadat metadata jako atributy
+
 V MSBuild 15,1 nebo novější může být jakákoli metadata s názvem, která nejsou v konfliktu s aktuálním seznamem atributů, volitelně vyjádřena jako atribut.
 
 Například pro určení seznamu balíčků NuGet byste obvykle použili něco podobného jako následující syntaxe.
@@ -62,6 +64,7 @@ Teď ale můžete metadata `Version` předat jako atribut, jako je například v
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -81,7 +84,7 @@ Teď ale můžete metadata `Version` předat jako atribut, jako je například v
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[Itemmetadata](../msbuild/itemmetadata-element-msbuild.md)|Klíč metadat položky definovaný uživatelem, který obsahuje hodnotu metadat položky. V položce může být nula nebo více `ItemMetadata` prvků.|
+|[ItemMetadata –](../msbuild/itemmetadata-element-msbuild.md)|Klíč metadat položky definovaný uživatelem, který obsahuje hodnotu metadat položky. V položce může být nula nebo více `ItemMetadata` prvků.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
@@ -90,13 +93,15 @@ Teď ale můžete metadata `Version` předat jako atribut, jako je například v
 |[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|Seskupení elementu pro položky|
 
 ## <a name="remarks"></a>Poznámky
+
 prvky `Item` definují vstupní hodnoty do systému sestavení a jsou seskupeny do kolekcí položek na základě jejich uživatelsky definovaných názvů kolekcí. Tyto kolekce položek lze použít jako parametry pro [úlohy](../msbuild/msbuild-tasks.md), které používají jednotlivé položky v kolekcích k provedení kroků procesu sestavení. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
 
 Použití notace Notation @ (\<myType >) umožňuje rozšířit kolekci položek typu \<myType > na seznam řetězců oddělených středníkem a předaných do parametru. Pokud je parametr typu `string`, pak hodnota parametru je seznam elementů, které jsou odděleny středníky. Pokud je parametr pole řetězců (`string[]`), pak je každý element vložen do pole na základě umístění středníků. Pokud je parametr úlohy typu <xref:Microsoft.Build.Framework.ITaskItem>`[]`, pak je hodnotou obsah kolekce Items spolu s připojenými metadaty. K vymezení jednotlivých položek pomocí znaku jiného než středníku použijte syntaxi @ (\<myType >, '\<oddělovač > ').
 
-Modul [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] může vyhodnotit zástupné znaky, například `*` a `?` a rekurzivní zástupné znaky, například */\*\*/\*. cs*. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
+Modul MSBuild může vyhodnotit zástupné znaky, například `*` a `?` a rekurzivní zástupné znaky, jako je například */\*\*/\*. cs*. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
 
 ## <a name="examples"></a>Příklady
+
 Následující příklad kódu ukazuje, jak deklarovat dvě položky typu `CSFile`. Druhá deklarovaná položka obsahuje metadata, která mají `MyMetadata` nastavená na `HelloWorld`.
 
 ```xml
@@ -118,7 +123,8 @@ Následující příklad kódu ukazuje, jak použít atribut `Update` pro úprav
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Položky](../msbuild/msbuild-items.md)
 - [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md)
 - [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)

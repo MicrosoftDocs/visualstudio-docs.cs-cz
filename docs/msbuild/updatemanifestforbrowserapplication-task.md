@@ -18,15 +18,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a78add284a5cea966d1176645649eed19017addd
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 079eecd6751f168a7beba32eda6d15eda712bd7f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579543"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631325"
 ---
 # <a name="updatemanifestforbrowserapplication-task"></a>UpdateManifestForBrowserApplication task
-Úloha <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> je spuštěna za účelem přidání prvku **\<HostInBrowser/>** do manifestu aplikace ( *\<ProjectName >. exe. manifest*) při sestavení projektu [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)].
+
+Úloha <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> je spuštěna za účelem přidání prvku **\<HostInBrowser/>** do manifestu aplikace ( *\<ProjectName >. exe. manifest*) při sestavení projektu aplikace prohlížeče XAML (XBAP).
 
 ## <a name="task-parameters"></a>Parametry úlohy
 
@@ -36,7 +37,8 @@ ms.locfileid: "77579543"
 |`HostInBrowser`|Požadovaný **logický** parametr.<br /><br /> Určuje, zda se má změnit manifest aplikace tak, aby zahrnoval prvek **\<HostInBrowser/>** . Je-li **nastavena hodnota true**, je v prvku **\<EntryPoint/>** obsažen nový prvek **\<HostInBrowser/>** . Zahrnutí elementu je kumulativní: Pokud **\<prvek HostInBrowser/>** již existuje, není odebrán ani přepsán. Místo toho je vytvořen další **\<prvek HostInBrowser/>** . Pokud má **hodnotu false**, manifest aplikace se nezmění.|
 
 ## <a name="remarks"></a>Poznámky
- [!INCLUDE[TLA2#tla_xbap#plural](../msbuild/includes/tla2sharptla_xbapsharpplural_md.md)] se spouští pomocí nasazení [!INCLUDE[TLA#tla_clickonce](../msbuild/includes/tlasharptla_clickonce_md.md)], takže je nutné je publikovat s podpůrnými manifesty nasazení a aplikací. [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] používá úlohu [GenerateApplicationManifest –](generateapplicationmanifest-task.md) k vygenerování manifestu aplikace.
+
+ Aplikace XBAP jsou spouštěny pomocí nasazení ClickOnce, takže je nutné je publikovat s podpůrnými manifesty nasazení a aplikací. Nástroj MSBuild používá úlohu [GenerateApplicationManifest –](generateapplicationmanifest-task.md) k vygenerování manifestu aplikace.
 
  Chcete-li nakonfigurovat aplikaci, aby byla hostována z prohlížeče, je nutné do manifestu aplikace přidat další **\<prvek HostInBrowser/>** , jak je znázorněno v následujícím příkladu:
 
@@ -54,9 +56,10 @@ ms.locfileid: "77579543"
 />
 ```
 
- Úkol <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> je spuštěn při sestavení [!INCLUDE[TLA2#tla_xbap](../msbuild/includes/tla2sharptla_xbap_md.md)] projektu, aby bylo možné přidat prvek `<hostInBrowser />`.
+ Úkol <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> se spustí, když je sestaven projekt XBAP, aby bylo možné přidat prvek `<hostInBrowser />`.
 
 ## <a name="example"></a>Příklad
+
  Následující příklad ukazuje, jak zajistit, aby byl prvek `<hostInBrowser />` zahrnutý v souboru manifestu aplikace.
 
 ```xml
@@ -73,6 +76,7 @@ ms.locfileid: "77579543"
 ```
 
 ## <a name="see-also"></a>Viz také
+
 - [Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)
 - [Odkaz na úkol](../msbuild/wpf-msbuild-task-reference.md)
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d94d6ab4840163e8379e53da435a97a69381aed
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: caefe0887ca23cd4cee60c3a4ba2a6133e9893df
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578470"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632768"
 ---
 # <a name="requiresframework35sp1assembly-task"></a>RequiresFramework35SP1Assembly – úloha
+
 Určuje, jestli aplikace vyžaduje .NET Framework 3,5 SP1.
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy `RequiresFramework35SP1Assembly`.
 
 |Parametr|Popis|
@@ -44,8 +46,10 @@ Určuje, jestli aplikace vyžaduje .NET Framework 3,5 SP1.
 |`TargetFrameworkVersion`|Volitelný parametr `String`.<br /><br /> Určuje verzi .NET Framework, na kterou se tato aplikace zaměřuje.|
 
 ## <a name="remarks"></a>Poznámky
+
  Kromě toho, že mají parametry, které jsou uvedeny v tabulce, tato úloha dědí parametry z třídy <xref:Microsoft.Build.Tasks.TaskExtension>, kterou sám dědí z třídy <xref:Microsoft.Build.Utilities.Task>. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

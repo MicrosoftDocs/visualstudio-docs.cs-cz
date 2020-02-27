@@ -26,17 +26,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 44b51617aa28f02763cc513a4619b3bd3b041cc5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7a43975244eaf064c9ed7608fa41c16854ca140f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592149"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633470"
 ---
 # <a name="midl-task"></a>MIDL – úloha
+
 Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *MIDL. exe*. Další informace naleznete v tématu [Reference k příkazovému řádku MIDL](/windows/desktop/Midl/midl-command-line-reference).
 
 ## <a name="parameters"></a>Parametry
+
  Následující popis popisuje parametry úlohy **MIDL** . Většina parametrů úlohy a několik sad parametrů odpovídá možnosti příkazového řádku.
 
 - **AdditionalIncludeDirectories**
@@ -91,7 +93,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *M
     |-----------|--------------------------|
     |**Podpisy**|**/char podepsané**|
     |**Celé**|**/char bez znaménka**|
-    |**Ascii**|**/char ascii7**|
+    |**Abecední**|**/char ascii7**|
 
      Další informace naleznete v tématu možnost **/char** v [Referenční příručce příkazového řádku MIDL](/windows/desktop/Midl/midl-command-line-reference).
 
@@ -113,9 +115,9 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *M
 
     |Hodnota|Možnost příkazového řádku|
     |-----------|--------------------------|
-    |**Žádné**|**/Error None**|
+    |**NTato**|**/Error None**|
     |**EnableCustom**|**/Error**|
-    |**Vše**|**/Error All**|
+    |**Všechny**|**/Error All**|
 
      Další informace naleznete v tématu možnost **/Error** v [referenci příkazového řádku MIDL](/windows/desktop/Midl/midl-command-line-reference).
 
@@ -169,7 +171,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *M
 
     |Hodnota|Možnost příkazového řádku|
     |-----------|--------------------------|
-    |**Žádné**|**/Client žádné**|
+    |**NTato**|**/Client žádné**|
     |**Metrik**|**/Client zástupná procedura**|
 
      Další informace naleznete v tématu možnost **/Client** v [Referenční příručce příkazového řádku MIDL](/windows/desktop/Midl/midl-command-line-reference).
@@ -184,7 +186,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *M
 
     |Hodnota|Možnost příkazového řádku|
     |-----------|--------------------------|
-    |**Žádné**|**/Server žádné**|
+    |**NTato**|**/Server žádné**|
     |**Metrik**|**/Server – zástupná procedura**|
 
      Další informace naleznete v části **/Server** v tématu [Reference k příkazovému řádku MIDL](/windows/desktop/Midl/midl-command-line-reference).
@@ -305,7 +307,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *M
     |**1**|**/Zp1**|
     |**2**|**/Zp2**|
     |**4**|**/Zp4**|
-    |**8**|**/Zp8**|
+    |**8**|**/ZP8**|
 
      Další informace naleznete v tématu možnost **/zp** v [Referenční příručce příkazového řádku MIDL](/windows/desktop/Midl/midl-command-line-reference). Možnost **/zp** je ekvivalentní možnosti **/Pack** a starší možnosti **/align** .
 
@@ -336,9 +338,9 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *M
     |Hodnota|Možnost příkazového řádku|
     |-----------|--------------------------|
     |**NotSet**|*\<žádné >*|
-    |**Win32**|**/ENV Win32**|
+    |**Chyb**|**/ENV Win32**|
     |**Procesor**|**/ENV ia64**|
-    |**X64**|**/env x64**|
+    |**Platformě**|**/ENV x64**|
 
      Další informace naleznete v tématu možnost **/ENV** v [Referenční příručce příkazového řádku MIDL](/windows/desktop/Midl/midl-command-line-reference).
 
@@ -363,7 +365,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *M
 
      Další informace naleznete v tématu možnosti **/newtlb** a **/oldtlb** v článku [Referenční příručka příkazového řádku MIDL](/windows/desktop/Midl/midl-command-line-reference).
 
-- **TypeLibraryName**
+- **Názevknihovnytypů**
 
      Volitelný **řetězcový** parametr.
 
@@ -387,7 +389,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *M
 
      Další informace naleznete v možnostech **/Robust** a **/no_robust** v tématu [Reference k příkazovému řádku MIDL](/windows/desktop/Midl/midl-command-line-reference).
 
-- **WarnAsError**
+- **Warnaserror –**
 
      Volitelný parametr `Boolean`.
 
@@ -415,5 +417,6 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *M
 
      Další informace naleznete v tématu možnost **/w** v [referenci příkazového řádku MIDL](/windows/desktop/Midl/midl-command-line-reference). Viz také parametr **warnaserror –** v této tabulce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

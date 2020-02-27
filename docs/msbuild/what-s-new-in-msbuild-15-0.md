@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2017'
-ms.openlocfilehash: 49e248ee0e5537ae54957695ca698b041fc1ce8b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2503040e074a62422d4c7c904f5ad3a2bd84d6c1
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75567277"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631026"
 ---
 # <a name="whats-new-in-msbuild-15"></a>Co je nového v nástroji MSBuild 15
 
@@ -39,6 +39,7 @@ Nástroj MSBuild je nyní k dispozici jako součást [.NET Core SDK](https://www
 - Vlastnosti `SDK35ToolsPath` a `SDK40ToolsPath` odkazují na sadu .NET Framework SDK, která je zabalena s touto verzí sady Visual Studio (například 10.0 A pro nástroje 4. X).
 
 ## <a name="updates"></a>Aktualizace
+
 - [Prvek projektu](../msbuild/project-element-msbuild.md) má nový atribut `SDK`. Také atribut `Xmlns` je nyní volitelný. Další informace o atributu `SDK` naleznete v tématu [How to: use MSBuild Project SDK](../msbuild/how-to-use-project-sdk.md), [Packages, metabalíčky a](/dotnet/core/packages) Builds and dodaný [Formát csproj pro .NET Core](/dotnet/core/tools/csproj).
 - [Element Item](../msbuild/item-element-msbuild.md) mimo cíle má nový atribut `Update`. Také omezení u atributu `Remove` bylo eliminováno.
 - *Directory. Build. props* je uživatelsky definovaný soubor, který poskytuje přizpůsobení projektům v adresáři. Tento soubor je automaticky importován z *aplikace Microsoft. Common. props* , pokud vlastnost `ImportDirectoryBuildTargets` není nastavena na **hodnotu false**. *Directory. Build. targets* se importují pomocí *Microsoft. Common. targets*.
@@ -49,7 +50,8 @@ Nástroj MSBuild je nyní k dispozici jako součást [.NET Core SDK](https://www
 - `EnsureTrailingSlash` přidá koncové lomítko k cestě, pokud ještě neexistuje.
 - `NormalizePath` kombinuje prvky cesty a zajistí, že výstupní řetězec má pro aktuální operační systém správné znaky oddělovače adresáře.
 - `NormalizeDirectory` kombinuje prvky cesty, zajišťuje koncové lomítko a zajistí, že výstupní řetězec má pro aktuální operační systém správné znaky oddělovače adresáře.
-- `GetPathOfFileAbove` vrátí cestu k souboru bezprostředně před tímto souborem. Je funkčně odpovídá volání `<Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />`
+- `GetPathOfFileAbove` vrátí cestu k souboru bezprostředně před tímto souborem. Je funkčně ekvivalentní volání `<Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [MSBuild](../msbuild/msbuild.md)

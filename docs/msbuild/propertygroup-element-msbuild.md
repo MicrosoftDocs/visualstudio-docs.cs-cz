@@ -18,17 +18,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f7497578b977b66c83a8b5f9f37f03743f864bcd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b94cf266be81b81aca9c83fe8d29b9777ee9114b
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597370"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632924"
 ---
 # <a name="propertygroup-element-msbuild"></a>Property – element (MSBuild)
-Obsahuje sadu uživatelsky definovaných prvků [vlastností](../msbuild/property-element-msbuild.md) . Každý prvek `Property` použitý v projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] musí být podřízeným prvkem `PropertyGroup` elementu.
 
- \<Project> \<PropertyGroup>
+Obsahuje sadu uživatelsky definovaných prvků [vlastností](../msbuild/property-element-msbuild.md) . Každý prvek `Property` použitý v projektu MSBuild musí být podřízeným prvkem `PropertyGroup` elementu.
+
+ \<> projektu \<vlastnost >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,6 +41,7 @@ Obsahuje sadu uživatelsky definovaných prvků [vlastností](../msbuild/propert
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -58,9 +60,10 @@ Obsahuje sadu uživatelsky definovaných prvků [vlastností](../msbuild/propert
 
 | Prvek | Popis |
 | - | - |
-| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| [Projektem](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
 
 ## <a name="example"></a>Příklad
+
  Následující příklad kódu ukazuje, jak nastavit vlastnosti na základě podmínky. V tomto příkladu, pokud je hodnota vlastnosti `CompileConfig` `DEBUG`, jsou nastaveny vlastnosti `Optimization`, `Obfuscate`a `OutputPath` uvnitř prvku `PropertyGroup`.
 
 ```xml
@@ -71,6 +74,7 @@ Obsahuje sadu uživatelsky definovaných prvků [vlastností](../msbuild/propert
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)

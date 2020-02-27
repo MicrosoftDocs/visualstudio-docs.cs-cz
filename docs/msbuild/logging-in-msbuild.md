@@ -10,20 +10,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24a769f6d0b9aa847899c02c951921dc77bac21a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a66164426b760798571fc35e5288158a8dae9943
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592188"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633548"
 ---
 # <a name="logging-in-msbuild"></a>Protokolování v nástroji MSBuild
+
 Protokolování poskytuje způsob, jak můžete monitorovat průběh sestavení. Protokolování zachycuje události, zprávy, upozornění a chyby sestavení v souboru protokolu.
 
 ## <a name="in-this-section"></a>V tomto oddílu
+
 - [Získat protokoly sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)
 
- Popisuje různé aspekty přihlášení [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].
+ Popisuje různé aspekty protokolování v nástroji MSBuild.
 
 - [Protokolovací nástroje sestavení](../msbuild/build-loggers.md)
 
@@ -41,5 +43,6 @@ Protokolování poskytuje způsob, jak můžete monitorovat průběh sestavení.
 
  Popisuje způsob vytváření vlastních protokolovacích nástrojů pro přesměrování.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Paralelní sestavení více projektů](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md) Popisuje, jak vytvořit více projektů rychleji spuštěním paralelně.

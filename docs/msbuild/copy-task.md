@@ -21,17 +21,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31ec191345e1a232e79a2eea21563bf41e5d555c
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.openlocfilehash: 28fd0033f5ef6f83ca29432f95d6b635fcd36116
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558162"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634367"
 ---
 # <a name="copy-task"></a>Copy – úloha
+
 Zkopíruje soubory do nového umístění v systému souborů.
 
 ## <a name="parameters"></a>Parametry
+
 Následující tabulka popisuje parametry úlohy `Copy`.
 
 |Parametr|Popis|
@@ -47,6 +49,7 @@ Následující tabulka popisuje parametry úlohy `Copy`.
 |`UseHardlinksIfPossible`|Volitelný parametr `Boolean`.<br /><br /> Je-li hodnota `true`, pak namísto kopírování souborů vytvoří pevné odkazy na zkopírované soubory.|
 
 ## <a name="warnings"></a>Upozornění
+
 Jsou protokolována upozornění, včetně:
 
 - `Copy.DestinationIsDirectory`
@@ -66,11 +69,13 @@ Jsou protokolována upozornění, včetně:
 - `Copy.RemovingReadOnlyAttribute`
 
 ## <a name="remarks"></a>Poznámky
+
 Je nutné zadat buď parametr `DestinationFolder`, nebo `DestinationFiles`, nikoli však oba. Jsou-li zadány oba parametry, úloha se nezdaří a je zaznamenána chyba.
 
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
 Následující příklad zkopíruje položky v kolekci `MySourceFiles` Item do složky *c:\MyProject\Destination*.
 
 ```xml
@@ -91,6 +96,7 @@ Následující příklad zkopíruje položky v kolekci `MySourceFiles` Item do s
 ```
 
 ## <a name="example"></a>Příklad
+
 Následující příklad znázorňuje postup rekurzivního kopírování. Tento projekt kopíruje všechny soubory rekurzivně z *c:\MySourceTree* do *c:\MyDestinationTree*a přitom udržuje adresářovou strukturu.
 
 ```xml
@@ -111,5 +117,6 @@ Následující příklad znázorňuje postup rekurzivního kopírování. Tento 
 ```
 
 ## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

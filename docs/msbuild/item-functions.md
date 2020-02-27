@@ -10,17 +10,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 65ca003375e54248852f5942bd2b5f62fe21a06c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: af4fb872206611ea5eb1aa93b7aa759615b56e41
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573791"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633678"
 ---
 # <a name="item-functions"></a>funkce položek
-Počínaje nástrojem MSBuild 4,0 může kód v úlohách a cílech volat funkce položek a získat informace o položkách v projektu. Tyto funkce zjednodušují získání jedinečných položek () a jsou rychlejší než přechází mezi položkami.
+
+Kód v úlohách a cílech může volat funkce položek pro získání informací o položkách projektu (v MSBuild 4,0 a novějším). Tyto funkce zjednodušují získání jedinečných položek a jsou rychlejší než procházení položek prostřednictvím smyčky.
 
 ## <a name="string-item-functions"></a>Funkce položky řetězce
+
 Můžete použít metody a vlastnosti řetězce v .NET Framework k provozování libovolné hodnoty položky. Pro <xref:System.String> metody zadejte název metody. Pro <xref:System.String> vlastnosti zadejte název vlastnosti za "get_".
 
 Pro položky, které mají více řetězců, je řetězcová metoda nebo vlastnost spuštěna na každém řetězci.
@@ -49,6 +51,7 @@ Následující příklad ukazuje, jak použít tyto funkce řetězcové položky
 ```
 
 ## <a name="intrinsic-item-functions"></a>Funkce vnitřních položek
+
 Následující tabulka uvádí vnitřní funkce dostupné pro položky.
 
 |Funkce|Příklad|Popis|
@@ -99,5 +102,6 @@ Následující příklad ukazuje, jak používat funkce vnitřních položek.
   -->
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Položky](../msbuild/msbuild-items.md)

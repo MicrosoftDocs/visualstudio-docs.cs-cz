@@ -17,14 +17,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd533507e1c498ae315529bd8ab17dd175b7f836
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 46ed1b1f94cd2ef23ff0704912cb2a2194ba7dab
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579679"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634185"
 ---
 # <a name="fileclassifier-task"></a>Úloha klasifikátoru
+
 <xref:Microsoft.Build.Tasks.Windows.FileClassifier> úloha klasifikuje sadu zdrojových prostředků jako ty, které budou vloženy do sestavení. Pokud prostředek nelze lokalizovat, je vložen do hlavního sestavení aplikace; v opačném případě je vložen do satelitního sestavení.
 
 ## <a name="task-parameters"></a>Parametry úlohy
@@ -41,9 +42,11 @@ ms.locfileid: "77579679"
 |`SourceFiles`|Povinný parametr **ITaskItem []** .<br /><br /> Určuje seznam souborů, které mají být klasifikovány.|
 
 ## <a name="remarks"></a>Poznámky
+
 Pokud parametr **jazykové verze** není nastaven, všechny prostředky, které jsou zadány pomocí parametru **SourceFiles** , jsou nelokalizovatelné; v opačném případě jsou lokalizovatelné, pokud nejsou přidruženy k **lokalizovatelnýmu** atributu, který je nastaven na **hodnotu false**.
 
 ## <a name="example"></a>Příklad
+
 Následující příklad klasifikuje jeden zdrojový soubor jako prostředek a pak jej vloží do satelitního sestavení pro jazykovou verzi, která je ve francouzštině kanadská (fr-CA).
 
 ```xml
@@ -64,6 +67,7 @@ Následující příklad klasifikuje jeden zdrojový soubor jako prostředek a p
 ```
 
 ## <a name="see-also"></a>Viz také
+
 - [Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)
 - [Odkaz na úkol](../msbuild/wpf-msbuild-task-reference.md)
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

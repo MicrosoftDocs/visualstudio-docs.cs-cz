@@ -15,24 +15,25 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89f7d8465b2078d4c0c1ce86894edb834581596d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6393e771f9e9ed862d21397dabacdb3f3808c386
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593821"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633145"
 ---
 # <a name="msbuild-tasks-specific-to-c"></a>Úlohy nástroje MSBuild specifické proC++
-Úlohy poskytují kód, který se spouští během procesu sestavení. Při C++ instalaci nástroje jsou k dispozici následující úkoly kromě těch, které jsou nainstalovány s [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Další informace naleznete v tématu [Přehled nástrojeC++MSBuild ()](/cpp/build/msbuild-visual-cpp-overview).
+
+Úlohy poskytují kód, který se spouští během procesu sestavení. Při C++ instalaci nástroje jsou k dispozici následující úkoly kromě těch, které jsou nainstalovány s nástrojem MSBuild. Další informace naleznete v tématu [Přehled nástrojeC++MSBuild ()](/cpp/build/msbuild-visual-cpp-overview).
 
  Kromě parametrů pro každý úkol má každý úkol také následující parametry.
 
 | Parametr | Popis |
 |-------------------| - |
-| `Condition` | Volitelný parametr `String`.<br /><br /> Výraz `Boolean`, který modul [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] používá k určení, zda bude tato úloha provedena. Informace o podmínkách podporovaných nástrojem [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]najdete v tématu [podmínky](../msbuild/msbuild-conditions.md). |
+| `Condition` | Volitelný parametr `String`.<br /><br /> Výraz `Boolean`, který modul MSBuild používá k určení, zda bude tato úloha spuštěna. Informace o podmínkách podporovaných nástrojem MSBuild naleznete v tématu [podmínky](../msbuild/msbuild-conditions.md). |
 | `ContinueOnError` | Volitelný parametr. Může obsahovat jednu z následujících hodnot:<br /><br /> -   **WarnAndContinue** nebo **true**. Pokud se úloha nezdařila, následné úkoly v [cílovém](../msbuild/target-element-msbuild.md) elementu a sestavení se budou spouštět i nadále a všechny chyby z tohoto úkolu jsou považovány za upozornění.<br />-   **ErrorAndContinue**. Pokud se úloha nezdařila, následné úkoly v prvku `Target` a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za chyby.<br />-   **ErrorAndStop** nebo **false** (výchozí). Pokud se úloha nezdařila, zbývající úkoly v prvku`Target` a sestavení nebudou provedeny a celý `Target` prvek a sestavení jsou považovány za neúspěšné.<br /><br /> Verze .NET Framework před 4,5 podporují pouze hodnoty `true` a `false`.<br /><br /> Další informace najdete v tématu [Postupy: ignorování chyb v úlohách](../msbuild/how-to-ignore-errors-in-tasks.md). |
 
-### <a name="related-topics"></a>Příbuzná témata
+### <a name="related-topics"></a>Související témata
 
 |Název|Popis|
 |-----------|-----------------|

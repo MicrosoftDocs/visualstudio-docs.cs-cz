@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 86525b2c4ddcf36ca85feee31f89f0003f1f9775
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8cea0ca4e6562ccc626bf52ad74dfa75b4f118f9
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590823"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633600"
 ---
 # <a name="lc-task"></a>LC – úloha
+
 Zabalí *LC. exe*, který generuje soubor *. License* ze souboru *. licx* . Další informace o *LC. exe*najdete v tématu [LC. exe (kompilátor licencí)](/dotnet/framework/tools/lc-exe-license-compiler).
 
 ## <a name="parameters"></a>Parametry
+
 Následující tabulka popisuje parametry pro úlohu `LC`.
 
 |Parametr|Popis|
@@ -44,6 +46,7 @@ Následující tabulka popisuje parametry pro úlohu `LC`.
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.ToolTaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.ToolTask> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [ToolTaskExtension – Base Class](../msbuild/tooltaskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
 Následující příklad používá úlohu `LC` ke kompilaci licencí.
 
 ```xml
@@ -66,6 +69,7 @@ Následující příklad používá úlohu `LC` ke kompilaci licencí.
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

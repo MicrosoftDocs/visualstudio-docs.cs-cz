@@ -12,20 +12,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a9ad869fc091035de711ec59e20d10fd0af5e21b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0566078c7f90faf204c35024e2c308b5ef881c01
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75574610"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633808"
 ---
 # <a name="how-to-select-the-files-to-build"></a>Postupy: výběr souborů k sestavení
+
 Když sestavíte projekt, který obsahuje několik souborů, můžete každý soubor vytvořit samostatně v souboru projektu nebo můžete použít zástupné znaky k zahrnutí všech souborů do jednoho adresáře nebo do vnořené sady adresářů.
 
 ## <a name="specify-inputs"></a>Zadat vstupy
+
 Položky reprezentují vstupy pro sestavení. Další informace o položkách naleznete v tématu [Items](../msbuild/msbuild-items.md).
 
-Chcete-li zahrnout soubory pro sestavení, musí být obsaženy v seznamu položek v souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Do seznamů položek lze přidat více souborů buď jednotlivě, nebo pomocí zástupných znaků pro zahrnutí mnoha souborů najednou.
+Chcete-li zahrnout soubory pro sestavení, musí být obsaženy v seznamu položek v souboru projektu MSBuild. Do seznamů položek lze přidat více souborů buď jednotlivě, nebo pomocí zástupných znaků pro zahrnutí mnoha souborů najednou.
 
 #### <a name="to-declare-items-individually"></a>Deklarace položek jednotlivě
 
@@ -51,6 +53,7 @@ Chcete-li zahrnout soubory pro sestavení, musí být obsaženy v seznamu polož
     `<VBFile Include="form1.vb;form2.vb"/>`
 
 ## <a name="specify-inputs-with-wildcards"></a>Zadat vstupy se zástupnými znaky
+
 Můžete také použít zástupné znaky k rekurzivnímu zahrnutí všech souborů nebo pouze konkrétních souborů z podadresářů jako vstupů pro sestavení. Další informace o zástupných znacích najdete v tématu [položky](../msbuild/msbuild-items.md) .
 
 Následující příklady jsou založeny na projektu, který obsahuje grafické soubory v následujících adresářích a podadresářích, se souborem projektu umístěným v adresáři *projektu* :
@@ -84,6 +87,7 @@ Následující příklady jsou založeny na projektu, který obsahuje grafické 
     `Include="Images\**\*jpgs\*"`
 
 ## <a name="pass-items-to-a-task"></a>Předání položek úkolu
+
 V souboru projektu můžete použít notaci @ () v úlohách k určení celého seznamu položek jako vstupu pro sestavení. Tento zápis můžete použít, pokud chcete zobrazit seznam všech souborů samostatně, nebo použít zástupné znaky.
 
 #### <a name="to-use-all-visual-c-or-visual-basic-files-as-inputs"></a>Použití všech souborů vizuálů C# nebo Visual Basic jako vstupů
@@ -97,11 +101,12 @@ V souboru projektu můžete použít notaci @ () v úlohách k určení celého 
     `<VBC Sources="@(VBFile)">...</VBC>`
 
 > [!NOTE]
-> Chcete-li určit vstupy pro sestavení, je nutné použít zástupné znaky s položkami. vstupy nemůžete zadat pomocí atributu `Sources` v [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] úlohách, jako je [CSC](../msbuild/csc-task.md) nebo [Vbc](../msbuild/vbc-task.md). Následující příklad není platný v souboru projektu:
+> Chcete-li určit vstupy pro sestavení, je nutné použít zástupné znaky s položkami. vstupy nemůžete zadat pomocí atributu `Sources` v úlohách MSBuild, jako je [CSC](../msbuild/csc-task.md) nebo [Vbc](../msbuild/vbc-task.md). Následující příklad není platný v souboru projektu:
 >
 > `<CSC Sources="*.cs">...</CSC>`
 
 ## <a name="example"></a>Příklad
+
 Následující příklad kódu ukazuje projekt, který obsahuje všechny vstupní soubory samostatně.
 
 ```xml
@@ -136,6 +141,7 @@ Následující příklad kódu ukazuje projekt, který obsahuje všechny vstupn�
 ```
 
 ## <a name="example"></a>Příklad
+
 Následující příklad kódu používá zástupný znak pro zahrnutí všech souborů *. cs* .
 
 ```xml
@@ -169,6 +175,7 @@ Následující příklad kódu používá zástupný znak pro zahrnutí všech s
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Postupy: vyloučení souborů ze sestavení](../msbuild/how-to-exclude-files-from-the-build.md)
 - [Položky](../msbuild/msbuild-items.md)

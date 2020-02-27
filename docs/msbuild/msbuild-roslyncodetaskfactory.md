@@ -10,20 +10,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb91ffd6ad626a148c3f3ad71c307fc0d0df2c75
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ead738042b15c955aadb458c527253f3759b934e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585896"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633223"
 ---
 # <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>Vložené úlohy nástroje MSBuild s RoslynCodeTaskFactory
+
 Podobně jako [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md), RoslynCodeTaskFactory využívá kompilátory Roslyn pro různé platformy ke generování sestavení úloh v paměti pro použití jako vložené úkoly.  RoslynCodeTaskFactory úkoly cílí na .NET Standard a můžou pracovat na modulech runtime .NET Framework a .NET Core i na jiných platformách, jako je Linux a Mac OS.
 
 >[!NOTE]
 >RoslynCodeTaskFactory je k dispozici pouze v MSBuild 15,8 a vyšších.
 
 ## <a name="the-structure-of-an-inline-task-with-roslyncodetaskfactory"></a>Struktura vložené úlohy pomocí RoslynCodeTaskFactory
+
  Vložené úkoly RoslynCodeTaskFactory jsou deklarovány stejným způsobem jako [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md), jediným rozdílem, že cílí na .NET Standard.  Vložená úloha a prvek `UsingTask`, který obsahuje, jsou obvykle zahrnuty do souboru *. targets* a importovány do jiných souborů projektu podle potřeby. Zde je základní vložená úloha. Všimněte si, že nedělá nic.
 
 ```xml
@@ -68,6 +70,7 @@ prvky `Reference` a `Using` jsou nezávislá jazyka. Vložené úkoly lze zapsat
 > Prvky, které jsou obsaženy v prvku `Task`, jsou specifické pro objekt pro vytváření úloh, v tomto případě objekt pro vytváření úloh kódu.
 
 ### <a name="code-element"></a>Element kódu
+
 Poslední podřízený element, který se má zobrazit v prvku `Task` je `Code` element. Element `Code` obsahuje nebo vyhledá kód, který chcete zkompilovat do úlohy. Co vložíte do prvku `Code` závisí na tom, jak chcete vytvořit úlohu.
 
 Atribut `Language` určuje jazyk, ve kterém je kód napsán. Přijatelné hodnoty jsou `cs` pro C#`vb` Visual Basic.
@@ -88,6 +91,7 @@ Alternativně můžete použít atribut `Source` elementu `Code` k určení umí
 > Při definování třídy Task ve zdrojovém souboru musí souhlasit název třídy s atributem `TaskName` odpovídajícího elementu [UsingTask](../msbuild/usingtask-element-msbuild.md) .
 
 ## <a name="hello-world"></a>Hello World
+
  Tady je robustnější vložená úloha s RoslynCodeTaskFactory. V úloze HelloWorld se zobrazí text Hello, World! na výchozím zařízení pro protokolování chyb, což je obvykle systémová konzola nebo okno **výstup** sady Visual Studio. Element `Reference` v příkladu je zahrnut pouze pro ilustraci.
 
 ```xml
@@ -125,6 +129,7 @@ Můžete uložit úlohu HelloWorld v souboru s názvem *HelloWorld. targets*a po
 ```
 
 ## <a name="input-and-output-parameters"></a>Vstupní a výstupní parametry
+
  Vložené parametry úlohy jsou podřízené prvky `ParameterGroup`ho prvku. Každý parametr přebírá název elementu, který ho definuje. Následující kód definuje parametr `Text`.
 
 ```xml
@@ -141,7 +146,7 @@ Parametry mohou mít jeden nebo více z těchto atributů:
 
 - `Output` je volitelný atribut, který je ve výchozím nastavení `false`. Pokud `true`, musí být parametru předána hodnota před návratem z metody Execute.
 
-Například
+Například:
 
 ```xml
 <ParameterGroup>
@@ -162,6 +167,7 @@ definuje tyto tři parametry:
 Pokud má element `Code` `Type` atribut `Fragment` nebo `Method`, jsou automaticky vytvořeny vlastnosti pro každý parametr. V opačném případě musí být vlastnosti explicitně deklarovány ve zdrojovém kódu úlohy a musí přesně odpovídat definicím parametrů.
 
 ## <a name="example"></a>Příklad
+
  Následující vložený úkol zapíše zprávy do protokolu a vrátí řetězec.
 
 ```xml
@@ -253,6 +259,7 @@ Tyto vložené úlohy můžou kombinovat cesty a získat název souboru.
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Návod: Vytvoření vložené úlohy](../msbuild/walkthrough-creating-an-inline-task.md)

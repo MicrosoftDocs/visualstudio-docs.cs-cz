@@ -11,14 +11,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d5c40af3e60add88948f8f1c5c36abf3b980eca
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: 70ce19a6dcd9c61b0e14d0d88c52072f59f87fb9
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77271173"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631156"
 ---
 # <a name="walkthrough-create-an-inline-task"></a>Návod: Vytvoření vložené úlohy
+
 Úlohy nástroje MSBuild jsou obvykle vytvořeny kompilací třídy, která implementuje rozhraní <xref:Microsoft.Build.Framework.ITask>. Počínaje verzí .NET Framework 4 můžete vytvořit úlohy vložené do souboru projektu. Pro hostování úlohy není nutné vytvářet samostatné sestavení. Další informace najdete v tématu [vložené úkoly](../msbuild/msbuild-inline-tasks.md).
 
  Tento návod ukazuje, jak vytvořit a spustit tyto vložené úkoly:
@@ -40,13 +41,12 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
 3. Pomocí **okna příkazového řádku** Sestavte projekt a prověřte výsledky.
 
 ## <a name="create-and-modify-an-msbuild-project"></a>Vytvoření a úprava projektu MSBuild
+
  Systém projektu sady Visual Studio je založen na nástroji MSBuild. Proto můžete vytvořit soubor projektu sestavení pomocí sady Visual Studio. V této části vytvoříte soubor projektu Visual C# . (Místo toho můžete vytvořit soubor projektu Visual Basic. V kontextu tohoto kurzu je rozdíl mezi dvěma soubory projektu nepatrný.)
 
 #### <a name="to-create-and-modify-a-project-file"></a>Vytvoření a úprava souboru projektu
 
-1. V aplikaci Visual Studio v nabídce **soubor** klikněte na položku **Nový** a poté klikněte na možnost **projekt**.
-
-2. V dialogovém okně **Nový projekt** vyberte  **C# typ projektu a** pak vyberte šablonu **aplikace model Windows Forms** . Do pole **Název** zadejte `InlineTasks`. Zadejte **umístění** pro řešení, například *D:\\* . Ujistěte se, že je vybraná možnost **vytvořit adresář pro řešení** , je zrušené **přidání do správy zdrojového kódu** a **název řešení** je **InlineTasks**.
+1. V aplikaci Visual Studio vytvořte nový projekt pomocí C# šablony **aplikace model Windows Forms** . Do pole **Název** zadejte `InlineTasks`. Zadejte **umístění** pro řešení, například *D:\\* . Ujistěte se, že je vybraná možnost **vytvořit adresář pro řešení** , je zrušené **přidání do správy zdrojového kódu** a **název řešení** je **InlineTasks**.
 
 3. Kliknutím na tlačítko **OK** vytvořte soubor projektu.
 
@@ -57,6 +57,7 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
      Soubor projektu se zobrazí v editoru kódu.
 
 ## <a name="add-a-basic-hello-task"></a>Přidat základní úlohu Hello
+
  Nyní přidejte do souboru projektu základní úlohu, která zobrazí zprávu "Hello, World!" Přidejte také výchozí cíl TestBuild k vyvolání úlohy.
 
 #### <a name="to-add-a-basic-hello-task"></a>Přidání základní úlohy Hello
@@ -88,6 +89,7 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
    Tento kód vytvoří vloženou úlohu s názvem Hello a nemá žádné parametry, odkazy ani direktivy `Using`. Úloha Hello obsahuje pouze jeden řádek kódu, který zobrazuje zprávu Hello na výchozím protokolovacím zařízení, obvykle okno konzoly.
 
 ### <a name="run-the-hello-task"></a>Spustit úlohu Hello
+
  Spusťte nástroj MSBuild pomocí **okna příkazového řádku** k vytvoření úlohy Hello a zpracování cíle TestBuild, který ho vyvolá.
 
 ##### <a name="to-run-the-hello-task"></a>Spuštění úlohy Hello
@@ -108,6 +110,7 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
    Pomocí střídání mezi editorem kódu a **oknem příkazového řádku**můžete změnit soubor projektu a rychle zobrazit výsledky.
 
 ## <a name="define-the-echo-task"></a>Definovat úlohu s odezvou
+
  Vytvoří vloženou úlohu, která přijme parametr řetězce a zobrazí řetězec na výchozím protokolovacím zařízení.
 
 #### <a name="to-define-the-echo-task"></a>Definování úlohy s odezvou
@@ -139,6 +142,7 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
    Tento kód definuje vloženou úlohu s názvem echo a má pouze jeden povinný text vstupního parametru. Ve výchozím nastavení jsou parametry typu System. String. Hodnota parametru text je nastavena, když cíl TestBuild vyvolá úlohu echo.
 
 ## <a name="define-the-adder-task"></a>Definovat úlohu přidávání
+
  Vytvořte vloženou úlohu, která přidá dva celočíselné parametry a vygeneruje jejich součet jako vlastnost MSBuild.
 
 #### <a name="to-define-the-adder-task"></a>Definování úlohy přidávání
@@ -175,6 +179,7 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
    Tento kód definuje vloženou úlohu s názvem "přidávání" a má dva požadované celočíselné vstupní parametry, a a B a jeden celočíselný výstupní parametr, C. Úloha přidávání přidá dva vstupní parametry a vrátí součet v parametru Output. Součet je vygenerován jako vlastnost MSBuild `Sum`. Hodnoty vstupních parametrů se nastaví, když cíl TestBuild vyvolá úlohu přidávání.
 
 ## <a name="define-the-regx-task"></a>Definování úlohy RegX
+
  Vytvořte vloženou úlohu, která přijímá skupinu položek a regulární výraz, a vrátí seznam všech položek, které mají obsah souboru odpovídající výrazu.
 
 #### <a name="to-define-the-regx-task"></a>Definování úlohy RegX
@@ -244,6 +249,7 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
   Hodnota vstupních parametrů je nastavena, když cíl TestBuild vyvolá úlohu RegX. Úloha RegX načte všechny soubory a vrátí seznam souborů, které odpovídají regulárnímu výrazu. Tento seznam je vrácen jako výstupní parametr `Result`, který je generován jako položka MSBuild `MatchedFiles`.
 
 ### <a name="handle-reserved-characters"></a>Zpracovat vyhrazené znaky
+
  Analyzátor MSBuild zpracovává vložené úkoly jako XML. Znaky, které mají rezervované významy v jazyce XML, například "\<" a ">", jsou zjišťovány a zpracovávány, jako kdyby byly XML, a nikoli zdrojový kód .NET. Chcete-li zahrnout rezervované znaky do výrazů kódu, jako je například `Files.Length > 0`, zapište `Code` element tak, aby jeho obsah byl obsažen ve výrazu CDATA následujícím způsobem:
 
  ```xml
@@ -256,7 +262,8 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
 </Code>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Vložené úkoly](../msbuild/msbuild-inline-tasks.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Cíle](../msbuild/msbuild-targets.md)

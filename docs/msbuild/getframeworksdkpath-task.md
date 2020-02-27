@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fbe0dbda58a0c57cacd64c40b66cc640b779bca
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d021bdb485846749ea2c7e9dfe483e09738fda46
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593314"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633990"
 ---
 # <a name="getframeworksdkpath-task"></a>GetFrameworkSdkPath – úloha
-Načte cestu k [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)].
 
+Načte cestu k sadě Windows Software Development Kit (SDK).
 ## <a name="task-parameters"></a>Parametry úlohy
+
+Následující tabulka popisuje parametry úlohy `GetFrameworkSdkPath`.
 Následující tabulka popisuje parametry úlohy `GetFrameworkSdkPath`.
 
 |Parametr|Popis|
@@ -39,10 +41,12 @@ Následující tabulka popisuje parametry úlohy `GetFrameworkSdkPath`.
 |`Path`|Volitelný výstupní parametr `String`.<br /><br /> Obsahuje cestu k nejnovější sadě .NET SDK, pokud je k dispozici nějaká verze. V opačném případě vrátí `String.Empty`.|
 
 ## <a name="remarks"></a>Poznámky
+
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
-Následující příklad používá úlohu `GetFrameworkSdkPath` k uložení cesty k [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] ve vlastnosti `SdkPath`.
+
+Následující příklad používá úlohu `GetFrameworkSdkPath` k uložení cesty k Windows SDK ve vlastnosti `SdkPath`.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -57,6 +61,7 @@ Následující příklad používá úlohu `GetFrameworkSdkPath` k uložení ces
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

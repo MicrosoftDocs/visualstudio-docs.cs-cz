@@ -21,17 +21,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 42fcd289f5258fde7ae8f17a9e19a25427fe6885
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: b79bd8eb3f7d813e3acd091ce5f2ffbc7b3eeb49
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77278351"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632755"
 ---
 # <a name="resolveassemblyreference-task"></a>ResolveAssemblyReference – úloha
+
 Určuje všechna sestavení, která závisí na zadaných sestaveních, včetně závislostí druhé a `n`ho pořadí.
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy `ResolveAssemblyReference`.
 
 |Parametr|Popis|
@@ -78,6 +80,7 @@ Určuje všechna sestavení, která závisí na zadaných sestaveních, včetně
 |`TargetProcessorArchitecture`|Volitelný parametr `String`.<br /><br /> Preferovaná architektura cílového procesoru. Používá se pro překládání odkazů na globální mezipaměť sestavení (GAC).<br /><br /> Tento parametr může mít hodnotu `x86`, `IA64`nebo `AMD64`.<br /><br /> Pokud tento parametr chybí, úloha nejprve posuzuje sestavení, která odpovídají architektuře aktuálně běžícího procesu. Pokud není nalezeno žádné sestavení, úloha posuzuje sestavení v globální mezipaměti sestavení, která mají `ProcessorArchitecture` hodnotu `MSIL` nebo žádná `ProcessorArchitecture` hodnota.|
 
 ## <a name="warnings"></a>Upozornění
+
  Protokolují se následující upozornění:
 
 - `ResolveAssemblyReference.TurnOnAutoGenerateBindingRedirects`
@@ -101,8 +104,10 @@ Určuje všechna sestavení, která závisí na zadaných sestaveních, včetně
 - `ResolveAssemblyReference.UnificationByFrameworkRetarget`
 
 ## <a name="remarks"></a>Poznámky
+
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

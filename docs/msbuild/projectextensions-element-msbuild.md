@@ -18,17 +18,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1057743732c8dfc7ebb05bc9cbc108d61b2e234c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 94f2d88aa19bf01ebe6f25c7d80772c812abcc59
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597409"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632963"
 ---
 # <a name="projectextensions-element-msbuild"></a>ProjectExtensions – – element (MSBuild)
-Povoluje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] soubory projektu, aby obsahovaly informace, které nejsou[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Vše v prvku `ProjectExtensions` bude [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]o ignorováno.
 
- \<Project> \<ProjectExtensions>
+Povoluje souborům projektu MSBuild, aby obsahovaly informace, které nejsou v MSBuild. Nástroj MSBuild bude ignorovat cokoli uvnitř elementu `ProjectExtensions`.
+
+ \<> projektu \<ProjectExtensions – >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,24 +40,29 @@ Povoluje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuil
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+
+ Žádná
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+
+ Žádná
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 | Prvek | Popis |
 | - | - |
-| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| [Projektem](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
 
 ## <a name="remarks"></a>Poznámky
- V projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] lze použít pouze jeden prvek `ProjectExtensions`.
+
+ V projektu MSBuild lze použít pouze jeden prvek `ProjectExtensions`.
 
 ## <a name="example"></a>Příklad
+
  Následující příklad kódu ukazuje informace z integrovaného vývojového prostředí, které je uloženo v `ProjectExtensions` elementu.
 
 ```xml
@@ -71,6 +77,7 @@ Povoluje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuil
 </ProjectExtensions>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
 - [MSBuild](../msbuild/msbuild.md)

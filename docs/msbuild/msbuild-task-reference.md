@@ -15,22 +15,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d050aa095868e229887e4928285d746e1b5906a5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 13c0731781efec98a117c11a7172645c46028af3
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593873"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633158"
 ---
 # <a name="msbuild-task-reference"></a>Referenční dokumentace úlohy nástroje MSBuild
 
-Úlohy poskytují kód, který se spouští během procesu sestavení. Úkoly v následujícím seznamu jsou součástí [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Když je nainstalovaná [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)], jsou k dispozici další úlohy, které se používají k sestavování projektů [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]. Další informace najdete v tématu [ C++ úlohy](../msbuild/msbuild-tasks-specific-to-visual-cpp.md).
+Úlohy poskytují kód, který se spouští během procesu sestavení. Úlohy v následujícím seznamu jsou součástí nástroje MSBuild. Po instalaci C++ úlohy jsou k dispozici další úlohy, které se používají k sestavení C++ projektů. Další informace najdete v tématu [ C++ úlohy](../msbuild/msbuild-tasks-specific-to-visual-cpp.md).
 
 Kromě parametrů uvedených v tématech v této části má každá úloha také následující parametry:
 
 | Parametr | Popis |
 |-------------------| - |
-| `Condition` | Volitelný parametr `String`.<br /><br /> Výraz `Boolean`, který modul [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] používá k určení, zda bude tato úloha provedena. Informace o podmínkách podporovaných nástrojem [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]najdete v tématu [podmínky](../msbuild/msbuild-conditions.md). |
+| `Condition` | Volitelný parametr `String`.<br /><br /> Výraz `Boolean`, který modul MSBuild používá k určení, zda bude tato úloha spuštěna. Informace o podmínkách podporovaných nástrojem MSBuild naleznete v tématu [podmínky](../msbuild/msbuild-conditions.md). |
 | `ContinueOnError` | Volitelný parametr. Může obsahovat jednu z následujících hodnot:<br /><br /> -   **WarnAndContinue** nebo **true**. Pokud se úloha nezdařila, následné úkoly v [cílovém](../msbuild/target-element-msbuild.md) elementu a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za upozornění.<br />-   **ErrorAndContinue**. Pokud se úloha nezdařila, následné úkoly v prvku `Target` a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za chyby.<br />-   **ErrorAndStop** nebo **false** (výchozí). Pokud se úloha nezdařila, zbývající úkoly v prvku `Target` a sestavení nejsou provedeny a celý `Target` element a sestavení se považuje za neúspěšné.<br /><br /> Verze .NET Framework před 4,5 podporují pouze hodnoty `true` a `false`.<br /><br /> Další informace najdete v tématu [Postupy: ignorování chyb v úlohách](../msbuild/how-to-ignore-errors-in-tasks.md). |
 
 ## <a name="in-this-section"></a>V tomto oddílu
@@ -83,9 +83,9 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 
  Zkopíruje soubory do nového umístění.
 
-- [CreateCSharpManifestResourceName task](../msbuild/createcsharpmanifestresourcename-task.md)
+- [CreateCSharpManifestResourceName – – úloha](../msbuild/createcsharpmanifestresourcename-task.md)
 
- Vytvoří název manifestu ve stylu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]z daného názvu souboru *. resx* nebo jiného prostředku.
+ C#Vytvoří název manifestu stylu z daného názvu souboru *. resx* nebo jiného prostředku.
 
 - [CreateItem – – úloha](../msbuild/createitem-task.md)
 
@@ -95,9 +95,9 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 
  Naplní vlastnosti ze vstupních hodnot a povoluje zkopírování hodnot z jedné vlastnosti nebo řetězce do jiného.
 
-- [CreateVisualBasicManifestResourceName task](../msbuild/createvisualbasicmanifestresourcename-task.md)
+- [CreateVisualBasicManifestResourceName – – úloha](../msbuild/createvisualbasicmanifestresourcename-task.md)
 
- Vytvoří název manifestu ve stylu [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]z daného názvu souboru *. resx* nebo jiného prostředku.
+ Vytvoří název manifestu ve stylu Visual Basic z daného názvu souboru *. resx* nebo jiného prostředku.
 
 - [CSc – úloha](../msbuild/csc-task.md)
 
@@ -141,7 +141,7 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 
 - [GenerateApplicationManifest – – úloha](../msbuild/generateapplicationmanifest-task.md)
 
- Generuje manifest [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace nebo nativní manifest.
+ Generuje manifest aplikace ClickOnce nebo nativní manifest.
 
 - [GenerateBootstrapper – – úloha](../msbuild/generatebootstrapper-task.md)
 
@@ -149,7 +149,7 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 
 - [GenerateDeploymentManifest – – úloha](../msbuild/generatedeploymentmanifest-task.md)
 
- Vygeneruje manifest nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)].
+ Generuje manifest nasazení ClickOnce.
 
 - [GenerateResource – – úloha](../msbuild/generateresource-task.md)
 
@@ -171,9 +171,9 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 
  Načte cestu k sestavením .NET Framework.
 
-- [GetFrameworkSdkPath task](../msbuild/getframeworksdkpath-task.md)
+- [GetFrameworkSdkPath – – úloha](../msbuild/getframeworksdkpath-task.md)
 
- Načte cestu k [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)].
+ Načte cestu k sadě Windows Software Development Kit (SDK).
 
 - [GetReferenceAssemblyPaths – – úloha](../msbuild/getreferenceassemblypaths-task.md)
 
@@ -197,7 +197,7 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 
 - [MSBuild – úloha](../msbuild/msbuild-task.md)
 
- Vytvoří [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projekty z jiného projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].
+ Vytvoří projekty MSBuild z jiného projektu MSBuild.
 
 - [ReadLinesFromFile – – úloha](../msbuild/readlinesfromfile-task.md)
 
@@ -307,7 +307,7 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 
  Vytvoří archiv *zip* z obsahu adresáře.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
 - [Zápis úlohy](../msbuild/task-writing.md)

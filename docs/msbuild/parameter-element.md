@@ -17,17 +17,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d1351f47ec8acc5aa5a510ede9c2284ec97c248
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e7c4fa5d093952eefc870aded3d3e14a1f5983a7
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590459"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633002"
 ---
 # <a name="parameter-element"></a>Element parametru
+
 Obsahuje informace o konkrétním parametru pro úkol, který je generován `TaskFactory``UsingTask`.  Název prvku je název parametru.  Další informace naleznete v tématu [UsingTask element (MSBuild)](../msbuild/usingtask-element-msbuild.md).
 
- \<Project> \<UsingTask> \<ParameterGroup> \<Parameter>
+ \<projektu > \<UsingTask > \<parametru > \<parametr >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,6 +39,7 @@ Obsahuje informace o konkrétním parametru pro úkol, který je generován `Tas
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -49,15 +51,17 @@ Obsahuje informace o konkrétním parametru pro úkol, který je generován `Tas
 |`Required`|Volitelný logický atribut.<br /><br /> Pokud `true`, tento parametr je pro úlohu povinný. Výchozí hodnota je `false`.|
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[ParameterGroup](../msbuild/parametergroup-element.md)|Obsahuje volitelný seznam parametrů, které budou k dispozici u úlohy vygenerované `TaskFactory``UsingTask`.|
+|[ParameterGroup –](../msbuild/parametergroup-element.md)|Obsahuje volitelný seznam parametrů, které budou k dispozici u úlohy vygenerované `TaskFactory``UsingTask`.|
 
 ## <a name="example"></a>Příklad
+
  Následující příklad ukazuje použití prvku `Parameter`.
 
 ```xml
@@ -73,7 +77,8 @@ Obsahuje informace o konkrétním parametru pro úkol, který je generován `Tas
 </UsingTask>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

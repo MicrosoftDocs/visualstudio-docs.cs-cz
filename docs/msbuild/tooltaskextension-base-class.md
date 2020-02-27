@@ -13,17 +13,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 947a1df101a169b7bdad4efda74cab1ae042964a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9aa052a0fd2216d5f3d85e99794d9ac883a09e2d
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594965"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631689"
 ---
 # <a name="tooltaskextension-base-class"></a>Základní třída ToolTaskExtension –
+
 Mnoho úloh dědí z třídy <xref:Microsoft.Build.Tasks.ToolTaskExtension>, která dědí z třídy <xref:Microsoft.Build.Utilities.ToolTask>, která sama dědí z třídy <xref:Microsoft.Build.Utilities.Task>. Tento řetěz dědičnosti přidá několik parametrů k úlohám, které jsou z nich odvozeny. Tyto parametry jsou uvedeny v tomto dokumentu.
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry základních tříd.
 
 | Parametr | Popis |
@@ -41,10 +43,11 @@ Mnoho úloh dědí z třídy <xref:Microsoft.Build.Tasks.ToolTaskExtension>, kte
 | <xref:Microsoft.Build.Utilities.ToolTask.StandardOutputImportance%2A> | Volitelný parametr `String`.<br /><br /> Důležitost, se kterou chcete protokolovat text z standardního výstupního proudu. |
 | <xref:Microsoft.Build.Utilities.ToolTask.Timeout%2A> | Virtuální volitelný parametr `Int32`.<br /><br /> Určuje dobu v milisekundách, po jejímž uplynutí je ukončen spustitelný soubor úlohy. Výchozí hodnota je `Int.MaxValue`, což značí, že není k dispozici žádný časový interval. Časový limit je v milisekundách. |
 | <xref:Microsoft.Build.Utilities.ToolTask.ToolExe%2A> | Virtuální volitelný parametr `string`.<br /><br /> Projekty mohou tuto implementaci implementovat pro přepsání nástroje. Úkoly mohou tuto potlačit, aby zachovaly nástroj. |
-| <xref:Microsoft.Build.Utilities.ToolTask.ToolPath%2A> | Volitelný parametr `string`.<br /><br /> Určuje umístění, ze kterého úloha načte základní spustitelný soubor. Pokud tento parametr není zadán, úloha použije cestu instalace sady SDK, která odpovídá verzi rozhraní .NET Framework, která je spuštěna [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| <xref:Microsoft.Build.Utilities.ToolTask.ToolPath%2A> | Volitelný parametr `string`.<br /><br /> Určuje umístění, ze kterého úloha načte základní spustitelný soubor. Pokud tento parametr není zadán, úloha použije cestu instalace sady SDK, která odpovídá verzi rozhraní .NET Framework, která spouští nástroj MSBuild. |
 | <xref:Microsoft.Build.Utilities.ToolTask.UseCommandProcessor%2A> | Volitelný parametr `bool`.<br /><br /> Když se nastaví na `true`, tato úloha vytvoří dávkový soubor pro příkazový řádek a provede ho pomocí příkazového procesoru namísto provedení příkazu přímo. |
 | <xref:Microsoft.Build.Utilities.ToolTask.YieldDuringToolExecution%2A> | Volitelný parametr `bool`.<br /><br /> Když se nastaví na `true`, tento úkol při provádění jeho úlohy vydává uzel. |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

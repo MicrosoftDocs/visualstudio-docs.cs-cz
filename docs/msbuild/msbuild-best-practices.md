@@ -11,14 +11,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b1aee1a6ae3abc06846523df9470ad75d316a50b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d3605109519dccaafa1367464bd8c2385df5e93e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592084"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633418"
 ---
 # <a name="msbuild-best-practices"></a>Osvědčené postupy nástroje MSBuild
+
 Pro psaní skriptů MSBuild doporučujeme následující osvědčené postupy:
 
 - Výchozí hodnoty vlastností jsou nejlépe zpracovávány pomocí atributu `Condition` a nikoli deklarováním vlastnosti, jejíž výchozí hodnota může být přepsána v příkazovém řádku. Například použijte
@@ -31,5 +32,6 @@ Pro psaní skriptů MSBuild doporučujeme následující osvědčené postupy:
 
 - Vyhněte se zástupným znakům při výběru položek. Místo toho zadejte soubory explicitně. To usnadňuje sledování chyb, které mohou nastat při přidávání nebo odstraňování souborů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Pokročilé koncepty](../msbuild/msbuild-advanced-concepts.md)

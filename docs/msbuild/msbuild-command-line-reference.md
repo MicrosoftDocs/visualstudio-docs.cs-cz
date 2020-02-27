@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ebea7356e81cb5924919f213327816dbd69e0c7b
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: bb95da599e6362ad32c0ef94dcf9c184269ddedf
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77278398"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633405"
 ---
 # <a name="msbuild-command-line-reference"></a>Reference k příkazovému řádku nástroje MSBuild
 
@@ -85,6 +85,7 @@ MSBuild.exe [Switches] [ProjectFile]
 |-noConsoleLogger|-noconlog|Zakáže výchozí protokolovací nástroj konzoly a neprotokoluje události do konzoly.|
 
 ## <a name="example"></a>Příklad
+
  Následující příklad vytvoří `rebuild` cíl projektu *MyProject. proj* .
 
 ```cmd
@@ -92,6 +93,7 @@ MSBuild.exe MyProject.proj -t:rebuild
 ```
 
 ## <a name="example"></a>Příklad
+
  Nástroj *MSBuild. exe* lze použít k provádění složitějších sestavení. Můžete ho například použít k sestavení specifických cílů konkrétního projektu v řešení. Následující příklad znovu sestaví projekt `NotInSolutionFolder` a vyčistí `InSolutionFolder`projektu, který je ve složce řešení *NewFolder* .
 
 ```cmd
@@ -99,5 +101,6 @@ msbuild SlnFolders.sln -t:NotInSolutionfolder:Rebuild;NewFolder\InSolutionFolder
 ```
 
 ## <a name="see-also"></a>Viz také
+
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
 - [Obecné vlastnosti projektu nástroje MSBuild](../msbuild/common-msbuild-project-properties.md)

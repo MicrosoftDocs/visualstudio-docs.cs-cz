@@ -22,20 +22,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06171f3a1543f6fa827c1b6fd477b992d099fff6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 81a9c3b1c22277261276ced1940f1f2e83d11882
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590472"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634250"
 ---
 # <a name="downloadfile-task"></a>DownloadFile – úloha
+
 Stáhne zadané soubory pomocí protokolu HTTP (Hyper-Text Transfer Protocol).
 
 >[!NOTE]
 >Úloha DownloadFile je k dispozici pouze v MSBuild 15,8 a vyšších.
 
 ## <a name="parameters"></a>Parametry
+
 Následující tabulka popisuje parametry úlohy `DownloadFile`.
 
 |Parametr|Popis|
@@ -49,9 +51,11 @@ Následující tabulka popisuje parametry úlohy `DownloadFile`.
 |`SourceUrl`|Vyžaduje se `String` parametr.<br /><br /> Určuje adresu URL, která se má stáhnout.|
 
 ## <a name="remarks"></a>Poznámky
+
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
 Následující příklad stáhne soubor a zahrne ho do `Content`ch položek před sestavením projektu.
 
 ```xml
@@ -72,6 +76,7 @@ Následující příklad stáhne soubor a zahrne ho do `Content`ch položek pře
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

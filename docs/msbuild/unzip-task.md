@@ -22,20 +22,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3b02108e2ee47a31ced196643bf917b3b63c1c6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d331fda05e8655be0536a1e83d8309ae8c060b1f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594900"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631507"
 ---
 # <a name="unzip-task"></a>Rozbalit úlohu
+
 Rozbalí archiv *zip* do zadaného umístění.
 
 >[!NOTE]
 >Úkol `Unzip` je k dispozici pouze v MSBuild 15,8 a vyšších.
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy `Unzip`.
 
 |Parametr|Popis|
@@ -46,9 +48,11 @@ Rozbalí archiv *zip* do zadaného umístění.
 |`SourceFiles`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje jeden nebo více souborů, které mají být extrahovány. Při zadávání více souborů, které jsou extrahovány, do stejné složky.|
 
 ## <a name="remarks"></a>Poznámky
+
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
  Následující příklad debalí archiv a přepíše všechny soubory jen pro čtení.
 
 ```xml
@@ -65,6 +69,7 @@ Rozbalí archiv *zip* do zadaného umístění.
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

@@ -21,17 +21,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: effc1b51352052f4e11e42298f9e9567db30d8f1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c45f22011c32378af0690c9aee226877faf903bd
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593353"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634458"
 ---
 # <a name="cl-task"></a>CL – úloha
+
 Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří spustitelné soubory ( *. exe*), soubory dynamické knihovny ( *. dll*) nebo soubory modulu kódu ( *. netmodule*). Další informace naleznete v tématu [Možnosti kompilátoru](/cpp/build/reference/compiler-options).
 
 ## <a name="parameters"></a>Parametry
+
  Následující seznam popisuje parametry úlohy **CL** . Většina parametrů úlohy a několik sad parametrů odpovídá možnosti příkazového řádku.
 
 - **AdditionalIncludeDirectories**
@@ -146,11 +148,11 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Cdecl** -  **/Gd**
+  - **Cdecl** -  **/GD**
 
   - **FastCall** -                           **/gr**
 
-  - **StdCall** -                           **/Gz**
+  - **StdCall** -                           **/GZ**
 
     Další informace naleznete v tématu [/GD,/GR,/GV,/GZ (konvence volání)](/cpp/build/reference/gd-gr-gv-gz-calling-convention).
 
@@ -210,7 +212,7 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
   - **ProgramDatabase** -  **/Zi**
 
-  - **EditAndContinue** -  **/ZI**
+  - **EditAndContinue** -  **/Zi**
 
     Další informace naleznete v tématu [/Z7,/Zi,/Zi (formát ladicích informací)](/cpp/build/reference/z7-zi-zi-debug-information-format).
 
@@ -240,7 +242,7 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
   - **StreamingSIMDExtensions** -  **/arch: SSE**
 
-  - **StreamingSIMDExtensions2** -  **/arch:SSE2**
+  - **StreamingSIMDExtensions2** -  **/arch: SSE2**
 
     Další informace najdete v tématu [/arch (x86)](/cpp/build/reference/arch-x86).
 
@@ -290,9 +292,9 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
   - **Asynchronní** -  **/EHa**
 
-  - **Sync** -  **/EHsc**
+  - **Synchronizovat** -  **/EHsc**
 
-  - **SyncCThrow** -  **/EHs**
+  - **SyncCThrow** -  **/EHS**
 
     Další informace naleznete v tématu [/EH (model zpracování výjimek)](/cpp/build/reference/eh-exception-handling-model).
 
@@ -404,7 +406,7 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
   - **Zakázané** -  **/Ob0**
 
-  - **OnlyExplicitInline** -  **/Ob1**
+  - **OnlyExplicitInline** -  **/OB1**
 
   - **AnySuitable** -  **/Ob2**
 
@@ -472,7 +474,7 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Další informace najdete v tématu [/OpenMP (povolení podpory openmp 2,0)](/cpp/build/reference/openmp-enable-openmp-2-0-support).
 
-- **Optimalizace**
+- **Vybrané**
 
    Volitelný **řetězcový** parametr.
 
@@ -592,11 +594,11 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
   -  -  **/Mt** s **více vlákny**
 
-  - **MultiThreadedDebug** -  **/MTd**
+  - **MultiThreadedDebug** -  **/MTD**
 
   - **MultiThreadedDLL** -  **/MD**
 
-  - **MultiThreadedDebugDLL** -  **/MDd**
+  - **MultiThreadedDebugDLL** -  **/MDD**
 
     Další informace naleznete v tématu [/MD,/MT,/LD (použití běhové knihovny)](/cpp/build/reference/md-mt-ld-use-run-time-library).
 
@@ -654,7 +656,7 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
   - **4Bytes** -  **/Zp4**
 
-  - **8Bytes** -  **/Zp8**
+  - **8Bytes** -  **/ZP8**
 
   - **16Bytes** -  **/Zp16**
 
@@ -800,5 +802,6 @@ Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří 
 
    Další informace najdete v tématu parametry **TLogReadFiles** a **TLogWriteFiles** v této tabulce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

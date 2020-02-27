@@ -10,20 +10,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b0551162a00437b01c7357dfdac16462aad8f2fc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: bb4c44b4e642ff1137df7f0afe02502224060a64
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597383"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632937"
 ---
 # <a name="property-functions"></a>Funkce vlastností
 
-V .NET Framework verzích 4 a 4,5 se funkce vlastností dají použít k vyhodnocení skriptů MSBuild. Funkce vlastností lze použít všude, kde se zobrazí vlastnosti. Na rozdíl od úloh lze funkce vlastností použít mimo cíle a jsou vyhodnocovány před jakýmkoli cílovým spuštěním.
+Funkce vlastností jsou volání metody .NET Framework, která se zobrazují v definicích vlastností MSBuild. Na rozdíl od úloh lze funkce vlastností použít mimo cíle a jsou vyhodnocovány před jakýmkoli cílovým spuštěním.
 
- Bez použití úloh nástroje MSBuild můžete přečíst systémový čas, porovnat řetězce, porovnat regulární výrazy a provádět další akce v rámci skriptu sestavení. Nástroj MSBuild se pokusí převést řetězec na číslo a číslo na řetězec a provést další převody podle požadavků.
- 
+Bez použití úloh nástroje MSBuild můžete přečíst systémový čas, porovnat řetězce, porovnat regulární výrazy a provádět další akce v rámci skriptu sestavení. Nástroj MSBuild se pokusí převést řetězec na číslo a číslo na řetězec a provést další převody podle požadavků.
+
 Řetězcové hodnoty vrácené z funkcí vlastnosti mají řídicí [znaky speciální](msbuild-special-characters.md) . Pokud chcete, aby byla hodnota zpracována, jako by byla vložena přímo do souboru projektu, použijte `$([MSBuild]::Unescape())` pro zrušení Escape speciálních znaků.
+
+Funkce vlastností jsou k dispozici v .NET Framework 4 a novější.
 
 ## <a name="property-function-syntax"></a>Syntaxe funkce Property
 
@@ -37,7 +39,7 @@ Jedná se o tři druhy funkcí vlastností; Každá funkce má odlišnou syntaxi
 
 Všechny hodnoty vlastností buildu jsou jenom řetězcové hodnoty. Můžete použít metody řetězce (instance) k provozování libovolné hodnoty vlastnosti. Můžete například extrahovat název jednotky (první tři znaky) z vlastnosti Build, která představuje úplnou cestu pomocí tohoto kódu:
 
-```fundamental
+```
 $(ProjectOutputFolder.Substring(0,3))
 ```
 
@@ -45,7 +47,7 @@ $(ProjectOutputFolder.Substring(0,3))
 
 Ve svém skriptu sestavení máte přístup ke statickým vlastnostem a metodám mnoha systémových tříd. Chcete-li získat hodnotu statické vlastnosti, použijte následující syntaxi, kde \<třídy > je název třídy System a \<Property > je název vlastnosti.
 
-```fundamental
+```
 $([Class]::Property)
 ```
 
@@ -57,7 +59,7 @@ Například můžete použít následující kód k nastavení vlastnosti Build 
 
 Chcete-li zavolat statickou metodu, použijte následující syntaxi, kde \<třídy > je název třídy systému, \<metoda > je název metody a (\<Parameters >) je seznam parametrů pro metodu:
 
-```fundamental
+```
 $([Class]::Method(Parameters))
 ```
 
@@ -121,7 +123,7 @@ Kromě toho můžete použít následující statické metody a vlastnosti:
 
 Pokud přistupujete ke statické vlastnosti, která vrací instanci objektu, můžete vyvolat metody instance daného objektu. Chcete-li vyvolat metodu instance, použijte následující syntaxi, kde \<třídy > je název třídy systému, \<Property > je název vlastnosti, \<metoda > je název metody a (\<Parameters >) je seznam parametrů pro metodu:
 
-```fundamental
+```
 $([Class]::Property.Method(Parameters))
 ```
 
@@ -137,13 +139,13 @@ Například můžete použít následující kód pro nastavení vlastnosti Buil
 
 Několik statických metod v sestavení lze použít k zajištění aritmetické, bitové logické a řídicí znakové podpory. K těmto metodám přistupujete pomocí následující syntaxe, kde \<metoda > je název metody a (\<Parameters >) je seznam parametrů pro metodu.
 
-```fundamental
+```
 $([MSBuild]::Method(Parameters))
 ```
 
 Chcete-li například přidat dohromady dvě vlastnosti, které mají číselné hodnoty, použijte následující kód.
 
-```fundamental
+```
 $([MSBuild]::Add($(NumberOne), $(NumberTwo)))
 ```
 
@@ -172,8 +174,8 @@ Tady je seznam funkcí MSBuild vlastností:
 |String NormalizePath (cesta k parametrům řetězec [])|Získá kanonickou úplnou cestu k zadané cestě a zajistí, že obsahuje správné znaky oddělovače adresáře pro aktuální operační systém.|
 |String NormalizeDirectory (cesta k parametrům řetězec [])|Získá kanonickou úplnou cestu k zadanému adresáři a zajistí, že obsahuje správné znaky oddělovačů adresářů pro aktuální operační systém a zároveň zajišťuje, že má koncové lomítko.|
 |EnsureTrailingSlash řetězce (cesta k řetězci)|Pokud daná cesta nemá koncové lomítko, pak ji přidejte. Pokud je cesta prázdným řetězcem, neupraví ho.|
-|String GetPathOfFileAbove (soubor řetězce; String startingDirectory)|Vyhledá soubor na základě umístění aktuálního souboru buildu nebo na základě `startingDirectory`, je-li tento parametr zadán.|
-|GetDirectoryNameOfFileAbove (řetězec startingDirectory, název souboru String)|Vyhledejte soubor buď v zadaném adresáři, nebo v umístění ve struktuře adresářů nad adresářem.|
+|String GetPathOfFileAbove (soubor řetězce; String startingDirectory)|Vyhledá a vrátí úplnou cestu k souboru ve struktuře adresáře nad aktuálním umístěním souboru sestavení nebo na základě `startingDirectory`, je-li tento parametr zadán.|
+|GetDirectoryNameOfFileAbove (řetězec startingDirectory, název souboru String)|Vyhledejte a vraťte adresář se souborem buď v zadaném adresáři, nebo v umístění ve struktuře adresáře nad adresářem.|
 |String MakeRelative (řetězec basePath, cesta k řetězci)|Vytvoří `path` relativní ke `basePath`. `basePath` musí být absolutní adresář. Pokud `path` nelze nastavit jako relativní, vrátí se do stejného znění. Podobně jako `Uri.MakeRelativeUri`.|
 |String ValueOrDefault (řetězec conditionValue, hodnota defaultValue řetězce)|Vrátí řetězec v parametru defaultValue pouze v případě, že parametr conditionValue je prázdný, v opačném případě vrátí hodnotu conditionValue.|
 
@@ -181,7 +183,7 @@ Tady je seznam funkcí MSBuild vlastností:
 
 Můžete zkombinovat funkce vlastností a vytvořit tak složitější funkce, jak ukazuje následující příklad.
 
-```fundamental
+```
 $([MSBuild]::BitwiseAnd(32, $([System.IO.File]::GetAttributes(tempFile))))
 ```
 
@@ -195,7 +197,7 @@ Funkce `DoesTaskHostExist` vlastnosti v nástroji MSBuild vrátí, zda je hostit
 
 Tato funkce vlastnosti má následující syntaxi:
 
-```fundamental
+```
 $([MSBuild]::DoesTaskHostExist(string theRuntime, string theArchitecture))
 ```
 
@@ -205,7 +207,7 @@ Funkce `EnsureTrailingSlash` vlastnosti v MSBuild přidá koncové lomítko, pok
 
 Tato funkce vlastnosti má následující syntaxi:
 
-```fundamental
+```
 $([MSBuild]::EnsureTrailingSlash('$(PathProperty)'))
 ```
 
@@ -215,7 +217,7 @@ Funkce MSBuild `GetDirectoryNameOfFileAbove` Property vyhledá soubor v adresá�
 
  Tato funkce vlastnosti má následující syntaxi:
 
-```fundamental
+```
 $([MSBuild]::GetDirectoryNameOfFileAbove(string ThePath, string TheFile))
 ```
 
@@ -227,7 +229,7 @@ $([MSBuild]::GetDirectoryNameOfFileAbove(string ThePath, string TheFile))
 
 ## <a name="msbuild-getpathoffileabove"></a>GetPathOfFileAbove nástroje MSBuild
 
-Funkce `GetPathOfFileAbove` vlastnosti v nástroji MSBuild vrátí cestu k souboru bezprostředně před tímto souborem. Je funkčně ekvivalentní volání
+Funkce `GetPathOfFileAbove` vlastnosti v MSBuild vrátí cestu k zadanému souboru, pokud se nachází ve struktuře adresáře nad aktuálním adresářem. Je funkčně ekvivalentní volání
 
 ```xml
 <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
@@ -235,7 +237,7 @@ Funkce `GetPathOfFileAbove` vlastnosti v nástroji MSBuild vrátí cestu k soubo
 
 Tato funkce vlastnosti má následující syntaxi:
 
-```fundamental
+```
 $([MSBuild]::GetPathOfFileAbove(dir.props))
 ```
 
@@ -245,7 +247,7 @@ Funkce vlastnosti `GetRegistryValue` MSBuild vrací hodnotu klíče registru. Ta
 
 Následující příklady ukazují, jak se tato funkce používá:
 
-```fundamental
+```
 $([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\Debugger`, ``))                                  // default value
 $([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\Debugger`, `SymbolCacheDir`))
 $([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(SampleValue)`))             // parens in name and value
@@ -257,7 +259,7 @@ Funkce vlastnosti `GetRegistryValueFromView` MSBuild získá data systémového 
 
 Syntaxe pro tuto funkci vlastnosti je:
 
-```fundamental
+```
 [MSBuild]::GetRegistryValueFromView(string keyName, string valueName, object defaultValue, params object[] views)
 ```
 
@@ -275,7 +277,7 @@ K dispozici jsou následující zobrazení registru:
 
 Například:
 
- ```fundamental
+ ```
 $([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Silverlight\v3.0\ReferenceAssemblies', 'SLRuntimeInstallPath', null, RegistryView.Registry64, RegistryView.Registry32))
 ```
 
@@ -287,7 +289,7 @@ Funkce MSBuild `MakeRelative` Property vrátí relativní cestu druhé cesty vzh
 
 Tato funkce vlastnosti má následující syntaxi:
 
-```fundamental
+```
 $([MSBuild]::MakeRelative($(FileOrFolderPath1), $(FileOrFolderPath2)))
 ```
 
@@ -338,7 +340,7 @@ Output:
 -->
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)
 

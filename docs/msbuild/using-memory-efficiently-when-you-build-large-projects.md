@@ -12,17 +12,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: af61c15c8ef65c062c1aab6eba079c613f99b5f8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f40f2713d93e4f1ad9755efaea2f8fba5f0bda94
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595225"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631312"
 ---
 # <a name="use-memory-efficiently-when-you-build-large-projects"></a>Efektivní využití paměti při sestavování rozsáhlých projektů
-Velké projekty často obsahují mnoho dílčích projektů a dalších závislostí, které mohou spotřebovat spoustu systémové paměti v době sestavení. Pokud dojde k poklesu dostupné systémové paměti, může se také snížit výkon systému. Starší verze [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projektů zůstaly v paměti. Verze 3,5 odebrala starší verze projektů, ale výsledky sestavení byly uchovány v mezipaměti pro pozdější načtení.
+
+Velké projekty často obsahují mnoho dílčích projektů a dalších závislostí, které mohou spotřebovat spoustu systémové paměti v době sestavení. Pokud dojde k poklesu dostupné systémové paměti, může se také snížit výkon systému. Starší verze projektů MSBuild zůstaly v paměti. Verze 3,5 odebrala starší verze projektů, ale výsledky sestavení byly uchovány v mezipaměti pro pozdější načtení.
 
  Verze 4,0 zpracovává tuto správu paměti automaticky a ukládá projekty z nutnosti používat vlastnosti, jako jsou `UnloadProjectsOnCompletion` a `UseResultsCache`.
 
-### <a name="see-also"></a>Viz také:
+### <a name="see-also"></a>Viz také
+
 - [Paralelní sestavení více projektů](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)

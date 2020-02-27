@@ -24,17 +24,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f90a1349771ab67f342a3490874cd422051cac2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 5fe0ce106fc471431d3aac088eb3f45cfb28c564
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595027"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633054"
 ---
 # <a name="mt-task"></a>MT – úloha
+
 Zabalí Nástroj manifest společnosti Microsoft, *Mt. exe*. Další informace najdete v části [Mt. exe](/windows/desktop/SbsCs/mt-exe).
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy **Mt** . Většina parametrů úlohy a několik sad parametrů odpovídá možnosti příkazového řádku.
 
 > [!NOTE]
@@ -63,10 +65,11 @@ Zabalí Nástroj manifest společnosti Microsoft, *Mt. exe*. Další informace n
 |**SuppressDependencyElement**|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, vygeneruje manifest bez prvků závislosti. Pokud je tento parametr `true`, zadejte také parametr úlohy **ManifestFromManagedAssemblyMT** .<br /><br /> Další informace najdete v tématu možnost **/nodependency** v [Mt. exe](/windows/desktop/SbsCs/mt-exe).|
 |**SuppressStartupBanner**|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.<br /><br /> Další informace naleznete v možnosti **/nologo** v [Mt. exe](/windows/desktop/SbsCs/mt-exe).|
 |**TrackerLogDirectory**|Volitelný parametr `String`.<br /><br /> Určuje zprostředkující adresář, ve kterém jsou uložené protokoly sledování pro tento úkol.|
-|**TypeLibraryFile**|Volitelný **řetězcový** parametr.<br /><br /> Určuje název souboru knihovny typů ( *. tlb*). Pokud zadáte tento parametr, zadejte také parametr úlohy **ComponentFileNameMT** .<br /><br /> Další informace najdete v tématu možnost **/TLB** v [Mt. exe](/windows/desktop/SbsCs/mt-exe).|
+|**SouborKnihovnyTypů**|Volitelný **řetězcový** parametr.<br /><br /> Určuje název souboru knihovny typů ( *. tlb*). Pokud zadáte tento parametr, zadejte také parametr úlohy **ComponentFileNameMT** .<br /><br /> Další informace najdete v tématu možnost **/TLB** v [Mt. exe](/windows/desktop/SbsCs/mt-exe).|
 |**UpdateFileHashes**|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, vypočítá hodnotu hash souborů v cestě určené parametrem úlohy **UpdateFileHashesSearchPathMT** a poté aktualizuje hodnotu atributu **hash** prvku **souboru** manifestu pomocí vypočítané hodnoty.<br /><br /> Další informace najdete v tématu možnost **/hashupdate** v [Mt. exe](/windows/desktop/SbsCs/mt-exe). V této tabulce se také zobrazí parametr **UpdateFileHashesSearchPath** .|
 |**UpdateFileHashesSearchPath**|Volitelný parametr `String`.<br /><br /> Určuje cestu hledání, která se použije při aktualizaci hodnot hash souborů. Tento parametr použijte s parametrem úlohy **UpdateFileHashesMT** .<br /><br /> Další informace najdete v parametru **UpdateFileHashes** v této tabulce.|
 |**VerboseOutput**|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, zobrazí podrobné informace o ladění.<br /><br /> Další informace najdete v možnosti **/verbose** v [Mt. exe](/windows/desktop/SbsCs/mt-exe).|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

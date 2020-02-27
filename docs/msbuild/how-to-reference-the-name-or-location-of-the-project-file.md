@@ -16,18 +16,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 739d444fe8ad3951e8b8f2f0026d5d986ea65c52
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2b54a63b135f844ff20b45ffac430662c4df1f19
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75574779"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633834"
 ---
 # <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>Postupy: odkazování na název nebo umístění souboru projektu
-Můžete použít název nebo umístění projektu v samotném souboru projektu, aniž by bylo nutné vytvořit vlastní vlastnost. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] poskytuje vyhrazené vlastnosti, které odkazují na název souboru projektu a další vlastnosti, které se vztahují k projektu. Další informace o vyhrazených vlastnostech naleznete v tématu [vyhrazené a dobře známé vlastnosti nástroje MSBuild](../msbuild/msbuild-reserved-and-well-known-properties.md).
+
+Můžete použít název nebo umístění projektu v samotném souboru projektu, aniž by bylo nutné vytvořit vlastní vlastnost. Nástroj MSBuild poskytuje vyhrazené vlastnosti, které odkazují na název souboru projektu a další vlastnosti, které se vztahují k projektu. Další informace o vyhrazených vlastnostech naleznete v tématu [vyhrazené a dobře známé vlastnosti nástroje MSBuild](../msbuild/msbuild-reserved-and-well-known-properties.md).
 
 ## <a name="use-the-project-properties"></a>Použití vlastností projektu
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] poskytuje některé vyhrazené vlastnosti, které lze použít v souborech projektu bez jejich definování pokaždé. Například vyhrazená vlastnost `MSBuildProjectName` poskytuje odkaz na název souboru projektu. Vyhrazená vlastnost `MSBuildProjectDirectory` poskytuje odkaz na umístění souboru projektu.
+
+ Nástroj MSBuild poskytuje některé vyhrazené vlastnosti, které lze použít v souborech projektu bez jejich definování pokaždé. Například vyhrazená vlastnost `MSBuildProjectName` poskytuje odkaz na název souboru projektu. Vyhrazená vlastnost `MSBuildProjectDirectory` poskytuje odkaz na umístění souboru projektu.
 
 #### <a name="to-use-the-project-properties"></a>Použití vlastností projektu
 
@@ -47,6 +49,7 @@ Můžete použít název nebo umístění projektu v samotném souboru projektu,
 > Rezervované vlastnosti nelze předefinovat v souboru projektu.
 
 ## <a name="example"></a>Příklad
+
  Následující příklad souboru projektu odkazuje na název projektu jako vyhrazená vlastnost k určení názvu výstupu.
 
 ```xml
@@ -75,6 +78,7 @@ Můžete použít název nebo umístění projektu v samotném souboru projektu,
 ```
 
 ## <a name="example"></a>Příklad
+
  Následující příklad souboru projektu používá vyhrazenou vlastnost `MSBuildProjectDirectory` k vytvoření úplné cesty k souboru v umístění souboru projektu.
 
 ```xml
@@ -87,6 +91,9 @@ Můžete použít název nebo umístění projektu v samotném souboru projektu,
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+V příkladu se používá syntaxe [funkce Property](property-functions.md) pro volání statické .NET Framework metody <xref:System.IO.Path.Combine*?displayProperty=fullName>.
+
+## <a name="see-also"></a>Viz také
+
 - [MSBuild](../msbuild/msbuild.md)
 - [Rezervované a dobře známé vlastnosti nástroje MSBuild](../msbuild/msbuild-reserved-and-well-known-properties.md)

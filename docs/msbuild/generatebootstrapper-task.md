@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 660f63f68435f4c4eba8d1c3dfb2438541da4841
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6da773fdf6cd84819ea0e73083995f60e3c17e2d
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589289"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634081"
 ---
 # <a name="generatebootstrapper-task"></a>GenerateBootstrapper – úloha
+
 Poskytuje automatizovaný způsob detekce, stažení a instalace aplikace a jejích požadavků. Slouží jako jediný instalační program, který integruje samostatné instalační programy pro všechny komponenty, které tvoří aplikaci.
 
 ## <a name="task-parameters"></a>Parametry úlohy
+
 Následující popis parametrů úlohy `GenerateBootstrapper`.
 
 - `ApplicationFile`
@@ -76,7 +78,7 @@ Následující popis parametrů úlohy `GenerateBootstrapper`.
   </BootstrapperItem>
   ```
 
-   Atribut `Include` představuje název předpokladu, který by měl být nainstalován. Metadata `ProductName` položky jsou volitelná a modul sestavení ho použije jako uživatelsky přívětivý název, pokud balíček nejde najít. Tyto položky nejsou požadovány [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vstupními parametry, pokud není zadána žádná `ApplicationFile`. Měli byste zahrnout jednu položku pro každý požadavek, který musí být nainstalovaný pro vaši aplikaci.
+   Atribut `Include` představuje název předpokladu, který by měl být nainstalován. Metadata `ProductName` položky jsou volitelná a modul sestavení ho použije jako uživatelsky přívětivý název, pokud balíček nejde najít. Tyto položky nejsou vyžadovány vstupními parametry nástroje MSBuild, pokud není zadána žádná `ApplicationFile`. Měli byste zahrnout jednu položku pro každý požadavek, který musí být nainstalovaný pro vaši aplikaci.
 
    Pokud není zadán parametr `BootstrapperItems` ani `ApplicationFile`, bude chyba sestavení výsledkem.
 
@@ -149,9 +151,11 @@ Následující popis parametrů úlohy `GenerateBootstrapper`.
    Pokud `true`, zaváděcí nástroj provede ověření XSD na zadaných položkách zaváděcího nástroje. Výchozí hodnota tohoto parametru je `false`.
 
 ## <a name="remarks"></a>Poznámky
+
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
 Následující příklad používá úlohu `GenerateBootstrapper` k instalaci aplikace, která musí mít nainstalovanou .NET Framework 2,0 jako předpoklad.
 
 ```xml
@@ -175,6 +179,7 @@ Následující příklad používá úlohu `GenerateBootstrapper` k instalaci ap
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

@@ -12,17 +12,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c55033d253b5c7dfeb2bed968f2418637ca3f0d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1914f709a69dbb120e4439ddceeda8b70ad570b4
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75576053"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633860"
 ---
 # <a name="how-to-exclude-files-from-the-build"></a>Postupy: vyloučení souborů ze sestavení
+
 V souboru projektu můžete použít zástupné znaky k zahrnutí všech souborů do jednoho adresáře nebo vnořené sady adresářů jako vstupů pro sestavení. Může však existovat jeden soubor v adresáři nebo jeden adresář ve vnořené sadě adresářů, které nechcete zahrnout jako vstup pro sestavení. Tento soubor nebo adresář můžete explicitně vyloučit ze seznamu vstupů. V projektu může být také soubor, který chcete zahrnout pouze za určitých podmínek. Můžete explicitně deklarovat podmínky, za kterých je soubor součástí sestavení.
 
 ## <a name="exclude-a-file-or-directory-from-the-inputs-for-a-build"></a>Vyloučení souboru nebo adresáře ze vstupů pro sestavení
+
  Seznamy položek jsou vstupní soubory pro sestavení. Položky, které chcete zahrnout, jsou deklarovány buď samostatně, nebo jako skupiny pomocí atributu `Include`. Příklad:
 
 ```xml
@@ -76,6 +78,7 @@ V souboru projektu můžete použít zástupné znaky k zahrnutí všech soubor�
     > Je nutné zadat cestu pro oba atributy. Použijete-li absolutní cestu k určení umístění souborů v atributu `Include`, je nutné také použít absolutní cestu v atributu `Exclude`; Použijete-li relativní cestu v atributu `Include`, je nutné také použít relativní cestu v atributu `Exclude`.
 
 ## <a name="use-conditions-to-exclude-a-file-or-directory-from-the-inputs-for-a-build"></a>Použití podmínek k vyloučení souboru nebo adresáře ze vstupů pro sestavení
+
  Pokud existují položky, které chcete zahrnout například v sestavení ladění, ale ne v sestavení verze, můžete použít atribut `Condition` k určení podmínek, za kterých se má položka zahrnout.
 
 #### <a name="to-include-the-file-formulavb-only-in-release-builds"></a>Zahrnutí *vzorce souboru. vb* pouze do sestavení vydaných verzí
@@ -89,6 +92,7 @@ V souboru projektu můžete použít zástupné znaky k zahrnutí všech soubor�
     ```
 
 ## <a name="example"></a>Příklad
+
  Následující příklad kódu vytvoří projekt se všemi soubory *. cs* v adresáři s výjimkou *Form2.cs*.
 
 ```xml
@@ -122,7 +126,8 @@ V souboru projektu můžete použít zástupné znaky k zahrnutí všech soubor�
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Položky](../msbuild/msbuild-items.md)
 - [MSBuild](../msbuild/msbuild.md)
 - [Postupy: výběr souborů k sestavení](../msbuild/how-to-select-the-files-to-build.md)

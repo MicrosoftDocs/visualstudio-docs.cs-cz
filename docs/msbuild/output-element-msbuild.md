@@ -18,14 +18,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bcd27951390cf86712f846fada2835c4d87ec7fe
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 90fbd517608c9c36db0b1035f296b9d9402abddd
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594835"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633028"
 ---
 # <a name="output-element-msbuild"></a>Output – element (MSBuild)
+
 Ukládá výstupní hodnoty úkolu do položek a vlastností.
 
  \<projektu > \<Target > \<> \<výstup >
@@ -39,6 +40,7 @@ Ukládá výstupní hodnoty úkolu do položek a vlastností.
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -51,15 +53,17 @@ Ukládá výstupní hodnoty úkolu do položek a vlastností.
 |`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 | Prvek | Popis |
 | - | - |
-| [Úloha](../msbuild/task-element-msbuild.md) | Vytvoří a spustí instanci úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| [Úkol](../msbuild/task-element-msbuild.md) | Vytvoří a spustí instanci úlohy MSBuild. |
 
 ## <a name="example"></a>Příklad
+
  Následující příklad kódu ukazuje spouštěný `Csc` úkol uvnitř elementu `Target`. Položky a vlastnosti předané parametrům úlohy jsou deklarovány mimo rozsah tohoto příkladu. Hodnota z výstupního parametru `OutputAssembly` je uložena v položce `FinalAssemblyName` a hodnota z `BuildSucceeded` výstupního parametru je uložena ve vlastnosti `BuildWorked`. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
 
 ```xml
@@ -79,6 +83,7 @@ Ukládá výstupní hodnoty úkolu do položek a vlastností.
 </Target>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

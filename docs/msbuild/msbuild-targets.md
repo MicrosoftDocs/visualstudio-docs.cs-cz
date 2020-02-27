@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: afa29a2fa3d853e61dbbc26c01d389e57116a1a5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0b3fcea8d073b4c40685d41b7432f1e24662a7ad
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593847"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633184"
 ---
 # <a name="msbuild-targets"></a>Cíle nástroje MSBuild
 
@@ -31,7 +31,7 @@ Cílí na seskupení úkolů v určitém pořadí a umožňuje procesu sestaven�
 </Target>
 ```
 
- Podobně jako vlastnosti MSBuild lze cíle předefinovat. Například
+ Podobně jako vlastnosti MSBuild lze cíle předefinovat. Například:
 
 ```xml
 <Target Name="AfterBuild" >
@@ -68,7 +68,7 @@ Podrobnosti a další informace o cílové objednávce sestavení naleznete v t�
 
 ## <a name="target-batching"></a>Dávkování cíle
 
-Cílový element může mít atribut `Outputs`, který určuje metadata ve formuláři%(\<metadata >). V takovém případě nástroj MSBuild spustí cíl jednou pro každou jedinečnou hodnotu metadat, seskupení nebo dávkování položek, které mají tuto hodnotu metadat. Například
+Cílový element může mít atribut `Outputs`, který určuje metadata ve formuláři%(\<metadata >). V takovém případě nástroj MSBuild spustí cíl jednou pro každou jedinečnou hodnotu metadat, seskupení nebo dávkování položek, které mají tuto hodnotu metadat. Například:
 
 ```xml
 <ItemGroup>
@@ -105,6 +105,7 @@ Reference: 4.0
  Pokud jsou všechny výstupní položky aktuální, nástroj MSBuild přeskočí cíl, což významně zlepšuje rychlost sestavení. Tento postup se nazývá přírůstkové sestavení cíle. Pokud jsou pouze některé soubory aktuální, nástroj MSBuild spustí cíl bez aktuálnosti položek. Toto se nazývá částečné přírůstkové sestavení cíle. Další informace naleznete v tématu [přírůstkové sestavení](../msbuild/incremental-builds.md).
 
 ## <a name="default-build-targets"></a>Výchozí cíle sestavení
+
 Následující seznam obsahuje veřejné cíle v Microsoft. Common. CurrentVersion. targets.
 
 ```
@@ -1011,7 +1012,7 @@ This target gathers the Redist folders from the SDKs which have been resolved.
     DependsOnTargets="$(SDKRedistOutputGroupDependsOn)"/>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
 - [Postupy: použití stejného cíle ve více souborech projektu](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)

@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d90e6c94d07b73e79d793982944bca395a562df2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6861fee8691c32415111347ab673f9e48bfb9e11
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593470"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634588"
 ---
 # <a name="al-assembly-linker-task"></a>AL (Assembly Linker) – úloha
-Úloha AL zalomí *Al. exe*, který je distribuován s [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]. Tento nástroj Assembly Linker slouží k vytvoření sestavení s manifestem z jednoho nebo více souborů, které jsou buď moduly, nebo soubory prostředků. Kompilátory a vývojová prostředí mohou již tyto možnosti poskytovat, takže často není nutné tuto úlohu používat přímo. Linker sestavení je nejužitečnější vývojářům, kteří potřebují vytvořit jedno sestavení z více souborů komponenty, jako jsou například ty, které mohou být vytvořeny z vývoje smíšeného jazyka. Tato úloha nespojuje moduly do jednoho souboru sestavení; aby se výsledné sestavení správně načetlo, musí být jednotlivé moduly stále distribuované a dostupné. Další informace o *Al. exe*naleznete v tématu [Al. exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker).
+
+Úloha AL balí *Al. exe*, který je distribuován se sadou Windows Software Development Kit (SDK). Tento nástroj Assembly Linker slouží k vytvoření sestavení s manifestem z jednoho nebo více souborů, které jsou buď moduly, nebo soubory prostředků. Kompilátory a vývojová prostředí mohou již tyto možnosti poskytovat, takže často není nutné tuto úlohu používat přímo. Linker sestavení je nejužitečnější vývojářům, kteří potřebují vytvořit jedno sestavení z více souborů komponenty, jako jsou například ty, které mohou být vytvořeny z vývoje smíšeného jazyka. Tato úloha nespojuje moduly do jednoho souboru sestavení; aby se výsledné sestavení správně načetlo, musí být jednotlivé moduly stále distribuované a dostupné. Další informace o *Al. exe*naleznete v tématu [Al. exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker).
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy `AL`.
 
 | Parametr | Popis |
@@ -52,26 +54,28 @@ ms.locfileid: "75593470"
 | `LinkResources` | Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Propojí zadané soubory prostředků se sestavením. Prostředek se stal součástí sestavení, ale soubor se nezkopíruje. K položkám předaným do tohoto parametru můžou být připojená volitelná metadata, která se nazývají `LogicalName`, `Target`a `Access`. Metadata `LogicalName` se používají k určení interního identifikátoru prostředku. `Target` metadata lze zadat cestu a název souboru, do kterého úloha kopíruje soubor, poté zkompiluje tento nový soubor do sestavení. Metadata `Access` lze nastavit na `private`, aby bylo možné prostředek zviditelnit jiným sestavením. Další informace naleznete v dokumentaci k možnosti `/link[resource]` v [Al. exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker). |
 | `MainEntryPoint` | Volitelný parametr `String`.<br /><br /> Určuje plně kvalifikovaný název (*Class. Method*) metody, která se má použít jako vstupní bod při převodu modulu na spustitelný soubor. Tento parametr odpovídá možnosti `/main` v [Al. exe (linker sestavení)](/dotnet/framework/tools/al-exe-assembly-linker). |
 | `OutputAssembly` | Požadovaný výstupní parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje název souboru vygenerovaného tímto úkolem. Tento parametr odpovídá možnosti `/out` v [Al. exe (linker sestavení)](/dotnet/framework/tools/al-exe-assembly-linker). |
-| `Platform` | Volitelný parametr `String`.<br /><br /> Omezuje platformu, na které se tento kód může spustit; musí se jednat o jednu z `x86`, `Itanium`, `x64`nebo `anycpu`. Výchozí hodnota je `anycpu`. Tento parametr odpovídá možnosti `/platform` v [Al. exe (linker sestavení)](/dotnet/framework/tools/al-exe-assembly-linker). |
+| `Platform` | Volitelný parametr `String`.<br /><br /> Omezuje platformu, na které se tento kód může spustit; musí se jednat o jednu z `x86`, `Itanium`, `x64`nebo `anycpu`. Výchozí formát je `anycpu`. Tento parametr odpovídá možnosti `/platform` v [Al. exe (linker sestavení)](/dotnet/framework/tools/al-exe-assembly-linker). |
 | `ProductName` | Volitelný parametr `String`.<br /><br /> Určuje řetězec pro pole `Product` v sestavení. Další informace naleznete v dokumentaci k možnosti `/prod[uct]` v [Al. exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker). |
 | `ProductVersion` | Volitelný parametr `String`.<br /><br /> Určuje řetězec pro pole `ProductVersion` v sestavení. Další informace naleznete v dokumentaci k možnosti `/productv[ersion]` v [Al. exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker). |
 | `ResponseFiles` | Volitelný parametr `String[]`.<br /><br /> Určuje soubory odezvy, které obsahují další možnosti, které mají být před linkerem sestavení předávány. |
 | `SdkToolsPath` | Volitelný parametr `String`.<br /><br /> Určuje cestu k nástrojům sady SDK, jako je Resgen. exe. |
 | `SourceModules` | Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Jeden nebo více modulů, které mají být zkompilovány do sestavení. Moduly budou uvedeny v manifestu výsledného sestavení a bude stále muset být distribuován a k dispozici, aby bylo sestavení načteno. Položky předané do tohoto parametru mohou mít další metadata s názvem `Target`, která určuje cestu a název souboru, do kterého úloha kopíruje soubor, poté zkompiluje tento nový soubor do sestavení. Další informace naleznete v dokumentaci k nástroji [Al. exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker). Tento parametr odpovídá seznamu modulů předaných do souboru *Al. exe* bez konkrétního přepínače. |
-| `TargetType` | Volitelný parametr `String`.<br /><br /> Určuje formát výstupního souboru: `library` (knihovna kódu), `exe` (Konzolová aplikace) nebo `win` (aplikace založené na systému Windows). Výchozí hodnota je `library`. Tento parametr odpovídá možnosti `/t[arget]` v [Al. exe (linker sestavení)](/dotnet/framework/tools/al-exe-assembly-linker). |
+| `TargetType` | Volitelný parametr `String`.<br /><br /> Určuje formát výstupního souboru: `library` (knihovna kódu), `exe` (Konzolová aplikace) nebo `win` (aplikace založené na systému Windows). Výchozí formát je `library`. Tento parametr odpovídá možnosti `/t[arget]` v [Al. exe (linker sestavení)](/dotnet/framework/tools/al-exe-assembly-linker). |
 | `TemplateFile` | Volitelný parametr `String`.<br /><br /> Určuje sestavení, ze kterého mají být děděna všechna metadata sestavení, s výjimkou pole culture. Zadané sestavení musí mít silný název.<br /><br /> Sestavení, které vytvoříte s parametrem `TemplateFile`, bude satelitní sestavení. Tento parametr odpovídá možnosti `/template` v [Al. exe (linker sestavení)](/dotnet/framework/tools/al-exe-assembly-linker). |
 | `Timeout` | Volitelný parametr `Int32`.<br /><br /> Určuje dobu v milisekundách, po jejímž uplynutí je ukončen spustitelný soubor úlohy. Výchozí hodnota je `Int.MaxValue`, což značí, že není k dispozici žádný časový interval. |
 | `Title` | Volitelný parametr `String`.<br /><br /> Určuje řetězec pro pole `Title` v sestavení. Další informace naleznete v dokumentaci k možnosti `/title` v [Al. exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker). |
-| `ToolPath` | Volitelný parametr `String`.<br /><br /> Určuje umístění, ze kterého bude úloha načítat základní spustitelný soubor (Al. exe). Pokud tento parametr není zadán, úloha použije cestu instalace sady SDK odpovídající verzi rozhraní .NET Framework, která je spuštěna [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| `ToolPath` | Volitelný parametr `String`.<br /><br /> Určuje umístění, ze kterého bude úloha načítat základní spustitelný soubor (Al. exe). Pokud tento parametr není zadán, úloha použije cestu instalace sady SDK odpovídající verzi rozhraní .NET Framework, která spouští nástroj MSBuild. |
 | `Trademark` | Volitelný parametr `String`.<br /><br /> Určuje řetězec pro pole `Trademark` v sestavení. Další informace naleznete v dokumentaci k možnosti `/trade[mark]` v [Al. exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker). |
 | `Version` | Volitelný parametr `String`.<br /><br /> Určuje informace o verzi pro toto sestavení. Formát řetězce je *hlavní_verze. podverze. sestavení. revize*. Výchozí hodnota je 0. Další informace naleznete v dokumentaci k možnosti `/v[ersion]` v [Al. exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker). |
 | `Win32Icon` | Volitelný parametr `String`.<br /><br /> Vloží soubor *. ico* do sestavení. Soubor *. ico* poskytne výstupnímu souboru požadovaný vzhled v Průzkumníkovi souborů. Tento parametr odpovídá možnosti `/win32icon` v [Al. exe (linker sestavení)](/dotnet/framework/tools/al-exe-assembly-linker). |
 | `Win32Resource` | Volitelný parametr `String`.<br /><br /> Vloží prostředek systému Win32 (soubor *. res* ) do výstupního souboru. Další informace naleznete v dokumentaci k možnosti `/win32res` v [Al. exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker). |
 
 ## <a name="remarks"></a>Poznámky
+
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.ToolTaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.ToolTask> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [ToolTaskExtension – Base Class](../msbuild/tooltaskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
  Následující příklad vytvoří sestavení se zadanými možnostmi.
 
 ```xml
@@ -91,6 +95,7 @@ ms.locfileid: "75593470"
 </AL>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 * [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 * [Úlohy](../msbuild/msbuild-tasks.md)

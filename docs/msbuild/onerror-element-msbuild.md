@@ -18,14 +18,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2ddf970225d96291f76935838a743ba358eff0f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 18edfe06a4f2cb98fcb41e93c920b03c53daea8c
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594874"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633080"
 ---
 # <a name="onerror-element-msbuild"></a>Error – element (MSBuild)
+
 Způsobí provedení jednoho nebo více cílů, pokud je atribut `ContinueOnError` `false` pro neúspěšnou úlohu.
 
  \<projektu > \<Target > \<chyba >
@@ -38,6 +39,7 @@ Způsobí provedení jednoho nebo více cílů, pokud je atribut `ContinueOnErro
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -48,21 +50,24 @@ Způsobí provedení jednoho nebo více cílů, pokud je atribut `ContinueOnErro
 |`ExecuteTargets`|Požadovaný atribut.<br /><br /> Cíle, které se mají provést, pokud se úloha nezdařila Více cílů oddělte středníkem. V zadaném pořadí je spuštěno více cílů.|
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 | Prvek | Popis |
 | - | - |
-| [Cíl](../msbuild/target-element-msbuild.md) | Element kontejneru pro úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| [Cíl](../msbuild/target-element-msbuild.md) | Element kontejneru pro úlohy MSBuild |
 
 ## <a name="remarks"></a>Poznámky
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] spustí prvek `OnError` v případě, že jeden z úkolů `Target` elementu se nezdařil s atributem `ContinueOnError` nastaveným na `ErrorAndStop` (nebo `false`). V případě, že se úloha nezdařila, cíle zadané v atributu `ExecuteTargets` jsou provedeny. Pokud je v cíli více než jeden `OnError` element, `OnError` prvky jsou spouštěny postupně, pokud se úloha nezdařila.
+
+ Nástroj MSBuild spustí element `OnError`, pokud některý z úkolů `Target` elementu se nezdařil s atributem `ContinueOnError` nastaveným na `ErrorAndStop` (nebo `false`). V případě, že se úloha nezdařila, cíle zadané v atributu `ExecuteTargets` jsou provedeny. Pokud je v cíli více než jeden `OnError` element, `OnError` prvky jsou spouštěny postupně, pokud se úloha nezdařila.
 
  Informace o atributu `ContinueOnError` naleznete v tématu [Task element (MSBuild)](../msbuild/task-element-msbuild.md). Informace o cílech najdete v tématu [cíle](../msbuild/msbuild-targets.md).
 
 ## <a name="example"></a>Příklad
- Následující kód spustí `TaskOne` a `TaskTwo` úkoly. Pokud `TaskOne` dojde k chybě, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vyhodnotí prvek `OnError` a provede cíl `OtherTarget`.
+
+ Následující kód spustí `TaskOne` a `TaskTwo` úkoly. Pokud `TaskOne` selžou, MSBuild vyhodnocuje prvek `OnError` a spustí cíl `OtherTarget`.
 
 ```xml
 <Target Name="ThisTarget">
@@ -74,6 +79,7 @@ Způsobí provedení jednoho nebo více cílů, pokud je atribut `ContinueOnErro
 </Target>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Cíle](../msbuild/msbuild-targets.md)

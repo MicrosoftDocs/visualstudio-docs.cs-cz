@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84b9f9d9d92815d1719f8ba43f4014ef9598e0c4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2e95b59b4ccc0bd2df89e45512a5bdd05c027556
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75567135"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631091"
 ---
 # <a name="warning-task"></a>Warning – úloha
+
 Zaznamená upozornění během sestavení na základě vyhodnoceného podmíněného příkazu.
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy `Warning`.
 
 | Parametr | Popis |
@@ -36,16 +38,18 @@ Zaznamená upozornění během sestavení na základě vyhodnoceného podmíněn
 | `Code` | Volitelný parametr `String`.<br /><br /> Kód upozornění, který se má přidružit k upozornění. |
 | `File` | Volitelný parametr `String`.<br /><br /> Určuje relevantní soubor, pokud existuje. Pokud není zadán žádný soubor, bude použit soubor obsahující varovná úloha. |
 | `HelpKeyword` | Volitelný parametr `String`.<br /><br /> Klíčové slovo Help pro přidružení k upozornění |
-| `Text` | Volitelný parametr `String`.<br /><br /> Text upozornění, který [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] protokoluje, je-li parametr `Condition` vyhodnocen jako `true`. |
+| `Text` | Volitelný parametr `String`.<br /><br /> Text upozornění, který nástroj MSBuild zaznamená, pokud je parametr `Condition` vyhodnocen jako `true`. |
 
 ## <a name="remarks"></a>Poznámky
- Úloha `Warning` umožňuje projektům [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] kontrolovat přítomnost požadované konfigurace nebo vlastnosti před pokračováním v dalším kroku sestavení.
+
+ Úloha `Warning` umožňuje projektům MSBuild kontrolovat přítomnost požadované konfigurace nebo vlastnosti před pokračováním v dalším kroku sestavení.
 
  Pokud je parametr `Condition` úlohy `Warning` vyhodnocen jako `true`, je hodnota parametru `Text` protokolována a sestavení bude nadále spuštěno. Pokud parametr `Condition` neexistuje, text upozornění se zaznamená do protokolu. Další informace o protokolování naleznete v tématu [získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
 
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
  Následující příklad kódu kontroluje vlastnosti, které jsou nastaveny na příkazovém řádku. Pokud nejsou nastaveny žádné vlastnosti, projekt vyvolá událost upozornění a zaznamená hodnotu parametru `Text` `Warning` úlohy.
 
 ```xml
@@ -62,6 +66,7 @@ Zaznamená upozornění během sestavení na základě vyhodnoceného podmíněn
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Získat protokoly sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

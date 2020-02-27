@@ -19,15 +19,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bb7c49e4f3dc86594c8a3211bacb538d3f10c4f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: df9eff3e941cc21aaa71c2779a72084e12e8e590
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597435"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632976"
 ---
 # <a name="project-element-msbuild"></a>Project – element (MSBuild)
-Požadovaný kořenový element souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].
+
+Požadovaný kořenový element souboru projektu MSBuild.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,13 +51,14 @@ Požadovaný kořenový element souboru projektu [!INCLUDE[vstecmsbuild](../exte
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 | Atribut | Popis |
 |------------------------| - |
-| `DefaultTargets` | Nepovinný atribut.<br /><br /> Výchozí cíl nebo cíle, které mají být vstupním bodem sestavení, pokud nebyl zadán žádný cíl. Více cílů je středníkem (;) oddělených.<br /><br /> Pokud není zadán žádný výchozí cíl buď v atributu `DefaultTargets`, nebo v příkazovém řádku [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], modul provede první cíl v souboru projektu po vyhodnocení [importovaných](../msbuild/import-element-msbuild.md) prvků. |
+| `DefaultTargets` | Nepovinný atribut.<br /><br /> Výchozí cíl nebo cíle, které mají být vstupním bodem sestavení, pokud nebyl zadán žádný cíl. Více cílů je středníkem (;) oddělených.<br /><br /> Pokud není zadán žádný výchozí cíl buď v atributu `DefaultTargets`, nebo v příkazovém řádku MSBuild, modul provede první cíl v souboru projektu po vyhodnocení [importovaných](../msbuild/import-element-msbuild.md) prvků. |
 | `InitialTargets` | Nepovinný atribut.<br /><br /> Počáteční cíl nebo cíle, které mají být spuštěny před cíli zadanými v atributu `DefaultTargets` nebo na příkazovém řádku. Více cílů je středníkem (`;`) odděleno. Pokud je `InitialTargets`definováno více importovaných souborů, budou všechny uvedené cíle spuštěny v pořadí, v jakém byly naimportovány. |
 | `Sdk` | Nepovinný atribut. <br /><br /> Název sady SDK a volitelná verze, která se má použít k vytvoření implicitních příkazů importu, které jsou přidány do souboru. proj. Pokud není zadána žádná verze, MSBuild se pokusí přeložit výchozí verzi.  Například `<Project Sdk="Microsoft.NET.Sdk" />` nebo `<Project Sdk="My.Custom.Sdk/1.0.0" />`. |
 | `ToolsVersion` | Nepovinný atribut.<br /><br /> Verze sady nástrojů MSBuild používá k určení hodnot pro $ (MSBuildBinPath) a $ (MSBuildToolsPath). |
@@ -69,19 +71,21 @@ Požadovaný kořenový element souboru projektu [!INCLUDE[vstecmsbuild](../exte
 | - | - |
 | [Výběrem](../msbuild/choose-element-msbuild.md) | Volitelný element.<br /><br /> Vyhodnotí podřízené prvky a vybere jednu sadu `ItemGroup` prvků a/nebo `PropertyGroup` prvky k vyhodnocení. |
 | [Import](../msbuild/import-element-msbuild.md) | Volitelný element.<br /><br /> Umožňuje souboru projektu importovat jiný soubor projektu. V projektu může být nula nebo více `Import` prvků. |
-| [ImportGroup](../msbuild/importgroup-element.md) | Volitelný element.<br /><br /> Obsahuje kolekci `Import` prvků, které jsou seskupeny pod volitelnou podmínkou. |
+| [ImportGroup –](../msbuild/importgroup-element.md) | Volitelný element.<br /><br /> Obsahuje kolekci `Import` prvků, které jsou seskupeny pod volitelnou podmínkou. |
 | [ItemGroup](../msbuild/itemgroup-element-msbuild.md) | Volitelný element.<br /><br /> Prvek seskupení pro jednotlivé položky. Položky jsou určeny pomocí elementu [Item](../msbuild/item-element-msbuild.md) . V projektu může být nula nebo více `ItemGroup` prvků. |
 | [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) | Volitelný element.<br /><br /> Umožňuje definovat sadu definic položek, což jsou hodnoty metadat, které jsou aplikovány na všechny položky v projektu, ve výchozím nastavení. ItemDefinitionGroup nahrazuje nutnost použít úlohu `CreateItem` a úlohu `CreateProperty`. |
-| [ProjectExtensions](../msbuild/projectextensions-element-msbuild.md) | Volitelný element.<br /><br /> Poskytuje způsob, jak uchovávat ne[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] informace v souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. V projektu může být nula nebo jeden `ProjectExtensions` elementů. |
+| [ProjectExtensions –](../msbuild/projectextensions-element-msbuild.md) | Volitelný element.<br /><br /> Poskytuje způsob, jak uchovávat informace mimo nástroj MSBuild v souboru projektu MSBuild. V projektu může být nula nebo jeden `ProjectExtensions` elementů. |
 | [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) | Volitelný element.<br /><br /> Prvek seskupení pro jednotlivé vlastnosti. Vlastnosti jsou určeny pomocí elementu [Property](../msbuild/property-element-msbuild.md) . V projektu může být nula nebo více `PropertyGroup` prvků. |
-| [Sdk](../msbuild/sdk-element-msbuild.md) | Volitelný element.<br /><br /> Odkazuje na sadu SDK [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projektu.  Tento element lze použít jako alternativu k atributu SDK. |
-| [Cíl](../msbuild/target-element-msbuild.md) | Volitelný element.<br /><br /> Obsahuje sadu úloh, které [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] provádět sekvenčně. Úkoly jsou určeny pomocí elementu [Task](../msbuild/task-element-msbuild.md) . V projektu může být nula nebo více `Target` prvků. |
-| [UsingTask](../msbuild/usingtask-element-msbuild.md) | Volitelný element.<br /><br /> Poskytuje způsob, jak zaregistrovat úkoly v [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. V projektu může být nula nebo více `UsingTask` prvků. |
+| [Sadě](../msbuild/sdk-element-msbuild.md) | Volitelný element.<br /><br /> Odkazuje na sadu SDK projektu MSBuild.  Tento element lze použít jako alternativu k atributu SDK. |
+| [Cíl](../msbuild/target-element-msbuild.md) | Volitelný element.<br /><br /> Obsahuje sadu úloh, které může nástroj MSBuild spustit sekvenčně. Úkoly jsou určeny pomocí elementu [Task](../msbuild/task-element-msbuild.md) . V projektu může být nula nebo více `Target` prvků. |
+| [UsingTask](../msbuild/usingtask-element-msbuild.md) | Volitelný element.<br /><br /> Poskytuje způsob, jak registrovat úlohy v nástroji MSBuild. V projektu může být nula nebo více `UsingTask` prvků. |
 
 ### <a name="parent-elements"></a>Nadřazené prvky
- Žádné
 
-## <a name="see-also"></a>Viz také:
+ Žádné.
+
+## <a name="see-also"></a>Viz také
+
 - [Postupy: určení prvního cíle sestavení](../msbuild/how-to-specify-which-target-to-build-first.md)
 - [Reference k příkazovému řádku](../msbuild/msbuild-command-line-reference.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

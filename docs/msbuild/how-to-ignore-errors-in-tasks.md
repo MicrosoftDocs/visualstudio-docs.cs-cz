@@ -9,17 +9,19 @@ ms.assetid: e2f1ca4f-787b-44bd-bc64-81a036025e96
 author: ghogen
 ms.author: ghogen
 manager: jillfra
-ms.openlocfilehash: be8b4a6845e8fd14a0649f4134bcc26d8e1ad08e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9899b7367e6ae9255755ae04fe06d8c8733043ae
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75574948"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633821"
 ---
 # <a name="how-to-ignore-errors-in-tasks"></a>Postupy: ignorování chyb v úlohách
+
 Někdy je vhodné, aby bylo sestavení odolné vůči chybám v určitých úlohách. Pokud tyto nekritické úkoly selžou, chcete, aby sestavení pokračovalo, protože stále může vytvořit požadovaný výstup. Například pokud projekt používá úlohu `SendMail` k odeslání e-mailové zprávy po sestavení každé součásti, může být vhodné, aby sestavení bylo přijatelné i v případě, že poštovní servery nejsou k dispozici a nelze odeslat stavové zprávy. Nebo například pokud jsou během sestavení obvykle smazány mezilehlé soubory, může být vhodné, aby sestavení bylo přijatelné i v případě, že tyto soubory nelze odstranit.
 
 ## <a name="use-the-continueonerror-attribute"></a>Použití atributu ContinueOnError
+
 Atribut `ContinueOnError` elementu `Task` určuje, zda je sestavení zastaveno nebo pokračuje, když dojde k selhání úlohy. Tento atribut také určuje, zda jsou chyby považovány za chyby nebo upozornění, když sestavení pokračuje.
 
 Atribut `ContinueOnError` může obsahovat jednu z následujících hodnot:
@@ -43,6 +45,7 @@ Použijte atribut `ContinueOnError` úlohy. Příklad:
 ```
 
 ## <a name="example"></a>Příklad
+
 Následující příklad kódu ukazuje, že cílový `Build` stále běží a sestavení je považováno za úspěšné, i když se úloha `Delete` nezdařila.
 
 ```xml
@@ -61,7 +64,8 @@ Následující příklad kódu ukazuje, že cílový `Build` stále běží a se
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [MSBuild](../msbuild/msbuild.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

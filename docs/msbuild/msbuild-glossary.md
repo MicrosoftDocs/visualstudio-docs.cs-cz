@@ -8,18 +8,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3d5f9e402750978b1201c6b2a5b1ef0659e8789
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8f20fdb4cd809e422bc33535f3143b45db99842f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593665"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633340"
 ---
 # <a name="msbuild-glossary"></a>Glosář nástroje MSBuild
 
 Tyto výrazy slouží k popisu Microsoft Build Engine (MSBuild) a jeho součástí.
 
-## <a name="glossary"></a>Slovníček
+## <a name="glossary"></a>Glosář
 
 AssemblyFoldersEx\
 Umístění v registru, kde dodavatelé třetích stran uchovávají cesty pro každou verzi rozhraní .NET Framework, které podporují, kde řešení pro dobu návrhu může vyhledat referenční sestavení.
@@ -88,10 +88,10 @@ soubor projektu \
 Soubor projektu obsahuje skript MSBuild, který řídí sestavení. Soubory projektu mají obvykle příponu souboru, která končí na *proj*, jako je například *. csproj* nebo *. vbproj*. Soubory projektu mohou importovat soubory vlastností a cílové soubory.
 
 majetek
-Vlastnost je pár klíč-hodnota, který slouží k řízení procesu sestavení. Další informace najdete v tématu [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
+Vlastnost je pár klíč-hodnota, který slouží k řízení procesu sestavení. Další informace najdete v tématu [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
 
 vlastnost, prostředí \
-Vlastnost prostředí je vlastnost, která se automaticky inicializuje na hodnotu systémové proměnné prostředí, která má stejný název. Další informace najdete v tématu [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
+Vlastnost prostředí je vlastnost, která se automaticky inicializuje na hodnotu systémové proměnné prostředí, která má stejný název. Další informace najdete v tématu [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
 
 soubor vlastností \
 Soubor vlastností je soubor projektu, který obsahuje převážně skupiny vlastností a skupiny položek, které sestavují sestavení. Podle konvence má Přípona souboru *. props*. Soubory vlastností jsou obvykle importovány na začátek přidružených souborů projektu.
@@ -100,23 +100,23 @@ vlastnost, funkce \
 Funkce vlastnosti je systémová vlastnost nebo metoda, která se dá použít k vyhodnocení skriptů MSBuild. Metody vlastností lze použít ke čtení systémového času, porovnávání řetězců, porovnávání regulárních výrazů a provádění dalších akcí. Další informace najdete v tématu [funkce vlastností](../msbuild/property-functions.md).
 
 funkce Property, vnořená \
-Funkce vlastností mohou být kombinovány pro vytvoření složitějších funkcí. Například
+Funkce vlastností mohou být kombinovány pro vytvoření složitějších funkcí. Například:
 
  `$([MSBuild]::BitwiseAnd(32,   $([System.IO.File]::GetAttributes(tempFile))))`
 
 Další informace najdete v tématu [funkce vlastností](../msbuild/property-functions.md).
 
 vlastnost, Global \
-Globální vlastnost je pár klíč-hodnota, který slouží k řízení procesu sestavení. Globální vlastnosti jsou nastaveny na příkazovém řádku nebo pomocí atributu `Properties` [úlohy MSBuild](../msbuild/msbuild-task.md)a nelze je změnit během fáze hodnocení sestavení. Další informace najdete v tématu [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
+Globální vlastnost je pár klíč-hodnota, který slouží k řízení procesu sestavení. Globální vlastnosti jsou nastaveny na příkazovém řádku nebo pomocí atributu `Properties` [úlohy MSBuild](../msbuild/msbuild-task.md)a nelze je změnit během fáze hodnocení sestavení. Další informace najdete v tématu [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
 
 vlastnost, místní \
 Místní vlastnost je pár klíč-hodnota, který slouží k řízení procesu sestavení. Tento termín slouží pouze k odlišení vlastnosti, která není globálních vlastností.
 
 vlastnost, registr \
-Vlastnost registru obsahuje hodnotu, která je nastavena pomocí speciální syntaxe, která čte hodnotu podklíče systémového registru. Další informace najdete v tématu [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
+Vlastnost registru obsahuje hodnotu, která je nastavena pomocí speciální syntaxe, která čte hodnotu podklíče systémového registru. Další informace najdete v tématu [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
 
 vlastnost, rezervovaná \
-Vyhrazená vlastnost je pár klíč-hodnota, který slouží k řízení procesu sestavení. Vyhrazené vlastnosti jsou automaticky inicializovány na předdefinované hodnoty. Další informace najdete v tématu [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
+Vyhrazená vlastnost je pár klíč-hodnota, který slouží k řízení procesu sestavení. Vyhrazené vlastnosti jsou automaticky inicializovány na předdefinované hodnoty. Další informace najdete v tématu [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
 
 projekt – rozsah \
 Obor projektu popisuje objekt MSBuild, například místní vlastnost, která je viditelná pouze v obsahujícím souboru projektu a na všech projektech, které importuje.
@@ -161,7 +161,7 @@ soubor cílů \
 Soubor cílů je soubor projektu, který obsahuje hlavně cíle a úlohy, které sestavují sestavení. Podle konvence má příponu souboru *. targets*. Cílové soubory jsou obvykle importovány na konci přidružených souborů projektu.
 
 hybn
-Úlohy jsou jednotky spustitelného kódu, který [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projekty používají k provádění operací sestavení. Například úloha může kompilovat vstupní soubory nebo spustit externí nástroj. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
+Úlohy jsou jednotky spustitelného kódu, který projekty MSBuild používají k provádění operací sestavení. Například úloha může kompilovat vstupní soubory nebo spustit externí nástroj. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
 
 převedení
 Transformace je převod 1:1 na jednu kolekci položek na jiný. Kromě povolení projektu pro převod kolekcí položek umožňuje transformace cíli identifikovat přímé mapování mezi vstupy a výstupy. Další informace najdete v tématu [transformace](../msbuild/msbuild-transforms.md).
@@ -169,6 +169,6 @@ Transformace je převod 1:1 na jednu kolekci položek na jiný. Kromě povolení
 dobře známá metadata \
 Podívejte *se na metadata, dobře známá*.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [MSBuild](../msbuild/msbuild.md)

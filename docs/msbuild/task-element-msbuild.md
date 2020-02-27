@@ -16,15 +16,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76f808c14b8459abfb3bf9c531cfff496932836c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d17dde15fdfcc00890338eadf603f02352697363
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566355"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631871"
 ---
 # <a name="task-element-msbuild"></a>Task – element (MSBuild)
-Vytvoří a spustí instanci úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Název elementu je určen názvem vytvářeného úkolu.
+
+Vytvoří a spustí instanci úlohy MSBuild. Název elementu je určen názvem vytvářeného úkolu.
 
  \<projektu > \<Target >
 
@@ -39,6 +40,7 @@ Vytvoří a spustí instanci úlohy [!INCLUDE[vstecmsbuild](../extensibility/int
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -53,20 +55,22 @@ Vytvoří a spustí instanci úlohy [!INCLUDE[vstecmsbuild](../extensibility/int
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[Output](../msbuild/output-element-msbuild.md)|Ukládá výstupy z úkolu v souboru projektu. V úloze může být nula nebo více `Output` prvků.|
+|[Výstup](../msbuild/output-element-msbuild.md)|Ukládá výstupy z úkolu v souboru projektu. V úloze může být nula nebo více `Output` prvků.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 | Prvek | Popis |
 | - | - |
-| [Cíl](../msbuild/target-element-msbuild.md) | Element kontejneru pro úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| [Cíl](../msbuild/target-element-msbuild.md) | Element kontejneru pro úlohy MSBuild |
 
 ## <a name="remarks"></a>Poznámky
- Prvek `Task` v souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vytvoří instanci úlohy, nastaví v ní vlastnosti a provede ji. Element `Output` ukládá výstupní parametry do vlastností nebo položek, které mají být použity jinde v souboru projektu.
+
+ Element `Task` v souboru projektu MSBuild vytvoří instanci úlohy, nastaví v ní vlastnosti a provede ji. Element `Output` ukládá výstupní parametry do vlastností nebo položek, které mají být použity jinde v souboru projektu.
 
  Pokud jsou v nadřazené `Target` elementu úlohy nějaké prvky [Errors](../msbuild/onerror-element-msbuild.md) , budou i nadále vyhodnoceny, pokud se úloha nezdaří a `ContinueOnError` má hodnotu `false`. Další informace o úlohách najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
 
 ## <a name="example"></a>Příklad
+
  Následující příklad kódu vytvoří instanci třídy [úlohy CSC](../msbuild/csc-task.md) , nastaví šest vlastností a spustí úlohu. Po spuštění se hodnota vlastnosti `OutputAssembly` objektu umístí do seznamu položek s názvem `FinalAssemblyName`.
 
 ```xml
@@ -83,7 +87,8 @@ Vytvoří a spustí instanci úlohy [!INCLUDE[vstecmsbuild](../extensibility/int
 </Target>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

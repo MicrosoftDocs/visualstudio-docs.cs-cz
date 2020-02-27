@@ -18,17 +18,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5bfe09fec169495afa5b58a41f7c9f1b9bacfad
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 21e3b6554a9d6e0024cc21fd898962177acfffa7
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573466"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633626"
 ---
 # <a name="itemdefinitiongroup-element-msbuild"></a>ItemDefinitionGroup – Element (MSBuild)
+
 Element `ItemDefinitionGroup` umožňuje definovat sadu definic položek, což jsou hodnoty metadat, které jsou aplikovány na všechny položky v projektu, ve výchozím nastavení. ItemDefinitionGroup nahrazuje nutnost použití [úlohy CreateItem –](../msbuild/createitem-task.md) a [úkolu CreateProperty –](../msbuild/createproperty-task.md). Další informace naleznete v tématu [Definice položek](../msbuild/item-definitions.md).
 
-\<Project> \<ItemDefinitionGroup>
+\<> projektu \<ItemDefinitionGroup >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,6 +41,7 @@ Element `ItemDefinitionGroup` umožňuje definovat sadu definic položek, což j
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
 Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -58,9 +60,10 @@ Následující části popisují atributy, podřízené prvky a nadřazené prvk
 
 | Prvek | Popis |
 | - | - |
-| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| [Projektem](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
 
 ## <a name="example"></a>Příklad
+
 Následující příklad kódu definuje dvě položky metadat, m a n v ItemDefinitionGroup. V tomto příkladu se výchozí metadata "m" aplikují na položku "i", protože metadata "m" nejsou explicitně definována položkou "i". Výchozí metadata "n" však nejsou použita na položku "i", protože metadata "n" jsou již definována položkou "i".
 
 ```xml
@@ -81,6 +84,7 @@ Následující příklad kódu definuje dvě položky metadat, m a n v ItemDefin
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Položky](../msbuild/msbuild-items.md)

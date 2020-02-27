@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aeb6e43e315aceef5028e77480b2817cd8edb030
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7c926c131fab101563841bea3362e88e27674226
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597357"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632898"
 ---
 # <a name="readlinesfromfile-task"></a>ReadLinesFromFile – úloha
+
 Přečte seznam položek z textového souboru.
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy `ReadLinesFromFile`.
 
 |Parametr|Popis|
@@ -37,9 +39,11 @@ Přečte seznam položek z textového souboru.
 |`Lines`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Obsahuje řádky načtené ze souboru.|
 
 ## <a name="remarks"></a>Poznámky
+
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
  Následující příklad používá úlohu `ReadLinesFromFile` k vytvoření položek ze seznamu v textovém souboru. Položky načtené ze souboru jsou uloženy v kolekci `ItemsFromFile` položky.
 
 ```xml
@@ -61,7 +65,8 @@ Přečte seznam položek z textového souboru.
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

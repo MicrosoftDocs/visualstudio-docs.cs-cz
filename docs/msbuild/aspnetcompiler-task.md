@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: a6535dbec7c09f0888d0fb29a2e6b801632da22f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8707371fac876586d38f12a797aaee7228b5f729
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593457"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634575"
 ---
 # <a name="aspnetcompiler-task"></a>AspNetCompiler – úloha
-`AspNetCompiler` úkol zalomí *Aspnet_compiler. exe*, což je nástroj pro předkompilování [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikací.
+
+`AspNetCompiler` úkol zalomí *Aspnet_compiler. exe*, což je nástroj pro předkompilování aplikací ASP.NET.
 
 ## <a name="task-parameters"></a>Parametry úlohy
+
 Následující tabulka popisuje parametry úlohy `AspNetCompiler`.
 
 |Parametr|Popis|
@@ -49,10 +51,12 @@ Následující tabulka popisuje parametry úlohy `AspNetCompiler`.
 |`VirtualPath`|Volitelný parametr `String`.<br /><br /> Virtuální cesta aplikace, která se má zkompilovat Pokud `PhysicalPath` zadáno, použije se k vyhledání aplikace fyzická cesta. V opačném případě se použije metabáze IIS a předpokládá se, že se aplikace nachází ve výchozí lokalitě. Tento parametr odpovídá přepínači **-v** *Aspnet_compiler. exe*.|
 
 ## <a name="remarks"></a>Poznámky
+
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.ToolTaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.ToolTask> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [ToolTaskExtension – Base Class](../msbuild/tooltaskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
-Následující příklad kódu používá úlohu `AspNetCompiler` k předkompilování [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace.
+
+Následující příklad kódu používá úlohu `AspNetCompiler` k předkompilování aplikace ASP.NET.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -68,6 +72,7 @@ Následující příklad kódu používá úlohu `AspNetCompiler` k předkompilo
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 * [Úlohy](../msbuild/msbuild-tasks.md)
 * [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

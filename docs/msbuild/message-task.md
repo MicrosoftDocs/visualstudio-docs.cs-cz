@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5a2e2a1adb810a8468d318298747eec226846df
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2c570a5a783133f9422dc434d0ef460b9ca7510e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592175"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633483"
 ---
 # <a name="message-task"></a>úloha zprávy
+
 Zaprotokoluje zprávu během sestavení.
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy `Message`.
 
 |Parametr|Popis|
@@ -37,7 +39,8 @@ Zaprotokoluje zprávu během sestavení.
 |`Text`|Volitelný parametr `String`.<br /><br /> Chybový text, který se má protokolovat|
 
 ## <a name="remarks"></a>Poznámky
- Úloha `Message` umožňuje projektům [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vydávat zprávy protokolovacím nástrojům v různých krocích procesu sestavení.
+
+ Úloha `Message` umožňuje projektům MSBuild vydávat zprávy do protokolovacích nástrojů v různých krocích procesu sestavení.
 
  Pokud je parametr `Condition` vyhodnocen jako `true`, bude hodnota parametru `Text` zaznamenána a sestavení bude nadále spuštěno. Pokud parametr `Condition` neexistuje, text zprávy se zaznamená do protokolu. Další informace o protokolování naleznete v tématu [získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
 
@@ -46,6 +49,7 @@ Zaprotokoluje zprávu během sestavení.
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
  Následující příklad kódu protokoluje zprávy do všech registrovaných protokolovacích nástrojů.
 
 ```xml
@@ -58,6 +62,7 @@ Zaprotokoluje zprávu během sestavení.
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Získat protokoly sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)

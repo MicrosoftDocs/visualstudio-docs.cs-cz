@@ -22,17 +22,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2bcc37446fe5b627ec789bc04461ea643e30575
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 13ae844759cb73de6dc7bcce6c8898c21132f9d7
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578480"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632911"
 ---
 # <a name="rc-task"></a>RC – úloha
+
 Zabalí nástroj Microsoft Windows Resource Compiler, *RC. exe*. Úloha **RC** kompiluje prostředky, jako jsou kurzory, ikony, bitmapy, dialogová okna a písma, do souboru prostředků ( *. res*). Další informace najdete v tématu [kompilátor prostředků](/windows/desktop/menurc/resource-compiler).
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úkolu RC. Většina parametrů úlohy a několik sad parametrů odpovídá možnosti příkazového řádku.
 
 |Parametr|Popis|
@@ -51,4 +53,5 @@ Zabalí nástroj Microsoft Windows Resource Compiler, *RC. exe*. Úloha **RC** k
 |**UndefinePreprocessorDefinitions**|Zruší definici předprocesorového symbolu.<br /><br /> Další informace naleznete v možnosti **/u** v tématu [použití RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-). Viz také **PreprocessorDefinitions** v této tabulce.|
 
 ## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

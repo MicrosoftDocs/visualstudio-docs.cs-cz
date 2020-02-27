@@ -13,20 +13,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d183026ffdfce3ada7fc96c29c83570ee18c694
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6b7848189c866481e6e97d05d95b5fb97a3d4893
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585216"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633912"
 ---
 # <a name="how-to-clean-a-build"></a>Postupy: vyčištění sestavení
-Při čištění sestavení se odstraní všechny mezilehlé a výstupní soubory, přičemž se zachová pouze soubory projektu a součásti. Ze souborů projektu a součásti lze vytvořit nové instance zprostředkujících a výstupních souborů. Knihovna běžných úloh, které jsou k dispozici v [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] zahrnuje úlohu [exec](../msbuild/exec-task.md) , kterou můžete použít ke spouštění systémových příkazů. Další informace o knihovně úkolů najdete v tématu odkaz na [úlohu](../msbuild/msbuild-task-reference.md).
+
+Při čištění sestavení se odstraní všechny mezilehlé a výstupní soubory, přičemž se zachová pouze soubory projektu a součásti. Ze souborů projektu a součásti lze vytvořit nové instance zprostředkujících a výstupních souborů. 
 
 ## <a name="create-a-directory-for-output-items"></a>Vytvoření adresáře pro výstupní položky
+
  Ve výchozím nastavení se soubor *. exe* , který je vytvořen při kompilování projektu, nachází ve stejném adresáři jako projekt a zdrojové soubory. Výstupní položky se ale obvykle vytvoří v samostatném adresáři.
 
-#### <a name="to-create-a-directory-for-output-items"></a>Vytvoření adresáře pro výstupní položky
+### <a name="to-create-a-directory-for-output-items"></a>Vytvoření adresáře pro výstupní položky
 
 1. Pomocí elementu `Property` definujte umístění a název adresáře. Například vytvořte adresář s názvem *BuiltApp* v adresáři, který obsahuje projekt a zdrojové soubory:
 
@@ -40,6 +42,7 @@ Při čištění sestavení se odstraní všechny mezilehlé a výstupní soubor
      ```
 
 ## <a name="remove-the-output-items"></a>Odebrat výstupní položky
+
  Před vytvořením nových instancí zprostředkujících a výstupních souborů je vhodné vymazat všechny předchozí instance zprostředkujících a výstupních souborů. Pomocí úlohy [RemoveDir –](../msbuild/removedir-task.md) můžete odstranit adresář a všechny soubory a adresáře, které obsahuje z disku.
 
 #### <a name="to-remove-a-directory-and-all-files-contained-in-the-directory"></a>Odebrání adresáře a všech souborů obsažených v adresáři
@@ -49,6 +52,7 @@ Při čištění sestavení se odstraní všechny mezilehlé a výstupní soubor
      `<RemoveDir Directories="$(builtdir)" />`
 
 ## <a name="example"></a>Příklad
+
  Následující příklad kódu projektu obsahuje nový cíl `Clean`, který pomocí úlohy `RemoveDir` odstraní adresář a všechny soubory a adresáře, které obsahuje. V tomto příkladu `Compile` cíl vytvoří samostatný adresář pro výstupní položky, které jsou odstraněny při vyčištění sestavení.
 
  `Compile` je definován jako výchozí cíl a je proto použit automaticky, pokud neurčíte jiný cíl nebo cíl. Pro určení jiného cíle použijete **cílový** přepínač příkazového řádku. Příklad:
@@ -99,8 +103,8 @@ Při čištění sestavení se odstraní všechny mezilehlé a výstupní soubor
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Exec – úloha](../msbuild/exec-task.md)
+## <a name="see-also"></a>Viz také
+
 - [MakeDir – – úloha](../msbuild/makedir-task.md)
 - [RemoveDir – – úloha](../msbuild/removedir-task.md)
 - [CSc – úloha](../msbuild/csc-task.md)

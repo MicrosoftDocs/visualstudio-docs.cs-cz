@@ -17,15 +17,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 703cd7bc3d0dd0e2229365dde39418ff32ad0a3e
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 2b5aba45292aaa55a719eb19d6f0f6f115e8b477
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579600"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632508"
 ---
 # <a name="resourcesgenerator-task"></a>ResourcesGenerator – – úloha
-Úloha <xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> vloží jeden nebo více prostředků ( *. jpg*, *. ico*, *. bmp*, [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] v binárním formátu a jiné typy rozšíření) do souboru *. Resources* .
+
+Úloha <xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> vloží jeden nebo více prostředků ( *. jpg*, *. ico*, *. bmp*, XAML v binárním formátu a dalších typech rozšíření) do souboru *. Resources* .
 
 ## <a name="task-parameters"></a>Parametry úlohy
 
@@ -36,6 +37,7 @@ ms.locfileid: "77579600"
 |`ResourcesFiles`|Povinný parametr **ITaskItem []** .<br /><br /> Určuje jeden nebo více prostředků, které mají být vloženy do vygenerovaného souboru *. Resources* .|
 
 ## <a name="example"></a>Příklad
+
  Následující příklad vygeneruje soubor *. Resources* s jedním prostředkem *. bmp* . Prostředek *. bmp* je vygenerován do adresáře, který je relativní vzhledem ke kořenovému adresáři projektu.
 
 ```xml
@@ -53,6 +55,7 @@ ms.locfileid: "77579600"
 ```
 
 ## <a name="see-also"></a>Viz také
+
 - [Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)
 - [Odkaz na úkol](../msbuild/wpf-msbuild-task-reference.md)
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

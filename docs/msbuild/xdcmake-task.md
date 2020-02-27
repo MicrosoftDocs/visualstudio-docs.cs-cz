@@ -19,22 +19,25 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 797a2f80c4e634b3dcb3b0fa32c46476e32cc334
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 3c41bfc2015f29cbb73b33df3594b3a3430af3f3
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578129"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630649"
 ---
 # <a name="xdcmake-task"></a>XDCMake – úloha
+
 Zabalí Nástroj dokumentace XML (*xdcmake. exe*), který sloučí soubory komentáře dokumentu XML ( *. xdc*) do souboru *. XML* .
 
  Soubor *. xdc* se vytvoří, když zadáte dokumentační komentáře ve C++ zdrojovém kódu a zkompilujete pomocí možnosti kompilátoru [/doc](/cpp/build/reference/doc-process-documentation-comments-c-cpp) . Další informace naleznete v tématu [Reference k xdcmake](/cpp/build/reference/xdcmake-reference), [stránky vlastností nástroje generátoru dokumentů XML](/cpp/build/reference/xml-document-generator-tool-property-pages)a možnost nápovědu příkazového řádku ( **/?** ) pro *xdcmake. exe*.
 
 ## <a name="remarks"></a>Poznámky
+
  Ve výchozím nastavení podporuje nástroj *xdcmake. exe* několik možností příkazového řádku. Další možnosti jsou podporovány při zadání možnosti příkazového řádku **/Old** .
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy **xdcmake** .
 
 |Parametr|Popis|
@@ -50,4 +53,5 @@ Zabalí Nástroj dokumentace XML (*xdcmake. exe*), který sloučí soubory komen
 |**TrackerLogDirectory**|Volitelný **řetězcový** parametr.<br /><br /> Určuje adresář pro protokol sledování.|
 
 ## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

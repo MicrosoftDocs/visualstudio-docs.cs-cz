@@ -17,15 +17,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c65bafd9183c97efa7595c10d7bdb3641c5f75f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8a704744032c5dea70246463a816ba8e1f5c84e8
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595134"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632469"
 ---
 # <a name="sdk-element-msbuild"></a>Element sady SDK (MSBuild)
-Odkazuje na sadu SDK [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projektu.
+
+Odkazuje na sadu SDK projektu MSBuild.
 
  \<Project > \<SDK >
 
@@ -37,6 +38,7 @@ Odkazuje na sadu SDK [!INCLUDE[vstecmsbuild](../extensibility/internals/includes
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -47,15 +49,17 @@ Odkazuje na sadu SDK [!INCLUDE[vstecmsbuild](../extensibility/internals/includes
 |`Version`|Nepovinný atribut.<br /><br /> Verze sady SDK projektu|
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 | Prvek | Popis |
 | - | - |
-| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| [Projektem](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Postupy: odkazování na sadu SDK projektu MSBuild](../msbuild/how-to-use-project-sdk.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
 - [MSBuild](../msbuild/msbuild.md)

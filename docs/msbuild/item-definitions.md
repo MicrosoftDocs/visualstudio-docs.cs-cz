@@ -10,15 +10,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95275f90af0fbf6f002a7e3a127e7d7ca7d08a39
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 18d6a2a30af4fb29a8d9e924c44c1570ff1efe29
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573778"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633704"
 ---
 # <a name="item-definitions"></a>Definice položek
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2,0 umožňuje statické deklaraci položek v souborech projektu pomocí elementu [ItemCollection](../msbuild/itemgroup-element-msbuild.md) . Metadata však mohou být přidána pouze na úrovni položky, i když jsou metadata identická pro všechny položky. Počínaje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3,5 je toto omezení předáno prvkem projektu s názvem [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) . *ItemDefinitionGroup* umožňuje definovat sadu definic položek, které přidávají výchozí hodnoty metadat všem položkám v typu pojmenované položky.
+
+MSBuild 2,0 umožňuje statické deklaraci položek v souborech projektu pomocí elementu [ItemCollection](../msbuild/itemgroup-element-msbuild.md) . Metadata však mohou být přidána pouze na úrovni položky, i když jsou metadata identická pro všechny položky. Od MSBuild 3,5 se toto omezení [přeItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) prvkem projektu s názvem. *ItemDefinitionGroup* umožňuje definovat sadu definic položek, které přidávají výchozí hodnoty metadat všem položkám v typu pojmenované položky.
 
 Element *ItemDefinitionGroup* se zobrazí hned po elementu [projektu](../msbuild/project-element-msbuild.md) souboru projektu. Definice položek poskytují následující funkce:
 
@@ -26,13 +27,14 @@ Element *ItemDefinitionGroup* se zobrazí hned po elementu [projektu](../msbuild
 
 - Typy položek mohou mít více definicí. Při přidání dalších specifikací metadat k typu má přednost poslední specifikace. \(metadata následují po stejném pořadí importu jako vlastnosti.\)
 
-- Metadata lze přidávat. Například hodnoty CDefines se sčítají podmíněně v závislosti na vlastnostech, které se nastavují. Například `MT;STD_CALL;DEBUG;UNICODE`.
+- Metadata lze přidávat. Například hodnoty CDefines se sčítají podmíněně v závislosti na vlastnostech, které se nastavují. například `MT;STD_CALL;DEBUG;UNICODE`.
 
 - Metadata je možné odebrat.
 
 - Podmínky lze použít k řízení zahrnutí metadat.
 
 ## <a name="item-metadata-default-values"></a>Výchozí hodnoty metadat položky
+
 Metadata položky, která jsou definována v ItemDefinitionGroup, jsou pouze deklarace výchozích metadat. Metadata se nevztahují, pokud nedefinujete položku, která používá danou položku, aby obsahovala hodnoty metadat.
 
 > [!NOTE]
@@ -61,6 +63,7 @@ V tomto příkladu se výchozí metadata "m" aplikují na položku "i", protože
 > V názvech elementů XML a parametrů jsou rozlišována malá a velká písmena\-. V názvech a položkách\/ch vlastností položky nejsou rozlišována velká a malá písmena\-. Proto by ItemDefinitionGroup položky, které mají názvy, které se liší pouze písmenem Case, měly být považovány za stejné pole Item.
 
 ## <a name="value-sources"></a>Zdroje hodnot
+
 Hodnoty metadat, které jsou definovány ve ItemDefinitionGroup, mohou pocházet z mnoha různých zdrojů, a to následujícím způsobem:
 
 - Vlastnost Property
@@ -83,6 +86,7 @@ Hodnoty metadat, které jsou definovány ve ItemDefinitionGroup, mohou pocházet
 > Metadata položky ze složky Item nejsou užitečná v deklaraci metadat ItemDefinitionGroup, protože prvky ItemDefinitionGroup jsou zpracovávány před prvky Item.
 
 ## <a name="additive-and-multiple-definitions"></a>Doplňková a vícenásobná definice
+
 Pokud přidáte definice nebo použijete více ItemDefinitionGroups, pamatujte na následující:
 
 - Do tohoto typu se přidá další specifikace metadat.
@@ -143,6 +147,7 @@ Pokud přepíšete dříve definovaná metadata, má přednost poslední specifi
 ```
 
 ## <a name="use-conditions-in-an-itemdefinitiongroup"></a>Použití podmínek v ItemDefinitionGroup
+
 Můžete použít podmínky v ItemDefinitionGroup k řízení zahrnutí metadat. Příklad:
 
 ```xml
@@ -189,7 +194,8 @@ Ve výše uvedeném příkladu položka "i" odkazuje na položku "test" ve své 
 Ve výše uvedeném příkladu by se hodnota "m" nastavila na hodnotu "M1", protože položka odkazuje na metadata položky "i" pro položku "Ano".
 
 ## <a name="override-and-delete-metadata"></a>Přepsat a odstranit metadata
-Metadata definovaná v elementu ItemDefinitionGroup lze přepsat v pozdějším elementu ItemDefinitionGroup nastavením hodnoty metadata na prázdnou. Můžete také efektivně odstranit položku metadat tím, že ji nastavíte na prázdnou hodnotu. Příklad:
+
+Metadata definovaná v elementu ItemDefinitionGroup lze přepsat v pozdějším elementu ItemDefinitionGroup nastavením hodnoty metadata na jinou hodnotu. Můžete také efektivně odstranit položku metadat tím, že ji nastavíte na prázdnou hodnotu. Příklad:
 
 ```xml
 <ItemDefinitionGroup>
@@ -207,6 +213,7 @@ Metadata definovaná v elementu ItemDefinitionGroup lze přepsat v pozdějším 
 Položka "i" stále obsahuje metadata "m", ale její hodnota je nyní prázdná.
 
 ## <a name="scope-of-metadata"></a>Rozsah metadat
+
 ItemDefinitionGroups mají globální rozsah u definovaných a globálních vlastností bez ohledu na jejich definování. Výchozí definice metadat v ItemDefinitionGroup můžou být odkazující samy na sebe. Například následující příklad používá jednoduchou referenci metadat:
 
 ```xml
@@ -240,7 +247,7 @@ Následující jsou však neplatné:
 </ItemDefinitionGroup>
 ```
 
-Počínaje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3,5 může být ItemGroups také odkazující na sebe. Příklad:
+Od verze MSBuild 3,5 může být ItemGroups také odkazující na sebe. Příklad:
 
 ```xml
 <ItemGroup>
@@ -251,5 +258,6 @@ Počínaje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbu
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Dávkování](../msbuild/msbuild-batching.md)

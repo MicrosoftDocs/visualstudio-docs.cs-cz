@@ -16,17 +16,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 66c19dbd74176babbf9e26030a68a6095992b660
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 18e1722fcd6867ca5e8ae52e220ff0a3dd2a3b7f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589367"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633613"
 ---
 # <a name="itemmetadata-element-msbuild"></a>ItemMetadata – – element (MSBuild)
+
 Obsahuje klíč metadat položky definovaný uživatelem, který obsahuje hodnotu metadat položky. Položka může mít libovolný počet párů klíč-hodnota metadat.
 
- \<Project> \<ItemGroup> \<Item>
+ \<projektu > \<položka > \<položka >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,6 +36,7 @@ Obsahuje klíč metadat položky definovaný uživatelem, který obsahuje hodnot
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -44,7 +46,8 @@ Obsahuje klíč metadat položky definovaný uživatelem, který obsahuje hodnot
 |`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
@@ -53,11 +56,13 @@ Obsahuje klíč metadat položky definovaný uživatelem, který obsahuje hodnot
 |[Položka](../msbuild/item-element-msbuild.md)|Uživatelsky definovaný element definující vstupy procesu sestavení.|
 
 ## <a name="text-value"></a>Textová hodnota
+
  Textová hodnota je volitelná.
 
  Tento text určuje hodnotu metadat položky, která může být buď text, nebo XML.
 
 ## <a name="example"></a>Příklad
+
  Následující příklad kódu ukazuje, jak přidat `Culture` metadata s hodnotou `fr` do `CSFile`položky.
 
 ```xml
@@ -68,6 +73,7 @@ Obsahuje klíč metadat položky definovaný uživatelem, který obsahuje hodnot
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Položky](../msbuild/msbuild-items.md)

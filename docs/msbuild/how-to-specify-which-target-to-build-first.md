@@ -12,18 +12,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75bcb41bb2df2afcb6e71b0fdaf58d0d7429e974
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e008e3181cd7c633179f35e7639265a2495fafe2
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75574623"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633795"
 ---
 # <a name="how-to-specify-which-target-to-build-first"></a>Postupy: určení prvního cíle sestavení
-Soubor projektu může obsahovat jeden nebo více `Target` prvků, které definují, jak je projekt sestaven. Modul [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) sestaví první projekt, který najde, a všechny závislosti, pokud soubor projektu neobsahuje atribut `DefaultTargets`, atribut `InitialTargets` nebo cíl je zadán na příkazovém řádku pomocí přepínače **-target** .
 
+Soubor projektu může obsahovat jeden nebo více `Target` prvků, které definují, jak je projekt sestaven. Modul Microsoft Build Engine (MSBuild) sestaví první projekt, který najde, a všechny závislosti, pokud soubor projektu neobsahuje atribut `DefaultTargets`, `InitialTargets` atribut nebo cíl je zadán na příkazovém řádku pomocí přepínače **-target** .
 ## <a name="use-the-initialtargets-attribute"></a>Použití atributu InitialTargets
+
  Atribut `InitialTargets` elementu `Project` určuje cíl, který se spustí jako první, a to i v případě, že jsou cíle zadány na příkazovém řádku nebo v atributu `DefaultTargets`.
+Atribut `InitialTargets` elementu `Project` určuje cíl, který se spustí jako první, a to i v případě, že jsou cíle zadány na příkazovém řádku nebo v atributu `DefaultTargets`.
 
 #### <a name="to-specify-one-initial-target"></a>Určení jednoho počátečního cíle
 
@@ -40,7 +42,8 @@ Soubor projektu může obsahovat jeden nebo více `Target` prvků, které definu
      `<Project InitialTargets="Clean;Compile">`
 
 ## <a name="use-the-defaulttargets-attribute"></a>Použití atributu DefaultTargets –
- Atribut `DefaultTargets` elementu `Project` určuje, který cíl nebo cíle jsou vytvořeny, pokud cíl není explicitně zadán na příkazovém řádku. Pokud jsou cíle zadány v atributech `InitialTargets` a `DefaultTargets` a v příkazovém řádku není zadán žádný cíl, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] spustí cíle zadané v atributu `InitialTargets` následovaný cíli určenými v atributu `DefaultTargets`.
+
+ Atribut `DefaultTargets` elementu `Project` určuje, který cíl nebo cíle jsou vytvořeny, pokud cíl není explicitně zadán na příkazovém řádku. Pokud jsou cíle zadány v atributech `InitialTargets` a `DefaultTargets` a v příkazovém řádku není zadán žádný cíl, nástroj MSBuild spustí cíle zadané v atributu `InitialTargets` následovaný cíli určenými v atributu `DefaultTargets`.
 
 #### <a name="to-specify-one-default-target"></a>Určení jednoho výchozího cíle
 
@@ -57,6 +60,7 @@ Soubor projektu může obsahovat jeden nebo více `Target` prvků, které definu
      `<Project DefaultTargets="Clean;Compile">`
 
 ## <a name="use-the--target-switch"></a>Použití přepínače-target
+
  Pokud v souboru projektu není definován výchozí cíl, nebo pokud nechcete použít tento výchozí cíl, můžete zadat jiný cíl pomocí příkazu pro přepínač příkazového řádku **target** . Cíl nebo cíle zadané s přepínačem **target** jsou spuštěny namísto cílů určených atributem `DefaultTargets`. Cíle zadané v atributu `InitialTargets` vždy spouštějí jako první.
 
 #### <a name="to-use-a-target-other-than-the-default-target-first"></a>Použití cíle jiného než výchozího cíle
@@ -71,7 +75,8 @@ Soubor projektu může obsahovat jeden nebo více `Target` prvků, které definu
 
      `msbuild <file name>.proj -t:Clean;Compile`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [MSBuild](../msbuild/msbuild.md)
 - [Cíle](../msbuild/msbuild-targets.md)
 - [Postupy: vyčištění sestavení](../msbuild/how-to-clean-a-build.md)

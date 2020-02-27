@@ -18,14 +18,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 481be1f0e9c5444e56c95b13e938cda1d541af71
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: bcb9404b8c68171f0695b33c285582f5e4c5b4ec
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566894"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630922"
 ---
 # <a name="when-element-msbuild"></a>When – element (MSBuild)
+
 Určuje možný blok kódu pro `Choose` prvek, který chcete vybrat.
 
  \<projektu \<> vyberte možnost > \<, když > \<vyberte >... \<jinak > \<zvolit >...
@@ -41,6 +42,7 @@ Určuje možný blok kódu pro `Choose` prvek, který chcete vybrat.
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -64,11 +66,13 @@ Určuje možný blok kódu pro `Choose` prvek, který chcete vybrat.
 |[Choose – element (MSBuild)](../msbuild/choose-element-msbuild.md)|Vyhodnotí podřízené prvky a vybere jeden oddíl kódu, který se má provést.|
 
 ## <a name="remarks"></a>Poznámky
+
  Pokud je atribut `Condition` vyhodnocen jako true, jsou spouštěny podřízené `ItemGroup` a `PropertyGroup` prvky `When` prvku a všechny následné `When` prvky budou vynechány.
 
  Prvky `Choose`, `When`a `Otherwise` slouží společně k tomu, aby poskytovala možnost výběru jedné části kódu pro provedení několika možných alternativ. Další informace naleznete v tématu [podmíněné konstrukce](../msbuild/msbuild-conditional-constructs.md).
 
 ## <a name="example"></a>Příklad
+
  Následující projekt používá prvek `Choose` k výběru sady hodnot vlastností v prvcích `When`, které chcete nastavit. Pokud `Condition` atributy `When` prvků vyhodnoceny jako `false`, jsou nastaveny hodnoty vlastností v elementu `Otherwise`.
 
 ```xml
@@ -116,6 +120,7 @@ Určuje možný blok kódu pro `Choose` prvek, který chcete vybrat.
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Podmíněné konstrukce](../msbuild/msbuild-conditional-constructs.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

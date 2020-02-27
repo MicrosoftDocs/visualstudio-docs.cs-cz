@@ -13,16 +13,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 955739372605b9e4f9fe58f73669322e2724de31
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f9958ae93e2605ad3c89decb4ac9fabc18102148
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595004"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633873"
 ---
 # <a name="how-to-escape-special-characters-in-msbuild"></a>Postupy: sekvence speciálních znaků v nástroji MSBuild
 
-Některé znaky mají zvláštní význam v [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] soubory projektu. Mezi příklady znaků patří středník (`;`) a hvězdičky (`*`). Úplný seznam těchto speciálních znaků naleznete v tématu [speciální znaky nástroje MSBuild](../msbuild/msbuild-special-characters.md).
+Některé znaky mají v souborech projektu MSBuild zvláštní význam. Mezi příklady znaků patří středník (`;`) a hvězdičky (`*`). Úplný seznam těchto speciálních znaků naleznete v tématu [speciální znaky nástroje MSBuild](../msbuild/msbuild-special-characters.md).
 
 Aby bylo možné použít tyto speciální znaky jako literály v souboru projektu, musí být určeny pomocí syntaxe `%<xx>`, kde `<xx>` představuje šestnáctkovou hodnotu ASCII znaku.
 
@@ -34,7 +34,7 @@ Jeden z příkladů, kde se používají speciální znaky, jsou v atributu `Inc
 <Compile Include="MyFile.cs;MyClass.cs"/>
 ```
 
-Chcete-li deklarovat položku, která obsahuje středník v názvu, je nutné použít syntaxi `%<xx>` pro odřídící středník a zabránit [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] v deklaraci dvou samostatných položek. Například následující položka řídí středník a deklaruje jednu položku s názvem `MyFile.cs;MyClass.cs`.
+Chcete-li deklarovat položku, která obsahuje středník v názvu, je nutné použít syntaxi `%<xx>` pro odřídící středník a zabránit nástroji MSBuild v deklaraci dvou samostatných položek. Například následující položka řídí středník a deklaruje jednu položku s názvem `MyFile.cs;MyClass.cs`.
 
 ```xml
 <Compile Include="MyFile.cs%3BMyClass.cs"/>
@@ -50,7 +50,7 @@ Můžete také použít [funkci vlastnosti](../msbuild/property-functions.md) pr
 
 Místo speciálního znaku použijte `%<xx>` Notation, kde `<xx>` představuje hexadecimální hodnotu znaku ASCII. Chcete-li například použít hvězdičku (`*`) jako literální znak, použijte hodnotu `%2A`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
 - [MSBuild](../msbuild/msbuild.md)
 - [Položky](../msbuild/msbuild-items.md)

@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7443ba29a743f4936ae104d9d0bb556fae3c4e2d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3c88e5aaef9262d320cdf61564078246dee46b10
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595381"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634263"
 ---
 # <a name="csc-task"></a>Csc – úloha
+
 Zabalí *CSc. exe*a vytvoří spustitelné soubory (soubory *. exe* ), dynamické knihovny (soubory *. dll* ) nebo kódové moduly (soubory *. netmodule* ). Další informace o souboru *CSc. exe*naleznete v tématu [ C# možnosti kompilátoru](/dotnet/csharp/language-reference/compiler-options/index).
 
 ## <a name="parameters"></a>Parametry
+
 Následující tabulka popisuje parametry úlohy `Csc`.
 
 | Parametr | Popis |
@@ -65,13 +67,13 @@ Následující tabulka popisuje parametry úlohy `Csc`.
 | `OutputRefAssembly` | Volitelný parametr `String`.<br /><br /> Určuje název výstupního souboru referenčního sestavení. Další informace naleznete v tématu [-refout (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/refout-compiler-option). |
 | `PdbFile` | Volitelný parametr `String`.<br /><br /> Určuje název souboru ladicích informací. Výchozí název je název výstupního souboru s příponou *. pdb* . |
 | `Platform` | Volitelný parametr `String`.<br /><br /> Určuje platformu procesoru, na kterou má výstupní soubor cílit. Tento parametr může mít hodnotu `x86`, `x64`nebo `anycpu`. Výchozí hodnota je `anycpu`. Další informace naleznete v tématu [-Platform (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option). |
-| `References` | Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Způsobí, že úloha importuje informace o veřejném typu ze zadaných položek do aktuálního projektu. Další informace naleznete v tématu [-Reference (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/reference-compiler-option).<br /><br /> Můžete zadat alias odkazu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] v souboru [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] přidáním `Aliases` metadat do původní položky "odkaz". Chcete-li například nastavit alias "LS1" v následujícím příkazovém řádku csc:<br /><br /> `CSC /r:LS1=MyCodeLibrary.dll /r:LS2=MyCodeLibrary2.dll *.cs`<br /><br /> použijete:<br /><br /> `<Reference Include="MyCodeLibrary"> <Aliases>LS1</Aliases> </Reference>` |
+| `References` | Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Způsobí, že úloha importuje informace o veřejném typu ze zadaných položek do aktuálního projektu. Další informace naleznete v tématu [-Reference (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/reference-compiler-option).<br /><br /> Můžete zadat alias C# odkazu v souboru MSBuild přidáním metadat `Aliases` do původní položky "odkaz". Chcete-li například nastavit alias "LS1" v následujícím příkazovém řádku csc:<br /><br /> `CSC /r:LS1=MyCodeLibrary.dll /r:LS2=MyCodeLibrary2.dll *.cs`<br /><br /> použijete:<br /><br /> `<Reference Include="MyCodeLibrary"> <Aliases>LS1</Aliases> </Reference>` |
 | `Resources` | Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Vloží prostředek .NET Framework do výstupního souboru.<br /><br /> Položky předané do tohoto parametru mohou mít volitelné položky metadat s názvem `LogicalName` a `Access`. `LogicalName` odpovídá parametru `identifier` `/resource` přepínači a `Access` odpovídá parametru `accessibility-modifier`. Další informace naleznete v tématu [-Resource (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/resource-compiler-option). |
 | `ResponseFiles` | Volitelný parametr `String`.<br /><br /> Určuje soubor odpovědí obsahující příkazy pro tento úkol. Další informace naleznete v tématu [@ (určení souboru odezvy)](/dotnet/csharp/language-reference/compiler-options/response-file-compiler-option). |
-| `Sources` | Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Určuje jeden nebo více [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] zdrojových souborů. |
+| `Sources` | Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Určuje jeden nebo více C# zdrojových souborů. |
 | `TargetType` | Volitelný parametr `String`.<br /><br /> Určuje formát výstupního souboru. Tento parametr může mít hodnotu `library`, která vytvoří knihovnu kódu, `exe`, která vytvoří konzolovou aplikaci, `module`, která vytvoří modul nebo `winexe`, který vytvoří program systému Windows. Výchozí hodnota je `library`. Další informace naleznete v tématu [-target (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/target-compiler-option). |
 | `TreatWarningsAsErrors` | Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, zpracovává všechna upozornění jako chyby. Další informace naleznete v tématu [-warnaserror – (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option). |
-| `UseHostCompilerIfAvailable` | Volitelný parametr `Boolean`.<br /><br /> Dá pokyn k tomu, aby úkol použil objekt vnitroprocesového kompilátoru, pokud je k dispozici. Používáno pouze pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. |
+| `UseHostCompilerIfAvailable` | Volitelný parametr `Boolean`.<br /><br /> Dá pokyn k tomu, aby úkol použil objekt vnitroprocesového kompilátoru, pokud je k dispozici. Používáno pouze v aplikaci Visual Studio. |
 | `Utf8Output` | Volitelný parametr `Boolean`.<br /><br /> Protokoluje výstup kompilátoru pomocí kódování UTF-8. Další informace naleznete v tématu [-utf8output – (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/utf8output-compiler-option). |
 | `WarningLevel` | Volitelný parametr `Int32`.<br /><br /> Určuje úroveň upozornění pro zobrazení kompilátoru. Další informace naleznete v tématu [-warn (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/warn-compiler-option). |
 | `WarningsAsErrors` | Volitelný parametr `String`.<br /><br /> Určuje seznam upozornění, která mají být považována za chyby. Další informace naleznete v tématu [-warnaserror – (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option).<br /><br /> Tento parametr Přepisuje parametr `TreatWarningsAsErrors`. |
@@ -81,9 +83,11 @@ Následující tabulka popisuje parametry úlohy `Csc`.
 | `Win32Resource` | Volitelný parametr `String`.<br /><br /> Vloží soubor prostředků Win32 ( *. res*) do výstupního souboru. Další informace naleznete v tématu [-win32res (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option). |
 
 ## <a name="remarks"></a>Poznámky
+
 Kromě výše uvedených parametrů Tato úloha dědí parametry z třídy `Microsoft.Build.Tasks.ManagedCompiler`, která dědí z třídy <xref:Microsoft.Build.Tasks.ToolTaskExtension>, která sama dědí z třídy <xref:Microsoft.Build.Utilities.ToolTask>. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [ToolTaskExtension – Base Class](../msbuild/tooltaskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
 Následující příklad používá úlohu `Csc` ke kompilaci spustitelného souboru ze zdrojových souborů v kolekci `Compile`ch položek.
 
 ```xml
@@ -93,6 +97,7 @@ Následující příklad používá úlohu `Csc` ke kompilaci spustitelného sou
     EmitDebugInformation="true" />
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

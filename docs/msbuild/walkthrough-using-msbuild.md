@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d874d8b9c96cc8cc58466bb42d8ac189e1aabc11
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c3e3f0ec3938136370daf15954d8c13da5905ba4
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75567291"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631078"
 ---
 # <a name="walkthrough-use-msbuild"></a>Návod: použití nástroje MSBuild
 
@@ -175,7 +175,7 @@ Nástroj MSBuild sleduje cíle sestavení a zaručuje, že každý cíl je sesta
 </PropertyGroup>
 ```
 
- Všechny vlastnosti jsou podřízené prvky prvků vlastností. Název vlastnosti je název podřízeného prvku a hodnota vlastnosti je textový prvek podřízeného prvku. Například
+ Všechny vlastnosti jsou podřízené prvky prvků vlastností. Název vlastnosti je název podřízeného prvku a hodnota vlastnosti je textový prvek podřízeného prvku. Například:
 
 ```xml
 <TargetFrameworkVersion>v15.0</TargetFrameworkVersion>
@@ -183,7 +183,7 @@ Nástroj MSBuild sleduje cíle sestavení a zaručuje, že každý cíl je sesta
 
  definuje vlastnost s názvem TargetFrameworkVersion, která mu dává hodnotu řetězce "v 15.0".
 
- Vlastnosti sestavení lze kdykoli znovu definovat. If
+ Vlastnosti sestavení lze kdykoli znovu definovat. Pokud uživatel
 
 ```xml
 <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
@@ -192,6 +192,7 @@ Nástroj MSBuild sleduje cíle sestavení a zaručuje, že každý cíl je sesta
  se zobrazí později v souboru projektu nebo v souboru importovaném později v souboru projektu, TargetFrameworkVersion převezme novou hodnotu "v 3.5".
 
 ## <a name="examine-a-property-value"></a>Prověření hodnoty vlastnosti
+
  Chcete-li získat hodnotu vlastnosti, použijte následující syntaxi, kde PropertyName je název vlastnosti:
 
 ```xml
@@ -243,7 +244,7 @@ $(PropertyName)
 
 ### <a name="conditional-properties"></a>Podmíněné vlastnosti
 
- Celá řada vlastností, jako je konfigurace, je definována podmíněně, to znamená, že atribut Condition se zobrazí v elementu Property. Podmíněné vlastnosti jsou definovány nebo předefinovány pouze v případě, že je podmínka vyhodnocena jako "true". Všimněte si, že nedefinované vlastnosti jsou předány výchozí hodnotě prázdného řetězce. Například
+ Celá řada vlastností, jako je konfigurace, je definována podmíněně, to znamená, že atribut Condition se zobrazí v elementu Property. Podmíněné vlastnosti jsou definovány nebo předefinovány pouze v případě, že je podmínka vyhodnocena jako "true". Všimněte si, že nedefinované vlastnosti jsou předány výchozí hodnotě prázdného řetězce. Například:
 
 ```xml
 <Configuration   Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -315,7 +316,7 @@ Další informace najdete v tématu [speciální znaky nástroje MSBuild](../msb
 
  Položka je část informací, obvykle název souboru, která se používá jako vstup do systému sestavení. Například kolekce položek, které představují zdrojové soubory, mohou být předány úloze s názvem Compile pro jejich zkompilování do sestavení.
 
- Všechny položky jsou podřízené prvky prvků Item. Název položky je název podřízeného prvku a hodnota položky je hodnota atributu Include podřízeného prvku. Hodnoty položek se stejným názvem jsou shromažďovány do typů položek daného názvu.  Například
+ Všechny položky jsou podřízené prvky prvků Item. Název položky je název podřízeného prvku a hodnota položky je hodnota atributu Include podřízeného prvku. Hodnoty položek se stejným názvem jsou shromažďovány do typů položek daného názvu.  Například:
 
 ```xml
 <ItemGroup>
@@ -411,7 +412,8 @@ Změňte úlohu zprávy na použití návratových znaků a kanálů řádků (%
     ```
 
 ### <a name="include-exclude-and-wildcards"></a>Zahrnutí, vyloučení a zástupné znaky
- K přidání položek do typu položky můžete použít zástupné znaky "*", "\*\*" a "?" s atributem include. Například
+
+ K přidání položek do typu položky můžete použít zástupné znaky "*", "\*\*" a "?" s atributem include. Například:
 
 ```xml
 <Photos Include="images\*.jpeg" />
@@ -425,7 +427,7 @@ Změňte úlohu zprávy na použití návratových znaků a kanálů řádků (%
 
  Přidá všechny soubory s příponou *. jpeg* ve složce *images* a všech jejích podsložkách na typ položky fotky. Další příklady naleznete v tématu [Postupy: výběr souborů pro sestavení](../msbuild/how-to-select-the-files-to-build.md).
 
- Všimněte si, že když jsou deklarovány položky, jsou přidány do typu položky. Například
+ Všimněte si, že když jsou deklarovány položky, jsou přidány do typu položky. Například:
 
 ```xml
 <Photos Include="images\*.jpeg" />
@@ -438,7 +440,7 @@ Změňte úlohu zprávy na použití návratových znaků a kanálů řádků (%
 <Photos Include="images\*.jpeg;images\*.gif" />
 ```
 
- Můžete vyloučit položku z typu položky s atributem Exclude. Například
+ Můžete vyloučit položku z typu položky s atributem Exclude. Například:
 
 ```xml
 <Compile Include="*.cs" Exclude="*Designer*">
@@ -446,7 +448,7 @@ Změňte úlohu zprávy na použití návratových znaků a kanálů řádků (%
 
  Přidá všechny soubory s příponou *. cs* na typ položky kompilace, s výjimkou souborů, jejichž názvy obsahují *Návrháře*řetězce. Další příklady naleznete v tématu [Postupy: vyloučení souborů ze sestavení](../msbuild/how-to-exclude-files-from-the-build.md).
 
-Atribut Exclude ovlivňuje pouze položky přidané atributem include v prvku položky, který je obsahuje obě. Například
+Atribut Exclude ovlivňuje pouze položky přidané atributem include v prvku položky, který je obsahuje obě. Například:
 
 ```xml
 <Compile Include="*.cs" />
@@ -486,6 +488,7 @@ nevylučuje soubor *Form1.cs*, který byl přidán do předchozí položky eleme
     ```
 
 ## <a name="item-metadata"></a>Metadata položky
+
  Kromě informací shromážděných z atributů include a Exclude mohou položky obsahovat i metadata. Tato metadata mohou být použita úkoly, které vyžadují více informací o položkách než pouze hodnota položky.
 
  Metadata položky jsou deklarována v souboru projektu vytvořením prvku s názvem metadat jako podřízeným prvkem položky. Položka může mít nula nebo více hodnot metadat. Například následující položka CSFile má metadata jazykové verze s hodnotou "fr":
@@ -602,7 +605,7 @@ Všimněte si, že metadata vyjádřená v této syntaxi nezpůsobují dávková
 
  Chcete-li zjistit, jak vytvořit jednoduchý soubor projektu v jednom kroku, postupujte podle [návodu: vytvoření souboru projektu MSBuild od začátku](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přehled nástroje MSBuild](../msbuild/msbuild.md)
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

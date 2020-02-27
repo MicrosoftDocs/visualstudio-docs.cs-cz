@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 011cc16dd965b952aa382c46f01d09fcc41bc02e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3cc2e97a3024d768861a1967705137415a0d3aa2
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592162"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633535"
 ---
 # <a name="makedir-task"></a>MakeDir – úloha
+
 Vytvoří adresáře a v případě potřeby i všechny nadřazené adresáře.
 
 ## <a name="parameters"></a>Parametry
+
 Následující tabulka popisuje parametry úlohy `MakeDir`.
 
 |Parametr|Popis|
@@ -37,9 +39,11 @@ Následující tabulka popisuje parametry úlohy `MakeDir`.
 |`DirectoriesCreated`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Adresáře, které jsou vytvořeny touto úlohou. Pokud některé adresáře nelze vytvořit, nemusí obsahovat všechny položky, které byly předány do parametru `Directories`.|
 
 ## <a name="remarks"></a>Poznámky
+
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
 Následující příklad kódu používá úlohu `MakeDir` k vytvoření adresáře určeného vlastností `OutputDirectory`.
 
 ```xml
@@ -57,6 +61,7 @@ Následující příklad kódu používá úlohu `MakeDir` k vytvoření adresá
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

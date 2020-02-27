@@ -15,14 +15,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d48c29b9dcca477c5a5470c443be08d5060b413d
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 950c6a07a46f7f4b970912e576257a577021367e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578110"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632005"
 ---
 # <a name="suspendtracking"></a>SuspendTracking
+
 Pozastaví sledování v aktuálním kontextu.
 
 ## <a name="syntax"></a>Syntaxe
@@ -32,10 +33,13 @@ HRESULT WINAPI SuspendTracking(void);
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
+
  Hodnota **HRESULT** s **úspěšným** bitem nastaveným v případě pozastavení sledování.
 
 ## <a name="requirements"></a>Požadavky
+
  **Záhlaví:** *stoper. h*
 
 ## <a name="see-also"></a>Viz také
+
 - [ResumeTracking](../msbuild/resumetracking.md)

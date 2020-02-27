@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 393077d6391a5c1f5f4088773013538efbedc9f7
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: aa9f7bb47efefa3f7a1d4cf52cbfa5891602956f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578708"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634562"
 ---
 # <a name="assignculture-task"></a>AssignCulture – úloha
+
 Tato úloha přijímá seznam položek, které mohou obsahovat platný řetězec identifikátoru kultury rozhraní .NET jako součást názvu souboru a vytváří položky, které mají metadata s názvem `Culture` obsahující odpovídající identifikátor jazykové verze. Například název souboru *Form1.fr-fr. resx* má vloženou identifikátor jazykové verze "fr-FR", takže tato úloha vytvoří položku, která má stejný název souboru s metadaty `Culture` rovna `fr-fr`. Úloha také vytvoří seznam názvů souborů s jazykovou verzí odebraným z názvu souboru.
 
 ## <a name="task-parameters"></a>Parametry úlohy
+
 Následující tabulka popisuje parametry úlohy `AssignCulture`.
 
 |Parametr|Popis|
@@ -40,9 +42,11 @@ Následující tabulka popisuje parametry úlohy `AssignCulture`.
 |`Files`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje seznam souborů s vloženou kulturou názvů, pro které má být přiřazena jazyková verze.|
 
 ## <a name="remarks"></a>Poznámky
+
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
  Následující příklad spustí úlohu `AssignCulture` s kolekcí `ResourceFiles` Item.
 
 ```xml
@@ -78,5 +82,6 @@ Následující tabulka popisuje hodnotu výstupních položek po provedení úko
 |`OutCultureNeutralAssignedFiles`|*MyResource1. resx* (Culture = "fr")<br /><br /> *MyResource2. xx. resx* (žádná další metadata)|
 
 ## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

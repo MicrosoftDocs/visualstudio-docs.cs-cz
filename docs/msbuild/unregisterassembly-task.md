@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22be291184ebf02ae0455f5b4656b1dec976dc89
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 2f8cddcf9bf0632914d1a6de1cc904dbf0f173e6
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578287"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631494"
 ---
 # <a name="unregisterassembly-task"></a>UnregisterAssembly – úloha
+
 Zruší registraci zadaných sestavení pro účely zprostředkovatele komunikace s objekty COM. Provede obrácenou [úlohu RegisterAssembly –](../msbuild/registerassembly-task.md).
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy `UnregisterAssembly`.
 
 |Parametr|Popis|
@@ -38,11 +40,13 @@ Zruší registraci zadaných sestavení pro účely zprostředkovatele komunikac
 |`TypeLibFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Zruší registraci zadané knihovny typů ze zadaného sestavení. **Poznámka:**  Tento parametr je nezbytný pouze v případě, že název souboru knihovny typů je jiný než název sestavení.|
 
 ## <a name="remarks"></a>Poznámky
+
  Není nutné, aby sestavení existovalo pro úspěšnou úlohu. Pokud se pokusíte zrušit registraci sestavení, které neexistuje, úloha bude úspěšně provedena s upozorněním. K tomu dochází, protože se jedná o úlohu této úlohy, která odebere registraci sestavení z registru. Pokud sestavení neexistuje, není v registru, a proto úloha byla úspěšná.
 
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension> třídy, které sama dědí z <xref:System.MarshalByRefObject> třídy. Třída `MarshalByRefObject` poskytuje stejné funkce jako <xref:Microsoft.Build.Utilities.Task> třída, ale je možné ji vytvořit ve své vlastní doméně aplikace.
 
 ## <a name="example"></a>Příklad
+
  Následující příklad používá úlohu `UnregisterAssembly` k zrušení registrace sestavení v cestě určené vlastností `OutputPath` a `FileName`, pokud existuje.
 
 ```xml
@@ -61,6 +65,7 @@ Zruší registraci zadaných sestavení pro účely zprostředkovatele komunikac
 ```
 
 ## <a name="see-also"></a>Viz také
+
 - [RegisterAssembly – – úloha](../msbuild/registerassembly-task.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

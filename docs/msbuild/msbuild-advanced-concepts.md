@@ -10,17 +10,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 88c051f71cf491efcf126af691dfb55b74e50db2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9f013464143929732da409f5dd9684ed73bcc705
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592123"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633444"
 ---
 # <a name="msbuild-advanced-concepts"></a>Rozšířené koncepty nástroje MSBuild
+
 Dokumenty v této části popisují, jak používat pokročilé techniky pro zlepšení sestavení spouštěných pomocí nástroje MSBuild.
 
-## <a name="related-topics"></a>Příbuzná témata
+## <a name="related-topics"></a>Související témata
 
 |Název|Popis|
 |-----------|-----------------|
@@ -31,6 +32,7 @@ Dokumenty v této části popisují, jak používat pokročilé techniky pro zle
 |[Cílení na více verzí](../msbuild/msbuild-multitargeting-overview.md)|Popisuje, jak zkompilovat aplikaci pro spuštění v některé z několika verzí .NET Framework.|
 |[Osvědčené postupy](../msbuild/msbuild-best-practices.md)|Doporučuje osvědčené postupy pro psaní skriptů MSBuild.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
 - [Protokolování v nástroji MSBuild](../msbuild/logging-in-msbuild.md)

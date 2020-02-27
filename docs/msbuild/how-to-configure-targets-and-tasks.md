@@ -8,20 +8,23 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f8f1bc76789ef80c1138efb94bda42442702c05
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fe2955feb50a28e5ba631cdeddd169973a42ed25
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596343"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633886"
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>Postupy: Konfigurace cílů a úloh
+
+Vybrané úlohy nástroje MSBuild je možné nastavit tak, aby běžely v prostředí, na které cílí, bez ohledu na prostředí vývojového počítače. Pokud například použijete 64 počítač k vytvoření aplikace, která se zaměřuje na 32 bitovou architekturu, vybrané úlohy se spustí v procesu 32.
 Vybrané úlohy nástroje MSBuild je možné nastavit tak, aby běžely v prostředí, na které cílí, bez ohledu na prostředí vývojového počítače. Pokud například použijete 64 počítač k vytvoření aplikace, která se zaměřuje na 32 bitovou architekturu, vybrané úlohy se spustí v procesu 32.
 
 > [!NOTE]
 > Pokud je úloha sestavení napsána v jazyce .NET, jako je například C# vizuál nebo Visual Basic, a nepoužívá nativní prostředky nebo nástroje, bude spuštěna v jakémkoli cílovém kontextu bez přizpůsobení.
 
 ## <a name="usingtask-attributes-and-task-parameters"></a>Atributy UsingTask a parametry úlohy
+
 Následující atributy `UsingTask` ovlivňují všechny operace úlohy v rámci určitého procesu sestavení:
 
 - Atribut `Runtime`, je-li k dispozici, nastaví verzi modulu CLR (Common Language Runtime) a může přijmout jednu z těchto hodnot: `CLR2`, `CLR4`, `CurrentRuntime`nebo `*` (jakýkoli modul runtime).
@@ -74,6 +77,7 @@ Předtím, než nástroj MSBuild spustí úlohu, vyhledá odpovídající `Using
 ```
 
 ## <a name="task-factories"></a>Továrny úloh
+
 Před spuštěním úlohy MSBuild zkontroluje, zda je určeno ke spuštění v aktuálním softwarovém kontextu. Pokud je úkol označen jako označený, nástroj MSBuild ho předá do AssemblyTaskFactory, který ho spustí v aktuálním procesu. v opačném případě nástroj MSBuild projde úlohu do TaskHostFactory, který úlohu spustí v procesu, který odpovídá cílovému kontextu. I v případě, že se aktuální kontext a cílový kontext shodují, můžete vynutit spuštění úlohy mimo proces (pro izolaci, zabezpečení nebo jiné důvody) nastavením `TaskFactory` na `TaskHostFactory`.
 
 ```xml
@@ -84,6 +88,7 @@ Před spuštěním úlohy MSBuild zkontroluje, zda je určeno ke spuštění v a
 ```
 
 ## <a name="phantom-task-parameters"></a>Parametry fiktivní úlohy
+
 Stejně jako jakékoli jiné parametry úlohy `MSBuildRuntime` a `MSBuildArchitecture` lze nastavit z vlastností sestavení.
 
 ```xml
@@ -107,5 +112,6 @@ Parametry `MSBuildRuntime` a `MSBuildArchitecture` poskytují nejpružnější z
 > [!NOTE]
 > Parametry úlohy jsou vyhodnocovány v kontextu nadřazeného uzlu, nikoli v kontextu hostitele úkolu. Proměnné prostředí, které jsou závislé na architektuře nebo běhu (například umístění *programových souborů* ), se vyhodnotí na hodnotu, která odpovídá nadřazenému uzlu. Pokud je však stejná proměnná prostředí čtena přímo úlohou, bude vyhodnocena správně v kontextu hostitele úkolu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Konfigurace cílů a úloh](../msbuild/configuring-targets-and-tasks.md)

@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7aaa963da3f17265da6ebeaed4d30cfe75aa533c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2a09bd4955cee6e50368f7155fb2e03c2c1758bf
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593262"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634016"
 ---
 # <a name="getassemblyidentity-task"></a>GetAssemblyIdentity – úloha
+
 Načte z určených souborů identity sestavení a vypíše informace o identitě.
 
 ## <a name="task-parameters"></a>Parametry úlohy
+
 Následující tabulka popisuje parametry úlohy `GetAssemblyIdentity`.
 
 |Parametr|Popis|
@@ -37,11 +39,13 @@ Následující tabulka popisuje parametry úlohy `GetAssemblyIdentity`.
 |`AssemblyFiles`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje soubory, ze kterých mají být načteny identity.|
 
 ## <a name="remarks"></a>Poznámky
+
 Výstup položek s parametrem `Assemblies` obsahuje položky metadat položky s názvem `Version`, `PublicKeyToken`a `Culture`.
 
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
 V následujícím příkladu je načtena identita souborů zadaných v `MyAssemblies` položce a jejich výstupy do položky `MyAssemblyIdentities`.
 
 ```xml
@@ -57,6 +61,7 @@ V následujícím příkladu je načtena identita souborů zadaných v `MyAssemb
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e37c57119f74b9ab5f3157c6b88f9405799a2e82
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 32ce6fcad3897443f178c45d84e16f4cff44ab03
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596096"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634380"
 ---
 # <a name="converttoabsolutepath-task"></a>ConvertToAbsolutePath – úloha
+
 Převede relativní cestu nebo odkaz na absolutní cestu.
 
 ## <a name="task-parameters"></a>Parametry úlohy
+
  Následující tabulka popisuje parametry úlohy `ConvertToAbsolutePath`.
 
 |Parametr|Popis|
@@ -37,8 +39,10 @@ Převede relativní cestu nebo odkaz na absolutní cestu.
 |`AbsolutePaths`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Seznam absolutních cest pro položky, které byly předány.|
 
 ## <a name="remarks"></a>Poznámky
+
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

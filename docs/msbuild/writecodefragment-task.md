@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3745e1c2f300c860d281752a0bf81359806c5d5e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0ab604b23a99ab2dd62adca6076168fe264ab1b4
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75567395"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630689"
 ---
 # <a name="writecodefragment-task"></a>WriteCodeFragment – úloha
+
 Vygeneruje dočasný soubor kódu ze zadaného vygenerovaného fragmentu kódu. Neodstraní soubor.
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy `WriteCodeFragment`.
 
 |Parametr|Popis|
@@ -37,8 +39,10 @@ Vygeneruje dočasný soubor kódu ze zadaného vygenerovaného fragmentu kódu. 
 |`OutputFile`|Volitelný výstupní parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje cestu k souboru, který se vygeneroval. Pokud je tento parametr nastaven pomocí názvu souboru, je cílová složka k názvu souboru. Pokud je tato složka nastavená pomocí kořenového adresáře, bude se cílová složka ignorovat.<br /><br /> Pokud tento parametr není nastaven, název výstupního souboru je cílová složka, libovolný název souboru a výchozí přípona názvu souboru pro zadaný jazyk.|
 
 ## <a name="remarks"></a>Poznámky
+
  Kromě toho, že mají parametry, které jsou uvedeny v tabulce, tato úloha dědí parametry z třídy <xref:Microsoft.Build.Tasks.TaskExtension>, kterou sám dědí z třídy <xref:Microsoft.Build.Utilities.Task>. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

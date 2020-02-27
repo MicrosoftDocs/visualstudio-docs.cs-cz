@@ -8,12 +8,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 1a83ce4cf47f8a1607e562dfdb69b5b7374de1a6
-ms.sourcegitcommit: ca9375d1c48355f2e9f7bc1b2d3f0e94eb15db00
+ms.openlocfilehash: abd8ba039f9f6a19f5c028e05c03151c090e304c
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022347"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631000"
 ---
 # <a name="whats-new-in-msbuild-160"></a>Co je nového v MSBuild 16,0
 
@@ -35,5 +35,6 @@ Tento článek popisuje aktualizované funkce a vlastnosti v MSBuild 16,0. Podro
 
 MSBuild (a Visual Studio) nyní cílí na .NET Framework 4.7.2. Pokud chcete používat nové funkce rozhraní API nástroje MSBuild, musíte upgradovat také sestavení, ale stávající kód bude fungovat i nadále.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [MSBuild](../msbuild/msbuild.md)

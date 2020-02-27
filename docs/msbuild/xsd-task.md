@@ -20,20 +20,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31c256e02901d4f7dd7de6f14e9f650626feac25
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 217e045a731efa1fe3ba1dda63e89eca685d4b75
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75565783"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630779"
 ---
 # <a name="xsd-task"></a>XSD – úloha
+
 Zabalí Nástroj definice schématu XML (*XSD. exe*), který generuje soubory schématu nebo třídy ze zdroje.
 
 > [!NOTE]
 > Od sady Visual Studio 2017 je C++ podpora projektů pro soubor *XSD. exe* zastaralá. Rozhraní API **Microsoft. VisualC. CppCodeProvider** můžete dál používat tak, že ručně přidáte *CppCodeProvider. dll* do globální mezipaměti sestavení (GAC).
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy **XSD** .
 
 - **AdditionalOptions**
@@ -52,7 +54,7 @@ Zabalí Nástroj definice schématu XML (*XSD. exe*), který generuje soubory sc
 
   - **třídy** -  **/Classes**
 
-  - **dataset** -  **/dataset**
+  - **datová sada** -  **/DataSet**
 
 - **Jazyk**
 
@@ -62,7 +64,7 @@ Zabalí Nástroj definice schématu XML (*XSD. exe*), který generuje soubory sc
 
      Vyberte z **cs** (C#, což je výchozí nastavení), **VB** (Visual Basic) nebo **js** (JScript). Můžete také zadat plně kvalifikovaný název pro třídu, která implementuje `System.CodeDom.Compiler.CodeDomProvider Class`.
 
-- **Namespace**
+- **Hosting**
 
      Volitelný **řetězcový** parametr.
 
@@ -86,5 +88,6 @@ Zabalí Nástroj definice schématu XML (*XSD. exe*), který generuje soubory sc
 
      Určuje adresář pro protokol sledování.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

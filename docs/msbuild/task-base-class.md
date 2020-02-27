@@ -13,17 +13,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b3aaef85c53dfacf592251c95772d17b1a6ff96
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d7d6e0870f809a30bc3feb7ecb7a7302b7729124
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566394"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631949"
 ---
 # <a name="task-base-class"></a>Základní třída úlohy
+
 Mnohé úlohy mají v konečném důsledku dědění z <xref:Microsoft.Build.Utilities.Task> třídy. Tato třída přidá několik parametrů do úkolů, které jsou z nich odvozeny. Tyto parametry jsou uvedeny v tomto dokumentu.
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry této základní třídy.
 
 |Parametr|Popis|
@@ -34,6 +36,7 @@ Mnohé úlohy mají v konečném důsledku dědění z <xref:Microsoft.Build.Uti
 |<xref:Microsoft.Build.Utilities.Task.HostObject%2A>|Volitelný parametr <xref:Microsoft.Build.Framework.ITaskHost>.<br /><br /> Určuje instanci objektu hostitele (může mít hodnotu null). Modul sestavení nastavuje tuto vlastnost, pokud má rozhraní IDE hostitele přidružený objekt hostitele s touto konkrétní úlohou.|
 |<xref:Microsoft.Build.Utilities.Task.Log%2A>|Volitelný <xref:Microsoft.Build.Utilities.TaskLoggingHelper> parametr jen pro čtení.<br /><br /> Objekt pomocníka protokolování..|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

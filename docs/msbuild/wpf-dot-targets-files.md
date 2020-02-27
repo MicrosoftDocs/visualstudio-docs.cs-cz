@@ -17,17 +17,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: adac07fff84bf0a447875b7084a3003e61a9767d
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: d3225777c020272a24ac124bf6d039c2154e2ff3
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578169"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630948"
 ---
 # <a name="wpf-targets-files"></a>WPF. targets – soubory
-[!INCLUDE[TLA#tla_winclient](../misc/includes/tlasharptla_winclient_md.md)] rozšiřuje [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] přidáním sady [!INCLUDE[TLA2#tla_wpf](../msbuild/includes/tla2sharptla_wpf_md.md)]specifických úloh, které jsou zkombinovány do speciálního souboru *. targets* , *Microsoft. WinFX. targets*. Tento soubor kombinuje sadu [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] úloh, které jsou požadovány pro sestavení projektu [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] v [!INCLUDE[TLA#tla_winclient](../misc/includes/tlasharptla_winclient_md.md)].
+
+Windows Presentation Foundation (WPF) rozšiřuje MSBuild přidáním sady úkolů specifických pro WPF, které jsou zkombinovány do speciálního souboru *. targets* , *Microsoft. WinFX. targets*. Tento soubor kombinuje sadu úloh nástroje MSBuild, které jsou požadovány pro sestavení projektu MSBuild v subsystému WPF.
 
 ## <a name="see-also"></a>Viz také
+
 - [MSBuild. targets – soubory](../msbuild/msbuild-dot-targets-files.md)
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
 - [Sestavení aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 650683c047f7df6422e25ef5b23201a2660b3125
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 915265a775f572467ad1296499bdd3201adc1f8b
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591122"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634146"
 ---
 # <a name="findinlist-task"></a>FindInList – úloha
+
 V zadaném seznamu najde položku, která má odpovídající itemspec.
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry [úlohy FindInList –](../msbuild/findinlist-task.md).
 
 |Parametr|Popis|
@@ -39,8 +41,10 @@ V zadaném seznamu najde položku, která má odpovídající itemspec.
 |`MatchFileNameOnly`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, porovná se jenom s názvem souboru, který je součástí ItemSpec; jinak se porovná s celým ItemSpec. Výchozí hodnota je `true`.|
 
 ## <a name="remarks"></a>Poznámky
+
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33912df490b148c91c2a0d152f979bd6149d8ae3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 4d97b727dcba8cd16fe97ee33764947797c36db7
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566069"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634133"
 ---
 # <a name="findunderpath-task"></a>FindUnderPath – úloha
+
 Určuje, které položky v zadané kolekci položek mají cesty, které jsou v zadané složce nebo pod ní.
 
 ## <a name="parameters"></a>Parametry
+
 Následující tabulka popisuje parametry úlohy `FindUnderPath`.
 
 |Parametr|Popis|
@@ -40,9 +42,11 @@ Následující tabulka popisuje parametry úlohy `FindUnderPath`.
 |`UpdateToAbsolutePaths`|Volitelný parametr `Boolean`.<br /><br /> Pokud má hodnotu true, cesty výstupních položek se aktualizují tak, aby byly absolutní cesty.|
 
 ## <a name="remarks"></a>Poznámky
+
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
 Následující příklad používá úlohu `FindUnderPath` k určení, zda soubory obsažené v `MyFiles` položce mají cesty, které existují v cestě určené vlastností `SearchPath`. Po dokončení úlohy `FilesNotFoundInPath` položka obsahuje soubor *Soubor1. txt* a položka `FilesFoundInPath` obsahuje soubor *Soubor2. txt* .
 
 ```xml
@@ -72,7 +76,8 @@ Následující příklad používá úlohu `FindUnderPath` k určení, zda soubo
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)

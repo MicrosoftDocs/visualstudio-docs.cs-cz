@@ -12,14 +12,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a0f63ac8fa782dcb504b8bd00ad7e32ce96e1eab
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 1723fba810450fe5e31a43d63f3704ab74f455f4
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917815"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634497"
 ---
 # <a name="build-multiple-projects-in-parallel-with-msbuild"></a>Paralelní sestavení více projektů pomocí MSBuild
+
 Nástroj MSBuild lze použít pro rychlejší sestavení více projektů tak, že budou tyto projekty spuštěny paralelně. Pro paralelní spuštění sestavení je možné na počítači s více jádry nebo s více procesory použít následující nastavení:
 
 - Přepínač příkazového řádku `-maxcpucount`.
@@ -30,6 +31,7 @@ Nástroj MSBuild lze použít pro rychlejší sestavení více projektů tak, ž
 > Výkon sestavení může mít i přepínač **-verbose** ( **-v**) na příkazovém řádku. Výkon sestavení se může snížit, je-li podrobnost informací protokolu sestavení nastavena na možnosti podrobné nebo diagnostické, které se používají pro řešení potíží. Další informace najdete v tématu [získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md) a [odkazů na příkazový řádek](../msbuild/msbuild-command-line-reference.md).
 
 ## <a name="-maxcpucount-switch"></a>– Přepínač maxcpucount
+
 Použijete-li přepínač `-maxcpucount` nebo `-m` pro krátké, nástroj MSBuild může vytvořit zadaný počet procesů *MSBuild. exe* , které mohou být spuštěny paralelně. Tyto procesy jsou známé také jako „pracovní procesy“. Každý pracovní proces používá samostatné jádro nebo procesor – je-li nějaký k dispozici – pro sestavení projektu ve stejnou dobu, kdy ostatní procesory provádějí sestavení ostatních projektů. Například nastavení tohoto přepínače na hodnotu „4“ způsobí, že nástroj MSBuild vytvoří čtyři pracovní procesy pro sestavení projektu.
 
 Při použití přepínače `-maxcpucount` bez zadání hodnoty použije nástroj MSBuild číslo odpovídající počtu procesorů v počítači.
@@ -43,7 +45,8 @@ msbuild.exe myproj.proj -maxcpucount:3
 ```
 
 ## <a name="buildinparallel-task-parameter"></a>BuildInParallel – parametr úlohy
-`BuildInParallel` je volitelný logický parametr u úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Pokud je `BuildInParallel` nastaveno na `true` (jeho výchozí hodnota je `true`), vygeneruje se více pracovních procesů, aby se sestavilo co nejvíce projektů. Aby tento postup správně fungoval, musí být přepínač `-maxcpucount` nastaven na hodnotu větší než 1 a systém musí být alespoň dvoujádrový nebo mít dva nebo více procesorů.
+
+`BuildInParallel` je volitelný logický parametr pro úlohu MSBuild. Pokud je `BuildInParallel` nastaveno na `true` (jeho výchozí hodnota je `true`), vygeneruje se více pracovních procesů, aby se sestavilo co nejvíce projektů. Aby tento postup správně fungoval, musí být přepínač `-maxcpucount` nastaven na hodnotu větší než 1 a systém musí být alespoň dvoujádrový nebo mít dva nebo více procesorů.
 
 Následuje příklad, který je pořízen od *společnosti Microsoft. Common. targets*, o tom, jak nastavit parametr `BuildInParallel`.
 
@@ -69,7 +72,8 @@ Následuje příklad, který je pořízen od *společnosti Microsoft. Common. ta
 </MSBuild>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Použití více procesorů k sestavení projektů](../msbuild/using-multiple-processors-to-build-projects.md)
 - [Zápis protokolovacích nástrojů s více procesory](../msbuild/writing-multi-processor-aware-loggers.md)
 - [Blog C++ o optimalizaci sestavení paralelně](https://devblogs.microsoft.com/visualstudio/tuning-c-build-parallelism-in-vs2010/)

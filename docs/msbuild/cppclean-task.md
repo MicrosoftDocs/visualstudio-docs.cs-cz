@@ -19,17 +19,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 827014e04c23239274e31b994fd0178cbe8e5883
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 331a96c7cd67b933e521e3fe5f2d7a909ffa5d03
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596070"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634341"
 ---
 # <a name="cppclean-task"></a>CPPClean – úloha
+
 Odstraní dočasné soubory, které nástroj MSBuild vytvoří při C++ sestavení projektu. Proces odstraňování souborů sestavení se označuje jako *čištění*.
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy **CPPClean –** .
 
 |Parametr|Popis|
@@ -40,5 +42,6 @@ Odstraní dočasné soubory, které nástroj MSBuild vytvoří při C++ sestaven
 |**FilesExcludedFromClean**|Volitelný parametr `String`.<br /><br /> Určuje středníky oddělený seznam souborů, které se nemají vyčistit.|
 |**FoldersToClean**|Vyžaduje se `String` parametr.<br /><br /> Určuje středníky oddělený seznam adresářů, které se mají vyčistit. Můžete zadat úplnou nebo relativní cestu a cesta může obsahovat zástupný symbol (*).|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

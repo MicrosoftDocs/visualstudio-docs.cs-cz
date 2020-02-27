@@ -16,17 +16,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99970bfbc955fe972d5e3c9a4e38ae6f57e0e0bf
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e50a6dd66c2dca7fa4159c578ccd334ed1d26cae
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597422"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632950"
 ---
 # <a name="property-element-msbuild"></a>Property – element (MSBuild)
-Obsahuje uživatelsky definovaný název a hodnotu vlastnosti. Každá vlastnost použitá v projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] musí být zadána jako podřízený prvku `PropertyGroup` elementu.
 
- \<Project> \<PropertyGroup>
+Obsahuje uživatelsky definovaný název a hodnotu vlastnosti. Každá vlastnost použitá v projektu MSBuild musí být zadána jako podřízený prvku `PropertyGroup`.
+
+ \<> projektu \<vlastnost >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,6 +38,7 @@ Obsahuje uživatelsky definovaný název a hodnotu vlastnosti. Každá vlastnost
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -46,7 +48,8 @@ Obsahuje uživatelsky definovaný název a hodnotu vlastnosti. Každá vlastnost
 |`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
@@ -55,14 +58,17 @@ Obsahuje uživatelsky definovaný název a hodnotu vlastnosti. Každá vlastnost
 |[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|Seskupení elementu pro vlastnosti|
 
 ## <a name="text-value"></a>Textová hodnota
+
  Textová hodnota je volitelná.
 
  Tento text určuje hodnotu vlastnosti a může obsahovat XML.
 
 ## <a name="remarks"></a>Poznámky
+
  Názvy vlastností jsou omezeny pouze na znaky ASCII. Hodnoty vlastností jsou odkazovány v projektu umístěním názvu vlastnosti mezi "`$(`" a "`)`". Například `$(builddir)\classes` by se přeložila na *build\classes*, pokud má vlastnost `builddir` hodnotu `build`. Další informace o vlastnostech naleznete v tématu [vlastnosti MSBuild](../msbuild/msbuild-properties.md).
 
 ## <a name="example"></a>Příklad
+
  Následující kód nastaví vlastnost `Optimization` na `false` a vlastnost `DefaultVersion` na `1.0`, pokud je vlastnost `Version` prázdná.
 
 ```xml
@@ -72,6 +78,7 @@ Obsahuje uživatelsky definovaný název a hodnotu vlastnosti. Každá vlastnost
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

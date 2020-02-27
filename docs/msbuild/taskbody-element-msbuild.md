@@ -16,14 +16,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac4e04c1a75fe7afdebc984381e17d7e55913fd4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 45b255f782390cfc478ac2f7bce58170e4e2b268
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594978"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631844"
 ---
 # <a name="taskbody-element-msbuild"></a>TaskBody – – element (MSBuild)
+
 Obsahuje data předávaná `UsingTask` `TaskFactory`. Další informace naleznete v tématu [UsingTask element (MSBuild)](../msbuild/usingtask-element-msbuild.md).
 
  \<projektu > \<UsingTask > \<TaskBody – >
@@ -35,6 +36,7 @@ Obsahuje data předávaná `UsingTask` `TaskFactory`. Další informace naleznet
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -47,15 +49,16 @@ Obsahuje data předávaná `UsingTask` `TaskFactory`. Další informace naleznet
 
 |Prvek|Popis|
 |-------------|-----------------|
-|Datové|Text mezi značkami `TaskBody` se do `TaskFactory`pošle jako doslovné.|
+|Data|Text mezi značkami `TaskBody` se do `TaskFactory`pošle jako doslovné.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 | Prvek | Popis |
 | - | - |
-| [UsingTask](../msbuild/usingtask-element-msbuild.md) | Poskytuje způsob, jak zaregistrovat úkoly v [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. V projektu může být nula nebo více `UsingTask` prvků. |
+| [UsingTask](../msbuild/usingtask-element-msbuild.md) | Poskytuje způsob, jak registrovat úlohy v nástroji MSBuild. V projektu může být nula nebo více `UsingTask` prvků. |
 
 ## <a name="example"></a>Příklad
+
  Následující příklad ukazuje způsob použití prvku `TaskBody` s atributem `Evaluate`.
 
 ```xml
@@ -71,7 +74,8 @@ Obsahuje data předávaná `UsingTask` `TaskFactory`. Další informace naleznet
 </UsingTask>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

@@ -25,17 +25,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c9daeb5264a4bebb67cfd486a5f05708d7e025f3
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: a5794d059a17f39531a7788895b604ae0e9590ce
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578537"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633587"
 ---
 # <a name="lib-task"></a>LIB – úloha
+
 Zabalí nástroj Správce bitových knihoven Microsoft 32, *lib. exe*. Správce knihovny vytvoří a spravuje knihovnu souborů objektů COFF (Common Object File Format). Správce knihovny může také vytvářet soubory exportu a importovat knihovny pro odkazování na exportované definice. Další informace naleznete v tématu [lib reference](/cpp/build/reference/lib-reference) a [Running lib](/cpp/build/reference/running-lib).
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy **lib** . Většina parametrů úlohy odpovídá možnosti příkazového řádku.
 
 |Parametr|Popis|
@@ -66,4 +68,5 @@ Zabalí nástroj Správce bitových knihoven Microsoft 32, *lib. exe*. Správce 
 |**Podrobné**|Volitelný **logický** parametr.<br /><br /> Pokud `true`, zobrazí podrobnosti o průběhu relace. To zahrnuje názvy přidávaných souborů *. obj* . Informace se odesílají do standardního výstupu a dají se přesměrovat na soubor.<br /><br /> Další informace naleznete v možnosti **/verbose** v tématu [spuštění lib](/cpp/build/reference/running-lib).|
 
 ## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 397366a7dac601cd11dc1c70efc352edf303a92e
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 133048a5bb8103c681d8e2b84e68033c486109e1
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579579"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632287"
 ---
 # <a name="signfile-task"></a>SignFile – úloha
 
@@ -74,5 +74,6 @@ Podepíše zadaný soubor pomocí zadaného certifikátu.
 > Kryptografický otisk certifikátu je hodnota hash SHA-1 certifikátu. Další informace najdete v tématu [získání hodnoty hash SHA-1 certifikátu důvěryhodné kořenové certifikační autority](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733076\(v\=ws.10\)). Pokud zkopírujete a vložíte kryptografický otisk z podrobností certifikátu, ujistěte se, že jste nezahrnuli neviditelný znak (3F), což by mohlo zabránit `SignFile` vyhledání certifikátu.
 
 ## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57031bd49a67e1961b5413a59f66562cc9c1b883
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0c95606a00e86ffd187162e444f2c710c5cc3a0e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596785"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632885"
 ---
 # <a name="registerassembly-task"></a>RegisterAssembly – úloha
+
 Přečte metadata v rámci zadaného sestavení a přidá nezbytné položky do registru, které umožní klientům modelu COM vytvářet transparentně .NET Framework třídy. Chování této úlohy je podobné, ale ne identické, pro modul [Regasm. exe (Nástroj pro registraci sestavení)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool).
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy `RegisterAssembly`.
 
 |Parametr|Popis|
@@ -39,9 +41,11 @@ Přečte metadata v rámci zadaného sestavení a přidá nezbytné položky do 
 |`TypeLibFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Určuje knihovnu typů, která se má generovat ze zadaného sestavení. Vygenerovaná knihovna typů obsahuje definice přístupných typů definovaných v rámci sestavení. Knihovna typů je generována pouze v případě, že je splněna jedna z následujících podmínek:<br /><br /> -V tomto umístění neexistuje knihovna typů daného názvu.<br />-Knihovna typů existuje, ale je starší než sestavení, které je předáno.<br /><br /> Pokud je knihovna typů novější než sestavení, které je předáno, nebude vytvořena nová, ale sestavení bude i nadále zaregistrováno.<br /><br /> Pokud je tento parametr zadán, musí mít stejný počet položek jako parametr `Assemblies` nebo úloha selže. Pokud nejsou zadány žádné vstupy, bude ve výchozím nastavení úloha název sestavení a změna rozšíření položky na *TLB*.|
 
 ## <a name="remarks"></a>Poznámky
+
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
  Následující příklad používá úlohu `RegisterAssembly` k registraci sestavení určeného kolekcí `MyAssemblies`ch položek.
 
 ```xml
@@ -59,6 +63,7 @@ Přečte metadata v rámci zadaného sestavení a přidá nezbytné položky do 
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

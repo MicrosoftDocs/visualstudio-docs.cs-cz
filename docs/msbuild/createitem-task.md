@@ -18,20 +18,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b722604249b9c395f06bb038102d731fafe2efc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 4364e6c3f637fdf2c3e02a52d3163e5cdd8a5861
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590069"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634328"
 ---
 # <a name="createitem-task"></a>CreateItem – úloha
+
 Naplní kolekce položek vstupními položkami. To umožňuje kopírování položek z jednoho seznamu do jiného.
 
 > [!NOTE]
 > Tato úloha je zastaralá. Počínaje .NET Framework 3,5 mohou být skupiny položek umístěny v rámci [cílových](../msbuild/target-element-msbuild.md) elementů. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
 
 ## <a name="attributes"></a>Atributy
+
  Následující tabulka popisuje parametry úlohy `CreateItem`.
 
 |Parametr|Popis|
@@ -42,9 +44,11 @@ Naplní kolekce položek vstupními položkami. To umožňuje kopírování polo
 |`PreserveExistingMetadata`|Volitelný parametr `Boolean`.<br /><br /> Pokud `True`, použijte další metadata pouze v případě, že ještě neexistují.|
 
 ## <a name="remarks"></a>Poznámky
+
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
  Následující příklad kódu vytvoří novou kolekci položek s názvem `MySourceItemsWithMetadata` z kolekce Item `MySourceItems`. `CreateItem` úloha naplní novou kolekci položek položkami `MySourceItems` položky. Pak přidá další položku metadat s názvem `MyMetadata` s hodnotou `Hello` pro každou položku v nové kolekci.
 
  Po spuštění úlohy kolekce `MySourceItemsWithMetadata` položky obsahuje položky *Soubor1. resx* a *Soubor2. resx*s položkami metadat pro `MyMetadata`. Kolekce `MySourceItems`ch položek se nezměnila.
@@ -76,6 +80,7 @@ Naplní kolekce položek vstupními položkami. To umožňuje kopírování polo
 |---------------------|--------------|
 |`MySourceItemsWithMetadata`|*Soubor1. resx* (`MyMetadata="Hello"`)<br /><br /> *Soubor2. resx* (`MyMetadata="Hello"`)|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

@@ -22,20 +22,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd4bf72509610e9d397e4b208294112fcc0975b4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8c9a51fe097eb110e44b3f4bd932a26f4efb6ea6
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588327"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630636"
 ---
 # <a name="zipdirectory-task"></a>ZipDirectory – úloha
+
 Vytvoří archiv *zip* z obsahu adresáře.
 
 >[!NOTE]
 >Úkol `ZipDirectory` je k dispozici pouze v MSBuild 15,8 a vyšších.
 
 ## <a name="parameters"></a>Parametry
+
  Následující tabulka popisuje parametry úlohy `ZipDirectory`.
 
 |Parametr|Popis|
@@ -45,9 +47,11 @@ Vytvoří archiv *zip* z obsahu adresáře.
 |`SourceDirectory`|Vyžaduje se <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje adresář, ze kterého se má vytvořit archiv *zip.*|
 
 ## <a name="remarks"></a>Poznámky
+
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
  Následující příklad vytvoří archiv *zip* z výstupního adresáře po sestavení projektu.
 
 ```xml
@@ -62,6 +66,7 @@ Vytvoří archiv *zip* z obsahu adresáře.
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

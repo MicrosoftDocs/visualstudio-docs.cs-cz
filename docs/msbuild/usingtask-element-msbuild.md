@@ -18,14 +18,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bd62738a89b38adb6cd01d6a33d661e95144d34
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: bc50379563a85ce9c76f3d45b9d70c1f784eaf5a
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75565263"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631247"
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask – element (MSBuild)
+
 Mapuje úlohu, na kterou je odkazováno v elementu [Task](../msbuild/task-element-msbuild.md) , na sestavení, které obsahuje implementaci úlohy.
 
  \<> projektu \<UsingTask >
@@ -43,6 +44,7 @@ Mapuje úlohu, na kterou je odkazováno v elementu [Task](../msbuild/task-elemen
 > Na rozdíl od vlastností a položek se použije *první* `UsingTask` element, který platí pro `TaskName`. Chcete-li přepsat úkoly, je nutné definovat nové `UsingTask` *před* existujícím.
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -59,16 +61,17 @@ Mapuje úlohu, na kterou je odkazováno v elementu [Task](../msbuild/task-elemen
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[ParameterGroup](../msbuild/parametergroup-element.md)|Sada parametrů, která se zobrazí na úkolu, který je generován zadaným `TaskFactory`.|
-|[Úloha](../msbuild/task-element-msbuild.md)|Data, která jsou předána `TaskFactory` k vygenerování instance úlohy.|
+|[ParameterGroup –](../msbuild/parametergroup-element.md)|Sada parametrů, která se zobrazí na úkolu, který je generován zadaným `TaskFactory`.|
+|[Úkol](../msbuild/task-element-msbuild.md)|Data, která jsou předána `TaskFactory` k vygenerování instance úlohy.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 | Prvek | Popis |
 | - | - |
-| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| [Projektem](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
 
 ## <a name="remarks"></a>Poznámky
+
  Proměnné prostředí, vlastnosti příkazového řádku, vlastnosti na úrovni projektu a položky na úrovni projektu mohou být odkazovány v `UsingTask` prvky obsažené v souboru projektu buď přímo, nebo prostřednictvím importovaného souboru projektu. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
 
 > [!NOTE]
@@ -77,6 +80,7 @@ Mapuje úlohu, na kterou je odkazováno v elementu [Task](../msbuild/task-elemen
  V MSBuild 4,0 lze pomocí úloh načíst ze souborů *. overridetask* .
 
 ## <a name="example"></a>Příklad
+
  Následující příklad ukazuje způsob použití prvku `UsingTask` s atributem `AssemblyName`.
 
 ```xml
@@ -93,6 +97,7 @@ Mapuje úlohu, na kterou je odkazováno v elementu [Task](../msbuild/task-elemen
 ```
 
 ## <a name="example"></a>Příklad
+
  Následující příklad ukazuje způsob použití prvku `UsingTask` s atributem `AssemblyFile`.
 
 ```xml
@@ -100,7 +105,8 @@ Mapuje úlohu, na kterou je odkazováno v elementu [Task](../msbuild/task-elemen
               AssemblyFile="c:\myTasks\myTask.dll" />
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

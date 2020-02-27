@@ -16,14 +16,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56d3c301eb0e9b660a82b6552792a96aa5bd8596
-ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
+ms.openlocfilehash: 76dadd1a064a64884e3ff1cd1f2431bc1b94c3c4
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76826585"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633730"
 ---
 # <a name="importgroup-element"></a>Import – element
+
   
 Obsahuje kolekci `Import` prvků, které jsou seskupeny pod volitelnou podmínkou. Další informace naleznete v tématu [Import element (MSBuild)](../msbuild/import-element-msbuild.md).
 
@@ -42,6 +43,7 @@ Obsahuje kolekci `Import` prvků, které jsou seskupeny pod volitelnou podmínko
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -60,9 +62,10 @@ Obsahuje kolekci `Import` prvků, které jsou seskupeny pod volitelnou podmínko
 
 | Prvek | Popis |
 | - | - |
-| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| [Projektem](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
 
 ## <a name="example"></a>Příklad
+
  Následující příklad kódu ukazuje prvek `ImportGroup`.
 
 ```xml
@@ -75,7 +78,7 @@ Obsahuje kolekci `Import` prvků, které jsou seskupeny pod volitelnou podmínko
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Položky](../msbuild/msbuild-items.md)

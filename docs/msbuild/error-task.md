@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e09fa38f9f160728c3ca353164e87c9f3f6fa82
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: bd5dd3214c9575a34e9265c33061b024648a221c
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596356"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634224"
 ---
 # <a name="error-task"></a>Error – úloha
+
 Zastaví sestavení a zaznamená chybu na základě vyhodnoceného podmíněného příkazu.
 
 ## <a name="parameters"></a>Parametry
+
 Následující tabulka popisuje parametry úlohy `Error`.
 
 | Parametr | Popis |
@@ -36,16 +38,18 @@ Následující tabulka popisuje parametry úlohy `Error`.
 | `Code` | Volitelný parametr `String`.<br /><br /> Kód chyby, který se má přidružit k chybě |
 | `File` | Volitelný parametr `String`.<br /><br /> Název souboru, který obsahuje chybu. Pokud není zadán žádný název souboru, bude použit soubor obsahující chybovou úlohu. |
 | `HelpKeyword` | Volitelný parametr `String`.<br /><br /> Klíčové slovo Help k přidružení k chybě |
-| `Text` | Volitelný parametr `String`.<br /><br /> Text chyby, který [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] protokoluje, je-li parametr `Condition` vyhodnocen jako `true`. |
+| `Text` | Volitelný parametr `String`.<br /><br /> Chybový text, který nástroj MSBuild zaznamená, pokud je parametr `Condition` vyhodnocen jako `true`. |
 
 ## <a name="remarks"></a>Poznámky
-Úloha `Error` umožňuje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]ým projektům vystavovat chybový text protokolovacím nástrojům a zastavit provádění sestavení.
+
+Úloha `Error` umožňuje projektům MSBuild vystavovat chybový text pro protokolovací nástroje a zastavit provádění sestavení.
 
 Pokud je parametr `Condition` vyhodnocen jako `true`, sestavení je zastaveno a zaprotokoluje se chyba. Pokud parametr `Condition` neexistuje, zaznamená se chyba a spuštění sestavení se zastaví. Další informace o protokolování naleznete v tématu [získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
 
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
 Následující příklad kódu ověřuje, zda jsou nastaveny všechny požadované vlastnosti. Pokud nejsou nastaveny, projekt vyvolá událost chyby a zaznamená hodnotu parametru `Text` úlohy `Error`.
 
 ```xml
@@ -62,6 +66,7 @@ Následující příklad kódu ověřuje, zda jsou nastaveny všechny požadovan
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Získat protokoly sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)

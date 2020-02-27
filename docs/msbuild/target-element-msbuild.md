@@ -18,15 +18,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c69ee5758d5c6e513af853a8d7589057c6537956
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 79686132adce043b4864d545f0912564709cfe2c
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566420"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631975"
 ---
 # <a name="target-element-msbuild"></a>Target – element (MSBuild)
-Obsahuje sadu úloh, které [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] spustit sekvenčně.
+
+Obsahuje sadu úloh, které má nástroj MSBuild spustit sekvenčně.
 
  \<projektu > \<Target >
 
@@ -51,6 +52,7 @@ Obsahuje sadu úloh, které [!INCLUDE[vstecmsbuild](../extensibility/internals/i
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
@@ -72,7 +74,7 @@ Obsahuje sadu úloh, které [!INCLUDE[vstecmsbuild](../extensibility/internals/i
 
 | Prvek | Popis |
 | - | - |
-| [Úloha](../msbuild/task-element-msbuild.md) | Vytvoří a spustí instanci úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. V cíli může být nula nebo více úkolů. |
+| [Úkol](../msbuild/task-element-msbuild.md) | Vytvoří a spustí instanci úlohy MSBuild. V cíli může být nula nebo více úkolů. |
 | [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) | Obsahuje sadu uživatelsky definovaných prvků `Property`. Počínaje .NET Framework 3,5 `Target` prvek může obsahovat `PropertyGroup` elementy. |
 | [ItemGroup](../msbuild/itemgroup-element-msbuild.md) | Obsahuje sadu uživatelsky definovaných prvků `Item`. Počínaje .NET Framework 3,5 `Target` prvek může obsahovat `ItemGroup` elementy. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md). |
 | [OnError](../msbuild/onerror-element-msbuild.md) | Způsobí provedení jednoho nebo více cílů, pokud je atribut `ContinueOnError` ErrorAndStop (nebo `false`) pro neúspěšnou úlohu. V cíli může být nula nebo více `OnError` prvků. Pokud `OnError` prvky jsou přítomny, musí být poslední prvky v elementu `Target`.<br /><br /> Informace o atributu `ContinueOnError` naleznete v tématu [Task element (MSBuild)](../msbuild/task-element-msbuild.md). |
@@ -81,10 +83,11 @@ Obsahuje sadu úloh, které [!INCLUDE[vstecmsbuild](../extensibility/internals/i
 
 | Prvek | Popis |
 | - | - |
-| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| [Projektem](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
 
 ## <a name="remarks"></a>Poznámky
- První cíl, který má být spuštěn, je určen v době běhu. Cíle můžou mít závislosti na jiných cílech. Například cíl pro nasazení závisí na cíli pro kompilaci. Modul [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] spouští závislosti v pořadí, ve kterém jsou uvedeny v atributu `DependsOnTargets`, zleva doprava. Další informace najdete v tématu [cíle](../msbuild/msbuild-targets.md).
+
+ První cíl, který má být spuštěn, je určen v době běhu. Cíle můžou mít závislosti na jiných cílech. Například cíl pro nasazení závisí na cíli pro kompilaci. Modul MSBuild spouští závislosti v pořadí, ve kterém jsou uvedeny v atributu `DependsOnTargets`, zleva doprava. Další informace najdete v tématu [cíle](../msbuild/msbuild-targets.md).
 
  MSBuild je závislý na pořadí importu a poslední definice cíle s konkrétním `Name` atributem je použitá definice.
 
@@ -101,6 +104,7 @@ Obsahuje sadu úloh, které [!INCLUDE[vstecmsbuild](../extensibility/internals/i
  Před tím, než nástroj MSBuild 4 pokaždé, když `Target` do své `Outputs`zahrnout více odkazů na stejnou položku, budou tyto duplicitní položky zaznamenány. Ve velmi rozsáhlých sestaveních, která měla velký počet výstupů a mnoho vzájemně závislých projektů, by to znamenalo neplýtvání velkého množství paměti, protože duplicitní položky nebyly žádného použití. Je-li atribut `KeepDuplicateOutputs` nastaven na hodnotu `true`, jsou tyto duplicity zaznamenávány.
 
 ## <a name="example"></a>Příklad
+
  Následující příklad kódu ukazuje `Target` element, který spouští úlohu `Csc`.
 
 ```xml
@@ -117,6 +121,7 @@ Obsahuje sadu úloh, které [!INCLUDE[vstecmsbuild](../extensibility/internals/i
 </Target>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Cíle](../msbuild/msbuild-targets.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

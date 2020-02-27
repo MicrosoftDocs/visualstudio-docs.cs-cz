@@ -13,29 +13,33 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41a32b914cab8626df513994a3d68c2aac3d7cb7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e2d825c0c08ffeba1449954ed310644dd4437840
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593431"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634536"
 ---
 # <a name="assigntargetpath-task"></a>AssignTargetPath – – úloha
+
 Tato úloha přijme seznam souborů a přidá atributy `<TargetPath>`, pokud již nejsou zadány.
 
 ## <a name="task-parameters"></a>Parametry úlohy
+
 Následující tabulka popisuje parametry úlohy `AssignTargetPath`.
 
 |Parametr|Popis|
 |---------------|-----------------|
 |`RootFolder`|Volitelný vstupní parametr `string`.<br /><br /> Obsahuje cestu ke složce, která obsahuje cílové odkazy.|
 |`Files`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>vstupní parametr `[]`.<br /><br /> Obsahuje seznam příchozích souborů.|
-|`AssignedFiles`|Volitelné<br /><br /> výstupní parametr <xref:Microsoft.Build.Framework.ITaskItem> `[]`.<br /><br /> Obsahuje výsledný seznam souborů.|
+|`AssignedFiles`|Nepovinné<br /><br /> výstupní parametr <xref:Microsoft.Build.Framework.ITaskItem> `[]`.<br /><br /> Obsahuje výsledný seznam souborů.|
 
 ## <a name="remarks"></a>Poznámky
+
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
 Následující příklad spustí úlohu `AssignTargetPath` ke konfiguraci projektu.
 
 ```xml
@@ -51,6 +55,7 @@ RootFolder="Resources"
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

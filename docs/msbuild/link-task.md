@@ -30,17 +30,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31bad6dfd0c336e4535e446d1167cb9fd6874972
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0f954be3a77e42ea4323255f978f6602a70c9725
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592201"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633574"
 ---
 # <a name="link-task"></a>odkaz – úloha
+
 Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje soubory objektů a knihoven Common Object File Format (COFF) a vytvoří spustitelný soubor ( *. exe*) nebo dynamickou knihovnu (DLL). Další informace naleznete v tématu [Možnosti linkeru](/cpp/build/reference/linker-options).
 
 ## <a name="parameters"></a>Parametry
+
  Následující popis popisuje parametry úkolu **propojení** . Většina parametrů úlohy a několik sad parametrů odpovídá možnosti příkazového řádku.
 
 - **AdditionalDependencies**
@@ -229,7 +231,7 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   Další informace naleznete v tématu [/delaysign (částečné podepsání sestavení)](/cpp/build/reference/delaysign-partially-sign-an-assembly).
 
-- **Ovladač**
+- **Faktorů**
 
   Volitelný **řetězcový** parametr.
 
@@ -237,7 +239,7 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti linkeru.
 
-  - **NotSet** -  *\<none>*
+  - Hodnota **NotSet** -  *\<žádná >*
 
   - **/Driver** **ovladače** - 
 
@@ -449,7 +451,7 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   - **Vyzvat okamžitě** -  **/errorreport: prompt**
 
-  - **QueueForNextLogin** -  **/ERRORREPORT:QUEUE**
+  - **QueueForNextLogin** -  **/errorreport: Queue**
 
   - **SendErrorReport** -  **/errorreport: Send**
 
@@ -497,7 +499,7 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   - **PGUpdate**
 
-    \- **/LTCG:PGUpdate**
+    \- **/LTCG: PGUpdate**
 
   Další informace naleznete v tématu [/LTCG (generování kódu při propojování)](/cpp/build/reference/ltcg-link-time-code-generation).
 
@@ -547,7 +549,7 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   Další informace naleznete v tématu [/MIDL (určení možností příkazového řádku MIDL)](/cpp/build/reference/midl-specify-midl-command-line-options).
 
-- **MinimumRequiredVersion**
+- **Určovat minimumRequiredVersion**
 
   Volitelný **řetězcový** parametr.
 
@@ -569,7 +571,7 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   Další informace najdete v tématu [/stub (název souboru zástupného kódu MS-DOS)](/cpp/build/reference/stub-ms-dos-stub-file-name).
 
-- **NoEntryPoint**
+- **Parametr-EntryPoint**
 
   Volitelný **logický** parametr.
 
@@ -619,7 +621,7 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   Další informace naleznete v tématu [/ALLOWBIND (zabránění vazbě knihoven DLL)](/cpp/build/reference/allowbind-prevent-dll-binding).
 
-- **Profile**
+- **Profil**
 
   Volitelný **logický** parametr.
 
@@ -681,19 +683,19 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **NotSet** -  *\<none>*
+  - Hodnota **NotSet** -  *\<žádná >*
 
-  - **LinkVerbose** -  **/VERBOSE**
+  - **LinkVerbose** -  **/verbose**
 
-  - **LinkVerboseLib** -  **/VERBOSE:Lib**
+  - **LinkVerboseLib** -  **/verbose: lib**
 
-  - **LinkVerboseICF** -  **/VERBOSE:ICF**
+  - **LinkVerboseICF** -  **/verbose: ICF**
 
-  - **LinkVerboseREF** -  **/VERBOSE:REF**
+  - **LinkVerboseREF** -  **/verbose: ref**
 
-  - **LinkVerboseSAFESEH** -  **/VERBOSE:SAFESEH**
+  - **LinkVerboseSAFESEH** -  **/verbose: SAFESEH**
 
-  - **LinkVerboseCLR** -  **/VERBOSE:CLR**
+  - **LinkVerboseCLR** -  **/verbose: CLR**
 
   Další informace najdete v tématu [/verbose (Tisk zpráv o průběhu)](/cpp/build/reference/verbose-print-progress-messages).
 
@@ -733,7 +735,7 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   Vytvoří druhý soubor programové databáze (PDB), který vynechá symboly, které nechcete distribuovat vašim zákazníkům. Zadejte název druhého souboru PDB.
 
-  Další informace najdete v tématu [/PDBSTRIPPED (odstranění privátních symbolů)](/cpp/build/reference/pdbstripped-strip-private-symbols).
+  Další informace naleznete v tématu [/PDBSTRIPPED (proložení privátních symbolů)](/cpp/build/reference/pdbstripped-strip-private-symbols).
 
 - **Provozuschopn**
 
@@ -743,25 +745,25 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **NotSet** -  *\<none>*
+  - Hodnota **NotSet** -  *\<žádná >*
 
   - **Konzola** -  **/SUBSYSTEM: konzola**
 
-  - **Windows** -  **/SUBSYSTEM:WINDOWS**
+  - **Windows** -  **/SUBSYSTEM: Windows**
 
   - **Nativní** -  **/SUBSYSTEM: Native**
 
   - **Aplikace rozhraní EFI** -  **/SUBSYSTEM: EFI_APPLICATION**
 
-  - **EFI Boot Service Driver** -  **/SUBSYSTEM:EFI_BOOT_SERVICE_DRIVER**
+  - **Ovladač spouštěcí služby EFI** -  **/SUBSYSTEM: EFI_BOOT_SERVICE_DRIVER**
 
   - /Subsystem **EFI ROM** -  **: EFI_ROM**
 
-  - **EFI Runtime** -  **/SUBSYSTEM:EFI_RUNTIME_DRIVER**
+  - **Běhové prostředí EFI** -  **/SUBSYSTEM: EFI_RUNTIME_DRIVER**
 
-  - **WindowsCE** -  **/SUBSYSTEM:WINDOWSCE**
+  - **WindowsCE** -  **/SUBSYSTEM: WindowsCE**
 
-  - **POSIX** -  **/SUBSYSTEM:POSIX**
+  - **Posix** -  **/SUBSYSTEM: POSIX**
 
   Další informace najdete v tématu [/Subsystem (určení subsystému)](/cpp/build/reference/subsystem-specify-subsystem).
 
@@ -813,7 +815,7 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **NotSet** -  *\<none>*
+  - Hodnota **NotSet** -  *\<žádná >*
 
   - **MachineARM** -  **/Machine: ARM**
 
@@ -823,13 +825,13 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   - **MachineMIPS** -  **/Machine: MIPS**
 
-  - **MachineMIPS16** -  **/MACHINE:MIPS16**
+  - **MachineMIPS16** -  **/Machine: MIPS16**
 
   - **MachineMIPSFPU** -  **/Machine: MIPSFPU**
 
   - **MachineMIPSFPU16** -  **/Machine: MIPSFPU16**
 
-  - **MachineSH4** -  **/MACHINE:SH4**
+  - **MachineSH4** -  **/Machine: sh4**
 
   - **MachineTHUMB** -  **/Machine: palec**
 
@@ -869,7 +871,7 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   Další informace naleznete v tématu [/NOASSEMBLY (Vytvoření modulu MSIL)](/cpp/build/reference/noassembly-create-a-msil-module).
 
-- **TypeLibraryFile**
+- **SouborKnihovnyTypů**
 
   Volitelný **řetězcový** parametr.
 
@@ -895,7 +897,7 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   - **Podle volajícího** - `level='asInvoker'`
 
-  - **HighestAvailable** - `level='highestAvailable'`
+  - **Nejvyšší dostupná** - `level='highestAvailable'`
 
   - **Vyžadovat správce** - `level='requireAdministrator'`
 
@@ -923,5 +925,6 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   Další informace najdete v tématu [/Version (informace o verzi)](/cpp/build/reference/version-version-information).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

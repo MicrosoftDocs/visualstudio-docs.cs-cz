@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 78aef20a322ad3743ed1cb89955654456dff670e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f588ae1b32b8b8d47d6323ee32d02c9053a3de32
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591447"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634211"
 ---
 # <a name="exec-task"></a>Exec – úloha
+
 Spustí zadaný program nebo příkaz pomocí zadaných argumentů.
 
 ## <a name="parameters"></a>Parametry
+
 Následující tabulka popisuje parametry pro úlohu `Exec`.
 
 |Parametr|Popis|
@@ -48,13 +50,15 @@ Následující tabulka popisuje parametry pro úlohu `Exec`.
 |`WorkingDirectory`|Volitelný parametr `String`.<br /><br /> Určuje adresář, ve kterém se příkaz spustí.<br /><br />Výchozí: aktuální pracovní adresář projektu.|
 
 ## <a name="remarks"></a>Poznámky
-Tato úloha je užitečná v případě, že konkrétní úloha [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] úlohy, kterou chcete provést, není k dispozici. `Exec` úloha ale na rozdíl od konkrétnější úlohy ale nemůže provádět další zpracování nebo podmíněné operace na základě výsledku nástroje nebo příkazu, který spouští.
+
+Tato úloha je užitečná v případě, že konkrétní úloha MSBuild pro úlohu, kterou chcete provést, není k dispozici. `Exec` úloha ale na rozdíl od konkrétnější úlohy ale nemůže provádět další zpracování nebo podmíněné operace na základě výsledku nástroje nebo příkazu, který spouští.
 
 Úloha `Exec` volá program *cmd. exe* namísto přímého vyvolání procesu.
 
 Kromě parametrů uvedených v tomto dokumentu dědí tento úkol parametry z třídy <xref:Microsoft.Build.Tasks.ToolTaskExtension>, která sama dědí z <xref:Microsoft.Build.Utilities.ToolTask> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [ToolTaskExtension – Base Class](../msbuild/tooltaskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
 Následující příklad používá úlohu `Exec` ke spuštění příkazu.
 
 ```xml
@@ -70,6 +74,7 @@ Následující příklad používá úlohu `Exec` ke spuštění příkazu.
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

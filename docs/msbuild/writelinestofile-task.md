@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf7f36d0876b1f757dee1a752c8461745783a21e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b78ac2347a5143aeb532a4bcc294551430584b4a
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595329"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630662"
 ---
 # <a name="writelinestofile-task"></a>WriteLinesToFile – úloha
+
 Zapíše cesty zadaných položek do zadaného textového souboru.
 
 ## <a name="task-parameters"></a>Parametry úlohy
+
  Následující tabulka popisuje parametry úlohy `WriteLinestoFile`.
 
 |Parametr|Popis|
@@ -40,11 +42,13 @@ Zapíše cesty zadaných položek do zadaného textového souboru.
 |`WriteOnlyWhenDifferent`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, je zadaný cílový soubor, pokud existuje, přečte se nejprve a porovná se s tím, co by byl úkol napsán. Pokud je to identické, soubor se nezapisuje na disk a časové razítko se zachová.|
 
 ## <a name="remarks"></a>Poznámky
+
  Pokud je `Overwrite` `true`, vytvoří nový soubor, zapíše obsah do souboru a potom soubor zavře. Pokud cílový soubor již existuje, bude přepsán. Pokud je `Overwrite` `false`, připojí obsah k souboru a vytvoří cílový soubor, pokud ještě neexistuje.
 
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
  Následující příklad používá úlohu `WriteLinesToFile` k zápisu cest k položkám v kolekci `MyItems` položky do souboru určeného `MyTextFile` kolekcí položek.
 
 ```xml
@@ -91,6 +95,7 @@ dotnet %~dp0$(AssemblyName).dll %*
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

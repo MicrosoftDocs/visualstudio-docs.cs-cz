@@ -15,24 +15,24 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4a0ef3fc6fe446ccda5479c95301d71efa84be4
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.openlocfilehash: 4f8a59349540492cd441f1eb3fa63ed520c0e8cd
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77557801"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633275"
 ---
 # <a name="msbuild-project-file-schema-reference"></a>Referenční dokumentace schématu souboru projektu nástroje MSBuild
 
-Poskytuje tabulku všech [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] prvků schématu XML s jejich dostupnými atributy a podřízenými prvky.
+Poskytuje tabulku všech prvků schématu XML nástroje MSBuild s jejich dostupnými atributy a podřízenými prvky.
 
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] používá soubory projektu k tomu, aby modul buildu instruoval, co sestavit a jak ho sestavit. soubory projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] jsou soubory XML, které vyhovují schématu XML [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Tato část dokumentuje soubor definice schématu XML ( *. xsd*) pro [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].
+ Nástroj MSBuild používá soubory projektu k tomu, aby vytvořil modul sestavení, který sestaví a jak ho sestavit. Soubory projektu MSBuild jsou soubory XML, které odpovídají schématu XML pro MSBuild. Tato část dokumentuje soubor definice schématu XML ( *. xsd*) pro nástroj MSBuild.
 
 Odkaz na schéma v souboru projektu MSBuild není vyžadován v aplikaci Visual Studio 2017 a novějším. Je-li k dispozici, měla by být ` http://schemas.microsoft.com/developer/msbuild/2003` bez ohledu na verzi sady Visual Studio.
 
 ## <a name="msbuild-xml-schema-elements"></a>Prvky schématu XML pro MSBuild
 
- V následující tabulce jsou uvedeny všechny prvky [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] schématu XML spolu s jejich podřízenými prvky a atributy.
+ V následující tabulce jsou uvedeny všechny prvky schématu XML nástroje MSBuild spolu s jejich podřízenými elementy a atributy.
 
 |Prvek|Podřízené prvky|Atributy|
 |-------------|--------------------|----------------|

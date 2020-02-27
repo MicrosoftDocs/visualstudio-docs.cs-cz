@@ -12,18 +12,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d66fb73972a81e421b6e7343e549b0ef3069001
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: afc679f9b782b8bc9ed3e04a2b8fb684cdbc1a20
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75574415"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633782"
 ---
 # <a name="how-to-use-environment-variables-in-a-build"></a>Postupy: použití proměnných prostředí v sestavení
+
 Při sestavování projektů je často nutné nastavit možnosti sestavení pomocí informací, které nejsou v souboru projektu, nebo soubory, které tvoří projekt. Tyto informace jsou obvykle uloženy v proměnných prostředí.
 
 ## <a name="reference-environment-variables"></a>Proměnné prostředí odkazů
- Všechny proměnné prostředí jsou k dispozici pro soubor projektu [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) jako vlastnosti.
+
+ Všechny proměnné prostředí jsou k dispozici pro soubor projektu Microsoft Build Engine (MSBuild) jako vlastnosti.
 
 > [!NOTE]
 > Pokud soubor projektu obsahuje explicitní definici vlastnosti, která má stejný název jako proměnná prostředí, vlastnost v souboru projektu přepíše hodnotu proměnné prostředí.
@@ -46,6 +48,7 @@ Při sestavování projektů je často nutné nastavit možnosti sestavení pomo
     > V názvech vlastností nejsou rozlišována velká a malá písmena, takže `$(ToolsPath)` i `$(TOOLSPATH)` odkazují na stejnou vlastnost nebo proměnnou prostředí.
 
 ## <a name="example"></a>Příklad
+
  Následující soubor projektu používá k určení umístění adresářů proměnné prostředí.
 
 ```xml
@@ -62,7 +65,8 @@ Při sestavování projektů je často nutné nastavit možnosti sestavení pomo
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [MSBuild](../msbuild/msbuild.md)
 - [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)
 - [Postupy: sestavení stejných zdrojových souborů s různými možnostmi](../msbuild/how-to-build-the-same-source-files-with-different-options.md)

@@ -18,17 +18,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 65a96b59837d04deb0517d3ab79b3b668e036a20
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: b907194c4818ff6b867e9d15b795506ef3b77476
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579638"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634003"
 ---
 # <a name="getframeworkpath-task"></a>GetFrameworkPath – úloha
+
+Načte cestu k sestavením .NET Framework.
 Načte cestu k sestavením .NET Framework.
 
 ## <a name="task-parameters"></a>Parametry úlohy
+
 Následující tabulka popisuje parametry úlohy `GetFrameworkPath`.
 
 |Parametr|Popis|
@@ -41,11 +44,13 @@ Následující tabulka popisuje parametry úlohy `GetFrameworkPath`.
 |`Path`|Volitelný výstupní parametr `String`.<br /><br /> Obsahuje cestu k nejnovějším sestavením rozhraní, pokud jsou k dispozici. V opačném případě vrátí `null`.|
 
 ## <a name="remarks"></a>Poznámky
-Pokud je nainstalováno několik verzí .NET Framework, vrátí tato úloha verzi, na které [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] je navržena pro spuštění.
+
+Pokud je nainstalováno několik verzí .NET Framework, vrátí tato úloha verzi, na které je nástroj MSBuild navržený ke spuštění.
 
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
+
 Následující příklad používá úlohu `GetFrameworkPath` k uložení cesty k .NET Framework ve vlastnosti `FrameworkPath`.
 
 ```xml
@@ -61,5 +66,6 @@ Následující příklad používá úlohu `GetFrameworkPath` k uložení cesty 
 ```
 
 ## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c0e83cc04b309a940f5aa4c5a36099f10afddcc3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: dd5946612889e98b3b90f2ee3cb8665c43827a5e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594797"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634055"
 ---
 # <a name="generateresource-task"></a>GenerateResource – úloha
+
 Převádí soubory *. txt* a *. resx* (formát prostředků založený na jazyce XML) *a binární soubory* modulu CLR (Common Language Runtime), které mohou být vloženy do binárního spustitelného souboru modulu runtime nebo zkompilovány do satelitních sestavení. Tato úloha se obvykle používá k převodu souborů *. txt* nebo *. resx* na soubory *. Resources* . Úloha `GenerateResource` je funkčně podobná aplikaci [Resgen. exe](/dotnet/framework/tools/resgen-exe-resource-file-generator).
 
 ## <a name="parameters"></a>Parametry
+
 Následující tabulka popisuje parametry úlohy `GenerateResource`.
 
 |Parametr|Popis|
@@ -61,6 +63,7 @@ Následující tabulka popisuje parametry úlohy `GenerateResource`.
 |`UseSourcePath`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, určuje, že se má pro překlad relativních cest k souborům použít adresář vstupního souboru.|
 
 ## <a name="remarks"></a>Poznámky
+
 Vzhledem k tomu, že soubory *. resx* mohou obsahovat odkazy na jiné soubory prostředků, není dostačující pouze k porovnání časových razítek souborů *. resx* a *. Resources* , aby bylo možné zjistit, zda jsou výstupy v aktuálním stavu. Místo toho `GenerateResource` úloha sleduje odkazy v souborech *. resx* a kontroluje také časová razítka propojených souborů. To znamená, že byste neměli obecně používat `Inputs` a `Outputs` atributy v cíli obsahující `GenerateResource` úkol, protože by to mohlo způsobit jeho přeskočení, když by se měl skutečně spustit.
 
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
@@ -68,6 +71,7 @@ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microso
 Při použití MSBuild 4,0 k cílení na projekty .NET 3,5 může sestavení selhat u prostředků x86. Pokud chcete tento problém obejít, můžete vytvořit cíl jako sestavení AnyCPU.
 
 ## <a name="example"></a>Příklad
+
 Následující příklad používá úlohu `GenerateResource` ke generování souborů *. Resources* ze souborů určených kolekcí `Resx` Item.
 
 ```xml
@@ -94,6 +98,7 @@ Za předpokladu, že sestavení má název myAssembly, následující kód vygen
 
 Bez \<> metadat by byl prostředek pojmenovaný *MyAssembly. MyResource. Resources*.  Tento příklad se vztahuje pouze na proces Visual Basic a C# Visual Build.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

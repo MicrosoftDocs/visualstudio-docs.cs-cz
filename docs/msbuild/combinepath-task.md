@@ -16,18 +16,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a52e0d770a535b0fa7d29a379a7f6aba63e62d78
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 533f87eba9032efa7dc60ac682bbe400cb640727
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593340"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634432"
 ---
 # <a name="combinepath-task"></a>CombinePath – úloha
-Zkombinuje zadané cesty do jedné cesty.
 
+Zkombinuje zadané cesty do jedné cesty.
 ## <a name="task-parameters"></a>Parametry úlohy
+
  Následující tabulka popisuje parametry [úlohy CombinePath –](../msbuild/combinepath-task.md).
+
 
 |Parametr|Popis|
 |---------------|-----------------|
@@ -36,8 +38,10 @@ Zkombinuje zadané cesty do jedné cesty.
 |`CombinedPaths`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Kombinovaná cesta, která je vytvořena touto úlohou.|
 
 ## <a name="remarks"></a>Poznámky
+
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

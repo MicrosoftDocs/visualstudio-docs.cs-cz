@@ -22,22 +22,25 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26891fa67616b1796499722e03a764da2a8fd7d6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0a06849c2aa0f4ec0203a7209ffc78be438dba9e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589263"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633379"
 ---
 # <a name="msbuild-conditional-constructs"></a>Podmíněné konstrukty nástroje MSBuild
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] poskytuje mechanismus pro nebo pro zpracování pomocí prvků [Choose](../msbuild/choose-element-msbuild.md), [when](../msbuild/when-element-msbuild.md)a [jinak](../msbuild/otherwise-element-msbuild.md) .
+
+Nástroj MSBuild poskytuje mechanismus pro nebo zpracování pomocí prvků [Choose](../msbuild/choose-element-msbuild.md), [when](../msbuild/when-element-msbuild.md)a [jinak](../msbuild/otherwise-element-msbuild.md) .
 
 ## <a name="use-the-choose-element"></a>Použití elementu Choose
+
  Element `Choose` obsahuje řadu `When` prvků s `Condition` atributy, které jsou testovány v pořadí shora dolů, dokud se jedna nevyhodnotí jako `true`. Pokud je více než jeden prvek `When` vyhodnocen jako `true`, je použita pouze první z nich. `Otherwise` element, pokud je k dispozici, bude vyhodnocen, pokud není podmínka u `When`ho prvku vyhodnocena jako `true`.
 
  prvky `Choose` lze použít jako podřízené prvky `Project`, `When` a `Otherwise` elementy. prvky `When` a `Otherwise` mohou mít podřízené prvky `ItemGroup`, `PropertyGroup`nebo `Choose`.
 
 ## <a name="example"></a>Příklad
+
  Následující příklad používá prvky `Choose` a `When` pro zpracování/nebo. Vlastnosti a položky projektu jsou nastaveny v závislosti na hodnotě vlastnosti `Configuration`.
 
 ```xml
@@ -76,7 +79,8 @@ ms.locfileid: "75589263"
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [Choose – element (MSBuild)](../msbuild/choose-element-msbuild.md)
 - [When – element (MSBuild)](../msbuild/when-element-msbuild.md)
 - [Jinak – element (MSBuild)](../msbuild/otherwise-element-msbuild.md)

@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 43c739cc24d453ad4129d8cb7cc4bfbebec07aa4
-ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
+ms.openlocfilehash: c7283d67710a3b5b319b2d25a1c5d6535fed83b9
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77091818"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633717"
 ---
 # <a name="incremental-builds"></a>Přírůstková sestavení
 
@@ -79,4 +79,5 @@ Z důvodu odvození výstupu je nutné přidat úlohu `CreateProperty` k cíli p
 Tento kód vytvoří vlastnost CompileRan a udělí jí hodnotu `true`, ale pouze v případě, že je cíl proveden. Pokud je cíl vynechán, nebude vlastnost CompileRan vytvořena.
 
 ## <a name="see-also"></a>Viz také
+
 - [Cíle](../msbuild/msbuild-targets.md)

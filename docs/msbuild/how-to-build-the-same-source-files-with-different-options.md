@@ -13,22 +13,24 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b196ae92b7388e8b9f4e1cee60a62b3839a9c120
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c31da244e5c264bb81498c6091aefce7e6318bb2
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585229"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633938"
 ---
 # <a name="how-to-build-the-same-source-files-with-different-options"></a>Postupy: sestavení stejných zdrojových souborů s různými možnostmi
-Při sestavování projektů je často možné kompilovat stejné komponenty s různými možnostmi sestavení. Můžete například vytvořit sestavení pro ladění s informacemi o symbolech nebo sestavením pro vydání bez informací o symbolu, ale s povolenými optimalizacemi. Nebo můžete sestavit projekt pro spuštění na konkrétní platformě, jako je například x86 nebo [!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)]. Ve všech těchto případech většina možností sestavení zůstává stejná; pro řízení konfigurace sestavení je změněno pouze několik možností. V [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]používáte vlastnosti a podmínky k vytvoření různých konfigurací sestavení.
 
-## <a name="use-properties-to-modify-projects"></a>Použití vlastností pro úpravu projektů
+Při sestavování projektů je často možné kompilovat stejné komponenty s různými možnostmi sestavení. Můžete například vytvořit sestavení pro ladění s informacemi o symbolech nebo sestavením pro vydání bez informací o symbolu, ale s povolenými optimalizacemi. Nebo můžete sestavit projekt pro spuštění na konkrétní platformě, jako je například x86 nebo x64. Ve všech těchto případech většina možností sestavení zůstává stejná; pro řízení konfigurace sestavení je změněno pouze několik možností. Pomocí nástroje MSBuild použijete vlastnosti a podmínky k vytvoření různých konfigurací sestavení.
+
+## <a name="use-properties-to-control-build-settings"></a>Použití vlastností k řízení nastavení sestavení
+
 Element `Property` definuje proměnnou, která je v souboru projektu odkazována několikrát, jako je například umístění dočasného adresáře, nebo pro nastavení hodnot vlastností, které jsou použity v několika konfiguracích, jako je například sestavení ladění a sestavení pro vydání. Další informace o vlastnostech naleznete v tématu [MSBuild Properties](../msbuild/msbuild-properties.md).
 
-Můžete použít vlastnosti pro změnu konfigurace sestavení bez nutnosti změnit soubor projektu. Atribut `Condition` elementu `Property` a prvek `PropertyGroup` umožňuje změnit hodnotu vlastností. Další informace o podmínkách [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).
+Můžete použít vlastnosti pro změnu konfigurace sestavení bez nutnosti změnit soubor projektu. Atribut `Condition` elementu `Property` a prvek `PropertyGroup` umožňuje změnit hodnotu vlastností. Další informace o podmínkách MSBuild naleznete v tématu [podmínky](../msbuild/msbuild-conditions.md).
 
-#### <a name="to-set-a-group-of-properties-based-on-another-property"></a>Nastavení skupiny vlastností na základě jiné vlastnosti
+### <a name="to-set-a-group-of-properties-that-depends-on-another-property"></a>Nastavení skupiny vlastností, které závisejí na jiné vlastnosti
 
 - Použijte atribut `Condition` v prvku `PropertyGroup` podobného následujícímu:
 
@@ -39,7 +41,7 @@ Můžete použít vlastnosti pro změnu konfigurace sestavení bez nutnosti změ
   </PropertyGroup>
   ```
 
-#### <a name="to-define-a-property-based-on-another-property"></a>Definování vlastnosti na základě jiné vlastnosti
+### <a name="to-define-a-property-that-depends-on-another-property"></a>Definování vlastnosti, která závisí na jiné vlastnosti
 
 - Použijte atribut `Condition` v prvku `Property` podobného následujícímu:
 
@@ -48,9 +50,10 @@ Můžete použít vlastnosti pro změnu konfigurace sestavení bez nutnosti změ
   ```
 
 ## <a name="specify-properties-on-the-command-line"></a>Zadat vlastnosti na příkazovém řádku
-Po zapsání souboru projektu pro přijetí více konfigurací je nutné mít možnost měnit tyto konfigurace při každém sestavení projektu. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] poskytuje tuto možnost tím, že povoluje zadání vlastností na příkazovém řádku pomocí přepínače **-Property** nebo **-p** .
 
-#### <a name="to-set-a-project-property-at-the-command-line"></a>Nastavení vlastnosti projektu na příkazovém řádku
+Po zapsání souboru projektu pro přijetí více konfigurací je nutné mít možnost měnit tyto konfigurace při každém sestavení projektu. Nástroj MSBuild poskytuje tuto možnost tím, že povoluje zadání vlastností na příkazovém řádku pomocí přepínače **-Property** nebo **-p** .
+
+### <a name="to-set-a-project-property-at-the-command-line"></a>Nastavení vlastnosti projektu na příkazovém řádku
 
 - Použijte přepínač **-Property** s hodnotou vlastnosti a vlastnosti. Příklad:
 
@@ -64,7 +67,7 @@ Po zapsání souboru projektu pro přijetí více konfigurací je nutné mít mo
   Msbuild file.proj -p:Flavor=Debug
   ```
 
-#### <a name="to-specify-more-than-one-project-property-at-the-command-line"></a>Chcete-li zadat více než jednu vlastnost projektu na příkazovém řádku
+### <a name="to-specify-more-than-one-project-property-at-the-command-line"></a>Chcete-li zadat více než jednu vlastnost projektu na příkazovém řádku
 
 - Použijte přepínač **-Property** nebo **-p** vícekrát s hodnotami vlastností a vlastností, nebo použijte přepínač- **Property** nebo **-p** a oddělte více vlastností středníky (;). Příklad:
 
@@ -78,13 +81,14 @@ Po zapsání souboru projektu pro přijetí více konfigurací je nutné mít mo
   msbuild file.proj -p:Flavor=Debug -p:Platform=x86
   ```
 
-  Proměnné prostředí se také považují za vlastnosti a jsou automaticky začleněny pomocí [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Další informace o použití proměnných prostředí naleznete v tématu [How to: use Environment Variables in a Build](../msbuild/how-to-use-environment-variables-in-a-build.md).
+  Proměnné prostředí se také považují za vlastnosti a jsou automaticky začleněny nástrojem MSBuild. Další informace o použití proměnných prostředí naleznete v tématu [How to: use Environment Variables in a Build](../msbuild/how-to-use-environment-variables-in-a-build.md).
 
   Hodnota vlastnosti, která je zadána v příkazovém řádku, má přednost před jakoukoli hodnotou, která je nastavena pro stejnou vlastnost v souboru projektu a tato hodnota v souboru projektu má přednost před hodnotou v proměnné prostředí.
 
   Toto chování můžete změnit pomocí atributu `TreatAsLocalProperty` ve značce projektu. U názvů vlastností, které jsou uvedeny s tímto atributem, hodnota vlastnosti zadaná v příkazovém řádku nemá přednost před hodnotou v souboru projektu. Příklad najdete v části dále v tomto tématu.
 
 ## <a name="example"></a>Příklad
+
 Následující příklad kódu, projekt "Hello World", obsahuje dvě nové skupiny vlastností, které lze použít k vytvoření sestavení pro ladění a sestavení pro vydání.
 
 Chcete-li sestavit ladicí verzi tohoto projektu, zadejte:
@@ -103,7 +107,7 @@ msbuild consolehwcs1.proj -p:flavor=retail
 <Project DefaultTargets = "Compile"
     xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-    <!-- Sets the default flavor of an environment variable called
+    <!-- Sets the default flavor if an environment variable called
     Flavor is not set or specified on the command line -->
     <PropertyGroup>
         <Flavor Condition="'$(Flavor)'==''">DEBUG</Flavor>
@@ -152,6 +156,7 @@ msbuild consolehwcs1.proj -p:flavor=retail
 ```
 
 ## <a name="example"></a>Příklad
+
 Následující příklad ukazuje, jak použít atribut `TreatAsLocalProperty`. Vlastnost `Color` má v souboru projektu hodnotu `Blue` a `Green` na příkazovém řádku. Při `TreatAsLocalProperty="Color"` ve značce projektu nepřepisuje vlastnost příkazového řádku (`Green`) vlastnost, která je definována v souboru projektu (`Blue`).
 
 Chcete-li sestavit projekt, zadejte následující příkaz:
@@ -182,7 +187,8 @@ ToolsVersion="4.0" TreatAsLocalProperty="Color">
 -->
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
 - [MSBuild](../msbuild/msbuild.md)
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

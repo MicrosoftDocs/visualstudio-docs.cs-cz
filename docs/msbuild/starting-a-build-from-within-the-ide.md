@@ -10,22 +10,25 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01ce9401174a26d58b7ef88d536a24bfb9017154
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f8c4792590565c027a316ed95abb067faa30f5dc
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595082"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632118"
 ---
 # <a name="start-a-build-from-within-the-ide"></a>Spuštění sestavení z integrovaného vývojového prostředí (IDE)
+
 Vlastní projektové systémy musí použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> k zahájení sestavení. Tento článek popisuje důvody tohoto požadavku a popisuje postup.
 
 ## <a name="parallel-builds-and-threads"></a>Paralelní sestavení a vlákna
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] umožňuje paralelní sestavení, které vyžaduje, aby bylo možné získat přístup k běžným prostředkům. Systémy projektu mohou spustit sestavení asynchronně, ale tyto systémy nesmí volat funkce sestavení v rámci zpětného volání.
+
+ Visual Studio umožňuje paralelní sestavení, které vyžaduje, aby bylo možné získat přístup k běžným prostředkům. Systémy projektu mohou spustit sestavení asynchronně, ale tyto systémy nesmí volat funkce sestavení v rámci zpětného volání.
 
  Pokud systém projektu mění proměnné prostředí, musí nastavit NodeAffinity sestavení na OutOfProc. Tento požadavek znamená, že nemůžete použít objekty hostitele, protože vyžadují uzel v rámci proc.
 
 ## <a name="use-ivsbuildmanageraccessor"></a>Použití IVSBuildManagerAccessor
+
  Následující kód popisuje metodu, kterou může projektový systém použít ke spuštění sestavení:
 
 ```csharp
