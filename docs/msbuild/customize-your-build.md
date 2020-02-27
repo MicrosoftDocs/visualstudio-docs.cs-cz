@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f1b0e774d70c5787a7221aa0dfa7b0834dac7e3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e7ddf87f5fa9f937c0272e37f3a6b4aba29f2d6c
+ms.sourcegitcommit: a80489d216c4316fde2579a0a2d7fdb54478abdf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588288"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652791"
 ---
 # <a name="customize-your-build"></a>Přizpůsobení sestavení
 
@@ -189,7 +189,73 @@ Můžete například definovat nový cíl pro zápis vlastní zprávy protokolu 
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="customize-all-net-builds"></a>Přizpůsobení všech sestavení .NET
+
+Při údržbě serveru sestavení může být nutné nakonfigurovat nastavení MSBuild globálně pro všechna sestavení na serveru.  V zásadě můžete upravit globální soubory *Microsoft. Common. targets* nebo *Microsoft. Common. props* , ale existuje lepší způsob. Můžete ovlivnit všechna sestavení určitého typu projektu (například všechny C# projekty) pomocí určitých vlastností nástroje MSBuild a přidat určité vlastní `.targets` a soubory `.props`.
+
+Aby bylo možné C# ovlivnit všechna nebo Visual Basic sestavení, která se řídí instalací nástroje MSBuild nebo Visual Studio, vytvořte *vlastní soubor. před. Microsoft. Common. targets* nebo *Custom. After. Microsoft. Common. cílí* na cíle, které se spustí před *nebo po* *Microsoft.* Common. Targets nebo Custom................. *..* ............ *. Common.*
+
+Umístění těchto souborů můžete určit pomocí následujících vlastností nástroje MSBuild:
+
+- CustomBeforeMicrosoftCommonProps
+- CustomBeforeMicrosoftCommonTargets
+- CustomAfterMicrosoftCommonProps
+- CustomAfterMicrosoftCommonTargets
+- CustomBeforeMicrosoftCSharpProps
+- CustomBeforeMicrosoftVisualBasicProps
+- CustomAfterMicrosoftCSharpProps
+- CustomAfterMicrosoftVisualBasicProps
+- CustomBeforeMicrosoftCSharpTargets
+- CustomBeforeMicrosoftVisualBasicTargets
+- CustomAfterMicrosoftCSharpTargets
+- CustomAfterMicrosoftVisualBasicTargets
+
+*Společné* verze těchto vlastností mají vliv i C# na projekty Visual Basic. Tyto vlastnosti lze nastavit v příkazovém řádku nástroje MSBuild.
+
+```cmd
+msbuild /p:CustomBeforeMicrosoftCommonTargets="C:\build\config\Custom.Before.Microsoft.Common.Targets" MyProject.csproj
+```
+
+Nejlepší přístup závisí na vašem scénáři. Pokud máte vyhrazený server sestavení a chcete zajistit, aby se určité cíle vždy spouštěly na všech sestaveních vhodného typu projektu, které na tomto serveru běží, pak použití globálního vlastního `.targets` nebo `.props` souboru dává smysl.  Pokud chcete, aby se vlastní cíle prováděly pouze v případě, že platí určité podmínky, použijte jiné umístění souboru a nastavte cestu k tomuto souboru nastavením příslušné vlastnosti MSBuild v příkazovém řádku MSBuild pouze v případě potřeby.
+
+> [!WARNING]
+> Visual Studio používá vlastní `.targets` nebo `.props` soubory, pokud je nalezne ve složce MSBuild vždy, když sestaví projekt odpovídajícího typu. To může mít nežádoucí následky a v případě nesprávného fungování může aplikace Visual Studio zakázat možnost sestavení v počítači.
+
+## <a name="customize-all-c-builds"></a>Přizpůsobit všechna C++ sestavení
+
+V C++ případě projektů jsou dříve zmíněné vlastní `.targets` a soubory `.props` ignorovány. Pro C++ projekty můžete vytvořit `.targets` soubory pro každou platformu a umístit je do odpovídajících složek pro import pro tyto platformy.
+
+Soubor `.targets` pro platformu Win32, *Microsoft. cpp. Win32. targets*obsahuje následující prvek `Import`:
+
+```xml
+<Import Project="$(VCTargetsPath)\Platforms\Win32\ImportBefore\*.targets"
+        Condition="Exists('$(VCTargetsPath)\Platforms\Win32\ImportBefore')"
+/>
+```
+
+Poblíž konce stejného souboru je podobný element:
+
+```xml
+<Import Project="$(VCTargetsPath)\Platforms\Win32\ImportAfter\*.targets"
+        Condition="Exists('$(VCTargetsPath)\Platforms\Win32\ImportAfter')"
+/>
+```
+
+Podobné prvky importu existují pro jiné cílové platformy ve *%ProgramFiles32%\MSBuild\Microsoft.Cpp\v {Version} \ Platforms\*.
+
+Po umístění souboru `.targets` do příslušné složky podle platformy nástroj MSBuild importuje soubor do každého C++ sestavení pro tuto platformu. V případě potřeby můžete do nějakého umístění zadat více `.targets` souborů.
+
+### <a name="specify-a-custom-import-on-the-command-line"></a>Zadat vlastní import na příkazovém řádku
+
+Pro vlastní `.targets`, které chcete zahrnout pro konkrétní sestavení C++ projektu, nastavte jednu nebo obě vlastnosti `ForceImportBeforeCppTargets` a `ForceImportAfterCppTargets` na příkazovém řádku.
+
+```cmd
+msbuild /p:ForceImportBeforeCppTargets="C:\build\config\Custom.Before.Microsoft.Cpp.Targets" MyCppProject.vcxproj
+```
+
+Pro globální nastavení (to znamená, že všechna C++ sestavení pro platformu na serveru sestavení) existují dvě metody. Nejdřív můžete tyto vlastnosti nastavit pomocí proměnné prostředí systému, která je vždycky nastavená. Tento postup funguje, protože nástroj MSBuild vždy přečte prostředí a vytvoří (nebo Přepisuje) vlastnosti pro všechny proměnné prostředí.
+
+## <a name="see-also"></a>Viz také
 
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
 

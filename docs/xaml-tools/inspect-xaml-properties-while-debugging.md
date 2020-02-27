@@ -3,18 +3,18 @@ title: Kontrolovat vlastnosti XAML při ladění | Microsoft Docs
 ms.date: 11/12/2019
 ms.topic: conceptual
 ms.assetid: 390edde4-7b8d-4c89-8d69-55106b7e6b11
-author: mikejo5000
-ms.author: mikejo
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: 61893e06f79b14b95ebb5b923eca581b047d979b
-ms.sourcegitcommit: 9801fc66a14c0f855b9ff601fb981a9e5321819e
+ms.openlocfilehash: 36246f959aa49e49aa84defc203075f163c67118
+ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74072762"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706409"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>Kontrola vlastností XAML při ladění 
 
@@ -110,7 +110,7 @@ Pojďme začít s velmi jednoduchou aplikací WPF, která má zobrazení seznamu
 
 1. Nyní se podívejme na vlastnosti jedné z položek seznamu.
 
-   Vyberte první položku seznamu v **živém vizuálním stromu** a na panelu nástrojů klikněte na ikonu **Zobrazit vlastnosti** . Měl by se zobrazit **Průzkumník vlastností živě** . Všimněte si, že pole **Content** je "Item1 –" a pole**barvy** na **pozadí** >  je **#FFFFFFE0**.
+   Vyberte první položku seznamu v **živém vizuálním stromu** a na panelu nástrojů klikněte na ikonu **Zobrazit vlastnosti** . Měl by se zobrazit **Průzkumník vlastností živě** . Všimněte si, že pole **Content** je "Item1 –" a pole **barva** **pozadí** >  **#FFFFFFE0**.
    
 1. Vraťte se do **živého vizuálního stromu** a vyberte položku se seznamem sekund. V **Průzkumníku živých vlastností** by se měl zobrazit, že pole **Content** je "Item2" a **#FFD3D3D3** pole **Barva** > **pozadí** (v závislosti na motivu).
 
@@ -151,6 +151,6 @@ Tyto nástroje XAML můžete použít i v případě, že nemáte zdrojový kód
 
 4. Ve druhé instanci aplikace Visual Studio otevřete **živý vizuální strom** (**ladění > Windows > Live Visual Tree**). Měli byste vidět prvky uživatelského rozhraní **TestXaml** a měli byste být schopni je manipulovat stejně jako při přímém ladění aplikace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zápis a ladění spuštěného kódu XAML pomocí horkého opětovného načtení XAML](xaml-hot-reload.md)

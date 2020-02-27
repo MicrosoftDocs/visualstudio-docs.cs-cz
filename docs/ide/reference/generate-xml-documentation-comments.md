@@ -7,12 +7,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 20381dd78f169e2b549e077992ac0d1dc1b5c44c
-ms.sourcegitcommit: 6375001ab26786af8d4d449f5846f8a49779ed18
+ms.openlocfilehash: 0e21d0617f954c0cc34975b7f8626b83966f6b5d
+ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76892130"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706388"
 ---
 # <a name="how-to-insert-xml-comments-for-documentation-generation"></a>Postupy: vložení komentáře XML pro generování dokumentace
 
@@ -21,10 +21,10 @@ Visual Studio vám může pomoct dokumentovat prvků kódu, jako jsou třídy a 
 > [!TIP]
 > Informace o konfiguraci názvu a umístění vygenerovaného souboru XML naleznete v tématu [dokumentování kódu pomocí komentářů XMLC# (Průvodce)](/dotnet/csharp/codedoc).
 
-XML souboru generovaného kompilátorem můžete distribuovat spolu s sestavení .NET, aby Visual Studio a jiná Integrovaná vývojová prostředí pomocí technologie IntelliSense můžete zobrazit rychlé informace o typech a členech. Kromě toho lze spustit soubor XML prostřednictvím nástrojů jako [DocFX](https://dotnet.github.io/docfx/) a [Sandcastle](https://www.microsoft.com/download/details.aspx?id=10526) ke generování websites referenční dokumentace rozhraní API.
+XML souboru generovaného kompilátorem můžete distribuovat spolu s sestavení .NET, aby Visual Studio a jiná Integrovaná vývojová prostředí pomocí technologie IntelliSense můžete zobrazit rychlé informace o typech a členech. Navíc můžete soubor XML spustit prostřednictvím nástrojů, jako je [DocFX](https://dotnet.github.io/docfx/) a [Sandcastle](https://www.microsoft.com/download/details.aspx?id=10526) , pro generování odkazů na webové stránky rozhraní API.
 
 > [!NOTE]
-> **Vložit komentář** příkaz, který automaticky vloží dokumentační komentáře XML je k dispozici v [ C# ](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments) a [jazyka Visual Basic](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation). Však můžete ručně vložit [dokumentační komentáře XML v jazyce C++](/cpp/build/reference/xml-documentation-visual-cpp) soubory a stále Generovat soubory dokumentace XML v době kompilace.
+> Příkaz **Vložit komentář** , který automaticky vloží dokumentační komentáře XML, je k [C#](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments) dispozici v a [Visual Basic](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation). Můžete však ručně vložit [dokumentační komentáře XML do C++ ](/cpp/build/reference/xml-documentation-visual-cpp) souborů a přesto vygenerovat soubory dokumentace XML v době kompilace.
 
 ## <a name="to-insert-xml-comments-for-a-code-element"></a>Chcete-li vložit komentáře XML pro prvek kódu
 
@@ -32,13 +32,13 @@ XML souboru generovaného kompilátorem můžete distribuovat spolu s sestavení
 
 2. Proveďte jednu z těchto akcí:
 
-   - Typ `///` v C#, nebo `'''` v jazyce Visual Basic
+   - Zadejte `///` v C#nebo `'''` v Visual Basic
 
-   - Z **upravit** nabídce zvolte **IntelliSense** > **Vložit komentář**
+   - V nabídce **Upravit** vyberte **IntelliSense** > **Vložit komentář** .
 
-   - Z klikněte pravým tlačítkem nebo místní nabídky nebo přímo nad prvek kódu, zvolte **fragment** > **Vložit komentář**
+   - V místní nabídce nebo v kontextové nabídce klikněte na tlačítko nebo hned nad prvkem kódu, vyberte **fragment** > **Vložit komentář**
 
-   XML šablony okamžitě generováno nad prvek kódu. Například když při psaní komentářů metodu, vygeneruje **\<souhrnu\>** elementu, **\<param\>** – element pro každý parametr a **\<vrátí\>** element dokumentu návratovou hodnotu.
+   XML šablony okamžitě generováno nad prvek kódu. Například při komentování metody generuje **\>prvek\<summary** , **\<param\>** element pro každý parametr a **\<vrátí\>** elementu pro dokumentaci návratové hodnoty.
 
    ![Šablona komentáře XML –C#](media/doc-preview-cs.png)
 
@@ -50,16 +50,16 @@ XML souboru generovaného kompilátorem můžete distribuovat spolu s sestavení
 
 Můžete použít styly v komentářích XML, které budou vykresleny rychle informace při přechodu na prvek. Mezi tyto styly patří kurzíva, tučné, odrážky a odkaz s odkazem.
 
-   ![Dokončené komentář](media/doc-styles-cs.png) 
+   ![Dokončené komentář](media/doc-style-cs.png) 
 
 > [!NOTE]
-> Je [možnost](../../ide/reference/options-text-editor-csharp-advanced.md) pro dokumentační komentáře XML přepnout po zadání `///` v C# nebo `'''` jazyka Visual Basic. Na panelu nabídek zvolte **nástroje** > **možnosti** otevřít **možnosti** dialogové okno. Pak přejděte do **textový Editor**  >  **C#** nebo **základní** > **Upřesnit**. V **Nápověda k editoru** části, vyhledejte **generovat komentáře dokumentace XML** možnost.
+> Po zadání `///` [](../../ide/reference/options-text-editor-csharp-advanced.md) do C# nebo `'''` Visual Basic je k dispozici možnost přepínat dokumentační komentáře XML. V řádku nabídek vyberte **nástroje** > **Možnosti** . tím otevřete dialogové okno **Možnosti** . Pak přejděte do **textového editoru** > **C#** nebo **Basic** > **Advanced**. V části **help editoru** vyhledejte možnost **Generovat dokumentační komentáře XML** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [XML – dokumentační komentáře (C# Programming Guide)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
+- [Komentáře dokumentace XML (C# Průvodce programováním)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
 - [Dokumentace kódu s komentáři XML (C# průvodce)](/dotnet/csharp/codedoc)
 - [Postupy: vytvoření dokumentace XML (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation)
-- [Komentáře v jazyce C++](/cpp/cpp/comments-cpp)
-- [XML dokumentace (C++)](/cpp/build/reference/xml-documentation-visual-cpp)
+- [C++Vyjádření](/cpp/cpp/comments-cpp)
+- [Dokumentace XML (C++)](/cpp/build/reference/xml-documentation-visual-cpp)
 - [Generování kódu](../code-generation-in-visual-studio.md)
