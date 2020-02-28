@@ -10,12 +10,12 @@ metadata:
   monikerRange: '>=vs-2017'
   f1_keywords:
   - MSDNSTART
-  ms.openlocfilehash: 1c4358fb1ceef0773a29c6860ee7b670c2d021b1
-  ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+  ms.openlocfilehash: 6ec31d2881abbfe2ae55174ea3f3fb15fd34651f
+  ms.sourcegitcommit: b016ea260856264eee730ee8cbcab198314a7ece
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 02/15/2020
-  ms.locfileid: "77265566"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77904058"
 highlightedContent:
   items:
   - title: Nastavení a instalace
@@ -150,7 +150,7 @@ additionalContent:
       url: ../profiling/index.yml
     - title: Rozšíření
       summary: Přidávání vlastních funkcí do integrovaného vývojového prostředí (IDE) sady Visual Studio pro zlepšení vývojového prostředí
-      url: ../extensibility/index.md
+      url: ../extensibility/index.yml
     - title: Data
       summary: Vytváření datových aplikací připojujících se k jakékoli databázi nebo službě, a to kdekoli – v místním prostředí i v cloudu
       url: ../data-tools/accessing-data-in-visual-studio.md
@@ -202,7 +202,7 @@ additionalContent:
     - title: Další sady nástrojů
       links:
       - text: Vývoj rozšíření sady Visual Studio
-        url: ../extensibility/index.md
+        url: ../extensibility/index.yml
       - text: Vývoj linuxových aplikací v jazyce C++
         url: /cpp/linux/
       - text: Vývoj multiplatformních aplikací pomocí rozhraní .NET Core
