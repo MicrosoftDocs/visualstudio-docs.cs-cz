@@ -28,74 +28,74 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f1a41667592b6965497f9b87514719f7d8a5a442
-ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
+ms.openlocfilehash: 8f605f9a7e07d485b4b1cb3835d53e4c4823fe7c
+ms.sourcegitcommit: 3d64bfb9bf85395357effe054db9a9afaa0be5ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75776000"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181119"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Připojení ladicího programu sady Visual Studio ke spuštěným procesům
-Ladicí program sady Visual Studio můžete připojit ke spuštěnému procesu na místním nebo vzdáleném počítači. Poté, co je proces spuštěn, vybrat **ladění** > **připojit k procesu** nebo stiskněte klávesu **Ctrl**+**Alt** + **P** ve Visual Studiu a použít **připojit k procesu** dialogové okno připojit ladicí program k procesu.
+Ladicí program sady Visual Studio můžete připojit ke spuštěnému procesu na místním nebo vzdáleném počítači. Po spuštění procesu vyberte **ladit** > **připojit k procesu** nebo stiskněte **CTRL**+**ALT**+**P** v aplikaci Visual Studio a pomocí dialogu **připojit k** procesu připojte ladicí program k procesu.
 
-Můžete použít **připojit k procesu** k ladění aplikace běžící na místních nebo vzdálených počítačích, ladění více procesů současně, ladění aplikace, které nebyly vytvořené v sadě Visual Studio nebo ladění libovolnou aplikaci, můžete se nepovedlo spustit ze sady Visual Studio s ladicí program se připojil. Například pokud máte spuštěnou aplikaci bez ladicího programu a k výjimce, můžete potom připojit ladicí program k procesu spuštění aplikace a spusťte ladění.
+Pomocí příkazu **připojit k procesu** můžete ladit spuštěné aplikace v místních nebo vzdálených počítačích, ladit současně více procesů, ladit aplikace, které nebyly vytvořeny v aplikaci Visual Studio, nebo ladit jakoukoli aplikaci, kterou jste nespustili ze sady Visual Studio, pomocí připojeného ladicího programu. Například pokud máte spuštěnou aplikaci bez ladicího programu a k výjimce, můžete potom připojit ladicí program k procesu spuštění aplikace a spusťte ladění.
 
 > [!TIP]
-> Nejste si jistí, jestli se má použít **připojit k procesu** pro váš scénář ladění? Zobrazit [běžné scénáře ladění](#BKMK_Scenarios).
+> Nejste si jisti, jestli pro váš scénář ladění chcete použít **připojit k procesu** ? Viz [běžné scénáře ladění](#BKMK_Scenarios).
 
-## <a name="BKMK_Attach_to_a_running_process"></a> Připojit ke spuštěnému procesu na místním počítači
+## <a name="BKMK_Attach_to_a_running_process"></a>Připojte se k běžícímu procesu na místním počítači.
 
-Chcete-li rychle znovu připojit k procesu připojen k dříve, přečtěte si téma [znovu připojit k procesu](#BKMK_reattach).
+Chcete-li se rychle znovu připojit k procesu, který jste k dřív připojili, přečtěte si téma [opětovné připojení k procesu](#BKMK_reattach).
 
-Ladění procesu ve vzdáleném počítači, naleznete v tématu [připojit k procesu ve vzdáleném počítači](#BKMK_Attach_to_a_process_on_a_remote_computer).
+Postup ladění procesu ve vzdáleném počítači najdete v tématu [připojení k procesu ve vzdáleném počítači](#BKMK_Attach_to_a_process_on_a_remote_computer).
 
 ::: moniker range=">= vs-2019"
 Chcete-li ladit proces .NET Core na kontejneru Docker pro Linux, přečtěte si téma [připojení k kontejneru Docker pro Linux](#BKMK_Docker_Attach).
 ::: moniker-end
 
-**Chcete-li se připojit k procesu v místním počítači:**
+**Připojení k procesu v místním počítači:**
 
-1. V sadě Visual Studio, vyberte **ladění** > **připojit k procesu** (nebo stiskněte klávesu **Ctrl**+**Alt** + **P**) Chcete-li otevřít **připojit k procesu** dialogové okno.
+1. V aplikaci Visual Studio vyberte možnost **ladění** > **připojit k procesu** (nebo stiskněte klávesovou **zkratku CTRL**+**ALT**+**P**) a otevřete tak dialogové okno **připojit k procesu** .
 
-   **Typ připojení** by mělo být nastavené **výchozí**. **Cíl připojení** by měl být název vašeho místního počítače.
+   **Typ připojení** by měl být nastaven na **výchozí**. **Cíl připojení** by měl být název místního počítače.
 
    ![DBG_Basics_Attach_To_Process](../debugger/media/DBG_Basics_Attach_To_Process.png "DBG_Basics_Attach_To_Process")
 
-2. V **procesy k dispozici** seznamu vyhledejte a vyberte proces nebo chcete připojit k procesům.
+2. V seznamu **procesy k dispozici** vyhledejte a vyberte proces nebo procesy, ke kterým se chcete připojit.
 
-   - Chcete-li rychle vyberte proces, zadejte její název nebo první písmena **procesy filtrování** pole.
+   - Chcete-li rychle vybrat proces, zadejte jeho název nebo první písmeno do pole **filtrovat procesy** .
 
-   - Pokud neznáte název procesu, projděte si seznam nebo se [běžné scénáře ladění](#BKMK_Scenarios) pro některé běžné názvy procesů.
+   - Pokud název procesu neznáte, procházejte seznamem nebo si prohlédněte [běžné scénáře ladění](#BKMK_Scenarios) pro některé běžné názvy procesů.
 
    >[!TIP]
-   >Procesy můžete spouštět a zastavovat na pozadí při **připojit k procesu** dialogové okno je otevřená, takže seznam běžících procesů nemusí být vždy aktuální. Můžete vybrat **aktualizovat** kdykoli zobrazit aktuální seznam.
+   >Procesy lze spustit a zastavit na pozadí, zatímco je otevřeno dialogové okno **připojit k procesu** , takže seznam spuštěných procesů nemusí být vždy aktuální. Můžete kdykoli vybrat možnost **aktualizovat** , aby se zobrazil aktuální seznam.
 
-3. V **připojit k** pole, ujistěte se, že je uveden typ kódu, plánujete-li ladit. Výchozí hodnota **automatické** nastavení funguje pro většinu typů aplikací.
+3. V poli **připojit k** ověřte, že je uveden typ kódu, který chcete ladit. Výchozí **Automatické** nastavení funguje pro většinu typů aplikací.
 
    Ručně vyberte typy kódu:
-   1. Klikněte na tlačítko **vyberte**.
-   1. V **vybrat typ kódu** dialogovém okně vyberte **ladit tyto typy kódu**.
+   1. Klikněte na **Vybrat**.
+   1. V dialogovém okně **Vybrat typ kódu** vyberte možnost **ladit tyto typy kódu**.
    1. Vyberte typy kódu, který chcete ladit.
    1. Vyberte **OK**.
 
 4. Vyberte **připojit**.
 
 >[!NOTE]
->Můžete být připojení k několika aplikacím pro ladění, ale současně je aktivní v ladicím programu jenom jedna aplikace. Můžete nastavit aktivní aplikace v sadě Visual Studio **umístění ladění** nástrojů nebo **procesy** okna.
+>Můžete být připojení k několika aplikacím pro ladění, ale současně je aktivní v ladicím programu jenom jedna aplikace. Aktivní aplikaci můžete nastavit na panelu nástrojů nebo v okně **procesy** ladění Visual Studio **umístění** .
 
-## <a name="BKMK_Attach_to_a_process_on_a_remote_computer"></a> Připojit k procesu ve vzdáleném počítači
+## <a name="BKMK_Attach_to_a_process_on_a_remote_computer"></a>Připojit k procesu ve vzdáleném počítači
 
-Můžete také vybrat vzdálený počítač v **připojit k procesu** dialogovém okně zobrazit seznam dostupných procesů spuštěných na tomto počítači a připojit se k jedné nebo více procesům pro ladění. Vzdálený ladicí program (*msvsmon.exe*) musí běžet na vzdáleném počítači. Další informace najdete v tématu [vzdálené ladění](../debugger/remote-debugging.md).
+Můžete také vybrat vzdálený počítač v dialogovém okně **připojit k procesu** , zobrazit seznam dostupných procesů spuštěných v tomto počítači a připojit se k jednomu nebo více procesům pro ladění. Na vzdáleném počítači musí být spuštěný vzdálený ladící program (*msvsmon. exe*). Další informace najdete v tématu [vzdálené ladění](../debugger/remote-debugging.md).
 
-Podrobnější pokyny k ladění aplikací ASP.NET, které jsou nasazené do služby IIS najdete v tématu [vzdálené ladění ASP.NET ve vzdáleném počítači IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md).
+Podrobnější pokyny pro ladění aplikací ASP.NET, které byly nasazeny do služby IIS, najdete v tématu [vzdálené ladění ASP.NET na vzdáleném počítači IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md).
 
-**Připojit ke spuštěnému procesu ve vzdáleném počítači:**
+**Chcete-li se připojit ke spuštěnému procesu na vzdáleném počítači:**
 
-1. V sadě Visual Studio, vyberte **ladění** > **připojit k procesu** (nebo stiskněte klávesu **Ctrl**+**Alt** + **P**) Chcete-li otevřít **připojit k procesu** dialogové okno.
+1. V aplikaci Visual Studio vyberte možnost **ladění** > **připojit k procesu** (nebo stiskněte klávesovou **zkratku CTRL**+**ALT**+**P**) a otevřete tak dialogové okno **připojit k procesu** .
 
-2. **Typ připojení** by měl být **výchozí** většině případů. V **cíl připojení** vyberte vzdáleného počítače pomocí jedné z následujících metod:
+2. Pro většinu případů by měl být **Typ připojení** **výchozí** . V poli **cíl připojení** vyberte vzdálený počítač pomocí jedné z následujících metod:
 
-   - Vyberte šipku rozevíracího seznamu vedle **cíl připojení**a z rozevíracího seznamu vyberte název počítače.
+   - Vyberte šipku rozevíracího seznamu vedle **cíle připojení**a v rozevíracím seznamu vyberte název počítače.
    - Do pole **cíl připojení** zadejte název počítače a stiskněte klávesu **ENTER**.
 
      Ověřte, že Visual Studio přidá požadovaný port do názvu počítače, který se zobrazí ve formátu: **\<název vzdáleného počítače >:p** .
@@ -103,55 +103,59 @@ Podrobnější pokyny k ladění aplikací ASP.NET, které jsou nasazené do slu
      ::: moniker range=">= vs-2019"
 
      > [!NOTE]
-     > Pokud se nemůžete připojit pomocí názvu vzdáleného počítače, zkuste použít IP adresu a port adresu (například `123.45.678.9:4022`). 4024 je výchozí port pro vzdálený ladicí program sady Visual Studio 2019 x64. Ostatní přiřazení portů vzdáleného ladicího programu, najdete v části [přiřazení portů vzdáleného ladicího programu](remote-debugger-port-assignments.md).
+     > Pokud se nemůžete připojit pomocí názvu vzdáleného počítače, zkuste použít adresu IP a port (například `123.45.678.9:4022`). 4024 je výchozí port pro vzdálený ladicí program sady Visual Studio 2019 x64. Další přiřazení portů vzdáleného ladicího programu najdete v tématu [Přiřazení portů vzdáleného ladicího programu](remote-debugger-port-assignments.md).
 
      ::: moniker-end
      ::: moniker range="vs-2017"
 
      > [!NOTE]
-     > Pokud se nemůžete připojit pomocí názvu vzdáleného počítače, zkuste použít IP adresu a port adresu (například `123.45.678.9:4022`). 4022 je výchozím portem pro vzdálený ladicí program sady Visual Studio 2017 x64. Ostatní přiřazení portů vzdáleného ladicího programu, najdete v části [přiřazení portů vzdáleného ladicího programu](remote-debugger-port-assignments.md).
+     > Pokud se nemůžete připojit pomocí názvu vzdáleného počítače, zkuste použít adresu IP a port (například `123.45.678.9:4022`). 4022 je výchozím portem pro vzdálený ladicí program sady Visual Studio 2017 x64. Další přiřazení portů vzdáleného ladicího programu najdete v tématu [Přiřazení portů vzdáleného ladicího programu](remote-debugger-port-assignments.md).
 
      ::: moniker-end
 
-   - Vyberte **najít** vedle **cíl připojení** otevřete okno **vzdálená připojení** dialogové okno. **Vzdálená připojení** dialogové okno obsahuje všechna zařízení, které jsou v místní podsíti, nebo přímo připojené k vašemu počítači. Možná budete muset [otevřete UDP port 3702](../debugger/remote-debugger-port-assignments.md) na serveru ke zjištění vzdáleného zařízení. Vyberte počítač nebo zařízení a potom klikněte na tlačítko **vyberte**.
+   - Zaškrtněte tlačítko **Najít** vedle pole **cíl připojení** a otevřete tak dialogové okno **Vzdálená připojení** . V dialogovém okně **Vzdálená připojení** jsou uvedena všechna zařízení, která jsou ve vaší místní podsíti nebo jsou přímo připojená k počítači. Možná budete muset na serveru [otevřít port UDP 3702](../debugger/remote-debugger-port-assignments.md) , abyste mohli zjišťovat vzdálená zařízení. Vyberte počítač nebo zařízení, které chcete, a potom klikněte na **Vybrat**.
 
    > [!NOTE]
-   > **Typ připojení** nastavení zůstává mezi relacemi ladění. **Cíl připojení** nastavení zůstává mezi relacemi ladění pouze v případě, že došlo k úspěšnému připojení ladění u, které cílí.
+   > Nastavení **typu připojení** trvá mezi relacemi ladění. Nastavení **cíl připojení** trvá mezi relacemi ladění pouze v případě, že u tohoto cíle došlo k úspěšnému připojení ladění.
 
-3. Klikněte na tlačítko **aktualizovat** k naplnění **procesy k dispozici** seznamu.
+3. Kliknutím na tlačítko **aktualizovat** naplňte seznam **procesy k dispozici** .
 
     >[!TIP]
-    >Procesy můžete spouštět a zastavovat na pozadí při **připojit k procesu** dialogové okno je otevřená, takže seznam běžících procesů nemusí být vždy aktuální. Můžete vybrat **aktualizovat** kdykoli zobrazit aktuální seznam.
+    >Procesy lze spustit a zastavit na pozadí, zatímco je otevřeno dialogové okno **připojit k procesu** , takže seznam spuštěných procesů nemusí být vždy aktuální. Můžete kdykoli vybrat možnost **aktualizovat** , aby se zobrazil aktuální seznam.
 
-4. V **procesy k dispozici** seznamu vyhledejte a vyberte proces nebo chcete připojit k procesům.
+4. V seznamu **procesy k dispozici** vyhledejte a vyberte proces nebo procesy, ke kterým se chcete připojit.
 
-   - Chcete-li rychle vyberte proces, zadejte její název nebo první písmena **procesy filtrování** pole.
+   - Chcete-li rychle vybrat proces, zadejte jeho název nebo první písmeno do pole **filtrovat procesy** .
 
-   - Pokud neznáte název procesu, projděte si seznam nebo se [běžné scénáře ladění](#BKMK_Scenarios) pro některé běžné názvy procesů.
+   - Pokud název procesu neznáte, procházejte seznamem nebo si prohlédněte [běžné scénáře ladění](#BKMK_Scenarios) pro některé běžné názvy procesů.
 
-   - Chcete-li najít procesů spuštěných v rámci všech uživatelských účtů, vyberte **Zobrazit procesy všech uživatelů** zaškrtávací políčko.
+   - Chcete-li najít procesy spuštěné v rámci všech uživatelských účtů, zaškrtněte políčko **Zobrazit procesy všech uživatelů** .
 
      >[!NOTE]
      >Pokud se pokusíte připojit k procesu vlastněnému nedůvěryhodným uživatelským účtem, zobrazí se potvrzovací dialogové okno s upozorněním zabezpečení. Další informace najdete v tématu [Upozornění zabezpečení: připojení k procesu, který vlastní nedůvěryhodný uživatel, může být nebezpečné. Pokud tyto informace vypadají podezřele nebo si nejste jistí, nepřipojujte se k tomuto procesu](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md).
 
-5. V **připojit k** pole, ujistěte se, že je uveden typ kódu, plánujete-li ladit. Výchozí hodnota **automatické** nastavení funguje pro většinu typů aplikací.
+5. V poli **připojit k** ověřte, že je uveden typ kódu, který chcete ladit. Výchozí **Automatické** nastavení funguje pro většinu typů aplikací.
 
    Ručně vyberte typy kódu:
-   1. Klikněte na tlačítko **vyberte**.
-   1. V **vybrat typ kódu** dialogovém okně vyberte **ladit tyto typy kódu**.
+   1. Klikněte na **Vybrat**.
+   1. V dialogovém okně **Vybrat typ kódu** vyberte možnost **ladit tyto typy kódu**.
    1. Vyberte typy kódu, který chcete ladit.
    1. Vyberte **OK**.
 
 6. Vyberte **připojit**.
 
 >[!NOTE]
->Můžete být připojení k několika aplikacím pro ladění, ale současně je aktivní v ladicím programu jenom jedna aplikace. Můžete nastavit aktivní aplikace v sadě Visual Studio **umístění ladění** nástrojů nebo **procesy** okna.
+>Můžete být připojení k několika aplikacím pro ladění, ale současně je aktivní v ladicím programu jenom jedna aplikace. Aktivní aplikaci můžete nastavit na panelu nástrojů nebo v okně **procesy** ladění Visual Studio **umístění** .
 
-V některých případech při ladění v relaci vzdálené plochy (Terminálová služba) **procesy k dispozici** seznamu nezobrazí všechny procesy k dispozici. Pokud používáte Visual Studio jako uživatel, který má omezený uživatelský účet, **procesy k dispozici** seznamu nezobrazí procesy spuštěné v relaci 0. Relace 0 se používá pro služby a ostatních serverové procesy, včetně *w3wp.exe*. Problém můžete vyřešit spuštěním [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] pod účtem správce nebo spuštěním [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] z konzoly serveru místo relace Terminálové služby.
+V některých případech se při ladění v relaci vzdálené plochy (Terminálové služby) nezobrazí seznam **procesy k** dispozici všechny dostupné procesy. Pokud používáte aplikaci Visual Studio jako uživatel s omezeným uživatelským účtem, seznam **procesy k dispozici** nebude zobrazovat procesy spuštěné v relaci 0. Relace 0 se používá pro služby a jiné serverové procesy, včetně *W3wp. exe*. Problém můžete vyřešit tak, že spustíte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] v rámci účtu správce nebo spuštěním [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] z konzoly serveru namísto relace Terminálové služby.
 
-Pokud ani jeden z těchto řešení je možné, třetí možnost je připojit k procesu spuštěním `vsjitdebugger.exe -p <ProcessId>` z příkazového řádku Windows. Můžete určit ID procesu pomocí *Tlist. exe*. Chcete-li získat *tlist.exe*, stáhněte a nainstalujte ladění nástroje pro Windows, k dispozici na [soubory ke stažení sady WDK a WinDbg](/windows-hardware/drivers/download-the-wdk).
+Pokud ani jedno z těchto řešení není možné, je třetí možností připojit se k procesu spuštěním `vsjitdebugger.exe -p <ProcessId>` z příkazového řádku Windows. Můžete určit ID procesu pomocí *Tlist. exe*. Chcete-li získat *Tlist. exe*, Stáhněte a nainstalujte ladicí nástroje pro Windows, které jsou k dispozici na webu [WDK a programu WinDbg ke stažení](/windows-hardware/drivers/download-the-wdk).
 
 ::: moniker range=">= vs-2019"
+
+## <a name="attach-to-a-net-core-process-running-on-linux-using-ssh"></a>Připojení k procesu .NET Core běžícímu na Linux pomocí SSH
+
+Další informace najdete v tématu [vzdálené ladění .NET Core běžící na Linux pomocí SSH](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md).
 
 ## <a name="BKMK_Docker_Attach"></a>Připojení k procesu běžícímu na kontejneru Docker platformy Linux
 
@@ -199,47 +203,48 @@ Můžete připojit ladicí program sady Visual Studio k procesu běžícímu v k
 
 ::: moniker-end
 
-## <a name="BKMK_reattach"></a> Znovu připojit k procesu
+## <a name="BKMK_reattach"></a>Opětovné připojení k procesu
 
-Můžete rychle znovu připojit k procesům, které byly dříve přiřazená výběrem **ladění** > **znovu připojit k procesu** (**Shift** + **Alt**+**P**). Název procesu, když zvolíte tento příkaz, ladicí program se okamžitě pokusí připojit k naposledy procesy, které jste připojili při prvním pokusu odpovídat ID předchozího procesu a pokud se nezdaří, to provede spárováním odpovídajících na předchozí. Pokud nejsou nalezeny žádné shody, nebo pokud několik procesů mají stejný název, **připojit k procesu** dialogové okno se otevře, takže můžete vybrat správný proces.
+Můžete se rychle znovu připojit k procesům, které jste dříve připojili k procesu, a to výběrem možnosti **ladit** > znovu **připojit k procesu** (**SHIFT**+**ALT**+**P**). Název procesu, když zvolíte tento příkaz, ladicí program se okamžitě pokusí připojit k naposledy procesy, které jste připojili při prvním pokusu odpovídat ID předchozího procesu a pokud se nezdaří, to provede spárováním odpovídajících na předchozí. Pokud se nenajde žádné shody nebo pokud má několik procesů stejný název, otevře se dialogové okno **připojit k procesu** , abyste mohli vybrat správný proces.
 
 > [!NOTE]
 > Příkaz znovu **připojit k procesu** je k dispozici od začátku v aplikaci Visual Studio 2017.
 
-## <a name="BKMK_Scenarios"></a> Běžné scénáře ladění
+## <a name="BKMK_Scenarios"></a>Běžné scénáře ladění
 
-Při určování, jestli se má použít **připojit k procesu** a jaký proces se připojit k, v následující tabulce jsou uvedeny několik běžných ladění scénářů, s odkazy na další pokyny najdete tam, kde je k dispozici. (Seznam není vyčerpávající.)
+V následující tabulce je uvedeno několik běžných scénářů ladění, které vám pomůžou určit, jestli se má použít **k procesu připojení** a jaký proces se má připojit, a to s odkazy na další pokyny, které jsou k dispozici. (Seznam není vyčerpávající.)
 
-Pro některé typy aplikací, jako jsou aplikace pro univerzální aplikace pro Windows (UPW), nemusíte připojit přímo k názvu procesu, ale použít **ladit nainstalovaný balíček aplikace** nabídce Možnosti v sadě Visual Studio (viz tabulka).
+U některých typů aplikací, jako jsou aplikace pro univerzální aplikace pro Windows (UWP), se nepřipojujte přímo k názvu procesu, ale místo toho použijte možnost **ladit nainstalovaný balíček aplikace** v aplikaci Visual Studio (viz tabulka).
 
-Ladicí program připojil kód napsaný v jazyce C++, musí kód generovat `DebuggableAttribute`. Můžete přidat to do kódu automaticky díky propojení s [/assemblydebug](/cpp/build/reference/assemblydebug-add-debuggableattribute) – možnost linkeru.
+Aby se ladicí program připojil k kódu napsanému v C++, musí kód vygenerovat `DebuggableAttribute`. To můžete do kódu přidat automaticky tak, že propojíte s možností linkeru [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute) .
 
 Pro ladění skriptů na straně klienta musí být ladění skriptů povoleno v prohlížeči. Pro ladění skriptu na straně klienta v Chrome vyberte možnost **Webová sada** jako typ kódu a v závislosti na typu vaší aplikace možná budete muset zavřít všechny instance Chromu a spustit prohlížeč v režimu ladění (typ `chrome.exe --remote-debugging-port=9222` z příkazového řádku).
 
-Chcete-li rychle vybrat běžící proces pro připojení, v sadě Visual Studio, zadejte **Ctrl**+**Alt**+**P**a pak zadejte první písmeno Název procesu.
+Pokud chcete rychle vybrat běžící proces, ke kterému se chcete připojit, v aplikaci Visual Studio zadejte **Ctrl**+**ALT**+**P**a pak zadejte první písmeno názvu procesu.
 
 |Scénář|Debug – metoda|Název procesu|Poznámky a odkazy|
 |-|-|-|-|
-|Vzdálené ladění ASP.NET 4 nebo 4.5 na serveru služby IIS|Pomocí nástrojů pro vzdálenou a **připojit k procesu**|*W3wp.exe*|Zobrazit [vzdálené ladění ASP.NET ve vzdáleném počítači služby IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
-|Vzdálené ladění ASP.NET Core na server služby IIS|Pomocí nástrojů pro vzdálenou a **připojit k procesu**|*dotnet.exe*|Nasazení aplikace, najdete v tématu [publikovat do služby IIS](https://docs.asp.net/en/latest/publishing/iis.html). Ladění, naleznete v tématu [vzdálené ladění ASP.NET Core ve vzdáleném počítači služby IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)|
-|Ladění skriptů na straně klienta na místním serveru IIS, pro typy podporovaných aplikací |Použití **připojit k procesu**|*Chrome.exe*, *MicrosoftEdgeCP.exe*, nebo *iexplore.exe*|Musí být povoleno ladění skriptu. Pro Chrome, je nutné spustit také Chrome v režimu ladění a vyberte **komponenty Webkit kód** v **připojit k** pole.|
-|Ladění aplikací v jazyce C#, Visual Basic nebo C++ v místním počítači|Použít buď standardní ladění (**F5**), nebo **připojit k procesu**|*\<název_aplikace > .exe*|Ve většině případů použijte standardní ladění a ne **připojit k procesu**.|
-|Vzdálené ladění aplikace klasické pracovní plochy Windows|Vzdálené nástroje|NEUŽÍVÁ SE.| Zobrazit [vzdáleného ladění aplikace v jazyce C# nebo Visual Basic](../debugger/remote-debugging-csharp.md) nebo [vzdálené ladění aplikací v C++](../debugger/remote-debugging-cpp.md)|
-|Ladění aplikace ASP.NET v místním počítači po spuštění aplikace bez ladicího programu|Použití **připojit k procesu**|*iiexpress.exe*|To může být užitečné k vytvoření aplikace načíst rychleji, například (třeba) při profilování. |
-|Ladit další typy aplikací podporované v procesu serveru|Pokud je vzdálený server, pomocí nástrojů pro vzdálenou, a **připojit k procesu**|*Chrome.exe*, *iexplore.exe*, nebo jiných procesů|V případě potřeby použijte k identifikaci procesu Sledování prostředků. Zobrazit [vzdálené ladění](../debugger/remote-debugging.md).|
-|Vzdálené ladění aplikací pro univerzální aplikace Windows (UPW), OneCore, HoloLens a IoT aplikací|Ladit nainstalovaný balíček aplikace|NEUŽÍVÁ SE.|Zobrazit [ladění balíčku nainstalované aplikace](debug-installed-app-package.md) namísto použití **připojit k procesu**|
-|Ladění aplikací pro univerzální aplikace Windows (UPW), OneCore, HoloLens a IoT aplikací, které se nepovedlo spustit ze sady Visual Studio|Ladit nainstalovaný balíček aplikace|NEUŽÍVÁ SE.|Zobrazit [ladění balíčku nainstalované aplikace](debug-installed-app-package.md) namísto použití **připojit k procesu**|
+|Vzdálené ladění ASP.NET 4 nebo 4.5 na serveru služby IIS|Použití vzdálených nástrojů a **připojení k procesu**|*W3wp.exe*|Viz [vzdálené ladění ASP.NET ve vzdáleném počítači IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) .|
+|Vzdálené ladění ASP.NET Core na server služby IIS|Použití vzdálených nástrojů a **připojení k procesu**|*dotnet. exe* nebo *APPNAME. exe*|Nasazení aplikací najdete v tématu [publikování do služby IIS](https://docs.asp.net/en/latest/publishing/iis.html). Pro ladění, viz [vzdálené ladění ASP.NET Core na vzdáleném počítači IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)|
+|Ladění skriptů na straně klienta na místním serveru IIS, pro typy podporovaných aplikací |Použít **připojit k procesu**|*Chrome. exe*, *MicrosoftEdgeCP. exe*nebo *iexplore. exe*|Musí být povoleno ladění skriptu. Pro Chrome musíte také spustit Chrome v režimu ladění a vybrat **WebKit kód** v poli **připojit k** .|
+|Ladění aplikací v jazyce C#, Visual Basic nebo C++ v místním počítači|Použít buď standardní ladění (**F5**), nebo **připojit k procesu**|*\<název_aplikace >. exe*|Ve většině scénářů použijte standardní ladění a **Nepřipojujte se k procesu**.|
+|Vzdálené ladění aplikace klasické pracovní plochy Windows|Vzdálené nástroje|neuvedeno| Viz téma [vzdálené ladění C# a aplikace Visual Basic](../debugger/remote-debugging-csharp.md) nebo [vzdálené C++ ladění aplikace](../debugger/remote-debugging-cpp.md) .|
+|Ladění .NET Core v systému Linux|Použít **připojit k procesu**|*dotnet. exe*|Pokud chcete použít SSH, přečtěte si téma [vzdálené ladění .NET Core běžící na Linux pomocí SSH](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md). Pokud chcete použít kontejner Docker pro Linux, přečtěte si téma [připojení k procesu spuštěnému v kontejneru Docker platformy Linux](#BKMK_Docker_Attach).|
+|Ladění aplikace ASP.NET v místním počítači po spuštění aplikace bez ladicího programu|Použít **připojit k procesu**|*iiexpress. exe*|To může být užitečné k vytvoření aplikace načíst rychleji, například (třeba) při profilování. |
+|Ladit další typy aplikací podporované v procesu serveru|Pokud je server vzdálený, použijte nástroje Remote Tools a **Připojte se k procesu** .|*Chrome. exe*, *iexplore. exe*nebo jiné procesy|V případě potřeby použijte k identifikaci procesu Sledování prostředků. Viz téma [vzdálené ladění](../debugger/remote-debugging.md).|
+|Vzdálené ladění aplikací pro univerzální aplikace Windows (UPW), OneCore, HoloLens a IoT aplikací|Ladit nainstalovaný balíček aplikace|neuvedeno|Viz [ladění nainstalovaného balíčku aplikace](debug-installed-app-package.md) namísto použití příkazu **připojit k procesu** .|
+|Ladění aplikací pro univerzální aplikace Windows (UPW), OneCore, HoloLens a IoT aplikací, které se nepovedlo spustit ze sady Visual Studio|Ladit nainstalovaný balíček aplikace|neuvedeno|Viz [ladění nainstalovaného balíčku aplikace](debug-installed-app-package.md) namísto použití příkazu **připojit k procesu** .|
 
 ## <a name="use-debugger-features"></a>Použití funkcí ladicího programu
 
-Chcete-li používat úplné funkce ladicího programu sady Visual Studio (například zarážek) při připojování k procesu, aplikace musí přesně odpovídat, místní zdroje a symbolů. To znamená, ladicí program musí být schopný načíst správný [symbolů (PDB) soubory](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md). Ve výchozím nastavení tento postup vyžaduje sestavení pro ladění.
+Chcete-li používat úplné funkce ladicího programu sady Visual Studio (například zarážek) při připojování k procesu, aplikace musí přesně odpovídat, místní zdroje a symbolů. To znamená, že ladicí program musí být schopný načíst správné [soubory symbolů (. pdb)](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md). Ve výchozím nastavení tento postup vyžaduje sestavení pro ladění.
 
 Pro scénáře vzdálené ladění musí mít zdrojový kód (nebo kopii zdrojového kódu) otevřen v sadě Visual Studio. Binární soubory kompilované aplikace na vzdáleném počítači musí pocházet ze stejného sestavení jako v místním počítači.
 
-V některých místní ladění scénářích můžete ladit v sadě Visual Studio bez přístupu ke zdroji Pokud jsou k dispozici v aplikaci správný symbol soubory. Ve výchozím nastavení tento postup vyžaduje sestavení pro ladění. Další informace najdete v tématu [určit symboly a zdrojové soubory](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+V některých místní ladění scénářích můžete ladit v sadě Visual Studio bez přístupu ke zdroji Pokud jsou k dispozici v aplikaci správný symbol soubory. Ve výchozím nastavení tento postup vyžaduje sestavení pro ladění. Další informace najdete v tématu [Určení symbolů a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
-## <a name="BKMK_Troubleshoot_attach_errors"></a> Řešení potíží s chybami připojení
- Pokud ladicí program připojí ke spuštěnému procesu, proces může obsahovat jeden nebo více typů kódu. Typy kódu k se může připojit ladicí program se zobrazí a jsou vybrány v **vybrat typ kódu** dialogové okno.
+## <a name="BKMK_Troubleshoot_attach_errors"></a>Řešení chyb připojení
+ Pokud ladicí program připojí ke spuštěnému procesu, proces může obsahovat jeden nebo více typů kódu. Typy kódu, ke kterým se může ladicí program připojit, jsou zobrazeny a vybrány v dialogovém okně **Vybrat typ kódu** .
 
  V některých případech můžete úspěšně připojit ladicí program k jednomu typu kódu, ale ne k jinému typu kódu. Tato situace může nastat, pokud se pokoušíte připojit k procesu, která běží na vzdáleném počítači. Vzdálený počítač může mít nainstalované pro některé typy kódu, ale nikoli pro jiné komponenty vzdáleného ladění. Může dojít také při pokusu o připojení ke dvěma nebo více procesům pro přímé ladění databáze. SQL ladění podporuje připojení pouze jednoho procesu.
 
@@ -249,26 +254,26 @@ V některých místní ladění scénářích můžete ladit v sadě Visual Stud
 
  Pokud potřebujete konkrétnější informace o Proč se ladicímu programu nepodařilo připojit k typu kódu, zkuste se znovu připojit pouze tomuto typu kódu.
 
- **Získání konkrétních informací o Proč se nepodařilo připojit typ kódu:**
+ **Chcete-li získat konkrétní informace o tom, proč se typ kódu nepodařilo připojit:**
 
-1. Odpojte od procesu. Na **ladění** nabídce vyberte možnost **Odpojit vše**.
+1. Odpojte od procesu. V nabídce **ladění** vyberte **Odpojit vše**.
 
 1. Znovu připojte k procesu, vyberte pouze typ kódu, který se nepodařilo připojit.
 
-    1. V **připojit k procesu** dialogového okna, vyberte v procesu **procesy k dispozici** seznamu.
+    1. V dialogovém okně **připojit k procesu** vyberte proces v seznamu **procesy k dispozici** .
 
-    2. Vyberte **vyberte**.
+    2. Vyberte **Vybrat**.
 
-    3. V **vybrat typ kódu** dialogovém okně vyberte **ladit tyto typy kódu** a typ kódu, který se nepodařilo připojit. Zrušte výběr jiných typů kódu.
+    3. V dialogovém okně **Vybrat typ kódu** vyberte možnost **ladit tyto typy kódu** a typ kódu, který se nepodařilo připojit. Zrušte výběr jiných typů kódu.
 
     4. Vyberte **OK**.
 
-    5. V **připojit k procesu** dialogu **připojit**.
+    5. V dialogovém okně **připojit k procesu** vyberte **připojit**.
 
     Tentokrát připojení zcela selže a dostanete konkrétní chybovou zprávu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Ladění více procesů](../debugger/debug-multiple-processes.md)
-- [Ladění Just-In-Time](../debugger/just-in-time-debugging-in-visual-studio.md)
+- [Ladění za běhu](../debugger/just-in-time-debugging-in-visual-studio.md)
 - [Vzdálené ladění](../debugger/remote-debugging.md)
