@@ -14,16 +14,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 301b829341eeb859030afabbf2225ea833e99a22
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ec257d67530692fc885d971e21136c10e7a271f6
+ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587677"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78167791"
 ---
 # <a name="design-warnings"></a>Upozornění ohledně návrhu
 
-Upozornění na návrh podporují dodržování [pokynů pro návrh .NET](/dotnet/standard/design-guidelines/).
+Upozornění na návrh podporují dodržování [pokynů pro návrh .NET Framework](/dotnet/standard/design-guidelines/).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -31,7 +31,7 @@ Upozornění na návrh podporují dodržování [pokynů pro návrh .NET](/dotne
 | - | - |
 | [CA1000: Nedeklarujte statické členy v obecných typech](../code-quality/ca1000.md) | Při volání statického členu obecného typu musí být pro tento typ zadán argument typu. Je-li zavolán obecný člen instance, který nepodporuje odvozování, musí být pro tento člen zadán argument typu. V těchto dvou případech je syntaxe zadávání argumentu typu různá a snadno zaměnitelná. |
 | [CA1001: Typy vlastních uvolnitelných polí, které by měly být uvolnitelné](../code-quality/ca1001.md) | Třída deklaruje a implementuje pole instance, které je typu System. IDisposable a třída neimplementuje rozhraní IDisposable. Třída, která deklaruje pole IDisposable nepřímo, vlastní nespravovaný zdroj a měla by rozhraní IDisposable implementovat. |
-| [CA1002: Nezveřejňujte obecné seznamy](../code-quality/ca1002.md) | Třída System.Collections.Generic.List < (ze \<(T >) >) je obecná kolekce navržená pro výkon, nikoli dědičnost. Proto třída List neobsahuje žádné virtuální členy. Místo ní by měly být vystaveny kolekce navržené pro dědičnost. |
+| [CA1002: Nezveřejňujte obecné seznamy](../code-quality/ca1002.md) | System. Collections. Generic. list < (of \<(T >) >) je obecná kolekce, která je navržena pro výkon, nikoli dědičnost. Proto třída List neobsahuje žádné virtuální členy. Místo ní by měly být vystaveny kolekce navržené pro dědičnost. |
 | [CA1003: Použijte instance obecných obslužných rutin události](../code-quality/ca1003.md) | Typ obsahuje delegát, který vrací typ void, jehož signatura obsahuje dva parametry (první objekt a druhý typ, který lze přiřadit k EventArgs), a obsahující cíle sestavení .NET Framework 2,0. |
 | [CA1004: Obecné metody by měly poskytnout parametr typu](../code-quality/ca1004.md) | Argument typu obecné metody je z argumentu typu předávaného metodě odvozen namísto explicitního určení argumentu typu. Má-li být odvozování povoleno, musí předpis parametrů obecné metody zahrnovat parametr stejného typu jako parametr typu metody. V tomto případě nemusí být argument typu zadán. Použijete-li odvození pro všechny parametry typu, syntaxe pro volání generických a neobecných instancí je identická; To zjednodušuje použitelnost obecných metod. |
 | [CA1005: Vyhněte se nadbytečným parametrům na obecných typech](../code-quality/ca1005.md) | Čím více parametrů typu obecný typ obsahuje, tím obtížnější je vědět a zapamatovat si, co každý z parametrů typu představuje. Je obvykle zřejmé s jedním parametrem typu, jako v seznamu\<T > a v některých případech se dvěma parametry typu, jako ve slovníku Dictionary\<TKey, TValue >. Pokud však existují více než dva parametry typu, stává se pro většinu uživatelů použití příliš obtížným. |
@@ -88,7 +88,7 @@ Upozornění na návrh podporují dodržování [pokynů pro návrh .NET](/dotne
 | [CA1061: Neskrývejte metody třídy base](../code-quality/ca1061.md) | Metoda základního typu je skryta identicky pojmenovanou metodou v odvozeném typu, kde je předpis parametrů odvozené metody odlišný od odpovídajících typů v předpisu parametrů základní metody pouze ve slaběji odvozených typech. |
 | [CA1062: Ověřte argumenty veřejných metod](../code-quality/ca1062.md) | Všechny argumenty odkazu předané externě viditelným metodám by měly být porovnány s hodnotou NULL. |
 | [CA1063: Implementuje správně IDisposable](../code-quality/ca1063.md) | Všechny typy IDisposable by měly správně implementovat vzor Dispose. |
-| [CA1064: Výjimky by měly být veřejné](../code-quality/ca1064.md) | Interní výjimka je viditelná pouze uvnitř svého vlastního vnitřního rozsahu. Jakmile výjimka přesáhne hranice vnitřního rozsahu, lze pro zachycení výjimky použít pouze základní výjimku. Pokud je vnitřní výjimka zděděna z <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, nebo <xref:System.ApplicationException?displayProperty=fullName>, externí kód nebude mít dostatečné informace o tom, co dělat, s výjimkou. |
+| [CA1064: Výjimky by měly být veřejné](../code-quality/ca1064.md) | Interní výjimka je viditelná pouze uvnitř svého vlastního vnitřního rozsahu. Jakmile výjimka přesáhne hranice vnitřního rozsahu, lze pro zachycení výjimky použít pouze základní výjimku. Pokud je interní výjimka zděděna z <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>nebo <xref:System.ApplicationException?displayProperty=fullName>, externí kód nebude mít dostatečné informace, abyste věděli, co dělat s výjimkou. |
 | [CA1065: Nevyvolávejte výjimky v neočekávaných umístěních](../code-quality/ca1065.md) | Metoda, u které není předpokládáno vyvolání výjimky, vyvolá výjimku. |
 | [CA1068: parametry CancellationToken se musí nacházet jako poslední.](../code-quality/ca1068.md) | Metoda má parametr CancellationToken, který není posledním parametrem. |
 | [CA2210: Sestavení by měly mít platné silné názvy](../code-quality/ca2210.md) | Silný název chrání klienty před neúmyslným načtením narušeného sestavení. Sestavení bez silných názvů by kromě velmi omezených scénářů neměla být nasazována. Pokud sdílíte nebo šíříte sestavení, která nejsou správně podepsána, může být sestavení záměrně poškozeno, modul CLR je nemusí načíst nebo uživatelé mohou být nuceni vypnout na svém počítači ověřování. |

@@ -14,12 +14,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 92e027b58d1a05d77055048872c38f45939cbfe0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 71d2fe83690e55d49bb23bffb09de91c8f7534b6
+ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587443"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78167621"
 ---
 # <a name="suppress-code-analysis-warnings"></a>Potlačit upozornění analýzy kódu
 
@@ -78,7 +78,7 @@ Mezi vlastnosti atributu patří:
 
 - **Rozsah** – cíl, na kterém je upozornění potlačeno. Pokud není cíl zadán, je nastaven na cíl atributu. Mezi podporované [obory](xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope) patří následující:
 
-  - `module` – tento rozsah potlačuje upozornění proti sestavení. Jedná se o globální potlačení, které platí pro celý projekt.
+  - [`module`](#module-suppression-scope) – tento rozsah potlačuje upozornění proti sestavení. Jedná se o globální potlačení, které platí pro celý projekt.
 
   - `resource` – (pouze[starší verze FxCop](../code-quality/static-code-analysis-for-managed-code-overview.md) ) Tento obor potlačí upozornění v diagnostických informacích zapsaných do souborů prostředků, které jsou součástí modulu (sestavení). Tento rozsah není v C#kompilátorech/VB pro diagnostiku Roslyn Analyzer k dispozici ani ke čtení, který analyzuje pouze zdrojové soubory.
 
@@ -174,11 +174,19 @@ Potlačení globální úrovně jsou jediným způsobem, jak potlačit zprávy, 
 > [!NOTE]
 > `Target` vždy obsahuje plně kvalifikovaný název položky.
 
-## <a name="global-suppression-file"></a>Globální soubor potlačení
+### <a name="global-suppression-file"></a>Globální soubor potlačení
 
 Globální soubor potlačení uchovává potlačení, která jsou buď potlačená, nebo potlačení, která neurčují cíl. Například potlačení pro porušení na úrovni sestavení se ukládají do tohoto souboru. Kromě toho jsou v tomto souboru uložena některá potlačení ASP.NET, protože nastavení na úrovni projektu nejsou k dispozici pro kód za formulářem. Globální soubor potlačení je vytvořen a přidán do projektu při prvním výběru možnosti **v souboru potlačení projektu** v příkazu **potlačit** v okně **Seznam chyb** .
 
-## <a name="see-also"></a>Viz také:
+### <a name="module-suppression-scope"></a>Rozsah potlačení modulu
+
+Můžete potlačit porušení kvality kódu pro celé sestavení pomocí oboru **modulu** .
+
+Například následující atribut v souboru projektu _GlobalSuppressions_ potlačí porušení ConfigureAwait pro projekt ASP.NET Core:
+
+`[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2007:Consider calling ConfigureAwait on the awaited task", Justification = "ASP.NET Core doesn't use thread context to store request context.", Scope = "module")]`
+
+## <a name="see-also"></a>Viz také
 
 - <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope>
 - <xref:System.Diagnostics.CodeAnalysis>

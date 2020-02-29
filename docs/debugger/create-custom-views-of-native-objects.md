@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61a8cce68a55f6db26de7754bdfc9dda196c457a
-ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
+ms.openlocfilehash: 9c26c35c09353d740f6db9745222bb66db40e7ba
+ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77091779"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78167751"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>Vytváření vlastních zobrazení C++ objektů v ladicím programu pomocí architektury Natvis
 
@@ -94,6 +94,30 @@ Ladicí program sady Visual Studio načítá soubory *. Natvis* v C++ projektech
 >[!NOTE]
 >Pravidla Natvis načtená ze souboru *. pdb* se vztahují pouze na typy v modulech, na které odkazuje soubor *. pdb* . Například pokud má *Module1. pdb* položku Natvis pro typ s názvem `Test`, vztahuje se pouze na třídu `Test` v souboru *Module1. dll*. Pokud jiný modul definuje také třídu s názvem `Test`, položka Natvis pro *Module1. pdb* se na ni nevztahuje.
 
+**Instalace a registrace souboru *. Natvis* prostřednictvím balíčku VSIX:**
+
+VSIX balíček může nainstalovat a zaregistrovat soubory *. Natvis* . Bez ohledu na to, kde jsou nainstalovány, jsou všechny registrované soubory *Natvis* automaticky vyzvednuty během ladění.
+
+1. Do balíčku VSIX zahrňte soubor *. Natvis* . Například pro následující soubor projektu:
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+   <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+     <ItemGroup>
+       <VSIXSourceItem Include="Visualizer.natvis" />
+     </ItemGroup>
+   </Project>
+   ```
+
+2. Zaregistrujte soubor *. Natvis* v souboru *source. extension. vsixmanifest* :
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+   <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+     <Assets>
+       <Asset Type="NativeVisualizer" Path="Visualizer.natvis"  />
+     </Assets>
+   </PackageManifest>
+   ```
+
 ### <a name="BKMK_natvis_location"></a>Umístění souborů Natvis
 
 Pokud chcete, aby se soubory *. Natvis* mohly použít pro více projektů, můžete je přidat do adresáře uživatelů nebo do systémového adresáře.
@@ -104,19 +128,21 @@ Soubory *. Natvis* jsou vyhodnocovány v následujícím pořadí:
 
 2. Všechny soubory *. Natvis* , které jsou v načteném C++ projektu nebo řešení nejvyšší úrovně. Tato skupina zahrnuje všechny načtené C++ projekty, včetně knihoven tříd, ale ne projektů v jiných jazycích.
 
+3. Všechny soubory *. Natvis* nainstalované a registrované prostřednictvím balíčku VSIX
+
 ::: moniker range="vs-2017"
 
-3. Adresář Natvis konkrétního uživatele (například *%UserProfile%\Documents\Visual Studio 2017 \ vizualizujes*).
+4. Adresář Natvis konkrétního uživatele (například *%UserProfile%\Documents\Visual Studio 2017 \ vizualizujes*).
 
 ::: moniker-end
 
 ::: moniker range=">= vs-2019"
 
-3. Adresář Natvis konkrétního uživatele (například *%UserProfile%\Documents\Visual Studio 2019 \ vizualizujes*).
+4. Adresář Natvis konkrétního uživatele (například *%UserProfile%\Documents\Visual Studio 2019 \ vizualizujes*).
 
 ::: moniker-end
 
-4. Adresář Natvis pro systém v rámci systému ( *%VSINSTALLDIR%\Common7\Packages\Debugger\Visualizers*). Tento adresář obsahuje soubory *. Natvis* , které jsou nainstalovány se sadou Visual Studio. Pokud máte oprávnění správce, můžete do tohoto adresáře přidat soubory.
+5. Adresář Natvis pro systém v rámci systému ( *%VSINSTALLDIR%\Common7\Packages\Debugger\Visualizers*). Tento adresář obsahuje soubory *. Natvis* , které jsou nainstalovány se sadou Visual Studio. Pokud máte oprávnění správce, můžete do tohoto adresáře přidat soubory.
 
 ## <a name="modify-natvis-files-while-debugging"></a>Upravovat soubory. Natvis během ladění
 
@@ -670,7 +696,7 @@ Tady je příklad prvku UIVisualizer:
 
 - Dvojice atributů `ServiceId` - `Id` identifikuje `UIVisualizer`. `ServiceId` je identifikátor GUID služby, kterou balíček Vizualizér zpřístupňuje. `Id` je jedinečný identifikátor, který odlišuje vizualizace, pokud služba poskytuje více než jednu. V předchozím příkladu má stejná služba Vizualizér dva nástroje pro vizualizaci.
 
-- Atribut `MenuName` definuje název Vizualizátoru, který se zobrazí v rozevíracím seznamu vedle ikony lupy v ladicím programu. Například:
+- Atribut `MenuName` definuje název Vizualizátoru, který se zobrazí v rozevíracím seznamu vedle ikony lupy v ladicím programu. Příklad:
 
   ![Místní nabídka nabídky UIVisualizer](../debugger/media/dbg_natvis_vectorvisualizer.png "Místní nabídka nabídky UIVisualizer")
 
@@ -682,7 +708,7 @@ Každý typ definovaný v souboru *. Natvis* musí explicitně uvést jakékoli 
 </Type>
 ```
 
- Můžete vidět příklad `UIVisualizer` v rozšíření pro [sledování obrázků](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.ImageWatch2017) , který slouží k zobrazení rastrových obrázků v paměti.
+ Můžete vidět příklad `UIVisualizer` v rozšíření pro [sledování obrázků](https://marketplace.visualstudio.com/search?term=%22Image%20Watch%22&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance) , který slouží k zobrazení rastrových obrázků v paměti.
 
 ### <a name="BKMK_CustomVisualizer"></a>Element CustomVisualizer
  `CustomVisualizer` je bod rozšíření, který určuje rozšíření VSIX, které zapisujete do ovládacích prvků vizualizace v aplikaci Visual Studio Code. Další informace o zápisu rozšíření VSIX naleznete v sadě [Visual Studio SDK](../extensibility/visual-studio-sdk.md).

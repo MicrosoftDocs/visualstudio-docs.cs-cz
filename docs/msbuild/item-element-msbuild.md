@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3da51c16645d0c44128b0a5fe1b19053062673c1
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: ff7e446c319a08004260125580cdace43412cdba
+ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633691"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169349"
 ---
 # <a name="item-element-msbuild"></a>Item – Element (MSBuild)
 
@@ -34,8 +34,7 @@ Obsahuje uživatelem definovanou položku a její metadata. Každá položka, kt
 ```xml
 <Item Include="*.cs"
         Exclude="MyFile.cs"
-        Remove="RemoveFile.cs"
-        Condition="'String A'=='String B'" >
+        Condition="'String A'=='String B'">
     <ItemMetadata1>...</ItemMetadata1>
     <ItemMetadata2>...</ItemMetadata2>
 </Item>

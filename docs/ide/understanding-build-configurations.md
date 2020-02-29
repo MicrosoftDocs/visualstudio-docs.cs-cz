@@ -26,12 +26,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b472ca78d36247a76bf397989f48e04230ccd7d
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.openlocfilehash: a37d4fa5dc92253b94dc64590c9df5fec7703ceb
+ms.sourcegitcommit: b016ea260856264eee730ee8cbcab198314a7ece
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77027619"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904162"
 ---
 # <a name="understand-build-configurations"></a>Vysvětlení konfigurací sestavení
 
@@ -44,11 +44,11 @@ Konfigurace sestavení potřebujete, pokud potřebujete sestavit projekty s jin�
 
 Konfigurace a řízení platformy, kde jsou uloženy vytvořené výstupní soubory. V případě, že Visual Studio sestaví projekt, výstup se umístí do podsložky projektu s názvem aktivní konfigurace (například *bin/ladit/x86*), ale můžete ho změnit.
 
-Vlastní konfigurace sestavení můžete vytvořit na úrovni řešení a projektu. Konfigurace řešení určuje, které projekty jsou zahrnuty v sestavení, pokud je tato konfigurace aktivní. Budou sestaveny pouze projekty, které jsou zadány v aktivní konfiguraci řešení. Konfigurace projektu určuje, které nastavení sestavení a možnosti kompilátoru se použijí při sestavování projektu.
+Vlastní konfigurace sestavení můžete vytvořit na úrovni řešení a projektu. Konfigurace řešení určuje, které projekty jsou zahrnuty v sestavení, pokud je tato konfigurace aktivní. Budou sestaveny pouze projekty, které jsou zadány v aktivní konfiguraci řešení. Pokud je v Configuration Manager vybraná možnost více cílových platforem, sestaví se všechny projekty, které platí pro tuto platformu. Konfigurace projektu určuje, které nastavení sestavení a možnosti kompilátoru se použijí při sestavování projektu.
 
 Chcete-li vytvořit, vybrat, upravit nebo odstranit konfiguraci, můžete použít **Configuration Manager**. Chcete-li jej otevřít, v panelu nabídek vyberte možnost **sestavit** > **Configuration Manager**nebo do vyhledávacího pole zadejte pouze **konfiguraci** . Můžete také použít seznam **Konfigurace řešení** na panelu nástrojů **standardní** k výběru konfigurace nebo otevření **Configuration Manager**.
 
-![Configuration Manager](media/understanding-build-configurations/config-manager.png)
+![Správce konfigurace](media/understanding-build-configurations/config-manager.png)
 
 > [!NOTE]
 > Pokud nemůžete najít nastavení konfigurace řešení na panelu nástrojů a nemůžete získat přístup k **Configuration Manager**, může být použito nastavení pro vývoj [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]. Další informace najdete v tématu [Postupy: Správa konfigurací pomocí Visual Basic nastavení pro vývojáře](../ide/how-to-manage-build-configurations-with-visual-basic-developer-settings-applied.md).
@@ -71,6 +71,12 @@ Konfigurace a platforma, které cílí na projekt, se používají společně k 
 
 ![Konfigurace Návrháře projektu](media/understanding-build-configurations/project-designer-configuration.png)
 
+## <a name="building-multiple-configurations"></a>Sestavování více konfigurací
+
+Při sestavování řešení pomocí příkazu **sestavit** > **Sestavit řešení** aplikace Visual Studio vytvoří pouze aktivní konfiguraci. Všechny projekty, které jsou určeny v této konfiguraci řešení, a jedinou konfiguraci projektu, která je vytvořena, je ten, který je zadán v aktivní konfiguraci řešení a na aktivním řešení platformy, který je zobrazen na panelu nástrojů v sadě Visual Studio. Například **ladit** a **x86**. Další definované konfigurace a platformy nejsou sestavené.
+
+Pokud chcete sestavit více konfigurací a platforem v rámci jedné akce, můžete použít **možnost build > ** **Batch** pro sestavení v aplikaci Visual Studio. Pro přístup k této funkci stiskněte **Ctrl**+**Q** a otevřete vyhledávací pole a zadejte `Batch build`. Dávkové sestavení není k dispozici pro všechny typy projektů. Viz [Postupy: sestavení více konfigurací současně](how-to-build-multiple-configurations-simultaneously.md).
+
 ## <a name="how-visual-studio-assigns-project-configurations"></a>Jak Visual Studio přiřadí konfigurace projektu
 
 Pokud definujete novou konfiguraci řešení a nekopírujete nastavení z existujícího projektu, Visual Studio použije následující kritéria k přiřazení výchozích konfigurací projektu. Kritéria jsou vyhodnocována v uvedeném pořadí.
@@ -91,7 +97,7 @@ Visual Studio používá následující kritéria k přiřazení konfigurací ř
 
 - Pokud projekt podporuje více platforem, je konfigurace řešení buď nalezena, nebo přidána pro každou podporovanou platformu. Název každé konfigurace řešení zahrnuje název konfigurace projektu i název platformy a má formu *\<název konfigurace projektu > \<název platformy >* .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Návod: Sestavení aplikace](../ide/walkthrough-building-an-application.md)
 - [Kompilace a sestavení](../ide/compiling-and-building-in-visual-studio.md)

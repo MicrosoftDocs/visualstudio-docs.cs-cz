@@ -10,12 +10,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 582c87eee2586eab12f70e2d27341987e7cb7e2a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7076e8f5718e44cc382eb0768e6456dbd6ee5664
+ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585883"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169362"
 ---
 # <a name="template-parameters"></a>Parametry šablony
 
@@ -23,7 +23,7 @@ Při vytváření instance šablony, můžete v šabloně nahraďte hodnoty. Chc
 
 ## <a name="declare-and-enable-template-parameters"></a>Deklarace a povolení parametrů šablony
 
-Parametry šablon jsou deklarovány ve formátu $*parametr*$. Příklad:
+Parametry šablony jsou deklarovány ve formátu $*Parameter*$. Příklad:
 
 - $safeprojectname$
 
@@ -33,9 +33,9 @@ Parametry šablon jsou deklarovány ve formátu $*parametr*$. Příklad:
 
 ### <a name="enable-parameter-substitution-in-templates"></a>Povolit substituci parametrů v šablonách
 
-1. V *.vstemplate* soubor šablony, vyhledejte `ProjectItem` element, který odpovídá položce, pro kterou chcete povolit náhradu parametrů.
+1. V souboru *. vstemplate* šablony vyhledejte prvek `ProjectItem`, který odpovídá položce, pro kterou chcete povolit nahrazení parametru.
 
-1. Nastavte `ReplaceParameters` atribut `ProjectItem` elementu `true`.
+1. Nastavte atribut `ReplaceParameters` `ProjectItem` elementu na `true`.
 
 1. V souboru kódu pro položku projektu zahrnují parametry, kde je to vhodné. Například následující parametr určuje, že se používá bezpečný název projektu pro obor názvů v souboru:
 
@@ -50,7 +50,7 @@ Následující tabulka uvádí seznam rezervovaných parametrů šablony, které
 |Parametr|Popis|
 |---------------|-----------------|
 |clrversion|Aktuální verze modulu common language runtime (CLR).|
-|ext_*|Přidejte předponu `ext_` do libovolného parametru, abyste odkazovali na proměnné nadřazené šablony. Například `ext_safeprojectname`.|
+|ext_*|Přidejte předponu `ext_` do libovolného parametru, abyste odkazovali na proměnné nadřazené šablony. například `ext_safeprojectname`.|
 |identifikátor GUID [1-10]|GUID, který se používá k nahrazení identifikátoru GUID projektu v souboru projektu. Můžete zadat až 10 jedinečných identifikátorů GUID (například `guid1`).|
 |Název položky|Název souboru, ve kterém se parametr používá|
 |MachineName|Aktuální název počítače (například Computer01).|
@@ -60,25 +60,25 @@ Následující tabulka uvádí seznam rezervovaných parametrů šablony, které
 |safeitemname|Stejné jako `itemname`, ale všechny nezabezpečené znaky a mezery nahrazují znaky podtržítka.|
 |safeitemrootname|Stejné jako `safeitemname`.|
 |safeprojectname|Název zadaný uživatelem při vytvoření projektu, ale všechny nezabezpečené znaky a mezery byly odebrány.|
-|čas|Aktuální čas ve formátu DD/MM/RRRR 00:00:00.|
-|specifiedSolutionName|Název řešení. Pokud je zaškrtnuto políčko „vytvořit adresář řešení“, `specifiedSolutionName` obsahuje název řešení. Pokud není zaškrtnuto políčko „vytvořit adresář řešení“, `specifiedSolutionName` je prázdné.|
+|time|Aktuální čas ve formátu DD/MM/RRRR 00:00:00.|
+|specifiedsolutionname|Název řešení. Pokud je zaškrtnuto políčko „vytvořit adresář řešení“, `specifiedsolutionname` obsahuje název řešení. Pokud není zaškrtnuto políčko „vytvořit adresář řešení“, `specifiedsolutionname` je prázdné.|
 |USERDOMAIN|Aktuální uživatel domény.|
-|userName|Aktuální uživatelské jméno.|
+|uživatelské jméno|Aktuální uživatelské jméno.|
 |webnamespace|Název aktuální webové stránky. Tento parametr se používá v šabloně webového formuláře zajistit jedinečné názvy tříd. Pokud webová stránka se v kořenovém adresáři webového serveru, tento parametr šablony přeloží do kořenového adresáře na webovém serveru.|
-|Rok|Aktuální rok ve formátu RRRR.|
+|rok|Aktuální rok ve formátu RRRR.|
 
 > [!NOTE]
 > Parametry šablony jsou malá a velká písmena.
 
 ## <a name="custom-template-parameters"></a>Parametry vlastní šablony
 
-Můžete určit vlastní parametry a hodnoty šablony, kromě vyhrazených výchozích parametrů šablony, které se používají při nahrazení parametru. Další informace najdete v tématu [CustomParameters – element (šablony sady Visual Studio)](../extensibility/customparameters-element-visual-studio-templates.md).
+Můžete určit vlastní parametry a hodnoty šablony, kromě vyhrazených výchozích parametrů šablony, které se používají při nahrazení parametru. Další informace naleznete v tématu [CustomParameters – element (šablony sady Visual Studio)](../extensibility/customparameters-element-visual-studio-templates.md).
 
 ## <a name="example-use-the-project-name-for-a-file-name"></a>Příklad: Použití názvu projektu k názvu souboru
 
-Můžete zadat různé názvy souborů pro položky projektu pomocí parametru `TargetFileName` atribut.
+Můžete zadat názvy souborů proměnných pro položky projektu pomocí parametru v atributu `TargetFileName`.
 
-Následující příklad určuje, že název spustitelného souboru používá název projektu, určené `$projectname$`.
+Následující příklad určuje, že název spustitelného souboru používá název projektu určený `$projectname$`.
 
 ```xml
 <TemplateContent>
@@ -106,7 +106,7 @@ namespace $safeprojectname$
 }
 ```
 
-V *.vstemplate* soubor šablony projektu, zahrnují `ReplaceParameters="true"` atribut při odkazování na soubor:
+V souboru *. vstemplate* pro šablonu projektu zahrňte atribut `ReplaceParameters="true"`, když odkazujete na soubor:
 
 ```xml
 <TemplateContent>
@@ -117,9 +117,9 @@ V *.vstemplate* soubor šablony projektu, zahrnují `ReplaceParameters="true"` a
 </TemplateContent>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: nahrazení parametrů v šabloně](how-to-substitute-parameters-in-a-template.md)
-- [Přizpůsobení šablony](../ide/customizing-project-and-item-templates.md)
-- [Postupy: vytváření šablon projektu](../ide/how-to-create-project-templates.md)
-- [Odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+- [Přizpůsobení šablon](../ide/customizing-project-and-item-templates.md)
+- [Postupy: vytváření šablon projektů](../ide/how-to-create-project-templates.md)
+- [Odkaz na schéma šablony](../extensibility/visual-studio-template-schema-reference.md)
