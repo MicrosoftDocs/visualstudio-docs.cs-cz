@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6e4bb97cc510ceb580b28a05eb6f3b27acdd451a
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 528887c477814b7011cf941a9198f83701beee54
+ms.sourcegitcommit: 2f6c6434419ac25ef166b1ccc409527cf69e6674
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77580010"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78215434"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Kurz: Vytvoření jednoduché C# konzolové aplikace v aplikaci Visual Studio
 
@@ -44,7 +44,7 @@ Začněte tím, že C# vytvoříte projekt aplikace. Typ projektu se dodává se
 
 ::: moniker range="vs-2017"
 
-1. Otevřete sadu Visual Studio 2017.
+1. Otevřete Visual Studio 2017.
 
 2. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
    (Případně stiskněte **kombinaci kláves Ctrl**+**SHIFT**+**N**).
@@ -329,15 +329,15 @@ Třída `Calculator` zpracuje hromadnou práci výpočtu a `Program` třída zpr
 
 Pusťme se do toho.
 
-1. Odstraňte vše *za* následujícím blokem kódu:
+1. Odstranit vše v oboru názvů `Calculator` mezi otevírací a uzavírací závorkou:
 
     ```csharp
-
     using System;
 
     namespace Calculator
     {
-
+        
+    }
     ```
 
 1. Dále přidejte novou třídu `Calculator` následujícím způsobem:
@@ -605,7 +605,7 @@ Blahopřejeme k dokončení tohoto kurzu! Pokud se chcete dozvědět ještě ví
 > [!div class="nextstepaction"]
 > [Pokračovat s dalšími C# kurzy](/dotnet/csharp/tutorials/)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 * [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
 * [Naučte se C# ladit kód v aplikaci Visual Studio.](tutorial-debugger.md)
