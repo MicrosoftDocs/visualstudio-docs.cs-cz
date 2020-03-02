@@ -280,12 +280,14 @@
           href: remote-debugging-aspnet-on-a-remote-iis-computer.md
         - name: Vzdálené ladění ASP.NET na počítači se službou IIS
           href: remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md
-        - name: Vzdálené ladění ASP.NET v Azure
+        - name: Vzdálené ladění ASP.NET Core v Azure
           href: remote-debugging-azure.md
         - name: 'Vzdálené ladění projektu v jazyce C# nebo Visual Basic'
           href: remote-debugging-csharp.md
         - name: Vzdálené ladění projektu v jazyce C++
           href: remote-debugging-cpp.md
+        - name: Vzdálené ladění .NET Core v Linuxu
+          href: remote-debugging-dotnet-core-linux-with-ssh.md
         - name: Přiřazení portů vzdáleného ladicího programu
           href: remote-debugger-port-assignments.md
         - name: Konfigurace brány firewall ve Windows pro vzdálené ladění
