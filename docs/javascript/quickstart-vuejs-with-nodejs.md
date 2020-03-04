@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 5f7b877d825a573b935a9bf0f2c907ec2ce6f808
-ms.sourcegitcommit: 2f64b3b231900018fceafb72b5a1c65140213a18
+ms.openlocfilehash: a1995353d00f9e48811f388e1d853c93850b85f4
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73428763"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235103"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-vuejs-app"></a>Rychlý start: Použití sady Visual Studio k vytvoření první aplikace pro Vue.js
 
@@ -26,7 +26,7 @@ V tomto úvodu 5 až 10 minut do integrovaného vývojového prostředí (IDE) s
 > [!IMPORTANT]
 > Tento článek vyžaduje Vue.js šablonu, která je k dispozici od verze Visual Studio 2017 verze 15.8.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje Node. js.
 
@@ -43,19 +43,21 @@ V tomto úvodu 5 až 10 minut do integrovaného vývojového prostředí (IDE) s
 
 * Je nutné mít nainstalovaný modul runtime Node.js.
 
-    Pokud ho nemáte nainstalovaný, nainstalujte si verzi LTS z webu [Node.js](https://nodejs.org/en/download/). Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud se nainstalovaný modul runtime nerozpozná, můžete projekt nakonfigurovat na stránce vlastností pomocí odkazu na nainstalovaný modul runtime (po vytvoření projektu klikněte pravým tlačítkem na uzel projektu a zvolte **Vlastnosti**).
+    Pokud ji nemáte nainstalovanou, doporučujeme nainstalovat verzi LTS z webu [Node. js](https://nodejs.org/en/download/) , aby se dosáhlo nejlepší kompatibility s externími architekturami a knihovnami. Node. js je sestaven pro 32 bitové a 64 architektury. Nástroje Node. js v aplikaci Visual Studio, které jsou součástí úlohy Node. js, podporují obě verze. Je vyžadována pouze jedna a instalační program Node. js podporuje pouze instalaci v jednom okamžiku.
+    
+    Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud nezjistí nainstalovaný modul runtime, můžete nakonfigurovat projekt tak, aby odkazoval na nainstalovaný modul runtime na stránce vlastnosti (po vytvoření projektu klikněte pravým tlačítkem myši na uzel projektu, vyberte možnost **vlastnosti**a nastavte **cestu k Node. exe**). Můžete použít globální instalaci Node. js nebo můžete zadat cestu k místní interpretaci v každém z vašich projektů Node. js. 
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
 Nejprve vytvoříte projekt Vue.js webové aplikace.
 
-1. Pokud nemáte modul runtime Node.js, který je už nainstalovaný, nainstalujte verzi LTS z [Node.js](https://nodejs.org/en/download/) webu.
+1. Pokud ještě nemáte modul runtime Node. js nainstalovaný, nainstalujte verzi LTS z webu [Node. js](https://nodejs.org/en/download/) .
 
-    Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud nezjistí nainstalovaný modul runtime, můžete nakonfigurovat projekt tak, aby odkazoval na nainstalovaný modul runtime na stránce vlastnosti (po vytvoření projektu klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **vlastnosti**).
+    Další informace najdete v části požadavky.
 
-1. Otevřít Visual Studio.
+1. Otevřete sadu Visual Studio.
 
-1. Vytvořte nový projekt.
+1. Vytvoření nového projektu
 
     ::: moniker range=">=vs-2019"
     Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **základní Vue. js**a pak zvolte **základní webová aplikace Vue. js** (buď JavaScript nebo TypeScript). V dialogovém okně, které se zobrazí, zadejte název **Basic-vuejs**a pak zvolte **vytvořit**.
@@ -73,43 +75,43 @@ Nejprve vytvoříte projekt Vue.js webové aplikace.
 
 1. Průběh instalace balíčků npm potřebnou pro aplikaci najdete v okně výstup (dolní podokno).
 
-1. V Průzkumníku řešení otevřete **npm** uzlu a ujistěte se, zda jsou nainstalovány všechny balíčky uvedené npm.
+1. V Průzkumník řešení otevřete uzel **npm** a ujistěte se, že jsou nainstalované všechny uvedené balíčky npm.
 
-    Pokud všechny balíčky, které chybí (ikona vykřičník), kliknete pravým tlačítkem **npm** uzlu a zvolte **instalovat chybějící balíčky npm**.
+    Pokud chybí některé balíčky (ikona s vykřičníkem), můžete kliknout pravým tlačítkem na uzel **npm** a zvolit **Instalovat chybějící balíčky npm**.
 
 ## <a name="explore-the-ide"></a>Prozkoumejte rozhraní IDE
 
-1. Podívejte se na **Průzkumníka řešení** v pravém podokně.
+1. Podívejte se na **Průzkumník řešení** v pravém podokně.
 
      ![VUE.js řešení](../javascript/media/vuejs-solution.png)
 
-   - Projekt je zvýrazněný tučným písmem a má název, který jste zadali v dialogovém okně **Nový projekt**. Na disku, je reprezentována tento projekt. *njsproj* souboru ve složce vašeho projektu.
+   - Projekt je zvýrazněný tučným písmem a má název, který jste zadali v dialogovém okně **Nový projekt**. Na disku je tento projekt reprezentován. soubor *njsproj* ve složce projektu.
 
-   - Na nejvyšší úrovni je řešení, které má ve výchozím nastavení stejný název jako příslušný projekt. Řešení, reprezentovaný. *sln* souboru na disku, je kontejner pro jeden nebo více souvisejících projektů.
+   - Na nejvyšší úrovni je řešení, které má ve výchozím nastavení stejný název jako příslušný projekt. Řešení reprezentované. soubor *sln* na disku je kontejner pro jeden nebo více souvisejících projektů.
 
-   - **Npm** uzlu se zobrazuje všechny balíčky npm nainstalované. Po kliknutí pravým tlačítkem na uzel npm lze vyhledat a nainstalovat balíčky npm pomocí dialogového okna.
+   - Uzel **npm** zobrazuje všechny nainstalované balíčky npm. Po kliknutí pravým tlačítkem na uzel npm lze vyhledat a nainstalovat balíčky npm pomocí dialogového okna.
 
-2. Pokud chcete nainstalovat balíčky npm nebo spustit příkazy Node.js z příkazového řádku, klikněte pravým tlačítkem na uzel projektu a zvolte **tady otevřete příkazový řádek**.
+2. Pokud chcete nainstalovat balíčky npm nebo spustit příkazy Node. js z příkazového řádku, klikněte pravým tlačítkem myši na uzel projektu a vyberte **otevřít příkazový řádek zde**.
 
 ## <a name="add-a-vue-file-to-the-project"></a>Přidejte do projektu soubor .vue
 
 1. V Průzkumník řešení klikněte pravým tlačítkem myši na libovolnou složku, jako je například složka *Src/Components* , a poté zvolte možnost **Přidat** > **novou položku**.
 
-1. Vyberte buď **komponenta jednoho souboru jazyka JavaScript Vue** nebo **TypeScript Vue jeden soubor součásti**a potom klikněte na tlačítko **přidat**.
+1. Vyberte buď součást **Vue s jedním souborem** , nebo **součást TypeScript Vue Single File**a pak klikněte na tlačítko **Přidat**.
 
     Visual Studio přidá nový soubor do projektu.
 
 ## <a name="build-the-project"></a>Sestavení projektu
 
-1. (Pouze aplikace project TypeScript) Ze sady Visual Studio, zvolte **sestavení** > **Vyčistit řešení**.
+1. (Jenom projekt TypeScript) V aplikaci Visual Studio vyberte možnost **sestavit** > **Vyčistit řešení**.
 
     ::: moniker range=">=vs-2019"
     V šabloně TypeScript, která je součástí sady Visual Studio 2019, tento krok přeskočte.
     ::: moniker-end
 
-1. Dále zvolte **sestavení** > **sestavit řešení** k sestavení projektu. V okně **výstup** Zkontrolujte výsledky sestavení a v seznamu **Zobrazit výstup ze** vyberte **sestavení** .
+1. V dalším kroku vyberte **sestavit** > **řešení sestavení** a sestavte projekt. V okně **výstup** Zkontrolujte výsledky sestavení a v seznamu **Zobrazit výstup ze** vyberte **sestavení** .
 
-    Šablona projektu Vue. js JavaScriptu (a starší verze šablony TypeScript) používá skript `build` npm konfigurací události po sestavení. Pokud chcete toto nastavení změnit, otevřete soubor projektu ( *\<projectname\>.njsproj*) z Průzkumníka Windows a vyhledejte tento řádek kódu:
+    Šablona projektu Vue. js JavaScriptu (a starší verze šablony TypeScript) používá skript `build` npm konfigurací události po sestavení. Chcete-li toto nastavení změnit, otevřete soubor projektu ( *\<projectname\>. njsproj*) z Průzkumníka Windows a vyhledejte tento řádek kódu:
 
     ```xml
     <PostBuildEvent>npm run build</PostBuildEvent>
@@ -117,9 +119,9 @@ Nejprve vytvoříte projekt Vue.js webové aplikace.
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
-1. Stisknutím klávesy **Ctrl**+**F5** (nebo **ladit > Spustit bez ladění**) ke spuštění aplikace.
+1. Spusťte aplikaci stisknutím klávesy **Ctrl**+**F5** (nebo **ladění > Spustit bez ladění**).
 
-   V konzole, zobrazí se zpráva *spuštění vývojového serveru*.
+   V konzole se zobrazí zpráva s *počátkem vývojového serveru*.
 
    Potom aplikace se otevře v prohlížeči.
    
@@ -133,6 +135,6 @@ Blahopřejeme k dokončení tohoto rychlého startu! Doufáme, že jste se dozv�
 
 ## <a name="next-steps"></a>Další kroky
 
-- Projděte si [kurz Node.js a Express](tutorial-nodejs.md)
-- Projděte si [kurz Node.js a React](tutorial-nodejs-with-react-and-jsx.md)
-- [Nasazení aplikace do služby App Service pro Linux](../javascript/publish-nodejs-app-azure.md)
+- Projděte si [kurz pro Node. js a Express](tutorial-nodejs.md)
+- Projděte si [kurz pro Node. js a reagují na ně.](tutorial-nodejs-with-react-and-jsx.md)
+- [Nasazení aplikace na Linux App Service](../javascript/publish-nodejs-app-azure.md)

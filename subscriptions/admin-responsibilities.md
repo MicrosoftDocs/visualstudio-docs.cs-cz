@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/20/2019
 ms.topic: conceptual
 description: Přečtěte si o zodpovědnostech správců předplatných.
-ms.openlocfilehash: 05b1a66eb6589f1d0d9502a754f67d0f9c31424f
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 1faa257278d1a477720d73271c6487d5d1618d8e
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851881"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235155"
 ---
 # <a name="overview-of-administrator-responsibilities"></a>Přehled odpovědností správce
 Jako správce můžete spravovat předplatná vaší organizace.  Role správce taky zajišťuje zodpovědnost za to, že se předplatná spravují v souladu s licenčními podmínkami. V tomto článku najdete popis odpovědností, výhod a omezení role správce.
@@ -34,6 +34,12 @@ Předplatná sady Visual Studio umožňují členům vývojového týmu instalov
 | Neurčeno pro produkční prostředí | Software předplatných sady Visual Studio není licencován pro produkční prostředí, včetně jakéhokoli prostředí, ke kterému mají koncoví uživatelé k dispozici více než testování přijetí nebo zpětnou vazbu, prostředí připojující se k provozní databázi, podporu zotavení po havárii nebo zálohování do provozu nebo využité pro produkční prostředí během období špičky aktivity. Mezi tyto výjimky patří konkrétní výhody pro určité úrovně předplatného, které jsou uvedené v [dokumentu White Paper licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf).                                                                                            |
 | Opětovné přiřazení licence                     | Když uživatel opustí tým a už nepotřebuje licenci, můžete znovu přiřadit licenci po uplynutí 90 dnů. Při opětovném přiřazení licence budou stále k dispozici všechny kódy Product Key, které již byly použity, ale nebudou nahrazeny. Pro organizace, které mají smlouvy Enterprise (EA), se všechny výhody, které použil původní uživatel, jako je třeba školení Pluralsight, resetují.                                                                                                                                                                                                                                                 |
 | Výjimka pro koncové uživatele                  | Na konci projektu vývoje softwaru koncoví uživatelé obvykle kontrolují aplikaci a určí, zda splňují kritéria potřebná pro vydání. Tento proces se nazývá testování přijetí uživatele (UAT). Členové týmu, jako je obchodní sponzor nebo správce produktu, můžou fungovat jako proxy servery pro koncové uživatele. Koncoví uživatelé, kteří nemají předplatné sady Visual Studio, mají přístup k softwaru pro UAT, pokud použití softwaru je v ostatních případech v souladu s licenčními podmínkami sady Visual Studio. Je vzácná, že někdo, jehož primární role navrhuje, vyvíjí nebo testuje software, by taky způsobil jako "koncový uživatel". |
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Další informace o zodpovědnostech pro správce:

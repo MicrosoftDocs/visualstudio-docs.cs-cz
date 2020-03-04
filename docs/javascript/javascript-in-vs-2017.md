@@ -12,17 +12,16 @@ caps.latest.revision: 1
 author: bowdenk7
 ms.author: wilkelly
 manager: jillfra
-monikerRange: vs-2017
-ms.openlocfilehash: 653b2576b0076d02f2e18cedc6f9f9890fd98fe5
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 2a0d3657843dcf282e5c9aab8609efe5f9611965
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888665"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78234953"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>JavaScript v sadě Visual Studio 2017
 
-JavaScript je první třídou jazyka v aplikaci Visual Studio. Při psaní kódu v jazyce JavaScript v sadě Visual Studio IDE můžete použít téměř všechny standardní editační pomůcky (fragmenty kódu, funkci IntelliSense atd.). Můžete psát kód JavaScriptu pro mnoho typů aplikací a služeb.
+JavaScript je prvotřídní jazyk v sadě Visual Studio. Při psaní kódu v jazyce JavaScript v sadě Visual Studio IDE můžete použít téměř všechny standardní editační pomůcky (fragmenty kódu, funkci IntelliSense atd.). Můžete napsat kód jazyka JavaScript pro mnoho typů aplikací a služeb.
 
 > [!NOTE]
 > Spojili jsme se s úsilím na celou komunitu, aby [webové dokumenty MDN webovým](https://developer.mozilla.org/en-US/) a vývojovým prostředkem na jednom zastavení webu. tím, že přesměruje všechny (500 + stránky) referenčních rozhraní API Microsoftu pro JavaScript z docs.Microsoft.com na své MDN protějšky. Podrobnosti najdete v tomto [oznámení](https://blogs.windows.com/msedgedev/2018/06/26/chakra-docs-mdn-web-docs/).

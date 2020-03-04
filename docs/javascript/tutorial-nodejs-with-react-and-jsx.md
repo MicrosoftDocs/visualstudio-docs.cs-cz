@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: faf418155708ebc577efea57ed3352953a8d577d
-ms.sourcegitcommit: 5920a8b0c68350f11eabc1652a19b04d0196881a
+ms.openlocfilehash: f60cd71f1dda4e401acef1db9ccd8c5a0be2b961
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75622572"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235090"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Kurz: Vytvoření aplikace Node.js a React v sadě Visual Studio
 
@@ -25,7 +25,7 @@ Visual Studio umožňuje snadno vytvořit projekt Node. js a zkušenosti s Intel
 
 V tomto kurzu se naučíte:
 > [!div class="checklist"]
-> * Vytvořit projekt Node.js
+> * Vytvoření projektu Node.js
 > * Přidat balíčky npm
 > * Přidat do aplikace kód React
 > * Transpilovat JSX
@@ -35,7 +35,7 @@ V tomto kurzu se naučíte:
 
 Tady je stručné Nejčastější dotazy, které vám povedou k předvedeným klíčovým konceptům.
 
-### <a name="what-is-nodejs"></a>Co je Node.js?
+### <a name="what-is-nodejs"></a>Co je Node. js?
 
 Node. js je běhové prostředí JavaScriptu na straně serveru, které spouští JavaScript na straně serveru.
 
@@ -55,7 +55,7 @@ JSX je rozšíření syntaxe JavaScriptu, které se obvykle používá s reakci 
 
 sada Webpack rozbalí soubory JavaScriptu tak, aby mohly běžet v prohlížeči. Může také transformovat nebo zabalit další prostředky a prostředky. Často se používá k určení kompilátoru, jako je Babel nebo TypeScript, k přeformátování JSX nebo kódu TypeScript na prostý JavaScript.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje Node. js.
 
@@ -74,15 +74,17 @@ sada Webpack rozbalí soubory JavaScriptu tak, aby mohly běžet v prohlížeči
 
     Tento kurz byl testován pomocí 10.16.0 verze.
 
-    Pokud ho nemáte nainstalovaný, nainstalujte si verzi LTS z webu [Node.js](https://nodejs.org/en/download/). Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud se nainstalovaný modul runtime nerozpozná, můžete projekt nakonfigurovat na stránce vlastností pomocí odkazu na nainstalovaný modul runtime (po vytvoření projektu klikněte pravým tlačítkem na uzel projektu a zvolte **Vlastnosti**).
+    Pokud ji nemáte nainstalovanou, doporučujeme nainstalovat verzi LTS z webu [Node. js](https://nodejs.org/en/download/) , aby se dosáhlo nejlepší kompatibility s externími architekturami a knihovnami. Node. js je sestaven pro 32 bitové a 64 architektury. Nástroje Node. js v aplikaci Visual Studio, které jsou součástí úlohy Node. js, podporují obě verze. Je vyžadována pouze jedna a instalační program Node. js podporuje pouze instalaci v jednom okamžiku.
+    
+    Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud nezjistí nainstalovaný modul runtime, můžete nakonfigurovat projekt tak, aby odkazoval na nainstalovaný modul runtime na stránce vlastnosti (po vytvoření projektu klikněte pravým tlačítkem myši na uzel projektu, vyberte možnost **vlastnosti**a nastavte **cestu k Node. exe**). Můžete použít globální instalaci Node. js nebo můžete zadat cestu k místní interpretaci v každém z vašich projektů Node. js. 
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
 Nejprve vytvoříte projekt webové aplikace Node.js.
 
-1. Otevřít Visual Studio.
+1. Otevřete sadu Visual Studio.
 
-1. Vytvořte nový projekt.
+1. Vytvoření nového projektu
 
     ::: moniker range=">=vs-2019"
     Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **Node. js**a pak zvolte **prázdná webová aplikace Node. js – JavaScript**. (I když tento kurz používá kompilátor TypeScript, postup vyžaduje, abyste začali s šablonou **JavaScriptu** .)
@@ -526,4 +528,4 @@ V tomto scénáři použijte Chrome.
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Nasazení aplikace do služby App Service pro Linux](../javascript/publish-nodejs-app-azure.md)
+> [Nasazení aplikace na Linux App Service](../javascript/publish-nodejs-app-azure.md)

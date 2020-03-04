@@ -13,18 +13,18 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 4995c6b95ba12eb776130b17dab1911c47988871
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: f716421da3b9f888dbb7656c55db6814de88332b
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180339"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235051"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první aplikace Node. js
 
 V této 5-10 minut Úvod do integrovaného vývojového prostředí (IDE) sady Visual Studio vytvoříte jednoduchou webovou aplikaci Node. js.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje Node. js.
 
@@ -41,19 +41,21 @@ V této 5-10 minut Úvod do integrovaného vývojového prostředí (IDE) sady V
 
 * Je nutné mít nainstalovaný modul runtime Node.js.
 
-    Pokud ho nemáte nainstalovaný, nainstalujte si verzi LTS z webu [Node.js](https://nodejs.org/en/download/). Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud se nainstalovaný modul runtime nerozpozná, můžete projekt nakonfigurovat na stránce vlastností pomocí odkazu na nainstalovaný modul runtime (po vytvoření projektu klikněte pravým tlačítkem na uzel projektu a zvolte **Vlastnosti**).
+    Pokud ji nemáte nainstalovanou, doporučujeme nainstalovat verzi LTS z webu [Node. js](https://nodejs.org/en/download/) , aby se dosáhlo nejlepší kompatibility s externími architekturami a knihovnami. Node. js je sestaven pro 32 bitové a 64 architektury. Nástroje Node. js v aplikaci Visual Studio, které jsou součástí úlohy Node. js, podporují obě verze. Je vyžadována pouze jedna a instalační program Node. js podporuje pouze instalaci v jednom okamžiku.
+    
+    Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud nezjistí nainstalovaný modul runtime, můžete nakonfigurovat projekt tak, aby odkazoval na nainstalovaný modul runtime na stránce vlastnosti (po vytvoření projektu klikněte pravým tlačítkem myši na uzel projektu, vyberte možnost **vlastnosti**a nastavte **cestu k Node. exe**). Můžete použít globální instalaci Node. js nebo můžete zadat cestu k místní interpretaci v každém z vašich projektů Node. js. 
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
 Nejprve vytvoříte projekt webové aplikace Node. js.
 
-1. Pokud nemáte modul runtime Node.js, který je už nainstalovaný, nainstalujte verzi LTS z [Node.js](https://nodejs.org/en/download/) webu.
+1. Pokud ještě nemáte modul runtime Node. js nainstalovaný, nainstalujte verzi LTS z webu [Node. js](https://nodejs.org/en/download/) .
 
-    Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud se nainstalovaný modul runtime nerozpozná, můžete projekt nakonfigurovat na stránce vlastností pomocí odkazu na nainstalovaný modul runtime (po vytvoření projektu klikněte pravým tlačítkem na uzel projektu a zvolte **Vlastnosti**).
+    Další informace najdete v části požadavky.
 
-1. Otevřít Visual Studio.
+1. Otevřete sadu Visual Studio.
 
-1. Vytvořte nový projekt.
+1. Vytvoření nového projektu
 
     ::: moniker range=">=vs-2019"
     Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **Node. js**a pak zvolte **vytvořit nový prázdný projekt webové aplikace Node. js** (JavaScript). V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
@@ -67,7 +69,7 @@ Nejprve vytvoříte projekt webové aplikace Node. js.
 
 ## <a name="explore-the-ide"></a>Prozkoumejte rozhraní IDE
 
-1. Podívejte se na **Průzkumníka řešení** v pravém podokně.
+1. Podívejte se na **Průzkumník řešení** v pravém podokně.
 
    ![Průzkumník řešení](../ide/media/quickstart-nodejs-solution-explorer.png)
 
@@ -99,7 +101,7 @@ Nejprve vytvoříte projekt webové aplikace Node. js.
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
-1. Stisknutím klávesy **Ctrl**+**F5** (nebo **ladit > Spustit bez ladění**) ke spuštění aplikace. Aplikace se otevře v prohlížeči.
+1. Spusťte aplikaci stisknutím klávesy **Ctrl**+**F5** (nebo **ladění > Spustit bez ladění**). Aplikace se otevře v prohlížeči.
 
 1. V okně prohlížeče se zobrazí zpráva "Hello World" plus číslo místního portu.
 
@@ -110,7 +112,7 @@ Blahopřejeme k dokončení tohoto rychlého startu, ve kterém jste začali s I
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Nasazení aplikace do služby App Service pro Linux](../javascript/publish-nodejs-app-azure.md)
+> [Nasazení aplikace na Linux App Service](../javascript/publish-nodejs-app-azure.md)
 
 - [Kurz pro Node. js a Express](../javascript/tutorial-nodejs.md)
 - [Kurz pro Node. js a reakce](../javascript/tutorial-nodejs-with-react-and-jsx.md)

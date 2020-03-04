@@ -3,15 +3,15 @@ title: Sledování přiřazení uživatelů a objednávek procesů | Visual Stud
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/23/2019
+ms.date: 03/02/2020
 ms.topic: conceptual
 description: Přečtěte si o responsibilty správců ke sledování přiřazení uživatelů a objednávek procesů.
-ms.openlocfilehash: bf7fcdb2fae2ad6d354c4320ec26c4f1025766dd
-ms.sourcegitcommit: bb72ce6ec173f3ae06c7ae57322c43690f27553c
+ms.openlocfilehash: c7dc2b55b3e9d1d1aea6b2712dbeb96316f48e7a
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76967327"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235222"
 ---
 # <a name="track-user-assignment-and-process-orders"></a>Sledování objednávek a přiřazování procesů uživatelů
 Správcům předplatných sady Visual Studio se očekává, že budou sledovat využití sady Visual Studio a zpracovávat objednávky pro jakékoli zvýšení využití v plánu, který je popsaný v příslušné multilicenční smlouvě nebo v rámci smlouvy o produktech a službách společnosti Microsoft. Nový portál pro správu předplatných sady Visual Studio je v tomto případě jednoduchý a užitečným sledovacím prostředím, které zobrazuje vaše dostupné a využité licence.
@@ -36,6 +36,12 @@ Odběry můžete přiřazovat prostřednictvím programů, jako je Open License,
 ## <a name="enterprise-mpsa-and-select-agreements"></a>Smlouvy Enterprise, MPSA a SELECT
 Smlouvy Microsoft Enterprise Agreement (EA), MPSA a Select Plus Agreement vám poskytnou flexibilitu při používání a licencování softwaru sady Visual Studio v průběhu času. Správci sady Visual Studio musí učinit roční skutečnou objednávku, aby zajistila maximální využití softwaru v průběhu období smlouvy.
 
+## <a name="see-also"></a>Viz také
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+
 ## <a name="next-steps"></a>Další kroky
 Další informace o zodpovědnostech pro správce:
 - [Odpovědnosti správce](admin-responsibilities.md)
@@ -43,7 +49,3 @@ Další informace o zodpovědnostech pro správce:
 - [Správa velkých týmů a externích dodavatelů](manage-teams.md)
 - Použití [maximálního využití](maximum-usage.md) ke sledování závazků nákupu
 
-## <a name="see-also"></a>Viz také:
-- [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace k Azure](/azure/)
-- [Azure DevOps](/azure/devops/)

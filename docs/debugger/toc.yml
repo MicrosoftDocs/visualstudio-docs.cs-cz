@@ -590,9 +590,7 @@
                   items:
                     - name: Ladění serveru a kontejneru modelu COM
                       href: com-server-and-container-debugging.md
-                    - name: Ladění klientů a serverů modelu COM pomocí ladění RPC
-                      href: how-to-debug-com-clients-and-servers-using-rpc-debugging.md
-                - name: Ovládací prvek ActiveX
+                - name: ActiveX – ovládací prvek
                   items:
                     - name: Ladění ovládacího prvku ActiveX
                       href: how-to-debug-an-activex-control.md

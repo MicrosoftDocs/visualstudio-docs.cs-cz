@@ -1,7 +1,7 @@
 ---
 title: Vytváření vlastních zobrazení objektů C++
 description: Použití rozhraní Natvis k přizpůsobení způsobu, jakým Visual Studio zobrazuje nativní typy v ladicím programu
-ms.date: 10/31/2018
+ms.date: 03/02/2020
 ms.topic: conceptual
 f1_keywords:
 - natvis
@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c26c35c09353d740f6db9745222bb66db40e7ba
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.openlocfilehash: 064761d87b9aa851e40cf906e7734a3578dcad1a
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78167751"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78234966"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>Vytváření vlastních zobrazení C++ objektů v ladicím programu pomocí architektury Natvis
 
@@ -537,7 +537,10 @@ Ladicí program vyhodnocuje `NextPointer` a `ValueNode` výrazy v kontextu prvku
 `ValueNode` může být ponecháno prázdné nebo pomocí `this` odkazovat na samotný uzel `LinkedListItems`.
 
 #### <a name="customlistitems-expansion"></a>Rozšíření CustomListItems
+
 Rozšíření `CustomListItems` umožňuje napsat vlastní logiku pro procházení datové struktury, jako je například zatřiďovací tabulka. Pomocí `CustomListItems` Vizualizujte datové struktury, které mohou používat C++ výrazy pro všechno, co potřebujete k vyhodnocení, ale nedělejte si tvarovat pro `ArrayItems`, `IndexListItems`nebo `LinkedListItems`.
+
+Můžete použít `Exec` k provedení kódu v rozšíření `CustomListItems` pomocí proměnných a objektů definovaných v rozšíření. Pomocí `Exec`můžete použít logické operátory, aritmetické operátory a operátory přiřazení. Nemůžete použít `Exec` k vyhodnocení funkcí, s výjimkou [vnitřních funkcí ladicího programu](../debugger/expressions-in-the-debugger.md#BKMK_Using_debugger_intrinisic_functions_to_maintain_state) , které podporuje vyhodnocovací filtr C++ výrazů.
 
 Následující Vizualizér pro `CAtlMap` je skvělým příkladem, kde je `CustomListItems` vhodný.
 
@@ -569,24 +572,6 @@ Následující Vizualizér pro `CAtlMap` je skvělým příkladem, kde je `Custo
     </Expand>
 </Type>
 ```
-
-Můžete použít `Exec` k provedení kódu v rozšíření `CustomListItems` pomocí proměnných a objektů definovaných v rozšíření. Pomocí `Exec`můžete použít logické operátory, aritmetické operátory a operátory přiřazení. K vyhodnocení funkcí se nedá použít `Exec`.
-
-`CustomListItems` podporuje následující vnitřní funkce:
-
-- `strlen`, `wcslen`, `strnlen`, `wcsnlen`, `strcmp`, `wcscmp`, `_stricmp`, `_strcmpi`, `_wcsicmp`, `strncmp`, `wcsncmp`, `_strnicmp`, `_wcsnicmp`, `memcmp`, `memicmp`, `wmemcmp`, `strchr`, `wcschr`, `memchr`, `wmemchr`, `strstr`, `wcsstr`, `__log2``__findNonNull`
-- `GetLastError`, `TlsGetValue`, `DecodeHString`, `WindowsGetStringLen`, `WindowsGetStringRawBuffer`, `WindowsCompareStringOrdinal`, `RoInspectCapturedStackBackTrace`, `CoDecodeProxy`, `GetEnvBlockLength`, `DecodeWinRTRestrictedException`, `DynamicMemberLookup`, `DecodePointer`, `DynamicCast`
-- `ConcurrencyArray_OperatorBracket_idx // Concurrency::array<>::operator[index<>] and operator(index<>)`
-- `ConcurrencyArray_OperatorBracket_int // Concurrency::array<>::operator(int, int, ...)`
-- `ConcurrencyArray_OperatorBracket_tidx // Concurrency::array<>::operator[tiled_index<>] and operator(tiled_index<>)`
-- `ConcurrencyArrayView_OperatorBracket_idx // Concurrency::array_view<>::operator[index<>] and operator(index<>)`
-- `ConcurrencyArrayView_OperatorBracket_int // Concurrency::array_view<>::operator(int, int, ...)`
-- `ConcurrencyArrayView_OperatorBracket_tidx // Concurrency::array_view<>::operator[tiled_index<>] and operator(tiled_index<>)`
-- `Stdext_HashMap_Int_OperatorBracket_idx`
-- `Std_UnorderedMap_Int_OperatorBracket_idx`
-- `TreeTraverse_Init // Initializes a new tree traversal`
-- `TreeTraverse_Next // Returns nodes in a tree`
-- `TreeTraverse_Skip // Skips nodes in a pending tree traversal`
 
 #### <a name="BKMK_TreeItems_expansion"></a>Rozšíření TreeItems
  Pokud vizuální typ představuje strom, ladicí program může projít stromovou strukturou a zobrazit jeho podřízené položky pomocí uzlu `TreeItems`. Tady je vizualizace `std::map`ho typu pomocí uzlu `TreeItems`:

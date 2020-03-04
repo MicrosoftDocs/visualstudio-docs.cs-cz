@@ -3,20 +3,21 @@ title: Vytypování – zvýraznit výhody v předplatných sady Visual Studio |
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/30/2019
+ms.date: 03/02/2020
 ms.topic: conceptual
 description: Přečtěte si o výhodách zvýraznění přetypování dostupných ve vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: c985a4ae4c1cdcf5c034293d2848a764d6be3d24
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.openlocfilehash: 7b06800bd53e2843015f3f3509a4a2c7e0eae671
+ms.sourcegitcommit: c98e0ccf236765b44e47095ee52836cb012e3854
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983741"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78257173"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Výhoda zvýraznění přetypování v předplatných sady Visual Studio
-Při migraci do cloudu potřebují vývojáři důležité poznatky o jejich softwaru. S zvýrazňováním přetypování může Visual Studio Enterprise předplatitelé rychle prověřit svůj zdrojový kód aplikace, aby identifikovali připravenost cloudu svých aplikací pro migraci do Azure a sledovali průběh své aplikace jak během migrace, tak i po ní.
+Při migraci do cloudu potřebují vývojáři důležité poznatky o jejich softwaru. S zvýrazňováním přetypování může předplatitelé sady Visual Studio rychle prověřit svůj zdrojový kód aplikace a identifikovat připravenost svých aplikací pro Cloud na migraci do Azure a monitorovat průběh své aplikace jak během migrace, tak i po ní.
 
-Předplatitelé Visual Studio Enterprise můžou získat bezplatné předplatné, jehož součástí je jeden měsíc, abyste mohli vysílat zvýraznění až pro pět aplikací na předplatitele.
+- Předplatitelé Visual Studio Enterprise můžou získat bezplatné předplatné s plnou funkcí pro přetypování, které uživatelům umožňuje vyhodnotit až pět aplikací.
+- Předplatitelé Visual Studio Professional mohou získat podobné předplatné, které umožňuje vyhodnocování jedné aplikace po dobu tří měsíců.
 
 ## <a name="activation-steps"></a>Kroky aktivace
 1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
@@ -26,7 +27,7 @@ Předplatitelé Visual Studio Enterprise můžou získat bezplatné předplatné
    > [!div class="mx-imgBorder"]
    > Dlaždice ![ho přetypování na zvýrazněné výhody](_img/vs-cast-highlight/vs-cast-highlight-tile.png)
 
-0. Zobrazí se zpráva s informacemi o tom, že váš kód byl úspěšně načten.  Klikněte na **aktivovat**. v takovém případě budete přesměrováni na stránku zvýraznění přetypování, kde můžete pokračovat v procesu aktivace.  (Pokud se nerozhodnete aktivovat nyní, můžete se kdykoli vrátit na dlaždici zvýraznění přetypování na portálu předplatného.  Odkaz získat kód se změní na "aktivovat" a kliknutím na něj se obnoví proces aktivace.)
+0. Zobrazí se zpráva s informacemi o tom, že váš kód byl úspěšně načten.  Klikněte na tlačítko **aktivovat**. (Pokud se nerozhodnete aktivovat nyní, můžete se kdykoli vrátit na dlaždici zvýraznění přetypování na portálu předplatného.  Odkaz získat kód se změní na "aktivovat" a kliknutím na něj se obnoví proces aktivace.)
 
 0. Budete přesměrováni na stránku zvýraznění přetypování, kde můžete prozkoumat funkce vašeho předplatného.  Až budete připraveni vytvořit účet, jednoduše poskytněte kontaktní informace ve webovém formuláři a klikněte na **Odeslat**.
 
@@ -40,7 +41,7 @@ Předplatitelé Visual Studio Enterprise můžou získat bezplatné předplatné
 
 0. Tým přetypování vyhodnotí vaši žádost a bude vás kontaktovat a dokončit vytváření vašeho účtu.
 
-0. Z přetypování obdržíte také následující e-mail potvrzující přijetí vaší žádosti.
+0. Z přetypování obdržíte také následující e-mail potvrzující přijetí vaší žádosti.  (Tento příklad ukazuje e-mail, který přijali Podnikoví zákazníci.)
 
    > *Děkujeme, že jste požádali o aktivaci přístupu ke zdůraznění přetypování na 30 dní, což je exkluzivní nabídka pro Microsoft Visual Studio Enterprise zákazníky!*
    >
@@ -73,16 +74,16 @@ Po schválení vaší žádosti obdržíte druhý e-mail potvrzující úspěšn
    > Nezapomeňte kliknout na aktivační odkaz v e-mailu, který obdržíte.  V opačném případě nebudete mít přístup k vašemu předplatnému zvýrazňování přetypování. Pokud nevidíte e-mail ve vaší doručené poště, zkontrolujte složky spamu.
 
 ## <a name="eligibility"></a>Vznik
-| Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
+| Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | Vyhodnotit 5 aplikací na 30 dní|  Ne.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | Vyhodnotit 5 aplikací na 30 dní|  Ne.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                             |  Není k dispozici          |
-| Visual Studio Professional s GitHubem Enterprise | VL                                       | Není k dispozici                                                             |  Není k dispozici          |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                             |  Není k dispozici           |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  Není k dispozici          |
-| Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | Není k dispozici |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | Není k dispozici |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | Vyhodnocení 5 aplikací po dobu tří měsíců|  Ne.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | Vyhodnocení 5 aplikací po dobu tří měsíců|  Ne.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Posouzení 1 aplikace po dobu tří měsíců                                                             |  Ne.  Dostupné jenom pro nové předplatitele                  |
+| Visual Studio Professional s GitHubem Enterprise | VL                                       | Posouzení 1 aplikace po dobu tří měsíců                                                            |  Ne.  Dostupné jenom pro nové předplatitele                  |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici.                                             |  neuvedeno           |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici.                                              |  neuvedeno          |
+| Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici.  | neuvedeno |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici. | neuvedeno |
 
 <sup>1</sup>*zahrnuje: Not for Reprodej (NFR), FTE, (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark, představte* si
 
@@ -98,6 +99,12 @@ Nejste si jistí, jaké Předplatné používáte?  Pokud chcete zobrazit všech
 
 - Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Pokud jste ještě neaktivovali zvýhodněné kredity Azure DevTest, která se dodává s vaším předplatným, přejděte na [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) a klikněte na dlaždici Azure v kategorii Nástroje, abyste si nastavili předplatné Azure a využili svůj jednotlivý kredit Azure DevTest.

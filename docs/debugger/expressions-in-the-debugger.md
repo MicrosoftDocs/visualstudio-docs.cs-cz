@@ -1,6 +1,6 @@
 ---
 title: Výrazy v ladicím programu | Microsoft Docs
-ms.date: 02/07/2018
+ms.date: 03/02/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.expressions
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6040988961e918c66ed08e7620607d100b2e07fe
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b05bc8de6db15261a9861867bc93a398b60bf0d0
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736205"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235000"
 ---
 # <a name="expressions-in-the-visual-studio-debugger"></a>Výrazy v ladicím programu sady Visual Studio
 Ladicí program sady Visual Studio obsahuje vyhodnocovací filtry výrazů, které fungují při zadání výrazu do dialogového okna **QuickWatch** , v okně **kukátka** nebo v okně **Immediate** . Vyhodnocovací filtry výrazů jsou také v práci v okně **zarážky** a v mnoha dalších místech v ladicím programu.
@@ -59,7 +59,7 @@ new Date(2,3,1985)
 ```
 
 #### <a name="preprocessor-macros"></a>Makra preprocesoru
-Makra preprocesoru nejsou v ladicím programu podporována. Například pokud je konstanta `VALUE` deklarována jako: `#define VALUE 3`, nelze v okně **kukátko** použít `VALUE`. Chcete-li se tomuto omezení vyhnout, je třeba nahradit `#define` s výčty a funkcemi, kdykoli je to možné.
+Makra preprocesoru nejsou v ladicím programu podporována. Například pokud je konstanta `VALUE` deklarována jako: `#define VALUE 3`, nelze v okně **kukátko** použít `VALUE`. Chcete-li se tomuto omezení vyhnout, je třeba nahradit `#define`s výčty a funkcemi, kdykoli je to možné.
 
 ### <a name="using-namespace-declarations"></a>použití deklarací oboru názvů
 Deklarace `using namespace` nemůžete použít.  Aby bylo možné přistupovat k názvu typu nebo proměnné mimo aktuální obor názvů, je nutné použít plně kvalifikovaný název.
@@ -101,10 +101,10 @@ Vnitřní funkce ladicího programu:
 |----------|-------------------------|
 |**Délka řetězce**|strlen, wcslen, strnlen, wcsnlen|
 |**Porovnání řetězců**|strcmp, wcscmp, stricmp, _stricmp, _strcmpi, wcsicmp, _wcscmpi, _wcsnicmp, strncmp, wcsncmp, strnicmp, wcsnicmp|
-|**Hledání řetězců**|strchr, wcschr, strstr, wcsstr|
-|**Chyb**|GetLastError (); TlsGetValue ()|
-|**Systém Windows 8**|WindowsGetStringLen(), WindowsGetStringRawBuffer()<br /><br /> Tyto funkce vyžadují, aby byl proces, který se právě ladí, spuštěný v systému Windows 8. Ladění souborů výpisu paměti generovaných ze zařízení se systémem Windows 8 vyžaduje také, aby na počítači se systémem Visual Studio běžel systém Windows 8. Pokud však provádíte ladění zařízení se systémem Windows 8 vzdáleně, může na počítači se systémem Visual Studio běžet systém Windows 7.|
-|**Ostatní**|__log2<br /><br /> Vrátí základ protokolu 2 zadaného celého čísla zaokrouhlený na nejbližší dolní celé číslo.|
+|**Hledání řetězců**|strchr, wcschr, memchr, wmemchr, strstr, wcsstr|
+|**Chyb**|GetLastError, TlsGetValue|
+|**Systém Windows 8**|WindowsGetStringLen, WindowsGetStringRawBuffer<br /><br /> Tyto funkce vyžadují, aby byl proces, který se právě ladí, spuštěný v systému Windows 8. Ladění souborů výpisu paměti generovaných ze zařízení se systémem Windows 8 vyžaduje také, aby na počítači se systémem Visual Studio běžel systém Windows 8. Pokud však provádíte ladění zařízení se systémem Windows 8 vzdáleně, může na počítači se systémem Visual Studio běžet systém Windows 7.|
+|**Různé**|__log2//vrátí log Base 2 zadaného celého čísla zaokrouhlenou na nejbližší dolní celé číslo.<br /><br />__findNonNull, DecodeHString, WindowsCompareStringOrdinal, RoInspectCapturedStackBackTrace, CoDecodeProxy, GetEnvBlockLength, DecodeWinRTRestrictedException, DynamicMemberLookup, DecodePointer, DynamicCast<br /><br />Stdext_HashMap_Int_OperatorBracket_idx Std_UnorderedMap_Int_OperatorBracket_idx<br /><br />ConcurrencyArray_OperatorBracket_idx//concurrency:: Array < >:: operator [Index < >] a operátor (index < >)<br /><br />ConcurrencyArray_OperatorBracket_int//concurrency:: Array < >:: operator (int, int,...)<br /><br />ConcurrencyArray_OperatorBracket_tidx//concurrency:: Array < >:: operator [tiled_index < >] a operator (tiled_index < >)<br /><br />ConcurrencyArrayView_OperatorBracket_idx//concurrency:: array_view < >:: operator [Index < >] a operátor (index < >)<br /><br />ConcurrencyArrayView_OperatorBracket_int//concurrency:: array_view < >:: operator (int, int,...)<br /><br />ConcurrencyArrayView_OperatorBracket_tidx//concurrency:: array_view < >:: operator [tiled_index < >] a operator (tiled_index < >)<br /><br />TreeTraverse_Init//inicializuje nový průchod stromem<br /><br />TreeTraverse_Next//vrátí uzly ve stromové struktuře.<br /><br />TreeTraverse_Skip//přeskočí uzly ve stromové struktuře čeká na vyřízení.|
 
 ## <a name="ccli---unsupported-expressions"></a>C++/CLI – nepodporované výrazy
 
@@ -125,7 +125,7 @@ Ve výrazech ladicího programu můžete použít proměnné, které jsou static
 
 Následující funkce dynamických objektů nejsou podporovány:
 
-- Složené operátory `+=`, `-=`, `%=`, `/=` a `*=`
+- Složené operátory `+=`, `-=`, `%=`, `/=`a `*=`
 
 - Mnoho přetypování, včetně číselných přetypování a přetypování argumentů typu
 
@@ -149,7 +149,7 @@ Ve výrazech ladicího programu můžete použít proměnné, které jsou static
 
 Následující funkce dynamických objektů nejsou podporovány:
 
-- Složené operátory `+=`, `-=`, `%=`, `/=` a `*=`
+- Složené operátory `+=`, `-=`, `%=`, `/=`a `*=`
 
 - Mnoho přetypování, včetně číselných přetypování a přetypování argumentů typu
 
@@ -204,7 +204,7 @@ V oknech ladicího programu nelze deklarovat explicitní nové proměnné. V **p
 
 - Klíčová slova na úrovni oboru názvů nebo modulu, například `End Sub` nebo `Module`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Specifikátory formátu v jazyce C++](../debugger/format-specifiers-in-cpp.md)
 - [Kontextový operátor (C++)](../debugger/context-operator-cpp.md)
 - [Specifikátory formátu v jazyce C#](../debugger/format-specifiers-in-csharp.md)

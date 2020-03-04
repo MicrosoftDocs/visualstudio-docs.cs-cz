@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: ecc14e4dc98caa17ac3849e9231ab17491f2acc8
-ms.sourcegitcommit: 2f64b3b231900018fceafb72b5a1c65140213a18
+ms.openlocfilehash: 416926742da427ba7ff18c6fa07de6477361cfa3
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73428782"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235077"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>Kurz: Vytvoření aplikace v Node. js a Express v aplikaci Visual Studio
 
@@ -24,25 +24,25 @@ V tomto kurzu pro vývoj sady Visual Studio pomocí Node. js a Express vytvoří
 
 ::: moniker range="vs-2017"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) stránku a nainstalovat zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/downloads) stránku a nainstalovat zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
 V tomto kurzu se naučíte:
 > [!div class="checklist"]
-> * Vytvořit projekt Node.js
+> * Vytvoření projektu Node.js
 > * Přidat kód
 > * Použití IntelliSense k úpravám kódu
 > * Spuštění aplikace
 > * Volání zarážky v ladicím programu
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Tady je stručné Nejčastější dotazy, které vám povedou k předvedeným klíčovým konceptům.
 
@@ -58,7 +58,7 @@ NPM je výchozí správce balíčků pro Node. js. Správce balíčků usnadňuj
 
 Express je rozhraní webové aplikace, které se používá jako serverová architektura pro Node. js k vytváření webových aplikací. Express umožňuje použít pro vytvoření uživatelského rozhraní, jako je například Pug (dříve označované jako Jade), možnost zvolit různé prostředí front-endu. V tomto kurzu se používá Pug.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje Node. js.
 
@@ -75,7 +75,9 @@ Express je rozhraní webové aplikace, které se používá jako serverová arch
 
 * Je nutné mít nainstalovaný modul runtime Node.js.
 
-    Pokud ho nemáte nainstalovaný, nainstalujte si verzi LTS z webu [Node.js](https://nodejs.org/en/download/). Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud se nainstalovaný modul runtime nerozpozná, můžete projekt nakonfigurovat na stránce vlastností pomocí odkazu na nainstalovaný modul runtime (po vytvoření projektu klikněte pravým tlačítkem na uzel projektu a zvolte **Vlastnosti**).
+    Pokud ji nemáte nainstalovanou, doporučujeme nainstalovat verzi LTS z webu [Node. js](https://nodejs.org/en/download/) , aby se dosáhlo nejlepší kompatibility s externími architekturami a knihovnami. Node. js je sestaven pro 32 bitové a 64 architektury. Nástroje Node. js v aplikaci Visual Studio, které jsou součástí úlohy Node. js, podporují obě verze. Je vyžadována pouze jedna a instalační program Node. js podporuje pouze instalaci v jednom okamžiku.
+    
+    Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud nezjistí nainstalovaný modul runtime, můžete nakonfigurovat projekt tak, aby odkazoval na nainstalovaný modul runtime na stránce vlastnosti (po vytvoření projektu klikněte pravým tlačítkem myši na uzel projektu, vyberte možnost **vlastnosti**a nastavte **cestu k Node. exe**). Můžete použít globální instalaci Node. js nebo můžete zadat cestu k místní interpretaci v každém z vašich projektů Node. js. 
 
     Tento kurz byl testován pomocí 8.10.0 Node. js.
 
@@ -85,9 +87,9 @@ Visual Studio spravuje soubory pro jednu aplikaci v *projektu*. Projekt obsahuje
 
 V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro Node. js a aplikaci Express.
 
-1. Otevřít Visual Studio.
+1. Otevřete sadu Visual Studio.
 
-1. Vytvořte nový projekt.
+1. Vytvoření nového projektu
 
     ::: moniker range=">=vs-2019"
     Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **Node. js**a pak zvolte **vytvořit novou základní aplikaci Azure Node. js Express 4** (JavaScript). V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
@@ -113,7 +115,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro Node. js 
 
 1. Otevřete uzel **npm** a ujistěte se, že jsou k dispozici všechny požadované balíčky npm.
 
-    Pokud všechny balíčky, které chybí (ikona vykřičník), kliknete pravým tlačítkem **npm** uzlu a zvolte **instalovat chybějící balíčky npm**.
+    Pokud chybí některé balíčky (ikona s vykřičníkem), můžete kliknout pravým tlačítkem na uzel **npm** a zvolit **Instalovat chybějící balíčky npm**.
 
 ## <a name="add-some-code"></a>Přidat kód
 
@@ -270,4 +272,4 @@ Blahopřejeme k dokončení tohoto kurzu!
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Nasazení aplikace do služby App Service pro Linux](../javascript/publish-nodejs-app-azure.md)
+> [Nasazení aplikace na Linux App Service](../javascript/publish-nodejs-app-azure.md)
