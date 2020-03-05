@@ -233,9 +233,9 @@
               href: sdk-element-msbuild.md
             - name: Target – element
               href: target-element-msbuild.md
-            - name: Task – element
+            - name: Task – podřízený element elementu Target
               href: task-element-msbuild.md
-            - name: TaskBody – element
+            - name: Task – podřízený element elementu UsingTask
               href: taskbody-element-msbuild.md
             - name: UsingTask – element
               href: usingtask-element-msbuild.md
