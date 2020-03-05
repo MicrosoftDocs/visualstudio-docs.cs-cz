@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6a8b380791cbb8adcc43b363e5f0a332935e131
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 5fe9f052c10f31c4db0f8bf09f273be5814ff732
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77631104"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263133"
 ---
 # <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>Návod: vytvoření souboru projektu MSBuild od začátku
 
@@ -154,8 +154,6 @@ Váš minimální soubor projektu by měl vypadat podobně jako následující k
 > ```xml
 > <Compile Include="*.cs" />
 > ```
->
-> Nedoporučujeme ale používat zástupné znaky, protože při přidávání nebo odstraňování zdrojových souborů je obtížné se zaměřit na ladění a selektivní cílení.
 
 ## <a name="extend-the-path-to-include-msbuild"></a>Rozšíří cestu pro zahrnutí nástroje MSBuild
 
@@ -361,7 +359,7 @@ Soubor projektu by měl nyní vypadat podobně jako následující kód:
 
      Chcete-li ověřit, zda složka *\bin\\* obsahuje aplikaci *aplikaci MSBuildSample* , zadejte příkaz **dir bin**.
 
-## <a name="build-incrementally"></a>Přírůstkové sestavení
+## <a name="build-incrementally"></a>Přírůstkové sestavování
 
  Nástroj MSBuild můžete sdělit, aby vytvořil cíl pouze v případě, že se změnily zdrojové soubory nebo cílové soubory, na kterých je cíl závislý. Nástroj MSBuild používá časové razítko souboru k určení, zda došlo ke změně.
 
@@ -478,7 +476,7 @@ Následující příklad ukazuje soubor projektu, který zkompiluje Visual Basic
 
  Visual Studio může automaticky provádět spoustu práce, která je uvedená v tomto návodu. Informace o tom, jak používat Visual Studio k vytváření, úpravám, sestavování a testování souborů projektu MSBuild, najdete v tématu [Návod: použití nástroje MSBuild](../msbuild/walkthrough-using-msbuild.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přehled nástroje MSBuild](../msbuild/msbuild.md)
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

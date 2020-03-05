@@ -11,14 +11,14 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3605109519dccaafa1367464bd8c2385df5e93e
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 91b2e157ee64f5e4d91bc75a5d6f8d65d4312862
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633418"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263146"
 ---
-# <a name="msbuild-best-practices"></a>Osvědčené postupy nástroje MSBuild
+# <a name="msbuild-best-practices"></a>Doporučené postupy nástroje MSBuild
 
 Pro psaní skriptů MSBuild doporučujeme následující osvědčené postupy:
 
@@ -30,8 +30,8 @@ Pro psaní skriptů MSBuild doporučujeme následující osvědčené postupy:
 </MyProperty>
 ```
 
-- Vyhněte se zástupným znakům při výběru položek. Místo toho zadejte soubory explicitně. To usnadňuje sledování chyb, které mohou nastat při přidávání nebo odstraňování souborů.
+- Obecně platí, že při výběru položek nepoužívejte zástupné znaky. Místo toho zadejte soubory explicitně. Důvodem je, že ve většině typů projektů MSBuild rozbalí zástupné znaky v různých časech, například při přidávání nebo odebírání položek, což může vést k neočekávanému chování. Výjimkou je v projektech ve stylu .NET Core SDK, které správně zpracovávají zástupné znaky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Pokročilé koncepty](../msbuild/msbuild-advanced-concepts.md)

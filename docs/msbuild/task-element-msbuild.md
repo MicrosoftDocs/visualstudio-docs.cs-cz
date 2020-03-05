@@ -1,5 +1,5 @@
 ---
-title: Task – element (MSBuild) | Microsoft Docs
+title: Element Task cíle (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -16,14 +16,14 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d17dde15fdfcc00890338eadf603f02352697363
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 8a4ec2203430045c083b46b2eea8d3e884a4b794
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77631871"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263169"
 ---
-# <a name="task-element-msbuild"></a>Task – element (MSBuild)
+# <a name="task-element-of-target-msbuild"></a>Element Task cíle (MSBuild)
 
 Vytvoří a spustí instanci úlohy MSBuild. Název elementu je určen názvem vytvářeného úkolu.
 
@@ -87,7 +87,7 @@ Vytvoří a spustí instanci úlohy MSBuild. Název elementu je určen názvem v
 </Target>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

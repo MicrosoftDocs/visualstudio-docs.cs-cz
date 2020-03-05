@@ -1,6 +1,6 @@
 ---
 title: Přehled Návrháře XAML
-ms.date: 07/31/2019
+ms.date: 03/03/2020
 ms.topic: conceptual
 f1_keywords:
 - VS.XamlDesigner
@@ -12,12 +12,12 @@ ms.assetid: c54969a7-d75a-4a35-9b37-af7a596a7c24
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 912468cf95b7b5a4b611fb568048c2ba62cc635d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a2a0e25779df1e0b91a69518dc2257119e33cca4
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592999"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263353"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>Vytvoření uživatelského rozhraní pomocí Návrháře XAML
 
@@ -25,9 +25,12 @@ Návrhář XAML v aplikaci Visual Studio a Blend pro Visual Studio poskytuje viz
 
 V případě pokročilých uživatelů můžete [Návrhář XAML přizpůsobit](https://github.com/microsoft/xaml-designer-extensibility/blob/master/documents/xaml-designer-extensibility-migration.md).
 
+> [!NOTE]
+> Xamarin. Forms nepodporuje návrháře XAML. Pokud chcete zobrazit uživatelská rozhraníy Xamarin. Forms XAML a upravit je, když je aplikace spuštěná, použijte pro Xamarin. Forms XAML Hot reload. Další informace naleznete na stránce [XAML Hot reloading pro Xamarin. Forms (Preview)](/xamarin/xamarin-forms/xaml/hot-reload/) .
+
 ## <a name="xaml-designer-workspace"></a>Pracovní prostor návrháře XAML
 
-Pracovní prostor v Návrháři XAML se skládá z několika prvků vizuální rozhraní. Mezi ně patří *Kreslicí* plocha (což je vizuální návrhová plocha), Editor XAML, okno Osnova dokumentu (objekty a časová osa okno v Blend pro Visual Studio) a okno Vlastnosti. Chcete-li otevřít Návrhář XAML, klikněte pravým tlačítkem na soubor XAML v **Průzkumníka řešení** a zvolte **Návrhář zobrazení**.
+Pracovní prostor v Návrháři XAML se skládá z několika prvků vizuální rozhraní. Mezi ně patří *Kreslicí* plocha (což je vizuální návrhová plocha), Editor XAML, okno Osnova dokumentu (objekty a časová osa okno v Blend pro Visual Studio) a okno Vlastnosti. Chcete-li otevřít Návrhář XAML, klikněte pravým tlačítkem myši na soubor XAML v **Průzkumník řešení** a vyberte možnost **Návrhář zobrazení**.
 
 Návrhář XAML zobrazuje XAML a synchronizované zobrazení návrhu vaší aplikace vykreslované značky XAML. Se souborem XAML otevřeným v aplikaci Visual Studio nebo Blend pro Visual Studio můžete přepínat mezi zobrazení Návrh a zobrazením XAML pomocí karet **design** a **XAML** . Můžete použít tlačítko **odkládacích panelů** ![tlačítko odkládacích panelů v Návrhář XAML](media/swap-panes.PNG) pro přepnutí zobrazeného okna nahoře: buď na návrhovou plochu, nebo na Editor XAML.
 
@@ -41,7 +44,7 @@ Tyto funkce jsou dostupné v návrhové plochy:
 
 **Zarovnávacím čárám**
 
-Zarovnávacím čárám jsou *hranice zarovnání* , které se zobrazí jako přerušované čáry, aby se zobrazily, když jsou zarovnány okraje ovládacích prvků nebo jsou zarovnány textové hodnoty. Hranice pro zarovnání se zobrazí pouze tehdy, když **přichycování k zarovnávacím čárám** je povolená.
+Zarovnávacím čárám jsou *hranice zarovnání* , které se zobrazí jako přerušované čáry, aby se zobrazily, když jsou zarovnány okraje ovládacích prvků nebo jsou zarovnány textové hodnoty. Hranice zarovnání se zobrazí jenom v případě, že je povolený **přichycení k zarovnávacím čárám** .
 
 **Mřížky – kolejnice**
 
@@ -77,7 +80,7 @@ V zobrazení **Návrh** jsou k dispozici další příkazy návrhové plochy v l
 
 Tyto příkazy jsou k dispozici na tomto panelu nástrojů:
 
-**Přiblížení**
+**Přibliž**
 
 Přiblížení umožňuje změnit velikost návrhové plochy. Můžete zvětšit z 12,5% na 800% nebo vybrat možnosti, například **přizpůsobit výběr** a **vše**.
 
@@ -87,7 +90,7 @@ Zobrazí nebo skryje mřížku přichycení, která zobrazuje mřížku. Mříž
 
 **Zapnout nebo vypnout přichycení k mřížce**
 
-Pokud je povoleno **přichycení k mřížce** , při přetažení prvku na návrhovou plochu se element bude zarovnávat s nejbližší vodorovnou a svislou mřížkou.
+Pokud je povoleno **přichycení k mřížce** , je při přetahování na návrhovou plochu element při jejich přetahování na návrhovou plochu zarovnán s nejbližší vodorovnou a svislou mřížkou.
 
 **Přepnout pozadí návrhové plochy**
 
@@ -95,7 +98,7 @@ Přepíná mezi světlým a tmavým pozadím.
 
 **Zapnout nebo vypnout přichycení k zarovnávacím čárám**
 
-Zarovnávacím čárám vám pomůžou Zarovnat ovládací prvky vzhledem k sobě navzájem. Pokud **přichycování k zarovnávacím čárám** je povolena, když přetahujete ovládacího prvku vzhledem k další ovládací prvky, zarovnání hranice zobrazí, když okrajů a text některé ovládací prvky jsou zarovnaná vodorovně nebo svisle. Hranici zarovnání se zobrazí jako červená přerušovaná čára.
+Zarovnávacím čárám vám pomůžou Zarovnat ovládací prvky vzhledem k sobě navzájem. Pokud je povoleno **přichycení k zarovnávacím čárám** , když přetáhnete ovládací prvek relativně k jiným ovládacím prvkům, hranice zarovnání se zobrazí, když jsou okraje a text některých ovládacích prvků zarovnány vodorovně nebo svisle. Hranici zarovnání se zobrazí jako červená přerušovaná čára.
 
 **Zakázat kód projektu**
 
@@ -113,7 +116,7 @@ Okno Osnova dokumentu v aplikaci Visual Studio je podobné [objekty a časová o
 
 - Zobrazte hierarchickou strukturu všech prvků na návrhové ploše.
 
-- Vyberte prvky, abyste je mohli upravovat (například pohybovat v hierarchii nebo nastavit jejich vlastnosti v okno Vlastnosti). Další informace najdete v tématu [práce s prvky v Návrhář XAML](../xaml-tools/working-with-elements-in-xaml-designer.md).
+- Vyberte prvky, abyste je mohli upravovat. Můžete je například přesunout v hierarchii nebo nastavit jejich vlastnosti v okno Vlastnosti. Další informace najdete v tématu [práce s prvky v Návrhář XAML](../xaml-tools/working-with-elements-in-xaml-designer.md).
 
 - Vytvářet a upravovat šablony pro prvky, které jsou ovládací prvky.
 
@@ -124,7 +127,7 @@ Chcete-li zobrazit okno Objekty a časová osa v Blend pro Visual Studio, na pan
 
 ![Okno Osnova dokumentu v aplikaci Visual Studio](media/document-outline-window.png)
 
-Hlavní zobrazení v okně Osnova/Objekty a časová osa v dokumentu zobrazuje hierarchii dokumentu ve stromové struktuře. Hierarchickou povahu osnovy dokumentu můžete použít k prohlédnutí dokumentu na různých úrovních podrobností a k zamčení a skrytí prvků jednotlivě nebo ve skupinách. Tyto možnosti jsou k dispozici v okně Osnova dokumentu/Objekty a časová osa:
+Hlavní zobrazení v okně Osnova/Objekty a časová osa v dokumentu zobrazuje hierarchii dokumentu ve stromové struktuře. Hierarchickou povahu osnovy dokumentu můžete použít k prohlédnutí dokumentu na různých úrovních podrobností a k zamčení a skrytí prvků jednotlivě nebo ve skupinách. V okně Osnova/Objekty a časová osa jsou k dispozici následující možnosti:
 
 **Zobrazit/skrýt**
 
@@ -148,13 +151,13 @@ V horní části okna **vlastností** jsou k dispozici různé možnosti:
 
 - V poli **název** změňte název aktuálně vybraného prvku.
 - V levém horním rohu je ikona, která reprezentuje aktuálně vybraný element.
-- Chcete-li seřadit vlastnosti podle kategorie nebo abecedy, klikněte na tlačítko **kategorie**, **název**, nebo **zdroje** v **uspořádat podle** seznamu.
+- Pokud chcete vlastnosti uspořádat podle kategorie nebo abecedně, klikněte v seznamu **Uspořádat podle** na **kategorie**, **název**nebo **zdroj** .
 - Chcete-li zobrazit seznam událostí ovládacího prvku, klikněte na tlačítko **události** , které se zobrazí jako symbol blesku.
 - Chcete-li vyhledat vlastnost, začněte do vyhledávacího pole zadat název vlastnosti. V okně **vlastnosti** se zobrazí vlastnosti, které odpovídají vašemu hledání při psaní.
 
 Některé vlastnosti umožňují nastavit upřesňující vlastnosti tak, že vyberete šipku dolů.
 
-Vpravo od každé vlastnosti je hodnota *značka vlastnosti* , který se zobrazí jako pole symbolu. Vzhled značky vlastnost označuje, zda je datové vazby nebo prostředek použitý pro vlastnost. Například symbol bílé pole určuje výchozí hodnotu, symbol černé skříňky obvykle označuje, že použití místního prostředku a oranžová pole se obvykle označuje, že byl použit datové vazby. Po kliknutí na značku vlastnosti, můžete přejít na definici stylu, otevřete Tvůrce vazeb dat nebo otevřít výběr prostředku.
+Napravo od každé hodnoty vlastnosti je *značka vlastnosti* , která se zobrazí jako symbol pole. Vzhled značky vlastnost označuje, zda je datové vazby nebo prostředek použitý pro vlastnost. Například symbol bílé pole určuje výchozí hodnotu, symbol černé skříňky obvykle označuje, že použití místního prostředku a oranžová pole se obvykle označuje, že byl použit datové vazby. Po kliknutí na značku vlastnosti, můžete přejít na definici stylu, otevřete Tvůrce vazeb dat nebo otevřít výběr prostředku.
 
 Další informace o používání vlastností a zpracování událostí naleznete v tématu [Úvod k ovládacím prvkům a vzorům](/windows/uwp/design/controls-and-patterns/controls-and-events-intro).
 

@@ -3,21 +3,20 @@ title: Přiřazení licencí skupinám uživatelů pro předplatná sady Visual 
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 02/26/2020
+ms.date: 03/02/2020
 ms.topic: conceptual
 description: Přečtěte si, jak můžou správci přiřazovat licence k několika předplatitelům pomocí funkce hromadného přidání nebo skupin Microsoft Azure Active Directory.
-ms.openlocfilehash: ae16c64f90f90b820332e0ee7f1753a8dd6e5c32
-ms.sourcegitcommit: a80489d216c4316fde2579a0a2d7fdb54478abdf
+ms.openlocfilehash: c8ea294f0e4b2b4deae18e2f5644bf08fff0dfc2
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77652817"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263341"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Přiřazení předplatných více uživatelům
 Portál pro správu předplatných umožňuje přidat uživatele v jednom okamžiku nebo ve velkých skupinách.  Chcete-li přidat jednotlivé uživatele, přečtěte si téma [přidání jednotlivých uživatelů](assign-license.md).
 
 Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromadného přidání, nebo pokud vaše organizace používá Microsoft Azure Active Directory (Azure AD), můžete použít skupiny Azure AD. Tento článek vysvětluje postup pro obě možnosti. 
-
 
 ## <a name="use-bulk-add-to-assign-subscriptions"></a>Použití hromadného přidání k přiřazení předplatných
 1. Přihlaste se na portál pro správu předplatných sady Visual Studio na https://manage.visualstudio.com.
@@ -59,18 +58,15 @@ Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromad
    > [!div class="mx-imgBorder"]
    > ![potvrzující zprávu, pokud je nahrávání více předplatitelů úspěšné](media/bulk-add-template-success.png)
 
-## <a name="use-azure-ad-groups-to-assign-subscriptions"></a>Přiřazení předplatných pomocí skupin Azure AD 
-Díky této funkci se můžete snadno soustředit na přiřazení předplatného. Na portálu pro správu předplatných můžete přidat skupiny zabezpečení Azure AD, které zajistí, že se předplatné přiřadí všem jednotlivcům ve skupině. A aby bylo snazší, když jednotlivci odejdou z vaší organizace a jsou z Azure AD odebráni, odebere se i jejich přístup k předplatným.
-
-> [!NOTE]
-> Tato funkce se nasazuje ve fázích, takže nemusí být pro vaši organizaci okamžitě dostupná.   
+## <a name="use-azure-active-directory-groups-to-assign-subscriptions"></a>Přiřazení předplatných pomocí skupin Azure Active Directory 
+Díky této funkci se můžete snadno soustředit na přiřazení předplatného. Na portálu pro správu předplatných můžete přidat skupiny zabezpečení Azure Active Directory, které zajistí, že se k odběru všech jednotlivců ve skupině přiřadí předplatné. A aby bylo snazší, když jednotlivci opustí vaši organizaci a jsou odstraněné z Azure Active Directory, odeberou se také jejich přístup k předplatným. 
 
 > [!IMPORTANT]
 > Následující omezení se vztahují na použití skupin Azure AD pro přidávání předplatitelů:
 > - Skupiny musí obsahovat alespoň jeden člen.  Prázdné skupiny se nepodporují.
-> - Skupiny musí mít méně než 1 000 uživatelů.
+> - Skupiny musí mít méně než 1 000 uživatelů. 
 > - Všichni uživatelé musí být na nejvyšší úrovni skupiny.  Vnořené skupiny se nepodporují.
-> - Podporovány jsou pouze důvěryhodné smlouvy.
+> - Podporují se jenom důvěryhodné smlouvy.
 > - Všichni členové skupiny musí mít e-mailovou adresu přidruženou ke svému účtu Azure AD.
 
 
@@ -104,11 +100,11 @@ Odpověď: ne – všichni ve skupině obdrží stejné předplatné.
 ### <a name="q-can-i-edit-subscriber-details-of-individuals-added-in-an-azure-ad-group"></a>Otázka: mohu upravit podrobnosti odběratele jednotlivců přidaných ve skupině Azure AD?  
 Odpověď: ne. Pokud chcete upravit informace pro jednotlivé odběratele, budete je muset odebrat ze skupiny zabezpečení Azure AD a přiřadit jim předplatné individuálně.  
 
-### <a name="q-i-added-someone-to-my-azure-ad-security-group-but-i-dont-see-them-added-in-the-subscriptions-administration-portal-and-they-dont-have-a-subscription-why-not"></a>Otázka: jsem přidal uživatele do skupiny zabezpečení Azure AD, ale nevidím ho na portálu pro správu předplatných a nemá předplatné. Proč?  
+### <a name="q-i-added-someone-to-my-azure-ad-security-group-but-i-dont-see-them-added-in-the-subscriptions-administration-portal-and-they-dont-have-a-subscription-why-not"></a>Otázka: jsem přidal uživatele do skupiny zabezpečení Azure AD, ale nevidím ho na portálu pro správu předplatných a nemá předplatné. Proč ne?  
 Odpověď: v závislosti na tom, jak vaše organizace nakonfigurovala Azure AD, se může zobrazit zpoždění až 24 hodin, než se uživatel přidá. Pokud je delší než 24 hodin, obraťte se na [podporu](https://visualstudio.microsoft.com/support/support-overview-vs).  
 
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
@@ -116,7 +112,5 @@ Odpověď: v závislosti na tom, jak vaše organizace nakonfigurovala Azure AD, 
 
 ## <a name="next-steps"></a>Další kroky
 - Chcete přidat jenom jednoho nebo dva předplatitele?  Podívejte se na [přidat jednotlivé uživatele](assign-license.md) .
-- Potřebujete pomoc? Obraťte [se na podporu správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs).
-
-
+- Potřebujete pomoct? Obraťte [se na podporu správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs).
 

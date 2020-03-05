@@ -1,5 +1,5 @@
 ---
-title: TaskBody – – element (MSBuild) | Microsoft Docs
+title: Element Task of UsingTask (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -8,31 +8,31 @@ dev_langs:
 - C++
 - jsharp
 helpviewer_keywords:
-- TaskBody element [MSBuild]
-- <TaskBody> element [MSBuild]
+- Task element [MSBuild]
+- <Task> element [MSBuild]
 ms.assetid: 49d8741b-f1ea-4470-94fd-a1ac27341a6a
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 45b255f782390cfc478ac2f7bce58170e4e2b268
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 36644a6b21092361d92dba5f0886eb4198884995
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77631844"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263185"
 ---
-# <a name="taskbody-element-msbuild"></a>TaskBody – – element (MSBuild)
+# <a name="task-element-of-usingtask-msbuild"></a>Element Task pro UsingTask (MSBuild)
 
 Obsahuje data předávaná `UsingTask` `TaskFactory`. Další informace naleznete v tématu [UsingTask element (MSBuild)](../msbuild/usingtask-element-msbuild.md).
 
- \<projektu > \<UsingTask > \<TaskBody – >
+ \<projektu > \<UsingTask > \<úkol >
 
 ## <a name="syntax"></a>Syntaxe
 
 ```xml
-<TaskBody Evaluate="true/false" />
+<Task Evaluate="true/false" />
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
@@ -49,7 +49,7 @@ Obsahuje data předávaná `UsingTask` `TaskFactory`. Další informace naleznet
 
 |Prvek|Popis|
 |-------------|-----------------|
-|Data|Text mezi značkami `TaskBody` se do `TaskFactory`pošle jako doslovné.|
+|Data|Text mezi značkami `Task` se do `TaskFactory`pošle jako doslovné.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
@@ -59,7 +59,7 @@ Obsahuje data předávaná `UsingTask` `TaskFactory`. Další informace naleznet
 
 ## <a name="example"></a>Příklad
 
- Následující příklad ukazuje způsob použití prvku `TaskBody` s atributem `Evaluate`.
+ Následující příklad ukazuje způsob použití prvku `Task` s atributem `Evaluate`.
 
 ```xml
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">
@@ -68,13 +68,13 @@ Obsahuje data předávaná `UsingTask` `TaskFactory`. Další informace naleznet
               <Parameter2 ParameterType="System.Int" Required="True" Output="False"/>
               ...
 </ParameterGroup>
-       <TaskBody Evaluate="true">
-      ... Task factory-specific data ...
-       </TaskBody>
+       <Task Evaluate="true">
+       ... Task factory-specific data ...
+       </Task>
 </UsingTask>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
