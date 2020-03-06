@@ -1,6 +1,6 @@
 ---
 title: Začínáme s testováním částí
-ms.date: 02/13/2020
+ms.date: 03/04/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit test plans
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ffbc5c6730fb4ca4d2f39732ad2a595de15bbf2
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: 90c3cbdee722c4cf12c515f06659cc03f3179e1e
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77279328"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78289851"
 ---
 # <a name="get-started-with-unit-testing"></a>Začínáme s testováním částí
 
@@ -22,7 +22,7 @@ Pomocí sady Visual Studio definujte a spusťte testy jednotek, abyste zachovali
 
 ## <a name="create-unit-tests"></a>Vytvořit testy jednotek
 
-Tato část popisuje na vysoké úrovni, jak vytvořit projekt testování částí.
+Tato část popisuje, jak vytvořit projekt testování částí.
 
 1. Otevřete projekt, který chcete testovat v aplikaci Visual Studio.
 
@@ -72,7 +72,7 @@ Tato část popisuje na vysoké úrovni, jak vytvořit projekt testování čás
 
 1. Přidejte kód do metody testování částí.
 
-   Například pro projekt testování MSTest nebo NUnit můžete použít následující kód.
+   Například pro projekt MSTest můžete použít následující kód.
 
    ```csharp
    using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -101,10 +101,44 @@ Tato část popisuje na vysoké úrovni, jak vytvořit projekt testování čás
    }
    ```
 
-> [!TIP]
-> Podrobnější návod k vytváření testů jednotek najdete v tématu [Vytvoření a spuštění testů jednotek pro spravovaný kód](walkthrough-creating-and-running-unit-tests-for-managed-code.md).
+   Nebo pro projekt NUnit můžete použít následující kód.
 
-## <a name="run-unit-tests"></a>Spouštění testů jednotek
+   ```csharp
+   using using NUnit.Framework;
+   using System.IO;
+   using System;
+
+   namespace HelloWorldTests
+   {
+      [TestClass]
+      public class Tests
+      {
+         private const string Expected = "Hello World!";
+
+         [SetUp]
+         public void Setup()
+         {
+         }
+         [Test]
+         public void TestMethod1()
+         {
+            using (var sw = new StringWriter())
+            {
+               Console.SetOut(sw);
+               HelloWorldCore.Program.Main();
+
+               var result = sw.ToString().Trim();
+               Assert.AreEqual(Expected, result);
+            }
+         }
+      }
+   }
+   ```
+
+> [!TIP]
+> Další informace o vytváření testů jednotek najdete v tématu [Vytvoření a spuštění testů jednotek pro spravovaný kód](walkthrough-creating-and-running-unit-tests-for-managed-code.md).
+
+## <a name="run-unit-tests"></a>Spuštění testů jednotek
 
 1. Otevřete [Průzkumník testů](../test/run-unit-tests-with-test-explorer.md).
 
