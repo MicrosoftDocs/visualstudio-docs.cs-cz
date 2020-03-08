@@ -9,11 +9,11 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0330ef80fc1127893590ef8d326cb5b8e0cf0160
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291601"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410078"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Barvy a styly pro sadu Visual Studio
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -304,7 +304,7 @@ protected override void Dispose(bool disposing)
 |------------------|-----------|
 |ActiveCaption|– Integrované vývojové prostředí aktivní a glyfy rafted okno tlačítko na při najetí myší a stiskněte klávesu<br />-Title pozadí panelu pro integrované vývojové prostředí a rafted windows<br />– Pozadí panelu výchozí stav|
 |ActiveCaptionText|-Active integrovaného vývojového prostředí a rafted okna popředí panelu title (text a glyfy)<br />-Na pozadí a ohraničení tlačítka aktivní okno na při najetí myší a stiskněte klávesu|
-|Ovládací prvek|– Pole se seznamem, rozevírací seznam a vyhledávání ovládacího prvku výchozí a zakázáno na pozadí, včetně tlačítko rozevíracího seznamu<br />-Pozadí tlačítka target ukotvení<br />-– Pozadí panelu příkaz<br />– Pozadí okna nástroj|
+|Řízení|– Pole se seznamem, rozevírací seznam a vyhledávání ovládacího prvku výchozí a zakázáno na pozadí, včetně tlačítko rozevíracího seznamu<br />-Pozadí tlačítka target ukotvení<br />-– Pozadí panelu příkaz<br />– Pozadí okna nástroj|
 |ControlDark|– Integrované vývojové prostředí pozadí<br />-Oddělovače řádku nabídek a příkazů<br />-– Ohraničení panelu příkaz<br />– Shadows nabídka<br />– Nástroj okraj výchozí a při najetí myší kartě okna a oddělovač<br />-Dokumentu i na pozadí tlačítko přetečení<br />– Dock cíl piktogram ohraničení|
 |ControlDarkDark|– Okno s kartou bez fokusu, vybraný dokument|
 |ControlLight|-Karta border automatického schovávání<br />– Ohraničení pole se seznamem pole a rozevírací seznam<br />-Ukotvit cílové pozadí a ohraničení|
@@ -424,7 +424,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\FontAndColors\CSharp T
     "NameID"=dword:00000064
 ```
 
- **ZNAČTE**
+ **POZNÁMKA:**
 
 - "NameID" = ID prostředku název lokalizované kategorie v balíčku
 

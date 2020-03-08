@@ -1,5 +1,5 @@
 ---
-title: Pouze můj kód | Dokumentace Microsoftu
+title: Pouze můj kód | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,94 +15,94 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: efcabf9c7dc201f95515cd24bf3a14727f7149fe
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823958"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410150"
 ---
 # <a name="just-my-code"></a>Pouze můj kód
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vývojáři, kteří používají jazycích rozhraní .NET Framework obeznámeni s jen můj kód, ladicí program funkce kroky systému a rozhraní framework a další neuživatelská volání, která sbalí ty volání v ovládacím prvku windows zásobníku volání. Funkce pouze můj kód rozšířilo a jazyce C++ a JavaScript. Toto téma popisuje, jaké jsou specifikace pomocí volbu pouze vlastní kód v rozhraní .NET Framework, nativní C++ a JavaScript projekty.  
+Vývojáři, kteří používají .NET Framework jazyky, jsou obeznámeni s funkcí Pouze můj kód ladicího programu, která provádí kroky nad systémem, rozhraním a jinými neuživatelskými voláními a sbalí tato volání v oknech zásobník volání. Pouze můj kód bylo rozšířeno na jazyky C++ a JavaScript. Toto téma popisuje konkrétní použití Pouze můj kód v projektech .NET Framework, nativních C++a JavaScriptu.  
   
-## <a name="BKMK_Enable_or_disable_Just_My_Code"></a> Povolit nebo zakázat pouze můj kód  
- Chcete-li povolit nebo zakázat pouze můj kód, zvolte **možnosti a nastavení** na **ladění** nabídky. V **ladění** / **Obecné** uzlu, vyberte nebo zrušte zaškrtnutí **povolit volbu pouze vlastní kód**.  
+## <a name="BKMK_Enable_or_disable_Just_My_Code"></a>Povolit nebo zakázat Pouze můj kód  
+ Pokud chcete povolit nebo zakázat Pouze můj kód, vyberte **Možnosti a nastavení** v nabídce **ladění** . V uzlu **ladění** / **Obecné** vyberte nebo zrušte zaškrtnutí **Povolit pouze můj kód**.  
   
- ![Povolit volbu pouze vlastní kód v dialogovém okně Možnosti](../debugger/media/dbg-justmycode-options.png "DBG_JustMyCode_Options")  
-  
-> [!NOTE]
-> **Povolit volbu pouze vlastní kód** nastavení je globální nastavení, které platí pro všechny projekty aplikace Visual Studio ve všech jazycích.  
-  
-### <a name="BKMK_Override_call_stack_filtering"></a> Přepsat filtrování zásobníku volání  
- V zobrazení zásobníku volání, jako jsou okna zásobník volání a úlohy funkce pouze můj kód sbalí neuživatelský kód do rámce s poznámkami s popiskem `[External Code]`. Chcete-li zobrazit sbalený rámce, zvolte **zobrazit externí kód** v místní nabídce zásobníku volání zobrazit.  
+ ![Povolení Pouze můj kód v dialogovém okně Možnosti](../debugger/media/dbg-justmycode-options.png "DBG_JustMyCode_Options")  
   
 > [!NOTE]
-> **Zobrazit externí kód** nastavení je uložit do aktuálního uživatele profileru. Použije se na všechny projekty ve všech jazycích, které jsou otevřeny uživatelem.  
+> Nastavení **povolit pouze můj kód** je globální nastavení, které se použije pro všechny projekty sady Visual Studio ve všech jazycích.  
   
-## <a name="BKMK__NET_Framework_Just_My_Code"></a> Rozhraní .NET framework pouze můj kód  
+### <a name="BKMK_Override_call_stack_filtering"></a>Přepsat filtrování zásobníku volání  
+ V zobrazení zásobníku volání, například v oknech zásobník volání a úkoly, Pouze můj kód sbalí neuživatelský kód do označeného `[External Code]`s poznámkou. Chcete-li zobrazit sbalené snímky, v místní nabídce zobrazení zásobníku volání vyberte možnost **Zobrazit externí kód** .  
   
-### <a name="BKMK_NET_User_and_non_user_code"></a> Uživatel a neuživatelský kód  
- Funkce pouze můj kód zjistí k rozlišení uživatelský kód z kódu nepocházejícího od uživatele, soubory symbolů (PDB) a optimalizace programu. Ladicí program bude považovat za kód je kód nepocházející od uživatele při optimalizaci binární soubor, nebo když není k dispozici soubor .pdb.  
+> [!NOTE]
+> Nastavení **Zobrazit externí kód** je uloženo v profileru aktuálního uživatele. Používá se pro všechny projekty ve všech jazycích, které uživatel otevřel.  
   
- Ladicí program považuje na můj kód ovlivňují také tři atributy:  
+## <a name="BKMK__NET_Framework_Just_My_Code"></a>.NET Framework Pouze můj kód  
   
-- <xref:System.Diagnostics.DebuggerNonUserCodeAttribute> dává pokyn ladicímu programu, že kód, který se použije k není můj kód.  
+### <a name="BKMK_NET_User_and_non_user_code"></a>Uživatel a jiný kód než uživatel  
+ Pro odlišení uživatelského kódu od neuživatelového kódu Pouze můj kód prohlíží soubory symbolů (PDB) a optimalizace programů. Ladicí program považuje kód za neuživatelský kód v případě, že je binární soubor optimalizovaný nebo pokud není k dispozici soubor. pdb.  
   
-- <xref:System.Diagnostics.DebuggerHiddenAttribute> Skryje kód z ladicího programu, i v případě, že funkce pouze můj kód je vypnutý.  
+ Tři atributy ovlivňují také to, co ladicí program považuje za můj kód:  
   
-- <xref:System.Diagnostics.DebuggerStepThroughAttribute> sdělí ladicímu programu, chcete-li si kód, který se použije, místo krokování s vnořením do kódu.  
+- <xref:System.Diagnostics.DebuggerNonUserCodeAttribute> oznamuje ladicímu programu, že kód, na který je použit, není můj kód.  
   
-  Veškerý kód, se považuje za uživatelského kódu.  
+- <xref:System.Diagnostics.DebuggerHiddenAttribute> skrývá kód z ladicího programu, a to i v případě, že je Pouze můj kód vypnutý.  
   
-### <a name="BKMK_NET_Stepping_behavior"></a> Chování  
- Pokud jste **Krokovat s vnořením** (Klávesová zkratka: F11) neuživatelský kód, ladicí program přes kód do dalšího příkazu uživatele. Pokud jste **Krokovat s Vystoupením** (klávesnice: SHIFT + F11), ladicí program se spustí na další řádek kódu uživatele. Pokud nebude nalezen žádný uživatelský kód, provádění pokračuje, dokud aplikace ukončí, dosaženo zarážky nebo dojde k výjimce.  
+- <xref:System.Diagnostics.DebuggerStepThroughAttribute> instruuje ladicí program, aby provedl kód, na který je použit, a ne krok do kódu.  
   
-### <a name="BKMK_NET_Breakpoint_behavior"></a> Chování zarážky  
- Pokud je povolena funkce pouze můj kód, můžete zvolit **příkaz Pozastavit vše** (klávesnice: Ctrl + Alt + Break) a zastavit provádění v místě, kde není žádný uživatelský kód pro zobrazení. Pokud k tomu dojde, zobrazí se okno žádný zdroj. Pokud vyberte příkaz kroku ladicí program přejde na další řádek kódu uživatele.  
+  Veškerý další kód je považován za uživatelský kód.  
   
-### <a name="BKMK_NET_Exception_behavior"></a> Výjimka chování  
- Pokud dojde k neošetřené výjimce v neuživatelském kódu, ladicí program přeruší na řádku v uživatelském kódu, ve kterém se vygeneroval výjimku.  
+### <a name="BKMK_NET_Stepping_behavior"></a>Chování krokování  
+ Při **krokování do** (Klávesová zkratka: F11) neuživatelský kód, ladicí program přesměruje kód na další příkaz uživatele. Při **krokování** (klávesnice: Shift + F11) se ladicí program spustí na další řádek uživatelského kódu. Pokud nedojde k žádnému kódu uživatele, provádění pokračuje, dokud se aplikace neukončí, zarážka je obsazena nebo dojde k výjimce.  
   
- Pokud první příležitosti výjimky jsou povolené pro výjimku, řádku uživatelského kódu je zvýrazněn zeleně. Zásobník volání se zobrazí rámce s poznámkami s popiskem **[externí kód]** .  
+### <a name="BKMK_NET_Breakpoint_behavior"></a>Chování zarážky  
+ Pokud je povolená Pouze můj kód, můžete zvolit možnost **přerušit vše** (klávesnice: CTRL + ALT + BREAK) a zastavit provádění na místě, kde není k dispozici žádný uživatelský kód k zobrazení. Pokud k tomu dojde, nezobrazí se žádné okno zdroje. Pokud pak zvolíte příkaz kroku, ladicí program přejde na další řádek uživatelského kódu.  
   
-## <a name="BKMK_C___Just_My_Code"></a> Pouze můj kód C++  
+### <a name="BKMK_NET_Exception_behavior"></a>Chování výjimky  
+ Pokud dojde k neošetřené výjimce v neuživatelském kódu, ladicí program se přeruší na řádku v uživatelském kódu, kde byla výjimka vygenerována.  
   
-### <a name="BKMK_CPP_User_and_non_user_code"></a> Uživatel a neuživatelský kód  
- Funkce pouze můj kód C++ se liší od rozhraní .NET Framework a jazyka JavaScript pouze můj kód, protože nezávisí chování chování zásobníku volání.  
+ Pokud jsou pro výjimku povoleny výjimky první, je řádek uživatelského kódu zvýrazněn zeleně. Zásobník volání zobrazuje rámec s poznámkou označený **[externí kód]** .  
+  
+## <a name="BKMK_C___Just_My_Code"></a>C++ Pouze můj kód  
+  
+### <a name="BKMK_CPP_User_and_non_user_code"></a>Uživatel a jiný kód než uživatel  
+ C++Pouze můj kód se liší od Pouze můj kód .NET Framework a JavaScriptu, protože chování při krokování je nezávislé na chování zásobníku volání.  
   
  **Zásobníky volání**  
   
- Ve výchozím nastavení ladicí program bude považovat za tyto funkce bude neuživatelský kód v zásobníku volání systému windows:  
+ Ve výchozím nastavení ladicí program považuje tyto funkce za neuživatelský kód v oknech zásobník volání:  
   
-- Funkce s odstraněnými příslušnými daty zdroj informací v jejich soubor symbolů.  
+- Funkce s odstraněnými zdrojovými informacemi v souboru symbolů.  
   
-- Funkce, kde soubory symbolů znamenat, že neexistuje žádný zdrojový soubor odpovídá rámce zásobníku.  
+- Funkce, kde soubory symbolů označují, že neexistuje zdrojový soubor odpovídající bloku zásobníku.  
   
-- Funkcí zadaných v `*.natjmc` soubory `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` složky.  
+- Funkce zadané v `*.natjmc` soubory ve složce `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers`  
   
-  **Krokování**  
+  **Pokusný**  
   
-  Ve výchozím nastavení, podle pouze funkce `*.natstepfilter` soubory `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` složky jsou považovány za neuživatelský kód.  
+  Ve výchozím nastavení jsou pouze funkce zadané v `*.natstepfilter` soubory ve `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` složce považovány za neuživatelský kód.  
   
-  Můžete vytvořit svoje vlastní `.natstepfilter` a `.natjmc` přizpůsobit posílení a chování okna zásobník volání `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers`.  
+  Můžete vytvořit vlastní `.natstepfilter` a `.natjmc` k přizpůsobení chování okna krokování a volání zásobníku v `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers`.  
   
-### <a name="BKMK_CPP_Stepping_behavior"></a> Chování  
- Pokud jste **Krokovat s vnořením** (Klávesová zkratka: Neuživatelský kód F11) z uživatelského kódu, ladicí program při krokování kódu na další řádek kódu uživatele. Pokud jste **Krokovat s Vystoupením** (klávesnice: SHIFT + F11), ladicí program se spustí na další řádek kódu uživatele. Pokud nebude nalezen žádný uživatelský kód, provádění pokračuje, dokud aplikace ukončí, dosaženo zarážky nebo dojde k výjimce.  
+### <a name="BKMK_CPP_Stepping_behavior"></a>Chování krokování  
+ Při **krokování do** (Klávesová zkratka: F11) neuživatelský kód z uživatelského kódu, ladicí program přesměruje kód na další řádek uživatelského kódu. Při **krokování** (klávesnice: Shift + F11) se ladicí program spustí na další řádek uživatelského kódu. Pokud nedojde k žádnému kódu uživatele, provádění pokračuje, dokud se aplikace neukončí, zarážka je obsazena nebo dojde k výjimce.  
   
- Pokud ladicí program přeruší v neuživatelském kódu (například, pokud příkaz Pozastavit vše zastaví v neuživatelském kódu), krokování pokračuje v neuživatelském kódu.  
+ Pokud ladicí program se přeruší v neuživatelském kódu (například v případě, že se příkaz break All zastaví v neuživatelském kódu), krokování pokračuje v neuživatelském kódu.  
   
-### <a name="BKMK_CPP_Exception_behavior"></a> Výjimka chování  
- Pokud ladicí program narazí na výjimku, se zastaví na výjimce bez ohledu na to, jestli má uživatel nebo neuživatelský kód. **Uživatelem neošetřené** možnosti **výjimky** dialogové okno se ignorují.  
+### <a name="BKMK_CPP_Exception_behavior"></a>Chování výjimky  
+ Pokud ladicí program narazí na výjimku, zastaví se na výjimce bez ohledu na to, zda se jedná o uživatele nebo jiný kód než uživatel. **Uživatelem neošetřené** možnosti v dialogovém okně **výjimky** jsou ignorovány.  
   
-### <a name="BKMK_CPP_Customize_stepping_behavior"></a> Přizpůsobení chování  
- Můžete zadat funkce převezme seznam jako neuživatelský kód v kroku `*.natstepfilter` soubory.  
+### <a name="BKMK_CPP_Customize_stepping_behavior"></a>Přizpůsobení chování krokování  
+ Můžete určit funkce, které chcete krokovat, jejich výpisem jako neuživatelský kód v `*.natstepfilter` soubory.  
   
-- Zadat neuživatelský kód pro všechny uživatele počítače Visual Studio, přidejte soubor .natstepfilter `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` složky.  
+- Chcete-li určit neuživatelský kód pro všechny uživatele počítače sady Visual Studio, přidejte soubor. natstepfilter do složky `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers`.  
   
-- Zadat neuživatelském kódu pro jednotlivé uživatele, přidejte soubor .natstepfilter `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` složky.  
+- Chcete-li určit neuživatelský kód pro jednotlivé uživatele, přidejte soubor. natstepfilter do složky `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers`.  
   
-  .natstepfilter soubory jsou soubory xml touto syntaxí:  
+  soubory. natstepfilter jsou soubory XML s touto syntaxí:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -122,19 +122,19 @@ Vývojáři, kteří používají jazycích rozhraní .NET Framework obeznámeni
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|Funkce|Povinný parametr. Určuje jednu nebo více funkcí jako funkcí nedefinovaných uživatelem.|  
-|`Name`|Povinný parametr. ECMA 262 ve formátu regulárních výrazů zadáním názvu plná funkčnost tak, aby odpovídaly. Příklad:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> sdělí ladicímu programu, že všechny metody v `MyNS::MyClass` mají být považovány za neuživatelský kód. Shoda rozlišuje velká a malá písmena.|  
-|`Module`|Volitelné. ECMA 262 ve formátu regulárních výrazů zadáním úplná cesta k modulu, který obsahuje funkci. Shoda nerozlišuje malá a velká písmena.|  
-|`Action`|Povinný parametr. Jedna z těchto hodnot malá a velká písmena:<br /><br /> -   `NoStepInto`  – sdělí ladicímu programu, aby přešel přes odpovídající funkce.<br />-   `StepInto`  – dává pokyn ladicímu programu vstup do funkce odpovídající přepsání jiného `NoStepInto` pro odpovídající funkce.|  
+|Funkce|Povinná hodnota. Určuje jednu nebo více funkcí jako neuživatelské funkce.|  
+|`Name`|Povinná hodnota. Formátovaný regulární výraz ECMA-262 určující úplný název funkce, který se má shodovat. Příklad:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> oznamuje ladicímu programu, že všechny metody v `MyNS::MyClass` mají být považovány za neuživatelský kód. Porovnávání rozlišuje velká a malá písmena.|  
+|`Module`|Volitelné. Formátovaný regulární výraz ECMA-262 určující úplnou cestu k modulu, který obsahuje funkci. U porovnávání se nerozlišují malá a velká písmena.|  
+|`Action`|Povinná hodnota. Jedna z těchto hodnot citlivých na velká a malá písmena:<br /><br /> -   `NoStepInto` – přikáže ladicímu programu, aby převzal odpovídající funkci.<br />-   `StepInto` – instruuje ladicí program, aby se přihlásil k odpovídajícím funkcím, které přepsaly všechny ostatní `NoStepInto` pro odpovídající funkce.|  
   
-### <a name="BKMK_CPP_Customize_call_stack_behavior"></a> Přizpůsobení chování zásobníku volání  
- Můžete zadat moduly, zdrojové soubory a funkce považovat za neuživatelský kód v zásobnících volání zadáním v `*.natjmc` soubory.  
+### <a name="BKMK_CPP_Customize_call_stack_behavior"></a>Přizpůsobení chování zásobníku volání  
+ Můžete určit moduly, zdrojové soubory a funkce, které se mají považovat za neuživatelský kód v zásobníkech volání zadáním v `*.natjmc` soubory.  
   
-- Zadat neuživatelský kód pro všechny uživatele počítače Visual Studio, přidejte soubor .natjmc `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` složky.  
+- Chcete-li určit neuživatelský kód pro všechny uživatele počítače sady Visual Studio, přidejte soubor. natjmc do složky `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers`.  
   
-- Zadat neuživatelském kódu pro jednotlivé uživatele, přidejte soubor .natjmc `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` složky.  
+- Chcete-li určit neuživatelský kód pro jednotlivé uživatele, přidejte soubor. natjmc do složky `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers`.  
   
-  .natjmc soubory jsou soubory xml touto syntaxí:  
+  soubory. natjmc jsou soubory XML s touto syntaxí:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -156,103 +156,103 @@ Vývojáři, kteří používají jazycích rozhraní .NET Framework obeznámeni
   
 ```  
   
- **Atributy modulu**  
+ **Atributy elementu modulu**  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Name`|Povinný parametr. Úplná cesta modulu nebo modulech. Můžete použít zástupné znaky Windows `?` (žádný nebo jeden znak) a `*` (nula nebo více znaků). Například<br /><br /> `<Module Name=”?:\3rdParty\UtilLibs\*” />`<br /><br /> sdělí ladicímu programu, aby považoval všechny moduly v `\3rdParty\UtilLibs` v jakékoli jednotce jako externí kód.|  
-|`Company`|Volitelné. Název společnosti, která publikuje modul, který je vložen do spustitelného souboru. Tento atribut slouží k rozlišení moduly.|  
+|`Name`|Povinná hodnota. Úplná cesta modulu nebo modulů. Můžete použít zástupné znaky systému Windows `?` (nula nebo jeden znak) a `*` (nula nebo více znaků). Například:<br /><br /> `<Module Name=”?:\3rdParty\UtilLibs\*” />`<br /><br /> Říká ladicímu programu, aby považoval všechny moduly v `\3rdParty\UtilLibs` na jakékoli jednotce jako externí kód.|  
+|`Company`|Volitelné. Název společnosti, která publikuje modul, který je vložený ve spustitelném souboru. Pomocí tohoto atributu lze odstranit nejednoznačnost modulů.|  
   
- **Atributy souboru**  
-  
-|Atribut|Popis|  
-|---------------|-----------------|  
-|`Name`|Povinný parametr. Úplná cesta ke zdrojovému souboru nebo souborů považovat za externí kód. Můžete použít zástupné znaky Windows `?` a `*` při zadání cesty.|  
-  
- **Atributy prvků – funkce**  
+ **Atributy elementu souboru**  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Name`|Povinný parametr. Plně kvalifikovaný název funkce, který má zpracovávat jako externí kód.|  
-|`Module`|Volitelné. Název nebo úplná cesta k modulu, který obsahuje funkci. Tento atribut slouží k rozlišení funkce se stejným názvem.|  
-|`ExceptionImplementation`|Pokud je nastavena na `true`, zásobník volání se zobrazí funkce, která vyvolala výjimku, spíše než tuto funkci.|  
+|`Name`|Povinná hodnota. Úplná cesta ke zdrojovému souboru nebo souborům, které mají být považovány za externí kód. Při zadávání cesty můžete použít zástupné znaky systému Windows `?` a `*`.|  
   
-## <a name="BKMK_JavaScript_Just_My_Code"></a> Pouze můj kód jazyka JavaScript  
+ **Atributy elementu funkce**  
   
-### <a name="BKMK_JS_User_and_non_user_code"></a> Uživatel a neuživatelský kód  
- **Klasifikacích kódu**  
+|Atribut|Popis|  
+|---------------|-----------------|  
+|`Name`|Povinná hodnota. Plně kvalifikovaný název funkce, která má být považována za externí kód.|  
+|`Module`|Volitelné. Název nebo úplná cesta k modulu, který obsahuje funkci. Tento atribut lze použít k nejednoznačnosti funkcí se stejným názvem.|  
+|`ExceptionImplementation`|Pokud je nastavena na `true`, zásobník volání zobrazí funkci, která výjimku vyvolala místo této funkce.|  
   
- Funkce pouze můj kód jazyka JavaScript – ovládací prvky krokování a volání Zobrazit zásobník zařazením do testovacích kód v jednom z těchto klasifikací:  
+## <a name="BKMK_JavaScript_Just_My_Code"></a>Pouze můj kód JavaScriptu  
+  
+### <a name="BKMK_JS_User_and_non_user_code"></a>Uživatel a jiný kód než uživatel  
+ **Klasifikace kódu**  
+  
+ JavaScript Pouze můj kód řídí krokování a zobrazování zásobníku volání pomocí kategorizace kódu v jedné z těchto klasifikací:  
   
 |||  
 |-|-|  
-|**MyCode**|Uživatelský kód, který vlastníte a řídíte vy.|  
-|**LibraryCode**|Neuživatelský kód z knihovny, které používáte, pravidelně a vaše aplikace závisí na fungovat správně (třeba WinJS nebo knihovny jQuery).|  
-|**UnrelatedCode**|Neuživatelský kód, který mohl být spuštěn v aplikaci, ale není vlastníkem a vaše aplikace nemusí spoléhat přímo na něm fungovala správně (například reklamní sady SDK, která zobrazuje služby Active Directory). V projektech pro Windows Store je jakýkoli kód, který je načten do vaší aplikace z HTTPS URI nebo HTTP také považován za UnrelatedCode.|  
+|**MyCode**|Uživatelský kód, který vlastníte a ovládáte.|  
+|**LibraryCode**|Neuživatelský kód z knihoven, které často používáte, a vaše aplikace spoléhá na správnou funkci (například WinJS nebo jQuery).|  
+|**UnrelatedCode**|Neuživatelský kód, který může být spuštěný v aplikaci, ale nevlastníte, a vaše aplikace přímo nespoléhá na správnou funkci (například reklamní sada SDK, která zobrazuje reklamy). V projektech Windows Store se také za UnrelatedCode považuje jakýkoliv kód, který je načten do vaší aplikace z identifikátoru URI protokolu HTTP nebo HTTPS.|  
   
- Ladicí program jazyka JavaScript automaticky rozděluje tyto typy kódu:  
+ Ladicí program JavaScriptu automaticky klasifikuje tyto typy kódu:  
   
-- Skript, který je proveden předáním řetězce hostitelské `eval` funkce je klasifikován tak **MyCode**.  
+- Skript, který je spuštěn předáním řetězce do `eval` funkce poskytnuté hostitelem, je klasifikován jako **myCode**.  
   
-- Skript, který je proveden tím, že předáte řetězec `Function` konstruktor je klasifikován tak **LibraryCode**.  
+- Skript, který je spuštěn předáním řetězce konstruktoru `Function`, je klasifikován jako **LibraryCode**.  
   
-- Skript, který je součástí odkaz na rozhraní, jako je například WinJS nebo sady Azure SDK, je klasifikován tak **LibraryCode**.  
+- Skript obsažený v odkazu na rozhraní, jako je WinJS nebo Azure SDK, je klasifikován jako **LibraryCode**.  
   
-- Skript, který je proveden tím, že předáte řetězec `setTimeout`, `setImmediate`, nebo `setInterval` funkce je klasifikován tak **UnrelatedCode**.  
+- Skript, který je spuštěn předáním řetězce do `setTimeout`, `setImmediate`nebo `setInterval` funkce jsou klasifikovány jako **UnrelatedCode**.  
   
-- `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` Určuje jiné uživatele a neuživatelský kód pro všechny projekty jazyka JavaScript Visual Studio.  
+- `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` určuje jiný uživatel a neuživatelský kód pro všechny projekty jazyka JavaScript v aplikaci Visual Studio.  
   
-  Můžete upravit výchozí klasifikace a klasifikovat určité soubory a adresy URL podle přidejte do ní soubor .json `mycode.json` ke kořenové složce projektu.  
+  Můžete upravit výchozí klasifikace a klasifikovat konkrétní soubory a adresy URL přidáním souboru. JSON s názvem `mycode.json` do kořenové složky projektu.  
   
-  Jiný kód je klasifikován tak **MyCode**.  
+  Všechny ostatní kódy jsou klasifikovány jako **myCode**.  
   
-### <a name="BKMK_JS_Stepping_behavior"></a> Chování  
+### <a name="BKMK_JS_Stepping_behavior"></a>Chování krokování  
   
-- Pokud funkce není uživatelem (**MyCode**) kód, **Krokovat s vnořením** (Klávesová zkratka: F11) se chová jako **Krokovat s přeskočením** (klávesnice: F10).  
+- Pokud funkce není uživatelem (**myCode**) kód, **Krok do** (Klávesová zkratka: F11) se chová jako **krok za krokem** (klávesnice: F10).  
   
-- Pokud krok v vstoupí v platnost od uživatele (**LibraryCode** nebo **UnrelatedCode**) kód, pak krokování dočasně se chová jako, pokud není povolena funkce pouze můj kód. Poté, co přejdete zpět do uživatelského kódu, funkce pouze můj kód krokování je znovu zapnout.  
+- Pokud krok začíná v kódu, který není uživatel (**LibraryCode** nebo **UnrelatedCode**), krok se dočasně chová, jako by pouze můj kód není povolený. Jakmile se vrátíte k uživatelskému kódu, Pouze můj kód krokování se znovu povolí.  
   
-- Když některý krok výsledky uživatelského kódu v byste museli opustit aktuální kontext spuštění (jako je vytváření kroku na posledním řádku obslužné rutiny události), ladicí program se zastaví na další spuštěných řádků kódu uživatele. Například, pokud se provede zpětné volání v **LibraryCode** kód, ladicí program bude pokračovat, dokud provede další řádek kódu uživatele.  
+- Když krok ve výsledku uživatelského kódu opustí aktuální kontext spuštění (například krok na posledním řádku obslužné rutiny události), ladicí program se zastaví na dalším spuštěném řádku uživatelského kódu. Například pokud se zpětné volání provede v kódu **LibraryCode** , ladicí program pokračuje, dokud se nespustí další řádek uživatelského kódu.  
   
-- **Krokovat s Vystoupením** (klávesnice: SHIFT + F11) zastaví na další řádek kódu uživatele. Pokud nebude nalezen žádný uživatelský kód, provádění pokračuje, dokud aplikace ukončí, dosaženo zarážky nebo dojde k výjimce.  
+- **Krok ven** (klávesnice: Shift + F11) zastaví na dalším řádku uživatelského kódu. Pokud nedojde k žádnému kódu uživatele, provádění pokračuje, dokud se aplikace neukončí, zarážka je obsazena nebo dojde k výjimce.  
   
-### <a name="BKMK_JS_Breakpoint_behavior"></a> Chování zarážky  
+### <a name="BKMK_JS_Breakpoint_behavior"></a>Chování zarážky  
   
-- Které jsou nastavené v jakýkoli kód vždy zarážky se bez ohledu na klasifikaci, že kód  
+- Zarážky, které byly nastaveny v jakémkoli kódu, budou vždy zasaženy bez ohledu na klasifikaci tohoto kódu.  
   
-- Pokud `debugger` – klíčové slovo je zaznamenáno v:  
+- Pokud je nalezeno klíčové slovo `debugger` v:  
   
-  - **LibraryCode** kód, ladicí program vždy přeruší.  
+  - **LibraryCode** kód, ladicí program se vždycky přeruší.  
 
-  - **UnrelatedCode** kód, ladicí program nelze zastavit.  
+  - **UnrelatedCode** kód, ladicí program se nezastaví.  
   
-### <a name="BKMK_JS_Exception_behavior"></a> Výjimka chování  
+### <a name="BKMK_JS_Exception_behavior"></a>Chování výjimky  
  Pokud dojde k neošetřené výjimce v:  
   
-- **MyCode** nebo **LibraryCode** kód, ladicí program vždy přeruší.  
+- Kód **myCode** nebo **LibraryCode** , ladicí program se vždy přeruší.  
   
-- **UnrelatedCode** kódu, a **MyCode** nebo **LibraryCode** kódu je v zásobníku volání, přerušení ladicího programu.  
+- Kód **UnrelatedCode** a kód **myCode** nebo **LibraryCode** jsou v zásobníku volání, ladicí program se přeruší.  
   
-  Pokud první příležitosti výjimky jsou povolené pro výjimku v dialogovém okně výjimky a je vyvolána výjimka **LibraryCode** nebo **UnrelatedCode** kódu:  
+  Pokud jsou pro výjimku v dialogovém okně výjimky povoleny první výjimky a výjimka je vyvolána v kódu **LibraryCode** nebo **UnrelatedCode** :  
   
-- Pokud je výjimka ošetřena, nedojde k narušení ladicího programu.  
+- Pokud je výjimka zpracována, ladicí program nebude přerušen.  
   
-- Pokud výjimka není zpracována, ladicí program přeruší.  
+- Pokud výjimka není zpracována, ladicí program se přeruší.  
   
-### <a name="BKMK_JS_Customize_Just_My_Code"></a> Přizpůsobení pouze můj kód  
- Ke kategorizaci uživatelů a neuživatelský kód pro jeden projekt sady Visual Studio, přidejte do ní soubor .json `mycode.json` ke kořenové složce projektu.  
+### <a name="BKMK_JS_Customize_Just_My_Code"></a>Přizpůsobení Pouze můj kód  
+ Chcete-li zařadit do kategorie uživatelský a neuživatelský kód pro jeden projekt sady Visual Studio, přidejte soubor. JSON s názvem `mycode.json` do kořenové složky projektu.  
   
- Klasifikace se provádějí v uvedeném pořadí:  
+ Klasifikace se provádějí v tomto pořadí:  
   
 1. Výchozí klasifikace  
   
-2. Klasifikacích v `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` souboru  
+2. Klasifikace v souboru `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json`  
   
-3. Klasifikacích v `mycode. json` souboru aktuálního projektu.  
+3. Klasifikace v souboru `mycode. json` aktuálního projektu.  
   
-   Každý krok klasifikace přepíše předchozí kroky. Soubor .json není nutné vypsat všechny páry klíč-hodnota a **MyCode**, **knihovny**, a **Unrelated** hodnoty mohou být prázdné pole.  
+   Každý krok klasifikace přepíše předchozí kroky. Soubor. JSON není nutné vypsat všechny páry klíč-hodnota a **myCode**, **knihovny**a **nesouvisející** hodnoty můžou být prázdná pole.  
   
-   Soubory .json kódu použijte následující syntaxi:  
+   Moje soubory Code. JSON používají tuto syntaxi:  
   
 ```json  
 {  
@@ -278,32 +278,32 @@ Vývojáři, kteří používají jazycích rozhraní .NET Framework obeznámeni
   
 ```  
   
- **(V angličtině), funkce tak vlastnost ScriptBlock**  
+ **Eval, Function a ScriptBlock**  
   
- **Eval**, **funkce**, a **ScriptBlock** páry klíč-hodnota určit, jak dynamicky generovaný kód je klasifikován.  
-  
-|||  
-|-|-|  
-|**(V angličtině)**|Skript, který je proveden předáním řetězce hostitelské `eval` funkce. Ve výchozím nastavení, vyhodnocení skriptů klasifikovaný jako **MyCode**.|  
-|**– funkce**|Skript, který je proveden tím, že předáte řetězec `Function` konstruktoru. Ve výchozím nastavení, funkce skriptu klasifikovaný jako **LibraryCode**.|  
-|**Hodnota ScriptBlock**|Skript, který je proveden tím, že předáte řetězec `setTimeout`, `setImmediate`, nebo `setInterval` funkce. Ve výchozím nastavení, skript ScriptBlock klasifikovaný jako **UnrelatedCode**.|  
-  
- Změňte hodnotu na jednu z těchto klíčových slov:  
-  
-- `MyCode`  klasifikuje skriptu jako **MyCode**.  
-  
-- `Library`  klasifikuje skriptu jako **LibraryCode**.  
-  
-- `Unrelated`  klasifikuje skriptu jako **UnrelatedCode**.  
-  
-  **MyCode, knihovny a nemá vztah**  
-  
-  **MyCode**, **knihovny**, a **Unrelated** zadejte páry klíč-hodnota adresy URL nebo soubory, které chcete zahrnout do klasifikace:  
+ Páry hodnot klíčů **Eval**, **Function**a **ScriptBlock** určují způsob klasifikovaného dynamicky generovaného kódu.  
   
 |||  
 |-|-|  
-|**MyCode**|Pole adresy URL nebo soubory, které jsou klasifikovány jako **MyCode**.|  
-|**Knihovny**|Pole adresy URL nebo soubory, které jsou klasifikovány jako **LibraryCode**.|  
-|**Nesouvisejících**|Pole adresy URL nebo soubory, které jsou klasifikovány jako **UnrelatedCode**.|  
+|**Platnost**|Skript, který se spustí předáním řetězce do funkce `eval` poskytnuté hostitelem. Ve výchozím nastavení je skript Eval klasifikován jako **myCode**.|  
+|**Slouží**|Skript, který je spuštěn předáním řetězce konstruktoru `Function`. Ve výchozím nastavení je skript funkcí klasifikován jako **LibraryCode**.|  
+|**ScriptBlock**|Skript, který je spuštěn předáním řetězce do funkce `setTimeout`, `setImmediate`nebo `setInterval`. Ve výchozím nastavení je skript ScriptBlock klasifikován jako **UnrelatedCode**.|  
   
- Řetězec adresy url nebo soubor může obsahovat jeden nebo více `*` znaků, které odpovídají nula nebo více znaků. `*` odpovídá regulárnímu výrazu `.*`.
+ Můžete změnit hodnotu na jedno z těchto klíčových slov:  
+  
+- `MyCode` klasifikuje skript jako **myCode**.  
+  
+- `Library` klasifikuje skript jako **LibraryCode**.  
+  
+- `Unrelated` klasifikuje skript jako **UnrelatedCode**.  
+  
+  **MyCode, knihovny a nesouvisející**  
+  
+  Páry klíč-hodnota **myCode**, **knihovny**a **nesouvisející** hodnoty klíčů určují adresy URL nebo soubory, které chcete zahrnout do klasifikace:  
+  
+|||  
+|-|-|  
+|**MyCode**|Pole adres URL nebo souborů, které jsou klasifikovány jako **myCode**.|  
+|**Knihovny**|Pole adres URL nebo souborů, které jsou klasifikovány jako **LibraryCode**.|  
+|**Nesouvisející**|Pole adres URL nebo souborů, které jsou klasifikovány jako **UnrelatedCode**.|  
+  
+ Adresa URL nebo řetězec souboru může obsahovat jeden nebo více `*` znaků, které se shodují s žádným nebo více znaky. `*` je ekvivalentem `.*`regulárního výrazu.
