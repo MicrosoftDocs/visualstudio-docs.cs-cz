@@ -16,15 +16,15 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: bc31b6c5286e5d02d5fd6d4da441a001f190de90
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115373"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410105"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Vytvoření síťové instalace sady Visual Studio
 
-Podnikový správce obvykle vytvoří bod instalace sítě pro nasazení do klientských pracovních stanic. Navrhli jsme aplikaci Visual Studio, která vám umožní ukládat soubory do mezipaměti pro počáteční instalaci společně se všemi aktualizacemi produktu do jediné složky. (Tento proces se také označuje jako _vytvoření rozložení platného pro_.)
+Podnikový správce obvykle vytvoří bod instalace sítě pro nasazení do klientských pracovních stanic. Navrhli jsme aplikaci Visual Studio, která vám umožní ukládat soubory do mezipaměti pro počáteční instalaci společně se všemi aktualizacemi produktu do jediné složky. (Tento proces je také označován jako _Vytvoření rozložení_.)
 
 Jsme udělali to tak, aby pracovní stanice klienta můžete používat stejné umístění v síti ke správě jejich instalace i v případě, že ještě neprovedli aktualizaci na nejnovější servisní aktualizace.
 
@@ -41,10 +41,10 @@ Další informace o tom, jak to udělat, najdete na stránce pro stažení [pře
 
 Spustitelný soubor instalace&mdash;nebo má být konkrétnější,&mdash;souboru zaváděcího nástroje by se měla shodovat s jedním z následujících způsobů.
 
-| Edice | Název souboru |
+| Edition (Edice) | Název souboru |
 |-------------|-----------------------|
-|Visual Studio Enterprise | **vs_enterprise.exe** |
-|Visual Studio Professional | **vs_professional.exe** |
+|Visual Studio Enterprise | **vs_enterprise. exe** |
+|Visual Studio Professional | **vs_professional. exe** |
 |Visual Studio Build Tools   | **vs_buildtools. exe** |
 
 Mezi další podporované zaváděcí nástroje patří **vs_feedbackclient. exe**, **vs_TeamExplorer. exe**, **vs_testagent. exe**, **vs_testcontroller. exe**a **vs_testprofessional. exe**.
@@ -55,10 +55,10 @@ Mezi další podporované zaváděcí nástroje patří **vs_feedbackclient. exe
 
 Spustitelný soubor instalace&mdash;nebo má být konkrétnější,&mdash;soubor zaváděcího nástroje by se měl shodovat nebo být podobný jednomu z následujících.
 
-|Edice | Stáhnout|
+|Edition (Edice) | Ke stažení|
 |-------------|-----------------------|
-|Visual Studio Enterprise | [**vs_enterprise.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
-|Visual Studio Professional | [**vs_professional.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
+|Visual Studio Enterprise | [**vs_enterprise. exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
+|Visual Studio Professional | [**vs_professional. exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
 | Visual Studio Build Tools   | [**vs_buildtools. exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019) |
 
 Mezi další podporované zaváděcí nástroje patří [vs_TeamExplorer. exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/4026077127d25d33789f3882998266946608d8ada378b6ed7c8fff8c07f3dde2/vs_TeamExplorer.exe), [vs_testagent. exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/1383bf8bcda3d0e986a2e42c14114aaea8a7b085d31aa0623c9f70b2bad130e4/vs_TestAgent.exe)a [vs_testcontroller. exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/54dcf24b76e7cd9fb8be0ac518a9dfba6daf18fe9b2aa1543411b1cda8820918/vs_TestController.exe).
@@ -76,7 +76,7 @@ Musíte mít internetové připojení k dokončení tohoto kroku. Chcete-li vytv
    > Kompletní rozložení sady Visual Studio vyžaduje minimálně 35 GB místa na disku a stažení může nějakou dobu trvat. Podrobné informace o tom, jak vytvořit rozložení jenom s součástmi, které chcete nainstalovat, najdete v části [přizpůsobení rozložení sítě](#customize-the-network-layout) .
    >
    > [!TIP]
-   > Ujistěte se, spusťte příkaz z adresáře ke stažení. Obvykle to `C:\Users\<username>\Downloads` v počítači se systémem Windows 10.
+   > Ujistěte se, spusťte příkaz z adresáře ke stažení. To je obvykle `C:\Users\<username>\Downloads` na počítači se systémem Windows 10.
 
 - Pro Visual Studio Enterprise spusťte:
 
@@ -88,7 +88,7 @@ Musíte mít internetové připojení k dokončení tohoto kroku. Chcete-li vytv
 
 ## <a name="modify-the-responsejson-file"></a>Upravte soubor response.json
 
-Můžete upravit response.json nastavit výchozí hodnoty, které se používají, když se spustí instalační program.  Například můžete nakonfigurovat `response.json` souboru vybrat konkrétní sadu úloh vybrat automaticky. Zobrazit [instalace automatizace sady Visual Studio souborem odpovědí](automated-installation-with-response-file.md) podrobnosti.
+Můžete upravit response.json nastavit výchozí hodnoty, které se používají, když se spustí instalační program.  Můžete třeba nakonfigurovat `response.json` soubor a vybrat konkrétní sadu úloh, které se automaticky vybraly. Podrobnosti najdete v tématu [Automatizace instalace sady Visual Studio se souborem odpovědí](automated-installation-with-response-file.md) .
 
 A pokud narazíte na problém s zaváděcím nástrojem sady Visual Studio při párování se souborem Response. JSON dojde k chybě, přečtěte si část "selhání analýzy ID z nadřazeného procesu" v tématu [řešení potíží souvisejících se sítí při instalaci nebo použití stránky sady Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md#error-failed-to-parse-id-from-parent-process) , kde najdete další informace o tom, co dělat.
 
@@ -121,12 +121,12 @@ xcopy /e c:\VSLayout \\server\products\VS2019
 
 ## <a name="customize-the-network-layout"></a>Přizpůsobení rozložení sítě
 
-Existuje několik možností, které lze použít k přizpůsobení rozvržení sítě. Lze vytvořit částečné rozložení obsahující jenom určitou sadu [národní prostředí](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales), [úlohy, komponenty a jejich doporučená nebo volitelné závislosti](workload-and-component-ids.md). To může být užitečné, pokud víte, že budete nasazovat pouze podmnožinu úloh do klientských pracovních stanic. Typické parametry příkazového řádku pro přizpůsobení rozložení patří:
+Existuje několik možností, které lze použít k přizpůsobení rozvržení sítě. Můžete vytvořit částečné rozložení, které obsahuje pouze konkrétní sadu [jazykových prostředí](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales), [zatížení, komponenty a jejich doporučené nebo volitelné závislosti](workload-and-component-ids.md). To může být užitečné, pokud víte, že budete nasazovat pouze podmnožinu úloh do klientských pracovních stanic. Typické parametry příkazového řádku pro přizpůsobení rozložení patří:
 
-* `--add` Chcete-li určit [ID úlohy nebo komponenty](workload-and-component-ids.md). <br>Pokud `--add` se používá, pouze úlohy a komponenty zadaným `--add` se stáhnou.  Pokud se `--add` nepoužívá, stáhnou se všechny úlohy a součásti.
-* `--includeRecommended` Chcete-li zahrnout všechny součásti, které jsou doporučené pro zadané ID úlohy
-* `--includeOptional` Chcete-li zahrnout všechny doporučené a volitelné součásti pro zadané ID úlohy.
-* `--lang` Chcete-li určit [národní prostředí](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales).
+* `--add` určit [ID úlohy nebo komponenty](workload-and-component-ids.md). <br>Pokud se používá `--add`, stáhnou se jenom úlohy a součásti, které jsou určené `--add`.  Pokud se `--add` nepoužívá, stáhnou se všechny úlohy a součásti.
+* `--includeRecommended` zahrnout všechny Doporučené součásti pro zadaná ID úloh
+* `--includeOptional` zahrnout všechny doporučené a volitelné komponenty pro zadaná ID úloh.
+* `--lang` určit [národní prostředí](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales).
 
 Tady je několik příkladů toho, jak vytvořit vlastní částečné rozložení.
 
@@ -222,11 +222,11 @@ Správci můžou nasadit sady Visual Studio na klientských pracovních stanic, 
 > Aby se zabránilo chybě, ujistěte se, že cesta k celému rozložení má méně než 80 znaků.
 
 > [!TIP]
-> Při spuštění jako součást dávkového souboru, `--wait` možnost zajišťuje, že `vs_enterprise.exe` proces čeká na dokončení instalace je dříve, než vrátí ukončovací kód.
+> Při spuštění jako součást dávkového souboru zajistí možnost `--wait`, že proces `vs_enterprise.exe` počká, dokud nebude instalace dokončena, než vrátí ukončovací kód.
 >
-> To je užitečné, pokud chce správce podnikové sítě provádět další akce instalace byla dokončena (například [použít kód product key pro úspěšnou instalaci](automatically-apply-product-keys-when-deploying-visual-studio.md)) ale musí počkat na dokončení zpracování instalace Návratový kód z této instalace.
+> To je užitečné v případě, že podnikový správce chce provést další akce při dokončené instalaci (například při [použití kódu Product Key pro úspěšnou instalaci](automatically-apply-product-keys-when-deploying-visual-studio.md)), ale musí počkat na dokončení instalace pro zpracování návratového kódu z této instalace.
 >
-> Pokud nepoužijete `--wait`, `vs_enterprise.exe` proces ukončí před dokončením instalace a vrátí nesprávné ukončovací kód, který nepředstavuje stavu operace instalace.
+> Pokud nepoužíváte `--wait`, proces `vs_enterprise.exe` se ukončí před dokončením instalace a vrátí nepřesný ukončovací kód, který nepředstavuje stav operace instalace.
 >
 
 ::: moniker range="vs-2019"
@@ -235,20 +235,20 @@ Správci můžou nasadit sady Visual Studio na klientských pracovních stanic, 
 >
 ::: moniker-end
 
-Při instalaci z rozložení, je obsah, který je nainstalován získaných z rozložení. Pokud však vyberete komponentu, která není v rozložení, bude získána z Internetu.  Pokud chcete zabránit ve stahování veškerý obsah, který nebyl nalezen v rozložení, použijte instalační program sady Visual Studio `--noWeb` možnost. Pokud `--noWeb` se používá a rozložení chybí veškerý obsah, který je se rozhodli nainstalovat, instalace selže.
+Při instalaci z rozložení, je obsah, který je nainstalován získaných z rozložení. Pokud však vyberete komponentu, která není v rozložení, bude získána z Internetu.  Pokud chcete, aby instalační program sady Visual Studio nestáhl obsah, který ve vašem rozložení chybí, použijte možnost `--noWeb`. Pokud se používá `--noWeb` a v rozložení chybí žádný obsah, který je vybraný k instalaci, instalace se nepovede.
 
 > [!IMPORTANT]
 > Možnost `--noWeb` neukončí instalaci sady Visual Studio ze zjišťování aktualizací. Další informace naleznete na stránce [ovládací prvky aktualizace pro síťové nasazení sady Visual Studio](controlling-updates-to-visual-studio-deployments.md) .
 
 ### <a name="error-codes"></a>Kódy chyb
 
-Pokud jste použili `--wait` parametr a potom v závislosti na výsledek operace, `%ERRORLEVEL%` proměnnou prostředí je nastavená na jednu z následujících hodnot:
+Pokud jste použili parametr `--wait` a v závislosti na výsledku operace je proměnná prostředí `%ERRORLEVEL%` nastavená na jednu z následujících hodnot:
 
 [!INCLUDE[install-error-codes-md](includes/install-error-codes-md.md)]
 
 ## <a name="update-a-network-install-layout"></a>Aktualizace rozložení instalace sítě
 
-Jakmile budou dostupné aktualizace produktu, můžete chtít [aktualizovat síťový diagram instalace](update-a-network-installation-of-visual-studio.md) začlenit aktualizované balíčky.
+Jakmile budou aktualizace produktu k dispozici, může být vhodné [Aktualizovat rozložení instalace sítě](update-a-network-installation-of-visual-studio.md) , aby zahrnovalo aktualizované balíčky.
 
 ## <a name="how-to-create-a-layout-for-a-previous-visual-studio-release"></a>Vytvoření rozložení pro předchozí vydání sady Visual Studio
 
@@ -278,18 +278,18 @@ Pokud potřebujete vytvořit rozložení pro starší verzi sady Visual Studio, 
 
 ### <a name="how-to-get-support-for-your-offline-installer"></a>Jak získat podporu pro offline instalační program
 
-Pokud dochází k potížím s offline instalací chcete vědět o něm. Nejlepší způsob, jak Řekněte nám, je použít [nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio.md) nástroj. Při použití tohoto nástroje můžete nám odeslat telemetrii a protokoly, musíme pomáhají diagnostikovat a opravit problém.
+Pokud dochází k potížím s offline instalací chcete vědět o něm. Nejlepším způsobem, jak nás říct, je použití nástroje [nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio.md) . Při použití tohoto nástroje můžete nám odeslat telemetrii a protokoly, musíme pomáhají diagnostikovat a opravit problém.
 
-Nabízíme také [ **živý chat** ](https://visualstudio.microsoft.com/vs/support/#talktous) (jenom v angličtině) možnost podpory pro problémy související s instalací.
+Nabízíme také [**živý chat**](https://visualstudio.microsoft.com/vs/support/#talktous) (jenom v angličtině), který umožňuje problémy související s instalací.
 
 Další možnosti podpory dostupné, máme příliš. Seznam najdete na naší stránce s [názory na zpětnou vazbu](../ide/feedback-options.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Příručka pro správce aplikace Visual Studio](visual-studio-administrator-guide.md)
+- [Příručka pro správce sady Visual Studio](visual-studio-administrator-guide.md)
 - [Aktualizace síťové instalace sady Visual Studio](update-a-network-installation-of-visual-studio.md)
 - [Řešení chyb souvisejících se sítí při instalaci nebo používání sady Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md)
-- [Řízení aktualizací nasazení sady Visual Studio založené na síti](controlling-updates-to-visual-studio-deployments.md)
+- [Řízení aktualizací pro nasazení sady Visual Studio založené na síti](controlling-updates-to-visual-studio-deployments.md)
 - [Životní cyklus produktu Visual Studio a údržba](/visualstudio/releases/2019/servicing/)
 - [Aktualizace sady Visual Studio na standardních hodnotách údržby](update-servicing-baseline.md)
 - [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)

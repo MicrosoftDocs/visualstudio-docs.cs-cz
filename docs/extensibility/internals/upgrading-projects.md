@@ -13,11 +13,11 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9170532746dfc61cdec6636fb669676a94535de1
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75848772"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409130"
 ---
 # <a name="upgrading-projects"></a>Upgrade projektů
 
@@ -50,7 +50,7 @@ Po aktualizaci všech relevantních globálních souborů může každý objekt 
 > [!NOTE]
 > Metoda <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> neposkytuje službu SVsUpgradeLogger. Tuto službu lze získat voláním <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A>.
 
-## <a name="best-practices"></a>Doporučené postupy
+## <a name="best-practices"></a>Osvědčené postupy
 
 Službu <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> použijte ke kontrole, jestli soubor před úpravou nemůžete upravit, a můžete ho před uložením Uložit. To pomůže vašim implementacím zálohování a upgradu zpracovat soubory projektu v rámci správy zdrojového kódu, souborů s nedostatečnými oprávněními a tak dále.
 
@@ -179,6 +179,6 @@ Implementací položek projektu obvykle chtějí využít již plně sestavený 
 
 2. V okamžiku, kdy položka projektu získá oznámení o upgradu projektu, je stále zobrazen **Průvodce převodem sady Visual Studio** . Proto byste měli použít metody rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsUpgradeLogger> k poskytnutí zpráv upgradu do uživatelského rozhraní průvodce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Projekty](../../extensibility/internals/projects.md)
