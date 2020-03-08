@@ -1,5 +1,5 @@
 ---
-title: Vývoj aplikací pomocí Návrháře postupu provádění
+title: Vývoj aplikací pomocí návrháře postupu provádění
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,11 +17,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 51c38a16ddbdca376dbc9788ca49783c7956d101
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597084"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409154"
 ---
 # <a name="develop-apps-with-the-workflow-designer"></a>Vývoj aplikací pomocí Návrháře postupu provádění
 
@@ -43,6 +43,6 @@ Chcete-li použít šablony projektu pracovního postupu v aplikaci Visual Studi
 
    Visual Studio nainstaluje komponentu **programovací model Windows Workflow Foundation** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Programovací model Windows Workflow Foundation (.NET Framework)](/dotnet/framework/windows-workflow-foundation/index)

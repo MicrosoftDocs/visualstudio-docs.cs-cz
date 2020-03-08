@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
 ms.openlocfilehash: 7b9df8c5609c92a6b6631d1ed9fdda8d65e9b605
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911799"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408708"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>Konfigurace projektu Azure v sadě Visual Studio za účelem použití více konfigurací služby
 
@@ -39,7 +39,7 @@ Vybere, na které `ServiceConfiguration.*.cscfg` soubor ovlivňuje změny. Ve v�
 
 Nastavte vlastnost počet **instancí** na počet instancí, které má služba spustit pro tuto roli.
 
-Nastavte vlastnost **Velikost virtuálního počítače** tak, aby byla větší než **malá**, **malá**, **střední**, **Velká**nebo **velmi velká**.  Další informace najdete v tématu [velikosti pro Cloud Services](/azure/cloud-services/cloud-services-sizes-specs).
+Nastavte vlastnost **Velikost virtuálního počítače** tak, aby byla větší než **malá**, **malá**, **střední**, **Velká**nebo **velmi velká**.  Další informace najdete v článku [Velikosti cloudových služeb](/azure/cloud-services/cloud-services-sizes-specs).
 
 ### <a name="startup-action-web-role-only"></a>Spouštěcí akce (jenom webová role)
 
@@ -53,7 +53,7 @@ Pokud jste už přidali koncový bod HTTPS, je ve výchozím nastavení povolen�
 
 Ve výchozím nastavení jsou pro webovou roli povoleny diagnostiky. Projekt cloudové služby Azure a účet úložiště se nastaví tak, aby používal emulátor místního úložiště. Až budete připraveni k nasazení do Azure, můžete vybrat tlačítko Tvůrce ( **...** ) a místo toho použít službu Azure Storage. Diagnostická data můžete přenést na účet úložiště na vyžádání nebo v automaticky naplánovaných intervalech. Další informace o diagnostice Azure najdete v tématu [Povolení diagnostiky v azure Cloud Services a Virtual Machines](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
-## <a name="settings-page"></a>Stránka nastavení
+## <a name="settings-page"></a>Stránka Nastavení
 
 Na stránce **Nastavení** můžete přidat nastavení do konfigurace jako páry název-hodnota. Kód spuštěný v roli může číst hodnoty nastavení konfigurace za běhu pomocí tříd poskytovaných [spravovanou knihovnou Azure](/previous-versions/azure/dn602775(v=azure.11)), konkrétně metodou [GetConfigurationSettingValue](/previous-versions/azure/reference/ee772857(v=azure.100)) .
 
@@ -93,7 +93,7 @@ Webová role má obvykle jeden koncový bod HTTP na portu 80. Role pracovního p
 
 Pomocí stránky vlastností **místního úložiště** můžete rezervovat jeden nebo více prostředků místního úložiště pro roli. Prostředek místního úložiště je rezervovaný adresář v systému souborů virtuálního počítače Azure, ve kterém je spuštěná instance role.
 
-## <a name="certificates-page"></a>Stránka certifikáty
+## <a name="certificates-page"></a>Stránka certifikátů
 
 Stránka vlastností **certifikáty** přidává do vaší konfigurace služby informace o certifikátech. Všimněte si, že vaše certifikáty nejsou součástí vaší služby. své certifikáty musíte nahrát samostatně do Azure prostřednictvím [Azure Portal](https://portal.azure.com).
 

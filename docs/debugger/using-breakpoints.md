@@ -1,5 +1,5 @@
 ---
-title: Použití zarážek v ladicím programu | Microsoft Docs
+title: Používání zarážek v ladicím programu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 10/28/2019
 ms.topic: conceptual
@@ -35,30 +35,30 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a6a8ee96834fc20186ba6719a7c4f377fea45d6b
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187318"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409239"
 ---
-# <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Použití zarážek v ladicím programu sady Visual Studio
+# <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Používání zarážek v ladicím programu sady Visual Studio
 
-Zarážky jsou jedním z nejdůležitějších technik ladění v sadě nástrojů pro vývojáře. Zarážky se nastavují všude, kde chcete pozastavit spuštění ladicího programu. Například můžete chtít zobrazit stav proměnných kódu nebo se podívat na zásobník volání na určitou zarážku.  Pokud se snažíte vyřešit upozornění nebo problém při použití zarážek, přečtěte si téma [řešení potíží se zarážkami v ladicím programu sady Visual Studio](../debugger/troubleshooting-breakpoints.md).
+Zarážky jsou jedním z nejdůležitějších technik ladění mezi nástroji pro vývojáře sady nástrojů. Můžete nastavit zarážky, bez ohledu na to chcete provést pozastavení spuštění ladicího programu. Můžete například zobrazit stav proměnných kódu se také podívat na zásobník volání na určité zarážce.  Pokud se snažíte vyřešit upozornění nebo problém při použití zarážek, přečtěte si téma [řešení potíží se zarážkami v ladicím programu sady Visual Studio](../debugger/troubleshooting-breakpoints.md).
 
 > [!NOTE]
 > Pokud znáte úlohu nebo problém, který se snažíte vyřešit, ale potřebujete znát, jaký typ zarážky chcete použít, přečtěte si téma [vyhledání úlohy ladění](../debugger/find-your-debugging-task.md#pause-running-code).
 
 ## <a name="BKMK_Overview"></a>Nastavení zarážek ve zdrojovém kódu
 
-Zarážku můžete nastavit na jakémkoli řádku spustitelného kódu. Například v následujícím C# kódu můžete nastavit zarážku na deklaraci proměnné,`for`smyčku nebo jakýkoli kód uvnitř smyčky`for`. Nelze nastavit zarážku na deklaracech oboru názvů nebo třídy nebo na podpis metody.
+Můžete nastavit zarážku na kterýkoli řádek spustitelného kódu. Například v následujícím C# kódu můžete nastavit zarážku na deklaraci proměnné, `for` smyčku nebo jakýkoli kód uvnitř smyčky `for`. Deklarace oboru názvů nebo třídy, nebo v podpisu metody nelze nastavit zarážku.
 
-Chcete-li nastavit zarážku ve zdrojovém kódu, klikněte na levý levý okraj vedle řádku kódu. Můžete také vybrat řádek a stisknout klávesu **F9**, vybrat položku **ladění** > **Přepnout zarážku**, nebo kliknout pravým tlačítkem a vybrat **zarážku** > **Vložit zarážku**. Zarážka se zobrazuje na levém okraji jako červená tečka.
+Pokud chcete nastavit zarážku ve zdrojovém kódu, klikněte v levém okraji vedle řádku kódu. Můžete také vybrat řádek a stisknout klávesu **F9**, vybrat položku **ladění** > **Přepnout zarážku**, nebo kliknout pravým tlačítkem a vybrat **zarážku** > **Vložit zarážku**. Zarážka se zobrazí jako červená tečka na levém okraji.
 
 Pro většinu jazyků, C#včetně, zarážky a aktuální řádky spuštění jsou automaticky zvýrazněny. Pro C++ kód můžete zapnout zvýraznění zarážky a aktuální řádky výběrem **nástrojů** (nebo **ladění**) > **možností** > **ladění** >  **zvýraznit celý zdrojový řádek pro zarážky a aktuální příkaz (C++ pouze)** .
 
 ![Nastavit zarážku](../debugger/media/basicbreakpoint.png "Základní zarážka")
 
-Při ladění se spuštění pozastaví na zarážce, než se kód na tomto řádku spustí. Symbol zarážky zobrazuje žlutou šipku.
+Při ladění, spouštění pozastavení na zarážce, před provedením kódu na daném řádku. Žlutá šipka se zobrazí symbol zarážky.
 
 Na zarážce v následujícím příkladu je hodnota `testInt` stále 1. Proto se hodnota od inicializace proměnné nezměnila (nastavená na hodnotu 1), protože příkaz žlutý nebyl dosud proveden.
 
@@ -68,7 +68,7 @@ Když se ladicí program zastaví na zarážce, můžete se podívat na aktuáln
 
 Zde je několik obecných pokynů pro práci se zarážkami.
 
-- Zarážka je přepínač. Můžete na ni kliknout, stisknout klávesu **F9**nebo použít **ladění** > **přepínací zarážku** , aby ji bylo možné odstranit nebo znovu vložit.
+- Zarážka je přepínací tlačítko. Můžete na ni kliknout, stisknout klávesu **F9**nebo použít **ladění** > **přepínací zarážku** , aby ji bylo možné odstranit nebo znovu vložit.
 
 - Chcete-li zakázat zarážku bez jejich odstranění, najeďte myší na ni nebo klikněte na ni pravým tlačítkem a vyberte možnost **Zakázat zarážku**. Zakázané zarážky se zobrazují jako prázdné tečky v levém okraji nebo v okně **zarážky** . Pokud chcete zarážku znovu povolit, najeďte myší na ni nebo klikněte na ni pravým tlačítkem a vyberte **Povolit zarážku**.
 
@@ -80,7 +80,7 @@ Zde je několik obecných pokynů pro práci se zarážkami.
 
 ## <a name="breakpoint-conditions"></a>Podmínky zarážky
 
-Můžete určit, kdy a kde se zarážka spustí, nastavením podmínek. Podmínkou může být libovolný platný výraz, který ladicí program rozpozná. Další informace o platných výrazech naleznete v tématu [výrazy v ladicím programu](../debugger/expressions-in-the-debugger.md).
+Můžete řídit, kdy a kde se zarážky spouštějí nastavením podmínky. Podmínka může být libovolný platný výraz, který ladicí program rozpozná. Další informace o platných výrazech naleznete v tématu [výrazy v ladicím programu](../debugger/expressions-in-the-debugger.md).
 
 **Nastavení podmínky zarážky:**
 
@@ -109,64 +109,64 @@ V následujícím příkladu je zarážka volána pouze v případě, že se zm�
 
 ![Zarážka při změně](../debugger/media/breakpointwhenchanged.png "Zarážka při změně")
 
-Pokud nastavíte podmínku zarážky s neplatnou syntaxí, zobrazí se varovná zpráva. Zadáte-li podmínku zarážky s platnou syntaxí, ale neplatnou sémantikou, zobrazí se při prvním průchodu zarážky zpráva s upozorněním. V obou případech dojde k přerušení ladicího programu, pokud narazí na neplatnou zarážku. Zarážka je přeskočena pouze v případě, že je podmínka platná a je vyhodnocena jako `false`.
+Pokud nastavíte podmínku zarážky s neplatnou syntaxí, zobrazí se zpráva s upozorněním. Pokud zadáte podmínku zarážky s platnou syntaxi ale s neplatnou sémantikou, zobrazí se upozornění při prvním dosažení zarážky. V obou případech ladicí program přeruší při volání zarážky neplatné. Zarážka je přeskočena pouze v případě, že je podmínka platná a je vyhodnocena jako `false`.
 
 >[!NOTE]
 >Chování pole když se **změnilo** v různých programovacích jazycích.
->- V případě nativního kódu ladicí program nebere v úvahu první vyhodnocení podmínky, že se má změnit, takže při prvním vyhodnocení nezasáhne zarážku.
+>- Pro nativní kód ladicí program nezahrne hodnocení první podmínku, která má být změněna, takže nebude zarážce při prvním hodnocení.
 >- Pro spravovaný kód ladicí program po zvolení **změny** vyhledá zarážku na prvním vyhodnocení.
 
 <a name="using-object-ids-in-breakpoint-conditions-c-and-f"></a>
 ### <a name="use-object-ids-in-conditional-expressions-c-and-f-only"></a>Použití ID objektů v podmíněnýchC# výrazech (a F# pouze)
 
- Existují situace, kdy chcete sledovat chování určitého objektu. Například může být vhodné zjistit, proč byl objekt vložen do kolekce více než jednou. V C# a F#můžete vytvořit ID objektů pro konkrétní instance [odkazových typů](/dotnet/csharp/language-reference/keywords/reference-types)a použít je v podmínkách zarážek. ID objektu je vygenerováno službami ladění modulu CLR (Common Language Runtime) a přidruženy k objektu.
+ Existují situace, kdy budete chtít sledovat chování s určitým objektem. Můžete třeba chtít zjistit, proč objekt byl vložen do kolekce více než jednou. V C# a F#můžete vytvořit ID objektů pro konkrétní instance [odkazových typů](/dotnet/csharp/language-reference/keywords/reference-types)a použít je v podmínkách zarážek. ID objektu je generována modulem common language runtime (CLR) ladění služeb a přidružená k objektu.
 
 **Vytvoření ID objektu:**
 
-1. Nastavte zarážku v kódu na místo, kde je objekt vytvořen.
+1. Nastavte zarážku v kódu některém místě po vytvoření objektu.
 
 2. Spustit ladění a když se spuštění pozastaví na zarážce, vyberte **ladit** > **Windows** > **Locals** nebo **ALT**+**4** pro otevření okna **místní** hodnoty.
 
    V okně **místní** hodnoty Najděte konkrétní instanci objektu, klikněte na ni pravým tlačítkem myši a vyberte **vytvořit ID objektu**.
 
-   V okně **místní** hodnoty by se měla zobrazit **$** plus číslo. Toto je ID objektu.
+   V okně **místní** hodnoty by se měla zobrazit **$** plus číslo. To je ID objektu.
 
-3. Přidejte novou zarážku v bodu, který chcete prozkoumat; například při přidání objektu do kolekce. Klikněte pravým tlačítkem na zarážku a vyberte **podmínky**.
+3. Přidat novou zarážku v okamžiku, kdy chcete prozkoumat; například když je přidán do kolekce. Klikněte pravým tlačítkem na zarážku a vyberte **podmínky**.
 
 4. V poli **podmíněný výraz** použijte ID objektu. Pokud je například proměnná `item` objekt, který má být přidán do kolekce, vyberte **má hodnotu true** a zadejte **Item = = $\<n >** , kde \<n > je číslo ID objektu.
 
-   Spuštění bude přerušeno v okamžiku, kdy má být objekt přidán do kolekce.
+   Spuštění se přeruší v okamžiku, když je přidán do kolekce.
 
    Chcete-li odstranit ID objektu, klikněte pravým tlačítkem myši na proměnnou v okně **místní** hodnoty a vyberte **Odstranit ID objektu**.
 
 > [!NOTE]
-> ID objektů vytvářejí slabé odkazy a nebrání v uvolňování paměti objektu. Jsou platné pouze pro aktuální relaci ladění.
+> ID objektů vytvořit slabé odkazy a nezabrání objektu je uvolněna z paměti. Jsou platné pouze pro aktuální relaci ladění.
 
 ### <a name="set-a-hit-count-condition"></a>Nastavení podmínky počtu přístupů
 
 Pokud máte podezření, že se smyčka v kódu začne chovat po určitém počtu iterací, můžete nastavit zarážku, aby se po tomto počtu přístupů zastavilo provádění, a nemusíte opakovaně stisknout klávesu **F5** , aby se dosáhlo této iterace.
 
-V části **podmínky** v okně **Nastavení zarážky** vyberte **Počet přístupů**a pak zadejte počet iterací. V následujícím příkladu je zarážka nastavená tak, aby se vyčerpala v každé jiné iteraci:
+V části **podmínky** v okně **Nastavení zarážky** vyberte **Počet přístupů**a pak zadejte počet iterací. V následujícím příkladu je nastavena zarážka narazí při každé iteraci:
 
 ![Počet volání zarážky](../debugger/media/breakpointhitcount.png "BreakpointHitCount")
 
 ### <a name="set-a-filter-condition"></a>Nastavení podmínky filtru
 
-Zarážku můžete omezit tak, aby se aktivovala jenom na zadaných zařízeních, nebo v zadaných procesech a vláknech.
+Můžete omezit zarážku, chcete-li vyvolat pouze na zadané zařízení nebo v konkrétních procesů a vláken.
 
 V **okně** **Nastavení zarážky** vyberte **Filtr**a potom zadejte jeden nebo více následujících výrazů:
 
-- Nazev_pocitace = "Name"
+- MachineName = "name"
 - ProcessId = hodnota
-- Název procesu = "Name"
-- IDvlákna = hodnota
-- Thread = "Name"
+- ProcessName = "name"
+- ThreadId = hodnota
+- ThreadName = "name"
 
-Uzavřete řetězcové hodnoty do dvojitých uvozovek. Klauzule lze kombinovat pomocí `&` (a), `||` (nebo), `!` (NOT) a závorek.
+Řetězcové hodnoty uzavřete do dvojitých uvozovek. Klauzule lze kombinovat pomocí `&` (a), `||` (nebo), `!` (NOT) a závorek.
 
 ## <a name="BKMK_Set_a_breakpoint_in_a_source_file"></a>Nastavení zarážek funkcí
 
-Můžete přerušit provádění při volání funkce. To je užitečné, například když znáte název funkce, ale ne její umístění. Je také užitečné, pokud máte funkce se stejným názvem a chcete je rozdělit na všechny (například přetížené funkce nebo funkce v různých projektech).
+Můžete přerušit běh při volání funkce. To je užitečné, například když znáte název funkce, ale ne její umístění. Je také užitečné, pokud máte funkce se stejným názvem a chcete je rozdělit na všechny (například přetížené funkce nebo funkce v různých projektech).
 
 **Nastavení zarážky funkce:**
 
@@ -176,9 +176,9 @@ Můžete přerušit provádění při volání funkce. To je užitečné, např�
 
 1. V dialogovém okně **Nová zarážka funkce** zadejte do pole **název funkce** název funkce.
 
-   Zúžení specifikace funkce:
+   Chcete-li zúžit specifikaci funkce:
 
-   - Použijte plně kvalifikovaný název funkce.
+   - Pomocí funkce plně kvalifikovaného názvu.
 
      Příklad: `Namespace1.ClassX.MethodA()`
 
@@ -186,11 +186,11 @@ Můžete přerušit provádění při volání funkce. To je užitečné, např�
 
      Příklad: `MethodA(int, string)`
 
-   - K určení modulu použijte symbol '! '.
+   - Používá "!" symbolů k určení modulu.
 
      Příklad: `App1.dll!MethodA`
 
-   - Použijte kontextový operátor v nativním režimu C++.
+   - Použijte operátor kontextu v nativním kódu C++.
 
      `{function, , [module]} [+<line offset from start of method>]`
 
@@ -200,10 +200,10 @@ Můžete přerušit provádění při volání funkce. To je užitečné, např�
 
 1. Vyberte **OK**.
 
-### <a name="set-a-function-breakpoint-using-a-memory-address-native-c-only"></a>Nastavení zarážky funkce pomocí adresy paměti (pouze nativní C++ )
- Můžete použít adresu objektu pro nastavení zarážky funkce pro metodu volanou určitou instancí třídy.  Například vzhledem k adresovatelné objektu typu `my_class`můžete nastavit zarážku funkce v metodě `my_method`, kterou instance volá.
+### <a name="set-a-function-breakpoint-using-a-memory-address-native-c-only"></a>Nastavení zarážky funkce pomocí adresy paměti (pouze nativní C++)
+ Chcete-li nastavit zarážku funkce v metodě volané konkrétní instanci třídy můžete adresu objektu.  Například vzhledem k adresovatelné objektu typu `my_class`můžete nastavit zarážku funkce v metodě `my_method`, kterou instance volá.
 
-1. Nastavte zarážku někam po vytvoření instance třídy.
+1. Nastavte zarážku někde, jakmile je vytvořena instance třídy.
 
 2. Vyhledejte adresu instance (například `0xcccccccc`).
 
@@ -240,11 +240,11 @@ Datové zarážky v .NET Core nebudou fungovat pro:
 
 ## <a name="BKMK_set_a_data_breakpoint_native_cplusplus"></a>Nastavit zarážky dat (pouze C++ nativní)
 
- Datové zarážky přeruší provádění, když se změní hodnota uložená v zadané adrese paměti. Pokud je hodnota čtena, ale nemění se, provádění není přerušeno.
+ Body zarážek přeruší provádění když hodnota uložená v paměti zadaná adresa změní. Pokud hodnota je číst, ale nebyl změněn, spuštění nebude přerušeno.
 
 **Nastavení datové zarážky:**
 
-1. V C++ projektu spusťte ladění a počkejte na dosažení zarážky. V nabídce **ladění** vyberte možnost **nová zarážka** > **datové zarážky** .
+1. V projektu jazyka C++ spustit ladění a počkejte, dokud není dosaženo zarážky. V nabídce **ladění** vyberte možnost **nová zarážka** > **datové zarážky** .
 
     V okně **zarážky** můžete také vybrat **Nový** > **datové zarážky** nebo kliknout pravým tlačítkem myši na položku v okně **Automatické**hodnoty, **kukátko**nebo **místních** hodnot a vybrat možnost **přerušit při změně hodnoty** v místní nabídce.
 
@@ -252,28 +252,28 @@ Datové zarážky v .NET Core nebudou fungovat pro:
 
 3. V rozevíracím seznamu **počet bajtů** vyberte počet bajtů, které má ladicí program sledovat. Pokud například vyberete **4**, ladicí program bude sledovat čtyři bajty počínaje `&avar` a přerušit, pokud kterákoli z těchto bajtů změní hodnotu.
 
-Datové zarážky nefungují za následujících podmínek:
-- Proces, který neladí zápisy do umístění v paměti.
-- Umístění v paměti je sdíleno mezi dvěma nebo více procesy.
+Zarážky data nefungují za těchto podmínek:
+- Proces, který se neladí se zapíše do umístění v paměti.
+- Umístění v paměti jsou sdílena mezi dvěma nebo více procesy.
 - Umístění v paměti je aktualizováno v rámci jádra. Například pokud je paměť předána funkci 32 Windows `ReadFile`, paměť bude aktualizována z režimu jádra, takže ladicí program nebude u aktualizace přerušen.
 - Kde výraz kukátka je větší než 4 bajty na 32ovém hardwaru a 8 bajtů na 64 bitového hardwaru. Toto je omezení architektury x86.
 
 > [!NOTE]
-> - Datové zarážky závisí na konkrétních adresách paměti. Adresa proměnné se mění z jedné relace ladění na další, takže se na konci každé relace ladění automaticky zakážou datové zarážky.
+> - Datové zarážky, závisí na konkrétní paměťové adresy. Adresa proměnné změny z jedné relace ladění na další, abyste na konci každé relace ladění jsou automaticky zakázány datové zarážky.
 >
-> - Pokud nastavíte zarážku dat na lokální proměnné, zarážka zůstane povolena, když funkce skončí, ale adresa paměti již není platná, takže chování zarážky je nepředvídatelné. Pokud nastavíte zarážku dat na lokální proměnné, měli byste před ukončením funkce odstranit nebo zakázat zarážku.
+> - Pokud nastavíte zarážku dat na lokální proměnné, zarážka zůstane povolena po skončení funkce, ale adresa paměti není nadále vhodné, takže nepředvídatelné chování zarážky. Pokud nastavíte zarážku dat na lokální proměnné, musíte odstranit nebo zakázat zarážku před ukončením funkce.
 
 ## <a name="BKMK_Specify_advanced_properties_of_a_breakpoint_"></a>Správa zarážek v okně zarážky
 
- Okno **zarážky** můžete použít k zobrazení a správě všech zarážek ve vašem řešení. Toto centralizované umístění je zvláště užitečné ve velkých řešeních nebo pro složité scénáře ladění, kde jsou zarážky kritické.
+ Okno **zarážky** můžete použít k zobrazení a správě všech zarážek ve vašem řešení. Toto centralizované umístění je zvláště užitečné v na velkých projektech nebo pro komplexní scénáře ladění, kde jsou zarážky nezbytné.
 
-V okně **zarážky** můžete vyhledat, seřadit, filtrovat, povolit nebo zakázat nebo odstranit zarážky. Můžete také nastavit podmínky a akce nebo přidat novou funkci nebo datovou zarážku.
+V okně **zarážky** můžete vyhledat, seřadit, filtrovat, povolit nebo zakázat nebo odstranit zarážky. Můžete také nastavit podmínky a akce nebo přidat nové funkce nebo datová zarážka.
 
 Chcete-li otevřít okno **zarážky** , vyberte možnost **ladění** > **Windows** > **zarážky**nebo stiskněte klávesy **ALT**+**F9** nebo **CTRL**+**ALT**+**B**.
 
 ![Okno zarážek](../debugger/media/breakpointswindow.png "Zarážky – okno")
 
-Chcete-li vybrat sloupce, které mají být zobrazeny v okně **zarážky** , vyberte možnost **Zobrazit sloupce**. Vyberte záhlaví sloupce pro seřazení seznamu zarážek podle daného sloupce.
+Chcete-li vybrat sloupce, které mají být zobrazeny v okně **zarážky** , vyberte možnost **Zobrazit sloupce**. Vyberte záhlaví sloupce řazení podle sloupce v seznamu zarážek.
 
 ### <a name="BKMK_Set_a_breakpoint_at_a_function_return_in_the_Call_Stack_window"></a>Popisky zarážek
 Štítky lze použít k řazení a filtrování seznamu zarážek v okně **zarážky** .
@@ -281,10 +281,10 @@ Chcete-li vybrat sloupce, které mají být zobrazeny v okně **zarážky** , vy
 1. Chcete-li přidat popisek ke zarážce, klikněte pravým tlačítkem myši na zarážku v okně zdrojového kódu nebo v okně **zarážky** a pak vyberte **Upravit popisky**. Přidejte nový popisek nebo zvolte existující a pak vyberte **OK**.
 2. V okně **zarážky** seřaďte seznam zarážek tak, že vyberete **popisky**, **podmínky**nebo jiná záhlaví sloupců. Výběrem možnosti **Zobrazit sloupce** na panelu nástrojů můžete vybrat sloupce, které chcete zobrazit.
 
-### <a name="export-and-import-breakpoints"></a>Export a import zarážek
- Chcete-li uložit nebo sdílet stav a umístění zarážek, můžete je exportovat nebo importovat.
+### <a name="export-and-import-breakpoints"></a>Zarážky exportu a importu
+ Pokud chcete uložit nebo sdílet stav a umístění vašich zarážek, můžete exportovat nebo importovat.
 
-- Chcete-li exportovat jednu zarážku do souboru XML, klikněte pravým tlačítkem myši na zarážku v okně zdrojového kódu nebo **zarážky** a vyberte **exportovat** nebo **Exportovat vybrané**. Vyberte umístění exportu a pak vyberte **Uložit**. Výchozím umístěním je složka řešení.
+- Chcete-li exportovat jednu zarážku do souboru XML, klikněte pravým tlačítkem myši na zarážku v okně zdrojového kódu nebo **zarážky** a vyberte **exportovat** nebo **Exportovat vybrané**. Vyberte umístění exportu a pak vyberte **Uložit**. Výchozí umístění je složky řešení.
 - Chcete-li exportovat několik zarážek, zaškrtněte v okně **zarážky** pole vedle zarážek nebo zadejte vyhledávací kritéria do **vyhledávacího** pole. Vyberte **exportovat všechny zarážky, které odpovídají ikoně aktuálního kritéria hledání** , a uložte soubor.
 - Chcete-li exportovat všechny zarážky, zrušte výběr všech polí a nechte pole **Hledat** prázdné. Vyberte **exportovat všechny zarážky, které odpovídají ikoně aktuálního kritéria hledání** , a uložte soubor.
 - Chcete-li importovat zarážky, vyberte v okně **zarážky** položku **importovat zarážky z ikony souboru** , přejděte do umístění souboru XML a vyberte možnost **otevřít**.
@@ -303,11 +303,11 @@ Můžete také nastavit zarážky z okna ladicího programu **zásobníku volán
 
 2. V okně **zásobník volání** klikněte pravým tlačítkem myši na volání funkce a vyberte **zarážku** > **Vložit zarážku**nebo stiskněte **F9**.
 
-   Symbol zarážky se zobrazí vedle názvu volání funkce na levém okraji zásobníku volání.
+   Vedle názvu volání funkce v zásobníku volání na levém okraji se zobrazí symbol zarážky.
 
 Zarážka zásobníku volání se zobrazí v okně **zarážky** jako adresa s umístěním v paměti, které odpovídá další spustitelné instrukci ve funkci.
 
-Ladicí program se v instrukci přerušuje.
+Ladicí program přeruší podle instrukce.
 
 Další informace o zásobníku volání naleznete v tématu [Postupy: použití okna zásobník volání](../debugger/how-to-use-the-call-stack-window.md).
 
@@ -319,7 +319,7 @@ Chcete-li vizuálně sledovat zarážky během provádění kódu, viz [metody m
 
 2. V okně **zpětný překlad** klikněte na levý okraj instrukce, na kterou chcete přerušit. Můžete ji také vybrat a stisknout klávesu **F9**nebo kliknout pravým tlačítkem a vybrat **zarážku** > **Vložit zarážku**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Co je ladění?](../debugger/what-is-debugging.md)
 - [Psaní lepšího C# kódu pomocí sady Visual Studio](../debugger/write-better-code-with-visual-studio.md)

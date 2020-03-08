@@ -12,19 +12,19 @@ ms.topic: conceptual
 ms.date: 03/21/2017
 ms.author: ghogen
 ms.openlocfilehash: 810ebfcfb4cb4354c3df4c0d9892a37ca1624256
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67692085"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410044"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>Konfigurace rolí cloudové služby Azure v sadě Visual Studio
-Cloudové služby Azure může mít jednu nebo více pracovních procesů nebo webové role. Pro každou roli budete muset definovat, jak nastavit tuto roli a také nakonfigurovat tak, jak tuto roli běží. Další informace o rolích v cloudových službách, podívejte se na video [Úvod do služby Azure Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services).
+Cloudové služby Azure může mít jednu nebo více pracovních procesů nebo webové role. Pro každou roli budete muset definovat, jak nastavit tuto roli a také nakonfigurovat tak, jak tuto roli běží. Další informace o rolích v cloudových službách najdete v tématu [Úvod do Azure Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services).
 
 Informace pro cloudové služby jsou uloženy v následující soubory:
 
-- **Soubor ServiceDefinition.csdef** – definiční soubor služby definuje nastavení běhového prostředí pro cloudové služby, včetně toho, jaké role jsou povinné, koncové body a velikost virtuálního počítače. Žádná z dat uložených v `ServiceDefinition.csdef` lze změnit, pokud vaše role běží.
-- **Soubor ServiceConfiguration.cscfg** – konfigurační soubor služby nakonfiguruje, kolik instancí role jsou spuštěny a hodnoty nastavení definované pro roli. Data uložená v `ServiceConfiguration.cscfg` lze změnit, když vaše role běží.
+- **ServiceDefinition. csdef** – definiční soubor služby definuje nastavení modulu runtime pro vaši cloudovou službu, včetně toho, jaké role jsou povinné, koncové body a velikost virtuálního počítače. Žádná data uložená v `ServiceDefinition.csdef` nelze změnit, pokud je vaše role spuštěna.
+- **ServiceConfiguration. cscfg** – konfigurační soubor služby nakonfiguruje, kolik instancí role je spuštěno, a hodnoty nastavení definované pro roli. Data uložená v `ServiceConfiguration.cscfg` lze změnit i v případě, že vaše role běží.
 
 Pokud chcete uchovávat různé hodnoty pro nastavení, které řídí vykonávání roli, můžete definovat více konfigurací služby. Pro jednotlivá prostředí nasazení můžete použít konfiguraci jinou službu. Můžete třeba nastavit připojovací řetězec účtu úložiště pomocí emulátoru lokálního úložiště Azure v místní službě konfigurace a vytvořit další konfigurace služby pro použití služby Azure storage v cloudu.
 
@@ -38,48 +38,48 @@ Cloudové služby Azure z Průzkumníka řešení v sadě Visual Studio, můžet
 
 1. Vytvořte nebo otevřete v sadě Visual Studio projekt cloudové služby Azure.
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a v místní nabídce vyberte **vlastnosti**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte možnost **vlastnosti**.
 
     ![Místní nabídky projektu Průzkumníka řešení](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-project-context-menu.png)
 
-1. Na stránce vlastností projektu, vyberte **vývoj** kartu.
+1. Na stránce Vlastnosti projektu vyberte kartu **vývoj** .
 
     ![Stránka Vlastnosti projektu - karta vývoj](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-development-tab.png)
 
-1. V **konfigurace služby** seznamu, vyberte název, který chcete upravit konfiguraci služby. (Pokud chcete provést změny na všech konfiguracích služby pro tuto roli, vyberte **všechny konfigurace**.)
+1. V seznamu **Konfigurace služby** vyberte název konfigurace služby, kterou chcete upravit. (Pokud chcete provést změny u všech konfigurací služby pro tuto roli, vyberte možnost **všechny konfigurace**.)
 
     > [!IMPORTANT]
-    > Pokud se rozhodnete specifické konfigurace služby, některé vlastnosti jsou zakázané, protože jejich lze nastavit pouze u všech konfigurací. Pokud chcete upravit tyto vlastnosti, musíte vybrat **všechny konfigurace**.
+    > Pokud se rozhodnete specifické konfigurace služby, některé vlastnosti jsou zakázané, protože jejich lze nastavit pouze u všech konfigurací. Chcete-li tyto vlastnosti upravit, je nutné vybrat možnost **všechny konfigurace**.
     >
     >
 
     ![Seznam konfiguraci služby pro cloudové služby Azure](./media/vs-azure-tools-configure-roles-for-cloud-service/cloud-service-service-configuration-property.png)
 
 ## <a name="change-the-number-of-role-instances"></a>Změňte počet instancí role
-Pro zlepšení výkonu cloudové služby, můžete změnit počet instancí role, které jsou spuštěny na základě počtu uživatelů nebo zatížení, byl očekáván pro určité role. Samostatný virtuální počítač se vytvoří pro každou instanci role při spuštění cloudové služby v Azure. To ovlivní fakturaci pro nasazení této cloudové služby. Další informace o fakturaci najdete v tématu [vysvětlení vašeho vyúčtování služeb Microsoft Azure](/azure/billing/billing-understand-your-bill).
+Pro zlepšení výkonu cloudové služby, můžete změnit počet instancí role, které jsou spuštěny na základě počtu uživatelů nebo zatížení, byl očekáván pro určité role. Samostatný virtuální počítač se vytvoří pro každou instanci role při spuštění cloudové služby v Azure. To ovlivní fakturaci pro nasazení této cloudové služby. Další informace o fakturaci najdete v tématu [vysvětlení faktury za Microsoft Azure](/azure/billing/billing-understand-your-bill).
 
 1. Vytvořte nebo otevřete v sadě Visual Studio projekt cloudové služby Azure.
 
-1. V **Průzkumníka řešení**, rozbalte uzel projektu. V části **role** uzel, klikněte pravým tlačítkem na roli, kterou chcete aktualizovat a v místní nabídce vyberte **vlastnosti**.
+1. V **Průzkumník řešení**rozbalte uzel projektu. V uzlu **role** klikněte pravým tlačítkem na roli, kterou chcete aktualizovat, a v místní nabídce vyberte možnost **vlastnosti**.
 
     ![Řešení Explorer Azure role kontextové nabídky](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
-1. Vyberte **konfigurace** kartu.
+1. Vyberte kartu **Konfigurace** .
 
     ![Karta Konfigurace](./media/vs-azure-tools-configure-roles-for-cloud-service/role-configuration-properties-page.png)
 
-1. V **konfigurace služby** vyberte konfiguraci služby, které chcete aktualizovat.
+1. V seznamu **Konfigurace služby** vyberte konfiguraci služby, kterou chcete aktualizovat.
 
     ![Konfigurace služby seznamu](./media/vs-azure-tools-configure-roles-for-cloud-service/role-configuration-properties-page-select-configuration.png)
 
-1. V **počet instancí** textové pole, zadejte počet instancí, které chcete spustit pro tuto roli. Každá instance běží na samostatném virtuálním počítači, při publikování cloudové služby v Azure.
+1. Do textového pole **počet instancí** zadejte počet instancí, které chcete pro tuto roli spustit. Každá instance běží na samostatném virtuálním počítači, při publikování cloudové služby v Azure.
 
     ![Aktualizuje se počet instancí](./media/vs-azure-tools-configure-roles-for-cloud-service/role-configuration-properties-page-instance-count.png)
 
-1. Ze sady Visual Studio panel nástrojů, vyberte **Uložit**.
+1. Z aplikace Visual Studio na panelu nástrojů vyberte **Uložit**.
 
 ## <a name="manage-connection-strings-for-storage-accounts"></a>Správa připojovací řetězce pro účty úložiště
-Můžete přidat, odebrat nebo změnit připojovací řetězce pro konfiguraci služby. Například může být vhodné místní připojovací řetězec pro místní služba konfigurace, která má hodnotu `UseDevelopmentStorage=true`. Můžete také nakonfigurovat konfigurací cloudové služby, který používá účet úložiště v Azure.
+Můžete přidat, odebrat nebo změnit připojovací řetězce pro konfiguraci služby. Například můžete chtít místní připojovací řetězec pro konfiguraci místní služby, která má hodnotu `UseDevelopmentStorage=true`. Můžete také nakonfigurovat konfigurací cloudové služby, který používá účet úložiště v Azure.
 
 > [!WARNING]
 > Po zadání klíče údaje účtu úložiště Azure pro připojovací řetězec účtu úložiště se tyto informace se ukládají místně v konfiguračním souboru služby. Tyto informace není aktuálně uložený jako šifrovaný text.
@@ -90,19 +90,19 @@ Když použijete jinou hodnotu pro každou konfiguraci služby, není nutné pou
 
 1. Vytvořte nebo otevřete v sadě Visual Studio projekt cloudové služby Azure.
 
-1. V **Průzkumníka řešení**, rozbalte uzel projektu. V části **role** uzel, klikněte pravým tlačítkem na roli, kterou chcete aktualizovat a v místní nabídce vyberte **vlastnosti**.
+1. V **Průzkumník řešení**rozbalte uzel projektu. V uzlu **role** klikněte pravým tlačítkem na roli, kterou chcete aktualizovat, a v místní nabídce vyberte možnost **vlastnosti**.
 
     ![Řešení Explorer Azure role kontextové nabídky](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
-1. Vyberte **nastavení** kartu.
+1. Vyberte kartu **Nastavení** .
 
     ![Karta nastavení](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab.png)
 
-1. V **konfigurace služby** vyberte konfiguraci služby, které chcete aktualizovat.
+1. V seznamu **Konfigurace služby** vyberte konfiguraci služby, kterou chcete aktualizovat.
 
     ![Konfigurace služby](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab-select-configuration.png)
 
-1. Chcete-li přidat připojovací řetězec, **přidat nastavení**.
+1. Pokud chcete přidat připojovací řetězec, vyberte **Přidat nastavení**.
 
     ![Přidat připojovací řetězec](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab-add-setting.png)
 
@@ -111,18 +111,18 @@ Když použijete jinou hodnotu pro každou konfiguraci služby, není nutné pou
     ![Nový připojovací řetězec](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab-add-setting-new-setting.png)
 
     - **Název** – zadejte název, který chcete použít pro připojovací řetězec.
-    - **Typ** – vyberte **připojovací řetězec** z rozevíracího seznamu.
-    - **Hodnota** – můžete zadat připojovací řetězec přímo do **hodnotu** buňky, nebo vyberte tři tečky (...) pro práci **vytvořit připojovací řetězec úložiště** dialogového okna.
+    - V rozevíracím seznamu **typ** vyberte **připojovací řetězec** .
+    - **Hodnota** – můžete buď zadat připojovací řetězec přímo do buňky **hodnoty** , nebo vybrat tři tečky (...) pro práci v dialogovém okně **vytvořit připojovací řetězec úložiště** .
 
-1. V **vytvořit připojovací řetězec úložiště** dialogového okna, vyberte možnost pro **připojit pomocí**. Postupujte podle pokynů pro zvolené možnosti:
+1. V dialogovém okně **vytvořit připojovací řetězec úložiště** vyberte možnost **připojit pomocí**. Postupujte podle pokynů pro zvolené možnosti:
 
-    - **Emulátor úložiště Microsoft Azure** – Pokud vyberete tuto možnost, zbývající nastavení v dialogovém okně je zakázaná, protože se vztahují pouze na Azure. Vyberte **OK**.
-    - **Vaše předplatné** – Pokud vyberete tuto možnost použijte v rozevíracím seznamu vyberte a přihlaste se do účtu Microsoft, nebo přidat účet Microsoft. Vyberte předplatné a úložiště účtu Azure. Vyberte **OK**.
-    - **Ručně zadali přihlašovací údaje** – zadejte název účtu úložiště a primární a druhý klíč. Vyberte možnost pro **připojení** (protokol HTTPS se doporučuje pro většinu scénářů). Vyberte **OK**.
+    - **Microsoft Azure emulátor úložiště** – Pokud vyberete tuto možnost, zbývající nastavení v dialogovém okně budou zakázaná, protože se vztahují jenom na Azure. Vyberte **OK**.
+    - **Vaše předplatné** – Pokud vyberete tuto možnost, použijte rozevírací seznam k výběru a přihlášení do účet Microsoft nebo přidejte účet Microsoft. Vyberte předplatné a úložiště účtu Azure. Vyberte **OK**.
+    - **Ručně zadané přihlašovací údaje** – zadejte název účtu úložiště a buď primární, nebo druhý klíč. Vyberte možnost **připojení** (protokol HTTPS se doporučuje pro většinu scénářů). Vyberte **OK**.
 
-1. Pokud chcete odstranit připojovací řetězec, vyberte připojovací řetězec a pak vyberte **nastavení odebrat**.
+1. Pokud chcete odstranit připojovací řetězec, vyberte připojovací řetězec a pak vyberte **odebrat nastavení**.
 
-1. Ze sady Visual Studio panel nástrojů, vyberte **Uložit**.
+1. Z aplikace Visual Studio na panelu nástrojů vyberte **Uložit**.
 
 ## <a name="programmatically-access-a-connection-string"></a>Programový přístup k připojovací řetězec
 
@@ -136,7 +136,7 @@ Následující kroky ukazují, jak programově přistupovat k připojovací řet
     using Microsoft.WindowsAzure.ServiceRuntime;
     ```
 
-1. Následující kód ukazuje příklad toho, jak přistupovat k připojovací řetězec. Nahradit &lt;ConnectionStringName > zástupný symbol s odpovídající hodnotou.
+1. Následující kód ukazuje příklad toho, jak přistupovat k připojovací řetězec. Nahraďte zástupný text &lt;connectionStringName > odpovídající hodnotou.
 
     ```csharp
     // Setup the connection to Azure Storage
@@ -144,7 +144,7 @@ Následující kroky ukazují, jak programově přistupovat k připojovací řet
     ```
 
 ## <a name="add-custom-settings-to-use-in-your-azure-cloud-service"></a>Přidat vlastní nastavení pro použití v Azure cloudové služby
-Vlastní nastavení v konfiguračním souboru služby umožňují přidat název a hodnotu řetězce pro specifické konfigurace služby. Můžete pomocí tohoto nastavení můžete konfigurovat funkce v cloudové službě čtení hodnoty nastavení a použití této hodnoty pro řízení logiku z vašeho kódu. Tyto hodnoty konfigurace služby můžete změnit bez nutnosti znovu sestavovat služby balíčku nebo při spuštění cloudové služby. Kód můžete zkontrolovat oznámení při změně nastavení. Zobrazit [RoleEnvironment.Changing události](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.changing.aspx).
+Vlastní nastavení v konfiguračním souboru služby umožňují přidat název a hodnotu řetězce pro specifické konfigurace služby. Můžete pomocí tohoto nastavení můžete konfigurovat funkce v cloudové službě čtení hodnoty nastavení a použití této hodnoty pro řízení logiku z vašeho kódu. Tyto hodnoty konfigurace služby můžete změnit bez nutnosti znovu sestavovat služby balíčku nebo při spuštění cloudové služby. Kód můžete zkontrolovat oznámení při změně nastavení. Viz [RoleEnvironment. měnící se událost](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.changing.aspx).
 
 Můžete přidat, odebrat nebo upravit vlastní nastavení pro konfiguraci služby. Jiné hodnoty může být vhodné pro tyto řetězce pro jiné služby konfigurace.
 
@@ -152,19 +152,19 @@ Když použijete jinou hodnotu pro každou konfiguraci služby, není nutné pou
 
 1. Vytvořte nebo otevřete v sadě Visual Studio projekt cloudové služby Azure.
 
-1. V **Průzkumníka řešení**, rozbalte uzel projektu. V části **role** uzel, klikněte pravým tlačítkem na roli, kterou chcete aktualizovat a v místní nabídce vyberte **vlastnosti**.
+1. V **Průzkumník řešení**rozbalte uzel projektu. V uzlu **role** klikněte pravým tlačítkem na roli, kterou chcete aktualizovat, a v místní nabídce vyberte možnost **vlastnosti**.
 
     ![Řešení Explorer Azure role kontextové nabídky](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
-1. Vyberte **nastavení** kartu.
+1. Vyberte kartu **Nastavení** .
 
     ![Karta nastavení](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab.png)
 
-1. V **konfigurace služby** vyberte konfiguraci služby, které chcete aktualizovat.
+1. V seznamu **Konfigurace služby** vyberte konfiguraci služby, kterou chcete aktualizovat.
 
     ![Konfigurace služby seznamu](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab-select-configuration.png)
 
-1. Chcete-li přidat vlastní nastavení, **přidat nastavení**.
+1. Pokud chcete přidat vlastní nastavení, vyberte **Přidat nastavení**.
 
     ![Přidat vlastní nastavení](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab-add-setting.png)
 
@@ -173,12 +173,12 @@ Když použijete jinou hodnotu pro každou konfiguraci služby, není nutné pou
     ![Nové vlastní nastavení](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab-add-setting-new-setting.png)
 
     - **Název** – zadejte název nastavení.
-    - **Typ** – vyberte **řetězec** z rozevíracího seznamu.
-    - **Hodnota** – zadejte hodnotu daného nastavení. Můžete buď zadat hodnotu přímo do **hodnotu** buňky, nebo vyberte tři tečky (...) zadejte hodnotu v **Upravit řetězec** dialogového okna.
+    - V rozevíracím seznamu **typ** vyberte **řetězec** .
+    - **Hodnota** – zadejte hodnotu nastavení. Můžete buď zadat hodnotu přímo do buňky **hodnoty** , nebo vybrat tři tečky (...) a zadat hodnotu do dialogového okna **Upravit řetězec** .
 
-1. Pokud chcete odstranit vlastní nastavení, vyberte nastavení a pak vyberte **nastavení odebrat**.
+1. Pokud chcete odstranit vlastní nastavení, vyberte nastavení a pak vyberte **odebrat nastavení**.
 
-1. Ze sady Visual Studio panel nástrojů, vyberte **Uložit**.
+1. Z aplikace Visual Studio na panelu nástrojů vyberte **Uložit**.
 
 ## <a name="programmatically-access-a-custom-settings-value"></a>Programový přístup k nastavení vlastní hodnoty
 
@@ -192,7 +192,7 @@ Následující kroky ukazují, jak získat programově přístup k vlastní nast
     using Microsoft.WindowsAzure.ServiceRuntime;
     ```
 
-1. Následující kód ukazuje příklad toho, jak přistupovat k vlastní nastavení. Nahradit &lt;Názevnastavení > zástupný symbol s odpovídající hodnotou.
+1. Následující kód ukazuje příklad toho, jak přistupovat k vlastní nastavení. Nahraďte zástupný text &lt;ho nastavení > odpovídající hodnotou.
 
     ```csharp
     var settingValue = RoleEnvironment.GetConfigurationSettingValue("<SettingName>");
@@ -203,19 +203,19 @@ Můžete přidat místní soubor úložiště v systému pro každou instanci ro
 
 1. Vytvořte nebo otevřete v sadě Visual Studio projekt cloudové služby Azure.
 
-1. V **Průzkumníka řešení**, rozbalte uzel projektu. V části **role** uzel, klikněte pravým tlačítkem na roli, kterou chcete aktualizovat a v místní nabídce vyberte **vlastnosti**.
+1. V **Průzkumník řešení**rozbalte uzel projektu. V uzlu **role** klikněte pravým tlačítkem na roli, kterou chcete aktualizovat, a v místní nabídce vyberte možnost **vlastnosti**.
 
     ![Řešení Explorer Azure role kontextové nabídky](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
-1. Vyberte **místní úložiště** kartu.
+1. Vyberte kartu **místní úložiště** .
 
     ![Karta místní úložiště](./media/vs-azure-tools-configure-roles-for-cloud-service/role-local-storage-tab.png)
 
-1. V **konfigurace služby** seznamu, ujistěte se, že **všechny konfigurace** je vybrán jako místní úložiště nastavení platí pro všechny služby konfigurace. Jakákoli jiná hodnota výsledkem všech vstupních polí na stránce, protože se zakázalo.
+1. V seznamu **Konfigurace služby** se ujistěte, že je vybraná možnost **všechny konfigurace** , protože nastavení místního úložiště platí pro všechny konfigurace služby. Jakákoli jiná hodnota výsledkem všech vstupních polí na stránce, protože se zakázalo.
 
     ![Konfigurace služby seznamu](./media/vs-azure-tools-configure-roles-for-cloud-service/role-local-storage-tab-service-configuration.png)
 
-1. Chcete-li přidat položku místní úložiště, **přidat místní úložiště**.
+1. Pokud chcete přidat položku místního úložiště, vyberte **Přidat místní úložiště**.
 
     ![Přidat místní úložiště](./media/vs-azure-tools-configure-roles-for-cloud-service/role-local-storage-tab-add-local-storage.png)
 
@@ -224,20 +224,20 @@ Můžete přidat místní soubor úložiště v systému pro každou instanci ro
     ![Nová položka místní úložiště](./media/vs-azure-tools-configure-roles-for-cloud-service/role-local-storage-tab-new-local-storage.png)
 
     - **Název** – zadejte název, který chcete použít pro nové místní úložiště.
-    - **Velikost (MB)** – zadejte velikost v MB, které potřebujete pro nové místní úložiště.
-    - **Vyčištění při recyklaci role** – tuto možnost použijte k odebrání dat v nové místní úložiště při recykluje virtuální počítač pro roli.
+    - **Velikost (MB)** – zadejte velikost v MB, kterou potřebujete pro nové místní úložiště.
+    - **Vyčistit při recyklaci role** – tuto možnost vyberte, pokud chcete data z nového místního úložiště odebrat, když se virtuální počítač role recykluje.
 
-1. Odstranit položku místní úložiště, vyberte položku a pak vyberte **odebrat místní úložiště**.
+1. Pokud chcete položku místního úložiště odstranit, vyberte ji a pak vyberte **Odebrat místní úložiště**.
 
-1. Ze sady Visual Studio panel nástrojů, vyberte **Uložit**.
+1. Z aplikace Visual Studio na panelu nástrojů vyberte **Uložit**.
 
 ## <a name="programmatically-accessing-local-storage"></a>Programově přístup k místnímu úložišti
 
-Tato část ukazuje, jak programově přístup k místní úložiště pomocí jazyka C# napsáním textový soubor testu `MyLocalStorageTest.txt`.
+Tato část ukazuje, jak programově získat přístup k místnímu úložišti pomocí C# zápisu textového souboru testu `MyLocalStorageTest.txt`.
 
 ### <a name="write-a-text-file-to-local-storage"></a>Zápis do textového souboru do místního úložiště
 
-Následující kód ukazuje příklad toho, jak zápis do textového souboru do místního úložiště. Nahradit &lt;LocalStorageName > zástupný symbol s odpovídající hodnotou.
+Následující kód ukazuje příklad toho, jak zápis do textového souboru do místního úložiště. Nahraďte zástupný text &lt;LocalStorageName > odpovídající hodnotou.
 
 ```csharp
 // Retrieve an object that points to the local storage resource
@@ -258,7 +258,7 @@ using (FileStream writeStream = File.Create(filePath))
 
 Chcete-li zobrazit soubor vytvořený kódem v předchozí části, postupujte podle těchto kroků:
 
-1. V oznamovací oblasti Windows, klikněte pravým tlačítkem na ikonu Azure a, v místní nabídce vyberte **zobrazit Uživatelském prostředí emulátoru výpočtů**.
+1. V oznamovací oblasti systému Windows klikněte pravým tlačítkem myši na ikonu Azure a v místní nabídce vyberte možnost **Zobrazit uživatelské rozhraní emulátoru COMPUTE**.
 
     ![Zobrazit emulátoru služby výpočty v Azure](./media/vs-azure-tools-configure-roles-for-cloud-service/show-compute-emulator.png)
 
@@ -266,11 +266,11 @@ Chcete-li zobrazit soubor vytvořený kódem v předchozí části, postupujte p
 
     ![Emulátor výpočtů v Azure](./media/vs-azure-tools-configure-roles-for-cloud-service/compute-emulator.png)
 
-1. Na **emulátoru Microsoft Azure Compute** nabídce vyberte možnost **nástroje** > **otevřít místní úložiště**.
+1. V nabídce **Microsoft Azure emulátor COMPUTE** vyberte **nástroje** > **otevřít místní úložiště**.
 
     ![Položka nabídky otevřít místní úložiště](./media/vs-azure-tools-configure-roles-for-cloud-service/compute-emulator-open-local-store-menu.png)
 
-1. Když se otevře okno Průzkumníka Windows, zadejte "MyLocalStorageTest.txt" do **hledání** textového pole a vyberte **Enter** má začít prohledávání.
+1. Po otevření okna Průzkumníka Windows zadejte do textového pole **hledání** text ' MyLocalStorageTest. txt ' a výběrem **ENTER** spusťte hledání.
 
 ## <a name="next-steps"></a>Další kroky
-Další informace o Azure projekty v sadě Visual Studio načtením [konfigurace projektu aplikace Azure](vs-azure-tools-configuring-an-azure-project.md). Další informace o schématu služby cloudových čtení [referenční dokumentace schématu](https://msdn.microsoft.com/library/azure/dd179398).
+Přečtěte si další informace o projektech Azure v aplikaci Visual Studio čtením [konfigurace projektu Azure](vs-azure-tools-configuring-an-azure-project.md). Další informace o schématu cloudové služby najdete v tématu [Přehled schématu](https://msdn.microsoft.com/library/azure/dd179398).

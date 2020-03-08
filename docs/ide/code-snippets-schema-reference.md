@@ -14,11 +14,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 22f84fbe5188e74acbf24256444ad11dd9c64347
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585428"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410134"
 ---
 # <a name="code-snippets-schema-reference"></a>Referenční informace ke schématu fragmentů kódu
 
@@ -108,7 +108,7 @@ Je vyžadována textová hodnota. Tento text Určuje kód spolu s literály a ob
 
 Pro element kódu jsou k dispozici tři atributy:
 
-- **Jazyk** - _požadovaný_ atribut, který určuje jazyk fragmentu kódu. Může jít o následující hodnoty:
+- **Jazyk** - _požadovaný_ atribut, který určuje jazyk fragmentu kódu. Hodnota může být jedna z následujících:
 
    |Hodnota|Popis|
    |-----|-----------|
@@ -121,7 +121,7 @@ Pro element kódu jsou k dispozici tři atributy:
    |`SQL`|Identifikuje fragment kódu jazyka SQL.|
    |`HTML`|Identifikuje fragment kódu jazyka HTML.|
 
-- **Druh** - _nepovinný_ atribut, který určuje druh kódu, který fragment obsahuje. Může jít o následující hodnoty:
+- **Druh** - _nepovinný_ atribut, který určuje druh kódu, který fragment obsahuje. Hodnota může být jedna z následujících:
 
    |Hodnota|Popis|
    |-----|-----------|
@@ -316,7 +316,7 @@ Určuje jedinečný identifikátor `Literal` nebo `Object` elementu. Žádné dv
 
 Je vyžadována textová hodnota. Tento text určuje jedinečný identifikátor pro objekt nebo literál.
 
-## <a name="import-element"></a>Importovat element
+## <a name="import-element"></a>Import – element
 
 Určuje importované obory názvů používané fragmentem kódu technologie IntelliSense.
 
@@ -657,7 +657,7 @@ Určuje adresu URL s dalšími informacemi o odkazovaném sestavení.
 
 Je vyžadována textová hodnota. Tento text určuje adresu URL s dalšími informacemi o odkazovaném sestavení. Tato adresa URL se zobrazí, pokud odkaz nelze přidat do projektu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Fragmenty kódu](../ide/code-snippets.md)
 - [Návod: Vytvoření fragmentu kódu](../ide/walkthrough-creating-a-code-snippet.md)

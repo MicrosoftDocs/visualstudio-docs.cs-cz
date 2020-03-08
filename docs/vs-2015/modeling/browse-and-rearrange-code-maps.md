@@ -25,11 +25,11 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3ecdfb91beb4d844216a9c961830af336e9de15a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672779"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410338"
 ---
 # <a name="browse-and-rearrange-code-maps"></a>Procházení a změna uspořádání map kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -61,20 +61,20 @@ Změna uspořádání položek v mapách kódu pro snazší čtení a zlepšení
 
 ## <a name="Selecting"></a>Změna rozložení mapy
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Komu**|**Proveďte tyto kroky**|
 |------------|-----------------------------|
-|Uspořádat tok závislostí pro celou mapu v určitém směru. To vám může pomáhat při zobrazení vrstev architektury v kódu.|Na panelu nástrojů mapa zvolte **rozložení**a pak:<br /><br /> -    tlačítko**shora** dolů shora dolů v ![grafu](../modeling/media/topbottomgraphbutton.gif "TopBottomGraphButton")<br />-    tlačítko**zdola** nahoru ![dolů na horní graf](../modeling/media/bottomtopgraphbutton.gif "BottomTopGraphButton")<br />-    tlačítko**zleva** doprava ![do pravého rozložení](../modeling/media/leftrightgraphbutton.gif "LeftRightGraphButton")<br />-    tlačítko**zprava** doleva ![k levému grafu](../modeling/media/rightleftgraphbutton.gif "RightLeftGraphButton")|
+|Uspořádat tok závislostí pro celou mapu v určitém směru. To vám může pomáhat při zobrazení vrstev architektury v kódu.|Na panelu nástrojů mapa zvolte **rozložení**a pak:<br /><br /> -   tlačítko **shora** dolů shora dolů v ![grafu](../modeling/media/topbottomgraphbutton.gif "TopBottomGraphButton")<br />-   tlačítko **zdola** nahoru ![dolů na horní graf](../modeling/media/bottomtopgraphbutton.gif "BottomTopGraphButton")<br />-   tlačítko **zleva** doprava ![do pravého rozložení](../modeling/media/leftrightgraphbutton.gif "LeftRightGraphButton")<br />-   tlačítko **zprava** doleva ![k levému grafu](../modeling/media/rightleftgraphbutton.gif "RightLeftGraphButton")|
 |Seznamte se s clustery s přirozenými závislostmi v kódu s nejvíce závislými uzly uprostřed clusterů a nejméně závislými uzly mimo tyto clustery.|Na panelu nástrojů Mapa klikněte na tlačítko **rozložení** **a rychlé clustery**![rychlé clustery na panelu nástrojů grafu](../modeling/media/quickclustersicon.gif "QuickClustersIcon").|
-|Vyberte jeden nebo více uzlů na mapě.|Kliknutím vyberte uzel. Pokud chcete vybrat nebo zrušit výběr více než jednoho uzlu, podržte při kliknutí **klávesu CTRL** .<br /><br /> Klávesnice: stiskněte klávesu **TAB** nebo pomocí kláves se šipkami přesuňte obdélník pro výběr s tečkami na uzel a stisknutím **mezerníku** ho vyberte. Stiskněte **CTRL**  + **MEZERNÍK** pro vícenásobný výběr nebo odvýběr uzlů.|
+|Vyberte jeden nebo více uzlů na mapě.|Kliknutím vyberte uzel. Pokud chcete vybrat nebo zrušit výběr více než jednoho uzlu, podržte při kliknutí **klávesu CTRL** .<br /><br /> Klávesnice: stiskněte klávesu **TAB** nebo pomocí kláves se šipkami přesuňte obdélník pro výběr s tečkami na uzel a stisknutím **mezerníku** ho vyberte. Stiskněte **CTRL** + **MEZERNÍK** pro vícenásobný výběr nebo odvýběr uzlů.|
 |Přesuňte konkrétní uzly kolem mapy.|Přetažením uzlů je přesuňte. Chcete-li přesunout jiné uzly a odkazy ze způsobu přetahování uzlů, stiskněte a podržte klávesu **SHIFT** .<br /><br /> Klávesnice: stiskněte **klávesu CTRL** a stiskněte klávesy se šipkami.|
 |Změna rozložení v rámci skupiny nezávisle na ostatních uzlech a skupinách na mapě.|Vyberte uzel a otevřete místní nabídku. Zvolte **rozložení** a vyberte styl rozložení.<br /><br /> ani<br /><br /> Vyberte uzel a rozbalte ho pro zobrazení podřízených uzlů. Kliknutím na název uzlu zobrazíte místní panel nástrojů skupiny a otevřete položku **změnit styl rozložení**seznamu![rozložení panelu nástrojů &#45; &#45; skupina grafu závislostí](../modeling/media/dependencygraph-grouptoolbar.gif "DependencyGraph_GroupToolbar") skupiny. Vyberte jedno z rozložení stromové struktury, **rychlé clustery**nebo **zobrazení seznamu** (které uspořádá obsah skupiny do seznamu).<br /><br /> Další podrobnosti najdete v tématu [skupiny uzlů](#OrganizeGroups) .|
-|Zruší akci na mapě.|Stiskněte **kombinaci kláves CTRL**  + **Z** nebo použijte příkaz pro **vrácení zpět** sady Visual Studio.|
+|Zruší akci na mapě.|Stiskněte **kombinaci kláves CTRL** + **Z** nebo použijte příkaz pro **vrácení zpět** sady Visual Studio.|
 
 ## <a name="Explore"></a>Procházet mapu
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Komu**|**Proveďte tyto kroky**|
 |------------|-----------------------------|
-|Naskenujte mapu.|Přetáhněte mapu v libovolném směru pomocí myši.<br /><br /> ani<br /><br /> Podržením **klávesy SHIFT** a otočením kolečka myši se posuňte vodorovně. Podržte stisknutou klávesu **SHIFT**  + **CTRL** a otočením kolečka myši se posuňte vodorovně.|
+|Naskenujte mapu.|Přetáhněte mapu v libovolném směru pomocí myši.<br /><br /> ani<br /><br /> Podržením **klávesy SHIFT** a otočením kolečka myši se posuňte vodorovně. Podržte stisknutou klávesu **SHIFT** + **CTRL** a otočením kolečka myši se posuňte vodorovně.|
 |Přiblížení nebo oddálení mapy.|Otočení kolečka myši<br /><br /> ani<br /><br /> Použijte rozevírací seznam **Lupa** na panelu nástrojů mapa kódu.<br /><br /> ani<br /><br /> Použijte klávesové zkratky. Přiblížíte se stisknutím **kombinace kláves CTRL + SHIFT +.** (tečka). Chcete-li zmenšit, stiskněte klávesy **CTRL + SHIFT +,** (čárka).|
 |Přiblížení konkrétní oblasti pomocí myši|Držte pravé tlačítko myši při kreslení obdélníku kolem oblasti, které vás zajímá.|
 |Změňte velikost a přizpůsobte mapu do svého okna.|Vyberte možnost **přizpůsobit tak, aby se vešla** do seznamu **zvětšení** na panelu nástrojů mapa kódu.<br /><br /> ani<br /><br /> Na panelu nástrojů mapa na panelu nástrojů mapa kódu klikněte na ikonu **přiblížení, aby se přizpůsobila** ikona ![lupy](../modeling/media/almcodemapzoomicon.png "ALMCodeMapZoomIcon") . Klávesnice: stiskněte **kombinaci kláves CTRL + 0** (nula).|
@@ -84,7 +84,7 @@ Změna uspořádání položek v mapách kódu pro snazší čtení a zlepšení
 
 ## <a name="FilterNodes"></a>Filtrování uzlů a propojení
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Komu**|**Proveďte tyto kroky**|
 |------------|-----------------------------|
 |Umožňuje zobrazit nebo skrýt podokno filtry.|Klikněte na tlačítko **filtry** na panelu nástrojů mapa kódu. Podokno filtry se ve výchozím nastavení zobrazí jako stránka s kartami v Průzkumník řešení okně.|
 |Filtrovat typy uzlů, které jsou zobrazeny na mapě.|Nastavte nebo zrušte zaškrtnutí políček v seznamu **prvky kódu** v podokně filtry.|
@@ -105,13 +105,13 @@ Změna uspořádání položek v mapách kódu pro snazší čtení a zlepšení
 > [!TIP]
 > Ve výchozím nastavení Mapa zobrazuje propojení mezi skupinami pouze pro vybrané uzly. Chcete-li toto chování změnit, aby se zobrazily nebo skryly agregované odkazy mezi skupinami, klikněte na tlačítko **rozložení** na panelu nástrojů mapa kódu a zvolte možnost **Upřesnit**, **Zobrazte všechny odkazy mezi skupinami** nebo **skryjte všechny odkazy mezi skupinami**. Další podrobnosti najdete v tématu [Skrytí nebo zobrazení uzlů a odkazů](#HidingShowing) .
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Komu**|**Proveďte tyto kroky**|
 |------------|-----------------------------|
 |Zobrazit další informace o uzlu nebo odkazu.|Přesuňte ukazatel myši nad uzel nebo propojení, dokud se nezobrazí popisek.<br /><br /> Popis pro agregovaný odkaz obsahuje seznam jednotlivých závislostí, které představuje.<br /><br /> ani<br /><br /> Otevřete místní nabídku pro uzel nebo odkaz. Vyberte možnost **Upravit**, **vlastnosti**.|
-|Umožňuje zobrazit nebo skrýt obsah skupiny.|– Chcete-li rozšířit skupinu, otevřete místní nabídku uzlu a vyberte možnost **Skupina**, **rozbalte položku**.<br />     ani<br />     Přesuňte ukazatel myši nad uzel, dokud se nezobrazí tlačítko se šipkou (šipka dolů). Kliknutím na toto tlačítko skupinu rozbalíte. Klávesnice: Chcete-li rozbalit nebo sbalit vybranou skupinu, stiskněte klávesu **plus** ( **+** ) nebo **symbol mínus** ( **-** ).<br />– Chcete-li sbalit skupinu, otevřete místní nabídku uzlu a vyberte možnost **Skupina**, **sbalit**.<br />     ani<br />     Přesuňte ukazatel myši nad skupinu, dokud se nezobrazí tlačítko dvojité šipky (šipka nahoru). Kliknutím na toto tlačítko skupinu sbalíte.<br />– Chcete-li rozbalit všechny skupiny, stiskněte klávesu **CTRL**  + **a** vyberte všechny uzly. Otevřete místní nabídku pro mapu a vyberte možnost **Skupina**a **Rozbalit**. **Poznámka:**      Tento příkaz není k dispozici, pokud rozšířením všech skupin vygenerujete nepoužitou mapu nebo problémy s pamětí. Doporučuje se rozšířit mapu jenom na úroveň podrobností, o které se zajímáte.<br />– Chcete-li sbalit všechny skupiny, otevřete místní nabídku pro uzel nebo pro mapu. Vyberte možnost **Skupina**, **Sbalit vše**.|
+|Umožňuje zobrazit nebo skrýt obsah skupiny.|– Chcete-li rozšířit skupinu, otevřete místní nabídku uzlu a vyberte možnost **Skupina**, **rozbalte položku**.<br />     ani<br />     Přesuňte ukazatel myši nad uzel, dokud se nezobrazí tlačítko se šipkou (šipka dolů). Kliknutím na toto tlačítko skupinu rozbalíte. Klávesnice: Chcete-li rozbalit nebo sbalit vybranou skupinu, stiskněte klávesu **plus** ( **+** ) nebo **symbol mínus** ( **-** ).<br />– Chcete-li sbalit skupinu, otevřete místní nabídku uzlu a vyberte možnost **Skupina**, **sbalit**.<br />     ani<br />     Přesuňte ukazatel myši nad skupinu, dokud se nezobrazí tlačítko dvojité šipky (šipka nahoru). Kliknutím na toto tlačítko skupinu sbalíte.<br />– Chcete-li rozbalit všechny skupiny, stiskněte klávesu **CTRL** + **a** vyberte všechny uzly. Otevřete místní nabídku pro mapu a vyberte možnost **Skupina**a **Rozbalit**. **Poznámka:**      Tento příkaz není k dispozici, pokud rozšířením všech skupin vygenerujete nepoužitou mapu nebo problémy s pamětí. Doporučuje se rozšířit mapu jenom na úroveň podrobností, o které se zajímáte.<br />– Chcete-li sbalit všechny skupiny, otevřete místní nabídku pro uzel nebo pro mapu. Vyberte možnost **Skupina**, **Sbalit vše**.|
 |Viz definice kódu pro obor názvů, typ nebo člen.|Otevřete místní nabídku uzlu a vyberte možnost **Přejít k definici**.<br /><br /> -nebo-<br /><br /> Dvakrát klikněte na uzel. V případě rozšířených skupin dvakrát klikněte na záhlaví skupiny.<br /><br /> -nebo-<br /><br /> Vyberte uzel a stiskněte klávesu **F12**.<br /><br /> Příklad:<br /><br /> – Pro obor názvů obsahující jednu třídu se otevře soubor s kódem pro třídu, ve kterém se zobrazí definice této třídy. V jiných případech okno **výsledků hledání symbolů** zobrazuje seznam souborů kódu. **Poznámka:**      Při provádění této úlohy v oboru názvů Visual Basic .NET se soubor kódu za oborem názvů neotevře. K tomuto problému dochází také při provádění této úlohy ve skupině vybraných uzlů, které zahrnují obor názvů Visual Basic .NET. Chcete-li tento problém obejít, přejděte ručně do souboru kódu za oborem názvů nebo vynechejte uzel pro obor názvů z výběru.<br />– Pro třídu nebo částečnou třídu se otevře soubor kódu této třídy, aby se zobrazila definice třídy.<br />– Pro metodu se otevře soubor kódu pro nadřazenou třídu, aby se zobrazila definice metody.|
 |Prověřte závislosti a položky, které se účastní agregačního odkazu.|Vyberte odkazy, které vás zajímají, a otevřete místní nabídku pro svůj výběr. Vyberte **Zobrazit přispívající odkazy** nebo **Zobrazit přispívající odkazy na nové mapě kódu**.<br /><br /> Visual Studio rozbalí skupiny na obou koncích spojení a zobrazí pouze položky a závislosti, které se účastní odkazu. **Poznámka:**  Když prohlížíte závislosti mezi položkami v částečných skupinách, může se toto chování zobrazit: <ul><li>Odkazy na položky, které nejsou součástí vašeho zkoumání, zmizí z mapy, i když tyto odkazy stále existují.</li><li>Řekněme, že prohlížíte odkaz na položku v částečné skupině a později provedete kontrolu jiného odkazu na stejnou položku. Během druhého testu zobrazuje cílová částečná skupina jenom položky z prvního testu. Odkazy a cílové položky, které se neúčastnily vašeho prvního zkoumání, ale účastní se druhého testu, se nezobrazí.</li></ul> Chcete-li zobrazit chybějící položky ze skupiny, klikněte na tlačítko znovu **načíst podřízené**–![ikona pro opětovné načtení podřízených objektů](../modeling/media/dependencygraph-deletednodesicon.png "DependencyGraph_DeletedNodesIcon") (což znamená, že na mapě se nezobrazí všichni členové skupiny). Můžete také zkusit provést akce (klávesnice: stiskněte **kombinaci kláves CTRL + Z**) a prozkoumávat závislosti na nové mapě.|
-|Prověřte závislosti mezi několika uzly v různých skupinách.|Rozbalte skupiny, abyste viděli všechny své podřízené položky. Vyberte všechny uzly, které vás zajímají, včetně jejich podřízených objektů. Mapa zobrazuje propojení mezi skupinami mezi vybranými uzly.<br /><br /> Pokud chcete vybrat všechny uzly ve skupině, stiskněte a podržte klávesu **SHIFT** a levé tlačítko myši, zatímco se kolem této skupiny nakreslí obdélník. Chcete-li vybrat všechny uzly na mapě, stiskněte klávesu **CTRL** +**a**. **Tip:**  Chcete-li zobrazit propojení mezi skupinami, klikněte na tlačítko **rozložení** na panelu nástrojů mapa, **Upřesnit**, **Zobrazit všechny odkazy mezi jednotlivými skupinami**.|
+|Prověřte závislosti mezi několika uzly v různých skupinách.|Rozbalte skupiny, abyste viděli všechny své podřízené položky. Vyberte všechny uzly, které vás zajímají, včetně jejich podřízených objektů. Mapa zobrazuje propojení mezi skupinami mezi vybranými uzly.<br /><br /> Pokud chcete vybrat všechny uzly ve skupině, stiskněte a podržte klávesu **SHIFT** a levé tlačítko myši, zatímco se kolem této skupiny nakreslí obdélník. Chcete-li vybrat všechny uzly na mapě, stiskněte klávesu **CTRL**+**a**. **Tip:**  Chcete-li zobrazit propojení mezi skupinami, klikněte na tlačítko **rozložení** na panelu nástrojů mapa, **Upřesnit**, **Zobrazit všechny odkazy mezi jednotlivými skupinami**.|
 |Podívejte se na položky, na které odkazuje uzel nebo propojení.|Otevřete místní nabídku uzlu a vyberte **Najít všechny odkazy**. **Poznámka:**  To platí pouze v případě, že je atribut `Reference` nastaven pro uzel nebo propojení v souboru. dgml mapy. Chcete-li přidat odkazy na položky z uzlů nebo propojení, přečtěte si téma [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).|
 
 ## <a name="HidingShowing"></a>Skrytí nebo zobrazení uzlů a propojení
@@ -122,15 +122,15 @@ Změna uspořádání položek v mapách kódu pro snazší čtení a zlepšení
 
 ### <a name="to-hide-or-show-nodes"></a>Skrytí nebo zobrazení uzlů
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Komu**|**Proveďte tyto kroky**|
 |------------|-----------------------------|
 |Skryje vybrané uzly.|1. Vyberte uzly, které chcete skrýt.<br />2. Otevřete místní nabídku pro vybrané uzly nebo pro mapu. Zvolte **Vybrat**a **Skrýt vybrané**.|
 |Skrýt nevybrané uzly.|1. Vyberte uzly, které chcete zůstat viditelné.<br />2. Otevřete místní nabídku pro vybrané uzly nebo pro mapu. Zvolte **Vybrat**a **Skrýt zrušit výběr**.|
-|Zobrazit skryté uzly.|– Chcete-li zobrazit všechny skryté uzly ve skupině, nejprve se ujistěte, že je skupina rozbalená. Otevřete místní nabídku a zvolte **možnost vybrat**, **Zobrazit podřízené položky**.<br />     ani<br />     V levém horním rohu skupiny klikněte na ikonu **Zobrazit podřízené objekty**![Zobrazit podřízené položky](../modeling/media/dependencygraph-filtericon-hiddennodes.gif "DependencyGraph_FilterIcon_HiddenNodes ") IC (Tato možnost se zobrazí jenom v případě, že existují skryté podřízené uzly).<br />– Chcete-li zobrazit všechny skryté uzly, otevřete místní nabídku pro mapu nebo uzel a zvolte **možnost vybrat**, **Zobrazit vše**.|
+|Zobrazit skryté uzly.|– Chcete-li zobrazit všechny skryté uzly ve skupině, nejprve se ujistěte, že je skupina rozbalená. Otevřete místní nabídku a zvolte **možnost vybrat**, **Zobrazit podřízené položky**.<br />     ani<br />     V levém horním rohu skupiny klikněte na ikonu **Zobrazit podřízené objekty**![Zobrazit podřízené položky](../modeling/media/dependencygraph-filtericon-hiddennodes.gif "DependencyGraph_FilterIcon_HiddenNodes") (Tato možnost se zobrazí jenom v případě, že existují skryté podřízené uzly).<br />– Chcete-li zobrazit všechny skryté uzly, otevřete místní nabídku pro mapu nebo uzel a zvolte **možnost vybrat**, **Zobrazit vše**.|
 
 ### <a name="to-hide-or-show-links"></a>Skrytí nebo zobrazení odkazů
 
-|**Schopn**|**Na panelu nástrojů mapa zvolte rozložení, Upřesnit a pak zvolte**|
+|**Komu**|**Na panelu nástrojů mapa zvolte rozložení, Upřesnit a pak zvolte**|
 |------------|----------------------------------------------------------------------|
 |Zobrazit propojení mezi skupinami za všech okolností.|**Zobrazit všechny odkazy mezi skupinami**. Tím budou skryta souhrnná propojení mezi skupinami.|
 |Nepřetržitě Skryjte propojení mezi skupinami.|**Skrýt všechny odkazy mezi skupinami**|
@@ -139,7 +139,7 @@ Změna uspořádání položek v mapách kódu pro snazší čtení a zlepšení
 
 ## <a name="OrganizeGroups"></a>Skupinové uzly
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Komu**|**Proveďte tyto kroky**|
 |------------|-----------------------------|
 |Zobrazit uzly kontejneru jako uzly skupiny nebo uzly typu list.|Chcete-li zobrazit uzly kontejneru jako listové uzly: Vyberte uzly, otevřete místní nabídku pro svůj výběr a zvolte možnost **Skupina**, **převést na list**.<br /><br /> Chcete-li zobrazit uzly kontejneru jako uzly skupiny: Vyberte uzly, otevřete místní nabídku pro svůj výběr a zvolte možnost **Skupina**, **převést na skupinu**.|
 |Změna rozložení v rámci skupiny.|Vyberte skupinu, otevřete místní nabídku, zvolte možnost **rozložení**a vyberte požadovaný styl rozložení.<br /><br /> ani<br /><br /> 1. Vyberte skupinu a ujistěte se, že je rozbalená.<br />2. klikněte znovu na záhlaví skupiny a zobrazí se panel nástrojů skupina.<br />     ![Panel nástrojů &#45; skupina grafu závislostí](../modeling/media/dependencygraph-group.png "DependencyGraph_Group")<br />3. Otevřete ![panel &#45; &#45; ](../modeling/media/dependencygraph-grouptoolbar.gif "DependencyGraph_GroupToolbar") **změnit styl rozložení pro** skupinu grafu závislosti seznamu skupin grafu a vyberte požadovaný styl rozložení.<br /><br /> **Zobrazení seznamu** změní uspořádání členů skupiny na seznam. **Graph – výchozí** obnoví rozložení skupiny na výchozí rozložení mapy. Další možnosti najdete v tématu [Změna rozložení mapy](#Selecting).|
@@ -157,18 +157,18 @@ Změna uspořádání položek v mapách kódu pro snazší čtení a zlepšení
 
 ### <a name="add-a-node-for-a-code-element"></a>Přidat uzel pro prvek kódu
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Komu**|**Proveďte tyto kroky**|
 |------------|-----------------------------|
 |Přidá nový obecný uzel v aktuálním umístění ukazatele myši.|1. přesuňte ukazatel myši na místo na mapě, kam chcete vložit nový prvek kódu, a stiskněte **Vložit**.<br />     ani<br />     Otevřete místní nabídku pro mapu a vyberte možnost **Upravit**, **Přidat**, **obecný uzel**.<br />2. Zadejte název nového uzlu a stiskněte tlačítko **vrátit**.|
 |Přidat konkrétní typ uzlu prvku kódu v aktuálním umístění ukazatele myši.|1. přesuňte ukazatel myši na místo na mapě, kam chcete vložit nový prvek kódu, a otevřete místní nabídku pro mapu.<br />2. Zvolte **Upravit**, **Přidat**a vyberte typ uzlu, který chcete.<br />3. Zadejte název nového uzlu a stiskněte tlačítko **vrátit**.|
 |Přidejte do skupiny obecný nebo konkrétní typ uzlu elementu kódu.|1. vyberte uzel skupiny a otevřete místní nabídku.<br />2. Zvolte **Upravit**, **Přidat**a vyberte typ uzlu, který chcete.<br />3. Zadejte název nového uzlu a stiskněte tlačítko **vrátit**.|
 |Přidání nového uzlu stejného typu a jeho propojení s existujícím uzlem.|1. Vyberte prvek kódu. Nad ním se zobrazí místní panel nástrojů.<br />     ![Panel nástrojů grafu závislostí](../modeling/media/depedencygraph-toolbar.png "DepedencyGraph_Toolbar")<br />2. na panelu nástrojů vyberte druhou ikonu **vytvořit uzel se stejnou kategorií, jako má tento uzel, a přidejte do něj nový odkaz**.<br />3. Vyberte místo na mapě pro vložení nového prvku kódu a klikněte levým tlačítkem myši.<br />4. Zadejte název nového uzlu a stiskněte tlačítko **vrátit**.|
-|Přidejte nový obecný uzel, který je propojený z existujícího prvku kódu, který má fokus.|1. pomocí klávesnice stiskněte klávesu **TAB** , dokud prvek kódu, ze kterého se má propojit, má fokus (tečkovaný obdélník).<br />2. stiskněte klávesu **Alt** +**Vložit**.<br />3. Zadejte název nového uzlu a stiskněte tlačítko **vrátit**.|
-|Přidejte nový obecný uzel, který odkazuje na existující prvek kódu, který má fokus.|1. pomocí klávesnice stiskněte klávesu **TAB** , dokud prvek kódu, na který chcete vytvořit odkaz, má fokus (tečkovaný obdélník).<br />2. stiskněte klávesu **Alt** +**SHIFT** +**Vložit**.<br />3. Zadejte název nového uzlu a stiskněte tlačítko **vrátit**.|
+|Přidejte nový obecný uzel, který je propojený z existujícího prvku kódu, který má fokus.|1. pomocí klávesnice stiskněte klávesu **TAB** , dokud prvek kódu, ze kterého se má propojit, má fokus (tečkovaný obdélník).<br />2. stiskněte klávesu **Alt**+**Vložit**.<br />3. Zadejte název nového uzlu a stiskněte tlačítko **vrátit**.|
+|Přidejte nový obecný uzel, který odkazuje na existující prvek kódu, který má fokus.|1. pomocí klávesnice stiskněte klávesu **TAB** , dokud prvek kódu, na který chcete vytvořit odkaz, má fokus (tečkovaný obdélník).<br />2. stiskněte klávesu **Alt**+**SHIFT**+**Vložit**.<br />3. Zadejte název nového uzlu a stiskněte tlačítko **vrátit**.|
 
 |**Přidání elementů kódu pro**|**Proveďte tyto kroky**|
 |----------------------------------|-----------------------------|
-|Prvky kódu v řešení.|1. Vyhledejte prvek kódu v **Průzkumník řešení**. Použijte vyhledávací pole **Průzkumník řešení** nebo procházejte řešením. **Tip:**      Chcete-li najít prvky kódu, které mají závislosti na typu nebo členu, otevřete místní nabídku pro typ nebo člen v **Průzkumník řešení**. Vyberte vztah, který vás zajímá. **Průzkumník řešení** zobrazuje pouze prvky kódu se zadanými závislostmi.<br />2. Přetáhněte prvky kódu, které vás zajímají na plochu rozvržení. Prvky kódu lze také přetáhnout z Zobrazení tříd nebo Prohlížeč objektů.<br />     ani<br />     V **Průzkumník řešení**vyberte prvky kódu, které chcete namapovat. Pak na panelu nástrojů **Průzkumník řešení** klikněte na možnost **Zobrazit na mapě kódu**.<br /><br /> Ve výchozím nastavení se na mapě zobrazí nadřazená hierarchie kontejneru pro nové prvky kódu. Chcete-li toto chování změnit, použijte tlačítko **Zahrnout nadřazené prvky** na panelu nástrojů mapa kódu. Pokud je vypnutý, do mapy se přidá pouze samotný prvek kódu. Chcete-li toto chování vrátit pouze pro jednu akci přetažení, stiskněte a podržte stisknutou klávesu **CTRL** a přetáhněte prvky kódu na mapu.<br /><br /> Visual Studio přidá prvky kódu pro prvky kódu nejvyšší úrovně do výběru. Chcete-li zjistit, zda prvek kódu obsahuje jiné prvky kódu, přesuňte ukazatel myši nad prvek kódu tak, aby se zobrazila Dvojitá šipka (šipka dolů). Vyberte dvojitou šipku pro rozbalení prvku kódu. Chcete-li rozbalit všechny prvky kódu, stiskněte klávesovou **zkratku CTRL** +**a** a vyberte všechny prvky, otevřete místní nabídku pro mapu a zvolte možnost **Skupina**a **Rozbalit**. Tento příkaz není k dispozici, pokud rozšíření všech skupin vyprodukuje nepoužitelnou mapu nebo způsobí nedostatek problémů s pamětí.|
+|Prvky kódu v řešení.|1. Vyhledejte prvek kódu v **Průzkumník řešení**. Použijte vyhledávací pole **Průzkumník řešení** nebo procházejte řešením. **Tip:**      Chcete-li najít prvky kódu, které mají závislosti na typu nebo členu, otevřete místní nabídku pro typ nebo člen v **Průzkumník řešení**. Vyberte vztah, který vás zajímá. **Průzkumník řešení** zobrazuje pouze prvky kódu se zadanými závislostmi.<br />2. Přetáhněte prvky kódu, které vás zajímají na plochu rozvržení. Prvky kódu lze také přetáhnout z Zobrazení tříd nebo Prohlížeč objektů.<br />     ani<br />     V **Průzkumník řešení**vyberte prvky kódu, které chcete namapovat. Pak na panelu nástrojů **Průzkumník řešení** klikněte na možnost **Zobrazit na mapě kódu**.<br /><br /> Ve výchozím nastavení se na mapě zobrazí nadřazená hierarchie kontejneru pro nové prvky kódu. Chcete-li toto chování změnit, použijte tlačítko **Zahrnout nadřazené prvky** na panelu nástrojů mapa kódu. Pokud je vypnutý, do mapy se přidá pouze samotný prvek kódu. Chcete-li toto chování vrátit pouze pro jednu akci přetažení, stiskněte a podržte stisknutou klávesu **CTRL** a přetáhněte prvky kódu na mapu.<br /><br /> Visual Studio přidá prvky kódu pro prvky kódu nejvyšší úrovně do výběru. Chcete-li zjistit, zda prvek kódu obsahuje jiné prvky kódu, přesuňte ukazatel myši nad prvek kódu tak, aby se zobrazila Dvojitá šipka (šipka dolů). Vyberte dvojitou šipku pro rozbalení prvku kódu. Chcete-li rozbalit všechny prvky kódu, stiskněte klávesovou **zkratku CTRL**+**a** a vyberte všechny prvky, otevřete místní nabídku pro mapu a zvolte možnost **Skupina**a **Rozbalit**. Tento příkaz není k dispozici, pokud rozšíření všech skupin vyprodukuje nepoužitelnou mapu nebo způsobí nedostatek problémů s pamětí.|
 |Prvky kódu související s prvky kódu na mapě.|Klikněte na tlačítko **Zobrazit související** na panelu nástrojů mapa kódu a vyberte typ souvisejících položek, které vás zajímají.<br /><br /> ani<br /><br /> Otevřete místní nabídku pro prvek kódu. Vyberte jednu z těchto **pořadu...** položky v nabídce v závislosti na druhu vztahu, který vás zajímá. Například můžete zobrazit položky, které odkazují na aktuální položku, položky odkazující na aktuální položku, základní a odvozené typy pro třídy, volající metody a obsahující třídy, obory názvů a sestavení.<br /><br /> Další podrobnosti najdete v [tomto tématu](../modeling/map-dependencies-across-your-solutions.md).|
 |Kompilovaná sestavení .NET (. dll nebo. exe) nebo binární soubory.|Přetáhněte sestavení nebo binární soubory z vnějšku sady Visual Studio na mapu.<br /><br /> Z Průzkumníka Windows nebo Průzkumníka souborů můžete přetahovat jenom v případě, že ho spouštíte a Visual Studio na stejné úrovni oprávnění User Access Control (UAC). Pokud je například zapnutý nástroj řízení uživatelských účtů a používáte aplikaci Visual Studio jako správce, Průzkumník Windows nebo Průzkumník souborů zablokuje operaci přetažení.|
 
@@ -208,13 +208,13 @@ Změna uspořádání položek v mapách kódu pro snazší čtení a zlepšení
 
      Otevřete místní nabídku pro prvek kódu a vyberte možnost **Upravit**, **Nový komentář**.
 
-3. Zadejte komentáře. Chcete-li zadat nový řádek, stiskněte klávesu **SHIFT**  + **vrátí**.
+3. Zadejte komentáře. Chcete-li zadat nový řádek, stiskněte klávesu **SHIFT** + **vrátí**.
 
 ##### <a name="add-a-comment-to-the-map-itself"></a>Přidání komentáře k samotné mapě
 
 1. Otevřete místní nabídku pro mapu a klikněte na tlačítko **Upravit**, **Nový komentář**.
 
-2. Zadejte komentáře. Chcete-li zadat nový řádek, stiskněte klávesu **SHIFT**  + **vrátí**.
+2. Zadejte komentáře. Chcete-li zadat nový řádek, stiskněte klávesu **SHIFT** + **vrátí**.
 
 ### <a name="RenameNodes"></a>
 ##### <a name="rename-a-code-element-or-link"></a>Přejmenování elementu kódu nebo odkazu
@@ -299,10 +299,10 @@ Změna uspořádání položek v mapách kódu pro snazší čtení a zlepšení
 
 2. Proveďte některou z následujících úloh:
 
-    |**Schopn**|**Výběrem**|
+    |**Komu**|**Výběrem**|
     |------------|----------------|
     |Deaktivovat prvek kódu|**Dezaktivovat**|
-    |Odstranit prvek kódu|**Delete**|
+    |Odstranit prvek kódu|**Odstranění**|
     |Přesunutí stylu nahoru|**Přesunout nahoru**|
     |Přesunout element kódu dolů|**Přesunout dolů**|
 
@@ -320,4 +320,4 @@ Změna uspořádání položek v mapách kódu pro snazší čtení a zlepšení
  Alternativně můžete tato sestavení nebo binární soubory přetáhnout na stejnou mapu z této složky.
 
 ## <a name="see-also"></a>Viz také
- [Mapování závislostí ve vašich řešeních](../modeling/map-dependencies-across-your-solutions.md) [použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md) [hledání potenciálních problémů pomocí analyzátorů mapy kódu](../modeling/find-potential-problems-using-code-map-analyzers.md) [Přizpůsobení mapování kódu úpravou DGML souborů](../modeling/customize-code-maps-by-editing-the-dgml-files.md) [DGML (Direct Graph Markup Language) Referenční informace](../modeling/directed-graph-markup-language-dgml-reference.md)
+ [Mapování závislostí ve vašich řešeních](../modeling/map-dependencies-across-your-solutions.md) [použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md) [hledání potenciálních problémů pomocí analyzátorů mapy kódu](../modeling/find-potential-problems-using-code-map-analyzers.md) [Přizpůsobení mapování kódu úpravou](../modeling/customize-code-maps-by-editing-the-dgml-files.md) [referenčních informací jazyka DGML (DGML Files Direct Graph Markup Language)](../modeling/directed-graph-markup-language-dgml-reference.md)

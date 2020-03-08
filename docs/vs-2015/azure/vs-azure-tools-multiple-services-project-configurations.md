@@ -12,11 +12,11 @@ ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
 ms.openlocfilehash: 59996180661806eee60d18ab4b7b5fd26f4a2e7b
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75915589"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410050"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>Konfigurace projektu Azure v sadě Visual Studio za účelem použití více konfigurací služby
 
@@ -41,7 +41,7 @@ Vybere, na které `ServiceConfiguration.*.cscfg` soubor ovlivňuje změny. Ve v�
 
 Nastavte vlastnost počet **instancí** na počet instancí, které má služba spustit pro tuto roli.
 
-Nastavte vlastnost **Velikost virtuálního počítače** tak, aby byla větší než **malá**, **malá**, **střední**, **Velká**nebo **velmi velká**.  Další informace najdete v tématu [velikosti pro Cloud Services](/azure/cloud-services/cloud-services-sizes-specs).
+Nastavte vlastnost **Velikost virtuálního počítače** tak, aby byla větší než **malá**, **malá**, **střední**, **Velká**nebo **velmi velká**.  Další informace najdete v článku [Velikosti cloudových služeb](/azure/cloud-services/cloud-services-sizes-specs).
 
 ### <a name="startup-action-web-role-only"></a>Spouštěcí akce (jenom webová role)
 

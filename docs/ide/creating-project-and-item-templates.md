@@ -11,11 +11,11 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 2cc932a2407aeb4951bab970a0edc6e2b2a5fcc9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589757"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409052"
 ---
 # <a name="project-and-item-templates"></a>Šablony projektů a položek
 
@@ -27,7 +27,7 @@ Několik předdefinovaných projektů a šablon položek je nainstalováno pomoc
 
 Tyto šablony představují výchozí bod pro uživatele a začněte vytvářet projekty nebo rozšířit projekty stávající. Šablony projektů poskytují soubory, které jsou požadovány pro konkrétní typ projektu, zahrnují standardní odkazy na sestavení a nastavují výchozí vlastnosti projektu a možnosti kompilátoru. Šablony položek mohou být v rozsahu od jednoho prázdný soubor, který má určitá příponu souboru, do více souborů se zdrojovým kódem se zakázaným inzerováním kódem, informační soubory pro návrháře a vložené prostředky.
 
-Můžete použít nainstalované šablony, vytvářet vlastní šablony nebo stahovat a používat šablony vytvořené komunitou. Další informace najdete v tématu [postupy: vytváření šablon projektu](../ide/how-to-create-project-templates.md) a [postup: Tvorba šablon položek s](../ide/how-to-create-item-templates.md).
+Můžete použít nainstalované šablony, vytvářet vlastní šablony nebo stahovat a používat šablony vytvořené komunitou. Další informace naleznete v tématu [Postupy: vytváření šablon projektů](../ide/how-to-create-project-templates.md) a [Postupy: vytváření šablon položek](../ide/how-to-create-item-templates.md).
 
 ## <a name="contents-of-a-template"></a>Obsah šablony
 
@@ -49,7 +49,7 @@ Všechny šablony projektů a položek, zda je nainstalován se sadou Visual Stu
 
    Další informace o souborech *. vstemplate* naleznete v tématu [Tagy šablony](template-tags.md) a [parametry šablony](../ide/template-parameters.md).
 
-Když jsou tyto soubory zkomprimovány do *ZIP* soubor a uložte do správné složky, Visual Studio automaticky zobrazí na následujících místech:
+Když jsou tyto soubory komprimovány do souboru *zip* a vloženy do správné složky, Visual Studio je automaticky zobrazí v následujících umístěních:
 
 ::: moniker range="vs-2017"
 
@@ -65,13 +65,13 @@ Když jsou tyto soubory zkomprimovány do *ZIP* soubor a uložte do správné sl
 
 - Šablony položek se zobrazí v okně **Přidat novou položku** .
 
-Další informace o adresářích pro šablony najdete v tématu [postupy: hledání a organizace šablon](../ide/how-to-locate-and-organize-project-and-item-templates.md).
+Další informace o složkách šablon naleznete v tématu [How to: vyhledání a uspořádání šablon](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Postupy: vytváření šablon projektu](../ide/how-to-create-project-templates.md)
-- [Postupy: Tvorba šablon položek](../ide/how-to-create-item-templates.md)
+- [Postupy: vytváření šablon projektů](../ide/how-to-create-project-templates.md)
+- [Postupy: vytváření šablon položek](../ide/how-to-create-item-templates.md)
 - [Tagy šablony](template-tags.md)
 - [Parametry šablony](../ide/template-parameters.md)
-- [Přizpůsobení šablony](../ide/customizing-project-and-item-templates.md)
-- [Balíčky NuGet ve šablony sady Visual Studio](/nuget/visual-studio-extensibility/visual-studio-templates)
+- [Přizpůsobení šablon](../ide/customizing-project-and-item-templates.md)
+- [Balíčky NuGet v šablonách sady Visual Studio](/nuget/visual-studio-extensibility/visual-studio-templates)

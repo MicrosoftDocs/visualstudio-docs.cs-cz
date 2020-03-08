@@ -1,5 +1,5 @@
 ---
-title: Zajistit jeho důvěryhodnost do řešení pro systém Office
+title: Udělení vztahu důvěryhodnosti řešením pro systém Office
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,38 +16,38 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: cf7a68d5d3567305e4f70049d76a1c260ddecf25
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62826931"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410014"
 ---
-# <a name="grant-trust-to-office-solutions"></a>Zajistit jeho důvěryhodnost do řešení pro systém Office
-  Zajistit jeho důvěryhodnost Office řešení znamená úpravy zásady zabezpečení v každém cílovém počítači důvěřovat řešení sestavení, manifest aplikace, manifest nasazení a dokumentu. Vztah důvěryhodnosti můžete vy nebo koncového uživatele udělit řešení pro Office.
+# <a name="grant-trust-to-office-solutions"></a>Udělení vztahu důvěryhodnosti řešením pro systém Office
+  Udělení vztahu důvěryhodnosti řešením pro systém Office znamená úpravu zásad zabezpečení pro každý cílový počítač pro důvěřování sestavení řešení, manifestu aplikace, manifestu nasazení a dokumentu. K řešení pro Office můžete udělit přístup buď vy, nebo koncovým uživatelem.
 
- Úplný vztah důvěryhodnosti řešení pro Office můžete udělit pomocí podepisování manifestů aplikace a nasazení.
+ Úplný vztah důvěryhodnosti k řešení Office můžete udělit podepsáním manifestů aplikace a nasazení.
 
- Koncovým uživatelům můžete udělit důvěryhodnost řešení pro Office tak, že rozhodnutí o důvěryhodnosti [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] výzvu vztahu důvěryhodnosti.
+ Koncoví uživatelé můžou udělit důvěru k řešení pro Office, a to tak, že v příkazovém řádku [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] trustu nastaví rozhodnutí o důvěryhodnosti.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="Signing"></a> Vztah důvěryhodnosti řešení pomocí podepsání manifestů aplikace a nasazení
- Všechny aplikace a manifestů nasazení pro Office řešení musí být podepsané certifikátem, který identifikuje vydavatele. Certifikáty poskytují základ pro rozhodování o důvěryhodnosti.
+## <a name="Signing"></a>Důvěřovat řešení podepsáním manifestů aplikace a nasazení
+ Všechny manifesty aplikace a nasazení pro řešení Office musí být podepsané certifikátem, který identifikuje vydavatele. Certifikáty poskytují základ pro rozhodování o důvěryhodnosti.
 
- Dočasný certifikát je pro vás vytvořili a udělen vztah důvěryhodnosti v okamžiku sestavení, takže řešení se spustí při ladění. Pokud publikujete, který je podepsaný certifikátem dočasné řešení, koncový uživatel se vyzve k provedení rozhodnutí důvěryhodnosti.
+ Pro vás se vytvoří dočasný certifikát a při sestavení se udělí důvěryhodnost, aby se řešení spouštělo při ladění. Pokud publikujete řešení podepsané dočasným certifikátem, zobrazí se koncovému uživateli výzva k rozhodnutí o důvěryhodnosti.
 
- Pokud se řešení pomocí známého a důvěryhodného certifikátu řešení se automaticky nainstalují bez zobrazení výzvy koncového uživatele k provedení rozhodnutí důvěryhodnosti. Další informace o tom, jak získat certifikát pro podepisování najdete v tématu [ClickOnce and Authenticode](../deployment/clickonce-and-authenticode.md). Po získání certifikátu se certifikát musí být explicitně důvěryhodná přidáním do seznamu Důvěryhodní vydavatelé. Další informace najdete v tématu [jak: Přidání důvěryhodného vydavatele na klientský počítač pro aplikace ClickOnce](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md).
+ Pokud podepíšete řešení se známým a důvěryhodným certifikátem, řešení bude automaticky nainstalováno bez vyzvání koncového uživatele, aby provedlo rozhodnutí o důvěryhodnosti. Další informace o tom, jak získat certifikát pro podepsání, naleznete v tématu [ClickOnce and Authenticode](../deployment/clickonce-and-authenticode.md). Po získání certifikátu musí být certifikát explicitně důvěryhodný přidáním do seznamu důvěryhodných vydavatelů. Další informace najdete v tématu [Postup: Přidání důvěryhodného vydavatele do klientského počítače pro aplikace ClickOnce](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md).
 
- Pokud vývojář podepisuje řešení dočasné certifikátem, Správce může znovu podepsat přizpůsobení pomocí známého a důvěryhodného certifikátu pomocí Manifest Generation and Editing Tool (*mage.exe*), což je jedna z Nástroje sady Microsoft .NET Framework. Další informace o podepisování řešení najdete v tématu [jak: Podepisování řešení pro Office](../vsto/how-to-sign-office-solutions.md) a [jak: Podepsání manifestů aplikace a nasazení](../ide/how-to-sign-application-and-deployment-manifests.md).
+ Pokud vývojář podepíše řešení s dočasným certifikátem, správce může znovu podepsat vlastní nastavení se známým a důvěryhodným certifikátem pomocí Manifest Generation and Editing Tool (*Mage. exe*), což je jeden z nástrojů Microsoft .NET Framework. Další informace o podpisových řešeních naleznete v tématu [How to: Signing Solutions Office](../vsto/how-to-sign-office-solutions.md) and [to: Signing Application and Deployment Manifests](../ide/how-to-sign-application-and-deployment-manifests.md).
 
-## <a name="TrustPrompt"></a>Vztah důvěryhodnosti řešení pomocí vztahu důvěryhodnosti ClickOnce
- [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] vyzve koncovému uživateli umožňují rozhodnutí důvěryhodnosti, pokud není žádná celou organizaci zásada, která důvěřuje certifikátu řešení. Pokud koncový uživatel uděluje vztah důvěryhodnosti k řešení, se vytvoří položka seznamu povolených položek, který obsahuje adresu URL a veřejný klíč pro uložení tohoto rozhodnutí důvěryhodnosti. Když důvěryhodné přizpůsobení je spustit později, koncový uživatel vyzván znovu.
+## <a name="TrustPrompt"></a>Důvěřovat řešení pomocí výzvy vztahu důvěryhodnosti ClickOnce
+ [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] vyzve koncového uživatele k tomu, aby v případě, že nedůvěřuje certifikátu řešení, nedůvěřuje žádné zásadě organizace. Pokud koncový uživatel pro řešení udělí důvěru, vytvoří se položka seznamu zahrnutí, která obsahuje adresu URL a veřejný klíč pro uložení tohoto rozhodnutí o důvěryhodnosti. Po pozdějším spuštění důvěryhodného vlastního nastavení se koncový uživatel nevyzve znovu.
 
- Správci mohou zakázat [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] důvěryhodný dotaz nebo vyžadovat, že dojde k řádku pouze pro řešení, které jsou podepsané certifikátem Authenticode. Další informace o tom, jak změnit tato nastavení pro tento počítač, LocalIntranet, Internet, TrustedSites a UntrustedSites zóny najdete v tématu [jak: Konfigurace chování výzvy důvěryhodnosti ClickOnce](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md).
+ Správci můžou zakázat výzvu [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] trustu nebo vyžadovat, aby se zobrazila výzva jenom pro řešení, která jsou podepsaná certifikátem Authenticode. Další informace o tom, jak změnit tato nastavení pro zóny MyComputer, LocalIntranet, Internet, TrustedSites a UntrustedSites, najdete v tématu [How to: Configure a Behavior pro zobrazení výzvy důvěryhodnosti ClickOnce](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md)
-- [Zajistit jeho důvěryhodnost do dokumentů](../vsto/granting-trust-to-documents.md)
+- [Udělení důvěryhodnosti k dokumentům](../vsto/granting-trust-to-documents.md)
 - [Řešení potíží se zabezpečením řešení pro systém Office](../vsto/troubleshooting-office-solution-security.md)
-- [Specifické aspekty zabezpečení pro řešení pro systém Office](../vsto/specific-security-considerations-for-office-solutions.md)
+- [Konkrétní požadavky na zabezpečení pro řešení Office](../vsto/specific-security-considerations-for-office-solutions.md)

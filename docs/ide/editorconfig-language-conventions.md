@@ -14,11 +14,11 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 471932f6a097879da194dc6bb4f18807f2323397
-ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76542656"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408490"
 ---
 # <a name="language-conventions"></a>Konvence jazyka
 
@@ -50,7 +50,7 @@ Pro každou jazykovou konvenci zadáte hodnotu, která definuje, kdy nebo kdy ch
 
 Závažnost jazykové konvence určuje úroveň, na které se má tento styl vyhovět. V následující tabulce jsou uvedeny možné hodnoty závažnosti a jejich důsledky:
 
-Závažnost | Efekt
+Severity | Účinek
 :------- | ------
 `error` | Při porušení tohoto pravidla stylu zobrazit chybu kompilátoru.
 `warning` | Při porušení tohoto pravidla stylu zobrazit upozornění kompilátoru.
@@ -86,16 +86,16 @@ Pravidla stylu v této části platí pro C# i Visual Basic.
 
 - [Kvalifikátory "This." a "já"](#this-and-me)
   - dotnet\_Style\_kvalifikaci\_for_field
-  - dotnet\_style\_qualification\_for_property
+  - dotnet\_Style\_kvalifikaci\_for_property
   - dotnet\_Style\_kvalifikaci\_for_method
   - dotnet\_Style\_kvalifikaci\_for_event
 - [Klíčová slova jazyka namísto názvů typů rozhraní pro odkazy na typy](#language-keywords)
   - dotnet\_Style\_předdefinovaný typ\_\_pro\_místní\_parameters_members
-  - dotnet\_style\_predefined\_type\_for\_member_access
+  - dotnet\_Style\_předdefinovaný typ\_\_pro\_member_access
 - [Předvolby modifikátoru](#normalize-modifiers)
   - dotnet\_Style\_vyžadovat\_accessibility_modifiers
-  - csharp\_preferred\_modifier_order
-  - visual\_basic\_preferred\_modifier_order
+  - CSharp\_preferované\_modifier_order
+  - Visual\_Basic\_preferované\_modifier_order
   - dotnet\_Style\_pole ReadOnly\_
 - [Předvolby závorek](#parentheses-preferences)
   - dotnet\_Style\_závorky\_v\_aritmetických\_binárních\_ch operátorů
@@ -103,19 +103,19 @@ Pravidla stylu v této části platí pro C# i Visual Basic.
   - dotnet\_Style\_závorky\_v\_dalších\_ch operátorů
   - dotnet\_Style\_závorky\_v\_relační\_binární\_operátory
 - [Předvolby na úrovni výrazu](#expression-level-preferences)
-  - dotnet\_style\_object_initializer
+  - \_\_stylu dotnet object_initializer
   - \_\_stylu dotnet collection_initializer
   - dotnet\_Style\_Explicit\_tuple_names
   - dotnet\_Style\_preferovat\_odvoditelné\_tuple_names
   - dotnet\_Style\_preferovat\_odvozený\_anonymní\_typ\_member_names
-  - dotnet\_style\_prefer\_auto\_properties
-  - dotnet\_Style\_preferovat\_je\_null\_\_metoda\_rovnosti\_
+  - dotnet\_Style\_preferovat\_auto\_Properties
+  - dotnet\_Style\_preferovat\_je\_null\_\_metoda\_rovnosti\_\_
   - dotnet\_Style\_preferovat\_podmíněný\_výraz\_over\_přiřazení
   - dotnet\_Style\_preferovat\_podmíněný\_výraz\_nad\_návrat
   - dotnet\_Style\_preferovat\_složené\_přiřazení
 - [Předvolby kontroly "null"](#null-checking-preferences)
-  - dotnet\_style\_coalesce_expression
-  - dotnet\_style\_null_propagation
+  - \_\_stylu dotnet coalesce_expression
+  - \_\_stylu dotnet null_propagation
 
 ### <a name="this-and-me"></a>"This." a "já". kvalifikátory
 
@@ -160,7 +160,7 @@ Me.capacity = 0
 capacity = 0
 ```
 
-#### <a name="dotnet_style_qualification_for_property"></a>dotnet\_style\_qualification\_for_property
+#### <a name="dotnet_style_qualification_for_property"></a>dotnet\_Style\_kvalifikaci\_for_property
 
 |||
 |-|-|
@@ -285,7 +285,7 @@ Private _member As Integer
 Private _member As Int32
 ```
 
-#### <a name="dotnet_style_predefined_type_for_member_access"></a>dotnet\_style\_predefined\_type\_for\_member_access
+#### <a name="dotnet_style_predefined_type_for_member_access"></a>dotnet\_Style\_předdefinovaný typ\_\_pro\_member_access
 
 |||
 |-|-|
@@ -588,7 +588,7 @@ dotnet_style_prefer_conditional_expression_over_return = true:suggestion
 dotnet_style_prefer_compound_assignment = true:suggestion
 ```
 
-#### <a name="dotnet_style_object_initializer"></a>dotnet\_style\_object_initializer
+#### <a name="dotnet_style_object_initializer"></a>\_\_stylu dotnet object_initializer
 
 |||
 |-|-|
@@ -742,7 +742,7 @@ Dim anon = New With {name, age}
 Dim anon = New With {.name = name, .age = age}
 ```
 
-#### <a name="dotnet_style_prefer_auto_properties"></a>dotnet\_style\_prefer\_auto\_properties
+#### <a name="dotnet_style_prefer_auto_properties"></a>dotnet\_Style\_preferovat\_auto\_Properties
 
 |||
 |-|-|
@@ -785,7 +785,7 @@ Public ReadOnly Property Age As Integer
 End Property
 ```
 
-#### <a name="dotnet_style_prefer_is_null_check_over_reference_equality_method"></a>dotnet\_Style\_preferovat\_je\_null\_\_metoda\_rovnosti\_
+#### <a name="dotnet_style_prefer_is_null_check_over_reference_equality_method"></a>dotnet\_Style\_preferovat\_je\_null\_\_metoda\_rovnosti\_\_
 
 |||
 |-|-|
@@ -820,7 +820,7 @@ If Object.ReferenceEquals(value, Nothing)
 End If
 ```
 
-#### <a name="dotnet_style_prefer_conditional_expression_over_assignment"></a>dotnet\_style\_prefer\_conditional\_expression\_over_assignment
+#### <a name="dotnet_style_prefer_conditional_expression_over_assignment"></a>dotnet\_Style\_preferovat\_podmíněný\_Expression\_over_assignment
 
 |||
 |-|-|
@@ -943,7 +943,7 @@ dotnet_style_coalesce_expression = true:suggestion
 dotnet_style_null_propagation = true:suggestion
 ```
 
-#### <a name="dotnet_style_coalesce_expression"></a>dotnet\_style\_coalesce_expression
+#### <a name="dotnet_style_coalesce_expression"></a>\_\_stylu dotnet coalesce_expression
 
 |||
 |-|-|
@@ -973,7 +973,7 @@ Dim v = If(x Is Nothing, y, x) ' or
 Dim v = If(x IsNot Nothing, x, y)
 ```
 
-#### <a name="dotnet_style_null_propagation"></a>dotnet\_style\_null_propagation
+#### <a name="dotnet_style_null_propagation"></a>\_\_stylu dotnet null_propagation
 
 |||
 |-|-|
@@ -1060,15 +1060,15 @@ Pravidla stylu v této části platí pouze pro C# .
 
 - [Implicitní a explicitní typy](#implicit-and-explicit-types)
   - CSharp\_Style\_var\_pro\_sestavené\_in_types
-  - csharp\_style\_var\_when\_type\_is_apparent
-  - csharp\_style\_var_elsewhere
+  - CSharp\_stylu\_var\_při\_typu\_is_apparent
+  - CSharp\_\_stylu var_elsewhere
 - [Členové tvoření výrazy](#expression-bodied-members)
   - výraz\_\_CSharp stylu\_bodied_methods
-  - csharp\_style\_expression\_bodied_constructors
-  - csharp\_style\_expression\_bodied_operators
-  - csharp\_style\_expression\_bodied_properties
-  - csharp\_style\_expression\_bodied_indexers
-  - csharp\_style\_expression\_bodied_accessors
+  - výraz\_\_CSharp stylu\_bodied_constructors
+  - výraz\_\_CSharp stylu\_bodied_operators
+  - výraz\_\_CSharp stylu\_bodied_properties
+  - výraz\_\_CSharp stylu\_bodied_indexers
+  - výraz\_\_CSharp stylu\_bodied_accessors
   - výraz\_\_CSharp stylu\_bodied_lambdas
   - CSharp\_Style\_Expression\_těle\_local_functions
 - [Porovnávání vzorů](#pattern-matching)
@@ -1077,12 +1077,12 @@ Pravidla stylu v této části platí pouze pro C# .
 - [Vložené deklarace proměnných](#inlined-variable-declarations)
   - CSharp\_styl\_vložené\_variable_declaration
 - [Předvolby na úrovni výrazu](#c-expression-level-preferences)
-  - csharp\_prefer\_simple\_default_expression
+  - CSharp\_preferovat\_jednoduché\_default_expression
 - [Předvolby kontroly "null"](#c-null-checking-preferences)
-  - csharp\_style\_throw_expression
-  - csharp\_style\_conditional\_delegate_call
+  - CSharp\_\_stylu throw_expression
+  - CSharp\_\_podmíněné\_delegate_call
 - [Předvolby bloku kódu](#code-block-preferences)
-  - csharp\_prefer_braces
+  - CSharp\_prefer_braces
 - [Předvolby nepoužité hodnoty](#unused-value-preferences)
   - CSharp\_Style\_nepoužitou\_ovou hodnotou\_výrazu\_statement_preference
   - CSharp\_Style\_nepoužitou\_ovou hodnotou\_assignment_preference
@@ -1131,7 +1131,7 @@ var x = 5;
 int x = 5;
 ```
 
-#### <a name="csharp_style_var_when_type_is_apparent"></a>csharp\_style\_var\_when\_type\_is_apparent
+#### <a name="csharp_style_var_when_type_is_apparent"></a>CSharp\_stylu\_var\_při\_typu\_is_apparent
 
 |||
 |-|-|
@@ -1151,7 +1151,7 @@ var obj = new Customer();
 Customer obj = new Customer();
 ```
 
-#### <a name="csharp_style_var_elsewhere"></a>csharp\_style\_var_elsewhere
+#### <a name="csharp_style_var_elsewhere"></a>CSharp\_\_stylu var_elsewhere
 
 |||
 |-|-|
@@ -1210,7 +1210,7 @@ public int GetAge() => this.Age;
 public int GetAge() { return this.Age; }
 ```
 
-#### <a name="csharp_style_expression_bodied_constructors"></a>csharp\_style\_expression\_bodied_constructors
+#### <a name="csharp_style_expression_bodied_constructors"></a>výraz\_\_CSharp stylu\_bodied_constructors
 
 |||
 |-|-|
@@ -1230,7 +1230,7 @@ public Customer(int age) => Age = age;
 public Customer(int age) { Age = age; }
 ```
 
-#### <a name="csharp_style_expression_bodied_operators"></a>csharp\_style\_expression\_bodied_operators
+#### <a name="csharp_style_expression_bodied_operators"></a>výraz\_\_CSharp stylu\_bodied_operators
 
 |||
 |-|-|
@@ -1252,7 +1252,7 @@ public static ComplexNumber operator + (ComplexNumber c1, ComplexNumber c2)
 { return new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary); }
 ```
 
-#### <a name="csharp_style_expression_bodied_properties"></a>csharp\_style\_expression\_bodied_properties
+#### <a name="csharp_style_expression_bodied_properties"></a>výraz\_\_CSharp stylu\_bodied_properties
 
 |||
 |-|-|
@@ -1272,7 +1272,7 @@ public int Age => _age;
 public int Age { get { return _age; }}
 ```
 
-#### <a name="csharp_style_expression_bodied_indexers"></a>csharp\_style\_expression\_bodied_indexers
+#### <a name="csharp_style_expression_bodied_indexers"></a>výraz\_\_CSharp stylu\_bodied_indexers
 
 |||
 |-|-|
@@ -1292,7 +1292,7 @@ public T this[int i] => _values[i];
 public T this[int i] { get { return _values[i]; } }
 ```
 
-#### <a name="csharp_style_expression_bodied_accessors"></a>csharp\_style\_expression\_bodied_accessors
+#### <a name="csharp_style_expression_bodied_accessors"></a>výraz\_\_CSharp stylu\_bodied_accessors
 
 |||
 |-|-|
@@ -1463,7 +1463,7 @@ Příklad souboru *. editorconfig* :
 csharp_prefer_simple_default_expression = true:suggestion
 ```
 
-#### <a name="csharp_prefer_simple_default_expression"></a>csharp\_prefer\_simple\_default_expression
+#### <a name="csharp_prefer_simple_default_expression"></a>CSharp\_preferovat\_jednoduché\_default_expression
 
 Toto pravidlo stylu se týká použití [literálu`default` pro výrazy výchozích hodnot](/dotnet/csharp/language-reference/operators/default#default-literal) , když kompilátor může odvodit typ výrazu.
 
@@ -1498,7 +1498,7 @@ csharp_style_throw_expression = true:suggestion
 csharp_style_conditional_delegate_call = false:suggestion
 ```
 
-#### <a name="csharp_style_throw_expression"></a>csharp\_style\_throw_expression
+#### <a name="csharp_style_throw_expression"></a>CSharp\_\_stylu throw_expression
 
 |||
 |-|-|
@@ -1519,7 +1519,7 @@ if (s == null) { throw new ArgumentNullException(nameof(s)); }
 this.s = s;
 ```
 
-#### <a name="csharp_style_conditional_delegate_call"></a>csharp\_style\_conditional\_delegate_call
+#### <a name="csharp_style_conditional_delegate_call"></a>CSharp\_\_podmíněné\_delegate_call
 
 |||
 |-|-|
@@ -1885,8 +1885,8 @@ switch (x)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Konvence formátování](editorconfig-formatting-conventions.md)
 - [Zásady vytváření názvů](editorconfig-naming-conventions.md)
-- [EditorConfig nastavení konvence psaní kódu .NET](editorconfig-code-style-settings-reference.md)
+- [Nastavení konvence kódování .NET pro EditorConfig](editorconfig-code-style-settings-reference.md)
