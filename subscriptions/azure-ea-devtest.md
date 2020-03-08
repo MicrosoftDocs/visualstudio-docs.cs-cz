@@ -6,12 +6,12 @@ manager: lank
 ms.date: 02/23/2020
 ms.topic: conceptual
 description: Naučte se využívat speciální ceny Azure DevTest dostupné zákazníkům se smlouvou Enterprise.
-ms.openlocfilehash: 53ff651d0e0de8bbff4d1bc75597a6824957e8e8
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 81075a5e692f610424c60cb38f0a660dfe9c939c
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77580102"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410428"
 ---
 # <a name="azure-enterprise-agreement-devtest-offer"></a>Nabídka Azure smlouva Enterprise DevTest
 
@@ -25,17 +25,17 @@ K předvedení tohoto procesu je k dispozici také [výukové video](https://cha
 
 ## <a name="enable-offers-in-the-ea-portal"></a>Povolit nabídky na portálu EA
 Povolení nabídek:
-1. Přihlaste se k https://ea.azure.com/manage.
+1. Přihlaste se k webu [https://ea.azure.com/manage](https://ea.azure.com/manage).
 0. Klikněte na nabídku **účet** .
 0. Vyhledejte účet, pro který chcete povolit nabídky.  Pokud máte mnoho účtů, možná budete chtít k rychlému vyhledání účtu použít **hledání** . 
 0. Najeďte myší na název účtu. 
 0. Úplně vpravo klikněte na ikonu pro **Úpravy** (tužka). 
 0. Klikněte na zaškrtávací políčko pro **vývoj/testování** .
-0. Klikněte na možnost **Uložit**.
+0. Klikněte na **Uložit**.
 
 ## <a name="create-individual-subscriptions-within-the-account"></a>Vytváření individuálních předplatných v rámci účtu
 Každý předplatitel účtu může vytvořit předplatné pomocí následujících kroků:
-1. Přihlaste se k https://account.windowsazure.com/signup?showCatalogs=True.
+1. Přihlaste se k webu [https://account.windowsazure.com/signup?showCatalogs=True](https://account.windowsazure.com/signup?showCatalogs=True).
 0. Vyberte nabídku **Enterprise pro vývoj/testování** .
 0. Kliknutím na zaškrtávací políčko potvrďte, že se předplatné řídí smlouva Enterprise. 
 0. Klikněte na **Koupit**.  (S touto nabídkou nemusíte ve skutečnosti kupovat žádné položky.)

@@ -21,16 +21,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c45f22011c32378af0690c9aee226877faf903bd
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: bb0e1feee1f7e1d271dd436a1879731354cbd8bb
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634458"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865333"
 ---
 # <a name="cl-task"></a>CL – úloha
 
-Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří spustitelné soubory ( *. exe*), soubory dynamické knihovny ( *. dll*) nebo soubory modulu kódu ( *. netmodule*). Další informace naleznete v tématu [Možnosti kompilátoru](/cpp/build/reference/compiler-options).
+Zabalí nástroj Microsoft C++ Compiler Tool, *CL. exe*. Kompilátor vytváří spustitelné soubory ( *. exe*), soubory dynamické knihovny ( *. dll*) nebo soubory modulu kódu ( *. netmodule*). Další informace naleznete v tématu [Možnosti kompilátoru](/cpp/build/reference/compiler-options) a [použití nástroje MSBuild z příkazového řádku](/cpp/build/msbuild-visual-cpp) a [použití sady C++ nástrojů Microsoft z příkazového řádku](/cpp/build/building-on-the-command-line).
 
 ## <a name="parameters"></a>Parametry
 

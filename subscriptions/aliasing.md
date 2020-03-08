@@ -6,12 +6,12 @@ manager: lank
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Přihlášení se nemusí zdařit, pokud se používají aliasy nebo popisné názvy.
-ms.openlocfilehash: 824d24979d029d4a2de611db092afdbe908f64ea
-ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
+ms.openlocfilehash: 53b277296e6923bb78717bb76a0c20d2861c29ce
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78235123"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865385"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Přihlášení k předplatným sady Visual Studio může při použití aliasů selhat.
 V závislosti na typu účtu použitého k přihlášení se nemusí při přihlašování k [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)správně zobrazit dostupná předplatná. Jednou z možných příčin je použití "aliasů" nebo "popisných názvů" místo přihlašovací identity, ke které je předplatné přiřazeno. Tento název se nazývá "aliasing".
@@ -39,7 +39,7 @@ Neshoda hlavního názvu uživatele (UPN) se může vyskytnout, když má spole�
 
 #### <a name="how-to-fix-a-upn-mismatch"></a>Jak opravit hlavní název uživatele (UPN)
 
-1. Přístup k portálu pro správu nástroje Visual Studio https://manage.visualstudio.com 
+1. Přístup k portálu pro správu nástroje Visual Studio [https://manage.visualstudio.com](https://manage.visualstudio.com) 
 
 2. Vyhledejte předplatitele, který má neshodu hlavního názvu uživatele (UPN). (Funkce [Filter](search-license.md) může snadno najít předplatitele.)
 
@@ -55,7 +55,7 @@ Pokud se e-mailová adresa použitá k přihlášení k portálu předplatných 
 
 #### <a name="how-to-detect-if-your-personal-subscription-account-is-impacted-by-an-aliasing-issue"></a>Jak zjistit, jestli má váš účet osobní předplatné vliv na problém s aliasem
 
-1. Přihlášení k https://my.visualstudio.com/subscriptions
+1. Přihlášení k [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions)
 
 0. Ověřte, že e-mailová adresa pro přihlášení uvedená v pravém horním rohu stránky odpovídá adrese, kterou jste použili k přihlášení.  Pokud se e-mailová adresa, která se přihlásila, neshoduje s e-mailovou adresou použitou pro přístup na web, dojde ke konfliktu mezi vaším účtem a aliasem.
 
@@ -81,7 +81,7 @@ Jako správce máte dvě možnosti, jak zajistit, aby vaši předplatitelé měl
 - Druhá možnost (méně bezpečná) znamená, že se předplatitelům umožní přihlásit se pomocí jiné e-mailové adresy, než je jejich e-mailová adresa.
 
 Obě tyto možnosti se konfigurují na portálu pro správu, a to provedením následujících kroků:  
-1. Přihlaste se https://manage.visualstudio.com 
+1. Přihlaste se [https://manage.visualstudio.com](https://manage.visualstudio.com) 
 
 0. Pokud upravujete jednoho uživatele, vyberte tohoto uživatele v tabulce a klikněte pravým tlačítkem na Upravit. Otevře se panel, kde můžete upravit e-mailovou adresu přihlášení. V poli e-mailová adresa pro přihlášení proveďte potřebné aktualizace. Klikněte na Uložit a změny se projeví.  
 

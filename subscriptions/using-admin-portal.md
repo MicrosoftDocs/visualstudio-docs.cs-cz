@@ -3,15 +3,15 @@ title: Začínáme s portálem pro správu předplatných | Visual Studio Market
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 08/07/2019
+ms.date: 03/03/2020
 ms.topic: conceptual
 description: Naučte se, jak začít spravovat předplatná sady Visual Studio ve vaší organizaci pomocí portálu pro správu předplatných.
-ms.openlocfilehash: b7a6d93e3c284e3778d9574eb86c4e998324c559
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: cc8a815317f46e01260f38e3ba974f89d928e49a
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850545"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408942"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Přehled portálu pro správu předplatných sady Visual Studio
 
@@ -25,7 +25,7 @@ Pamatujte na tyto body při použití portálu pro správu předplatných sady V
 - **Nesdílejte předplatná mezi předplatiteli.** Předplatná musí být přiřazena k pojmenovaným jednotlivcům.  Přiřazení předplatných týmům se nepovoluje.  Musíte přiřadit předplatné všem, kdo používá celou aplikaci nebo výhody předplatného (software pro vývoj a testování, Microsoft Azure, e-Learning atd.).
 
 ## <a name="the-subscribers-page"></a>Stránka předplatitelé
-Po přiřazení předplatných vám karta předplatitelé poskytne podrobné informace o předplatitelích, včetně těchto:
+Po přiřazení předplatných poskytuje karta spravovat předplatitele podrobné informace o předplatitelích, včetně těchto:
 - Křestní jméno a příjmení každého předplatitele.
 - E-mailová adresa pro tohoto uživatele
 - Úroveň předplatného, která je jim přiřazena.
@@ -37,20 +37,28 @@ Po přiřazení předplatných vám karta předplatitelé poskytne podrobné inf
 - Jazykové předvolby pro e-maily týkající se komunikace přiřazení na portálu pro správu.
 - Volitelné pole pro jinou e-mailovou adresu, která se používá pro komunikaci než přihlášení.
 
-Na levé straně této stránky můžete zobrazit další informace o počtu zakoupených, přiřazených a stále dostupných licencí k předplatnému v organizaci pro každou smlouvu.
+V levé horní části stránky je několik ikon, které můžete vybrat k zobrazení přehledu přiřazení předplatného, podrobností o smlouvě a sestavy maximálního využití.
+
+Chcete-li zobrazit další informace o počtu zakoupených a přiřazených licencí k předplatnému, které jsou ve vaší organizaci k dispozici pro každou smlouvu, klikněte na ikonu nahoru a povolte tak panel pro posunutí.
 > [!div class="mx-imgBorder"]
 > ![stránku předplatitelů portálu pro správu předplatných sady Visual Studio](_img/using-admin-portal/subscribers-page.png)
 
 ## <a name="the-details-page"></a>Stránka s podrobnostmi
-Další informace o zobrazené smlouvě získáte výběrem karty Podrobnosti. Zobrazuje stav smlouvy, účet nákupu, podrobnosti o organizaci, nadřízeného správce a další související informace.
+Další informace o zobrazené smlouvě získáte výběrem druhé ikony a kliknutím na ni zobrazíte kartu Podrobnosti smlouvy. Na panelu pro posunutí se zobrazuje stav smlouvy, účet nákupu, podrobnosti o organizaci, nadřízeného správce a další související informace.
 > [!div class="mx-imgBorder"]
 > ![stránce podrobností portálu pro správu předplatných sady Visual Studio](_img/using-admin-portal/details-page.png)
 
-## <a name="resources"></a>Prostředky
+## <a name="resources"></a>Zdroje
 - [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Porovnání možností a cen předplatného](https://visualstudio.microsoft.com/vs/pricing)
 - [Porovnání funkcí integrovaných vývojových prostředí (IDE) sady Visual Studio](https://visualstudio.microsoft.com/vs/compare)
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Další informace o zodpovědnostech pro správce:
@@ -59,3 +67,4 @@ Další informace o zodpovědnostech pro správce:
 - [Správa velkých týmů a externích dodavatelů](manage-teams.md)
 - [Sledování přiřazení uživatelů a zpracování objednávek](assignments-orders.md)
 - Použití [maximálního využití](maximum-usage.md) ke sledování závazků nákupu
+

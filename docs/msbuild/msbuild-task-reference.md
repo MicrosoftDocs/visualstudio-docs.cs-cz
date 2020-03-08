@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13c0731781efec98a117c11a7172645c46028af3
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: cbec3c7c020bae0e94bc16bdb1fe9740a36a93ae
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633158"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865320"
 ---
 # <a name="msbuild-task-reference"></a>Referenční dokumentace úlohy nástroje MSBuild
 
@@ -37,15 +37,15 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 
 - [Základní třída úlohy](../msbuild/task-base-class.md)
 
- Přidá několik parametrů k úkolům odvozeným od třídy <xref:Microsoft.Build.Utilities.Task>.
+ Přidá několik parametrů k úkolům odvozeným od třídy <xref:Microsoft.Build.Utilities.Task>. Není určeno k použití přímo.
 
 - [Základní třída TaskExtension –](../msbuild/taskextension-base-class.md)
 
- Přidá několik parametrů k úkolům odvozeným od třídy <xref:Microsoft.Build.Tasks.TaskExtension>.
+ Přidá několik parametrů k úkolům odvozeným od třídy <xref:Microsoft.Build.Tasks.TaskExtension>. Není určeno k použití přímo.
 
 - [Základní třída ToolTaskExtension –](../msbuild/tooltaskextension-base-class.md)
 
- Přidá několik parametrů k úkolům odvozeným od třídy <xref:Microsoft.Build.Tasks.ToolTaskExtension>.
+ Přidá několik parametrů k úkolům odvozeným od třídy <xref:Microsoft.Build.Tasks.ToolTaskExtension>. Není určeno k použití přímo.
 
 - [AL (Assembly Linker) – úloha](../msbuild/al-assembly-linker-task.md)
 

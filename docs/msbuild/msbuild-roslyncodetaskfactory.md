@@ -10,19 +10,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ead738042b15c955aadb458c527253f3759b934e
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 658302de187d6bbeab67dedaaa816709f00436ed
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633223"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865372"
 ---
-# <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>Vložené úlohy nástroje MSBuild s RoslynCodeTaskFactory
+# <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>Vložené úlohy MSBuild s použitím RoslynCodeTaskFactory
 
 Podobně jako [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md), RoslynCodeTaskFactory využívá kompilátory Roslyn pro různé platformy ke generování sestavení úloh v paměti pro použití jako vložené úkoly.  RoslynCodeTaskFactory úkoly cílí na .NET Standard a můžou pracovat na modulech runtime .NET Framework a .NET Core i na jiných platformách, jako je Linux a Mac OS.
 
 >[!NOTE]
->RoslynCodeTaskFactory je k dispozici pouze v MSBuild 15,8 a vyšších.
+>RoslynCodeTaskFactory je k dispozici pouze v MSBuild 15,8 a vyšších. Verze nástroje MSBuild následují po verzích sady Visual Studio, takže RoslynCodeTaskFactory je k dispozici v aplikaci Visual Studio 15,8 a vyšší.
 
 ## <a name="the-structure-of-an-inline-task-with-roslyncodetaskfactory"></a>Struktura vložené úlohy pomocí RoslynCodeTaskFactory
 
@@ -164,7 +164,7 @@ definuje tyto tři parametry:
 
 - `Tally` je výstupní parametr typu System. Int32.
 
-Pokud má element `Code` `Type` atribut `Fragment` nebo `Method`, jsou automaticky vytvořeny vlastnosti pro každý parametr. V opačném případě musí být vlastnosti explicitně deklarovány ve zdrojovém kódu úlohy a musí přesně odpovídat definicím parametrů.
+Pokud má element `Code` `Type` atribut `Fragment` nebo `Method`, jsou automaticky vytvořeny vlastnosti pro každý parametr.  V RoslynCodeTaskFactory, pokud má element `Code` `Type` atribut `Class`, není nutné zadávat `ParameterGroup`, protože je odvozen ze zdrojového kódu (Jedná se o rozdíl od `CodeTaskFactory`). V opačném případě musí být vlastnosti explicitně deklarovány ve zdrojovém kódu úlohy a musí přesně odpovídat definicím parametrů.
 
 ## <a name="example"></a>Příklad
 

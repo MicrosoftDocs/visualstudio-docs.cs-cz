@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 9f4b044cddee59254e0b4f5198e75e3fa774aab7
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 7fd8e886a4f770238c00ef881748388f93281074
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114203"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409692"
 ---
 # <a name="visual-studio-administrator-guide"></a>Příručka správce sady Visual Studio
 
@@ -107,13 +107,21 @@ Před nasazením sady Visual Studio napříč vaší organizací je potřeba pro
 
 ## <a name="step-4---deploy-updates"></a>Krok 4 – nasazení aktualizací
 
-* [Aktualizujte vaše umístění v síti s nejnovějšími aktualizacemi](update-a-network-installation-of-visual-studio.md?view=vs-2019) do sady Visual Studio spuštěním příkazu, který jste použili v kroku 1 v pravidelných intervalech a přidejte aktualizované součásti.
+* [Aktualizujte umístění v síti nejnovějšími aktualizacemi](update-a-network-installation-of-visual-studio.md?view=vs-2019) sady Visual Studio spuštěním příkazu, který jste použili v kroku 1 v pravidelných intervalech pro přidání aktualizovaných součástí.
 
   Aplikaci Visual Studio lze aktualizovat pomocí skriptu pro aktualizaci. Uděláte to tak, že použijete parametr [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) příkazového řádku.
 
 ## <a name="step-5---optional-use-visual-studio-tools"></a>Krok 5 – (volitelné) použití nástrojů sady Visual Studio
 
-Máme několik nástrojů, které vám pomůžou [zjišťovat a spravovat nainstalované instance sady Visual Studio](tools-for-managing-visual-studio-instances.md?view=vs-2019) na klientských počítačích.
+K dispozici je několik nástrojů, které vám pomůžou [detekovat a spravovat nainstalované instance sady Visual Studio](tools-for-managing-visual-studio-instances.md?view=vs-2019) na klientských počítačích.
+
+## <a name="advanced-configuration"></a>Pokročilá konfigurace
+
+Ve výchozím nastavení umožňuje instalace sady Visual Studio Zahrnutí vlastního typu do vyhledávání Bingu z seznamu chyb F1 a z odkazů na kód. Sadu Visual Studio můžete nakonfigurovat tak, aby zakázala vyhledávací mechanismus z zahrnutí libovolných vlastních uživatelských typů změnou hodnoty následujícího klíče registru podle zásad:
+
+**"PutCustomTypeInBingSearch" – DWORD 0**
+
+Registr se nachází ve složce * Software\Microsoft\VisualStudio\16.0_ {InstanceId} \ Roslyn\Internal\Diagnostics\* adresáři vašeho privátního registru. Pokyny, jak otevřít podregistr registru, najdete v tématu [úprava registru pro instanci sady Visual Studio](tools-for-managing-visual-studio-instances.md?view=vs-2019#editing-the-registry-for-a-visual-studio-instance).
 
 ::: moniker-end
 
@@ -146,22 +154,30 @@ Máme několik nástrojů, které vám pomůžou [zjišťovat a spravovat nainst
 
 ## <a name="step-4---deploy-updates"></a>Krok 4 – nasazení aktualizací
 
-* [Aktualizujte vaše umístění v síti s nejnovějšími aktualizacemi](update-a-network-installation-of-visual-studio.md?view=vs-2017) do sady Visual Studio spuštěním příkazu, který jste použili v kroku 1 v pravidelných intervalech a přidejte aktualizované součásti.
+* [Aktualizujte umístění v síti nejnovějšími aktualizacemi](update-a-network-installation-of-visual-studio.md?view=vs-2017) sady Visual Studio spuštěním příkazu, který jste použili v kroku 1 v pravidelných intervalech pro přidání aktualizovaných součástí.
 
   Aplikaci Visual Studio lze aktualizovat pomocí skriptu pro aktualizaci. Uděláte to tak, že použijete parametr [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) příkazového řádku.
 
 ## <a name="step-5---optional-use-visual-studio-tools"></a>Krok 5 – (volitelné) použití nástrojů sady Visual Studio
 
-Máme několik nástrojů, které vám pomůžou [zjišťovat a spravovat nainstalované instance sady Visual Studio](tools-for-managing-visual-studio-instances.md?view=vs-2017) na klientských počítačích.
+K dispozici je několik nástrojů, které vám pomůžou [detekovat a spravovat nainstalované instance sady Visual Studio](tools-for-managing-visual-studio-instances.md?view=vs-2017) na klientských počítačích.
+
+## <a name="advanced-configuration"></a>Pokročilá konfigurace
+
+Ve výchozím nastavení umožňuje instalace sady Visual Studio Zahrnutí vlastního typu do vyhledávání Bingu z seznamu chyb F1 a z odkazů na kód. Sadu Visual Studio můžete nakonfigurovat tak, aby zakázala vyhledávací mechanismus z zahrnutí libovolných vlastních uživatelských typů změnou hodnoty následujícího klíče registru podle zásad:
+
+**"PutCustomTypeInBingSearch" – DWORD 0**
+
+Registr se nachází ve složce * Software\Microsoft\VisualStudio\15.0_ {InstanceId} \ Roslyn\Internal\Diagnostics\* adresáři vašeho privátního registru. Pokyny, jak otevřít podregistr registru, najdete v tématu [úprava registru pro instanci sady Visual Studio](tools-for-managing-visual-studio-instances.md?view=vs-2017#editing-the-registry-for-a-visual-studio-instance).
 
 ::: moniker-end
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Příklady parametrů příkazového řádku](command-line-parameter-examples.md)
-* [Instalace certifikátů vyžadovaných pro offline instalace sady Visual Studio](install-certificates-for-visual-studio-offline.md)
+* [Instalace certifikátů vyžadovaných pro instalaci sady Visual Studio offline](install-certificates-for-visual-studio-offline.md)
 * [Import nebo export konfigurací instalace](import-export-installation-configurations.md)
 * [Archivy instalačního programu sady Visual Studio](https://devblogs.microsoft.com/setup/tag/vs2017/)
 * [Životní cyklus produktu Visual Studio a údržba](/visualstudio/releases/2019/servicing/)

@@ -14,12 +14,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 71d2fe83690e55d49bb23bffb09de91c8f7534b6
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.openlocfilehash: 67bb0d7ca38d4312dc2a1f1e7a8f50d0102a328a
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78167621"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408721"
 ---
 # <a name="suppress-code-analysis-warnings"></a>Potlačit upozornění analýzy kódu
 
@@ -92,6 +92,8 @@ Mezi vlastnosti atributu patří:
 
 - **Target** – identifikátor, který se používá k určení cíle, na kterém je upozornění potlačeno. Musí obsahovat plně kvalifikovaný název položky.
 
+Když se v aplikaci Visual Studio zobrazí upozornění, můžete zobrazit příklady `SuppressMessage` [přidáním potlačení do globálního souboru potlačení](../code-quality/use-roslyn-analyzers.md#suppress-violations). Atribut potlačení a požadované vlastnosti se zobrazí v okně náhledu.
+
 ## <a name="suppressmessage-usage"></a>Využití SuppressMessage
 
 Upozornění analýzy kódu jsou potlačena na úrovni, na kterou je použit atribut <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>. Atribut lze například použít na úrovni sestavení, modulu, typu, člena nebo parametru. Účelem tohoto je pevně spojit informace o potlačení s kódem, kde dojde k porušení.
@@ -147,15 +149,6 @@ public class Animal
 }
 ```
 
-## <a name="generated-code"></a>Generovaný kód
-
-Kompilátory spravovaného kódu a některé nástroje třetích stran generují kód pro usnadnění rychlého vývoje kódu. Kód generovaný kompilátorem, který se zobrazí ve zdrojových souborech, je obvykle označen atributem `GeneratedCodeAttribute`.
-
-Můžete zvolit, zda chcete potlačit upozornění a chyby analýzy kódu pro vygenerovaný kód. Informace o tom, jak potlačit taková upozornění a chyby, naleznete v tématu [How to: potlačit upozornění pro generovaný kód](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md).
-
-> [!NOTE]
-> Analýza kódu ignoruje `GeneratedCodeAttribute`, když se aplikuje na celé sestavení nebo na jeden parametr.
-
 ## <a name="global-level-suppressions"></a>Potlačení na globální úrovni
 
 Nástroj Analýza spravovaného kódu prověřuje `SuppressMessage` atributy, které jsou aplikovány na úrovni sestavení, modulu, typu, člena nebo parametru. Také se aktivují narušení proti prostředkům a oborům názvů. Tato porušení musí být použita na globální úrovni a mají rozsah a cíl. Například následující zpráva potlačuje porušení oboru názvů:
@@ -185,6 +178,22 @@ Můžete potlačit porušení kvality kódu pro celé sestavení pomocí oboru *
 Například následující atribut v souboru projektu _GlobalSuppressions_ potlačí porušení ConfigureAwait pro projekt ASP.NET Core:
 
 `[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2007:Consider calling ConfigureAwait on the awaited task", Justification = "ASP.NET Core doesn't use thread context to store request context.", Scope = "module")]`
+
+## <a name="generated-code"></a>Generovaný kód
+
+Kompilátory spravovaného kódu a některé nástroje třetích stran generují kód pro usnadnění rychlého vývoje kódu. Kód generovaný kompilátorem, který se zobrazí ve zdrojových souborech, je obvykle označen atributem `GeneratedCodeAttribute`.
+
+Pro analýzu zdrojového kódu (analyzátory FxCop) můžete potlačit zprávy v generovaném kódu pomocí souboru [. editorconfig](../code-quality/configure-fxcop-analyzers.md) v kořenovém adresáři projektu nebo řešení. Použijte vzor souboru, který se bude shodovat s generovaným kódem. Pokud například chcete vyloučit upozornění CS1591 v souborech * *. Designer.cs* , použijte to v konfiguračním souboru.
+
+``` cmd
+[*.designer.cs]
+dotnet_diagnostic.CS1591.severity = none
+```
+
+Pro analýzu starší verze kódu můžete zvolit, zda chcete potlačit upozornění analýzy kódu a chyby pro vygenerovaný kód. Informace o tom, jak potlačit taková upozornění a chyby, naleznete v tématu [How to: potlačit upozornění pro generovaný kód](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md).
+
+> [!NOTE]
+> Analýza kódu ignoruje `GeneratedCodeAttribute`, když se aplikuje na celé sestavení nebo na jeden parametr.
 
 ## <a name="see-also"></a>Viz také
 

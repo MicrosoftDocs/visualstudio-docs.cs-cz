@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c570a5a783133f9422dc434d0ef460b9ca7510e
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 264ff3a5e64b756020648e888f7817e12702659f
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633483"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865359"
 ---
 # <a name="message-task"></a>úloha zprávy
 
@@ -44,7 +44,7 @@ Zaprotokoluje zprávu během sestavení.
 
  Pokud je parametr `Condition` vyhodnocen jako `true`, bude hodnota parametru `Text` zaznamenána a sestavení bude nadále spuštěno. Pokud parametr `Condition` neexistuje, text zprávy se zaznamená do protokolu. Další informace o protokolování naleznete v tématu [získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
 
- Ve výchozím nastavení se zpráva pošle do protokolovacího nástroje konzoly MSBuild. To lze změnit nastavením parametru <xref:Microsoft.Build.Tasks.TaskExtension.Log%2A>. Protokolovací nástroj interpretuje parametr `Importance`. Zpráva nastavená na `high` se obvykle pošle, když je podrobnost protokolovacího nástroje nastavená na <xref:Microsoft.Build.Framework.LoggerVerbosity>`Minimal` nebo vyšší. Když je podrobnost protokolovacího nástroje nastavená na <xref:Microsoft.Build.Framework.LoggerVerbosity>`Detailed`, pošle se zpráva nastavená na `low`.
+ Ve výchozím nastavení je zpráva odeslána všem registrovaným protokolovacím nástrojům. Protokolovací nástroj interpretuje parametr `Importance`. Zpráva nastavená na `high` se obvykle pošle, když je podrobnost protokolovacího nástroje nastavená na <xref:Microsoft.Build.Framework.LoggerVerbosity>.`Minimal` nebo vyšší. Když je podrobnost protokolovacího nástroje nastavená na <xref:Microsoft.Build.Framework.LoggerVerbosity>, pošle se zpráva nastavená na `low`.`Detailed`.
 
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
