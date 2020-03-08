@@ -6,12 +6,12 @@ manager: lank
 ms.date: 02/20/2020
 ms.topic: conceptual
 description: Přečtěte si, jak se data předplatitelů při ztrátě přístupu k předplatným nezdařila.
-ms.openlocfilehash: f3a35448dd0befbbb91f1657dd62b2b99ff37a2a
-ms.sourcegitcommit: 3c105990656cd509062ce60e52e776c794f6305d
+ms.openlocfilehash: 439e53b1c67fde0fbda0666652e29bf396abfee2
+ms.sourcegitcommit: c8b979a56c95e43cf8ae92b6c3c9570db59a8e58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77520836"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78894408"
 ---
 # <a name="anonymization-of-visual-studio-subscriber-information"></a>Anonymita informací předplatitele sady Visual Studio
 Když dojde k události, která blokuje použití předplatného předplatitele, jako je například vypršení platnosti předplatného nebo odstranění přihlašovacího účtu odběratele, osobní údaje uživatele, například jméno a přihlašovací účet, jsou v podstatě zakódované pro vykreslování. nepoužitelné.  Tento postup slouží k ochraně osobních údajů předplatitele.
@@ -41,11 +41,13 @@ Odpověď: Existují dva způsoby, jak zabránit problému:
 - Nasaďte jeden systém pro správu identit – buď MSA, nebo AAD, ale ne obojí.  
 - Přidružte identity AAD a MSA prostřednictvím tenanta. 
 
-## <a name="next-steps"></a>Další kroky
-Přečtěte si, jak se vyhnout anonymitě pomocí [přidružení identit MSA a AAD](https://docs.microsoft.com/azure/active-directory/b2b/add-users-administrator).
-
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+
+## <a name="next-steps"></a>Další kroky
+Přečtěte si, jak se vyhnout anonymitě pomocí [přidružení identit MSA a AAD](https://docs.microsoft.com/azure/active-directory/b2b/add-users-administrator).
+
+

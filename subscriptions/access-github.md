@@ -6,12 +6,12 @@ manager: lank
 ms.date: 02/17/2020
 ms.topic: conceptual
 description: Další informace o nové nabídce aplikace Visual Studio + GitHub
-ms.openlocfilehash: 5ae209bc0f6b3dcef99f15abd2cfb67d65f655d0
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.openlocfilehash: f8cfe09d6c9dc7608684ccf80238db4ac066fc20
+ms.sourcegitcommit: c8b979a56c95e43cf8ae92b6c3c9570db59a8e58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77476753"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78894387"
 ---
 # <a name="introducing-visual-studio-subscriptions-with-github-enterprise"></a>Představení předplatných sady Visual Studio s GitHubem Enterprise  
 
@@ -77,12 +77,14 @@ Odpověď: společně s předplatným webu GitHub Enterprise obdržíte plné p�
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 - Získejte [technickou podporu](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapId=b77fe80f-5417-80bd-4b2a-275cf0018c24) pro GitHub Enterprise.   
 
-## <a name="next-steps"></a>Další kroky
-Pokud s GitHubem začínáte, Projděte si [výukové cvičení GitHubu](https://lab.github.com/), které vás provede řadou zábavnéch a praktických projektů, které vám umožní sdílet užitečnou zpětnou vazbu na cestě.
-
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+
+## <a name="next-steps"></a>Další kroky
+Pokud s GitHubem začínáte, Projděte si [výukové cvičení GitHubu](https://lab.github.com/), které vás provede řadou zábavnéch a praktických projektů, které vám umožní sdílet užitečnou zpětnou vazbu na cestě.
+
+
 
