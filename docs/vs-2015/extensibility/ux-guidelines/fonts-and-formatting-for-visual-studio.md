@@ -9,28 +9,28 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ede8844b34473e1c900bd6af040cac99ceee1514
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67824058"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409911"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Písma a formátování pro Visual Studio
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-## <a name="BKMK_TheEnvironmentFont"></a> Písmo prostředí
- Všechna písma v sadě Visual Studio musí být vystavené pro uživatele pro přizpůsobení. To probíhá primárně prostřednictvím **písma a barvy** stránku **nástroje > Možnosti** dialogového okna. Jsou tři hlavní kategorie nastavení písma:
+## <a name="BKMK_TheEnvironmentFont"></a>Písmo prostředí
+ Všechna písma v sadě Visual Studio musí být vystavené pro uživatele pro přizpůsobení. To se primárně provádí pomocí stránky **písma a barvy** v dialogovém okně **Nástroje > Možnosti** . Jsou tři hlavní kategorie nastavení písma:
 
-- **Písmo prostředí** – primární písmo integrované vývojové prostředí (IDE), použít pro všechny prvky rozhraní, včetně dialogová okna, nabídky, okna nástrojů a oken dokumentu. Ve výchozím nastavení písmo prostředí je vázán na systémové písmo, které se zobrazí jako 9 pt Segoe UI v aktuálních verzích Windows. Pomocí jednoho písma pro všechny prvky rozhraní pomáhá zajistit vzhled písma konzistentní v celém rozhraní IDE.
+- **Písmo prostředí** – primární písmo pro integrované vývojové prostředí (IDE), které se používá pro všechny prvky rozhraní, včetně dialogových oken, nabídek, oken nástrojů a oken dokumentů. Ve výchozím nastavení písmo prostředí je vázán na systémové písmo, které se zobrazí jako 9 pt Segoe UI v aktuálních verzích Windows. Pomocí jednoho písma pro všechny prvky rozhraní pomáhá zajistit vzhled písma konzistentní v celém rozhraní IDE.
 
-- **Textový editor** – prvky, že surface v kódu a dalších textových editorů je možné přizpůsobit v textovém editoru stránku **nástroje > Možnosti**.
+- **Textový editor** – prvky, které jsou na kódu a další textové editory, lze přizpůsobit na stránce textový editor v **nabídce Nástroje > Možnosti**.
 
-- **Konkrétní kolekce** – na stránce vlastní nastavení v zařízení surface návrháře windows, která nabízejí vlastní nastavení jejich prvky rozhraní může vystavit písma, které jsou specifické pro jejich návrhu **nástroje > Možnosti**.
+- **Konkrétní kolekce** – okna návrháře, která nabízí vlastní nastavení prvků rozhraní, mohou vystavit písma specifická pro svoji návrhovou plochu na jejich vlastní stránce nastavení v části **Nástroje > Možnosti**.
 
 ### <a name="editor-font-customization-and-resizing"></a>Vlastní nastavení písma editoru a změnu velikosti
  Uživatelé budou často zvětšení nebo zvětšení velikosti a/nebo barvu textu v editoru podle jejich priority, nezávislé na obecné uživatelského rozhraní. Písmo prostředí, protože se používají u elementů, které se zobrazují v rámci nebo jako součást editoru nebo návrháře je důležité si uvědomit očekávané chování, pokud jeden z těchto písmo klasifikace se změnilo.
 
- Při vytváření prvky uživatelského rozhraní, které se zobrazí v editoru, ale jsou není součástí *obsah*, je důležité používat písmo prostředí a písmo textu, aby předvídatelnému změnit velikost elementů.
+ Při vytváření prvků uživatelského rozhraní, které se zobrazí v editoru, ale nejsou součástí *obsahu*, je důležité použít písmo prostředí a nikoli text písma, aby se prvky měnily předvídatelným způsobem.
 
 1. V editoru kódu text velikost s nastavením písmo textu kódu a reagovat na úroveň přiblížení editoru textu.
 
@@ -43,9 +43,9 @@ ms.locfileid: "67824058"
     - Text popisku v dialogových oknech, jako je například hledání v souborech nebo Refaktorujte
 
 ### <a name="accessing-the-environment-font"></a>Přístup k prostředí písma
- V kódu nativní nebo WinForms písmo prostředí přístupná pomocí volání metody **IUIHostLocale::GetDialogFont** po dotazování rozhraní ze služby SID_SUIHostLocale.
+ V nativním kódu nebo v kódu WinForms je možné k písma prostředí přistupovat voláním metody **IUIHostLocale:: GetDialogFont** po dotazování rozhraní ze služby SID_SUIHostLocale.
 
- Pro Windows Presentation Foundation (WPF), odvozovat vlastní třídy dialogového okna okno prostředí **DialogWindow** třídy místo pro WPF **okno** třídy.
+ Pro Windows Presentation Foundation (WPF) odvodíte třídu vašeho dialogového okna z třídy **DialogWindow** Shell namísto třídy **okna** WPF.
 
  V XAML kód vypadá například takto:
 
@@ -68,9 +68,9 @@ internal partial class WebConfigModificationWindow : DialogWindow
 
 ```
 
- (Nahradit `Microsoft.VisualStudio.Shell.11.0` v aktuální verzi knihovny dll MPF.)
+ (Nahraďte `Microsoft.VisualStudio.Shell.11.0` aktuální verzí knihovny MPF dll.)
 
- Chcete-li zobrazit dialogové okno, zavolejte "**ShowModal()** " ve třídě přes **ShowDialog()** . **ShowModal()** nastaví správnou modální stav v prostředí, zajišťuje je zarovnaný na střed dialogového okna v nadřazené okno a tak dále.
+ Chcete-li zobrazit dialogové okno, zavolejte "**ShowModal ()** " na třídu přes **ShowDialog ()** . **ShowModal ()** nastaví správný modální stav v prostředí, zajistí, že se dialog v nadřazeném okně zařadí do středu, a tak dále.
 
  Kód je následujícím způsobem:
 
@@ -80,9 +80,9 @@ window.ShowModal()
 
 ```
 
- **ShowModal** vrátí hodnotu? (s možnou hodnotou Null logická hodnota) se **DialogResult**, kterou lze použít v případě potřeby. Vrácená hodnota je hodnota true, pokud dialogové okno se zavřel s **OK**.
+ **ShowModal** vrací BOOL? (Nullable Boolean) se **DialogResult**, který může být v případě potřeby použit. Návratová hodnota má hodnotu true, pokud bylo dialogové okno zavřeno s **OK**.
 
- Pokud chcete zobrazit některé rozhraní WPF, která není kompatibilní se dialogové okno a je hostovaná v její vlastní **HwndSource**, jako je například automaticky otevíraném okně nebo podřízené okno WPF okna okno nadřazené Win32/WinForms, budete muset nastavit **FontFamily**a **FontSize** v kořenovém elementu prvku WPF. (Prostředí v hlavním okně nastaví vlastnosti, ale nebude možné zdědit minulé HWND). Prostředí obsahuje prostředky, ke kterým může být vázána vlastnosti, následujícím způsobem:
+ Pokud potřebujete zobrazit některé uživatelské rozhraní WPF, které není dialog a je hostováno ve vlastním **HwndSource**, například v místním okně nebo v podřízeném okně WPF okna nadřazeného okna systému Windows, bude nutné nastavit **FontFamily** a **FontSize** v kořenovém elementu prvku WPF. (Prostředí v hlavním okně nastaví vlastnosti, ale nebude možné zdědit minulé HWND). Prostředí obsahuje prostředky, ke kterým může být vázána vlastnosti, následujícím způsobem:
 
 ```
 <Setter property="FontFamily" Value="{DynamicResource VsFont.EnvironmentFontFamily}" />
@@ -90,10 +90,10 @@ window.ShowModal()
 
 ```
 
-### <a name="BKMK_Formatting"></a> Formátování odkaz (škálování/tučné)
+### <a name="BKMK_Formatting"></a>Formátování (škálování/tučné) – referenční informace
  Některá dialogová okna, aby konkrétní text, který má být tučného písma nebo velikost než písmo prostředí. Dříve byly písma větší než písmo prostředí kódovaný jako "písmo prostředí + 2" nebo podobné. Používání fragmentů kódu zadaná podporu vysokých hodnot DPI monitorování a ujistěte se, že zobrazovaný text vždy se zobrazí v správnou velikost a váhy (jako jsou Light nebo Semilight).
 
-> **Poznámka: Než použijete schéma formátování, ujistěte se, jsou následující pokyny v [styl textu](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle).**
+> **Poznámka: před použitím formátování se ujistěte, že budete postupovat podle pokynů, které najdete ve [stylu textu](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle).**
 
  Škálování prostředí písma, nastavte styl TextBlock nebo popisku, jak je uvedeno. Každá z těchto fragmentů kódu používá správně, bude generovat použitím správného písma, včetně změn odpovídající velikost a váhy záznamu.
 
@@ -105,11 +105,11 @@ xmlns:vsui="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.Visual
 ```
 
 #### <a name="375-environment-font--light"></a>Písmo prostředí 375 % + světla
- **Zobrazí se jako:** 34 pt Segoe UI Light
+ **Zobrazuje se jako:** 34 PT Segoe UI Light.
 
- **Použití:** (vzácného) jedinečné obchodní značku uživatelského rozhraní, jako je například úvodní stránky
+ **Použijte pro:** (vzácné) jedinečné BRANDINGOVÉ uživatelské rozhraní, jako je například na úvodní stránce.
 
- **Kódu procedury:** Kde "textBlock" je dříve definovaný TextBlock a "štítku" je dříve definovaný popisek.
+ **Procedurální kód:** Kde "textBlock" je dříve definovaný TextBlock a "label" je dříve definovaný popisek.
 
 ```
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -119,7 +119,7 @@ label.SetResourceReference(Label.StyleProperty,  
 
 ```
 
- **XAML:** Nastavte styl TextBlock nebo popisku, jak je znázorněno.
+ **XAML:** Nastavte styl TextBlock nebo popisku, jak je znázorněno na obrázku.
 
 ```
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment375PercentFontSizeStyleKey}}">TextBlock: 375 Percent Scaling</TextBlock> 
@@ -128,11 +128,11 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="310-environment-font--light"></a>Písmo prostředí 310 % + světla
- **Zobrazí se jako:** 28 pt Segoe UI Light
+ **Zobrazuje se jako:** 28 bodů Segoe UI Light.
 
- **Použití:** názvy velkých podpis dialogového okna, hlavní části sestavy
+ **Použijte pro:** názvy dialogových oken velkých podpisů, hlavní nadpis v sestavách
 
- **Kódu procedury:** Kde "textBlock" je dříve definovaný TextBlock a "štítku" je dříve definovaný popisek.
+ **Procedurální kód:** Kde "textBlock" je dříve definovaný TextBlock a "label" je dříve definovaný popisek.
 
 ```
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -142,7 +142,7 @@ label.SetResourceReference(Label.StyleProperty,  
 
 ```
 
- **XAML:** Nastavte styl TextBlock nebo popisku, jak je znázorněno.
+ **XAML:** Nastavte styl TextBlock nebo popisku, jak je znázorněno na obrázku.
 
 ```
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment310PercentFontSizeStyleKey}}">TextBlock: 310 Percent Scaling</TextBlock> 
@@ -151,11 +151,11 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="200-environment-font--semilight"></a>Písmo prostředí 200 % + Semilight
- **Zobrazí se jako:** 18 bodů Segoe UI Semilight
+ **Vypadá takto:** 18 bodů Segoe UI Semilight
 
- **Použití:** podnadpisů, názvy v dialogových oknech malé a střední
+ **Použít pro:** dílčí záhlaví, názvy v malých a středně velkých dialogových oknech
 
- **Kódu procedury:** Kde "textBlock" je dříve definovaný TextBlock a "štítku" je dříve definovaný popisek.
+ **Procedurální kód:** Kde "textBlock" je dříve definovaný TextBlock a "label" je dříve definovaný popisek.
 
 ```
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -165,7 +165,7 @@ label.SetResourceReference(Label.StyleProperty,  
 
 ```
 
- **XAML:** Nastavte styl TextBlock nebo popisku, jak je znázorněno.
+ **XAML:** Nastavte styl TextBlock nebo popisku, jak je znázorněno na obrázku.
 
 ```
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment200PercentFontSizeStyleKey}}">TextBlock: 200 Percent Scaling</TextBlock> 
@@ -174,11 +174,11 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="155-environment-font"></a>155 % prostředí písma
- **Zobrazí se jako:** 14 bodů Segoe UI
+ **Zobrazuje se jako:** 14 bodů Segoe UI
 
- **Použití:** nadpisy oddílů v dokumentu a uživatelského rozhraní nebo sestavy
+ **Použít pro:** nadpisy oddílů v uživatelském rozhraní nebo sestavách dokumentu
 
- **Kódu procedury:** Kde "textBlock" je dříve definovaný TextBlock a "štítku" je dříve definovaný popisek.
+ **Procedurální kód:** Kde "textBlock" je dříve definovaný TextBlock a "label" je dříve definovaný popisek.
 
 ```
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -188,7 +188,7 @@ label.SetResourceReference(Label.StyleProperty,  
 
 ```
 
- **XAML:** Nastavte styl TextBlock nebo popisku, jak je znázorněno.
+ **XAML:** Nastavte styl TextBlock nebo popisku, jak je znázorněno na obrázku.
 
 ```
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment155PercentFontSizeStyleKey}}">TextBlock: 155 Percent Scaling</TextBlock> 
@@ -197,11 +197,11 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="133-environment-font"></a>133 % prostředí písma
- **Zobrazí se jako:** 12 bodů Segoe UI
+ **Vypadá takto:** Segoe UI 12 bodů
 
- **Použití:** menší podpoložek v signatuře dialogových oken a dokumentů a uživatelského rozhraní
+ **Použít pro:** menší podpozice v dialogových oknech podpisů a v uživatelském rozhraní dokumentu
 
- **Kódu procedury:** Kde "textBlock" je dříve definovaný TextBlock a "štítku" je dříve definovaný popisek.
+ **Procedurální kód:** Kde "textBlock" je dříve definovaný TextBlock a "label" je dříve definovaný popisek.
 
 ```
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -211,7 +211,7 @@ label.SetResourceReference(Label.StyleProperty,  
 
 ```
 
- **XAML:** Nastavte styl TextBlock nebo popisku, jak je znázorněno.
+ **XAML:** Nastavte styl TextBlock nebo popisku, jak je znázorněno na obrázku.
 
 ```
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment133PercentFontSizeStyleKey}}">TextBlock: 133 Percent Scaling</TextBlock> 
@@ -220,11 +220,11 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="122-environment-font"></a>Písmo prostředí 122 %
- **Zobrazí se jako:** 11 bodů Segoe UI
+ **Zobrazuje se jako:** 11 bodů Segoe UI
 
- **Použití:** části záhlaví v dialogových oknech podpis, top uzly ve stromovém zobrazení, svislého tabulátoru navigace
+ **Používá se pro:** nadpisy oddílů v dialogových oknech podpisů, hlavních uzlech ve stromovém zobrazení, svislé navigaci karet.
 
- **Kódu procedury:** Kde "textBlock" je dříve definovaný TextBlock a "štítku" je dříve definovaný popisek.
+ **Procedurální kód:** Kde "textBlock" je dříve definovaný TextBlock a "label" je dříve definovaný popisek.
 
 ```
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -234,7 +234,7 @@ label.SetResourceReference(Label.StyleProperty,  
 
 ```
 
- **XAML:** Nastavte styl TextBlock nebo popisku, jak je znázorněno.
+ **XAML:** Nastavte styl TextBlock nebo popisku, jak je znázorněno na obrázku.
 
 ```
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment122PercentFontSizeStyleKey}}">TextBlock: 122 Percent Scaling</TextBlock> 
@@ -243,11 +243,11 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="environment-font--bold"></a>Písmo prostředí + tučného písma
- **Zobrazí se jako:** tučné 9 pt Segoe UI
+ **Zobrazuje se jako:** tučné 9 pt Segoe UI
 
- **Použití:** popisky a podnadpisy v dialogových oknech podpis, sestavy a dokumentu a uživatelského rozhraní
+ **Použijte pro:** Labels a podhlaves v dialogových oknech podpisů, sestavách a ve správném uživatelském rozhraní dokumentu.
 
- **Kódu procedury:** Kde "textBlock" je dříve definovaný TextBlock a "štítku" je dříve definovaný popisek.
+ **Procedurální kód:** Kde "textBlock" je dříve definovaný TextBlock a "label" je dříve definovaný popisek.
 
 ```
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -257,7 +257,7 @@ label.SetResourceReference(Label.StyleProperty,  
 
 ```
 
- **XAML:** Nastavte styl TextBlock nebo popisku, jak je znázorněno.
+ **XAML:** Nastavte styl TextBlock nebo popisku, jak je znázorněno na obrázku.
 
 ```
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironmentBoldStyleKey}}"> Bold TextBlock</TextBlock> 
@@ -268,7 +268,7 @@ label.SetResourceReference(Label.StyleProperty,  
 ### <a name="localizable-styles"></a>Lokalizovatelné styly
  V některých případech Lokalizátoři muset upravit styly písem definované pro různá národní prostředí, jako je například tučné odebrání text pro východoasijské jazyky. Chcete-li lokalizace styly písem je to možné, musí být tyto styly v souboru .resx. Nejlepší způsob, jak to provést a přesto upravit styly písem definované v nástroji Návrhář formulářů sady Visual Studio je explicitně nastavit styly písem v době návrhu. I když to vytvoří objekt celé písmo a zdát, že k rozdělení dědění nadřazeného písma, pouze vlastnost FontStyle slouží k nastavení písma.
 
- Toto řešení je spojit formuláře dialogového okna **FontChanged** událostí. V **FontChanged** události, provede všechny ovládací prvky a zkontrolovat, pokud je nastavit jejich písma. Pokud je nastavena, změňte ho na nové písmo na základě formuláře písma a předchozí styl písma ovládacího prvku. Příklad v kódu je:
+ Řešením je zapojit událost **FontChanged** formuláře dialogového okna. V události **FontChanged** Projděte všechny ovládací prvky a ověřte, zda je jejich písmo nastaveno. Pokud je nastavena, změňte ho na nové písmo na základě formuláře písma a předchozí styl písma ovládacího prvku. Příklad v kódu je:
 
 ```
 private void Form1_FontChanged(object sender, System.EventArgs e)
@@ -304,27 +304,27 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 }
 ```
 
- Tento kód použít zaručuje, že dojde k aktualizaci formuláře písma, bude písma ovládací prvky také aktualizovat. Tato metoda by měla volat také z konstruktoru formuláře, protože dialogové okno se nemusí podařit získat instanci **IUIService** a **FontChanged** nikdy se aktivuje událost. Zapojení **FontChanged** vám umožní dialogových oknech se dynamicky získaly nové písmo i v případě, že dialogové okno je již otevřen.
+ Tento kód použít zaručuje, že dojde k aktualizaci formuláře písma, bude písma ovládací prvky také aktualizovat. Tato metoda by měla být volána také z konstruktoru formuláře, protože dialogové okno může selhat při získání instance **IUIService** a událost **FontChanged** nikdy neproběhne. Zavěšení **FontChanged** umožní dialogům dynamicky vybrat nové písmo, i když už je dialog otevřený.
 
 ### <a name="testing-the-environment-font"></a>Testování písmo prostředí
- Chcete-li zajistit, že vaše uživatelské rozhraní používá písmo prostředí a respektuje nastavení velikosti, otevřete **nástroje > Možnosti > prostředí > písma a barvy** a vyberte v části "Písmo prostředí" "Zobrazit nastavení pro:" rozevírací nabídka.
+ Aby bylo zajištěno, že vaše uživatelské rozhraní používá písmo prostředí a respektuje nastavení velikosti, otevřete **nástroje > možnosti > prostředí > písma a barvy** a v rozevírací nabídce "Zobrazit nastavení pro:" vyberte možnost "písmo prostředí".
 
- ![Stránka písma a barev v nástrojích &#62; dialogové okno Možnosti](../../extensibility/ux-guidelines/media/0201-a-optionsfonts.png "0201 a_OptionsFonts")
+ ![Stránka písma a barvy v dialogovém &#62; okně Možnosti nástrojů](../../extensibility/ux-guidelines/media/0201-a-optionsfonts.png "0201 – a_OptionsFonts")
 
- **Nastavení písma a barev v nástrojích > dialogové okno Možnosti**
+ **Nastavení písem a barev v dialogovém okně nástroje > Možnosti**
 
  Nastavte písmo na velmi jiné než výchozí. Aby bylo zřejmé který uživatelského rozhraní se neaktualizuje, zvolte písma s patek (například "Times nové Roman") a nastavte velmi velké velikosti. Otestujte uživatelské rozhraní k zajištění, že respektuje prostředí. Tady je příklad použití dialogového okna licence:
 
- ![Příklad dialogového okna bez použití písmo prostředí](../../extensibility/ux-guidelines/media/0201-b-wrongfontdialog.png "0201 b_WrongFontDialog")
+ ![Příklad dialogového okna bez použití písma prostředí](../../extensibility/ux-guidelines/media/0201-b-wrongfontdialog.png "0201 – b_WrongFontDialog")
 
- **Příklad text uživatelského rozhraní, která nerespektuje písmo prostředí**
+ **Příklad textu uživatelského rozhraní, které nerespektuje písmo prostředí**
 
  "Informace o uživateli" a "Informace o produktu" nejsou v tomto případě respektování písma. V některých případech to může být na volbu explicitní návrhu, ale může jít o chybu, pokud není zadán explicitní písma v rámci specifikace redline.
 
- Pokud chcete resetovat písma, klikněte na tlačítko "Použít výchozí hodnoty" v části **nástroje > Možnosti > prostředí > písma a barvy**.
+ Pokud chcete písmo obnovit, klikněte na "použít výchozí" v části **nástroje > možnosti > prostředí > písma a barvy**.
 
-## <a name="BKMK_TextStyle"></a> Styl textu
- Styl textu odkazuje na velikost písma, váha a malých a velkých písmen. Pokyny k implementaci, najdete v části [písmo prostředí](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont).
+## <a name="BKMK_TextStyle"></a>Styl textu
+ Styl textu odkazuje na velikost písma, váha a malých a velkých písmen. Pokyny k implementaci najdete v tématu [Písmo prostředí](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont).
 
 ### <a name="text-casing"></a>Text malých a velkých písmen
 
@@ -351,11 +351,11 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 ##### <a name="title-case"></a>Všechna první písmena velká
  Mena všech slov velká je styl, ve kterém jsou první písmena většinu nebo všechny slov v rámci frázi velkými písmeny. V sadě Visual Studio se používá mena všech slov velká pro mnoho položek, včetně:
 
-- **Popisy tlačítek.** Příklad: "Náhled vybraných položek."
+- **Popisy.** Příklad: "náhled vybrané položky"
 
-- **Záhlaví sloupců.** Příklad: "Systém odpověď"
+- **Záhlaví sloupců** Příklad: "systém odpovědi"
 
-- **Položky nabídky.** Příklad: "Uložit vše"
+- **Položky nabídky** Příklad: "Uložit vše"
 
   Při použití mena všech slov velká, toto jsou pokyny pro kdy velké první písmeno slova a kdy je nechat, malá písmena:
 
@@ -371,7 +371,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 |Všechna písmena zkratka|HTML, XML, ADRESA URL, ROZHRANÍ IDE, RGB|
 |Druhá slovo v složené slovo, pokud je to podstatné jméno nebo přídavného správných jména, nebo máte stejnou váhu slova|Přístup pro čtení a zápis křížových odkazů, předběžného softwaru, Run-Time|
 
-|Malá|Příklady|
+|Malá písmena|Příklady|
 |---------------|--------------|
 |Druhý slovo v složené slovo, je-li další slovní nebo jiném úpravy první slovo čase či osobě|Postupy:, zkuste vypnout|
 |Články, pokud jeden není první slovo v názvu|,|
@@ -382,16 +382,16 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 ##### <a name="sentence-case"></a>Velké pouze první písmeno
  Věty je metoda standardní malá a velká písmena pro zápis, ve kterém je velké pouze první slovo věty, spolu s jakékoli podstatná jména správné a zastupovat "I." Obecně je snadnější po celém světě cílové skupiny, číst, zejména když obsah bude fungovat na počítači věty. Používejte velká písmena pro:
 
-1. **Zprávy stavového řádku.** Tyto jsou jednoduché a krátké a poskytují jenom informace o stavu. Příklad: "Načítání souboru projektu"
+1. **Zprávy stavového řádku.** Tyto jsou jednoduché a krátké a poskytují jenom informace o stavu. Příklad: "načítání souboru projektu"
 
-2. **Všechny ostatní prvky uživatelského rozhraní**, včetně popisků, zaškrtávací políčka, přepínače a pole položky seznamu. Příklad: "Vybrat všechny položky v seznamu"
+2. **Všechny ostatní prvky uživatelského rozhraní**, včetně popisků, zaškrtávacích políček, přepínačů a položek seznamu Příklad: "všechny položky v seznamu vyberte"
 
 ### <a name="text-formatting"></a>Formátování textu
- Výchozí formátování textu v sadě Visual Studio 2013 je řízen [písmo prostředí](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont). Tato služba pomáhá zajistit vzhled písma konzistentní v celém rozhraní IDE (integrované vývojové prostředí) a je nutné je použít k zajištění konzistentního prostředí pro vaše uživatele.
+ Výchozí formátování textu v Visual Studio 2013 je řízeno pomocí [písma prostředí](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont). Tato služba pomáhá zajistit vzhled písma konzistentní v celém rozhraní IDE (integrované vývojové prostředí) a je nutné je použít k zajištění konzistentního prostředí pro vaše uživatele.
 
  Výchozí velikost písma služba Visual Studio využívá pochází z Windows a zobrazí se jako 9 pt.
 
- Můžete použít formátování písma prostředí. Toto téma popisuje, jak a kde použít styly. Informace o implementaci, najdete [písmo prostředí](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont).
+ Můžete použít formátování písma prostředí. Toto téma popisuje, jak a kde použít styly. Informace o implementaci najdete v tématu [Písmo prostředí](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont).
 
 #### <a name="bold-text"></a>Tučný text
  Tučný text je používat střídmě, v sadě Visual Studio a by měl být vyhrazen pro:
@@ -425,62 +425,62 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 
 - Barva záhlaví by je měli využít stávající sady Visual Studio značkové barvy, především hlavní nachová #FF68217A.
 
-- Při použití barev v záhlaví, je nutné splnit [Windows barva pokyny](https://msdn.microsoft.com/library/dn742482.aspx), včetně kontrastní poměr a další věci ohledně přístupnosti.
+- Při použití barev v nadpisech musíte dodržovat [pokyny k barvě Windows](https://msdn.microsoft.com/library/dn742482.aspx), včetně poměru kontrastu a dalších otázek dostupnosti.
 
 ### <a name="font-size"></a>Velikost písma
  Visual Studio UI návrh funkce světlejší vzhled více prázdnými znaky. Tam, kde je to možné, byly pruhy chrome a názvu nižší nebo odebrán. Požadavek v sadě Visual Studio při informace hustota Typografie i nadále být důležité, s důrazem na otevřenější řádkování a změna velikosti písma a váhy.
 
  V tabulce dole najdete obsahuje podrobnosti o návrhu a vizuální příklady pro zobrazení písma použitého v sadě Visual Studio. Několik variant písma zobrazení mít velikost i váha, jako je například Semilight nebo světle, zakódovaný do jejich výskytu.
 
- Implementace fragmentů kódu pro všechna zobrazení písma lze nalézt v [formátování (škálování/tučné) odkaz](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_Formatting).
+ Fragmenty kódu implementace pro všechna zobrazovaná písma se dají najít v [odkazu formátování (škálování/tučné)](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_Formatting).
 
 #### <a name="375-environment-font--light"></a>Písmo prostředí 375 % + světla
 
 |||
 |-|-|
-|**Použití:** Výjimečný. Jedinečné obchodní značku pouze uživatelské rozhraní.<br /><br /> **Proveďte:**<br /><br /> -Používejte velká písmena<br />-Vždy používejte lehký<br /><br /> **Ne:**<br /><br /> – Použijte pro uživatelské rozhraní než podpis uživatelského rozhraní, jako je například úvodní stránka<br />-Tučného písma, kurzívy nebo tučné, kurzíva<br />-Použití textu<br />– Použijte v oknech nástrojů|**Zobrazí se jako:** 34 pt Segoe UI Light<br /><br /> **Vizuální příklad:**<br /><br /> *Momentálně se nepoužívá. Lze z úvodní obrazovky.*|
+|**Použití:** Časté. Jedinečné obchodní značku pouze uživatelské rozhraní.<br /><br /> **Postup**<br /><br /> -Používejte velká písmena<br />-Vždy používejte lehký<br /><br /> **Ne:**<br /><br /> – Použijte pro uživatelské rozhraní než podpis uživatelského rozhraní, jako je například úvodní stránka<br />-Tučného písma, kurzívy nebo tučné, kurzíva<br />-Použití textu<br />– Použijte v oknech nástrojů|**Zobrazuje se jako:** 34 PT Segoe UI Light.<br /><br /> **Příklad vizuálu:**<br /><br /> *Aktuálně se nepoužívá. Lze použít na úvodní stránce.*|
 
 #### <a name="310-environment-font--light"></a>Písmo prostředí 310 % + světla
 
 |||
 |-|-|
-|**Použití:**<br /><br /> -Větší záhlaví v dialogových oknech podpis<br />– Nadpis hlavní sestava<br /><br /> **Proveďte:**<br /><br /> -Používejte velká písmena<br />-Vždy používejte lehký<br /><br /> **Ne:**<br /><br /> – Použijte pro uživatelské rozhraní než podpis uživatelského rozhraní, jako je například úvodní stránka<br />-Tučného písma, kurzívy nebo tučné, kurzíva<br />-Použití textu<br />– Použijte v oknech nástrojů|**Zobrazí se jako:** 28 pt Segoe UI Light<br /><br /> **Vizuální příklad:**<br /><br /> ![Příklad písmo prostředí 310 % &#43; světla záhlaví](../../extensibility/ux-guidelines/media/0202-a-ef310.png "0202 a_EF310")|
+|**Využívání**<br /><br /> -Větší záhlaví v dialogových oknech podpis<br />– Nadpis hlavní sestava<br /><br /> **Postup**<br /><br /> -Používejte velká písmena<br />-Vždy používejte lehký<br /><br /> **Ne:**<br /><br /> – Použijte pro uživatelské rozhraní než podpis uživatelského rozhraní, jako je například úvodní stránka<br />-Tučného písma, kurzívy nebo tučné, kurzíva<br />-Použití textu<br />– Použijte v oknech nástrojů|**Zobrazuje se jako:** 28 bodů Segoe UI Light.<br /><br /> **Příklad vizuálu:**<br /><br /> ![Příklad 310% – nadpis světla &#43; písma prostředí](../../extensibility/ux-guidelines/media/0202-a-ef310.png "0202 – a_EF310")|
 
 #### <a name="200-environment-font--semilight"></a>Písmo prostředí 200 % + Semilight
 
 |||
 |-|-|
-|**Použití:**<br /><br /> -Položek<br />– Názvy v dialogových oknech malé a střední<br /><br /> **Proveďte:**<br /><br /> -Používejte velká písmena<br />-Vždy používejte Semilight váhy<br /><br /> **Ne:**<br /><br /> -Tučného písma, kurzívy nebo tučné, kurzíva<br />-Použití textu<br />– Použijte v oknech nástrojů|**Zobrazí se jako:** 18 bodů Segoe UI Semillight<br /><br /> **Vizuální příklad:**<br /><br /> ![Příklad písmo prostředí 200 % &#43; Semilight](../../extensibility/ux-guidelines/media/0202-b-ef200.png "0202 b_EF200")|
+|**Využívání**<br /><br /> -Položek<br />– Názvy v dialogových oknech malé a střední<br /><br /> **Postup**<br /><br /> -Používejte velká písmena<br />-Vždy používejte Semilight váhy<br /><br /> **Ne:**<br /><br /> -Tučného písma, kurzívy nebo tučné, kurzíva<br />-Použití textu<br />– Použijte v oknech nástrojů|**Vypadá takto:** 18 bodů Segoe UI Semillight<br /><br /> **Příklad vizuálu:**<br /><br /> ![Příklad 200% fontu &#43; prostředí Semilight](../../extensibility/ux-guidelines/media/0202-b-ef200.png "0202 – b_EF200")|
 
 #### <a name="155-environment-font"></a>155 % prostředí písma
 
 |||
 |-|-|
-|**Použití:**<br /><br /> -Section záhlaví v dokumentu a uživatelského rozhraní<br />-Sestavy<br /><br /> **Proveďte:** Používejte velká písmena<br /><br /> **Ne:**<br /><br /> -Tučného písma, kurzívy nebo tučné, kurzíva<br />-Použití textu<br />-Použít ve standardní ovládací prvky sady Visual Studio<br />– Použijte v oknech nástrojů|**Zobrazí se jako:** 14 bodů Segoe UI<br /><br /> **Vizuální příklad:**<br /><br /> ![Příklad 155 % prostředí písmo záhlaví](../../extensibility/ux-guidelines/media/0202-c-ef155.png "0202 c_EF155")|
+|**Využívání**<br /><br /> -Section záhlaví v dokumentu a uživatelského rozhraní<br />-Sestavy<br /><br /> **Do:** Použít případ věty<br /><br /> **Ne:**<br /><br /> -Tučného písma, kurzívy nebo tučné, kurzíva<br />-Použití textu<br />-Použít ve standardní ovládací prvky sady Visual Studio<br />– Použijte v oknech nástrojů|**Zobrazuje se jako:** 14 bodů Segoe UI<br /><br /> **Příklad vizuálu:**<br /><br /> ![Příklad 155% nadpisu písma prostředí](../../extensibility/ux-guidelines/media/0202-c-ef155.png "0202 – c_EF155")|
 
 #### <a name="133-environment-font"></a>133 % prostředí písma
 
 |||
 |-|-|
-|**Použití:**<br /><br /> -Menší položek v dialogových oknech podpis<br />-Menší položky v dokumentu a uživatelského rozhraní<br /><br /> **Proveďte:** Používejte velká písmena<br /><br /> **Ne:**<br /><br /> -Tučného písma, kurzívy nebo tučné, kurzíva<br />-Použití textu<br />-Použít ve standardní ovládací prvky sady Visual Studio<br />– Použijte v oknech nástrojů|**Zobrazí se jako:** 12 bodů Segoe UI<br /><br /> **Vizuální příklad:**<br /><br /> ![Příklad 133 % prostředí písmo záhlaví](../../extensibility/ux-guidelines/media/0202-d-ef133.png "0202 d_EF133")|
+|**Využívání**<br /><br /> -Menší položek v dialogových oknech podpis<br />-Menší položky v dokumentu a uživatelského rozhraní<br /><br /> **Do:** Použít případ věty<br /><br /> **Ne:**<br /><br /> -Tučného písma, kurzívy nebo tučné, kurzíva<br />-Použití textu<br />-Použít ve standardní ovládací prvky sady Visual Studio<br />– Použijte v oknech nástrojů|**Vypadá takto:** Segoe UI 12 bodů<br /><br /> **Příklad vizuálu:**<br /><br /> ![Příklad 133% nadpisu písma prostředí](../../extensibility/ux-guidelines/media/0202-d-ef133.png "0202 – d_EF133")|
 
 #### <a name="122-environment-font"></a>Písmo prostředí 122 %
 
 |||
 |-|-|
-|**Použití:**<br /><br /> -Section záhlaví v dialogových oknech podpis<br />-Hlavní uzly ve stromovém zobrazení<br />– Navigace vertikální tabulátor<br /><br /> **Proveďte:** Používejte velká písmena<br /><br /> **Ne:**<br /><br /> -Tučného písma, kurzívy nebo tučné, kurzíva<br />-Použití textu<br />-Použít ve standardní ovládací prvky sady Visual Studio<br />– Použijte v oknech nástrojů|**Zobrazí se jako:** 11 bodů Segoe UI<br /><br /> **Vizuální příklad:**<br /><br /> ![Příklad 122 % prostředí písmo záhlaví](../../extensibility/ux-guidelines/media/0202-e-ef122.png "0202 e_EF122")|
+|**Využívání**<br /><br /> -Section záhlaví v dialogových oknech podpis<br />-Hlavní uzly ve stromovém zobrazení<br />– Navigace vertikální tabulátor<br /><br /> **Do:** Použít případ věty<br /><br /> **Ne:**<br /><br /> -Tučného písma, kurzívy nebo tučné, kurzíva<br />-Použití textu<br />-Použít ve standardní ovládací prvky sady Visual Studio<br />– Použijte v oknech nástrojů|**Zobrazuje se jako:** 11 bodů Segoe UI<br /><br /> **Příklad vizuálu:**<br /><br /> ![Příklad 122% nadpisu písma prostředí](../../extensibility/ux-guidelines/media/0202-e-ef122.png "0202 – e_EF122")|
 
 #### <a name="environment-font--bold"></a>Písmo prostředí + tučného písma
 
 |||
 |-|-|
-|**Použití:**<br /><br /> -Popisků a podnadpisy v dialogových oknech podpis<br />-Popisků a podnadpisy v sestavách<br />-Popisků a podnadpisy v dokumentu uživatelského rozhraní<br /><br /> **Proveďte:**<br /><br /> -Používejte velká písmena<br />– Použití tučného písma váhy<br /><br /> **Ne:**<br /><br /> -Kurzívy nebo tučné, kurzíva<br />-Použití textu<br />-Použít ve standardní ovládací prvky sady Visual Studio<br />– Použijte v oknech nástrojů|**Zobrazí se jako:** tučné 9 pt Segoe UI<br /><br /> **Vizuální příklad:**<br /><br /> ![Příklad písmo prostředí &#43; tučný nadpis](../../extensibility/ux-guidelines/media/0202-f-efb.png "0202 f_EFB")|
+|**Využívání**<br /><br /> -Popisků a podnadpisy v dialogových oknech podpis<br />-Popisků a podnadpisy v sestavách<br />-Popisků a podnadpisy v dokumentu uživatelského rozhraní<br /><br /> **Postup**<br /><br /> -Používejte velká písmena<br />– Použití tučného písma váhy<br /><br /> **Ne:**<br /><br /> -Kurzívy nebo tučné, kurzíva<br />-Použití textu<br />-Použít ve standardní ovládací prvky sady Visual Studio<br />– Použijte v oknech nástrojů|**Zobrazuje se jako:** tučné 9 pt Segoe UI<br /><br /> **Příklad vizuálu:**<br /><br /> ![Příklad písma &#43; prostředí nadpisu tučně](../../extensibility/ux-guidelines/media/0202-f-efb.png "0202 – f_EFB")|
 
 #### <a name="environment-font"></a>Písmo prostředí
 
 |||
 |-|-|
-|**Použití:** Další text<br /><br /> **Proveďte:** Používejte velká písmena<br /><br /> **Ne:** Výběr kurzívy nebo tučné, kurzíva|**Zobrazí se jako:** 9 pt Segoe UI<br /><br /> **Vizuální příklad:**<br /><br /> ![Příklad písmo prostředí](../../extensibility/ux-guidelines/media/0202-g-ef.png "0202 g_EF")|
+|**Použití:** Všechen jiný text<br /><br /> **Do:** Použít případ věty<br /><br /> **Nepoužívejte:** Kurzíva nebo Tučná kurzíva|**Zobrazuje se jako:** 9 bodů Segoe UI<br /><br /> **Příklad vizuálu:**<br /><br /> ![Příklad písma prostředí](../../extensibility/ux-guidelines/media/0202-g-ef.png "0202 – g_EF")|
 
 ### <a name="padding-and-spacing"></a>Odsazení a mezery
  Záhlaví vyžadují prostor kolem nich jim poskytnout příslušné zvýraznění. Tento prostor se liší v závislosti na velikosti bodu a co dalšího je v záhlaví, jako je například vodorovná čára nebo řádek textu v prostředí písma.
@@ -492,4 +492,4 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 - Tučný text písmo prostředí by mělo vycházet výchozí výška řádkování a odsazení.
 
 ## <a name="see-also"></a>Viz také
- [MSDN: Písma (Windows)](https://msdn.microsoft.com/library/windows/desktop/dn742483\(v=vs.85\).aspx) [MSDN: Text uživatelského rozhraní (Windows)](https://msdn.microsoft.com/library/windows/desktop/dn742478\(v=vs.85\).aspx)
+ [MSDN: písma (Windows)](https://msdn.microsoft.com/library/windows/desktop/dn742483\(v=vs.85\).aspx) [MSDN: text uživatelského rozhraní (Windows)](https://msdn.microsoft.com/library/windows/desktop/dn742478\(v=vs.85\).aspx)
