@@ -7,11 +7,11 @@ ms.date: 07/17/2019
 ms.topic: conceptual
 description: Přečtěte si, jak využít předplatná sady Visual Studio na maximum.
 ms.openlocfilehash: a8a58cd3fca2443ca84db712cbd2a356351d4499
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74706974"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408878"
 ---
 # <a name="managing-subscriptions"></a>Správa předplatných
 

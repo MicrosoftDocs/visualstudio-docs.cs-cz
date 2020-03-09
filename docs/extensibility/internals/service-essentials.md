@@ -1,5 +1,5 @@
 ---
-title: Service Essentials | Microsoft Docs
+title: Základy služby | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,34 +11,34 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8817ca48ff0a3f44a973986a173e647ce89c662c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318692"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409710"
 ---
 # <a name="service-essentials"></a>Základy služeb
-Služba je kontrakt mezi dvěma rozšíření VSPackages. Jeden VSPackage poskytuje určitou sadu rozhraní pro jiné VSPackage využívat. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je kolekce rozšíření VSPackages, která poskytuje služby do jiné balíků VSPackages.
+Služba je smlouva mezi dvěma VSPackage. Jeden VSPackage poskytuje konkrétní sadu rozhraní, které se mají využít pro další VSPackage. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je kolekce VSPackage, která poskytuje služby jiným VSPackage.
 
- Můžete například použít službu SVsActivityLog získat IVsActivityLog rozhraní, který můžete použít k zápisu do protokolu aktivit. Další informace najdete v tématu [jak: Použití protokolu aktivit](../../extensibility/how-to-use-the-activity-log.md).
+ Službu SVsActivityLog můžete například použít k získání rozhraní IVsActivityLog, které můžete použít k zápisu do protokolu aktivit. Další informace najdete v tématu [Postupy: použití protokolu aktivit](../../extensibility/how-to-use-the-activity-log.md).
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] poskytuje také některé integrované služby, které nejsou registrovány. Rozšíření VSPackages můžete nahradit integrované nebo jiných služeb tím, že poskytuje přepsání služby. Smí obsahovat jenom jednu službu přepsání pro libovolnou službu.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] také poskytuje některé předdefinované služby, které nejsou registrovány. Sady VSPackage můžou nahradit integrované nebo jiné služby poskytnutím přepsání služby. Pro jakoukoli službu je povoleno pouze jedno přepsání služby.
 
- Services k dispozici žádné možnosti rozpoznání. Proto musíte znát služby identifikátor (SID), který chcete používat službu, a musíte znát rozhraní, která poskytuje. Referenční dokumentace pro službu poskytuje tyto informace.
+ Služby nemají žádnou zjistitelnost. Proto musíte znát identifikátor služby (SID) služby, kterou chcete spotřebovat, a musíte znát, která rozhraní poskytuje. Tato informace je k dispozici v referenční dokumentaci k této službě.
 
-- Rozšíření VSPackages, které poskytují služby, se nazývají poskytovatelé služeb.
+- VSPackage, které poskytují služby, se nazývají poskytovatelé služeb.
 
-- Služby, které jsou k dispozici další balíčky VSPackages, se nazývají služeb global services.
+- Služby, které jsou poskytovány jiným VSPackage, se nazývají globální služby.
 
-- Služby, které jsou k dispozici pouze pro sady VSPackage, která implementuje je, nebo na libovolný objekt, který vytvoří, se nazývají místních služeb.
+- Služby, které jsou k dispozici pouze pro VSPackage, které je implementují, nebo pro libovolný objekt, který vytvoří, se nazývají místní služby.
 
-- Služby, které nahrazují integrované služby nebo služeb poskytovaných další balíčky, se nazývají přepsání služby.
+- Služby, které nahrazují integrované služby nebo služby poskytované jinými balíčky, se nazývají přepsání služby.
 
-- Služby nebo přepsání služby jsou načtena na vyžádání, to znamená, je načteno poskytovatele služeb, když službu, kterou poskytuje požádá o jiný VSPackage.
+- Služby nebo přepsání služby se načítají na vyžádání, to znamená, že poskytovatel služeb se načte, když služba, kterou poskytuje, je vyžadovaná jiným rozhraním VSPackage.
 
-- Poskytovatel služeb pro podporu načítání na vyžádání, zaregistruje jeho služeb global services s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Další informace najdete v tématu [jak: Poskytování služeb](../../extensibility/how-to-provide-a-service.md).
+- Pro podporu načítání na vyžádání zaregistruje poskytovatel služeb své globální služby pomocí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Další informace najdete v tématu [Postup: poskytování služby](../../extensibility/how-to-provide-a-service.md).
 
-- Po obdržení služby použijte [QueryInterface](/cpp/atl/queryinterface) (nespravovaný kód) nebo přetypování (spravovaný kód) Chcete-li získat požadované rozhraní, například:
+- Po získání služby použijte [QueryInterface](/cpp/atl/queryinterface) (nespravovaný kód) nebo přetypování (spravovaný kód), abyste získali požadované rozhraní, například:
 
   ```vb
   TryCast(GetService(GetType(SVsActivityLog)), IVsActivityLog)
@@ -48,35 +48,35 @@ Služba je kontrakt mezi dvěma rozšíření VSPackages. Jeden VSPackage poskyt
   GetService(typeof(SVsActivityLog)) as IVsActivityLog;
   ```
 
-- Spravovaný kód odkazuje na službu podle jeho typu, zatímco nespravovaný kód odkazuje na službu podle její identifikátor GUID.
+- Spravovaný kód odkazuje na službu podle typu, zatímco nespravovaný kód odkazuje na službu pomocí jejího identifikátoru GUID.
 
-- Když [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načte VSPackage, předá poskytovatel služeb VSPackage chcete dát VSPackage přístup ke službám global services. To se označuje jako "umístění" sady VSPackage.
+- Když [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načte VSPackage, předává poskytovateli služeb rozhraní VSPackage, aby přístup k globálním službám poskytoval rozhraní VSPackage. Označuje se jako "umístění" sady VSPackage.
 
-- Rozšíření VSPackages může být poskytovatelů služeb pro objekty, které vytvářejí. Například může formuláře odeslat žádost o službu barva jeho snímek, který může předat požadavky na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
+- Sady VSPackage můžou být poskytovatelé služeb pro objekty, které vytvářejí. Například formulář může poslat požadavek na službu barev do svého rámce, což může předat požadavek [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
 
-- Spravované objekty, které jsou vnořeny hluboko, nebo není umístěna vůbec, může volat <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> pro přímý přístup ke službám global services.
+- Spravované objekty, které jsou hluboko vnořené nebo nejsou na stejné úrovni, můžou volat <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> pro přímý přístup ke globálním službám.
 
 <a name="how-to-use-getglobalservice"></a>
 
-## <a name="use-getglobalservice"></a>Use GetGlobalService
+## <a name="use-getglobalservice"></a>Použití GetGlobalService
 
-V některých případech budete muset získat službu z panelu nástrojů nebo ovládací prvek kontejneru, který nebyl byl umístěn, jinak byl umístěn u poskytovatele služeb, které neví o službu, kterou chcete. Můžete například chtít zapisovat do protokolu aktivit z v rámci ovládacího prvku. Další informace o těchto a dalších scénářů najdete v tématu [jak: Odstraňování potíží se službami](../../extensibility/how-to-troubleshoot-services.md).
+Někdy může být nutné získat službu z okna nástroje nebo kontejneru ovládacího prvku, který nebyl zadaný, nebo jinak byl vytvořen s poskytovatelem služeb, který neví o požadované službě. Například můžete chtít zapisovat do protokolu aktivit z ovládacího prvku. Další informace o těchto a dalších scénářích najdete v tématu [How to: Troubleshooting Services](../../extensibility/how-to-troubleshoot-services.md).
 
-Většina služeb Visual Studio můžete získat voláním statické <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> metody.
+Většinu služeb sady Visual Studio můžete získat voláním metody static <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>.
 
-<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> spoléhá na služby uložený v mezipaměti je umístěna zprostředkovatele, který je inicializován při prvním jakékoli VSPackage odvozený z balíčku. Je nutné zaručit, že tato podmínka je splněna, jinak se připravit null služby.
+<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> spoléhá na poskytovatele služby uložené v mezipaměti, který je inicializován při prvním spuštění všech rozhraní VSPackage odvozených od balíčku. Musíte zaručit, že je tato podmínka splněná, nebo je možné ji připravit na službu s hodnotou null.
 
-Naštěstí <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> ve většině případů funguje správně.
+Naštěstí <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> funguje správně ve většině času.
 
-- Pokud VSPackage poskytuje službu znáte jenom jiné VSPackage, VSPackage žádosti o služby je umístěn před VSPackage za předpokladu, že načtení služby.
+- Pokud VSPackage poskytuje službu známou pouze pro jiný VSPackage, rozhraní VSPackage požadující službu je umístěno dříve, než bude načtena služba VSPackage.
 
-- Pokud VSPackage vytvoří panel nástrojů, sady VSPackage je umístěn před vytvořením okna nástrojů.
+- Pokud je okno nástroje vytvořeno pomocí VSPackage, rozhraní VSPackage je umístěno před vytvořením okna nástroje.
 
-- Pokud kontejneru ovládacího prvku je hostitelem nástroje okna vytvořeného rozhraním VSPackage, sady VSPackage je umístěn před vytvořením kontejneru ovládacího prvku.
+- Pokud je kontejner ovládacího prvku hostován oknem nástrojů vytvořeným VSPackage, rozhraní VSPackage je umístěno před vytvořením kontejneru ovládacího prvku.
 
-### <a name="to-get-a-service-from-within-a-tool-window-or-control-container"></a>Chcete-li získat službu z v rámci nástroje okna nebo ovládací prvek kontejneru
+### <a name="to-get-a-service-from-within-a-tool-window-or-control-container"></a>Získání služby z okna nástroje nebo kontejneru ovládacího prvku
 
-- Vložte tento kód v konstruktoru, okno nástroje nebo kontejneru ovládacího prvku:
+- Vložte tento kód do konstruktoru, okna nástroje nebo kontejneru ovládacího prvku:
 
     ```csharp
     IVsActivityLog log = Package.GetGlobalService(typeof(SVsActivityLog)) as IVsActivityLog;
@@ -90,9 +90,9 @@ Naštěstí <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> ve v
     End If
     ```
 
-    Tento kód získá služby SVsActivityLog a přetypování IVsActivityLog rozhraní, který slouží k zápisu do protokolu aktivit. Příklad najdete v tématu [jak: Použití protokolu aktivit](../../extensibility/how-to-use-the-activity-log.md).
+    Tento kód získá službu SVsActivityLog a přetypování ji na rozhraní IVsActivityLog, které lze použít k zápisu do protokolu aktivit. Příklad naleznete v tématu [How to: Use a log Activity](../../extensibility/how-to-use-the-activity-log.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Seznam dostupných služeb](../../extensibility/internals/list-of-available-services.md)
 - [Používání a poskytování služeb](../../extensibility/using-and-providing-services.md)

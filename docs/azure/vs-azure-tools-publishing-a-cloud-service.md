@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
 ms.openlocfilehash: d8257e0833da470554ce331c30cd0edf74122093
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75915958"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408681"
 ---
 # <a name="publishing-a-cloud-service-using-visual-studio"></a>Publikování cloudové služby pomocí sady Visual Studio
 
@@ -45,7 +45,7 @@ Při publikování aplikace Azure můžete provést jednu z následujících úl
 
    b. V dialogovém okně **balíček aplikace Azure** zvolte konfiguraci služby, pro kterou chcete vytvořit balíček, a pak zvolte konfiguraci sestavení.
 
-   c. Volitelné Pokud chcete zapnout službu Vzdálená plocha pro cloudovou službu po jejím publikování, vyberte **Povolit vzdálenou plochu pro všechny role**a pak vyberte **Nastavení** a nakonfigurujte přihlašovací údaje vzdálené plochy. Další informace najdete v tématu [povolit připojení ke vzdálené ploše pro roli v cloudových službách Azure pomocí sady Visual Studio](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
+   c. Volitelné Pokud chcete zapnout službu Vzdálená plocha pro cloudovou službu po jejím publikování, vyberte **Povolit vzdálenou plochu pro všechny role**a pak vyberte **Nastavení** a nakonfigurujte přihlašovací údaje vzdálené plochy. Další informace najdete v tématu [povolení připojení ke vzdálené ploše pro roli v Azure Cloud Services pomocí sady Visual Studio](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
 
       Pokud chcete po publikování cloudové služby ladit, zapněte vzdálené ladění tak, že vyberete **Povolit vzdálený ladicí program pro všechny role**.
 
