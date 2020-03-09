@@ -10,11 +10,11 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 5010761213cf79756cf8da3d2fffe60dd0b61efd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591564"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409543"
 ---
 # <a name="static-helper-classes"></a>Třídy statických pomocných rutin
 
@@ -95,7 +95,7 @@ Třída **PexChoose** může fungovat ve dvou režimech:
 
 * Vygenerovaný kód pro konkrétní testovací případy nastaví poskytovatele výběru určitým způsobem, aby opětovné spuštění takového testovacího případu provedlo konkrétní volby pro aktivaci konkrétní cesty spuštění.
 
-**Využití**
+**Použití**
 
 * Jednoduchá volání **PexChoose. Value** pro vygenerování nové hodnoty:
 
@@ -141,7 +141,7 @@ public partial class MathExTests {
 
 Statická třída, která slouží k ignorování omezení u parametrů a k vytištění symbolických informací přidružených k hodnotám.
 
-**Využití**
+**Použití**
 
 V normálním případě se IntelliTest pokusí pokrýt všechny cesty provádění kódu během provádění. Zejména při výpočtu podmínek předpokladu a podmínky vyhodnocení by se však nemělo prozkoumat všechny možné případy.
 
@@ -172,4 +172,4 @@ public static void AreElementsNotNull<T>(T[] value)
 
 ## <a name="got-feedback"></a>Máte zpětnou vazbu?
 
-Publikujte své nápady a žádosti o funkce na [komunitě vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
+Své nápady a žádosti o funkce můžete zadávat na webu [Developer Community](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

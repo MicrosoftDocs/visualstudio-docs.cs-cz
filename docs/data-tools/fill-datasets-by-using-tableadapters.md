@@ -20,11 +20,11 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: a79f7b781944bb93a60794e748eefb9375723384
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586624"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408764"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>Vyplnění datových sad pomocí objektů TableAdapter
 
@@ -128,15 +128,15 @@ Následující jsou často používané metody a vlastnosti `TableAdapterManager
 
 |Člen|Popis|
 |------------|-----------------|
-|Metoda `UpdateAll`|Uloží všechna data ze všech tabulek dat.|
+|`UpdateAll` – metoda|Uloží všechna data ze všech tabulek dat.|
 |`BackUpDataSetBeforeUpdate` – vlastnost|Určuje, zda má být před provedením metody `TableAdapterManager.UpdateAll` vytvořena záložní kopie datové sady. Datového.|
 |vlastnost *tableName* `TableAdapter`|Představuje objekt TableAdapter. Vygenerovaná TableAdapterManager obsahuje vlastnost pro každý `TableAdapter`, kterou spravuje. Například datová sada s tabulkou Customers and Orders generuje TableAdapterManager, který obsahuje vlastnosti `CustomersTableAdapter` a `OrdersTableAdapter`.|
 |`UpdateOrder` – vlastnost|Určuje pořadí jednotlivých příkazů INSERT, Update a DELETE. Nastavte tuto hodnotu na jednu z hodnot ve výčtu `TableAdapterManager.UpdateOrderOption`.<br /><br /> Ve výchozím nastavení je `UpdateOrder` nastavena na **InsertUpdateDelete**. To znamená, že vložení, následné aktualizace a následné odstranění jsou prováděny pro všechny tabulky v datové sadě.|
 
-## <a name="security"></a>Zabezpečení –
+## <a name="security"></a>Zabezpečení
 
 Když použijete datové příkazy s vlastností CommandType nastavenou na <xref:System.Data.CommandType.Text>, pečlivě zkontrolujte informace, které se odesílají z klienta, než je předáte do vaší databáze. Uživatelé se zlými úmysly se můžou pokusit odeslat (vložit) upravené nebo další příkazy SQL za účelem získání neoprávněného přístupu nebo poškození databáze. Před přenosem vstupu uživatele do databáze vždy ověřte, zda jsou informace platné. Osvědčeným postupem je vždy použít parametrizované dotazy nebo uložené procedury, pokud je to možné.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nástroje datové sady](../data-tools/dataset-tools-in-visual-studio.md)

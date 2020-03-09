@@ -13,11 +13,11 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7f4c490abbcd5b970c5bf9586ea881be4c5d62a4
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849807"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409508"
 ---
 # <a name="extend-uml-models-and-diagrams"></a>Rozšíření modelů a diagramů UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ V tomto tématu jsou shrnuty různé způsoby, kterými můžete roztáhnout ná
 
  Další informace najdete v tomto videu: ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo")[MSDN jak mám řady: nástroje a rozšiřitelnost UML](https://msdn.microsoft.com/vstudio/ff859492).
 
-## <a name="Requirements"></a> Požadavky
+## <a name="Requirements"></a>Požadavků
 
 - [Sada Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
@@ -50,7 +50,7 @@ V tomto tématu jsou shrnuty různé způsoby, kterými můžete roztáhnout ná
 
  Další informace najdete v tématu [definice vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md).
 
-## <a name="validation"></a>Ověřování
+## <a name="validation"></a>Ověření
  Můžete definovat pravidla, aby se zajistilo, že model UML odpovídá zadaným omezením.
 
  Vývojáři nástrojů společnosti Fabrikam definují pravidla, která členům týmu umožní vyhnout se jednoduchým chybám v modelech zpracování zavazadel. Například služba Odregistrace nemůže být připojena přímo k přihrádce úložiště. Mezi nimi musí být aspoň pás dopravník.
@@ -85,7 +85,7 @@ V tomto tématu jsou shrnuty různé způsoby, kterými můžete roztáhnout ná
 
  Další informace najdete v tématu [Integrace modelů UML s jinými modely a nástroji](../modeling/integrate-uml-models-with-other-models-and-tools.md).
 
-## <a name="generation"></a>Generace
+## <a name="generation"></a>Nezbytných
  Z modelu můžete generovat kód programu, skripty, konfigurace, dokumenty, nové modely nebo jiné artefakty.
 
  V systémech zavazadel, které společnost Fabrikam navrhuje, je většina programového kódu stejná jako u jednoho projektu na další. Hlavním aspektem proměnné je plán toku zavazadel kolem letiště. Po tom, co tým návrhu má zkušenosti s několika prvními projekty, vývojáři nástroje vytvoří šablonu, která generuje, z modelu toku zavazadel, většinu programového kódu proměnné a dalších souborů, jako jsou například uživatelské dokumenty. To významně snižuje dobu vývoje a četnost chyb pro každý nový projekt.
