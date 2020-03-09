@@ -14,11 +14,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2ac595098d793e44d65312a09fc8857225f150ef
-ms.sourcegitcommit: 6ef52c2030b37ea7a64fddb32f050ecfb77dd918
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416383"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409190"
 ---
 # <a name="debugging-techniques-and-tools-to-help-you-write-better-code"></a>Techniky a nástroje ladění, které vám pomůžou psát lepší kód
 

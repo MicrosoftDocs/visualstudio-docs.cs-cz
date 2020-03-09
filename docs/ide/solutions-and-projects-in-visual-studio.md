@@ -21,11 +21,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ffa561667ea31f215306c7cac4b9820d7b386b5c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590082"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408833"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v aplikaci Visual Studio
 
@@ -45,7 +45,7 @@ Visual Studio používá [MSBuild](../msbuild/msbuild.md) k sestavení jednotliv
 Soubory projektu jsou založeny na [schématu XML jazyka MSBuild](../msbuild/msbuild-project-file-schema-reference.md). Chcete-li se podívat na obsah novějších [souborů projektů ve stylu sady SDK v sadě](../msbuild/how-to-use-project-sdk.md) Visual Studio, klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **Upravit \<ProjectName\>** . Chcete-li se podívat na obsah .NET Framework a dalších projektů tohoto stylu, nejprve uvolněte projekt (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **Uvolnit projekt**). Potom klikněte pravým tlačítkem na projekt a zvolte **upravit \<projectname\>** .
 
 > [!NOTE]
-> K úpravám, sestavování a ladění kódu nemusíte používat řešení nebo projekty v aplikaci Visual Studio. Jednoduše otevřete složku, která obsahuje zdrojové soubory v aplikaci Visual Studio, a začněte upravovat. Další informace najdete v tématu [vývoj kódu v sadě Visual Studio bez projektů nebo řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
+> K úpravám, sestavování a ladění kódu nemusíte používat řešení nebo projekty v aplikaci Visual Studio. Jednoduše otevřete složku, která obsahuje zdrojové soubory v aplikaci Visual Studio, a začněte upravovat. Další informace naleznete v tématu [vývoj kódu v aplikaci Visual Studio bez projektů nebo řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
 
 ## <a name="solutions"></a>Řešení
 
@@ -53,7 +53,7 @@ Projekt je obsažen v rámci *řešení*. Bez ohledu na jeho název není řeše
 
 Visual Studio používá dva typy souborů ( *. sln* a *. suo*) k ukládání nastavení řešení:
 
-|Linka|Name|Popis|
+|Linka|Název|Popis|
 |---------------|----------|-----------------|
 |.sln|Řešení sady Visual Studio|Uspořádá projekty, položky projektu a položky řešení v řešení.|
 |.suo|Možnosti uživatele řešení|Ukládá nastavení a přizpůsobení na úrovni uživatele, například zarážky.|
@@ -76,7 +76,7 @@ Po vytvoření nového projektu můžete použít **Průzkumník řešení** k z
 
 U ASP.NET Core projektů můžete přizpůsobit, jak jsou soubory vnořené v **Průzkumník řešení**. Další informace najdete v tématu [přizpůsobení vnořování souborů v Průzkumník řešení](file-nesting-solution-explorer.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Integrované vývojové prostředí sady Visual Studio](../get-started/visual-studio-ide.md)
 - [Projekty a řešení (Visual Studio pro Mac)](/visualstudio/mac/projects-and-solutions)

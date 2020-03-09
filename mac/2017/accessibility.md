@@ -1,18 +1,18 @@
 ---
-title: Usnadnění
+title: Přístupnost
 description: V tomto článku se seznámíte s funkcemi pro usnadnění přístupu v Visual Studio pro Mac a o tom, jak je možné je povolit.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 08/15/2017
 ms.assetid: 2C4AAC2E-3B4A-4496-8BE0-1F5A7F81D1CA
 ms.openlocfilehash: c0f056643a8cea0c9a5eca9801d2bd008e0793a8
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74984874"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410466"
 ---
-# <a name="accessibility"></a>Usnadnění
+# <a name="accessibility"></a>Přístupnost
 
 Kromě funkcí a nástrojů v macOS má Visual Studio pro Mac následující funkce, které lidem s postižením mají lepší přístup:
 
@@ -77,6 +77,6 @@ Obecné informace o používání VoiceOver v macOS najdete v následujících p
 - [Začínáme s VoiceOver](https://help.apple.com/voiceover/info/guide/10.12/)
 - [Příkazy VoiceOver v macOS](https://lab.dotjay.com/notes/voiceover-commands/)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Funkce usnadnění v aplikaci Visual Studio (ve Windows)](/visualstudio/ide/reference/accessibility-features-of-visual-studio)

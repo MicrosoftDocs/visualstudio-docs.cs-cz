@@ -12,11 +12,11 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: da164414cfcca9631eaf59b5e2f6044e70ac9cc5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594861"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409438"
 ---
 # <a name="welcome-to-the-visual-studio-ide--c"></a>Vítejte v integrovaném vývojovém prostředí sady Visual Studio |\# jazyka C
 
@@ -26,7 +26,7 @@ ms.locfileid: "75594861"
 
 Pojďme aplikaci Visual Studio nakonfigurovat tak, aby používala nastavení prostředí C# , která jsou přizpůsobená vývojářům.
 
-1. V panelu nabídky zvolte **nástroje** > **nastavení importu a exportu**.
+1. Na panelu nabídek vyberte **nástroje** > **Nastavení importu a exportu**.
 
 2. V **Průvodci importem a exportem nastavení**vyberte **Obnovit všechna nastavení** na první stránce a pak zvolte **Další**.
 
@@ -36,7 +36,7 @@ Pojďme aplikaci Visual Studio nakonfigurovat tak, aby používala nastavení pr
 
 5. Na stránce **obnovení dokončena** klikněte na tlačítko **Zavřít**.
 
-Další informace o dalších způsobech mohli přizpůsobit integrovaného vývojového prostředí, najdete v článku [přizpůsobení sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
+Další informace o dalších způsobech přizpůsobení rozhraní IDE naleznete v tématu [přizpůsobení sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="next-steps"></a>Další kroky
 
@@ -46,10 +46,10 @@ Prozkoumejte další Visual Studio na základě společně s některou z těchto
 > [Naučte se používat editor kódu.](tutorial-editor.md)
 
 > [!div class="nextstepaction"]
-> [Seznamte se s projekty a řešení](../tutorial-projects-solutions.md)
+> [Další informace o projektech a řešeních](../tutorial-projects-solutions.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- Zjistit [další funkce sady Visual Studio](../../ide/advanced-feature-overview.md)
-- Navštivte [visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/)
-- Čtení [blogu sady Visual Studio](https://devblogs.microsoft.com/visualstudio/)
+- Objevte [Další funkce sady Visual Studio](../../ide/advanced-feature-overview.md)
+- Navštívit [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/vs/)
+- Přečtěte si [blog sady Visual Studio](https://devblogs.microsoft.com/visualstudio/) .
