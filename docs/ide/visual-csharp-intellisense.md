@@ -11,11 +11,11 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 2ed5d86599fa99b9c1360b414b37ef95ab59082d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594172"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410132"
 ---
 # <a name="c-intellisense"></a>C# IntelliSense
 
@@ -160,7 +160,7 @@ Pokud stisknete klávesu **TAB**, technologie IntelliSense odblokuje metodu se s
 > [!NOTE]
 > Pomocí příkazu **Navigovat zpět** v nabídce **zobrazení** (**CTRL**+ **-** ) se vraťte do příkazu Event propojení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Používání technologie IntelliSense](../ide/using-intellisense.md)
 - [Integrované vývojové prostředí sady Visual Studio](../get-started/visual-studio-ide.md)

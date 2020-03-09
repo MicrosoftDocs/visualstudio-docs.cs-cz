@@ -1,5 +1,5 @@
 ---
-title: Install Visual Studio
+title: Instalace sady Visual Studio
 titleSuffix: ''
 description: Zjistěte, jak nainstalovat sadu Visual Studio, krok za krokem.
 ms.date: 12/13/2019
@@ -21,13 +21,13 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: d8e6e3a857c9bbf5577cf395f698f64cfb11bddc
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114567"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409750"
 ---
-# <a name="install-visual-studio"></a>Install Visual Studio
+# <a name="install-visual-studio"></a>Instalace sady Visual Studio
 
 ::: moniker range="vs-2019"
 
@@ -42,17 +42,17 @@ Vítá vás nový způsob, jak nainstalovat sadu Visual Studio! V této verzi js
 ::: moniker-end
 
 > [!NOTE]
-> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac, najdete v části [instalace sady Visual Studio pro Mac](/visualstudio/mac/installation/).
+> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [instalace Visual Studio pro Mac](/visualstudio/mac/installation/).
 
 ::: moniker range="vs-2019"
 
-Chcete vědět více o tom, co je nového v této verzi? Najdete v našich [poznámky k verzi](/visualstudio/releases/2019/release-notes/).
+Chcete vědět více o tom, co je nového v této verzi? Podívejte se na naše [poznámky k verzi](/visualstudio/releases/2019/release-notes/).
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Chcete vědět více o tom, co je nového v této verzi? Najdete v našich [poznámky k verzi](/visualstudio/releasenotes/vs2017-relnotes).
+Chcete vědět více o tom, co je nového v této verzi? Podívejte se na naše [poznámky k verzi](/visualstudio/releasenotes/vs2017-relnotes).
 
 ::: moniker-end
 
@@ -64,7 +64,7 @@ Před zahájením instalace sady Visual Studio:
 
 ::: moniker range="vs-2017"
 
-1. Zkontrolujte, [požadavky na systém](/visualstudio/productinfo/vs2017-system-requirements-vs). Tyto požadavky vám pomohli určit, jestli počítač podporuje Visual Studio 2017.
+1. Podívejte se na [požadavky na systém](/visualstudio/productinfo/vs2017-system-requirements-vs). Tyto požadavky vám pomohli určit, jestli počítač podporuje Visual Studio 2017.
 
 1. Použijte nejnovější aktualizace Windows. Tyto aktualizace zkontrolujte, zda má počítač nejnovější aktualizace zabezpečení a požadované systémové komponenty pro sadu Visual Studio.
 
@@ -76,7 +76,7 @@ Před zahájením instalace sady Visual Studio:
 
 ::: moniker range="vs-2019"
 
-1. Zkontrolujte, [požadavky na systém](/visualstudio/releases/2019/system-requirements). Tyto požadavky vám pomůžou zjistit, jestli váš počítač podporuje Visual Studio 2019.
+1. Podívejte se na [požadavky na systém](/visualstudio/releases/2019/system-requirements). Tyto požadavky vám pomůžou zjistit, jestli váš počítač podporuje Visual Studio 2019.
 
 1. Použijte nejnovější aktualizace Windows. Tyto aktualizace zkontrolujte, zda má počítač nejnovější aktualizace zabezpečení a požadované systémové komponenty pro sadu Visual Studio.
 
@@ -88,7 +88,7 @@ Před zahájením instalace sady Visual Studio:
 
 ::: moniker range="vs-2017"
 
-Dotazy týkající se spouštění předchozích verzí sady Visual Studio souběžně se sadou Visual Studio 2017, najdete v článku [informace o kompatibilitě sady Visual Studio](/visualstudio/productinfo/vs2017-compatibility-vs#compatibility-with-previous-releases).
+Dotazy týkající se spouštění předchozích verzí sady Visual Studio vedle sebe se sadou Visual Studio 2017 naleznete v [podrobnostech o kompatibilitě sady Visual Studio](/visualstudio/productinfo/vs2017-compatibility-vs#compatibility-with-previous-releases).
 
 ::: moniker-end
 
@@ -121,15 +121,15 @@ Chcete-li to provést, zvolte následující tlačítko, zvolte požadovanou ver
 
 Spuštěním souboru zaváděcího nástroje nainstalujte Instalační program pro Visual Studio. Tento nový odlehčený instalační program zahrnuje všechno, co potřebujete k instalaci i přizpůsobení sady Visual Studio.
 
-1. Z vaší **stáhne** složky, dvakrát klikněte na panel zaváděcí nástroj, který odpovídá nebo se podobá následující soubory:
+1. Ve složce **stažené** soubory poklikejte na zaváděcí nástroj, který odpovídá nebo je podobný jednomu z následujících souborů:
 
-   * **vs_community.exe** pro Visual Studio Community
-   * **vs_professional.exe** for Visual Studio Professional
-   * **vs_enterprise.exe** pro Visual Studio Enterprise
+   * **vs_community. exe** pro Visual Studio Community
+   * **vs_professional. exe** pro Visual Studio Professional
+   * **vs_enterprise. exe** pro Visual Studio Enterprise
 
    Pokud se zobrazí upozornění na řízení uživatelských účtů, vyberte **Ano**.
 
-2. Požádáme vás potvrďte Microsoft [licenční podmínky](https://visualstudio.microsoft.com/license-terms/) a Microsoft [prohlášení o zásadách](https://privacy.microsoft.com/privacystatement). Zvolte **pokračovat**.
+2. Požádáme vás o potvrzení [licenčních podmínek](https://visualstudio.microsoft.com/license-terms/) společnosti Microsoft a [prohlášení o zásadách ochrany osobních údajů](https://privacy.microsoft.com/privacystatement)společnosti Microsoft. Klikněte na tlačítko **pokračovat**.
 
    ![Licenční smlouvy a prohlášení o zásadách ochrany osobních údajů](media/privacy-and-license-terms.png "Licenční smlouvy společnosti Microsoft a prohlášení o zásadách ochrany osobních údajů")
 
@@ -166,7 +166,7 @@ Po dokončení instalace instalační program vám pomůže ho svou instalaci p�
  ::: moniker-end
 
 > [!TIP]
-> Kdykoli po instalaci můžete nainstalovat úlohy nebo komponenty, které nenainstaloval původně. Pokud máte Visual Studio otevřete, přejděte na **nástroje** > **získat nástroje a funkce...**  tím se otevře instalačního programu sady Visual Studio. Nebo otevřete **instalační program sady Visual Studio** z nabídky Start. Odtud můžete zvolit úlohy nebo komponenty, které chcete nainstalovat. Pak zvolte **Upravit**.
+> Kdykoli po instalaci můžete nainstalovat úlohy nebo komponenty, které nenainstaloval původně. Pokud máte spuštěnou aplikaci Visual Studio, přejdete do části **nástroje** > **získat nástroje a funkce...** tím otevřete instalační program pro Visual Studio. Případně otevřete **instalační program pro Visual Studio** v nabídce Start. Odtud můžete zvolit úlohy nebo komponenty, které chcete nainstalovat. Pak zvolte **Upravit**.
 
 ## <a name="step-5---choose-individual-components-optional"></a>Krok 5 – výběr jednotlivých komponent (volitelné)
 
@@ -202,13 +202,13 @@ Ve výchozím nastavení instalační program pokusí tak, aby odpovídala jazyk
 
 ### <a name="change-the-installer-language-from-the-command-line"></a>Změnit jazyk instalačního programu z příkazového řádku
 
-Dalším způsobem, že můžete změnit výchozí jazyk je spuštění instalačního programu z příkazového řádku. Například můžete vynutit instalační program pro spuštění v anglickém jazyce pomocí následujícího příkazu: `vs_installer.exe --locale en-US`. Instalační program bude mějte na paměti Toto nastavení při příštím spuštění. Instalační program podporuje následující klíčová slova jazyka: zh-cn, zh-tw, cs-cz, en-us, es-es, fr-fr, de-de, it-it, ja-jp, ko-kr, pl-pl, pt-br, ru-ru a tr-tr.
+Dalším způsobem, že můžete změnit výchozí jazyk je spuštění instalačního programu z příkazového řádku. Například můžete vynutit, aby se instalační program spouštěl v angličtině, a to pomocí následujícího příkazu: `vs_installer.exe --locale en-US`. Instalační program bude mějte na paměti Toto nastavení při příštím spuštění. Instalační program podporuje následující klíčová slova jazyka: zh-cn, zh-tw, cs-cz, en-us, es-es, fr-fr, de-de, it-it, ja-jp, ko-kr, pl-pl, pt-br, ru-ru a tr-tr.
 
 ## <a name="step-7---select-the-installation-location-optional"></a>Krok 7 – výběr umístění instalace (volitelné)
 
 ::: moniker range="vs-2017"
 
-**Nové ve verzi 15.7**: Nyní můžete snížit nároky na instalaci sady Visual Studio na systémovou jednotku. Můžete se rozhodnout, zda budou přesunuty mezipaměť pro stahování, sdílených komponent, sady SDK a nástrojů na jiné jednotky a sady Visual Studio na disku, na kterém běží nejrychlejší.
+**Novinka v 15,7**: teď můžete snížit nároky na instalaci sady Visual Studio na systémovou jednotku. Můžete se rozhodnout, zda budou přesunuty mezipaměť pro stahování, sdílených komponent, sady SDK a nástrojů na jiné jednotky a sady Visual Studio na disku, na kterém běží nejrychlejší.
 
   ![Visual Studio 2017 – Změna umístění instalace](media/installation-options-by-location.png "Změna umístění instalace")
 
@@ -259,11 +259,11 @@ Další informace najdete na stránce [Výběr umístění instalace](change-ins
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Aktualizace sady Visual Studio](update-visual-studio.md)
 * [Úpravy sady Visual Studio](modify-visual-studio.md)
 * [Odinstalace sady Visual Studio](uninstall-visual-studio.md)
 * [Vytvoření offline instalace sady Visual Studio](create-an-offline-installation-of-visual-studio.md)
 * [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
-* [Instalace sady Visual Studio pro Mac](/visualstudio/mac/installation)
+* [Nainstalovat Visual Studio pro Mac](/visualstudio/mac/installation)

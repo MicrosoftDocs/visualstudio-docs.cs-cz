@@ -11,18 +11,18 @@ f1_keywords:
 ms.workload:
 - multiple
 ms.openlocfilehash: 9d540339ca25fc42fc05df4818a6d05204ccae0e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585402"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408463"
 ---
 # <a name="code-style-preferences"></a>Předvolby stylu kódu
 
 Můžete definovat nastavení stylu kódu pro jednotlivé projekty pomocí [souboru EditorConfig](#code-styles-in-editorconfig-files)nebo pro veškerý kód, který upravíte v aplikaci Visual Studio na [stránce **Možnosti** ](#code-styles-in-the-options-dialog-box)textového editoru. Pro C# kód můžete také nakonfigurovat aplikaci Visual Studio, aby používala Tyto předvolby stylu kódu pomocí příkazů pro **Vyčištění kódu** (Visual Studio 2019) a **formátovat dokument** (Visual Studio 2017).
 
 > [!NOTE]
-> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac, najdete v části [chování editoru v sadě Visual Studio pro Mac](/visualstudio/mac/editor-behavior).
+> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [chování editoru v Visual Studio pro Mac](/visualstudio/mac/editor-behavior).
 
 ## <a name="code-styles-in-editorconfig-files"></a>Styly kódu v souborech EditorConfig
 
@@ -38,7 +38,7 @@ Můžete ručně naplnit soubor EditorConfig nebo můžete soubor automaticky vy
 
 ## <a name="code-styles-in-the-options-dialog-box"></a>Styly kódu v dialogovém okně Možnosti
 
-Předvolby stylu kódu lze nastavit pro všechny vaše C# projekty a Visual Basic otevřením dialogového okna **Možnosti** v nabídce **nástroje** . V **možnosti** dialogu **textový Editor** > [**C#** nebo **základní**] > **styl kódu**  >  **Obecné**.
+Předvolby stylu kódu lze nastavit pro všechny vaše C# projekty a Visual Basic otevřením dialogového okna **Možnosti** v nabídce **nástroje** . V dialogovém okně **Možnosti** vyberte **textový editor** > [**C#** nebo **Basic**] > **styl kódu** > **Obecné**.
 
 Každá položka v seznamu zobrazí náhled předvoleb při výběru:
 
@@ -58,7 +58,7 @@ Možnosti nastavené v tomto okně se vztahují na váš účet přizpůsobení 
 
 ### <a name="preference-and-severity"></a>Priority a závažnosti
 
-U každého nastavení stylu kódu na této stránce můžete nastavit hodnoty **předvoleb** a **závažnosti** pomocí rozevíracích seznamu na každém řádku. Závažnost se dá nastavit jenom na **refaktoring**, **Návrh**, **varování**nebo **chybu**. Pokud chcete povolit [rychlé akce](../ide/quick-actions.md) pro styl kódu, zajistěte, aby bylo **Vážnost** nastavení závažnosti nastaveno na jinou hodnotu než **refaktoring**. V případě, že se používá nepreferovaný styl, se v případě použití nepreferovaného stylu zobrazí ikona pro **rychlé akce** ![žárovky](media/light-bulb-dropdown.png), chyba žárovky ![chyba žárovky](media/error-bulb.png) nebo ![Screwdriver](media/screwdriver.png). a můžete zvolit možnost v seznamu **rychlé akce** pro automatické přepsání kódu na preferovaný styl.
+U každého nastavení stylu kódu na této stránce můžete nastavit hodnoty **předvoleb** a **závažnosti** pomocí rozevíracích seznamu na každém řádku. Závažnost se dá nastavit jenom na **refaktoring**, **Návrh**, **varování**nebo **chybu**. Pokud chcete povolit [rychlé akce](../ide/quick-actions.md) pro styl kódu, zajistěte, aby bylo nastavení **závažnosti** nastaveno na jinou hodnotu než **refaktoring**. Žárovka pro **rychlé akce** ![žárovky](media/light-bulb-dropdown.png), chyba žárovky chyby ![žárovky](media/error-bulb.png)nebo ikona Screwdriver ![Screwdriver](media/screwdriver.png) se zobrazí, když je použit nepreferovaný styl, a můžete zvolit možnost v seznamu **rychlých akcí** pro automatické přepisování kódu pro preferovaný styl.
 
 ## <a name="apply-code-styles"></a>Použít styly kódu
 
@@ -101,8 +101,8 @@ Pokud chcete, aby nastavení stylu kódu bylo použito při každém uložení s
 
 ::: moniker-end
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Rychlé akce](../ide/quick-actions.md)
-- [EditorConfig nastavení konvence psaní kódu .NET](../ide/editorconfig-code-style-settings-reference.md)
-- [Chování editoru (Visual Studio for Mac)](/visualstudio/mac/editor-behavior)
+- [Nastavení konvence kódování .NET pro EditorConfig](../ide/editorconfig-code-style-settings-reference.md)
+- [Chování editoru (Visual Studio pro Mac)](/visualstudio/mac/editor-behavior)

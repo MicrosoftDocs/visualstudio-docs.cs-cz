@@ -33,14 +33,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 93470ebcea306d3cea762d60e061994b2bf27cc8
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253852"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409734"
 ---
 # <a name="program-vsto-add-ins"></a>Programové doplňky VSTO
-  Když rozšíříte systém Microsoft Office aplikaci vytvořením doplňku VSTO, napíšete kód přímo proti `ThisAddIn` třídě v projektu. Tuto třídu můžete použít k provádění úloh, jako je například přístup k objektovému modelu aplikace systém Microsoft Office hosta, přizpůsobení uživatelského rozhraní (UI) aplikace a vystavení objektů v doplňku VSTO do dalších řešení pro Office.
+  Když rozšíříte systém Microsoft Office aplikaci vytvořením doplňku VSTO, napíšete kód přímo proti třídě `ThisAddIn` ve vašem projektu. Tuto třídu můžete použít k provádění úloh, jako je například přístup k objektovému modelu aplikace systém Microsoft Office hosta, přizpůsobení uživatelského rozhraní (UI) aplikace a vystavení objektů v doplňku VSTO do dalších řešení pro Office.
 
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]
 
@@ -49,15 +49,15 @@ ms.locfileid: "71253852"
  Obecné informace o doplňcích VSTO a dalších typech řešení, které můžete vytvořit pomocí nástrojů pro vývoj pro Office v sadě Visual Studio, najdete v tématu [Přehled &#40;vývoje řešení pro systém&#41;Office VSTO](../vsto/office-solutions-development-overview-vsto.md).
 
 ## <a name="use-the-thisaddin-class"></a>Použití třídy ThisAddIn
- Do `ThisAddIn` třídy můžete začít psát kód doplňku VSTO. Visual Studio automaticky vygeneruje tuto třídu v souboru kódu *ThisAddIn. vb* (in [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]) nebo *ThisAddIn.cs* (in C#) v projektu doplňku VSTO. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Automaticky vytvoří instanci této třídy, když systém Microsoft Office aplikace načte doplněk VSTO.
+ Můžete začít psát kód doplňku VSTO ve třídě `ThisAddIn`. Visual Studio automaticky vygeneruje tuto třídu v souboru kódu *ThisAddIn. vb* (v [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ) nebo ThisAddIn.cs C#(in) v projektu doplňku VSTO. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] automaticky vytvoří instanci této třídy, když aplikace systém Microsoft Office načte doplněk VSTO.
 
- Ve `ThisAddIn` třídě existují dvě výchozí obslužné rutiny událostí. Chcete-li spustit kód při načtení doplňku VSTO, přidejte kód do `ThisAddIn_Startup` obslužné rutiny události. Chcete-li spustit kód těsně před uvolněním doplňku VSTO, přidejte kód do `ThisAddIn_Shutdown` obslužné rutiny události. Další informace o těchto obslužných rutinách událostí najdete v tématu [události v projektech pro systém Office](../vsto/events-in-office-projects.md).
+ Ve třídě `ThisAddIn` existují dvě výchozí obslužné rutiny událostí. Chcete-li spustit kód při načtení doplňku VSTO, přidejte kód do obslužné rutiny události `ThisAddIn_Startup`. Chcete-li spustit kód těsně před uvolněním doplňku VSTO, přidejte kód do obslužné rutiny události `ThisAddIn_Shutdown`. Další informace o těchto obslužných rutinách událostí najdete v tématu [události v projektech pro systém Office](../vsto/events-in-office-projects.md).
 
 > [!NOTE]
-> V aplikaci Outlook se ve výchozím `ThisAddIn_Shutdown` nastavení obslužná rutina události nevolá vždy, když je doplněk VSTO uvolněný. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).
+> V aplikaci Outlook se ve výchozím nastavení obslužná rutina události `ThisAddIn_Shutdown` nevolá vždy, když je doplněk VSTO uvolněný. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).
 
 ### <a name="access-the-object-model-of-the-host-application"></a>Přístup k objektovému modelu aplikace hostitele
- Chcete-li získat přístup k objektovému modelu aplikace hostitele, `Application` použijte pole `ThisAddIn` třídy. Toto pole vrátí objekt, který představuje aktuální instanci hostitelské aplikace. V následující tabulce je uveden typ vrácené hodnoty pro `Application` pole v každém projektu doplňku VSTO.
+ Chcete-li získat přístup k objektovému modelu aplikace hostitele, použijte pole `Application` třídy `ThisAddIn`. Toto pole vrátí objekt, který představuje aktuální instanci hostitelské aplikace. V následující tabulce je uveden typ vrácené hodnoty pro pole `Application` v každém projektu doplňku VSTO.
 
 |Hostitelská aplikace|Typ návratové hodnoty|
 |----------------------|-----------------------|
@@ -69,7 +69,7 @@ ms.locfileid: "71253852"
 |systém Microsoft Office Visio|Microsoft.Office.Interop.Visio.Application|
 |systém Microsoft Office Word|<xref:Microsoft.Office.Interop.Word.Application>|
 
- Následující příklad kódu ukazuje, jak použít `Application` pole k vytvoření nového sešitu v doplňku VSTO pro systém Microsoft Office Excel. Tento příklad je určen ke spuštění z `ThisAddIn` třídy.
+ Následující příklad kódu ukazuje, jak použít pole `Application` k vytvoření nového sešitu v doplňku VSTO pro systém Microsoft Office Excel. Tento příklad je určen pro spuštění z `ThisAddIn` třídy.
 
 ```vb
 Dim newWorkbook As Excel.Workbook = Me.Application.Workbooks.Add()
@@ -79,7 +79,7 @@ Dim newWorkbook As Excel.Workbook = Me.Application.Workbooks.Add()
 Excel.Workbook newWorkbook = this.Application.Workbooks.Add(System.Type.Missing);
 ```
 
- Chcete-li provést stejnou věc mimo `ThisAddIn` třídu, `Globals` použijte objekt pro přístup `ThisAddIn` ke třídě. Další informace o `Globals` objektu naleznete v tématu [globální přístup k objektům v projektech systému Office](../vsto/global-access-to-objects-in-office-projects.md).
+ Chcete-li provést stejnou věc mimo třídu `ThisAddIn`, použijte objekt `Globals` pro přístup ke třídě `ThisAddIn`. Další informace o objektu `Globals` najdete v tématu [globální přístup k objektům v projektech Office](../vsto/global-access-to-objects-in-office-projects.md).
 
 ```vb
 Dim newWorkbook As Excel.Workbook = Globals.ThisAddIn.Application.Workbooks.Add()
@@ -106,7 +106,7 @@ Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add(System.
 - [Přehled modelu objektů aplikace Visio](../vsto/visio-object-model-overview.md)
 
 ### <a name="AccessingDocuments"></a>Přístup k dokumentu při spuštění aplikace Office
- Ne všechny [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] aplikace automaticky otevřou dokument při jejich spuštění a žádná [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] z aplikací při jejich spuštění neotevřela dokument. Proto nepřidávejte kód do `ThisAdd-In_Startup` obslužné rutiny události, pokud kód vyžaduje otevření dokumentu. Místo toho přidejte tento kód do události, kterou aplikace Office vyvolá, když uživatel vytvoří nebo otevře dokument. Tímto způsobem můžete zaručit, že dokument je otevřen před tím, než kód provede operace.
+ Ne všechny [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] aplikace automaticky otevřou dokument při jejich spuštění a žádná z [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]ch aplikací při jejich spuštění neotevřela dokument. Proto nepřidávejte kód do obslužné rutiny události `ThisAdd-In_Startup`, pokud kód vyžaduje otevření dokumentu. Místo toho přidejte tento kód do události, kterou aplikace Office vyvolá, když uživatel vytvoří nebo otevře dokument. Tímto způsobem můžete zaručit, že dokument je otevřen před tím, než kód provede operace.
 
  Následující příklad kódu funguje s dokumentem v aplikaci Word pouze v případě, že uživatel vytvoří dokument nebo otevře existující dokument.
 
@@ -114,20 +114,20 @@ Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add(System.
  [!code-vb[Trin_WordAddIn_Menus#3](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#3)]
 
 ### <a name="thisaddin-members-to-use-for-other-tasks"></a>ThisAddIn členové, kteří se mají použít pro jiné úkoly
- Následující tabulka popisuje další běžné úlohy a ukazuje, které členy `ThisAddIn` třídy můžete použít k provádění úkolů.
+ Následující tabulka popisuje další běžné úlohy a ukazuje, které členy třídy `ThisAddIn` můžete použít k provádění úkolů.
 
-|Úloha|Člen, který se má použít|
+|Úkol|Člen, který se má použít|
 |----------|-------------------|
-|Spusťte kód pro inicializaci doplňku VSTO při načtení doplňku VSTO.|Přidejte kód do `ThisAddIn_Startup` metody. Toto je výchozí obslužná rutina události pro <xref:Microsoft.Office.Tools.AddInBase.Startup> událost. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).|
-|Spusťte kód pro vyčištění prostředků používaných doplňkem VSTO před uvolněním doplňku VSTO.|Přidejte kód do `ThisAddIn_Shutdown` metody. Toto je výchozí obslužná rutina události pro <xref:Microsoft.Office.Tools.AddInBase.Shutdown> událost. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md). **Poznámka:**  V aplikaci Outlook se ve výchozím `ThisAddIn_Startup` nastavení obslužná rutina události nevolá vždy, když je doplněk VSTO uvolněný. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).|
-|Zobrazí vlastní podokno úloh.|`CustomTaskPanes` Použijte pole. Další informace najdete v tématu [vlastní podokna úloh](../vsto/custom-task-panes.md).|
-|Vystavte objekty v doplňku VSTO pro další systém Microsoft Office řešení.|Přepsat <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> metody. Další informace najdete v tématu [kód volání v doplňcích VSTO z jiných řešení pro Office](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md).|
-|Přizpůsobení funkce v systém Microsoft Office systému implementací rozhraní rozšiřitelnosti.|<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> Přepsat metodu pro vrácení instance třídy, která implementuje rozhraní. Další informace najdete v tématu [Přizpůsobení funkcí uživatelského rozhraní pomocí rozhraní rozšiřitelnosti](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md). **Poznámka:**  Chcete-li přizpůsobit uživatelské rozhraní pásu karet, můžete také <xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A> přepsat metodu.|
+|Spusťte kód pro inicializaci doplňku VSTO při načtení doplňku VSTO.|Přidejte kód do metody `ThisAddIn_Startup`. Toto je výchozí obslužná rutina události <xref:Microsoft.Office.Tools.AddInBase.Startup>. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).|
+|Spusťte kód pro vyčištění prostředků používaných doplňkem VSTO před uvolněním doplňku VSTO.|Přidejte kód do metody `ThisAddIn_Shutdown`. Toto je výchozí obslužná rutina události <xref:Microsoft.Office.Tools.AddInBase.Shutdown>. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md). **Poznámka:**  V aplikaci Outlook se ve výchozím nastavení obslužná rutina události `ThisAddIn_Startup` nevolá vždy, když je doplněk VSTO uvolněný. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).|
+|Zobrazí vlastní podokno úloh.|Použijte pole `CustomTaskPanes`. Další informace najdete v tématu [vlastní podokna úloh](../vsto/custom-task-panes.md).|
+|Vystavte objekty v doplňku VSTO pro další systém Microsoft Office řešení.|Přepsat metodu <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A>. Další informace najdete v tématu [kód volání v doplňcích VSTO z jiných řešení pro Office](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md).|
+|Přizpůsobení funkce v systém Microsoft Office systému implementací rozhraní rozšiřitelnosti.|Přepište metodu <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> pro vrácení instance třídy, která implementuje rozhraní. Další informace najdete v tématu [Přizpůsobení funkcí uživatelského rozhraní pomocí rozhraní rozšiřitelnosti](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md). **Poznámka:**  Chcete-li přizpůsobit uživatelské rozhraní pásu karet, můžete také přepsat metodu <xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>.|
 
 ### <a name="understand-the-design-of-the-thisaddin-class"></a>Pochopení návrhu třídy ThisAddIn
- V projektech, které cílí [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]na <xref:Microsoft.Office.Tools.AddIn> , je rozhraní. Třída je odvozena <xref:Microsoft.Office.Tools.AddInBase> z třídy. `ThisAddIn` Tato základní třída přesměruje všechna volání do jejích členů na vnitřní implementaci <xref:Microsoft.Office.Tools.AddIn> rozhraní [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]v.
+ V projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)], <xref:Microsoft.Office.Tools.AddIn> je rozhraní. Třída `ThisAddIn` je odvozena od <xref:Microsoft.Office.Tools.AddInBase> třídy. Tato základní třída přesměruje všechna volání do jejích členů na vnitřní implementaci rozhraní <xref:Microsoft.Office.Tools.AddIn> v [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)].
 
- V projektech doplňku `ThisAddIn` VSTO pro Outlook je třída odvozena `Microsoft.Office.Tools.Outlook.OutlookAddIn` od třídy v projektech, které cílí na .NET Framework 3,5, a z <xref:Microsoft.Office.Tools.Outlook.OutlookAddInBase> v projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. Tyto základní třídy poskytují některé další funkce pro podporu oblastí formuláře. Další informace o oblastech formuláře najdete v tématu [vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md).
+ V projektech doplňku VSTO pro Outlook je třída `ThisAddIn` odvozená od `Microsoft.Office.Tools.Outlook.OutlookAddIn` třídy v projektech, které cílí na .NET Framework 3,5, a <xref:Microsoft.Office.Tools.Outlook.OutlookAddInBase> v projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. Tyto základní třídy poskytují některé další funkce pro podporu oblastí formuláře. Další informace o oblastech formuláře najdete v tématu [vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md).
 
 ## <a name="customize-the-user-interface-of-microsoft-office-applications"></a>Přizpůsobení uživatelského rozhraní aplikací systém Microsoft Office
  Můžete programově přizpůsobit uživatelské rozhraní systém Microsoft Office aplikací pomocí doplňku VSTO. Můžete například přizpůsobit pás karet, zobrazit vlastní podokno úloh nebo vytvořit vlastní oblast formuláře v aplikaci Outlook. Další informace najdete v tématu [přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md).
@@ -143,12 +143,12 @@ Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add(System.
 
  Další informace najdete v tématu [kód volání v doplňcích VSTO z jiných řešení pro Office](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vývoj řešení pro systém Office](../vsto/developing-office-solutions.md)
 - [Rozšiřování dokumentů aplikace Word a excelových sešitů v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
 - [Volání kódu v doplňcích VSTO z jiných řešení pro systém Office](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
-- [Návod: Volání kódu v doplňku VSTO z jazyka VBA](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)
+- [Návod: volání kódu v doplňku VSTO z jazyka VBA](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)
 - [Přizpůsobení funkcí uživatelského rozhraní pomocí rozhraní rozšiřitelnosti](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md)
-- [Postupy: Vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
+- [Postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
 - [Architektura doplňků VSTO](../vsto/architecture-of-vsto-add-ins.md)
 - [Psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md)
