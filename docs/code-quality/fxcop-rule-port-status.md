@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f743df63ce779b90f728fd69622f621c8a2169d5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fccd167bfafd4c27895b01927aaabc1e77eab91c
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587586"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78945556"
 ---
 # <a name="fxcop-rule-port-status"></a>Stav portu pravidla FxCop
 
@@ -40,6 +40,7 @@ ID pravidla | Název
 [CA1017](ca1017-mark-assemblies-with-comvisibleattribute.md) | Označte sestavení pomocí ComVisible
 [CA1018](ca1018-mark-attributes-with-attributeusageattribute.md) | Označte atributy pomocí AttributeUsageAttribute
 [CA1019](ca1019-define-accessors-for-attribute-arguments.md) | Definujte přístupové objekty pro argumenty atributů
+[CA1021](ca1021.md) | Vyhněte se výstupním parametrům
 [CA1024](ca1024-use-properties-where-appropriate.md) | Použijte vlastnosti, kde je to vhodné
 [CA1027](ca1027-mark-enums-with-flagsattribute.md) | Označte výčty pomocí FlagsAttribute
 [CA1028](ca1028-enum-storage-should-be-int32.md) | Úložiště výčtu by měl být Int32
@@ -178,7 +179,7 @@ CA3061 | Nepřidávat schéma podle adresy URL
 [CA3147](ca3147.md) | Označit obslužné rutiny operací s tokenem ověření antipadělání
 [CA5350](ca5350.md) | Nepoužívejte slabé kryptografické algoritmy
 [CA5351](ca5351.md) | Nepoužívejte nefunkční kryptografické algoritmy.
-CA5358 | Nepoužívat nezabezpečené šifrovací režimy
+CA5358 | Nepoužívat nezabezpečené režimy šifrování
 CA5359 | Nezakázat ověřování certifikátu
 CA5360 | Nevolat nebezpečné metody v deserializaci
 CA5361 | Nepovolujte používání SChannel silného šifrování.
@@ -344,6 +345,6 @@ Následující starší pravidla analýzy FxCop jsou zastaralá a nebudou implem
 - [CA2233](ca2233.md)
 - [CA5122](ca5122.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Pravidla Microsoft. CodeAnalysis. FxCopAnalyzers](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md)

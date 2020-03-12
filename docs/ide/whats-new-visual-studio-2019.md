@@ -2,7 +2,7 @@
 title: Novinky v sadě Visual Studio 2019
 titleSuffix: ''
 description: Seznamte se s novými funkcemi v aplikaci Visual Studio 2019.
-ms.date: 12/10/2019
+ms.date: 02/28/2020
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 35891f081e19420374a1579e73c68d7b93930e54
-ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
+ms.openlocfilehash: 9e506a2a0101449ef598734cece5b1330bcd2655
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125361"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78947037"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
@@ -206,7 +206,7 @@ Další informace najdete v tématu [vlastnosti Pinnable: Debug & zobrazit sprav
 
 ## <a name="whats-next"></a>Kam dál
 
-Visual Studio 2019 aktualizujeme často o nové funkce, které můžou zlepšit vývojové prostředí. Další informace o našich nejnovějších inovacích najdete v blogu sady [Visual Studio](https://devblogs.microsoft.com/visualstudio/). A pro záznam toho, co jsme vydali v předběžné verzi Preview, se podívejte na poznámky k [verzi Preview](/visualstudio/releases/2019/release-notes-preview/).
+Visual Studio 2019 aktualizujeme často o nové funkce, které můžou zlepšit vývojové prostředí. Další informace o našich nejnovějších inovacích najdete v blogu sady [Visual Studio](https://devblogs.microsoft.com/visualstudio/). Záznam o tom, co jsme vydali v předběžné verzi Preview, najdete v [poznámkách k verzi Preview](/visualstudio/releases/2019/release-notes-preview/). Seznam toho, co plánujeme vydávat dál, najdete v tématu plán sady [Visual Studio](/visualstudio/productinfo/vs-roadmap).
 
 Chcete získat další informace o tom, co je jinde v sadě Works for Visual Studio 2019? Podívejte se na [plán sady Visual Studio](/visualstudio/productinfo/vs-roadmap/).
 
@@ -221,7 +221,6 @@ Proč odeslat zpětnou vazbu týmu sady Visual Studio? Protože jsme vážně tr
 ## <a name="see-also"></a>Viz také
 
 * [Zpráva k vydání verze pro Visual Studio 2019](/visualstudio/releases/2019/release-notes/)
-* [Co je nového v sadě Visual Studio 2019 SDK](../extensibility/whats-new-visual-studio-2019-sdk.md)
 * [Zpráva k vydání verze pro Visual Studio 2019 for Mac](/visualstudio/releasenotes/vs2019-mac-relnotes/)
-* [Konference k Microsoft Build 2019](https://www.microsoft.com/build)
-* [Microsoft Connect (); konference 2018](https://www.microsoft.com/connectevent)
+* [Co je nového v sadě Visual Studio 2019 SDK](../extensibility/whats-new-visual-studio-2019-sdk.md)
+* [Konference Microsoftu o sestavení](https://www.microsoft.com/build)

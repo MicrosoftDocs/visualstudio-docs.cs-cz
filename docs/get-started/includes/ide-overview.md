@@ -6,12 +6,12 @@ ms.author: tglee
 author: TerryGLee
 manager: jillfra
 ms.topic: include
-ms.openlocfilehash: 69b1bccf20c242965462b807b2a1b64d3c60d671
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
-ms.translationtype: MT
+ms.openlocfilehash: d6ecbfc3917898de1b55a6a1e1edc411d8b01234
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77590771"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78968226"
 ---
 *Integrované vývojové prostředí* sady Visual Studio je kreativní spouštěcí panel, který můžete použít k úpravám, ladění a vytváření kódu a pak k publikování aplikace. Integrované vývojové prostředí (IDE) je plně funkční program, který lze použít pro mnoho aspektů vývoje softwaru. Kromě standardní editor a ladicího programu, že většina integrovanými vývojovými prostředími poskytnout, Visual Studio obsahuje kompilátory, nástroje dokončování kódu, grafičtí návrháři pro a mnoho dalších funkcí, které usnadňují proces vývoje softwaru.
 
@@ -47,7 +47,7 @@ Tento obrázek ukazuje sady Visual Studio s otevřít projekt a několika okny n
 
 Visual Studio je k dispozici pro Windows a Mac. [Visual Studio pro Mac](/visualstudio/mac/) má mnoho stejných funkcí jako sadu Visual Studio 2017 a je optimalizovaná pro vývoj aplikací pro různé platformy a mobilní aplikace. Tento článek se týká Windows verze sady Visual Studio 2017.
 
-Existují 3 edicích sady Visual Studio 2017: Community, Professional a Enterprise. Informace o tom, které funkce jsou v jednotlivých edicích podporované, najdete v článku [porovnání sady Visual Studio 2017](https://visualstudio.microsoft.com/vs/compare/) .
+Existují 3 edicích sady Visual Studio 2017: Community, Professional a Enterprise. Informace o tom, které funkce jsou v jednotlivých edicích podporované, najdete v článku [porovnání edice sady Visual Studio 2017](https://visualstudio.microsoft.com/vs/compare/) .
 
 ::: moniker-end
 
@@ -55,7 +55,7 @@ Existují 3 edicích sady Visual Studio 2017: Community, Professional a Enterpri
 
 Visual Studio je k dispozici pro Windows a Mac. [Visual Studio pro Mac](/visualstudio/mac/) má mnoho stejných funkcí jako sadu Visual Studio 2019 a je optimalizovaná pro vývoj aplikací pro různé platformy a mobilní aplikace. Tento článek se zaměřuje na verzi systému Windows sady Visual Studio 2019.
 
-Existují tři edice sady Visual Studio 2019: komunita, Professional a Enterprise. Informace o tom, které funkce jsou v jednotlivých edicích podporované, najdete v tématu [porovnání sady Visual Studio](https://visualstudio.microsoft.com/vs/compare/) .
+Existují tři edice sady Visual Studio 2019: komunita, Professional a Enterprise. Informace o tom, které funkce jsou v jednotlivých edicích podporované, najdete v článku [porovnání edice sady Visual Studio](https://visualstudio.microsoft.com/vs/compare/) .
 
 ::: moniker-end
 

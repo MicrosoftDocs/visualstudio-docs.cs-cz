@@ -3,15 +3,15 @@ title: Stažení softwarových titulů v předplatných sady Visual Studio | Mic
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 02/17/2020
+ms.date: 03/07/2020
 ms.topic: conceptual
 description: Naučte se vyhledávat a stahovat tituly softwaru Microsoftu v předplatných sady Visual Studio.
-ms.openlocfilehash: 053e6d7171f8983def3675e42fb661172a381284
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.openlocfilehash: 062454a6f5af4a0452b55bd632986f426347eab5
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77476827"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937484"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Stažení softwarových titulů v předplatných sady Visual Studio
 V závislosti na tom, jaké Předplatné sady Visual Studio máte, může být k dispozici celá řada softwarových titulů Microsoftu.  V tomto článku se dozvíte, jak vyhledat a stáhnout software, který potřebujete k tomu, abyste mohli využít své předplatné na maximum. 
@@ -50,14 +50,22 @@ Pokud chcete získat kód Product Key pro stažení, můžete buď kliknout na m
 > [!div class="mx-imgBorder"]
 > ![kód Product Key pro deklaraci identity sady Visual Studio 2019](_img/subscriber-downloads/vs2019-claim-keys.png)
 
-## <a name="next-steps"></a>Další kroky
-Další informace o hledání, nárokování a exportování kódů Product Key najdete v dokumentaci k produktovým klíčům:
-- [Přehled kódů Product Key](product-keys.md)
-- [Vyhledání a deklarace klíčů](find-keys.md)
-
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+
+## <a name="next-steps"></a>Další kroky
+Další informace o hledání, deklaracích a exportu kódů Product Key najdete v dokumentaci k klíčům Product Key:
+- [Přehled kódů Product Key](product-keys.md)
+- [Vyhledání a deklarace klíčů](find-keys.md)
+
+Naučte se využívat výhod dalších skvělých výhod, jako jsou:
+- [Individuální kredit v Azure DevTest](vs-azure.md)
+- [Azure DevOps](vs-azure-devops.md)
+- [Integrované vývojové prostředí sady Visual Studio](vs-ide-benefit.md)
+
+
+
 

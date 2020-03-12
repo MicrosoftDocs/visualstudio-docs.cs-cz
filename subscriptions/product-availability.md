@@ -3,15 +3,15 @@ title: Dostupnost produktu pro stahování softwaru v předplatných sady Visual
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/29/2019
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: Informace o dostupnosti produktů v předplatných sady Visual Studio ke stažení softwaru
-ms.openlocfilehash: bf75f9638807b823fb72c4e23f69d0204fcec5de
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+ms.openlocfilehash: 30dd3a216274e189d4d1afe2321bd1db7b66fb94
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74706815"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78947100"
 ---
 # <a name="product-availability-for-software-downloads-in-visual-studio-subscriptions"></a>Dostupnost produktu pro stahování softwaru v předplatných sady Visual Studio
 V rámci výhod vašeho předplatitele máte přístup k široké škále stahování softwaru.
@@ -36,6 +36,12 @@ Počet a typ stahování závisí na úrovni předplatného a na členství v pr
 > Pokud máte přidruženo několik předplatných se stejnou e-mailovou adresou, jsou softwarové tituly, které máte k dispozici, určeny na základě předplatného **nejvyšší** úrovně.  Pokud máte například předplatné Visual Studio Enterprise a předplatné Visual Studio Test Professional, budete mít přístup k softwarovým titulům, které jsou součástí předplatného Visual Studio Enterprise, bez ohledu na to, které předplatné je aktuálně se používá na portálu předplatných. 
 
 Nejste si jistí, jaké Předplatné používáte?  Pokud chcete zobrazit všechna předplatná přiřazená k vaší e-mailové adrese, připojte se k [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) . Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  K zobrazení těchto předplatných se budete muset přihlásit pomocí této e-mailové adresy.
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 - Některé položky ke stažení softwaru mohou pro instalaci a aktivaci vyžadovat kód Product Key.  Podrobnosti o tom, jak získat a spravovat kódy Product Key, najdete v článku o našich [klíčích Product Key](product-keys.md) . 

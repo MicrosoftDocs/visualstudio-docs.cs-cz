@@ -3,15 +3,15 @@ title: Předplatná sady Visual Studio nabízená partnerům v Microsoft Partner
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/28/2019
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: Podrobnosti o tom, jaká předplatná jsou nabízená, jaká pravidla se použijí a kolik předplatných se nabízí v programu MPN.
-ms.openlocfilehash: 1a103f76b56df72b5829f9ce87f587070519726e
-ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
+ms.openlocfilehash: ddafa2daef34d4a23de448235ffa186c1bb27319
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281695"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78947043"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Předplatná sady Visual Studio nabízená partnerům v Microsoft Partner Network (MPN)
 
@@ -69,11 +69,18 @@ Toto interní omezení jen pro použití v podstatě znamená, že partneři nem
 
 V případě předplatných sady Visual Studio nabízených přes MPN se musí licencovaný uživatel přihlásit k aplikaci Visual Studio pomocí stejné identity nebo přihlašovacího jména, které bylo použito k aktivaci předplatného sady Visual Studio. Kódy Product Key nejsou nabízeny k odemknutí produktu; jediným možností pro spuštění sady Visual Studio je přihlášení. Předplatitel sady Visual Studio může pracovat offline až po dobu 30 dnů, než přestane fungovat Visual Studio. Při práci v režimu online Visual Studio tiše aktualizuje stav licence uživatele pravidelně, aby bylo zajištěno, že předplatné je stále platné.
 
-## <a name="resources"></a>Prostředky
+## <a name="resources"></a>Zdroje
 
 - [Příručka pro správce programu MPN](https://assets.microsoft.com/en-us/Program-Administrator-Guide-to-Software-and-Online-Services-Benefits_1.pdf) – obsahuje pokyny k přiřazení předplatných sady Visual Studio zaměstnancům programu MPN.
 - [Přiřazení předplatných sady Visual Studio zaměstnancům programu MPN](manage-mpn-subscriptions.md)
 - [Podmínky použití](https://www.microsoft.com/useterms/) – předplatná sady Visual Studio nabízená přes MPN podléhají smlouvě EULA předplatných sady Visual Studio (NFR).
+
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 

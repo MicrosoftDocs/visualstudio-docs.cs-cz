@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 517a583c859870b979c89c4fe2f55cd3bc0fc913
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d8e1df93fa9e865bb9b9136b9d0a0e07f1a485ea
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587612"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937519"
 ---
 # <a name="frequently-asked-questions-about-fxcop-and-fxcop-analyzers"></a>Nejčastější dotazy k analyzátorům FxCop a FxCop
 
@@ -57,8 +57,8 @@ Informace o tom, která pravidla analýzy starší verze byly [PřeFxCopa na ana
 
 Pokud váš projekt používá možnost sestavení k ponechání upozornění jako chyby, může se zobrazit upozornění analyzátoru FxCop jako chyby. Chcete-li zabránit tomu, aby upozornění analýzy kódu byla považována za chyby, postupujte podle pokynů v [části Nejčastější dotazy k analýze kódu](../code-quality/analyzers-faq.md#treat-warnings-as-errors).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přehled analyzátorů .NET Compiler Platform](roslyn-analyzers-overview.md)
-- [Začínáme s analyzátory](fxcop-analyzers.yml)
+- [Migrace na analyzátory FxCop](migrate-from-legacy-analysis-to-fxcop-analyzers.md)
 - [Nainstalovat analyzátory FxCop](install-fxcop-analyzers.md)

@@ -3,15 +3,15 @@ title: Použití kódů Product Key k podpoře internetových ukázek prostředn
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/19/2019
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: Naučte se používat kódy Product Key k podpoře internetových ukázek prostřednictvím Terminálové služby a povolení přístupu k VP.
-ms.openlocfilehash: 19faa64b7eeaebc1b92ca965f686795b31e00e7e
-ms.sourcegitcommit: 9fc8b144d4ed1c46aba87c0b7e1d24454e0eea9d
+ms.openlocfilehash: c02bce8fe098c75f0405fdd4e9ba5f0f143401fa
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68493386"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937465"
 ---
 # <a name="internet-demonstrations-via-terminal-services"></a>Internetové ukázky prostřednictvím Terminálové služby
 Pomocí předplatného sady Visual Studio můžete koncovým uživatelům poskytnout přístup k internetovým demonstračním programům prostřednictvím Terminálové služby (Windows Server 2003 nebo Windows Server 2008) nebo služby Vzdálená plocha (Windows Server 2008 R2 a novější). Tímto způsobem můžou k vašemu předvádění přistupovat až 200 anonymních uživatelů. Vaše ukázka nesmí používat produkční data. Předplatitelé sady Visual Studio mají licenci k předvedení svých aplikací koncovým uživatelům. Tato internetová ukázka pomocí Terminálové služby (TS) nebo služby Vzdálená plocha (RDS) je jediným scénářem, kdy koncoví uživatelé bez předplatného sady Visual Studio můžou pracovat s demonstrační aplikací, když je software licencovaný prostřednictvím vizuálu. Předplatná studia.
@@ -34,7 +34,14 @@ Koncoví uživatelé se můžou k aplikacím přistupovat přes RDS, pokud jsou 
 - Pro ukázky aplikace lze použít až 200 souběžných uživatelských připojení.
 - Kódy Product Key pro povolení připojení uživatele musí získat předplatitel sady Visual Studio.
 
+## <a name="see-also"></a>Viz také
+- [Documenation Windows serveru](https://docs.microsoft.com/windows-server/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+
 ## <a name="next-steps"></a>Další kroky
-Pokud potřebujete pokyny k nasazení služby RDS, Projděte si část blogové řady pro https://techcommunity.microsoft.com/t5/Ask-The-Performance-Team/bg-p/AskPerf **službu Vzdálená plocha (RDS) 2012 v části nasazení relace vzdálené plochy** . 
+Pokud potřebujete pomoc s nasazením služby RDS, Projděte si část blogové série v **nasazení vzdálené plochy (VP) 2012** na adrese https://techcommunity.microsoft.com/t5/Ask-The-Performance-Team/bg-p/AskPerf. 
 
 Pokud máte nějaké dotazy, navštivte [fórum služby Vzdálená plocha Microsoft Services](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverTS).
