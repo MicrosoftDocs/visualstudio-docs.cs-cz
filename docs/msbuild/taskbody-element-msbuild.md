@@ -1,5 +1,5 @@
 ---
-title: Element Task of UsingTask (MSBuild) | Microsoft Docs
+title: Prvek úlohy usingtask (MSBuild) | Dokumenty společnosti Microsoft
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -17,17 +17,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 36644a6b21092361d92dba5f0886eb4198884995
-ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78263185"
 ---
-# <a name="task-element-of-usingtask-msbuild"></a>Element Task pro UsingTask (MSBuild)
+# <a name="task-element-of-usingtask-msbuild"></a>Prvek úlohy UsingTask (MSBuild)
 
-Obsahuje data předávaná `UsingTask` `TaskFactory`. Další informace naleznete v tématu [UsingTask element (MSBuild)](../msbuild/usingtask-element-msbuild.md).
+Obsahuje data, která je `UsingTask` `TaskFactory`předána . Další informace naleznete [v tématu UsingTask element (MSBuild)](../msbuild/usingtask-element-msbuild.md).
 
- \<projektu > \<UsingTask > \<úkol >
+ \<Projekt \<> pomocí \<> úkolu> úkolů
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,7 +35,7 @@ Obsahuje data předávaná `UsingTask` `TaskFactory`. Další informace naleznet
 <Task Evaluate="true/false" />
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
 
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
@@ -43,23 +43,23 @@ Obsahuje data předávaná `UsingTask` `TaskFactory`. Další informace naleznet
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Evaluate`|Volitelný logický atribut.<br /><br /> Pokud `true`, MSBuild vyhodnotí vnitřní prvky a rozbalí položky a vlastnosti před tím, než předává informace do `TaskFactory` při vytváření instance úkolu.|
+|`Evaluate`|Volitelný logický atribut.<br /><br /> Pokud `true`, MSBuild vyhodnotí všechny vnitřní prvky a rozbalí `TaskFactory` položky a vlastnosti před tím, než předá informace při vytvoření instance úlohy.|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|Data|Text mezi značkami `Task` se do `TaskFactory`pošle jako doslovné.|
+|Data|Text mezi `Task` značkami je doslovně `TaskFactory`odeslán do .|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-| Prvek | Popis |
+| Element | Popis |
 | - | - |
-| [UsingTask](../msbuild/usingtask-element-msbuild.md) | Poskytuje způsob, jak registrovat úlohy v nástroji MSBuild. V projektu může být nula nebo více `UsingTask` prvků. |
+| [UsingTask](../msbuild/usingtask-element-msbuild.md) | Poskytuje způsob, jak zaregistrovat úkoly v MSBuild. V projektu může `UsingTask` být nula nebo více prvků. |
 
 ## <a name="example"></a>Příklad
 
- Následující příklad ukazuje způsob použití prvku `Task` s atributem `Evaluate`.
+ Následující příklad ukazuje, jak `Task` používat `Evaluate` prvek s atributem.
 
 ```xml
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">
@@ -74,8 +74,8 @@ Obsahuje data předávaná `UsingTask` `TaskFactory`. Další informace naleznet
 </UsingTask>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
-- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

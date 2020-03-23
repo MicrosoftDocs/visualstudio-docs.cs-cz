@@ -1,5 +1,5 @@
 ---
-title: Úloha upozornění | Microsoft Docs
+title: Výstražný úkol | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,38 +19,38 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2e95b59b4ccc0bd2df89e45512a5bdd05c027556
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77631091"
 ---
 # <a name="warning-task"></a>Warning – úloha
 
-Zaznamená upozornění během sestavení na základě vyhodnoceného podmíněného příkazu.
+Protokoluje upozornění během sestavení na základě vyhodnoceného podmíněného příkazu.
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry úlohy `Warning`.
+ Následující tabulka popisuje parametry `Warning` úkolu.
 
 | Parametr | Popis |
 |---------------| - |
-| `Code` | Volitelný parametr `String`.<br /><br /> Kód upozornění, který se má přidružit k upozornění. |
-| `File` | Volitelný parametr `String`.<br /><br /> Určuje relevantní soubor, pokud existuje. Pokud není zadán žádný soubor, bude použit soubor obsahující varovná úloha. |
-| `HelpKeyword` | Volitelný parametr `String`.<br /><br /> Klíčové slovo Help pro přidružení k upozornění |
-| `Text` | Volitelný parametr `String`.<br /><br /> Text upozornění, který nástroj MSBuild zaznamená, pokud je parametr `Condition` vyhodnocen jako `true`. |
+| `Code` | Volitelný `String` parametr.<br /><br /> Kód upozornění přidružit k upozornění. |
+| `File` | Volitelný `String` parametr.<br /><br /> Určuje příslušný soubor, pokud existuje. Pokud není k dispozici žádný soubor, soubor obsahující úlohu Upozornění se použije. |
+| `HelpKeyword` | Volitelný `String` parametr.<br /><br /> Klíčové slovo nápovědy, které chcete přidružit k upozornění. |
+| `Text` | Volitelný `String` parametr.<br /><br /> Text upozornění, který MSBuild `Condition` protokoluje, `true`pokud parametr vyhodnotí na . |
 
 ## <a name="remarks"></a>Poznámky
 
- Úloha `Warning` umožňuje projektům MSBuild kontrolovat přítomnost požadované konfigurace nebo vlastnosti před pokračováním v dalším kroku sestavení.
+ Úkol `Warning` umožňuje MSBuild projekty zkontrolovat přítomnost požadované konfigurace nebo vlastnosti před pokračováním v dalším kroku sestavení.
 
- Pokud je parametr `Condition` úlohy `Warning` vyhodnocen jako `true`, je hodnota parametru `Text` protokolována a sestavení bude nadále spuštěno. Pokud parametr `Condition` neexistuje, text upozornění se zaznamená do protokolu. Další informace o protokolování naleznete v tématu [získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
+ Pokud `Condition` je parametr `Warning` úlohy `true`vyhodnocen do `Text` , je hodnota parametru zaznamenána a sestavení pokračuje v provádění. Pokud `Condition` parametr neexistuje, je zaznamenán text upozornění. Další informace o protokolování naleznete v [tématu Získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
 
- Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
 
- Následující příklad kódu kontroluje vlastnosti, které jsou nastaveny na příkazovém řádku. Pokud nejsou nastaveny žádné vlastnosti, projekt vyvolá událost upozornění a zaznamená hodnotu parametru `Text` `Warning` úlohy.
+ Následující příklad kódu kontroluje vlastnosti, které jsou nastaveny na příkazovém řádku. Pokud nejsou nastaveny žádné vlastnosti, projekt vyvolá událost upozornění `Text` a zaznamená hodnotu parametru `Warning` úkolu.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -69,4 +69,4 @@ Zaznamená upozornění během sestavení na základě vyhodnoceného podmíněn
 ## <a name="see-also"></a>Viz také
 
 - [Získat protokoly sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)
-- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

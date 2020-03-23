@@ -1,5 +1,5 @@
 ---
-title: Referenční dokumentace úlohy nástroje MSBuild | Microsoft Docs
+title: Odkaz na úkol msbuild | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,98 +16,98 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cbec3c7c020bae0e94bc16bdb1fe9740a36a93ae
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78865320"
 ---
-# <a name="msbuild-task-reference"></a>Referenční dokumentace úlohy nástroje MSBuild
+# <a name="msbuild-task-reference"></a>Odkaz na úkol MSBuild
 
-Úlohy poskytují kód, který se spouští během procesu sestavení. Úlohy v následujícím seznamu jsou součástí nástroje MSBuild. Po instalaci C++ úlohy jsou k dispozici další úlohy, které se používají k sestavení C++ projektů. Další informace najdete v tématu [ C++ úlohy](../msbuild/msbuild-tasks-specific-to-visual-cpp.md).
+Úkoly poskytují kód, který se spustí během procesu sestavení. Úkoly v následujícím seznamu jsou zahrnuty s MSBuild. Při instalaci zatížení Jazyka C++ jsou k dispozici další úkoly, které se používají k vytváření projektů jazyka C++. Další informace naleznete v tématu [Úkoly jazyka C++](../msbuild/msbuild-tasks-specific-to-visual-cpp.md).
 
-Kromě parametrů uvedených v tématech v této části má každá úloha také následující parametry:
+Kromě parametrů uvedených v tématech v této části má každý úkol také následující parametry:
 
 | Parametr | Popis |
 |-------------------| - |
-| `Condition` | Volitelný parametr `String`.<br /><br /> Výraz `Boolean`, který modul MSBuild používá k určení, zda bude tato úloha spuštěna. Informace o podmínkách podporovaných nástrojem MSBuild naleznete v tématu [podmínky](../msbuild/msbuild-conditions.md). |
-| `ContinueOnError` | Volitelný parametr. Může obsahovat jednu z následujících hodnot:<br /><br /> -   **WarnAndContinue** nebo **true**. Pokud se úloha nezdařila, následné úkoly v [cílovém](../msbuild/target-element-msbuild.md) elementu a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za upozornění.<br />-   **ErrorAndContinue**. Pokud se úloha nezdařila, následné úkoly v prvku `Target` a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za chyby.<br />-   **ErrorAndStop** nebo **false** (výchozí). Pokud se úloha nezdařila, zbývající úkoly v prvku `Target` a sestavení nejsou provedeny a celý `Target` element a sestavení se považuje za neúspěšné.<br /><br /> Verze .NET Framework před 4,5 podporují pouze hodnoty `true` a `false`.<br /><br /> Další informace najdete v tématu [Postupy: ignorování chyb v úlohách](../msbuild/how-to-ignore-errors-in-tasks.md). |
+| `Condition` | Volitelný `String` parametr.<br /><br /> Výraz, `Boolean` který modul MSBuild používá k určení, zda bude tato úloha provedena. Informace o podmínkách podporovaných msbuild, naleznete v [tématu Podmínky](../msbuild/msbuild-conditions.md). |
+| `ContinueOnError` | Volitelný parametr. Může obsahovat jednu z následujících hodnot:<br /><br /> -   **WarnAndContinue** nebo **true**. Pokud úloha selže, následné úkoly v [Target](../msbuild/target-element-msbuild.md) element a sestavení pokračovat v provádění a všechny chyby z úkolu jsou považovány za upozornění.<br />-   **ErrorAndContinue**. Pokud úloha selže, následné `Target` úkoly v prvku a sestavení pokračovat v provádění a všechny chyby z úkolu jsou považovány za chyby.<br />-   **ErrorAndStop** nebo **false** (výchozí). Pokud úloha selže, zbývající úkoly v elementu `Target` a sestavení nejsou `Target` provedeny a celý prvek a sestavení se považuje za neúspěšné.<br /><br /> Verze rozhraní .NET Framework před 4.5 `true` `false` podporovaly pouze hodnoty a.<br /><br /> Další informace naleznete v [tématu Postup: Ignorovat chyby v úkolech](../msbuild/how-to-ignore-errors-in-tasks.md). |
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-- [Základní třída úlohy](../msbuild/task-base-class.md)
+- [Základní třída úkolu](../msbuild/task-base-class.md)
 
- Přidá několik parametrů k úkolům odvozeným od třídy <xref:Microsoft.Build.Utilities.Task>. Není určeno k použití přímo.
+ Přidá několik parametrů k úkolům, <xref:Microsoft.Build.Utilities.Task> které jsou odvozeny z třídy. Není určeno k přímému použití.
 
-- [Základní třída TaskExtension –](../msbuild/taskextension-base-class.md)
+- [Základní třída TaskExtension](../msbuild/taskextension-base-class.md)
 
- Přidá několik parametrů k úkolům odvozeným od třídy <xref:Microsoft.Build.Tasks.TaskExtension>. Není určeno k použití přímo.
+ Přidá několik parametrů k úkolům, <xref:Microsoft.Build.Tasks.TaskExtension> které jsou odvozeny z třídy. Není určeno k přímému použití.
 
-- [Základní třída ToolTaskExtension –](../msbuild/tooltaskextension-base-class.md)
+- [Základní třída ToolTaskExtension](../msbuild/tooltaskextension-base-class.md)
 
- Přidá několik parametrů k úkolům odvozeným od třídy <xref:Microsoft.Build.Tasks.ToolTaskExtension>. Není určeno k použití přímo.
+ Přidá několik parametrů k úkolům, <xref:Microsoft.Build.Tasks.ToolTaskExtension> které jsou odvozeny z třídy. Není určeno k přímému použití.
 
-- [AL (Assembly Linker) – úloha](../msbuild/al-assembly-linker-task.md)
+- [Úloha AL (Assembly Linker)](../msbuild/al-assembly-linker-task.md)
 
- Vytvoří sestavení s manifestem z jednoho nebo více souborů, které jsou buď moduly, nebo soubory prostředků.
+ Vytvoří sestavení s manifestem z jednoho nebo více souborů, které jsou moduly nebo soubory prostředků.
 
-- [AspNetCompiler – – úloha](../msbuild/aspnetcompiler-task.md)
+- [Úloha aspNetCompiler](../msbuild/aspnetcompiler-task.md)
 
- Zabalí *Aspnet_compiler. exe*, nástroj pro předkompilování aplikací ASP.NET.
+ Zalomí *aspnet_compiler.exe*, nástroj pro předkompilaci ASP.NET aplikací.
 
-- [AssignCulture – – úloha](../msbuild/assignculture-task.md)
+- [Úkol AssignCulture](../msbuild/assignculture-task.md)
 
  Přiřadí identifikátory jazykové verze k položkám.
 
-- [AssignProjectConfiguration – – úloha](../msbuild/assignprojectconfiguration-task.md)
+- [Přiřazení úkolu Konfigurace projektu](../msbuild/assignprojectconfiguration-task.md)
 
- Přijme seznam konfiguračních řetězců a přiřadí je zadaným projektům.
+ Přijme seznam konfiguračních řetězců a přiřadí je k určeným projektům.
 
-- [AssignTargetPath – – úloha](../msbuild/assigntargetpath-task.md)
+- [Přiřadit úkol TargetPath](../msbuild/assigntargetpath-task.md)
 
- Přijme seznam souborů a přidá atributy `<TargetPath>`, pokud již nejsou zadány.
+ Přijme seznam souborů a `<TargetPath>` přidá atributy, pokud ještě nejsou zadány.
 
-- [CallTarget – – úloha](../msbuild/calltarget-task.md)
+- [Úkol CallTarget](../msbuild/calltarget-task.md)
 
  Vyvolá cíl v souboru projektu.
 
-- [CombinePath – – úloha](../msbuild/combinepath-task.md)
+- [Úloha CombinePath](../msbuild/combinepath-task.md)
 
  Zkombinuje zadané cesty do jedné cesty.
 
-- [ConvertToAbsolutePath – – úloha](../msbuild/converttoabsolutepath-task.md)
+- [Úloha PřevéstnaAbsolutePath](../msbuild/converttoabsolutepath-task.md)
 
  Převede relativní cestu nebo odkaz na absolutní cestu.
 
-- [Kopírovat úlohu](../msbuild/copy-task.md)
+- [Kopírovat úkol](../msbuild/copy-task.md)
 
  Zkopíruje soubory do nového umístění.
 
-- [CreateCSharpManifestResourceName – – úloha](../msbuild/createcsharpmanifestresourcename-task.md)
+- [Úloha CreateCSharpManifestResourceName](../msbuild/createcsharpmanifestresourcename-task.md)
 
- C#Vytvoří název manifestu stylu z daného názvu souboru *. resx* nebo jiného prostředku.
+ Vytvoří název manifestu ve stylu C# z daného názvu souboru *RESX* nebo jiného prostředku.
 
-- [CreateItem – – úloha](../msbuild/createitem-task.md)
+- [Úkol Vytvořit položku](../msbuild/createitem-task.md)
 
- Naplní kolekce položek ze vstupních položek a umožní kopírování položek z jednoho seznamu do jiného.
+ Naplní kolekce položek ze vstupních položek a umožní kopírování položek z jednoho seznamu do druhého.
 
-- [CreateProperty – – úloha](../msbuild/createproperty-task.md)
+- [CreateProperty – úloha](../msbuild/createproperty-task.md)
 
- Naplní vlastnosti ze vstupních hodnot a povoluje zkopírování hodnot z jedné vlastnosti nebo řetězce do jiného.
+ Naplní vlastnosti ze vstupních hodnot, což umožňuje zkopírovat hodnoty z jedné vlastnosti nebo řetězce do jiného.
 
-- [CreateVisualBasicManifestResourceName – – úloha](../msbuild/createvisualbasicmanifestresourcename-task.md)
+- [Úloha VytvořitVisualBasicManifestResourceName](../msbuild/createvisualbasicmanifestresourcename-task.md)
 
- Vytvoří název manifestu ve stylu Visual Basic z daného názvu souboru *. resx* nebo jiného prostředku.
+ Vytvoří název manifestu ve stylu jazyka Visual Basic z daného názvu souboru *RESX* nebo jiného prostředku.
 
-- [CSc – úloha](../msbuild/csc-task.md)
+- [Úkol CsC](../msbuild/csc-task.md)
 
- Vyvolá kompilátor vizuálu C# pro vytváření spustitelných souborů, knihoven DLL nebo modulů kódu.
+ Vyvolá kompilátor Visual C# k vytvoření spustitelných souborů, knihoven dynamických spojů nebo modulů kódu.
 
-- [Odstranit úlohu](../msbuild/delete-task.md)
+- [Odstranit úkol](../msbuild/delete-task.md)
 
  Odstraní zadané soubory.
 
-- [DownloadFile – úloha](../msbuild/downloadfile-task.md)
+- [Úloha DownloadFile](../msbuild/downloadfile-task.md)
 
  Stáhne soubor do zadaného umístění.
 
@@ -115,200 +115,200 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 
  Zastaví sestavení a zaznamená chybu na základě vyhodnoceného podmíněného příkazu.
 
-- [Exec – úloha](../msbuild/exec-task.md)
+- [Exec úkol](../msbuild/exec-task.md)
 
  Spustí zadaný program nebo příkaz se zadanými argumenty.
 
-- [FindAppConfigFile – – úloha](../msbuild/findappconfigfile-task.md)
+- [Úloha FindAppConfigFile](../msbuild/findappconfigfile-task.md)
 
- Vyhledá soubor *App. config* , pokud existuje, v uvedených seznamech.
+ Vyhledá soubor *app.config,* pokud existuje, v poskytnutých seznamech.
 
-- [FindInList – – úloha](../msbuild/findinlist-task.md)
+- [Úloha NajítInList](../msbuild/findinlist-task.md)
 
- Najde položku v zadaném seznamu, která má odpovídající itemspec.
+ Vyhledá položku v zadaném seznamu, který má odpovídající itemspec.
 
-- [FindUnderPath – – úloha](../msbuild/findunderpath-task.md)
+- [Úloha FindUnderPath](../msbuild/findunderpath-task.md)
 
- Určuje, které položky v zadané kolekci položek existují v zadané složce a všech jejích podsložkách.
+ Určuje, které položky v zadané kolekci položek existují v zadané složce a ve všech jejích podsložkách.
 
-- [FormatUrl – – úloha](../msbuild/formaturl-task.md)
+- [Úloha FormatUrl](../msbuild/formaturl-task.md)
 
  Převede adresu URL na správný formát adresy URL.
 
-- [FormatVersion – – úloha](../msbuild/formatversion-task.md)
+- [Úloha FormatVersion](../msbuild/formatversion-task.md)
 
  Připojí číslo revize k číslu verze.
 
-- [GenerateApplicationManifest – – úloha](../msbuild/generateapplicationmanifest-task.md)
+- [Úloha GenerateApplicationManifest](../msbuild/generateapplicationmanifest-task.md)
 
  Generuje manifest aplikace ClickOnce nebo nativní manifest.
 
-- [GenerateBootstrapper – – úloha](../msbuild/generatebootstrapper-task.md)
+- [Úloha GenerateBootstrapper](../msbuild/generatebootstrapper-task.md)
 
- Poskytuje automatizovaný způsob detekce, stažení a instalace aplikace a jejích požadavků.
+ Poskytuje automatizovaný způsob, jak zjistit, stáhnout a nainstalovat aplikaci a její požadavky.
 
-- [GenerateDeploymentManifest – – úloha](../msbuild/generatedeploymentmanifest-task.md)
+- [Úloha GenerateDeploymentManifest](../msbuild/generatedeploymentmanifest-task.md)
 
  Generuje manifest nasazení ClickOnce.
 
-- [GenerateResource – – úloha](../msbuild/generateresource-task.md)
+- [Úloha Generovat zdroj](../msbuild/generateresource-task.md)
 
- Převede soubory *. txt* a *. resx* do binárních souborů *. Resources* modulu CLR (Common Language Runtime).
+ Převede soubory *TXT* a *Resx* na soubory s *binárními prostředky .resources* v běžném jazyce.
 
-- [GenerateTrustInfo – – úloha](../msbuild/generatetrustinfo-task.md)
+- [Úloha Generovat důvěryhodnou informaci](../msbuild/generatetrustinfo-task.md)
 
- Generuje vztah důvěryhodnosti aplikace ze základního manifestu a z parametrů `TargetZone` a `ExcludedPermissions`.
+ Generuje vztah důvěryhodnosti aplikace ze základního `TargetZone` `ExcludedPermissions` manifestu a z parametrů a.
 
-- [GetAssemblyIdentity – úloha](../msbuild/getassemblyidentity-task.md)
+- [Úloha GetAssemblyIdentity](../msbuild/getassemblyidentity-task.md)
 
- Načte z určených souborů identity sestavení a vypíše informace o identitě.
+ Načte identity sestavení ze zadaných souborů a výstupy informace o identitě.
 
-- [GetFileHash – úloha](../msbuild/getfilehash-task.md)
+- [Úloha GetFileHash](../msbuild/getfilehash-task.md)
 
- Vypočítá kontrolní součet obsahu souboru nebo sady souborů.
+ Vypočítá kontrolní součty obsahu souboru nebo sady souborů.
 
-- [GetFrameworkPath – – úloha](../msbuild/getframeworkpath-task.md)
+- [Úloha GetFrameworkPath](../msbuild/getframeworkpath-task.md)
 
- Načte cestu k sestavením .NET Framework.
+ Načte cestu k sestavením rozhraní .NET Framework.
 
-- [GetFrameworkSdkPath – – úloha](../msbuild/getframeworksdkpath-task.md)
+- [Úloha GetFrameworkSdkPath](../msbuild/getframeworksdkpath-task.md)
 
- Načte cestu k sadě Windows Software Development Kit (SDK).
+ Načte cestu k sada Windows Software Development Kit (SDK).
 
-- [GetReferenceAssemblyPaths – – úloha](../msbuild/getreferenceassemblypaths-task.md)
+- [Úloha GetReferenceAssemblyPaths](../msbuild/getreferenceassemblypaths-task.md)
 
- Vrátí cesty referenčního sestavení různých rozhraní.
+ Vrátí cesty referenčního sestavení různých rámců.
 
-- [LC – úloha](../msbuild/lc-task.md)
+- [Lc úkol](../msbuild/lc-task.md)
 
- Vygeneruje soubor *. License* ze souboru *. licx* .
+ Generuje soubor *.license* ze souboru *LICX.*
 
-- [MakeDir – – úloha](../msbuild/makedir-task.md)
+- [Úloha MakeDir](../msbuild/makedir-task.md)
 
- Vytvoří adresáře a v případě potřeby i všechny nadřazené adresáře.
+ Vytvoří adresáře a v případě potřeby všechny nadřazené adresáře.
 
-- [Úloha zprávy](../msbuild/message-task.md)
+- [Úkol zprávy](../msbuild/message-task.md)
 
- Zaprotokoluje zprávu během sestavení.
+ Zaznamená zprávu během sestavení.
 
 - [Přesunout úkol](../msbuild/move-task.md)
 
  Přesune soubory do nového umístění.
 
-- [MSBuild – úloha](../msbuild/msbuild-task.md)
+- [Úloha MSBuild](../msbuild/msbuild-task.md)
 
  Vytvoří projekty MSBuild z jiného projektu MSBuild.
 
-- [ReadLinesFromFile – – úloha](../msbuild/readlinesfromfile-task.md)
+- [Úloha ReadLinesFromFile](../msbuild/readlinesfromfile-task.md)
 
- Přečte seznam položek z textového souboru.
+ Načte seznam položek z textového souboru.
 
-- [RegisterAssembly – – úloha](../msbuild/registerassembly-task.md)
+- [Úkol RegisterAssembly](../msbuild/registerassembly-task.md)
 
- Přečte metadata v rámci zadaného sestavení a přidá nezbytné položky do registru.
+ Přečte metadata v rámci zadaného sestavení a přidá potřebné položky do registru.
 
-- [RemoveDir – – úloha](../msbuild/removedir-task.md)
+- [Úkol OdebratDir](../msbuild/removedir-task.md)
 
- Odebere zadané adresáře a všechny jeho soubory a podadresáře.
+ Odebere zadané adresáře a všechny jejich soubory a podadresáře.
 
-- [RemoveDuplicates – – úloha](../msbuild/removeduplicates-task.md)
+- [Úkol Odebrat duplikáty](../msbuild/removeduplicates-task.md)
 
- Odstraní duplicitní položky ze zadané kolekce položek.
+ Odebere duplicitní položky z zadané kolekce položek.
 
-- [Requiresframework35sp1assembly – – úloha](../msbuild/requiresframework35sp1assembly-task.md)
+- [VyžadujeFramework35SP1Sestava úkol](../msbuild/requiresframework35sp1assembly-task.md)
 
- Určuje, jestli aplikace vyžaduje .NET Framework 3,5 SP1.
+ Určuje, zda aplikace vyžaduje rozhraní .NET Framework 3.5 SP1.
 
-- Úloha ResGen
+- Úloha resgenu
 
- Zastaralé. Úkol [úlohy GenerateResource –](../msbuild/generateresource-task.md) použijte k převodu souborů *. txt* a *. resx* do a z binárního souboru *. Resources* modulu CLR.
+ Zastaralé. Úloha [Generovat prostředek](../msbuild/generateresource-task.md) slouží k převodu souborů *TXT* a *Resx* do a ze souborů *binárních zdrojů* s běžným jazykem a z nich.
 
-- [ResolveAssemblyReference – – úloha](../msbuild/resolveassemblyreference-task.md)
+- [Úkol ResolveAssemblyReference](../msbuild/resolveassemblyreference-task.md)
 
- Určuje všechna sestavení, která závisí na zadaných sestaveních.
+ Určuje všechna sestavení, která závisí na určených sestaveních.
 
-- [ResolveComReference – – úloha](../msbuild/resolvecomreference-task.md)
+- [Úloha ResolveComReference](../msbuild/resolvecomreference-task.md)
 
- Převezme seznam jednoho nebo více názvů knihoven typů nebo souborů *. tlb* a přeloží tyto knihovny typů do umístění na disku.
+ Pořídí seznam jednoho nebo více názvů knihovny typů nebo souborů *TLB* a přeloizuje tyto knihovny typů do umístění na disku.
 
-- [ResolveKeySource – – úloha](../msbuild/resolvekeysource-task.md)
+- [Úloha ResolveKeySource](../msbuild/resolvekeysource-task.md)
 
- Určuje zdroj klíče se silným názvem.
+ Určuje zdroj klíče silného názvu.
 
-- [ResolveManifestFiles – – úloha](../msbuild/resolvemanifestfiles-task.md)
+- [VyřešitManifestFiles, úloha](../msbuild/resolvemanifestfiles-task.md)
 
- Řeší následující položky v procesu sestavení do souborů pro generování manifestu: sestavené položky, závislosti, satelity, obsah, symboly ladění a dokumentace.
+ Řeší následující položky v procesu sestavení na soubory pro generování manifestu: vytvořené položky, závislosti, satelity, obsah, ladicí symboly a dokumentace.
 
-- [ResolveNativeReference – – úloha](../msbuild/resolvenativereference-task.md)
+- [Úkol ResolveNativeReference](../msbuild/resolvenativereference-task.md)
 
- Přeloží nativní odkazy.
+ Řeší nativní odkazy.
 
-- [ResolveNonMSBuildProjectOutput – – úloha](../msbuild/resolvenonmsbuildprojectoutput-task.md)
+- [ResolveNonMSBuildProjectOutput úkol](../msbuild/resolvenonmsbuildprojectoutput-task.md)
 
- Určuje výstupní soubory pro odkazy na projekt, které nejsou v nástroji MSBuild.
+ Určuje výstupní soubory pro odkazy na projekt y jiné než MSBuild.
 
-- [SGen – úloha](../msbuild/sgen-task.md)
+- [Úkol SGen](../msbuild/sgen-task.md)
 
  Vytvoří sestavení serializace XML pro typy v zadaném sestavení.
 
-- [SignFile – – úloha](../msbuild/signfile-task.md)
+- [Úloha SignFile](../msbuild/signfile-task.md)
 
- Podepíše zadaný soubor pomocí zadaného certifikátu.
+ Podepisuje zadaný soubor pomocí zadaného certifikátu.
 
 - [Dotyková úloha](../msbuild/touch-task.md)
 
  Nastaví dobu přístupu a úprav souborů.
 
-- [UnregisterAssembly – – úloha](../msbuild/unregisterassembly-task.md)
+- [Zrušit registraciÚloha sestavení](../msbuild/unregisterassembly-task.md)
 
- Zruší registraci zadaných sestavení pro účely zprostředkovatele komunikace s objekty COM.
+ Zruší registraci zadaných sestavení pro účely interop com.
 
-- [Rozbalit úlohu](../msbuild/unzip-task.md)
+- [Rozbalit úkol](../msbuild/unzip-task.md)
 
- Rozbalí archiv *zip* do zadaného umístění.
+ Rozbalí archiv *ZIP* do zadaného umístění.
 
-- [UpdateManifest – – úloha](../msbuild/updatemanifest-task.md)
+- [Úkol Aktualizovat manifest](../msbuild/updatemanifest-task.md)
 
- Aktualizuje vybrané vlastnosti v manifestu a znovu se podepíše.
+ Aktualizuje vybrané vlastnosti v manifestu a odstoupí.
 
-- [Vbc – úloha](../msbuild/vbc-task.md)
+- [Úloha Vbc](../msbuild/vbc-task.md)
 
- Vyvolá kompilátor Visual Basic pro vytváření spustitelných souborů, knihoven DLL nebo modulů kódu.
+ Vyvolá kompilátor jazyka K vytvoření spustitelných souborů, knihoven s dynamickými spoji nebo modulů kódu.
 
-- [VerifyFileHash – úloha](../msbuild/verifyfilehash-task.md)
+- [Úloha VerifyFileHash](../msbuild/verifyfilehash-task.md)
 
- Ověřuje, že soubor odpovídá očekávané hodnotě hash souboru.
+ Ověří, zda soubor odpovídá očekávané hodnotě hash souboru.
 
-- [Úloha upozornění](../msbuild/warning-task.md)
+- [Warning – úloha](../msbuild/warning-task.md)
 
- Zaznamená upozornění během sestavení na základě vyhodnoceného podmíněného příkazu.
+ Protokoluje upozornění během sestavení na základě vyhodnoceného podmíněného příkazu.
 
-- [WriteCodeFragment – – úloha](../msbuild/writecodefragment-task.md)
+- [Úloha WriteCodeFragment](../msbuild/writecodefragment-task.md)
 
- Generuje dočasný soubor kódu pomocí zadaného vygenerovaného fragmentu kódu. Neodstraní soubor.
+ Generuje dočasný soubor kódu pomocí zadaného fragmentu generovaného kódu. Neodstraní soubor.
 
-- [WriteLinesToFile – – úloha](../msbuild/writelinestofile-task.md)
+- [Úloha WriteLinesToFile](../msbuild/writelinestofile-task.md)
 
  Zapíše zadané položky do zadaného textového souboru.
 
-- [XmlPeek – – úloha](../msbuild/xmlpeek-task.md)
+- [XmlPeek úkol](../msbuild/xmlpeek-task.md)
 
  Vrátí hodnoty určené dotazem XPath ze souboru XML.
 
-- [XmlPoke – – úloha](../msbuild/xmlpoke-task.md)
+- [Úloha XmlPoke](../msbuild/xmlpoke-task.md)
 
  Nastaví hodnoty určené dotazem XPath do souboru XML.
 
-- [XslTransformation – – úloha](../msbuild/xsltransformation-task.md)
+- [Úloha XslTransformace](../msbuild/xsltransformation-task.md)
 
- Transformuje vstup XML pomocí *Extensible Stylesheet Language Transformation* (XSLT) nebo zkompilovaného souboru XSLT a výstupy na výstupní zařízení nebo soubor.
+ Transformuje vstup XML pomocí *transformace jazyka extensible stylesheet* (XSLT) nebo zkompilované XSLT a výstupy do výstupního zařízení nebo souboru.
 
-- [ZipDirectory – úloha](../msbuild/zipdirectory-task.md)
+- [Úloha ZipDirectory](../msbuild/zipdirectory-task.md)
 
- Vytvoří archiv *zip* z obsahu adresáře.
+ Vytvoří archiv *ZIP* z obsahu adresáře.
 
 ## <a name="see-also"></a>Viz také
 
-- [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
-- [Zápis úlohy](../msbuild/task-writing.md)
+- [Odkaz na sestavení msbuild](../msbuild/msbuild-reference.md)
+- [Psaní úkolů](../msbuild/task-writing.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

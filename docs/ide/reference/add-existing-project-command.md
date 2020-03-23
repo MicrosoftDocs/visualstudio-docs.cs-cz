@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 008802546d87bd44137c6d13ee2aef802877e308
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595875"
 ---
 # <a name="add-existing-project-command"></a>Přidat existující projekt – příkaz
@@ -29,27 +29,27 @@ Přidá existující projekt do aktuálního řešení.
 File.AddExistingProject filename
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 `filename`\
-Volitelné. Úplná cesta a název projektu s příponou projektu, který se má přidat do řešení.
+Nepovinný parametr. Úplná cesta a název projektu s rozšířením projektu, který chcete přidat do řešení.
 
-Pokud argument `filename` obsahuje mezery, musí být uzavřen v uvozovkách.
+Pokud `filename` argument obsahuje mezery, musí být uzavřen v uvozovkách.
 
-Pokud není zadán žádný název souboru, příkaz otevře dialogové okno souboru, aby mohl uživatel vybrat projekt.
+Pokud není zadán žádný název souboru, příkaz otevře dialogové okno souboru, aby uživatel mohl vybrat projekt.
 
 ## <a name="remarks"></a>Poznámky
-Automatické dokončování se snaží vyhledat správnou cestu a název souboru při psaní.
+Automatické dokončování se při psaní pokusí najít správnou cestu a název souboru.
 
 ## <a name="example"></a>Příklad
-Tento příklad přidá projekt [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] TestProject1 k aktuálnímu řešení.
+Tento příklad [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] přidá projekt TestProject1 k aktuálnímu řešení.
 
 ```cmd
 >File.AddExistingProject "c:\visual studio projects\TestProject1.vbproj"
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Pole Najít/příkaz](../../ide/find-command-box.md)
+- [Najít/Příkazové pole](../../ide/find-command-box.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: přírůstkové sestavení | Microsoft Docs'
+title: 'Postup: Sestavení postupně | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,23 +13,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e4911bb131f5c5c878b82865b3dee61fd7bedbe1
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634159"
 ---
-# <a name="how-to-build-incrementally"></a>Postupy: přírůstkové sestavení
+# <a name="how-to-build-incrementally"></a>Postup: Sestavení postupně
 
-Při sestavování velkého projektu je důležité, aby dříve vytvořené komponenty, které jsou stále aktuální, nebyly znovu sestaveny. Pokud jsou všechny cíle sestaveny pokaždé, dokončení každého sestavení bude trvat dlouhou dobu. Chcete-li povolit přírůstková sestavení (sestavení, ve kterých jsou znovu sestaveny pouze ty cíle, které nebyly vytvořeny dříve nebo jsou-li cíle zastaraly), Microsoft Build Engine (MSBuild) může porovnat časová razítka vstupních souborů s časovými razítky výstupních souborů a Určete, zda se má přeskočit, sestavit nebo částečně znovu sestavit cíl. Musí však existovat mapování 1:1 mezi vstupy a výstupy. Pomocí transformací můžete umožnit cílem identifikovat toto přímé mapování. Další informace o transformacích naleznete v tématu [transformace](../msbuild/msbuild-transforms.md).
+Při vytváření velkého projektu je důležité, aby dříve vytvořené součásti, které jsou stále aktuální, nebyly znovu sestaveny. Pokud jsou všechny cíle vytvořeny pokaždé, každé sestavení bude trvat dlouhou dobu k dokončení. Chcete-li povolit přírůstková sestavení (sestavení, ve kterých jsou znovu sestaveny pouze cíle, které nebyly vytvořeny před nebo cíle, které jsou zastaralé), microsoft build engine (MSBuild) může porovnat časová razítka vstupních souborů s časovými razítky výstupních souborů a určete, zda chcete cíl přeskočit, sestavit nebo částečně znovu sestavit. Však musí být mapování 1:1 mezi vstupy a výstupy. Transformace můžete použít k povolení cílů k identifikaci tohoto přímého mapování. Další informace o transformacích naleznete v tématu [Transformace](../msbuild/msbuild-transforms.md).
 
-## <a name="specify-inputs-and-outputs"></a>Zadat vstupy a výstupy
+## <a name="specify-inputs-and-outputs"></a>Určení vstupů a výstupů
 
-Cíl lze vytvořit postupně, pokud jsou vstupy a výstupy zadány v souboru projektu.
+Cíl lze sestavit postupně, pokud jsou vstupy a výstupy zadány v souboru projektu.
 
 #### <a name="to-specify-inputs-and-outputs-for-a-target"></a>Určení vstupů a výstupů pro cíl
 
-- Použijte atributy `Inputs` a `Outputs` elementu `Target`. Příklad:
+- Použijte `Inputs` atributy a `Outputs` `Target` prvku. Například:
 
   ```xml
   <Target Name="Build"
@@ -37,7 +37,7 @@ Cíl lze vytvořit postupně, pokud jsou vstupy a výstupy zadány v souboru pro
       Outputs="hello.exe">
   ```
 
-Nástroj MSBuild může porovnat časová razítka vstupních souborů s časovými razítky výstupních souborů a určit, zda má být cíl vynechán, sestavení nebo částečně znovu sestaven. V následujícím příkladu, pokud je libovolný soubor v seznamu `@(CSFile)` položky novější než soubor *Hello. exe* , MSBuild spustí cíl; v opačném případě se přeskočí:
+MSBuild můžete porovnat časová razítka vstupních souborů s časová razítka výstupních souborů a určit, zda přeskočit, sestavit nebo částečně znovu sestavit cíl. V následujícím příkladu, pokud `@(CSFile)` je některý soubor v seznamu položek novější než soubor *hello.exe,* msbuild spustí cíl; v opačném případě bude přeskočen:
 
 ```xml
 <Target Name="Build"
@@ -50,27 +50,27 @@ Nástroj MSBuild může porovnat časová razítka vstupních souborů s časov�
 </Target>
 ```
 
-Pokud jsou vstupy a výstupy zadány v cíli, každý výstup může být namapován pouze na jeden vstup nebo nemůže být žádné přímé mapování mezi výstupem a vstupy. V předchozí [úloze CSC](../msbuild/csc-task.md), například výstup, *Hello. exe*, nelze namapovat na žádný jednotlivý vstup – závisí na všech nich.
+Pokud jsou vstupy a výstupy zadány v cíli, může každý výstup mapovat pouze na jeden vstup nebo nemůže existovat žádné přímé mapování mezi výstupy a vstupy. V předchozí [úloze Csc](../msbuild/csc-task.md), například výstup *hello.exe*, nelze mapovat na žádný jednotlivý vstup - záleží na všech z nich.
 
 > [!NOTE]
-> Cíl, ve kterém neexistuje žádné přímé mapování mezi vstupy a výstupy, bude vždy sestavovat častěji než cíl, ve kterém každý výstup může být namapován pouze na jeden vstup, protože nástroj MSBuild nemůže určit, které výstupy je nutné znovu sestavit, pokud se změnily některé vstupy.
+> Cíl, ve kterém neexistuje žádné přímé mapování mezi vstupy a výstupy bude vždy sestavení častěji než cíl, ve kterém každý výstup lze mapovat pouze jeden vstup, protože MSBuild nelze určit, které výstupy je třeba znovu sestavit, pokud některé vstupy byly změněny.
 
-Úlohy, ve kterých můžete identifikovat přímé mapování mezi výstupy a vstupy, jako je například [úloha LC](../msbuild/lc-task.md), jsou nejvhodnější pro přírůstková sestavení, na rozdíl od úloh jako [CSC](../msbuild/csc-task.md) a [Vbc](../msbuild/vbc-task.md), což vytváří jedno výstupní sestavení z řady vstupů.
+Úkoly, ve kterých můžete identifikovat přímé mapování mezi výstupy a vstupy, jako je [například úloha LC](../msbuild/lc-task.md), jsou nejvhodnější pro přírůstková sestavení, na rozdíl od úkolů, jako jsou [Csc](../msbuild/csc-task.md) a [Vbc](../msbuild/vbc-task.md), které vytvářejí jedno výstupní sestavení z několika vstupů.
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu je použit projekt, který sestaví soubory s nápovědu pro hypotetický systém pro nápovědu. Projekt funguje tak, že převede zdrojové soubory *. txt* do souborů mezilehlého *. Content* , které jsou pak kombinovány se soubory metadat XML pro vytvoření finálního souboru *. help* používaného systémem help. Projekt používá následující hypotetické úkoly:
+Následující příklad používá projekt, který vytváří soubory nápovědy pro hypotetický systém nápovědy. Projekt funguje tak, že převádí zdrojové soubory *TXT* na zprostředkující soubory *.help* *obsahu.* Projekt používá následující hypotetické úkoly:
 
-- `GenerateContentFiles`: převede soubory *. txt* na soubory *. Content* .
+- `GenerateContentFiles`: Převede soubory *TXT* na soubory *obsahu.*
 
-- `BuildHelp`: kombinuje soubory *obsahu* a soubory XML s metadaty k sestavení finálního souboru *. help* .
+- `BuildHelp`: Kombinuje soubory *obsahu* a soubory metadat XML a vytváří konečný soubor *.help.*
 
-Projekt používá transformaci k vytvoření mapování 1:1 mezi vstupy a výstupy v úloze `GenerateContentFiles`. Další informace najdete v tématu [transformace](../msbuild/msbuild-transforms.md). Také prvek `Output` je nastaven tak, aby automaticky používal výstupy z úlohy `GenerateContentFiles` jako vstupy pro `BuildHelp` úlohu.
+Projekt používá transformace k vytvoření mapování 1:1 mezi vstupy a `GenerateContentFiles` výstupy v úkolu. Další informace naleznete v [tématu Transformace](../msbuild/msbuild-transforms.md). `Output` Prvek je také nastaven tak, aby automaticky `GenerateContentFiles` používal výstupy z `BuildHelp` úkolu jako vstupy pro úlohu.
 
-Tento soubor projektu obsahuje cíle `Convert` i `Build`. Úkoly `GenerateContentFiles` a `BuildHelp` se umístí do `Convert` a `Build` cílů tak, aby se každý cíl mohl sestavit postupně. Pomocí elementu `Output` jsou výstupy úlohy `GenerateContentFiles` umístěny v seznamu `ContentFile` položky, kde je lze použít jako vstupy pro úlohu `BuildHelp`. Použití prvku `Output` tímto způsobem automaticky poskytuje výstupy z jednoho úkolu jako vstupy pro jinou úlohu, takže nemusíte v jednotlivých úkolech vypisovat jednotlivé seznamy položek nebo položek ručně.
+Tento soubor projektu `Convert` obsahuje `Build` cíle i cíle. A `GenerateContentFiles` `BuildHelp` úkoly jsou `Convert` umístěny v a `Build` cíle, respektive tak, aby každý cíl lze sestavit postupně. Pomocí `Output` prvku jsou výstupy `GenerateContentFiles` úkolu umístěny v `ContentFile` seznamu položek, kde je lze použít `BuildHelp` jako vstupy pro úkol. Použití `Output` prvku tímto způsobem automaticky poskytuje výstupy z jednoho úkolu jako vstupy pro jiný úkol, takže není nutné v jednotlivých úkolech ručně vypsat jednotlivé položky nebo seznamy položek.
 
 > [!NOTE]
-> I když cílový `GenerateContentFiles` může sestavovat přírůstkově, všechny výstupy z tohoto cíle jsou vždy požadovány jako vstupy pro `BuildHelp` cíle. Nástroj MSBuild automaticky poskytuje všechny výstupy z jednoho cíle jako vstupy pro jiný cíl při použití prvku `Output`.
+> Přestože `GenerateContentFiles` cíl může sestavit postupně, všechny výstupy z tohoto cíle `BuildHelp` jsou vždy požadovány jako vstupy pro cíl. MSBuild automaticky poskytuje všechny výstupy z jednoho cíle jako vstupy pro jiný cíl při použití `Output` prvku.
 
 ```xml
 <Project DefaultTargets="Build"
@@ -107,7 +107,7 @@ Tento soubor projektu obsahuje cíle `Convert` i `Build`. Úkoly `GenerateConten
 ## <a name="see-also"></a>Viz také
 
 - [Cíle](../msbuild/msbuild-targets.md)
-- [Target – element (MSBuild)](../msbuild/target-element-msbuild.md)
+- [Cílový prvek (MSBuild)](../msbuild/target-element-msbuild.md)
 - [Transformace](../msbuild/msbuild-transforms.md)
-- [CSc – úloha](../msbuild/csc-task.md)
-- [Vbc – úloha](../msbuild/vbc-task.md)
+- [Úkol CsC](../msbuild/csc-task.md)
+- [Úloha Vbc](../msbuild/vbc-task.md)

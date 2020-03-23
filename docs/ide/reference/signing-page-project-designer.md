@@ -21,88 +21,88 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 516e2aaf4a55ad6422200f9fef1cbbf2d435af7b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75597331"
 ---
 # <a name="signing-page-project-designer"></a>Stránka Podepisování, návrhář projektu (C#)
 
-Použijte stránku **podepisování** **Návrháře projektu** k podepsání manifestů aplikace a nasazení a také k podepsání sestavení (podepisování silného názvu).
+Pomocí stránky **Podepisování** **Návrháře projektu** podepište manifesty aplikace a nasazení a také k podepsání sestavení (podepisování silného názvu).
 
-Všimněte si, že podepisování manifestů aplikace a nasazení je proces, který se liší od podepsání sestavení, přestože se obě úlohy provádějí na stránce **podepisování** .
+Všimněte si, že podepisování manifestů aplikace a nasazení je proces odlišný od podepisování sestavení, i když oba úkoly jsou prováděny na stránce **podepisování.**
 
-Kromě toho se úložiště informací o klíčovém souboru liší od podepisování manifestu a podepsání sestavení. V případě podepisování manifestu jsou informace o klíči uloženy v databázi kryptografického úložiště v počítači a v úložišti certifikátů systému Windows aktuálního uživatele. V případě podepisování sestavení jsou informace o klíči uloženy pouze v databázi kryptografického úložiště vašeho počítače.
+Také ukládání informací o souboru klíčů se liší pro podepisování manifestu a podepisování sestavení. Pro podepisování manifestu jsou informace o klíči uloženy v databázi kryptografického úložiště počítače a v úložišti certifikátů systému Windows aktuálního uživatele. Pro podepisování sestavení jsou informace o klíči uloženy pouze v databázi kryptografického úložiště počítače.
 
-Pro přístup na stránku **podepisování** vyberte uzel projektu v **Průzkumník řešení**a potom v nabídce **projekt** klikněte na **vlastnosti**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **podepisování** .
+Chcete-li získat přístup ke stránce **Podepisování,** vyberte uzel projektu v **Průzkumníku řešení**a v nabídce **Project** klepněte na příkaz **Vlastnosti**. Po zobrazení **Návrháře projektů** klikněte na kartu **Podpis.**
 
-## <a name="application-and-deployment-manifest-signing"></a>Podepisování manifestu aplikace a nasazení
+## <a name="application-and-deployment-manifest-signing"></a>Podepisování manifestu aplikací a nasazení
 
-Zaškrtávací políčko **podepsat manifesty ClickOnce**
+**Zaškrtávací** políčko Podepsat manifesty ClickOnce
 
-Zaškrtněte toto políčko pro podepsání manifestů aplikace a nasazení pomocí páru veřejného a privátního klíče. Další informace o tom, jak to provést, naleznete v tématu [How to: Signing Application and Deployment Manifests](../../ide/how-to-sign-application-and-deployment-manifests.md).
+Toto políčko zaškrtněte, chcete-li podepsat manifesty aplikace a nasazení pomocí dvojice veřejných a soukromých klíčů. Další informace o tom, jak to provést, naleznete v [tématu How to: Sign Application and Deployment Manifests](../../ide/how-to-sign-application-and-deployment-manifests.md).
 
-Tlačítko **vybrat z úložiště**
+**Vybrat z** tlačítka Store
 
-Umožňuje vybrat existující certifikát z osobního úložiště certifikátů aktuálního uživatele. Můžete vybrat jeden z těchto certifikátů pro podepsání aplikace a manifestů nasazení.
+Umožňuje vybrat existující certifikát z úložiště osobních certifikátů aktuálního uživatele. Můžete vybrat jeden z těchto certifikátů k podepsání manifestů aplikace a nasazení.
 
-Když kliknete na **vybrat ze Storu** , otevře se dialogové okno **Vybrat certifikát** , ve kterém najdete seznam certifikátů v osobním úložišti certifikátů, které jsou aktuálně platné (neprošlé), a které mají privátní klíče. Účel certifikátu, který vyberete, by měl zahrnovat podepisování kódu.
+Kliknutím na **Vybrat ze storu** se otevře dialogové okno **Vybrat certifikát,** ve kterém jsou certifikáty v úložišti osobních certifikátů, které jsou aktuálně platné (jejichž platnost nevypršela) a které mají soukromé klíče. Účel certifikátu, který vyberete, by měl zahrnovat podepisování kódu.
 
-Pokud kliknete na **Zobrazit vlastnosti certifikátu**, zobrazí se dialogové okno **Podrobnosti o certifikátu** . Toto dialogové okno obsahuje podrobné informace o certifikátu a obsahuje další možnosti. Kliknutím na Další informace **o certifikátech** můžete zobrazit další informace o nápovědě.
+Klepnete-li na **tlačítko Zobrazit vlastnosti certifikátu**, zobrazí se dialogové okno **Podrobnosti o certifikátu.** Toto dialogové okno obsahuje podrobné informace o certifikátu a další možnosti. Kliknutím na Další informace o certifikátech zobrazíte další informace **nápovědy.**
 
-**Vybrat ze souboru** – tlačítko
+**Vybrat z** tlačítka Soubor
 
 Umožňuje vybrat certifikát z existujícího souboru klíče.
 
-Kliknutím na **vybrat ze souboru** se otevře dialogové okno **Vybrat soubor** , ve kterém můžete vybrat soubor klíče certifikátu (. pfx). Soubor musí být chráněný heslem a v osobním úložišti certifikátů ho už nejde najít.
+Klepnutím na **tlačítko Vybrat ze souboru** se otevře dialogové okno **Vybrat soubor,** které umožňuje vybrat soubor klíče certifikátu (.pfx). Soubor musí být chráněn heslem a již nemůže být umístěn v úložišti osobních certifikátů.
 
-V dialogovém okně **zadat heslo pro otevření souboru** zadejte heslo pro otevření souboru klíče certifikátu (. pfx). Informace o heslech jsou uložené v osobním seznamu kontejnerů klíčů a v úložišti osobních certifikátů.
+V dialogovém **okně Zadat heslo k otevření souboru** zadejte heslo pro otevření souboru klíče certifikátu (.pfx). Informace o hesle jsou uloženy v seznamu osobních kontejnerů klíčů a v úložišti osobních certifikátů.
 
-Tlačítko **vytvořit testovací certifikát**
+**Tlačítko Vytvořit testovací certifikát**
 
-Umožňuje vytvořit certifikát pro testování. Testovací certifikát se používá k podepsání aplikace ClickOnce a manifestů nasazení.
+Umožňuje vytvořit certifikát pro testování. Testovací certifikát se používá k podepisování manifestů aplikace ClickOnce a nasazení.
 
-Kliknutím na **vytvořit testovací certifikát** otevřete dialogové okno **vytvořit testovací certifikát** , ve kterém můžete zadat heslo pro soubor klíče se silným názvem pro testovací certifikát. Soubor má název *projectname*_TemporaryKey. pfx. Pokud kliknete na tlačítko **OK** bez zadání hesla, není soubor. pfx zašifrovaný heslem.
+Klepnutím na **tlačítko Vytvořit testovací certifikát** se otevře dialogové okno Vytvořit testovací **certifikát,** ve kterém můžete zadat heslo pro soubor klíče silného názvu pro testovací certifikát. Soubor se nazývá *název projektu*_TemporaryKey.pfx. Pokud klepnete na **tlačítko OK** bez zadání hesla, soubor PFx není šifrován heslem.
 
-Pole **adresy URL serveru časového razítka**
+Pole **URL serveru časového razítka**
 
-Určuje adresu serveru, který má časovou razítko vaší signatury. Když zadáte certifikát, tato externí lokalita ověří čas, kdy byla aplikace podepsána.
+Určuje adresu serveru, který časově oznamuje váš podpis. Pokud zadáte certifikát, tento externí web ověří čas, kdy byla aplikace podepsána.
 
 ## <a name="assembly-signing"></a>Podepisování sestavení
 
-Zaškrtávací políčko **pro podepsání sestavení**
+**Zaškrtávací** políčko Podepsat sestavení
 
-Toto políčko zaškrtněte, pokud chcete podepsat sestavení a vytvořit soubor silně pojmenovaného klíče. Další informace o podepsání sestavení pomocí **Návrháře projektu**naleznete v tématu [How to: Sign a Assembly (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio).
+Zaškrtnutím tohoto políčka podepíšete sestavení a vytvoříte silně pojmenovaný soubor klíče. Další informace o podepisování sestavení pomocí **Návrháře projektu**naleznete v [tématu How to: Sign a Assembly (Visual Studio).](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)
 
-Tato možnost používá k podepsání sestavení nástroj Al. exe, který poskytuje sada Windows Software Development Kit (SDK). Další informace o nástroji Al. exe naleznete v tématu [How to: Sign a Assembly se silným názvem](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name).
+Tato možnost používá nástroj Al.exe poskytovovaný sadou Windows Software Development Kit (SDK) k podepsání sestavení. Další informace o souboru Al.exe naleznete v [tématu How to: Sign a Assembly with a Strong Name](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name).
 
-**Zvolit seznam souborů klíčů se silným názvem**
+Výběr seznamu **souborů klíčů silného názvu**
 
-Umožňuje zadat nový nebo existující silně pojmenovaný soubor klíče, který se používá k podepsání sestavení. Vyberte **\<Procházet... >** pro výběr existujícího souboru klíče.
+Umožňuje zadat nový nebo existující silně pojmenovaný soubor klíče, který se používá k podepsání sestavení. Vyberte ** \<Procházet...>** a vyberte existující soubor klíče.
 
-Vybrat **\<nové... >** vytvořit nový soubor klíče, který má podepsat sestavení. Zobrazí se dialogové okno **vytvořit klíč se silným názvem** , pomocí kterého můžete zadat název souboru klíče a chránit soubor klíče heslem. Heslo musí mít délku alespoň 6 znaků. Pokud zadáte heslo, vytvoří se soubor Personal Information Exchange (. pfx); Pokud nezadáte heslo, vytvoří se silný soubor s názvem klíče (. snk).
+Vyberte ** \<Nový...>** a vytvořte nový soubor klíče, se kterým chcete podepsat sestavení. Zobrazí se dialogové okno **Vytvořit silný klíč názvu,** pomocí kterého můžete zadat název souboru klíče a chránit soubor klíče heslem. Heslo musí mít alespoň 6 znaků. Pokud zadáte heslo, vytvoří se soubor Výměny osobních informací (.pfx); Pokud heslo nezadáte, vytvoří se soubor s výrazným názvem klíče (.snk).
 
-Tlačítko pro **změnu hesla**
+**Tlačítko Změnit heslo**
 
-Změní heslo pro soubor klíče Personal Information Exchange (. pfx), který se používá k podepsání sestavení.
+Změní heslo pro soubor klíče výměny osobních informací (.pfx), který se používá k podepsání sestavení.
 
-Kliknutím na **změnit heslo** se otevře dialogové okno **změnit heslo klíče** . V tomto dialogovém okně je **staré** heslo aktuální heslo pro soubor klíče. **Nové heslo** musí mít délku nejméně 6 znaků. Informace o heslech jsou uložené v úložišti certifikátů Windows aktuálního uživatele.
+Kliknutím na **Změnit heslo** se otevře dialogové okno Změnit **heslo klíče.** V tomto dialogovém okně je **staré heslo** aktuálním heslem pro soubor klíče. **Nové heslo** musí mít trvat nejméně 6 znaků. Informace o hesle jsou uloženy v úložišti certifikátů systému Windows aktuálního uživatele.
 
-Zaškrtávací políčko **pouze Zpožděné podepsání**
+Zaškrtávací políčko **Pouze znaménko zpoždění**
 
-Zaškrtnutím tohoto políčka povolíte zpožděné podepisování.
+Zaškrtnutím tohoto políčka povolíte zpoždění podepisování.
 
-Všimněte si, že zpožděný podepsaný projekt nebude spuštěn a nebude možné ho ladit. K přeskočení ověřování během vývoje však můžete použít [Nástroj Sn. exe (nástroj Strong Name)](/dotnet/framework/tools/sn-exe-strong-name-tool) s možností `-Vr`.
+Všimněte si, že zpožděné podepsané projektu nebude spuštěna a nelze ladit. Můžete však použít [Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool) s `-Vr` možností přeskočit ověření během vývoje.
 
 > [!NOTE]
-> Když podepisujete sestavení, možná nebudete mít vždycky přístup k privátnímu klíči. Organizace může mít například úzce chráněný pár klíčů, ke kterému nemají vývojáři přístup denně. Veřejný klíč může být dostupný, ale přístup k privátnímu klíči je omezený na pár jednotlivců. V takovém případě můžete použít *Zpožděné* nebo *částečné podepisování* k poskytnutí veřejného klíče a odložit přidání privátního klíče, dokud nebude sestavení předáno.
+> Při podepisování sestavení nemusí mít vždy přístup k soukromému klíči. Organizace může mít například pečlivě střežený pár klíčů, ke kterému vývojáři nemají přístup každý den. Veřejný klíč může být k dispozici, ale přístup k soukromému klíči je omezen na několik osob. V takovém případě můžete použít *zpožděné* nebo *částečné podepisování* poskytnout veřejný klíč, odložení přidání soukromého klíče, dokud je předán sestavení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Referenční dokumentace k vlastnostem projektu](../../ide/reference/project-properties-reference.md)
 - [Správa sestavení a podepsání manifestu](../../ide/managing-assembly-and-manifest-signing.md)
 - [Postupy: Podepsání manifestů aplikace a nasazení](../../ide/how-to-sign-application-and-deployment-manifests.md)
-- [Postupy: podepsání sestavení (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)
+- [Postup: Podepsání sestavení (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)
 - [Postupy: Podepsání sestavení silným názvem](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)
 - [Sestavení se silným názvem](/dotnet/framework/app-domains/strong-named-assemblies)

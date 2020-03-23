@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Změna výstupního adresáře sestavení'
+title: 'Postup: Změna výstupního adresáře sestavení'
 ms.date: 05/15/2019
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -12,40 +12,40 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 37342796f2dd94138136bb837cf6007d19d350c4
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114265"
 ---
-# <a name="how-to-change-the-build-output-directory"></a>Postupy: Změna výstupního adresáře sestavení
+# <a name="how-to-change-the-build-output-directory"></a>Postup: Změna výstupního adresáře sestavení
 
-Můžete určit umístění výstupu generovaného vaším projektem podle konfigurace (pro ladění, vydání nebo obojí).
+Můžete určit umístění výstupu generovaného projektem na základě konfigurace (pro ladění, vydání nebo obojí).
 
 ## <a name="change-the-build-output-directory"></a>Změna výstupního adresáře sestavení
 
-1. Chcete-li otevřít stránky vlastností projektu, klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte možnost **vlastnosti**.
+1. Chcete-li otevřít stránky vlastností projektu, klepněte pravým tlačítkem myši na uzel projektu v **Průzkumníku řešení** a vyberte **příkaz Vlastnosti**.
 
 2. Vyberte příslušnou kartu na základě typu projektu:
 
-   - V případě klikněte na kartu **sestavení.** C#
-   - Pro Visual Basic vyberte kartu **kompilovat** .
-   - Pro C++ nebo JavaScript vyberte kartu **Obecné** .
+   - V souboru C# vyberte kartu **Sestavení.**
+   - V jazyce Visual Basic vyberte kartu **Kompilace.**
+   - V jazyce C++ nebo JavaScriptu vyberte kartu **Obecné.**
 
-3. V rozevíracím seznamu konfigurace v horní části vyberte konfiguraci, jejíž umístění výstupního souboru chcete změnit (**ladění**, **vydání**nebo **všechny konfigurace**).
+3. V rozevíracím přehledu konfigurace v horní části zvolte konfiguraci, jejíž umístění výstupního souboru chcete změnit (**Ladění**, **Vydání**nebo **Všechny konfigurace**).
 
-4. Najít položku výstupní cesty na stránce&mdash;se liší v závislosti na typu projektu:
+4. Najděte položku výstupní&mdash;cesty na stránce, která se liší v závislosti na typu projektu:
 
-   - **Výstupní cesta** pro C# projekty a projekty JavaScriptu
-   - **Výstupní cesta k sestavení** pro projekty Visual Basic
-   - **Výstupní adresář** pro vizuální C++ projekty
+   - **Výstupní cesta** pro projekty Jazyka C# a JavaScriptu
+   - **Vytvořit výstupní cestu** pro projekty jazyka Visual Basic
+   - **Výstupní adresář** pro projekty visual c++
 
-   Zadejte cestu k vygenerování výstupu (absolutní nebo relativní ke kořenovému adresáři projektu), nebo klikněte na tlačítko **Procházet** a přejděte k této složce.
+   Zadejte cestu ke generování výstupu (absolutní nebo relativní k kořenovému adresáři projektu) nebo zvolte **Procházet** a procházejte do této složky.
 
-   ![Vlastnost výstupní cesty pro projekt sady Visual C# Studio](media/output-path.png)
+   ![Vlastnost výstupní cesty pro projekt jazyka Visual Studio C#](media/output-path.png)
    
    > [!NOTE]
-   > Některé projekty budou standardně zahrnovat rozhraní a modul runtime v cestě sestavení. Pokud to chcete změnit, klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení**, vyberte **Upravit soubor projektu**a přidejte následující:
+   > Některé projekty budou ve výchozím nastavení zahrnovat rozhraní framework a runtime v cestě sestavení. Chcete-li to toto změnit, klepněte pravým tlačítkem myši na uzel projektu v **Průzkumníku řešení**, vyberte **příkaz Upravit soubor projektu**a přidejte následující:
    > ```xml
    > <PropertyGroup>
    >   <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -54,12 +54,12 @@ Můžete určit umístění výstupu generovaného vaším projektem podle konfi
    > ```
 
 > [!TIP]
-> Pokud výstup není generován do umístění, které jste určili, ujistěte se, že vytváříte odpovídající konfiguraci (například **ladění** nebo **vydání**) tak, že ji vyberete v panelu nabídek aplikace Visual Studio.
+> Pokud výstup není generován do zadaného umístění, ujistěte se, že vytváříte odpovídající konfiguraci (například **Ladění** nebo **Vydání)** výběrem na panelu nabídek sady Visual Studio.
 >
-> ![Výběr konfigurace sestavení v aplikaci Visual Studio 2019](media/build-configuration-chooser.png)
+> ![Výběr konfigurace sestavení ve Visual Studiu 2019](media/build-configuration-chooser.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Stránka sestavení, Návrhář projektu (C#)](../ide/reference/build-page-project-designer-csharp.md)
-- [Obecná stránka vlastností (projekt)](/cpp/build/reference/general-property-page-project)
+- [Stránka Obecná vlastnost (projekt)](/cpp/build/reference/general-property-page-project)
 - [Kompilace a sestavení](../ide/compiling-and-building-in-visual-studio.md)

@@ -1,5 +1,5 @@
 ---
-title: Úloha RemoveDuplicates – | Microsoft Docs
+title: Úkol Odebrat duplicity | Dokumenty společnosti Microsoft
 ms.date: 03/01/2018
 ms.topic: reference
 f1_keywords:
@@ -19,34 +19,34 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 90366bab14eefd1be4edac81d6b09b3f57aa3332
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632781"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates – úloha
 
-Odstraní duplicitní položky ze zadané kolekce položek.
+Odebere duplicitní položky z zadané kolekce položek.
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry úlohy `RemoveDuplicates`.
+ Následující tabulka popisuje parametry `RemoveDuplicates` úkolu.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Filtered`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Obsahuje kolekci položek s odebranými duplicitními položkami. Pořadí vstupních položek je zachováno a zachová první instanci každé duplicitní položky.|
-|`Inputs`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametr.<br /><br /> Kolekce položek, ze které se mají odebrat duplicitní položky|
+|`Filtered`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje kolekci položek se všemi odstraněnými duplicitními položkami. Pořadí vstupních položek je zachováno a první instance každé duplicitní položky zůstane zachována.|
+|`Inputs`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Kolekce položek odebrat duplicitní položky z.|
 
 ## <a name="remarks"></a>Poznámky
 
- U této úlohy se nerozlišují malá a velká písmena a při určování duplicitních hodnot se neshodují metadata položek.
+ Tato úloha je malá a velká písmena a neporovnává metadata položky při určování duplicity.
 
- Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
 
- Následující příklad používá úlohu `RemoveDuplicates` k odebrání duplicitních položek z kolekce `MyItems` Item. Po dokončení úkolu obsahuje kolekce `FilteredItems` položky jednu položku.
+ Následující příklad používá `RemoveDuplicates` úkol k odebrání `MyItems` duplicitních položek z kolekce položek. Po dokončení úkolu kolekce `FilteredItems` položek obsahuje jednu položku.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -70,7 +70,7 @@ Odstraní duplicitní položky ze zadané kolekce položek.
 </Project>
 ```
 
- Následující příklad ukazuje, že úloha `RemoveDuplicates` zachovává vstupní objednávku. Po dokončení úkolu obsahuje kolekce `FilteredItems` položky položky *MyFile2.cs*, *MyFile1.cs*a *MyFile3.cs* v tomto pořadí.
+ Následující příklad ukazuje, `RemoveDuplicates` že úloha zachová své pořadí vstupu. Po dokončení úkolu obsahuje `FilteredItems` kolekce položek položky *MyFile2.cs*, *MyFile1.cs*a *MyFile3.cs* v tomto pořadí.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -96,5 +96,5 @@ Odstraní duplicitní položky ze zadané kolekce položek.
 ## <a name="see-also"></a>Viz také
 
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
-- [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
+- [Koncepty MSBuild](../msbuild/msbuild-concepts.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

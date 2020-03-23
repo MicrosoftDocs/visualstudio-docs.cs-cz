@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Vytvořte. Soubor vsct | Microsoft Docs'
+title: 'Postup: Vytvoření souboru . Vsct Soubor | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,109 +11,109 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c3155ff69db461e652b11ff6e8ec6d405000244f
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924173"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303167"
 ---
-# <a name="how-to-create-a-vsct-file"></a>Postupy: Vytvoření souboru. vsct
+# <a name="how-to-create-a-vsct-file"></a>Postup: Vytvoření souboru .vsct
 
-Existuje několik způsobů, jak vytvořit soubor konfigurace příkazového řádku sady Visual Studio založený na jazyce XML ( *. vsct*).
+Existuje několik způsobů, jak vytvořit soubor tabulky příkazů sady Visual Studio založené na jazyce XML (*.vsct).*
 
-- V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] šabloně balíčku můžete vytvořit nový VSPackage.
+- Můžete vytvořit nový VSPackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v šabloně balíčku.
 
-- K vygenerování souboru z existujícího souboru *. ctc* můžete použít konfigurační tabulku *vsct. exe*založenou na jazyce XML.
+- K vygenerování souboru z existujícího souboru *CTC* můžete použít k onikrek konfigurace tabulky příkazů xml *Vsct.exe.*
 
-- Pomocí *vsct. exe* můžete vygenerovat soubor *. vsct* z existujícího souboru *. technický ředitel* .
+- *Vsct.exe* můžete použít ke generování souboru *.vsct* z existujícího souboru *CTO.*
 
-- Můžete ručně vytvořit nový soubor *. vsct* .
+- Můžete ručně vytvořit nový soubor *.vsct.*
 
-  Tento článek vysvětluje, jak ručně vytvořit nový soubor *. vsct* .
+  Tento článek vysvětluje, jak ručně vytvořit nový soubor *VSCT.*
 
-### <a name="to-manually-create-a-new-vsct-file"></a>Ruční vytvoření nového souboru. vsct
+### <a name="to-manually-create-a-new-vsct-file"></a>Ruční vytvoření nového souboru VSCT
 
 1. Spustit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
 
-2. Na **souboru** nabídky, přejděte k **nový**a potom klikněte na tlačítko **souboru**.
+2. V nabídce **Soubor** přejděte na **Nový**a potom klepněte na **příkaz Soubor**.
 
-3. V podokně **šablony** klikněte na **soubor XML** a potom klikněte na **otevřít**.
+3. V podokně **Šablony** klikněte na **Soubor XML** a potom na **Otevřít**.
 
-4. V nabídce **zobrazení** klikněte na **vlastnosti** . zobrazí se vlastnosti souboru XML.
+4. V nabídce **View** klepněte na **příkaz Vlastnosti** a zobrazte vlastnosti souboru XML.
 
-5. V okně **vlastnosti** klikněte na tlačítko **Procházet** na vlastnosti **schémata** .
+5. V okně **Vlastnosti** klepněte na tlačítko **Procházet** ve vlastnosti **Schémata.**
 
-6. V seznamu schémat XSD vyberte schéma *vsct. xsd* . Pokud není v seznamu, klikněte na tlačítko **Přidat** a vyhledejte soubor na místním disku. Až skončíte, klikněte na **OK** .
+6. V seznamu schémat XSD vyberte schéma *vsct.xsd.* Pokud není v seznamu, klepněte na tlačítko **Přidat** a vyhledejte soubor na místní jednotce. Po dokončení klepněte na **tlačítko OK.**
 
-7. V souboru XML zadejte *< příkazového řádku* a potom stiskněte klávesu **TAB**. Uzavřete značku zadáním *>* .
+7. Do souboru XML zadejte *<CommandTable* a stiskněte **klávesu Tab**. Zavřete značku zadáním *>*.
 
-    Tato akce vytvoří základní soubor *. vsct* .
+    Tato akce vytvoří základní *soubor .vsct.*
 
-8. Vyplňte prvky souboru XML, který chcete přidat, podle [odkazu schématu vsct XML](../../extensibility/vsct-xml-schema-reference.md). Další informace najdete v tématu [vytváření souborů. vsct](../../extensibility/internals/authoring-dot-vsct-files.md).
+8. Vyplňte prvky souboru XML, který chcete přidat, podle [odkazu na schéma XML VSCT](../../extensibility/vsct-xml-schema-reference.md). Další informace naleznete v [tématu Author .vsct files](../../extensibility/internals/authoring-dot-vsct-files.md).
 
 <a name="how-to-create-a-dot-vsct-file-from-an-existing-dot-ctc-file"></a>
 
-## <a name="how-to-create-a-vsct-file-from-an-existing-ctc-file"></a>Postupy: Vytvoření souboru. vsct z existujícího souboru. ctc
+## <a name="how-to-create-a-vsct-file-from-an-existing-ctc-file"></a>Postup: Vytvoření souboru .vsct z existujícího souboru CTC
 
-Soubor *. vsct* založený na jazyce XML můžete vytvořit z existující tabulky příkazů *. ctc* zdrojového souboru. Díky tomu můžete využít nové formáty kompilátoru příkazového řádku založeného na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] jazyce XML (vsct).
+Soubor *VSCT* založený na jazyce XML můžete vytvořit z existujícího zdrojového souboru *CTC* tabulky příkazů. Tímto způsobem můžete využít nový formát kompilátoru založeného na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] XML (VSCT).
 
-### <a name="to-create-a-vsct-file-from-a-ctc-file"></a>Vytvoření souboru. vsct ze souboru. ctc
+### <a name="to-create-a-vsct-file-from-a-ctc-file"></a>Vytvoření souboru CtC .vsct ze souboru CTC
 
-1. Získá kopii jazyka Perl.
+1. Získejte kopii jazyka Perl.
 
-2. Získejte kopii skriptu Perl *ConvertCTCToVSCT.pl*, která se obvykle nachází v  *\<instalační cestě sady Visual Studio SDK > složce \VisualStudioIntegration\Tools\bin* .
+2. Získejte kopii skriptu Perl *ConvertCTCToVSCT.pl*, který se obvykle nachází v * \<instalační cestě sady Visual Studio SDK>\VisualStudioIntegration\Tools\bin.*
 
-3. Získejte kopii zdrojového souboru *. ctc* , který chcete převést.
+3. Získejte kopii zdrojového souboru *CTC,* který chcete převést.
 
-4. Soubory umístěte do stejného adresáře.
+4. Umístěte soubory do stejného adresáře.
 
-5. V okně [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] příkazového řádku přejděte do adresáře.
+5. V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] okně příkazového řádku přejděte do adresáře.
 
-6. type
+6. Typ
 
    ```
    perl.exe ConvertCTCtoVSCT.pl PkgCmd.ctc PkgCmd.vsct
    ```
 
-    kde *PkgCmd. ctc* je název souboru *. ctc* a *PkgCmd. vsct* je název souboru *. vsct* , který chcete vytvořit.
+    kde *PkgCmd.ctc* je název souboru *CTC* a *PkgCmd.vsct* je název souboru *.vsct,* který chcete vytvořit.
 
-    Tato akce vytvoří nový zdrojový soubor tabulky příkazů XML *. vsct* . Soubor můžete zkompilovat pomocí *vsct. exe*, kompilátoru VSCT, stejně jako jakýkoli jiný soubor *. vsct* .
+    Tato akce vytvoří nový zdrojový soubor tabulky *příkazu XML .vsct.* Soubor můžete zkompilovat pomocí *vsct.exe*, kompilátoru VSCT, stejně jako jakýkoli jiný soubor *.vsct.*
 
    > [!NOTE]
-   > Můžete zlepšit čitelnost souboru *. vsct* přeformátováním komentářů XML.
+   > Čitelnost souboru *.vsct* můžete zlepšit přeformátováním komentářů XML.
 
 <a name="how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file"></a>
 
-## <a name="how-to-create-a-vsct-file-from-an-existing-cto-file"></a>Postupy: Vytvoření souboru. vsct z existujícího souboru. technický ředitel
+## <a name="how-to-create-a-vsct-file-from-an-existing-cto-file"></a>Postup: Vytvoření souboru .vsct z existujícího souboru CTO
 
-Soubor *. vsct* založený na jazyce XML můžete vytvořit z existujícího binárního souboru *. technický ředitel* . Díky tomu je možné využít nové formáty kompilátoru příkazových tabulek. Tento proces funguje i v případě, že soubor *. technický ředitel* byl zkompilován ze souboru *. ctc* . Soubor *. vsct* můžete upravit a zkompilovat do jiného souboru. technický ředitel.
+Soubor *VSCT* založený na jazyce XML můžete vytvořit z existujícího binárního souboru *CTO.* To umožňuje využít nový formát kompilátoru tabulky příkazů. Tento proces funguje i v případě, že soubor *.cto* byl zkompilován ze souboru *CTC.* Soubor *.vsct* můžete upravit a zkompilovat do jiného souboru .cto.
 
-### <a name="to-create-a-vsct-file-from-a-cto-file"></a>Vytvoření souboru. vsct ze souboru. technický ředitel
+### <a name="to-create-a-vsct-file-from-a-cto-file"></a>Vytvoření souboru .vsct ze souboru .cto
 
-1. Získejte kopie souboru *. technický ředitel* a odpovídajícího souboru *. ctsym* .
+1. Získejte kopie souboru *CTTO* a jeho odpovídajícího souboru *CTSYM.*
 
-2. Soubory umístěte do stejného adresáře jako kompilátor *vsct. exe* .
+2. Umístěte soubory do stejného adresáře jako kompilátor *vsct.exe.*
 
-3. V příkazovém řádku sady Visual Studio přejdete do adresáře, který obsahuje soubory *. technický ředitel* a *. ctsym* .
+3. Na příkazovém řádku sady Visual Studio přejděte do adresáře, který obsahuje soubory *CtTO* a *CTSYM.*
 
-4. type
+4. Typ
 
     ```
     vsct.exe <ctofilename>.cto <vsctfilename>.vsct -S<symfilename>.ctsym
     ```
 
-     kde \<ctofilename\> \<\> \< je název souboru. technický ředitel, vsctfilename je název souboru. vsct, který chcete vytvořit, a symfilename je název\> soubor *. ctsym* .
+     kde \<\> ctofilename je název souboru *.cto,* \<vsctfilename\> je název souboru *.vsct,* který chcete vytvořit, a \<název symfilename\> je název souboru *CTSYM.*
 
-     Tento proces vytvoří nový soubor kompilátoru tabulky příkazů XML *. vsct* . Soubor můžete upravit a zkompilovat pomocí *vsct. exe*, kompilátoru VSCT, stejně jako jakýkoli jiný soubor *. vsct* .
+     Tento proces vytvoří nový soubor kompilátoru příkazové tabulky XML *.vsct.* Soubor můžete upravovat a kompilovat pomocí *vsct.exe*, kompilátoru vsct, stejně jako jakýkoli jiný soubor *.vsct.*
 
 ## <a name="compile-the-code"></a>Kompilace kódu
- Pouhým přidáním souboru *. vsct* do projektu nezpůsobí jeho zkompilování. Je nutné jej začlenit do procesu sestavení.
+ Jednoduše přidání souboru *.vsct* do projektu nezpůsobí jeho kompilaci. Je nutné začlenit do procesu sestavení.
 
-### <a name="to-add-a-vsct-file-to-project-compilation"></a>Přidání souboru. vsct do kompilace projektu
+### <a name="to-add-a-vsct-file-to-project-compilation"></a>Přidání souboru .vsct do kompilace projektu
 
-1. Otevřete soubor projektu v editoru. Pokud je projekt načten, je nutné jej nejprve uvolnit.
+1. Otevřete soubor projektu v editoru. Pokud je projekt načten, musíte jej nejprve uvolnit.
 
-2. Přidejte [element Item](../../msbuild/itemgroup-element-msbuild.md) , který obsahuje `VSCTCompile` element, jak je znázorněno v následujícím příkladu.
+2. Přidejte [element ItemGroup,](../../msbuild/itemgroup-element-msbuild.md) který obsahuje `VSCTCompile` prvek, jak je znázorněno v následujícím příkladu.
 
     ```xml
     <ItemGroup>
@@ -124,9 +124,9 @@ Soubor *. vsct* založený na jazyce XML můžete vytvořit z existujícího bin
 
     ```
 
-     Element by měl být vždy nastaven na `Menus.ctmenu`hodnotu. `ResourceName`
+     Prvek `ResourceName` by měl být `Menus.ctmenu`vždy nastaven na .
 
-3. Pokud projekt obsahuje soubor *. resx* , přidejte `EmbeddedResource` `MergeWithCTO` element, který obsahuje element, jak je znázorněno v následujícím příkladu:
+3. Pokud váš projekt obsahuje soubor *Resx,* `EmbeddedResource` přidejte `MergeWithCTO` prvek, který obsahuje prvek, jak je znázorněno v následujícím příkladu:
 
     ```xml
     <EmbeddedResource Include="VSPackage.resx">
@@ -136,19 +136,19 @@ Soubor *. vsct* založený na jazyce XML můžete vytvořit z existujícího bin
 
     ```
 
-     Tento kód by měl jít uvnitř `ItemGroup` elementu, který obsahuje vložené prostředky.
+     Tato značka by měla `ItemGroup` přejít do prvku, který obsahuje vložené prostředky.
 
-4. Otevřete soubor balíčku, obvykle nazvaný  *\<\>ProjectName Package.cs* nebo  *\<ProjectName\>Package. vb*, v editoru.
+4. Otevřete soubor balíčku, obvykle s názvem * \<\>ProjectName Package.cs* nebo * \<ProjectName\>Package.vb*, v editoru.
 
-5. `ProvideMenuResource` Přidejte atribut do třídy Package, jak je znázorněno v následujícím příkladu.
+5. Přidejte `ProvideMenuResource` atribut do třídy balíčku, jak je znázorněno v následujícím příkladu.
 
     ```csharp
     [ProvideMenuResource("Menus.ctmenu", 1)]
     ```
 
-     První hodnota parametru se musí shodovat s hodnotou `ResourceName` atributu, který jste definovali v souboru projektu.
+     První hodnota parametru se musí `ResourceName` shodovat s hodnotou atributu definovaného v souboru projektu.
 
-## <a name="see-also"></a>Viz také:
-- [Soubory Author. vsct](../../extensibility/internals/authoring-dot-vsct-files.md)
-- [Soubory tabulek příkazů sady Visual Studio (. vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-- [Referenční dokumentace schématu VSCT XML](../../extensibility/vsct-xml-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Soubory Autor .vsct](../../extensibility/internals/authoring-dot-vsct-files.md)
+- [Soubory příkazů sady Visual Studio (.vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Odkaz na schéma XML VSCT](../../extensibility/vsct-xml-schema-reference.md)

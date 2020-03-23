@@ -1,5 +1,5 @@
 ---
-title: C#možnosti formátování editoru
+title: Možnosti formátování editoru C#
 ms.date: 08/14/2018
 ms.topic: reference
 f1_keywords:
@@ -19,38 +19,38 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 1176232eb3354a9b425e9432eb83037367ee7706
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596239"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79303076"
 ---
-# <a name="options-dialog-box-text-editor--c--code-style--formatting"></a>Dialogové okno Možnosti: textový editor \> C# \> stylu kódu \> formátování
+# <a name="options-dialog-box-text-editor--c--code-style--formatting"></a>Dialogové okno Možnosti: \> Formátování \> stylu kódu editoru \> C#
 
-Pomocí stránky možnosti **formátování** a jejích podstránek ([**odsazení**](#indentation-page), **nové řádky**, **mezery**a **zalamování**) nastavte možnosti formátování kódu v editoru kódu.
+Pomocí stránky **Možnosti formátování** a jejích podstránek ([**Odsazení**](#indentation-page), **Nové řádky**, Mezery a **Obtékání**) nastavte možnosti formátování kódu v editoru kódu kódu. **Spacing**
 
-Chcete-li získat přístup k této stránce Možnosti, v řádku nabídek vyberte možnost **nástroje** > **Možnosti** . V dialogovém okně **Možnosti** vyberte možnost **textový editor** > **C#**  > **stylu kódu** > **formátování**.
+Chcete-li získat přístup k této stránce možností, zvolte**Možnosti** **nástrojů** > z řádku nabídek. V dialogovém okně **Možnosti** zvolte Formátování > stylu kódu **textového editoru** > **C#** > **Code Style****.**
 
 > [!TIP]
-> **Odsazení**, **nové řádky**, **mezery**a **zabalení** podstránky každý zobrazí okno náhledu v dolní části, které zobrazuje účinek jednotlivých možností. Chcete-li použít okno náhledu, vyberte možnost formátování. V okně náhledu se zobrazí příklad vybrané možnosti. Když změníte nastavení tak, že vyberete přepínač nebo zaškrtávací políčko, okno náhledu se aktualizuje a zobrazí efekt nového nastavení.
+> Podstránky **Odsazení**, **Nové čáry**, Mezery a **Obtékání** zobrazují v dolní části okno náhledu, které zobrazuje efekt jednotlivých možností. **Spacing** Chcete-li použít okno náhledu, vyberte možnost formátování. Okno náhledu ukazuje příklad vybrané možnosti. Když změníte nastavení zaškrtnutím přepínacího tlačítka nebo zaškrtávacího políčka, okno náhledu se aktualizuje, aby se zobrazil účinek nového nastavení.
 
-## <a name="formatting-general-page"></a>Stránka formátování (Obecné)
+## <a name="formatting-general-page"></a>Stránka Formátování (Obecné)
 
 ### <a name="general-settings"></a>Obecná nastavení
 
-Tato nastavení mají vliv na to, *kdy* Editor kódu aplikuje možnosti formátování na kód.
+Tato nastavení *ovlivňují, když* editor kódu použije možnosti formátování kódu.
 
 |Popisek|Popis|
 |-----------|-----------------|
-|**Automaticky formátovat při psaní**|Při zrušení výběru jsou možnosti **Format zapnuté** a **formátový blok zapnuté** .|
-|**Automaticky formátovat příkaz v;**|Pokud je tato možnost vybrána, formátuje příkazy při dokončení podle možností formátování vybraných pro Editor.|
-|**Automaticky formátovat blok na}**|Je-li vybrána tato možnost, formátuje bloky kódu podle možností formátování vybraných pro Editor ihned po dokončení bloku kódu.|
-|**Automaticky formátovat při návratu**|Když je tato možnost vybrána, formátuje text při stisknutí klávesy **ENTER** , aby odpovídaly možnostem formátování vybraným pro Editor.|
-|**Automaticky formátovat při vložení**|Když se tato možnost vybere, zformátuje text, který se vloží do editoru, aby odpovídal možnostem formátování vybraným pro Editor.|
+|**Automatické formátování při psaní**|Pokud není vybrána možnosti **, příkaz formátu na ;** a blok formátu na **}** možnosti jsou zakázány.|
+|**Automaticky formátovat příkaz na ;**|Je-li tato možnost vybrána, naformátuje příkazy při dokončení podle možností formátování vybraných pro editor.|
+|**Automaticky formátovat blok na }**|Pokud je tato možnost vybrána, formátuje bloky kódu podle možností formátování vybraných pro editor, jakmile dokončíte blok kódu.|
+|**Automaticky formátovat při návratu**|Když je tato volba vybraná, zformátuje text při stisknutí **Enter,** aby se vešly volby formátování vybrané pro editor.|
+|**Automatické formátování při vložení**|Je-li tato možnost vybrána, naformátuje text vložený do editoru tak, aby odpovídal možnostem formátování vybraným pro editor.|
 
 ::: moniker range="vs-2019"
 
-Pokud jste dřív použili nastavení stylu kódu pro C# soubory pomocí příkazu **formátovat dokument** v aplikaci Visual Studio 2017, tato funkce je teď k dispozici jako [**Vyčištění kódu**](../code-styles-and-code-cleanup.md#apply-code-styles).
+Pokud jste dříve použili nastavení stylu kódu pro soubory C# pomocí příkazu **Formát dokumentu** v sadě Visual Studio 2017, je tato funkce nyní k dispozici jako [**vyčištění kódu**](../code-styles-and-code-cleanup.md#apply-code-styles).
 
 ::: moniker-end
 
@@ -58,42 +58,42 @@ Pokud jste dřív použili nastavení stylu kódu pro C# soubory pomocí příka
 
 ### <a name="format-document-settings"></a>Formátování nastavení dokumentu
 
-Tato nastavení nakonfigurují příkaz **formátovat dokument** , aby pro soubor prováděl další vyčištění kódu. Další informace o tom, jak se tato nastavení používají, najdete v tématu [Format Document Command](../code-styles-and-code-cleanup.md#apply-code-styles).
+Tato nastavení nakonfigurují příkaz **Formát dokumentu** pro provádění dalšího vyčištění kódu v souboru. Další informace o použití těchto nastavení naleznete v [příkazu Formát dokumentu](../code-styles-and-code-cleanup.md#apply-code-styles).
 
-|Popisek|Popis|Odpovídající pravidla možností > EditorConfig a nástrojů|
+|Popisek|Popis|Odpovídající pravidla EditorConfig a Tools > Options|
 |-----------|-----------------|-----------------|-----------------|
-|**Použít všechna C# pravidla formátování (odsazení, zalomení a mezery)**|Příkaz **Formát dokumentu** vždy opravuje problémy s formátováním. Toto nastavení nelze změnit.| [Základní možnosti EditorConfig](../../ide/create-portable-custom-editor-options.md)<br/>[Možnosti formátování .NET EditorConfig](../../ide/editorconfig-formatting-conventions.md)<br/><br/>**Nástroje** > **možnosti** > **textový Editor** > **C#**  > **Formátování**>[**odsazení** nebo **nové řádky** nebo **mezery** nebo **obtékání**]|
-|**Při formátování provést vyčištění kódu**|Když se tato možnost vybere, použije opravy pro níže uvedená pravidla v příkazu **Edit. FormatDocument** .| NEUŽÍVÁ SE. |
-|**Odebrat nepotřebné direktivy using**|Pokud je tato možnost vybrána, při spuštění **Edit. FormatDocument** odebere nepotřebné direktivy `using`.| NEUŽÍVÁ SE. |
-|**Seřadit direktivy using**|Když se tato možnost vybere, seřadí `using` direktivy, když se aktivuje **Edit. FormatDocument** .| dotnet_sort_system_directives_first<br/><br/>**Nástroje** > **možnosti** > **textový Editor** > **jazyka C#**  > **Advanced**  > **Místo "Systém" direktivy první při řazení direktiv Using** |
-|**Přidat/odebrat složené závorky pro jednořádkové Řídicí příkazy**|Je-li vybrána tato možnost, přidá nebo odstraní závorky z jednoduchých řídicích příkazů při aktivaci **Edit. FormatDocument** .| csharp_prefer_braces<br/><br/>**Nástroje** > **možnosti** > **textový Editor** > **jazyka C#**  > **styl kódu** > **Předvolby bloku kódu** > **preferovat složené závorky** |
-|**Přidat Modifikátory dostupnosti**|Když se tato možnost vybere, při aktivaci **Edit. FormatDocument** přidá chybějící Modifikátory dostupnosti.| dotnet_style_require_accessibility_modifiers |
-|**Seřadit Modifikátory dostupnosti**|Když se tato možnost vybere, seřadí při spuštění **Edit. FormatDocument** Modifikátory dostupnosti.| csharp_preferred_modifier_order<br/>visual_basic_preferred_modifier_order |
-|**Použít předvolby textu výrazu nebo bloku**|Je-li vybrána tato možnost, převede členové Expression-těle na blokové tělo nebo naopak, když se aktivuje **Edit. FormatDocument** .| [Expression-těle – možnosti členů EditorConfig](../../ide/editorconfig-language-conventions.md#expression-bodied-members)<br/><br/>**Nástroje** > **možnosti** > **textový Editor** > **jazyka C#**  > **styl kódu**  > **Předvolby výrazu** > **používat text výrazu pro metody, konstruktory, atd.** |
-|**Použít předvolby implicitního/explicitního typu**|Pokud je tato možnost vybrána, převede `var` na explicitní typ, nebo naopak, když se aktivuje **Edit. FormatDocument** .| [Možnosti EditorConfig explicitního typu](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types)<br/><br/>**Nástroje** > **možnosti** > **textový Editor** > **jazyka C#**  > **styl kódu** > **předvolby pro "var"** |
-|**Použít předvolby vložených proměnných pro inline**|Je-li vybrána tato možnost, inlinees `out` proměnné, kde je to možné při spuštění **Edit. FormatDocument** .| csharp_style_inlined_variable_declaration<br/><br/>**Nástroje** > **možnosti** > **textový Editor** > **jazyka C#**  > **styl kódu**  > **Proměnné předvoleb** > **upřednostňovat vloženou deklaraci proměnných** |
-|**Použít předvolby pro typ jazyka nebo architektury**|Je-li vybrána tato možnost, převede typy jazyků na typy architektury nebo naopak, když je spuštěna **Edit. FormatDocument** .| dotnet_style_predefined_type_for_locals_parameters_members<br/>dotnet_style_predefined_type_for_member_access<br/><br/>**Nástroje** > **možnosti** > **textový Editor** > **jazyka C#**  > **styl kódu** > **předdefinované předvolby typů** |
-|**Použít předvolby inicializace objektu nebo kolekce**|Je-li vybrána tato možnost, používá Inicializátory objektů a kolekcí, pokud je to možné při spuštění **Edit. FormatDocument** .| dotnet_style_object_initializer<br/>dotnet_style_collection_initializer<br/><br/>**Nástroje** > **možnosti** > **textový Editor** > **jazyka C#**  > **styl kódu** > **Předvolby výrazu** > **upřednostňovat inicializátor objektu** nebo **upřednostňovat inicializátor kolekce** |
-|**Použít předvolby pro kvalifikaci this.**|Když se tato možnost vybere, aplikuje `this.` předvolby při spuštění **Edit. FormatDocument** .| [Tento. možnosti EditorConfig kvalifikace](../../ide/editorconfig-language-conventions.md#this-and-me)<br/><br/>**Nástroje** > **možnosti** > **textový Editor** > **jazyka C#**  > **styl kódu** > **předvolby 'this'.** |
-|**Pokud je to možné, nastavit privátní pole jako jen pro čtení**|Když se tato možnost vybere, zpřístupní soukromá pole `readonly`, kde je to možné, když se spustí **Edit. FormatDocument** .| dotnet_style_readonly_field<br/><br/>**Nástroje** > **možnosti** > **textový Editor** > **jazyka C#**  > **styl kódu**  > **Pole Předvolby** > **preferovat jen pro čtení** |
-|**Odebrat nepotřebná přetypování**|Když se tato možnost vybere, odebere nepotřebná přetypování, pokud je to možné, když se spustí **Edit. FormatDocument** .| NEUŽÍVÁ SE. |
-|**Odebrat nepoužité proměnné**|Když se tato možnost vybere, odebere proměnné, které se nepoužívají při spuštění **Edit. FormatDocument** .| NEUŽÍVÁ SE. |
+|**Použít všechna pravidla formátování Jazyka C# (odsazení, obtékání, mezery)**|Příkaz **Formát dokumentu** vždy řeší problémy s formátováním. Toto nastavení nelze změnit.| [Základní editorConfig možnosti](../../ide/create-portable-custom-editor-options.md)<br/>[Možnosti formátování editoru .NETConfig](../../ide/editorconfig-formatting-conventions.md)<br/><br/>**Možnosti** >  > nástroje**Textový editor** > **C#** > **Formátování** > [**Odsazení** nebo **Nové řádky** nebo **Mezery** nebo **obtékání**]**Options**|
+|**Provést vyčištění kódu sčítání během formátování**|Pokud je tato možnost vybrána, použije opravy pro níže uvedená pravidla v příkazu **Edit.FormatDocument.**| Není dostupné. |
+|**Odebrání zbytečných použití**|Když je tato `using` volba vybraná, odebere nepotřebné direktivy při aktivaci **funkce Edit.FormatDocument.**| Není dostupné. |
+|**Řazení pomocí**|Když je `using` tato volba vybraná, seřadí direktivy při aktivaci **souboru Edit.FormatDocument.**| dotnet_sort_system_directives_first<br/><br/>**Možnosti** >  > nástrojů**Textový editor** > **C#** > **Rozšířené** > **místo 'Systém' direktivy jako první při řazení pomocí** **Options** |
+|**Přidání nebo odebrání složených závorek pro jednořádkové příkazy ovládacího prvku**|Když je tato volba vybraná, přidá nebo odebere závorky z jednořádkových příkazů ovládacího prvku při **aktivaci příkazu Edit.FormatDocument.**| csharp_prefer_braces<br/><br/>**Možnosti** >  > nástrojů**Textový editor** > **C#** > **Kód styl** > **kód blok předvolby** > **Preferovat závorky** **Options** |
+|**Přidání modifikátorů usnadnění přístupu**|Když je tato volba vybraná, přidá chybějící modifikátory usnadnění přístupu **při aktivaci funkce Edit.FormatDocument.**| dotnet_style_require_accessibility_modifiers |
+|**Řazení modifikátorů usnadnění přístupu**|Když je tato volba vybraná, seřadí modifikátory usnadnění přístupu **při aktivaci funkce Edit.FormatDocument.**| csharp_preferred_modifier_order<br/>visual_basic_preferred_modifier_order |
+|**Použití předvoleb textu výrazu/bloku**|Když je tato volba vybraná, převede členy s výrazem na blokovat těla nebo naopak, když je **edit.FormatDocument** spuštěn.| [Výraz-tělesně člen EditorConfig možnosti](../../ide/editorconfig-language-conventions.md#expression-bodied-members)<br/><br/>**Možnosti** >  > nástrojů**Textový editor** > **C#** > **Předvolby** > **výrazu stylu** > kódu**Použijte text výrazu pro metody, konstruktory atd.** **Options** |
+|**Použití předvoleb implicitního/explicitního typu**|Když je tato `var` volba vybraná, převede se na explicitní typ nebo naopak, když je spuštěn **edit.FormatDocument.**| [Možnosti explicitního typu EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types)<br/><br/>**Tools** > **Možnosti** > **Code Style** > **Text Editor** > **C#****'var' preferences** nástrojů Textový editor C# Styl kódu 'var' předvolby >  |
+|**Použít předvolby inline 'out' proměnných**|Když je tato `out` volba vybraná, vřádky, kde je to možné **při aktivaci Edit.FormatDocument.**| csharp_style_inlined_variable_declaration<br/><br/>**Možnosti** >  > nástrojů**Textový editor** > **C#** > **Předvolby proměnných** > **stylu** > kódu**Preferují vloženou deklaraci proměnných** **Options** |
+|**Použití předvoleb typu jazyka/architektury**|Když je tato volba vybraná, převádí typy jazyků na typy architektury nebo naopak, když je spuštěn **edit.FormatDocument.**| dotnet_style_predefined_type_for_locals_parameters_members<br/>dotnet_style_predefined_type_for_member_access<br/><br/>**Možnosti** > **Options** >  >  > **Code Style****Text Editor****C#****predefined type preferences** nástrojů Textový editor C# Předdefinované předvolby stylu kódu >  |
+|**Použít předvolby inicializace objektu/kolekce**|Když je tato volba vybraná, používá inicializátory objektů a kolekcí tam, kde je to možné, když je spuštěn **edit.FormatDocument.**| dotnet_style_object_initializer<br/>dotnet_style_collection_initializer<br/><br/>**Možnosti** > **Options** > **Expression preferences** > **Text Editor** > **C#** > **Code Style****Prefer object initializer** nástroje Text Editor C# Výraz stylu kódu Preference objekt inicializátor nebo **Preferovat inicializátor kolekce**  >  |
+|**Použít "toto".**|Když je tato `this.` volba vybraná, použije předvolby při **aktivaci funkce Edit.FormatDocument.**| [Tento. možnosti kvalifikace EditorConfig](../../ide/editorconfig-language-conventions.md#this-and-me)<br/><br/>**Tools** > **Možnosti** > **Code Style** > **Text Editor** > **C#** nástroje Textový editor C# Styl kódu **'to.' předvolby**  >  |
+|**Pokud je to možné, poměšete na to, aby soukromá pole byla čitelná**|Když je tato `readonly` volba vybraná, vytvoří privátní pole tam, kde je to možné **při aktivaci funkce Edit.FormatDocument.**| dotnet_style_readonly_field<br/><br/>**Tools** > **Možnosti** > **Code Style** > **Text Editor** > **C#** > **Prefer readonly** **Field preferences**nástrojů Text Editor C# Kód Styl Pole předvolby Preferovat jen pro čtení >  |
+|**Odstranění zbytečných náhozů**|Je-li tato možnost vybrána, odebere nepotřebná přetypování, pokud je to možné **při aktivaci funkce Edit.FormatDocument.**| Není dostupné. |
+|**Odebrání nepoužívaných proměnných**|Když je tato volba vybraná, odebere proměnné, které nejsou použity při **aktivaci funkce Edit.FormatDocument.**| Není dostupné. |
 
-![Nastavení vyčištění kódu pro C# v aplikaci Visual Studio](media/format-document-settings.png)
+![Nastavení vyčištění kódu pro C# v sadě Visual Studio](media/format-document-settings.png)
 
 ::: moniker-end
 
-## <a name="indentation-page"></a>Odsazení stránky
+## <a name="indentation-page"></a>Stránka Odsazení
 
-Možnosti odsazení na této stránce se použijí při automatickém formátování kódu. Jedním z příkladů při automatickém formátování kódu je při vložení kódu do souboru, když je vybraná možnost **automaticky formátovat při vložení** . (Možnost **automaticky formátovat při vložení** se nachází v části **formátování** > **Obecné**.)
+Možnosti odsazení na této stránce platí, když je kód formátován automaticky. Jedním z příkladů, kdy je kód automaticky formátován, je vložení kódu do souboru, zatímco je vybrána volba **Automaticky formátovat při vložení.** (Možnost **Automaticky formátovat při vložení** je v části**Obecné** **formátování** > .)
 
-![C#Možnosti odsazení textového editoru v aplikaci Visual Studio](media/csharp-indentation-options.png)
+![Možnosti odsazení textového editoru jazyka C# v sadě Visual Studio](media/csharp-indentation-options.png)
 
 > [!TIP]
-> K dispozici jsou také možnosti odsazení na stránce možností > **C#** **karty** > **textový editor** . Tyto možnosti určují, kde Editor kódu umístí kurzor po stisknutí klávesy **ENTER** na konci řádku.
+> Existují také možnosti odsazení na stránce možností**karty** **C#** >  **textového editoru.** >  Tyto možnosti určují pouze místo, kam editor kódu umístí kurzor, když stisknete **enter** na konci řádku.
 >
-> ![C#karty textový editor možnosti v aplikaci Visual Studio](media/csharp-tabs-options.png)
+> ![Možnosti karet textového editoru jazyka C# v sadě Visual Studio](media/csharp-tabs-options.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
+- [Dialogové okno Obecné, Prostředí, Možnosti](../../ide/reference/general-environment-options-dialog-box.md)

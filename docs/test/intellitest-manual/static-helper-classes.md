@@ -1,5 +1,5 @@
 ---
-title: Statické pomocné třídy | Nástroj Microsoft IntelliTest Developer test Tool
+title: Statické pomocné třídy | Testovací nástroj pro vývojáře IntelliTest společnosti Microsoft
 ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -10,35 +10,35 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 5010761213cf79756cf8da3d2fffe60dd0b61efd
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78409543"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79302614"
 ---
 # <a name="static-helper-classes"></a>Třídy statických pomocných rutin
 
-IntelliTest poskytuje sadu statických pomocných tříd, které lze použít při vytváření [parametrizovaných testů jednotek](test-generation.md#parameterized-unit-testing):
+IntelliTest poskytuje sadu statické pomocné třídy, kterou lze použít při vytváření [parametrizovaných testů částí](test-generation.md#parameterized-unit-testing):
 
-* [PexAssume](#pexassume): slouží k definování předpokladů pro vstupy a je užitečné pro filtrování nežádoucích vstupů.
-* [PexAssert](#pexassert): jednoduchá třída kontrolního výrazu pro použití, pokud testovací rozhraní neposkytuje žádný
-* [PexChoose](#pexchoose): datový proud dalších testovacích vstupů, které IntelliTest spravuje
-* [PexObserve](#pexobserve): protokoluje konkrétní hodnoty a volitelně je ověřuje ve vygenerovaném kódu.
+* [PexAssume](#pexassume): slouží k definování předpokladů na vstupech a je užitečné pro filtrování nežádoucích vstupů
+* [PexAssert](#pexassert): jednoduchá třída assertion pro použití, pokud testovací rámec neposkytuje
+* [PexChoose](#pexchoose): datový proud dalších testovacích vstupů, které intelliTest spravuje
+* [PexObserve](#pexobserve): zaznamenává konkrétní hodnoty a volitelně je ověřuje ve generovaném kódu
 
-Některé třídy vám umožňují pracovat s IntelliTestm důvodem pro modul na nízké úrovni:
+Některé třídy umožňují interakci s intelliTest uvažování motoru na nízké úrovni:
 
-* [PexSymbolicValue](#pexsymbolicvalue): pomůcky pro kontrolu a úpravy symbolických omezení u proměnných
+* [PexSymbolicValue](#pexsymbolicvalue): nástroje pro kontrolu nebo úpravu symbolických omezení proměnných
 
 <a name="pexassume"></a>
 ## <a name="pexassume"></a>PexAssume
 
-Statická třída, která se používá k vyjádření předpokladů, jako jsou například [předběžné podmínky](test-generation.md#precondition), v [parametrizovaných testech testování částí](test-generation.md#parameterized-unit-testing). Metody této třídy lze použít k vyfiltrování nežádoucích testovacích vstupů.
+Statická třída používaná k vyjádření předpokladů, jako jsou [například předpoklady](test-generation.md#precondition), v [parametrizovaných jednotkových testech](test-generation.md#parameterized-unit-testing). Metody této třídy lze odfiltrovat nežádoucí zkušební vstupy.
 
-Pokud předpokládaná podmínka není pro nějaký vstup testu podržena, je vyvolána výjimka **PexAssumeFailedException** . Tím dojde k tichému ignorování testu.
+Pokud předpokládaná podmínka neobsahuje pro některé zkušební vstup, **PexAssumeFailedException** je vyvolána. To způsobí, že test tiše ignorovány.
 
 **Příklad**
 
-Následující parametrizovaný test nebude brát v úvahu **j = 0**:
+Následující parametrizovaný test nebude brát v úvahu **j=0**:
 
 ```csharp
 public void TestSomething(int i, int j) {
@@ -50,27 +50,27 @@ public void TestSomething(int i, int j) {
 
 **Poznámky**
 
-Výše uvedený kód je skoro ekvivalent:
+Výše uvedený kód je téměř ekvivalentní:
 
 ```csharp
      if (j==0)
           return;
 ```
 
-s tím rozdílem, že selhání **PexAssume** vede k žádným testovacím případům. V případě příkazu **if** vygeneruje IntelliTest samostatný testovací případ pro **pokrytí větve příkazu** **if** .
+s tím rozdílem, že selhání **PexAssume** výsledky v žádné testovacích případů. V případě **příkazu if** intelliTest generuje samostatný testovací případ, který pokrývá **tehdejší** větvi příkazu **if.**
 
-**PexAssume** obsahuje také specializované vnořené třídy pro předpoklady v řetězcích, polích a kolekcích.
+**PexAssume** také obsahuje specializované vnořené třídy pro předpoklady na řetězec, pole a kolekce.
 
 <a name="pexassert"></a>
 ## <a name="pexassert"></a>PexAssert
 
-Statická třída, která se používá k vyjádření kontrolních výrazů, jako je například [následné podmínky](test-generation.md#postcondition), v [parametrizovaných testech testování částí](test-generation.md#parameterized-unit-testing).
+Statická třída používaná k vyjádření kontrolních výrazů, například [postconditions](test-generation.md#postcondition), v [parametrizovaných jednotkových testech](test-generation.md#parameterized-unit-testing).
 
-Pokud podmínka vyhodnocení není pro nějaký vstup testu podržena, je vyvolána výjimka **PexAssertFailedException** , která způsobí selhání testu.
+Pokud je uplatněná podmínka neobsahuje pro některé testovací vstup, Je vyvolána **PexAssertFailedException,** která způsobí selhání testu.
 
 **Příklad**
 
-Následující výrazy vyhodnotí, že absolutní hodnota celého čísla je kladná:
+Následující tvrzení, že absolutní hodnota celého čísla je pozitivní:
 
 ```csharp
 public void TestSomething(int i) {
@@ -83,21 +83,21 @@ public void TestSomething(int i) {
 <a name="pexchoose"></a>
 ## <a name="pexchoose"></a>PexChoose
 
-Statická třída, která poskytuje pomocné vstupní hodnoty k testu, který lze použít k implementaci [parametrizovaných modelů](input-generation.md#parameterized-mocks).
+Statická třída, která dodává pomocné vstupní hodnoty testu, který lze použít k implementaci [Parametrizované mocks](input-generation.md#parameterized-mocks).
 
-Třída **PexChoose** vám nepomáhá určit, zda test projde nebo se nezdařil pro konkrétní vstupní hodnoty. **PexChoose** jednoduše poskytuje vstupní hodnoty, které jsou také označovány jako *volby*. Je stále až uživateli omezit vstupní hodnoty a napsat kontrolní výrazy, které definují, kdy test projde nebo dojde k chybě.
+**PexChoose** Třída nepomůže při určování, zda test projde nebo selže pro konkrétní vstupní hodnoty. **PexChoose** jednoduše poskytuje vstupní hodnoty, které jsou také označovány jako *volby*. Je stále na uživateli omezit vstupní hodnoty a psát kontrolní výrazy, které definují, když test projde nebo selže.
 
-**Režimy provozu**
+**Režimy činností**
 
-Třída **PexChoose** může fungovat ve dvou režimech:
+Třída **PexChoose** může pracovat ve dvou režimech:
 
-* I když IntelliTest provádí symbolické analýzy testu a testovaný kód při [vstupní generaci](input-generation.md), výběr vrací libovolné hodnoty a IntelliTest sleduje, jak se jednotlivé hodnoty používají v testu a testovaném kódu. IntelliTest vygeneruje relevantní hodnoty pro aktivaci různých prováděcích cest v rámci testu a testovaného kódu.
+* Zatímco IntelliTest provádí symbolickou analýzu testu a testovaný kód během [generování vstupu](input-generation.md), výběr vrátí libovolné hodnoty a IntelliTest sleduje, jak se jednotlivé hodnoty používají v testu a testovaný kód. IntelliTest bude generovat příslušné hodnoty pro aktivaci různých cest spuštění v testu a testovaný kód.
 
-* Vygenerovaný kód pro konkrétní testovací případy nastaví poskytovatele výběru určitým způsobem, aby opětovné spuštění takového testovacího případu provedlo konkrétní volby pro aktivaci konkrétní cesty spuštění.
+* Generovaný kód pro konkrétní testovací případy nastaví zprostředkovatele volby určitým způsobem tak, aby opětovné spuštění takového testovacího případu provede konkrétní volby pro aktivaci konkrétní cesty spuštění.
 
 **Použití**
 
-* Jednoduchá volání **PexChoose. Value** pro vygenerování nové hodnoty:
+* Jednoduché volání **PexChoose.Value** pro generování nové hodnoty:
 
 ```csharp
 public int Foo() {
@@ -108,9 +108,9 @@ public int Foo() {
 <a name="pexobserve"></a>
 ## <a name="pexobserve"></a>PexObserve
 
-Statická třída pro protokolování pojmenovaných hodnot.
+Statická třída protokolu s pojmenovanými hodnotami.
 
-Když IntelliTest prozkoumá kód, **PexObserve** se používá k záznamu vypočítaných hodnot pomocí jejich formátovaná reprezentace řetězce. Hodnoty jsou přidruženy k jedinečným názvům.
+Když IntelliTest zkoumá kód, **PexObserve** se používá k záznamu vypočítané hodnoty pomocí jejich reprezentace formátovaného řetězce. Hodnoty jsou spojeny s jedinečnými názvy.
 
 ```csharp
 PexObserve.Value<string>("result", result);
@@ -139,16 +139,16 @@ public partial class MathExTests {
 <a name="pexsymbolicvalue"></a>
 ## <a name="pexsymbolicvalue"></a>PexSymbolicValue
 
-Statická třída, která slouží k ignorování omezení u parametrů a k vytištění symbolických informací přidružených k hodnotám.
+Statická třída používaná k ignorování omezení parametrů a k tisku symbolických informací spojených s hodnotami.
 
 **Použití**
 
-V normálním případě se IntelliTest pokusí pokrýt všechny cesty provádění kódu během provádění. Zejména při výpočtu podmínek předpokladu a podmínky vyhodnocení by se však nemělo prozkoumat všechny možné případy.
+Normálně IntelliTest se pokusí pokrýt všechny cesty spuštění kódu během provádění. Však zejména při výpočtu předpokladu a kontrolní podmínky, by neměla zkoumat všechny možné případy.
 
 **Příklad**
 
-Tento příklad ukazuje implementaci metody **PexAssume. Array. ElementsAreNotNull** .
-V metodě můžete ignorovat omezení pro lengh hodnoty pole, abyste se vyhnuli IntelliTest pokusu o generování různých velikostí pole. Omezení se tady ignorují. Pokud testovaný kód se chová jinak u různých délek pole, IntelliTest nemůže generovat různá pole velikosti z omezení testovaného kódu.
+Tento příklad ukazuje implementaci metody **PexAssume.Arrays.ElementsAreNotNull.**
+V metodě ignorujete omezení délky hodnoty pole, abyste se vyhnuli pokusu o generování různých velikostí pole. Omezení jsou ignorovány pouze zde. Pokud testovaný kód chová odlišně pro různé délky pole, IntelliTest nelze generovat různé velikosti polí z omezení testovaného kódu.
 
 ```csharp
 public static void AreElementsNotNull<T>(T[] value)

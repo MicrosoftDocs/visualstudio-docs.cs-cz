@@ -1,5 +1,5 @@
 ---
-title: SetThreadCount | Microsoft Docs
+title: SetThreadCount | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 apiname:
@@ -16,15 +16,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 102f46ec639719bb2bec70a38c6c7177c63793c1
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632326"
 ---
 # <a name="setthreadcount"></a>SetThreadCount
 
-Nastaví počet globálních vláken a přiřadí tento počet k aktuálnímu vláknu.
+Nastaví globální počet vláken a přiřadí tento počet aktuálnímu vláknu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,14 +34,14 @@ HRESULT WINAPI SetThreadCount(int threadCount);
 
 #### <a name="parameters"></a>Parametry
 
-[in] `threadCount`
+[v]`threadCount`
 
- Počet vláken, která se mají použít.
+ Počet podprocesů, které chcete použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
- Hodnota **HRESULT** s **úspěšně** nastaveným bitem, pokud byl počet vláken aktualizován.
+ **HRESULT** s **succeeded** bit nastavit, pokud počet vláken byla aktualizována.
 
 ## <a name="requirements"></a>Požadavky
 
- **Záhlaví:** *stoper. h*
+ **Záhlaví:** *FileTracker.h*

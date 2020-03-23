@@ -1,7 +1,7 @@
 ---
-title: Sady Visual Studio Feedback Client úlohy a ID komponent
+title: Úlohy klienta Visual Studio Feedback a ID komponent
 titleSuffix: ''
-description: ID pracovního vytížení a komponenta Visual Studio můžete zaslat podrobnou zpětnou vazbu pro Azure DevOps Services nebo Team Foundation Server
+description: Použití úloh a ID komponent sady Visual Studio k poskytování bohaté zpětné vazby pro služby Azure DevOps Services nebo Team Foundation Server
 keywords: ''
 author: ornellaalt
 ms.author: ornella
@@ -17,53 +17,53 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: vs-2017
 ms.openlocfilehash: 5cba73bd7ea3e0251174ea7a702cd80509fbd954
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76113842"
 ---
-# <a name="visual-studio-feedback-client-component-directory"></a>Adresář součástí sady Visual Studio Feedback Client
+# <a name="visual-studio-feedback-client-component-directory"></a>Adresář komponent y Visual Studio Feedback Client
 
-Tabulky v tomto seznamu stránce ID, můžete použít k instalaci sady Visual Studio pomocí příkazového řádku nebo je můžete zadat jako závislost v manifestu VSIX. Všimněte si, že přidáme další součásti vydaných aktualizací sady Visual Studio.
+Tabulky na této stránce uvádějí ID, které můžete použít k instalaci sady Visual Studio pomocí příkazového řádku nebo které můžete zadat jako závislost v manifestu VSIX. Všimněte si, že budeme přidávat další součásti, jak budeme vydávat aktualizace visual studio.
 
-Všimněte si také následující stránka:
+Všimněte si také následující o stránce:
 
-* Každá úloha má vlastní oddíl, za nímž následuje Identifikátor pracovního vytížení a tabulku komponent, které jsou k dispozici pro pracovní vytížení.
-* Ve výchozím nastavení **vyžaduje** součásti nainstaluje, když jste si nainstalovali úlohu.
-* Pokud budete chtít, můžete nainstalovat také **doporučená** a **volitelné** komponenty.
-* Přidali jsme také oddíl, který obsahuje další součásti, které nejsou pod něj nespadá u jakékoli úlohy.
+* Každé pracovní vytížení má vlastní část, následovanou ID pracovního vytížení a tabulkou součástí, které jsou k dispozici pro úlohu.
+* Ve výchozím nastavení budou **požadované** součásti nainstalovány při instalaci úlohy.
+* Pokud se rozhodnete, můžete také nainstalovat **doporučené** a **volitelné** součásti.
+* Přidali jsme také oddíl, který obsahuje seznam dalších součástí, které nejsou přidruženy k žádné pracovní zátěži.
 
-Když nastavíte závislosti v manifestu VSIX, je nutné zadat ID součástí pouze. Určení závislostí naše minimální součástí pomocí tabulek na této stránce. V některých případech to může znamenat, že zadáváte pouze jednu komponentu z pracovního vytížení. V jiných scénářích může znamenat, že zadáte více komponent z jedné úlohy nebo více komponent z více úloh. Další informace najdete v tématu [postupy: migrace projektů rozšíření do sady Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) stránky.
+Když nastavíte závislosti v manifestu VSIX, musíte zadat pouze ID součástí. Pomocí tabulek na této stránce určete naše minimální závislosti součástí. V některých případech to může znamenat, že zadáte pouze jednu součást z pracovního vytížení. V jiných scénářích to může znamenat, že zadáte více součástí z jednoho pracovního vytížení nebo více součástí z více úloh. Další informace najdete v tématu [Postup: Migrace projektů rozšiřitelnosti do Visual Studia 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) stránku.
 
-Další informace o tom, jak pomocí těchto identifikátorů najdete v části [pomocí parametrů příkazového řádku instalace sady Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) stránky. A seznam pracovního vytížení a komponenta ID pro ostatní produkty, naleznete v tématu [funkcí sady Visual Studio 2017 a ID součástí](workload-and-component-ids.md) stránky.
+Další informace o použití těchto ID najdete [v tématu Použití parametrů příkazového řádku k instalaci stránky Visual Studia 2017.](use-command-line-parameters-to-install-visual-studio.md) A seznam úloh a ID součástí pro jiné produkty najdete na stránce [Visual Studio 2017 Workload and Component ID.](workload-and-component-ids.md)
 
 ## <a name="feedback-client"></a>Feedback Client
 
 **ID:** Microsoft.VisualStudio.Workload.FeedbackClient
 
-**Popis:** Feedback client umožňuje účastníkům poskytovat bohatou zpětnou vazbu pro Azure DevOps Services nebo Team Foundation Server.
+**Popis:** Klient zpětné vazby umožňuje zúčastněným stranám poskytovat bohatou zpětnou vazbu pro služby Azure DevOps Services nebo Team Foundation Server.
 
-### <a name="components-included-by-this-workload"></a>Pomocí této úlohy zahrnuté komponenty
+### <a name="components-included-by-this-workload"></a>Komponenty zahrnuté do tohoto pracovního vytížení
 
-ID součásti | Name | Version | Typ závislosti
+ID součásti | Name (Název) | Version | Typ závislosti
 --- | --- | --- | ---
-Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.6.27406.0 | Požadováno
+Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.6.27406.0 | Požaduje se
 
-## <a name="unaffiliated-components"></a>Nespojená komponenty
+## <a name="unaffiliated-components"></a>Nepřidružené součásti
 
-Toto jsou komponenty, které nejsou zahrnuty u jakékoli úlohy, ale může vybrat jako jednotlivých komponent.
+Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé součásti.
 
-ID součásti | Name | Version
+ID součásti | Name (Název) | Version
 --- | --- | ---
-není k dispozici | není k dispozici | není k dispozici
+neuvedeno | neuvedeno | neuvedeno
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md)
-* [Příručka pro správce aplikace Visual Studio](visual-studio-administrator-guide.md)
-* [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
+* [Průvodce správcem sady Visual Studio](visual-studio-administrator-guide.md)
+* [Instalace sady Visual Studio pomocí parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
   * [Příklady parametrů příkazového řádku](command-line-parameter-examples.md)
 * [Vytvoření offline instalace sady Visual Studio](create-an-offline-installation-of-visual-studio.md)

@@ -1,5 +1,5 @@
 ---
-title: Porovnání výsledků zátěžového testu
+title: Porovnání výsledků zátěžových zkoušek
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,40 +10,40 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f85800ea59545ad64a821d1bb8c003ba6eef8c26
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589341"
 ---
-# <a name="report-load-tests-results-for-test-comparisons-or-trend-analysis"></a>Sestava zátěžové testy s výsledky pro porovnávání testů a analýzu trendů
+# <a name="report-load-tests-results-for-test-comparisons-or-trend-analysis"></a>Vykazovat výsledky zatěžovacích testů pro porovnání testů nebo analýzu trendů
 
-Můžete generovat sestavy zátěžového testu aplikace Microsoft Excel, které jsou založeny na dvou nebo více výsledcích testu.
+Můžete generovat sestavy zátěžových testů aplikace Microsoft Excel, které jsou založeny na dvou nebo více výsledcích testů.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-K dispozici jsou dva typy sestav zátěžových testů:
+K dispozici jsou dva typy protokolů zátěžových testů:
 
-- Spustit porovnání&mdash;této sestavy je ve skutečnosti dvě sestavy, které zobrazují vedle sebe porovnání dat pomocí tabulek a sloupcových grafů.
+- Porovnání&mdash;spuštění Tato sestava je ve skutečnosti dvě sestavy, které zobrazují data porovnání vedle sebe pomocí tabulek a pruhových grafů.
 
-- Trend&mdash;lze generovat analýzu trendů na dvě nebo více sestav. Výsledky se zobrazí ve spojnicových grafech.
+- Trend:&mdash;Analýzu trendů můžete generovat u dvou nebo více sestav. Výsledky se zobrazí ve spojnicových grafech.
 
-Některá sestava umožňuje sdílení dat o výkonu se zúčastněnými stranami a sdělení, zda celkový výkon a stav systému se zlepšuje nebo zhoršuje.
+Obě sestavy lze použít ke sdílení údajů o výkonu se zúčastněnými stranami a sdělit, zda celkový výkon a stav systému je stále lepší nebo horší.
 
-Definice sestav jsou uloženy v databázi zátěžového testu. Při uložení sestavy definice sestavy je uloženo v databázi a můžete znovu použít později.
+Definice sestavy jsou uloženy v databázi zátěžového testu. Při uložení sestavy je definice sestavy uložena v databázi a může být znovu použita později.
 
-Soubor tabulky můžete také sdílet se zúčastněnými stranami, tak, aby zúčastněné strany není potřeba připojení k databázi pro zobrazení sestavy.
+Soubor tabulky lze také sdílet se zúčastněnými stranami, aby se zúčastněné strany nemusely připojovat k databázi, aby se sestava zoána zoařila.
 
 > [!NOTE]
-> Pokud chcete přidat komentáře k zátěžovému testu, se zobrazí v sestavě aplikace Excel.
+> Pokud přidáte komentáře k zátěžovému testu, zobrazí se v sestavě aplikace Excel.
 
-## <a name="tasks"></a>Tasks
+## <a name="tasks"></a>Úlohy
 
-|Tasks|Související témata|
+|Úlohy|Přidružená témata|
 |-|-|
-|**Vytvoření sestavy výkonu a zátěže:** můžete vytvořit sestavy na zatížení a webové testy výkonu, pomocí aplikace Microsoft Excel.|- [Postupy: vytvoření sestavy zátěžových testů výkonu pomocí aplikace Microsoft Excel](../test/how-to-create-load-test-performance-reports-using-microsoft-excel.md)|
-|**Ruční vytvoření sestavy výkonu a zátěže pomocí aplikace Microsoft Word:** můžete vytvořit sestavy na zatížení a webové testy výkonu ručně zkopírováním a vložením souhrnu, tabulky a data grafu do dokumentu aplikace Microsoft Word.|- [Postupy: ruční vytvoření sestavy výkonu zátěžového testu pomocí aplikace Microsoft Word](../test/how-to-manually-create-a-load-test-performance-report-using-microsoft-word.md)|
+|**Vytvoření sestavy výkonu a napětí:** Pomocí aplikace Microsoft Excel můžete vytvářet sestavy testů zatížení a výkonu webu.|- [Postup: Vytvoření sestav výkonu zátěžového testu pomocí aplikace Microsoft Excel](../test/how-to-create-load-test-performance-reports-using-microsoft-excel.md)|
+|**Ručně vytvořte zprávu o výkonu a stresu pomocí aplikace Microsoft Word:** Sestavy testů výkonu načtení a webu můžete vytvořit ručně zkopírováním a vložením souhrnných dat, tabulek a grafů do dokumentu aplikace Microsoft Word.|- [Postup: Ruční vytvoření sestavy výkonu zátěžového testu pomocí aplikace Microsoft Word](../test/how-to-manually-create-a-load-test-performance-report-using-microsoft-word.md)|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Analýza výsledků zátěžových testů](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

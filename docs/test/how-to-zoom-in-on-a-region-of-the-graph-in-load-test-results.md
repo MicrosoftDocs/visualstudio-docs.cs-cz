@@ -1,5 +1,5 @@
 ---
-title: Přiblížit na grafy výsledků testu zatížení
+title: Přiblížení grafů výsledků zátěžových testů
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,109 +12,109 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a22f1a9b6aa772224b217b5de4136687df1462a1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594354"
 ---
-# <a name="how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results"></a>Postupy: přiblížení oblasti grafu ve výsledcích zátěžového testu
+# <a name="how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results"></a>Postup: Přiblížení oblasti grafu ve výsledcích zátěžového testu
 
-Po dokončení zátěžového testu můžete přiblížit a přejděte do oblasti grafu pruhy přiblížení. Podle přiblížit, můžete zkoumat data, která byla vygenerována během spuštění jemnější podrobně zátěžového testu.
+Po dokončení zátěžového testu můžete pomocí pruhů přiblížení přiblížit a posunout se do oblasti grafu. Přiblížením můžete zkontrolovat data, která byla generována během spuštění zátěžového testu v jemnějších detailech.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Přiblížit je k dispozici pouze při analýze výsledku dokončeného zátěžového testu není během pozorujete výsledky spuštění testu.
+Přiblížení je k dispozici pouze v případě, že analyzujete výsledek dokončeného zátěžového testu, nikoli při sledování výsledků průběžného testu.
 
-Ovládací prvek lupy je viditelná pouze v **Analyzéru zátěžového testu** při prohlížení výsledku zátěžového testu v zvětšení a zmenšení režimu. V zobrazení grafu je stanoven režim zvětšení a zmenšení, po dokončení zátěžového testu nebo načíst zátěžového testu, která byla dříve spuštěna. Můžete zobrazit nebo skrýt ovládací prvky zvětšení na grafy pomocí **zobrazit ovládací prvky zvětšení** na panelu nástrojů.
+Ovládací prvek lupy je viditelný pouze v **analyzátoru zátěžového testu,** když zobrazíte výsledek zátěžového testu v režimu přiblížení. Režim přiblížení je vytvořen v zobrazení grafu, když byl dokončen zátěžový test nebo je načten zátěžový test, který byl dříve spuštěn. Ovládací prvky lupy v grafech můžete zobrazit nebo skrýt pomocí funkce **Zobrazit ovládací prvky lupy** na panelu nástrojů.
 
-**Vodorovné osy x lupy** k analýze konkrétní časová období, během zátěžového testu lze upravit. **Svislé osy y přiblížení** lze upravit k analýze rozsahy konkrétní hodnotu čítače, které jsou zahrnuty v grafu.
+**Horizontální přiblížení osy x** lze upravit tak, aby analyzovalo konkrétní časová období během zátěžového testu. **Svislé zvětšení osy y** lze upravit tak, aby analyzovalo rozsahy určitých hodnot pro čítače, které jsou zahrnuty v grafu.
 
-Oba **vodorovné ose** a **rozsah hodnot svislé** ovládací prvky zvětšení lze upravit pomocí myši. **Ovládací prvek vodorovné ose** může být také upravena pomocí kláves šipka doleva a doprava. Pomocí kláves se šipkami upravit ovládací prvek lupy, můžete upravit rozsah windows ve vzorkovací frekvence 1 najednou. Použití **Shift** a klávesy se šipkami provádí úpravy 10 intervalů vzorkování.
+Pomocí myši lze upravit **jak vodorovnou časovou osu,** tak ovládací prvky zvětšení **rozsahu svislých hodnot.** **Horizontální ovládací prvek časové osy** lze také upravit pomocí kláves se šipkami vlevo a vpravo. Pomocí kláves se šipkami můžete upravit rozsah přiblížení o 1 interval vzorkování najednou. Pomocí kláves **Shift** a se šipkami provádíte úpravy 10 intervalů vzorkování.
 
-Chcete-li upravit ovládací prvek lupy pomocí klávesy šipka, nejprve se zaměřit na ovládací prvek lupy pomocí **kartu** klíč. Pokud Levý posuvník má fokus, klávesy se šipkami se přesunout počáteční hranice okna přiblížení 1 interval doleva nebo doprava. Pokud je fokus nastavený na posuvník System center, můžete použít klávesy se šipkami posouvat přiblížení okno doleva nebo doprava 1 interval vzorkování beze změny velikosti okna přiblížení. A nakonec se posune posuvník na pravé straně, rozšíření nebo snížením rozsahu konec časového období přiblížení o 1 interval vzorkování.
+Chcete-li upravit ovládání přiblížení pomocí klávesy se šipkou, nejprve nastavte zaostření na ovládací prvek lupy pomocí klávesy **Tabulátor.** Když má levý jezdec fokus, klávesy se šipkami posunou počáteční hranici okna lupy o 1 interval doleva nebo doprava. Když je fokus na středovém posuvníku, můžete pomocí kláves se šipkami posouvat interval vzorkování okna lupy vlevo nebo vpravo 1 bez změny velikosti okna lupy. A konečně, pravé straně jezdce se pohybuje, rozšíření nebo snížení rozsahu konce okna zoom o 1 interval vzorkování.
 
-Vrátit ovládací prvky vodorovného a svislého zvětšení zobrazíte úplný časového harmonogramu a rozsahy hodnot, můžete použít **zvětšení limitu vodorovné** možnost, **přiblížení na svislé** možnost, nebo **Oddálit Obě** možnost v rozbalovací nabídce v grafu.
+Chcete-li vrátit ovládací prvky vodorovného a svislého přiblížení, abyste zobrazili úplné časové osy a rozsahy hodnot, můžete použít volbu **Oddálit vodorovnou** oblast, volbu **Oddálit svisle** nebo **volbu Oddálit obě** v rozbalovací nabídce v grafu.
 
 > [!TIP]
-> Můžete použít **synchronizovat vodorovné přiblížení ovládací prvky** v panelu nástrojů můžete zapnout nebo vypnout automatické vodorovného zvětšení synchronizace. Synchronizace na jakékoli změna měřítka zobrazení, které použijete do grafu použijí se taky pro jiné grafy pro zobrazení grafů.
+> Pomocí **ovládacích prvků synchronizovat vodorovné zvětšení** na panelu nástrojů můžete zapnout nebo vypnout automatickou synchronizaci vodorovného přiblížení. Při zapnuté synchronizaci se jakékoli přiblížení, které aplikujete na graf, použije také na všechny ostatní grafy v zobrazení Grafy.
 
-![Ovládací prvek lupy grafu zobrazit](../test/media/ltest_zoomcontrol.png)
+![Ovládací prvek zvětšení zobrazení grafu](../test/media/ltest_zoomcontrol.png)
 
-Na předchozím obrázku **zkoušený systém** graf má přiblížení, a zjistit problémy s prahovou hodnotou. Byly povoleny překročení mezních hodnot s použitím **zobrazit v grafu porušení mezních** z **možnosti grafu** rozevíracího seznamu na panelu nástrojů.
+Na předchozím obrázku byl zobrazen graf Systém u **testu,** aby se zjistily problémy s prahovou hodnotou. Porušení prahové hodnoty bylo povoleno pomocí zobrazení **porušení prahové hodnoty v grafu** z rozevíracího seznamu **Možnosti grafu** v panelu nástrojů.
 
-Další informace najdete v tématu [výsledků zátěžového testu analyzovat v zobrazení grafů](../test/analyze-load-test-results-in-the-graphs-view.md).
+Další informace naleznete [v tématu Analýza výsledků zátěžových testů v zobrazení Grafy](../test/analyze-load-test-results-in-the-graphs-view.md).
 
-## <a name="display-graphs"></a>Zobrazení grafů
+## <a name="display-graphs"></a>Zobrazit grafy
 
-Před změnou zobrazení grafu přiblížení nebo oddálení nebo posouvání, zobrazení grafů pomocí tohoto postupu.
+Před změnou zobrazení grafu přiblížením nebo oddálením nebo posouváním zobrazte grafy následujícím postupem.
 
-Chcete-li zobrazit grafy:
+Zobrazení grafů:
 
 1. Spusťte zátěžový test, dokud se nedokončí.
 
-2. Na konci zátěžového testu, zvolte **Ano** v dialogovém okně, které žádá o zobrazení výsledků z výsledků zátěžových testů úložiště.
+2. Na konci spuštění zátěžového testu zvolte **Ano** v dialogovém okně, které se ptá na zobrazení výsledků z úložiště výsledků zátěžového testu.
 
-     \- nebo –
+     \-nebo -
 
-     Zobrazte podrobnosti o dříve spuštěném zátěžovém testu. Další informace najdete v tématu [postupy: přístup k analýze výsledků zátěžového testu](../test/how-to-access-load-test-results-for-analysis.md).
+     Zobrazte podrobnosti o dříve spuštěném zátěžovém testu. Další informace naleznete v [tématu How to: Access load test results for analysis](../test/how-to-access-load-test-results-for-analysis.md).
 
-3. Zvolte **grafy** Pokud vaše grafy nejsou zobrazeny.
+3. Pokud se grafy nezobrazují, zvolte **Grafy.**
 
-4. Pokud se nezobrazují přiblížení pruhy, zvolte **zobrazit ovládací prvky zvětšení**.
+4. Pokud se pruhy přiblížení nezobrazují, zvolte **Zobrazit ovládací prvky přiblížení**.
 
-     Dva panely přiblížení jsou k dispozici pro každý graf. Panel přiblížení, který řídí vertikální škálování se zobrazí nalevo od grafu. V grafu se zobrazí pruh zvětšení, které řídí horizontálního škálování.
+     Pro každý graf jsou k dispozici dva pruhy přiblížení. Pruh lupy, který řídí svislé měřítko, se zobrazí vlevo od grafu. Pod grafem se zobrazí pruh lupy, který řídí vodorovné měřítko.
 
-     Každý panel přiblížení má dva popisovače. Popisovač je obdélníkovou oblast na každém konci panelu přiblížení.
+     Každý pruh lupy má dva úchyty. Úchyt je obdélníková oblast na každém konci pruhu lupy.
 
 ## <a name="zoom-and-scroll"></a>Přiblížení a posouvání
 
-Pokud máte více grafů, které se zobrazí, můžete zachovat jejich synchronizaci, aby se zobrazí stejné část zátěžového testu.
+Pokud máte zobrazeno více grafů, můžete je zachovat synchronizované tak, aby zobrazovaly stejnou část spuštění zátěžového testu.
 
-### <a name="to-synchronize-zooming-and-scrolling"></a>Synchronizovat přibližování a posouvání
+### <a name="to-synchronize-zooming-and-scrolling"></a>Synchronizace přiblížení a posouvání
 
-1. Na **Analyzéru zátěžového testu**, zvolte **synchronizovat vodorovné přiblížení ovládací prvky**.
+1. V **analyzátoru zátěžového testu**zvolte **Synchronizovat ovládací prvky vodorovného přiblížení**.
 
-     Když **synchronizovat vodorovné přiblížení ovládací prvky** vybere tlačítko, přibližování a posouvání časové měřítko grafu jednotlivé také přiblížení a zobrazení se posune časové měřítko další grafy.
+     Když je vybráno tlačítko **Synchronizovat ovládací prvky vodorovného přiblížení,** přiblížení a posouvání časového měřítka jednotlivého grafu také zvětšuje a posouvá časové měřítko ostatních grafů.
 
-2. Znovu, vyberte **synchronizovat vodorovné přiblížení ovládací prvky**.
+2. Znovu zvolte **Synchronizovat ovládací prvky vodorovného přiblížení**.
 
-     Když **synchronizovat vodorovné přiblížení ovládací prvky** tlačítko není vybrané, přibližování a posouvání časové měřítko grafu jednotlivé ovlivní pouze tohoto grafu.
+     Pokud není vybráno tlačítko **Synchronizovat ovládací prvky vodorovného přiblížení,** zvětšování a posouvání časového měřítka jednotlivého grafu ovlivní pouze tento graf.
 
-### <a name="to-zoom-and-scroll-to-a-region-of-the-graph"></a>Přiblížení a přejděte do oblasti grafu
+### <a name="to-zoom-and-scroll-to-a-region-of-the-graph"></a>Zvětšení a posunutí do oblasti grafu
 
-1. Na panelu přiblížení pod graf přetažením úchytu levé straně na pravé straně.
+1. Na lupě pod grafem přetáhněte levé táhlo doprava.
 
-     To se přiblíží ve druhé části testovacího běhu. Podobně přetažením úchytu na pravé straně vlevo přiblíží v dřívější části testovacího běhu.
+     To přiblíží druhou část testovacího běhu. Podobně přetažením pravého úchytu doleva přiblížíte dřívější části testovacího běhu.
 
-2. Přiblížit na určitou oblast snímků obou popisovače směrem do středu grafu.
+2. Chcete-li přiblížit určitou oblast, posuňte obě táhla směrem ke středu grafu.
 
-     Čím blíž dva popisovače jsou k sobě navzájem, tím více přiblížit zobrazíte kratší, jemnější segmenty zátěžového testu.
+     Čím blíže jsou dva úchyty k sobě, tím více přiblížíte, abyste zobrazili kratší, jemnější segmenty zátěžového testu.
 
-     Vyberte centrum části panelu přiblížení a poté ji přetáhněte do přejděte na konkrétní místo v zátěžovém testu.
+     Zvolte středovou část pruhu lupy a přetažením se posunete k určitému bodu zátěžového testu.
 
-### <a name="to-zoom-to-a-region-of-the-graph-by-choosing-and-dragging"></a>Přiblížení výběrem a přetažením do oblasti grafu
+### <a name="to-zoom-to-a-region-of-the-graph-by-choosing-and-dragging"></a>Přiblížení oblasti grafu výběrem a přetažením
 
-1. Zvolte na jednom konci přiblížení oblasti grafu.
+1. Zvolte graf na jednom konci oblasti lupy.
 
-2. Přetažením ukazatele myši na druhém konci přiblížení oblasti.
+2. Přetáhněte ukazatel myši na druhý konec oblasti lupy.
 
 3. Uvolněte tlačítko myši.
 
-    Tím se zvětší oblasti, která jste definovali kliknutím a přetažením.
+    Tím se zvětší oblast, kterou jste definovali výběrem a přetažením.
 
-   Následující postup popisuje, jak rychle horizonální oddálení, aniž by bylo nutné upravit konce panelu přiblížení.
+   Následující postup popisuje, jak rychle oddálit bez nutnosti upravovat konce lupy.
 
-### <a name="to-zoom-out"></a>Zmenšíte.
+### <a name="to-zoom-out"></a>Oddálení
 
-1. Klikněte pravým tlačítkem na graf přiblížené.
+1. Klikněte pravým tlačítkem myši na zvětšený graf.
 
-2. V místní nabídce vyberte **zvětšení limitu vodorovné**.
+2. V místní nabídce vyberte **Oddálit vodorovné .**
 
-     To Oddálí zobrazíte spuštění celou dobu trvání zátěžového testu.
+     Tím se oddálí, aby se zobrazila celá doba trvání zátěžového testu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Analýza výsledků zátěžových testů v zobrazení grafů](../test/analyze-load-test-results-in-the-graphs-view.md)
+- [Analýza výsledků zátěžových testů v zobrazení Grafy](../test/analyze-load-test-results-in-the-graphs-view.md)
 - [Analýza výsledků zátěžových testů](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
-- [Postupy: Přidání a odstranění čítačů pro grafy](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)
+- [Postup: Přidání a odstranění čítačů v grafech](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)

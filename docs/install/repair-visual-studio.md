@@ -1,7 +1,7 @@
 ---
 title: Oprava sady Visual Studio
 titleSuffix: ''
-description: Zjistěte, jak opravit instalaci sady Visual Studio 2017
+description: Přečtěte si, jak opravit instalaci Visual Studia 2017
 ms.date: 07/31/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -13,73 +13,73 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 368ca6619a2fcff48cc3bcc7eb70913247b631b2
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114746"
 ---
 # <a name="repair-visual-studio"></a>Oprava sady Visual Studio
 
 ::: moniker range="vs-2017"
 
-Někdy instalaci sady Visual Studio stává poškozené. Toto můžete opravit opravu.
+V některých případě dojde k poškození nebo poškození instalace sady Visual Studio. Oprava to může opravit.
 
-1. Najděte **instalační program pro Visual Studio** v počítači.
+1. Vyhledejte **instalační program sady Visual Studio v** počítači.
 
-     Například v počítači se systémem Windows 10 Anniversary Update nebo novější, vyberte **Start**a poté přejděte k označení **V**, kde je hodnota uvedena jako **instalační program sady Visual Studio**.
+     Například v počítači se systémem Windows 10 Anniversary Update nebo novějším vyberte **Start**a pak přejděte na písmeno **V**, kde je uvedeno jako **Instalační služba sady Visual Studio**.
 
    > [!NOTE]
-   > V některých počítačích může instalační program sady Visual Studio uvedené pod písmenem **"M"** jako **instalační program Visual Studio**.
+   > V některých počítačích může být instalační program sady Visual Studio uveden pod písmenem **"M"** jako **Instalační služba sady Microsoft Visual Studio**.
    >
-   > Alternativně můžete najít instalační program sady Visual Studio v následujícím umístění: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
+   > Instalační program sady Visual Studio najdete také v následujícím umístění:`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
-1. Spusťte instalační program, klikněte na tlačítko **Další**a pak zvolte možnost **opravit**.
+1. Otevřete instalační program, zvolte **Další**a pak zvolte **Opravit**.
 
-    ![Opravit Visual Studio z Instalační program pro Visual Studio](media/repair-visual-studio.png "Opravit Visual Studio z Instalační program pro Visual Studio")
+    ![Oprava sady Visual Studio z instalačního programu sady Visual Studio](media/repair-visual-studio.png "Oprava sady Visual Studio z instalačního programu sady Visual Studio")
 
    > [!NOTE]
-   > Oprava sady Visual Studio obnoví prostředí. Místní úpravy, jako jsou například rozšíření pro jednotlivé uživatele nainstalované bez zvýšení oprávnění, nastavení uživatele a profily, se odeberou. Vaše synchronizovaná nastavení, jako jsou motivy, barvy, vazby klíčů, se obnoví.
+   > Oprava Visual Studio obnoví prostředí. Místní úpravy, jako jsou rozšíření pro jednotlivé uživatele nainstalované bez zvýšení oprávnění, nastavení uživatele a profily budou odebrány. Vaše synchronizované nastavení, jako jsou motivy, barvy, klíče vazby budou obnoveny.
    >
 
    > [!TIP]
-   > Možnost **opravit** se zobrazí pouze pro nainstalované instance sady Visual Studio. Pokud nevidíte možnost **opravit** , je pravděpodobné, že jste vybrali **více** ve verzi, která je uvedena v instalační program pro Visual Studio jako "dostupné" místo "nainstalováno".
+   > Možnost **Opravit** se zobrazí pouze pro nainstalované instance sady Visual Studio. Pokud nevidíte **možnost Opravit,** je pravděpodobné, že jste vybrali **více** ve verzi, která je uvedena v Instalační službě sady Visual Studio jako "K dispozici" spíše než "Nainstalováno".
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-1. Najdete instalační program sady Visual Studio v počítači.
+1. Vyhledejte instalační program sady Visual Studio v počítači.
 
-     Například v počítači se systémem Windows 10, vyberte **Start**a poté přejděte k označení **V**, kde je hodnota uvedena jako **instalační program sady Visual Studio**.
+     Například v počítači se systémem Windows 10 vyberte **start**a pak přejděte na písmeno **V**, kde je uvedeno jako **Instalační služba sady Visual Studio**.
 
-     ![Otevřete Instalační program pro Visual Studio](media/vs-2019/vs-installer-windows-start.png "Otevřete Instalační program pro Visual Studio")
+     ![Otevření Instalační ho programu Visual Studio](media/vs-2019/vs-installer-windows-start.png "Otevření Instalační ho programu Visual Studio")
 
      > [!NOTE]
-     > Instalační program pro Visual Studio můžete najít také v následujícím umístění:
+     > Instalační program sady Visual Studio najdete také v následujícím umístění:
      >
      > `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
-    Než budete pokračovat, bude pravděpodobně nutné aktualizovat instalační program. Pokud ano, postupujte podle pokynů.
+    Před pokračováním bude pravděpodobně nutné aktualizovat instalační program. Pokud ano, postupujte podle pokynů.
 
-1. V instalačním programu vyhledejte edici sady Visual Studio, kterou jste nainstalovali. Dále zvolte možnost **Další**a pak zvolte možnost **opravit**.
+1. V instalačním programu vyhledejte nainstalovanou edici sady Visual Studio. Dále zvolte **Další**a pak zvolte **Opravit**.
 
-     ![Opravit Visual Studio 2019](media/vs-2019/vs-installer-repair.png "Opravit Visual Studio 2019")
+     ![Oprava Visual Studio 2019](media/vs-2019/vs-installer-repair.png "Oprava Visual Studio 2019")
 
    > [!NOTE]
-   > Oprava sady Visual Studio obnoví prostředí. Místní úpravy, jako jsou například rozšíření pro jednotlivé uživatele nainstalované bez zvýšení oprávnění, nastavení uživatele a profily, se odeberou. Vaše synchronizovaná nastavení, jako jsou motivy, barvy, vazby klíčů, se obnoví.
+   > Oprava Visual Studio obnoví prostředí. Místní úpravy, jako jsou rozšíření pro jednotlivé uživatele nainstalované bez zvýšení oprávnění, nastavení uživatele a profily budou odebrány. Vaše synchronizované nastavení, jako jsou motivy, barvy, klíče vazby budou obnoveny.
    >
 
    > [!TIP]
-   > Možnost **opravit** se zobrazí pouze pro nainstalované instance sady Visual Studio. Pokud nevidíte možnost **opravit** , je pravděpodobné, že jste vybrali **více** ve verzi, která je uvedena v instalační program pro Visual Studio jako "dostupné" místo "nainstalováno".
+   > Možnost **Opravit** se zobrazí pouze pro nainstalované instance sady Visual Studio. Pokud nevidíte **možnost Opravit,** je pravděpodobné, že jste vybrali **více** ve verzi, která je uvedena v Instalační službě sady Visual Studio jako "K dispozici" spíše než "Nainstalováno".
 
 ::: moniker-end
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Instalace sady Visual Studio](install-visual-studio.md)
 * [Aktualizace sady Visual Studio](update-visual-studio.md)
 * [Odinstalace sady Visual Studio](uninstall-visual-studio.md)
-* [Řešení potíží s instalací a upgradem sady Visual Studio](troubleshooting-installation-issues.md)
+* [Poradce při potížích s instalací a upgradem sady Visual Studio](troubleshooting-installation-issues.md)

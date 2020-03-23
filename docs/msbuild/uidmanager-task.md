@@ -1,5 +1,5 @@
 ---
-title: Úloha UidManager | Microsoft Docs
+title: Úloha uidmanager | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -20,27 +20,27 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 37692c541fb2a6e9b2ccf61083dd383e56a79766
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77631520"
 ---
-# <a name="uidmanager-task"></a>UidManager – úloha
+# <a name="uidmanager-task"></a>Úloha UidManager
 
-<xref:Microsoft.Build.Tasks.Windows.UidManager> úloha kontroluje, aktualizuje nebo odebírá jedinečné identifikátory (UID), aby bylo možné lokalizovat všechny prvky XAML, které jsou zahrnuty ve zdrojových souborech XAML.
+Úkol <xref:Microsoft.Build.Tasks.Windows.UidManager> kontroluje, aktualizuje nebo odebere jedinečné identifikátory (UID), aby lokalizoval všechny prvky XAML, které jsou zahrnuty ve zdrojových souborech XAML.
 
 ## <a name="task-parameters"></a>Parametry úlohy
 
 | Parametr | Popis |
 |-------------------------| - |
-| `IntermediateDirectory` | Volitelný **řetězcový** parametr.<br /><br /> Určuje adresář, který se použije k zálohování zdrojových souborů XAML, které jsou určené parametrem **MarkupFiles** . |
-| `MarkupFiles` | Povinný parametr **ITaskItem []** .<br /><br /> Určuje zdrojové soubory XAML, které mají být zahrnuty pro kontrolu UID, aktualizaci nebo odebrání. |
-| `Task` | Povinný parametr **řetězce**<br /><br /> Určuje úlohu správy UID, kterou chcete provést. Platné možnosti jsou **check**, **Update**nebo **Remove**. |
+| `IntermediateDirectory` | Volitelný **parametr String.**<br /><br /> Určuje adresář, který se používá k zálohování zdrojových souborů XAML určených parametrem **MarkupFiles.** |
+| `MarkupFiles` | Povinný parametr **ITaskItem[].**<br /><br /> Určuje zdrojové soubory XAML, které mají být zahrnuty pro kontrolu, aktualizaci nebo odebrání UID. |
+| `Task` | Povinný **parametr String.**<br /><br /> Určuje úlohu správy UID, kterou chcete provést. Platné možnosti jsou **Kontrola**, **Aktualizace**nebo **Odebrat**. |
 
 ## <a name="example"></a>Příklad
 
- Následující příklad používá úlohu <xref:Microsoft.Build.Tasks.Windows.UidManager> ke kontrole, zda zadané zdrojové soubory XAML obsahují prvky XAML, které mají odpovídající identifikátory UID.
+ Následující příklad používá <xref:Microsoft.Build.Tasks.Windows.UidManager> úlohu ke kontrole, zda zadané zdrojové soubory XAML obsahují prvky XAML, které mají příslušná uid.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -58,9 +58,9 @@ ms.locfileid: "77631520"
 
 ## <a name="see-also"></a>Viz také
 
-- [Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)
+- [WPF MSBuild odkaz](../msbuild/wpf-msbuild-reference.md)
 - [Odkaz na úkol](../msbuild/wpf-msbuild-task-reference.md)
-- [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
+- [Odkaz na sestavení msbuild](../msbuild/msbuild-reference.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
-- [Sestavení aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
-- [Postupy: lokalizace aplikace](/dotnet/framework/wpf/advanced/how-to-localize-an-application)
+- [Vytvoření aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [Postup: Lokalizovat aplikaci](/dotnet/framework/wpf/advanced/how-to-localize-an-application)

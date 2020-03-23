@@ -18,26 +18,26 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 996c863612907593ce2c198d4910cda150737c3c
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115059"
 ---
 # <a name="understand-build-platforms"></a>Vysvětlení platforem sestavení
 
-Můžete ukládat různé verze řešení a vlastností projektu, které se vztahují na různé cílové platformy. Můžete například vytvořit konfiguraci ladění, která cílí na platformu x86 a konfiguraci ladění, která cílí na platformu x64. Aktivní platformu můžete rychle změnit, abyste mohli snadno vytvářet více konfigurací.
+Můžete uložit různé verze vlastností řešení a projektu, které platí pro různé cílové platformy. Můžete například vytvořit konfiguraci ladění, která se zaměřuje na platformu x86, a konfiguraci ladění, která se zaměřuje na platformu x64. Aktivní platformu můžete rychle změnit, abyste mohli snadno vytvořit více konfigurací.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Postupy: konfigurace projektů pro cílové platformy](../ide/how-to-configure-projects-to-target-platforms.md)\
-Vysvětluje, jak nakonfigurovat projekt pro cílení na konkrétní platformu.
+[Postup: Konfigurace projektů pro cílové platformy](../ide/how-to-configure-projects-to-target-platforms.md)\
+Vysvětluje, jak nakonfigurovat projekt pro cílovou konkrétní platformu.
 
-[Postupy: konfigurace projektů pro cílení na více platforem](../ide/how-to-configure-projects-to-target-multiple-platforms.md)\
-Vysvětluje, jak nakonfigurovat projekt tak, aby byl cílen na více platforem.
+[Postup: Konfigurace projektů pro cílení na více platforem](../ide/how-to-configure-projects-to-target-multiple-platforms.md)\
+Vysvětluje, jak nakonfigurovat projekt pro cílení na více platforem.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Návod: Sestavení aplikace](../ide/walkthrough-building-an-application.md)
-- [Sestavování a čištění projektů a řešení v aplikaci Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
+- [Vytváření a čištění projektů a řešení v sadě Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
 - [Kompilace a sestavení](../ide/compiling-and-building-in-visual-studio.md)

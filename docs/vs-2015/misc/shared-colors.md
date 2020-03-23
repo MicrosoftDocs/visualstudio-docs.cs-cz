@@ -1,5 +1,5 @@
 ---
-title: Sdílené barvy | Microsoft Docs
+title: Sdílené barvy | Dokumenty společnosti Microsoft
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -8,972 +8,972 @@ ms.assetid: 9d3186f3-07d2-441f-b33e-435e95d8a0b8
 caps.latest.revision: 11
 ms.author: brgeorge
 ms.openlocfilehash: 421ff85831bb611b655de2bc35f01423b61921a2
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78410077"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79302404"
 ---
 # <a name="shared-colors"></a>Sdílené barvy
 Sem vložte úvod.  
   
 ## <a name="shared-colors"></a>Sdílené barvy  
- Při navrhování uživatelského rozhraní, který používá společné prvky prostředí sady Visual Studio, nebo chcete prvek rozhraní pro zajištění konzistence s podobné funkce, použijte existující token názvy v definičních souborech balíčku vybrat a přiřadit barvy. Tím se zajistí, že vaše uživatelské rozhraní zůstane konzistentní s celkové prostředí sady Visual Studio a že se automaticky aktualizuje při přidávání nebo aktualizaci motivy.  
+ Při navrhování uživatelského rozhraní, které používá běžné prvky prostředí sady Visual Studio, nebo chcete, aby byl prvek rozhraní konzistentní s podobnými funkcemi, použijte existující názvy tokenů v souborech definice balíčku k výběru a přiřazení barev. Tím zajistíte, že vaše ui zůstane konzistentní s celkovým prostředím sady Visual Studio a že se automaticky aktualizuje při přidání nebo aktualizaci motivů.  
   
- Tento článek popisuje obecné prvky uživatelského rozhraní a token názvy, které používají, které můžete využít při sestavování podobným uživatelským rozhraním. Konkrétní informace o tom, jak získat přístup k těmto barevným tokenům, najdete v tématu [Služba VSColor](../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService).  
+ Tento článek popisuje běžné prvky uživatelského rozhraní a názvy tokenů, které používají, na které můžete odkazovat při vytváření podobného uživatelského rozhraní. Konkrétní informace o tom, jak získat přístup k těmto tokenům barev, naleznete [v tématu VSColor Service](../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService).  
   
- Nezapomeňte použít token názvy správně:  
+ Ujistěte se, že používáte názvy tokenů správně:  
   
-- **Použijte názvy tokenů založené na funkci, nikoli na samotné barvě.** Společné sdílené barvy jsou spojeny s prvky určité rozhraní a jsou určeny pouze pro stejné nebo podobné funkce. Například nepoužívejte soubory Barva při stisknutí tlačítka pole se seznamem pro animace průběhu pokryjte pouze z důvodu jako barva. Funkce pole se seznamem a animace se liší, a pokud barva přidružené změny pole se seznamem, už může být vhodné barvu pro prvek animace. Konzistentní použití barev pomůže zorientovat uživatelům a zabránit nejasnostem.  
+- **Používejte názvy tokenů na základě funkce, nikoli na samotné barvě.** Společné sdílené barvy jsou přidruženy k určitým prvkům rozhraní a jsou určeny pouze pro stejné nebo podobné funkce. Například nepoužívejte znovu barvu lisovaného pole se seznamem pro animaci průběhu otáčení jen proto, že se vám barva líbí. Funkce pole se seznamem a animace se liší a pokud se změní barva přidružená k poli se seznamem, nemusí již být vhodnou barvou pro prvek animace. Konzistentní používání barev pomáhá orientovat uživatele a zabránit nejasnostem.  
   
-- **Používejte barvy pozadí a textu ve správné kombinaci.** Barvy pozadí, které jsou určeny pro použití s textem bude mít k přidružené textového barvu. Nepoužívejte barvy textu, než který je určen pro pozadí. Pokud není k přidružené barvy, nepoužívejte pro všechny povrch, na kterém budete chtít zobrazit text barvy pozadí. Nejde přečíst rozhraní může vést k jiné kombinace barvy textu a pozadí.  
+- **Používejte barvy pozadí a textu ve správné kombinaci.** Barvy pozadí, které jsou určeny k použití s textem, budou mít přidruženou barvu textu. Nepoužívejte jiné barvy textu, než které jsou určeny pro toto pozadí. Pokud není přidružená barva textu, nepoužívejte tuto barvu pozadí pro žádný povrch, na kterém očekáváte zobrazení textu. Jiné kombinace barev textu a pozadí mohou mít za následek nečitelné rozhraní.  
   
-- **Používejte barvy ovládacích prvků, které jsou vhodné pro jejich umístění.** V některých stavech některé ovládací prvky sady Visual Studio nemají samostatné ohraničení a barvy pozadí. Místo toho že sbírání tyto barvy z plochy za nimi stojí. Ujistěte se, že vždy používáte token názvy, které jsou vhodné pro umístění, ve kterém jsou umístění ovládacího prvku.  
+- **Použijte ovládací barvy, které jsou vhodné pro jejich umístění.** V některých státech některé ovládací prvky sady Visual Studio nemají samostatné barvy ohraničení a pozadí. Místo toho, oni vyzvednout ty barvy z povrchů za nimi. Ujistěte se, že vždy používáte názvy tokenů, které jsou vhodné pro umístění, kam umísťujete ovládací prvek.  
   
 > [!IMPORTANT]
-> Nepoužívejte tokeny nacházející se v kategoriích "Úvodní stránka" nebo "jablečná".  
+> Nepoužívejte žetony nalezené v kategoriích "Úvodní stránka" nebo "Jablečný mošt"!  
   
-### <a name="command-structures"></a>Příkaz struktury  
+### <a name="command-structures"></a>Struktury příkazů  
   
-#### <a name="BKMK_CommandMenus"></a>Nabídek  
- Nabídky se můžou vyskytovat na několika místech Visual Studio 2013: hlavní panel nabídek, vložený v oknech dokumentů nebo nástrojů, nebo na různých místech v prostředí IDE, klikněte pravým tlačítkem myši. Implementace nabídky spojené s další prvky uživatelského rozhraní jsou popsány v části pro odpovídající prvek. Vždy byste měli používat standardní nabídky implementace poskytovaných prostředím sady Visual Studio. V některých výjimečných případech ale nebudete mít přístup k standardní nabídky sady Visual Studio. V těchto situacích nepoužívejte následující názvy token k zajištění, že vaše uživatelské rozhraní je v souladu s jiným nabídkám v sadě Visual Studio.  
+#### <a name="menus"></a><a name="BKMK_CommandMenus"></a>Nabídky  
+ Nabídky se mohou vyskytovat na několika místech v rámci sady Visual Studio 2013: na hlavním panelu nabídek, vloženém do oken dokumentů nebo nástrojů nebo při kliknutí pravým tlačítkem myši na různých místech v celém integrovaném prostředí. Implementace nabídek přidružených k jiným prvkům uživatelského rozhraní jsou popsány v části pro příslušný prvek. Vždy byste měli použít standardní implementaci nabídky poskytované prostředí sady Visual Studio. V některých výjimečných případech však nemusí mít přístup ke standardním nabídkám sady Visual Studio. V těchto situacích použijte následující názvy tokenů, abyste zajistili, že vaše ui je konzistentní s ostatními nabídkami v sadě Visual Studio.  
   
- ![Nabídky Redline](../extensibility/ux-guidelines/media/0303-000-menuredline.png "0303 – 000_MenuRedline")  
+ ![Červená čára nabídek](../extensibility/ux-guidelines/media/0303-000-menuredline.png "0303-000_MenuRedline")  
   
-Použití...  
-- vždy, když je potřeba vytvořit vlastní nabídku.  
+Použít...  
+- kdykoli potřebujete vytvořit vlastní nabídku.  
   
-- Pokud máte nové komponenty uživatelského rozhraní, který chcete porovnat nabídek sady Visual Studio.  
+- Pokud máte novou komponentu uzly, které chcete, aby odpovídaly nabídky sady Visual Studio.  
   
-Nepoužívejte...  
-Barva pozadí samostatně. Vždy použijte kombinaci na pozadí a popředí uvedené.  
+Nepoužívejte ...  
+samotnou barvu pozadí. Vždy používejte kombinaci pozadí a popředí, jak je uvedeno.  
   
 ##### <a name="menu-title"></a>Název nabídky  
- Názvy nabídek se skládají z na pozadí, ohraničení a text nadpisu, jakož i volitelný glyf, obvykle, když se nachází v nabídce v panelu příkazů.  
+ Názvy nabídek se skládají z pozadí, ohraničení a textu nadpisu a volitelného glyfu, obvykle když se nabídka nachází v panelu příkazů.  
   
- ![Název nabídky Redline](../extensibility/ux-guidelines/media/0303-001-menutitleredline.png "0303 – 001_MenuTitleRedline")  
+ ![Červená čára názvu nabídky](../extensibility/ux-guidelines/media/0303-001-menutitleredline.png "0303-001_MenuTitleRedline")  
   
-Použití...  
-vždy, když vytváříte název vlastní nabídku.  
+Použít...  
+při každém vytváření vlastního názvu nabídky.  
   
 Nepoužívejte...  
-- pro všechno, co nechcete vždy odpovídat názvu nabídky.  
+- pro vše, co nechcete vždy odpovídat názvu nabídky.  
   
-- v libovolné na pozadí a popředí jinými než která byla specifikována.  
+- v jakékoli kombinaci pozadí/popředí, než je uvedeno.  
   
   **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Výchozí název nabídky](../extensibility/ux-guidelines/media/0303-002-menutitledefault.png "0303 – 002_MenuTitleDefault")<br /><br /> **Název nabídky**|Pozadí|Žádná|  
-|![Výchozí název nabídky](../extensibility/ux-guidelines/media/0303-002-menutitledefault.png "0303 – 002_MenuTitleDefault")<br /><br /> **Název nabídky**|Popředí (Text)|`Environment.CommandBarTextActive`|  
-|![Název nabídky s výchozím glyfem](../extensibility/ux-guidelines/media/0303-003-menutitlewithglyphdefault.png "0303 – 003_MenuTitleWithGlyphDefault")<br /><br /> **Název nabídky s glyfem**|Popředí (piktogram)|`Environment.CommandBarMenuGlyph`|  
-|![Název nabídky s výchozím glyfem](../extensibility/ux-guidelines/media/0303-003-menutitlewithglyphdefault.png "0303 – 003_MenuTitleWithGlyphDefault")<br /><br /> **Název nabídky s glyfem**|Ohraničení|Žádná|  
+|![Výchozí název nabídky](../extensibility/ux-guidelines/media/0303-002-menutitledefault.png "0303-002_MenuTitleDefault")<br /><br /> **Název nabídky**|Pozadí|Žádný|  
+|![Výchozí název nabídky](../extensibility/ux-guidelines/media/0303-002-menutitledefault.png "0303-002_MenuTitleDefault")<br /><br /> **Název nabídky**|Popředí (text)|`Environment.CommandBarTextActive`|  
+|![Název nabídky s výchozím glyfem](../extensibility/ux-guidelines/media/0303-003-menutitlewithglyphdefault.png "0303-003_MenuTitleWithGlyphDefault")<br /><br /> **Název nabídky s glyfem**|Popředí (glyf)|`Environment.CommandBarMenuGlyph`|  
+|![Název nabídky s výchozím glyfem](../extensibility/ux-guidelines/media/0303-003-menutitlewithglyphdefault.png "0303-003_MenuTitleWithGlyphDefault")<br /><br /> **Název nabídky s glyfem**|Ohraničení|Žádný|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Název nabídky při najetí myší](../extensibility/ux-guidelines/media/0303-004-menutitlehover.png "0303 – 004_MenuTitleHover")<br /><br /> **Název nabídky**|Pozadí|`Environment.CommandBarMouseOverBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Název nabídky při najetí myší](../extensibility/ux-guidelines/media/0303-004-menutitlehover.png "0303 – 004_MenuTitleHover")<br /><br /> **Název nabídky**|Popředí (Text)|`Environment.CommandBarTextHover`|  
-|![Název nabídky s glyfem při najetí myší](../extensibility/ux-guidelines/media/0303-005-menutitlewithglyphhover.png "0303 – 005_MenuTitleWithGlyphHover")<br /><br /> **Název nabídky s glyfem**|Popředí (piktogram)|`Environment.CommandBarMenuMouseOverGlyph`|  
-|![Název nabídky s glyfem při najetí myší](../extensibility/ux-guidelines/media/0303-005-menutitlewithglyphhover.png "0303 – 005_MenuTitleWithGlyphHover")<br /><br /> **Název nabídky s glyfem**|Ohraničení|`Environment.CommandBarBorder`|  
+|![Název nabídky při najetí přes](../extensibility/ux-guidelines/media/0303-004-menutitlehover.png "0303-004_MenuTitleHover")<br /><br /> **Název nabídky**|Pozadí|`Environment.CommandBarMouseOverBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Název nabídky při najetí přes](../extensibility/ux-guidelines/media/0303-004-menutitlehover.png "0303-004_MenuTitleHover")<br /><br /> **Název nabídky**|Popředí (text)|`Environment.CommandBarTextHover`|  
+|![Název nabídky s glyfem na jevu](../extensibility/ux-guidelines/media/0303-005-menutitlewithglyphhover.png "0303-005_MenuTitleWithGlyphHover")<br /><br /> **Název nabídky s glyfem**|Popředí (glyf)|`Environment.CommandBarMenuMouseOverGlyph`|  
+|![Název nabídky s glyfem na jevu](../extensibility/ux-guidelines/media/0303-005-menutitlewithglyphhover.png "0303-005_MenuTitleWithGlyphHover")<br /><br /> **Název nabídky s glyfem**|Ohraničení|`Environment.CommandBarBorder`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Stisknutí názvu nabídky](../extensibility/ux-guidelines/media/0303-006-menutitlepressed.png "0303 – 006_MenuTitlePressed")<br /><br /> **Název nabídky**|Pozadí|`Environment.CommandBarMenuBackgroundGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Stisknutí názvu nabídky](../extensibility/ux-guidelines/media/0303-006-menutitlepressed.png "0303 – 006_MenuTitlePressed")<br /><br /> **Název nabídky**|Popředí (Text)|`Environment.CommandBarTextActive`|  
-|![Název nabídky se stisknutým glyfem](../extensibility/ux-guidelines/media/0303-007-menutitlewithglyphpressed.png "0303 – 007_MenuTitleWithGlyphPressed")<br /><br /> **Název nabídky s glyfem**|Popředí (piktogram)|`Environment.CommandBarMenuMouseDownGlyph`|  
-|![Název nabídky se stisknutým glyfem](../extensibility/ux-guidelines/media/0303-007-menutitlewithglyphpressed.png "0303 – 007_MenuTitleWithGlyphPressed")<br /><br /> **Název nabídky s glyfem**|Ohraničení|`Environment.CommandBarMenuBorder`<br /><br /> Pouze vlevo nahoře a pravé straně.|  
+|![Název nabídky stisknut](../extensibility/ux-guidelines/media/0303-006-menutitlepressed.png "0303-006_MenuTitlePressed")<br /><br /> **Název nabídky**|Pozadí|`Environment.CommandBarMenuBackgroundGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Název nabídky stisknut](../extensibility/ux-guidelines/media/0303-006-menutitlepressed.png "0303-006_MenuTitlePressed")<br /><br /> **Název nabídky**|Popředí (text)|`Environment.CommandBarTextActive`|  
+|![Název nabídky s flyfy](../extensibility/ux-guidelines/media/0303-007-menutitlewithglyphpressed.png "0303-007_MenuTitleWithGlyphPressed")<br /><br /> **Název nabídky s glyfem**|Popředí (glyf)|`Environment.CommandBarMenuMouseDownGlyph`|  
+|![Název nabídky s flyfy](../extensibility/ux-guidelines/media/0303-007-menutitlewithglyphpressed.png "0303-007_MenuTitleWithGlyphPressed")<br /><br /> **Název nabídky s glyfem**|Ohraničení|`Environment.CommandBarMenuBorder`<br /><br /> Pouze na levé, horní a pravé straně.|  
   
  **Disabled** (Zakázáno)  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Název nabídky se zakázaným glyfem](../extensibility/ux-guidelines/media/0303-008-menutitlewithglyphdisabled.png "0303 – 008_MenuTitleWithGlyphDisabled")<br /><br /> **Název nabídky s glyfem**|Pozadí|Žádná|  
-|![Název nabídky se zakázaným glyfem](../extensibility/ux-guidelines/media/0303-008-menutitlewithglyphdisabled.png "0303 – 008_MenuTitleWithGlyphDisabled")<br /><br /> **Název nabídky s glyfem**|Popředí (Text)|`Environment.CommandBarTextInactive`|  
-|![Název nabídky se zakázaným glyfem](../extensibility/ux-guidelines/media/0303-008-menutitlewithglyphdisabled.png "0303 – 008_MenuTitleWithGlyphDisabled")<br /><br /> **Název nabídky s glyfem**|Popředí (piktogram)|`Environment.CommandBarTextInactive`|  
-|![Název nabídky se zakázaným glyfem](../extensibility/ux-guidelines/media/0303-008-menutitlewithglyphdisabled.png "0303 – 008_MenuTitleWithGlyphDisabled")<br /><br /> **Název nabídky s glyfem**|Ohraničení|Žádná|  
+|![Název nabídky se zakázaným glyfem](../extensibility/ux-guidelines/media/0303-008-menutitlewithglyphdisabled.png "0303-008_MenuTitleWithGlyphDisabled")<br /><br /> **Název nabídky s glyfem**|Pozadí|Žádný|  
+|![Název nabídky se zakázaným glyfem](../extensibility/ux-guidelines/media/0303-008-menutitlewithglyphdisabled.png "0303-008_MenuTitleWithGlyphDisabled")<br /><br /> **Název nabídky s glyfem**|Popředí (text)|`Environment.CommandBarTextInactive`|  
+|![Název nabídky se zakázaným glyfem](../extensibility/ux-guidelines/media/0303-008-menutitlewithglyphdisabled.png "0303-008_MenuTitleWithGlyphDisabled")<br /><br /> **Název nabídky s glyfem**|Popředí (glyf)|`Environment.CommandBarTextInactive`|  
+|![Název nabídky se zakázaným glyfem](../extensibility/ux-guidelines/media/0303-008-menutitlewithglyphdisabled.png "0303-008_MenuTitleWithGlyphDisabled")<br /><br /> **Název nabídky s glyfem**|Ohraničení|Žádný|  
   
 ##### <a name="menu"></a>Nabídka  
- Individuální nabídky položky se skládá z text nabídky a volitelné ikony, zaškrtněte políčko nebo podnabídka glyfů. Jeho textu a pozadí Změna barvy při najetí myší. Tento token barva je pár na pozadí a popředí.  
+ Jednotlivá položka nabídky se skládá z textu nabídky a volitelné ikony, zaškrtávacího políčka nebo glyfu podnabídky. Jeho pozadí a barva textu se mění při přechodu. Tento token barev je dvojice pozadí/popředí.  
   
- ![Položky nabídky Redline](../extensibility/ux-guidelines/media/0303-009-menuitemredline.png "0303 – 009_MenuItemRedline")  
+ ![Červené položky nabídky](../extensibility/ux-guidelines/media/0303-009-menuitemredline.png "0303-009_MenuItemRedline")  
   
- Použití...  
- pro všechny rozevíracího seznamu, který se spustí z panelu příkazů a nabídek.  
+ Použít...  
+ pro všechny rozevírací seznamy, které jsou spuštěny z panelu nabídek nebo panelu příkazů.  
   
 Nepoužívejte...  
-- pro všechny rozevíracího seznamu, který se nachází v jiném kontextu.  
+- pro všechny rozevírací seznam, ke kterému dochází v jiném kontextu.  
 
-- v libovolné na pozadí a popředí jinými než která byla specifikována.  
+- v jakékoli kombinaci pozadí/popředí, než je uvedeno.  
   
   **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Výchozí nabídka](../extensibility/ux-guidelines/media/0303-010-menudefault.png "0303 – 010_MenuDefault")<br /><br /> **Nabídka**|Pozadí|`Environment.CommandBarMenuBackgroundGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Výchozí nabídka](../extensibility/ux-guidelines/media/0303-010-menudefault.png "0303 – 010_MenuDefault")<br /><br /> **Nabídka**|Popředí (Text)|`Environment.CommandBarTextActive`|  
-|![Výchozí nabídka](../extensibility/ux-guidelines/media/0303-010-menudefault.png "0303 – 010_MenuDefault")<br /><br /> **Nabídka**|Popředí (podnabídky piktogram)|`Environment.CommandBarMenuSubmenuGlyph`|  
-|![Výchozí nabídka](../extensibility/ux-guidelines/media/0303-010-menudefault.png "0303 – 010_MenuDefault")<br /><br /> **Nabídka**|Ohraničení|`Environment.CommandBarMenuBorder`|  
-|![Výchozí nabídka](../extensibility/ux-guidelines/media/0303-010-menudefault.png "0303 – 010_MenuDefault")<br /><br /> **Nabídka**|Pozadí ikony kanálu|`Environment.CommandBarMenuIconBackground`|  
-|![Výchozí nabídka](../extensibility/ux-guidelines/media/0303-010-menudefault.png "0303 – 010_MenuDefault")<br /><br /> **Nabídka**|Oddělovač|`Environment.CommandBarMenuSeparator`|  
-|![Výchozí nabídka](../extensibility/ux-guidelines/media/0303-010-menudefault.png "0303 – 010_MenuDefault")<br /><br /> **Nabídka**|Stín|`Environment.DropShadowBackground`|  
-|![Zaškrtnutá nabídka](../extensibility/ux-guidelines/media/0303-011-menuchecked.png "0303 – 011_MenuChecked")<br /><br /> **Kontrolovaný**|Zaškrtávací políčko|`Environment.CommandBarCheckBox`|  
-|![Zaškrtnutá nabídka](../extensibility/ux-guidelines/media/0303-011-menuchecked.png "0303 – 011_MenuChecked")<br /><br /> **Kontrolovaný**|Zaškrtávací políčko na pozadí|`Environment.CommandBarSelectedIcon`|  
-|![Vybraná nabídka](../extensibility/ux-guidelines/media/0303-012-menuselected.png "0303 – 012_MenuSelected")<br /><br /> **Vyberte**|Pozadí ikony|`Environment.CommandBarSelected`|  
-|![Vybraná nabídka](../extensibility/ux-guidelines/media/0303-012-menuselected.png "0303 – 012_MenuSelected")<br /><br /> **Vyberte**|Okraj ikony|`Environment.CommandBarSelectedBorder`|  
+|![Výchozí nabídka](../extensibility/ux-guidelines/media/0303-010-menudefault.png "0303-010_MenuDefault")<br /><br /> **Nabídka**|Pozadí|`Environment.CommandBarMenuBackgroundGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Výchozí nabídka](../extensibility/ux-guidelines/media/0303-010-menudefault.png "0303-010_MenuDefault")<br /><br /> **Nabídka**|Popředí (text)|`Environment.CommandBarTextActive`|  
+|![Výchozí nabídka](../extensibility/ux-guidelines/media/0303-010-menudefault.png "0303-010_MenuDefault")<br /><br /> **Nabídka**|Popředí (glyf podnabídky)|`Environment.CommandBarMenuSubmenuGlyph`|  
+|![Výchozí nabídka](../extensibility/ux-guidelines/media/0303-010-menudefault.png "0303-010_MenuDefault")<br /><br /> **Nabídka**|Ohraničení|`Environment.CommandBarMenuBorder`|  
+|![Výchozí nabídka](../extensibility/ux-guidelines/media/0303-010-menudefault.png "0303-010_MenuDefault")<br /><br /> **Nabídka**|Pozadí kanálu ikony|`Environment.CommandBarMenuIconBackground`|  
+|![Výchozí nabídka](../extensibility/ux-guidelines/media/0303-010-menudefault.png "0303-010_MenuDefault")<br /><br /> **Nabídka**|Oddělovač|`Environment.CommandBarMenuSeparator`|  
+|![Výchozí nabídka](../extensibility/ux-guidelines/media/0303-010-menudefault.png "0303-010_MenuDefault")<br /><br /> **Nabídka**|Stín|`Environment.DropShadowBackground`|  
+|![Nabídka zaškrtnuta](../extensibility/ux-guidelines/media/0303-011-menuchecked.png "0303-011_MenuChecked")<br /><br /> **Zaškrtnuté**|Zaškrtnutí|`Environment.CommandBarCheckBox`|  
+|![Nabídka zaškrtnuta](../extensibility/ux-guidelines/media/0303-011-menuchecked.png "0303-011_MenuChecked")<br /><br /> **Zaškrtnuté**|Zkontrolujte pozadí značky|`Environment.CommandBarSelectedIcon`|  
+|![Vybraná nabídka](../extensibility/ux-guidelines/media/0303-012-menuselected.png "0303-012_MenuSelected")<br /><br /> **Vybráno**|Pozadí ikony|`Environment.CommandBarSelected`|  
+|![Vybraná nabídka](../extensibility/ux-guidelines/media/0303-012-menuselected.png "0303-012_MenuSelected")<br /><br /> **Vybráno**|Ohraničení ikony|`Environment.CommandBarSelectedBorder`|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Najeďte do nabídky](../extensibility/ux-guidelines/media/0303-013-menuhover.png "0303 – 013_MenuHover")<br /><br /> **Položka nabídky**|Pozadí|`Environment.CommandBarMenuItemMouseOver`|  
-|![Najeďte do nabídky](../extensibility/ux-guidelines/media/0303-013-menuhover.png "0303 – 013_MenuHover")<br /><br /> **Položka nabídky**|Popředí (Text)|`Environment.CommandBarMenuItemMouseOver`|  
-|![Najeďte do nabídky](../extensibility/ux-guidelines/media/0303-013-menuhover.png "0303 – 013_MenuHover")<br /><br /> **Položka nabídky**|Popředí (podnabídky piktogram)|`Environment.CommandBarMenuMouseOverSubmenuGlyph`|  
-|![Kontrola najetí myší v nabídce](../extensibility/ux-guidelines/media/0303-014-menuhoverchecked.png "0303 – 014_MenuHoverChecked")<br /><br /> **Kontrolovaný**|Zaškrtávací políčko|`Environment.CommandBarCheckBoxMouseOver`|  
-|![Kontrola najetí myší v nabídce](../extensibility/ux-guidelines/media/0303-014-menuhoverchecked.png "0303 – 014_MenuHoverChecked")<br /><br /> **Kontrolovaný**|Zaškrtávací políčko na pozadí|`Environment.CommandBarHoverOverSelectedIcon`|  
-|![Výběr myši v nabídce](../extensibility/ux-guidelines/media/0303-015-menuhoverselected.png "0303 – 015_MenuHoverSelected")<br /><br /> **Vyberte**|Pozadí ikony|`Environment.CommandBarHoverOverSelected`|  
-|![Výběr myši v nabídce](../extensibility/ux-guidelines/media/0303-015-menuhoverselected.png "0303 – 015_MenuHoverSelected")<br /><br /> **Vyberte**|Okraj ikony|`Environment.CommandBarHoverOverSelectedIconBorder`|  
+|![Nabídka najetá přes](../extensibility/ux-guidelines/media/0303-013-menuhover.png "0303-013_MenuHover")<br /><br /> **Položka nabídky**|Pozadí|`Environment.CommandBarMenuItemMouseOver`|  
+|![Nabídka najetá přes](../extensibility/ux-guidelines/media/0303-013-menuhover.png "0303-013_MenuHover")<br /><br /> **Položka nabídky**|Popředí (text)|`Environment.CommandBarMenuItemMouseOver`|  
+|![Nabídka najetá přes](../extensibility/ux-guidelines/media/0303-013-menuhover.png "0303-013_MenuHover")<br /><br /> **Položka nabídky**|Popředí (glyf podnabídky)|`Environment.CommandBarMenuMouseOverSubmenuGlyph`|  
+|![Nabídka je zaškrtnutá.](../extensibility/ux-guidelines/media/0303-014-menuhoverchecked.png "0303-014_MenuHoverChecked")<br /><br /> **Zaškrtnuté**|Zaškrtnutí|`Environment.CommandBarCheckBoxMouseOver`|  
+|![Nabídka je zaškrtnutá.](../extensibility/ux-guidelines/media/0303-014-menuhoverchecked.png "0303-014_MenuHoverChecked")<br /><br /> **Zaškrtnuté**|Zkontrolujte pozadí značky|`Environment.CommandBarHoverOverSelectedIcon`|  
+|![Nabídka je vybraná.](../extensibility/ux-guidelines/media/0303-015-menuhoverselected.png "0303-015_MenuHoverSelected")<br /><br /> **Vybráno**|Pozadí ikony|`Environment.CommandBarHoverOverSelected`|  
+|![Nabídka je vybraná.](../extensibility/ux-guidelines/media/0303-015-menuhoverselected.png "0303-015_MenuHoverSelected")<br /><br /> **Vybráno**|Ohraničení ikony|`Environment.CommandBarHoverOverSelectedIconBorder`|  
   
  **Disabled** (Zakázáno)  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Nabídka zakázaná](../extensibility/ux-guidelines/media/0303-016-menudisabled.png "0303 – 016_MenuDisabled")<br /><br /> Položka nabídky|Popředí (Text)|`Environment.CommandBarTextInactive`|  
-|![Nabídka zakázaná](../extensibility/ux-guidelines/media/0303-016-menudisabled.png "0303 – 016_MenuDisabled")<br /><br /> Položka nabídky|Popředí (podnabídky piktogram)|`Environment.CommandBarMenuSubmenuGlyph`|  
-|![Zaškrtnutá nabídka zakázaná](../extensibility/ux-guidelines/media/0303-017-menudisabledchecked.png "0303 – 017_MenuDisabledChecked")<br /><br /> Zaškrtnuté|Zaškrtávací políčko|`Environment.CommandBarCheckBoxDisabled`|  
-|![Zaškrtnutá nabídka zakázaná](../extensibility/ux-guidelines/media/0303-017-menudisabledchecked.png "0303 – 017_MenuDisabledChecked")<br /><br /> Zaškrtnuté|Zaškrtávací políčko na pozadí|`Environment.CommandBarSelectedIconDisabled`|  
+|![Nabídka je zakázána.](../extensibility/ux-guidelines/media/0303-016-menudisabled.png "0303-016_MenuDisabled")<br /><br /> Položka nabídky|Popředí (text)|`Environment.CommandBarTextInactive`|  
+|![Nabídka je zakázána.](../extensibility/ux-guidelines/media/0303-016-menudisabled.png "0303-016_MenuDisabled")<br /><br /> Položka nabídky|Popředí (glyf podnabídky)|`Environment.CommandBarMenuSubmenuGlyph`|  
+|![Nabídka zakázána zaškrtnuto](../extensibility/ux-guidelines/media/0303-017-menudisabledchecked.png "0303-017_MenuDisabledChecked")<br /><br /> Zaškrtnuté|Zaškrtnutí|`Environment.CommandBarCheckBoxDisabled`|  
+|![Nabídka zakázána zaškrtnuto](../extensibility/ux-guidelines/media/0303-017-menudisabledchecked.png "0303-017_MenuDisabledChecked")<br /><br /> Zaškrtnuté|Zkontrolujte pozadí značky|`Environment.CommandBarSelectedIconDisabled`|  
   
 #### <a name="command-bar"></a>Panel příkazů  
- Na panelu příkazů lze zobrazit na více místech v rámci rozhraní IDE sady Visual Studio, zejména příkaz polici a embedded v nástroji nebo okna dokumentu.  
+ Panel příkazů se může zobrazit na více místech v integrovaném prostředí Sady Visual Studio, zejména na polici příkazů a vložený do oken nástrojů nebo dokumentů.  
   
- Obecně platí vždy používejte implementace standardních příkazů panelu poskytovaných prostředím sady Visual Studio. Pomocí standardní mechanismus zajišťuje, že se správně zobrazí všechny podrobnosti o visual a interaktivní prvky, ke které přistupuje konzistentní s jinými ovládacími prvky sady Visual Studio příkazového řádku. Nicméně pokud je nutné, můžete vytvořit vlastní panel příkazů, ujistěte se, že správně pomocí následující token názvy stylu.  
+ Obecně vždy používejte standardní implementaci panelu příkazů poskytovanou prostředím sady Visual Studio. Použití standardní mechanismus zajišťuje, že všechny vizuální podrobnosti se zobrazí správně a že interaktivní prvky, se bude chovat konzistentně s ostatními ovládacími prvky panelu příkazů sady Visual Studio. Pokud je však nutné vytvořit vlastní panel příkazů, ujistěte se, že styl správně pomocí následující názvy tokenů.  
   
- ![Redline panelu příkazů](../extensibility/ux-guidelines/media/0303-018-commandbarredline.png "0303 – 018_CommandBarRedline")  
+ ![Červený řádek panelu příkazů](../extensibility/ux-guidelines/media/0303-018-commandbarredline.png "0303-018_CommandBarRedline")  
   
- ![Redline tlačítka přetečení](../extensibility/ux-guidelines/media/0303-019-overflowbuttonredline.png "0303 – 019_OverflowButtonRedline")  
+ ![Červené tlačítko přetečení](../extensibility/ux-guidelines/media/0303-019-overflowbuttonredline.png "0303-019_OverflowButtonRedline")  
   
- Použití...  
- na místech, kde je třeba vložené příkaz panelu ale nebudou moct používat standardní implementace panel příkaz sady Visual Studio.  
-  
-Nepoužívejte...  
-- pro prvky uživatelského rozhraní, které nejsou podobný panelu příkazů.  
-
-- pro příkaz součástí než ty, pro kterou token názvy jsou určené.  
-  
-##### <a name="command-bar-group"></a>Příkaz pruhový graf  
- Příkaz pruhový graf se skládá ze sady související ovládací prvky stavového řádku příkaz a může obsahovat libovolný počet tlačítek rozdělení tlačítek, rozevíracích nabídek, pole se seznamem nebo nabídky. Barvy pro tyto ovládací prvky se budou řídit token názvy a jsou jednotlivě jinde popsaných v této příručce. Oddělovací čáry se používá k rozdělení skupiny panelu příkazů na související podskupiny.  
-  
- ![Redline skupiny panelů příkazů](../extensibility/ux-guidelines/media/0303-020-commandbargroupredline.png "0303 – 020_CommandBarGroupRedline")  
-  
- Použití...  
- na místech, kde je třeba vložené příkaz panelu ale nebudou moct používat standardní implementace panel příkaz sady Visual Studio.  
+ Použít...  
+ v místech, kde potřebujete vložený panel příkazů, ale nemůžete použít standardní implementaci panelu příkazů sady Visual Studio.  
   
 Nepoužívejte...  
-- pro prvky uživatelského rozhraní, které nejsou podobný panelu příkazů.  
+- pro prvky uživatelského rozhraní, které nejsou podobné panelu příkazů.  
 
-- pro příkaz součástí než ty, pro kterou token názvy jsou určené.  
+- pro komponenty panelu příkazů jiné než ty, pro které jsou určeny názvy tokenů.  
+  
+##### <a name="command-bar-group"></a>Skupina panelu příkazů  
+ Skupina panelu příkazů se skládá ze související sady ovládacích prvků panelu příkazů a může obsahovat libovolný počet tlačítek, rozdělených tlačítek, rozevíracích nabídek, polí se seznamem nebo nabídek. Barvy pro tyto ovládací prvky jsou regulovány samostatné názvy tokenů a jsou popsány jednotlivě jinde v této příručce. Oddělovací čára se používá k rozdělení skupiny panelu příkazů do souvisejících podskupin.  
+  
+ ![Červená čára skupiny panelu příkazů](../extensibility/ux-guidelines/media/0303-020-commandbargroupredline.png "0303-020_CommandBarGroupRedline")  
+  
+ Použít...  
+ v místech, kde potřebujete vložený panel příkazů, ale nemůžete použít standardní implementaci panelu příkazů sady Visual Studio.  
+  
+Nepoužívejte...  
+- pro prvky uživatelského rozhraní, které nejsou podobné panelu příkazů.  
+
+- pro komponenty panelu příkazů jiné než ty, pro které jsou určeny názvy tokenů.  
   
   **Výchozí** (žádné jiné stavy)  
   
-|Prvek|Název tokenu: Category.color|  
+|Element|Název tokenu: Category.color|  
 |-------------|--------------------------------|  
-|Pozadí|`Environment.CommandBarGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
+|Pozadí|`Environment.CommandBarGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
 |Ohraničení|`Environment.CommandBarToolBarBorder`|  
-|Úchyt pro přetažení|`Environment.CommandBarDragHandle`|  
+|Táhlo přetažení|`Environment.CommandBarDragHandle`|  
 |Oddělovač|`Environment.CommandBarToolBarSeparator`<br /><br /> `Environment.CommandBarToolBarSeparatorHighlight`|  
   
 ##### <a name="command-icons"></a>Ikony příkazů  
- ![Ikona příkazu Redline](../extensibility/ux-guidelines/media/0303-021-commandiconredline1.png "0303 – 021_CommandIconRedline1")  
+ ![Červená čára ikony příkazu](../extensibility/ux-guidelines/media/0303-021-commandiconredline1.png "0303-021_CommandIconRedline1")  
   
- ![Ikona příkazu Redline](../extensibility/ux-guidelines/media/0303-022-commandiconredline2.png "0303 – 022_CommandIconRedline2")  
+ ![Červená čára ikony příkazu](../extensibility/ux-guidelines/media/0303-022-commandiconredline2.png "0303-022_CommandIconRedline2")  
   
- Použití...  
- u tlačítek, které budou umístěny na panelu příkazů.  
+ Použít...  
+ pro všechna tlačítka, která budou umístěna na panelu příkazů.  
   
 Nepoužívejte...  
-- pro ovládací prvky, které mají své vlastní token názvy.  
+- pro ovládací prvky, které mají své vlastní názvy tokenů.  
 
-- v libovolné na pozadí a popředí jinými než která byla specifikována.  
+- v jakékoli kombinaci pozadí/popředí, než je uvedeno.  
   
   **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Výchozí ikona příkazu](../extensibility/ux-guidelines/media/0303-023-commandicondefault.png "0303 – 023_CommandIconDefault")<br /><br /> **Výchozí**|Pozadí|Není k dispozici (dědí nastavení z příkazového řádku na pozadí)|  
-|![Výchozí ikona příkazu](../extensibility/ux-guidelines/media/0303-023-commandicondefault.png "0303 – 023_CommandIconDefault")<br /><br /> **Výchozí**|Popředí (Text)|`Environment.CommandBarTextActive`|  
-|![Výchozí ikona příkazu](../extensibility/ux-guidelines/media/0303-023-commandicondefault.png "0303 – 023_CommandIconDefault")<br /><br /> **Výchozí**|Ohraničení|neuvedeno|  
-|![Vybraná ikona příkazu – výchozí](../extensibility/ux-guidelines/media/0303-024-commandicondefaultselected.png "0303 – 024_CommandIconDefaultSelected")<br /><br /> **Vyberte**|Pozadí|`Environment.CommandBarSelected`|  
-|![Vybraná ikona příkazu – výchozí](../extensibility/ux-guidelines/media/0303-024-commandicondefaultselected.png "0303 – 024_CommandIconDefaultSelected")<br /><br /> **Vyberte**|Popředí (Text)|`Environment.CommandBarTextSelected`|  
-|![Vybraná ikona příkazu – výchozí](../extensibility/ux-guidelines/media/0303-024-commandicondefaultselected.png "0303 – 024_CommandIconDefaultSelected")<br /><br /> **Vyberte**|Ohraničení|`Environment.CommandBarSelectedBorder`|  
+|![Výchozí ikona příkazu](../extensibility/ux-guidelines/media/0303-023-commandicondefault.png "0303-023_CommandIconDefault")<br /><br /> **Výchozí**|Pozadí|Není k zato (dědí z pozadí panelu příkazů)|  
+|![Výchozí ikona příkazu](../extensibility/ux-guidelines/media/0303-023-commandicondefault.png "0303-023_CommandIconDefault")<br /><br /> **Výchozí**|Popředí (text)|`Environment.CommandBarTextActive`|  
+|![Výchozí ikona příkazu](../extensibility/ux-guidelines/media/0303-023-commandicondefault.png "0303-023_CommandIconDefault")<br /><br /> **Výchozí**|Ohraničení|Není dostupné.|  
+|![Ve výchozím nastavení se vybrala ikona příkazu.](../extensibility/ux-guidelines/media/0303-024-commandicondefaultselected.png "0303-024_CommandIconDefaultSelected")<br /><br /> **Vybráno**|Pozadí|`Environment.CommandBarSelected`|  
+|![Ve výchozím nastavení se vybrala ikona příkazu.](../extensibility/ux-guidelines/media/0303-024-commandicondefaultselected.png "0303-024_CommandIconDefaultSelected")<br /><br /> **Vybráno**|Popředí (text)|`Environment.CommandBarTextSelected`|  
+|![Ve výchozím nastavení se vybrala ikona příkazu.](../extensibility/ux-guidelines/media/0303-024-commandicondefaultselected.png "0303-024_CommandIconDefaultSelected")<br /><br /> **Vybráno**|Ohraničení|`Environment.CommandBarSelectedBorder`|  
   
- **Fokus myši a klávesnice**  
+ **Najetí přes klávesnici a na klávesnici**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Ikona příkazu najeďte myší](../extensibility/ux-guidelines/media/0303-025-commandiconhover.png "0303 – 025_CommandIconHover")<br /><br /> **Při najetí myší na standard**|Pozadí|`Environment.CommandBarMouseOverBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Ikona příkazu najeďte myší](../extensibility/ux-guidelines/media/0303-025-commandiconhover.png "0303 – 025_CommandIconHover")<br /><br /> **Při najetí myší na standard**|Popředí (Text)|`Environment.CommandBarTextHover`|  
-|![Ikona příkazu najeďte myší](../extensibility/ux-guidelines/media/0303-025-commandiconhover.png "0303 – 025_CommandIconHover")<br /><br /> **Při najetí myší na standard**|Ohraničení|`Environment.CommandBarBorder`|  
-|![Ikona příkazu po výběru](../extensibility/ux-guidelines/media/0303-026-commandiconhoverselected.png "0303 – 026_CommandIconHoverSelected")<br /><br /> **Vybráno při najetí myší**|Pozadí|`Environment.CommandBarHoverOverSelected`|  
-|![Ikona příkazu po výběru](../extensibility/ux-guidelines/media/0303-026-commandiconhoverselected.png "0303 – 026_CommandIconHoverSelected")<br /><br /> **Vybráno při najetí myší**|Popředí (Text)|`Environment.CommandBarTextHoverOverSelected`|  
-|![Ikona příkazu po výběru](../extensibility/ux-guidelines/media/0303-026-commandiconhoverselected.png "0303 – 026_CommandIconHoverSelected")<br /><br /> **Vybráno při najetí myší**|Ohraničení|`Environment.CommandBarHoverOverSelectedIconBorder`|  
+|![Najetí na ikonu příkazu](../extensibility/ux-guidelines/media/0303-025-commandiconhover.png "0303-025_CommandIconHover")<br /><br /> **Standardní při najetí přes**|Pozadí|`Environment.CommandBarMouseOverBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Najetí na ikonu příkazu](../extensibility/ux-guidelines/media/0303-025-commandiconhover.png "0303-025_CommandIconHover")<br /><br /> **Standardní při najetí přes**|Popředí (text)|`Environment.CommandBarTextHover`|  
+|![Najetí na ikonu příkazu](../extensibility/ux-guidelines/media/0303-025-commandiconhover.png "0303-025_CommandIconHover")<br /><br /> **Standardní při najetí přes**|Ohraničení|`Environment.CommandBarBorder`|  
+|![Ikona příkazu je vybraná jako na jenom](../extensibility/ux-guidelines/media/0303-026-commandiconhoverselected.png "0303-026_CommandIconHoverSelected")<br /><br /> **Vybráno při najetí přes**|Pozadí|`Environment.CommandBarHoverOverSelected`|  
+|![Ikona příkazu je vybraná jako na jenom](../extensibility/ux-guidelines/media/0303-026-commandiconhoverselected.png "0303-026_CommandIconHoverSelected")<br /><br /> **Vybráno při najetí přes**|Popředí (text)|`Environment.CommandBarTextHoverOverSelected`|  
+|![Ikona příkazu je vybraná jako na jenom](../extensibility/ux-guidelines/media/0303-026-commandiconhoverselected.png "0303-026_CommandIconHoverSelected")<br /><br /> **Vybráno při najetí přes**|Ohraničení|`Environment.CommandBarHoverOverSelectedIconBorder`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Byla stisknuta ikona příkazu.](../extensibility/ux-guidelines/media/0303-027-commandiconpressed.png "0303 – 027_CommandIconPressed")<br /><br /> **Ikona stisknutého příkazu**|Pozadí|`Environment.CommandBarMouseDownBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Byla stisknuta ikona příkazu.](../extensibility/ux-guidelines/media/0303-027-commandiconpressed.png "0303 – 027_CommandIconPressed")<br /><br /> **Ikona stisknutého příkazu**|Popředí (Text)|`Environment.CommandBarTextMouseDown`|  
-|![Byla stisknuta ikona příkazu.](../extensibility/ux-guidelines/media/0303-027-commandiconpressed.png "0303 – 027_CommandIconPressed")<br /><br /> **Ikona stisknutého příkazu**|Ohraničení|`Environment.CommandBarBorder`|  
+|![Stisknutá ikona příkazu](../extensibility/ux-guidelines/media/0303-027-commandiconpressed.png "0303-027_CommandIconPressed")<br /><br /> **Ikona příkazu Stisknuto**|Pozadí|`Environment.CommandBarMouseDownBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Stisknutá ikona příkazu](../extensibility/ux-guidelines/media/0303-027-commandiconpressed.png "0303-027_CommandIconPressed")<br /><br /> **Ikona příkazu Stisknuto**|Popředí (text)|`Environment.CommandBarTextMouseDown`|  
+|![Stisknutá ikona příkazu](../extensibility/ux-guidelines/media/0303-027-commandiconpressed.png "0303-027_CommandIconPressed")<br /><br /> **Ikona příkazu Stisknuto**|Ohraničení|`Environment.CommandBarBorder`|  
   
  **Disabled** (Zakázáno)  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Ikona příkazu je zakázaná.](../extensibility/ux-guidelines/media/0303-028-commandicondisabled.png "0303 – 028_CommandIconDisabled")<br /><br /> **Ikona zakázaného příkazu**|Pozadí|Není k dispozici (dědí nastavení z příkazového řádku na pozadí)|  
-|![Ikona příkazu je zakázaná.](../extensibility/ux-guidelines/media/0303-028-commandicondisabled.png "0303 – 028_CommandIconDisabled")<br /><br /> **Ikona zakázaného příkazu**|Popředí (Text)|`Environment.CommandBarTextInactive`|  
-|![Ikona příkazu je zakázaná.](../extensibility/ux-guidelines/media/0303-028-commandicondisabled.png "0303 – 028_CommandIconDisabled")<br /><br /> **Ikona zakázaného příkazu**|Ohraničení|neuvedeno|  
+|![Ikona příkazu je zakázána.](../extensibility/ux-guidelines/media/0303-028-commandicondisabled.png "0303-028_CommandIconDisabled")<br /><br /> **Ikona příkazu Zakázáno**|Pozadí|Není k zato (dědí z pozadí panelu příkazů)|  
+|![Ikona příkazu je zakázána.](../extensibility/ux-guidelines/media/0303-028-commandicondisabled.png "0303-028_CommandIconDisabled")<br /><br /> **Ikona příkazu Zakázáno**|Popředí (text)|`Environment.CommandBarTextInactive`|  
+|![Ikona příkazu je zakázána.](../extensibility/ux-guidelines/media/0303-028-commandicondisabled.png "0303-028_CommandIconDisabled")<br /><br /> **Ikona příkazu Zakázáno**|Ohraničení|Není dostupné.|  
   
-##### <a name="BKMK_CommandComboBox"></a>Pole se seznamem  
+##### <a name="combo-box"></a><a name="BKMK_CommandComboBox"></a>Seznamem  
   
 > [!IMPORTANT]
-> Pole se seznamem se podobají rozevírací seznamy, ale zahrnují určitá oblast upravitelný text. Pokud rozevírací seznam neobsahuje upravitelnou textovou oblast, použijte v [rozevíracím](../misc/shared-colors.md#BKMK_CommandDropDown)seznamu tokeny barev.  
+> Pole se seznamem jsou podobná rozevíracím seznamům, ale obsahují upravitelnou oblast textu. Pokud váš rozevírací soubor neobsahuje upravitelnou oblast textu, použijte barevné tokeny nalezené v [rozevíracím souboru](../misc/shared-colors.md#BKMK_CommandDropDown).  
   
- ![Redline pole se seznamem](../extensibility/ux-guidelines/media/0303-029-comboboxredline.png "0303 – 029_ComboBoxRedline")  
+ ![Červená čára pole se seznamem](../extensibility/ux-guidelines/media/0303-029-comboboxredline.png "0303-029_ComboBoxRedline")  
   
-Použití...  
-- Při vytváření vlastního pole se seznamem.  
+Použít...  
+- při vytváření vlastních polí se seznamem.  
 
-- Při vytváření ovládací prvek panelu příkazů, který je podobný pole se seznamem.  
+- při vytváření ovládacího prvku panelu příkazů, který je podobný poli se seznamem.  
 
-Nepoužívejte...  
-- pro všechno, co nechcete, aby vždy tak, aby odpovídaly příkaz uživatelské rozhraní panelu.  
+Nepoužívejte ...  
+- pro cokoliv, co nechcete vždy odpovídat ui panelu příkazů.  
 
-- Když máte přístup k upravený pole se seznamem.  
+- když máte přístup k stylizované musetu se seznamem.  
   
   **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Vstupní pole pole se seznamem](../extensibility/ux-guidelines/media/0303-030-comboboxinputfield.png "0303 – 030_ComboBoxInputField")<br /><br /> **Vstupní pole**|Pozadí|`Environment.ComboBoxBackground`|  
-|![Vstupní pole pole se seznamem](../extensibility/ux-guidelines/media/0303-030-comboboxinputfield.png "0303 – 030_ComboBoxInputField")<br /><br /> **Vstupní pole**|Popředí (Text)|`Environment.ComboBoxText`|  
-|![Vstupní pole pole se seznamem](../extensibility/ux-guidelines/media/0303-030-comboboxinputfield.png "0303 – 030_ComboBoxInputField")<br /><br /> **Vstupní pole**|Ohraničení|`Environment.ComboBoxBorder`|  
-|![Vstupní pole pole se seznamem](../extensibility/ux-guidelines/media/0303-030-comboboxinputfield.png "0303 – 030_ComboBoxInputField")<br /><br /> **Vstupní pole**|Oddělovač|Žádný oddělovač|  
-|![Rozevírací&#45;tlačítko pole se seznamem](../extensibility/ux-guidelines/media/0303-031-comboboxdropdownbutton.png "0303 – 031_ComboBoxDropdownButton")<br /><br /> **Tlačítko rozevíracího seznamu**|Pozadí|Není k dispozici (dědí)|  
-|![Rozevírací&#45;tlačítko pole se seznamem](../extensibility/ux-guidelines/media/0303-031-comboboxdropdownbutton.png "0303 – 031_ComboBoxDropdownButton")<br /><br /> **Tlačítko rozevíracího seznamu**|Popředí (piktogram)|`Environment.ComboBoxGlyph`|  
-|![Rozevírací&#45;seznam&#47;pole se seznamem](../extensibility/ux-guidelines/media/0303-032-comboboxdropdownlist.png "0303 – 032_ComboBoxDropdownList")<br /><br /> **Rozevírací seznam**|Pozadí|`Environment.ComboBoxPopupBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Rozevírací&#45;seznam&#47;pole se seznamem](../extensibility/ux-guidelines/media/0303-032-comboboxdropdownlist.png "0303 – 032_ComboBoxDropdownList")<br /><br /> **Rozevírací seznam**|Popředí (Text)|`Environment.ComboBoxItemText`|  
-|![Rozevírací&#45;seznam&#47;pole se seznamem](../extensibility/ux-guidelines/media/0303-032-comboboxdropdownlist.png "0303 – 032_ComboBoxDropdownList")<br /><br /> **Rozevírací seznam**|Ohraničení|`Environment.ComboBoxPopupBorder`|  
+|![Vstupní pole se seznamem](../extensibility/ux-guidelines/media/0303-030-comboboxinputfield.png "0303-030_ComboBoxInputField")<br /><br /> **Vstupní pole**|Pozadí|`Environment.ComboBoxBackground`|  
+|![Vstupní pole se seznamem](../extensibility/ux-guidelines/media/0303-030-comboboxinputfield.png "0303-030_ComboBoxInputField")<br /><br /> **Vstupní pole**|Popředí (text)|`Environment.ComboBoxText`|  
+|![Vstupní pole se seznamem](../extensibility/ux-guidelines/media/0303-030-comboboxinputfield.png "0303-030_ComboBoxInputField")<br /><br /> **Vstupní pole**|Ohraničení|`Environment.ComboBoxBorder`|  
+|![Vstupní pole se seznamem](../extensibility/ux-guidelines/media/0303-030-comboboxinputfield.png "0303-030_ComboBoxInputField")<br /><br /> **Vstupní pole**|Oddělovač|Žádný oddělovač|  
+|![Tlačítko&#45;spouštění pole se seznamem](../extensibility/ux-guidelines/media/0303-031-comboboxdropdownbutton.png "0303-031_ComboBoxDropdownButton")<br /><br /> **Rozevírací tlačítko**|Pozadí|Není k mno h(dědění)|  
+|![Tlačítko&#45;spouštění pole se seznamem](../extensibility/ux-guidelines/media/0303-031-comboboxdropdownbutton.png "0303-031_ComboBoxDropdownButton")<br /><br /> **Rozevírací tlačítko**|Popředí (glyf)|`Environment.ComboBoxGlyph`|  
+|![Seznam&#47;rozevírací&#45;seznamu dolů](../extensibility/ux-guidelines/media/0303-032-comboboxdropdownlist.png "0303-032_ComboBoxDropdownList")<br /><br /> **Rozevírací seznam**|Pozadí|`Environment.ComboBoxPopupBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Seznam&#47;rozevírací&#45;seznamu dolů](../extensibility/ux-guidelines/media/0303-032-comboboxdropdownlist.png "0303-032_ComboBoxDropdownList")<br /><br /> **Rozevírací seznam**|Popředí (text)|`Environment.ComboBoxItemText`|  
+|![Seznam&#47;rozevírací&#45;seznamu dolů](../extensibility/ux-guidelines/media/0303-032-comboboxdropdownlist.png "0303-032_ComboBoxDropdownList")<br /><br /> **Rozevírací seznam**|Ohraničení|`Environment.ComboBoxPopupBorder`|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Vstupní pole pole se seznamem při najetí myší](../extensibility/ux-guidelines/media/0303-033-comboboxinputfieldhover.png "0303 – 033_ComboBoxInputFieldHover")<br /><br /> **Vstupní pole**|Pozadí|`Environment.ComboBoxMouseOverBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Vstupní pole pole se seznamem při najetí myší](../extensibility/ux-guidelines/media/0303-033-comboboxinputfieldhover.png "0303 – 033_ComboBoxInputFieldHover")<br /><br /> **Vstupní pole**|Popředí (Text)|`Environment.ComboBoxMouseOverText`|  
-|![Vstupní pole pole se seznamem při najetí myší](../extensibility/ux-guidelines/media/0303-033-comboboxinputfieldhover.png "0303 – 033_ComboBoxInputFieldHover")<br /><br /> **Vstupní pole**|Ohraničení|`Environment.ComboBoxMouseOverBorder`|  
-|![Vstupní pole pole se seznamem při najetí myší](../extensibility/ux-guidelines/media/0303-033-comboboxinputfieldhover.png "0303 – 033_ComboBoxInputFieldHover")<br /><br /> **Vstupní pole**|Oddělovač|`Environment.ComboBoxMouseOverSeparator`|  
-|![Rozevírací&#45;tlačítko&#47;pole se seznamem při najetí myší](../extensibility/ux-guidelines/media/0303-034-comboboxdropdownbuttonhover.png "0303 – 034_ComboBoxDropdownButtonHover")<br /><br /> **Tlačítko rozevíracího seznamu**|Pozadí|`Environment.ComboBoxButtonMouseOverBackground`|  
-|![Rozevírací&#45;tlačítko&#47;pole se seznamem při najetí myší](../extensibility/ux-guidelines/media/0303-034-comboboxdropdownbuttonhover.png "0303 – 034_ComboBoxDropdownButtonHover")<br /><br /> **Tlačítko rozevíracího seznamu**|Popředí (piktogram)|`Environment.ComboBoxMouseOverGlyph`|  
-|![Rozevírací&#45;seznam&#47;při najetí myší pole se seznamem](../extensibility/ux-guidelines/media/0303-035-comboboxdropdownlisthover.png "0303 – 035_ComboBoxDropdownListHover")<br /><br /> **Rozevírací seznam**|Na pozadí (položka nabídky)|`Environment.ComboBoxItemMouseOverBackground`|  
-|![Rozevírací&#45;seznam&#47;při najetí myší pole se seznamem](../extensibility/ux-guidelines/media/0303-035-comboboxdropdownlisthover.png "0303 – 035_ComboBoxDropdownListHover")<br /><br /> **Rozevírací seznam**|Popředí (Text)|`Environment.ComboBoxItemMouseOverText`|  
-|![Rozevírací&#45;seznam&#47;při najetí myší pole se seznamem](../extensibility/ux-guidelines/media/0303-035-comboboxdropdownlisthover.png "0303 – 035_ComboBoxDropdownListHover")<br /><br /> **Rozevírací seznam**|Ohraničení (položka nabídky)|`Environment.ComboBoxItemMouseOverBorder`|  
+|![Pole se seznamem při přijetí](../extensibility/ux-guidelines/media/0303-033-comboboxinputfieldhover.png "0303-033_ComboBoxInputFieldHover")<br /><br /> **Vstupní pole**|Pozadí|`Environment.ComboBoxMouseOverBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Pole se seznamem při přijetí](../extensibility/ux-guidelines/media/0303-033-comboboxinputfieldhover.png "0303-033_ComboBoxInputFieldHover")<br /><br /> **Vstupní pole**|Popředí (text)|`Environment.ComboBoxMouseOverText`|  
+|![Pole se seznamem při přijetí](../extensibility/ux-guidelines/media/0303-033-comboboxinputfieldhover.png "0303-033_ComboBoxInputFieldHover")<br /><br /> **Vstupní pole**|Ohraničení|`Environment.ComboBoxMouseOverBorder`|  
+|![Pole se seznamem při přijetí](../extensibility/ux-guidelines/media/0303-033-comboboxinputfieldhover.png "0303-033_ComboBoxInputFieldHover")<br /><br /> **Vstupní pole**|Oddělovač|`Environment.ComboBoxMouseOverSeparator`|  
+|![Pole se seznamem&#47;tlačítko&#45;dolů při přijetí](../extensibility/ux-guidelines/media/0303-034-comboboxdropdownbuttonhover.png "0303-034_ComboBoxDropdownButtonHover")<br /><br /> **Rozevírací tlačítko**|Pozadí|`Environment.ComboBoxButtonMouseOverBackground`|  
+|![Pole se seznamem&#47;tlačítko&#45;dolů při přijetí](../extensibility/ux-guidelines/media/0303-034-comboboxdropdownbuttonhover.png "0303-034_ComboBoxDropdownButtonHover")<br /><br /> **Rozevírací tlačítko**|Popředí (glyf)|`Environment.ComboBoxMouseOverGlyph`|  
+|![Pole se seznamem&#47;rozevírací&#45;seznamu při přiřazu](../extensibility/ux-guidelines/media/0303-035-comboboxdropdownlisthover.png "0303-035_ComboBoxDropdownListHover")<br /><br /> **Rozevírací seznam**|Pozadí (položka nabídky)|`Environment.ComboBoxItemMouseOverBackground`|  
+|![Pole se seznamem&#47;rozevírací&#45;seznamu při přiřazu](../extensibility/ux-guidelines/media/0303-035-comboboxdropdownlisthover.png "0303-035_ComboBoxDropdownListHover")<br /><br /> **Rozevírací seznam**|Popředí (text)|`Environment.ComboBoxItemMouseOverText`|  
+|![Pole se seznamem&#47;rozevírací&#45;seznamu při přiřazu](../extensibility/ux-guidelines/media/0303-035-comboboxdropdownlisthover.png "0303-035_ComboBoxDropdownListHover")<br /><br /> **Rozevírací seznam**|Ohraničení (položka nabídky)|`Environment.ComboBoxItemMouseOverBorder`|  
   
- **Zaměřil**  
+ **Focused**  
   
-|Komponenta|Prvek|Název tokenu: Color.category|  
+|Komponenta|Element|Název tokenu: Color.category|  
 |---------------|-------------|--------------------------------|  
-|![Zaměření na vstupní pole pole se seznamem](../extensibility/ux-guidelines/media/0303-036-comboboxinputfieldfocused.png "0303 – 036_ComboBoxInputFieldFocused")<br /><br /> **Vstupní pole**|Pozadí|`Environment.ComboBoxFocusedBackground`|  
-|![Zaměření na vstupní pole pole se seznamem](../extensibility/ux-guidelines/media/0303-036-comboboxinputfieldfocused.png "0303 – 036_ComboBoxInputFieldFocused")<br /><br /> **Vstupní pole**|Popředí (Text)|`Environment.ComboBoxFocusedText`|  
-|![Zaměření na vstupní pole pole se seznamem](../extensibility/ux-guidelines/media/0303-036-comboboxinputfieldfocused.png "0303 – 036_ComboBoxInputFieldFocused")<br /><br /> **Vstupní pole**|Ohraničení|`Environment.ComboBoxFocusedBorder`|  
-|![Zaměření na vstupní pole pole se seznamem](../extensibility/ux-guidelines/media/0303-036-comboboxinputfieldfocused.png "0303 – 036_ComboBoxInputFieldFocused")<br /><br /> **Vstupní pole**|Oddělovač|`Environment.ComboBoxFocusedButtonSeparator`|  
-|![Rozevírací tlačítko&#47;rozevíracího&#45;seznamu pole se seznamem](../extensibility/ux-guidelines/media/0303-037-comboboxdropdownbuttonfocused.png "0303 – 037_ComboBoxDropdownButtonFocused")<br /><br /> **Tlačítko rozevíracího seznamu**|Pozadí|`Environment.ComboBoxFocusedButtonBackground`|  
-|![Rozevírací tlačítko&#47;rozevíracího&#45;seznamu pole se seznamem](../extensibility/ux-guidelines/media/0303-037-comboboxdropdownbuttonfocused.png "0303 – 037_ComboBoxDropdownButtonFocused")<br /><br /> **Tlačítko rozevíracího seznamu**|Popředí (piktogram)|`Environment.ComboBoxFocusedGlyph`|  
+|![Zaměření na pole se seznamem](../extensibility/ux-guidelines/media/0303-036-comboboxinputfieldfocused.png "0303-036_ComboBoxInputFieldFocused")<br /><br /> **Vstupní pole**|Pozadí|`Environment.ComboBoxFocusedBackground`|  
+|![Zaměření na pole se seznamem](../extensibility/ux-guidelines/media/0303-036-comboboxinputfieldfocused.png "0303-036_ComboBoxInputFieldFocused")<br /><br /> **Vstupní pole**|Popředí (text)|`Environment.ComboBoxFocusedText`|  
+|![Zaměření na pole se seznamem](../extensibility/ux-guidelines/media/0303-036-comboboxinputfieldfocused.png "0303-036_ComboBoxInputFieldFocused")<br /><br /> **Vstupní pole**|Ohraničení|`Environment.ComboBoxFocusedBorder`|  
+|![Zaměření na pole se seznamem](../extensibility/ux-guidelines/media/0303-036-comboboxinputfieldfocused.png "0303-036_ComboBoxInputFieldFocused")<br /><br /> **Vstupní pole**|Oddělovač|`Environment.ComboBoxFocusedButtonSeparator`|  
+|![Pole se seznamem&#47;zaostřené tlačítkem&#45;dolů](../extensibility/ux-guidelines/media/0303-037-comboboxdropdownbuttonfocused.png "0303-037_ComboBoxDropdownButtonFocused")<br /><br /> **Rozevírací tlačítko**|Pozadí|`Environment.ComboBoxFocusedButtonBackground`|  
+|![Pole se seznamem&#47;zaostřené tlačítkem&#45;dolů](../extensibility/ux-guidelines/media/0303-037-comboboxdropdownbuttonfocused.png "0303-037_ComboBoxDropdownButtonFocused")<br /><br /> **Rozevírací tlačítko**|Popředí (glyf)|`Environment.ComboBoxFocusedGlyph`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Color.category|  
+|Komponenta|Element|Název tokenu: Color.category|  
 |---------------|-------------|--------------------------------|  
-|![Stisknuté vstupní pole pole se seznamem](../extensibility/ux-guidelines/media/0303-038-comboboxinputfieldpressed.png "0303 – 038_ComboBoxInputFieldPressed")<br /><br /> **Vstupní pole**|Pozadí|`Environment.ComboBoxMouseDownBackground`|  
-|![Stisknuté vstupní pole pole se seznamem](../extensibility/ux-guidelines/media/0303-038-comboboxinputfieldpressed.png "0303 – 038_ComboBoxInputFieldPressed")<br /><br /> **Vstupní pole**|Popředí (Text)|`Environment.ComboBoxMouseDownText`|  
-|![Stisknuté vstupní pole pole se seznamem](../extensibility/ux-guidelines/media/0303-038-comboboxinputfieldpressed.png "0303 – 038_ComboBoxInputFieldPressed")<br /><br /> **Vstupní pole**|Ohraničení|`Environment.ComboBoxMouseDownBorder`|  
-|![Stisknuté vstupní pole pole se seznamem](../extensibility/ux-guidelines/media/0303-038-comboboxinputfieldpressed.png "0303 – 038_ComboBoxInputFieldPressed")<br /><br /> **Vstupní pole**|Oddělovač|`Environment.ComboBoxMouseDownSeparator`|  
-|![Stisknuté&#47;tlačítko&#45;rozevíracího seznamu pole se seznamem](../extensibility/ux-guidelines/media/0303-039-comboboxdropdownbuttonpressed.png "0303 – 039_ComboBoxDropdownButtonPressed")<br /><br /> **Tlačítko rozevíracího seznamu**|Pozadí|`Environment.ComboBoxButtonMouseDownBackground`|  
-|![Stisknuté&#47;tlačítko&#45;rozevíracího seznamu pole se seznamem](../extensibility/ux-guidelines/media/0303-039-comboboxdropdownbuttonpressed.png "0303 – 039_ComboBoxDropdownButtonPressed")<br /><br /> **Tlačítko rozevíracího seznamu**|Popředí (piktogram)|`Environment.ComboBoxMouseDownGlyph`|  
+|![Stisknuté vstupní pole se seznamem](../extensibility/ux-guidelines/media/0303-038-comboboxinputfieldpressed.png "0303-038_ComboBoxInputFieldPressed")<br /><br /> **Vstupní pole**|Pozadí|`Environment.ComboBoxMouseDownBackground`|  
+|![Stisknuté vstupní pole se seznamem](../extensibility/ux-guidelines/media/0303-038-comboboxinputfieldpressed.png "0303-038_ComboBoxInputFieldPressed")<br /><br /> **Vstupní pole**|Popředí (text)|`Environment.ComboBoxMouseDownText`|  
+|![Stisknuté vstupní pole se seznamem](../extensibility/ux-guidelines/media/0303-038-comboboxinputfieldpressed.png "0303-038_ComboBoxInputFieldPressed")<br /><br /> **Vstupní pole**|Ohraničení|`Environment.ComboBoxMouseDownBorder`|  
+|![Stisknuté vstupní pole se seznamem](../extensibility/ux-guidelines/media/0303-038-comboboxinputfieldpressed.png "0303-038_ComboBoxInputFieldPressed")<br /><br /> **Vstupní pole**|Oddělovač|`Environment.ComboBoxMouseDownSeparator`|  
+|![Spouštěč&#47;stisknuté tlačítko&#45;dolů](../extensibility/ux-guidelines/media/0303-039-comboboxdropdownbuttonpressed.png "0303-039_ComboBoxDropdownButtonPressed")<br /><br /> **Rozevírací tlačítko**|Pozadí|`Environment.ComboBoxButtonMouseDownBackground`|  
+|![Spouštěč&#47;stisknuté tlačítko&#45;dolů](../extensibility/ux-guidelines/media/0303-039-comboboxdropdownbuttonpressed.png "0303-039_ComboBoxDropdownButtonPressed")<br /><br /> **Rozevírací tlačítko**|Popředí (glyf)|`Environment.ComboBoxMouseDownGlyph`|  
   
  **Disabled** (Zakázáno)  
   
-|Komponenta|Prvek|Název tokenu: Color.category|  
+|Komponenta|Element|Název tokenu: Color.category|  
 |---------------|-------------|--------------------------------|  
-|![Vstupní pole pole se seznamem je zakázané.](../extensibility/ux-guidelines/media/0303-041-comboboxinputfielddisabled.png "0303 – 041_ComboBoxInputFieldDisabled")<br /><br /> **Vstupní pole**|Pozadí|`Environment.ComboBoxDisabledBackground`|  
-|![Vstupní pole pole se seznamem je zakázané.](../extensibility/ux-guidelines/media/0303-041-comboboxinputfielddisabled.png "0303 – 041_ComboBoxInputFieldDisabled")<br /><br /> **Vstupní pole**|Popředí (Text)|`Environment.ComboBoxDisabledText`|  
-|![Vstupní pole pole se seznamem je zakázané.](../extensibility/ux-guidelines/media/0303-041-comboboxinputfielddisabled.png "0303 – 041_ComboBoxInputFieldDisabled")<br /><br /> **Vstupní pole**|Ohraničení|`Environment.ComboBoxDisabledBorder`|  
-|![Vstupní pole pole se seznamem je zakázané.](../extensibility/ux-guidelines/media/0303-041-comboboxinputfielddisabled.png "0303 – 041_ComboBoxInputFieldDisabled")<br /><br /> **Vstupní pole**|Oddělovač|Žádný oddělovač|  
-|![Tlačítko&#47;rozevíracího&#45;seznamu pole se seznamem je zakázané.](../extensibility/ux-guidelines/media/0303-040-comboboxdropdownbuttondisabled.png "0303 – 040_ComboBoxDropdownButtonDisabled")<br /><br /> **Tlačítko rozevíracího seznamu**|Pozadí|Žádná|  
-|![Tlačítko&#47;rozevíracího&#45;seznamu pole se seznamem je zakázané.](../extensibility/ux-guidelines/media/0303-040-comboboxdropdownbuttondisabled.png "0303 – 040_ComboBoxDropdownButtonDisabled")<br /><br /> **Tlačítko rozevíracího seznamu**|Popředí (piktogram)|`Environment.ComboBoxDisabledGlyph`|  
+|![Vstupní pole se seznamem je zakázáno.](../extensibility/ux-guidelines/media/0303-041-comboboxinputfielddisabled.png "0303-041_ComboBoxInputFieldDisabled")<br /><br /> **Vstupní pole**|Pozadí|`Environment.ComboBoxDisabledBackground`|  
+|![Vstupní pole se seznamem je zakázáno.](../extensibility/ux-guidelines/media/0303-041-comboboxinputfielddisabled.png "0303-041_ComboBoxInputFieldDisabled")<br /><br /> **Vstupní pole**|Popředí (text)|`Environment.ComboBoxDisabledText`|  
+|![Vstupní pole se seznamem je zakázáno.](../extensibility/ux-guidelines/media/0303-041-comboboxinputfielddisabled.png "0303-041_ComboBoxInputFieldDisabled")<br /><br /> **Vstupní pole**|Ohraničení|`Environment.ComboBoxDisabledBorder`|  
+|![Vstupní pole se seznamem je zakázáno.](../extensibility/ux-guidelines/media/0303-041-comboboxinputfielddisabled.png "0303-041_ComboBoxInputFieldDisabled")<br /><br /> **Vstupní pole**|Oddělovač|Žádný oddělovač|  
+|![Pole se seznamem&#47;vypnuté tlačítko&#45;down down](../extensibility/ux-guidelines/media/0303-040-comboboxdropdownbuttondisabled.png "0303-040_ComboBoxDropdownButtonDisabled")<br /><br /> **Rozevírací tlačítko**|Pozadí|Žádný|  
+|![Pole se seznamem&#47;vypnuté tlačítko&#45;down down](../extensibility/ux-guidelines/media/0303-040-comboboxdropdownbuttondisabled.png "0303-040_ComboBoxDropdownButtonDisabled")<br /><br /> **Rozevírací tlačítko**|Popředí (glyf)|`Environment.ComboBoxDisabledGlyph`|  
   
-##### <a name="BKMK_CommandDropDown"></a>Rozevírací seznam  
+##### <a name="drop-down"></a><a name="BKMK_CommandDropDown"></a>Rozevírací uzlovací  
   
 > [!IMPORTANT]
-> Rozevírací seznamy jsou podobné polích se seznamem, ale nemají upravitelný text oblastech. Pokud rozevírací seznam obsahuje upravitelnou textovou oblast, použijte tokeny barev nalezené v [poli se seznamem](../misc/shared-colors.md#BKMK_CommandComboBox).  
+> Rozevírací seznamy jsou podobné polím se seznamem, ale postrádají upravitelné oblasti textu. Pokud rozevírací seznam obsahuje upravitelnou oblast textu, použijte tokeny barev nalezené v [poli Seseznam](../misc/shared-colors.md#BKMK_CommandComboBox).  
   
- ![Rozevírací&#45;Redline](../extensibility/ux-guidelines/media/0303-042-dropdownredline.png "0303 – 042_DropdownRedline")  
+ ![Přetažení&#45;redline](../extensibility/ux-guidelines/media/0303-042-dropdownredline.png "0303-042_DropdownRedline")  
   
- Použití...  
- Pokud při vytváření vlastní rozevírací seznam ovládacích prvků.  
+ Použít...  
+ při vytváření vlastních ovládacích prvků rozevíracího seznamu.  
   
-Nepoužívejte...  
-- pro všechno, co to není podobný rozevíracího seznamu.  
+Nepoužívejte ...  
+- pro cokoliv, co není podobné rozevíracímu seznamu.  
 
-- pro pole se seznamem nebo tlačítka rozdělení.  
+- pro pole se seznamem nebo rozdělená tlačítka.  
   
   **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Rozevírací&#45;pole pro výběr](../extensibility/ux-guidelines/media/0303-043-dropdownselectionfield.png "0303 – 043_DropdownSelectionField")<br /><br /> **Pole výběru**|Pozadí|`Environment.DropDownBackground`|  
-|![Rozevírací&#45;pole pro výběr](../extensibility/ux-guidelines/media/0303-043-dropdownselectionfield.png "0303 – 043_DropdownSelectionField")<br /><br /> **Pole výběru**|Popředí (Text)|`DropDownText`|  
-|![Rozevírací&#45;pole pro výběr](../extensibility/ux-guidelines/media/0303-043-dropdownselectionfield.png "0303 – 043_DropdownSelectionField")<br /><br /> **Pole výběru**|Ohraničení|`DropDownBorder`|  
-|![Rozevírací&#45;pole pro výběr](../extensibility/ux-guidelines/media/0303-043-dropdownselectionfield.png "0303 – 043_DropdownSelectionField")<br /><br /> **Pole výběru**|Oddělovač|Žádný oddělovač|  
-|![Tlačítko&#45;rozevíracího seznamu](../extensibility/ux-guidelines/media/0303-044-dropdownbutton.png "0303 – 044_DropdownButton")<br /><br /> **Tlačítko rozevíracího seznamu**|Pozadí|Žádná|  
-|![Tlačítko&#45;rozevíracího seznamu](../extensibility/ux-guidelines/media/0303-044-dropdownbutton.png "0303 – 044_DropdownButton")<br /><br /> **Tlačítko rozevíracího seznamu**|Popředí (piktogram)|`Environment.DropDownGlyph`|  
-|![Rozevírací&#45;seznam](../extensibility/ux-guidelines/media/0303-045-dropdownlist.png "0303 – 045_DropdownList")<br /><br /> **Rozevírací seznam**|Pozadí|`Environment.DropDownPopupBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Rozevírací&#45;seznam](../extensibility/ux-guidelines/media/0303-045-dropdownlist.png "0303 – 045_DropdownList")<br /><br /> **Rozevírací seznam**|Popředí (Text)|`Environment.ComboBoxItemText`|  
-|![Rozevírací&#45;seznam](../extensibility/ux-guidelines/media/0303-045-dropdownlist.png "0303 – 045_DropdownList")<br /><br /> **Rozevírací seznam**|Ohraničení|`Environment.DropDownPopupBorder`|  
-|![Rozevírací&#45;seznam](../extensibility/ux-guidelines/media/0303-045-dropdownlist.png "0303 – 045_DropdownList")<br /><br /> **Rozevírací seznam**|Stín|`Environment.DropShadowBackground`|  
+|![Rozbalovací&#45;výběrové pole dolů](../extensibility/ux-guidelines/media/0303-043-dropdownselectionfield.png "0303-043_DropdownSelectionField")<br /><br /> **Výběrové pole**|Pozadí|`Environment.DropDownBackground`|  
+|![Rozbalovací&#45;výběrové pole dolů](../extensibility/ux-guidelines/media/0303-043-dropdownselectionfield.png "0303-043_DropdownSelectionField")<br /><br /> **Výběrové pole**|Popředí (text)|`DropDownText`|  
+|![Rozbalovací&#45;výběrové pole dolů](../extensibility/ux-guidelines/media/0303-043-dropdownselectionfield.png "0303-043_DropdownSelectionField")<br /><br /> **Výběrové pole**|Ohraničení|`DropDownBorder`|  
+|![Rozbalovací&#45;výběrové pole dolů](../extensibility/ux-guidelines/media/0303-043-dropdownselectionfield.png "0303-043_DropdownSelectionField")<br /><br /> **Výběrové pole**|Oddělovač|Žádný oddělovač|  
+|![Tlačítko&#45;dolů](../extensibility/ux-guidelines/media/0303-044-dropdownbutton.png "0303-044_DropdownButton")<br /><br /> **Rozevírací tlačítko**|Pozadí|Žádný|  
+|![Tlačítko&#45;dolů](../extensibility/ux-guidelines/media/0303-044-dropdownbutton.png "0303-044_DropdownButton")<br /><br /> **Rozevírací tlačítko**|Popředí (glyf)|`Environment.DropDownGlyph`|  
+|![Rozevírací&#45;rozevírací seznam](../extensibility/ux-guidelines/media/0303-045-dropdownlist.png "0303-045_DropdownList")<br /><br /> **Rozevírací seznam**|Pozadí|`Environment.DropDownPopupBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Rozevírací&#45;rozevírací seznam](../extensibility/ux-guidelines/media/0303-045-dropdownlist.png "0303-045_DropdownList")<br /><br /> **Rozevírací seznam**|Popředí (text)|`Environment.ComboBoxItemText`|  
+|![Rozevírací&#45;rozevírací seznam](../extensibility/ux-guidelines/media/0303-045-dropdownlist.png "0303-045_DropdownList")<br /><br /> **Rozevírací seznam**|Ohraničení|`Environment.DropDownPopupBorder`|  
+|![Rozevírací&#45;rozevírací seznam](../extensibility/ux-guidelines/media/0303-045-dropdownlist.png "0303-045_DropdownList")<br /><br /> **Rozevírací seznam**|Stín|`Environment.DropShadowBackground`|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Rozevírací&#45;pole pro výběr při najetí myší](../extensibility/ux-guidelines/media/0303-046-dropdownselectionfieldhover.png "0303 – 046_DropdownSelectionFieldHover")<br /><br /> **Pole výběru**|Pozadí|`Environment.DropDownMouseOverBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Rozevírací&#45;pole pro výběr při najetí myší](../extensibility/ux-guidelines/media/0303-046-dropdownselectionfieldhover.png "0303 – 046_DropdownSelectionFieldHover")<br /><br /> **Pole výběru**|Popředí (Text)|`Environment.DropDownMouseOverText`|  
-|![Rozevírací&#45;pole pro výběr při najetí myší](../extensibility/ux-guidelines/media/0303-046-dropdownselectionfieldhover.png "0303 – 046_DropdownSelectionFieldHover")<br /><br /> **Pole výběru**|Ohraničení|`Environment.DropDownMouseOverBorder`|  
-|![Rozevírací&#45;pole pro výběr při najetí myší](../extensibility/ux-guidelines/media/0303-046-dropdownselectionfieldhover.png "0303 – 046_DropdownSelectionFieldHover")<br /><br /> **Pole výběru**|Oddělovač|`Environment.DropDownButtonMouseOverSeparator`|  
-|![Tlačítko&#45;rozevíracího seznamu při najetí myší](../extensibility/ux-guidelines/media/0303-047-dropdownbuttonhover.png "0303 – 047_DropdownButtonHover")<br /><br /> **Tlačítko rozevíracího seznamu**|Pozadí|`Environment.DropDownButtonMouseOverBackground`|  
-|![Tlačítko&#45;rozevíracího seznamu při najetí myší](../extensibility/ux-guidelines/media/0303-047-dropdownbuttonhover.png "0303 – 047_DropdownButtonHover")<br /><br /> **Tlačítko rozevíracího seznamu**|Popředí (piktogram)|`Environment.DropDownMouseOverGlyph`|  
-|![Rozevírací&#45;seznam při najetí myší](../extensibility/ux-guidelines/media/0303-048-dropdownlisthover.png "0303 – 048_DropdownListHover")<br /><br /> **Rozevírací seznam**|Na pozadí (položka nabídky)|`Environment.ComboBoxItemMouseOverBackground`|  
-|![Rozevírací&#45;seznam při najetí myší](../extensibility/ux-guidelines/media/0303-048-dropdownlisthover.png "0303 – 048_DropdownListHover")<br /><br /> **Rozevírací seznam**|Popředí (Text)|`Environment.ComboBoxItemMouseOverText`|  
-|![Rozevírací&#45;seznam při najetí myší](../extensibility/ux-guidelines/media/0303-048-dropdownlisthover.png "0303 – 048_DropdownListHover")<br /><br /> **Rozevírací seznam**|Ohraničení (položka nabídky)|`Environment.ComboBoxItemMouseOverBorder`|  
+|![Rozbalovací&#45;výběrové pole při najetí přes](../extensibility/ux-guidelines/media/0303-046-dropdownselectionfieldhover.png "0303-046_DropdownSelectionFieldHover")<br /><br /> **Výběrové pole**|Pozadí|`Environment.DropDownMouseOverBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Rozbalovací&#45;výběrové pole při najetí přes](../extensibility/ux-guidelines/media/0303-046-dropdownselectionfieldhover.png "0303-046_DropdownSelectionFieldHover")<br /><br /> **Výběrové pole**|Popředí (text)|`Environment.DropDownMouseOverText`|  
+|![Rozbalovací&#45;výběrové pole při najetí přes](../extensibility/ux-guidelines/media/0303-046-dropdownselectionfieldhover.png "0303-046_DropdownSelectionFieldHover")<br /><br /> **Výběrové pole**|Ohraničení|`Environment.DropDownMouseOverBorder`|  
+|![Rozbalovací&#45;výběrové pole při najetí přes](../extensibility/ux-guidelines/media/0303-046-dropdownselectionfieldhover.png "0303-046_DropdownSelectionFieldHover")<br /><br /> **Výběrové pole**|Oddělovač|`Environment.DropDownButtonMouseOverSeparator`|  
+|![Tlačítko&#45;při najetí na tlačítko pro najetí](../extensibility/ux-guidelines/media/0303-047-dropdownbuttonhover.png "0303-047_DropdownButtonHover")<br /><br /> **Rozevírací tlačítko**|Pozadí|`Environment.DropDownButtonMouseOverBackground`|  
+|![Tlačítko&#45;při najetí na tlačítko pro najetí](../extensibility/ux-guidelines/media/0303-047-dropdownbuttonhover.png "0303-047_DropdownButtonHover")<br /><br /> **Rozevírací tlačítko**|Popředí (glyf)|`Environment.DropDownMouseOverGlyph`|  
+|![Rozevírací&#45;při najetí na jev](../extensibility/ux-guidelines/media/0303-048-dropdownlisthover.png "0303-048_DropdownListHover")<br /><br /> **Rozevírací seznam**|Pozadí (položka nabídky)|`Environment.ComboBoxItemMouseOverBackground`|  
+|![Rozevírací&#45;při najetí na jev](../extensibility/ux-guidelines/media/0303-048-dropdownlisthover.png "0303-048_DropdownListHover")<br /><br /> **Rozevírací seznam**|Popředí (text)|`Environment.ComboBoxItemMouseOverText`|  
+|![Rozevírací&#45;při najetí na jev](../extensibility/ux-guidelines/media/0303-048-dropdownlisthover.png "0303-048_DropdownListHover")<br /><br /> **Rozevírací seznam**|Ohraničení (položka nabídky)|`Environment.ComboBoxItemMouseOverBorder`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Stisknutí pole výběru rozevíracího seznamu&#45;](../extensibility/ux-guidelines/media/0303-049-dropdownselectionfieldpressed.png "0303 – 049_DropdownSelectionFieldPressed")<br /><br /> **Pole výběru**|Pozadí|`Environment.DropDownMouseDownBackground`|  
-|![Stisknutí pole výběru rozevíracího seznamu&#45;](../extensibility/ux-guidelines/media/0303-049-dropdownselectionfieldpressed.png "0303 – 049_DropdownSelectionFieldPressed")<br /><br /> **Pole výběru**|Popředí (Text)|`Environment.DropDownMouseDownText`|  
-|![Stisknutí pole výběru rozevíracího seznamu&#45;](../extensibility/ux-guidelines/media/0303-049-dropdownselectionfieldpressed.png "0303 – 049_DropdownSelectionFieldPressed")<br /><br /> **Pole výběru**|Ohraničení|`Environment.DropDownMouseDownBorder`|  
-|![Stisknutí pole výběru rozevíracího seznamu&#45;](../extensibility/ux-guidelines/media/0303-049-dropdownselectionfieldpressed.png "0303 – 049_DropdownSelectionFieldPressed")<br /><br /> **Pole výběru**|Oddělovač|`Environment.DropDownButtonMouseDownSeparator`|  
-|![Stisknuté tlačítko rozevíracího seznamu&#45;](../extensibility/ux-guidelines/media/0303-050-dropdownbuttonpressed.png "0303 – 050_DropdownButtonPressed")<br /><br /> **Tlačítko rozevíracího seznamu**|Pozadí|`Environment.DropDownButtonMouseDownBackground`|  
-|![Stisknuté tlačítko rozevíracího seznamu&#45;](../extensibility/ux-guidelines/media/0303-050-dropdownbuttonpressed.png "0303 – 050_DropdownButtonPressed")<br /><br /> **Tlačítko rozevíracího seznamu**|Popředí (piktogram)|`Environment.DropDownMouseDownGlyph`|  
+|![Stisknuté pole výběru&#45;dolů](../extensibility/ux-guidelines/media/0303-049-dropdownselectionfieldpressed.png "0303-049_DropdownSelectionFieldPressed")<br /><br /> **Výběrové pole**|Pozadí|`Environment.DropDownMouseDownBackground`|  
+|![Stisknuté pole výběru&#45;dolů](../extensibility/ux-guidelines/media/0303-049-dropdownselectionfieldpressed.png "0303-049_DropdownSelectionFieldPressed")<br /><br /> **Výběrové pole**|Popředí (text)|`Environment.DropDownMouseDownText`|  
+|![Stisknuté pole výběru&#45;dolů](../extensibility/ux-guidelines/media/0303-049-dropdownselectionfieldpressed.png "0303-049_DropdownSelectionFieldPressed")<br /><br /> **Výběrové pole**|Ohraničení|`Environment.DropDownMouseDownBorder`|  
+|![Stisknuté pole výběru&#45;dolů](../extensibility/ux-guidelines/media/0303-049-dropdownselectionfieldpressed.png "0303-049_DropdownSelectionFieldPressed")<br /><br /> **Výběrové pole**|Oddělovač|`Environment.DropDownButtonMouseDownSeparator`|  
+|![Stisknuté tlačítko drop&#45;down](../extensibility/ux-guidelines/media/0303-050-dropdownbuttonpressed.png "0303-050_DropdownButtonPressed")<br /><br /> **Rozevírací tlačítko**|Pozadí|`Environment.DropDownButtonMouseDownBackground`|  
+|![Stisknuté tlačítko drop&#45;down](../extensibility/ux-guidelines/media/0303-050-dropdownbuttonpressed.png "0303-050_DropdownButtonPressed")<br /><br /> **Rozevírací tlačítko**|Popředí (glyf)|`Environment.DropDownMouseDownGlyph`|  
   
  **Disabled** (Zakázáno)  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Pole&#45;výběru rozevíracího seznamu je zakázané.](../extensibility/ux-guidelines/media/0303-051-dropdownselectionfielddisabled.png "0303 – 051_DropdownSelectionFieldDisabled")|Pozadí|`Environment.DropDownDisabledBackground`|  
-|![Pole&#45;výběru rozevíracího seznamu je zakázané.](../extensibility/ux-guidelines/media/0303-051-dropdownselectionfielddisabled.png "0303 – 051_DropdownSelectionFieldDisabled")|Popředí (Text)|`Environment.DropDownDisabledText`|  
-|![Pole&#45;výběru rozevíracího seznamu je zakázané.](../extensibility/ux-guidelines/media/0303-051-dropdownselectionfielddisabled.png "0303 – 051_DropdownSelectionFieldDisabled")|Ohraničení|`Environment.DropDownDisabledBorder`|  
-|![Pole&#45;výběru rozevíracího seznamu je zakázané.](../extensibility/ux-guidelines/media/0303-051-dropdownselectionfielddisabled.png "0303 – 051_DropdownSelectionFieldDisabled")|Oddělovač|Žádný oddělovač|  
-|![Tlačítko&#45;rozevíracího seznamu je zakázané.](../extensibility/ux-guidelines/media/0303-052-dropdownbuttondisabled.png "0303 – 052_DropdownButtonDisabled")|Pozadí|neuvedeno|  
-|![Tlačítko&#45;rozevíracího seznamu je zakázané.](../extensibility/ux-guidelines/media/0303-052-dropdownbuttondisabled.png "0303 – 052_DropdownButtonDisabled")|Popředí (piktogram)|`Environment.DropDownDisabledGlyph`|  
+|![Rozbalovací&#45;výběrové pole bylo zakázáno.](../extensibility/ux-guidelines/media/0303-051-dropdownselectionfielddisabled.png "0303-051_DropdownSelectionFieldDisabled")|Pozadí|`Environment.DropDownDisabledBackground`|  
+|![Rozbalovací&#45;výběrové pole bylo zakázáno.](../extensibility/ux-guidelines/media/0303-051-dropdownselectionfielddisabled.png "0303-051_DropdownSelectionFieldDisabled")|Popředí (text)|`Environment.DropDownDisabledText`|  
+|![Rozbalovací&#45;výběrové pole bylo zakázáno.](../extensibility/ux-guidelines/media/0303-051-dropdownselectionfielddisabled.png "0303-051_DropdownSelectionFieldDisabled")|Ohraničení|`Environment.DropDownDisabledBorder`|  
+|![Rozbalovací&#45;výběrové pole bylo zakázáno.](../extensibility/ux-guidelines/media/0303-051-dropdownselectionfielddisabled.png "0303-051_DropdownSelectionFieldDisabled")|Oddělovač|Žádný oddělovač|  
+|![Tlačítko&#45;down je vypnuté.](../extensibility/ux-guidelines/media/0303-052-dropdownbuttondisabled.png "0303-052_DropdownButtonDisabled")|Pozadí|Není dostupné.|  
+|![Tlačítko&#45;down je vypnuté.](../extensibility/ux-guidelines/media/0303-052-dropdownbuttondisabled.png "0303-052_DropdownButtonDisabled")|Popředí (glyf)|`Environment.DropDownDisabledGlyph`|  
   
-##### <a name="split-button"></a>Tlačítko rozdělení  
- Tlačítka rozdělení sdílet s jinými ovládacími prvky příkazového řádku, jako jsou tlačítka, nabídky a panelu text příkazu mnoho názvů token. Všechny potřebné akce a tlačítkem rozevírací nabídky token názvy pro usnadnění práce tady opakují. Rozevírací seznamy rozdělení na tlačítko jsou implementace [nabídek](../misc/shared-colors.md#BKMK_CommandMenus)panelu příkazů.  
+##### <a name="split-button"></a>Tlačítko Rozdělit  
+ Rozdělená tlačítka sdílejí mnoho názvů tokenů s dalšími ovládacími prvky panelu příkazů, jako jsou tlačítka, nabídky a text panelu příkazů. Všechny potřebné akce a názvy tokenů rozevíracího tlačítka se zde opakují pro pohodlí. Rozevírací seznamy rozdělených tlačítek jsou implementace příkazů [.](../misc/shared-colors.md#BKMK_CommandMenus)  
   
- ![Redline tlačítko rozdělení](../extensibility/ux-guidelines/media/0303-053-splitbuttonredline.png "0303 – 053_SplitButtonRedline")  
+ ![Červené tlačítko Rozdělení](../extensibility/ux-guidelines/media/0303-053-splitbuttonredline.png "0303-053_SplitButtonRedline")  
   
- Použití...  
- Když vytváříte tlačítko rozdělení vlastní.  
+ Použít...  
+ při vytváření vlastního tlačítka rozdělení.  
   
-Nepoužívejte...  
-- pro jiné typy tlačítek.  
+Nepoužívejte ...  
+- pro jiné druhy tlačítek.  
 
-- v libovolné na pozadí a popředí jinými než která byla specifikována.  
+- v jakékoli kombinaci pozadí/popředí, než je uvedeno.  
   
   **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Tlačítko rozdělení](../extensibility/ux-guidelines/media/0303-054-splitbutton.png "0303 – 054_SplitButton")<br /><br /> **Tlačítko rozdělení (výchozí)**|Pozadí|Žádná|  
-|![Tlačítko rozdělení](../extensibility/ux-guidelines/media/0303-054-splitbutton.png "0303 – 054_SplitButton")<br /><br /> **Tlačítko rozdělení (výchozí)**|Popředí (Text)|`Environment.CommandBarTextActive`|  
-|![Tlačítko rozdělení](../extensibility/ux-guidelines/media/0303-054-splitbutton.png "0303 – 054_SplitButton")<br /><br /> **Tlačítko rozdělení (výchozí)**|Popředí (piktogram)|`Environment.CommandBarSplitButtonGlyph`|  
-|![Tlačítko rozdělení](../extensibility/ux-guidelines/media/0303-054-splitbutton.png "0303 – 054_SplitButton")<br /><br /> **Tlačítko rozdělení (výchozí)**|Ohraničení|neuvedeno|  
-|![Tlačítko rozdělení](../extensibility/ux-guidelines/media/0303-054-splitbutton.png "0303 – 054_SplitButton")<br /><br /> **Tlačítko rozdělení (výchozí)**|Oddělovač|neuvedeno|  
+|![Tlačítko Rozdělit](../extensibility/ux-guidelines/media/0303-054-splitbutton.png "0303-054_SplitButton")<br /><br /> **Tlačítko Rozdělit (výchozí)**|Pozadí|Žádný|  
+|![Tlačítko Rozdělit](../extensibility/ux-guidelines/media/0303-054-splitbutton.png "0303-054_SplitButton")<br /><br /> **Tlačítko Rozdělit (výchozí)**|Popředí (text)|`Environment.CommandBarTextActive`|  
+|![Tlačítko Rozdělit](../extensibility/ux-guidelines/media/0303-054-splitbutton.png "0303-054_SplitButton")<br /><br /> **Tlačítko Rozdělit (výchozí)**|Popředí (glyf)|`Environment.CommandBarSplitButtonGlyph`|  
+|![Tlačítko Rozdělit](../extensibility/ux-guidelines/media/0303-054-splitbutton.png "0303-054_SplitButton")<br /><br /> **Tlačítko Rozdělit (výchozí)**|Ohraničení|Není dostupné.|  
+|![Tlačítko Rozdělit](../extensibility/ux-guidelines/media/0303-054-splitbutton.png "0303-054_SplitButton")<br /><br /> **Tlačítko Rozdělit (výchozí)**|Oddělovač|Není dostupné.|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Tlačítko rozdělení při najetí myší](../extensibility/ux-guidelines/media/0303-055-splitbuttonhover.png "0303 – 055_SplitButtonHover")<br /><br /> **Tlačítko rozdělení (při najetí myší)**|Pozadí|`Environment.CommandBarMouseOverBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Tlačítko rozdělení při najetí myší](../extensibility/ux-guidelines/media/0303-055-splitbuttonhover.png "0303 – 055_SplitButtonHover")<br /><br /> **Tlačítko rozdělení (při najetí myší)**|Popředí (Text)|`Environment.CommandBarTextHover`|  
-|![Tlačítko rozdělení při najetí myší](../extensibility/ux-guidelines/media/0303-055-splitbuttonhover.png "0303 – 055_SplitButtonHover")<br /><br /> **Tlačítko rozdělení (při najetí myší)**|Popředí (piktogram)|`Environment.CommandBarSplitButtonMouseOverGlyph`|  
-|![Tlačítko rozdělení při najetí myší](../extensibility/ux-guidelines/media/0303-055-splitbuttonhover.png "0303 – 055_SplitButtonHover")<br /><br /> **Tlačítko rozdělení (při najetí myší)**|Ohraničení|`Environment.CommandBarBorder`|  
-|![Tlačítko rozdělení při najetí myší](../extensibility/ux-guidelines/media/0303-055-splitbuttonhover.png "0303 – 055_SplitButtonHover")<br /><br /> **Tlačítko rozdělení (při najetí myší)**|Oddělovač|`Environment.CommandBarSplitButtonSeparator`|  
+|![Tlačítko Rozdělit při najetí mezi](../extensibility/ux-guidelines/media/0303-055-splitbuttonhover.png "0303-055_SplitButtonHover")<br /><br /> **Tlačítko Rozdělit (při najetí)**|Pozadí|`Environment.CommandBarMouseOverBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Tlačítko Rozdělit při najetí mezi](../extensibility/ux-guidelines/media/0303-055-splitbuttonhover.png "0303-055_SplitButtonHover")<br /><br /> **Tlačítko Rozdělit (při najetí)**|Popředí (text)|`Environment.CommandBarTextHover`|  
+|![Tlačítko Rozdělit při najetí mezi](../extensibility/ux-guidelines/media/0303-055-splitbuttonhover.png "0303-055_SplitButtonHover")<br /><br /> **Tlačítko Rozdělit (při najetí)**|Popředí (glyf)|`Environment.CommandBarSplitButtonMouseOverGlyph`|  
+|![Tlačítko Rozdělit při najetí mezi](../extensibility/ux-guidelines/media/0303-055-splitbuttonhover.png "0303-055_SplitButtonHover")<br /><br /> **Tlačítko Rozdělit (při najetí)**|Ohraničení|`Environment.CommandBarBorder`|  
+|![Tlačítko Rozdělit při najetí mezi](../extensibility/ux-guidelines/media/0303-055-splitbuttonhover.png "0303-055_SplitButtonHover")<br /><br /> **Tlačítko Rozdělit (při najetí)**|Oddělovač|`Environment.CommandBarSplitButtonSeparator`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Stisknuté tlačítko rozdělení](../extensibility/ux-guidelines/media/0303-056-splitbuttonpressed.png "0303 – 056_SplitButtonPressed")<br /><br /> **Tlačítko Rozdělit (stisknuté)**|Pozadí|`Environment.CommandBarMouseDownBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Stisknuté tlačítko rozdělení](../extensibility/ux-guidelines/media/0303-056-splitbuttonpressed.png "0303 – 056_SplitButtonPressed")<br /><br /> **Tlačítko Rozdělit (stisknuté)**|Popředí (Text)|`Environment.CommandBarTextMouseDown`|  
-|![Stisknuté tlačítko rozdělení](../extensibility/ux-guidelines/media/0303-056-splitbuttonpressed.png "0303 – 056_SplitButtonPressed")<br /><br /> **Tlačítko Rozdělit (stisknuté)**|Popředí (piktogram)|`Environment.CommandBarSplitButtonMouseDownGlyph`|  
-|![Stisknuté tlačítko rozdělení](../extensibility/ux-guidelines/media/0303-056-splitbuttonpressed.png "0303 – 056_SplitButtonPressed")<br /><br /> **Tlačítko Rozdělit (stisknuté)**|Ohraničení|`Environment.CommandBarBorder`|  
-|![Stisknuté tlačítko rozdělení](../extensibility/ux-guidelines/media/0303-056-splitbuttonpressed.png "0303 – 056_SplitButtonPressed")<br /><br /> **Tlačítko Rozdělit (stisknuté)**|Oddělovač|neuvedeno|  
+|![Tlačítko Rozdělit stisknuto](../extensibility/ux-guidelines/media/0303-056-splitbuttonpressed.png "0303-056_SplitButtonPressed")<br /><br /> **Tlačítko Rozdělení (stisknuto)**|Pozadí|`Environment.CommandBarMouseDownBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Tlačítko Rozdělit stisknuto](../extensibility/ux-guidelines/media/0303-056-splitbuttonpressed.png "0303-056_SplitButtonPressed")<br /><br /> **Tlačítko Rozdělení (stisknuto)**|Popředí (text)|`Environment.CommandBarTextMouseDown`|  
+|![Tlačítko Rozdělit stisknuto](../extensibility/ux-guidelines/media/0303-056-splitbuttonpressed.png "0303-056_SplitButtonPressed")<br /><br /> **Tlačítko Rozdělení (stisknuto)**|Popředí (glyf)|`Environment.CommandBarSplitButtonMouseDownGlyph`|  
+|![Tlačítko Rozdělit stisknuto](../extensibility/ux-guidelines/media/0303-056-splitbuttonpressed.png "0303-056_SplitButtonPressed")<br /><br /> **Tlačítko Rozdělení (stisknuto)**|Ohraničení|`Environment.CommandBarBorder`|  
+|![Tlačítko Rozdělit stisknuto](../extensibility/ux-guidelines/media/0303-056-splitbuttonpressed.png "0303-056_SplitButtonPressed")<br /><br /> **Tlačítko Rozdělení (stisknuto)**|Oddělovač|Není dostupné.|  
   
  **Disabled** (Zakázáno)  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Tlačítko rozdělení je zakázané.](../extensibility/ux-guidelines/media/0303-057-splitbuttondisabled.png "0303 – 057_SplitButtonDisabled")<br /><br /> **Tlačítko rozdělení (zakázáno)**|Pozadí|neuvedeno|  
-|![Tlačítko rozdělení je zakázané.](../extensibility/ux-guidelines/media/0303-057-splitbuttondisabled.png "0303 – 057_SplitButtonDisabled")<br /><br /> **Tlačítko rozdělení (zakázáno)**|Popředí (Text)|`Environment.ComboBoxItemTextInactive`|  
-|![Tlačítko rozdělení je zakázané.](../extensibility/ux-guidelines/media/0303-057-splitbuttondisabled.png "0303 – 057_SplitButtonDisabled")<br /><br /> **Tlačítko rozdělení (zakázáno)**|Popředí (piktogram)|`Environment.CommandBarTextInactive`|  
-|![Tlačítko rozdělení je zakázané.](../extensibility/ux-guidelines/media/0303-057-splitbuttondisabled.png "0303 – 057_SplitButtonDisabled")<br /><br /> **Tlačítko rozdělení (zakázáno)**|Ohraničení|neuvedeno|  
-|![Tlačítko rozdělení je zakázané.](../extensibility/ux-guidelines/media/0303-057-splitbuttondisabled.png "0303 – 057_SplitButtonDisabled")<br /><br /> **Tlačítko rozdělení (zakázáno)**|Oddělovač|neuvedeno|  
+|![Tlačítko Rozdělit je vypnuto.](../extensibility/ux-guidelines/media/0303-057-splitbuttondisabled.png "0303-057_SplitButtonDisabled")<br /><br /> **Tlačítko Rozdělit (zakázáno)**|Pozadí|Není dostupné.|  
+|![Tlačítko Rozdělit je vypnuto.](../extensibility/ux-guidelines/media/0303-057-splitbuttondisabled.png "0303-057_SplitButtonDisabled")<br /><br /> **Tlačítko Rozdělit (zakázáno)**|Popředí (text)|`Environment.ComboBoxItemTextInactive`|  
+|![Tlačítko Rozdělit je vypnuto.](../extensibility/ux-guidelines/media/0303-057-splitbuttondisabled.png "0303-057_SplitButtonDisabled")<br /><br /> **Tlačítko Rozdělit (zakázáno)**|Popředí (glyf)|`Environment.CommandBarTextInactive`|  
+|![Tlačítko Rozdělit je vypnuto.](../extensibility/ux-guidelines/media/0303-057-splitbuttondisabled.png "0303-057_SplitButtonDisabled")<br /><br /> **Tlačítko Rozdělit (zakázáno)**|Ohraničení|Není dostupné.|  
+|![Tlačítko Rozdělit je vypnuto.](../extensibility/ux-guidelines/media/0303-057-splitbuttondisabled.png "0303-057_SplitButtonDisabled")<br /><br /> **Tlačítko Rozdělit (zakázáno)**|Oddělovač|Není dostupné.|  
   
-##### <a name="more-options-and-overflow-buttons"></a>Další možnosti a 'Overflow' tlačítka  
- Tlačítko "Další možnosti" se používá při skupinou příkazů panelu přizpůsobitelné buď přidáním nebo odebráním související panelu příkazů. Tlačítko "Přetečení" se zobrazí, když je zkrácena kvůli nedostatku místa na vodorovné panel příkazů a při kliknutí zobrazí nabídku, která obsahuje panelu příkazů nelze zobrazit. Barvy pro tyto dvě tlačítka se řídí stejnou sadu token názvy.  
+##### <a name="more-options-and-overflow-buttons"></a>Tlačítka "Další možnosti" a Přetečení  
+ Tlačítko "Další možnosti" se používá, když lze přizpůsobit skupinu panelu příkazů přidáním nebo odebráním souvisejících tlačítek panelu příkazů. Tlačítko "Přetečení" se zobrazí, když je panel příkazů zkrácen kvůli nedostatku vodorovného prostoru, a po klepnutí se zobrazí nabídka obsahující tlačítka panelu příkazů, která nelze zobrazit. Barvy pro tato dvě tlačítka jsou řízeny stejnou sadou názvů tokenů.  
   
- ![Další možnosti Redline](../extensibility/ux-guidelines/media/0303-058-moreoptionsredline.png "0303 – 058_MoreOptionsRedline")  
+ ![Další možnosti redline](../extensibility/ux-guidelines/media/0303-058-moreoptionsredline.png "0303-058_MoreOptionsRedline")  
   
- Použití...  
- pro vlastní "Další možnosti' nebo 'Overflow' tlačítka.  
+ Použít...  
+ pro vlastní tlačítka "Další možnosti" nebo Přetečení.  
   
- Nepoužívejte...  
- u tlačítek, které nemají podobné funkce jako více možností nebo 'Overflow' tlačítko.  
+ Nepoužívejte ...  
+ pro tlačítka, která nemají podobné funkce jako tlačítko "Další možnosti" nebo Přetečení.  
   
  **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Další možnosti](../extensibility/ux-guidelines/media/0303-059-moreoptions.png "0303 – 059_MoreOptions")<br /><br /> **Další možnosti**|Pozadí|`Environment.CommandBarOptionsBackground`|  
-|![Další možnosti](../extensibility/ux-guidelines/media/0303-059-moreoptions.png "0303 – 059_MoreOptions")<br /><br /> **Další možnosti**|Popředí (piktogram)|`Environment.CommandBarOptionsGlyph`|  
-|![Tlačítko přetečení](../extensibility/ux-guidelines/media/0303-060-overflow.png "0303 – 060_Overflow")<br /><br /> **Plně**|Pozadí|`Environment.CommandBarOptionsBackground`|  
-|![Tlačítko přetečení](../extensibility/ux-guidelines/media/0303-060-overflow.png "0303 – 060_Overflow")<br /><br /> **Plně**|Popředí (piktogram)|`Environment.CommandBarOptionsGlyph`|  
+|![Další možnosti](../extensibility/ux-guidelines/media/0303-059-moreoptions.png "0303-059_MoreOptions")<br /><br /> **Další možnosti**|Pozadí|`Environment.CommandBarOptionsBackground`|  
+|![Další možnosti](../extensibility/ux-guidelines/media/0303-059-moreoptions.png "0303-059_MoreOptions")<br /><br /> **Další možnosti**|Popředí (glyf)|`Environment.CommandBarOptionsGlyph`|  
+|![Tlačítko přetečení](../extensibility/ux-guidelines/media/0303-060-overflow.png "0303-060_Overflow")<br /><br /> **Přetečení**|Pozadí|`Environment.CommandBarOptionsBackground`|  
+|![Tlačítko přetečení](../extensibility/ux-guidelines/media/0303-060-overflow.png "0303-060_Overflow")<br /><br /> **Přetečení**|Popředí (glyf)|`Environment.CommandBarOptionsGlyph`|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Další možnosti při najetí myší](../extensibility/ux-guidelines/media/0303-061-moreoptionshover.png "0303 – 061_MoreOptionsHover")<br /><br /> **Další možnosti**|Pozadí|`Environment.CommandBarOptionsMouseOverBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Další možnosti při najetí myší](../extensibility/ux-guidelines/media/0303-061-moreoptionshover.png "0303 – 061_MoreOptionsHover")<br /><br /> **Další možnosti**|Popředí (piktogram)|`Environment.CommandBarOptionsMouseDownGlyph`|  
-|![Přetečení při najetí myší](../extensibility/ux-guidelines/media/0303-062-overflowoptions.png "0303 – 062_OverflowOptions")<br /><br /> **Plně**|Pozadí|`Environment.CommandBarOptionsMouseOverBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Přetečení při najetí myší](../extensibility/ux-guidelines/media/0303-062-overflowoptions.png "0303 – 062_OverflowOptions")<br /><br /> **Plně**|Popředí (piktogram)|`Environment.CommandBarOptionsMouseDownGlyph`|  
+|![Další možnosti při najetí přes](../extensibility/ux-guidelines/media/0303-061-moreoptionshover.png "0303-061_MoreOptionsHover")<br /><br /> **Další možnosti**|Pozadí|`Environment.CommandBarOptionsMouseOverBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Další možnosti při najetí přes](../extensibility/ux-guidelines/media/0303-061-moreoptionshover.png "0303-061_MoreOptionsHover")<br /><br /> **Další možnosti**|Popředí (glyf)|`Environment.CommandBarOptionsMouseDownGlyph`|  
+|![Přetečení při vznášení](../extensibility/ux-guidelines/media/0303-062-overflowoptions.png "0303-062_OverflowOptions")<br /><br /> **Přetečení**|Pozadí|`Environment.CommandBarOptionsMouseOverBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Přetečení při vznášení](../extensibility/ux-guidelines/media/0303-062-overflowoptions.png "0303-062_OverflowOptions")<br /><br /> **Přetečení**|Popředí (glyf)|`Environment.CommandBarOptionsMouseDownGlyph`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Bylo stisknuto více možností](../extensibility/ux-guidelines/media/0303-063-moreoptionspressed.png "0303 – 063_MoreOptionsPressed")<br /><br /> **Další možnosti**|Pozadí|`Environment.CommandBarOptionsMouseDownBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Bylo stisknuto více možností](../extensibility/ux-guidelines/media/0303-063-moreoptionspressed.png "0303 – 063_MoreOptionsPressed")<br /><br /> **Další možnosti**|Popředí (piktogram)|`Environment.CommandBarOptionsMouseDownGlyph`|  
-|![Stisknuté přetečení](../extensibility/ux-guidelines/media/0303-064-overflowpressed.png "0303 – 064_OverflowPressed")<br /><br /> **Plně**|Pozadí|`Environment.CommandBarOptionsMouseDownBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Stisknuté přetečení](../extensibility/ux-guidelines/media/0303-064-overflowpressed.png "0303 – 064_OverflowPressed")<br /><br /> **Plně**|Popředí (piktogram)|`Environment.CommandBarOptionsMouseDownGlyph`|  
+|![Další možnosti stisknuté](../extensibility/ux-guidelines/media/0303-063-moreoptionspressed.png "0303-063_MoreOptionsPressed")<br /><br /> **Další možnosti**|Pozadí|`Environment.CommandBarOptionsMouseDownBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Další možnosti stisknuté](../extensibility/ux-guidelines/media/0303-063-moreoptionspressed.png "0303-063_MoreOptionsPressed")<br /><br /> **Další možnosti**|Popředí (glyf)|`Environment.CommandBarOptionsMouseDownGlyph`|  
+|![Přetekli](../extensibility/ux-guidelines/media/0303-064-overflowpressed.png "0303-064_OverflowPressed")<br /><br /> **Přetečení**|Pozadí|`Environment.CommandBarOptionsMouseDownBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Přetekli](../extensibility/ux-guidelines/media/0303-064-overflowpressed.png "0303-064_OverflowPressed")<br /><br /> **Přetečení**|Popředí (glyf)|`Environment.CommandBarOptionsMouseDownGlyph`|  
   
-### <a name="document-windows"></a>Okna dokumentů  
- Není nutné replikovat okna dokumentu, protože jsou poskytovány prostředí sady Visual Studio. Ale můžete se rozhodnout, že chcete využít barvy použité v dokumentu systému windows tak, aby vaše uživatelské rozhraní se vždy zobrazí konzistentní s touto částí prostředí sady Visual Studio.  
+### <a name="document-windows"></a>Okna dokumentu  
+ Není nutné replikovat okna dokumentů, protože jsou poskytovány prostředím sady Visual Studio. Můžete se však rozhodnout, že chcete využít barvy použité v oknech dokumentu tak, aby vaše ui vždy zobrazí konzistentní s touto částí prostředí sady Visual Studio.  
   
- Při použití tokenů barva okno dokumentu, musíte být opatrní při jejich použití pouze pro podobné prvky a vždy ve dvojicích. Pokud to neuděláte, budete mít neočekávané výsledky v uživatelském rozhraní.  
+ Při použití tokenů barev okna dokumentu musíte být opatrní, abyste je používali pouze pro podobné prvky a vždy ve dvojicích. Pokud tak neučiníte, budete mít neočekávané výsledky v ui.  
   
 #### <a name="document-window-frame"></a>Rámeček okna dokumentu  
- Okna dokumentu může být ukotven v integrovaném vývojovém prostředí nebo s plovoucí desetinnou čárkou jako samostatném okně. Pokud je číslo s plovoucí čárkou okna dokumentu mimo rozhraní IDE, ji stále nachází v kontejneru dokumentu a má na pozadí, ohraničení, textu a barvy karet MDI, které se shodují, pokud je částí rozhraní IDE. Ale dokumentu se nachází uvnitř rámečku, který má svou vlastní pozadí ohraničení a barvy textu. Když okna nástrojů jsou ukotveny v kontejneru dokumentu, dědí chování a barvy pro jejich karty z tokenu názvy oken dokumentů.  
+ Okna dokumentu mohou být ukotvena v prostředí IDE nebo plovoucí jako samostatné okno. Pokud je okno dokumentu plovoucí mimo ide, stále sedí v dokumentu dobře a má pozadí, ohraničení, text a tabulátor barvy, které jsou stejné jako když je součástí ide. Dokument je však v něm nasazený uvnitř rámečku, který má vlastní barvy pozadí, ohraničení a textu. Když jsou okna nástrojů ukotvena v dokumentu dobře, dědí chování a barvu pro své karty z názvů tokenů okna dokumentu.  
   
- ![Okno ukotveného dokumentu Redline](../extensibility/ux-guidelines/media/0303-065-dockeddocumentwindowredline.png "0303 – 065_DockedDocumentWindowRedline")  
+ ![Červená čára okna ukotveného dokumentu](../extensibility/ux-guidelines/media/0303-065-dockeddocumentwindowredline.png "0303-065_DockedDocumentWindowRedline")  
   
  **Okno ukotveného dokumentu**  
   
- ![Plovoucí okno dokumentu Redline](../extensibility/ux-guidelines/media/0303-066-floatingdocumentwindowredline.png "0303 – 066_FloatingDocumentWindowRedline")  
+ ![Červená čára plovoucího okna dokumentu](../extensibility/ux-guidelines/media/0303-066-floatingdocumentwindowredline.png "0303-066_FloatingDocumentWindowRedline")  
   
  **Plovoucí okno dokumentu**  
   
- Použití...  
- kdekoli vytvoříte uživatelské rozhraní, které chcete najít okno dokumentu.  
+ Použít...  
+ kdekoli vytváříte ui, které chcete, aby odpovídaly okno dokumentu.  
   
- Nepoužívejte...  
- uživatelské rozhraní, který chcete změnit, pokud nechcete automaticky prostředí má aktualizace motivu.  
+ Nepoužívejte ...  
+ pro jakékoli ui, které nechcete automaticky změnit, pokud prostředí obsahuje aktualizaci motivu.  
   
  **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|Dokument: ukotven nebo s plovoucí desetinnou čárkou|Pozadí|Závisí na typu dokumentu|  
-|Dokument: ukotven nebo s plovoucí desetinnou čárkou|Popředí (Text)|Závisí na typu dokumentu|  
-|Dokument: ukotven nebo s plovoucí desetinnou čárkou|Ohraničení|`Environment.ToolWindowBorder`|  
-|![Zaměření na rámec](../extensibility/ux-guidelines/media/0303-067-framefocused.png "0303 – 067_FrameFocused")<br /><br /> **Rámec: plovoucí, prioritní**|Pozadí|`Environment.ToolWindowFloatingFrame`|  
-|![Zaměření na rámec](../extensibility/ux-guidelines/media/0303-067-framefocused.png "0303 – 067_FrameFocused")<br /><br /> **Rámec: plovoucí, prioritní**|Popředí (Text)|`Environment.ToolWindowFloatingFrame`|  
-|![Zaměření na rámec](../extensibility/ux-guidelines/media/0303-067-framefocused.png "0303 – 067_FrameFocused")<br /><br /> **Rámec: plovoucí, prioritní**|Popředí (piktogram)|`Environment.RaftedWindowButtonActiveGlyph`|  
-|![Zaměření na rámec](../extensibility/ux-guidelines/media/0303-067-framefocused.png "0303 – 067_FrameFocused")<br /><br /> **Rámec: plovoucí, prioritní**|Ohraničení|`Environment.MainWindowActiveDefaultBorder`|  
-|![Zaměření na rámec](../extensibility/ux-guidelines/media/0303-067-framefocused.png "0303 – 067_FrameFocused")<br /><br /> **Rámec: plovoucí, prioritní**|Ohraničení (piktogram)|`Environment.RaftedWindowButtonActiveBorder`<br /><br /> Nastavte na transparentní|  
-|![Nevybraný rámec](../extensibility/ux-guidelines/media/0303-068-frameunfocused.png "0303 – 068_FrameUnfocused")<br /><br /> **Frame: plovoucí, nevybrané**|Pozadí|`Environment.ToolWindowFloatingFrameInactive`|  
-|![Nevybraný rámec](../extensibility/ux-guidelines/media/0303-068-frameunfocused.png "0303 – 068_FrameUnfocused")<br /><br /> **Frame: plovoucí, nevybrané**|Popředí (Text)|`Environment.ToolWindowFloatingFrameInactive`|  
-|![Nevybraný rámec](../extensibility/ux-guidelines/media/0303-068-frameunfocused.png "0303 – 068_FrameUnfocused")<br /><br /> **Frame: plovoucí, nevybrané**|Popředí (piktogram)|`Environment.RaftedWindowButtonInactiveGlyph`|  
-|![Nevybraný rámec](../extensibility/ux-guidelines/media/0303-068-frameunfocused.png "0303 – 068_FrameUnfocused")<br /><br /> **Frame: plovoucí, nevybrané**|Ohraničení|`Environment.MainWindowInactiveBorder`|  
-|![Nevybraný rámec](../extensibility/ux-guidelines/media/0303-068-frameunfocused.png "0303 – 068_FrameUnfocused")<br /><br /> **Frame: plovoucí, nevybrané**|Ohraničení (piktogram)|`Environment.RaftedWindowButtonInactiveBorder`<br /><br /> Nastavte na transparentní|  
+|Dokument: ukotvený nebo plovoucí|Pozadí|Závisí na typu dokumentu|  
+|Dokument: ukotvený nebo plovoucí|Popředí (text)|Závisí na typu dokumentu|  
+|Dokument: ukotvený nebo plovoucí|Ohraničení|`Environment.ToolWindowBorder`|  
+|![Zaostřený snímek](../extensibility/ux-guidelines/media/0303-067-framefocused.png "0303-067_FrameFocused")<br /><br /> **Rám: plovoucí, zaostřený**|Pozadí|`Environment.ToolWindowFloatingFrame`|  
+|![Zaostřený snímek](../extensibility/ux-guidelines/media/0303-067-framefocused.png "0303-067_FrameFocused")<br /><br /> **Rám: plovoucí, zaostřený**|Popředí (text)|`Environment.ToolWindowFloatingFrame`|  
+|![Zaostřený snímek](../extensibility/ux-guidelines/media/0303-067-framefocused.png "0303-067_FrameFocused")<br /><br /> **Rám: plovoucí, zaostřený**|Popředí (glyf)|`Environment.RaftedWindowButtonActiveGlyph`|  
+|![Zaostřený snímek](../extensibility/ux-guidelines/media/0303-067-framefocused.png "0303-067_FrameFocused")<br /><br /> **Rám: plovoucí, zaostřený**|Ohraničení|`Environment.MainWindowActiveDefaultBorder`|  
+|![Zaostřený snímek](../extensibility/ux-guidelines/media/0303-067-framefocused.png "0303-067_FrameFocused")<br /><br /> **Rám: plovoucí, zaostřený**|Ohraničení (glyf)|`Environment.RaftedWindowButtonActiveBorder`<br /><br /> Nastavit na průhlednou|  
+|![Rámeček rozostřený](../extensibility/ux-guidelines/media/0303-068-frameunfocused.png "0303-068_FrameUnfocused")<br /><br /> **Rám: plovoucí, nezaostřený**|Pozadí|`Environment.ToolWindowFloatingFrameInactive`|  
+|![Rámeček rozostřený](../extensibility/ux-guidelines/media/0303-068-frameunfocused.png "0303-068_FrameUnfocused")<br /><br /> **Rám: plovoucí, nezaostřený**|Popředí (text)|`Environment.ToolWindowFloatingFrameInactive`|  
+|![Rámeček rozostřený](../extensibility/ux-guidelines/media/0303-068-frameunfocused.png "0303-068_FrameUnfocused")<br /><br /> **Rám: plovoucí, nezaostřený**|Popředí (glyf)|`Environment.RaftedWindowButtonInactiveGlyph`|  
+|![Rámeček rozostřený](../extensibility/ux-guidelines/media/0303-068-frameunfocused.png "0303-068_FrameUnfocused")<br /><br /> **Rám: plovoucí, nezaostřený**|Ohraničení|`Environment.MainWindowInactiveBorder`|  
+|![Rámeček rozostřený](../extensibility/ux-guidelines/media/0303-068-frameunfocused.png "0303-068_FrameUnfocused")<br /><br /> **Rám: plovoucí, nezaostřený**|Ohraničení (glyf)|`Environment.RaftedWindowButtonInactiveBorder`<br /><br /> Nastavit na průhlednou|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Zaměřit se na umístění rámečku při najetí myší](../extensibility/ux-guidelines/media/0303-069-framefocusedhover.png "0303 – 069_FrameFocusedHover")<br /><br /> **Rámec: plovoucí, prioritní**|Na pozadí (piktogram)|`Environment.RaftedWindowButtonHoverActive`|  
-|![Zaměřit se na umístění rámečku při najetí myší](../extensibility/ux-guidelines/media/0303-069-framefocusedhover.png "0303 – 069_FrameFocusedHover")<br /><br /> **Rámec: plovoucí, prioritní**|Popředí (piktogram)|`Environment.RaftedWindowButtonHoverActiveGlyph`|  
-|![Zaměřit se na umístění rámečku při najetí myší](../extensibility/ux-guidelines/media/0303-069-framefocusedhover.png "0303 – 069_FrameFocusedHover")<br /><br /> **Rámec: plovoucí, prioritní**|Ohraničení (piktogram)|`Environment.RaftedWindowButtonHoverActiveBorder`|  
-|![Nevybraný rámeček při najetí myší](../extensibility/ux-guidelines/media/0303-070-frameunfocusedhover.png "0303 – 070_FrameUnfocusedHover")<br /><br /> **Frame: plovoucí, nevybrané**|Na pozadí (piktogram)|`EnvironmentRaftedWindowButtonHoverInactive`|  
-|![Nevybraný rámeček při najetí myší](../extensibility/ux-guidelines/media/0303-070-frameunfocusedhover.png "0303 – 070_FrameUnfocusedHover")<br /><br /> **Frame: plovoucí, nevybrané**|Popředí (piktogram)|`Environment.RaftedWindowButtonHoverInactiveGlyph`|  
-|![Nevybraný rámeček při najetí myší](../extensibility/ux-guidelines/media/0303-070-frameunfocusedhover.png "0303 – 070_FrameUnfocusedHover")<br /><br /> **Frame: plovoucí, nevybrané**|Ohraničení (piktogram)|`Environment.RaftedWindowButtonHoverInactiveBorder`|  
+|![Snímek zaměřený na jev](../extensibility/ux-guidelines/media/0303-069-framefocusedhover.png "0303-069_FrameFocusedHover")<br /><br /> **Rám: plovoucí, zaostřený**|Pozadí (glyf)|`Environment.RaftedWindowButtonHoverActive`|  
+|![Snímek zaměřený na jev](../extensibility/ux-guidelines/media/0303-069-framefocusedhover.png "0303-069_FrameFocusedHover")<br /><br /> **Rám: plovoucí, zaostřený**|Popředí (glyf)|`Environment.RaftedWindowButtonHoverActiveGlyph`|  
+|![Snímek zaměřený na jev](../extensibility/ux-guidelines/media/0303-069-framefocusedhover.png "0303-069_FrameFocusedHover")<br /><br /> **Rám: plovoucí, zaostřený**|Ohraničení (glyf)|`Environment.RaftedWindowButtonHoverActiveBorder`|  
+|![Rámeček nezaostřený na vznášení](../extensibility/ux-guidelines/media/0303-070-frameunfocusedhover.png "0303-070_FrameUnfocusedHover")<br /><br /> **Rám: plovoucí, nezaostřený**|Pozadí (glyf)|`EnvironmentRaftedWindowButtonHoverInactive`|  
+|![Rámeček nezaostřený na vznášení](../extensibility/ux-guidelines/media/0303-070-frameunfocusedhover.png "0303-070_FrameUnfocusedHover")<br /><br /> **Rám: plovoucí, nezaostřený**|Popředí (glyf)|`Environment.RaftedWindowButtonHoverInactiveGlyph`|  
+|![Rámeček nezaostřený na vznášení](../extensibility/ux-guidelines/media/0303-070-frameunfocusedhover.png "0303-070_FrameUnfocusedHover")<br /><br /> **Rám: plovoucí, nezaostřený**|Ohraničení (glyf)|`Environment.RaftedWindowButtonHoverInactiveBorder`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Stisknutí rámečku soustředěné](../extensibility/ux-guidelines/media/0303-071-framefocusedpressed.png "0303 – 071_FrameFocusedPressed")<br /><br /> **Rámec: plovoucí, prioritní**|Na pozadí (piktogram)|`Environment.RaftedWindowButtonDown`|  
-|![Stisknutí rámečku soustředěné](../extensibility/ux-guidelines/media/0303-071-framefocusedpressed.png "0303 – 071_FrameFocusedPressed")<br /><br /> **Rámec: plovoucí, prioritní**|Popředí (piktogram)|`Environment.RaftedWindowButtonDownGlyph`|  
-|![Stisknutí rámečku soustředěné](../extensibility/ux-guidelines/media/0303-071-framefocusedpressed.png "0303 – 071_FrameFocusedPressed")<br /><br /> **Rámec: plovoucí, prioritní**|Ohraničení (piktogram)|`Environment.RaftedWindowButtonDownBorder`|  
+|![Stisknutý rám](../extensibility/ux-guidelines/media/0303-071-framefocusedpressed.png "0303-071_FrameFocusedPressed")<br /><br /> **Rám: plovoucí, zaostřený**|Pozadí (glyf)|`Environment.RaftedWindowButtonDown`|  
+|![Stisknutý rám](../extensibility/ux-guidelines/media/0303-071-framefocusedpressed.png "0303-071_FrameFocusedPressed")<br /><br /> **Rám: plovoucí, zaostřený**|Popředí (glyf)|`Environment.RaftedWindowButtonDownGlyph`|  
+|![Stisknutý rám](../extensibility/ux-guidelines/media/0303-071-framefocusedpressed.png "0303-071_FrameFocusedPressed")<br /><br /> **Rám: plovoucí, zaostřený**|Ohraničení (glyf)|`Environment.RaftedWindowButtonDownBorder`|  
   
 #### <a name="document-tabs"></a>Záložky dokumentů  
- Karty dokumentů se nacházejí v kanálu kartu označující dokumenty, které jsou právě otevřeny, a která z nich je aktuální vybraná nebo aktivní dokument. Okna nástrojů lze také ukotvit v kanálu kartu dokumentu, pokud existuje uživatel je umístí. V takovém případě používají stejné barvy karet jako okna dokumentu. Při vytváření uživatelského rozhraní, který chcete vždy odpovídat barvy okno dokumentu (včetně aktualizací motiv nebo pokud jsou nainstalovány nové motivy) a pak odkazovat na tyto barvy tokeny.  
+ Karty dokumentů jsou v kanálu karet, které označují, které dokumenty jsou aktuálně otevřené, spolu s nimiž se jedná o aktuální vybraný nebo aktivní dokument. Okna nástrojů lze také ukotvit v kanálu karty dokumentu, pokud je tam uživatel umístí. V takovém případě používají stejné barvy karty jako okna dokumentu. Pokud vytváříte ui, které chcete vždy odpovídat barvy okna dokumentu (včetně aktualizací motivu nebo pokud jsou nainstalovány nové motivy), pak odkazovat na tyto tokeny barev.  
   
- ![Redline na kartě dokumentu](../extensibility/ux-guidelines/media/0303-072-documenttabredline.png "0303 – 072_DocumentTabRedline")  
+ ![Červená čára karty Dokument](../extensibility/ux-guidelines/media/0303-072-documenttabredline.png "0303-072_DocumentTabRedline")  
   
- Použití...  
- kdekoli vytvoříte uživatelské rozhraní, které chcete odpovídat karty dokumentů a automaticky získávají aktualizace motiv nebo nové barvy motivu.  
+ Použít...  
+ kdekoli vytváříte ui, které chcete přizpůsobit karty dokumentů a automaticky vyzvednout aktualizace motivů nebo nové barvy motivu.  
   
- Nepoužívejte...  
- pro všechny uživatelské rozhraní, které nechcete automaticky změnit, pokud prostředí má motiv aktualizovat.  
+ Nepoužívejte ...  
+ pro jakékoli ui, které nechcete změnit automaticky, když prostředí má aktualizaci motivu.  
   
-##### <a name="open-document-tabs"></a>Karty otevřených dokumentů  
- Každý otevřený dokument obsahuje kartu v kanálu kartu dokumentu, který se zobrazí její název. Dokumenty, můžete buď vybrat nebo otevřete na pozadí a jejich karty, aby odrážela tyto stavy:  
+##### <a name="open-document-tabs"></a>Otevření karet dokumentů  
+ Každý otevřený dokument má v kanálu karty dokumentu kartu, která zobrazuje jeho název. Dokumenty mohou být vybrány nebo otevřeny na pozadí a jejich karty odrážejí tyto stavy:  
   
-- Vybraná karta představuje dokument, který je dobře zobrazeno v dokumentu. Vybraná karta má ohraničení dokumentu, který rozšiřuje dobře mezi horním okrajem dokumentu.  
+- Vybraná karta představuje dokument, který je aktuálně zobrazen v dokumentu dobře. Vybraná karta má ohraničení dokumentu, které dobře přesahuje horní okraj dokumentu.  
   
-- Karty na pozadí jsou jakékoli karty dokumentu, které nejsou aktuálně vybranou kartou. Po kliknutí se stanou vybranými kartami a získá všechny barvy pozadí, ohraničení a textu z názvů těchto tokenů.  
+- Karty na pozadí jsou všechny karty dokumentů, které nejsou aktuálně vybranou kartou. Po kliknutí se stanou vybranou kartou a z těchto názvů tokenů získají všechny barvy pozadí, ohraničení a textu.  
   
-  ![Otevřít kartu dokumentu Redline](../extensibility/ux-guidelines/media/0303-073-opendocumenttabredline.png "0303 – 073_OpenDocumentTabRedline")  
+  ![Otevřít kartu dokumentu jako červenou čáru](../extensibility/ux-guidelines/media/0303-073-opendocumenttabredline.png "0303-073_OpenDocumentTabRedline")  
   
-  Použití...  
-  Pokud při vytváření vlastního dokumentu karty.  
+  Použít...  
+  při vytváření vlastních karet dokumentů.  
   
-  Nepoužívejte...  
-  - u tabulátorů prozatímní (preview).  
+  Nepoužívejte ...  
+  - pro předběžné (náhledové) karty.  
   
-- prostředí pro uživatelské rozhraní, které nechcete automaticky změnit, pokud má aktualizace motivu.  
+- pro jakékoli ui, které nechcete změnit automaticky, pokud prostředí obsahuje aktualizaci motivu.  
   
 ##### <a name="selected-tab"></a>Vybraná karta  
- **Zaměřil**  
+ **Focused**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Vybraná karta – prioritní](../extensibility/ux-guidelines/media/0303-074-selectedtabfocused.png "0303 – 074_SelectedTabFocused")<br /><br /> **Vybraná karta dokumentu – prioritní**|Pozadí|`Environment.FileTabSelectedGradientTop`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Vybraná karta – prioritní](../extensibility/ux-guidelines/media/0303-074-selectedtabfocused.png "0303 – 074_SelectedTabFocused")<br /><br /> **Vybraná karta dokumentu – prioritní**|Popředí (Text)|`Environment.FileTabSelectedText`|  
-|![Vybraná karta – prioritní](../extensibility/ux-guidelines/media/0303-074-selectedtabfocused.png "0303 – 074_SelectedTabFocused")<br /><br /> **Vybraná karta dokumentu – prioritní**|Ohraničení|`Environment.FileTabSelectedBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
-|![Vybraná karta – prioritní](../extensibility/ux-guidelines/media/0303-074-selectedtabfocused.png "0303 – 074_SelectedTabFocused")<br /><br /> **Vybraná karta dokumentu – prioritní**|Dokument ohraničení|`Environment.FileTabDocumentBorderBackground`|  
+|![Vybraná karta zaměřená](../extensibility/ux-guidelines/media/0303-074-selectedtabfocused.png "0303-074_SelectedTabFocused")<br /><br /> **Vybraná karta dokumentu, zaměřená**|Pozadí|`Environment.FileTabSelectedGradientTop`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Vybraná karta zaměřená](../extensibility/ux-guidelines/media/0303-074-selectedtabfocused.png "0303-074_SelectedTabFocused")<br /><br /> **Vybraná karta dokumentu, zaměřená**|Popředí (text)|`Environment.FileTabSelectedText`|  
+|![Vybraná karta zaměřená](../extensibility/ux-guidelines/media/0303-074-selectedtabfocused.png "0303-074_SelectedTabFocused")<br /><br /> **Vybraná karta dokumentu, zaměřená**|Ohraničení|`Environment.FileTabSelectedBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
+|![Vybraná karta zaměřená](../extensibility/ux-guidelines/media/0303-074-selectedtabfocused.png "0303-074_SelectedTabFocused")<br /><br /> **Vybraná karta dokumentu, zaměřená**|Ohraničení dokumentu|`Environment.FileTabDocumentBorderBackground`|  
   
- **Bez fokusu**  
+ **Rozostřený**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Vybraná karta nebyla zaostřená.](../extensibility/ux-guidelines/media/0303-075-selectedtabunfocused.png "0303 – 075_SelectedTabUnfocused")<br /><br /> **Vybraná karta dokumentu bez fokusu**|Pozadí|`Environment.FileTabInactiveGradientTop`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Vybraná karta nebyla zaostřená.](../extensibility/ux-guidelines/media/0303-075-selectedtabunfocused.png "0303 – 075_SelectedTabUnfocused")<br /><br /> **Vybraná karta dokumentu bez fokusu**|Popředí (Text)|`Environment.FileTabInactiveText`|  
-|![Vybraná karta nebyla zaostřená.](../extensibility/ux-guidelines/media/0303-075-selectedtabunfocused.png "0303 – 075_SelectedTabUnfocused")<br /><br /> **Vybraná karta dokumentu bez fokusu**|Ohraničení|`Environment.FileTabInactiveBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
-|![Vybraná karta nebyla zaostřená.](../extensibility/ux-guidelines/media/0303-075-selectedtabunfocused.png "0303 – 075_SelectedTabUnfocused")<br /><br /> **Vybraná karta dokumentu bez fokusu**|Dokument ohraničení|`Environment.FileTabInactiveDocumentBorderBackground`|  
+|![Vybraná karta rozostřená](../extensibility/ux-guidelines/media/0303-075-selectedtabunfocused.png "0303-075_SelectedTabUnfocused")<br /><br /> **Vybraná karta dokumentu, nezaostřená**|Pozadí|`Environment.FileTabInactiveGradientTop`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Vybraná karta rozostřená](../extensibility/ux-guidelines/media/0303-075-selectedtabunfocused.png "0303-075_SelectedTabUnfocused")<br /><br /> **Vybraná karta dokumentu, nezaostřená**|Popředí (text)|`Environment.FileTabInactiveText`|  
+|![Vybraná karta rozostřená](../extensibility/ux-guidelines/media/0303-075-selectedtabunfocused.png "0303-075_SelectedTabUnfocused")<br /><br /> **Vybraná karta dokumentu, nezaostřená**|Ohraničení|`Environment.FileTabInactiveBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
+|![Vybraná karta rozostřená](../extensibility/ux-guidelines/media/0303-075-selectedtabunfocused.png "0303-075_SelectedTabUnfocused")<br /><br /> **Vybraná karta dokumentu, nezaostřená**|Ohraničení dokumentu|`Environment.FileTabInactiveDocumentBorderBackground`|  
   
-##### <a name="background-tab"></a>Karty na pozadí  
+##### <a name="background-tab"></a>Karta Pozadí  
  **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Color.category|  
+|Komponenta|Element|Název tokenu: Color.category|  
 |---------------|-------------|--------------------------------|  
-|![Karta pozadí](../extensibility/ux-guidelines/media/0303-076-backgroundtab.png "0303 – 076_BackgroundTab")<br /><br /> **Výchozí hodnota karty na pozadí**|Pozadí|`Environment.FileTabBackground`|  
-|![Karta pozadí](../extensibility/ux-guidelines/media/0303-076-backgroundtab.png "0303 – 076_BackgroundTab")<br /><br /> **Výchozí hodnota karty na pozadí**|Popředí (Text)|`Environment.FileTabText`|  
-|![Karta pozadí](../extensibility/ux-guidelines/media/0303-076-backgroundtab.png "0303 – 076_BackgroundTab")<br /><br /> **Výchozí hodnota karty na pozadí**|Ohraničení|`Environment.FileTabBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
+|![Karta Pozadí](../extensibility/ux-guidelines/media/0303-076-backgroundtab.png "0303-076_BackgroundTab")<br /><br /> **Karta Pozadí je výchozí**|Pozadí|`Environment.FileTabBackground`|  
+|![Karta Pozadí](../extensibility/ux-guidelines/media/0303-076-backgroundtab.png "0303-076_BackgroundTab")<br /><br /> **Karta Pozadí je výchozí**|Popředí (text)|`Environment.FileTabText`|  
+|![Karta Pozadí](../extensibility/ux-guidelines/media/0303-076-backgroundtab.png "0303-076_BackgroundTab")<br /><br /> **Karta Pozadí je výchozí**|Ohraničení|`Environment.FileTabBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Color.category|  
+|Komponenta|Element|Název tokenu: Color.category|  
 |---------------|-------------|--------------------------------|  
-|![Karta pozadí při najetí myší](../extensibility/ux-guidelines/media/0303-077-backgroundtabhover.png "0303 – 077_BackgroundTabHover")<br /><br /> **Karta pozadí při najetí myší**|Pozadí|`Environment.FileTabHotGradientTop`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Karta pozadí při najetí myší](../extensibility/ux-guidelines/media/0303-077-backgroundtabhover.png "0303 – 077_BackgroundTabHover")<br /><br /> **Karta pozadí při najetí myší**|Popředí (Text)|`Environment.FileTabHotText`|  
-|![Karta pozadí při najetí myší](../extensibility/ux-guidelines/media/0303-077-backgroundtabhover.png "0303 – 077_BackgroundTabHover")<br /><br /> **Karta pozadí při najetí myší**|Ohraničení|`Environment.FileTabHotBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
+|![Karta Pozadí při najetí přes](../extensibility/ux-guidelines/media/0303-077-backgroundtabhover.png "0303-077_BackgroundTabHover")<br /><br /> **Karta Pozadí při najetí přes**|Pozadí|`Environment.FileTabHotGradientTop`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Karta Pozadí při najetí přes](../extensibility/ux-guidelines/media/0303-077-backgroundtabhover.png "0303-077_BackgroundTabHover")<br /><br /> **Karta Pozadí při najetí přes**|Popředí (text)|`Environment.FileTabHotText`|  
+|![Karta Pozadí při najetí přes](../extensibility/ux-guidelines/media/0303-077-backgroundtabhover.png "0303-077_BackgroundTabHover")<br /><br /> **Karta Pozadí při najetí přes**|Ohraničení|`Environment.FileTabHotBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
   
-##### <a name="preview-tab"></a>Karta náhledu  
- Na kartě preview se zobrazí na pravé straně kanálu kartu dokumentu po kliknutí na položku v panelu nástrojů Průzkumníku řešení. Funguje jako náhled dokumentu a také umožňuje uživateli možnost zachovat dokument otevřít na levé straně kanálu kartu dokumentu. Otevřenou kartou pouze jednu verzi preview může být najednou otevřený. Ve verzi Preview karty mají i na pozadí a vybraných států, jako jsou otevřené karty a může být zaměřené nebo bez fokusu v aktivním stavu.  
+##### <a name="preview-tab"></a>Karta Náhled  
+ Karta Náhled se zobrazí na pravé straně kanálu karty dokumentu, když uživatel klepne na položku v okně nástroje Průzkumník řešení. Funguje jako náhled dokumentu a také dává uživateli možnost ponechat dokument otevřený na levé straně kanálu karty dokumentu. Současně lze otevřít pouze jednu otevřenou kartu náhledu. Karty náhledu mají pozadí i vybrané stavy, například otevřené karty, a lze je zaostřit nebo rozostřit v aktivním stavu.  
   
- ![Redline karty Preview](../extensibility/ux-guidelines/media/0303-078-previewtabredline.png "0303 – 078_PreviewTabRedline")  
+ ![Červená čára karty Náhled](../extensibility/ux-guidelines/media/0303-078-previewtabredline.png "0303-078_PreviewTabRedline")  
   
- Použití...  
- kdekoli vytváření prozatímní ve verzi preview a má nějaký element tak, aby odpovídaly aktuální barvu karty ve verzi preview.  
+ Použít...  
+ kdekoli vytváříte předběžný náhled a chcete, aby nějaký prvek odpovídal aktuální barvě karty náhledu.  
   
-Nepoužívejte...  
-- pro jakýkoli druh dokumentu nebo kartu, která není prozatímní (preview).  
+Nepoužívejte ...  
+- pro jakýkoli druh dokumentu nebo karty, která není prozatímní (náhled).  
 
-- prostředí pro uživatelské rozhraní, které nechcete automaticky změnit, pokud má aktualizace motivu.  
+- pro jakékoli ui, které nechcete změnit automaticky, pokud prostředí obsahuje aktualizaci motivu.  
   
-  **Vybraná karta náhled: prioritní**  
+  **Vybraná karta náhledu: Zaostřeno**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Zaměření karty Preview](../extensibility/ux-guidelines/media/0303-079-previewtabfocused.png "0303 – 079_PreviewTabFocused")<br /><br /> **Karta s fokusem ve verzi Preview**|Pozadí|`Environment.FileTabProvisionalSelectedActive`|  
-|![Zaměření karty Preview](../extensibility/ux-guidelines/media/0303-079-previewtabfocused.png "0303 – 079_PreviewTabFocused")<br /><br /> **Karta s fokusem ve verzi Preview**|Popředí (Text)|`Environment.FileTabProvisionalSelectedActiveForeground`|  
-|![Zaměření karty Preview](../extensibility/ux-guidelines/media/0303-079-previewtabfocused.png "0303 – 079_PreviewTabFocused")<br /><br /> **Karta s fokusem ve verzi Preview**|Ohraničení|`Environment.FileTabProvisionalSelectedActiveBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
-|![Zaměření karty Preview](../extensibility/ux-guidelines/media/0303-079-previewtabfocused.png "0303 – 079_PreviewTabFocused")<br /><br /> **Karta s fokusem ve verzi Preview**|Dokument ohraničení|`Environment.FileTabProvisionalSelectedActiveBorder`|  
+|![Na kartu Náhled zaměřená](../extensibility/ux-guidelines/media/0303-079-previewtabfocused.png "0303-079_PreviewTabFocused")<br /><br /> **Karta Fokus náhledu**|Pozadí|`Environment.FileTabProvisionalSelectedActive`|  
+|![Na kartu Náhled zaměřená](../extensibility/ux-guidelines/media/0303-079-previewtabfocused.png "0303-079_PreviewTabFocused")<br /><br /> **Karta Fokus náhledu**|Popředí (text)|`Environment.FileTabProvisionalSelectedActiveForeground`|  
+|![Na kartu Náhled zaměřená](../extensibility/ux-guidelines/media/0303-079-previewtabfocused.png "0303-079_PreviewTabFocused")<br /><br /> **Karta Fokus náhledu**|Ohraničení|`Environment.FileTabProvisionalSelectedActiveBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
+|![Na kartu Náhled zaměřená](../extensibility/ux-guidelines/media/0303-079-previewtabfocused.png "0303-079_PreviewTabFocused")<br /><br /> **Karta Fokus náhledu**|Ohraničení dokumentu|`Environment.FileTabProvisionalSelectedActiveBorder`|  
   
- **Vybraná karta náhledu: Nevybráno**  
+ **Vybraná karta náhledu: Nezaostřeno**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Karta Preview není zaostřená](../extensibility/ux-guidelines/media/0303-080-previewtabunfocused.png "0303 – 080_PreviewTabUnfocused")<br /><br /> **Karta Náhled se nezaměřuje**|Pozadí|`Environment.FileTabProvisionalSelectedInactive`|  
-|![Karta Preview není zaostřená](../extensibility/ux-guidelines/media/0303-080-previewtabunfocused.png "0303 – 080_PreviewTabUnfocused")<br /><br /> **Karta Náhled se nezaměřuje**|Popředí (Text)|`Environment.FileTabProvisionalSelectedInactiveForeground`|  
-|![Karta Preview není zaostřená](../extensibility/ux-guidelines/media/0303-080-previewtabunfocused.png "0303 – 080_PreviewTabUnfocused")<br /><br /> **Karta Náhled se nezaměřuje**|Ohraničení|`Environment.FileTabProvisionalSelectedInactiveBorder`|  
-|![Karta Preview není zaostřená](../extensibility/ux-guidelines/media/0303-080-previewtabunfocused.png "0303 – 080_PreviewTabUnfocused")<br /><br /> **Karta Náhled se nezaměřuje**|Dokument ohraničení|`Environment.FileTabProvisionalSelectedInactiveBorder`|  
+|![Rozostřený kartě Náhled](../extensibility/ux-guidelines/media/0303-080-previewtabunfocused.png "0303-080_PreviewTabUnfocused")<br /><br /> **Karta Nezaostřený náhled**|Pozadí|`Environment.FileTabProvisionalSelectedInactive`|  
+|![Rozostřený kartě Náhled](../extensibility/ux-guidelines/media/0303-080-previewtabunfocused.png "0303-080_PreviewTabUnfocused")<br /><br /> **Karta Nezaostřený náhled**|Popředí (text)|`Environment.FileTabProvisionalSelectedInactiveForeground`|  
+|![Rozostřený kartě Náhled](../extensibility/ux-guidelines/media/0303-080-previewtabunfocused.png "0303-080_PreviewTabUnfocused")<br /><br /> **Karta Nezaostřený náhled**|Ohraničení|`Environment.FileTabProvisionalSelectedInactiveBorder`|  
+|![Rozostřený kartě Náhled](../extensibility/ux-guidelines/media/0303-080-previewtabunfocused.png "0303-080_PreviewTabUnfocused")<br /><br /> **Karta Nezaostřený náhled**|Ohraničení dokumentu|`Environment.FileTabProvisionalSelectedInactiveBorder`|  
   
- **Karta Náhled pozadí: výchozí**  
+ **Karta Náhled na pozadí: Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Karta pozadí náhledu](../extensibility/ux-guidelines/media/0303-081-previewbackgroundtab.png "0303 – 081_PreviewBackgroundTab")<br /><br /> **Karta pozadí karty Preview**|Pozadí|`Environment.FileTabProvisionalInactive`|  
-|![Karta pozadí náhledu](../extensibility/ux-guidelines/media/0303-081-previewbackgroundtab.png "0303 – 081_PreviewBackgroundTab")<br /><br /> **Karta pozadí karty Preview**|Popředí (Text)|`Environment.FileTabProvisionalInactiveForeground`|  
-|![Karta pozadí náhledu](../extensibility/ux-guidelines/media/0303-081-previewbackgroundtab.png "0303 – 081_PreviewBackgroundTab")<br /><br /> **Karta pozadí karty Preview**|Ohraničení|`Environment.FileTabProvisionalInactiveBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
+|![Karta Náhled na pozadí](../extensibility/ux-guidelines/media/0303-081-previewbackgroundtab.png "0303-081_PreviewBackgroundTab")<br /><br /> **Karta Náhled na pozadí**|Pozadí|`Environment.FileTabProvisionalInactive`|  
+|![Karta Náhled na pozadí](../extensibility/ux-guidelines/media/0303-081-previewbackgroundtab.png "0303-081_PreviewBackgroundTab")<br /><br /> **Karta Náhled na pozadí**|Popředí (text)|`Environment.FileTabProvisionalInactiveForeground`|  
+|![Karta Náhled na pozadí](../extensibility/ux-guidelines/media/0303-081-previewbackgroundtab.png "0303-081_PreviewBackgroundTab")<br /><br /> **Karta Náhled na pozadí**|Ohraničení|`Environment.FileTabProvisionalInactiveBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
   
- **Karta náhledu pozadí: najeďte myší**  
+ **Karta Náhled na pozadí: Najeďte**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Náhled karty pozadí při najetí myší](../extensibility/ux-guidelines/media/0303-082-previewbackgroundtabhover.png "0303 – 082_PreviewBackgroundTabHover")<br /><br /> **Karta pozadí náhledu při najetí myší**|Pozadí|`Environment.FileTabProvisionalHover`|  
-|![Náhled karty pozadí při najetí myší](../extensibility/ux-guidelines/media/0303-082-previewbackgroundtabhover.png "0303 – 082_PreviewBackgroundTabHover")<br /><br /> **Karta pozadí náhledu při najetí myší**|Popředí (Text)|`Environment.FileTabProvisionalHoverForeground`|  
-|![Náhled karty pozadí při najetí myší](../extensibility/ux-guidelines/media/0303-082-previewbackgroundtabhover.png "0303 – 082_PreviewBackgroundTabHover")<br /><br /> **Karta pozadí náhledu při najetí myší**|Ohraničení|`Environment.FileTabProvisionalHoverBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
+|![Náhled karty Pozadí při najetí přes](../extensibility/ux-guidelines/media/0303-082-previewbackgroundtabhover.png "0303-082_PreviewBackgroundTabHover")<br /><br /> **Karta Náhled na pozadí při najetí přes**|Pozadí|`Environment.FileTabProvisionalHover`|  
+|![Náhled karty Pozadí při najetí přes](../extensibility/ux-guidelines/media/0303-082-previewbackgroundtabhover.png "0303-082_PreviewBackgroundTabHover")<br /><br /> **Karta Náhled na pozadí při najetí přes**|Popředí (text)|`Environment.FileTabProvisionalHoverForeground`|  
+|![Náhled karty Pozadí při najetí přes](../extensibility/ux-guidelines/media/0303-082-previewbackgroundtabhover.png "0303-082_PreviewBackgroundTabHover")<br /><br /> **Karta Náhled na pozadí při najetí přes**|Ohraničení|`Environment.FileTabProvisionalHoverBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
   
-##### <a name="document-overflow-button"></a>Dokument tlačítku přetečení  
- Tlačítko přetečení dokument je k dispozici, pokud existuje jedna nebo více dokumentů otevřít, bez ohledu na to, zda je v aktuální konfiguraci podle všechny karty dokumentu svislé mezery. Rozevírací nabídka přetečení dokumentu, která je ovládána **CommandBarMenu** barvami (viz [nabídky](../misc/shared-colors.md#BKMK_CommandMenus)), zobrazuje seznam všech otevřených dokumentů, viditelné i skryté a glyf přetečení se mění v závislosti na tom, zda jsou všechny otevřené dokumenty zobrazeny v kanálu karet.  
+##### <a name="document-overflow-button"></a>Tlačítko přetečení dokumentu  
+ Tlačítko přetečení dokumentu je k dispozici, pokud je otevřen jeden nebo více dokumentů, bez ohledu na to, zda je v aktuální konfiguraci svislé místo, aby se vešly všechny karty dokumentu. Rozevírací nabídka Přetečení dokumentu, která je řízena barvami **CommandBarMenu** (viz [Nabídky](../misc/shared-colors.md#BKMK_CommandMenus)), zobrazuje seznam všech otevřených dokumentů, viditelných i skrytých, a přetečení glyfů se mění v závislosti na tom, zda jsou všechny otevřené dokumenty zobrazeny v kanálu karet.  
   
- ![Redline přetečení](../extensibility/ux-guidelines/media/0303-083-overflowredline.png "0303 – 083_OverflowRedline")  
+ ![Přetečení redline](../extensibility/ux-guidelines/media/0303-083-overflowredline.png "0303-083_OverflowRedline")  
   
-Použití...  
-Když vytvoříte tlačítko přetečení vlastní šablony dokumentů.  
+Použít...  
+při vytváření vlastního tlačítka přetečení dokumentu.  
 
-Nepoužívejte...  
-- pro uživatelské rozhraní, která není podobné k tlačítku přetečení.  
+Nepoužívejte ...  
+- pro uI, které není podobné tlačítko přetečení.  
 
 - pro tlačítka přetečení panelu příkazů.  
   
   **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Plně](../extensibility/ux-guidelines/media/0303-084-overflow.png "0303 – 084_Overflow")<br /><br /> **Tlačítko přetečení dokumentu**|Pozadí|`Environment.DocWellOverflowButtonBackground`|  
-|![Plně](../extensibility/ux-guidelines/media/0303-084-overflow.png "0303 – 084_Overflow")<br /><br /> **Tlačítko přetečení dokumentu**|Popředí (piktogram)|`Environment.DocWellOverflowButtonGlyph`|  
-|![Plně](../extensibility/ux-guidelines/media/0303-084-overflow.png "0303 – 084_Overflow")<br /><br /> **Tlačítko přetečení dokumentu**|Ohraničení|neuvedeno|  
+|![Přetečení](../extensibility/ux-guidelines/media/0303-084-overflow.png "0303-084_Overflow")<br /><br /> **Tlačítko přetečení dokumentu**|Pozadí|`Environment.DocWellOverflowButtonBackground`|  
+|![Přetečení](../extensibility/ux-guidelines/media/0303-084-overflow.png "0303-084_Overflow")<br /><br /> **Tlačítko přetečení dokumentu**|Popředí (glyf)|`Environment.DocWellOverflowButtonGlyph`|  
+|![Přetečení](../extensibility/ux-guidelines/media/0303-084-overflow.png "0303-084_Overflow")<br /><br /> **Tlačítko přetečení dokumentu**|Ohraničení|Není dostupné.|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Přetečení při najetí myší](../extensibility/ux-guidelines/media/0303-085-overflowhover.png "0303 – 085_OverflowHover")<br /><br /> **Tlačítko přetečení dokumentu při najetí myší**|Pozadí|`Environment.DocWellOverflowButtonMouseOverBackground`|  
-|![Přetečení při najetí myší](../extensibility/ux-guidelines/media/0303-085-overflowhover.png "0303 – 085_OverflowHover")<br /><br /> **Tlačítko přetečení dokumentu při najetí myší**|Popředí (piktogram)|`Environment.DocWellOverflowButtonMouseOverGlyph`|  
-|![Přetečení při najetí myší](../extensibility/ux-guidelines/media/0303-085-overflowhover.png "0303 – 085_OverflowHover")<br /><br /> **Tlačítko přetečení dokumentu při najetí myší**|Ohraničení|`Environment.DocWellOverflowButtonMouseOverBorder`|  
+|![Přetečení při vznášení](../extensibility/ux-guidelines/media/0303-085-overflowhover.png "0303-085_OverflowHover")<br /><br /> **Tlačítko přetečení dokumentu při najetí přes**|Pozadí|`Environment.DocWellOverflowButtonMouseOverBackground`|  
+|![Přetečení při vznášení](../extensibility/ux-guidelines/media/0303-085-overflowhover.png "0303-085_OverflowHover")<br /><br /> **Tlačítko přetečení dokumentu při najetí přes**|Popředí (glyf)|`Environment.DocWellOverflowButtonMouseOverGlyph`|  
+|![Přetečení při vznášení](../extensibility/ux-guidelines/media/0303-085-overflowhover.png "0303-085_OverflowHover")<br /><br /> **Tlačítko přetečení dokumentu při najetí přes**|Ohraničení|`Environment.DocWellOverflowButtonMouseOverBorder`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Stisknuté přetečení](../extensibility/ux-guidelines/media/0303-086-overflowpressed.png "0303 – 086_OverflowPressed")<br /><br /> **Stisknuté tlačítko přetečení dokumentu**|Pozadí|`Environment.DocWellOverflowButtonMouseDownBackground`|  
-|![Stisknuté přetečení](../extensibility/ux-guidelines/media/0303-086-overflowpressed.png "0303 – 086_OverflowPressed")<br /><br /> **Stisknuté tlačítko přetečení dokumentu**|Popředí (piktogram)|`Environment.DocWellOverflowButtonMouseDownGlyph`|  
-|![Stisknuté přetečení](../extensibility/ux-guidelines/media/0303-086-overflowpressed.png "0303 – 086_OverflowPressed")<br /><br /> **Stisknuté tlačítko přetečení dokumentu**|Ohraničení|`Environment.DocWellOverflowButtonMouseDownBorder`|  
+|![Přetekli](../extensibility/ux-guidelines/media/0303-086-overflowpressed.png "0303-086_OverflowPressed")<br /><br /> **Tlačítko přetečení stlačeného dokumentu**|Pozadí|`Environment.DocWellOverflowButtonMouseDownBackground`|  
+|![Přetekli](../extensibility/ux-guidelines/media/0303-086-overflowpressed.png "0303-086_OverflowPressed")<br /><br /> **Tlačítko přetečení stlačeného dokumentu**|Popředí (glyf)|`Environment.DocWellOverflowButtonMouseDownGlyph`|  
+|![Přetekli](../extensibility/ux-guidelines/media/0303-086-overflowpressed.png "0303-086_OverflowPressed")<br /><br /> **Tlačítko přetečení stlačeného dokumentu**|Ohraničení|`Environment.DocWellOverflowButtonMouseDownBorder`|  
   
-### <a name="tool-windows"></a>Nástroje systému windows  
- Není nutné replikovat okna nástrojů, protože jsou poskytovány prostředí sady Visual Studio. Ale můžete se rozhodnout, že chcete využít barvy použité v oknech nástrojů tak, aby vaše uživatelské rozhraní se vždy zobrazí konzistentní s touto částí prostředí sady Visual Studio.  
+### <a name="tool-windows"></a>Okna nástrojů  
+ Není nutné replikovat okna nástrojů, protože jsou poskytovány prostředím sady Visual Studio. Můžete se však rozhodnout, že chcete využít barvy použité v oknech nástrojů tak, aby vaše ui vždy zobrazí konzistentní s touto částí prostředí sady Visual Studio.  
   
- ![Okno nástroje Redline](../extensibility/ux-guidelines/media/0303-087-toolwindowredline.png "0303 – 087_ToolWindowRedline")  
+ ![Červená čára okna nástroje](../extensibility/ux-guidelines/media/0303-087-toolwindowredline.png "0303-087_ToolWindowRedline")  
   
- Použití...  
- kdekoli vytvoříte uživatelské rozhraní, které chcete porovnat okna nástrojů.  
+ Použít...  
+ kdekoli vytváříte ui, které chcete, aby odpovídaly okna nástrojů.  
   
- Nepoužívejte...  
- prostředí pro uživatelské rozhraní, které nechcete automaticky změnit, pokud má aktualizace motivu.  
+ Nepoužívejte ...  
+ pro jakékoli ui, které nechcete změnit automaticky, pokud prostředí obsahuje aktualizaci motivu.  
   
-#### <a name="tool-window-frame"></a>Rámeček okna nástroje  
- Okna nástrojů v sadě Visual Studio se používají pro celou řadu různých úloh a může existovat v jednom z několika různých stavů. Pokud je panel nástrojů otevřen, může být přiřazena k některému z čtyřech stranách oblasti dokumentu. Nástroje systému windows můžete také uvolnit mimo rozhraní IDE, odkud můžou přesunout kamkoli v rámci obrazovce uživatele. Plovoucí okna vždy nacházejí na integrovaném vývojovém prostředí. Nakonec panely nástrojů lze ukotvit jako dokument windows a zobrazí jako karty v dobře dokumentu. Okna nástrojů, které byly ukotvit jako dokument windows se zobrazí v části pomocí tokenu názvy oken dokumentů.  
+#### <a name="tool-window-frame"></a>Rám okna nástroje  
+ Okna nástrojů v sadě Visual Studio se používají pro mnoho různých úkolů a mohou existovat v jednom z několika různých stavů. Pokud je okno nástroje otevřené, lze jej přiřadit k libovolné ze čtyř stran oblasti dokumentu. Okna nástrojů mohou také plavat mimo rozhraní IDE, což umožňuje jejich přemístění kdekoli na obrazovce uživatele. Plovoucí okna vždy sedět na vrcholu IDE. Nakonec mohou být okna nástrojů ukotvena jako okna dokumentu a v dokumentu se dobře zobrazí jako karta. Okna nástrojů, která byla ukotvena jako okna dokumentu, jsou částečně barevná pomocí názvů tokenů okna dokumentu.  
   
- ![Redline rámečku okna nástroje](../extensibility/ux-guidelines/media/0303-088-toolwindowframeredline.png "0303 – 088_ToolWindowFrameRedline")  
+ ![Červený rámeček okna nástroje](../extensibility/ux-guidelines/media/0303-088-toolwindowframeredline.png "0303-088_ToolWindowFrameRedline")  
   
- Použití...  
- kdekoli vytvoříte uživatelské rozhraní, které chcete porovnat okna nástrojů.  
+ Použít...  
+ kdekoli vytváříte ui, které chcete, aby odpovídaly okna nástrojů.  
   
- Nepoužívejte...  
- prostředí pro uživatelské rozhraní, které nechcete automaticky změnit, pokud má aktualizace motivu.  
+ Nepoužívejte ...  
+ pro jakékoli ui, které nechcete změnit automaticky, pokud prostředí obsahuje aktualizaci motivu.  
   
- **Ukotven**  
+ **Ukotvený**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Ukotvené okno nástroje](../extensibility/ux-guidelines/media/0303-089-toolwindowdocked.png "0303 – 089_ToolWindowDocked")|Pozadí|`Environment.ToolWindowBackground`|  
-|![Ukotvené okno nástroje](../extensibility/ux-guidelines/media/0303-089-toolwindowdocked.png "0303 – 089_ToolWindowDocked")|Ohraničení|`Environment.ToolWindowBorder`|  
+|![Okno nástroje ukotvené](../extensibility/ux-guidelines/media/0303-089-toolwindowdocked.png "0303-089_ToolWindowDocked")|Pozadí|`Environment.ToolWindowBackground`|  
+|![Okno nástroje ukotvené](../extensibility/ux-guidelines/media/0303-089-toolwindowdocked.png "0303-089_ToolWindowDocked")|Ohraničení|`Environment.ToolWindowBorder`|  
   
- **Plovoucí: prioritní**  
+ **Plovoucí: zaostřeno**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Fokus okna nástrojů](../extensibility/ux-guidelines/media/0303-090-toolwindowfocused.png "0303 – 090_ToolWindowFocused")|Pozadí|`Environment.ToolWindowBackground`|  
-|![Fokus okna nástrojů](../extensibility/ux-guidelines/media/0303-090-toolwindowfocused.png "0303 – 090_ToolWindowFocused")|Ohraničení|`Environment.MainWindowActiveDefaultBorder`|  
+|![Zaostřené okno nástroje](../extensibility/ux-guidelines/media/0303-090-toolwindowfocused.png "0303-090_ToolWindowFocused")|Pozadí|`Environment.ToolWindowBackground`|  
+|![Zaostřené okno nástroje](../extensibility/ux-guidelines/media/0303-090-toolwindowfocused.png "0303-090_ToolWindowFocused")|Ohraničení|`Environment.MainWindowActiveDefaultBorder`|  
   
- **Plovoucí: nevybrané**  
+ **Plovoucí: rozostřený**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Okno nástroje není vybrané.](../extensibility/ux-guidelines/media/0303-091-toolwindowunfocused.png "0303 – 091_ToolWindowUnfocused")|Pozadí|`Environment.ToolWindowBackground`|  
-|![Okno nástroje není vybrané.](../extensibility/ux-guidelines/media/0303-091-toolwindowunfocused.png "0303 – 091_ToolWindowUnfocused")|Ohraničení|`Environment.MainWindowInactiveBorder`|  
+|![Okno nástroje rozostřené](../extensibility/ux-guidelines/media/0303-091-toolwindowunfocused.png "0303-091_ToolWindowUnfocused")|Pozadí|`Environment.ToolWindowBackground`|  
+|![Okno nástroje rozostřené](../extensibility/ux-guidelines/media/0303-091-toolwindowunfocused.png "0303-091_ToolWindowUnfocused")|Ohraničení|`Environment.MainWindowInactiveBorder`|  
   
 #### <a name="tool-window-title-bar"></a>Záhlaví okna nástroje  
- Ohraničení panelu název není true ohraničení, ale tlustá čára v horní části záhlaví. Nemá název tokenu bez fokusu stavu.  
+ Ohraničení záhlaví není skutečným ohraničením, ale tlustou čárou v horní části záhlaví. Nemá název tokenu pro jeho nezaostřený stav.  
   
- ![Panel nástrojů záhlaví okna Redline](../extensibility/ux-guidelines/media/0303-092-toolwindowtitlebarredline.png "0303 – 092_ToolWindowTitleBarRedline")  
+ ![Červený řádek záhlaví okna nástroje](../extensibility/ux-guidelines/media/0303-092-toolwindowtitlebarredline.png "0303-092_ToolWindowTitleBarRedline")  
   
- Použití...  
- kdekoli vytvoříte uživatelské rozhraní, které chcete porovnat okna nástrojů.  
+ Použít...  
+ kdekoli vytváříte ui, které chcete, aby odpovídaly okna nástrojů.  
   
- Nepoužívejte...  
- prostředí pro uživatelské rozhraní, které nechcete automaticky změnit, pokud má aktualizace motivu.  
+ Nepoužívejte ...  
+ pro jakékoli ui, které nechcete změnit automaticky, pokud prostředí obsahuje aktualizaci motivu.  
   
- **Zaměřil**  
+ **Focused**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Zaměření záhlaví](../extensibility/ux-guidelines/media/0303-093-titlebarfocused.png "0303 – 093_TitleBarFocused")<br /><br /> **Prioritní záhlaví**|Pozadí|`Environment.TitleBarActiveGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Zaměření záhlaví](../extensibility/ux-guidelines/media/0303-093-titlebarfocused.png "0303 – 093_TitleBarFocused")<br /><br /> **Prioritní záhlaví**|Popředí (Text)|`Environment.TitleBarActiveText`|  
-|![Zaměření záhlaví](../extensibility/ux-guidelines/media/0303-093-titlebarfocused.png "0303 – 093_TitleBarFocused")<br /><br /> **Prioritní záhlaví**|Ohraničení|`Environment.TitleBarActiveBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
-|![Zaměření záhlaví](../extensibility/ux-guidelines/media/0303-093-titlebarfocused.png "0303 – 093_TitleBarFocused")<br /><br /> **Prioritní záhlaví**|Úchyt pro přetažení|`Environment.TitleBarDragHandleActive`|  
+|![Záhlaví zaměřené](../extensibility/ux-guidelines/media/0303-093-titlebarfocused.png "0303-093_TitleBarFocused")<br /><br /> **Zaostřený záhlaví**|Pozadí|`Environment.TitleBarActiveGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Záhlaví zaměřené](../extensibility/ux-guidelines/media/0303-093-titlebarfocused.png "0303-093_TitleBarFocused")<br /><br /> **Zaostřený záhlaví**|Popředí (text)|`Environment.TitleBarActiveText`|  
+|![Záhlaví zaměřené](../extensibility/ux-guidelines/media/0303-093-titlebarfocused.png "0303-093_TitleBarFocused")<br /><br /> **Zaostřený záhlaví**|Ohraničení|`Environment.TitleBarActiveBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
+|![Záhlaví zaměřené](../extensibility/ux-guidelines/media/0303-093-titlebarfocused.png "0303-093_TitleBarFocused")<br /><br /> **Zaostřený záhlaví**|Táhlo přetažení|`Environment.TitleBarDragHandleActive`|  
   
- **Bez fokusu**  
+ **Rozostřený**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Záhlaví bez fokusu](../extensibility/ux-guidelines/media/0303-094-titlebarunfocused.png "0303 – 094_TitleBarUnfocused")<br /><br /> **Nevybraný nadpisový řádek**|Pozadí|`Environment.TitleBarInactiveGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Záhlaví bez fokusu](../extensibility/ux-guidelines/media/0303-094-titlebarunfocused.png "0303 – 094_TitleBarUnfocused")<br /><br /> **Nevybraný nadpisový řádek**|Popředí (Text)|`Environment.TitleBarInactiveText`|  
-|![Záhlaví bez fokusu](../extensibility/ux-guidelines/media/0303-094-titlebarunfocused.png "0303 – 094_TitleBarUnfocused")<br /><br /> **Nevybraný nadpisový řádek**|Ohraničení|neuvedeno|  
-|![Záhlaví bez fokusu](../extensibility/ux-guidelines/media/0303-094-titlebarunfocused.png "0303 – 094_TitleBarUnfocused")<br /><br /> **Nevybraný nadpisový řádek**|Úchyt pro přetažení|`Environment.TitleBarDragHandle`|  
+|![Záhlaví rozostřené](../extensibility/ux-guidelines/media/0303-094-titlebarunfocused.png "0303-094_TitleBarUnfocused")<br /><br /> **Nezaostřený záhlaví**|Pozadí|`Environment.TitleBarInactiveGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Záhlaví rozostřené](../extensibility/ux-guidelines/media/0303-094-titlebarunfocused.png "0303-094_TitleBarUnfocused")<br /><br /> **Nezaostřený záhlaví**|Popředí (text)|`Environment.TitleBarInactiveText`|  
+|![Záhlaví rozostřené](../extensibility/ux-guidelines/media/0303-094-titlebarunfocused.png "0303-094_TitleBarUnfocused")<br /><br /> **Nezaostřený záhlaví**|Ohraničení|Není dostupné.|  
+|![Záhlaví rozostřené](../extensibility/ux-guidelines/media/0303-094-titlebarunfocused.png "0303-094_TitleBarUnfocused")<br /><br /> **Nezaostřený záhlaví**|Táhlo přetažení|`Environment.TitleBarDragHandle`|  
   
-##### <a name="title-bar-buttons"></a>Název tlačítka na panelu  
- ![Redline tlačítka záhlaví](../extensibility/ux-guidelines/media/0303-095-titlebarbuttonredline.png "0303 – 095_TitleBarButtonRedline")  
+##### <a name="title-bar-buttons"></a>Tlačítka záhlaví  
+ ![Červená čára záhlaví](../extensibility/ux-guidelines/media/0303-095-titlebarbuttonredline.png "0303-095_TitleBarButtonRedline")  
   
- Použití...  
- u tlačítek, která se zobrazí v uživatelském rozhraní, která používá tokeny barvu ze záhlaví okna nástrojů.  
+ Použít...  
+ pro tlačítka, která se zobrazují v ui, která používá tokeny barev z záhlaví okna nástroje.  
   
-Nepoužívejte...  
-- u tlačítek, která se zobrazí v jiných umístěních.  
+Nepoužívejte ...  
+- tlačítka, která se zobrazují v jiných umístěních.  
 
-- v libovolné na pozadí a popředí jinými než která byla specifikována.  
+- v jakékoli kombinaci pozadí/popředí, než je uvedeno.  
   
   **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Fokus – tlačítko záhlaví](../extensibility/ux-guidelines/media/0303-096-titlebarbuttonfocused.png "0303 – 096_TitleBarButtonFocused")<br /><br /> **Zaměřil**|Pozadí|neuvedeno|  
-|![Fokus – tlačítko záhlaví](../extensibility/ux-guidelines/media/0303-096-titlebarbuttonfocused.png "0303 – 096_TitleBarButtonFocused")<br /><br /> **Zaměřil**|Popředí (piktogram)|`Environment.ToolWindowButtonActiveGlyph`|  
-|![Fokus – tlačítko záhlaví](../extensibility/ux-guidelines/media/0303-096-titlebarbuttonfocused.png "0303 – 096_TitleBarButtonFocused")<br /><br /> **Zaměřil**|Ohraničení|neuvedeno|  
-|![Tlačítko s záhlavím bez fokusu](../extensibility/ux-guidelines/media/0303-097-titlebarbuttonunfocused.png "0303 – 097_TitleBarButtonUnfocused")<br /><br /> **Bez fokusu**|Pozadí|neuvedeno|  
-|![Tlačítko s záhlavím bez fokusu](../extensibility/ux-guidelines/media/0303-097-titlebarbuttonunfocused.png "0303 – 097_TitleBarButtonUnfocused")<br /><br /> **Bez fokusu**|Popředí (piktogram)|`Environment.ToolWindowButtonInactiveGlyph`|  
-|![Tlačítko s záhlavím bez fokusu](../extensibility/ux-guidelines/media/0303-097-titlebarbuttonunfocused.png "0303 – 097_TitleBarButtonUnfocused")<br /><br /> **Bez fokusu**|Ohraničení|neuvedeno|  
+|![Zaostřené tlačítko záhlaví](../extensibility/ux-guidelines/media/0303-096-titlebarbuttonfocused.png "0303-096_TitleBarButtonFocused")<br /><br /> **Focused**|Pozadí|Není dostupné.|  
+|![Zaostřené tlačítko záhlaví](../extensibility/ux-guidelines/media/0303-096-titlebarbuttonfocused.png "0303-096_TitleBarButtonFocused")<br /><br /> **Focused**|Popředí (glyf)|`Environment.ToolWindowButtonActiveGlyph`|  
+|![Zaostřené tlačítko záhlaví](../extensibility/ux-guidelines/media/0303-096-titlebarbuttonfocused.png "0303-096_TitleBarButtonFocused")<br /><br /> **Focused**|Ohraničení|Není dostupné.|  
+|![Tlačítko záhlaví rozostřené](../extensibility/ux-guidelines/media/0303-097-titlebarbuttonunfocused.png "0303-097_TitleBarButtonUnfocused")<br /><br /> **Rozostřený**|Pozadí|Není dostupné.|  
+|![Tlačítko záhlaví rozostřené](../extensibility/ux-guidelines/media/0303-097-titlebarbuttonunfocused.png "0303-097_TitleBarButtonUnfocused")<br /><br /> **Rozostřený**|Popředí (glyf)|`Environment.ToolWindowButtonInactiveGlyph`|  
+|![Tlačítko záhlaví rozostřené](../extensibility/ux-guidelines/media/0303-097-titlebarbuttonunfocused.png "0303-097_TitleBarButtonUnfocused")<br /><br /> **Rozostřený**|Ohraničení|Není dostupné.|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Tlačítko záhlaví s fokusem při najetí myší](../extensibility/ux-guidelines/media/0303-098-titlebarbuttonfocusedhover.png "0303 – 098_TitleBarButtonFocusedHover")<br /><br /> **Zaměřil**|Pozadí|`Environment.ToolWindowButtonHoverActive`|  
-|![Tlačítko záhlaví s fokusem při najetí myší](../extensibility/ux-guidelines/media/0303-098-titlebarbuttonfocusedhover.png "0303 – 098_TitleBarButtonFocusedHover")<br /><br /> **Zaměřil**|Popředí (piktogram)|`Environment.ToolWindowButtonHoverActiveGlyph`|  
-|![Tlačítko záhlaví s fokusem při najetí myší](../extensibility/ux-guidelines/media/0303-098-titlebarbuttonfocusedhover.png "0303 – 098_TitleBarButtonFocusedHover")<br /><br /> **Zaměřil**|Ohraničení|`Environment.ToolWindowButtonHoverActiveBorder`|  
-|![Tlačítko s záhlavím bez fokusu při najetí myší](../extensibility/ux-guidelines/media/0303-099-titlebarbuttonunfocusedhover.png "0303 – 099_TitleBarButtonUnfocusedHover")<br /><br /> **Bez fokusu**|Pozadí|`Environment.ToolWindowButtonHoverInactive`|  
-|![Tlačítko s záhlavím bez fokusu při najetí myší](../extensibility/ux-guidelines/media/0303-099-titlebarbuttonunfocusedhover.png "0303 – 099_TitleBarButtonUnfocusedHover")<br /><br /> **Bez fokusu**|Popředí (piktogram)|`Environment.ToolWindowButtonHoverInactiveGlyph`|  
-|![Tlačítko s záhlavím bez fokusu při najetí myší](../extensibility/ux-guidelines/media/0303-099-titlebarbuttonunfocusedhover.png "0303 – 099_TitleBarButtonUnfocusedHover")<br /><br /> **Bez fokusu**|Ohraničení|`Environment.ToolWindowButtonHoverInactiveBorder`|  
+|![Tlačítko záhlaví zaměřené na jev](../extensibility/ux-guidelines/media/0303-098-titlebarbuttonfocusedhover.png "0303-098_TitleBarButtonFocusedHover")<br /><br /> **Focused**|Pozadí|`Environment.ToolWindowButtonHoverActive`|  
+|![Tlačítko záhlaví zaměřené na jev](../extensibility/ux-guidelines/media/0303-098-titlebarbuttonfocusedhover.png "0303-098_TitleBarButtonFocusedHover")<br /><br /> **Focused**|Popředí (glyf)|`Environment.ToolWindowButtonHoverActiveGlyph`|  
+|![Tlačítko záhlaví zaměřené na jev](../extensibility/ux-guidelines/media/0303-098-titlebarbuttonfocusedhover.png "0303-098_TitleBarButtonFocusedHover")<br /><br /> **Focused**|Ohraničení|`Environment.ToolWindowButtonHoverActiveBorder`|  
+|![Tlačítko záhlaví rozostřené na jev](../extensibility/ux-guidelines/media/0303-099-titlebarbuttonunfocusedhover.png "0303-099_TitleBarButtonUnfocusedHover")<br /><br /> **Rozostřený**|Pozadí|`Environment.ToolWindowButtonHoverInactive`|  
+|![Tlačítko záhlaví rozostřené na jev](../extensibility/ux-guidelines/media/0303-099-titlebarbuttonunfocusedhover.png "0303-099_TitleBarButtonUnfocusedHover")<br /><br /> **Rozostřený**|Popředí (glyf)|`Environment.ToolWindowButtonHoverInactiveGlyph`|  
+|![Tlačítko záhlaví rozostřené na jev](../extensibility/ux-guidelines/media/0303-099-titlebarbuttonunfocusedhover.png "0303-099_TitleBarButtonUnfocusedHover")<br /><br /> **Rozostřený**|Ohraničení|`Environment.ToolWindowButtonHoverInactiveBorder`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Fokus a stisknutí tlačítka záhlaví](../extensibility/ux-guidelines/media/0303-100-titlebarbuttonfocusedpressed.png "0303 – 100_TitleBarButtonFocusedPressed")<br /><br /> **Zaměřil**|Pozadí|`Environment.ToolWindowButtonDown`|  
-|![Fokus a stisknutí tlačítka záhlaví](../extensibility/ux-guidelines/media/0303-100-titlebarbuttonfocusedpressed.png "0303 – 100_TitleBarButtonFocusedPressed")<br /><br /> **Zaměřil**|Popředí (piktogram)|`Environment.ToolWindowButtonDownActiveGlyph`|  
-|![Fokus a stisknutí tlačítka záhlaví](../extensibility/ux-guidelines/media/0303-100-titlebarbuttonfocusedpressed.png "0303 – 100_TitleBarButtonFocusedPressed")<br /><br /> **Zaměřil**|Ohraničení|`Environment.ToolWindowButtonDownBorder`|  
-|![Tlačítko s záhlavím bez fokusu a stisknuté](../extensibility/ux-guidelines/media/0303-101-titlebarbuttonunfocusedpressed.png "0303 – 101_TitleBarButtonUnfocusedPressed")<br /><br /> **Bez fokusu**|Pozadí|`Environment.ToolWindowButtonDown`|  
-|![Tlačítko s záhlavím bez fokusu a stisknuté](../extensibility/ux-guidelines/media/0303-101-titlebarbuttonunfocusedpressed.png "0303 – 101_TitleBarButtonUnfocusedPressed")<br /><br /> **Bez fokusu**|Popředí (piktogram)|`Environment.ToolWindowButtonDownInactiveGlyph`|  
-|![Tlačítko s záhlavím bez fokusu a stisknuté](../extensibility/ux-guidelines/media/0303-101-titlebarbuttonunfocusedpressed.png "0303 – 101_TitleBarButtonUnfocusedPressed")<br /><br /> **Bez fokusu**|Ohraničení|`Environment.ToolWindowButtonDownBorder`|  
+|![Tlačítko záhlaví zaostřené a stisknuté](../extensibility/ux-guidelines/media/0303-100-titlebarbuttonfocusedpressed.png "0303-100_TitleBarButtonFocusedPressed")<br /><br /> **Focused**|Pozadí|`Environment.ToolWindowButtonDown`|  
+|![Tlačítko záhlaví zaostřené a stisknuté](../extensibility/ux-guidelines/media/0303-100-titlebarbuttonfocusedpressed.png "0303-100_TitleBarButtonFocusedPressed")<br /><br /> **Focused**|Popředí (glyf)|`Environment.ToolWindowButtonDownActiveGlyph`|  
+|![Tlačítko záhlaví zaostřené a stisknuté](../extensibility/ux-guidelines/media/0303-100-titlebarbuttonfocusedpressed.png "0303-100_TitleBarButtonFocusedPressed")<br /><br /> **Focused**|Ohraničení|`Environment.ToolWindowButtonDownBorder`|  
+|![Tlačítko záhlaví rozostřené a stisknuté](../extensibility/ux-guidelines/media/0303-101-titlebarbuttonunfocusedpressed.png "0303-101_TitleBarButtonUnfocusedPressed")<br /><br /> **Rozostřený**|Pozadí|`Environment.ToolWindowButtonDown`|  
+|![Tlačítko záhlaví rozostřené a stisknuté](../extensibility/ux-guidelines/media/0303-101-titlebarbuttonunfocusedpressed.png "0303-101_TitleBarButtonUnfocusedPressed")<br /><br /> **Rozostřený**|Popředí (glyf)|`Environment.ToolWindowButtonDownInactiveGlyph`|  
+|![Tlačítko záhlaví rozostřené a stisknuté](../extensibility/ux-guidelines/media/0303-101-titlebarbuttonunfocusedpressed.png "0303-101_TitleBarButtonUnfocusedPressed")<br /><br /> **Rozostřený**|Ohraničení|`Environment.ToolWindowButtonDownBorder`|  
   
-#### <a name="tool-window-tabs"></a>Karty okna nástrojů  
- ![Karta panelu nástrojů Redline](../extensibility/ux-guidelines/media/0303-102-toolwindowtabredline.png "0303 – 102_ToolWindowTabRedline")  
+#### <a name="tool-window-tabs"></a>Karty oken nástrojů  
+ ![Červená karta okna nástroje](../extensibility/ux-guidelines/media/0303-102-toolwindowtabredline.png "0303-102_ToolWindowTabRedline")  
   
- Použití...  
- kdekoli vytvoříte uživatelské rozhraní, které chcete porovnat okna nástrojů.  
+ Použít...  
+ kdekoli vytváříte ui, které chcete, aby odpovídaly okna nástrojů.  
   
- Nepoužívejte...  
- prostředí pro uživatelské rozhraní, které nechcete automaticky změnit, pokud má aktualizace motivu.  
+ Nepoužívejte ...  
+ pro jakékoli ui, které nechcete změnit automaticky, pokud prostředí obsahuje aktualizaci motivu.  
   
  **Vybraná karta**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Zaměření na kartu okna nástrojů](../extensibility/ux-guidelines/media/0303-103-toolwindowtabfocused.png "0303 – 103_ToolWindowTabFocused")<br /><br /> **Vybraná, karta okna nástrojů s fokusem**|Pozadí|`Environment.ToolWindowTabSelectedTab`|  
-|![Zaměření na kartu okna nástrojů](../extensibility/ux-guidelines/media/0303-103-toolwindowtabfocused.png "0303 – 103_ToolWindowTabFocused")<br /><br /> **Vybraná, karta okna nástrojů s fokusem**|Popředí (Text)|`Environment.ToolWindowTabSelectedActiveText`|  
-|![Zaměření na kartu okna nástrojů](../extensibility/ux-guidelines/media/0303-103-toolwindowtabfocused.png "0303 – 103_ToolWindowTabFocused")<br /><br /> **Vybraná, karta okna nástrojů s fokusem**|Ohraničení|`Environment.ToolWindowTabSelectedBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
+|![Na kartu okna nástroje](../extensibility/ux-guidelines/media/0303-103-toolwindowtabfocused.png "0303-103_ToolWindowTabFocused")<br /><br /> **Karta okna vybraného zaostřeného nástroje**|Pozadí|`Environment.ToolWindowTabSelectedTab`|  
+|![Na kartu okna nástroje](../extensibility/ux-guidelines/media/0303-103-toolwindowtabfocused.png "0303-103_ToolWindowTabFocused")<br /><br /> **Karta okna vybraného zaostřeného nástroje**|Popředí (text)|`Environment.ToolWindowTabSelectedActiveText`|  
+|![Na kartu okna nástroje](../extensibility/ux-guidelines/media/0303-103-toolwindowtabfocused.png "0303-103_ToolWindowTabFocused")<br /><br /> **Karta okna vybraného zaostřeného nástroje**|Ohraničení|`Environment.ToolWindowTabSelectedBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Karta okna nástroje není zaostřená](../extensibility/ux-guidelines/media/0303-104-toolwindowtabunfocused.png "0303 – 104_ToolWindowTabUnfocused")<br /><br /> **Vybraná, karta okna nástrojů na nevybrané**|Pozadí|`Environment.ToolWindowTabSelectedTab`|  
-|![Karta okna nástroje není zaostřená](../extensibility/ux-guidelines/media/0303-104-toolwindowtabunfocused.png "0303 – 104_ToolWindowTabUnfocused")<br /><br /> **Vybraná, karta okna nástrojů na nevybrané**|Popředí (Text)|`Environment.ToolWindowTabSelectedText`|  
-|![Karta okna nástroje není zaostřená](../extensibility/ux-guidelines/media/0303-104-toolwindowtabunfocused.png "0303 – 104_ToolWindowTabUnfocused")<br /><br /> **Vybraná, karta okna nástrojů na nevybrané**|Ohraničení|`Environment.ToolWindowTabSelectedBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
+|![Karta okna nástroje rozostřená](../extensibility/ux-guidelines/media/0303-104-toolwindowtabunfocused.png "0303-104_ToolWindowTabUnfocused")<br /><br /> **Karta vybraného, nezaostřeného okna nástroje**|Pozadí|`Environment.ToolWindowTabSelectedTab`|  
+|![Karta okna nástroje rozostřená](../extensibility/ux-guidelines/media/0303-104-toolwindowtabunfocused.png "0303-104_ToolWindowTabUnfocused")<br /><br /> **Karta vybraného, nezaostřeného okna nástroje**|Popředí (text)|`Environment.ToolWindowTabSelectedText`|  
+|![Karta okna nástroje rozostřená](../extensibility/ux-guidelines/media/0303-104-toolwindowtabunfocused.png "0303-104_ToolWindowTabUnfocused")<br /><br /> **Karta vybraného, nezaostřeného okna nástroje**|Ohraničení|`Environment.ToolWindowTabSelectedBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
   
- **Karta pozadí**  
+ **Karta Pozadí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Karta pozadí okna nástrojů](../extensibility/ux-guidelines/media/0303-105-toolwindowbackgroundtab.png "0303 – 105_ToolWindowBackgroundTab")<br /><br /> **Karta okno nástrojů na pozadí**|Pozadí|`Environment.ToolWindowTabGradientBegin`<br /><br /> Přechod zastaví nastavenou na hodnotu barvy v sadě Visual Studio 2013.<br /><br /> `Environment.ToolWindowTabGradientEnd`<br /><br /> Přechod zastaví nastavenou na hodnotu barvy v sadě Visual Studio 2013.|  
-|![Karta pozadí okna nástrojů](../extensibility/ux-guidelines/media/0303-105-toolwindowbackgroundtab.png "0303 – 105_ToolWindowBackgroundTab")<br /><br /> **Karta okno nástrojů na pozadí**|Popředí (Text)|`Environment.ToolWindowTabText`|  
-|![Karta pozadí okna nástrojů](../extensibility/ux-guidelines/media/0303-105-toolwindowbackgroundtab.png "0303 – 105_ToolWindowBackgroundTab")<br /><br /> **Karta okno nástrojů na pozadí**|Ohraničení|`Environment.ToolWindowTabBorder`|  
+|![Karta pozadí okna nástroje](../extensibility/ux-guidelines/media/0303-105-toolwindowbackgroundtab.png "0303-105_ToolWindowBackgroundTab")<br /><br /> **Karta okna nástroje Pozadí**|Pozadí|`Environment.ToolWindowTabGradientBegin`<br /><br /> Přechod se zastaví nastavena na stejnou hodnotu barvy v sadě Visual Studio 2013.<br /><br /> `Environment.ToolWindowTabGradientEnd`<br /><br /> Přechod se zastaví nastavena na stejnou hodnotu barvy v sadě Visual Studio 2013.|  
+|![Karta pozadí okna nástroje](../extensibility/ux-guidelines/media/0303-105-toolwindowbackgroundtab.png "0303-105_ToolWindowBackgroundTab")<br /><br /> **Karta okna nástroje Pozadí**|Popředí (text)|`Environment.ToolWindowTabText`|  
+|![Karta pozadí okna nástroje](../extensibility/ux-guidelines/media/0303-105-toolwindowbackgroundtab.png "0303-105_ToolWindowBackgroundTab")<br /><br /> **Karta okna nástroje Pozadí**|Ohraničení|`Environment.ToolWindowTabBorder`|  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Karta pozadí okna nástrojů při najetí myší](../extensibility/ux-guidelines/media/0303-106-toolwindowbackgroundtabhover.png "0303 – 106_ToolWindowBackgroundTabHover")<br /><br /> **Karta okna nástrojů na pozadí při najetí myší**|Pozadí|`Environment.ToolWindowTabMouseOverBackgroundBegin`<br /><br /> Přechod zastaví nastavenou na hodnotu barvy v sadě Visual Studio 2013.<br /><br /> `Environment.ToolWindowTabMouseOverBackgroundEnd`<br /><br /> Přechod zastaví nastavenou na hodnotu barvy v sadě Visual Studio 2013.|  
-|![Karta pozadí okna nástrojů při najetí myší](../extensibility/ux-guidelines/media/0303-106-toolwindowbackgroundtabhover.png "0303 – 106_ToolWindowBackgroundTabHover")<br /><br /> **Karta okna nástrojů na pozadí při najetí myší**|Popředí (Text)|`Environment.ToolWindowTabMouseOverText`|  
-|![Karta pozadí okna nástrojů při najetí myší](../extensibility/ux-guidelines/media/0303-106-toolwindowbackgroundtabhover.png "0303 – 106_ToolWindowBackgroundTabHover")<br /><br /> **Karta okna nástrojů na pozadí při najetí myší**|Ohraničení|`Environment.ToolWindowTabMouseOverBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
+|![Karta pozadí okna nástroje při najetí přes](../extensibility/ux-guidelines/media/0303-106-toolwindowbackgroundtabhover.png "0303-106_ToolWindowBackgroundTabHover")<br /><br /> **Karta okna nástroje pozadí při najetí přes**|Pozadí|`Environment.ToolWindowTabMouseOverBackgroundBegin`<br /><br /> Přechod se zastaví nastavena na stejnou hodnotu barvy v sadě Visual Studio 2013.<br /><br /> `Environment.ToolWindowTabMouseOverBackgroundEnd`<br /><br /> Přechod se zastaví nastavena na stejnou hodnotu barvy v sadě Visual Studio 2013.|  
+|![Karta pozadí okna nástroje při najetí přes](../extensibility/ux-guidelines/media/0303-106-toolwindowbackgroundtabhover.png "0303-106_ToolWindowBackgroundTabHover")<br /><br /> **Karta okna nástroje pozadí při najetí přes**|Popředí (text)|`Environment.ToolWindowTabMouseOverText`|  
+|![Karta pozadí okna nástroje při najetí přes](../extensibility/ux-guidelines/media/0303-106-toolwindowbackgroundtabhover.png "0303-106_ToolWindowBackgroundTabHover")<br /><br /> **Karta okna nástroje pozadí při najetí přes**|Ohraničení|`Environment.ToolWindowTabMouseOverBorder`<br /><br /> Nastavte stejnou barvu jako pozadí.|  
   
-#### <a name="auto-hide-tabs"></a>Automatického skrytí karty  
- ![Automaticky&#45;skrývat Redline](../extensibility/ux-guidelines/media/0303-107-autohideredline.png "0303 – 107_AutoHideRedline")  
+#### <a name="auto-hide-tabs"></a>Automatické skrytí karet  
+ ![Automatické&#45;skrytí červené čáry](../extensibility/ux-guidelines/media/0303-107-autohideredline.png "0303-107_AutoHideRedline")  
   
- Použití...  
- kdekoli vytvoříte uživatelské rozhraní, které můžete chtít, aby nástroj automaticky skrývaná okna karet.  
+ Použít...  
+ kdekoli vytváříte ui, které chcete, aby odpovídaly auto-skryté karty okna nástroje.  
   
- Nepoužívejte...  
- prostředí pro uživatelské rozhraní, které nechcete automaticky změnit, pokud má aktualizace motivu.  
+ Nepoužívejte ...  
+ pro jakékoli ui, které nechcete změnit automaticky, pokud prostředí obsahuje aktualizaci motivu.  
   
  **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Automaticky&#45;Skrýt kartu](../extensibility/ux-guidelines/media/0303-108-autohidetab.png "0303 – 108_AutoHideTab")<br /><br /> **Automaticky skrývat kartu výchozí**|Pozadí|`Environment.AutoHideTabBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Automaticky&#45;Skrýt kartu](../extensibility/ux-guidelines/media/0303-108-autohidetab.png "0303 – 108_AutoHideTab")<br /><br /> **Automaticky skrývat kartu výchozí**|Popředí (Text)|`Environment.AutoHideTabText`|  
-|![Automaticky&#45;Skrýt kartu](../extensibility/ux-guidelines/media/0303-108-autohidetab.png "0303 – 108_AutoHideTab")<br /><br /> **Automaticky skrývat kartu výchozí**|Ohraničení|`Environment.AutoHideTabBorder`|  
+|![Karta Automatické&#45;skrytí](../extensibility/ux-guidelines/media/0303-108-autohidetab.png "0303-108_AutoHideTab")<br /><br /> **Výchozí karta automatického skrytí**|Pozadí|`Environment.AutoHideTabBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Karta Automatické&#45;skrytí](../extensibility/ux-guidelines/media/0303-108-autohidetab.png "0303-108_AutoHideTab")<br /><br /> **Výchozí karta automatického skrytí**|Popředí (text)|`Environment.AutoHideTabText`|  
+|![Karta Automatické&#45;skrytí](../extensibility/ux-guidelines/media/0303-108-autohidetab.png "0303-108_AutoHideTab")<br /><br /> **Výchozí karta automatického skrytí**|Ohraničení|`Environment.AutoHideTabBorder`|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Automaticky&#45;skrývat kartu při najetí myší](../extensibility/ux-guidelines/media/0303-109-autohidetabhover.png "0303 – 109_AutoHideTabHover")<br /><br /> **Automaticky skrývat kartu při najetí myší**|Pozadí|`Environment.AutoHideTabMouseOverBackgroundBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Automaticky&#45;skrývat kartu při najetí myší](../extensibility/ux-guidelines/media/0303-109-autohidetabhover.png "0303 – 109_AutoHideTabHover")<br /><br /> **Automaticky skrývat kartu při najetí myší**|Popředí (Text)|`Environment.AutoHideTabMouseOverText`|  
-|![Automaticky&#45;skrývat kartu při najetí myší](../extensibility/ux-guidelines/media/0303-109-autohidetabhover.png "0303 – 109_AutoHideTabHover")<br /><br /> **Automaticky skrývat kartu při najetí myší**|Ohraničení|`Environment.AutoHideTabMouseOverBorder`|  
+|![Automatické&#45;skrýt kartu při najetí přes](../extensibility/ux-guidelines/media/0303-109-autohidetabhover.png "0303-109_AutoHideTabHover")<br /><br /> **Automaticky skrýt kartu při najetí přes**|Pozadí|`Environment.AutoHideTabMouseOverBackgroundBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Automatické&#45;skrýt kartu při najetí přes](../extensibility/ux-guidelines/media/0303-109-autohidetabhover.png "0303-109_AutoHideTabHover")<br /><br /> **Automaticky skrýt kartu při najetí přes**|Popředí (text)|`Environment.AutoHideTabMouseOverText`|  
+|![Automatické&#45;skrýt kartu při najetí přes](../extensibility/ux-guidelines/media/0303-109-autohidetabhover.png "0303-109_AutoHideTabHover")<br /><br /> **Automaticky skrýt kartu při najetí přes**|Ohraničení|`Environment.AutoHideTabMouseOverBorder`|  
   
-### <a name="common-shared-controls"></a>Běžné ovládací prvky sdílené  
- Při použití standardní panel příkazů sady Visual Studio v vaši funkci, budete mít přístup k ovládacím prvkům upravený prostředí a byste měli znovu template tyto běžné ovládací prvky. Ale pokud budete muset sestavit vlastní příkazového řádku, potřebujete k vytváření vlastních ovládacích prvků. V takovém případě nezapomeňte použít správný token názvy pro každý z následujících ovládacích prvků tak, aby vaše uživatelské rozhraní je konzistentní se zbytkem pracovního sadě Visual Studio.  
+### <a name="common-shared-controls"></a>Společné sdílené ovládací prvky  
+ Při použití standardní visual studio panel příkazů ve vaší funkci, budete mít přístup k stylizované ovládací prvky prostředí a neměli byste znovu šablony těchto běžných ovládacích prvků. Pokud však potřebujete vytvořit vlastní panel příkazů, může být nutné vytvořit také vlastní ovládací prvky. V takovém případě nezapomeňte použít správné názvy tokenů pro každý z následujících ovládacích prvků tak, aby vaše rozhraní je konzistentní se zbytkem sady Visual Studio.  
   
 #### <a name="search-box"></a>Vyhledávací pole  
- Kdykoli je to možné, použijte běžný ovládací prvek vyhledávání poskytovaných prostředím sady Visual Studio. Barvy vyhledávacího pole se nacházejí v kategorii "SearchControl" v souboru **ShellColors. pkgdef** , který obsahuje názvy tokenů pro vstupní pole, tlačítko akce, tlačítko rozevíracího seznamu a rozevírací nabídku.  
+ Kdykoli je to možné, použijte společný ovládací prvek hledání poskytované prostředí sady Visual Studio. Barvy vyhledávacího pole se nacházejí v kategorii "SearchControl" v souboru **ShellColors.pkgdef,** který obsahuje názvy tokenů pro vstupní pole, tlačítko akce, rozevírací tlačítko a rozevírací nabídku.  
   
- Vyhledávací pole může být jedna z několika státy, z nichž některé se vzájemně vylučují:  
+ Vyhledávací pole může být jedním z několika stavů, z nichž některé se vzájemně vylučují:  
   
-- "Zaměřuje" nebo "bez fokusu" odkazuje na Určuje, jestli je kurzor v textovém poli.  
+- "Focused" nebo "unfocused" označuje, zda je kurzor v textovém poli.  
   
-- "Aktivní" nebo "neaktivní" odkazuje na tom, jestli uživatel zadal vyhledávací dotaz v textovém poli.  
+- "Aktivní" nebo "neaktivní" označuje, zda uživatel zadal vyhledávací dotaz do textového pole.  
   
-- "Při najetí myší" znamená, že uživatel má moused prostřednictvím vyhledávacího pole pomocí myši (Tento stav potlačí všechny ostatní stavy).  
+- "Najetí myší" znamená, že uživatel má myší na hledané pole (tento stav přepíše všechny ostatní stavy).  
   
-- "Zakázáno" znamená, že funkce vyhledávání je vypnuté pro aktuální kontext.  
+- "Zakázáno" znamená, že funkce vyhledávání je vypnuta pro aktuální kontext.  
   
-  ![Vyhledávací pole Redline](../extensibility/ux-guidelines/media/0303-110-searchboxredline.png "0303 – 110_SearchBoxRedline")  
+  ![Červené pole hledání](../extensibility/ux-guidelines/media/0303-110-searchboxredline.png "0303-110_SearchBoxRedline")  
   
-  Použití...  
-  Při navrhování vlastní vyhledávací pole.  
+  Použít...  
+  při navrhování vlastního vyhledávacího pole.  
   
-  Nepoužívejte...  
-  - pro všechno, co není vyhledávací pole.  
+  Nepoužívejte ...  
+  - pro cokoliv, co není vyhledávací pole.  
   
-- pro všechno, co, které nechcete, aby vždy tak, aby odpovídaly hledání pole uživatelského rozhraní.  
+- pro cokoliv, co nechcete vždy odpovídat ui vyhledávacího pole.  
   
-  **Zaměřil**  
+  **Focused**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Hledat zaměření na vstupní pole](../extensibility/ux-guidelines/media/0303-111-searchinputfieldfocused.png "0303 – 111_SearchInputFieldFocused")<br /><br /> **Vstupní pole**|Pozadí|`SearchControl.FocusedBackground`|  
-|![Hledat zaměření na vstupní pole](../extensibility/ux-guidelines/media/0303-111-searchinputfieldfocused.png "0303 – 111_SearchInputFieldFocused")<br /><br /> **Vstupní pole**|Popředí (Text)|`SearchControl.FocusedBackground`|  
-|![Hledat zaměření na vstupní pole](../extensibility/ux-guidelines/media/0303-111-searchinputfieldfocused.png "0303 – 111_SearchInputFieldFocused")<br /><br /> **Vstupní pole**|Ohraničení|`SearchControl.FocusedBorder`|  
-|![Hledat zaměření na vstupní pole](../extensibility/ux-guidelines/media/0303-111-searchinputfieldfocused.png "0303 – 111_SearchInputFieldFocused")<br /><br /> **Vstupní pole**|Oddělovač|`SearchControl.FocusedDropDownSeparator`|  
-|![Fokus – tlačítko akce hledání](../extensibility/ux-guidelines/media/0303-112-searchactionbuttonfocused.png "0303 – 112_SearchActionButtonFocused")<br /><br /> **Tlačítko akce**|Pozadí|Žádná|  
-|![Fokus – tlačítko akce hledání](../extensibility/ux-guidelines/media/0303-112-searchactionbuttonfocused.png "0303 – 112_SearchActionButtonFocused")<br /><br /> **Tlačítko akce**|Popředí (piktogram vyhledávání)|`SearchControl.SearchGlyph`|  
-|![Fokus – tlačítko akce hledání](../extensibility/ux-guidelines/media/0303-112-searchactionbuttonfocused.png "0303 – 112_SearchActionButtonFocused")<br /><br /> **Tlačítko akce**|Popředí (Zastavit piktogram)|`SearchControl.StopGlyph`|  
-|![Fokus – tlačítko akce hledání](../extensibility/ux-guidelines/media/0303-112-searchactionbuttonfocused.png "0303 – 112_SearchActionButtonFocused")<br /><br /> **Tlačítko akce**|Popředí (Vymazat piktogram)|`SearchControl.ClearGlyph`|  
-|![Fokus – tlačítko akce hledání](../extensibility/ux-guidelines/media/0303-112-searchactionbuttonfocused.png "0303 – 112_SearchActionButtonFocused")<br /><br /> **Tlačítko akce**|Ohraničení|neuvedeno|  
-|![Hledání –&#45;tlačítko rozevíracího seznamu](../extensibility/ux-guidelines/media/0303-113-searchdropdownbuttonfocused.png "0303 – 113_SearchDropdownButtonFocused")<br /><br /> **Tlačítko rozevíracího seznamu**|Pozadí|`SearchControl.FocusedDropDownButton`|  
-|![Hledání –&#45;tlačítko rozevíracího seznamu](../extensibility/ux-guidelines/media/0303-113-searchdropdownbuttonfocused.png "0303 – 113_SearchDropdownButtonFocused")<br /><br /> **Tlačítko rozevíracího seznamu**|Popředí (piktogram)|`SearchControl.FocusedDropDownButtonGlyph`|  
-|![Hledání –&#45;tlačítko rozevíracího seznamu](../extensibility/ux-guidelines/media/0303-113-searchdropdownbuttonfocused.png "0303 – 113_SearchDropdownButtonFocused")<br /><br /> **Tlačítko rozevíracího seznamu**|Ohraničení|`SearchControl.FocusedDropDownButtonBorder`|  
+|![Zaměření na vstupní pole hledání](../extensibility/ux-guidelines/media/0303-111-searchinputfieldfocused.png "0303-111_SearchInputFieldFocused")<br /><br /> **Vstupní pole**|Pozadí|`SearchControl.FocusedBackground`|  
+|![Zaměření na vstupní pole hledání](../extensibility/ux-guidelines/media/0303-111-searchinputfieldfocused.png "0303-111_SearchInputFieldFocused")<br /><br /> **Vstupní pole**|Popředí (text)|`SearchControl.FocusedBackground`|  
+|![Zaměření na vstupní pole hledání](../extensibility/ux-guidelines/media/0303-111-searchinputfieldfocused.png "0303-111_SearchInputFieldFocused")<br /><br /> **Vstupní pole**|Ohraničení|`SearchControl.FocusedBorder`|  
+|![Zaměření na vstupní pole hledání](../extensibility/ux-guidelines/media/0303-111-searchinputfieldfocused.png "0303-111_SearchInputFieldFocused")<br /><br /> **Vstupní pole**|Oddělovač|`SearchControl.FocusedDropDownSeparator`|  
+|![Tlačítko akce hledání zaměřené](../extensibility/ux-guidelines/media/0303-112-searchactionbuttonfocused.png "0303-112_SearchActionButtonFocused")<br /><br /> **Tlačítko Akce**|Pozadí|Žádný|  
+|![Tlačítko akce hledání zaměřené](../extensibility/ux-guidelines/media/0303-112-searchactionbuttonfocused.png "0303-112_SearchActionButtonFocused")<br /><br /> **Tlačítko Akce**|Popředí (Hledat glyf)|`SearchControl.SearchGlyph`|  
+|![Tlačítko akce hledání zaměřené](../extensibility/ux-guidelines/media/0303-112-searchactionbuttonfocused.png "0303-112_SearchActionButtonFocused")<br /><br /> **Tlačítko Akce**|Popředí (Stop glyf)|`SearchControl.StopGlyph`|  
+|![Tlačítko akce hledání zaměřené](../extensibility/ux-guidelines/media/0303-112-searchactionbuttonfocused.png "0303-112_SearchActionButtonFocused")<br /><br /> **Tlačítko Akce**|Popředí (Vymazat glyf)|`SearchControl.ClearGlyph`|  
+|![Tlačítko akce hledání zaměřené](../extensibility/ux-guidelines/media/0303-112-searchactionbuttonfocused.png "0303-112_SearchActionButtonFocused")<br /><br /> **Tlačítko Akce**|Ohraničení|Není dostupné.|  
+|![Hledat&#45;zaostřené tlačítko dolů](../extensibility/ux-guidelines/media/0303-113-searchdropdownbuttonfocused.png "0303-113_SearchDropdownButtonFocused")<br /><br /> **Rozevírací tlačítko**|Pozadí|`SearchControl.FocusedDropDownButton`|  
+|![Hledat&#45;zaostřené tlačítko dolů](../extensibility/ux-guidelines/media/0303-113-searchdropdownbuttonfocused.png "0303-113_SearchDropdownButtonFocused")<br /><br /> **Rozevírací tlačítko**|Popředí (glyf)|`SearchControl.FocusedDropDownButtonGlyph`|  
+|![Hledat&#45;zaostřené tlačítko dolů](../extensibility/ux-guidelines/media/0303-113-searchdropdownbuttonfocused.png "0303-113_SearchDropdownButtonFocused")<br /><br /> **Rozevírací tlačítko**|Ohraničení|`SearchControl.FocusedDropDownButtonBorder`|  
   
- **Bez fokusu**  
+ **Rozostřený**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Hledat vstupní pole nevybrané](../extensibility/ux-guidelines/media/0303-114-searchinputfieldunfocused.png "0303 – 114_SearchInputFieldUnfocused")<br /><br /> **Aktivní vstupní pole**|Pozadí|`SearchControl.SearchActiveBackground`|  
-|![Hledat vstupní pole nevybrané](../extensibility/ux-guidelines/media/0303-114-searchinputfieldunfocused.png "0303 – 114_SearchInputFieldUnfocused")<br /><br /> **Aktivní vstupní pole**|Popředí (Text)|`SearchControl.SearchActiveBackground`|  
-|![Hledat vstupní pole nevybrané](../extensibility/ux-guidelines/media/0303-114-searchinputfieldunfocused.png "0303 – 114_SearchInputFieldUnfocused")<br /><br /> **Aktivní vstupní pole**|Ohraničení|`SearchControl.UnfocusedBorder`|  
-|![Hledat vstupní pole nevybrané](../extensibility/ux-guidelines/media/0303-114-searchinputfieldunfocused.png "0303 – 114_SearchInputFieldUnfocused")<br /><br /> **Aktivní vstupní pole**|Oddělovač|`SearchControl.DropDownSeparator`|  
-|![Hledat vstupní pole nevybrané a neaktivní](../extensibility/ux-guidelines/media/0303-114-1-searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br /><br /> **Neaktivní vstupní pole**|Pozadí|`SearchControl.Unfocused`|  
-|![Hledat vstupní pole nevybrané a neaktivní](../extensibility/ux-guidelines/media/0303-114-1-searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br /><br /> **Neaktivní vstupní pole**|Popředí (Text)|`SearchControl.Unfocused`|  
-|![Hledat vstupní pole nevybrané a neaktivní](../extensibility/ux-guidelines/media/0303-114-1-searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br /><br /> **Neaktivní vstupní pole**|Ohraničení|`SearchControl.UnfocusedBorder`|  
-|![Hledat vstupní pole nevybrané a neaktivní](../extensibility/ux-guidelines/media/0303-114-1-searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br /><br /> **Neaktivní vstupní pole**|Oddělovač|`SearchControl.DropDownSeparator`|  
-|![Tlačítko akce hledání nevybrané](../extensibility/ux-guidelines/media/0303-115-searchactionbuttonunfocused.png "0303 – 115_SearchActionButtonUnfocused")<br /><br /> **Tlačítko akce**|Pozadí|neuvedeno|  
-|![Tlačítko akce hledání nevybrané](../extensibility/ux-guidelines/media/0303-115-searchactionbuttonunfocused.png "0303 – 115_SearchActionButtonUnfocused")<br /><br /> **Tlačítko akce**|Popředí (piktogram vyhledávání)|`SearchControl.SearchGlyph`|  
-|![Tlačítko akce hledání nevybrané](../extensibility/ux-guidelines/media/0303-115-searchactionbuttonunfocused.png "0303 – 115_SearchActionButtonUnfocused")<br /><br /> **Tlačítko akce**|Popředí (Zastavit piktogram)|`SearchControl.StopGlyph`|  
-|![Tlačítko akce hledání nevybrané](../extensibility/ux-guidelines/media/0303-115-searchactionbuttonunfocused.png "0303 – 115_SearchActionButtonUnfocused")<br /><br /> **Tlačítko akce**|Popředí (Vymazat piktogram)|`SearchControl.ClearGlyph`|  
-|![Tlačítko akce hledání nevybrané](../extensibility/ux-guidelines/media/0303-115-searchactionbuttonunfocused.png "0303 – 115_SearchActionButtonUnfocused")<br /><br /> **Tlačítko akce**|Ohraničení|neuvedeno|  
-|![Tlačítko pro&#45;hledání v nevybraném umístění](../extensibility/ux-guidelines/media/0303-116-searchdropdownbuttonunfocused.png "0303 – 116_SearchDropdownButtonUnfocused")<br /><br /> **Tlačítko rozevíracího seznamu**|Pozadí|`SearchControl.UnfocusedDropDownButton`|  
-|![Tlačítko pro&#45;hledání v nevybraném umístění](../extensibility/ux-guidelines/media/0303-116-searchdropdownbuttonunfocused.png "0303 – 116_SearchDropdownButtonUnfocused")<br /><br /> **Tlačítko rozevíracího seznamu**|Popředí (piktogram)|`SearchControl.UnfocusedDropDownButtonGlyph`|  
-|![Tlačítko pro&#45;hledání v nevybraném umístění](../extensibility/ux-guidelines/media/0303-116-searchdropdownbuttonunfocused.png "0303 – 116_SearchDropdownButtonUnfocused")<br /><br /> **Tlačítko rozevíracího seznamu**|Ohraničení|`SearchControl.UnfocusedDropDownButtonBorder`|  
+|![Rozostřené vyhledávací vstupní pole](../extensibility/ux-guidelines/media/0303-114-searchinputfieldunfocused.png "0303-114_SearchInputFieldUnfocused")<br /><br /> **Aktivní vstupní pole**|Pozadí|`SearchControl.SearchActiveBackground`|  
+|![Rozostřené vyhledávací vstupní pole](../extensibility/ux-guidelines/media/0303-114-searchinputfieldunfocused.png "0303-114_SearchInputFieldUnfocused")<br /><br /> **Aktivní vstupní pole**|Popředí (text)|`SearchControl.SearchActiveBackground`|  
+|![Rozostřené vyhledávací vstupní pole](../extensibility/ux-guidelines/media/0303-114-searchinputfieldunfocused.png "0303-114_SearchInputFieldUnfocused")<br /><br /> **Aktivní vstupní pole**|Ohraničení|`SearchControl.UnfocusedBorder`|  
+|![Rozostřené vyhledávací vstupní pole](../extensibility/ux-guidelines/media/0303-114-searchinputfieldunfocused.png "0303-114_SearchInputFieldUnfocused")<br /><br /> **Aktivní vstupní pole**|Oddělovač|`SearchControl.DropDownSeparator`|  
+|![Hledat vstupní pole nezaostřené a neaktivní](../extensibility/ux-guidelines/media/0303-114-1-searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br /><br /> **Neaktivní vstupní pole**|Pozadí|`SearchControl.Unfocused`|  
+|![Hledat vstupní pole nezaostřené a neaktivní](../extensibility/ux-guidelines/media/0303-114-1-searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br /><br /> **Neaktivní vstupní pole**|Popředí (text)|`SearchControl.Unfocused`|  
+|![Hledat vstupní pole nezaostřené a neaktivní](../extensibility/ux-guidelines/media/0303-114-1-searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br /><br /> **Neaktivní vstupní pole**|Ohraničení|`SearchControl.UnfocusedBorder`|  
+|![Hledat vstupní pole nezaostřené a neaktivní](../extensibility/ux-guidelines/media/0303-114-1-searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br /><br /> **Neaktivní vstupní pole**|Oddělovač|`SearchControl.DropDownSeparator`|  
+|![Tlačítko akce hledání rozostřené](../extensibility/ux-guidelines/media/0303-115-searchactionbuttonunfocused.png "0303-115_SearchActionButtonUnfocused")<br /><br /> **Tlačítko Akce**|Pozadí|Není dostupné.|  
+|![Tlačítko akce hledání rozostřené](../extensibility/ux-guidelines/media/0303-115-searchactionbuttonunfocused.png "0303-115_SearchActionButtonUnfocused")<br /><br /> **Tlačítko Akce**|Popředí (Hledat glyf)|`SearchControl.SearchGlyph`|  
+|![Tlačítko akce hledání rozostřené](../extensibility/ux-guidelines/media/0303-115-searchactionbuttonunfocused.png "0303-115_SearchActionButtonUnfocused")<br /><br /> **Tlačítko Akce**|Popředí (Stop glyf)|`SearchControl.StopGlyph`|  
+|![Tlačítko akce hledání rozostřené](../extensibility/ux-guidelines/media/0303-115-searchactionbuttonunfocused.png "0303-115_SearchActionButtonUnfocused")<br /><br /> **Tlačítko Akce**|Popředí (Vymazat glyf)|`SearchControl.ClearGlyph`|  
+|![Tlačítko akce hledání rozostřené](../extensibility/ux-guidelines/media/0303-115-searchactionbuttonunfocused.png "0303-115_SearchActionButtonUnfocused")<br /><br /> **Tlačítko Akce**|Ohraničení|Není dostupné.|  
+|![Rozostřené tlačítko&#45;přetažení hledání](../extensibility/ux-guidelines/media/0303-116-searchdropdownbuttonunfocused.png "0303-116_SearchDropdownButtonUnfocused")<br /><br /> **Rozevírací tlačítko**|Pozadí|`SearchControl.UnfocusedDropDownButton`|  
+|![Rozostřené tlačítko&#45;přetažení hledání](../extensibility/ux-guidelines/media/0303-116-searchdropdownbuttonunfocused.png "0303-116_SearchDropdownButtonUnfocused")<br /><br /> **Rozevírací tlačítko**|Popředí (glyf)|`SearchControl.UnfocusedDropDownButtonGlyph`|  
+|![Rozostřené tlačítko&#45;přetažení hledání](../extensibility/ux-guidelines/media/0303-116-searchdropdownbuttonunfocused.png "0303-116_SearchDropdownButtonUnfocused")<br /><br /> **Rozevírací tlačítko**|Ohraničení|`SearchControl.UnfocusedDropDownButtonBorder`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Stisknutí tlačítka akce hledání](../extensibility/ux-guidelines/media/0303-116-1-searchactionbuttonpressed.png "0303-116-1_SearchActionButtonPressed")<br /><br /> **Tlačítko akce**|Pozadí|`SearchControl.ActionButtonMouseDown`|  
-|![Stisknutí tlačítka akce hledání](../extensibility/ux-guidelines/media/0303-116-1-searchactionbuttonpressed.png "0303-116-1_SearchActionButtonPressed")<br /><br /> **Tlačítko akce**|Popředí (piktogram)|`SearchControl.ActionButtonMouseDownGlyph`|  
-|![Stisknutí tlačítka akce hledání](../extensibility/ux-guidelines/media/0303-116-1-searchactionbuttonpressed.png "0303-116-1_SearchActionButtonPressed")<br /><br /> **Tlačítko akce**|Ohraničení|`SearchControl.ActionButtonMouseDownBorder`|  
-|![Stisknutí&#45;tlačítka pro hledání v rozevíracím seznamu](../extensibility/ux-guidelines/media/0303-116-2-searchdropdownbuttonpressed.png "0303-116-2_SearchDropdownButtonPressed")<br /><br /> **Tlačítko rozevíracího seznamu**|Pozadí|`SearchControl.MouseDownDropDownButton`|  
-|![Stisknutí&#45;tlačítka pro hledání v rozevíracím seznamu](../extensibility/ux-guidelines/media/0303-116-2-searchdropdownbuttonpressed.png "0303-116-2_SearchDropdownButtonPressed")<br /><br /> **Tlačítko rozevíracího seznamu**|Popředí (piktogram)|`SearchControl.MouseDownDropDownButtonGlyph`|  
-|![Stisknutí&#45;tlačítka pro hledání v rozevíracím seznamu](../extensibility/ux-guidelines/media/0303-116-2-searchdropdownbuttonpressed.png "0303-116-2_SearchDropdownButtonPressed")<br /><br /> **Tlačítko rozevíracího seznamu**|Ohraničení|`SearchControl.MouseDownDropDownButtonBorder`|  
+|![Stisknuto tlačítko akce Hledání](../extensibility/ux-guidelines/media/0303-116-1-searchactionbuttonpressed.png "0303-116-1_SearchActionButtonPressed")<br /><br /> **Tlačítko Akce**|Pozadí|`SearchControl.ActionButtonMouseDown`|  
+|![Stisknuto tlačítko akce Hledání](../extensibility/ux-guidelines/media/0303-116-1-searchactionbuttonpressed.png "0303-116-1_SearchActionButtonPressed")<br /><br /> **Tlačítko Akce**|Popředí (glyf)|`SearchControl.ActionButtonMouseDownGlyph`|  
+|![Stisknuto tlačítko akce Hledání](../extensibility/ux-guidelines/media/0303-116-1-searchactionbuttonpressed.png "0303-116-1_SearchActionButtonPressed")<br /><br /> **Tlačítko Akce**|Ohraničení|`SearchControl.ActionButtonMouseDownBorder`|  
+|![Hledat stisknuté tlačítko&#45;rozevírací&#45;](../extensibility/ux-guidelines/media/0303-116-2-searchdropdownbuttonpressed.png "0303-116-2_SearchDropdownButtonPressed")<br /><br /> **Rozevírací tlačítko**|Pozadí|`SearchControl.MouseDownDropDownButton`|  
+|![Hledat stisknuté tlačítko&#45;rozevírací&#45;](../extensibility/ux-guidelines/media/0303-116-2-searchdropdownbuttonpressed.png "0303-116-2_SearchDropdownButtonPressed")<br /><br /> **Rozevírací tlačítko**|Popředí (glyf)|`SearchControl.MouseDownDropDownButtonGlyph`|  
+|![Hledat stisknuté tlačítko&#45;rozevírací&#45;](../extensibility/ux-guidelines/media/0303-116-2-searchdropdownbuttonpressed.png "0303-116-2_SearchDropdownButtonPressed")<br /><br /> **Rozevírací tlačítko**|Ohraničení|`SearchControl.MouseDownDropDownButtonBorder`|  
   
- **Zvýrazněný (jenom text)**  
+ **Zvýrazněno (pouze text)**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Zvýraznit vstupní pole pro hledání](../extensibility/ux-guidelines/media/0303-120-searchinputfieldhighlight.png "0303 – 120_SearchInputFieldHighlight")<br /><br /> **Vstupní pole s zvýrazněným textem**|Pozadí|`SearchControl.Selection`|  
-|![Zvýraznit vstupní pole pro hledání](../extensibility/ux-guidelines/media/0303-120-searchinputfieldhighlight.png "0303 – 120_SearchInputFieldHighlight")<br /><br /> **Vstupní pole s zvýrazněným textem**|Popředí (Text)|`SearchControl.FocusedBackground`|  
-|![Zvýraznit vstupní pole pro hledání](../extensibility/ux-guidelines/media/0303-120-searchinputfieldhighlight.png "0303 – 120_SearchInputFieldHighlight")<br /><br /> **Vstupní pole s zvýrazněným textem**|Ohraničení|Žádná|  
-|![Zvýraznit vstupní pole pro hledání](../extensibility/ux-guidelines/media/0303-120-searchinputfieldhighlight.png "0303 – 120_SearchInputFieldHighlight")<br /><br /> **Vstupní pole s zvýrazněným textem**|Oddělovač|`SearchControl.FocusedDropDownSeparator`|  
+|![Zvýraznění vstupního pole hledání](../extensibility/ux-guidelines/media/0303-120-searchinputfieldhighlight.png "0303-120_SearchInputFieldHighlight")<br /><br /> **Vstupní pole se zvýrazněným textem**|Pozadí|`SearchControl.Selection`|  
+|![Zvýraznění vstupního pole hledání](../extensibility/ux-guidelines/media/0303-120-searchinputfieldhighlight.png "0303-120_SearchInputFieldHighlight")<br /><br /> **Vstupní pole se zvýrazněným textem**|Popředí (text)|`SearchControl.FocusedBackground`|  
+|![Zvýraznění vstupního pole hledání](../extensibility/ux-guidelines/media/0303-120-searchinputfieldhighlight.png "0303-120_SearchInputFieldHighlight")<br /><br /> **Vstupní pole se zvýrazněným textem**|Ohraničení|Žádný|  
+|![Zvýraznění vstupního pole hledání](../extensibility/ux-guidelines/media/0303-120-searchinputfieldhighlight.png "0303-120_SearchInputFieldHighlight")<br /><br /> **Vstupní pole se zvýrazněným textem**|Oddělovač|`SearchControl.FocusedDropDownSeparator`|  
   
  **Disabled** (Zakázáno)  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Hledání vstupního pole je zakázané.](../extensibility/ux-guidelines/media/0303-121-searchinputfielddisabled.png "0303 – 121_SearchInputFieldDisabled")<br /><br /> **Vstupní pole**|Pozadí|`SearchControl.Disabled`|  
-|![Hledání vstupního pole je zakázané.](../extensibility/ux-guidelines/media/0303-121-searchinputfielddisabled.png "0303 – 121_SearchInputFieldDisabled")<br /><br /> **Vstupní pole**|Popředí (Text)|`SearchControl.Disabled`|  
-|![Hledání vstupního pole je zakázané.](../extensibility/ux-guidelines/media/0303-121-searchinputfielddisabled.png "0303 – 121_SearchInputFieldDisabled")<br /><br /> **Vstupní pole**|Ohraničení|`SearchControl.DisabledBorder`|  
-|![Hledání vstupního pole je zakázané.](../extensibility/ux-guidelines/media/0303-121-searchinputfielddisabled.png "0303 – 121_SearchInputFieldDisabled")<br /><br /> **Vstupní pole**|Oddělovač|`SearchControl.DropDownSeparator`|  
-|![Tlačítko akce hledání je zakázané.](../extensibility/ux-guidelines/media/0303-122-searchactionbuttondisabled.png "0303 – 122_SearchActionButtonDisabled")<br /><br /> **Tlačítko akce**|Pozadí|Žádná|  
-|![Tlačítko akce hledání je zakázané.](../extensibility/ux-guidelines/media/0303-122-searchactionbuttondisabled.png "0303 – 122_SearchActionButtonDisabled")<br /><br /> **Tlačítko akce**|Popředí (piktogram)|`SearchControl.ActionButtonDisabledGlyph`|  
-|![Tlačítko akce hledání je zakázané.](../extensibility/ux-guidelines/media/0303-122-searchactionbuttondisabled.png "0303 – 122_SearchActionButtonDisabled")<br /><br /> **Tlačítko akce**|Ohraničení|Žádná|  
-|![Tlačítko Hledat&#45;v rozevíracím seznamu zakázáno](../extensibility/ux-guidelines/media/0303-123-searchdropdownbuttondisabled.png "0303 – 123_SearchDropdownButtonDisabled")<br /><br /> **Tlačítko rozevíracího seznamu**|Pozadí|Žádná|  
-|![Tlačítko Hledat&#45;v rozevíracím seznamu zakázáno](../extensibility/ux-guidelines/media/0303-123-searchdropdownbuttondisabled.png "0303 – 123_SearchDropdownButtonDisabled")<br /><br /> **Tlačítko rozevíracího seznamu**|Popředí (piktogram)|`SearchControl.DisabledDownButtonGlyph`|  
-|![Tlačítko Hledat&#45;v rozevíracím seznamu zakázáno](../extensibility/ux-guidelines/media/0303-123-searchdropdownbuttondisabled.png "0303 – 123_SearchDropdownButtonDisabled")<br /><br /> **Tlačítko rozevíracího seznamu**|Ohraničení|Žádná|  
+|![Vyhledávací vstupní pole bylo zakázáno.](../extensibility/ux-guidelines/media/0303-121-searchinputfielddisabled.png "0303-121_SearchInputFieldDisabled")<br /><br /> **Vstupní pole**|Pozadí|`SearchControl.Disabled`|  
+|![Vyhledávací vstupní pole bylo zakázáno.](../extensibility/ux-guidelines/media/0303-121-searchinputfielddisabled.png "0303-121_SearchInputFieldDisabled")<br /><br /> **Vstupní pole**|Popředí (text)|`SearchControl.Disabled`|  
+|![Vyhledávací vstupní pole bylo zakázáno.](../extensibility/ux-guidelines/media/0303-121-searchinputfielddisabled.png "0303-121_SearchInputFieldDisabled")<br /><br /> **Vstupní pole**|Ohraničení|`SearchControl.DisabledBorder`|  
+|![Vyhledávací vstupní pole bylo zakázáno.](../extensibility/ux-guidelines/media/0303-121-searchinputfielddisabled.png "0303-121_SearchInputFieldDisabled")<br /><br /> **Vstupní pole**|Oddělovač|`SearchControl.DropDownSeparator`|  
+|![Tlačítko akce hledání je zakázáno.](../extensibility/ux-guidelines/media/0303-122-searchactionbuttondisabled.png "0303-122_SearchActionButtonDisabled")<br /><br /> **Tlačítko Akce**|Pozadí|Žádný|  
+|![Tlačítko akce hledání je zakázáno.](../extensibility/ux-guidelines/media/0303-122-searchactionbuttondisabled.png "0303-122_SearchActionButtonDisabled")<br /><br /> **Tlačítko Akce**|Popředí (glyf)|`SearchControl.ActionButtonDisabledGlyph`|  
+|![Tlačítko akce hledání je zakázáno.](../extensibility/ux-guidelines/media/0303-122-searchactionbuttondisabled.png "0303-122_SearchActionButtonDisabled")<br /><br /> **Tlačítko Akce**|Ohraničení|Žádný|  
+|![Tlačítko Přetažení hledání&#45;vypnuto.](../extensibility/ux-guidelines/media/0303-123-searchdropdownbuttondisabled.png "0303-123_SearchDropdownButtonDisabled")<br /><br /> **Rozevírací tlačítko**|Pozadí|Žádný|  
+|![Tlačítko Přetažení hledání&#45;vypnuto.](../extensibility/ux-guidelines/media/0303-123-searchdropdownbuttondisabled.png "0303-123_SearchDropdownButtonDisabled")<br /><br /> **Rozevírací tlačítko**|Popředí (glyf)|`SearchControl.DisabledDownButtonGlyph`|  
+|![Tlačítko Přetažení hledání&#45;vypnuto.](../extensibility/ux-guidelines/media/0303-123-searchdropdownbuttondisabled.png "0303-123_SearchDropdownButtonDisabled")<br /><br /> **Rozevírací tlačítko**|Ohraničení|Žádný|  
   
-##### <a name="search-drop-down-lists"></a>Hledání rozevírací seznamy  
- Vyhledávací pole rozevírací nabídce má potenciál být o něco složitější než ostatní rozevíracích nabídek v sadě Visual Studio. "Navrhované hledání" a "možnosti hledání" oddílů se může objevit samostatně nebo společně v nabídce a každý z nich jsou zobrazeny samostatně. Řádek také odděluje tyto dva oddíly, když jsou uvedeny společně a ohraničení kolem celého rozevírací nabídky.  
+##### <a name="search-drop-down-lists"></a>Hledat rozevírací seznamy  
+ Rozevírací nabídka vyhledávacího pole má potenciál být o něco složitější než jiné rozevírací nabídky v sadě Visual Studio. Sekce "Navrhovaná hledání" a "možnosti vyhledávání" se mohou v nabídce objevit samostatně nebo společně a každá z nich je barevná samostatně. Čára také odděluje tyto dva oddíly, když se zobrazí společně a ohraničení obklopuje celou rozevírací nabídku.  
   
- ![Hledat rozevírací&#45;seznam Redline](../extensibility/ux-guidelines/media/0303-124-searchdropdownredline.png "0303 – 124_SearchDropdownRedline")  
+ ![Hledat&#45;redline](../extensibility/ux-guidelines/media/0303-124-searchdropdownredline.png "0303-124_SearchDropdownRedline")  
   
-Použití...  
-- Pokud při vytváření vlastních vyhledávacích rozevíracím seznamu.  
+Použít...  
+- při vytváření vlastního rozevíracího seznamu hledání.  
 
-- správný token názvy správný seznam součástí.  
+- správné názvy tokenů pro součásti správného seznamu.  
 
-Nepoužívejte...  
-- pro rozevíracích seznamů, které se zobrazí v jiném kontextu.  
+Nepoužívejte ...  
+- pro rozevírací seznamy, které se zobrazují v jiných kontextech.  
 
-- v libovolné na pozadí a popředí jinými než která byla specifikována.  
+- v jakékoli kombinaci pozadí/popředí, než je uvedeno.  
   
   **Výchozí (žádné jiné stavy)**  
   
-|Prvek|Název tokenu: Category.color|  
+|Element|Název tokenu: Category.color|  
 |-------------|--------------------------------|  
 |Ohraničení|`SearchControl.PopupBorder`|  
 |Oddělovač|`SearchControl.PopupSectionHeaderSeparator`|  
@@ -981,646 +981,646 @@ Nepoužívejte...
   
  **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Doporučené hledání](../extensibility/ux-guidelines/media/0303-125-searchsuggested.png "0303 – 125_SearchSuggested")<br /><br /> **Navrhovaná hledání**|Pozadí|`SearchControl.PopupItemsListBackgroundGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Doporučené hledání](../extensibility/ux-guidelines/media/0303-125-searchsuggested.png "0303 – 125_SearchSuggested")<br /><br /> **Navrhovaná hledání**|Popředí (Text)|`SearchControl.PopupItemText`|  
-|![Zaškrtávací políčko hledání](../extensibility/ux-guidelines/media/0303-126-searchcheckbox.png "0303 – 126_SearchCheckbox")<br /><br /> **Možnosti hledání (zaškrtávací políčko)**|Pozadí|`SearchControl.PopupSectionBackgroundGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Možnosti hledání](../extensibility/ux-guidelines/media/0303-127-searchoptions.png "0303 – 127_SearchOptions")<br /><br /> **Možnosti hledání (odkaz)**|Pozadí|`SearchControl.PopupSectionBackgroundGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Zaškrtávací políčko hledání](../extensibility/ux-guidelines/media/0303-126-searchcheckbox.png "0303 – 126_SearchCheckbox")<br /><br /> **Možnosti hledání (zaškrtávací políčko)**|Popředí (zaškrtávací políčko text)|`SearchControl.PopupCheckboxText`|  
-|![Možnosti hledání](../extensibility/ux-guidelines/media/0303-127-searchoptions.png "0303 – 127_SearchOptions")<br /><br /> **Možnosti hledání (odkaz)**|Popředí (zaškrtávací políčko text)|`SearchControl.PopupCheckboxText`|  
-|![Zaškrtávací políčko hledání](../extensibility/ux-guidelines/media/0303-126-searchcheckbox.png "0303 – 126_SearchCheckbox")<br /><br /> **Možnosti hledání (zaškrtávací políčko)**|Popředí (text odkazu)|`SearchControl.PopupButtonText`|  
-|![Možnosti hledání](../extensibility/ux-guidelines/media/0303-127-searchoptions.png "0303 – 127_SearchOptions")<br /><br /> **Možnosti hledání (odkaz)**|Popředí (text odkazu)|`SearchControl.PopupButtonText`|  
-|![Zaškrtávací políčko hledání](../extensibility/ux-guidelines/media/0303-126-searchcheckbox.png "0303 – 126_SearchCheckbox")<br /><br /> **Možnosti hledání (zaškrtávací políčko)**|Pozadí záhlaví|`SearchControl.PopupSectionHeaderGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Možnosti hledání](../extensibility/ux-guidelines/media/0303-127-searchoptions.png "0303 – 127_SearchOptions")<br /><br /> **Možnosti hledání (odkaz)**|Pozadí záhlaví|`SearchControl.PopupSectionHeaderGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Zaškrtávací políčko hledání](../extensibility/ux-guidelines/media/0303-126-searchcheckbox.png "0303 – 126_SearchCheckbox")<br /><br /> **Možnosti hledání (zaškrtávací políčko)**|Popředí (text záhlaví)|`SearchControl.PopupSectionHeaderText`|  
-|![Možnosti hledání](../extensibility/ux-guidelines/media/0303-127-searchoptions.png "0303 – 127_SearchOptions")<br /><br /> **Možnosti hledání (odkaz)**|Popředí (text záhlaví)|`SearchControl.PopupSectionHeaderText`|  
+|![Navrhované hledání](../extensibility/ux-guidelines/media/0303-125-searchsuggested.png "0303-125_SearchSuggested")<br /><br /> **Navrhovaná hledání**|Pozadí|`SearchControl.PopupItemsListBackgroundGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Navrhované hledání](../extensibility/ux-guidelines/media/0303-125-searchsuggested.png "0303-125_SearchSuggested")<br /><br /> **Navrhovaná hledání**|Popředí (text)|`SearchControl.PopupItemText`|  
+|![Zaškrtávací políčko Hledat](../extensibility/ux-guidelines/media/0303-126-searchcheckbox.png "0303-126_SearchCheckbox")<br /><br /> **Možnosti hledání (zaškrtávací políčko)**|Pozadí|`SearchControl.PopupSectionBackgroundGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Možnosti hledání](../extensibility/ux-guidelines/media/0303-127-searchoptions.png "0303-127_SearchOptions")<br /><br /> **Možnosti hledání (odkaz)**|Pozadí|`SearchControl.PopupSectionBackgroundGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Zaškrtávací políčko Hledat](../extensibility/ux-guidelines/media/0303-126-searchcheckbox.png "0303-126_SearchCheckbox")<br /><br /> **Možnosti hledání (zaškrtávací políčko)**|Popředí (text zaškrtávacího políčka)|`SearchControl.PopupCheckboxText`|  
+|![Možnosti hledání](../extensibility/ux-guidelines/media/0303-127-searchoptions.png "0303-127_SearchOptions")<br /><br /> **Možnosti hledání (odkaz)**|Popředí (text zaškrtávacího políčka)|`SearchControl.PopupCheckboxText`|  
+|![Zaškrtávací políčko Hledat](../extensibility/ux-guidelines/media/0303-126-searchcheckbox.png "0303-126_SearchCheckbox")<br /><br /> **Možnosti hledání (zaškrtávací políčko)**|Popředí (text odkazu)|`SearchControl.PopupButtonText`|  
+|![Možnosti hledání](../extensibility/ux-guidelines/media/0303-127-searchoptions.png "0303-127_SearchOptions")<br /><br /> **Možnosti hledání (odkaz)**|Popředí (text odkazu)|`SearchControl.PopupButtonText`|  
+|![Zaškrtávací políčko Hledat](../extensibility/ux-guidelines/media/0303-126-searchcheckbox.png "0303-126_SearchCheckbox")<br /><br /> **Možnosti hledání (zaškrtávací políčko)**|Pozadí záhlaví|`SearchControl.PopupSectionHeaderGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Možnosti hledání](../extensibility/ux-guidelines/media/0303-127-searchoptions.png "0303-127_SearchOptions")<br /><br /> **Možnosti hledání (odkaz)**|Pozadí záhlaví|`SearchControl.PopupSectionHeaderGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Zaškrtávací políčko Hledat](../extensibility/ux-guidelines/media/0303-126-searchcheckbox.png "0303-126_SearchCheckbox")<br /><br /> **Možnosti hledání (zaškrtávací políčko)**|Popředí (text záhlaví)|`SearchControl.PopupSectionHeaderText`|  
+|![Možnosti hledání](../extensibility/ux-guidelines/media/0303-127-searchoptions.png "0303-127_SearchOptions")<br /><br /> **Možnosti hledání (odkaz)**|Popředí (text záhlaví)|`SearchControl.PopupSectionHeaderText`|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Hledání navrhované při najetí myší](../extensibility/ux-guidelines/media/0303-128-searchsuggestedhover.png "0303 – 128_SearchSuggestedHover")<br /><br /> **Navrhovaná hledání**|Pozadí|`SearchControl.PopupControlMouseOverBackgroundGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Hledání navrhované při najetí myší](../extensibility/ux-guidelines/media/0303-128-searchsuggestedhover.png "0303 – 128_SearchSuggestedHover")<br /><br /> **Navrhovaná hledání**|Popředí (Text)|`SearchControl.PopupMouseOverItemText`|  
-|![Hledání navrhované při najetí myší](../extensibility/ux-guidelines/media/0303-128-searchsuggestedhover.png "0303 – 128_SearchSuggestedHover")<br /><br /> **Navrhovaná hledání**|Ohraničení|`SearchControl.PopupControlMouseOverBorder`|  
-|![Zaškrtávací políčko pro hledání při najetí myší](../extensibility/ux-guidelines/media/0303-129-searchcheckboxhover.png "0303 – 129_SearchCheckboxHover")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Pozadí|`SearchControl.PopupControlMouseOverBackgroundGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Možnosti hledání při najetí myší](../extensibility/ux-guidelines/media/0303-130-searchoptionshover.png "0303 – 130_SearchOptionsHover")<br /><br /> **Možnosti hledání**|Pozadí|`SearchControl.PopupControlMouseOverBackgroundGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Zaškrtávací políčko pro hledání při najetí myší](../extensibility/ux-guidelines/media/0303-129-searchcheckboxhover.png "0303 – 129_SearchCheckboxHover")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Popředí (zaškrtávací políčko text)|`SearchControl.PopupCheckboxMouseDownText`|  
-|![Možnosti hledání při najetí myší](../extensibility/ux-guidelines/media/0303-130-searchoptionshover.png "0303 – 130_SearchOptionsHover")<br /><br /> **Možnosti hledání**|Popředí (zaškrtávací políčko text)|`SearchControl.PopupCheckboxMouseDownText`|  
-|![Zaškrtávací políčko pro hledání při najetí myší](../extensibility/ux-guidelines/media/0303-129-searchcheckboxhover.png "0303 – 129_SearchCheckboxHover")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Popředí (text odkazu)|`SearchControl.PopupButtonMouseDownText`|  
-|![Možnosti hledání při najetí myší](../extensibility/ux-guidelines/media/0303-130-searchoptionshover.png "0303 – 130_SearchOptionsHover")<br /><br /> **Možnosti hledání**|Popředí (text odkazu)|`SearchControl.PopupButtonMouseDownText`|  
-|![Zaškrtávací políčko pro hledání při najetí myší](../extensibility/ux-guidelines/media/0303-129-searchcheckboxhover.png "0303 – 129_SearchCheckboxHover")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Ohraničení|`SearchControl.PopupControlMouseOverBorder`|  
-|![Možnosti hledání při najetí myší](../extensibility/ux-guidelines/media/0303-130-searchoptionshover.png "0303 – 130_SearchOptionsHover")<br /><br /> **Možnosti hledání**|Ohraničení|`SearchControl.PopupControlMouseOverBorder`|  
+|![Hledání navrhované při najetí přes](../extensibility/ux-guidelines/media/0303-128-searchsuggestedhover.png "0303-128_SearchSuggestedHover")<br /><br /> **Navrhovaná hledání**|Pozadí|`SearchControl.PopupControlMouseOverBackgroundGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Hledání navrhované při najetí přes](../extensibility/ux-guidelines/media/0303-128-searchsuggestedhover.png "0303-128_SearchSuggestedHover")<br /><br /> **Navrhovaná hledání**|Popředí (text)|`SearchControl.PopupMouseOverItemText`|  
+|![Hledání navrhované při najetí přes](../extensibility/ux-guidelines/media/0303-128-searchsuggestedhover.png "0303-128_SearchSuggestedHover")<br /><br /> **Navrhovaná hledání**|Ohraničení|`SearchControl.PopupControlMouseOverBorder`|  
+|![Vyhledávací zaškrtávací políčko při najetí přes](../extensibility/ux-guidelines/media/0303-129-searchcheckboxhover.png "0303-129_SearchCheckboxHover")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Pozadí|`SearchControl.PopupControlMouseOverBackgroundGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Možnosti hledání při najetí přes](../extensibility/ux-guidelines/media/0303-130-searchoptionshover.png "0303-130_SearchOptionsHover")<br /><br /> **Možnosti hledání**|Pozadí|`SearchControl.PopupControlMouseOverBackgroundGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Vyhledávací zaškrtávací políčko při najetí přes](../extensibility/ux-guidelines/media/0303-129-searchcheckboxhover.png "0303-129_SearchCheckboxHover")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Popředí (text zaškrtávacího políčka)|`SearchControl.PopupCheckboxMouseDownText`|  
+|![Možnosti hledání při najetí přes](../extensibility/ux-guidelines/media/0303-130-searchoptionshover.png "0303-130_SearchOptionsHover")<br /><br /> **Možnosti hledání**|Popředí (text zaškrtávacího políčka)|`SearchControl.PopupCheckboxMouseDownText`|  
+|![Vyhledávací zaškrtávací políčko při najetí přes](../extensibility/ux-guidelines/media/0303-129-searchcheckboxhover.png "0303-129_SearchCheckboxHover")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Popředí (text odkazu)|`SearchControl.PopupButtonMouseDownText`|  
+|![Možnosti hledání při najetí přes](../extensibility/ux-guidelines/media/0303-130-searchoptionshover.png "0303-130_SearchOptionsHover")<br /><br /> **Možnosti hledání**|Popředí (text odkazu)|`SearchControl.PopupButtonMouseDownText`|  
+|![Vyhledávací zaškrtávací políčko při najetí přes](../extensibility/ux-guidelines/media/0303-129-searchcheckboxhover.png "0303-129_SearchCheckboxHover")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Ohraničení|`SearchControl.PopupControlMouseOverBorder`|  
+|![Možnosti hledání při najetí přes](../extensibility/ux-guidelines/media/0303-130-searchoptionshover.png "0303-130_SearchOptionsHover")<br /><br /> **Možnosti hledání**|Ohraničení|`SearchControl.PopupControlMouseOverBorder`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Hledání navrhovaného stisknutí](../extensibility/ux-guidelines/media/0303-131-searchsuggestedpressed.png "0303 – 131_SearchSuggestedPressed")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Pozadí zaškrtávacího políčka|`SearchControl.PopupControlMouseDownBackgroundGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Stisknuté možnosti hledání](../extensibility/ux-guidelines/media/0303-132-searchoptionspressed.png "0303 – 132_SearchOptionsPressed")<br /><br /> **Možnosti hledání**|Pozadí zaškrtávacího políčka|`SearchControl.PopupControlMouseDownBackgroundGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Hledání navrhovaného stisknutí](../extensibility/ux-guidelines/media/0303-131-searchsuggestedpressed.png "0303 – 131_SearchSuggestedPressed")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Pozadí zaškrtávacího políčka|`SearchControl.PopupControlMouseDownBackgroundGradientEnd`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Stisknuté možnosti hledání](../extensibility/ux-guidelines/media/0303-132-searchoptionspressed.png "0303 – 132_SearchOptionsPressed")<br /><br /> **Možnosti hledání**|Pozadí zaškrtávacího políčka|`SearchControl.PopupControlMouseDownBackgroundGradientEnd`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Hledání navrhovaného stisknutí](../extensibility/ux-guidelines/media/0303-131-searchsuggestedpressed.png "0303 – 131_SearchSuggestedPressed")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Popředí (zaškrtávací políčko text)|`SearchControl.PopupCheckboxMouseDownText`|  
-|![Stisknuté možnosti hledání](../extensibility/ux-guidelines/media/0303-132-searchoptionspressed.png "0303 – 132_SearchOptionsPressed")<br /><br /> **Možnosti hledání**|Popředí (zaškrtávací políčko text)|`SearchControl.PopupCheckboxMouseDownText`|  
-|![Hledání navrhovaného stisknutí](../extensibility/ux-guidelines/media/0303-131-searchsuggestedpressed.png "0303 – 131_SearchSuggestedPressed")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Odkaz na pozadí|`SearchControl.PopupButtonMouseDownBackgroundGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Stisknuté možnosti hledání](../extensibility/ux-guidelines/media/0303-132-searchoptionspressed.png "0303 – 132_SearchOptionsPressed")<br /><br /> **Možnosti hledání**|Odkaz na pozadí|`SearchControl.PopupButtonMouseDownBackgroundGradientBegin`<br /><br /> Přestože nepoužívá moderní uživatelské rozhraní s motivem, existují Přechodové zarážky a hodnoty pro tato na pozadí.|  
-|![Hledání navrhovaného stisknutí](../extensibility/ux-guidelines/media/0303-131-searchsuggestedpressed.png "0303 – 131_SearchSuggestedPressed")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Popředí (text odkazu)|`SearchControl.PopupButtonMouseDownText`|  
-|![Stisknuté možnosti hledání](../extensibility/ux-guidelines/media/0303-132-searchoptionspressed.png "0303 – 132_SearchOptionsPressed")<br /><br /> **Možnosti hledání**|Popředí (text odkazu)|`SearchControl.PopupButtonMouseDownText`|  
+|![Hledání navrhované stisknuté](../extensibility/ux-guidelines/media/0303-131-searchsuggestedpressed.png "0303-131_SearchSuggestedPressed")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Pozadí zaškrtávacího políčka|`SearchControl.PopupControlMouseDownBackgroundGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Stisknuté možnosti hledání](../extensibility/ux-guidelines/media/0303-132-searchoptionspressed.png "0303-132_SearchOptionsPressed")<br /><br /> **Možnosti hledání**|Pozadí zaškrtávacího políčka|`SearchControl.PopupControlMouseDownBackgroundGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Hledání navrhované stisknuté](../extensibility/ux-guidelines/media/0303-131-searchsuggestedpressed.png "0303-131_SearchSuggestedPressed")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Pozadí zaškrtávacího políčka|`SearchControl.PopupControlMouseDownBackgroundGradientEnd`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Stisknuté možnosti hledání](../extensibility/ux-guidelines/media/0303-132-searchoptionspressed.png "0303-132_SearchOptionsPressed")<br /><br /> **Možnosti hledání**|Pozadí zaškrtávacího políčka|`SearchControl.PopupControlMouseDownBackgroundGradientEnd`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Hledání navrhované stisknuté](../extensibility/ux-guidelines/media/0303-131-searchsuggestedpressed.png "0303-131_SearchSuggestedPressed")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Popředí (text zaškrtávacího políčka)|`SearchControl.PopupCheckboxMouseDownText`|  
+|![Stisknuté možnosti hledání](../extensibility/ux-guidelines/media/0303-132-searchoptionspressed.png "0303-132_SearchOptionsPressed")<br /><br /> **Možnosti hledání**|Popředí (text zaškrtávacího políčka)|`SearchControl.PopupCheckboxMouseDownText`|  
+|![Hledání navrhované stisknuté](../extensibility/ux-guidelines/media/0303-131-searchsuggestedpressed.png "0303-131_SearchSuggestedPressed")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Propojit pozadí|`SearchControl.PopupButtonMouseDownBackgroundGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Stisknuté možnosti hledání](../extensibility/ux-guidelines/media/0303-132-searchoptionspressed.png "0303-132_SearchOptionsPressed")<br /><br /> **Možnosti hledání**|Propojit pozadí|`SearchControl.PopupButtonMouseDownBackgroundGradientBegin`<br /><br /> I když se nepoužívá v moderním tematizovaném uzly, jsou přechodové zarážky a hodnoty pro toto pozadí.|  
+|![Hledání navrhované stisknuté](../extensibility/ux-guidelines/media/0303-131-searchsuggestedpressed.png "0303-131_SearchSuggestedPressed")<br /><br /> **Navrhovaná hledání (zaškrtávací políčko)**|Popředí (text odkazu)|`SearchControl.PopupButtonMouseDownText`|  
+|![Stisknuté možnosti hledání](../extensibility/ux-guidelines/media/0303-132-searchoptionspressed.png "0303-132_SearchOptionsPressed")<br /><br /> **Možnosti hledání**|Popředí (text odkazu)|`SearchControl.PopupButtonMouseDownText`|  
   
 #### <a name="hyperlink"></a>Hypertextový odkaz  
- Hypertextový odkaz je jeden ovládací prvek, který nemá dvojici popředí nebo pozadí. Ve všech případech použijte barvu popředí hypertextový odkaz, který se zobrazí správně na tmavě šedou a bílé pozadí. Pokud nepoužijete token barvu ovládacího prvku hypertextový odkaz, zobrazí se výchozí systémové barvy pro "stisknutí", "který blikat červené. To je signál, že ovládací prvek není pomocí tokenu barva správné prostředí.  
+ Hypertextový odkaz je jeden ovládací prvek, který nemá dvojici popředí nebo pozadí. Ve všech případech použijte barvu hypertextového odkazu v popředí, která se na tmavém, šedém a bílém pozadí zobrazí správně. Pokud nepoužijete token barvy pro ovládací prvek hypertextového odkazu, zobrazí se výchozí barva systému pro "stisknuté", která bude blikat červeně. To je signál, že ovládací prvek nepoužívá token barvy správné prostředí.  
   
- ![Hypertextový odkaz Redline](../extensibility/ux-guidelines/media/0303-133-hyperlinkredline.png "0303 – 133_HyperlinkRedline")  
+ ![Červená čára hypertextového odkazu](../extensibility/ux-guidelines/media/0303-133-hyperlinkredline.png "0303-133_HyperlinkRedline")  
   
- Použití...  
- Když je potřeba vytvořit vlastní hypertextový odkaz.  
+ Použít...  
+ když potřebujete vytvořit vlastní hypertextový odkaz.  
   
- Nepoužívejte...  
- pro všechno, co není hypertextový odkaz.  
+ Nepoužívejte ...  
+ pro cokoliv, co není hypertextový odkaz.  
   
  **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Výchozí hypertextový odkaz](../extensibility/ux-guidelines/media/0303-134-hyperlink.png "0303 – 134_Hyperlink")|Popředí (Text)|`Environment.PanelHyperlink`|  
+|![Výchozí odkaz hypertextového odkazu](../extensibility/ux-guidelines/media/0303-134-hyperlink.png "0303-134_Hyperlink")|Popředí (text)|`Environment.PanelHyperlink`|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Hypertextový odkaz při najetí myší](../extensibility/ux-guidelines/media/0303-135-hyperlinkhover.png "0303 – 135_HyperlinkHover")|Popředí (Text)|`Environment.PanelHyperlinkHover`|  
+|![Hypertextový odkaz na najetí přes](../extensibility/ux-guidelines/media/0303-135-hyperlinkhover.png "0303-135_HyperlinkHover")|Popředí (text)|`Environment.PanelHyperlinkHover`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Hypertextový odkaz byl stisknut](../extensibility/ux-guidelines/media/0303-136-hyperlinkpressed.png "0303 – 136_HyperlinkPressed")|Popředí (Text)|`Environment.PanelHyperlinkPressed`|  
+|![Hypertextový odkaz stisknutý](../extensibility/ux-guidelines/media/0303-136-hyperlinkpressed.png "0303-136_HyperlinkPressed")|Popředí (text)|`Environment.PanelHyperlinkPressed`|  
   
  **Disabled** (Zakázáno)  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Hypertextový odkaz zakázán](../extensibility/ux-guidelines/media/0303-137-hyperlinkdisabled.png "0303 – 137_HyperlinkDisabled")|Popředí (Text)|`Environment.PanelHyperlinkDisabled`|  
+|![Hypertextový odkaz je zakázán.](../extensibility/ux-guidelines/media/0303-137-hyperlinkdisabled.png "0303-137_HyperlinkDisabled")|Popředí (text)|`Environment.PanelHyperlinkDisabled`|  
   
 #### <a name="infobar"></a>Informační panel  
- Infobars se používají k poskytují další informace o daném kontextu a vždy se zobrazí v horní části okna dokumentu nebo panelu nástrojů.  
+ Informační panely slouží k poskytnutí dalších informací o daném kontextu a vždy se zobrazují v horní části okna dokumentu nebo okna nástroje.  
   
- ![Redline informačního panelu](../extensibility/ux-guidelines/media/0303-138-infobarredline.png "0303 – 138_InfobarRedline")  
+ ![Červená čára informačního panelu](../extensibility/ux-guidelines/media/0303-138-infobarredline.png "0303-138_InfobarRedline")  
   
- Použití...  
- Při vytváření vlastní infobars.  
+ Použít...  
+ při vytváření vlastních informačních panelů.  
   
- Nepoužívejte...  
- pro prvky uživatelského rozhraní, které nejsou podobný informačního panelu.  
+ Nepoužívejte ...  
+ pro prvky uživatelského rozhraní, které nejsou podobné informačnímu panelu.  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Řádku](../extensibility/ux-guidelines/media/0303-139-infobar.png "0303 – 139_Infobar")<br /><br /> **Řádku**|Pozadí|`Environment.InfoBackground`|  
-|![Řádku](../extensibility/ux-guidelines/media/0303-139-infobar.png "0303 – 139_Infobar")<br /><br /> **Řádku**|Popředí (Text)|`Environment.InfoText`|  
-|![Řádku](../extensibility/ux-guidelines/media/0303-139-infobar.png "0303 – 139_Infobar")<br /><br /> **Řádku**|Ohraničení|`Environment.ToolWindowBorder`|  
+|![Informační panel](../extensibility/ux-guidelines/media/0303-139-infobar.png "0303-139_Infobar")<br /><br /> **Informační panel**|Pozadí|`Environment.InfoBackground`|  
+|![Informační panel](../extensibility/ux-guidelines/media/0303-139-infobar.png "0303-139_Infobar")<br /><br /> **Informační panel**|Popředí (text)|`Environment.InfoText`|  
+|![Informační panel](../extensibility/ux-guidelines/media/0303-139-infobar.png "0303-139_Infobar")<br /><br /> **Informační panel**|Ohraničení|`Environment.ToolWindowBorder`|  
   
 #### <a name="scroll-bar"></a>Posuvník  
- Posuvníky jsou ve stylu prostředím sady Visual Studio a nebude nutné použít motiv. Ale můžete se rozhodnout, že chcete využít barvy použité v posuvníky tak, aby vaše uživatelské rozhraní se vždy zobrazí konzistentní s touto částí prostředí sady Visual Studio.  
+ Posuvníky jsou stylizovány prostředím sady Visual Studio a nebude nutné tématické. Můžete se však rozhodnout, že chcete využít barvy použité v posuvnících tak, aby vaše ui vždy zobrazí konzistentní s touto částí prostředí sady Visual Studio.  
   
- ![Redline posuvníku](../extensibility/ux-guidelines/media/0303-140-scrollbarredline.png "0303 – 140_ScrollbarRedline")  
+ ![Červený pruh posouvání](../extensibility/ux-guidelines/media/0303-140-scrollbarredline.png "0303-140_ScrollbarRedline")  
   
- Použití...  
- Pokud při vytváření uživatelského rozhraní, které chcete odpovídá posuvníky sady Visual Studio.  
+ Použít...  
+ při vytváření ui, které chcete, aby odpovídaly Visual Studio posuvníky.  
   
- Nepoužívat...  
- pro cokoli, co nechcete, aby se rozhraní ScrollBar vždy shodovalo.  
+ Nepoužívejte ...  
+ pro cokoli, co nechcete vždy odpovídat scrollbar uI.  
   
  **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Posuvník](../extensibility/ux-guidelines/media/0303-141-scrollbar.png "0303 – 141_Scrollbar")<br /><br /> **Posuvník**|Posuvník|`Environment.ScrollBarBackground`|  
-|![Posuvník](../extensibility/ux-guidelines/media/0303-141-scrollbar.png "0303 – 141_Scrollbar")<br /><br /> **Posuvník**|Popředí (palce)|`Environment.ScrollBarThumbBackground`|  
-|![Šipka posuvníku](../extensibility/ux-guidelines/media/0303-142-scrollbararrow.png "0303 – 142_ScrollbarArrow")<br /><br /> **Šipka posuvníku**|Pozadí|`Environment.ScrollBarArrowBackground`<br /><br /> Nastavte stejnou barvu jako posuvníku.|  
-|![Šipka posuvníku](../extensibility/ux-guidelines/media/0303-142-scrollbararrow.png "0303 – 142_ScrollbarArrow")<br /><br /> **Šipka posuvníku**|Popředí (piktogram)|`Environment.ScrollBarArrowGlyph`|  
+|![Posuvník](../extensibility/ux-guidelines/media/0303-141-scrollbar.png "0303-141_Scrollbar")<br /><br /> **Posuvník**|Posuvník|`Environment.ScrollBarBackground`|  
+|![Posuvník](../extensibility/ux-guidelines/media/0303-141-scrollbar.png "0303-141_Scrollbar")<br /><br /> **Posuvník**|Popředí (palec)|`Environment.ScrollBarThumbBackground`|  
+|![Šipka posuvníku](../extensibility/ux-guidelines/media/0303-142-scrollbararrow.png "0303-142_ScrollbarArrow")<br /><br /> **Šipka posuvníku**|Pozadí|`Environment.ScrollBarArrowBackground`<br /><br /> Nastavte stejnou barvu jako posuvník.|  
+|![Šipka posuvníku](../extensibility/ux-guidelines/media/0303-142-scrollbararrow.png "0303-142_ScrollbarArrow")<br /><br /> **Šipka posuvníku**|Popředí (glyf)|`Environment.ScrollBarArrowGlyph`|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Při najetí myší přejít na posuvník](../extensibility/ux-guidelines/media/0303-143-scrollbarhover.png "0303 – 143_ScrollbarHover")<br /><br /> **Posuvník**|Posuvník|`Environment.ScrollBarBackground`|  
-|![Při najetí myší přejít na posuvník](../extensibility/ux-guidelines/media/0303-143-scrollbarhover.png "0303 – 143_ScrollbarHover")<br /><br /> **Posuvník**|Popředí (palce)|`Environment.ScrollBarThumbMouseOverBackground`|  
-|![Šipka posuvníku při najetí myší](../extensibility/ux-guidelines/media/0303-144-scrollbararrowhover.png "0303 – 144_ScrollbarArrowHover")<br /><br /> **Šipka posuvníku**|Pozadí|`Environment.ScrollBarArrowMouseOverBackground`<br /><br /> Nastavte stejnou barvu jako posuvníku.|  
-|![Šipka posuvníku při najetí myší](../extensibility/ux-guidelines/media/0303-144-scrollbararrowhover.png "0303 – 144_ScrollbarArrowHover")<br /><br /> **Šipka posuvníku**|Popředí (piktogram)|`Environment.ScrollBarArrowGlyphMouseOver`|  
+|![Posuvník při přechodu](../extensibility/ux-guidelines/media/0303-143-scrollbarhover.png "0303-143_ScrollbarHover")<br /><br /> **Posuvník**|Posuvník|`Environment.ScrollBarBackground`|  
+|![Posuvník při přechodu](../extensibility/ux-guidelines/media/0303-143-scrollbarhover.png "0303-143_ScrollbarHover")<br /><br /> **Posuvník**|Popředí (palec)|`Environment.ScrollBarThumbMouseOverBackground`|  
+|![Šipka posuvníku při přechodu](../extensibility/ux-guidelines/media/0303-144-scrollbararrowhover.png "0303-144_ScrollbarArrowHover")<br /><br /> **Šipka posuvníku**|Pozadí|`Environment.ScrollBarArrowMouseOverBackground`<br /><br /> Nastavte stejnou barvu jako posuvník.|  
+|![Šipka posuvníku při přechodu](../extensibility/ux-guidelines/media/0303-144-scrollbararrowhover.png "0303-144_ScrollbarArrowHover")<br /><br /> **Šipka posuvníku**|Popředí (glyf)|`Environment.ScrollBarArrowGlyphMouseOver`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Stisknutí posuvníku](../extensibility/ux-guidelines/media/0303-145-scrollbarpressed.png "0303 – 145_ScrollbarPressed")<br /><br /> **Posuvník**|Posuvník|`Environment.ScrollBarBackground`|  
-|![Stisknutí posuvníku](../extensibility/ux-guidelines/media/0303-145-scrollbarpressed.png "0303 – 145_ScrollbarPressed")<br /><br /> **Posuvník**|Popředí (palce)|`Environment.ScrollBarThumbPressedBackground`|  
-|![Stisknutí šipky posuvníku](../extensibility/ux-guidelines/media/0303-146-scrollbararrowpressed.png "0303 – 146_ScrollbarArrowPressed")<br /><br /> **Šipka posuvníku**|Pozadí|`Environment.ScrollBarArrowPressedBackground`<br /><br /> Nastavte stejnou barvu jako posuvník.|  
-|![Stisknutí šipky posuvníku](../extensibility/ux-guidelines/media/0303-146-scrollbararrowpressed.png "0303 – 146_ScrollbarArrowPressed")<br /><br /> **Šipka posuvníku**|Popředí (piktogram)|`Environment.ScrollBarArrowGlyphPressed`|  
+|![Posuvník stisknutý](../extensibility/ux-guidelines/media/0303-145-scrollbarpressed.png "0303-145_ScrollbarPressed")<br /><br /> **Posuvník**|Posuvník|`Environment.ScrollBarBackground`|  
+|![Posuvník stisknutý](../extensibility/ux-guidelines/media/0303-145-scrollbarpressed.png "0303-145_ScrollbarPressed")<br /><br /> **Posuvník**|Popředí (palec)|`Environment.ScrollBarThumbPressedBackground`|  
+|![Stisknutá šipka posuvníku](../extensibility/ux-guidelines/media/0303-146-scrollbararrowpressed.png "0303-146_ScrollbarArrowPressed")<br /><br /> **Šipka posuvníku**|Pozadí|`Environment.ScrollBarArrowPressedBackground`<br /><br /> Nastavte stejnou barvu jako posuvník.|  
+|![Stisknutá šipka posuvníku](../extensibility/ux-guidelines/media/0303-146-scrollbararrowpressed.png "0303-146_ScrollbarArrowPressed")<br /><br /> **Šipka posuvníku**|Popředí (glyf)|`Environment.ScrollBarArrowGlyphPressed`|  
   
-#### <a name="BKMK_TreeView"></a>Stromové zobrazení  
- Několika okny nástrojů, včetně Průzkumníka řešení, Průzkumníka serveru a zobrazení tříd, implementace hierarchické organizační schéma, jejichž barvy se řídí názvy barev v kategorii prvku TreeView. Barvy textu a pozadí mají všechny položky ve stromovém zobrazení. Položky, které mají vnořené podřízené prvky mají také glyfy označující, zda položka rozbalená nebo sbalená.  
+#### <a name="tree-view"></a><a name="BKMK_TreeView"></a>Stromové zobrazení  
+ Několik oken nástrojů, včetně Průzkumníka řešení, Průzkumníka serveru a zobrazení tříd, implementuje hierarchické organizační schéma, jehož barvy jsou řízeny názvy barev v kategorii TreeView. Všechny položky ve stromovém zobrazení mají barvy pozadí a textu. Položky, které mají vnořené podřízené prvky, mají také glyfy, které označují, zda je položka rozbalena nebo sbalena.  
   
- ![Redline zobrazení stromu](../extensibility/ux-guidelines/media/0303-147-treeviewredline.png "0303 – 147_TreeViewRedline")  
+ ![Červená čára stromového zobrazení](../extensibility/ux-guidelines/media/0303-147-treeviewredline.png "0303-147_TreeViewRedline")  
   
- Použití...  
+ Použít...  
  kdekoli potřebujete implementovat hierarchické organizační zobrazení.  
   
-Nepoužívejte...  
-- pro všechno, co to není podobné zobrazení stromu.  
+Nepoužívejte ...  
+- pro cokoli, co není podobné stromové zobrazení.  
 
-- v libovolné na pozadí a popředí jinými než která byla specifikována.  
+- v jakékoli kombinaci pozadí/popředí, než je uvedeno.  
   
   **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Stromové zobrazení](../extensibility/ux-guidelines/media/0303-148-treeview.png "0303 – 148_TreeView")|Pozadí|`TreeView.Background`|  
-|![Stromové zobrazení](../extensibility/ux-guidelines/media/0303-148-treeview.png "0303 – 148_TreeView")|Popředí (Text)|`TreeView.Background`|  
-|![Stromové zobrazení](../extensibility/ux-guidelines/media/0303-148-treeview.png "0303 – 148_TreeView")|Popředí (piktogram)|`TreeView.Glyph`|  
-|![Stromové zobrazení](../extensibility/ux-guidelines/media/0303-148-treeview.png "0303 – 148_TreeView")|Ohraničení|Žádná|  
+|![Stromové zobrazení](../extensibility/ux-guidelines/media/0303-148-treeview.png "0303-148_TreeView")|Pozadí|`TreeView.Background`|  
+|![Stromové zobrazení](../extensibility/ux-guidelines/media/0303-148-treeview.png "0303-148_TreeView")|Popředí (text)|`TreeView.Background`|  
+|![Stromové zobrazení](../extensibility/ux-guidelines/media/0303-148-treeview.png "0303-148_TreeView")|Popředí (glyf)|`TreeView.Glyph`|  
+|![Stromové zobrazení](../extensibility/ux-guidelines/media/0303-148-treeview.png "0303-148_TreeView")|Ohraničení|Žádný|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Stromové zobrazení při najetí myší](../extensibility/ux-guidelines/media/0303-149-treeviewhover.png "0303 – 149_TreeViewHover")|Pozadí|`TreeView.Background`|  
-|![Stromové zobrazení při najetí myší](../extensibility/ux-guidelines/media/0303-149-treeviewhover.png "0303 – 149_TreeViewHover")|Popředí (Text)|`TreeView.Background`|  
-|![Stromové zobrazení při najetí myší](../extensibility/ux-guidelines/media/0303-149-treeviewhover.png "0303 – 149_TreeViewHover")|Popředí (piktogram)|`TreeView.GlyphMouseOver`|  
-|![Stromové zobrazení při najetí myší](../extensibility/ux-guidelines/media/0303-149-treeviewhover.png "0303 – 149_TreeViewHover")|Ohraničení|Žádná|  
+|![Stromový pohled na vznášení](../extensibility/ux-guidelines/media/0303-149-treeviewhover.png "0303-149_TreeViewHover")|Pozadí|`TreeView.Background`|  
+|![Stromový pohled na vznášení](../extensibility/ux-guidelines/media/0303-149-treeviewhover.png "0303-149_TreeViewHover")|Popředí (text)|`TreeView.Background`|  
+|![Stromový pohled na vznášení](../extensibility/ux-guidelines/media/0303-149-treeviewhover.png "0303-149_TreeViewHover")|Popředí (glyf)|`TreeView.GlyphMouseOver`|  
+|![Stromový pohled na vznášení](../extensibility/ux-guidelines/media/0303-149-treeviewhover.png "0303-149_TreeViewHover")|Ohraničení|Žádný|  
   
- **Přetáhnout**  
+ **Přetažení**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![DragOver zobrazení stromu](../extensibility/ux-guidelines/media/0303-150-treeviewdragover.png "0303 – 150_TreeViewDragOver")|Pozadí|`TreeView.DragOverItem`|  
-|![DragOver zobrazení stromu](../extensibility/ux-guidelines/media/0303-150-treeviewdragover.png "0303 – 150_TreeViewDragOver")|Popředí (Text)|`TreeView.DragOverItem`|  
-|![DragOver zobrazení stromu](../extensibility/ux-guidelines/media/0303-150-treeviewdragover.png "0303 – 150_TreeViewDragOver")|Popředí (piktogram)|`TreeView.DragOverItemGlyph`|  
-|![DragOver zobrazení stromu](../extensibility/ux-guidelines/media/0303-150-treeviewdragover.png "0303 – 150_TreeViewDragOver")|Ohraničení|Žádná|  
+|![Přetažení stromového zobrazení](../extensibility/ux-guidelines/media/0303-150-treeviewdragover.png "0303-150_TreeViewDragOver")|Pozadí|`TreeView.DragOverItem`|  
+|![Přetažení stromového zobrazení](../extensibility/ux-guidelines/media/0303-150-treeviewdragover.png "0303-150_TreeViewDragOver")|Popředí (text)|`TreeView.DragOverItem`|  
+|![Přetažení stromového zobrazení](../extensibility/ux-guidelines/media/0303-150-treeviewdragover.png "0303-150_TreeViewDragOver")|Popředí (glyf)|`TreeView.DragOverItemGlyph`|  
+|![Přetažení stromového zobrazení](../extensibility/ux-guidelines/media/0303-150-treeviewdragover.png "0303-150_TreeViewDragOver")|Ohraničení|Žádný|  
   
- **Vyberte**  
+ **Vybráno**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Zaměření stromového zobrazení](../extensibility/ux-guidelines/media/0303-151-treeviewfocused.png "0303 – 151_TreeViewFocused")<br /><br /> **Zaměřil**|Pozadí|`TreeView.SelectedItemActive`|  
-|![Zaměření stromového zobrazení](../extensibility/ux-guidelines/media/0303-151-treeviewfocused.png "0303 – 151_TreeViewFocused")<br /><br /> **Zaměřil**|Popředí (Text)|`TreeView.SelectedItemActive`|  
-|![Zaměření stromového zobrazení](../extensibility/ux-guidelines/media/0303-151-treeviewfocused.png "0303 – 151_TreeViewFocused")<br /><br /> **Zaměřil**|Popředí (piktogram)|`TreeView.SelectedItemActiveGlyph`|  
-|![Zaměření stromového zobrazení](../extensibility/ux-guidelines/media/0303-151-treeviewfocused.png "0303 – 151_TreeViewFocused")<br /><br /> **Zaměřil**|Ohraničení|`TreeView.FocusVisualBorder`|  
-|![Stromové zobrazení není vybrané.](../extensibility/ux-guidelines/media/0303-152-treeviewunfocused.png "0303 – 152_TreeViewUnfocused")<br /><br /> **Bez fokusu**|Pozadí|`TreeView.SelectedItemInactive`|  
-|![Stromové zobrazení není vybrané.](../extensibility/ux-guidelines/media/0303-152-treeviewunfocused.png "0303 – 152_TreeViewUnfocused")<br /><br /> **Bez fokusu**|Popředí (Text)|`TreeView.SelectedItemInactive`|  
-|![Stromové zobrazení není vybrané.](../extensibility/ux-guidelines/media/0303-152-treeviewunfocused.png "0303 – 152_TreeViewUnfocused")<br /><br /> **Bez fokusu**|Popředí (piktogram)|`TreeView.SelectedItemInactiveGlyph`|  
-|![Stromové zobrazení není vybrané.](../extensibility/ux-guidelines/media/0303-152-treeviewunfocused.png "0303 – 152_TreeViewUnfocused")<br /><br /> **Bez fokusu**|Ohraničení|Žádná|  
+|![Stromové zobrazení zaměřené](../extensibility/ux-guidelines/media/0303-151-treeviewfocused.png "0303-151_TreeViewFocused")<br /><br /> **Focused**|Pozadí|`TreeView.SelectedItemActive`|  
+|![Stromové zobrazení zaměřené](../extensibility/ux-guidelines/media/0303-151-treeviewfocused.png "0303-151_TreeViewFocused")<br /><br /> **Focused**|Popředí (text)|`TreeView.SelectedItemActive`|  
+|![Stromové zobrazení zaměřené](../extensibility/ux-guidelines/media/0303-151-treeviewfocused.png "0303-151_TreeViewFocused")<br /><br /> **Focused**|Popředí (glyf)|`TreeView.SelectedItemActiveGlyph`|  
+|![Stromové zobrazení zaměřené](../extensibility/ux-guidelines/media/0303-151-treeviewfocused.png "0303-151_TreeViewFocused")<br /><br /> **Focused**|Ohraničení|`TreeView.FocusVisualBorder`|  
+|![Stromové zobrazení rozostřené](../extensibility/ux-guidelines/media/0303-152-treeviewunfocused.png "0303-152_TreeViewUnfocused")<br /><br /> **Rozostřený**|Pozadí|`TreeView.SelectedItemInactive`|  
+|![Stromové zobrazení rozostřené](../extensibility/ux-guidelines/media/0303-152-treeviewunfocused.png "0303-152_TreeViewUnfocused")<br /><br /> **Rozostřený**|Popředí (text)|`TreeView.SelectedItemInactive`|  
+|![Stromové zobrazení rozostřené](../extensibility/ux-guidelines/media/0303-152-treeviewunfocused.png "0303-152_TreeViewUnfocused")<br /><br /> **Rozostřený**|Popředí (glyf)|`TreeView.SelectedItemInactiveGlyph`|  
+|![Stromové zobrazení rozostřené](../extensibility/ux-guidelines/media/0303-152-treeviewunfocused.png "0303-152_TreeViewUnfocused")<br /><br /> **Rozostřený**|Ohraničení|Žádný|  
   
- **Najeďte myší na vybrané**  
+ **Najet přes vybranou položku**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Stromové zobrazení zaměřené na najetí myší](../extensibility/ux-guidelines/media/0303-153-treeviewfocusedhover.png "0303 – 153_TreeViewFocusedHover")<br /><br /> **Zaměřil**|Pozadí|`TreeView.SelectedItemActive`|  
-|![Stromové zobrazení zaměřené na najetí myší](../extensibility/ux-guidelines/media/0303-153-treeviewfocusedhover.png "0303 – 153_TreeViewFocusedHover")<br /><br /> **Zaměřil**|Popředí (Text)|`TreeView.SelectedItemActive`|  
-|![Stromové zobrazení zaměřené na najetí myší](../extensibility/ux-guidelines/media/0303-153-treeviewfocusedhover.png "0303 – 153_TreeViewFocusedHover")<br /><br /> **Zaměřil**|Popředí (piktogram)|`TreeView.SelectedItemActiveGlyphMouseOver`|  
-|![Stromové zobrazení zaměřené na najetí myší](../extensibility/ux-guidelines/media/0303-153-treeviewfocusedhover.png "0303 – 153_TreeViewFocusedHover")<br /><br /> **Zaměřil**|Ohraničení|Žádná`TreeView.FocusVisualBorder`|  
-|![Po najetí myší se stromové zobrazení nezaměřuje](../extensibility/ux-guidelines/media/0303-154-treeviewunfocusedhover.png "0303 – 154_TreeViewUnfocusedHover")<br /><br /> **Bez fokusu**|Pozadí|`TreeView.SelectedItemInactive`|  
-|![Po najetí myší se stromové zobrazení nezaměřuje](../extensibility/ux-guidelines/media/0303-154-treeviewunfocusedhover.png "0303 – 154_TreeViewUnfocusedHover")<br /><br /> **Bez fokusu**|Popředí (Text)|`TreeView.SelectedItemInactive`|  
-|![Po najetí myší se stromové zobrazení nezaměřuje](../extensibility/ux-guidelines/media/0303-154-treeviewunfocusedhover.png "0303 – 154_TreeViewUnfocusedHover")<br /><br /> **Bez fokusu**|Popředí (piktogram)|`TreeView.SelectedItemActiveGlyphMouseOver`|  
-|![Po najetí myší se stromové zobrazení nezaměřuje](../extensibility/ux-guidelines/media/0303-154-treeviewunfocusedhover.png "0303 – 154_TreeViewUnfocusedHover")<br /><br /> **Bez fokusu**|Ohraničení|Žádná|  
+|![Stromové zobrazení zaměřené na vznášení](../extensibility/ux-guidelines/media/0303-153-treeviewfocusedhover.png "0303-153_TreeViewFocusedHover")<br /><br /> **Focused**|Pozadí|`TreeView.SelectedItemActive`|  
+|![Stromové zobrazení zaměřené na vznášení](../extensibility/ux-guidelines/media/0303-153-treeviewfocusedhover.png "0303-153_TreeViewFocusedHover")<br /><br /> **Focused**|Popředí (text)|`TreeView.SelectedItemActive`|  
+|![Stromové zobrazení zaměřené na vznášení](../extensibility/ux-guidelines/media/0303-153-treeviewfocusedhover.png "0303-153_TreeViewFocusedHover")<br /><br /> **Focused**|Popředí (glyf)|`TreeView.SelectedItemActiveGlyphMouseOver`|  
+|![Stromové zobrazení zaměřené na vznášení](../extensibility/ux-guidelines/media/0303-153-treeviewfocusedhover.png "0303-153_TreeViewFocusedHover")<br /><br /> **Focused**|Ohraničení|Žádný`TreeView.FocusVisualBorder`|  
+|![Stromové zobrazení nezaostřené na hover](../extensibility/ux-guidelines/media/0303-154-treeviewunfocusedhover.png "0303-154_TreeViewUnfocusedHover")<br /><br /> **Rozostřený**|Pozadí|`TreeView.SelectedItemInactive`|  
+|![Stromové zobrazení nezaostřené na hover](../extensibility/ux-guidelines/media/0303-154-treeviewunfocusedhover.png "0303-154_TreeViewUnfocusedHover")<br /><br /> **Rozostřený**|Popředí (text)|`TreeView.SelectedItemInactive`|  
+|![Stromové zobrazení nezaostřené na hover](../extensibility/ux-guidelines/media/0303-154-treeviewunfocusedhover.png "0303-154_TreeViewUnfocusedHover")<br /><br /> **Rozostřený**|Popředí (glyf)|`TreeView.SelectedItemActiveGlyphMouseOver`|  
+|![Stromové zobrazení nezaostřené na hover](../extensibility/ux-guidelines/media/0303-154-treeviewunfocusedhover.png "0303-154_TreeViewUnfocusedHover")<br /><br /> **Rozostřený**|Ohraničení|Žádný|  
   
 #### <a name="button-controls"></a>ovládací prvky tlačítek  
- ![Redline ovládacího prvku tlačítko](../extensibility/ux-guidelines/media/0303-155-buttoncontrolredline.png "0303 – 155_ButtonControlRedline")  
+ ![Červená čára ovládání tlačítka](../extensibility/ux-guidelines/media/0303-155-buttoncontrolredline.png "0303-155_ButtonControlRedline")  
   
- Použití...  
- u tlačítek v dokumentu kontejneru, kterou chcete integrovat s motivů aplikace Visual Studio (světla, tmavý, modrá nebo motiv s vysokým kontrastem systému).  
+ Použít...  
+ pro tlačítka v dokumentu dobře, že chcete integrovat s motivy Sady Visual Studio (světlá, tmavá, modrá nebo systém vysoký kontrast motiv).  
   
- Nepoužívejte...  
- u tlačítek, které se zobrazí na vlastní pozadí, který není součástí sady Visual Studio motivu.  
-  
- **Výchozí**  
-  
-|Komponenta|Prvek|Název tokenu: Category.color|  
-|---------------|-------------|--------------------------------|  
-|![Tlačítko](../extensibility/ux-guidelines/media/0303-156-button.png "0303 – 156_Button")|Tlačítko|`CommonControls.Button`|  
-|![Tlačítko](../extensibility/ux-guidelines/media/0303-156-button.png "0303 – 156_Button")|Ohraničení tlačítka|`CommonControls.ButtonBorder`|  
-  
- **Disabled** (Zakázáno)  
-  
-|Komponenta|Prvek|Název tokenu: Category.color|  
-|---------------|-------------|--------------------------------|  
-|![Tlačítko je zakázané.](../extensibility/ux-guidelines/media/0303-157-buttondisabled.png "0303 – 157_ButtonDisabled")|Tlačítko|`CommonControls.ButtonDisabled`|  
-|![Tlačítko je zakázané.](../extensibility/ux-guidelines/media/0303-157-buttondisabled.png "0303 – 157_ButtonDisabled")|Ohraničení tlačítka|`CommonControls.ButtonBorderDisabled`|  
-  
- **Přesunutí**  
-  
-|Komponenta|Prvek|Název tokenu: Category.color|  
-|---------------|-------------|--------------------------------|  
-|![Tlačítko při najetí myší](../extensibility/ux-guidelines/media/0303-158-buttonhover.png "0303 – 158_ButtonHover")|Tlačítko|`CommonControls.ButtonHover`|  
-|![Tlačítko při najetí myší](../extensibility/ux-guidelines/media/0303-158-buttonhover.png "0303 – 158_ButtonHover")|Ohraničení tlačítka|`CommonControls.ButtonBorderHover`|  
-  
- **Stisknete**  
-  
-|Komponenta|Prvek|Název tokenu: Category.color|  
-|---------------|-------------|--------------------------------|  
-|![Stisknutí tlačítka](../extensibility/ux-guidelines/media/0303-159-buttonpressed.png "0303 – 159_ButtonPressed")|Tlačítko|`CommonControls.ButtonPressed`|  
-|![Stisknutí tlačítka](../extensibility/ux-guidelines/media/0303-159-buttonpressed.png "0303 – 159_ButtonPressed")|Ohraničení tlačítka|`CommonControls.ButtonBorderPressed`|  
-  
- **Zaměřil**  
-  
-|Komponenta|Prvek|Název tokenu: Category.color|  
-|---------------|-------------|--------------------------------|  
-|![Fokus – tlačítko](../extensibility/ux-guidelines/media/0303-160-buttonfocused.png "0303 – 160_ButtonFocused")|Tlačítko|`CommonControls.ButtonFocused`|  
-|![Fokus – tlačítko](../extensibility/ux-guidelines/media/0303-160-buttonfocused.png "0303 – 160_ButtonFocused")|Ohraničení tlačítka|`CommonControls.ButtonBorderFocused`|  
-  
-#### <a name="check-box-controls"></a>Ovládací prvky zaškrtávacích políček  
- ![Zaškrtávací políčko Redline](../extensibility/ux-guidelines/media/0303-161-checkboxredline.png "0303 – 161_CheckboxRedline")  
-  
- Použití...  
- pro ovládací prvky zaškrtávacích políček dobře obsažených v dokumentu.  
-  
- Nepoužívejte...  
- pro uživatelské rozhraní, který není ovládací prvek zaškrtávací políčko.  
+ Nepoužívejte ...  
+ pro tlačítka, která se zobrazí na vlastním pozadí, který není součástí motivu sady Visual Studio.  
   
  **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Zaškrtávací políčko](../extensibility/ux-guidelines/media/0303-162-checkbox.png "0303 – 162_Checkbox")|Pozadí|`CommonControls.CheckBoxBackground`|  
-|![Zaškrtávací políčko](../extensibility/ux-guidelines/media/0303-162-checkbox.png "0303 – 162_Checkbox")|Ohraničení|`CommonControls.CheckBoxBorder`|  
-|![Zaškrtávací políčko](../extensibility/ux-guidelines/media/0303-162-checkbox.png "0303 – 162_Checkbox")|Text|`CommonControls.CheckBoxText`|  
-|![Zaškrtávací políčko](../extensibility/ux-guidelines/media/0303-162-checkbox.png "0303 – 162_Checkbox")|Piktogram|`CommonControls.CheckBoxGlyph`|  
+|![Tlačítko](../extensibility/ux-guidelines/media/0303-156-button.png "0303-156_Button")|Tlačítko|`CommonControls.Button`|  
+|![Tlačítko](../extensibility/ux-guidelines/media/0303-156-button.png "0303-156_Button")|Ohraničení tlačítka|`CommonControls.ButtonBorder`|  
   
  **Disabled** (Zakázáno)  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Zaškrtávací políčko zakázáno](../extensibility/ux-guidelines/media/0303-163-checkboxdisabled.png "0303 – 163_CheckboxDisabled")|Pozadí|`CommonControls.CheckBoxBackgroundDisabled`|  
-|![Zaškrtávací políčko zakázáno](../extensibility/ux-guidelines/media/0303-163-checkboxdisabled.png "0303 – 163_CheckboxDisabled")|Ohraničení|`CommonControls.CheckBoxBorderDisabled`|  
-|![Zaškrtávací políčko zakázáno](../extensibility/ux-guidelines/media/0303-163-checkboxdisabled.png "0303 – 163_CheckboxDisabled")|Text|`CommonControls.CheckBoxTextDisabled`|  
-|![Zaškrtávací políčko zakázáno](../extensibility/ux-guidelines/media/0303-163-checkboxdisabled.png "0303 – 163_CheckboxDisabled")|Piktogram|`CommonControls.CheckBoxGlyphDisabled`|  
+|![Tlačítko bylo zakázáno.](../extensibility/ux-guidelines/media/0303-157-buttondisabled.png "0303-157_ButtonDisabled")|Tlačítko|`CommonControls.ButtonDisabled`|  
+|![Tlačítko bylo zakázáno.](../extensibility/ux-guidelines/media/0303-157-buttondisabled.png "0303-157_ButtonDisabled")|Ohraničení tlačítka|`CommonControls.ButtonBorderDisabled`|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Zaškrtávací políčko při najetí myší](../extensibility/ux-guidelines/media/0303-164-checkboxhover.png "0303 – 164_CheckboxHover")|Pozadí|`CommonControls.CheckBoxBackgroundHover`|  
-|![Zaškrtávací políčko při najetí myší](../extensibility/ux-guidelines/media/0303-164-checkboxhover.png "0303 – 164_CheckboxHover")|Ohraničení|`CommonControls.CheckBoxBorderHover`|  
-|![Zaškrtávací políčko při najetí myší](../extensibility/ux-guidelines/media/0303-164-checkboxhover.png "0303 – 164_CheckboxHover")|Text|`CommonControls.CheckBoxTextHover`|  
-|![Zaškrtávací políčko při najetí myší](../extensibility/ux-guidelines/media/0303-164-checkboxhover.png "0303 – 164_CheckboxHover")|Piktogram|`CommonControls.CheckBoxGlyphHover`|  
+|![Tlačítko při najetí přes](../extensibility/ux-guidelines/media/0303-158-buttonhover.png "0303-158_ButtonHover")|Tlačítko|`CommonControls.ButtonHover`|  
+|![Tlačítko při najetí přes](../extensibility/ux-guidelines/media/0303-158-buttonhover.png "0303-158_ButtonHover")|Ohraničení tlačítka|`CommonControls.ButtonBorderHover`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Stisknuté políčko](../extensibility/ux-guidelines/media/0303-165-checkboxpressed.png "0303 – 165_CheckboxPressed")|Pozadí|`CommonControls.CheckBoxBackgroundPressed`|  
-|![Stisknuté políčko](../extensibility/ux-guidelines/media/0303-165-checkboxpressed.png "0303 – 165_CheckboxPressed")|Ohraničení|`CommonControls.CheckBoxBorderPressed`|  
-|![Stisknuté políčko](../extensibility/ux-guidelines/media/0303-165-checkboxpressed.png "0303 – 165_CheckboxPressed")|Text|`CommonControls.CheckBoxTextPressed`|  
-|![Stisknuté políčko](../extensibility/ux-guidelines/media/0303-165-checkboxpressed.png "0303 – 165_CheckboxPressed")|Piktogram|`CommonControls.CheckBoxGlyphPressed`|  
+|![Stisknuté tlačítko](../extensibility/ux-guidelines/media/0303-159-buttonpressed.png "0303-159_ButtonPressed")|Tlačítko|`CommonControls.ButtonPressed`|  
+|![Stisknuté tlačítko](../extensibility/ux-guidelines/media/0303-159-buttonpressed.png "0303-159_ButtonPressed")|Ohraničení tlačítka|`CommonControls.ButtonBorderPressed`|  
   
- **Zaměřil**  
+ **Focused**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Zaměření na zaškrtávací políčko](../extensibility/ux-guidelines/media/0303-166-checkboxfocused.png "0303 – 166_CheckboxFocused")|Pozadí|`CommonControls.CheckBoxBackgroundFocused`|  
-|![Zaměření na zaškrtávací políčko](../extensibility/ux-guidelines/media/0303-166-checkboxfocused.png "0303 – 166_CheckboxFocused")|Ohraničení|`CommonControls.CheckBoxBorderFocused`|  
-|![Zaměření na zaškrtávací políčko](../extensibility/ux-guidelines/media/0303-166-checkboxfocused.png "0303 – 166_CheckboxFocused")|Text|`CommonControls.CheckBoxTextFocused`|  
-|![Zaměření na zaškrtávací políčko](../extensibility/ux-guidelines/media/0303-166-checkboxfocused.png "0303 – 166_CheckboxFocused")|Piktogram|`CommonControls.CheckBoxGlyphFocused`|  
+|![Tlačítko zaměřené](../extensibility/ux-guidelines/media/0303-160-buttonfocused.png "0303-160_ButtonFocused")|Tlačítko|`CommonControls.ButtonFocused`|  
+|![Tlačítko zaměřené](../extensibility/ux-guidelines/media/0303-160-buttonfocused.png "0303-160_ButtonFocused")|Ohraničení tlačítka|`CommonControls.ButtonBorderFocused`|  
   
-#### <a name="drop-boxcombo-box-controls"></a>Přetáhněte pole nebo pole se seznamem  
- ![Rozevírací&#45;seznam&#47;Redline pole se seznamem](../extensibility/ux-guidelines/media/0303-167-dropdowncomboboxredline.png "0303 – 167_DropDownComboBoxRedline")  
+#### <a name="check-box-controls"></a>Ovládací prvky zaškrtávacího políčka  
+ ![Zaškrtávací políčko červená čára](../extensibility/ux-guidelines/media/0303-161-checkboxredline.png "0303-161_CheckboxRedline")  
   
-Použití...  
-rozevírací seznamy a pole se seznamem polí, které jsou součástí dokumentu kontejneru.  
+ Použít...  
+ pro ovládací prvky zaškrtávacích pokoncích obsažených v dokumentu.  
+  
+ Nepoužívejte ...  
+ pro jakékoli ui, které není ovládací prvek zaškrtávací políčko.  
+  
+ **Výchozí**  
+  
+|Komponenta|Element|Název tokenu: Category.color|  
+|---------------|-------------|--------------------------------|  
+|![Políčko](../extensibility/ux-guidelines/media/0303-162-checkbox.png "0303-162_Checkbox")|Pozadí|`CommonControls.CheckBoxBackground`|  
+|![Políčko](../extensibility/ux-guidelines/media/0303-162-checkbox.png "0303-162_Checkbox")|Ohraničení|`CommonControls.CheckBoxBorder`|  
+|![Políčko](../extensibility/ux-guidelines/media/0303-162-checkbox.png "0303-162_Checkbox")|Text|`CommonControls.CheckBoxText`|  
+|![Políčko](../extensibility/ux-guidelines/media/0303-162-checkbox.png "0303-162_Checkbox")|Glyfů|`CommonControls.CheckBoxGlyph`|  
+  
+ **Disabled** (Zakázáno)  
+  
+|Komponenta|Element|Název tokenu: Category.color|  
+|---------------|-------------|--------------------------------|  
+|![Zaškrtávací políčko je zakázáno](../extensibility/ux-guidelines/media/0303-163-checkboxdisabled.png "0303-163_CheckboxDisabled")|Pozadí|`CommonControls.CheckBoxBackgroundDisabled`|  
+|![Zaškrtávací políčko je zakázáno](../extensibility/ux-guidelines/media/0303-163-checkboxdisabled.png "0303-163_CheckboxDisabled")|Ohraničení|`CommonControls.CheckBoxBorderDisabled`|  
+|![Zaškrtávací políčko je zakázáno](../extensibility/ux-guidelines/media/0303-163-checkboxdisabled.png "0303-163_CheckboxDisabled")|Text|`CommonControls.CheckBoxTextDisabled`|  
+|![Zaškrtávací políčko je zakázáno](../extensibility/ux-guidelines/media/0303-163-checkboxdisabled.png "0303-163_CheckboxDisabled")|Glyfů|`CommonControls.CheckBoxGlyphDisabled`|  
+  
+ **Hover**  
+  
+|Komponenta|Element|Název tokenu: Category.color|  
+|---------------|-------------|--------------------------------|  
+|![Zaškrtávací políčko při najetí přes](../extensibility/ux-guidelines/media/0303-164-checkboxhover.png "0303-164_CheckboxHover")|Pozadí|`CommonControls.CheckBoxBackgroundHover`|  
+|![Zaškrtávací políčko při najetí přes](../extensibility/ux-guidelines/media/0303-164-checkboxhover.png "0303-164_CheckboxHover")|Ohraničení|`CommonControls.CheckBoxBorderHover`|  
+|![Zaškrtávací políčko při najetí přes](../extensibility/ux-guidelines/media/0303-164-checkboxhover.png "0303-164_CheckboxHover")|Text|`CommonControls.CheckBoxTextHover`|  
+|![Zaškrtávací políčko při najetí přes](../extensibility/ux-guidelines/media/0303-164-checkboxhover.png "0303-164_CheckboxHover")|Glyfů|`CommonControls.CheckBoxGlyphHover`|  
+  
+ **Pressed**  
+  
+|Komponenta|Element|Název tokenu: Category.color|  
+|---------------|-------------|--------------------------------|  
+|![Bylo stisknuto zaškrtávací políčko](../extensibility/ux-guidelines/media/0303-165-checkboxpressed.png "0303-165_CheckboxPressed")|Pozadí|`CommonControls.CheckBoxBackgroundPressed`|  
+|![Bylo stisknuto zaškrtávací políčko](../extensibility/ux-guidelines/media/0303-165-checkboxpressed.png "0303-165_CheckboxPressed")|Ohraničení|`CommonControls.CheckBoxBorderPressed`|  
+|![Bylo stisknuto zaškrtávací políčko](../extensibility/ux-guidelines/media/0303-165-checkboxpressed.png "0303-165_CheckboxPressed")|Text|`CommonControls.CheckBoxTextPressed`|  
+|![Bylo stisknuto zaškrtávací políčko](../extensibility/ux-guidelines/media/0303-165-checkboxpressed.png "0303-165_CheckboxPressed")|Glyfů|`CommonControls.CheckBoxGlyphPressed`|  
+  
+ **Focused**  
+  
+|Komponenta|Element|Název tokenu: Category.color|  
+|---------------|-------------|--------------------------------|  
+|![Zaškrtávací políčko zaměřené](../extensibility/ux-guidelines/media/0303-166-checkboxfocused.png "0303-166_CheckboxFocused")|Pozadí|`CommonControls.CheckBoxBackgroundFocused`|  
+|![Zaškrtávací políčko zaměřené](../extensibility/ux-guidelines/media/0303-166-checkboxfocused.png "0303-166_CheckboxFocused")|Ohraničení|`CommonControls.CheckBoxBorderFocused`|  
+|![Zaškrtávací políčko zaměřené](../extensibility/ux-guidelines/media/0303-166-checkboxfocused.png "0303-166_CheckboxFocused")|Text|`CommonControls.CheckBoxTextFocused`|  
+|![Zaškrtávací políčko zaměřené](../extensibility/ux-guidelines/media/0303-166-checkboxfocused.png "0303-166_CheckboxFocused")|Glyfů|`CommonControls.CheckBoxGlyphFocused`|  
+  
+#### <a name="drop-boxcombo-box-controls"></a>Ovládací prvky s vybalením/pole se seznamem  
+ ![Rozbalit&#45;dolů&#47;pole se seznamem redline](../extensibility/ux-guidelines/media/0303-167-dropdowncomboboxredline.png "0303-167_DropDownComboBoxRedline")  
+  
+Použít...  
+pro rozevírací seznamy a seznamy, které jsou součástí dokumentu dobře.  
 
-Nepoužívejte...  
-- pro uživatelské rozhraní, která není pole rozevíracího seznamu nebo pole se seznamem.  
+Nepoužívejte ...  
+- pro jakékoli ui, které není rozevírací seznam nebo pole se seznamem.  
 
-- pro [rozevírací](../misc/shared-colors.md#BKMK_CommandDropDown) [seznam nebo pole se seznamem](../misc/shared-colors.md#BKMK_CommandComboBox) na panelu příkazů.  
+- pro [rozevírací](../misc/shared-colors.md#BKMK_CommandDropDown) seznam nebo [pole se seznamem](../misc/shared-colors.md#BKMK_CommandComboBox) na panelu příkazů.  
   
   **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Rozevírací&#45;pole&#47;se seznamem](../extensibility/ux-guidelines/media/0303-168-dropdowncombobox.png "0303 – 168_DropDownComboBox")|Pozadí|`CommonControls.ComboBoxBackground`|  
-|![Rozevírací&#45;pole&#47;se seznamem](../extensibility/ux-guidelines/media/0303-168-dropdowncombobox.png "0303 – 168_DropDownComboBox")|Ohraničení|`CommonControls.ComboBoxBorder`|  
-|![Rozevírací&#45;pole&#47;se seznamem](../extensibility/ux-guidelines/media/0303-168-dropdowncombobox.png "0303 – 168_DropDownComboBox")|Text|`CommonControls.ComboBoxText`|  
-|![Rozevírací&#45;pole&#47;se seznamem](../extensibility/ux-guidelines/media/0303-168-dropdowncombobox.png "0303 – 168_DropDownComboBox")|Oddělovač|`CommonControls.ComboBoxSeparator`|  
-|![Rozevírací&#45;pole&#47;se seznamem](../extensibility/ux-guidelines/media/0303-168-dropdowncombobox.png "0303 – 168_DropDownComboBox")|Piktogram|`CommonControls.ComboBoxGlyph`|  
-|![Rozevírací&#45;pole&#47;se seznamem](../extensibility/ux-guidelines/media/0303-168-dropdowncombobox.png "0303 – 168_DropDownComboBox")|Piktogram na pozadí|`CommonControls.ComboBoxGlyphBackground`|  
+|![Rozbalit&#45;dolů&#47;pole se seznamem](../extensibility/ux-guidelines/media/0303-168-dropdowncombobox.png "0303-168_DropDownComboBox")|Pozadí|`CommonControls.ComboBoxBackground`|  
+|![Rozbalit&#45;dolů&#47;pole se seznamem](../extensibility/ux-guidelines/media/0303-168-dropdowncombobox.png "0303-168_DropDownComboBox")|Ohraničení|`CommonControls.ComboBoxBorder`|  
+|![Rozbalit&#45;dolů&#47;pole se seznamem](../extensibility/ux-guidelines/media/0303-168-dropdowncombobox.png "0303-168_DropDownComboBox")|Text|`CommonControls.ComboBoxText`|  
+|![Rozbalit&#45;dolů&#47;pole se seznamem](../extensibility/ux-guidelines/media/0303-168-dropdowncombobox.png "0303-168_DropDownComboBox")|Oddělovač|`CommonControls.ComboBoxSeparator`|  
+|![Rozbalit&#45;dolů&#47;pole se seznamem](../extensibility/ux-guidelines/media/0303-168-dropdowncombobox.png "0303-168_DropDownComboBox")|Glyfů|`CommonControls.ComboBoxGlyph`|  
+|![Rozbalit&#45;dolů&#47;pole se seznamem](../extensibility/ux-guidelines/media/0303-168-dropdowncombobox.png "0303-168_DropDownComboBox")|Pozadí glyfů|`CommonControls.ComboBoxGlyphBackground`|  
   
  **Disabled** (Zakázáno)  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Rozevírací&#45;seznam&#47;se zakázal.](../extensibility/ux-guidelines/media/0303-169-dropdowncomboboxdisabled.png "0303 – 169_DropDownComboBoxDisabled")|Pozadí|`CommonControls.ComboBoxBackgroundDisabled`|  
-|![Rozevírací&#45;seznam&#47;se zakázal.](../extensibility/ux-guidelines/media/0303-169-dropdowncomboboxdisabled.png "0303 – 169_DropDownComboBoxDisabled")|Ohraničení|`CommonControls.ComboBoxBorderDisabled`|  
-|![Rozevírací&#45;seznam&#47;se zakázal.](../extensibility/ux-guidelines/media/0303-169-dropdowncomboboxdisabled.png "0303 – 169_DropDownComboBoxDisabled")|Text|`CommonControls.ComboBoxTextDisabled`|  
-|![Rozevírací&#45;seznam&#47;se zakázal.](../extensibility/ux-guidelines/media/0303-169-dropdowncomboboxdisabled.png "0303 – 169_DropDownComboBoxDisabled")|Oddělovač|`CommonControls.ComboBoxSeparatorDisabled`|  
-|![Rozevírací&#45;seznam&#47;se zakázal.](../extensibility/ux-guidelines/media/0303-169-dropdowncomboboxdisabled.png "0303 – 169_DropDownComboBoxDisabled")|Piktogram|`CommonControls.ComboBoxGlyphDisabled`|  
-|![Rozevírací&#45;seznam&#47;se zakázal.](../extensibility/ux-guidelines/media/0303-169-dropdowncomboboxdisabled.png "0303 – 169_DropDownComboBoxDisabled")|Piktogram na pozadí|`CommonControls.ComboBoxGlyphBackgroundDisabled`|  
+|![Drop&#45;dolů&#47;pole se seznamem zakázáno](../extensibility/ux-guidelines/media/0303-169-dropdowncomboboxdisabled.png "0303-169_DropDownComboBoxDisabled")|Pozadí|`CommonControls.ComboBoxBackgroundDisabled`|  
+|![Drop&#45;dolů&#47;pole se seznamem zakázáno](../extensibility/ux-guidelines/media/0303-169-dropdowncomboboxdisabled.png "0303-169_DropDownComboBoxDisabled")|Ohraničení|`CommonControls.ComboBoxBorderDisabled`|  
+|![Drop&#45;dolů&#47;pole se seznamem zakázáno](../extensibility/ux-guidelines/media/0303-169-dropdowncomboboxdisabled.png "0303-169_DropDownComboBoxDisabled")|Text|`CommonControls.ComboBoxTextDisabled`|  
+|![Drop&#45;dolů&#47;pole se seznamem zakázáno](../extensibility/ux-guidelines/media/0303-169-dropdowncomboboxdisabled.png "0303-169_DropDownComboBoxDisabled")|Oddělovač|`CommonControls.ComboBoxSeparatorDisabled`|  
+|![Drop&#45;dolů&#47;pole se seznamem zakázáno](../extensibility/ux-guidelines/media/0303-169-dropdowncomboboxdisabled.png "0303-169_DropDownComboBoxDisabled")|Glyfů|`CommonControls.ComboBoxGlyphDisabled`|  
+|![Drop&#45;dolů&#47;pole se seznamem zakázáno](../extensibility/ux-guidelines/media/0303-169-dropdowncomboboxdisabled.png "0303-169_DropDownComboBoxDisabled")|Pozadí glyfů|`CommonControls.ComboBoxGlyphBackgroundDisabled`|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Rozevírací&#45;pole&#47;se seznamem při najetí myší](../extensibility/ux-guidelines/media/0303-170-dropdowncomboboxhover.png "0303 – 170_DropDownComboBoxHover")|Pozadí|`CommonControls.ComboBoxBackgroundHover`|  
-|![Rozevírací&#45;pole&#47;se seznamem při najetí myší](../extensibility/ux-guidelines/media/0303-170-dropdowncomboboxhover.png "0303 – 170_DropDownComboBoxHover")|Ohraničení|`CommonControls.ComboBoxBorderHover`|  
-|![Rozevírací&#45;pole&#47;se seznamem při najetí myší](../extensibility/ux-guidelines/media/0303-170-dropdowncomboboxhover.png "0303 – 170_DropDownComboBoxHover")|Text|`CommonControls.ComboBoxTextHover`|  
-|![Rozevírací&#45;pole&#47;se seznamem při najetí myší](../extensibility/ux-guidelines/media/0303-170-dropdowncomboboxhover.png "0303 – 170_DropDownComboBoxHover")|Oddělovač|`CommonControls.ComboBoxSeparatorHover`|  
-|![Rozevírací&#45;pole&#47;se seznamem při najetí myší](../extensibility/ux-guidelines/media/0303-170-dropdowncomboboxhover.png "0303 – 170_DropDownComboBoxHover")|Piktogram|`CommonControls.ComboBoxGlyphHover`|  
-|![Rozevírací&#45;pole&#47;se seznamem při najetí myší](../extensibility/ux-guidelines/media/0303-170-dropdowncomboboxhover.png "0303 – 170_DropDownComboBoxHover")|Piktogram na pozadí|`CommonControls.ComboBoxGlyphBackgroundHover`|  
+|![Rozbalit&#45;dolů&#47;pole se seznamem při hoveru](../extensibility/ux-guidelines/media/0303-170-dropdowncomboboxhover.png "0303-170_DropDownComboBoxHover")|Pozadí|`CommonControls.ComboBoxBackgroundHover`|  
+|![Rozbalit&#45;dolů&#47;pole se seznamem při hoveru](../extensibility/ux-guidelines/media/0303-170-dropdowncomboboxhover.png "0303-170_DropDownComboBoxHover")|Ohraničení|`CommonControls.ComboBoxBorderHover`|  
+|![Rozbalit&#45;dolů&#47;pole se seznamem při hoveru](../extensibility/ux-guidelines/media/0303-170-dropdowncomboboxhover.png "0303-170_DropDownComboBoxHover")|Text|`CommonControls.ComboBoxTextHover`|  
+|![Rozbalit&#45;dolů&#47;pole se seznamem při hoveru](../extensibility/ux-guidelines/media/0303-170-dropdowncomboboxhover.png "0303-170_DropDownComboBoxHover")|Oddělovač|`CommonControls.ComboBoxSeparatorHover`|  
+|![Rozbalit&#45;dolů&#47;pole se seznamem při hoveru](../extensibility/ux-guidelines/media/0303-170-dropdowncomboboxhover.png "0303-170_DropDownComboBoxHover")|Glyfů|`CommonControls.ComboBoxGlyphHover`|  
+|![Rozbalit&#45;dolů&#47;pole se seznamem při hoveru](../extensibility/ux-guidelines/media/0303-170-dropdowncomboboxhover.png "0303-170_DropDownComboBoxHover")|Pozadí glyfů|`CommonControls.ComboBoxGlyphBackgroundHover`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Stisknuté políčko rozevíracího&#45;pole&#47;se seznamem](../extensibility/ux-guidelines/media/0303-171-dropdowncomboboxpressed.png "0303 – 171_DropDownComboBoxPressed")|Pozadí|`CommonControls.ComboBoxBackgroundPressed`|  
-|![Stisknuté políčko rozevíracího&#45;pole&#47;se seznamem](../extensibility/ux-guidelines/media/0303-171-dropdowncomboboxpressed.png "0303 – 171_DropDownComboBoxPressed")|Ohraničení|`CommonControls.ComboBoxBorderPressed`|  
-|![Stisknuté políčko rozevíracího&#45;pole&#47;se seznamem](../extensibility/ux-guidelines/media/0303-171-dropdowncomboboxpressed.png "0303 – 171_DropDownComboBoxPressed")|Text|`CommonControls.ComboBoxTextPressed`|  
-|![Stisknuté políčko rozevíracího&#45;pole&#47;se seznamem](../extensibility/ux-guidelines/media/0303-171-dropdowncomboboxpressed.png "0303 – 171_DropDownComboBoxPressed")|Oddělovač|`CommonControls.ComboBoxSeparatorPressed`|  
-|![Stisknuté políčko rozevíracího&#45;pole&#47;se seznamem](../extensibility/ux-guidelines/media/0303-171-dropdowncomboboxpressed.png "0303 – 171_DropDownComboBoxPressed")|Piktogram|`CommonControls.ComboBoxGlyphPressed`|  
-|![Stisknuté políčko rozevíracího&#45;pole&#47;se seznamem](../extensibility/ux-guidelines/media/0303-171-dropdowncomboboxpressed.png "0303 – 171_DropDownComboBoxPressed")|Piktogram na pozadí|`CommonControls.ComboBoxGlyphBackgroundPressed`|  
+|![Spadnout&#45;dolů&#47;combo box stisknuto](../extensibility/ux-guidelines/media/0303-171-dropdowncomboboxpressed.png "0303-171_DropDownComboBoxPressed")|Pozadí|`CommonControls.ComboBoxBackgroundPressed`|  
+|![Spadnout&#45;dolů&#47;combo box stisknuto](../extensibility/ux-guidelines/media/0303-171-dropdowncomboboxpressed.png "0303-171_DropDownComboBoxPressed")|Ohraničení|`CommonControls.ComboBoxBorderPressed`|  
+|![Spadnout&#45;dolů&#47;combo box stisknuto](../extensibility/ux-guidelines/media/0303-171-dropdowncomboboxpressed.png "0303-171_DropDownComboBoxPressed")|Text|`CommonControls.ComboBoxTextPressed`|  
+|![Spadnout&#45;dolů&#47;combo box stisknuto](../extensibility/ux-guidelines/media/0303-171-dropdowncomboboxpressed.png "0303-171_DropDownComboBoxPressed")|Oddělovač|`CommonControls.ComboBoxSeparatorPressed`|  
+|![Spadnout&#45;dolů&#47;combo box stisknuto](../extensibility/ux-guidelines/media/0303-171-dropdowncomboboxpressed.png "0303-171_DropDownComboBoxPressed")|Glyfů|`CommonControls.ComboBoxGlyphPressed`|  
+|![Spadnout&#45;dolů&#47;combo box stisknuto](../extensibility/ux-guidelines/media/0303-171-dropdowncomboboxpressed.png "0303-171_DropDownComboBoxPressed")|Pozadí glyfů|`CommonControls.ComboBoxGlyphBackgroundPressed`|  
   
- **Zaměřil**  
+ **Focused**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Rozevírací&#45;pole&#47;se seznamem podle fokusu](../extensibility/ux-guidelines/media/0303-172-dropdowncomboboxfocused.png "0303 – 172_DropDownComboBoxFocused")|Pozadí|`CommonControls.ComboBoxBackgroundFocused`|  
-|![Rozevírací&#45;pole&#47;se seznamem podle fokusu](../extensibility/ux-guidelines/media/0303-172-dropdowncomboboxfocused.png "0303 – 172_DropDownComboBoxFocused")|Ohraničení|`CommonControls.ComboBoxBorderFocused`|  
-|![Rozevírací&#45;pole&#47;se seznamem podle fokusu](../extensibility/ux-guidelines/media/0303-172-dropdowncomboboxfocused.png "0303 – 172_DropDownComboBoxFocused")|Text|`CommonControls.ComboBoxTextFocused`|  
-|![Rozevírací&#45;pole&#47;se seznamem podle fokusu](../extensibility/ux-guidelines/media/0303-172-dropdowncomboboxfocused.png "0303 – 172_DropDownComboBoxFocused")|Oddělovač|`CommonControls.ComboBoxSeparatorFocused`|  
-|![Rozevírací&#45;pole&#47;se seznamem podle fokusu](../extensibility/ux-guidelines/media/0303-172-dropdowncomboboxfocused.png "0303 – 172_DropDownComboBoxFocused")|Piktogram|`CommonControls.ComboBoxGlyphFocused`|  
-|![Rozevírací&#45;pole&#47;se seznamem podle fokusu](../extensibility/ux-guidelines/media/0303-172-dropdowncomboboxfocused.png "0303 – 172_DropDownComboBoxFocused")|Piktogram na pozadí|`CommonControls.ComboBoxGlyphBackgroundFocused`|  
+|![Drop&#45;dolů&#47;pole se seznamem zaměřené](../extensibility/ux-guidelines/media/0303-172-dropdowncomboboxfocused.png "0303-172_DropDownComboBoxFocused")|Pozadí|`CommonControls.ComboBoxBackgroundFocused`|  
+|![Drop&#45;dolů&#47;pole se seznamem zaměřené](../extensibility/ux-guidelines/media/0303-172-dropdowncomboboxfocused.png "0303-172_DropDownComboBoxFocused")|Ohraničení|`CommonControls.ComboBoxBorderFocused`|  
+|![Drop&#45;dolů&#47;pole se seznamem zaměřené](../extensibility/ux-guidelines/media/0303-172-dropdowncomboboxfocused.png "0303-172_DropDownComboBoxFocused")|Text|`CommonControls.ComboBoxTextFocused`|  
+|![Drop&#45;dolů&#47;pole se seznamem zaměřené](../extensibility/ux-guidelines/media/0303-172-dropdowncomboboxfocused.png "0303-172_DropDownComboBoxFocused")|Oddělovač|`CommonControls.ComboBoxSeparatorFocused`|  
+|![Drop&#45;dolů&#47;pole se seznamem zaměřené](../extensibility/ux-guidelines/media/0303-172-dropdowncomboboxfocused.png "0303-172_DropDownComboBoxFocused")|Glyfů|`CommonControls.ComboBoxGlyphFocused`|  
+|![Drop&#45;dolů&#47;pole se seznamem zaměřené](../extensibility/ux-guidelines/media/0303-172-dropdowncomboboxfocused.png "0303-172_DropDownComboBoxFocused")|Pozadí glyfů|`CommonControls.ComboBoxGlyphBackgroundFocused`|  
   
- **Výběr textového vstupu**  
+ **Výběr vstupu textu**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Rozevírací&#45;seznam&#47;pro zadání textu v poli se seznamem](../extensibility/ux-guidelines/media/0303-173-dropdowncomboboxtextinput.png "0303 – 173_DropDownComboBoxTextInput")|Zvýraznění|`CommonControls.ComboBoxTextInputSelection`|  
+|![Rozesílání&#45;dolů&#47;vstupu pole se seznamem](../extensibility/ux-guidelines/media/0303-173-dropdowncomboboxtextinput.png "0303-173_DropDownComboBoxTextInput")|Zvýraznit|`CommonControls.ComboBoxTextInputSelection`|  
   
- **Stisknuté – zobrazení položek seznamu**  
+ **Lisované – zobrazení položky seznamu**  
   
-|Komponenta|Prvek|Název tokenu: Color.category|  
+|Komponenta|Element|Název tokenu: Color.category|  
 |---------------|-------------|--------------------------------|  
-|![Rozevírací&#45;seznam&#47;pro zobrazení seznamu polí se seznamem](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303 – 174_DropDownComboBoxListView")|Pozadí|`CommonControls.ComboBoxListBackground`|  
-|![Rozevírací&#45;seznam&#47;pro zobrazení seznamu polí se seznamem](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303 – 174_DropDownComboBoxListView")|Pozadí|`CommonControls.ComboBoxListBackgroundHover`|  
-|![Rozevírací&#45;seznam&#47;pro zobrazení seznamu polí se seznamem](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303 – 174_DropDownComboBoxListView")|Pozadí|`CommonControls.ComboBoxListItemBackgroundPressed`|  
-|![Rozevírací&#45;seznam&#47;pro zobrazení seznamu polí se seznamem](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303 – 174_DropDownComboBoxListView")|Pozadí|`CommonControls.ComboBoxListItemBackgroundFocused`|  
-|![Rozevírací&#45;seznam&#47;pro zobrazení seznamu polí se seznamem](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303 – 174_DropDownComboBoxListView")|Ohraničení|`CommonControls.ComboBoxListBorder`|  
-|![Rozevírací&#45;seznam&#47;pro zobrazení seznamu polí se seznamem](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303 – 174_DropDownComboBoxListView")|Ohraničení|`CommonControls.ComboBoxListBorderHover`|  
-|![Rozevírací&#45;seznam&#47;pro zobrazení seznamu polí se seznamem](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303 – 174_DropDownComboBoxListView")|Ohraničení|`CommonControls.ComboBoxListBorderPressed`|  
-|![Rozevírací&#45;seznam&#47;pro zobrazení seznamu polí se seznamem](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303 – 174_DropDownComboBoxListView")|Ohraničení|`CommonControls.ComboBoxListBorderFocused`|  
-|![Rozevírací&#45;seznam&#47;pro zobrazení seznamu polí se seznamem](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303 – 174_DropDownComboBoxListView")|Text položky|`CommonControls.ComboBoxListItemText`|  
-|![Rozevírací&#45;seznam&#47;pro zobrazení seznamu polí se seznamem](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303 – 174_DropDownComboBoxListView")|Text položky|`CommonControls.ComboBoxListItemTextHover`|  
-|![Rozevírací&#45;seznam&#47;pro zobrazení seznamu polí se seznamem](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303 – 174_DropDownComboBoxListView")|Text položky|`CommonControls.ComboBoxListItemTextPressed`|  
-|![Rozevírací&#45;seznam&#47;pro zobrazení seznamu polí se seznamem](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303 – 174_DropDownComboBoxListView")|Text položky|`CommonControls.ComboBoxListItemTextFocused`|  
-|![Rozevírací&#45;seznam&#47;pro zobrazení seznamu polí se seznamem](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303 – 174_DropDownComboBoxListView")|Stín pozadí|`CommonControls.ComboBoxListBackgroundShadow`|  
+|![Rozepsat&#45;zobrazení seznamu se seznamem&#47;](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")|Pozadí|`CommonControls.ComboBoxListBackground`|  
+|![Rozepsat&#45;zobrazení seznamu se seznamem&#47;](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")|Pozadí|`CommonControls.ComboBoxListBackgroundHover`|  
+|![Rozepsat&#45;zobrazení seznamu se seznamem&#47;](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")|Pozadí|`CommonControls.ComboBoxListItemBackgroundPressed`|  
+|![Rozepsat&#45;zobrazení seznamu se seznamem&#47;](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")|Pozadí|`CommonControls.ComboBoxListItemBackgroundFocused`|  
+|![Rozepsat&#45;zobrazení seznamu se seznamem&#47;](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")|Ohraničení|`CommonControls.ComboBoxListBorder`|  
+|![Rozepsat&#45;zobrazení seznamu se seznamem&#47;](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")|Ohraničení|`CommonControls.ComboBoxListBorderHover`|  
+|![Rozepsat&#45;zobrazení seznamu se seznamem&#47;](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")|Ohraničení|`CommonControls.ComboBoxListBorderPressed`|  
+|![Rozepsat&#45;zobrazení seznamu se seznamem&#47;](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")|Ohraničení|`CommonControls.ComboBoxListBorderFocused`|  
+|![Rozepsat&#45;zobrazení seznamu se seznamem&#47;](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")|Text položky|`CommonControls.ComboBoxListItemText`|  
+|![Rozepsat&#45;zobrazení seznamu se seznamem&#47;](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")|Text položky|`CommonControls.ComboBoxListItemTextHover`|  
+|![Rozepsat&#45;zobrazení seznamu se seznamem&#47;](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")|Text položky|`CommonControls.ComboBoxListItemTextPressed`|  
+|![Rozepsat&#45;zobrazení seznamu se seznamem&#47;](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")|Text položky|`CommonControls.ComboBoxListItemTextFocused`|  
+|![Rozepsat&#45;zobrazení seznamu se seznamem&#47;](../extensibility/ux-guidelines/media/0303-174-dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")|Stín pozadí|`CommonControls.ComboBoxListBackgroundShadow`|  
   
-#### <a name="tabular-data-grid-controls"></a>Ovládací prvky tabulkových dat (grid)  
- Ovládací prvky tabulkových dat, označované také jako ovládací prvky mřížky, jsou běžné ovládací prvky pro Visual Studio, která slouží k zobrazení velkého objemu dat ve více sloupcích. Ovládací prvky standardní tabulkových dat najdete na více místech v rámci sady Visual Studio: panel nástrojů Seznam chyb, sestavy IntelliTrace a zobrazení paměti haldy, mimo jiné. Vždy používejte standardní tabulková data ovládací prvky k dispozici. V některých výjimečných případech nemusí mít přístup k ovládacím prvkům standardní tabulková data. V těchto situacích nepoužívejte následující názvy token k zajištění, že vaše uživatelské rozhraní je konzistentní s jinými ovládacími prvky tabulková data v sadě Visual Studio.  
+#### <a name="tabular-data-grid-controls"></a>Ovládací prvky tabulkových dat (mřížka)  
+ Ovládací prvky tabulkových dat, označované také jako ovládací prvky mřížky, jsou běžné ovládací prvky pro sady Visual Studio, které lze použít k prezentaci velkého množství dat ve více sloupcích. Standardní ovládací prvky tabulkových dat lze nalézt na více místech v rámci sady Visual Studio: okno nástroje Seznam chyb, sestavy IntelliTrace a zobrazení haldy paměti. Vždy používejte standardní ovládací prvky tabulkových dat. V některých výjimečných případech pravděpodobně nemáte přístup ke standardním ovládacím prvkům tabulkových dat. V těchto situacích použijte následující názvy tokenů, abyste zajistili, že vaše rozhraní je konzistentní s ostatními ovládacími prvky tabulkových dat v sadě Visual Studio.  
   
- ![Redline ovládacího &#40;prvku&#41; mřížky tabelárních dat](../extensibility/ux-guidelines/media/0303-197-tabulardatagridcontrolredline.png "0303 – 197_TabularDataGridControlRedline")  
+ ![Ovládací prvek&#41;&#41; červené čáry&#41; ovládacího prvku tabulkových dat &#40;](../extensibility/ux-guidelines/media/0303-197-tabulardatagridcontrolredline.png "0303-197_TabularDataGridControlRedline")  
   
- Použití...  
- pro tabulkové nebo ovládací prvky mřížky.  
+ Použít...  
+ pro tabulkové ovládací prvky nebo ovládací prvky mřížky.  
   
- Nepoužívejte...  
- pro uživatelské rozhraní, který není ovládacího prvku tabulky nebo tabulky.  
+ Nepoužívejte ...  
+ pro jakékoli ui, které není tabulkové nebo mřížky ovládací prvek.  
   
 ##### <a name="column-headers"></a>Záhlaví sloupců  
- Záhlaví sloupců se skládají z na pozadí, ohraničení, text nadpisu a volitelné piktogram obvykle se používá pro mřížku je seřazený podle tohoto sloupce.  
+ Záhlaví sloupců se skládají z pozadí, ohraničení, textu nadpisu a volitelného glyfu, který se obvykle používá při seřazení mřížky podle tohoto sloupce.  
   
-|Stav|Prvek|Název tokenu: Category.color|  
+|Stav|Element|Název tokenu: Category.color|  
 |-----------|-------------|--------------------------------|  
 |Výchozí|Pozadí|`Header.Default`|  
-|Výchozí|Popředí (Text)|`Environment.CommandBarTextActive`|  
-|Výchozí|Popředí (piktogram)|`Header.Glyph`|  
+|Výchozí|Popředí (text)|`Environment.CommandBarTextActive`|  
+|Výchozí|Popředí (glyf)|`Header.Glyph`|  
 |Výchozí|Ohraničení|`Header.SeparatorLine`|  
-|Při najetí myší|Pozadí|`Header.MouseOver`|  
-|Při najetí myší|Popředí (Text)|`Environment.CommandBarTextHover`|  
-|Při najetí myší|Popředí (piktogram)|`Header.MouseOverGlyph`|  
-|Při najetí myší|Ohraničení|`Header.SeparatorLine`|  
-|Stisknutí|Pozadí|`CommonControls.CheckBoxBackgroundPressed`|  
-|Stisknutí|Popředí (Text)|`CommonControls.CheckBoxBorderPressed`|  
-|Stisknutí|Popředí (piktogram)|`CommonControls.CheckBoxTextPressed`|  
-|Stisknutí|Ohraničení|`CommonControls.CheckBoxGlyphPressed`|  
+|Hover|Pozadí|`Header.MouseOver`|  
+|Hover|Popředí (text)|`Environment.CommandBarTextHover`|  
+|Hover|Popředí (glyf)|`Header.MouseOverGlyph`|  
+|Hover|Ohraničení|`Header.SeparatorLine`|  
+|Pressed|Pozadí|`CommonControls.CheckBoxBackgroundPressed`|  
+|Pressed|Popředí (text)|`CommonControls.CheckBoxBorderPressed`|  
+|Pressed|Popředí (glyf)|`CommonControls.CheckBoxTextPressed`|  
+|Pressed|Ohraničení|`CommonControls.CheckBoxGlyphPressed`|  
   
-##### <a name="list-view-items"></a>Položky seznamu  
- Položky seznamu se skládají z na pozadí a obsah. Obsah může být text nebo ikonu.  
+##### <a name="list-view-items"></a>Položky zobrazení seznamu  
+ Položky zobrazení seznamu se skládají z pozadí a obsahu. Obsah může být text, ikona nebo obojí.  
   
-|Stav|Prvek|Název tokenu: Category.color|  
+|Stav|Element|Název tokenu: Category.color|  
 |-----------|-------------|--------------------------------|  
-|Výchozí|Pozadí|Transparentní|  
-|Výchozí|Popředí (Text)|`Environment.CommandBarTextActive`|  
-|Výchozí|Ohraničení|Žádná|  
-|Vybraná (aktivní)|Pozadí|`TreeView.SelectedItemActive`|  
-|Vybraná (aktivní)|Popředí (Text)|`TreeView.SelectedItemActiveText`|  
-|Vybraná (aktivní)|Ohraničení|Žádná|  
-|Vybraná (neaktivní)|Pozadí|`TreeView.SelectedItemInactive`|  
-|Vybraná (neaktivní)|Popředí (Text)|`TreeView.SelectedItemInactiveText`|  
-|Vybraná (neaktivní)|Ohraničení|Žádná|  
+|Výchozí|Pozadí|Průhlednost|  
+|Výchozí|Popředí (text)|`Environment.CommandBarTextActive`|  
+|Výchozí|Ohraničení|Žádný|  
+|Vybráno (aktivní)|Pozadí|`TreeView.SelectedItemActive`|  
+|Vybráno (aktivní)|Popředí (text)|`TreeView.SelectedItemActiveText`|  
+|Vybráno (aktivní)|Ohraničení|Žádný|  
+|Vybráno (neaktivní)|Pozadí|`TreeView.SelectedItemInactive`|  
+|Vybráno (neaktivní)|Popředí (text)|`TreeView.SelectedItemInactiveText`|  
+|Vybráno (neaktivní)|Ohraničení|Žádný|  
   
 ### <a name="manifest-designer"></a>Návrhář manifestu  
- Nástroj Manifest Designer je navržená jako způsob, jak bylo snazší upravit soubor manifestu v projektech pro systém Windows 8 a Windows Phone 8. Neplatí žádné sdílené architektuře k dispozici pro použití, může být vhodné pro tak, aby odpovídala návrhu rozložení a barvy orientace/navigačních karet a celkovou strukturu. Další informace o podrobnostech rozložení naleznete v tématu [layout for Visual Studio](../extensibility/ux-guidelines/layout-for-visual-studio.md).  
+ Návrhář manifestu byl navržen jako způsob, jak usnadnit úpravy souboru manifestu v projektech Windows 8 a Windows Phone 8. I když není k dispozici žádná sdílená architektura pro spotřebu, může být vhodné, abyste odpovídali rozložení návrhu a barvy karet orientace/navigace a celkové struktury. Další informace o podrobnostech rozložení naleznete v [tématu Layout for Visual Studio](../extensibility/ux-guidelines/layout-for-visual-studio.md).  
   
- ![Redline návrháře manifestu](../extensibility/ux-guidelines/media/0303-175-manifestdesignerredline.png "0303 – 175_ManifestDesignerRedline")  
+ ![Redline návrháře manifestu](../extensibility/ux-guidelines/media/0303-175-manifestdesignerredline.png "0303-175_ManifestDesignerRedline")  
   
-Použití...  
-- pro profesionální návrháře využívající, které jsou podobné pro Nástroj Manifest Designer.  
+Použít...  
+- pro návrháře, které jsou podobné Návrhář manifestu.  
 
-- místo použití běžných ovládacích prvků kartě v horní části editoru v rámci dokumentu kontejneru.  
+- místo použití běžných ovládacích prvků tabulátoru v horní části editoru v dokumentu dobře.  
 
-Nepoužívejte...  
-- Pokud máte víc než šest karet.  
+Nepoužívejte ...  
+- pokud máte více než šest záložek.  
 
-- pro všechny uživatelské rozhraní, která není strukturované jako nástroj Manifest Designer.  
+- pro jakékoli ui, které není strukturováno jako Návrhář manifestu.  
   
-|Stav|Komponenta|Prvek|Název tokenu: Category.color|  
+|Stav|Komponenta|Element|Název tokenu: Category.color|  
 |-----------|---------------|-------------|--------------------------------|  
-|Výchozí (vybrané)|Tabulátor|Pozadí|`ManifestDesigner.TabActive`|  
-|Výchozí (vybrané)|Tabulátor|Ohraničení|Žádná|  
-|Výchozí (vybrané)|Podokno s popisem|Pozadí|`ManifestDesigner.DescriptionPane`|  
-|Výchozí (vybrané)|Stránka obsahu|Pozadí|`ManifestDesigner.Background`|  
-|Výchozí (vybrané)|Stránka obsahu|Dialogové okno text pomocné rutiny|`ManifestDesigner.WatermarkText`<br /><br /> Tento název tokenu se neshoduje s jeho funkci.|  
-|Non vybraná|Tabulátor|Pozadí|`ManifestDesigner.Tab.Inactive`|  
-|Při najetí myší|Tabulátor|Pozadí|`ManifestDesigner.Tab.Mouseover`|  
+|Výchozí (vybráno)|Karta|Pozadí|`ManifestDesigner.TabActive`|  
+|Výchozí (vybráno)|Karta|Ohraničení|Žádný|  
+|Výchozí (vybráno)|Podokno Popis|Pozadí|`ManifestDesigner.DescriptionPane`|  
+|Výchozí (vybráno)|Stránka obsahu|Pozadí|`ManifestDesigner.Background`|  
+|Výchozí (vybráno)|Stránka obsahu|Text pomocníka dialogu|`ManifestDesigner.WatermarkText`<br /><br /> Tento název tokenu neodpovídá jeho funkci.|  
+|Nevybráno|Karta|Pozadí|`ManifestDesigner.Tab.Inactive`|  
+|Hover|Karta|Pozadí|`ManifestDesigner.Tab.Mouseover`|  
   
 ### <a name="tagging"></a>Označování  
- Visual Studio podporuje označování, které umožňuje uživateli deklarovat prohledávatelná klíčová slova pro účely sledování. Například projektových manažerů a vývojářů může používat Team Foundation Server (TFS) k označení pracovních položek. Následující tabulky poskytují názvy barev pro vlastní značku i "Zavřít ikonu" šifra, která se zobrazí při najetí myší a vybraných států.  
+ Visual Studio podporuje označování, které umožňuje uživateli deklarovat prohledávatelná klíčová slova pro účely sledování. Například projektoví manažeři a vývojáři mohou použít Team Foundation Server (TFS) k označení pracovních položek. Níže uvedené tabulky udávají názvy barev pro samotnou značku i glyf "zavřít ikonu", který se zobrazí v režimu umístění v měřítku a vybraných stavech.  
   
- ![Označování Redline](../extensibility/ux-guidelines/media/0303-176-taggingredline.png "0303 – 176_TaggingRedline")  
+ ![Označení červené čáry](../extensibility/ux-guidelines/media/0303-176-taggingredline.png "0303-176_TaggingRedline")  
   
- Použití...  
- pro uživatelské rozhraní, který podporuje označování.  
+ Použít...  
+ pro ui, které podporuje označování.  
   
- Nepoužívejte...  
- u ostatních typů uživatelského rozhraní.  
+ Nepoužívejte ...  
+ pro jakýkoli jiný typ ui.  
   
 #### <a name="tag"></a>Značka  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Tag](../extensibility/ux-guidelines/media/0303-177-tag.png "0303 – 177_Tag")<br /><br /> **Výchozí**|Pozadí|`Tag.Background`|  
-|![Tag](../extensibility/ux-guidelines/media/0303-177-tag.png "0303 – 177_Tag")<br /><br /> **Výchozí**|Popředí (Text)|`Tag.Background`|  
-|![Označit při najetí myší](../extensibility/ux-guidelines/media/0303-178-taghover.png "0303 – 178_TagHover")<br /><br /> **Přesunutí**|Pozadí|`Tag.HoverBackground`|  
-|![Označit při najetí myší](../extensibility/ux-guidelines/media/0303-178-taghover.png "0303 – 178_TagHover")<br /><br /> **Přesunutí**|Popředí (Text)|`Tag.HoverBackgroundText`|  
-|![Stisknutí značky](../extensibility/ux-guidelines/media/0303-179-tagpressed.png "0303 – 179_TagPressed")<br /><br /> **Stisknete**|Pozadí|`Tag.PressedBackground`|  
-|![Stisknutí značky](../extensibility/ux-guidelines/media/0303-179-tagpressed.png "0303 – 179_TagPressed")<br /><br /> **Stisknete**|Popředí (Text)|`Tag.PressedBackgroundText`|  
-|![Vybraná značka](../extensibility/ux-guidelines/media/0303-180-tagselected.png "0303 – 180_TagSelected")<br /><br /> **Vyberte**|Pozadí|`Tag.SelectedBackground`|  
-|![Vybraná značka](../extensibility/ux-guidelines/media/0303-180-tagselected.png "0303 – 180_TagSelected")<br /><br /> **Vyberte**|Popředí (Text)|`Tag.SelectedBackgroundText`|  
+|![Značku](../extensibility/ux-guidelines/media/0303-177-tag.png "0303-177_Tag")<br /><br /> **Výchozí**|Pozadí|`Tag.Background`|  
+|![Značku](../extensibility/ux-guidelines/media/0303-177-tag.png "0303-177_Tag")<br /><br /> **Výchozí**|Popředí (text)|`Tag.Background`|  
+|![Značka při najetí přes](../extensibility/ux-guidelines/media/0303-178-taghover.png "0303-178_TagHover")<br /><br /> **Hover**|Pozadí|`Tag.HoverBackground`|  
+|![Značka při najetí přes](../extensibility/ux-guidelines/media/0303-178-taghover.png "0303-178_TagHover")<br /><br /> **Hover**|Popředí (text)|`Tag.HoverBackgroundText`|  
+|![Stisknutá značka](../extensibility/ux-guidelines/media/0303-179-tagpressed.png "0303-179_TagPressed")<br /><br /> **Pressed**|Pozadí|`Tag.PressedBackground`|  
+|![Stisknutá značka](../extensibility/ux-guidelines/media/0303-179-tagpressed.png "0303-179_TagPressed")<br /><br /> **Pressed**|Popředí (text)|`Tag.PressedBackgroundText`|  
+|![Značka byla vybrána.](../extensibility/ux-guidelines/media/0303-180-tagselected.png "0303-180_TagSelected")<br /><br /> **Vybráno**|Pozadí|`Tag.SelectedBackground`|  
+|![Značka byla vybrána.](../extensibility/ux-guidelines/media/0303-180-tagselected.png "0303-180_TagSelected")<br /><br /> **Vybráno**|Popředí (text)|`Tag.SelectedBackgroundText`|  
   
-#### <a name="glyph-close-icon"></a>Piktogram (ikonu pro zavření)  
+#### <a name="glyph-close-icon"></a>Glyf (ikona zavření)  
  **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Glyf &#40;značky&#41;](../extensibility/ux-guidelines/media/0303-181-tagglyph.png "0303 – 181_TagGlyph")<br /><br /> **Výchozí (označit jako výchozí)**|Pozadí|neuvedeno|  
-|![Glyf &#40;značky&#41;](../extensibility/ux-guidelines/media/0303-181-tagglyph.png "0303 – 181_TagGlyph")<br /><br /> **Výchozí (označit jako výchozí)**|Popředí (piktogram)|`Tag.TagHoverGlyph`|  
+|![&#41;glyfů &#40;](../extensibility/ux-guidelines/media/0303-181-tagglyph.png "0303-181_TagGlyph")<br /><br /> **Výchozí (výchozí značka)**|Pozadí|Není dostupné.|  
+|![&#41;glyfů &#40;](../extensibility/ux-guidelines/media/0303-181-tagglyph.png "0303-181_TagGlyph")<br /><br /> **Výchozí (výchozí značka)**|Popředí (glyf)|`Tag.TagHoverGlyph`|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Označit &#40;glyf&#41; při najetí myší](../extensibility/ux-guidelines/media/0303-182-tagglyphhover.png "0303 – 182_TagGlyphHover")<br /><br /> **Najeďte myší (výchozí značka)**|Pozadí|`Tag.TagHoverGlyphHoverBackground`|  
-|![Označit &#40;glyf&#41; při najetí myší](../extensibility/ux-guidelines/media/0303-182-tagglyphhover.png "0303 – 182_TagGlyphHover")<br /><br /> **Najeďte myší (výchozí značka)**|Popředí (piktogram)|`Tag.TagHoverGlyphHover`|  
-|![Označit &#40;glyf&#41; při najetí myší](../extensibility/ux-guidelines/media/0303-182-tagglyphhover.png "0303 – 182_TagGlyphHover")<br /><br /> **Najeďte myší (výchozí značka)**|Ohraničení|`Tag.TagHoverGlyphHoverBorder`|  
+|![Značka &#40;&#41; při najetí](../extensibility/ux-guidelines/media/0303-182-tagglyphhover.png "0303-182_TagGlyphHover")<br /><br /> **Najetí přes (výchozí značka)**|Pozadí|`Tag.TagHoverGlyphHoverBackground`|  
+|![Značka &#40;&#41; při najetí](../extensibility/ux-guidelines/media/0303-182-tagglyphhover.png "0303-182_TagGlyphHover")<br /><br /> **Najetí přes (výchozí značka)**|Popředí (glyf)|`Tag.TagHoverGlyphHover`|  
+|![Značka &#40;&#41; při najetí](../extensibility/ux-guidelines/media/0303-182-tagglyphhover.png "0303-182_TagGlyphHover")<br /><br /> **Najetí přes (výchozí značka)**|Ohraničení|`Tag.TagHoverGlyphHoverBorder`|  
   
- **Stisknete**  
+ **Pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Stisknutí&#41; glyfu značky &#40;](../extensibility/ux-guidelines/media/0303-183-tagglyphpressed.png "0303 – 183_TagGlyphPressed")<br /><br /> **Stisknuté (označit jako výchozí)**|Pozadí|`Tag.TagHoverGlyphPressedBackground`|  
-|![Stisknutí&#41; glyfu značky &#40;](../extensibility/ux-guidelines/media/0303-183-tagglyphpressed.png "0303 – 183_TagGlyphPressed")<br /><br /> **Stisknuté (označit jako výchozí)**|Popředí (piktogram)|`Tag.TagHoverGlyphPressed`|  
-|![Stisknutí&#41; glyfu značky &#40;](../extensibility/ux-guidelines/media/0303-183-tagglyphpressed.png "0303 – 183_TagGlyphPressed")<br /><br /> **Stisknuté (označit jako výchozí)**|Ohraničení|`Tag.TagHoverGlyphPressedBorder`|  
+|![Tag &#40;glyf&#41; stisknutí](../extensibility/ux-guidelines/media/0303-183-tagglyphpressed.png "0303-183_TagGlyphPressed")<br /><br /> **Stisknuto (výchozí značka)**|Pozadí|`Tag.TagHoverGlyphPressedBackground`|  
+|![Tag &#40;glyf&#41; stisknutí](../extensibility/ux-guidelines/media/0303-183-tagglyphpressed.png "0303-183_TagGlyphPressed")<br /><br /> **Stisknuto (výchozí značka)**|Popředí (glyf)|`Tag.TagHoverGlyphPressed`|  
+|![Tag &#40;glyf&#41; stisknutí](../extensibility/ux-guidelines/media/0303-183-tagglyphpressed.png "0303-183_TagGlyphPressed")<br /><br /> **Stisknuto (výchozí značka)**|Ohraničení|`Tag.TagHoverGlyphPressedBorder`|  
   
- **Vybraná značka/výchozí hodnota glyfu**  
+ **Značka byla vybrána/glyph výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Vybraná značka](../extensibility/ux-guidelines/media/0303-184-tagselected.png "0303 – 184_TagSelected")<br /><br /> **Výchozí (vybraná značka)**|Pozadí|neuvedeno|  
-|![Vybraná značka](../extensibility/ux-guidelines/media/0303-184-tagselected.png "0303 – 184_TagSelected")<br /><br /> **Výchozí (vybraná značka)**|Popředí (piktogram)|`Tag.TagSelectedGlyph`|  
+|![Značka byla vybrána.](../extensibility/ux-guidelines/media/0303-184-tagselected.png "0303-184_TagSelected")<br /><br /> **Výchozí (vybraná značka)**|Pozadí|Není dostupné.|  
+|![Značka byla vybrána.](../extensibility/ux-guidelines/media/0303-184-tagselected.png "0303-184_TagSelected")<br /><br /> **Výchozí (vybraná značka)**|Popředí (glyf)|`Tag.TagSelectedGlyph`|  
   
- **Výběr značky/glyfy po ukázání**  
+ **Tag selected/glyph hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Značka vybraná při najetí myší](../extensibility/ux-guidelines/media/0303-185-tagselectedhover.png "0303 – 185_TagSelectedHover")<br /><br /> **Najeďte myší (vybraná značka)**|Pozadí|`Tag.TagSelectedGlyphHoverBackground`|  
-|![Značka vybraná při najetí myší](../extensibility/ux-guidelines/media/0303-185-tagselectedhover.png "0303 – 185_TagSelectedHover")<br /><br /> **Najeďte myší (vybraná značka)**|Popředí (piktogram)|`Tag.TagSelectedGlyphHover`|  
-|![Značka vybraná při najetí myší](../extensibility/ux-guidelines/media/0303-185-tagselectedhover.png "0303 – 185_TagSelectedHover")<br /><br /> **Najeďte myší (vybraná značka)**|Ohraničení|`Tag.TagSelectedGlyphHoverBorder`|  
+|![Značka vybraná při najetí přes](../extensibility/ux-guidelines/media/0303-185-tagselectedhover.png "0303-185_TagSelectedHover")<br /><br /> **Najetí přes (vybraný tag)**|Pozadí|`Tag.TagSelectedGlyphHoverBackground`|  
+|![Značka vybraná při najetí přes](../extensibility/ux-guidelines/media/0303-185-tagselectedhover.png "0303-185_TagSelectedHover")<br /><br /> **Najetí přes (vybraný tag)**|Popředí (glyf)|`Tag.TagSelectedGlyphHover`|  
+|![Značka vybraná při najetí přes](../extensibility/ux-guidelines/media/0303-185-tagselectedhover.png "0303-185_TagSelectedHover")<br /><br /> **Najetí přes (vybraný tag)**|Ohraničení|`Tag.TagSelectedGlyphHoverBorder`|  
   
- **Vybraná značka/stisknutí glyfu**  
+ **Tag selected/glyph pressed**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Stisknutá vybraná značka](../extensibility/ux-guidelines/media/0303-186-tagselectedpressed.png "0303 – 186_TagSelectedPressed")<br /><br /> **Stisknuté (vybraná značka)**|Pozadí|`Tag.TagSelectedGlyphPressedBackground`|  
-|![Stisknutá vybraná značka](../extensibility/ux-guidelines/media/0303-186-tagselectedpressed.png "0303 – 186_TagSelectedPressed")<br /><br /> **Stisknuté (vybraná značka)**|Foreground(Glyph)|`Tag.TagSelectedGlyphPressed`|  
-|![Stisknutá vybraná značka](../extensibility/ux-guidelines/media/0303-186-tagselectedpressed.png "0303 – 186_TagSelectedPressed")<br /><br /> **Stisknuté (vybraná značka)**|Ohraničení|`Tag.TagSelectedGlyphPressedBorder`|  
+|![Vybraný tag byl stisknutý.](../extensibility/ux-guidelines/media/0303-186-tagselectedpressed.png "0303-186_TagSelectedPressed")<br /><br /> **Stisknuto (značka vybrána)**|Pozadí|`Tag.TagSelectedGlyphPressedBackground`|  
+|![Vybraný tag byl stisknutý.](../extensibility/ux-guidelines/media/0303-186-tagselectedpressed.png "0303-186_TagSelectedPressed")<br /><br /> **Stisknuto (značka vybrána)**|Popředí (glyf)|`Tag.TagSelectedGlyphPressed`|  
+|![Vybraný tag byl stisknutý.](../extensibility/ux-guidelines/media/0303-186-tagselectedpressed.png "0303-186_TagSelectedPressed")<br /><br /> **Stisknuto (značka vybrána)**|Ohraničení|`Tag.TagSelectedGlyphPressedBorder`|  
   
 ### <a name="shell"></a>Prostředí  
   
 #### <a name="background"></a>Pozadí  
- Na pozadí prostředí se skládá ze dvou vrstev. Spodní vrstva je plnou barvu, která zahrnuje celou integrovaného vývojového prostředí. Horní vrstvě vejde v rámci příkazu polici a mezi kanálů automatického skrytí okna nástroje na levých a pravých okrajů integrovaného vývojového prostředí. Od verze Visual Studio 2013 pozadí vrstvy horní a dolní nastavené na stejnou barvu v motivy tmavý a světlý motiv.  
+ Pozadí prostředí se skládá ze dvou vrstev. Spodní vrstva je plná barva, která pokrývá celé ide. Horní vrstva se vejde pod polici příkazu a mezi okno nástroje automaticky skrýt kanály na levém a pravém okraji ide. Od Visual Studia 2013 jsou horní a dolní vrstvy pozadí nastaveny na stejnou barvu v motivech Světlé a Tmavé.  
   
- ![Redline na pozadí prostředí](../extensibility/ux-guidelines/media/0303-187-shellbackgroundredline.png "0303 – 187_ShellBackgroundRedline")  
+ ![Červená čára pozadí prostředí](../extensibility/ux-guidelines/media/0303-187-shellbackgroundredline.png "0303-187_ShellBackgroundRedline")  
   
- Použití...  
- pro míst, na které můžete chtít, aby na pozadí prostředí sady Visual Studio.  
+ Použít...  
+ pro místa, která mají odpovídat pozadí prostředí sady Visual Studio.  
   
-Nepoužívejte...  
-- jako výplň místa, které nejsou na pozadí plochy.  
+Nepoužívejte ...  
+- jako výplň pro místa, která nejsou povrchy pozadí.  
 
-- na pozadí, na kterém chcete umístit prvky popředí.  
+- jako pozadí, na které chcete umístit prvky popředí.  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|Dolní vrstvy|Pozadí|`Environment.EnvironmentBackground`|  
+|Spodní vrstva|Pozadí|`Environment.EnvironmentBackground`|  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|Vrstvu na nejvyšší úrovni|Pozadí<br /><br /> *Přechodová zastávka se nastaví na stejnou hodnotu barvy v Visual Studio 2013 světlé a tmavé motivy.*|`Environment.EnvironmentBackgroundGradientBegin`|  
-|Vrstvu na nejvyšší úrovni|Pozadí<br /><br /> *Přechodová zastávka se nastaví na stejnou hodnotu barvy v Visual Studio 2013 světlé a tmavé motivy.*|`Environment.EnvironmentBackgroundGradientEnd`|  
-|Vrstvu na nejvyšší úrovni|Pozadí<br /><br /> *Přechodová zastávka se nastaví na stejnou hodnotu barvy v Visual Studio 2013 světlé a tmavé motivy.*|`Environment.EnvironmentBackgroundGradientMiddle1`|  
-|Vrstvu na nejvyšší úrovni|Pozadí<br /><br /> *Přechodová zastávka se nastaví na stejnou hodnotu barvy v Visual Studio 2013 světlé a tmavé motivy.*|`Environment.EnvironmentBackgroundGradientMiddle2`|  
+|Horní vrstva|Pozadí<br /><br /> *Přechod se zastaví na stejnou hodnotu barvy v motivech Visual Studio 2013 Světlé a Tmavé.*|`Environment.EnvironmentBackgroundGradientBegin`|  
+|Horní vrstva|Pozadí<br /><br /> *Přechod se zastaví na stejnou hodnotu barvy v motivech Visual Studio 2013 Světlé a Tmavé.*|`Environment.EnvironmentBackgroundGradientEnd`|  
+|Horní vrstva|Pozadí<br /><br /> *Přechod se zastaví na stejnou hodnotu barvy v motivech Visual Studio 2013 Světlé a Tmavé.*|`Environment.EnvironmentBackgroundGradientMiddle1`|  
+|Horní vrstva|Pozadí<br /><br /> *Přechod se zastaví na stejnou hodnotu barvy v motivech Visual Studio 2013 Světlé a Tmavé.*|`Environment.EnvironmentBackgroundGradientMiddle2`|  
   
-#### <a name="command-shelf"></a>Příkaz police  
- Dvě sady token názvů, které se používají pro pozadí příkaz police: nastavit jeden kde je umístěn řádku nabídek a jeden pro kde panely příkazů nacházejí. Pruhový graf konkrétní příkaz má svůj vlastní pozadí hodnot barev, které jsou popsány podrobněji v oddílu "panel příkazů". Řádek nabídek panelu a příkaz text je popsána v části panel nabídek a příkazů.  
+#### <a name="command-shelf"></a>Příkazová police  
+ Pro pozadí policí příkazu se používají dvě sady názvů tokenů: jedna sada pro místo, kde je na řádku nabídek, a druhá pro místo, kde jsou tyče příkazů. Jednotlivé skupiny panelů příkazů mají vlastní hodnoty barev pozadí, které jsou podrobněji popsány v části "panel příkazů". Panel nabídek a text panelu příkazů je popsán v sekcích nabídek a panelu příkazů.  
   
- ![Redline police příkazu](../extensibility/ux-guidelines/media/0303-188-commandshelfredline.png "0303 – 188_CommandShelfRedline")  
+ ![Redline police příkazu](../extensibility/ux-guidelines/media/0303-188-commandshelfredline.png "0303-188_CommandShelfRedline")  
   
-Použití...  
-- pro oblasti, kam umístit nabídek a panelů nástrojů.  
+Použít...  
+- pro oblasti, kam umístíte nabídky nebo panely nástrojů.  
 
-- se správnou kombinací názvu tokenu Background/popředí.  
+- se správnou kombinací názvů tokenů pozadí/ popředí.  
   
-  Nepoužívejte...  
-  pro oblasti, které nejsou podobný police příkazu.  
+  Nepoužívejte ...  
+  pro oblasti, které nejsou podobné příkazu police.  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|Panel nabídek|Pozadí<br /><br /> *Přechodová zastávka se nastaví na stejnou hodnotu barvy v Visual Studio 2013 světlé a tmavé motivy.*|`Environment.CommandShelfHighlightGradientBegin`|  
-|Panel nabídek|Pozadí<br /><br /> *Přechodová zastávka se nastaví na stejnou hodnotu barvy v Visual Studio 2013 světlé a tmavé motivy.*|`Environment.CommandShelfHighlightGradientMiddle`|  
-|Panel nabídek|Pozadí<br /><br /> *Přechodová zastávka se nastaví na stejnou hodnotu barvy v Visual Studio 2013 světlé a tmavé motivy.*|`Environment.CommandShelfHighlightGradientEnd`|  
-|Panel příkazů|Pozadí<br /><br /> *Přechodová zastávka se nastaví na stejnou hodnotu barvy v Visual Studio 2013 světlé a tmavé motivy.*|`Environment.CommandShelfBackgroundGradientBegin`|  
-|Panel příkazů|Pozadí<br /><br /> *Přechodová zastávka se nastaví na stejnou hodnotu barvy v Visual Studio 2013 světlé a tmavé motivy.*|`Environment.CommandShelfBackgroundGradientMiddle`|  
-|Panel příkazů|Pozadí<br /><br /> *Přechodová zastávka se nastaví na stejnou hodnotu barvy v Visual Studio 2013 světlé a tmavé motivy.*|`Environment.CommandShelfBackgroundGradientEnd`|  
+|Nabídek|Pozadí<br /><br /> *Přechod se zastaví na stejnou hodnotu barvy v motivech Visual Studio 2013 Světlé a Tmavé.*|`Environment.CommandShelfHighlightGradientBegin`|  
+|Nabídek|Pozadí<br /><br /> *Přechod se zastaví na stejnou hodnotu barvy v motivech Visual Studio 2013 Světlé a Tmavé.*|`Environment.CommandShelfHighlightGradientMiddle`|  
+|Nabídek|Pozadí<br /><br /> *Přechod se zastaví na stejnou hodnotu barvy v motivech Visual Studio 2013 Světlé a Tmavé.*|`Environment.CommandShelfHighlightGradientEnd`|  
+|Panel příkazů|Pozadí<br /><br /> *Přechod se zastaví na stejnou hodnotu barvy v motivech Visual Studio 2013 Světlé a Tmavé.*|`Environment.CommandShelfBackgroundGradientBegin`|  
+|Panel příkazů|Pozadí<br /><br /> *Přechod se zastaví na stejnou hodnotu barvy v motivech Visual Studio 2013 Světlé a Tmavé.*|`Environment.CommandShelfBackgroundGradientMiddle`|  
+|Panel příkazů|Pozadí<br /><br /> *Přechod se zastaví na stejnou hodnotu barvy v motivech Visual Studio 2013 Světlé a Tmavé.*|`Environment.CommandShelfBackgroundGradientEnd`|  
   
 ### <a name="toolbox"></a>Sada nástrojů  
- Panelu nástrojů je jedním z běžných okna nástrojů, které se nejčastěji používá v sadě Visual Studio. Je v podstatě ovládací prvek stromu se speciální motivu a styly použijí.  
+ Panel nástrojů je jedním z běžných oken nástrojů, který se nejčastěji používá v sadě Visual Studio. Jedná se v podstatě o stromový ovládací prvek se speciálním tématem a použitým stylem.  
   
- ![Redline nástrojů](../extensibility/ux-guidelines/media/0303-189-toolboxredline.png "0303 – 189_ToolboxRedline")  
+ ![Červená čára panelu nástrojů](../extensibility/ux-guidelines/media/0303-189-toolboxredline.png "0303-189_ToolboxRedline")  
   
- Použití...  
- Při navrhování panelu nástrojů, kterou chcete vždy bylo v souladu s prostředí nástrojů.  
+ Použít...  
+ při navrhování okna nástroje, které chcete vždy konzistentní s panelem nástrojů skořepiny.  
   
- Nepoužívejte...  
- pro cokoli, co není podobný panelu nástrojů uživatelského rozhraní nebo pokud si nejste jistí, jestli vaše uživatelské rozhraní bude mít problémy se změna barvy panelu prostředí.  
+ Nepoužívejte ...  
+ pro cokoli, co není podobné uj.  
   
  **Výchozí**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Nadřazený uzel sady nástrojů](../extensibility/ux-guidelines/media/0303-190-toolboxparentnode.png "0303 – 190_ToolboxParentNode")<br /><br /> **Nadřazený uzel**|Pozadí|`Environment.ToolboxContent`<br /><br /> Záhlaví<br /><br /> `Environment.ToolWindowBackground`<br /><br /> Jednotlivé položky nebo celé okno, pokud žádné dostupné ovládací prvky|  
-|![Podřízený uzel sady nástrojů](../extensibility/ux-guidelines/media/0303-191-toolboxchildnode.png "0303 – 191_ToolboxChildNode")<br /><br /> **Podřízený uzel**|Pozadí|`Environment.ToolboxContent`<br /><br /> Záhlaví<br /><br /> `Environment.ToolWindowBackground`<br /><br /> Jednotlivé položky nebo celé okno, pokud žádné dostupné ovládací prvky|  
-|![Nadřazený uzel sady nástrojů](../extensibility/ux-guidelines/media/0303-190-toolboxparentnode.png "0303 – 190_ToolboxParentNode")<br /><br /> **Nadřazený uzel**|Ohraničení|Žádná|  
-|![Podřízený uzel sady nástrojů](../extensibility/ux-guidelines/media/0303-191-toolboxchildnode.png "0303 – 191_ToolboxChildNode")<br /><br /> **Podřízený uzel**|Ohraničení|Žádná|  
-|![Nadřazený uzel sady nástrojů](../extensibility/ux-guidelines/media/0303-190-toolboxparentnode.png "0303 – 190_ToolboxParentNode")<br /><br /> **Nadřazený uzel**|Popředí (piktogram)|`Environment.ToolboxContent`|  
-|![Podřízený uzel sady nástrojů](../extensibility/ux-guidelines/media/0303-191-toolboxchildnode.png "0303 – 191_ToolboxChildNode")<br /><br /> **Podřízený uzel**|Popředí (piktogram)|`Environment.ToolboxContent`|  
-|![Nadřazený uzel sady nástrojů](../extensibility/ux-guidelines/media/0303-190-toolboxparentnode.png "0303 – 190_ToolboxParentNode")<br /><br /> **Nadřazený uzel**|Popředí (Text)|`Environment.ToolboxContent`|  
-|![Podřízený uzel sady nástrojů](../extensibility/ux-guidelines/media/0303-191-toolboxchildnode.png "0303 – 191_ToolboxChildNode")<br /><br /> **Podřízený uzel**|Popředí (Text)|`Environment.ToolboxContent`|  
+|![Nadřazený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-190-toolboxparentnode.png "0303-190_ToolboxParentNode")<br /><br /> **Nadřazený uzel**|Pozadí|`Environment.ToolboxContent`<br /><br /> Nadpisy<br /><br /> `Environment.ToolWindowBackground`<br /><br /> Jednotlivé položky nebo celé okno, pokud nejsou k dispozici žádné ovládací prvky|  
+|![Podřízený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-191-toolboxchildnode.png "0303-191_ToolboxChildNode")<br /><br /> **Podřízený uzel**|Pozadí|`Environment.ToolboxContent`<br /><br /> Nadpisy<br /><br /> `Environment.ToolWindowBackground`<br /><br /> Jednotlivé položky nebo celé okno, pokud nejsou k dispozici žádné ovládací prvky|  
+|![Nadřazený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-190-toolboxparentnode.png "0303-190_ToolboxParentNode")<br /><br /> **Nadřazený uzel**|Ohraničení|Žádný|  
+|![Podřízený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-191-toolboxchildnode.png "0303-191_ToolboxChildNode")<br /><br /> **Podřízený uzel**|Ohraničení|Žádný|  
+|![Nadřazený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-190-toolboxparentnode.png "0303-190_ToolboxParentNode")<br /><br /> **Nadřazený uzel**|Popředí (glyf)|`Environment.ToolboxContent`|  
+|![Podřízený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-191-toolboxchildnode.png "0303-191_ToolboxChildNode")<br /><br /> **Podřízený uzel**|Popředí (glyf)|`Environment.ToolboxContent`|  
+|![Nadřazený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-190-toolboxparentnode.png "0303-190_ToolboxParentNode")<br /><br /> **Nadřazený uzel**|Popředí (text)|`Environment.ToolboxContent`|  
+|![Podřízený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-191-toolboxchildnode.png "0303-191_ToolboxChildNode")<br /><br /> **Podřízený uzel**|Popředí (text)|`Environment.ToolboxContent`|  
   
- **Přesunutí**  
+ **Hover**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Podřízený uzel panelu nástrojů při najetí myší](../extensibility/ux-guidelines/media/0303-192-toolboxchildnodehover.png "0303 – 192_ToolboxChildNodeHover")<br /><br /> **Panel nástrojů – najeďte na podřízený uzel**|Pozadí|`Environment.ToolboxContentMouseOver`<br /><br /> Pouze jednotlivé položky|  
-|![Podřízený uzel panelu nástrojů při najetí myší](../extensibility/ux-guidelines/media/0303-192-toolboxchildnodehover.png "0303 – 192_ToolboxChildNodeHover")<br /><br /> **Panel nástrojů – najeďte na podřízený uzel**|Ohraničení|Žádná|  
-|![Podřízený uzel panelu nástrojů při najetí myší](../extensibility/ux-guidelines/media/0303-192-toolboxchildnodehover.png "0303 – 192_ToolboxChildNodeHover")<br /><br /> **Panel nástrojů – najeďte na podřízený uzel**|Popředí (Text)|`Environment.ToolboxContentMouseOver`<br /><br /> Pouze jednotlivé položky|  
+|![Podřízený uzel panelu nástrojů při najetí](../extensibility/ux-guidelines/media/0303-192-toolboxchildnodehover.png "0303-192_ToolboxChildNodeHover")<br /><br /> **Panel nástrojů napodačit podřízený uzel**|Pozadí|`Environment.ToolboxContentMouseOver`<br /><br /> Pouze jednotlivé položky|  
+|![Podřízený uzel panelu nástrojů při najetí](../extensibility/ux-guidelines/media/0303-192-toolboxchildnodehover.png "0303-192_ToolboxChildNodeHover")<br /><br /> **Panel nástrojů napodačit podřízený uzel**|Ohraničení|Žádný|  
+|![Podřízený uzel panelu nástrojů při najetí](../extensibility/ux-guidelines/media/0303-192-toolboxchildnodehover.png "0303-192_ToolboxChildNodeHover")<br /><br /> **Panel nástrojů napodačit podřízený uzel**|Popředí (text)|`Environment.ToolboxContentMouseOver`<br /><br /> Pouze jednotlivé položky|  
   
- **Vyberte**  
+ **Vybráno**  
   
-|Komponenta|Prvek|Název tokenu: Category.color|  
+|Komponenta|Element|Název tokenu: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![Zaměření nadřazeného uzlu panelu nástrojů](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303 – 193_ToolboxParentNodeFocused")<br /><br /> **Zaměřený nadřazený uzel**|Pozadí|`TreeView.SelectedItemActive`<br /><br /> Z kategorie [stromového zobrazení](../misc/shared-colors.md#BKMK_TreeView)|  
-|![Zaměření podřízeného uzlu sady nástrojů](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303 – 194_ToolboxChildNodeFocused")<br /><br /> **Prioritní podřízený uzel**|Pozadí|`TreeView.SelectedItemActive`<br /><br /> Z kategorie [stromového zobrazení](../misc/shared-colors.md#BKMK_TreeView)|  
-|![Zaměření nadřazeného uzlu panelu nástrojů](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303 – 193_ToolboxParentNodeFocused")<br /><br /> **Zaměřený nadřazený uzel**|Ohraničení|`TreeView.FocusVisualBorder`<br /><br /> Z kategorie [stromového zobrazení](../misc/shared-colors.md#BKMK_TreeView)|  
-|![Zaměření podřízeného uzlu sady nástrojů](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303 – 194_ToolboxChildNodeFocused")<br /><br /> **Prioritní podřízený uzel**|Ohraničení|`TreeView.FocusVisualBorder`<br /><br /> Z kategorie [stromového zobrazení](../misc/shared-colors.md#BKMK_TreeView)|  
-|![Zaměření nadřazeného uzlu panelu nástrojů](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303 – 193_ToolboxParentNodeFocused")<br /><br /> **Zaměřený nadřazený uzel**|Popředí (piktogram)|`TreeView.SelectedItemActive`<br /><br /> Z kategorie [stromového zobrazení](../misc/shared-colors.md#BKMK_TreeView)|  
-|![Zaměření podřízeného uzlu sady nástrojů](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303 – 194_ToolboxChildNodeFocused")<br /><br /> **Prioritní podřízený uzel**|Popředí (piktogram)|`TreeView.SelectedItemActive`<br /><br /> Z kategorie [stromového zobrazení](../misc/shared-colors.md#BKMK_TreeView)|  
-|![Zaměření nadřazeného uzlu panelu nástrojů](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303 – 193_ToolboxParentNodeFocused")<br /><br /> **Zaměřený nadřazený uzel**|Popředí (Text)|`TreeView.SelectedItemActive`<br /><br /> Z kategorie [stromového zobrazení](../misc/shared-colors.md#BKMK_TreeView)|  
-|![Zaměření podřízeného uzlu sady nástrojů](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303 – 194_ToolboxChildNodeFocused")<br /><br /> **Prioritní podřízený uzel**|Popředí (Text)|`TreeView.SelectedItemActive`<br /><br /> Z kategorie [stromového zobrazení](../misc/shared-colors.md#BKMK_TreeView)|  
-|![Nevybraný nadřazený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303 – 195_ToolboxParentNodeUnfocused")<br /><br /> **Nevybraný nadřazený uzel**|Pozadí|`TreeView.SelectedItemInactive`<br /><br /> Z kategorie [stromového zobrazení](../misc/shared-colors.md#BKMK_TreeView)|  
-|![Podřízený uzel panelu nástrojů nebyl vybrán.](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303 – 196_ToolboxChildNodeUnfocused")<br /><br /> **Nevybraný podřízený uzel**|Pozadí|`TreeView.SelectedItemInactive`<br /><br /> Z kategorie [stromového zobrazení](../misc/shared-colors.md#BKMK_TreeView)|  
-|![Nevybraný nadřazený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303 – 195_ToolboxParentNodeUnfocused")<br /><br /> **Nevybraný nadřazený uzel**|Ohraničení|Žádná|  
-|![Podřízený uzel panelu nástrojů nebyl vybrán.](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303 – 196_ToolboxChildNodeUnfocused")<br /><br /> **Nevybraný podřízený uzel**|Ohraničení|Žádná|  
-|![Nevybraný nadřazený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303 – 195_ToolboxParentNodeUnfocused")<br /><br /> **Nevybraný nadřazený uzel**|Popředí (piktogram)|`TreeView.SelectedItemInactive`<br /><br /> Z kategorie [stromového zobrazení](../misc/shared-colors.md#BKMK_TreeView)|  
-|![Podřízený uzel panelu nástrojů nebyl vybrán.](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303 – 196_ToolboxChildNodeUnfocused")<br /><br /> **Nevybraný podřízený uzel**|Popředí (piktogram)|`TreeView.SelectedItemInactive`<br /><br /> Z kategorie [stromového zobrazení](../misc/shared-colors.md#BKMK_TreeView)|  
-|![Nevybraný nadřazený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303 – 195_ToolboxParentNodeUnfocused")<br /><br /> **Nevybraný nadřazený uzel**|Popředí (Text)|`TreeView.SelectedItemInactive`<br /><br /> Z kategorie [stromového zobrazení](../misc/shared-colors.md#BKMK_TreeView)|  
-|![Podřízený uzel panelu nástrojů nebyl vybrán.](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303 – 196_ToolboxChildNodeUnfocused")<br /><br /> **Nevybraný podřízený uzel**|Popředí (Text)|`TreeView.SelectedItemInactive`<br /><br /> Z kategorie [stromového zobrazení](../misc/shared-colors.md#BKMK_TreeView)|  
+|![Nadřazený uzel panelu nástrojů zaměřený](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303-193_ToolboxParentNodeFocused")<br /><br /> **Cílový nadřazený uzel**|Pozadí|`TreeView.SelectedItemActive`<br /><br /> Ze [stromové](../misc/shared-colors.md#BKMK_TreeView) kategorie|  
+|![Podřízený uzel panelu nástrojů zaměřený](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303-194_ToolboxChildNodeFocused")<br /><br /> **Soustředěný podřízený uzel**|Pozadí|`TreeView.SelectedItemActive`<br /><br /> Ze [stromové](../misc/shared-colors.md#BKMK_TreeView) kategorie|  
+|![Nadřazený uzel panelu nástrojů zaměřený](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303-193_ToolboxParentNodeFocused")<br /><br /> **Cílový nadřazený uzel**|Ohraničení|`TreeView.FocusVisualBorder`<br /><br /> Ze [stromové](../misc/shared-colors.md#BKMK_TreeView) kategorie|  
+|![Podřízený uzel panelu nástrojů zaměřený](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303-194_ToolboxChildNodeFocused")<br /><br /> **Soustředěný podřízený uzel**|Ohraničení|`TreeView.FocusVisualBorder`<br /><br /> Ze [stromové](../misc/shared-colors.md#BKMK_TreeView) kategorie|  
+|![Nadřazený uzel panelu nástrojů zaměřený](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303-193_ToolboxParentNodeFocused")<br /><br /> **Cílový nadřazený uzel**|Popředí (glyf)|`TreeView.SelectedItemActive`<br /><br /> Ze [stromové](../misc/shared-colors.md#BKMK_TreeView) kategorie|  
+|![Podřízený uzel panelu nástrojů zaměřený](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303-194_ToolboxChildNodeFocused")<br /><br /> **Soustředěný podřízený uzel**|Popředí (glyf)|`TreeView.SelectedItemActive`<br /><br /> Ze [stromové](../misc/shared-colors.md#BKMK_TreeView) kategorie|  
+|![Nadřazený uzel panelu nástrojů zaměřený](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303-193_ToolboxParentNodeFocused")<br /><br /> **Cílový nadřazený uzel**|Popředí (text)|`TreeView.SelectedItemActive`<br /><br /> Ze [stromové](../misc/shared-colors.md#BKMK_TreeView) kategorie|  
+|![Podřízený uzel panelu nástrojů zaměřený](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303-194_ToolboxChildNodeFocused")<br /><br /> **Soustředěný podřízený uzel**|Popředí (text)|`TreeView.SelectedItemActive`<br /><br /> Ze [stromové](../misc/shared-colors.md#BKMK_TreeView) kategorie|  
+|![Nezaostřený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303-195_ToolboxParentNodeUnfocused")<br /><br /> **Nezaostřený nadřazený uzel**|Pozadí|`TreeView.SelectedItemInactive`<br /><br /> Ze [stromové](../misc/shared-colors.md#BKMK_TreeView) kategorie|  
+|![Nezaostřený podřízený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303-196_ToolboxChildNodeUnfocused")<br /><br /> **Nezaostřený podřízený uzel**|Pozadí|`TreeView.SelectedItemInactive`<br /><br /> Ze [stromové](../misc/shared-colors.md#BKMK_TreeView) kategorie|  
+|![Nezaostřený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303-195_ToolboxParentNodeUnfocused")<br /><br /> **Nezaostřený nadřazený uzel**|Ohraničení|Žádný|  
+|![Nezaostřený podřízený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303-196_ToolboxChildNodeUnfocused")<br /><br /> **Nezaostřený podřízený uzel**|Ohraničení|Žádný|  
+|![Nezaostřený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303-195_ToolboxParentNodeUnfocused")<br /><br /> **Nezaostřený nadřazený uzel**|Popředí (glyf)|`TreeView.SelectedItemInactive`<br /><br /> Ze [stromové](../misc/shared-colors.md#BKMK_TreeView) kategorie|  
+|![Nezaostřený podřízený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303-196_ToolboxChildNodeUnfocused")<br /><br /> **Nezaostřený podřízený uzel**|Popředí (glyf)|`TreeView.SelectedItemInactive`<br /><br /> Ze [stromové](../misc/shared-colors.md#BKMK_TreeView) kategorie|  
+|![Nezaostřený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303-195_ToolboxParentNodeUnfocused")<br /><br /> **Nezaostřený nadřazený uzel**|Popředí (text)|`TreeView.SelectedItemInactive`<br /><br /> Ze [stromové](../misc/shared-colors.md#BKMK_TreeView) kategorie|  
+|![Nezaostřený podřízený uzel panelu nástrojů](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303-196_ToolboxChildNodeUnfocused")<br /><br /> **Nezaostřený podřízený uzel**|Popředí (text)|`TreeView.SelectedItemInactive`<br /><br /> Ze [stromové](../misc/shared-colors.md#BKMK_TreeView) kategorie|  
   
 ## <a name="color-value-reference"></a>Odkaz na hodnotu barvy  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|Komponenta|Částí|Prvek|Stav|Hlediska|Tmavě|Modrá|Vysoký kontrast|  
-|Čáry oddělovače|||Výchozí|FFEEEEF2|FF2D2D30|FFEEEEF2|ControlDark|  
-|Piktogram rozšíření||Popředí|Výchozí|||||  
-|Piktogram rozšíření||Popředí|Při najetí myší|||||  
-|Piktogram rozšíření||Pozadí|Výchozí|||||  
-|Piktogram rozšíření||Pozadí|Při najetí myší|||||  
-|Piktogram rozšíření||Ohraničení|Výchozí|||||  
-|Piktogram rozšíření||Ohraničení|Při najetí myší|||||
+|Komponenta|Část|Element|Stav|Světlý|Tmavý|Blue|Vysoký kontrast|  
+|Dělicí čáry|||Výchozí|FFEEEEF2|FF2D2D30|FFEEEEF2|ControlDark|  
+|Glyf expanderu||Popředí|Výchozí|||||  
+|Glyf expanderu||Popředí|Hover|||||  
+|Glyf expanderu||Pozadí|Výchozí|||||  
+|Glyf expanderu||Pozadí|Hover|||||  
+|Glyf expanderu||Ohraničení|Výchozí|||||  
+|Glyf expanderu||Ohraničení|Hover|||||

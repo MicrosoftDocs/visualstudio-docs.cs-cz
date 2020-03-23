@@ -1,6 +1,6 @@
 ---
-title: Jak spustit C# program
-description: Příručka pro začátečníky, jak spustit C# program v aplikaci Visual Studio.
+title: Jak spustit program Jazyka C#
+description: Průvodce pro začátečníky o spuštění programu Jazyka C# v sadě Visual Studio.
 ms.custom: get-started
 ms.date: 10/16/2019
 ms.technology: vs-ide-general
@@ -16,112 +16,112 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 2ffe52fc2bf7d05084307b4d972e45f4b1d2acdf
-ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "76924614"
 ---
-# <a name="how-to-run-a-c-program-in-visual-studio"></a>Postupy: spuštění C# programu v aplikaci Visual Studio
+# <a name="how-to-run-a-c-program-in-visual-studio"></a>Postup: Spuštění programu Jazyka C# v sadě Visual Studio
 
-To, co potřebujete ke spuštění programu, závisí na tom, co začínáte, jaký typ programu, aplikace nebo služby je a zda ho chcete spustit pod ladicím programem. V nejjednodušším případě, když máte projekt otevřený v sadě Visual Studio, sestavíte ho a spustíte tak, že stisknete **Ctrl**+**F5** (**Spustit bez ladění**) nebo **F5** (**Spustit s laděním**) nebo stisknete zelenou šipku (**tlačítko Start**) na hlavním panelu nástrojů sady Visual Studio.
+Co je třeba udělat pro spuštění programu, závisí na tom, od čeho začínáte, jaký typ programu, aplikace nebo služby je a zda jej chcete spustit pod ladicím programem nebo ne. V nejjednodušším případě, když máte projekt otevřený v sadě Visual Studio, sestavte a spusťte stisknutím **kláves Ctrl**+**F5** ( Start bez**ladění**) nebo **F5** (**Začněte laděním**) nebo stiskněte zelenou šipku (**Tlačítko Start**) na hlavním panelu nástrojů sady Visual Studio.
 
-![Snímek obrazovky se zobrazeným tlačítkem Start](media/vs-start-button.png)
+![Snímek obrazovky s tlačítkem Start](media/vs-start-button.png)
 
-## <a name="starting-from-a-project"></a>Spuštění z projektu
+## <a name="starting-from-a-project"></a>Počínaje projektem
 
-Pokud máte C# projekt (soubor *. csproj* ), můžete jej spustit, pokud se jedná o program spustitelný. Pokud projekt obsahuje C# soubor s metodou `Main` a jeho výstupem je spustitelný soubor (exe), je nejpravděpodobnější, že bude spuštěn v případě úspěšného sestavení.
+Pokud máte c# projekt (*.csproj* soubor), pak jej můžete spustit, pokud se jedná o spustitelný program. Pokud projekt obsahuje soubor Jazyka `Main` C# s metodou a jeho výstup je spustitelný soubor (EXE), pak s největší pravděpodobností bude spuštěn, pokud se úspěšně vytvoří.
 
-Pokud již máte kód pro svůj program v projektu v aplikaci Visual Studio, otevřete projekt. Chcete-li projekt otevřít, dvakrát klikněte nebo klepněte na soubor *. csproj* z Průzkumníka souborů systému Windows nebo ze sady Visual Studio, vyberte možnost **Otevřít projekt**, vyhledejte soubor projektu ( *. csproj*) a vyberte soubor projektu.
+Pokud již máte kód pro váš program v projektu v sadě Visual Studio, otevřete projekt. Chcete-li projekt otevřít, poklepejte nebo klepněte na *soubor .csproj* z Průzkumníka souborů Windows nebo z aplikace Visual Studio, zvolte **Otevřít projekt**, vyhledejte soubor projektu (*csproj*) a zvolte soubor projektu.
 
-Po načtení projektů do sady Visual Studio stiskněte klávesu **Ctrl**+**F5** (**Spustit bez ladění**) nebo použijte zelené tlačítko **Start** na panelu nástrojů sady Visual Studio ke spuštění programu.  Pokud existuje více projektů, musí být jedna s `Main` metodou nastavena jako spouštěný projekt. Chcete-li nastavit projekt po spuštění, klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **nastavit jako spouštěný projekt**.
+Po načtení projektů v sadě Visual Studio spusťte program stisknutím **klávesCtrl**+**F5** **(Start without debugging)** nebo pomocí zeleného tlačítka **Start** na panelu nástrojů sady Visual Studio.  Pokud existuje více projektů, musí `Main` být jako projekt při spuštění nastaven a toto s metodou. Chcete-li nastavit projekt po spuštění, klepněte pravým tlačítkem myši na uzel projektu a zvolte **Nastavit jako spouštěcí projekt**.
 
-![Nastavení spouštěného projektu](media/set-as-startup-project.png)
+![Nastavení projektu spuštění](media/set-as-startup-project.png)
 
-Visual Studio se pokusí sestavit a spustit váš projekt.  Pokud dojde k chybám sestavení, zobrazí se výstup sestavení v okně **výstup** a chyby v okně **Seznam chyb** .
+Visual Studio se pokusí vytvořit a spustit projekt.  Pokud jsou chyby sestavení, zobrazí se výstup sestavení v okně **Výstup** a chyby v okně **Seznam chyb.**
 
-Pokud je sestavení úspěšné, aplikace bude spuštěna způsobem, který je vhodný pro typ projektu. Konzolové aplikace běží v okně terminálu. aplikace pro desktopové aplikace pro Windows se spouštějí v novém okně. Web Apps se spouští v prohlížeči (hostovaném IIS Express), a tak dále.
+Pokud sestavení úspěšné, aplikace běží způsobem, který je vhodný pro typ projektu. Konzolové aplikace běží v okně terminálu, aplikace klasické pracovní plochy windows se spouštějí v novém okně, webové aplikace se spouštějí v prohlížeči (hostované službou IIS Express) a tak dále.
 
 ## <a name="starting-from-code"></a>Počínaje kódem
 
-Pokud začínáte ze seznamu kódu, souboru s kódem nebo malého počtu souborů, nejprve se ujistěte, že kód, který chcete spustit, pochází z důvěryhodného zdroje a je spustitelný program. Pokud má `Main` metodu, je pravděpodobně určena jako program spustitelný, který můžete použít k vytvoření projektu pro práci v aplikaci Visual Studio pomocí šablony konzolové aplikace.
+Pokud začínáte se seznamem kódu, souborem kódu nebo malým počtem souborů, nejprve se ujistěte, že kód, který chcete spustit, pochází z důvěryhodného zdroje a je spustitelný program. Pokud má `Main` metodu, je pravděpodobně určena jako spustitelný program, který můžete použít šablonu konzolové aplikace k vytvoření projektu pro práci s ní v sadě Visual Studio.
 
 ### <a name="code-listing-for-a-single-file"></a>Výpis kódu pro jeden soubor
 
-Spusťte Visual Studio, otevřete prázdný C# projekt konzoly, vyberte veškerý kód v souboru. cs, který je v projektu, a odstraňte ho. Pak vložte obsah kódu do souboru. cs. Když kód vložíte, přepište nebo odstraňte kód, který existoval dříve. Přejmenujte soubor tak, aby odpovídal původnímu kódu.
+Spusťte Visual Studio, otevřete prázdný projekt konzoly C#, vyberte veškerý kód v souboru .cs, který je již v projektu, a odstraňte ho. Potom vložte obsah kódu do souboru .cs. Při vložení kódu přepište nebo odstraňte kód, který tam byl předtím. Přejmenujte soubor tak, aby odpovídal původnímu kódu.
 
 ### <a name="code-listings-for-a-few-files"></a>Výpisy kódu pro několik souborů
 
-Spusťte Visual Studio, otevřete prázdný C# projekt konzoly, vyberte veškerý kód v souboru. cs, který je v projektu, a odstraňte ho. Pak vložte obsah prvního souboru s kódem do souboru. cs. Přejmenujte soubor tak, aby odpovídal původnímu kódu. 
+Spusťte Visual Studio, otevřete prázdný projekt konzoly C#, vyberte veškerý kód v souboru .cs, který je již v projektu, a odstraňte ho. Potom vložte obsah prvního souboru kódu do souboru .cs. Přejmenujte soubor tak, aby odpovídal původnímu kódu. 
 
-Pro druhý soubor, klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** otevřete místní nabídku pro projekt a zvolte možnost **Přidat > existující položku** (nebo použijte kombinaci kláves **SHIFT**+**ALT**+**a**) a vyberte soubory kódu.
+U druhého souboru klikněte pravým tlačítkem myši na uzel projektu v **Průzkumníku řešení,** otevřete místní nabídku projektu a zvolte **Přidat > existující položku** (nebo použijte kombinaci kláves **Shift**+**Alt**+**A**) a vyberte soubory kódu.
 
 ### <a name="multiple-files-on-disk"></a>Více souborů na disku
 
-1. Vytvoří nový projekt příslušného typu (Pokud si nejste C# jistí, použijte **konzolovou aplikaci** ).
+1. Vytvořte nový projekt příslušného typu (pokud si nejste jisti, použijte **konzolovou aplikaci** C#).
 
-2. Klikněte pravým tlačítkem myši na uzel projektu, ale **přidejte** > **existující položku** a vyberte soubory a importujte je do projektu.  
+2. Klikněte pravým tlačítkem myši na uzel projektu, se **Přidat** > **existující položku** vyberte soubory a importujte je do projektu.  
 
 ### <a name="starting-from-a-folder"></a>Spuštění ze složky
 
-Když pracujete se složkou mnoha souborů, nejprve se podívejte, jestli existuje projekt nebo řešení.  Pokud byl program vytvořen pomocí sady Visual Studio, měli byste najít soubor projektu nebo soubor řešení. Vyhledejte soubory s příponou *. csproj* nebo s příponou. sln a v Průzkumníkovi souborů systému Windows dvakrát klikněte na jeden z nich a otevřete si je v aplikaci Visual Studio. Viz téma [zahájení z řešení nebo projektu sady Visual Studio](#starting-from-a-project).
+Při práci se složkou s mnoha soubory nejprve zjistěte, zda existuje projekt nebo řešení.  Pokud byl program vytvořen pomocí sady Visual Studio, měli byste najít soubor projektu nebo soubor řešení. Vyhledejte soubory s příponou *.csproj* nebo .sln a v Průzkumníkovi souborů windows, poklepáním na jeden z nich je otevřete v sadě Visual Studio. Viz [Spuštění z řešení nebo projektu sady Visual Studio](#starting-from-a-project).
 
-Pokud nemáte soubor projektu, například pokud byl kód vyvinut v jiném vývojovém prostředí, otevřete složku nejvyšší úrovně pomocí metody **Open Folder** v aplikaci Visual Studio. Viz [vývoj kódu bez projektů nebo řešení](../../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
+Pokud nemáte soubor projektu, například pokud byl kód vyvinut v jiném vývojovém prostředí, otevřete složku nejvyšší úrovně pomocí metody **Otevřít složku** v sadě Visual Studio. Viz [Vývoj kódu bez projektů nebo řešení](../../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
 
-## <a name="starting-from-a-github-or-azure-devops-repo"></a>Od GitHubu nebo úložiště Azure DevOps
+## <a name="starting-from-a-github-or-azure-devops-repo"></a>Počínaje úložištěm GitHub nebo Azure DevOps
 
-Pokud je kód, který chcete spustit, v GitHubu nebo v úložišti Azure DevOps, můžete k otevření projektu přímo z úložiště použít Visual Studio. Viz [Otevřít projekt z úložiště](../tutorial-open-project-from-repo.md).
+Pokud kód, který chcete spustit, je v GitHubu nebo v úložišti Azure DevOps, můžete projekt otevřít pomocí Visual Studia přímo z úložiště. Viz [Otevření projektu z repo](../tutorial-open-project-from-repo.md).
 
 ## <a name="run-the-program"></a>Spuštění programu
 
-Chcete-li spustit program, stiskněte zelenou šipku (tlačítko**Start** ) na hlavním panelu nástrojů sady Visual Studio nebo stiskněte klávesu **f5** nebo **CTRL**+**F5** a program spusťte. Když použijete tlačítko **Start** , spustí se v ladicím programu.  Visual Studio se pokusí sestavit kód v projektu a spustit ho.  Pokud to bude úspěšné, Skvělé! Ale pokud ne, pokračujte v čtení některých nápadů, jak je získat na úspěšné sestavení.
+Program spustíte stisknutím zelené šipky **(tlačítko Start)** na hlavním panelu nástrojů sady Visual Studio nebo stisknutím **klávesY F5** nebo **Ctrl**+**F5.** Při použití tlačítka **Start** se spustí pod ladicím programem.  Visual Studio se pokusí vytvořit kód v projektu a spustit jej.  Pokud se to podaří, skvělé! Ale pokud ne, pokračovat ve čtení pro některé nápady, jak se dostat do stavět úspěšně.
 
-## <a name="troubleshooting"></a>Odstraňování problémů
+## <a name="troubleshooting"></a>Řešení potíží
 
-Váš kód může mít chyby, ale pokud je kód správný, ale závisí jenom na některých dalších sestaveních nebo balíčcích NuGet, nebo jestli byl zapsaný na jinou verzi rozhraní .NET, možná ho budete moct snadno opravit.
+Váš kód může mít chyby, ale pokud je kód správný, ale závisí pouze na některých jiných sestaveních nebo balíčcích NuGet nebo byl napsán tak, aby cílit na jinou verzi rozhraní .NET, můžete jej snadno opravit.
 
-### <a name="add-references"></a>Přidat odkazy
+### <a name="add-references"></a>Přidání odkazů
 
-Aby bylo možné správně sestavit kód, musí být kód správný a mít správné odkazy nastaveny na knihovny nebo jiné závislosti. Můžete se podívat na červené vlnovky a na **Seznam chyb** a zjistit, jestli program obsahuje nějaké chyby, dokonce i před tím, než ho zkompilujete a spustíte. Pokud se zobrazují chyby týkající se nevyřešených názvů, pravděpodobně budete muset přidat odkaz nebo direktivu using nebo obojí. Pokud kód odkazuje na jakákoli sestavení nebo balíčky NuGet, je nutné přidat tyto odkazy do projektu.
+Chcete-li vytvořit správně, kód musí být správné a mít správné odkazy nastaveny na knihovny nebo jiné závislosti. Můžete se podívat na červené klikaté řádky a na **seznamu chyb,** abyste zjistili, zda má program nějaké chyby, a to ještě předtím, než jej zkompilujete a spustíte. Pokud se vám zobrazují chyby související s nevyřešenými názvy, budete pravděpodobně muset přidat odkaz nebo direktivu using nebo obojí. Pokud kód odkazuje na všechna sestavení nebo balíčky NuGet, je třeba přidat tyto odkazy v projektu.
 
-Visual Studio se snaží vám poznat chybějící odkazy. Pokud je název nevyřešený, zobrazí se v editoru ikona žárovky. Pokud kliknete na žárovku, uvidíte některé návrhy, jak problém vyřešit. Opravy mohou být:
+Visual Studio se pokusí pomoci identifikovat chybějící odkazy. Pokud není název vyřešen, zobrazí se v editoru ikona žárovky. Pokud kliknete na žárovku, zobrazí se několik návrhů, jak problém vyřešit. Opravy mohou být:
 
-- Přidání direktivy using
-- Přidejte odkaz na sestavení nebo
-- Nainstalujte balíček NuGet.
+- přidat direktivu using
+- přidat odkaz na sestavu, nebo
+- nainstalujte balíček NuGet.
 
-#### <a name="missing-using-directive"></a>Chybějící Direktiva using
+#### <a name="missing-using-directive"></a>Chybí using směrnice
 
-Například na následující obrazovce můžete přidat `using System;` na začátek souboru kódu, chcete-li přeložit nerozpoznaný název `Console`:
+Například na následující obrazovce můžete přidat `using System;` na začátek souboru kódu přeložit nevyřešený název `Console`:
 
-![Obrázek žárovky pro přidání direktivy using](media/name-does-not-exist2.png)
+![Snímek obrazovky s žárovkou pro přidání direktivy using](media/name-does-not-exist2.png)
 
-#### <a name="missing-assembly-reference"></a>Chybějící odkaz na sestavení
+#### <a name="missing-assembly-reference"></a>Chybí odkaz na sestavení
 
-Odkazy .NET můžou být ve formě sestavení nebo balíčků NuGet. Pokud například vyhledáte zdrojový kód, Vydavatel nebo autor vysvětlete, jaká sestavení jsou povinná a jaké balíčky závisí na kódu. Chcete-li přidat odkaz na projekt ručně, klikněte pravým tlačítkem myši na uzel **odkazy** v **Průzkumník řešení**, vyberte možnost **Přidat odkaz**a vyhledejte požadované sestavení.
+Odkazy .NET mohou být ve formě sestavení nebo balíčků NuGet. Obvykle pokud najdete zdrojový kód, vydavatel nebo autor vysvětlí, jaké sestavení jsou požadovány a jaké balíčky kód závisí na. Chcete-li přidat odkaz na projekt ručně, klepněte pravým tlačítkem myši na uzel **Reference** v **Průzkumníku řešení**, zvolte **Přidat odkaz**a vyhledejte požadované sestavení.
 
-![Snímek obrazovky nabídky Přidat odkaz](media/add-reference.png)
+![Snímek obrazovky s nabídkou Přidat odkaz](media/add-reference.png)
 
-Můžete najít sestavení a přidat odkazy podle pokynů v tématu [Přidání nebo odebrání odkazů pomocí Správce odkazů](../../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md).
+Sestavení můžete najít a přidat odkazy podle pokynů v [části Přidat nebo odebrat odkazy pomocí správce odkazů](../../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md).
 
 #### <a name="missing-nuget-package"></a>Chybějící balíček NuGet
 
-Pokud Visual Studio zjistí chybějící balíček NuGet, zobrazí se žárovka a nabídne vám možnost je nainstalovat:
+Pokud Visual Studio zjistí chybějící balíček NuGet, zobrazí se žárovka a poskytuje možnost ji nainstalovat:
 
-![Snímek žárovky pro instalaci balíčku](media/lightbulb-add-package.png)
+![Snímek obrazovky s žárovkou pro instalaci balíčku](media/lightbulb-add-package.png)
 
-Pokud se tím problém nevyřeší a sada Visual Studio nemůže balíček najít, zkuste ho vyhledat online. Viz [instalace a použití balíčku NuGet v aplikaci Visual Studio](/nuget/quickstart/install-and-use-a-package-in-visual-studio).
+Pokud se tím problém nevyřeší a Visual Studio nemůže balíček najít, zkuste ho vyhledat online. Viz [Instalace a použití balíčku NuGet v sadě Visual Studio](/nuget/quickstart/install-and-use-a-package-in-visual-studio).
 
-## <a name="use-the-right-version-of-net"></a>Použití správné verze .NET
+## <a name="use-the-right-version-of-net"></a>Použití správné verze rozhraní .NET
 
-Vzhledem k tomu, že různé verze .NET Framework mají určitou úroveň zpětné kompatibility, může novější rozhraní spustit kód napsaný pro starší verzi rozhraní bez jakýchkoli úprav. Někdy ale potřebujete cílit na konkrétní rámec. Je možné, že budete muset nainstalovat určitou verzi .NET Framework nebo .NET Core, pokud ještě není nainstalovaná. Viz [Změna sady Visual Studio](../../install/modify-visual-studio.md).
+Vzhledem k tomu, že různé verze rozhraní .NET Framework mají určitý stupeň zpětné kompatibility, novější framework může spustit kód napsaný pro starší rozhraní bez jakýchkoli úprav. Někdy však musíte cílit na konkrétní rámec. Možná budete muset nainstalovat určitou verzi rozhraní .NET Framework nebo .NET Core, pokud ještě není nainstalována. Viz [Úprava sady Visual Studio](../../install/modify-visual-studio.md).
 
-Chcete-li změnit cílovou architekturu, přečtěte si téma [Změna cílové architektury](../../ide/visual-studio-multi-targeting-overview.md#select-a-target-framework-version). Další informace najdete v tématu [řešení potíží s chybami cílení .NET Framework](../../msbuild/troubleshooting-dotnet-framework-targeting-errors.md).
+Pokud chcete změnit cílový rámec, přečtěte si informace [o změně cílového rozhraní](../../ide/visual-studio-multi-targeting-overview.md#select-a-target-framework-version). Další informace naleznete [v tématu Poradce při potížích s chybami cílení rozhraní .NET Framework](../../msbuild/troubleshooting-dotnet-framework-targeting-errors.md).
 
 ## <a name="next-steps"></a>Další kroky
 
-Prozkoumejte vývojové prostředí sady Visual Studio tak, že si přečtete [Vítá vás Visual Studio IDE](../visual-studio-ide.md).
+Prozkoumejte vývojové prostředí sady Visual Studio přečtením [vítání ide sady Visual Studio](../visual-studio-ide.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vytvoření první C# aplikace](tutorial-console.md)
+[Vytvoření první aplikace v C#](tutorial-console.md)

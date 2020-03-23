@@ -9,36 +9,36 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 71d570e6dc7544911ebe2bb279aafb3a07620cbc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589406"
 ---
-# <a name="how-to-export-a-texture-that-contains-mipmaps"></a>Postupy: Export textury obsahující mipmapy
+# <a name="how-to-export-a-texture-that-contains-mipmaps"></a>Postup: Export textury, která obsahuje mipmapy
 
-Kanál obsahu obrázku může vygenerovat mipmapy ze zdrojového obrázku jako součást fáze sestavení vašeho projektu. Aby bylo možné dosáhnout určitých účinků, někdy je nutné zadat obsah obrázku pro každou úroveň MIP ručně. Pokud nepotřebujete určit obsah obrázku v každé úrovni MIP ručně, generování mipmapy při sestavení zajistí, aby se mipmap obsah nikdy nesynchronizoval. Také eliminuje náklady na výkon při generování mipmapy v době běhu.
+Kanál obsahu obrázků může generovat mipmapy ze zdrojového obrazu jako součást fáze sestavení projektu. Chcete-li dosáhnout určitých efektů, někdy musíte zadat obsah obrazu každé úrovně MIP ručně. Pokud nepotřebujete zadat obsah obrazu každé úrovně MIP ručně, generování mipmap v době sestavení zajišťuje, že obsah mipmap nikdy nebude mimo synchronizaci. Také eliminuje náklady na výkon generování mipmap za běhu.
 
-Tento článek se týká:
+Tento článek se zabývá:
 
-- Konfigurace zdrojového obrázku, který má být zpracován kanálem obsahu obrázku.
+- Konfigurace zdrojového obrazu, který má být zpracován kanálem obsahu obrázku.
 
-- Konfigurace kanálu obsahu obrázku tak, aby generoval mipmapy.
+- Konfigurace kanálu obsahu obrázků pro generování mipmap.
 
 ## <a name="export-mipmaps"></a>Exportovat mipmapy
 
-Mipmapping poskytuje pro texturované plochy v 3D hře nebo aplikaci automatickou úroveň podrobností na obrazovce. Zlepšuje výkon při vykreslování hry nebo aplikace pomocí předběžného zpracování ukázkových verzí textury. Verze předběžného zpracování vzorků znamená, že celá textura nemusí být pokaždé vzorkování pokaždé, když je vzorkovaná.
+Mipmapping poskytuje automatické nastavení prostoru obrazovky Úroveň detailů pro texturované povrchy ve 3D hře nebo aplikaci. Zvyšuje výkon vykreslování hry nebo aplikace tím, že předem napočítává verze textury s ukázkami. Pre-computing down-sampled verze znamená, že celá textura nemusí být down-sampled pokaždé, když je vzorkován.
 
-### <a name="to-export-a-texture-that-has-mipmaps"></a>Export textury, která má mipmapy
+### <a name="to-export-a-texture-that-has-mipmaps"></a>Export textury s mipmapami
 
-1. Začněte základní texturou. Načtěte existující soubor obrázku nebo ho vytvořte tak, jak je popsáno v tématu [Postupy: Vytvoření základní textury](../designers/how-to-create-a-basic-texture.md). Pro podporu mipmapy určete texturu, která má šířku a výšku, které mají stejnou mocninu dvou velikostí, například 64 × 64, 256x256 nebo 512x512.
+1. Začněte se základní texturou. Načtěte existující obrazový soubor nebo jej vytvořte podle popisu v [části Postup: Vytvoření základní textury](../designers/how-to-create-a-basic-texture.md). Chcete-li podporovat mipmaps, zadejte texturu, která má šířku a výšku, které jsou oba stejné mocniny ve velikosti, například 64x64, 256x256 nebo 512x512.
 
-2. Nakonfigurujte soubor textury, který jste právě vytvořili, aby byl zpracován kanálem obsahu obrázku. V **Průzkumník řešení**otevřete místní nabídku pro soubor textury, který jste vytvořili, a pak zvolte **vlastnosti**. Na stránce **Vlastnosti konfigurace** > **Obecné** nastavte vlastnost **typ položky** na **kanál obsahu obrázku**. Ujistěte se, že vlastnost **Content** je nastavená na **hodnotu Ano** a **vyloučit z buildu** je nastavená na **ne**. Vyberte **Použít**.
+2. Nakonfigurujte právě vytvořený soubor textury tak, aby byl zpracován kanálem obsahu obrázků. V **Průzkumníku řešení**otevřete místní nabídku vytvořeného souboru textury a pak zvolte **Vlastnosti**. Na stránce **Configuration Properties** > **General** nastavte vlastnost **Typ položky** na Kanál obsahu **obrázku**. Ujistěte se, že **content** vlastnost je nastavena na **Ano** a **vyloučit z sestavení** je nastavena na **ne**. Vyberte **Použít**.
 
-   Zobrazí se stránka vlastností konfigurace **kanálu obsahu obrázku** .
+   Zobrazí se stránka vlastností vlastností konfigurace **kanálu obsahu obrázku.**
 
-3. Nakonfigurujte kanál obsahu obrázku tak, aby generoval mipmapy. V části **Vlastnosti konfigurace** > **kanál obsahu obrázku** > stránce **Obecné** nastavte vlastnost **Generovat MIPS** na **Ano (/generatemips)** .
+3. Nakonfigurujte kanál obsahu obrázků tak, aby generoval mipmapy. Na stránce**Obecné** pole**Obsahu** > obrazu **vlastností** > konfigurace nastavte vlastnost **Generate Mips** na **ano (/generatemips).**
 
 4. Vyberte **OK**.
 
-Při sestavování projektu kanál obsahu obrazu převede zdrojový obraz z pracovního formátu na výstupní formát, který jste zadali, včetně úrovní MIP. Výsledek je zkopírován do výstupního adresáře projektu.
+Při vytváření projektu převede kanál obsahu obrázků zdrojový obraz z pracovního formátu do zadaný výstupního formátu, včetně úrovní MIP. Výsledek je zkopírován do výstupního adresáře projektu.

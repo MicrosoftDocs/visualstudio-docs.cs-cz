@@ -1,5 +1,5 @@
 ---
-title: Subsystém. Soubory cílů | Microsoft Docs
+title: Wpf. Cíle soubory | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,18 +18,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d3225777c020272a24ac124bf6d039c2154e2ff3
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77630948"
 ---
-# <a name="wpf-targets-files"></a>WPF. targets – soubory
+# <a name="wpf-targets-files"></a>WPF .cíle soubory
 
-Windows Presentation Foundation (WPF) rozšiřuje MSBuild přidáním sady úkolů specifických pro WPF, které jsou zkombinovány do speciálního souboru *. targets* , *Microsoft. WinFX. targets*. Tento soubor kombinuje sadu úloh nástroje MSBuild, které jsou požadovány pro sestavení projektu MSBuild v subsystému WPF.
+Windows Presentation Foundation (WPF) rozšiřuje MSBuild přidáním sadu wpf specifické úkoly, které jsou sloučeny do speciální soubor *.targets,* *Microsoft.WinFX.targets*. Tento soubor kombinuje sadu úloh MSBuild, které jsou nutné k vytvoření projektu MSBuild v WPF.
 
 ## <a name="see-also"></a>Viz také
 
-- [MSBuild. targets – soubory](../msbuild/msbuild-dot-targets-files.md)
-- [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
-- [Sestavení aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [Soubory MSBuild .targets](../msbuild/msbuild-dot-targets-files.md)
+- [Odkaz na sestavení msbuild](../msbuild/msbuild-reference.md)
+- [Vytváření aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

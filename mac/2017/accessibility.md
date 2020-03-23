@@ -1,82 +1,82 @@
 ---
 title: Přístupnost
-description: V tomto článku se seznámíte s funkcemi pro usnadnění přístupu v Visual Studio pro Mac a o tom, jak je možné je povolit.
+description: Tento článek představuje funkce usnadnění v sadě Visual Studio pro Mac a jak je lze povolit.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 08/15/2017
 ms.assetid: 2C4AAC2E-3B4A-4496-8BE0-1F5A7F81D1CA
 ms.openlocfilehash: c0f056643a8cea0c9a5eca9801d2bd008e0793a8
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78410466"
+ms.lasthandoff: 03/20/2020
+ms.locfileid: "79301683"
 ---
 # <a name="accessibility"></a>Přístupnost
 
-Kromě funkcí a nástrojů v macOS má Visual Studio pro Mac následující funkce, které lidem s postižením mají lepší přístup:
+Kromě funkcí a nástrojů v systému macOS má Visual Studio pro Mac následující funkce, díky čemuž je přístupnější pro osoby s postižením:
 
-- Zvětšení textu v panelu řešení a editoru
-- Možnosti změnit velikost textu v editorech
+- Zvětšení textu v panelech řešení a editoru
+- Možnosti velikosti textu v editorech
 - Přizpůsobení barev v editorech
-- Přizpůsobení klávesové zkratky
-- Dokončování kódu pro metody a parametry
+- Přizpůsobení klávesových zkratek
+- Dokončení kódu pro metody a parametry
 
-Další informace o funkcích přístupnosti v macOS najdete na [webu společnosti Apple](https://www.apple.com/accessibility/mac/).
+Další informace o funkcích usnadnění v macOS najdete na [webu Apple](https://www.apple.com/accessibility/mac/).
 
-## <a name="using-accessibility-features-in-visual-studio-for-mac"></a>Používání funkcí usnadnění v Visual Studio pro Mac
+## <a name="using-accessibility-features-in-visual-studio-for-mac"></a>Používání funkcí usnadnění ve Visual Studiu pro Mac
 
-Funkce přístupnosti v Visual Studio pro Mac jsou ve výchozím nastavení vypnuté. Pokud je chcete povolit, proveďte následující kroky:
+Funkce usnadnění v Sadě Visual Studio pro Mac jsou ve výchozím nastavení vypnuté. Chcete-li je povolit, proveďte následující kroky:
 
-1. Přejít na **> předvolby pro Visual Studio > jiné > přístupnost**.
+1. Přejděte na **předvolby > sady Visual Studio > další > usnadnění přístupu**.
 
-2. Zaškrtněte políčko **Povolit usnadnění** , jak je znázorněno na následujícím obrázku:
+2. Zaškrtněte políčko **Povolit usnadnění,** jak je znázorněno na následujícím diagramu:
 
-    ![Zaškrtávací políčko Povolit přístupnost](media/accessibility-image1.png)
+    ![Zaškrtávací políčko Povolit usnadnění přístupu](media/accessibility-image1.png)
 
-3. Pokud chcete, aby se funkce usnadnění projevily, stiskněte tlačítko **restartovat Visual Studio** .
+3. Stisknutím tlačítka **Restartovat visual studio** povolíte, aby se funkce usnadnění projevily.
 
-Alternativně můžete pomocí příkazového řádku povolit funkce usnadnění přístupu. Provedete to tak, že v terminálu zadáte následující příkaz:
+Případně můžete pomocí příkazového řádku povolit funkce usnadnění přístupu. Chcete-li to provést, zadejte do terminálu následující příkaz:
 
 ```bash
 defaults write com.microsoft.visual-studio com.monodevelop.AccessibilityEnabled 1
 ```
 
-Po zapnutí přístupnosti budete muset restartovat Visual Studio.
+Po zapnutí usnadnění přístupu je třeba restartovat visual studio.
 
-## <a name="how-to-use-keyboard-navigation"></a>Postupy: použití navigace pomocí klávesnice
+## <a name="how-to-use-keyboard-navigation"></a>Postup: Použití navigace pomocí klávesnice
 
-Navigace na klávesnici se dá povolit nastavením možnosti úplný přístup pomocí klávesnice v **systémových preferencích > klávesových zkratek >** na **všechny ovládací prvky**:
+Navigaci pomocí klávesnice lze povolit nastavením možnosti Úplný přístup pomocí klávesnice v **předvolbách systému > klávesové zkratky > klávesové zkratky** pro **všechny ovládací prvky**:
 
-![Panel předvoleb systému v MacOS](media/accessibility-image2.png)
+![Panel Předvoleb systémů v systému macos](media/accessibility-image2.png)
 
-Nastavení úplného přístupu z klávesnice se zapne v obdélníku fokusu. Pak můžete vybrat ovládací prvky pomocí:
+Nastavení úplného přístupu pomocí klávesnice zapne obdélník fokusu. Ovládací prvky pak můžete vybrat pomocí:
 
-- Karta k přechodu mezi ovládacími prvky
-- Klávesa SHIFT pro přechod zpět přes ovládací prvky
-- Klávesy se šipkami pro pohyb mezi ovládacími prvky ve směru šipky.
+- Tabulátorem pro procházení ovládacích prvků
+- Shift-Tab pro přechod dozadu přes ovládací prvky
+- Šipky pro pohyb mezi ovládacími prvky ve směru šipek.
 
-Stisknutí mezerníku aktivuje ovládací prvek s fokusem.
+Stisknutím mezerníku se aktivuje zaostřený ovládací prvek.
 
-## <a name="how-to-enable-and-use-voice-over"></a>Postupy: povolení a použití hlasu
+## <a name="how-to-enable-and-use-voice-over"></a>Postup: Povolení a používání funkce Voice Over
 
-Zapnutí nebo vypnutí VoiceOver stisknutím klávesy **cmd + F5**
+Zapnutí nebo vypnutí voiceoveru stiskněte **tlačítko Cmd + F5**
 
-Chcete-li procházet VoiceOver pomocí příkazů uživatelského rozhraní, použijte následující příkazy:
+Chcete-li procházet příkazy UI VoiceOver, použijte následující příkazy:
 
-- Přesunout kurzor VoiceOver mezi ovládacími prvky: **CTRL + ALT + šipka doleva a klávesa šipka doprava**
+- Přesunout kurzor VoiceOveru mezi ovládacími prvky: **Ctrl + Alt + šipka doleva / šipka doprava**
 
-   VoiceOver přečte název ovládacích prvků, informace o nich a to, co s ním můžete dělat.
+   VoiceOver přečte název ovládacích prvků, některé podrobnosti o něm a co s ním můžete dělat.
 
-- Zadejte skupiny a ovládací prvky (například Oblast řešení, panel nástrojů a další panely): **CTRL + ALT + SHIFT + šipka dolů** .
+- Zadejte skupiny a ovládací prvky (například panel řešení, panel nástrojů a další podložky): **Ctrl + Alt + Shift + Šipka dolů**
 
-   Jednou v ovládacím prvku můžete použít **CTRL + ALT + šipky** a pohybovat se uvnitř něj.
+   Jakmile jste uvnitř ovládacího prvku, můžete se pohybovat uvnitř **ovládacího prvku pomocí kláves Ctrl + Alt +.**
 
-Obecné informace o používání VoiceOver v macOS najdete v následujících příručkách:
+Obecné informace o používání VoiceOveru v macOS najdete v následujících průvodcích:
 
-- [Začínáme s VoiceOver](https://help.apple.com/voiceover/info/guide/10.12/)
-- [Příkazy VoiceOver v macOS](https://lab.dotjay.com/notes/voiceover-commands/)
+- [Začínáme s VoiceOverem](https://help.apple.com/voiceover/info/guide/10.12/)
+- [Příkazy VoiceOveru v macOS](https://lab.dotjay.com/notes/voiceover-commands/)
 
 ## <a name="see-also"></a>Viz také
 
-- [Funkce usnadnění v aplikaci Visual Studio (ve Windows)](/visualstudio/ide/reference/accessibility-features-of-visual-studio)
+- [Funkce usnadnění v sadě Visual Studio (ve Windows)](/visualstudio/ide/reference/accessibility-features-of-visual-studio)

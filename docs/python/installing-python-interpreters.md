@@ -1,6 +1,6 @@
 ---
-title: Vyberte a instalace interpretů Pythonu
-description: Úplný seznam interpretů Pythonu, které jsou podporovány v sadě Visual Studio s stručné pokyny, ve kterém můžete najít jejich instalační programy.
+title: Výběr a instalace interpretů Pythonu
+description: Úplný seznam interpretů Pythonu, které jsou podporovány v sadě Visual Studio se stručným návodem, kde najít své instalační programy.
 ms.date: 06/05/2019
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -11,64 +11,64 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 13290aef7acfe599c7693af4be771c625e713596
-ms.sourcegitcommit: d04441e3c5f2eff3a63f7aca35ccf7ecac90fb44
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75735815"
 ---
 # <a name="install-python-interpreters"></a>Instalace interpretů Pythonu
 
-Ve výchozím nastavení nainstaluje úloha vývoje v Pythonu do sady Visual Studio 2017 a později také Python 3 (64-bit). Volitelně můžete zvolit instalaci 32 a 64 bitových verzí Pythonu 2 a Python 3, společně s Miniconda (Visual Studio 2019) nebo Anaconda 2/Anaconda 3 (Visual Studio 2017), jak je popsáno v tématu [instalace](installing-python-support-in-visual-studio.md).
+Ve výchozím nastavení instalace úlohy vývoje Pythonu ve Visual Studiu 2017 a novější také nainstaluje Python 3 (64bitový). Volitelně můžete nainstalovat 32bitové a 64bitové verze Pythonu 2 a Pythonu 3 spolu s Minicondou (Visual Studio 2019) nebo Anacondou 2/Anaconda 3 (Visual Studio 2017), jak je popsáno v [aplikaci Installation](installing-python-support-in-visual-studio.md).
 
 ::: moniker range=">=vs-2019"
-Alternativně můžete v dialogovém okně **Přidat prostředí** nainstalovat standardní překladače Pythonu. V okně **prostředí Pythonu** nebo na panelu nástrojů Python vyberte příkaz **Přidat prostředí** , vyberte kartu **Instalace Pythonu** , určete, které překladače se mají nainstalovat a vyberte **nainstalovat**.
+Alternativně můžete nainstalovat standardní interprety pythonu z dialogového okna **Přidat prostředí.** Vyberte příkaz **Přidat prostředí** v okně **Prostředí Pythonu** nebo na panelu nástrojů Pythonu, vyberte kartu **Instalace pythonu,** označte, které interprety chcete nainstalovat, a vyberte **Instalovat**.
 ::: moniker-end
 
-Můžete nainstalovat také ručně žádné interprety uvedené v následující tabulce mimo instalačního programu sady Visual Studio. Například pokud jste nainstalovali Anaconda 3 před instalací sady Visual Studio, není nutné znovu nainstalovat pomocí instalačního programu sady Visual Studio. Můžete také nainstalovat interpretu ručně pokud, třeba novější verzi k dispozici, který ještě se nezobrazí v instalačním programu sady Visual Studio.
+Můžete také ručně nainstalovat některý z tlumočníků uvedených v tabulce níže mimo instalační program sady Visual Studio. Pokud jste například před instalací sady Visual Studio nainstalovali Anaconda 3, není nutné ji znovu instalovat prostřednictvím instalačního programu sady Visual Studio. Interpreta můžete nainstalovat také ručně, pokud například novější verze dostupné, která se ještě nezobrazuje v instalačním programu sady Visual Studio.
 
 ::: moniker range=">=vs-2019"
 > [!Note]
-> Visual Studio podporuje Python verze 2,7 a také verze 3,5 a vyšší. I když je možné použít sadu Visual Studio k úpravám kódu napsaného v jiných verzích Pythonu, tyto verze se oficiálně nepodporují a funkce, jako je například IntelliSense a ladění, nemusí fungovat.
+> Visual Studio podporuje Python verze 2.7, stejně jako verze 3.5 a vyšší. I když je možné použít Visual Studio k úpravám kódu napsaného v jiných verzích Pythonu, tyto verze nejsou oficiálně podporovány a funkce, jako je IntelliSense a ladění nemusí fungovat.
 ::: moniker-end
 
-Pro **sady Visual Studio 2015 a starší**, musíte ručně nainstalovat jeden interprety.
+Pro **Visual Studio 2015 a starší**, je nutné ručně nainstalovat jeden z tlumočníků.
 
-Visual Studio (všechny verze) automaticky rozpozná každý nainstalovaný interpret Pythonu a její prostředí tak, že zkontrolujete registru podle [období 514 - Python registraci v registru Windows](https://www.python.org/dev/peps/pep-0514/). Instalace Pythonu se většinou nacházejí ve skupinovém rámečku **HKEY_LOCAL_MACHINE\SOFTWARE\Python** (32 bitů) a **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Python** (64-bit), pak v rámci uzly, aby se distribuce, jako **PythonCore** (CPython) a **ContinuumAnalytics** (Anaconda).
+Visual Studio (všechny verze) automaticky detekuje každý nainstalovaný překladač Pythonu a jeho prostředí kontrolou registru podle [PEP 514 - Python registrace v registru Windows](https://www.python.org/dev/peps/pep-0514/). Instalace pythonu se obvykle nacházejí pod **HKEY_LOCAL_MACHINE\SOFTWARE\Python** (32-bit) a **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Python** (64-bit), pak v uzlech pro distribuci, jako je **PythonCore** (CPython) a **ContinuumAnalytics** (Anaconda).
 
-Pokud aplikace Visual Studio nerozpozná nainstalované prostředí, přečtěte si téma [ručně identifikovat existující prostředí](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment).
+Pokud Visual Studio nerozpozná nainstalované prostředí, [přečtěte si informace o ruční identifikaci existujícího prostředí](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment).
 
-Sada Visual Studio zobrazí všechny známé prostředí v [ **prostředí Pythonu** ](managing-python-environments-in-visual-studio.md#the-python-environments-window) okna a automaticky zjišťuje aktualizace existující interpretů.
+Visual Studio zobrazuje všechna známá prostředí v okně [**Prostředí Pythonu**](managing-python-environments-in-visual-studio.md#the-python-environments-window) a automaticky detekuje aktualizace stávajících interpretů.
 
-| Interpret | Popis |
+| Tlumočník | Popis |
 | --- | --- |
-| [CPython](https://www.python.org/) | "Nativní" a nejčastěji používaná interpret, dostupné v 32bitové a 64bitové verze (32bitová verze doporučeno). Zahrnuje nejnovější funkce jazyků, maximální kompatibility balíček Pythonu, plná podpora ladění a zprostředkovatele komunikace s [IPython](https://ipython.org/). Viz také: [použít Python 2 nebo Python 3?](https://wiki.python.org/moin/Python2orPython3). Mějte na paměti, že Visual Studio 2015 a starší nepodporují Python 3.6 + a může dojít k chybám jako **nepodporované python verze 3.6**. Použití Pythonu 3.5 nebo starší místo. |
-| [IronPython](https://github.com/IronLanguages/ironpython2) | Implementace .NET jazyka Python, dostupné v 32bitové a 64bitové verze poskytuje C#/F#/zprostředkovatele komunikace s objekty jazyka Visual Basic, přístup k rozhraní API pro .NET, standardní ladění Pythonu (ale není C++ ladění v kombinovaném režimu) a smíšené IronPython /C# ladění. IronPython, ale nepodporuje virtuální prostředí. |
-| [Anaconda](https://www.continuum.io) | Platforma pro otevřete datovou vědu službu Python a obsahuje nejnovější verzi CPython a většina obtížné instalační balíčky. Doporučujeme, abyste ho rozhodnete nemůže jinak. |
-| [PyPy](https://www.pypy.org/) | Vysoce výkonné trasování JIT, provádění Python, který je vhodný pro dlouho běžící programy a situacích, kde identifikujete výkonu problémy, ale nemůžu najít další řešení. Funguje s Visual Studio, ale s omezenou podporu pro pokročilé funkce ladění. |
-| [Jython](https://www.jython.org/) | Implementace jazyka Python na virtuální počítač Java (JVM). Podobný Ironpythonu, kód spuštěný v Jython může komunikovat s třídami jazyka Java a knihoven, ale nemusí být možné používat mnoho knihoven určené pro CPython. Funguje s Visual Studio, ale s omezenou podporu pro pokročilé funkce ladění. |
+| [CPython](https://www.python.org/) | "Nativní" a nejčastěji používaný interpret, který je k dispozici v 32bitových a 64bitových verzích (doporučeno 32bitový). Obsahuje nejnovější funkce jazyka, maximální kompatibilitu balíčků Pythonu, plnou podporu ladění a interop s [IPython](https://ipython.org/). Viz také: [Mám použít Python 2 nebo Python 3?](https://wiki.python.org/moin/Python2orPython3). Všimněte si, že Visual Studio 2015 a starší nepodporují Python 3.6+ a může dát chyby jako **nepodporované python verze 3.6**. Místo toho použijte Python 3.5 nebo starší. |
+| [Ironpython](https://github.com/IronLanguages/ironpython2) | Implementace Pythonu .NET, dostupná v 32bitových a 64bitových verzích, poskytující interop jazyka C#/F#/Visual Basic, přístup k rozhraní MAÚ API .NET, standardní ladění Pythonu (ale ne ladění v kombinovaném režimu Jazyka C++) a kombinované ladění IronPython/C#. IronPython však nepodporuje virtuální prostředí. |
+| [Anaconda](https://www.continuum.io) | Platforma pro vědu o otevřených datech poháněná Pythonem a obsahuje nejnovější verzi CPython a většinu obtížně instalovatelné balíčky. Doporučujeme, pokud se nemůžete rozhodnout jinak. |
+| [PyPy](https://www.pypy.org/) | Vysoce výkonná trasování jit implementace Pythonu, která je vhodná pro dlouhotrvající programy a situace, kdy identifikujete problémy s výkonem, ale nemůžete najít jiná řešení. Pracuje s Visual Studio, ale s omezenou podporou pro pokročilé funkce ladění. |
+| [Jython](https://www.jython.org/) | Implementace Pythonu na Java Virtual Machine (JVM). Podobně jako IronPython, kód spuštěný v Jython můžete komunikovat s Java třídy a knihovny, ale nemusí být schopen používat mnoho knihoven určených pro CPython. Pracuje s Visual Studio, ale s omezenou podporou pro pokročilé funkce ladění. |
 
-Vývojáři, kteří chtěli poskytnout nové formy zjišťování pro prostředí Pythonu najdete v článku [PTVS prostředí detekce](https://github.com/Microsoft/PTVS/wiki/Extensibility-Environments) (webu github.com).
+Vývojáři, kteří chtějí poskytovat nové formy detekce pro prostředí Pythonu, viz [PTVS Environment Detection](https://github.com/Microsoft/PTVS/wiki/Extensibility-Environments) (github.com).
 
-## <a name="move-an-interpreter"></a>Přesunout interpretu
+## <a name="move-an-interpreter"></a>Přesunutí tlumočníka
 
-Pokud přesouváte existující překladač do nového umístění pomocí systému souborů, Visual Studio nerozpozná automaticky změny.
+Pokud přesunete existující interpreta do nového umístění pomocí systému souborů, Visual Studio automaticky nerozpozná změnu.
 
-- Pokud jste původně zadali umístění překladač prostřednictvím **prostředí Pythonu** okna, upravte svoje prostředí pomocí **konfigurovat** karty v tomto okně identifikovat nové umístění. Zobrazit [ručně identifikovat existující prostředí](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment).
+- Pokud jste původně zadali umístění interpreta prostřednictvím okna **Prostředí Pythonu,** upravte jeho prostředí pomocí karty **Konfigurovat** v tomto okně k identifikaci nového umístění. Viz [Ruční identifikace existujícího prostředí](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment).
 
-- Pokud jste nainstalovali překladač pomocí instalačního programu, použijte následující kroky k přeinstalování interpret v novém umístění:
+- Pokud jste interpreta nainstalovali pomocí instalačního programu, přeinstalujte jej v novém umístění pomocí následujících kroků:
 
-  1. Interpret Pythonu obnovte do původního umístění.
-  2. Odinstalujte překladač pomocí jeho instalační program, který vymaže položky registru.
-  3. Znovu nainstalujte překladač do požadovaného umístění.
-  4. Restartujte sadu Visual Studio, který by měl automaticky rozpoznat nové umístění, namísto původní umístění.
+  1. Obnovte překladač Pythonu do původního umístění.
+  2. Odinstalujte interpreta pomocí instalačního programu, který vymaže položky registru.
+  3. Přeinstalujte interpreta v požadovaném umístění.
+  4. Restartujte visual studio, které by mělo automaticky rozpoznat nové umístění místo starého umístění.
 
-Následující tento proces zajistí, že jsou správně aktualizovat položky registru, které identifikují na překladač umístění, které používá sada Visual Studio. Pomocí instalačního programu také zpracovává všechny vedlejší účinky, které mohou existovat.
+Po tomto procesu zajišťuje, že položky registru, které identifikují umístění tlumočníka, který používá Visual Studio, jsou řádně aktualizovány. Použití instalačního programu také zpracovává všechny další vedlejší účinky, které mohou existovat.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Správa prostředí Pythonu](managing-python-environments-in-visual-studio.md)
 - [Výběr interpretu pro projekt](selecting-a-python-environment-for-a-project.md)
-- [Používání souboru requirements.txt pro závislosti](managing-required-packages-with-requirements-txt.md)
+- [Použití souboru requirements.txt pro závislosti](managing-required-packages-with-requirements-txt.md)
 - [Cesty pro hledání](search-paths.md)
 - [Odkaz na okno prostředí Pythonu](python-environments-window-tab-reference.md)

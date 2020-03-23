@@ -1,5 +1,5 @@
 ---
-title: Přehled Visual Basic vývojářů
+title: Přehled pro vývojáře jazyka Visual Basic
 ms.date: 11/15/2018
 ms.technology: vs-ide-general
 ms.custom: get-started
@@ -12,83 +12,83 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 5cf5f8d3660abcf941eb5cc429b8f190459d9c56
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596044"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79301977"
 ---
-# <a name="welcome-to-the-visual-studio-ide--visual-basic"></a>Vítejte v integrovaném vývojovém prostředí sady Visual Studio | Visual Basic
+# <a name="welcome-to-the-visual-studio-ide--visual-basic"></a>Vítá vás ide sady Visual Studio | Visual Basic
 
-Visual Studio *integrovaného vývojového prostředí* je creative odrazový, můžete použít k úpravám, ladit a sestavovat kód a pak publikujete aplikaci. Integrované vývojové prostředí (IDE) je plně funkční program, který lze použít pro mnoho aspektů vývoje softwaru. Kromě standardní editor a ladicího programu, že většina integrovanými vývojovými prostředími poskytnout, Visual Studio obsahuje kompilátory, nástroje dokončování kódu, grafičtí návrháři pro a mnoho dalších funkcí, které usnadňují proces vývoje softwaru.
+*Integrované vývojové prostředí* sady Visual Studio je kreativní spouštěcí panel, který můžete použít k úpravám, ladění a sestavení kódu a následnému publikování aplikace. Integrované vývojové prostředí (IDE) je program bohatý na funkce, který lze použít pro mnoho aspektů vývoje softwaru. Kromě standardního editoru a ladicího programu, které poskytuje většina ide, sada Visual Studio obsahuje kompilátory, nástroje pro dokončení kódu, grafické návrháře a mnoho dalších funkcí, které usnadňují proces vývoje softwaru.
 
 ::: moniker range="vs-2017"
 
-![Prostředí IDE sady Visual Studio](../media/visual-studio-ide.png)
+![IDE visual studia](../media/visual-studio-ide.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-[![integrované vývojové prostředí (IDE) sady Visual Studio 2019](media/vs-2019/ide-overview.png)](media/vs-2019/ide-overview.png#lightbox)
+[![IDE Visual Studia 2019](media/vs-2019/ide-overview.png)](media/vs-2019/ide-overview.png#lightbox)
 
 ::: moniker-end
 
-Tento obrázek ukazuje sady Visual Studio s otevřít projekt a několika okny nástrojů klíče, které budete pravděpodobně používat:
+Tento obrázek znázorňuje Visual Studio s otevřeným projektem a několika okny nástrojů klíčů, které budete pravděpodobně používat:
 
-- [Průzkumník řešení](../../ide/solutions-and-projects-in-visual-studio.md) (vpravo nahoře) umožňuje zobrazit, navigovat a spravovat soubory kódu. **Průzkumník řešení** pomáhá organizovat kód seskupením soubory do [řešení a projekty](tutorial-projects-solutions.md).
+- [Průzkumník řešení](../../ide/solutions-and-projects-in-visual-studio.md) (vpravo nahoře) umožňuje zobrazit, procházet a spravovat soubory kódu. **Průzkumník řešení** může pomoci uspořádat kód seskupením souborů do [řešení a projektů](tutorial-projects-solutions.md).
 
-- [Okno editoru](../../ide/writing-code-in-the-code-and-text-editor.md) (System center), kde budete pravděpodobně tráví většinu svého času zobrazí obsah souboru. Toto je, kde můžete upravit kódu nebo navrhnout uživatelské rozhraní, jako je například okno s tlačítka a textová pole.
+- [Okno editoru](../../ide/writing-code-in-the-code-and-text-editor.md) (uprostřed), kde pravděpodobně strávíte většinu svého času, zobrazuje obsah souboru. Toto je místo, kde můžete upravit kód nebo navrhnout uživatelské rozhraní, jako je například okno s tlačítky a textovými poli.
 
-- [Okno výstup](../../ide/reference/output-window.md) (dole uprostřed) je, kde sada Visual Studio odešle oznámení, jako jsou ladění a chybové zprávy, upozornění kompilátoru, publikování stavové zprávy a další. Každý zdroj zprávy má svůj vlastní kartu.
+- [Okno Výstup](../../ide/reference/output-window.md) (dolní centrum) je místo, kde Visual Studio odesílá oznámení, jako je ladění a chybové zprávy, upozornění kompilátoru, zprávy o stavu publikování a další. Každý zdroj zprávy má vlastní kartu.
 
-- [Team Explorer](/azure/devops/user-guide/work-team-explorer?view=vsts) (vpravo dole) umožňuje sledování pracovních položek a sdílet s ostatními kód pomocí technologie pro řízení verze, například [Git](https://git-scm.com/) a [Team Foundation verze ovládacího prvku (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts).
+- [Průzkumník týmu](/azure/devops/user-guide/work-team-explorer?view=vsts) (vpravo dole) umožňuje sledovat pracovní položky a sdílet kód s ostatními pomocí technologií správy verzí, jako je [Git](https://git-scm.com/) a Team Foundation Version [Control (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts).
 
 ## <a name="editions"></a>Edice
 
-Visual Studio je k dispozici pro Windows a Mac. [Visual Studio pro Mac](/visualstudio/mac/) má mnoho stejných funkcí jako Visual Studio 2017 a je optimalizovaná pro vývoj multiplatformní a mobilní aplikace. Tento článek se týká Windows verze sady Visual Studio 2017.
+Visual Studio je k dispozici pro Windows a Mac. [Visual Studio pro Mac](/visualstudio/mac/) má mnoho stejných funkcí jako Visual Studio 2017 a je optimalizované pro vývoj aplikací napříč platformami a mobilními aplikacemi. Tento článek se zaměřuje na verzi Sady Visual Studio 2017 pro Windows.
 
-Existují 3 edicích sady Visual Studio 2017: Community, Professional a Enterprise. V tématu [porovnání Visual Studio 2017 integrovanými vývojovými prostředími](https://visualstudio.microsoft.com/vs/compare/) Další informace o funkcích, které jsou podporované v každé edici.
+Existují tři edice Visual Studia 2017: Komunita, Profesionál a Enterprise. Informace o tom, které funkce jsou v jednotlivých edicích podporované, najdete v [tématu Porovnání idů sady Visual Studio 2017.](https://visualstudio.microsoft.com/vs/compare/)
 
-## <a name="popular-productivity-features"></a>Oblíbené pro zvýšení produktivity
+## <a name="popular-productivity-features"></a>Oblíbené funkce produktivity
 
-Mezi oblíbené funkce v sadě Visual Studio, které vám umožní být produktivnější při vývoji softwaru, patří:
+Některé z oblíbených funkcí v sadě Visual Studio, které vám pomohou být produktivnější při vývoji softwaru, zahrnují:
 
-- Podtržení vlnovkou a [rychlé akce](../../ide/quick-actions.md)
+- Klikyháky a [rychlé akce](../../ide/quick-actions.md)
 
-   Podtržení vlnovkou jsou podtržení vlnovkou, které vás upozorní na chyby nebo potenciální problémy v kódu při psaní. Tyto vizuální záchytné body umožňují opravit problémy okamžitě bez čekání na chyby mají být zjišťované, a během sestavování nebo při spuštění programu. Pokud najedete myší vlnovka, zobrazí se další informace o této chybě. Žárovky může také zobrazit na levém okraji s akcemi, známé jako rychlých akcí, chcete-li vyřešit chybu.
+   Vlnité vlnovky jsou podtržení vlnovkou, která vás při psaní upozorní na chyby nebo potenciální problémy v kódu. Tyto vizuální vodítka umožňují okamžitě opravit problémy bez čekání na chybu, která má být zjištěna během sestavení nebo při spuštění programu. Pokud najedete na vlnovku, zobrazí se další informace o chybě. Na levém okraji se může zobrazit také žárovka s akcemi, které se označují jako rychlé akce, které chybu opraví.
 
    ::: moniker range="vs-2017"
 
-   ![Podtržení vlnovkou v sadě Visual Studio](media/squiggles-error.png)
+   ![Vlnité v sadě Visual Studio](media/squiggles-error.png)
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   ![Podtržení vlnovkou v sadě Visual Studio](media/vs-2019/squiggles-error.png)
+   ![Vlnité v sadě Visual Studio](media/vs-2019/squiggles-error.png)
 
    ::: moniker-end
 
 - [Refactoring](../../ide/refactoring-in-visual-studio.md)
 
-   Refaktoring zahrnuje operace, jako jsou inteligentní přejmenováním proměnné, extrahování jeden nebo více řádků kódu do nové metody, změna pořadí parametrů metod a dalších.
+   Refaktoring zahrnuje operace, jako je inteligentní přejmenování proměnných, extrahování jednoho nebo více řádků kódu do nové metody, změna pořadí parametrů metody a další.
 
    ::: moniker range="vs-2017"
 
-   ![Nabídka refaktoringu v aplikaci Visual Studio](media/refactoring-menu.png)
+   ![Nabídka refaktoringu v sadě Visual Studio](media/refactoring-menu.png)
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   ![Nabídka refaktoringu v aplikaci Visual Studio](media/vs-2019/refactorings-menu.png)
+   ![Nabídka refaktoringu v sadě Visual Studio](media/vs-2019/refactorings-menu.png)
 
    ::: moniker-end
 
 - [IntelliSense](../../ide/using-intellisense.md)
 
-   Technologie IntelliSense je termín pro sadu funkcí, která zobrazí informace o kódu přímo v editoru a v některých případech může zapisovat malé části kódu za vás. Je to jako mít základní dokumentaci vložené v editoru, což vám ušetří nebudou muset vyhledat informace o typu jinde. Funkce technologie IntelliSense se liší podle jazyka. Další informace najdete v tématu [jazyka C# IntelliSense](../../ide/visual-csharp-intellisense.md), [Visual C++ IntelliSense](../../ide/visual-cpp-intellisense.md), [technologie IntelliSense jazyka JavaScript](../../ide/javascript-intellisense.md), a [jazyka Visual Basic IntelliSense](../../ide/visual-basic-specific-intellisense.md). Následující obrázek znázorňuje, jak technologie IntelliSense zobrazí seznam členů pro typ:
+   IntelliSense je termín pro sadu funkcí, které zobrazují informace o kódu přímo v editoru a v některých případech za vás píší malé kousky kódu. Je to jako mít základní dokumentaci veditoru v editoru, který vám ušetří od nutnosti hledat informace o typu jinde. Funkce Technologie IntelliSense se liší podle jazyka. Další informace naleznete v [tématech C# IntelliSense](../../ide/visual-csharp-intellisense.md), [Visual C++ IntelliSense](../../ide/visual-cpp-intellisense.md), [JavaScript IntelliSense](../../ide/javascript-intellisense.md)a [Visual Basic IntelliSense](../../ide/visual-basic-specific-intellisense.md). Následující obrázek znázorňuje, jak technologie IntelliSense zobrazuje seznam členů pro daný typ:
 
    ::: moniker range="vs-2017"
 
@@ -104,144 +104,144 @@ Mezi oblíbené funkce v sadě Visual Studio, které vám umožní být produkti
 
 - Vyhledávací pole
 
-   Visual Studio, může to působit příliš složitě čas od času s tolika nabídky, možnosti a vlastnosti. Vyhledávací pole je skvělým způsobem, jak rychle najít, co potřebujete v aplikaci Visual Studio. Když začnete psát název něco, co hledáte, Visual Studio obsahuje výsledky, které dostanete, přesně, kde potřebujete přejít. Pokud potřebujete přidat funkci do sady Visual Studio, například chcete-li přidat podporu pro další programovací jazyk, vyhledávací pole poskytuje výsledky, které otevřou Instalační program pro Visual Studio k instalaci úlohy nebo jednotlivé součásti.
+   Visual Studio může zdát ohromující občas s tolika nabídky, možnosti a vlastnosti. Vyhledávací pole je skvělý způsob, jak rychle najít to, co potřebujete v sadě Visual Studio. Když začnete psát název něčeho, co hledáte, Visual Studio zobrazí seznam výsledků, které vás přesně přemístí tam, kam potřebujete. Pokud potřebujete přidat funkce do sady Visual Studio, například pro přidání podpory pro další programovací jazyk, vyhledávací pole poskytuje výsledky, které otevřou Instalační služba sady Visual Studio pro instalaci pracovního vytížení nebo jednotlivé součásti.
 
    > [!TIP]
-   > Stiskněte klávesu **Ctrl**+**Q** jako zástupce vyhledávacího pole.
+   > Stiskněte **ctrl**+**q** jako zástupce vyhledávacího pole.
 
    ::: moniker range="vs-2017"
 
-   ![Rychlé spuštění vyhledávacího pole v aplikaci Visual Studio 2017](../media/quick-launch-nuget.png)
+   ![Vyhledávací pole Snadné spuštění ve Visual Studiu 2017](../media/quick-launch-nuget.png)
 
-   Další informace najdete v tématu [Snadné spuštění](../../ide/reference/quick-launch-environment-options-dialog-box.md).
+   Další informace naleznete v [tématu Snadné spuštění](../../ide/reference/quick-launch-environment-options-dialog-box.md).
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   ![Vyhledávací pole v aplikaci Visual Studio 2019](media/vs-2019/quick-launch.png)
+   ![Vyhledávací pole ve Visual Studiu 2019](media/vs-2019/quick-launch.png)
 
    ::: moniker-end
 
 - [Live Share](/visualstudio/liveshare/)
 
-   Spoluupravujte a laďte s ostatními v reálném čase bez ohledu na typ aplikace nebo programovací jazyk. Můžete okamžitě a bezpečně sdílet svůj projekt a podle potřeby ladit relace, instance Terminálové služby, webové aplikace localhost, hlasové hovory a další.
+   Kolaborativně upravujte a laděte s ostatními v reálném čase bez ohledu na to, jaký typ aplikace nebo programovací jazyk. Můžete okamžitě a bezpečně sdílet svůj projekt a podle potřeby ladit relace, terminálové instance, webové aplikace localhost, hlasové hovory a další.
 
 - [Hierarchie volání](../../ide/reference/call-hierarchy.md)
 
-   **Hierarchie volání** okno zobrazuje metody, které volají vybrané metody. To může být užitečné informace, pokud uvažujete o změně nebo odebrání metodu, nebo když se snažíte vysledování chybu.
+   Okno **Hierarchie volání** zobrazuje metody, které volají vybranou metodu. To může být užitečné informace, když uvažujete o změně nebo odebrání metody, nebo když se pokoušíte vystopovat chybu.
 
    ::: moniker range="vs-2017"
 
-   ![Okno hierarchie volání v aplikaci Visual Studio](media/call-hierarchy.png)
+   ![Okno Hierarchie volání v sadě Visual Studio](media/call-hierarchy.png)
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   ![Okno hierarchie volání v aplikaci Visual Studio](media/vs-2019/call-hierarchy.png)
+   ![Okno Hierarchie volání v sadě Visual Studio](media/vs-2019/call-hierarchy.png)
 
    ::: moniker-end
 
 - [CodeLens](../../ide/find-code-changes-and-other-history-with-codelens.md)
 
-   CodeLens vám pomůže najít odkazy na kód, změny kódu, propojené chyby, pracovní položky, revize kódu a testy jednotek, to vše bez opuštění editoru.
+   CodeLens vám pomůže najít odkazy na váš kód, změny vašeho kódu, propojené chyby, pracovní položky, revize kódu a testy částí, to vše bez opuštění editoru.
 
    ::: moniker range="vs-2017"
 
-   ![CodeLens v aplikaci Visual Studio](media/codelens.png)
+   ![CodeLens v sadě Visual Studio](media/codelens.png)
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   ![CodeLens v aplikaci Visual Studio](media/vs-2019/codelens.png)
+   ![CodeLens v sadě Visual Studio](media/vs-2019/codelens.png)
 
    ::: moniker-end
 
-- [Přejít k definici](../../ide/go-to-and-peek-definition.md)
+- [Přejít na definici](../../ide/go-to-and-peek-definition.md)
 
-   Funkce Přejít k definici přejdete přímo do umístění, kde je funkce nebo typ definován.
+   Funkce Přejít na definici vás přenese přímo do umístění, kde je definována funkce nebo typ.
 
    ::: moniker range="vs-2017"
 
-   ![Přejít k definici v aplikaci Visual Studio 2017](media/go-to-definition-menu.png)
+   ![Přejít na definici ve Visual Studiu 2017](media/go-to-definition-menu.png)
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   ![Přejít k definici v aplikaci Visual Studio 2019](media/vs-2019/go-to-definition-menu.png)
+   ![Přejít na definici ve Visual Studiu 2019](media/vs-2019/go-to-definition-menu.png)
 
    ::: moniker-end
 
 - [Náhled definice](../../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
 
-   **Definice operace Peek** okno zobrazuje definici metody nebo typ bez nutnosti otevřít ve skutečnosti samostatný soubor.
+   Okno **Definice náhledu** zobrazuje definici metody nebo typu bez skutečného otevření samostatného souboru.
 
    ::: moniker range="vs-2017"
 
-   ![Náhled definice v aplikaci Visual Studio](media/peek-definition.png)
+   ![Definice náhledu v sadě Visual Studio](media/peek-definition.png)
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   ![Náhled definice v aplikaci Visual Studio](media/vs-2019/peek-definition.png)
+   ![Definice náhledu v sadě Visual Studio](media/vs-2019/peek-definition.png)
 
    ::: moniker-end
 
-## <a name="install-the-visual-studio-ide"></a>Instalace sady Visual Studio IDE
+## <a name="install-the-visual-studio-ide"></a>Instalace ide sady Visual Studio
 
-V této části vytvoříte jednoduchý projekt, abyste si vyzkoušeli některé z akcí, které můžete dělat se sadou Visual Studio. Změníte barevný motiv, použijete [IntelliSense](../../ide/using-intellisense.md) jako pomůcku pro psaní kódu a ladit aplikaci pro zobrazení hodnoty proměnné během provádění programu.
+V této části vytvoříte jednoduchý projekt vyzkoušet některé z věcí, které můžete dělat s Visual Studio. Změníte barevný motiv, použijete [IntelliSense](../../ide/using-intellisense.md) jako kódovací pomůcku a ladíte aplikaci, abyste viděli hodnotu proměnné během provádění programu.
 
 ::: moniker range="vs-2017"
 
-Pokud chcete začít, [Stáhněte si Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte ho do svého systému. Modulární instalačního programu umožňuje vybrat a nainstalovat *úlohy*, což jsou skupiny funkce potřebné pro programovací jazyk nebo platformu dáváte přednost. Postupovat podle kroků pro [vytvoření programu](#create-a-program), je nutné vybrat **vývoj pro různé platformy .NET Core** úloh během instalace.
+Chcete-li začít, [stáhněte si Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte ho do systému. Modulární instalační program umožňuje zvolit a nainstalovat úlohy , což jsou *skupiny*funkcí potřebných pro programovací jazyk nebo platformu, které dáváte přednost. Chcete-li postupovat podle kroků pro [vytvoření programu](#create-a-program), nezapomeňte během instalace vybrat vývojové zatížení **.NET Core napříč platformami.**
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Pokud chcete začít, [Stáhněte si Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte ho do svého systému. Modulární instalačního programu umožňuje vybrat a nainstalovat *úlohy*, což jsou skupiny funkce potřebné pro programovací jazyk nebo platformu dáváte přednost. Postupovat podle kroků pro [vytvoření programu](#create-a-program), je nutné vybrat **vývoj pro různé platformy .NET Core** úloh během instalace.
+Chcete-li začít, [stáhněte si Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte ho do systému. Modulární instalační program umožňuje zvolit a nainstalovat úlohy , což jsou *skupiny*funkcí potřebných pro programovací jazyk nebo platformu, které dáváte přednost. Chcete-li postupovat podle kroků pro [vytvoření programu](#create-a-program), nezapomeňte během instalace vybrat vývojové zatížení **.NET Core napříč platformami.**
 
 ::: moniker-end
 
-![Úlohy pro vývoj pro různé platformy .NET core v instalační program sady Visual Studio](../media/dotnet-core-cross-platform-workload.png)
+![Úloha vývoje napříč platformami .NET Core v Instalační službě sady Visual Studio](../media/dotnet-core-cross-platform-workload.png)
 
-Při prvním otevření sady Visual Studio se můžete volitelně [Přihlásit](../../ide/signing-in-to-visual-studio.md) pomocí účet Microsoft nebo svého pracovního nebo školního účtu.
+Při prvním spuštění sady Visual Studio se můžete volitelně [přihlásit](../../ide/signing-in-to-visual-studio.md) pomocí účtu Microsoft nebo pracovního nebo školního účtu.
 
 ## <a name="customize-visual-studio"></a>Přizpůsobení sady Visual Studio
 
-Uživatelské rozhraní sady Visual Studio, včetně změn si můžete přizpůsobit výchozí barevný motiv.
+Uživatelské rozhraní sady Visual Studio můžete přizpůsobit, včetně změny výchozího barevného motivu.
 
 ### <a name="change-the-color-theme"></a>Změna barevného motivu
 
-Chcete-li změnit na **tmavě** motivu:
+Změna na **tmavý** motiv:
 
 ::: moniker range="vs-2017"
 
-1. Otevřít Visual Studio.
+1. Otevřete sadu Visual Studio.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Otevřít Visual Studio. V okně Start vyberte možnost **pokračovat bez kódu**.
+1. Otevřete sadu Visual Studio. V počátečním okně zvolte **Pokračovat bez kódu**.
 
-   ![Okno Start v aplikaci Visual Studio 2019](media/vs-2019/continue-without-code.png)
+   ![Počáteční okno v Sadě Visual Studio 2019](media/vs-2019/continue-without-code.png)
 
-   Otevře se rozhraní IDE.
+   Otevře se ide.
 
 ::: moniker-end
 
-2. V panelu nabídky zvolte **nástroje** > **možnosti** otevřít **možnosti** dialogového okna.
+2. Na řádku nabídek zvolte**Možnosti** **nástrojů,** > abyste otevřeli dialogové okno **Volby.**
 
-3. Na **prostředí** > **Obecné** stránka Možnosti, změna **barevný motiv** výběru **tmavě**a klikněte na tlačítko **OK**.
+3. Na stránce**Volby Obecné** **prostředí** > změňte výběr **motivu Barva** na **Tmavý**a pak zvolte **OK**.
 
-   ![Změnit barevný motiv na tmavý v aplikaci Visual Studio](media/change-color-theme.png)
+   ![Změna motivu barvy na tmavý v Sadě Visual Studio](media/change-color-theme.png)
 
-   Barva motivu pro celý integrovaného vývojového prostředí se změní na **tmavě**.
+   Barevný motiv pro celé ide se změní na **Tmavý**.
 
    ::: moniker range="vs-2017"
 
@@ -257,186 +257,186 @@ Chcete-li změnit na **tmavě** motivu:
 
 ### <a name="select-environment-settings"></a>Vybrat nastavení prostředí
 
-Teď nakonfigurujeme Visual Studio tak, aby používalo nastavení prostředí, které je přizpůsobené Visual Basic vývojářům.
+Dále nakonfigurujeme Visual Studio tak, aby používalo nastavení prostředí přizpůsobené vývojářům jazyka Visual Basic.
 
-1. V panelu nabídky zvolte **nástroje** > **nastavení importu a exportu**.
+1. Na řádku nabídek zvolte **Nástroje** > **importu a exportu nastavení**.
 
 2. V **Průvodci importem a exportem nastavení**vyberte **Obnovit všechna nastavení** na první stránce a pak zvolte **Další**.
 
-3. Na stránce **Uložit aktuální nastavení** vyberte možnost pro uložení aktuálního nastavení, nebo ne, a poté klikněte na tlačítko **Další**. (Pokud jste nepřizpůsobili žádné nastavení, vyberte možnost **Ne, pouze resetovat nastavení a přepsat aktuální nastavení**.)
+3. Na stránce **Uložit aktuální nastavení** vyberte možnost, kterou chcete uložit, nebo ne, a pak zvolte **Další**. (Pokud jste nepřizpůsobili žádná nastavení, vyberte **Ne, stačí obnovit nastavení, přepsat aktuální nastavení**.)
 
-4. Na stránce **Výběr výchozí kolekce nastavení** zvolte **Visual Basic**a pak zvolte **Dokončit**.
+4. Na stránce **Zvolit výchozí kolekci nastavení** zvolte Visual **Basic**a pak zvolte **Dokončit**.
 
-5. Na stránce **obnovení dokončena** klikněte na tlačítko **Zavřít**.
+5. Na stránce **Obnovit dokončení** zvolte **Zavřít**.
 
-Další informace o dalších způsobech mohli přizpůsobit integrovaného vývojového prostředí, najdete v článku [přizpůsobení sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
+Další informace o dalších způsobech přizpůsobení prostředí IDE najdete v [tématu Přizpůsobení sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="create-a-program"></a>Vytvoření programu
 
-Pojďme začít a vytvořit jednoduchý program.
+Pojďme se ponořit a vytvořit jednoduchý program.
 
 ::: moniker range="vs-2017"
 
-1. Na panelu nabídek aplikace Visual Studio vyberte **soubor** > **Nový projekt**.
+1. Na panelu nabídek Sady Visual Studio zvolte **Soubor** > **nového projektu**.
 
-   ![Soubor > Nový projekt v řádku nabídek](media/file-new-project-menu.png)
+   ![Soubor > nový projekt na řádku nabídek](media/file-new-project-menu.png)
 
-   **Nový projekt** dialogové okno zobrazí několik projektů *šablony*. Šablona obsahuje základní souborů a nastavení potřebných pro typ daného projektu.
+   Dialogové okno **Nový projekt** zobrazuje několik *šablon*projektu . Šablona obsahuje základní soubory a nastavení potřebné pro daný typ projektu.
 
-1. Zvolte kategorii **.NET Core** v části **Visual Basic**a pak zvolte šablonu **Konzolová aplikace (.NET Core)** . V **název** textového pole, typ **HelloWorld**a pak vyberte **OK** tlačítko.
+1. V části **Visual Basic**zvolte kategorii **.NET Core** a pak zvolte šablonu Console App **(.NET Core).** Do textového pole **Název** zadejte **HelloWorld**a pak vyberte tlačítko **OK.**
 
-   ![Šablona aplikace .NET core](media/overview-npd.png)
+   ![Šablona aplikace .NET Core](media/overview-npd.png)
 
    > [!NOTE]
-   > Pokud se nezobrazí **.NET Core** kategorie, je nutné nainstalovat **vývoj pro různé platformy .NET Core** pracovního vytížení. Chcete-li to provést, zvolte **otevřít instalační program Visual Studio** odkaz v levé dolní části **nový projekt** dialogového okna. Jakmile se instalační program sady Visual Studio otevře, posuňte se dolů a vyberte **vývoj pro různé platformy .NET Core** úlohy a pak vyberte **změnit**.
+   > Pokud nevidíte kategorii **.NET Core,** je třeba nainstalovat **zatížení vývoje napříč platformami .NET Core.** Chcete-li to provést, zvolte odkaz Otevřít instalační program **sady Visual Studio** v levém dolním rohu dialogového okna Nový **projekt.** Po otevření Instalační služby sady Visual Studio přejděte dolů a vyberte **vývojové úlohy .NET Core pro různé platformy** a pak vyberte **Změnit**.
 
-   Visual Studio vytvoří projekt. To je jednoduchá aplikace "Hello World", která volá <xref:System.Console.WriteLine?displayProperty=nameWithType> metodu pro zobrazení řetězcový literál "Hello World!" v okně konzoly (výstup programu).
+   Visual Studio vytvoří projekt. Je to jednoduchá aplikace "Hello World", která volá metodu <xref:System.Console.WriteLine?displayProperty=nameWithType> pro zobrazení doslovného řetězce "Hello World!" v okně konzoly (výstup programu).
 
-   Po chvíli, by měl vypadat přibližně takto:
+   Krátce, měli byste vidět něco jako následující:
 
    ![Visual Studio – sada IDE](media/overview-ide-console-app.png)
 
-   Kód Visual Basic pro aplikaci se zobrazí v okně editoru, které zabírá většinu místa. Všimněte si, že text je automaticky barevně zvýrazněné k označení různých částí kódu, jako jsou klíčová slova a typy. Kromě toho malé, svislé přerušované čáry v kódu označují, které složené závorky odpovídat mezi sebou a čísla řádků vám pomohou vyhledat kód později. Můžete také malé, zabalený mínus bloky kódu rozbalíte nebo sbalíte. Tento kód funkce osnovy vám umožňuje skrýt kód, který už nebudete potřebovat, a usnadnit tak minimalizovat zbytečné soubory na obrazovce. Soubory projektu jsou uvedeny na pravé straně v okně **Průzkumníka řešení**.
+   Kód jazyka pro aplikaci se zobrazí v okně editoru, který zabírá většinu místa. Všimněte si, že text je automaticky obarven a označuje různé části kódu, například klíčová slova a typy. Kromě toho malé, svislé přerušované čárky v kódu označují, které složená závorky se vzájemně shodují, a čísla řádků vám později pomohou najít kód. Můžete zvolit malé, krabicové znaménko mínus, které chcete sbalit nebo rozbalit bloky kódu. Tato funkce osnovy kódu umožňuje skrýt kód, který nepotřebujete, což pomáhá minimalizovat nepořádek na obrazovce. Soubory projektu jsou uvedeny na pravé straně v okně s názvem **Průzkumník řešení**.
 
-   ![Visual Studio integrované vývojové prostředí s červená pole](media/overview-ide-console-app-red-boxes.png)
+   ![IDE visual studia s červenými rámečky](media/overview-ide-console-app-red-boxes.png)
 
-   K dispozici další nabídky a panely nástrojů, ale teď přejdeme teď.
+   K dispozici jsou další nabídky a okna nástrojů, ale pojďme se přesunout na teď.
 
-1. Nyní spusťte aplikaci. To lze provést výběrem **spustit bez ladění** z **ladění** nabídky na řádku nabídek. Můžete také stisknout klávesu **Ctrl**+**F5**.
+1. Nyní spusťte aplikaci. To lze provést výběrem **možnosti Spustit bez ladění** z nabídky **Ladění** na řádku nabídek. Můžete také stisknout **kombinaci kláves Ctrl**+**F5**.
 
-   ![Ladit > Spustit bez ladění nabídky](../media/overview-start-without-debugging.png)
+   ![Ladění > Spustit bez ladění nabídky](../media/overview-start-without-debugging.png)
 
-   Visual Studio vytvoří aplikaci a otevře se okno konzoly se zprávou **Hello World!** . Nyní máte funkční aplikaci.
+   Visual Studio vytvoří aplikaci a otevře se okno konzoly se zprávou **Hello World!**. Nyní máte spuštěnou aplikaci!
 
    ![Okno konzoly](../media/overview-console-window.png)
 
-1. Zavřete okno konzoly stisknutím libovolné klávesy na klávesnici.
+1. Chcete-li zavřít okno konzoly, stiskněte libovolnou klávesu na klávesnici.
 
-1. Přidejme do aplikace další kód. Přidejte následující kód Visual Basic před řádek, který říká `Console.WriteLine("Hello World!")`:
+1. Pojďme do aplikace přidat nějaký další kód. K řádku, který říká: `Console.WriteLine("Hello World!")`
 
    ```vb
    Console.WriteLine("What is your name?")
    Dim name = Console.ReadLine()
    ```
 
-   Tento kód zobrazí **jak se jmenuješ?** v okně konzoly a potom počká, dokud uživatel zadá nějaký text, za nímž následuje **Enter** klíč.
+   Tento kód zobrazuje V okně konzoly **je vaše jméno** a poté počká, dokud uživatel nezadá nějaký text následovaný klávesou **Enter.**
 
-1. Změňte řádek, který říká `Console.WriteLine("Hello World!")` v následujícím kódu:
+1. Změňte řádek `Console.WriteLine("Hello World!")` s textem na následující kód:
 
    ```vb
    Console.WriteLine("Hello " + name + "!")
    ```
 
-1. Znovu spusťte aplikaci stisknutím **kombinace kláves Ctrl**+**F5**.
+1. Spusťte aplikaci znovu stisknutím **ctrl**+**f5**.
 
-   Visual Studio znovu sestaví aplikaci a otevře se okno konzoly a vás vyzve k zadání název vaší.
+   Visual Studio znovu vytvoří aplikaci a otevře se okno konzoly a zobrazí výzvu k zadání vašeho jména.
 
-1. Zadejte název v okně konzoly a stisknutím klávesy **Enter**.
+1. Do okna konzoly zadejte své jméno a stiskněte **Enter**.
 
-   ![Vstup okno konzoly](../media/overview-console-input.png)
+   ![Vstup okna konzoly](../media/overview-console-input.png)
 
-1. Stisknutím jakékoli klávesy zavřete okno konzoly a zastavit spuštěný program.
+1. Stisknutím libovolné klávesy zavřete okno konzoly a zastavte spuštěný program.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Na panelu nabídek aplikace Visual Studio vyberte **soubor** > **Nový projekt**.
+1. Na panelu nabídek Sady Visual Studio zvolte **Soubor** > **nového projektu**.
 
-   ![Soubor > Nový projekt v řádku nabídek](media/vs-2019/file-new-project.png)
+   ![Soubor > nový projekt na řádku nabídek](media/vs-2019/file-new-project.png)
 
-   Otevře se okno **vytvořit nový projekt** a zobrazí se několik *šablon*projektů. Šablona obsahuje základní souborů a nastavení potřebných pro typ daného projektu.
+   Otevře se okno **Vytvořit nový projekt** a zobrazí se několik *šablon*projektu . Šablona obsahuje základní soubory a nastavení potřebné pro daný typ projektu.
 
-1. Pokud chcete najít požadovanou šablonu, zadejte nebo zadejte do vyhledávacího pole **konzolu .NET Core** . Seznam šablon, které jsou k dispozici, se automaticky filtruje na základě klíčových slov, která jste zadali. Výsledky šablony můžete dál filtrovat volbou **Visual Basic** v rozevíracím seznamu **jazyk** .
+1. Chcete-li najít šablonu, kterou chceme, zadejte nebo zadejte do vyhledávacího pole **konzolu .net core.** Seznam dostupných šablon se automaticky filtruje na základě zadaných klíčových slov. Výsledky šablony můžete dále filtrovat výběrem **jazyka Visual Basic** z rozevíracího seznamu **Jazyk.**
 
-1. Vyberte šablonu **aplikace konzoly (.NET Core)** a klikněte na tlačítko **Další**.
+1. Vyberte šablonu **Konzola aplikace (.NET Core)** a pak zvolte **Další**.
 
-   ![Vytvoření nového projektu v aplikaci Visual Studio](media/vs-2019/create-new-project.png)
+   ![Vytvoření nového projektu v sadě Visual Studio](media/vs-2019/create-new-project.png)
 
-1. V okně **Konfigurovat nový projekt** zadejte do pole **název projektu** **HelloWorld** a volitelně změňte umístění adresáře pro soubory projektu a pak zvolte **vytvořit**.
+1. V okně **Konfigurovat nový projekt** zadejte **HelloWorld** do pole **Název projektu,** volitelně změňte umístění adresáře pro soubory projektu a pak zvolte **Vytvořit**.
 
-   ![Konfigurace nového projektu v aplikaci Visual Studio](media/vs-2019/configure-new-project.png)
+   ![Konfigurace nového projektu v sadě Visual Studio](media/vs-2019/configure-new-project.png)
 
-   Visual Studio vytvoří projekt. To je jednoduchá aplikace "Hello World", která volá <xref:System.Console.WriteLine?displayProperty=nameWithType> metodu pro zobrazení řetězcový literál "Hello World!" v okně konzoly (výstup programu).
+   Visual Studio vytvoří projekt. Je to jednoduchá aplikace "Hello World", která volá metodu <xref:System.Console.WriteLine?displayProperty=nameWithType> pro zobrazení doslovného řetězce "Hello World!" v okně konzoly (výstup programu).
 
-   Po chvíli, by měl vypadat přibližně takto:
+   Krátce, měli byste vidět něco jako následující:
 
    ![Visual Studio – sada IDE](media/overview-ide-console-app.png)
 
-   Kód Visual Basic pro aplikaci se zobrazí v okně editoru, které zabírá většinu místa. Všimněte si, že text je automaticky barevně zvýrazněné k označení různých částí kódu, jako jsou klíčová slova a typy. Kromě toho malé, svislé přerušované čáry v kódu označují, které složené závorky odpovídat mezi sebou a čísla řádků vám pomohou vyhledat kód později. Můžete také malé, zabalený mínus bloky kódu rozbalíte nebo sbalíte. Tento kód funkce osnovy vám umožňuje skrýt kód, který už nebudete potřebovat, a usnadnit tak minimalizovat zbytečné soubory na obrazovce. Soubory projektu jsou uvedeny na pravé straně v okně **Průzkumníka řešení**.
+   Kód jazyka pro aplikaci se zobrazí v okně editoru, který zabírá většinu místa. Všimněte si, že text je automaticky obarven a označuje různé části kódu, například klíčová slova a typy. Kromě toho malé, svislé přerušované čárky v kódu označují, které složená závorky se vzájemně shodují, a čísla řádků vám později pomohou najít kód. Můžete zvolit malé, krabicové znaménko mínus, které chcete sbalit nebo rozbalit bloky kódu. Tato funkce osnovy kódu umožňuje skrýt kód, který nepotřebujete, což pomáhá minimalizovat nepořádek na obrazovce. Soubory projektu jsou uvedeny na pravé straně v okně s názvem **Průzkumník řešení**.
 
-   ![Visual Studio integrované vývojové prostředí s červená pole](media/overview-ide-console-app-red-boxes.png)
+   ![IDE visual studia s červenými rámečky](media/overview-ide-console-app-red-boxes.png)
 
-   K dispozici další nabídky a panely nástrojů, ale teď přejdeme teď.
+   K dispozici jsou další nabídky a okna nástrojů, ale pojďme se přesunout na teď.
 
-1. Nyní spusťte aplikaci. To lze provést výběrem **spustit bez ladění** z **ladění** nabídky na řádku nabídek. Můžete také stisknout klávesu **Ctrl**+**F5**.
+1. Nyní spusťte aplikaci. To lze provést výběrem **možnosti Spustit bez ladění** z nabídky **Ladění** na řádku nabídek. Můžete také stisknout **kombinaci kláves Ctrl**+**F5**.
 
-   ![Ladit > Spustit bez ladění nabídky](media/vs-2019/start-without-debugging.png)
+   ![Ladění > Spustit bez ladění nabídky](media/vs-2019/start-without-debugging.png)
 
-   Visual Studio vytvoří aplikaci a otevře se okno konzoly se zprávou **Hello World!** . Nyní máte funkční aplikaci.
+   Visual Studio vytvoří aplikaci a otevře se okno konzoly se zprávou **Hello World!**. Nyní máte spuštěnou aplikaci!
 
    ![Okno konzoly](../media/vs-2019/overview-console-window.png)
 
-1. Zavřete okno konzoly stisknutím libovolné klávesy na klávesnici.
+1. Chcete-li zavřít okno konzoly, stiskněte libovolnou klávesu na klávesnici.
 
-1. Přidejme do aplikace další kód. Přidejte následující kód Visual Basic před řádek, který říká `Console.WriteLine("Hello World!")`:
+1. Pojďme do aplikace přidat nějaký další kód. K řádku, který říká: `Console.WriteLine("Hello World!")`
 
    ```vb
    Console.WriteLine("What is your name?")
    Dim name = Console.ReadLine()
    ```
 
-   Tento kód zobrazí **jak se jmenuješ?** v okně konzoly a potom počká, dokud uživatel zadá nějaký text, za nímž následuje **Enter** klíč.
+   Tento kód zobrazuje V okně konzoly **je vaše jméno** a poté počká, dokud uživatel nezadá nějaký text následovaný klávesou **Enter.**
 
-1. Změňte řádek, který říká `Console.WriteLine("Hello World!")` v následujícím kódu:
+1. Změňte řádek `Console.WriteLine("Hello World!")` s textem na následující kód:
 
    ```vb
    Console.WriteLine("Hello " + name + "!")
    ```
 
-1. Znovu spusťte aplikaci stisknutím **kombinace kláves Ctrl**+**F5**.
+1. Spusťte aplikaci znovu stisknutím **ctrl**+**f5**.
 
-   Visual Studio znovu sestaví aplikaci a otevře se okno konzoly a vás vyzve k zadání název vaší.
+   Visual Studio znovu vytvoří aplikaci a otevře se okno konzoly a zobrazí výzvu k zadání vašeho jména.
 
-1. Zadejte název v okně konzoly a stisknutím klávesy **Enter**.
+1. Do okna konzoly zadejte své jméno a stiskněte **Enter**.
 
    ![Okno konzoly](../media/vs-2019/overview-console-input.png)
 
-1. Stisknutím jakékoli klávesy zavřete okno konzoly a zastavit spuštěný program.
+1. Stisknutím libovolné klávesy zavřete okno konzoly a zastavte spuštěný program.
 
 ::: moniker-end
 
-## <a name="use-refactoring-and-intellisense"></a>Refaktoring a technologie IntelliSense
+## <a name="use-refactoring-and-intellisense"></a>Použití refaktoringu a technologie IntelliSense
 
-Podívejme se na několik způsobů, jak, který [refaktoring](../../ide/refactoring-in-visual-studio.md) a [IntelliSense](../../ide/using-intellisense.md) může pomoct kód efektivněji.
+Podívejme se na několik způsobů, jak [refaktoring](../../ide/refactoring-in-visual-studio.md) a [IntelliSense](../../ide/using-intellisense.md) vám může pomoci kód efektivněji.
 
-Nejprve přejmenujme `name` proměnné:
+Nejprve přejmenujme proměnnou: `name`
 
-1. Dvakrát klikněte `name` proměnnou, která ho vyberte.
+1. Poklepejte `name` na proměnnou a vyberte ji.
 
 2. Zadejte nový název proměnné, **uživatelské jméno**.
 
-   Všimněte si, že šedé pole se zobrazí kolem proměnnou a žárovky se zobrazí na okraji.
+   Všimněte si, že se kolem proměnné zobrazí šedé pole a na okraji se zobrazí žárovka.
 
-3. Vyberte ikonu žárovky k zobrazení dostupných [rychlé akce](../../ide/quick-actions.md). Vyberte **přejmenovat "název" na "username"** .
+3. Výběrem ikony žárovky zobrazíte dostupné [rychlé akce](../../ide/quick-actions.md). Vyberte **Přejmenovat 'jméno' na 'uživatelské jméno'**.
 
-   ![Přejmenujte akci v sadě Visual Studio](media/rename-quick-action.png)
+   ![Přejmenování akce v sadě Visual Studio](media/rename-quick-action.png)
 
-   Proměnná je přejmenovat v projektu, který v našem případě je pouze dvě místa.
+   Proměnná je přejmenována v rámci projektu, což je v našem případě pouze dvě místa.
 
-4. Nyní Pojďme se podívat na IntelliSense. Pod řádkem, který říká `Console.WriteLine("Hello " + username + "!")`, zadejte následující fragment kódu:
+4. Nyní se podívejme na IntelliSense. Pod řádek, `Console.WriteLine("Hello " + username + "!")`který říká , zadejte následující fragment kódu:
 
     ```vb
    Dim now = Date.
    ```
 
-   Pole zobrazuje jako objekty její členové <xref:System.DateTime> třídy. Popis aktuálně vybraného člena se navíc zobrazí v rámci samostatného pole.
+   V poli se zobrazí <xref:System.DateTime> členové třídy. Kromě toho se popis aktuálně vybraného člena zobrazí v samostatném poli.
 
-   ![Seznam členů IntelliSense v sadě Visual Studio](media/intellisense-list-members.png)
+   ![Členové seznamu IntelliSense v sadě Visual Studio](media/intellisense-list-members.png)
 
-5. Vyberte člen s názvem **nyní**, který je vlastností třídy, dvojím kliknutím na něj nebo jeho výběrem pomocí šipek nahoru nebo dolů a stisknutím klávesy **TAB**.
+5. Vyberte člena s názvem **Nyní**, což je vlastnost třídy, poklepáním na něj nebo jeho výběrem pomocí kláves se šipkami nahoru nebo dolů a stisknutím **klávesy Tab**.
 
-6. Níže zadejte nebo vložte následující řádky kódu:
+6. Pod tím zadejte nebo vložte následující řádky kódu:
 
    ```vb
    Dim dayOfYear = now.DayOfYear
@@ -445,72 +445,72 @@ Nejprve přejmenujme `name` proměnné:
    ```
 
    > [!TIP]
-   > <xref:System.Console.Write%2A?displayProperty=nameWithType> se mírně liší na <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> v tom, že po vytiskne nepřidá znakem ukončení řádku. To znamená, že další část textu, které je odesláno výstup vytiskne na stejném řádku. Myší nad každá z těchto metod v kódu zobrazíte jejich popis.
+   > <xref:System.Console.Write%2A?displayProperty=nameWithType>je trochu jiný <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> v tom, že nepřidává řádek zakončení po vytištění. To znamená, že další text, který je odeslán do výstupu, se vytiskne na stejném řádku. Můžete najet nad každou z těchto metod v kódu zobrazíte jejich popis.
 
-7. V dalším kroku použijeme refaktoring znovu provést trochu stručnější kód. Klikněte na proměnnou `now` v řádku `Dim now = Date.Now`.
+7. Dále použijeme refaktoring znovu, aby byl kód trochu výstižnější. Klikněte na `now` proměnnou `Dim now = Date.Now`v řádku .
 
-   Všimněte si, že malou ikonu šroubovák se zobrazí na okraji na daném řádku.
+   Všimněte si, že na okraji na tomto řádku se objeví malá ikona šroubováku.
 
-8. Klikněte na ikonu šroubovák návrhy, které nabízí Visual Studio. V tomto případě se zobrazuje [vložená dočasná](../../ide/reference/inline-temporary-variable.md) refaktoring proměnné pro odebrání řádku kódu beze změny celkového chování kódu:
+8. Kliknutím na ikonu šroubováku zobrazíte, jaké návrhy má Visual Studio k dispozici. V tomto případě se zobrazuje [inline dočasné proměnné](../../ide/reference/inline-temporary-variable.md) refaktoring odebrat řádek kódu beze změny celkového chování kódu:
 
-   ![Vložené dočasné proměnné refaktoring v sadě Visual Studio](media/inline-temporary-variable-refactoring.png)
+   ![Inline dočasné proměnné refaktoring v sadě Visual Studio](media/inline-temporary-variable-refactoring.png)
 
-9. Klikněte na tlačítko **dočasná proměnná na řádku** Refaktorovat kód.
+9. Chcete-li kód refaktorovat, klepněte na položku **Inline temporary variable.**
 
 ::: moniker range="vs-2017"
 
-10. Spusťte program znovu stisknutím klávesy **Ctrl**+**F5**. Výstup bude vypadat přibližně takto:
+10. Spusťte program znovu stisknutím **klávesctrl**+**F5**. Výstup vypadá asi takto:
 
-    ![Okno konzoly s výstup programu](../media/overview-console-final.png)
+    ![Okno konzoly s výstupem programu](../media/overview-console-final.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-10. Spusťte program znovu stisknutím klávesy **Ctrl**+**F5**. Výstup bude vypadat přibližně takto:
+10. Spusťte program znovu stisknutím **klávesctrl**+**F5**. Výstup vypadá asi takto:
 
-    ![Okno konzoly s výstup programu](../media/vs-2019/overview-console-final.png)
+    ![Okno konzoly s výstupem programu](../media/vs-2019/overview-console-final.png)
 
 ::: moniker-end
 
-## <a name="debug-code"></a>Ladění kódu
+## <a name="debug-code"></a>Ladicí kód
 
-Při psaní kódu, musíte ji spustit a otestovat pro chyby. Ladění systému Visual Studio vám umožní krokovat kód jeden příkaz najednou a kontrolovat proměnné, co využijete. Můžete nastavit *zarážky* , který svém vyvolání zastaví provádění kódu na konkrétní řádek. Můžete sledovat, jak hodnota proměnné změny jako kód spustí a další.
+Při psaní kódu je třeba jej spustit a otestovat na chyby. Systém ladění visual studia umožňuje krokovat kód po jednom příkazu a kontrolovat proměnné. Můžete nastavit *zarážky,* které zastaví provádění kódu na určitém řádku. Můžete sledovat, jak se hodnota proměnné mění při spuštění kódu a další.
 
-Pojďme nastavit zarážku pro její hodnota `username` proměnné při "v cestě" program.
+Nastavíme zarážku tak, aby `username` se zoírá hodnota proměnné, zatímco je program "v letu".
 
-1. Vyhledejte řádek kódu, který říká `Console.WriteLine("Hello " + username + "!")`. Nastavit zarážku na tomto řádku kódu, to znamená, aby program pozastaví provádění na tomto řádku, klikněte v levém okraji editoru. Můžete také kliknout na libovolné místo na řádek kódu a stiskněte klávesu **F9**.
+1. Najděte řádek kódu, `Console.WriteLine("Hello " + username + "!")`který říká . Chcete-li nastavit zarážku na tomto řádku kódu, to znamená, aby program pozastavit provádění na tomto řádku, klepněte na zcela levý okraj editoru. Můžete také kliknout kamkoli v řádku kódu a pak stisknout **klávesu F9**.
 
-   V levém okraji se zobrazí červený kruh a kód se zvýrazní červeně.
+   Na levém okraji se zobrazí červený kruh a kód je zvýrazněn červeně.
 
-   ![Zarážku na řádek kódu v sadě Visual Studio](media/breakpoint.png)
+   ![Zarážka na řádku kódu v sadě Visual Studio](media/breakpoint.png)
 
-1. Spuštění ladění tak, že vyberete **ladění** > **spustit ladění** nebo stisknutím klávesy **F5**.
+1. Ladění můžete spustit výběrem **možnosti Ladění** > **spouštět** ladění nebo stisknutím **klávesy F5**.
 
-1. Když v okně konzoly se zobrazí a vyzve k zadání vaše jméno, zadejte jej a stiskněte klávesu **Enter**.
+1. Když se zobrazí okno konzoly a zeptá se na vaše jméno, zadejte ho a stiskněte **Enter**.
 
-   Fokus se vrátí do editoru kódu sady Visual Studio a řádek kódu se zarážkou se zvýrazní žlutě. To znamená, že se jedná o další řádek kódu, který se spustí program.
+   Fokus se vrátí do editoru kódu sady Visual Studio a řádek kódu s zarážkou je zvýrazněn žlutě. To znamená, že se jedná o další řádek kódu, který program spustí.
 
-1. Najeďte myší `username` proměnnou můžete zobrazit její hodnotu. Alternativně je můžete kliknout pravým tlačítkem na `username` a vyberte **Přidat kukátko** chcete přidat proměnnou **Watch** okno, kde můžete také zobrazit její hodnotu.
+1. Najeďte myší `username` na proměnnou, abyste viděli její hodnotu. Případně můžete kliknout pravým `username` tlačítkem myši a vybrat **přidat hodinky** a přidat proměnnou do okna **Kukátko,** kde můžete také zobrazit její hodnotu.
 
    ![Hodnota proměnné během ladění v sadě Visual Studio](media/debugging-variable-value.png)
 
-1. Aby mohl program dokončen, stiskněte klávesu **F5** znovu.
+1. Chcete-li, aby byl program spuštěn až do konce, stiskněte znovu **klávesu F5.**
 
-Pokud chcete získat další informace o ladění v sadě Visual Studio, naleznete v tématu [prohlídka funkcí ladicího programu](../../debugger/debugger-feature-tour.md).
+Další podrobnosti o ladění v sadě Visual Studio najdete v [tématu prohlídka funkce ladicího programu](../../debugger/debugger-feature-tour.md).
 
 ## <a name="next-steps"></a>Další kroky
 
-Prozkoumejte další Visual Studio na základě společně s některou z těchto úvodní články:
+Prozkoumejte visual studio dále podle následujících spolu s jedním z těchto úvodních článků:
 
 > [!div class="nextstepaction"]
-> [Naučte se používat editor kódu.](tutorial-editor.md)
+> [Naučte se používat editor kódu](tutorial-editor.md)
 
 > [!div class="nextstepaction"]
-> [Seznamte se s projekty a řešení](tutorial-projects-solutions.md)
+> [Další informace o projektech a řešeních](tutorial-projects-solutions.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- Zjistit [další funkce sady Visual Studio](../../ide/advanced-feature-overview.md)
+- Objevte [další funkce sady Visual Studio](../../ide/advanced-feature-overview.md)
 - Navštivte [visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/)
-- Čtení [blogu sady Visual Studio](https://devblogs.microsoft.com/visualstudio/)
+- Přečtěte si [blog visual ateliéru](https://devblogs.microsoft.com/visualstudio/)

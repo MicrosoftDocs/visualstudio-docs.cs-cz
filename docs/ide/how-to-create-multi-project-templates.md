@@ -10,33 +10,33 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 6da7464f5e22e186edff7671744c2605bee3c9ad
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591083"
 ---
-# <a name="how-to-create-multi-project-templates"></a>Postupy: vytváření šablon vícenásobného projektu
+# <a name="how-to-create-multi-project-templates"></a>Postup: Vytvoření šablon pro více projektů
 
-Šablony vícenásobných projektů slouží jako kontejnery pro dva nebo více projektů. Při vytváření projektu, který je založen na šabloně více projektů, je každý projekt v šabloně přidán do řešení.
+Šablony vícenásobných projektů slouží jako kontejnery pro dva nebo více projektů. Když vytvoříte projekt, který je založen na šabloně více projektů, každý projekt v šabloně je přidán do řešení.
 
-Šablona více projektů obsahuje dvě nebo více šablon projektů a kořenovou šablonu typu **Project**.
+Šablona pro více projektů obsahuje dvě nebo více šablon projektu a kořenovou šablonu typu **ProjectGroup**.
 
-Víceprojektové šablony chovat jinak než jeden projekt šablony. Mají následující jedinečné charakteristiky:
+Šablony pro více projektů se chovají jinak než šablony jednoho projektu. Mají následující jedinečné vlastnosti:
 
-- Jednotlivé projekty v šabloně více projektů nelze přiřadit názvy, pokud je šablona použita k vytvoření nového projektu. Místo toho použijte **ProjectName** atribut na **ProjectTemplateLink** prvek *vstemplate* souboru zadejte název pro každý projekt.
+- Jednotlivé projekty v šabloně více projektů nelze přiřadit názvy, pokud je šablona použita k vytvoření nového projektu. Místo toho použijte atribut **ProjectName** na elementu **ProjectTemplateLink** v souboru *vstemplate* k určení názvu pro každý projekt.
 
-- Víceprojektové šablony může obsahovat projekty pro různé jazyky, ale samotné celého šablony lze pouze v jedné kategorii. Zadat kategorii šablony v **ProjectType** elementu *vstemplate* souboru.
+- Šablony více projektů mohou obsahovat projekty pro různé jazyky, ale celá šablona sama o sobě může být zařazena pouze do jedné kategorie. Zadejte kategorii šablony v elementu **ProjectType** souboru *vstemplate.*
 
-Víceprojektové šablony musí obsahovat následující položky do komprimované *ZIP* souboru:
+Šablona pro více projektů musí obsahovat následující položky komprimované do souboru *ZIP:*
 
-- Kořenové *vstemplate* soubor pro celý víceprojektové šabloně. Tento kořenový soubor *vstemplate* obsahuje metadata, která se zobrazí v dialogovém okně, kde vytvoříte nový projekt. Také určuje, kde najít soubory *vstemplate* pro projekty v šabloně. Tento soubor musí být umístěn v kořenovém adresáři *ZIP* souboru.
+- Kořenový soubor *vstemplate* pro celou šablonu více projektů. Tento *kořenový soubor vstemplate* obsahuje metadata, která se zobrazí v dialogovém okně, kde vytvoříte nový projekt. Také určuje, kde najít *vstemplate* soubory pro projekty v šabloně. Tento soubor musí být umístěn v kořenovém adresáři souboru *ZIP.*
 
-- Dvě nebo více složek, které obsahují soubory, které jsou požadovány pro dokončení šablony projektu. Složky zahrne všechny soubory kódu pro projekt a také *vstemplate* souboru projektu.
+- Dvě nebo více složek, které obsahují soubory, které jsou požadovány pro kompletní šablonu projektu. Složky obsahují všechny soubory kódu pro projekt a také *vstemplate* soubor pro projekt.
 
-Například víceprojektové šabloně *ZIP* soubor, který má dva projekty může mít následující soubory a adresáře:
+Například soubor *zip* šablony více projektů, který má dva projekty, může mít následující soubory a adresáře:
 
-- *MultiProjectTemplate.vstemplate*
+- *Šablona MultiProjectTemplate.vstemplate*
 - *\Project1\MyTemplate.vstemplate*
 - *\Project1\Project1.vbproj*
 - *\Project1\Class.vb*
@@ -44,16 +44,16 @@ Například víceprojektové šabloně *ZIP* soubor, který má dva projekty mů
 - *\Project2\Project2.vbproj*
 - *\Project2\Class.vb*
 
-Kořen *vstemplate* soubor pro víceprojektové šabloně se liší od jednoprojektové šablony následujícími způsoby:
+Kořenový soubor *vstemplate* pro šablonu více projektů se liší od šablony jednoho projektu následujícími způsoby:
 
-- **Typ** atribut **VSTemplate** element má hodnotu **ProjectGroup** místo **projektu**. Příklad:
+- Atribut **Type** prvku **VSTemplate** má hodnotu **ProjectGroup** namísto **aplikace Project**. Například:
 
     ```xml
     <VSTemplate Version="2.0.0" Type="ProjectGroup"
         xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     ```
 
-- **TemplateContent** obsahuje element **projectcollection –** element, který má jeden nebo více **ProjectTemplateLink** prvky, které definují cesty *vstemplate* soubory zahrnuté projektů. Příklad:
+- Prvek **TemplateContent** obsahuje prvek **ProjectCollection,** který obsahuje jeden nebo více prvků **ProjectTemplateLink,** které definují cesty k souborům *vstemplate* zahrnutých projektů. Například:
 
     ```xml
     <TemplateContent>
@@ -69,7 +69,7 @@ Kořen *vstemplate* soubor pro víceprojektové šabloně se liší od jednoproj
     ```
 
 > [!TIP]
-> Pokud chcete, aby se šablona více projektů zobrazila v dialogovém okně Nový projekt, nikoli v jednotlivých projektech, které obsahuje, označte vnitřní šablony jako [skryté](../extensibility/hidden-element-visual-studio-templates.md). Příklad:
+> Pokud chcete, aby se šablona více projektů zobrazovala pouze v novém dialogovém okně projektu, nikoli v jednotlivých projektech, které obsahuje, označte vnitřní šablony jako [skryté](../extensibility/hidden-element-visual-studio-templates.md). Například:
 >
 > ```xml
 > <VSTemplate Type="Project" ... >
@@ -81,52 +81,52 @@ Kořen *vstemplate* soubor pro víceprojektové šabloně se liší od jednoproj
 > </VSTemplate>
 > ```
 
-## <a name="create-a-multi-project-template-from-an-existing-solution"></a>Vytvoření šablony s více projekty z existujícího řešení
+## <a name="create-a-multi-project-template-from-an-existing-solution"></a>Vytvoření šablony pro více projektů z existujícího řešení
 
-1. Vytvoření řešení a přidejte dva nebo více projektů.
+1. Vytvořte řešení a přidejte dva nebo více projektů.
 
-2. Přizpůsobení projektů, dokud nebudou připravené nelze exportovat do šablony.
+2. Přizpůsobte projekty, dokud nebudou připraveny k exportu do šablony.
 
    > [!TIP]
-   > Pokud používáte [parametry šablony](template-parameters.md) a chcete odkazovat na proměnné z nadřazené šablony, prefixujte název parametru s `ext_`. Například `$ext_safeprojectname$`. Také nastavte atribut **CopyParameters** elementu **ProjectTemplateLink** na **hodnotu true**.
+   > Pokud používáte [parametry šablony](template-parameters.md) a chcete odkazovat na proměnné z nadřazené `ext_`šablony, předpona název parametru s . Například, `$ext_safeprojectname$`. Nastavte také atribut **CopyParameters** prvku **ProjectTemplateLink** na **hodnotu true**.
    >
    > ```xml
    > <ProjectTemplateLink ProjectName="MyProject" CopyParameters="true">...</ProjectTemplateLink>
    > ```
 
-3. Na **projektu** nabídce zvolte **exportovat šablonu**.
+3. V nabídce **Project** zvolte **Exportovat šablonu**.
 
-   **Průvodce exportem šablony** otevře.
+   Otevře se **Průvodce exportem šablony.**
 
-4. Na **zvolte typ šablony** stránce **šablonu projektu**. Vyberte jeden z projektů, které chcete exportovat do šablony, a poté zvolte možnost **Další**. (Tento postup se opakuje pro každý projekt v řešení.)
+4. Na stránce **Zvolit typ šablony** vyberte **Šablona projektu**. Vyberte jeden z projektů, které chcete exportovat do šablony, a pak zvolte **Další**. (Tyto kroky zopakujete pro každý projekt v řešení.)
 
-5. Na **vyberte možnosti šablony** stránky, zadejte název a volitelný popis, ikona a image ve verzi preview pro šablonu. Zvolte **Dokončit**.
+5. Na stránce **Vybrat možnosti šablony** zadejte název a volitelný popis, ikonu a náhled obrázku pro šablonu. Zvolte **Dokončit**.
 
-   Projekt se exportuje do *ZIP* souboru a je umístěná v zadané výstupní umístění.
+   Projekt je exportován do souboru *ZIP* a umístěn do zadaného výstupního umístění.
 
    > [!NOTE]
-   > Každý projekt musí být exportován do šablony zvlášť, takže zopakujte předchozí kroky pro každý projekt v řešení.
+   > Každý projekt musí být exportován do šablony samostatně, proto opakujte předchozí kroky pro každý projekt v řešení.
 
-6. Vytvořte adresář pro šablony, s podadresář pro každý projekt.
+6. Vytvořte adresář pro šablonu s podadresářem pro každý projekt.
 
-7. Extrahujte obsah každého projektu *ZIP* soubor do odpovídající podadresář, který jste vytvořili.
+7. Extrahujte obsah souboru *ZIP* každého projektu do odpovídajícího podadresáře, který jste vytvořili.
 
-8. V základním adresáři vytvořte soubor XML s *.vstemplate* příponu souboru. Tento soubor obsahuje metadata pro víceprojektové šabloně. Viz příklad, který následuje pro strukturu souboru. Nezapomeňte zadat relativní cestu pro každý projekt *vstemplate* souboru.
+8. V základním adresáři vytvořte soubor XML s příponou *.vstemplate.* Tento soubor obsahuje metadata pro šablonu více projektů. Podívejte se na příklad, který následuje pro strukturu souboru. Nezapomeňte zadat relativní cestu k souboru *vstemplate* každého projektu.
 
-9. Vyberte všechny soubory v adresáři základní a z nabídky, klikněte pravým tlačítkem nebo kontext, zvolte **odeslat** > **komprimovanou složku (ZIP)** .
+9. Vyberte všechny soubory v základním adresáři a v nabídce pravým tlačítkem nebo v místní nabídce zvolte **Odeslat** > **komprimovně (zip) složku**.
 
-   Do jsou komprimované soubory a složky *ZIP* souboru.
+   Soubory a složky jsou komprimovány do souboru *ZIP.*
 
-10. Kopírovat *ZIP* soubor do adresáře projektu šablony uživatele. Ve výchozím nastavení, je tento adresář *%USERPROFILE%\Documents\Visual Studio \<verze\>\Templates\ProjectTemplates*.
+10. Zkopírujte soubor *ZIP* do adresáře šablony projektu uživatele. Ve výchozím nastavení je tento adresář *%USERPROFILE%\Documents\Visual Studio \<verze\>\Templates\ProjectTemplates*.
 
-11. V aplikaci Visual Studio vyberte **soubor** > **Nový** > **projekt** a ověřte, zda se zobrazí vaše šablona.
+11. V Sadě Visual Studio zvolte **Soubor** > **nový** > **projekt** a ověřte, že se vaše šablona zobrazí.
 
-## <a name="two-project-example"></a>Příklad dvou projektu
+## <a name="two-project-example"></a>Příklad dvou projektů
 
-Tento příklad ukazuje základní kořenové víceprojektové *vstemplate* souboru. V tomto příkladu obsahuje šablona dva projekty **My Windows Application** a **My Class Library**. **ProjectName** atribut na **ProjectTemplateLink** prvek určuje název, který je přiřazen do projektu.
+Tento příklad ukazuje základní kořenový soubor *vstemplate* pro více projektů. V tomto příkladu má šablona dva projekty, **Moje aplikace systému Windows** a Moje **knihovna tříd**. Atribut **ProjectName** v elementu **ProjectTemplateLink** určuje název, který je projektu přidělen.
 
 > [!TIP]
-> Pokud **ProjectName** atribut není zadán, název *vstemplate* soubor se používá jako název projektu.
+> Pokud není zadán atribut **ProjectName,** název souboru *vstemplate* se použije jako název projektu.
 
 ```xml
 <VSTemplate Version="2.0.0" Type="ProjectGroup"
@@ -152,7 +152,7 @@ Tento příklad ukazuje základní kořenové víceprojektové *vstemplate* soub
 
 ## <a name="example-with-solution-folders"></a>Příklad se složkami řešení
 
-V tomto příkladu **SolutionFolder** elementu a rozdělit do dvou skupin, projekty **matematické třídy** a **grafických tříd**. Šablona má čtyři projekty, z nichž dva jsou umístěny ve složce jednotlivých řešení.
+Tento příklad používá **SolutionFolder** element rozdělit projekty do dvou skupin, **Matematické třídy** a **grafické třídy**. Šablona má čtyři projekty, z nichž dva jsou umístěny v každé složce řešení.
 
 ```xml
 <VSTemplate Version="2.0.0" Type="ProjectGroup"
@@ -186,10 +186,10 @@ V tomto příkladu **SolutionFolder** elementu a rozdělit do dvou skupin, proje
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Postupy: vytváření šablon projektu](../ide/how-to-create-project-templates.md)
-- [Visual Studio odkaz na schéma šablon (rozšiřitelnost)](../extensibility/visual-studio-template-schema-reference.md)
-- [SolutionFolder – element (šablony sady Visual Studio)](../extensibility/solutionfolder-element-visual-studio-templates.md)
-- [ProjectTemplateLink – element (šablony sady Visual Studio)](../extensibility/projecttemplatelink-element-visual-studio-templates.md)
+- [Postup: Vytvoření šablon projektů](../ide/how-to-create-project-templates.md)
+- [Odkaz na schéma šablony sady Visual Studio (rozšiřitelnost)](../extensibility/visual-studio-template-schema-reference.md)
+- [Element SolutionFolder (šablony sady Visual Studio)](../extensibility/solutionfolder-element-visual-studio-templates.md)
+- [Element ProjectTemplateLink (šablony sady Visual Studio)](../extensibility/projecttemplatelink-element-visual-studio-templates.md)

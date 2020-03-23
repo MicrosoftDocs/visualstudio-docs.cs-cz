@@ -10,59 +10,59 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: f4caebfdc4e61b683e0f1407d1522f6da2328fcf
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591070"
 ---
-# <a name="how-to-create-project-templates"></a>Postupy: vytváření šablon projektu
+# <a name="how-to-create-project-templates"></a>Postup: Vytvoření šablon projektů
 
-V tomto tématu se dozvíte, jak vytvořit šablonu pomocí **Průvodce exportem šablony**, která zabalí vaše šablony v *ZIP* souboru.
+Toto téma ukazuje, jak vytvořit šablonu pomocí **Průvodce exportem šablony**, který ji zabalí do souboru *ZIP.*
 
 ## <a name="use-the-export-template-wizard"></a>Použití Průvodce exportem šablony
 
-1. Vytvoření projektu.
+1. Vytvořte projekt.
 
     > [!NOTE]
-    > Při pojmenování projektu, který bude sloužit jako zdroj šablony, používejte pouze znaky platný identifikátor. V opačném případě kompilace může dojít k chybám v projektech, které jsou vytvořeny ze šablony. Další informace o platný identifikátor znacích naleznete v tématu [deklarované názvy elementu (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/declared-elements/declared-element-names) nebo [identifikátory (C++)](/cpp/cpp/identifiers-cpp). Alternativně můžete použít [parametry šablony](../ide/template-parameters.md) používat "bezpečné" názvy tříd a obory názvů.
+    > Při pojmenování projektu, který bude zdrojem šablony, používejte pouze platné znaky identifikátoru. V opačném případě může dojít k chybám kompilace v projektech, které jsou vytvořeny ze šablony. Další informace o platných znakech identifikátorů naleznete v [tématu Deklarované názvy prvků (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/declared-elements/declared-element-names) nebo [identifikátory (C++).](/cpp/cpp/identifiers-cpp) Alternativně můžete použít [parametry šablony](../ide/template-parameters.md) k použití "bezpečných" názvů pro třídy a obory názvů.
 
-2. Upravte projekt, dokud nebude připravený exportovat jako šablonu. Například můžete chtít upravit soubory kódu k označení, kde by měla probíhat náhrada parametru. Zobrazit [postupy: nahrazení parametrů v šabloně](../ide/how-to-substitute-parameters-in-a-template.md).
+2. Upravte projekt, dokud nebude připraven k exportu jako šablona. Můžete například upravit soubory kódu, které označují, kde má dojít k nahrazení parametrů. Viz [Postup: Nahrazení parametrů v šabloně](../ide/how-to-substitute-parameters-in-a-template.md).
 
-3. Na **projektu** nabídce zvolte **exportovat šablonu**.
+3. V nabídce **Project** zvolte **Exportovat šablonu**.
 
-   **Průvodce exportem šablony** otevře.
+   Otevře se **Průvodce exportem šablony.**
 
-4. Na **zvolte typ šablony** stránce **šablonu projektu**. Vyberte projekt, který chcete exportovat do šablony a klikněte na tlačítko **Další**.
+4. Na stránce **Zvolit typ šablony** vyberte **Šablona projektu**. Vyberte projekt, který chcete exportovat do šablony, a pak zvolte **Další**.
 
 ::: moniker range="vs-2017"
 
-5. Na **vyberte možnosti šablony** stránky, zadejte název a volitelný popis, ikona a image ve verzi preview pro šablonu. Tyto položky se zobrazí v **nový projekt** dialogové okno. Zvolte **Dokončit**.
+5. Na stránce **Vybrat možnosti šablony** zadejte název a volitelný popis, ikonu a náhled obrázku pro šablonu. Tyto položky se zobrazí v dialogovém okně **Nový projekt.** Zvolte **Dokončit**.
 
-   Projekt se exportuje do *ZIP* soubor a umístí do zadané výstupní umístění a, k importu do sady Visual Studio.
+   Projekt je exportován do souboru *ZIP* a umístěn do zadaného výstupního umístění a pokud je vybrán, importován do sady Visual Studio.
 
-Najít šablonu v **nový projekt** dialogového okna rozbalte **nainstalováno** a potom rozbalte kategorii, která odpovídá `ProjectType` element v *.vstemplate*souboru. Například *.vstemplate* soubor, který obsahuje `<ProjectType>CSharp</ProjectType>` se zobrazí v části **nainstalováno** > **Visual C#** , ve výchozím nastavení. Šablony můžete uspořádat do podadresáře typu projektu, stačí jim k vytvoření složky v tomto adresáři a uvedení do šablony *ZIP* soubor v ní. Další informace najdete v tématu [postupy: hledání a organizace šablon](../ide/how-to-locate-and-organize-project-and-item-templates.md).
+Chcete-li najít šablonu v dialogovém okně **Nový projekt,** **rozbalte možnost Nainstalováno** a potom rozbalte kategorii, která odpovídá `ProjectType` prvku v souboru *.vstemplate.* Například soubor *.vstemplate,* `<ProjectType>CSharp</ProjectType>` který obsahuje, se ve výchozím nastavení zobrazí v části **Nainstalováno** > **Visual C#**. Šablonu můžete uspořádat do podadresáře typu projektu pouhým vytvořením složky v tomto adresáři a umístěním souboru *ZIP* šablony. Další informace naleznete v [tématu How to: Locate and organize templates](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-5. Na **vyberte možnosti šablony** stránky, zadejte název a volitelný popis, ikona a image ve verzi preview pro šablonu. Tyto položky se zobrazí v dialogovém okně, kde vytvoříte nový projekt. Zvolte **Dokončit**.
+5. Na stránce **Vybrat možnosti šablony** zadejte název a volitelný popis, ikonu a náhled obrázku pro šablonu. Tyto položky se zobrazí v dialogovém okně, ve kterém vytvoříte nový projekt. Zvolte **Dokončit**.
 
-   Projekt se exportuje do *ZIP* soubor a umístí do zadané výstupní umístění a, k importu do sady Visual Studio.
+   Projekt je exportován do souboru *ZIP* a umístěn do zadaného výstupního umístění a pokud je vybrán, importován do sady Visual Studio.
 
-Chcete-li najít šablonu v dialogovém okně, kde vytvoříte nový projekt, vyhledejte je podle názvu nebo posuňte seznam se seznamem. (Filtrování založené na jazyce nebo typu projektu není aktuálně možné pro uživatelské šablony.)
+Chcete-li najít šablonu v dialogovém okně, ve kterém vytváříte nový projekt, vyhledejte ji podle názvu nebo procházejte seznamem. (Filtrování na základě jazyka nebo typu projektu není v současné době možné pro uživatelské šablony.)
 
 ::: moniker-end
 
-## <a name="other-ways-to-create-project-templates"></a>Další způsoby vytváření šablon projektu
+## <a name="other-ways-to-create-project-templates"></a>Další způsoby vytváření šablon projektů
 
-Můžete vytvořit šablony projektu ručně shromažďováním souborů, které projekt tvoří, do složky a vytvořením souboru XML *. vstemplate* s příslušnými metadaty. Další informace najdete v tématu [postupy: ruční vytvoření webových šablon](../ide/how-to-manually-create-web-templates.md).
+Šablony projektů můžete vytvořit ručně shromážděním souborů, které tvoří projekt, do složky a vytvořením souboru *XML .vstemplate* s příslušnými metadaty. Další informace naleznete v [tématu Postup: Ruční vytváření webových šablon](../ide/how-to-manually-create-web-templates.md).
 
-Pokud máte nainstalované Visual Studio SDK, můžete zabalit dokončená šablona v souboru VSIX pro nasazení pomocí **projekt VSIX** šablony. Další informace najdete v tématu [Začínáme se šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md).
+Pokud máte nainstalovanou sadu Visual Studio SDK, můžete zabalit dokončenou šablonu do souboru VSIX pro nasazení pomocí šablony **Projektu VSIX.** Další informace naleznete [v tématu Začínáme se šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Postupy: Tvorba šablon položek](../ide/how-to-create-item-templates.md)
-- [Začínáme s šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md)
+- [Vytvoření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
+- [Postup: Vytvoření šablon položek](../ide/how-to-create-item-templates.md)
+- [Začínáme se šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md)

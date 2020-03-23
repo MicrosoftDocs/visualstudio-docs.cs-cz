@@ -1,40 +1,43 @@
 ---
-title: Generovat parametr refaktoring
-ms.date: 06/19/2019
+title: Generovat refaktoring parametrů
+ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: e95e76c35afdb8cdbe38c8b33329734ba68361b1
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.openlocfilehash: 372a3f705e5e85c0edb31a754105f61056402b9f
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67329097"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094364"
 ---
-# <a name="generate-parameter"></a>Generovat parametr
+# <a name="generate-parameter"></a>Vygenerování parametru
 
-Tento refaktoring platí pro:
+Toto refaktoring se vztahuje na:
 
 - C#
 
+- Visual Basic
+
 **Co:** Automaticky generuje parametr metody.
 
-**Kdy:** Odkazujete na proměnnou v metodě, která neexistuje v aktuálním kontextu a obdrží chybu; Generovat parametr jako opravu kódu. 
+**Kdy:** Odkazujete na proměnnou v metodě, která neexistuje v aktuálním kontextu a obdrží chybu; můžete vygenerovat parametr jako opravu kódu. 
 
-**Proč:** Můžete rychle změnit podpis metody bez ztráty kontextu.
+**Proč:** Podpis metody můžete rychle upravit bez ztráty kontextu.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte ukazatel myši v názvu proměnné a stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
-1. Vyberte **generovat parametr**.
+1. Umístěte kurzor do názvu proměnné a stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+1. Vyberte **Generovat parametr**.
 
-   ![Generovat parametr](media/generate-parameter.png) 
+   ![Vygenerování parametru](media/generate-parameter.png) 
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Refactoring](../refactoring-in-visual-studio.md)

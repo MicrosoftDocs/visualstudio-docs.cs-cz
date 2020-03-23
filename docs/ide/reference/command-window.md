@@ -1,5 +1,5 @@
 ---
-title: Okno Příkaz
+title: Příkazové okno
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,62 +17,62 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cb855cbed67bffc5ff2fb63b1785c577dd9fea25
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75570346"
 ---
-# <a name="command-window"></a>Okno Příkaz
-**Příkazové** okno se používá ke spouštění příkazů nebo aliasů přímo v integrovaném vývojovém prostředí (IDE) [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Příkazy nabídky a příkazy, které se nezobrazí v žádné nabídce, můžete spustit. Chcete-li zobrazit **příkazové** okno, zvolte možnost **Další okna** v nabídce **zobrazení** a vyberte **příkazová okna**.
+# <a name="command-window"></a>Příkazové okno
+Okno **Příkaz** se používá ke spouštění příkazů [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nebo aliasů přímo v integrovaném vývojovém prostředí (IDE). Můžete provést příkazy nabídky i příkazy, které se nezobrazují v žádné nabídce. Chcete-li zobrazit **okno Příkaz,** zvolte Z nabídky **Zobrazení** vyberte Jiný **systém Windows** a vyberte Příkaz **Window**.
 
 ## <a name="displaying-the-values-of-variables"></a>Zobrazení hodnot proměnných
-Chcete-li zjistit hodnotu proměnné `varA`, použijte [příkaz Print](../../ide/reference/print-command.md):
+Chcete-li zkontrolovat hodnotu proměnné `varA`, použijte příkaz [Tisk](../../ide/reference/print-command.md):
 
 ```cmd
 >Debug.Print varA
 ```
 
-Otazník (?) je alias pro `Debug.Print`, takže tento příkaz lze také zapsat:
+Otazník (?) je `Debug.Print`alias pro , takže tento příkaz může být také zapsán:
 
 ```cmd
 >? varA
 ```
 
-Obě verze tohoto příkazu vrátí hodnotu proměnné `varA`.
+Obě verze tohoto příkazu vrátí hodnotu `varA`proměnné .
 
 ## <a name="entering-commands"></a>Zadávání příkazů
-Symbol větší než (`>`) se zobrazí na levém okraji okno Příkaz jako výzva pro nové řádky. Pomocí kláves Šipka nahoru a šipka dolů můžete procházet předchozí vydané příkazy.
+Symbol větší než`>`( ) se zobrazí na levém okraji okna Příkaz jako výzva k zadání nových řádků. Pomocí kláves ŠIPKA NAHORU a ŠIPKA DOLŮ můžete procházet dříve vydané příkazy.
 
-|Úloha|Řešení|Příklad|
+|Úkol|Řešení|Příklad|
 |----------|--------------|-------------|
-|Vyhodnotit výraz.|Předtvářte výraz s otazníkem (`?`).|`? myvar`|
-|Přepněte do příkazového podokna.|Zadejte `immed` do okna bez znaménka větší než (>).|`immed`|
-|Přepněte zpět na okno Příkaz z příkazového podokna.|Do okna zadejte `cmd`.|`>cmd`|
+|Vyhodnoťte výraz.|Předmluva výrazu s`?`otazníkem ( ).|`? myvar`|
+|Přepněte do okna Okamžité.|Vstup `immed` do okna bez větší než znaménko (>)|`immed`|
+|Přepněte zpět do okna Příkaz z okna Okamžité.|Vstupte `cmd` do okna.|`>cmd`|
 
-Následující klávesové zkratky vám pomůžou s navigací v režimu příkazu.
+Následující klávesové zkratky vám pomohou procházet v režimu příkazu.
 
-|Akce|Umístění kurzoru|KeyBinding teprve|
+|Akce|Umístění kurzoru|Keybinding|
 |------------| - |----------------|
-|Procházení seznamu dříve zadaných příkazů|Vstupní řádek|Šipka nahoru & šipka dolů|
-|Posuňte se do okna.|Obsah okno Příkaz|CTRL + ŠIPKA NAHORU|
-|Posuňte se dolů na okno.|Obsah okno Příkaz|Šipka dolů nebo CTRL + šipka dolů|
+|Procházet seznam emitovaných příkazů.|Vstupní řádek|ŠIPKA NAHORU & ŠIPKA DOLŮ|
+|Posuňte se nahoru v okně.|Obsah okna příkazu|CTRL + ŠIPKA NAHORU|
+|Posuňte se dolů v okně.|Obsah okna příkazu|ŠIPKA DOLŮ nebo CTRL+ŠIPKA DOLŮ|
 
 > [!TIP]
-> Můžete zkopírovat celý nebo celý předchozí příkaz na vstupní řádek tak, že ho posunete, zvýrazníte jeho část nebo jeho část a potom stisknete klávesu ENTER.
+> Můžete zkopírovat celý předchozí příkaz nebo jeho část na vstupní řádek posouváním, zvýrazněním celého příkazu nebo jeho části a stisknutím klávesy ENTER.
 
-## <a name="mark-mode"></a>Režim označení
-Když kliknete na libovolný předchozí řádek v **příkazovém** okně, automaticky se posune do režimu označení. To vám umožní vybrat, upravit a zkopírovat text předchozích příkazů jako v libovolném textovém editoru a vložit je do aktuálního řádku.
+## <a name="mark-mode"></a>Označit režim
+Když kliknete na libovolný předchozí řádek v okně **Příkaz,** automaticky se přesunete do režimu označit. To vám umožní vybrat, upravit a zkopírovat text předchozích příkazů stejně jako v libovolném textovém editoru a vložit je do aktuálního řádku.
 
-## <a name="the-equals--sign"></a>Symbol rovná se (=)
-Okno použité k zadání příkazu `EvaluateStatement` určuje, zda je znak rovná se (=) interpretován jako operátor porovnání nebo jako operátor přiřazení.
+## <a name="the-equals--sign"></a>Znaménko rovná se (=)
+Okno použité k `EvaluateStatement` zadání příkazu určuje, zda je znaménko rovná se (=) interpretováno jako operátor porovnání nebo jako operátor přiřazení.
 
-V **příkazovém** okně je znak rovná se (=) interpretován jako operátor porovnání. V **příkazovém** okně nemůžete použít operátory přiřazení. Takže pokud se například hodnoty proměnných `varA` a `varB` liší, příkaz `>Debug.EvaluateStatement(varA=varB)` vrátí hodnotu `False`.
+V okně **Příkaz** je znaménko rovná se (=) interpretováno jako operátor porovnání. V okně **Příkaz** nelze použít operátory přiřazení. Pokud se tedy například hodnoty `varA` proměnných liší, `varB` příkaz `>Debug.EvaluateStatement(varA=varB)` vrátí hodnotu `False`.
 
-V **příkazovém podokně** je naopak znak rovná se (=) interpretován jako operátor přiřazení. Například `>Debug.EvaluateStatement(varA=varB)` příkazu se přiřadí proměnné `varA` hodnotu proměnné `varB`.
+V okně **Okamžité** je naopak znaménko rovná se (=) interpretováno jako operátor přiřazení. Tak například, příkaz `>Debug.EvaluateStatement(varA=varB)` přiřadí `varA` proměnné hodnotu `varB`proměnné .
 
 ## <a name="parameters-switches-and-values"></a>Parametry, přepínače a hodnoty
-Některé příkazy [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vyžadují a volitelné argumenty, přepínače a hodnoty. Určitá pravidla platí při obchodování s takovými příkazy. V následujícím příkladu je k dispozici příklad bohatých příkazů k objasnění terminologie.
+Některé [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] příkazy mají povinné a volitelné argumenty, přepínače a hodnoty. Při práci s těmito příkazy platí určitá pravidla. Následuje příklad bohatého příkazu k objasnění terminologie.
 
 ```cmd
 Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar
@@ -80,36 +80,36 @@ Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar
 
 V tomhle příkladu je
 
-- `Edit.ReplaceInFiles` je příkaz
+- `Edit.ReplaceInFiles`je příkaz
 
-- `/case` a `/pattern:regex` jsou přepínače (před znakem lomítka [/]).
+- `/case`a `/pattern:regex` jsou přepínače (předlohy znaku lomítka [/])
 
-- `regex` je hodnota přepínače `/pattern`; přepínač `/case` nemá žádnou hodnotu.
+- `regex`je hodnota spínače; `/pattern` `/case` přepínač nemá žádnou hodnotu
 
-- `var[1-3]+` a `oldpar` jsou parametry
+- `var[1-3]+`a `oldpar` jsou parametry
 
     > [!NOTE]
     > Všechny příkazy, parametry, přepínače nebo hodnoty, které obsahují mezery, musí mít na obou stranách dvojité uvozovky.
 
-Pozice přepínačů a parametrů lze volně měnit na příkazovém řádku s výjimkou příkazu [Shell](../../ide/reference/shell-command.md) , který vyžaduje jeho přepínače a parametry v určitém pořadí.
+Poloha přepínačů a parametrů může být volně zaměřována na příkazovém řádku s výjimkou příkazu [Shell,](../../ide/reference/shell-command.md) který vyžaduje jeho přepínače a parametry v určitém pořadí.
 
-Skoro každý přepínač podporovaný příkazem má dvě formy: krátký tvar (jeden znak) a dlouhý tvar. Do skupiny lze sloučit více přepínačů s krátkým tvarem. Například `/p /g /m` může být vyjádřena Alternativně jako `/pgm`.
+Téměř každý přepínač podporovaný příkazem má dvě formy: krátký (jeden znak) formulář a dlouhý formulář. Více přepínačů krátkého tvaru lze kombinovat do skupiny. Například `/p /g /m` může být vyjádřena `/pgm`střídavě jako .
 
-Pokud jsou zkrácené přepínače kombinovány do skupiny a zadány hodnoty, tato hodnota se vztahuje na každý přepínač. Například `/pgm:123` bude rovno `/p:123 /g:123 /m:123`. Pokud některý z přepínačů ve skupině nepřijímá hodnotu, dojde k chybě.
+Pokud jsou přepínače krátkého tvaru sloučeny do skupiny a mají hodnotu, tato hodnota platí pro každý přepínač. Například `/pgm:123` se rovná `/p:123 /g:123 /m:123`. K chybě dochází, pokud některý z přepínačů ve skupině nepřijímá hodnotu.
 
 ## <a name="escape-characters"></a>Řídicí znaky
-Znak stříšky (^) na příkazovém řádku znamená, že znak bezprostředně za ním je interpretován doslova, nikoli jako řídicí znak. To slouží k vložení uvozovek ("), mezer, úvodních lomítek, střížek nebo jakýmikoli literálními znaky parametru nebo hodnotě switch s výjimkou názvů switchů. Například
+Znak stříšky (^) v příkazovém řádku znamená, že znak bezprostředně za ním je interpretován doslovně, nikoli jako řídicí znak. To lze použít k vložení rovných uvozovek (), mezery, úvodní lomítka, stříšky nebo jiné literál znaky v parametru nebo přepínač hodnoty, s výjimkou názvů přepínačů. Například:
 
 ```cmd
 >Edit.Find ^^t /regex
 ```
 
-Stříška funguje stejně, ať už se jedná o vnitřní nebo vnější uvozovky. Pokud poslední znak na řádku stříška, je ignorován. Zde uvedený příklad ukazuje, jak vyhledat vzor "^ t".
+Stříška funguje stejně bez ohledu na to, zda je uvnitř nebo vně uvozovek. Pokud stříška je poslední znak na řádku, je ignorována. Zde uvedený příklad ukazuje, jak vyhledat vzor ^t.
 
 ## <a name="use-quotes-for-path-names-with-spaces"></a>Použití uvozovek pro názvy cest s mezerami
-Pokud například chcete otevřít soubor, který obsahuje cestu obsahující mezery, je nutné umístit dvojité uvozovky kolem cesty nebo segmentu cesty, který obsahuje mezery: **C:\\"Program Files"** nebo **"C:\Program Files"** .
+Pokud například chcete otevřít soubor, který má cestu obsahující mezery, musíte dát dvojité uvozovky kolem cesty nebo segmentu cesty, který obsahuje mezery: **C:\\"ProgramFiles"** nebo **"C:\Program Files"**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)

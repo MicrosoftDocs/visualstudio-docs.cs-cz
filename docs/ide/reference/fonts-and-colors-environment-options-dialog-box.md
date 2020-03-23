@@ -26,232 +26,232 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9d5c9edd47e3db43735d3c6e8f6a4ec1a881214e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595615"
 ---
 # <a name="fonts-and-colors-environment-options-dialog-box"></a>Písma a barvy, prostředí, dialogové okno Možnosti
 
-Stránka **písma a barvy** v dialogovém okně **Možnosti** umožňuje vytvořit vlastní písmo a barevné schéma pro různé prvky uživatelského rozhraní v integrovaném vývojovém prostředí (IDE). K tomuto dialogovému oknu se dostanete tak, že kliknete na **nástroje** > **Možnosti**a pak vyberete **prostředí** > **písma a barvy**.
+Stránka **Písma a barvy** v dialogovém okně **Možnosti** umožňuje vytvořit vlastní písmo a barevné schéma pro různé prvky uživatelského rozhraní v integrovaném vývojovém prostředí (IDE). K tomuto dialogovému oknu se dostanete klepnutím na**položku Možnosti** **nástroje** > a výběrem**možnosti Písma a barvy** **prostředí** > .
 
-Změny barevného schématu se neprojeví během relace, ve které jste je provedli. Změny barev můžete vyhodnotit tak, že otevřete jinou instanci aplikace Visual Studio a vydáte podmínky, za kterých očekáváte, že se vaše změny použijí.
+Změny barevného schématu se neprojeví během relace, ve které je provedete. Změny barev můžete vyhodnotit otevřením jiné instance sady Visual Studio a vytvořením podmínek, za kterých očekáváte, že změny použít.
 
 **Zobrazit nastavení pro**
 
-Obsahuje seznam všech prvků uživatelského rozhraní, u kterých můžete měnit schémata písma a barev. Po výběru položky z tohoto seznamu můžete přizpůsobit nastavení barev pro položku vybranou v **zobrazení položky**.
+Zobrazí seznam všech prvků uživatelského rozhraní, pro které můžete změnit písma a barevná schémata. Po výběru položky z tohoto seznamu můžete přizpůsobit nastavení barev pro položku vybranou v **části Zobrazit položky**.
 
-- **Textový Editor**
+- **Textový editor**
 
-     Změny stylu písma, velikosti a nastavení barev v textovém editoru ovlivňují vzhled textu ve výchozím textovém editoru. Pomocí těchto nastavení nebudou ovlivněny dokumenty otevřené v textovém editoru mimo rozhraní IDE.
+     Změny nastavení stylu, velikosti a zobrazení barev pro textový editor ovlivňují vzhled textu ve výchozím textovém editoru. Dokumenty otevřené v textovém editoru mimo rozhraní IDE nebudou těmito nastaveními ovlivněny.
 
-- **Tiskárně**
+- **Tiskárna**
 
-     Změny stylu písma, velikosti a nastavení barev pro tiskárnu ovlivní vzhled textu ve vytištěných dokumentech.
+     Změny nastavení stylu, velikosti a zobrazení barev pro tiskárnu ovlivňují vzhled textu v tištěných dokumentech.
 
     > [!NOTE]
-    > Podle potřeby můžete pro tisk vybrat jiné výchozí písmo, než které se používá pro zobrazení v textovém editoru. To může být užitečné při tisku kódu, který obsahuje jednobajtové i dvoubajtové znaky.
+    > Podle potřeby můžete vybrat jiné výchozí písmo pro tisk, než které se používá pro zobrazení v textovém editoru. To může být užitečné při tisku kódu, který obsahuje jednobajtové i dvoubajtové znaky.
 
-- **Dokončování příkazů**
+- **Doplňování výrazů**
 
-     Změní styl písma a velikost textu, který se zobrazí v místním okně dokončování příkazů v editoru.
+     Změní styl a velikost písma pro text, který se zobrazí v rozbalovacím okně dokončování příkazů v editoru.
 
-- **Popis editoru**
+- **Popisek editoru**
 
-     Změní styl písma a velikost textu, který se zobrazí v popiscích tlačítek zobrazených v editoru.
+     Změní styl a velikost písma pro text, který se zobrazí v popiscích zobrazených v editoru.
 
 - **Písmo prostředí**
 
-     Změní styl písma a velikost pro všechny prvky uživatelského rozhraní IDE, které ještě nemají samostatnou možnost v části **Zobrazit nastavení pro**.
+     Změní styl a velikost písma pro všechny prvky uživatelského rozhraní IDE, které ještě nemají samostatnou možnost v **nastavení zobrazit pro**.
 
      ::: moniker range="vs-2017"
 
-     Například tato možnost se vztahuje na **úvodní stránku** , ale nemá vliv na okno **výstup** .
+     Tato možnost se například vztahuje na **úvodní stránku,** ale nemá vliv na okno **Výstup.**
 
      ::: moniker-end
 
-- **[Všechna okna textových nástrojů]**
+- **[Všechny textové nástroje Windows]**
 
-     Změny stylu písma, velikosti a nastavení barev pro tuto položku ovlivňují vzhled textu v oknech nástrojů, které mají výstupní podokna v integrovaném vývojovém prostředí (IDE). Například okno výstup, okno Příkaz, okamžité okno atd.
+     Změny nastavení stylu, velikosti a zobrazení barev pro tuto položku ovlivňují vzhled textu v oknech nástrojů, která mají výstupní podokna v prostředí IDE. Například okno Výstup, Okno příkazu, Okamžité okno atd.
 
     > [!NOTE]
-    > Změny textu **[všechna okna textových nástrojů]** se neprojeví během relace, ve které jste je provedli. Tyto změny můžete vyhodnotit otevřením jiné instance aplikace Visual Studio.
+    > Změny textu položek **[Všechny textové nástroje systému Windows]** se neprojeví během relace, ve které je provedete. Tyto změny můžete vyhodnotit otevřením jiné instance sady Visual Studio.
 
-**Použít výchozí**
+**Použít výchozí hodnoty**
 
-Obnoví hodnoty písma a barev položky seznamu vybrané v **možnosti Zobrazit nastavení pro**. Tlačítko **použít** se zobrazí, pokud jsou pro výběr k dispozici další schémata zobrazení. Můžete si například vybrat ze dvou schémat pro tiskárnu.
+Obnoví hodnoty písma a barev položky seznamu vybrané v **části Zobrazit nastavení pro aplikace**. Tlačítko **Použít** se zobrazí, když jsou k dispozici pro výběr jiná schémata zobrazení. Můžete si například vybrat ze dvou schémat pro tiskárnu.
 
-**Font (tučný typ indikuje písma s pevnou šířkou)**
+**Písmo (tučné písmo označuje písma s pevnou šířkou)**
 
-Zobrazí seznam všech písem nainstalovaných ve vašem systému. Při prvním zobrazení rozevírací nabídky se zvýrazní aktuální písmo pro prvek vybraný v poli **Zobrazit nastavení pro** . Pevná písma, která jsou v editoru jednodušší, se zobrazují tučně.
+Zobrazí seznam všech písem nainstalovaných v systému. Když se poprvé zobrazí rozevírací nabídka, zvýrazní se aktuální písmo prvku vybraného v poli **Zobrazit nastavení pro** pole. Pevná písma, která se v editoru snadněji zarovnávají, se zobrazují tučně.
 
 **Velikost**
 
-Vypíše dostupné velikosti bodů pro zvýrazněné písmo. Změna velikosti písma má vliv na všechny **položky zobrazení** pro volbu **Zobrazit nastavení pro** výběr.
+Zobrazí dostupné velikosti bodů zvýrazněného písma. Změna velikosti písma ovlivní všechny **položky zobrazení** **pro nastavení zobrazení pro** výběr.
 
 **Zobrazit položky**
 
-Obsahuje seznam položek, pro které lze změnit barvu popředí a pozadí.
+Zobrazí seznam položek, u kterých můžete upravit barvu popředí a pozadí.
 
 > [!NOTE]
-> Výchozí položkou zobrazení je **prostý text** . V takovém případě vlastnosti přiřazené k **prostému textu** budou přepsány vlastnostmi přiřazenými jiným položkám zobrazení. Například pokud přiřadíte barvu modrou jako **prostý text** a zelenou barvu na **identifikátor**, všechny identifikátory budou zobrazeny zeleně. V tomto příkladu vlastnosti **identifikátoru** přepisují vlastnosti **nešifrovaného textu** .
+> **Prostý text** je výchozí položka zobrazení. Vlastnosti přiřazené **ke formátu PlainText** budou takto přepsány vlastnostmi přiřazenými jiným položkám zobrazení. Pokud například přiřadíte modrou barvu **plaintextu** a zelenou barvu **identifikátoru**, všechny identifikátory se zobrazí zeleně. V tomto příkladu vlastnosti **identifikátoru** přepíší vlastnosti **prostého textu.**
 
-Mezi některé položky zobrazení patří:
+Některé položky zobrazení zahrnují:
 
 |Zobrazit položku|Popis|
 |------------------|-----------------|
-|**Prostý text**|Text v editoru|
-|**Vybraný text**|Text, který je obsažen v aktuálním výběru, když má Editor fokus.|
-|**Neaktivní vybraný text**|Text, který je zahrnut v aktuálním výběru, když Editor ztratil fokus.|
-|**Okraj indikátoru**|Okraj na levé straně editoru kódu, kde se zobrazují zarážky a ikony záložek.|
-|**Čísla řádků**|Volitelná čísla, která se zobrazí vedle každého řádku kódu|
-|**Viditelné prázdné znaky**|Mezery, tabulátory a indikátory zalamování slov|
-|**záložky**|Řádky, které mají záložky. **Záložka** je viditelná pouze v případě, že je okraj indikátoru zakázán.|
-|**Spárování složených závorek (zvýraznění)**|Zvýraznění, které obvykle formátuje tučně pro odpovídající závorky.|
-|**Spárování složených závorek (obdélník)**|Zvýraznění, které je obvykle šedý obdélník na pozadí.|
-|**Zarážka (zakázaná)**|Nepoužívá se.|
-|**Zarážka (povolena)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující jednoduché zarážky. Tato možnost je k dispozici pouze v případě, že jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** pro [Obecné, ladění, dialogové okno Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka (chyba)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující zarážky, které jsou v chybovém stavu. Platí pouze v případě, že jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka (upozornění)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující zarážky, které jsou ve stavu upozornění. Platí pouze v případě, že jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka-Rozšířená (zakázána)**|Určuje barvu zvýraznění pro příkazy nebo řádky, které obsahují zakázané zarážky podmíněného nebo vypočítaného počtu volání. Platí pouze v případě, že jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka-Rozšířená (povolena)**|Určuje barvu zvýraznění pro příkazy nebo řádky, které obsahují podmíněné a zahozené zarážky. Platí pouze v případě, že jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka-Rozšířená (chyba)**|Určuje barvu zvýraznění pro příkazy nebo řádky, které obsahují podmíněné a zahozené zarážky, které jsou v chybovém stavu. Platí pouze v případě, že jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka-Rozšířená (upozornění)**|Určuje barvu zvýraznění pro příkazy nebo řádky, které obsahují podmíněné a zahozené zarážky, které jsou ve stavu upozornění. Platí pouze v případě, že jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka-mapovaná (zakázaná)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující zakázané mapované zarážky. Platí pro ladění skriptů ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** , a to v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka-mapovaná (povolená)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující namapované zarážky. Platí pro ladění skriptů ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** , a to v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka-mapovaná (chyba)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující namapované zarážky v chybovém stavu. Platí pro ladění skriptů ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** , a to v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka-mapovaná (upozornění)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující namapované zarážky ve stavu upozornění. Platí pro ladění skriptů ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** , a to v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**KlíčováC++ slova jazyka C/uživatele**|Konstanta v rámci určitého souboru kódu definovaného prostřednictvím direktivy `#define`.|
-|**Volání metody Return**|Určuje barvu zvýraznění pro zdrojové příkazy nebo řádky, které označují vracené body volání, když je kontext přepnut na rámec nehorního zásobníku při ladění.|
-|**Pole závislé na fragmentu kódu**|Pole, které bude aktualizováno při úpravě aktuálního upravitelného pole.|
-|**Pole fragmentu kódu**|Upravitelné pole, když je fragment kódu aktivní|
-|**Sbalitelný text**|Blok textu nebo kódu, který lze přepnout a z pohledu zobrazení v editoru kódu.|
-|**Komentování**|Komentáře ke kódu.|
-|**Chyba kompilátoru**|Modré vlnovky v editoru indikující chybu kompilátoru.|
-|**Pokrytí – nedotčená oblast**|Kód, který nebyl pokryt jednotkovým testem.|
-|**Pokrytí částečně prokryté oblasti**|Kód, který byl částečně pokryt jednotkovým testem.|
-|**Disponibilní oblast pokrytí**|Kód, který byl zcela pokryt jednotkovým testem.|
-|**Komentář CSS**|Komentář v šablony stylů CSS. Příklad:<br /><br /> /* komentář \*/|
-|**Klíčové slovo CSS**|Klíčová slova v šabloně stylů CSS.|
-|**Název vlastnosti CSS**|Název vlastnosti, například pozadí.|
-|**Hodnota vlastnosti CSS**|Hodnota přiřazená vlastnosti, například modrá.|
-|**Selektor šablon stylů CSS**|Řetězec určující, na které prvky se odpovídající pravidlo vztahují. Selektor může být jednoduchý selektor, například "H1" nebo kontextový selektor, například "H1 B", který se skládá z několika jednoduchých selektorů.|
-|**Hodnota řetězce CSS**|Řetězec v šablony stylů CSS.|
-|**Aktuální umístění seznamu**|Aktuální řádek přešel do okna nástroje seznamu, jako je například okno výstup nebo okna výsledků hledání.|
-|**Aktuální příkaz**|Určuje barvu zvýraznění zdrojového příkazu nebo řádku, který označuje pozici aktuálního kroku při ladění.|
-|**Data ladicího programu se změnila**|Barva textu používaná k zobrazení změněných dat v oknech **Registry** a **paměť**|
-|**Pozadí okna definice**|Barva pozadí okna **definice kódu** .|
-|**Aktuální shoda okna definice**|Aktuální definice v okně **definice kódu** .|
-|**Název souboru zpětného překladu**|Barva textu používaná pro zobrazení konců názvů souborů v okně zpětného **překladu**|
-|**Zdroj zpětného překladu**|Barva textu používaná k zobrazení řádků zdroje uvnitř okna zpětného **překladu**|
-|**Symbol zpětného překladu**|Barva textu používaná pro zobrazení názvů symbolů v okně zpětného **překladu**|
-|**Text zpětného překladu**|Barva textu používaná pro zobrazení op-Code a data uvnitř okna zpětného **překladu** .|
-|**Vyloučený kód**|Kód, který nemá být zkompilován, pro podmíněnou direktivu preprocesoru, například `#if`.|
-|**RID**|Identifikátory v kódu, jako jsou názvy tříd, názvy metod a názvy proměnných.|
-|**Klíčové slovo**|Klíčová slova pro daný jazyk, která jsou vyhrazena. Například: Class a Namespace.|
-|**Adresa paměti**|Barva textu použitá pro zobrazení sloupce adresa v okně **paměti**|
-|**Paměť změněna**|Barva textu používaná k zobrazení změněných dat v okně **paměti**|
-|**Data paměti**|Barva textu používaná k zobrazení dat v okně **paměti**|
-|**Paměť je nečitelná.**|Barva textu používaná k zobrazení nečitelných paměťových oblastí v okně **paměti**|
+|**Prostý text**|Text v editoru.|
+|**Vybraný text**|Text, který je zahrnut v aktuálním výběru, když má editor fokus.|
+|**Neaktivní vybraný text**|Text, který je zahrnut do aktuálního výběru, když editor ztratil fokus.|
+|**Ukazatel marže**|Okraj vlevo od Editoru kódu, kde jsou zobrazeny zarážky a ikony záložek.|
+|**Čísla řádků**|Volitelná čísla, která se zobrazují vedle každého řádku kódu|
+|**Viditelné prázdné místo**|Mezery, tabulátory a indikátory zalamování slov|
+|**Záložka**|Řádky, které mají záložky. **Záložka** je viditelná pouze v případě, že je indikátorová marže zakázána.|
+|**Porovnávání složených závorek (zvýraznění)**|Zvýraznění, které je obvykle tučné formátování pro odpovídající závorky.|
+|**Porovnávání složených závorek (obdélník)**|Zvýraznění, které je obvykle šedý obdélník na pozadí.|
+|**Zarážka (zakázáno)**|Nepoužívá se.|
+|**Zarážka (povolena)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující jednoduché zarážky. Tato možnost je použitelná pouze v případě, že jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění, Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Zarážka (chyba)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující zarážky, které jsou v chybovém stavu. Použitelné pouze v případě, že jsou aktivní zarážky na úrovni příkazu nebo je v [dialogovém okně Obecné, Ladění, Možnosti vybrána](../../debugger/general-debugging-options-dialog-box.md)možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální výpis** .|
+|**Zarážka (upozornění)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující zarážky, které jsou ve stavu upozornění. Použitelné pouze v případě, že jsou aktivní zarážky na úrovni příkazu nebo je v [dialogovém okně Obecné, Ladění, Možnosti vybrána](../../debugger/general-debugging-options-dialog-box.md)možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální výpis** .|
+|**Zarážka – upřesnit (zakázáno)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující zakázané podmíněné nebo spočítané zarážky. Použitelné pouze v případě, že jsou aktivní zarážky na úrovni příkazu nebo je v [dialogovém okně Obecné, Ladění, Možnosti vybrána](../../debugger/general-debugging-options-dialog-box.md)možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální výpis** .|
+|**Zarážka – upřesnit (povoleno)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující podmíněné zarážky nebo zarážky spočítané zásahem. Použitelné pouze v případě, že jsou aktivní zarážky na úrovni příkazu nebo je v [dialogovém okně Obecné, Ladění, Možnosti vybrána](../../debugger/general-debugging-options-dialog-box.md)možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální výpis** .|
+|**Zarážka – upřesnit (chyba)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující podmíněné nebo spočítané zarážky, které jsou v chybovém stavu. Použitelné pouze v případě, že jsou aktivní zarážky na úrovni příkazu nebo je v [dialogovém okně Obecné, Ladění, Možnosti vybrána](../../debugger/general-debugging-options-dialog-box.md)možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální výpis** .|
+|**Zarážka – upřesnit (upozornění)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující podmíněné nebo spočítané zarážky, které jsou ve stavu upozornění. Použitelné pouze v případě, že jsou aktivní zarážky na úrovni příkazu nebo je v [dialogovém okně Obecné, Ladění, Možnosti vybrána](../../debugger/general-debugging-options-dialog-box.md)možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální výpis** .|
+|**Zarážka – mapováno (zakázáno)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující zakázané mapované zarážky. Použitelné pro ladění Technologie ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění a Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Zarážka – mapováno (povoleno)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující mapované zarážky. Použitelné pro ladění Technologie ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění a Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Zarážka – mapováno (chyba)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující mapované zarážky v chybovém stavu. Použitelné pro ladění Technologie ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění a Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Zarážka – mapováno (upozornění)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující mapované zarážky ve stavu upozornění. Použitelné pro ladění Technologie ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění a Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Uživatelská klíčová slova jazyka C/C++**|Konstanta v rámci souboru kódu `#define` definované pomocí směrnice.|
+|**Návrat volání**|Určuje barvu zvýraznění pro zdrojové příkazy nebo řádky, které označují body zpětného volání při přepnutí kontextu do rámce nenejvyššího zásobníku při ladění.|
+|**Pole závislé na fragmentu kódu**|Pole, které bude aktualizováno při změně aktuálního upravitelného pole.|
+|**Pole fragmentu kódu**|Upravitelné pole, když je aktivní fragment kódu.|
+|**Sbalitelný text**|Blok textu nebo kódu, který lze přepnout dovnitř a ven z pohledu v editoru kódu.|
+|**Komentář**|Komentáře kódu.|
+|**Chyba kompilátoru**|Modré vlnovky v editoru označující chybu kompilátoru.|
+|**Oblast pokrytí se nedotkla**|Kód, který nebyl zahrnut do testování částí.|
+|**Pokrytí částečně dotkl oblasti**|Kód, který byl částečně zahrnuta do testování částí.|
+|**Pokrytí Dotkl oblast**|Kód, který byl zcela pokryt a testování částí.|
+|**CsS Komentář**|Komentář v kaskádových šablonách stylů. Například:<br /><br /> /* komentář\*/|
+|**Klíčové slovo CSS**|Klíčová slova v šabloně stylů Kaskádového stylu.|
+|**Název vlastnosti CSS**|Název vlastnosti, například Background.|
+|**Hodnota vlastnosti CSS**|Hodnota přiřazená vlastnosti, jako je například modrá.|
+|**Výběr CSS**|Řetězec, který identifikuje, jaké prvky se vztahuje odpovídající pravidlo. Voličem může být buď jednoduchý volič, například "H1", nebo kontextový volič, například "H1 B", který se skládá z několika jednoduchých selektorů.|
+|**Hodnota řetězce CSS**|Řetězec v kaskádových šablonách stylů.|
+|**Aktuální umístění seznamu**|Aktuální řádek navigoval v okně nástroje seznamu, například v okně Výstup nebo v oknech Najít výsledky.|
+|**Aktuální výpis**|Určuje barvu zvýraznění pro zdrojový příkaz nebo řádek, který označuje aktuální pozici kroku při ladění.|
+|**Data ladicího programu byla změněna**|Barva textu použitá k zobrazení změněných dat v **oknech Registry a** **Memory.**|
+|**Pozadí okna definice**|Barva pozadí okna **Definice kódu.**|
+|**Aktuální shoda okna definice**|Aktuální definice v okně **Definice kódu.**|
+|**Rozebrání názvu souboru**|Barva textu použitá k zobrazení názvu souboru se v okně **Demontáže** přeruší.|
+|**Zdroj demontáže**|Barva textu použitá k zobrazení zdrojových řádků uvnitř okna **Demontáže.**|
+|**Symbol demontáže**|Barva textu použitá k zobrazení názvů symbolů uvnitř okna **Demontáže.**|
+|**Rozebrání textu**|Barva textu použitá k zobrazení operačního kódu a dat uvnitř okna **Demontáže.**|
+|**Vyloučený kód**|Kód, který není třeba zkompilovat, na `#if`podmíněné preprocesorové směrnice, jako je například .|
+|**Identifikátor**|Identifikátory v kódu, jako jsou názvy tříd, názvy metod a názvy proměnných.|
+|**Klíčové slovo**|Klíčová slova pro daný jazyk, které jsou vyhrazeny. Příklad: třída a obor názvů.|
+|**Adresa paměti**|Barva textu použitá k zobrazení sloupce adresy v okně **Paměť.**|
+|**Paměť se změnila**|Barva textu použitá k zobrazení změněných dat v okně **Paměť.**|
+|**Paměťová data**|Barva textu použitá k zobrazení dat v okně **Paměť.**|
+|**Paměť nečitelná**|Barva textu použitá k zobrazení nečitelných oblastí paměti v okně **Paměť.**|
 |**Číslo**|Číslo v kódu, které představuje skutečnou číselnou hodnotu.|
-|**– Operátor**|Operátory, jako jsou +,-a! =.|
-|**Jiná chyba**|Jiné typy chyb, na které se nevztahují jiné chybové vlnovky. V současné době zahrnuje úpravy hrubé v úpravách a pokračování.|
-|**Klíčové slovo preprocesoru**|Klíčová slova používaná preprocesorem, jako je například #include.|
-|**Oblast jen pro čtení**|Kód, který nelze upravovat. Například kód zobrazený v okně zobrazení definice kódu nebo kód, který nelze změnit během úprav a pokračování.|
-|**Refaktoring pozadí**|Barva pozadí dialogového okna **Náhled změn**|
-|**Refaktoring aktuálního pole**|Barva pozadí aktuálního prvku, který má být refaktorovaná v dialogovém okně **Náhled změn** .|
-|**Refaktorování závislého pole**|Barva odkazů elementu, který má být refaktorované v dialogovém okně **Náhled změn** .|
-|**Registrovat data**|Barva textu používaná pro zobrazení dat v okně **Registry**|
-|**Registrovat NAT**|Barva textu používaná k zobrazení nerozpoznaných dat a objektů uvnitř okna **Registry**|
-|**Inteligentní značka**|Slouží k označení obrysu při vyvolání inteligentních značek.|
-|**SQL DML Marker**|Platí pro Editor jazyka Transact-SQL. Příkazy DML v tomto editoru jsou ve výchozím nastavení označeny ohraničujícím modrým polem.|
-|**Zastaralý kód**|Nahrazený kód čeká na aktualizaci. V některých případech nemůže příkaz Upravit a pokračovat okamžitě použít změny kódu, ale použije se později při pokračování ladění. K tomu dochází, pokud upravíte funkci, která musí volat aktuálně prováděnou funkci, nebo pokud přidáte více než 64 bajtů nových proměnných do funkce čekající na zásobník volání. Pokud k tomu dojde, ladicí program zobrazí dialogové okno upozornění na zastaralé kódy a nahrazený kód bude pokračovat, dokud nebude dokončena funkce a bude volána znovu. Upravit a pokračovat aplikuje změny kódu v daném čase.|
+|**Operátor**|Operátory jako +, -a !=.|
+|**Jiná chyba**|Jiné typy chyb, které nejsou zahrnuty do jiných chyb vlnovky. V současné době to zahrnuje hrubé úpravy v upravit a pokračovat.|
+|**Klíčové slovo preprocesoru**|Klíčová slova používaná preprocesorem, například #include.|
+|**Oblast jen pro čtení**|Kód, který nelze upravit. Například kód zobrazený v okně Zobrazení definice kódu nebo kód, který nelze změnit během úprav a pokračovat.|
+|**Refaktoring pozadí**|Barva pozadí dialogového okna **Změny náhledu**|
+|**Refaktoring aktuálního pole**|Barva pozadí aktuálního prvku, který má být refaktorován v dialogovém okně **Změny náhledu.**|
+|**Refaktoring závislého pole**|Barva odkazů na prvek, který má být refaktorován v dialogovém okně **Změny náhledu.**|
+|**Zaregistrovat data**|Barva textu použitá k zobrazení dat v okně **Registrys.**|
+|**Zaregistrovat NAT**|Barva textu použitá k zobrazení nerozpoznaných dat a objektů v okně **Registrys.**|
+|**Inteligentní značka**|Používá se k označení osnovy při vyvolání inteligentních značek.|
+|**Značka SQL DML**|Platí pro editor Transact-SQL. Příkazy DML v tomto editoru jsou ve výchozím nastavení označeny ohraničujícím modrým rámečkem.|
+|**Zastaralý kód**|Nahrazený kód čekající na aktualizaci. V některých případech upravit a pokračovat nelze použít změny kódu okamžitě, ale bude použít později, jak budete pokračovat v ladění. K tomu dochází, pokud upravíte funkci, která musí volat aktuálně spuštěnou funkci, nebo pokud přidáte více než 64 bajtů nových proměnných do funkce čekající v zásobníku volání. V takovém případě ladicí program zobrazí dialogové okno "Zastaralé upozornění kódu" a nahrazený kód pokračuje v provádění, dokud dotyčná funkce nedokončí a nebude znovu volána. Upravit a pokračovat použije změny kódu v té době.|
 |**Řetězec**|Řetězcové literály.|
-|**Řetězec (C# @ doslovné)**|Řetězcové literály C# v, které jsou interpretovány doslovné. Příklad:<br /><br /> @"x"|
+|**Řetězec (C# @ Verbatim)**|Řetězcové literály v c#, které jsou interpretovány doslovně. Například:<br /><br /> @"x"|
 |**Chyba syntaxe**|Analyzovat chyby.|
-|**Zástupce Seznam úkolů**|Pokud je do řádku přidána klávesová zkratka **seznam úkolů** a okraj indikátoru je zakázán, bude zvýrazněna čára.|
-|**Zarážka s trasováním (zakázáno)**|Nepoužívá se.|
-|**Zarážka s trasováním (povolený)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující jednoduché trasováním. Tato možnost je k dispozici pouze v případě, že je trasováním na úrovni příkazu aktivní nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** pro [Obecné, ladění, dialogové okno Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka s trasováním (chyba)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující trasováním, které jsou v chybovém stavu. Tato možnost je k dispozici pouze v případě, že je trasováním na úrovni příkazu aktivní nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** pro [Obecné, ladění, dialogové okno Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka s trasováním (upozornění)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující trasováním, které jsou ve stavu upozornění. Tato možnost je k dispozici pouze v případě, že je trasováním na úrovni příkazu aktivní nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** pro [Obecné, ladění, dialogové okno Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka s trasováním – rozšířený (zakázaný)**|Určuje barvu zvýraznění pro příkazy nebo řádky, které obsahují zakázané podmíněné nebo trasováním se započítávající volání. Tato možnost je k dispozici pouze v případě, že je trasováním na úrovni příkazu aktivní nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** pro [Obecné, ladění, dialogové okno Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka s trasováním – rozšířený (povolený)**|Určuje barvu zvýraznění pro příkazy nebo řádky, které obsahují podmíněné trasováním nebo počet vypočítaných přístupů. Tato možnost je k dispozici pouze v případě, že je trasováním na úrovni příkazu aktivní nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** pro [Obecné, ladění, dialogové okno Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka s trasováním – rozšířený (chyba)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující podmíněné nebo trasováním započítané hodnoty, které jsou v chybovém stavu. Tato možnost je k dispozici pouze v případě, že je trasováním na úrovni příkazu aktivní nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** pro [Obecné, ladění, dialogové okno Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka s trasováním – rozšířený (upozornění)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující podmíněné nebo trasováním započítané hodnoty, které jsou ve stavu upozornění. Tato možnost je k dispozici pouze v případě, že je trasováním na úrovni příkazu aktivní nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** pro [Obecné, ladění, dialogové okno Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka s trasováním – mapovaný (zakázaný)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující zakázané mapované trasováním. Platí pro ladění skriptů ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** , a to v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka s trasováním – mapovaný (povolený)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující namapované trasováním. Platí pro ladění skriptů ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** , a to v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka s trasováním-mapovaná (chyba)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující namapované trasováním v chybovém stavu. Platí pro ladění skriptů ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** , a to v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Zarážka s trasováním-mapovaná (upozornění)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující namapované trasováním ve stavu upozornění. Platí pro ladění skriptů ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** , a to v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**Sledovat změny po uložení**|Řádky kódu, které byly od otevření souboru změněny, ale uloženy na disk.|
-|**Sledovat změny před uložením**|Řádky kódu, které byly od otevření souboru změněny, ale nebyly uloženy na disk.|
-|**Uživatelské typy**|Typy definované uživateli|
-|**Uživatelské typy (delegáti)**|Barva typu pro delegáty|
-|**Uživatelské typy (výčty)**|Barva typu použitá pro výčty|
-|**Uživatelské typy (rozhraní)**|Barva typu pro rozhraní|
-|**Uživatelské typy (typy hodnot)**|Barva typu pro typy hodnot, jako jsou struktury v C#.|
-|**Visual Basic značka jen pro čtení**|Značka specifická pro Visual Basic slouží k určení typu EnC, jako jsou například oblasti výjimek, definice metody a rámce volání mimo list.|
+|**Zástupce seznamu úkolů**|Pokud je zástupce **seznamu úkolů** přidán k řádku a okraj ukazatele je zakázán, řádek se zvýrazní.|
+|**Trasovací bod (zakázáno)**|Nepoužívá se.|
+|**Trasovací bod (povoleno)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující jednoduché stopovací body. Tato možnost je použitelná pouze v případě, že jsou aktivní trasovací body na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění, Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Tracepoint (chyba)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující trasovací body, které jsou v chybovém stavu. Tato možnost je použitelná pouze v případě, že jsou aktivní trasovací body na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění, Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Trasovací bod (upozornění)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující trasovací body, které jsou ve stavu upozornění. Tato možnost je použitelná pouze v případě, že jsou aktivní trasovací body na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění, Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Tracepoint - Upřesnit (zakázáno)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující zakázané podmíněné stopovací body nebo stopované body spočítané přístupem. Tato možnost je použitelná pouze v případě, že jsou aktivní trasovací body na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění, Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Tracepoint - upřesnit (povoleno)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující podmíněné stopovací body nebo stopované body spočítané přístupem. Tato možnost je použitelná pouze v případě, že jsou aktivní trasovací body na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění, Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Tracepoint - Upřesnit (chyba)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující podmíněné stopovací body nebo stopovací body spočítané přístupem, které jsou v chybovém stavu. Tato možnost je použitelná pouze v případě, že jsou aktivní trasovací body na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění, Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Tracepoint - Upřesnit (upozornění)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující podmíněné stopovací body nebo stopovací body spočítané přístupem, které jsou ve stavu upozornění. Tato možnost je použitelná pouze v případě, že jsou aktivní trasovací body na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění, Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Tracepoint - mapováno (zakázáno)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující zakázané mapované trasovací body. Použitelné pro ladění Technologie ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění a Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Tracepoint - mapováno (povoleno)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující mapované stopovací body. Použitelné pro ladění Technologie ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění a Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Tracepoint - mapováno (chyba)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující mapované trasovací body v chybovém stavu. Použitelné pro ladění Technologie ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění a Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Tracepoint - mapováno (upozornění)**|Určuje barvu zvýraznění pro příkazy nebo čáry obsahující mapované trasovací body ve stavu upozornění. Použitelné pro ladění Technologie ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **Zvýraznit celý zdrojový řádek pro zarážky nebo aktuální příkaz** v [dialogovém okně Obecné, Ladění a Možnosti](../../debugger/general-debugging-options-dialog-box.md).|
+|**Sledování změn po uložení**|Řádky kódu, které byly od otevření souboru změněny, ale jsou uloženy na disk.|
+|**Sledování změn před uložením**|Řádky kódu, které byly změněny od otevření souboru, ale nejsou uloženy na disk.|
+|**Typy uživatelů**|Typy definované uživateli.|
+|**Typy uživatelů (delegáti)**|Zadejte barvu pro delegáty.|
+|**Typy uživatelů (výčty)**|Zadejte barvu použitou pro výčty.|
+|**Typy uživatelů (rozhraní)**|Zadejte barvu pro rozhraní.|
+|**Typy uživatelů (typy hodnot)**|Zadejte barvu pro typy hodnot, jako jsou struktury v c#.|
+|**Značka jen pro čtení v jazyce Visual Basic**|Značka specifická pro jazyk Visual Basic používaná pro označení enc, jako jsou oblasti výjimek, definice metody a rámce volání mimo list.|
 |**Upozornění**|Upozornění kompilátoru.|
-|**Cesta k řádkům upozornění**|Používá se pro výstražné řádky statické analýzy.|
+|**Cesta k výstražným čarám**|Používá se pro řádky upozornění statické analýzy.|
 |**Atribut XML**|Názvy atributů.|
-|**Uvozovky atributů XML**|Znaky uvozovek pro atributy XML|
-|**Hodnota atributu XML**|Obsah atributů XML|
-|**Oddíl XML CDATA**|Obsah \<![CDATA[...]]>.|
-|**Komentář XML**|Obsah \<!---->.|
-|**Oddělovač XML**|Oddělovače syntaxe XML, včetně <, <?, <!, \<!--,-->?\>\<! [, ]] > a [,].|
-|**Atribut doc XML**|Hodnota atributu dokumentace XML, například \<param Name = "I" >, kde "I" jsou zabarvení.|
-|**Komentář k dokumentu XML**|Komentáře uzavřené v dokumentačních komentářích XML|
-|**Značka XML doc**|Značky v komentářích k dokumentu XML, jako např.<br /><br /> > souhrn \</// .|
-|**XML – klíčové slovo**|Klíčová slova DTD jako CDATA, IDREF a NTYP datové.|
-|**Název XML**|Názvy elementů a název cíle instrukcí pro zpracování.|
-|**Instrukce pro zpracování XML**|Obsah instrukcí pro zpracování, včetně názvu cíle|
-|**Text XML**|Obsah elementu prostého textu.|
-|**XSLT – klíčové slovo**|Názvy elementů XSLT.|
+|**Uvozovky atributů XML**|Znaky uvozovek pro atributy XML.|
+|**Hodnota atributu XML**|Obsah atributů XML.|
+|**Oddíl Cdata XML**|Obsah \<! [CDATA[...]] >.|
+|**Komentář XML**|Obsah \<!-- -->.|
+|**Oddělovač XML**|Oddělovače syntaxe XML, včetně <, \<<?, <!, !--, -->? \>, \<! [, ]] > a [, ].|
+|**Atribut dokumentu XML**|Hodnota atributu dokumentace xml, \<například param name="I"> kde je "I" obarven.|
+|**Komentář dokumentu XML**|Komentáře přiložené v dokumentaci xml komentáře.|
+|**Značka doc XML**|Tagy v komentářích dokumentu XML, například<br /><br /> /// \<souhrnné ho>.|
+|**Klíčové slovo XML**|Klíčová slova DTD, například CDATA, IDREF a NDATA.|
+|**Název XML**|Názvy prvků a název cíle pokyny pro zpracování.|
+|**Instrukce zpracování XML**|Obsah pokynů pro zpracování, bez cílového názvu.|
+|**XML Text**|Obsah prvku prostého textu.|
+|**Klíčové slovo XSLT**|Názvy prvků XSLT.|
 
 **Popředí položky**
 
-Zobrazuje dostupné barvy, které můžete zvolit pro popředí položky vybrané v části **Zobrazit položky**. Vzhledem k tomu, že některé položky souvisejí a měly by proto udržovat konzistentní schéma zobrazení, změna barvy popředí textu také změní výchozí hodnoty pro prvky, jako je chyba kompilátoru, klíčové slovo nebo operátor.
+Zobrazí seznam dostupných barev, které můžete zvolit pro popředí položky vybrané v **části Zobrazit položky**. Vzhledem k tomu, že některé položky souvisejí a proto by měly udržovat konzistentní schéma zobrazení, změna barvy textu v popředí také změní výchozí hodnoty pro prvky, jako je chyba kompilátoru, klíčové slovo nebo operátor.
 
 **Automaticky**
 
-Položky mohou dědit barvu popředí z jiných položek zobrazení, jako je například **prostý text**. Použijete-li tuto možnost, bude při změně barvy zděděné položky zobrazení také automaticky změněna barva souvisejících položek zobrazení. Například pokud jste vybrali možnost **Automatická** hodnota pro **chybu kompilátoru** a později jste změnili barvu **prostého textu** na červenou, **Chyba kompilátoru** by také automaticky dědila červenou barvu.
+Položky mohou dědit barvu popředí z jiných položek zobrazení, jako je **prostý text**. Při použití této možnosti se při změně barvy zděděné položky zobrazení automaticky změní také barva souvisejících položek zobrazení. Pokud jste například vybrali **automatickou** hodnotu pro **chybu kompilátoru** a později jste změnili barvu prostého textu na **červenou,** **chyba kompilátoru** také automaticky zdědí červenou barvu.
 
-**Default**
+**Výchozí**
 
-Barva, která se zobrazí pro položku při prvním otevření sady Visual Studio. Kliknutím na tlačítko **použít výchozí** obnovíte tuto barvu.
+Barva, která se zobrazí pro položku při prvním otevření sady Visual Studio. Kliknutím na tlačítko **Použít výchozí nastavení** se tato barva obnoví.
 
 **Vlastní**
 
-Zobrazí dialogové okno barvy, které umožňuje nastavit vlastní barvu pro položku vybranou v seznamu zobrazit položky.
+Zobrazí dialogové okno Barva, které vám umožní nastavit vlastní barvu pro položku vybranou v seznamu Zobrazit položky.
 
 > [!NOTE]
-> Možnost definovat vlastní barvy může být omezena nastavením barev pro zobrazení vašeho počítače. Například pokud je váš počítač nastavený na zobrazení 256 barev a v dialogovém okně **Barva** vyberete vlastní barvu, rozhraní IDE se nastaví jako výchozí k nejbližší dostupné **základní barvě** a v poli Náhled **barvy** se zobrazí černá barva.
+> Možnost definovat vlastní barvy může být omezena nastavením barev pro zobrazení počítače. Pokud je například počítač nastaven na zobrazení 256 barev a v dialogovém okně **Barva** vyberete vlastní barvu, rozhraní IDE bude ve výchozím nastavení nastaveno na nejbližší **dostupnou základní barvu** a zobrazí barvu černě v poli Náhled **barvy.**
 
 **Pozadí položky**
 
-Poskytuje paletu barev, ze které můžete zvolit barvu pozadí pro položku vybranou v **zobrazení položky**. Vzhledem k tomu, že některé položky jsou v relaci, a měla by proto zachovat konzistentní schéma zobrazení, změna barvy pozadí textu také změní výchozí hodnoty pro prvky, jako je chyba kompilátoru, klíčové slovo nebo operátor.
+Poskytuje paletu barev, ze které můžete zvolit barvu pozadí pro položku vybranou v **části Zobrazit položky**. Vzhledem k tomu, že některé položky souvisejí a proto by měly udržovat konzistentní schéma zobrazení, změna barvy pozadí textu také změní výchozí hodnoty pro prvky, jako je chyba kompilátoru, klíčové slovo nebo operátor.
 
 **Automaticky**
 
-Položky mohou dědit barvu pozadí z jiných položek zobrazení, jako je například **prostý text**. Použijete-li tuto možnost, bude při změně barvy zděděné položky zobrazení také automaticky změněna barva souvisejících položek zobrazení. Například pokud jste vybrali možnost **Automatická** hodnota pro **chybu kompilátoru** a později jste změnili barvu **prostého textu** na červenou, **Chyba kompilátoru** by také automaticky dědila červenou barvu.
+Položky mohou dědit barvu pozadí z jiných položek zobrazení, například **prostého textu**. Při použití této možnosti se při změně barvy zděděné položky zobrazení automaticky změní také barva souvisejících položek zobrazení. Pokud jste například vybrali **automatickou** hodnotu pro **chybu kompilátoru** a později jste změnili barvu prostého textu na **červenou,** **chyba kompilátoru** také automaticky zdědí červenou barvu.
 
-**Default**
+**Výchozí**
 
-Barva, která se zobrazí pro položku při prvním otevření sady Visual Studio. Kliknutím na tlačítko **použít výchozí** obnovíte tuto barvu.
+Barva, která se zobrazí pro položku při prvním otevření sady Visual Studio. Kliknutím na tlačítko **Použít výchozí nastavení** se tato barva obnoví.
 
 **Vlastní**
 
-Zobrazí dialogové okno barvy, které umožňuje nastavit vlastní barvu pro položku vybranou v seznamu zobrazit položky.
+Zobrazí dialogové okno Barva, které vám umožní nastavit vlastní barvu pro položku vybranou v seznamu Zobrazit položky.
 
-**Tučné**
+**Tučný**
 
-Tuto možnost vyberte, chcete-li zobrazit text vybraných **položek zobrazení** v tučném textu. V editoru je snadnější identifikovat tučný text.
+Tuto možnost vyberte, chcete-li zobrazit text vybraných **položek zobrazení** tučným písmem. Tučný text je snadněji identifikovatelný v editoru.
 
 **Ukázka**
 
-Zobrazí ukázku stylu písma, velikosti a barevného schématu pro vybrané položky **Zobrazit nastavení pro** a **zobrazené položky** . Pomocí tohoto pole můžete zobrazit náhled výsledků při experimentování s různými možnostmi formátování.
+Zobrazí ukázku stylu, velikosti a barevného schématu pro vybrané **nastavení zobrazení** a **zobrazení položek.** Toto pole můžete použít k zobrazení náhledu výsledků při experimentování s různými možnostmi formátování.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Dialogové okno Možnosti](../../ide/reference/options-dialog-box-visual-studio.md)
 - [Postupy: Změna písma a barev](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)

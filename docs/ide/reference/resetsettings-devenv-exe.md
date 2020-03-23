@@ -14,20 +14,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: eebcf2c6796723e51c3aefdb12575aa89779429f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75593860"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 
-Obnoví výchozí nastavení sady Visual Studio a automaticky spustí integrované vývojové prostředí (IDE) sady Visual Studio. Tento přepínač volitelně obnoví nastavení na zadaný soubor nastavení.
+Obnoví výchozí nastavení sady Visual Studio a automaticky spustí ide sady Visual Studio. Tento přepínač volitelně obnoví nastavení na zadaný soubor nastavení.
 
-Výchozí nastavení pochází z profilu, který byl vybrán při prvním spuštění aplikace Visual Studio.
+Výchozí nastavení pochází z profilu, který byl vybrán při prvním spuštění sady Visual Studio.
 
 > [!TIP]
-> Informace o resetování nastavení pomocí integrovaného vývojového prostředí (IDE) najdete v tématu [resetování nastavení](../environment-settings.md#reset-settings).
+> Informace o tom, jak obnovit nastavení pomocí integrovaného vývojového prostředí (IDE), naleznete v [tématu Obnovení nastavení](../environment-settings.md#reset-settings).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,35 +35,35 @@ Výchozí nastavení pochází z profilu, který byl vybrán při prvním spušt
 devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 
 - *SettingsFile*
 
-  Volitelné. Úplná cesta a název souboru s nastavením, které se mají použít pro sadu Visual Studio.
+  Nepovinný parametr. Úplná cesta a název souboru nastavení, který se má použít pro visual studio.
 
 - *DefaultCollectionSpecifier*
 
-  Volitelné. Specifikátor představující výchozí kolekci nastavení k obnovení. Vyberte jeden z výchozích specifikátorů kolekce uvedených v tabulce.
+  Nepovinný parametr. Specifikátor představující výchozí kolekci nastavení k obnovení. Zvolte jeden z výchozích specifikátorů kolekce uvedených v tabulce.
 
-  | Název výchozí kolekce | Specifikátor kolekce |
+  | Výchozí název kolekce | Specifikátor kolekce |
   | --- | --- |
   | **Obecné** | `General` |
-  | **JavaScript** | `JavaScript` |
+  | **Javascript** | `JavaScript` |
   | **Visual Basic** | `VB` |
-  | **Visual C#** | `CSharp` |
+  | **Vizuální C #** | `CSharp` |
   | **Visual C++** | `VC` |
-  | **Vývoj pro web** | `Web` |
-  | **Vývoj pro web (jenom kód)** | `WebCode` |
+  | **Vývoj webových aplikací** | `Web` |
+  | **Vývoj webu (pouze kód)** | `WebCode` |
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud není zadán žádný *SettingsFile* , IDE se otevře s existujícím nastavením.
+Pokud není zadán žádný *Soubor Nastavení,* ide se otevře pomocí existujícího nastavení.
 
 ## <a name="example"></a>Příklad
 
-V prvním příkladu se aplikuje nastavení uložená v souboru `MySettings.vssettings`.
+První příklad použije nastavení uložená `MySettings.vssettings`v souboru .
 
-Druhý příklad obnoví vizuální C# výchozí profil.
+Druhý příklad obnoví výchozí profil Visual C#.
 
 ```shell
 devenv /resetsettings "%USERPROFILE%\MySettings.vssettings"
@@ -71,8 +71,8 @@ devenv /resetsettings "%USERPROFILE%\MySettings.vssettings"
 devenv /resetsettings CSharp
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nastavení prostředí](../environment-settings.md)
 - [Přizpůsobení prostředí IDE sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)
-- [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)
+- [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md)

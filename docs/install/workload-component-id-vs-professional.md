@@ -1,12 +1,12 @@
 ---
-title: Visual Studio Professional úlohy a ID komponent
+title: Pracovní vytížení visual studio professional a ID součástí
 titleSuffix: ''
-description: Použití pracovního vytížení a komponenta ID pro instalaci sady Visual Studio pomocí příkazového řádku nebo v závislosti na VSIX manifest
+description: Použití id úloh a součástí k instalaci sady Visual Studio pomocí příkazového řádku nebo k určení závislosti v manifestu VSIX
 keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 12/03/2019
+ms.date: 03/16/2020
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 5719032b-2c2e-416e-a281-a4573ec74e38
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: c1564eb6b7345af1fe8a81d49369d5822ac14655
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 22af1df58619207a0af89da2268ab9d19ba5fa33
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114387"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79437605"
 ---
-# <a name="visual-studio-professional-component-directory"></a>Visual Studio Professional adresář součástí
+# <a name="visual-studio-professional-component-directory"></a>Adresář komponent Visual Studio Professional
 
 [!INCLUDE[workloads-components-universal-header_md](includes/workloads-components-universal-header_md.md)]
 
@@ -44,10 +44,10 @@ ms.locfileid: "76114387"
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md)
-* [Příručka pro správce aplikace Visual Studio](visual-studio-administrator-guide.md)
-* [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
+* [Průvodce správcem sady Visual Studio](visual-studio-administrator-guide.md)
+* [Instalace sady Visual Studio pomocí parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
   * [Příklady parametrů příkazového řádku](command-line-parameter-examples.md)
 * [Vytvoření offline instalace sady Visual Studio](create-an-offline-installation-of-visual-studio.md)

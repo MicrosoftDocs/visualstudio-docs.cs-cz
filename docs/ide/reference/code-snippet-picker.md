@@ -14,49 +14,49 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bb03da430f43bbfd5c7398c147560a9c823f8811
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75570489"
 ---
 # <a name="code-snippet-picker"></a>Sběrač fragmentů kódu
 
-Editor Visual Studio Code poskytuje **Výběr fragmentu kódu** , který umožňuje v několika kliknutích myši vkládat připravené bloky kódu do aktivního dokumentu.
+Visual Studio Code Editor poskytuje **výběr fragmentu kódu,** který umožňuje, v několika kliknutí myší, vložit hotové bloky kódu do aktivního dokumentu.
 
-Postup zobrazení **výběru fragmentu kódu** se liší v závislosti na jazyku, který používáte.
+Postup zobrazení **výběru fragmentů kódu** se liší v závislosti na jazyku, který používáte.
 
-- Visual Basic – kliknutím pravým tlačítkem myši na požadované místo v editoru kódu zobrazte místní nabídku a vyberte možnost **Vložit fragment**.
+- Visual Basic - Klepnutím pravým tlačítkem myši na požadované místo v Editoru kódu zobrazte nabídku Zástupce a vyberte **vložit výstřižek**.
 
-- C#– Kliknutím pravým tlačítkem myši na požadované místo v editoru kódu zobrazte místní nabídku a klikněte na příkaz **Vložit fragment** nebo **obklopit pomocí**.
+- C# – Klepnutím pravým tlačítkem myši na požadované místo v Editoru kódu zobrazte nabídku Zástupce a klepněte na příkaz **Vložit úryvek** nebo **Obklopit pomocí**.
 
-- C++– **Výběr fragmentu kódu** není k dispozici.
+- C++ - **Výběr fragmentu kódu** není k dispozici.
 
-- F#– **Výběr fragmentu kódu** není k dispozici.
+- F# - **Výběr fragmentu kódu** není k dispozici.
 
-- JavaScript – kliknutím pravým tlačítkem myši na požadované místo v editoru kódu zobrazíte místní nabídku a kliknete na **Vložit fragment** nebo **obklopit s**.
+- JavaScript – Klepnutím pravým tlačítkem myši na požadované místo v Editoru kódu zobrazte nabídku Zástupce a klepněte na příkaz **Vložit úryvek** nebo **Obklopit pomocí**.
 
-- XML – kliknutím pravým tlačítkem myši na požadované místo v editoru kódu zobrazte místní nabídku a klikněte na příkaz **Vložit fragment** nebo **obklopit pomocí**.
+- XML – Klepnutím pravým tlačítkem myši na požadované místo v Editoru kódu zobrazte nabídku Zástupce a klepněte na příkaz **Vložit výstřižknebo** **Obklopit pomocí**.
 
-- HTML – kliknutím pravým tlačítkem myši na požadované místo v editoru kódu zobrazíte místní nabídku a kliknete na **Vložit fragment** nebo **obklopit s**.
+- HTML – Klepnutím pravým tlačítkem myši na požadované místo v Editoru kódu zobrazte nabídku Zástupce a klepněte na příkaz **Vložit výstřižknebo** **Obklopit pomocí**.
 
-- SQL – kliknutím pravým tlačítkem myši na požadované místo v editoru kódu zobrazíte místní nabídku a kliknete na možnost **Vložit fragment**.
+- SQL – Klepnutím pravým tlačítkem myši na požadované místo v Editoru kódu zobrazte nabídku Zástupce a klepněte na příkaz **Vložit výstřižk .**
 
-Ve většině vývojových jazyků sady Visual Studio můžete pomocí **Správce fragmentů kódu** přidat složky do seznamu složek, který nástroj pro **Výběr fragmentu kódu** vyhledává soubory fragmentů XML. Můžete také vytvořit vlastní fragmenty kódu, které chcete přidat do seznamu. Další informace naleznete v tématu [Návod: Vytvoření fragmentu kódu](../../ide/walkthrough-creating-a-code-snippet.md).
+Ve většině vývojových jazyků sady Visual Studio můžete pomocí **Správce výstřižků kódu** přidat složky do seznamu složek, které **výběr fragmentů kódu** prohledá soubory výstřižků XML. Můžete také vytvořit vlastní úryvky, které chcete přidat do seznamu. Další informace naleznete [v tématu Návod: Vytvoření fragmentu kódu](../../ide/walkthrough-creating-a-code-snippet.md).
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
 Název položky
 
-Upravitelné textové pole, které zobrazuje název položky vybrané v **seznamu položek**. Chcete-li provést přírůstkové hledání požadované položky, začněte zadávat název do tohoto pole. Pokračujte v přidávání písmen, dokud není v **seznamu položek**vybraná požadovaná položka.
+Upravitelné textové pole, které zobrazuje název položky vybrané v **seznamu položek**. Chcete-li provést přírůstkové hledání požadované položky, začněte do tohoto pole psát její název. Pokračujte v přidávání písmen, dokud není v **seznamu položek**vybrána požadovaná položka .
 
 Seznam položek
 
-Seznam fragmentů kódu, které jsou k dispozici pro vložení, nebo seznam složek obsahujících fragmenty kódu. Pokud chcete vložit fragment nebo rozbalit složku, vyberte požadovanou položku a stiskněte klávesu ENTER.
+Seznam fragmentů kódu, které jsou k dispozici pro vložení, nebo seznam složek obsahujících fragmenty kódu. Pokud chcete vložit výstřižek nebo rozbalit složku, vyberte požadovanou položku a stiskněte Enter.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Doporučené postupy pro používání fragmentů kódu](../../ide/best-practices-for-using-code-snippets.md)
-- [Visual Basic fragmentů kódu technologie IntelliSense](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)
+- [Výstřižky kódu IntelliSense jazyka Visual Basic](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)
 - [Nastavení záložek v kódu](../../ide/setting-bookmarks-in-code.md)
 - [Postupy: Použití příkazu Obklopit s fragmenty kódu](../../ide/how-to-use-surround-with-code-snippets.md)

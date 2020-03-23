@@ -1,5 +1,5 @@
 ---
-title: Vytvořit zástupné procedury metody testování částí
+title: Vytvořit zástupné procedury testovací metody
 ms.date: 04/01/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,53 +10,53 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3eb001d2022bb57981f21fd99c051c54aeb08301
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75844321"
 ---
-# <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>Vytvořte zástupné procedury metody testování částí pomocí příkazu vytvořit testy jednotek.
+# <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>Vytvoření zástupů testovací metody jednotky pomocí příkazu Vytvořit testy jednotek
 
-Příkaz **vytvořit testy jednotek** vytvoří zástupné procedury metody testování částí. Tato funkce umožňuje snadnou konfiguraci testovacího projektu, testovací třídy a zástupné procedury testovací metody v rámci ní.
+Příkaz **Vytvořit testy částí** vytvoří zástupné procedury zkušební metody jednotky. Tato funkce umožňuje snadnou konfiguraci testovacího projektu, testovací třídy a zkušební metody se zakázaným inzerováním v něm.
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> Příkaz nabídky **vytvořit testy jednotek** je k dispozici pouze pro spravovaný kód, který cílí na .NET Framework (ale ne .NET Core).
+> Příkaz **příkazu Vytvořit testy jednotek** je k dispozici pouze pro spravovaný kód, který cílí na rozhraní .NET Framework (ale ne na jádro .NET).
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 > [!NOTE]
-> Příkaz nabídky **vytvořit testy jednotek** je k dispozici pouze pro spravovaný kód.
+> Příkaz **Nabídky Vytvořit testy jednotek** je k dispozici pouze pro spravovaný kód.
 ::: moniker-end
 
-Příkaz nabídky **vytvořit testy jednotek** je rozšiřitelný a lze ho použít ke generování testů pro MSTest, MSTest v2, nunit a xUnit.
+Příkaz **příkazu Vytvořit testy částí** je rozšiřitelný a lze jej použít ke generování testů pro MSTest, MSTest V2, NUnit a xUnit.
 
 ## <a name="get-started"></a>Začínáme
 
-Chcete-li začít, vyberte metodu, typ nebo obor názvů v editoru kódu v projektu, který chcete otestovat, klikněte pravým tlačítkem myši a zvolte možnost **vytvořit testy jednotek**. Otevře se dialogové okno **vytvořit testy jednotek** , kde můžete nakonfigurovat, jak se mají testy vytvářet.
+Chcete-li začít, vyberte metodu, typ nebo obor názvů v editoru kódu v projektu, který chcete testovat, klepněte pravým tlačítkem myši a pak zvolte **Vytvořit testy částí**. Otevře se dialogové okno **Vytvořit testy částí,** kde můžete nakonfigurovat způsob vytvoření testů.
 
-![Použití příkazu vytvořit testy jednotek](media/createunittestcommand.png)
+![Použití příkazu Vytvořit testy jednotek](media/createunittestcommand.png)
 
-## <a name="set-unit-test-traits"></a>Nastavit vlastnosti testu jednotek
+## <a name="set-unit-test-traits"></a>Nastavení vlastností testování částí
 
-Pokud plánujete spustit tyto testy jako součást procesu automatizace testů, můžete zvážit, že je test vytvořen v jiném testovacím projektu (druhá možnost v dialogovém okně výše) a nastavení vlastností testu jednotek pro test jednotky. To vám umožní snadněji zahrnout nebo vyloučit tyto konkrétní testy jako součást kanálu průběžné integrace nebo průběžného nasazování. Vlastnosti jsou nastaveny přidáním metadat přímo do testu jednotky, jak je znázorněno níže.
+Pokud plánujete spustit tyto testy jako součást procesu automatizace testu, můžete zvážit vytvoření testu v jiném testovacím projektu (druhá možnost v dialogovém okně výše) a nastavení testovacích vlastností částí pro testování částí. To umožňuje snadněji zahrnout nebo vyloučit tyto konkrétní testy jako součást průběžné integrace nebo průběžné ho nasazení kanálu. Vlastnosti jsou nastaveny přidáním metadat do testování částí přímo, jak je znázorněno níže.
 
-![Nastavení vlastností testu jednotek](media/createunittest.png)
+![Nastavení testovacích znaků jednotky](media/createunittest.png)
 
-## <a name="use-third-party-unit-test-frameworks"></a>Použít rozhraní pro testování částí třetích stran
+## <a name="use-third-party-unit-test-frameworks"></a>Použití rozhraní testování částí jiných výrobců
 
-Chcete-li automaticky generovat testy jednotek pro NUnit nebo xUnit, nainstalujte jedno z těchto rozšíření testovacího rozhraní z Visual Studio Marketplace:
+Chcete-li automaticky generovat testy částí pro NUnit nebo xUnit, nainstalujte jedno z těchto rozšíření testovacího rozhraní z webu Visual Studio Marketplace:
 
-* [Rozšíření NUnit pro generátory testů](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension)
-* [rozšíření xUnit.net pro generátory testů](https://marketplace.visualstudio.com/items?itemName=BradWilson.xUnitnetTestExtensions)
+* [NUnit rozšíření pro testovací generátory](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension)
+* [rozšíření xUnit.net pro zkušební generátory](https://marketplace.visualstudio.com/items?itemName=BradWilson.xUnitnetTestExtensions)
 
-## <a name="when-should-i-use-this-feature"></a>Kdy mám použít tuto funkci?
+## <a name="when-should-i-use-this-feature"></a>Kdy mám tuto funkci používat?
 
-Tuto funkci použijte vždy, když potřebujete vytvořit testy jednotek, ale konkrétně při testování stávajícího kódu, který má málo nebo žádné pokrytí testu, a není k dispozici žádná dokumentace. Jinými slovy, kde je omezená nebo neexistující specifikace kódu. To efektivně implementuje přístup podobně jako [inteligentní testy jednotek](https://devblogs.microsoft.com/devops/introducing-smart-unit-tests/) , které charakterizují pozorované chování kódu.
+Tuto funkci použijte vždy, když potřebujete vytvořit testy částí, ale konkrétně při testování existujícího kódu, který má malé nebo žádné pokrytí testem a žádnou dokumentaci. Jinými slovy, pokud existuje omezená nebo neexistující specifikace kódu. Účinně implementuje přístup podobný [testům inteligentní jednotky,](https://devblogs.microsoft.com/devops/introducing-smart-unit-tests/) který charakterizuje pozorované chování kódu.
 
-Tato funkce je však stejně platná v případě, že vývojář začne psát kód a následně používá ke spuštění testů jednotek. V rámci toku kódování může vývojář chtít rychle vytvořit zástupnou proceduru metody testování částí (s vhodnou testovací třídou a vhodným testovacím projektem) pro konkrétní část kódu.
+Tato funkce je však stejně použitelná, když vývojář spustí psaní některých kódů a pak ji použije k zaváděcím testům jednotek. V rámci toku kódování může vývojář chtít rychle vytvořit zkušební metodu jednotky se zakázaným inzerováním (s vhodnou testovací třídou a vhodným testovacím projektem) pro konkrétní část kódu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Vytváření zástupných procedur v metodě testování částí pomocí příkazu "vytvořit testy jednotek"](https://devblogs.microsoft.com/devops/creating-unit-test-method-stubs-with-create-unit-tests/)
-- [Příspěvky v blogu testování částí](https://devblogs.microsoft.com/devops/?s=unit+testing)
+- [Vytváření testovacích metod jednotek se zakázanými kódy s "Vytvořit testy částí"](https://devblogs.microsoft.com/devops/creating-unit-test-method-stubs-with-create-unit-tests/)
+- [Příspěvky blogu testování částí](https://devblogs.microsoft.com/devops/?s=unit+testing)

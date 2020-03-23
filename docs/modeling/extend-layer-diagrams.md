@@ -11,29 +11,29 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 305c562c7600dc6955ce0307db92f4e257fc1c21
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78410242"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79302943"
 ---
 # <a name="extend-dependency-diagrams"></a>Rozšíření diagramů závislostí
 
-Můžete napsat kód pro vytváření a aktualizaci diagramů závislostí a k ověření struktury kódu programu pro diagramy závislostí v aplikaci Visual Studio. Můžete přidat příkazy, které se zobrazí v místní nabídce (kontextové) diagramu, upravit gesta přetažení a přistupovat k modelu vrstvy z textových šablon. Tato rozšíření můžete zabalit do rozšíření integrace sady Visual Studio (VSIX) a distribuovat je ostatním uživatelům aplikace Visual Studio.
+Můžete napsat kód pro vytvoření a aktualizaci diagramů závislostí a ověření struktury kódu programu proti diagramům závislostí v sadě Visual Studio. Můžete přidat příkazy, které se zobrazí v místní (kontextové) nabídce diagramů, přizpůsobit gesta přetažení a získat přístup k modelu vrstvy ze šablon textu. Tato rozšíření můžete zabalit do rozšíření integrace sady Visual Studio (VSIX) a distribuovat je ostatním uživatelům sady Visual Studio.
 
 ## <a name="requirements"></a>Požadavky
 
-V počítači, na kterém chcete vyvíjet rozšíření vrstev, je nutné mít nainstalované následující:
+V počítači, ve kterém chcete vyvinout rozšíření vrstev, musíte mít nainstalované následující:
 
 - Visual Studio
 
 - [Visual Studio SDK](../extensibility/visual-studio-sdk.md)
 
-- Sada Modeling SDK pro Visual Studio
+- Modelování sady SDK pro sady Visual Studio
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-V počítači, na kterém chcete spustit rozšíření vrstvy, musíte mít nainstalovanou vhodnou verzi sady Visual Studio. Chcete-li zjistit, které edice sady Visual Studio podporují diagramy závislostí, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+V počítači, ve kterém chcete spustit rozšíření vrstev, musí být nainstalována vhodná edice sady Visual Studio. Informace o tom, které edice sady Visual Studio podporují diagramy závislostí, naleznete [v tématu Podpora edice pro architekturu a nástroje pro modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 ## <a name="see-also"></a>Viz také
 

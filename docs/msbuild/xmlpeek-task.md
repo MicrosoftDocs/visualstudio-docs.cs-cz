@@ -1,5 +1,5 @@
 ---
-title: Úloha XmlPeek – | Microsoft Docs
+title: Úloha XmlPeek | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 59bc42bd438d80bbaf0ff45cd1c95447961cd437
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: c5a76bf033fa3eb85f0626478b965285f32e5fb6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77630623"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094668"
 ---
 # <a name="xmlpeek-task"></a>XmlPeek – úloha
 
@@ -29,19 +29,50 @@ Vrátí hodnoty určené dotazem XPath ze souboru XML.
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry úlohy `XmlPeek`.
+ Následující tabulka popisuje parametry `XmlPeek` úkolu.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Namespaces`|Volitelný parametr `String`.<br /><br /> Určuje obory názvů pro předpony dotazů XPath.|
-|`Query`|Volitelný parametr `String`.<br /><br /> Určuje dotaz XPath.|
-|`Result`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Obsahuje výsledky, které jsou vráceny touto úlohou.|
-|`XmlContent`|Volitelný parametr `String`.<br /><br /> Určuje vstup XML jako řetězec.|
-|`XmlInputPath`|Volitelný parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje vstup XML jako cestu k souboru.|
+|`Namespaces`|Volitelný `String` parametr.<br /><br /> Určuje obory názvů předpon dotazu XPath.|
+|`Query`|Volitelný `String` parametr.<br /><br /> Určuje dotaz XPath.|
+|`Result`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje výsledky, které jsou vráceny tímto úkolem.|
+|`XmlContent`|Volitelný `String` parametr.<br /><br /> Určuje vstup XML jako řetězec.|
+|`XmlInputPath`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje vstup XML jako cestu k souboru.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě toho, že mají parametry, které jsou uvedeny v tabulce, tato úloha dědí parametry z třídy <xref:Microsoft.Build.Tasks.TaskExtension>, kterou sám dědí z třídy <xref:Microsoft.Build.Utilities.Task>. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
+ Kromě parametrů, které jsou uvedeny v tabulce, tato úloha <xref:Microsoft.Build.Tasks.TaskExtension> dědí parametry z <xref:Microsoft.Build.Utilities.Task> třídy, která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
+
+
+
+## <a name="example"></a>Příklad
+
+Zde je ukázkový `settings.config` soubor XML ke čtení:
+
+```xml
+<appSettings>
+  <add key="ProjectFolder" value="S1" />
+</appSettings>
+```
+
+V tomto příkladu, pokud `value`chcete číst , použijte kód jako následující:
+
+```xml
+<Target Name="BeforeBuild">
+    <XmlPeek XmlInputPath="settings.config" Query="appSettings/add[@key='ProjectFolder']/@value">
+        <Output TaskParameter="Result" ItemName="value" />
+    </XmlPeek>
+    <Message Text="Using project folder @(value)." Importance="high" />
+    <PropertyGroup>
+        <ProjectFolder>@(value)</ProjectFolder>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="Projects\$(ProjectFolder)\Controls\Control1.ascx.cs">
+            <SubType>ASPXCodeBehind</SubType>
+        </Compile>
+    </ItemGroup>
+</Target>
+```
 
 ## <a name="see-also"></a>Viz také
 

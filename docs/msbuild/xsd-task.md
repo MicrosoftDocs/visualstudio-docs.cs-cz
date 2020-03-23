@@ -1,5 +1,5 @@
 ---
-title: XSD – úloha | Microsoft Docs
+title: Úkol XSD | Dokumenty společnosti Microsoft
 ms.date: 06/27/2018
 ms.topic: reference
 f1_keywords:
@@ -21,72 +21,72 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 217e045a731efa1fe3ba1dda63e89eca685d4b75
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77630779"
 ---
 # <a name="xsd-task"></a>XSD – úloha
 
-Zabalí Nástroj definice schématu XML (*XSD. exe*), který generuje soubory schématu nebo třídy ze zdroje.
+Zalomí nástroj definice schématu XML (*xsd.exe*), který generuje soubory schématu nebo třídy ze zdroje.
 
 > [!NOTE]
-> Od sady Visual Studio 2017 je C++ podpora projektů pro soubor *XSD. exe* zastaralá. Rozhraní API **Microsoft. VisualC. CppCodeProvider** můžete dál používat tak, že ručně přidáte *CppCodeProvider. dll* do globální mezipaměti sestavení (GAC).
+> Počínaje Visual Studio 2017, C++ podpora projektu pro *xsd.exe* je zastaralé. Rozhraní **API Microsoft.VisualC.CppCodeProvider** můžete stále používat ručním přidáním souboru *CppCodeProvider.dll* do souboru GAC.
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry úlohy **XSD** .
+ Následující tabulka popisuje parametry úlohy **XSD.**
 
-- **AdditionalOptions**
+- **Další možnosti**
 
-     Volitelný **řetězcový** parametr.
+     Volitelný **parametr String.**
 
-     Seznam možností, jak je uvedeno na příkazovém řádku. Například/\<možnost1 >/\<možnost2 >/\<možnost # >. Pomocí tohoto parametru můžete zadat možnosti, které nejsou reprezentované žádným jiným parametrem úlohy **XSD** .
+     Seznam možností určených na příkazovém řádku. Například /\<option1\<> /\<option2> / option#>. Tento parametr slouží k určení možností, které nejsou reprezentovány žádným jiným parametrem úlohy **XSD.**
 
 - **GenerateFromSchema**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
   Určuje typy, které jsou generovány ze zadaného schématu.
 
   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti XSD.
 
-  - **třídy** -  **/Classes**
+  - **třídy** - **/třídy**
 
-  - **datová sada** -  **/DataSet**
+  - **datová sada** - **/datová sada**
 
 - **Jazyk**
 
-     Volitelný **řetězcový** parametr.
+     Volitelný **parametr String.**
 
-     Určuje programovací jazyk, který má být použit pro vygenerovaný kód.
+     Určuje programovací jazyk, který se má použít pro generovaný kód.
 
-     Vyberte z **cs** (C#, což je výchozí nastavení), **VB** (Visual Basic) nebo **js** (JScript). Můžete také zadat plně kvalifikovaný název pro třídu, která implementuje `System.CodeDom.Compiler.CodeDomProvider Class`.
+     Vyberte si z **CS** (C#, což je výchozí), **VB** (Visual Basic) nebo **JS** (JScript). Můžete také zadat plně kvalifikovaný název pro třídu, která implementuje `System.CodeDom.Compiler.CodeDomProvider Class`.
 
-- **Hosting**
+- **Namespace**
 
-     Volitelný **řetězcový** parametr.
+     Volitelný **parametr String.**
 
      Určuje runtime obor názvů pro generovaný typy.
 
-- **Prostředky**
+- **Zdrojů**
 
-     Vyžaduje se `ITaskItem[]` parametr.
+     Požadovaný parametr `ITaskItem[]`.
 
-     Definuje pole položek zdrojového souboru MSBuild, které mohou být spotřebovány a generovány úlohami.
+     Definuje pole položek zdrojového souboru MSBuild, které mohou být spotřebovány a vydávány úkoly.
 
-- **SuppressStartupBanner**
+- **PotlačitStartupBanner**
 
      Volitelný **logický** parametr.
 
-     Pokud `true`, zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.
+     Pokud `true`aplikace zabraňuje zobrazení zprávy o autorských právech a čísle verze při spuštění úlohy.
 
 - **TrackerLogDirectory**
 
-     Volitelný **řetězcový** parametr.
+     Volitelný **parametr String.**
 
-     Určuje adresář pro protokol sledování.
+     Určuje adresář protokolu sledování.
 
 ## <a name="see-also"></a>Viz také
 

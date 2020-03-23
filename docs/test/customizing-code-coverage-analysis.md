@@ -8,64 +8,64 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: bce7a6b9369f33e6fa5248821f58d9903172415c
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75918651"
 ---
 # <a name="customize-code-coverage-analysis"></a>Přizpůsobení analýzy pokrytí kódu
 
-Ve výchozím nastavení pokrytí kódu analyzuje všechna sestavení řešení, která jsou načtena během testování částí. Vzhledem k tomu, že to funguje dobře ve většině případů doporučujeme použít toto výchozí chování. Další informace najdete v tématu [použití pokrytí kódu k určení, kolik kódu je testována](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
+Ve výchozím nastavení pokrytí kódu analyzuje všechna sestavení řešení, která jsou načtena během testů částí. Doporučujeme použít toto výchozí chování, protože funguje dobře většinu času. Další informace naleznete [v tématu Použití pokrytí kódu k určení, kolik kódu je testováno](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
 
-Chcete-li vyloučit testovací kód z výsledků pokrytí kódu a obsahovat jenom kód aplikace, přidejte <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute> atribut do vaší testovací třídy.
+Chcete-li vyloučit testovací kód z výsledků pokrytí kódu <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute> a zahrnout pouze kód aplikace, přidejte atribut do testovací třídy.
 
-Chcete-li zahrnout sestavení, které nejsou součástí vašeho řešení, získat *PDB* soubory pro tato sestavení a zkopírujte je do stejné složky jako sestavení *.dll* soubory.
+Chcete-li zahrnout sestavení, která nejsou součástí vašeho řešení, získejte soubory *PDB* pro tato sestavení a zkopírujte je do stejné složky jako soubory *dll* sestavení.
 
-## <a name="run-settings-file"></a>Soubor parametrů běhu
+## <a name="run-settings-file"></a>Spustit soubor nastavení
 
-[Soubor parametrů běhu](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md) je konfigurační soubor používaný nástroji pro testování jednotky. Upřesňující nastavení pokrytí kódu jsou určené v *s příponou .runsettings* souboru.
+[Soubor nastavení spuštění](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md) je konfigurační soubor používaný nástroji pro testování částí. Upřesňující nastavení krytí kódu jsou určena v souboru *.runsettings.*
 
-Chcete-li přizpůsobit pokrytí kódu, postupujte podle těchto kroků:
+Chcete-li přizpůsobit pokrytí kódu, postupujte takto:
 
-1. Přidejte soubor parametrů běhu do vašeho řešení. V **Průzkumníka řešení**, v místní nabídce řešení zvolte **přidat** > **nová položka**a vyberte **soubor XML**. Uložte soubor s názvem, jako *CodeCoverage.runsettings*.
+1. Přidejte do řešení soubor nastavení spuštění. V **Průzkumníku řešení**v místní nabídce řešení zvolte **Přidat** > **novou položku**a vyberte **soubor XML**. Uložte soubor s názvem, například *CodeCoverage.runsettings*.
 
-2. Přidejte obsah ze souboru příkladu na konci tohoto článku a jak je popsáno v následující části jeho úprava podle vašich potřeb.
+2. Přidejte obsah z ukázkového souboru na konci tohoto článku a přizpůsobte jej podle svých potřeb, jak je popsáno v následujících částech.
 
 ::: moniker range="vs-2017"
 
-3. Vyberte soubor parametrů běhu na **testovací** nabídky, zvolte **nastavení testu** > **vybrat soubor nastavení testu**. Chcete-li zadat soubor parametrů běhu pro spuštění testů z příkazového řádku, přečtěte si téma [Konfigurace testování částí](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line).
+3. Chcete-li vybrat soubor nastavení spuštění, zvolte v nabídce **Test** **Nastavení testů** > **Vybrat soubor nastavení testu**. Informace o určení souboru nastavení spuštění pro spuštění testů z příkazového řádku naleznete v [tématu Konfigurace testů jednotek](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line).
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. Chcete-li vybrat soubor s parametry spuštění, v nabídce **test** zvolte **možnost soubor nastavení**. Chcete-li zadat soubor parametrů běhu pro spuštění testů z příkazového řádku, přečtěte si téma [Konfigurace testování částí](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line).
+3. Chcete-li vybrat soubor nastavení spuštění, zvolte v nabídce **Test** **možnost Vybrat soubor nastavení**. Informace o určení souboru nastavení spuštění pro spuštění testů z příkazového řádku naleznete v [tématu Konfigurace testů jednotek](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line).
 
 ::: moniker-end
 
-   Když vyberete **analyzovat pokrytí kódu**, informace o konfiguraci je pro čtení ze souboru parametrů běhu.
+   Když vyberete **Analyzovat pokrytí kódu**, informace o konfiguraci se přečtou ze souboru nastavení spuštění.
 
    > [!TIP]
-   > Všechny předchozí výsledky pokrytí kódu a barevné zvýraznění kódu nejsou automaticky skryty při spuštění testů nebo aktualizaci kódu.
+   > Všechny předchozí výsledky pokrytí kódu a zbarvení kódu nejsou automaticky skryty při spuštění testů nebo aktualizaci kódu.
 
 ::: moniker range="vs-2017"
 
-Chcete-li vlastní nastavení vypnout a zapnout, zrušte výběr nebo vyberte soubor v nabídce **Nastavení** **testu > test** .
+Chcete-li vypnout a zapnout vlastní nastavení, odznačte nebo vyberte soubor v nabídce **Nastavení testu.** > **Test Settings**
 
-![Nabídka nastavení testu se souborem vlastního nastavení v aplikaci Visual Studio 2017](../test/media/codecoverage-settingsfile.png)
+![Nabídka Nastavení testu s vlastním souborem nastavení v Sadě Visual Studio 2017](../test/media/codecoverage-settingsfile.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Chcete-li vlastní nastavení vypnout a zapnout, zrušte výběr nebo vyberte soubor v nabídce **test** .
+Chcete-li vypnout a zapnout vlastní nastavení, odznačte nebo vyberte soubor v nabídce **Test.**
 
 ::: moniker-end
 
-## <a name="symbol-search-paths"></a>Cesty pro hledání symbolů
+## <a name="symbol-search-paths"></a>Cesty pro vyhledávání symbolů
 
-Pokrytí kódu vyžaduje soubory symbolů (*PDB* soubory) pro sestavení. Pro sestavení sestavená vaším řešením jsou soubory symbolů obvykle přítomny společně s binárními soubory a pokrytí kódu funguje automaticky. V některých případech může být vhodné zahrnout odkazovaná sestavení do analýzy pokrytí kódu. V takovém případě *PDB* soubory nemusí být vedle binární soubory, ale můžete zadat cestu pro hledání symbolů v *s příponou .runsettings* souboru.
+Pokrytí kódu vyžaduje soubory symbolů (*soubory PDB)* pro sestavení. U sestavení sestavených podle vašeho řešení jsou soubory symbolů obvykle k dispozici vedle binárních souborů a pokrytí kódu funguje automaticky. V některých případech můžete chtít zahrnout odkazovaná sestavení do analýzy pokrytí kódu. V takových případech nemusí být soubory *PDB* vedle binárních souborů, ale v souboru *.runsettings* můžete určit cestu hledání symbolů.
 
 ```xml
 <SymbolSearchPaths>
@@ -75,13 +75,13 @@ Pokrytí kódu vyžaduje soubory symbolů (*PDB* soubory) pro sestavení. Pro se
 ```
 
 > [!NOTE]
-> Vyhodnocování symbolů může trvat dobu, zvláště při použití vzdáleného umístění souborů s mnoha sestavení. Zvažte proto možnost zkopírování *PDB* soubory do stejného umístění jako binární soubor ( *.dll* a *.exe*) soubory.
+> Rozlišení symbolu může nějakou dobu trvat, zejména při použití vzdáleného umístění souboru s mnoha sestaveními. Proto zvažte kopírování souborů *PDB* do stejného místního umístění jako binární soubory *( DLL* a *EXE*).
 
 ## <a name="include-or-exclude-assemblies-and-members"></a>Zahrnout nebo vyloučit sestavení a členy
 
-Můžete zahrnout nebo vyloučit sestavení nebo konkrétní typy a členy z analýzy pokrytí kódu. Pokud je oddíl **include** prázdný nebo vynechán, jsou zahrnuta všechna sestavení, která jsou načtena a přidruženy soubory PDB. Pokud sestavení nebo člen souhlasí s klauzulí v oddílu **Exclude** , je vyloučen z pokrytí kódu. Oddíl **Exclude** má přednost před oddílem **include** : Pokud je sestavení uvedeno v **zahrnutí** i **vyloučení**, nebude zahrnuto do pokrytí kódu.
+Můžete zahrnout nebo vyloučit sestavení nebo určité typy a členy z analýzy disponibility kódu. Pokud je oddíl **Zahrnout** prázdný nebo vynechaný, budou zahrnuta všechna sestavení, která jsou načtena a mají přidružené soubory PDB. Pokud sestavení nebo člen odpovídá klauzuli v části **Vyloučit,** je vyloučenz pokrytí kódu. Oddíl **Vyloučit** má přednost před oddílem **Zahrnout:** pokud je sestavení uvedeno v **části Zahrnout** i **Vyloučit**, nebude zahrnuto do pokrytí kódu.
 
-Například následující kód XML vyloučí jedno sestavení zadáním jeho názvu:
+Například následující XML vyloučí jedno sestavení zadáním jeho názvu:
 
 ```xml
 <ModulePaths>
@@ -92,7 +92,7 @@ Například následující kód XML vyloučí jedno sestavení zadáním jeho n�
 </ModulePaths>
 ```
 
-Následující příklad určuje, že v pokrytí kódu by mělo být zahrnuto pouze jedno sestavení:
+Následující příklad určuje, že do pokrytí kódu by mělo být zahrnuto pouze jedno sestavení:
 
 ```xml
 <ModulePaths>
@@ -103,34 +103,34 @@ Následující příklad určuje, že v pokrytí kódu by mělo být zahrnuto po
 </ModulePaths>
 ```
 
-Následující tabulka ukazuje různé způsoby, jak mohou být sestavení a členové spárovány s zahrnutím do nebo z pokrytí kódu.
+V následující tabulce jsou uvedeny různé způsoby, jak sestavení a členy mohou být spárovány pro zahrnutí nebo vyloučení z pokrytí kódu.
 
-| XML – element | Co odpovídá |
+| Element XML | Co odpovídá |
 | - | - |
-| ModulePath nastavte | Odpovídá sestavením určeným názvem sestavení nebo cestou k souboru. |
-| CompanyName | Porovnává sestavení podle atributu **společnosti** . |
-| PublicKeyToken | Odpovídá podepsaným sestavením tokenu veřejného klíče. |
-| Zdroj | Porovná prvky podle názvu cesty zdrojového souboru, ve kterém jsou definovány. |
-| Atribut | Porovná prvky, které mají zadaný atribut. Zadejte úplný název atributu, například `<Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>`.<br/><br/>Pokud vyloučíte atribut <xref:System.Runtime.CompilerServices.CompilerGeneratedAttribute>, kód, který používá funkce jazyka, jako jsou `async`, `await`, `yield return`a automaticky implementované vlastnosti, je vyloučen z analýzy pokrytí kódu. Chcete-li vyloučit skutečně generovaný kód, vylučte pouze atribut <xref:System.CodeDom.Compiler.GeneratedCodeAttribute>. |
-| Funkce | Porovná procedury, funkce nebo metody podle plně kvalifikovaného názvu, včetně seznamu parametrů. Můžete také porovnat část názvu pomocí [regulárního výrazu](#regular-expressions).<br/><br/>Příklady:<br/><br/>`Fabrikam.Math.LocalMath.SquareRoot(double);` (C#)<br/><br/>`Fabrikam::Math::LocalMath::SquareRoot(double)` (C++) |
+| Cesta modulu | Shoduje se se stavy určenými názvem sestavení nebo cestou souboru. |
+| CompanyName | Odpovídá sestavení podle atributu **Company.** |
+| Publickeytoken | Odpovídá podepsaným sestavením tokenem veřejného klíče. |
+| Zdroj | Odpovídá prvkům podle názvu cesty zdrojového souboru, ve kterém jsou definovány. |
+| Atribut | Odpovídá prvkům, které mají zadaný atribut. Zadejte úplný název atributu, `<Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>`například .<br/><br/>Pokud <xref:System.Runtime.CompilerServices.CompilerGeneratedAttribute> atribut vyloučíte, kód, `async` `await`který `yield return`používá funkce jazyka, jako jsou , , a automaticky implementované vlastnosti, je vyloučen z analýzy pokrytí kódu. Chcete-li vyloučit skutečně generovaný kód, vylučte pouze <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> atribut. |
+| Funkce | Odpovídá procedurám, funkcím nebo metodám podle plně kvalifikovaného názvu, včetně seznamu parametrů. Část názvu můžete také porovnat pomocí [regulárního výrazu](#regular-expressions).<br/><br/>Příklady:<br/><br/>`Fabrikam.Math.LocalMath.SquareRoot(double);`(C#)<br/><br/>`Fabrikam::Math::LocalMath::SquareRoot(double)`(C++) |
 
 ### <a name="regular-expressions"></a>Regulární výrazy
 
-Uzly include a Exclude používejte regulární výrazy, které nejsou stejné jako zástupné znaky. Ve shodách se nerozlišují velká a malá písmena. Tady je pár příkladů:
+Zahrnout a vyloučit uzly používají regulární výrazy, které nejsou stejné jako zástupné znaky. Ve shodách se nerozlišují velká a malá písmena. Tady je několik příkladů:
 
-- **.\*** odpovídá řetězci libovolných znaků.
+- **. \* ** odpovídá řetězci libovolných znaků
 
-- **\\.** odpovídá tečkě "."
+- **\\.** odpovídá tečka "."
 
-- **\\( \\)** odpovídá závorkám ""
+- ( ) odpovídá závorce "( )" ** \\ \\**
 
-- **\\\\** odpovídá oddělovači cesty k souboru "\\"
+- **\\\\**odpovídá oddělovači cesty\\k souboru " "
 
 - **^** odpovídá začátku řetězce
 
 - **$** odpovídá konci řetězce
 
-Následující kód XML ukazuje, jak zahrnout a vyloučit konkrétní sestavení pomocí regulárních výrazů:
+Následující jazyk XML ukazuje, jak zahrnout a vyloučit určitá sestavení pomocí regulárních výrazů:
 
 ```xml
 <ModulePaths>
@@ -147,7 +147,7 @@ Následující kód XML ukazuje, jak zahrnout a vyloučit konkrétní sestavení
 </ModulePaths>
 ```
 
-Následující kód XML ukazuje, jak zahrnout a vyloučit konkrétní funkce pomocí regulárních výrazů:
+Následující jazyk XML ukazuje, jak zahrnout a vyloučit určité funkce pomocí regulárních výrazů:
 
 ```xml
 <Functions>
@@ -165,13 +165,13 @@ Následující kód XML ukazuje, jak zahrnout a vyloučit konkrétní funkce pom
 ```
 
 > [!WARNING]
-> Pokud dojde k chybě v regulárním výrazu, jako je například znakem nebo nespárované závorky, analýza pokrytí kódu se nespustí.
+> Pokud je chyba v regulárním výrazu, jako je například unescaped nebo neodpovídající závorky, analýza pokrytí kódu se nespustí.
 
-Další informace o regulárních výrazech naleznete v tématu [použití regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
+Další informace o regulárních výrazech naleznete [v tématu Použití regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
 
 ## <a name="sample-runsettings-file"></a>Ukázkový soubor s příponou .runsettings
 
-Zkopírujte tento kód a upravte jej tak, aby odpovídala vašim potřebám.
+Zkopírujte tento kód a upravte jej tak, aby vyhovoval vašim potřebám.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -288,8 +288,8 @@ Included items must then not match any entries in the exclude list to remain inc
 </RunSettings>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Konfigurace testů jednotek s použitím souboru parametrů běhu](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
-- [Použití pokrytí kódu k určení, kolik kódu je testována.](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
+- [Konfigurace testů jednotek pomocí souboru nastavení spuštění](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
+- [Použití pokrytí kódu k určení, kolik kódu je testováno](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
 - [Testování částí kódu](../test/unit-test-your-code.md)

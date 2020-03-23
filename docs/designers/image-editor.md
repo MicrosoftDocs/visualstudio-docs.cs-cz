@@ -11,17 +11,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fd7d9aed75876b47a6574d46b226f5baec336883
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589315"
 ---
 # <a name="image-editor"></a>editor obrázků
 
-Tento článek popisuje, jak pracovat s **editorem imagí** sady Visual Studio k zobrazení a úpravě prostředků textury a obrázků.
+Tento článek popisuje, jak pracovat s Visual Studio **Image Editor** zobrazit a upravit textury a obrazové prostředky.
 
-**Editor obrázků** můžete použít pro práci s typy bohatých textur a formátů obrázků používaných při vývoji aplikací DirectX. To zahrnuje podporu oblíbených formátů souborů obrázků a barevného kódování, funkcí jako alfa kanálů a mapování MIP a mnoha vysoce komprimovaných formátů hardwarových a akcelerovaných textur, které podporuje DirectX.
+**Editor obrázků** můžete použít k práci s druhy bohatých textur a obrazových formátů, které se používají při vývoji aplikací DirectX. To zahrnuje podporu pro populární formáty obrazových souborů a kódování barev, funkce, jako jsou alfa kanály a mapování MIP, a mnoho vysoce komprimovaných, hardwarově akcelerovaných formátů textur, které rozhraní DirectX podporuje.
 
 ## <a name="supported-formats"></a>Podporované formáty
 
@@ -29,265 +29,265 @@ Tento článek popisuje, jak pracovat s **editorem imagí** sady Visual Studio k
 
 |Název formátu|Přípona názvu souboru|
 |-----------------| - |
-|Formát PNG|*formát. png*|
+|Formát PNG|*Png*|
 |JPEG|*.jpg*, *.jpeg*, *.jpe*, *.jfif*|
-|Přímo nakreslit plochu|*.dds*|
-|Formát GIF|*. gif*|
-|Monochromatick|*. bmp*, *. DIB*|
-|Formát tagovaného obrázkového souboru|*. tif*, *. TIFF*|
+|Přímý nakreslování povrchu|*.dds*|
+|Formát GIF|*Gif*|
+|Bitmapové|*.bmp*, *.dib*|
+|Formát souboru označeného obrázku|*.tif*, *.tiff*|
 |TGA (Targa)|*.tga*|
 
 ## <a name="get-started"></a>Začínáme
 
-Tato část popisuje, jak přidat obrázek do projektu aplikace Visual Studio a nakonfigurovat ho pro vaše požadavky.
+Tato část popisuje, jak přidat bitovou kopii do projektu sady Visual Studio a nakonfigurovat ji pro vaše požadavky.
 
 ### <a name="add-an-image-to-your-project"></a>Přidání obrázku do projektu
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro projekt, do kterého chcete přidat obrázek, a poté zvolte možnost **Přidat** > **novou položku**.
+1. V **Průzkumníku řešení**otevřete místní nabídku projektu, do kterého chcete obrázek přidat, a pak zvolte **Přidat** > **novou položku**.
 
-2. V dialogovém okně **Přidat novou položku** vyberte v části **nainstalováno**možnost **Grafika**a pak pro obrázek vyberte příslušný formát souboru.
+2. V dialogovém okně **Přidat novou položku** v části **Nainstalováno**vyberte **Grafika**a pak vyberte vhodný formát souboru pro obraz.
 
    > [!NOTE]
-   > Pokud v dialogovém okně **Přidat novou položku** nevidíte kategorii **grafiky** , možná budete muset nainstalovat součást **image a 3D model editory** . Zavřete dialogové okno a pak vyberte **nástroje** > **získat nástroje a funkce** z řádku nabídek a otevřete **instalační program pro Visual Studio**. Vyberte kartu **jednotlivé komponenty** a potom vyberte součást **image a 3D model editory** v kategorii **hry a grafiky** . Vyberte **Upravit**.
+   > Pokud v dialogovém okně **Přidat novou položku** nevidíte kategorii **Grafika,** bude možná nutné nainstalovat komponentu **Image a editory 3D modelů.** Zavřete dialogové okno a potom na řádku nabídek vyberte **Nástroje** > **získat nástroje a funkce,** chcete-li otevřít Instalační **službu sady Visual Studio**. Vyberte kartu **Jednotlivé komponenty** a pak vyberte komponentu **Image a editory 3D modelů** v kategorii Hry a **Grafika.** Vyberte **Změnit**.
    >
-   > ![Součást Editor obrázků a 3D model](media/image-3d-model-editors-component.png)
+   > ![Komponenta editorů obrazových a 3D modelů](media/image-3d-model-editors-component.png)
 
-   Informace o tom, jak zvolit formát souboru podle vašich požadavků, najdete v tématu [Volba formátu obrázku](#choose-the-image-format).
+   Informace o tom, jak zvolit formát souboru na základě vašich požadavků, [najdete v tématu Volba formátu obrázku](#choose-the-image-format).
 
-3. Zadejte **název** souboru obrázku a **umístění** , kde se má vytvořit.
+3. Zadejte **název** obrazového souboru a **umístění,** kde má být vytvořen.
 
-4. Zvolte **přidat** tlačítko.
+4. Vyberte tlačítko **Přidat**.
 
 ### <a name="choose-the-image-format"></a>Volba formátu obrázku
 
-V závislosti na tom, jak plánujete použít image, můžou být některé formáty souborů vhodnější než jiné. Některé formáty například nemusí podporovat funkci, kterou potřebujete, například průhlednost nebo konkrétní formát barvy. Některé formáty nemusí poskytovat vhodnou kompresi pro druh obsahu bitové kopie, který jste naplánovali.
+V závislosti na tom, jak chcete obrázek používat, mohou být některé formáty souborů vhodnější než jiné. Některé formáty například nemusí podporovat funkci, kterou potřebujete, například průhlednost nebo určitý barevný formát. Některé formáty nemusí poskytovat vhodnou kompresi pro typ naplánovaného obsahu obrázku.
 
-Následující informace vám pomohou zvolit formát obrázku, který vyhovuje vašim potřebám:
+Následující informace vám mohou pomoci vybrat formát obrázku, který vyhovuje vašim potřebám:
 
-**Rastrový obrázek (. bmp)**
+**Bitmapový obraz (.bmp)**
 
-Formát rastrového obrázku. Nekomprimovaný formát obrázku, který podporuje 24bitové barvy. Formát rastrového obrázku nepodporuje průhlednost.
+Formát bitmapového obrazu. Nekomprimovaný formát obrazu, který podporuje 24bitové barvy. Formát bitmapy nepodporuje průhlednost.
 
 **Obrázek GIF (.gif)**
 
-Formát obrázku ve formátu GIF (Graphics Interchange Format). Bezeztrátový formát komprimovaný ve formátu LZW, který podporuje až 256 barev. Nevhodné pro fotografie a obrázky, které mají velký objem detailů barev, ale poskytuje dobré kompresní poměry pro obrázky s nízkými barvami, které mají vysoký stupeň provázanosti barev.
+Formát obrázku Formát formátu GIF (Graphics Interchange Format). LZW komprimovaný bezeztrátový obrazový formát, který podporuje až 256 barev. Nevhodné pro fotografie a obrazy, které mají značné množství barevných detailů, ale poskytují dobré kompresní poměry pro obrazy s nízkými barvami, které mají vysoký stupeň soudržnosti barev.
 
-**Obrázek JPG (. jpg)**
+**JPG Obrázek (.jpg)**
 
-Formát obrázku ve formátu JPEG (společný fotografický Experts Group). Vysoce komprimovaný formát neztrátového obrazu, který podporuje 24bitové barvy a je vhodný pro účely běžné komprese imagí s vysokým stupněm provázanosti barev.
+Formát obrazu Společné fotografické expertní skupiny (JPEG). Vysoce komprimovaný, ztrátový formát obrazu, který podporuje 24bitové barvy a je vhodný pro univerzální kompresi obrazů, které mají vysoký stupeň soudržnosti barev.
 
-**Obrázek PNG (. png)**
+**Obrázek PNG (.png)**
 
-Formát obrázku PNG (Portable Network Graphics). Středně komprimovaný a bezeztrátový formát obrazu, který podporuje 24bitové barvy a alfa průhlednost. Je vhodný pro přirozené i umělé bitové kopie, ale neposkytuje kompresní poměry tak, jak jsou, stejně jako formáty ztrát, jako je JPG nebo GIF.
+Formát obrazu PNG (Portable Network Graphics). Mírně komprimovaný bezeztrátový formát obrazu, který podporuje 24bitovou barevnou a alfa průhlednost. Je vhodný pro přírodní i umělé obrazy, ale neposkytuje kompresní poměry tak dobré jako ztrátové formáty, jako je JPG nebo GIF.
 
-**Obrázek TIFF (. tif)**
+**Obrázek TIFF (.tif)**
 
-Formát obrázku TIFF nebo TIF (Tagged Image File Format). Flexibilní formát obrázku, který podporuje několik schémat komprese.
+Formát obrázku Tagged Image File Format (TIFF nebo TIF). Flexibilní formát obrazu, který podporuje několik kompresních schémat.
 
-**Textura DDS (. DDS)**
+**Textura DDS (.dds)**
 
-Formát textury sady DirectDraw (DDS surfing). Vysoce komprimovaný formát struktury s neztrátou, který podporuje 24bitové barvy a alfa průhlednost. Jeho kompresní poměry můžou být vysoké jako 8:1. Je založený na kompresi textury S3, která se dá dekomprimovat na hardwaru grafiky.
+Formát textury DirectDraw Surface (DDS). Vysoce komprimovaný, ztrátový formát textury, který podporuje 24bitovou barvu a průhlednost alfa. Jeho kompresní poměry mohou být až 8:1. Je založen na kompresi Textury S3, která může být dekomprimována na grafickém hardwaru.
 
-**Obrázek TGA (. TGA)**
+**Obrázek TGA (.tga)**
 
-Formát obrázku TGA (Truevision Graphics Adapter) (označovaný také jako Targa). Bezeztrátový formát komprimovaný ve formátu RLE, který podporuje barevně namapovanou barvu (paletu barev) nebo přímý barevný obraz až na 24 bitů barev a alfa fólie. Nevhodné pro fotografie a obrázky, které mají velký objem detailů barev, ale poskytuje dobré kompresní poměry pro obrázky, které mají dlouhé rozpětí stejných barev.
+Formát obrázku Truevision Graphics Adapter (TGA) (také známý jako Targa). Formát obrazu komprimovaný protokolem RLE, který podporuje barevně mapované (barevnou paletu) i obrazy s přímými barvami až 24bitové barvy a alfa průhlednost. Nevhodné pro fotografie a obrazy, které mají značné množství barevných detailů, ale poskytuje dobré kompresní poměry pro obrazy, které mají dlouhé rozsahy identických barev.
 
-### <a name="configure-the-image"></a>Konfigurace image
+### <a name="configure-the-image"></a>Konfigurace bitové kopie
 
-Než začnete pracovat s bitovou kopií, kterou jste vytvořili, můžete změnit její výchozí konfiguraci. Můžete například změnit jeho rozměry nebo formát barvy, který používá. Informace o tom, jak nakonfigurovat tyto a další vlastnosti obrázku, najdete v tématu [Vlastnosti obrázku](#image-properties).
+Než začnete pracovat s obrazem, který jste vytvořili, můžete změnit jeho výchozí konfiguraci. Můžete například změnit jeho rozměry nebo formát barvy, který používá. Informace o konfiguraci těchto a dalších vlastností bitové kopie naleznete v tématu [Vlastnosti obrazu](#image-properties).
 
 > [!NOTE]
-> Před uložením práce nezapomeňte nastavit vlastnost **formát barev** , pokud chcete použít konkrétní formát barvy. Pokud formát souboru podporuje kompresi, můžete nastavení komprese upravit při prvním uložení souboru nebo když zvolíte možnost **Uložit jako**.
+> Před uložením práce nezapomeňte nastavit vlastnost **Formát barvy,** pokud chcete použít určitý barevný formát. Pokud formát souboru podporuje kompresi, můžete upravit nastavení komprese při prvním uložení souboru nebo při **volbě Uložit jako**.
 
-## <a name="work-with-the-image-editor"></a>Práce s editorem obrázků
+## <a name="work-with-the-image-editor"></a>Práce s Editorem obrázků
 
-Tato část popisuje, jak použít **Editor obrázků** k úpravě textur a imagí.
+Tato část popisuje, jak pomocí **Editoru obrázků** upravit textury a obrazy.
 
-Příkazy, které mají vliv na stav **editoru obrázků** , jsou umístěny na panelu nástrojů **režim editoru obrázků** spolu s pokročilými příkazy. Panel nástrojů se nachází podél horního okraje návrhové plochy **editoru obrázků** . Nástroje pro kreslení jsou umístěné na panelu nástrojů **Editor obrázků** podél levého okraje návrhové plochy **editoru obrázků** .
+Příkazy, které ovlivňují stav **Editoru obrázků,** jsou umístěny na panelu nástrojů **Režim editoru obrázků** spolu s rozšířenými příkazy. Panel nástrojů se nachází podél horního okraje návrhové plochy **Editoru obrázků.** Kreslicí nástroje jsou umístěny na panelu nástrojů **Editor obrázků** podél levého okraje návrhové plochy **Editoru obrázků.**
 
 ### <a name="image-editor-mode-toolbar"></a>Panel nástrojů Režim editoru obrázků
 
-![Panel nástrojů Režim editoru obrázků v sadě Visual Studio](../designers/media/digit-tre-modal-toolbar.png)
+![Panel nástrojů Editor obrázků v sadě Visual Studio](../designers/media/digit-tre-modal-toolbar.png)
 
-Následující tabulka popisuje položky na panelu nástrojů **režim editoru obrázků** , které jsou uvedeny v pořadí, ve kterém se zobrazují zleva doprava:
+Následující tabulka popisuje položky na panelu nástrojů **Režim editoru obrázků,** které jsou uvedeny v pořadí, ve kterém se zobrazují zleva doprava:
 
 |Položka na panelu nástrojů|Popis|
 |------------------|-----------------|
-|**Výběr**|Umožňuje výběr obdélníkové oblasti obrázku. Po výběru oblasti ji můžete vyjmout, kopírovat, přesunout, škálovat, otočit, překlopit nebo odstranit. Pokud existuje aktivní výběr, nástroje pro kreslení ovlivní pouze vybranou oblast.|
-|**Nepravidelný výběr**|Umožňuje výběr nepravidelné oblasti obrázku. Po výběru oblasti ji můžete vyjmout, kopírovat, přesunout, škálovat, otočit, překlopit nebo odstranit. Pokud existuje aktivní výběr, nástroje pro kreslení ovlivní pouze vybranou oblast.|
-|**Výběr hůlka**|Umožňuje výběr podobně barevné oblasti obrázku. *Tolerance*– tedy maximální rozdíl mezi sousedícími barvami, ve kterých jsou považovány za podobné, lze nakonfigurovat tak, aby zahrnovaly menší nebo širší rozsah podobných barev. Po výběru oblasti ji můžete vyjmout, kopírovat, přesunout, škálovat, otočit, překlopit nebo odstranit. Pokud existuje aktivní výběr, nástroje pro kreslení ovlivní pouze vybranou oblast.|
-|**Posouvání**|Povoluje přesun obrázku relativně k rámečku okna. V režimu **posouvání** vyberte v imagi nějaký bod a pak ho přesuňte kolem.<br /><br /> Režim **posouvání** můžete dočasně aktivovat tak, že stisknete a podržíte klávesu **CTRL** .|
-|**Přiblížení**|Povoluje zobrazení více nebo méně podrobností obrázku relativně k rámečku okna. V režimu **zvětšení** vyberte bod na obrázku a pak ho přesuňte doprava nebo dolů, abyste se přiblížili nebo ponechali zmenšení.<br /><br /> Můžete přiblížit nebo oddálit stisknutím a podržením **klávesy CTRL** , a to buď pomocí kolečka myši, nebo stisknutím znaménka plus ( **+** ) nebo znaménka mínus ( **-** ).|
-|**Zvětšit na skutečnou velikost**|Zobrazí obrázek pomocí vztahu 1:1 mezi pixely obrázku a pixely obrazovky.|
-|**Přizpůsobit zobrazení**|Zobrazí celý obrázek v rámci okna.|
-|**Zvětšit na šířku**|Zobrazí celou šířku obrázku v rámci okna.|
-|**Mřížka**|Povolí nebo zakáže mřížku, která zobrazuje hranice v pixelech. Mřížka se nemusí zobrazit, dokud nezměníte zobrazení obrázku.|
-|**Zobrazit další úroveň MIP**|Aktivuje další větší úroveň MIP v řetězci mapy MIP. Na návrhové ploše se zobrazí aktivní úroveň MIP. Tato položka je k dispozici pouze pro textury, které mají úrovně MIP.|
-|**Zobrazit předchozí úroveň MIP**|Aktivuje další menší úroveň MIP v řetězci mapy MIP. Na návrhové ploše se zobrazí aktivní úroveň MIP. Tato položka je k dispozici pouze pro textury, které mají úrovně MIP.|
-|**Červený kanál**<br /><br /> **Zelený kanál**<br /><br /> **Modrý kanál**<br /><br /> **Kanál alfa**|Povolí nebo zakáže konkrétní barevný kanál. **Poznámka:**  Když systematicky povolíte nebo zakážete barevné kanály, můžete izolovat problémy, které souvisí s jedním nebo více z nich. Můžete například identifikovat nesprávnou průhlednost alfa.|
-|**Na pozadí**|Povolí nebo zakáže zobrazení pozadí prostřednictvím průhledných částí obrázku. Způsob zobrazení pozadí můžete nakonfigurovat výběrem z těchto možností:<br /><br /> **Šachovnicový**<br /> Používá zelenou barvu společně se zadanou barvou pozadí k zobrazení pozadí jako šachovnicového vzoru. Tuto možnost můžete použít, chcete-li lépe poznat průhledné části obrázku.<br /><br /> Bílé pozadí<br /> Používá bílou barvu k zobrazení pozadí.<br /><br /> Černé pozadí<br /> Použije barvu černou k zobrazení pozadí.<br /><br /> Animovat pozadí<br /> Sevýšení šachovnicového vzoru pomalu. Tuto možnost můžete použít, chcete-li lépe poznat průhledné části obrázku.|
-|**Vlastnosti**|Alternativně otevře nebo zavře okno **vlastnosti** .|
-|**Pokročilé**|Obsahuje další příkazy a možnosti.<br /><br /> **Filtry**<br /><br /> Nabízí několik běžných filtrů obrázků: **černou a bílá**, **Rozostřit**, **zesvětlit**, **ztmavit**, **detekce hran**, **reliéf**, **invertování barev**, **Ripple**, **Sépiový tón tón**a **Zostřit**.<br /><br /> **Grafické moduly**<br /><br /> **Vykreslení pomocí D3D11**<br /> Vykreslí návrhovou plochu **editoru obrázků** pomocí Direct3D 11.<br /><br /> **Vykreslení pomocí D3D11WARP**<br /> Vykreslí návrhovou plochu **editoru obrázků** pomocí Direct3D 11 Windows Advanced rastring Platform (osnova).<br /><br /> **Nástroje**<br /><br /> **Překlopit vodorovně**<br /> Předává obraz kolem jeho vodorovné osy nebo osy x.<br /><br /> **Převrátit svisle**<br /> Předává obraz kolem jeho vertikálního nebo osy y.<br /><br /> **Generovat MIPS**<br /> Vygeneruje úrovně MIP pro obrázek. Pokud úrovně MIP již existují, budou znovu vytvořeny z nejvyšší úrovně MIP. Všechny změny, které byly provedeny v menších úrovních MIP, budou ztraceny. Chcete-li uložit úrovně MIP, které jste vygenerovali, je nutné použít formát *. dds* k uložení obrázku.<br /><br /> **Zobrazení**<br /><br /> **Snímková frekvence**<br /> Pokud je tato možnost povolená, zobrazí kmitočet snímků v pravém horním rohu návrhové plochy. Frekvence snímků je počet snímků, které jsou zpracovány za sekundu. **Tip:** Můžete zvolit tlačítko **Upřesnit** a znovu spustit poslední příkaz.|
+|**Vybrat**|Umožňuje výběr obdélníkové oblasti obrazu. Po výběru oblasti ji můžete vyjmout, kopírovat, přesouvat, měnit velikost, otáčet, překlápět nebo odstraňovat. Pokud je aktivní výběr, kreslicí nástroje ovlivní pouze vybranou oblast.|
+|**Nepravidelný výběr**|Umožňuje výběr nepravidelné oblasti obrazu. Po výběru oblasti ji můžete vyjmout, kopírovat, přesouvat, měnit velikost, otáčet, překlápět nebo odstraňovat. Pokud je aktivní výběr, kreslicí nástroje ovlivní pouze vybranou oblast.|
+|**Výběr hůlky**|Umožňuje výběr podobně barevné oblasti obrazu. *Tolerance*– to znamená maximální rozdíl mezi sousedními barvami, ve kterých jsou považovány za podobné – lze nakonfigurovat tak, aby zahrnovala menší nebo širší rozsah podobných barev. Po výběru oblasti ji můžete vyjmout, kopírovat, přesouvat, měnit velikost, otáčet, překlápět nebo odstraňovat. Pokud je aktivní výběr, kreslicí nástroje ovlivní pouze vybranou oblast.|
+|**Posouvání**|Umožňuje pohyb obrazu vzhledem k rámečku okna. V režimu **Posouvání** vyberte bod v obraze a pak ho přesuňte.<br /><br /> Režim **Posouvání** můžete dočasně aktivovat stisknutím a podržením klávesy **Ctrl.**|
+|**Zoom**|Umožňuje zobrazení více či méně detailů obrazu vzhledem k rámečku okna. V režimu **Lupa** vyberte bod na obrázku a pak ho přesuňte doprava nebo dolů, abyste zobrazení přiblížili, nebo doleva nebo nahoru pro oddálení.<br /><br /> Přiblížení nebo oddálení můžete přiblížit stisknutím a podržením **klávesy Ctrl,** zatímco používáte kolečko myši nebo stiskněte znaménko plus (**+**) nebo znaménko mínus (**-**).|
+|**Zvětšení na skutečnou velikost**|Zobrazí obraz pomocí vztahu 1:1 mezi obrazovými body obrazu a obrazovými body obrazovky.|
+|**Přiblížení podle**|Zobrazí celý obraz v rámečku okna.|
+|**Zvětšení na šířku**|Zobrazí celou šířku obrazu v rámečku okna.|
+|**Mřížka**|Povolí nebo zakáže mřížku, která zobrazuje hranice obrazových bodů. Mřížka se nemusí zobrazit, dokud obraz nepřiblížíte.|
+|**Zobrazit další úroveň MIP**|Aktivuje další větší úroveň MIP v řetězci map MIP. Aktivní úroveň MIP se zobrazí na návrhové ploše. Tato položka je k dispozici pouze pro textury, které mají úrovně MIP.|
+|**Zobrazit předchozí úroveň MIP**|Aktivuje další menší úroveň MIP v řetězci map MIP. Aktivní úroveň MIP se zobrazí na návrhové ploše. Tato položka je k dispozici pouze pro textury, které mají úrovně MIP.|
+|**Červený kanál**<br /><br /> **Zelený kanál**<br /><br /> **Modrý kanál**<br /><br /> **Alfa kanál**|Povolí nebo zakáže konkrétní barevný kanál. **Poznámka:**  Systematickým povolením nebo zakázáním barevných kanálů můžete izolovat problémy, které souvisejí s jedním nebo více z nich. Můžete například identifikovat nesprávnou průhlednost alfa.|
+|**Pozadí**|Povolí nebo zakáže zobrazení pozadí prostřednictvím průhledných částí obrazu. Způsob zobrazení pozadí můžete nakonfigurovat výběrem z těchto možností:<br /><br /> **Šachovnice**<br /> Použije zelenou barvu spolu se zadanou barvou pozadí k zobrazení pozadí jako šachovního vzoru. Pomocí této možnosti můžete přispět k tomu, aby byly průhledné části obrazu viditelnější.<br /><br /> Bílé pozadí<br /> Používá bílou barvu k zobrazení pozadí.<br /><br /> Černé pozadí<br /> Používá černou barvu k zobrazení pozadí.<br /><br /> Animace pozadí<br /> Posouvá šachovní vzor pomalu. Pomocí této možnosti můžete přispět k tomu, aby byly průhledné části obrazu viditelnější.|
+|**Vlastnosti**|Střídavě otevře nebo zavře okno **Vlastnosti.**|
+|**Pokročilé**|Obsahuje další příkazy a možnosti.<br /><br /> **Filtry**<br /><br /> Poskytuje několik běžných obrazových filtrů: **černá a bílá**, **rozostření**, **zesvětlení**, **detekce** **okrajů**, **reliéf**, **invertní barvy**, **zvlnění**, **sépiový tón**a **zostření**.<br /><br /> **Grafické moduly**<br /><br /> **Vykreslení pomocí D3D11**<br /> Používá Direct3D 11 k vykreslení návrhového povrchu **Editoru obrázků.**<br /><br /> **Vykreslení pomocí d3D11WARP**<br /> Používá direct3d 11 Windows Advanced rastrovací platforma (WARP) k vykreslení návrhové plochy **Editoru obrázků.**<br /><br /> **Nástroje**<br /><br /> **Překlopit vodorovně**<br /> Transposes obraz kolem jeho vodorovné nebo x, osy.<br /><br /> **Překlopit svisle**<br /> Transposes obraz kolem jeho svislé nebo y, osy.<br /><br /> **Generovat Mips**<br /> Generuje úrovně MIP pro obraz. Pokud úrovně MIP již existují, jsou znovu vytvořeny z největší úrovně MIP. Všechny změny, které byly provedeny na menší úrovně MIP budou ztraceny. Chcete-li uložit úrovně MIP, které jste vygenerovali, musíte k uložení obrázku použít formát *DDs.*<br /><br /> **Zobrazit**<br /><br /> **Kmitočet**<br /> Pokud je tato možnost povolena, zobrazí kmitočet snímků v pravém horním rohu návrhové plochy. Frekvence snímků je počet snímků, které jsou zpracovány za sekundu. **Tip:** Chcete-li znovu spustit poslední příkaz, můžete zvolit tlačítko **Upřesnit.**|
 
 ### <a name="image-editor-toolbar"></a>Panel nástrojů Editor obrázků
 
 ![Panel nástrojů Editor obrázků](../designers/media/digit-tre-toolbar.png)
 
-Následující tabulka popisuje položky na panelu nástrojů **editoru obrázků** , které jsou uvedeny v pořadí, ve kterém se zobrazují shora dolů:
+Následující tabulka popisuje položky na panelu nástrojů **Editor obrázků,** které jsou uvedeny v pořadí, ve kterém se zobrazují shora dolů:
 
 |Položka na panelu nástrojů|Popis|
 |------------------|-----------------|
-|**Tužky**|Pomocí výběru aktivní barvy nakreslí tah s aliasem. Můžete nastavit barvu a tloušťku tahu v okně **vlastnosti** .|
-|**Štětec**|Použije aktivní výběr barvy k nakreslení tahu proti vyhlazení. Můžete nastavit barvu a tloušťku tahu v okně **vlastnosti** .|
-|**Rozprašovač**|Použije aktivní výběr barvy k nakreslení tahu proti vyhlazení, který se společně s obrázkem rozroste a má větší sytost jako funkce času. Můžete nastavit barvu a tloušťku tahu v okně **vlastnosti** .|
-|**Eyedropper**|Nastaví aktivní výběr barvy na barvu vybraného pixelu.|
-|**Vyplnění**|Použije aktivní výběr barvy k vyplnění oblasti obrázku. Ovlivněná oblast je definována jako pixel, ve kterém je výplň použita, spolu s každým pixelem, který je k němu připojen, v pixelech stejné barvy, což je stejná barva. Pokud je výplň použita v rámci aktivního výběru, bude ovlivněná oblast omezena výběrem.<br /><br /> Ve výchozím nastavení je aktivní výběr barvy Blendem spolu s ovlivněnou oblastí obrázku podle jeho komponenty alfa. Chcete-li použít aktivní výběr barvy k přepsání příslušné oblasti, stiskněte a podržte klávesu **SHIFT** při použití nástroje Fill.|
-|**Guma**|Nastaví pixely na plně průhlednou barvu, pokud obrázek podporuje alfa kanál. V opačném případě nastaví pixely na aktivní barvu pozadí.|
-|**Čára**, **obdélník**, **Zaoblený obdélník**, **Elipsa**|Nakreslí obrazec na obrázku. Můžete nastavit barvu a tloušťku obrysu v okně **vlastnosti** .<br /><br /> Chcete-li nakreslit primitivní, který má stejnou šířku a výšku, stiskněte a podržte při kreslení klávesu **SHIFT** .|
-|**Text**|Vykreslí text pomocí výběru barvy popředí. Barva pozadí je určena výběrem barvy pozadí. U průhledných pozadí hodnota alfa výběru barvy pozadí musí být 0. Když je oblast textu aktivní, můžete nastavit, zda je text vykreslen pomocí vyhlazení, a můžete nastavit textovou **hodnotu**, **písmo**, **Velikost**a styl –**tučné**, **kurzíva**nebo **podtržení**– v okně **vlastnosti** . Obsah a vzhled textu je finalizován, když textová oblast již není aktivní.|
-|**Před**|Otočí obrázek 90 stupňů po směru hodinových ručiček.|
-|**Sklon**|Ořízne obrázek na aktivní výběr.|
+|**Tužka**|Použije aktivní výběr barev k nakreslení vytaženého vytažení vyhlazení. Barvu a tloušťku tahu můžete nastavit v okně **Vlastnosti.**|
+|**Kartáč**|Použije aktivní výběr barev k nakreslení vyhlazeného tahu. Barvu a tloušťku tahu můžete nastavit v okně **Vlastnosti.**|
+|**Airbrush**|Použije aktivní výběr barev k nakreslení vyhlazeného tahu, který se prolne s obrazem a stane se sytější jako funkce času. Barvu a tloušťku tahu můžete nastavit v okně **Vlastnosti.**|
+|**Kapátko**|Nastaví aktivní výběr barev na barvu vybraného obrazového bodu.|
+|**Výplně**|Použije aktivní výběr barev k vyplnění oblasti obrazu. Ovlivněná oblast je definována jako obrazový bod, ve kterém je výplň použita, spolu s každým obrazovým bodem, který je k ní připojen obrazovými body stejné barvy a který má stejnou barvu. Pokud je výplň použita v rámci aktivního výběru, je ovlivněná oblast výběrem omezena.<br /><br /> Ve výchozím nastavení je aktivní výběr barev prolnut společně s postiženou oblastí obrazu podle jeho alfa složky. Chcete-li použít aktivní výběr barev k přepsání postižené oblasti, stiskněte a podržte při použití nástroje výplň klávesu **Shift.**|
+|**Guma**|Nastaví obrazové body na plně průhlednou barvu, pokud obraz podporuje alfa kanál. V opačném případě nastaví obrazové body na aktivní barvu pozadí.|
+|**Čára**, **obdélník,** **zaoblený obdélník**, **elipsa**|Nakreslí obrazec na obrázek. Barvu a tloušťku obrysu můžete nastavit v okně **Vlastnosti.**<br /><br /> Chcete-li nakreslit primitivu, která má stejnou šířku a výšku, stiskněte a podržte **shift** při kreslení.|
+|**Text**|Používá výběr barev popředí k kreslení textu. Barva pozadí je určena výběrem barvy pozadí. U průhledného pozadí musí být hodnota alfa výběru barvy pozadí 0. Když je oblast textu aktivní, můžete nastavit, zda je text nakreslený vyhlazeným tahem, a můžete nastavit text **Hodnota**, **Písmo**, **Velikost**a styl –**Tučné**, **Kurzíva**nebo **Podtrženo**– v okně **Vlastnosti.** Obsah a vzhled textu je dokončen, když oblast textu již není aktivní.|
+|**Otočit**|Otočí obraz o 90 stupňů ve směru hodinových ručiček.|
+|**Trim**|Ořízne obraz na aktivní výběr.|
 
 ### <a name="work-with-mip-levels"></a>Práce s úrovněmi MIP
 
-Některé formáty obrázků, například textura DirectDraw ( *. dds*), podporují úrovně MIP pro úroveň rozsahu minimálních hodnot v podrobnostech (LOD). Informace o tom, jak vygenerovat a pracovat s úrovněmi MIP, najdete v tématu [Postupy: vytváření a úpravy úrovní MIP.](../designers/how-to-create-and-modify-mip-levels.md)
+Některé formáty obrázků, například DirectDraw Surface (*.dds*), podporují úrovně MIP pro úroveň detailu (LOD) textury. Informace o tom, jak generovat a pracovat s úrovněmi MIP, naleznete v [tématu How to: Create and modify MIP levels](../designers/how-to-create-and-modify-mip-levels.md)
 
-### <a name="work-with-transparency"></a>Práce s transparentností
+### <a name="work-with-transparency"></a>Práce s průhledností
 
-Některé formáty obrázků, například plocha DirectDraw ( *. dds*), podporují transparentnost. Transparentnost lze použít několika způsoby v závislosti na použitém nástroji. Chcete-li určit úroveň transparentnosti výběru barvy, v okně **vlastnosti** nastavte pro výběr barvy komponentu **a** (alfa).
+Některé formáty obrázků, například DirectDraw Surface (*.dds*), podporují průhlednost. Průhlednost můžete použít několika způsoby v závislosti na nástroji, který používáte. Chcete-li určit úroveň průhlednosti pro výběr barvy, nastavte v okně **Vlastnosti** komponentu **A** (alfa) výběru barev.
 
-Následující tabulka popisuje, jak různé druhy nástrojů řídí použití průhlednosti:
+Následující tabulka popisuje, jak různé druhy nástrojů řídí způsob použití průhlednosti:
 
 |Nástroj|Popis|
 |----------|-----------------|
-|**Tužka**, **štětec**, **sprej**, **čára**, **obdélník**, **Zaoblený obdélník**, **Elipsa**, **text**|Chcete-li prolnout aktivní výběr barev společně s obrázkem, v okně **vlastnosti** rozbalte skupinu vlastností **kanály** a nastavte zaškrtávací políčko **kreslit** na **alfa** kanálu a pak normálně kreslete.<br /><br /> Chcete-li kreslit pomocí výběru aktivní barvy a ponechání hodnoty alfa obrázku, zrušte zaškrtnutí políčka **Draw** kanálu **alfa** a pak vykreslete normálně.|
-|**Vyplnění**|Chcete-li prolnout aktivní výběr barev spolu s obrázkem, stačí zvolit oblast, která má být vyplněna.<br /><br /> Chcete-li použít aktivní výběr barvy – včetně hodnoty alfa kanál – k přepsání obrázku, stiskněte a podržte klávesu **SHIFT** a zvolte oblast, která má být vyplněna.|
+|**Tužka,** **štětec,** **rozprašovač,** **čára, obdélník,** **zaoblený obdélník,** **elipsa,** **text** **Line**|Chcete-li prolnout aktivní výběr barev společně s obrazem, rozbalte **Draw** v okně **Vlastnosti** **skupinu vlastností Kanály** a nastavte políčko Kreslit na kanálu **Alfa** a pak nakreslete normálně.<br /><br /> Chcete-li kreslit pomocí aktivního výběru barev a ponechat hodnotu alfa obrazu na místě, **zrušte** zaškrtnutí políčka Kreslit **alfa** kanálu a pak nakreslete normálně.|
+|**Výplně**|Chcete-li prolnout aktivní výběr barev společně s obrazem, stačí vybrat oblast, kterou chcete vyplnit.<br /><br /> Chcete-li použít aktivní výběr barev – včetně hodnoty alfa kanálu – k přepsání obrazu, stiskněte a podržte **klávesu Shift** a pak zvolte oblast, kterou chcete vyplnit.|
 
-### <a name="image-properties"></a>Vlastnosti bitové kopie
+### <a name="image-properties"></a>Vlastnosti obrazu
 
-K určení různých vlastností obrázku můžete použít okno **vlastnosti** . Můžete například nastavit vlastnosti Width a Height pro změnu velikosti obrázku.
+Okno **Vlastnosti** můžete použít k určení různých vlastností obrazu. Můžete například nastavit, aby se velikost obrazu měřila, aby se velikost obrazu měřila.
 
-Následující tabulka obsahuje popis vlastností obrázku:
+Následující tabulka popisuje vlastnosti obrazu:
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|Šířka|Šířka obrázku|
-|Výška|Výška obrázku|
-|Bitů na pixel|Počet bitů, které reprezentují jednotlivé pixely. Hodnota této vlastnosti závisí na **formátu barvy** obrázku.|
-|Transparentní výběr|**True** pro prolnutí vrstvy výběru společně s hlavním obrázkem na základě hodnoty alfa vrstvy výběru; v opačném případě **false**. Tato položka je k dispozici pouze pro obrázky, které podporují alfa.|
-|Formát|Formát barvy obrázku V závislosti na formátu obrázku můžete zadat nejrůznější formáty barev. Formát barvy definuje počet a druh barevných kanálů, které jsou zahrnuty v obrázku, a také velikost a kódování různých kanálů.|
-|Úroveň MIP|Aktivní úroveň MIP. Tato položka je k dispozici pouze pro textury, které mají úrovně MIP.|
-|Počet úrovní MIP|Celkový počet úrovní MIP v obrázku. Tato položka je k dispozici pouze pro textury, které mají úrovně MIP.|
-|Počet snímků|Celkový počet snímků v obrázku. Tato položka je k dispozici pouze pro obrázky, které podporují pole textury.|
-|Rámec|Aktuální rámec. Lze zobrazit pouze první rámec. všechny ostatní snímky jsou ztraceny, když je obrázek uložen.|
-|Počet hloubek řezu|Celkový počet hloubkových řezů v obrázku. Tato položka je k dispozici pouze pro image, které podporují textury svazků.|
-|Hloubka řezu|Aktuální Hloubka řezu. Lze zobrazit pouze první řez. Při uložení obrázku dojde ke ztrátě všech ostatních řezů.|
+|impulzu|Šířka obrázku.|
+|Vlastnost Height|Výška obrázku.|
+|Bity na pixel|Počet bitů, které představují každý pixel. Hodnota této vlastnosti závisí na **barevném formátu** obrazu.|
+|Průhledný výběr|**True** prolnutí vrstvy výběru s hlavním obrazem na základě alfa hodnoty vrstvy výběru; jinak **False**. Tato položka je k dispozici pouze pro obrázky, které podporují alfa.|
+|Formát|Barevný formát obrazu. V závislosti na formátu obrazu můžete určit různé barevné formáty. Barevný formát definuje počet a druh barevných kanálů, které jsou zahrnuty v obraze, a také velikost a kódování různých kanálů.|
+|Úroveň Mip|Aktivní úroveň MIP. Tato položka je k dispozici pouze pro textury, které mají úrovně MIP.|
+|Počet úrovní Mip|Celkový počet úrovní MIP v obraze. Tato položka je k dispozici pouze pro textury, které mají úrovně MIP.|
+|Počet rámců|Celkový počet snímků v obraze. Tato položka je k dispozici pouze pro obrazy, které podporují pole textury.|
+|Rámec|Aktuální snímek. Lze zobrazit pouze první snímek; všechny ostatní snímky budou ztraceny při uložení obrazu.|
+|Počet hloubkových řezů|Celkový počet řezů hloubky v obraze. Tato položka je k dispozici pouze pro obrazy, které podporují textury objemu.|
+|Hloubkový řez|Aktuální řez hloubky. Lze zobrazit pouze první řez; všechny ostatní řezy se při uložení obrazu ztratí.|
 
 > [!NOTE]
-> Vzhledem k tomu, že vlastnost **otočit by** se vztahuje na všechny nástroje a vybrané oblasti, vždy se zobrazí v dolní části okna **vlastnosti** spolu s dalšími vlastnostmi nástroje. Možnost **Otočit o** je vždy zobrazená, protože celá Image je implicitně vybraná, když není k dispozici jiný výběr nebo aktivní nástroj. Další informace o vlastnosti **otočit** o vlastnost naleznete v tématu [Vlastnosti nástroje](#tool -properties).
+> Protože vlastnost **Otočit podle** se vztahuje na všechny nástroje a vybrané oblasti, vždy se zobrazí v dolní části okna **Vlastnosti** spolu s dalšími vlastnostmi nástroje. **Otočit podle** se vždy zobrazí, protože celý obraz je implicitně vybrán, když není k dispozici žádný jiný výběr nebo aktivní nástroj. Další informace o vlastnosti **Otočit podle** naleznete v tématu [Vlastnosti nástroje](#tool -properties).
 
-### <a name="resize-images"></a>Změna velikosti obrázků
+### <a name="resize-images"></a>Změna velikosti obrazů
 
-Existují dva způsoby, jak změnit velikost obrázku. V obou případech **Editor obrázků** používá interpolaci varianty k převzorkování obrázku.
+Existují dva způsoby, jak změnit velikost obrázku. V obou případech **editor obrázků** používá k převzorkování obrazu bilineární interpolaci.
 
-- V okně **vlastnosti** zadejte nové hodnoty vlastností **Width** a **Height** .
+- V okně **Vlastnosti** zadejte nové hodnoty pro vlastnosti **Šířka** a **Výška.**
 
-- Vyberte celý obrázek a pomocí značek ohraničení změňte velikost obrázku.
+- Vyberte celý obraz a pomocí značek ohraničení změňte velikost obrazu.
 
 ### <a name="selected-regions"></a>Vybrané oblasti
 
-Výběry v **editoru obrázků** definují oblasti obrázku, které jsou aktivní. Aktivní oblasti jsou ovlivněny pomocí nástrojů a transformací. Pokud existuje aktivní výběr, oblasti mimo vybranou oblast nejsou ovlivněny většinou nástrojů a transformací. Pokud není aktivní výběr, je aktivní celý obrázek.
+Výběry v **Editoru obrázků** definují oblasti obrazu, které jsou aktivní. Aktivní oblasti jsou ovlivněny nástroji a transformacemi. Pokud je aktivní výběr, oblasti mimo vybranou oblast nejsou ovlivněny většinou nástrojů a transformací. Pokud není aktivní výběr, je aktivní celý obraz.
 
-Většina nástrojů (**Tužka**, **štětec**, **sprej**, **výplň**, **mazání**a 2D primitiv) a transformace (**otočení**, **ořezávání**, **invertování barev**, překlopení **vodorovně**a **Překlopit svisle**) jsou omezené nebo definované aktivním výběrem. Některé nástroje (**kapátko** a **text**) a transformace (**generování MIPS**) ale neovlivňují žádný aktivní výběr. Tyto nástroje se vždy chovají, jako by byl celý obrázek aktivním výběrem.
+Většina nástrojů (**tužka**, **štětec**, **rozprašovač**, **výplň**, **guma**a 2D primitiva) a transformace **(Otočení**, **Oříznutí**, **Invertní barvy**, **Překlopit vodorovně**a **Překlopit svisle)** jsou omezeny nebo definovány aktivním výběrem. Některé nástroje **(kapátko** a **text)** a transformace **(Generovat mips)** však nejsou ovlivněny žádným aktivním výběrem. Tyto nástroje se vždy chovají, jako by aktivním výběrem byl celý obraz.
 
-Když vybíráte oblast, můžete stisknout a podržet klávesu **SHIFT** k provedení proporčního (čtvercového) výběru. V opačném případě výběr není omezen.
+Při výběru oblasti můžete stisknutím a podržením **klávesy Shift** provést proporcionální (čtvercový) výběr. V opačném případě není výběr omezen.
 
-#### <a name="resize-selections"></a>Změnit velikost výběru
+#### <a name="resize-selections"></a>Změna velikosti výběrů
 
-Po výběru oblasti můžete změnit její velikost nebo její obsah tak, že změníte velikost značky výběru. Když měníte velikost vybrané oblasti, můžete pro změnu chování vybrané oblasti při změně velikosti použít následující modifikační klávesy:
+Po výběru oblasti můžete změnit její velikost nebo její obsah obrazu změnou velikosti značky výběru. Při změně velikosti vybrané oblasti můžete pomocí následujících modifikačních kláves změnit chování vybrané oblasti při změně její velikosti:
 
-**CTRL** – zkopíruje obsah vybrané oblasti předtím, než se změní jeho velikost. Původní obrázek zůstane beze změny v době, kdy se změnila velikost kopie.
+**Ctrl** - Zkopíruje obsah vybrané oblasti před její velikostí. Původní obraz zůstane při velikosti kopie beze změny.
 
-**SHIFT** – změní velikost vybrané oblasti v poměru k původní velikosti.
+**Shift** - Změní velikost vybrané oblasti v poměru k její původní velikosti.
 
-**ALT** – změní velikost oblasti výběru. Obrázek zůstane beze změny.
+**Alt** - Změní velikost oblasti výběru. Tím zůstane obraz nezměněn.
 
-Následující tabulka popisuje platné kombinace klávesových zkratek:
+Následující tabulka popisuje platné kombinace kláves modifikátoru:
 
-|Ctrl|SHIFT|Alt|Popis|
+|Ctrl|Shift|Alt|Popis|
 |----------|-----------|---------|-----------------|
 ||||Změní velikost obsahu vybrané oblasti.|
-||**Posouvá**||Proporcionálně mění velikost obsahu vybrané oblasti.|
-|||**ALT**|Změní velikost vybrané oblasti. Tato definice definuje novou oblast výběru.|
-||**Posouvá**|**ALT**|Proporcionálně mění velikost vybrané oblasti. Tato definice definuje novou oblast výběru.|
-|**Ctrl**|||Zkopíruje a změní velikost obsahu vybrané oblasti.|
-|**Ctrl**|**Posouvá**||Kopie a pak proporcionálně mění velikost obsahu vybrané oblasti.|
+||**Shift**||Proporcionálně změní velikost obsahu vybrané oblasti.|
+|||**Alt**|Změní velikost vybrané oblasti. Definuje novou oblast výběru.|
+||**Shift**|**Alt**|Proporcionálně změní velikost vybrané oblasti. Definuje novou oblast výběru.|
+|**Ctrl**|||Zkopíruje a pak změní velikost obsahu vybrané oblasti.|
+|**Ctrl**|**Shift**||Zkopíruje a pak proporcionálně změní velikost obsahu vybrané oblasti.|
 
 ### <a name="tool-properties"></a>Vlastnosti nástroje
 
-Když je vybraný nástroj, můžete použít okno **vlastnosti** k zadání podrobností o tom, jak má obrázek vliv. Například můžete nastavit tloušťku nástroje **tužky** nebo barvu nástroje **štětec** .
+Když je nástroj vybraný, můžete použít okno **Vlastnosti** k určení podrobností o tom, jak ovlivňuje obraz. Můžete například nastavit tloušťku nástroje **tužka** nebo barvu nástroje **štětec.**
 
-Můžete nastavit barvu popředí i barvu pozadí. Oba podporují alfa kanál k poskytnutí neprůhlednosti definované uživatelem. Nastavení platí pro všechny nástroje. Pokud používáte myš, levé tlačítko myši odpovídá barvě popředí a pravé tlačítko myši odpovídá barvě pozadí.
+Můžete nastavit barvu popředí i barvu pozadí. Obě podporují alfa kanál k zajištění krytí definovaného uživatelem. Nastavení platí pro všechny nástroje. Pokud používáte myš, levé tlačítko myši odpovídá barvě popředí a pravé tlačítko myši odpovídá barvě pozadí.
 
 Následující tabulka popisuje vlastnosti nástroje:
 
 |Nástroj|Vlastnosti|
 |----------|----------------|
-|Všechny nástroje a výběry|**Otočit o**<br /> Definuje velikost ve stupních, po kterou je výběr nebo efekt nástroje otočen po směru hodinových ručiček.|
-|**Tužka**, **štětec**, **sprej**, **Guma**|**Silnější**<br /> Definuje velikost oblasti, která je ovlivněná nástrojem.|
-|**Text**|**Anti-alias**<br /> Vykreslí text, který obsahuje okraje s vyhlazením. To dává text hladšímu vzhledu.<br /><br /> **Hodnota**<br /> Text, který se má vykreslit<br /><br /> **Písma**<br /> Písmo použité k vykreslení textu<br /><br /> **Velikost**<br /> Velikost textu<br /><br /> **Tučné**<br /> Nastaví písmo tučně.<br /><br /> **Kurzíva**<br /> Převede písmo na kurzívu.<br /><br /> **Podtržené**<br /> Vytvoří podtržené písmo.|
-|**2D primitiva**|**Anti-alias**<br /> Kreslí primitivní prvky, které mají okraje se vyhlazením. Díky tomu je jejich plynulejší vzhled.<br /><br /> **Silnější**<br /> Definuje tloušťku čáry, která tvoří hranici primitivního.<br /><br /> **Radius X**<br /> (Jenom zaoblený obdélník) Definuje poloměr zaoblení pro horní a dolní okraj primitivního rozhraní.<br /><br /> **Poloměr Y**<br /> (Jenom zaoblený obdélník) Definuje poloměr zaoblení pro levý a pravý okraj primitivního rozhraní.|
-|**Tužka**, **štětec**, **sprej**, **2D primitiva**|**Kanály**<br /> Povoluje nebo zakazuje konkrétní barevné kanály pro zobrazení a vykreslení. Pokud je **zobrazení** nastavené pro konkrétní barevný kanál, tento kanál se v imagi zobrazuje. v opačném případě se nezobrazí. Pokud je pro konkrétní barevný kanál nastavená sada **Draw** , je tento kanál ovlivněn operacemi vykreslování. v opačném případě není.|
-|**Výběr hůlka**, **výplň**|**Odolnost**<br /> Definuje maximální rozdíl mezi sousedícími barvami, ve kterých jsou považovány za podobné, takže méně nebo více podobných barev tvoří součást ovlivněné nebo vybrané oblasti. Ve výchozím nastavení je hodnota 32, což znamená, že sousední pixely v rámci 32 odstínů (světlejší nebo tmavší) původní barvy se považují za součást oblasti.|
+|Všechny nástroje a výběry|**Otočit podle**<br /> Definuje velikost ve stupních, ve které se efekt výběru nebo nástroje otáčí ve směru hodinových ručiček.|
+|**Tužka,** **štětec,** **rozprašovač,** **guma**|**Tloušťka**<br /> Definuje velikost oblasti, která je nástrojem ovlivněna.|
+|**Text**|**Vyhlazení**<br /> Nakreslí text, který má vyhlazené okraje. To dává textu hladší vzhled.<br /><br /> **Hodnotu**<br /> Text, který má být vykreslen.<br /><br /> **Písmo**<br /> Písmo použité k nakreslení textu.<br /><br /> **Velikost**<br /> Velikost textu.<br /><br /> **Tučný**<br /> Vytvoří písmo tučným písmem.<br /><br /> **Kurzíva**<br /> Vytvoří písmo kurzívou.<br /><br /> **Podtržené**<br /> Podpne písmo.|
+|**2D primitivní**|**Vyhlazení**<br /> Nakreslí primitiva, které mají vyhlazené hrany. To jim dává hladší vzhled.<br /><br /> **Tloušťka**<br /> Definuje tloušťku čáry, která tvoří hranici primitiva.<br /><br /> **Poloměr X**<br /> (Pouze zaoblený obdélník) Definuje poloměr zaokrouhlení pro horní a dolní okraj primitiva.<br /><br /> **Poloměr Y**<br /> (Pouze zaoblený obdélník) Definuje poloměr zaokrouhlení pro levý a pravý okraj primitiva.|
+|**Tužka,** **štětec,** **rozprašovač,** **2D primitiv**|**Kanály**<br /> Povolí nebo zakáže určité barevné kanály pro zobrazení a kreslení. Pokud je **zobrazení** nastaveno pro určitý barevný kanál, je tento kanál viditelný v obraze; v opačném případě není viditelná. Pokud je **draw** nastaven pro určitý barevný kanál, je tento kanál ovlivněn operacemi kreslení; v opačném případě tomu tak není.|
+|**Výběr hůlky**, **výplň**|**Tolerance**<br /> Definuje maximální rozdíl mezi sousedními barvami, ve kterých jsou považovány za podobné, takže méně nebo více podobných barev je součástí ovlivněné nebo vybrané oblasti. Ve výchozím nastavení je hodnota 32, což znamená, že sousední obrazové body v rámci 32 odstínů (světlejší nebo tmavší) původní barvy jsou považovány za součást oblasti.|
 
 ## <a name="keyboard-shortcuts"></a>Klávesové zkratky
 
 |Příkaz|Klávesové zkratky|
 |-------------| - |
-|Přepnout na režim **výběru**|**S**|
-|Přepnout do režimu **lupy**|**Z**|
-|Přepnout do režimu **posouvání**|**K**|
+|Přepnutí do **režimu výběru**|**S**|
+|Přepnutí do režimu **lupy**|**Z**|
+|Přepnutí do režimu **Pan**|**K**|
 |Vybrat vše|**Ctrl**+**A**|
-|Odstranit aktuální výběr|**Delete**|
-|Zrušit aktuální výběr|**ESC** (řídicí znak)|
-|Přiblížit|**Ctrl**+**kolečkem myši v popředí**<br /><br /> **Ctrl**+**PageUp**<br /><br /> Znaménko plus ( **+** )|
-|Oddálit|**Ctrl**-**dozadu – kolečko myši**<br /><br /> **Ctrl**-**PageDown**<br /><br /> Symbol mínus ( **-** )|
-|Posunout obrázek nahoru|**Kolečko myši dozadu**<br /><br /> **PageDown**|
-|Posunout obrázek dolů|**Kolečko myši – posunutí**<br /><br /> **PageUp**|
-|Posunout obrázek doleva|**Posunout**+**kolečkem myši dozadu**<br /><br /> **Kolečko myši vlevo**<br /><br /> **Shift**+**PageDown**|
-|Posunout obrázek vpravo|**Posunout**+**kolečkem myši na popředí**<br /><br /> **Kolečko myši vpravo**<br /><br /> **Shift**+**PageUp**|
-|Zvětšit na skutečnou velikost|**Ctrl**+**0** (nula)|
-|Přizpůsobit obrázek oknu|**Ctrl**+**G**, **CTRL**+**F**|
-|Přizpůsobit obraz šířce okna|**Ctrl**+**G**, **Ctrl**+**I**|
+|Odstranit aktuální výběr|**Odstranit**|
+|Zrušit aktuální výběr|**Esc** (uniknout)|
+|Přiblížit|**Ctrl**+**kolečko myši vpřed**<br /><br /> **Ctrl**+**PageUp**<br /><br /> Znaménko plus (**+**)|
+|Oddálit|**Ctrl**-**kolečko myši dozadu**<br /><br /> **Ctrl**-**PageDown**<br /><br /> Znaménko mínus (**-**)|
+|Posunení obrázku nahoru|**Kolečko myši dozadu**<br /><br /> **PageDown**|
+|Posunu obrazu dolů|**Kolečko myši dopředu**<br /><br /> **PageUp**|
+|Posuzuji obrázek doleva|**Shift**+**kolečko myši dozadu**<br /><br /> **Kolečko myši doleva**<br /><br /> **Shift**+**PageDown**|
+|Posuzuji obrázek doprava|**Shift**+**kolečko myši vpřed**<br /><br /> **Kolečko myši doprava**<br /><br /> **Posunout**+**stránku nahoru**|
+|Zvětšení na skutečnou velikost|**Ctrl**+**0** (nula)|
+|Přizpůsobit obraz oknu|**Ctrl**+**G**, **Ctrl**+**F**|
+|Přizpůsobit obrázek šířce okna|**Ctrl**+**G**, **Ctrl**+**I**|
 |Přepnout mřížku|**Ctrl**+**G**, **Ctrl**+**G**|
-|Oříznout obraz na aktuální výběr|**Ctrl**+**G**, **Ctrl**+**C**|
-|Zobrazit další (vyšší podrobnosti) Úroveň MIP|**Ctrl**+**G**, **Ctrl**+**6**|
-|Zobrazit předchozí (nižší podrobnosti) Úroveň MIP|**Ctrl**+**G**, **Ctrl**+**7**|
+|Oříznutí obrazu na aktuální výběr|**Ctrl**+**G**, **Ctrl**+**C**|
+|Zobrazit další úroveň MIP (vyšší detail)|**Ctrl**+**G**, **Ctrl**+**6**|
+|Zobrazit předchozí úroveň MIP (nižší detail)|**Ctrl**+**G**, **Ctrl**+**7**|
 |Přepnout červený barevný kanál|**Ctrl**+**G**, **Ctrl**+**1**|
-|Přepnout zelený barevný kanál|**Ctrl**+**G**, **Ctrl**+**2**|
-|Přepnout modrý barevný kanál|**Ctrl**+**G**, **Ctrl**+**3**|
-|Přepínání kanálu alfa (transparentnost)|**Ctrl**+**G**, **Ctrl**+**4**|
-|Přepnout šachovnicový vzor pro alfa|**Ctrl**+**G**, **Ctrl**+**B**|
-|Přepnout na nástroj pro výběr nepravidelného výběru|**L**|
-|Přepnout na nástroj pro výběr na hůlka|**M**|
+|Přepnout kanál zelené barvy|**Ctrl**+**G**, **Ctrl**+**2**|
+|Přepnout kanál modré barvy|**Ctrl**+**G**, **Ctrl**+**3**|
+|Přepnout alfa (průhledný) kanál|**Ctrl**+**G**, **Ctrl**+**4**|
+|Přepnout vzor šachovní desky alfa|**Ctrl**+**G**, **Ctrl**+**B**|
+|Přepnutí na nástroj pro nepravidelný výběr|**L**|
+|Přepnout na nástroj pro výběr hůlky|**M**|
 |Přepnout na nástroj tužka|**P**|
 |Přepnout na nástroj štětec|**B**|
-|Přepnout na nástroj Fill|**F**|
-|Přepnout na nástroj mazání|**E**|
+|Přepnout na výplň|**F**|
+|Přepnout na nástroj pro vymazání|**E**|
 |Přepnout na textový nástroj|**T**|
-|Přepnout na nástroj Color-Select (kapátko)|**I**|
-|Přesune aktivní výběr a jeho obsah.|Klávesy se **šipkami** .|
-|Změní velikost aktivního výběru a jeho obsah.|**Ctrl**+klávesy se **šipkami**|
-|Přesune aktivní výběr, ale ne jeho obsah.|Klávesy **Shift**+**šipky**|
-|Změní velikost aktivního výběru, ale ne jeho obsah.|**Shift**+**CTRL**+klávesy se **šipkami**|
-|Potvrdit aktuální vrstvu|**Vrátit**|
+|Přepnout na nástroj pro výběr barev (kapátko)|**I**|
+|Přesuňte aktivní výběr a jeho obsah.|**Klávesy se šipkami.**|
+|Změňte velikost aktivního výběru a jeho obsahu.|**Ctrl**+**Klávesy Ctrl**|
+|Přesunutí aktivního výběru, nikoli však jeho obsahu.|**Klávesy**+**se šipkami**|
+|Změňte velikost aktivního výběru, ale ne jeho obsahu.|**Klávesy**+**Ctrl**+**Se šipkami**|
+|Potvrzení aktuální vrstvy|**Vrátit**|
 |Zmenšit tloušťku nástroje|**[**|
 |Zvětšit tloušťku nástroje|**]**|
 
-## <a name="related-topics"></a>Příbuzná témata
+## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
-|[Práce s 3D prostředky pro hry a aplikace](../designers/working-with-3-d-assets-for-games-and-apps.md)|Poskytuje přehled nástrojů, které lze použít v aplikaci Visual Studio pro práci s grafickými prostředky, jako jsou textury a obrázky, 3D modely a efekty shaderu.|
-|[Editor modelů](../designers/model-editor.md)|Popisuje, jak používat Editor modelů sady Visual Studio pro práci s 3D modely.|
-|[Návrhář shaderů](../designers/shader-designer.md)|Popisuje, jak používat návrháře shaderu sady Visual Studio pro práci s shadery.|
+|[Práce s 3D datovými zdroji pro hry a aplikace](../designers/working-with-3-d-assets-for-games-and-apps.md)|Obsahuje přehled nástrojů, které můžete použít v sadě Visual Studio pro práci s grafickými prostředky, jako jsou textury a obrazy, 3D modely a efekty shaderu.|
+|[Editor modelů](../designers/model-editor.md)|Popisuje, jak používat Visual Studio Editor modelů pro práci s 3D modely.|
+|[Návrhář shaderů](../designers/shader-designer.md)|Popisuje, jak používat Návrhář shaderu sady Visual Studio pro práci se stínidly.|

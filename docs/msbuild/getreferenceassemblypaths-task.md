@@ -1,5 +1,5 @@
 ---
-title: Úloha GetReferenceAssemblyPaths – | Microsoft Docs
+title: Úloha GetReferenceAssemblyPaths | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,32 +14,32 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d2ca532e37fa2f70800416539a7de2ff5e9978e2
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633977"
 ---
-# <a name="getreferenceassemblypaths-task"></a>GetReferenceAssemblyPaths – – úloha
+# <a name="getreferenceassemblypaths-task"></a>Úloha GetReferenceAssemblyPaths
 
-Vrátí cesty referenčního sestavení různých rozhraní.
+Vrátí cesty referenčního sestavení různých rámců.
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry úlohy `GetReferenceAssemblyPaths`.
+ Následující tabulka popisuje parametry `GetReferenceAssemblyPaths` úkolu.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`ReferenceAssemblyPaths`|Volitelný výstupní parametr `String[]`.<br /><br /> Vrátí cestu na základě parametru `TargetFrameworkMoniker`. Pokud je `TargetFrameworkMoniker` null nebo prázdné, bude tato cesta `String.Empty`.|
-|`FullFrameworkReferenceAssemblyPaths`|Volitelný výstupní parametr `String[]`.<br /><br /> Vrátí cestu na základě parametru `TargetFrameworkMoniker` bez zvážení části profilu monikeru. Pokud je `TargetFrameworkMoniker` null nebo prázdné, bude tato cesta `String.Empty`.|
-|`TargetFrameworkMoniker`|Volitelný parametr `String`.<br /><br /> Určuje moniker cílového rozhraní .NET Framework, který je přidružen k referenčním cestám sestavení.|
-|`RootPath`|Volitelný parametr `String`.<br /><br /> Určuje kořenovou cestu, která se má použít k vygenerování cesty referenčního sestavení.|
-|`BypassFrameworkInstallChecks`|Volitelný parametr <xref:System.Boolean>.<br /><br /> Pokud `true`, přeskočí základní kontroly, které `GetReferenceAssemblyPaths` ve výchozím nastavení provádí, aby bylo zajištěno, že jsou v závislosti na cílové architektuře nainstalovány konkrétní prostředí modulu runtime.|
-|`TargetFrameworkMonikerDisplayName`|Volitelný výstupní parametr `String`.<br /><br /> Určuje zobrazovaný název pro moniker cílového rozhraní .NET Framework.|
+|`ReferenceAssemblyPaths`|Volitelný `String[]` výstupní parametr.<br /><br /> Vrátí cestu na základě `TargetFrameworkMoniker` parametru. Pokud `TargetFrameworkMoniker` je null nebo prázdný, `String.Empty`bude tato cesta .|
+|`FullFrameworkReferenceAssemblyPaths`|Volitelný `String[]` výstupní parametr.<br /><br /> Vrátí cestu na základě `TargetFrameworkMoniker` parametru bez ohledu na profilovou část zástupného názvového názvového názvového názvového názvového protokolu. Pokud `TargetFrameworkMoniker` je null nebo prázdný, `String.Empty`bude tato cesta .|
+|`TargetFrameworkMoniker`|Volitelný `String` parametr.<br /><br /> Určuje zástupný název cílového rámce, který je přidružen k cestám sestavy odkazu.|
+|`RootPath`|Volitelný `String` parametr.<br /><br /> Určuje kořenovou cestu, která má být používána ke generování cesty sestavy odkazu.|
+|`BypassFrameworkInstallChecks`|Volitelný <xref:System.Boolean> parametr.<br /><br /> Pokud `true`, obchází `GetReferenceAssemblyPaths` základní kontroly, které provádí ve výchozím nastavení zajistit, že jsou nainstalovány určité rozhraní runtime, v závislosti na cílové rozhraní.|
+|`TargetFrameworkMonikerDisplayName`|Volitelný `String` výstupní parametr.<br /><br /> Určuje zobrazovaný název zástupového názvu cílové architektury.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě toho, že mají parametry, které jsou uvedeny v tabulce, tato úloha dědí parametry z třídy <xref:Microsoft.Build.Tasks.TaskExtension>, kterou sám dědí z třídy <xref:Microsoft.Build.Utilities.Task>. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
+ Kromě parametrů, které jsou uvedeny v tabulce, tato úloha <xref:Microsoft.Build.Tasks.TaskExtension> dědí parametry z <xref:Microsoft.Build.Utilities.Task> třídy, která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Viz také
 

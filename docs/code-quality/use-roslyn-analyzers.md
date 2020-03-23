@@ -1,6 +1,6 @@
 ---
-title: Závažnost pravidla analyzátoru a potlačení
-ms.date: 09/23/2019
+title: Závažnost a potlačení pravidel analyzátoru
+ms.date: 03/04/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, managed code
@@ -11,89 +11,119 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c24164f31ca444d17035f145a1783c69dfb2585b
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.openlocfilehash: 67fd157ad4db24acbc1676ea0a9a1d79e9eb34f9
+ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408462"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79431407"
 ---
 # <a name="use-code-analyzers"></a>Použití analyzátorů kódu
 
-Analyzátory kódu .NET Compiler Platform ("Roslyn") analyzují C# kód nebo Visual Basic při psaní. Každé *diagnostice* nebo pravidlo má výchozí závažnost a stav potlačení, který může být pro váš projekt přepsán. Tento článek popisuje nastavení závažnosti pravidla, použití sad pravidel a potlačení porušení.
+Analyzátory kódu platformy kompilátoru .NET ("Roslyn") analyzují kód jazyka C# nebo Visual Basic při psaní. Každá *diagnostika* nebo pravidlo má výchozí stav závažnosti a potlačení, který lze přepsat pro váš projekt. Tento článek popisuje nastavení závažnosti pravidel, použití sady pravidel a potlačení porušení.
 
-## <a name="analyzers-in-solution-explorer"></a>Analyzátory v Průzkumník řešení
+## <a name="analyzers-in-solution-explorer"></a>Analyzátory v Průzkumníku řešení
 
-Z **Průzkumník řešení**můžete provádět většinu úprav diagnostiky analyzátoru. Pokud [nainstalujete analyzátory](../code-quality/install-roslyn-analyzers.md) jako balíček NuGet, pod uzlem **odkazy** nebo **závislosti** v **Průzkumník řešení**se zobrazí uzel **analyzátory** . Pokud rozbalíte **analyzátory**a pak rozbalíte jedno ze sestavení analyzátoru, uvidíte všechny diagnostiky v sestavení.
+Většinu vlastního nastavení diagnostiky analyzátoru můžete provést z **Průzkumníka řešení**. Pokud [nainstalujete analyzátory](../code-quality/install-roslyn-analyzers.md) jako balíček NuGet, uzel **analyzátorů** se zobrazí pod uzlemi **Reference** **nebo Závislosti** v **Průzkumníku řešení**. Pokud rozbalíte **analyzátory**a potom rozbalíte jednu ze sestav analyzátoru, zobrazí se v sestavení všechny diagnostiky.
 
-![Uzel analyzátorů v Průzkumník řešení](media/analyzers-expanded-in-solution-explorer.png)
+![Uzel analyzátorů v Průzkumníku řešení](media/analyzers-expanded-in-solution-explorer.png)
 
-V okně **vlastnosti** můžete zobrazit vlastnosti diagnostiky, včetně jeho popisu a výchozí závažnosti. Chcete-li zobrazit vlastnosti, klikněte pravým tlačítkem na pravidlo a vyberte **vlastnosti**, nebo vyberte pravidlo a stiskněte klávesu **ALT**+**ENTER**.
+Vlastnosti diagnostiky, včetně jejího popisu a výchozí závažnosti, můžete zobrazit v okně **Vlastnosti.** Chcete-li vlastnosti zobrazit, klepněte pravým tlačítkem myši na pravidlo a vyberte příkaz **Vlastnosti**nebo vyberte pravidlo a stiskněte **klávesu Alt**+**Enter**.
 
-![Diagnostické vlastnosti v okno Vlastnosti](media/analyzer-diagnostic-properties.png)
+![Diagnostické vlastnosti v okně Vlastnosti](media/analyzer-diagnostic-properties.png)
 
-Pokud chcete zobrazit online dokumentaci pro diagnostiku, klikněte pravým tlačítkem na diagnostiku a vyberte **Zobrazit nápovědu**.
+Chcete-li zobrazit online dokumentaci k diagnostice, klepněte pravým tlačítkem myši na diagnostiku a vyberte příkaz **Zobrazit nápovědu**.
 
-Ikony vedle každé diagnostiky v **Průzkumník řešení** odpovídají ikonám, které vidíte v sadě pravidel při jejich otevírání v editoru:
+Ikony vedle každé diagnostiky v **Průzkumníku řešení** odpovídají ikonám, které se zobrazí v sadě pravidel při otevření v editoru:
 
-- znak "x" v kruhu indikuje [závažnost](#rule-severity) **chyby**
-- znak "!" v trojúhelníku označuje [závažnost](#rule-severity) **Upozornění**
-- znak "i" v kruhu indikuje [závažnost](#rule-severity) **informací**
-- znak "i" v kruhu na pozadí s světlou barvou označuje [závažnost](#rule-severity) **skrytého**
-- Šipka dolů v kruhu indikuje, že je diagnostika potlačena.
+- "x" v kruhu označuje [závažnost](#rule-severity) **chyby**
+- "!" v trojúhelníku označuje [závažnost](#rule-severity) **varování**
+- "i" v kruhu označuje [závažnost](#rule-severity) **Info**
+- "i" v kruhu na světlém pozadí označuje [závažnost](#rule-severity) **skrytého**
+- šipka směřující dolů v kruhu označuje, že diagnostika je potlačena
 
-![Ikony diagnostiky v Průzkumník řešení](media/diagnostics-icons-solution-explorer.png)
+![Ikony diagnostiky v Průzkumníku řešení](media/diagnostics-icons-solution-explorer.png)
 
 ## <a name="rule-severity"></a>Závažnost pravidla
 
 ::: moniker range=">=vs-2019"
 
-Pokud [nainstalujete analyzátory](../code-quality/install-roslyn-analyzers.md) jako balíček NuGet, můžete nakonfigurovat závažnost pravidel analyzátoru nebo *diagnostiky*. Počínaje verzí Visual Studio 2019 verze 16,3 můžete nakonfigurovat závažnost pravidla [v souboru EditorConfig](#set-rule-severity-in-an-editorconfig-file). Závažnost pravidla můžete také změnit [z Průzkumník řešení](#set-rule-severity-from-solution-explorer) nebo [v souboru sady pravidel](#set-rule-severity-in-the-rule-set-file).
+Můžete nakonfigurovat závažnost pravidel analyzátoru nebo *diagnostiky*, pokud [nainstalujete analyzátory](../code-quality/install-roslyn-analyzers.md) jako balíček NuGet. Počínaje visual studio 2019 verze 16.3, můžete nakonfigurovat závažnost pravidla [v souboru EditorConfig](#set-rule-severity-in-an-editorconfig-file). Závažnost pravidla můžete také změnit [z Průzkumníka řešení](#set-rule-severity-from-solution-explorer) nebo [v souboru sady pravidel](#set-rule-severity-in-the-rule-set-file).
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Pokud [nainstalujete analyzátory](../code-quality/install-roslyn-analyzers.md) jako balíček NuGet, můžete nakonfigurovat závažnost pravidel analyzátoru nebo *diagnostiky*. Závažnost pravidla můžete změnit [z Průzkumník řešení](#set-rule-severity-from-solution-explorer) nebo [v souboru sady pravidel](#set-rule-severity-in-the-rule-set-file).
+Můžete nakonfigurovat závažnost pravidel analyzátoru nebo *diagnostiky*, pokud [nainstalujete analyzátory](../code-quality/install-roslyn-analyzers.md) jako balíček NuGet. Závažnost pravidla můžete změnit [z Průzkumníka řešení](#set-rule-severity-from-solution-explorer) nebo v [souboru sady pravidel](#set-rule-severity-in-the-rule-set-file).
 
 ::: moniker-end
 
 V následující tabulce jsou uvedeny různé možnosti závažnosti:
 
-| Závažnost (Průzkumník řešení) | Závažnost (soubor EditorConfig) | Chování při sestavení | Chování editoru |
+| Závažnost (Průzkumník řešení) | Závažnost (soubor EditorConfig) | Chování v době sestavení | Chování editoru |
 |-|-|-|
-| Chyba | `error` | Porušení se zobrazují jako *chyby* v seznam chyb a ve výstupu sestavení příkazového řádku a způsobují selhání sestavení.| Poškozený kód je podtržen červenou vlnovkou a označený malým červeným polem na posuvníku. |
-| Upozornění | `warning` | Porušení se zobrazí jako *Upozornění* v seznam chyb a ve výstupu sestavení příkazového řádku, ale nezpůsobí selhání sestavení. | Poškozený kód je podtržen zelenou vlnovkou a označený malým zeleným polem na posuvníku. |
-| Informace | `suggestion` | Porušení se zobrazí jako *zprávy* v seznam chyb, a ne vůbec ve výstupu sestavení příkazového řádku. | Poškozený kód je podtržený šedou vlnovkou a označený malým šedým polem na posuvníku. |
-| Skrytý | `silent` | Uživatel není viditelný. | Uživatel není viditelný. Diagnostika se oznamuje diagnostickému modulu IDE, ale. |
-| Žádná | `none` | Zcela potlačeno. | Zcela potlačeno. |
-| Výchozí | `default` | Odpovídá výchozí závažnosti pravidla. Chcete-li určit výchozí hodnotu pravidla, podívejte se do okno Vlastnosti. | Odpovídá výchozí závažnosti pravidla. |
+| Chyba | `error` | Porušení se zobrazí jako *chyby* v seznamu chyb a ve výstupu sestavení příkazového řádku a způsobit sestavení nezdaří.| Problematický kód je podtržen červenou vlnovkou a označen malým červeným rámečkem ve posuvníku. |
+| Upozornění | `warning` | Porušení se zobrazí jako *upozornění* v seznamu chyb a ve výstupu sestavení příkazového řádku, ale nezpůsobí selhání sestavení. | Problematický kód je podtržen zeleným vlnovkou a označen malým zeleným rámečkem ve posuvníku. |
+| Informace | `suggestion` | Porušení se zobrazí jako *zprávy* v seznamu chyb a vůbec ve výstupu sestavení příkazového řádku. | Problematický kód je podtržen šedou vlnovkou a označen malým šedým rámečkem ve posuvníku. |
+| Skrytý | `silent` | Neviditelné pro uživatele. | Neviditelné pro uživatele. Diagnostika je však hlášena diagnostickému modulu IDE. |
+| Žádný | `none` | Úplně potlačeno. | Úplně potlačeno. |
+| Výchozí | `default` | Odpovídá výchozí závažnosti pravidla. Chcete-li zjistit, jaká je výchozí hodnota pravidla, podívejte se do okna Vlastnosti. | Odpovídá výchozí závažnosti pravidla. |
 
-Následující snímek obrazovky editoru kódu ukazuje tři odlišná porušení s různými závažnostmi. Všimněte si barvy vlnovek a malého a barevného čtverce v posuvníku vpravo.
+Následující snímek obrazovky editoru kódu ukazuje tři různá porušení s různými závažnostmi. Všimněte si barvy vlnovky a malého barevného čtverce ve posuvníku vpravo.
 
-![Chyba, upozornění a porušení informací v editoru kódu](media/diagnostics-severity-colors.png)
+![Chyba, upozornění a narušení informací v editoru kódu](media/diagnostics-severity-colors.png)
 
-Následující snímek obrazovky ukazuje stejná tři porušení zásad, která se zobrazují v Seznam chyb:
+Následující snímek obrazovky ukazuje stejné tři porušení, která se zobrazují v seznamu chyb:
 
-![Došlo k chybě, varování a porušení informací v Seznam chyb](media/diagnostics-severities-in-error-list.png)
+![Chyba, upozornění a porušení informací v seznamu chyb](media/diagnostics-severities-in-error-list.png)
 
 ::: moniker range=">=vs-2019"
 
 ### <a name="set-rule-severity-in-an-editorconfig-file"></a>Nastavení závažnosti pravidla v souboru EditorConfig
 
-(Visual Studio 2019 verze 16,3 a novější)
+(Visual Studio 2019 verze 16.3 a novější)
 
-Obecná syntaxe pro určení závažnosti pravidla v souboru EditorConfig je následující:
+Závažnost upozornění kompilátoru nebo pravidel analyzátoru můžete nastavit v souboru EditorConfig pomocí následující syntaxe:
 
 `dotnet_diagnostic.<rule ID>.severity = <severity>`
 
-Nastavení závažnosti pravidla v souboru EditorConfig má přednost před jakoukoli závažností, která je nastavená v sadě pravidel nebo v Průzkumník řešení. Můžete [ručně](#manually-configure-rule-severity) nakonfigurovat závažnost v souboru EditorConfig nebo [automaticky](#automatically-configure-rule-severity) prostřednictvím žárovky, která se zobrazí vedle porušení.
+Nastavení závažnosti pravidla v souboru EditorConfig má přednost před jakoukoli závažností nastavenou v sadě pravidel nebo v Průzkumníku řešení. Závažnost můžete [nakonfigurovat ručně](#manually-configure-rule-severity) v souboru EditorConfig nebo [automaticky](#automatically-configure-rule-severity) prostřednictvím žárovky, která se zobrazí vedle porušení.
+
+### <a name="set-rule-severity-of-multiple-analyzer-rules-at-once-in-an-editorconfig-file"></a>Nastavení závažnosti pravidel více pravidel analyzátoru najednou v souboru EditorConfig
+
+(Visual Studio 2019 verze 16.5 a novější)
+
+Závažnost můžete nastavit pro určitou kategorii pravidel analyzátoru nebo pro všechna pravidla analyzátoru pomocí jedné položky v souboru EditorConfig.
+
+- Nastavte závažnost pravidla pro kategorii pravidel analyzátoru:
+
+`dotnet_analyzer_diagnostic.category-<rule category>.severity = <severity>`
+
+- Nastavte závažnost pravidla pro všechna pravidla analyzátoru:
+
+`dotnet_analyzer_diagnostic.severity = <severity>`
+
+Pokud máte více položek, které se vztahují na konkrétní ID pravidla, je pořadí priorit pro výběr příslušné položky:
+
+- Položka závažnosti pro jednotlivé pravidlo podle ID má přednost před položkou závažnosti pro kategorii.
+- Položka závažnosti pro kategorii má přednost před položkou závažnosti pro všechna pravidla analyzátoru.
+
+Vezměme si následující EditorConfig příklad, kde [CA1822](https://docs.microsoft.com/visualstudio/code-quality/ca1822) má kategorii "Výkon":
+
+   ```ini
+   [*.cs]
+   dotnet_diagnostic.CA1822.severity = error
+   dotnet_analyzer_diagnostic.category-performance.severity = warning
+   dotnet_analyzer_diagnostic.severity = suggestion
+   ```
+
+V předchozím příkladu jsou všechny tři položky použitelné pro CA1822. Při použití zadaných pravidel priority však první položka závažnosti založené na ID pravidla vyhrává v následujících položkách. V tomto příkladu ca1822 bude mít efektivní závažnost "chyba". Všechna zbývající pravidla s kategorií "Výkon" budou mít závažnost "upozornění". Všechna zbývající pravidla analyzátoru, která nemají kategorii "Výkon", budou mít "návrh" závažnosti.
 
 #### <a name="manually-configure-rule-severity"></a>Ruční konfigurace závažnosti pravidla
 
-1. Pokud ještě nemáte soubor EditorConfig pro váš projekt, [přidejte ho](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project).
+1. Pokud ještě nemáte soubor EditorConfig pro váš projekt, [přidejte jeden](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project).
 
-2. Přidejte položku pro každé pravidlo, které chcete konfigurovat v odpovídající příponě souboru. Pokud třeba chcete nastavit závažnost pro [CA1822](ca1822.md) C# souborů na `error`, bude položka vypadat takto:
+2. Přidejte položku pro každé pravidlo, které chcete nakonfigurovat pod odpovídající příponou souboru. Chcete-li například nastavit závažnost pro [CA1822](ca1822.md) na `error` soubory C#, položka vypadá takto:
 
    ```ini
    [*.cs]
@@ -101,59 +131,156 @@ Nastavení závažnosti pravidla v souboru EditorConfig má přednost před jako
    ```
 
 > [!NOTE]
-> Analyzátory ve stylu kódu IDE lze také nakonfigurovat v souboru EditorConfig pomocí jiné syntaxe, například `dotnet_style_qualification_for_field = false:suggestion`. Pokud ale nastavíte závažnost pomocí syntaxe `dotnet_diagnostic`, má přednost. Další informace najdete v tématu [jazykové konvence pro EditorConfig](../ide/editorconfig-language-conventions.md).
+> Pro analyzátory ve stylu kódu IDE je můžete také nakonfigurovat v souboru `dotnet_style_qualification_for_field = false:suggestion`EditorConfig pomocí jiné syntaxe, například . Pokud však nastavíte závažnost `dotnet_diagnostic` pomocí syntaxe, bude mít přednost. Další informace naleznete [v tématu Language conventions for EditorConfig](../ide/editorconfig-language-conventions.md).
 
-#### <a name="automatically-configure-rule-severity"></a>Automaticky konfigurovat závažnost pravidla
+#### <a name="convert-an-existing-ruleset-file-to-editorconfig-file"></a>Převedení existujícího souboru sady pravidel na soubor EditorConfig
 
-Visual Studio nabízí pohodlný způsob konfigurace závažnosti pravidla z nabídky návrhy [rychlých akcí](../ide/quick-actions.md) .
+Počínaje Visual Studio 2019 verze 16.5, soubory sady pravidel jsou zastaralé ve prospěch souboru EditorConfig pro konfiguraci analyzátoru pro spravovaný kód. Většina nástrojů sady Visual Studio pro konfiguraci závažnosti pravidel analyzátoru byla aktualizována tak, aby fungovala na souborech EditorConfig namísto souborů sady pravidel. EditorConfig soubory umožňují konfigurovat rozdělení pravidel analyzátoru a možnosti analyzátoru, včetně možností stylu stylu ide aplikace Visual Studio. Důrazně doporučujeme převést existující soubor sady pravidel na soubor EditorConfig. Doporučujeme také uložit soubor EditorConfig v kořenovém adresáři ukládání do pou nebo do složky řešení. Pomocí kořenového adresáře složky pro repo nebo řešení se ujistěte, že nastavení závažnosti z tohoto souboru jsou automaticky použita na celé repo nebo řešení.
 
-1. Jakmile dojde k porušení, najeďte myší nad vlnovkou porušení v editoru a otevřete nabídku žárovky. Nebo umístěte kurzor na řádek a stiskněte klávesy **Ctrl**+ **.** (tečka).
+Existuje několik způsobů, jak převést existující soubor sady pravidel na soubor EditorConfig:
 
-2. V nabídce žárovky vyberte **Konfigurovat nebo potlačit problémy** > **nakonfigurovat \<ID pravidla > závažnost**.
+- Z editoru sad pravidel v sadě Visual Studio (vyžaduje Visual Studio 2019 16.5 nebo novější). Pokud projekt již používá jako soubor `CodeAnalysisRuleSet`konkrétní sady pravidel konkrétní soubor pravidel , můžete jej převést na ekvivalentní soubor EditorConfig z Editoru sady pravidel v sadě Visual Studio.
 
-   ![Konfigurace závažnosti pravidla z nabídky světlé žárovky v aplikaci Visual Studio](media/configure-rule-severity.png)
+    1. Poklepejte na soubor sady pravidel v Průzkumníku řešení.
 
-3. Tam vyberte jednu z možností závažnosti.
+       Soubor sady pravidel by se měl otevřít v Editoru sad pravidel. V horní části editoru sad pravidel byste měli vidět **informační panel,** na který lze kliknout.
 
-   ![Nakonfigurovat závažnost pravidla jako návrh](media/configure-rule-severity-suggestion.png)
+       ![Převést sadu pravidel na soubor EditorConfig v Editoru sad pravidel](media/convert-ruleset-to-editorconfig-file-ruleset-editor.png)
 
-   Visual Studio přidá položku do souboru EditorConfig, aby nakonfigurovala pravidlo na požadovanou úroveň, jak je uvedeno v poli Náhled.
+    2. **Klikněte na** odkaz na informační panel.
+
+       To by mělo otevřít dialogové okno **Uložit jako,** které umožňuje vybrat adresář, ve kterém chcete vygenerovat soubor EditorConfig.
+
+    3. **Klepnutím na** tlačítko **Uložit** vygenerujete soubor EditorConfig.
+
+       Vygenerovaný EditorConfig by se měl otevřít v editoru. Navíc MSBuild vlastnost `CodeAnalysisRuleSet` získá aktualizovánv souboru projektu tak, aby již odkazuje na původní soubor sady pravidel.
+
+- Z příkazového řádku:
+
+    1. Nainstalujte balíček NuGet [Microsoft.CodeAnalysis.RulesetToEditorconfigConverter](https://www.nuget.org/packages/Microsoft.CodeAnalysis.RulesetToEditorconfigConverter).
+
+    2. Spouštět `RulesetToEditorconfigConverter.exe` z nainstalovaného balíčku, s cestami k souboru sady pravidel a EditorConfig soubor jako argumenty příkazového řádku.
+
+   ```
+   Usage: RulesetToEditorconfigConverter.exe <%ruleset_file%> [<%path_to_editorconfig%>]
+   ```
+
+Zde je ukázkový soubor sady pravidel, který chcete převést:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Rules for ConsoleApp" Description="Code analysis rules for ConsoleApp.csproj." ToolsVersion="16.0">
+  <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+    <Rule Id="CA1001" Action="Warning" />
+    <Rule Id="CA1821" Action="Warning" />
+    <Rule Id="CA2213" Action="Warning" />
+    <Rule Id="CA2231" Action="Warning" />
+  </Rules>
+</RuleSet>
+```
+
+Zde je převeden EditorConfig soubor:
+
+```ini
+# NOTE: Requires **VS2019 16.3** or later
+
+# Rules for ConsoleApp
+# Description: Code analysis rules for ConsoleApp.csproj.
+
+# Code files
+[*.{cs,vb}]
+
+
+dotnet_diagnostic.CA1001.severity = warning
+
+dotnet_diagnostic.CA1821.severity = warning
+
+dotnet_diagnostic.CA2213.severity = warning
+
+dotnet_diagnostic.CA2231.severity = warning
+```
+
+#### <a name="automatically-configure-rule-severity"></a>Automatická konfigurace závažnosti pravidla
+
+##### <a name="configure-from-light-bulb-menu"></a>Konfigurace z nabídky žárovky
+
+Visual Studio poskytuje pohodlný způsob konfigurace závažnosti pravidla z nabídky rychlé [akce](../ide/quick-actions.md) žárovky.
+
+1. Po porušení dojde, najeďte na porušení klikyháky v editoru a otevřete nabídku žárovky. Nebo položte kurzor na řádek a stiskněte **klávesu Ctrl**+**.** (tečka).
+
+2. V nabídce Žárovka vyberte **Konfigurovat nebo potlačit problémy** > **Konfigurovat \<ID pravidla> závažnosti**.
+
+   ![Konfigurace závažnosti pravidla z nabídky žárovky v sadě Visual Studio](media/configure-rule-severity.png)
+
+3. Odtud vyberte jednu z možností závažnosti.
+
+   ![Konfigurace závažnosti pravidla jako návrhu](media/configure-rule-severity-suggestion.png)
+
+   Visual Studio přidá položku do souboru EditorConfig a nakonfiguruje pravidlo na požadovanou úroveň, jak je znázorněno v poli náhledu.
 
    > [!TIP]
-   > Pokud v projektu ještě nemáte soubor EditorConfig, Visual Studio ho vytvoří za vás.
+   > Pokud ještě nemáte editorconfig soubor v projektu, Visual Studio vytvoří jeden pro vás.
+
+##### <a name="configure-from-error-list"></a>Konfigurovat ze seznamu chyb
+
+Visual Studio také poskytuje pohodlný způsob konfigurace závažnosti pravidla z kontextové nabídky seznamu chyb.
+
+1. Po porušení dojde, klikněte pravým tlačítkem myši na diagnostickou položku v seznamu chyb.
+
+2. V místní nabídce vyberte **Nastavit závažnost**.
+
+   ![Konfigurace závažnosti pravidla ze seznamu chyb v sadě Visual Studio](media/configure-rule-severity-error-list.png)
+
+3. Odtud vyberte jednu z možností závažnosti.
+
+   Visual Studio přidá položku do souboru EditorConfig a nakonfiguruje pravidlo na požadovanou úroveň.
+
+   > [!TIP]
+   > Pokud ještě nemáte editorconfig soubor v projektu, Visual Studio vytvoří jeden pro vás.
 
 ::: moniker-end
 
-### <a name="set-rule-severity-from-solution-explorer"></a>Nastavit závažnost pravidla z Průzkumník řešení
+### <a name="set-rule-severity-from-solution-explorer"></a>Nastavení závažnosti pravidla z Průzkumníka řešení
 
-1. V **Průzkumník řešení**rozbalte **odkazy** > **analyzátory** (nebo **závislosti** > **analyzátory** pro projekty .NET Core).
+1. V Průzkumníku řešení **rozbalte reference** > **analyzátory** (nebo**analyzátory** **závislostí** > pro projekty .NET Core).
 
-1. Rozbalte sestavení, které obsahuje pravidlo, pro které chcete nastavit závažnost.
+2. Rozbalte sestavení obsahující pravidlo, pro které chcete nastavit závažnost.
 
-1. Klikněte pravým tlačítkem na pravidlo a vyberte **nastavit závažnost sady pravidel**. V rozevírací nabídce vyberte jednu z možností závažnosti.
+::: moniker range=">=vs-2019"
+3. Klepněte pravým tlačítkem myši na pravidlo a vyberte **nastavit závažnost**. V místní nabídce vyberte jednu z možností závažnosti.
 
-   Závažnost pravidla se uloží do souboru aktivní sady pravidel.
+   Visual Studio přidá položku do souboru EditorConfig a nakonfiguruje pravidlo na požadovanou úroveň. Pokud projekt používá soubor sady pravidel namísto souboru EditorConfig, položka závažnosti se přidá do souboru sady pravidel.
 
-### <a name="set-rule-severity-in-the-rule-set-file"></a>Nastavte závažnost pravidla v souboru sady pravidel.
+   > [!TIP]
+   > Pokud ještě nemáte soubor EditorConfig nebo soubor pravidel v projektu, Visual Studio vytvoří nový editorconfig soubor pro vás.
+::: moniker-end
 
-![Soubor sady pravidel v Průzkumník řešení](media/ruleset-in-solution-explorer.png)
+::: moniker range="vs-2017"
+3. Klepněte pravým tlačítkem myši na pravidlo a vyberte **nastavit závažnost sady pravidel**. V místní nabídce vyberte jednu z možností závažnosti.
 
-1. Otevřete aktivní soubor sady pravidel tak, že na **Průzkumník řešení**něj dvakrát kliknete a vyberete **Otevřít aktivní sadu pravidel** v místní nabídce uzlu **odkazy** > **analyzátory** , nebo výběrem možnosti **otevřít** na stránce vlastností **analýzy kódu** pro projekt.
+   Závažnost pravidla je uložena v aktivním souboru sady pravidel.
+::: moniker-end
 
-   Pokud se jedná o první úpravu sady pravidel, sada Visual Studio vytvoří kopii výchozího souboru sady pravidel a pojmenuje ho *\<projectname >. ruleset*a přidá ho do projektu. Tato vlastní sada pravidel se také stal aktivní sadou pravidel pro váš projekt.
+### <a name="set-rule-severity-in-the-rule-set-file"></a>Nastavení závažnosti pravidla v souboru sady pravidel
+
+![Soubor sady pravidel v Průzkumníku řešení](media/ruleset-in-solution-explorer.png)
+
+1. Otevřete aktivní soubor sady pravidel poklepáním v **Průzkumníku řešení**, vyberte **otevřít aktivní sadu pravidel** v nabídce po kliknutí pravým tlačítkem myši na uzlu Reference**analyzátory** **References** > nebo výběrem **možnosti Otevřít** na stránce **vlastností Analýza kódu** pro projekt.
+
+   Pokud upravujete sadu pravidel poprvé, visual studio vytvoří kopii výchozího souboru sady pravidel, pojmenuje * \<název projektu>.ruleset*a přidá ji do projektu. Tato vlastní sada pravidel se také stane aktivní sadou pravidel pro váš projekt.
 
    > [!NOTE]
-   > Projekty .NET Core a .NET Standard nepodporují příkazy nabídky pro sady pravidel v **Průzkumník řešení**, například **otevřete aktivní sadu pravidel**. Chcete-li určit nevýchozí sadu pravidel pro projekt .NET Core nebo .NET Standard, přidejte do souboru projektu ručně [vlastnost **CodeAnalysisRuleSet** ](using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project) . Pravidla můžete konfigurovat v rámci sady pravidel v uživatelském rozhraní editoru sad pravidel sady Visual Studio.
+   > Projekty .NET Core a .NET Standard nepodporují příkazy nabídky pro sady pravidel v **Průzkumníku řešení**, například **Otevřít aktivní sadu pravidel**. Chcete-li zadat nevýchozí sadu pravidel pro projekt .NET Core nebo .NET Standard, ručně [přidejte vlastnost **CodeAnalysisRuleSet** ](using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project) do souboru projektu. Pravidla v rámci sady pravidel v editoru sady pravidel sady visual ateliu stále můžete nakonfigurovat.
 
-1. Přejděte k pravidlu tak, že rozbalíte jeho obsahující sestavení.
+1. Přejděte k pravidlu rozšířením jeho obsahující ho sestavení.
 
-1. Ve sloupci **Akce** výběrem hodnoty otevřete rozevírací seznam a v seznamu vyberte požadovanou závažnost.
+1. Ve sloupci **Akce** vyberte hodnotu, kterou chcete otevřít rozevíracím seznamu, a vyberte požadovanou závažnost ze seznamu.
 
-   ![Soubor sady pravidel je otevřen v editoru.](media/ruleset-file-in-editor.png)
+   ![Soubor sady pravidel otevřený v editoru](media/ruleset-file-in-editor.png)
 
 ## <a name="suppress-violations"></a>Potlačit porušení
 
-Existuje několik způsobů, jak potlačit porušení pravidel:
+Porušení pravidel lze potlačit několika způsoby:
 
 ::: moniker range=">=vs-2019"
 
@@ -161,81 +288,81 @@ Existuje několik způsobů, jak potlačit porušení pravidel:
 
   Nastavte závažnost na `none`, například `dotnet_diagnostic.CA1822.severity = none`.
 
-- Z nabídky **analyzovat**
+- Z nabídky **Analyzovat**
 
-  Vyberte možnost **analyzovat** > **sestavovat a potlačit aktivní problémy** na řádku nabídek, aby se potlačila všechna aktuální porušení. Někdy se označuje jako "monitorování standardních hodnot".
+  Vyberte **Analyzovat** > **sestavení a potlačit aktivní problémy** na řádku nabídek, abyste potlačili všechna aktuální porušení. To se někdy označuje jako "baselining".
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-- Z nabídky **analyzovat**
+- Z nabídky **Analyzovat**
 
-  Vyberte možnost **analyzovat** > **Spustit analýzu kódu a potlačit aktivní problémy** na řádku nabídek, abyste potlačili všechna aktuální porušení. Někdy se označuje jako "monitorování standardních hodnot".
+  Vyberte **Analyzovat** > **spustit analýzu kódu a potlačit aktivní problémy** na řádku nabídek, abyste potlačili všechna aktuální porušení. To se někdy označuje jako "baselining".
 
 ::: moniker-end
 
-- Z **Průzkumník řešení**
+- Z **Průzkumníka řešení**
 
-  Nastavte závažnost pravidla na **None (žádné**).
+  Nastavte závažnost pravidla na **žádné**.
 
-- Z **editoru sad pravidel**
+- Z **editoru sady pravidel**
 
-  Zrušte zaškrtnutí políčka vedle jeho názvu nebo nastavte **akci** na **žádná**.
+  Odškrtnete políčko vedle jeho názvu nebo nastavte **akci** na **žádnou**.
 
 - Z **editoru kódu**
 
-  Umístěte kurzor na řádek kódu s porušením a stisknutím **kombinace kláves Ctrl**+**perioda (.)** otevřete nabídku **rychlé akce** . Vyberte možnost **potlačit CAXXXX** > **ve zdroji nebo v souboru potlačení**.
+  Umístěte kurzor do řádku kódu s porušením a stisknutím **klávesy Ctrl**+**Period (.)** otevřete nabídku **Rychlé akce.** Vyberte **příkaz Potlačit caxxxx** > **ve zdroji/v souboru potlačení**.
 
-  ![Potlačit diagnostiku z nabídky rychlé akce](media/suppress-diagnostic-from-editor.png)
+  ![Potlačit diagnostiku z nabídky rychlých akcí](media/suppress-diagnostic-from-editor.png)
 
-- Z **Seznam chyb**
+- Ze **seznamu chyb**
 
-  Vyberte pravidla, která chcete potlačit, a potom klikněte pravým tlačítkem myši a vyberte možnost **potlačit** > **ve zdroji nebo v souboru potlačení**.
+  Vyberte pravidla, která chcete potlačit, a potom klepněte pravým tlačítkem myši a vyberte **příkaz Potlačit** > **ve zdroji/v souboru potlačení**.
 
-  - Pokud potlačíte **zdroj**, otevře se dialogové okno **Náhled změn** , ve kterém se zobrazí C# náhled [#pragma varování](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning) nebo Visual Basic #Disable direktivu [Upozornění](/dotnet/visual-basic/language-reference/directives/directives) , která je přidána do zdrojového kódu.
+  - Pokud potlačíte **ve zdroji**, otevře se dialogové okno **Změny náhledu** a zobrazí náhled [příkazu c# #pragma upozornění](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning) nebo směrnice upozornění [#Disable](/dotnet/visual-basic/language-reference/directives/directives) jazyka Visual Basic, která je přidána do zdrojového kódu.
 
-    ![Náhled Přidání upozornění #pragma v souboru kódu](media/pragma-warning-preview.png)
+    ![Náhled přidání upozornění #pragma v souboru kódu](media/pragma-warning-preview.png)
 
-  - Pokud vyberete možnost **v souboru potlačení**, otevře se dialogové okno **Náhled změn** , ve kterém se zobrazí náhled atributu <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> přidaný do globálního souboru potlačení.
+  - Pokud vyberete **V souboru potlačení**, otevře se <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> dialogové okno Náhled **změn** a zobrazí se náhled atributu, který je přidán do souboru globálních potlačení.
 
     ![Náhled přidání atributu SuppressMessage do souboru potlačení](media/preview-changes-in-suppression-file.png)
 
-  V dialogovém okně **Náhled změn** vyberte **použít**.
+  V dialogovém **okně Náhled změn** vyberte **Použít**.
 
   > [!NOTE]
-  > Pokud nevidíte možnost nabídky **potlačit** v **Průzkumník řešení**, porušení pravděpodobně přijde z buildu a ne za živou analýzu. **Seznam chyb** zobrazuje narušení diagnostiky nebo pravidla, a to od živých analýz kódu i sestavení. Vzhledem k tomu, že diagnostika sestavení může být zastaralá, například pokud jste upravili kód pro opravu porušení, ale ještě nebyla znovu sestavena, nemůžete tuto diagnostiku z **Seznam chyb**potlačit. Diagnostika z živých analýz nebo IntelliSense je vždy aktuální s aktuálními zdroji a lze ji potlačit z **Seznam chyb**. Pokud chcete z výběru vyloučit diagnostiku *sestavení* , přepněte filtr zdroje **Seznam chyb** z **Build + IntelliSense** na **pouze IntelliSense**. Pak vyberte diagnostiku, kterou chcete potlačit, a pokračujte podle postupu popsaného výše.
+  > Pokud v **Průzkumníku řešení**nevidíte možnost **Potlačit** nabídku , porušení pravděpodobně pochází z sestavení a ne z živé analýzy. **Seznam chyb** zobrazuje diagnostiku nebo porušení pravidel z analýzy živého kódu i sestavení. Vzhledem k tomu, že diagnostika sestavení může být zastaralá, například pokud jste upravili kód k opravě porušení, ale nejste znovu sestaveni, nelze tuto diagnostiku potlačit ze **seznamu chyb**. Diagnostika z živé analýzy nebo technologie IntelliSense je vždy aktuální s aktuálními zdroji a může být z **seznamu chyb**potlačena . Chcete-li z výběru vyloučit diagnostiku *sestavení,* přepněte zdrojový filtr **Seznamu chyb** z **položky Build + IntelliSense** na **pouze položku IntelliSense**. Potom vyberte diagnostiku, kterou chcete potlačit, a postupujte podle výše popsaného postupu.
   >
-  > ![Zdrojový filtr Seznam chyb v aplikaci Visual Studio](media/error-list-filter.png)
+  > ![Zdrojový filtr Seznamu chyb v sadě Visual Studio](media/error-list-filter.png)
 
-## <a name="command-line-usage"></a>Použití příkazového řádku
+## <a name="command-line-usage"></a>Využití příkazového řádku
 
-Při sestavování projektu na příkazovém řádku se porušení pravidla zobrazí ve výstupu sestavení, pokud jsou splněny následující podmínky:
+Při vytváření projektu na příkazovém řádku se porušení pravidel zobrazí ve výstupu sestavení, pokud jsou splněny následující podmínky:
 
-- Analyzátory jsou nainstalovány jako balíček NuGet a nikoli jako rozšíření VSIX.
+- Analyzátory jsou nainstalovány jako balíček NuGet a ne jako rozšíření VSIX.
 
 - V kódu projektu je porušeno jedno nebo více pravidel.
 
-- [Závažnost](#rule-severity) narušeného pravidla je nastavena na možnost **Upozornění**, v takovém případě porušení nezpůsobí selhání sestavení nebo **Chyba**. v takovém případě porušení způsobí selhání sestavení.
+- [Závažnost](#rule-severity) porušeného pravidla je nastavena buď na **upozornění**, v takovém případě porušení nezpůsobí selhání sestavení nebo **chybu**, v takovém případě porušení způsobit selhání sestavení.
 
-Podrobnosti výstupu sestavení neovlivňují, zda jsou zobrazena porušení pravidel. I při **tiché** podrobnostech se ve výstupu sestavení zobrazí porušení pravidel.
+Podrobnost výstupu sestavení nemá vliv na to, zda jsou zobrazena porušení pravidel. I při **tiché** podrobnosti porušení pravidel se objeví ve výstupu sestavení.
 
 > [!TIP]
-> Pokud jste zvyklí spouštět starší verzi analýzy z příkazového řádku, a to buď pomocí *FxCopCmd. exe* , nebo pomocí nástroje MSBuild s příznakem **RunCodeAnalysis** , zde je postup, jak to udělat pomocí analyzátorů kódu.
+> Pokud jste zvyklí na spuštění starší analýzy z příkazového řádku, buď s *FxCopCmd.exe* nebo prostřednictvím msbuild s **RunCodeAnalysis** příznak, zde je návod, jak to udělat s analyzátory kódu.
 
-Chcete-li zobrazit narušení analyzátoru na příkazovém řádku při sestavování projektu pomocí nástroje MSBuild, spusťte příkaz podobný tomuto:
+Chcete-li zobrazit porušení analyzátoru na příkazovém řádku při vytváření projektu pomocí msbuild, spusťte příkaz, jako je tento:
 
 ```cmd
 msbuild myproject.csproj /target:rebuild /verbosity:minimal
 ```
 
-Následující obrázek ukazuje výstup sestavení příkazového řádku z sestavení projektu, který obsahuje porušení pravidla analyzátoru:
+Následující obrázek znázorňuje výstup sestavení příkazového řádku z vytváření projektu, který obsahuje porušení pravidel analyzátoru:
 
-![Výstup nástroje MSBuild s porušením pravidla](media/command-line-build-analyzers.png)
+![Výstup MSBuild s porušením pravidel](media/command-line-build-analyzers.png)
 
 ## <a name="dependent-projects"></a>Závislé projekty
 
-Pokud v projektu .NET Core přidáte odkaz na projekt, který obsahuje analyzátory NuGet, tyto analyzátory jsou také automaticky přidány do závislého projektu. Chcete-li toto chování zakázat, například pokud je závislý projekt projekt testování částí, označte balíček NuGet jako soukromý v souboru *. csproj* nebo *. vbproj* odkazovaného projektu nastavením atributu **PrivateAssets** :
+V projektu .NET Core pokud přidáte odkaz na projekt, který má analyzátory NuGet, tyto analyzátory jsou automaticky přidány do závislého projektu příliš. Chcete-li zakázat toto chování, například pokud závislý projekt je projekt testování částí, označte balíček NuGet jako soukromý v souboru *.csproj* nebo *.vbproj* odkazovaného projektu nastavením atributu **PrivateAssets:**
 
 ```xml
 <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.0" PrivateAssets="all" />
@@ -243,7 +370,7 @@ Pokud v projektu .NET Core přidáte odkaz na projekt, který obsahuje analyzát
 
 ## <a name="see-also"></a>Viz také
 
-- [Přehled analyzátorů kódu v aplikaci Visual Studio](../code-quality/roslyn-analyzers-overview.md)
+- [Přehled analyzátorů kódu v sadě Visual Studio](../code-quality/roslyn-analyzers-overview.md)
 - [Odeslat chybu analyzátoru kódu](https://github.com/dotnet/roslyn-analyzers/issues)
 - [Použití sad pravidel](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)
-- [Potlačit upozornění analýzy kódu](../code-quality/in-source-suppression-overview.md)
+- [Potlačit upozornění na analýzu kódu](../code-quality/in-source-suppression-overview.md)

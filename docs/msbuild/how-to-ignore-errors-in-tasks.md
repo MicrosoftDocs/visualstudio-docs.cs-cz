@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: ignorování chyb v úlohách | Microsoft Docs'
+title: 'Postup: Ignorovat chyby v úkolech | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,35 +10,35 @@ author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.openlocfilehash: 9899b7367e6ae9255755ae04fe06d8c8733043ae
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633821"
 ---
-# <a name="how-to-ignore-errors-in-tasks"></a>Postupy: ignorování chyb v úlohách
+# <a name="how-to-ignore-errors-in-tasks"></a>Postup: Ignorovat chyby v úkolech
 
-Někdy je vhodné, aby bylo sestavení odolné vůči chybám v určitých úlohách. Pokud tyto nekritické úkoly selžou, chcete, aby sestavení pokračovalo, protože stále může vytvořit požadovaný výstup. Například pokud projekt používá úlohu `SendMail` k odeslání e-mailové zprávy po sestavení každé součásti, může být vhodné, aby sestavení bylo přijatelné i v případě, že poštovní servery nejsou k dispozici a nelze odeslat stavové zprávy. Nebo například pokud jsou během sestavení obvykle smazány mezilehlé soubory, může být vhodné, aby sestavení bylo přijatelné i v případě, že tyto soubory nelze odstranit.
+Někdy chcete, aby sestavení bylo tolerantní k chybám v určitých úkolech. Pokud tyto nekritické úkoly nezdaří, chcete, aby sestavení pokračovat, protože může stále produkovat požadovaný výstup. Pokud například projekt používá `SendMail` úkol k odeslání e-mailové zprávy po vytvoření každé součásti, můžete považovat za přijatelné pro sestavení pokračovat k dokončení i v případě, že poštovní servery nejsou k dispozici a stavové zprávy nelze odeslat. Nebo například pokud zprostředkující soubory jsou obvykle odstraněny během sestavení, můžete považovat za přijatelné pro sestavení pokračovat k dokončení i v případě, že tyto soubory nelze odstranit.
 
 ## <a name="use-the-continueonerror-attribute"></a>Použití atributu ContinueOnError
 
-Atribut `ContinueOnError` elementu `Task` určuje, zda je sestavení zastaveno nebo pokračuje, když dojde k selhání úlohy. Tento atribut také určuje, zda jsou chyby považovány za chyby nebo upozornění, když sestavení pokračuje.
+Atribut `ContinueOnError` prvku `Task` určuje, zda sestavení zastaví nebo pokračuje, když dojde k selhání úlohy. Tento atribut také určuje, zda jsou chyby považovány za chyby nebo upozornění při pokračování sestavení.
 
 Atribut `ContinueOnError` může obsahovat jednu z následujících hodnot:
 
-- **WarnAndContinue** nebo **true**. Pokud se úloha nezdařila, následné úkoly v [cílovém](../msbuild/target-element-msbuild.md) elementu a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za upozornění.
+- **WarnAndContinue** nebo **true**. Pokud úloha selže, následné úkoly v [Target](../msbuild/target-element-msbuild.md) element a sestavení pokračovat v provádění a všechny chyby z úkolu jsou považovány za upozornění.
 
-- **ErrorAndContinue**. Pokud se úloha nezdařila, následné úkoly v prvku `Target` a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za chyby.
+- **ErrorAndContinue**. Pokud úloha selže, následné `Target` úkoly v prvku a sestavení pokračovat v provádění a všechny chyby z úkolu jsou považovány za chyby.
 
-- **ErrorAndStop** nebo **false** (výchozí). Pokud se úloha nezdařila, zbývající úkoly v prvku `Target` a sestavení nejsou provedeny a celý `Target` element a sestavení se považuje za neúspěšné.
+- **ErrorAndStop** nebo **false** (výchozí). Pokud úloha selže, zbývající úkoly v elementu `Target` a sestavení nejsou `Target` provedeny a celý prvek a sestavení se považuje za neúspěšné.
 
-Verze .NET Framework před 4,5 podporují pouze hodnoty `true` a `false`.
+Verze rozhraní .NET Framework před 4.5 `true` `false` podporovaly pouze hodnoty a.
 
-Výchozí hodnota `ContinueOnError` je `ErrorAndStop`. Pokud nastavíte atribut na `ErrorAndStop`, uděláte chování explicitně pro kohokoli, kdo soubor projektu přečte.
+Výchozí hodnota `ContinueOnError` je `ErrorAndStop`. Pokud nastavíte `ErrorAndStop`atribut , provedete chování explicitní pro každého, kdo čte soubor projektu.
 
-#### <a name="to-ignore-an-error-in-a-task"></a>Ignorování chyby v úloze
+#### <a name="to-ignore-an-error-in-a-task"></a>Ignorování chyby v úkolu
 
-Použijte atribut `ContinueOnError` úlohy. Příklad:
+Použijte `ContinueOnError` atribut úkolu. Například:
 
 ```xml
 <Delete Files="@(Files)" ContinueOnError="WarnAndContinue"/>
@@ -46,7 +46,7 @@ Použijte atribut `ContinueOnError` úlohy. Příklad:
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje, že cílový `Build` stále běží a sestavení je považováno za úspěšné, i když se úloha `Delete` nezdařila.
+Následující příklad kódu ukazuje, `Build` že cíl stále běží a sestavení je `Delete` považováno za úspěšné, i v případě, že úloha selže.
 
 ```xml
 <Project DefaultTargets="FakeBuild"
@@ -66,6 +66,6 @@ Následující příklad kódu ukazuje, že cílový `Build` stále běží a se
 
 ## <a name="see-also"></a>Viz také
 
-- [MSBuild](../msbuild/msbuild.md)
+- [Msbuild](../msbuild/msbuild.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

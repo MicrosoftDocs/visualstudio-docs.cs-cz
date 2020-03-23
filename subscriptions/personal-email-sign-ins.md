@@ -3,54 +3,55 @@ title: Osobní e-maily zobrazené v VLSC
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 03/03/2020
+ms.assetid: 3f4b0528-03f0-4a02-b3c3-a39292a9bbe1
+ms.date: 03/17/2020
 ms.topic: conceptual
-description: Předplatná sady Visual Studio – proč se mi zobrazují adresy služby Hotmail nebo Gmail pro moje předplatitele?
-ms.openlocfilehash: c4a3202bfb14246fa8057309de90bdc7c32db5df
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+description: Předplatné sady Visual Studio – proč se mi zobrazuje hotmail nebo gmailové adresy pro předplatitele?
+ms.openlocfilehash: 7cd6a4761efb7dcad7568bd0a95ba33141407055
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78410212"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79550339"
 ---
-# <a name="visual-studio-subscriptions--why-am-i-seeing-hotmail-or-gmail-addresses-for-my-subscribers"></a>Předplatná sady Visual Studio – proč se mi zobrazují adresy služby Hotmail nebo Gmail pro moje předplatitele?
-Po migraci společností z webu Volume Licensing Service Center (VLSC) na nový [portál pro správu předplatných](https://manage.visualstudio.com)sady Visual Studio byli správci překvapeni, že přihlašovací e-mailová adresa pro některé předplatitele zobrazuje e-mailovou adresu třetí strany, jako je Hotmail, Gmail nebo Yahoo.  Další informace najdete v [tomto videu](https://www.youtube.com/watch?v=J61EYaVN-dQ&list=PLReL099Y5nReJhZ6o8CQFPSBgzGCHX99_&index=6).
+# <a name="visual-studio-subscriptions--why-do-i-see-personal-accounts-for-my-subscribers"></a>Předplatná visual studia – proč se u odběratelů zobrazují osobní účty?
+Poté, co společnosti migrovaly z Centra multilicenčních služeb (VLSC) na nový [portál správy předplatných](https://manage.visualstudio.com)sady Visual Studio , byli správci překvapeni, že "Přihlašovací e-mailová adresa" pro některé předplatitele zobrazuje osobní e-mailovou adresu, jako je Hotmail nebo Outlook.  Další informace naleznete v [tomto videu](https://www.youtube.com/watch?v=J61EYaVN-dQ&list=PLReL099Y5nReJhZ6o8CQFPSBgzGCHX99_&index=6).
 
 ## <a name="cause"></a>Příčina
-K tomuto scénáři dochází v důsledku procesů přihlašování, které byly přidruženy k starší verzi služby předplatitele MSDN. Uživatelé byli migrováni z webu Volume License Service Center (VLSC) na portál pro správu předplatných sady Visual Studio bez úprav. Správci možná nebudou vědomi, že uživatelé používali osobní účty pro přístup k výhodám jejich předplatného. Před migrací předplatitele sady Visual Studio, které byly dokončeny v 2016, byly pro úspěšné použití Visual Studio Subscription nutné dvě akce:
-1. Správce přiřadil předplatné individuálnímu předplatiteli pomocí své pracovní nebo školní e-mailové adresy.
-2. Předplatné je aktivované předplatitelem.
+K tomuto scénáři dochází z důvodu přihlášení procesy, které byly přidruženy ke starším prostředí předplatitele MSDN. Uživatelé byli migrována z Volume License Service Center (VLSC) na portál pro správu předplatných sady Visual Studio bez úprav. Správci si možná nebyli vědomi toho, že uživatelé používali osobní účty k přístupu k výhodám předplatného. Před migracepředplatitele sady Visual Studio, které byly dokončeny v roce 2016, byly k úspěšnému použití předplatného sady Visual Studio vyžadovány dvě akce:
+1. Správce "přiřadil" předplatné jednotlivému odběrateli pomocí jeho pracovní nebo školní e-mailové adresy.
+2. Účastník "aktivoval" předplatné.
 
-Během procesu aktivace předplatitele se vyžaduje účet Microsoft (MSA), abyste se přihlásili. Pokud se předplatiteli nepovedlo vytvořit pracovní nebo školní účet (například tasha@contoso.com), mohl vytvořit novou MSA nebo využít stávající. Výsledkem je, že se "e-mailová adresa pro přihlášení" liší od jejich "přiřazeno e-mailové adresy".
+Během procesu aktivace odběratele: K přihlášení byl vyžadován účet Microsoft (MSA). Pokud se předplatitel nepokusil vytvořit svůj pracovní nebo školní tasha@contoso.comúčet (např. ) MSA, mohl by vytvořit nový MSA nebo využít stávající. To mělo za následek, že jejich "přihlašovací e-mailová adresa" se liší od jejich "Přiřazeno k e-mailové adrese".
 
 > [!NOTE]
-> Nové prostředí pro předplatitele v [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) podporuje typy identit pracovní/školní a účet Microsoft (MAA).
+> Moderní prostředí pro [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) předplatitele podporuje typy identit Work/School i Microsoft Account (MSA).
 
 ## <a name="solution"></a>Řešení
-Pokud chcete tento problém vyřešit, stačí vybrat tlačítko **připojit e-maily** a systém se pokusí porovnat účty s účty spravované služby stávajícím uživatelům v Azure Active Directory (Azure AD) vaší organizace na základě shody s prvním a posledním jménem. Pokud dojde k chybě, můžete jakoukoli shodu odstranit kliknutím na **X** napravo od shody.  
+Chcete-li problém vyřešit, jednoduše vyberte tlačítko **Připojit e-maily** a systém se pokusí porovnat účty s MSA s existujícími uživateli ve vaší organizaci Azure Active Directory (Azure AD) na základě odpovídající jméno a příjmení. Pokud dojde k chybě, můžete odstranit libovolnou shodu kliknutím na **X** napravo od shody.  
 
 > [!div class="mx-imgBorder"]
-> Tlačítko pro ![připojení k e-mailům](_img/connect-emails/connect-emails-button.png)
+> ![Tlačítko Připojit e-maily](_img/connect-emails/connect-emails-button.png)
 
-Pomocí **adresáře hledání** můžete také opravit chyby nebo vyplnit chybějící informace z Azure AD. Pokud se všechny shody shodují, můžete vybrat možnost "vybrat všechny odpovídající předplatitele" a nemusíte je vybírat po jednom.  
-
-> [!div class="mx-imgBorder"]
-> ](_img/connect-emails/connect-emails-flyout.png) ![připojení e-mailů
-
-Potom klikněte na pokračovat, což vás převezme na obrazovce s osnovou změn, které se mají provést. Pokud souhlasíte, klikněte na Uložit a provedou se změny. Předplatitel dostane také zprávu o tom, že se změní při příštím přihlášení ke svému předplatnému.   
+Můžete také použít **adresář vyhledávání** opravit chyby nebo vyplnit chybějící informace z Azure AD. Pokud všechny shody vypadají správně, můžete zvolit možnost "Vybrat všechny odpovídající předplatitele", nikoli je vybírat po jednom.  
 
 > [!div class="mx-imgBorder"]
-> Potvrzení e-mailu ![připojení](_img/connect-emails/connect-emails-confirm.png) 
+> ![Připojení e-mailů Fly-out](_img/connect-emails/connect-emails-flyout.png)
+
+Další klikněte na "pokračovat", který vás zavede na obrazovku popisující změny, které se mají uskutečnit. Pokud souhlasíte, klikněte na tlačítko "uložit" a změny budou provedeny. Váš odběratel také obdrží zprávu informující o změně při příštím přihlášení k předplatnému.   
+
+> [!div class="mx-imgBorder"]
+> ![Připojení potvrzení e-mailů](_img/connect-emails/connect-emails-confirm.png) 
 
 > [!NOTE]
-> Když upravujete e-mailovou adresu pro přihlášení, aktualizuje se e-mail, který se používá pro přihlášení ke svému předplatnému na https://my.visualstudio.com. Pokud už předplatitel aktivoval výhody, jako je Azure nebo Pluralsight, pomocí jiné e-mailové adresy, bude muset tyto e-mailové adresy dál používat pro přístup k nim. Pro všechny nové výhody, ke kterým mají přístup, by měly používat novou e-mailovou adresu. 
+> Při úpravě přihlašovací e-mailovou adresu to pouze aktualizuje e-mail https://my.visualstudio.compoužívaný účastníkem k přihlášení k jejich předplatné na . Pokud předplatitel již aktivoval výhody, jako je Azure nebo Pluralsight pomocí jiné e-mailové adresy, bude muset nadále používat tyto e-mailové adresy pro přístup k nim. Pro všechny nové výhody, které mají přístup, by měli použít novou e-mailovou adresu. 
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ##  <a name="next-steps"></a>Další kroky
-- Pokud jste aktualizovali e-mailové adresy odběratelů, můžete jim sdělit, že se změnily přihlašovací údaje.  Budou také dostávat e-maily s aktualizovanými informacemi.
-- Může být užitečné [filtrovat seznam předplatitelů](search-license.md) ve vaší organizaci, aby se hledaly e-mailové adresy, které může být potřeba změnit.  
+- Pokud jste aktualizovali e-mailovou adresu odběratele(y), můžete je upozornit, že se změnily jejich přihlašovací údaje.  Obdrží také e-mail s aktualizovanými informacemi.
+- Může být užitečné [filtrovat seznam odběratelů](search-license.md) ve vaší organizaci a vyhledat všechny přihlašovací e-mailové adresy, které může být nutné změnit.  

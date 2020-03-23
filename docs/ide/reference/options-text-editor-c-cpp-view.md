@@ -1,5 +1,5 @@
 ---
-title: Možnosti, textový editor, C/C++, zobrazení
+title: Možnosti, Textový editor, C/C++, Zobrazení
 ms.date: 10/29/2018
 ms.topic: reference
 f1_keywords:
@@ -12,49 +12,49 @@ manager: markl
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 95963245b15828f374e9812a9bb09d015b21a94b
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77278691"
 ---
-# <a name="options-text-editor-cc-view"></a>Možnosti, textový editor, C/C++, zobrazení
+# <a name="options-text-editor-cc-view"></a>Možnosti, Textový editor, C/C++, Zobrazení
 
 Pomocí těchto stránek vlastností můžete změnit výchozí chování editoru kódu při programování v jazyce C nebo C++.
 
-Chcete-li získat přístup k této stránce vlastností, zvolte **nástroje** > **Možnosti** a rozbalte **Text Editor**, pak **C/C++** a pak klikněte na tlačítko **Zobrazit**.
+Chcete-li získat přístup k této stránce vlastností, zvolte**Možnosti** **nástrojů** > a rozbalte **textový editor**, pak **C/C++** a pak zvolte **Zobrazit**.
 
-## <a name="code-squiggles"></a>Vlnovky kódu
+## <a name="code-squiggles"></a>Kód vlnovky
 
-Můžete povolit nebo zakázat následující nastavení pro správu způsobu, jakým textový editor zpracovává vlnovky kódu pro C a C++:
+Můžete povolit nebo zakázat následující nastavení pro správu způsobu, jakým textový editor zpracovává kód klikyháky pro C a C++:
 
-- **Makra v vynechaných oblastech procházení** – definuje, jak zvýraznit makra, která jsou uvnitř vynechaných oblastí v databázi procházení, například makra, jejichž definice obsahují složené závorky.
+- **Makra v oblastech přeskočené procházení** – Definuje, jak zvýraznit makra, která jsou uvnitř přeskočených oblastí v databázi procházení, například makra, jejichž definice obsahují závorky.
 
-- **Makra převoditelná na constexpr** – definuje, jak zvýraznit definice maker, které je možné převést na `constexpr` definice.
+- **Makra konvertibilní na constexpr** - Definuje, `constexpr` jak zvýraznit definice maker, které lze převést na definice.
 
 ## <a name="inactive-code"></a>Neaktivní kód
 
-- **Zobrazit neaktivní bloky** – neaktivní bloky preprocesoru jsou barevně odlišné.
+- **Zobrazit neaktivní bloky** - Neaktivní bloky preprocesoru jsou obarveny odlišně.
 
-- **Zakázat krytí neaktivního kódu** – plná barva namísto neprůhlednosti se používá pro neaktivní bloky kódu.
+- **Zakázat krytí neaktivního kódu** – Pro neaktivní bloky kódu se místo krytí používá plná barva.
 
-- **Neaktivní neprůhlednost kódu** – procento neprůhlednosti pro neaktivní bloky kódu.
+- Procento krytí **neaktivního kódu –** procento krytí pro neaktivní bloky kódu.
 
 ## <a name="miscellaneous"></a>Různé
 
-- Zobrazení **výčtu úkolů s komentářem** – vyhledá v otevřených zdrojových souborech tokeny vs a nahlásí je v okně seznam úkolů.
+- **Výčet úloh komentářů** – Prohledá open source soubory pro tokeny VS a oznamte je v okně Seznam úkolů.
 
-- **Zvýraznit odpovídající tokeny** – zvýrazněte uzavírací závorky nebo syntaxi, které odpovídají místu, kde je kurzor umístěný.
+- **Zvýraznit odpovídající tokeny** – zvýrazní ohraničující závorky nebo syntaxi, která odpovídá umístění kurzoru.
 
 ## <a name="outlining"></a>Sbalování
 
-- **Povolit sbalení** – po otevření souboru zadejte režim sbalení.
+- **Povolit osnovu** – Po otevření souboru zadejte režim osnovy.
 
-- **Vytvoření osnovy oblastí pragma** – Automatická osnova `#pragma` bloků oblastí.
+- **Osnova Pragma** Regiony `#pragma` - Automaticky osnova oblast bloky.
 
-- **Bloky příkazů osnovy** – automatické bloky příkazů osnovy.
+- **Bloky příkazu osnovy** – automaticky nastínit bloky výkazů.
 
 ## <a name="see-also"></a>Viz také
 
 - [Nastavení možností editoru pro konkrétní jazyk](../../ide/reference/setting-language-specific-editor-options.md)
-- [Refaktoring v C++ (blog VC)](https://devblogs.microsoft.com/cppblog/all-about-c-refactoring-in-visual-studio-2015-preview/)
+- [Refaktoring v Jazyce C++ (Blog VC)](https://devblogs.microsoft.com/cppblog/all-about-c-refactoring-in-visual-studio-2015-preview/)

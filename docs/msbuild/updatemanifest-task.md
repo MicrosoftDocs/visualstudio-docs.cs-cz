@@ -1,5 +1,5 @@
 ---
-title: Úloha UpdateManifest – | Microsoft Docs
+title: AktualizovatManifest úkol | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,30 +17,30 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 25e410ba3122e0065f92186195ee5a82d6a55c2f
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77631339"
 ---
 # <a name="updatemanifest-task"></a>UpdateManifest – úloha
 
-Aktualizuje vybrané vlastnosti v manifestu a znovu se podepíše.
+Aktualizuje vybrané vlastnosti v manifestu a odstoupí.
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry úlohy `UpdateManifest`.
+ Následující tabulka popisuje parametry `UpdateManifest` úkolu.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`ApplicationManifest`|Vyžaduje se <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje manifest aplikace.|
-|`ApplicationPath`|Vyžaduje se `String` parametr.<br /><br /> Určuje cestu k manifestu aplikace.|
-|`InputManifest`|Vyžaduje se <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje manifest, který se má aktualizovat.|
-|`OutputManifest`|Volitelný výstupní parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje manifest, který obsahuje aktualizované vlastnosti.|
+|`ApplicationManifest`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje manifest aplikace.|
+|`ApplicationPath`|Požadovaný parametr `String`.<br /><br /> Určuje cestu manifestu aplikace.|
+|`InputManifest`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje manifest, který má být aktualizován.|
+|`OutputManifest`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> výstupní parametr.<br /><br /> Určuje manifest, který obsahuje aktualizované vlastnosti.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě parametrů uvedených v tabulce zdědí tento úkol parametry z třídy <xref:Microsoft.Build.Utilities.Task>. Seznam těchto dalších parametrů a jejich popisů naleznete v tématu [základní třída Task](../msbuild/task-base-class.md).
+ Kromě parametrů, které jsou uvedeny v tabulce, tato úloha <xref:Microsoft.Build.Utilities.Task> dědí parametry z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [Základní třída úlohy](../msbuild/task-base-class.md).
 
 ## <a name="see-also"></a>Viz také
 

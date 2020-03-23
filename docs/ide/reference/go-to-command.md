@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 535906d8b8d7f8ba0c2984d22ceead18a0d47c2d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569202"
 ---
 # <a name="go-to-command"></a>Přejít na – příkaz
@@ -29,14 +29,14 @@ Přesune kurzor na zadaný řádek.
 Edit.GoTo [linenumber]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 `linenumber`\
-Volitelné. Celé číslo představující číslo řádku, na který se má přejít
+Nepovinný parametr. Celé číslo představující číslo řádku, na který má být přejde.
 
 ## <a name="remarks"></a>Poznámky
-Číslování řádků začíná na jednom. Pokud je hodnota `linenumber` menší než jedna, zobrazí se první řádek. Pokud je hodnota `linenumber` větší než číslo posledního řádku, zobrazí se poslední řádek.
+Číslování řádků začíná na jednom. Pokud `linenumber` je hodnota menší než jedna, zobrazí se první řádek. Pokud `linenumber` je hodnota větší než číslo posledního řádku, zobrazí se poslední řádek.
 
-Pokud není zadána hodnota `linenumber`, zobrazí se dialogové okno **Přejít na řádek** .
+Pokud není `linenumber` zadána hodnota pro, zobrazí se dialogové okno **Přejít na řádek.**
 
 Alias pro tento příkaz je GoToLn.
 
@@ -46,9 +46,9 @@ Alias pro tento příkaz je GoToLn.
 >Edit.GoTo 125
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Pole Najít/příkaz](../../ide/find-command-box.md)
+- [Najít/Příkazové pole](../../ide/find-command-box.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

@@ -14,56 +14,56 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6b9b61d25d0a08763d55dcfb5d5ddb245471effc
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76113784"
 ---
 # <a name="code-analysis-project-designer"></a>Analýza kódu, návrhář projektu
 
-Obsahuje nástroj pro analýzu kódu, který se můžete rozhodnout pro spuštění v kódu. Nástroj hlásí informace o vašich sestaveních, například porušení pravidel programování a návrhu stanovených v pokynech pro návrh Microsoft .NET.
+Obsahuje nástroj pro analýzu kódu, který můžete zvolit ke spuštění na kódu. Nástroj hlásí informace o sestaveních, jako je například porušení pravidel programování a návrhu stanovených v pokynech pro návrh rozhraní Microsoft .NET.
 
-## <a name="uielement-list"></a>UIElement – seznam
+## <a name="uielement-list"></a>Seznam Prvků UI
 
-Povolit Analysis kódu\
-Povoluje nebo zakazuje analýzu kódu pro váš projekt.
+Povolit analýzu kódu\
+Povolí nebo zakáže analýzu kódu pro váš projekt.
 
-Návrh Rules\
-Povoluje nebo zakazuje pravidla návrhu. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+Pravidla návrhu\
+Povolí nebo zakáže pravidla návrhu. Tuto položku můžete také rozbalit a povolit nebo zakázat jednotlivá pravidla.
 
-Globalizace Rules\
-Povolí nebo zakáže pravidla globalizace. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+Pravidla globalizace\
+Povolí nebo zakáže pravidla globalizace. Tuto položku můžete také rozbalit a povolit nebo zakázat jednotlivá pravidla.
 
-Vzájemná funkční spolupráce Rules\
-Povolí nebo zakáže pravidla interoperability. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+Pravidla interoperability\
+Povolí nebo zakáže pravidla interoperability. Tuto položku můžete také rozbalit a povolit nebo zakázat jednotlivá pravidla.
 
-Rules udržovatelnosti\
-Povoluje nebo zakazuje pravidla údržby. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+Pravidla udržovatelnosti\
+Povolí nebo zakáže pravidla udržovatelnosti. Tuto položku můžete také rozbalit a povolit nebo zakázat jednotlivá pravidla.
 
-Mobility Rules\
-Povolí nebo zakáže pravidla mobility. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+Pravidla mobility\
+Povolí nebo zakáže pravidla mobility. Tuto položku můžete také rozbalit a povolit nebo zakázat jednotlivá pravidla.
 
-Pojmenování Rules\
-Povolí nebo zakáže pravidla pojmenování. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+Pravidla pojmenování\
+Povolí nebo zakáže pravidla pojmenování. Tuto položku můžete také rozbalit a povolit nebo zakázat jednotlivá pravidla.
 
-Rules výkonu\
-Povoluje nebo zakazuje pravidla výkonu. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+Pravidla výkonu\
+Povolí nebo zakáže pravidla výkonu. Tuto položku můžete také rozbalit a povolit nebo zakázat jednotlivá pravidla.
 
-Přenositelnost Rules\
-Povolí nebo zakáže pravidla přenositelnosti. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+Pravidla přenositelnosti\
+Povolí nebo zakáže pravidla přenositelnosti. Tuto položku můžete také rozbalit a povolit nebo zakázat jednotlivá pravidla.
 
-Spolehlivost Rules\
-Povoluje nebo zakazuje pravidla spolehlivosti. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+Pravidla spolehlivosti\
+Povolí nebo zakáže pravidla spolehlivosti. Tuto položku můžete také rozbalit a povolit nebo zakázat jednotlivá pravidla.
 
-Rules zabezpečení\
-Povoluje nebo zakazuje pravidla zabezpečení. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+Pravidla zabezpečení\
+Povolí nebo zakáže pravidla zabezpečení. Tuto položku můžete také rozbalit a povolit nebo zakázat jednotlivá pravidla.
 
-Využití Rules\
-Povoluje nebo zakazuje pravidla použití. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+Pravidla použití\
+Povolí nebo zakáže pravidla použití. Tuto položku můžete také rozbalit a povolit nebo zakázat jednotlivá pravidla.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Upozornění Analýzy kódu pro spravovaný kód](../../code-quality/code-analysis-for-managed-code-warnings.md)
+- [Analýza kódu pro upozornění spravovaného kódu](../../code-quality/code-analysis-for-managed-code-warnings.md)
 - [Přehled Analýzy kódu pro spravovaný kód](../../code-quality/code-analysis-for-managed-code-overview.md)
 - [Návod: Analýza spravovaného kódu na výskyt závad v kódu](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)

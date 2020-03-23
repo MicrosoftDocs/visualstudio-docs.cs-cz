@@ -16,52 +16,52 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9780a4ee81a4d063b5cfb7f66b1a5ea023d8fa2f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75573401"
 ---
-# <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>Kód vlastního ověřovacího pravidla pro test výkonnosti webu
+# <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>Kód vlastního ověřovacího pravidla pro test výkonu webu
 
-Můžete vytvořit vlastní ověřovací pravidla. K tomuto účelu odvozujete od třídy pravidla pro ověření třídy vlastní pravidlo. Ověřovací pravidla odvozovat <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> základní třídy.
+Můžete vytvořit vlastní ověřovací pravidla. Chcete-li to provést, odvodit vlastní třídu pravidel z třídy ověřovacího pravidla. Ověřovací pravidla jsou <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> odvozena ze základní třídy.
 
 > [!NOTE]
-> Můžete také vytvořit vlastní pravidla pro extrakci. Další informace najdete v tématu [vytvoření vlastního kódu a modulů Plugin pro zátěžové testy](../test/create-custom-code-and-plug-ins-for-load-tests.md).
+> Můžete také vytvořit vlastní pravidla extrakce. Další informace naleznete v [tématu Vytvoření vlastního kódu a modulů plug-in pro zátěžové testy](../test/create-custom-code-and-plug-ins-for-load-tests.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="to-create-custom-validation-rules"></a>Chcete-li vytvořit vlastní ověřovací pravidla
+## <a name="to-create-custom-validation-rules"></a>Vytvoření vlastních ověřovacích pravidel
 
-1. Otevřete projekt testů obsahující test výkonnosti webu.
+1. Otevřete testovací projekt, který obsahuje test výkonu webu.
 
-2. (Volitelné) Vytvořte samostatný projekt knihovny tříd, do kterého chcete uložit ověřovací pravidlo.
+2. (Nepovinné) Vytvořte samostatný projekt knihovny tříd, do kterého chcete uložit ověřovací pravidlo.
 
     > [!IMPORTANT]
     > Třídu lze vytvořit ve stejném projektu, ve kterém jsou testy. Nicméně pokud chcete pravidlo znovu použít, je vhodnější vytvořit samostatný projekt knihovny tříd, do které pravidlo uložíte. Pokud vytvoříte samostatný projekt, je nutné provést volitelné kroky v tomto postupu.
 
-3. (Volitelné) V projektu knihovny tříd přidejte odkaz na knihovnu DLL Microsoft.VisualStudio.QualityTools.WebTestFramework.
+3. (Nepovinné) V projektu knihovny tříd přidejte odkaz na knihovnu DLL Microsoft.VisualStudio.QualityTools.WebTestFramework.
 
 4. Vytvořte třídu, která je odvozena od třídy <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule>. Implementujte členy <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.Validate*> a <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.RuleName*>.
 
 5. (Volitelné) Vytvořte nový projekt knihovny tříd.
 
-6. (Volitelné) V testovacím projektu přidejte odkaz na projekt knihovny tříd, který obsahuje vlastní ověřovací pravidlo.
+6. (Nepovinné) V testovacím projektu přidejte odkaz na projekt knihovny tříd, který obsahuje vlastní ověřovací pravidlo.
 
-7. V projektu testů otevřete test výkonnosti webu v **editoru testu výkonnosti webu**.
+7. V testovacím projektu otevřete test výkonu webu v **Editoru testů výkonu webu**.
 
-8. Přidání vlastního ověřovacího pravidla na požadavek testu výkonnosti webu, klikněte pravým tlačítkem na žádost a vyberte **přidat ověřovací pravidlo**.
+8. Chcete-li přidat vlastní ověřovací pravidlo do požadavku testu výkonu webu, klepněte pravým tlačítkem myši na požadavek a vyberte **přidat ověřovací pravidlo**.
 
-     **Přidat ověřovací pravidlo** zobrazí se dialogové okno. Zobrazí se vlastní ověřovací pravidlo v **vyberte pravidlo** seznamu, společně s předdefinovanými ověřovacími pravidly. Vyberte vlastní ověřovací pravidlo a pak zvolte **OK**.
+     Zobrazí se dialogové okno **Přidat ověřovací pravidlo.** Vlastní ověřovací pravidlo se zobrazí v seznamu **Vybrat pravidlo** spolu s předdefinovanými ověřovacími pravidly. Vyberte vlastní ověřovací pravidlo a pak zvolte **OK**.
 
-9. Spuštění testu výkonnosti webu.
+9. Spusťte test výkonu webu.
 
 ## <a name="example"></a>Příklad
 
 Následující kód ukazuje implementaci vlastního ověřovacího pravidla. Toto ověřovací pravidlo napodobuje chování předdefinovaného ověřovacího pravidla požadované značky. Tento příklad použijte jako výchozí bod pro vlastní ověřovací pravidla.
 
 > [!WARNING]
-> Veřejné vlastnosti v kódu pro vlastní validátor nemůže mít hodnotu null.
+> Veřejné vlastnosti v kódu pro vlastní validátor nemůže mít nulové hodnoty.
 
 ```csharp
 using System;
@@ -243,7 +243,7 @@ Namespace SampleWebTestRules
 End Namespace
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule>
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.Rules>
@@ -252,4 +252,4 @@ End Namespace
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleRequestTime>
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleRequiredAttributeValue>
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleRequiredTag>
-- [Kódování vlastního pravidla extrakce pro test výkonnosti webu](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
+- [Vytvoření vlastního pravidla extrakce pro test výkonnosti webu](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)

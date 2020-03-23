@@ -1,5 +1,5 @@
 ---
-title: Element sady SDK (MSBuild) | Microsoft Docs
+title: Prvek Sdk (MSBuild) | Dokumenty společnosti Microsoft
 ms.date: 01/25/2018
 ms.topic: reference
 f1_keywords:
@@ -18,17 +18,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8a704744032c5dea70246463a816ba8e1f5c84e8
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632469"
 ---
-# <a name="sdk-element-msbuild"></a>Element sady SDK (MSBuild)
+# <a name="sdk-element-msbuild"></a>Prvek Sdk (MSBuild)
 
 Odkazuje na sadu SDK projektu MSBuild.
 
- \<Project > \<SDK >
+ \<Projekt \<> Sdk>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,7 +37,7 @@ Odkazuje na sadu SDK projektu MSBuild.
      Version="1.0.0" />
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
 
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
@@ -45,8 +45,8 @@ Odkazuje na sadu SDK projektu MSBuild.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Name`|Požadovaný atribut.<br /><br /> Název sady SDK projektu.|
-|`Version`|Nepovinný atribut.<br /><br /> Verze sady SDK projektu|
+|`Name`|Požadovaný atribut.<br /><br /> Název projektu SDK.|
+|`Version`|Nepovinný atribut.<br /><br /> Verze projektu SDK|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
@@ -54,12 +54,12 @@ Odkazuje na sadu SDK projektu MSBuild.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-| Prvek | Popis |
+| Element | Popis |
 | - | - |
-| [Projektem](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
+| [Projektu](../msbuild/project-element-msbuild.md) | Požadovaný kořenový prvek souboru projektu MSBuild. |
 
 ## <a name="see-also"></a>Viz také
 
-- [Postupy: odkazování na sadu SDK projektu MSBuild](../msbuild/how-to-use-project-sdk.md)
-- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
-- [MSBuild](../msbuild/msbuild.md)
+- [Postup: Odkaz na sadu SDK projektu MSBuild](../msbuild/how-to-use-project-sdk.md)
+- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Msbuild](../msbuild/msbuild.md)

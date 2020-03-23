@@ -1,5 +1,5 @@
 ---
-title: ItemCollection – element (MSBuild) | Microsoft Docs
+title: Element skupiny položek (MSBuild) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,17 +19,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8064ce4c13419238ca5877893a731d2ac53afb25
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633639"
 ---
-# <a name="itemgroup-element-msbuild"></a>Item – Element (MSBuild)
+# <a name="itemgroup-element-msbuild"></a>Element ItemGroup (MSBuild)
 
-Obsahuje sadu uživatelsky definovaných prvků [položky](../msbuild/item-element-msbuild.md) . Každá položka, která se používá v projektu MSBuild, musí být zadána jako podřízený prvku `ItemGroup`.
+Obsahuje sadu uživatelem definovaných prvků [item.](../msbuild/item-element-msbuild.md) Každá položka použitá v projektu MSBuild musí `ItemGroup` být zadána jako podřízený prvek.
 
-\<projektu > \<položky >
+\<> \<položky položky projektu>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +41,7 @@ Obsahuje sadu uživatelsky definovaných prvků [položky](../msbuild/item-eleme
 </ItemGroup>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
 
 Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
@@ -49,25 +49,25 @@ Následující části popisují atributy, podřízené prvky a nadřazené prvk
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Condition`|Nepovinný atribut. Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
+|`Condition`|Nepovinný atribut. Podmínka, která má být vyhodnocena. Další informace naleznete v tématu [Podmínky](../msbuild/msbuild-conditions.md).|
 |`Label`|Nepovinný atribut. Identifikuje `ItemGroup`.|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Položka](../msbuild/item-element-msbuild.md)|Definuje vstupy procesu sestavení. V `ItemGroup`může být nula nebo více `Item` prvků.|
+|[Položka](../msbuild/item-element-msbuild.md)|Definuje vstupy pro proces sestavení. V rozhraní může `Item` být nula `ItemGroup`nebo více prvků.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-| Prvek | Popis |
+| Element | Popis |
 | - | - |
-| [Projektem](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
-| [Cíl](../msbuild/target-element-msbuild.md) | Počínaje .NET Framework 3,5 se element `ItemGroup` může objevit uvnitř elementu `Target`. Další informace najdete v tématu [cíle](../msbuild/msbuild-targets.md). |
+| [Projektu](../msbuild/project-element-msbuild.md) | Požadovaný kořenový prvek souboru projektu MSBuild. |
+| [Cíl](../msbuild/target-element-msbuild.md) | Počínaje rozhraním .NET Framework `ItemGroup` 3.5 se `Target` prvek může zobrazit uvnitř prvku. Další informace naleznete v tématu [Cíle](../msbuild/msbuild-targets.md). |
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje uživatelsky definované kolekce položek `Res` a `CodeFiles` deklarované uvnitř elementu `ItemGroup`. Každá položka v kolekci `Res` Item obsahuje uživatelsky definovaný podřízený element [ItemMetadata –](../msbuild/itemmetadata-element-msbuild.md) .
+Následující příklad kódu ukazuje uživatelem definované `Res` `CodeFiles` kolekce položek `ItemGroup` a deklarované uvnitř prvku. Každá z položek `Res` v kolekci položek obsahuje uživatelem definovaný podřízený element [ItemMetadata.](../msbuild/itemmetadata-element-msbuild.md)
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -88,6 +88,6 @@ Následující příklad kódu ukazuje uživatelsky definované kolekce položek
 
 ## <a name="see-also"></a>Viz také
 
-- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
-- [Položky](../msbuild/msbuild-items.md)
-- [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md)
+- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Items](../msbuild/msbuild-items.md)
+- [Běžné položky projektu MSBuild](../msbuild/common-msbuild-project-items.md)

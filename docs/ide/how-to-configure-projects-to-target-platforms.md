@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: konfigurace projektů pro cílové platformy'
+title: 'Postup: Konfigurace projektů pro cílové platformy'
 ms.date: 08/16/2019
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -19,58 +19,58 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9cbe4bc3f982ae18b9f85fe8bf5c21495c98beee
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76112540"
 ---
-# <a name="how-to-configure-projects-to-target-platforms"></a>Postupy: konfigurace projektů pro cílové platformy
+# <a name="how-to-configure-projects-to-target-platforms"></a>Postup: Konfigurace projektů pro cílové platformy
 
-Visual Studio umožňuje nastavení aplikací na různých platformách, včetně 64bitových platforem. Další informace o podpoře platforem 64-bit v sadě Visual Studio najdete v tématu [64bitové aplikace](/dotnet/framework/64-bit-apps).
+Visual Studio umožňuje nastavit aplikace tak, aby cílily na různé platformy, včetně 64bitových platforem. Další informace o podpoře 64bitové platformy v sadě Visual Studio najdete v [tématu 64bitové aplikace](/dotnet/framework/64-bit-apps).
 
-## <a name="target-platforms-with-the-configuration-manager"></a>Cílové platformy s Configuration Manager
+## <a name="target-platforms-with-the-configuration-manager"></a>Cílové platformy pomocí Nástroje pro konfiguraci
 
-**Configuration Manager** poskytuje způsob, jak rychle přidat novou platformu pro cílení na váš projekt. Pokud vyberete jednu z platforem, které jsou součástí sady Visual Studio, vlastnosti projektu jsou upraveny pro sestavení projektu pro vybranou platformu.
+**Nástroj Configuration Manager** nabízí způsob, jak rychle přidat novou platformu, na kterou chcete cílit s projektem. Pokud vyberete jednu z platforem součástí sady Visual Studio, vlastnosti pro váš projekt jsou upraveny tak, aby vytvořily projekt pro vybranou platformu.
 
-### <a name="to-configure-a-project-to-target-a-64-bit-platform"></a>Konfigurace projektu pro cílení na 64 platformu
+### <a name="to-configure-a-project-to-target-a-64-bit-platform"></a>Konfigurace projektu pro cílovou 64bitovou platformu
 
-1. Na panelu nabídek vyberte možnost **sestavit** > **Configuration Manager**.
+1. Na řádku nabídek zvolte **Build** > **Configuration Manager**.
 
-2. V seznamu **Aktivní platforma řešení** zvolte 64 platformu pro cílové řešení a pak klikněte na tlačítko **Zavřít** .
+2. V seznamu **Aktivní platforma řešení** zvolte 64bitovou platformu pro řešení, na které chcete cílit, a pak zvolte tlačítko **Zavřít.**
 
-    1. Pokud se požadovaná platforma nezobrazí v seznamu **Aktivní platforma řešení** , vyberte možnost **nové**.
+    1. Pokud se požadovaná platforma nezobrazí v seznamu **Aktivní platforma řešení,** zvolte **Nový**.
 
-         Zobrazí se dialogové okno **Nová platforma řešení** .
+         Zobrazí se dialogové okno **Nová platforma řešení.**
 
-    2. V rozevíracím seznamu **Typ vyberte Nová platforma** a zvolte možnost **x64**.
+    2. V seznamu **Typ nebo vyberte novou platformu** zvolte **x64**.
 
         > [!NOTE]
-        > Pokud vaší konfiguraci přiřadíte nový název, může být nutné upravit nastavení v **Návrháři projektu** , aby se zacíleno na správnou platformu.
+        > Pokud přidáváte konfiguraci nový název, bude pravděpodobně nutné upravit nastavení v **Návrháři projektu,** abyste cílili na správnou platformu.
 
-    3. Pokud chcete zkopírovat nastavení z aktuální konfigurace platformy, vyberte ji a pak klikněte na tlačítko **OK** .
+    3. Pokud chcete zkopírovat nastavení z aktuální konfigurace platformy, zvolte ji a pak zvolte tlačítko **OK.**
 
-Vlastnosti pro všechny projekty, které cílí na 64, jsou aktualizovány a další sestavení projektu bude optimalizováno pro 64-bitové platformy.
+Vlastnosti pro všechny projekty, které cílí na 64bitovou platformu, se aktualizují a další sestavení projektu bude optimalizováno pro 64bitové platformy.
 
-## <a name="target-platforms-in-the-project-designer"></a>Cílové platformy v Návrháři projektu
+## <a name="target-platforms-in-the-project-designer"></a>Cílové platformy v návrháři projektů
 
-**Návrhář projektu** také poskytuje způsob, jak cílit na různé platformy s vaším projektem. Pokud výběr jedné z platforem zahrnutých v seznamu v dialogovém okně **Nová platforma řešení** nefunguje pro vaše řešení, můžete vytvořit vlastní název konfigurace a upravit nastavení v **Návrháři projektu** , abyste mohli cílit na správnou platformu.
+**Návrhář projektu** také poskytuje způsob, jak cílit na různé platformy s projektem. Pokud výběr jedné z platforem zahrnutých v seznamu v dialogovém okně **Nová platforma řešení** nefunguje pro vaše řešení, můžete vytvořit vlastní název konfigurace a upravit nastavení v **Návrháři projektu** tak, aby se zaměřilo na správnou platformu.
 
-Provádění tohoto úkolu se liší v závislosti na programovacím jazyku, který používáte. Další informace najdete na následujících odkazech:
+Provedení této úlohy se liší v závislosti na programovacím jazyce, který používáte. Další informace naleznete na následujících odkazech:
 
-- [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projektů naleznete v tématu [/Platform (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/platform).
+- Pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projekty naleznete [v tématu /platform (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/platform).
 
-- Pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projekty, viz [Stránka sestavení, Návrhář projektu (C#)](../ide/reference/build-page-project-designer-csharp.md).
+- Pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projekty naleznete v [tématu Sestavení stránky, Návrhář projektu (C#)](../ide/reference/build-page-project-designer-csharp.md).
 
-- Pro [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] projekty naleznete v tématu [/CLR (Common Language Runtime Compilation)](/cpp/build/reference/clr-common-language-runtime-compilation).
+- Pro [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] projekty naleznete v tématu [/clr (Kompilace common language runtime)](/cpp/build/reference/clr-common-language-runtime-compilation).
 
 ## <a name="manually-editing-the-project-file"></a>Ruční úprava souboru projektu
 
-V některých případech je nutné ručně upravit soubor projektu pro určitou vlastní konfiguraci. Příkladem je, že máte podmínky, které nelze zadat v integrovaném vývojovém prostředí (IDE), jako je například odkaz, který je odlišný pro dvě různé platformy, jako v následujícím příkladu.
+Někdy je třeba ručně upravit soubor projektu pro některé vlastní konfigurace. Příkladem je, když máte podmínky, které nelze zadat v ide, jako je například odkaz, který se liší pro dvě různé platformy, jako v následujícím příkladu.
 
-### <a name="example-referencing-x86-and-x64-assemblies-and-dlls"></a>Příklad: odkazování na sestavení a knihovny DLL pro x86 a x64
+### <a name="example-referencing-x86-and-x64-assemblies-and-dlls"></a>Příklad: Odkazování na sestavení x86 a x64 a knihovny DLL
 
-Je možné, že máte sestavení .NET nebo knihovnu DLL, které mají verze x86 i x64. Chcete-li nastavit projekt pro použití těchto odkazů, přidejte nejprve odkaz a poté otevřete soubor projektu a upravte jej tak, aby přidal `ItemGroup` s podmínkou, která odkazuje jak na konfiguraci, tak na cílovou platformu.  Předpokládejme například, že binární soubor, na který odkazujete, je ClassLibrary1 a jsou k dispozici různé cesty pro konfigurace ladění a vydaných verzí a také verze x86 a x64.  Pak použijte čtyři `ItemGroup` prvky se všemi kombinacemi nastavení následujícím způsobem:
+Můžete mít sestavení .NET nebo DLL, která má verze x86 a x64. Chcete-li nastavit projekt pro použití těchto odkazů, nejprve přidejte odkaz a potom `ItemGroup` otevřete soubor projektu a upravte jej tak, aby se přidala podmínka, která odkazuje na konfiguraci i cílovou platformu.  Předpokládejme například, že binární soubor, na který odkazujete, je ClassLibrary1 a existují různé cesty pro konfigurace ladění a vydání, stejně jako verze x86 a x64.  Potom použijte `ItemGroup` čtyři prvky se všemi kombinacemi nastavení, a to následovně:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -109,15 +109,15 @@ Je možné, že máte sestavení .NET nebo knihovnu DLL, které mají verze x86 
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> V aplikaci Visual Studio 2017 je nutné před úpravou souboru projektu uvolnit projekt. Chcete-li uvolnit projekt, klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Uvolnit projekt**. Po dokončení úprav uložte změny a znovu načtěte projekt kliknutím pravým tlačítkem myši na uzel projektu a výběrem možnosti **znovu načíst projekt**.
+> V sadě Visual Studio 2017 je třeba uvolnit projekt před úpravou souboru projektu. Chcete-li projekt uvolnit, klepněte pravým tlačítkem myši na uzel projektu a zvolte **Uvolnit projekt**. Po dokončení úprav uložte změny a znovu načtěte projekt kliknutím pravým tlačítkem myši na uzel projektu a výběrem **možnosti Znovu načíst projekt**.
 ::: moniker-end
 
-Další informace o souboru projektu naleznete v tématu [Referenční dokumentace schématu souboru projektu nástroje MSBuild](../msbuild/msbuild-project-file-schema-reference.md).
+Další informace o souboru projektu naleznete v [tématu MSBuild](../msbuild/msbuild-project-file-schema-reference.md)odkaz na schéma souboru projektu .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Principy platforem sestavení](../ide/understanding-build-platforms.md)
-- [/Platform (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)
-- [64 – bitové aplikace](/dotnet/framework/64-bit-apps)
-- [Visual Studio IDE 64 – Podpora bitových procesorů](../ide/visual-studio-ide-64-bit-support.md)
-- [Porozumění souboru projektu](/aspnet/web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-project-file)
+- [Vysvětlení platforem sestavení](../ide/understanding-build-platforms.md)
+- [/platforma (možnosti kompilátoru Jazyka C#)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)
+- [64bitové aplikace](/dotnet/framework/64-bit-apps)
+- [Podpora 64bitového zařízení Visual Studio IDE](../ide/visual-studio-ide-64-bit-support.md)
+- [Principy souboru projektu](/aspnet/web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-project-file)

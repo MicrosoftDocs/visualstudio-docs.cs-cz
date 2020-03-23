@@ -9,34 +9,34 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5ddb082bf2451759be239d5c16404e82bcd84733
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77578163"
 ---
 # <a name="analyze-memory-usage"></a>Analýza využití paměti
 
-Pokud chcete najít nevracení paměti a neefektivní využití paměti, můžete použít nástroje, jako je nástroj pro diagnostiku využití paměti integrovaného ladicího programu nebo nástroje v profileru výkonu, jako je nástroj pro přidělování objektů .NET a nástroj pro využití paměti po porážce. Nástroj využití paměti umožňuje provést jeden nebo více *snímků* spravované a nativní haldy paměti. Můžete shromažďovat snímky aplikací .NET, ASP.NET, nativní nebo smíšený režim (.NET a nativní). 
+chcete-li najít nevracení paměti a neefektivní využití paměti, můžete použít nástroje, jako je například ladicí program integrované využití paměti diagnostický nástroj nebo nástroje v profileru výkonu, jako je například nástroj pro alokaci objektů .NET a posmrtné využití paměti. Nástroj využití paměti umožňuje pořizovat jeden nebo více *snímků* spravované a nativní paměti haldy. Můžete shromažďovat snímky aplikací .NET, ASP.NET, nativní nebo smíšený režim (.NET a nativní). 
 
-Nástroj **využití paměti** může běžet na otevřeném projektu sady Visual Studio, na nainstalované Microsoft Store aplikaci nebo připojeném ke spuštěné aplikaci nebo procesu. Nástroj můžete spustit na místních nebo vzdálených počítačích nebo na simulátoru nebo emulátoru. Další informace najdete v tématu [spuštění nástrojů pro profilaci pomocí ladicího programu nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
+Nástroj **Využití paměti** lze spustit v otevřeném projektu Sady Visual Studio, v nainstalované aplikaci Microsoft Store nebo připojenéke spuštěné aplikaci nebo procesu. Nástroj můžete spustit na místních nebo vzdálených počítačích nebo na simulátoru nebo emulátoru. Další informace naleznete [v tématu Spuštění nástrojů profilování s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-Nástroj **využití paměti** můžete spustit s laděním nebo bez něj. V ladicím programu můžete zapnout nebo vypnout profilaci paměti a zobrazit rozpis využití paměti pro jednotlivé objekty. Můžete zobrazit výsledky využití paměti při pozastavení provádění, například na zarážce.
+Nástroj Využití **paměti** můžete spustit s laděním nebo bez něj. V ladicím programu můžete zapínat a vypínat profilování paměti a zobrazit rozdělení využití paměti na objekt. Výsledky využití paměti můžete zobrazit při pozastavení provádění, například v zarážky.
 
-Nástroj pro **přidělování objektů .NET** se spouští jenom jako nástroj po porážce.
+Nástroj **pro alokaci objektů .NET** je spuštěn pouze jako nástroj po smrti.
 
-Podrobné pokyny, které popisují použití nástrojů pro analýzu paměti, najdete v kurzu [Analýza využití paměti](../profiling/memory-usage.md) a [Nástroj pro přidělování objektů .NET](../profiling/dotnet-alloc-tool.md).
+Podrobné pokyny, které popisují použití nástrojů pro analýzu paměti, naleznete v tématu [Analýza využití paměti](../profiling/memory-usage.md) a nástroje pro [alokaci objektů .NET](../profiling/dotnet-alloc-tool.md).
 
-Můžete použít profilovací nástroje bez ladicího programu s Windows 7 a novější. Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější.
+Můžete použít profilování nástroje bez ladicího programu se systémem Windows 7 a novější. Windows 8 a novější je nutné spustit profilování nástroje s ladicím programem **(Diagnostické nástroje** okna).
 
 ## <a name="blogs-and-videos"></a>Blogy a videa
 
-[Analyzovat procesor a paměť během ladění](https://devblogs.microsoft.com/visualstudio/analyze-cpu-memory-while-debugging/)
+[Analýza procesoru a paměti při ladění](https://devblogs.microsoft.com/visualstudio/analyze-cpu-memory-while-debugging/)
 
-[Blog C++ vizuálu: profilace paměti v jazyce C++ Visual 2015](https://devblogs.microsoft.com/cppblog/memory-profiling-in-visual-c-2015/)
+[Visual C++ blog: Profilování paměti ve Visual C++ 2015](https://devblogs.microsoft.com/cppblog/memory-profiling-in-visual-c-2015/)
 
 ## <a name="see-also"></a>Viz také
 
 - [Profilace v sadě Visual Studio](../profiling/index.yml)
-- [První pohled na nástroje pro profilaci](../profiling/profiling-feature-tour.md)
+- [První seznámení s nástroji pro profilaci](../profiling/profiling-feature-tour.md)
 - [Analýza využití paměti bez ladicího programu](../profiling/memory-usage-without-debugging2.md)

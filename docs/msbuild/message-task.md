@@ -1,5 +1,5 @@
 ---
-title: Úloha zprávy | Microsoft Docs
+title: Úkol zprávy | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,38 +19,38 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 264ff3a5e64b756020648e888f7817e12702659f
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78865359"
 ---
 # <a name="message-task"></a>úloha zprávy
 
-Zaprotokoluje zprávu během sestavení.
+Zaznamená zprávu během sestavení.
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry úlohy `Message`.
+ Následující tabulka popisuje parametry `Message` úkolu.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Importance`|Volitelný parametr `String`.<br /><br /> Určuje důležitost zprávy. Tento parametr může mít hodnotu `high`, `normal` nebo `low`. Výchozí hodnota je `normal`.|
-|`Text`|Volitelný parametr `String`.<br /><br /> Chybový text, který se má protokolovat|
+|`Importance`|Volitelný `String` parametr.<br /><br /> Určuje důležitost zprávy. Tento parametr může mít `high` `normal` hodnotu , nebo `low`. Výchozí hodnota je `normal`.|
+|`Text`|Volitelný `String` parametr.<br /><br /> Text chyby protokolu.|
 
 ## <a name="remarks"></a>Poznámky
 
- Úloha `Message` umožňuje projektům MSBuild vydávat zprávy do protokolovacích nástrojů v různých krocích procesu sestavení.
+ Úkol `Message` umožňuje MSBuild projekty vydávat zprávy úhozy kláves v různých krocích v procesu sestavení.
 
- Pokud je parametr `Condition` vyhodnocen jako `true`, bude hodnota parametru `Text` zaznamenána a sestavení bude nadále spuštěno. Pokud parametr `Condition` neexistuje, text zprávy se zaznamená do protokolu. Další informace o protokolování naleznete v tématu [získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
+ Pokud `Condition` parametr vyhodnotí na `true`, `Text` hodnota parametru bude zaznamenána a sestavení bude pokračovat v provádění. Pokud `Condition` parametr neexistuje, je zaznamenán text zprávy. Další informace o protokolování naleznete v [tématu Získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
 
- Ve výchozím nastavení je zpráva odeslána všem registrovaným protokolovacím nástrojům. Protokolovací nástroj interpretuje parametr `Importance`. Zpráva nastavená na `high` se obvykle pošle, když je podrobnost protokolovacího nástroje nastavená na <xref:Microsoft.Build.Framework.LoggerVerbosity>.`Minimal` nebo vyšší. Když je podrobnost protokolovacího nástroje nastavená na <xref:Microsoft.Build.Framework.LoggerVerbosity>, pošle se zpráva nastavená na `low`.`Detailed`.
+ Ve výchozím nastavení je zpráva odeslána všem registrovaným úhozům. Protokolovací protokol `Importance` interpretuje parametr. Obvykle je zpráva nastavena na `high` je odeslána, když <xref:Microsoft.Build.Framework.LoggerVerbosity>je nastavena podrobnost protokolování na .`Minimal` nebo vyšší. Zpráva nastavena `low` na je odeslána, když <xref:Microsoft.Build.Framework.LoggerVerbosity>je nastavena verbosita protokolování na . `Detailed`.
 
- Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
 
- Následující příklad kódu protokoluje zprávy do všech registrovaných protokolovacích nástrojů.
+ Následující příklad kódu protokoluje zprávy všem registrovaným úhozům.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

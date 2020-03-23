@@ -1,67 +1,73 @@
 ---
-title: Problémy s přihlašováním k předplatným sady Visual Studio | Microsoft Docs
+title: Problémy s přihlášením k předplatným Sady Visual Studio | Dokumenty společnosti Microsoft
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/19/2019
+ms.date: 03/11/2020
 ms.topic: conceptual
-description: Informace o problémech, které mohou nastat při přihlašování k předplatným sady Visual Studio
-ms.openlocfilehash: dea81a57501f791ba9d40a95c5305f9aedcc3b49
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+description: Informace o problémech, které mohou vzniknout při přihlášení k předplatným Sady Visual Studio
+ms.openlocfilehash: 8175a1d8d2c79aecad25952eebdf734e0a9d29d2
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74706857"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79509015"
 ---
-# <a name="issues-signing-in-to-visual-studio-subscriptions"></a>Problémy s přihlašováním k předplatným sady Visual Studio
-Pokud chcete použít předplatné sady Visual Studio, musíte se nejdřív přihlásit.  V závislosti na vašem předplatném jste ho možná nastavili pomocí účet Microsoft (MSA) nebo identity Azure Active Directory (AAD).  Tento článek popisuje některé problémy, se kterými se můžete setkat při přihlašování ke svému předplatnému.
+# <a name="issues-signing-in-to-visual-studio-subscriptions"></a>Problémy s přihlášením k předplatným Sady Visual Studio
+Chcete-li používat předplatné sady Visual Studio, musíte se nejprve přihlásit.  V závislosti na předplatném jste ho mohli nastavit buď pomocí účtu Microsoft (MSA), nebo pomocí identity Azure Active Directory (AAD).  Tento článek popisuje některé problémy, se kterými se můžete setkat při přihlašování k předplatnému.
 
-## <a name="microsoft-accounts-msa-cannot-be-created-using-workschool-email-addresses"></a>Účty Microsoft (MSA) se nedají vytvořit pomocí e-mailových adres pracovní/školní služby.
-Možnost vytvoření nového osobního účtu Microsoft (MSA) pomocí e-mailové adresy na pracovní/školní už není povolená, když je e-mailová doména nakonfigurovaná ve službě Azure AD. Co to znamená? Pokud vaše organizace používá Office 365 nebo jiné firemní služby od Microsoftu, které spoléhají na Azure AD, a pokud jste do svého tenanta Azure AD přidali název domény, uživatelé už nebudou moct vytvářet nové osobní účet Microsoft pomocí e-mailové adresy ve vaší doméně.
+## <a name="microsoft-accounts-msa-cannot-be-created-using-workschool-email-addresses"></a>Účty Microsoft (MSA) nelze vytvořit pomocí pracovních a školních e-mailových adres.
+Možnost vytvořit nový osobní účet Microsoft (MSA) pomocí pracovní/školní e-mailové adresy už není povolena, když je e-mailová doména nakonfigurovaná ve službě Azure AD. Co to znamená? Pokud vaše organizace používá Office 365 nebo jiné obchodní služby od Microsoftu, které jsou závislé na Azure AD, a pokud jste do klienta Azure AD přidali název domény, uživatelé už nebudou moct vytvářet nový osobní účet Microsoft pomocí e-mailové adresy ve vaší doméně.
 
 ### <a name="why-was-this-change-made"></a>Proč byla tato změna provedena?
-Osobní účet Microsoft s pracovní adresou jako uživatelským jménem je fraught s problémy pro koncové uživatele a oddělení IT. Příklad:
-- Uživatelé se mohou domnívat, že jejich osobní účet Microsoft jsou kompatibilní s obchodním a že jsou v souladu s předpisy, když ukládají obchodní dokument na OneDrive.
-- Uživatelé, kteří odejdou z organizace, obecně ztratí přístup ke své pracovní e-mailové adrese. Pokud k tomu dojde, nemusí být schopni se vrátit do osobních účet Microsoft, pokud si zapomenete heslo. Překlopení je, že jeho IT oddělení může resetovat svoje heslo a získat si ho do osobního účtu bývalých zaměstnanců.
-- Oddělení IT mají falešnou představu o vlastnictví a zabezpečení účtů. Ale uživatelé potřebují jenom přesměrovat kód na svou pracovní e-mailovou adresu jenom jednou a kdykoli v budoucnu může přejmenovat svůj účet.
+Mít osobní účet Microsoft s pracovní adresou jako uživatelským jménem je plné problémů pro koncové uživatele i oddělení IT. Například:
+- Uživatelé si mohou myslet, že jejich osobní účet Microsoft splňuje požadavky firmy a že jsou v souladu s předpisy, když si ukládají firemní dokument na OneDrive.
+- Uživatelé, kteří opustí organizaci, obvykle ztratí přístup ke své pracovní e-mailové adrese. Pokud tak učiní, nemusí být moci zpět do svého osobního účtu Microsoft, pokud zapomene své heslo. Druhou stranou je, že jejich IT oddělení by mohlo resetovat své heslo a dostat se na osobní účet bývalých zaměstnanců.
+- IT oddělení mají falešný smysl pro vlastnictví a zabezpečení účtu. Uživatelé však potřebují pouze jednou převést kód na svou pracovní e-mailovou adresu a mohou svůj účet kdykoli v budoucnu přejmenovat.
 
-Tato situace je zvláště matoucí pro uživatele, kteří mají dva účty se stejnou e-mailovou adresou (jedna ve službě Azure AD & jednu účet Microsoft).
+Situace je obzvláště matoucí pro uživatele, kteří mají dva účty se stejnou e-mailovou adresou (jeden ve službě Azure AD & jeden účet Microsoft).
 
-### <a name="what-does-this-experience-look-like"></a>Jak toto chování vypadá?
-Pokud se pokusíte zaregistrovat aplikaci pro příjemce Microsoftu pomocí pracovní nebo školní e-mailové adresy, zobrazí se následující zpráva.
-
-   > [!div class="mx-imgBorder"]
-   > ![nemůže vytvořit účet s pracovním e-mailem](_img/sign-in-issues/cannot-use-work-email.png)
-
-Pokud se ale pokusíte zaregistrovat aplikaci Microsoftu, která podporuje osobní a pracovní/školní účty, měla by se zobrazit tato zpráva:
+### <a name="what-does-this-experience-look-like"></a>Jak tato zkušenost vypadá?
+Pokud se pokusíte zaregistrovat spotřebitelskou aplikaci Microsoft s pracovní nebo školní e-mailovou adresou, zobrazí se níže uvedená zpráva.
 
    > [!div class="mx-imgBorder"]
-   > ![pracovní/školní účty podporované](_img/sign-in-issues/existing-account.png)
+   > ![Nelze vytvořit účet s pracovním e-mailem](_img/sign-in-issues/cannot-use-work-email.png)
 
-### <a name="are-existing-accounts-affected"></a>Ovlivnily se stávající účty?
-Zde popsané blokování registrace zabrání pouze vytváření nových účtů. Nemá žádný vliv na uživatele, kteří už mají účet Microsoft s pracovní nebo školní e-mailovou adresou. Pokud už v této situaci jste, usnadnili jsme přejmenování osobního účet Microsoft. Tento [článek podpory](https://windows.microsoft.com/en-US/Windows/rename-personal-microsoft-account) poskytuje jednoduché podrobné pokyny. Přejmenování osobních účet Microsoft znamená změnu uživatelského jména a nemá vliv na váš pracovní e-mail ani na způsob, jakým se přihlašujete k obchodním službám, jako je například Office 365. Neovlivní to i vaše osobní věci – stačí změnit způsob, jakým se k němu přihlašujete. Můžete použít jinou (osobní) e-mailovou adresu, získat novou @outlook.com e-mailovou adresu od Microsoftu nebo použít telefonní číslo jako nové uživatelské jméno.
+Pokud se však pokusíte zaregistrovat aplikaci Microsoft, která podporuje osobní a pracovní/školní účty, měla by se zobrazit tato zpráva:
+
+   > [!div class="mx-imgBorder"]
+   > ![Podporované pracovní/školní účty](_img/sign-in-issues/existing-account.png)
+
+### <a name="are-existing-accounts-affected"></a>Jsou ovlivněny stávající účty?
+Blok registrace popsaný zde pouze zabraňuje vytváření nových účtů. Nemá žádný vliv na uživatele, kteří už mají účet Microsoft s pracovní/školní e-mailovou adresou. Pokud jste již v této situaci, jsme usnadnili přejmenování osobního účtu Microsoft. Tento [článek podpory](https://windows.microsoft.com/en-US/Windows/rename-personal-microsoft-account) obsahuje jednoduché pokyny krok za krokem. Přejmenování osobního účtu Microsoft znamená změnu uživatelského jména a nemá vliv na pracovní e-mail ani na způsob přihlášení k firemním službám, jako je Office 365. Nemá to ani vliv na vaše osobní věci – jen to mění způsob, jakým se k němu přihlašujete. Můžete použít jinou (osobní) e-mailovou adresu, získat novou @outlook.com e-mailovou adresu od společnosti Microsoft nebo použít své telefonní číslo jako nové uživatelské jméno.
 
 > [!NOTE]
-> Pokud vaše IT oddělení požádalo o vytvoření osobní účet Microsoft s vaším pracovním nebo školním e-mailem, například pro přístup k firemním službám Microsoftu, jako je třeba Premier Support, se před přejmenováním účtu poraďte s týmem správce.
+> Pokud vás vaše ODDĚLENÍ IT požádalo o vytvoření osobního účtu Microsoft pomocí pracovního/školního e-mailu, například pro přístup ke službám Microsoft business, jako je Premier Support, promluvte si před přejmenováním účtu se svým týmem pro správu.
 
-## <a name="deleting-a-sign-in-address-may-prevent-access-to-a-subscription"></a>Odstranění přihlašovací adresy může zabránit přístupu k předplatnému.
-Pokud odstraníte jednu nebo více identit (MSA nebo AAD) přidružených k vašemu předplatnému, informace o vašem předplatiteli, včetně vašeho uživatelského jména a přihlašovacího ID, mohou být vygenerovány anonymně, což vede ke ztrátě přístupu k vašemu předplatnému.
+## <a name="deleting-a-sign-in-address-may-prevent-access-to-a-subscription"></a>Odstranění přihlašovací adresy může znemožnit přístup k předplatnému
+Pokud odstraníte jednu nebo více identit (MSA nebo AAD) přidružených k vašemu předplatnému, informace o odběrateli včetně vašeho uživatelského jména a přihlašovacího ID mohou být anonymizovány, což vede ke ztrátě přístupu k vašemu předplatnému.
 
-Abyste se vyhnuli dopadům na přístup k předplatnému, použijte jeden z těchto postupů.
-- Nasaďte jeden systém pro správu identit – buď MSA, nebo AAD, ale ne obojí.
-- Přidružte identity AAD a MSA prostřednictvím tenanta.
+Chcete-li se vyhnout dopadům na přístup k předplatnému, použijte jednu z těchto technik.
+- Nasazení jednoho systému správy identit – buď MSA nebo AAD – ale ne obojí.
+- Přidružte identity AAD a MSA prostřednictvím klienta.
 
-## <a name="signing-in-may-fail-when-using-aliases"></a>Přihlášení se nemusí zdařit při použití aliasů.
-V závislosti na typu účtu použitého k přihlášení se nemusí při přihlašování k [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)správně zobrazit dostupná předplatná. Jednou z možných příčin je použití "aliasů" nebo "popisných názvů" místo přihlašovací identity, ke které je předplatné přiřazeno. Tento název se nazývá "aliasing".
+## <a name="signing-in-may-fail-when-using-aliases"></a>Při přihlašování se může selhat při použití aliasů.
+V závislosti na typu účtu použitého k přihlášení nemusí být dostupná [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)předplatná při přihlášení k aplikaci správně zobrazena. Jednou z možných příčin je použití "aliasy" nebo "popisné názvy" místo přihlašovací identity, ke kterému je přiřazeno předplatné. Tomu se říká "aliasing".
 
 ### <a name="what-is-aliasing"></a>Co je aliasing?
-Pojem "aliasing" odkazuje na uživatele, kteří mají různé identity pro přihlášení k Windows (nebo službě Active Directory) a pro přístup k e-mailu.
+Termín "aliasování" označuje uživatele, kteří mají různé identity pro přihlášení k systému Windows (nebo službě Active Directory) a přístup k e-mailu.
 
-Aliasing se dá využít, když má společnost Microsoft Online Service pro své adresáře, jako je JohnD@contoso.com, ale uživatelé mají přístup k e-mailovým účtům pomocí aliasů nebo popisných názvů, jako je například John.Doe@contoso.com. Pro mnoho zákazníků, kteří spravují svá předplatná prostřednictvím služby Volume Licensing Service Center (VLSC), může dojít k neúspěšnému přihlášení, protože zadaná e-mailová adresa (John.Doe@contoso.com) se neshoduje s adresou adresáře (JohnD@contoso.com) požadovanou pro úspěšné ověření prostřednictvím možnosti pracovní nebo školní účet.
+Aliasing může dojít, když společnost má Službu Microsoft Online pro JohnD@contoso.comjejich přihlášení k adresáři, jako je , John.Doe@contoso.comale uživatelé přístup k jejich e-mailové účty pomocí aliasů nebo popisné názvy, například . Pro mnoho zákazníků, kteří spravují svá předplatná prostřednictvím Centra multilicenčních služeb (VLSC), toJohn.Doe@contoso.commůže mít za následekJohnD@contoso.comneúspěšné přihlašovací prostředí, protože zadaná e-mailová adresa ( ) neodpovídá adrese adresáře ( ) požadované pro úspěšné ověření prostřednictvím možnosti "Pracovní nebo školní účet".
 
-### <a name="what-options-do-i-have"></a>Jaké možnosti mám?
-Z perspektivy předplatitele je důležité, abyste nejdřív spolupracovali se správcem a pochopili konfiguraci identity vaší společnosti. V případě potřeby může správce potřebovat aktualizovat nastavení účtu na portálu pro správu nebo může být nutné vytvořit účet Microsoft (MSA) pomocí firemní e-mailové adresy. Před provedením kroků při vytváření MSA můžete mluvit s vaším správcem týkajícím se všech zásad nebo problémů s provedením této akce. 
+### <a name="what-options-do-i-have"></a>Jaké mám možnosti?
+Z hlediska odběratele je důležité nejprve spolupracovat se správcem, abyste porozuměli konfiguraci identity vaší společnosti. V případě potřeby může být nutné, aby správce aktualizoval nastavení účtu z portálu pro správu nebo si můžete vytvořit účet Microsoft (MSA) pomocí firemní e-mailové adresy. Než podniknete kroky k vytvoření msa, promluvte si se správcem o všech zásadách nebo problémech s touto akcí. 
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-- Přečtěte si, jak [propojit účty MSA a AAD](/azure/active-directory/b2b/add-users-administrator) v AAD.
-- Přečtěte si další informace o [anonymitě](anonymization.md).
+- Přečtěte si, jak [propojit účty MSA a AAD](/azure/active-directory/b2b/add-users-administrator) v rámci ad.
+- Další informace o [anonymizaci](anonymization.md).

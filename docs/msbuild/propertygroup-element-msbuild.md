@@ -1,5 +1,5 @@
 ---
-title: Property – element (MSBuild) | Microsoft Docs
+title: PropertyGroup Element (MSBuild) | Dokumenty společnosti Microsoft
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -19,17 +19,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b94cf266be81b81aca9c83fe8d29b9777ee9114b
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632924"
 ---
-# <a name="propertygroup-element-msbuild"></a>Property – element (MSBuild)
+# <a name="propertygroup-element-msbuild"></a>Element PropertyGroup (MSBuild)
 
-Obsahuje sadu uživatelsky definovaných prvků [vlastností](../msbuild/property-element-msbuild.md) . Každý prvek `Property` použitý v projektu MSBuild musí být podřízeným prvkem `PropertyGroup` elementu.
+Obsahuje sadu uživatelem definovaných elementů [Vlastnosti.](../msbuild/property-element-msbuild.md) Každý `Property` prvek použitý v projektu MSBuild musí `PropertyGroup` být podřízený prvek.
 
- \<> projektu \<vlastnost >
+ \<> \<skupiny vlastností projektu>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,7 +40,7 @@ Obsahuje sadu uživatelsky definovaných prvků [vlastností](../msbuild/propert
 </PropertyGroup>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
 
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
@@ -48,23 +48,23 @@ Obsahuje sadu uživatelsky definovaných prvků [vlastností](../msbuild/propert
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Podmínka|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
+|Podmínka|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace naleznete v tématu [Podmínky](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Vlastnost](../msbuild/property-element-msbuild.md)|Volitelný element.<br /><br /> Uživatelsky definovaný název vlastnosti, který obsahuje hodnotu vlastnosti. V prvku `PropertyGroup` může existovat nula nebo více prvků *vlastností* .|
+|[Vlastnost](../msbuild/property-element-msbuild.md)|Volitelný element.<br /><br /> Název vlastnosti definované uživatelem, který obsahuje hodnotu vlastnosti. Může být nula *Property* nebo více `PropertyGroup` Property prvky v elementu.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-| Prvek | Popis |
+| Element | Popis |
 | - | - |
-| [Projektem](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
+| [Projektu](../msbuild/project-element-msbuild.md) | Požadovaný kořenový prvek souboru projektu MSBuild. |
 
 ## <a name="example"></a>Příklad
 
- Následující příklad kódu ukazuje, jak nastavit vlastnosti na základě podmínky. V tomto příkladu, pokud je hodnota vlastnosti `CompileConfig` `DEBUG`, jsou nastaveny vlastnosti `Optimization`, `Obfuscate`a `OutputPath` uvnitř prvku `PropertyGroup`.
+ Následující příklad kódu ukazuje, jak nastavit vlastnosti na základě podmínky. V tomto příkladu pokud `CompileConfig` `DEBUG`je hodnota `Optimization`vlastnosti , , `Obfuscate`a `OutputPath` vlastnosti uvnitř `PropertyGroup` prvku jsou nastaveny.
 
 ```xml
 <PropertyGroup Condition="'$(CompileConfig)' == 'DEBUG'" >
@@ -76,5 +76,5 @@ Obsahuje sadu uživatelsky definovaných prvků [vlastností](../msbuild/propert
 
 ## <a name="see-also"></a>Viz také
 
-- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
-- [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)
+- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Vlastnosti MSBuild](../msbuild/msbuild-properties.md)

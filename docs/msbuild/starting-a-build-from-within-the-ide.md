@@ -1,5 +1,5 @@
 ---
-title: Spuštění sestavení z prostředí IDE | Microsoft Docs
+title: Spuštění sestavení z ide | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,25 +11,25 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f8c4792590565c027a316ed95abb067faa30f5dc
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632118"
 ---
-# <a name="start-a-build-from-within-the-ide"></a>Spuštění sestavení z integrovaného vývojového prostředí (IDE)
+# <a name="start-a-build-from-within-the-ide"></a>Spuštění sestavení z ide
 
-Vlastní projektové systémy musí použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> k zahájení sestavení. Tento článek popisuje důvody tohoto požadavku a popisuje postup.
+Vlastní projektové <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> systémy musí použít ke spuštění sestavení. Tento článek popisuje důvody tohoto požadavku a popisuje postup.
 
 ## <a name="parallel-builds-and-threads"></a>Paralelní sestavení a vlákna
 
- Visual Studio umožňuje paralelní sestavení, které vyžaduje, aby bylo možné získat přístup k běžným prostředkům. Systémy projektu mohou spustit sestavení asynchronně, ale tyto systémy nesmí volat funkce sestavení v rámci zpětného volání.
+ Visual Studio umožňuje paralelní sestavení, která vyžaduje zprostředkování pro přístup ke společným prostředkům. Projektové systémy lze spustit sestavení asynchronně, ale tyto systémy nesmí volat funkce sestavení z v rámci zpětné volání.
 
- Pokud systém projektu mění proměnné prostředí, musí nastavit NodeAffinity sestavení na OutOfProc. Tento požadavek znamená, že nemůžete použít objekty hostitele, protože vyžadují uzel v rámci proc.
+ Pokud systém projektu upravuje proměnné prostředí, musí nastavit NodeAffinity sestavení Na OutOfProc. Tento požadavek znamená, že nelze použít objekty hostitele, protože vyžadují uzel in-proc.
 
-## <a name="use-ivsbuildmanageraccessor"></a>Použití IVSBuildManagerAccessor
+## <a name="use-ivsbuildmanageraccessor"></a>Použití nástroje IVSBuildManagerAccessor
 
- Následující kód popisuje metodu, kterou může projektový systém použít ke spuštění sestavení:
+ Níže uvedený kód popisuje metodu, kterou může systém projektu použít ke spuštění sestavení:
 
 ```csharp
 

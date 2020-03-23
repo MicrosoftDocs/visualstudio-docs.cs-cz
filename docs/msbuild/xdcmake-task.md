@@ -1,5 +1,5 @@
 ---
-title: Úloha XDCMake | Microsoft Docs
+title: XDCMake úkol | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -20,37 +20,37 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3c41bfc2015f29cbb73b33df3594b3a3430af3f3
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77630649"
 ---
 # <a name="xdcmake-task"></a>XDCMake – úloha
 
-Zabalí Nástroj dokumentace XML (*xdcmake. exe*), který sloučí soubory komentáře dokumentu XML ( *. xdc*) do souboru *. XML* .
+Zalomí nástroj dokumentace XML (*xdcmake.exe*), který sloučí soubory dokumentu XML (*.xdc)* do souboru *XML.*
 
- Soubor *. xdc* se vytvoří, když zadáte dokumentační komentáře ve C++ zdrojovém kódu a zkompilujete pomocí možnosti kompilátoru [/doc](/cpp/build/reference/doc-process-documentation-comments-c-cpp) . Další informace naleznete v tématu [Reference k xdcmake](/cpp/build/reference/xdcmake-reference), [stránky vlastností nástroje generátoru dokumentů XML](/cpp/build/reference/xml-document-generator-tool-property-pages)a možnost nápovědu příkazového řádku ( **/?** ) pro *xdcmake. exe*.
+ Soubor *XDC* je vytvořen při poskytování komentářů dokumentace ve zdrojovém kódu jazyka C++ a kompilace pomocí možnosti kompilátoru [/doc.](/cpp/build/reference/doc-process-documentation-comments-c-cpp) Další informace naleznete v [tématech XDCMake reference](/cpp/build/reference/xdcmake-reference), [XML Document Generator Tool stránky vlastností](/cpp/build/reference/xml-document-generator-tool-property-pages)a příkazový řádek nápovědy možnost (**/?**) pro *xdcmake.exe*.
 
 ## <a name="remarks"></a>Poznámky
 
- Ve výchozím nastavení podporuje nástroj *xdcmake. exe* několik možností příkazového řádku. Další možnosti jsou podporovány při zadání možnosti příkazového řádku **/Old** .
+ Ve výchozím nastavení podporuje nástroj *xdcmake.exe* několik možností příkazového řádku. Další možnosti jsou podporovány, pokud zadáte **/old** možnost příkazového řádku.
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry úlohy **xdcmake** .
+ Následující tabulka popisuje parametry úlohy **XDCMake.**
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**AdditionalDocumentFile**|Parametr volitelného **řetězce []** .<br /><br /> Určuje jeden nebo více dalších souborů *. xdc* ke sloučení.<br /><br /> Další informace najdete v popisu **dalších souborů dokumentů** v popisu na [stránkách vlastností nástroje generátoru dokumentů XML](/cpp/build/reference/xml-document-generator-tool-property-pages). Podívejte se také na možnosti příkazového řádku **/Old** a **/FS** pro *xdcmake. exe*.|
-|**AdditionalOptions**|Volitelný **řetězcový** parametr.<br /><br /> Seznam možností, jak je uvedeno na příkazovém řádku. Například/\<možnost1 >/\<možnost2 >/\<možnost # >. Pomocí tohoto parametru můžete zadat možnosti, které nejsou reprezentované žádným jiným parametrem úlohy **xdcmake** .<br /><br /> Další informace naleznete v tématu [Reference k xdcmake](/cpp/build/reference/xdcmake-reference), [stránky vlastností nástroje generátor dokumentů XML](/cpp/build/reference/xml-document-generator-tool-property-pages)a nápovědu příkazového řádku ( **/?** ) pro *xdcmake. exe*.|
-|**DocumentLibraryDependencies**|Volitelný **logický** parametr.<br /><br /> Pokud `true` a aktuální projekt mají závislost na projektu statické knihovny ( *. lib*) v řešení, soubory *. xdc* pro tento projekt knihovny jsou zahrnuty ve výstupu souboru *. XML* pro aktuální projekt.<br /><br /> Další informace najdete v popisu **závislostí knihovny dokumentů** na [stránkách vlastností nástroje generátoru dokumentů XML](/cpp/build/reference/xml-document-generator-tool-property-pages).|
-|**OutputFile**|Volitelný **řetězcový** parametr.<br /><br /> Přepíše výchozí název výstupního souboru. Výchozí název je odvozen z názvu prvního souboru *. xdc* , který je zpracován.<br /><br /> Další informace naleznete v tématu možnost **/out:\<filename >** v tématu [xdcmake reference](/cpp/build/reference/xdcmake-reference). Podívejte se také na možnosti příkazového řádku **/Old** a **/FO** pro *xdcmake. exe*.|
-|**Názevprojektu**|Volitelný **řetězcový** parametr.<br /><br /> Název aktuálního projektu|
-|**SlashOld**|Volitelný **logický** parametr.<br /><br /> Pokud `true`, povolí další možnosti *xdcmake. exe* .<br /><br /> Další informace naleznete v možnosti příkazového řádku **/Old** pro *xdcmake. exe*.|
-|**Prostředky**|Vyžaduje se `ITaskItem[]` parametr.<br /><br /> Definuje pole položek zdrojového souboru MSBuild, které mohou být spotřebovány a generovány úlohami.|
-|**SuppressStartupBanner**|Volitelný **logický** parametr.<br /><br /> Pokud `true`, zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.<br /><br /> Další informace naleznete v tématu možnost **/nologo** v [xdcmake reference](/cpp/build/reference/xdcmake-reference).|
-|**TrackerLogDirectory**|Volitelný **řetězcový** parametr.<br /><br /> Určuje adresář pro protokol sledování.|
+|**Soubor additionaldocumentfile**|Volitelný **parametr String[].**<br /><br /> Určuje jeden nebo více dalších souborů *.xdc,* které mají být sloučeny.<br /><br /> Další informace naleznete v popisu **dalších souborů dokumentů** na [stránkách vlastností nástroje GENERÁTOR DOKUMENTŮ XML](/cpp/build/reference/xml-document-generator-tool-property-pages). Viz také možnosti příkazového řádku **/old** a **/Fs** pro *soubor xdcmake.exe*.|
+|**Další možnosti**|Volitelný **parametr String.**<br /><br /> Seznam možností určených na příkazovém řádku. Například /\<option1\<> /\<option2> / option#>. Tento parametr slouží k určení možností, které nejsou reprezentovány žádným jiným parametrem úkolu **XDCMake.**<br /><br /> Další informace naleznete v [tématech XDCMake reference](/cpp/build/reference/xdcmake-reference), [XML Document Generator Tool stránky vlastností](/cpp/build/reference/xml-document-generator-tool-property-pages)a nápověda příkazového řádku (**/?**) pro *xdcmake.exe*.|
+|**Závislosti knihovny dokumentů**|Volitelný **logický** parametr.<br /><br /> Pokud `true` a aktuální projekt má závislost na statické knihovny (*LIB*) projektu v řešení, soubory *.xDC* pro tento projekt knihovny jsou zahrnuty ve výstupu souboru *XML* pro aktuální projekt.<br /><br /> Další informace naleznete v popisu **závislostí knihovny dokumentů** na [stránkách vlastností nástroje Generátor dokumentů XML](/cpp/build/reference/xml-document-generator-tool-property-pages).|
+|**Výstupní soubor**|Volitelný **parametr String.**<br /><br /> Přepíše výchozí název výstupního souboru. Výchozí název je odvozen od názvu prvního souboru *.xdc,* který je zpracován.<br /><br /> Další informace naleznete v tématu **/out:\<filename>** option in [XDCMake reference](/cpp/build/reference/xdcmake-reference). Viz také možnosti příkazového řádku **/old** a **/Fo** pro *soubor xdcmake.exe*.|
+|**Projectname**|Volitelný **parametr String.**<br /><br /> Název aktuálního projektu.|
+|**LomítkoStaré**|Volitelný **logický** parametr.<br /><br /> Pokud `true`, umožňuje další možnosti *xdcmake.exe.*<br /><br /> Další informace naleznete v parametru **/old** příkaz-line pro *soubor xdcmake.exe*.|
+|**Zdrojů**|Požadovaný parametr `ITaskItem[]`.<br /><br /> Definuje pole položek zdrojového souboru MSBuild, které mohou být spotřebovány a vydávány úkoly.|
+|**PotlačitStartupBanner**|Volitelný **logický** parametr.<br /><br /> Pokud `true`aplikace zabraňuje zobrazení zprávy o autorských právech a čísle verze při spuštění úlohy.<br /><br /> Další informace naleznete v tématu **/nologo** možnost v [XDCMake odkaz](/cpp/build/reference/xdcmake-reference).|
+|**TrackerLogDirectory**|Volitelný **parametr String.**<br /><br /> Určuje adresář protokolu sledování.|
 
 ## <a name="see-also"></a>Viz také
 

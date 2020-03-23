@@ -2,22 +2,22 @@
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 03/02/2019
+ms.date: 03/16/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 0066837f2cbd64fb88cdbf57290eebf0a04bd114
-ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
+ms.openlocfilehash: 040a168f45afff9111426aac57cafc32a05c1b12
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76159359"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79437475"
 ---
-Tabulky na této stránce uvádějí ID, která lze použít k instalaci sady Visual Studio z příkazového řádku nebo které lze zadat jako závislost v manifestu VSIX. Až vydáte aktualizace sady Visual Studio, přidáme další komponenty.
+Tabulky na této stránce uvádějí ID, které můžete použít k instalaci sady Visual Studio z příkazového řádku nebo které můžete zadat jako závislost v manifestu VSIX. Přidáme další součásti při vydávání aktualizací do sady Visual Studio.
 
-Všimněte si také následující stránka:
+Všimněte si také následující o stránce:
 
-* Každá úloha má vlastní oddíl, za nímž následuje Identifikátor pracovního vytížení a tabulku komponent, které jsou k dispozici pro pracovní vytížení.
-* Ve výchozím nastavení **vyžaduje** součásti nainstaluje, když jste si nainstalovali úlohu.
-* Pokud budete chtít, můžete nainstalovat také **doporučená** a **volitelné** komponenty.
-* Přidali jsme také oddíl, který obsahuje další součásti, které nejsou pod něj nespadá u jakékoli úlohy.
+* Každé pracovní vytížení má vlastní část, následovanou ID pracovního vytížení a tabulkou součástí, které jsou k dispozici pro úlohu.
+* Ve výchozím nastavení budou **požadované** součásti nainstalovány při instalaci úlohy.
+* Pokud se rozhodnete, můžete také nainstalovat **doporučené** a **volitelné** součásti.
+* Přidali jsme také oddíl, který obsahuje seznam dalších součástí, které nejsou přidruženy k žádné pracovní zátěži.
