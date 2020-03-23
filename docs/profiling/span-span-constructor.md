@@ -1,5 +1,5 @@
 ---
-title: span::span – konstruktor | Dokumentace Microsoftu
+title: rozpětí:konstruktor rozpětí | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,15 +13,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f761e87c1658c11bfdfd93a4f4e22299d88575a8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62979819"
 ---
 # <a name="spanspan-constructor"></a>span::span – konstruktor
 
-Inicializuje novou instanci třídy `span` třídy.
+Inicializuje novou instanci třídy. `span`
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,20 +54,20 @@ span(
 
 #### <a name="parameters"></a>Parametry
 
-`_Series` Platné značky řady kontextu.
+`_Series`Platný kontext řady značek.
 
-`_Format` Složený řetězec formátu, který obsahuje textu smíšeného s nula nebo více položek formátu, který odpovídá objektům v seznamu argumentů.
+`_Format`Složený formátovací řetězec, který obsahuje text smíchaný s nulovými nebo více položkami formátu, které odpovídají objektům v seznamu argumentů.
 
-`_Importance` Úroveň důležitosti.
+`_Importance`Úroveň důležitosti.
 
-`_Category` Kategorie.
+`_Category`Kategorie.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** *cvmarkersobj.h*
 
-**Namespace:** Concurrency::diagnostic
+**Obor názvů:** Souběžnost::diagnostik
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [span třídy](../profiling/span-class.md)
+- [třída rozpětí](../profiling/span-class.md)

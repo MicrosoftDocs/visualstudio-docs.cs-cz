@@ -1,6 +1,6 @@
 ---
-title: Vítá vás R Tools for Visual Studio
-description: Souhrnné informace pro vývojáře, kteří nainstalovali nástroje R pro Visual Studio.
+title: Vítá vás nástroje R pro Visual Studio
+description: Souhrnné informace pro vývojáře, kteří nainstalovali Nástroje R pro Visual Studio.
 ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
@@ -9,30 +9,30 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: 15b8a91c0b29b71b85ee5f82dc3b8d662c80549e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62581162"
 ---
-# <a name="welcome-to-r-tools-for-visual-studio"></a>Vítá vás R Tools for Visual Studio
+# <a name="welcome-to-r-tools-for-visual-studio"></a>Vítá vás nástroje R pro Visual Studio
 
-Děkujeme vám za instalaci nástrojů R pro Visual Studio (RTVS). Prohlédněte si ho a dejte nám vědět, co si myslíte pomocí odkazů v části [prostředky](#resources).
+Děkujeme vám za instalaci nástroje R pro Visual Studio (RTVS)! Podívejte se na to a dejte nám vědět, co si myslíte, že pomocí odkazů v části [zdroje](#resources).
 
-![Snímek obrazovky RTVS](media/installer-screenshot.png)
+![Rtvs snímek obrazovky](media/installer-screenshot.png)
 
-## <a name="resources"></a>Prostředky
+## <a name="resources"></a>Zdroje informací
 
 - [Dokumentace](index.md)
-- [Postup instalace nástroje R pro Visual Studio](installing-r-tools-for-visual-studio.md)
-- [Odeslat a procházet chyb a žádosti o funkce na GitHib](https://github.com/Microsoft/RTVS/issues)
-- [Prozkoumejte a přispívání ke zdrojovému kódu](https://github.com/Microsoft/RTVS/blob/master/LICENSE)
-- Pro odeslání zpětné vazby bez použití Githubu (což je upřednostňované), použít **R Tools > zpětnou vazbu** nabídky v sadě Visual Studio.
+- [Instalace nástrojů R pro sady Visual Studio](installing-r-tools-for-visual-studio.md)
+- [Odesílání a procházení chyb a požadavků na funkce na GitHib](https://github.com/Microsoft/RTVS/issues)
+- [Prozkoumejte zdrojový kód a přispějte k ní](https://github.com/Microsoft/RTVS/blob/master/LICENSE)
+- Chcete-li odeslat zpětnou vazbu bez použití GitHubu (který je upřednostňován), použijte nabídku **Nástroje R > Zpětná vazba** v sadě Visual Studio.
 
 ## <a name="microsoft-r-distributions"></a>Distribuce Microsoft R
 
-RTVS podporuje CRAN r. a distribuce Microsoft R, včetně verze jazyka R, který je distribuován s SQL serverem 2016. Následující odkazy obsahují další informace v různých distribucích R Microsoftu:
+RTVS podporuje distribuce CRAN R a Microsoft R, včetně verze R, která je distribuována s SQL Server 2016. Následující odkazy poskytují další informace o různých distribucích společnosti Microsoft R:
 
 - [Microsoft R Open](https://mran.microsoft.com/download/)
-- [Microsoft R Client](/machine-learning-server/r-client/what-is-microsoft-r-client)
-- [Server Microsoft Machine Learning (dříve R Server)](/machine-learning-server/)
+- [Klient Microsoft R](/machine-learning-server/r-client/what-is-microsoft-r-client)
+- [Microsoft Machine Learning Server (dříve R Server)](/machine-learning-server/)

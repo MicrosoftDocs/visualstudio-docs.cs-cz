@@ -10,36 +10,36 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 821e915a0b66f25c5b89a83b31e93b01aea6f400
-ms.sourcegitcommit: b593bb889f049fcbdff502c30b73178ed17dbdf0
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "67292690"
 ---
 # <a name="move-type-to-namespace"></a>Přesun typu do oboru názvů
 
-Tento refaktoring platí pro:
+Toto refaktoring se vztahuje na:
 
 - C#
 
-**Co:** Přesun typu do oboru názvů.
+**Co:** Přesunout text do oboru názvů.
 
-**Kdy:** Chcete přesunout typu na jiný obor názvů nebo složku. 
+**Kdy:** Chcete přesunout typ do jiného oboru názvů nebo složky. 
 
-**Proč:** Chcete Refaktorujte součástí vašeho řešení a mít rychlý způsob, jak přesunout typu na jiný obor názvů nebo složky. 
+**Proč:** Chcete refaktorovat části řešení a mít rychlý způsob, jak přesunout typ do jiného oboru názvů nebo složky. 
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor na název třídy.
-2. Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
-3. Vyberte **přesunout do oboru názvů**.
+1. Umístěte kurzor do názvu třídy.
+2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+3. Vyberte **Přesunout do oboru názvů**.
 
-   ![Přesunout do oboru názvů refaktoring](media/move-to-namespace.png)
+   ![Přechod na refaktoring oboru názvů](media/move-to-namespace.png)
 
-4. V dialogovém okně, které se otevře vyberte chcete přesunout typ, který má cílový obor názvů. 
+4. V zobrazeném dialogovém okně vyberte cílový obor názvů, do kterého chcete typ přesunout. 
 
-   ![Vyberte obor názvů dialogovému oknu](media/select-target-namespace.png)
+   ![Výběr dialogového okna obor názvů](media/select-target-namespace.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Refactoring](../refactoring-in-visual-studio.md)

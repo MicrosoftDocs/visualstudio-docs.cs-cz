@@ -1,5 +1,5 @@
 ---
-title: SuspendProfile | Microsoft Docs
+title: SuspendProfile | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 1eb0d0f41b17c4f23c3898b044ad49182d47aae0
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778190"
 ---
 # <a name="suspendprofile"></a>SuspendProfile
-Metoda `SuspendProfile` zvyšuje čítač pozastavení/obnovení pro zadanou úroveň profilace.
+Metoda `SuspendProfile` se zpřísní počítadlo Pozastavit/Obnovit pro zadanou úroveň profilování.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,46 +32,46 @@ PROFILE_COMMAND_STATUS PROFILERAPI SuspendProfile(
 #### <a name="parameters"></a>Parametry
  `Level`
 
- Označuje úroveň profilu, na kterou lze použít shromažďování dat výkonu. Následující výčty **PROFILE_CONTROL_LEVEL** lze použít k označení jedné ze tří úrovní, na kterou lze použít shromažďování dat výkonu:
+ Označuje úroveň profilu, na kterou lze použít shromažďování dat o výkonu. Následující **PROFILE_CONTROL_LEVEL** čítače výčtu lze použít k označení jedné ze tří úrovní, na které lze použít shromažďování dat výkonu:
 
-|Čítače|Popis|
+|Čítač výčtu|Popis|
 |----------------|-----------------|
-|PROFILE_GLOBALLEVEL|Nastavení globální úrovně má vliv na všechny procesy a vlákna v rámci procesu profilace.|
-|PROFILE_PROCESSLEVEL|Nastavení na úrovni procesu ovlivňuje všechna vlákna, která jsou součástí zadaného procesu.|
-|PROFILE_THREADLEVEL|Nastavení úrovně profilace vlákna má vliv na zadané vlákno.|
+|PROFILE_GLOBALLEVEL|Nastavení globální úrovně ovlivňuje všechny procesy a vlákna v profilování spustit.|
+|PROFILE_PROCESSLEVEL|Nastavení úrovně procesu ovlivní všechna vlákna, která jsou součástí zadaného procesu.|
+|PROFILE_THREADLEVEL|Nastavení úrovně profilování vláken ovlivňuje zadané vlákno.|
 
  `dwId`
 
- Proces nebo identifikátor vlákna generovaný systémem.
+ Identifikátor procesu nebo vlákna generovaný systémem.
 
-## <a name="property-valuereturn-value"></a>Hodnota nebo návratová hodnota vlastnosti
- Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Návratová hodnota může být jedna z následujících:
+## <a name="property-valuereturn-value"></a>Hodnota/vrácená hodnota nemovitosti
+ Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Vrácená hodnota může být jedna z následujících hodnot:
 
-|Čítače|Popis|
+|Čítač výčtu|Popis|
 |----------------|-----------------|
-|PROFILE_ERROR_ID_NOEXIST|ID elementu profilace neexistuje.|
-|PROFILE_ERROR_LEVEL_NOEXIST|Zadaná úroveň profilace neexistuje.|
-|PROFILE_ERROR_MODE_NEVER|Režim profilace byl nastaven na hodnotu nikdy při volání funkce.|
-|PROFILE_ERROR_NOT_YET_IMPLEMENTED|Volání funkce profilování, úroveň profilace nebo kombinace volání a úrovně ještě není naimplementované.|
+|PROFILE_ERROR_ID_NOEXIST|ID prvku profilování neexistuje.|
+|PROFILE_ERROR_LEVEL_NOEXIST|Zadaná úroveň profilování neexistuje.|
+|PROFILE_ERROR_MODE_NEVER|Režim profilování byl nastaven na NIKDY, když byla volána funkce.|
+|PROFILE_ERROR_NOT_YET_IMPLEMENTED|Profilování volání funkce, profilování úroveň nebo kombinace volání a úroveň ještě není implementována.|
 |PROFILE_OK|Volání bylo úspěšné.|
 
 ## <a name="remarks"></a>Poznámky
- Počáteční hodnota čítače pozastavení/obnovení je 0. Každé volání SuspendProfile přidá 1 k počtu pozastavení/obnovení; každé volání ResumeProfile odečte 1.
+ Počáteční hodnota počítadla Pozastavit/Pokračovat je 0. Každé volání SuspendProfile přidá 1 pozastavit/obnovit počet; každé volání ResumeProfile odečte 1.
 
- Když je počet pozastavení/obnovení větší než 0, stav pozastavení/obnovení pro úroveň je VYPNUTý. Pokud je počet menší nebo roven 0, je stav pozastavení/obnovení ZAPNUTý.
+ Pokud je počet Pozastavení/Obnovení větší než 0, stav Pozastavit/Obnovit pro úroveň je VYPNUTO. Pokud je počet menší nebo roven 0, stav Pozastavit/Pokračovat je zapnuto.
 
- Když je stav spuštění/zastavení i stav pozastavení/obnovení ZAPNUTý, stav profilace pro úroveň je ZAPNUTo. Aby bylo vlákno profilování, musí být všechny stavy, procesy a podprocesy na úrovni vlákna zapnuty.
+ Když jsou stav Start/Stop a Stav Pozastavení/Obnovení zapnuty, stav profilování pro úroveň je zapnuto. Aby bylo vlákno profilováno, musí být všechny globální stavy, stavy úrovně procesu a vlákna pro vlákno zapnuty.
 
-## <a name="net-framework-equivalent"></a>Ekvivalent .NET Framework
- *Microsoft. VisualStudio. Profiler. dll*
+## <a name="net-framework-equivalent"></a>Ekvivalent rozhraní .NET Framework
+ *Soubor Microsoft.VisualStudio.Profiler.dll*
 
 ## <a name="function-information"></a>Informace o funkci
- Hlavička: deklaruje se v *VSPerf. h*
+ Záhlaví: Deklarováno v *VSPerf.h*
 
- Knihovna importu: *VSPerf. lib*
+ Knihovna importu: *VSPerf.lib*
 
 ## <a name="example"></a>Příklad
- Následující příklad ilustruje metodu SuspendProfile. Tento příklad předpokládá, že bylo provedeno předchozí volání StartProfile pro proces nebo vlákno identifikované [PROFILE_CURRENTID](../profiling/profile-currentid.md).
+ Následující příklad ilustruje metodu SuspendProfile. Tento příklad předpokládá, že předchozí volání StartProfile byla provedena pro proces nebo vlákno identifikované [PROFILE_CURRENTID](../profiling/profile-currentid.md).
 
 ```cpp
 void ExerciseSuspendProfile()
@@ -105,5 +105,5 @@ void ExerciseSuspendProfile()
 }
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace rozhraní API pro Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na rozhraní API profileru sady Visual Studio (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)

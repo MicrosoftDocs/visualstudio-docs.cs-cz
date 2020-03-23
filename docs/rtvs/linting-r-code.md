@@ -1,6 +1,6 @@
 ---
-title: Linting R kódu
-description: Jak pracovat s podporou linting sestavení v sadě Visual Studio pro jazyk R, včetně možnosti linter.
+title: Linting R kód
+description: Jak pracovat s visual studio je nastoaný linting podporu pro R, včetně linter možnosti.
 ms.date: 07/02/2018
 ms.topic: conceptual
 f1_keywords:
@@ -11,64 +11,64 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: aecf9d95fb8a3b2cda659e2694bff145424e150b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62970732"
 ---
-# <a name="lint-r-code-in-visual-studio"></a>LINT R kódu v sadě Visual Studio
+# <a name="lint-r-code-in-visual-studio"></a>Kód Lint R v sadě Visual Studio
 
-Linter analyzuje kódu odhalit potenciální chyby, problémy formátování a obdobný kód například nesprávné prázdné znaky. Použití linter také pomáhá podporovat některé konvence kódování, například jak jsou pojmenovány identifikátory. Tato konvence jsou užitečné v rámci týmů a jiných spolupráci situacích.
+Linter analyzuje kód odhalit potenciální chyby, problémy s formátováním a další šum kódu, jako jsou falešné mezery. Použití linter také pomáhá podporovat určité konvence kódování, například jak jsou pojmenovány identifikátory. Tyto konvence jsou užitečné v rámci týmů a jiných situací spolupráce.
 
-Nástroje R pro Visual Studio (RTVS) poskytuje integrovanou linter pro R, chování, které je řízen pomocí různých možností, které jsou popsané v tomto článku. Tyto možnosti jsou součástí **nástroje** > **možnosti** > **textový Editor** > **R**  >  **Lint**.
+Nástroje R pro visual studio (RTVS) poskytuje předdefinovaný linter pro R, jehož chování je řízeno pomocí různých možností popsaných v tomto článku. Tyto možnosti naleznete v**Options** > **textovém editoru** >  **nástrojů** > **Nástroje R** > **Lint**.
 
-Lint je ve výchozím nastavení zakázána. Chcete-li povolit lint, nastavte **všechny** > **povolit lint** umožňuje **True**.
+Nečistoty jsou ve výchozím nastavení zakázány. Chcete-li povolit chloupky, nastavte možnost **Všechny** > **povolit vlákna** na **hodnotu True**.
 
-Pokud, linter spuštěna v editoru během psaní. Problémy se zobrazí jako zelenou vlnovkou. Na následujícím obrázku, například RTVS zjistila šest lint problémy, mezi které patří použití `=` místo `<-` pro přiřazení, chybějící mezery okolo argumentů funkce, pomocí pascalcase a velká písmena identifikátorů a využívání středníkem . Ukazatel myši problém obsahuje popis.
+Pokud je povoleno, linter spustí v editoru při psaní. Problémy se zobrazují jako zelené vlnovky. Na následujícím obrázku například RTVS identifikovala šest problémů `=` s `<-` vlákny, včetně použití místo pro přiřazení, nedostatek mezer kolem argumentů funkce, použití pascalových velkých a velkých identifikátorů a použití středníku. Najetím na problém je uveden popis.
 
-![Příklady linter výstup pro kód jazyka R](media/linting-01.png)
+![Příklady linter výstupu pro kód R](media/linting-01.png)
 
-Často mění možnosti linter podle potřeb projektu nebo souboru. Například může pomocí ukázkového kódu z online kurz `=` místo `<-` spolu s identifikátory pascalcase. Takového kódu by zobrazit časté linter upozornění, protože výchozí možnosti linter příznak tyto případy. Při práci s tímto kódem, pak můžete zakázat možnosti nemusíte trávit čas opravy každou instanci.
+Často měníte možnosti linter v závislosti na potřebách projektu nebo souboru. Ukázkový kód z online kurzu `=` může `<-` například použít namísto spolu s identifikátory pascalových případů. Takový kód by zobrazit časté linter upozornění, protože výchozí linter možnosti příznak těchto případech. Při práci s tímto kódem pak můžete zakázat možnosti namísto trávení času opravováním jednotlivých instancí.
 
-## <a name="assignment-group"></a>Přiřazení skupiny
+## <a name="assignment-group"></a>Skupina přiřazení
 
-| Možnost | Výchozí hodnota | Efekt LINT |
+| Možnost | Výchozí hodnota | Lintův efekt |
 | --- | --- | --- |
-| **Vynucení \<-** | **Hodnota TRUE** | Určuje, kdy `<-` se nepoužívá pro přiřazení. |
+| **Vynutit\<-** | **Pravda** | Určuje, `<-` kdy se pro přiřazení nepoužívá. |
 
-## <a name="naming-group"></a>Zásady skupiny
+## <a name="naming-group"></a>Skupina pojmenování
 
-Tyto identifikátory příznak možnosti, které používají různé zásady vytváření názvů:
+Tyto možnosti označují identifikátory, které používají různé konvence pojmenování:
 
-| Možnost | Výchozí hodnota | Efekt LINT |
+| Možnost | Výchozí hodnota | Lintův efekt |
 | --- | --- | --- |
-| **Označit camelCase** | **False** | Příznaky identifikátory, které používají camelCase. |
-| **Označit dlouhé názvy** | **False** | Příznaky identifikátory, jejichž názvy překročit **maximální délka názvu** nastavení. |
-| **Označí více teček** | **Hodnota TRUE** | Příznaky identifikátory, které používají více teček. |
-| **Označit PascalCase** | **Hodnota TRUE** | Příznaky identifikátory, které používají PascalCase. |
-| **Označit snake_case** | **False** | Příznaky identifikátory, které používají podtržítka. |
-| **Označit VELKAPISMENA** | **Hodnota TRUE** | Příznaky identifikátory, které používají všechna velká. |
-| **Maximální délka názvu** | **32** | Délka s **označit dlouhé názvy** nastavení. |
+| **Vlajka camelCase** | **False** | Příznaky identifikátory, které používají camelCase. |
+| **Označit dlouhé názvy příznakem** | **False** | Příznaky identifikátory, jejichž názvy překračují maximální **délka názvu** nastavení. |
+| **Označení více tek ze příznaku** | **Pravda** | Příznaky identifikátory, které používají více tet. |
+| **Příznak PascalCase** | **Pravda** | Příznaky identifikátory, které používají PascalCase. |
+| **Snake_case příznaku** | **False** | Příznaky identifikátory, které používají podtržítka. |
+| **Vlajka velká** | **Pravda** | Příznaky identifikátory, které používají všechny čepice. |
+| **Maximální délka názvu** | **32** | Délka použitá s nastavením **Dlouhé názvy příznak.** |
 
-## <a name="spacing-group"></a>Mezery mezi skupiny
+## <a name="spacing-group"></a>Skupina mezer
 
-Tyto možnosti, které jsou nastaveny na **True** ve výchozím nastavení, řídit, kdy linter identifikuje problémy mezery: po názvy funkcí kolem čárek kolem operátorů, levé a pravé složené pozic, mezera před (a mezery uvnitř ().
+Tyto možnosti, které jsou ve výchozím nastavení nastaveny na **hodnotu True,** řídí, kde linter identifikuje problémy s mezerami: po názvech funkcí, kolem čárek, kolem operátorů, otevírání a zavírání složených pozic, mezery před (a mezery uvnitř ().
 
-## <a name="statements-group"></a>Skupina příkazů
+## <a name="statements-group"></a>Skupina Výpisy
 
-| Možnost | Výchozí hodnota | Efekt LINT |
+| Možnost | Výchozí hodnota | Lintův efekt |
 | --- | --- | --- |
-| **Více** | **Hodnota TRUE** | Určuje, kdy se více příkazů na stejném řádku. |
-| **Středníky** | **Hodnota TRUE** | Určuje použití středníky. |
+| **Několik** | **Pravda** | Identifikuje, když je na stejném řádku více příkazů. |
+| **Středníky** | **Pravda** | Identifikuje použití středníků. |
 
-## <a name="text-group"></a>Text skupiny
+## <a name="text-group"></a>Skupina textu
 
-| Možnost | Výchozí hodnota | Efekt LINT |
+| Možnost | Výchozí hodnota | Lintův efekt |
 | --- | --- | --- |
-| **Limit délky řádku** | **False** | Nastaví, zda linter příznaky řádky delší než **maximální délka řádku** možnost. |
-| **Maximální délka řádku** | **80** | Nastaví délka řádku používané **limit délky řádku** možnost. |
+| **Limit délky čáry** | **False** | Nastaví, zda linter označí čáry delší než možnost **Délka čáry Max.** |
+| **Maximální délka čáry** | **80** | Nastaví délku čáry použitou volbou **Limit délky čáry.** |
 
-## <a name="whitespace-group"></a>Skupiny prázdné znaky
+## <a name="whitespace-group"></a>Skupina Prázdné znaky
 
-Tyto možnosti, které jsou nastaveny na **True** ve výchozím nastavení, řídit, kdy linter identifikuje problémy prázdný znak: použití tabulátory, použijte dvojité uvozovky, prázdné řádky na konci a koncové mezery.
+Tyto možnosti, které jsou ve výchozím nastavení nastaveny na **hodnotu True,** řídí, kde linter identifikuje problémy s prázdnými znaky: použití karet, použití dvojitých uvozovek, koncové prázdné čáry a koncové mezery.

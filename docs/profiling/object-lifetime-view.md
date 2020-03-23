@@ -1,5 +1,5 @@
 ---
-title: Zobrazení doby života objektu | Microsoft Docs
+title: Zobrazení životnosti objektu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -18,59 +18,59 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: d4ea486930d0ea9f266b4ee57b69a50f7c570651
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772621"
 ---
 # <a name="object-lifetime-view"></a>Zobrazení doby života objektu
-Zobrazení životnosti objektů je k dispozici, když je také zaškrtnuto políčko **shromažďovat data o životnosti objektů .NET** na stránkách vlastností **výkonnostní relace** .
+Zobrazení Životnost objektu je k dispozici, pokud je na stránkách vlastností **relace výkonu** zaškrtnuto také shromažďování **dat životnosti objektu .NET.**
 
- Systém uvolňování paměti .NET Framework spravuje přidělování a uvolňování paměti pro vaši aplikaci. Pro optimalizaci výkonu uvolňování paměti je spravovaná halda rozdělená na tři generace: 0, 1 a 2. Uvolňování paměti modulu runtime ukládá nové objekty v generaci 0. Objekty, které zůstávají kolekce, jsou povýšeny a uloženy v generacích 1 a 2.
+ Systém uvolňování paměti rozhraní .NET Framework spravuje přidělení a uvolnění paměti pro vaši aplikaci. Chcete-li optimalizovat výkon systému uvolňování paměti, je spravovaná halda rozdělena do tří generací: 0, 1 a 2. Uvolňování systému runtime ukládá nové objekty v generaci 0. Objekty, které přežijí kolekce jsou povýšen a uloženy v generacích 1 a 2.
 
- Uvolňování paměti uvolňuje paměť uvolněním celé generace objektů. Pro objekty, které byly vytvořeny profilované aplikace, zobrazuje zobrazení životnost objektů počet a velikost objektů a generování, ve kterém jsou uvolněny.
+ Systém uvolňování paměti uvolňuje paměť zrušením přidělení celé generace objektů. U objektů, které byly vytvořeny profilovanou aplikací, zobrazí zobrazení Životnost objektu počet a velikost objektů a generování, ve kterém jsou regenerované.
 
 ## <a name="general"></a>Obecné
 
 |Sloupec|Popis|
 |------------|-----------------|
 |**Název třídy**|Název třídy přiděleného typu.|
-|**ID procesu**|ID procesu běhu profilace.|
-|**Název procesu**|Název procesu.|
+|**ID procesu**|ID procesu profilování spustit.|
+|**Název procesu**|Název procesu|
 |**Název modulu**|Název modulu, který obsahuje funkci.|
-|**Cesta k modulu**|Cesta modulu, který obsahuje funkci.|
+|**Cesta modulu**|Cesta modulu, který obsahuje funkci.|
 
 ## <a name="instance-data"></a>Data instance
- Data instance označují počet objektů typu, které byly vytvořeny v procesu profilace, a generaci, ve kterém byly objekty uvolněny systémem uvolňování paměti.
+ Data instance označuje počet objektů typu, které byly vytvořeny v profilování spustit a generování, ve kterém byly uvolněny objekty systémem uvolňování paměti.
 
 |Sloupec|Popis|
 |------------|-----------------|
 |**Instance**|Počet přidělení objektů tohoto typu.|
-|**Celkem instancí%**|Procentuální podíl celkového počtu přidělení provedených při spuštění profilace.|
-|**Shromážděné instance gen 0**|Počet instancí typu, které byly navráceny v generaci 0 algoritmu uvolňování paměti.|
-|**Shromážděné instance Gen 1**|Počet instancí typu, které byly navráceny v generaci 1 algoritmu uvolňování paměti.|
-|**Shromážděné instance Gen 2**|Počet instancí typu, které byly navráceny v generaci 2 algoritmu uvolňování paměti.|
-|**Instance aktivní na konci**|Počet instancí typu, které nebyly uvolněny až do konce profilace.|
+|**Celkový počet instancí %**|Procento z celkového počtu přidělení, které byly provedeny v profilování spustit.|
+|**Gen 0 Instance Shromážděné**|Počet instancí typu, které byly uvolněny v generaci 0 algoritmu uvolňování paměti.|
+|**Gen 1 Instance Shromážděné**|Počet instancí typu, které byly uvolněny v generaci 1 algoritmu uvolňování paměti.|
+|**Gen 2 Instance Shromážděné**|Počet instancí typu, které byly uvolněny v generaci 2 algoritmu uvolňování paměti.|
+|**Instance Alive na konci**|Počet instancí typu, které nebyly deallocated až do konce profilování spustit.|
 
-## <a name="size-byte-data"></a>Velikost (Byte) dat
- Velikost (Byte) data označuje velikost objektů typu, které byly vytvořeny při spuštění profilování, a množství paměti, které bylo v každé generaci, ve kterém byly objekty uvolněny, uvolněno.
+## <a name="size-byte-data"></a>Data o velikosti (bajtu)
+ Velikost (bajt) data označuje velikost objektů typu, které byly vytvořeny v profilování spustit a množství paměti, která byla vyvolána v každé generaci, ve kterém byly objekty přiděleny.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Celkový počet přidělených bajtů**|Celkový počet bajtů pro všechny instance daného typu.|
-|**Celkem bajtů v%**|Procentuální podíl celkového počtu přidělených bajtů v běhu profilace, které byly přiděleny pro instance tohoto typu.|
-|**Shromážděné bajty gen 0**|Velikost instancí typu, které byly navráceny v generaci 0 algoritmu uvolňování paměti.|
-|**Shromážděné bajty Gen 1**|Velikost instancí typu, které byly navráceny v generaci 1 algoritmu uvolňování paměti.|
-|**Shromážděné bajty Gen 2**|Velikost instancí typu, které byly navráceny v generaci 2 algoritmu uvolňování paměti.|
+|**Celkový počet přidělených bajtů**|Celkový počet bajtů pro všechny instance typu.|
+|**Celkový počet bajtů %**|Procento z celkového počtu přidělených bajtů v profilování spustit, které byly přiděleny pro instance tohoto typu.|
+|**Gen 0 bajtů shromážděných**|Velikost instancí typu, které byly uvolněny v generaci 0 algoritmu uvolňování paměti.|
+|**Gen 1 Bajty Shromážděné**|Velikost instancí typu, které byly uvolněny v generaci 1 algoritmu uvolňování paměti.|
+|**Gen 2 bajty sebrané**|Velikost instancí typu, které byly uvolněny v generaci 2 algoritmu uvolňování paměti.|
 
 ## <a name="large-object-heap-data"></a>Data haldy velkých objektů
  Alokátor paměti .NET spravuje velmi velké objekty v umístění, které je oddělené od standardní spravované haldy. Data haldy velkých objektů označují počet a velikost objektů typu, které byly spravovány v tomto umístění.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Shromážděné instance haldy Large Object**|Počet instancí tohoto typu, které byly umístěny v haldě velkých objektů a které byly shromážděny při spuštění profilace.|
-|**Shromážděné bajty haldy Large Object**|Velikost instancí tohoto typu (v bajtech), které byly umístěny v haldě velkých objektů a které byly shromážděny při spuštění profilace.|
+|**Instance hald velkých objektů se branži**|Počet instancí tohoto typu, které byly umístěny v haldě velkého objektu a které byly shromážděny v profilování spustit.|
+|**Počet sebraných hald velkých objektů**|Velikost v bajtů instancí tohoto typu, které byly umístěny v haldě velkého objektu a které byly shromážděny v profilování spustit.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md)

@@ -16,40 +16,40 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f9c6934c816574796d59f978c3d2f37f590cf578
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565120"
 ---
-# <a name="develop-globalized-and-localized-apps"></a>Vývoj globálních a lokalizovaných aplikací
+# <a name="develop-globalized-and-localized-apps"></a>Vývoj globalizovaných a lokalizovaných aplikací
 
-Visual Studio usnadňuje vývoj pro mezinárodní cílovou skupinu díky využití služeb integrovaných do [.NET](/dotnet/standard/globalization-localization/).
+Visual Studio usnadňuje vývoj pro mezinárodní publikum využitím služeb integrovaných do [rozhraní .NET](/dotnet/standard/globalization-localization/).
 
-Například projektový systém pro model Windows Forms aplikace může generovat soubory prostředků pro záložní jazykovou verzi uživatelského rozhraní i pro každou další jazykovou verzi uživatelského rozhraní. Při sestavování projektu v aplikaci Visual Studio jsou soubory prostředků kompilovány z formátu XML sady Visual Studio (. resx) do mezilehlého binárního formátu (. Resources), které jsou poté vloženy do satelitních sestavení. Další informace naleznete v tématu [soubory prostředků v aplikaci Visual Studio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps#VSResFiles) a [Vytváření satelitních sestavení pro aplikace klasické pracovní plochy](/dotnet/framework/resources/creating-satellite-assemblies-for-desktop-apps).
+Například systém projektu pro aplikace Windows Forms můžete generovat soubory prostředků pro záložní jazykovou verzi operačního prostředí a každé další jazykové verze ui. Při vytváření projektu v sadě Visual Studio jsou soubory prostředků kompilovány z formátu XML sady Visual Studio (.resx) do zprostředkujícího binárního formátu (.resources), které jsou pak vloženy do satelitních sestavení. Další informace naleznete [v tématu Resource files v sadě Visual Studio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps#VSResFiles) a vytvoření [satelitních sestavení pro desktopové aplikace](/dotnet/framework/resources/creating-satellite-assemblies-for-desktop-apps).
 
 ## <a name="bidirectional-languages"></a>Obousměrné jazyky
 
-Pomocí sady Visual Studio můžete vytvářet aplikace, které správně zobrazují text v jazycích psaných zprava doleva, včetně arabštiny a hebrejštiny. U některých funkcí můžete jednoduše nastavit vlastnosti. V jiných případech je nutné implementovat funkce v kódu.
+Pomocí sady Visual Studio můžete vytvářet aplikace, které správně zobrazují text v jazycích psaných zprava doleva, včetně arabštiny a hebrejštiny. U některých funkcí můžete jednoduše nastavit vlastnosti. V ostatních případech je nutné implementovat funkce v kódu.
 
 > [!NOTE]
-> Aby bylo možné zadávat a zobrazovat obousměrné jazyky, musíte pracovat s verzí systému Windows, která je nakonfigurovaná s odpovídajícím jazykem. Může to být buď Anglická verze systému Windows s nainstalovanou příslušnou jazykovou sadou, nebo odpovídající lokalizovaná verze systému Windows.
+> Chcete-li zadávat a zobrazovat obousměrné jazyky, musíte pracovat s verzí systému Windows, která je nakonfigurována s příslušným jazykem. Může se jedná buď o anglickou verzi systému Windows s nainstalovanou příslušnou jazykovou sadou, nebo o vhodně lokalizovanou verzi systému Windows.
 
 ### <a name="apps-that-support-bidirectional-languages"></a>Aplikace, které podporují obousměrné jazyky
 
 - Aplikace pro Windows
 
-   Můžete vytvářet plně obousměrné aplikace, které zahrnují podporu obousměrného textu, směr čtení zprava doleva a zrcadlení (převrácení rozložení oken, nabídek, dialogových oken atd.). S výjimkou zrcadlení jsou tyto funkce k dispozici ve výchozím nastavení nebo jako nastavení vlastností. Zrcadlení je v podstatě podporováno pro některé funkce, jako jsou například okna se zprávami. V jiných případech však musíte implementovat zrcadlení v kódu. Další informace najdete v tématu [Obousměrná podpora pro aplikace model Windows Forms](/dotnet/framework/winforms/advanced/bi-directional-support-for-windows-forms-applications).
+   Můžete vytvářet plně obousměrné aplikace, které zahrnují podporu obousměrného textu, pořadí čtení zprava doleva a zrcadlení (obrácení rozložení oken, nabídek, dialogových oken a tak dále). S výjimkou zrcadlení jsou tyto funkce k dispozici ve výchozím nastavení nebo jako nastavení vlastností. Zrcadlení je podporováno ze své podstaty pro některé funkce, jako jsou například okna se zprávami. V ostatních případech však je nutné implementovat zrcadlení v kódu. Další informace naleznete [v tématu obousměrná podpora aplikací windows forms](/dotnet/framework/winforms/advanced/bi-directional-support-for-windows-forms-applications).
 
 - Webové aplikace
 
-   Webové služby podporují posílání a přijímání textu v kódování UTF-8 a Unicode, takže jsou vhodné pro aplikace, které zahrnují obousměrné jazyky. Webové klientské aplikace spoléhají na své uživatelské rozhraní v prohlížečích, takže stupeň obousměrné podpory ve webové aplikaci závisí na tom, jak dobře podporuje prohlížeč uživatelů tyto obousměrné funkce. V aplikaci Visual Studio můžete vytvářet aplikace s podporou arabského nebo hebrejského textu, pořadí čtení zprava doleva, kódování souborů a nastavení místní kultury. Další informace najdete v tématu [Obousměrná podpora pro webové aplikace ASP.NET](https://msdn.microsoft.com/Library/5576f9b1-9b86-41ef-8354-092d366bcd03).
+   Webové služby podporují odesílání a přijímání textu UTF-8 a Unicode, takže jsou vhodné pro aplikace, které zahrnují obousměrné jazyky. Webové klientské aplikace spoléhají na prohlížeče pro své uživatelské rozhraní, takže stupeň obousměrné podpory ve webové aplikaci závisí na tom, jak dobře prohlížeč uživatele podporuje tyto obousměrné funkce. V sadě Visual Studio můžete vytvářet aplikace s podporou arabského nebo hebrejského textu, pořadí čtení zprava doleva, kódování souborů a nastavení místní jazykové verze. Další informace naleznete [v tématu Obousměrná podpora ASP.NET webových aplikací](https://msdn.microsoft.com/Library/5576f9b1-9b86-41ef-8354-092d366bcd03).
 
 > [!NOTE]
-> Konzolové aplikace neobsahují podporu textu pro obousměrné jazyky. Jedná se o postup, jak systém Windows funguje s aplikacemi konzoly.
+> Konzolové aplikace neobsahují podporu textu pro obousměrné jazyky. To je důsledkem toho, jak systém Windows pracuje s konzolovými aplikacemi.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Podpora obousměrných jazyků v aplikaci Visual Studio](use-bidirectional-languages.md)
-- [Globalizace a lokalizace aplikací .NET](/dotnet/standard/globalization-localization/)
+- [Podpora obousměrných jazyků v sadě Visual Studio](use-bidirectional-languages.md)
+- [Globalizace a lokalizaci aplikací .NET](/dotnet/standard/globalization-localization/)
 - [Prostředky v aplikacích .NET](/dotnet/framework/resources/)

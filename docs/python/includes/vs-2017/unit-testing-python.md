@@ -1,6 +1,6 @@
 ---
-title: Testování částí kódu v Pythonu
-description: Nastavení testování jednotek pro kód Python v sadě Visual Studio plně využívá funkce Průzkumníka testů, které chcete zjišťovat, spouštějte a laďte testy.
+title: Kód Pythonu testu částí
+description: Nastavení testování částí pro kód Pythonu v sadě Visual Studio plně využívá funkce Průzkumníka testů ke zjišťování, spouštění a ladění testů.
 ms.date: 09/18/2019
 ms.topic: include
 author: JoshuaPartlow
@@ -11,19 +11,19 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 9843b47e38d5d33a25c455efe619dfcc033fb334
-ms.sourcegitcommit: 9f6f63a2d76c6e579b4b67a96ec86faba99ad1df
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "71933469"
 ---
-## <a name="discover-and-view-tests"></a>Zjištění a zobrazení testů
+## <a name="discover-and-view-tests"></a>Zjišťování a zobrazení testů
 
-Podle konvence sady Visual Studio identifikuje testy jako metody, jejichž jména začínají `test`. Pokud chcete zobrazit toto chování, postupujte takto:
+Podle konvence Visual Studio identifikuje testy jako `test`metody, jejichž názvy začínají . Chcete-li toto chování zobrazit, postupujte takto:
 
-1. Otevřít [projektu Pythonu](../../managing-python-projects-in-visual-studio.md) načten v sadě Visual Studio, klikněte pravým tlačítkem na projekt, vyberte **přidat** > **nová položka**a pak vyberte **Test jednotky Pythonu**  následovaný **přidat**.
+1. Otevřete [projekt Pythonu](../../managing-python-projects-in-visual-studio.md) načtený ve Visual Studiu, klikněte pravým tlačítkem myši na projekt, vyberte **Přidat** > **novou položku**a pak vyberte Test částí **Pythonu** následovaný **addem**.
 
-1. Tato akce vytvoří *test1.py* souboru s kódem, který importuje standardní `unittest` modulu, je odvozena testovací třídy z `unittest.TestCase`a vyvolá `unittest.main()` přímo při spuštění skriptu:
+1. Tato akce vytvoří *soubor test1.py* s kódem, který importuje standardní `unittest` modul, odvodí testovací třídu z `unittest.TestCase`aplikace a vyvolá, `unittest.main()` pokud skript spustíte přímo:
 
     ```python
 
@@ -37,53 +37,53 @@ Podle konvence sady Visual Studio identifikuje testy jako metody, jejichž jmén
         unittest.main()
     ```
 
-1. Uložte soubor, pokud potřebné a pak otevřete **Průzkumník testů** s **testovací** > **Windows** > **Průzkumník testů**příkazu nabídky.
+1. V případě potřeby soubor uložte a v případě potřeby otevřete **Průzkumníka testů** pomocí příkazu **nabídky Test** > **Průzkumník windows.** > **Test Explorer**
 
-1. **Průzkumník testů** prohledává váš projekt pro testy a zobrazí je uvedeno dále. Dvojitým kliknutím test otevře jeho zdrojový soubor.
+1. **Průzkumník testů** vyhledá v projektu testy a zobrazí je, jak je znázorněno níže. Poklepáním na test se otevře zdrojový soubor.
 
-    ![Test Explorer test_A výchozí zobrazení](../../media/unit-test-A.png)
+    ![Průzkumník testů zobrazující výchozí test_A](../../media/unit-test-A.png)
 
-1. Jak budete přidávat další testy do projektu, můžete uspořádat zobrazení **Průzkumník testů** pomocí **Seskupit podle** nabídka na panelu nástrojů:
+1. Při přidávání dalších testů do projektu můžete uspořádat zobrazení v **Průzkumníkovi testů** pomocí nabídky **Seskupit podle** na panelu nástrojů:
 
-    ![Skupiny Průzkumníka testů pomocí nabídky panelu nástrojů](../../media/unit-test-group-menu.png)
+    ![Nabídka Panelu nástrojů Seskupí explorer u skupiny](../../media/unit-test-group-menu.png)
 
-1. Můžete také zadat text v **hledání** pole k filtrování testů podle názvu.
+1. Do pole **Hledat** můžete také zadat text a filtrovat testy podle názvu.
 
-Další informace o modulu `unittest` a zápis testů naleznete v [dokumentaci k python 2,7](https://docs.python.org/2/library/unittest.html) nebo v dokumentaci k [python 3,7](https://docs.python.org/3/library/unittest.html) (Python.org).
+Další informace o `unittest` modulu a psaní testů naleznete v [dokumentaci k Pythonu 2.7](https://docs.python.org/2/library/unittest.html) nebo [v dokumentaci k Pythonu 3.7](https://docs.python.org/3/library/unittest.html) (python.org).
 
 ## <a name="run-tests"></a>Spouštění testů
 
-V **Průzkumník testů** testy můžete spustit v mnoha různými způsoby:
+V **Průzkumníkovi testů** můžete spouštět testy různými způsoby:
 
-- **Spustit všechny** jasně spustí všechny testy zobrazených (v souladu s filtry).
-- **Spustit** nabídka poskytuje příkazy ke spuštění testů selhalo, úspěch nebo nelze spustit jako se skupinou.
-- Můžete vybrat jeden nebo více testů, klikněte pravým tlačítkem a vyberte **spustit vybrané testy**.
+- **Spustit vše** jasně spustí všechny zobrazené testy (s výhradou filtrů).
+- Nabídka **Spustit** poskytuje příkazy pro spuštění neúspěšných, předaný nebo nespouštěné testy jako skupina.
+- Můžete vybrat jeden nebo více testů, klepnout pravým tlačítkem myši a vybrat **možnost Spustit vybrané testy**.
 
-Spustit testy na pozadí a **Průzkumníka testů** aktualizuje stav každého testu při dokončení:
+Testy spustit na pozadí a **Průzkumník testů** aktualizuje stav každého testu, jak je dokončena:
 
-- Předávání testů ukazují zelené značky a doba trvání testu:
+- Absolvování testů ukazuje zelené klíště a čas, který trvá na spuštění testu:
 
-    ![test_A předaného stavu](../../media/unit-test-A-pass.png)
+    ![test_A předán status](../../media/unit-test-A-pass.png)
 
-- Zobrazit neúspěšné testy červený křížek s **výstup** odkaz, který zobrazuje výstup na konzole a `unittest` výstup z testovacího běhu:
+- Neúspěšné testy ukazují červený kříž s **odkazem Výstup,** který zobrazuje výstup konzoly a `unittest` výstup z testovacího běhu:
 
-    ![Stav test_A se nezdařilo](../../media/unit-test-A-fail.png)
+    ![test_A stav se nezdařilo.](../../media/unit-test-A-fail.png)
 
-    ![test_A úspěšný z tohoto důvodu](../../media/unit-test-A-fail-reason.png)
+    ![test_A selhals rozumem](../../media/unit-test-A-fail-reason.png)
 
-## <a name="debug-tests"></a>Ladit testy
+## <a name="debug-tests"></a>Testy ladění
 
-Vzhledem k tomu, že jednotkové testy jsou části kódu, podléhají stejným způsobem jako jakýkoli jiný kód chyby a někdy je nutné spustit v ladicí program. V ladicím programu můžete nastavit zarážky, zkontrolujte proměnné a krokovat kód. Visual Studio také poskytuje diagnostické nástroje pro testování částí.
+Vzhledem k tomu, že testy částí jsou části kódu, jsou předmětem chyb, stejně jako jakýkoli jiný kód a občas je třeba spustit v ladicím programu. V ladicím programu můžete nastavit zarážky, prozkoumat proměnné a krokovat kód. Visual Studio také poskytuje diagnostické nástroje pro testování částí.
 
-Spustit ladění, nastavte počáteční zarážky v kódu a pak klikněte pravým tlačítkem na zkoušku (nebo výběr) v **Průzkumníka testů** a vyberte **ladit vybrané testy**. Visual Studio spustí ladicí program Pythonu, stejně jako pro kód aplikace.
+Chcete-li zahájit ladění, nastavte počáteční zarážku v kódu, potom klepněte pravým tlačítkem myši na test (nebo výběr) v **Průzkumníkovi testů** a vyberte **ladění vybraných testů**. Visual Studio spustí ladicí program Pythonu stejně jako pro kód aplikace.
 
 ![Ladění testu](../../media/unit-test-debugging.png)
 
-Můžete také použít možnost **Analyzovat pokrytí kódu pro vybrané testy**. Další informace najdete v tématu [použití pokrytí kódu k určení, kolik kódu je testována](../../../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
+Můžete také použít **analyzovat pokrytí kódu pro vybrané testy**. Další informace naleznete [v tématu Použití pokrytí kódu k určení, kolik kódu je testováno](../../../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
 
 ### <a name="known-issues"></a>Známé problémy
 
-- Při spouštění, ladění, Visual Studio se zobrazí spuštění a zastavení ladění a spusťte znovu. Toto chování je očekávané.
-- Při ladění více testů, každý z nich běží nezávisle na sobě, což přerušení relace ladění.
-- Visual Studio přerušovaně nepodaří spustit test při ladění. Za normálních okolností pokusem o ladění znovu test proběhne úspěšně.
-- Při ladění, je možné krok z testovacího do `unittest` implementace. Za normálních okolností dál běží na konci programu a zastaví ladění.
+- Při spuštění ladění visual studio se zobrazí spustit a zastavit ladění a potom začít znovu. Jde o očekávané chování.
+- Při ladění více testů, každý z nich je spuštěn nezávisle, což přeruší relaci ladění.
+- Visual Studio občas nepodaří spustit test při ladění. Za normálních okolností pokus o ladění testu znovu úspěšné.
+- Při ladění je možné krok z testu do `unittest` implementace. Za normálních okolností další krok spustí na konec programu a zastaví ladění.

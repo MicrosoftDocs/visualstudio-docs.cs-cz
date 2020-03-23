@@ -1,5 +1,5 @@
 ---
-title: Cvwritemessage – funkce | Dokumentace Microsoftu
+title: Funkce CvWriteMessage | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -27,14 +27,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ea9fd21c346a61939683ee05e3cb9ef3123cc03d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62936657"
 ---
-# <a name="cvwritemessage-function"></a>Cvwritemessage – funkce
-Zapíše zprávu do souboru trasování vizualizátoru souběžnosti.
+# <a name="cvwritemessage-function"></a>CvWriteMessage
+Zapíše zprávu do trasovacího souboru vizuále souběžnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -93,25 +93,25 @@ HRESULT CvWriteMessageExVA(
 ```
 
 #### <a name="parameters"></a>Parametry
- `argList` Seznam argumentů.
+ `argList`Seznam argumentů.
 
- `category` Kategorie značky span
+ `category`Kategorie rozpětí
 
- `level` Úroveň důležitosti rozpětí.
+ `level`Úroveň důležitosti rozpětí.
 
- `pMarkerSeries` Platné značky řady kontextu. Nemůže mít hodnotu NULL.
+ `pMarkerSeries`Platný kontext řady značek. Nemůže být null.
 
- `pMessage` Řetězec formátu zprávy. Nemůže mít hodnotu NULL.
+ `pMessage`Formátový řetězec zprávy. Nemůže být null.
 
 ## <a name="return-value"></a>Návratová hodnota
- S_OK při úspěšném zápisu zprávy. Kód chyby v případě, že došlo k chybám. Použití makra SUCCEEDED nebo FAILED zkontrolujte chybovou podmínku.
+ S_OK, kdy je zpráva úspěšně zapsána. Kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte následující/neúspěšná makra.
 
 ## <a name="requirements"></a>Požadavky
- **Header:** *cvmarkers.h*
+ **Záhlaví:** *cvmarkers.h*
 
  **Unicode:** CvWriteMessageW, CvWriteMessageVW, CvWriteMessageExW, CvWriteMessageExVW
 
- **ANSI:** Cvwritemessagea – cvwritemessageexva – cvwritemessageva – cvwritemessageexa –,
+ **ANSI:** CvWriteMessageA, CvWriteMessageVA, CvWriteMessageExA, CvWriteMessageExVA
 
-## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na knihovnu C++](../profiling/cpp-library-reference.md)

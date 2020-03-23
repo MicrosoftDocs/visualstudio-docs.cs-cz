@@ -16,44 +16,44 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 513dd884f65e041e7ad90dda1483633fec57e100
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589003"
 ---
-# <a name="how-to-select-a-load-test-results-repository"></a>Postupy: Výběr úložiště výsledků zátěžového testu
+# <a name="how-to-select-a-load-test-results-repository"></a>Postup: Výběr úložiště výsledků zátěžového testu
 
-Nejste omezeni na úložiště místních výsledků. Často jsou zátěžové testy spuštěny na vzdálené sadě počítačů agentů. Agenty mohou spolu s kontrolérem generovat více simulované zátěže než jakýkoli jeden počítač. Další informace najdete v tématu [testovací kontrolery a testovací agenty](configure-test-agents-and-controllers-for-load-tests.md).
+Nejste omezeni na místní úložiště výsledků. Zátěžové testy jsou často spouštěny ve vzdálené sadě počítačů agenta. Agenty mohou spolu s kontrolérem generovat více simulované zátěže než jakýkoli jeden počítač. Další informace naleznete v [tématu Test řadiče a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md).
 
-Výsledky testu z agentů nebo místního počítače můžete uložit na každý serversql, na kterém jste vytvořili úložiště výsledků zátěžového testu. V obou případech je nutné určit, kam chcete uložit výsledky zátěžového testu pomocí **Správa testovacích Kontrolérů** okna.
+Výsledky testů z vašich agentů nebo místního počítače lze uložit na libovolný server SQL, na kterém jste vytvořili úložiště výsledků zátěžového testu. V obou případech je nutné určit, kde chcete uložit výsledky zátěžového testu pomocí okna **Spravovat testovací řadiče.**
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="identify-a-results-store-for-load-test-data"></a>Identifikace úložiště výsledků pro data zátěžového testu
 
-1. V **Průzkumníka řešení**, otevřete soubor zátěžového testu.
+1. V **Průzkumníku řešení**otevřete soubor zátěžového testu.
 
-2. Z **zátěžový Test** nástrojů, zvolte **spravovat testovací Kontroléry**. **Spravovat testovací Kontrolér** se zobrazí dialogové okno. Používáte-li agent vzdáleně, je zapotřebí zvolit kontrolér.
+2. Na panelu nástrojů **Zátěžový test** zvolte **Spravovat testovací řadiče**. Zobrazí se dialogové okno **Spravovat testovací řadič.** Používáte-li agent vzdáleně, je zapotřebí zvolit kontrolér.
 
-     ![Vlastnosti připojení úložiště výsledků zátěžového testu](../test/media/loadtestconnectionproperties.png) vlastnosti připojení úložiště výsledků zátěžového testu
+     ![Výsledky zátěžových testů](../test/media/loadtestconnectionproperties.png) ukládají vlastnosti připojení Vlastnosti zátěžových testů ukládají vlastnosti připojení
 
-3. V **úložiště výsledků zátěžového testu**, klikněte na tlačítko **(...)**  zobrazíte **vlastnosti připojení** dialogové okno.
+3. V **úložišti výsledků zátěžového testu**zobrazte klepnutím na **tlačítko (...)** dialogové okno **Vlastnosti připojení.**
 
-4. V **název serveru**, zadejte název serveru, na kterém jste spustili `LoadTest` skripty.
+4. Do **pole Název serveru**zadejte název serveru, `LoadTest` na kterém jste skripty spouštěli.
 
     > [!TIP]
-    > Pokud používáte SQL Express na místním počítači pro úložiště zátěžového testu, zadejte \<názevpočítače > \sqlexpress (například **Můjpočítač\sqlexpress**).
+    > Pokud používáte SQL Express v místním počítači pro \<úložiště zátěžových testů, zadejte název_počítače>\sqlexpress (například **MyComputer\sqlexpress**).
 
-5. V části **Přihlaste se k serveru**, můžete zvolit **použít ověřování Windows**. Můžete zadat uživatelské jméno a heslo, ale pokud tak učiníte, musíte vybrat možnost **uložit heslo**.
+5. V části **Přihlásit se k serveru**můžete zvolit **Použít ověřování systému Windows**. Můžete zadat uživatelské jméno a heslo, ale pokud tak učiníte, musíte vybrat možnost **Uložit heslo**.
 
-6. V části **připojit k databázi**, zvolte **vyberte nebo zadejte název databáze**. Vyberte **LoadTest** z rozevíracího seznamu.
+6. V části **Připojit k databázi**zvolte **Vybrat nebo zadat název databáze**. V rozevíracím seznamu vyberte **LoadTest.**
 
-7. Vyberte **OK**. Připojení můžete otestovat pomocí příkazu **Test připojení**.
+7. Vyberte **OK**. Připojení můžete otestovat výběrem **možnosti Testovat připojení**.
 
-8. Zvolte **Zavřít** v **spravovat testovací Kontrolér** dialogové okno.
+8. V dialogovém okně **Spravovat testovací řadič** zvolte **Zavřít.**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Správa výsledků zátěžových testů v úložiště výsledků testu zátěže](../test/manage-load-test-results-in-the-load-test-results-repository.md)
+- [Správa výsledků zátěžových testů v úložišti výsledků zátěžových testů](../test/manage-load-test-results-in-the-load-test-results-repository.md)
 - [Kontrolery testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md)

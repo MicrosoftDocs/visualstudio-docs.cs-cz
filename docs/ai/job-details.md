@@ -1,5 +1,5 @@
 ---
-title: Zobrazit nedávné úlohy
+title: Zobrazit poslední úlohy
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -8,21 +8,21 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 ms.openlocfilehash: 79b396946666077dcdedb3ee2a5ab891c2bb4fb8
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72777398"
 ---
-# <a name="view-recent-job-performance-and-details"></a>Zobrazit výkon poslední úlohy a podrobnosti
+# <a name="view-recent-job-performance-and-details"></a>Zobrazit nedávný výkon úlohy a podrobnosti
 
-Po odeslání úloh můžete zobrazit seznam úloh, abyste viděli jejich stav, dobu trvání a další.
+Po odeslání úloh můžete zobrazit seznam úloh a zobrazit jejich stav, dobu trvání a další.
 
-1. V **Průzkumník serveru**rozbalte konkrétní výpočetní kontext.
-2. Dvakrát klikněte na **úlohy**.
-3. Zobrazí se seznam úloh odeslaných do daného výpočetního kontextu.
-4. Pokud chcete zobrazit podrobnosti, vyberte konkrétní **úlohu** v seznamu.
+1. V **Průzkumníkovi serveru**rozbalte konkrétní kontext výpočetních prostředků.
+2. Dvakrát klikněte na **Úlohy**.
+3. Zobrazí se seznam úloh odeslaných do tohoto výpočetního kontextu.
+4. Vyberte konkrétní **úlohu** v seznamu, chcete-li zobrazit podrobnosti.
 
-![Monitorování úloh](media/job-details/monitor-jobs.png)
+![monitorovat úlohy](media/job-details/monitor-jobs.png)
 
-> Historie úloh odeslaná do virtuálních počítačů se systémem Linux je uložena na virtuálním počítači v adresáři adresáře/TMP. Proto se při každém restartování historie úlohy vymaže. Pokud chcete mít trvalý záznam o historii úloh, nakonfigurujte prosím svůj virtuální počítač jako výpočetní kontext ve službě Azure Machine Learning a pak odešlete úlohu do Azure Machine Learning (jako výpočetní kontext vyberte virtuální počítač).
+> Historie úloh odeslaná do virtuálních počítačů S IP se ukládá na virtuálním počítači v adresáři /tmp. Proto vždy, když je restartován historie úloh je vymazána. Pro trvalý záznam historie úloh nakonfigurujte virtuální počítač jako výpočetní kontext v Azure Machine learninga a pak odešlete úlohu do Azure Machine Learning (výběr virtuálního počítače jako výpočetního kontextu).

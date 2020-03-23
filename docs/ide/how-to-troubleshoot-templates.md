@@ -1,5 +1,5 @@
 ---
-title: Řešení potíží s šablony projektu a načítání šablony položky
+title: Poradce při potížích s načítáním šablony a položky projektu
 ms.date: 01/02/2018
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -8,60 +8,60 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 1bef6a460f1a59823930597565b955b591ab48a0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591382"
 ---
-# <a name="how-to-troubleshoot-templates"></a>Postupy: řešení problémů se šablonami
+# <a name="how-to-troubleshoot-templates"></a>Postup: Poradce při potížích se šablonami
 
-Pokud šablonu se nepodaří načíst ve vývojovém prostředí, nalezení problému několika způsoby.
+Pokud se šablona nenačte ve vývojovém prostředí, existuje několik způsobů, jak problém vyhledat.
 
-## <a name="validate-the-vstemplate-file"></a>Ověřit soubor vstemplate
+## <a name="validate-the-vstemplate-file"></a>Ověření souboru vstemplate
 
 ::: moniker range="vs-2017"
 
-Pokud *vstemplate* soubor v šabloně neodpovídající schématu pro šablony sady Visual Studio, šablony se nemůže nacházet v **nový projekt** dialogové okno.
+Pokud soubor *vstemplate* v šabloně nedodržuje schéma šablony sady Visual Studio, nemusí se šablona zobrazit v dialogovém okně **Nový projekt.**
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Pokud soubor *vstemplate* v šabloně neodpovídá schématu šablony sady Visual Studio, šablona se nemusí zobrazit v dialogovém okně, ve kterém vytvoříte nové projekty.
+Pokud soubor *vstemplate* v šabloně nedodržuje schéma šablony sady Visual Studio, nemusí se šablona zobrazit v dialogovém okně, ve kterém vytváříte nové projekty.
 
 ::: moniker-end
 
-### <a name="to-validate-the-vstemplate-file"></a>Chcete-li ověřit soubor vstemplate
+### <a name="to-validate-the-vstemplate-file"></a>Ověření souboru vstemplate
 
-1. Vyhledejte *ZIP* soubor, který obsahuje šablonu.
+1. Vyhledejte soubor *ZIP* obsahující šablonu.
 
-1. Extrahovat *ZIP* souboru.
+1. Extrahujte soubor *ZIP.*
 
-1. Na **souboru** nabídku v sadě Visual Studio, zvolte **otevřít** > **souboru**.
+1. V nabídce **Soubor** v sadě Visual Studio zvolte **Otevřít** > **soubor**.
 
-1. Vyberte *vstemplate* soubor šablony a zvolte **otevřít**.
+1. Vyberte soubor *vstemplate* pro šablonu a zvolte **Otevřít**.
 
-1. Ověřte, že se souborem XML sady *vstemplate* soubor používá schéma šablony. Další informace o *vstemplate* schématu, naleznete v tématu [odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md).
+1. Ověřte, zda xml souboru *vstemplate* dodržuje schéma šablony. Další informace o schématu *vstemplate* naleznete v [tématu odkaz na schéma šablony](../extensibility/visual-studio-template-schema-reference.md).
 
     > [!NOTE]
-    > Jak získat podporu technologie IntelliSense při vytváření *vstemplate* přidejte `xmlns` atribut `VSTemplate` prvek a přiřaďte ho hodnotu `http://schemas.microsoft.com/developer/vstemplate/2005`.
+    > Chcete-li získat podporu Technologie IntelliSense při vytváření `xmlns` souboru `VSTemplate` *vstemplate,* přidejte `http://schemas.microsoft.com/developer/vstemplate/2005`k prvku atribut a přiřaďte mu hodnotu .
 
-1. Uložte a zavřete *vstemplate* souboru.
+1. Uložte a zavřete soubor *vstemplate.*
 
-1. Vyberte soubory, které jsou součástí šablony, klikněte pravým tlačítkem a zvolte **odeslat** > **komprimovanou složku (ZIP)** . Do jsou komprimované soubory, které jste vybrali *ZIP* souboru.
+1. Vyberte soubory obsažené v šabloně, klikněte pravým tlačítkem myši a zvolte **Odeslat do** > **komprimované (zip) složky**. Vybrané soubory jsou komprimovány do souboru *ZIP.*
 
-1. Umístit novou *ZIP* souboru ve stejném adresáři jako původní *ZIP* souboru.
+1. Umístěte nový soubor *ZIP* do stejného adresáře jako starý soubor *ZIP.*
 
-1. Odstranit extrahované soubory šablony a starou šablonu *ZIP* souboru.
+1. Odstraňte extrahované soubory šablon a starý soubor *ZIP* šablony.
 
-## <a name="enable-diagnostic-logging"></a>Povolit protokolování diagnostiky
+## <a name="enable-diagnostic-logging"></a>Povolení protokolování diagnostiky
 
-Můžete povolit protokolování diagnostiky pro zjišťování šablon podle postupu v [zjišťování Poradce při potížích šablony (rozšiřitelnost)](../extensibility/troubleshooting-template-discovery.md).
+Protokolování diagnostiky pro zjišťování šablony můžete povolit podle kroků v [části Poradce při potížích s zjišťováním šablony (rozšiřitelnost)](../extensibility/troubleshooting-template-discovery.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Řešení potíží s zjišťování šablony (rozšiřitelnost)](../extensibility/troubleshooting-template-discovery.md)
-- [Přizpůsobení šablony](../ide/customizing-project-and-item-templates.md)
-- [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+- [Poradce při potížích s zjišťováním šablony (rozšiřitelnost)](../extensibility/troubleshooting-template-discovery.md)
+- [Přizpůsobení šablon](../ide/customizing-project-and-item-templates.md)
+- [Vytvoření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
+- [Odkaz na schéma šablony](../extensibility/visual-studio-template-schema-reference.md)

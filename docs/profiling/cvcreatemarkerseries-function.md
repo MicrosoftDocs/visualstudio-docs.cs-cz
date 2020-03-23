@@ -1,5 +1,5 @@
 ---
-title: Cvcreatemarkerseries – funkce | Dokumentace Microsoftu
+title: Funkce CvCreateMarkerSeries | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,14 +15,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: eb3ef4d928aaac57f39a48e5be212c1148ef58eb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62552678"
 ---
-# <a name="cvcreatemarkerseries-function"></a>Cvcreatemarkerseries – funkce
-Vytvoří značku řady pro daného zprostředkovatele.
+# <a name="cvcreatemarkerseries-function"></a>CvCreateMarkerSeries
+Vytvoří řadu značek pro daného zprostředkovatele.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,21 +39,21 @@ _Check_return_ HRESULT CvCreateMarkerSeriesA(
 ```
 
 #### <a name="parameters"></a>Parametry
- `pProvider` Cvinitprovider – dříve inicializován objekt zprostředkovatele. Nemůže mít hodnotu NULL.
+ `pProvider`Objekt zprostředkovatele dříve inicializován cvInitProvider. Nemůže být null.
 
- `pSeriesName` Název značky řady. Nemůže mít hodnotu NULL, ale je povolen prázdný řetězec.
+ `pSeriesName`Název řady značek. Nemůže být NULL, ale prázdný řetězec je povolen.
 
- `ppMarkerSeries` Adresa výstupní proměnné, která bude ukládat značky řady kontextu. Nemůže mít hodnotu NULL.
+ `ppMarkerSeries`Adresa výstupní proměnné, která bude ukládat kontext řady značek. Nemůže být null.
 
 ## <a name="return-value"></a>Návratová hodnota
- S_OK při úspěšném vytvoření značky řady nebo kód chyby v případě, že existuje byly všechny chyby. Použití makra SUCCEEDED nebo FAILED zkontrolujte chybovou podmínku.
+ S_OK, kdy je řada značek úspěšně vytvořena, nebo kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte následující/neúspěšná makra.
 
 ## <a name="requirements"></a>Požadavky
- **Header:** *cvmarkers.h*
+ **Záhlaví:** *cvmarkers.h*
 
  **Unicode:** CvCreateMarkerSeriesW
 
  **ANSI:** CvCreateMarkerSeriesA
 
-## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na knihovnu C++](../profiling/cpp-library-reference.md)

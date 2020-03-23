@@ -1,46 +1,46 @@
 ---
-title: Připojte se k projektům v Průzkumníku týmových projektů
+title: Připojení k projektům v Průzkumníkovi týmu
 ms.date: 12/04/2018
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 ms.openlocfilehash: 936fcb598ccb7919eca0a35a1191732bce1c8e23
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585480"
 ---
-# <a name="connect-to-projects-in-team-explorer"></a>Připojte se k projektům v Průzkumníku týmových projektů
+# <a name="connect-to-projects-in-team-explorer"></a>Připojení k projektům v Průzkumníkovi týmu
 
-Použití **Team Exploreru** panel nástrojů koordinovat své úsilí kódu s ostatními členy týmu k vývoji projektu a ke správě práce, která je přiřazena vám, vašemu týmu nebo projekty. **Team Explorer** propojí aplikaci Visual Studio pro úložiště Git a Githubu, Team Foundation verze ovládacího prvku (TFVC) úložiště a projektech hostovaných ve službě [Azure DevOps služby](/azure/devops/user-guide/what-is-azure-devops-services) nebo na místě [Azure DevOps Server](/azure/devops/index-all) (dříve označované jako TFS). Můžete spravovat zdrojový kód, pracovní položky a sestavení.
+Okno nástroje **Průzkumník týmu** slouží ke koordinaci úsilí o kód s ostatními členy týmu k vývoji projektu a ke správě práce, která je přiřazena vám, vašemu týmu nebo projektům. **Průzkumník týmu** spojuje Visual Studio s úložišti Git a GitHub, úložištěm správy verzí Team Foundation (TFVC) a projekty hostovanými ve [službách Azure DevOps](/azure/devops/user-guide/what-is-azure-devops-services) services nebo na místním [serveru Azure DevOps (dříve](/azure/devops/index-all) označovaném jako TFS). Můžete spravovat zdrojový kód, pracovní položky a sestavení.
 
-![Team Explorer domovské stránky v sadě Visual Studio](media/team-explorer/team-explorer.png)
+![Domovská stránka Průzkumníka týmu v Sadě Visual Studio](media/team-explorer/team-explorer.png)
 
 > [!TIP]
-> Pokud otevřete sadu Visual Studio a **Team Exploreru** nebude nezobrazí, otevřete výběrem **zobrazení** > **Průzkumník týmových projektů** z řádku nabídek.
+> Pokud otevřete Visual Studio a **Průzkumník týmu** se nezobrazí, otevřete ho tak, že z řádku nabídek zvolíte **Zobrazit** > **Průzkumníka týmu.**
 
-## <a name="connect-to-a-project-or-repository"></a>Připojte se k projektu nebo úložiště
+## <a name="connect-to-a-project-or-repository"></a>Připojení k projektu nebo úložišti
 
-Připojení k projektu nebo úložiště na **připojit** stránky.
+Připojte se k projektu nebo úložišti na stránce **Připojit.**
 
-![Připojit v Průzkumníku týmových projektů stránku](media/team-explorer/connect.png)
+![Připojit stránku v Průzkumníkovi týmu](media/team-explorer/connect.png)
 
 Připojení k projektu:
 
-1. Otevřít **připojit** stránku kliknutím **spravovat připojení** ikonu.
+1. Otevřete stránku **Připojit** výběrem ikony **Spravovat připojení.**
 
-   ![Spravovat připojení tlačítko v Průzkumníku týmových projektů](media/team-explorer/manage-connections.png)
+   ![Tlačítko Spravovat připojení v Průzkumníkovi týmu](media/team-explorer/manage-connections.png)
 
-1. Na **připojit** zvolte **spravovat připojení** > **připojit k projektu**.
+1. Na stránce **Připojit** zvolte **Manage Connections** > **Connect to a project**.
 
-   ![Připojte se k projektu v Team Exploreru](media/team-explorer/connect-project.png)
+   ![Připojení k projektu v Průzkumníkovi týmu](media/team-explorer/connect-project.png)
 
 > [!TIP]
-> Pokud je potřeba vytvořit nový projekt nebo přidání uživatelů do projektu naleznete v tématu [vytvoření projektu (Azure DevOps)](/azure/devops/organizations/projects/create-project) a [přidání uživatelů do projektu nebo týmu (Azure DevOps)](/azure/devops/organizations/security/add-users-team-project).
+> Pokud potřebujete vytvořit nový projekt nebo přidat uživatele do projektu, přečtěte si informace o [vytvoření projektu (Azure DevOps)](/azure/devops/organizations/projects/create-project) a [přidání uživatelů do projektu nebo týmu (Azure DevOps).](/azure/devops/organizations/security/add-users-team-project)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Referenční dokumentace Team Explorer](reference/team-explorer-reference.md)
-- [Připojte se k projektu (Azure DevOps)](/azure/devops/organizations/projects/connect-to-projects)
+- [Referenční dokumentace k Team Exploreru](reference/team-explorer-reference.md)
+- [Připojení k projektu (Azure DevOps)](/azure/devops/organizations/projects/connect-to-projects)

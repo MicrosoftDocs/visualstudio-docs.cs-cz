@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: určení modulu runtime .NET Framework | Microsoft Docs'
+title: 'Postup: Určení běhu rozhraní .NET Framework | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,38 +13,38 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 4ab53a6cf265b36ee423a2df176014187860f635
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778671"
 ---
-# <a name="how-to-specify-the-net-framework-runtime"></a>Postupy: určení modulu runtime .NET Framework
+# <a name="how-to-specify-the-net-framework-runtime"></a>Postupy: Určení modulu runtime .NET Framework
 
-S vydáním .NET Framework 4 mohou být aplikace tvořeny moduly, které byly vytvořeny pomocí různých verzí .NET Framework modulu runtime. Ve výchozím nastavení Visual Studio Nástroje pro profilaci Profilovat první modul runtime, který je načten aplikací. Můžete určit, že při spuštění aplikace s profilerem a při připojení profileru k již spuštěné aplikaci budete profilovat.
+S vydáním rozhraní .NET Framework 4 mohou být aplikace složeny z modulů, které byly vytvořeny pomocí různých verzí modulu run-time rozhraní .NET Framework. Ve výchozím nastavení nástroje profilování sady Visual Studio profilují první runtime načtený aplikací. Můžete určit run-time do profilu při spuštění aplikace s profiler a při připojení profiler k již spuštěné aplikace.
 
-## <a name="to-specify-the-net-framework-run-time-to-profile-when-starting-an-application-with-the-profiler"></a>Určení .NET Framework při spouštění aplikace pomocí profileru profilace modulu runtime
+## <a name="to-specify-the-net-framework-run-time-to-profile-when-starting-an-application-with-the-profiler"></a>Určení běhu rozhraní .NET Framework do profilu při spuštění aplikace pomocí profileru
 
-1. V **prohlížeč výkonu**klikněte pravým tlačítkem na relaci výkonu, klikněte na **vlastnosti**a pak klikněte na **Upřesnit**.
+1. V **Průzkumníku výkonu**klepněte pravým tlačítkem myši na relaci výkonu, klepněte na příkaz **Vlastnosti**a potom klepněte na příkaz **Upřesnit**.
 
-     Seznam **cílová verze CLR** zobrazuje **automaticky** a verze .NET Framework runtime, které jsou nainstalovány v počítači.
+     V seznamu **Cílová verze CLR** se zobrazují **automatické** a verze runtime rozhraní .NET Framework, které jsou nainstalovány v počítači.
 
 2. Proveďte jeden z následujících kroků:
 
-    - Klikněte na verzi modulu CLR, kterou chcete profilovat.
+    - Klikněte na verzi clr, kterou chcete profilovat.
 
-    - Klikněte na tlačítko **automaticky** a profilujte první verzi, která je načtena aplikací.
+    - Chcete-li profilovat první verzi načtenou aplikací, klepněte na **tlačítko Automaticky.**
 
-## <a name="to-specify-the-net-framework-run-time-to-profile-when-attaching-the-profiler-to-an-application"></a>Určení profilu modulu runtime .NET Framework k profilování při připojení profileru k aplikaci
+## <a name="to-specify-the-net-framework-run-time-to-profile-when-attaching-the-profiler-to-an-application"></a>Určení běhu rozhraní .NET Framework k profilu při připojování profileru k aplikaci
 
-1. V nabídce **analyzovat** přejděte na **Profiler**a pak klikněte na **připojit nebo odpojit**.
+1. V nabídce **Analyzovat** přejděte na **položku Profiler**a klepněte na tlačítko **Připojit nebo odpojit**.
 
-2. V dialogovém okně **Připojit profiler k procesu** klikněte na proces, který chcete profilovat.
+2. V dialogovém okně **Připojit profiler ke zpracování** klikněte na proces, který chcete profilovat.
 
-     Seznam **cílových verzí modulu CLR** s **automatickým** a verze .NET Framework runtime, které jsou nainstalovány v počítači.
+     **Seznam Cílové verze CLR** s **Automatické** a verze runtime rozhraní .NET Framework, které jsou nainstalovány v počítači.
 
 3. Proveďte jeden z následujících kroků:
 
-    - Klikněte na verzi modulu CLR, kterou chcete profilovat.
+    - Klikněte na verzi clr, kterou chcete profilovat.
 
-    - Kliknutím na **automaticky** můžete profilovat verzi, která se načte, když se Profiler připojí k aplikaci.
+    - Chcete-li profilovat verzi načtenou při připojení profileru k aplikaci, klepněte na **tlačítko Automaticky.**

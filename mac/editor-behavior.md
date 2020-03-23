@@ -1,34 +1,34 @@
 ---
 title: Formátování kódu
-description: Tento článek popisuje různé možnosti, které lze použít k úpravě chování textového editoru v sadě Visual Studio pro Mac
+description: Tento článek popisuje různé možnosti, které lze použít k úpravě chování textového editoru v sadě Visual Studio for Mac
 author: cobey
 ms.author: cobey
 ms.date: 05/06/2018
 ms.assetid: 81EE4460-26EB-4BB0-9297-932E1F88E4B8
 ms.openlocfilehash: 20363d5497ea5897cb2685ca838da44b8c21d3df
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "67823176"
 ---
 # <a name="editor-behavior"></a>Chování editoru
 
-Chování editoru můžete nastavit tak, aby kód má být formátováno při zápisu. Tyto akce jsou nastavené v rámci **sady Visual Studio > Předvolby > textový Editor > chování**, a některé z nejčastěji používaných funkcí jsou popsané níže:
+Editor chování lze nastavit tak, aby kód, který má být formátován, jak je napsáno. Tyto akce jsou nastaveny v části **Předvolby > sady Visual Studio > textový editor > chování**a některé z více běžně používaných funkcí jsou popsány níže:
 
 ![Možnosti chování editoru](media/source-editor-image9.png)
 
-* Odpovídající uzavírací složené závorky mohou být automaticky přidán do kódu při vytváření nové třídy, metody nebo vlastnosti. Pokud je vybraná tato možnost, zadáním `{` automaticky přidá `}`.
-* Formátování kódu na běhu se aktivuje znak strojů, jako je středníkem nebo složených závorek, které bude emulovat předvolby formátování, které jsou nastavené.
-* Můžete také při uložení, která umožňuje zápis kódu podle potřeby a ponechá integrovaného vývojového prostředí za formátování kódu jako sada podle preferencí existující formát souboru.
-* Odsazení může být nastaveno na hodnotu None, automaticky, nebo inteligentní. Tyto postupujte takto:
-  * NONE – Nastaví blikající kurzor na začátek dalšího řádku
-  * Auto – nastaví blikající kurzor na stejný sloupec na dalším řádku
-  * Inteligentní – změní odsazení na následující řádek na základě kódu
-* Dělení slov chování se liší mezi operační systémy a pro účely navigace, potřebuje vědět, kde slova začátku ani na konci textového editoru. Formátování můžete nastavit pro systém Unix nebo Windows.
+* Odpovídající uzavírací svorky lze přidat automaticky do kódu při vytváření nových tříd, metod nebo vlastností. Je-li vybrána tato `{` možnost, `}`bude psaní automaticky přidávat .
+* Průběžně formátování kódu je spouštěno stisknutím znaku, například středníkem nebo závorkami, které budou emulují nastavené předvolby formátování.
+* Můžete také zvolit formátování souboru při jeho uložení, což umožňuje psaní kódu podle potřeby a ponechá ide zodpovědný za formátování kódu, jak je nastaveno existující předvolby.
+* Odsazení lze nastavit na žádné, automatické nebo inteligentní. Tyto následující:
+  * Žádný - nastaví stříška na začátek dalšího řádku
+  * Auto - nastaví stříška na stejný sloupec na dalším řádku
+  * Smart - odrážky na následujícím řádku na základě kódu
+* Chování rozdělení textu se liší mezi ose a pro účely navigace textový editor potřebuje vědět, kde slova začínají nebo končí. Formátování lze nastavit na Unix nebo Windows.
 
-Můžete také nastavit pravidla formátování pro XML, šablon stylů CSS, HTML a JSON.
+Můžete také nastavit pravidla formátování pro XML, CSS, HTML a JSON.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Předvolby stylu kódu (Visual Studio na Windows)](/visualstudio/ide/code-styles-and-quick-actions)
+- [Předvolby stylu kódu (Visual Studio ve Windows)](/visualstudio/ide/code-styles-and-quick-actions)

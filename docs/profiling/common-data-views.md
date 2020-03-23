@@ -1,5 +1,5 @@
 ---
-title: Společná zobrazení dat | Microsoft Docs
+title: Společná zobrazení údajů | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 39af1975dc3bcb0f5df729579ca1af38fa60160f
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74777826"
 ---
 # <a name="common-data-views"></a>Společná zobrazení dat
@@ -25,48 +25,48 @@ Tato část obsahuje referenční informace o zobrazeních a sestavách datovýc
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Souhrnné zobrazení](../profiling/summary-view.md)
 
- Popisuje souhrnné zobrazení a sestavu. Datové sloupce závisí na metodě profilace.
+ Popisuje souhrnné zobrazení a sestavu. Sloupce dat závisí na metodě profilování.
 
-- [Zobrazení volající/volaný](../profiling/caller-callee-view.md)
+- [Zobrazení volajícího/volaní](../profiling/caller-callee-view.md)
 
- Popisuje zobrazení stromu volání a sestavu. Datové sloupce závisí na metodě profilace.
+ Popisuje zobrazení a sestavu stromu volání. Sloupce dat závisí na metodě profilování.
 
 - [Zobrazení stromu volání](../profiling/call-tree-view.md)
 
- Popisuje zobrazení stromu volání a sestavu. Datové sloupce závisí na metodě profilace.
+ Popisuje zobrazení a sestavu stromu volání. Sloupce dat závisí na metodě profilování.
 
 - [Zobrazení modulů](../profiling/modules-view.md)
 
- Popisuje zobrazení a sestavu modulů. Datové sloupce závisí na metodě profilace.
+ Popisuje zobrazení modulů a sestavu. Sloupce dat závisí na metodě profilování.
 
 - [Zobrazení funkcí](../profiling/functions-view.md)
 
- Popisuje zobrazení a sestavu funkcí. Datové sloupce závisí na metodě profilace.
+ Popisuje zobrazení funkcí a sestavu. Sloupce dat závisí na metodě profilování.
 
-- [Zobrazení řádků](../profiling/lines-view.md)
+- [Zobrazení čar](../profiling/lines-view.md)
 
- Popisuje zobrazení a sestavu řádků. Datové sloupce závisí na metodě profilace.
+ Popisuje zobrazení a sestavu řádky. Sloupce dat závisí na metodě profilování.
 
-- [Zobrazení ukazatelů na instrukce (IP)](../profiling/instruction-pointers-ips-view.md)
+- [Zobrazení ukazatelů instrukcí (IP)](../profiling/instruction-pointers-ips-view.md)
 
- Popisuje zobrazení a sestavu ukazatele na instrukce (IP). Datové sloupce závisí na metodě profilace.
+ Popisuje zobrazení a sestavu ukazatele min. (IP). Sloupce dat závisí na metodě profilování.
 
 - [Zobrazení procesu](../profiling/process-view.md)
 
- Zobrazí seznam procesů a časů spuštění a ukončení vlákna.
+ Uvádí časy zahájení a ukončení procesu a podprocesu.
 
 - [Zobrazení značek](../profiling/marks-view.md)
 
- Vypisuje události ETW a vzorkování, které byly vloženy do souboru dat profilování.
+ Seznamy ETW a vzorkování události, které byly vloženy do datového souboru profilování.
 
 ## <a name="related-sections"></a>Související oddíly
 - [Zobrazení dat metody vzorkování](../profiling/profiler-sampling-method-data-views.md)
 
- Referenční informace o zobrazeních a sestavách datových souborů profileru, které byly vygenerovány pomocí metody vzorkování.
+ Referenční informace o zobrazenía sestavy profiler datových souborů, které byly generovány pomocí metody vzorkování.
 
 - [Zobrazení dat metody instrumentace](../profiling/instrumentation-method-data-views.md)
 
- Referenční informace o zobrazeních a sestavách datových souborů profileru, které byly generovány pomocí metody instrumentace.
+ Referenční informace o zobrazení a sestavy datových souborů profileru, které byly generovány pomocí metody instrumentace.
 
 - [Zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md)
 

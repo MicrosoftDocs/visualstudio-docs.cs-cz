@@ -1,6 +1,6 @@
 ---
-title: Použití Node.js REPL
-description: Visual Studio poskytuje podporu pro práci s modulem runtime Node.js
+title: Použití souboru Node.js REPL
+description: Visual Studio poskytuje podporu pro interakci s runtime Node.js
 ms.date: 12/04/2018
 ms.topic: conceptual
 ms.devlang: javascript
@@ -12,40 +12,40 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: faed930c60869010f740cf0a1e118a40299ce782
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62840657"
 ---
-# <a name="work-with-the-nodejs-interactive-window"></a>Práce s interaktivní okno Node.js
+# <a name="work-with-the-nodejs-interactive-window"></a>Práce s interaktivním oknem Node.js
 
-Nástroje Node.js Tools for Visual Studio zahrnují interaktivní okno pro nainstalovaný modul runtime Node.js. Toto okno umožňuje zadat kód jazyka JavaScript a hned vidět výsledky, také spouštět příkazy npm pro interakci s aktuálním projektem. Interaktivní okno se také označuje jako operace REPL (**R**ečíst /**E**valuate /**P**isknout **L**oop).
+Node.js Nástroje pro Visual Studio zahrnují interaktivní okno pro nainstalovaný runtime Node.js. Toto okno umožňuje zadat kód JavaScript a okamžitě zobrazit výsledky, stejně jako spustit příkazy npm pro interakci s aktuálním projektem. Interaktivní okno je také známé jako REPL (**R**ead /**E**valuate /**P**rint **L**oop).
 
-## <a name="open-the-interactive-window"></a>Otevřít interaktivní okno
+## <a name="open-the-interactive-window"></a>Otevření interaktivního okna
 
-Interaktivní okno můžete otevřít tak, že kliknete pravým tlačítkem na uzel projektu Node.js v Průzkumníku řešení a vyberete **otevřete interaktivní okno Node.js**.
+Interaktivní okno můžete otevřít klepnutím pravým tlačítkem myši na uzel projektu Node.js v Průzkumníku řešení a výběrem **interaktivního okna Otevřít soubor Node.js**.
 
 ![Interaktivní okno Node.js v kontextové nabídce projektu](../javascript/media/interactivewindow-open-from-project.png)
 
-Výchozí klíče místní otevřete interaktivní okno Node.js se **[CTRL] + K, N**. Nebo na panelu nástrojů můžete otevřít okno výběrem **zobrazení** > **Windows** > **interaktivní okno Node.js**.
+Výchozí zkratkové klávesy pro otevření interaktivního okna Node.js jsou **[CTRL] + K, N**. Nebo můžete otevřít okno z panelu nástrojů výběrem **možnosti Zobrazit** > interaktivní okno aplikace**Windows** > **Node.js**.
 
-## <a name="use-the-repl"></a>Použití REPL
+## <a name="use-the-repl"></a>Použijte REPL
 
-Po otevření, můžete zadávat příkazy.
+Po otevření můžete zadat příkazy.
 
 ![Interaktivní okno Node.js](../javascript/media/interactivewindow.png)
 
-Interaktivní okno má několik předdefinovaných příkazů, které začínají předponou tečka abychom je odlišili od žádné funkce jazyka JavaScript, který je deklarovat. Podporovány jsou následující příkazy:
+Interaktivní okno má několik vestavěných příkazů, které začínají tečkovou předponou, aby se odlišily od jakékoli deklarované funkce JavaScriptu. Podporovány jsou následující příkazy:
 
-**.CLS, .clear** vymaže obsah okna editor uživatele zůstanou nedotčena kontext historie a spuštění.
+**.cls, .clear** Vymaže obsah okna editoru a ponechá historii a kontext spuštění beze změny.
 
-**.help** zobrazí nápovědu na zadaný příkaz nebo na všechny dostupné příkazy a klávesové zkratky, pokud není zadaný žádný.
+**.help** Zobrazí nápovědu k zadanému příkazu nebo ke všem dostupným příkazům a vazbám klíčů, pokud není zadánžádný.
 
-**.Info** zobrazuje informace o aktuální použité Node.js spustitelný soubor.
+**.info** Zobrazuje informace o aktuálním použitém spustitelném souboru Node.js.
 
-**.npm** spouští příkaz npm. Pokud řešení obsahuje více než jeden projekt, zadejte cílový projekt pomocí `.npm [projectname] <npm arguments>`.
+**.npm** Spustí příkaz npm. Pokud řešení obsahuje více než jeden projekt, `.npm [projectname] <npm arguments>`zadejte cílový projekt pomocí .
 
-**.reset** do původního stavu, uchovat historii obnoví prostředí pro spuštění.
+**.reset** Obnoví spuštění prostředí do počátečního stavu, zachovat historii.
 
-**.Save** uloží aktuální relaci REPL do souboru.
+**.uložit** Uloží aktuální relaci REPL do souboru.

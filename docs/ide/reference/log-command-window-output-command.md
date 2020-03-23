@@ -14,15 +14,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b6ba8fb419726018bd089e217386ab5dbd6a9c33
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568656"
 ---
 # <a name="log-command-window-output-command"></a>Okno výstupu příkazů protokolu – příkaz
 
-Zkopíruje všechny vstupy a výstupy z **příkazového** okna do souboru.
+Zkopíruje veškerý vstup a výstup z okna **Příkaz** do souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,38 +30,38 @@ Zkopíruje všechny vstupy a výstupy z **příkazového** okna do souboru.
 Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 
 `filename`\
-Volitelné. Název souboru protokolu. Ve výchozím nastavení se soubor vytvoří ve složce profilu uživatele. Pokud název souboru již existuje, protokol je připojen na konec stávajícího souboru. Pokud není zadán žádný soubor, je použit poslední zadaný soubor. Pokud žádný z předchozích souborů neexistuje, vytvoří se výchozí soubor protokolu s názvem cmdline. log.
+Nepovinný parametr. Název souboru protokolu. Ve výchozím nastavení je soubor vytvořen ve složce profilu uživatele. Pokud název souboru již existuje, protokol je připojen na konec existujícího souboru. Pokud není zadán žádný soubor, použije se poslední zadaný soubor. Pokud neexistuje žádný předchozí soubor, je vytvořen výchozí soubor protokolu, který se nazývá cmdline.log.
 
 > [!TIP]
-> Pokud chcete změnit umístění, kam se soubor protokolu uloží, zadejte úplnou cestu k souboru, která je ohraničená uvozovkami, pokud cesta obsahuje mezery.
+> Chcete-li změnit umístění, kam je uložen soubor protokolu, zadejte úplnou cestu k souboru obklopenou uvozovkami, pokud cesta obsahuje mezery.
 
 ## <a name="switches"></a>Přepínače
 
 /on\
-Volitelné. Spustí protokol pro **příkazové** okno v zadaném souboru a připojí soubor s novými informacemi.
+Nepovinný parametr. Spustí protokol okna **Příkaz** v zadaném souboru a připojí soubor k novým informacím.
 
 /off\
-Volitelné. Zastaví protokol okna **příkazového** řádku.
+Nepovinný parametr. Zastaví protokol pro okno **Příkaz.**
 
-/overwrite\
-Volitelné. Pokud soubor zadaný v argumentu `filename` odpovídá existujícímu souboru, je soubor přepsán.
+/přepsat\
+Nepovinný parametr. Pokud soubor zadaný `filename` v argumentu odpovídá existujícímu souboru, je soubor přepsán.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud není zadaný žádný soubor, ve výchozím nastavení se vytvoří soubor cmdline. log. Ve výchozím nastavení je alias tohoto příkazu protokolem.
+Pokud není zadán žádný soubor, soubor cmdline.log je vytvořen ve výchozím nastavení. Ve výchozím nastavení je alias pro tento příkaz Protokol.
 
 ## <a name="examples"></a>Příklady
 
-Tento příklad vytvoří nový soubor protokolu cmdlog a spustí protokol příkazů.
+Tento příklad vytvoří nový soubor protokolu, cmdlog a spustí protokol příkazů.
 
 ```cmd
 >Tools.LogCommandWindowOutput cmdlog
 ```
 
-Tento příklad zastaví příkazy protokolování.
+Tento příklad zastaví protokolování příkazů.
 
 ```cmd
 >Tools.LogCommandWindowOutput /off
@@ -73,9 +73,9 @@ Tento příklad obnoví protokolování příkazů v dříve použitém souboru 
 >Tools.LogCommandWindowOutput /on
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
-- [okno Příkaz](../../ide/reference/command-window.md)
-- [Pole Najít/příkaz](../../ide/find-command-box.md)
-- [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)
+- [Příkazové okno](../../ide/reference/command-window.md)
+- [Pole Najít/Příkaz](../../ide/find-command-box.md)
+- [Aliasy příkazů Visual Studia](../../ide/reference/visual-studio-command-aliases.md)

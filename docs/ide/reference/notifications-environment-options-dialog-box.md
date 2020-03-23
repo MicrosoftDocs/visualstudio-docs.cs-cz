@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 monikerRange: vs-2017
 ms.openlocfilehash: d7f2f5606f658288db90049c0069c9716056a237
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72666443"
 ---
-# <a name="notifications-environment-options-dialog-box"></a>Dialogová okna oznámení, prostředí, možnosti
+# <a name="notifications-environment-options-dialog-box"></a>Dialogové okno Oznámení, prostředí, Možnosti
 
-Tuto možnost použijte, pokud chcete zastavit ignorování všech oznámení, která jste dříve zvolili pro ignorování v dialogovém okně **oznámení** . Další informace najdete v tématu [aktualizace sady Visual Studio](../../install/update-visual-studio.md).
+Tuto možnost použijte, chcete-li přestat ignorovat všechna oznámení, která jste se dříve rozhodli ignorovat prostřednictvím dialogového okna **Oznámení.** Další informace naleznete v [tématu Update Visual Studio](../../install/update-visual-studio.md).

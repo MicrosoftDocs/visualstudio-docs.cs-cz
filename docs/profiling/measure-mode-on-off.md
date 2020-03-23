@@ -1,5 +1,5 @@
 ---
-title: Zapnutí nebo vypnutí režimu měření | Dokumentace Microsoftu
+title: Režim měření Zapnutí a vypnutí | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,18 +13,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fd3eaf1df585ac9c95355c0677934bee1ba3c09a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62830821"
 ---
-# <a name="measure-mode-onoff"></a>Zapnout nebo vypnout režim míry
-Pomocí tohoto nástroje můžete přesně změřit dobu na časové ose. Pokud chcete povolit režim míry, klikněte na tlačítko měr, (který má ikonu pravítka) a potom přetáhněte na časové ose. Při přetahování, Všimněte si, že oblast pod ukazatelem je zvýrazněn žlutě a měření času se zobrazí na panelu nástrojů na pravé straně tlačítka. Tato hodnota se vypočítá dynamicky při přetahování tak, aby umožňují okamžitě zjistit, jak dlouho trvá konkrétní události. Když uvolníte tlačítko myši, časová hodnota zůstává viditelná.
+# <a name="measure-mode-onoff"></a>Zapisování/vypínání režimu měření
+Pomocí tohoto nástroje můžete přesně změřit dobu v časové ose. Chcete-li režim měření povolit, klepněte na tlačítko měření (které má ikonu pravítka) a potom přetáhněte na časovou osu. Při tažení si všimněte, že oblast pod ukazatelem je zvýrazněna žlutě a měřený čas se zobrazí na panelu nástrojů vpravo od tlačítka. Tato hodnota se počítá dynamicky při tažení, takže můžete okamžitě zobrazit, jak dlouho trvá určitá událost. Po uvolnění tlačítka myši zůstane viditelná hodnota času.
 
- Měření procesu můžete opakovat, ale je zobrazena pouze nejnovější měření. Klikněte na tlačítko míru znovu k vypnutí režimu míry.
+ Proces měření můžete opakovat, ale zobrazí se pouze nejnovější měření. Dalším klepnutím na tlačítko měření režim míry vypnete.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Správa kanálů](../profiling/manage-channels.md)
-- [Ovládací prvek Lupa (zobrazení vláken)](../profiling/zoom-control-threads-view.md)
+- [Ovládání lupy (zobrazení vláken)](../profiling/zoom-control-threads-view.md)
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

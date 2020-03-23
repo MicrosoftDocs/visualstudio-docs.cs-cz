@@ -1,65 +1,65 @@
 ---
-title: Visual Studio for Mac Tools for Unity
-description: Představení Visual Studio Tools for Unity rozšíření
+title: Visual Studio pro Mac Nástroje pro jednotu
+description: Představujeme rozšíření Visual Studio Tools for Unity
 author: therealjohn
 ms.author: johmil
 ms.date: 05/25/2018
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
 ms.openlocfilehash: f275288ea54b4b24996825aeb14c7a55ee3a3018
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "62986818"
 ---
-# <a name="visual-studio-for-mac-tools-for-unity"></a>Visual Studio for Mac Tools for Unity
+# <a name="visual-studio-for-mac-tools-for-unity"></a>Visual Studio pro Mac Nástroje pro jednotu
 
-![Stylizované obrázek Unity a Visual Studio pro Mac](media/vsmac-tools-unity-image1.png)
+![Stylizovaný obraz Unity a Visual Studia pro Mac](media/vsmac-tools-unity-image1.png)
 
 Visual Studio for Mac Tools for Unity je bezplatné rozšíření sady Visual Studio, které promění sadu Visual Studio for Mac ve výkonný nástroj pro vývoj her a aplikací pro různé platformy pomocí platformy Unity.
 
-Integrace Unity spadá mimo pole v sadě Visual Studio pro Mac a Visual Studio pro Mac od Unity 2018.1, je výchozí C# integrované vývojové prostředí pro projekty Unity.
+Integrace unity je součástí po vybalení z krabice v Sadě Visual Studio pro Mac a počínaje Unity 2018.1, Visual Studio pro Mac je výchozí C# IDE pro projekty Unity.
 
 ## <a name="overview"></a>Přehled
 
-Tady jsou některé klíčové funkce sady Visual Studio for Mac Tools for Unity:
+Tady jsou některé z klíčových funkcí Visual Studia pro Mac Tools for Unity:
 
-### <a name="compatible-with-visual-studio-for-mac-community-edition"></a>Kompatibilní s Visual Studiem pro Mac Community Edition
+### <a name="compatible-with-visual-studio-for-mac-community-edition"></a>Kompatibilní s Visual Studio pro Mac Community Edition
 
-[Visual Studio pro Mac Community Edition](https://visualstudio.microsoft.com/) je k dispozici pro bezplatné a jako součást balíčku s Unity nainstaluje počínaje Unity 2018.1. Najdete v sadě Visual Studio for Mac Tools for Unity [dokumentaci k instalaci](setup-vsmac-tools-unity.md) Další informace.
+[Visual Studio for Mac Community Edition](https://visualstudio.microsoft.com/) je k dispozici zdarma a je dodáváno s instalacemi Unity od Unity 2018.1. Další informace najdete v [dokumentaci k nastavení](setup-vsmac-tools-unity.md) Visual Studia for Mac Tools for Unity.
 
-### <a name="intellisense-for-unity-messages"></a>Technologie IntelliSense pro zprávy Unity
+### <a name="intellisense-for-unity-messages"></a>Zprávy IntelliSense for Unity
 
-Technologie IntelliSense můžete rychle a snadno [implementovat zprávy Unity](using-vsmac-tools-unity.md#intellisense-for-unity-messages) jako `OnCollisionEnter`, včetně jejich parametry.
+Technologie IntelliSense umožňuje rychlou a [snadnou implementaci zpráv Unity,](using-vsmac-tools-unity.md#intellisense-for-unity-messages) jako je `OnCollisionEnter`, včetně jejich parametrů.
 
-### <a name="superior-debugging"></a>Nadřazené ladění
+### <a name="superior-debugging"></a>Vynikající ladění
 
-Visual Studio for Mac Tools for Unity podporuje všechny [ladění](using-vsmac-tools-unity.md#unity-debugging) funkce, které očekáváte, že ze sady Visual Studio:
+Visual Studio for Mac Tools for Unity podporuje všechny funkce [ladění,](using-vsmac-tools-unity.md#unity-debugging) které očekáváte od Sady Visual Studio:
 
-* Nastavit zarážky, včetně podmíněné zarážky.
-* Vyhodnocujte složité výrazy v okně kukátko.
-* Kontrola a změny hodnotu proměnné a argumenty.
-* K podrobnostem složité objekty a datových struktur.
+* Nastavte zarážky, včetně podmíněných zarážek.
+* Vyhodnoťte složité výrazy v okně Kukátka.
+* Zkontrolujte a upravte hodnotu proměnných a argumentů.
+* Přechod k podrobnostem o složitých objektech a datových strukturách.
 
-### <a name="powerful-refactoring-and-context-actions"></a>Výkonné Refaktoring a kontext akce
+### <a name="powerful-refactoring-and-context-actions"></a>Výkonné refaktoringové a kontextové akce
 
-Vytvářejte další použitelné kód s využitím rychlé nabídky a klávesové zkratky pro [přejmenování, refaktoring a kontextu akce](refactoring.md).
+Napište více použitelného kódu pomocí rychlých nabídek a klávesových zkratek pro [přejmenování, refaktoring a kontextové akce](refactoring.md).
 
-### <a name="browse-and-add-new-files"></a>Procházet a přidávat nové soubory
+### <a name="browse-and-add-new-files"></a>Procházení a přidávání nových souborů
 
-Procházet projekty Unity a [přidat složky, skripty nebo shadery](using-vsmac-tools-unity.md#adding-new-unity-files-and-folders), vše v rámci sady Visual Studio pro Mac integrovaného vývojového prostředí.
+Procházet unity projekty a [přidat složky, skripty nebo shadery](using-vsmac-tools-unity.md#adding-new-unity-files-and-folders), to vše v rámci Visual Studio pro Mac IDE.
 
-### <a name="use-familiar-key-bindings"></a>Použití známých klávesové zkratky
+### <a name="use-familiar-key-bindings"></a>Použití známých vazeb klíčů
 
-Zvyšte produktivitu tím, že pomocí klávesové zkratky, které znáte. Visual Studio for Mac obsahuje známou [klíče vazby](customizing-the-ide.md) pro mnoho oblíbenými prostředími IDE, jako je Visual Studio na Windows, ReSharper, Visual Studio Code a Xcode.
+Zvyšte produktivitu pomocí klíčových vazeb, které znáte. Visual Studio for Mac poskytuje známé [klíče vazby](customizing-the-ide.md) pro mnoho populárních IDE, jako je například Visual Studio na Windows, ReSharper, Visual Studio Code a Xcode.
 
-### <a name="customize-the-visual-theme"></a>Upravit vizuální motiv
+### <a name="customize-the-visual-theme"></a>Přizpůsobení vizuálního motivu
 
-Poskytnout rozlišení rest se zahrnutou [tmavý motiv](customizing-the-ide.md).
+Dejte svým očím odpočinek s součástí [tmavé téma](customizing-the-ide.md).
 
-## <a name="tips-for-unity-developers-getting-started-with-visual-studio-for-mac"></a>Tipy pro vývojáře Unity Začínáme se sadou Visual Studio pro Mac
+## <a name="tips-for-unity-developers-getting-started-with-visual-studio-for-mac"></a>Tipy pro vývojáře Unity začínáme s Visual Studio pro Mac
 
-Tyto odkazy popisují užitečných funkcí pro vývojáře Unity jenom od verze Visual Studio pro Mac:
+Tyto odkazy vysvětlují užitečné funkce pro vývojáře Unity, kteří právě začínají s Visual Studio pro Mac:
 
-* [Přizpůsobení integrovaného vývojového prostředí](customizing-the-ide.md) – Další informace jak [změnit vizuální motiv](customizing-the-ide.md#dark-theme) nebo přejít na další známé [klíče vazby](customizing-the-ide.md#key-bindings) schéma.
-* [Editor zdrojového kódu](source-editor.md) – zjistěte, jak Visual Studio for Mac mohli psát lepší kód rychleji a snadněji, včetně běžných [klávesové zkratky](keyboard-shortcuts.md).
+* [Přizpůsobení ide](customizing-the-ide.md) – Zjistěte, jak [změnit vizuální motiv](customizing-the-ide.md#dark-theme) nebo přepnout na známější schéma [vazby klíčů.](customizing-the-ide.md#key-bindings)
+* [Editor zdrojů](source-editor.md) – Zjistěte, jak visual studio pro Mac může rychlejší a jednodušší psaní kódu, včetně [běžných klávesových zkratek](keyboard-shortcuts.md).

@@ -1,5 +1,5 @@
 ---
-title: Zobrazení jader | Dokumentace Microsoftu
+title: Zobrazení jader | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,20 +13,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 99b26b913a42a563e0226ff2697b947684dfec53
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62553055"
 ---
 # <a name="cores-view"></a>Zobrazení jader
-**Zobrazení jader** ukazuje, jak bylo vlákno provádění mapované na logický procesor jader (zvolte **analyzovat** > **Vizualizátor souběžnosti** spusťte Vizualizér souběžnosti). Pokud píšete serverových aplikací, toto zobrazení vám může pomoci optimalizovat výkon mezipaměti pomocí nástroje Správa fondu vztahů nebo vlákna. vlákna. Může také pomoct prozkoumat případy, kdy použití spřažení vláken může mít zhoršit problém migrace napříč jádry. Zobrazení jader má dvě části, graf a legendu.
+**Zobrazení jader** ukazuje, jak bylo namapováno spuštění vlákna na jádra logického procesoru (zvolte **Analyzovat** > **vizualizaci souběžnosti** a spusťte vizualizér souběžnosti). Pokud píšete serverové aplikace, toto zobrazení vám může pomoci optimalizovat výkon mezipaměti pomocí spřažení vláken nebo správy fondu vláken. Může také pomoci prozkoumat případy, kdy použití spřažení vláken mohlo zhoršit problém migrace mezi jádry. Zobrazení jader má dvě části, graf a legendu.
 
- Graf zobrazuje počet logických jader na ose y a času na ose x. Každé vlákno v grafu má odlišnou barvu, takže můžete sledovat jeho pohyb mezi jádry v čase. Vlákna v tomto grafu můžete filtrovat tak, že je vyberete v oblasti legend.
+ Graf zobrazuje logická jádra na ose y a čas na ose x. Každé vlákno v grafu má jedinečnou barvu, takže můžete sledovat jeho pohyb mezi jádry v průběhu času. Vlákna v tomto grafu můžete filtrovat tak, že je vyberete v oblasti legendy.
 
- Oblasti legend má záznam pro každou barvu v grafu. Každá položka zobrazuje barva vlákna a název, číslo přepnutí kontextu mezi jádry, celkový počet přepnutí kontextu a procento přepínačů kontextů napříč jádry. Legenda je seřazený podle počtu přepínače kontextu mezi jádry v sestupném pořadí. Vypíše vlákna, které provedených během zobrazený časový rozsah.  Seznam se aktualizuje, pokud zvětšování nebo posouvání.
+ Oblast legendy má položku pro každou barvu v grafu. Každá položka zobrazuje barvu a název vlákna, počet přepnutí kontextu mezi jádry, celkový počet přepnutí kontextu a procento přepnutí kontextu, které protínají jádra. Legenda je seřazena podle počtu přepínačů kontextu mezi jádry v sestupném pořadí. Obsahuje pouze vlákna, která byla spuštěna během zobrazeného časového rozsahu.  Seznam se aktualizuje, pokud přiblížíte nebo posunete.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vizualizér souběžnosti](../profiling/concurrency-visualizer.md)
 - [Zobrazení využití](../profiling/utilization-view.md)
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

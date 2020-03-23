@@ -1,5 +1,5 @@
 ---
-title: Na základě sestava pro viditelný časový rozsah | Dokumentace Microsoftu
+title: Sestava založená na viditelném časovém rozsahu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,18 +13,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fd4758f5484089e58f50462300f48f76f1538381
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "63002343"
 ---
-# <a name="report-based-on-visible-time-range"></a>Sestava pro viditelný časový rozsah
-Profil zobrazení sestavy, které jsou založeny na současném viditelném časovém rozsahu a kanály. Chcete-li zobrazit podrobnosti pro různé podmnožiny dat, klikněte na položky v legendě.
+# <a name="report-based-on-visible-time-range"></a>Sestava založená na viditelném časovém rozsahu
+Zobrazení Profil zobrazuje sestavy, které jsou založeny na aktuálně viditelném časovém rozsahu a kanálech. Chcete-li zobrazit podrobnosti o různých podmnožinech dat, klepněte na položky v legendě.
 
- Další informace o datech najdete v tabulkách v tomto poli.
+ Více informací o datech naleznete v tabulkách zde.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Žádná aktivita vláken k zobrazení](../profiling/no-thread-activity-to-show-threads-view.md)
 - [Sestava profilu spuštění](../profiling/execution-profile-report.md)
 - [Čas synchronizace](../profiling/synchronization-time.md)

@@ -1,5 +1,5 @@
 ---
-title: Aktivita GPU (jiné procesy) | Dokumentace Microsoftu
+title: Aktivita GPU (jiné procesy) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +12,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9a502590c20fce1455d9259ae681178d9cd48e33
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62969499"
 ---
 # <a name="gpu-activity-other-processes"></a>Aktivita GPU (jiné procesy)
-**Aktivita GPU (jiné procesy)** segmenty v zobrazení vlákna Vizualizátor souběžnosti představují časy, kdy GPU zpracovává požadavky jménem jiných procesů v systému. Tyto požadavky jsou odesílány GPU jako pakety paměti (DMA) přístup.  Délka segment, který představuje časový interval, zpracování paketu GPU.
+Segmenty **aktivity GPU (ostatní procesy)** v zobrazení vláken vizualizéru souběžnosti představují časy, kdy GPU zpracovával požadavky jménem jiných procesů v systému. Tyto požadavky jsou odesílány GPU jako pakety přímého přístupu do paměti (DMA).  Délka segmentu představuje dobu, po kterou byl paket zpracován grafickým procesorem.
 
- Když vyberete tento druh segmentu, sestavy na **aktuální** karta zobrazuje informace o paketu, který byl zpracován.  Tyto informace zahrnují množství času, které paket čekání ve frontě hardwaru, který je spojen s modul rozhraní DirectX, proces, který odešle paket a čas, který je potřebný ke zpracování paketu.
+ Když vyberete tento druh segmentu, sestava na kartě **Aktuální** zobrazí informace o zpracovávaném paketu.  Informace zahrnují dobu, po kterou paket čekal ve frontě hardwaru, která je přidružena k modulu DirectX, proces, který paket odeslal, a čas potřebný ke zpracování paketu.

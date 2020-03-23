@@ -1,5 +1,5 @@
 ---
-title: Referenční dokumentace knihoven jazyka C | Dokumentace Microsoftu
+title: C Odkaz na knihovnu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 570c3c1cfa4ee42b0b7262b92fba3c936297387c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440272"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "64826676"
 ---
-# <a name="c-library-reference"></a>Referenční dokumentace knihoven jazyka C
-Tato část obsahuje referenční informace k sadě SDK Vizualizéru souběžnosti.
+# <a name="c-library-reference"></a>Odkaz na knihovnu C
+Tato část obsahuje referenční informace pro souběžnost vizualizér SDK.
 
 > [!NOTE]
-> Standard jazyka C vyhrazuje použití identifikátorů, které začínají podtržítkem (`_`) znak, například pro implementaci knihoven. Nepoužívejte názvy začínající podtržítkem ve vašem kódu. Chování kódu elementy, jejichž názvy postupujte podle tohoto konvence není zaručeno a se může změnit v budoucích vydáních. Z těchto důvodů jsou takovéto prvky kódu z této dokumentace vynechány.
+> Standard jazyka C si vyhrazuje použití identifikátorů,`_`které začínají znakem podtržítka ( ) pro implementace, jako jsou knihovny. Nepoužívejte názvy začínající podtržítkem v kódu. Chování prvků kódu, jejichž názvy postupujte podle této konvence nejsou zaručeny a mohou se změnit v budoucích verzích. Z těchto důvodů jsou tyto prvky kódu vynechány z této dokumentace.

@@ -1,5 +1,5 @@
 ---
-title: Časová osa zobrazení jader | Dokumentace Microsoftu
+title: Časová osa zobrazení jader | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,15 +13,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7ae006788f2704459de7ef32f01385e196e28c04
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62553107"
 ---
-# <a name="cores-view-timeline"></a>Časová osa zobrazení jader
-Každý řádek na časové ose představuje logický procesor core PROFILOVANÉHO systému. Pro každý řádek vodorovná osa zobrazuje, které vlákno běžel na logické jádro k danému bodu v čase. Myší nad barvu zájmu na časové ose vrátit popisek, který identifikuje vlákna. Usnadňující identifikaci vlákna, legendy v dolní části okna ukazuje, co každá barva představuje. Pomocí nástroje přiblížení a oddálení, zvětšení kliknutím a přetažením nebo stisknutím klávesy CTRL a přesunutím kolečka myši. Přiblížení konzistence zachovaný při přepínání mezi zobrazením jader a zobrazení vláken.
+# <a name="cores-view-timeline"></a>Cores Zobrazit časovou osu
+Každý řádek v časové ose představuje logické jádro procesoru v profilovaném systému. Pro každý řádek vodorovná osa ukazuje, které vlákno bylo spuštěno na logickém jádru v daném okamžiku. Můžete najet na jenom barvy, která vás zajímá na časové ose, a vrátit tak popisek, který identifikuje vlákno. Chcete-li pomoci s identifikací podprocesu, legenda v dolní části okna ukazuje, co jednotlivé barvy představují. Pomocí nástroje lupa přibližte a oddalte zobrazení kliknutím a přetažením nebo stisknutím klávesy CTRL a pohybem kolečka myši. Konzistence zvětšení se udržuje při přepínání mezi zobrazením jader a zobrazením vláken.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zobrazení jader](../profiling/cores-view.md)
-- [Ovládací prvek Lupa (zobrazení vláken)](../profiling/zoom-control-threads-view.md)
+- [Ovládání lupy (zobrazení vláken)](../profiling/zoom-control-threads-view.md)

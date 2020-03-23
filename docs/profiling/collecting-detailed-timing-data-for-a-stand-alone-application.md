@@ -1,5 +1,5 @@
 ---
-title: 'Příkazový řádek profileru: podrobnosti časování dat pro samostatnou aplikaci'
+title: 'Příkazový řádek Profiler: Podrobnosti dat časování pro samostatnou aplikaci'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,42 +13,42 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: a0c0fae312b5c193774d9acf8934a0688b2ed69e
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779607"
 ---
-# <a name="collect-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line"></a>Shromažďování podrobných dat časování pro samostatné aplikace pomocí příkazového řádku profileru
-Tato část popisuje postupy a možnosti shromažďování podrobných údajů o výkonu pro komponentu klienta (samostatné) pomocí metody instrumentace z příkazového řádku.
+# <a name="collect-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line"></a>Shromažďování podrobných časovacích dat pro samostatnou aplikaci pomocí příkazového řádku profileru
+Tato část popisuje postupy a možnosti pro shromažďování podrobných dat o výkonu pro klientskou (samostatnou) komponentu pomocí metody instrumentace z příkazového řádku.
 
-## <a name="common-tasks"></a>Běžné úlohy
+## <a name="common-tasks"></a>Běžné úkoly
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
-|**Profilace a .NET Framework aplikace pomocí instrumentace**|-   [Postupy: instrumentace komponenty rozhraní .NET a shromažďování podrobných dat časování](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-timing-data.md)|
-|**Profilace C/C++ aplikace pomocí instrumentace**|-   [Postupy: instrumentace nativní komponenty a shromažďování podrobných dat časování](../profiling/how-to-instrument-a-native-component-and-collect-timing-data.md)|
-|**Přidat data interakce vrstev**|-   [shromažďovat data interakce vrstev](../profiling/adding-tier-interaction-data-from-the-command-line.md)|
+|**Profilaplikace rozhraní .NET Framework pomocí instrumentace**|-   [Postup: Instrumentujte komponentu .NET a shromažďujte podrobná časovací data](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-timing-data.md)|
+|**Profilaplikace C/C++ pomocí instrumentace**|-   [Postup: Instrumentujte nativní komponentu a shromažďujte podrobné časovací údaje](../profiling/how-to-instrument-a-native-component-and-collect-timing-data.md)|
+|**Přidání dat interakce na úrovni**|-   [Shromažďování dat interakce vrstvy](../profiling/adding-tier-interaction-data-from-the-command-line.md)|
 
 ## <a name="related-tasks"></a>Související úlohy
 
 ### <a name="profile-stand-alone-applications"></a>Profilovat samostatné aplikace
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
-|**Profilování aplikací pomocí vzorkování**|-   [shromažďovat statistiky aplikací pomocí vzorkování](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|
-|**Profilové přidělení paměti .NET a uvolňování paměti**|-   [shromažďovat data o .NET Framework paměti](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md)|
-|**Kolize prostředku profilu a aktivita vlákna**|-   [shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|
+|**Profilové aplikace pomocí vzorkování**|-   [Shromažďujte statistiky aplikací pomocí vzorkování](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|
+|**Přidělení a uvolnění paměti profil .NET**|-   [Shromažďování paměťových dat rozhraní .NET Framework](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md)|
+|**Konflikty prostředků profilu a aktivita podprocesu**|-   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|
 
-### <a name="profile-by-using-the-instrumentation-method"></a>Profilování pomocí metody instrumentace
+### <a name="profile-by-using-the-instrumentation-method"></a>Profil pomocí metody instrumentace
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
-|**Profilování aplikací ASP.NET**|-   [shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|
-|**Profilovací služby**|-   [shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md)|
+|**Profilové aplikace ASP.NET**|-   [Shromažďování podrobných časových dat pomocí instrumentace](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|
+|**Profilové služby**|-   [Shromažďování podrobných časových dat pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md)|
 
 ### <a name="analyze-instrumentation-data-views-and-reports"></a>Analýza zobrazení a sestav dat instrumentace
 - [Zobrazení dat metody instrumentace](../profiling/instrumentation-method-data-views.md)
 
-## <a name="reference"></a>Odkaz
+## <a name="reference"></a>Referenční informace
 - [Referenční dokumentace nástrojů příkazového řádku pro profilaci](../profiling/command-line-profiling-tools-reference.md)

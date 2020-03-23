@@ -1,5 +1,5 @@
 ---
-title: Vizualizace událostí EventSource v podobě značek | Dokumentace Microsoftu
+title: Vizualizace událostí Zdroje událostí jako značek | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3a10022a-5c37-48b1-a833-dd35902176b6
@@ -9,66 +9,66 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bd6339b3f55b4a4c9a1e2c90ff3183a36f16c178
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63422098"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "64811544"
 ---
-# <a name="visualize-eventsource-events-as-markers"></a>Vizualizace událostí EventSource v podobě značek
-Vizualizátor souběžnosti můžete zobrazit události EventSource jako značky a můžete řídit způsob zobrazení značek. Chcete-li zobrazit značky EventSource, zaregistrujte identifikátor GUID zprostředkovatele trasování událostí pro Windows s použitím [Upřesnit nastavení](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) dialogové okno. Vizualizátor souběžnosti nemá výchozí konvence pro reprezentaci událostí EventSource jako [značky příznaků](../profiling/flag-markers.md), [značky Span](../profiling/span-markers.md), a [značky zpráv](../profiling/message-markers.md). Můžete upravit způsob zobrazení událostí EventSource tak, že přidáte vlastní pole k událostem. Další informace o značkách najdete v tématu [značek Vizualizéru souběžnosti](../profiling/concurrency-visualizer-markers.md). Další informace o událostí EventSource, naleznete v tématu <xref:System.Diagnostics.Tracing>.
+# <a name="visualize-eventsource-events-as-markers"></a>Vizualizace událostí EventSource jako značek
+Vizualizér souběžnosti může zobrazit události EventSource jako značky a můžete určit, jak se značky zobrazí. Chcete-li zobrazit značky EventSource, zaregistrujte identifikátor GUID poskytovatele ETW pomocí dialogového okna [Upřesnit nastavení.](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) Vizualizér souběžnosti má výchozí konvence představující události EventSource jako [značky příznaku](../profiling/flag-markers.md), [značky rozpětí](../profiling/span-markers.md)a [značky zpráv](../profiling/message-markers.md). Způsob zobrazení událostí EventSource můžete přizpůsobit přidáním vlastních polí k událostem. Další informace o značkách naleznete v [tématu Značky vizuálu souběžnosti](../profiling/concurrency-visualizer-markers.md). Další informace o událostech <xref:System.Diagnostics.Tracing>EventSource naleznete v tématu .
 
 ## <a name="default-visualization-of-eventsource-events"></a>Výchozí vizualizace událostí EventSource
- Ve výchozím nastavení používá Vizualizátor souběžnosti následující konvence pro reprezentaci událostí EventSource.
+ Ve výchozím nastavení visualizátor souběžnosti používá následující konvence k reprezentaci událostí EventSource.
 
 ### <a name="marker-type"></a>Typ značky
 
-1. Události, které mají [operační kód](/windows/desktop/WES/eventmanifestschema-opcodetype-complextype) win: spuštění nebo win: zastavení jsou považovány za začátku nebo konci rozsahu, v uvedeném pořadí.  Vnořený nebo překrývající se rozsahy nelze zobrazit. Nelze zobrazit páry událostí, které v jednom vlákně začínají i končí na další.
+1. Události, které mají [Opcode](/windows/desktop/WES/eventmanifestschema-opcodetype-complextype) win:Start nebo win:Stop jsou považovány za začátek nebo konec rozpětí, resp.  Vnořené nebo překrývající se rozsahy nelze zobrazit. Dvojice událostí, které začínají na jednom vlákně a končí v jiném, nelze zobrazit.
 
-2. Událost, jejichž operační kód není win: Start ani win: zastavení je považováno za příznak značky, pokud jeho [úroveň](/windows/desktop/WES/defining-severity-levels) (pole EVENT_RECORD. EVENT_HEADER. EVENT_DESCRIPTOR) je win: podrobné nebo vyšší.
+2. Událost, jejíž Opcode není win:Start ani win:Stop je považována za příznak značky, pokud jeho [úroveň](/windows/desktop/WES/defining-severity-levels) (pole EVENT_RECORD. EVENT_HEADER. EVENT_DESCRIPTOR) je výhra:Verbose nebo vyšší.
 
 3. Ve všech ostatních případech je událost považována za zprávu.
 
-### <a name="importance"></a>Význam
- Následující tabulka definuje, jak se úroveň události mapuje na významu značky.
+### <a name="importance"></a>Důležitost
+ Následující tabulka definuje, jak se úroveň události mapuje na důležitost značky.
 
-|Úroveň trasování událostí pro Windows|Důležitost Vizualizéru souběžnosti|
+|Úroveň ETW|Význam vizualizéru souběžnosti|
 |---------------|---------------------------------------|
 |win:LogAlways|Normální|
-|Vyhrajte: kritické|Kritická|
-|Windows: Chyba|Kritická|
-|Windows: upozornění|Vysoká|
-|Vyhrajte: informativní|Normální|
-|win:Verbose|Nízká|
-|Větší než win: podrobné|Nízká|
+|výhra:Kritická|Kritická|
+|win:Chyba|Kritická|
+|výhra:Upozornění|Vysoká|
+|výhra:Informační|Normální|
+|vyhrát:Verbose|Nízká|
+|Větší než win:verbose|Nízká|
 
 ### <a name="series-name"></a>Název řady
- Název úlohy události se používá pro název řady. Název řady je prázdný, pokud byla definována žádná úloha pro událost.
+ Název úkolu události se používá pro název řady. Název řady je prázdný, pokud pro událost nebyl definován žádný úkol.
 
 ### <a name="category"></a>Kategorie
- Pokud je úroveň win: kritický nebo win: Chyba a pak do kategorie je výstraha (-1). Kategorie, jinak je výchozí hodnota (0).
+ Pokud je úroveň win:Critical nebo win:Error, pak je kategorie Výstraha (-1). V opačném případě je kategorie výchozí (0).
 
 ### <a name="text"></a>Text
- Pokud zpráva typu printf formátovaný text byl definován pro události, zobrazí se jako popis značky. V opačném případě se popis název události a hodnotu každé datové pole.
+ Pokud byla pro událost definována textová zpráva formátu printf, zobrazí se jako popis značky. V opačném případě je popis název události a hodnota každého pole datové části.
 
 ## <a name="customize-visualization-of-eventsource-events"></a>Přizpůsobení vizualizace událostí EventSource
- Můžete přizpůsobit způsob událostí EventSource zobrazení tak, že přidáte do příslušných polí na událost, jak je popsáno v následujících částech.
+ Způsob zobrazení událostí EventSource můžete přizpůsobit přidáním příslušných polí k události, jak je popsáno v následujících částech.
 
 ### <a name="marker-type"></a>Typ značky
- Použití `cvType` pole bajtů, k řízení druh značky, který se používá k reprezentování události. Zde jsou dostupné hodnoty pro cvType:
+ Pomocí `cvType` pole, bajtu, můžete určit druh značky, která se používá k reprezentaci události. Zde jsou dostupné hodnoty pro cvType:
 
-|Hodnota cvType|Výsledný typ značky|
+|cvTyp|Výsledný typ značky|
 |------------------|---------------------------|
 |0|Zpráva|
-|1|Počáteční značky span|
-|2|Koncové značky span|
+|1|Začátek rozpětí|
+|2|Konec rozpětí|
 |3|Příznak|
 |Všechny ostatní hodnoty|Zpráva|
 
-### <a name="importance"></a>Význam
- Můžete použít `cvImportance` pole bajtů, k řízení nastavení důležitost události EventSource. Doporučujeme však řízení zobrazených důležitost události pomocí jeho úroveň.
+### <a name="importance"></a>Důležitost
+ Toto `cvImportance` pole, bajt, můžete použít k řízení nastavení důležitosti události EventSource. Doporučujeme však řídit zobrazenou důležitost události pomocí úrovně.
 
-|Hodnota cvImportance|Důležitost Vizualizéru souběžnosti|
+|cvHodnota významu|Význam vizualizéru souběžnosti|
 |------------------------|---------------------------------------|
 |0|Normální|
 |1|Kritická|
@@ -79,19 +79,19 @@ Vizualizátor souběžnosti můžete zobrazit události EventSource jako značky
 |Všechny ostatní hodnoty|Nízká|
 
 ### <a name="series-name"></a>Název řady
- Použití `cvSeries` pole události, řetězce, k řízení název řady, poskytující události EventSource Vizualizátor souběžnosti.
+ Pomocí `cvSeries` pole události, řetězce, můžete řídit název řady, který vizualizér souběžnosti přiděluje události EventSource.
 
 ### <a name="category"></a>Kategorie
- Použití `cvCategory` pole bajtů, k řízení kategorii, která poskytuje Vizualizátor souběžnosti události EventSource.
+ Pomocí `cvCategory` pole, bajt, můžete řídit kategorii, kterou vizualizér souběžnosti dává události EventSource.
 
 ### <a name="text"></a>Text
- Použití `cvTextW` pole, řetězec, k řízení popis, který poskytuje Vizualizátor souběžnosti události EventSource.
+ Pomocí `cvTextW` pole, řetězec, k řízení popisu, který vizualizér souběžnosti dává události EventSource.
 
 ### <a name="spanid"></a>SpanID
- Použijte pole cvSpanId, int, tak, aby odpovídaly páry událostí. Hodnota pro každou dvojici spuštění a zastavení událostí, které představují rozsah musí být jedinečný. Obvykle pro souběžné kódu to vyžaduje použití primitiv synchronizace, jako <xref:System.Threading.Interlocked.Exchange%2A> k ověření, že klíč (hodnota, která se používá pro CvSpanID) je správná.
+ Použijte pole cvSpanId, int, aby odpovídaly dvojice událostí. Hodnota pro každou dvojici událostí start/stop, které představují rozsah, musí být jedinečná. Obvykle pro souběžný kód to vyžaduje použití synchronizačních <xref:System.Threading.Interlocked.Exchange%2A> primitiv, například k zajištění, že klíč (hodnota, která se používá pro CvSpanID) je správná.
 
 > [!NOTE]
-> Použití SpanID vnořit rozsahy, zajistí, aby částečně překrývají ve stejném vlákně, nebo povolit jejich spuštění v jednom vlákně a end na jiném není podporována.
+> Použití SpanID vnořovat rozpětí, umožnit jim částečně překrývat na stejném vlákně, nebo umožnit jim začít na jednom vlákně a konec na jiném není podporována.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Značky vizualizéru souběžnosti](../profiling/concurrency-visualizer-markers.md)

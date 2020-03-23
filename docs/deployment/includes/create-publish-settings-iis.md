@@ -1,23 +1,23 @@
 ---
 ms.openlocfilehash: 69f4f4c2b55670d510652b44a203b9f0eafcc53a
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "68143548"
 ---
 
-1. Zavřete a znovu otevřete konzolu pro správu služby IIS na zobrazit aktualizovanou konfiguraci možností v uživatelském rozhraní.
+1. Zavřete a znovu otevřete Konzolu pro správu služby IIS a zobrazte aktualizované možnosti konfigurace v ui.
 
-2. Ve službě IIS, klikněte pravým tlačítkem myši **výchozí webový server**, zvolte **nasadit** > **konfigurace nasazení publikování na webu**.
+2. Ve službě IIS klepněte pravým tlačítkem myši na **výchozí web**a zvolte **možnost Nasadit** > **konfigurovat publikování na nasazení webu**.
 
-    ![Konfiguraci nasazení webu](../../deployment/media/tutorial-configure-web-deploy-publishing.png)
+    ![Konfigurace konfigurace nasazení webu](../../deployment/media/tutorial-configure-web-deploy-publishing.png)
 
-3. V **konfigurace nasazení publikování na webu** dialogovém okně zkontrolujte nastavení.
+3. V dialogovém okně **Konfigurovat publikování na nasazení webu** zkontrolujte nastavení.
 
-4. Klikněte na tlačítko **nastavení**.
+4. Klepněte na **položku Nastavení**.
 
-    V **výsledky** panelu ukazuje výstup, které přístupová práva jsou udělena pro zadaného uživatele a že soubor s *.publishsettings* přípona souboru byl vytvořen v části znázorněné v dialogovém okně pole.
+    V panelu **Výsledky** výstup ukazuje, že přístupová práva jsou udělena určenému uživateli a že soubor s příponou *souboru .publishsettings* byl vygenerován v umístění zobrazeném v dialogovém okně.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -34,14 +34,14 @@ ms.locfileid: "68143548"
     </publishData>
     ```
 
-    V závislosti na konfiguraci systému Windows Server a služby IIS najdete v článku různé hodnoty v souboru XML. Tady je několik podrobností o hodnoty, které se zobrazí:
+    V závislosti na konfiguraci systému Windows Server a služby IIS se v souboru XML zobrazují různé hodnoty. Zde je několik podrobností o zobrazených hodnotách:
 
-   * *Msdeploy.axd* soubor odkazuje `publishUrl` atribut je dynamicky generovaný soubor obslužné rutiny HTTP pro nasazení webu. (Pro testovací účely `http://myhostname:8172` obecně funguje stejně.)
-   * `publishUrl` Je port nastaven na port 8172, což je výchozí nastavení pro nasazení webu.
-   * `destinationAppUrl` Je port nastaven na port 80, což je výchozí hodnota pro službu IIS.
-   * Pokud se nemůžete připojit ke vzdálenému hostiteli v sadě Visual Studio pomocí názvu hostitele (v následujících krocích), otestujte adresu IP místo názvu hostitele.
+   * Soubor *msdeploy.axd* odkazovaný `publishUrl` v atributu je dynamicky generovaný soubor obslužné rutiny HTTP pro nasazení webu. (Pro účely `http://myhostname:8172` testování, obecně funguje také.)
+   * Port `publishUrl` je nastaven na port 8172, což je výchozí pro nasazení webu.
+   * Port `destinationAppUrl` je nastaven na port 80, což je výchozí pro iis.
+   * Pokud se nemůžete připojit ke vzdálenému hostiteli v sadě Visual Studio pomocí názvu hostitele (v pozdějších krocích), otestujte adresu IP místo názvu hostitele.
 
      > [!NOTE]
-     > Pokud publikujete do IIS a běžící na Virtuálním počítači Azure, je nutné otevřít nasazení webu a portů služby IIS ve skupině zabezpečení sítě. Podrobné informace najdete v tématu [instalace a spuštění služby IIS](/azure/virtual-machines/windows/quick-create-portal#install-web-server).
+     > Pokud publikujete do služby IIS spuštěné na virtuálním počítači Azure, musíte otevřít porty Nasazení webu a IIS ve skupině Zabezpečení sítě. Podrobné informace naleznete v [tématu Instalace a spuštění služby IIS](/azure/virtual-machines/windows/quick-create-portal#install-web-server).
 
-5. Zkopírujte tento soubor do počítače, ve kterém běží sady Visual Studio.
+5. Zkopírujte tento soubor do počítače, ve kterém používáte visual studio.

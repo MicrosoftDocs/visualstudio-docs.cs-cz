@@ -1,5 +1,5 @@
 ---
-title: Nastavení obecných možností relace výkonu | Microsoft Docs
+title: Nastavení obecných možností relace výkonu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,39 +11,39 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 023681b263e6e70048ec7d82d2cee741672989ff
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74773939"
 ---
 # <a name="set-general-performance-session-options"></a>Nastavení obecných možností výkonnostní relace
 
-Metodu kolekce a zásady vytváření názvů dat profilování pro relaci výkonu sady Visual Studio Nástroje pro profilaci můžete nastavit na stránce **Obecné** v dialogovém okně Vlastnosti pro relaci výkonu. Chcete-li otevřít toto dialogové okno z **prohlížeč výkonu**, klikněte pravým tlačítkem myši na výkonnostní relaci a potom klikněte na příkaz **vlastnosti**.
+Metodu kolekce a profilování konvencí pojmenování dat pro relaci výkonu Nástroje profilování sady Visual Studio můžete nastavit na stránce **Obecné** dialogového okna vlastností relace výkonu. Chcete-li otevřít toto dialogové okno z **Průzkumníka výkonu**, klepněte pravým tlačítkem myši na relaci výkonu a potom klepněte na příkaz **Vlastnosti**.
 
-## <a name="choosing-data-collection-methods"></a>Výběr metod shromažďování dat
+## <a name="choosing-data-collection-methods"></a>Výběr metod sběru dat
 
-Metodu základní kolekce nastavíte tak, že vyberete jednu z možností v části **kolekce profilace**. Možnosti jsou popsány v následující tabulce:
-
-|||
-|-|-|
-|**Vzorkování**. Metoda vzorkování shromažďuje informace profilování v pravidelných intervalech. Tato metoda je užitečná pro hledání problémů s využitím procesoru a je navrhovaná metoda pro spuštění většiny šetření výkonu.|- [shromažďování statistik výkonu pomocí vzorkování](../profiling/collecting-performance-statistics-by-using-sampling.md)|
-|**Instrumentace**. Metoda instrumentace vloží do kopie kódu profilace modulu, který zaznamenává každé zadání, ukončení a volání funkce v modulu při spuštění profilace. Tato metoda je užitečná pro shromažďování podrobných informací o časování oddílu kódu a pro porozumění dopadu vstupních a výstupních operací na výkon aplikace.|- [shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md)|
-|**Souběžnost**. Metoda souběžnosti shromažďuje data pro každou událost, která blokuje provádění kódu, například když vlákno čeká na zamčený přístup k prostředku aplikace, který se má uvolnit. Tato metoda je užitečná pro analýzu aplikací s více vlákny.|- [shromažďování dat o souběžnosti vláken a procesů](../profiling/collecting-thread-and-process-concurrency-data.md)|
-
- Data paměti .NET můžete shromažďovat pomocí metod vzorkování nebo instrumentace. Vyberte typ dat v části **profilace paměti .NET**.
+Metodu základní kolekce nastavíte výběrem jedné z možností v části **Profilování kolekce**. Možnosti jsou popsány v následující tabulce:
 
 |||
 |-|-|
-|**Shromažďovat informace o přidělování objektů .NET** Ve výchozím nastavení data obsahují počet a velikost přidělených objektů. Zaškrtnutím nebo zrušením zaškrtnutí tohoto políčka povolíte nebo zakážete shromažďování dat paměti .NET. |- [shromažďování dat o alokaci paměti a době života .NET](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)|
-|**Shromažďovat také informace o životnosti objektů .NET**. Toto políčko zaškrtněte, pokud chcete zahrnout data o generacích uvolňování paměti, které byly použity k uvolnění paměťových objektů.|- [shromažďování dat o alokaci paměti a době života .NET](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md) |
+|**Odběr vzorků**. Metoda odběru vzorků shromažďuje informace o profilování v pravidelných intervalech. Tato metoda je užitečná pro hledání problémů s využitím procesoru a je navrhovanou metodou pro spuštění většiny šetření výkonu.|- [Shromažďování statistik výkonu pomocí vzorkování](../profiling/collecting-performance-statistics-by-using-sampling.md)|
+|**Instrumentace**. Instrumentace metoda vloží do kopie kódu profilování modulu, který zaznamenává každý vstup, ukončení a volání funkce funkcí v modulu během profilování spustit. Tato metoda je užitečná pro shromažďování podrobné informace o časování o části kódu a pro pochopení dopadu vstupních a výstupních operací na výkon aplikace.|- [Shromažďování podrobných časovacích dat pomocí instrumentace](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md)|
+|**Souběžnost**. Metoda souběžnosti shromažďuje data pro každou událost, která blokuje spuštění kódu, například když vlákno čeká na uzamčený přístup k prostředku aplikace, který má být uvolněn. Tato metoda je užitečná pro analýzu vícevláknových aplikací.|- [Shromažďování dat souběžnosti vláken a procesů](../profiling/collecting-thread-and-process-concurrency-data.md)|
+
+ Můžete shromažďovat data paměti .NET pomocí metody vzorkování nebo instrumentace. Typ dat vyberte v části **profilování paměti .NET**.
+
+|||
+|-|-|
+|**Shromažďujte informace o přidělení objektu .NET**. Ve výchozím nastavení data zahrnují počet a velikost přidělených objektů. Zaškrtnutím nebo zrušením zaškrtnutí tohoto políčka povolíte nebo zakážete shromažďování dat paměti .NET. |- [Shromažďování dat přidělení paměti .NET a životnosti](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)|
+|**Shromažďujte také informace o životnosti objektu .NET**. Zaškrtnutím tohoto políčka zahrnete data o generacích uvolňování paměti, které byly použity k uvolnění paměťových objektů.|- [Shromažďování dat přidělení paměti .NET a životnosti](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md) |
 
  Stránka relace profilování se zobrazí, jakmile začnete profilovat aplikaci. Na této stránce můžete profilování pozastavit, obnovit a zastavit.
 
  ![Stránka relace profilování](../profiling/media/prof_profilingsessionpage.png "PROF_ProfilingSessionPage")
 
-## <a name="set-profiling-data-file-options"></a>Nastavení možností datového souboru profilování
+## <a name="set-profiling-data-file-options"></a>Nastavení možností souboru datového souboru profilování
 
 |||
 |-|-|
-|**Sestava**. Ve výchozím nastavení je soubor dat profilování (. vsp) dán názvem profilované aplikace a je umístěn ve složce řešení nebo projektu. K názvu se připojí i řetězec data a do datových souborů, které by jinak měly duplicitní názvy, se přidá přírůstkové číslo. Tato nastavení můžete změnit.|- [Postupy: nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)|
+|**zpráva**. Ve výchozím nastavení je soubor dat profilování (.vsp) uveden název profilované aplikace a je umístěn ve složce řešení nebo projektu. K názvu je také připojen řetězec kalendářních dat a do datových souborů, které by jinak měly duplicitní názvy, je přidáno větší číslo. Tato nastavení můžete změnit.|- [Postup: Nastavení možností názvu souboru dat výkonu](../profiling/how-to-set-performance-data-file-name-options.md)|

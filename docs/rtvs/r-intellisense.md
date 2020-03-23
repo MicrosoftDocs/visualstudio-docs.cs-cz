@@ -1,6 +1,6 @@
 ---
-title: Technologie IntelliSense pro kód jazyka R
-description: IntelliSense ve Visual Studio zobrazí informace o funkcích, členové objektu, fragmenty kódu a dokončování při psaní kódu jazyka R.
+title: IntelliSense pro kód R
+description: Visual Studio IntelliSense zobrazuje informace o funkcích, členech objektů, fragmentech kódu a dokončení při psaní kódu R.
 ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
@@ -9,56 +9,56 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: 854f7d410e327ca92d0c5156d89bc21765e13cc7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62999119"
 ---
 # <a name="intellisense"></a>IntelliSense
 
-Zobrazí informace o funkcích, které bude možné volat, členy objektů, argumenty funkce IntelliSense ve Visual Studio a [fragmenty kódu](code-snippets-for-r.md) přímo ve svém zobrazení při psaní kódu. Také možná dokončení se zobrazí při psaní a skončí po stisknutí klávesy **kartu** nebo **Enter** klíče (naleznete v tématu [možnosti editoru](editing-r-code-in-visual-studio.md#editor-options) pro **Upřesnit** kartu). Technologie IntelliSense je k dispozici v editor a [interaktivní okno](interactive-repl-for-r-in-visual-studio.md).
+Visual Studio IntelliSense zobrazuje informace o funkcích, které můžete volat, členy objektů, argumenty funkce a [fragmenty kódu](code-snippets-for-r.md) přímo v zobrazení při psaní kódu. Zobrazuje také možné dokončení při psaní a dokončí se po stisknutí **kláves Tab** nebo **Enter** (viz [Možnosti editoru](editing-r-code-in-visual-studio.md#editor-options) pro kartu **Upřesnit).** Technologie IntelliSense je k dispozici v editoru i v [interaktivním okně](interactive-repl-for-r-in-visual-studio.md).
 
-![Technologie IntelliSense zobrazuje signatura funkce](media/intellisense-function-signature.png)
+![Technologie IntelliSense s podpisem funkce](media/intellisense-function-signature.png)
 
-Při zadávání funkce nebo další příkaz, IntelliSense nabídne automatické dokončení nabídky (case-sensitively) Filtroval co jste už zadali:
+Při psaní funkce nebo jiného příkazu poskytuje technologie IntelliSense filtrovanou nabídku automatického dokončování (malá a velká písmena) podle toho, co jste již zadali:
 
-![Nabídka Automatické doplňování technologie IntelliSense](media/intellisense-auto-complete-menu.png)
+![Nabídka automatického dokončování technologie IntelliSense](media/intellisense-auto-complete-menu.png)
 
-Stisknutím klávesy **kartu** (nebo **Enter**, nebo **místo**podle toho, jak nastavit možnosti), vloží položky vybrané v rozevíracím seznamu. Výběr můžete změnit pomocí kláves se šipkami.
+Stisknutím **klávesy Tab** (nebo **Enter**nebo **Space**v závislosti na nastavení možností) vložíte položku vybranou v rozevíracím seznamku. Výběr můžete změnit pomocí kláves se šipkami.
 
-Technologie IntelliSense také nabízí návrhy pro členy R objektů:
+Technologie IntelliSense také poskytuje návrhy pro členy objektů R:
 
-![Návrhy IntelliSense pro členy objektu](media/intellisense-auto-complete-r-objects.png)
+![Návrhy technologie IntelliSense pro členy objektu](media/intellisense-auto-complete-r-objects.png)
 
-Stisknutím klávesy **ESC** zavře nabídce úplně se vynechá. Můžete ho přenést zpět s **Ctrl**+**místo**.
+Stisknutím **klávesy ESC** nabídku zcela odmítnete. Můžete ji vrátit zpět s **Ctrl**+**Space**.
 
-Zadáním otevírání `(` pro funkci volání vloží uzavírací `)` a vyvolá nápovědu k signatuře, jak je uvedeno výše:
+Zadáním otvoru `(` pro volání funkce `)` vložíte uzávěrku a vyvoláte nápovědu k podpisu, jak je znázorněno výše:
 
-![Signaturám technologie IntelliSense pro funkci](media/intellisense-function-signature.png)
+![Nápověda k podpisu technologie IntelliSense pro funkci](media/intellisense-function-signature.png)
 
-Opět **ESC** zavře automaticky otevírané okno; signatury funkce připravíte ho znovu s **Ctrl**+**Shift**+**místa** .
+Opět platí, **že ESC** odmítá vyskakovací okno; u funkčních podpisů, můžete ji znovu vyvolat pomocí **klávesctrl**+**shift**+**space**.
 
 > [!Tip]
-> Pokud parametr nápovědy skryje text pod ním, stiskněte a podržte **Ctrl** klíč, aby parametr více průchody průsvitných text nápovědy.
+> Pokud parametr pomáhá zakrýt text pod ním, stiskněte a podržte klávesu **Ctrl,** aby byl parametr text průsvitný.
 
 ## <a name="intellisense-for-user-defined-functions-and-variables"></a>Technologie IntelliSense pro uživatelem definované funkce a proměnné
 
-Technologie IntelliSense platí pro uživatelem definované funkce ve stejném souboru, včetně dokončování název parametru:
+Technologie IntelliSense platí pro uživatelem definované funkce ve stejném souboru, včetně dokončování parametrů názvu:
 
 ![Technologie IntelliSense pro uživatelem definované funkce](media/intellisense-same-file-functions.png)
 
-![Parametr doplňování technologie IntelliSense pro uživatelem definované funkce](media/intellisense-parameter-completion.png)
+![Dokončení parametrů IntelliSense pro uživatelem definované funkce](media/intellisense-parameter-completion.png)
 
-Technologie IntelliSense platí také pro proměnné ve stejném souboru a aktuální relace:
+Technologie IntelliSense platí také pro proměnné ve stejném souboru a aktuální relaci:
 
-![Proměnné doplňování technologie IntelliSense](media/intellisense-variable-completion.png)
+![Dokončení proměnných IntelliSense](media/intellisense-variable-completion.png)
 
 > [!Note]
-> Technologie IntelliSense v interaktivním okně, bere v úvahu pouze názvy v aktuální relaci jazyka R a ignoruje soubory ve vašem projektu.
+> V interaktivním okně technologie IntelliSense bere v úvahu pouze názvy v aktuální relaci R a ignoruje soubory v projektu.
 
 ## <a name="code-suggestions"></a>Návrhy kódu
 
-Když na okraji se zobrazí žárovka (označované jako inteligentních značek), Visual Studio navrhuje, že je k dispozici pro běžně používané akci zástupce. Například, najeďte myší řádek, který obsahuje `library` příkaz v editoru zobrazíte žárovky. Výběr žárovky zobrazí dostupné možnosti:
+Když se na okraji zobrazí žárovka (nazývaná inteligentní značka), Visual Studio naznačuje, že pro běžně používanou akci je k dispozici zástupce. Najeďte například nad čárou, která obsahuje `library` příkaz v editoru, abyste viděli žárovku. Výběrem žárovky zobrazí teces dostupných možností:
 
 ![Inteligentní značky pro R v editoru](media/intellisense-smart-tags.png)

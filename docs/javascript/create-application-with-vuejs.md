@@ -1,6 +1,6 @@
 ---
-title: Vytvoření aplikace Vue.js pomocí Node.js
-description: Můžete vytvářet aplikace Node.js v sadě Visual Studio pomocí rozhraní Vue.js
+title: Vytvoření aplikace Vue.js pomocí souboru Node.js
+description: Aplikace Node.js můžete vytvořit v sadě Visual Studio pomocí rozhraní Vue.js
 ms.custom: seodec18
 ms.date: 07/06/2018
 ms.topic: conceptual
@@ -13,101 +13,101 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: af781f5735a3539d8b0e2d098bb9252bc60193fc
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "70180264"
 ---
-# <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>Vytvoření aplikace Vue.js pomocí Node.js Tools for Visual Studio
+# <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>Vytvoření aplikace Vue.js pomocí nástrojů Node.js pro visual studio
 
-Visual Studio podporuje vývoj aplikací s architekturou [Vue. js](https://vuejs.org/) buď v JavaScriptu, nebo v TypeScript.
+Visual Studio podporuje vývoj aplikací s rámcem [Vue.js](https://vuejs.org/) v jazyce JavaScript nebo TypeScript.
 
-Následující nové funkce podporují Vue.js vývoj aplikací v sadě Visual Studio:
+Následující nové funkce podporují vývoj aplikací Vue.js v sadě Visual Studio:
 
-* Podpora pro bloky skriptu, stylu a šablon v *.vue* soubory
-* Rozpoznávání `lang` atribut na *.vue* soubory
-* Šablony projektů a souborů VUE.js
+* Podpora bloků Skript, Styl a Šablona v souborech *.vue*
+* Rozpoznávání atributu na `lang` souborech *.vue*
+* Šablony projektů a souborů Vue.js
 
 ## <a name="prerequisites"></a>Požadavky
 
-* Musíte mít nainstalovanou verzi sady Visual Studio 2017 verze 15,8 nebo novější a úlohu **vývoje Node. js** .
+* Musíte mít nainstalovanou visual studio 2017 verze 15.8 nebo novější verzi a vývojové úlohy **Node.js.**
 
     > [!IMPORTANT]
-    > Tento článek vyžaduje funkce, které jsou k dispozici pouze počínaje verzí Visual Studio 2017 verze 15,8.
+    > Tento článek vyžaduje funkce, které jsou k dispozici pouze od visual studia 2017 verze 15.8.
 
     ::: moniker range=">=vs-2019"
     Pokud požadovaná verze ještě není nainstalovaná, nainstalujte [Visual Studio 2019](https://visualstudio.microsoft.com/downloads).
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) stránku a nainstalovat zdarma.
+    Pokud jste visual studio ještě nenainstalovali, přejděte na stránku ke stažení sady Visual [Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)a nainstalujte ji zdarma.
     ::: moniker-end
 
-    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít na **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
+    Pokud potřebujete nainstalovat úlohy, ale už máte Visual Studio, přejděte na **nástroje** > **získat nástroje a funkce...**, který otevře Instalační program sady Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
 
-* Chcete-li vytvořit projekt ASP.NET Core, musí mít technologie ASP.NET a web development a instalaci úlohy vývoj pro různé platformy .NET Core.
+* Chcete-li vytvořit ASP.NET základní projekt, musíte mít nainstalovanou ASP.NET a vývoj webových aplikací a .NET Core vývojové úlohy napříč platformami.
 
 * Je nutné mít nainstalovaný modul runtime Node.js.
 
-    Pokud ho nemáte nainstalovaný, nainstalujte si verzi LTS z webu [Node.js](https://nodejs.org/en/download/). Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud nainstalovaný modul runtime nemůže zjistit, můžete nakonfigurovat tak, aby odkazovaly nainstalovaný modul runtime na stránce vlastností projektu. (Po vytvoření projektu klikněte pravým tlačítkem na uzel projektu a zvolte **vlastnosti**).
+    Pokud ho nemáte nainstalovaný, nainstalujte si verzi LTS z webu [Node.js](https://nodejs.org/en/download/). Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud nerozpozná nainstalovaný za běhu, můžete nakonfigurovat projekt tak, aby odkazoval na nainstalovaný běh na stránce vlastností. (Po vytvoření projektu klepněte pravým tlačítkem myši na uzel projektu a zvolte **vlastnosti).**
 
 ## <a name="create-a-vuejs-project-using-a-template"></a>Vytvoření projektu Vue.js pomocí šablony
 
-Nové šablony Vue.js slouží k vytvoření nového projektu. Použití šablony je nejjednodušší způsob, jak začít pracovat. Podrobné pokyny najdete v článku [použijte sadu Visual Studio k vytvoření první aplikace pro Vue.js](../javascript/quickstart-vuejs-with-nodejs.md).
+Nové šablony Vue.js můžete použít k vytvoření nového projektu. Použití šablony je nejjednodušší způsob, jak začít. Podrobné kroky najdete [v tématu Vytvoření první aplikace Vue.js pomocí Sady Visual Studio](../javascript/quickstart-vuejs-with-nodejs.md).
 
-## <a name="create-a-vuejs-project-with-aspnet-core-and-the-vue-cli"></a>Vytvoření projektu Vue.js s ASP.NET Core a rozhraní příkazového řádku Vue
+## <a name="create-a-vuejs-project-with-aspnet-core-and-the-vue-cli"></a>Vytvoření projektu Vue.js s ASP.NET core a Vue CLI
 
-VUE.js poskytuje oficiální příkazového řádku pro rychle projekty generování uživatelského rozhraní. Pokud chcete používat rozhraní příkazového řádku k vytvoření aplikace, postupujte podle kroků v tomto článku nastavte vývojové prostředí.
+Vue.js poskytuje oficiální CLI pro rychle lešení projektů. Pokud chcete použít vykreslování po ruce k vytvoření aplikace, postupujte podle kroků v tomto článku nastavit vývojové prostředí.
 
 > [!IMPORTANT]
-> Tento postup předpokládá, že už máte nějaké zkušenosti s Vue.js framework. Pokud ne, navštivte prosím [Vue.js](https://vuejs.org/) získat další informace o rozhraní.
+> Tyto kroky předpokládají, že již máte nějaké zkušenosti s rozhraním Vue.js. Pokud ne, navštivte [Vue.js](https://vuejs.org/) se dozvědět více o rámci.
 
-### <a name="create-a-new-aspnet-core-project"></a>Vytvořte nový projekt ASP.NET Core
+### <a name="create-a-new-aspnet-core-project"></a>Vytvoření nového projektu ASP.NET Core
 
-V tomto příkladu použijete prázdnou aplikaci ASP.NET Core (jazyk C#). Ale můžete zvolit z různých projektů a programovacích jazyků.
+V tomto příkladu použijete prázdnou ASP.NET základní aplikace (C#). Můžete si však vybrat z různých projektů a programovacích jazyků.
 
-#### <a name="create-an-empty-project"></a>Vytvořit prázdný projekt
+#### <a name="create-an-empty-project"></a>Vytvoření prázdného projektu
 
 1. Otevřete Visual Studio a vytvořte nový projekt.
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **ASP.NET**a pak zvolte **vytvořit novou ASP.NET Core webovou aplikaci**. V dialogovém okně, které se zobrazí, zadejte název **klient-aplikace**a pak zvolte **vytvořit**.
+    Stisknutím **klávesy Esc** zavřete počáteční okno. Zadejte **Ctrl + Q,** chcete-li otevřít vyhledávací pole, zadejte **asp.net**a pak zvolte Vytvořit novou ASP.NET **základní webovou aplikaci**. V zobrazeném dialogovém okně zadejte název **klient-app**a pak zvolte **Vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně dialogového okna **Nový projekt** rozbalte položku **Visual C#** a pak zvolte možnost **Web**. V prostředním podokně vyberte **ASP.NET Core webová aplikace**, zadejte název **klient-aplikace**a klikněte na **tlačítko OK**.
+    V horním řádku nabídek zvolte **Soubor** > **nového** > **projektu**. V levém podokně dialogového okna **Nový projekt** rozbalte **položku Visual C#** a pak zvolte **Web**. V prostředním podokně zvolte **ASP.NET Core Web Application**, zadejte název **klient-app**a pak zvolte **OK**.
     ::: moniker-end
 
-    Pokud se nezobrazí **webové aplikace ASP.NET Core** šablony projektu, je nutné nainstalovat **vývoj pro ASP.NET a web** pracovního vytížení a. **.NET Core** úlohy pro vývoj první. K instalaci workload(s), klikněte na tlačítko **otevřít instalační program Visual Studio** odkaz v levém podokně **nový projekt** dialogové okno (vyberte **souboru**  >  **Nové** > **projektu**). Spustí se instalační program pro Visual Studio. Vyberte požadované úlohy.
+    Pokud nevidíte šablonu projektu **ASP.NET core webová aplikace,** je nutné nainstalovat **ASP.NET a zatížení vývoje webu** a . **NET Základní** vývojové zatížení jako první. Chcete-li nainstalovat úlohy, klepněte na odkaz Otevřít instalační program **sady Visual Studio** v levém podokně dialogového okna Nový **projekt** (vyberte **Soubor** > **nový** > **projekt).** Spustí se instalační program pro Visual Studio. Vyberte požadované úlohy.
 
-1. Vyberte **prázdný**a potom klikněte na tlačítko **OK**.
+1. Vyberte **Prázdné**a klepněte na tlačítko **OK**.
 
-    Visual Studio vytvoří projekt, který se otevře v okně Průzkumník řešení (pravé podokno).
+    Visual Studio vytvoří projekt, který se otevře v Průzkumníku řešení (pravé podokno).
 
 #### <a name="configure-the-project-startup-file"></a>Konfigurace spouštěcího souboru projektu
 
-* Otevřete soubor *./Startup.cs*a přidejte následující řádky do metody konfigurace:
+* Otevřete soubor *./Startup.cs*a do metody Configure přidejte následující řádky:
 
     ```csharp
     app.UseDefaultFiles(); // Enables default file mapping on the web root.
     app.UseStaticFiles(); // Marks files on the web root as servable.
     ```
 
-### <a name="install-the-vue-cli"></a>Nainstalujte vue rozhraní příkazového řádku
+### <a name="install-the-vue-cli"></a>Instalace vue CLI
 
-Chcete-li nainstalovat modul npm vue rozhraní příkazového řádku, otevřete příkazový řádek a zadejte `npm install --g vue-cli` nebo `npm install -g @vue/cli` pro verzi 3.0 (aktuálně ve verzi beta).
+Chcete-li nainstalovat modul vue-cli npm, `npm install --g vue-cli` otevřete příkazový řádek a zadejte nebo `npm install -g @vue/cli` pro verzi 3.0 (aktuálně v beta verzi).
 
-### <a name="scaffold-a-new-client-application-using-the-vue-cli"></a>Vygenerované uživatelské rozhraní pomocí rozhraní příkazového řádku vue novou klientskou aplikaci
+### <a name="scaffold-a-new-client-application-using-the-vue-cli"></a>Lešení nové klientské aplikace pomocí vue CLI
 
-1. Přejděte na příkazovém řádku a přejděte do kořenové složky projektu.
+1. Přejděte do příkazového řádku a změňte aktuální adresář do kořenové složky projektu.
 
-1. Typ `vue init webpack client-app` a postupujte podle kroků po zobrazení výzvy na další otázky.
+1. Po `vue init webpack client-app` zobrazení výzvy k zodpovězení dalších otázek zadejte a postupujte podle pokynů.
 
     > [!NOTE]
-    > Pro soubory *. Vue* je nutné použít k převodu rozhraní Webpack nebo podobnou architekturu pro zavaděč. TypeScript a Visual Studio neznají, jak zkompilovat soubory *. Vue* . Totéž platí pro sdružování; TypeScript neobsahuje informace o tom, jak převést ES2015 moduly (tj. příkazy `import` a `export`) do jediného finálního souboru *. js* , který se načte v prohlížeči. V tuto akci je teď nejlepší volbou možnost Webpack. Chcete-li tento proces řídit v rámci sady Visual Studio pomocí nástroje MSBuild, je nutné začít od šablony sady Visual Studio. V současné době není k dispozici žádná šablona ASP.NET pro vývoj v Vue. js.
+    > Pro *soubory .vue* je třeba použít WebPack nebo podobný rámec s zavaděčem k převodu. Skripty TypeScript a sady Visual Studio neznají způsob kompilace souborů *VUE.* Totéž platí pro svazování; TypeScript neví, jak převést moduly ES2015 `import` (tj. a `export` příkazy) do jednoho konečného souboru *JS,* který se načte v prohlížeči. Opět platí, že WebPack je nejlepší volbou zde. Chcete-li řídit tento proces z v rámci sady Visual Studio pomocí MSBuild, je třeba spustit ze šablony sady Visual Studio. V současné době neexistuje žádná šablona ASP.NET pro vývoj vue.js in-the-box.
 
-#### <a name="modify-the-webpack-configuration-to-output-the-built-files-to-wwwroot"></a>Upravit konfiguraci webpacku pro výstupní soubory sestavení do wwwroot
+#### <a name="modify-the-webpack-configuration-to-output-the-built-files-to-wwwroot"></a>Úprava konfigurace webového balíčku pro výstup vytvořených souborů do wwwroot
 
-* Otevřete soubor *./Client-App/config/index.js*a změňte `build.index` a `build.assetsRoot` na cestu wwwroot:
+* Otevřete soubor *./client-app/config/index.js*a `build.index` `build.assetsRoot` změňte cestu a wwwroot:
 
     ```js
     // Template for index.html
@@ -117,40 +117,40 @@ Chcete-li nainstalovat modul npm vue rozhraní příkazového řádku, otevřete
     assetsRoot: path.resolve(__dirname, '../../wwwroot'),
     ```
 
-#### <a name="indicate-the-project-to-build-the-client-app-each-time-that-a-build-is-triggered"></a>Označení projektu pro sestavení klientské aplikace pokaždé, když se spustí sestavení
+#### <a name="indicate-the-project-to-build-the-client-app-each-time-that-a-build-is-triggered"></a>Označte projekt pro sestavení klientské aplikace při každém spuštění sestavení
 
-1. V sadě Visual Studio, přejděte na **projektu** > **vlastnosti** > **události sestavení**.
+1. V sadě Visual Studio přejděte na**události sestavení sestavení vlastností****Properties** >  **projektu** > .
 
-1. Na **příkazový řádek události před sestavením**, typ `npm --prefix ./client-app run build`.
+1. Na **příkazovém řádku události Před sestavením**zadejte `npm --prefix ./client-app run build`.
 
-#### <a name="configure-webpacks-output-module-names"></a>Konfigurovat webpacku na výstup modulu názvy
+#### <a name="configure-webpacks-output-module-names"></a>Konfigurace názvů výstupních modulů webového balíčku
 
-* Otevřete soubor *./Client-App/Build/Webpack.Base.conf.js*a do vlastnosti Output přidejte následující vlastnosti:
+* Otevřete soubor *./client-app/build/webpack.base.conf.js*a přidejte do výstupní vlastnosti následující vlastnosti:
 
     ```js
     devtoolModuleFilenameTemplate: '[absolute-resource-path]',
     devtoolFallbackModuleFilenameTemplate: '[absolute-resource-path]?[hash]'
     ```
 
-### <a name="add-typescript-support-with-the-vue-cli"></a>Přidání podpory TypeScript pomocí rozhraní příkazového řádku Vue
+### <a name="add-typescript-support-with-the-vue-cli"></a>Přidání podpory jazyka TypeScript pomocí příkazového příkazu Vue
 
-Tyto kroky vyžadují vue – rozhraní příkazového řádku 3.0, která je aktuálně ve verzi beta.
+Tyto kroky vyžadují vue-cli 3.0, který je v současné době v beta verzi.
 
-1. Přejděte na příkazovém řádku a změňte aktuální adresář ke kořenové složce projektu.
+1. Přejděte do příkazového řádku a změňte aktuální adresář do kořenové složky projektu.
 
-1. Typ `vue create client-app`a klikněte na tlačítko **ručně vybrat funkce**.
+1. Zadejte `vue create client-app`a pak zvolte **Ručně vybrat funkce**.
 
-1. Zvolte **Typescript**a pak vyberte další požadované možnosti.
+1. Zvolte **Typescript**a pak vyberte další požadované volby.
 
-1. Postupujte podle pokynů a odpovědět na otázky.
+1. Postupujte podle zbývajících kroků a odpovězte na otázky.
 
-#### <a name="configure-a-vuejs-project-for-typescript"></a>Konfigurace projektu Vue.js pro TypeScript
+#### <a name="configure-a-vuejs-project-for-typescript"></a>Konfigurace projektu Vue.js pro typescript
 
-1. Otevřete soubor *./Client-App/tsconfig.JSON* a přidejte `noEmit:true` k možnostem kompilátoru.
+1. Otevřete soubor *./client-app/tsconfig.json* a přidejte `noEmit:true` do možností kompilátoru.
 
-    Nastavením této možnosti byste se vyhnout, nebudou zbytečně zabírat váš projekt pokaždé, když sestavení v sadě Visual Studio.
+    Nastavením této možnosti se vyhnete zahlcení projektu při každém sestavení v sadě Visual Studio.
 
-1. Dále vytvořte soubor *Vue. config. js* v souboru *./Client-App/* a přidejte následující kód.
+1. Dále vytvořte soubor *vue.config.js* v *./client-app/* a přidejte následující kód.
 
     ```js
     module.exports = {
@@ -165,13 +165,13 @@ Tyto kroky vyžadují vue – rozhraní příkazového řádku 3.0, která je ak
     };
     ```
 
-    Předchozí kód konfiguruje webpacku a nastaví složku wwwroot.
+    Předchozí kód konfiguruje webpack a nastaví složku wwwroot.
 
-#### <a name="build-with-vue-cli-30"></a>Sestavení s vue – rozhraní příkazového řádku 3.0
+#### <a name="build-with-vue-cli-30"></a>Sestavení s vue-cli 3.0
 
-Neznámý problém s Vue-CLI 3,0 může zabránit automatizaci procesu sestavení. Pokaždé, když se pokusíte aktualizovat složku Wwwroot, musíte spustit příkaz `npm run build` ve složce klient-aplikace.
+Neznámý problém s vue-cli 3.0 může zabránit automatizaci procesu sestavení. Pokaždé, když se pokusíte aktualizovat složku wwwroot, `npm run build` je třeba spustit příkaz ve složce klient-app.
 
-Alternativně můžete vytvořit projekt Vue-CLI 3,0 jako událost před sestavením pomocí vlastností projektu ASP.NET. Klikněte pravým tlačítkem myši na projekt, vyberte možnost **vlastnosti**a na kartě **sestavení** přidejte následující příkazy do textového pole **příkazový řádek události před sestavením** .
+Případně můžete vytvořit projekt vue-cli 3.0 jako událost předběžného sestavení pomocí vlastností ASP.NET projektu. Klepněte pravým tlačítkem myši na projekt, zvolte **Build** **Vlastnosti**a do textového pole **příkazového řádku události Před sestavením** zahrňte následující příkazy.
 
 ``` cmd
 cd ./client-app
@@ -181,10 +181,10 @@ cd ../
 
 ## <a name="limitations"></a>Omezení
 
-* `lang` Atribut se podporuje jenom jazyky JavaScript a TypeScript. Přípustné hodnoty jsou: js, jsx, ts a tsx.
-* `lang` atribut nefunguje s šablonu nebo styl značky.
-* Ladění skriptů blokuje *.vue* soubory nejsou podporovány díky jejich povaze předzpracovaná.
-* Nerozpozná TypeScript *.vue* soubory jako moduly. Budete potřebovat soubor, který obsahuje například následující TypeScript říct, co kód *.vue* soubory vypadat (vue – rozhraní příkazového řádku 3.0 šablona již obsahuje tento soubor).
+* `lang`atribut podporuje pouze jazyky JavaScript a TypeScript. Přijaté hodnoty jsou: js, jsx, ts a tsx.
+* `lang`atribut nefunguje se značkami šablony nebo stylu.
+* Ladění bloků skriptů v souborech *.vue* není podporováno z důvodu jeho předzpracované povahy.
+* Skript TypeScript nerozpozná soubory *.vue* jako moduly. Potřebujete soubor, který obsahuje například následující, abyste sdělili TypeScript, jak vypadají soubory *.vue* (šablona vue-cli 3.0 již tento soubor obsahuje).
 
     ```js
     // ./client-app/vue-shims.d.ts
@@ -194,10 +194,10 @@ cd ../
     }
     ```
 
-* Spuštění příkazu `npm run build` jako událost před sestavením ve vlastnostech projektu nefunguje při použití vue – rozhraní příkazového řádku 3.0.
+* Spuštění příkazu `npm run build` jako události předběžného sestavení ve vlastnostech projektu nefunguje při použití vue-cli 3.0.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Příručka Začínáme s Vue](https://vuejs.org/v2/guide).
-- [Projekt CLI Vue](https://github.com/vuejs/vue-cli)
-- [Dokumentace ke konfiguraci sady Webpack](https://webpack.js.org/configuration/).
+- [Vue začít průvodce](https://vuejs.org/v2/guide).
+- [Projekt Vue CLI](https://github.com/vuejs/vue-cli).
+- [Dokumentace ke konfiguraci webového balíčku](https://webpack.js.org/configuration/).

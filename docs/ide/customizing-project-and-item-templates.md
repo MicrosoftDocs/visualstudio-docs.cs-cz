@@ -9,37 +9,37 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 031caa0f1bccb2c3f57dbbc89b4dd7d311928b77
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75567551"
 ---
 # <a name="customize-project-and-item-templates"></a>Přizpůsobení šablon projektů a položek
 
-I po vytvoření šablony projektů a položek můžete dále přizpůsobit tak, aby splňovaly vaše potřeby.
+I po vytvoření šablon projektů a položek je můžete dále přizpůsobit vašim potřebám.
 
-## <a name="customizations"></a>Vlastní nastavení
+## <a name="customizations"></a>Přizpůsobení
 
-Například můžete provádět následující úlohy:
+Můžete například provádět následující úkoly:
 
-- Upravit a exportovat jako šablonu uživatel existující šablony.
+- Upravte a exportujte existující šablonu jako uživatelskou šablonu.
 
-   Další informace najdete v tématu [postupy: aktualizace existujících šablon](../ide/how-to-update-existing-templates.md).
+   Další informace naleznete v [tématu Postup: Aktualizace existujících šablon](../ide/how-to-update-existing-templates.md).
 
-- Vlastní parametry předejte do šablonu, která nahradí stávající hodnoty.
+- Předejte vlastní parametry do šablony, která nahradí existující hodnoty.
 
-   Další informace najdete v tématu [postupy: nahrazení parametrů v šabloně](../ide/how-to-substitute-parameters-in-a-template.md).
+   Další informace naleznete v [tématu How to: Substitute parameters in a template](../ide/how-to-substitute-parameters-in-a-template.md).
 
-- Přizpůsobení průvodců, které vytvářet projekty ze šablon.
+- Přizpůsobte průvodce, kteří vytvářejí projekty ze šablon.
 
-   Další informace najdete v tématu [postupy: použití průvodců se šablonami projektů (rozšiřitelnost)](../extensibility/how-to-use-wizards-with-project-templates.md).
+   Další informace naleznete v [tématu Postup: Použití průvodců se šablonami projektu (rozšiřitelnost)](../extensibility/how-to-use-wizards-with-project-templates.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Postupy: řešení problémů se šablonami](../ide/how-to-troubleshoot-templates.md)
-- [Postupy: vytváření šablon projektu](../ide/how-to-create-project-templates.md)
-- [Postupy: Tvorba šablon položek](../ide/how-to-create-item-templates.md)
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+- [Postup: Poradce při potížích se šablonami](../ide/how-to-troubleshoot-templates.md)
+- [Postup: Vytvoření šablon projektů](../ide/how-to-create-project-templates.md)
+- [Postup: Vytvoření šablon položek](../ide/how-to-create-item-templates.md)
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>

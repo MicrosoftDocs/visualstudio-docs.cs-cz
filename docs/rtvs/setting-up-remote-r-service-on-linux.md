@@ -1,6 +1,6 @@
 ---
 title: Nastavení vzdálené služby R na Linuxu
-description: Jak nastavit vzdálené služby R na Ubuntu a subsystém Windows pro Linux.
+description: Jak nastavit vzdálenou službu R pro Ubuntu a podsystém Windows pro Linux.
 ms.date: 12/04/2017
 ms.topic: conceptual
 author: kraigb
@@ -10,42 +10,42 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: c4d65388db0ef90f807ec85b8c9216d717c2b571
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62809554"
 ---
 # <a name="remote-r-service-for-linux"></a>Vzdálená služba R pro Linux
 
-Vzdálená služba R pro Linux je aktuálně podobu rtvs démona. Proces démon se nepodporuje a otestovali na Ubuntu 16.04 16.10 LTS desktop, server a subsystém Windows pro Linux s Ubuntu. Hromadné Tento článek poskytuje pokyny pro nastavení vzdálené služby R na tyto různé systémy.
+Vzdálená služba R pro Linux je v současné době zabalena jako rtvs-daemon. Daemon je podporován a testován na Ubuntu 16.04, 16.10 LTS desktop, server a Podsystém Windows pro Linux se systémem Ubuntu. Převážná část tohoto článku obsahuje pokyny pro nastavení vzdálené služby R v těchto různých systémech.
 
-Po dokončení konfigurace vzdáleného počítače, bude následující postup k této službě připojit nástroje R pro Visual Studio (RTVS):
+Po konfiguraci vzdáleného počítače připojte k této službě následující kroky nástroje R pro visual studio (RTVS):
 
-1. Vyberte **nástroje R** > **Windows** > **pracovní prostory** otevřít **pracovní prostory** okna.
-1. Vyberte **přidat připojení**.
-1. Zadejte název připojení a zadejte jeho adresu URL jako třeba `https://localhost:5444` (subsystém Windows pro Linux) nebo `https://public-ip:5444` (kontejnerů Azure). Vyberte **Uložit** po dokončení.
-1. Vyberte ikonu připojení nebo dvakrát klikněte na položku připojení.
-1. Zadejte přihlašovací údaje. Uživatelské jméno musí obsahovat předponu `<<unix>>\` stejně jako v `<<unix>>\ruser1` (podle potřeby pro všechna připojení ke vzdáleným počítačům s Linuxem).
-1. Pokud používáte certifikát podepsaný svým držitelem, může se zobrazit upozornění. Zpráva obsahuje pokyny, chcete-li opravit toto upozornění.
+1. Vyberte **Nástroje Nástroje** > **Windows** > **Pracovní prostory** otevřete okno **Pracovní prostory.**
+1. Vyberte **Přidat připojení**.
+1. Pojmenujte připojení a zadejte jeho `https://localhost:5444` adresu URL, například `https://public-ip:5444` (Podsystém Windows pro Linux) nebo (kontejner Azure). Po dokončení vyberte **Uložit.**
+1. Vyberte ikonu připojení nebo poklepejte na položku připojení.
+1. Zadejte přihlašovací údaje. Uživatelské jméno musí být `<<unix>>\` předponou jako v `<<unix>>\ruser1` (jak je požadováno pro všechna připojení ke vzdáleným počítačům SIP).
+1. Pokud používáte certifikát podepsaný svým držitelem, může se zobrazit upozornění. Zpráva obsahuje pokyny k opravě upozornění.
 
-## <a name="set-up-remote-r-service"></a>Nastavit vzdálenou službu r.
+## <a name="set-up-remote-r-service"></a>Nastavit vzdálenou službu R
 
 Tato část popisuje následující možnosti:
 
-- [Fyzický počítač se systémem Ubuntu](#physical-ubuntu-computer)
-- [Virtuální počítač s Ubuntu serverem nebo virtuálním počítači v Azure pro datové vědy](#ubuntu-server-vm-or-data-science-vm-on-azure)
-- [Místním nebo vzdáleném kontejneru Dockeru (čisté sestavení)](#local-or-remote-docker-container-clean-build)
-- [Kontejneru spuštěného v Azure Container Instances](#container-running-on-azure-container-instances)
+- [Fyzický počítač Ubuntu](#physical-ubuntu-computer)
+- [Virtuální počítač Ubuntu Server nebo virtuální počítač pro datové vědy v Azure](#ubuntu-server-vm-or-data-science-vm-on-azure)
+- [Místní nebo vzdálený kontejner Dockeru (čisté sestavení)](#local-or-remote-docker-container-clean-build)
+- [Kontejner spuštěný v instanci kontejnerů Azure](#container-running-on-azure-container-instances)
 
-V obou případech vzdálený počítač musí mít jednu z těchto balíčků překladačů R nainstalovaný:
+V každém případě musí být ve vzdáleném počítači nainstalován jeden z následujících překladačů R:
 
 - [Microsoft R Open](https://mran.microsoft.com/open/)
-- [R server CRAN pro Windows](https://cran.r-project.org/bin/linux/ubuntu/)
+- [CRAN R pro Windows](https://cran.r-project.org/bin/linux/ubuntu/)
 
-### <a name="physical-ubuntu-computer"></a>Fyzický počítač se systémem Ubuntu
+### <a name="physical-ubuntu-computer"></a>Fyzický počítač Ubuntu
 
-1. Po přihlášení na počítači, stáhněte rtvs démon tarballu:
+1. Po přihlášení do počítače, stáhněte si rtvs-daemon tarball:
 
     ```bash
     wget -O rtvs-daemon.tar.gz https://aka.ms/r-remote-services-linux-binary-current
@@ -58,7 +58,7 @@ V obou případech vzdálený počítač musí mít jednu z těchto balíčků p
     sudo ./rtvs-install
     ```
 
-    U bezobslužné automatizaci, použijte `sudo ./rtvs-install -s`.
+    Pro tichou automatizaci použijte `sudo ./rtvs-install -s`.
 
 1. Povolit a spustit službu:
 
@@ -67,51 +67,51 @@ V obou případech vzdálený počítač musí mít jednu z těchto balíčků p
     sudo systemctl start rtvsd
     ```
 
-1. Konfigurace certifikátu SSL (povinné pro produkční prostředí). Ve výchozím nastavení, démonů rtvs používá `ssl-cert-snakeoil.pem` a `ssl-cert-snakeoil.pem` generovaných `ssl-cert` balíčku. Během instalace, jsou sloučeny do `ssl-cert-snakeoil.pfx`. Pro produkční účely používejte certifikát SSL poskytnutých vaším správcem. Certifikát SSL můžete nakonfigurovat tím, že poskytuje *.pfx* souboru a volitelný import heslo: */etc/rtvs/rtvsd.config.json*.
+1. Konfigurace certifikátu SSL (vyžadováno pro produkční prostředí). Ve výchozím nastavení rtvs-daemon používá `ssl-cert-snakeoil.pem` a `ssl-cert` `ssl-cert-snakeoil.pem` generované balíček. Během instalace jsou kombinovány `ssl-cert-snakeoil.pfx`do . Pro produkční účely použijte certifikát SSL poskytnutý správcem. Certifikát SSL lze nakonfigurovat zadáním souboru *.pfx* a volitelného hesla pro import v: */etc/rtvs/rtvsd.config.json*.
 
-1. (Volitelné) Zkontrolujte, zda je spuštěna služba:
+1. (Nepovinné) Zkontrolujte, zda je služba spuštěna:
 
     ```bash
     ps -A -f | grep rtvsd
     ```
 
-    Pokud nevidíte proces běžící pod uživatelské jméno `rtvssvc`. Spusťte ji pomocí následujícího příkazu:
+    Pokud nevidíte proces spuštěný pod uživatelským jménem `rtvssvc`. Spusťte jej pomocí následujícího příkazu:
 
     ```bash
     sudo systemctl start rtvsd
     ```
 
-1. Další konfiguraci démona rtvs, naleznete v tématu `man rtvsd`.
+1. Další konfigurace rtvs-daemonu `man rtvsd`naleznete v tématu .
 
-### <a name="ubuntu-server-vm-or-data-science-vm-on-azure"></a>Virtuální počítač s Ubuntu serverem nebo virtuálním počítači v Azure pro datové vědy
+### <a name="ubuntu-server-vm-or-data-science-vm-on-azure"></a>Virtuální počítač Ubuntu Server nebo virtuální počítač pro datové vědy v Azure
 
 #### <a name="create-a-vm"></a>Vytvoření virtuálního počítače
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-1. Přejděte na virtuální počítače a pak vyberte **přidat**.
-1. V seznamu dostupných imagí virtuálních počítačů vyhledejte a vyberte jednu z následujících akcí:
-    - Ubuntu Server: `Ubuntu Server 16.04 LTS`
-    - Virtuální počítač pro datové vědy: `Linux Data Science` (viz [virtuální počítače pro datové vědy](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/) podrobnosti)
-1. Nastavte na model nasazení `Resource manager` a vyberte **vytvořit**.
-1. Zvolte název pro virtuální počítač, zadejte uživatelské jméno a heslo (heslo je povinné, jako SSH veřejného klíče přihlašovací jméno není podporováno).
-1. Proveďte další požadované změny v konfiguraci virtuálního počítače.
-1. Výběr velikosti virtuálního počítače, zkontrolujte konfiguraci a vyberte **vytvořit**. Po vytvoření virtuálního počítače přejděte k další části.
+1. Přihlaste se k [portálu Azure](https://portal.azure.com).
+1. Přejděte na Virtuální počítače a pak vyberte **Přidat**.
+1. V seznamu dostupných iktovisl virtuálních vás vyhledá a vybere jednu z následujících možností:
+    - Ubuntu Server:`Ubuntu Server 16.04 LTS`
+    - Virtuální počítač pro `Linux Data Science` datové vědy: (podrobnosti najdete ve [virtuálních počítačích pro datové vědy)](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)
+1. Nastavte model nasazení `Resource manager` na a vyberte **Vytvořit**.
+1. Zvolte název virtuálního počítače, zadejte uživatelské jméno a heslo (heslo je povinné, protože přihlášení veřejného klíče SSH není podporováno).
+1. Proveďte jakékoli další požadované změny konfigurace virtuálního počítače.
+1. Zvolte velikost virtuálního počítače, ověřte konfiguraci a vyberte **Vytvořit**. Po vytvoření virtuálního virtuálního masivu přejděte k další části.
 
-#### <a name="configure-the-vm"></a>Konfigurace virtuálního počítače
+#### <a name="configure-the-vm"></a>Nakonfigurování virtuálního počítače
 
-1. Na virtuálním počítači **sítě** části, přidejte 5444 jako povolený příchozí port. Pokud chcete použít jiný port, změňte nastavení v konfiguračním souboru RTVS démon (*/etc/rtvs/rtvsd.config.json*).
-1. (Volitelné) Nastavení názvu DNS; Můžete také použít IP adresu.
-1. Připojení k virtuálnímu počítači pomocí klienta SSH, jako je například PuTTY pro systém WIndows.
-1. Postupujte podle pokynů [Ubuntu fyzické počítače](#physical-ubuntu-computer) výše.
+1. V části **Síť** virtuálního zařízení přidejte 5444 jako povolený příchozí port. Chcete-li použít jiný port, změňte nastavení v konfiguračním souboru daemonu RTVS (*/etc/rtvs/rtvsd.config.json*).
+1. (Nepovinné) Nastavte název DNS; můžete také použít IP adresu.
+1. Připojte se k virtuálnímu virtuálnímu zařízení pomocí klienta SSH, jako je například PuTTY pro WIndows.
+1. Postupujte podle pokynů pro [fyzický počítač Ubuntu](#physical-ubuntu-computer) výše.
 
-### <a name="windows-subsystem-for-linux-wsl"></a>Subsystém Windows pro Linux (WSL)
+### <a name="windows-subsystem-for-linux-wsl"></a>Windows Subsystem pro Linux (WSL)
 
-1. Postupujte podle pokynů WSL buď [Windows 10](/windows/wsl/install-win10#install-the-windows-subsystem-for-linux) nebo [systému Windows Server](/windows/wsl/install-on-server#enable-the-windows-subsystem-for-linux-wsl).
-1. Spusťte prostředí bash ve Windows a postupujte podle předchozích pokynů [Ubuntu fyzické počítače](#physical-ubuntu-computer) s jednou výjimkou. Krok 3, spusťte službu pomocí příkazu `rtvsd`místo toho protože WSL aktuálně nepodporuje systemd/systemctl rozhraní.
+1. Postupujte podle pokynů k instalaci wsl pro [Windows 10](/windows/wsl/install-win10#install-the-windows-subsystem-for-linux) nebo [Windows Server](/windows/wsl/install-on-server#enable-the-windows-subsystem-for-linux-wsl).
+1. Spusťte bash na Windows a postupujte podle dřívějších pokynů [fyzický počítač Ubuntu](#physical-ubuntu-computer) s jednou výjimkou. V kroku 3 spusťte `rtvsd`službu pomocí příkazu, protože WSL aktuálně nepodporuje rozhraní systemd/systemctl.
 
-### <a name="local-or-remote-docker-container-clean-build"></a>Místním nebo vzdáleném kontejneru Dockeru (čisté sestavení)
+### <a name="local-or-remote-docker-container-clean-build"></a>Místní nebo vzdálený kontejner Dockeru (čisté sestavení)
 
-1. Vytvořit soubor Docker s následujícím obsahem, který se nainstaluje služba démona Vzdálená služba R a nejnovější verzi jazyka R. **Poznámka**: Tento skript vytvoří uživatele "ruser1" heslo "panel", který můžete upravit podle potřeby v poslední dvě `RUN` příkazy.
+1. Vytvořte soubor Docker u níže uvedeného obsahu, který nainstaluje daemon služby Remote R a nejnovější verzi R. **Poznámka**: tento skript vytvoří uživatele s názvem `RUN` "ruser1" s heslem "foobar", které můžete upravit podle potřeby v posledních dvou příkazech.
 
     ```docker
     FROM ubuntu:16.04
@@ -147,25 +147,25 @@ V obou případech vzdálený počítač musí mít jednu z těchto balíčků p
     EXPOSE 5444
     ```
 
-1. Sestavte a spusťte soubor docker:
+1. Vytvořte a spusťte soubor dockeru:
 
     ```bash
     docker build -t myrimage .
     docker run -p 5444:5444 myrimage rtvsd
     ```
 
-1. Pro připojení k obsahuje z RTVS, použijte `https://localhost:5444` jako cestu, uživatelské jméno `<<unix>>\ruser1`a heslo `foobar`. Pokud je kontejner spuštěný na vzdáleném počítači, použijte `https://remote-host-name:5444` jako cestu místo. Port, který lze změnit aktualizováním */etc/rtvs/rtvsd.config.json*.
+1. Chcete-li se připojit k obsahuje `https://localhost:5444` z RTVS, použijte jako cestu, uživatelské jméno `<<unix>>\ruser1`a heslo `foobar`. Pokud je kontejner spuštěn ve vzdáleném počítači, použijte `https://remote-host-name:5444` místo toho jako cestu. Port lze změnit aktualizací */etc/rtvs/rtvsd.config.json*.
 
-### <a name="container-running-on-azure-container-instances"></a>Kontejneru spuštěného v Azure Container Instances
+### <a name="container-running-on-azure-container-instances"></a>Kontejner spuštěný v instanci kontejnerů Azure
 
-1. Postupujte podle pokynů v [místním nebo vzdáleném kontejneru Dockeru (čisté sestavení)](#local-or-remote-docker-container-clean-build) k vytvoření této image.
-1. Nahrání kontejneru do Docker hubu nebo služby kontejneru úložiště Azure.
-1. Spuštění rozhraní příkazového řádku Azure a přihlaste se pomocí `az login` příkazu.
-1. Použití `az container create` příkaz pro vytvoření kontejneru, pomocí `--command-line "rtvsd"` Pokud jste nenastavili kontejner pro spuštění `rtvsd` jako `systemd` služby. V následujícím příkazu je na obrázku má být v Docker hubu. Kontejner úložiště Azure můžete použít také tak, že přidáte argumenty kontejneru úložiště přihlašovacích údajů do příkazového řádku.
+1. Podle pokynů v [místním nebo vzdáleném kontejneru Dockeru (čisté sestavení)](#local-or-remote-docker-container-clean-build) vytvořte image.
+1. Převeličte kontejner do centra Docker u centra nebo úložiště kontejnerů Azure.
+1. Spusťte azure cli a `az login` přihlaste se pomocí příkazu.
+1. Pomocí `az container create` příkazu vytvořte kontejner `--command-line "rtvsd"` pomocí, pokud jste nenastavili kontejner spustit `rtvsd` jako službu. `systemd` V níže uvedeném příkazu se očekává, že obraz bude v centru Dockeru. Úložiště kontejnerů Azure můžete také použít přidáním argumentů pověření úložiště kontejnerů do příkazového řádku.
 
     ```bash
     az container create --image myimage:latest --name myaz-container --resource-group myaz-container-res --ip-address public --port 5444 --cpu 2 --memory 4 --command-line "rtvsd"
     ```
 
-1. Použití `az container list` příkaz a zkontrolujte stav. Vyhledejte `provisioningState`: `Succeeded`.
-1. Pokud Zřizování proběhlo úspěšně, je možné připojit se ke kontejneru. Vyhledejte veřejnou IP adresu v `ipAddress` pole, který použijete pro připojení ke kontejneru z RTVS s přihlašovacími údaji v souboru docker.
+1. Pomocí `az container list` příkazu zkontrolujte stav. Podívejte `provisioningState`se `Succeeded`na : .
+1. Pokud zřizování proběhlo úspěšně, můžete se nyní připojit ke kontejneru. Vyhledejte veřejnou IP adresu `ipAddress` v poli, které používáte s pověřeními v souboru dockeru pro připojení ke kontejneru z RTVS.

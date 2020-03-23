@@ -17,58 +17,58 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 957dbd557a15c4c1df6028672f204a06936767c1
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "68605997"
 ---
-# <a name="options-dialog-box-text-editor--javascript--formatting"></a>Dialogové okno Možnosti: Formátování textového \> editoru \> JavaScript
+# <a name="options-dialog-box-text-editor--javascript--formatting"></a>Dialogové okno Možnosti: \> Formátování JavaScriptu textového editoru \>
 
-Stránka **formátování** dialogového okna **Možnosti** slouží k nastavení možností formátování kódu v editoru kódu. Chcete-li získat přístup k této stránce, v řádku nabídek zvolte**možnost** **nástroje** > a potom rozbalte**formátování** **textový editor** > **JavaScript/TypeScript** > .
+Pomocí stránky **Formátování** v dialogovém okně **Možnosti** nastavte volby pro formátování kódu v Editoru kódu. Chcete-li získat přístup k této stránce, zvolte na řádku nabídek**možnosti** **nástrojů** > a potom **rozbalte** > **formátování JavaScript/TypeScript** > **textového editoru**.
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
 ## <a name="automatic-formatting"></a>Automatické formátování
 
-Tyto možnosti určují, kdy se formátování vyskytne v zobrazení **zdroje** .
+Tyto možnosti určují, kdy dojde k formátování ve **zdrojovém** zobrazení.
 
 ### <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
 |Možnost|Popis|
 |------------|-----------------|
-|**Formátovat dokončený řádek při zadání**|Pokud je vybrána tato možnost, Editor kódu při volbě klávesy ENTER automaticky zformátuje řádek.|
-|**Formátovat dokončený příkaz na;**|Pokud je vybrána tato možnost, Editor kódu při výběru středníku automaticky zformátuje řádek.|
-|**Formátovat otevřený blok na {**|Je-li vybrána tato možnost, Editor kódu při volbě počátečního klíče složené závorky automaticky zformátuje řádek.|
-|**Formátovat dokončený blok na}**|Je-li vybrána tato možnost, Editor kódu při volbě pravého klíče složené závorky automaticky zformátuje řádek.|
-|**Formátovat při vložení**|Pokud je vybrána tato možnost, Editor kódu přeformátuje kód při vložení do editoru. Editor používá aktuálně definovaná pravidla formátování. Pokud tato možnost není vybrána, editor použije původní formátování vloženého kódu.|
+|**Formát dokončený řádek na Enter**|Když je tato volba vybraná, Editor kódu automaticky zformátuje řádek, když zvolíte klávesu Enter.|
+|**Formát dokončeného příkazu dne ;**|Je-li vybrána tato možnost, Editor kódu automaticky zformátuje řádek, když zvolíte středník.|
+|**Formát otevřený blok na {**|Je-li vybrána tato možnost, Editor kódu automaticky zformátuje řádek, když zvolíte otevírací složenou složenku.|
+|**Formát dokončen blok na }**|Je-li vybrána tato možnost, Editor kódu automaticky zformátuje řádek, když zvolíte uzavírací složenou složenou klávesu.|
+|**Formát při vložení**|Když je vybrána tato možnost, Editor kódu přeformátuje kód, když jej vložíte do editoru. Editor používá aktuálně definovaná pravidla formátování. Pokud tato volba není vybrána, editor použije původní formátování vloženého kódu.|
 
 ## <a name="new-lines"></a>Nové řádky
 
-Tyto možnosti určují, zda editor kódu vloží levou složenou závorku pro funkce a řídicí bloky na nový řádek.
+Tyto možnosti určují, zda Editor kódu umístí otevřenou složenou složenku pro funkce a řídicí bloky na nový řádek.
 
-### <a name="uielement-list"></a>UIElement – seznam
+### <a name="uielement-list"></a>Seznam Prvků UI
 
 |Možnost|Popis|
 |------------|-----------------|
-|**Pro funkce umístit levou složenou závorku na nový řádek**|Pokud je vybrána tato možnost, Editor kódu přesune levou složenou závorku spojenou s funkcí na nový řádek.|
-|**Pro řídicí bloky umístit levou složenou závorku na nový řádek**|Je-li vybrána tato možnost, Editor kódu přesune levou složenou závorku spojenou s řídicím blokem ( `if` například `while` a řídicími bloky) na nový řádek.|
+|**Umístit otevřenou ortézu na nový řádek pro funkce**|Je-li vybrána tato možnost, Editor kódu přesune otevřenou složenou závorku přidruženou k funkci na nový řádek.|
+|**Umístit otevřenou složenou závorku na novou čáru pro řídicí bloky**|Je-li vybrána tato možnost, Editor kódu přesune otevřenou složenou závorku přidruženou k řídicímu bloku (například `if` řídicím `while` blokům) na nový řádek.|
 
 ## <a name="spacing"></a>Mezery
 
-Tyto možnosti určují, jak jsou mezery vloženy do zobrazení **zdroje** .
+Tyto možnosti určují způsob vkládání mezer do **zdrojového** zobrazení.
 
-### <a name="uielement-list"></a>UIElement – seznam
+### <a name="uielement-list"></a>Seznam Prvků UI
 
 |Možnost|Popis|
 |------------|-----------------|
-|**Vložit mezeru za oddělovač čárky**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru za oddělovače čárky.|
-|**Vložit mezeru za středník v příkazech for**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru za každou střední hodnotu v prvním řádku `for` smyčky.|
-|**Vložit mezeru před a za binární operátory**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru před a za binární operátory (například +,-, & &, &#124; &#124;).|
-|**Vložit mezeru za klíčová slova v příkazech toku řízení**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru za klíčovým slovem jazyka JavaScript v příkazech toku řízení.|
-|**Vložit mezeru za klíčové slovo funkce pro anonymní funkce**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru za `function` klíčovým slovem pro anonymní funkce.|
-|**Vložit mezeru za levou a před pravou závorku, která není prázdná**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru za levou (otevírací) závorku a před pravou závorku, pokud jsou v závorkách přítomny neprázdné znaky.|
+|**Vložení mezery za oddělovač čárky**|Je-li vybrána tato možnost, editor kódu přidá mezeru za oddělovače čárek.|
+|**Vložit mezeru za středník do příkazů 'for'**|Je-li vybrána tato možnost, Editor kódu přidá mezeru za `for` každý středník v prvním řádku smyčky.|
+|**Vložení mezery před a za binární operátory**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru před a za binární operátory (například +, -, &&, &#124;&#124;).|
+|**Vložení mezery za klíčová slova do příkazů toku řízení**|Je-li vybrána tato volba, Editor kódu přidá mezeru za klíčová slova JavaScriptu do příkazů toku řízení.|
+|**Vložit mezeru za funkci klíčové slovo pro anonymní funkce**|Je-li vybrána tato možnost, editor `function` kódu přidá mezeru za klíčové slovo pro anonymní funkce.|
+|**Vložení mezery po otevření a před zavřením neprázdné závorky**|Je-li vybrána tato možnost, editor kódu přidá mezeru za počáteční závorku a před uzavírací závorku, pokud jsou v závorcích neprázdné znaky.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Obecné, Prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
+- [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)

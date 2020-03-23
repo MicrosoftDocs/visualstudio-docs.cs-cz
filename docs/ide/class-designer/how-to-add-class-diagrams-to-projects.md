@@ -12,71 +12,71 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 87a6c1e996d820724138b6bf38c6440193a4c26b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588834"
 ---
-# <a name="how-to-add-class-diagrams-to-projects"></a>Postupy: Přidání diagramů tříd do projektů
+# <a name="how-to-add-class-diagrams-to-projects"></a>Postup: Přidání diagramů tříd do projektů
 
-Chcete-li navrhovat, upravovat a Refaktorovat třídy a jiné typy, přidejte diagram tříd do C#Visual Basic nebo C++ projektu. Chcete-li vizualizovat různé části kódu v projektu, přidejte do projektu více diagramů tříd.
+Chcete-li navrhnout, upravit a refaktorovat třídy a další typy, přidejte diagram tříd do projektu Jazyka C#, Visual Basic nebo C++. Chcete-li vizualizovat různé části kódu v projektu, přidejte do projektu více diagramů tříd.
 
-Diagramy tříd nemůžete vytvářet z projektů, které sdílejí kód napříč více aplikacemi. Chcete-li vytvořit diagramy tříd UML, přečtěte si téma [vytváření projektů a diagramů modelování UML](../../modeling/what-s-new-for-design-in-visual-studio.md).
+Diagramy tříd nelze vytvářet z projektů, které sdílejí kód ve více aplikacích. Pokud chcete vytvořit diagramy tříd UML, [přečtěte si informace o vytváření projektů modelování A diagramů UML](../../modeling/what-s-new-for-design-in-visual-studio.md).
 
-## <a name="install-the-class-designer-component"></a>Instalace součásti Návrhář tříd
+## <a name="install-the-class-designer-component"></a>Instalace komponenty Návrhář e-class
 
-Pokud jste nenainstalovali součást **Návrhář tříd** , nainstalujte ji podle těchto kroků.
+Pokud jste nenainstalovali komponentu **Návrhář e-up,** nainstalujte ji následujícím postupem.
 
-1. Otevřete **instalační program pro Visual Studio** z nabídky Start systému Windows nebo výběrem **nástrojů** > **získat nástroje a funkce** z panelu nabídek v aplikaci Visual Studio.
+1. Otevřete **Instalační službu sady Visual Studio** z nabídky Start systému Windows nebo výběrem **možnosti Nástroje** > **získat nástroje a funkce** z panelu nabídek v sadě Visual Studio.
 
-   **Instalační program pro Visual Studio** se otevře.
+   **Otevře se instalační program sady Visual Studio.**
 
-1. Vyberte kartu **jednotlivé komponenty** a potom se posuňte dolů ke kategorii **nástroje kódu** .
+1. Vyberte kartu **Jednotlivé součásti** a pak přejděte dolů do kategorie **Nástroje kód.**
 
-1. Vyberte **Návrhář tříd** a pak vyberte **Upravit**.
+1. Vyberte **Návrhář evidence a** pak **vyberte Změnit**.
 
-   ![Součást Návrhář tříd v Instalační program pro Visual Studio](media/class-designer-component.png)
+   ![Součást Návrháře tříd v Instalační službě sady Visual Studio](media/class-designer-component.png)
 
-   Spustí se instalace součásti **Návrhář tříd** .
+   Komponenta **Návrhář tříd** y se spustí.
 
-## <a name="add-a-blank-class-diagram-to-a-project"></a>Přidání prázdného diagramu tříd do projektu
+## <a name="add-a-blank-class-diagram-to-a-project"></a>Přidání prázdného diagramu třídy do projektu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat** > **novou položku**. Případně stiskněte **kombinaci kláves Ctrl**+**SHIFT**+**A**.
+1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na uzel projektu a pak zvolte **Přidat** > **novou položku**. Nebo stiskněte **kombinaci kláves Ctrl**+**Shift**+**A**.
 
-   Otevře se dialogové okno **Přidat novou položku** .
+   Otevře se dialogové okno **Přidat novou položku.**
 
-2. Rozbalte položku **běžné položky** > **Obecné**a potom v seznamu šablon vyberte možnost **Diagram tříd** . V případě C++ vizuálních projektů vyhledejte šablonu **diagramu tříd** v kategorii **nástrojů** .
+2. Rozbalte **obecné běžné položky** > **General**a ze seznamu šablon vyberte **Diagram tříd.** U projektů visual c++ vyhledejte šablonu **Diagram tříd** v kategorii **Utility.**
 
    > [!NOTE]
-   > Pokud nevidíte šablonu **diagramu tříd** , [postupujte podle kroků](#install-the-class-designer-component) pro instalaci součásti **Návrhář tříd** pro Visual Studio.
+   > Pokud šablonu Diagram **tříd** nevidíte, nainstalujte komponentu **Návrhář e-up pro** Visual Studio [podle pokynů.](#install-the-class-designer-component)
 
-   Diagram tříd se otevře v Návrhář tříd a zobrazí se jako soubor s příponou *. CD* v **Průzkumník řešení**. Obrazce a čáry lze přetáhnout do diagramu ze **sady nástrojů**.
+   Diagram třídy se otevře v Návrháři tříd a zobrazí se jako soubor s příponou *CD* v **Průzkumníku řešení**. Obrazce a čáry můžete přetáhnout do diagramu z **panelu nástrojů**.
 
 Chcete-li přidat více diagramů tříd, opakujte kroky v tomto postupu.
 
-## <a name="add-a-class-diagram-based-on-existing-types"></a>Přidání diagramu tříd založeného na existujících typech
+## <a name="add-a-class-diagram-based-on-existing-types"></a>Přidání diagramu třídy na základě existujících typů
 
-V **Průzkumník řešení**otevřete místní nabídku souboru třídy (klikněte pravým tlačítkem myši) a pak zvolte **Zobrazit diagram tříd**.
+V **Průzkumníku řešení**otevřete místní nabídku souboru třídy (klepněte pravým tlačítkem myši) a pak zvolte **Zobrazit diagram tříd**.
 
 -nebo-
 
-V **zobrazení tříd**otevřete místní nabídku obor názvů nebo typ a zvolte možnost **Zobrazit diagram tříd**.
+V **zobrazení tříd**otevřete kontextovou nabídku oboru názvů nebo typu a zvolte Zobrazit diagram **tříd**.
 
 > [!TIP]
-> Pokud **zobrazení tříd** není otevřený, otevřete **zobrazení tříd** v nabídce **zobrazení** .
+> Pokud **zobrazení tříd** není otevřené, otevřete zobrazení tříd **z** nabídky **Zobrazení.**
 
-## <a name="to-display-the-contents-of-a-complete-project-in-a-class-diagram"></a>Zobrazení obsahu kompletního projektu v diagramu tříd
+## <a name="to-display-the-contents-of-a-complete-project-in-a-class-diagram"></a>Zobrazení obsahu celého projektu v diagramu třídy
 
-V **Průzkumník řešení** nebo zobrazení tříd klikněte pravým tlačítkem myši na projekt a zvolte možnost **Zobrazit**a pak zvolte možnost **Zobrazit diagram tříd**.
+V **Průzkumníku řešení** nebo zobrazení tříd klepněte pravým tlačítkem myši na projekt a zvolte **Zobrazit**a pak zvolte Zobrazit **diagram tříd**.
 
-Vytvoří se automaticky vyplněný diagram tříd.
+Je vytvořen diagram automaticky vyplněných tříd.
 
 > [!NOTE]
-> Návrhář tříd není v projektech .NET Core k dispozici.
+> Návrhář tříd není k dispozici v projektech .NET Core.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Postupy: vytváření typů pomocí Návrhář tříd](how-to-create-types.md)
-- [Postupy: zobrazení existujících typů](how-to-view-existing-types.md)
+- [Postup: Vytváření typů pomocí Návrháře tříd](how-to-create-types.md)
+- [Postup: Zobrazení existujících typů](how-to-view-existing-types.md)
 - [Návrh a zobrazení tříd a typů](designing-and-viewing-classes-and-types.md)

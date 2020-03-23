@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4d49f0fde7bbf13a1219296420b84970f4350860
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585701"
 ---
 # <a name="add-existing-item-command"></a>Přidat existující položku – příkaz
@@ -29,33 +29,33 @@ Přidá existující soubor do aktuálního řešení a otevře jej.
 File.AddExistingItem filename [/e:editorname]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 `filename`\
-Požadováno. Úplná cesta a název souboru s příponou položky, která se má přidat do aktuálního řešení. Pokud cesta nebo název souboru obsahují mezery, uzavřete celou cestu do uvozovek.
+Povinná hodnota. Úplná cesta a název souboru s příponou položky, kterou chcete přidat do aktuálního řešení. Pokud cesta k souboru nebo název souboru obsahuje mezery, uzavřete celou cestu do uvozovek.
 
 ## <a name="switches"></a>Přepínače
-/e: `editorname`\
-Volitelné. Název editoru, ve kterém bude soubor otevřen. Je-li zadán argument, ale není zadán žádný název editoru, zobrazí se dialogové okno **otevřít v** .
+/e:`editorname`\
+Nepovinný parametr. Název editoru, ve kterém bude soubor otevřen. Pokud je argument zadán, ale není zadán žádný název editoru, zobrazí se dialogové okno **Otevřít v** akci.
 
-Syntaxe parametru/e:`editorname` používá editory názvů, které se zobrazují v **dialogovém okně Otevřít v programu**, uzavřeném v uvozovkách. Chcete-li například otevřít šablonu stylů v editoru zdrojového kódu, zadejte následující příkaz pro argument/e:`editorname`.
+Syntaxe argumentu /e:`editorname` používá názvy editorů tak, jak jsou zobrazeny v **dialogovém okně Otevřít s**, které jsou uzavřeny v uvozovkách. Chcete-li například otevřít šablonu stylů v editoru zdrojového kódu,`editorname` zadejte pro argument /e: následující.
 
 ```cmd
 /e:"Source Code (text) Editor"
 ```
 
 ## <a name="remarks"></a>Poznámky
-Automatické dokončování se snaží vyhledat správnou cestu a název souboru při psaní.
+Automatické dokončování se pokusí při psaní najít správnou cestu a název souboru.
 
 ## <a name="example"></a>Příklad
-Tento příklad přidá soubor. Form1. frm do aktuálního řešení.
+Tento příklad přidá soubor Form1.frm do aktuálního řešení.
 
 ```cmd
 >File.AddExistingItem "C:\public\solution files\Form1.frm"
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Pole Najít/příkaz](../../ide/find-command-box.md)
+- [Najít/Příkazové pole](../../ide/find-command-box.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

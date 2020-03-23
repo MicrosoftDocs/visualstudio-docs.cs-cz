@@ -1,5 +1,5 @@
 ---
-title: 'DA0030: shromáždění měření interakce vrstev pro databázové projekty | Microsoft Docs'
+title: 'DA0030: Shromážděte měření interakce vrstev pro databázové projekty | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,33 +14,33 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 26b0905882ef8ec2e3fcddc4cf699ecae7dbe7a4
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74777473"
 ---
-# <a name="da0030-gather-tier-interaction-measurements-for-database-projects"></a>DA0030: shromáždění měření interakce vrstev pro databázové projekty
+# <a name="da0030-gather-tier-interaction-measurements-for-database-projects"></a>DA0030: Shromážděte měření interakce vrstev pro databázové projekty
 
 |||
 |-|-|
 |Id pravidla|DA0030|
-|Kategorie|Využití Nástroje pro profilaci|
-|Metoda profilace|Kontrol|
-|Zpráva|Shromažďování výsledků interakce pro vícevrstvé aplikace vám pomůže pochopit vzorce využití databáze a klíčová zpoždění přístupu k datům. Zkuste aplikaci profilovat znovu s povolenou možností Profilování interakce vrstev.|
-|Typ pravidla|Informace o nástroji|
+|Kategorie|Využití nástrojů profilování|
+|Metoda profilování|Vzorkování|
+|Zpráva|Shromažďování měření interakcí pro vícevrstvé aplikace vám pomůže pochopit vzorce využití databáze a zpoždění přístupu ke klíčovým datům. Zkuste aplikaci profilovat znovu s povolenou možností profilování interakce vrstvy.|
+|Typ pravidla|Informace|
 
-## <a name="cause"></a>příčina
- Volání metod <xref:System.Data> jsou významným podílem dat profilování a neshromáždili jste data interakce vrstev při spuštění profilace. Zvažte znovu profilaci a přidejte data interakce vrstev.
+## <a name="cause"></a>Příčina
+ Volání <xref:System.Data> metod jsou významnou částí dat profilování a v průběhu profilování jste neshromáždili data interakce vrstvy. Zvažte profilování znovu a přidání dat interakce vrstvy.
 
 ## <a name="rule-description"></a>Popis pravidla
- Toto pravidlo je vyvoláno vždy, když jsou ve funkcích, které jsou umístěny v oborech názvů System. data, včetně <xref:System.Data.Linq><xref:System.Data.Linq>, významné aktivity.
+ Toto pravidlo je aktivována vždy, když je významná aktivita <xref:System.Data.Linq> <xref:System.Data.Linq>ve funkcích, které jsou umístěny v System.Data obory názvů, včetně .
 
- Vícevrstvé aplikace používají vrstvené služby pro svou prezentační a datovou vrstvu. Datová vrstva je často samostatný proces, který spouští systém správy databáze, například Microsoft SQL Server. Datová vrstva může dokonce běžet na samostatném počítači ze zbytku aplikace. Vzorkovací profily poskytují malý přehled o funkcích a službách, které se spouštějí mimo proces nebo vzdáleně.
+ Vícevrstvé aplikace používají vrstvené služby pro své prezentační a datové vrstvy. Často je datová vrstva samostatný proces se systémem pro správu databáze, jako je microsoft SQL Server. Datová vrstva může být dokonce spuštěna na samostatném počítači od zbytku aplikace. Vzorkovací profily poskytují malý přehled o funkcích a službách, které jsou mimo proces nebo vzdáleně.
 
- Nástroje pro profilaci můžou shromažďovat informace o časování pro vícevrstvé aplikace, které pracují s Microsoft SQL Server datovou vrstvou pomocí asynchronních volání služeb ADO.NET Services. Musíte explicitně povolit profilaci interakce vrstev. Ve výchozím nastavení není zapnutý.
+ Nástroje profilování mohou shromažďovat informace o časování pro vícevrstvé aplikace, které interagují s datovou vrstvou serveru Microsoft SQL Server pomocí asynchronních volání ADO.NET služeb. Je nutné explicitně povolit profilování interakce vrstvy. Ve výchozím nastavení není zapnuta.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
- Toto pravidlo je pouze pro informace a nemusí vyžadovat nápravné akce.
+ Toto pravidlo je pouze pro informaci a nemusí vyžadovat nápravná opatření.
 
- Informace o tom, jak přidat data interakce vrstvy k profilaci dat z integrovaného vývojového prostředí (IDE) sady Visual Studio, najdete v tématu [shromáždění dat interakce vrstev](../profiling/collecting-tier-interaction-data.md). Informace o tom, jak přidat data interakce vrstev z příkazového řádku, najdete v tématu [shromáždění dat interakce vrstev](../profiling/adding-tier-interaction-data-from-the-command-line.md).
+ Informace o tom, jak přidat data interakce vrstvy do profilování dat z ide Sady Visual Studio, naleznete v [tématu Shromažďování dat interakce vrstvy](../profiling/collecting-tier-interaction-data.md). Informace o tom, jak přidat data interakce vrstvy z příkazového řádku, naleznete v [tématu Shromažďování dat interakce vrstvy](../profiling/adding-tier-interaction-data-from-the-command-line.md).

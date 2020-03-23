@@ -1,6 +1,6 @@
 ---
-title: Ladění kódu v Pythonu na vzdálených Linuxových počítačích
-description: Ladění kódu v Pythonu běží na vzdálených Linuxových počítačích, včetně potřebný postup konfigurace, zabezpečení a řešení potíží pomocí sady Visual Studio.
+title: Ladění kódu Pythonu na vzdálených počítačích s Linuxem
+description: Pomocí sady Visual Studio můžete ladit kód Pythonu spuštěný ve vzdálených počítačích s Linuxem, včetně nezbytných kroků konfigurace, zabezpečení a řešení potíží.
 ms.date: 12/06/2018
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -11,36 +11,36 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: e718a5610d9539e3e2a89af0a9de502ebfd168a7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62962522"
 ---
-# <a name="remotely-debug-python-code-on-linux"></a>Vzdálené ladění kódu v Pythonu v Linuxu
+# <a name="remotely-debug-python-code-on-linux"></a>Vzdálené ladění kódu Pythonu v Linuxu
 
-Visual Studio můžete spustit a lokální a vzdálené ladění aplikací v Pythonu v počítači Windows (viz [vzdálené ladění](../debugger/remote-debugging.md)). To může také vzdálené ladění na různých operačních systémů, zařízení nebo implementace Python než CPython pomocí [ptvsd knihovny](https://pypi.python.org/pypi/ptvsd).
+Visual Studio může spouštět a ladit aplikace Pythonu místně a vzdáleně v počítači se systémem Windows (viz [Vzdálené ladění).](../debugger/remote-debugging.md) Může také ladit vzdáleně na jiný operační systém, zařízení nebo Python implementace než CPython pomocí [knihovny ptvsd](https://pypi.python.org/pypi/ptvsd).
 
-Při použití ptvsd, hostuje kód Pythonu, který se právě ladí ladění serveru, na který lze připojit sady Visual Studio. Malé změny kódu do importovat na server a může vyžadovat sítě nebo povolení brány firewall na vzdáleném počítači a povolíte připojení TCP konfigurace tohoto hostování vyžaduje.
+Při použití ptvsd, kód Pythonu, který je laděn, hostuje ladicí server, ke kterému se může aplikace Visual Studio připojit. Tento hosting vyžaduje malou změnu kódu pro import a povolení serveru a může vyžadovat konfiguraci sítě nebo brány firewall ve vzdáleném počítači, aby bylo možné povolit připojení TCP.
 
 |   |   |
 |---|---|
-| ![Ikona filmové kamery pro video](../install/media/video-icon.png "Sledovat video") | Úvod do vzdáleného ladění, naleznete v tématu [podrobné informace: Vzdálené ladění napříč platformami](https://youtu.be/y1Qq7BrV6Cc) (webu youtube.com, 6m22s), která se vztahuje na Visual Studio 2015 a 2017. |
+| ![ikona filmové kamery pro video](../install/media/video-icon.png "Podívejte se na video") | Úvod do vzdáleného ladění najdete [v tématu Deep Dive: Vzdálené ladění napříč platformami](https://youtu.be/y1Qq7BrV6Cc) (youtube.com, 6m22s), které je použitelné pro Visual Studio 2015 a 2017. |
 
-## <a name="set-up-a-linux-computer"></a>Nastavit počítač s Linuxem
+## <a name="set-up-a-linux-computer"></a>Nastavení počítače s Linuxem
 
-Následující položky je třeba postupovat podle tohoto návodu:
+Následující položky jsou potřebné pro tento návod:
 
-- Vzdálený počítač se systémem Python v operačním systému, jako jsou Mac OS x nebo Linux.
-- Port 5678 (příchozí) otevřené na tomto počítači brány firewall, což je výchozí nastavení pro vzdálené ladění.
+- Vzdálený počítač se systémem Python v operačním systému, jako je Mac OSX nebo Linux.
+- Port 5678 (příchozí) byl otevřen v bráně firewall tohoto počítače, což je výchozí pro vzdálené ladění.
 
-Můžete snadno vytvořit [virtuálního počítače s Linuxem v Azure](/azure/virtual-machines/linux/creation-choices) a [přístup pomocí vzdálené plochy](/azure/virtual-machines/linux/use-remote-desktop) z Windows. Pro virtuální počítač se systémem Ubuntu je pohodlné, protože je ve výchozím nastavení; nainstalován Python v opačném případě najdete v seznamu na [nainstalujte interpret Pythonu podle vašeho výběru](installing-python-interpreters.md) pro umístění pro stahování dalších Python.
+[Virtuální počítač S Linuxem](/azure/virtual-machines/linux/creation-choices) můžete snadno vytvořit v Azure a [přistupovat k němu pomocí vzdálené plochy](/azure/virtual-machines/linux/use-remote-desktop) z Windows. Ubuntu pro Virtuální měje je výhodné, protože Python je ve výchozím nastavení nainstalován; v opačném případě se seznam najdete v seznamu [Instalace interpretu Pythonu podle vašeho výběru](installing-python-interpreters.md) pro další umístění stahování Pythonu.
 
-Podrobnosti o vytvoření pravidla brány firewall pro virtuální počítač Azure najdete v tématu [otevření portů k virtuálnímu počítači v Azure pomocí webu Azure portal](/azure/virtual-machines/windows/nsg-quickstart-portal).
+Podrobnosti o vytvoření pravidla brány firewall pro virtuální počítač Azure najdete v tématu [Otevření portů na virtuální počítač v Azure pomocí portálu Azure](/azure/virtual-machines/windows/nsg-quickstart-portal).
 
-## <a name="prepare-the-script-for-debugging"></a>Příprava ladění skriptu
+## <a name="prepare-the-script-for-debugging"></a>Příprava skriptu pro ladění
 
-1. Na vzdáleném počítači, vytvořte soubor Pythonu s názvem *opakovaně uhodnout game.py* následujícím kódem:
+1. Ve vzdáleném počítači vytvořte soubor Pythonu s názvem *guessing-game.py* s následujícím kódem:
 
     ```python
     import random
@@ -65,64 +65,64 @@ Podrobnosti o vytvoření pravidla brány firewall pro virtuální počítač Az
         print('Nope. The number I was thinking of was {0}'.format(number))
     ```
 
-1. Nainstalujte `ptvsd` balíčku do vašeho prostředí pomocí `pip3 install ptvsd`.
+1. Nainstalujte `ptvsd` balíček do `pip3 install ptvsd`vašeho prostředí pomocí .
    >[!NOTE]
-   >Je vhodné zaznamenat verzi ptvsd, která je nainstalována v případě, že ho budete potřebovat pro řešení potíží s; [ptvsd výpis](https://pypi.python.org/pypi/ptvsd) také zobrazuje dostupné verze.
+   >Je vhodné zaznamenat verzi ptvsd, která je nainstalována v případě, že ji potřebujete pro řešení potíží; [ptvsd výpis](https://pypi.python.org/pypi/ptvsd) také zobrazuje dostupné verze.
 
-1. Povolení vzdáleného ladění tak, že přidáte následující kód nejbližší možné v okamžiku *opakovaně uhodnout game.py*, před jiným kódem. (I když striktní požadavek, není možné ladit žádného vlákna na pozadí vytvoří podřízený proces před `enable_attach` funkce je volána.)
+1. Povolte vzdálené ladění přidáním níže uvedeného kódu v nejbližším možném bodě *v guessing-game.py*před jiným kódem. (Ačkoli to není přísný požadavek, není možné ladit všechna vlákna `enable_attach` na pozadí, která byla zplozena před voláním funkce.)
 
    ```python
    import ptvsd
    ptvsd.enable_attach()
    ```
 
-1. Uložte soubor a spusťte `python3 guessing-game.py`. Volání `enable_attach` běží na pozadí a čeká na příchozí připojení, když pracujete v opačném případě se program. V případě potřeby `wait_for_attach` funkce lze volat po `enable_attach` Blokujte program, dokud ladicí program připojí.
+1. Uložte soubor `python3 guessing-game.py`a spusťte . Volání spustí `enable_attach` na pozadí a čeká na příchozí připojení, jak jinak pracovat s programem. V případě `wait_for_attach` potřeby může být `enable_attach` funkce volána po zablokování programu, dokud se ladicí program nepřipojí.
 
 > [!Tip]
-> Kromě `enable_attach` a `wait_for_attach`, ptvsd také poskytuje pomocnou funkci `break_into_debugger`, který slouží jako zarážku prostřednictvím kódu programu, pokud je připojen ladicí program. K dispozici je také `is_attached` funkce, která vrací `True` Pokud je připojen ladicí program (Všimněte si, že není nutné ke kontrole tohoto výsledku před voláním jakékoli jiné `ptvsd` funkce).
+> Kromě `enable_attach` a `wait_for_attach`, ptvsd také poskytuje `break_into_debugger`pomocnou funkci , která slouží jako programová zarážka, pokud je připojen ladicí program. K dispozici `is_attached` je také `True` funkce, která vrátí, pokud ladicí program je připojen (všimněte si, že není nutné zkontrolovat tento výsledek před voláním jiné `ptvsd` funkce).
 
-## <a name="attach-remotely-from-python-tools"></a>Připojit vzdáleně z nástroje Python Tools
+## <a name="attach-remotely-from-python-tools"></a>Připojení vzdáleně z nástrojů Pythonu
 
-V následujícím postupu jsme nastavení jednoduché zarážky zastavit vzdálený proces.
+V těchto krocích nastavíme jednoduchou zarážku pro zastavení vzdáleného procesu.
 
-1. Vytvoření kopie vzdáleného souboru na místním počítači a otevřete ho v sadě Visual Studio. Je jedno, kde je umístěn soubor, ale její název by měl odpovídat názvu souboru, který na vzdáleném počítači.
+1. Vytvořte kopii vzdáleného souboru v místním počítači a otevřete ji v sadě Visual Studio. Nezáleží na tom, kde je soubor umístěn, ale jeho název by měl odpovídat názvu skriptu ve vzdáleném počítači.
 
-1. (Volitelné) Pokud chcete, aby IntelliSense pro ptvsd v místním počítači, nainstalujte balíček ptvsd prostředí Pythonu.
+1. (Nepovinné) Chcete-li mít intelliSense pro ptvsd v místním počítači, nainstalujte balíček ptvsd do prostředí Pythonu.
 
-1. Vyberte **ladění** > **připojit k procesu**.
+1. Vyberte **možnost Připojit k procesu** > **Attach to Process**.
 
-1. V **připojit k procesu** dialogové okno, které se zobrazí, nastavte **typ připojení** k **vzdálené Pythonu (ptvsd)**. (Ke starším verzím sady Visual Studio jsou pojmenovány tyto příkazy **přenosu** a **vzdálené ladění Pythonu**.)
+1. V zobrazeném dialogovém okně **Připojit k procesu** nastavte **typ připojení** na **vzdálené (ptvsd)**. (Ve starších verzích sady Visual Studio se tyto příkazy nazývají **Transport** a **vzdálené ladění Pythonu**.)
 
-1. V **cíl připojení** pole (**kvalifikátor** na starší verze), zadejte `tcp://<ip_address>:5678` kde `<ip_address>` je, že vzdáleného počítače (který může být explicitní adresa nebo název, například myvm.cloudapp.NET), a `:5678` je číslo portu vzdáleného ladění.
+1. V poli **Cíl připojení** (**Kvalifikátor** ve starších verzích) `tcp://<ip_address>:5678` zadejte, kde `<ip_address>` je to `:5678` vzdálený počítač (což může být buď explicitní adresa nebo název, jako je myvm.cloudapp.net) a je číslo vzdáleného ladicího portu.
 
-1. Stisknutím klávesy **Enter** k naplnění seznamu k dispozici ptvsd procesy v tomto počítači:
+1. Stisknutím **klávesy Enter** naplníte seznam dostupných procesů ptvsd v tomto počítači:
 
-    ![Zadáním cíl připojení a seznam procesů](media/remote-debugging-qualifier.png)
+    ![Zadání cíle připojení a výpis procesů](media/remote-debugging-qualifier.png)
 
-    Pokud jste ke spuštění jiného programu na vzdáleném počítači po naplnění seznamu, vyberte **aktualizovat** tlačítko.
+    Pokud po vyplnění tohoto seznamu spustíte jiný program ve vzdáleném počítači, vyberte tlačítko **Aktualizovat.**
 
-1. Vyberte proces pro ladění a pak **připojit**, nebo dvakrát klikněte na proces.
+1. Vyberte proces, který chcete ladit, a potom **připojit**nebo poklepejte na proces.
 
-1. Visual Studio dojde k přepnutí do režimu ladění, zatímco skript stále běží na vzdáleném počítači, poskytuje všechny běžné [ladění](debugging-python-in-visual-studio.md) možnosti. Například nastavte zarážku na `if guess < number:` řádku, pak přepnutí na vzdáleném počítači a zadejte jiné odhad. Až tak učiníte, Visual Studio na váš místní počítač zastaví na zarážce, zobrazí místní proměnné a tak dále:
+1. Visual Studio se pak přepne do režimu ladění, zatímco skript bude nadále spuštěn ve vzdáleném počítači a poskytne všechny obvyklé možnosti [ladění.](debugging-python-in-visual-studio.md) Nastavte například zarážku `if guess < number:` na řádku, přepněte do vzdáleného počítače a zadejte jiný odhad. Poté se visual studio v místním počítači zastaví na této zarážky, zobrazí místní proměnné a tak dále:
 
-    ![Visual Studio pozastaví ladění při dosažení zarážky](media/remote-debugging-breakpoint-hit.png)
+    ![Visual Studio pozastaví ladění při zásahu zarážky](media/remote-debugging-breakpoint-hit.png)
 
-1. Při zastavení ladění sady Visual Studio se odpojí z programu, který zůstane spuštěný na vzdáleném počítači. ptvsd taky dál naslouchání pro připojení ladicí programy, takže můžete znovu připojit k procesu kdykoli znovu.
+1. Když zastavíte ladění, Visual Studio odpojí od programu, který pokračuje v běhu ve vzdáleném počítači. ptvsd také pokračuje v poslechu pro připojení ladicích programů, takže můžete znovu připojit k procesu znovu kdykoliv.
 
-### <a name="connection-troubleshooting"></a>Řešení potíží s připojením
+### <a name="connection-troubleshooting"></a>Poradce při potížích s připojením
 
-1. Ujistěte se, že jste vybrali **vzdálené Pythonu (ptvsd)** pro **typ připojení** (**vzdálené ladění Pythonu** pro **přenosu** s starší verze.)
-1. Zkontrolujte, že tajný klíč v **cíl připojení** (nebo **kvalifikátor**) se přesně shoduje s tajným kódem v vzdáleného kódu.
-1. Zkontrolujte, že IP adresa v **cíl připojení** (nebo **kvalifikátor**) odpovídá vzdáleného počítače.
-1. Zkontrolujte, že máte otevřen port vzdáleného ladění na vzdáleném počítači a že jste zadali přípona portu v cíl připojení, jako `:5678`.
-    - Pokud je potřeba použít jiný port, můžete je zadat v `enable_attach` zavolat pomocí `address` argument, jako v `ptvsd.enable_attach(address = ('0.0.0.0', 8080))`. V tomto případě otevřete určený port v bráně firewall.
-1. Zkontrolujte, že verzi ptvsd nainstalovaný na vzdáleném počítači vrácené `pip3 list` odpovídá používané verzi nástroje Pythonu, který používáte v sadě Visual Studio v následující tabulce. V případě potřeby aktualizujte ptvsd na vzdáleném počítači.
+1. Ujistěte se, že jste vybrali **dálkové ovládání Pythonu (ptvsd)** pro **typ připojení** **(vzdálené ladění Pythonu** pro **přenos** se staršími verzemi.)
+1. Zkontrolujte, zda tajný klíč v **cíli připojení** (nebo **kvalifikátor)** přesně odpovídá tajný klíč ve vzdáleném kódu.
+1. Zkontrolujte, zda adresa IP v **cíli připojení** (nebo **kvalifikátoru)** odpovídá adrese vzdáleného počítače.
+1. Zkontrolujte, zda jste otevřeli vzdálený ladicí port ve vzdáleném počítači a zda jste do cíle `:5678`připojení zahrnuli příponu portu, například .
+    - Pokud potřebujete použít jiný port, můžete jej `enable_attach` zadat v `address` volání pomocí `ptvsd.enable_attach(address = ('0.0.0.0', 8080))`argumentu, jako v . V takovém případě otevřete tento konkrétní port v bráně firewall.
+1. Zkontrolujte, zda verze ptvsd nainstalovaná ve `pip3 list` vzdáleném počítači, která byla vrácena shodami, které používají verze nástrojů Pythonu, které používáte v sadě Visual Studio, v následující tabulce. V případě potřeby aktualizujte ptvsd ve vzdáleném počítači.
 
-    | Verze Visual Studio | Nástroje/ptvsd verze Pythonu |
+    | Verze sady Visual Studio | Python tools/ptvsd verze |
     | --- | --- |
-    | 2017 15.8 | 4.1.1a9 (starší verze ladicího programu: 3.2.1.0) |
-    | 2017 15.7 | 4.1.1A1 (starší verze ladicího programu: 3.2.1.0) |
-    | 2017 15.4, 15.5, verzi 15.6 | 3.2.1.0 |
+    | 2017 15.8 | 4.1.1a9 (starší ladicí program: 3.2.1.0) |
+    | 2017 15.7 | 4.1.1a1 (starší ladicí program: 3.2.1.0) |
+    | 2017 15.4, 15.5, 15.6 | 3.2.1.0 |
     | 2017 15.3 | 3.2.0 |
     | 2017 15.2 | 3.1.0 |
     | 2017 15.0, 15.1 | 3.0.0 |
@@ -130,53 +130,53 @@ V následujícím postupu jsme nastavení jednoduché zarážky zastavit vzdále
     | 2013 | 2.2.2 |
     | 2012, 2010 | 2.1 |
 
-## <a name="using-ptvsd-3x"></a>Pomocí ptvsd 3.x
+## <a name="using-ptvsd-3x"></a>Použití ptvsd 3.x
 
-Následující informace platí pouze pro vzdálené ladění pomocí ptvsd 3.x, který obsahuje některé funkce, které byly odstraněny v ptvsd 4.x.
+Následující informace platí pouze pro vzdálené ladění pomocí ptvsd 3.x, které obsahuje určité funkce, které byly odebrány v ptvsd 4.x.
 
-1. S ptvsd 3.x `enable_attach` funkce vyžaduje předání "tajný klíč" jako první argument, který omezuje přístup na spouštění skriptu. Tento tajný kód zadáte při připojování vzdáleného ladicího programu. Když ale nedoporučený krok, můžete povolit všem uživatelům připojení, použijte `enable_attach(secret=None)`.
+1. S ptvsd `enable_attach` 3.x, funkce vyžaduje, abyste předat "tajný klíč" jako první argument, který omezuje přístup ke spuštěnéskript. Tento tajný klíč zadáte při připojování vzdáleného ladicího programu. I když se nedoporučuje, můžete povolit komukoli připojit, použijte `enable_attach(secret=None)`.
 
-1. Cíl připojení je adresa URL `tcp://<secret>@<ip_address>:5678` kde `<secret>` se předal řetězec `enable_attach` v kódu Pythonu.
+1. Cílová adresa `tcp://<secret>@<ip_address>:5678` URL `<secret>` připojení je `enable_attach` místo, kde je řetězec předaný v kódu Pythonu.
 
-Ve výchozím nastavení je zabezpečená připojení k serveru ptvsd 3.x vzdálené ladění pouze pomocí tajný kód a všechna data předávána ve formátu prostého textu. Pro zabezpečení připojení, ptvsd 3.x podporuje používání protokolu SSL `tcsp` protokol, který nastavíte takto:
+Ve výchozím nastavení je připojení ke vzdálenému ladicímu serveru ptvsd 3.x zabezpečeno pouze tajným kódem a všechna data jsou předávána ve formátu prostého textu. Pro bezpečnější připojení podporuje ptvsd 3.x protokol `tcsp` SSL, který jste nastavili takto:
 
-1. Na vzdáleném počítači generovat samostatný certifikát podepsaný svým držitelem a pomocí openssl soubory klíčů:
+1. Ve vzdáleném počítači vygenerujte samostatný certifikát podepsaný svým držitelem a soubory klíčů pomocí openssl:
 
     ```command
     openssl req -new -x509 -days 365 -nodes -out cert.cer -keyout cert.key
     ```
 
-    Pokud budete vyzváni, použijte název hostitele nebo IP adresa (podle toho, co použijete k připojení) pro **běžný název** po zobrazení výzvy openssl.
+    Po zobrazení výzvy použijte název hostitele nebo ADRESU IP (podle toho, co používáte pro připojení) pro **běžný název,** když se zobrazí výzva openssl.
 
-    (Viz [certifikáty podepsané svým držitelem](https://docs.python.org/3/library/ssl.html#self-signed-certificates) v Pythonu `ssl` modulu dokumentace pro další podrobnosti. Všimněte si, že příkaz v těchto dokumentace generuje pouze jeden soubor kombinované.)
+    (Další podrobnosti najdete v `ssl` [tématu Certifikáty podepsané svým](https://docs.python.org/3/library/ssl.html#self-signed-certificates) držitelem v dokumentech modulu Pythonu. Všimněte si, že příkaz v těchto dokumentech generuje pouze jeden kombinovaný soubor.)
 
-1. V kódu, upravte volání `enable_attach` zahrnout `certfile` a `keyfile` pomocí názvů souborů jako hodnoty argumentů (tyto argumenty mají stejný význam jako u standardní `ssl.wrap_socket` funkce Pythonu):
+1. V kódu upravte volání `enable_attach` tak, aby zahrnovalo `certfile` a `keyfile` argumenty používající názvy souborů jako hodnoty `ssl.wrap_socket` (tyto argumenty mají stejný význam jako pro standardní funkci Pythonu):
 
     ```python
     ptvsd.enable_attach(secret='my_secret', certfile='cert.cer', keyfile='cert.key')
     ```
 
-    Můžete také provést stejnou změnu v souboru kódu na místním počítači, ale protože tento kód není ve skutečnosti spuštěn, není nezbytně nutné.
+    Můžete také provést stejnou změnu v souboru kódu v místním počítači, ale protože tento kód není ve skutečnosti spuštěn, není nezbytně nutné.
 
-1. Restartujte program v Pythonu na vzdáleném počítači, takže připravené pro ladění.
+1. Restartujte program Pythonu ve vzdáleném počítači a připravte ho na ladění.
 
-1. Zabezpečený kanál tak, že přidáte certifikát důvěryhodné kořenové certifikační Autority na počítači Windows pomocí sady Visual Studio:
+1. Zabezpečte kanál přidáním certifikátu do důvěryhodné ho schu a kcertifikačníautority v počítači se systémem Windows s aplikací Visual Studio:
 
     1. Zkopírujte soubor certifikátu ze vzdáleného počítače do místního počítače.
-    1. Otevřít **ovládací panely** a přejděte do **nástroje pro správu** > **spravovat certifikáty počítače**.
-    1. V okně, které se zobrazí, rozbalte **důvěryhodných kořenových certifikačních autorit** na levé straně, klikněte pravým tlačítkem na **certifikáty**a vyberte **všechny úkoly**  >  **Import**.
-    1. Vyhledejte a vyberte *.cer* zkopírovat soubor ze vzdáleného počítače, potom klikněte na tlačítko prostřednictvím dialogových oknech se bylo možné import dokončit.
+    1. Otevřete **Ovládací panely** a přejděte na **Nástroje pro správu** > Správa**certifikátů počítače**.
+    1. V okně, které se zobrazí, rozbalte položku **Důvěryhodné kořenové certifikační úřady** na levé straně, klikněte pravým tlačítkem myši na **certifikáty**a vyberte**import** **ovat všechny úkoly** > .
+    1. Přejděte do souboru *CER* zkopírovaného ze vzdáleného počítače a vyberte jej a import dokončete klepnutím v dialogových oknech.
 
-1. Postupujte stejně jako připojení v sadě Visual Studio jak je popsáno výše, teď používá `tcps://` jako protokol pro **cíl připojení** (nebo **kvalifikátor**).
+1. Opakujte proces připojení v sadě Visual Studio, jak je popsáno výše, nyní používá `tcps://` jako protokol pro cíl **připojení** (nebo **kvalifikátor).**
 
-    ![Výběr přenos vzdáleného ladění s protokolem SSL](media/remote-debugging-qualifier-ssl.png)
+    ![Výběr vzdáleného přenosu ladění pomocí technologie SSL](media/remote-debugging-qualifier-ssl.png)
 
-1. Visual Studio vás vyzve k o potenciálních problémech s certifikátem při připojení přes protokol SSL. Můžete upozornění ignorovat a pokračovat, ale i když před odposlechem ve chvíli je šifrovaný kanál může být otevřeno vůči útokům man-in-the-middle.
+1. Visual Studio zobrazí výzvy k potenciálním problémům s certifikáty při připojování přes SSL. Můžete ignorovat varování a pokračovat, ale i když je kanál stále šifrován proti odposlechu, může být otevřen útokům man-in-the-middle.
 
-    1. Pokud se zobrazí **vzdálený certifikát není důvěryhodný** upozornění níže, to znamená, že nebyl přidán správně certifikát k důvěryhodné kořenové certifikační Autority. Zkontrolujte tyto kroky a zkuste to znovu.
+    1. Pokud se níže zobrazí **vzdálené upozornění na vzdálený certifikát,** znamená to, že jste certifikát do důvěryhodného kořenového certifikačního autority nepřidali správně. Zkontrolujte tyto kroky a zkuste to znovu.
 
-        ![Upozornění důvěryhodný certifikát SSL](media/remote-debugging-ssl-warning.png)
+        ![Upozornění na důvěryhodné certifikáty SSL](media/remote-debugging-ssl-warning.png)
 
-    1. Pokud se zobrazí **vzdálený certifikát název neodpovídá názvu hostitele** upozornění níže, to znamená, že jste nepoužili správný název hostitele nebo IP adresou, jako **běžný název** při vytváření certifikátu.
+    1. Pokud se zobrazí **název vzdáleného certifikátu neodpovídá** upozornění názvu hostitele níže, znamená to, že jste při vytváření certifikátu nepoužili správný název hostitele nebo adresu IP jako **běžný název.**
 
         ![Upozornění na název hostitele certifikátu SSL](media/remote-debugging-ssl-warning2.png)

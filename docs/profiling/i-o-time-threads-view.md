@@ -1,5 +1,5 @@
 ---
-title: Čas I/o (zobrazení vláken) | Dokumentace Microsoftu
+title: Čas I-O (zobrazení vláken) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9d7ba29383ddddc02160967a90b56046128d2f19
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62995451"
 ---
 # <a name="io-time-threads-view"></a>čas I/O (zobrazení vláken)
-Tyto segmenty na časové ose jsou přidruženy k blokování časy, které jsou klasifikovány jako vstupně-výstupních operací. To znamená, že vlákno čeká na dokončení operace vstupně-výstupních operací. Vlákno může mít zablokovaný v rozhraní API, nebo I O souvisejícím s/jádra čekání, který Vizualizátor souběžnosti se počítá jako vstupně-výstupních operací. Rozhraní API, jako `CreateFile()`, `ReadFile()`, a `WSARecv()` spadají do této skupiny.
+Tyto segmenty v časové ose jsou spojeny s blokování časy, které jsou rozděleny do kategorií jako vstupně-v./O. To znamená, že vlákno čeká na dokončení vstupně-va. Vlákno může být blokovánv rozhraní API nebo vstupně-o související jádro čekat, že souběžnost vizualizátor počítá jako V/O. api, jako `CreateFile()` `ReadFile()`je `WSARecv()` například , a spadají do této skupiny.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

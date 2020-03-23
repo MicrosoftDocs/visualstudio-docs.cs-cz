@@ -1,5 +1,5 @@
 ---
-title: Profil viditelné časové osy | Dokumentace Microsoftu
+title: Viditelný profil časové osy | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 352651be28f178272caaad9a01070dc9d7357d79
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62823462"
 ---
-# <a name="visible-timeline-profile"></a>Profil viditelné časové osy
-Profil viditelné časové osy pro zobrazení vláken blokují poskytuje statistické informace a odkazy na sestavy. Jako přiblížení, oddálení, posuňte se vodorovně, kanály skrýt nebo zobrazit kanály, čísla v aktivní legenda se změní tak, aby odrážely, co je aktuálně v zobrazení. Chcete-li zobrazit zprávu o položky v legendě, klikněte na položku.
+# <a name="visible-timeline-profile"></a>Viditelný profil časové osy
+Profil viditelné časové osy pro zobrazení blokování vláken poskytuje statistické informace a odkazy na sestavy. Při přiblížení, oddálení, vodorovném posouvání, skrytí kanálů nebo zobrazení kanálů se čísla v aktivní legendě mění tak, aby odrážela to, co je aktuálně v zobrazení. Chcete-li zobrazit sestavu o položce v legendě, klikněte na ni.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: nastavení oprávnění | Microsoft Docs'
+title: 'Postup: Nastavení oprávnění | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,46 +15,46 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: c1ab7705c7ab46b07b08b707ce447f37c581036a
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74774586"
 ---
-# <a name="how-to-set-permissions"></a>Postupy: nastavení oprávnění
+# <a name="how-to-set-permissions"></a>Postup: Nastavení oprávnění
 
-Tento článek popisuje, jak správce počítače udělí oprávnění zabezpečení potřebná k profilaci uživateli nebo skupině, která nemá v tomto počítači oprávnění správce.
+Tento článek popisuje, jak správce počítače uděluje oprávnění zabezpečení požadovaná pro profilování uživateli nebo skupině, která nemá oprávnění správce v tomto počítači.
 
-Základní princip zabezpečení uvádí, že aplikace by měly běžet bez více než oprávnění, která potřebují. Tato zásada platí i pro uživatele. Pokud můžou uživatelé plně platit, když jsou přihlášeni jako členové skupiny uživatelů místo skupiny správců, neměli by jim být udělená oprávnění správce. První postup: vytvoření uživatelského účtu, který má oprávnění uživatele, popisuje, jak vytvořit uživatelský účet pro člena skupiny Users.
+Základní princip zabezpečení uvádí, že aplikace by měly být spuštěny s více než oprávnění, která potřebují. Tato zásada platí i pro uživatele. Pokud mohou být uživatelé plně efektivní, když jsou přihlášeni jako členové skupiny Users namísto skupiny Administrators, neměla by jim být udělena oprávnění správce. První postup "Chcete-li vytvořit uživatelský účet s uživatelskými oprávněními", popisuje, jak vytvořit uživatelský účet pro člena skupiny Users.
 
-Členové skupiny Uživatelé budou potřebovat přístup ke složkám a souborům na disku, které jsou sdíleny s ostatními členy týmu. Druhý postup, "udělení přístupu ke sdíleným souborům projektu", popisuje, jak tento přístup udělit.
+Členové skupiny Users budou potřebovat přístup ke složkám a souborům na disku, které jsou sdíleny s ostatními členy týmu. Druhý postup "Chcete-li udělit přístup ke sdíleným souborům projektu", popisuje, jak tento přístup udělit.
 
-Členové skupiny Uživatelé mohou spustit nástroje pro profilaci, pokud správce udělí přístup k ovladači softwaru pro nástroje pro profilaci. Poslední postup, "udělení přístupu k ovladači profilování", popisuje, jak udělit přístup k tomuto ovladači.
+Členové skupiny Users mohou spustit nástroje profilování, pokud jim správce udělí přístup k softwarovému ovladači pro nástroje profilování. Poslední postup "Udělit přístup k ovladačprofilování," popisuje, jak udělit přístup k tomuto ovladači.
 
 > [!NOTE]
-> K provedení kroků v těchto postupech potřebujete oprávnění správce.
+> Chcete-li postupovat podle kroků uvedených v těchto postupech, potřebujete oprávnění správce.
 
-## <a name="to-create-a-user-account-that-has-user-permissions"></a>Vytvoření uživatelského účtu, který má oprávnění uživatele
+## <a name="to-create-a-user-account-that-has-user-permissions"></a>Vytvoření uživatelského účtu s uživatelskými oprávněními
 
-1. Pravým tlačítkem myši klikněte na položku **Tento počítač** a poté klikněte na možnost **Spravovat**.
+1. Klepněte pravým tlačítkem myši na **položku Tento počítač** a potom klepněte na příkaz **Spravovat**.
 
-     Otevře se okno **Správa počítače** .
+     Otevře se okno **Správa počítače.**
 
-2. Rozbalte položku **místní uživatelé a skupiny**.
+2. Rozbalte **položku Místní uživatelé a skupiny**.
 
-3. Klikněte pravým tlačítkem na složku **Uživatelé** a pak klikněte na **Nový uživatel**.
+3. Klepněte pravým tlačítkem myši na složku **Uživatelé** a potom klepněte na příkaz **Nový uživatel**.
 
-     Zobrazí se dialogové okno **Nový uživatel** .
+     Zobrazí se dialogové okno **Nový uživatel.**
 
-4. Vyplňte pole v tomto dialogovém okně informacemi pro uživatelský účet, který vytváříte. Zadejte heslo. Volitelně můžete zaškrtnout políčko, které vyžaduje, aby uživatel při příštím přihlášení změnil heslo.
+4. Dokončete pole v tomto dialogovém okně informacemi o uživatelském účtu, který vytváříte. Zadejte heslo. Volitelně zaškrtněte políčko, které vyžaduje, aby uživatel při příštím přihlášení změnil heslo.
 
-5. Klikněte na **vytvořit** a potom na **Zavřít**.
+5. Klepněte na tlačítko **Vytvořit** a potom na **tlačítko Zavřít**.
 
-     Nový uživatel se zobrazí ve skupině Uživatelé, skupina uživatelů, kteří nemají oprávnění správce.
+     Nový uživatel se zobrazí ve skupině Users, skupině uživatelů, kteří nemají oprávnění správce.
 
-## <a name="to-grant-access-to-shared-project-files"></a>Chcete-li udělit přístup ke sdíleným souborům projektu
+## <a name="to-grant-access-to-shared-project-files"></a>Udělení přístupu ke sdíleným souborům projektu
 
-1. V Průzkumníku Windows (nebo Průzkumníku souborů) vyhledejte kořen stromu složky pro soubory projektu, které používá tento uživatel a sdílí projektový tým.
+1. V Průzkumníkovi Windows (nebo Průzkumníku souborů) vyhledejte kořenový adresář stromu složek pro soubory projektu, které tento uživatel používá a sdílí projektový tým.
 
      Cesta k této složce se může podobat následujícímu:
 
@@ -62,21 +62,21 @@ Základní princip zabezpečení uvádí, že aplikace by měly běžet bez víc
     D:\ourProject
     ```
 
-2. Klikněte pravým tlačítkem na složku a pak klikněte na **vlastnosti**.
+2. Klepněte pravým tlačítkem myši na složku a potom klepněte na příkaz **Vlastnosti**.
 
-     Zobrazí se dialogové okno **\<název složky > vlastnosti** .
+     Zobrazí ** \<** se dialogové okno název> vlastnosti.
 
-3. Klikněte na kartu **zabezpečení** .
+3. Klikněte na kartu **Zabezpečení**.
 
-4. Klikněte na název účtu uživatele v poli **název skupiny nebo jméno uživatele** .
+4. Klikněte na název uživatelského účtu v poli **Skupina nebo uživatelská jména.**
 
-5. V poli **oprávnění pro \<uživatelské jméno >** zaškrtněte políčko pro **Úplné řízení**.
+5. V poli **Oprávnění pro \<uživatelské jméno>** zaškrtněte políčko Úplné **řízení**.
 
 6. Klikněte na tlačítko **OK**.
 
-     Tato možnost uděluje uživateli oprávnění ke stromu sdílené složky, který začíná složkou vybranou v kroku 5.
+     To uděluje oprávnění uživateli pro strom sdílených složek, který začíná složky vybrané v kroku 5.
 
-## <a name="to-grant-access-to-the-profiling-driver"></a>Udělení přístupu k ovladači profilace
+## <a name="to-grant-access-to-the-profiling-driver"></a>Udělení přístupu k ovladači profilování
 
 1. Otevřete příkazový řádek jako správce.
 
@@ -92,36 +92,36 @@ Základní princip zabezpečení uvádí, že aplikace by měly běžet bez víc
     vsperfcmd /admin:driver,start /admin:service,start
     ```
 
-     Tento příkaz nainstaluje a spustí ovladač pro nástroje pro profilaci.
+     Tento příkaz nainstaluje a spustí ovladač pro profilovací nástroje.
 
-     Tento příkaz spustí ovladač a službu profilace, aby uživatelé bez správce mohli používat funkce profilace, které jsou k dispozici v prostoru uživatelského procesu. Pouze správce může spustit příkaz. a u uživatelů bez oprávnění správce se to nepodaří.
+     Tento příkaz spustí profilování ovladač a službu tak, aby uživatelé bez správce mohou používat funkce profilování, které jsou k dispozici v jejich uživatelském prostoru procesu. Příkaz může spustit pouze správce. a u uživatelů, kteří nejsou administrativními oprávněními, se nezdaří.
 
-     Všimněte si, že účinky tohoto kroku jsou vráceny po restartování počítače, Pokud neprovedete také poslední krok v tomto postupu.
+     Všimněte si, že účinky tohoto kroku jsou zpět po restartování počítače, pokud také provést poslední krok v tomto postupu.
 
-4. Spusťte příkaz, který umožní přístup k funkci profilace ovladače podle uživatele nebo skupiny, která nemá přístup správce k počítači:
+4. Spuštěním příkazu povolíte přístup k funkcím ovladače profilování uživatelem nebo skupinou, která nemá přístup správce k počítači:
 
     ```cmd
     vsperfcmd /admin:security,allow,<right[,right],<user name|group name>
     ```
 
-     Tento příkaz udělí \<uživatelské jméno > nebo \<název skupiny > účtu přístup k nástrojům pro profilaci. Možnost > \<určuje funkce profilování, ke kterým má uživatel přístup. \<pravé > možnosti může být jedna nebo více z následujících hodnot:
+     Tento příkaz \<uděluje> \<uživatelskému jménu nebo> názvu skupiny přístup k nástrojům profilování. Správná \<možnost> určuje funkci profilování, ke které má uživatel přístup. Správná \<možnost> může být jedna nebo více z následujících hodnot:
 
-    - FullAccess – povolí přístup ke všem metodám profilace, včetně shromažďování údajů o výkonu ze služeb, vzorkování a profilování mezi jednotlivými relacemi.
+    - FullAccess - umožňuje přístup ke všem metodám profilování, včetně shromažďování dat o výkonu ze služeb, vzorkování a profilování napříč relacemi.
 
-    - SampleProfiling – povolí přístup k ukázkovým metodám profilace
+    - SampleProfiling - umožňuje přístup k metodám profilování vzorků
 
-    - CrossSession – povolí přístup k profilování mezi relacemi, který je vyžadován pro služby profilace.
+    - CrossSession - umožňuje přístup k profilování mezi relacemi, které je vyžadováno pro profilování služeb.
 
-5. Volitelné Pokud chcete zachovat výsledky některého z předchozích kroků po restartování počítače, spusťte následující příkaz:
+5. (Nepovinné) Chcete-li zachovat výsledky některého z předchozích kroků po restartování počítače, spusťte následující příkaz:
 
     ```cmd
     vsperfcmd /admin:driver,autostart,on
     ```
 
-   Určení uživatelé po přihlášení budou moci používat nástroje pro profilaci bez oprávnění správce.
+   Zadali uživatelé po přihlášení budou nyní moci používat nástroje profilování bez oprávnění správce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Konfigurace relací výkonu](../profiling/configuring-performance-sessions.md)
-[VSPerfCmd](../profiling/vsperfcmd.md)
-[profilace a zabezpečení systému Windows Vista](../profiling/profiling-and-windows-vista-security.md)
+[Konfigurace relací](../profiling/configuring-performance-sessions.md)
+výkonu[Profilování VSPerfCmd](../profiling/vsperfcmd.md)
+[a Zabezpečení systému Windows Vista](../profiling/profiling-and-windows-vista-security.md)

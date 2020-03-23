@@ -1,5 +1,5 @@
 ---
-title: Čas přerušení | Dokumentace Microsoftu
+title: Preemption Time | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,22 +13,22 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: de7a02f7247e09876bc4598d44fc1c395161ebc2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62935890"
 ---
-# <a name="preemption-time"></a>Čas přerušení
-Tyto segmenty na časové ose jsou přidruženy k blokování, který je zařazený do kategorie jako ztracený čas. Tato kategorie znamená, že je vlákno přepnutí z jednoho z těchto důvodů:
+# <a name="preemption-time"></a>Doba prevence
+Tyto segmenty v časové ose jsou spojeny s blokování čas, který je kategorizován jako pre-emption. Tato kategorie znamená, že vlákno je přepnutz z jednoho z těchto důvodů:
 
-- Plánovač se nahrazuje použití vyšší priorita vlákna.
+- Plánovač jej nahradil pomocí podprocesu s vyšší prioritou.
 
-- Kvantové doby provádění vlákna vypršela platnost a byly jiná vlákna připravená ke spuštění.
+- Spuštění kvantové vlákno vypršela a další vlákna byla připravena k provedení.
 
-  Během této doby je blokovaná společností Důvod čekání jádra, která Vizualizátor souběžnosti se počítá jako ztracený vlákno. Ztracený segmenty spustit, když vlákno je vložena mimo logické jádro a ukončit, pokud bylo vlákno pokračuje v provádění.
+  Během této doby vlákno bylo blokováno z důvodu čekání jádra, že vizualizér souběžnosti počítá jako pre-emption. Předemptionsegmenty spustit při vlákno je vytlačena z logickéjádro a končí, když toto vlákno pokračuje v provádění.
 
-  Popis pro segment dojde ke zrušení zobrazí název procesu nebo vlákna, která způsobila ztracený. Nicméně to neznamená, že proces nebo vlákno, které převzal skutečně spustila v průběhu preempted období.
+  Popispro předem vysunutý segment zobrazuje název procesu nebo vlákna, které předkupnímu procesu způsobily. To však neznamená, že proces nebo vlákno, které převzal ve skutečnosti běžel v průběhu období preempted.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

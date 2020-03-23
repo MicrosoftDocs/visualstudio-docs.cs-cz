@@ -8,21 +8,21 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 ms.openlocfilehash: f455a1cbfbad58ebe724c879837e161954cf4be2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62560927"
 ---
 # <a name="monitoring-gpu-utilization"></a>Monitorování využití GPU
 
-K monitorování využití GPU ze vzdáleného počítače s Linuxem:
+Sledování využití GPU vzdálených počítačů s Linuxem:
 
-1. V **Průzkumníka serveru**, rozbalte **vzdálených počítačů**.
-2. **Klikněte pravým tlačítkem na** vzdálený počítač, který chcete sledovat.
+1. V **Průzkumníkovi serveru**rozbalte **položku Vzdálené počítače**.
+2. **Klikněte pravým tlačítkem myši na** vzdálený počítač, který chcete monitorovat.
 
-    ![GPU heatmapu](media/monitor-gpu/gpu-heatmap-0.png)
+    ![gpu heatmap](media/monitor-gpu/gpu-heatmap-0.png)
 
-3. Klikněte na tlačítko **zobrazit Heat mapa**.
+3. Klepněte na tlačítko **Zobrazit tepelnou mapu**.
 
-    ![GPU heatmapu](media/monitor-gpu/heatmap.png)
+    ![gpu heatmap](media/monitor-gpu/heatmap.png)

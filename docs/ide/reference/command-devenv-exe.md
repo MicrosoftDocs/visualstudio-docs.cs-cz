@@ -13,15 +13,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 434b2ad0f2a6ca4d84c6d82bf9a1a85876a4d975
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75570398"
 ---
 # <a name="command-devenvexe"></a>/Command (devenv.exe)
 
-Spustí zadaný příkaz po spuštění integrovaného vývojového prostředí (IDE) sady Visual Studio.
+Po spuštění ide sady Visual Studio provede zadaný příkaz.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,31 +29,31 @@ Spustí zadaný příkaz po spuštění integrovaného vývojového prostředí 
 devenv /Command CommandName
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 
-*CommandName*
+*Commandname*
 
-Požadováno. Úplný název příkazu aplikace Visual Studio nebo jeho alias uzavřený do dvojitých uvozovek. Další informace o syntaxi příkazu a aliasu naleznete v tématu [příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md).
+Povinná hodnota. Úplný název příkazu Sady Visual Studio nebo jeho aliasu, uzavřeného v uvozovkách. Další informace o syntaxi příkazů a aliasů naleznete v [tématu Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Po dokončení spuštění IDE spustí pojmenovaný příkaz.
+Po dokončení spuštění ide provede pojmenovaný příkaz.
 
 ::: moniker range="vs-2017"
 
-Pokud použijete tento přepínač, rozhraní IDE nezobrazuje úvodní stránku při spuštění.
+Pokud použijete tento přepínač, ide nezobrazí úvodní stránku při spuštění.
 
 ::: moniker-end
 
-Pokud doplněk zpřístupňuje příkaz, můžete pomocí tohoto přepínače spustit doplněk z příkazového řádku. Další informace najdete v tématu [Postup: ovládání doplňků pomocí Správce doplňků](/previous-versions/xwdatdwh(v=vs.140)).
+Pokud doplněk zpřístupňuje příkaz, můžete pomocí tohoto přepínače spustit doplněk z příkazového řádku. Další informace naleznete v [tématu How to: Control add-ins using the add-in manager](/previous-versions/xwdatdwh(v=vs.140)).
 
 ## <a name="example"></a>Příklad
 
-První příklad spustí aplikaci Visual Studio a automaticky spustí makro otevření oblíbených souborů.
+První příklad spustí Visual Studio a automaticky spustí makro Otevřít oblíbené soubory.
 
-Druhý příklad otevře kartu procházení webu v rámci integrovaného vývojového prostředí (IDE) a přejde na web Microsoft Docs.
+Druhý příklad otevře kartu procházení webu v rámci rozhraní IDE a přejde na web Microsoft Docs.
 
-Třetí příklad vytvoří nový soubor s názvem `some_file.cs` a otevře jej v editoru kódu.
+Třetí příklad vytvoří nový `some_file.cs` soubor s názvem a otevře jej v editoru kódu.
 
 ```shell
 devenv /command "Macros.MyMacros.Module1.OpenFavoriteFiles"
@@ -63,8 +63,8 @@ devenv /command "navigate https://docs.microsoft.com/"
 devenv /command "nf some_file.cs"
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)
+- [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)
-- [okno Příkaz](command-window.md)
+- [Příkazové okno](command-window.md)

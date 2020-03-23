@@ -1,5 +1,5 @@
 ---
-title: Čítač | Microsoft Docs
+title: Počítadlo | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: aa4b4cdb-e6ea-433a-9579-56f3785e1385
@@ -10,20 +10,20 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 9e2f1684257ed39560fa0ea049d3296a6e45cdd7
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779477"
 ---
-# <a name="counter"></a>Counter
-Možnost **čítač** shromažďuje data z čítačů výkonu procesoru (hardware).
+# <a name="counter"></a>Čítač
+Možnost **Čítač** shromažďuje data z čítačů výkonu procesoru (hardwaru).
 
-- Při použití metody profilace vzorkování Určuje **čítač** čítač výkonu na čipu a počet událostí čítače, které se mají použít jako interval vzorkování. Když používáte vzorkování, můžete zadat jenom jeden čítač.
+- Při použití metody profilování vzorkování **čítač** určuje čítač výkonu na čipu a počet událostí čítače, které mají být používány jako interval vzorkování. Při použití vzorkování můžete zadat pouze jeden čítač.
 
-- Pokud používáte metodu profilace instrumentace, počet událostí čítače, ke kterým došlo v intervalu mezi předchozími a aktuálními událostmi kolekce, je v sestavách profileru uveden jako samostatná pole. Při použití instrumentace lze zadat více možností **čítače** .
+- Pokud používáte metodu profilování instrumentace, počet událostí čítače, ke kterým došlo v intervalu mezi předchozí a aktuální událostí kolekce, je uveden jako samostatná pole v sestavách profileru. Více **možností čítače** lze zadat, pokud používáte instrumentaci.
 
-  Každý typ procesoru má vlastní sadu čítačů výkonu hardwaru. Profiler definuje sadu obecných čítačů výkonu, které jsou společné pro téměř všechny procesory. K vypsání obecných a specifických čítačů pro konkrétní procesor v počítači použijte příkaz VSPerfCmd **QueryCounters** .
+  Každý typ procesoru má vlastní sadu čítačů výkonu hardwaru. Profiler definuje sadu obecných čítačů výkonu, které jsou společné pro téměř všechny procesory. Chcete-li v počítači uvést obecné čítače specifické pro procesor, použijte příkaz VSPerfCmd **QueryCounters.**
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,25 +36,25 @@ VSPerfCmd.exe /Start:Method /Counter:Name[,Reload[,FriendlyName]][/Counter:Name[
 ```
 
 #### <a name="parameters"></a>Parametry
- `Name` název čítače. Pomocí možnosti VSPerfCmd. exe **/QueryCounters** můžete vypsat názvy dostupných čítačů v počítači.
+ `Name`Název čítače. Pomocí možnosti VSPerfCmd.exe **/QueryCounters** uveďte názvy dostupných čítačů v počítači.
 
- `Reload` počet událostí čítače v intervalu vzorkování. Nepoužívejte s metodou instrumentace.
+ `Reload`Počet událostí čítače v intervalu vzorkování. Nepoužívejte s přístrojovou metodou.
 
- `FriendlyName` (nepovinný) řetězec, který se má použít místo `Name` v hlavičkách sloupců sestav a zobrazení profileru.
+ `FriendlyName`(Nepovinné) Řetězec, který se `Name` má použít místo v záhlaví sloupců sestavy profileru a zobrazení.
 
 ## <a name="required-options"></a>Požadované možnosti
- Možnost čítače lze použít pouze s jednou z následujících možností:
+ Možnost Čítač lze použít pouze s jednou z následujících možností:
 
- **Start:** `Trace` inicializuje Profiler, aby používal metodu instrumentace.
+ **Start:** `Trace` Inicializuje profiler pro použití metody instrumentace.
 
- **Spustit:** `AppName` spustí zadanou aplikaci a Profiler. Profiler je nutné inicializovat pro použití metody vzorkování.
+ **Spuštění:** `AppName` Spustí zadanou aplikaci a profiler. Profiler musí být inicializován, aby se použila metoda odběru vzorků.
 
- **Připojit:** `PID` spustí Profiler a připojí ho k procesu určenému ID procesu. Profiler je nutné inicializovat pro použití metody vzorkování.
+ **Připojit:** `PID` Spustí profiler a připojí jej k procesu určenému ID procesu. Profiler musí být inicializován, aby se použila metoda odběru vzorků.
 
 ## <a name="example"></a>Příklad
- Ukázka metody vzorkování ukazuje, jak vzorkovat aplikaci při každém 1000 výskytech obecného čítače profileru NonHaltedCycles.
+ Příklad metody vzorkování ukazuje, jak vzorkovat aplikaci při každých 1000 výskytech čítače obecného profileru NonHaltedCycles.
 
- Příklad metody instrumentace ukazuje, jak inicializovat profiler pro shromažďování událostí čítače L2InstructionFetches. Název čítače L2InstructionFetches je specifický pro procesor.
+ Příklad metody instrumentace ukazuje, jak inicializovat profiler shromažďovat události čítače L2InstructionFetches. Název čítače L2InstructionFetches je specifický pro procesor.
 
 ```cmd
 ; Sample Method Example
@@ -65,8 +65,8 @@ VSPerfCmd.exe /Launch:TestApp.exe /Counter:NonHaltedCycles,1000,"Non-Halted Cycl
 VSPerfCmd.exe /Start:Trace /Output:TestApp.exe.vsp /Counter:L2InstructionFetches,,"L2 Cache Instruction Fetches"
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [VSPerfCmd](../profiling/vsperfcmd.md)
 - [Profilovat samostatné aplikace](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [ASP.NET webové aplikace Profile](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [Profilovací služby](../profiling/command-line-profiling-of-services.md)
+- [Profil ASP.NET webových aplikací](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profilové služby](../profiling/command-line-profiling-of-services.md)

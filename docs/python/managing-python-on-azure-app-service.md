@@ -1,6 +1,6 @@
 ---
 title: Konfigurace Pythonu ve službě Azure App Service (Windows)
-description: Postup instalace překladače a knihoven Pythonu ve službě Azure App Service a konfiguraci webové aplikace správně odkazovat na tomto interpretu.
+description: Jak nainstalovat překladač Pythonu a knihovny ve službě Azure App Service a konfigurace webových aplikací tak, aby správně odkazovaly na tento interpret.
 ms.date: 01/07/2019
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -12,43 +12,43 @@ ms.workload:
 - data-science
 - azure
 ms.openlocfilehash: 7ffe0de939eba8af38c132fc3de5c96a9499e3f0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62535959"
 ---
 # <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>Jak nastavit prostředí Pythonu ve službě Azure App Service (Windows)
 
 > [!Important]
-> Microsoft se nepoužívá rozšíření Pythonu pro službu App Service na Windows, jak je popsáno v tomto článku ve prospěch přímé nasazení do [App Service v Linuxu](publishing-python-web-applications-to-azure-from-visual-studio.md).
+> Společnost Microsoft zastarala rozšíření Pythonu pro službu App Service v systému Windows, jak je popsáno v tomto článku ve prospěch přímého nasazení do [služby App Service v systému Linux](publishing-python-web-applications-to-azure-from-visual-studio.md).
 
-[Azure App Service](https://azure.microsoft.com/services/app-service/) je jako nabídka platforma jako služba pro webové aplikace, ať už jsou weby přístupných prostřednictvím prohlížeče, rozhraní REST API, používat vlastní klienty nebo událost aktivuje zpracování. App Service podporuje použití Pythonu k implementaci aplikace.
+[Azure App Service](https://azure.microsoft.com/services/app-service/) je nabídka platformy jako služby pro webové aplikace, ať už se jedná o weby přístupné prostřednictvím prohlížeče, REST API používané vlastními klienty nebo zpracování spouštěné událostmi. App Service plně podporuje používání Pythonu k implementaci aplikací.
 
-Přizpůsobitelné podpory Pythonu pro službu Azure App Service se poskytuje jako sady služby App Service *rozšířením webu* , že každý obsahuje konkrétní verzi modulu runtime Pythonu. Poté můžete nainstalovat všechny požadované balíčky, které přímo do daného prostředí, jak je popsáno v tomto článku. Přizpůsobením prostředí ve službě App Service, samotného, není nutné udržovat balíčky v projektech webových aplikací nebo nahrávat společně s kódem aplikace.
+Přizpůsobitelná podpora Pythonu pro Službu aplikací Azure je poskytována jako sada *rozšíření webu služby* App Service, která obsahují konkrétní verzi modulu runtime pythonu. Potom můžete nainstalovat všechny požadované balíčky přímo do tohoto prostředí, jak je popsáno v tomto článku. Přizpůsobením prostředí v samotné službě App Service nemusíte udržovat balíčky v projektech webových aplikací ani je nahrávat s kódem aplikace.
 
 > [!Tip]
-> Ačkoli App Service ve výchozím nastavení se Python 2.7 a Python 3.4 nainstalovat do kořenové složky na serveru, nejde upravit nebo nainstalovat balíčky v těchto prostředích, ani by měl záviset na jejich přítomnost. Se místo toho spoléhají na rozšíření webu, který určujete vy, jak je popsáno v tomto článku.
+> Přestože služba App Service má ve výchozím nastavení Python 2.7 a Python 3.4 nainstalovaný v kořenových složkách na serveru, nelze přizpůsobit nebo nainstalovat balíčky v těchto prostředích, ani byste neměli záviset na jejich přítomnosti. Místo toho byste se měli spoléhat na rozšíření webu, které řídíte, jak je popsáno v tomto článku.
 
-## <a name="choose-a-python-version-through-the-azure-portal"></a>Zvolte verzi Pythonu na webu Azure portal
+## <a name="choose-a-python-version-through-the-azure-portal"></a>Výběr verze Pythonu na webu Azure Portal
 
-1. Vytvoření služby App Service pro vaši webovou aplikaci na webu Azure portal.
-1. Na stránce služby App Service, přejděte **nástroje pro vývoj** vyberte **rozšíření**a pak vyberte **+ přidat**.
-1. Přejděte dolů v seznamu, který obsahuje verzi jazyka Python, které chcete, aby rozšíření:
+1. Vytvořte službu aplikace pro webovou aplikaci na webu Azure Portal.
+1. Na stránce App Service přejděte do části **Nástroje pro vývoj,** vyberte **Rozšíření**a pak vyberte **+ Přidat**.
+1. Přejděte v seznamu dolů k rozšíření, které obsahuje požadovanou verzi Pythonu:
 
-    ![Rozšíření Azure Portalu zobrazující Pythonu](media/python-on-azure-extensions.png)
+    ![Portál Azure zobrazující rozšíření Pythonu](media/python-on-azure-extensions.png)
 
     > [!Tip]
-    > Pokud potřebujete starší verze jazyka Python a nezobrazuje uvedené v rozšíření webu, můžete nainstalovat ho prostřednictvím Azure Resource Manageru jak je popsáno v další části.
+    > Pokud potřebujete starší verzi Pythonu a nevidíte ji uvedenou v rozšíření webu, můžete ji nainstalovat prostřednictvím Správce prostředků Azure, jak je popsáno v další části.
 
-1. Vyberte rozšíření, přijměte právní podmínky a pak vyberte **OK**.
-1. Oznámení se zobrazí na portálu po dokončení instalace.
+1. Vyberte rozšíření, přijměte zákonné podmínky a pak vyberte **OK**.
+1. Po dokončení instalace se na portálu zobrazí oznámení.
 
-## <a name="choose-a-python-version-through-the-azure-resource-manager"></a>Zvolte verzi Pythonu prostřednictvím Azure Resource Manageru
+## <a name="choose-a-python-version-through-the-azure-resource-manager"></a>Výběr verze Pythonu prostřednictvím Správce prostředků Azure
 
-Pokud provádíte nasazení služby App Service pomocí šablony Azure Resource Manageru, přidáte rozšíření webu jako prostředek. Konkrétně se rozšíření zobrazí jako vnořený prostředek ( `resources` objekt v rámci `resources`) s typem `siteextensions` a název z [siteextensions.net](https://www.siteextensions.net/packages?q=Tags%3A%22python%22).
+Pokud nasazujete službu App Service se šablonou Azure Resource Manager, přidejte rozšíření webu jako prostředek. Konkrétně rozšíření se zobrazí jako `resources` vnořený `resources`prostředek (objekt pod ) s typem `siteextensions` a názvem z [siteextensions.net](https://www.siteextensions.net/packages?q=Tags%3A%22python%22).
 
-Například po přidání odkazu na `python361x64` (Python 3.6.1 x 64), vaše šablona může vypadat třeba takto (vynechány některé vlastnosti):
+Například po přidání odkazu `python361x64` na (Python 3.6.1 x64) může vaše šablona vypadat takto (některé vlastnosti jsou vynechány):
 
 ```json
 "resources": [
@@ -74,33 +74,33 @@ Například po přidání odkazu na `python361x64` (Python 3.6.1 x 64), vaše š
   }
 ```
 
-## <a name="set-webconfig-to-point-to-the-python-interpreter"></a>Nastavení web.config tak, aby odkazoval na interpret Pythonu
+## <a name="set-webconfig-to-point-to-the-python-interpreter"></a>Nastavení souboru web.config tak, aby přecvačiukazoval na interpret Pythonu
 
-Po instalaci rozšíření webu (pomocí portálu nebo šablony Azure Resource Manageru), dále odkazovat vaše aplikace *web.config* soubor pro interpret Pythonu. *Web.config* souboru nastaví na webovém serveru IIS (7 +) běžící na App Service, o jak zpracovávat požadavky Python prostřednictvím HttpPlatform (doporučeno) nebo FastCGI.
+Po instalaci rozšíření webu (prostřednictvím portálu nebo šablony Azure Resource Manager) dále přejdete soubor *web.config* vaší aplikace na interpret a překladač Pythonu. Soubor *web.config* instruuje webový server Služby IIS (7+) spuštěný ve službě App Service o tom, jak by měl zpracovávat požadavky Pythonu prostřednictvím httpplatformy (doporučeno) nebo fastcgi.
 
-Začněte tím, že hledání úplnou cestu k rozšíření webu *python.exe*, vytvořte a upravte příslušné *web.config* souboru.
+Začněte vyhledáním úplné cesty k *souboru python.exe*rozšíření webu a poté vytvořte a upravte příslušný soubor *web.config.*
 
-### <a name="find-the-path-to-pythonexe"></a>Najít cestu ke python.exe
+### <a name="find-the-path-to-pythonexe"></a>Najít cestu k python.exe
 
-Rozšíření webu Python je nainstalována na serveru v části *d:\home* ve složce příslušná verze Pythonu a architektura (s výjimkou několika starší verze). Například Python 3.6.1 x64 nainstalovaný v *d:\home\python361x64*. Úplná cesta k interpretu Pythonu je pak *d:\home\python361x64\python.exe*.
+Rozšíření webu Pythonu je nainstalováno na serveru pod *d:\home* ve složce odpovídající verzi a architektuře Pythonu (s výjimkou několika starších verzí). Například Python 3.6.1 x64 je nainstalován v *d:\home\python361x64*. Úplná cesta k interpretu Pythonu je potom *d:\home\python361x64\python.exe*.
 
-Pokud chcete zobrazit konkrétní cesty ve službě App Service, vyberte **rozšíření** na stránce služby App Service, pak vyberte rozšíření v seznamu.
+Pokud chcete zobrazit konkrétní cestu ve službě App Service, vyberte **rozšíření** na stránce Služba aplikace a vyberte rozšíření v seznamu.
 
 ![Seznam rozšíření ve službě Azure App Service](media/python-on-azure-extension-list.png)
 
-Tato akce otevře stránku rozšíření popis obsahující cestu:
+Tato akce otevře stránku s popisem rozšíření obsahující cestu:
 
 ![Podrobnosti o rozšíření ve službě Azure App Service](media/python-on-azure-extension-detail.png)
 
-Pokud máte potíže s zobrazuje cestu k rozšíření, najdete ho ručně pomocí konzoly:
+Pokud máte potíže se zobrazením cesty k rozšíření, můžete ji najít ručně pomocí konzoly:
 
-1. Na stránce služby App Service, vyberte **nástroje pro vývoj** > **konzoly**.
-1. Zadejte příkaz `ls ../home` nebo `dir ..\home` zobrazíte složky nejvyšší úrovně rozšíření *Python361x64*.
-1. Zadejte příkaz podobný `ls ../home/python361x64` nebo `dir ..\home\python361x64` k ověření, že obsahuje *python.exe* a další soubory překladač.
+1. Na stránce Služby aplikací vyberte**konzolu** **nástrojů pro vývoj** > .
+1. Zadejte `ls ../home` příkaz `dir ..\home` nebo zhlédnou složky rozšíření nejvyšší úrovně, například *Python361x64*.
+1. Zadejte příkaz `ls ../home/python361x64` `dir ..\home\python361x64` jako to se mi líbí nebo ověřte, zda obsahuje *python.exe* a další interpretní soubory.
 
-### <a name="configure-the-httpplatform-handler"></a>Konfigurace HttpPlatform obslužné rutiny
+### <a name="configure-the-httpplatform-handler"></a>Konfigurace obslužné rutiny httpplatformy
 
-Modul HttpPlatform předá připojení soketu přímo do samostatného procesu Pythonu. Tato předávací umožňuje spouštět jakékoli webové servery, jako jsou, ale vyžaduje spouštěcí skript, který spustí místní webový server. Zadejte skript v `<httpPlatform>` prvek *web.config*, kde `processPath` atribut body k interpretu Pythonu rozšíření webu a `arguments` atribut odkazuje na skript a argumentů Chcete poskytnout:
+Modul HttpPlatform předává připojení soketu přímo samostatnému procesu Pythonu. Tento průchod umožňuje spustit libovolný webový server, který se vám líbí, ale vyžaduje spouštěcí skript, který spouští místní webový server. Skript zadáte v `<httpPlatform>` prvku *web.config*, `processPath` kde atribut odkazuje na překladbu Pythonu rozšíření webu a `arguments` atribut odkazuje na váš skript a všechny argumenty, které chcete poskytnout:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -123,11 +123,11 @@ Modul HttpPlatform předá připojení soketu přímo do samostatného procesu P
 </configuration>
 ```
 
-`HTTP_PLATFORM_PORT` Proměnná prostředí je vidět tady obsahuje port, který váš místní server naslouchat požadavkům na připojení z místního hostitele. Tento příklad také ukazuje, jak vytvořit další proměnné prostředí, v případě potřeby v tomto případě `SERVER_PORT`.
+Zde `HTTP_PLATFORM_PORT` zobrazená proměnná prostředí obsahuje port, na který by měl místní server naslouchat pro připojení z localhost. Tento příklad také ukazuje, jak vytvořit jinou proměnnou prostředí, pokud je to žádoucí, v tomto případě `SERVER_PORT`.
 
-### <a name="configure-the-fastcgi-handler"></a>Konfigurace obslužná rutina FastCGI
+### <a name="configure-the-fastcgi-handler"></a>Konfigurace obslužné rutiny FastCGI
 
-FastCGI je rozhraní, které funguje na úrovni požadavků. Přijímá příchozí připojení služby IIS a předá každý požadavek s rozhraním WSGI aplikace spuštěná v jednom nebo více trvalých Python procesy. [Wfastcgi balíčku](https://pypi.io/project/wfastcgi) předem nainstalovaná a nakonfigurovaná s každou rozšíření webu Pythonu, takže je můžete snadno povolit kódu v *web.config* , jako jsou zobrazené níže pro webové aplikace na základě Rozhraní Bottle. Všimněte si, že úplné cesty k *python.exe* a *wfastcgi.py* jsou umístěny v `PythonHandler` klíč:
+FastCGI je rozhraní, které funguje na úrovni požadavku. IIS přijímá příchozí připojení a předává každý požadavek do aplikace WSGI spuštěné v jednom nebo více trvalých procesech Pythonu. [Balíček wfastcgi](https://pypi.io/project/wfastcgi) je předinstalovaný a nakonfigurovaný s každým rozšířením webu Pythonu, takže jej můžete snadno povolit zahrnutím kódu do *web.config,* jako je uvedeno níže pro webovou aplikaci založenou na rozhraní Bottle Framework. Všimněte si, že úplné cesty k *python.exe* a *wfastcgi.py* jsou umístěny v klíči: `PythonHandler`
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -148,59 +148,59 @@ FastCGI je rozhraní, které funguje na úrovni požadavků. Přijímá přícho
 </configuration>
 ```
 
-`<appSettings>` Definované, tady jsou k dispozici pro vaši aplikaci jako proměnné prostředí:
+Zde `<appSettings>` definované jsou k dispozici pro vaši aplikaci jako proměnné prostředí:
 
-- Hodnota pro `PYTHONPATH` volně prodloužit, ale musí obsahovat kořenovém adresáři aplikace.
-- `WSGI_HANDLER` musí odkazovat na aplikaci s rozhraním WSGI importovatelnou z vaší aplikace.
-- `WSGI_LOG` je volitelný, ale doporučený pro ladění vaší aplikace.
+- Hodnota pro `PYTHONPATH` může být volně rozšířena, ale musí obsahovat kořen aplikace.
+- `WSGI_HANDLER`musí ukazovat na aplikaci WSGI, která se z vaší aplikace může importovat.
+- `WSGI_LOG`je volitelná, ale doporučená pro ladění aplikace.
 
-V tématu [publikovat do Azure](publishing-python-web-applications-to-azure-from-visual-studio.md) najdete další podrobnosti o *web.config* obsah pro Bottle, Flask a Django webové aplikace.
+Další podrobnosti o obsahu *web.config* pro webové aplikace Bottle, Flask a Django najdete v tématu [Publish to Azure.](publishing-python-web-applications-to-azure-from-visual-studio.md)
 
 ## <a name="install-packages"></a>Instalace balíčků
 
-Interpret Pythonu nainstalované prostřednictvím rozšíření webu je pouze jedna část prostředí Pythonu. Budete pravděpodobně muset nainstalovat různých balíčcích v tomto prostředí také.
+Překladač Pythonu nainstalovaný prostřednictvím rozšíření webu je pouze jeden kus vašeho prostředí Pythonu. Pravděpodobně budete muset nainstalovat různé balíčky v tomto prostředí také.
 
-K instalaci balíčků přímo v prostředí serveru, použijte jednu z následujících metod:
+Chcete-li nainstalovat balíčky přímo v prostředí serveru, použijte jednu z následujících metod:
 
-| Metody | Použití |
+| Metody | Využití |
 | --- | --- |
-| [Azure App Service Kudu konzoly](#azure-app-service-kudu-console) | Nainstaluje balíčky interaktivně. Balíčky musí být čistě Python nebo musíte publikovat kola. |
-| [Rozhraní REST API služby kudu](#kudu-rest-api) | Můžete použít k automatizaci instalace balíčku.  Balíčky musí být čistě Python nebo musíte publikovat kola. |
-| Vytvoření balíčku aplikace | Instalace balíčků přímo do vašeho projektu a pak je nasadit do služby App Service, jako by byly součástí vaší aplikace. V závislosti na tom, kolik závislostí máte a jak často je aktualizovat, tato metoda může být nejjednodušší způsob, jak získat pracovní nasazení. Informováni, že knihovny musí odpovídat verzi jazyka Python na serveru, v opačném případě se zobrazí chyby skrytého po nasazení. Ale nutné dodat, protože verze Pythonu ve službě App Service rozšíření webu jsou stejné jako všeobecně dostupné na webu python.org verzí, můžete snadno získat kompatibilní verze pro místní vývoj. |
-| Virtuální prostředí | Není podporováno. Místo toho použijte sdružování a nastavte `PYTHONPATH` proměnnou prostředí, aby odkazovalo na umístění balíčky. |
+| [Konzola Kudu služby Azure App Service](#azure-app-service-kudu-console) | Nainstaluje balíčky interaktivně. Balíčky musí být čistě Python nebo musí publikovat kola. |
+| [Kudu REST API](#kudu-rest-api) | Lze použít k automatizaci instalace balíčku.  Balíčky musí být čistě Python nebo musí publikovat kola. |
+| Balíček s aplikací | Nainstalujte balíčky přímo do projektu a pak je nasaďte do služby App Service, jako by byly součástí vaší aplikace. V závislosti na tom, kolik závislostí máte a jak často je aktualizujete, může být tato metoda nejjednodušším způsobem, jak začít pracovat s pracovním nasazením. Upozorňujeme, že knihovny musí odpovídat verzi Pythonu na serveru, jinak se po nasazení zobrazí nejasné chyby. To znamená, že vzhledem k tomu, že verze Pythonu v rozšířeníwebu Služby aplikací jsou přesně stejné jako verze vydané v python.org, můžete snadno získat kompatibilní verzi pro místní vývoj. |
+| Virtuální prostředí | Není podporováno. Místo toho použijte sdružování a nastavte proměnnou `PYTHONPATH` prostředí tak, aby ukazovala na umístění balíčků. |
 
-### <a name="azure-app-service-kudu-console"></a>Azure App Service Kudu konzoly
+### <a name="azure-app-service-kudu-console"></a>Konzola Kudu služby Azure App Service
 
-[Konzola Kudu](https://github.com/projectkudu/kudu/wiki/Kudu-console) umožňuje přístup příkazového řádku s přímým přístupem, se zvýšenými oprávněními na serveru služby App Service a její systému souborů. Tím se oba cenné ladicí nástroj a umožňuje operace rozhraní příkazového řádku, například při instalaci balíčků.
+[Konzole Kudu](https://github.com/projectkudu/kudu/wiki/Kudu-console) poskytuje přímý, zvýšený přístup k serveru App Service a jeho souborovému systému. Jedná se o cenný ladicí nástroj a umožňuje operace v rámci systému řízení chování, jako je například instalace balíčků.
 
-1. Na stránce služby App Service na portálu Azure portal výběrem otevřete Kudu **nástroje pro vývoj** > **Rozšířené nástroje**, pak vyberete **Přejít**. Tato akce přejde na adresu URL, která je stejná jako vaše základní adresa URL služby aplikace s výjimkou s `.scm` vložen. Například, pokud je základní adresa URL `https://vspython-test.azurewebsites.net/` Kudu je na `https://vspython-test.scm.azurewebsites.net/` (což můžete stránku):
+1. Otevřete Kudu ze stránky Služby aplikací na webu Azure Portal tak, že vyberete **pokročilé nástroje pro** > vývoj**a**pak vyberete **Přejít**. Tato akce přejde na adresu URL, která je stejná `.scm` jako vaše základní adresa URL služby App Service s výjimkou vložené. Pokud je `https://vspython-test.azurewebsites.net/` například vaše základní adresa URL, je na `https://vspython-test.scm.azurewebsites.net/` ní Kudu (kterou si můžete připletit do záložek):
 
-    ![Konzola Kudu pro službu Azure App Service](media/python-on-azure-console01.png)
+    ![Konzole Kudu pro službu Azure App Service](media/python-on-azure-console01.png)
 
-1. Vyberte **konzolou pro ladění** > **CMD** otevřete konzoly, ve kterém můžete přejít do instalace Pythonu a zjistit, co knihovny jsou již existuje.
+1. Vyberte **Ladicí konzola** > **CMD** otevřete konzolu, ve které můžete přejít do instalace Pythonu a zjistit, jaké knihovny již existují.
 
-1. Chcete-li nainstalovat jeden balíček:
+1. Instalace jednoho balíčku:
 
-    a. Přejděte do složky instalace Pythonu, ve které chcete balíček nainstalovat, například *d:\home\python361x64*.
+    a. Přejděte do složky instalace Pythonu, do které chcete balíček nainstalovat, například *d:\home\python361x64*.
 
-    b. Použití `python.exe -m pip install <package_name>` k instalaci balíčku.
+    b. Slouží `python.exe -m pip install <package_name>` k instalaci balíčku.
 
-    ![Příklad instalace bottle prostřednictvím konzoly Kudu pro službu Azure App Service](media/python-on-azure-console02.png)
+    ![Příklad instalace láhve prostřednictvím konzole Kudu pro službu Azure App Service](media/python-on-azure-console02.png)
 
-1. Pokud jste nasadili *souboru requirements.txt* pro vaši aplikaci na server již, nainstalujte všechny tyto požadavky následujícím způsobem:
+1. Pokud jste již pro aplikaci nasadili *soubor requirements.txt* pro aplikaci na server, nainstalujte všechny tyto požadavky takto:
 
-    a. Přejděte do složky instalace Pythonu, ve které chcete balíček nainstalovat, například *d:\home\python361x64*.
+    a. Přejděte do složky instalace Pythonu, do které chcete balíček nainstalovat, například *d:\home\python361x64*.
 
     b. Spusťte příkaz `python.exe -m pip install --upgrade -r d:\home\site\wwwroot\requirements.txt`.
 
-    Pomocí *souboru requirements.txt* se doporučuje, protože je snadné ji reprodukovat přesné balíčku nastavte lokálně a na serveru. Jenom nezapomeňte pro návštěvu konzole po nasazení jakékoli změny *souboru requirements.txt* a spusťte příkaz znovu.
+    Použití *souboru requirements.txt* se doporučuje, protože je snadné reprodukovat přesnou sadu balíčků jak místně, tak na serveru. Nezapomeňte navštívit konzolu po nasazení všech změn *na requirements.txt* a znovu spustit příkaz.
 
 > [!Note]
-> Neexistuje žádný kompilátor jazyka C ve službě App Service, takže je potřeba nainstalovat kolečko pro všechny balíčky s nativní rozšiřující moduly. Mnoho oblíbených balíčků poskytnout jejich vlastní kola. Pro balíčky, které ji nemají, použijte `pip wheel <package_name>` na místním počítači pro vývoj a nahrajete kolečka na váš web. Příklad najdete v tématu [spravovat vyžadované balíčky pomocí souboru requirements.txt](managing-required-packages-with-requirements-txt.md).
+> Ve službě App Service není žádný kompilátor Jazyka C, takže je třeba nainstalovat kolečko pro všechny balíčky s nativními rozšiřujícími moduly. Mnoho populárních balíčků poskytuje vlastní kola. U balíčků, které ne, použijte `pip wheel <package_name>` v místním vývojovém počítači a nahrajte kolo na svůj web. Příklad naleznete v tématu [Správa požadovaných balíčků pomocí souboru requirements.txt](managing-required-packages-with-requirements-txt.md).
 
-### <a name="kudu-rest-api"></a>Rozhraní REST API služby kudu
+### <a name="kudu-rest-api"></a>Kudu REST API
 
-Namísto použití konzoly Kudu na webu Azure portal, můžete spouštět příkazy vzdáleně přes rozhraní REST API Kudu tím, že příkaz, který publikuje `https://yoursite.scm.azurewebsites.net/api/command`. Například, chcete-li nainstalovat `bottle` balíček, publikovat následující JSON na `/api/command`:
+Místo použití konzoly Kudu prostřednictvím portálu Azure můžete spouštět příkazy vzdáleně prostřednictvím rozhraní API Kudu REST odesláním příkazu do `https://yoursite.scm.azurewebsites.net/api/command`. Chcete-li například `bottle` nainstalovat balíček, zaúčtujte následující příspěvek na následující aplikaci JSON do `/api/command`:
 
 ```json
 {
@@ -209,6 +209,6 @@ Namísto použití konzoly Kudu na webu Azure portal, můžete spouštět přík
 }
 ```
 
-Informace o příkazech a ověřování najdete v tématu [Kudu dokumentaci](https://github.com/projectkudu/kudu/wiki/REST-API).
+Informace o příkazech a ověřování naleznete v [dokumentaci kudu](https://github.com/projectkudu/kudu/wiki/REST-API).
 
-Můžete také zjistit pomocí přihlašovacích údajů `az webapp deployment list-publishing-profiles` příkaz přes rozhraní příkazového řádku Azure (viz [az webapp deployment](/cli/azure/webapp/deployment?view=azure-cli-latest#az-webapp-deployment-list-publishing-profiles)). Je k dispozici na pomocné knihovny pro odesílání příkazů Kudu [Githubu](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42).
+Můžete také zobrazit přihlašovací `az webapp deployment list-publishing-profiles` údaje pomocí příkazu prostřednictvím příkazu Azure CLI (viz [nasazení az webapp](/cli/azure/webapp/deployment?view=azure-cli-latest#az-webapp-deployment-list-publishing-profiles)). Pomocná knihovna pro odesílání příkazů Kudu je k dispozici na [GitHubu](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42).

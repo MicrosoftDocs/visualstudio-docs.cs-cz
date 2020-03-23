@@ -1,6 +1,6 @@
 ---
 title: Produkty a služby pro usnadnění přístupu od Microsoftu
-description: Přečtěte si další informace o produktech a službách od Microsoftu, které vám pomůžou usnadnit přístup k našim operačním systémům, programům a aplikacím pro všechny uživatele, včetně postižených uživatelů.
+description: Přečtěte si další informace o produktech a službách od společnosti Microsoft, které mohou pomoci zpřístupnit naše operační systémy, programy a aplikace všem uživatelům, včetně osob s postižením.
 ms.date: 08/23/2019
 ms.topic: conceptual
 ms.prod: visual-studio-windows
@@ -22,69 +22,69 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 79e9ead07e58a1b359e67289913581a533185a45
-ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72919091"
 ---
 # <a name="accessibility-products-and-services-from-microsoft"></a>Produkty a služby pro usnadnění přístupu od Microsoftu
 
-Společnost Microsoft se zavazuje, že své produkty a služby usnadňují použití pro všechny uživatele. Tato stránka obsahuje informace o funkcích, produktech a službách, které usnadňují přístup k systému Microsoft Windows pro osoby s postižením.
+Společnost Microsoft se zavázala k tomu, aby vytvářela produkty a služby, jejichž používání je snadné pro každého. Tato stránka obsahuje informace o funkcích, produktech a službách, které usnadňují systém Microsoft Windows postiženým osobám.
 
 > [!IMPORTANT]
-> Informace na této stránce se můžou vztahovat jenom na uživatele, kteří licencují produkty Microsoftu v USA. Pokud jste tento produkt získali mimo USA, přečtěte si web [Microsoft Accessibility (usnadnění](https://www.microsoft.com/accessibility/) ), kde najdete seznam telefonních čísel a adres služeb podpory společnosti Microsoft. Chcete-li zjistit, zda je typ produktů a služeb popsaných na této stránce k dispozici ve vaší oblasti, obraťte se na svou pobočku. Informace o usnadnění jsou k dispozici v jiných jazycích.
+> Informace na této stránce se mohou vztahovat pouze na uživatele, kteří licencují produkty společnosti Microsoft ve Spojených státech. Pokud jste tento produkt získali mimo SPOJENÉ STÁTY, navštivte web [Microsoft Accessibility,](https://www.microsoft.com/accessibility/) kde najdete seznam telefonních čísel a adres služeb podpory společnosti Microsoft. Chcete-li zjistit, zda jsou ve vaší oblasti k dispozici produkty a služby popsané na této stránce, obraťte se na svou pobočku. Informace o usnadnění přístupu jsou k dispozici v jiných jazycích.
 
-## <a name="windows"></a>Funkce usnadnění systému Windows
+## <a name="accessibility-features-of-windows"></a><a name="windows"></a>Funkce usnadnění systému Windows
 
-Operační systém Windows obsahuje mnoho vestavěných funkcí pro usnadnění přístupu, které jsou užitečné pro jednotlivce, kteří mají potíže s psaním nebo používáním myši, jsou nevidomí nebo mají slabý zrak nebo jsou neslyšící nebo sluchové. Funkce se instalují při instalaci. Další informace o těchto funkcích naleznete v nápovědě k systému Windows a na webu [Microsoft Accessibility (usnadnění](https://www.microsoft.com/accessibility/) ).
+Operační systém Windows obsahuje mnoho vestavěných funkcí usnadnění určených pro osoby, které mají potíže se psaním nebo používáním myši, pro osoby slepé nebo slabozraké a pro osoby neslyšící či s vadou sluchu. Tyto funkce jsou instalovány během instalace. Další informace o těchto funkcích naleznete v nápovědě v systému Windows a na webu [Microsoft Accessibility.](https://www.microsoft.com/accessibility/)
 
 ### <a name="free-step-by-step-tutorials"></a>Kurzy s podrobnými pokyny pro uživatele
 
-Microsoft nabízí řadu podrobných kurzů, které poskytují podrobné postupy pro úpravu možností a nastavení usnadnění v počítači. Tyto informace se zobrazují v souběžném formátu, abyste se mohli naučit používat myš, klávesnici nebo kombinaci obou.
+Společnost Microsoft poskytuje řadu podrobných návodů, které popisují, jak přizpůsobit možnosti a nastavení usnadnění v počítači. Tyto informace jsou poskytovány společně, abyste se mohli naučit používat myš, klávesnici nebo jejich kombinaci.
 
-Podrobné kurzy pro produkty Microsoftu najdete na webu [Microsoft Accessibility (usnadnění](https://www.microsoft.com/accessibility/) ).
+Podrobné kurzy k produktům společnosti Microsoft najdete na webu [Microsoft Accessibility.](https://www.microsoft.com/accessibility/)
 
 ### <a name="assistive-technology-products-for-windows"></a>Technické pomůcky pro usnadnění pro systém Windows
 
-K dispozici je celá řada produktů využívajících asistenční technologie pro postižené osoby pro uživatele, kteří mají postižené. Katalog produktů s podporou technologie usnadnění, které běží na Windows, můžete vyhledat na webu [Microsoft Accessibility (usnadnění](https://www.microsoft.com/accessibility/) ).
+Existuje velké množství produktů s podpůrnou technologií, které postiženým osobám umožňují zjednodušit používání počítače. Katalog produktů asistenčních technologií, které běží v systému Windows, můžete prohledávat na webu [Microsoft Accessibility.](https://www.microsoft.com/accessibility/)
 
-Pokud používáte technologii pro usnadnění, obraťte se na dodavatele asistenční technologie před upgradem softwaru nebo hardwaru, aby zkontroloval možné problémy s kompatibilitou.
+Pokud používáte podpůrnou technologii, obraťte se před upgradem na výrobce podpůrné technologie, abyste prověřili případné problémy s kompatibilitou softwaru či hardwaru.
 
-## <a name="altfortmats"></a>Dokumentace v alternativních formátech
+## <a name="documentation-in-alternative-formats"></a><a name="altfortmats"></a>Dokumentace v alternativních formátech
 
-Pokud máte potíže při čtení nebo manipulaci s tištěnými materiály, můžete získat dokumentaci k mnoha produktům společnosti Microsoft v přístupnější formátech. Rejstřík dokumentace k produktu můžete zobrazit na webu [Microsoft Accessibility (usnadnění](https://www.microsoft.com/accessibility/) ).
+Pokud máte potíže se čtením či používáním tištěných materiálů, můžete získat dokumentaci k různým produktům Microsoft v dostupnějších formátech. Index přístupné dokumentace k produktu můžete zobrazit na webu [Microsoft Accessibility.](https://www.microsoft.com/accessibility/)
 
-Kromě toho můžete získat další publikace od Microsoftu od výukových Ally. Služba Learning Ally distribuuje tyto dokumenty do registrovaných a oprávněných členů jejich distribuční služby. Informace o dostupnosti dokumentace produktů společnosti Microsoft a knih nakladatelství Microsoft Press získáte od:
+Kromě toho můžete získat další publikace společnosti Microsoft od learning ally. Společnost Learning Ally distribuuje tyto dokumenty registrovaným způsobilým uživatelům své distribuční služby. Další informace o dostupnosti dokumentace produktů společnosti Microsoft a knih od společnosti Microsoft Press získáte od:
 
 > Sdružení Learning Ally<br />
-> Roszel cesta 20<br /> Princetonské, NEWARKU 08540<br /><br /> Web Learning Ally: [http://www.learningally.org](https://learningally.org/)
+> 20 Roszel Road<br /> Princeton, NJ 08540<br /><br /> Výuka Ally webové stránky:[http://www.learningally.org](https://learningally.org/)
 
-Webové adresy se mohou měnit, takže se možná nebudete moci připojit k webu nebo webům uvedeným zde.
+Webové adresy se mohou změnit a možná nebude možné se připojit ke zde uvedeným webovým stránkám nebo serverům.
 
-## <a name="hearing"></a>Služby zákazníkům pro lidi s postižením sluchu
+## <a name="customer-service-for-people-with-hearing-impairments"></a><a name="hearing"></a>Zákaznický servis pro osoby se sluchovým postižením
 
-Pokud jste neslyšící nebo máte sluchově těžko, máte k dispozici úplný přístup k produktům Microsoftu a zákaznickým službám prostřednictvím služby textového telefonu (TTY/TDD):
+Pokud jste neslyšící nebo máte vadu sluchu, máte k dispozici úplný přístup k produktům společnosti Microsoft a k zákaznickým službám prostřednictvím služby textového telefonu (TTY/TDD):
 
-- U zákaznických služeb kontaktujte Microsoft Sales Information Center na adrese (800) 892-5234 mezi 6:30 a 5:30 hodin tichomořského času, od pondělí do pátku s výjimkou svátků.
+- V případě potřeby se můžete obrátit na zákaznický servis, viz kontakt Microsoft Sales Information Center na telefonním čísle (800) 892-5234, od 6:30 do 17:30 pacifického času v pracovní dny mimo svátků.
 
-- Pro technickou pomoc v USA kontaktujte oddělení služeb technické podpory společnosti Microsoft na adrese (800) 892-5234 mezi 6:00 a 6:00 hodin tichomořského času, od pondělí do pátku s výjimkou svátků. V Kanadě vytočte (905) 568-9641 mezi 8:00 a 8:00 odp., od pondělí do pátku s výjimkou svátků.
+- Technická podpora ve Spojených Státech je k dispozici prostřednictvím služby Microsoft Product Support Services na telefonním čísle (800) 892-5234 od 6:00 do 18:00 pacifického času ve všední dny mimo svátků. V Kanadě na telefonním čísle (905) 568-9641 od 8:00 do 20:00 východního času v pracovní dny mimo svátků.
 
-Na podpora Microsoftu služby se vztahují ceny, podmínky a podmínky platné v době použití služby.
+Pro služby Microsoft Support Services platí ceny a podmínky platné v době použití služby.
 
-## <a name="moreinfo"></a>Další informace
+## <a name="for-more-information"></a><a name="moreinfo"></a>Pro více informací
 
-Další informace o tom, jak přístupné technologie pro počítače pomáhají zlepšit život osob s postižením, najdete na webu [Microsoft Accessibility (usnadnění](https://www.microsoft.com/accessibility/) ).
+Další informace o tom, jak přístupná technologie pro počítače pomáhá zlepšit životy postižených osob, naleznete na webu [Microsoft Accessibility.](https://www.microsoft.com/accessibility/)
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Další informace o nejnovějších aktualizacích usnadnění v aplikaci Visual Studio naleznete v příspěvku na blogu [Vylepšení přístupnosti v rámci sady Visual studio 2017 verze 15,3](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/) .
+> Další informace o nedávných aktualizacích usnadnění ve Visual Studiu najdete v tématu Vylepšení usnadnění v blogu [Visual Studia 2017 verze 15.3.](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/)
 
 ::: moniker-end
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-* [Prostředky pro návrh přístupných aplikací](../../ide/reference/resources-for-designing-accessible-applications.md)
-* [Funkce usnadnění v aplikaci Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md)
-* [Přístupnost pro Visual Studio pro Mac](/visualstudio/mac/accessibility)
+* [Prostředky pro navrhování přístupných aplikací](../../ide/reference/resources-for-designing-accessible-applications.md)
+* [Funkce usnadnění v sadě Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md)
+* [Usnadnění pro Visual Studio pro Mac](/visualstudio/mac/accessibility)

@@ -1,6 +1,6 @@
 ---
-title: Refaktorování kódu Pythonu
-description: Visual Studio umožňuje snadno Refaktorujte kód Pythonu přejmenováním identifikátory, extrahování metody, přidání importy a odebrání nepoužívaných importuje.
+title: Refaktorovat kód Pythonu
+description: Visual Studio usnadňuje refaktorování kódu Pythonu přejmenováním identifikátorů, extrahováním metod, přidáním importů a odebráním nepoužívaných importů.
 ms.date: 03/13/2019
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -11,72 +11,72 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: db1a551e20c597f98052471910bcb696c878675f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62429850"
 ---
-# <a name="refactor-python-code"></a>Refaktorování kódu Pythonu
+# <a name="refactor-python-code"></a>Refaktorovat kód Pythonu
 
-Visual Studio obsahuje několik příkazů pro automaticky transformaci a čištění zdrojový kód Pythonu:
+Visual Studio poskytuje několik příkazů pro automatickou transformaci a vyčištění zdrojového kódu Pythonu:
 
-- [Přejmenovat](#rename) Přejmenuje vybrané třídy, metody nebo název proměnné
-- [Extrahovat metodu](#extract-method) vytvoří novou metodu z vybraného kódu
-- [Přidat import](#add-import) poskytuje inteligentní značky, chcete-li přidat chybějící importu
-- [Odebere nevyužité importy](#remove-unused-imports) odebere nevyužité importy
+- [Přejmenování](#rename) přejmenuje vybranou třídu, metodu nebo název proměnné
+- [Metoda Extrakce](#extract-method) vytvoří novou metodu z vybraného kódu.
+- [Přidání importu](#add-import) poskytuje inteligentní značku pro přidání chybějícího importu
+- [Odebrání nepoužitých importů](#remove-unused-imports) odstraní nevyužité importy.
 
-## <a name="rename"></a>přejmenování
+## <a name="rename"></a>Přejmenovat
 
-1. Klikněte pravým tlačítkem na identifikátor, který chcete přejmenovat a vyberte **přejmenovat**, nebo umístěte blikající kurzor do identifikátoru a vyberte **upravit** > **Refaktorovat**  >  **Přejmenovat** příkazu nabídky (**F2**).
-2. V **přejmenovat** dialogové okno, které se zobrazí, zadejte nový název pro identifikátor, vyberte **OK**:
+1. Klepněte pravým tlačítkem myši na identifikátor, který chcete přejmenovat, a vyberte možnost **Přejmenovat**, nebo umístěte stříšku do tohoto identifikátoru a vyberte příkaz **Upravit** > **přejmenování** > **Rename** **(F2).**
+2. V zobrazeném dialogovém okně **Přejmenovat** zadejte nový název identifikátoru a vyberte **OK**:
 
-   ![Přejmenovat výzva k zadání nového názvu identifikátor](media/code-refactor-rename-1.png)
+   ![Přejmenovat výzvu pro nový název identiferu](media/code-refactor-rename-1.png)
 
-3. V dalším dialogovém okně vyberte soubory a instancí ve vašem kódu, pro kterou chcete použít přejmenování; Vyberte všechny jednotlivé instance na konkrétní změně ve verzi preview:
+3. V dalším dialogu vyberte soubory a instance v kódu, na které chcete přejmenovat; vyberte libovolnou jednotlivou instanci, abyste zobrazili náhled konkrétní změny:
 
-   ![Přejmenování dialogového okna a vyberte umístění pro použití změn](media/code-refactor-rename-2.png)
+   ![Přejmenovat dialogové okno pro výběr, kde se mají změny použít](media/code-refactor-rename-2.png)
 
-4. Vyberte **použít** provést změny souborů se zdrojovým kódem. (Tato akce může být vrátit zpět.)
+4. Chcete-li provést změny v souborech zdrojového kódu, vyberte **použít.** (Tuto akci lze vrátit zpět.)
 
 ## <a name="extract-method"></a>Extrahování metody
 
-1. Vyberte řádky kódu nebo výraz, který se extrahuje do samostatné metodě.
-2. Vyberte **upravit** > **Refaktorovat** > **extrahovat metodu** příkaz nabídky nebo typ **Ctrl** + **R** > **M**.
-3. V dialogovém okně, které se zobrazí zadejte nový název metody, uveďte, kam extrahujte ho do a vyberte všechny proměnné uzavření. Proměnné není vybrána pro uzavření jsou převedena na argumenty metody:
+1. Vyberte řádky kódu nebo výraz, který chcete extrahovat do samostatné metody.
+2. Vyberte příkaz příkaz metody **Upravit** > **refaktorování** > **nebo** zadejte **Ctrl**+**R** > **M**.
+3. V zobrazeném dialogovém okně zadejte nový název metody, označte, kam ji extrahovat, a vyberte všechny proměnné uzavření. Proměnné, které nejsou vybrány pro uzavření, se změní na argumenty metody:
 
-   ![Extrahovat metodu dialogového okna](media/code-refactor-extract-method-1.png)
+   ![Dialogové okno Extrahovat metodu](media/code-refactor-extract-method-1.png)
 
-4. Vyberte **OK** a kód je odpovídajícím způsobem upravit:
+4. Vyberte **OK** a kód je odpovídajícím způsobem upraven:
 
-   ![Účinek extrahování metody](media/code-refactor-extract-method-2.png)
+   ![Účinek extrakce metody](media/code-refactor-extract-method-2.png)
 
 ## <a name="add-import"></a>Přidat import
 
-Když umístíte blikající kurzor na identifikátor, chybí typ informací, Visual Studio poskytuje inteligentní značky (ikonu žárovky nalevo od kódu), jehož příkazy přidat nezbytné `import` nebo `from ... import` – příkaz:
+Když umístíte stříšku na identifikátor, který nemá informace o typu, Visual Studio poskytuje inteligentní značku (ikonu `import` žárovky vlevo od kódu), jejíž příkazy přidávají potřebné nebo `from ... import` příkazy:
 
-![Přidání inteligentních značek importu](media/code-refactor-add-import-1.png)
+![Přidání inteligentní značky importu](media/code-refactor-add-import-1.png)
 
-Visual Studio nabízí `import` dokončování pro nejvyšší úrovně balíčky a moduly v aktuálním projektu a standardní knihovny. Visual Studio také nabízí `from ... import` dokončování pro dílčí moduly a dílčí balíčky, jakož i modul členy. Dokončování zahrnují funkce, třídy nebo exportovaná data. Vyberte jednu z možností přidá příkaz tak, aby v horní části souboru po další imports nebo do existujícího `from ... import` příkazu, pokud již byla naimportována stejného modulu.
+Visual Studio `import` nabízí dokončení pro balíčky nejvyšší úrovně a moduly v aktuálním projektu a standardní knihovny. Visual Studio `from ... import` také nabízí dokončení pro podmoduly a podbalíčky, stejně jako členy modulu. Dokončení zahrnují funkce, třídy nebo exportovaná data. Výběrem jedné z možností přidáte příkaz do horní části souboru `from ... import` po jiných importech nebo do existujícího příkazu, pokud je stejný modul již importován.
 
-![Výsledkem přidání importu](media/code-refactor-add-import-2.png)
+![Výsledek přidání importu](media/code-refactor-add-import-2.png)
 
-Visual Studio se pokusí vyfiltrovat členy, které nejsou ve skutečnosti definovány v modulu, jako jsou moduly, které jsou importovány do jiné, ale nejsou podřízené objekty daného modulu to import. Například mnoho moduly se řídí `import sys` spíše než `from xyz import sys`, takže se nezobrazí dokončení pro import `sys` z jiných modulů, i když nebyly nalezeny moduly `__all__` člena, který vylučuje `sys`.
+Visual Studio se pokusí odfiltrovat členy, které nejsou ve skutečnosti definovány v modulu, jako jsou moduly, které jsou importovány do jiného, ale nejsou podřízené modulu provádění importu. Například mnoho modulů `import sys` použít `from xyz import sys`spíše než , takže nevidíte `sys` dokončení pro import z jiných modulů `__all__` i v `sys`případě, že moduly chybí člen, který vylučuje .
 
-Podobně Visual Studio filtry funkce, které jsou importovány z jiných modulů nebo z předdefinovaných oboru názvů. Například pokud importuje modul `settrace` funkci `sys` modulu, pak teoreticky naimportovat z tohoto modulu. Je nejvhodnější použít, ale `import settrace from sys` přímo, a proto nabízí Visual Studio, který tento příkaz konkrétně.
+Podobně Visual Studio filtruje funkce, které jsou importovány z jiných modulů nebo z předdefinovaného oboru názvů. Například pokud modul importuje `settrace` `sys` funkci z modulu, pak teoreticky můžete importovat z tohoto modulu. Ale je nejlepší použít `import settrace from sys` přímo, a tak Visual Studio nabízí toto prohlášení konkrétně.
 
-Nakonec, pokud se něco by normálně vyloučeny, ale má jiné hodnoty, které budou vloženy (protože název byla přidělena hodnota v modulu, třeba), Visual Studio stále vyloučí importu. Toto chování se předpokládá, že hodnota by neměla možné exportovat, protože je definována v jiném modulu, a proto je pravděpodobně fiktivní hodnoty, které se exportují také další přiřazení.
+Nakonec pokud by něco normálně být vyloučeny, ale má jiné hodnoty, které by byly zahrnuty (protože název byl přiřazen hodnotu v modulu, například), Visual Studio stále vylučuje import. Toto chování předpokládá, že hodnota by neměla být exportována, protože je definována v jiném modulu, a proto je další přiřazení pravděpodobně fiktivní hodnota, která také není exportována.
 
-## <a name="remove-unused-imports"></a>Odebere nevyužité importy
+## <a name="remove-unused-imports"></a>Odebrání nepoužitých importů
 
-Při psaní kódu, je snadné skončit s `import` příkazy pro moduly, které nejsou vůbec nepoužívá. Vzhledem k tomu, že sada Visual Studio analyzuje váš kód, může automaticky zjistit, jestli `import` příkazu je potřeba pro pohledu na tom, jestli importované název se používá v rámci oboru níže, kde dochází k příkazu.
+Při psaní kódu je snadné skončit `import` s příkazy pro moduly, které nejsou používány vůbec. Vzhledem k tomu, že Visual Studio `import` analyzuje váš kód, může automaticky určit, zda je potřebný příkaz, a to tak, že se zobrazí, zda se importovaný název používá v rámci níže uvedeného oboru, kde k příkazu dochází.
 
-Klikněte pravým tlačítkem na libovolné místo v editoru a vyberte **odebrat importy**, který poskytuje možnosti odebrání **všechny obory** nebo jenom **aktuální obor**:
+Klepněte pravým tlačítkem myši na libovolné místo v editoru a vyberte **odebrat importy**, což vám dává možnost odebrat ze **všech oborů** nebo jen **aktuální obor**:
 
-![Odebrat příkaz imports](media/code-refactor-remove-imports-1.png)
+![Nabídka Odebrat importy](media/code-refactor-remove-imports-1.png)
 
-Visual Studio pak provede odpovídající změny kódu:
+Visual Studio pak provede příslušné změny kódu:
 
-![Efekt odebrat importy](media/code-refactor-remove-imports-2.png)
+![Účinek odstranění dovozů](media/code-refactor-remove-imports-2.png)
 
-Všimněte si, že pro tok řízení; není účet sady Visual Studio pomocí názvu před `import` příkaz je zpracováván stejně, jako název ve skutečnosti byl použit. Visual Studio také ignoruje všechny `from __future__` importy, importy, které se provádí v rámci definice třídy, také z `from ... import *` příkazy.
+Všimněte si, že Visual Studio neúčtuje pro tok řízení; použití názvu před `import` příkaz je zacházeno, jako kdyby název byl skutečně použit. Visual Studio také `from __future__` ignoruje všechny importy, importy, které jsou prováděny `from ... import *` uvnitř definice třídy, také z příkazů.

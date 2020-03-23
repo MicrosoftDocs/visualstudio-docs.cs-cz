@@ -1,6 +1,6 @@
 ---
-title: Spravovat závislosti balíčků s soubor requirements.txt
-description: Soubor requirements.txt, který popisuje závislosti projektu. Pokud se zobrazí projekt obsahující soubor requirements.txt, můžete snadno nainstalovat tyto závislosti v jednom kroku.
+title: Správa závislostí balíčků pomocí souboru requirements.txt
+description: Soubor requirements.txt popisuje závislosti projektu. Pokud obdržíte projekt, který obsahuje soubor requirements.txt, můžete tyto závislosti snadno nainstalovat v jednom kroku.
 ms.date: 03/18/2019
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -11,35 +11,35 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: a1853df63354801ebf0413d3c8707135cb9bb800
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62535702"
 ---
-# <a name="manage-required-packages-with-requirementstxt"></a>Správa požadované balíčky pomocí souboru requirements.txt
+# <a name="manage-required-packages-with-requirementstxt"></a>Správa požadovaných balíčků pomocí souboru requirements.txt
 
-Pokud projekt sdílet s ostatními, systém sestavení nebo plán projektu zkopírovat do jiného umístění, které je potřeba obnovit prostředí, budete muset zadat externí balíčky, které projekt vyžaduje. Doporučuje se použít [soubor requirements.txt](https://pip.readthedocs.org/en/latest/user_guide.html#requirements-files) (readthedocs.org), který obsahuje seznam příkazů pro pip, který instaluje požadované verze závislé balíčky. Příkaz nejběžnější je `pip freeze > requirements.txt`, která zaznamenává prostředí aktuální seznam balíčků do *souboru requirements.txt*.
+Pokud sdílíte projekt s ostatními, použijte systém sestavení nebo plánujete zkopírovat projekt do jiného umístění, kde potřebujete obnovit prostředí, je třeba zadat externí balíčky, které projekt vyžaduje. Doporučeným postupem je použití [souboru requirements.txt](https://pip.readthedocs.org/en/latest/user_guide.html#requirements-files) (readthedocs.org), který obsahuje seznam příkazů pro pip, který nainstaluje požadované verze závislých balíčků. Nejběžnější majek je `pip freeze > requirements.txt`, který zaznamenává aktuální seznam balíčků prostředí do *souboru requirements.txt*.
 
-Technicky vzato některý název souboru může sloužit ke sledování požadavků (s použitím `-r <full path to file>` při instalaci balíčku), ale Visual Studio poskytuje specifické podpoře pro *souboru requirements.txt*:
+Technicky lze ke sledování požadavků (při `-r <full path to file>` instalaci balíčku) použít libovolný název souboru, ale sada Visual Studio poskytuje specifickou podporu pro soubor *requirements.txt*:
 
-- Pokud jste načetli projekt, který obsahuje *souboru requirements.txt* a chcete nainstalovat všechny balíčky uvedené v tomto souboru, rozbalte **prostředí Pythonu** uzel v **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel prostředí a vyberte **instalovat z requirements.txt**:
+- Pokud jste načetli projekt, který obsahuje *soubor requirements.txt* a chcete nainstalovat všechny balíčky uvedené v tomto souboru, rozbalte uzel **Prostředí Pythonu** v **Průzkumníku řešení**, klepněte pravým tlačítkem myši na uzel prostředí a vyberte instalovat z **souboru requirements.txt**:
 
-    ![Instalovat z requirements.txt](media/environments/environments-requirements-txt-install.png)
+    ![Instalace z souboru requirements.txt](media/environments/environments-requirements-txt-install.png)
 
-- Pokud chcete nainstalovat závislosti ve virtuálním prostředí, nejprve aktivovat prostředí, vytvořte a použít **instalovat z requirements.txt** příkazu. Další informace o vytvoření virtuálního prostředí najdete v tématu [použít virtuální prostředí](selecting-a-python-environment-for-a-project.md#use-virtual-environments).
+- Pokud chcete nainstalovat závislosti ve virtuálním prostředí, nejprve vytvořte a aktivujte toto prostředí a pak použijte příkaz **Instalovat z souboru requirements.txt.** Další informace o vytváření virtuálního prostředí naleznete v tématu [Použití virtuálních prostředí](selecting-a-python-environment-for-a-project.md#use-virtual-environments).
 
-- Pokud už máte všechny potřebné balíčky nainstalované ve prostředí, můžete kliknout pravým tlačítkem v daném prostředí **Průzkumníka řešení** a vyberte **generovat soubor requirements.txt** k vytvoření potřebných soubor. Pokud soubor již existuje, se zobrazí výzva pro jak ji aktualizovat:
+- Pokud již máte všechny potřebné balíčky nainstalované v prostředí, můžete na toto prostředí klepnout pravým tlačítkem myši v **Průzkumníkovi řešení** a vybrat **soubor Generate requirements.txt** a vytvořit potřebný soubor. Pokud soubor již existuje, zobrazí se výzva, jak jej aktualizovat:
 
-    ![Možnosti aktualizace souboru requirements.txt](media/environments/environments-requirements-txt-replace.png)
+    ![Aktualizovat možnosti requirements.txt](media/environments/environments-requirements-txt-replace.png)
 
-  - **Nahradí celý soubor** odebere všechny položky, poznámky a možnosti, které existují.
-  - **Aktualizovat existující položky** zjistí požadavků balíčku a aktualizuje specifikátory verze tak, aby odpovídaly aktuálně nainstalovanou verzi.
-  - **Aktualizace a přidání položky** aktualizuje všechny požadavky, které se nacházejí a přidá všechny ostatní balíčky na konec souboru.
+  - **Nahradit celý soubor** odstraní všechny položky, komentáře a možnosti, které existují.
+  - **Aktualizace existujících položek** zjistí požadavky na balíček a aktualizuje specifikátory verze tak, aby odpovídaly aktuálně nainstalované verzi.
+  - **Aktualizace a přidání položek** aktualizuje všechny nalezené požadavky a přidá všechny ostatní balíčky na konec souboru.
 
-Protože *souboru requirements.txt* soubory jsou určeny k zablokování požadavky prostředí, všechny nainstalované balíčky jsou vytvářeny s použitím přesné verze. Pomocí přesné verze zajistí, že můžete snadno reprodukovat svoje prostředí na jiném počítači. Balíčky jsou zahrnuty i v případě, že byly nainstalovány s rozsah verzí, jako závislost jinému balíčku, nebo instalační program než pip.
+Vzhledem k tomu, že soubory *requirements.txt* jsou určeny ke zmrazení požadavků prostředí, jsou všechny nainstalované balíčky napsány s přesnými verzemi. Použití přesných verzí zajišťuje, že můžete snadno reprodukovat vaše prostředí v jiném počítači. Balíčky jsou zahrnuty i v případě, že byly nainstalovány s rozsahem verzí, jako závislost jiného balíčku nebo s instalačním programem jiným než pip.
 
-Pokud balíček nejde nainstalovat pomocí pip a zobrazí se v *souboru requirements.txt* celou instalaci souboru, se nezdaří. V takovém případě ruční úpravy souboru a vylučte tento balíček nebo pomocí [pip na možnosti](https://pip.readthedocs.org/en/latest/reference/pip_install.html#requirements-file-format) k odkazování na instalovatelnou verzi balíčku. Například můžete chtít použít [ `pip wheel` ](https://pip.readthedocs.org/en/latest/reference/pip_wheel.html) závislost zkompilujete a přidat `--find-links <path>` umožňuje vaší *souboru requirements.txt*:
+Pokud balíček nelze nainstalovat pomocí pipu a zobrazí se v souboru *requirements.txt,* celá instalace se nezdaří. V takovém případě ručně upravte soubor tak, aby byl tento balíček vyloučen, nebo použijte [možnosti pipu](https://pip.readthedocs.org/en/latest/reference/pip_install.html#requirements-file-format) k odkazování na instalovatelnou verzi balíčku. Můžete například raději použít [`pip wheel`](https://pip.readthedocs.org/en/latest/reference/pip_wheel.html) ke kompilaci závislosti `--find-links <path>` a přidat možnost *na adresu requirements.txt*:
 
 ```output
 C:\Project>pip wheel azure
@@ -66,7 +66,7 @@ Cleaning up...
     Removing temporary dir C:\Project\env\build...
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Správa prostředí Pythonu v sadě Visual Studio](managing-python-environments-in-visual-studio.md)
 - [Výběr interpretu pro projekt](selecting-a-python-environment-for-a-project.md)

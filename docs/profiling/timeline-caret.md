@@ -1,5 +1,5 @@
 ---
-title: Vsuvka časové osy | Dokumentace Microsoftu
+title: Časová osa Stříška | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 370e19757890d6d9f56fad4e7b89b2197e515d9c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62999668"
 ---
-# <a name="timeline-caret"></a>Vsuvka časové osy
-Když vyberete bod na časové ose provádění segment vlákna, objeví se nad ní vsuvka časové osy. Zásobník volání, který se zobrazí na kartě aktuálního zásobníku je ten, který je nejblíže v čase, do které jste klepnuli na segment. Blikající kurzor slouží k přidružení zásobník volání, které se zobrazí v části **aktuální** karta se v okamžiku, kdy ho vzorkováno. Blikající kurzor ukazuje přesné umístění zásobníku volání, což je nejbližší zásobník volání do umístění, které uživatel vybral.
+# <a name="timeline-caret"></a>Časová osa stříška
+Když vyberete bod na časové ose vykonávajícího segmentu vlákna, zobrazí se nad ním stříška časové osy. Zásobník volání, který se zobrazí na aktuální kartě zásobníku, je ten, který je nejblíže v čase k místu, kde jste klikli na segment. Stříška se používá k přidružení zásobníku volání, který se zobrazí na kartě **Aktuální,** s okamžikem, kdy byl vzorkován. Stříška zobrazuje přesné umístění zásobníku volání, což je nejbližší zásobník volání do umístění, které uživatel vybral.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

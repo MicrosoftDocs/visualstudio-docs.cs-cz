@@ -1,5 +1,5 @@
 ---
-title: Vytvoření projektu aplikace AI ze šablony
+title: Vytvoření projektu AI ze šablony
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -8,36 +8,36 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 ms.openlocfilehash: 0b537d80b8db9150c6804aff2ee3de0e6c879bb9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62546723"
 ---
-# <a name="create-an-ai-project-from-a-template-in-visual-studio"></a>Vytvoření projektu aplikace AI ze šablony v sadě Visual Studio
+# <a name="create-an-ai-project-from-a-template-in-visual-studio"></a>Vytvoření projektu AI ze šablony v Sadě Visual Studio
 
-Jakmile [nainstalované Visual Studio Tools pro AI](installation.md), je snadné vytvořit nový projekt AI pomocí různých šablon.
+Po instalaci [nástrojů Visual Studio pro umělou přípravu](installation.md)je snadné vytvořit nový projekt AI pomocí různých šablon.
 
-1. Spusťte sadu Visual Studio.
+1. Spusťte Visual Studio.
 
-2. Vyberte **soubor > Nový > projekt** (Ctrl + Shift + N). V **nový projekt** dialogové okno, vyhledejte "**nástroje AI**" a vyberte požadované šablony. Všimněte si, že vyberete šablonu zobrazuje krátký popis co Šablona nabízí.
+2. Vyberte **Soubor > Nový > projektu** (Ctrl+Shift+N). V dialogovém okně **Nový projekt** vyhledejte "**Nástroje AI**" a vyberte požadovanou šablonu. Všimněte si, že výběr šablony zobrazí krátký popis toho, co šablona poskytuje.
 
-    ![Dialogové okno Nový projekt VS2017 šablonou Pythonu](media/create-project/new-ai-project.png)
+    ![VS2017 Dialogové okno Nový projekt se šablonou Pythonu](media/create-project/new-ai-project.png)
 
-3. Pro účely tohoto rychlého startu vyberte "**TensorFlow aplikace**" šablony, dejte projektu název (například "mnist ručně") a umístění a vyberte **OK**.
+3. Pro tento rychlý start vyberte šablonu "**TensorFlow Application**", pojmenujte projekt (například "MNIST") a umístění a vyberte **OK**.
 
-4. Visual Studio vytvoří soubor projektu ( `.pyproj` souboru na disku) společně s další soubory, jak je popsáno v šabloně. Projekt se šablonou "TensorFlow aplikace", obsahuje jeden soubor se stejným názvem jako váš projekt. Soubor je otevřen v editoru sady Visual Studio ve výchozím nastavení.
+4. Visual Studio vytvoří soubor `.pyproj` projektu (soubor na disku) spolu s dalšími soubory, jak je popsáno v šabloně. Se šablonou "TensorFlow Application" projekt obsahuje jeden soubor s názvem stejný jako váš projekt. Soubor je ve výchozím nastavení otevřen v editoru sady Visual Studio.
 
-    ![Výsledný projekt při použití šablony aplikace v Pythonu](media/create-project/new-tensorflowapp.png)
+    ![Výsledný projekt při použití šablony aplikace Pythonu](media/create-project/new-tensorflowapp.png)
 
-5. Všimněte si, že kód již importuje několik knihoven, včetně TensorFlow, numpy, sys a operačního systému. Kromě toho začíná vaše aplikace připravená některé vstupní argumenty snadno povolit přepínání umístění vstupní trénovacích dat, výstupní modely a soubory protokolů. Tyto parametry jsou užitečné, když odešlete své úlohy do více výpočetní kontext (tedy jiný adresář na místním vývojovém pole, než na sdílené složky Azure).
+5. Všimněte si, že kód již importuje několik knihoven včetně TensorFlow, numpy, sys a os. Navíc spustí aplikaci připravenou s některými vstupními argumenty, které snadno umožňují přepínání umístění vstupních trénovacích dat, výstupních modelů a souborů protokolu. Tyto params jsou užitečné při odesílání úloh do více výpočetních kontextů (tj. jiný adresář v místním poli pro spuštění než ve sdílené složce Azure).
 
-6. Váš projekt má také některé vlastnosti vytvořen k tomu, aby dál ladit vaši aplikaci automaticky předáním argumentů příkazového řádku pro tyto vstupní parametry. **Klikněte pravým tlačítkem myši** projektu vyberte **vlastnosti**
+6. Váš projekt má také některé vlastnosti vytvořené pro snadné ladění aplikace automatickým předáním argumentů příkazového řádku těmto vstupním parametrům. **Klikněte pravým tlačítkem myši na** projekt a vyberte **vlastnosti**
 
     ![Vlastnosti](media/create-project/project-properties.png)
 
-7. Klikněte na tlačítko **ladění** přidána karta zobrazíte argumenty skriptu. můžete je změnit podle potřeby, kde se vstupní data nachází a kde chcete výstup uložen.
+7. Kliknutím na kartu **Ladění** zobrazíte automaticky přidané argumenty skriptu. můžete je podle potřeby změnit na místo, kde jsou umístěna vaše vstupní data a kde chcete, aby byl výstup uložen.
 
     ![Vlastnosti](media/create-project//project-properties_1.png)
 
-8. Spusťte program stisknutím kombinace kláves Ctrl + F5 nebo výběrem **ladit > Spustit bez ladění** v nabídce. Výsledky se zobrazí v okně konzoly.
+8. Spusťte program stisknutím ctrl+f5 nebo výběrem **možnosti Ladění > Spustit bez ladění** v nabídce. Výsledky se zobrazí v okně konzoly.

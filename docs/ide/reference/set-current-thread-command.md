@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0d782a507d57e459aa5735cf34717f13e41d4cde
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72748619"
 ---
 # <a name="set-current-thread-command"></a>Nastavit aktuální vlákno – příkaz
@@ -29,10 +29,10 @@ Nastaví zadané vlákno jako aktuální vlákno.
 Debug.SetCurrentThread index
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 `index`
 
-Požadováno. Vybere vlákno podle jeho indexu.
+Povinná hodnota. Vybere vlákno podle indexu.
 
 ## <a name="example"></a>Příklad
 
@@ -40,9 +40,9 @@ Požadováno. Vybere vlákno podle jeho indexu.
 >Debug.SetCurrentThread 1
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Pole Najít/příkaz](../../ide/find-command-box.md)
+- [Najít/Příkazové pole](../../ide/find-command-box.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

@@ -23,45 +23,45 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 05c337a6e809f85490e651fecf405b44e9f28930
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75592006"
 ---
-# <a name="options-dialog-box-environment--task-list"></a>Dialogové okno Možnosti: prostředí \> Seznam úkolů
+# <a name="options-dialog-box-environment--task-list"></a>Dialogové okno Možnosti: Seznam úkolů prostředí \>
 
-Tato stránka možností umožňuje přidávat, odstraňovat a měnit tokeny komentářů, které generují **seznam úkolů** připomenutí. Chcete-li zobrazit tato nastavení, vyberte **Možnosti** v nabídce **nástroje** , rozbalte složku **prostředí** a zvolte možnost **seznam úkolů**.
+Tato stránka možností umožňuje přidávat, odstraňovat a měnit tokeny poznámek, které generují připomenutí **seznamu úkolů.** Chcete-li tato nastavení zobrazit, vyberte **možnosti** z nabídky **Nástroje,** rozbalte složku **Prostředí** a zvolte **Seznam úkolů**.
 
-## <a name="task-list-tokens"></a>Tokeny Seznam úkolů
+## <a name="task-list-tokens"></a>Tokeny seznamu úkolů
 
-Když vložíte komentář do kódu, jehož text začíná tokenem ze **seznamu tokenu**, **seznam úkolů** zobrazí váš komentář jako novou položku vždy, když je soubor otevřen pro úpravy. Klikněte na položku **seznam úkolů** pro přechod přímo na řádek komentáře ve vašem kódu. Další informace najdete v tématu [použití seznam úkolů](../../ide/using-the-task-list.md).
+Když vložíte komentář do kódu, jehož text začíná tokenem ze **seznamu tokenů**, **seznam úkolů** zobrazí váš komentář jako novou položku při každém otevření souboru pro úpravy. Kliknutím na položku **Seznam úkolů** přejdete přímo na řádek komentáře v kódu. Další informace naleznete [v tématu Použití seznamu úkolů](../../ide/using-the-task-list.md).
 
-Seznam tokenů \
-Zobrazí seznam tokenů a umožňuje přidat nebo odebrat vlastní tokeny. Tokeny komentáře rozlišují velká a C# malá C++písmena v a, ale ne v Visual Basic.
+Seznam tokenů\
+Zobrazí seznam tokenů a umožňuje přidat nebo odebrat vlastní tokeny. Tokeny poznámek rozlišují v jazyce C# a C++, ale ne v jazyce Visual Basic.
 
 > [!NOTE]
-> Pokud nechcete požadovaný token zadat přesně tak, jak se zobrazuje v seznamu tokenů, nebude se v **seznam úkolů**zobrazovat úloha s komentářem.
+> Pokud nezadáte požadovaný token přesně tak, jak je uveden v seznamu tokenů, úloha komentáře se v **seznamu úkolů**nezobrazí .
 
-Upřednostněn
-Nastaví prioritu úloh, které používají vybraný token (nízká, normální nebo vysoká). K komentářům úlohy začínajícím tímto tokenem se automaticky přiřadí určená priorita v **seznam úkolů**.
+Priorita\
+Nastaví prioritu úkolů, které používají vybraný token (nízká, normální nebo vysoká). Komentáře úkolů, které začínají tímto tokenem, jsou automaticky přiřazeny určené priority v **seznamu úkolů**.
 
-Název
-Sem zadejte řetězec tokenu a potom kliknutím na **Přidat** přidejte řetězec do seznamu tokenů.
+Název\
+Sem zadejte řetězec tokenu a kliknutím na **Přidat** přidejte řetězec do seznamu tokenů.
 
-Add\
-Tato možnost je povolená, když zadáte nový **název**. Kliknutím můžete přidat nový řetězec tokenu s použitím hodnot zadaných do polí **název** a **Priorita** .
+Přidat\
+Povoleno při zadání nového **názvu**. Klepnutím přidáte nový řetězec tokenu pomocí hodnot zadaných do polí **Název** a **Priorita.**
 
-Dstranit
-Kliknutím odstraníte vybraný token ze seznamu tokenů. Nelze odstranit výchozí token komentáře.
+Odstranit\
+Klepnutím odstraníte vybraný token ze seznamu tokenů. Výchozí token komentáře nelze odstranit.
 
-Mění
-Kliknutím provedete změny v existujícím tokenu pomocí hodnot zadaných do polí **název** a **Priorita** .
+Změnit\
+Klepnutím provedete změny existujícího tokenu pomocí hodnot zadaných v polích **Název** a **Priorita.**
 
 > [!NOTE]
 > Výchozí token komentáře nelze přejmenovat ani odstranit, ale můžete změnit jeho úroveň priority.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Použití seznamu úloh](../../ide/using-the-task-list.md)
-- [N záložky v kódu](../../ide/setting-bookmarks-in-code.md)
+- [Sett Záložky v kódu](../../ide/setting-bookmarks-in-code.md)

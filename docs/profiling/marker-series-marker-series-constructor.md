@@ -1,5 +1,5 @@
 ---
-title: marker_series::marker_series – konstruktor | Dokumentace Microsoftu
+title: marker_series::marker_series konstruktor | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5178b2cebdfa4246256aef6334e026ef091fa553
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62831410"
 ---
-# <a name="markerseriesmarkerseries-constructor"></a>marker_series::marker_series – konstruktor
-Inicializuje novou instanci třídy `marker_series` třídy.
+# <a name="marker_seriesmarker_series-constructor"></a>marker_series::marker_series konstruktor
+Inicializuje novou instanci třídy. `marker_series`
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,14 +39,14 @@ marker_series(
 ```
 
 #### <a name="parameters"></a>Parametry
- `_SeriesName` Název řady k vytvoření.
+ `_SeriesName`Název řady, kterou chcete vytvořit.
 
- `_ProviderGuid` Identifikátor GUID zprostředkovatele řady.
+ `_ProviderGuid`Identifikátor GUID zprostředkovatele řady.
 
 ## <a name="requirements"></a>Požadavky
  **Záhlaví:** *cvmarkersobj.h*
 
- **Namespace:** Concurrency::diagnostic
+ **Obor názvů:** Souběžnost::diagnostik
 
-## <a name="see-also"></a>Viz také:
-- [marker_series – třída](../profiling/marker-series-class.md)
+## <a name="see-also"></a>Viz také
+- [marker_series třída](../profiling/marker-series-class.md)

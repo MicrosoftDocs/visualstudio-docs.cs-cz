@@ -1,5 +1,5 @@
 ---
-title: Žádná aktivita vláken k zobrazení (zobrazení vláken) | Dokumentace Microsoftu
+title: Žádná aktivita vlákna k zobrazení (zobrazení vláken) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,24 +13,24 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 91cc840a69135edf59603ba62d15985eb541df0e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62794465"
 ---
-# <a name="no-thread-activity-to-show-threads-view"></a>Žádná aktivita vláken k zobrazení (zobrazení vláken)
-Tato oblast se zobrazí data o zobrazí vlákna v současném viditelném časovém rozsahu.
+# <a name="no-thread-activity-to-show-threads-view"></a>Žádná aktivita vlákna (zobrazení vláken)
+Tato oblast zobrazuje data o neskrytých vláknech v aktuálně viditelném časovém rozsahu.
 
- Pokud žádné informace nejsou viditelné, zkontrolujte následující nastavení:
+ Pokud nejsou zobrazeny žádné informace, zkontrolujte následující nastavení:
 
-- Úroveň zvětšení je vysoká? Některé pixely zobrazují mimo nebo posouvání zpřístupnit další aktivita vláken v rozsahu.
+- Je úroveň přiblížení vysoká? Zkuste oddálit nebo posouvat, aby se více aktivity vláken v dosahu.
 
-- Jsou skryté příliš mnoho vláken Pokud ano, zkuste zobrazuje všechna vlákna
+- Je příliš mnoho vláken skrytých? Pokud ano, zkuste ukázat všechna vlákna
 
-- Pokud **pouze můj kód** je vybraná, můžete zobrazit pouze data o svém kódu. Zkuste zrušit zaškrtnutí nastavení pro ověření, zda je jakékoli vlákno aktivitu systému.
+- Pokud je **vybrána možnost Jen můj kód,** můžete zobrazit pouze data o kódu. Zkuste vymazat nastavení a zjistit, zda existuje nějaká aktivita podprocesu systému.
 
-- Ujistěte se, že snížení šumu nastavený na nízké prahové hodnoty.
+- Ujistěte se, že redukce šumu je nastavena na nízkou prahovou hodnotu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

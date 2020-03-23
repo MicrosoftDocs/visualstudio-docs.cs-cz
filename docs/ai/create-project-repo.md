@@ -1,5 +1,5 @@
 ---
-title: Klonování úložiště
+title: Klonovat repo
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -8,54 +8,54 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 ms.openlocfilehash: 73f1595e0e6c8f182f0bedcece51011390964ed2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62539616"
 ---
-# <a name="clone-a-repository-of-python-code-in-visual-studio"></a>Naklonujte úložiště kódu v Pythonu v sadě Visual Studio
+# <a name="clone-a-repository-of-python-code-in-visual-studio"></a>Klonování úložiště kódu Pythonu v sadě Visual Studio
 
-Jakmile [nainstalované Visual Studio Tools pro AI](installation.md), můžete snadno naklonujte úložiště kódu v Pythonu a vytvoření projektu z něj.
+Po instalaci [nástrojů Sady Visual Studio pro umělou přípravu](installation.md)můžete snadno naklonovat úložiště kódu Pythonu a vytvořit z něj projekt.
 
-1. Pro připojení k úložištím GitHub, spusťte instalační program sady Visual Studio, vyberte **změnit**a vyberte **jednotlivé komponenty** kartu. Přejděte dolů k položce **kódu nástroje** vyberte **rozšíření GitHub pro Visual Studio**a vyberte **změnit**.
+1. Chcete-li se připojit k úložištím GitHub, spusťte instalační program Sady Visual Studio, vyberte **GitHub extension for Visual Studio** **Změnit**a vyberte kartu **Modify** **Jednotlivé součásti.** **Code tools**
 
-    ![Výběr GitHub extension v instalačním programu sady Visual Studio](media/create-project-repo/installation-github-extension.png)
+    ![Výběr rozšíření GitHub v instalačním programu Sady Visual Studio](media/create-project-repo/installation-github-extension.png)
 
-2. Spusťte sadu Visual Studio.
+2. Spusťte Visual Studio.
 
-3. Vyberte **zobrazení > Průzkumník týmových projektů** otevřít **Team Exploreru** okno, ve kterém můžete připojit ke Githubu nebo Azure DevOps nebo klonování úložiště.
+3. Vyberte **Zobrazit > Průzkumníktýmu** otevřete okno **Průzkumníka týmu,** ve kterém se můžete připojit k GitHubu nebo Azure DevOps, nebo naklonovat úložiště.
 
-    ![Okno Průzkumníka týmu zobrazující Azure DevOps, Githubu a klonování úložiště](media/create-project-repo/team-explorer-devops.png)
+    ![Okno průzkumníka týmu zobrazující Azure DevOps, GitHub a klonování úložiště](media/create-project-repo/team-explorer-devops.png)
 
-4. Do pole Adresa URL v části **místní úložiště Git**, zadejte `https://github.com/Microsoft/samples-for-ai`zadejte složky pro klonované soubory a vyberte **klonování**.
+4. Do pole URL v části Místní `https://github.com/Microsoft/samples-for-ai`úložiště **Git**zadejte , zadejte složku pro klonované soubory a vyberte **Klonovat**.
 
     > [!Tip]
-    > Složka, kterou zadáte v Průzkumníku týmových projektů je konkrétní složky pro klonované soubory příjem. Na rozdíl od `git clone` příkazu, vytváření v Team Exploreru klonu neprovádí automatické vytváření podsložku s názvem úložiště.
+    > Složka zadaná v Průzkumníkovi týmu je konkrétní složka pro příjem klonovaných souborů. Na `git clone` rozdíl od příkazu vytvoření klonu v Průzkumníkovi týmu automaticky nevytvoří podsložku s názvem úložiště.
 
-5. Při klonování je hotové, klikněte dvakrát na složku úložiště v dolní části Průzkumníku týmových projektů přejděte na řídicí panel úložiště. V části **řešení**vyberte **nový**.
+5. Po dokončení klonování poklikejte na složku úložiště v dolní části Průzkumníka týmu a přejděte na řídicí panel úložiště. V části **Řešení**vyberte **Nový**.
 
-    ![Okno Průzkumníka týmu, vytvoření nového projektu z klonu](media/create-project-repo/team-explorer-new-project.png)
+    ![Okno průzkumníka týmu, vytvoření nového projektu z klonu](media/create-project-repo/team-explorer-new-project.png)
 
-6. V **nový projekt** dialogové okno, které se zobrazí, vyberte "**z existujícího kódu Pythonu**", zadejte název projektu, nastavte **umístění** do stejné složky jako úložiště, a Vyberte **OK**. V průvodci, který se zobrazí, vyberte **Dokončit**.
+6. V dialogovém okně **Nový projekt,** které se zobrazí, vyberte "**Z existujícího kódu Pythonu**", zadejte název projektu, nastavte **umístění** na stejnou složku jako úložiště a vyberte **OK**. V průvodci, který se zobrazí, vyberte **dokončit**.
 
-7. Vyberte **zobrazení > Průzkumník řešení** z nabídky.
+7. V nabídce vyberte **Zobrazit Průzkumníka řešení >.**
 
-8. V Průzkumníku řešení rozbalte `TensorFlow Examples> MNIST` uzel, klikněte pravým tlačítkem na `convolutional.py`a vyberte **nastavit jako spouštěcí soubor**. Tento krok informuje soubor, který by měl použít při spuštění projektu sady Visual Studio.
+8. V Průzkumníku řešení `TensorFlow Examples> MNIST` rozbalte uzel, `convolutional.py`klikněte pravým tlačítkem myši a vyberte **Nastavit jako spouštěcí soubor**. Tento krok informuje visual studio, který soubor by měl použít při spuštění projektu.
 
-9. Stisknutím klávesy **Ctrl**+**F5** nebo vyberte **ladit > Spustit bez ladění** ke spuštění programu. Pokud se zobrazí chyba, zkontrolujte nastavení pracovního adresáře v předchozím kroku.
+9. Stisknutím **klávesy Ctrl**+**F5** nebo stisknutím **možnosti Ladění > Spustit bez ladění** program spustíte. Pokud se zobrazí chyba, zkontrolujte nastavení pracovního adresáře v předchozím kroku.
 
-10. Když se program spustí úspěšně, uvidíte ho spustit ke stažení trénování a testování datovou sadu, pak trénování modelu a vaše míra výstupních chyb. Chcete, míra chyb snížení v čase
+10. Když program úspěšně spustí, uvidíte, že začne stahovat trénovací a testovací datovou sadu, pak trénovat model a výstup chybové frekvence. Chcete, aby se míra chyb v průběhu času snižovala
 
-    ![První výstup z programu mnist ručně Pythonu](media/create-project-repo/tensorflow-mnist-running.png)
+    ![První výstup z programu Python MNIST](media/create-project-repo/tensorflow-mnist-running.png)
 
    > [!NOTE]
-   > Pokud používáte Anaconda a dojde k chybě o chybějící numpy, budete muset [změnit prostředí Pythonu používat Anaconda](../python/selecting-a-python-environment-for-a-project.md).
+   > Pokud používáte Anaconda a zobrazí se vám chyba ohledně chybějícího numpy, možná budete muset [změnit prostředí Pythonu, abyste mohli používat Anakonda](../python/selecting-a-python-environment-for-a-project.md).
 
-11. Můžete sledovat průběh pomocí TensorBoard. Klikněte pravým tlačítkem na projekt a klikněte na tlačítko **TensorBoard spouštět** vyberte adresář výstupu TensorBoard protokoly.
+11. Průběh si můžete představit pomocí TensorBoardu. Klikněte pravým tlačítkem myši na projekt a klikněte na **spustit tensorboard** a vyberte adresář výstupních protokolů TensorBoard.
 
-   ![Spustit tensorboard](media/create-project-repo/run-tensorboard.png)
+   ![spustit tendenstož](media/create-project-repo/run-tensorboard.png)
 
-12. Všimněte si, že chyba snížení přesčas, což znamená, že zlepšení kvality.
+12. Všimněte si chyby snižující se přesčas, což znamená, že se kvalita zlepšuje.
 
-   ![Spustit tensorboard](media/create-project-repo/tensorboard.png)
+   ![spustit tendenstož](media/create-project-repo/tensorboard.png)

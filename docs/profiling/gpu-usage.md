@@ -1,5 +1,5 @@
 ---
-title: Využití GPU | Dokumentace Microsoftu
+title: Využití GPU | Dokumenty společnosti Microsoft
 ms.date: 11/01/2018
 ms.topic: conceptual
 author: mikejo5000
@@ -8,154 +8,154 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f16a518542e8acab636da6e395fdfee8d7a25085
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62969804"
 ---
 # <a name="gpu-usage"></a>Využití GPU
 
-Pomocí nástroje využití GPU ve výkon sady Visual Studio a centra diagnostiky sady pro lepší pochopení základní hardware využití vaší aplikace Direct3D. Pomůže vám zjistit, jestli je výkon vaší aplikace vázané na procesor nebo vázané na GPU a získat přehled o tom, jak můžete použít hardwarové platformy efektivněji. Využití GPU podporuje aplikace používající rozhraní Direct3D 12, Direct3D 11 a Direct3D 10; nepodporuje se jiné grafické rozhraní API, jako je například Direct2D nebo OpenGL.
+Pomocí nástroje využití GPU v centru Visual Studio Performance and Diagnostics Hub lépe porozumíte vysoké muzice hardwaru vaší aplikace Direct3D. Pomůže vám zjistit, jestli je výkon vaší aplikace vázaný na procesor nebo gpu a získat přehled o tom, jak můžete efektivněji používat hardware platformy. Využití GPU podporuje aplikace, které používají Direct3D 12, Direct3D 11 a Direct3D 10; nepodporuje jiná grafická rozhraní API, například Direct2D nebo OpenGL.
 
-Tento snímek obrazovky ukazuje **sestava využití GPU** okno:
+Tento snímek obrazovky ukazuje okno **Sestava využití GPU:**
 
-![Sestava využití GPU, s konkrétním procesoru a GPU časové osy](media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")
+![Sestava využití GPU s časovými osami PROCESORU a GPU](media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")
 
 ## <a name="requirements"></a>Požadavky
 
-Následující požadavky pro použití pomocí nástroje využití GPU přidejte požadavky na nástroj Diagnostika grafiky.
+Následující požadavky pro použití nástroje využití GPU přidávají požadavky na diagnostiku grafiky.
 
-- GPU a ovladače, které podporují instrumentace nezbytné časování.
+- GPU a ovladač, které podporují potřebné časování instrumentace.
 
   > [!NOTE]
-  > Další informace o podporovaný hardware a ovladačů najdete v tématu [hardwarem a ovladači podporují](#hwsupport) na konci tohoto dokumentu.
+  > Další informace o podporovaném hardwaru a ovladačích naleznete v [tématu Podpora hardwaru a ovladačů](#hwsupport) na konci tohoto dokumentu.
 
-  Další informace o požadavcích diagnostiky grafiky, naleznete v tématu [Začínáme](../debugger/graphics/getting-started-with-visual-studio-graphics-diagnostics.md).
+  Další informace o požadavcích na diagnostiku grafiky naleznete v [tématu Začínáme](../debugger/graphics/getting-started-with-visual-studio-graphics-diagnostics.md).
 
-## <a name="using-the-gpu-usage-tool"></a>Pomocí nástroje využití GPU
+## <a name="using-the-gpu-usage-tool"></a>Použití nástroje využití GPU
 
- Při spuštění aplikace v systému pomocí nástroje využití GPU bude Visual Studio v reálném čase vytvoří relaci diagnostiky tohoto grafy souhrnné informace o využití GPU a vykreslování výkonu vaší aplikace.
+ Když spustíte aplikaci v rámci nástroje využití GPU, Visual Studio vytvoří diagnostickou relaci, která v reálném čase vykresluje informace na vysoké úrovni o výkonu vykreslování vaší aplikace a využití GPU.
 
-**Chcete-li spustit nástroj využití GPU:**
+**Spuštění nástroje využití GPU:**
 
-1. V hlavní nabídce zvolte **ladění**, pak **výkon a Diagnostika** (klávesnice: Stisknutím klávesy Alt + F2).
+1. V hlavní nabídce zvolte **Ladění**, pak **Výkon a diagnostika** (Klávesnice: Stisknutí kláves Alt+F2).
 
-2. V Centru pro výkon a diagnostiku, zaškrtněte políčko vedle položky **využití GPU**. Volitelně můžete zaškrtnutím políčka vedle jiné nástroje, které vás zajímají. Můžete spustit několik výkonu a diagnostické nástroje souběžně, což umožňuje získat komplexnější přehled o výkonu vaší aplikace.
+2. V centru Výkon a diagnostika zaškrtněte políčko vedle **služby Využití GPU**. Volitelně zaškrtněte políčka vedle dalších nástrojů, které vás zajímají. Můžete spustit několik nástrojů pro výkon a diagnostiku současně, abyste získali úplnější představu o výkonu aplikace.
 
-    ![Zvolte diagnostické nástroje, které chcete použít. ](media/gfx_diag_diagsession_tools.png "gfx_diag_diagsession_tools")
+    ![Vyberte diagnostické nástroje, které chcete použít.](media/gfx_diag_diagsession_tools.png "gfx_diag_diagsession_tools")
 
    > [!NOTE]
-   > Ne všechny výkonu a diagnostické nástroje je možné ve stejnou dobu.
+   > Ne všechny nástroje pro výkon a diagnostiku lze použít současně.
 
-3. Zvolte modrá **Start** tlačítko v dolní části rozcestníku výkon a Diagnostika ke spouštění vaší aplikace v nabídce Nástroje, které jste vybrali.
+3. Zvolte modré tlačítko **Start** v dolní části centra Výkon a diagnostika, abyste aplikaci spustili pod vybranými nástroji.
 
-   Základní informace, které se zobrazí v reálném čase zahrnuje časování snímků, frekvence snímků a využití GPU. Všechny tyto údaje se zaneseny do nezávisle na sobě grafu, ale použít obecného časového měřítka, takže můžete snadno se týkají mezi nimi.
+   Informace na vysoké úrovni, které se zobrazují v reálném čase, zahrnují časování snímků, kmitočet snímků a využití GPU. Každá z těchto informací je zobrazena nezávisle, ale použijte společnou časovou osu, abyste mezi nimi mohli snadno propojit.
 
-   **Rámec doba (ms)** a **snímků za sekundu (FPS)** grafy má dvě červené, vodorovných čar, který cílí výkonu zobrazit 30 a 60 snímků za sekundu. V **rámec čas** grafu, vaše aplikace překračuje cíl výkonnosti při graf je pod řádkem a výpadky cíl po nad čáru grafu. Pro snímky za druhé grafu, je opakem – aplikace překračuje cílový výkon při graf je vyšší než řádku a výpadky cíl, když je graf pod řádkem. Tyto grafy se používají především, chcete-li získat základní představu o výkonu vaší aplikace a k identifikaci slow-downs, které můžete chtít prozkoumat, jako je například náhlému poklesu v snímkovou frekvenci nebo špička využití GPU.
+   Grafy **Frame time (ms)** a **frames per second (FPS)** mají dvě červené vodorovné čáry, které zobrazují výkonnostní cíle 60 a 30 snímků za sekundu. V grafu **čas rámce** aplikace překročí cíl výkonu, když je graf pod čárou, a netrefí cíl, když je graf nad čárou. Pro graf snímků za sekundu je to naopak – vaše aplikace překročí cíl výkonu, když je graf nad čárou, a mine cíl, když je graf pod čárou. Tyto grafy se primárně používají k získání vysoké úrovně představu o výkonu vaší aplikace a k identifikaci zpomalení, které budete chtít prozkoumat, jako je například náhlý pokles kmitočet snímků nebo špička využití GPU.
 
-   Při spouštění vaší aplikace v pomocí nástroje využití GPU se relace diagnostiky taky shromažďuje podrobné informace o událostí grafiky, které byly spouštěny na GPU. Tyto informace slouží ke generování podrobnější sestavu o tom, jak vaše aplikace využívá hardware. Vzhledem k tomu, že tato sestava trvá nějakou dobu ke generování ze shromážděných informací, je k dispozici pouze po dokončení shromažďování údajů o informace diagnostickou relaci.
+   Zatímco vaše aplikace běží v rámci nástroje využití GPU, relace diagnostiky také shromažďuje podrobné informace o grafických událostech, které byly provedeny na GPU. Tyto informace se používají ke generování podrobnější sestavy o tom, jak vaše aplikace využívá hardware. Vzhledem k tomu, že tato sestava trvá nějakou dobu generovat ze shromážděných informací, je k dispozici pouze po dokončení relace diagnostiky shromažďování informací.
 
-   Když chcete podívat na výkon nebo využití vydávání lépe, zastavte shromažďování informací o výkonu, takže lze generovat sestavy.
+   Pokud se chcete podívat na výkon nebo využití problému podrobněji, přestat shromažďovat informace o výkonu tak, aby sestava může být generována.
 
-**Umožňuje generovat a prohlížet sestavy využití GPU:**
+**Jak generovat a zobrazit sestavu využití GPU:**
 
-1. V dolní části okna diagnostické relace, zvolte **zastavit shromažďování** propojení nebo stisknutím klávesy **Zastavit** v levém horním rohu.
+1. V dolní části okna relace diagnostiky zvolte odkaz **Zastavit kolekci** nebo stiskněte **klávesu Stop** v levém horním rohu.
 
-   ![Shromažďování informací o časování GPU a CPU. ](media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")
+   ![Shromažďujte informace o časování GPU a procesoru.](media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")
 
-2. V horní části sestavy vyberte oddíl jednu z grafů, které ukazuje tento problém, že který chcete prozkoumat. Výběr může být až 3 sekund; delší oddíly se zkrátí spíš na začátku.
+2. V horní části sestavy vyberte oddíl z jednoho z grafů, který zobrazuje problém, který chcete prozkoumat. Výběr může být dlouhý až 3 sekundy; delší úseky jsou zkráceny směrem k začátku.
 
-   ![Příspěvek&#45;kolekce, vyberte oblast, chcete-li zobrazit podrobnosti](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")
+   ![Zveřejnit&#45;kolekce, vybrat rozsah pro zobrazení podrobností](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")
 
-3. V dolní části sestavy, zvolte **podrobnosti** odkaz v **.. klikněte zde k zobrazení podrobností o využití GPU pro tento rozsah** zprávu zobrazíte podrobné časová osa vašeho výběru.
+3. V dolní části sestavy zvolte odkaz **podrobnosti zobrazení** v **... kliknutím sem zobrazíte podrobnosti o využití GPU pro** tuto zprávu o rozsahu a zobrazte tak podrobnou časovou osu vašeho výběru.
 
-   ![Příspěvek&#45;kolekce s rozsah vybraný](media/gfx_diag_gpu_usage_select2.png "gfx_diag_gpu_usage_select2")
+   ![Zaúčtovat&#45;kolekce s vybraným rozsahem](media/gfx_diag_gpu_usage_select2.png "gfx_diag_gpu_usage_select2")
 
-   Tato volba otevře nový dokument s kartami, která obsahuje sestavu. Sestava využití GPU vám se zobrazí při spuštění události grafiky na CPU, až dorazí do místa GPU a jak dlouho trvá GPU k jeho provedení. Tyto informace pomáhají identifikovat problémová místa a příležitosti pro zvýšení paralelismu ve vašem kódu.
+   Tento výběr otevře nový dokument s kartami, který obsahuje sestavu. Sestava využití GPU vám pomůže zjistit, kdy je grafická událost spuštěna v procesoru, když dosáhne GPU a jak dlouho gpu trvá, než ji spustí. Tyto informace vám mohou pomoci identifikovat kritické body a příležitosti pro zvýšení paralelismu ve vašem kódu.
 
 <!-- VERSIONLESS -->
-## <a name="export-to-gpuview-or-windows-performance-analyzer"></a>Exportovat do GPUView nebo Analyzátor výkonu Windows
+## <a name="export-to-gpuview-or-windows-performance-analyzer"></a>Export do nástroje GPUView nebo Windows Performance Analyzer
 
-Od verze Visual Studio 2017, můžete otevřít tato data s [GPUView](/windows-hardware/drivers/display/using-gpuview) a [Analyzátor výkonu Windows](/windows-hardware/test/wpt/windows-performance-analyzer). Stačí vybrat **otevřít v GpuView** nebo **otevřít ve WPA** odkazy nachází v pravém dolním rohu diagnostické relace.
+Počínaje Visual Studio 2017, můžete otevřít tato data s [GPUView](/windows-hardware/drivers/display/using-gpuview) a [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer). Stačí vybrat **otevřít v GpuView** nebo **Otevřít v WPA** odkazy umístěné v pravém dolním bodě diagnostické relace.
 
 ![Otevřít v...](media/gfx_diag_open_in.png)
 <!-- /VERSIONLESS -->
 
-## <a name="using-the-gpu-usage-report"></a>Pomocí sestavy využití GPU
+## <a name="using-the-gpu-usage-report"></a>Použití sestavy Využití GPU
 
-Horní části sestavy využití GPU zobrazuje časové osy pro procesoru aktivita, aktivita vykreslování GPU a aktivitu kopírování, která GPU. Tyto časové rámce jsou rozděleny ve světle šedý, svislé pruhy, které označují impulsu VSync zobrazení. Frekvence pruhy odpovídá obnovovací frekvence jednoho zobrazení (vybrali pomocí **zobrazení** rozevíracího seznamu) tato data využití GPU se shromažďovala ze. Protože zobrazení můžou mít vyšší obnovovací frekvence než cílový výkon vaší aplikace, nemusí být 1 až 1 vztah mezi impulsu vsync a chcete, aby vaše aplikace k dosažení frekvenci snímků. Podle jeho cíl výkonnosti, musí aplikace dokončete veškeré zpracování, proveďte vykreslování a volání Present() na cílové snímkové frekvence. Vykreslený snímek nebudou zobrazovat až do další impulsu vsync po Present(), i když.
+V horní části sestavy využití GPU se zobrazí časové osy pro aktivitu zpracování procesoru, aktivitu vykreslování GPU a aktivitu kopírování GPU. Tyto časové osy jsou rozděleny světle šedými svislými pruhy, které indikují vsync displeje. Frekvence pruhů odpovídá obnovovací frekvenci jednoho z displejů (vybraných pomocí rozevíracího **seznamu Display),** ze kterého byla shromážděna data o využití grafického procesoru. Vzhledem k tomu, že displej může mít vyšší obnovovací frekvenci, než je cíl výkonu vaší aplikace, nemusí existovat vztah 1:1 mezi vsync a snímkovou frekvencí, které má vaše aplikace dosáhnout. Chcete-li splnit svůj cíl výkonu, aplikace musí dokončit veškeré zpracování, provést vykreslování a provést volání Present() na cílovou snímkovou frekvenci. Vykreslený snímek se však zobrazí až vsync po Present().
 
-Dolní části zobrazí seznam událostí grafiky, ke kterým došlo během časového období sestavy.
+V dolní části se zobrazí seznam grafických událostí, ke kterým došlo během časového období sestavy.
 
-Tady je **sestava využití GPU** okno:
+Tady je okno **Sestava využití GPU:**
 
-![Sestava využití GPU, s konkrétním procesoru a GPU časové osy](media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")
+![Sestava využití GPU s časovými osami PROCESORU a GPU](media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")
 
-Vyberte událost v dolní části sestavy, zobrazí se v odpovídající události v příslušné časové osy značku. Obvykle jednu událost ve vlákně procesoru ukazuje volání rozhraní API další událost v jednom z časové osy GPU se zobrazí po dokončení úlohy GPU. Podobně když vyberete událost na časové ose, sestava zvýrazní odpovídající událost v dolní části sestavy. Při zvětšení mimo časové osy v horní části sestavy, jsou viditelné pouze události, která se nejvíce časově náročné. Pokud chcete zobrazit události, které mají kratší dobu trvání, zvětšení časové osy stisknutím klávesy Ctrl a kolečka na zařízení nebo změny velikosti ovládacího prvku v levém dolním rohu na horním panelu. Můžete také přetáhnout na časové ose panelu obsahu můžete procházet zaznamenané události.
+Když vyberete událost v dolní části sestavy, zobrazí se značka na odpovídajících událostech v příslušných časových osách. Obvykle jedna událost ve vlákně procesoru zobrazuje volání rozhraní API, zatímco jiná událost na jedné z časových os GPU zobrazuje, když GPU dokončil úlohu. Podobně když vyberete událost na časové ose, sestava zvýrazní odpovídající událost v dolní části sestavy. Při oddálení časových os v horní části sestavy jsou viditelné pouze časově nejnáročnější události. Chcete-li zobrazit události, které mají kratší dobu trvání, přibližte časové osy pomocí kláves Ctrl + kolečko na ukazovacím zařízení nebo ovládací prvek změny měřítka v levém dolním rohu horního panelu. Obsah panelu časové osy můžete také přetažením panelu časové osy procházet zaznamenané události.
 
-To vám umožní najít, co hledáte, filtr sestava využití GPU na základě procesu názvy, ID vlákna a název události. Kromě toho můžete zvolit, které zobrazení obnovovací frekvence určuje vysnc řádky. Můžete řadit události hierarchicky Pokud vaše aplikace používá [ID3DUserDefinedAnnotation](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3duserdefinedannotation) rozhraní pro příkazy vykreslování skupiny.
+Chcete-li najít, co hledáte, filtrujte sestavu využití GPU na základě názvů procesů, ID vláken a názvu události. Kromě toho můžete zvolit, která obnovovací frekvence displeje určuje řádky vysnc. Události můžete seřadit hierarchicky, pokud vaše aplikace používá rozhraní [ID3DUserDefinedAnnotation](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3duserdefinedannotation) ke skupinovým příkazům vykreslování.
 
  Tady jsou další podrobnosti:
 
 |Ovládací prvek filtru|Popis|
 |--------------------|-----------------|
-|**Proces**|Název procesu, které vás zajímají. V tomto rozevíracím seznamu jsou zahrnuté všechny procesy, které používá GPU během diagnostické relace. Barva spojených s procesem v této rozevírací seznam je barva aktivity vlákna ve níže časové osy.|
-|**vlákno**|ID vlákna, které vás zajímají. Ve vícevláknové aplikaci tyto informace můžete izolovat konkrétní vlákna, které patří k procesu, který vás zajímá. Události související s vybranou vlákna jsou vyznačené na každé časové osy.|
-|**Zobrazení**|Počet zobrazení se zobrazí jehož obnovovací frekvence **Poznámka:**  Některé ovladače lze nastavit zobrazíte více fyzických zobrazí jako jeden, velké virtuální zobrazení. Jediné zobrazení uvedené, může se zobrazit i v případě, že tento počítač má připojené více monitorů.|
-|**Filtr**|Klíčová slova, které vás zajímají. Události v dolní části sestavy bude obsahovat pouze ty, které odpovídají klíčové slovo, ať už zcela nebo zčásti. Více klíčových slov můžete určit jejich oddělením středníkem (;).|
-|**Hierarchy Sort**|Zaškrtávací políčko, která označuje, zda události – definice prostřednictvím uživatelské značky--hierarchií jsou zachovány nebo ignorovat.|
+|**Proces**|Název procesu, který vás zajímá. Všechny procesy, které používaly GPU během relace diagnostiky jsou zahrnuty v této rozevírací rozbalené. Barva přidružená k procesu v tomto rozevíracím seznamu je barva aktivity vlákna v následujících časových osách.|
+|**Vlákno**|ID vlákna, které vás zajímá. V aplikaci s více vlákny vám tyto informace mohou pomoci izolovat konkrétní vlákna, která patří k procesu, který vás zajímá. Události přidružené k vybranému vláknu jsou zvýrazněny v každé časové ose.|
+|**Displej**|Číslo zobrazení, jehož obnovovací frekvence je zobrazena **Poznámka:** Některé ovladače mohou být nakonfigurovány tak, aby zobrazovaly více fyzických displejů jako jeden velký virtuální displej. Může se zobrazit pouze jeden zobrazený displej, a to i v případě, že zařízení má připojeno více displejů.|
+|**Filtr**|Klíčová slova, která vás zajímají. Události v dolní části přehledu budou zahrnovat pouze ty, které odpovídají klíčovému slovu zcela nebo zčásti. Můžete zadat více klíčových slov jejich oddělením s středníkem (;).|
+|**Řazení hierarchie**|Zaškrtávací políčko, které označuje, zda jsou hierarchie událostí definované pomocí uživatelských značek zachovány nebo ignorovány.|
 
- Seznam událostí v dolní části sestavy využití GPU zobrazují podrobnosti o každé události.
+ Seznam událostí v dolní části sestavy využití GPU zobrazuje podrobnosti o každé události.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Název události**|Název události grafiky. Události obvykle odpovídá událost na časové ose vlákna CPU a časová osa událost GPU.<br /><br /> Názvy událostí může být "zjednodušeně", pokud využití GPU se nepodařilo zjistit název události. Další informace najdete v poznámce dál v této tabulce.|
-|**Spuštění CPU (ns)**|Čas události se inicializovala na CPU při volání rozhraní API Direct3D. Čas se měří v nanosekundách, vzhledem k při spuštění aplikace.|
-|**Spuštění GPU (ns)**|Čas události se inicializovala na GPU. Čas se měří v nanosekundách, vzhledem k při spuštění aplikace.|
-|**Doba trvání GPU (ns)**|Čas události trvalo dokončení na GPU v nanosekundách.|
-|**Název procesu**|Název aplikace, odkud událost pochází.|
-|**ID vlákna**|ID vlákna, odkud událost pochází.|
+|**Název události**|Název grafické události. Událost obvykle odpovídá události v časové ose vlákna procesoru a události časové osy GPU.<br /><br /> Názvy událostí mohou být "unattributed", pokud využití GPU nebylo možné určit název události. Další informace naleznete v poznámce pod touto tabulkou.|
+|**Zahájení procesoru (ns)**|Čas, kdy byla událost zahájena na procesoru voláním rozhraní DIRECT3D API. Čas se měří v nanosekundách, vzhledem k době, kdy se aplikace spustila.|
+|**Začátek GPU (ns)**|Čas, kdy byla událost zahájena na GPU. Čas se měří v nanosekundách vzhledem k době, kdy byla aplikace spuštěna.|
+|**Doba trvání GPU (ns)**|Čas, který událost trvalo dokončit na GPU, v nanosekundách.|
+|**Název procesu**|Název aplikace, ze které událost pochází.|
+|**ID vlákna**|ID vlákna, ze kterého událost pochází.|
 
 > [!IMPORTANT]
-> Pokud GPU nebo ovladač nepodporují funkce nezbytné instrumentace, všechny události se zobrazí jako "zjednodušeně". Ujistěte se, že aktualizace ovladače GPU a zkuste to znovu, pokud dochází k tomuto problému. Další informace najdete v tématu [hardwarem a ovladači podporují](#hwsupport) níže.
+> Pokud váš GRAFICKÝ PROCESOR nebo ovladač nepodporuje potřebné funkce instrumentace, všechny události se zobrazí jako "unattributed". Nezapomeňte aktualizovat ovladač GPU a zkuste to znovu, pokud dojde k tomuto problému. Další informace naleznete v [tématu Podpora hardwaru a ovladačů](#hwsupport) níže.
 
 ## <a name="gpu-usage-settings"></a>Nastavení využití GPU
 
-Můžete nakonfigurovat pomocí nástroje využití GPU se odložit kolekce profilace informace, a ne od lze shromažďovat informace o co nejdříve po spuštění aplikace. Protože velikost profilování informace můžou být důležité, tato akce je užitečná, když víte, že zpomalení výkonu vaší aplikace se zobrazí až později.
+Nástroj využití GPU můžete nakonfigurovat tak, aby odložil shromažďování informací o profilování, místo toho, abyste začali shromažďovat informace, jakmile se aplikace spustí. Vzhledem k tomu, že velikost informací o profilování může být významná, je tato akce užitečná, když víte, že zpomalení výkonu aplikace se zobrazí až později.
 
-**Chcete-li odložit, profilace od začátku aplikace:**
+**Odložení profilování od začátku aplikace:**
 
-1. V hlavní nabídce zvolte **ladění**, pak **výkon a Diagnostika** (klávesnice: Stisknutím klávesy Alt + F2).
+1. V hlavní nabídce zvolte **Ladění**, pak **Výkon a diagnostika** (Klávesnice: Stisknutí kláves Alt+F2).
 
-2. V Centru pro výkon a diagnostiku, postupujte **nastavení** odkaz **využití GPU**.
+2. V centru Výkon a diagnostika postupujte podle odkazu **nastavení** vedle **položky Využití GPU**.
 
-3. V části **konfigurace profilace GPU**na **Obecné** stránky vlastností, zrušte **zahájíte profilaci na začátku aplikace** zaškrtávací políčko odložit profilace.
+3. V části **Konfigurace profilování GPU zrušte**na stránce **Vlastností Obecné** zaškrtnutí **políčka Zahájit profilování při spuštění aplikace,** chcete-li profilování odložit.
 
-   ![Konfigurace při spuštění shromažďování využití GPU](media/gfx_diag_gpu_usage_config.png "gfx_diag_gpu_usage_config")
+   ![Konfigurace při spuštění kolekce využití GPU](media/gfx_diag_gpu_usage_config.png "gfx_diag_gpu_usage_config")
 
 > [!IMPORTANT]
-> Odkládá se profilování se aktuálně nepodporuje pro aplikace rozhraní Direct3D 12.
+> Odkládání profilování není v současné době podporováno pro aplikace Direct3D 12.
 
-Po spuštění aplikace v systému pomocí nástroje využití GPU dodatečný odkaz bude k dispozici v dolní části okna nástroje využití GPU. Aby začal shromažďovat analytické informace, zvolte **Start** odkaz v **zahájení shromažďování dalších podrobných dat o využití GPU** zprávy.
+Po spuštění aplikace v nástroji využití GPU bude k dispozici další odkaz v dolní části okna nástroje Využití GPU. Chcete-li začít shromažďovat informace o profilování, zvolte odkaz **Start** ve **zprávě Začít shromažďovat další podrobná data využití GPU.**
 
-## <a name="hwsupport"></a> Hardware a podpoře ovladačů
+## <a name="hardware-and-driver-support"></a><a name="hwsupport"></a>Podpora hardwaru a ovladačů
 
-Jsou podporovány následující hardwarové GPU a ovladače:
+Podporován je následující hardware a ovladače GPU:
 
-|Dodavatele|Popis GPU|Požadovaná verze ovladače|
+|Dodavatel|Popis GPU|Je vyžadována verze ovladače.|
 |------------|---------------------|-----------------------------|
-|Intel®|4. generace Intel® procesory (Haswell)<br /><br /> – Procesor Intel® HD, High Density grafiky (GT1)<br />– Procesor Intel® HD, High Density grafiky 4200 (GT2)<br />– Procesor Intel® HD, High Density grafiky 4400 (GT2)<br />– Procesor Intel® HD, High Density grafiky 4600 (GT2)<br />– P4600 procesor Intel® HD, High Density grafiky (GT2)<br />– P4700 procesor Intel® HD, High Density grafiky (GT2)<br />– Procesor Intel® HD, High Density grafiky 5000 (GT3)<br />– Grafika procesor Intel® Iris™ 5100 (GT3)<br />– Procesor Intel® Iris™ Pro grafiky 5200 (GT3e)|--(použijte nejnovější ovladače)|
-|AMD®|Většina od AMD Radeon™ HD, High Density 7000-series (nezahrnuje AMD Radeon™ HD, High Density 7350 7670)<br /><br /> Akcelerátory AMD Radeon™ GPU, AMD FirePro™ GPU a AMD FirePro GPU poskytuje funkci architektura grafiky Core další (GCN).<br /><br /> AMD® E-Series a AMD A-series urychlení zpracování jednotky (APU) poskytuje funkci architektura grafiky Core další (GCN) ("Kaveri", "Kabini", "Temash", "Beema", "Mullins")|14.7 RC3 nebo vyšší|
-|NVIDIA®|Většina od NVIDIA GeForce® 400-series.<br /><br /> Poskytuje funkci architektura Fermi™, Kepler™ nebo Maxwell™ grafických procesorů NVIDIA® GeForce®, která využívá GPU NVIDIA Quadro® a grafický procesor NVIDIA® Tesla™ akcelerátory.|343.37 nebo vyšší|
+|Informace ®|4. generace procesorů Intel® ("Haswell")<br /><br /> - Intel® HD grafika (GT1)<br />- Intel® HD grafika 4200 (GT2)<br />- Intel® HD grafika 4400 (GT2)<br />- Intel® HD grafika 4600 (GT2)<br />- Intel® HD grafika P4600 (GT2)<br />- Intel® HD grafika P4700 (GT2)<br />- Intel® HD grafika 5000 (GT3)<br />- Intel® Iris™ grafika 5100 (GT3)<br />- Intel® Iris™ Pro Grafika 5200 (GT3e)|-- (použijte nejnovější ovladače)|
+|AMD®|Nejvíce od amd radeon™ HD 7000-série (s výjimkou AMD Radeon™ HD 7350-7670)<br /><br /> AMD Radeon™ GPU, AMD FirePro™ GPU a akcelerátory GPU AMD FirePro s architekturou Graphics Core Next (GCN).<br /><br /> AMD® E-Series a AMD A-series Accelerated Processing Units (APU) s architekturou Graphics Core Next (GCN) ('Kaveri', 'Kabini', 'Temash' , 'Beema', 'Mullins')|14.7 RC3 nebo vyšší|
+|NVIDIA®|Nejvíce od dob NVIDIA® GeForce® 400-series.<br /><br /> NVIDIA® GpU®, NVIDIA Quadro® GPU a NVIDIA® Tesla™ gpu akcelerátory představovat Fermi™, Kepler™, nebo Maxwell™ architektura.|343.37 nebo vyšší|
 
- V tuto chvíli nepodporuje konfigurace s více GPU například NVIDIA® SLI™ a AMD Crossfire™. Nastavení hybridní grafiky, jako je například NVIDIA® Optimus™ a AMD Enduro™ jsou podporovány.
+ Konfigurace s více GPU, jako je NVIDIA® SLI™ a AMD Crossfire™ nejsou v současné době podporovány. Hybridní nastavení grafiky, jako je NVIDIA® Optimus™ a AMD Enduro™ jsou podporovány.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Vyřešit Palčivé problémy s grafikou nástroje pro vaše hry pomocí DirectX (video)](https://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools)
-- [Nástroj využití GPU v sadě Visual Studio (video)](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/715)
-- [Nástroj využití GPU ve Visual Studio 2013 Update 4 CTP1 (blog)](https://devblogs.microsoft.com/cppblog/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1/)
+- [Řešení náročných problémů s grafikou pomocí nástrojů DirectX (video)](https://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools)
+- [Nástroj pro použití GPU v sadě Visual Studio (video)](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/715)
+- [Nástroj pro použití GPU ve Visual Studiu 2013 Update 4 CTP1 (blog)](https://devblogs.microsoft.com/cppblog/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1/)
 - [Využití GPU pro DirectX v sadě Visual Studio (blog)](https://blogs.msdn.microsoft.com/ianhu/2014/12/16/gpu-usage-for-directx-in-visual-studio/)
-- [GPUView](/windows-hardware/drivers/display/using-gpuview)
-- [Analyzátor výkonu Windows](/windows-hardware/test/wpt/windows-performance-analyzer)
+- [Zobrazení GPU](/windows-hardware/drivers/display/using-gpuview)
+- [Analyzátor výkonu systému Windows](/windows-hardware/test/wpt/windows-performance-analyzer)

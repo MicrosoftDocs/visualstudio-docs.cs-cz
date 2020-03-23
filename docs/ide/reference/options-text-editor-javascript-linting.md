@@ -1,5 +1,5 @@
 ---
-title: Možnosti, textový editor, JavaScript, linting
+title: Možnosti, Textový editor, JavaScript, Linting
 ms.date: 1/15/2019
 ms.technology: vs-javascript
 ms.topic: reference
@@ -14,31 +14,31 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1f8a194f3848b0737fc33af2b9948102987a5923
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "68605965"
 ---
-# <a name="options-dialog-box-text-editor--javascripttypescript--linting"></a>Dialogové okno Možnosti: Textový editor \> JavaScript/TypeScript \> linting
+# <a name="options-dialog-box-text-editor--javascripttypescript--linting"></a>Dialogové okno Možnosti: Textový \> editor \> JavaScript/Script Linting
 
-Pomocí stránky **linting** dialogového okna **Možnosti** můžete nastavit možnosti analýzy kódu v editoru kódu. Chcete-li získat přístup k této stránce, v řádku nabídek zvolte**možnost** **nástroje** > a potom rozbalte **textový editor** > **JavaScript/TypeScript** > **linting**.
+Na stránce **Linting** v dialogovém okně **Možnosti** nastavte možnosti pro analýzu kódu v Editoru kódu. Chcete-li získat přístup k této stránce, zvolte na řádku nabídek**možnosti** **nástrojů** > a potom **rozbalte textový editor** > **JavaScript/Script** > **Linting**.
 
 ## <a name="eslint-settings"></a>Nastavení ESLint
 
-Tyto možnosti umožňují povolit statickou analýzu kódu JavaScript a TypeSCript a vybrat, které soubory se analyzují. Další informace o ESLint najdete v tématu [ESLint.org](https://eslint.org/).
+Tyto možnosti umožňují povolit statickou analýzu kódu JavaScript u TypeSCript a zvolit, které soubory budou analyzovány. Další informace o ESLint naleznete [v tématu ESLint.org](https://eslint.org/).
 
-### <a name="uielement-list"></a>UIElement – seznam
+### <a name="uielement-list"></a>Seznam Prvků UI
 
 |Možnost|Popis|
 |------------|-----------------|
 |**Povolit ESLint**|Pokud je vybrána tato možnost, Editor kódu umožňuje statickou analýzu kódu.|
-|**Lint všechny soubory zahrnuté v projektu, dokonce i uzavřené soubory**|Pokud je vybrána tato možnost, jsou při analýze zavřeny soubory, pokud se Diagnostika nehlásí pouze pro otevřené soubory.|
+|**Lint všechny soubory obsažené v projektu, dokonce i uzavřené soubory**|Je-li vybrána tato možnost, jsou analyzovány uzavřené soubory, pokud nejsou diagnostika hlášena pouze pro otevřené soubory.|
 
 ## <a name="global-eslint-config-options"></a>Globální možnosti konfigurace ESLint
 
-Tato možnost umožňuje zkopírovat umístění globálního konfiguračního souboru ESLint. Také, pokud jste dříve změnili umístění, můžete obnovit výchozí umístění souboru.
+Tato možnost umožňuje zkopírovat umístění globálního konfiguračního souboru ESLint. Pokud jste umístění dříve změnili, můžete soubor obnovit do výchozího umístění.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Obecné, Prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
+- [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)

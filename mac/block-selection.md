@@ -1,25 +1,25 @@
 ---
 title: Výběr bloku
-description: Tento článek vysvětluje, jak používat funkce výběru bloku v sadě Visual Studio pro Mac
+description: Tento článek vysvětluje, jak používat funkci výběru bloků ve Visual Studiu pro Mac
 author: cobey
 ms.author: cobey
 ms.date: 11/06/2018
 ms.assetid: E8E0831E-E076-44B1-A82A-A325382916A6
 ms.openlocfilehash: be5a19b48355b871018684400f3f4a7b2e3135b6
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "67692847"
 ---
 # <a name="block-selection"></a>Výběr bloku
 
-Visual Studio for Mac umožňuje jednoduché vybrat, vyjmutí, kopírování a vložení oddílů kódu. Obdélníkové bloků kódu může být zvýrazněný a vybrali pomocí **možnost + přetažení** příkazu v bloku kódu. Formátování v rámci tohoto výběru bloku je zachováno při vkládání bloku.
+Visual Studio pro Mac usnadňuje výběr, vyjmutí, kopírování a vkládání částí kódu. Obdélníkové bloky kódu lze zvýraznit a vybrat pomocí příkazu **Option + Drag** v bloku kódu. Formátování v rámci tohoto výběru bloku se zachová při vkládání bloku.
 
-Výběr bloku se dá upravit také nutné změnit text na více řádků najednou. O výběr bloku nulové šířky je možné umístit stříška u velkého počtu řádků najednou a umožňuje psaní identické textu na více řádků:
+Výběry bloků lze také upravit a upravit tak text na více řádcích najednou. Výběr bloku s nulovou šířkou lze použít k umístění stříšky před mnoho řádků najednou a umožňuje psát stejný text na více řádků:
 
-![Výběr bloku a přidávání textu](media/source-editor-image16.png)
+![Blokovat výběr a přidávání textu](media/source-editor-image16.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Vyberte více blikajícího kurzoru pro Visual Studio (ve Windows)](/visualstudio/ide/finding-and-replacing-text#multi-caret-selection)
+- [Výběr více stříšek pro Visual Studio (ve Windows)](/visualstudio/ide/finding-and-replacing-text#multi-caret-selection)

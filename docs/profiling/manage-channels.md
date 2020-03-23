@@ -1,5 +1,5 @@
 ---
-title: Správa kanálů | Dokumentace Microsoftu
+title: Správa kanálů | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,52 +13,52 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0b1480bab2f52383a8ca3a5b0ac22fd56acb5e01
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435633"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "64779252"
 ---
 # <a name="manage-channels"></a>Správa kanálů
-V **zobrazení vláken** ve vizualizátoru souběžnosti můžete uspořádat kanály pro proces, takže můžete zkoumat konkrétní vzory. Můžete řadit kanály, je přesunout nahoru a dolů a skrýt nebo zobrazit jejich.
+V **zobrazení vláken** v vizualizéru souběžnosti můžete uspořádat kanály pro váš proces tak, aby bylo možné prozkoumat konkrétní vzory. Kanály můžete řadit, přesouvat nahoru a dolů a skrývat nebo zobrazovat.
 
-## <a name="sort-by"></a>Seřadit podle:
- Ovládací prvek řadit podle můžete řadit vlákna podle různých kritérií založených na aktuální úroveň přiblížení. To je užitečné, když hledáte určitému vzoru. Můžete řadit podle těchto kritérií:
+## <a name="sort-by"></a>Řadit podle
+ Ovládací prvek Seřadit podle můžete použít k seřazení vláken podle různých kritérií na základě aktuální úrovně přiblížení. To je užitečné zejména při hledání určitého vzoru. Můžete řadit podle těchto kritérií:
 
 |Kritéria|Definice|
 |--------------|----------------|
-|Čas spuštění|Seřadí podle jejich časy spuštění vlákna. Toto je výchozí pořadí řazení.|
-|Koncový čas|Vlákna jsou řazeny podle jejich koncovým časem.|
-|Spuštění|Seřadí podle procent času stráveného při provádění vlákna.|
-|Synchronizace|Seřadí podle procent času stráveného v synchronizaci vláken.|
-|I/O|Vlákna seřadí podle procent času stráveného ve vstupně-výstupních operací (čtení a zápis dat).|
-|Přejít do režimu spánku|Vlákna seřadí podle procent času stráveného v režimu spánku.|
-|Stránkování|Vlákna jsou řazeny podle procentuální hodnotu času, který byl stráven stránkování.|
-|Přerušení|Seřadí podle procentuální hodnotu času, který byl stráven přerušování vláken.|
-|Zpracování uživatelského rozhraní|Vlákna seřadí podle procent času stráveného ve zpracování uživatelského rozhraní.|
+|Čas spuštění|Seřadí vlákna podle počátečních časů. Toto je výchozí pořadí řazení.|
+|Čas ukončení|Seřadí vlákna podle jejich koncových časů.|
+|Spouštěcí|Seřadí vlákna podle procenta času stráveného v provádění.|
+|Synchronizace|Seřadí vlákna podle procenta času stráveného synchronizací.|
+|I/O|Seřadí vlákna podle procenta času stráveného v stupněm vstupně-up (čtení a zápis dat).|
+|Režim spánku|Seřadí vlákna podle procenta času stráveného ve spánku.|
+|Stránkování|Seřadí vlákna podle procenta času stráveného stránkováním.|
+|Prevence|Seřadí vlákna podle procenta času stráveného v preemption.|
+|Zpracování ui|Seřadí vlákna podle procenta času stráveného při zpracování uživatelského rozhraní.|
 
-## <a name="move-selected-channel-up-or-down"></a>Přesunout vybraný kanál nahoru nebo dolů
- Tyto ovládací prvky můžete použít k přesunutí kanál směrem nahoru nebo dolů v seznamu. Například může umístit související kanály vedle sebe můžete prozkoumat určitému vzoru nebo vztah mezi vlákny.
+## <a name="move-selected-channel-up-or-down"></a>Přesunutí vybraného kanálu nahoru nebo dolů
+ Pomocí těchto ovládacích prvků můžete v seznamu přesunout kanál nahoru nebo dolů. Můžete například umístit související kanály vedle sebe, abyste mohli prozkoumat určitý vzorek nebo vztah mezi vlákny.
 
-## <a name="move-selected-channel-to-top-or-bottom"></a>Přesunout vybraný kanál na horní nebo dolní
- Vybrané kanály můžete přesunout na začátek nebo konec seznamu tak, aby si projdete určitému vzoru, nebo přesunout některé kanály eliminuje při zkoumání ostatní.
+## <a name="move-selected-channel-to-top-or-bottom"></a>Přesunutí vybraného kanálu na začátek nebo dolů
+ Vybrané kanály můžete přesunout do horní nebo dolní části seznamu, abyste mohli prozkoumat určitý vzorek, nebo přesunout některé kanály z cesty, když zkoumáte ostatní.
 
-## <a name="hide-selected-channels"></a>Skrýt vybrané kanály
- Zvolte tento ovládací prvek, pokud chcete skrýt kanály. Například pokud vlákno je synchronizace 100 procent po celou dobu životnosti vašeho spravovaného procesu, ji může skrýt jak analyzovat jiných vláken.
+## <a name="hide-selected-channels"></a>Skrytí vybraných kanálů
+ Tento ovládací prvek zvolte, pokud chcete kanály skrýt. Například pokud vlákno je 100 procent synchronizace po dobu životnosti spravovaného procesu, můžete skrýt při analýze jiných vláken.
 
 > [!NOTE]
-> Skrytí vlákno také odebere ho z čas výpočtu, která se zobrazí v legendě aktivní a v sestavách profilu.
+> Skrytím vlákna se také odebere z doby výpočtu, která je zobrazena v aktivní legendě a v přehledech profilů.
 
 ## <a name="show-all-channels"></a>Zobrazit všechny kanály
- Tento ovládací prvek je aktivní, když jsou skryté jednoho nebo několika kanálů. Pokud jste ji zvolili, jsou uvedeny všechny prvky skrytý a jsou vráceny ve výpočtech čas.
+ Tento ovládací prvek je aktivní, pokud je jeden nebo více kanálů skrytých. Pokud ji zvolíte, zobrazí se všechny skryté prvky a vrátí se do výpočtů času.
 
-## <a name="move-markers-to-top"></a>Přesunout značky na začátek
- Pokud trasování neobsahuje značky události, můžete použít tento příkaz pro přesun kanály značky do horní části na časové ose. Jejich relativního pořadí je zachováno.
+## <a name="move-markers-to-top"></a>Přesunutí značek nahoru
+ Pokud trasování obsahuje události značky, můžete pomocí tohoto příkazu přesunout kanály značek na začátek časové osy. Jejich relativní řád je zachován.
 
-## <a name="group-markers-by-thread"></a>Seskupit značky podle vlákna
- Pokud trasování neobsahuje značky události, můžete použít tento příkaz na kanály skupiny značky podle vlákna, která se vygenerované značky události.  Kanály disku přesunou do horní části seznamu kanálů a kanály GPU přesunou do dolní části.
+## <a name="group-markers-by-thread"></a>Seskupit značky podle nitě
+ Pokud trasování obsahuje události značky, můžete pomocí tohoto příkazu seskupit kanály značek pod vláknem, které vygenerovalo události značky.  Diskové kanály jsou přesunuty do horní části seznamu kanálů a gpu kanály jsou přesunuty na konec.
 
-## <a name="see-also"></a>Viz také:
-- [Ovládací prvek Lupa (zobrazení vláken)](../profiling/zoom-control-threads-view.md)
-- [Zapnout nebo vypnout režim míry](../profiling/measure-mode-on-off.md)
+## <a name="see-also"></a>Viz také
+- [Ovládání lupy (zobrazení vláken)](../profiling/zoom-control-threads-view.md)
+- [Zapisování/vypínání režimu měření](../profiling/measure-mode-on-off.md)
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

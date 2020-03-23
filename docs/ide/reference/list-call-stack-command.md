@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7f62852550c161566832a7ab78d4058d1d14028f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72748712"
 ---
 # <a name="list-call-stack-command"></a>Listovat zásobník volání – příkaz
@@ -33,74 +33,74 @@ Debug.ListCallStack [/Count:number] [/ShowTypes:yes|no]
 [/ShowExternalCode:yes|no] [Thread:n] [index]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 
 `index`\
-Volitelné. Nastaví aktuální rámec zásobníku a nezobrazí žádný výstup.
+Nepovinný parametr. Nastaví aktuální snímek zásobníku a nezobrazí žádný výstup.
 
 ## <a name="switches"></a>Přepínače
-Každý přepínač lze vyvolat buď pomocí jeho úplného formátu, nebo krátkého tvaru.
+Každý přepínač lze vyvolat pomocí jeho kompletní formulář nebo krátký formulář.
 
-/Count: `number` [nebo]/C: `number`
+/Počet:`number` [nebo] /C:`number`
 
-Volitelné. Maximální počet zásobníků volání, které se mají zobrazit Výchozí hodnota je neomezená.
+Nepovinný parametr. Maximální počet zásobníků volání, které se mají zobrazit. Výchozí hodnota je neomezená.
 
-/ShowTypes: `yes`&#124; `no` [nebo]/t: `yes`&#124; `no`
+/ShowTypes:`yes` `no`&#124;[nebo]`yes` /T:&#124;`no`
 
-Volitelné. Určuje, zda se mají zobrazit typy parametrů. Výchozí hodnota je `yes`.
+Nepovinný parametr. Určuje, zda se mají zobrazit typy parametrů. Výchozí hodnota `yes`je .
 
-/ShowNames: `yes`&#124; `no` [nebo]/n: `yes`&#124; `no`
+/ShowNames:`yes` `no`&#124;[nebo]`yes` /N:&#124;`no`
 
-Volitelné. Určuje, zda se mají zobrazovat názvy parametrů. Výchozí hodnota je `yes`.
+Nepovinný parametr. Určuje, zda se mají zobrazit názvy parametrů. Výchozí hodnota `yes`je .
 
-/ShowValues: `yes`&#124; `no` [nebo]/v: `yes`&#124; `no`
+/ShowValues:`yes` `no`&#124;[nebo]`yes` /V:&#124;`no`
 
-Volitelné. Určuje, zda se mají zobrazovat hodnoty parametrů. Výchozí hodnota je `yes`.
+Nepovinný parametr. Určuje, zda se mají zobrazit hodnoty parametrů. Výchozí hodnota `yes`je .
 
-/ShowModule: `yes`&#124; `no` [nebo]/m: `yes`&#124; `no`
+/ShowModule:`yes` `no`&#124;[nebo]`yes` /M:&#124;`no`
 
-Volitelné. Určuje, zda se má zobrazit název modulu. Výchozí hodnota je `yes`.
+Nepovinný parametr. Určuje, zda se má zobrazit název modulu. Výchozí hodnota `yes`je .
 
-/ShowLineOffset: `yes`&#124; `no` [nebo]/#: `yes`&#124; `no`
+/ShowLineOffset:`yes` `no`&#124;[nebo]`yes` /#:&#124;`no`
 
-Volitelné. Určuje, zda se má zobrazit posun řádku. Výchozí hodnota je `no`.
+Nepovinný parametr. Určuje, zda se má odsazení čáry zobrazit. Výchozí hodnota `no`je .
 
-/ShowByteOffset: `yes`&#124; `no` [nebo]/b: `yes`&#124; `no`
+/ShowByteOffset:`yes` `no`&#124;[nebo]`yes` /B:&#124;`no`
 
-Volitelné. Určuje, zda se má zobrazovat posun bajtů. Výchozí hodnota je `no`.
+Nepovinný parametr. Určuje, zda se má odsazení bajtů zobrazit. Výchozí hodnota `no`je .
 
-/ShowLanguage: `yes`&#124; `no` [nebo]/l: `yes`&#124; `no`
+/ShowLanguage:`yes` `no`&#124;[nebo]`yes` /L:&#124;`no`
 
-Volitelné. Určuje, zda se má jazyk zobrazit. Výchozí hodnota je `no`.
+Nepovinný parametr. Určuje, zda se má jazyk zobrazit. Výchozí hodnota `no`je .
 
-/IncludeCallsAcrossThreads: `yes`&#124; `no` [nebo]/i: `yes`&#124; `no`
+/IncludeCallsAcrossThreads:`yes` `no`&#124;[nebo]`yes` /I:&#124;`no`
 
-Volitelné. Určuje, zda se mají zahrnout volání do nebo z jiných vláken. Výchozí hodnota je `no`.
+Nepovinný parametr. Určuje, zda má být zahrnuta volání do nebo z jiných vláken. Výchozí hodnota `no`je .
 
-/ShowExternalCode: `yes`&#124; `no`
+/ShowExternalCode:`yes`&#124;`no`
 
-Volitelné. Určuje, zda se má pro zásobník volání zobrazit Pouze můj kód. Pokud je Pouze můj kód vypnutý, zobrazí se všechen neuživatelský kód. Když je Pouze můj kód zapnutý, zobrazí se neuživatelský kód jako `[external]` ve výstupu zásobník volání.
+Nepovinný parametr. Určuje, zda se má zobrazit pouze můj kód pro zásobník volání. Když je vypnutý jen můj kód, zobrazí se veškerý neuživatelský kód. Když jen můj kód je zapnutý, neuživatelský `[external]` kód se zobrazí jako ve výstupu zásobníku volání.
 
-Vlákno: `n`
+Vlákno:`n`
 
-Volitelné. Zobrazí zásobník volání pro `n` vláken. Pokud není zadán žádný podproces, aplikace zobrazí zásobník volání pro aktuální vlákno.
+Nepovinný parametr. Zobrazí zásobník volání `n`pro vlákno . Pokud není zadáno žádné vlákno, zobrazí zásobník volání pro aktuální vlákno.
 
 ## <a name="remarks"></a>Poznámky
-Změny argumentů nebo přepínačů se vztahují na budoucí vyvolání tohoto příkazu. Pokud vydáte příkaz Debug. ListCallStackby, zobrazí se celý zásobník volání. Pokud zadáte index, například
+Změny provedené v argumentech nebo přepínačích platí pro budoucí vyvolání tohoto příkazu. Pokud problém debug.ListCallStackby sám, zobrazí se celý zásobník volání. Pokud například zadáte index,
 
 ```cmd
 Debug.ListCallStack 2
 ```
 
-aktuální rámec zásobníku je nastaven na tento rámec (v tomto případě druhý rámec).
+pak je aktuální snímek zásobníku nastaven na tento snímek (v tomto případě druhý snímek).
 
-Tento příkaz můžete také napsat pomocí jeho předem definovaného aliasu KB. Můžete například zadat
+Tento příkaz můžete také napsat pomocí jeho předdefinovaného aliasu kb. Můžete například zadat
 
 ```cmd
 kb 2
 ```
 
-Chcete-li nastavit aktuální rámec zásobníku na druhý snímek.
+nastavte aktuální snímek zásobníku na druhý snímek.
 
 ## <a name="example"></a>Příklad
 
@@ -108,11 +108,11 @@ Chcete-li nastavit aktuální rámec zásobníku na druhý snímek.
 >Debug.CallStack /Count:4 /ShowTypes:yes
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Příkaz Zobrazit zpětný překlad](../../ide/reference/list-disassembly-command.md)
-- [Příkaz Listovat vlákna](../../ide/reference/list-threads-command.md)
+- [Zobrazit zpětný překlad – příkaz](../../ide/reference/list-disassembly-command.md)
+- [Listovat vlákna – příkaz](../../ide/reference/list-threads-command.md)
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Pole Najít/příkaz](../../ide/find-command-box.md)
+- [Najít/Příkazové pole](../../ide/find-command-box.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

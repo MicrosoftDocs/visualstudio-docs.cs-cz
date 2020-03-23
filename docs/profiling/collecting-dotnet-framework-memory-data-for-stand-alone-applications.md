@@ -1,5 +1,5 @@
 ---
-title: Získání dat .NET Framework paměti pomocí příkazového řádku profileru
+title: Získání paměťových dat rozhraní .NET Framework pomocí příkazového řádku profileru
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 7bce69e2-407c-4342-8516-641586968928
@@ -10,44 +10,44 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 04656351b538aa71811bc32d6b45d735f5441441
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74773202"
 ---
-# <a name="collect-net-framework-memory-data-by-using-the-profiler-command-line"></a>Shromažďování dat .NET Framework paměti pomocí příkazového řádku profileru
+# <a name="collect-net-framework-memory-data-by-using-the-profiler-command-line"></a>Shromažďování paměťových dat rozhraní .NET Framework pomocí příkazového řádku profileru
 
-Tato část popisuje postupy a možnosti pro shromažďování přidělení paměti a dat o životnosti objektů pro klienta rozhraní .NET (samostatné) aplikace pomocí metody vzorkování z příkazového řádku.
+Tato část popisuje postupy a možnosti pro shromažďování přidělení paměti a data životnosti objektu pro klientskou (samostatnou) aplikaci .NET pomocí metody vzorkování z příkazového řádku.
 
-## <a name="common-tasks"></a>Běžné úlohy
+## <a name="common-tasks"></a>Běžné úkoly
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
-|**Spuštění aplikace a profilu .NET paměti**|-   [Postupy: spuštění aplikace .NET Framework s profilerem za účelem shromáždění dat paměti](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-memory-data.md)|
-|**Připojení profileru k aplikaci .NET**|-   [Postupy: Připojení profileru k aplikaci .NET Framework ke shromáždění dat paměti](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-app-to-collect-memory-data.md)|
-|**Instrumentace aplikace pro shromažďování dat paměti .NET**|-   [Postupy: instrumentace samostatné .NET Framework součásti a shromáždění dat paměti pomocí profileru](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md)|
+|**Spuštění aplikace a profilu .NET paměti**|-   [Postup: Spuštění aplikace rozhraní .NET Framework pomocí profileru pro shromažďování paměťových dat](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-memory-data.md)|
+|**Připojení profileru k aplikaci .NET**|-   [Postup: Připojení profileru k aplikaci rozhraní .NET Framework ke shromažďování paměťových dat](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-app-to-collect-memory-data.md)|
+|**Instrumentace aplikace pro shromažďování dat paměti .NET**|-   [Postup: Instrumentujte samostatnou komponentu rozhraní .NET Framework a shromažďujte data paměti pomocí profileru](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md)|
 
 ## <a name="related-tasks"></a>Související úlohy
 
 ### <a name="profile-stand-alone-applications"></a>Profilovat samostatné aplikace
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
-|**Profilování pomocí metody vzorkování**|-   [shromažďovat statistiky aplikací pomocí vzorkování](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|
-|**Profilování pomocí metody instrumentace**|-   [shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md)|
-|**Kolize prostředku profilu a aktivita vlákna**|-   [shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|
-|**Přidání dat interakce vrstev**|-   [shromažďovat data interakce vrstev](../profiling/adding-tier-interaction-data-from-the-command-line.md)|
+|**Profil pomocí metody odběru vzorků**|-   [Shromažďujte statistiky aplikací pomocí vzorkování](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|
+|**Profil pomocí metody instrumentace**|-   [Shromažďování podrobných časových dat pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md)|
+|**Konflikty prostředků profilu a aktivita podprocesu**|-   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|
+|**Přidání dat interakce tier**|-   [Shromažďování dat interakce vrstvy](../profiling/adding-tier-interaction-data-from-the-command-line.md)|
 
-### <a name="profile-net-memory-data"></a>Profilovat data paměti .NET
+### <a name="profile-net-memory-data"></a>Data paměti Profil .NET
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
-|**Profilování aplikací ASP.NET**|-   [shromažďovat data paměti](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|
-|**Profilovací služby**|-   [shromažďovat data paměti .NET](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|
+|**Profilové aplikace ASP.NET**|-   [Shromažďování paměťových dat](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|
+|**Profilové služby**|-   [Shromažďování dat paměti .NET](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|
 
-### <a name="analyze-net-memory-data-views-and-reports"></a>Analýza zobrazení a sestav dat paměti .NET
+### <a name="analyze-net-memory-data-views-and-reports"></a>Analýza zobrazení a sestav paměti .NET
 - [Zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md)
 
-## <a name="reference"></a>Odkaz
+## <a name="reference"></a>Referenční informace
 - [Referenční dokumentace nástrojů příkazového řádku pro profilaci](../profiling/command-line-profiling-tools-reference.md)

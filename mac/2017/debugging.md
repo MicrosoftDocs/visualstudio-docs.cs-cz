@@ -1,99 +1,99 @@
 ---
-title: Ladění pomocí Xamarin
-description: Ladění je běžné a nezbytné, což je součást programování. V rámci vyspělého integrovaného vývojového prostředí Visual Studio pro Mac obsahuje celou sadu funkcí, aby bylo ladění snadné. Z bezpečného ladění na vizualizaci dat v tomto článku se dozvíte, jak používat plný potenciál ladění v Visual Studio pro Mac.
+title: Ladění s Xamarinem
+description: Ladění je běžnou a nezbytnou součástí programování. Jako starší IDE, Visual Studio pro Mac obsahuje celou sadu funkcí, které usnadňují ladění. Od bezpečnéladění, na vizualizaci dat, tento článek vysvětluje, jak využít plný potenciál ladění v Sadě Visual Studio pro Mac.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
 ms.openlocfilehash: f62ebe21dcc5eb60927c0bc14617051aba3363e8
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74985024"
 ---
-# <a name="debugging-with-xamarin"></a>Ladění pomocí Xamarin
+# <a name="debugging-with-xamarin"></a>Ladění s Xamarinem
 
-Visual Studio pro Mac má nativní ladicí program umožňující ladění pro aplikace Xamarin. iOS, Xamarin. Mac a Xamarin. Android.
+Visual Studio pro Mac má nativní ladicí program umožňující podporu ladění pro aplikace Xamarin.iOS, Xamarin.Mac a Xamarin.Android.
 
-Visual Studio pro Mac používá [*měkký ladicí program mono*](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/), který je implementován do mono runtime a umožňuje Visual Studio pro Mac ladit spravovaný kód napříč všemi platformami.
+Visual Studio pro Mac používá [*Mono Soft Debugger*](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/), který je implementován do mono runtime, což umožňuje Visual Studio pro Mac ladit spravovaný kód na všech platformách.
 
 ## <a name="the-debugger"></a>Ladicí program
 
-Visual Studio pro Mac používá ke ladění spravovaného (C# nebo F#) kódu v aplikacích Xamarin měkký ladicí program mono. Měkké ladění mono se liší od běžných ladicích programů v tom, že se jedná o spolupracující ladicí program, který je integrovaný do Mono runtime; generovaný kód a Mono runtime spolupracuje s IDE pro poskytování prostředí ladění. Mono runtime zpřístupňuje funkce ladění prostřednictvím přenosového protokolu, který si můžete přečíst [v dokumentaci k mono](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger-wire-format/).
+Visual Studio pro Mac používá Mono Soft Debugger k ladění spravovaného (C# nebo F#) kódu ve všech aplikacích Xamarin. Ladicí program Mono Soft se liší od běžných ladicích programů v tom, že se jedná o kooperativní ladicí program, který je zabudován do runtime Mono; generovaný kód a mono runtime spolupracují s ide poskytnout ladění prostředí. Mono runtime zveřejňuje funkce ladění prostřednictvím drátového protokolu, který si můžete přečíst více [v dokumentaci Mono](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger-wire-format/).
 
-Pevné ladicí programy, jako je například [LLDB](https://lldb.llvm.org/index.html) nebo [GDB](https://www.gnu.org/software/gdb/), řídí program bez znalosti nebo spolupráce z laděného programu, ale mohou být užitečné při ladění aplikací Xamarin v případě, že potřebujete ladit nativní kód pro iOS nebo Android.
+Tvrdé ladicí programy, jako je [LLDB](https://lldb.llvm.org/index.html) nebo [GDB](https://www.gnu.org/software/gdb/), řídí program bez vědomí nebo spolupráce z laděné ho programu, ale může být stále užitečné při ladění aplikací Xamarin v případě, že potřebujete ladit nativní kód iOS nebo Android.
 
 ## <a name="using-the-debugger"></a>Použití ladicího programu
 
-Chcete-li spustit ladění jakékoli aplikace, vždy zajistěte, aby byla konfigurace nastavena na **ladění**. Konfigurace ladění poskytuje užitečnou sadu nástrojů pro podporu ladění, jako je například zarážky, použití vizualizací dat a zobrazení zásobníku volání:
+Chcete-li spustit ladění libovolné aplikace, vždy se ujistěte, že konfigurace je nastavena na **ladění**. Konfigurace ladění poskytuje užitečnou sadu nástrojů pro podporu ladění, jako jsou zarážky, pomocí vizualizérů dat a zobrazení zásobníku volání:
 
 ![Konfigurace ladění](media/debugging-image_0.png)
 
-## <a name="setting-a-breakpoint"></a>Nastavením zarážky
+## <a name="setting-a-breakpoint"></a>Nastavení zarážky
 
-Chcete-li nastavit zarážku v integrovaném vývojovém prostředí (IDE), klikněte vedle čísla řádku kódu, který chcete přerušit, na oblast okraje editoru.
+Chcete-li nastavit zarážku v rozhraní IDE, klikněte na oblast okrajů editoru vedle čísla řádku kódu, kde chcete přerušit:
 
 ![Nastavení zarážky v okraji](media/debugging-image0.png)
 
-Všechny zarážky, které byly nastaveny v kódu, můžete zobrazit tak, že na **panelu zarážek**kliknete:
+Všechny zarážky, které byly nastaveny v kódu, můžete zobrazit tak, že přejdete na **panel Zarážky**:
 
 ![Seznam zarážek](media/debugging-image0a.png)
 
-## <a name="start-debugging"></a>Spustit ladění
+## <a name="start-debugging"></a>Zahájit ladění
 
-Chcete-li spustit ladění, vyberte cílové zařízení nebo podobné/emulátor v integrovaném vývojovém prostředí (IDE):
+Chcete-li začít ladění, vyberte cílové zařízení nebo podobný/emulátor v ide:
 
-![Vyberte cílové zařízení.](media/debugging-image1.png)
+![Vybrat cílové zařízení](media/debugging-image1.png)
 
-Pak aplikaci nasaďte stisknutím tlačítka **Přehrát** nebo **příkazu cmd + Return**. Když narazíte na zarážku, kód se zvýrazní žlutě:
+Pak nasadit aplikaci stisknutím tlačítka **Play,** nebo **Cmd + return**. Když narazíte na zarážku, kód se zvýrazní žlutě:
 
-![Zvýraznění ukazující, že bylo dosaženo zarážky](media/debugging-image2.png)
+![Zvýraznění zobrazující zarážku bylo dosaženo](media/debugging-image2.png)
 
-Nástroje pro ladění, jako je například ta, která se používá ke kontrole hodnot objektů, lze v tomto okamžiku použít k získání dalších informací o tom, co se děje v kódu:
+Ladicí nástroje, jako je například ten, který slouží ke kontrole hodnot objektů, lze v tomto okamžiku použít k získání dalších informací o tom, co se děje ve vašem kódu:
 
 ![Ladění vizualizací](media/debugging-image3.png)
 
 ## <a name="conditional-breakpoints"></a>Podmíněné zarážky
 
-Můžete také nastavit pravidla, která určují okolnosti, za kterých by měla být zarážka, což se říká přidání *podmíněné zarážky*. Chcete-li nastavit podmíněnou zarážku, přejděte k **okno vlastnosti zarážky**, kterou lze provést dvěma způsoby:
+Můžete také nastavit pravidla diktovat okolnosti, za kterých by mělo dojít k zarážky, to se označuje jako přidání *podmíněné zarážky*. Chcete-li nastavit podmíněnou zarážku, přejděte do **okna Vlastnosti zarážky**, které lze provést dvěma způsoby:
 
-* Chcete-li přidat novou podmíněnou zarážku, klikněte pravým tlačítkem myši na okraj editoru, nalevo od čísla řádku pro kód, na kterém chcete nastavit zarážku, a vyberte Nová zarážka:
+* Chcete-li přidat novou podmíněnou zarážku, klikněte pravým tlačítkem myši na okraj editoru, vlevo od čísla řádku kódu, na který chcete nastavit zarážku, a vyberte Nový zarážka:
 
- ![Místní nabídka zarážky](media/debugging-image4.png)
+ ![Kontextová nabídka zarážky](media/debugging-image4.png)
 
-* Chcete-li přidat podmínku do existující zarážky, klikněte pravým tlačítkem myši na zarážku a vyberte možnost **vlastnosti zarážky**, nebo v panelu **zarážky**vyberte tlačítko Upravit zarážku, které je zobrazeno níže:
+* Chcete-li přidat podmínku k existující zarážky, klepněte pravým tlačítkem myši na zarážku a vyberte **vlastnosti zarážky**nebo v **panelu zarážek**vyberte tlačítko Upravit zarážky znázorněné níže:
 
- ![Upravit existující zarážku v panelu zarážek](media/debugging-image5.png)
+ ![Úprava existující zarážky v panelu zarážek](media/debugging-image5.png)
 
-Pak můžete zadat podmínku, pod kterou chcete, aby se zarážka nastala:
+Potom můžete zadat podmínku, pod kterou chcete, aby došlo k zarážky:
 
  ![Upravit podmínky zarážky](media/debugging-image6.png)
 
-## <a name="stepping-through-code"></a>Krokování prostřednictvím kódu
+## <a name="stepping-through-code"></a>Krokování kódu
 
-Při dosažení zarážky vám ladicí nástroje umožní získat kontrolu nad prováděním programu. Visual Studio pro Mac zobrazí čtyři tlačítka, která vám umožní spustit a krokovat kód. V Visual Studio pro Mac budou vypadat takto:
+Po dosažení zarážky, ladicí nástroje umožňují získat kontrolu nad provádění programu. Visual Studio for Mac zobrazí čtyři tlačítka, což vám umožní spustit a krokovat kód. Ve Visual Studiu pro Mac budou vypadat takto:
 
- ![Tlačítka pro krokování kódu](media/debugging-image7.png)
+ ![Tlačítka pro krokovací kód](media/debugging-image7.png)
 
-Tady jsou čtyři tlačítka:
+Zde jsou čtyři tlačítka:
 
-* **Přehrát** – spustí se kód až do další zarážky.
-* **Krok za krokem** – provede další řádek kódu. Pokud je další řádek volání funkce, krok za krokem spustí funkci a zastaví se na dalším řádku kódu *za* funkcí.
-* **Krokovat** s vnořením se také spustí další řádek kódu. Pokud je další řádek volání funkce, krok dovnitř se zastaví na prvním řádku funkce, což vám umožní pokračovat v řádkovém ladění funkce. Pokud další řádek není funkce, bude se chovat stejně jako krok za krokem.
-* **Krok ven** – vrátí se na řádek, kde byla zavolána aktuální funkce.
+* **Přehrát** – začne se spouštět kód až do další zarážky.
+* **Krok přes** - To provede další řádek kódu. Pokud další řádek je volání funkce, Krok přes spustí funkci a zastaví se na dalším řádku kódu *za* funkcí.
+* **Krok do** - To také spustí další řádek kódu. Pokud je dalším řádkem volání funkce, Krok Do se zastaví na prvním řádku funkce, což vám umožní pokračovat v ladění funkce řádek po řádku. Pokud další řádek není funkce, bude se chovat stejně jako Krok přes.
+* **Krok ven** - To se vrátí na řádek, kde byla volána aktuální funkce.
 
-## <a name="debugging-monos-class-libraries"></a>Ladění knihoven tříd mono
+## <a name="debugging-monos-class-libraries"></a>Ladění knihoven tříd Mono
 
-Produkty Xamarin dodávané se zdrojovým kódem pro knihovny tříd mono a můžete je použít pro jeden krok ladicího programu ke kontrole, jak fungují v digestoři.
+Produkty Xamarin jsou dodávány se zdrojovým kódem pro knihovny tříd Mono a můžete použít tento krok z ladicího programu ke kontrole, jak věci fungují pod kapotou.
 
-Vzhledem k tomu, že tato funkce spotřebovává větší množství paměti během ladění, je ve výchozím nastavení vypnutá.
+Vzhledem k tomu, že tato funkce spotřebovává více paměti během ladění, je ve výchozím nastavení vypnuta.
 
-Chcete-li povolit tuto funkci, přejděte na **Visual Studio pro Mac > předvolby > ladicí program** a ujistěte se, že "**ladit pouze kód projektu; Neprovádějte krok do kódu architektury.** " možnost není **Vybraná**, jak je znázorněno níže:
+Chcete-li tuto funkci povolit, přejděte do **předvoleb > Sady Visual Studio pro Mac > ladicím programem** a ujistěte se, že**je třeba pouze kód projektu ladění. nevstupujte do kódu rámce.**" volba **není vybraná**, jak je znázorněno níže:
 
-![Nekrokovat s vnořením do možnosti kódu architektury](media/debugging-image8.png)
+![Nekrokovat do framework code možnost](media/debugging-image8.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Ladění v aplikaci Visual Studio (ve Windows)](/visualstudio/debugger/)
+- [Ladění v sadě Visual Studio (v systému Windows)](/visualstudio/debugger/)

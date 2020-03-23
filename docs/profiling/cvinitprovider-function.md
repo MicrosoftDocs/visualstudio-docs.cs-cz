@@ -1,5 +1,5 @@
 ---
-title: Cvinitprovider – funkce | Dokumentace Microsoftu
+title: Funkce CvInitProvider | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a97be63cd782397e984fd8dbce7da844efa07540
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62552664"
 ---
-# <a name="cvinitprovider-function"></a>Cvinitprovider – funkce
-Inicializuje poskytovatele značek. Musí být volána před všechny ostatní funkce sada Vizualizátor souběžnosti SDK.
+# <a name="cvinitprovider-function"></a>CvInitProvider
+Inicializuje zprostředkovatele značky. Musí být volána před všechny ostatní funkce souběžnosti Vizulizátor SDK.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,15 +32,15 @@ HRESULT CvInitProvider(
 ```
 
 #### <a name="parameters"></a>Parametry
- `pGuid` Identifikátor guid zprostředkovatele. Nemůže mít hodnotu NULL.
+ `pGuid`Identifikátor GUID zprostředkovatele. Nemůže být null.
 
- `ppProvider` Adresa proměnné výstup, který bude uložený kontext zprostředkovatele. Nemůže mít hodnotu NULL.
+ `ppProvider`Adresa výstupní proměnné, která bude ukládat kontext zprostředkovatele. Nemůže být null.
 
 ## <a name="return-value"></a>Návratová hodnota
- S_OK při zprostředkovatel úspěšně inicializován nebo kód chyby v případě, že existuje byly všechny chyby. Použití makra SUCCEEDED nebo FAILED zkontrolujte chybovou podmínku.
+ S_OK, kdy je zprostředkovatel úspěšně inicializován, nebo kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte následující/neúspěšná makra.
 
 ## <a name="requirements"></a>Požadavky
- **Header:** *cvmarkers.h*
+ **Záhlaví:** *cvmarkers.h*
 
-## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na knihovnu C++](../profiling/cpp-library-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Analýza využití procesoru | Dokumentace Microsoftu
+title: Analýza využití procesoru | Dokumenty společnosti Microsoft
 ms.custom: seodec18
 ms.date: 11/04/2018
 ms.topic: conceptual
@@ -10,118 +10,118 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 351247f50560896d53267fcf8d7f4a66a81b9461
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62553496"
 ---
 # <a name="analyze-cpu-usage"></a>Analýza využití procesoru
 
-Dobrým způsobem, jak spustit šetření s problémy s výkonem v aplikaci je pochopit jeho využití procesoru. **Využití procesoru** nástroj výkon ukazuje čas procesoru a procentuální strávené prováděním kódu v jazyce C++, C#/Visual Basic a aplikacích JavaScript.
+Dobrým způsobem, jak začít vyšetřovat problémy s výkonem ve vaší aplikaci, je pochopit jeho využití procesoru. Nástroj **výkon využití procesoru** zobrazuje čas a procento procesoru strávené prováděním kódu v aplikacích C++, C#/Visual Basic a JavaScript.
 
-**Využití procesoru** nástroj můžete spustit v otevřeném projektu sady Visual Studio na nainstalovanou aplikaci Microsoft Store nebo připojený ke spuštěné aplikace nebo proces. Nástroj můžete spustit na místních nebo vzdálených počítačích nebo na simulátoru nebo emulátoru. Další informace najdete v tématu [spustit s nebo bez ladicího programu nástroje pro profilaci](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
+Nástroj **využití procesoru** lze spustit v otevřeném projektu Sady Visual Studio, v nainstalované aplikaci Microsoft Store nebo připojené ke spuštěné aplikaci nebo procesu. Nástroj můžete spustit na místních nebo vzdálených počítačích nebo na simulátoru nebo emulátoru. Další informace naleznete [v tématu Spuštění nástrojů profilování s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-Můžete spustit **využití procesoru** nástroj s nebo bez ladění. V ladicím programu můžete zapnout a vypnout profilaci procesoru a zobrazit rozpis využití procesoru podle funkce. Můžete zobrazit výsledky pro využití procesoru při spuštění je pozastaveno, například zarážky.
+Nástroj využití **procesoru** můžete spustit s laděním nebo bez něj. V ladicím programu můžete zapínat a vypínat profilování procesoru a zobrazit rozpis využití procesoru podle funkce. Výsledky využití procesoru můžete zobrazit při pozastavení provádění, například v zarážky.
 
-Následující pokyny ukazují, jak používat **využití procesoru** nástroje bez ladicího programu, pomocí sady Visual Studio **Profiler výkonu**. V příkladech se používá sestavení pro vydání v místním počítači. Sestavení pro vydání poskytují nejlepší zobrazení aplikace skutečný výkon. Analýza využití procesoru s sestavení pro ladění, naleznete v tématu [příručka začátečníka profilací výkonu](../profiling/beginners-guide-to-performance-profiling.md).
+Následující pokyny ukazují, jak používat nástroj **využití procesoru** bez ladicího programu pomocí nástroje Visual Studio **Performance Profiler**. Příklady používají vydání sestavení na místním počítači. Vydání sestavení poskytují nejlepší přehled o skutečném výkonu aplikace. Chcete-li analyzovat využití procesoru pomocí sestavení ladění, [přečtěte si příručku pro začátečníky k profilování výkonu](../profiling/beginners-guide-to-performance-profiling.md).
 
-Obvykle místní počítač nejlepší replikuje provádění nainstalované aplikace. Pro aplikace Windows Phone shromažďovat data přímo ze zařízení poskytuje co nejvíce zpřesnili data. Chcete-li shromažďovat data ze vzdáleného zařízení, spusťte aplikaci přímo v zařízení, nikoli prostřednictvím připojení ke vzdálené ploše.
+Obvykle místní počítač nejlépe replikuje nainstalované spuštění aplikace. Pro aplikace pro Windows Phone poskytuje shromažďování dat přímo ze zařízení nejpřesnější data. Chcete-li shromažďovat data ze vzdáleného zařízení, spusťte aplikaci přímo v zařízení, nikoli přes připojení ke vzdálené ploše.
 
 >[!NOTE]
->Windows 7 nebo novější je nutné použít [Profiler výkonu](../profiling/profiling-feature-tour.md).
+>Systém Windows 7 nebo novější je nutné použít [nástroj Performance Profiler](../profiling/profiling-feature-tour.md).
 
 ## <a name="collect-cpu-usage-data"></a>Shromažďovat data o využití procesoru
 
-1. V projektu sady Visual Studio nastavte konfiguraci řešení na **vydání** a vyberte **místního počítače** jako cíl nasazení.
+1. V projektu Sady Visual Studio nastavte konfiguraci řešení na **Release** a jako cíl nasazení vyberte **místní počítač.**
 
-    ![Vyberte verzi a místní počítač](../profiling/media/cpuuse_selectreleaselocalmachine.png "vyberte verzi a místní počítač")
+    ![Vybrat uvolnění a místní počítač](../profiling/media/cpuuse_selectreleaselocalmachine.png "Vybrat uvolnění a místní počítač")
 
-1. Vyberte **ladění** > **Profiler výkonu**.
+1. Vyberte **možnost Ladění** > **profileru výkonu**.
 
-1. V části **dostupných nástrojů**vyberte **využití procesoru**a pak vyberte **Start**.
+1. V části **Dostupné nástroje**vyberte **Využití procesoru**a pak vyberte **Start**.
 
-    ![Vyberte využití procesoru](../profiling/media/cpuuse_lib_choosecpuusage.png "vyberte využití procesoru")
+    ![Vybrat využití procesoru](../profiling/media/cpuuse_lib_choosecpuusage.png "Vybrat využití procesoru")
 
-4. Po spuštění aplikace diagnostické relace spustí a zobrazí data o využití procesoru. Po dokončení shromažďování dat, vyberte **zastavit shromažďování**.
+4. Po spuštění aplikace začne diagnostická relace a zobrazí data o využití procesoru. Po dokončení shromažďování dat vyberte **Zastavit shromažďování**.
 
-   ![Zastavit shromažďování dat o využití procesoru](../profiling/media/cpu_use_wt_stopcollection.png "využití procesoru zastavit shromažďování dat")
+   ![Zastavit shromažďování dat o využití procesoru](../profiling/media/cpu_use_wt_stopcollection.png "Zastavit shromažďování dat o využití procesoru")
 
-   Nástroj využití CPU analyzuje data a zobrazí sestavu.
+   Nástroj využití procesoru analyzuje data a zobrazí sestavu.
 
-   ![Sestava využití procesoru](../profiling/media/cpu_use_wt_report.png "sestava využití procesoru")
+   ![Sestava využití procesoru](../profiling/media/cpu_use_wt_report.png "Sestava využití procesoru")
 
 ## <a name="analyze-the-cpu-usage-report"></a>Analýza sestavy využití procesoru
 
-Diagnostické zprávy je seřazený podle **celkový čas procesoru**, od nejvyšší po nejnižší. Změníte pořadí řazení a řazení sloupců tak, že vyberete záhlaví sloupců. Použít **filtr** rozevírací nabídku a vyberte nebo zrušte výběr vláken k zobrazení a použití **hledání** políčka k vyhledání konkrétního vlákna nebo uzel.
+Diagnostická sestava je seřazena podle **celkového procesoru**od nejvyššího k nejnižšímu. Změňte pořadí řazení nebo sloupec řazení výběrem záhlaví sloupců. Rozevírací **seznam Filtr** slouží k výběru nebo zrušení výběru vláken, které chcete zobrazit, a pomocí pole **Hledat** k vyhledání určitého vlákna nebo uzlu.
 
 ::: moniker range=">=vs-2019"
-Od verze Visual Studio 2019, můžete kliknout na **rozbalit kritickou cestu** a **zobrazit kritickou cestu** tlačítka zobrazíte volá funkci, která používají nejvyšší procento procesoru v zobrazení stromu volání.
+Počínaje Visual Studio 2019, můžete kliknout **rozbalit aktivní cestu** a **zobrazit horké cesty** tlačítka zobrazíte volání funkce, které používají nejvyšší procento procesoru v zobrazení stromu volání.
 ::: moniker-end
 
-### <a name="BKMK_Call_tree_data_columns"></a> Sloupce dat využití procesoru
+### <a name="cpu-usage-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a>Sloupce dat o využití procesoru
 
 |||
 |-|-|
-|**Celkový čas procesoru [jednotka, %]**|![Celkem % dat rovnice](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> Milisekund a % využití CPU ve volání funkce a funkcích volaných funkcí ve vybraném časovém rozsahu. Tím se liší od **využití výkonu procesoru** graf časové osy, která porovnává celkové aktivity procesoru v časový rozsah pro celkový čas procesoru k dispozici.|
-|**Vlastní čas procesoru [jednotka, %]**|![Vlastní % rovnice](../profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> Milisekund a procento využití procesoru používá volání funkce ve vybraném časovém rozsahu, s výjimkou funkce volané funkce.|
-|**Modul**|Název modulu, který obsahuje funkci.
+|**Celkový procesor [jednotka, %]**|![Rovnice celkových % dat](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> Milisekundy a procento procesoru používané voláním funkce a funkce mivolavky volaný funkcí ve vybraném časovém rozsahu. To se liší od grafu časové osy **využití procesoru,** který porovnává celkovou aktivitu procesoru v časovém rozsahu s celkovým dostupným procesorem.|
+|**Vlastní procesor [jednotka, %]**|![Vlastní % rovnice](../profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> Milisekundy a procento procesoru používané voláním funkce ve vybraném časovém rozsahu, s výjimkou funkcí volaných funkcí.|
+|**Modul**|Název modulu obsahujícího funkci.
 
-### <a name="BKMK_The_CPU_Usage_call_tree"></a> Využití procesoru strom volání
+### <a name="the-cpu-usage-call-tree"></a><a name="BKMK_The_CPU_Usage_call_tree"></a>Strom volání využití procesoru
 
-Zobrazení stromu volání, vyberte nadřazený uzel v sestavě. **Využití procesoru** stránka se otevře **volající/volaný** zobrazení. V **aktuální zobrazení** rozevíracího seznamu vyberte **stromu volání**.
+Chcete-li zobrazit strom volání, vyberte nadřazený uzel v sestavě. Stránka **Využití procesoru** se otevře v zobrazení **Volající/Volaný.** V rozevíracím přehledu **Aktuální zobrazení** vyberte **Strom volání**.
 
-#### <a name="BKMK_Call_tree_structure"></a> Struktura stromu volání
+#### <a name="call-tree-structure"></a><a name="BKMK_Call_tree_structure"></a>Struktura stromu volání
 
 ::: moniker range=">=vs-2019"
-![Volání stromovou strukturu](../profiling/media/vs-2019/cpu-use-wt-getmaxnumbercalltree-annotated.png "volání stromové struktury")
+![Struktura stromu volání](../profiling/media/vs-2019/cpu-use-wt-getmaxnumbercalltree-annotated.png "Struktura stromu volání")
 ::: moniker-end
 ::: moniker range="vs-2017"
-![Volání stromovou strukturu](../profiling/media/cpu_use_wt_getmaxnumbercalltree_annotated.png "volání stromové struktury")
+![Struktura stromu volání](../profiling/media/cpu_use_wt_getmaxnumbercalltree_annotated.png "Struktura stromu volání")
 ::: moniker-end
 
 |||
 |-|-|
-|![1. krok](../profiling/media/procguid_1.png "ProcGuid_1")|Uzel nejvyšší úrovně ve stromu volání procesoru je pseudo uzel.|
-|![2. krok](../profiling/media/procguid_2.png "ProcGuid_2")|Ve většině aplikací když **zobrazit externí kód** možnost je zakázaná, je uzel druhé úrovně **[externí kód]** uzlu. Uzel obsahuje kód systému a rozhraní, který se spustí a zastaví aplikace, nakreslí uživatelského rozhraní, ovládací prvky, plánování vláken a poskytuje další nižší úrovně služby do aplikace.|
-|![3. krok](../profiling/media/procguid_3.png "ProcGuid_3")|Uzlu druhé úrovně jsou podřízeny metody uživatelského kódu a asynchronní rutiny, které volá nebo vytváří systémový kód a kód architektury druhé úrovně.|
-|![4. krok](../profiling/media/procguid_4.png "ProcGuid_4")|Podřízené uzly metody mají data pouze pro volání metody nadřazené. Pokud zakážete **Zobrazit externí kód**, mohou metody aplikace obsahovat také uzel **[Externí kód]**.|
+|![Krok 1](../profiling/media/procguid_1.png "ProcGuid_1")|Uzel nejvyšší úrovně ve stromech volání využití procesoru je pseudouzel.|
+|![Krok 2](../profiling/media/procguid_2.png "ProcGuid_2")|Ve většině aplikací, když je zakázána možnost **Zobrazit externí kód,** uzel druhé úrovně je uzel **[Externí kód].** Uzel obsahuje systémový a framework kód, který spustí a zastaví aplikaci, nakreslí uživatelské rozhraní, řídí plánování vláken a poskytuje další služby nižší úrovně do aplikace.|
+|![Krok 3](../profiling/media/procguid_3.png "ProcGuid_3")|Uzlu druhé úrovně jsou podřízeny metody uživatelského kódu a asynchronní rutiny, které volá nebo vytváří systémový kód a kód architektury druhé úrovně.|
+|![Krok 4](../profiling/media/procguid_4.png "ProcGuid_4")|Podřízené uzly metody mají data pouze pro volání nadřazené metody. Pokud zakážete **Zobrazit externí kód**, mohou metody aplikace obsahovat také uzel **[Externí kód]**.|
 
-#### <a name="BKMK_External_Code"></a> Externí kód
+#### <a name="external-code"></a><a name="BKMK_External_Code"></a>Externí kód
 
-Systém a o funkcích rozhraní, které jsou spouštěny ve vašem kódu, se nazývají *externí kód*. Externí kód funkce spuštění a zastavení aplikace, vykreslení uživatelského rozhraní, řízení práce s vlákny a poskytují další nižší úrovně služby do aplikace. Ve většině případů nepotřebujete externí kód, takže využití procesoru volání stromu shromáždí externí funkce metody uživatele do jednoho **[externí kód]** uzlu.
+Systémové a rámcové funkce, které jsou spouštěny vaším kódem, se nazývají *externí kód*. Funkce externího kódu spustí a zastaví aplikaci, nakreslí uživatelské rozhraní, řídí podprocesy a poskytuje aplikaci další nízkoúrovňové služby. Ve většině případů vás nezajímá externí kód, takže strom volání využití procesoru shromažďuje externí funkce uživatelské metody do jednoho uzlu **[externí kód].**
 
-Chcete-li zobrazit cesty volání externí kód, na stránce hlavní diagnostickou sestavu (pravé podokno), vyberte **zobrazit externí kód** z **filtr** rozevírací seznam a pak vyberte **použít**. **Stromu volání** zobrazení **využití procesoru** stránce poté rozbalí volání externí kód. ( **Filtr** ovládacího prvku dropdown je k dispozici na hlavní stránce diagnostiky, ne podrobné zobrazení.)
+Chcete-li zobrazit cesty volání externího kódu, na stránce hlavní diagnostické sestavy (pravé podokno) vyberte v rozevíracím souboru **Filtr** zobrazit **externí kód** a pak vyberte **Použít**. Zobrazení **Stromvolání** na stránce **Využití procesoru** pak rozbalí volání externího kódu. (Rozevírací **seznam Filtr** je k dispozici na hlavní diagnostické stránce, nikoli na podrobných zobrazeních.)
 
-![Zobrazit externí kód](../profiling/media/cpu_use_wt_filterview.png "zobrazit externí kód")
+![Zobrazit externí kód](../profiling/media/cpu_use_wt_filterview.png "Zobrazit externí kód")
 
-Mnoho řetězců volání externí kód jsou vnořeny hluboko, takže šířku řetězce může být delší než šířka zobrazení **název funkce** sloupce. Názvy funkcí se potom zobrazí jako **...** .
+Mnoho řetězců volání externího kódu je hluboce vnořeno, takže šířka řetězu může překročit šířku zobrazení sloupce **Název funkce.** Názvy funkcí se pak zobrazí jako **...**.
 
-![Vnořené externí kód ve stromu volání](../profiling/media/cpu_use_wt_showexternalcodetoowide.png "vnořené externí kód ve stromu volání")
+![Vnořený externí kód ve stromu volání](../profiling/media/cpu_use_wt_showexternalcodetoowide.png "Vnořený externí kód ve stromu volání")
 
-Chcete-li najít název funkce, které hledáte, použijte vyhledávací pole. Najeďte myší vybraný řádek nebo zobrazení dat pomocí vodorovný posuvník.
+Chcete-li najít název funkce, kterou hledáte, použijte vyhledávací pole. Najeďte přes vybranou čáru nebo pomocí vodorovného posuvníku zobrazte data.
 
 ::: moniker range=">=vs-2019"
-![Hledat vnořené externí kód](../profiling/media/vs-2019/cpu-use-wt-showexternalcodetoowide-found.png "vyhledávání pro vnořené externí kód")
+![Hledání vnořeného externího kódu](../profiling/media/vs-2019/cpu-use-wt-showexternalcodetoowide-found.png "Hledání vnořeného externího kódu")
 ::: moniker-end
 ::: moniker range="vs-2017"
-![Hledat vnořené externí kód](../profiling/media/cpu_use_wt_showexternalcodetoowide_found.png "vyhledávání pro vnořené externí kód")
+![Hledání vnořeného externího kódu](../profiling/media/cpu_use_wt_showexternalcodetoowide_found.png "Hledání vnořeného externího kódu")
 ::: moniker-end
 
-### <a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a> Asynchronní funkce ve stromu volání využití procesoru
+### <a name="asynchronous-functions-in-the-cpu-usage-call-tree"></a><a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a>Asynchronní funkce ve stromu volání využití procesoru
 
- Když kompilátor narazí na asynchronní metodu, vytvoří třídu skryté k řízení provádění metody. Třída je koncepčně stavového stroje. Třída má vygenerovaný kompilátorem funkce, které volají asynchronní metody původní a zpětná volání, Plánovač a iterátory, které jsou potřebné k jejich spuštění. Když nadřazené metody volá původní metody, kompilátor odebere metodu z kontextu spuštění nadřazeného elementu a spustí třídy skryté metody v kontextu systému a rozhraní framework kód, který určuje provádění aplikace. Asynchronní metody jsou často, ale ne vždy spouštěny na jeden nebo více různých vláken. Tento kód se zobrazí v **využití procesoru** strom volání jako podřízené objekty **[externí kód]** uzel bezprostředně pod nejvyšší uzel stromu.
+ Když kompilátor narazí na asynchronní metodu, vytvoří skrytou třídu pro řízení spuštění metody. Koncepčně je třída stavový počítač. Třída má kompilátor generované funkce, které asynchronně volat původní metody a zpětná volání, plánovač a iterátory potřebné k jejich spuštění. Když nadřazená metoda volá původní metodu, kompilátor odebere metodu z kontextu spuštění nadřazeného a spustí metody skryté třídy v kontextu systémového a frameworkového kódu, který řídí spuštění aplikace. Asynchronní metody jsou často, ale ne vždy, spuštěny v jednom nebo více různých vláknech. Tento kód se zobrazí ve stromu volání **využití procesoru** jako podřízené uzel **[Externí kód]** bezprostředně pod horním uzlem stromu.
 
-V následujícím příkladu první dva uzly v rámci **[externí kód]** způsoby kompilátorem generované třídy stav počítače. Třetí uzlu je volání na původní metodu.
+V následujícím příkladu jsou první dva uzly v rámci **[Externí kód]** metody generované kompilátorem třídy stavového počítače. Třetí uzel je volání původní metody.
 
-![Asynchronní uzel](media/cpu_use_wt_getmaxnumberasync_selected.png "asynchronní uzlu")
+![Asynchronní uzel](media/cpu_use_wt_getmaxnumberasync_selected.png "Asynchronní uzel")
 
-Rozbalte generované metody, chcete-li zobrazit, co se děje:
+Rozbalte generované metody a zobrazte tak, co se děje:
 
-![Asynchronní uzel rozšířené](media/cpu_use_wt_getmaxnumberasync_expandedcalltree.png "rozšířené asynchronní uzlu")
+![Rozšířený asynchronní uzel](media/cpu_use_wt_getmaxnumberasync_expandedcalltree.png "Rozšířený asynchronní uzel")
 
-- `MainPage::GetMaxNumberAsyncButton_Click` právě spravuje seznam hodnot úloh, vypočítá maximální počet výsledků a zobrazí výstup.
+- `MainPage::GetMaxNumberAsyncButton_Click`pouze spravuje seznam hodnot úkolů, vypočítá maximum výsledků a zobrazí výstup.
 
-- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` ukazuje aktivit potřebných k naplánování a spuštění 48 úkoly, které obalují volání `GetNumberAsync`.
+- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext`zobrazuje aktivitu potřebnou k naplánování a spuštění 48 úkolů, které zalomí volání . `GetNumberAsync`
 
-- `MainPage::<GetNumberAsync>b__b` obsahuje informace o aktivitě úkoly, které volají `GetNumber`.
+- `MainPage::<GetNumberAsync>b__b`zobrazuje aktivitu úkolů, `GetNumber`které volají .

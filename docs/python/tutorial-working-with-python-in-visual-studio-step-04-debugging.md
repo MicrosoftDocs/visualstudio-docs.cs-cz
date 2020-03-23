@@ -1,7 +1,7 @@
 ---
-title: Ladění pro Python v sadě Visual Studio kurz – krok 4
+title: Python v kurzu Visual Studia krok 4, ladění
 titleSuffix: ''
-description: Krok 4 Průvodce základní funkce Pythonu v sadě Visual Studio ke spuštění kódu Pythonu v ladicím programu.
+description: Krok 4 základního návodu možností Pythonu v sadě Visual Studio, který popisuje, jak spustit kód Pythonu v ladicím programu.
 ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -12,19 +12,19 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 3f6464986cb94ffa3ab3cc9264ab818112046ea9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "63002796"
 ---
 # <a name="step-4-run-code-in-the-debugger"></a>Krok 4: Spuštění kódu v ladicím programu
 
-**Předchozí krok: [Použití okna interaktivní okno REPL](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)**
+**Předchozí krok: [Použití interaktivního okna REPL](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)**
 
-Kromě správy projektů, poskytuje bohaté možnosti, úprav a **interaktivní** okně Visual Studio poskytuje plně vybavené ladění pro kód Python. V ladicím programu můžete spustit váš kód krok za krokem, včetně všech iterací smyčky. Je také možné pozastavit program pokaždé, když jsou splněny určité podmínky. Kdykoli při program je pozastavení v ladicím programu, můžete zkontrolovat stav celého programu a změňte hodnotu proměnné. Tyto akce jsou nezbytné pro sledování chyby v kódu programu a také poskytují velmi užitečné pomůcky pro pečlivě uplatňují přesné programu.
+Kromě správy projektů, poskytování bohaté možnosti úprav a **interaktivní** okno, Visual Studio poskytuje plně doporučené ladění kódu Pythonu. V ladicím programu můžete spustit kód krok za krokem, včetně každé iterace smyčky. Program můžete také pozastavit, kdykoli jsou splněny určité podmínky. Kdykoli, když je program pozastaven v ladicím programu, můžete zkontrolovat celý stav programu a změnit hodnotu proměnných. Tyto akce jsou nezbytné pro sledování chyb programu, a také poskytují velmi užitečné pomůcky pro pečlivé sledování přesný tok programu.
 
-1. Nahraďte kód v *PythonApplication1.py* souboru následujícím kódem. Tuto variaci kód rozšiřuje `make_dot_string` tak, aby můžete zkontrolovat jeho diskrétní kroky v ladicím programu. Zároveň přenáší `for` smyčku do `main` funkce a spustí ji explicitně voláním této funkce:
+1. Nahraďte kód v *PythonApplication1.py* souboru následujícím. Tato varianta kódu `make_dot_string` se rozbalí, takže můžete prozkoumat jeho diskrétní kroky v ladicím programu. Také umístí `for` smyčky do `main` funkce a spustí explicitně voláním této funkce:
 
     ```python
     from math import cos, radians
@@ -44,66 +44,66 @@ Kromě správy projektů, poskytuje bohaté možnosti, úprav a **interaktivní*
     main()
     ```
 
-1. Zkontrolujte, jestli kód funguje správně stisknutím kombinace kláves **F5** nebo jeho výběru **ladění** > **spustit ladění** příkazu nabídky. Tento příkaz spustí kód v ladicím programu, ale vzhledem k tomu, že jste ještě nepracovali se pro pozastavení programu, když je spuštěný, stačí vytiskne vlnovky u několika iterací. Stisknutím jakékoli klávesy zavřete okno výstup.
+1. Zkontrolujte, zda kód funguje správně stisknutím **klávesy F5** nebo výběrem **příkazu** > nabídky Ladění**spouštět** ladění. Tento příkaz spustí kód v ladicím programu, ale protože jste neudělali nic pozastavit program, zatímco je spuštěn, pouze vytiskne vlnový vzor pro několik iterací. Stisknutím libovolné klávesy zavřete výstupní okno.
 
     > [!Tip]
-    > Zavřete okno výstup automaticky při dokončení programu, vyberte **nástroje** > **možnosti** nabídky příkazu, rozbalte **Python** uzlu, vyberte možnost **Ladění**a potom zrušte zaškrtnutí políčka **počkat na vstup při ukončení procesu obvykle**:
+    > Chcete-li po dokončení programu automaticky zavřít výstupní okno, vyberte příkaz**Příkaz y možnosti** **nástroje,** > rozbalte uzel **Pythonu,** vyberte **Ladění**a zrušte zaškrtnutí políčka Čekat **na vstup, když proces normálně ukončí**:
     >
-    > ![Možnost ladění Pythonu zavřete okno výstup na normální program ukončit](media/vs-getting-started-python-22-debugging5.png)
+    > ![Možnost ladění pythonu pro zavření výstupního okna při normálním ukončení programu](media/vs-getting-started-python-22-debugging5.png)
 
-1. Nastavit zarážku na `for` jedním klepnutím na okraji šedé tento řádek nebo umístěním blikající kurzor na tomto řádku a pomocí příkazu **ladění** > **Přepnout zarážku** příkazu () **F9**). Červená tečka se zobrazí v šedé okraj udávajících zarážky (jak je uvedeno níže šipkou):
+1. Nastavte zarážku `for` na příkaz u c) jednou v šedém okraji tímto řádkem nebo umístěním stříšky do tohoto řádku a použitím příkazu **Ladění** > **přepínání zarážky** (**F9**). Na šedém okraji se zobrazí červená tečka označující zarážku (jak je uvedeno v následující šipky):
 
-    ![Nastavením zarážky](media/vs-getting-started-python-18-debugging1.png)
+    ![Nastavení zarážky](media/vs-getting-started-python-18-debugging1.png)
 
-1. Znovu spusťte ladicí program (**F5**) a podívejte se spuštěnou zastaví kód na řádku s Tato zarážka určena. Tady si můžete prohlédnout volání zásobníku a zkontrolovat proměnné. Proměnné, které jsou v oboru se zobrazí v **automatické hodnoty** okno, když máte definovány; můžete také přepínač tak, aby **lokální** zobrazení v dolní části tohoto okna, chcete-li zobrazit všechny proměnné, které Visual Studio vyhledá v aktuální rozsah (včetně funkce), dokonce i předtím, než se definuje:
+1. Spusťte ladicí program znovu (**F5**) a uvidíte, že spuštění kódu se zastaví na řádku s tou zarážkou. Zde můžete zkontrolovat zásobník volání a zkoumat proměnné. Proměnné, které jsou v oboru, se zobrazí v okně Autos, když jsou **definovány;** Můžete také přepnout do zobrazení **Locals** v dolní části tohoto okna a zobrazit všechny proměnné, které sada Visual Studio najde v aktuálním oboru (včetně funkcí), ještě předtím, než jsou definovány:
 
-    ![Zarážka uživatelské rozhraní pro Python](media/vs-getting-started-python-19-debugging2b.png)
+    ![Prostředí uživatelského prostředí zarážky pro Python](media/vs-getting-started-python-19-debugging2b.png)
 
-1. Sledujte ladění nástrojů (viz dole) v horní části okna nástroje Visual Studio. Tento panel nástrojů poskytuje rychlý přístup k největší běžné příkazy ladění (které také najdete na **ladění** nabídky):
+1. Sledujte panel nástrojů ladění (viz níže) v horní části okna sady Visual Studio. Tento panel nástrojů poskytuje rychlý přístup k nejběžnějším příkazům ladění (které lze nalézt také v nabídce **Ladění):**
 
-    ![Základní ladění tlačítka na panelu nástrojů](media/vs-getting-started-python-20-debugging3.png)
+    ![Základní ladění tlačítek panelu nástrojů](media/vs-getting-started-python-20-debugging3.png)
 
-    Tlačítka zleva doprava následujícím způsobem:
-    - **Pokračovat** (**F5**) spustí program až k další zarážce nebo až do dokončení programu.
-    - **Přerušení všech** (**Ctrl**+**Alt**+**přerušit**) dlouho běžící program pozastaví.
-    - **Zastavit ladění** (**Shift**+**F5**) program zastaví, bez ohledu na to je a ladicí program se ukončí.
-    - **Restartujte** (**Ctrl**+**Shift**+**F5**) program zastaví, bez ohledu na to je a restartuje ho od začátku v ladicí program.
-    - **Zobrazit další příkaz** (**Alt**+**Num** **&#42;**) přepne na další řádek kódu ke spuštění. To je nejužitečnější při navigaci v kódu během relace ladění a chcete rychle se vrátit do bodu, kde je pozastavena ladicím programu.
-    - **Krokovat s vnořením** (**F11**) spustí další řádek kódu, zadáte do volané funkce.
-    - **Krokovat s přeskočením** (**F10**) spustí další řádek kódu bez nutnosti zadávat do volané funkce.
-    - **Krokovat s Vystoupením** (**Shift**+**F11**) spustí zbývající část aktuální funkci a pozastaví ve volajícím kódu.
+    Tlačítka zleva doprava:
+    - **Continue** **(F5)** spustí program až do další zarážky nebo do dokončení programu.
+    - **Break All** **(Ctrl**+**Alt**+**Break)** pozastaví dlouhotrvající program.
+    - **Zastavit ladění** **(Shift**+**F5**) zastaví program, ať je kdekoli, a ukončí ladicí program.
+    - **Restart** **(Ctrl**+**Shift**+**F5)** zastaví program, ať je kdekoli, a restartuje jej od začátku v ladicím programu.
+    - **Zobrazit další příkaz** (**Alt**+**Num** **&#42;**) přepne na další řádek kódu ke spuštění. To je velmi užitečné při procházení v rámci kódu během relace ladění a chcete rychle vrátit do bodu, kde je pozastavenladicí program.
+    - **Krok do** (**F11**) spustí další řádek kódu, zadání mj.
+    - **Krok přes** (**F10**) spustí další řádek kódu bez zadání do volaných funkcí.
+    - **Krok ven** **(Shift**+**F11)** spustí zbytek aktuální funkce a pozastaví v volajícím kódu.
 
-1. Krokovat přes `for` pomocí příkazu **Krokovat s přeskočením**. *Krokování* znamená, že ladicí program spouští aktuální řádek kódu, včetně všechna volání funkce a následně ihned pozastaví znovu. Všimněte si, že jak proměnné `i` je nyní definována ve **lokální** a **automatické hodnoty** systému windows.
+1. Krok přes `for` příkaz pomocí **Krok přes**. *Krokování* znamená, že ladicí program spustí aktuální řádek kódu, včetně všech volání funkce a okamžitě pozastaví znovu. Všimněte si, jak je proměnná `i` nyní definována v oknech **Locals** a **Autos.**
 
-1. Krok za další řádek kódu, která volá `make_dot_string` a pozastaví. **Krokovat s přeskočením** tady konkrétně znamená, že ladicí program běží celý `make_dot_string` a pozastaví při vrátí. Ladicí program nezastaví uvnitř této funkce, pokud existuje samostatné zarážku.
+1. Krok přes další řádek kódu, `make_dot_string` který volá a pozastaví. **Krok tady** konkrétně znamená, že ladicí `make_dot_string` program spustí celý a pozastaví, když se vrátí. Ladicí program se nezastaví uvnitř této funkce, pokud existuje samostatná zarážka.
 
-1. Pokračovat, krokování přes kód ještě několikrát a podívejte se jak hodnoty v **lokální** nebo **automatické hodnoty** okno změnit.
+1. Pokračujte krokování přes kód ještě několikrát a sledovat, jak se mění hodnoty v locals **nebo** **Autos** okna.
 
-1. V **lokální** nebo **automatické hodnoty** okna, dvakrát klikněte na v **hodnotu** sloupec pro buď `i` nebo `s` proměnné a příslušnou hodnotu upravte. Stisknutím klávesy **Enter** nebo klikněte na tlačítko mimo tuto hodnotu použít změny.
+1. V okně **Místní** nebo **Autos** poklepejte na sloupec `i` `s` **Hodnota** pro proměnnou nebo pro úpravu hodnoty. Stisknutím **klávesy Enter** nebo kliknutím mimo tuto hodnotu použijete všechny změny.
 
-1. Pokračujte v krokování kódu pomocí **Krokovat s vnořením**. **Krokovat s vnořením** znamená, že ladicí program vstoupí v jakékoli volání funkce, pro které má ladicí informace, jako například `make_dot_string`. Jednou uvnitř `make_dot_string` můžete prozkoumat své místní proměnné a konkrétně projít jeho kód.
+1. Pokračovat krokování kódu pomocí **Krok do**. **Krok do** znamená, že ladicí program zadá uvnitř jakékoli volání funkce, `make_dot_string`pro které má ladicí informace, například . Jakmile `make_dot_string` jste uvnitř, můžete prozkoumat jeho místní proměnné a konkrétně procházet jeho kód.
 
-1. Krokování s pokračovat **Krokovat s vnořením** a Všimněte si, že při dosažení konce `make_dot_string`, dalším krokem vrátí do `for` smyčky s novou návratovou hodnotou v `s` proměnné. Jako krok znovu na `print` prohlášení, Všimněte si, že **Krokovat s vnořením** na `print` nepřejde do této funkce. Důvodem je, že `print` není napsané v Pythonu, ale je místo toho nativní kód uvnitř modulu runtime Pythonu.
+1. Pokračujte krokování s **Krok do** a všimněte si, že když se dostanete `make_dot_string`na konec , další krok se vrátí do `for` smyčky s novou vrácenou hodnotu v `s` proměnné. Při kroku znovu `print` do příkazu, všimněte si, že **krok do** na `print` nevstoupí do této funkce. Důvodem `print` je, že není napsán v Pythonu, ale je spíše nativní kód uvnitř runtime Pythonu.
 
-1. Pokračovat v používání **Krokovat s vnořením** až na znovu partway do `make_dot_string`. Pak pomocí **Krokovat s Vystoupením** a Všimněte si, že se vrátíte `for` smyčky. S **Krokovat s Vystoupením**, ladicí program spustí zbývající část funkce a automaticky pozastaví ve volajícím kódu. To je velmi užitečné, když jste prošli část zdlouhavé funkce, kterou chcete ladit, nemusíte krokovat ostatní a není, ale chcete nastavit explicitní zarážky ve volajícím kódu.
+1. Pokračujte v používání **funkce Krok do,** dokud nebudete opět na částečný úvazek. `make_dot_string` Pak použijte **Krok ven** a všimněte si, že se vrátíte do `for` smyčky. Pomocí **programu Step Out**ladicí program spustí zbývající část funkce a poté se automaticky pozastaví v volajícím kódu. To je velmi užitečné, když jste prošli některé části zdlouhavé funkce, které chcete ladit, ale není nutné krokovat zbytek a nechcete nastavit explicitní zarážku v volajícím kódu.
 
-1. Chcete-li pokračování ve spouštění programu, dokud nebude dosaženo k další zarážce, použijte **pokračovat** (**F5**). Protože máte zarážku `for` smyčky, přerušíte na další iteraci.
+1. Chcete-li pokračovat v běhu programu, dokud není dosaženo další zarážky, použijte **pokračovat** **(F5).** Protože máte zarážku `for` ve smyčce, přerušíte na další iteraci.
 
-1. Krokování stovky iterací smyčky může být pracná, aby Visual Studio vám umožňuje přidat *podmínku* zarážku. Ladicí program pak pozastaví program na zarážce, pouze pokud je splněna podmínka. Například můžete použít podmínku zarážky, která na `for` příkaz tak, že pozastaví pouze při hodnotu `i` překračuje 1600. Pokud chcete nastavit tuto podmínku, klikněte pravým tlačítkem na tečku red zarážky a vyberte **podmínky** (**Alt**+**F9** > **C**). V **nastavení zarážek** automaticky otevírané okno, které se zobrazí, zadejte `i > 1600` jako výraz a vyberte **Zavřít**. Stisknutím klávesy **F5** pokračovat a podívejte se, že se program spouští více iterací před další přerušení.
+1. Krokování stovky iterací smyčky může být únavné, takže Visual Studio umožňuje přidat *podmínku* zarážky. Ladicí program pak pozastaví program na zarážky pouze v případě, že je splněna podmínka. Můžete například použít podmínku s zarážkou na `for` příkaz tak, aby `i` se pozastaví pouze v případě, že hodnota přesahuje 1600. Chcete-li tuto podmínku nastavit, klepněte pravým tlačítkem myši na červenou tečku zarážky a vyberte možnost **Podmínky** (**Alt**+**F9** > **C**). V rozbalovacím panelu Nastavení `i > 1600` **zarážky** zadejte jako výraz a vyberte **Zavřít**. Stisknutím **klávesy F5** pokračujte a sledujte, že program před další přestávkou spustí mnoho iterací.
 
-    ![Nastavení podmínku zarážky](media/vs-getting-started-python-21-debugging4.png)
+    ![Nastavení podmínky zarážky](media/vs-getting-started-python-21-debugging4.png)
 
-1. Spustit program dokončen, zakázat zarážku tak, že kliknete pravým tlačítkem a vyberete **zakázat zarážku** (**Ctrl**+**F9**). Potom vyberte **pokračovat** (nebo stiskněte klávesu **F5**) ke spuštění programu. Při ukončení programu sady Visual Studio ukončí jeho ladicí relace a vrátí jeho režimu úprav. Všimněte si, že zarážka můžete také odstranit klepnutím na jeho tečkou, ale tím se odstraní také všechny podmínky, které jste nastavili.
+1. Chcete-li spustit program až do konce, zakažte zarážku klepnutím pravým tlačítkem myši a výběrem **příkazu Zakázat zarážku** (**Ctrl**+**F9**). Potom vyberte **Pokračovat** (nebo stisknutím **klávesy F5**) program spusťte. Po ukončení programu Visual Studio zastaví relaci ladění a vrátí se do režimu úprav. Všimněte si, že můžete také odstranit zarážku kliknutím na jeho tečku, ale to také odstraní všechny podmínky, které jste nastavili.
 
 > [!Tip]
-> V některých situacích, jako je například selhání při spuštění interpret Pythonu, může v okně výstupu zobrazí pouze krátce a pak zavřete automaticky bez s možností zobrazíte všechny chybové zprávy. Pokud k tomu dojde, klikněte pravým tlačítkem na projekt v **Průzkumníka řešení**vyberte **vlastnosti**, vyberte **ladění** kartu a pak přidejte `-i` k  **Argumenty pro interpret** pole. Tento argument způsobí, že překladač přejde do interaktivního režimu po dokončení programu, a tím udržování okna otevřete dokud nezadáte **Ctrl**+**Z**  >  **Enter** ukončíte.
+> V některých situacích, jako je například selhání spuštění samotného interpretu Pythonu, se výstupní okno může zobrazit pouze krátce a pak se automaticky zavře, aniž byste měli možnost zobrazit zprávy o chybách. Pokud k tomu dojde, klepněte pravým tlačítkem myši na projekt v `-i` **Průzkumníku řešení**, vyberte **vlastnosti**, vyberte kartu **Ladění** a přidejte ji do pole **Argumenty interpretu.** Tento argument způsobí, že interpret přejde do interaktivního režimu po dokončení programu, čímž se okno ponechá otevřené, dokud nezadáte **klávesu Ctrl**+**Z** > **Enter.**
 
 ## <a name="next-step"></a>Další krok
 
 > [!div class="nextstepaction"]
-> [Instalace balíčků ve vašem prostředí Pythonu](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
+> [Instalace balíčků v prostředí Pythonu](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
 
-## <a name="go-deeper"></a>Seznamte se blíž
+## <a name="go-deeper"></a>Jděte hlouběji
 
-- [Ladění](debugging-python-in-visual-studio.md)
-- [Ladění v sadě Visual Studio](../debugger/debugger-feature-tour.md) poskytuje úplnou dokumentaci sady Visual Studio je funkce ladění.
+- [ladění](debugging-python-in-visual-studio.md)
+- [Ladění v sadě Visual Studio](../debugger/debugger-feature-tour.md) poskytuje úplnou dokumentaci funkcí ladění sady Visual Studio.

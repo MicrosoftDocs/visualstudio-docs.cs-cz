@@ -11,36 +11,36 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: ce2b0f1e0c0db45c478c3917306683b314da0564
-ms.sourcegitcommit: 614d5b99576ea27a41957cd94062dc95cbd29c1c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "65531879"
 ---
 # <a name="unused-value-assignments-variables-and-parameters"></a>Přiřazení nepoužitých hodnot, proměnné a parametry
 
-Tento refaktoring platí pro:
+Toto refaktoring se vztahuje na:
 
 - C#
 - Visual Basic
 
-**Co:** Setmívá nepoužitých parametrů a vygeneruje upozornění pro nepoužívané výraz hodnoty. Kompilátor také provádí analýzu toku k vyhledání všech přiřazení nepoužitých hodnot. Nepoužité zesvětlit přiřazení hodnoty a zobrazí se žárovka s [rychlá akce](../quick-actions.md) odebrat redundantní přiřazení. Nepoužité proměnné s zobrazit neznámé hodnoty [rychlá akce](../quick-actions.md) návrhem na použití [zahodí](/dotnet/csharp/discards) místo. (Zahození jsou dočasné a fiktivní proměnné, které nejsou používány záměrně v kódu aplikace. Mohou snížit přidělení paměti a aby byl váš kód lépe čitelný.)
+**Co:** Zeslabí nepoužívané parametry a vygeneruje upozornění pro nepoužívané hodnoty výrazů. Kompilátor také provádí analýzu toku k vyhledání všech nevyužitých přiřazení hodnot. Nevyužité přiřazení hodnot zeslábne a zobrazí se žárovka s [rychlou akcí](../quick-actions.md) k odebrání nadbytečného přiřazení. Nepoužívané proměnné s neznámými hodnotami zobrazují návrh [rychlé akce,](../quick-actions.md) který místo toho použije [zahozené hodnoty.](/dotnet/csharp/discards) (Zahození jsou dočasné, fiktivní proměnné, které jsou záměrně nepoužívané v kódu aplikace. Mohou snížit přidělení paměti a usnadnit čtení kódu.)
 
-**Kdy:** Máte přiřazení hodnoty, parametry nebo výraz hodnoty, které se nikdy nepoužívá.
+**Kdy:** Máte přiřazení hodnot, parametry nebo hodnoty výrazu, které se nikdy nepoužívají.
 
-**Proč:** Někdy je obtížné určit, pokud přiřazení hodnoty, proměnná nebo parametr je již nejsou déle používány. Tyto hodnoty mizení nebo generuje upozornění, získat vizuální upozornění jaké kódu můžete odstranit.
+**Proč:** Někdy je obtížné zjistit, zda se přiřazení hodnoty, proměnná nebo parametr již nepoužívá. Vyblednutím těchto hodnot nebo generováním upozornění získáte vizuální upozornění na to, jaký kód můžete odstranit.
 
-## <a name="unused-expression-values-and-parameters-diagnostic"></a>Nepoužité výraz hodnoty a parametry diagnostiky
+## <a name="unused-expression-values-and-parameters-diagnostic"></a>Nevyužité hodnoty výrazů a diagnostika parametrů
 
-1. Máte žádné přiřazení hodnoty, proměnná nebo parametr, který se nepoužívá.
-2. Přiřazení nepoužitých hodnot nebo parametr, zobrazí se zašedlou navýšení kapacity. Hodnota výrazu nevyužité vygeneruje upozornění.
+1. Mít libovolnou hodnotu přiřazení, proměnnou nebo parametr, který se nepoužívá.
+2. Nevyužité přiřazení hodnoty nebo parametr se zobrazí vybledlé. Nepoužitá hodnota výrazu generuje upozornění.
 
-  ![Nepoužitý parametr](media/unused-parameter.png)
-  ![nepoužitých hodnot](media/unused-value.png)
-  ![nepoužitých hodnot přiřazení](media/unused-value-assignment.png)
-  ![nepoužitých hodnot zahození](media/unused-value-discard.png)
+  ![Nepoužívaný](media/unused-parameter.png)
+  ![parametr Nevyužitá](media/unused-value.png)
+  ![hodnota](media/unused-value-assignment.png)
+  ![Přiřazení nevyužité hodnoty Nevyužitá hodnota zahozena](media/unused-value-discard.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Refactoring](../refactoring-in-visual-studio.md)
-- [Tipy pro vývojáře .NET](../csharp-developer-productivity.md)
+- [Tipy pro vývojáře rozhraní .NET](../csharp-developer-productivity.md)

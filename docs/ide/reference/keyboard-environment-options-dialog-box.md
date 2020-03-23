@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 724c00a7462dd731193383ba374b5b35677823b9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72610871"
 ---
-# <a name="options-dialog-box-environment--keyboard"></a>Dialogové okno Možnosti: prostředí \> klávesnice
+# <a name="options-dialog-box-environment--keyboard"></a>Dialogové okno Možnosti: Klávesnice prostředí \>
 
-Pomocí této stránky můžete nastavit mapování klávesnice. Další informace o mapování najdete v tématu [identifikace a přizpůsobení klávesových zkratek](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
+Na této stránce můžete nastavit mapování klávesnice. Další informace o mapování naleznete v [tématu Identifikace a přizpůsobení klávesových zkratek](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).

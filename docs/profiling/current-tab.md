@@ -1,5 +1,5 @@
 ---
-title: Aktuální karta | Dokumentace Microsoftu
+title: Aktuální karta | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f48ba44d41286f1cf5eda6ececb68d21d39abd14
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62552785"
 ---
 # <a name="current-tab"></a>Aktuální karta
-Kliknutím **aktuální** kartu, můžete zobrazit zásobník volání (Pokud je k dispozici), který je nejblíž k aktuální výběr bod na časové ose vybrali segment vlákna CPU.  V takovém případě je reprezentován bod výběru černé šipky, nebo blikajícího kurzoru nad časovou osou. Při výběru blokující segment blikající kurzor se nezobrazí, protože žádné spuštění. Ale stále je zvýrazněn segmentu a zásobník volání se zobrazí.
+Kliknutím na kartu **Aktuální** uvidíte zásobník volání (pokud je k dispozici), který je nejblíže aktuálnímu bodu výběru na časové ose, pokud je vybrán segment vlákna procesoru.  V tomto případě je bod výběru reprezentován černou šipkou nebo stříškou nad časovou osou. Pokud je vybrán blokující segment, stříška se nezobrazí, protože nedošlo k žádnému spuštění. Segment je však stále zvýrazněn a zobrazí se zásobník volání.
 
- **Aktuální** kartu také zobrazí informace o segmenty aktivity DirectX, značky a přístup k vstupně-výstupních operací.  Pro segmenty aktivity DirectX zobrazí se informace o způsob, jakým zpracovává paketů DMA frontě hardwaru.  Pro značky zobrazí se informace o typu popis a značky.  Pro přístup k vstupně-výstupních operací zobrazí se informace o souboru a počet bajtů číst nebo zapisovat.
+ Karta **Aktuální** také zobrazuje informace o segmentech aktivity DirectX, značkách a vstupně-va.  U segmentů aktivity rozhraní DirectX se zobrazí informace o způsobu zpracování paketů DMA hardwarovou frontou.  U značek se zobrazí informace o popisu a typu značky.  Pro vstupně-out přístup jsou zobrazeny informace o souboru a počet přečtených nebo zapsaných bajtů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

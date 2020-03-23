@@ -1,99 +1,99 @@
 ---
 title: Refaktoring kódu
-description: Ladění kódu pomocí sady Visual Studio pro Mac a rychlé akce.
+description: Vylepšování kódu pomocí Visual Studia pro Mac a rychlých akcí.
 author: cobey
 ms.author: cobey
 ms.date: 03/29/2019
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
 ms.custom: video
 ms.openlocfilehash: 5a87b87f3a14462daec1e069fe222164818d2a19
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "67691288"
 ---
 # <a name="refactoring"></a>Refaktoring
 
-Refaktoring kódu je způsob, jak změnit uspořádání, struktury a vysvětlení existující kód, zatímco je zajištěna, která se nemění celkový chování kódu.
+Refaktoring kód je způsob, jak změnit uspořádání, restrukturalizaci a objasnění existující kód při zajištění, že celkové chování kódu nezmění.
 
-Refaktoring vytváří znamenala základ kódu, takže použitelný, čitelný a udržovatelný pro vás nebo jakékoli jiné vývojáře nebo uživatel, který může odkazovat na kód.
+Refaktoring vytváří zdravější základ kódu, takže je použitelnější, čitelnější a udržovatelné pro vás nebo jiného vývojáře nebo uživatele, který může odkazovat na kód.
 
-Visual Studio pro Mac integrace roslyn společnosti Microsoft open-source platformy kompilátoru .NET, umožňuje více operací refaktoringu.
+Visual Studio pro integraci Macu s Roslyn, open source platformou kompilátoru .NET od Microsoftu, umožňuje další refaktoringové operace.
 
 ## <a name="renaming"></a>Přejmenování
 
-*Přejmenovat* refaktoring příkaz lze použít na libovolný identifikátor kódu (například název třídy, název vlastnosti atd.) a vyhledejte všechny výskyty daného identifikátoru je změnit. Přejmenování symbolu, klepněte na něj pravým tlačítkem myši a zvolte **přejmenování...** , nebo použijte **Cmd (⌘) + R** vazba klíče:
+Příkaz *Rename* refactoring lze použít na libovolný identifikátor kódu (například název třídy, název vlastnosti atd.) k vyhledání všech výskytů tohoto identifikátoru a jejich změně. Chcete-li symbol přejmenovat, klikněte na něj pravým tlačítkem myši a zvolte **Přejmenovat...** nebo použijte vazbu kláves **Cmd (啦) + R:**
 
-![Přejmenování položky nabídky](media/refactoring-renaming1.png)
+![Přejmenovat položku nabídky](media/refactoring-renaming1.png)
 
-To klade důraz na symbol a všechny odkazy na něj. Když spustíte zadáním nového názvu se automaticky změní všechny odkazy ve vašem kódu a změny můžete potvrzovat stisknutím kombinace kláves **Enter**:
+Tím se symbol a všechny odkazy na něj zvýrazní. Když začnete psát nový název, automaticky změní všechny odkazy v kódu a změny můžete potvrdit stisknutím **klávesy Enter**:
 
 ![Přejmenování a identifikátor](media/refactoring-renaming2.png)
 
 ## <a name="quick-actions"></a>Rychlé akce
 
-Rychlé akce vám umožní snadno Refaktorujte, generovat nebo jinak upravit kód pomocí jedné akce.
+Rychlé akce umožňují snadno refaktorovat, generovat nebo jinak upravovat kód pomocí jediné akce.
 
-Rychlé akce umožňuje:
+Rychlé akce lze použít k:
 
-* Použít opravu kódu pro porušení pravidel analyzátor kódu
-* Potlačit porušení pravidla analyzátor kódu
-* Použít refaktoring (například vložená dočasná proměnná)
-* Generování kódu (například přidání místní proměnné)
+* Použití opravy kódu pro porušení pravidel analyzátoru kódu
+* Potlačení porušení pravidel analyzátoru kódu
+* Použití refaktoringu (například vložky dočasné proměnné)
+* Generovat kód (například zavést místní proměnnou)
 
-Rychlé akce lze použít pomocí žárovky ![ikonou žárovky](media/quick-actions-light-bulb-icon.png) nebo šroubovák ![šroubovák ikonu](media/quick-actions-screwdriver-icon.png) ikony, nebo stisknutím klávesy **možnost (⌥)** +  **Zadejte** když je kurzor na řádek kódu, pro který je k dispozici akci. Zobrazí se žárovka chyba ![ikonu žárovky chyby](media/quick-actions-error-light-bulb-icon.png) pokud existuje červená vlnovka udávající chybu a sady Visual Studio je k dispozici pro tuto chybu opravu.
+Rychlé akce lze použít pomocí ![ikony žárovky](media/quick-actions-light-bulb-icon.png) nebo ![ikony](media/quick-actions-screwdriver-icon.png) ikon šroubováku šroubováku nebo stisknutím tlačítka **Option (?)**+**Enter,** když je kurzor na řádku kódu, pro který je k dispozici akce. Pokud je k dispozici ![červená vlnovka](media/quick-actions-error-light-bulb-icon.png) označující chybu, zobrazí se ikona chybové žárovky chyby žárovky a visual studio má k dispozici opravu pro tuto chybu.
 
-Pro libovolný jazyk třetím stranám poskytnete vlastní Diagnostika a návrhy, například jako součást sady SDK a sady Visual Studio návrhy bylo možné na základě těchto pravidel.
+Pro libovolný jazyk mohou třetí strany poskytnout vlastní diagnostiku a návrhy, například jako součást sady SDK, a žárovky sady Visual Studio se na základě těchto pravidel rozsvítí.
 
-### <a name="quick-action-icons"></a>Rychlé akce ikony
-Ikona, která se zobrazí, když je k dispozici je rychlá akce obsahuje údaj o typu opravu, nebo refaktoring, který je k dispozici. *Šroubovák* ![šroubovák ikonu](media/quick-actions-screwdriver-icon.png) ikona značí pouze, že nejsou k dispozici pro kód změnit akce, ale byste je neměli používat nemusí. *Žlutá žárovka* ![ikonou žárovky](media/quick-actions-light-bulb-icon.png) ikona značí, že jsou k dispozici akce, které jste *by měl* proveďte ke zlepšení kódu. *Chyba žárovky* ![ikonou žárovky chyba](media/quick-actions-error-light-bulb-icon.png) ikona značí, že je k dispozici akci, která řeší chybu v kódu.
+### <a name="quick-action-icons"></a>Ikony rychlé akce
+Ikona, která se zobrazí, když je k dispozici rychlá akce, ukazuje typ opravy nebo refaktoringu, který je k dispozici. ](media/quick-actions-screwdriver-icon.png) Ikona *šroubováku šroubováku* ![označuje pouze to, že jsou k dispozici akce pro změnu kódu, ale neměli byste je nutně používat. Ikona *žárovky žluté žárovky* ![označuje, že jsou k dispozici akce, které byste měli udělat pro zlepšení kódu. *should* ](media/quick-actions-light-bulb-icon.png) Ikona chybové *žárovky* ![error bulb indikuje, že je k dispozici akce, která opravuje chybu ve vašem kódu.](media/quick-actions-error-light-bulb-icon.png)
 
-### <a name="to-see-a-light-bulb-or-screwdriver"></a>Pokud chcete zobrazit návrhy nebo šroubovák
+### <a name="to-see-a-light-bulb-or-screwdriver"></a>Zobrazení žárovky nebo šroubováku
 
-- Pokud je k dispozici oprava, návrhy samovolně se zobrazí při najetí myší na umístění k chybě.
+- Pokud je k dispozici oprava, žárovky se spontánně zobrazí, když najedete myší na místo chyby.
 
-   ![Žárovka s najede myší](media/refactoring-lightbulb-hover.png)
+   ![Žárovka s myší vznášející se](media/refactoring-lightbulb-hover.png)
 
-- Ikony žárovky šroubováky zobrazí a do levého okraje editoru při přesunutí blikající kurzor do jediného řádku kódu, pro který je k dispozici rychle reagovat.
+- Žárovky a šroubováky se zobrazí v levém okraji editoru, když přesunete stříška do řádku kódu, pro který je k dispozici rychlá akce.
 
-- Stisknutím klávesy **možnost (⌥)** +**Enter** kdekoli na řádek zobrazíte seznam dostupných rychlé akce a refaktoringy.
+- Stisknutím **klávesy Option ((?)**+**Zadejte** libovolné místo na řádku, abyste viděli seznam dostupných rychlých akcí a refaktoringů.
 
-![Zobrazit kontext položky](media/refactoring-context-action.png)
+![Zobrazit kontextové položky](media/refactoring-context-action.png)
 
-Najetí myší nad kontext akce, které poskytuje náhled co budou přidány nebo odstraněny z vašeho kódu.
+Najetím na libovolnou kontextovou akce získáte náhled toho, co bude přidáno nebo odebráno z vašeho kódu.
 
-![Možnost zadat místní položky](media/refactoring-image2a.png)
+![Možnost zadat položky kontextu](media/refactoring-image2a.png)
 
-Pokud chcete povolit tyto možnosti, musíte vybrat *povolit zdrojovou analýzu otevřených souborů* v možnostech **Visual Studio for Mac > Předvolby > textový Editor > zdrojová analýza**:
+Chcete-li tyto možnosti povolit, musíte vybrat *možnost Povolit zdrojovou analýzu otevřených souborů* v možnostech **Visual Studio for Mac > Preferences > Textový editor > zdrojové analýzy**:
 
-![Povolení zdrojová analýza](media/refactoring-options.png)
+![Povolení zdrojové analýzy](media/refactoring-options.png)
 
-Existuje více než 100 možných akcí, které mohou být navržena, které jsou povolené nebo zakázané tak, že přejdete do **Visual Studio for Mac > Předvolby > zdrojová analýza > C# > Akce kódu** a výběr nebo unselecting políčko vedle položky akce:
+Existuje více než 100 možných akcí, které lze navrhnout, které jsou povolené nebo zakázané procházením **Visual Studio pro Mac > předvolby > zdrojové analýzy > C# > akce kódu** a výběrem nebo zrušením výběru pole vedle akce:
 
-![Zdrojová analýza C# akce](media/refactoring-image3a.png)
+![Akce analýzy zdroje jazyka C#](media/refactoring-image3a.png)
 
 ### <a name="common-quick-actions"></a>Běžné rychlé akce
 
-Další informace o běžné rychlé akce v [běžné rychlé akce](/visualstudio/ide/common-quick-actions) článku.
+Další informace o běžných rychlých akcích najdete v článku [Běžné rychlé akce.](/visualstudio/ide/common-quick-actions)
 
 ## <a name="source-analysis"></a>Zdrojová analýza
 
-Zdrojová analýza analyzuje podtržení potenciální chyby a porušení stylu kódu v reálném čase a poskytuje automatické opravy jako kontext akce.
+Zdrojová analýza analyzuje váš kód průběžně tím, že zdůrazňuje potenciální chyby a porušení stylu a poskytuje automatické opravy jako kontextové akce.
 
-Můžete zobrazit všechny výsledky analýzy zdroje pro jakýkoli soubor v okamžiku, zobrazením posuvníku na pravé straně textového editoru:
+Všechny výsledky zdrojové analýzy pro libovolný soubor můžete kdykoli zobrazit zobrazením posuvníku na pravé straně textového editoru:
 
-![Boční panel analýzy zdroje](media/refactoring-image4a.png)
+![Postranní panel Zdrojová analýza](media/refactoring-image4a.png)
 
-Pokud kliknete na kolečko v horní části, můžete iterovat každý návrh s nejvyšší závažností problémy zobrazeno prvních. Problém můžete vyřešit pomocí kontextu akce najede myší jednotlivé výsledek nebo řádek zobrazí:
+Pokud kliknete na kruh v horní části, můžete iterate přes každý návrh, s nejvyšší závažnosti problémy zobrazeny jako první. Najetím ukazatele na jednotlivý výsledek nebo řádek zobrazí problém, který lze opravit prostřednictvím kontextových akcí:
 
-![Zdrojová položka analýzy](media/refactoring-image5.png)
+![Položka analýzy zdroje](media/refactoring-image5.png)
 
-## <a name="related-video"></a>Související videa
+## <a name="related-video"></a>Související video
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Refactoring-Code/player]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Rychlé akce (Visual Studio na Windows)](/visualstudio/ide/quick-actions)
-- [Refaktorování kódu (Visual Studio na Windows)](/visualstudio/ide/refactoring-in-visual-studio)
+- [Rychlé akce (Visual Studio ve Windows)](/visualstudio/ide/quick-actions)
+- [Refaktoringový kód (Visual Studio v systému Windows)](/visualstudio/ide/refactoring-in-visual-studio)

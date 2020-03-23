@@ -1,5 +1,5 @@
 ---
-title: Přehled výkonnostní relace | Microsoft Docs
+title: Přehled relace výkonu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,67 +13,67 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: e7b23a7cbefeace19a3deaa5c1bfc05580081d39
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778463"
 ---
 # <a name="performance-session-overview"></a>Přehled výkonnostní relace
-Tento přehled vysvětluje základy profilace. Vývojáři, kteří jsou novinkou v práci s výkonem, uvidí, jak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci může pomáhat s tím, že se rychle zvýší produktivitu a zvýší výkon kódu. Vývojáři, kteří mají profilaci, mohou získat přehled o konkrétních Nástroje pro profilacich funkcích a procesech.
+Tento přehled vysvětluje základy profilování. Vývojáři, kteří jsou na výkon [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] práce uvidí, jak profilování nástroje jim může pomoci rychle zvýšit produktivitu a zvýšit výkon jejich kódu. Vývojáři, kteří mají zkušenosti s profilováním, mohou získat přehled o konkrétních funkcích a procesech nástrojů profilování.
 
- Nástroje pro profilaci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] vám pomůžou identifikovat problémy s výkonem ve zdrojovém kódu a porovnávat výkon možných řešení. Průvodci Nástroje pro profilaci a výchozí nastavení vám můžou poskytnout okamžitý přehled o mnoha problémech s výkonem. Funkce a možnosti Nástroje pro profilaci poskytují přesnou kontrolu nad procesem profilace. Tento ovládací prvek zahrnuje přesné cílení částí kódu, kolekci informací o časování na úrovni bloku a zahrnutí dalších dat o výkonu procesoru a systému do vašich dat.
+ Nástroje [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profilování vám pomohou identifikovat problémy s výkonem ve zdrojovém kódu a porovnat výkon možných řešení. Průvodce nástroji profilování a výchozí nastavení vám mohou poskytnout okamžitý přehled o mnoha problémech s výkonem. Funkce a možnosti nástrojů profilování poskytují přesnou kontrolu nad procesem profilování. Tento ovládací prvek zahrnuje přesné cílení na části kódu, shromažďování informací o časování na úrovni bloku a zahrnutí dalších dat o výkonu procesoru a systému do dat.
 
- Následující kroky tvoří základní proces použití Nástroje pro profilaci:
+ Následující kroky tvoří základní proces použití nástrojů profilování:
 
 1. Nakonfigurujte relaci výkonu zadáním metody kolekce a dat, která chcete shromažďovat.
 
-2. Shromažďování dat profilování spuštěním aplikace v relaci výkonu.
+2. Shromažďovat data profilování spuštěním aplikace v relaci výkonu.
 
-3. Analyzujte data a Identifikujte problém s výkonem.
+3. Analyzujte data k identifikaci problému s výkonem.
 
-4. Úprava kódu v integrovaném vývojovém prostředí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] (IDE) pro zvýšení výkonu aplikace v kódu
+4. Úprava kódu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] v integrovaném vývojovém prostředí (IDE) zvyšuje výkon aplikace kódu
 
-5. Shromážděte data profilace ve změněném kódu a porovnejte data profilace původních a změněných dat.
+5. Shromažďujte data profilování změněného kódu a porovnejte data profilování původních a změněných dat.
 
 6. Vygenerujte sestavu, která dokumentuje zvýšení výkonu.
 
-   Pro práci s informacemi, které jsou poskytovány profilování, byste měli mít k dispozici informace o symbolech pro binární soubory, které chcete profilovat, a pro binární soubory operačního systému Windows.
+   Chcete-li pracovat s informacemi poskytovanými profilováním, měli byste mít k dispozici informace o symbolech pro binární soubory, které chcete profilovat, a pro binární soubory operačního systému Windows.
 
-## <a name="configure-the-performance-session"></a>Konfigurace výkonnostní relace
- Chcete-li konfigurovat relaci profilování, vyberte metodu profilace, kterou chcete použít, a data, která chcete shromažďovat. **Průvodce výkonem** nástroje pro profilaci vás provede základní konfigurací a pomocí stránek vlastností relace výkonu můžete přidat další možnosti:
+## <a name="configure-the-performance-session"></a>Konfigurace relace výkonu
+ Chcete-li nakonfigurovat relaci profilování, vyberte metodu profilování, kterou chcete použít, a data, která chcete shromažďovat. **Průvodce výkonem** nástrojů profilování vás může provést základní konfigurací a pomocí stránek vlastností Relace výkonu můžete přidat další možnosti:
 
 - Metody profilování zahrnují vzorkování, trasování a přidělení paměti.
 
-- Mezi hodnoty dat patří čas, čítače výkonu procesoru a operační systém a události aplikace, jako například chyby stránky a přechody jádra.
+- Mezi datové hodnoty patří čítače výkonu času, procesoru a operačního systému a události aplikace, jako jsou chyby stránek a přechody jádra.
 
-  Můžete nakonfigurovat relaci výkonu v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projektu jako součást řešení projektu, nebo vytvořit profil libovolných binárních souborů prostřednictvím [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE. Vlastnosti relace můžete zadat na stránkách vlastností relace výkonu nebo můžete použít Průvodce profilací.
+  Můžete nakonfigurovat relaci výkonu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] v projektu jako součást řešení projektu nebo profil [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] libovolné binární soubory prostřednictvím rozhraní IDE. Můžete zadat vlastnosti relace na stránkách vlastností Relace výkonu nebo můžete použít Průvodce profilováním.
 
-## <a name="collect-profiling-data"></a>Shromažďování dat profilace
- Můžete spustit shromažďování dat profilování z **prohlížeč výkonu**. Můžete pozastavit a obnovit profilování pro omezení množství shromažďovaných dat. Můžete se také připojit k procesu, který je již spuštěn.
+## <a name="collect-profiling-data"></a>Shromažďování dat profilování
+ Spuštění shromažďování dat profilování z **Průzkumníka výkonu**. Profilování můžete pozastavit a obnovit a omezit tak množství shromažďovacích dat. Můžete také připojit k procesu, který je již spuštěn.
 
- Jakmile se aplikace spustí, okno **ovládací prvek shromažďování dat** se zobrazí v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí. V okně **ovládací prvek shromažďování dat** můžete profilovat určité části aplikace tím, že se pozastavíte a znovu pokračujete v procesu shromažďování. Můžete také použít okno **ovládací prvek shromažďování dat** k vložení značek do shromažďovaných dat. Značky jsou uživatelsky definované datové body, které se zobrazují v zobrazeních profilu a které lze použít k filtrování dat profilování.
+ Jakmile se aplikace spustí, zobrazí se v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ide okno **řízení kolekce dat.** Z okna **Řízení kolekce dat** můžete profilovat určité části aplikace pozastavením a obnovením procesu shromažďování dat. Okno **Řízení kolekce dat** můžete také použít k vložení značek do shromažďovaných dat. Značky jsou uživatelem definované datové body, které jsou zobrazeny v zobrazeních profilu a které lze použít k filtrování dat profilování.
 
- Když se cílová aplikace ukončí, Nástroje pro profilaci vygeneruje soubor dat profilování (*. vsp) a zobrazí souhrnné zobrazení sestavy v rozhraní IDE [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+ Když se cílová aplikace vypne, nástroje profilování vygeneruje datový soubor profilování (*.vsp) a zobrazí zobrazení souhrnné sestavy v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ide.
 
-## <a name="analyze-the-data-and-identify-performance-issues"></a>Analyzujte data a Identifikujte problémy s výkonem.
- Po ukončení běhu profilování se analyzují data a zobrazí se souhrn v oknech zobrazit **sestavu výkonu** nástroje pro profilaci. Data profilování jsou shromažďována pro zásobník volání a jednotlivé funkce cílové aplikace. Zobrazení sestav zobrazují analýzu výkonu pro rozsahy dat procesů, vláken, modulů, funkcí a řádků zdrojového kódu aplikace. K profilování hodnot dat pro funkci patří následující:
+## <a name="analyze-the-data-and-identify-performance-issues"></a>Analýza dat a identifikace problémů s výkonem
+ Když ukončíte spuštění profilování, data se analyzují a v oknech sestavy **výkonu** nástroje profilování se zobrazí souhrn. Profilování dat jsou shromažďovány pro zásobník volání a jednotlivé funkce cílové aplikace. Zobrazení sestavy zobrazují analýzu výkonu pro oblasti dat procesů, vláken, modulů, funkcí a řádků zdrojového kódu aplikace. Profilování datových hodnot pro funkci zahrnuje následující:
 
-- Celkový čas strávený ve funkci a v podřízených funkcích, které byly volány funkcí (včetně hodnot).
+- Celkový čas, který byl strávený ve funkci a v podřízených funkcích, které byly volány funkcí (včetně hodnot).
 
-- Čas strávený prováděním pouze kódu ve funkci (exkluzivní hodnoty).
+- Čas, který byl stráven prováděním pouze kódu ve funkci (výhradní hodnoty).
 
-  Více než dvanáct různých zobrazení vám umožní analyzovat data profilace nejúčinnějším způsobem. Zobrazení úprav umožňují filtrovat a řadit data a vyhledat funkce, které mohou způsobovat problémy s výkonem. Filtrování horké cesty poskytuje okamžité zvýraznění nejaktivnějších cest v zobrazení stromu volání a modulu.
+  Více než dvanáct různých zobrazení umožňuje analyzovat data profilování nejefektivnějším způsobem. Zobrazení vlastního nastavení umožňuje filtrovat a seřadit data a vyhledat funkce, které mohou způsobovat problémy s výkonem. Filtrování horké cesty poskytuje okamžité zvýraznění nejaktivnějších cest v zobrazení stromu volání a modulu.
 
 ## <a name="modify-the-application-code"></a>Úprava kódu aplikace
- Po izolování jednoho nebo více relevantních problémů s výkonem můžete kód upravit pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE) a pak shromažďovat data profilování pro vaše změny.
+ Po izolované jeden nebo více relevantních problémů s výkonem můžete upravit kód pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ide a potom shromažďovat data profilování pro vaše změny.
 
-## <a name="collect-profiling-data-again-and-compare-the-data-between-the-profiling-runs"></a>Shromažďování dat profilování znovu a porovnání dat mezi spuštěnými profilací
- V zobrazení sestavy porovnání Nástroje pro profilaci se zobrazuje rozdíl mezi dvěma vybranými datovými soubory profilování v modulu, funkci nebo řádku. Můžete určit hodnoty dat profilování, které chcete porovnat, a můžete přepínat mezi zobrazením porovnání a zobrazeními jednotlivých souborů.
+## <a name="collect-profiling-data-again-and-compare-the-data-between-the-profiling-runs"></a>Znovu shromažďujte data profilování a porovnejte data mezi spuštěními profilování
+ Zobrazení sestavy porovnání nástrojů profilování zobrazuje rozdíl v výkonu modulu, funkce nebo linky mezi dvěma vybranými datovými soubory profilování. Můžete určit hodnoty dat profilování, které chcete porovnat, a můžete přepínat mezi zobrazením porovnání a zobrazeními jednotlivých souborů.
 
-## <a name="generate-a-report-of-the-results"></a>Generování sestavy výsledků
- Do e-mailů a tabulek můžete vkládat řádky všech zobrazení sestav výkonu a můžete generovat sestavy obsahující data pro jedno nebo více zobrazení.
+## <a name="generate-a-report-of-the-results"></a>Generovat sestavu výsledků
+ Řádky libovolného zobrazení sestavy výkonu můžete vložit do e-mailů a tabulek a můžete generovat sestavy obsahující data pro jedno nebo více zobrazení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přehledy](../profiling/overviews-performance-tools.md)
 - [Návod: Identifikace problémů s výkonem](beginners-guide-to-cpu-sampling.md)

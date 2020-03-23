@@ -1,5 +1,5 @@
 ---
-title: Tlačítko Exportovat (vizualizér souběžnosti) | Dokumentace Microsoftu
+title: Tlačítko exportu (vizualizér souběžnosti) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,15 +13,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 50c5aed4f12cc5bef9bc50c2a41009de4e6ad811
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62969898"
 ---
 # <a name="export-button-concurrency-visualizer"></a>Tlačítko Exportovat (vizualizér souběžnosti)
-**Exportovat** tlačítko umožňuje exportovat jako zásobník volání. *sdílený svazek clusteru* soubor pro vlastní potřebu nebo pomocí jiného nástroje, jako je například aplikace Microsoft Excel.
+Tlačítko **Exportovat** umožňuje exportovat zásobník volání jako . *csv* pro vlastní záznamy nebo pro použití s jiným nástrojem, jako je Microsoft Excel.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vizualizér souběžnosti](../profiling/concurrency-visualizer.md)
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

@@ -1,5 +1,5 @@
 ---
-title: Referenční dokumentace WPF MSBuild | Microsoft Docs
+title: WPF MSBuild Odkaz | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,25 +17,25 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3b3f47f41466d8eb7ddf0a4700428b6e28500b61
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596304"
 ---
-# <a name="wpf-msbuild-reference"></a>Referenční dokumentace WPF MSBuild
+# <a name="wpf-msbuild-reference"></a>WPF MSBuild odkaz
 
-Windows Presentation Foundation (WPF) rozšiřuje modul Microsoft Build Engine (MSBuild) o další podporu sestavení, která je popsána v této části.
+Windows Presentation Foundation (WPF) rozšiřuje Microsoft sestavení motoru (MSBuild) s další podporu sestavení, která je popsána v této části.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[WPF. targets – soubory](../msbuild/wpf-dot-targets-files.md)
+[WPF .cíle soubory](../msbuild/wpf-dot-targets-files.md)
 
-Popisuje soubory WPF. targets.
+Popisuje soubory WPF .targets.
 
-[WPF MSBuild – referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)
+[WPF MSBuild odkaz na úkol](../msbuild/wpf-msbuild-task-reference.md)
 
-Obsahuje seznam dostupných úloh sestavení WPF.
+Zobrazí seznam dostupných úloh sestavení WPF.
 
 <xref:Microsoft.Build.Tasks>
 
@@ -47,16 +47,16 @@ Sestavení zaváděcího nástroje nasazení úlohy sestavení.
 
 <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities>
 
-Sestavení nástroje manifestu nasazení úlohy sestavení
+Sestavení sestavení úlohy nasazení manifestu sestavení.
 
 <xref:Microsoft.Build.Tasks.Hosting>
 
-Sestavení hostující sestavení.
+Sestavení sestavení úlohy hostování sestavení.
 
 <xref:Microsoft.Build.Tasks.Windows>
 
-Sestavení Windows pro úlohu sestavení.
+Sestavení sestavení sestavení okna úlohy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [MSBuild](../msbuild/msbuild.md)
+- [Msbuild](../msbuild/msbuild.md)

@@ -1,5 +1,5 @@
 ---
-title: Doba zpracování uživatelského rozhraní | Dokumentace Microsoftu
+title: Doba zpracování uj | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,18 +13,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 391b4582d03e32e738f0eade823326e72a662a43
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "63004439"
 ---
-# <a name="ui-processing-time"></a>Doba zpracování uživatelského rozhraní
-Tyto segmenty na časové ose jsou přidruženy k blokování časy, které jsou klasifikovány jako zpracování uživatelského rozhraní. Z toho vyplývá, že vlákno – čerpání zpráv Windows nebo provádění jiné práce uživatelské rozhraní (UI). Během této doby je zablokovaný vlákno v rozhraní API, které Vizualizátor souběžnosti se počítá jako zpracování uživatelského rozhraní. Rozhraní API, jako `GetMessage()` a `MsgWaitForMultipleObjects()` spadají do této skupiny.
+# <a name="ui-processing-time"></a>Doba zpracování ui
+Tyto segmenty v časové ose jsou spojeny s blokování časy, které jsou rozděleny do kategorií jako zpracování ui. To znamená, že vlákno je čerpání zpráv systému Windows nebo provádění jiných uživatelských rozhraní (UI) práce. Během této doby vlákno bylo zablokováno v rozhraní API, které concurrency Visualizer počítá jako zpracování uživatelského rozhraní. API, jako `GetMessage()` `MsgWaitForMultipleObjects()` je například a spadají do této skupiny.
 
- Pokud se zjistí, žádné předdefinované blokování rozhraní API, projděte si zásobníky volání a profilu, sestavy určit základní příčiny zpoždění.
+ Pokud není identifikováno žádné předdefinované blokovací rozhraní API, zkontrolujte zásobníky volání a sestavy profilů k určení základních příčin zpoždění.
 
- Kategorie zpracování uživatelského rozhraní vám pomůže pochopit rychlosti odezvy aplikací grafického uživatelského rozhraní a je žádoucí v aplikacích, které závisí na rychlosti odezvy uživatelského rozhraní. Například pokud vlákno uživatelského rozhraní v aplikaci dosáhne 100 % času v zpracování uživatelského rozhraní, je pravděpodobně nebude reagovat. Pokud vlákno uživatelského rozhraní stráví značnou dobu v jiných kategoriích, ale hledat hlavní příčiny a zvažte možnosti snížení kategorie bez uživatelského rozhraní v daném vláknu.
+ Kategorie Zpracování uživatelského rozhraní vám pomůže pochopit odezvu aplikací grafického uživatelského rozhraní a je žádoucí v aplikacích, které závisí na odezvě uživatelského rozhraní. Například pokud vlákno uživatelského rozhraní v aplikaci dosáhne 100 % času ve zpracování uživatelského rozhraní, je pravděpodobně responzivní. Pokud však vlákno uživatelského rozhraní stráví značnou dobu v jiných kategoriích, vyhledejte hlavní příčiny a zvažte možnosti pro snížení kategorií mimo uživatelské rozhraní v tomto vlákně.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

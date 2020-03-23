@@ -1,5 +1,5 @@
 ---
-title: 'DA0039: velmi vysoká míra kolizí zámků | Microsoft Docs'
+title: 'DA0039: Velmi vysoká míra tvrzení lock | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,42 +14,42 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: f64f717bf87fb4636c7c2f4e6f11a08236d08ada
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779360"
 ---
-# <a name="da0039-very-high-rate-of-lock-contentions"></a>DA0039: velmi vysoká míra kolizí zámků
+# <a name="da0039-very-high-rate-of-lock-contentions"></a>DA0039: Velmi vysoká míra tvrzení o zámku
 
 |||
 |-|-|
-|Id pravidla|DA0039|
-|Kategorie|Využití .NET Framework|
-|Metody profilace|Kontrol<br /><br /> Instrumentace<br /><br /> Paměť .NET|
-|Zpráva|Dochází k velmi vysoké míře sporů zámků .NET. Vyzkoumejte důvod pro tento spor zámku spuštěním profilu souběžnosti.|
+|Id pravidla|DA0039 řekl:|
+|Kategorie|Použití rozhraní .NET Framework|
+|Metody profilování|Vzorkování<br /><br /> Instrumentace<br /><br /> Paměť .NET|
+|Zpráva|Dochází k velmi vysoké rychlosti konfliktů zámků .NET. Zkontrolujte důvod tohoto konfliktu zámku spuštěním profilu souběžnosti.|
 |Typ pravidla|Upozornění|
 
- Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit alespoň 25 vzorků.
+ Při profilování pomocí vzorkování, .NET paměti nebo metody tvrzení prostředků, je nutné shromáždit alespoň 25 vzorků k aktivaci tohoto pravidla.
 
-## <a name="cause"></a>příčina
- Data o výkonu systému shromážděná s daty profilace znamenají, že během provádění aplikace došlo k nadměrné vysoké míře kolizí zámků. Zvažte znovu profilaci pomocí metody profilace souběžnosti, abyste zjistili příčinu sporů.
+## <a name="cause"></a>Příčina
+ Data o výkonu systému, která jsou shromažďována s daty profilování označuje, že během provádění aplikace došlo k příliš vysoké míře konfliktů zámků. Zvažte profilování znovu pomocí metody profilování souběžnosti k nalezení příčiny tvrzení.
 
 ## <a name="rule-description"></a>Popis pravidla
- Zámky slouží k ochraně kritických oddílů kódu, které musí být spuštěny v jednom vlákně v čase v aplikaci s více vlákny. Modul runtime CLR (Common Language Runtime) platformy Microsoft .NET poskytuje úplnou sadu synchronizačních a uzamykání primitiv. Například C# jazyk podporuje příkaz lock (SyncLock in Visual Basic). Spravovaná aplikace může zavolat monitor. k získání a uvolnění zámku použijte metody v oboru názvů System. Threading. .NET Framework podporuje další prvky synchronizace a zamykání, včetně tříd, které podporují mutexy, ReaderWriterLocks a semafory. Další informace najdete v tématu [Přehled primitiv synchronizace](/dotnet/standard/threading/overview-of-synchronization-primitives) v příručce pro vývojáře .NET Framework na webu MSDN. .NET Framework třídy jsou samy vrstveny na nižší úrovni synchronizačních služeb, které jsou integrované v operačním systému Windows. Patří mezi ně důležité objekty oddílu a mnoho různých funkcí čekání a signalizace událostí. Další informace najdete v části [synchronizace](/windows/win32/sync/synchronization) pro vývoj v systémech Win32 a com v knihovně MSDN.
+ Zámky se používají k ochraně kritických částí kódu, které musí být prováděny sériově jedním vláknem najednou v aplikaci s více vlákny. Microsoft .NET Common Language Run-time (CLR) poskytuje úplnou sadu synchronizace a zamykání primitiv. Například jazyk C# podporuje příkaz lock (SyncLock v jazyce Visual Basic). Spravovaná aplikace může volat metody Monitor.Enter a Monitor.Exit v oboru názvů System.Threading, aby získala a uvolnila zámek přímo. Rozhraní .NET Framework podporuje další synchronizaci a zamykání primitiv, včetně tříd, které podporují Mutexes, ReaderWriterLocks a Semafory. Další informace naleznete v [tématu Přehled primitiv synchronizace](/dotnet/standard/threading/overview-of-synchronization-primitives) v příručce pro vývojáře rozhraní .NET Framework na webu MSDN. Třídy rozhraní .NET Framework jsou samy vrstvené přes nižší úroveň synchronizačních služeb integrovaných do operačního systému Windows. Patří mezi ně kritické objekty řezu a mnoho různých Wait a události signalizační funkce. Další informace naleznete v části [Synchronizace](/windows/win32/sync/synchronization) win32 a vývoj com v knihovně MSDN.
 
- Základními .NET Framework třídy i nativní objekty Windows, které se používají pro synchronizaci a uzamykání, jsou sdílené paměťové umístění, které se musí změnit pomocí propojených operací. Propojené operace používají pro změnu jejich stavu pomocí atomických operací pokyny specifické pro hardware, které pracují na umístěních sdílené paměti. U atomických operací je zaručena konzistence v rámci všech procesorů v počítači. Zámky a WaitHandles jsou objekty .NET, které automaticky používají propojené operace při jejich nastavení nebo resetování. V aplikaci mohou být k dispozici další struktury dat sdílené paměti, které také vyžadují, abyste používali propojené operace, aby je bylo možné aktualizovat pouze v bezpečném vlákně. Další informace najdete v tématu [propojené operace](/dotnet/api/system.threading.interlocked) v části .NET Framework v knihovně MSDN.
+ Základní třídy rozhraní .NET Framework a nativní objekty systému Windows, které se používají pro synchronizaci a zamykání, jsou sdílená umístění paměti, která musí být změněna pomocí propojených operací. Propojené operace používají hardwarově specifické pokyny, které pracují na umístění sdílené paměti, ke změně stavu pomocí atomických operací. Atomové operace jsou zaručeně konzistentní ve všech procesorech v počítači. Zámky a WaitHandles jsou objekty .NET, které automaticky používají propojené operace, když jsou nastaveny nebo resetovány. V aplikaci mohou existovat další struktury dat sdílené paměti, které také vyžadují použití propojených operací, aby byly aktualizovány bezpečným způsobem pro přístup z více vláken. Další informace naleznete v [tématu Interlocked Operations](/dotnet/api/system.threading.interlocked) v části Rozhraní .NET framework knihovny MSDN.
 
- Synchronizace a uzamykání jsou mechanismy, pomocí kterých se zajišťuje správné spouštění aplikací s více vlákny. Každé vlákno aplikace s více vlákny je nezávislá jednotka spuštění, která je naplánována nezávisle na operačním systému. K kolizí zámků dochází pokaždé, když je vlákno, které se pokouší získat zámek, zpožděno, protože zámek zadrží jiné vlákno.
+ Synchronizace a zamykání jsou mechanismy používané k zajištění, že aplikace s více vlákny se spouštějí správně. Každé vlákno vícevláknové aplikace je nezávislá prováděcí jednotka, která je naplánována nezávisle operačním systémem. Ke konfliktu zámku dochází vždy, když podproces, který se pokouší získat zámek je zpožděn, protože jiné vlákno drží zámek.
 
- Zámky jsou často vnořené. K vnořování dochází, když vlákno spouštějící kritickou část provede funkci, která pak vyžaduje jiný zámek. Určité množství vnoření zámku je nenevyhnutelné. Vaše kritická část může volat .NET Framework metodu, která spoléhá na zámky, aby bylo zajištěno, že je bezpečná pro přístup z více vláken. Volání z některé důležité části aplikace do metody rozhraní, která také zamkne pomocí jiného popisovače zámku, způsobí vnoření zámků. Vnořené podmínky zamykání můžou vést k problémům s výkonem, které jsou obvykle odlaďuje obtížné Unravel a opravit.
+ Zámky jsou často vnořené. K vnoření dochází, když vlákno provádějící kritický oddíl provádí funkci, která pak vyžaduje jiný zámek. Určité množství vnoření zámku je nevyhnutelné. Kritická část může volat metodu rozhraní .NET Framework, která závisí na zámky k zajištění, že je bezpečné pro přístup z více vláken. Volání z některé kritické části ve vaší aplikaci do Framework metoda, která také uzamkne pomocí jiného popisovače zámku způsobí, že zámky vnoření. Vnořené podmínky uzamčení může vést k problémům s výkonem, které jsou notoricky obtížné rozluštit a opravit.
 
- Toto pravidlo je vyvoláno, když měření prováděná během profilace poukazují na nadměrné vysoké množství kolizí zámků. U kolizí zámků dochází ke zpoždění provádění vláken, která čekají na zámek. Měla by se prozkoumat i poměrně malá část kolizí zámků v testech jednotek nebo zátěžové testy, které běží na nižším koncovém hardwaru.
+ Toto pravidlo je aktivována při měření během profilování spustit označují, že je příliš vysoké množství zámek kolize. Konflikty zámku zpoždění provádění podprocesů, které čekají na zámek. Dokonce i poměrně malé množství uzamčení kolize v jednotkových testech nebo v zátěžových testech spuštěných na hardwaru nižší konec by měly být zkoumány.
 
 > [!NOTE]
-> Pokud je počet hlášených kolizí zámků v datech profilace značný, ale ne nadměrný, DA0038: místo této zprávy upozornění se aktivuje zpráva s informacemi o kolizí kolizí ( [Vysoká míra kolizí zámků](../profiling/da0038-high-rate-of-lock-contentions.md) ).
+> Pokud rychlost hlášené konflikty zámku v datech profilování je významné, ale není nadměrné, [DA0038: Vysoká rychlost uzamčení tvrzení](../profiling/da0038-high-rate-of-lock-contentions.md) informační zpráva je aktivována namísto této varovné zprávy.
 
-## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění
- Dvojitým kliknutím na zprávu přejdete do zobrazení [značky](../profiling/marks-view.md) dat profilace.  Vyhledá sloupec **LocksAndThreads\Contention .NET CLR počet přenosů/s** . Určete, zda existují konkrétní fáze provádění programu, kde je těžší kolize zámku než jiné fáze.
+## <a name="how-to-investigate-a-warning"></a>Jak prošetřit varování
+ Poklepáním na zprávu přejděte do zobrazení [Značky](../profiling/marks-view.md) dat profilování.  Vyhledejte sloupec **Zámky a vlákna .NET CLR\Míra konfliktů / s.** Zjistěte, zda existují určité fáze provádění programu, kde je konflikt zámku těžší než jiné fáze.
 
- Toto pravidlo je aktivováno pouze v případě, že nepoužíváte metodu profilace souběžnosti. Metoda profilace souběžného zpracování je nejlepším nástrojem, který slouží k diagnostice problémů s výkonem souvisejících s uzamčením kolizí ve vaší aplikaci. Shromážděte data profilace souběžnosti, abyste pochopili chování aplikace při zamykání. To zahrnuje porozumění, které zámky jsou silně ovlivněny, jak dlouho je doba spuštění vlákna zpožděná čekáním na zavedené zámky a jaký konkrétní kód je implicated. Profily souběžnosti shromažďují data o všech sporech zámků, včetně chování při zamykání nativních zařízení s Windows, .NET Framework tříd a dalších knihoven třetích stran, na které vaše aplikace odkazuje. Informace o shromažďování souběžnosti z [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE) najdete v tématu [shromáždění dat o souběžnosti vláken a procesů](../profiling/collecting-thread-and-process-concurrency-data.md). Odkazy na informace o profilaci souběžnosti z příkazového řádku naleznete v části **použití metody souběžnosti ke shromáždění dat o kolize prostředků a dat aktivity vlákna** v tématu [použití metod profilace z příkazového řádku](../profiling/using-profiling-methods-to-collect-performance-data-from-the-command-line.md).
+ Toto pravidlo je aktivována pouze v případě, že nepoužíváte metodu profilování souběžnosti. Metoda profilování souběžnosti je nejlepším nástrojem, který se používá k diagnostice problémů s výkonem souvisejících s konflikty zámku ve vaší aplikaci. Shromažďovat data profilování souběžnosti pochopit chování uzamčení vaší aplikace. To zahrnuje pochopení, které zámky jsou silně tvrdil, jak dlouho je zpožděna doba provádění podprocesu čekání na tvrdil zámky a jaký konkrétní kód je zapletený. Profily souběžnosti shromažďuje data o všech konfliktech zámků, včetně chování uzamčení nativních zařízení systému Windows, tříd rozhraní .NET Framework a všech ostatních knihoven třetích stran, na které vaše aplikace odkazuje. Informace o profilování souběžnosti [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] z rozhraní IDE naleznete v [tématu Shromažďování dat souběžnosti podprocesu a zpracování souběžnosti](../profiling/collecting-thread-and-process-concurrency-data.md). Odkazy na informace o profilování souběžnosti z příkazového řádku naleznete v části **Použití metody souběžnosti ke shromažďování konfliktů prostředků a dat o aktivitě podprocesu** v části [Use profilování metod z příkazového řádku](../profiling/using-profiling-methods-to-collect-performance-data-from-the-command-line.md).

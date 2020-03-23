@@ -1,5 +1,5 @@
 ---
-title: Prohlídka integrovaného vývojového prostředí (IDE) sady Visual Studio
+title: Prohlídka ide sady Visual Studio
 titleSuffix: ''
 ms.date: 02/05/2019
 ms.topic: quickstart
@@ -9,41 +9,41 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 713e7319618b42e2cdc4b8c0951bd79c225ac1b6
-ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "73636590"
 ---
 # <a name="first-look-at-the-visual-studio-ide"></a>První seznámení s integrovaným vývojovým prostředím sady Visual Studio
 
-V tomto 5-10 minutách Úvod do integrovaného vývojového prostředí (IDE) sady Visual Studio se podíváme na některé z oken, nabídek a dalších funkcí uživatelského rozhraní.
+V tomto 5-10 minut úvod do integrovaného vývojového prostředí Visual Studio (IDE), budeme mít prohlídku některých oken, nabídek a dalších funkcí ui.
 
 ::: moniker range="vs-2017"
 
-Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
+Pokud jste visual studio ještě nenainstalovali, přejděte na stránku [ke stažení sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte ji zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
+Pokud jste visual studio ještě nenainstalovali, přejděte na stránku [ke stažení sady Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte ji zdarma.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-## <a name="start-window"></a>Počáteční okno
+## <a name="start-window"></a> Úvodní okno
 
-První věc, kterou se zobrazí po spuštění sady Visual Studio, je okno Start. Okno Start je navrženo tak, aby vám pomohla rychleji "získat kód". Obsahuje možnosti, jak zavřít nebo rezervovat kód, otevřít existující projekt nebo řešení, vytvořit nový projekt nebo jednoduše otevřít složku, která obsahuje nějaké soubory kódu.
+První věc, kterou uvidíte po spuštění sady Visual Studio, je počáteční okno. Počáteční okno je navrženo tak, aby vám pomohlo rychleji se dostat ke kódu. Má možnosti zavřít nebo rezervovat kód, otevřít existující projekt nebo řešení, vytvořit nový projekt nebo jednoduše otevřít složku, která obsahuje některé soubory kódu.
 
-[![okno Start v aplikaci Visual Studio 2019](media/vs-2019/start-window.png)](media/vs-2019/start-window.png)
+[![Počáteční okno v Sadě Visual Studio 2019](media/vs-2019/start-window.png)](media/vs-2019/start-window.png)
 
-Pokud používáte Visual Studio poprvé, váš seznam posledních projektů bude prázdný.
+Pokud používáte visual studio poprvé, bude seznam posledních projektů prázdný.
 
-Pokud pracujete s kódy základů kódu, které nejsou založené na MSBuild, použijete možnost **otevřít místní složku** pro otevření kódu v aplikaci Visual Studio. Další informace naleznete v tématu [vývoj kódu v aplikaci Visual Studio bez projektů nebo řešení](develop-javascript-code-without-solutions-projects.md). V opačném případě můžete vytvořit nový projekt nebo naklonovat projekt ze zdrojového poskytovatele, jako je GitHub nebo Azure DevOps.
+Pokud pracujete s kódovými základnami nezaloženými na MSBuild, použijete možnost **Otevřít místní složku** k otevření kódu v sadě Visual Studio. Další informace naleznete [v tématu Vývoj kódu v sadě Visual Studio bez projektů nebo řešení](develop-javascript-code-without-solutions-projects.md). V opačném případě můžete vytvořit nový projekt nebo klonovat projekt od zdrojového zprostředkovatele, jako je GitHub nebo Azure DevOps.
 
-Možnost **pokračovat bez kódu** jednoduše otevře vývojové prostředí sady Visual Studio bez jakéhokoli konkrétního projektu nebo načteného kódu. Tuto možnost můžete zvolit, chcete-li připojit relaci [Live Share](/visualstudio/liveshare/) nebo připojit k procesu pro ladění. Můžete také stisknutím klávesy **ESC** zavřít okno Start a otevřít integrované vývojové prostředí (IDE).
+Možnost **Pokračovat bez kódu** jednoduše otevře vývojové prostředí sady Visual Studio bez načtení konkrétního projektu nebo kódu. Tuto možnost můžete zvolit, chcete-li se připojit k relaci [živého sdílení](/visualstudio/liveshare/) nebo připojit k procesu ladění. Můžete také stisknutím **klávesy Esc** zavřít počáteční okno a otevřít ide.
 
 ::: moniker-end
 
@@ -51,104 +51,104 @@ Možnost **pokračovat bez kódu** jednoduše otevře vývojové prostředí sad
 
 ## <a name="start-page"></a>Úvodní stránka
 
-První věc, kterou se zobrazí po spuštění sady Visual Studio, je největší pravděpodobně **úvodní stránkou**. **Úvodní stránka** je navržena jako "centrum", která vám pomůžou najít příkazy a soubory projektu, které potřebujete rychleji. V části **Poslední** se zobrazují projekty a složky, které jste nedávno pracovali. V části **Nový projekt**můžete kliknout na odkaz pro otevření dialogového okna **Nový projekt** nebo v části **otevřít**můžete otevřít existující projekt kódu nebo složku. Napravo je informační kanál nejnovějších příspěvků pro vývojáře.
+První věc, kterou uvidíte po spuštění sady Visual Studio, je s největší pravděpodobností **úvodní stránka**. **Úvodní stránka** je navržena jako "rozbočovač", který vám pomůže rychleji najít příkazy a soubory projektu, které potřebujete. V části **Poslední** se zobrazují projekty a složky, na kterých jste v poslední době pracovali. V části **Nový projekt**můžete klepnutím na odkaz vyvolat dialogové okno **Nový projekt** nebo v části **Otevřít**můžete otevřít existující projekt kódu nebo složku. Na pravé straně je krmivo z nejnovějších developer novinky.
 
-![Úvodní stránka v aplikaci Visual Studio](media/start-page.png)
+![Úvodní stránka v Sadě Visual Studio](media/start-page.png)
 
-Pokud zavřete **úvodní stránku** a chcete ji znovu zobrazit, můžete ji znovu otevřít z nabídky **soubor** .
+Pokud úvodní **stránku** zavřete a chcete ji znovu zobrazit, můžete ji znovu otevřít z nabídky **Soubor.**
 
-![Nabídka soubor v aplikaci Visual Studio](media/quickstart-IDE-file-menu-large.png)
+![Nabídka Soubor v sadě Visual Studio](media/quickstart-IDE-file-menu-large.png)
 
 ::: moniker-end
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-Abychom mohli pokračovat v prozkoumávání funkcí sady Visual Studio, vytvoříme nový projekt.
+Chcete-li pokračovat ve zkoumání funkcí sady Visual Studio, vytvořte nový projekt.
 
 ::: moniker range=">=vs-2019"
 
-1. V okně Start vyberte možnost **vytvořit nový projekt**a potom do vyhledávacího pole zadejte **JavaScript** , aby se vyfiltroval seznam typů projektů, které v názvu nebo typu jazyka obsahují text "JavaScript".
+1. V úvodním okně vyberte **Vytvořit nový projekt**a potom ve vyhledávacím poli v **javascriptu** vyfiltrujte seznam typů projektů na ty, které obsahují javascript v jejich názvu nebo typu jazyka.
 
-   Visual Studio poskytuje různé druhy šablon projektů, které vám pomohou rychle začít kódovat. (Případně, pokud jste vývojář TypeScript, můžete vytvořit projekt v tomto jazyce. Uživatelské rozhraní, které budeme hledat, je podobné jako u všech programovacích jazyků.)
+   Visual Studio poskytuje různé druhy šablon projektů, které vám pomohou začít rychle kódovat. (Případně, pokud jste vývojář typu TypeScript, neváhejte a vytvořte projekt v tomto jazyce. UI budeme při pohledu na je podobný pro všechny programovací jazyky.)
 
-   ![Hledat v šablonách projektů v okně Start sady Visual Studio](media/vs-2019/create-new-project.png)
+   ![Hledání šablon projektů v počátečním okně sady Visual Studio](media/vs-2019/create-new-project.png)
 
-1. Vyberte prázdnou šablonu projektu **webové aplikace Node. js** a klikněte na **Další**.
+1. Zvolte šablonu projektu **webové aplikace Blank Node.js** a klepněte na tlačítko **Další**.
 
-1. V dialogovém okně **Konfigurovat nový projekt** , které se zobrazí, přijměte výchozí název projektu a klikněte na **vytvořit**.
+1. V zobrazeném **dialogovém okně Konfigurovat nový projekt** přijměte výchozí název projektu a zvolte **Vytvořit**.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-1. Na **úvodní stránce**zadejte do pole Hledat v části **Nový projekt**text v **jazyce JavaScript** , aby se seznam typů projektů vyfiltroval na ty, které v názvu nebo typu jazyka obsahují text "JavaScript".
+1. Na **úvodní stránce**do vyhledávacího pole v části **Nový projekt**zadejte **javascript,** chcete-li filtrovat seznam typů projektů na ty, které obsahují "javascript" v jejich názvu nebo typu jazyka.
 
-   ![Hledat v šablonách projektů na úvodní stránce Visual studia](media/start-page-search-templates.png)
+   ![Hledání šablon projektů na úvodní stránce sady Visual Studio](media/start-page-search-templates.png)
 
-   Visual Studio poskytuje různé druhy šablon projektů, které vám pomohou rychle začít kódovat. Vyberte prázdnou šablonu projektu **webové aplikace Node. js** . (Případně, pokud jste vývojář TypeScript, můžete vytvořit projekt v tomto jazyce. Uživatelské rozhraní, které budeme hledat, je podobné jako u všech programovacích jazyků.)
+   Visual Studio poskytuje různé druhy šablon projektů, které vám pomohou začít rychle kódovat. Zvolte šablonu projektu **webové aplikace Blank Node.js.** (Případně, pokud jste vývojář typu TypeScript, neváhejte a vytvořte projekt v tomto jazyce. UI budeme při pohledu na je podobný pro všechny programovací jazyky.)
 
-1. V dialogovém okně **Nový projekt** , které se zobrazí, přijměte výchozí název projektu a klikněte na **tlačítko OK**.
+1. V zobrazeném dialogovém okně **Nový projekt** přijměte výchozí název projektu a zvolte **OK**.
 ::: moniker-end
 
-   Projekt je vytvořen a v okně **editoru** se otevře soubor s názvem *Server. js* . **Editor** zobrazuje obsah souborů a je tam, kde provedete většinu práce s kódováním v aplikaci Visual Studio.
+   Projekt je vytvořen a v okně **Editor** se otevře soubor s názvem *server.js.* **Editor** zobrazuje obsah souborů a je místo, kde budete dělat většinu své práce kódování v sadě Visual Studio.
 
-   ![Editor v aplikaci Visual Studio](media/editor.png)
+   ![Editor v sadě Visual Studio](media/editor.png)
 
 ## <a name="solution-explorer"></a>Průzkumník řešení
 
-**Průzkumník řešení**, který je obvykle na pravé straně aplikace Visual Studio, zobrazuje grafické znázornění hierarchie souborů a složek ve složce projektu, řešení nebo kódu. Můžete procházet hierarchii a přejít k souboru v **Průzkumník řešení**.
+**Průzkumník řešení**, který je obvykle na pravé straně sady Visual Studio, zobrazuje grafické znázornění hierarchie souborů a složek ve složce projektu, řešení nebo kódu. Hierarchii můžete procházet a přejít k souboru v **Průzkumníku řešení**.
 
-![Průzkumník řešení v aplikaci Visual Studio](media/quickstart-IDE-solution-explorer.png)
+![Průzkumník řešení v sadě Visual Studio](media/quickstart-IDE-solution-explorer.png)
 
 ## <a name="menus"></a>Nabídky
 
-Panel nabídek podél horního okraje příkazů skupiny sady Visual Studio do kategorií. Například nabídka **projekt** obsahuje příkazy týkající se projektu, ve kterém pracujete. V nabídce **nástroje** můžete přizpůsobit, jak se aplikace Visual Studio chová, výběrem **možností**nebo přidáním funkcí do instalace výběrem možnosti **získat nástroje a funkce**.
+Řádek nabídek v horní části Visual Studio seskupí příkazy do kategorií. Nabídka **Projekt** například obsahuje příkazy související s projektem, ve kterém pracujete. V nabídce **Nástroje** můžete přizpůsobit způsob, jakým se visual studio chová, výběrem **možnosti nebo**přidáním funkcí do instalace výběrem **možnosti Získat nástroje a funkce**.
 
-![Panel nabídek v aplikaci Visual Studio](media/quickstart-IDE-menu-bar.png)
+![Panel nabídek v sadě Visual Studio](media/quickstart-IDE-menu-bar.png)
 
-Pojďme otevřít okno **Seznam chyb** tím, že kliknete na nabídku **zobrazení** a pak **Seznam chyb**.
+Otevřeme okno **Seznam chyb** výběrem nabídky **Zobrazení** a potom v **seznamu chyb**.
 
 ## <a name="error-list"></a>Seznam chyb
 
-**Seznam chyb** zobrazí chyby, varování a zprávy týkající se aktuálního stavu kódu. Pokud jsou v souboru nějaké chyby (například chybějící složená závorka nebo středník) nebo kdekoli v projektu, jsou zde uvedeny.
+**Seznam chyb** zobrazuje chyby, upozornění a zprávy týkající se aktuálního stavu kódu. Pokud se v souboru nebo kdekoli v projektu nacházejí chyby (například chybějící závorka nebo středník), jsou zde uvedeny.
 
-![Seznam chyb v aplikaci Visual Studio](media/quickstart-IDE-error-list.png)
+![Seznam chyb v sadě Visual Studio](media/quickstart-IDE-error-list.png)
 
-## <a name="output-window"></a>Výstup – okno
+## <a name="output-window"></a>Okno Výstup
 
-V okně **výstup** se zobrazí výstupní zprávy ze sestavení projektu a ze svého poskytovatele správy zdrojů.
+Okno **Výstup** zobrazuje výstupní zprávy z vytváření projektu a od poskytovatele správy zdrojového kódu.
 
-Pojďme sestavit projekt, aby se zobrazil výstup sestavení. V nabídce **sestavení** klikněte na příkaz **Sestavit řešení**. Okno **výstup** automaticky získá fokus a zobrazí zprávu o úspěšném sestavení.
+Pojďme sestavit projekt vidět některé výstup sestavení. V nabídce **Sestavení** zvolte **Build Solution**. **Okno Výstup** automaticky získá fokus a zobrazí zprávu úspěšnésestavení.
 
-![Okno výstup v aplikaci Visual Studio](media/build-output-minimal.png)
+![Okno výstupu v sadě Visual Studio](media/build-output-minimal.png)
 
 ## <a name="search-box"></a>Vyhledávací pole
 
-Vyhledávací pole představuje rychlý a snadný způsob, jak v aplikaci Visual Studio dělat poměrně mnoho všeho. Můžete zadat nějaký text týkající se toho, co chcete udělat, a zobrazí se seznam možností, které se týkají tohoto textu. Představte si například, že chcete zvýšit úroveň podrobností výstupu sestavení a zobrazit další podrobnosti o tom, co právě sestavuje. Můžete to udělat takto:
+Vyhledávací pole je rychlý a snadný způsob, jak v sadě Visual Studio provést téměř cokoli. Můžete zadat text související s tím, co chcete udělat, a zobrazí se seznam možností, které se týkají textu. Představte si například, že chcete zvýšit podrobnost výstupu sestavení, abyste zobrazili další podrobnosti o tom, co přesně sestavení dělá. Zde je návod, jak byste to mohli udělat:
 
-1. Do vyhledávacího pole zadejte **Podrobnosti** . V zobrazených výsledcích vyberte **projekty a řešení – > sestavovat a spouštět** v kategorii **Možnosti** .
+1. Do vyhledávacího pole zadejte **podrobnost.** Ze zobrazených výsledků zvolte **Projekty a řešení --> Sestavení a spuštění** v kategorii **Možnosti.**
 
-   ![Vyhledávací pole v aplikaci Visual Studio](media/quickstart-IDE-quick-launch.png)
+   ![Vyhledávací pole ve Visual Studiu](media/quickstart-IDE-quick-launch.png)
 
-   Dialogové okno **Možnosti** se otevře na stránce možnosti **sestavení a spuštění** .
+   Otevře se dialogové okno **Možnosti** na stránce Možnosti **sestavení a spuštění.**
 
-1. V části **Podrobnosti výstupu sestavení projektu nástroje MSBuild**zvolte možnost **normální**a pak klikněte na tlačítko **OK**.
+1. V části **MSBuild projektu vytvořit podrobnost výstupu**zvolte **Normální**a klepněte na tlačítko **OK**.
 
-1. Sestavte projekt znovu tak, že kliknete pravým tlačítkem na projekt **NodejsWebApp1** v **Průzkumník řešení** a z kontextové nabídky zvolíte **znovu sestavit** .
+1. Sestavte projekt znovu kliknutím pravým tlačítkem myši na projekt **NodejsWebApp1** v **Průzkumníku řešení** a výběrem **příkazu Znovu sestavit** z kontextové nabídky.
 
-   Tentokrát okno **výstup** zobrazuje podrobné protokolování z procesu sestavení, včetně toho, které soubory byly zkopírovány tam, kde.
+   Tentokrát **output** okno zobrazuje podrobnější protokolování z procesu sestavení, včetně souborů, které byly zkopírovány kde.
 
-   ![Podrobný výstup sestavení v aplikaci Visual Studio](media/build-output-verbose.png)
+   ![Podrobný výstup sestavení v sadě Visual Studio](media/build-output-verbose.png)
 
-## <a name="send-feedback-menu"></a>Nabídka Odeslat názor
+## <a name="send-feedback-menu"></a>Nabídka Odeslat zpětnou vazbu
 
-Pokud máte v aplikaci Visual Studio nějaké problémy, nebo pokud máte návrhy na to, jak produkt vylepšit, můžete použít nabídku **Odeslat názor** v horní části okna sady Visual Studio.
+Pokud při používání sady Visual Studio narazíte na nějaké problémy nebo pokud máte návrhy, jak vylepšit produkt, můžete použít nabídku **Odeslat zpětnou vazbu** v horní části okna sady Visual Studio.
 
-![Nabídka Odeslat názor v aplikaci Visual Studio](../ide/media/quickstart-ide-send-feedback.png)
+![Nabídka Odeslat zpětnou vazbu v sadě Visual Studio](../ide/media/quickstart-ide-send-feedback.png)
 
 ## <a name="next-steps"></a>Další kroky
 
-Prohlédli jsme si jenom několik funkcí sady Visual Studio, abyste se seznámili s uživatelským rozhraním. Další zkoumání:
+Podívali jsme se na několik funkcí sady Visual Studio seznámit se s uživatelským rozhraním. Další zkoumání:
 
 > [!div class="nextstepaction"]
 > [Další informace o editoru kódu](write-and-edit-code.md)
@@ -156,8 +156,8 @@ Prohlédli jsme si jenom několik funkcí sady Visual Studio, abyste se seznámi
 > [!div class="nextstepaction"]
 > [Další informace o projektech a řešeních](../get-started/tutorial-projects-solutions.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Přehled integrovaného vývojového prostředí (IDE) sady Visual Studio](../get-started/visual-studio-ide.md)
-- [Další funkce sady Visual Studio 2017](../ide/advanced-feature-overview.md)
-- [Změna barev motivu a písma](../ide/quickstart-personalize-the-ide.md)
+- [Přehled ide sady Visual Studio](../get-started/visual-studio-ide.md)
+- [Další funkce Visual Studia 2017](../ide/advanced-feature-overview.md)
+- [Změna motivu a barev písma](../ide/quickstart-personalize-the-ide.md)

@@ -11,40 +11,40 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: a0419100cbc5fcd543eb250fa85cbfe2ebd1c97f
-ms.sourcegitcommit: 614d5b99576ea27a41957cd94062dc95cbd29c1c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "65531592"
 ---
 # <a name="invert-if-statement"></a>Invertování příkazů if
 
-Tento refaktoring platí pro:
+Toto refaktoring se vztahuje na:
 
 - C#
 - Visual Basic
 
-**Co:** Umožňuje Invertovat `if` nebo `if else` příkaz beze změny význam kódu.
+**Co:** Umožňuje invertovat `if` nebo `if else` příkaz beze změny významu kódu.
 
-**Kdy:** Pokud máte `if` nebo `if else` příkaz, který by bylo lepší porozumění při obrácený.
+**Kdy:** Když máte `if` nebo `if else` prohlášení, které by bylo lépe pochopeno, když obrácený.
 
-**Proč:** Převrácení `if` nebo `if else` příkaz ručně může trvat déle a potenciálně zavést chyby. Tato oprava kódu umožňuje udělat tento refaktoring automaticky.
+**Proč:** Obrácení příkazu `if else` nebo příkazu `if` ručně může trvat mnohem déle a případně způsobit chyby. Tato oprava kódu vám pomůže provést tento refaktoring automaticky.
 
-## <a name="invert-if-statement-refactoring"></a>Invertovat refaktoring – příkaz
+## <a name="invert-if-statement-refactoring"></a>Invertovat, pokud refaktoring příkazu
 
-1. Umístěte ukazatel myši v `if` nebo `if else` příkazu.
+1. Umístěte kurzor `if` do `if else` příkazu nebo.
 
-    ![Invertovat else](media/invert-if.png)
+    ![Invertovat, pokud je to jiné](media/invert-if.png)
 
-2. Stisknutím klávesy **Ctrl**+**.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
+2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
 
-    ![Invertovat jiného kódu pro opravu](media/invert-if-codefix.png)
+    ![Invertovat, pokud jiný kód opravit](media/invert-if-codefix.png)
 
-3. Vyberte **Invertovat**.
+3. Vyberte **Invertovat, pokud**.
 
-    ![Invertovat jiný výsledek](media/invert-if-codefix-result.png)
+    ![Invertovat, pokud dojde k jinému výsledku](media/invert-if-codefix-result.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Refactoring](../refactoring-in-visual-studio.md)
-- [Tipy pro vývojáře .NET](../csharp-developer-productivity.md)
+- [Tipy pro vývojáře rozhraní .NET](../csharp-developer-productivity.md)

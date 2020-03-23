@@ -11,50 +11,50 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1236c3057cd209bd5c7c81304a2168704927c506
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "71127937"
 ---
-# <a name="publish-a-web-app-to-a-web-site-using-visual-studio"></a>Publikování webové aplikace na webu pomocí sady Visual Studio
+# <a name="publish-a-web-app-to-a-web-site-using-visual-studio"></a>Publikování webové aplikace na web pomocí Visual Studia
 
-Pomocí nástroje **publikovat** můžete publikovat aplikace ASP.NET, ASP.NET Core, .NET Core a Python na web ze sady Visual Studio. Pro Node. js je postup podporován, ale uživatelské rozhraní je jiné.
+Pomocí nástroje **Publikovat** můžete publikovat aplikace ASP.NET, ASP.NET Jádra, .NET Core a Pythonu na web z Visual Studia. Pro Node.js jsou podporovány kroky, ale uživatelské rozhraní se liší.
 
 [!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
 
 > [!NOTE]
-> Pokud potřebujete publikovat desktopovou aplikaci pro Windows do síťové sdílené složky, přečtěte si téma [nasazení desktopové aplikace pomocí](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) technologieC# ClickOnce (nebo Visual Basic). V C++případě/CLI si přečtěte téma [nasazení nativní aplikace pomocí ClickOnce](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) nebo pro CC++/, viz [nasazení nativní aplikace pomocí projektu instalace](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
+> Pokud potřebujete publikovat desktopovou aplikaci windows do sdílené síťové složky, přečtěte si část [Nasazení aplikace klasické pracovní plochy pomocí clickonce](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# nebo Visual Basic). V jazyce C++/CLI [najdete v tématu Nasazení nativní aplikace pomocí ClickOnce](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) nebo v případě C/C++ najdete v [tématu Nasazení nativní aplikace pomocí instalačního projektu](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
 
-## <a name="publish-to-a-web-site"></a>Publikování na webu
+## <a name="publish-to-a-web-site"></a>Publikovat na webu
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na projekt a vyberte **publikovat** (nebo použijte položku nabídky**publikovat** **sestavení** > ).
+1. V Průzkumníku řešení klikněte pravým tlačítkem myši na projekt a zvolte **Publikovat** (nebo použijte položku nabídky**Publikovat** **sestavení).** > 
 
-    ![Příkaz publikovat v místní nabídce projektu v Průzkumník řešení](../deployment/media/quickstart-publish.png "Zvolit publikování")
+    ![Příkaz Publikovat v kontextové nabídce projektu v Průzkumníku řešení](../deployment/media/quickstart-publish.png "Zvolte Publikovat")
 
-1. Pokud jste již dříve nakonfigurovali všechny publikační profily, otevře se podokno **publikování** . Vyberte **vytvořit nový profil**.
+1. Pokud jste dříve nakonfigurovali profily publikování, zobrazí se podokno **Publikovat.** Vyberte **Vytvořit nový profil**.
 
-1. V dialogovém okně **vybrat cíl publikování** zvolte možnost **IIS, FTP atd**.
+1. V **dialogovém** okně Vybrat cíl publikování zvolte **Službu IIS, FTP atd**.
 
-    ![Vyberte IIS, FTP atd.](../deployment/media/quickstart-publish-iis-ftp.png "Vyberte IIS, FTP atd.")
+    ![Zvolte IIS, FTP atd.](../deployment/media/quickstart-publish-iis-ftp.png "Zvolte IIS, FTP atd.")
 
-1. Vyberte **Publikovat**. Otevře se dialogové okno nastavení publikování profilu.
+1. Vyberte **Publikovat**. Otevře se dialogové okno Nastavení publikování profilu.
 
-    ![Zvolit složku](../deployment/media/quickstart-publish-settings-web.png "Zvolit složku")
+    ![Zvolte složku](../deployment/media/quickstart-publish-settings-web.png "Zvolte složku")
 
-1. V poli **publikovat metodu** vyberte metodu, například **nasazení webu** nebo **FTP**. Nastavení, které vidíte dál, odpovídá vaší metodě publikování. Nasazení webu zjednodušuje nasazení webových aplikací a webů na servery služby IIS a musí být nainstalováno jako aplikace na serveru. Pomocí [instalačního programu webové platformy](https://www.microsoft.com/web/downloads/platform.aspx) ho nainstalujte.
+1. V poli **Metoda publikování** zvolte metodu, například **Nasazení webu** nebo **FTP**. Nastavení, která se zobrazí dále odpovídají vaší metodě publikování. Nasazení webu zjednodušuje nasazení webových aplikací a webových serverů na servery služby IIS a musí být nainstalováno jako aplikace na serveru. K instalaci použijte [instalační program webové platformy.](https://www.microsoft.com/web/downloads/platform.aspx)
 
-1. Nakonfigurujte požadovaná nastavení pro metodu publikování a vyberte **ověřit připojení**. Pokud je server nebo cíl k dispozici a je správné nastavení, zobrazí se zpráva s oznámením o připojení a Vy jste připraveni publikovat.
+1. Nakonfigurujte požadovaná nastavení metody publikování a vyberte **možnost Ověřit připojení**. Pokud je server nebo cíl k dispozici a nastavení jsou správná, zobrazí se zpráva, která označuje, že připojení je ověřeno a jste připraveni k publikování.
 
     ![Ověření připojení](../deployment/media/quickstart-publish-web-deploy.png "Ověření připojení")
 
-1. Vyberte **Nastavení** a nakonfigurujte další nastavení nasazení, například zda nasadit konfiguraci ladění nebo vydání, a pak vyberte **Uložit**. Pokud provádíte ladění vzdáleně, je vyžadována konfigurace ladění.
+1. Vyberte **Nastavení,** chcete-li nakonfigurovat další nastavení nasazení, například zda se má nasadit konfigurace ladění nebo vydání, a pak vyberte **Uložit**. Pokud ladíte vzdáleně, je vyžadována konfigurace ladění.
 
-1. Pro publikování vyberte **publikovat**. V okně výstup se zobrazuje průběh a výsledky nasazení.
+1. Chcete-li publikovat, vyberte **publikovat**. Okno Výstup zobrazuje průběh nasazení a výsledky.
 
 ## <a name="next-steps"></a>Další kroky
 
-V tomto rychlém startu jste zjistili, jak pomocí sady Visual Studio vytvořit profil publikování. Profil publikování můžete také nakonfigurovat importem nastavení publikování.
+V tomto rychlém startu jste se naučili, jak pomocí sady Visual Studio vytvořit profil publikování. Profil publikování můžete také nakonfigurovat importem nastavení publikování.
 
 > [!div class="nextstepaction"]
 > [Import nastavení publikování a nasazení do služby IIS](tutorial-import-publish-settings-iis.md)

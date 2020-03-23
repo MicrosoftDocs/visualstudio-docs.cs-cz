@@ -1,5 +1,5 @@
 ---
-title: Noise procentní | Dokumentace Microsoftu
+title: Procento snížení hluku | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,11 +13,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9d3021aef3f9a2e11849991327a6ef8783b62439
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62794310"
 ---
 # <a name="noise-reduction-percentage"></a>Procento snížení šumu
-Výchozí hodnota nastavení procento snížení šumu je 2. Ve stromu volání jsou uvedeny pouze položky, které mají procento celkového času větší než nebo rovna hodnotě toto nastavení. Změnou nastavení můžete řídit počet položek, které jsou zobrazeny ve stromu volání. Například změna hodnoty 10 se zobrazí pouze položky stromu volání, které mají celkový čas větší nebo rovna 10 %. Zvýšením hodnoty nastavení vám soustředit se na položky, které mají větší dopad na výkon procesu.
+Ve výchozím nastavení je hodnota nastavení Procento snížení šumu 2. Ve stromu volání jsou zobrazeny pouze položky, které mají procento včetně času většího nebo rovného tomuto nastavení. Změnou nastavení můžete určit počet položek, které jsou zobrazeny ve stromu volání. Například změna hodnoty na 10 zobrazí pouze položky stromu volání, které mají včetně čas větší nebo rovno 10%. Zvýšením hodnoty nastavení se můžete zaměřit na položky, které mají větší vliv na výkon procesu.

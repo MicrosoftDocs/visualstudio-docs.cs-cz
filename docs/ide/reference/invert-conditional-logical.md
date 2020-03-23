@@ -11,36 +11,36 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 3931ae53fc29b0ffd8b8b6e96951a0f4786ff756
-ms.sourcegitcommit: 614d5b99576ea27a41957cd94062dc95cbd29c1c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "65531679"
 ---
-# <a name="invert-conditional-expressions-and-conditional-andor-operators"></a>Invertovat podmíněné výrazy a podmíněné a/nebo operátory
+# <a name="invert-conditional-expressions-and-conditional-andor-operators"></a>Invertovat podmíněné výrazy a podmíněné operátory AND/OR
 
-Tento refaktoring platí pro:
+Toto refaktoring se vztahuje na:
 
 - C#
 - Visual Basic
 
-**Co:** Umožňuje Invertovat podmíněný výraz nebo s podmínkou a operátorem.
+**Co:** Umožňuje invertovat podmíněný výraz nebo podmíněný operátor AND/OR.
 
-**Kdy:** Podmíněný výraz nebo podmíněné a/nebo operátor, který by se lépe chápat, pokud obrácený.
+**Kdy:** Máte podmíněný výraz nebo podmíněný operátor AND/OR, který by byl lépe pochopen, pokud by byl invertován.
 
-**Proč:** Převrácení výraz nebo podmíněný nebo operátor ručně může trvat déle a potenciálně zavést chyby. Tato oprava kódu umožňuje udělat tento refaktoring automaticky.
+**Proč:** Ruční obrácení výrazu nebo podmíněného operátoru AND/OR může trvat mnohem déle a případně může zavést chyby. Tato oprava kódu vám pomůže provést tento refaktoring automaticky.
 
-## <a name="invert-conditional-expressions-and-conditional-andor-operators-refactoring"></a>Invertovat podmíněné výrazy a podmíněné nebo refaktoring operátory
+## <a name="invert-conditional-expressions-and-conditional-andor-operators-refactoring"></a>Invertovat podmíněné výrazy a podmíněné operátory AND/OR refaktoring
 
-1. Umístěte kurzor podmíněný výraz nebo s podmínkou a operátorem.
-2. Stisknutím klávesy **Ctrl**+**.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
-3. Vyberte **invertování podmíněné** nebo **nahraďte ' & & "s" ||.**
+1. Umístěte kurzor do podmíněného výrazu nebo podmíněného operátoru AND/OR.
+2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+3. Vyberte **Invertovat podmíněné** nebo **Nahradit && s '||'**
 
     ![Invertovat podmíněné](media/invert-conditional.png)
 
     ![Invertovat podmíněné](media/invert-logical-operator.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Refactoring](../refactoring-in-visual-studio.md)
-- [Tipy pro vývojáře .NET](../csharp-developer-productivity.md)
+- [Tipy pro vývojáře rozhraní .NET](../csharp-developer-productivity.md)

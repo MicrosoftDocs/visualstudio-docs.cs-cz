@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Vytvoření sestavy trasování volání Nástroje pro profilaci | Microsoft Docs'
+title: 'Postup: Vytvoření sestavy trasování volání nástrojů profilování | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,32 +13,32 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 4b184310d837193679a1a5eacf2fbae4ecf29caa
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778983"
 ---
 # <a name="how-to-create-a-profiling-tools-call-trace-report"></a>Postupy: Vytvoření sestavy trasování volání nástrojů pro profilaci
-*Sestava trasování volání* pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástroje pro profilaci uvádí informace o časování pro každý vstupní a výstupní bod do funkcí aplikace a každé volání dalších funkcí vaší funkcí. Sestavy trasování volání jsou k dispozici pro data profilování pouze v případě, že byla shromážděna pomocí metody instrumentace.
+*Sestava trasování* volání [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] pro nástroje profilování uvádí informace o časování pro každou položku a výstupní bod funkcí aplikace a každé volání dalších funkcí vaší funkcí. Sestavy trasování volání jsou k dispozici pro profilování dat pouze v případě, že byly shromážděny pomocí metody instrumentace.
 
 > [!NOTE]
-> V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]nelze zobrazit sestavy trasování volání. K vygenerování hodnoty oddělené čárkami je nutné použít nástroj příkazového řádku **VSPerfReport** . *CSV*) nebo. soubor *XML* . Další informace o tomto nástroji naleznete v tématu [VSPerfReport](../profiling/vsperfreport.md).
+> V aplikaci nelze [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]zobrazit sestavy trasování volání. Ke generování **VSPerfReport** hodnoty oddělené čárkami (.* csv*) nebo . *xml.* Další informace o tomto nástroji naleznete [v tématu VSPerfReport](../profiling/vsperfreport.md).
 
 ### <a name="to-create-a-call-trace-report"></a>Vytvoření sestavy trasování volání
 
-1. Otevřete okno **příkazového řádku** .
+1. Otevřete okno **příkazového řádku.**
 
-2. V příkazovém řádku zadejte následující příkaz:
+2. Do příkazového řádku zadejte následující příkaz:
 
-     *ToolsPath* **VSPerfReport** *VSPFile*  **/CallTrace [/XML]**
+     *ToolsPath* **VSPerfReport** *VSPFile*  **/CallTrace [/Xml]**
 
     |||
     |-|-|
-    |*ToolsPath*|Cesta Nástroje pro profilaci nástrojů příkazového řádku Další informace najdete v tématu [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).|
-    |*VSPFile*|Data profilace (. *VSP* nebo. *vsps*) souborů. Jsou přijímány úplné a částečné cesty.|
-    |XML|Generuje sestavu ve formátu XML.|
+    |*Cesta k nástrojům*|Cesta nástrojů příkazového řádku Nástroje profilování. Další informace naleznete [v tématu Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).|
+    |*Soubor VSP*|Data profilování (.* vsp* nebo . *vsps*) Soubor. Jsou přijímány úplné a částečné cesty.|
+    |XML|Generuje sestavu formátovanou xml.|
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: shromažďování dat trasování událostí pro Windows (ETW)](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
-- [Rozhraní API nástrojů pro profilaci](../profiling/profiling-tools-apis.md)
+## <a name="see-also"></a>Viz také
+- [Postup: Shromažďování dat sledování událostí pro Windows (ETW)](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
+- [Api nástrojů pro profilování](../profiling/profiling-tools-apis.md)

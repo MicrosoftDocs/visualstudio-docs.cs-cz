@@ -1,6 +1,6 @@
 ---
-title: Vytvoření aplikace model Windows Forms s Visual Basic
-description: Zjistěte, jak vytvořit aplikaci Windows Forms v sadě Visual Studio pomocí jazyka Visual Basic, krok za krokem.
+title: Vytvoření aplikace pro Windows Forms pomocí Jazyka Visual Basic
+description: Přečtěte si, jak vytvořit aplikaci pro Windows Forms v Visual Studiu s Visual Basicem krok za krokem.
 ms.date: 09/27/2019
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -14,46 +14,46 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: 8be3edaaab970dab7ef41bd8bce75c84bac54a2e
-ms.sourcegitcommit: 13decf878b33fc0c5d665a88067170c2861b261b
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "71681582"
 ---
-# <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>Vytvoření Windows Forms aplikace v sadě Visual Studio pomocí jazyka Visual Basic
+# <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>Vytvoření aplikace pro Windows Forms ve Visual Studiu pomocí Visual Basicu
 
-V této krátké Úvod do integrovaného vývojového prostředí (IDE) sady Visual Studio vytvoříte jednoduchou aplikaci Visual Basic, který má na základě Windows uživatelského rozhraní (UI).
+V tomto krátkém úvodu k integrovanévývojové prostředí sady Visual Studio (IDE) vytvoříte jednoduchou aplikaci visual basicu, která má uživatelské rozhraní (UI) založené na systému Windows.
 
 ::: moniker range="vs-2017"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) stránku a nainstalovat zdarma.
+Pokud jste visual studio ještě nenainstalovali, přejděte na stránku [ke stažení sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte ji zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/downloads) stránku a nainstalovat zdarma.
+Pokud jste visual studio ještě nenainstalovali, přejděte na stránku [ke stažení sady Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte ji zdarma.
 
 > [!NOTE]
-> Některé snímky obrazovky v tomto kurzu používají tmavý motiv. Pokud nepoužíváte tmavý motiv, ale chtěli, najdete v článku [přizpůsobit IDE sady Visual Studio a Editor](../ide/quickstart-personalize-the-ide.md) stránku a zjistěte, jak.
+> Některé screenshoty v tomto tutoriálu používají tmavý motiv. Pokud nepoužíváte tmavý motiv, ale chcete, podívejte se na [stránku Přizpůsobit ide a editor u visual ateliéru,](../ide/quickstart-personalize-the-ide.md) kde se dozvíte, jak na to.
 
 ::: moniker-end
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-Nejprve vytvoříte projekt aplikace Visual Basic. Typ projektu obsahuje všechny soubory šablon, které potřebujete, než jste přidali ještě něco.
+Nejprve vytvoříte projekt aplikace jazyka Visual Basic. Typ projektu je dodáván se všemi soubory šablon, které budete potřebovat, ještě předtím, než něco přidáte.
 
 ::: moniker range="vs-2017"
 
-1. Otevřete Visual Studio 2017.
+1. Otevřete sadu Visual Studio 2017.
 
-1. V horním řádku nabídek vyberte **soubor** > **Nový** > **projekt**.
+1. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
 
-1. V **nový projekt** dialogové okno v levém podokně rozbalte **jazyka Visual Basic**a klikněte na tlačítko **Windows Desktop**. V prostředním podokně vyberte **aplikace Windows Forms (.NET Framework)** . Potom zadejte název souboru `HelloWorld`.
+1. V dialogovém okně **Nový projekt** v levém podokně rozbalte **položku Visual Basic**a pak zvolte Plochu **systému Windows**. V prostředním podokně zvolte **Windows Forms App (.NET Framework)**. Poté soubor `HelloWorld`pojmenujte .
 
-     Pokud se nezobrazí **aplikace Windows Forms (.NET Framework)** projektu šablony, zrušte z celkového počtu **nový projekt** dialogového okna a v horní nabídce vyberte **nástroje**  >  **Získejte nástroje a funkce**. Spustí se instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací .NET** úloh, klikněte na tlačítko **změnit**.
+     Pokud šablonu projektu **aplikace Windows Forms App (.NET Framework)** nevidíte, zrušte ji z dialogového okna **Nový projekt** a v horním řádku nabídek zvolte **Nástroje** > **získat nástroje a funkce**. Spustí se instalační program pro Visual Studio. Zvolte **úlohu vývoje plochy .NET** a pak zvolte **Změnit**.
 
-     ![Úlohy .NET core v instalačním programu sady Visual Studio](../ide/media/install-dot-net-desktop-env.png)
+     ![Úloha jádra .NET v Instalační službě sady Visual Studio](../ide/media/install-dot-net-desktop-env.png)
 
 ::: moniker-end
 
@@ -61,30 +61,30 @@ Nejprve vytvoříte projekt aplikace Visual Basic. Typ projektu obsahuje všechn
 
 1. Otevřete Visual Studio 2019.
 
-1. V okně Start vyberte možnost **vytvořit nový projekt**.
+1. V počátečním okně zvolte **Vytvořit nový projekt**.
 
-   ![Zobrazit okno vytvořit nový projekt](../get-started/media/vs-2019/create-new-project-dark-theme.png)
+   ![Zobrazit okno Vytvořit nový projekt](../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. V okně **vytvořit nový projekt** vyberte šablonu **aplikace model Windows Forms (.NET Framework)** pro Visual Basic.
+1. V okně **Vytvořit nový projekt** zvolte šablonu aplikace Windows Forms App **(.NET Framework)** pro visual basic.
 
-   (Pokud chcete, můžete hledání upřesnit tak, abyste se rychle dostali k požadované šabloně. Do vyhledávacího pole zadejte například nebo zadejte *model Windows Forms App* . Dále v seznamu jazyk vyberte možnost **Visual Basic** a v seznamu platforma zvolte možnost **Windows** .)  
+   (Pokud chcete, můžete upřesnit hledání, abyste se rychle dostali k požadované šabloně. Do vyhledávacího pole například zadejte nebo zadejte *aplikaci Windows Forms App.* Dále zvolte V seznamu Jazyk v jazyce **možnost Visual Basic** a pak ze seznamu Platforma zvolte **Windows.)**  
 
-   ![Vyberte šablonu Visual Basic pro aplikaci model Windows Forms (.NET Framework).](../get-started/visual-basic/media/vs-2019/vb-create-new-project-search-winforms-filtered.png)
+   ![Volba šablony jazyka Visual Basic pro Aplikaci Windows Forms (.NET Framework)](../get-started/visual-basic/media/vs-2019/vb-create-new-project-search-winforms-filtered.png)
 
    > [!NOTE]
-   > Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** .
+   > Pokud šablonu **Aplikace Windows Forms (.NET Framework)** nevidíte, můžete ji nainstalovat z okna Vytvořit nový **projekt.** Ve zprávě **Install more tools and features** **Nenajít to, co hledáte?**
    >
-   > ![Odkaz pro instalaci dalších nástrojů a funkcí v okně vytvořit nový projekt v části nenajít, co hledáte?](../get-started/media/vs-2019/not-finding-what-looking-for.png)
+   > ![Odkaz "Nainstalovat další nástroje a funkce" ze zprávy "Nenajít to, co hledáte" v okně "Vytvořit nový projekt"](../get-started/media/vs-2019/not-finding-what-looking-for.png)
    >
-   > V části Instalační program pro Visual Studio klikněte na možnost zvolit úlohu **vývoj desktopových aplikací .NET** .
+   > Dále v Instalační službě sady Visual Studio zvolte zvolte **úlohu vývoje plochy .NET.**
    >
-   > ![Úlohy .NET core v instalačním programu sady Visual Studio](../ide/media/install-dot-net-desktop-env.png)
+   > ![Úloha jádra .NET v Instalační službě sady Visual Studio](../ide/media/install-dot-net-desktop-env.png)
    >
-   > Potom klikněte na tlačítko **Upravit** v instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce; Pokud ano, udělejte to. V dalším kroku vyberte **pokračovat** a nainstalujte úlohu. Pak se vraťte ke kroku 2 v tomto postupu "[Vytvoření projektu](#create-a-project)".
+   > Poté zvolte tlačítko **Změnit** v Instalační službě sady Visual Studio. Můžete být vyzváni k uložení práce. pokud ano, uvažte tak. Dále zvolte **Pokračovat** k instalaci úlohy. Potom se vraťte ke kroku 2 v tomto postupu "[Vytvořit projekt](#create-a-project)".
 
-1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *HelloWorld* do pole **název projektu** . Pak zvolte **vytvořit**.
+1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *HelloWorld* do pole **Název projektu.** Potom zvolte **Vytvořit**.
 
-   ![v okně Konfigurovat nový projekt pojmenujte svůj projekt HelloWorld.](../get-started/visual-basic/media/vs-2019/vb-name-your-winform-project-helloworld.png)
+   ![v okně Konfigurace nového projektu pojmenujte projekt HelloWorld](../get-started/visual-basic/media/vs-2019/vb-name-your-winform-project-helloworld.png)
 
    Visual Studio otevře nový projekt.
 
@@ -92,78 +92,78 @@ Nejprve vytvoříte projekt aplikace Visual Basic. Typ projektu obsahuje všechn
 
 ## <a name="create-the-application"></a>Vytvoření aplikace
 
-Po výběru šablony projektu jazyka Visual Basic a název souboru, Visual Studio otevře formulář za vás. Formulář je uživatelské rozhraní Windows. Vytvoříme aplikaci "Hello World" přidáním ovládacích prvků do formuláře a pak aplikaci spustíme.
+Po výběru šablony projektu jazyka Visual Basic a pojmenování souboru visual studio otevře formulář pro vás. Formulář je uživatelské rozhraní systému Windows. Vytvoříme aplikaci "Hello World" přidáním ovládacích prvků do formuláře a pak spustíme aplikaci.
 
 ### <a name="add-a-button-to-the-form"></a>Přidání tlačítka do formuláře
 
-1. Klikněte na tlačítko **nástrojů** nabídka okno nástrojů.
+1. Kliknutím na **Panel nástrojů** otevřete okno pro rozluštití panelu nástrojů.
 
-     ![Klikněte na panelu nástrojů okno nástrojů](../ide/media/vb-toolbox-toolwindow.png)
+     ![Kliknutím na panel nástrojů otevřete okno Panelu nástrojů.](../ide/media/vb-toolbox-toolwindow.png)
 
-     (Pokud se nezobrazí **nástrojů** nabídka možností, lze jej otevřít z řádku nabídek. Provedete to tak, že **zobrazíte** > **sadu nástrojů**. Také můžete stisknout klávesu **Ctrl**+**Alt**+**X**.)
+     (Pokud možnost rámeček **nástrojů** nevidíte, můžete ji otevřít z panelu nabídek. Chcete-li tak učinit, **zobrazit** > **panel nástrojů**. Nebo stiskněte **kombinaci kláves Ctrl**+**Alt**+**X**.)
 
-1. Klikněte na tlačítko **Pin** ikonu ukotvení **nástrojů** okna.
+1. Kliknutím na ikonu **Pin** ukotvíte okno **Panelu nástrojů.**
 
-     ![Klikněte na ikonu připínáčku připněte okno nástrojů do integrovaného vývojového prostředí](../ide/media/vb-pin-the-toolbox-window.png)
+     ![Kliknutím na ikonu Pin připněte okno panelu nástrojů do ide.](../ide/media/vb-pin-the-toolbox-window.png)
 
-1. Klikněte na tlačítko **tlačítko** řídit a přetáhněte ji na formuláři.
+1. Klikněte na ovládací prvek **Button** a přetáhněte ho do formuláře.
 
      ![Přidání tlačítka do formuláře](../ide/media/vb-add-a-button-to-form1.png)
 
-1. V části **vzhled** (nebo v části **písma** ) v okně **vlastnosti** zadejte `Click this`a potom stiskněte klávesu **ENTER**.
+1. V části **Vzhled** (nebo v části **Písma)** `Click this`okna **Vlastnosti** zadejte a stiskněte **Enter**.
 
-     ![Přidejte text pro tlačítko ve formuláři](../ide/media/vb-button-control-text.png)
+     ![Přidání textu k tlačítku ve formuláři](../ide/media/vb-button-control-text.png)
 
-     (Pokud se nezobrazí **vlastnosti** okna, lze jej otevřít z řádku nabídek. Chcete-li tak učinit, klikněte na tlačítko **zobrazení** > **okno vlastností**. Také můžete stisknout klávesu **F4**.)
+     (Pokud okno **Vlastnosti** nevidíte, můžete ho otevřít z panelu nabídek. Chcete-li tak učinit, klepněte na **položku Zobrazit** > **okno vlastností**. Nebo stiskněte **klávesu F4**.)
 
-1. V **návrhu** část **vlastnosti** okna, změňte název z **Button1** k `btnClickThis`a potom stiskněte klávesu **Enter**.
+1. V části **Návrh** v okně **Vlastnosti** změňte `btnClickThis`název z **Button1** na a stiskněte **Enter**.
 
-     ![Přidání funkce do tlačítko ve formuláři](../ide/media/vb-button-control-function.png)
+     ![Přidání funkce k tlačítku ve formuláři](../ide/media/vb-button-control-function.png)
 
    > [!NOTE]
-   > Pokud jste v okně **vlastnosti** v abecedním seznamu, zobrazí se v části **(DataBindings)** ikona **Button1** místo toho.
+   > Pokud jste seznam seřazeni podle abecedy v okně **Vlastnosti,** zobrazí se místo toho **button1** v části **(DataBindings).**
 
-### <a name="add-a-label-to-the-form"></a>Přidejte popisek do formuláře
+### <a name="add-a-label-to-the-form"></a>Přidání popisku do formuláře
 
-Teď, když jsme přidali ovládací prvek tlačítko Vytvořit akci, přidáme popisek ovládacího prvku k odeslání text, který se.
+Teď, když jsme přidali ovládací prvek tlačítka pro vytvoření akce, přidáme ovládací prvek popisku pro odeslání textu.
 
-1. Vyberte **popisek** ovládacího prvku **nástrojů** okna a přetáhněte ji na formuláři a přetáhněte ho pod **kliknutím na tuto** tlačítko.
+1. Vyberte ovládací **prvek Popisek** z okna **Panelu nástrojů** a přetáhněte ho do formuláře a přetáhněte ho pod **tlačítko Klepnout na toto** tlačítko.
 
-1. V části **Návrh** nebo **(datové vazby)** v okně **vlastnosti** změňte název **Label1** na `lblHelloWorld`a potom stiskněte klávesu **ENTER**.
+1. V části **Návrh** nebo v části **(DataBindings)** v okně **Vlastnosti** `lblHelloWorld`změňte název **labelu1** na a stiskněte **klávesu Enter**.
 
-### <a name="add-code-to-the-form"></a>Přidejte kód do formuláře
+### <a name="add-code-to-the-form"></a>Přidání kódu do formuláře
 
-1. V **Form1.vb &#91;návrhu&#93;**  okna, dvakrát klikněte **kliknutím na tuto** tlačítko Otevřít **Form1.vb** okna.
+1. V okně **Form1.vb &#91;Návrh&#93;** poklepejte na tlačítko Klepnutím na **toto** tlačítko otevřete okno **Form1.vb.**
 
-      (Alternativně můžete rozbalit **Form1.vb** v **Průzkumníka řešení**a potom klikněte na tlačítko **Form1**.)
+      (Případně můžete rozbalit **soubor Form1.vb** v **Průzkumníku řešení**a potom klepnout na **položku Form1**.)
 
-1. V okně **Form1. vb** zadejte mezi **soukromými** a **koncovými dílčími** řádky `lblHelloWorld.Text = "Hello World!"`, jak je znázorněno na následujícím snímku obrazovky:
+1. V okně **Form1.vb** mezi řádky **Private Sub** a End `lblHelloWorld.Text = "Hello World!"` **Sub** zadejte nebo zadejte, jak je znázorněno na následujícím snímku obrazovky:
 
-     ![Přidejte kód do formuláře](../ide/media/vb-add-code-to-the-form.png)
+     ![Přidání kódu do formuláře](../ide/media/vb-add-code-to-the-form.png)
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
-1. Klikněte na tlačítko **Start** tlačítko ke spuštění aplikace.
+1. Klepnutím na tlačítko **Start** spusťte aplikaci.
 
-     ![Klikněte na příkaz Spustit ladění a spuštění aplikace](../ide/media/vb-click-start-hello-world.png)
+     ![Chcete-li ladit a spouštět aplikaci, klepněte na tlačítko Start.](../ide/media/vb-click-start-hello-world.png)
 
-   Stane se několik věcí. V sadě Visual Studio IDE **diagnostické nástroje** otevře se okno a **výstup** otevře se okno, příliš. Ale mimo rozhraní IDE **Form1** zobrazí se dialogové okno. Bude obsahovat vaše **kliknutím na tuto** tlačítko a text, který říká **Label1**.
+   Stane se několik věcí. V ide sady Visual Studio se otevře okno **Nástroje diagnostiky** a otevře se také okno **Výstup.** Ale mimo ide, **form1** dialogové okno se zobrazí. Bude obsahovat vaše **Klikněte na toto** tlačítko a text, který říká **Label1**.
 
-1. Klikněte na tlačítko **kliknutím na tuto** tlačítko **Form1** dialogové okno. Všimněte si, **Label1** text změní na **Hello World!** .
+1. Klepněte **na toto** tlačítko v dialogovém okně **Formulář1.** Všimněte si, že **text Label1** se změní na **Hello World!**.
 
-    ![Dialogové okno Form1, které obsahuje Label1 text ](../ide/media/vb-form1-dialog-hello-world.png)
+    ![Dialogové okno Formulář1 obsahující text Popisek1 ](../ide/media/vb-form1-dialog-hello-world.png)
 
-1. Zavřením dialogového okna **Form1** zastavíte běh aplikace.
+1. Zavřete dialogové okno **Formulář1,** chcete-li aplikaci zastavit.
 
 ## <a name="next-steps"></a>Další kroky
 
 Další informace najdete v následujícím kurzu:
 
 > [!div class="nextstepaction"]
-> [Kurz: vytvoření prohlížeče obrázků](tutorial-1-create-a-picture-viewer.md)
+> [Kurz: Vytvoření prohlížeče obrázků](tutorial-1-create-a-picture-viewer.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-* [Další kurzy Visual Basic](/visualstudio/get-started/visual-basic/)
-* [C#výuka](/visualstudio/get-started/csharp/)
-* [C++výuka](/cpp/get-started/tutorial-console-cpp)
+* [Další výukové programy jazyka Visual Basic](/visualstudio/get-started/visual-basic/)
+* [C# výukové programy](/visualstudio/get-started/csharp/)
+* [Výukové programy pro C++](/cpp/get-started/tutorial-console-cpp)

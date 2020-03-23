@@ -1,5 +1,5 @@
 ---
-title: Cvisenabled – funkce | Dokumentace Microsoftu
+title: Funkce CvIsEnabled | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,14 +15,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 92763e352d04d5aa3e88a68bad7adfcd05897027
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62945411"
 ---
-# <a name="cvisenabled-function"></a>Cvisenabled – funkce
-Určuje, zda všechny relace má povoleno zadaného zprostředkovatele trasování událostí pro Windows.
+# <a name="cvisenabled-function"></a>CvIsEnabled
+Určuje, zda nějaká relace povolila zadaného zprostředkovatele ETW.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,17 +38,17 @@ HRESULT CvIsEnabledEx(
 ```
 
 #### <a name="parameters"></a>Parametry
- `category` Kategorie.
+ `category`Kategorie.
 
- `level` Úroveň důležitosti.
+ `level`Úroveň důležitosti.
 
- `pProvider` Objekt zprostředkovatele platné. Nemůže mít hodnotu NULL.
+ `pProvider`Platný objekt zprostředkovatele. Nemůže být null.
 
 ## <a name="return-value"></a>Návratová hodnota
- S_OK, pokud zprostředkovatel je aktuálně povoleno. S_FALSE, pokud zprostředkovatel je momentálně zakázané. Kód chyby v případě, že došlo k chybám. Použijte makro se nezdařilo pro kontrolu chybovou podmínku a pak vyhledejte hodnotu S_OK/S_FALSE.
+ S_OK, pokud je aktuálně povolen zprostředkovatel. S_FALSE, pokud je zprostředkovatel aktuálně zakázán. Kód chyby v případě, že došlo k chybám. Pomocí makra FAILED zkontrolujte chybový stav a potom zkontrolujte S_OK/S_FALSE.
 
 ## <a name="requirements"></a>Požadavky
- **Header:** *cvmarkers.h*
+ **Záhlaví:** *cvmarkers.h*
 
-## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na knihovnu C++](../profiling/cpp-library-reference.md)

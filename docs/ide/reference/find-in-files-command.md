@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 87d313c29be1d5fb4f1be1febe9b5b7cd32e7e11
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569579"
 ---
 # <a name="find-in-files-command"></a>Najít v souborech – příkaz
-Vyhledejte soubory pomocí podmnožiny možností dostupných na kartě **najít v souborech** okna **Najít a nahradit** .
+Prohledávejte soubory pomocí podmnožiny možností dostupných na kartě **Najít v souborech** v okně **Najít a nahradit.**
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,63 +31,63 @@ Edit.FindinFiles findwhat [/case] [/ext:extensions]
 [/text2] [/wild|/regex] [/word]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 
 `findwhat`\
-Požadováno. Text, který se má shodovat.
+Povinná hodnota. Text, který má odpovídat.
 
 ## <a name="switches"></a>Přepínače
-/Case nebo/c\
-Volitelné. Shody se objeví pouze v případě, že velká a malá písmena přesně odpovídají znakům zadaným v argumentu `findwhat`.
+/case nebo /c\
+Nepovinný parametr. Shody dojít pouze v případě, že velká a `findwhat` malá písmena přesně odpovídají těm, které jsou zadány v argumentu.
 
-/EXT: `extensions`\
-Volitelné. Určuje přípony souborů pro soubory, které mají být prohledány. Pokud není zadaný, použije se předchozí rozšíření, pokud se dřív zadal.
+/ext:`extensions`\
+Nepovinný parametr. Určuje přípony souborů pro prohledávané soubory. Pokud není zadán, předchozí rozšíření se používá, pokud byl dříve zadán.
 
-/Lookin: `searchpath`\
-Volitelné. Adresář, který chcete vyhledat. Pokud cesta obsahuje mezery, uzavřete celou cestu do uvozovek.
+/lookin:`searchpath`\
+Nepovinný parametr. Adresář k vyhledávání. Pokud cesta obsahuje mezery, uzavřete celou cestu do uvozovek.
 
-/Names nebo/n\
-Volitelné. Zobrazí seznam názvů souborů, které obsahují shody.
+/names or /n\
+Nepovinný parametr. Zobrazí seznam názvů souborů, které obsahují shody.
 
-/Options nebo/T\
-Volitelné. Zobrazí seznam aktuálních nastavení možností hledání a neprovádí hledání.
+/options nebo /t\
+Nepovinný parametr. Zobrazí seznam aktuálního nastavení možností hledání a neprovede vyhledávání.
 
-/Regex nebo/r\
-Volitelné. Používá předem definované speciální znaky v argumentu `findwhat` jako notace, které reprezentují vzory textu, nikoli literální znaky. Úplný seznam znaků regulárních výrazů naleznete v tématu [regulární výrazy](../../ide/using-regular-expressions-in-visual-studio.md).
+/regex nebo /r\
+Nepovinný parametr. Používá předdefinované speciální znaky `findwhat` v argumentu jako zápisy, které představují vzorky textu spíše než literál znaky. Úplný seznam znaků regulárních výrazů naleznete [v tématu Regulární výrazy](../../ide/using-regular-expressions-in-visual-studio.md).
 
-/Reset po vyčištění nebo/e\
-Volitelné. Vrátí možnosti hledání do jejich výchozího nastavení a neprovádí hledání.
+/reset nebo /e\
+Nepovinný parametr. Vrátí možnosti hledání do výchozího nastavení a neprovede hledání.
 
 /stop\
-Volitelné. Zastaví aktuální operaci hledání, pokud právě probíhá. Při zadání `/stop` bude hledání ignorovat všechny ostatní argumenty. Pokud například chcete zastavit aktuální hledání, zadejte následující:
+Nepovinný parametr. Zastaví aktuální operaci hledání, pokud probíhá. Hledání ignoruje všechny ostatní `/stop` argumenty, pokud byla zadána. Chcete-li například zastavit aktuální hledání, zadejte následující:
 
 ```cmd
 >Edit.FindinFiles /stop
 ```
 
-/Sub nebo/s\
-Volitelné. Vyhledá podsložky v adresáři zadaném v argumentu/Lookin:`searchpath`.
+/sub nebo /s\
+Nepovinný parametr. Prohledá podsložky v adresáři určeném`searchpath` v argumentu /lookin: .
 
-/Text2 nebo/2 \
-Volitelné. Zobrazí výsledky hledání v okně výsledky hledání 2.
+/text2 nebo /2\
+Nepovinný parametr. Zobrazí výsledky hledání v okně Najít výsledky 2.
 
-/Wild nebo/l\
-Volitelné. Používá předem definované speciální znaky v argumentu `findwhat` jako notace, které reprezentují znak nebo sekvenci znaků.
+/wild nebo /l\
+Nepovinný parametr. Používá předdefinované speciální znaky `findwhat` v argumentu jako zápisy představující znak nebo posloupnost znaků.
 
-/Word nebo/W\
-Volitelné. Vyhledává pouze celá slova.
+/word nebo /w\
+Nepovinný parametr. Vyhledá pouze celá slova.
 
 ## <a name="example"></a>Příklad
-Tento příklad vyhledá btnCancel ve všech souborech. CLS umístěných ve složce Moje projekty sady Visual Studio a v okně výsledky hledání 2 zobrazí informace o shodě.
+Tento příklad vyhledá btnCancel ve všech souborech CLS umístěných ve složce "Moje projekty sady Visual Studio" a zobrazí informace o shodě v okně Najít výsledky 2.
 
 ```cmd
 >Edit.FindinFiles btnCancel /lookin:"c:/My Visual Studio Projects" /ext:*.cls /text2
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Najít v souborech](../../ide/find-in-files.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Pole Najít/příkaz](../../ide/find-command-box.md)
+- [Najít/Příkazové pole](../../ide/find-command-box.md)
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

@@ -1,5 +1,5 @@
 ---
-title: R a kontejnery Dockeru
+title: Kontejnery R a Dockeru
 description: Jak nastavit kontejnery Dockeru pro R a připojit se k nim pomocí sady Visual Studio.
 ms.date: 12/04/2017
 ms.topic: conceptual
@@ -10,47 +10,47 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: 8c5b4278ab50aac96703f03e74c014d29831f22e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62810141"
 ---
-# <a name="use-docker-containers-with-r-tools-for-visual-studio"></a>Použití kontejnerů Dockeru pomocí nástrojů R pro Visual Studio
+# <a name="use-docker-containers-with-r-tools-for-visual-studio"></a>Použití kontejnerů Dockeru s nástroji R pro Visual Studio
 
-Nástroje R pro Visual Studio (RTVS) verzi 1.3 +, společně s instalace [Docker pro Windows](https://www.docker.com/docker-windows), podporuje práci s kontejnery Dockeru.
+Nástroje R pro Visual Studio (RTVS) verze 1.3+ spolu s instalací [Dockeru pro Windows](https://www.docker.com/docker-windows)podporují práci s kontejnery Dockeru.
 
 ## <a name="create-a-container"></a>Vytvoření kontejneru
 
-1. Vyberte **kontejnery** tlačítko v pravém horním rohu **pracovní prostory** okno (**nástroje R** > **Windows**  >  **Pracovní prostory**). V okně vás upozorní, pokud nemáte nainstalovaný Docker pro Windows a poskytuje odkaz pro stažení. Instalace Dockeru může vyžadovat restartování počítače.
+1. V pravém rohu okna **Pracovní prostory pracovních prostorů** vyberte tlačítko **Kontejnery** **(R Tools** > **Windows** > **Workspaces).** Okno vás informuje, pokud nemáte nainstalovaný Docker pro Windows a poskytuje odkaz ke stažení. Instalace Dockeru může vyžadovat restartování počítače.
 
-    ![Okno pracovní prostory v nástroje jazyka R pro Visual Studio (VS2017) pomocí příkazu kontejnery](media/container-workspaces-window.png)
+    ![Okno pracovních prostorů v nástrojích R pro Visual Studio (VS2017) s příkazem Kontejnery](media/container-workspaces-window.png)
 
-1. V **kontejnery** okně **vytvořit**:
+1. V okně **Kontejnery** vyberte **Vytvořit**:
 
-    ![Vytvoření příkazu v okně kontejnery](media/containers-window-create.png)
+    ![Příkaz Vytvořit v okně Kontejnery](media/containers-window-create.png)
 
-1. Zadejte požadované informace do dialogového okna a vyberte **vytvořit**. Přihlašovací údaje, které zadáte slouží také k vytvoření účtu v Linuxu, pomocí kterého můžete přihlásit později.
+1. Vyplňte požadované informace v dialogovém okně a vyberte **Vytvořit**. Zadávaná pověření se také používají k vytvoření účtu v Systému Linux, pomocí kterého se přihlásíte později.
 
-    ![Zadání názvu kontejneru a přihlašovací údaje při vytváření kontejneru](media/containers-window-create-fill.png)
+    ![Zadání názvu kontejneru a pověření při vytváření kontejneru](media/containers-window-create-fill.png)
 
-1. Může trvat nějakou dobu RTVS k sestavení image. **Výstup** okna v sadě Visual Studio zobrazí průběh, ale může zdát, že nebudou dělat většinu během dlouhých image stáhne; buďte připraveni buďte prosím trpěliví. Jakmile se image se sestavuje, RTVS spustí kontejner a zobrazí se v **kontejneru** okna. Ovládací prvky vpravo stop, odebrat nebo restartujte kontejneru.
+1. Může trvat nějakou dobu pro RTVS k vytvoření bitové kopie. **Okno Výstup** v sadě Visual Studio zobrazuje průběh, ale může se zdát, že během zdlouhavého stahování obrázků neprovádí mnoho; být připraveni být trpěliví. Po dokončení bitové kopie rtvs spustí kontejner a zobrazí se v okně **Kontejner.** Ovládací prvky na pravé zastavení, odebrání nebo restartování kontejneru.
 
-    ![Okno kontejner dokončené kontejnery](media/containers-window-created.png)
+    ![Okno kontejnerů zobrazující dokončený kontejner](media/containers-window-created.png)
 
-## <a name="connect-to-a-container"></a>Připojte se ke kontejneru
+## <a name="connect-to-a-container"></a>Připojení ke kontejneru
 
-1. **Místní spouštění kontejnerů** část **pracovní prostory** v okně se zobrazí kontejnery spuštěné na portu 5444 RTVS démona. (Viz [vzdálené R Server pro Linux](setting-up-remote-r-service-on-linux.md) podrobnosti o konfiguraci démona.)
+1. V části **Místní spuštěné kontejnery** v okně **Pracovní prostory** se zobrazí kontejnery s daemonem RTVS na portu 5444. (Podrobnosti o konfiguraci daemonu naleznete v tématu [Remote R Server for Linux.)](setting-up-remote-r-service-on-linux.md)
 
-    ![Pracovní prostory okno zobrazující dostupné kontejnery](media/workspaces-window-running-containers.png)
+    ![Okno pracovních prostorů zobrazující dostupné kontejnery](media/workspaces-window-running-containers.png)
 
-1. K připojení do kontejneru, dvakrát klikněte na název kontejneru nebo vyberte šipku vpřed tlačítka vpravo. Když se připojí, zobrazí **interaktivní R** okno (naleznete v tématu [pracovat interaktivní okno R](interactive-repl-for-r-in-visual-studio.md)):
+1. Chcete-li se připojit ke kontejneru, poklepejte na název kontejneru nebo vyberte tlačítko šipky vpřed vpravo. Při připojení se zobrazí interaktivní okno **R** (viz [Práce s interaktivním oknem R):](interactive-repl-for-r-in-visual-studio.md)
 
-    ![Okno pracovní prostory a okno REPL otevřené pro kontejner](media/workspaces-window-container-connected.png)
+    ![Okno pracovních prostorů a okno REPL otevřené pro kontejner](media/workspaces-window-container-connected.png)
 
-## <a name="use-custom-built-images"></a>Použití vlastními silami sestavených imagí
+## <a name="use-custom-built-images"></a>Použití vlastních obrazů
 
-RTVS detekuje a umožňuje správu kontejnerů vytvořené pomocí uživatelské Image, jako jsou image microsoft/rtvs popsané v následující soubor docker. Základní image se tady použít má rtvs démonů, R 3.4.2 a běžné balíčky R, které jsou předem nainstalované. **Poznámka:**: Změna uživatelského jména a hesla je vidět tady podle potřeby.
+RTVS detekuje a umožňuje správu kontejnerů vytvořených pomocí vlastních bitových kopií, jako je například image Microsoft/RTVS popsaná v souboru dockeru níže. Základní obrázek zde použitý má rtvs-daemon, R 3.4.2 a běžné balíčky R předinstalované. **Poznámka:** Změňte uživatelské jméno a heslo zde zobrazené podle potřeby.
 
 ```docker
 FROM microsoft/rtvs:1.3-ub1604-r3.4.2
@@ -61,11 +61,11 @@ RUN echo "ruser1:foobar" | chpasswd
 #RUN Rscript --vanilla -e "install.packages(c('AzureML','wordcloud'), repos = 'http://cran.us.r-project.org');"
 ```
 
-Použijte následující příkaz k sestavení image, mění se název kontejneru ( `--name` argument) podle potřeby:
+K vytvoření bitové kopie použijte následující příkaz, `--name` který podle potřeby změní název kontejneru (argument):
 
 ```bash
 docker build -t my-rtvs-image:latest .
 docker run -p 6056:5444 --name my-rtvs-container my-rtvs-image:latest rtvsd
 ```
 
-`-p 6056:5444` Argument mapování portů 6056 na interní port 5444, která RTVS využívá ke zjištění rtvs démona. Každý kontejner, který zpřístupňuje port kontejneru 5444 je uveden v **pracovní prostory** okna. Pak můžete použít **pracovní prostory** okno pro připojení k kontejneru pomocí `<<unix>>\ruser1` jako uživatelské jméno a "panel" jako heslo, pokud zadáte jiné přihlašovací údaje v souboru docker.
+Argument `-p 6056:5444` mapuje port 6056 na interní port 5444, který RTVS používá k detekci rtvs-daemon. Všechny kontejnery, které zpřístupňuje port kontejneru 5444 je uveden v okně **pracovníprostory.** Potom můžete použít okno **Pracovní prostory** pro `<<unix>>\ruser1` připojení ke kontejneru pomocí jako uživatelské jméno a "foobar" jako heslo, pokud jste zadali různá pověření v souboru dockeru.

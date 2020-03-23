@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a3440c66d79fef3eac3744681870c9ce1ed0e97b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75593548"
 ---
 # <a name="set-current-process"></a>Nastavit aktuální proces
@@ -27,13 +27,13 @@ Nastaví zadaný proces jako aktivní proces v ladicím programu.
 Debug.SetCurrentProcess index
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 `index`
 
-Požadováno. Index procesu.
+Povinná hodnota. Index procesu.
 
 ## <a name="remarks"></a>Poznámky
-Můžete se připojit k více procesům při ladění, ale v Dubber je v daném okamžiku aktivní pouze jeden proces. K nastavení aktivního procesu lze použít příkaz `SetCurrentProcess`.
+Při ladění můžete připojit k více procesům, ale v dubberu je v daném okamžiku aktivní pouze jeden proces. Pomocí příkazu `SetCurrentProcess` můžete nastavit aktivní proces.
 
 ## <a name="example"></a>Příklad
 
@@ -41,7 +41,7 @@ Můžete se připojit k více procesům při ladění, ale v Dubber je v daném 
 >Debug.SetCurrentProcess 1
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)

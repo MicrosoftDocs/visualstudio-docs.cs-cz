@@ -1,44 +1,44 @@
 ---
 title: Přidávání a odebírání projektových položek
-description: Tento dokument popisuje, jak přidávat a odebírat položky projektu v sadě Visual Studio pro Mac
+description: Tento dokument popisuje, jak přidat a odebrat položky projektu v Visual Studiu pro Mac
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 4071689D-1C21-42D7-8963-550E7BCB4B67
 ms.openlocfilehash: 94bb56fba0b90f29c291bc2c4b95976810dd21c6
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "67692962"
 ---
 # <a name="adding-and-removing-project-items"></a>Přidávání a odebírání projektových položek
 
-Můžete přidat nové položky projektu do projektu kliknutím pravým tlačítkem na uzel projektu v **oblasti řešení** a přejdete do **Přidat > Nový soubor**:
+Nové položky projektu můžete do projektu přidat kliknutím pravým tlačítkem myši na uzel Projektu na **panelu řešení** a procházením **položky Přidat > nový soubor**:
 
 ![Přidat novou položku projektu](media/add-and-remove-project-items-image1.png)
 
-Zobrazí dialogové okno Nový soubor, který obsahuje soubor šablony založené na typu aplikace, kterou vytváříte kromě výchozích šablon, jako je například prázdné třídy nebo prázdný výčty. Například pokud vytváříte aplikace pro iOS, můžete vybrat **scénáře** vytvořit nový prázdný soubor scénáře:
+Zobrazí se dialogové okno Nový soubor, který poskytuje šablony souborů založené na typu aplikace, kterou vytváříte, kromě výchozích šablon, jako jsou prázdné třídy nebo prázdné výčty. Například pokud píšete aplikaci pro iOS, můžete vybrat **Storyboard** a vytvořit nový prázdný soubor storyboardu:
 
-![Přidat nový prázdný scénář v Iosu](media/add-and-remove-project-items-image2.png)
+![Přidání nového prázdného scénáře v iOS](media/add-and-remove-project-items-image2.png)
 
 ## <a name="adding-existing-files"></a>Přidání existujících souborů
 
-Můžete přidat existující soubory do svého projektu tak, že kliknete pravým tlačítkem na uzel projektu a vyberete **Přidat > Přidat soubory...** . Můžete také přidat celou složku, vyberte **Přidat > Přidat existující složku...** . Zobrazí se prohlížeč souborů, které umožňuje hledat systému pro požadovanou položku Přidat.
+Existující soubory můžete do projektu přidat tak, že kliknete pravým tlačítkem myši na uzel Projektu a vyberete **přidat > přidat soubory...**. Chcete-li přidat celou složku, vyberte přidat **> přidat existující složku...**. Zobrazí se prohlížeč souborů, který umožňuje vyhledat požadovanou položku, kterou chcete přidat, v systému.
 
-## <a name="removing-items"></a>Odebírání položek
+## <a name="removing-items"></a>Odebrání položek
 
-Chcete-li odebrat položku z aktuálního projektu, klikněte pravým tlačítkem na položku a vyberte **odebrat**
+Chcete-li odebrat položku z aktuálního projektu, klepněte na ni pravým tlačítkem myši a vyberte **příkaz Odebrat.**
 
 ![Odebrat položku](media/add-and-remove-project-items-image3.png)
 
-Zobrazí se dialogové okno Odstranit položky. Vyberte jednu z možností a odebrat z projektu:
+Zobrazí se dialogové okno odstranit položku. Vyberte jednu z možností, kterou chcete z projektu odebrat:
 
-![Odstranit položky dialogového okna](media/add-and-remove-project-items-image4.png)
+![Dialogové okno Odstranit položku](media/add-and-remove-project-items-image4.png)
 
-* **Odstranit** – odebere položku z projektu a z disku.
-* **Odebrat z projektu** – odebere položku z projektu, ale neodebere se z disku
+* **Odstranit** - Odebere položku z projektu a z disku.
+* **Odebrat z projektu** – odebere položku z projektu, ale neodebere ji z disku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Řešení a projekty v sadě Visual Studio (ve Windows)](/visualstudio/ide/solutions-and-projects-in-visual-studio)

@@ -1,5 +1,5 @@
 ---
-title: Konfigurace portů pro testovací Kontroléry a testovací agenty
+title: Konfigurace portů pro testovací řadiče a testovací agenty
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,58 +14,58 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2228f5ac4dce4743fa6dafbb321f0106b5d6cc11
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595940"
 ---
-# <a name="configure-ports-for-test-controllers-and-test-agents"></a>Konfigurace portů pro testovací kontroléry a testovací agenty
+# <a name="configure-ports-for-test-controllers-and-test-agents"></a>Konfigurace portů pro testovací řadiče a testovací agenty
 
-Můžete změnit výchozí příchozí porty používané testovací kontrolér, testovacího agenta a klientem. To může být nutné v případě, že se pokoušíte použít testovací kontrolér, testovacího agenta nebo klienta spolu s dalším softwarem této je v konfliktu s nastavením portu. Dalším důvodem pro změnu portů je omezení brány firewall mezi řadičem testu a klientem. V tomto případě můžete ručně nakonfigurovat port, který chcete zpřístupnit jej pro bránu firewall tak, aby řadič testu mohl odesílat výsledky klientovi.
+Můžete změnit výchozí příchozí porty používané testovacím řadičem, testovacím agentem a klientem. To může být nezbytné, pokud se pokoušíte použít testovací řadič, testovacího agenta nebo klienta společně s jiným softwarem, který je v konfliktu s nastavením portu. Dalším důvodem pro změnu portů je z důvodu omezení brány firewall mezi testovacím řadičem a klientem. V takovém případě můžete chtít ručně nakonfigurovat port tak, aby vyhovoval povolení pro bránu firewall tak, aby testovací řadič mohl odeslat výsledky klientovi.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Následující obrázek znázorňuje spojovací body mezi řadičem testu, agentem testu a klienta. Poskytuje přehled o používaných portech pro příchozí a odchozí připojení, jakož i omezení zabezpečení použité na těchto portech.
+Následující obrázek znázorňuje spojovací body mezi testovacím řadičem, testovacím agentem a klientem. Popisuje, které porty se používají pro příchozí a odchozí připojení, stejně jako omezení zabezpečení používané na těchto portech.
 
-![Testovací kontrolér a porty a zabezpečení testovacího agenta](../test/media/test-controller-agent-firewall.png)
+![Testovací řadič a porty testovacího agenta a zabezpečení](../test/media/test-controller-agent-firewall.png)
 
 ## <a name="incoming-connections"></a>Příchozí připojení
 
-Výchozí port používaný řadičem testu je 6901 a výchozí port agenta testu je 6910. Klient používá náhodný port ve výchozím nastavení, která se používá k získání výsledků testů z testovacího kontroléru. Pro všechna příchozí připojení řadič testu ověří volajícího a ověří, zda patří do konkrétní skupiny zabezpečení.
+Výchozí port používaný testovacím řadičem je 6901 a výchozí port testovacího agenta je 6910. Klient používá náhodný port ve výchozím nastavení, který se používá k příjmu výsledků testu z testovacího řadiče. Pro všechna příchozí připojení testovací řadič ověří volající ho a ověří, zda patří do určité skupiny zabezpečení.
 
-- **Testovací Kontrolér** příchozí připojení jsou na portu TCP 6901. Pokud potřebujete, můžete nakonfigurovat příchozí port. Další informace najdete v tématu [konfigurace příchozích portů](#configure-the-incoming-ports).
+- **Testovací řadič** Příchozí připojení jsou na portu TCP 6901. V případě potřeby můžete nakonfigurovat příchozí port. Další informace naleznete [v tématu Konfigurace příchozích portů](#configure-the-incoming-ports).
 
-    Testovací kontrolér musí být schopen provést odchozí připojení k testovacímu agentovi a do klienta.
+    Testovací řadič musí být schopen provést odchozí připojení k testovacím agentům a klientovi.
 
     > [!NOTE]
-    > Testovací kontrolér potřebuje **souborů a tiskáren sdílení** otevřené připojení.
+    > Testovací řadič potřebuje otevřené příchozí připojení **pro sdílení souborů a tiskáren.**
 
-- **Testovací Agent** příchozí připojení jsou na portu TCP 6910. Pokud potřebujete, můžete nakonfigurovat příchozí port. Další informace najdete v tématu [konfigurace příchozích portů](#configure-the-incoming-ports).
+- **Testovací agent** Příchozí připojení jsou na portu TCP 6910. V případě potřeby můžete nakonfigurovat příchozí port. Další informace naleznete [v tématu Konfigurace příchozích portů](#configure-the-incoming-ports).
 
-   Testovací agent musí být schopen provést odchozí připojení ke kontroleru testů.
+   Testovací agent musí být schopen provést odchozí připojení k testovacímu řadiči.
 
-- **Klient** standardně náhodný port TCP používaný pro příchozí připojení. Pokud potřebujete, můžete nakonfigurovat příchozí port. Další informace najdete v tématu [konfigurace příchozích portů](#configure-the-incoming-ports).
+- **Klient** Ve výchozím nastavení se pro příchozí připojení používá náhodný port TCP. V případě potřeby můžete nakonfigurovat příchozí port. Další informace naleznete [v tématu Konfigurace příchozích portů](#configure-the-incoming-ports).
 
-   Pokud testovací kontrolér pokusí o připojení klienta první čas, může se zobrazit upozornění brány firewall.
+   Při prvním pokusu o připojení ke klientovi může být upozornění brány firewall.
 
-   V systému Windows Server 2008 jsou upozornění brány firewall ve výchozím nastavení zakázána a je třeba ručně přidat výjimky brány Firewall pro klientské programy (*devenv.exe*, *mstest.exe*, *mlm.exe*) tak, aby mohl přijímat příchozí připojení.
+   V systému Windows Server 2008 jsou oznámení brány firewall ve výchozím nastavení zakázána a je nutné ručně přidat výjimky brány firewall pro klientské programy (*devenv.exe*, *mstest.exe*, *mlm.exe*), aby mohla přijímat příchozí připojení.
 
 ## <a name="outgoing-connections"></a>Odchozí připojení
 
-Pro všechny odchozí připojení se používají náhodné porty TCP.
+Náhodné porty TCP se používají pro všechna odchozí připojení.
 
-- **Testovací Kontrolér** testovací kontrolér musí být schopen provést odchozí připojení k agentům a klientovi.
+- **Testovací řadič** Testovací řadič musí být schopen provést odchozí připojení k agentům a klientovi.
 
-- **Testovací Agent** testovací agent musí být schopen provést odchozí připojení ke Kontroleru.
+- **Testovací agent** Testovací agent musí být schopen provést odchozí připojení k řadiči.
 
-- **Klient** klienta musí být schopen provést odchozí připojení ke Kontroleru.
+- **Klient** Klient musí být schopen provést odchozí připojení k řadiči.
 
 ## <a name="configure-the-incoming-ports"></a>Konfigurace příchozích portů
 
-Postupujte podle těchto pokynů ke konfiguraci portů pro testovací kontrolér a testovací agenty.
+Postupujte podle těchto pokynů a nakonfigurujte porty pro testovací řadič a testovací agenty.
 
-- **Službu řadiče** upravte hodnotu portu úpravou *% ProgramFiles (x86) %\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config* souboru:
+- **Služba řadiče** Upravte hodnotu portu úpravou souboru *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config:*
 
     ```xml
     <appSettings>
@@ -73,7 +73,7 @@ Postupujte podle těchto pokynů ke konfiguraci portů pro testovací kontrolér
     </appSettings>
     ```
 
-- **Služba agenta** upravte port úpravou *% ProgramFiles (x86) %\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTAgentService.exe.config* souboru:
+- **Služba agenta** Upravte port úpravou souboru *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTAgentService.exe.config:*
 
     ```xml
     <appSettings>
@@ -81,12 +81,12 @@ Postupujte podle těchto pokynů ke konfiguraci portů pro testovací kontrolér
     </appSettings>
     ```
 
-- **Klient** přidat následující registru pomocí Editoru registru (**DWORD**) hodnoty. Klient použije jeden z portů v určeném rozsahu pro příjem dat z kontroleru testů:
+- **Klient** Pomocí editoru registru přidejte následující hodnoty registru (**DWORD).** Klient použije jeden z portů ze zadaného rozsahu pro příjem dat z testovacího řadiče:
 
      **HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeStart**
 
      **HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeEnd**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md)

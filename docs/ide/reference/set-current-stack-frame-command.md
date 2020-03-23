@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 088fe9871b54e69b015ffdc9dcdaf23de3d98e0e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72747760"
 ---
 # <a name="set-current-stack-frame-command"></a>Nastavit aktuální rámec zásobníku – příkaz
@@ -29,10 +29,10 @@ Umožňuje nastavit konkrétní rámec zásobníku.
 Debug.SetCurrentStackFrame index
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 `index`
 
-Požadováno. Vybere rámec zásobníku podle jeho indexu.
+Povinná hodnota. Vybere rámec zásobníku podle jeho indexu.
 
 ## <a name="example"></a>Příklad
 
@@ -40,9 +40,9 @@ Požadováno. Vybere rámec zásobníku podle jeho indexu.
 >Debug.SetCurrentStackFrame 1
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Pole Najít/příkaz](../../ide/find-command-box.md)
+- [Najít/Příkazové pole](../../ide/find-command-box.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

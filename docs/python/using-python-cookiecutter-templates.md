@@ -1,6 +1,6 @@
 ---
 title: Použití šablon CookieCutter s Pythonem
-description: Visual Studio podporuje grafické Cookiecutter rozšíření ke zjištění šablony pro kód Python a vytváření projektů z těch šablon.
+description: Visual Studio podporuje grafické rozšíření Cookiecutter pro zjišťování šablon pro kód Pythonu a vytváření projektů z těchto šablon.
 ms.date: 01/28/2019
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -11,96 +11,96 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: eeea19b1d2ff4a4d24f27280a48b9ae673406908
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62832144"
 ---
 # <a name="use-the-cookiecutter-extension"></a>Použití rozšíření Cookiecutter
 
-[Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) poskytuje grafické uživatelské rozhraní pro zjišťování šablony, zadejte možnosti šablony a vytváření projektů a souborů. Je součástí sady Visual Studio 2017 a novější a je možné nainstalovat odděleně v dřívějších verzích sady Visual Studio.
+[Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) poskytuje grafické uživatelské rozhraní pro objevování šablon, možnosti vstupních šablon a vytváření projektů a souborů. Je součástí Sady Visual Studio 2017 a novější a lze ji nainstalovat samostatně v dřívějších verzích sady Visual Studio.
 
-Cookiecutter vyžaduje Python 3.3 nebo novější (32bitové nebo 64bitové) nebo pro platformu Anaconda 3 4.2 nebo novější (32bitová nebo 64bitová verze). Pokud není k dispozici vhodný interpret Pythonu, Visual Studio zobrazí upozornění. Pokud je spuštěna sada Visual Studio, nainstalujte interpret Pythonu, klikněte na tlačítko **Domů** tlačítko na panelu nástrojů Cookiecutter k detekci na nově nainstalovaný překladač. (Viz [prostředí Pythonu](managing-python-environments-in-visual-studio.md) pro další informace o prostředích obecně.)
+Cookiecutter vyžaduje Python 3.3 nebo novější (32bitový nebo 64bitový) nebo Anaconda 3 4.2 nebo novější (32bitový nebo 64bitový). Pokud není k dispozici vhodný překladač Pythonu, Visual Studio zobrazí upozornění. Pokud nainstalujete interpret pythonu, když je spuštěna Visual Studio, klepněte na tlačítko **Domů** na panelu nástrojů Cookiecutter pro detekci nově nainstalovaného interpretu. (Další informace o prostředích obecně najdete v [tématu Prostředí](managing-python-environments-in-visual-studio.md) Pythonu.)
 
-Po instalaci, vyberte **zobrazení** > **Cookiecutter Explorer** otevřete jeho okno:
+Po instalaci otevřete okno vyberte **Zobrazit** > **Průzkumník souborů cookie:**
 
-![Hlavní okno Cookiecutter](media/cookiecutter-overview.png)
+![Cookiecutter hlavní okno](media/cookiecutter-overview.png)
 
-## <a name="cookiecutter-workflow"></a>Cookiecutter pracovního postupu
+## <a name="cookiecutter-workflow"></a>Cookiecutter workflow
 
-Práce s Cookiecutter je proces procházení a výběr šablony, klonování do místního počítače, nastavení možností a vytváření kódu z této šablony, jak je popsáno v následující části.
+Práce s Cookiecutter je proces procházení a výběru šablony, klonování do místního počítače, nastavení možností, pak vytváření kódu z této šablony, jak je popsáno v následujících částech.
 
 ### <a name="browse-templates"></a>Procházet šablony
 
-Na domovské stránce Cookiecutter zobrazí seznam šablon lze vybírat, uspořádané do následujících skupin:
+Domovská stránka Cookiecutter zobrazuje seznam šablon, ze kterých si můžete vybrat, uspořádaných do následujících skupin:
 
 | Skupina | Popis |
 | --- | --- |
-| **Nainstalovat** | Šablony, které byly nainstalovány do místního počítače. Při online šablona se používá, je jeho úložiště automaticky naklonovalo do podsložky *~/.cookiecutters*. Můžete odstranit vybrané šablony nainstalovaných stisknutím kombinace kláves **odstranit**. |
-| **Doporučené** | Šablony načíst z doporučených informačního kanálu. Výchozí kanál spravuje Microsoft. Zobrazit [Cookiecutter možnosti](#cookiecutter-options) níže podrobnosti o přizpůsobení informačního kanálu. |
-| **GitHub** | Výsledky hledání Githubu pro klíčové slovo cookiecutteru. Výsledky z Githubu vrátit stránkované sestavy, pokud jsou k dispozici více výsledků **zatížení více** se zobrazí na konci seznamu. |
-| **Vlastní** | Při zadání vlastního umístění se do vyhledávacího pole, zobrazí se v této skupině. Můžete buď zadejte úplnou cestu k úložišti GitHub, nebo úplnou cestu ke složce na místním disku. |
+| **Nainstalovaný** | Šablony, které byly nainstalovány do místního počítače. Při použití online šablony je její úložiště automaticky klonováno do podsložky *~/.cookiecutters*. Vybranou nainstalovanou šablonu můžete odstranit stisknutím **klávesy Delete**. |
+| **Doporučené** | Šablony načtené z doporučeného informačního kanálu. Výchozí informační kanál je kurátorem společnosti Microsoft. Podrobnosti o přizpůsobení informačního kanálu naleznete níže v [možnostech cookiecutteru.](#cookiecutter-options) |
+| **GitHubu** | GitHub výsledky vyhledávání pro cookiecutter klíčové slovo. Výsledky z GitHub vrátit stránkované, pokud jsou k dispozici další výsledky, **Načíst více** se zobrazí na konci seznamu. |
+| **Vlastní** | Když je do vyhledávacího pole zadáno vlastní umístění, zobrazí se v této skupině. Můžete buď zadat úplnou cestu k úložišti GitHub, nebo úplnou cestu ke složce na místním disku. |
 
 ### <a name="cloning"></a>Klonování
 
-Když vyberete šablonu, za nímž následuje **Další**, Cookiecutter vytvoří kopii místních pracovat.
+Když vyberete šablonu následovanou **Next**, Cookiecutter vytvoří místní kopii pro práci.
 
-Pokud vyberete šablonu z **doporučená** nebo **Githubu** skupiny, nebo zadejte vlastní adresu URL do vyhledávacího pole a vyberte tuto šablonu, má klonovat a nainstalován v místním počítači. Pokud tato šablona byla nainstalována v předchozí relaci sady Visual Studio, automaticky se odstraní a naklonované na nejnovější verzi.
+Pokud vyberete šablonu ze skupin **Doporučené** nebo **GitHub** nebo do vyhledávacího pole zadáte vlastní adresu URL a vyberete ji, naklonuje se a nainstaluje do místního počítače. Pokud byla tato šablona nainstalována v předchozí relaci sady Visual Studio, je automaticky odstraněna a je klonována nejnovější verze.
 
-Pokud vyberete šablonu z **nainstalováno** skupiny, nebo zadejte cestu k vlastní složky do vyhledávacího pole a vyberte šablonu, Visual Studio načte tato šablona bez klonování.
+Pokud vyberete šablonu ze **skupiny Nainstalované** nebo do vyhledávacího pole zadáte vlastní cestu ke složce a vyberete tuto šablonu, visual studio tuto šablonu načte bez klonování.
 
 > [!Important]
-> V rámci jedné složky se klonují šablony Cookiecutter *~/.cookiecutters*. Každá podsložka je pojmenován název úložiště git, který neobsahuje uživatelské jméno Githubu. Konfliktů může nastat, pokud naklonujete různé šablony se stejným názvem, které pocházejí z různých autoři. Cookiecutter v tomto případě zabrání přepsání existující šablonu s jinou šablonu se stejným názvem. Pokud chcete nainstalovat další šablony, musíte nejprve odstranit stávající.
+> Cookiecutter šablony jsou klonovány pod jednou složkou *~/.cookiecutters*. Každá podsložka je pojmenována po názvu git repozitáře, který neobsahuje uživatelské jméno GitHub. Konflikty mohou nastat, pokud klonujete různé šablony se stejným názvem, které pocházejí od různých autorů. V tomto případě cookiecutter zabraňuje přepsání stávající šablony jinou šablonou stejného jména. Chcete-li nainstalovat druhou šablonu, musíte nejprve odstranit existující šablonu.
 
-### <a name="set-template-options"></a>Možnosti sada šablony
+### <a name="set-template-options"></a>Nastavení možností šablony
 
-Po instalaci šablony místně Cookiecutter zobrazí stránku možnosti, kde můžete určit, kam chcete Cookiecutter pro vygenerování souborů společně s další možnosti:
+Po instalaci šablony lokálně, Cookiecutter zobrazí možnosti stránku, kde můžete určit, kde chcete Cookiecutter generovat soubory spolu s dalšími možnostmi:
 
-![Stránka Možnosti Cookiecutter](media/cookiecutter-template-options.png)
+![Stránka možností cookiecutteru](media/cookiecutter-template-options.png)
 
-Každé šablony Cookiecutter definuje vlastní sadu možností a určí výchozí hodnotu pro každé z nich (zobrazené jako navrhovaný text do každého vstupního pole). Výchozí hodnota může být fragment kódu, často, pokud je dynamické hodnoty, která používá další možnosti.
+Každá šablona Cookiecutter definuje vlastní sadu možností a určuje výchozí hodnotu pro každou z nich (zobrazenou jako navrhovaný text v každém poli položky). Výchozí hodnota může být fragment kódu, často když se jedná o dynamickou hodnotu, která používá jiné možnosti.
 
-Je možné přizpůsobit výchozí hodnoty pro konkrétní možnosti pomocí konfiguračního souboru uživatele. Když rozšíření Cookiecutter zjistí konfigurační soubor uživatele, přepíše výchozí hodnoty šablony s výchozími hodnotami cestujícího uživatele. Toto chování je podrobněji popsána [cestujícího uživatele](https://cookiecutter.readthedocs.io/en/latest/advanced/user_config.html) část dokumentace Cookiecutter.
+Je možné přizpůsobit výchozí hodnoty pro konkrétní možnosti pomocí konfiguračního souboru uživatele. Když přípona Cookiecutter detekuje konfigurační soubor uživatele, přepíše výchozí hodnoty šablony výchozími hodnotami konfigurace uživatele. Toto chování je popsáno v části [Konfigurace uživatele](https://cookiecutter.readthedocs.io/en/latest/advanced/user_config.html) v dokumentaci Cookiecutter.
 
-Pokud šablona specifikuje konkrétní úkoly sady Visual Studio ke spuštění po generování kódu, zobrazí se další **spustit další úkoly při dokončení** možnost bude nabídnuta, která umožňuje vyjádřit výslovný nesouhlas tyto úlohy. Nejběžnější používání úlohy je otevřete webový prohlížeč, soubory otevřít v editoru, nainstalujte závislosti a tak dále.
+Pokud šablona určuje konkrétní úlohy sady Visual Studio, které mají být spuštěny po generování kódu, zobrazí se další možnost **Spustit další úlohy při dokončení,** která vám umožní odhlásit se z těchto úloh. Nejčastěji se používají úkoly k otevření webového prohlížeče, otevření souborů v editoru, instalaci závislostí a tak dále.
 
-### <a name="create"></a>Create
+### <a name="create"></a>Vytvořit
 
-Jakmile jednou nastavíte požadované možnosti, vyberte **vytvořit** pro generování kódu (zobrazí se upozornění v případě, že výstupní složka není prázdná). Pokud jste obeznámeni s výstupem šablony a nevadí, že přepíšete soubory, můžete upozornění zavřít. V opačném případě vyberte **zrušit**, zadejte prázdnou složku a ručně vytvořené soubory zkopírujte do složky výstupu není prázdná.
+Po nastavení možností vyberte **Vytvořit,** chcete-li vygenerovat kód (zobrazí se upozornění, pokud výstupní složka není prázdná). Pokud jste obeznámeni s výstupem šablony a nevadí vám přepisování souborů, můžete upozornění zavřít. V opačném případě vyberte **Zrušit**, zadejte prázdnou složku a potom ručně zkopírujte vytvořené soubory do neprázdné výstupní složky.
 
-Po úspěšném vytvoření souborů Cookiecutter poskytuje možnosti pro otevření souboru v **Průzkumníka řešení**:
+Po úspěšném vytvoření souborů, Cookiecutter poskytuje možnost otevřít soubory v **Průzkumníku řešení**:
 
-![Příkaz Průzkumník řešení zobrazující Cookiecutter](media/cookiecutter-files-created.png)
+![Cookiecutter zobrazující Průzkumníkřešení, příkaz](media/cookiecutter-files-created.png)
 
-## <a name="cookiecutter-options"></a>Možnosti Cookiecutter
+## <a name="cookiecutter-options"></a>Možnosti cookiecutter
 
-Cookiecutter možnosti jsou k dispozici prostřednictvím **nástroje** > **možnosti** > **Cookiecutter**:
+Cookiecutter možnosti jsou k dispozici prostřednictvím **nástroje** > **Možnosti** > **Cookiecutter:**
 
-![Možnosti Cookiecutter](media/cookiecutter-tools-options.png)
+![Možnosti cookiecutter](media/cookiecutter-tools-options.png)
 
 | Možnost | Popis |
 | --- | --- |
-| **Doporučené adresa URL informačního kanálu** | Umístění doporučené šablony informačního kanálu. Může být adresa URL nebo cestu do místního souboru. Adresa URL ponechte prázdné použít výchozí Microsoft spravované informačního kanálu. Informační kanál poskytuje jednoduchý seznam umístění šablon, vložení znaků newline oddělené. O změny do kurátorované informačního kanálu, ujistěte se, žádost o přijetí změn před [source na Githubu](https://github.com/Microsoft/PTVS/blob/master/Python/Product/Cookiecutter/CookiecutterFeed.txt). |
-| **Zobrazit nápovědu** | Ovládá viditelnost informační panel s nápovědou v horní části okna Cookiecutter. |
+| **Doporučená adresa URL zdroje** | Umístění doporučené šablony krmiva. Může se jedná o adresu URL nebo cestu k místnímu souboru. Ponechejte adresu URL prázdnou a použijte výchozí zdroj kurátora společnosti Microsoft. Informační kanál poskytuje jednoduchý seznam umístění šablon oddělených novými řádky. Chcete-li požádat o změny v kurátorním kanálu, požádejte o přijetí změn proti [zdroji na GitHubu](https://github.com/Microsoft/PTVS/blob/master/Python/Product/Cookiecutter/CookiecutterFeed.txt). |
+| **Zobrazit nápovědu** | Řídí viditelnost informačního panelu nápovědy v horní části okna Cookiecutter. |
 
-## <a name="optimize-cookiecutter-templates-for-visual-studio"></a>Optimalizace šablony Cookiecutter pro Visual Studio
+## <a name="optimize-cookiecutter-templates-for-visual-studio"></a>Optimalizace šablon cookiecutter pro Visual Studio
 
-Základní informace o vytváření šablony Cookiecutter, najdete v článku [Cookiecutter dokumentaci](https://cookiecutter.readthedocs.io/en/latest/first_steps.html). Cookiecutter rozšíření pro Visual Studio podporuje šablony vytvořené pro Cookiecutter v1.4.
+Základy vytváření šablony Cookiecutter naleznete v [dokumentaci k souboru Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/first_steps.html). Rozšíření Cookiecutter pro Visual Studio podporuje šablony vytvořené pro Cookiecutter v1.4.
 
-Výchozí vykreslování proměnné šablony závisí na typu dat (řetězce nebo seznamu):
+Výchozí vykreslení proměnných šablony závisí na typu dat (řetězec nebo seznam):
 
-- Řetězec: Popisek názvu proměnné, textovým polem pro zadání hodnoty a vodoznak znázorňující výchozí hodnotu. Popisek v textovém poli se zobrazí výchozí hodnota.
-- Seznam: Popisek názvu proměnné pole se seznamem pro výběr hodnotu. Popisek tlačítka na pole se seznamem ukazuje výchozí hodnotu.
+- Řetězec: Popisek pro název proměnné, textové pole pro zadání hodnoty a vodoznak zobrazující výchozí hodnotu. Popisek v textovém poli zobrazuje výchozí hodnotu.
+- Seznam: Popisek pro název proměnné, pole se seznamem pro výběr hodnoty. Popisek pole se seznamem zobrazuje výchozí hodnotu.
 
-Je možné zvýšit na tomto vykreslování tak, že zadáte další metadata v vaše *cookiecutter.json* soubor, který je specifické pro Visual Studio (a ignorována Cookiecutter rozhraní příkazového řádku). Všechny vlastnosti jsou volitelné:
+Je možné zlepšit na toto vykreslování zadáním další metadata v souboru *cookiecutter.json,* který je specifický pro Visual Studio (a ignorovány Cookiecutter CLI). Všechny vlastnosti jsou volitelné:
 
 | Vlastnost | Popis |
 | --- | --- |
-| Popisek | Určuje, co se zobrazí nad editor pro proměnnou, ne v názvu proměnné. |
-| Popis | Určuje popis, který se zobrazí v textovém poli, namísto výchozí hodnoty pro tuto proměnnou. |
-| Adresa URL | Změní popisek hypertextového odkazu, se popisek, který zobrazuje adresu URL. Kliknutím na hypertextový odkaz otevře výchozí prohlížeč uživatele pro tuto adresu URL. |
-| Selektor | Umožňuje přizpůsobit editor pro proměnnou. Aktuálně jsou podporovány následující selektory:<ul><li>`string`: Standardního textového pole, výchozí hodnoty pro řetězce.</li><li>`list`: Standard – pole se seznamem, výchozí hodnoty pro seznamy.</li><li>`yesno`: Pole se seznamem si vybrat mezi `y` a `n`, pro řetězce.</li><li>`odbcConnection`: Textové pole s **...**  tlačítko, které se otevře dialogové okno připojení databáze.</li></ul> |
+| Popisek | Určuje, co se zobrazí nad editorem proměnné, namísto názvu proměnné. |
+| Popis | Určuje popis, který se zobrazí v ovládacím prvku pro úpravy, namísto výchozí hodnoty pro tuto proměnnou. |
+| zprostředkovatele identity | Změní popisek na hypertextový odkaz s popisem, který zobrazuje adresu URL. Kliknutím na hypertextový odkaz se otevře výchozí prohlížeč uživatele na tuto adresu URL. |
+| Volič | Umožňuje přizpůsobení editoru pro proměnnou. V současné době jsou podporovány následující voliče:<ul><li>`string`: Standardní textové pole, výchozí pro řetězce.</li><li>`list`: Standardní pole se seznamem, výchozí pro seznamy.</li><li>`yesno`: Pole se seznamem pro výběr mezi `y` a `n`, pro řetězce.</li><li>`odbcConnection`: Textové pole s **tlačítkem ...,** které vyvolá dialogové okno pro připojení k databázi.</li></ul> |
 
 Příklad:
 
@@ -129,13 +129,13 @@ Příklad:
 }
 ```
 
-### <a name="run-visual-studio-tasks"></a>Spouštění úloh v sadě Visual Studio
+### <a name="run-visual-studio-tasks"></a>Spuštění úloh sady Visual Studio
 
-Cookiecutter má funkci zvanou *zavěšení Post-Generate* , který umožňuje spuštění libovolného kódu Python po tyto soubory jsou vygenerovány. I když je flexibilní, neumožňuje snadný přístup k sadě Visual Studio.
+Cookiecutter má funkci nazvanou *Post-Generate Hooks,* která umožňuje spuštění libovolného kódu Pythonu po vygenerování souborů. I když je flexibilní, neumožňuje snadný přístup k sadě Visual Studio.
 
-Můžete například otevřít soubor v editoru sady Visual Studio nebo v jeho webový prohlížeč nebo aktivovat rozhraní Visual Studia, který vyzve uživatele k vytvoření virtuálního prostředí a nainstalujte balíček požadavky.
+Můžete například chtít otevřít soubor v editoru sady Visual Studio nebo ve webovém prohlížeči nebo aktivovat uživatelské rozhraní sady Visual Studio, které vyzve uživatele k vytvoření virtuálního prostředí a požadavků na instalaci balíčku.
 
-Pokud chcete povolit tyto scénáře, Visual Studio vyhledá rozšířených metadat v *cookiecutter.json* , který popisuje příkazy se spouští potom, co uživatel otevře generované soubory v **Průzkumníku řešení** nebo poté, co soubory jsou přidány do existujícího projektu. (Znovu, můžete uživatele zrušit spuštění úlohy zrušením **spustit další úkoly při dokončení** v možnostech šablony.)
+Chcete-li povolit tyto scénáře, Visual Studio hledá rozšířená metadata v *cookiecutter.json,* který popisuje příkazy spustit po uživatel otevře generované soubory v **Průzkumníku řešení** nebo po soubory jsou přidány do existujícího projektu. (Opět platí, že uživatel může odhlásit spuštění úlohy vymazáním **spustit další úkoly při dokončení** v možnostech šablony.)
 
 Příklad:
 
@@ -156,11 +156,11 @@ Příklad:
 ]
 ```
 
-Příkazy jsou určena podle názvu a používejte nelokalizovaný název (anglicky) pro práci na lokalizované instalací sady Visual Studio. Můžete otestovat a vyhledat názvy příkazů v sadě Visual Studio **příkaz** okna.
+Příkazy jsou určeny podle názvu a by měly používat nelokalizovaný název (anglicky) pro práci na lokalizovaných instalacích sady Visual Studio. Názvy příkazů můžete testovat a zjišťovat v okně **Příkaz** sady Visual Studio.
 
-Pokud chcete předat jeden argument, zadejte ho jako řetězec jako v předchozím příkladu.
+Pokud chcete předat jeden argument, zadejte jej jako řetězec jako v předchozím příkladu.
 
-Pokud není nutné předat argument, ponechte prázdný řetězec nebo ji vynechte z JSON:
+Pokud nepotřebujete předat argument, nechte ho prázdný řetězec nebo jej vynechat z JSON:
 
 ```json
 "_visual_studio_post_cmds": [
@@ -170,7 +170,7 @@ Pokud není nutné předat argument, ponechte prázdný řetězec nebo ji vynech
 ]
 ```
 
-Použijte pole pro více argumentů. Pro přepínače rozdělit na samostatné argumenty přepínač a jeho hodnotu a použití správného citací. Příklad:
+Použijte pole pro více argumentů. U přepínačů rozdělte přepínač a jeho hodnotu do samostatných argumentů a použijte správné kotace. Například:
 
 ```json
 "_visual_studio_post_cmds": [
@@ -185,41 +185,41 @@ Použijte pole pro více argumentů. Pro přepínače rozdělit na samostatné a
 ]
 ```
 
-Argumenty mohou odkazovat na jiné proměnné Cookiecutter. V příkladu výše, vnitřní `_output_folder_path` proměnná se používá k vytvoření absolutní cesta k generované soubory.
+Argumenty mohou odkazovat na jiné proměnné Cookiecutter. Ve výše uvedených příkladech se vnitřní `_output_folder_path` proměnná používá k vytvoření absolutní cesty k generovaným souborům.
 
-Všimněte si, `Python.InstallProjectRequirements` příkaz funguje pouze při přidávání souborů do existujícího projektu. Toto omezení existuje, protože příkaz je zpracován projektu Pythonu v **Průzkumníka řešení**, a není žádný projekt pro příjem zprávy při v **Průzkumníka řešení**  -   **Zobrazení složky**. Věříme, že chcete odebrat omezení win budoucí verzi (a poskytují lepší **zobrazení složky** obecně podporují).
+Všimněte `Python.InstallProjectRequirements` si, že příkaz funguje pouze při přidávání souborů do existujícího projektu. Toto omezení existuje, protože příkaz je zpracován projektem Pythonu v **Průzkumníku řešení**a neexistuje žádný projekt pro příjem zprávy v**zobrazení složky** **Průzkumníka** - řešení . Doufáme, že k odstranění omezení vyhrát budoucí verzi (a poskytnout lepší **podporu zobrazení složek** obecně).
 
-## <a name="troubleshooting"></a>Poradce při potížích
+## <a name="troubleshooting"></a>Řešení potíží
 
-### <a name="error-loading-template"></a>Chyba načítání šablony
+### <a name="error-loading-template"></a>Při načítání šablony došlo k chybě.
 
-Některé šablony může pomocí neplatné datové typy, jako jsou boolean, v jejich *cookiecutter.json*. Tyto instance nahlásit Autor šablony tak, že vyberete **problémy** odkaz v informačním podokně Šablona.
+Některé šablony mohou používat neplatné datové typy, například logické, v souboru *cookiecutter.json*. Tyto instance nahlaste autorovi šablony výběrem odkazu **Problémy** v podokně informací o šabloně.
 
-### <a name="hook-script-failed"></a>Chyba skriptu háku
+### <a name="hook-script-failed"></a>Hákový skript se nezdařil.
 
-Některé šablony mohou používat po generování skriptů, které nejsou kompatibilní s uživatelským rozhraním Cookiecutter. Skripty, například tento dotaz, který uživatele o vstup se nepovedlo kvůli nemají konzolu terminálu.
+Některé šablony mohou používat skripty po generaci, které nejsou kompatibilní s uživatelském rozhraním Cookiecutter. Například skripty, které dotaz uživatele na vstup selže z důvodu, že nemá terminálkonzoly.
 
-### <a name="hook-script-not-supported-on-windows"></a>Skript Hook není podporováno ve Windows
+### <a name="hook-script-not-supported-on-windows"></a>Skript zavěšení není v systému Windows podporován
 
-Pokud je pozálohovacího skriptu *.sh*, nemusí být přidružený k aplikaci v počítači Windows. Může se zobrazit dialogové okno Windows s výzvou k vyhledání kompatibilní aplikace ve Windows storu.
+Pokud je skript *.sh*, nemusí být přidružen k aplikaci v počítači se systémem Windows. Může se zobrazit dialogové okno systému Windows s žádostí o nalezení kompatibilní aplikace v obchodě windows store.
 
 ### <a name="templates-with-known-issues"></a>Šablony se známými problémy
 
 Selhání klonování:
 
-- **wildfish/cookiecutter-django – crud** (neplatný znak `|` v podsložce s názvem)
-- **cookiecutter pyvanguard** (neplatný znak `|` v podsložce s názvem)
+- **wildfish/cookiecutter-django-crud** (neplatný znak `|` v názvu podsložky)
+- **cookiecutter-pyvanguard** (neplatný znak `|` v názvu podsložky)
 
-Selhání při načítání:
+Selhání zatížení:
 
-- **chrisdev/wagtail-cookiecutter-foundation** (používá typem boolean v *cookiecutter.json*)
-- **quintoandar/cookiecutter – android** (žádná složka šablony)
+- **chrisdev/wagtail-cookiecutter-foundation** (používá logický typ v *cookiecutter.json)*
+- **quintoandar/cookiecutter-android** (bez šablony)
 
-Spusťte chyby:
+Selhání spuštění:
 
-- **iknite/cookiecutter-ansible-role** (pozálohovacího skriptu hook vyžaduje vstup konzoly)
-- **benregn/cookiecutter-django – ansible** (šablonovacím systémem chyba)
+- **iknite/cookiecutter-ansible-role** (post hák skript vyžaduje vstup konzole)
+- **benregn/cookiecutter-django-ansible** (Jinja chyba)
 
-Používá bash (není závažná):
+Používá bash (není fatální):
 
 - **openstack-dev/cookiecutter**

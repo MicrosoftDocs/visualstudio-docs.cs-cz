@@ -1,5 +1,5 @@
 ---
-title: Zobrazení řádků | Microsoft Docs
+title: Zobrazení řádků | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,34 +16,34 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 25dbb0beb600f7f043ae006e09ac48b9b64d613b
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74773978"
 ---
 # <a name="lines-view"></a>Zobrazení řádků
-Zobrazení řádků je k dispozici pouze pro data profileru, která byla shromážděna pomocí metody vzorkování. Zobrazení není k dispozici pro data shromážděná pomocí instrumentace.
+Zobrazení Čáry je k dispozici pouze pro data profileru, která byla shromážděna pomocí metody vzorkování. Zobrazení není k dispozici pro data, která byla shromážděna pomocí instrumentace.
 
- V případě vzorkování dat profilu se v zobrazení řádky identifikuje příkaz ve funkci, která byla přímo spuštěna při shromáždění ukázky. V případě dat paměti .NET identifikuje zobrazení řádky příkazy, které přidělují paměť.
+ Pro data profil vzorkování, čáry zobrazení identifikuje příkaz ve funkci, která byla přímo provádění při vzorku byla shromážděna. U dat paměti .NET zobrazení čáry identifikuje příkazy, které přidělují paměť.
 
- Ve zdrojovém souboru může příkaz pokrývat více než jeden řádek ve zdrojovém souboru a jeden řádek může obsahovat více než jeden výraz.
+ Ve zdrojovém souboru může příkaz zahrnovat více než jeden řádek ve zdrojovém souboru a jeden řádek může obsahovat více než jeden příkaz.
 
- Příkaz je identifikován následujícím způsobem:
+ Prohlášení je označeno:
 
-- Zdrojový soubor, který obsahuje příkaz Function.
+- Zdrojový soubor, který obsahuje příkaz funkce.
 
 - Funkce, která obsahuje příkaz.
 
-- Zdrojový řádek, ve kterém se příkaz spustí.
+- Zdrojový řádek, na kterém začíná příkaz.
 
-- Znak ve zdrojovém řádku, ve kterém se příkaz spustí.
+- Znak ve zdrojovém řádku, na kterém začíná příkaz.
 
 - Zdrojový řádek, na kterém končí příkaz.
 
 - Znak ve zdrojovém řádku, na kterém končí příkaz.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zobrazení řádků](../profiling/lines-view-sampling-data.md)
-- [Zobrazení řádků – vzorkování](../profiling/lines-view-dotnet-memory-sampling-data.md)
+- [Zobrazení čar - odběr vzorků](../profiling/lines-view-dotnet-memory-sampling-data.md)
 - [Zobrazení řádků](../profiling/lines-view-contention-data.md)

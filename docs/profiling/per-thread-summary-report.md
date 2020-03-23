@@ -1,5 +1,5 @@
 ---
-title: Sestava souhrnu podle vláken | Dokumentace Microsoftu
+title: Souhrnná sestava podle vlákna | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,21 +13,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1ab5e88db9f539dd79482044ab3834b27a6b1747
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62794323"
 ---
-# <a name="per-thread-summary-report"></a>Sestava souhrnu podle vláken
-Tento pruhový graf ukazuje podíl času, kdy každý zobrazí vlákna v každé kategorie aktivity při současném viditelném časovém rozsahu. "Spuštění" znamená, je vlákno prováděno; všech ostatních kategorií znamená, že vlákno čeká na nějaké.
+# <a name="per-thread-summary-report"></a>Souhrnná sestava podle vlákna
+Tento pruhový graf zobrazuje podíl času, který každé neskryté vlákno stráví v každé kategorii aktivity během aktuálně viditelného časového rozsahu. "Spuštění" znamená, že vlákno je spuštěn; všechny ostatní kategorie znamenají, že vlákno na něco čeká.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Doba spuštění (zobrazení vláken)](../profiling/execution-time-threads-view.md)
-- [Čas I/O (zobrazení vláken)](../profiling/i-o-time-threads-view.md)
+- [Vstupně-no čas (zobrazení vláken)](../profiling/i-o-time-threads-view.md)
 - [Čas správy paměti](../profiling/memory-management-time.md)
-- [Čas přerušení](../profiling/preemption-time.md)
+- [Doba prevence](../profiling/preemption-time.md)
 - [Doba spánku](../profiling/sleep-time.md)
 - [Čas synchronizace](../profiling/synchronization-time.md)
-- [Doba zpracování uživatelského rozhraní](../profiling/ui-processing-time.md)
+- [Doba zpracování ui](../profiling/ui-processing-time.md)
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

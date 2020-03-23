@@ -1,5 +1,5 @@
 ---
-title: Graf využití procesoru | Dokumentace Microsoftu
+title: Graf využití procesoru | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,25 +13,25 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e09526930bf98141ae4f9d4d204b20383763c208
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62552873"
 ---
 # <a name="cpu-utilization-graph"></a>Graf využití procesoru
-Graf využití procesoru v aplikaci zobrazí úroveň využití v průběhu času. Představuje dobu trvání trasování osy x a osy y představuje počet logických jader v systému. Grafu nezobrazí, které konkrétní core je aktivní v daném okamžiku. Například pokud dvě jádra každý systém plně využívá kapacitu 50 procent za dané časové období, pak toto zobrazení uvádí využívané jednoho logického jádra.
+Graf využití procesoru zobrazuje úroveň využití v aplikaci v průběhu času. Osa X představuje dobu trvání trasování a osa y představuje počet logických jader v systému. Graf nezobrazuje, které konkrétní jádro je v daném okamžiku aktivní. Například pokud jsou dvě jádra spuštěna s kapacitou 50 procent pro dané časové období, pak toto zobrazení ukazuje, že se využívá jedno logické jádro.
 
-## <a name="cpu-utilization-graph-colors"></a>Barvy graf využití procesoru
+## <a name="cpu-utilization-graph-colors"></a>Barvy grafu využití procesoru
 
-- Zelená značí využití logických jader v systému v aktuálním procesu.
+- Zelená označuje využití logických jader v systému aktuálním procesem.
 
-- Světle šedá označuje využití logických jader s jinými procesy v systému. Vysoké procento světle šedá v grafu využití procesoru označuje, že systém je silně zatížen jinými procesy a, že váš proces by mohla být dojde ke zrušení jimi. Ke snížení spotřeby logických jader s jinými procesy, snížit počet z nich spuštěné v systému.
+- Světle šedá označuje využití logických jader jinými procesy v systému. Vysoké procento světle šedé v grafu procesoru znamená, že systém je silně načten jinými procesy a že váš proces je pravděpodobně předepisován. Chcete-li snížit spotřebu logických jader jinými procesy, snižte počet těchto procesů spuštěných v systému.
 
-- Tmavě šedá označuje spotřeby logických jader systémový proces. Nemůžete ovládat, přímo toto, ale je vhodné vědět, kdy dochází, protože ho může mít vliv na dostupnost logického jádra pro proces.
+- Tmavě šedá označuje spotřebu logických jader systémovým procesem. Nelze přímo řídit, ale je užitečné vědět, kdy k němu dochází, protože to může ovlivnit dostupnost logických jader pro váš proces.
 
-- Prázdné označuje dostupnosti nepoužité logických jader v systému. Pokud nemůžete najít další příležitosti pro paralelismus jsou k dispozici pro váš proces těchto jader.
+- Bílá označuje dostupnost nepoužívaných logických jader v systému. Tato jádra jsou k dispozici pro váš proces, pokud můžete najít více příležitostí pro paralelismus.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zobrazení využití](../profiling/utilization-view.md)
 - [Průměrné využití procesoru](../profiling/average-cpu-utilization.md)

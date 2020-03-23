@@ -10,34 +10,34 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 5c46506e81e5334efea9060e957269e92e9d49cc
-ms.sourcegitcommit: 614d5b99576ea27a41957cd94062dc95cbd29c1c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "65531914"
 ---
-# <a name="use-expression-body-or-block-body-for-lambda-expressions"></a>Používat text výrazu nebo blok textu pro výrazy lambda
+# <a name="use-expression-body-or-block-body-for-lambda-expressions"></a>Použití těla výrazu nebo těla bloku pro výrazy lambda
 
-Tento refaktoring platí pro:
+Toto refaktoring se vztahuje na:
 
 - C#
 
-**Co:** Umožňuje Refaktorovat výraz lambda definoval se použít tělo výrazu nebo bloku textu.
+**Co:** Umožňuje refaktorovat výraz lambda tak, aby používal tělo výrazu nebo tělo bloku.
 
-**Kdy:** Dáváte přednost výrazy lambda použít tělo výrazu nebo bloku textu.
+**Kdy:** Upřednostňujete lambda výrazy použít tělo výrazu nebo tělo bloku.
 
-**Proč:** Výrazy lambda je možné Refaktorovat pro lepší čitelnost podle vašich potřeb uživatelů.
+**Proč:** Lambda výrazy mohou být refaktorovány ke zlepšení čitelnosti podle vašich uživatelských preferencí.
 
-## <a name="lambda-expression-body-or-block-body-refactoring"></a>Hlavní část výrazu lambda výrazu nebo refaktoring text bloku
+## <a name="lambda-expression-body-or-block-body-refactoring"></a>Lambda výraz tělo nebo blok tělo refaktoring
 
-1. Umístěte kurzor na pravé straně operátoru lambda.
-2. Stisknutím klávesy **Ctrl**+**.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
+1. Umístěte kurzor na pravé straně provozovatele lambda.
+2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
 
-  ![Použít hlavní část výrazu lambda výraz/blokování](media/block-body-lambda.png)
+  ![Použití těla výrazu/bloku lambda](media/block-body-lambda.png)
 
-3. Vyberte **text použití bloku pro výrazy lambda** nebo **používat text výrazu lambda výrazy**.
+3. Vyberte **Použít tělo bloku pro výrazy lambda** nebo Použít tělo **výrazu pro výrazy lambda**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Refactoring](../refactoring-in-visual-studio.md)
-- [Tipy pro vývojáře .NET](../csharp-developer-productivity.md)
+- [Tipy pro vývojáře rozhraní .NET](../csharp-developer-productivity.md)

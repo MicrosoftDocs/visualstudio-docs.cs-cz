@@ -1,5 +1,5 @@
 ---
-title: Synchronizace oboru názvů a název složky
+title: Synchronizovat obor názvů a název složky
 ms.date: 06/12/2019
 ms.topic: reference
 author: mikadumont
@@ -10,32 +10,32 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: d7073edaf6ecc261c58bf1e5607323b9214c5ed0
-ms.sourcegitcommit: d4920babfc3d24a3fe1d4bf446ed3fe73b344467
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "67160726"
 ---
-# <a name="sync-namespace-and-folder-name"></a>Synchronizace oboru názvů a název složky
+# <a name="sync-namespace-and-folder-name"></a>Synchronizovat obor názvů a název složky
 
-Tento refaktoring platí pro:
+Toto refaktoring se vztahuje na:
 
 - C#
 
-**Co:** Synchronizace oboru názvů a název složky.
+**Co:** Synchronizace oboru názvů a názvu složky.
 
-**Kdy:** Chcete úprava architektury součástí vašeho řešení přetáhněte soubor do nové složky. 
+**Kdy:** Chcete předělat části řešení přetažením souboru do nové složky. 
 
-**Proč:** Chcete zajistit, aby že váš obor názvů udržuje aktuální s vaší novou strukturu složek.
+**Proč:** Chcete se ujistit, že obor názvů bude aktuální s novou strukturou složek.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor na název oboru názvů.
-2. Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
-3. Vyberte **změnit obor názvů pro \<název složky >** .
+1. Umístěte kurzor do názvu oboru názvů.
+2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+3. Vyberte **Změnit \<obor názvů na název složky>**.
 
-   ![Namespace synchronizace a název složky](media/sync-namespace-and-folder-name.png)
+   ![Synchronizovat obor názvů a název složky](media/sync-namespace-and-folder-name.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Refactoring](../refactoring-in-visual-studio.md)

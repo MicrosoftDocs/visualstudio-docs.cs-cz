@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6c211773f20ab4643b62c8c71fc6ae6581a91987
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72747893"
 ---
 # <a name="list-source-command"></a>Listovat zdroj – příkaz
@@ -32,34 +32,34 @@ Debug.ListSource [/Count:number] [/Current] [/File:filename]
 ```
 
 ## <a name="switches"></a>Přepínače
-/Count: `number`
+/Počet:`number`
 
-Volitelné. Určuje počet řádků, které se mají zobrazit.
+Nepovinný parametr. Určuje počet řádků, které se mají zobrazit.
 
-/Current
+/Aktuální
 
-Volitelné. Zobrazuje aktuální řádek.
+Nepovinný parametr. Zobrazuje aktuální řádek.
 
-/File: `filename`
+/Soubor:`filename`
 
-Volitelné. Cesta k souboru, který se má zobrazit Pokud není zadán žádný název souboru, příkaz zobrazí zdrojový kód pro řádek aktuálního příkazu.
+Nepovinný parametr. Cesta k souboru, který chcete zobrazit. Pokud není zadán žádný název souboru, příkaz zobrazí zdrojový kód pro řádek aktuálního příkazu.
 
-/Line: `number`
+/Čára:`number`
 
-Volitelné. Zobrazuje konkrétní číslo řádku.
+Nepovinný parametr. Zobrazí konkrétní číslo řádku.
 
-/ShowLineNumbers: `yes|no`
+/ZobrazitČísla:`yes|no`
 
-Volitelné. Určuje, zda se mají zobrazit čísla řádků.
+Nepovinný parametr. Určuje, zda se mají zobrazit čísla řádků.
 
 ## <a name="example"></a>Příklad
-Tento příklad uvádí zdrojový kód ze řádku 4 souboru Form1. vb s čísly řádků, které jsou viditelné.
+V tomto příkladu je uveden zdrojový kód z řádku 4 souboru Form1.vb s viditelnými čísly řádků.
 
 ```
 Debug.ListSource /File:"C:\Visual Studio Projects\Form1.vb" /Line:4 /ShowLineNumbers:yes
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)

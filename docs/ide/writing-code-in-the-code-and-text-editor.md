@@ -11,85 +11,85 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: de209e0a940fe7f7c64644cea37de3762df0d643
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588548"
 ---
 # <a name="features-of-the-code-editor"></a>Funkce editoru kódu
 
-Editor sady Visual Studio poskytuje mnoho funkcí, které usnadňují zápis a správu vašeho kódu a text. Můžete rozbalit nebo sbalit různé bloky kódu pomocí osnovy. Další informace o kódu pomocí technologie IntelliSense, **prohlížeče objektů**a hierarchii volání. Kód můžete najít pomocí funkcí **přejít na**, **přejít k definici**, a **najít všechny odkazy**. Můžete vložit bloky kódu pomocí fragmentů kódu a může generovat kód pomocí funkcí **Generovat z využití**. Pokud jste ještě nikdy nepoužívali Editor sady Visual Studio, přečtěte si téma [informace o použití editoru kódu](../get-started/tutorial-editor.md).
+Editor sady Visual Studio poskytuje mnoho funkcí, které usnadňují psaní a správu kódu a textu. Můžete rozbalit a sbalit různé bloky kódu pomocí osnovy. Další informace o kódu můžete získat pomocí technologie IntelliSense, **prohlížeče objektů**a hierarchie volání. Kód můžete najít pomocí funkcí, jako je **Přejít na**, **Přejít na definici**a **Najít všechny odkazy**. Můžete vložit bloky kódu s fragmenty kódu a můžete generovat kód pomocí funkcí, jako je **generovat z použití**. Pokud jste nikdy předtím editor Visual Studio nepoužívali, přečtěte si informace [o používání editoru kódu](../get-started/tutorial-editor.md).
 
 > [!NOTE]
-> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac, najdete v části [Editor zdrojového kódu (Visual Studio for Mac)](/visualstudio/mac/source-editor).
+> Toto téma platí pro Visual Studio v systému Windows. Visual Studio pro Mac najdete [v tématu Zdrojový editor (Visual Studio pro Mac).](/visualstudio/mac/source-editor)
 
-Zobrazí se váš kód v několika různými způsoby. Ve výchozím nastavení **Průzkumníka řešení** zobrazuje váš kód uspořádané podle souborů. Můžete kliknout na **zobrazení tříd** karta v dolní části okna, chcete-li zobrazit kód uspořádané podle třídy.
+Kód můžete zobrazit několika různými způsoby. Ve výchozím nastavení **Průzkumník řešení** zobrazuje kód uspořádaný podle souborů. Kliknutím na kartu **Zobrazení tříd** v dolní části okna zobrazíte kód uspořádaný podle tříd.
 
-Můžete vyhledat a nahradit text v jedné nebo více souborů. Další informace najdete v tématu [najít a nahradit text](../ide/finding-and-replacing-text.md). Regulární výrazy můžete použít k vyhledání a nahrazení textu. Další informace najdete v tématu [použití regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
+Text můžete prohledávat a nahrazovat v jednom nebo více souborech. Další informace naleznete v tématu [Hledání a nahrazování textu](../ide/finding-and-replacing-text.md). K vyhledání a nahrazení textu můžete použít regulární výrazy. Další informace naleznete v [tématu Použití regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
 
-Různé jazyky Visual Studio nabízí různé sady funkcí a v některých případech se funkce chovají odlišně v různých jazycích. Mnohé z těchto rozdílů jsou uvedeny v popisech funkcí, ale pro další informace najdete v částech na konkrétní jazyky sady Visual Studio.
+Různé jazyky sady Visual Studio nabízejí různé sady funkcí a v některých případech se funkce chovají odlišně v různých jazycích. Mnohé z těchto rozdílů jsou uvedeny v popisech funkcí, ale další informace můžete zobrazit v částech o konkrétních jazycích sady Visual Studio.
 
 ## <a name="editor-features"></a>Funkce editoru
 
 |||
 |-|-|
-|Barevné zvýrazňování syntaxe|Některé prvky syntaxe kódu a kódu souborů jsou různě barevně odlišeny abychom je odlišili. Například klíčová slova (například `using` v jazyce C# a `Imports` v jazyce Visual Basic) jsou jednu barvu, ale typy (například `Console` a `Uri`) mají jinou barvu. Ostatní prvky syntaxe jsou také obarveny, jako je například řetězcové literály a komentáře. C++ používá barvy k rozlišení mezi typy, výčty a makry, mezi další tokeny.<br /><br /> Můžete zobrazit výchozí barvy pro každý typ a můžete změnit barvu libovolného elementu syntaxe v [písma a barvy, prostředí, dialogové okno Možnosti](../ide/reference/fonts-and-colors-environment-options-dialog-box.md), které můžete otevřít z **nástroje** nabídky.|
-|Značky chyba a varování|Jak přidat kód a sestavte řešení, může se zobrazit podtržení vlnovkou (a) různé barvy (známé jako squiggles) nebo (b) návrhy ve vašem kódu. Chyby syntaxe jsou označené červenou vlnovkou, modrá označuje chybu kompilátoru, zelená značí upozornění a nachová označuje jiných typů chyb. [Rychlé akce](../ide/quick-actions.md) navrhnout opravy problémů a usnadňují použití opravy.<br /><br /> Můžete zobrazit výchozí barvy pro každé chyby a varování vlnovku v **nástroje** > **možnosti** > **prostředí**  >   **Písma a barvy** dialogové okno. Vyhledejte **Chyba syntaxe**, **Chyba kompilátoru**, **upozornění**, a **jiná chyba**.|
-|Párování závorek|Když je kurzor umístěn na levou složenou závorku v souboru kódu, jsou zvýrazněny ho a pravou složenou závorku. Tato funkce poskytuje okamžitou zpětnou vazbu na nesprávně umístěné nebo chybějící závorky. Můžete zapnout závorky zapnutí nebo vypnutí se **automatické zvýraznění oddělovače** nastavení (**nástroje** > **možnosti**  >   **Textový Editor**). Můžete změnit barvu zvýraznění v **písma a barvy** nastavení (**nástroje** > **možnosti** > **prostředí**). Vyhledejte **závorky (zvýraznit)** nebo **závorky (obdélník)** .|
-|Vizualizér struktur|Tečkované čáry připojení odpovídající složené závorky v kódu soubory usnadnit zobrazíte levá a pravá složená závorka dvojice. To může pomoct najít kód vašeho základu kódu rychleji. Tyto řádky může zapnout nebo vypnout pomocí **zobrazit strukturu pokyny** v **zobrazení** část **nástroje** > **možnosti**  >  **Textový Editor** > **Obecné** stránky.|
-|Čísla řádků|Čísla řádků lze zobrazit na levém okraji okna kódu. Ve výchozím nastavení nejsou zobrazeny. Můžete zapnout tuto možnost **všechny jazyky textového editoru** nastavení (**nástroje** > **možnosti** > **textový Editor**  >  **Všechny jazyky**). Čísla řádků pro jednotlivé programovací jazyky můžete zobrazit tak, že změníte nastavení pro tyto jazyky (**nástroje** > **možnosti** > **textový Editor**   >   **\<jazyk >** ). Čísla řádků k tisku, musíte vybrat **zahrnutí čísel řádků** v **tisk** dialogové okno.|
-|Sledování změn|Barva levého okraje umožňuje sledovat, změny, které jste provedli v souboru. Změny, které jste provedli, protože soubor byl otevřen, ale nebyl uložen, jsou označeny žlutým pruhem na levý okraj (známé jako okraj výběru). Po uložení změn (ale před zavřením souboru), se panel zbarví zeleně. Pokud vrátíte zpět změnu po uložení souboru, na panelu oranžově. Chcete-li tuto funkci vypnout a znovu zapnout, změňte **sledovat změny** možnost **textový Editor** nastavení (**nástroje** > **možnosti**  >  **Textový Editor**).|
-|Vyberte kód a Text|Text můžete vybrat v režimu standardního souvislého datového toku nebo v režimu pole, ve kterém vyberete obdélníkovou část textu místo sady řádků. Chcete-li provést výběr v režimu pole, stiskněte **Alt** tažení myší přes výběr (nebo stiskněte klávesu **Alt**+**Shift** +  **\<šipka >** ). Výběr zahrnuje všechny znaky v obdélníku definovaném prvním znakem a posledním znakem ve výběru. Libovolná hodnota zadaná nebo vložit do vybrané oblasti bude vložena na stejné místo na každém řádku.|
-|Lupa|Můžete provést přiblížení nebo navýšení kapacity v jakékoli okno kódu stisknutím a podržením **Ctrl** klíč a přesunutím kolečka myši (nebo **Ctrl**+**Shift** + **.** pro zvýšení a **Ctrl**+**Shift**+ **,** snížení). Můžete také použít **přiblížení** pole v levém dolním rohu okna kódu k nastavení konkrétního procenta zvětšení. Funkce Lupa nefunguje v oknech nástrojů.|
-|Virtuální prostor|Ve výchozím nastavení, řádky v end editory sady Visual Studio po poslední znak tak, aby **šipka vpravo** klíč na konci řádku přesunula kurzor na začátek dalšího řádku. V některých jiných editorech řádek nekončí za posledním znakem a můžete umístit kurzor kamkoliv na řádek. Můžete povolit virtuální prostor v editoru v **nástroje** > **možnosti** > **textový Editor** > **všechny Jazyky** nastavení. Všimněte si, že můžete povolit buď **virtuální prostor** nebo **zalamování**, ale ne obojí.|
-|Tisk|Můžete použít možnosti v **tisk** dialogové okno pro zahrnutí čísel řádků nebo skrytí sbalených oblasti kódu při tisku souboru. V **vzhled stránky** dialogové okno, můžete také vytisknout úplnou cestu a název souboru výběrem **záhlaví stránky**.<br /><br /> Možnosti tisku barev můžete nastavit **nástroje** > **možnosti** > **prostředí** > **písma a Barvy** dialogové okno. Zvolte **tiskárny** v **zobrazit nastavení pro** seznamu přizpůsobit barevný tisk. Můžete určit různé barvy pro tisk souboru než pro úpravy souboru.|
-|Globální akce zpět a znovu|**Vrátit zpět poslední globální akci** a **znovu provést poslední globální akci** příkazy na **upravit** nabídky vrátit zpět nebo opětovnému provedení globálních akcí, které ovlivňují více souborů. Globální akce zahrnují přejmenování třídy nebo oboru názvů, vykonání operace hledání a nahrazení napříč celým řešení, refaktoringu databáze nebo jakoukoli jinou akci, která se mění více souborů. Můžete použít globální akce zpět a znovu příkazy, které akce v aktuální relaci aplikace Visual Studio, dokonce i po zavření řešení, ve kterém byla použita akce.|
+|Zbarvení syntaxe|Některé prvky syntaxe kódu a soubory značek jsou zbarveny odlišně, aby se odlišily. Například klíčová slova `using` (například v `Imports` jazyce C# a v jazyce `Console` `Uri`Visual Basic) jsou jednu barvu, ale typy (například a ) jsou jinou barvou. Ostatní prvky syntaxe jsou také obarveny, například řetězcové literály a komentáře. C++ používá barvu k rozlišení mezi typy, výčty a makra, mimo jiné tokeny.<br /><br /> Můžete zobrazit výchozí barvu pro každý typ a můžete změnit barvu pro libovolný konkrétní prvek syntaxe v [dialogovém okně Písma a barvy, Prostředí, Volby](../ide/reference/fonts-and-colors-environment-options-dialog-box.md), které můžete otevřít z nabídky **Nástroje.**|
+|Chybové a varovné značky|Při přidávání kódu a vytváření řešení se může zobrazit (a) různě barevné podtržení vlnovkou (označované jako vlnovky) nebo (b) žárovky, které se zobrazují ve vašem kódu. Červené vlnovky označují syntaktické chyby, modrá označuje chyby kompilátoru, zelená označují varování a fialová označuje jiné typy chyb. [Rychlé akce](../ide/quick-actions.md) navrhnou opravy problémů a usnadní její použití.<br /><br /> Výchozí barvu pro každou chybu a vlnovku upozornění zobrazíte v dialogovém okně**Environment** > **Písma a barvy** **prostředí nástrojů.** > **Options** >  Vyhledejte **syntaktickou chybu**, **chybu kompilátoru**, **upozornění**a **další chybu**.|
+|Porovnávání závorek|Když je textový kurzor umístěn na otevřené závorce v souboru kódu, je zvýrazněn jak na něm, tak na uzavírací závorku. Tato funkce poskytuje okamžitou zpětnou vazbu o chybně umístěných nebo chybějících závorkách. Pomocí nastavení **Automatické zvýraznění oddělovače** (Textový editor**možností** > **nástroje)** > můžete zapnout nebo vypnout shodu složených závorek.**Text Editor** Barvu zvýraznění můžete změnit v nastavení **Písma a barvy** **(Prostředí****voleb** > **nástrojů).** >  Vyhledejte **shodu svorek (zvýraznění)** nebo **složených závorek (obdélník).**|
+|Vizualizér struktury|Tečkované čáry spojují odpovídající složená závorky v souborech kódu, což usnadňuje zobrazení párů počátečnía uzavírací svorky. To vám může pomoci najít kód v základu kódu rychleji. Tyto řádky můžete zapnout nebo vypnout pomocí **pokynů zobrazit strukturu** v části **Zobrazení** na stránce**Obecné** **textovéeditory** > **možností** >  **nástrojů.** > |
+|Čísla řádků|Čísla řádků lze zobrazit v levém okraji okna kódu. Ve výchozím nastavení nejsou zobrazeny. Tuto možnost můžete zapnout v nastavení **Text editoru Všechny jazyky** **(Textové** > **editory** > **možností nástrojů** > **Všechny jazyky**). Čísla řádků pro jednotlivé programovací jazyky můžete zobrazit změnou nastavení pro tyto jazyky **(Možnosti** > **Options** > nástrojů**Text Editor** > **\<jazyk>**). Chcete-li vytisknout čísla řádků, musíte v **tiskovém** dialogovém okně vybrat zahrnout **čísla řádků.**|
+|Sledování změn|Barva levého okraje umožňuje sledovat změny, které jste provedli v souboru. Změny provedené od otevření, ale neuložené souboru jsou označeny žlutým pruhem na levém okraji (označovaný jako okraj výběru). Po uložení změn (ale před zavřením souboru) se pruh změní na zelenou. Pokud po uložení souboru změnu vrátíte, změní se na oranžovou. Chcete-li tuto funkci vypnout a zapnout, změňte možnost **Sledovat změny** v nastavení **textového editoru** **(Textový editor****možností** > **nástrojů).** > |
+|Výběr kódu a textu|Text můžete vybrat buď ve standardním režimu spojitého datového proudu, nebo v režimu rámečku, ve kterém vyberete obdélníkovou část textu namísto sady řádků. Chcete-li provést výběr v režimu pole, stiskněte **klávesu Alt** při tažení myší nad výběrem (nebo stiskněte**\<klávesu Alt ** **Alt**+**shift**+se šipkou>). Výběr zahrnuje všechny znaky v obdélníku definované prvním znakem a poslední znak ve výběru. Vše, co je zadáno nebo vloženo do vybrané oblasti, se vloží do stejného bodu na každém řádku.|
+|Zoom|V libovolném okně kódu můžete přiblížit nebo oddálit stisknutím a podržením **klávesy Ctrl** a posunutím kolečka myši (nebo **Klávesy Ctrl**+**Shift**+**.** a **Ctrl**+**Shift**+**,** chcete-li snížit). Pole **Lupa** v levém dolním rohu okna kódu můžete také použít k nastavení určitého procenta zvětšení. Funkce lupy nefunguje v oknech nástrojů.|
+|Virtuální prostor|Ve výchozím nastavení řádky v editorech sady Visual Studio končí za posledním znakem, takže **klávesa Šipka vpravo** na konci řádku přesune kurzor na začátek dalšího řádku. V některých jiných editorech řádek nekončí za posledním znakem a kurzor můžete umístit kdekoli na řádek. Virtuální prostor v editoru můžete povolit v nastavení**Textový editor** > **Možnosti** >  **nástrojů** > **Všechny jazyky.** Všimněte si, že můžete povolit **virtuální prostor** nebo **zalamování řádků**, ale ne obojí.|
+|Tisk|Volby v **tiskovém** dialogovém okně můžete použít k zahrnutí čísel řádků nebo ke skrytí sbalených oblastí kódu při tisku souboru. V dialogovém okně **Vzhled stránky** můžete také zvolit tisk úplné cesty a názvu souboru výběrem **záhlaví Stránky**.<br /><br /> Volby barevného tisku můžete nastavit v dialogovém okně**Options** > **Environment** > **Písma a barvy** **prostředí nástrojů.** >  Chcete-li přizpůsobit barevný tisk, zvolte **Tiskárna** v seznamu **Zobrazit nastavení.** Pro tisk souboru můžete určit různé barvy než pro úpravy souboru.|
+|Globální vrátit a znovu|Příkazy **Zpět na poslední globální akci** a Znovu provést poslední globální **akci** v nabídce **Úpravy** vrátit zpět nebo znovu provést globální akce, které mají vliv na více souborů. Globální akce zahrnují přejmenování třídy nebo oboru názvů, provedení operace hledání a nahrazení v rámci řešení, refaktoring databáze nebo jakoukoli jinou akci, která změní více souborů. Globální příkazy zpět a znovu můžete použít na akce v aktuální relaci sady Visual Studio, a to i po zavření řešení, ve kterém byla akce použita.|
 
-## <a name="advanced-editing-features"></a>Pokročilé funkce pro úpravy
+## <a name="advanced-editing-features"></a>Pokročilé funkce úprav
 
-Najdete řadu pokročilých funkcí na **upravit** > **Upřesnit** nabídka na panelu nástrojů. Všechny tyto funkce jsou dostupné pro všechny typy souborů s kódem.
+V nabídce **Upravit** > **upřesnit** najdete na panelu nástrojů řadu pokročilých funkcí. Ne všechny tyto funkce jsou k dispozici pro všechny typy souborů kódu.
 
 |||
 |-|-|
-|Formátovat dokument|Nastaví správné odsazení řádků kódu a přesune složené závorky do samostatných řádků v dokumentu.|
-|Příkaz Formátovat výběr|Nastaví správné odsazení řádků kódu a přesune složené závorky do samostatných řádků ve výběru.|
-|Vybrané řádky posunout tabulátorem|Změny úvodních mezer na karty, kde je to vhodné.|
-|Zrušit posunutí tabulátorem u vybraných řádků|Změny úvodních karet na mezery. Pokud chcete převést všechny mezery v souboru na tabulátory (nebo všechny tabulátory na mezery), můžete použít `Edit.ConvertSpacesToTabs` a `Edit.ConvertTabsToSpaces` příkazy. Tyto příkazy se nezobrazují v nabídkách aplikace Visual Studio, ale můžete je z volat **rychlý přístup** okna nebo příkazové okno.|
-|Převést na velká písmena|Změní všechny znaky ve výběru na velká písmena, nebo pokud není nic vybráno, znak na pozici kurzoru na velká písmena se změní. Zástupce: **Ctrl**+**SHIFT**+**U**.|
-|Nastavit jako malé písmeno|Změní všechny znaky ve výběr na malá písmena, nebo pokud není nic vybráno, znak na pozici kurzoru změní na malá písmena. Zástupce: **Ctrl**+**U**.|
-|Přesunout vybrané řádky nahoru|Posune vybraný řádek jeden řádek nahoru. Místní: **Alt**+**šipka nahoru**.|
-|Přesunout vybrané řádky dolů|Posune vybraný řádek jeden řádek dolů. Místní: **Alt**+**šipka dolů**.|
-|Odstranit vodorovné prázdné znaky|Odstraní tabulátory nebo mezery na konci aktuálního řádku. Zástupce: **ctrl**+**K**, **CTRL**+ **\\**|
-|Zobrazit prázdné znaky|Zobrazí mezery jako zvýšené tečky a karty jako šipky. Konec souboru se zobrazí jako obdélníkový glyf. Pokud **nástroje** > **možnosti** > **textový Editor** > **všechny jazyky**  >  **Zalamování** > **zobrazit viditelné piktogramy pro zalamování řádků** je vybráno, že zobrazí se také piktogram.|
-|Zalamování řádků|Způsobí, že všechny řádky v dokumentu mají být zobrazeny v okně kódu. Zalamování slov můžete vypnout nebo zapnout v **všechny jazyky textového editoru** nastavení (**nástroje** > **možnosti** > **textový Editor**   >  **Všechny jazyky**).|
-|Zakomentovat výběr|Přidá znaky komentáře do výběru nebo aktuálního řádku. Zástupce: **ctrl**+**K**, **CTRL**+**C**|
-|Odkomentovat výběr|Odebere znaky komentáře z výběru nebo aktuálního řádku. Zástupce: **ctrl**+**K**, **CTRL**+**U**|
-|Zvětšit odsazení řádku|Přidá kartu (nebo ekvivalentní mezery) do vybraných řádků nebo aktuálního řádku.|
-|Zmenšit odsazení řádku|Odebere kartu (nebo ekvivalentní mezery) z vybraných řádků nebo aktuálního řádku.|
-|Vybrat značku|V dokumentu, který obsahuje značky (například XML nebo HTML) vybere značku.|
-|Vybrat obsah značky|V dokumentu, který obsahuje značky (například XML nebo HTML) vybere obsah.|
+|Formátovat dokument|Nastaví správné odsazení řádků kódu a přesune složené závorky tak, aby oddělovaly řádky v dokumentu.|
+|Příkaz Formátovat výběr|Nastaví správné odsazení řádků kódu a přesune složené závorky tak, aby oddělily řádky ve výběru.|
+|Tabulfikovat vybrané řádky|V případě potřeby změní úvodní mezery na tabulátory.|
+|Zrušit zabezpečení vybraných řádků|Změní úvodní karty na mezery. Chcete-li převést všechny mezery v souboru na tabulátory (nebo `Edit.ConvertSpacesToTabs` `Edit.ConvertTabsToSpaces` všechny karty na mezery), můžete použít příkazy a. Tyto příkazy se nezobrazují v nabídkách sady Visual Studio, ale můžete je volat z okna **Rychlý přístup** nebo z příkazového okna.|
+|Vytvořit velká písmena|Změní všechny znaky ve výběru na velká písmena, nebo pokud není žádný výběr, změní znak v kurzoru na velká písmena. Zástupce: **Ctrl**+**Shift**+**U**.|
+|Vytvořit malá písmena|Změní všechny znaky ve výběru na malá písmena, nebo pokud není žádný výběr, změní znak v kurzoru na malá písmena. Zástupce: **Ctrl**+**U**.|
+|Přesunout vybrané řádky nahoru|Přesune vybraný řádek o jeden řádek nahoru. Zástupce: **Alt**+**Šipka nahoru**.|
+|Přesunout vybrané čáry dolů|Přesune vybranou čáru o jeden řádek dolů. Zástupce: **Alt**+**Šipka dolů**.|
+|Odstranit vodorovné prázdné místo|Odstraní karty nebo mezery na konci aktuálního řádku. Zástupce: **Ctrl**+**K**, **Ctrl**+**\\**|
+|Zobrazit prázdné místo|Zobrazí mezery jako zvýšené tečky a tabulátory jako šipky. Konec souboru je zobrazen jako obdélníkový glyf. Pokud je**vybraná** > volba**volby** >  **nástrojů** > Textový editor**Všechny jazyky,** > **zalamování** > **slov: Zobrazí se viditelné glyfy pro zalamování slov,** zobrazí se také tento glyf.|
+|Zalamování řádků|Způsobí, že všechny řádky v dokumentu, které mají být viditelné v okně kódu. Zalamování a zapínání textu můžete vypnout a zapnout v**Options** >  **textovém editoru Všechny jazyky** (Textové**editory** > **možností nástrojů** > **Všechny jazyky).**|
+|Výběr komentáře|Přidá znaky komentáře k výběru nebo k aktuálnímu řádku. Zástupce: **Ctrl**+**K**, **Ctrl**+**C**|
+|Odkomentování výběru|Odebere znaky komentáře z výběru nebo aktuálního řádku. Zástupce: **Ctrl**+**K**, **Ctrl**+**U**|
+|Zvětšit odsazení řádku|Přidá kartu (nebo ekvivalentní mezery) k vybraným řádkům nebo aktuálnímu řádku.|
+|Zmenšení odsazení čáry|Odebere kartu (nebo ekvivalentní mezery) z vybraných řádků nebo aktuálního řádku.|
+|Vybrat značku|V dokumentu, který obsahuje tagy (například XML nebo HTML), vybere značku.|
+|Vybrat obsah značky|V dokumentu, který obsahuje tagy (například XML nebo HTML), vybere obsah.|
 
-## <a name="navigate-and-find-code"></a>Orientuje a hledá kód
+## <a name="navigate-and-find-code"></a>Navigace a hledání kódu
 
-Můžete pohybovat v editoru kódu v několika různými způsoby, včetně zpětné navigace a předává do předchozích bodů vložení, zobrazování definice typu nebo členu a přechod na konkrétní metodu, pomocí navigačního panelu. Další informace najdete v části [vyhledání kódu](navigating-code.md).
+V editoru kódu se můžete pohybovat několika různými způsoby, včetně navigace vpřed a vpřed k předchozím kurzorovým bodům, zobrazení definice typu nebo člena a přechodu na konkrétní metodu pomocí navigačního panelu. Další informace naleznete v [tématu Navigate code](navigating-code.md).
 
-## <a name="find-references-in-your-code-base"></a>Hledání odkazů v vašeho základu kódu
+## <a name="find-references-in-your-code-base"></a>Vyhledání referencí v základu kódu
 
-Chcete-li zjistit, kde se v rámci základu kódu odkazuje na konkrétní prvky kódu, můžete použít příkaz **Najít všechny odkazy** nebo stiskněte klávesu **SHIFT**+**F12**. Také, když kliknete na typ nebo člen, **zvýraznění odkazů** funkce automaticky zvýrazní všechny odkazy na tento typ nebo člen. Další informace najdete v tématu [najít odkazy ve vašem kódu](finding-references.md).
+Chcete-li zjistit, kde jsou v celém základu kódu odkazovány určité **prvky** kódu, můžete použít příkaz Najít všechny odkazy nebo stiskněte **klávesu Shift**+**F12**. Také když kliknete na typ nebo člen, funkce **zvýraznění odkazů** automaticky zvýrazní všechny odkazy na daný typ nebo člen. Další informace naleznete [v tématu Hledání odkazů v kódu](finding-references.md).
 
 ## <a name="customize-the-editor"></a>Přizpůsobení editoru
 
-Můžete sdílet nastavení sady Visual Studio s jiným vývojářem, aby vaše nastavení bylo v souladu s normou nebo pomocí vraťte do výchozího nastavení sady Visual Studio **Průvodce importem a exportem nastavení** příkaz  **Nástroje** nabídky. V **Průvodce importem a exportem nastavení**, můžete změnit obecné nastavení nebo jazyk a nastavení specifická pro projekt.
+Nastavení sady Visual Studio můžete sdílet s jiným vývojářem, nastavit, aby odpovídalo standardu, nebo se vrátit k výchozímu nastavení sady Visual Studio pomocí **příkazu Průvodce nastavením importu a exportu** v nabídce **Nástroje.** V **Průvodci importem a exportem nastavení**můžete změnit vybraná obecná nastavení nebo nastavení jazyka a konkrétního projektu.
 
-Pokud chcete definovat nové klávesové zkratky nebo změnit existujícího klávesové zkratky, přejděte na **nástroje** > **možnosti** > **prostředí**  >  **Klávesnice**. Další informace o klávesových zkratkách naleznete v tématu [výchozí klávesové zkratky](../ide/default-keyboard-shortcuts-in-visual-studio.md).
+Chcete-li definovat nové klávesové zkratky nebo předefinovat existující klávesové zkratky, přejděte na tlačítko Klávesnice**prostředí** >  **Nástroje** > **možnosti** > **.** Další informace o klávesových zkratkách naleznete [v tématu Výchozí klávesové zkratky](../ide/default-keyboard-shortcuts-in-visual-studio.md).
 
-Možnosti editoru jazyka JavaScript specifické najdete v tématu [možnosti editoru jazyka JavaScript](../ide/reference/options-text-editor-javascript-formatting.md).
+Možnosti editoru specifické pro JavaScript najdete v tématu [Možnosti editoru JavaScriptu](../ide/reference/options-text-editor-javascript-formatting.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Editor zdrojového kódu (Visual Studio for Mac)](/visualstudio/mac/source-editor)
-- [Integrované vývojové prostředí sady Visual Studio](../get-started/visual-studio-ide.md)
-- [Začínáme s C++ v sadě Visual Studio](/cpp/get-started/tutorial-console-cpp)
-- [Začínáme s C# a technologie ASP.NET v sadě Visual Studio](../get-started/csharp/tutorial-aspnet-core.md)
-- [Začněte používat Python v sadě Visual Studio](../ide/quickstart-python.md)
+- [Zdrojový editor (Visual Studio pro Mac)](/visualstudio/mac/source-editor)
+- [IDE visual studia](../get-started/visual-studio-ide.md)
+- [Začínáme s C++ ve Visual Studiu](/cpp/get-started/tutorial-console-cpp)
+- [Začínáme s C# a ASP.NET v Sadě Visual Studio](../get-started/csharp/tutorial-aspnet-core.md)
+- [Začínáme s Pythonem ve Visual Studiu](../ide/quickstart-python.md)

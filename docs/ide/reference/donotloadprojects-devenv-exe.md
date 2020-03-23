@@ -12,17 +12,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 51e3341082ff354fc8bc87a89b3d7bc56e4e7887
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569852"
 ---
-# <a name="donotloadprojects-devenvexe"></a>/DoNotLoadProjects (devenv. exe)
+# <a name="donotloadprojects-devenvexe"></a>/DoNotLoadProjects (devenv.exe)
 
-**Novinka pro Visual Studio 2019 verze 16,1**
+**Novinka pro Visual Studio 2019 verze 16.1**
 
-Otevře zadané řešení bez načtení jakýchkoli projektů. Další informace najdete v tématu [filtrovaná řešení v aplikaci Visual Studio](../filtered-solutions.md).
+Otevře zadané řešení bez načtení všech projektů. Další informace naleznete [v tématu Filtered solutions in Visual Studio](../filtered-solutions.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,21 +30,21 @@ Otevře zadané řešení bez načtení jakýchkoli projektů. Další informace
 devenv /DoNotLoadProjects SolutionName
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 
 *SolutionName*
 
-Požadováno. Úplná cesta a název řešení, které má být otevřeno.
+Povinná hodnota. Úplná cesta a název řešení, které má být otevřeno.
 
 ## <a name="example"></a>Příklad
 
-V příkladu se otevře řešení MySln. sln bez načtení jakýchkoli projektů.
+Příklad otevře řešení MySln.sln bez načítání projektů.
 
 ```shell
 devenv /donotloadprojects MySln.sln
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Filtrovaná řešení v aplikaci Visual Studio](../filtered-solutions.md)
-- [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)
+- [Filtrovaná řešení v sadě Visual Studio](../filtered-solutions.md)
+- [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md)

@@ -11,22 +11,22 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8a6f227e6ab55696250d2769f5eef2e25597e081
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72645223"
 ---
-# <a name="options-dialog-box-environment--startup"></a>Dialogové okno Možnosti: prostředí \> po spuštění
+# <a name="options-dialog-box-environment--startup"></a>Dialogové okno Možnosti: Spuštění prostředí \>
 
 ::: moniker range="vs-2017"
 
-Pomocí této stránky můžete přizpůsobit úvodní stránku aplikace Visual Studio nebo nastavit jinou výchozí akci při spuštění sady Visual Studio. Další informace najdete v tématu [přizpůsobení spuštění](../../ide/customizing-the-start-page-for-visual-studio.md).
+Na této stránce můžete přizpůsobit úvodní stránku sady Visual Studio nebo nastavit jinou výchozí akci při spuštění sady Visual Studio. Další informace naleznete v [tématu Vlastní spuštění](../../ide/customizing-the-start-page-for-visual-studio.md).
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Tato stránka slouží k nastavení jiné výchozí akce při spuštění sady Visual Studio. V rozevíracím seznamu **při spuštění** vyberte možnost z **okna Start** (umožňuje otevřít nový nebo existující projekt), nejnovější **řešení**nebo **prázdné prostředí**.
+Na této stránce můžete nastavit jinou výchozí akci při spuštění sady Visual Studio. V **seznamu Při spuštění, otevřít,** zvolte z **úvodního okna** (který umožňuje otevřít nový nebo existující projekt), **Nejnovější řešení**nebo Prázdné **prostředí**.
 
 ::: moniker-end

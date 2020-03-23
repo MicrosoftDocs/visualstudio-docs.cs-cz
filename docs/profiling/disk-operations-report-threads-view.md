@@ -1,5 +1,5 @@
 ---
-title: Sestava operací (zobrazení vláken) na disku | Dokumentace Microsoftu
+title: Sestava operací disku (zobrazení vláken) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,24 +13,24 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 69cbef53bcca74cceba4f9409b578fca45a58806
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62970067"
 ---
 # <a name="disk-operations-report-threads-view"></a>Sestava diskových operací (Zobrazení vláken)
-Sestava diskových operací ukazuje vstupně-výstupních operací disku v kanálech disku.
+Sestava operací disku zobrazuje vstupně-nosné operace disku v diskových kanálech.
 
- Pro každý přístup na disk, který se nachází jménem proces, který je právě profilována v současném viditelném časovém okně se použije v hlášení tyto informace:
+ Pro každý přístup k disku, ke kterému dochází jménem procesu, který je profilován v aktuálně viditelném časovém okně, jsou tyto informace hlášeny:
 
-- Název a identifikátor PID procesu, který provádí přístup k disku
+- Název a PID procesu, který provedl přístup k disku
 
-- ID vlákna, která využívají disku
+- ID vlákna, které přistupovalo k disku
 
-- Název souboru, která se použila
+- Název souboru, ke kterému byl přistupován
 
-- Počet čtení na souboru
+- Počet čtení na soubor
 
 - Počet přečtených bajtů
 
@@ -40,7 +40,7 @@ Sestava diskových operací ukazuje vstupně-výstupních operací disku v kaná
 
 - Počet zapsaných bajtů
 
-- Latence zápisu, v milisekundách
+- Latence zápisu v milisekundách
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

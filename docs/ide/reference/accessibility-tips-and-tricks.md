@@ -1,6 +1,6 @@
 ---
-title: Tipy a triky pro usnadnění pro Visual Studio
-description: Přečtěte si další informace o tipech a štychech, které vám pomůžou usnadnit přístup k integrovanému vývojovému prostředí (IDE) sady Visual Studio pro všechny uživatele, včetně postižených uživatelů.
+title: Tipy a triky pro usnadnění přístupu pro Visual Studio
+description: Přečtěte si další informace o tipech a tricích, které můžou usnadnit integrované vývojové prostředí sady Visual Studio (IDE) pro všechny uživatele, včetně osob s postižením.
 ms.date: 08/06/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,118 +12,118 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5828fb114a4df559c46dd6ae7f64887ab48e7429
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "68919526"
 ---
-# <a name="accessibility-tips-and-tricks-for-visual-studio"></a>Tipy a triky pro usnadnění pro Visual Studio
+# <a name="accessibility-tips-and-tricks-for-visual-studio"></a>Tipy a triky pro usnadnění přístupu pro Visual Studio
 
-Visual Studio obsahuje integrované funkce pro usnadnění přístupu, které jsou kompatibilní s čtečkami obrazovky a dalšími technologiemi usnadnění. Bez ohledu na to, jestli chcete používat klávesové zkratky k procházení IDE nebo k lepší viditelnosti použít kvalitní motivy, najdete na této stránce několik & tipů, jak to udělat.
+Visual Studio obsahuje integrované funkce usnadnění, které jsou kompatibilní s programy pro čtení z obrazovky a dalšími asistenčními technologiemi. Ať už chcete k navigaci v prostředí IDE používat klávesové zkratky nebo používat motivy s vysokým kontrastem ke zlepšení viditelnosti, najdete na této stránce několik tipů, & triky o tom, jak to udělat.
 
-Také pokryjeme, jak používat poznámky k odhalení užitečných informací o vašem kódu a jak nastavit zvukové pomůcky pro události sestavení a zarážky.
+Také se zabýváme tím, jak pomocí poznámky odhalit užitečné informace o kódu a jak nastavit zvukové podněty pro sestavení a události zarážky.
 
 > [!NOTE]
-> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [přístupnost pro Visual Studio pro Mac](/visualstudio/mac/accessibility).
+> Toto téma platí pro Visual Studio v systému Windows. Visual Studio pro Mac najdete [v tématu Usnadnění pro Visual Studio pro Mac](/visualstudio/mac/accessibility).
 
-## <a name="save-your-ide-settings"></a>Uložení nastavení IDE
+## <a name="save-your-ide-settings"></a>Uložení nastavení ide
 
-Prostředí IDE můžete přizpůsobit uložením rozložení okna, schématu mapování klávesnice a dalších předvoleb. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
+Prostředí IDE můžete přizpůsobit uložením rozložení okna, schématu mapování klávesnice a dalších předvoleb. Další informace naleznete [v tématu Přizpůsobení prostředí IDE sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="modify-your-ide-for-high-contrast-viewing"></a>Úprava prostředí IDE pro zobrazení s vysokým kontrastem
+## <a name="modify-your-ide-for-high-contrast-viewing"></a>Úprava ide pro zobrazení s vysokým kontrastem
 
-U některých lidé se některé barvy obtížně zobrazují. Pokud chcete při kódování větší kontrast, ale nechcete používat typické motivy "Vysoký kontrast", teď nabízíme motiv "modrý (extra Contrast)".
+Pro některé lidi, některé barvy jsou obtížnější vidět. Pokud chcete větší kontrast, jak si kód, ale nechcete používat typické "Vysoký kontrast" témata, nyní nabízíme "Modrá (Extra Kontrast)" téma.
 
-  ![Porovnat modrý motiv a modrý motiv extra Contrast](media/blue-extra-contrast-theme.png "Snímek obrazovky znázorňující porovnání modrého motivu a modrého motivu s modrým kontrastem")
+  ![Porovnání motivu Modrý a Modrý extra kontrast](media/blue-extra-contrast-theme.png "Snímek obrazovky, který zobrazuje porovnání modrého motivu a motivu Modrý extra kontrast")
 
-## <a name="use-annotations-to-reveal-useful-information-about-your-code"></a>Použití poznámek k odhalení užitečných informací o kódu
+## <a name="use-annotations-to-reveal-useful-information-about-your-code"></a>Použití poznámky odhalit užitečné informace o kódu
 
-Editor sady Visual Studio obsahuje mnoho textových "vylepšení", která vám pomůžou zjistit charakteristiky a funkce na určitých místech na řádku kódu, jako jsou ikony Screwdriver a žárovky, chyby a varování "vlnovky", záložky atd. Můžete použít sadu příkazů zobrazit poznámky k řádkům, které vám pomohou zjistit a procházet mezi těmito doplňky.
+Editor sady Visual Studio obsahuje mnoho text "vylepšení", které vás upozorní na charakteristiky a funkce v určitých bodech na řádku kódu, jako je například šroubovák a žárovky ikony, chyby a varování "klikyháky", záložky a tak dále. Můžete použít sadu příkazů "Zobrazit anotace čar", která vám pomůže objevit a pak přejít mezi těmito vylepšeními.
 
-  ![Použití sady příkazů zobrazit poznámky k řádkům](media/show-line-annotations-command-set.png "Snímek obrazovky s položkou nabídky Zobrazit poznámky k řádkům")
+  ![Použití sady příkazů Zobrazit poznámky z řádku](media/show-line-annotations-command-set.png "Snímek obrazovky s položkou nabídky Poznámky zobrazit řádek")
 
 ## <a name="access-toolbars-by-using-keyboard-shortcuts"></a>Přístup k panelům nástrojů pomocí klávesových zkratek
 
-Integrované vývojové prostředí sady Visual Studio má panely nástrojů jako mnoho oken nástrojů. Následující klávesové zkratky vám pomůžou s přístupem k nim.
+Prostředí IDE sady Visual Studio má panely nástrojů stejně jako mnoho oken nástrojů. K nim mají přístup následující klávesové zkratky.
 
 |Funkce|Popis|Klávesová zkratka|
 |-------------|-----------------| - |
-|Panely nástrojů IDE|Vyberte první tlačítko na standardním panelu nástrojů.|**ALT**,**TAB** **CTRL**+|
-|Panely nástrojů okna nástrojů|Přesuňte fokus na panely nástrojů v okně nástroje. <br> <br> **POZNÁMKA:** Tato funkce funguje pro většinu oken nástrojů, ale pouze v případě, že je fokus v okně nástroje. Také je nutné před klávesou ALT zvolit klávesu SHIFT. V některých oknech nástrojů, jako je například Team Explorer, je nutné před volbou klávesy ALT držet chvilku klávesu SHIFT.|**Shift**ALT+|
-|Panely nástrojů|Přejít na první položku na následujícím panelu nástrojů (Pokud má panel nástrojů fokus).|**Ctrl**+**Tab**|
+|Panely nástrojů IDE|Vyberte první tlačítko na panelu nástrojů Standardní.|**Alt**,**karta** **Ctrl**+|
+|Panely nástrojů okna nástrojů|Přesunutí fokusu na panely nástrojů v okně nástroje <br> <br> **POZNÁMKA:** To funguje pro většinu oken nástrojů, ale pouze v případě, že fokus je v okně nástroje. Musíte také před klávesou ALT zvolit klávesu SHIFT. V některých oknech nástrojů, například v Průzkumníkovi týmu, musíte před výběrem klávesy ALT chvíli podržet klávesu SHIFT.|**Posuntovat**+**s alternativním**|
+|Panely nástrojů|Přejděte na první položku na dalším panelu nástrojů (pokud je zaostřeno na panelu nástrojů).|**Ctrl**+**Karta** Ctrl|
 
 ### <a name="other-useful-keyboard-shortcuts"></a>Další užitečné klávesové zkratky
 
-Mezi další užitečné klávesové zkratky patří následující.
+Některé další užitečné klávesové zkratky zahrnují následující.
 
 |Funkce|Popis|Klávesová zkratka|
 |-------------|-----------------| - |
-|IDE – integrované vývojové prostředí|Přepnutí Vysoký kontrast zapnuto nebo vypnuto. <br> <br> **POZNÁMKA:** Standardní klávesové zkratky Windows|**Levý ALT**+**levý SHIFT**Screen+|
-|Dialogové okno|Zaškrtněte nebo zrušte zaškrtnutí možnosti zaškrtávací políčko v dialogovém okně. <br> <br> **POZNÁMKA:** Standardní klávesové zkratky Windows|**Spacebar**|
-|Místní nabídky|Otevřete místní nabídku (kliknutím pravým tlačítkem myši). <br> <br> **POZNÁMKA:** Standardní klávesové zkratky Windows|**Shift**+**F10**|
-|Nabídky|Rychlý přístup k položce nabídky pomocí jeho klávesových zkratek Příkaz aktivujete tak, že v nabídce vyberete klávesu **ALT** následovanou podtrženými písmeny. Například pro zobrazení dialogového okna otevřít projekt v aplikaci Visual Studio byste si zvolili **ALT**+**F**+**O**+**P**.  <br><br> **POZNÁMKA:** Standardní klávesové zkratky Windows|ALT +  **[písmeno]**|
-|Vyhledávací pole|Použijte funkci hledání v aplikaci Visual Studio.|**Ctrl**+**Q**|
-|Okno nástrojů|Přesun mezi kartami sady nástrojů|**CTRL +** +**šipka nahoru**<br /><br /> and<br /><br /> **CTRL +** +**šipka dolů**|
-|Okno nástrojů|Přidejte ovládací prvek ze sady nástrojů do formuláře nebo návrháře.|**Zadejte**|
-|Dialogové okno Možnosti: Prostředí > klávesnice|Odstraní kombinaci kláves zadaná v možnosti klávesových **zkratek** CTRL.|**BACKSPACE**|
-|Okno nástroje oznámení|Otevřete okno nástroje oznámení pomocí dvou kombinací kláves klávesových zkratek, jednu následovaný druhým. Potom zobrazte oznámení pomocí kláves se šipkami a vyberte je.| **CTRL** **&#92;** , **CTRL**N++|
+|IDE – integrované vývojové prostředí|Zapínejte a vypínejte vysoký kontrast. <br> <br> **POZNÁMKA:** Standardní klávesová zkratka pro Windows|**Levý alt**+**levý posun**+**PrtScn**|
+|Dialogové okno|Zaškrtněte nebo zrušte zaškrtnutí políčka v dialogovém okně. <br> <br> **POZNÁMKA:** Standardní klávesová zkratka pro Windows|**Mezerník**|
+|Místní nabídky|Otevřete kontextovou nabídku (po kliknutí pravým tlačítkem myši). <br> <br> **POZNÁMKA:** Standardní klávesová zkratka pro Windows|**Posun**+**F10**|
+|Nabídky|Rychlý přístup k položce nabídky pomocí kláves akcelerátoru. Příkaz aktivujete zvolte klávesu **Alt** následovanou podtrženými písmeny v nabídce. Chcete-li například zobrazit dialogové okno Otevřít projekt v sadě Visual Studio, zvolíte možnost **Alt**+**F**+**O**+**P**.  <br><br> **POZNÁMKA:** Standardní klávesová zkratka pro Windows|**Alt** + **[dopis]**|
+|Vyhledávací pole|Použijte funkci hledání v sadě Visual Studio.|**Ctrl**+**Q**|
+|Okno panelu nástrojů|Přesun mezi kartami Panelu nástrojů|**Ctrl**+**šipka nahoru**<br /><br /> a<br /><br /> **Ctrl**+**šipka dolů**|
+|Okno panelu nástrojů|Přidejte ovládací prvek z panelu nástrojů do formuláře nebo návrháře.|**Enter**|
+|Dialogové okno Možnosti: Prostředí > klávesnice|Odstraňte kombinaci kláves zadanou v možnosti **Natisknout klávesové zkratky.**|**Backspace**|
+|Okno nástroje Oznámení|Otevřete okno nástroje Oznámení pomocí dvou kombinací klávesových zkratek, jedné následované druhou. Potom zobrazte oznámení pomocí kláves se šipkami a vyberte ho.| **Ctrl** + **&#92;**, **Ctrl**+**N**|
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které se zobrazí mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici.
+> Zobrazená dialogová okna a příkazy nabídek se mohou lišit od těch, které jsou popsány v nápovědě, v závislosti na aktivním nastavení nebo edici.
 
 ## <a name="access-notifications-by-using-keyboard-shortcuts"></a>Přístup k oznámením pomocí klávesových zkratek
 
-Když se v integrovaném vývojovém prostředí zobrazí oznámení, můžete získat přístup k oknu oznámení pomocí klávesových zkratek:
+Když se v ide zobrazí oznámení, můžete získat přístup k oknu Oznámení pomocí klávesových zkratek:
 
-1. Z libovolného místa v integrovaném vývojovém prostředí (IDE) stiskněte následující dvě klávesové zkratky v sekvenci, jednu po druhé: **CTRL** **&#92;** a pakCTRL+**N**.+
+1. Z libovolného místa v ide, stiskněte následující dvě klávesové zkratky v pořadí, jeden po druhém: **Ctrl** + **&#92;** a pak **Ctrl**+**N**.
 
-   Otevře se okno **oznámení** .
+   Otevře se okno **Oznámení.**
 
-   ![Okno nástroje oznámení v integrovaném vývojovém prostředí sady Visual Studio](media/toast-notification.png "Snímek obrazovky okna oznámení v integrovaném vývojovém prostředí sady Visual Studio")
+   ![Okno nástroje Oznámení v ide sady Visual Studio](media/toast-notification.png "Snímek obrazovky s oknem Oznámení v rozhraní IDE sady Visual Studio")
 
-1. K výběru oznámení použijte klávesu **TAB** nebo klávesy se šipkami.
+1. Pomocí klávesy **Tab** nebo kláves se šipkami vyberte oznámení.
 
-## <a name="use-the-sound-applet-to-set-build-and-breakpoint-cues"></a>Použití apletu zvuk k nastavení hromádek sestavení a zarážky
+## <a name="use-the-sound-applet-to-set-build-and-breakpoint-cues"></a>Použití apletu Zvuku k nastavení podnětů sestavení a zarážky
 
-Pomocí apletu zvuk v systému Windows můžete přiřadit zvuk k událostem programu Visual Studio. Konkrétně můžete přiřadit zvuky k následujícím událostem programu:
+Aplet zvuku v systému Windows můžete použít k přiřazení zvuku k událostem programu sady Visual Studio. Konkrétně můžete přiřadit zvuky k následujícím událostem programu:
 
-* Pozice zarážky
-* Sestavení bylo zrušeno
-* Sestavení selhalo
-* Sestavení bylo úspěšné.
+* Zásahová stopa
+* Sestavení bylo zrušeno.
+* Sestavení se nezdařilo.
+* Sestavení proběhlo úspěšně.
 
-Tady je postup:
+Zde je uveden postup:
 
-1. Do **vyhledávacího** pole na počítači s Windows 10 zadejte **změnit systémové zvuky**.
+1. Do pole **Hledat** v počítači se systémem Windows 10 zadejte **příkaz Změnit systémové zvuky**.
 
-   ![Vyhledávací pole ve Windows 10](media/type-here-to-search.png "Snímek obrazovky vyhledávacího pole ve Windows 10")
+   ![Vyhledávací pole ve Windows 10](media/type-here-to-search.png "Snímek obrazovky s vyhledávacím polem ve Windows 10")
 
-   (Případně, pokud máte Cortana povoleno, řekněme "Hey Cortana" a pak vyslovte "změnit systémové zvuky".)
+   (Pokud máte cortanu povolenou, řekněte "Hey Cortana" a pak řekněte "Změnit systémové zvuky".)
 
-1. Dvakrát klikněte na možnost **změnit systémové zvuky**.
+1. Poklepejte na **změnit systémové zvuky**.
 
-   ![Výsledky hledání ve Windows 10](media/change-system-sounds.png "Snímek obrazovky s výsledky hledání \"Změna systémových zvuků\" ve Windows 10")
+   ![Výsledky hledání ve Windows 10](media/change-system-sounds.png "Snímek obrazovky s výsledky hledání "Změnit zvuky systému" ve Windows 10")
 
-1. V dialogovém okně **zvuk** klikněte na kartu **zvuky** .
+1. V dialogovém okně **Zvuk** klikněte na kartu **Zvuky.**
 
-1. V okně **události programu**přejděte na **Microsoft Visual Studio**a pak vyberte zvuky, které chcete použít pro vybrané události.
+1. V **části Události programů**přejděte na **aplikaci Microsoft Visual Studio**a vyberte zvuky, které chcete použít pro vybrané události.
 
-   ![Karta zvuky v apletu zvuk v systému Windows 10](media/sound-applet.png "Karta zvuky v apletu zvuk v systému Windows 10")
+   ![Zvuková karta apletu Zvuk ve Windows 10](media/sound-applet.png "Zvuková karta apletu Zvuk ve Windows 10")
 
-1. Klikněte na **OK**.
+1. Klikněte na tlačítko **OK**.
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Další informace o aktualizacích usnadnění najdete v blogovém příspěvku o [vylepšeních dostupnosti v aplikaci Visual Studio 2017 verze 15,3](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/) .
+> Další informace o aktualizacích usnadnění najdete v tématu Vylepšení usnadnění v blogu [Visual Studia 2017 verze 15.3.](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/)
 
 ::: moniker-end
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-* [Funkce pro usnadnění přístupu sady Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md)
-* [Postupy: Přizpůsobení nabídek a panelů nástrojů v aplikaci Visual Studio](../../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)
+* [Funkce usnadnění v sadě Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md)
+* [Postup: Přizpůsobení nabídek a panelů nástrojů v sadě Visual Studio](../../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)
 * [Přizpůsobení prostředí IDE sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)
-* [Usnadnění (Visual Studio pro Mac)](/visualstudio/mac/accessibility)
-* [Usnadnění Microsoftu](https://www.microsoft.com/Accessibility)
+* [Usnadnění přístupu (Visual Studio pro Mac)](/visualstudio/mac/accessibility)
+* [Usnadnění přístupu společnosti Microsoft](https://www.microsoft.com/Accessibility)

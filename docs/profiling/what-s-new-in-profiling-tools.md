@@ -1,5 +1,5 @@
 ---
-title: Co je nového v profilování v aplikaci Visual Studio 2017 | Microsoft Docs
+title: Co je nového v profilování ve Visual Studiu 2017 | Dokumenty společnosti Microsoft
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,27 +14,27 @@ ms.workload:
 - multiple
 monikerRange: vs-2017
 ms.openlocfilehash: 0512c6e95f0a26184593f7af5ba08c31c33a3299
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "71128343"
 ---
-# <a name="whats-new-in-profiling-tools-in-includevs_dev15miscincludesvs_dev15_mdmd"></a>Co je nového v nástrojích pro profilaci v nástroji[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
+# <a name="whats-new-in-profiling-tools-in-includevs_dev15"></a>Co je nového v nástrojích profilování v[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
 
-Diagnostické nástroje obsahují nové vizualizace, které vám pomůžou identifikovat problémy ve vaší aplikaci, které potřebují opravit. Diagnostické nástroje teď zahrnují podporu pro aplikace ASP.NET.
+Diagnostické nástroje obsahují nové vizualizace, které vám pomohou identifikovat problémy ve vaší aplikaci, které je třeba opravit. Diagnostické nástroje nyní obsahují podporu pro ASP.NET aplikace.
 
-Další informace najdete v [poznámkách k verzi [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]pro ](/visualstudio/releasenotes/vs2017-relnotes).
+Další informace naleznete v [poznámkách k verzi pro . [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] ](/visualstudio/releasenotes/vs2017-relnotes)
 
-Do nástrojů se přidala karta **Souhrn** , která vám pomůže soustředit se na klíčové oblasti pro analýzu výkonu. Tato karta zobrazuje, kolik událostí se objevilo, umožňuje pořizovat snímky haldy a umožňuje rychle Povolit shromažďování dat o využití procesoru. Toto zobrazení ukazuje všechny události [Application Insights](/azure/azure-monitor/app/visual-studio) nebo [Analýza uživatelského rozhraní](/visualstudio/releasenotes/vs2017-relnotes) . Kromě toho pro Visual Studio Enterprise toto zobrazení také zobrazuje události IntelliTrace.
+Karta **Souhrn** byla přidána do nástrojů, které vám pomohou zaměřit se na klíčové oblasti pro analýzu výkonu. Tato karta ukazuje, kolik událostí došlo, umožňuje pořizovat snímky haldy a umožňuje rychle povolit shromažďování dat využití procesoru. Toto zobrazení zobrazuje všechny [přehledy aplikací](/azure/azure-monitor/app/visual-studio) nebo události [analýzy ui.](/visualstudio/releasenotes/vs2017-relnotes) Kromě toho pro Visual Studio Enterprise toto zobrazení také zobrazuje události IntelliTrace.
 
-![Karta souhrn nástrojů pro diagnostiku](../profiling/media/diag-tools-summary-tab-2.png "DiagToolsSummaryTab")
+![Karta Souhrn nástrojů diagnostiky](../profiling/media/diag-tools-summary-tab-2.png "DiagToolsSummaryTab")
 
-Nástroj využití CPU má [nové vizualizace](../profiling/Beginners-Guide-to-Performance-Profiling.md) , které vám pomůžou identifikovat funkce, které nejpravděpodobněji způsobují problémy s výkonem. Nové zobrazení **volající/volaný** umožňuje prozkoumat náklady na volání funkcí a z vybrané funkce.
+Nástroj pro využití procesoru má [nové vizualizace, které](../profiling/Beginners-Guide-to-Performance-Profiling.md) vám pomohou identifikovat funkce, které s největší pravděpodobností způsobují problémy s výkonem. Nové zobrazení **Volající/Volaný** umožňuje prozkoumat náklady na volání funkce do a z vybrané funkce.
 
-![Zobrazení volajícího volaných nástrojů pro diagnostiku](../profiling/media/diag-tools-caller-callee-2.png "DiagToolsCallerCallee")
+![Diagnostické nástroje volajícího volacího zobrazení](../profiling/media/diag-tools-caller-callee-2.png "DiagToolsCallerCallee")
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Profil v aplikaci Visual Studio](../profiling/index.yml)
-- [Nejdřív se podívejte na nástroje pro profilaci](../profiling/profiling-feature-tour.md)
+- [Profil v sadě Visual Studio](../profiling/index.yml)
+- [První seznámení s nástroji pro profilaci](../profiling/profiling-feature-tour.md)

@@ -14,27 +14,27 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b5392ad3efaee8a3c29e58bd2b75272e4206215a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569137"
 ---
-# <a name="how-to-display-line-numbers-in-the-editor"></a>Postupy: zobrazení čísel řádků v editoru
+# <a name="how-to-display-line-numbers-in-the-editor"></a>Postup: Zobrazení čísel řádků v editoru
 
 V kódu můžete zobrazit nebo skrýt číslování řádků.
 
-## <a name="display-line-numbers-in-code"></a>Zobrazit čísla řádků v kódu
+## <a name="display-line-numbers-in-code"></a>Zobrazení čísel řádků v kódu
 
-1. V panelu nabídky zvolte **nástroje** > **možnosti**. Rozbalte uzel **textový editor** a pak vyberte buď jazyk, který používáte, nebo **všechny jazyky** , abyste zapnuli čísla řádků ve všech jazycích. (Nebo, zadejte **číslo řádku** do vyhledávacího pole a z výsledků vyberte možnost **zapnout nebo vypnout čísla řádků** .)
+1. Na řádku nabídek zvolte**Možnosti** **nástrojů** > . Rozbalte uzel **Editor textu** a pak vyberte jazyk, který používáte, nebo **Všechny jazyky,** chcete-li zapnout čísla řádků ve všech jazycích. (Nebo do vyhledávacího pole zadejte **číslo řádku** a z výsledků zvolte **Zapnout nebo vypnout čísla řádků.)**
 
-2. Zaškrtněte políčko **čísla řádků** .
+2. Zaškrtněte políčko **Čísla řádků.**
 
    ![Možnost zobrazení čísel řádků v editoru VS](../../ide/reference/media/line-numbers-option.png)
 
 > [!TIP]
-> Čísla řádků nejsou přidána do kódu; jsou jenom pro referenci. Pokud chcete tisknout čísla řádků, zaškrtněte políčko **Zahrnout čísla řádků** v dialogovém okně **Tisk** .
+> Čísla řádků se do kódu nepřidávají. Jsou jen na posuzu. Pokud chcete, aby se čísla řádků vytiskla, zaškrtněte v dialogovém okně **Tisk** políčko **Zahrnout čísla řádků.**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Funkce editoru kódu](../../ide/writing-code-in-the-code-and-text-editor.md)

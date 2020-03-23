@@ -1,25 +1,25 @@
 ---
 ms.openlocfilehash: 6c2065eee7663b627623bf7c68a4a94027c9be57
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "70197115"
 ---
 ## <a name="prerequisites"></a>Požadavky
 
 ::: moniker range=">=vs-2019"
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) nainstalované s odpovídajícími úlohami pro svůj jazyk, který si vyberete:
-  * ASP.NET: **Vývoj pro ASP.NET a Web**
+* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) nainstalované s odpovídajícími úlohami pro váš jazyk:
+  * ASP.NET: **ASP.NET a vývoj webových aplikací**
 ::: moniker-end
 ::: moniker range="vs-2017"
-* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) nainstalované s odpovídajícími úlohami pro svůj jazyk, který si vyberete:
-  * ASP.NET: **Vývoj pro ASP.NET a Web**
+* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) nainstalované s odpovídajícími úlohami pro váš jazyk:
+  * ASP.NET: **ASP.NET a vývoj webových aplikací**
 ::: moniker-end
 
-* Předplatné Azure. Pokud ještě předplatné nemáte, zaregistrujte se [zdarma](https://azure.microsoft.com/free/dotnet/), včetně $200 na kreditu po dobu 30 dnů a 12 měsíců oblíbených bezplatných služeb.
+* Předplatné Azure. Pokud ještě nemáte předplatné, [zaregistrujte se zdarma](https://azure.microsoft.com/free/dotnet/), který zahrnuje 200 dolarů v kreditu po dobu 30 dnů a 12 měsíců populárních bezplatných služeb.
 
-* ASP.NET Core projekt. Pokud ho ještě nemáte, postupujte podle pokynů [pro rychlý Start: Použijte Visual Studio k vytvoření první ASP.NET Core webové aplikace](../../ide/quickstart-aspnet-core.md)nebo použijte **soubor** > **Nový projekt**, vyberte **Visual C#**   > .NET Core a pak vyberte **ASP.NET Core webová aplikace.** . Po zobrazení výzvy vyberte šablonu **Webová aplikace (model-zobrazení-kontroler)** , ujistěte se, že není vybráno **žádné ověřování** , a pak vyberte **OK**.
+* Projekt ASP.NET Core. Pokud ji ještě nemáte, postupujte podle [funkce Úvodní příručka: Pomocí sady Visual Studio vytvořte první ASP.NET webovou aplikaci Core](../../ide/quickstart-aspnet-core.md)nebo použijte Nový projekt **souboru** > **New Project**, vyberte **Visual C#** > **.NET Core**a pak vyberte ASP.NET Základní **webová aplikace**. Po zobrazení výzvy vyberte šablonu **Webové aplikace (Model-View-Controller),** ujistěte se, že není **vybrána možnost Žádné ověřování,** a pak vyberte **OK**.
 
-* Před provedením kroků nasazení se ujistěte, že jste sestavili projekt pomocí příkazu nabídky **build > Build Solution** .
+* Před provedením kroků nasazení se ujistěte, že jste projekt vytvořili pomocí příkazu nabídky **Sestavit > sestavení řešení.**

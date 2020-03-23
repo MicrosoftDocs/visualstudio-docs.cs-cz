@@ -1,5 +1,5 @@
 ---
-title: diagnostické Namespace | Dokumentace Microsoftu
+title: diagnostický obor názvů | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 03671f314dca3c016f9524bcb246b74e0eb1f837
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62970080"
 ---
-# <a name="diagnostic-namespace"></a>Diagnostic – obor názvů
-`diagnostics` Obor názvů poskytuje funkce pro generování značek Vizualizéru souběžnosti.
+# <a name="diagnostic-namespace"></a>diagnostický obor názvů
+Obor `diagnostics` názvů poskytuje funkce pro vyzařování značek vizualizérů souběžnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,21 +32,21 @@ namespace diagnostic;
 
 ### <a name="classes"></a>Třídy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[marker_series – třída](../profiling/marker-series-class.md)|Představuje kanál sériového portu události generované modulem jednoho zprostředkovatele.|
-|[span – třída](../profiling/span-class.md)|Definuje fáze aplikace.|
+|[marker_series – třída](../profiling/marker-series-class.md)|Představuje sériový kanál událostí generovaných jednoho zprostředkovatele.|
+|[span – třída](../profiling/span-class.md)|Definuje fázi aplikace.|
 
 ### <a name="enumerations"></a>Výčty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[marker_importance – výčet](../profiling/marker-importance-enumeration.md)|Představuje úroveň důležitosti značek Vizualizátor souběžnosti.|
+|[marker_importance – výčet](../profiling/marker-importance-enumeration.md)|Představuje úroveň důležitosti značky Vizualizér souběžnosti.|
 
 ## <a name="requirements"></a>Požadavky
  **Záhlaví:** *cvmarkersobj.h*
 
- **Namespace:** Souběžnost
+ **Obor názvů:** Souběžnost
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Obor názvů souběžnosti (vizualizér souběžnosti)](../profiling/concurrency-namespace-concurrency-visualizer.md)

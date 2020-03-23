@@ -1,6 +1,6 @@
 ---
-title: Definovat vlastní příkazy pro projekty v Pythonu
-description: Podle úprav projektu a soubory cíle můžete přidat vlastní příkazy do kontextové nabídky projektu Pythonu v sadě Visual Studio, který má být vyvolán spustitelné programy, skripty, moduly, vložené fragmenty kódu a pip.
+title: Definování příkazů vlastní nabídky pro projekty Pythonu
+description: Úpravou souborů projektu a cílů můžete přidat vlastní příkazy do kontextové nabídky projektu Pythonu v sadě Visual Studio a vyvolat spustitelné programy, skripty, moduly, fragmenty vřádíkem vřádku a pip.
 ms.date: 11/12/2018
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -11,46 +11,46 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: ec53a67980866ed6422fae5764bbf6a9313ef91e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62957656"
 ---
-# <a name="define-custom-commands-for-python-projects"></a>Definovat vlastní příkazy pro projekty v Pythonu
+# <a name="define-custom-commands-for-python-projects"></a>Definování vlastních příkazů pro projekty Pythonu
 
-Při práci s projekty v Pythonu, může být pro vás sami přepnutí na okno příkazového řádku spustit konkrétní skripty a moduly, spustit příkazy nástroje pip, nebo nějaký jiný libovolný nástroj. Cílem pracovního postupu můžete přidat vlastní příkazy **Python** podnabídce v kontextové nabídce projektu Pythonu. Tyto příkazy můžete spustit v okně konzoly nebo v sadě Visual Studio **výstup** okna. Regulární výrazy můžete použít také dáte pokyn, aby Visual Studio jak parsovat chyby a upozornění z výstupu příkazu.
+V procesu práce s projekty Pythonu se můžete ocitnout při přepnutí do příkazového okna pro spuštění konkrétních skriptů nebo modulů, spuštění příkazů pip nebo spuštění jiného libovolného nástroje. Chcete-li zlepšit svůj pracovní postup, můžete přidat vlastní příkazy do podnabídky **Pythonu** v kontextové nabídce projektu Pythonu. Tyto příkazy lze spustit v okně konzoly nebo v okně Visual Studio **Output.** Regulární výrazy můžete také použít k instruování sady Visual Studio, jak analyzovat chyby a upozornění z výstupu příkazu.
 
-Ve výchozím nastavení, této nabídky obsahuje pouze jeden **spustit Pylintu** příkaz:
+Ve výchozím nastavení tato nabídka obsahuje pouze jeden příkaz **Spustit PyLint:**
 
-![Výchozí vzhled podnabídky Python v místní nabídce projektu](media/custom-commands-default-menu.png)
+![Výchozí vzhled podnabídky Pythonu v kontextové nabídce projektu](media/custom-commands-default-menu.png)
 
-Vlastní příkazy se zobrazují v tomto stejné místní nabídce. Vlastní příkazy jsou přidány do souboru projektu přímo, kde se vztahují na tento projekt. Můžete také definovat vlastní příkazy v *.targets* soubor, který lze snadno importovat do více souborech projektu.
+Vlastní příkazy se zobrazí ve stejné místní nabídce. Vlastní příkazy jsou přidány do souboru projektu přímo, kde se vztahují na tento jednotlivý projekt. Můžete také definovat vlastní příkazy v souboru *.targets,* které lze snadno importovat do více souborů projektu.
 
-Některé šablony projektů Python v sadě Visual Studio už přidat vlastní příkazy jejich vlastní použití jejich *.targets* souboru. Například šablony Bottle webový projekt a webový projekt Flask přidat dva příkazy **spustit server** a **spustit server pro ladění**. Šablona webového projektu Django přidá tyto stejné příkazy, a navíc několik dalších:
+Některé šablony projektů Pythonu v sadě Visual Studio již přidávají vlastní příkazy pomocí souboru *.targets.* Například šablony Bottle Web Project a Flask Web Project přidávají dva příkazy, **Start server** a **Start ladicí server**. Šablona webového projektu Django přidává stejné příkazy a několik dalších:
 
-![Vzhled podnabídky Python v místní nabídce projektu Django](media/custom-commands-django-menu.png)
+![Vzhled podnabídky Pythonu v kontextové nabídce projektu Django](media/custom-commands-django-menu.png)
 
-Každý vlastní příkaz mohou odkazovat na soubor Pythonu, modul Pythonu, vložený kód Pythonu, libovolný spustitelný soubor nebo příkazu pip. Můžete také určit, jak a kde se příkaz spustí.
+Každý vlastní příkaz může odkazovat na soubor Pythonu, modul Pythonu, vřádkový kód Pythonu, libovolný spustitelný soubor nebo příkaz pip. Můžete také určit, jak a kde je příkaz spuštěn.
 
 > [!Tip]
-> Pokaždé, když provedete změny do souboru projektu v textovém editoru, je nutné znovu načíst projekt v sadě Visual Studio, aby se tyto změny. Například je nutné znovu projektu po přidání vlastního příkazu definice pro tyto příkazy se zobrazí v místní nabídce projektu.
+> Kdykoli provedete změny v souboru projektu v textovém editoru, je nutné znovu načíst projekt v sadě Visual Studio, abyste tyto změny použili. Například je nutné znovu načíst projekt po přidání vlastní chod příkazů pro tyto příkazy, které se zobrazí v kontextové nabídce projektu.
 >
-> Jak asi víte, Visual Studio poskytuje prostředky k přímo upravit soubor projektu. Nejprve klikněte pravým tlačítkem na soubor projektu a vyberte **uvolnit projekt**, pak znovu klikneme pravým tlačítkem a vyberte **upravit \<název projektu >** projekt otevřít v editoru sady Visual Studio. Můžete pak provádět a uložení úprav, ještě jednou klikněte pravým tlačítkem na projekt a vyberte **znovu načíst projekt**, což také vás vyzve k potvrzení zavření souboru projektu v editoru.
+> Jak možná víte, Visual Studio poskytuje prostředky k úpravě souboru projektu přímo. Nejprve klepněte pravým tlačítkem myši na soubor projektu a vyberte **uvolnit projekt**, potom znovu klepněte pravým tlačítkem myši a vyberte **upravit \<název projektu>** otevřete projekt v editoru sady Visual Studio. Potom provedete a uložíte úpravy, znovu kliknete pravým tlačítkem myši na projekt a vyberete **znovu načíst projekt**, který vás také vyzve k potvrzení zavření souboru projektu v editoru.
 >
-> Při vytváření vlastního příkazu, ale tyto kliknutí se může stát únavné. Pro efektivnější pracovní postupy, načtení projektu v sadě Visual Studio a také otevřít *.pyproj* souboru v samostatných editoru úplně (jako je například jiná instance sady Visual Studio, Visual Studio Code, Poznámkový blok, atd.). Při uložení změn v editoru a přepnete se do sady Visual Studio, Visual Studio zjistí změny a zeptá, jestli se má znovu načtěte projekt (**projektu \<name > byl změněn mimo prostředí.**). Vyberte **Reload** a provedené změny se okamžitě použijí v jednom kroku.
+> Při vývoji vlastního příkazu se však všechna tato kliknutí mohou stát zdlouhavá. Efektivnější pracovní postup načtěte projekt v sadě Visual Studio a také otevřete soubor *.pyproj* v samostatném editoru (například jinou instanci sady Visual Studio, kód sady Visual Studio, poznámkový blok atd.). Když uložíte změny v editoru a přepnete do sady Visual Studio, Visual Studio zjistí změny a zeptá se, zda chcete znovu načíst projekt (**Název \<projektu> byl změněn mimo prostředí.**). Vyberte **Znovu načíst** a změny se okamžitě použijí v jediném kroku.
 
 ## <a name="walkthrough-add-a-command-to-a-project-file"></a>Návod: Přidání příkazu do souboru projektu
 
-Seznamte se s vlastní příkazy, tato část vás provede jednoduchý příklad, který spouští projektu po spuštění souboru přímo pomocí *python.exe*. (Takové příkaz je v podstatě totéž jako použití **ladění** > **spustit bez ladění**.)
+Chcete-li se seznámit s vlastními příkazy, tato část prochází jednoduchým příkladem, který spouští spouštěcí soubor projektu přímo pomocí *python.exe*. (Takový příkaz je v podstatě stejný jako pomocí **ladění** > **Start bez ladění**.)
 
-1. Vytvoření nového projektu s názvem "Python-CustomCommands" pomocí **aplikace v Pythonu** šablony. (Viz [rychlý start: Vytvoření projektu Pythonu z šablony](quickstart-02-python-in-visual-studio-project-from-template.md) pokyny, pokud ještě nejste obeznámeni s procesem.)
+1. Vytvořte nový projekt s názvem "Python-CustomCommands" pomocí šablony **aplikace Python.** (Viz [Úvodní příručka: Vytvoření projektu Pythonu ze šablony](quickstart-02-python-in-visual-studio-project-from-template.md) pro pokyny, pokud ještě nejste obeznámeni s procesem.)
 
-1. V *Python_CustomCommands.py*, přidejte kód `print("Hello custom commands")`.
+1. V *Python_CustomCommands.py*přidejte `print("Hello custom commands")`kód .
 
-1. Klikněte pravým tlačítkem na projekt v **Průzkumníka řešení**vyberte **Python**a Všimněte si, že je jediný příkaz, který se zobrazí v podnabídce **spustit Pylintu**. Vlastní příkazy se zobrazí v podnabídce Tento stejný.
+1. Klepněte pravým tlačítkem myši na projekt v **Průzkumníku řešení**, vyberte **Python**a všimněte si, že jediný příkaz, který se zobrazí v podnabídce, je **Spustit PyLint**. Vlastní příkazy se zobrazí ve stejné podnabídce.
 
-1. Jak je navrženo v úvodu, otevřete *Python CustomCommands.pyproj* v samostatném textovém editoru. Pak přidejte následující řádky na konci souboru pouze uvnitř uzavírací `</Project>` a soubor uložte.
+1. Jak je navrženo v úvodu, otevřete *Python-CustomCommands.pyproj* v samostatném textovém editoru. Potom přidejte následující řádky na konec souboru `</Project>` přímo uvnitř uzávěrky a uložte soubor.
 
     ```xml
     <PropertyGroup>
@@ -60,9 +60,9 @@ Seznamte se s vlastní příkazy, tato část vás provede jednoduchý příklad
     </PropertyGroup>
     ```
 
-1. Přepněte zpět do sady Visual Studio a vyberte **Reload** při zobrazování výzvy o změně souboru. Zkontrolujte **Python** nabídky znovu, abyste viděli, která **spustit Pylintu** je stále pouze položky, které je znázorněno, protože jste přidali pouze řádky replikovat výchozí `<PythonCommands>` vlastnosti skupiny obsahující Pylintu příkaz.
+1. Přepněte zpět do sady Visual Studio a vyberte **Znovu načíst,** když se zobrazí výzva ke změně souboru. Pak znovu zkontrolujte nabídku **Pythonu,** abyste viděli, že **Spustit PyLint** je `<PythonCommands>` stále jedinou položkou, která je zde zobrazena, protože řádky, které jste přidali, replikují pouze výchozí skupinu vlastností obsahující příkaz PyLint.
 
-1. Přejděte k editoru do souboru projektu a přidejte následující `<Target>` definici po `<PropertyGroup>`. Jak je popsáno dále v tomto článku se to `Target` element definuje vlastní příkaz pro spuštění po spuštění souboru (identifikovaný podle vlastnosti "StartupFile") pomocí *python.exe* v okně konzoly. Atribut `ExecuteIn="consolepause"` používá konzolu, která čeká na stisknutím jakékoli klávesy před zavřením.
+1. Přepněte do editoru se souborem `<Target>` projektu `<PropertyGroup>`a za soubor přidejte následující definici. Jak je vysvětleno dále `Target` v tomto článku, tento prvek definuje vlastní příkaz pro spuštění spouštěcího souboru (identifikovaný vlastností "StartupFile") pomocí *python.exe* v okně konzoly. Atribut `ExecuteIn="consolepause"` používá konzolu, která čeká na stisknutí klávesy před zavřením.
 
     ```xml
     <Target Name="Example_RunStartupFile" Label="Run startup file" Returns="@(Commands)">
@@ -77,7 +77,7 @@ Seznamte se s vlastní příkazy, tato část vás provede jednoduchý příklad
     </Target>
     ```
 
-1. Přidejte hodnotu cíle `Name` atribut `<PythonCommands>` skupiny vlastností přidali dříve, tak, že element bude vypadat jako následující kód. Název cíle přidání do tohoto seznamu je co přidá jej do **Python** nabídky.
+1. Přidejte hodnotu `Name` atributu Target `<PythonCommands>` do skupiny vlastností přidané dříve, aby prvek vypadal jako níže uvedený kód. Přidání názvu cíle do tohoto seznamu je to, co jej přidá do nabídky **Pythonu.**
 
     ```xml
       <PythonCommands>
@@ -86,28 +86,28 @@ Seznamte se s vlastní příkazy, tato část vás provede jednoduchý příklad
       </PythonCommands>
     ```
 
-    Pokud chcete, aby před těmi definovanými ve svých rukou `$(PythonCommands)`, je umístit před tento token.
+    Pokud chcete, aby se příkaz `$(PythonCommands)`zobrazil před příkazy definovanými v aplikaci , umístěte je před tento token.
 
-1. Uložte soubor projektu, přepněte do aplikace Visual Studio a znovu načtěte projekt po zobrazení výzvy. Klepněte pravým tlačítkem myši **Python CustomCommands** projektu a vyberte **Python**. Měli byste vidět **spuštění spouštěcího souboru** položky v nabídce. Pokud se nezobrazí položka nabídky, zkontrolujte, že jste přidali název, který má `<PythonCommands>` elementu. Viz také [Poradce při potížích s](#troubleshooting) dále v tomto článku.
+1. Uložte soubor projektu, přepněte do sady Visual Studio a po zobrazení výzvy projekt znovu načtěte. Potom klepněte pravým tlačítkem myši na projekt **Python-CustomCommands** a vyberte **Python**. V nabídce by se měla zobrazit položka **spouštěcího souboru.** Pokud položku nabídky nevidíte, zkontrolujte, zda jste `<PythonCommands>` do prvku přidali název. Viz také [řešení potíží](#troubleshooting) dále v tomto článku.
 
-    ![Vlastní příkaz povolí, v kontextu podnabídky Pythonu](media/custom-commands-walkthrough-menu-item.png)
+    ![Vlastní příkaz zobrazený v podnabídce kontextu Pythonu](media/custom-commands-walkthrough-menu-item.png)
 
-1. Vyberte **spuštění spouštěcího souboru** příkazu a měli byste vidět okno příkazového řádku se zobrazí s textem **Hello vlastní příkazy** následovaný **stisknutím libovolné klávesy pokračovat**.  Stisknutím jakékoli klávesy zavřete okno.
+1. Vyberte příkaz **Spustit spouštěcí soubor** a mělo by se zobrazit příkazové okno s textem Další vlastní příkazy následované **pokračováním stisknutím libovolné** **klávesy** .  Zavřete okno stisknutím klávesy.
 
-    ![Výstup vlastního příkazu v okně konzoly](media/custom-commands-walkthrough-console.png)
+    ![Vlastní výstup příkazu v okně konzoly](media/custom-commands-walkthrough-console.png)
 
-1. Vraťte se do editoru do souboru projektu a změňte hodnotu `ExecuteIn` atribut `output`. Uložte soubor, přepněte do aplikace Visual Studio, znovu načtěte projekt a znovu vyvolat příkaz. Tentokrát uvidíte výstup programu v sadě Visual Studio se zobrazí **výstup** okno:
+1. Vraťte se do editoru se souborem `ExecuteIn` projektu `output`a změňte hodnotu atributu na . Uložte soubor, přepněte do sady Visual Studio, znovu načtěte projekt a příkaz znovu vyvoláte. Tentokrát se výstup programu zobrazí v okně **Výstup** sady Visual Studio:
 
-    ![Výstup vlastního příkazu v okně Výstup](media/custom-commands-walkthrough-output-window.png)
+    ![Vlastní výstup příkazu ve výstupním okně](media/custom-commands-walkthrough-output-window.png)
 
-1. Chcete-li přidat další příkazy, definujte vhodný `<Target>` – element pro každý příkaz, přidejte název cíle do `<PythonCommands>` skupiny vlastností a znovu načtěte projekt v sadě Visual Studio.
+1. Chcete-li přidat další příkazy, definujte vhodný `<Target>` prvek pro každý `<PythonCommands>` příkaz, přidejte název cíle do skupiny vlastností a znovu načtěte projekt v sadě Visual Studio.
 
 >[!Tip]
-> Pokud spuštění příkazu, použití vlastnosti projektu, jako například `($StartupFile)`a příkaz se nezdaří, protože token, který není definován, Visual Studio zakáže příkaz, dokud znovu načíst projekt. Provádění změn pro projekt, který by definovat vlastnost, ale neaktualizuje stavu těchto příkazů, je stále potřeba znovu načíst projekt v takových případech.
+> Pokud vyvoláte příkaz, který používá `($StartupFile)`vlastnosti projektu, například , a příkaz se nezdaří, protože token není definován, Visual Studio zakáže příkaz, dokud projekt znovu nenačtete. Provádění změn v projektu, který by definoval vlastnost, však neaktualizuje stav těchto příkazů, takže v takových případech je stále nutné znovu načíst projekt.
 
-## <a name="command-target-structure"></a>Příkaz cílová struktura
+## <a name="command-target-structure"></a>Cílová struktura příkazu
 
-Obecný tvar `<Target>` elementu se zobrazí v následujícím kódu pseudo:
+Obecná forma `<Target>` prvku je uvedena v následujícím pseudokódu:
 
 ```xml
 <Target Name="Name1" Label="Display Name" Returns="@(Commands)">
@@ -127,61 +127,61 @@ Obecný tvar `<Target>` elementu se zobrazí v následujícím kódu pseudo:
   </Target>
 ```
 
-K odkazování na vlastnosti projektu a proměnných prostředí v hodnoty atributů, použijte název v rámci `$()` token jako `$(StartupFile)` a `$(MSBuildProjectDirectory)`. Další informace najdete v tématu [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
+Chcete-li odkazovat na vlastnosti projektu nebo proměnné `$()` prostředí v `$(StartupFile)` hodnotách atributů, použijte název v tokenu, například a `$(MSBuildProjectDirectory)`. Další informace naleznete v tématu [MSBuild vlastnosti](../msbuild/msbuild-properties.md).
 
-### <a name="target-attributes"></a>Cílové atributy.
+### <a name="target-attributes"></a>Cílové atributy
 
-| Atribut | Požadováno | Popis |
+| Atribut | Požaduje se | Popis |
 | --- | --- | --- |
-| Name | Ano | Identifikátor příkazu v rámci projektu sady Visual Studio. Tento název musí být přidán do `<PythonCommands>` skupiny vlastností příkazu se zobrazí v podnabídce Python. |
-| Popisek | Ano | Zobrazovaný název uživatelského rozhraní, který se zobrazí dílčí nabídky Python. |
-| Vrací | Ano | Musí obsahovat `@(Commands)`, který identifikuje cíl jako příkaz. |
+| Name (Název) | Ano | Identifikátor pro příkaz v rámci projektu sady Visual Studio. Tento název musí být `<PythonCommands>` přidán do skupiny vlastností, aby se příkaz zobrazil v podnabídce Pythonu. |
+| Popisek | Ano | Zobrazovaný název uživatelského prostředí, který se zobrazí v podnabídce Pythonu. |
+| Vrací | Ano | Musí `@(Commands)`obsahovat , který identifikuje cíl jako příkaz. |
 
 ### <a name="createpythoncommanditem-attributes"></a>Atributy CreatePythonCommandItem
 
-Všechny hodnoty atributů jsou malá a velká písmena.
+Všechny hodnoty atributů nerozlišují malá a velká písmena.
 
-| Atribut | Požadováno | Popis |
+| Atribut | Požaduje se | Popis |
 | --- | --- | --- |
-| TargetType | Ano | Určuje, co obsahuje atribut Target a způsobu jejich použití spolu s argumenty atributu:<ul><li>**Spustitelný soubor**: Spusťte spustitelný soubor s názvem v cíli, připojením hodnoty v argumentech, jako kdyby zadali přímo na příkazovém řádku. Hodnota musí obsahovat pouze název programu bez argumentů.</li><li>**skript**: Spustit *python.exe* s názvem souboru v cíli, a potom s hodnotou v argumentech.</li><li>**modul**: Spustit `python -m` za nímž následuje název modulu v cíli, a potom s hodnotou v argumentech.</li><li>**kód**: Spusťte kód vloženého obsažených v cíli. Hodnota argumenty se ignoruje.</li><li>**pip**: Spustit `pip` pomocí příkazu v cíli, za nímž následuje argumenty; je ExecuteIn nastavená na "výstupní", ale předpokládá pip `install` příkazů a používá cíl jako název balíčku.</li></ul> |
-| Target | Ano | Název souboru, název modulu, kód nebo příkazu pip používat, v závislosti na TargetType. |
-| Arguments | volitelná, | Určuje řetězec argumentů (pokud existuje) pro cíl. Všimněte si, že pokud TargetType je `script`, argumenty uvedeny v programu Python, ne *python.exe*. Ignorovat `code` TargetType. |
-| ExecuteIn | Ano | Určuje prostředí, ve kterém chcete spustit příkaz:<ul><li>**Konzola**: (Výchozí) Spustí cíl a argumenty jako v případě, že se zadají přímo na příkazovém řádku. Okno příkazového řádku se zobrazí, zatímco cílem běží, pak je automaticky uzavřeny.</li><li>**consolepause**: Stejně jako konzola, ale čeká keypress před zavřením okna.</li><li>**Výstup**: Spustí cíl a zobrazí výsledky v **výstup** okna v sadě Visual Studio. Pokud TargetType je "pip", Visual Studio používá cíl jako název balíčku a připojí argumenty.</li><li>**REPL**: Spustí v cílovém [interaktivní Python](python-interactive-repl-in-visual-studio.md) okno; volitelný zobrazovaný název se používá pro záhlaví okna.</li><li>**žádný**: chová se stejně jako konzola.</li></ul>|
-| WorkingDirectory | volitelná, | Složka, ve kterém chcete spustit příkaz. |
-| ErrorRegex<br>WarningRegEx | volitelná, | Použít pouze, když je ExecuteIn `output`. Regulární výraz, pomocí které sady Visual Studio analyzuje výstup zobrazíte chyby a upozornění v příkazu zadat obě hodnoty jeho **seznam chyb** okna. Pokud není zadán, příkaz nemá vliv **seznam chyb** okna. Očekává, že další informace o jaké Visual Studio, najdete v části [skupin zachycení pojmenované](#named-capture-groups-for-regular-expressions). |
-| RequiredPackages | volitelná, | Seznam všech požadavků balíčku pro příkaz ve stejném formátu jako [ *souboru requirements.txt* ](https://pip.readthedocs.io/en/1.1/requirements.html) (pip.readthedocs.io). **Spustit Pylintu** příkazu, například určuje `pylint>=1.0.0`. Před spuštěním příkazu, Visual Studio kontroluje, zda jsou nainstalovány všechny balíčky v seznamu. Visual Studio používá k instalaci všechny chybějící balíčky pip. |
-| Prostředí | volitelná, | Řetězec proměnné prostředí k definování před spuštěním příkazu. Každou proměnnou používá formulář \<NAME > =\<hodnota > v případě více proměnných oddělených středníky. Proměnná s více hodnotami musí být obsažen v jednoduché nebo dvojité uvozovky, stejně jako v "NAME = VALUE1; HODNOTA2 ". |
+| Targettype | Ano | Určuje, co atribut Target obsahuje a jak se používá spolu s atributem Arguments:<ul><li>**spustitelný soubor**: Spusťte spustitelný soubor pojmenovaný v targetu a připojujte hodnotu v argumentech, jako by byl zadán přímo na příkazovém řádku. Hodnota musí obsahovat pouze název programu bez argumentů.</li><li>**skript**: Spusťte *python.exe* s názvem souboru v Target, následovaný hodnotou v Arguments.</li><li>**modul**: `python -m` Spustit následovaný názvem modulu v Target, následovaný hodnotou v Arguments.</li><li>**kód**: Spusťte vložkový kód obsažený v targetu. Hodnota Arguments je ignorována.</li><li>**pip**: `pip` Spustit s příkazem v targetu, následovaným Argumenty; is ExecuteIn je nastavena na "výstup", `install` ale pip převezme příkaz a používá Target jako název balíčku.</li></ul> |
+| Cíl | Ano | Název souboru, název modulu, kód nebo pip příkaz použít, v závislosti na TargetType. |
+| Argumenty | Nepovinné | Určuje řetězec argumentů (pokud existuje) dát cíl. Všimněte si, `script`že když TargetType je , argumenty jsou uvedeny v programu Python, nikoli *python.exe*. Ignorováno pro `code` TargetType. |
+| ExecuteIn | Ano | Určuje prostředí, ve kterém má být příkaz spuštěn:<ul><li>**konzole**: (Výchozí) Spustí cíl a argumenty, jako by byly zadány přímo na příkazovém řádku. Příkazové okno se zobrazí, když je cíl spuštěn, a pak se automaticky zavře.</li><li>**consolepause**: Stejné jako konzole, ale čeká na stisknutí klávesy před zavřením okna.</li><li>**výstup**: Spustí cíl a zobrazí jeho výsledky v okně **Výstup** v sadě Visual Studio. Pokud TargetType je "pip", Visual Studio používá Target jako název balíčku a připojí Arguments.</li><li>**repl**: Spustí cíl v interaktivním okně [Pythonu;](python-interactive-repl-in-visual-studio.md) pro název okna se používá volitelný zobrazovaný název.</li><li>**žádný**: chová se stejně jako konzole.</li></ul>|
+| WorkingDirectory | Nepovinné | Složka, ve které chcete spustit příkaz. |
+| Chybový kód<br>UpozorněníRegEx | Nepovinné | Používá se pouze `output`v případě, že executeIn je . Obě hodnoty určují regulární výraz, se kterým visual studio analyzuje výstup příkazu pro zobrazení chyb a upozornění v okně **seznamu chyb.** Pokud není zadán, příkaz nemá vliv na okno **Seznam chyb.** Další informace o tom, co Visual Studio očekává, naleznete [v tématu Pojmenované skupiny sběru](#named-capture-groups-for-regular-expressions). |
+| Povinné balíčky | Nepovinné | Seznam požadavků na balíček pro příkaz ve stejném formátu jako [*requirements.txt*](https://pip.readthedocs.io/en/1.1/requirements.html) (pip.readthedocs.io). Příkaz **Spustit PyLint,** například `pylint>=1.0.0`určuje . Před spuštěním příkazu visual studio zkontroluje, že jsou nainstalovány všechny balíčky v seznamu. Visual Studio používá pip k instalaci všech chybějících balíčků. |
+| Prostředí | Nepovinné | Řetězec proměnných prostředí, které chcete definovat před spuštěním příkazu. Každá proměnná \<používá formulář\<NÁZEV>= HODNOTA> s více proměnnými oddělenými středníky. Proměnná s více hodnotami musí být obsažena v jednoduchých nebo dvojitých uvozovkách, jako v 'NAME=VALUE1; HODNOTA2". |
 
-#### <a name="named-capture-groups-for-regular-expressions"></a>Skupiny pojmenované sběr dat pro regulární výrazy
+#### <a name="named-capture-groups-for-regular-expressions"></a>Pojmenované skupiny sběru pro regulární výrazy
 
-Při analýze kódu chyby a varování z výstupu příkazu, Visual Studio, která očekává regulární výrazy v `ErrorRegex` a `WarningRegex` hodnot použít následující pojmenované skupiny:
+Při analýzě chyby a upozornění z výstupu příkazu visual studio očekává, `ErrorRegex` `WarningRegex` že regulární výrazy v hodnotách a používají následující pojmenované skupiny:
 
 - `(?<message>...)`: Text chyby
 - `(?<code>...)`: Kód chyby
-- `(?<filename>...)`: Název souboru, pro kterou je chyba Hlášená
-- `(?<line>...)`: Číslo řádku umístění v souboru, pro který ohlásil chybu.
-- `(?<column>...)`: Číslo sloupce z umístění v souboru, pro který ohlásil chybu.
+- `(?<filename>...)`: Název souboru, pro který je chyba hlášena
+- `(?<line>...)`: Číslo řádku umístění v souboru, pro které byla chyba hlášena.
+- `(?<column>...)`: Číslo sloupce umístění v souboru, pro které byla chyba hlášena.
 
-Například Pylintu vytvoří upozornění v následujícím formátu:
+Například PyLint vytváří upozornění následujícího formuláře:
 
 ```output
 ************* Module hello
 C:  1, 0: Missing module docstring (missing-docstring)
 ```
 
-Umožňuje sadě Visual Studio k extrahování správné informace z těchto upozornění a zobrazit je v **seznam chyb** okně `WarningRegex` hodnotu pro **spustit Pylintu** příkaz vypadá takto:
+Chcete-li aplikaci Visual Studio povolit extrahovat správné informace `WarningRegex` z těchto upozornění a zobrazit je v okně **Seznam chyb,** je hodnota příkazu Spustit **pylint** následující:
 
 ```regex
 ^(?<filename>.+?)\((?<line>\d+),(?<column>\d+)\): warning (?<msg_id>.+?): (?<message>.+?)$]]
 ```
 
-(Všimněte si, že `msg_id` v hodnotě by měl být ve skutečnosti `code`, naleznete v tématu [problém 3680](https://github.com/Microsoft/PTVS/issues/3680).)
+(Všimněte `msg_id` si, že `code`v hodnotě by měla být ve skutečnosti naleznete [v tématu Problém 3680](https://github.com/Microsoft/PTVS/issues/3680).)
 
-## <a name="create-a-targets-file-with-custom-commands"></a>Vytvoření souboru .targets pomocí vlastních příkazů
+## <a name="create-a-targets-file-with-custom-commands"></a>Vytvoření souboru .targets s vlastními příkazy
 
-Definování vlastní příkazy v souboru projektu je k dispozici pouze tento soubor projektu. Použití příkazů ve více souborech projektu, můžete místo toho definujte `<PythonCommands>` vlastnost skupinu a všechny vaše `<Target>` prvků v *.targets* souboru. Tento soubor pak importovat do jednotlivé soubory projektu.
+Definování vlastních příkazů v souboru projektu je zpřístupní pouze tomuto souboru projektu. Chcete-li použít příkazy ve více `<PythonCommands>` souborech projektu, `<Target>` definujte místo toho skupinu vlastností a všechny prvky v souboru *.targets.* Potom importovat tento soubor do jednotlivých souborů projektu.
 
-*.Targets* je ve formátu souboru následujícím způsobem:
+Soubor *.targets* je formátován takto:
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -200,20 +200,20 @@ Definování vlastní příkazy v souboru projektu je k dispozici pouze tento so
 </Project>
 ```
 
-Načíst *.targets* soubor do projektu, umístěte `<Import Project="(path)">` prvek kdekoli v rámci `<Project>` elementu. Například, pokud máte soubor s názvem *CustomCommands.targets* v *cíle* podsložky ve vašem projektu, použijte následující kód:
+Chcete-li načíst soubor *.targets* `<Import Project="(path)">` do projektu, `<Project>` umístěte prvek kdekoli v rámci prvku. Pokud máte například soubor s názvem *CustomCommands.targets* v podsložce *cílů* v projektu, použijte následující kód:
 
 ```xml
 <Import Project="targets/CustomCommands.targets"/>
 ```
 
 > [!Note]
-> Vždy, když změníte *.targets* souboru, je potřeba znovu načíst *řešení* , který obsahuje projekt, ne jenom projektu.
+> Při každé změně souboru *.targets* je třeba znovu načíst *řešení,* které obsahuje projekt, nikoli pouze samotný projekt.
 
 ## <a name="example-commands"></a>Příklady příkazů
 
 ### <a name="run-pylint-module-target"></a>Spustit PyLint (cíl modulu)
 
-Následující kód se zobrazí v *Microsoft.PythonTools.targets* souboru:
+V souboru *Microsoft.PythonTools.targets* se zobrazí následující kód:
 
 ```xml
 <PropertyGroup>
@@ -238,9 +238,9 @@ Následující kód se zobrazí v *Microsoft.PythonTools.targets* souboru:
 </Target>
 ```
 
-### <a name="run-pip-install-with-a-specific-package-pip-target"></a>Spuštění instalace pip s konkrétním balíčku (cíl pip).
+### <a name="run-pip-install-with-a-specific-package-pip-target"></a>Spustit instalaci pipu s konkrétním balíčkem (pip target)
 
-Následující příkaz spustí `pip install my-package` v **výstup** okna. Můžete použít tyto příkaz při vývoji balíček a jeho instalace testování. Všimněte si, že cíl obsahuje název balíčku místo `install` příkaz, který se předpokládá, že při použití `ExecuteIn="output"`.
+Následující příkaz `pip install my-package` běží v okně **Výstup.** Takový příkaz můžete použít při vývoji balíčku a testování jeho instalace. Všimněte si, že Target `install` obsahuje název balíčku spíše `ExecuteIn="output"`než příkaz, který se předpokládá při použití .
 
 ```xml
 <PropertyGroup>
@@ -255,7 +255,7 @@ Následující příkaz spustí `pip install my-package` v **výstup** okna. Mů
 </Target>
 ```
 
-### <a name="show-outdated-pip-packages-pip-target"></a>Zobrazit zastaralé balíčky pip (cíl pip).
+### <a name="show-outdated-pip-packages-pip-target"></a>Zobrazit zastaralé pip balíčky (pip cíl)
 
 ```xml
 <PropertyGroup>
@@ -272,7 +272,7 @@ Následující příkaz spustí `pip install my-package` v **výstup** okna. Mů
 
 ### <a name="run-an-executable-with-consolepause"></a>Spuštění spustitelného souboru s consolepause
 
-Následující příkaz spustí jednoduše `where` zobrazíte soubory Pythonu, spouští se ve složce projektu:
+Následující příkaz jednoduše `where` spustí zobrazení souborů Pythonu začínajících ve složce projektu:
 
 ```xml
 <PropertyGroup>
@@ -287,11 +287,11 @@ Následující příkaz spustí jednoduše `where` zobrazíte soubory Pythonu, s
 </Target>
 ```
 
-### <a name="run-server-and-run-debug-server-commands"></a>Spusťte server a spusťte ladění příkazy serveru
+### <a name="run-server-and-run-debug-server-commands"></a>Spuštění serveru a spuštění příkazů ladicího serveru
 
-Prozkoumat jak **spustit server** a **spustit server pro ladění** příkazy pro webové projekty jsou definovány, zkontrolujte [Microsoft.PythonTools.Web.targets](https://github.com/Microsoft/PTVS/blob/master/Python/Product/BuildTasks/Microsoft.PythonTools.Web.targets) (GitHub).
+Chcete-li **prozkoumat,** jak jsou definovány příkazy serveru Start a **Start pro** webové projekty, zkontrolujte [cíle Microsoft.PythonTools.Web.targets](https://github.com/Microsoft/PTVS/blob/master/Python/Product/BuildTasks/Microsoft.PythonTools.Web.targets) (GitHub).
 
-### <a name="install-package-for-development"></a>Instalace balíčku pro vývoj
+### <a name="install-package-for-development"></a>Nainstalovat balíček pro vývoj
 
 ```xml
 <PropertyGroup>
@@ -306,9 +306,9 @@ Prozkoumat jak **spustit server** a **spustit server pro ladění** příkazy pr
   </Target>
 ```
 
-*Z [fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub), použít s oprávněním.*
+*Z [fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub), používá se svolením.*
 
-### <a name="generate-windows-installer"></a>Generovat Instalační služby systému Windows
+### <a name="generate-windows-installer"></a>Generovat instalační program systému Windows
 
 ```xml
 <PropertyGroup>
@@ -325,9 +325,9 @@ Prozkoumat jak **spustit server** a **spustit server pro ladění** příkazy pr
   </Target>
 ```
 
-*Z [fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub), použít s oprávněním.*
+*Z [fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub), používá se svolením.*
 
-### <a name="generate-wheel-package"></a>Generovat balíček wheel
+### <a name="generate-wheel-package"></a>Generovat balíček kol
 
 ```xml
 <PropertyGroup>
@@ -345,23 +345,23 @@ Prozkoumat jak **spustit server** a **spustit server pro ladění** příkazy pr
 </Target>
 ```
 
-*Z [fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub), použít s oprávněním.*
+*Z [fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub), používá se svolením.*
 
-## <a name="troubleshooting"></a>Poradce při potížích
+## <a name="troubleshooting"></a>Řešení potíží
 
-### <a name="message-the-project-file-could-not-be-loaded"></a>zpráva: "Soubor projektu nelze načíst."
+### <a name="message-the-project-file-could-not-be-loaded"></a>Zpráva " Soubor projektu nelze načíst"
 
-Označuje, že máte chyby syntaxe v souboru projektu. Zpráva obsahuje konkrétní chyba s číslem řádku a pozici znaku.
+Označuje, že máte v souboru projektu syntaktické chyby. Zpráva obsahuje konkrétní chybu s číslem řádku a pozicí znaku.
 
-### <a name="console-window-closes-immediately-after-command-is-run"></a>Zavře okno konzoly hned po spuštění příkazu
+### <a name="console-window-closes-immediately-after-command-is-run"></a>Okno konzoly se zavře ihned po spuštění příkazu
 
-Použití `ExecuteIn="consolepause"` místo `ExecuteIn="console"`.
+Místo `ExecuteIn="consolepause"` použít `ExecuteIn="console"`.
 
-### <a name="command-does-not-appear-on-the-menu"></a>Příkaz v nabídce nezobrazí.
+### <a name="command-does-not-appear-on-the-menu"></a>Příkaz se v nabídce nezobrazí
 
-Zkontrolujte, že příkaz je součástí `<PythonCommands>` skupiny vlastností a že název v seznamu příkazu odpovídá názvu zadanému v `<Target>` elementu.
+Zkontrolujte, zda je `<PythonCommands>` příkaz zahrnut do skupiny vlastností a zda název `<Target>` v seznamu příkazů odpovídá názvu zadanému v prvku.
 
-Například následující elementy název "Vzorový" ve skupině vlastností neodpovídá názvu "ExampleCommand" v cílové. Visual Studio nenajde příkaz s názvem "Vzorový", takže se zobrazí žádný příkaz. Použijte "ExampleCommand" v seznamu příkazu, nebo změňte název cílového pouze na "Vzorový".
+Například v následujících prvcích název "Příklad" ve skupině vlastností neodpovídá názvu "ExampleCommand" v cíli. Visual Studio nenajde příkaz s názvem "Příklad", takže se nezobrazí žádný příkaz. Buď použijte "ExampleCommand" v seznamu příkazů, nebo změňte název cíle pouze na "Příklad".
 
 ```xml
   <PropertyGroup>
@@ -372,22 +372,22 @@ Například následující elementy název "Vzorový" ve skupině vlastností ne
   </Target>
 ```
 
-### <a name="message-an-error-occurred-while-running-command-name-failed-to-get-command-target-name-from-project"></a>zpráva: "Došlo k chybě při spouštění \<název příkazu >. Nepovedlo se získat příkaz \<target-name > z projektu. "
+### <a name="message-an-error-occurred-while-running-command-name-failed-to-get-command-target-name-from-project"></a>Zpráva " Při spuštění \<názvu příkazu> došlo k chybě. Nepodařilo se \<získat> názvu cíle příkazu z projektu."
 
-Označuje, že obsah `<Target>` nebo `<CreatePythonCommandItem>` prvky jsou nesprávné. Mezi možné důvody patří:
+Označuje, že obsah `<Target>` `<CreatePythonCommandItem>` nebo prvky jsou nesprávné. Možné důvody zahrnují:
 
-- Požadované `Target` atributu je prázdný.
-- Požadované `TargetType` atributu je prázdný nebo obsahuje nerozpoznanou hodnotu.
-- Požadované `ExecuteIn` atributu je prázdný nebo obsahuje nerozpoznanou hodnotu.
-- `ErrorRegex` nebo `WarningRegex` je zadán bez nastavení `ExecuteIn="output"`.
-- Nerozpoznaný atributy neexistují v elementu. Například jste mohli použít `Argumnets` (chybně) namísto `Arguments`.
+- Požadovaný `Target` atribut je prázdný.
+- Požadovaný `TargetType` atribut je prázdný nebo obsahuje nerozpoznanou hodnotu.
+- Požadovaný `ExecuteIn` atribut je prázdný nebo obsahuje nerozpoznanou hodnotu.
+- `ErrorRegex`nebo `WarningRegex` je zadán `ExecuteIn="output"`bez nastavení .
+- V prvku existují nerozpoznané atributy. Je například možné, `Argumnets` že jste místo toho `Arguments`použili (chybně napsané).
 
-Hodnoty atributů může být prázdný, pokud budete odkazovat na vlastnost, která není definovaná. Například, pokud použijete token `$(StartupFile)` , ale v projektu nebyl definován žádný spouštěcí soubor a potom token, který se přeloží na prázdný řetězec. V takových případech můžete definovat výchozí hodnotu. Například **spuštění serveru** a **server pro spuštění ladění** příkazy definované v Bottle, Flask, a výchozí šablony projektu Django *souboru manage.py* Pokud jste tak dosud jinak Zadaný spouštěcí soubor, který server ve vlastnostech projektu.
+Hodnoty atributů mohou být prázdné, pokud odkazujete na vlastnost, která není definována. Pokud například použijete `$(StartupFile)` token, ale v projektu nebyl definován žádný spouštěcí soubor, pak se token překládá na prázdný řetězec. V takových případech můžete definovat výchozí hodnotu. Například **příkazy Spustit server** a **Spustit ladicí server** definované v šablonách projektu Bottle, Flask a Django jsou ve výchozím nastavení *manage.py* pokud jste jinak nezadali spouštěcí soubor serveru ve vlastnostech projektu.
 
 ### <a name="visual-studio-hangs-and-crashes-when-running-the-command"></a>Visual Studio přestane reagovat a dojde k chybě při spuštění příkazu
 
-Pravděpodobně se pokoušíte spustit příkaz konzoly s `ExecuteIn="output"`, v takovém případě sady Visual Studio dojít k chybě při pokusu o parsování výstupu. Místo nich se používá `ExecuteIn="console"`. (Viz [vydat 3682](https://github.com/Microsoft/PTVS/issues/3681).)
+Pravděpodobně se pokoušíte spustit příkaz konzoly s `ExecuteIn="output"`, v takovém případě visual studio může dojít k chybě při pokusu o analýzu výstupu. Místo toho použijte `ExecuteIn="console"`. (Viz [vydání 3682](https://github.com/Microsoft/PTVS/issues/3681).)
 
-### <a name="executable-command-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>Spustitelný příkaz "nebyl rozpoznán jako vnitřního ani vnějšího příkazu, spustitelného programu nebo dávkového souboru"
+### <a name="executable-command-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>Spustitelný příkaz "není rozpoznán jako interní nebo externí příkaz, funkční program nebo dávkový soubor"
 
-Při použití `TargetType="executable"`, hodnota v `Target` musí být *pouze* program název bez argumentů, jako například *python* nebo *python.exe* pouze. Přesunout argumentů `Arguments` atribut.
+Při `TargetType="executable"`použití musí `Target` být hodnota v *pouze* název programu bez jakýchkoli argumentů, například *pouze python* nebo *python.exe.* Přesuňte všechny argumenty do atributu. `Arguments`

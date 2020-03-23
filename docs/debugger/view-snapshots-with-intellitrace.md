@@ -1,6 +1,6 @@
 ---
 title: Zobrazení snímků s IntelliTrace
-description: Kontrola stavu historických aplikace pomocí zpětného kroku IntelliTrace
+description: Použití intelliTrace krok-zpět prozkoumat stav historické aplikace
 ms.date: 09/20/2018
 ms.topic: quickstart
 helpviewer_keywords:
@@ -11,18 +11,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 767181ce917e4cbef69001e07a018e20c89a01f8
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "65676435"
 ---
-# <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise-c-visual-basic-c"></a>Zobrazení snímků pomocí zpětného kroku IntelliTrace (Visual Studio Enterprise) (C#, Visual Basic, C++)
+# <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise-c-visual-basic-c"></a>Zobrazení snímků pomocí krokového zpětného kroku IntelliTrace (Visual Studio Enterprise) (C#, Visual Basic, C++)
 
-**Zpětného kroku IntelliTrace** automaticky vytvoří snímek vaší aplikace v každé zarážce a ladicí program krok události. Zaznamenané snímky umožňují snadno vrátit k předchozím zarážkám nebo krokům a zobrazit stav aplikace jako v minulosti. IntelliTrace zpětným krokem vám může ušetřit čas při chcete zobrazit předchozí stav aplikace, ale nebudete chtít znovu spusťte ladění nebo znovu vytvořit stav požadované aplikace.
+**Krok zpět intelliTrace** automaticky pořídí snímek vaší aplikace při každé události kroku zarážky a ladicího programu. Zaznamenané snímky umožňují vrátit se k předchozím zarážky nebo kroky a zobrazit stav aplikace, jak tomu bylo v minulosti. IntelliTrace krok-back můžete ušetřit čas, když chcete zobrazit předchozí stav aplikace, ale nechcete restartovat ladění nebo znovu vytvořit požadovaný stav aplikace.
 
-Můžete procházet a zobrazit snímky pomocí **krok zpět** a **krok vpřed** tlačítka na panelu nástrojů ladění. Tato tlačítka Procházet události, které se zobrazují v **události** kartu **diagnostické nástroje** okna.
+Snímky můžete procházet a zobrazovat pomocí tlačítek **Krok vpřed** a **Krok vpřed** na panelu nástrojů Ladění. Tato tlačítka procházet události, které se zobrazí na kartě **Události** v okně **Diagnostické nástroje.**
 
-![Krokovat zpět a vpřed tlačítka](../debugger/media/intellitrace-step-back-icons-description.png  "krok zpět a vpřed tlačítka")
+![Kroková tlačítka vpřed a vpřed](../debugger/media/intellitrace-step-back-icons-description.png  "Krok vpřed a vpřed")
 
-Další informace najdete v tématu [kontrolovat předchozí nové aplikace pomocí nástroje IntelliTrace](../debugger/view-historical-application-state.md).
+Další informace najdete [v tématu Kontrola předchozích stavů aplikace pomocí technologie IntelliTrace](../debugger/view-historical-application-state.md).

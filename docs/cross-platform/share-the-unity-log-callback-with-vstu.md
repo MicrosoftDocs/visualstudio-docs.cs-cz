@@ -1,5 +1,5 @@
 ---
-title: Sdílení zpětného volání protokolu Unity s VSTU | Dokumentace Microsoftu
+title: Sdílení volání protokolu Unity s VSTU | Dokumenty společnosti Microsoft
 ms.custom: ''
 ms.date: 07/26/2018
 ms.technology: vs-unity-tools
@@ -11,17 +11,17 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: aa8a4a229102a6a9439ffb36582cd03e322a086b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62815662"
 ---
 # <a name="share-the-unity-log-callback-with-vstu"></a>Sdílení zpětného volání protokolu Unity s VSTU
-Visual Studio Tools for Unity zaregistruje zpětné volání protokolu Unity Streamovat konzoly do sady Visual Studio. Pokud editor skriptů také zaregistrovat zpětné volání protokolu Unity, zpětné volání VSTU může narušit zpětného volání. Aby tato možnost, použijte `VisualStudioIntegration.LogCallback` události spolupracovat s VSTU.
+Visual Studio Tools for Unity zaregistruje zpětné volání protokolu s Unity, aby bylo možné streamovat jeho konzole do sady Visual Studio. Pokud skripty editoru také zaregistrovat zpětné volání protokolu s Unity, zpětné volání VSTU může narušit zpětné volání. Chcete-li této možnosti zabránit, použijte `VisualStudioIntegration.LogCallback` událost ke spolupráci s VSTU.
 
 ## <a name="demonstrates"></a>Demonstruje
- Jak sdílet zpětného volání protokolu Unity, vytvoří Visual Studio Tools for Unity.
+ Jak sdílet volání protokolu Unity vytvořené Visual Studio Nástroje pro jednotu.
 
 ## <a name="example"></a>Příklad
 
@@ -48,5 +48,5 @@ public class LogCallbackHook
 #endif
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
  [Příklad: Generování souboru projektu](../cross-platform/customize-project-files-created-by-vstu.md)

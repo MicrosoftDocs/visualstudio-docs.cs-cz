@@ -1,5 +1,5 @@
 ---
-title: Aktivita GPU (stránkování) | Dokumentace Microsoftu
+title: Aktivita GPU (stránkování) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,16 +12,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8bd28c7b41a01992ad52fa343b098b0a02460806
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62969612"
 ---
 # <a name="gpu-activity-paging"></a>Aktivita GPU (stránkování)
-**Aktivita GPU (stránkování)** segmenty na **vlákna** kartě představují časy, kdy GPU zpracovává požadavky stránkování.  Délka segment, který představuje čas, GPU zpracování paket stránkování paměti přístup (DMA). Stránkování pakety jsou obvykle spojené s přenos paměti mezi CPU a GPU.
+Segmenty **aktivity GPU (Stránkování)** na kartě **Vlákna** představují časy, kdy GPU zpracovával požadavky na stránkování.  Délka segmentu představuje dobu, po kterou GPU zpracovával stránkovací paket přímého přístupu do paměti (DMA). Pagingové pakety jsou obvykle přidruženy k přenosu paměti mezi procesorem a grafickým procesorem.
 
- Když vyberete segment stránkování GPU sestavy na **aktuální** karta zobrazuje informace o paketu DMA, který byl zpracován. To zahrnuje množství času, které ho čekání ve frontě hardwaru, který je spojen s modul rozhraní DirectX, proces odeslání paketů DMA a čas, který je potřeba zpracovat paketu.
+ Když vyberete segment stránkování GPU, sestava na kartě **Aktuální** zobrazí informace o zpracovávaném paketu DMA. To zahrnuje dobu, po kterou čekal ve frontě hardwaru, který je přidružen k modulu DirectX, proces, který odeslal paket DMA, a čas potřebný ke zpracování paketu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zobrazení využití](../profiling/utilization-view.md)
