@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: určení cíle, který se má sestavit jako první | Microsoft Docs'
+title: 'Postup: Určení cíle, který chcete sestavit jako první | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,70 +13,70 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e008e3181cd7c633179f35e7639265a2495fafe2
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633795"
 ---
-# <a name="how-to-specify-which-target-to-build-first"></a>Postupy: určení prvního cíle sestavení
+# <a name="how-to-specify-which-target-to-build-first"></a>Postup: Určete, který cíl má být sestavován jako první
 
-Soubor projektu může obsahovat jeden nebo více `Target` prvků, které definují, jak je projekt sestaven. Modul Microsoft Build Engine (MSBuild) sestaví první projekt, který najde, a všechny závislosti, pokud soubor projektu neobsahuje atribut `DefaultTargets`, `InitialTargets` atribut nebo cíl je zadán na příkazovém řádku pomocí přepínače **-target** .
+Soubor projektu může obsahovat `Target` jeden nebo více prvků, které definují způsob vytvoření projektu. Modul Microsoft Build Engine (MSBuild) vytvoří první projekt, který najde, a všechny `DefaultTargets` závislosti, `InitialTargets` pokud soubor projektu obsahuje atribut, atribut nebo cíl je určen na příkazovém řádku pomocí **přepínače -target.**
 ## <a name="use-the-initialtargets-attribute"></a>Použití atributu InitialTargets
 
- Atribut `InitialTargets` elementu `Project` určuje cíl, který se spustí jako první, a to i v případě, že jsou cíle zadány na příkazovém řádku nebo v atributu `DefaultTargets`.
-Atribut `InitialTargets` elementu `Project` určuje cíl, který se spustí jako první, a to i v případě, že jsou cíle zadány na příkazovém řádku nebo v atributu `DefaultTargets`.
+ Atribut `InitialTargets` `Project` prvku určuje cíl, který bude spuštěn jako první, i když jsou `DefaultTargets` cíle zadány na příkazovém řádku nebo v atributu.
+Atribut `InitialTargets` `Project` prvku určuje cíl, který bude spuštěn jako první, i když jsou `DefaultTargets` cíle zadány na příkazovém řádku nebo v atributu.
 
 #### <a name="to-specify-one-initial-target"></a>Určení jednoho počátečního cíle
 
-- Zadejte výchozí cíl v atributu `InitialTargets` elementu `Project`. Příklad:
+- Zadejte výchozí cíl `InitialTargets` v `Project` atributu prvku. Například:
 
    `<Project InitialTargets="Clean">`
 
-  Můžete zadat více než jeden počáteční cíl v atributu `InitialTargets` zobrazením cílů v pořadí a použitím středníku pro oddělení jednotlivých cílů. Cíle v seznamu se spustí postupně.
+  Můžete zadat více než jeden `InitialTargets` počáteční cíl v atributu výpis cíle v pořadí a pomocí středníku oddělit každý cíl. Cíle v seznamu budou spuštěny postupně.
 
 #### <a name="to-specify-more-than-one-initial-target"></a>Určení více než jednoho počátečního cíle
 
-- Seznam počátečních cílů oddělených středníky v atributu `InitialTargets` elementu `Project`. Pokud například chcete spustit cíl `Clean` a potom `Compile` cíl, zadejte:
+- V `InitialTargets` atributu `Project` prvku uveďte počáteční cíle oddělené středníky. Chcete-li například `Clean` spustit cíl `Compile` a pak cíl, zadejte:
 
      `<Project InitialTargets="Clean;Compile">`
 
-## <a name="use-the-defaulttargets-attribute"></a>Použití atributu DefaultTargets –
+## <a name="use-the-defaulttargets-attribute"></a>Použití atributu DefaultTargets
 
- Atribut `DefaultTargets` elementu `Project` určuje, který cíl nebo cíle jsou vytvořeny, pokud cíl není explicitně zadán na příkazovém řádku. Pokud jsou cíle zadány v atributech `InitialTargets` a `DefaultTargets` a v příkazovém řádku není zadán žádný cíl, nástroj MSBuild spustí cíle zadané v atributu `InitialTargets` následovaný cíli určenými v atributu `DefaultTargets`.
+ Atribut `DefaultTargets` `Project` prvku určuje, který cíl nebo cíle jsou vytvořeny, pokud cíl není zadán explicitně na příkazovém řádku. Pokud jsou cíle `InitialTargets` zadány `DefaultTargets` v atributech a na příkazovém řádku není zadán žádný `InitialTargets` cíl, msbuild `DefaultTargets` spustí cíle zadané v atributu následované cíli zadanými v atributu.
 
 #### <a name="to-specify-one-default-target"></a>Určení jednoho výchozího cíle
 
-- Zadejte výchozí cíl v atributu `DefaultTargets` elementu `Project`. Příklad:
+- Zadejte výchozí cíl `DefaultTargets` v `Project` atributu prvku. Například:
 
    `<Project DefaultTargets="Compile">`
 
-  Můžete zadat více než jeden výchozí cíl v atributu `DefaultTargets` uvedením cílů v pořadí a použitím středníku pro oddělení jednotlivých cílů. Cíle v seznamu se spustí postupně.
+  Můžete zadat více než jeden `DefaultTargets` výchozí cíl v atributu výpis cíle v pořadí a pomocí středníku oddělit každý cíl. Cíle v seznamu budou spuštěny postupně.
 
 #### <a name="to-specify-more-than-one-default-target"></a>Určení více než jednoho výchozího cíle
 
-- Seznam výchozích cílů oddělených středníky v atributu `DefaultTargets` elementu `Project`. Pokud například chcete spustit cíl `Clean` a potom `Compile` cíl, zadejte:
+- V `DefaultTargets` atributu `Project` prvku uveďte výchozí cíle oddělené středníky. Chcete-li například `Clean` spustit cíl `Compile` a pak cíl, zadejte:
 
      `<Project DefaultTargets="Clean;Compile">`
 
-## <a name="use-the--target-switch"></a>Použití přepínače-target
+## <a name="use-the--target-switch"></a>Použití přepínače -target
 
- Pokud v souboru projektu není definován výchozí cíl, nebo pokud nechcete použít tento výchozí cíl, můžete zadat jiný cíl pomocí příkazu pro přepínač příkazového řádku **target** . Cíl nebo cíle zadané s přepínačem **target** jsou spuštěny namísto cílů určených atributem `DefaultTargets`. Cíle zadané v atributu `InitialTargets` vždy spouštějí jako první.
+ Pokud výchozí cíl není definován v souboru projektu nebo pokud nechcete použít tento výchozí cíl, můžete použít příkazový řádek přepínač **-target** k určení jiného cíle. Cíl nebo cíle zadané pomocí **přepínače -target** jsou spuštěny namísto cílů určených atributem. `DefaultTargets` Cíle zadané `InitialTargets` v atributu jsou vždy spuštěny jako první.
 
-#### <a name="to-use-a-target-other-than-the-default-target-first"></a>Použití cíle jiného než výchozího cíle
+#### <a name="to-use-a-target-other-than-the-default-target-first"></a>První použití jiného než výchozího cíle
 
-- Zadejte cíl jako první cíl pomocí přepínače příkazového řádku **-target** . Příklad:
+- Zadejte cíl jako první cíl pomocí přepínače příkazového řádku **-target.** Například:
 
      `msbuild file.proj -target:Clean`
 
-#### <a name="to-use-several-targets-other-than-the-default-targets-first"></a>Použití několika cílů kromě výchozích cílů
+#### <a name="to-use-several-targets-other-than-the-default-targets-first"></a>První použití několika cílů než výchozích cílů
 
-- Seznam cílů oddělených středníky nebo čárkami pomocí přepínače příkazového řádku **-target** . Příklad:
+- Seznam cílů oddělených středníky nebo čárkami pomocí přepínače příkazového řádku **-target.** Například:
 
      `msbuild <file name>.proj -t:Clean;Compile`
 
 ## <a name="see-also"></a>Viz také
 
-- [MSBuild](../msbuild/msbuild.md)
+- [Msbuild](../msbuild/msbuild.md)
 - [Cíle](../msbuild/msbuild-targets.md)
-- [Postupy: vyčištění sestavení](../msbuild/how-to-clean-a-build.md)
+- [Postup: Čištění sestavení](../msbuild/how-to-clean-a-build.md)

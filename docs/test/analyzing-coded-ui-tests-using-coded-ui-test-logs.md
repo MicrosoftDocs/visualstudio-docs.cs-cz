@@ -8,29 +8,29 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: ec1025eaa53861fae2cf92395d8842854649fa8c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591213"
 ---
-# <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>Analýza programových testů uživatelského rozhraní pomocí protokolů kódovaného testu uživatelského rozhraní
+# <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>Analýza kódovaných testů ui pomocí kódovaných protokolů testů ui
 
-Protokoly programových testů uživatelského rozhraní filtr a zaznamenávají důležité informace o běhu programového testu uživatelského rozhraní. Protokoly se zobrazí ve formátu, který umožňuje rychle ladit problémy.
+Protokoly testovaných kódovaných ui filtrují a zaznamenávají důležité informace o spuštění chutovaných testovacích běhů ui. Protokoly jsou uvedeny ve formátu, který umožňuje problémy ladění rychle.
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-## <a name="step-1-enable-logging"></a>Krok 1: povolení protokolování
+## <a name="step-1-enable-logging"></a>Krok 1: Povolení protokolování
 
-V závislosti na vašem scénáři použijte k povolení protokolu jednu z následujících metod:
+V závislosti na scénáři povolte protokol jednou z následujících metod:
 
-- Pokud není v testovacím projektu přítomen žádný soubor *App. config* :
+- Pokud v testovacím projektu není žádný soubor *App.config:*
 
-   1. Určí, který proces *QTAgent\*. exe* se spustí při spuštění testu. Jedním ze způsobů, jak to provést, je sledovat kartu **Podrobnosti** ve **Správci úloh**systému Windows.
+   1. Zjistěte, který proces *QTAgent\*.exe* je spuštěn při spuštění testu. Jedním ze způsobů, jak to provést, je sledovat kartu **Podrobnosti** ve **Správci úloh systému**Windows .
 
-   2. Otevřete odpovídající soubor *. config* ze složky *% ProgramFiles (x86)% \ Microsoft Visual Studio\\\<verze >\\* \<. Pokud je například spuštěný proces *QTAgent_40. exe*, otevřete *QTAgent_40. exe. config*.
+   2. Otevřete odpovídající soubor *.config* ze složky *%ProgramFiles(x86)%\Microsoft Visual Studio\\\<verze>\\ \<edition>\Common7\IDE.* Pokud je například spuštěný proces *QTAgent_40.exe*, otevřete *soubor QTAgent_40.exe.config*.
 
-   2. Změňte hodnotu **EqtTraceLevel** na úroveň protokolu, kterou chcete.
+   2. Upravte hodnotu **EqtTraceLevel** na požadovanou úroveň protokolu.
 
       ```xml
       <!-- You must use integral values for "value".
@@ -40,9 +40,9 @@ V závislosti na vašem scénáři použijte k povolení protokolu jednu z násl
 
    3. Uložte soubor.
 
-- Pokud je v testovacím projektu přítomen soubor *App. config* :
+- Pokud je v testovacím projektu přítomen soubor *App.config:*
 
-  - Otevřete v projektu soubor *App. config* a do uzlu Konfigurace přidejte následující kód:
+  - Otevřete soubor *App.config* v projektu a pod konfigurační uzel přidejte následující kód:
 
     ```xml
     <system.diagnostics>
@@ -52,42 +52,42 @@ V závislosti na vašem scénáři použijte k povolení protokolu jednu z násl
     </system.diagnostics>`
     ```
 
-- Povolit protokolování z samotného testovacího kódu:
+- Povolit protokolování ze samotného testovacího kódu:
 
    ```csharp
    Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.LoggerOverrideState = HtmlLoggerState.AllActionSnapshot;
    ```
 
-## <a name="step-2-run-your-coded-ui-test-and-view-the-log"></a>Krok 2: spuštění kódovaného testu uživatelského rozhraní a zobrazení protokolu
+## <a name="step-2-run-your-coded-ui-test-and-view-the-log"></a>Krok 2: Spuštění programového testu ui a zobrazení protokolu
 
-Když spustíte programový test uživatelského rozhraní s úpravami v souboru *QTAgent\*. exe. config* , uvidíte odkaz na výstup ve výsledcích **Průzkumníka testů** . Soubory protokolu se vytvářejí nejen v případě, že se test nezdařil, ale také pro úspěšné testy, pokud je úroveň trasování nastavena na **verbose**.
+Při spuštění programového testu ui s úpravami souboru *QTAgent\*.exe.config* na místě se zobrazí výstupní odkaz ve výsledcích **Průzkumníka testů.** Soubory protokolu jsou vyráběny nejen v případě, že váš test selže, ale také pro úspěšné testy, pokud je úroveň trasování **nastavena**na podrobné .
 
-1. V nabídce **test** zvolte **okna** a pak vyberte **Průzkumník testů**.
+1. V nabídce **Test** zvolte **Windows** a pak vyberte **Průzkumník a test**.
 
-2. V nabídce **sestavení** klikněte na příkaz **Sestavit řešení**.
+2. V nabídce **Build** zvolte **Build Solution**.
 
-3. V **Průzkumníku testů**vyberte programový test UI, který chcete spustit, otevřete místní nabídku a zvolte možnost **Spustit výběr testů**.
+3. V **Průzkumníkovi testů**vyberte kódovaný test ui, který chcete spustit, otevřete jeho místní nabídku a pak zvolte **Spustit testy výběru**.
 
-     Automatizované testy se spouštějí a označují, jestli byly úspěšné nebo neúspěšné.
+     Automatizované testy spustit a určit, pokud byly předány nebo se nezdařilo.
 
     > [!TIP]
-    > Chcete-li zobrazit **Průzkumníka testů**, zvolte možnost **test** > **Windows**a pak zvolte možnost **Průzkumník testů**.
+    > Chcete-li zobrazit **Průzkumníka testů**, zvolte **Testovat** > **windows**a pak zvolte Test **Explorer**.
 
-4. Vyberte odkaz **výstup** ve výsledcích **Průzkumníka testů** .
+4. Ve výsledcích **Průzkumníka testů** zvolte odkaz **Výstup.**
 
      ![Odkaz na výstup v Průzkumníku testů](../test/media/cuit_htmlactionlog1.png)
 
-     Tím se zobrazí výstup testu, který obsahuje odkaz na protokol akcí.
+     Zobrazí se výstup pro test, který obsahuje odkaz na protokol akcí.
 
-     ![Odkazy na výsledky a výstupy ze kódovaného testu uživatelského rozhraní](../test/media/cuit_htmlactionlog2.png)
+     ![Výsledky a výstupní odkazy z kódovaného testu ui](../test/media/cuit_htmlactionlog2.png)
 
-5. Vyberte odkaz *UITestActionLog. html* .
+5. Zvolte odkaz *UITestActionLog.html.*
 
      Protokol se zobrazí ve webovém prohlížeči.
 
-     ![Soubor protokolu programového testu UI](../test/media/cuit_htmlactionlog3.png)
+     ![Kódovaný soubor protokolu testovacího ui](../test/media/cuit_htmlactionlog3.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)
-- [Postupy: spuštění testů z Microsoft Visual Studio](https://msdn.microsoft.com/Library/1a1207a9-2a33-4a1e-a1e3-ddf0181b1046)
+- [Testování kódu pomocí automatizace uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)
+- [Postup: Spuštění testů z aplikace Microsoft Visual Studio](https://msdn.microsoft.com/Library/1a1207a9-2a33-4a1e-a1e3-ddf0181b1046)

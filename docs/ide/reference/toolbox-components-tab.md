@@ -14,81 +14,81 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e5eb8c320a3190121d95395f7b359aa9ed978408
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75597305"
 ---
-# <a name="toolbox-components-tab"></a>Panel nástrojů, karta součásti
+# <a name="toolbox-components-tab"></a>Panel nástrojů, karta Komponenty
 
-Zobrazí komponenty, které můžete přidat do Visual Basic C# a návrháře pro model Windows Forms. Kromě součástí .NET, které jsou součástí sady Visual Studio, jako jsou například <xref:System.Messaging.MessageQueue> a <xref:System.Diagnostics.EventLog> komponenty, můžete na tuto kartu přidat vlastní součásti nebo komponenty třetích stran.
+Zobrazí součásti, které můžete přidat do návrhářů jazyka Visual Basic a C# pro Windows Forms. Kromě součástí .NET, které jsou součástí sady Visual <xref:System.Messaging.MessageQueue> Studio, jako jsou součásti a, <xref:System.Diagnostics.EventLog> můžete na tuto kartu přidat vlastní součásti nebo součásti jiných výrobců.
 
-Chcete-li zobrazit tuto kartu, otevřete model Windows Forms Designer. Vyberte **zobrazení** > **Sada nástrojů**. Na **panelu nástrojů**vyberte kartu **součásti** .
+Chcete-li tuto kartu zobrazit, otevřete návrháře formulářů systému Windows. Vyberte **Zobrazit** > **panel nástrojů**. V **panelu nástrojů**vyberte kartu **Komponenty.**
 
 ## <a name="components"></a>Komponenty
 
 **BackgroundWorker**
 
-Vytvoří instanci komponenty <xref:System.ComponentModel.BackgroundWorker>, která může spustit operaci na samostatném vyhrazeném vlákně. Další informace najdete v tématu [Komponenta BackgroundWorker](/dotnet/framework/winforms/controls/backgroundworker-component).
+Vytvoří <xref:System.ComponentModel.BackgroundWorker> instanci komponenty, která může spustit operaci v samostatném vyhrazeném vlákně. Další informace naleznete v tématu [BackgroundWorker komponenty](/dotnet/framework/winforms/controls/backgroundworker-component).
 
-**DirectoryEntry**
+**Directoryentry**
 
-Vytvoří instanci <xref:System.DirectoryServices.DirectoryEntry> komponenty, která zapouzdřuje uzel nebo objekt v hierarchii služby Active Directory a dá se použít k interakci s poskytovateli služeb Active Directory.
+Vytvoří <xref:System.DirectoryServices.DirectoryEntry> instanci komponenty, která zapouzdřuje uzel nebo objekt v hierarchii služby Active Directory a lze ji použít k interakci s poskytovateli služeb Active Directory.
 
 **DirectorySearcher**
 
-Vytvoří instanci komponenty <xref:System.DirectoryServices.DirectorySearcher>, kterou můžete použít k provádění dotazů na službu Active Directory.
+Vytvoří <xref:System.DirectoryServices.DirectorySearcher> instanci komponenty, kterou můžete použít k provádění dotazů proti službě Active Directory.
 
 **ErrorProvider**
 
-Vytvoří instanci <xref:System.Windows.Forms.ErrorProvider> komponenty, která indikuje koncovému uživateli, že k ovládacímu prvku na formuláři je přidružená chyba. Další informace najdete v tématu [Komponenta ErrorProvider](/dotnet/framework/winforms/controls/errorprovider-component-windows-forms).
+Vytvoří <xref:System.Windows.Forms.ErrorProvider> instanci komponenty, která koncovému uživateli ukazuje, že ovládací prvek ve formuláři má přidruženou chybu. Další informace naleznete v tématu [ErrorProvider component](/dotnet/framework/winforms/controls/errorprovider-component-windows-forms).
 
-**EventLog**
+**Eventlog**
 
-Vytvoří instanci komponenty <xref:System.Diagnostics.EventLog>, kterou můžete použít k interakci se systémovými a vlastními protokoly událostí, včetně zápisu událostí do protokolu a čtení dat protokolu.
+Vytvoří <xref:System.Diagnostics.EventLog> instanci komponenty, kterou můžete použít k interakci se systémovými protokoly a protokoly vlastních událostí, včetně zápisu událostí do protokolu a čtení dat protokolu.
 
-**FileSystemWatcher**
+**Filesystemwatcher**
 
-Vytvoří instanci komponenty <xref:System.IO.FileSystemWatcher>, kterou můžete použít k monitorování změn v jakémkoli adresáři nebo souboru, ke kterému máte přístup.
+Vytvoří <xref:System.IO.FileSystemWatcher> instanci komponenty, kterou můžete použít ke sledování změn v libovolném adresáři nebo souboru, ke kterému máte přístup.
 
-**HelpProvider –**
+**Helpprovider**
 
-Vytvoří instanci <xref:System.Windows.Forms.HelpProvider> komponenty, která poskytuje místní nebo online nápovědu pro ovládací prvky. Další informace najdete v tématu [Komponenta HelpProvider –](/dotnet/framework/winforms/controls/helpprovider-component-windows-forms).
+Vytvoří <xref:System.Windows.Forms.HelpProvider> instanci komponenty, která poskytuje automaticky otevíraná data nebo online nápovědu pro ovládací prvky. Další informace naleznete v tématu [HelpProvider component](/dotnet/framework/winforms/controls/helpprovider-component-windows-forms).
 
-**Obrázků**
+**Imagelist**
 
-Vytvoří instanci <xref:System.Windows.Forms.ImageList> komponenty, která poskytuje metody pro správu kolekce objektů <xref:System.Drawing.Image>. Další informace najdete v tématu [Komponenta ImageList](/dotnet/framework/winforms/controls/imagelist-component-windows-forms).
+Vytvoří <xref:System.Windows.Forms.ImageList> instanci komponenty, která <xref:System.Drawing.Image> poskytuje metody pro správu kolekce objektů. Další informace naleznete v [tématu ImageList komponenty](/dotnet/framework/winforms/controls/imagelist-component-windows-forms).
 
-**MessageQueue**
+**Messagequeue**
 
-Vytvoří instanci <xref:System.Messaging.MessageQueue> komponenty, kterou můžete použít k interakci s frontami zpráv, včetně čtení zpráv z front a zápisů do front, zpracování transakcí a provádění úloh správy fronty.
+Vytvoří <xref:System.Messaging.MessageQueue> instanci komponenty, kterou můžete použít k interakci s frontami zpráv, včetně čtení zpráv a zápisu zpráv do front, zpracování transakcí a provádění úloh správy fronty.
 
-**PerformanceCounter**
+**Performancecounter**
 
-Vytvoří instanci <xref:System.Diagnostics.PerformanceCounter> komponenty, kterou můžete použít k interakci s čítači výkonu systému Windows, včetně vytváření nových kategorií a instancí, čtení hodnot z čítačů a provádění výpočtů s daty čítače.
+Vytvoří <xref:System.Diagnostics.PerformanceCounter> instanci komponenty, kterou můžete použít k interakci s čítači výkonu systému Windows, včetně vytváření nových kategorií a instancí, čtení hodnot z čítačů a provádění výpočtů dat čítačů.
 
-**Přihlášení**
+**Proces**
 
-Vytvoří instanci <xref:System.Diagnostics.Process> komponenty, kterou můžete použít k zastavení, spuštění a manipulaci s daty přidruženými k procesům ve vašem systému.
+Vytvoří <xref:System.Diagnostics.Process> instanci komponenty, kterou můžete použít k zastavení, spuštění a manipulaci s daty přidruženými k procesům v systému.
 
-**SerialPort**
+**Serialport**
 
-Vytvoří instanci <xref:System.IO.Ports.SerialPort> komponenty, která poskytuje synchronní a vstupně-výstupní operace řízené událostmi, přístup k stavům PIN a přerušení a přístup k vlastnostem sériového ovladače.
+Vytvoří <xref:System.IO.Ports.SerialPort> instanci komponenty, která poskytuje synchronní a událostmi řízené vstupně-videa, přístup ke stavům pin a break a přístup k vlastnostem sériového ovladače.
 
-**ServiceController**
+**Servicecontroller**
 
-Vytvoří instanci <xref:System.ServiceProcess.ServiceController> komponenty, kterou můžete použít k manipulaci s existujícími službami, včetně spouštění a zastavování služeb a posílání příkazů do nich.
+Vytvoří <xref:System.ServiceProcess.ServiceController> instanci komponenty, kterou můžete použít k manipulaci s existujícími službami, včetně spouštění a zastavování služeb a odesílání příkazů.
 
-**Timer**
+**Časovač**
 
-Vytvoří instanci <xref:System.Windows.Forms.Timer> komponenty, kterou můžete použít k přidání časových funkcí do aplikací určených pro systém Windows. Další informace najdete v tématu [Komponenta Timer](/dotnet/framework/winforms/controls/timer-component-windows-forms).
+Vytvoří <xref:System.Windows.Forms.Timer> instanci komponenty, kterou můžete použít k přidání funkcí založených na čase do aplikací systému Windows. Další informace naleznete v tématu [Timer component](/dotnet/framework/winforms/controls/timer-component-windows-forms).
 
 > [!NOTE]
-> K dispozici je také systém <xref:System.Timers.Timer>, který lze přidat do **sady nástrojů** . Tato <xref:System.Timers.Timer> je optimalizována pro serverové aplikace a model Windows Forms <xref:System.Windows.Forms.Timer> je nejvhodnější pro použití na model Windows Forms.
+> K dispozici je také <xref:System.Timers.Timer> systém založený, který můžete <xref:System.Timers.Timer> přidat do **panelu nástrojů** To <xref:System.Windows.Forms.Timer> je optimalizováno pro serverové aplikace a Windows Forms je nejvhodnější pro použití ve windows forms.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Ovládací prvky pro použití na model Windows Forms](/dotnet/framework/winforms/controls/controls-to-use-on-windows-forms)
-- [Zvolit položky panelu nástrojů, součásti WPF](choose-toolbox-items-wpf-components.md)
-- [Panel nástrojů](../../ide/reference/toolbox.md)
+- [Ovládací prvky pro použití ve Formulářích Systému Windows](/dotnet/framework/winforms/controls/controls-to-use-on-windows-forms)
+- [Zvolte položky panelu nástrojů, součásti WPF](choose-toolbox-items-wpf-components.md)
+- [Sada nástrojů](../../ide/reference/toolbox.md)

@@ -13,39 +13,39 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 33302a4a686d80621cc64ee018371a2d03ea30ee
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114726"
 ---
-# <a name="configuring-warnings-in-visual-basic"></a>Konfigurace upozornění v Visual Basic
+# <a name="configuring-warnings-in-visual-basic"></a>Konfigurace upozornění v jazyce Visual Basic
 
-Kompilátor [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] obsahuje sadu upozornění na kód, který může způsobit chyby v době běhu. Tyto informace můžete použít k zápisu čisticího a rychlejšího kódu s méně chybami. Například kompilátor vytvoří upozornění, když se uživatel pokusí vyvolat člena nepřiřazené proměnné objektu, vrátit se z funkce bez nastavení návratové hodnoty nebo spustit `Try` blok s chybami v logice k zachycení výjimek.
+Kompilátor [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] obsahuje sadu upozornění o kódu, který může způsobit chyby za běhu. Tyto informace můžete použít k zápisu čistší, rychlejší a lepší kód s menším počtem chyb. Například kompilátor vytvoří upozornění, když se uživatel pokusí vyvolat člena nepřiřazené proměnné objektu, vrátit se z `Try` funkce bez nastavení vrácené hodnoty nebo spustit blok s chybami v logice zachytit výjimky.
 
-Někdy kompilátor poskytuje další logiku pro uživatele, aby se uživatel mohl soustředit na místo toho, aby se mohl zaměřit na úkol, nikoli na Předvídání možných chyb. V předchozích verzích [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]byla použita **možnost Option Strict** k omezení další logiky, kterou poskytuje kompilátor [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]. Konfigurace upozornění vám umožní omezit tuto logiku podrobněji na úrovni jednotlivých upozornění.
+Někdy kompilátor poskytuje další logiku jménem uživatele tak, aby se uživatel mohl soustředit na daný úkol, spíše než na předvídání možných chyb. V předchozích [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]verzích aplikace **Option Strict** byla použita k omezení další logiky, kterou [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kompilátor poskytuje. Konfigurace upozornění umožňuje omezit tuto logiku podrobnějším způsobem na úrovni jednotlivých upozornění.
 
-Můžete chtít přizpůsobit projekt a vypnout některá upozornění, která nejsou relevantní pro vaši aplikaci, a zároveň zapínat jiná upozornění na chyby. Tato stránka vysvětluje, jak zapnout a vypnout jednotlivá upozornění.
+Můžete chtít přizpůsobit projekt a vypnout některá upozornění, která nejsou relevantní pro vaši aplikaci, zatímco jiné upozornění změníte na chyby. Tato stránka vysvětluje, jak zapnout a vypnout jednotlivá upozornění.
 
 ## <a name="turning-warnings-off-and-on"></a>Vypnutí a zapnutí upozornění
-Existují dva různé způsoby konfigurace upozornění: můžete je nakonfigurovat pomocí **Návrháře projektu**, nebo můžete použít možnosti kompilátoru **/warnaserror** a **/nowarn** .
+Existují dva různé způsoby konfigurace upozornění: můžete je nakonfigurovat pomocí **Návrháře projektu**nebo můžete použít možnosti kompilátoru **/warnaserror** a **/nowarn.**
 
-Na kartě **kompilovat** stránky **Návrháře projektu** můžete zapnout a vypnout upozornění. Zaškrtnutím políčka **Zakázat všechna upozornění** zakážete všechna upozornění. Pokud chcete považovat všechna upozornění za chyby, vyberte možnost **považovat všechna upozornění za chyby** . Některá jednotlivá upozornění je možné v zobrazené tabulce přepínat jako chyby nebo upozornění podle potřeby.
+Karta **Kompilace** na stránce **Návrhář etablování projektu** umožňuje zapínat a vypínat upozornění. Zaškrtnutím políčka **Zakázat všechna upozornění** zakážete všechna upozornění. Vyberte **možnost Považovat všechna upozornění jako chyby,** chcete-li všechna upozornění považovat za chyby. Některá jednotlivá upozornění lze přepnout jako chybu nebo upozornění podle potřeby v zobrazené tabulce.
 
-Pokud je **možnost Strict** nastavená na **vypnuto**, upozornění související s **možností Option Strict** nelze zpracovat nezávisle na sobě. Pokud je **možnost Strict** nastavená na **zapnuto**, jsou přidružená upozornění považována za chyby bez ohledu na jejich stav. Když je **možnost Strict** nastavená na **Custom** zadáním `/optionstrict:custom` v kompilátoru příkazového řádku, **možnost striktní** varování se dá zapnout nebo vypnout nezávisle.
+**Je-li možnost Strict** nastavena na **vypnuto**, nelze s upozorněními souvisejícími s **možností** přistupovat nezávisle na sobě. Pokud je **možnost Strict** nastavena **na zapnuto**, jsou přidružená upozornění považována za chyby bez ohledu na jejich stav. Pokud **je možnost Strict** nastavena na **vlastní** zadáním `/optionstrict:custom` v kompilátoru příkazového řádku, můžete nezávisle zapnout nebo vypnout upozornění **striktní možnosti.**
 
-Možnost příkazového řádku **/warnaserror** kompilátoru lze také použít k určení, zda jsou upozornění považována za chyby. Do této možnosti můžete přidat seznam oddělený čárkami a určit tak, která upozornění mají být považována za chyby nebo upozornění pomocí příkazu + nebo-. Následující tabulka popisuje možné možnosti.
+Možnost příkazového řádku **/warnaserror** kompilátoru lze také určit, zda jsou upozornění považována za chyby. Do této možnosti můžete přidat seznam oddělený čárkami a určit, která upozornění mají být považována za chyby nebo upozornění pomocí + nebo -. V následující tabulce jsou uvedeny možné možnosti.
 
 |Možnost příkazového řádku|Určuje|
 | - |---------------|
 |`/warnaserror+`|Považovat všechna upozornění za chyby|
-|`/warnsaserror`-|Nepovažujte za chyby jako upozornění. Toto nastavení je výchozí.|
-|`/warnaserror+:<warning list` `>`|Považovat specifická upozornění za chyby uvedené číslem ID chyby v seznamu r oddělené čárkami.|
-|`/warnaserror-:<warning list>`|Nepovažujte specifická upozornění za chyby, která jsou uvedená číslem ID chyby v seznamu odděleném čárkami.|
-|`/nowarn`|Nesestavovat upozornění.|
-|`/nowarn:<warning list>`|Nesestavovat zadaná upozornění, uvedená číslem ID chyby v seznamu odděleném čárkami.|
+|`/warnsaserror`-|Nepovažovat za upozornění jako chyby. Toto nastavení je výchozí.|
+|`/warnaserror+:<warning list` `>`|Považovat konkrétní upozornění za chyby uvedené podle jejich id chyby v seznamu r odděleného čárkami.|
+|`/warnaserror-:<warning list>`|Nezacházejte s určitými upozorněními jako s chybami uvedenými podle jejich čísla ID chyby v seznamu oddělených čárkami.|
+|`/nowarn`|Neoznamujte varování.|
+|`/nowarn:<warning list>`|Nevykazují zadané upozornění, uvedené podle jejich id chyby číslo v seznamu čárka oddělené.|
 
-Seznam upozornění obsahuje čísla ID chyby upozornění, která by měla být považována za chyby, které lze použít s možnostmi příkazového řádku pro zapnutí nebo vypnutí konkrétních upozornění. Pokud seznam upozornění obsahuje neplatné číslo, je hlášena chyba.
+Seznam upozornění obsahuje čísla ID chyb upozornění, která by měla být považována za chyby, které lze použít s možnostmi příkazového řádku k zapnutí nebo vypnutí určitých upozornění. Pokud seznam upozornění obsahuje neplatné číslo, je hlášena chyba.
 
 ## <a name="examples"></a>Příklady
 Tato tabulka příkladů argumentů příkazového řádku popisuje, co každý argument dělá.
@@ -54,74 +54,74 @@ Tato tabulka příkladů argumentů příkazového řádku popisuje, co každý 
 |--------------|-----------------|
 |`vbc /warnaserror`|Určuje, že všechna upozornění mají být považována za chyby.|
 |`vbc /warnaserror:42024`|Určuje, že upozornění 42024 by mělo být považováno za chybu.|
-|`vbc /warnaserror:42024,42025`|Určuje, že upozornění 42024 a 42025 by měla být považována za chyby.|
-|`vbc /nowarn`|Určuje, že by neměla být hlášena žádná upozornění.|
-|`vbc /nowarn:42024`|Určuje, že by se nemělo hlásit upozornění 42024.|
-|`vbc /nowarn:42024,42025`|Určuje, že by se neměla hlásit upozornění 42024 a 42025.|
+|`vbc /warnaserror:42024,42025`|Určuje, že varování 42024 a 42025 by měly být považovány za chyby.|
+|`vbc /nowarn`|Určuje, že by měla být hlášena žádná upozornění.|
+|`vbc /nowarn:42024`|Určuje, že upozornění 42024 by nemělo být hlášeno.|
+|`vbc /nowarn:42024,42025`|Určuje, že upozornění 42024 a 42025 by neměly být hlášeny.|
 
-## <a name="types-of-warnings"></a>Typy upozornění
-Následuje seznam upozornění, které můžete chtít považovat za chyby.
+## <a name="types-of-warnings"></a>Typy varování
+Následuje seznam upozornění, která můžete chtít považovat za chyby.
 
-### <a name="implicit-conversion-warning"></a>Upozornění implicitního převodu
-Vygenerováno pro instance implicitního převodu. Nezahrnují implicitní převody z vnitřního číselného typu na řetězec při použití operátoru `&`. Výchozí pro nové projekty jsou vypnuté.
+### <a name="implicit-conversion-warning"></a>Upozornění na implicitní převod
+Generováno pro instance implicitnípřevod. Nezahrnují implicitní převody z vnitřního číselného typu na `&` řetězec při použití operátoru. Výchozí nastavení pro nové projekty je vypnuto.
 
 ID: 42016
 
-### <a name="late-bound-method-invocation-and-overload-resolution-warning"></a>Volání metody s pozdní vazbou a upozornění na rozlišení přetížení
-Vygenerováno pro instance pozdní vazby. Výchozí pro nové projekty jsou vypnuté.
+### <a name="late-bound-method-invocation-and-overload-resolution-warning"></a>Upozornění na vyvolání pozdní vázané metody a rozlišení přetížení
+Generováno pro instance pozdní vazby. Výchozí nastavení pro nové projekty je vypnuto.
 
 ID: 42017
 
-### <a name="operands-of-type-object-warnings"></a>Operandy typu "Object" – upozornění
-Vygenerováno, pokud dojde k operandům typu `Object`, které by vytvořily chybu s **možností Strict On**. Výchozí pro nové projekty jsou zapnuté.
+### <a name="operands-of-type-object-warnings"></a>Operandy typu "Objekt" upozornění
+Generováno při operandech `Object` typu, které by vytvořily chybu s **možností Strict On**. Výchozí nastavení pro nové projekty je zapnuto.
 
 ID: 42018 a 42019
 
-### <a name="declarations-require-as-clause-warnings"></a>Deklarace vyžadují upozornění klauzule AS.
-Vygenerováno, když deklarace proměnné, funkce nebo vlastnosti, která postrádá klauzuli `As`, by vytvořila chybu s **možností Strict On**. K proměnným, které nemají přiřazený typ, se předpokládá, že jsou typu `Object`. Výchozí pro nové projekty jsou zapnuté.
+### <a name="declarations-require-as-clause-warnings"></a>Prohlášení vyžadují varování doložky "As"
+Generováno, pokud by deklarace proměnné, `As` funkce nebo vlastnosti bez klauzule vytvořila chybu s **možností Strict On**. Proměnné, které nemají přiřazený typ, se považují `Object`za typ . Výchozí nastavení pro nové projekty je zapnuto.
 
-ID: 42020 (deklarace proměnné), 42021 (deklarace funkce) a 42022 (deklarace vlastnosti).
+ID: 42020 (deklarace proměnné), 42021 (deklarace funkce) a 42022 (prohlášení o vlastnostech).
 
-### <a name="possible-null-reference-exception-warnings"></a>Možná upozornění na výjimku null Reference
-Vygenerováno při použití proměnné předtím, než jí byla přiřazena hodnota. Výchozí pro nové projekty jsou zapnuté.
+### <a name="possible-null-reference-exception-warnings"></a>Možná upozornění na výjimku nulového odkazu
+Generováno při použití proměnné před tím, než jí byla přiřazena hodnota. Výchozí nastavení pro nové projekty je zapnuto.
 
 ID: 42104, 42030
 
 ### <a name="unused-local-variable-warning"></a>Upozornění na nepoužitou místní proměnnou
-Vygenerováno při deklaraci místní proměnné, ale nikdy se na ni neříká. Výchozí hodnota je zapnuto.
+Generováno při deklarování místní proměnné, ale nikdy odkazovat. Výchozí nastavení je zapnuto.
 
 ID: 42024
 
-### <a name="access-of-shared-member-through-instance-variable-warning"></a>Přístup ke sdílenému členu prostřednictvím upozornění na proměnnou instance
-Vygenerováno při přístupu ke sdílenému členu prostřednictvím instance může mít vedlejší účinky nebo při přístupu ke sdílenému členu prostřednictvím proměnné instance není pravá strana výrazu nebo je předávána jako parametr. Výchozí pro nové projekty jsou zapnuté.
+### <a name="access-of-shared-member-through-instance-variable-warning"></a>Přístup sdíleného člena prostřednictvím upozornění proměnné instance
+Generováno při přístupu ke sdílenému členu prostřednictvím instance může mít vedlejší účinky nebo při přístupu ke sdílenému členu prostřednictvím proměnné instance není pravá strana výrazu nebo je předávána jako parametr. Výchozí nastavení pro nové projekty je zapnuto.
 
 ID: 42025
 
-### <a name="recursive-operator-or-property-access-warnings"></a>Rekurzivní operátor nebo upozornění na přístup k vlastnosti
-Vygenerováno, když tělo rutiny používá stejný operátor nebo vlastnost, v níž je definována. Výchozí pro nové projekty jsou zapnuté.
+### <a name="recursive-operator-or-property-access-warnings"></a>Upozornění na rekurzivní operátor nebo přístup k vlastnostem
+Generováno, když tělo rutiny používá stejný operátor nebo vlastnost, ve které je definována. Výchozí nastavení pro nové projekty je zapnuto.
 
 ID: 42004 (operátor), 42026 (vlastnost)
 
-### <a name="function-or-operator-without-return-value-warning"></a>Funkce nebo operátor bez upozornění na návratovou hodnotu
-Vygenerováno v případě, že funkce nebo operátor nemá zadanou návratovou hodnotu. To zahrnuje vynechání `Set` implicitní místní proměnné se stejným názvem jako funkce. Výchozí pro nové projekty jsou zapnuté.
+### <a name="function-or-operator-without-return-value-warning"></a>Funkce nebo operátor bez upozornění na vrácenou hodnotu
+Generováno, pokud funkce nebo operátor nemá zadanou vrácenou hodnotu. To zahrnuje vynechání `Set` a implicitní místní proměnné se stejným názvem jako funkce. Výchozí nastavení pro nové projekty je zapnuto.
 
 ID: 42105 (funkce), 42016 (operátor)
 
-### <a name="overloads-modifier-used-in-a-module-warning"></a>Modifikátor přetížení použitý v modulu upozornění
-Vygenerováno při použití `Overloads` v `Module`. Výchozí pro nové projekty jsou zapnuté.
+### <a name="overloads-modifier-used-in-a-module-warning"></a>Modifikátor přetížení použitý v upozornění modulu
+Generováno `Overloads` při použití `Module`v . Výchozí nastavení pro nové projekty je zapnuto.
 
 ID: 42028
 
-### <a name="duplicate-or-overlapping-catch-blocks-warnings"></a>Duplicitní nebo překrývající se výstrahy catch Blocks
-Vygenerováno při nedosažení `Catch`ho bloku z důvodu jeho vztahu k jiným blokům `Catch`, které byly definovány. Výchozí pro nové projekty jsou zapnuté.
+### <a name="duplicate-or-overlapping-catch-blocks-warnings"></a>Duplicitní nebo překrývající se upozornění bloků catch
+Generováno, `Catch` když je nikdy dosaženo bloku `Catch` z důvodu jeho vztahu k jiným blokům, které byly definovány. Výchozí nastavení pro nové projekty je zapnuto.
 
 ID: 42029, 42031
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Typy chyb](/dotnet/visual-basic/programming-guide/language-features/error-types)
-- [Zkusit... Zachytit... Finally – příkaz](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)
+- [Zkuste... Chytit... Prohlášení s konečnou snesení](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)
 - [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn)
-- [/warnaserror (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror)
-- [Stránka Kompilovat, Návrhář projektu (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)
+- [/warnasError (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror)
+- [Stránka kompilace, Návrhář projektu (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)
 - [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](/cpp/preprocessor/compiler-warnings-that-are-off-by-default)

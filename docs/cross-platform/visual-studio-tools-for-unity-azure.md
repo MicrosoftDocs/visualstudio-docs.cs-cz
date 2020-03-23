@@ -1,5 +1,5 @@
 ---
-title: Programování s Visual Studio Tools for Unity a Azure | Dokumentace Microsoftu
+title: Programování pomocí nástrojů Visual Studia pro jednotu a Azure | Dokumenty společnosti Microsoft
 ms.custom: ''
 ms.date: 12/18/2017
 ms.reviewer: crdun
@@ -13,29 +13,29 @@ ms.workload:
 - azure
 - unity
 ms.openlocfilehash: e9a07a7f04cae433803d012302555821fc851075
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75916829"
 ---
 # <a name="program-with-unity-and-azure"></a>Programování v Unity s Azure
 
-Azure poskytuje škálovatelné řešení pro ukládání telemetrických dat a dalších herních dat v cloudu. Ve verzi Unity 2017 Unity a experimentální podporu pro rozhraní .NET 4.6 díky integrace se službou Azure jednodušší než dříve tím, že použití sady Azure .NET SDK.
+Azure poskytuje škálovatelné řešení pro ukládání telemetrie a dalších herních dat v cloudu. S vydáním Unity 2017, Unity experimentální podpora pro .NET 4.6 umožňuje integraci Azure jednodušší než kdy jindy tím, že umožňuje použití Azure .NET SDK.
 
 ## <a name="experimental-azure-sdks"></a>Experimentální sady Azure SDK
 
 > [!NOTE]
-> Tyto sady SDK se nepodporuje, ale k dispozici pomáhá zákazníkům vyzkoušet si experimentální podporu rozhraní .NET 4.6 v Unity.
+> Tyto sady SDK nejsou podporovány, ale poskytují zákazníkům vyzkoušet experimentální podporu Unity .NET 4.6.
 
-Navštivte [Sandboxu](/sandbox/) vyzkoušet následující experimentální sad Azure SDK pomocí Unity:
+Navštivte [sandbox](/sandbox/) a vyzkoušejte následující experimentální sady Azure SDK s unity:
 
-* [Azure Storage SDK pro Unity](/sandbox/gamedev/unity/azure-storage-unity?wt.mc_id=azgamedev-sandbox-brpeek)
-* [Azure Event Hubs sady SDK pro Unity](/sandbox/gamedev/unity/azure-event-hubs-unity?WT.mc_id=azgamedev-sandbox-brpeek)
-* [Azure Mobile SDK aplikací pro Unity](/sandbox/gamedev/unity/azure-mobile-apps-unity?WT.mc_id=azgamedev-sandbox-brpeek)
+* [Sada Azure Storage SDK pro jednotu](/sandbox/gamedev/unity/azure-storage-unity?wt.mc_id=azgamedev-sandbox-brpeek)
+* [Azure Event Hubs SDK pro jednotu](/sandbox/gamedev/unity/azure-event-hubs-unity?WT.mc_id=azgamedev-sandbox-brpeek)
+* [Azure Mobile Apps SDK pro jednotu](/sandbox/gamedev/unity/azure-mobile-apps-unity?WT.mc_id=azgamedev-sandbox-brpeek)
 
-## <a name="azure-sdk-sample"></a>Azure SDK – ukázka
+## <a name="azure-sdk-sample"></a>Ukázka sady Azure SDK
 
-K dispozici je také [jednoduché ukázky hry](/sandbox/gamedev/unity/samples/azure-mobile-apps-unity-racer) pomocí snadno SDK tabulky Azure a Unity. Úložiště dat Azure jednoduché tabulky her používá ke sledování vysoké skóre tabulek výsledků a ukládání telemetrických dat v rámci her a je k dispozici pro [stáhnout z webu GitHub](https://github.com/BrianPeek/AzureSamples-Unity).
+K dispozici je také [jednoduchá ukázková hra](/sandbox/gamedev/unity/samples/azure-mobile-apps-unity-racer) pomocí sady Azure Easy Tables SDK a Unity. Hra využívá azure snadné tabulky úložiště dat sledovat vysoké skóre leaderboard a ukládat ve hře telemetrie a je k dispozici [ke stažení z GitHubu](https://github.com/BrianPeek/AzureSamples-Unity).
 
-![Hry – snímek obrazovky ukázky](media/vstu_azure-test-sample-game-image2.png)
+![Ukázkový snímek obrazovky hry](media/vstu_azure-test-sample-game-image2.png)

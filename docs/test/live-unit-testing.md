@@ -9,195 +9,195 @@ ms.author: mikejo
 ms.workload:
 - dotnet
 ms.openlocfilehash: 1e1a0ec1fd6f2fbdf4f016b1d22db5a6929b5e24
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75851434"
 ---
-# <a name="how-to-configure-and-use-live-unit-testing"></a>Konfigurace a použití Live Unit Testing
+# <a name="how-to-configure-and-use-live-unit-testing"></a>Jak konfigurovat a používat živé testování částí
 
-Při vývoji aplikace Live Unit Testing automaticky spouští všechny ovlivněné testy jednotek na pozadí a prezentuje výsledky a pokrytí kódu v reálném čase. Při úpravě kódu, na jaký vliv na existující testy změny Live Unit Testing poskytuje zpětnou vazbu a určuje, zda nový kód jste přidali se vztahuje na jeden nebo více existujících testů. Tím se jemně dohlížíte na zápis testů jednotek, když provádíte opravy chyb nebo přidáváte nové funkce.
+Při vývoji aplikace živé testování částí automaticky spustí všechny ovlivněné testy částí na pozadí a zobrazí výsledky a pokrytí kódu v reálném čase. Při úpravě kódu poskytuje živé testování částí zpětnou vazbu o tom, jak vaše změny ovlivnily existující testy a zda je nový kód, který jste přidali, pokryt jedním nebo více existujícími testy. To jemně připomíná, abyste při provádění oprav chyb nebo přidávání nových funkcí psali testy částí.
 
 > [!NOTE]
-> Live Unit Testing je k dispozici pro C# a Visual Basic projekty, které cílí na .NET Core nebo .NET Framework v edici Enterprise sady Visual Studio.
+> Živé testování částí je k dispozici pro projekty jazyka C# a Visual Basic, které cílí na rozhraní .NET Core nebo .NET Framework v edici Enterprise sady Visual Studio.
 
-Při použití Live Unit Testing pro testy, uchovává data o stavu testů. Použití trvalých dat umožňuje Live Unit Testing nabízet špičkový výkon při spouštění testů dynamicky v reakci na změny kódu.
+Při použití live testování částí pro vaše testy, uchovává data o stavu testů. Použití trvalých dat umožňuje live testování částí nabídnout vynikající výkon při dynamickém spuštění testů v reakci na změny kódu.
 
-## <a name="supported-test-frameworks"></a>Podporované testovacích architektur
+## <a name="supported-test-frameworks"></a>Podporované testovací architektury
 
-Live Unit Testing spolupracuje s tři rozhraní testování částí oblíbených uvedené v následující tabulce. Zobrazuje se taky minimální podporovaná verze jejich adaptérů a platforem. Rozhraní testování částí jsou všechny dostupné z webu NuGet.org.
+Živé testování částí pracuje se třemi oblíbenými rozhraními pro testování částí uvedenými v následující tabulce. Minimální podporovaná verze jejich adaptérů a rámců je také zobrazena. Testování částí rámce jsou k dispozici od NuGet.org.
 
-|Rozhraní pro testování  |Minimální verze aplikace Visual Studio adaptéru  |Minimální verze rozhraní Framework  |
+|Testovací rámec  |Minimální verze adaptéru Visual Studio  |Minimální verze rozhraní Framework  |
 |---------|---------|---------|
-|xUnit.net |verze 2.2.0-beta3-build1187 xunit.Runner.VisualStudio |1\.9.2 xunit |
-|NUnit |NUnit3TestAdapter verzí 3.5.1 |NUnit verze 3.5.0 |
+|xUnit.net |xunit.runner.visualstudio verze 2.2.0-beta3-build1187 |xjednotka 1,9,2 |
+|NJednotka |NUnit3TestAdaptér verze 3.5.1 |NUnit verze 3.5.0 |
 |MSTest |MSTest.TestAdapter 1.1.4-preview |MSTest.TestFramework 1.0.5-preview |
 
-Pokud máte starší testovací projekty založené na MSTest, které odkazují na Microsoft. VisualStudio. QualityTools. UnitTestFramework, a nechcete přejít na novější balíčky NuGet MSTest, upgradujte na Visual Studio 2019 nebo Visual Studio 2017.
+Pokud máte starší testovací projekty založené na MSTest, které odkazují na Microsoft.VisualStudio.QualityTools.UnitTestFramework a nechcete přejít na novější balíčky MSTest NuGet, upgradujte na Visual Studio 2019 nebo Visual Studio 2017.
 
-V některých případech může být nutné explicitně obnovit balíčky NuGet, na které odkazuje projekt, aby mohla Live Unit Testing fungovat. To můžete provést buď explicitním sestavením řešení (vyberte **sestavení > znovu** **Sestavit řešení** z nabídky nejvyšší úrovně), nebo obnovením balíčků v řešení (klikněte pravým tlačítkem na řešení a vyberte **obnovit balíčky NuGet**).
+V některých případech budete muset explicitně obnovit balíčky NuGet odkazuje projektu, aby pro živé testování částí fungovat. Můžete to provést buď provedením explicitní sestavení řešení (vyberte **sestavení** > **znovu sestavit řešení** z nabídky visual studio nejvyšší úrovně) nebo obnovením balíčků v řešení (klikněte pravým tlačítkem myši na řešení a vyberte obnovit **nuget balíčky).**
 
-## <a name="configure"></a>Konfigurovat
+## <a name="configure"></a>Konfigurace
 
-Nakonfigurujte Live Unit Testing výběrem **nástrojů** > **Možnosti** na nejvyšší úrovni řádku nabídek sady Visual Studio a potom v levém podokně dialogového okna **Možnosti** vyberte **Live Unit Testing** .
+Nakonfigurujte živé testování částí výběrem**možností** **nástrojů** > z panelu nabídek aplikace Visual Studio nejvyšší úrovně a výběrem **živého testování částí** v levém podokně dialogového okna **Možnosti.**
 
 > [!TIP]
-> Po povolení Live Unit Testing (viz další část, [spuštění, pozastavení a zastavení Live Unit Testing](#start-pause-and-stop)) můžete také otevřít dialogové okno **Možnosti** výběrem možnosti **test** > **Live Unit Testing** > **Možnosti**.
+> Po povolení testování živých částí (viz další část [Start, pozastavit a zastavit testování živých částí](#start-pause-and-stop)) můžete také otevřít dialogové okno **Možnosti** výběrem**možnosti** **testování** > **živé jednotky** > .
 
-Následující obrázek ukazuje možnosti konfigurace Live Unit Testing, které jsou k dispozici v dialogovém okně:
+Následující obrázek znázorňuje možnosti konfigurace testování živých částí, které jsou k dispozici v dialogovém okně:
 
-![Možnosti konfigurace Live Unit Testing](./media/lut-options.png)
+![Možnosti konfigurace testování živých částí](./media/lut-options.png)
 
-Konfigurovatelných možností, které patří:
+Konfigurovatelné možnosti zahrnují:
 
-- Určuje, zda Live Unit Testing pozastaví při řešení je sestavení a ladění.
+- Zda live testování částí pozastaví při vytvoření řešení a odlazení.
 
-- Určuje, zda Live Unit Testing pozastaví při napájení z baterie systému klesne pod zadanou prahovou hodnotu.
+- Zda se testování živých částí pozastaví, když napájení systému baterie klesne pod zadanou prahovou hodnotu.
 
-- Určuje, zda Live Unit Testing spustí automaticky při otevření řešení.
+- Zda je při otevření řešení automaticky spuštěno živé testování částí.
 
-- Jestli se má povolit ladění symbolů a generování komentáře dokumentace XML.
+- Určuje, zda má být povolen symbol ladění a generování komentářů dokumentace XML.
 
-- Adresáře, ve kterém k uložení trvalá data.
+- Adresář, do kterého chcete uložit trvalá data.
 
-- Možnost odstranit všechny trvalá data. To je užitečné, když se Live Unit Testing chová v nepředvídatelném nebo neočekávaném způsobu, což naznačuje, že trvalá data jsou poškozena.
+- Možnost odstranit všechna trvalá data. To je užitečné, když živé testování částí se chová nepředvídatelným nebo neočekávaným způsobem, což naznačuje, že došlo k poškození trvalých dat.
 
-- Interval, po kterém vypršel časový limit testovacího případu. Výchozí hodnota je 30 sekund.
+- Interval, po kterém časový interval testovacího případu out. Výchozí hodnota je 30 sekund.
 
-- Maximální počet testovacích procesů, které vytvoří Live Unit Testing.
+- Maximální počet testovacích procesů, které vytvoří testování živé části.
 
-- Maximální množství paměti, které využívají Live Unit Testing procesy.
+- Maximální množství paměti, které mohou spotřebovat procesy testování živých částí.
 
-- Úroveň informací, zapsán do Live Unit Testing **výstup** okna.
+- Úroveň informací zapsaných do okna **Výstup** živého testování částí.
 
-   Mezi možnosti patří žádné protokolování (**žádný**), chybové zprávy pouze (**chyba**), chybové zprávy a informační zprávy (**informace o**, výchozí hodnota), nebo všechny podrobnosti (**Verbose** ).
+   Možnosti zahrnují žádné protokolování (**Žádné**), pouze chybové zprávy (**Chyba**), chybové a informační zprávy (**Info**, výchozí), nebo všechny detaily (**Verbose**).
 
-   Můžete také zobrazit podrobný výstup v Live Unit Testing **výstup** okna tak, že přiřadíte hodnotu "1" do proměnné prostředí na úrovni uživatele s názvem `VS_UTE_DIAGNOSTICS`a následného restartování sady Visual Studio.
+   Můžete také zobrazit podrobný výstup v okně **Výstup** živétestování částí přiřazením hodnoty "1" proměnné `VS_UTE_DIAGNOSTICS`prostředí na úrovni uživatele s názvem a restartováním sady Visual Studio.
 
-   Chcete-li zachytit podrobné zprávy protokolu MSBuild z Live Unit Testing v souboru, nastavte `LiveUnitTesting_BuildLog` individuální prostředí proměnnou pro název souboru, který má obsahovat protokol.
+   Chcete-li zachytit podrobné zprávy protokolu MSBuild z `LiveUnitTesting_BuildLog` testování živých částí v souboru, nastavte proměnnou prostředí na úrovni uživatele na název souboru tak, aby protokol obsahoval.
 
 ## <a name="start-pause-and-stop"></a>Spuštění, pozastavení a zastavení
 
-Chcete-li povolit Live Unit Testing, vyberte možnost **Test** > **Live Unit Testing** > **Start** v nabídce aplikace Visual Studio nejvyšší úrovně. Když je povolený Live Unit Testing, možnosti dostupné v nabídce **Live Unit Testing** se změní z jedné položky, **Start**, na **pozastavit** a **zastavit**:
+Chcete-li povolit živé testování částí, vyberte **test** > **spuštění testování** > živých částí**z** nabídky Visual Studio nejvyšší úrovně. Je-li povoleno testování živých částí, možnosti dostupné v nabídce **Testování živých částí** se změní z jedné položky **Start**, **na Pozastavit** a **zastavit**:
 
-- **Pozastavení** dočasně pozastaví Live Unit Testing.
+- **Pozastavit** dočasné pozastavení testování živých částí.
 
-  Když je Live Unit Testing pozastavit, vizualizace pokrytí se v editoru nezobrazí, ale všechna shromážděná data se zachovají. Chcete-li pokračovat v Live Unit Testing, vyberte **pokračovat** z nabídky Live Unit Testing. Live Unit Testing provádí potřebnou práci pro zachycení všech úprav, které byly provedeny v době, kdy byla pozastavena, a odpovídajícím způsobem aktualizuje glyfy.
+  Při pozastavení živétestování částí, vizualizace pokrytí se nezobrazí v editoru, ale všechna data, která byla shromážděna je zachována. Chcete-li pokračovat v testování živých částí, vyberte **pokračovat** v nabídce Testování živých částí. Živé testování částí provádí nezbytnou práci, aby dohnalo všechny úpravy, které byly provedeny v době, kdy byly pozastaveny, a odpovídajícím způsobem aktualizuje glyfy.
 
-- **Zastavení** Live Unit Testing zcela zastaví. Live Unit Testing odstraní všechna data, která se budou shromažďovat.
+- **Zastavte** úplně zastaví živé testování částí. Živé testování částí zahodí všechna data, která shromáždila.
 
 > [!NOTE]
-> Pokud začnete Live Unit Testing v řešení, které neobsahuje projekt testování částí, možnosti **pozastavit** a **zastavit** se zobrazí v nabídce **Live Unit Testing** , ale Live Unit Testing nespustí. V okně **výstup** se zobrazí zpráva, která začíná. Toto řešení neodkazuje na žádné podporované adaptéry testů...
+> Pokud spustíte živé testování částí v řešení, které neobsahuje projekt testování částí, zobrazí se možnosti **Pozastavit** a **Zastavit** v nabídce **Testování živých částí,** ale živé testování částí se nespustí. Okno **Výstup** zobrazí zprávu, která začíná " Žádné podporované testovací adaptéry jsou odkazovány tímto řešením ...".
 
-Kdykoli můžete dočasně pozastavit nebo úplně zastavit Live Unit Testing. To může být vhodné například v případě, že jste uprostřed refaktoringu a víte, že testy budou v průběhu chvilky přerušeny.
+Kdykoli můžete dočasně pozastavit nebo zcela zastavit živé testování částí. Můžete to udělat, například pokud jste uprostřed refaktoringu a víte, že vaše testy budou na chvíli přerušeny.
 
-## <a name="view-coverage-visualization"></a>Zobrazit vizualizaci pokrytí
+## <a name="view-coverage-visualization"></a>Zobrazit vizualizaci disponibility
 
-Po povolení Live Unit Testing aktualizuje jednotlivé řádky kódu v editoru sady Visual Studio, aby se zobrazila informace o tom, zda se kód, který píšete, zabývá testy jednotek a zda jsou testy, které se na něj vztahují, přecházejí. Následující obrázek ukazuje řádky kódu s předáváním i neúspěšnými testy, jakož i řádky kódu, které nejsou pokryty testy. Pouze předáním testy jsou pokryté řádky upravené pomocí zelený "✓", jeden nebo více selhávající testy jsou pokryté řádky upravené pomocí red "x" a řádky upravena podle modrý "➖" nejsou pokryty všemi jakýkoli test.
+Po jeho povolení živé testování částí aktualizuje každý řádek kódu v editoru Sady Visual Studio, aby vám ukázal, zda je kód, který píšete, pokryt testy částí a zda testy, které jej pokrývají, předají. Následující obrázek znázorňuje řádky kódu s předávání mandatismu i selhává testy, stejně jako řádky kódu, které nejsou zahrnuty testy. Řádky zdobené zeleným "✓" jsou pokryty pouze absolvováním zkoušek, řádky zdobené červeným "x" jsou pokryty jedním nebo více testy selhání a řádky zdobené modrou "➖" nejsou pokryty žádným testem.
 
-![Pokrytí kódu v aplikaci Visual Studio](./media/lut-codewindow.png)
+![Pokrytí kódu v sadě Visual Studio](./media/lut-codewindow.png)
 
-Vizualizace pokrytí Live Unit Testing je okamžitě aktualizována při úpravě kódu v editoru kódu. Při zpracování úprav se změny vizualizace, které označují, že data nejsou aktuální, přidáním obrázku kulatého časovače pod průchozí, neúspěšné a nezahrnuté symboly, jak ukazuje následující obrázek.
+Live Testování částí pokrytí vizualizace je aktualizován okamžitě při úpravě kódu v editoru kódu. Při zpracování úprav se vizualizace změní tak, že data nejsou aktuální přidáním obrázku kruhového časovače pod symboly předávání, selhání a nezahrnuté symboly, jak ukazuje následující obrázek.
 
-![Pokrytí kódu v aplikaci Visual Studio s ikonou časovače](./media/lut-codeupdating.png)
+![Pokrytí kódu v sadě Visual Studio s ikonou časovače](./media/lut-codeupdating.png)
 
-## <a name="get-information-about-test-status"></a>Získat informace o stavu testu
+## <a name="get-information-about-test-status"></a>Získání informací o stavu testu
 
-Podržením ukazatele nad symbol bylo úspěšné nebo neúspěšné v okně kódu, uvidíte, kolik testů se tím tento řádek. Chcete-li zobrazit stav jednotlivých testů, vyberte symbol:
+Najetím na symbol úspěšné nebo neúspěšné v okně kódu můžete vidět, kolik testů je zasaženo na tento řádek. Chcete-li zobrazit stav jednotlivých testů, vyberte symbol:
 
-![Stav testu pro symbol v aplikaci Visual Studio](./media/lut-failedinfo.png)
+![Test stavu symbolu v sadě Visual Studio](./media/lut-failedinfo.png)
 
-Kromě poskytování názvů a výsledků testů vám popisek umožňuje znovu spustit nebo ladit sadu testů. Pokud vyberete jednu nebo více testů v popisu, můžete také spustit nebo ladit pouze tyto testy. To umožňuje ladit testy bez odejití z okna kódu. Při ladění, kromě pozorování všech zarážek, které jste již pravděpodobně nastavili, se spuštění programu pozastaví, když ladicí program spustí metodu <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>, která vrací neočekávaný výsledek.
+Kromě poskytnutí názvů a výsledků testů umožňuje popisek znovu spustit nebo ladit sadu testů. Pokud vyberete jeden nebo více testů v popisku, můžete také spustit nebo ladit pouze tyto testy. To umožňuje ladit testy bez nutnosti opustit okno kódu. Při ladění, kromě pozorování všech zarážek, které jste již nastavili, program spuštění pozastaví, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> když ladicí program spustí metodu, která vrací neočekávaný výsledek.
 
-Když najedete myší neúspěšných testů v popisu, rozšiřuje poskytnout další informace o selhání, jak je znázorněno na následujícím obrázku. Pokud chcete přejít přímo k neúspěšnému testu, poklikejte na něj v popisku.
+Když v popisku najedete na místo neúspěšného testu, rozbalí se a poskytne další informace o chybě, jak je znázorněno na následujícím obrázku. Chcete-li přejít přímo na neúspěšný test, poklepejte na něj v popisku.
 
-![Neúspěšné informace popisu tlačítka testu v aplikaci Visual Studio](./media/lut-failedmsg.png)
+![Informace v popisku testu se nezdařilo v sadě Visual Studio](./media/lut-failedmsg.png)
 
-Když přejdete na neúspěšný test, Live Unit Testing vizuálně indikuje v podpisu metody testy, které mají:
+Při přechodu na neúspěšný test živé testování částí vizuálně označuje v podpisu metody testy, které mají:
 
-- předáno (označeno poloviční plnou kádinkou a zelenou "✓")
-- neúspěšné (polovina plná kádinka s červeným "🞩")
-- nejsou zapojené do Live Unit Testing (poloviční plná kádinka spolu s modrou "➖").
+- (označeno poloúplnou kádinkou spolu se zeleným "✓")
+- selhal (poloúplná kádinka spolu🞩s červenou " ")
+- nejsou zapojeny do živého testování částí (poloúplná kádinka spolu s modrým "➖")
 
-Bez testovacích metod nejsou upravené pomocí symbolu. Následující obrázek znázorňuje všechny čtyři typy metod.
+Netestovací metody nejsou zdobeny symbolem. Následující obrázek znázorňuje všechny čtyři typy metod.
 
-![Testovací metody v aplikaci Visual Studio se symbolem Pass nebo neúspěchu](media/lut-testsource.png)
+![Testovací metody v sadě Visual Studio se symbolem vyhovění nebo selhání](media/lut-testsource.png)
 
-## <a name="diagnose-and-correct-test-failures"></a>Diagnostikujte a opravte chyby a testů
+## <a name="diagnose-and-correct-test-failures"></a>Diagnostika a oprava selhání testu
 
-Z neúspěšného testu můžete snadno ladit kód produktu, provádět úpravy a pokračovat ve vývoji aplikace. Vzhledem k tomu, že Live Unit Testing běží na pozadí, není nutné zastavit a restartovat Live Unit Testing během cyklu ladění, úprav a pokračování.
+Z neúspěšného testu můžete snadno ladit kód produktu, provádět úpravy a pokračovat ve vývoji aplikace. Vzhledem k tomu, že živé testování částí běží na pozadí, není nutné zastavit a restartovat živé testování částí během ladění, úprav a pokračovat v cyklu.
 
-Například selhání testu zobrazené na předchozím obrázku bylo způsobeno nesprávným předpokladem v metodě testu, že neabecední znaky vracejí `true` při předání do metody <xref:System.Char.IsLower%2A?displayProperty=fullName>. Po opravě testovací metody by měly projít všechny testy. Nemusíte pozastavit ani zastavit Live Unit Testing.
+Například selhání testu zobrazené v předchozím obrázku bylo způsobeno nesprávným předpokladem v `true` testovací metodě, že neabecední znaky vrátit při předání metodě. <xref:System.Char.IsLower%2A?displayProperty=fullName> Po opravě zkušební metody by měly projít všechny testy. Není třeba pozastavit nebo zastavit živé testování částí.
 
 ## <a name="test-explorer"></a>Průzkumník testů
 
-**Průzkumník testů** poskytuje rozhraní, které umožňuje spouštět a ladit testy a analyzovat výsledky testů. Live Unit Testing integruje **Průzkumník testů**. Live Unit Testing není povolena nebo je zastavená, **Průzkumníka testů** zobrazuje stav testů jednotek při posledním spuštění testu. Změny zdrojového kódu vyžadují, znovu spusťte testy. Naproti tomu při zapnuté funkci Live Unit Testing, stav jednotky, které se testuje v **Průzkumník testů** ihned aktualizovat. Nemusíte explicitně spouštět testy jednotek.
+**Průzkumník testů** poskytuje rozhraní, které umožňuje spouštět a ladit testy a analyzovat výsledky testů. Živé testování částí se integruje s **Průzkumníkem testů**. Pokud testování živých částí není povoleno nebo je zastaveno, **Průzkumník testů** zobrazí stav testů částí při posledním spuštění testu. Změny zdrojového kódu vyžadují opětovné spuštění testů. Naopak při aktivnítestování částí je povolena, stav testování částí v **Průzkumníku testů** je aktualizován okamžitě. Není nutné explicitně spustit testy částí.
 
 > [!TIP]
-> Otevřete **Průzkumník testů** výběrem možnosti **test** > **Windows** > **Průzkumník testů** v nabídce Visual Studio nejvyšší úrovně.
+> Sem **Průzkumníka testů** otevřete výběrem **možnosti Testovat** > **Průzkumníka testů** **systému Windows** > z nabídky Visual Studio nejvyšší úrovně.
 
-V okně **Průzkumník testů** si můžete všimnout, že některé testy jsou vybledlé. Pokud například povolíte Live Unit Testing po otevření dříve uloženého projektu, okno **Průzkumník testů** vynechalo vše, ale neúspěšný test, jak ukazuje následující obrázek. V tomto případě Live Unit Testing znovu spustit neúspěšný test, ale nespustí úspěšné testy znovu. Důvodem je to, že trvalá data Live Unit Testing znamenají, že se od posledního spuštění testů nezměnily žádné změny.
+Můžete si všimnout v okně **Průzkumníka testů,** že některé testy jsou vybledlé. Například když povolíte live testování částí po otevření dříve uloženého projektu, okno **Průzkumníktestů** vybledlo všechny, ale neúspěšný test, jak ukazuje následující obrázek. V tomto případě live testování částí má znovu spustit neúspěšný test, ale neznovu spustit úspěšné testy. Důvodem je, že živé testování částí trvalá data označuje, že nebyly žádné změny od testování byly naposledy úspěšně spuštěny.
 
 ![Neúspěšný test v Průzkumníku testů](media/lut-test-explorer.png)
 
-Můžete znovu spustit všechny testy, které se projeví na zvolna, a to výběrem možnosti **Spustit vše** nebo **Spustit** z nabídky **Průzkumník testů** . Nebo vyberte jeden nebo více testů v nabídce **Průzkumník testů** , klikněte pravým tlačítkem myši a vyberte možnost **Spustit vybrané testy** nebo **ladit vybrané testy** z místní nabídky. Jak jsou testy spuštěny, jejich pokračovala horní části.
+Všechny testy, které se zobrazí jako vybledlé, můžete znovu spustit výběrem možností **Spustit vše** nebo **Spustit** z nabídky **Průzkumník testů.** Nebo vyberte jeden nebo více testů v nabídce **Průzkumník testů,** klikněte pravým tlačítkem myši a pak z místní nabídky vyberte **Spustit vybrané testy** nebo Ladit vybrané **testy.** Jak testy jsou spuštěny, oni bubliny nahoru.
 
-Existují určité rozdíly mezi Live Unit Testing automatickým spuštěním a aktualizuje výsledky testů a explicitně spouštění testů z **Průzkumníka testů**. Tyto rozdíly mezi patří:
+Existují určité rozdíly mezi live testování částí automaticky spuštěna aktualizace výsledků testů a explicitně spuštěny testy z **Průzkumníka testů**. Tyto rozdíly zahrnují:
 
-- Spouštění nebo ladění testů z okna Průzkumníka testů běží regulární binární soubory, zatímco Live Unit Testing běží instrumentované binární soubory.
-- Live Unit Testing nevytvoří novou doménu aplikace pro spuštění testů, ale místo toho spustí testy z výchozí doménu. Spustit testy z **Průzkumník testů** okno Vytvořit novou doménu aplikace.
-- Live Unit Testing spustí testy v každé sestavení testu postupně. V okně **Průzkumník testů** můžete zvolit paralelní spuštění více testů.
+- Spuštění nebo ladění testů z okna Průzkumníka testů spouští pravidelné binární soubory, zatímco živé testování částí spouští instrumentované binární soubory.
+- Živé testování částí nevytváří novou doménu aplikace pro spuštění testů, ale spíše spustí testy z výchozí domény. Testy spuštěné z okna **Průzkumníka testů** vytvářejí novou doménu aplikace.
+- Testování živých částí spustí testy v každé testovací sestavení postupně. V okně **Průzkumník testů** můžete spustit více testů paralelně.
 
 ## <a name="large-solutions"></a>Velká řešení
 
-Pokud má vaše řešení 10 nebo více projektů, Visual Studio zobrazí následující dialog, když:
+Pokud vaše řešení obsahuje 10 nebo více projektů, Visual Studio zobrazí následující dialogové okno, když:
 
-- spustit Live Unit Testing a neexistují žádná trvalá data
-- Vyberte **nástroje** > **možnosti** > **Live Unit Testing** > **Odstranit trvalá data** .
+- spustit živé testování částí a nejsou k dispozici žádná trvalá data
+- vybrat **možnosti možnosti** > **Options** > **živé testování částí odstranit** > **trvalá data**
 
-![Live Unit Testing dialogové okno pro velké projekty](media/lut-large-project.png)
+![Dialogové okno Živé testování částí pro velké projekty](media/lut-large-project.png)
 
-Dialog vás upozorní na to, že dynamické spuštění velkého počtu testů ve velkých projektech může mít vážně vliv na výkon. Pokud vyberete **OK**, Live Unit Testing spustí všechny testy v řešení. Pokud vyberete **zrušit**, můžete vybrat testy ke spuštění. V následující části se dozvíte, jak to provést.
+Dialogové okno vás upozorní, že dynamické provádění velkého počtu testů ve velkých projektech může vážně ovlivnit výkon. Pokud vyberete **OK**, live testování částí provede všechny testy v řešení. Pokud vyberete **Zrušit**, můžete vybrat testy, které chcete provést. V následující části je vysvětleno, jak to provést.
 
-## <a name="include-and-exclude-test-projects-and-test-methods"></a>Zahrnout a vyloučit projekty testů a testovací metody
+## <a name="include-and-exclude-test-projects-and-test-methods"></a>Zahrnout a vyloučit testovací projekty a zkušební metody
 
-Pro řešení s mnoha testovacími projekty můžete určit, které projekty a jednotlivé metody v projektu se účastní Live Unit Testing. Pokud máte řešení s využitím stovek projekty testů, můžete vybrat cílovou sadu testovacích projektů k účasti v Live Unit Testing. To lze provést několika způsoby v závislosti na tom, zda chcete vyloučit všechny testy v projektu nebo řešení, zahrnout nebo vyloučit většinu testů nebo vyloučit jednotlivé testy. Live Unit Testing uloží stav zahrnout nebo vyloučit jako nastavení uživatele a zapamatuje, když je řešení zavřít a znovu otevřít.
+U řešení s mnoha testovacími projekty můžete řídit, které projekty a jednotlivé metody v projektu se účastní živého testování částí. Například pokud máte řešení se stovkami testovacích projektů, můžete vybrat cílovou sadu testovacích projektů k účasti na živé testování částí. Existuje několik způsobů, jak to provést, v závislosti na tom, zda chcete vyloučit všechny testy v projektu nebo řešení, zahrnout nebo vyloučit většinu testů nebo vyloučit jednotlivé testy. Živé testování částí ukládá zahrnout nebo vyloučit stav jako uživatelské nastavení a pamatuje si to, když je řešení uzavřeno a znovu otevřeno.
 
 ### <a name="exclude-all-tests-in-a-project-or-solution"></a>Vyloučit všechny testy v projektu nebo řešení
 
-Chcete-li vybrat jednotlivé projekty při testech jednotek, proveďte následující po Live Unit Testing je spuštění:
+Chcete-li vybrat jednotlivé projekty v jednotkových testech, postupujte po spuštění testování živých částí:
 
-1. Klikněte pravým tlačítkem na řešení v **Průzkumníka řešení** a zvolte **Live testy** > **vyloučit** vyloučit celé řešení.
-1. Klikněte pravým tlačítkem na každý testovací projekt, který chcete zahrnout do testů a zvolte **Live testy** > **zahrnout**.
+1. Klikněte pravým tlačítkem myši na řešení v **Průzkumníku řešení** a zvolte **živé testy** > **vyloučit** vyloučit celé řešení.
+1. Klikněte pravým tlačítkem myši na každý testovací projekt, který chcete zahrnout do testů, a zvolte **živé testy** > **zahrnout**.
 
 ### <a name="exclude-individual-tests-from-the-code-editor-window"></a>Vyloučit jednotlivé testy z okna editoru kódu
 
-Okna editoru kódu můžete použít k zahrnutí nebo vyloučení jednotlivých testovacích metod. Klikněte pravým tlačítkem na podpis testovací metody v okně editoru kódu a vyberte jednu z následujících možností:
+Okno editoru kódu můžete použít k zahrnutí nebo vyloučení jednotlivých testovacích metod. Klikněte pravým tlačítkem myši na podpis testovací metody v okně editoru kódu a vyberte jednu z následujících možností:
 
-- **Živé testy** > **Zahrnout \<vybranou metodu >**
-- **Živé testy** > **vyloučení \<vybrané metody >**
-- **Živé testy** > **vyloučí všechny \<vybrané metody, ale >**
+- **Živé testy** > **zahrnují \<vybranou metodu>**
+- **Živé testy** > **Vylučují \<vybranou metodu>**
+- **Živé testy** > **vyložit všechny, ale \<vybrané metody>**
 
-### <a name="exclude-tests-programmatically"></a>Vyloučení testů prostřednictvím kódu programu
+### <a name="exclude-tests-programmatically"></a>Programově vyloučit testy
 
-Můžete použít <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute> atribut programově vyloučené z hlášení jejich pokrytí v Live Unit Testing metody, třídy nebo struktury.
+<xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute> Atribut můžete použít programově vyloučit metody, třídy nebo struktury z vykazování jejich pokrytí v testování živých částí.
 
-Pomocí následujících atributů vylučte jednotlivé metody z Live Unit Testing:
+Pomocí následujících atributů vylučte jednotlivé metody z testování živých částí:
 
-- Pro xUnit: `[Trait("Category", "SkipWhenLiveUnitTesting")]`
-- Pro NUnit: `[Category("SkipWhenLiveUnitTesting")]`
-- Pro MSTest: `[TestCategory("SkipWhenLiveUnitTesting")]`
+- Pro xUnit:`[Trait("Category", "SkipWhenLiveUnitTesting")]`
+- Pro NUnit:`[Category("SkipWhenLiveUnitTesting")]`
+- Pro MSTest:`[TestCategory("SkipWhenLiveUnitTesting")]`
 
-Pomocí následujících atributů vylučte celé sestavení testů z Live Unit Testing:
+Následující atributy vylučte celou sestavu testů z testování živých částí:
 
-- Pro xUnit: `[assembly: AssemblyTrait("Category", "SkipWhenLiveUnitTesting")]`
-- Pro NUnit: `[assembly: Category("SkipWhenLiveUnitTesting")]`
-- Pro MSTest: `[assembly: TestCategory("SkipWhenLiveUnitTesting")]`
+- Pro xUnit:`[assembly: AssemblyTrait("Category", "SkipWhenLiveUnitTesting")]`
+- Pro NUnit:`[assembly: Category("SkipWhenLiveUnitTesting")]`
+- Pro MSTest:`[assembly: TestCategory("SkipWhenLiveUnitTesting")]`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Kód testovací nástroje](https://visualstudio.microsoft.com/vs/testing-tools/)
-- [Blogu Live Unit Testing](https://devblogs.microsoft.com/visualstudio/live-unit-testing-in-visual-studio-2017-enterprise/)
+- [Nástroje pro testování kódu](https://visualstudio.microsoft.com/vs/testing-tools/)
+- [Blog o testování živých částí](https://devblogs.microsoft.com/visualstudio/live-unit-testing-in-visual-studio-2017-enterprise/)
 - [Nejčastější dotazy k funkci Live Unit Testing](live-unit-testing-faq.md)
-- [Video pro kanál 9: Live Unit Testing v aplikaci Visual Studio](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105)
+- [Video kanálu 9: Živé testování částí v sadě Visual Studio](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105)

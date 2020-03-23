@@ -21,81 +21,81 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 973e08ca6555f7da7873d3068e2794b8d34e3640
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569436"
 ---
-# <a name="options-dialog-box-environment--general"></a>Dialogové okno Možnosti: prostředí \> obecné
+# <a name="options-dialog-box-environment--general"></a>Dialogové okno Možnosti: Obecné prostředí \>
 
-Tato stránka slouží ke změně barevných motivů, nastavení stavového řádku a přidružení přípon souborů mezi další možnosti pro integrované vývojové prostředí (IDE). K dialogovému oknu **Možnosti** můžete přistupovat otevřením nabídky **nástroje** , výběrem **Možnosti**, otevřením složky **prostředí** a kliknutím na stránku **Obecné** . Pokud se tato stránka v seznamu nezobrazí, zaškrtněte políčko **Zobrazit všechna nastavení** v dialogovém okně **Možnosti** .
+Na této stránce můžete mimo jiné změnit barevné motivy, nastavení stavového řádku a přidružení příponek souborů pro integrované vývojové prostředí (IDE). Dialogové okno **Možnosti** můžete získat tak, že otevřete nabídku **Nástroje,** zvolíte **Možnosti**, otevřete složku **Prostředí** a pak zvolíte stránku **Obecné.** Pokud se tato stránka v seznamu nezobrazí, zaškrtněte políčko **Zobrazit všechna nastavení** v dialogovém okně **Možnosti.**
 
-## <a name="visual-experience"></a>Vizuální prostředí
+## <a name="visual-experience"></a>Vizuální zážitek
 
-**Barevný motiv**
+**Color Theme**
 
-Vyberte barevný motiv **Blue**, **světlý**, **tmavý**nebo **modrý (extra Contrast)** pro rozhraní IDE.
+Zvolte barevný motiv **Modrá,** **Světlá**, **Tmavá**nebo **Modrá (Extra Kontrast)** pro ide.
 
-Můžete nainstalovat další předdefinované motivy a vytvořit vlastní motivy stažením a instalací **editoru barevných motivů sady Visual Studio** z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor). Po instalaci tohoto nástroje se v seznamu **barevný motiv** zobrazí další barevné motivy.
+Můžete nainstalovat další předdefinované motivy a vytvořit vlastní motivy stažením a instalací **Editoru motivů barev sady Visual Studio** z webu Visual Studio [Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor). Po instalaci tohoto nástroje se v seznamu **Barevný motiv** zobrazí další barevné motivy.
 
-**Použití stylu případu nadpisu na řádku nabídek**
+**Použití stylu titulního případu na řádek nabídek**
 
-Nabídky používají ve výchozím nastavení styl písmen názvů. Zrušte tuto možnost, chcete-li místo toho použít všechny styly velkých a malých písmen.
+Nabídky používají styl titulního případu ve výchozím nastavení. Chcete-li místo toho použít veškerý styl velkých písmen, zaškrtněte tuto možnost.
 
 ::: moniker range=">=vs-2019"
 
-**Optimalizovat vykreslování pro obrazovky s různou hustotou pixelů (vyžaduje restart)**
+**Optimalizace vykreslování pro obrazovky s různými hustotami pixelů (vyžaduje restart)**
 
-Tato možnost povoluje nebo zakazuje sledování bodů monitorování a DPI (nebo *PMA*) na palec. Když je povolený PMA, uživatelské rozhraní sady Visual Studio se zobrazí ostře v jakémkoli monitorování a konfigurace rozlišení DPI, včetně různých monitorů. K povolení PMA potřebujete Windows 10 Update 2018 nebo novější a .NET Framework 4,8 nebo novější. (Tato možnost se zobrazí šedě, pokud tyto dva požadavky nejsou splněny.)
+Tato možnost povolí nebo zakáže povědomí o sledování na palec (DPI) (nebo *PMA).* Pokud je povoleno PMA, uživatelské rozhraní sady Visual Studio se zobrazí ostré v každém měřítku zobrazení monitoru faktor a konfigurace DPI, včetně více monitorů. Chcete-li povolit PMA, potřebujete aktualizaci windows 10 z dubna 2018 nebo novější a rozhraní .NET Framework 4.8 nebo novější. (Tato možnost se zobrazí šedě, pokud tyto dva požadavky nejsou splněny.)
 
 > [!TIP]
-> - Windows 10 obsahuje nastavení, které říká, že se **Windows snaží opravit aplikace, aby se rozmazaný**. **Zapnutí nastavení systému** Windows má zanedbatelný efekt, pokud máte zaškrtnuté políčko **optimalizovat vykreslování pro obrazovky s různou hustotou pixelů** .
-> - Windows 10 zahrnuje také **Poradce při potížích s kompatibilitou programů**. Nedoporučujeme řešit vzhled sady Visual Studio pomocí tohoto poradce při potížích.
+> - Windows 10 má nastavení, které **říká, aby se Systém Windows pokusil opravit aplikace, aby nebyly rozmazané**. Zapnutí tohoto nastavení **systému** Windows má zanedbatelný účinek, pokud máte zaškrtnutou volbu **Optimalizovat vykreslování pro obrazovky s různými hustotami obrazových bodů.**
+> - Windows 10 také obsahuje **Poradce při potížích s kompatibilitou programů**. Nedoporučujeme se pokoušet opravit vzhled sady Visual Studio pomocí tohoto poradce při potížích.
 
 ::: moniker-end
 
-**Automatické přizpůsobení vizuálního prostředí na základě výkonu klienta**
+**Automatické nastavení vizuálního prostředí na základě výkonu klienta**
 
-Určuje, zda sada Visual Studio nastaví automatické nastavení pro vizuální prostředí nebo zda je nastavení explicitně nastaveno. Tato úprava může měnit zobrazení barev z přechodů na ploché barvy, nebo může omezit použití animací v nabídkách nebo v automaticky otevíraných oknech.
+Určuje, zda visual studio nastaví úpravu vizuálního prostředí automaticky nebo zda nastavení nastavíte explicitně. Toto nastavení může změnit zobrazení barev z přechodů na ploché barvy nebo může omezit použití animací v nabídkách nebo vyskakovacích oknech.
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Windows 10 obsahuje nastavení, které říká, že se **Windows snaží opravit aplikace, aby se rozmazaný**. Zapnutí tohoto nastavení se doporučuje, **Pokud se Visual** Studio na monitoru neostří. Zvažte upgrade na [Visual Studio 2019](https://visualstudio.microsoft.com/downloads), který výrazně vylepšuje přehlednost zobrazení, protože se jedná o každou monitorovanou aplikaci pro monitorování bodů na palec.
+> Windows 10 má nastavení, které **říká, aby se Systém Windows pokusil opravit aplikace, aby nebyly rozmazané**. Pokud se visual studio na monitoru zobrazí rozmazaně, **doporučujeme** toto nastavení zapnout. Zvažte upgrade na [Visual Studio 2019](https://visualstudio.microsoft.com/downloads), který výrazně zlepšila přehlednost zobrazení, protože se jedná o aplikace na monitor uvědoměla.
 
 ::: moniker-end
 
-**Povolit komplexní klientské prostředí**
+**Povolení bohatého klientského prostředí**
 
-Umožňuje plné vizuální prostředí sady Visual Studio, včetně přechodů a animací. Tuto možnost zrušte, pokud používáte připojení ke vzdálené ploše nebo starší grafické adaptéry, protože tyto funkce mohou mít v těchto případech špatný výkon. Tato možnost je dostupná, jenom když zrušíte zaškrtnutí políčka **automaticky upravit vizuální prostředí na základě možnosti klienta** .
+Umožňuje úplné vizuální prostředí sady Visual Studio, včetně přechodů a animací. Zrušte zaškrtnutí této možnosti při použití připojení ke vzdálené ploše nebo starších grafických adaptérů, protože tyto funkce mohou mít v těchto případech nízký výkon. Tato možnost je k dispozici pouze v případě, že vymažete možnost Automaticky upravit vizuální prostředí na základě možnosti **klienta.**
 
-**Použít hardwarovou akceleraci grafiky, pokud je k dispozici**
+**Použití hardwarové grafické akcelerace, pokud je k dispozici**
 
-Používá hardwarovou akceleraci grafiky, je-li k dispozici, nikoli při akceleraci softwaru.
+Používá hardwarovou grafickou akceleraci, pokud je k dispozici, nikoli akceleraci softwaru.
 
-## <a name="other"></a>Další
+## <a name="other"></a>Ostatní
 
-**Položky, které se mají zobrazit v nabídce okna**
+**Položky, které se mají zobrazit v nabídce Okno**
 
-Přizpůsobuje počet oken, která se zobrazí v seznamu Windows v nabídce **okna** . Zadejte číslo od 1 do 24. Výchozí hodnota je 10.
+Přizpůsobí počet oken, které se zobrazí v seznamu systému Windows v nabídce **Okno.** Zadejte číslo mezi 1 a 24. Výchozí hodnota je 10.
 
-**Položky zobrazené v seznamu naposledy použitých položek**
+**Položky zobrazené v naposledy použitých seznamech**
 
-Přizpůsobuje počet naposledy použitých projektů a souborů, které se zobrazí v nabídce **soubor** . Zadejte číslo od 1 do 24. Výchozí hodnota je 10. Toto je snadný způsob, jak načíst nedávno použité projekty a soubory.
+Přizpůsobí počet naposledy použitých projektů a souborů, které se zobrazí v nabídce **Soubor.** Zadejte číslo mezi 1 a 24. Výchozí hodnota je 10. Toto je snadný způsob, jak načíst nedávno použité projekty a soubory.
 
 **Zobrazit stavový řádek**
 
-Zobrazí stavový řádek. Stavový řádek je umístěný v dolní části okna IDE a zobrazí informace o průběhu probíhajících operací.
+Zobrazí stavový řádek. Stavový řádek se nachází v dolní části okna ide a zobrazuje informace o průběhu probíhajících operací.
 
-**Tlačítko Zavřít ovlivní pouze aktivní okno nástrojů**
+**Tlačítko Zavřít ovlivní pouze okno aktivního nástroje**
 
-Určuje, že když se klikne na tlačítko **Zavřít** , zavře se jenom okno nástroje, které má fokus, a ne všechna okna nástrojů v ukotvené sadě. Tato možnost je vybrána ve výchozím nastavení.
+Určuje, že po klepnutí na tlačítko **Zavřít** je zavřeno pouze okno nástroje, které má fokus, a ne všechna okna nástrojů v ukotvené sadě. Tato možnost je vybrána ve výchozím nastavení.
 
-**Tlačítko automaticky skrýt ovlivní pouze aktivní okno nástrojů**
+**Tlačítko Automatické skrytí ovlivní pouze okno aktivního nástroje**
 
-Určuje, že po kliknutí na tlačítko pro **automatické skrývání** bude automaticky skryto okno nástroje, které má fokus, a ne všechna okna nástrojů v ukotvené sadě. Ve výchozím nastavení není tato možnost vybrána.
+Určuje, že po klepnutí na tlačítko **Automaticky skrýt** se automaticky skryje pouze okno nástroje, které má fokus, a ne všechna okna nástrojů v ukotvené sadě. Ve výchozím nastavení není tato možnost vybrána.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přizpůsobení rozložení oken](../../ide/customizing-window-layouts-in-visual-studio.md)

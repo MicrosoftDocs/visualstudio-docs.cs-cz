@@ -1,6 +1,6 @@
 ---
 title: Měření výkonu z příkazového řádku
-description: Změřte výkon procesoru a využití spravované paměti ve vaší aplikaci z příkazového řádku.
+description: Změřte výkon procesoru a využití spravované paměti v aplikaci z příkazového řádku.
 ms.custom: ''
 ms.date: 02/21/2020
 ms.topic: conceptual
@@ -15,19 +15,19 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
 ms.openlocfilehash: c109e2ae1db28f8e08ed7c34a7ee0871a6efe670
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77558118"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>Měření výkonu aplikace z příkazového řádku
 
-Pomocí nástrojů příkazového řádku můžete shromažďovat informace o výkonu aplikace.
+Informace o výkonu aplikace můžete shromažďovat pomocí nástrojů příkazového řádku.
 
-V příkladu popsaném v tomto článku shromažďujete informace o výkonu pro Microsoft Notepad, ale stejnou metodu lze použít k profilování jakéhokoli procesu.
+V příkladu popsaném v tomto článku shromažďujete informace o výkonu programu Microsoft Notepad, ale stejnou metodu lze použít k profilování libovolného procesu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 * Visual Studio 2019 Preview 3 nebo novější verze
 
@@ -35,50 +35,50 @@ V příkladu popsaném v tomto článku shromažďujete informace o výkonu pro 
 
 ## <a name="collect-performance-data"></a>Shromažďování údajů o výkonu
 
-Profilace pomocí nástrojů rozhraní příkazového řádku Visual Studio Diagnostics funguje tak, že k procesu připojí nástroj pro profilaci společně s jedním z agentů kolektoru. Když připojíte nástroj profilace, zahájíte relaci diagnostiky, která zachycuje a ukládá data profilování, dokud se nástroj nezastaví. v takovém případě se data exportují do souboru *. diagsession* . Pak můžete tento soubor otevřít v aplikaci Visual Studio a analyzovat výsledky.
+Profilování pomocí nástrojů nastavení cli nástroje Visual Studio Diagnostika funguje tak, že připojí nástroj profilování spolu s jedním z agentů kolektoru, k procesu. Když připojíte nástroj profilování, zahájíte diagnostickou relaci, která zachycuje a ukládá data profilování, dokud není nástroj zastaven, a v tomto okamžiku jsou data exportována do souboru *diagsession.* Potom můžete otevřít tento soubor v sadě Visual Studio a analyzovat výsledky.
 
-1. Spusťte Poznámkový blok a otevřete Správce úloh a získejte jeho ID procesu (PID). Ve Správci úloh Najděte na kartě **Podrobnosti** PID.
+1. Spusťte poznámkový blok a pak otevřete Správce úloh, abyste získali jeho ID procesu (PID). Ve Správci úloh najdete pid na kartě **Podrobnosti.**
 
-1. Otevřete příkazový řádek a přejděte do adresáře se spustitelným souborem agenta shromažďování, obvykle tady.
+1. Otevřete příkazový řádek a změňte adresář pomocí spustitelného souboru inkasního agenta, obvykle zde.
 
    ```<Visual Studio installation folder>\2019\Preview\Team Tools\DiagnosticsHub\Collector\```
 
-1. Spusťte *VSDiagnostics. exe* zadáním následujícího příkazu.
+1. Spusťte *nástroj VSDiagnostics.exe* zadáním následujícího příkazu.
 
    ```cmd
    VSDiagnostics.exe start <id> /attach:<pid> /loadConfig:<configFile>
    ```
 
-   Argumenty, které musí být zahrnuty:
+   Argumenty, které musí být zahrnuty, jsou:
 
-   * \<*id*> identifikuje relaci shromažďování. ID musí být číslo mezi 1-255.
-   * \<*pid*> a PID procesu, který chcete profilovat, v tomto případě PID, který jste našli v kroku 1
-   * \<*configFile*>, konfigurační soubor pro agenta shromažďování dat, který chcete spustit. Další informace najdete v tématu [konfigurační soubory pro agenty](#config_file).
+   * \<*id*> Identifikuje relaci kolekce. ID musí být číslo mezi 1-255.
+   * \<*pid*>, PID procesu, který chcete profilovat, v tomto případě PID, který jste našli v kroku 1
+   * \<*configFile*> konfigurační soubor pro inkasního agenta, který chcete spustit. Další informace naleznete v [tématu Configuration files for agents](#config_file).
 
-1. Změňte velikost poznámkového bloku nebo něco do něj zadejte, abyste se ujistili, že jsou shromažďovány zajímavé informace o profilaci.
+1. Změňte velikost poznámkového bloku nebo do něj něco zadejte, abyste se ujistili, že jsou shromažďovány některé zajímavé informace o profilování.
 
-1. Zastavte relaci shromažďování a odešlete výstup do souboru zadáním následujícího příkazu.
+1. Zastavte relaci kolekce a odešlete výstup do souboru zadáním následujícího příkazu.
 
    ```cmd
    VSDiagnostics.exe stop <id> /output:<path to file>
    ```
 
-1. V předchozím příkazu přejdete na výstup souboru a otevřete ho v aplikaci Visual Studio a Projděte shromážděné informace.
+1. Přejděte na výstup souboru z předchozího příkazu a otevřete jej v sadě Visual Studio a zkontrolujte shromážděné informace.
 
-## <a name="config_file"></a>Konfigurační soubory agenta
+## <a name="agent-configuration-files"></a><a name="config_file"></a>Konfigurační soubory agenta
 
-Agenti kolekcí jsou vzájemně zaměnitelné komponenty, které shromažďují různé typy dat v závislosti na tom, co se snažíte změřit.
+Agenti kolekce jsou zaměnitelné součásti, které shromažďují různé typy dat v závislosti na tom, co se pokoušíte měřit.
 
-Pro usnadnění práce můžete tyto informace uložit do konfiguračního souboru agenta. Konfigurační soubor je soubor *. JSON* , který obsahuje minimálně název souboru *. dll* a jeho identifikátor CLSID com. Tady jsou ukázkové konfigurační soubory, které najdete v následující složce:
+Pro větší pohodlí můžete tyto informace uložit do konfiguračního souboru agenta. Konfigurační soubor je *soubor JSON,* který obsahuje minimálně název *dll* a jeho CLSID COM. Zde jsou ukázkové konfigurační soubory, které najdete v následující složce:
 
 ```<Visual Studio installation folder>\2019\Preview\Team Tools\DiagnosticsHub\Collector\AgentConfigs\```
 
-* Konfigurace CpuUsage (základní/vysoká/nízká), které odpovídají datům shromážděným pro nástroj pro profilaci [využití procesoru](../profiling/cpu-usage.md) .
-* Konfigurace DotNetObjectAlloc (Base/nízká), které odpovídají datům shromážděným pro [Nástroj přidělování objektů rozhraní .NET](../profiling/dotnet-alloc-tool.md).
+* Konfigurace využití procesoru (Base/High/Low), což odpovídá datům shromážděným pro nástroj profilování [využití procesoru.](../profiling/cpu-usage.md)
+* Konfigurace DotNetObjectAlloc (Base/Low), které odpovídají datům shromážděným pro [nástroj pro alokaci objektů .NET](../profiling/dotnet-alloc-tool.md).
 
-Základní a nízké/vysoké konfigurace odkazují na vzorkovací frekvenci. Například nízká je 100 vzorků/s a vysoká je 4000 vzorků za sekundu.
+Konfigurace Base/Low/High se vztahují k vzorkovací frekvenci. Například Nízká je 100 vzorků za sekundu a Vysoká je 4000 vzorků za sekundu.
 
-Nástroj *VSDiagnostics. exe* pro práci s agentem shromažďování dat vyžaduje knihovnu DLL i identifikátor CLSID com pro příslušný agent a Agent může mít také další možnosti konfigurace. Pokud používáte agenta bez konfiguračního souboru, použijte formát v následujícím příkazu.
+Pro nástroj *VSDiagnostics.exe* pro práci s agentem kolekce vyžaduje pro příslušného agenta soubor DLL i CLSID COM a agent může mít také další možnosti konfigurace. Pokud používáte agenta bez konfiguračního souboru, použijte formát v následujícím příkazu.
 
 ```cmd
 VSDiagnostics.exe start <id> /attach:<pid> /loadAgent:<agentCLSID>;<agentName>[;<config>]
@@ -86,4 +86,4 @@ VSDiagnostics.exe start <id> /attach:<pid> /loadAgent:<agentCLSID>;<agentName>[;
 
 ## <a name="permissions"></a>Oprávnění
 
-Chcete-li profilovat aplikaci, která vyžaduje zvýšená oprávnění, musíte to provést z příkazového řádku se zvýšenými oprávněními.
+Chcete-li profilovat aplikaci, která vyžaduje zvýšená oprávnění, musíte tak učinit z příkazového řádku se zvýšenými oprávněními.

@@ -19,15 +19,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cabbf36adb5019543b3cfb72b0b0e56976517d2d
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77557930"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 
-Nastaví výchozí jazyk, který se používá pro text, měnu a jiné hodnoty v rámci integrovaného vývojového prostředí (IDE).
+Nastaví výchozí jazyk používaný pro text, měnu a další hodnoty v rámci rozhraní IDE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,19 +37,19 @@ devenv {/LCID|/L} LocaleID
 
 ## <a name="arguments"></a>Argumenty
 
-- *LocaleID*
+- *Localeid*
 
-  Povinná hodnota. Identifikátor národního prostředí (LCID) jazyka, který zadáte.
+  Povinná hodnota. Identifikátor národního prostředí (LCID) zadaného jazyka.
 
 ## <a name="remarks"></a>Poznámky
 
-Načte rozhraní IDE a nastaví výchozí přirozený jazyk pro prostředí. Tato změna je trvalá mezi relacemi a IDE tuto změnu zobrazuje v dialogovém okně **nástroje** > **možnosti** > **prostředí** > **mezinárodní nastavení** > **jazyk** .
+Načte rozhraní IDE a nastaví výchozí přirozený jazyk pro prostředí. Tato změna je mezi relacemi zachována a rozhraní IDE tuto změnu zobrazí v poli **Tools** > **Options** > **Environment** > International**Settings** > **Language.**
 
-Pokud zadaný jazyk není ve vašem systému k dispozici, přepínač `/LCID` se ignoruje.
+Pokud zadaný jazyk není v systému `/LCID` k dispozici, přepínač se ignoruje.
 
-V následující tabulce jsou uvedeny identifikátory LCID jazyků, které podporuje Visual Studio.
+V následující tabulce jsou uvedeny kódy LCID jazyků podporovaných souborem Visual Studio.
 
-|Jazyk|IDENTIFIKÁTORY|
+|Jazyk|LCID|
 |--------------|----------|
 |Čínština (zjednodušená)|2052|
 |Čínština (tradiční)|1028|
@@ -68,7 +68,7 @@ V následující tabulce jsou uvedeny identifikátory LCID jazyků, které podpo
 
 ## <a name="example"></a>Příklad
 
-Tento příklad načte integrované vývojové prostředí (IDE) s řetězci České prostředky.
+Tento příklad načte ide s anglickými řetězci prostředků.
 
 ```shell
 devenv /LCID 1033
@@ -76,6 +76,6 @@ devenv /LCID 1033
 
 ## <a name="see-also"></a>Viz také
 
-- [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)
+- [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md)
 - [Mezinárodní nastavení, Prostředí, dialogové okno Možnosti](../../ide/reference/international-settings-environment-options-dialog-box.md)
 - [Přizpůsobení rozložení oken](../../ide/customizing-window-layouts-in-visual-studio.md)

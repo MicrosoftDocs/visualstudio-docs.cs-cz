@@ -1,5 +1,5 @@
 ---
-title: Úloha ResolveKeySource – | Microsoft Docs
+title: Úloha ResolveKeySource | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,36 +19,36 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3aa4e2454a0216e697ed12404091eb0ef16416cb
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632703"
 ---
 # <a name="resolvekeysource-task"></a>ResolveKeySource – úloha
 
-Určuje zdroj klíče se silným názvem.
+Určuje zdroj klíče silného názvu.
 
 ## <a name="task-parameters"></a>Parametry úlohy
 
- Následující tabulka popisuje parametry úlohy `ResolveKeySource`.
+ Následující tabulka popisuje parametry `ResolveKeySource` úkolu.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`AutoClosePasswordPromptShow`|Volitelný parametr `Int32`.<br /><br /> Získá nebo nastaví množství času (v sekundách), ve kterém se má zobrazit zpráva o počtu.|
-|`AutoClosePasswordPromptTimeout`|Volitelný parametr `Int32`.<br /><br /> Získá nebo nastaví množství času (v sekundách), po který se má čekat před zavřením dialogového okna výzvy k zadání hesla.|
-|`CertificateFile`|Volitelný parametr `String`.<br /><br /> Získá nebo nastaví cestu k souboru certifikátu.|
-|`CertificateThumbprint`|Volitelný parametr `String`.<br /><br /> Získá nebo nastaví kryptografický otisk certifikátu.|
-|`KeyFile`|Volitelný parametr `String`.<br /><br /> Získá nebo nastaví cestu k souboru klíče.|
-|`ResolvedKeyContainer`|Volitelný výstupní parametr `String`.<br /><br /> Získá nebo nastaví vyřešený kontejner klíčů.|
-|`ResolvedKeyFile`|Volitelný výstupní parametr `String`.<br /><br /> Získá nebo nastaví přeložený soubor klíče.|
-|`ResolvedThumbprint`|Volitelný výstupní parametr `String`.<br /><br /> Získá nebo nastaví přeložený kryptografický otisk certifikátu.|
-|`ShowImportDialogDespitePreviousFailures`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, Zobrazit dialog pro import navzdory předchozím chybám|
-|`SuppressAutoClosePasswordPrompt`|Volitelný parametr `Boolean`.<br /><br /> Získá nebo nastaví logickou hodnotu, která určuje, zda se má dialogové okno výzvy k zadání hesla automaticky zavřít.|
+|`AutoClosePasswordPromptShow`|Volitelný `Int32` parametr.<br /><br /> Získá nebo nastaví množství času v sekundách, chcete-li zobrazit zprávu odpočítávání.|
+|`AutoClosePasswordPromptTimeout`|Volitelný `Int32` parametr.<br /><br /> Získá nebo nastaví dobu v sekundách, než zavřete dialogové okno s výzvou k zadání hesla.|
+|`CertificateFile`|Volitelný `String` parametr.<br /><br /> Získá nebo nastaví cestu k souboru certifikátu.|
+|`CertificateThumbprint`|Volitelný `String` parametr.<br /><br /> Získá nebo nastaví kryptografický otisk certifikátu.|
+|`KeyFile`|Volitelný `String` parametr.<br /><br /> Získá nebo nastaví cestu k souboru klíče.|
+|`ResolvedKeyContainer`|Volitelný `String` výstupní parametr.<br /><br /> Získá nebo nastaví kontejner vyřešený klíč.|
+|`ResolvedKeyFile`|Volitelný `String` výstupní parametr.<br /><br /> Získá nebo nastaví soubor vyřešeného klíče.|
+|`ResolvedThumbprint`|Volitelný `String` výstupní parametr.<br /><br /> Získá nebo nastaví kryptografický otisk vyřešeného certifikátu.|
+|`ShowImportDialogDespitePreviousFailures`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true`zobrazíte dialogové okno importu i přes předchozí selhání.|
+|`SuppressAutoClosePasswordPrompt`|Volitelný `Boolean` parametr.<br /><br /> Získá nebo nastaví logickou hodnotu, která určuje, zda dialogové okno s výzvou k zadání hesla nemá automaticky zavřít.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Viz také
 

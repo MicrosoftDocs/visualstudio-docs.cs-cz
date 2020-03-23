@@ -1,5 +1,5 @@
 ---
-title: 'Návod: vytvoření souboru projektu MSBuild od začátku | Microsoft Docs'
+title: 'Návod: Vytvoření souboru projektu MSBuild od začátku | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,53 +11,53 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5fe9f052c10f31c4db0f8bf09f273be5814ff732
-ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78263133"
 ---
-# <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>Návod: vytvoření souboru projektu MSBuild od začátku
+# <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>Návod: Vytvoření souboru projektu MSBuild od začátku
 
-Programovací jazyky, které cílí na .NET Framework používají soubory projektu MSBuild k popisu a řízení procesu sestavení aplikace. Při použití sady Visual Studio k vytvoření souboru projektu MSBuild je do souboru automaticky přidáno příslušné XML. Může však být užitečné pochopit, jak je kód XML uspořádán a jak jej lze změnit pro řízení sestavení.
+Programovací jazyky, které cílí na rozhraní .NET Framework, používají k popisu a řízení procesu sestavení aplikace soubory projektu MSBuild. Při použití sady Visual Studio k vytvoření souboru projektu MSBuild, příslušný XML je přidán do souboru automaticky. Může však být užitečné pochopit, jak je xml uspořádán a jak jej můžete změnit pro řízení sestavení.
 
- Informace o vytvoření souboru projektu pro C++ projekt naleznete v tématu [MSBuild (C++)](/cpp/build/msbuild-visual-cpp).
+ Informace o vytvoření souboru projektu pro projekt jazyka C++ naleznete v tématu [MSBuild (C++).](/cpp/build/msbuild-visual-cpp)
 
- Tento návod ukazuje, jak vytvořit soubor základního projektu přírůstkově pomocí pouze textového editoru. Tento návod se skládá z těchto kroků:
+ Tento návod ukazuje, jak vytvořit základní soubor projektu postupně pomocí pouze textového editoru. Návod následuje následujícím způsobem:
 
-1. Vytvořte zdrojový soubor minimální aplikace.
+1. Vytvořte minimální zdrojový soubor aplikace.
 
 2. Vytvořte minimální soubor projektu MSBuild.
 
-3. Proměnnou prostředí PATH rozšíříte tak, aby zahrnovala nástroj MSBuild.
+3. Rozšiřte proměnnou prostředí PATH tak, aby zahrnovala MSBuild.
 
-4. Sestavte aplikaci pomocí souboru projektu.
+4. Vytvořte aplikaci pomocí souboru projektu.
 
 5. Přidejte vlastnosti pro řízení sestavení.
 
-6. Řízení sestavení změnou hodnot vlastností.
+6. Ovládejte sestavení změnou hodnot vlastností.
 
 7. Přidejte cíle do sestavení.
 
 8. Řízení sestavení zadáním cílů.
 
-9. Přírůstkové sestavení.
+9. Sestavení postupně.
 
-Tento návod ukazuje, jak sestavit projekt na příkazovém řádku a prohlédnout si výsledky. Další informace o nástroji MSBuild a o tom, jak spustit MSBuild v příkazovém řádku, naleznete v tématu [Návod: použití nástroje MSBuild](../msbuild/walkthrough-using-msbuild.md).
+Tento návod ukazuje, jak vytvořit projekt na příkazovém řádku a zkontrolujte výsledky. Další informace o msbuildu a způsobu spuštění msbuildu na příkazovém řádku naleznete v [tématu Návod: Použití msbuildu](../msbuild/walkthrough-using-msbuild.md).
 
-Chcete-li dokončit tento návod, je nutné mít nainstalovanou .NET Framework (verze 2,0, 3,5, 4,0, 4,5 nebo novější), protože zahrnuje MSBuild a vizuální C# kompilátor, které jsou požadovány pro návod.
+Chcete-li dokončit návod, musíte mít nainstalovaný rozhraní .NET Framework (verze 2.0, 3.5, 4.0, 4.5 nebo novější), protože obsahuje MSBuild a kompilátor Visual C#, které jsou požadovány pro návod.
 
 ## <a name="create-a-minimal-application"></a>Vytvoření minimální aplikace
 
- V této části se dozvíte, jak C# vytvořit zdrojový soubor minimální aplikace pomocí textového editoru.
+ Tato část ukazuje, jak vytvořit minimální zdrojový soubor aplikace C# pomocí textového editoru.
 
-1. Na příkazovém řádku přejděte do složky, ve které chcete vytvořit aplikaci, například *\My documents\\* nebo *\Plocha\\* .
+1. Na příkazovém řádku vyhledejte složku, do které chcete vytvořit aplikaci, například *\Dokumenty\\ * nebo *\Desktop\\*.
 
-2. Zadejte **MD HelloWorld** pro vytvoření podsložky s názvem *\HelloWorld\\* .
+2. Zadejte **md HelloWorld** a vytvořte podsložku s názvem *\\\HelloWorld*.
 
-3. Zadejte **CD HelloWorld** pro změnu do nové složky.
+3. Zadejte **cd HelloWorld** pro změnu do nové složky.
 
-4. Spusťte Poznámkový blok nebo jiný textový editor a poté zadejte následující kód.
+4. Spusťte poznámkový blok nebo jiný textový editor a zadejte následující kód.
 
     ```csharp
     using System;
@@ -75,29 +75,29 @@ Chcete-li dokončit tento návod, je nutné mít nainstalovanou .NET Framework (
     }
     ```
 
-5. Uložte tento soubor zdrojového kódu a pojmenujte ho *HelloWorld.cs*.
+5. Uložte tento soubor zdrojového kódu a *pojmenujte*jej Helloworld.cs .
 
-6. Sestavte aplikaci zadáním **csc HelloWorld.cs** na příkazovém řádku.
+6. Vytvořte aplikaci zadáním **csc helloworld.cs** na příkazovém řádku.
 
-7. Otestujte aplikaci zadáním **HelloWorld** na příkazovém řádku.
+7. Otestujte aplikaci zadáním **helloworld** na příkazovém řádku.
 
-     **Hello, World!** měla by se zobrazit zpráva.
+     **Ahoj, světe!** zpráva by měla být zobrazena.
 
-8. Odstraňte aplikaci zadáním **del Hello. exe** z příkazového řádku.
+8. Odstraňte aplikaci zadáním **del helloworld.exe** na příkazovém řádku.
 
-## <a name="create-a-minimal-msbuild-project-file"></a>Vytvořit minimální soubor projektu MSBuild
+## <a name="create-a-minimal-msbuild-project-file"></a>Vytvoření minimálního souboru projektu MSBuild
 
- Teď, když máte minimální zdrojový soubor aplikace, můžete vytvořit minimální soubor projektu pro sestavení aplikace. Tento soubor projektu obsahuje následující prvky:
+ Nyní, když máte minimální zdrojový soubor aplikace, můžete vytvořit minimální soubor projektu k vytvoření aplikace. Tento soubor projektu obsahuje následující prvky:
 
-- Požadovaný kořenový uzel `Project`.
+- Požadovaný kořenový `Project` uzel.
 
-- Uzel `ItemGroup`, který obsahuje prvky položky.
+- Uzel `ItemGroup` obsahující prvky položky.
 
-- Element Item, který odkazuje na zdrojový soubor aplikace.
+- Prvek položky, který odkazuje na zdrojový soubor aplikace.
 
-- Uzel `Target`, který obsahuje úlohy, které jsou nutné k sestavení aplikace.
+- Uzel `Target` obsahující úkoly, které jsou nutné k sestavení aplikace.
 
-- Element `Task`, který spustí vizuální C# kompilátor pro sestavení aplikace.
+- Prvek `Task` pro spuštění kompilátoru Visual C# k sestavení aplikace.
 
 ### <a name="to-create-a-minimal-msbuild-project-file"></a>Vytvoření minimálního souboru projektu MSBuild
 
@@ -108,7 +108,7 @@ Chcete-li dokončit tento návod, je nutné mít nainstalovanou .NET Framework (
     </Project>
     ```
 
-2. Vložte tento `ItemGroup` uzel jako podřízený prvek uzlu `Project`:
+2. Vložte `ItemGroup` tento uzel jako podřízený prvek `Project` uzlu:
 
     ```xml
     <ItemGroup>
@@ -116,24 +116,24 @@ Chcete-li dokončit tento návod, je nutné mít nainstalovanou .NET Framework (
     </ItemGroup>
     ```
 
-     Všimněte si, že tento `ItemGroup` již obsahuje element Item.
+     Všimněte `ItemGroup` si, že již obsahuje prvek položky.
 
-3. Přidejte `Target` uzel jako podřízený prvek uzlu `Project`. Pojmenujte `Build`uzlu.
+3. Přidejte `Target` uzel jako podřízený `Project` prvek uzlu. Pojmenujte `Build`uzel .
 
     ```xml
     <Target Name="Build">
     </Target>
     ```
 
-4. Vložte tento element Task jako podřízený prvek uzlu `Target`:
+4. Vložte tento prvek úkolu jako `Target` podřízený prvek uzlu:
 
     ```xml
     <Csc Sources="@(Compile)"/>
     ```
 
-5. Uložte tento soubor projektu a pojmenujte ho *HelloWorld. csproj*.
+5. Uložte tento soubor projektu a pojmenujte jej *Helloworld.csproj*.
 
-Váš minimální soubor projektu by měl vypadat podobně jako následující kód:
+Minimální soubor projektu by se měl podobat následujícímu kódu:
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -146,55 +146,55 @@ Váš minimální soubor projektu by měl vypadat podobně jako následující k
 </Project>
 ```
 
-Úlohy v cíli sestavení jsou spouštěny postupně. V tomto případě je úkol `Csc` C# Visual Compiler jediným úkolem. Očekává seznam zdrojových souborů, které mají být zkompilovány, a je dána hodnotou `Compile` položky. `Compile` položka odkazuje pouze na jeden zdrojový soubor, *HelloWorld.cs*.
+Úkoly v cíli sestavení jsou prováděny postupně. V tomto případě `Csc` je úkol kompilátoru Visual C# je jediný úkol. Očekává, že seznam zdrojových souborů ke kompilaci, a `Compile` to je dáno hodnotou položky. Položka `Compile` odkazuje pouze na jeden zdrojový *soubor, Helloworld.cs*.
 
 > [!NOTE]
-> V elementu Item můžete použít zástupný znak hvězdičky (\*) pro odkazování na všechny soubory, které mají příponu názvu souboru *. cs* následujícím způsobem:
+> V elementu item můžete použít zástupný znak\*hvězdičky ( ) k odkazování na všechny soubory, které mají příponu *.cs* název souboru, a to následovně:
 >
 > ```xml
 > <Compile Include="*.cs" />
 > ```
 
-## <a name="extend-the-path-to-include-msbuild"></a>Rozšíří cestu pro zahrnutí nástroje MSBuild
+## <a name="extend-the-path-to-include-msbuild"></a>Rozšíření cesty tak, aby zahrnovala MSBuild
 
-Předtím, než budete moci získat přístup k nástroji MSBuild, je nutné roztáhnout proměnnou prostředí PATH, aby zahrnovala složku .NET Framework.
+Před přístupem k msbuild, je nutné rozšířit proměnnou prostředí PATH zahrnout složku rozhraní .NET Framework.
 
-Počínaje Visual Studio 2013 můžete soubor *MSBuild. exe* najít ve složce MSBuild ( *%ProgramFiles%\MSBuild* v 32ém operačním systému nebo v *% ProgramFiles (x86)% \ MSBuild* na 64 operačním systému).
+Počínaje visual studio 2013 najdete *msbuild.exe* ve složce MSBuild (*%ProgramFiles%\MSBuild* na 32bitovém operačním systému nebo v *%ProgramFiles(x86)%\MSBuild* na 64bitovém operačním systému).
 
-Na příkazovém řádku zadejte **set cesta =% Path%;%ProgramFiles%\MSBuild** nebo **set PATH =% Path%;% ProgramFiles (x86)% \ MSBuild**.
+Na příkazovém řádku zadejte **příkaz PATH=%PATH%;%ProgramFiles%\MSBuild** nebo **PATH=%PATH%;%ProgramFiles(x86)%\MSBuild**.
 
-Případně, pokud máte nainstalovanou aplikaci Visual Studio, můžete použít **Developer Command Prompt pro Visual Studio**, která má cestu, která obsahuje složku *MSBuild* .
+Případně pokud máte nainstalovanou visual studio, můžete použít **příkazový řádek pro vývojáře pro Visual Studio**, který má cestu, která obsahuje složku *MSBuild.*
 
 ## <a name="build-the-application"></a>Sestavení aplikace
 
- Nyní k sestavení aplikace použijte soubor projektu, který jste právě vytvořili.
+ Nyní k vytvoření aplikace použijte soubor projektu, který jste právě vytvořili.
 
-1. Na příkazovém řádku zadejte **MSBuild HelloWorld. csproj-t:Build**.
+1. Na příkazovém řádku zadejte **příkaz msbuild helloworld.csproj -t:Build**.
 
-     Tím se vytvoří cíl sestavení souboru projektu HelloWorld vyvoláním vizuálního C# kompilátoru pro vytvoření aplikace HelloWorld.
+     To vytvoří sestavení cíl souboru projektu Helloworld vyvoláním Visual C# kompilátor u vytvořit aplikaci Helloworld.
 
-2. Otestujte aplikaci zadáním **HelloWorld**.
+2. Otestujte aplikaci zadáním **helloworld**.
 
-     **Hello, World!** měla by se zobrazit zpráva.
+     **Ahoj, světe!** zpráva by měla být zobrazena.
 
 > [!NOTE]
-> Další podrobnosti o sestavení můžete zobrazit zvýšením úrovně podrobností. Chcete-li nastavit úroveň podrobností na "podrobné", zadejte tento příkaz na příkazovém řádku:
+> Můžete zobrazit další podrobnosti o sestavení zvýšením úroveň podrobností. Chcete-li nastavit úroveň podrobností na "podrobnou", zadejte tento příkaz na příkazovém řádku:
 >
-> **MSBuild HelloWorld. csproj-t:Build-detailed: detailed**
+> **msbuild helloworld.csproj -t:Build -verbosity:detailní**
 
-## <a name="add-build-properties"></a>Přidat vlastnosti sestavení
+## <a name="add-build-properties"></a>Přidání vlastností sestavení
 
  Můžete přidat vlastnosti sestavení do souboru projektu k dalšímu řízení sestavení. Nyní přidejte tyto vlastnosti:
 
-- Vlastnost `AssemblyName` pro určení názvu aplikace.
+- Vlastnost `AssemblyName` zadejte název aplikace.
 
-- Vlastnost `OutputPath` k určení složky, která má obsahovat aplikaci.
+- Vlastnost `OutputPath` určit složku, která má obsahovat aplikaci.
 
 ### <a name="to-add-build-properties"></a>Přidání vlastností sestavení
 
-1. Odstraňte existující aplikaci zadáním **del Hello. exe** z příkazového řádku.
+1. Odstraňte existující aplikaci zadáním **souboru del helloworld.exe** na příkazovém řádku.
 
-2. V souboru projektu vložte tento prvek `PropertyGroup` hned za otevřený `Project` element:
+2. V souboru projektu `PropertyGroup` vložte tento `Project` prvek těsně za otevírací prvek:
 
     ```xml
     <PropertyGroup>
@@ -203,25 +203,25 @@ Případně, pokud máte nainstalovanou aplikaci Visual Studio, můžete použí
     </PropertyGroup>
     ```
 
-3. Přidejte tento úkol do cíle sestavení těsně před úlohu `Csc`:
+3. Přidejte tento úkol do cíle `Csc` sestavení těsně před úkolem:
 
     ```xml
     <MakeDir Directories="$(OutputPath)"      Condition="!Exists('$(OutputPath)')" />
     ```
 
-     Úloha `MakeDir` vytvoří složku, která je pojmenována vlastností `OutputPath` za předpokladu, že v tuto chvíli neexistuje žádná složka s tímto názvem.
+     Úloha `MakeDir` vytvoří složku, která `OutputPath` je pojmenována vlastností, za předpokladu, že aktuálně neexistuje žádná složka s tímto názvem.
 
-4. Přidejte tento atribut `OutputAssembly` do úlohy `Csc`:
+4. Přidejte `OutputAssembly` tento `Csc` atribut do úkolu:
 
     ```xml
     <Csc Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" />
     ```
 
-     To instruuje kompilátor vizuálu C# , aby vytvořil sestavení, které je pojmenováno vlastností `AssemblyName` a umístí ho do složky, která je pojmenována vlastností `OutputPath`.
+     To instruuje kompilátor Visual C# k `AssemblyName` vytvoření sestavení, které je pojmenováno vlastností a umístit jej do složky, která je pojmenována `OutputPath` vlastností.
 
 5. Uložte provedené změny.
 
-Soubor projektu by měl nyní vypadat podobně jako následující kód:
+Soubor projektu by se nyní měl podobat následujícímu kódu:
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -240,7 +240,7 @@ Soubor projektu by měl nyní vypadat podobně jako následující kód:
 ```
 
 > [!NOTE]
-> Doporučujeme přidat oddělovač cest zpětného lomítka (\\) na konec názvu složky při jeho zadání v elementu `OutputPath` namísto přidání do atributu `OutputAssembly` `Csc` úlohy. Proto:
+> Doporučujeme přidat oddělovač\\cest zpětného lomítka ( ) na konec `OutputPath` názvu složky, když `OutputAssembly` jej zadáte `Csc` v prvku, namísto jeho přidání do atributu úkolu. Proto:
 >
 > `<OutputPath>Bin\</OutputPath>`
 >
@@ -254,31 +254,31 @@ Soubor projektu by měl nyní vypadat podobně jako následující kód:
 
 ## <a name="test-the-build-properties"></a>Testování vlastností sestavení
 
- Nyní můžete sestavit aplikaci pomocí souboru projektu, ve kterém jste použili vlastnosti sestavení k určení výstupní složky a názvu aplikace.
+ Nyní můžete vytvořit aplikaci pomocí souboru projektu, ve kterém jste použili vlastnosti sestavení k určení výstupní složky a názvu aplikace.
 
-1. Na příkazovém řádku zadejte **MSBuild HelloWorld. csproj-t:Build**.
+1. Na příkazovém řádku zadejte **příkaz msbuild helloworld.csproj -t:Build**.
 
-     Tím se vytvoří složka *\bin\\* a potom se vyvolá kompilátor vizuálu C# , aby se vytvořila aplikace *aplikaci MSBuildSample* a umístí se do složky *\Bin\\* .
+     Tím se vytvoří složka *\Bin\\ * a potom vyvolá kompilátor Visual C# a vytvoří aplikaci *MSBuildSample* a vloží ji do složky *\Bin.\\ *
 
-2. Chcete-li ověřit, zda byla vytvořena složka *\bin\\* a zda obsahuje aplikaci *aplikaci MSBuildSample* , zadejte příkaz **dir bin**.
+2. Chcete-li ověřit, zda byla složka *\\ \Bin* vytvořena a zda obsahuje aplikaci *MSBuildSample,* zadejte **dir Bin**.
 
-3. Otestujte aplikaci zadáním **Bin\MSBuildSample**.
+3. Otestujte aplikaci zadáním **přihrádky\MSBuildSample**.
 
-     **Hello, World!** měla by se zobrazit zpráva.
+     **Ahoj, světe!** zpráva by měla být zobrazena.
 
-## <a name="add-build-targets"></a>Přidat cíle sestavení
+## <a name="add-build-targets"></a>Přidání cílů sestavení
 
- Dále přidejte do souboru projektu dva další cíle následujícím způsobem:
+ Dále přidejte do souboru projektu další dva cíle takto:
 
-- Čistý cíl, který odstraní staré soubory.
+- Cíl Clean, který odstraní staré soubory.
 
-- Cíl opětovného sestavení, který používá atribut `DependsOnTargets` k vynucení spuštění úlohy čištění před úlohou sestavení.
+- Cíl znovu sestavit, `DependsOnTargets` který používá atribut k vynucení clean úlohy spustit před úlohou sestavení.
 
 Teď, když máte více cílů, můžete nastavit cíl sestavení jako výchozí cíl.
 
 ### <a name="to-add-build-targets"></a>Přidání cílů sestavení
 
-1. V souboru projektu přidejte tyto dva cíle hned po cíli sestavení:
+1. V souboru projektu přidejte tyto dva cíle hned za cíl sestavení:
 
     ```xml
     <Target Name="Clean" >
@@ -287,17 +287,17 @@ Teď, když máte více cílů, můžete nastavit cíl sestavení jako výchozí
     <Target Name="Rebuild" DependsOnTargets="Clean;Build" />
     ```
 
-     Cíl vyčištění vyvolá úlohu odstranění pro odstranění aplikace. Cíl opětovného sestavení se nespustí, dokud se nespustí plán vyčištění i cíl sestavení. I když cíl opětovného sestavení nemá žádné úkoly, způsobí, že se čistý cíl spustí před cílem sestavení.
+     Cíl Vyčistit vyvolá úlohu Delete k odstranění aplikace. Znovu sestavit cíl nelze spustit, dokud clean cíl a cíl sestavení spustit. Přestože cíl znovu sestavit nemá žádné úlohy, způsobí, že cíl Clean spustit před cíl sestavení.
 
-2. Přidejte tento atribut `DefaultTargets` do otevřeného elementu `Project`:
+2. Přidejte `DefaultTargets` tento atribut `Project` do počátečního prvku:
 
     ```xml
     <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     ```
 
-     Tím se nastaví cíl sestavení jako výchozí cíl.
+     Tím nastavíte cíl sestavení jako výchozí cíl.
 
-Soubor projektu by měl nyní vypadat podobně jako následující kód:
+Soubor projektu by se nyní měl podobat následujícímu kódu:
 
 ```xml
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -321,59 +321,59 @@ Soubor projektu by měl nyní vypadat podobně jako následující kód:
 
 ## <a name="test-the-build-targets"></a>Testování cílů sestavení
 
- Nové cíle sestavení můžete vykonat pro otestování těchto funkcí souboru projektu:
+ Můžete použít nové cíle sestavení k testování těchto funkcí souboru projektu:
 
-- Sestavení výchozího sestavení.
+- Vytváření výchozí sestavení.
 
-- Nastavení názvu aplikace v příkazovém řádku.
+- Nastavení názvu aplikace na příkazovém řádku.
 
-- Odstranění aplikace před sestavením jiné aplikace.
+- Odstranění aplikace před spuštěním jiné aplikace.
 
-- Odstranění aplikace bez sestavování jiné aplikace.
+- Odstranění aplikace bez vytváření jiné aplikace.
 
 ### <a name="to-test-the-build-targets"></a>Testování cílů sestavení
 
-1. Na příkazovém řádku zadejte **MSBuild HelloWorld. csproj-p:AssemblyName = Greetings**.
+1. Na příkazovém řádku zadejte **příkaz msbuild helloworld.csproj -p:AssemblyName=Greetings**.
 
-     Vzhledem k tomu, že jste nepoužili přepínač **-t** k explicitnímu nastavení cíle, nástroj MSBuild spustí výchozí cíl sestavení. Přepínač **-p** přepíše vlastnost `AssemblyName` a získá novou hodnotu `Greetings`. Tím dojde k vytvoření nové aplikace, *Greetings. exe*ve složce *\Bin\\* .
+     Vzhledem k tomu, že jste přepínač **-t** k explicitnímu nastavení cíle nepoužili, msbuild spustí výchozí cíl sestavení. Přepínač **-p** přepíše `AssemblyName` vlastnost a dá jí `Greetings`novou hodnotu . To způsobí, že nová aplikace *Greetings.exe*bude vytvořena ve složce *\Bin.\\ *
 
-2. Chcete-li ověřit, zda složka *\bin\\* obsahuje aplikaci *aplikaci MSBuildSample* i novou aplikaci *Greetings* , zadejte příkaz **dir bin**.
+2. Chcete-li ověřit, zda složka *\\ \Bin* obsahuje aplikaci *MSBuildSample* i novou *aplikaci Pozdravy,* zadejte **dir Bin**.
 
-3. Otestujte aplikaci Greetings zadáním **Bin\Greetings**.
+3. Otestujte aplikaci Pozdravy zadáním **přihrádky\Pozdravy**.
 
-     **Hello, World!** měla by se zobrazit zpráva.
+     **Ahoj, světe!** zpráva by měla být zobrazena.
 
-4. Odstraňte aplikaci aplikaci MSBuildSample zadáním **MSBuild Hello. csproj-t:Clean**.
+4. Odstraňte aplikaci MSBuildSample zadáním **příkazu msbuild helloworld.csproj -t:clean**.
 
-     Tím se spustí úloha vyčistit pro odebrání aplikace, která má výchozí hodnotu vlastnosti `AssemblyName` `MSBuildSample`.
+     Tím spustí tečovou úlohu odebrání `AssemblyName` aplikace, `MSBuildSample`která má výchozí hodnotu vlastnosti .
 
-5. Odstraňte aplikaci Greetings zadáním **MSBuild Hello. csproj-t:Clean-p:AssemblyName = Greetings**.
+5. Odstraňte aplikaci Pozdravy zadáním **příkazu msbuild helloworld.csproj -t:clean -p:AssemblyName=Greetings**.
 
-     Tím se spustí úloha vyčistit pro odebrání aplikace, která má zadanou hodnotu vlastnosti **AssemblyName** , `Greetings`.
+     Tím spustí tečovou úlohu odebrání aplikace, která `Greetings`má danou hodnotu **vlastnosti AssemblyName** .
 
-6. Chcete-li ověřit, zda je složka *\bin\\* nyní prázdná, zadejte příkaz **dir bin**.
+6. Chcete-li ověřit, zda je složka *\\ \Bin* nyní prázdná, zadejte **dir Bin**.
 
-7. Zadejte **MSBuild**.
+7. Zadejte **msbuild**.
 
-     I když není zadán soubor projektu, MSBuild sestaví soubor *HelloWorld. csproj* , protože aktuální složka obsahuje pouze jeden soubor projektu. To způsobí, že se aplikace *aplikaci MSBuildSample* vytvoří ve složce *\Bin\\* .
+     Přestože soubor projektu není zadán, MSBuild vytvoří soubor *helloworld.csproj,* protože v aktuální složce je pouze jeden soubor projektu. To způsobí, že aplikace *MSBuildSample* bude vytvořena ve složce *\Bin.\\ *
 
-     Chcete-li ověřit, zda složka *\bin\\* obsahuje aplikaci *aplikaci MSBuildSample* , zadejte příkaz **dir bin**.
+     Chcete-li ověřit, zda složka *\\ \Bin* obsahuje aplikaci *MSBuildSample,* zadejte **dir Bin**.
 
-## <a name="build-incrementally"></a>Přírůstkové sestavování
+## <a name="build-incrementally"></a>Sestavení postupně
 
- Nástroj MSBuild můžete sdělit, aby vytvořil cíl pouze v případě, že se změnily zdrojové soubory nebo cílové soubory, na kterých je cíl závislý. Nástroj MSBuild používá časové razítko souboru k určení, zda došlo ke změně.
+ MSBuild můžete říct, aby vytvořil cíl pouze v případě, že se změnily zdrojové soubory nebo cílové soubory, na kterých cíl závisí. MSBuild používá časové razítko souboru k určení, zda byl změněn.
 
-### <a name="to-build-incrementally"></a>Přírůstkové sestavení
+### <a name="to-build-incrementally"></a>Chcete-li vytvořit postupně
 
-1. V souboru projektu přidejte tyto atributy do úvodního cíle sestavení:
+1. V souboru projektu přidejte tyto atributy do počátečního cíle sestavení:
 
     ```xml
     Inputs="@(Compile)" Outputs="$(OutputPath)$(AssemblyName).exe"
     ```
 
-     To určuje, že cíl sestavení závisí na vstupních souborech, které jsou zadány ve skupině položek `Compile` a zda je výstupním cílem soubor aplikace.
+     To určuje, že cíl sestavení závisí na vstupních `Compile` souborech, které jsou zadány ve skupině položek, a že výstupní cíl je soubor aplikace.
 
-     Výsledný cíl sestavení by měl vypadat podobně jako následující kód:
+     Výsledný cíl sestavení by se měl podobat následujícímu kódu:
 
     ```xml
     <Target Name="Build" Inputs="@(Compile)" Outputs="$(OutputPath)$(AssemblyName).exe">
@@ -382,27 +382,27 @@ Soubor projektu by měl nyní vypadat podobně jako následující kód:
     </Target>
     ```
 
-2. Otestujte cíl sestavení zadáním **MSBuild-v:d** do příkazového řádku.
+2. Otestujte cíl sestavení zadáním **příkazu msbuild -v:d** na příkazovém řádku.
 
-     Nezapomeňte, že *HelloWorld. csproj* je výchozí soubor projektu a toto sestavení je výchozí cíl.
+     Nezapomeňte, že *helloworld.csproj* je výchozí soubor projektu a že sestavení je výchozí cíl.
 
      Přepínač **-v:d** určuje podrobný popis procesu sestavení.
 
      Tyto řádky by měly být zobrazeny:
 
-     **Vynechává se cíl "Build", protože všechny výstupní soubory jsou aktuální s ohledem na vstupní soubory.**
+     **Přeskočení cíl "Build", protože všechny výstupní soubory jsou aktuální s ohledem na vstupní soubory.**
 
      **Vstupní soubory: HelloWorld.cs**
 
-     **Výstupní soubory: BinMSBuildSample. exe**
+     **Výstupní soubory: BinMSBuildSample.exe**
 
      MSBuild přeskočí cíl sestavení, protože žádný ze zdrojových souborů se od posledního sestavení aplikace nezměnil.
 
-## <a name="c-example"></a>C#případě
+## <a name="c-example"></a>Příklad jazyka C#
 
-Následující příklad ukazuje soubor projektu, který zkompiluje C# aplikaci a zaznamená zprávu, která obsahuje název výstupního souboru.
+Následující příklad ukazuje soubor projektu, který zkompiluje aplikaci Jazyka C# a zaznamená zprávu, která obsahuje název výstupního souboru.
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```xml
 <Project DefaultTargets = "Compile"
@@ -435,11 +435,11 @@ Následující příklad ukazuje soubor projektu, který zkompiluje C# aplikaci 
 </Project>
 ```
 
-## <a name="visual-basic-example"></a>Příklad Visual Basic
+## <a name="visual-basic-example"></a>Příklad jazyka Visual Basic
 
-Následující příklad ukazuje soubor projektu, který zkompiluje Visual Basic aplikace a zaznamená zprávu, která obsahuje název výstupního souboru.
+Následující příklad ukazuje soubor projektu, který zkompiluje aplikaci jazyka Visual Basic a zaznamená zprávu obsahující název výstupního souboru.
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```xml
 <Project DefaultTargets = "Compile"
@@ -474,9 +474,9 @@ Následující příklad ukazuje soubor projektu, který zkompiluje Visual Basic
 
 ## <a name="whats-next"></a>Co dále?
 
- Visual Studio může automaticky provádět spoustu práce, která je uvedená v tomto návodu. Informace o tom, jak používat Visual Studio k vytváření, úpravám, sestavování a testování souborů projektu MSBuild, najdete v tématu [Návod: použití nástroje MSBuild](../msbuild/walkthrough-using-msbuild.md).
+ Visual Studio může automaticky provést většinu práce, která je zobrazena v tomto návodu. Informace o tom, jak pomocí sady Visual Studio vytvářet, upravovat, vytvářet a testovat soubory projektu MSBuild, naleznete [v tématu Návod: Použití msbuildu](../msbuild/walkthrough-using-msbuild.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Přehled nástroje MSBuild](../msbuild/msbuild.md)
-- [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
+- [MSBuild – přehled](../msbuild/msbuild.md)
+- [Odkaz na sestavení msbuild](../msbuild/msbuild-reference.md)

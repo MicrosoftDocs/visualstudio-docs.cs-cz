@@ -1,5 +1,5 @@
 ---
-title: Propojit úkol | Microsoft Docs
+title: Úkol propojení | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -31,431 +31,431 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 01105e3fd4c86d57077df7804e66592e32ebae07
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78865346"
 ---
 # <a name="link-task"></a>odkaz – úloha
 
-Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje soubory objektů a knihoven Common Object File Format (COFF) a vytvoří spustitelný soubor ( *. exe*) nebo dynamickou knihovnu (DLL). Další informace naleznete v tématech [Možnosti linkeru](/cpp/build/reference/linker-options) a [použití nástroje MSBuild z příkazového řádku](/cpp/build/msbuild-visual-cpp) a [použití C++ sady nástrojů Microsoft z příkazového řádku](/cpp/build/building-on-the-command-line).
+Zalomí nástroj propojovací program Microsoft C++, *link.exe*. Nástroj linker propojuje soubory objektů AC (COFF) a vytváří spustitelný soubor *(EXE)* nebo knihovnu dll (Dynamic-link). Další informace naleznete v [tématech Možnosti propojovacího programu](/cpp/build/reference/linker-options) a [Použití nástroje MSBuild z příkazového řádku](/cpp/build/msbuild-visual-cpp) a Použití sady nástrojů Microsoft [C++ z příkazového řádku](/cpp/build/building-on-the-command-line).
 
 ## <a name="parameters"></a>Parametry
 
- Následující popis popisuje parametry úkolu **propojení** . Většina parametrů úlohy a několik sad parametrů odpovídá možnosti příkazového řádku.
+ Následující text popisuje parametry úkolu **Propojení.** Většina parametrů úlohy a několik sad parametrů odpovídají možnosti příkazového řádku.
 
-- **AdditionalDependencies**
+- **Další závislosti**
 
-  Parametr volitelného **řetězce []** .
+  Volitelný **parametr String[].**
 
-  Určuje seznam vstupních souborů, které mají být přidány do příkazu.
+  Určuje seznam vstupních souborů, které chcete přidat do příkazu.
 
-  Další informace najdete v tématu [připojení vstupních souborů](/cpp/build/reference/link-input-files).
+  Další informace naleznete v tématu [LINK input files](/cpp/build/reference/link-input-files).
 
-- **AdditionalLibraryDirectories**
+- **Další adresáře knihovny**
 
-  Parametr volitelného **řetězce []** .
+  Volitelný **parametr String[].**
 
-  Přepíše cestu ke knihovně prostředí. Zadejte název adresáře.
+  Přepíše cestu knihovny prostředí. Zadejte název adresáře.
 
-  Další informace najdete v tématu [/LIBPATH (Další Libpath)](/cpp/build/reference/libpath-additional-libpath).
+  Další informace naleznete v tématu [/LIBPATH (Additional Libpath)](/cpp/build/reference/libpath-additional-libpath).
 
 - **AdditionalManifestDependencies**
 
-  Parametr volitelného **řetězce []** .
+  Volitelný **parametr String[].**
 
-  Určuje atributy, které budou umístěny v sekci `dependency` souboru manifestu.
+  Určuje atributy, které budou `dependency` umístěny do části souboru manifestu.
 
-  Další informace najdete v tématu [/MANIFESTDEPENDENCY (určení závislostí manifestu)](/cpp/build/reference/manifestdependency-specify-manifest-dependencies). Viz také [konfigurační soubory vydavatele](/windows/desktop/SbsCs/publisher-configuration-files).
+  Další informace naleznete v tématu [/MANIFESTDEPENDENCY (Zadat závislosti manifestu)](/cpp/build/reference/manifestdependency-specify-manifest-dependencies). Viz také [konfigurační soubory aplikace Publisher](/windows/desktop/SbsCs/publisher-configuration-files).
 
-- **AdditionalOptions**
+- **Další možnosti**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Seznam možností linkeru, jak je uvedeno na příkazovém řádku. Například/\<možnost1 >/\<možnost2 >/\<možnost # >. Pomocí tohoto parametru lze zadat možnosti linkeru, které nejsou reprezentovány žádným jiným parametrem **Propojovací úlohy.**
+  Seznam možností propojovacího zařízení, jak je určeno na příkazovém řádku. Například /\<option1\<> /\<option2> / option#>. Tento parametr slouží k určení možností propojovacího objektu, které nejsou reprezentovány žádným jiným parametrem **úlohy propojení.**
 
   Další informace naleznete v tématu [Možnosti linkeru](/cpp/build/reference/linker-options).
 
-- **AddModuleNamesToAssembly**
+- **Přidat názvy modulůkk**
 
-  Parametr volitelného **řetězce []** .
+  Volitelný **parametr String[].**
 
-  Přidá do sestavení odkaz na modul.
+  Přidá odkaz na modul do sestavy.
 
-  Další informace naleznete v tématu [/ASSEMBLYMODULE (Přidání modulu MSIL do sestavení)](/cpp/build/reference/assemblymodule-add-a-msil-module-to-the-assembly).
+  Další informace naleznete v tématu [/ASSEMBLYMODULE (Add a MSIL modul do sestavení)](/cpp/build/reference/assemblymodule-add-a-msil-module-to-the-assembly).
 
-- **AllowIsolation**
-
-  Volitelný **logický** parametr.
-
-  Pokud `true`, způsobí, že operační systém provede vyhledání a načtení manifestu. Pokud `false`, označuje, že knihovny DLL jsou načteny, jako kdyby nebyl žádný manifest.
-
-  Další informace naleznete v tématu [/ALLOWISOLATION (Lookup Manifesting)](/cpp/build/reference/allowisolation-manifest-lookup).
-
-- **AssemblyDebug**
+- **Povolit izolaci**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, vygeneruje atribut **DebuggableAttribute** společně s trasováním informací o ladění a ZAKÁŽE optimalizace JIT. Pokud `false`, vygeneruje atribut **DebuggableAttribute** , ale zakáže sledování ladicích informací a POVOLÍ optimalizace JIT.
+  Pokud `true`, způsobí, že operační systém provést vyhledávání manifestu a zatížení. Pokud `false`, označuje, že knihovny DLL jsou načteny, jako kdyby nebyl žádný manifest.
 
-  Další informace najdete v tématu [/ASSEMBLYDEBUG (Add DebuggableAttribute)](/cpp/build/reference/assemblydebug-add-debuggableattribute).
+  Další informace naleznete [v tématu /ALLOWISOLATION (Vyhledávání manifestu).](/cpp/build/reference/allowisolation-manifest-lookup)
+
+- **Ladění sestavení**
+
+  Volitelný **logický** parametr.
+
+  Pokud `true`, vydává **Laditatribut** atribut spolu s ladění min. sledování informací a zakáže optimalizace JIT. Pokud `false`aplikace vydává atribut **Laditatribut,** ale zakáže sledování ladicích informací a povolí optimalizaci JIT.
+
+  Další informace naleznete v tématu [/ASSEMBLYDEBUG (Add DebuggableAttribute)](/cpp/build/reference/assemblydebug-add-debuggableattribute).
 
 - **AssemblyLinkResource**
 
-  Parametr volitelného **řetězce []** .
+  Volitelný **parametr String[].**
 
-  Vytvoří odkaz na prostředek .NET Framework ve výstupním souboru; zdrojový soubor není umístěný do výstupního souboru. Zadejte název prostředku.
+  Vytvoří odkaz na prostředek rozhraní .NET Framework ve výstupním souboru. soubor prostředků není umístěn do výstupního souboru. Zadejte název prostředku.
 
-  Další informace najdete v tématu [/ASSEMBLYLINKRESOURCE (odkaz na prostředek .NET Framework)](/cpp/build/reference/assemblylinkresource-link-to-dotnet-framework-resource).
+  Další informace naleznete v tématu [/ASSEMBLYLINKRESOURCE (Link to .NET Framework resource)](/cpp/build/reference/assemblylinkresource-link-to-dotnet-framework-resource).
 
 - **AttributeFileTracking**
 
-  Implicitní parametr **Boolean**
+  Implicitní **logický** parametr.
 
-  Umožňuje hlubší sledování souborů pro funkci přírůstkového propojení při zachytávání. Vždy vrátí hodnotu `true`.
+  Umožňuje hlubší sledování souborů pro zachycení přírůstkového chování propojení. Vždy vrátí hodnotu `true`.
 
-- **BaseAddress**
+- **Základní adresa**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Nastaví základní adresu pro sestavení programu nebo knihovny DLL. Zadejte `{address[,size] | @filename,key}`.
+  Nastaví základní adresu pro program nebo dll, které jsou sestaveny. Zadejte `{address[,size] | @filename,key}`.
 
-  Další informace najdete v tématu [/Base (základní adresa)](/cpp/build/reference/base-base-address).
+  Další informace naleznete v tématu [/BASE (Základní adresa)](/cpp/build/reference/base-base-address).
 
-- **BuildingInIDE**
+- **BuildinginiDE**
 
   Volitelný **logický** parametr.
 
-  Pokud je nastaveno na true, označuje, že nástroj MSBuild je vyvolán z rozhraní IDE. V opačném případě označuje, že nástroj MSBuild je vyvolán z příkazového řádku.
+  Pokud true, označuje, že MSBuild je vyvolána z ide. V opačném případě označuje, že MSBuild je vyvolána z příkazového řádku.
 
-  Tento parametr nemá ekvivalentní možnost linkeru.
+  Tento parametr nemá žádnou ekvivalentní možnost propojovacího objektu.
 
-- **CLRImageType**
+- **Typ clrimage**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Nastaví typ image modulu CLR (Common Language Runtime).
+  Nastaví typ obrázku CLR (COMMON Language runtime).
 
-  Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti linkeru.
+  Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti propojovacího propojení.
 
-  - **Výchozí** -  *\<žádné >*
+  - **Výchozí** - *žádný>\<*
 
-  - **ForceIJWImage** -  **/CLRIMAGETYPE: IJW**
+  - **ForceIJWImage** - **/CLRIMAGETYPE:IJW**
 
-  - **ForcePureILImage** -  **/CLRIMAGETYPE: Pure**
+  - **ForcePureILImage** - **/CLRIMAGETYPE:PURE**
 
-  - **ForceSafeILImage** -  **/CLRIMAGETYPE: Safe**
+  - **ForceSafeILImage** - **/CLRIMAGETYPE:SAFE**
 
-  Další informace najdete v tématu [/CLRIMAGETYPE (určení typu image CLR)](/cpp/build/reference/clrimagetype-specify-type-of-clr-image).
+  Další informace naleznete v tématu [/CLRIMAGETYPE (Zadejte typ obrázku CLR)](/cpp/build/reference/clrimagetype-specify-type-of-clr-image).
 
-- **CLRSupportLastError**
+- **ClRSupportLastError**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Zachová poslední chybový kód funkcí volaných prostřednictvím mechanismu volání nespravovaného kódu.
+  Zachová poslední kód chyby funkcí volaných prostřednictvím mechanismu P/Invoke.
 
-  Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti linkeru.
+  Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti propojovacího propojení.
 
-  - **Povoleno** -  **/CLRSupportLastError**
+  - **Povolena** - **chyba /CLRSupportLastError**
 
-  - **Disabled** -  **/CLRSupportLastError: No**
+  - **Zakázáno** - **/CLRSupportLastError:NO**
 
-  - **SystemDlls** -  **/CLRSupportLastError: SYSTEMDLL**
+  - **SystemDlls** - **/CLRSupportLastError:SYSTEMDLL**
 
-  Další informace naleznete v tématu [/CLRSUPPORTLASTERROR (zachování kódu poslední chyby pro volání PInvoke)](/cpp/build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls).
+  Další informace naleznete v tématu [/CLRSUPPORTLASTERROR (Zachovat poslední kód chyby pro volání PInvoke).](/cpp/build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls)
 
-- **CLRThreadAttribute**
+- **Atribut CLRThread**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Explicitně určuje atribut vlákna pro vstupní bod programu CLR.
+  Explicitně určuje atribut zřetězení pro vstupní bod programu CLR.
 
-  Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti linkeru.
+  Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti propojovacího propojení.
 
-  - **DefaultThreadingAttribute** -  **/CLRTHREADATTRIBUTE: žádné**
+  - **DefaultThreadingAttribute** - **/CLRTHREADATTRIBUTE:NONE**
 
-  - **MTAThreadingAttribute** -  **/CLRTHREADATTRIBUTE: MTA**
+  - **Atribut MTAThreadingAttribute** - **/CLRTHREADATTRIBUTE:MTA**
 
-  - **STAThreadingAttribute** -  **/CLRTHREADATTRIBUTE: sta**
+  - **Atribut STAThreadingAttribute** - **/CLRTHREADATTRIBUTE:STA**
 
-  Další informace najdete v tématu [/CLRTHREADATTRIBUTE (nastavení atributu vlákna modulu CLR)](/cpp/build/reference/clrthreadattribute-set-clr-thread-attribute).
+  Další informace naleznete v tématu [/CLRTHREADATTRIBUTE (Set CLR thread attribute)](/cpp/build/reference/clrthreadattribute-set-clr-thread-attribute).
 
 - **CLRUnmanagedCodeCheck**
 
   Volitelný **logický** parametr.
 
-  Určuje, zda linker bude použít **SuppressUnmanagedCodeSecurityAttribute** na volání volání volání nespravovaného kódu do nativních knihoven DLL.
+  Určuje, zda bude propojovací program používat **suppressUnmanagedCodeSecurityAttribute** pro volání P/Invoke generované propojovacím programem ze spravovaného kódu do nativních knihoven DLL.
 
-  Další informace najdete v tématu [/CLRUNMANAGEDCODECHECK (přidání SuppressUnmanagedCodeSecurityAttribute)](/cpp/build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute).
+  Další informace naleznete v tématu [/CLRUNMANAGEDCODECHECK (Add SuppressSuppressUnmanagedCodeSecurityAttribute)](/cpp/build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute).
 
-- **CreateHotPatchableImage**
+- **VytvořitObrázHotPatchableImage**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Připraví obrázek pro Hot patching.
+  Připraví obraz pro horké záplatování.
 
-  Zadejte jednu z následujících hodnot, která odpovídá možnosti linkeru.
+  Zadejte jednu z následujících hodnot, která odpovídá možnosti propojovacího propojení.
 
-  - **Povoleno** -  **/functionpadmin**
+  - **Povoleno** - **/FUNCTIONPADMIN**
 
-  - **X86Image** -  **/functionpadmin: 5**
+  - **X86Image** - **/FUNCTIONPADMIN:5**
 
-  - **X64Image** -  **/functionpadmin: 6**
+  - **X64Image** - **/FUNCTIONPADMIN:6**
 
-  - **ItaniumImage** -  **/functionpadmin: 16**
+  - **ItaniumImage** - **/FUNCTIONPADMIN:16**
 
-  Další informace najdete v tématu [/functionpadmin (Create opravitelnou za provozu image)](/cpp/build/reference/functionpadmin-create-hotpatchable-image).
+  Další informace naleznete v tématu [/FUNCTIONPADMIN (Create hotpatchable image).](/cpp/build/reference/functionpadmin-create-hotpatchable-image)
 
 - **DataExecutionPrevention**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, označuje, že spustitelný soubor byl testován tak, aby byl kompatibilní s funkcí Zabránění spuštění dat systému Windows.
+  Pokud `true`aplikace označuje, že spustitelný soubor byl testován jako kompatibilní s funkcí Zabránění spuštění dat systému Windows.
 
-  Další informace najdete v tématu [/NXCOMPAT (kompatibilní se zabráněním spuštění dat)](/cpp/build/reference/nxcompat-compatible-with-data-execution-prevention).
+  Další informace naleznete v tématu [/NXCOMPAT (Kompatibilní s zabráněním spuštění dat)](/cpp/build/reference/nxcompat-compatible-with-data-execution-prevention).
 
-- **DelayLoadDLLs**
+- **DelayLoadDL**
 
-  Parametr volitelného **řetězce []** .
+  Volitelný **parametr String[].**
 
-  Tento parametr způsobí *opožděné načtení* knihoven DLL. Zadejte název knihovny DLL pro odložené načtení.
+  Tento parametr způsobí *zpožděné načítání* knihoven DLL. Zadejte název dll zpoždění zatížení.
 
-  Další informace najdete v tématu [/DELAYLOAD (import zpožděného načtení)](/cpp/build/reference/delayload-delay-load-import).
+  Další informace naleznete v tématu [/DELAYLOAD (Delay load import)](/cpp/build/reference/delayload-delay-load-import).
 
-- **DelaySign**
+- **Delaysign**
 
   Volitelný **logický** parametr.
 
   Pokud `true`, částečně podepíše sestavení. Výchozí hodnota je `false`.
 
-  Další informace naleznete v tématu [/delaysign (částečné podepsání sestavení)](/cpp/build/reference/delaysign-partially-sign-an-assembly).
+  Další informace naleznete v tématu [/DELAYSIGN (Částečně podepsat sestavení)](/cpp/build/reference/delaysign-partially-sign-an-assembly).
 
-- **Faktorů**
+- **Ovladač**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Zadáním tohoto parametru sestavíte ovladač režimu jádra systému Windows NT.
+  Zadejte tento parametr pro vytvoření ovladače režimu jádra systému Windows NT.
 
-  Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti linkeru.
+  Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti propojovacího propojení.
 
-  - Hodnota **NotSet** -  *\<žádná >*
+  - **NotNastavit žádný** - >*\<*
 
-  - **/Driver** **ovladače** - 
+  - **Ovladač** - **/Řidič**
 
-  - **Pouze** -  **/Driver: pouze** pro
+  - **UpOnly** - **/DRIVER:UPONLY**
 
-  - **Wdm** -  **/Driver: WDM**
+  - **WDM** - **/DRIVER:WDM**
 
-  Další informace najdete v tématu [/Driver (ovladač režimu jádra Windows NT)](/cpp/build/reference/driver-windows-nt-kernel-mode-driver).
+  Další informace naleznete v tématu [/DRIVER (Windows NT kernel mode driver)](/cpp/build/reference/driver-windows-nt-kernel-mode-driver).
 
-- **EmbedManagedResourceFile**
+- **Soubor EmbedManagedResourceFile**
 
-  Parametr volitelného **řetězce []** .
+  Volitelný **parametr String[].**
 
-  Vloží soubor prostředků do sestavení. Zadejte požadovaný název souboru prostředků. Volitelně můžete zadat logický název, který se používá k načtení prostředku, a možnost **Private** , která označuje manifest sestavení, že soubor prostředků je privátní.
+  Vloží soubor prostředků do sestavení. Zadejte požadovaný název souboru prostředků. Volitelně zadejte logický název, který se používá k načtení prostředku, a možnost **PRIVATE,** která v manifestu sestavení označuje, že soubor prostředků je soukromý.
 
-  Další informace najdete v tématu [/ASSEMBLYRESOURCE (vložení spravovaného prostředku)](/cpp/build/reference/assemblyresource-embed-a-managed-resource).
+  Další informace naleznete v tématu [/ASSEMBLYRESOURCE (Vložit spravovaný prostředek)](/cpp/build/reference/assemblyresource-embed-a-managed-resource).
 
-- **EnableCOMDATFolding**
-
-  Volitelný **logický** parametr.
-
-  Pokud `true`, povolí identické skládání COMDAT.
-
-  Další informace najdete v argumentu `ICF[= iterations]` [/opt (optimalizace)](/cpp/build/reference/opt-optimizations).
-
-- **EnableUAC**
+- **Povolit skládání COMDAT**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, určuje, že informace nástroje řízení uživatelských účtů (UAC) budou vloženy do manifestu programu.
+  Pokud `true`, umožňuje identické COMDAT skládání.
 
-  Další informace naleznete v tématu [/MANIFESTUAC (vložení informací o nástroji Řízení uživatelských účtů v manifestu)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).
+  Další informace naleznete `ICF[= iterations]` v argumentu [/OPT (Optimalizace)](/cpp/build/reference/opt-optimizations).
+
+- **EnableuAC**
+
+  Volitelný **logický** parametr.
+
+  Pokud `true`aplikace určuje, že informace o řízení uživatelských účtů (UAC) jsou vloženy do manifestu programu.
+
+  Další informace naleznete [v tématu /MANIFESTUAC (Embeds UAC informace v manifestu)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).
 
 - **EntryPointSymbol**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Určuje funkci vstupního bodu jako počáteční adresu souboru *. exe* nebo knihovny DLL. Jako hodnotu parametru zadejte název funkce.
+  Určuje funkci vstupního bodu jako počáteční adresu souboru *EXE* nebo dll. Jako hodnotu parametru zadejte název funkce.
 
-  Další informace naleznete v tématu [/entry (symbol vstupního bodu)](/cpp/build/reference/entry-entry-point-symbol).
+  Další informace naleznete v tématu [/ENTRY (symbol vstupního bodu).](/cpp/build/reference/entry-entry-point-symbol)
 
-- **FixedBaseAddress**
+- **Adresa FixedBaseAddress**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, vytvoří program nebo knihovnu DLL, které se dají načíst jenom na upřednostňovanou základní adresu.
+  Pokud `true`, vytvoří program nebo dll, který lze načíst pouze na jeho preferované základní adresu.
 
-  Další informace najdete v tématu [/fixed (pevná základní adresa)](/cpp/build/reference/fixed-fixed-base-address).
+  Další informace naleznete v tématu [/FIXED (Pevná základní adresa)](/cpp/build/reference/fixed-fixed-base-address).
 
 - **ForceFileOutput**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Instruuje linker, aby vytvořil platný soubor *. exe* nebo knihovnu DLL i v případě, že se na symbol odkazuje, ale není definován, nebo je definován násobek.
+  Sděluje propojovacímu systému vytvoření platného souboru *EXE* nebo knihovny DLL, i když je symbol odkazován, ale není definován, nebo je definován.
 
   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Povoleno** -  **/Force**
+  - **Povoleno** - **/FORCE**
 
-  - **MultiplyDefinedSymbolOnly** -  **/Force: více**
+  - **MultiplyDefinedSymbolOnly** - **/FORCE:NÁSOBEK**
 
-  - **UndefinedSymbolOnly** -  **/Force: nevyřešené**
+  - **UndefinedSymbolOnly** - **/FORCE:NEVYŘEŠENO**
 
-  Další informace najdete v tématu [/Force (vynucení výstupu souboru)](/cpp/build/reference/force-force-file-output).
+  Další informace naleznete v tématu [/FORCE (Force file output).](/cpp/build/reference/force-force-file-output)
 
 - **ForceSymbolReferences**
 
-  Parametr volitelného **řetězce []** .
+  Volitelný **parametr String[].**
 
-  Tento parametr oznamuje linkeru, aby přidal zadaný symbol do tabulky symbolů.
+  Tento parametr říká propojovacímu objektu, aby do tabulky symbolů přidal zadaný symbol.
 
-  Další informace naleznete v tématu [/include (vynucení odkazů na symboly)](/cpp/build/reference/include-force-symbol-references).
+  Další informace naleznete v tématu [/INCLUDE (Force symbol reference)](/cpp/build/reference/include-force-symbol-references).
 
-- **FunctionOrder**
+- **Příkaz funkce**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Tento parametr optimalizuje program tím, že do bitové kopie umístí zadané zabalené funkce (sekvence COMDAT) do obrazu v předdefinovaném pořadí.
+  Tento parametr optimalizuje program umístěním zadaných zabalených funkcí (COMDAts) do obrazu v předem určeném pořadí.
 
-  Další informace najdete v tématu [/Order (vložení funkcí v pořadí)](/cpp/build/reference/order-put-functions-in-order).
+  Další informace naleznete v tématu [/ORDER (Dát funkce v pořadí)](/cpp/build/reference/order-put-functions-in-order).
 
 - **GenerateDebugInformation**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, vytvoří informace o ladění pro soubor *. exe* nebo knihovnu DLL.
+  Pokud `true`aplikace vytvoří informace o ladění pro soubor *EXE* nebo dll.
 
-  Další informace najdete v tématu [/Debug (generování informací o ladění)](/cpp/build/reference/debug-generate-debug-info).
+  Další informace naleznete v tématu [/DEBUG (Generate debug info)](/cpp/build/reference/debug-generate-debug-info).
 
-- **GenerateManifest**
-
-  Volitelný **logický** parametr.
-
-  Pokud `true`, vytvoří soubor souběžného manifestu.
-
-  Další informace naleznete v tématu [/manifest (Vytvoření manifestu souběžného sestavení)](/cpp/build/reference/manifest-create-side-by-side-assembly-manifest).
-
-- **GenerateMapFile**
+- **Generovat manifest**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, vytvoří *soubor mapy*. Přípona názvu souboru souboru mapy je *. map*.
+  Pokud `true`vytvoří soubor manifestu vedle sebe.
 
-  Další informace najdete v tématu [/map (Generate souboru mapování)](/cpp/build/reference/map-generate-mapfile).
+  Další informace naleznete v tématu [/MANIFEST (Vytvoření manifestu sestavení vedle sebe).](/cpp/build/reference/manifest-create-side-by-side-assembly-manifest)
+
+- **Soubor GenerateMapFile**
+
+  Volitelný **logický** parametr.
+
+  Pokud `true`vytvoří *soubor mapy*. Přípona názvu souboru mapy je *.map*.
+
+  Další informace naleznete v tématu [/MAP (Generate mapfile)](/cpp/build/reference/map-generate-mapfile).
 
 - **HeapCommitSize**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Určuje velikost fyzické paměti v haldě, která se má přidělit v čase.
+  Určuje množství fyzické paměti na haldě, kterou chcete přidělit najednou.
 
-  Další informace najdete v argumentu `commit` v [/Heap (nastavení velikosti haldy)](/cpp/build/reference/heap-set-heap-size). Další informace najdete také v parametru **HeapReserveSize** .
+  Další informace naleznete `commit` v argumentu [/HEAP (Set haldy velikost)](/cpp/build/reference/heap-set-heap-size). Také naleznete **HeapReserveSize** parametr.
 
 - **HeapReserveSize**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
   Určuje celkové přidělení haldy ve virtuální paměti.
 
-  Další informace najdete v argumentu `reserve` v [/Heap (nastavení velikosti haldy)](/cpp/build/reference/heap-set-heap-size). Viz také parametr **HeapCommitSize** v této tabulce.
+  Další informace naleznete `reserve` v argumentu [/HEAP (Set haldy velikost)](/cpp/build/reference/heap-set-heap-size). Viz také parametr **HeapCommitSize** v této tabulce.
 
-- **IgnoreAllDefaultLibraries**
-
-  Volitelný **logický** parametr.
-
-  Pokud `true`, přikáže linkeru, aby odebral jednu nebo více výchozích knihoven ze seznamu knihoven, které vyhledává, když přeloží externí odkazy.
-
-  Další informace najdete v tématu [/NODEFAULTLIB (ignorování knihoven)](/cpp/build/reference/nodefaultlib-ignore-libraries).
-
-- **IgnoreEmbeddedIDL**
+- **Ignorovatvšechny výchozí knihovny**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, určuje, že žádné atributy IDL ve zdrojovém kódu by neměly být zpracovány do souboru *. idl* .
+  Pokud `true`aplikace napojovací systém sděluje propojovacímu systému odebrání jedné nebo více výchozích knihoven ze seznamu knihoven, které hledá při řešení externích odkazů.
 
-  Další informace naleznete v tématu [/IGNOREIDL (Nezpracovávat atributy do MIDL)](/cpp/build/reference/ignoreidl-don-t-process-attributes-into-midl).
+  Další informace naleznete v tématu [/NODEFAULTLIB (Ignorovat knihovny).](/cpp/build/reference/nodefaultlib-ignore-libraries)
+
+- **IgnorovatEmbeddedIDL**
+
+  Volitelný **logický** parametr.
+
+  Pokud `true`aplikace , určuje, že žádné atributy IDL ve zdrojovém kódu by neměly být zpracovány do souboru *.idl.*
+
+  Další informace naleznete v tématu [/IGNOREIDL (Nezpracovávat atributy do MIDL).](/cpp/build/reference/ignoreidl-don-t-process-attributes-into-midl)
 
 - **IgnoreImportLibrary**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, určuje, že knihovna importu vygenerovaná touto konfigurací by neměla být importována do závislých projektů.
+  Pokud `true`aplikace určuje, že knihovna importu vygenerovaná touto konfigurací by neměla být importována do závislých projektů.
 
-  Tento parametr neodpovídá Možnosti linkeru.
+  Tento parametr neodpovídá možnosti propojovacího objektu.
 
-- **IgnoreSpecificDefaultLibraries**
+- **IgnoreSpecificDefaultKnihovny**
 
-  Parametr volitelného **řetězce []** .
+  Volitelný **parametr String[].**
 
-  Určuje jeden nebo více názvů výchozích knihoven, které se mají ignorovat. Více knihoven oddělte středníkem.
+  Určuje jeden nebo více názvů výchozích knihoven, které chcete ignorovat. Oddělte více knihoven pomocí středníků.
 
-  Další informace najdete v tématu [/NODEFAULTLIB (ignorování knihoven)](/cpp/build/reference/nodefaultlib-ignore-libraries).
+  Další informace naleznete v tématu [/NODEFAULTLIB (Ignorovat knihovny).](/cpp/build/reference/nodefaultlib-ignore-libraries)
 
 - **ImageHasSafeExceptionHandlers**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, linker vytvoří obrázek pouze v případě, že může také vytvořit tabulku bezpečných obslužných rutin výjimek pro image.
+  Pokud `true`propojovací aplikace vytvoří bitovou kopii pouze v případě, že může také vytvořit tabulku s obslužnými rutinami bezpečných výjimek bitové kopie.
 
-  Další informace naleznete v tématu [/SAFESEH (Image má bezpečné obslužné rutiny výjimek)](/cpp/build/reference/safeseh-image-has-safe-exception-handlers).
+  Další informace naleznete v tématu [/SAFESEH (Image has safe exception handlers)](/cpp/build/reference/safeseh-image-has-safe-exception-handlers).
 
-- **ImportLibrary**
+- **Importovat knihovnu**
 
-  Uživatelem zadaný název knihovny importu, který nahradí výchozí název knihovny.
+  Uživatelem určený název knihovny importu, který nahrazuje výchozí název knihovny.
 
-  Další informace najdete v tématu [/IMPLIB (pojmenování knihovny importu)](/cpp/build/reference/implib-name-import-library).
+  Další informace naleznete v tématu [/IMPLIB (Knihovna importu názvů).](/cpp/build/reference/implib-name-import-library)
 
-- **KeyContainer**
+- **Keycontainer**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
   Kontejner, který obsahuje klíč pro podepsané sestavení.
 
-  Další informace naleznete v tématu [/keycontainer (určení kontejneru klíčů pro podepsání sestavení)](/cpp/build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly). Podívejte se také na parametr **keyfile** v této tabulce.
+  Další informace naleznete v tématu [/KEYCONTAINER (Zadejte kontejner klíčů k podepsání sestavení).](/cpp/build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly) Viz také **keyfile** parametr v této tabulce.
 
-- **KeyFile**
+- **Keyfile**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
   Určuje soubor, který obsahuje klíč pro podepsané sestavení.
 
-  Další informace naleznete v tématu [/keyfile (určení klíče nebo páru klíčů pro podepsání sestavení)](/cpp/build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly). Podívejte se také na parametr **obsahuje** .
+  Další informace naleznete v tématu [/KEYFILE (Zadejte klíč nebo dvojici klíčů k podepsání sestavení).](/cpp/build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly) Viz také **KeyContainer** parametr.
 
 - **LargeAddressAware**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, aplikace může zpracovávat adresy větší než 2 gigabajty.
+  Pokud `true`aplikace dokáže zpracovat adresy větší než 2 gigabajty.
 
-  Další informace najdete v tématu [/LARGEADDRESSAWARE (zpracování velkých adres)](/cpp/build/reference/largeaddressaware-handle-large-addresses).
+  Další informace naleznete v tématu [/LARGEADDRESSAWARE (Zpracování velkých adres).](/cpp/build/reference/largeaddressaware-handle-large-addresses)
 
 - **LinkDLL**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, aplikace vytvoří knihovnu DLL jako hlavní výstupní soubor.
+  Pokud `true`vytvoří dll jako hlavní výstupní soubor.
 
-  Další informace naleznete v tématu [/DLL (sestavení knihovny DLL)](/cpp/build/reference/dll-build-a-dll).
+  Další informace naleznete [v tématu /DLL (Build a DLL)](/cpp/build/reference/dll-build-a-dll).
 
 - **LinkErrorReporting**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Umožňuje poskytnout informace o vnitřní chybě kompilátoru (ICE) přímo společnosti Microsoft.
+  Umožňuje poskytovat informace o interní chybě kompilátoru (ICE) přímo společnosti Microsoft.
 
   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **NoErrorReport** -  **/errorreport: none**
+  - **NoErrorReport** - **/ERRORREPORT:NONE**
 
-  - **Vyzvat okamžitě** -  **/errorreport: prompt**
+  - **PromptImmediately** - **/ERRORREPORT:VÝZVA**
 
-  - **QueueForNextLogin** -  **/errorreport: Queue**
+  - **QueueForNextLogin** - **/ERRORREPORT:FRONTA**
 
-  - **SendErrorReport** -  **/errorreport: Send**
+  - **SendErrorReport** - **/ERRORREPORT:ODESLAT**
 
-  Další informace najdete v tématu [/errorreport (hlášení chyb interního linkeru)](/cpp/build/reference/errorreport-report-internal-linker-errors).
+  Další informace naleznete v tématu [/ERRORREPORT (Nahlásit interní chyby propojovacího systému).](/cpp/build/reference/errorreport-report-internal-linker-errors)
 
 - **LinkIncremental**
 
@@ -463,125 +463,125 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   Pokud `true`, umožňuje přírůstkové propojení.
 
-  Další informace najdete v tématu [/incremental (propojování přírůstkově)](/cpp/build/reference/incremental-link-incrementally).
+  Další informace naleznete v tématu [/INCREMENTAL (Link incrementally).](/cpp/build/reference/incremental-link-incrementally)
 
-- **LinkLibraryDependencies**
-
-  Volitelný **logický** parametr.
-
-  Pokud `true`, určuje, že výstupy knihoven ze závislostí projektu jsou automaticky propojeny v.
-
-  Tento parametr neodpovídá Možnosti linkeru.
-
-- **LinkStatus**
+- **Závislostí knihovny propojení**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, určuje, že linker má zobrazit indikátor průběhu, který ukazuje, jaké procento odkazu je dokončeno.
+  Pokud `true`aplikace určuje, že výstupy knihovny ze závislostí projektu jsou automaticky propojeny.
 
-  Další informace naleznete v argumentu `STATUS` [/LTCG (generování kódu při propojování)](/cpp/build/reference/ltcg-link-time-code-generation).
+  Tento parametr neodpovídá možnosti propojovacího objektu.
 
-- **LinkTimeCodeGeneration**
+- **Stav odkazu**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **logický** parametr.
 
-  Určuje možnosti optimalizace na základě profilu.
+  Pokud `true`, určuje, že propojovací program je zobrazit indikátor průběhu, který ukazuje, jaké procento propojení je dokončeno.
+
+  Další informace naleznete `STATUS` v argumentu [/LTCG (Generování kódu v době propojení).](/cpp/build/reference/ltcg-link-time-code-generation)
+
+- **Generování kódu LinkTime**
+
+  Volitelný **parametr String.**
+
+  Určuje možnosti optimalizace s asistencí profilu.
 
   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Výchozí** -  *\<žádné >*
+  - **Výchozí** - *žádný>\<*
 
-  - **UseLinkTimeCodeGeneration** -  **/LTCG**
+  - **UseLinkTimeCodeGeneration** - **/LTCG**
 
-  - **PGInstrument** -  **/LTCG: PGInstrument**
+  - **PGInstrument** - **/LTCG:PGInstrument**
 
-  - **PGOptimization** -  **/LTCG: PGOptimize**
+  - **PGOptimization** - **/LTCG:PGOptimize**
 
-  - **PGUpdate**
+  - **PgUpdate**
 
-    \- **/LTCG: PGUpdate**
+    \-**/LTCG:PGUpdate**
 
-  Další informace naleznete v tématu [/LTCG (generování kódu při propojování)](/cpp/build/reference/ltcg-link-time-code-generation).
+  Další informace naleznete v tématu [/LTCG (Generování kódu v době propojení).](/cpp/build/reference/ltcg-link-time-code-generation)
 
-- **ManifestFile**
+- **Soubor manifestu**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
   Změní výchozí název souboru manifestu na zadaný název souboru.
 
-  Další informace naleznete v tématu [/MANIFESTFILE (název souboru manifestu)](/cpp/build/reference/manifestfile-name-manifest-file).
+  Další informace naleznete v tématu [/MANIFESTFILE (Název manifestu souboru)](/cpp/build/reference/manifestfile-name-manifest-file).
 
-- **MapExports**
+- **MapVývoz**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, instruuje linker, aby zahrnoval exportované funkce v souboru mapy.
+  Pokud `true`aplikace napomene, aby do souboru mapy zahrnul exportované funkce.
 
-  Další informace najdete v argumentu `EXPORTS` [/MapInfo (zahrnutí informací v souboru mapování)](/cpp/build/reference/mapinfo-include-information-in-mapfile).
+  Další informace naleznete `EXPORTS` v argumentu [/MAPINFO (Zahrnout informace do souboru mapy).](/cpp/build/reference/mapinfo-include-information-in-mapfile)
 
-- **MapFileName**
+- **Název mapového souboru**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Změní výchozí název souboru mapy na zadaný název souboru.
+  Změní výchozí název mapového souboru na zadaný název souboru.
 
-- **MergedIDLBaseFileName**
+- **MergediDLBaseNázevsouboru**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Určuje název souboru a příponu názvu souboru *. idl* .
+  Určuje název souboru a příponu názvu souboru *IDL.*
 
-  Další informace naleznete v tématu [/IDLOUT (pojmenování výstupních souborů MIDL)](/cpp/build/reference/idlout-name-midl-output-files).
+  Další informace naleznete v tématu [/IDLOUT (Název výstupních souborů MIDL).](/cpp/build/reference/idlout-name-midl-output-files)
 
-- **MergeSections**
+- **Sloučit oddíly**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Kombinuje oddíly v obrázku. Zadejte `from-section=to-section`.
+  Kombinuje oddíly v obraze. Zadejte `from-section=to-section`.
 
-  Další informace naleznete v tématu [/merge (kombinování oddílů)](/cpp/build/reference/merge-combine-sections).
+  Další informace naleznete v tématu [/MERGE (Kombinovat oddíly)](/cpp/build/reference/merge-combine-sections).
 
-- **MidlCommandFile**
+- **Soubor MidlCommandFile**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Zadejte název souboru, který obsahuje možnosti příkazového řádku MIDL.
+  Zadejte název souboru, který obsahuje volby příkazového řádku MIDL.
 
-  Další informace naleznete v tématu [/MIDL (určení možností příkazového řádku MIDL)](/cpp/build/reference/midl-specify-midl-command-line-options).
+  Další informace naleznete v tématu [/MIDL (Zadejte volby příkazového řádku MIDL).](/cpp/build/reference/midl-specify-midl-command-line-options)
 
-- **Určovat minimumRequiredVersion**
+- **Minimální požadovaná verze**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Určuje minimální požadovanou verzi subsystému. Argumenty jsou desítková čísla v rozsahu 0 až 65535.
+  Určuje minimální požadovanou verzi subsystému. Argumenty jsou desetinná čísla v rozsahu 0 až 65535.
 
 - **ModuleDefinitionFile**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Určuje název [souboru definice modulu](/cpp/build/reference/module-definition-dot-def-files).
+  Určuje název [definičního souboru modulu](/cpp/build/reference/module-definition-dot-def-files).
 
-  Další informace najdete v tématu [/def (určení souboru definice modulu)](/cpp/build/reference/def-specify-module-definition-file).
+  Další informace naleznete v tématu [/DEF (Specify module-definition file).](/cpp/build/reference/def-specify-module-definition-file)
 
-- **MSDOSStubFileName**
+- **Název souboru MSDOSStubFileName**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Připojí zadaný program pro zástupné procedury systému MS-DOS k programu Win32.
+  Připojí zadaný program se zakázaným inzerováním ms-DOS k programu Win32.
 
-  Další informace najdete v tématu [/stub (název souboru zástupného kódu MS-DOS)](/cpp/build/reference/stub-ms-dos-stub-file-name).
+  Další informace naleznete v tématu [/STUB (název souboru se zakázaným inzerováním systému MS-DOS).](/cpp/build/reference/stub-ms-dos-stub-file-name)
 
-- **Parametr-EntryPoint**
+- **NoEntryPoint**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, určuje knihovnu DLL pouze pro prostředky.
+  Pokud `true`určuje dll pouze pro prostředky.
 
-  Další informace najdete v tématu [/NOENTRY (bez vstupního bodu)](/cpp/build/reference/noentry-no-entry-point).
+  Další informace naleznete v tématu [/NOENTRY (Žádný vstupní bod)](/cpp/build/reference/noentry-no-entry-point).
 
-- **ObjectFiles**
+- **Objektové soubory**
 
-  Parametr implicitního **řetězce []** .
+  Implicitní **parametr String[].**
 
   Určuje soubory objektů, které jsou propojeny.
 
@@ -589,341 +589,341 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, eliminuje funkce nebo data, která nejsou nikdy odkazována.
+  Pokud `true`, eliminuje funkce a/nebo data, která nejsou nikdy odkazována.
 
-  Další informace najdete v argumentu `REF` v [/opt (optimalizace)](/cpp/build/reference/opt-optimizations).
+  Další informace naleznete `REF` v argumentu [/OPT (Optimalizace)](/cpp/build/reference/opt-optimizations).
 
-- **OutputFile**
+- **Výstupní soubor**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Přepíše výchozí název a umístění programu, který vytvoří linker.
+  Přepíše výchozí název a umístění programu, který propojovací program vytvoří.
 
-  Další informace naleznete v tématu [/out (název výstupního souboru)](/cpp/build/reference/out-output-file-name).
+  Další informace naleznete v tématu [/OUT (Název výstupního souboru).](/cpp/build/reference/out-output-file-name)
 
 - **PerUserRedirection**
 
   Volitelný **logický** parametr.
 
-  Pokud je povolený výstup `true` a registru, vynutí **HKEY_CLASSES_ROOT** přesměrování zápisy registru do **HKEY_CURRENT_USER**.
+  Pokud `true` je povolena funkce Registrovat výstup, vynutí, **aby** HKEY_CLASSES_ROOT zápisy registru byly přesměrovány na **HKEY_CURRENT_USER**.
 
-- **PreprocessOutput**
+- **Předprocesvýstup**
 
-  Volitelný parametr `ITaskItem[]`.
+  Volitelný `ITaskItem[]` parametr.
 
-  Definuje pole výstupních položek preprocesoru, které mohou být spotřebovány a generovány úlohami.
+  Definuje pole výstupních položek preprocesoru, které mohou být spotřebovány a vydávány úkoly.
 
 - **PreventDllBinding**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, označuje, že se má *svázat. exe* , že by se neměla svázat propojený obrázek.
+  Pokud `true`, označuje *Bind.exe,* že propojený obrázek by neměl být vázán.
 
-  Další informace naleznete v tématu [/ALLOWBIND (zabránění vazbě knihoven DLL)](/cpp/build/reference/allowbind-prevent-dll-binding).
+  Další informace naleznete v tématu [/ALLOWBIND (Prevent DLL binding).](/cpp/build/reference/allowbind-prevent-dll-binding)
 
 - **Profil**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, vytvoří výstupní soubor, který se dá použít s profilerem **Performance Tools** .
+  Pokud `true`vytvoří výstupní soubor, který lze použít s profilerem **Nástroje výkonu.**
 
-  Další informace najdete v tématu [/Profile (Performance Tools profiler)](/cpp/build/reference/profile-performance-tools-profiler).
+  Další informace naleznete v tématu [/PROFILE (Performance Tools profiler)](/cpp/build/reference/profile-performance-tools-profiler).
 
-- **ProfileGuidedDatabase**
+- **ProfileGuidedDatabáze**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Určuje název souboru *. pgd* , který se použije k uložení informací o spuštěném programu.
+  Určuje název souboru *PGD,* který bude použit k uložení informací o spuštěném programu.
 
-  Další informace najdete v tématu [/PGD (určení databáze pro optimalizace na základě profilu)](/cpp/build/reference/pgd-specify-database-for-profile-guided-optimizations).
+  Další informace naleznete v tématu [/PGD (Zadat databázi pro optimalizace s asistencí profilu)](/cpp/build/reference/pgd-specify-database-for-profile-guided-optimizations).
 
 - **ProgramDatabaseFile**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Určuje název pro databázi programu (PDB), kterou linker vytvoří.
+  Určuje název databáze programu (PDB), který vytvoří propojovací program.
 
-  Další informace najdete v tématu [/PDB (použití databáze programu)](/cpp/build/reference/pdb-use-program-database).
+  Další informace naleznete v tématu [/PDB (Use program database)](/cpp/build/reference/pdb-use-program-database).
 
-- **RandomizedBaseAddress**
+- **Randomizovanázákladní adresa**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, nástroj vygeneruje spustitelnou bitovou kopii, která se dá náhodně využít při načítání, pomocí funkce ASLR ( *Address Space Layout layout* ) systému Windows.
+  Pokud `true`aplikace vygeneruje spustitelný obrázek, který lze náhodně přepojit v době načítání pomocí funkce *aslr (randomization) rozložení adresního prostoru* (ASLR).
 
-  Další informace najdete v tématu [/DYNAMICBASE (použití náhodnosti rozložení adresního prostoru)](/cpp/build/reference/dynamicbase-use-address-space-layout-randomization).
+  Další informace naleznete v tématu [/DYNAMICBASE (Použití randomizace rozložení adresního prostoru).](/cpp/build/reference/dynamicbase-use-address-space-layout-randomization)
 
 - **RegisterOutput**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, zaregistruje primární výstup tohoto sestavení.
+  Pokud `true`, registruje primární výstup tohoto sestavení.
 
-- **Zarovnání oddílu**
+- **SectionAlignment**
 
-  Volitelný **celočíselný** parametr
+  Volitelný **čtyřčíselné** číslo.
 
-  Určuje zarovnání jednotlivých oddílů v rámci lineárního adresního prostoru programu. Hodnota parametru je jednotkový počet bajtů a je mocninou dvou.
+  Určuje zarovnání jednotlivých oddílů v rámci lineárního adresního prostoru programu. Hodnota parametru je počet bajtů jednotky a je mocninu dvou.
 
-  Další informace najdete v tématu [/align (zarovnání oddílů)](/cpp/build/reference/align-section-alignment).
+  Další informace naleznete v tématu [/ALIGN (zarovnání řezu).](/cpp/build/reference/align-section-alignment)
 
-- **SetChecksum –**
+- **SetChecksum**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, nastaví kontrolní součet v hlavičce souboru *. exe* .
+  Pokud `true`nastaví kontrolní součet v záhlaví souboru *EXE.*
 
-  Další informace naleznete v tématu [/release (Nastavení kontrolního součtu)](/cpp/build/reference/release-set-the-checksum).
+  Další informace naleznete v tématu [/RELEASE (Set the checksum).](/cpp/build/reference/release-set-the-checksum)
 
-- **ShowProgress**
+- **Zobrazit průběh**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Určuje podrobnosti o sestavách průběhu operace propojení.
+  Určuje podrobnost sestav průběhu pro operaci propojení.
 
   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - Hodnota **NotSet** -  *\<žádná >*
+  - **NotNastavit žádný** - >*\<*
 
-  - **LinkVerbose** -  **/verbose**
+  - **LinkVerbose** - **/VERBOSE**
 
-  - **LinkVerboseLib** -  **/verbose: lib**
+  - **LinkVerboseLib** - **/VERBOSE:Lib**
 
-  - **LinkVerboseICF** -  **/verbose: ICF**
+  - **LinkVerboseICF** - **/VERBOSE:ICF**
 
-  - **LinkVerboseREF** -  **/verbose: ref**
+  - **LinkVerboseREF** - **/VERBOSE:ODKAZ**
 
-  - **LinkVerboseSAFESEH** -  **/verbose: SAFESEH**
+  - **LinkVerboseSAFESEH** - **/VERBOSE:SAFESEH**
 
-  - **LinkVerboseCLR** -  **/verbose: CLR**
+  - **LinkVerboseCLR** - **/VERBOSE:CLR**
 
-  Další informace najdete v tématu [/verbose (Tisk zpráv o průběhu)](/cpp/build/reference/verbose-print-progress-messages).
+  Další informace naleznete v tématu [/VERBOSE (Tisk zpráv průběhu)](/cpp/build/reference/verbose-print-progress-messages).
 
-- **Prostředky**
+- **Zdrojů**
 
-  Vyžaduje se `ITaskItem[]` parametr.
+  Požadovaný parametr `ITaskItem[]`.
 
-  Definuje pole položek zdrojového souboru MSBuild, které mohou být spotřebovány a generovány úlohami.
+  Definuje pole položek zdrojového souboru MSBuild, které mohou být spotřebovány a vydávány úkoly.
 
-- **SpecifySectionAttributes**
+- **Zadat atributy oddílu**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Určuje atributy oddílu. Tím dojde k přepsání atributů, které byly nastaveny při kompilaci souboru *. obj* pro oddíl.
+  Určuje atributy oddílu. Tím se přepíší atributy, které byly nastaveny při kompilaci souboru *OBJ* pro oddíl.
 
-  Další informace najdete v tématu [/section (určení atributů oddílu)](/cpp/build/reference/section-specify-section-attributes).
+  Další informace naleznete v tématu [/SECTION (Zadejte atributy oddílu).](/cpp/build/reference/section-specify-section-attributes)
 
 - **StackCommitSize**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Určuje velikost fyzické paměti v každém přidělení, pokud je přidělena další paměť.
+  Určuje velikost fyzické paměti v každém přidělení při přidělení další paměti.
 
-  Další informace naleznete v argumentu `commit` [/Stack (přidělení zásobníku)](/cpp/build/reference/stack-stack-allocations).
+  Další informace naleznete `commit` v argumentu [/STACK (Stack allocations)](/cpp/build/reference/stack-stack-allocations).
 
 - **StackReserveSize**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Určuje celkovou velikost alokačního zásobníku ve virtuální paměti.
+  Určuje celkovou velikost přidělení zásobníku ve virtuální paměti.
 
-  Další informace naleznete v argumentu `reserve` [/Stack (přidělení zásobníku)](/cpp/build/reference/stack-stack-allocations).
+  Další informace naleznete `reserve` v argumentu [/STACK (Stack allocations)](/cpp/build/reference/stack-stack-allocations).
 
-- **StripPrivateSymbols**
+- **Stripsoukromé symboly**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Vytvoří druhý soubor programové databáze (PDB), který vynechá symboly, které nechcete distribuovat vašim zákazníkům. Zadejte název druhého souboru PDB.
+  Vytvoří soubor druhé programové databáze (PDB), který vynese symboly, které nechcete distribuovat zákazníkům. Zadejte název druhého souboru PDB.
 
-  Další informace naleznete v tématu [/PDBSTRIPPED (proložení privátních symbolů)](/cpp/build/reference/pdbstripped-strip-private-symbols).
+  Další informace naleznete v tématu [/PDBSTRIPPED (Strip soukromé symboly).](/cpp/build/reference/pdbstripped-strip-private-symbols)
 
-- **Provozuschopn**
+- **Subsystému**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
   Určuje prostředí pro spustitelný soubor.
 
   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - Hodnota **NotSet** -  *\<žádná >*
+  - **NotNastavit žádný** - >*\<*
 
-  - **Konzola** -  **/SUBSYSTEM: konzola**
+  - **Konzola** - **/SUBSYSTÉM:KONZOLA**
 
-  - **Windows** -  **/SUBSYSTEM: Windows**
+  - **Windows** - **/SUBSYSTÉM:WINDOWS**
 
-  - **Nativní** -  **/SUBSYSTEM: Native**
+  - **Nativní** - **/SUBSYSTEM:NATIVNÍ**
 
-  - **Aplikace rozhraní EFI** -  **/SUBSYSTEM: EFI_APPLICATION**
+  - **Aplikace EFI** - **/SUBSYSTÉM:EFI_APPLICATION**
 
-  - **Ovladač spouštěcí služby EFI** -  **/SUBSYSTEM: EFI_BOOT_SERVICE_DRIVER**
+  - **Ovladač spouštěcí služby EFI** - **/SUBSYSTEM:EFI_BOOT_SERVICE_DRIVER**
 
-  - /Subsystem **EFI ROM** -  **: EFI_ROM**
+  - **EFI ROM** - **/SUBSYSTÉM:EFI_ROM**
 
-  - **Běhové prostředí EFI** -  **/SUBSYSTEM: EFI_RUNTIME_DRIVER**
+  - **EFI Runtime** - **/SUBSYSTÉM:EFI_RUNTIME_DRIVER**
 
-  - **WindowsCE** -  **/SUBSYSTEM: WindowsCE**
+  - **WindowsCE** - **/SUBSYSTÉM:WINDOWSCE**
 
-  - **Posix** -  **/SUBSYSTEM: POSIX**
+  - **POSIX** - **/SUBSYSTÉM:POSIX**
 
-  Další informace najdete v tématu [/Subsystem (určení subsystému)](/cpp/build/reference/subsystem-specify-subsystem).
+  Další informace naleznete v tématu [/SUBSYSTEM (Specify subsystem)](/cpp/build/reference/subsystem-specify-subsystem).
 
-- **SupportNobindOfDelayLoadedDLL**
+- **SupportNobindOfDelayLoadedDLL LL**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, sdělí linkeru, aby do finální image nezahrnula tabulku importních adres (IAT) s možností vazby.
+  Pokud `true`aplikace navazující zařízení sděluje, aby do konečné bitové kopie nezahrnul tabulku adres importu (IAT) s hotelnou vazbou.
 
-  Další informace najdete v argumentu `NOBIND` [/Delay (nastavení importu zpožděného načtení)](/cpp/build/reference/delay-delay-load-import-settings).
+  Další informace naleznete `NOBIND` v argumentu [/DELAY (Nastavení importu zpoždění načítání)](/cpp/build/reference/delay-delay-load-import-settings).
 
 - **SupportUnloadOfDelayLoadedDLL**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, sdělí pomocnou funkci opožděného načtení, aby podporovala explicitní uvolnění knihovny DLL.
+  Pokud `true`, sděluje pomocné funkce zpoždění zatížení pro podporu explicitního uvolnění dll.
 
-  Další informace najdete v argumentu `UNLOAD` [/Delay (nastavení importu zpožděného načtení)](/cpp/build/reference/delay-delay-load-import-settings).
+  Další informace naleznete `UNLOAD` v argumentu [/DELAY (Nastavení importu zpoždění načítání)](/cpp/build/reference/delay-delay-load-import-settings).
 
-- **SuppressStartupBanner**
+- **PotlačitStartupBanner**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.
+  Pokud `true`aplikace zabraňuje zobrazení zprávy o autorských právech a čísle verze při spuštění úlohy.
 
-  Další informace naleznete v tématu [/nologo (potlačení úvodního nápisu při spouštění) (Linker)](/cpp/build/reference/nologo-suppress-startup-banner-linker).
+  Další informace naleznete v tématu [/NOLOGO (Suppress startup banner) (linker)](/cpp/build/reference/nologo-suppress-startup-banner-linker).
 
 - **SwapRunFromCD**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, sdělí operačnímu systému, aby nejprve zkopíroval výstup linkeru do odkládacího souboru, a pak z něj spusťte bitovou kopii.
+  Pokud `true`aplikace nařídí operačnímu systému, aby nejprve zkopíroval výstup linkeru do odkládacího souboru a potom obraz spusťte.
 
-  Další informace naleznete v argumentu `CD` [/SWAPRUN (načtení výstupu linkeru do odkládacího souboru)](/cpp/build/reference/swaprun-load-linker-output-to-swap-file). Další informace najdete také v parametru **SwapRunFromNET** .
+  Další informace naleznete `CD` v argumentu [/SWAPRUN (Load linker výstup pro odkládací soubor)](/cpp/build/reference/swaprun-load-linker-output-to-swap-file). Viz také **Parametr SwapRunFromNET.**
 
 - **SwapRunFromNET**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, sdělí operačnímu systému, aby nejprve zkopíroval výstup linkeru do odkládacího souboru, a pak z něj spusťte bitovou kopii.
+  Pokud `true`aplikace nařídí operačnímu systému, aby nejprve zkopíroval výstup linkeru do odkládacího souboru a potom obraz spusťte.
 
-  Další informace naleznete v argumentu `NET` [/SWAPRUN (načtení výstupu linkeru do odkládacího souboru)](/cpp/build/reference/swaprun-load-linker-output-to-swap-file). Viz také parametr **SwapRunFromCD** v této tabulce.
+  Další informace naleznete `NET` v argumentu [/SWAPRUN (Load linker výstup pro odkládací soubor)](/cpp/build/reference/swaprun-load-linker-output-to-swap-file). Viz také **Parametr SwapRunFromCD** v této tabulce.
 
 - **TargetMachine**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Určuje cílovou platformu pro program nebo knihovnu DLL.
+  Určuje cílovou platformu pro program nebo dll.
 
   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - Hodnota **NotSet** -  *\<žádná >*
+  - **NotNastavit žádný** - >*\<*
 
-  - **MachineARM** -  **/Machine: ARM**
+  - **MachineARM** - **/ STROJ: ARM**
 
-  - **MachineEBC** -  **/Machine: EBC**
+  - **MachineEBC** - **/STROJ:EBC**
 
-  - **MachineIA64** -  **/Machine: ia64**
+  - **MachineIA64** - **/STROJ:IA64**
 
-  - **MachineMIPS** -  **/Machine: MIPS**
+  - **MachineMIPS** - **/STROJ:MIPS**
 
-  - **MachineMIPS16** -  **/Machine: MIPS16**
+  - **MachineMIPS16** - **/STROJ:MIPS16**
 
-  - **MachineMIPSFPU** -  **/Machine: MIPSFPU**
+  - **MachineMIPSFPU** - **/STROJ:MIPSFPU**
 
-  - **MachineMIPSFPU16** -  **/Machine: MIPSFPU16**
+  - **MachineMIPSFPU16** - **/STROJ:MIPSFPU16**
 
-  - **MachineSH4** -  **/Machine: sh4**
+  - **StrojSH4** - **/STROJ:SH4**
 
-  - **MachineTHUMB** -  **/Machine: palec**
+  - **MachineTHUMB** - **/ STROJ: PALEC**
 
-  - **MachineX64** -  **/Machine: x64**
+  - **StrojX64** - **/STROJ:X64**
 
-  - **MachineX86** -  **/Machine: x86**
+  - **StrojX86** - **/STROJ:X86**
 
-  Další informace najdete v tématu [/Machine (určení cílové platformy)](/cpp/build/reference/machine-specify-target-platform).
+  Další informace naleznete v tématu [/MACHINE (Zadat cílovou platformu).](/cpp/build/reference/machine-specify-target-platform)
 
 - **TerminalServerAware**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, nastaví příznak v poli IMAGE_OPTIONAL_HEADER DllCharacteristics v volitelné hlavičce bitové kopie programu. Pokud je tento příznak nastaven, terminálový server neprovede určité změny aplikace.
+  Pokud `true`nastaví příznak v poli IMAGE_OPTIONAL_HEADER DllCharacteristics ve volitelné masce obrázku programu. Je-li tento příznak nastaven, terminálový server neprovede určité změny v aplikaci.
 
-  Další informace najdete v tématu [/TSAWARE (vytvoření aplikace pracující s terminálovým serverem)](/cpp/build/reference/tsaware-create-terminal-server-aware-application).
+  Další informace naleznete v tématu [/TSAWARE (Create Terminal Server aware application)](/cpp/build/reference/tsaware-create-terminal-server-aware-application).
 
 - **TrackerLogDirectory**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
   Určuje adresář protokolu sledování.
 
-- **TreatLinkerWarningAsErrors**
+- **Chyby Upozornění na linker**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, negeneruje žádný výstupní soubor, pokud linker vygeneruje upozornění.
+  Pokud `true`, způsobí, že žádný výstupní soubor, který má být generován, pokud propojovací systém generuje upozornění.
 
-  Další informace naleznete v tématu [/WX (zpracovávání upozornění linkeru jako chyby)](/cpp/build/reference/wx-treat-linker-warnings-as-errors).
+  Další informace naleznete v tématu [/WX (Považovat upozornění linkeru za chyby).](/cpp/build/reference/wx-treat-linker-warnings-as-errors)
 
-- **TurnOffAssemblyGeneration**
+- **TurnoffAssemblyGeneration**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, vytvoří obrázek pro aktuální výstupní soubor bez sestavení .NET Framework.
+  Pokud `true`vytvoří obraz pro aktuální výstupní soubor bez sestavení rozhraní .NET Framework.
 
-  Další informace naleznete v tématu [/NOASSEMBLY (Vytvoření modulu MSIL)](/cpp/build/reference/noassembly-create-a-msil-module).
+  Další informace naleznete v tématu [/NOASSEMBLY (Create a MSIL module)](/cpp/build/reference/noassembly-create-a-msil-module).
 
-- **SouborKnihovnyTypů**
+- **Soubor TypeLibraryFile**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Určuje název souboru a příponu názvu souboru *. tlb* . Zadejte název souboru nebo cestu a název souboru.
+  Určuje název souboru a příponu názvu souboru *TLB.* Zadejte název souboru nebo cestu a název souboru.
 
-  Další informace najdete v tématu [/TLBOUT (pojmenování souboru. tlb)](/cpp/build/reference/tlbout-name-dot-tlb-file).
+  Další informace naleznete v tématu [/TLBOUT (Název souboru TLB).](/cpp/build/reference/tlbout-name-dot-tlb-file)
 
-- **TypeLibraryResourceID**
+- **ID resourceiknihovny typeLibrary**
 
-  Volitelný **celočíselný** parametr
+  Volitelný **čtyřčíselné** číslo.
 
-  Určuje uživatelem zadanou hodnotu pro knihovnu typů vytvořenou linkerem. Zadejte hodnotu od 1 do 65535.
+  Určuje uživatelsky zadanou hodnotu pro knihovnu typů vytvořenou linkerem. Zadejte hodnotu od 1 do 65535.
 
-  Další informace najdete v tématu [/TLBID (určení ID prostředku pro knihovnu TypeLib)](/cpp/build/reference/tlbid-specify-resource-id-for-typelib).
+  Další informace naleznete v tématu [/TLBID (Zadejte ID prostředku pro TypeLib)](/cpp/build/reference/tlbid-specify-resource-id-for-typelib).
 
-- **UACExecutionLevel**
+- **Úroveň uacpopravy**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Určuje požadovanou úroveň spuštění aplikace v případě, že je spuštěna pomocí nástroje řízení uživatelských účtů.
+  Určuje požadovanou úroveň spuštění aplikace při spuštění pod pomocí řízení uživatelských účtů.
 
   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Podle volajícího** - `level='asInvoker'`
+  - **Asinvoker** - `level='asInvoker'`
 
-  - **Nejvyšší dostupná** - `level='highestAvailable'`
+  - **NejvyššíK dispozici** - `level='highestAvailable'`
 
-  - **Vyžadovat správce** - `level='requireAdministrator'`
+  - **Vyžadovatsprávce** - `level='requireAdministrator'`
 
-  Další informace naleznete v argumentu `level` [/MANIFESTUAC (vložení informací o nástroji Řízení uživatelských účtů v manifestu)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).
+  Další informace naleznete `level` v argumentu [/MANIFESTUAC (Embeds UAC informace v manifestu)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).
 
-- **UACUIAccess**
+- **Přístup UACUIAccess**
 
   Volitelný **logický** parametr.
 
-  Pokud `true`, aplikace obchází úrovně ochrany uživatelského rozhraní a vstup jednotek do oken s vyšším oprávněním na ploše. v opačném případě `false`.
+  Pokud `true`aplikace obchází úrovně ochrany uživatelského rozhraní a předává vstup do oken s vyšším oprávněním na ploše; v `false`opačném případě .
 
-  Další informace naleznete v argumentu `uiAccess` [/MANIFESTUAC (vložení informací o nástroji Řízení uživatelských účtů v manifestu)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).
+  Další informace naleznete `uiAccess` v argumentu [/MANIFESTUAC (Embeds UAC informace v manifestu)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).
 
 - **UseLibraryDependencyInputs**
 
   Volitelný **logický** parametr.
 
-  Pokud je `true`, místo samotného souboru knihovny se použijí vstupy pro nástroj Librarian, když jsou v knihovně výstupy na závislosti projektu.
+  Pokud `true`se vstupy knihovníkového nástroje používají, nikoli samotný soubor knihovny, když jsou propojeny výstupy knihovny závislostí projektu.
 
 - **Verze**
 
-  Volitelný **řetězcový** parametr.
+  Volitelný **parametr String.**
 
-  Vložte číslo verze do hlavičky souboru *. exe* nebo *. dll* . Zadejte "`major[.minor]`". Argumenty `major` a `minor` jsou desítková čísla od 0 do 65535.
+  Do záhlaví souboru *EXE* nebo *DLL* vložte číslo verze. Zadejte`major[.minor]`" ". A `major` `minor` argumenty jsou desetinná čísla od 0 do 65535.
 
-  Další informace najdete v tématu [/Version (informace o verzi)](/cpp/build/reference/version-version-information).
+  Další informace naleznete v tématu [/VERSION (Version information)](/cpp/build/reference/version-version-information).
 
 ## <a name="see-also"></a>Viz také
 

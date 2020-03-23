@@ -1,5 +1,5 @@
 ---
-title: Úloha FormatVersion – | Microsoft Docs
+title: Úloha formatversion | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,36 +14,36 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 250c73ce0395f278b72c18605f1666290670e20a
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634107"
 ---
-# <a name="formatversion-task"></a>FormatVersion – – úloha
+# <a name="formatversion-task"></a>Úloha FormatVersion
 
 Připojí číslo revize k číslu verze.
 
-- Case #1: vstup: verze =\<nedefinovaný >;  Revision =\<nemusíte >;   Výstup: OutputVersion = "1.0.0.0"
+- Případ #1: Vstup:\<Verze = nedefinovaná>;  Revize\<= nezajímá>;   Výstup: OutputVersion="1.0.0.0"
 
-- Case #2: vstup: Version = "1.0.0. *" Revision = "5" Output: OutputVersion = "1.0.0.5"
+- Případ #2: Vstup: Version="1.0.0.*" Revision="5" Výstup: OutputVersion="1.0.0.5"
 
-- Případ #3: vstup: verze = "1.0.0.0" revize =\<není důležité >;  Výstup: OutputVersion = "1.0.0.0"
+- Případ #3: Vstup: Version="1.0.0.0" Revize =\<nestarám se>;  Výstup: OutputVersion="1.0.0.0"
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry úlohy `FormatVersion`.
+ Následující tabulka popisuje parametry `FormatVersion` úkolu.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`FormatType`|Volitelný parametr `String`.<br /><br /> Určuje typ formátu.<br /><br /> -"Version" = Version.<br />-"Path" = Replace "." s "_";|
-|`OutputVersion`|Volitelný výstupní parametr `String`.<br /><br /> Určuje výstupní verzi, která obsahuje číslo revize.|
-|`Revision`|Volitelný parametr `Int32`.<br /><br /> Určuje revizi, která se má připojit k verzi.|
-|`Version`|Volitelný parametr `String`.<br /><br /> Určuje řetězec čísla verze, který má být zformátován.|
+|`FormatType`|Volitelný `String` parametr.<br /><br /> Určuje typ formátu.<br /><br /> - "Verze" = verze.<br />- "Cesta" = nahradit "." s "_";|
+|`OutputVersion`|Volitelný `String` výstupní parametr.<br /><br /> Určuje výstupní verzi, která obsahuje číslo revize.|
+|`Revision`|Volitelný `Int32` parametr.<br /><br /> Určuje revizi, která se připojí k verzi.|
+|`Version`|Volitelný `String` parametr.<br /><br /> Určuje číselné řetězce verze, které chcete formátovat.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě toho, že mají parametry, které jsou uvedeny v tabulce, tato úloha dědí parametry z třídy <xref:Microsoft.Build.Tasks.TaskExtension>, kterou sám dědí z třídy <xref:Microsoft.Build.Utilities.Task>. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
+ Kromě parametrů, které jsou uvedeny v tabulce, tato úloha <xref:Microsoft.Build.Tasks.TaskExtension> dědí parametry z <xref:Microsoft.Build.Utilities.Task> třídy, která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Viz také
 

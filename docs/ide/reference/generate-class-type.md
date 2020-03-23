@@ -1,5 +1,5 @@
 ---
-title: Generovat třídy nebo typu
+title: Generovat třídu nebo typ
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -13,82 +13,82 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 94786ef10e427a0deb4f80471305509124f1638b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595628"
 ---
-# <a name="generate-a-class-or-type-in-visual-studio"></a>Generovat třídy nebo typu v sadě Visual Studio
+# <a name="generate-a-class-or-type-in-visual-studio"></a>Generování třídy nebo typu v sadě Visual Studio
 
-Tato generace kód platí pro:
+Toto generování kódu se vztahuje na:
 
 - C#
 
 - Visual Basic
 
-**Co:** umožňuje okamžitě generování kódu pro třídu nebo typu.
+**Co:** Umožňuje okamžitě vygenerovat kód pro třídu nebo typ.
 
-**Kdy:** představují nové třídy nebo typu a chcete správně, automaticky deklarovat.
+**Kdy:** Zavedete novou třídu nebo typ a chcete správně deklarovat, automaticky.
 
-**Důvod, proč:** můžete deklarovat třídy nebo typu než ho začnete využívat, ale tato funkce bude generovat třídy nebo typu automaticky.
+**Proč:** Před použitím můžete deklarovat třídu nebo typ, ale tato funkce bude generovat třídu nebo typ automaticky.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor na řádek níž se nachází červená vlnovka. Červená vlnovka Určuje třídu, která ještě neexistuje.
+1. Umístěte kurzor na čáru, kde je červená vlnovka. Červená vlnovka označuje třídu, která ještě neexistuje.
 
    - C#:
 
-       ![Zvýrazněný kód jazyka C#](media/class-highlight-cs.png)
+       ![Zvýrazněný kód C #](media/class-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Zvýrazněný kód jazyka Visual Basic](media/class-highlight-vb.png)
+       ![Zvýrazněný kód VB](media/class-highlight-vb.png)
 
-2. Dále proveďte jednu z následujících akcí:
+2. Dále proveďte jeden z následujících akcí:
 
    - **Klávesnice**
-      - Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
-   - **Myši**
-      - Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky.
-      - Červená vlnovka ukazatel myši a klikněte ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
-      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí u levého okraje, pokud textový kurzor na řádek s červená vlnovka.
+      - Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+   - **Myš**
+      - Klikněte pravým tlačítkem myši a vyberte nabídku **Rychlé akce a Refaktoringy.**
+      - Najeďte přes červenou vlnovku a klikněte na ![chybová žárovka](media/error-bulb.png) ikona, která se zobrazí.
+      - Klikněte na ![chybová žárovka](media/error-bulb.png) se zobrazí na levém okraji, pokud je textový kurzor již na řádku s červenou vlnovkou.
 
-      ![Generovat třídy ve verzi preview](media/class-preview-cs.png)
+      ![Generovat náhled třídy](media/class-preview-cs.png)
 
-3. Vyberte jednu z možností z rozevírací nabídky:
+3. V rozevírací nabídce vyberte jednu z možností:
 
-   - Generovat třídy*TypeName*"v novém souboru&mdash;vytvoří třídu s názvem *TypeName* do souboru s názvem *TypeName*.cs nebo .vb
-   - Generovat třídy*TypeName*"&mdash;vytvoří třídu s názvem *TypeName* v aktuálním souboru.
-   - Generovat vnořené třídy*TypeName*"&mdash;vytvoří třídu s názvem *TypeName* vnořit do aktuální třídy.
-   - Generovat nový typ... &mdash;Vytvoří nové třídy nebo struktury se všemi vlastnosti, které zadáte.
+   - Generovat třídu*TypeName*v&mdash;novém souboru Vytvoří třídu s názvem *TypeName* v souboru s názvem *TypeName*.cs/.vb
+   - Generovat třídu "&mdash;*TypeName*" Vytvoří v aktuálním souboru třídu s názvem *TypeName.*
+   - Generovat vnořenou třídu '*TypeName*'&mdash;Vytvoří třídu s názvem *TypeName* vnořenou uvnitř aktuální třídy.
+   - Generovat nový typ... &mdash;Vytvoří novou třídu nebo strukturu se všemi zadanými vlastnostmi.
 
    > [!TIP]
-   > Použití **náhled změn** odkaz v dolní části okna náhledu [zobrazíte všechny změny](../../ide/preview-changes.md) , který bude proveden před zvolení požadované možnosti.
+   > Pomocí odkazu **Náhled změn** v dolní části okna náhledu [zobrazíte všechny změny,](../../ide/preview-changes.md) které budou provedeny před provedením výběru.
 
-4. Pokud jste vybrali **generovat nový typ** položky, **generovat typ** zobrazí se dialogové okno. Nakonfigurujte usnadnění přístupu, typ a umístění nového typu.
+4. Pokud jste vybrali položku **Generovat nový typ,** otevře se dialogové okno **Generovat typ.** Nakonfigurujte usnadnění, druh a umístění nového typu.
 
    ![Generovat typ](media/class-newtype-cs.png)
 
    Výběr | Popis
    --- | ---
-   Přístup | Nastavit typ, který má být *výchozí*, *interní* nebo *veřejné* přístup.
-   Druh | To je možné nastavit jako *třídy* nebo *struktura*.
-   Name | To se nedá změnit a bude název, který jste už zadali.
-   Projekt | Pokud existuje více projektů v řešení, můžete místo, kam chcete třídě/struktuře TTL.
+   Access | Nastavte typ, který má *výchozí*, *interní* nebo *veřejný* přístup.
+   Druh | To lze nastavit jako *třídu* nebo *strukturu*.
+   Name (Název) | Nelze jej změnit a bude se jedná o název, který jste již zadali.
+   Project | Pokud existuje více projektů ve vašem řešení, můžete si vybrat, kde chcete třídy/struktury žít.
    Název souboru | Můžete vytvořit nový soubor nebo můžete přidat typ do existujícího souboru.
 
-Vytvoření třídy nebo struktury. Pro C#, se vytvoří také konstruktor.
+Třída nebo struktura je vytvořena. Pro C#je také vytvořen konstruktor.
 
 - C#
 
-   ![Generovat třídy výsledekC#](media/class-result-cs.png)
+   ![Generovat výsledek třídy C #](media/class-result-cs.png)
 
 - Visual Basic
 
-   ![Generovat třídy výsledek VB](media/class-result-vb.png)
+   ![Generovat výsledek třídy VB](media/class-result-vb.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Generování kódu](../code-generation-in-visual-studio.md)
 - [Náhled změn](../../ide/preview-changes.md)

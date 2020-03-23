@@ -1,6 +1,6 @@
 ---
 title: Běžné rychlé akce
-description: Nejoblíbenější rychlé akce pro C# a Visual Basic, včetně oprav chybně napsaných klíčových slov nebo symbolů, řešení konfliktů při slučování, odebírání nezbytných importů, generování typů, představení místních proměnných atd.
+description: Nejoblíbenější rychlé akce pro C# a Visual Basic, včetně opravy chybně napsaných klíčových slov nebo symbolů, řešení konfliktů sloučení, odstranění potřebných importů, generování typů, zavedení místních proměnných atd.
 ms.date: 03/28/2018
 ms.topic: reference
 author: TerryGLee
@@ -12,25 +12,25 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: db7a3a550f6bfc1250679eeefa0ba3ec6291eef0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585519"
 ---
 # <a name="common-quick-actions"></a>Běžné rychlé akce
 
-Části v tomto tématu uvádí některé běžné **rychlé akce** , které se vztahují C# i Visual Basic kódu. Tyto akce jsou *opravy kódu* pro diagnostiku kompilátoru nebo integrované [analyzátory .NET Compiler Platform](../code-quality/roslyn-analyzers-overview.md) v aplikaci Visual Studio.
+Části v tomto tématu seznam některých běžných **rychlých akcí,** které jsou použitelné pro c# a visual basic kód. Tyto akce jsou *opravy kódu* pro diagnostiku kompilátoru nebo integrované [analyzátory platformy kompilátoru .NET](../code-quality/roslyn-analyzers-overview.md) v sadě Visual Studio.
 
 ## <a name="actions-that-fix-errors"></a>Akce, které opravují chyby
 
-Rychlé akce v této části opravují chyby v kódu, které by způsobily selhání sestavení. Když jsou k dispozici rychlé akce pro opravu chyby na řádku kódu, Ikona zobrazená na okraji nebo pod červenou vlnovkou je žárovkou s červeným symbolem x.
+Rychlé akce v této části opravit chyby v kódu, který by způsobil selhání sestavení. Pokud jsou k dispozici rychlé akce k opravě chyby na řádku kódu, ikona, která se zobrazí na okraji nebo pod červenou vlnovkou, je žárovka s červeným "x".
 
-![Rychlá akce – ikona chyby a nabídka](media/error-light-bulb-with-code.png)
+![Ikona chyby a nabídka chyby Rychlé akce](media/error-light-bulb-with-code.png)
 
-### <a name="correct-misspelled-symbol-or-keyword"></a>Opravit nesprávně napsaný symbol nebo klíčové slovo
+### <a name="correct-misspelled-symbol-or-keyword"></a>Oprava chybně napsaného symbolu nebo klíčového slova
 
-Pokud nechtěně napíšete typ nebo klíčové slovo v aplikaci Visual Studio omylem, tato rychlá akce je automaticky opraví za vás. Tyto položky se zobrazí v nabídce žárovky jako **"Change"\<> nesprávně napsaným slovem "na"\<správné slovo > ""** . Příklad:
+Pokud omylem chybně napíšete typ nebo klíčové slovo v sadě Visual Studio, tato rychlá akce je automaticky opraví za vás. Tyto položky se zobrazí v nabídce žárovky jako **"Změnit "\<\<chybně napsané slovo>' na 'správné slovo> '.** Například:
 
 ```csharp
 // Before
@@ -62,9 +62,9 @@ End Function
 | - | - |
 | CS0103, BC30002 | C# a Visual Basic |
 
-### <a name="resolve-git-merge-conflict"></a>Vyřešit konflikt sloučení Git
+### <a name="resolve-git-merge-conflict"></a>Vyřešit konflikt sloučení git
 
-Tyto rychlé akce umožňují vyřešit konflikty sloučení Git tím, že probíhají změny, což odebere konfliktní kód a značky.
+Tyto rychlé akce umožňují vyřešit konflikty sloučení git "přijetím změny", která odebere konfliktní kód a značky.
 
 ```csharp
 // Before
@@ -90,21 +90,21 @@ private void MyMethod()
 
 | ID chyby | Příslušné jazyky | Podporovaná verze |
 | ------- | -------------------- | ---------------- |
-| CS8300, BC37284 | C# a Visual Basic | Visual Studio 2017 verze 15,3 a novější |
+| CS8300, BC37284 | C# a Visual Basic | Visual Studio 2017 verze 15.3 a novější |
 
-## <a name="actions-that-remove-unnecessary-code"></a>Akce, které odstraňují zbytečný kód
+## <a name="actions-that-remove-unnecessary-code"></a>Akce, které odeberou nepotřebný kód
 
-### <a name="remove-unnecessary-usingsimports"></a>Odebrat nepotřebné použití/importy
+### <a name="remove-unnecessary-usingsimports"></a>Odebrání nepotřebných použití/importů
 
-Rychlá akce **Odebrání nepotřebných použití nebo importu** odebere nepoužívané `using` a `Import` direktiv pro aktuální soubor. Když vyberete tuto položku, odeberou se nepoužité importy oboru názvů.
+**Odebrat nepotřebné použití/importy** rychlé akce `using` odebere všechny nepoužívané a `Import` direktivy pro aktuální soubor. Vyberete-li tuto položku, budou odebrány nepoužívané importy oborů názvů.
 
 | Příslušné jazyky | Podporovaná verze |
 | - | - |
 | C# a Visual Basic | Visual Studio 2015 a novější |
 
-### <a name="remove-unnecessary-cast"></a>Odebrat zbytečné přetypování
+### <a name="remove-unnecessary-cast"></a>Odebrání nepotřebného přetypátu
 
-Pokud přetypování typu na jiný typ, který nevyžaduje přetypování, položka rychlé akce odebrat nepotřebné **přetypování** odstraní zbytečné přetypování.
+Pokud přetypování typu na jiný typ, který nevyžaduje přetypování, **odebrat zbytečné přetypování** rychlá akce položka odebere zbytečné přetypování.
 
 ```csharp
 // before
@@ -130,9 +130,9 @@ Dim number as Integer = 3
 | ------- | -------------------- | ---------------- |
 | IDE0004 | C# a Visual Basic | Visual Studio 2015 a novější |
 
-### <a name="remove-unused-variables"></a>Odebrat nepoužité proměnné
+### <a name="remove-unused-variables"></a>Odebrání nepoužívaných proměnných
 
-Tato rychlá akce umožňuje odebrat proměnné, které byly deklarované, ale nikdy se nepoužily ve vašem kódu.
+Tato rychlá akce umožňuje odebrat proměnné, které byly deklarovány, ale nikdy použity ve vašem kódu.
 
 ```csharp
 // Before
@@ -155,11 +155,11 @@ public MyMethod()
 
 | ID diagnostiky | Příslušné jazyky | Podporovaná verze |
 | ------- | -------------------- | ---------------- |
-| CS0219, BC42024 | C# a Visual Basic | Visual Studio 2017 verze 15,3 a novější |
+| CS0219, BC42024 | C# a Visual Basic | Visual Studio 2017 verze 15.3 a novější |
 
-### <a name="remove-type-from-default-value-expression"></a>Odebrat typ z výrazu výchozí hodnoty
+### <a name="remove-type-from-default-value-expression"></a>Odebrat text z výrazu výchozí hodnoty
 
-Tato rychlá akce odebere typ hodnoty z výchozího výrazu hodnoty a použije [výchozí literál](/dotnet/csharp/language-reference/operators/default#default-literal) , pokud kompilátor může odvodit typ výrazu.
+Tato rychlá akce odebere typ hodnoty z výchozího výrazu hodnoty a použije [výchozí literál,](/dotnet/csharp/language-reference/operators/default#default-literal) když kompilátor může odvodit typ výrazu.
 
 ```csharp
 // Before
@@ -173,18 +173,18 @@ void DoWork(CancellationToken cancellationToken = default) { ... }
 
 | ID diagnostiky | Příslušné jazyky | Podporovaná verze |
 | ------- | -------------------- | ---------------- |
-| IDE0034 | C#7.1 + | Visual Studio 2017 verze 15,3 a novější |
+| IDE0034 | C# 7.1+ | Visual Studio 2017 verze 15.3 a novější |
 
 ## <a name="actions-that-add-missing-code"></a>Akce, které přidávají chybějící kód
 
-### <a name="add-usingsimports-for-types-in-reference-assemblies-nuget-packages-or-other-types-in-your-solution"></a>Přidání použití/importu pro typy v referenčních sestaveních, balíčcích NuGet nebo jiných typech v řešení
+### <a name="add-usingsimports-for-types-in-reference-assemblies-nuget-packages-or-other-types-in-your-solution"></a>Přidání použití nebo importu pro typy v referenčních sestaveních, balíčcích NuGet nebo jiných typech v řešení
 
-Když použijete typy umístěné v jiných projektech ve vašem řešení, zobrazí se rychlá akce automaticky, ale ostatní musí být povolené na kartě **Nástroje > Možnosti > C#**  nebo **Základní > Upřesnit** :
+Pomocí typů umístěných v jiných projektech ve vašem řešení se automaticky zobrazí rychlá akce, ale ostatní musí být povoleny z **nástroje > možnosti > C#** nebo **základní > upřesnit** kartu:
 
-- Navrhnout použití/importy pro typy v referenčních sestaveních
-- Navrhnout použití/importy pro typy v balíčcích NuGet
+- Navrhnout použití/importy pro typy v referenčních sestavách
+- Navrhnout použití nebo importy pro typy v balíčcích NuGet
 
-Pokud je povoleno, pokud použijete typ v oboru názvů, který aktuálně není importován, ale existuje v referenčním sestavení nebo balíčku NuGet, je vytvořena Direktiva using nebo import.
+Pokud je povoleno, pokud použijete typ v oboru názvů, který není aktuálně importován, ale existuje v referenčním sestavení nebo balíčku NuGet, vytvoří se direktiva using nebo import.
 
 ```csharp
 // Before
@@ -214,11 +214,11 @@ Debug.WriteLine("Hello")
 | - | - |
 | CS0103, BC30451 | C# a Visual Basic|
 
-### <a name="add-missing-casesdefault-caseboth"></a>Přidat chybějící případy/výchozí případ/obojí
+### <a name="add-missing-casesdefault-caseboth"></a>Přidání chybějících případů/výchozího případu/obojího
 
-Při vytváření příkazu `switch` v C#nebo v příkazu `Select Case` v Visual Basic můžete použít akci kódu k automatickému přidání chybějících položek Case, výchozího příkazu case nebo obou.
+Při vytváření `switch` příkazu v `Select Case` jazyce C# nebo příkazu v jazyce Visual Basic můžete použít akci kódu k automatickému přidání chybějících položek případu, výchozího příkazu případu nebo obojího.
 
-Vezměte v úvahu následující výčet a prázdnou `switch` nebo příkaz `Select Case`:
+Zvažte následující výčet `switch` a `Select Case` prázdný nebo příkaz:
 
 ```csharp
 enum MyEnum
@@ -252,7 +252,7 @@ Select Case myEnum
 End Select
 ```
 
-Pomocí možnosti **Přidat** v chybějících případech rychlou akci a přidá výchozí případ:
+Použití **funkce Přidat obě** rychlé akce vyplní chybějící případy a přidá výchozí případ:
 
 ```csharp
 switch(myEnum)
@@ -281,11 +281,11 @@ End Select
 
 | ID diagnostiky | Příslušné jazyky | Podporovaná verze |
 | ------- | -------------------- | ---------------- |
-| IDE0010 | C# a Visual Basic| Visual Studio 2017 verze 15,3 a novější |
+| IDE0010 | C# a Visual Basic| Visual Studio 2017 verze 15.3 a novější |
 
-### <a name="add-null-checks-for-parameters"></a>Přidat kontroly hodnoty null pro parametry
+### <a name="add-null-checks-for-parameters"></a>Přidání nulových kontrol parametrů
 
-Tato rychlá akce umožňuje přidat do kódu vrácení se změnami, aby bylo možné zjistit, zda je parametr null.
+Tato rychlá akce umožňuje přidat vrácení kódu se změnami, abyste zjistili, zda je parametr null.
 
 ```csharp
 // Before
@@ -315,9 +315,9 @@ class MyClass
 
 | Příslušné jazyky | Podporovaná verze |
 | -------------------- | ---------------- |
-| C# a Visual Basic| Visual Studio 2017 verze 15,3 a novější |
+| C# a Visual Basic| Visual Studio 2017 verze 15.3 a novější |
 
-### <a name="add-argument-name"></a>Přidat název argumentu
+### <a name="add-argument-name"></a>Přidání názvu argumentu
 
 ```csharp
 // Before
@@ -331,11 +331,11 @@ var date = new DateTime(year: 1997, month: 7, day: 8);
 
 | Příslušné jazyky | Podporovaná verze |
 | -------------------- | ---------------- |
-| C# a Visual Basic| Visual Studio 2017 verze 15,3 a novější |
+| C# a Visual Basic| Visual Studio 2017 verze 15.3 a novější |
 
-### <a name="add-braces"></a>Přidat složené závorky
+### <a name="add-braces"></a>Přidání závorek
 
-Rychlá akce Přidat složené závorky zalomí závorky kolem jednoduchých `if` příkazů.
+Přidat složená závorky Rychlá akce `if` závorky kolem jednořádkové příkazy.
 
 ```csharp
 // Before
@@ -355,9 +355,9 @@ if (true)
 | ------- | -------------------- | ---------------- |
 | IDE0011 | C# | Visual Studio 2017 a novější |
 
-### <a name="add-and-order-modifiers"></a>Přidat a seřadit modifikátory
+### <a name="add-and-order-modifiers"></a>Přidat a objednat modifikátory
 
-Tyto rychlé akce vám pomůžou uspořádat modifikátory tím, že vám umožní seřadit existující a přidat chybějící Modifikátory dostupnosti.
+Tyto rychlé akce pomáhají uspořádat modifikátory tím, že umožňují řadit existující a přidávat chybějící modifikátory usnadnění.
 
 ```csharp
 // Before
@@ -387,14 +387,14 @@ private static int thisFieldIsPublic;
 
 | ID diagnostiky | Příslušné jazyky | Podporovaná verze |
 | ------- | -------------------- | ---------------- |
-| IDE0036 | C# a Visual Basic| Visual Studio 2017 verze 15,5 a novější |
-| IDE0040 | C# a Visual Basic| Visual Studio 2017 verze 15,5 a novější |
+| IDE0036 | C# a Visual Basic| Visual Studio 2017 verze 15.5 a novější |
+| IDE0040 | C# a Visual Basic| Visual Studio 2017 verze 15.5 a novější |
 
 ## <a name="code-transformations"></a>Transformace kódu
 
-### <a name="convert-if-construct-to-switch"></a>Převést if na Switch
+### <a name="convert-if-construct-to-switch"></a>Převést konstrukci if na přepínač
 
-Tato rychlá akce umožňuje převést konstrukci **if-then-else** na konstrukci **přepínače** .
+Tato rychlá akce umožňuje převést konstrukci **if-then-else** na konstrukci **přepínače.**
 
 ```csharp
 // Before
@@ -445,11 +445,11 @@ End Select
 
 | Příslušné jazyky | Podporovaná verze |
 | -------------------- | ---------------- |
-| C# a Visual Basic| Visual Studio 2017 verze 15,3 a novější |
+| C# a Visual Basic| Visual Studio 2017 verze 15.3 a novější |
 
-### <a name="convert-to-interpolated-string"></a>Převést na interpolované řetězce
+### <a name="convert-to-interpolated-string"></a>Převést na interpolovaný řetězec
 
-[Interpolované řetězce](/dotnet/csharp/language-reference/keywords/interpolated-strings) představují snadný způsob, jak vyjádřit řetězce pomocí vložených proměnných, podobně jako metoda **[String. Format](/dotnet/api/system.string.format#overloads)** .  Tato rychlá akce rozpoznává případy, kdy jsou zřetězeny řetězce, nebo pomocí **String. Format**a mění použití na interpolované řetězce.
+[Interpolované řetězce](/dotnet/csharp/language-reference/keywords/interpolated-strings) jsou snadný způsob, jak vyjádřit řetězce s vloženými proměnnými, podobně jako **[string.Format](/dotnet/api/system.string.format#overloads)** metoda.  Tato rychlá akce rozpozná případy, kdy jsou řetězce zřetězené nebo pomocí **String.Format**, a změní použití na interpolovaný řetězec.
 
 ```csharp
 // Before
@@ -477,11 +477,11 @@ Dim s As String = $"My string with {num} in the middle"
 
 | Příslušné jazyky | Podporovaná verze |
 | -------------------- | ---------------- |
-| C#6.0 + a Visual Basic 14 + | Visual Studio 2017 a novější |
+| C# 6.0+ a Visual Basic 14+ | Visual Studio 2017 a novější |
 
-### <a name="use-object-initializers"></a>Použít inicializátory objektů
+### <a name="use-object-initializers"></a>Použití inicializačních objektů
 
-Tato rychlá akce umožňuje použít [Inicializátory objektů](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers) místo vyvolání konstruktoru a další řádky příkazů přiřazení.
+Tato rychlá akce umožňuje použít [inicializační metody objektu,](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers) nikoli vyvolání konstruktoru a další řádky příkazů přiřazení.
 
 ```csharp
 // Before
@@ -511,7 +511,7 @@ Dim c = New Customer() With {.Age = 21}
 
 ### <a name="use-collection-initializers"></a>Použít inicializátory kolekce
 
-Tato rychlá akce umožňuje použít [inicializátory kolekce](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers) místo více volání metody `Add` vaší třídy.
+Tato rychlá akce umožňuje použít [inicializátory](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers) `Add` kolekce spíše než více volání metody vaší třídy.
 
 ```csharp
 // Before
@@ -543,7 +543,7 @@ Dim list = New List(Of Integer) From {1, 2, 3}
 | ------- | -------------------- | ---------------- |
 | IDE0028 | C# a Visual Basic | Visual Studio 2017 a novější |
 
-### <a name="convert-auto-property-to-full-property"></a>Převést vlastnost auto na vlastnost Full
+### <a name="convert-auto-property-to-full-property"></a>Převést vlastnost auto na úplnou vlastnost
 
 Tato rychlá akce umožňuje převést vlastnost auto na úplnou vlastnost a naopak.
 
@@ -582,11 +582,11 @@ End Property
 
 | Příslušné jazyky | Podporovaná verze |
 | -------------------- | ---------------- |
-| C# a Visual Basic | Visual Studio 2017 verze 15,5 a novější |
+| C# a Visual Basic | Visual Studio 2017 verze 15.5 a novější |
 
-### <a name="convert-block-body-to-expression-bodied-member"></a>Převést tělo bloku na člen Expression-těle
+### <a name="convert-block-body-to-expression-bodied-member"></a>Převést tělo bloku na člen s výrazem
 
-Tato rychlá akce umožňuje převést blokové texty na členy Expression-těle pro metody, konstruktory, operátory, vlastnosti, indexery a přistupující objekty.
+Tato rychlá akce umožňuje převést těla bloků na členy s výrazem pro metody, konstruktory, operátory, vlastnosti, indexery a přistupující objekty.
 
 ```csharp
 //Before
@@ -635,11 +635,11 @@ class MyClass4
 
 | ID diagnostiky | Příslušné jazyky | Podporovaná verze |
 | ------- | -------------------- | ---------------- |
-| IDE0021-27 | C#6.0 + | Visual Studio 2017 a novější |
+| IDE0021-27 | C# 6.0+ | Visual Studio 2017 a novější |
 
 ### <a name="convert-anonymous-function-to-local-function"></a>Převést anonymní funkci na místní funkci
 
-Tato rychlá akce převede anonymní funkce na místní funkce.
+Tato rychlá akce převádí anonymní funkce na místní funkce.
 
 ```csharp
 // Before
@@ -658,13 +658,13 @@ int fibonacci(int n)
 }
 ```
 
-### <a name="convert-referenceequals-to-is-null"></a>Převést ' ReferenceEquals ' na ' is null '
+### <a name="convert-referenceequals-to-is-null"></a>Převést 'ReferenceEquals' na 'is null'
 
 | ID diagnostiky | Příslušné jazyky | Podporovaná verze |
 | ------- | -------------------- | ---------------- |
-| IDE0041 | C#7.0 + | Visual Studio 2017 verze 15,5 a novější |
+| IDE0041 | C# 7.0+ | Visual Studio 2017 verze 15.5 a novější |
 
-Tato rychlá akce navrhuje použití [porovnávání vzorů](/dotnet/csharp/pattern-matching) místo ```ReferenceEquals```ho vzorového vzoru, pokud je to možné.
+Tato rychlá akce navrhuje použití [porovnávání](/dotnet/csharp/pattern-matching) ```ReferenceEquals``` vzorů spíše než kódovací vzor, kde je to možné.
 
 ```csharp
 // Before
@@ -686,11 +686,11 @@ if (value is null)
 
 | ID diagnostiky | Příslušné jazyky | Podporovaná verze |
 | ------- | -------------------- | ---------------- |
-| IDE0039 | C#7.0 + | Visual Studio 2017 verze 15. a novější |
+| IDE0039 | C# 7.0+ | Visual Studio 2017 verze 15. a novější |
 
 ### <a name="introduce-pattern-matching"></a>Zavést porovnávání vzorů
 
-Tato rychlá akce navrhuje použití [porovnávání vzorů](/dotnet/csharp/pattern-matching) s přetypováními a kontrolami hodnotou C#null v.
+Tato rychlá akce navrhuje použití [porovnávání vzorů](/dotnet/csharp/pattern-matching) s přetypování a null kontroly v jazyce C#.
 
 ```csharp
 // Before
@@ -728,12 +728,12 @@ if (o is string s)
 
 | ID diagnostiky | Příslušné jazyky | Podporovaná verze |
 | ------- | -------------------- | ---------------- |
-| IDE0020 | C#7.0 + | Visual Studio 2017 a novější |
-| IDE0019 | C#7.0 + | Visual Studio 2017 a novější |
+| IDE0020 | C# 7.0+ | Visual Studio 2017 a novější |
+| IDE0019 | C# 7.0+ | Visual Studio 2017 a novější |
 
 ### <a name="change-base-for-numeric-literals"></a>Změnit základ pro číselné literály
 
-Tato rychlá akce umožňuje převést číselný literál z jednoho základního číselného systému na jiný. Můžete například změnit číslo na šestnáctkové nebo do binárního formátu.
+Tato rychlá akce umožňuje převést číselný literál z jednoho základního číselného systému na jiný. Můžete například změnit číslo na šestnáctkové nebo na binární formát.
 
 ```csharp
 // Before
@@ -757,11 +757,11 @@ Dim countdown As Integer = &H200000
 
 | Příslušné jazyky | Podporovaná verze |
 | ------- | -------------------- | ---------------- |
-| C#7.0 + a Visual Basic 14 + | Visual Studio 2017 verze 15,3 a novější |
+| C# 7.0+ a Visual Basic 14+ | Visual Studio 2017 verze 15.3 a novější |
 
-### <a name="insert-digit-separators-into-literals"></a>Vložit oddělovače číslic do literálů
+### <a name="insert-digit-separators-into-literals"></a>Vložení oddělovačů číslic do literál
 
-Tato rychlá akce umožňuje přidat znaky oddělovače do hodnot literálů.
+Tato rychlá akce umožňuje přidat oddělovací znaky do literálových hodnot.
 
 ```csharp
 // Before
@@ -785,11 +785,11 @@ Dim countdown As Integer = 1_000_000
 
 | Příslušné jazyky | Podporovaná verze |
 | ------- | -------------------- | ---------------- |
-| C#7.0 + a Visual Basic 14 + | Visual Studio 2017 verze 15,3 a novější |
+| C# 7.0+ a Visual Basic 14+ | Visual Studio 2017 verze 15.3 a novější |
 
-### <a name="use-explicit-tuple-names"></a>Použití explicitních názvů řazených kolekcí členů
+### <a name="use-explicit-tuple-names"></a>Použití explicitních názvů řazené kolekce členů
 
-Tato rychlá akce identifikuje oblasti, kde je možné použít explicitní název řazené kolekce členů místo Item1 –, Item2 atd.
+Tato rychlá akce identifikuje oblasti, kde lze použít explicitní názvy řazených členů, nikoli položky Item1, Item2 atd.
 
 ```csharp
 // Before
@@ -817,11 +817,11 @@ Dim name = customer.name
 
 | ID diagnostiky | Příslušné jazyky | Podporovaná verze |
 | ------- | -------------------- | ---------------- |
-| IDE0033 | C#7.0 + a Visual Basic 15 + | Visual Studio 2017 a novější |
+| IDE0033 | C# 7.0+ a Visual Basic 15+ | Visual Studio 2017 a novější |
 
 ### <a name="use-inferred-names"></a>Použití odvozených názvů
 
-Tato rychlá akce ukazuje, že kód může být zjednodušen pro použití odvozených názvů členů v anonymních typech nebo odvození názvů prvků v řazených kolekcích členů.
+Tato rychlá akce poukazuje na to, kdy lze kód zjednodušit tak, aby se používaly odvozené názvy členů v anonymních typech nebo odvozené názvy prvků v řazených kolekcích a diáři.
 
 ```csharp
 // Before
@@ -845,12 +845,12 @@ var tuple = (age, name);
 
 | ID diagnostiky | Příslušné jazyky | Podporovaná verze |
 | ------- | -------------------- | ---------------- |
-| IDE0037 | C# | Visual Studio 2017 verze 15,5 a novější |
-| IDE0037 | C#7.1 + | Visual Studio 2017 verze 15,5 a novější |
+| IDE0037 | C# | Visual Studio 2017 verze 15.5 a novější |
+| IDE0037 | C# 7.1+ | Visual Studio 2017 verze 15.5 a novější |
 
-### <a name="deconstruct-tuple-declaration"></a>Dekonstruovat deklaraci řazené kolekce členů
+### <a name="deconstruct-tuple-declaration"></a>Deconstruct n-tice prohlášení
 
-Tato rychlá akce umožňuje dekonstruovat deklarace proměnných řazené kolekce členů.
+Tato rychlá akce umožňuje deconstructing řazené kolekce členů proměnné deklarace.
 
 ```csharp
 // Before
@@ -872,11 +872,11 @@ Console.WriteLine($"{x} {y}");
 
 | ID diagnostiky | Příslušné jazyky | Podporovaná verze |
 | ------- | -------------------- | ---------------- |
-| IDE0042 | C#7.0 + | Visual Studio 2017 verze 15,5 a novější |
+| IDE0042 | C# 7.0+ | Visual Studio 2017 verze 15.5 a novější |
 
-### <a name="make-method-synchronous"></a>Nastavit metodu jako synchronní
+### <a name="make-method-synchronous"></a>Vytvořit metodu synchronní
 
-Při použití klíčového slova `async` nebo `Async` v metodě je očekáváno, že uvnitř této metody je použito také klíčové slovo `await` nebo `Await`. Pokud se však nejedná o tento případ, zobrazí se rychlá akce, která provede synchronní metodu odebráním klíčového slova `async` nebo `Async` a změnou návratového typu. Použijte možnost **vytvořit metodu synchronně** z nabídky rychlé akce.
+Při použití `async` `Async` nebo klíčové slovo na metodu, očekává `await` se, že uvnitř této metody nebo `Await` klíčové slovo je také použit. Pokud tomu tak však není, zobrazí se rychlá akce, která způsobí `async` `Async` synchronní metodu odebráním klíčového slova nebo a změnou návratového typu. Použijte možnost **Vytvořit synchronní metodu** z nabídky Rychlé akce.
 
 ```csharp
 // Before
@@ -912,9 +912,9 @@ End Function
 | ------- | -------------------- |
 | CS1998, BC42356 | C# a Visual Basic |
 
-### <a name="make-method-asynchronous"></a>Nastavit metodu jako asynchronní
+### <a name="make-method-asynchronous"></a>Vytvořit metodu asynchronní
 
-Při použití klíčového slova `await` nebo `Await` v rámci metody je očekáváno, že metoda je označena klíčovým slovem `async` nebo `Async`. Pokud se však nejedná o tento případ, zobrazí se rychlá akce, která provede asynchronní metodu. Použijte **asynchronní možnost vytvořit metodu/funkci** z nabídky rychlé akce.
+Při použití `await` `Await` nebo klíčové slovo uvnitř metody, očekává se, že `async` `Async` metoda je označena nebo klíčové slovo. Pokud tomu tak však není, zobrazí se rychlá akce, která způsobí, že metoda bude asynchronní. Použijte možnost **Vytvořit metodu/funkci asynchronní** z nabídky Rychlé akce.
 
 ```csharp
 // Before
@@ -950,6 +950,6 @@ End Function
 | ------- | -------------------- | ---------------- |
 | CS4032, BC37057 | C# a Visual Basic | Visual Studio 2017 a novější |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Rychlé akce](../ide/quick-actions.md)

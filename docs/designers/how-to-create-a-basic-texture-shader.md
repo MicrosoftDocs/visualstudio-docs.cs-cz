@@ -9,50 +9,50 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ac74155b8de4669d959d9b14e9be20ada2ec51d9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589471"
 ---
-# <a name="how-to-create-a-basic-texture-shader"></a>Postupy: Vytvoření základního shaderu textury
+# <a name="how-to-create-a-basic-texture-shader"></a>Postupy: Vytvoření shaderu základní textury
 
-Tento článek ukazuje, jak pomocí Návrháře shaderu a jazyka DGSL (Direct Graph shader) vytvořit shader s jednou texturou. Tento shader nastaví konečnou barvu přímo na hodnoty RGB a alfa, které jsou odebírány z textury.
+Tento článek ukazuje, jak pomocí Návrhář shaderu a směrovaný graf shader jazyk (DGSL) k vytvoření shader s jednou texturou. Tento shader nastaví konečnou barvu přímo na hodnoty RGB a alfa, které jsou vzorkovány z textury.
 
 ## <a name="create-a-basic-texture-shader"></a>Vytvoření shaderu základní textury
 
-Můžete implementovat základní shader s jednou texturou tak, že napíšete barvy a alfa hodnoty vzorku textury přímo do konečné výstupní barvy.
+Základní shader s jednou texturou můžete implementovat zápisem hodnot barev a alfa vzorku textury přímo do konečné výstupní barvy.
 
-Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nástrojů** .
+Než začnete, ujistěte se, že jsou zobrazeny okno **Vlastnosti** a **panel nástrojů.**
 
-1. Vytvořte shader DGSL, se kterým chcete pracovat. Informace o tom, jak přidat DGSL shader do projektu, naleznete v části Začínáme v [Návrháři shaderu](../designers/shader-designer.md).
+1. Vytvořte shader DGSL pro práci. Informace o tom, jak přidat shader SChL do projektu, naleznete v části Začínáme v [návrháři shaderu](../designers/shader-designer.md).
 
-2. Odstraňte uzel **Barva bodu** . V režimu **výběru** vyberte uzel **Barva bodu** a pak na panelu nabídek zvolte **Upravit** > **Odstranit**. Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
+2. Odstraňte uzel **Barva bodu.** V režimu **výběru** vyberte uzel **Barva bodu** a potom na řádku nabídek zvolte **Upravit** > **odstranění**. Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
 
-3. Přidejte do grafu uzel s **ukázkovým texturou** . V **panelu nástrojů**v části **Textura**vyberte **Ukázka textury** a přesuňte ji na návrhovou plochu.
+3. Přidejte do grafu uzel **Ukázkový** vzorek textury. V **panelu nástrojů**v části **Textura**vyberte **Vzorek textury** a přesuňte ho na návrhovou plochu.
 
-4. Přidejte uzel **souřadnice textury** do grafu. V **panelu nástrojů**v části **Textura**vyberte možnost **souřadnice textury** a přesuňte ji na plochu návrhu.
+4. Přidejte do grafu uzel **Souřadnice textury.** V **panelu nástrojů**v části **Textura**vyberte **Souřadnice textury** a přesuňte ji na návrhovou plochu.
 
-5. Vyberte texturu, která se má použít. V režimu **výběru** vyberte uzel **Ukázka textury** a potom v okně **vlastnosti** zadejte texturu, kterou chcete použít, pomocí vlastnosti **filename** .
+5. Vyberte texturu, která se má použít. V režimu **Výběr** vyberte uzel **Ukázkový texturu** a pak v okně **Vlastnosti** určete texturu, kterou chcete použít, pomocí vlastnosti **Název_souboru.**
 
-6. Zpřístupněte texturu jako veřejně přístupný. Vyberte uzel **Ukázka textury** a potom v okně **vlastnosti** nastavte vlastnost **přístup** na **veřejné**. Nyní můžete nastavit texturu z jiného nástroje, jako je například **Editor modelů**.
+6. Zpřístupňte texturu veřejně přístupnou. Vyberte uzel **Ukázkový** textura a potom v okně **Vlastnosti** nastavte vlastnost **Access** na **hodnotu Public**. Nyní můžete nastavit texturu z jiného nástroje, například **editoru modelů**.
 
-7. Připojte souřadnice textury k ukázce textury. V režimu **výběru** přesuňte **výstupní** terminál uzlu **souřadnice textury** do **UV** terminálu uzlu **ukázky textury** . Toto připojení vzorkuje texturu na zadaných souřadnicích.
+7. Připojte souřadnice textury ke vzorku textury. V režimu **Select** přesuňte **výstupní** terminál uzlu **Souřadnice textury** na terminál **UV** uzlu **Vzorku textury.** Toto připojení vzorku textury na zadané souřadnice.
 
-8. Připojte ukázku textury k konečné barvě. Přesuňte terminál **RGB** uzlu **vzorku textury** do terminálu **RGB** **konečného uzlu barvy** a poté přesuňte terminál **alfa** uzlu **ukázky textury** do terminálu **alfa** koncového uzlu **barvy** .
+8. Připojte vzorek textury ke konečné barvě. Přesuňte terminál **RGB** uzlu **Ukázkový textury** do terminálu **RGB** uzlu **Konečné barvy** a potom přesuňte **terminál alfa** uzlu **Vzorku textury** do **terminálu Alfa** uzlu Konečné **barva.**
 
-Následující ilustrace znázorňuje dokončený graf shaderu a náhled shaderu, který se použije pro datovou krychli.
+Následující obrázek znázorňuje dokončený graf shaderu a náhled shaderu aplikovaného na krychli.
 
 > [!NOTE]
-> Na tomto obrázku je jako obrazec náhledu použita rovina a je určena textura, aby lépe ukázala účinek shaderu.
+> Na tomto obrázku se jako obrazec náhledu použije rovina a byla zadána textura, která lépe demonstruje účinek shaderu.
 
-![Graf shaderu a náhled jeho efektu](../designers/media/digit-texture-effect.png)
+![Shader graf a náhled jeho účinku](../designers/media/digit-texture-effect.png)
 
-Některé tvary mohou pro některé shadery poskytnout lepší náhled. Další informace o tom, jak zobrazit shadery v Návrháři shaderu, najdete v tématu [Shader Designer](../designers/shader-designer.md) .
+Některé obrazce mohou některým shaderům poskytovat lepší náhledy. Další informace o zobrazení náhledu shaderů v návrháři shaderů najdete v [tématu Shader Designer](../designers/shader-designer.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [Editor obrázků](../designers/image-editor.md)
-- [Návrhář shaderů](../designers/shader-designer.md)
-- [Uzly návrháře shaderu](../designers/shader-designer-nodes.md)
+- [Návrhář shaderu](../designers/shader-designer.md)
+- [Uzly Návrhářshaderu](../designers/shader-designer-nodes.md)

@@ -1,6 +1,6 @@
 ---
 title: Použití architektury Microsoft pro testování jednotek pro jazyk C++
-description: Pro vytvoření testování částí C++ C++ kódu použijte rozhraní Microsoft Unit Testing Framework.
+description: Pomocí rozhraní Microsoft Unit Testing Framework pro C++ vytvořte testy částí pro váš kód C++.
 ms.date: 01/08/2020
 ms.topic: conceptual
 ms.author: corob
@@ -9,88 +9,88 @@ ms.workload:
 - cplusplus
 author: corob-msft
 ms.openlocfilehash: 5c8cb794ce7891e74610f1a73164ce403d294925
-ms.sourcegitcommit: 789430e18dfe8e5f7db19273e7298af2f078c0dc
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75755564"
 ---
-# <a name="use-the-microsoft-unit-testing-framework-for-c-in-visual-studio"></a>Použít Microsoft rozhraní testování části pro C++ v sadě Visual Studio
+# <a name="use-the-microsoft-unit-testing-framework-for-c-in-visual-studio"></a>Použití rozhraní Microsoft Unit Testing Framework pro jazyk C++ v sadě Visual Studio
 
-Ve výchozím nastavení je zahrnuto Microsoft Unit Testing Framework pro C++ **Desktop Development with C++** pracovního vytížení.
+Microsoft Unit Testing Framework pro C++ je součástí standardně ve vývoji plochy s úlohou **C++.**
 
-## <a name="separate_project"></a> Pro psaní jednotkových testů testovacího projektu
+## <a name="to-write-unit-tests-in-a-separate-project"></a><a name="separate_project"></a>Zápis testů částí v samostatném projektu
 
-Obvykle spustíte testovací kód ve svém vlastním projektu ve stejném řešení jako kód, který chcete testovat. Chcete-li vytvořit a nakonfigurovat nový testovací projekt, naleznete v tématu [zápis testů jednotek pro C/C++](writing-unit-tests-for-c-cpp.md).
+Obvykle spustíte testovací kód ve vlastním projektu ve stejném řešení jako kód, který chcete testovat. Chcete-li nastavit a nakonfigurovat nový testovací projekt, naleznete [v tématu Zápis testů částí pro C/C++](writing-unit-tests-for-c-cpp.md).
 
-## <a name="same_project"></a> Pro psaní jednotkových testů do stejného projektu
+## <a name="to-write-unit-tests-in-the-same-project"></a><a name="same_project"></a>Zápis testů částí ve stejném projektu
 
-V některých případech, například při testování neexportovaných funkcí v knihovně DLL, může být nutné vytvořit testy ve stejném projektu jako program, který testujete. Pro psaní jednotkových testů do stejného projektu:
+V některých případech, například při testování neexportovaných funkcí v knihovně DLL, může být nutné vytvořit testy ve stejném projektu jako testovaný program. Chcete-li psát testy částí ve stejném projektu:
 
-1. Upravte vlastnosti projektu, aby zahrnovaly hlavičkové soubory a soubory knihoven, které jsou požadovány pro testování částí.
+1. Upravte vlastnosti projektu tak, aby zahrnovaly záhlaví a soubory knihovny, které jsou požadovány pro testování částí.
 
-   1. V Průzkumník řešení v místní nabídce projektu, který testujete, vyberte možnost **vlastnosti**. Otevře se okno Vlastnosti projektu.
+   1. V Průzkumníku řešení v místní nabídce projektu, který testujete, zvolte **Vlastnosti**. Otevře se okno vlastností projektu.
 
-   1. V dialogovém okně stránky vlastností vyberte možnost **Vlastnosti konfigurace** > **adresáře VC + +** .
+   1. V dialogovém okně Stránky vlastností vyberte **Vlastnosti** > konfigurace**Adresáře VC++**.
 
-   1. Klikněte na šipku dolů v následujících řádcích a vyberte **\<upravit >** . Přidejte tyto cesty:
+   1. Klikněte na šipku dolů v ** \< **následujících řádcích a zvolte Upravit>. Přidejte tyto cesty:
 
       | Adresář | Vlastnost |
       |-| - |
-      | **Adresáře souborů k zahrnutí** | **$ (VCInstallDir) Auxiliary\VS\UnitTest\include** |
-      | **Adresáře knihoven** | **$ (VCInstallDir) Auxiliary\VS\UnitTest\lib** |
+      | **Zahrnout adresáře** | **$(VCInstallDir)Pomocné\VS\UnitTest\include** |
+      | **Adresáře knihoven** | **$(VCInstallDir)Pomocné\VS\UnitTest\lib** |
 
-1. Přidáte soubor testu jednotek C++:
+1. Přidejte testovací soubor jednotky C++:
 
-   - V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte **Přidat** > nový soubor >  **C++ položky (. cpp)** .
+   - Klikněte pravým tlačítkem myši na uzel projektu v **Průzkumníku řešení** a zvolte **Přidat** > nový soubor**c++** > **(.cpp)**.
 
-## <a name="object_files"></a> Připojení testů k souborům objektů nebo knihoven
+## <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="object_files"></a>Propojení testů se soubory objektu nebo knihovny
 
-Pokud testovaný kód neexportuje funkce, které chcete otestovat, můžete přidat výstupní soubor **. obj** nebo **. lib** do závislostí testovacího projektu. Upravte vlastnosti projektu testu tak, aby zahrnovaly hlavičky a soubory knihoven nebo objektů, které jsou požadovány pro testování částí.
+Pokud testovaný kód neexportuje funkce, které chcete testovat, můžete přidat výstupní **soubor OBJ** nebo **.lib** do závislostí testovacího projektu. Upravte vlastnosti testovacího projektu tak, aby zahrnovaly záhlaví a soubory knihovny nebo objektů, které jsou požadovány pro testování částí.
 
-1. V Průzkumník řešení v místní nabídce testovacího projektu vyberte možnost **vlastnosti**. Otevře se okno Vlastnosti projektu.
+1. V Průzkumníku řešení v místní nabídce testovacího projektu zvolte **Vlastnosti**. Otevře se okno vlastností projektu.
 
-1. Vyberte **konfigurační** stránku > **linker** > **input** a pak vyberte **Další závislosti**.
+1. Vyberte vstupní stránku > **Položky** **linkeru** **vlastností** > konfigurace a pak vyberte **Další závislosti**.
 
-   Zvolte **upravit**a přidejte názvy **.obj** nebo **lib** soubory. Nepoužívejte názvy úplných cest.
+   Zvolte **Upravit**a přidejte názvy souborů **OBJ** nebo **LIB.** Nepoužívejte úplné názvy cest.
 
-1. Vyberte **konfigurační vlastnosti** > **linker** > stránce **Obecné** a pak vyberte **Další adresáře knihoven**.
+1. Vyberte stránku Configuration **Properties** > **Linker** > **General** a pak vyberte **Další adresáře knihovny**.
 
-   Zvolte **upravit**a přidejte cestu k adresáři **.obj** nebo **lib** soubory. Cesta je obvykle ve složce sestavení testovaného projektu.
+   Zvolte **Upravit**a přidejte cestu k adresáři souborů **OBJ** nebo **LIB.** Cesta je obvykle ve složce sestavení testovného projektu.
 
-1. Vyberte **Vlastnosti konfigurace** > **adresáře VC + +** a pak vyberte **Zahrnout adresáře**.
+1. Vyberte stránku **Vlastnosti** > konfigurace**VC++ Adresáře** a pak vyberte **Zahrnout adresáře**.
 
-   Zvolte **upravit**a poté přidejte hlavní adresář testovaného projektu.
+   Zvolte **Upravit**a přidejte adresář záhlaví testovce projektu.
 
-## <a name="write-the-tests"></a>Zápis testů
+## <a name="write-the-tests"></a>Napište testy
 
-Žádné *.cpp* soubor s testovacích tříd musí obsahovat "CppUnitTest.h" a obsahovat using příkazu pro `using namespace Microsoft::VisualStudio::CppUnitTestFramework`. Projekt testů už je nakonfigurovaný pro vás. Zahrnuje také definice oboru názvů a TEST_CLASS s TEST_METHOD, které vám pomůžou začít. Můžete upravit název oboru názvů a názvy v závorkách v makrech třídy a metody.
+Jakýkoli soubor *CPP* s testovacími třídami musí obsahovat "CppUnitTest.h" a musí mít příkaz using pro `using namespace Microsoft::VisualStudio::CppUnitTestFramework`. Testovací projekt je již nakonfigurován pro vás. Obsahuje také definici oboru názvů a TEST_CLASS s TEST_METHOD, který vám pomůže začít. Název oboru názvů a názvy v závorcích v makrech třídy a metody můžete změnit.
 
-Testovací rozhraní definuje speciální makra pro inicializaci testovacích modulů, tříd a metod a pro vyčištění prostředků po dokončení testů. Tato makra generují kód, který se má provést před prvním otevřením třídy nebo metody, a po spuštění posledního testu. Další informace najdete v tématu [inicializace a vyčištění](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md#Initialize_and_cleanup).
+Testovací rámec definuje speciální makra pro inicializaci testovacích modulů, tříd a metod a pro vyčištění prostředků po dokončení testů. Tato makra generují kód, který se má spustit před prvním přístupem třídy nebo metody a po spuštění posledního testu. Další informace naleznete v [tématu Inicializovat a vyčistit](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md#Initialize_and_cleanup).
 
-Používají statické metody v [Assert](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md#general_asserts) třídy definovat podmínky testu. Použití [protokolovací nástroj](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md#logger) třídu pro zápis zpráv do **okno výstup**. Přidat atributy s testovacími metodami
+Použijte statické metody ve třídě [Assert](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md#general_asserts) k definování testovacích podmínek. Pomocí třídy [Logger](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md#logger) zapisovat zprávy do **okna výstup .** Přidání atributů do testovacích metod
 
-## <a name="run-the-tests"></a>Spustit testy
+## <a name="run-the-tests"></a>Spuštění testů
 
-1. Na **testovací** nabídce zvolte **Windows** > **Průzkumník testů**.
+1. V nabídce **Test** zvolte**Průzkumník testů systému** **Windows** > .
 
-1. Pokud nejsou všechny testy v okně viditelné, sestavte projekt testu kliknutím pravým tlačítkem myši na jeho uzel v **Průzkumník řešení** a výběrem možnosti **sestavit** nebo **znovu sestavit**.
+1. Pokud nejsou všechny testy viditelné v okně, vytvořte testovací projekt kliknutím pravým tlačítkem myši na jeho uzel v **Průzkumníku řešení** a zvolte **Sestavit** nebo **znovu sestavit**.
 
-1. V **Průzkumník testů**, zvolte **spustit všechny**, nebo vyberte konkrétní testy, které chcete spustit. Klikněte pravým tlačítkem myši na test pro další možnosti, včetně spuštění v režimu ladění se zarážkami povolené.
+1. V **Průzkumníkovi testů**zvolte **Spustit vše**nebo vyberte konkrétní testy, které chcete spustit. Klepněte pravým tlačítkem myši na test pro další možnosti, včetně spuštění v režimu ladění s povolenými zarážkymi.
 
-1. V **okno výstup** v rozevíracím seznamu vyberte možnost **testy** , abyste zobrazili zprávy zapsané `Logger` třídou:
+1. V **okně Výstup** zvolte **testy** v rozevíracím seznamku pro zobrazení zpráv zapsaných třídou: `Logger`
 
-   ![Okno výstup C++ zkušební zprávy](media/cpp-test-output-window.png)
+   ![Výstupní okno C++ zobrazující testovací zprávy](media/cpp-test-output-window.png)
 
-## <a name="define-traits-to-enable-grouping"></a>Definovat vlastnosti, které chcete povolit seskupování
+## <a name="define-traits-to-enable-grouping"></a>Definování vlastností umožňujících seskupování
 
-Můžete definovat vlastnosti v testovacích metodách, které umožňují kategorizaci a seskupení testů v **Průzkumníku testů**. Chcete-li definovat vlastnost, použijte `TEST_METHOD_ATTRIBUTE` – makro. Například pro definici znaku s názvem `TEST_MY_TRAIT`:
+Můžete definovat vlastnosti testovacích metod, které umožňují kategorizovat a seskupit testy v **Průzkumníku testů**. Chcete-li definovat vlastnost, `TEST_METHOD_ATTRIBUTE` použijte makro. Chcete-li například definovat `TEST_MY_TRAIT`vlastnost s názvem :
 
 ```cpp
 #define TEST_MY_TRAIT(traitValue) TEST_METHOD_ATTRIBUTE(L"MyTrait", traitValue)
 ```
 
-Použití definované vlastnosti v testech jednotek:
+Použití definovanévlastnosti v testování částí:
 
 ```cpp
 BEGIN_TEST_METHOD_ATTRIBUTE(Method1)
@@ -106,16 +106,16 @@ TEST_METHOD(Method1)
 }
 ```
 
-### <a name="c-trait-attribute-macros"></a>Atributy a makra C++ vlastností
+### <a name="c-trait-attribute-macros"></a>Makra atributu vlastností jazyka C++
 
-Následující předdefinované vlastnosti se nacházejí v `CppUnitTest.h`. Další informace najdete v tématu [Microsoft Unit Testing Framework pro reference k rozhraní API C++](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md).
+Následující předdefinované znaky se nacházejí `CppUnitTest.h`v . Další informace naleznete [v tématu Microsoft Unit Testing Framework for C++ API reference](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md).
 
-|– Makro|Popis|
+|Makro|Popis|
 |-|-----------------|
-|`TEST_METHOD_ATTRIBUTE(attributeName, attributeValue)`|Chcete-li definovat vlastnost, použijte makro TEST_METHOD_ATTRIBUTE.|
-|`TEST_OWNER(ownerAlias)`|Použijte předdefinovanou vlastnost Owner k zadání vlastníka testovací metody.|
-|`TEST_PRIORITY(priority)`|Pomocí předdefinované vlastnosti Priority přiřaďte relativní priority testovacím metodám.|
+|`TEST_METHOD_ATTRIBUTE(attributeName, attributeValue)`|Pomocí TEST_METHOD_ATTRIBUTE makra definujte vlastnost.|
+|`TEST_OWNER(ownerAlias)`|Pomocí předdefinované vlastnosti vlastníka určete vlastníka testovací metody.|
+|`TEST_PRIORITY(priority)`|Pomocí předdefinovaného znaku Priorita přiřaďte testovacím metodám relativní priority.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Rychlý start: Testovací řízeného rozvoje pomocí Průzkumníka testů](../test/quick-start-test-driven-development-with-test-explorer.md)
+- [Úvodní příručka: Vývoj řízený testováním pomocí Průzkumníka testů](../test/quick-start-test-driven-development-with-test-explorer.md)

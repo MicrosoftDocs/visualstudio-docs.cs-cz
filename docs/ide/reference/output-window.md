@@ -17,23 +17,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: be028af8ab9f458c1fadad6f8b2fcbd6aaa49a04
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75567980"
 ---
-# <a name="output-window"></a>Výstup – okno
+# <a name="output-window"></a>Okno Výstup
 
-V okně **výstup** se zobrazí stavové zprávy pro různé funkce v integrovaném vývojovém prostředí (IDE). Chcete-li otevřít okno **výstup** , v řádku nabídek zvolte možnost **Zobrazit** > **výstup**nebo stiskněte klávesovou **zkratku CTRL**+**ALT**+**O**.
+Okno **Výstup** zobrazuje stavové zprávy pro různé funkce v integrovaném vývojovém prostředí (IDE). Chcete-li otevřít okno **Výstup,** zvolte na řádku nabídek **možnost Zobrazit** > **výstup**nebo stiskněte **kombinaci kláves Ctrl**+**Alt**+**O**.
 
 ## <a name="toolbar"></a>Panel nástrojů
 
-Následující ovládací prvky jsou zobrazeny na panelu nástrojů okna **výstup** .
+Následující ovládací prvky jsou zobrazeny na panelu nástrojů okna **Výstup.**
 
 ### <a name="show-output-from"></a>Zobrazit výstup z
 
-Zobrazí jednu nebo více podoken výstupu k zobrazení. V závislosti na tom, které nástroje v integrovaném vývojovém prostředí používaly okno **výstup** k doručování zpráv uživateli, může být k dispozici několik podoken informací.
+Zobrazí jedno nebo více výstupních podoken, které chcete zobrazit. Několik podoken informací může být k dispozici v závislosti na tom, které nástroje v rozhraní IDE použily okno **Výstup** k doručování zpráv uživateli.
 
 ### <a name="find-message-in-code"></a>Najít zprávu v kódu
 
@@ -41,42 +41,42 @@ Přesune kurzor v editoru kódu na řádek, který obsahuje vybranou chybu sesta
 
 ### <a name="go-to-previous-message"></a>Přejít na předchozí zprávu
 
-Změní fokus v okně **výstup** na předchozí chybu sestavení a přesune kurzor v editoru kódu na řádek, který obsahuje chybu sestavení.
+Změní fokus v okně **Výstup** na předchozí chybu sestavení a přesune kurzor v editoru kódu na řádek, který obsahuje tuto chybu sestavení.
 
 ### <a name="go-to-next-message"></a>Přejít na další zprávu
 
-Změní fokus v okně **výstup** na další chybu sestavení a přesune kurzor v editoru kódu na řádek, který obsahuje chybu sestavení.
+Změní fokus v okně **Výstup** na další chybu sestavení a přesune kurzor v editoru kódu na řádek, který obsahuje tuto chybu sestavení.
 
 ### <a name="clear-all"></a>Vymazat vše
 
-Vymaže veškerý text z podokna **výstup** .
+Vymaže veškerý text z **podokna Výstup.**
 
-### <a name="toggle-word-wrap"></a>Změnit zalamování řádků
+### <a name="toggle-word-wrap"></a>Přepnout zalamování řádků
 
-Zapne nebo vypne funkci zalamování řádků v podokně **výstup** . Když je zapnuto zalamování řádků, text v delších položkách, které se rozšíří mimo oblast zobrazení, se zobrazí na následujícím řádku.
+Zapíná a vypíná funkci Zalamování řádků v podokně **Výstup.** Když je zalamování řádků zapnuto, text v delších položkách, které přesahují oblast zobrazení, se zobrazí na následujícím řádku.
 
-## <a name="output-pane"></a>Podokno výstup
+## <a name="output-pane"></a>Podokno Výstup
 
-Podokno **výstup** vybrané v seznamu **Zobrazit výstup z** zobrazuje výstup z označeného zdroje.
+**Podokno Výstup** vybrané v seznamu **Zobrazit výstup ze** seznamu zobrazuje výstup z uvedeného zdroje.
 
-## <a name="route-messages-to-the-output-window"></a>Směrovat zprávy do okna výstup
+## <a name="route-messages-to-the-output-window"></a>Směrování zpráv do okna Výstup
 
-Chcete-li zobrazit okno **výstup** vždy, když sestavíte projekt, v dialogovém okně **Možnosti** na stránce **projekty a řešení** > **Obecné** vyberte možnost **Zobrazit okno výstup při zahájení sestavování**. Pak se souborem kódu otevřeným pro úpravy zvolte **Přejít na další zpráva** a **Přejít na předchozí zprávu** na panelu nástrojů okna **výstup** a vyberte položky v podokně **výstup** . V takovém případě kurzor v editoru kódu přejde na řádek kódu, kde se vyskytuje vybraný problém.
+Chcete-li zobrazit okno **Výstup** při každém vytváření projektu, v dialogovém okně **Možnosti** na stránce **Projekty a řešení** > **obecné** vyberte zobrazit okno Výstup při **spuštění sestavení**. Potom s otevřeným souborem kódu pro úpravy zvolte **Přejít na Další zprávu** a **Přejít** na předchozí zprávu na panelu nástrojů okna **Výstup** a vyberte položky v podokně **Výstup.** Při tomto spuštění kurzor v editoru kódu přejde na řádek kódu, kde dojde k vybranému problému.
 
-Některé funkce a příkazy rozhraní IDE vyvolané v [okno příkaz](../../ide/reference/command-window.md) doručí výstup do okna **výstup** . Výstup z externích nástrojů, jako jsou soubory *. bat* a *. com* , které jsou obvykle zobrazeny v příkazovém okně, je směrován do podokna **výstup** , když vyberete možnost **použít okno výstup** v části [spravovat externí nástroje](../../ide/managing-external-tools.md). V podoknech **výstup** lze také zobrazit mnoho dalších typů zpráv. Například v případě, že syntaxe Transact-SQL v uložené proceduře je kontrolována na cílovou databázi, výsledky se zobrazí v okně **výstup** .
+Některé funkce a příkazy ide vyvolané v [okně příkazu](../../ide/reference/command-window.md) doručují svůj výstup do okna **Výstup.** Výstup z externích nástrojů, jako jsou soubory *BAT* a *.com,* který se obvykle zobrazuje v příkazovém okně, je směrován do **podokna Výstup,** když vyberete možnost **Použít okno výstupu** v [aplikaci Manage external tools](../../ide/managing-external-tools.md). Mnoho dalších druhů zpráv lze zobrazit také v podokně **Výstup.** Například při Transact-SQL syntaxe v uložené proceduře je kontrolována proti cílové databázi, výsledky jsou zobrazeny v okně **Výstup.**
 
-Můžete také programovat vlastní aplikace pro zápis diagnostických zpráv v době běhu do podokna **výstup** . Chcete-li to provést, použijte členy třídy <xref:System.Diagnostics.Debug> nebo <xref:System.Diagnostics.Trace> třídy v oboru názvů <xref:System.Diagnostics> rozhraní .NET API. Členové třídy <xref:System.Diagnostics.Debug> zobrazují výstup při sestavování konfigurací ladění vašeho řešení nebo projektu. Při sestavování konfigurací ladění nebo vydání jsou členy třídy <xref:System.Diagnostics.Trace> zobrazeny výstup. Další informace naleznete v části [diagnostické zprávy v okně výstup](../../debugger/diagnostic-messages-in-the-output-window.md).
+Můžete také naprogramovat vlastní aplikace pro zápis diagnostických zpráv za běhu do podokna **Výstup.** Chcete-li to provést, <xref:System.Diagnostics.Debug> použijte <xref:System.Diagnostics.Trace> členy <xref:System.Diagnostics> třídy nebo třídy v oboru názvů rozhraní .NET API. Členové třídy <xref:System.Diagnostics.Debug> zobrazit výstup při vytváření konfigurace ladění vašeho řešení nebo projektu; členové třídy <xref:System.Diagnostics.Trace> zobrazí výstup při vytváření konfigurací ladění nebo vydání. Další informace naleznete [v tématu Diagnostické zprávy v okně Výstup](../../debugger/diagnostic-messages-in-the-output-window.md).
 
-V C++nástroji můžete vytvořit vlastní kroky sestavení a události sestavení, jejichž upozornění a chyby jsou zobrazeny a počítány v podokně **výstup** . Stisknutím **klávesy F1** na řádku výstupu můžete zobrazit příslušné téma nápovědy. Další informace najdete v tématu [formátování výstupu vlastního kroku sestavení](/cpp/build/formatting-the-output-of-a-custom-build-step-or-build-event).
+V jazyce C++ můžete vytvořit vlastní kroky sestavení a vytvářet události, jejichž upozornění a chyby jsou zobrazeny a počítány v podokně **Výstup.** Stisknutím **klávesy F1** na řádku výstupu můžete zobrazit příslušné téma nápovědy. Další informace naleznete [v tématu Formátování výstupu vlastního kroku sestavení](/cpp/build/formatting-the-output-of-a-custom-build-step-or-build-event).
 
 ## <a name="scroll-behavior"></a>Chování posouvání
 
-Použijete-li automatické posouvání v okně **výstup** a pak přejdete pomocí myši nebo kláves se šipkami, automatické posouvání se zastaví. Automatické posouvání obnovíte stisknutím **kláves Ctrl**+**End**.
+Pokud používáte automatické posouvání v okně **Výstup** a potom se můžete pohybovat pomocí kláves myši nebo kláves se šipkami, automatické posouvání se zastaví. Chcete-li pokračovat v automatickém posouvání, stiskněte **klávesu Ctrl**+**End**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Diagnostické zprávy v okně výstup](../../debugger/diagnostic-messages-in-the-output-window.md)
-- [Postupy: řízení okna výstupu](https://msdn.microsoft.com/Library/91aebd15-8854-4a7a-9f7d-57376fb4e858)
+- [Diagnostické zprávy v okně Výstup](../../debugger/diagnostic-messages-in-the-output-window.md)
+- [Postup: Ovládání okna Výstup](https://msdn.microsoft.com/Library/91aebd15-8854-4a7a-9f7d-57376fb4e858)
 - [Kompilace a sestavení](../../ide/compiling-and-building-in-visual-studio.md)
-- [Principy konfigurací sestavení](../../ide/understanding-build-configurations.md)
+- [Vysvětlení konfigurací sestavení](../../ide/understanding-build-configurations.md)
 - [Přehled knihovny tříd](/dotnet/standard/class-library-overview)

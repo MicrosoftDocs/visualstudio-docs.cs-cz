@@ -1,5 +1,5 @@
 ---
-title: ProjectExtensions – – element (MSBuild) | Microsoft Docs
+title: Element ProjectExtensions (MSBuild) | Dokumenty společnosti Microsoft
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -19,17 +19,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 94f2d88aa19bf01ebe6f25c7d80772c812abcc59
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632963"
 ---
-# <a name="projectextensions-element-msbuild"></a>ProjectExtensions – – element (MSBuild)
+# <a name="projectextensions-element-msbuild"></a>Prvek ProjectExtensions (MSBuild)
 
-Povoluje souborům projektu MSBuild, aby obsahovaly informace, které nejsou v MSBuild. Nástroj MSBuild bude ignorovat cokoli uvnitř elementu `ProjectExtensions`.
+Umožňuje souborům projektu MSBuild obsahovat informace, které nejsou součástí msbuildu. Nic uvnitř `ProjectExtensions` prvku bude ignorována MSBuild.
 
- \<> projektu \<ProjectExtensions – >
+ \<> \<Rozšíření projektu>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,31 +39,31 @@ Povoluje souborům projektu MSBuild, aby obsahovaly informace, které nejsou v M
 </ProjectExtensions>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
 
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
- Žádná
+ Žádný
 
 ### <a name="child-elements"></a>Podřízené prvky
 
- Žádná
+ Žádný
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-| Prvek | Popis |
+| Element | Popis |
 | - | - |
-| [Projektem](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
+| [Projektu](../msbuild/project-element-msbuild.md) | Požadovaný kořenový prvek souboru projektu MSBuild. |
 
 ## <a name="remarks"></a>Poznámky
 
- V projektu MSBuild lze použít pouze jeden prvek `ProjectExtensions`.
+ V `ProjectExtensions` projektu MSBuild lze použít pouze jeden prvek.
 
 ## <a name="example"></a>Příklad
 
- Následující příklad kódu ukazuje informace z integrovaného vývojového prostředí, které je uloženo v `ProjectExtensions` elementu.
+ Následující příklad kódu ukazuje informace z integrovaného `ProjectExtensions` vývojového prostředí, které jsou uloženy v prvku.
 
 ```xml
 <ProjectExtensions>
@@ -79,5 +79,5 @@ Povoluje souborům projektu MSBuild, aby obsahovaly informace, které nejsou v M
 
 ## <a name="see-also"></a>Viz také
 
-- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
-- [MSBuild](../msbuild/msbuild.md)
+- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Msbuild](../msbuild/msbuild.md)

@@ -1,5 +1,5 @@
 ---
-title: ItemMetadata – – element (MSBuild) | Microsoft Docs
+title: Element ItemMetadata (MSBuild) | Dokumenty společnosti Microsoft
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -17,17 +17,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 18e1722fcd6867ca5e8ae52e220ff0a3dd2a3b7f
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633613"
 ---
-# <a name="itemmetadata-element-msbuild"></a>ItemMetadata – – element (MSBuild)
+# <a name="itemmetadata-element-msbuild"></a>Element ItemMetadata (MSBuild)
 
-Obsahuje klíč metadat položky definovaný uživatelem, který obsahuje hodnotu metadat položky. Položka může mít libovolný počet párů klíč-hodnota metadat.
+Obsahuje uživatelem definovaný klíč metadat položky, který obsahuje hodnotu metadat položky. Položka může mít libovolný počet párů klíč hodnota metadata.
 
- \<projektu > \<položka > \<položka >
+ \<> \<položky \<> položky položky položky položky skupiny položky> projektu
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,7 +35,7 @@ Obsahuje klíč metadat položky definovaný uživatelem, který obsahuje hodnot
 <ItemMetadataName> Item Metadata value</ItemMetadataName>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
 
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
@@ -43,7 +43,7 @@ Obsahuje klíč metadat položky definovaný uživatelem, který obsahuje hodnot
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
+|`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace naleznete v tématu [Podmínky](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
@@ -51,19 +51,19 @@ Obsahuje klíč metadat položky definovaný uživatelem, který obsahuje hodnot
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Položka](../msbuild/item-element-msbuild.md)|Uživatelsky definovaný element definující vstupy procesu sestavení.|
+|[Položka](../msbuild/item-element-msbuild.md)|Uživatelem definovaný prvek, který definuje vstupy pro proces sestavení.|
 
 ## <a name="text-value"></a>Textová hodnota
 
  Textová hodnota je volitelná.
 
- Tento text určuje hodnotu metadat položky, která může být buď text, nebo XML.
+ Tento text určuje hodnotu metadat položky, která může být text nebo XML.
 
 ## <a name="example"></a>Příklad
 
- Následující příklad kódu ukazuje, jak přidat `Culture` metadata s hodnotou `fr` do `CSFile`položky.
+ Následující příklad kódu ukazuje, `Culture` jak přidat `fr` metadata `CSFile`s hodnotou do položky .
 
 ```xml
 <ItemGroup>
@@ -75,5 +75,5 @@ Obsahuje klíč metadat položky definovaný uživatelem, který obsahuje hodnot
 
 ## <a name="see-also"></a>Viz také
 
-- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
-- [Položky](../msbuild/msbuild-items.md)
+- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Items](../msbuild/msbuild-items.md)

@@ -1,5 +1,5 @@
 ---
-title: Property – element (MSBuild) | Microsoft Docs
+title: Prvek vlastnosti (MSBuild) | Dokumenty společnosti Microsoft
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -17,17 +17,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e50a6dd66c2dca7fa4159c578ccd334ed1d26cae
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77632950"
 ---
-# <a name="property-element-msbuild"></a>Property – element (MSBuild)
+# <a name="property-element-msbuild"></a>Element vlastnosti (MSBuild)
 
-Obsahuje uživatelsky definovaný název a hodnotu vlastnosti. Každá vlastnost použitá v projektu MSBuild musí být zadána jako podřízený prvku `PropertyGroup`.
+Obsahuje uživatelem definovaný název a hodnotu vlastnosti. Každá vlastnost použitá v projektu MSBuild musí `PropertyGroup` být zadána jako podřízený prvek.
 
- \<> projektu \<vlastnost >
+ \<> \<skupiny vlastností projektu>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,7 +37,7 @@ Obsahuje uživatelsky definovaný název a hodnotu vlastnosti. Každá vlastnost
 </Property>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
 
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
@@ -45,7 +45,7 @@ Obsahuje uživatelsky definovaný název a hodnotu vlastnosti. Každá vlastnost
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
+|`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace naleznete v tématu [Podmínky](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
@@ -53,9 +53,9 @@ Obsahuje uživatelsky definovaný název a hodnotu vlastnosti. Každá vlastnost
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|Seskupení elementu pro vlastnosti|
+|[Propertygroup](../msbuild/propertygroup-element-msbuild.md)|Seskupení element pro vlastnosti.|
 
 ## <a name="text-value"></a>Textová hodnota
 
@@ -65,11 +65,11 @@ Obsahuje uživatelsky definovaný název a hodnotu vlastnosti. Každá vlastnost
 
 ## <a name="remarks"></a>Poznámky
 
- Názvy vlastností jsou omezeny pouze na znaky ASCII. Hodnoty vlastností jsou odkazovány v projektu umístěním názvu vlastnosti mezi "`$(`" a "`)`". Například `$(builddir)\classes` by se přeložila na *build\classes*, pokud má vlastnost `builddir` hodnotu `build`. Další informace o vlastnostech naleznete v tématu [vlastnosti MSBuild](../msbuild/msbuild-properties.md).
+ Názvy vlastností jsou omezeny pouze na znaky ASCII. Hodnoty vlastností jsou v projektu odkazovány umístěním názvu vlastnosti mezi "`$(`" a "`)`". Například `$(builddir)\classes` by přeložit *build\classes*, `builddir` pokud vlastnost `build`měla hodnotu . Další informace o vlastnostech naleznete v tématu [MSBuild properties](../msbuild/msbuild-properties.md).
 
 ## <a name="example"></a>Příklad
 
- Následující kód nastaví vlastnost `Optimization` na `false` a vlastnost `DefaultVersion` na `1.0`, pokud je vlastnost `Version` prázdná.
+ Následující kód `Optimization` nastaví `false` vlastnost `DefaultVersion` a `1.0` vlastnost, `Version` pokud je vlastnost prázdná.
 
 ```xml
 <PropertyGroup>
@@ -80,5 +80,5 @@ Obsahuje uživatelsky definovaný název a hodnotu vlastnosti. Každá vlastnost
 
 ## <a name="see-also"></a>Viz také
 
-- [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)
-- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Vlastnosti MSBuild](../msbuild/msbuild-properties.md)
+- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

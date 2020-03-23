@@ -8,65 +8,65 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 313083090c94c94f4e196e87f3bf6cf6df36e118
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565250"
 ---
 # <a name="create-a-unit-test-project"></a>Vytvoření projektu testování částí
 
-Testy jednotek často zrcadlí struktury kódu v rámci testu. Pro každého kódu projektu v produktu by například vytvořit projekt testování částí. Projekt testů může být ve stejném řešení jako produkční kód nebo může být v samostatném řešení. Můžete mít více jednotek testování projektů v řešení.
+Jednotkové testy často zrcadlí strukturu testovaného kódu. Například projekt testování částí by být vytvořen pro každý projekt kódu v produktu. Testovací projekt může být ve stejném řešení jako produkční kód, nebo může být v samostatném řešení. V řešení můžete mít více projektů testování částí.
 
 > [!NOTE]
-> Umístění testů jednotek pro nativní kód a strukturu testovacího projektu se může lišit od struktury popsané v tomto článku. Další informace najdete v tématu [zápis testů jednotek pro C/C++](writing-unit-tests-for-c-cpp.md).
+> Umístění testů částí pro nativní kód a strukturu testovacího projektu se může lišit od struktury popsané v tomto článku. Další informace naleznete [v tématu Zápis testů částí pro C/C++](writing-unit-tests-for-c-cpp.md).
 
-## <a name="to-create-a-unit-test-project"></a>Vytvoření projektu testu jednotek
+## <a name="to-create-a-unit-test-project"></a>Vytvoření projektu testování částí
 
-1. V nabídce **soubor** zvolte položku **Nový** > **projekt**nebo stiskněte klávesu **CTRL**+**SHIFT**+**N**.
+1. V nabídce **Soubor** zvolte **Nový** > **projekt**nebo stiskněte **Ctrl**+**Shift**+**N**.
 
 ::: moniker range="vs-2017"
 
-2. V **nový projekt** dialogového okna rozbalte **nainstalováno** uzlu, vyberte jazyk, který chcete použít pro testovací projekt a pak zvolte **testování**.
+2. V dialogovém okně **Nový projekt** rozbalte **nainstalovaný** uzel, zvolte jazyk, který chcete použít pro testovací projekt, a pak zvolte **Testovat**.
 
-3. Vyberte šablonu projektu pro testovací rozhraní, které chcete použít, například **projekt testů MSTest** nebo **projekt testů nunit**. Pojmenujte projekt a klikněte na **tlačítko OK**.
+3. Vyberte šablonu projektu pro testovací architekturu, kterou chcete použít, například **MSTest Test Project** nebo **NUnit Test Project**. Pojmenujte projekt a pak zvolte **OK**.
 
-   ![Testování šablon projektů v aplikaci Visual Studio 2017](media/test-project-templates.png)
+   ![Testování šablon projektů ve Visual Studiu 2017](media/test-project-templates.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Na stránce **vytvořit nový projekt** zadejte do vyhledávacího pole text **Test jednotky** . Vyberte šablonu projektu pro testovací rozhraní, které chcete použít, například **projekt testů MSTest** nebo **projekt testů nunit**a pak zvolte možnost **Další**.
+2. Na stránce **Vytvořit nový projekt** zadejte do vyhledávacího pole test **částí.** Vyberte šablonu projektu pro testovací architekturu, kterou chcete použít, například **MSTest Test Project** nebo **NUnit Test Project**, a pak zvolte **Další**.
 
-   ![Testování šablon projektů v aplikaci Visual Studio 2019](media/vs-2019/test-project-templates.png)
+   ![Testování šablon projektů ve Visual Studiu 2019](media/vs-2019/test-project-templates.png)
 
-3. Na stránce **Konfigurace nového projektu** zadejte název projektu a pak zvolte **vytvořit**.
+3. Na stránce **Konfigurovat nový projekt** zadejte název projektu a pak zvolte **Vytvořit**.
 
 ::: moniker-end
 
 4. V projektu testování částí přidejte odkaz na testovaný kód. Chcete-li přidat odkaz na projekt kódu ve stejném řešení:
 
-   1. Vyberte projekt testů v **Průzkumník řešení**.
+   1. Vyberte testovací projekt v **Průzkumníku řešení**.
 
-   2. Na **projektu** nabídce zvolte **přidat odkaz**.
+   2. V nabídce **Projekt** zvolte **Přidat odkaz**.
 
-   3. V okně **Správce odkazů**vyberte uzel **řešení** v části **projekty**. Vyberte projekt kódu, který chcete otestovat, a pak vyberte **OK**.
+   3. Ve **Správci odkazů**vyberte uzel **Řešení** v části **Projekty**. Vyberte projekt kódu, který chcete testovat, a pak vyberte **OK**.
 
-   Pokud je kód, který chcete testovat, v jiném umístění, přečtěte si téma [Správa odkazů v projektu](../ide/managing-references-in-a-project.md) , kde najdete informace o přidání odkazu.
+   Pokud je kód, který chcete testovat, v jiném umístění, přečtěte si informace o přidání odkazu [v tématu Správa odkazů v projektu.](../ide/managing-references-in-a-project.md)
 
 ## <a name="next-steps"></a>Další kroky
 
-Přečtěte si následující části:
+Podívejte se na jednu z následujících částí:
 
-**Zápis testů jednotek**
+**Psaní testů částí**
 
 - [Testování částí kódu](../test/unit-test-your-code.md)
 
-- [Zápis testů jednotek pro C/C++](writing-unit-tests-for-c-cpp.md)
+- [Zápis testů částí pro C/C++](writing-unit-tests-for-c-cpp.md)
 
-- [Použití rozhraní MSTest při testech jednotek](using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)
+- [Použití architektury MSTest v jednotkových testech](using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)
 
-**Provádění testů jednotek**
+**Spuštění testů částí**
 
 - [Spouštění testování částí pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md)

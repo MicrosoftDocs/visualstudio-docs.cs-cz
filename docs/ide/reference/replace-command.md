@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 620e55938a9c96393d8cd7de6f238d3f98715d29
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596681"
 ---
 # <a name="replace-command"></a>Nahradit – příkaz
-Nahradí text v souborech pomocí podmnožiny možností, které jsou k dispozici na kartě **nahradit v souborech** okna **Najít a nahradit** .
+Nahradí text v souborech pomocí podmnožiny voleb dostupných na kartě **Nahradit v souborech** v okně **Najít a nahradit.**
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,79 +31,79 @@ Edit.Replace findwhat replacewith [/all] [/case]
 [/wild|/regex] [/word]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 `findwhat`
 
-Požadováno. Text, který se má shodovat.
+Povinná hodnota. Text, který má odpovídat.
 
 `replacewith`
 
-Požadováno. Text, který má být nahrazen odpovídajícím textem
+Povinná hodnota. Text, který má nahradit odpovídající text.
 
 ## <a name="switches"></a>Přepínače
-/All nebo/a
+/všechny nebo /a
 
-Volitelné. Nahradí všechny výskyty hledaného textu náhradním textem.
+Nepovinný parametr. Nahradí všechny výskyty hledaného textu náhradním textem.
 
-/Case nebo/c
+/case nebo /c
 
-Volitelné. Shody se objeví pouze v případě, že se velká a malá písmena přesně shodují s hodnotami zadanými v argumentu `findwhat`.
+Nepovinný parametr. Shody dojít pouze v případě, že velká a `findwhat` malá písmena přesně odpovídají těm, které jsou zadány v argumentu.
 
-/doc nebo/d
+/doc nebo /d
 
-Volitelné. Vyhledá pouze aktuální dokument. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open`nebo `/sel`.
+Nepovinný parametr. Prohledá pouze aktuální dokument. Zadejte pouze jeden z dostupných `/proc` `/open`oborů `/sel`hledání , `/doc`, , nebo .
 
-/Hidden nebo/h
+/hidden nebo /h
 
-Volitelné. Vyhledává skrytý a sbalený text, například metadata ovládacího prvku v době návrhu, skryté oblasti naznačeného dokumentu nebo sbalené třídy nebo metody.
+Nepovinný parametr. Prohledá skrytý a sbalený text, například metadata ovládacího prvku v době návrhu, skrytou oblast obrysového dokumentu nebo sbalenou třídu nebo metodu.
 
-/Open nebo/o
+/open nebo /o
 
-Volitelné. Vyhledá všechny otevřené dokumenty, jako by se jednalo o jeden dokument. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open`nebo `/sel`.
+Nepovinný parametr. Prohledává všechny otevřené dokumenty, jako by se jednalo o jeden dokument. Zadejte pouze jeden z dostupných `/proc` `/open`oborů `/sel`hledání , `/doc`, , nebo .
 
-/Options nebo/t
+/options nebo /t
 
-Volitelné. Zobrazí seznam aktuálních nastavení možností hledání a neprovádí hledání.
+Nepovinný parametr. Zobrazí seznam aktuálního nastavení možností hledání a neprovede vyhledávání.
 
-/Proc nebo/p
+/proc nebo /p
 
-Volitelné. Vyhledá pouze aktuální proceduru. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open`nebo `/sel`.
+Nepovinný parametr. Prohledá pouze aktuální postup. Zadejte pouze jeden z dostupných `/proc` `/open`oborů `/sel`hledání , `/doc`, , nebo .
 
-/Regex nebo/r
+/regulární výraz nebo /r
 
-Volitelné. Používá předem definované speciální znaky v argumentu `findwhat` jako notace, které reprezentují vzory textu, nikoli literální znaky. Úplný seznam znaků regulárních výrazů naleznete v tématu [regulární výrazy](../../ide/using-regular-expressions-in-visual-studio.md).
+Nepovinný parametr. Používá předdefinované speciální znaky `findwhat` v argumentu jako zápisy, které představují vzorky textu spíše než literál znaky. Úplný seznam znaků regulárních výrazů naleznete [v tématu Regulární výrazy](../../ide/using-regular-expressions-in-visual-studio.md).
 
-/Reset po vyčištění nebo/e
+/reset nebo /e
 
-Volitelné. Vrátí možnosti hledání do jejich výchozího nastavení a neprovádí hledání.
+Nepovinný parametr. Vrátí možnosti hledání do výchozího nastavení a neprovede hledání.
 
-/SEL nebo/s
+/sel nebo /s
 
-Volitelné. Vyhledá pouze aktuální výběr. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open`nebo `/sel`.
+Nepovinný parametr. Prohledá pouze aktuální výběr. Zadejte pouze jeden z dostupných `/proc` `/open`oborů `/sel`hledání , `/doc`, , nebo .
 
-/up nebo/u
+/nahoru nebo /u
 
-Volitelné. Vyhledá z aktuálního umístění v souboru směrem k hornímu okraji souboru. Ve výchozím nastavení vyhledávání začíná na aktuálním umístění v souboru a předá směrem k dolnímu okraji souboru.
+Nepovinný parametr. Prohledává z aktuálního umístění v souboru směrem k horní části souboru. Ve výchozím nastavení hledání začíná v aktuálním umístění v souboru a postupují směrem k dolnímu částsouboru.
 
-/Wild nebo/l
+/wild nebo /l
 
-Volitelné. Používá předem definované speciální znaky v argumentu `findwhat` jako notace, které reprezentují znak nebo sekvenci znaků.
+Nepovinný parametr. Používá předdefinované speciální znaky `findwhat` v argumentu jako zápisy představující znak nebo posloupnost znaků.
 
-/Word nebo/w
+/slovo nebo /w
 
-Volitelné. Vyhledává pouze celá slova.
+Nepovinný parametr. Vyhledá pouze celá slova.
 
 ## <a name="example"></a>Příklad
-Tento příklad nahrazuje `btnSend` `btnSubmit` ve všech otevřených dokumentech.
+Tento příklad `btnSend` nahradí `btnSubmit` ve všech otevřených dokumentech.
 
 ```
 >Edit.Replace btnSend btnSubmit /open
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Hledání a nahrazení textu](../../ide/finding-and-replacing-text.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Pole Najít/příkaz](../../ide/find-command-box.md)
+- [Najít/Příkazové pole](../../ide/find-command-box.md)
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

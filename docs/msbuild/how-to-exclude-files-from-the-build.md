@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vyloučení souborů ze sestavení | Microsoft Docs'
+title: 'Postup: Vyloučit soubory ze sestavení | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,19 +13,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1914f709a69dbb120e4439ddceeda8b70ad570b4
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633860"
 ---
-# <a name="how-to-exclude-files-from-the-build"></a>Postupy: vyloučení souborů ze sestavení
+# <a name="how-to-exclude-files-from-the-build"></a>Postup: Vyloučení souborů ze sestavení
 
-V souboru projektu můžete použít zástupné znaky k zahrnutí všech souborů do jednoho adresáře nebo vnořené sady adresářů jako vstupů pro sestavení. Může však existovat jeden soubor v adresáři nebo jeden adresář ve vnořené sadě adresářů, které nechcete zahrnout jako vstup pro sestavení. Tento soubor nebo adresář můžete explicitně vyloučit ze seznamu vstupů. V projektu může být také soubor, který chcete zahrnout pouze za určitých podmínek. Můžete explicitně deklarovat podmínky, za kterých je soubor součástí sestavení.
+V souboru projektu můžete pomocí zástupných znaků zahrnout všechny soubory do jednoho adresáře nebo vnořenou sadu adresářů jako vstupy pro sestavení. V adresáři však může být jeden soubor nebo jeden adresář v vnořené sadě adresářů, které nechcete zahrnout jako vstup pro sestavení. Tento soubor nebo adresář můžete explicitně vyloučit ze seznamu vstupů. V projektu může být také soubor, který chcete zahrnout pouze za určitých podmínek. Můžete explicitně deklarovat podmínky, za kterých je soubor součástí sestavení.
 
 ## <a name="exclude-a-file-or-directory-from-the-inputs-for-a-build"></a>Vyloučení souboru nebo adresáře ze vstupů pro sestavení
 
- Seznamy položek jsou vstupní soubory pro sestavení. Položky, které chcete zahrnout, jsou deklarovány buď samostatně, nebo jako skupiny pomocí atributu `Include`. Příklad:
+ Seznamy položek jsou vstupní soubory pro sestavení. Položky, které chcete zahrnout, jsou deklarovány `Include` buď samostatně, nebo jako skupina používající atribut. Například:
 
 ```xml
 <CSFile Include="Form1.cs"/>
@@ -34,39 +34,39 @@ V souboru projektu můžete použít zástupné znaky k zahrnutí všech soubor�
 <JPGFile Include="Images\**\*.jpg"/>
 ```
 
- Pokud jste použili zástupné znaky, které budou zahrnovat všechny soubory v jednom adresáři nebo vnořené sady adresářů jako vstupy pro sestavení, může existovat jeden nebo více souborů v adresáři nebo v jednom adresáři v rámci vnořené sady adresářů, které nechcete zahrnout. Chcete-li vyloučit položku ze seznamu položek, použijte atribut `Exclude`.
+ Pokud jste pomocí zástupných znaků zahrnuli všechny soubory do jednoho adresáře nebo vnořenou sadu adresářů jako vstupy pro sestavení, může být v adresáři jeden nebo více souborů nebo jeden adresář v vnořené sadě adresářů, které nechcete zahrnout. Chcete-li položku ze seznamu `Exclude` položek vyloučit, použijte atribut.
 
-#### <a name="to-include-all-cs-or-vb-files-except-form2"></a>Zahrnutí všech souborů *. cs* nebo *. vb* s výjimkou *Form2*
+#### <a name="to-include-all-cs-or-vb-files-except-form2"></a>Zahrnout všechny soubory *CS* nebo *.vb* kromě *form2*
 
-- Použijte jeden z následujících `Include` a atributy `Exclude`:
+- Použijte jednu `Include` z `Exclude` následujících možností a atributů:
 
     ```xml
     <CSFile Include="*.cs" Exclude="Form2.cs"/>
     ```
 
-    nebo
+    – nebo –
 
     ```xml
     <VBFile Include="*.vb" Exclude="Form2.vb"/>
     ```
 
-#### <a name="to-include-all-cs-or-vb-files-except-form2-and-form3"></a>Zahrnutí všech souborů *. cs* nebo *. vb* s výjimkou *Form2* a *Form3*
+#### <a name="to-include-all-cs-or-vb-files-except-form2-and-form3"></a>Zahrnutí všech souborů *CS* nebo *.vb* kromě *for2* a *form3*
 
-- Použijte jeden z následujících `Include` a atributy `Exclude`:
+- Použijte jednu `Include` z `Exclude` následujících možností a atributů:
 
     ```xml
     <CSFile Include="*.cs" Exclude="Form2.cs;Form3.cs"/>
     ```
 
-    nebo
+    – nebo –
 
     ```xml
     <VBFile Include="*.vb" Exclude="Form2.vb;Form3.vb"/>
     ```
 
-#### <a name="to-include-all-jpg-files-in-subdirectories-of-the-images-directory-except-those-in-the-version2-directory"></a>Zahrnutí všech souborů *. jpg* v podadresářích adresáře *imagí* s výjimkou těch v adresáři *Version2*
+#### <a name="to-include-all-jpg-files-in-subdirectories-of-the-images-directory-except-those-in-the-version2-directory"></a>Zahrnutí všech souborů *JPG* do podadresářů *adresáře Obrázky* s výjimkou souborů v adresáři *Version2*
 
-- Použijte následující `Include` a atributy `Exclude`:
+- Použijte následující `Include` `Exclude` a atributy:
 
     ```xml
     <JPGFile
@@ -75,15 +75,15 @@ V souboru projektu můžete použít zástupné znaky k zahrnutí všech soubor�
     ```
 
     > [!NOTE]
-    > Je nutné zadat cestu pro oba atributy. Použijete-li absolutní cestu k určení umístění souborů v atributu `Include`, je nutné také použít absolutní cestu v atributu `Exclude`; Použijete-li relativní cestu v atributu `Include`, je nutné také použít relativní cestu v atributu `Exclude`.
+    > Je nutné zadat cestu pro oba atributy. Pokud použijete absolutní cestu k určení `Include` umístění souborů v atributu, `Exclude` musíte také použít absolutní cestu v atributu; Pokud v `Include` atributu použijete relativní cestu, musíte také `Exclude` použít relativní cestu v atributu.
 
 ## <a name="use-conditions-to-exclude-a-file-or-directory-from-the-inputs-for-a-build"></a>Použití podmínek k vyloučení souboru nebo adresáře ze vstupů pro sestavení
 
- Pokud existují položky, které chcete zahrnout například v sestavení ladění, ale ne v sestavení verze, můžete použít atribut `Condition` k určení podmínek, za kterých se má položka zahrnout.
+ Pokud existují položky, které chcete zahrnout, například v sestavení ladění, ale ne `Condition` vydání sestavení, můžete použít atribut k určení podmínek, za kterých chcete zahrnout položku.
 
-#### <a name="to-include-the-file-formulavb-only-in-release-builds"></a>Zahrnutí *vzorce souboru. vb* pouze do sestavení vydaných verzí
+#### <a name="to-include-the-file-formulavb-only-in-release-builds"></a>Zahrnutí souboru *Formula.vb* pouze do sestavení verze
 
-- Použijte atribut `Condition` podobný následujícímu:
+- Použijte `Condition` atribut podobný následujícímu:
 
     ```xml
     <Compile
@@ -93,7 +93,7 @@ V souboru projektu můžete použít zástupné znaky k zahrnutí všech soubor�
 
 ## <a name="example"></a>Příklad
 
- Následující příklad kódu vytvoří projekt se všemi soubory *. cs* v adresáři s výjimkou *Form2.cs*.
+ Následující příklad kódu vytvoří projekt se všemi soubory *CS* v adresáři s výjimkou *Form2.cs*.
 
 ```xml
 <Project DefaultTargets="Compile"
@@ -128,6 +128,6 @@ V souboru projektu můžete použít zástupné znaky k zahrnutí všech soubor�
 
 ## <a name="see-also"></a>Viz také
 
-- [Položky](../msbuild/msbuild-items.md)
-- [MSBuild](../msbuild/msbuild.md)
-- [Postupy: výběr souborů k sestavení](../msbuild/how-to-select-the-files-to-build.md)
+- [Items](../msbuild/msbuild-items.md)
+- [Msbuild](../msbuild/msbuild.md)
+- [Postup: Vyberte soubory, které chcete sestavit.](../msbuild/how-to-select-the-files-to-build.md)

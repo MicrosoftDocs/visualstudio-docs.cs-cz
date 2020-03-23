@@ -1,43 +1,46 @@
 ---
-title: Zjednodušit interpolaci řetězců
-ms.date: 02/12/2020
+title: Zjednodušení interpolace řetězců
+ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15f034b0ecf46e19681f3b74e4137a2de9e9d950
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: a8b0fd53164cb98921b111d49fa04a76c9d0d8a8
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77280752"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094305"
 ---
-# <a name="simplify-string-interpolation-refactoring"></a>Zjednodušit refaktoring řetězcové interpolace
+# <a name="simplify-string-interpolation-refactoring"></a>Zjednodušení refaktoringu interpolace řetězců
 
-Tento refaktoring platí pro:
+Toto refaktoring se vztahuje na:
 
 - C#
 
+- Visual Basic
+
 **Co:** Umožňuje zjednodušit [interpolaci řetězce](https://docs.microsoft.com/dotnet/csharp/tutorials/string-interpolation).
 
-**Když:** Máte interpolaci řetězců, kterou lze zjednodušit.
+**Kdy:** Máte řetězec interpolace, které lze zjednodušit.
 
-**Proč:** Zjednodušení řetězcové interpolace může poskytnout větší srozumitelnou a stručnou syntaxi. Tento nástroj refaktoringu provede úlohu automaticky namísto ručního provedení.
+**Proč:** Zjednodušení interpolace řetězce může poskytnout větší jasnost a stručnou syntaxi. Tento refaktoring nástroj bude provádět úlohu automaticky namísto nutnosti provést ručně.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístit blikající kurzor na řetězcovou interpolaci:
+1. Umístěte stříšku na řetězec interpolace:
 
-2. Stiskněte klávesu **Ctrl**+ **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
+2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
 
-3. Vybrat **zjednodušit interpolaci**
+3. Vyberte **Zjednodušit interpolaci.**
 
-    ![Zjednodušit interpolaci řetězců](media/simplify-string-interpolation.png)
+    ![Zjednodušení interpolace řetězců](media/simplify-string-interpolation.png)
 
 ## <a name="see-also"></a>Viz také
 
-- [Refaktoring](../refactoring-in-visual-studio.md)
+- [Refactoring](../refactoring-in-visual-studio.md)
