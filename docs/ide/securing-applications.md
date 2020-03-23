@@ -1,5 +1,5 @@
 ---
-title: Zabezpečení –
+title: Zabezpečení
 ms.date: 06/01/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,37 +12,37 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 87f06746901baaaf14f91032f8968a0d99fc20c2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595446"
 ---
 # <a name="secure-applications"></a>Zabezpečené aplikace
 
-Zabezpečení byste měli věnovat pozornost ve všech aspektech vývoje aplikace od návrhu až po nasazení. Začněte tím, co spustíte Visual Studio. Viz [uživatelská oprávnění](../ide/user-permissions-and-visual-studio.md).
+Zabezpečení byste měli věnovat pozornost ve všech aspektech vývoje aplikace od návrhu až po nasazení. Začněte spuštěním sady Visual Studio co nejbezpečněji. Viz [Uživatelská oprávnění](../ide/user-permissions-and-visual-studio.md).
 
 Abyste mohli efektivně vyvíjet bezpečné aplikace, měli byste znát základní principy konceptů zabezpečení a funkce zabezpečení platforem, pro které vyvíjíte. Také je třeba porozumět bezpečným technikám kódování.
 
 ## <a name="code-for-security"></a>Kód pro zabezpečení
 
-Většina chyb kódování, které vedou k ohrožení zabezpečení, je způsobená tím, že vývojáři při práci s uživatelským vstupem vytvářejí nesprávné předpoklady nebo protože plně nerozumí platformě, pro kterou vyvíjí.
+Většina chyb kódování, které vedou k ohrožení zabezpečení dochází, protože vývojáři, aby nesprávné předpoklady při práci s vstupem uživatele, nebo protože nejsou plně pochopit platformu, pro které jsou jejich vývoj.
 
-- [Pokyny pro bezpečné kódování](/dotnet/standard/security/secure-coding-guidelines) popisuje různé způsoby, jak může být kód .NET navržený pro práci se systémem zabezpečení.
-- [Osvědčené postupy C++ zabezpečení](/cpp/top/security-best-practices-for-cpp) nástroje obsahují informace o nástrojích zabezpečení a C++ postupech pro vývojáře.
+- [Pokyny pro bezpečné kódování](/dotnet/standard/security/secure-coding-guidelines) popisují různé způsoby, jak lze kód .NET navrhnout pro práci se systémem zabezpečení.
+- [Doporučené postupy zabezpečení pro c++](/cpp/top/security-best-practices-for-cpp) obsahuje informace o nástrojích zabezpečení a postupech pro vývojáře jazyka C++.
 
-## <a name="build-for-security"></a>Sestavit pro zabezpečení
+## <a name="build-for-security"></a>Sestavení pro zabezpečení
 
-Zabezpečení je také důležitým aspektem procesu sestavení. Několik dalších kroků může zlepšit zabezpečení nasazené aplikace a pomáhat zabránit neoprávněným zpětným inženýrům, falšování a jiným útokům:
+Zabezpečení je také důležitým aspektem v procesu sestavení. Několik dalších kroků může zlepšit zabezpečení nasazené aplikace a zabránit neoprávněnému zpětnému inženýrství, falšování a jiným útokům:
 
-- [Dotfuscator](dotfuscator/index.md) je zdarma a pomáhá chránit sestavení .NET před zpětným technickým a neoprávněným použitím, jako je například neoprávněné ladění.
-- [Podpis se silným názvem](managing-assembly-and-manifest-signing.md) se dá použít k jednoznačné identifikaci softwarových komponent a k zabránění falšování názvů.
+- [Dotfuscator](dotfuscator/index.md) je zdarma a pomáhá chránit sestavení .NET před reverzní masovou a neautorizovanou funkcí, jako je například neoprávněné ladění.
+- [Podepisování silných názvů](managing-assembly-and-manifest-signing.md) lze použít k jednoznačné identifikaci softwarových součástí a zabránění falšování názvů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Zabezpečení v .NET](/dotnet/standard/security/index)
 - [Zabezpečení Azure](/azure/security/)
-- [Průvodce zabezpečením pro Windows 10 Mobile](/windows/security/threat-protection/windows-10-mobile-security-guide)
+- [Průvodce zabezpečením windows 10 Mobile](/windows/security/threat-protection/windows-10-mobile-security-guide)
 - [Funkce zabezpečení platformy Apache Cordova](/visualstudio/cross-platform/tools-for-cordova/security/best-practices?view=toolsforcordova-2017)
-- [ASP.NET Core zabezpečení](/aspnet/core/security/?view=aspnetcore-2.1)
-- [model Windows Forms zabezpečení](/dotnet/framework/winforms/windows-forms-security)
+- [ASP.NET základní zabezpečení](/aspnet/core/security/?view=aspnetcore-2.1)
+- [Zabezpečení modelu Windows Forms](/dotnet/framework/winforms/windows-forms-security)

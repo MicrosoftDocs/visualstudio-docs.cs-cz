@@ -1,5 +1,5 @@
 ---
-title: Element parametru | Microsoft Docs
+title: Prvek parametru | Dokumenty společnosti Microsoft
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -18,17 +18,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dbf0c25967d84e930ee97a84709c808d3541e733
-ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78263094"
 ---
-# <a name="parameter-element"></a>Parameter – element
+# <a name="parameter-element"></a>Element parametru
 
-Obsahuje informace o konkrétním parametru pro úkol, který je generován `TaskFactory``UsingTask`.  Název prvku je název parametru.  Další informace naleznete v tématu [UsingTask element (MSBuild)](../msbuild/usingtask-element-msbuild.md).
+Obsahuje informace o konkrétním parametru pro úkol, `UsingTask` `TaskFactory`který je generován .  Název prvku je název parametru.  Další informace naleznete [v tématu UsingTask element (MSBuild)](../msbuild/usingtask-element-msbuild.md).
 
- \<projektu > \<UsingTask > \<parametru > \<parametr >
+ \<> \<projektu usingTask \<> \<ParametrSkupina> parametr>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,7 +38,7 @@ Obsahuje informace o konkrétním parametru pro úkol, který je generován `Tas
     Required="true/false" />
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
 
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
@@ -46,23 +46,23 @@ Obsahuje informace o konkrétním parametru pro úkol, který je generován `Tas
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`ParameterType`|Nepovinný atribut.<br /><br /> Typ rozhraní .NET parametru, například `System.String`.|
-|`Output`|Volitelný logický atribut.<br /><br /> Pokud je `true`, tento parametr je parametrem Output pro úlohu. Výchozí hodnota je `false`.|
-|`Required`|Volitelný logický atribut.<br /><br /> Pokud `true`, tento parametr je pro úlohu povinný. Výchozí hodnota je `false`.|
+|`ParameterType`|Nepovinný atribut.<br /><br /> Typ parametru .NET, `System.String`například .|
+|`Output`|Volitelný logický atribut.<br /><br /> Pokud `true`je tento parametr výstupním parametrem úlohy. Výchozí hodnota je `false`.|
+|`Required`|Volitelný logický atribut.<br /><br /> Pokud `true`je tento parametr povinným parametrem pro úlohu. Výchozí hodnota je `false`.|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[ParameterGroup –](../msbuild/parametergroup-element.md)|Obsahuje volitelný seznam parametrů, které budou k dispozici u úlohy vygenerované `TaskFactory``UsingTask`.|
+|[Skupina parametrů](../msbuild/parametergroup-element.md)|Obsahuje volitelný seznam parametrů, které budou k dispozici na úkolu, který je generován `UsingTask` `TaskFactory`.|
 
 ## <a name="example"></a>Příklad
 
- Následující příklad ukazuje použití prvku `Parameter`.
+ Následující příklad ukazuje, jak `Parameter` použít prvek.
 
 ```xml
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">
@@ -77,8 +77,8 @@ Obsahuje informace o konkrétním parametru pro úkol, který je generován `Tas
 </UsingTask>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
-- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

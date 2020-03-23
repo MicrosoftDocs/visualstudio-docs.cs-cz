@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: výběr souborů k sestavení | Microsoft Docs'
+title: 'Postup: Vyberte soubory k sestavení | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,95 +13,95 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0566078c7f90faf204c35024e2c308b5ef881c01
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633808"
 ---
-# <a name="how-to-select-the-files-to-build"></a>Postupy: výběr souborů k sestavení
+# <a name="how-to-select-the-files-to-build"></a>Postup: Vyberte soubory, které chcete sestavit.
 
-Když sestavíte projekt, který obsahuje několik souborů, můžete každý soubor vytvořit samostatně v souboru projektu nebo můžete použít zástupné znaky k zahrnutí všech souborů do jednoho adresáře nebo do vnořené sady adresářů.
+Při vytváření projektu, který obsahuje několik souborů, můžete v souboru projektu vypsat každý soubor samostatně nebo můžete pomocí zástupných znaků zahrnout všechny soubory do jednoho adresáře nebo vnořené sady adresářů.
 
-## <a name="specify-inputs"></a>Zadat vstupy
+## <a name="specify-inputs"></a>Určení vstupů
 
-Položky reprezentují vstupy pro sestavení. Další informace o položkách naleznete v tématu [Items](../msbuild/msbuild-items.md).
+Položky představují vstupy pro sestavení. Další informace o položkách naleznete v [tématu Položky](../msbuild/msbuild-items.md).
 
-Chcete-li zahrnout soubory pro sestavení, musí být obsaženy v seznamu položek v souboru projektu MSBuild. Do seznamů položek lze přidat více souborů buď jednotlivě, nebo pomocí zástupných znaků pro zahrnutí mnoha souborů najednou.
+Chcete-li zahrnout soubory pro sestavení, musí být zahrnuty do seznamu položek v souboru projektu MSBuild. Do seznamů položek lze přidat více souborů buď zahrnutím souborů jednotlivě, nebo použitím zástupných znaků k zahrnutí mnoha souborů najednou.
 
-#### <a name="to-declare-items-individually"></a>Deklarace položek jednotlivě
+#### <a name="to-declare-items-individually"></a>Deklarování položek jednotlivě
 
-- Použijte atributy `Include` podobné následujícímu:
+- Použijte `Include` atributy podobné následujícím u následujících:
 
     `<CSFile Include="form1.cs"/>`
 
-    nebo
+    – nebo –
 
     `<VBFile Include="form1.vb"/>`
 
     > [!NOTE]
     > Pokud položky v kolekci položek nejsou ve stejném adresáři jako soubor projektu, je nutné zadat úplnou nebo relativní cestu k položce. Například: `Include="..\..\form2.cs"`.
 
-#### <a name="to-declare-multiple-items"></a>Deklarace více položek
+#### <a name="to-declare-multiple-items"></a>Deklarování více položek
 
-- Použijte atributy `Include` podobné následujícímu:
+- Použijte `Include` atributy podobné následujícím u následujících:
 
     `<CSFile Include="form1.cs;form2.cs"/>`
 
-    nebo
+    – nebo –
 
     `<VBFile Include="form1.vb;form2.vb"/>`
 
-## <a name="specify-inputs-with-wildcards"></a>Zadat vstupy se zástupnými znaky
+## <a name="specify-inputs-with-wildcards"></a>Určení vstupů pomocí zástupných znaků
 
-Můžete také použít zástupné znaky k rekurzivnímu zahrnutí všech souborů nebo pouze konkrétních souborů z podadresářů jako vstupů pro sestavení. Další informace o zástupných znacích najdete v tématu [položky](../msbuild/msbuild-items.md) .
+Zástupné znaky můžete také použít k rekurzivně zahrnout všechny soubory nebo pouze určité soubory z podadresářů jako vstupy pro sestavení. Další informace o zástupných zástupcích naleznete v [tématu Items](../msbuild/msbuild-items.md)
 
-Následující příklady jsou založeny na projektu, který obsahuje grafické soubory v následujících adresářích a podadresářích, se souborem projektu umístěným v adresáři *projektu* :
+Následující příklady jsou založeny na projektu, který obsahuje grafické soubory v následujících adresářích a podadresářích, se souborem projektu umístěným v adresáři *aplikace Project:*
 
-*Project\Images\BestJpgs*
+*Projekt\Obrázky\Nejlepší Jpgs*
 
-*Project\Images\ImgJpgs*
+*Projekt\Obrázky\ImgJpgs*
 
-*Project\Images\ImgJpgs\Img1*
+*Projekt\Obrázky\ImgJpgs\Img1*
 
-#### <a name="to-include-all-jpg-files-in-the-images-directory-and-subdirectories"></a>Zahrnutí všech souborů *. jpg* do adresáře a podadresářů *obrázků*
+#### <a name="to-include-all-jpg-files-in-the-images-directory-and-subdirectories"></a>Zahrnutí všech *souborů JPG* do *adresáře a* podadresářů Obrázky
 
-- Použijte následující atribut `Include`:
+- Použijte následující `Include` atribut:
 
     `Include="Images\**\*.jpg"`
 
-#### <a name="to-include-all-jpg-files-starting-with-img"></a>Zahrnutí všech souborů *. jpg* počínaje *img*
+#### <a name="to-include-all-jpg-files-starting-with-img"></a>Zahrnout všechny *soubory JPG* začínající *na img*
 
-- Použijte následující atribut `Include`:
+- Použijte následující `Include` atribut:
 
     `Include="Images\**\img*.jpg"`
 
-#### <a name="to-include-all-files-in-directories-with-names-ending-in-jpgs"></a>Zahrnutí všech souborů v adresářích s názvy končícími na *JPGs*
+#### <a name="to-include-all-files-in-directories-with-names-ending-in-jpgs"></a>Zahrnutí všech souborů do adresářů s názvy končícími *na jpgs*
 
-- Použijte jeden z následujících atributů `Include`:
+- Použijte jeden z `Include` následujících atributů:
 
     `Include="Images\**\*jpgs\*.*"`
 
-    nebo
+    – nebo –
 
     `Include="Images\**\*jpgs\*"`
 
 ## <a name="pass-items-to-a-task"></a>Předání položek úkolu
 
-V souboru projektu můžete použít notaci @ () v úlohách k určení celého seznamu položek jako vstupu pro sestavení. Tento zápis můžete použít, pokud chcete zobrazit seznam všech souborů samostatně, nebo použít zástupné znaky.
+V souboru projektu můžete pomocí zápisu @() v úkolech určit celý seznam položek jako vstup pro sestavení. Tento zápis můžete použít, zda vypíšete všechny soubory samostatně nebo použijete zástupné znaky.
 
-#### <a name="to-use-all-visual-c-or-visual-basic-files-as-inputs"></a>Použití všech souborů vizuálů C# nebo Visual Basic jako vstupů
+#### <a name="to-use-all-visual-c-or-visual-basic-files-as-inputs"></a>Použití všech souborů jazyka Visual C# nebo Visual Basic jako vstupů
 
-- Použijte atributy `Include` podobné následujícímu:
+- Použijte `Include` atributy podobné následujícímu:
 
     `<CSC Sources="@(CSFile)">...</CSC>`
 
-    nebo
+    – nebo –
 
     `<VBC Sources="@(VBFile)">...</VBC>`
 
 > [!NOTE]
-> Chcete-li určit vstupy pro sestavení, je nutné použít zástupné znaky s položkami. vstupy nemůžete zadat pomocí atributu `Sources` v úlohách MSBuild, jako je [CSC](../msbuild/csc-task.md) nebo [Vbc](../msbuild/vbc-task.md). Následující příklad není platný v souboru projektu:
+> K určení vstupů pro sestavení je nutné použít zástupné znaky s položkami; nelze zadat vstupy pomocí `Sources` atributu v úkolech MSBuild, například [Csc](../msbuild/csc-task.md) nebo [Vbc](../msbuild/vbc-task.md). Následující příklad není v souboru projektu platný:
 >
 > `<CSC Sources="*.cs">...</CSC>`
 
@@ -142,7 +142,7 @@ Následující příklad kódu ukazuje projekt, který obsahuje všechny vstupn�
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu používá zástupný znak pro zahrnutí všech souborů *. cs* .
+Následující příklad kódu používá zástupný znak zahrnout všechny soubory *.cs.*
 
 ```xml
 <Project DefaultTargets="Compile"
@@ -177,5 +177,5 @@ Následující příklad kódu používá zástupný znak pro zahrnutí všech s
 
 ## <a name="see-also"></a>Viz také
 
-- [Postupy: vyloučení souborů ze sestavení](../msbuild/how-to-exclude-files-from-the-build.md)
-- [Položky](../msbuild/msbuild-items.md)
+- [Postup: Vyloučení souborů ze sestavení](../msbuild/how-to-exclude-files-from-the-build.md)
+- [Items](../msbuild/msbuild-items.md)

@@ -3,7 +3,7 @@ title: Upgrade Dotfuscatoru Community
 ms.date: 03/28/2019
 ms.devlang: dotnet
 ms.topic: conceptual
-keywords: Dotfuscator, Dotfuscator Community, Dotfuscator CE, nepřesné, bezplatná řešení, bezplatná ochrana, ochrana, komunita Edition, zmatene, .NET, free, Visual Studio 2019, Visual Studio 2017, Visual Studio, upgrade, příkazový řádek
+keywords: Dotfuscator, Dotfuscator Community, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, Protection, Community Edition, obfuscation, .NET, free, Visual Studio 2019, Visual Studio 2017, Visual Studio, upgrade, příkazový řádek
 helpviewer_keywords:
 - PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
@@ -19,55 +19,55 @@ helpviewer_keywords:
 - registering Dotfuscator
 - Dotfuscator command line
 - Dotfuscator Professional
-description: Naučte se upgradovat bezplatnou kopii Dotfuscator komunity zahrnutou v aplikaci Visual Studio.
+description: Přečtěte si, jak upgradovat bezplatnou kopii komunity Dotfuscator, která je součástí sady Visual Studio.
 ms.assetid: c7c60904-27f9-4f1f-b79b-ddf65041b810
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 08492340022f772beadca8061a216de69fafc8af
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596798"
 ---
 # <a name="upgrade-dotfuscator-community"></a>Upgrade Dotfuscatoru Community
 
-Komunita Dotfuscator nabízí všem vývojářům, kteří používají Microsoft Visual Studio, mnoho funkcí ochrany aplikací a posílení zabezpečení hned.
-Pro uživatele, kteří upgradují svou verzi Dotfuscator, je však k dispozici více funkcí.
+Dotfuscator Community nabízí mnoho funkcí ochrany aplikací a posílení zabezpečení okamžitě všem vývojářům pomocí sady Microsoft Visual Studio.
+Nicméně, existuje více funkcí k dispozici uživatelům, kteří inovovat jejich verzi Dotfuscator.
 
-## <a name="registering-dotfuscator-community"></a>Registrace komunity Dotfuscator
+## <a name="registering-dotfuscator-community"></a>Registrace Dotfuscator Společenství
 
-Registrovaní uživatelé komunity Dotfuscator získají přístup k dalším funkcím, jako je [Podpora příkazového řádku][cli], což usnadňuje integraci Dotfuscator komunity do procesu automatizovaného sestavení. Registrace také uděluje přístup k integrovanému nástroji použitému k [dekódování zakódovaných trasování zásobníku][decode-obfuscated].
+Registrovaní uživatelé komunity Dotfuscator získají přístup k dalším funkcím, jako je [podpora příkazového řádku][cli], což usnadňuje integraci komunity Dotfuscator do automatizovaného procesu sestavení. Registrace také uděluje přístup k integrovanému nástroji používanému k [dekódování zamlžených trasování zásobníku][decode-obfuscated].
 
 Registrace je rychlá, jednoduchá a bezplatná.
-Pokud chcete zaregistrovat komunitu Dotfuscator, přečtěte si [pokyny v tématu úplná Dotfuscator uživatelská příručka komunity][register-ce].
+Chcete-li zaregistrovat Komunitu dotfuscatorů, přečtěte si [pokyny v úplné uživatelské příručce komunity Dotfuscator][register-ce].
 
-## <a name="dotfuscator-professional"></a>Dotfuscator Professional
+## <a name="dotfuscator-professional"></a>Dotfuscator Profesionální
 
-I když komunita Dotfuscator poskytuje základní úroveň ochrany, bezkontaktní ***ochrana – Dotfuscator Professional*** zahrnuje vylepšené transformace a možnosti ochrany, jako například:
+Zatímco Dotfuscator Community poskytuje základní úroveň ochrany, ***PreEmptivní ochrana - Dotfuscator Professional*** zahrnuje vylepšené transformace obfuskace a ochranné schopnosti, jako jsou:
 
 * *Ochrana duševního vlastnictví*
-  * Další možnosti přejmenování, včetně rozšířených srážek přetížení™ a náhodného výběru identifikátorů.
-  * Přístup k transformačním transformacím na podnikové úrovni, včetně [transformací cílených na zpracování automatizované dekompilace kódu][control-flow].
-  * Možnost [zakrýt citlivé řetězce][string-encryption], což znemožňuje jednoduché hledání dekompilovaného kódu.
-  * Možnost [discreetly vkládat vlastnictví a distribuční řetězce do sestavení][watermarking], což vám umožní určit zdroj neautorizovaných úniků softwaru.
-  * Možnost [zkombinovat více sestavení do jednoho][linking], což je ještě obtížnější pro útočníky, aby určili role prvků kódu, protože oddělení obav bylo eliminováno.
-  * Možnost [automaticky odebrat nepoužitý kód z aplikace][pruning]a snížit množství citlivého kódu, který je dodán.
-* *Ochrana integrity aplikací*
-  * Další [chování ochrany aplikace][check-actions].
-  * Možnost poskytnout období upozornění před konečným termínem ukončení platnosti aplikace.
-  * Možnost upozornění kódu aplikace v průběhu období upozornění na ukončení životnosti nebo po termínu.
+  * Další možnosti přejmenování, včetně rozšířené hodování indukcí ™ a výběru randomizovaného identifikátoru.
+  * Přístup k transformace miny na podnikové úrovni, včetně [transformací zaměřených na poražení automatické dekompilace kódu][control-flow].
+  * Schopnost [zakrývat citlivé řetězce][string-encryption], takže jednoduché hledání dekompilovaného kódu nemožné.
+  * Možnost [diskrétně vložit vlastnictví a distribuční řetězce do sestavení][watermarking], což vám umožní určit zdroj neoprávněných úniků softwaru.
+  * Schopnost [kombinovat více sestavení do jednoho][linking], takže je ještě obtížnější pro útočníky určit role prvků kódu, jako oddělení obavy byla odstraněna.
+  * Možnost [automaticky odebrat nepoužitý kód z aplikace][pruning], snížení množství citlivého kódu, který je dodáván.
+* *Ochrana integrity aplikace*
+  * Další [chování obrany aplikace][check-actions].
+  * Možnost poskytnout varovnou lhůtu před termínem ukončení životnosti aplikace.
+  * Možnost upozornit kód aplikace během období varování na konci životnosti nebo po uplynutí lhůty.
 
-Dotfuscator Professional je průmyslový standard [.NET][net-obfuscator] , který je vhodný pro podnikové vývojáře, který vyžaduje průběžnou podporu, údržbu a aktualizace produktů.
-Dotfuscator Professional navíc nabízí úzkou integraci se sadou Visual Studio a má licenci pro komerční použití.
+Dotfuscator Professional je průmyslový standard [.NET Obfuscator][net-obfuscator] a je vhodný pro podnikové vývojáře, kteří vyžadují průběžnou podporu, údržbu a aktualizace produktů.
+Kromě toho Dotfuscator Professional nabízí užší integraci s Visual Studio a je licencován pro komerční použití.
 
-Další informace o pokročilých funkcích ochrany aplikací v Dotfuscator Professional najdete na [stránce Přehled][product-about] řešení s možnostmi Dotfuscator a [porovnejte je s komunitou Dotfuscator][product-compare].
-[Plně podporované zkušební verze jsou k dispozici na adrese PreEmptive.com][eval].
+Další informace o pokročilých funkcích ochrany aplikací dotfuscator professional naleznete na [stránce Přehled dotfuscatoru][product-about] preemptivních řešení a [porovnejte ji s komunitou Dotfuscator][product-compare].
+[Plně podporované zkoušky jsou k dispozici na preemptive.com][eval].
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Tento článek v úplné příručce pro uživatele komunity Dotfuscator][full]
+[Tento článek v úplné uživatelské příručce komunity Dotfuscator][full]
 
 <!-- Copyright © 2019 PreEmptive Solutions, LLC -->
 

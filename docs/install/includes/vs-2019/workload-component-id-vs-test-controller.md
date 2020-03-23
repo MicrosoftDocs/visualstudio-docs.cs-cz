@@ -1,38 +1,38 @@
 ---
-title: Úlohy a ID komponent sady Visual Studio Test Controller 2019
+title: Pracovní vytížení a ID komponent řadiče Visual Studio 2019
 titleSuffix: ''
-description: Rozdělení automatizovaných testů mezi více počítačů pomocí ID pracovního vytížení a komponenta Visual Studio
+description: Použití úloh visual studia a ID součástí k distribuci automatizovaných testů do více počítačů
 keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 12/03/2019
+ms.date: 03/16/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 5f7a003d11f9db26e9c2deb95deb641ee2e730a7
-ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
+ms.openlocfilehash: 3b1a3cc6d1e9a7bac24a9a64845bdb43e4a6739a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76159012"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79437495"
 ---
-## <a name="test-controller"></a>Kontroler testů
+## <a name="test-controller"></a>Testovací řadič
 
-**ID:** Microsoft.VisualStudio.Workload.TestController
+**ID:** Řadič Microsoft.VisualStudio.Workload.TestController
 
-**Popis:** rozdělení automatizovaných testů mezi více počítačů
+**Popis:** Distribuce automatizovaných testů do více počítačů
 
-### <a name="components-included-by-this-workload"></a>Pomocí této úlohy zahrnuté komponenty
+### <a name="components-included-by-this-workload"></a>Komponenty zahrnuté do tohoto pracovního vytížení
 
-ID součásti | Name | Version | Typ závislosti
+ID součásti | Name (Název) | Version | Typ závislosti
 --- | --- | --- | ---
-Microsoft.VisualStudio.ComponentGroup.TestTools.TestController | Základní funkce Kontroleru testů | 16.0.28315.86 | Požadováno
+Microsoft.VisualStudio.ComponentGroup.TestTools.TestController | Základní funkce testovacího řadiče | 16.0.28315.86 | Požaduje se
 
-## <a name="unaffiliated-components"></a>Nespojená komponenty
+## <a name="unaffiliated-components"></a>Nepřidružené součásti
 
-Toto jsou komponenty, které nejsou zahrnuty u jakékoli úlohy, ale může vybrat jako jednotlivých komponent.
+Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé součásti.
 
-ID součásti | Name | Version
+ID součásti | Name (Název) | Version
 --- | --- | ---
-není k dispozici | není k dispozici | není k dispozici
+neuvedeno | neuvedeno | neuvedeno

@@ -15,63 +15,63 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4f13df00059523ca87e720a999c596e203b20e49
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75593678"
 ---
 # <a name="manage-assembly-and-manifest-signing"></a>Správa podepsání sestavení a manifestu
 
-Podepisování silného názvu poskytuje komponentě softwaru globálně jedinečnou identitu. Silné názvy slouží k zajištění toho, že sestavení nemůže být falešné někým jiným a aby se zajistilo, že závislosti komponent a konfigurační příkazy jsou mapovány na správnou komponentu a verzi komponenty.
+Podepisování silného názvu poskytuje softwarové součásti globálně jedinečnou identitu. Silné názvy se používají k zajištění toho, že sestavení nemůže být zfalšováno jiným uživatelem, a ujistěte se, že závislosti komponent a příkazy konfigurace jsou mapovány na správnou verzi komponenty a součásti.
 
-Silný název se skládá z identity sestavení (jednoduchý textový název, číslo verze a informace o jazykové verzi) a navíc tokenu veřejného klíče a digitálního podpisu.
+Silný název se skládá z identity sestavení (jednoduchý textový název, číslo verze a informace o jazykové verzi) plus token veřejného klíče a digitální podpis.
 
-Informace o podepisování sestavení v Visual Basic a C# projektech naleznete v tématu [Create and use silně pojmenované sestavení](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).
+Informace o podepisování sestavení v projektech jazyka Visual Basic a C# naleznete v [tématu Vytvoření a použití sestavení se silným názvem](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).
 
-Informace o podepisování sestavení v C++ projektech naleznete v tématu [sestavení se silným názvemC++(/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli).
+Informace o podpisu sestavení v projektech jazyka C++ naleznete v [tématu sestavení s názvem Silné (C++/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli).
 
 > [!NOTE]
-> Podepisování silného názvu není chráněno proti zpětné analýze sestavení. Informace o ochraně před zpětným inženýrstvím najdete v tématu [komunita Dotfuscator](dotfuscator/index.md).
+> Podepisování silného názvu nechrání před zpětnou analýzou sestavení. Chcete-li se chránit před zpětným inženýrstvím, viz [Dotfuscator Community](dotfuscator/index.md).
 
-## <a name="asset-types-and-signing"></a>Typy prostředků a podepisování
+## <a name="asset-types-and-signing"></a>Typy majetku a podepisování
 
-Můžete podepsat sestavení .NET a manifesty aplikace:
+Můžete podepsat sestavení .NET a manifesty aplikací:
 
-- Spustitelné soubory ( *. exe*)
+- Spustitelné soubory (*.exe*)
 
-- Manifesty aplikace ( *. exe. manifest*)
+- Manifesty aplikace (*.exe.manifest*)
 
-- Manifesty nasazení ( *. Application*)
+- Manifesty nasazení (*.application*)
 
-- Sdílená sestavení komponent ( *. dll*)
+- Sestavy sdílených součástí (*DLL*)
 
-Podepište následující typy assetu:
+Podepište následující typy majetku:
 
 1. Sestavení, pokud je chcete nasadit do globální mezipaměti sestavení (GAC).
 
-2. ClickOnce aplikace a manifesty nasazení. Visual Studio umožňuje přihlášení ve výchozím nastavení pro tyto aplikace.
+2. Manifesty aplikace a nasazení clickonce. Visual Studio umožňuje podepisování ve výchozím nastavení pro tyto aplikace.
 
-3. Primární spolupracující sestavení, která se používají pro interoperabilitu modelu COM. Nástroj TLBIMP vynutil silné pojmenovávání při vytváření primárního definičního sestavení z knihovny typů modelu COM.
+3. Primární sestavení interop, které se používají pro interoperabilitu com. Nástroj TLBIMP vynucuje silné pojmenování při vytváření primárního sestavení interop z knihovny typů COM.
 
-Obecně platí, že byste neměli podepisovat spustitelné soubory. Silně pojmenovaná komponenta nemůže odkazovat na součást, která není silně pojmenována, která je nasazena s aplikací. Visual Studio nepodepisuje spustitelné soubory aplikace, ale místo toho podepisuje manifest aplikace, který odkazuje na spustitelný soubor se slabým názvem. Vyhněte se podepisování součástí, které jsou pro vaši aplikaci soukromé, protože podepisování může ztížit správu závislostí.
+Obecně byste neměli podepisovat spustitelné soubory. Silně pojmenovaná komponenta nemůže odkazovat na komponentu bez silného označení, která je nasazena s aplikací. Visual Studio nepodepisuje spustitelné soubory aplikace, ale místo toho podepisuje manifest aplikace, který odkazuje na spustitelný soubor se slabým názvem. Vyhněte se podepisování součástí, které jsou soukromé pro vaši aplikaci, protože podepisování může ztížit správu závislostí.
 
-## <a name="how-to-sign-an-assembly-in-visual-studio"></a>Jak podepsat sestavení v aplikaci Visual Studio
+## <a name="how-to-sign-an-assembly-in-visual-studio"></a>Jak podepsat sestavení v sadě Visual Studio
 
-Aplikaci nebo komponentu podepisujete pomocí karty **podepisování** v okně Vlastnosti projektu (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **vlastnosti**). Vyberte kartu **podepisování** a potom zaškrtněte políčko **podepsat sestavení** .
+Aplikaci nebo komponentu podepíšete pomocí karty **Podpis** v okně vlastností projektu (klepněte pravým tlačítkem myši na uzel projektu v **Průzkumníku řešení** a vyberte **vlastnosti**). Vyberte kartu **Podpisy** a zaškrtněte políčko **Podepsat sestavení.**
 
-Zadejte soubor klíče. Pokud se rozhodnete vytvořit nový soubor klíče, budou nové soubory klíčů vždy vytvořeny ve formátu *. pfx* . Pro nový soubor budete potřebovat jméno a heslo.
+Zadejte soubor klíče. Pokud se rozhodnete vytvořit nový soubor klíče, budou nové soubory klíčů vždy vytvořeny ve formátu *.pfx.* Potřebujete jméno a heslo pro nový soubor.
 
 > [!WARNING]
-> Soubor klíče byste měli vždycky chránit heslem, abyste zabránili jeho použití někomu jinému. Klíče můžete zabezpečit i pomocí poskytovatelů nebo úložišť certifikátů.
+> Soubor klíče byste měli vždy chránit heslem, abyste zabránili jeho použití někomu jinému. Klíče můžete také zabezpečit pomocí zprostředkovatelů nebo úložišť certifikátů.
 
-Můžete také Ukázat na klíč, který jste už vytvořili. Další informace o vytváření klíčů najdete v tématu [vytvoření dvojice klíčů veřejného a soukromého klíče](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair).
+Můžete také překážet na klíč, který jste již vytvořili. Další informace o vytváření klíčů naleznete [v tématu Vytvoření páru veřejných a soukromých klíčů](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair).
 
-Pokud máte přístup jenom k veřejnému klíči, můžete k odložení přiřazení klíče použít zpožděné podepisování. Zpožděné podepisování povolíte zaškrtnutím políčka **pouze zpožděné přihlášení** . Projekt se zpožděným podpisem se nespustí a nemůžete ho ladit. Ověřování však můžete přeskočit během vývoje pomocí [nástroje Sn. exe Strong Name](/dotnet/framework/tools/sn-exe-strong-name-tool) s možností `-Vr`.
+Pokud máte přístup pouze k veřejnému klíči, můžete k odložení přiřazení klíče použít podepisování zpoždění. Podpis zpoždění povolíte zaškrtnutím políčka **Pouze znaménko Zpoždění.** Projekt podepsaný zpožděním nespustí a nelze jej ladit. Ověření během vývoje však můžete přeskočit pomocí [nástroje silného názvu Sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) s možností. `-Vr`
 
-Informace o podepisování manifestů naleznete v tématu [How to: Signing Application and Deployment Manifests](../ide/how-to-sign-application-and-deployment-manifests.md).
+Informace o podepisování manifestů naleznete v [tématu How to: Sign application and deployment manifests](../ide/how-to-sign-application-and-deployment-manifests.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Sestavení se silným názvem](/dotnet/framework/app-domains/strong-named-assemblies)
-- [Sestavení se silným názvemC++(/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli)
+- [Sestavení se silným názvem (C++/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli)

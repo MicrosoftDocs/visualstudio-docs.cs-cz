@@ -14,41 +14,41 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 200ec41a1295178f1127d10053985384a7813158
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568266"
 ---
-# <a name="options-text-editor-u-sql-formatting"></a>Options, Text Editor, U-SQL, Formatting
+# <a name="options-text-editor-u-sql-formatting"></a>Možnosti, Textový editor, U-SQL, Formátování
 
-Pomocí stránky možnosti **formátování** můžete nastavit možnosti formátování kódu v editoru kódu. Chcete-li získat přístup k této stránce Možnosti, vyberte možnost **nástroje** > **Možnosti**. V dialogovém okně **Možnosti** vyberte možnost **textový editor** > formátování **U-SQL** > .
+Na stránce **Možnosti formátování** můžete nastavit možnosti formátování kódu v editoru kódu. Chcete-li získat přístup k této stránce možností, zvolte**Možnosti** **nástrojů** > . V dialogovém okně **Možnosti** zvolte **Text Editor** > **U-SQL** > **Formátování**.
 
-## <a name="general-page"></a>Stránka s obecnými informacemi
+## <a name="general-page"></a>Obecná stránka
 
 ### <a name="general-settings"></a>Obecná nastavení
 
-Tato nastavení mají vliv na to, *kdy* Editor kódu aplikuje možnosti formátování na kód.
+Tato nastavení *ovlivňují, když* editor kódu použije možnosti formátování kódu.
 
-- **Automaticky formátovat dokončený příkaz při zadání středníku**
+- **Automaticky formátovat dokončený příkaz při zadávání středníkem**
 
-   Když je tato možnost vybrána, formátuje příkazy při výběru středníku klíče v závislosti na možnostech formátování vybraných pro Editor.
+   Když je tato volba vybraná, naformátuje příkazy, když zvolíte středníkovou klávesu podle možností formátování vybraných pro editor.
 
-- **Automaticky formátovat při vložení**
+- **Automatické formátování při vložení**
 
-   Když se tato možnost vybere, zformátuje text, který se vloží do editoru, aby odpovídal možnostem formátování vybraným pro Editor.
+   Je-li tato možnost vybrána, naformátuje text vložený do editoru tak, aby odpovídal možnostem formátování vybraným pro editor.
 
 ## <a name="preview-windows"></a>Náhled oken
 
-**Odsazení**, **nové řádky**a **mezery** na jednotlivých stránkách zobrazují v dolní části okno náhledu. V okně náhledu se zobrazí efekt jednotlivých možností. Chcete-li použít okno náhledu, vyberte možnost formátování. V okně náhledu se zobrazí příklad vybrané možnosti. Když změníte nastavení tak, že vyberete zaškrtávací políčko, okno náhledu se aktualizuje a zobrazí efekt nového nastavení.
+Podstránky **Odsazení**, **Nové čáry**a **Mezery** zobrazují v dolní části okno náhledu. Okno náhledu zobrazuje efekt jednotlivých možností. Chcete-li použít okno náhledu, vyberte možnost formátování. Okno náhledu ukazuje příklad vybrané možnosti. Když změníte nastavení zaškrtnutím políčka, okno náhledu se aktualizuje, aby se zobrazil účinek nového nastavení.
 
-### <a name="indentation-remarks"></a>Poznámky k odsazení
+### <a name="indentation-remarks"></a>Odsazení poznámek
 
-Možnosti odsazení na stránkách **karet** pro jednotlivé jazyky určují, kde Editor kódu umístí kurzor po stisknutí klávesy **ENTER** na konci řádku. Možnosti odsazení v části **formátování** platí, pokud je kód automaticky naformátován, například:
+Možnosti odsazení na stránkách **Tabulátory** pro každý jazyk určují pouze místo, kam editor kódu umístí kurzor, když stisknete **klávesu Enter** na konci řádku. Volby odsazení v části **Formátování** platí při automatickém formátování kódu, například:
 
-- Když vložíte kód do souboru při výběru **automaticky formátovat při vložení**
-- Když je blok, který je naformátován, zadán ručně
+- Když vložíte kód do souboru, když je vybraná volba **Automaticky formátovat při vložení**
+- Při formátování bloku je zadán ručně
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
+- [Dialogové okno Obecné, Prostředí, Možnosti](../../ide/reference/general-environment-options-dialog-box.md)

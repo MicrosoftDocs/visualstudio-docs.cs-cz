@@ -42,56 +42,56 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0fc169960cf757e4e334d5f77b06ff70b0d6da7c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594744"
 ---
 # <a name="options-text-editor-all-languages-tabs"></a>Možnosti, textový editor, všechny jazyky, karty
 
-Toto dialogové okno umožňuje změnit výchozí chování editoru kódu. Tato nastavení platí také pro ostatní editory na základě editoru kódu, jako je například zobrazení zdroje v Návrháři HTML. Chcete-li zobrazit tyto možnosti, vyberte **Možnosti** v nabídce **nástroje** . V rámci složky **textový editor** rozbalte podsložku **všechny jazyky** a pak zvolte **karty**.
+Toto dialogové okno umožňuje změnit výchozí chování Editoru kódu. Tato nastavení platí také pro ostatní editory založené na Editoru kódu, jako je například zobrazení zdroje návrháře HTML. Chcete-li tyto možnosti zobrazit, vyberte **možnosti** z nabídky **Nástroje.** Ve složce **Editor textu** rozbalte podsložku **Všechny jazyky** a pak zvolte **Tabulátory**.
 
 > [!CAUTION]
-> Tato stránka nastaví výchozí možnosti pro všechny vývojové jazyky. Mějte na paměti, že při resetování možnosti v tomto dialogu dojde k výběru možností karet ve všech jazycích, ať už jsou vybrané volby. Chcete-li změnit možnosti textového editoru pouze pro jeden jazyk, rozbalte podsložku pro daný jazyk a vyberte její stránky možností.
+> Tato stránka nastaví výchozí možnosti pro všechny vývojové jazyky. Nezapomeňte, že obnovení volby v tomto dialogovém okně obnoví možnosti tabulátorů ve všech jazycích na libovolné volby, které jsou zde vybrány. Chcete-li změnit možnosti editoru textu pouze pro jeden jazyk, rozbalte podsložku pro daný jazyk a vyberte jeho stránky možností.
 
-Pokud jsou na stránkách možností karet pro konkrétní programovací jazyky vybraná jiná nastavení, zobrazí se u různých možností **odsazení** zpráva nastavení odsazení pro jednotlivé textové formáty. a zpráva "nastavení tabulátoru pro jednotlivé textové formáty jsou v konfliktu." se zobrazí pro různé možnosti **tabulátoru** . Toto připomenutí se zobrazí například v případě, že je vybraná možnost **inteligentního odsazení** pro Visual Basic, ale pro vizuál C++se vybere **odsazení bloku** .
+Pokud jsou na stránkách možností Záložek pro konkrétní programovací jazyky vybrána různá nastavení, zobrazí se pro různé možnosti **odsazení** zpráva "Nastavení odsazení pro jednotlivé textové formáty". a zobrazí se zpráva "Nastavení tabulátoru pro jednotlivé formáty textu je vzájemně kolize", pro různé možnosti **tabulátoru.** Toto připomenutí se například zobrazí, pokud je pro jazyk Visual Basic vybrána možnost **Inteligentní odsazení,** ale pro visual c++ je vybraná volba **Odsazení bloku.**
 
 ## <a name="indenting"></a>Odsazení
 
-Žádné
+Žádný
 
-Pokud je tato možnost vybrána, nové řádky nebudou odsazeny. Místo vložení se umístí do prvního sloupce nového řádku.
+Je-li tato možnost vybrána, nové řádky nejsou odsazeny. Textový kurzor je umístěn v prvním sloupci nového řádku.
 
 Blok
 
-Je-li tato možnost vybrána, budou nové řádky automaticky odsazeny. Bod vložení se umístí na stejný výchozí bod jako předchozí řádek.
+Když je tato volba vybraná, nové řádky se automaticky odsazují. Textový kurzor je umístěn ve stejném počátečním bodě jako předchozí řádek.
 
-Inteligence
+Inteligentní
 
-Je-li vybrána tato možnost, jsou nové řádky umístěny tak, aby odpovídaly kontextu kódu, pro další nastavení formátování kódu a konvence technologie IntelliSense pro váš vývojový jazyk. Tato možnost není k dispozici pro všechny vývojové jazyky.
+Když je tato volba vybraná, jsou nové řádky umístěny tak, aby odpovídaly kontextu kódu, podle jiných nastavení formátování kódu a konvencí Technologie IntelliSense pro váš vývojový jazyk. Tato možnost není k dispozici pro všechny vývojové jazyky.
 
-Například řádky uzavřené mezi levou složenou závorkou ({) a pravou složenou závorkou (}) mohou být automaticky odsazeny o další zarážku tabulátoru z pozice zarovnaných složených závorek.
+Například řádky uzavřené mezi otevírací závorkou ( { ) a uzavírací složenou závorkou ( } ) mohou být automaticky odsazeny o další zarážku tabulátoru od pozice zarovnaných závorek.
 
 ## <a name="tabs"></a>Karty
 
 Velikost tabulátoru
 
-Nastaví vzdálenost mezi zarážkami tabulátoru v mezerách. Výchozí hodnota je čtyři mezery.
+Nastaví vzdálenost v mezerách mezi zarážkami tabulátoru. Výchozí hodnota je čtyři mezery.
 
-Zvětšit velikost
+Velikost odsazení
 
-Nastaví velikost v mezerách automatického odsazení. Výchozí hodnota je čtyři mezery. Pro vyplnění zadané velikosti budou vloženy znaky tabulátoru, znaky mezery nebo obojí.
+Nastaví velikost v prostorech automatického odsazení. Výchozí hodnota je čtyři mezery. Znaky tabulátoru, mezery nebo obojí budou vloženy, aby vyplnily zadanou velikost.
 
-Vložit mezery
+Vložení mezer
 
-Pokud je tato možnost vybrána, operace odsazení zabírají pouze znaky, nikoli znaky TABULÁTORu. Pokud je **Velikost odsazení** nastavená na 5, například, pak se při každém stisknutí klávesy TAB nebo **zvětšení odsazení** na panelu nástrojů **formátování** vloží pět znaků mezer.
+Když je tato volba vybraná, operace odsazení vloží pouze mezery, nikoli znaky TABulÁTORU. Pokud je například **velikost Odsazení** nastavena na 5, vloží se pět znaků mezery vždy, když stisknete klávesu TAB nebo tlačítko **Zvětšit odsazení** na panelu nástrojů **Formátování.**
 
-Dělejte si záložky
+Zachovat přehled
 
-Pokud je tato možnost vybrána, operace odsazení zaplňují tolik znaků TABULÁTORu. Každý znak TABULÁTORu vyplní počet mezer zadaný v poli **velikost tabulátoru**. Pokud **Velikost odsazení** není sudým násobkem **velikosti tabulátoru**, přidají se k vyplnění rozdílu znaky mezer.
+Když je tato volba vybraná, operace odsazení vloží co nejvíce znaků TABulÁTORU. Každý znak TABulátoru vyplní počet mezer určených ve **velikosti tabulátoru**. Pokud **velikost Odsazení** není sudým násobkem **velikosti tabulátoru**, budou přidány mezery, aby se rozdíl vyplnil.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Možnosti, Textový editor, Všechny jazyky](../../ide/reference/options-text-editor-all-languages.md)
-- [Obecné, Prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
+- [Možnosti, textový editor, všechny jazyky](../../ide/reference/options-text-editor-all-languages.md)
+- [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)

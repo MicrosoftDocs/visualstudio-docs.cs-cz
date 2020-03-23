@@ -1,50 +1,50 @@
 ---
-title: Hledat a filtrovat | Microsoft Docs
+title: Vyhledávání a filtrování | Dokumenty společnosti Microsoft
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 03/03/2020
 ms.topic: conceptual
-description: Přečtěte si, jak můžou správci na portálu pro správu najít jednotlivé předplatitele nebo skupiny.
+description: Zjistěte, jak mohou správci vyhledat jednotlivé předplatitele nebo skupiny na portálu pro správu.
 ms.openlocfilehash: ab6e680747e7c4c216315bad02e0373bb8fe271c
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "78408994"
 ---
-# <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Hledání a filtrování předplatitelů v předplatných sady Visual Studio
-Portál pro správu předplatných sady Visual Studio umožňuje najít konkrétní podmnožinu předplatitelů na základě různých kritérií. Seznam předplatitele můžete filtrovat podle jména, e-mailové adresy, úrovně předplatného a dalších informací.
+# <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Vyhledávání a filtrování odběratelů v předplatných Sady Visual Studio
+Portál pro správu předplatných sady Visual Studio umožňuje najít určitou podmnožinu odběratelů na základě různých kritérií. Seznam odběratelů můžete filtrovat podle názvu, e-mailové adresy, úrovně předplatného a dalších informací.
 
-## <a name="to-filter-the-subscriber-list"></a>Filtrování seznamu předplatitelů
-1. Pokud chcete vyhledat konkrétní skupinu předplatitelů, vyberte kartu **Filtr** .
+## <a name="to-filter-the-subscriber-list"></a>Filtrování seznamu odběratelů
+1. Chcete-li vyhledat určitou skupinu odběratelů, vyberte kartu **Filtr.**
    > [!div class="mx-imgBorder"]
-   > ![vyberte filtr pro hledání seznamu předplatitelů](_img/search-filter/filter-list.png)
+   > ![Výběrem možnosti Filtr chcete prohledat seznam odběratelů.](_img/search-filter/filter-list.png)
 
-2. Zadejte kritéria, která chcete použít jako základ hledání, a pak znovu vyberte **Filtr** .
+2. Zadejte kritéria, která chcete použít jako základ hledání, a pak znovu vyberte **Filtrovat.**
    > [!div class="mx-imgBorder"]
-   > ![k filtrování dat odběratele použít pole k dispozici](media/filter-subscribers.png)
+   > ![Filtrování dat odběratele pomocí dostupných polí](media/filter-subscribers.png)
 
-   Váš seznam předplatitelů pak bude odpovídat vybraným kritériím.  Můžete kliknout na záhlaví filtrovaných výsledků a změnit pořadí řazení pro každé pole.  
+   Seznam odběratelů pak odpovídá zvoleným kritériím.  Kliknutím na záhlaví filtrovaných výsledků můžete změnit pořadí řazení pro každé pole.  
    > [!NOTE]
-   > Pole **název** je seřazené podle křestního jména.
+   > Pole **Název** je seřazeno podle křestního jména.
 
-   Všimněte si, že ikona **filtru** je zvýrazněna, což značí, že je použit filtr.  Zobrazí se také volba **Vymazat filtr** . 
+   Všimněte si, že je zvýrazněna ikona **Filtru,** což znamená, že je použit filtr.  Zobrazí se také volba **vymazat filtr.** 
 
-3. Pokud chcete filtr vymazat a obnovit seznam bez filtru, klikněte na kartu **Vymazat filtr** v pravém horním rohu. 
+3. Chcete-li vymazat filtr a obnovit nefiltrovaný seznam, klepněte v pravém horním rohu na kartu **Vymazat filtr.** 
    > [!div class="mx-imgBorder"]
-   > ![vymažte filtr ze seznamu předplatitele](_img/search-filter/clear-filter.png)
+   > ![Vymazání filtru ze seznamu odběratelů](_img/search-filter/clear-filter.png)
 
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 
 ## <a name="next-steps"></a>Další kroky
-- Teď, když víte, jak najít předplatitele, se dozvíte, jak [Upravit](edit-license.md) jejich předplatné.
-- Potřebujete pomoci s používáním portálu pro správu?  Obraťte [se na podporu správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs).
+- Nyní, když víte, jak najít odběratele, naučte [se,](edit-license.md) jak upravit své předplatné.
+- Potřebujete pomoc s používáním portálu pro správu?  Obraťte se na [podporu správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs).
 
 

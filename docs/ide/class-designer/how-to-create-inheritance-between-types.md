@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vytvoření dědičnosti mezi typy (Návrhář tříd)'
+title: 'Postupy: Definice dědičnosti mezi typy (Návrhář tříd)'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,42 +14,42 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fbf540056318e092db13521dc80478cc7eb91948
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590368"
 ---
-# <a name="how-to-create-inheritance-between-types-in-class-designer"></a>Postupy: vytvoření dědičnosti mezi typy v Návrhář tříd
+# <a name="how-to-create-inheritance-between-types-in-class-designer"></a>Postup: Vytvoření dědičnosti mezi typy v Návrháři tříd
 
-Chcete-li vytvořit vztah dědičnosti mezi dvěma typy v diagramu tříd pomocí **Návrhář tříd**, připojte základní typ s jeho odvozeným typem nebo typy. Můžete mít vztah dědičnosti mezi dvěma třídami, mezi třídou a rozhraním nebo mezi dvěma rozhraními.
+Chcete-li vytvořit vztah dědičnosti mezi dvěma typy v diagramu **třídpomocí Návrháře tříd**, připojte základní typ k odvozenému typu nebo typům. Můžete mít vztah dědičnosti mezi dvěma třídami, mezi třídou a rozhraním nebo mezi dvěma rozhraními.
 
 ## <a name="to-create-an-inheritance-between-types"></a>Vytvoření dědičnosti mezi typy
 
-1. Z projektu v **Průzkumník řešení**otevřete soubor diagramu tříd (. CD).
+1. V projektu v **Průzkumníku řešení**otevřete soubor diagramu tříd (.cd).
 
-     Pokud nemáte diagram tříd, vytvořte jej. Viz [Postupy: Přidání diagramů tříd do projektů](how-to-add-class-diagrams-to-projects.md).
+     Pokud nemáte diagram třídy, vytvořte jej. Postup: [Přidání diagramů tříd do projektů](how-to-add-class-diagrams-to-projects.md).
 
-2. V **soupravě nástrojů**v části **Návrhář tříd**klikněte na **Dědičnost**.
+2. V **panelu nástrojů**klikněte v části **Návrhář e-potomkem**na **položku Dědičnost**.
 
-3. V diagramu tříd nakreslete čáru dědičnosti mezi typy, které chcete, od:
+3. V diagramu třídy nakreslete čáru dědičnosti mezi požadovanými typy, počínaje:
 
-    - Odvozená třída pro základní třídu
+    - Odvozená třída základní třídy
 
-    - Implementující třída do implementovaného rozhraní
+    - Implementující třída implementovaného rozhraní
 
-    - Rozšíření rozhraní na rozšířené rozhraní
+    - Rozšiřující se rozhraní k rozšířenému rozhraní
 
-4. Případně, pokud máte odvozený typ z obecného typu, klikněte na čáru dědičnosti. V okně **vlastnosti** nastavte vlastnost **argumenty typu** tak, aby odpovídala typu, který chcete pro obecný typ.
+4. Volitelně pokud máte odvozený typ z obecného typu, klepněte na řádek dědičnosti. V okně **Vlastnosti** nastavte vlastnost **Typ argumentů** tak, aby odpovídala požadovanému typu obecného typu.
 
     > [!NOTE]
-    > Pokud nadřazená abstraktní třída obsahuje alespoň jeden abstraktní člen, jsou všechny abstraktní členy implementovány jako neabstraktní třídy dědění.
+    > Pokud nadřazená abstraktní třída obsahuje alespoň jeden abstraktní člen, jsou všechny abstraktní členy implementovány jako neabstraktní dědící třídy.
     >
-    >  I když můžete vizualizovat existující obecné typy, nemůžete vytvořit nové obecné typy. Nemůžete také změnit parametry typu pro existující obecné typy.
+    >  Přestože můžete vizualizovat existující obecné typy, nelze vytvořit nové obecné typy. Také nelze změnit parametry typu pro existující obecné typy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Dědičnost](/dotnet/csharp/programming-guide/classes-and-structs/inheritance)
 - [Základní informace o dědičnosti](/dotnet/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics)
-- [Postupy: zobrazení dědičnosti mezi typy](how-to-view-inheritance-between-types.md)
-- [Třídy jazyka Visual C++ v Návrháři tříd](visual-cpp-classes.md)
+- [Postup: Zobrazení dědičnosti mezi typy](how-to-view-inheritance-between-types.md)
+- [Třídy jazyka Visual C++ v návrháři tříd](visual-cpp-classes.md)

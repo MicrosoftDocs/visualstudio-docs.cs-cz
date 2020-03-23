@@ -1,6 +1,6 @@
 ---
-title: Úvod Live Unit Testing
-description: Přečtěte si o výhodách Live Unit Testing a o tom, jak je používat při testování jednotek v projektech.
+title: Úvod Živé testování částí
+description: Seznamte se s výhodami testování živých částí a o tom, jak ho používat při testování projektů.
 ms.date: 09/11/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,36 +11,36 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 3f3a5e97153997908a0360bc123fd1b88fb5c009
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596837"
 ---
-# <a name="live-unit-testing-overview"></a>Přehled Live Unit Testing
+# <a name="live-unit-testing-overview"></a>Živé testování částí – přehled
 
-Live Unit Testing provede testy jednotek automaticky a v reálném čase, když provedete změny kódu. To vám umožní Refaktorovat a měnit kód s větší jistotou. Live Unit Testing automaticky spustí všechny ovlivněné testy při úpravách kódu, aby se zajistilo, že vaše změny nezavádí regrese.
+Živé testování částí provádí testy částí automaticky a v reálném čase při provádění změn kódu. To vám umožní refaktorovat a změnit kód s větší spolehlivostí. Živé testování částí automaticky provede všechny ovlivněné testy při úpravách kódu, abyste zajistili, že vaše změny nezavedou regrese.
 
-Live Unit Testing určuje, zda vaše testování jednotek vhodně pokrývá váš kód. Graficky znázorňuje pokrytí kódu v reálném čase. Vidíte na první pohled, kolik testů pokrývá jednotlivé řádky kódu a které řádky nejsou pokryty žádnými testy jednotek.
+Živé testování částí označuje, zda testy částí dostatečně pokrývají váš kód. Graficky zobrazuje pokrytí kódu v reálném čase. Můžete na první pohled zjistit, kolik testů pokrývá každý řádek kódu a které řádky nejsou zahrnuty v žádné testy částí.
 
-Máte-li řešení, které obsahuje jeden nebo více projektů testování částí, můžete povolit Live Unit Testing výběrem možnosti **test** > **Live Unit Testing** > **Start** z panelu nabídek nejvyšší úrovně v aplikaci Visual Studio.
+Pokud máte řešení, které obsahuje jeden nebo více projektů testování částí, můžete povolit live testování částí výběrem **testovat** > **živé testování částí** > **start** z panelu nabídek nejvyšší úrovně v sadě Visual Studio.
 
 > [!NOTE]
-> Live Unit Testing je k dispozici pouze v edici Visual Studio Enterprise.
+> Živé testování částí je k dispozici pouze v edici Visual Studio Enterprise.
 
-Další informace o Live Unit Testing:
+Další informace o testování živých částí:
 
-- Vyzkoušejte si úvodní kurz: [Začínáme s Live Unit Testing](live-unit-testing-start.md).
+- Vyzkoušejte úvodní kurz: [Začínáme s testováním živých částí](live-unit-testing-start.md).
 
-- Přečtěte si podrobnou dokumentaci: [Live Unit Testing použít s Visual Studio Enterprise Edition](live-unit-testing.md).
+- Přečtěte si podrobnou dokumentaci: [Použití živého testování částí s visual studio enterprise edition](live-unit-testing.md).
 
-- Přečtěte si část [Live Unit Testing – Nejčastější dotazy](live-unit-testing-faq.md) , kde se dozvíte, co je nového v Live Unit Testing a také tipy a techniky.
+- Přečtěte si nejčastější dotazy týkající se [testování živých částí](live-unit-testing-faq.md) a zjistěte, co je nového v testování živých částí, stejně jako tipy a techniky.
 
-- Podívejte se na video o kanálu 9, kde můžete zobrazit přehled Live Unit Testing a jeho funkcí.</p>
+- Podívejte se na video kanálu 9, kde najdete přehled testování živých částí a jeho funkcí.</p>
 
    > [!VIDEO https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105/player]
 
-## <a name="related-resources"></a>Související informační zdroje
+## <a name="related-resources"></a>Související prostředky
 
-- [Kód testovací nástroje](https://visualstudio.microsoft.com/vs/testing-tools/)
+- [Nástroje pro testování kódu](https://visualstudio.microsoft.com/vs/testing-tools/)
 - [Testování částí kódu](unit-test-your-code.md)

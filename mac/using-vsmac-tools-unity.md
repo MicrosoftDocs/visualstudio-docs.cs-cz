@@ -1,123 +1,123 @@
 ---
-title: Pomocí sady Visual Studio for Mac Tools for Unity
-description: Tato příručka popisuje, jak pomocí sady Visual Studio for Mac Tools pro Unity rozšíření
+title: Použití Visual Studia pro Mac Nástroje pro jednotu
+description: Tato příručka popisuje použití rozšíření Visual Studio for Mac Tools for Unity
 author: therealjohn
 ms.author: johmil
 ms.date: 12/13/2019
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
 ms.openlocfilehash: 4247e5cfb936d79c2b2bea5ac68a16164f0c0ef0
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78410525"
+ms.lasthandoff: 03/20/2020
+ms.locfileid: "79303335"
 ---
-# <a name="using-visual-studio-for-mac-tools-for-unity"></a>Pomocí sady Visual Studio for Mac Tools for Unity
+# <a name="using-visual-studio-for-mac-tools-for-unity"></a>Použití Visual Studia pro Mac Nástroje pro jednotu
 
-V této části se dozvíte, jak pomocí sady Visual Studio for Mac Tools pro Unity a integrace a funkce pro zvýšení produktivity a jak pomocí sady Visual Studio pro Mac ladicího programu pro vývoj pro Unity.
+V této části se dozvíte, jak používat Visual Studio pro Mac Nástroje pro unity integrace a produktivity funkce a jak používat Visual Studio pro Mac ladicí program pro vývoj Unity.
 
-## <a name="opening-unity-scripts-in-visual-studio-for-mac"></a>Otevírání skriptů Unity v sadě Visual Studio pro Mac
+## <a name="opening-unity-scripts-in-visual-studio-for-mac"></a>Otevření skriptů Unity ve Visual Studiu pro Mac
 
-Jakmile Visual Studio pro Mac [nastavíte jako externí editor skriptů pro Unity](setup-vsmac-tools-unity.md#configure-unity-for-use-with-visual-studio-for-mac), otevře se při otevření libovolného skriptu z editoru Unity automatické spuštění nebo přepnutí na Visual Studio pro Mac s vybraným skriptem.
+Jakmile je Visual Studio for Mac [nastavenjako externí editor skriptů pro Unity](setup-vsmac-tools-unity.md#configure-unity-for-use-with-visual-studio-for-mac), otevření libovolného skriptu z editoru Unity se automaticky spustí nebo přepne na Visual Studio for Mac s otevřeným zvoleným skriptem.
 
-Alternativně můžete Visual Studio pro Mac otevřít bez otevření skriptu v editoru zdrojového kódu tak, že v nabídce **prostředky** v Unity vyberete **otevřít C# projekt** .
+Případně Visual Studio pro Mac lze otevřít bez skriptu otevřít ve zdrojovém editoru výběrem **Open C# Project** z nabídky **Prostředky** v Unity.
 
-![Otevřít projekt C#](media/using-vsmac-tools-unity-image1.png)
+![Otevřít projekt Jazyka C#](media/using-vsmac-tools-unity-image1.png)
 
-## <a name="unity-documentation-access"></a>Přístup k dokumentaci k Unity
+## <a name="unity-documentation-access"></a>Přístup k dokumentaci Unity
 
-Visual Studio for Mac Tools for Unity obsahuje zástupce pro přístup k dokumentaci k rozhraní Unity API. Pokud chcete získat přístup k dokumentaci k rozhraní Unity API z Visual Studio pro Mac, umístěte kurzor na rozhraní Unity API, se kterým chcete získat informace, a stiskněte **⌘ Command +** .
+Visual Studio for Mac Tools for Unity obsahuje zástupce pro přístup k dokumentaci rozhraní UNITY API. Chcete-li získat přístup k dokumentaci rozhraní Unity API z Visual Studia for Mac, umístěte kurzor nad rozhraní UNITY API, o kterém se chcete dozvědět, a stiskněte **příkaz 啦 + "**.
 
-## <a name="intellisense-for-unity-messages"></a>Technologie IntelliSense pro zprávy Unity
-Modul Unity vysílá zprávy do skriptů MonoBehaviour a umožňuje vývojářům psát kód, který reaguje na zprávy, jako je například. MouseDown, OnTriggerEnter atd. Vzhledem k tomu, že se nejedná o virtuální metody v základní třídě MonoBehaviour, některé z nich, jako je MonoDevelop, pro zprávy Unity chybí funkce pro dokončování kódu.
+## <a name="intellisense-for-unity-messages"></a>Zprávy IntelliSense for Unity
+Unity engine vysílá zprávy do skriptů MonoBehaviour, což umožňuje vývojářům psát kód, který reaguje na zprávy, jako je OnMouseDown, OnTriggerEnter, atd. Protože se nejedná o virtuální metody v základní monobehavior třídy, některé IDE, jako je Například MonoDevelop chybí funkce dokončení kódu pro zprávy Unity.
 
-Visual Studio for Mac Tools for Unity však rozšiřuje funkčnost technologie IntelliSense pro zprávy Unity. To umožňuje snadno implementovat zprávy Unity skripty třídy MonoBehaviour a pomáhá při učení Unity API. Použití technologie IntelliSense pro zprávy Unity:
+Visual Studio for Mac Tools for Unity však rozšiřuje své funkce IntelliSense na zprávy Unity. To usnadňuje implementaci unity zprávy ve skriptech MonoBehaviour a pomáhá s učením Unity API. Použití zpráv IntelliSense for Unity:
 
-1. Umístěte kurzor na nový řádek do těla třídy, která je odvozena z třídy MonoBehaviour.
+1. Umístěte kurzor na nový řádek uvnitř těla třídy, která je odvozena od MonoBehaviour.
 
-2. Začněte psát název zprávy Unity, například `OnTriggerEnter`.
+2. Začněte psát název zprávy Unity, `OnTriggerEnter`například .
 
-3. Po zadání písmen "**ONT**" se zobrazí seznam návrhů technologie IntelliSense.
+3. Po zadání písmen "**ont**" se zobrazí seznam návrhů Technologie IntelliSense.
 
    ![Používání atributu IntelliSense](media/using-vsmac-tools-unity-image2.png)
 
 4. Výběr v seznamu lze změnit třemi způsoby:
 
-   * Pomocí šipek **nahoru** a **dolů** .
+   * Pomocí kláves se šipkami **nahoru** a **dolů.**
 
-   * Po kliknutí myší na požadovanou položku.
+   * Kliknutím myší na požadovanou položku.
 
-   * Pokud budete pokračovat k zadání názvu požadované položky.
+   * Dalším zadáním názvu požadované položky.
 
-5. Technologie IntelliSense můžete vložit vybrané zprávy Unity všechny potřebné parametry včetně:
+5. Technologie IntelliSense může vložit vybranou zprávu Unity, včetně všech nezbytných parametrů:
 
-   * Stisknutím klávesy **TAB**.
+   * Stisknutím **klávesy Tab**.
 
-   * Stisknutím klávesy **return**.
+   * Stisknutím **klávesy Return**.
 
-   * Dvojitým kliknutím na vybranou položku.
+   * Poklepáním na vybranou položku.
 
-   ![Vložit zprávu Unity v IntelliSense](media/using-vsmac-tools-unity-image3.png)
+   ![Vložit zprávu Unity ze služby IntelliSense](media/using-vsmac-tools-unity-image3.png)
 
-## <a name="adding-new-unity-files-and-folders"></a>Přidání nové Unity soubory a složky
+## <a name="adding-new-unity-files-and-folders"></a>Přidání nových souborů a složek Unity
 
-I když můžete vždy přidat nové soubory do projektu Unity v editoru Unity, Visual Studio pro Mac umožňuje snadno vytvářet nové skripty Unity, shadery, struktury, výčty a složky z aplikace Visual Studio.
+Zatímco můžete vždy přidat nové soubory do projektu Unity v editoru Unity, Visual Studio pro Mac umožňuje snadno vytvářet nové skripty Unity, shadery, struktury, výčty a složky z visual studia.
 
-### <a name="add-a-new-c-monobehaviour-script"></a>Přidat nový skript jazyka C# třídy MonoBehaviour.
+### <a name="add-a-new-c-monobehaviour-script"></a>Přidání nového skriptu C# MonoBehaviour
 
-Pokud chcete přidat nový C# skript MonoBehaviour, **klikněte pravým tlačítkem na složku assets (prostředky** ) nebo na jeden z jeho podadresářů na panelu řešení a vyberte **Přidat > nové MonoBehaviour**.
+Chcete-li přidat nový skript C# MonoBehaviour, **klepněte pravým tlačítkem myši na složku Prostředky** nebo na jeden z jejích podadresářů v panelu Řešení a vyberte přidat > nové **monochování**.
 
-![Přidání nové třídy MonoBehaviour.](media/using-vsmac-tools-unity-image4.png)
+![Přidat nové MonoBehaviour](media/using-vsmac-tools-unity-image4.png)
 
-### <a name="add-a-new-unity-shader"></a>Přidat nový shader pro Unity
+### <a name="add-a-new-unity-shader"></a>Přidání nového shaderu Unity
 
-Pokud chcete přidat nový shader Unity, **klikněte pravým tlačítkem na složku assets (prostředky** ) nebo na podadresář na panelu řešení a vyberte **Přidat > Nový shader**.
+Chcete-li přidat nový shader Unity, **klepněte pravým tlačítkem myši na složku Datové zdroje** nebo na podadresář v panelu Řešení a vyberte přidat > nový **shader**.
 
-### <a name="add-a-new-folder"></a>Přidat novou složku
+### <a name="add-a-new-folder"></a>Přidání nové složky
 
-Chcete-li přidat novou složku, **klikněte pravým tlačítkem myši na složku assets (prostředky** ) nebo na podadresář na panelu řešení a vyberte **Přidat > Nová složka**.
+Chcete-li přidat novou složku, **klepněte pravým tlačítkem myši na složku Datové zdroje** nebo podadresář na panelu Řešení a vyberte příkaz Přidat > novou **složku**.
 
-Tyto doplňky se projeví v okně projektů Unity editor.
+Tyto dodatky se projeví v okně Projektu editorunity.
 
 ### <a name="to-rename-a-file-or-folder"></a>Přejmenování souboru nebo složky
-**klikněte pravým tlačítkem myši** na položku, kterou chcete přejmenovat, na panelu řešení a vyberte **Přejmenovat...** .
+**Klikněte pravým tlačítkem myši** na položku, kterou chcete přejmenovat na panelu Řešení, a vyberte **přejmenovat...**.
 
 > [!NOTE]
-> Pokud máte nový projekt Unity se žádné skripty a prostředky složka nezobrazí v oblasti řešení v sadě Visual Studio pro Mac, přidejte počáteční skript jazyka C# z v rámci nástroje Unity editor.
+> Pokud máte nový projekt Unity bez skriptů a složka Prostředky se nezobrazí v panelu Řešení v sadě Visual Studio for Mac, přidejte počáteční skript Jazyka C# z editoru Unity.
 
-## <a name="unity-debugging"></a>Ladění Unity
+## <a name="unity-debugging"></a>Ladění jednoty
 
-Projekty Unity můžete ladit pomocí sady Visual Studio pro Mac.
+Unity projekty lze ladit pomocí Visual Studio pro Mac.
 
-### <a name="start-debugging"></a>Spustit ladění
+### <a name="start-debugging"></a>Zahájit ladění
 
-Spuštění ladění:
+Zahájení ladění:
 
-1. Připojte Visual Studio k Unity kliknutím na tlačítko **Přehrát** nebo zadejte **příkaz + return**nebo **F5**.
+1. Připojte Visual Studio k jednotě klepnutím na tlačítko **Přehrát** nebo zadáním **příkazu + returnu**nebo **f5**.
 
-   ![Kliknutím na tlačítko Přehrát v sadě Visual Studio](media/using-vsmac-tools-unity-image5.png)
+   ![Klikněte na Přehrát v Sadě Visual Studio.](media/using-vsmac-tools-unity-image5.png)
 
 2. Přepněte na Unity a kliknutím na tlačítko **Přehrát** spusťte hru v editoru.
 
-   ![Kliknutím na tlačítko Přehrát v Unity](media/using-vsmac-tools-unity-image6.png)
+   ![Klikněte na Přehrát v jednotě](media/using-vsmac-tools-unity-image6.png)
 
-3. Neopravňují hry v Unity editoru připojeny k sadě Visual Studio budou všechny zarážky, došlo k pozastavení provádění hry a otevřete řádek kódu, kde hru zarážce v sadě Visual Studio pro Mac.
+3. Když hra běží v editoru Unity při připojení k Visual Studio, všechny zarážky zjištěné pozastaví provádění hry a zobrazí řádek kódu, kde hra narazí na zarážku v sadě Visual Studio for Mac.
 
-### <a name="start-debugging-in-a-single-step"></a>Spustit ladění v jednom kroku
+### <a name="start-debugging-in-a-single-step"></a>Spuštění ladění v jednom kroku
 
-Spuštění ladění a přehrání editoru Unity můžete provést v jednom kroku přímo z Visual Studio pro Mac výběrem možnosti **připojit k Unity a přehrání** .
+Spuštění ladění a přehrávání unity editor lze dokončit v jednom kroku přímo z Visual Studio pro Mac výběrem **připojit k jednotě a play** konfigurace.
 
-![Vybrat připojit k Unity a hrát](media/using-vsmac-tools-unity-image8.png)
+![Vyberte Připojit k jednotě a přehrát](media/using-vsmac-tools-unity-image8.png)
 
 ### <a name="stop-debugging"></a>Zastavit ladění
 
-Chcete zastavit ladění:
+Ukončení ladění:
 
-1. Klikněte na tlačítko **zastavit** v Visual Studio pro Mac nebo stiskněte **Shift + Command + Return**.
+1. Klepněte na tlačítko **Zastavit** v Sadě Visual Studio pro Mac nebo stiskněte **Shift + Command + Return**.
 
-   ![Klikněte na tlačítko Zastavit ve Visual Studiu](media/using-vsmac-tools-unity-image7.png)
+   ![Klikněte na Zastavit v sadě Visual Studio.](media/using-vsmac-tools-unity-image7.png)
 
 > [!NOTE]
-> Pokud jste zahájili ladění pomocí konfigurace **připojit k Unity a Play** , tlačítko **zastavit** také zastaví Unity.
+> Pokud jste začali ladění pomocí **připojit k jednotě a play** konfigurace, tlačítko **Stop** také zastaví Unity.
 
-Další informace o ladění v Visual Studio pro Mac najdete v tématu [použití ladicího programu](debugging.md).
+Další informace o ladění v Visual Studiu pro Mac najdete v [tématu Použití ladicího programu](debugging.md).

@@ -1,5 +1,5 @@
 ---
-title: Glosář atributů | Nástroj Microsoft IntelliTest Developer test Tool
+title: Glosář atributů | Testovací nástroj pro vývojáře IntelliTest společnosti Microsoft
 ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -10,11 +10,11 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 00d8b24d26237a3c7b4130eba4614b5ea7b7eccd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594302"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79302628"
 ---
 # <a name="attribute-glossary"></a>Glosář atributů
 
@@ -30,7 +30,7 @@ ms.locfileid: "75594302"
 * **Microsoft.Pex.Framework.Settings**
   * [PexAssemblySettings](#pexassemblysettings)
 
-* **Microsoft.Pex.Framework.Instrumentation**
+* **Microsoft.Pex.Framework.Instrumentace**
   * [PexAssemblyUnderTest](#pexassemblyundertest)
   * [PexInstrumentAssembly](#pexinstrumentassemblyattribute)
 
@@ -46,9 +46,9 @@ ms.locfileid: "75594302"
 <a name="pexassumenotnull"></a>
 ## <a name="pexassumenotnull"></a>PexAssumeNotNull
 
-Tento atribut vyhodnotí, že upravená hodnota nemůže být **null**. Dá se připojit k:
+Tento atribut tvrdí, že řízená hodnota nemůže být **null**. Může být připojen k:
 
-* **parametr** parametrizované testovací metody
+* **parametr** parametrizované zkušební metody
 
   ```csharp
   // assume foo is not null
@@ -74,22 +74,22 @@ Tento atribut vyhodnotí, že upravená hodnota nemůže být **null**. Dá se p
   public class Foo {}
   ```
 
-Dá se taky připojit k testovacímu sestavení, testovacímu přípravku nebo testovací metodě; v takovém případě musí první argumenty označovat, na které pole se předpoklady vztahují. Pokud atribut platí pro typ, platí pro všechna pole s tímto formálním typem.
+Může být také připojen ke zkušební sestavě, zkušebnímu přípravku nebo zkušební metodě; v tomto případě musí první argumenty uvádět, na které pole nebo typ se předpoklady vztahují. Pokud se atribut vztahuje na typ, platí pro všechna pole s tímto formálním typem.
 
 <a name="pexclass"></a>
 ## <a name="pexclass"></a>PexClass
 
-Tento atribut označuje třídu, která obsahuje *průzkumy*. Je ekvivalentem MSTest **atribut TestClassAttribute** (nebo nunit **TestFixtureAttribute**). Tento atribut je nepovinný.
+Tento atribut označuje třídu, která obsahuje *průzkumy*. Jedná se o ekvivalent atributu MSTest **TestClassAttribute** (nebo Atribut **Utajení NUnit TestFixtureAttribute).** Tento atribut je volitelný.
 
-Třídy označené jako [PexClass](#pexclass) musí být *výchozí constructible*:
+Třídy označené [třídou PexClass](#pexclass) musí být *výchozí k ono :*
 
 * veřejně exportovaný typ
 * výchozí konstruktor
-* neabstraktní
+* není abstraktní
 
-Pokud třída tyto požadavky nesplňuje, je hlášena chyba a průzkum se nezdařil.
+Pokud třída nesplňuje tyto požadavky, je hlášena chyba a průzkum se nezdaří.
 
-Je také velmi doporučeno, aby tyto třídy byly **částečně** tak, aby IntelliTest mohli generovat nové testy, které jsou součástí třídy, ale v samostatném souboru. Tento přístup řeší mnohé problémy z důvodu [viditelnosti](input-generation.md#visibility) a je typickou technikou v C#.
+Důrazně doporučujeme, aby tyto třídy **částečné** tak, aby IntelliTest můžete generovat nové testy, které jsou součástí třídy, ale v samostatném souboru. Tento přístup řeší mnoho problémů z důvodu [viditelnosti](input-generation.md#visibility) a je typická technika v C#.
 
 **Další sada a kategorie**:
 
@@ -99,34 +99,34 @@ Je také velmi doporučeno, aby tyto třídy byly **částečně** tak, aby Inte
 public partial class MyTests { ... }
 ```
 
-**Určení testovaného typu**:
+**Určení zkoušeného typu**:
 
 ```csharp
 [PexClass(typeof(Foo))] // this is a test for Foo
 public partial class FooTest { ... }
 ```
 
-Třída může obsahovat metody s poznámkou s [PexMethod](#pexmethod). IntelliTest také rozumí [nastavení a odtrhnout metody](test-generation.md#setup-teardown).
+Třída může obsahovat metody s poznámkou [PexMethod](#pexmethod). IntelliTest také chápe [metody nastavení a bourání](test-generation.md#setup-teardown).
 
 <a name="pexgenericarguments"></a>
 ## <a name="pexgenericarguments"></a>PexGenericArguments
 
-Tento atribut poskytuje řazenou kolekci členů typu pro vytvoření instance [obecného parametrizovaného testu jednotek](test-generation.md#generic-parameterized).
+Tento atribut poskytuje typ řazené kolekce členů pro vytváření instancí [obecné parametrizované testování částí](test-generation.md#generic-parameterized).
 
 <a name="pexmethod"></a>
 ## <a name="pexmethod"></a>PexMethod
 
-Tento atribut označuje metodu jako [parametrizovaný test jednotky](test-generation.md#parameterized-unit-testing).
-Metoda se musí nacházet v rámci třídy označené atributem [PexClass](#pexclass) .
+Tento atribut označí metodu jako [parametrizovaný test částí](test-generation.md#parameterized-unit-testing).
+Metoda musí být umístěna v rámci třídy označené atributem [PexClass.](#pexclass)
 
-IntelliTest bude generovat tradiční testy bez parametrů, které volají [parametrizovaný test jednotek](test-generation.md#parameterized-unit-testing) s různými parametry.
+IntelliTest bude generovat tradiční, parametrické testy, které volají [parametrizovaný test částí](test-generation.md#parameterized-unit-testing) s různými parametry.
 
-Parametrizovaný test jednotek:
+Parametrizovaný test částí:
 
-* musí být metoda instance.
-* musí být [viditelný](input-generation.md#visibility) pro třídu testu, do které jsou vygenerované testy umístěny podle [Nastavení vodopádu](settings-waterfall.md) .
+* musí být metoda instance
+* musí být [viditelné](input-generation.md#visibility) pro zkušební třídu, do které jsou generované zkoušky umístěny podle [vodopádu Nastavení](settings-waterfall.md)
 * může mít libovolný počet parametrů
-* může být obecný
+* mohou být generické
 
 **Příklad**
 
@@ -142,12 +142,12 @@ public partial class MyTests {
 <a name="pexexplorationattributebase"></a>
 ## <a name="pexexplorationattributebase"></a>PexExplorationAttributeBase
 
-[Další informace](xref:Microsoft.Pex.Framework.PexExplorationAttributeBase)
+[Více informací](xref:Microsoft.Pex.Framework.PexExplorationAttributeBase)
 
 <a name="pexassemblysettings"></a>
 ## <a name="pexassemblysettings"></a>PexAssemblySettings
 
-Tento atribut lze nastavit na úrovni sestavení a přepsat tak výchozí hodnoty nastavení pro všechny průzkumy.
+Tento atribut lze nastavit na úrovni sestavy přepsat výchozí hodnoty nastavení pro všechny průzkumy.
 
 ```csharp
 using Microsoft.Pex.Framework;
@@ -158,7 +158,7 @@ using Microsoft.Pex.Framework;
 <a name="pexassemblyundertest"></a>
 ## <a name="pexassemblyundertest"></a>PexAssemblyUnderTest
 
-Tento atribut určuje sestavení, které je Testováno pomocí aktuálního testovacího projektu.
+Tento atribut určuje sestavení, které je testováno aktuálním testovacím projektem.
 
 ```csharp
 [assembly: PexAssemblyUnderTest("MyAssembly")]
@@ -167,7 +167,7 @@ Tento atribut určuje sestavení, které je Testováno pomocí aktuálního test
 <a name="pexinstrumentassemblyattribute"></a>
 ## <a name="pexinstrumentassemblyattribute"></a>PexInstrumentAssemblyAttribute
 
-Tento atribut slouží k určení sestavení, které má být instrumentované.
+Tento atribut se používá k určení sestavy, která má být instrumentována.
 
 **Příklad**
 
@@ -184,7 +184,7 @@ using Microsoft.Pex.Framework;
 <a name="pexusetype"></a>
 ## <a name="pexusetype"></a>PexUseType
 
-Tento atribut oznamuje IntelliTest, že může použít konkrétní typ pro vytvoření instance (abstraktních) základních typů nebo rozhraní.
+Tento atribut říká IntelliTest, že můžete použít určitý typ k vytvoření instance (abstraktní) základní typy nebo rozhraní.
 
 **Příklad**
 
@@ -201,11 +201,11 @@ public void MyTest(object testParameter)
 <a name="pexallowedexception"></a>
 ## <a name="pexallowedexception"></a>PexAllowedException
 
-Pokud je tento atribut připojen k [PexMethod](#pexmethod) (nebo k [PexClass](#pexclass), změní výchozí IntelliTest logiku, která indikuje, kdy testy selžou. Test se nepovažuje za neúspěšný, a to i v případě, že vyvolá určenou výjimku.
+Pokud je tento atribut připojen k [pexmethod](#pexmethod) (nebo [pexclass](#pexclass), změní výchozí logiku IntelliTest, která označuje, když se testy nezdaří. Test nebude považován za neúspěšný, i v případě, že vyvolá zadanou výjimku.
 
 **Příklad**
 
-Následující test určuje, že konstruktor **zásobníku** může vyvolat výjimku **ArgumentOutOfRangeException**:
+Následující test určuje, že konstruktor **Stack** může vyvolat **ArgumentOutOfRangeException**:
 
 ```csharp
 class Stack {
@@ -220,7 +220,7 @@ class Stack {
 }
 ```
 
-Filtr je připojen k přípravné následujícím způsobem (lze také definovat na úrovni sestavení nebo testu):
+Filtr je připojen k upínací mutovi (lze jej také definovat na úrovni sestavy nebo zkoušky):
 
 ```csharp
 [PexMethod]
@@ -233,18 +233,18 @@ class CtorTest(int capacity) {
 <a name="pexallowedexceptionfromassembly"></a>
 ## <a name="pexallowedexceptionfromassembly"></a>PexAllowedExceptionFromAssembly
 
-[Další informace](xref:Microsoft.Pex.Framework.Validation.PexAllowedExceptionFromAssemblyAttribute)
+[Více informací](xref:Microsoft.Pex.Framework.Validation.PexAllowedExceptionFromAssemblyAttribute)
 
 <a name="pexallowedexceptionfromtype"></a>
 ## <a name="pexallowedexceptionfromtype"></a>PexAllowedExceptionFromType
 
-[Další informace](xref:Microsoft.Pex.Framework.Validation.PexAllowedExceptionFromTypeAttribute)
+[Více informací](xref:Microsoft.Pex.Framework.Validation.PexAllowedExceptionFromTypeAttribute)
 
 <a name="pexallowedexceptionfromtypeundertest"></a>
 ## <a name="pexallowedexceptionfromtypeundertest"></a>PexAllowedExceptionFromTypeUnderTest
 
-[Další informace](xref:Microsoft.Pex.Framework.Validation.PexAllowedExceptionFromTypeUnderTestAttribute)
+[Více informací](xref:Microsoft.Pex.Framework.Validation.PexAllowedExceptionFromTypeUnderTestAttribute)
 
 ## <a name="got-feedback"></a>Máte zpětnou vazbu?
 
-Publikujte své nápady a žádosti o funkce na [komunitě vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
+Své nápady a žádosti o funkce můžete zadávat na webu [Developer Community](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

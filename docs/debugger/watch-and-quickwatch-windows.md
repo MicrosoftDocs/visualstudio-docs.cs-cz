@@ -1,5 +1,5 @@
 ---
-title: Nastavení sledování u proměnných | Dokumentace Microsoftu
+title: Nastavení hodinek na proměnné | Dokumenty společnosti Microsoft
 ms.custom: seodec18
 ms.date: 10/11/2018
 ms.topic: conceptual
@@ -18,25 +18,25 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ea3d2a1e82e92473859fef29754fbb831cf3685b
-ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74904041"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79302005"
 ---
-# <a name="watch-variables-with-watch-windows-and-quickwatch"></a>Podívejte se na proměnných s oknech kukátka a Rychlé kukátko
+# <a name="watch-variables-with-watch-windows-and-quickwatch"></a>Sledování proměnných pomocí oken Watch a QuickWatch
 
-Při ladění, můžete použít **Watch** windows a **QuickWatch** sledovat proměnné a výrazy. Systému windows jsou k dispozici pouze během relace ladění.
+Při ladění můžete ke sledování proměnných a výrazů použít **okna a** **hodinky QuickWatch.** Okna jsou k dispozici pouze během relace ladění.
 
-**Sledování** windows můžete zobrazit několika proměnných v době během ladění. **QuickWatch** dialogové okno zobrazí jednu proměnnou najednou a musí být uzavřeny předtím, než můžete pokračovat v ladění.
+**Okna sledování** můžete zobrazit několik proměnných najednou při ladění. Dialogové okno **Rychlé sledování** zobrazuje jednu proměnnou najednou a před pokračováním ladění musí být uzavřeno.
 
-Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprostou začátečníky](../debugger/debugging-absolute-beginners.md) a [techniky a nástroje pro ladění](../debugger/write-better-code-with-visual-studio.md) .
+Pokud je to poprvé, co jste se pokusili ladit kód, můžete si přečíst [ladění pro absolutní začátečníky](../debugger/debugging-absolute-beginners.md) a ladění [techniky a nástroje](../debugger/write-better-code-with-visual-studio.md) před procházením tohoto článku.
 
-## <a name="observe-variables-with-a-watch-window"></a>Sledujte proměnné okno kukátka
+## <a name="observe-variables-with-a-watch-window"></a>Sledování proměnných pomocí okna Kukátka
 
-Můžete otevřít více než jeden **Watch** okna a sledovat více než jednu proměnnou v **Watch** okna.
+Můžete otevřít více než jedno okno **kukátka** a sledovat více než jednu proměnnou v okně **kukátka.**
 
-Například nastavení sledování u hodnot typu `a`, `b`, a `c` v následujícím kódu:
+Chcete-li například nastavit sledování `a`hodnot `b`, `c` , a v následujícím kódu:
 
 ```C++
 int main()
@@ -58,85 +58,85 @@ int main()
 
 ```
 
-1. Nastavit zarážku na `c = a + b;` řádek kliknutím na levý okraj výběru **ladění** > **Přepnout zarážku**, nebo stisknutím klávesy **F9**.
+1. Nastavte zarážku `c = a + b;` na řádku klepnutím na levý okraj, výběrem **možnosti Ladění** > **přepínací zarážky nebo**stisknutím **klávesy F9**.
 
-1. Spuštění ladění tak, že vyberete zelené **Start** šipku nebo **ladění** > **spustit ladění**, nebo stiskněte klávesu **F5**. Pozastaví spuštění na zarážce.
+1. Ladění můžete spustit výběrem zelené šipky **Start** nebo **Ladění** > **počátečního ladění**nebo stisknutím **klávesy F5**. Spuštění pozastaví na zarážky.
 
-1. Otevřít **Watch** okna tak, že vyberete **ladění** > **Windows** > **Watch**  >   **Podívejte se na 1**, nebo stisknutím klávesy **Ctrl**+**Alt**+**W** > **1**.
+1. Otevřete okno **Kukátka** výběrem **možnosti Ladění** > sledování**ve službách Windows** > **Watch** > **1**nebo stisknutím **klávesy Ctrl**+**Alt**+**W** > **1**.
 
-   Můžete otevřít další **Watch** windows tak, že vyberete windows **2**, **3**, nebo **4**.
+   Další okna **kukátku** můžete otevřít výběrem oken **2**, **3**nebo **4**.
 
-1. V **Watch** okna, vyberte prázdný řádek a proměnné typu `a`. Totéž proveďte pro `b` a `c`.
+1. V okně **Kukátko** vyberte prázdný `a`řádek a zadejte proměnnou . Proveďte totéž pro `b` a `c`.
 
-   ![Sledovat proměnné](../debugger/media/watchvariables.png "WatchVariables")
+   ![Sledování proměnných](../debugger/media/watchvariables.png "Sledovat proměnné")
 
-1. Pokračovat v ladění tak, že vyberete **ladění** > **Krokovat s vnořením** nebo stiskněte **F11** podle potřeby k přechodu. Hodnoty proměnné ve **Watch** okno změnit, protože iteraci `for` smyčky.
+1. Pokračujte v ladění výběrem **ladění** > **kroku do** nebo stisknutím **klávesy F11** podle potřeby k postupu. Hodnoty proměnných v okně **Kukátko** se `for` při itetování ve smyčce mění.
 
 >[!NOTE]
->Pouze jazyka c++
->- Budete muset kvalifikovat kontext názvu proměnné nebo výraz, který používá název proměnné. Kontext je funkce, zdrojový soubor nebo modul, kde je umístěna proměnná. Pokud máte kvalifikovat kontext, použijte [kontextový operátor (C++)](../debugger/context-operator-cpp.md) syntaxe v poznámce **název** v **Watch** okna.
+>Pouze pro C++
+>- Možná budete muset kvalifikovat kontext názvu proměnné nebo výraz, který používá název proměnné. Kontext je funkce, zdrojový soubor nebo modul, kde je proměnná umístěna. Pokud máte kvalifikovat kontext, použijte syntaxi [operátoru kontextu (C++)](../debugger/context-operator-cpp.md) v **name** v okně **Kukátka.**
 >
->- Můžete přidat názvy registrů a názvy proměnných pomocí  **$ \<zaregistrovat&nbsp;název >** nebo  **@ \<zaregistrovat&nbsp;name >** k **název** v **Watch** okna. Další informace najdete v tématu [Pseudoproměnné](../debugger/pseudovariables.md).
+>- Názvy registrů a proměnných můžete přidat pomocí ** $ \<názvu registru&nbsp;>** nebo ** @ \<název registru&nbsp;>** do okna **Název** v okně **Kukátko.** Další informace naleznete v tématu [Pseudovariables](../debugger/pseudovariables.md).
 
-## <a name="use-expressions-in-a-watch-window"></a>Použití výrazů v okně kukátko
+## <a name="use-expressions-in-a-watch-window"></a>Použití výrazů v okně Kukátka
 
-Libovolný platný výraz rozpoznán v ladicím programu v můžete sledovat **Watch** okna.
+Můžete sledovat libovolný platný výraz rozpoznaný ladicím programem v okně **Kukátka.**
 
-Například kód v předchozí části, můžete získat průměrem tří hodnot tak, že zadáte `(a + b + c) / 3` v **Watch** okno:
+Například pro kód v předchozí části můžete získat průměr ze tří `(a + b + c) / 3` hodnot zadáním do okna **Kukátko:**
 
-![Výraz kukátka](../debugger/media/watchexpression.png "Výraz kukátka")
+![Sledovat výraz](../debugger/media/watchexpression.png "Sledovat výraz")
 
-Pravidla pro vyhodnocování výrazů v **Watch** okna jsou obvykle stejné jako pravidla pro vyhodnocování výrazů v kódu jazyka. Pokud výraz obsahuje chybu syntaxe, očekávejte ke stejné chybě kompilátoru stejně jako v editoru kódu. Například máte překlep v předcházejícího výrazu vytváří tuto chybu **Watch** okno:
+Pravidla pro vyhodnocení výrazů v okně **Kukátko** jsou obecně stejné jako pravidla pro vyhodnocení výrazů v jazyce kódu. Pokud výraz obsahuje syntaktickou chybu, očekávejte stejnou chybu kompilátoru jako v editoru kódu. Například překlep v předchozím výrazu způsobí tuto chybu v okně **Kukátko:**
 
-![Chyba kukátka výrazu](../debugger/media/watchexpressionerror.png "Chyba kukátka výrazu")
+![Chyba výrazu sledování](../debugger/media/watchexpressionerror.png "Chyba výrazu sledování")
 
-Kruh s ikonou dvě vlnovky se může vyskytovat **Watch** okno. Tato ikona znamená, že ladicí program nevyhodnocuje výraz z důvodu možných závislosti mezi vlákny. Vyhodnocení kódu vyžaduje další vlákna ve vaší aplikaci dočasně spustit, ale vzhledem k tomu, že jste v režimu přerušení, jsou obvykle Zastavit všechna vlákna ve vaší aplikaci. Umožňuje spustit dočasně jiných vláken může mít neočekávané účinky na stav aplikace a ladicí program může ignorovat události, například zarážky a výjimky na tato vlákna.
+V okně **Kukátko** se může zobrazit kruh se dvěma ikonami vlnovky. Tato ikona znamená, že ladicí program nevyhodnocuje výraz z důvodu potenciální závislosti mezi vlákny. Vyhodnocení kódu vyžaduje, aby se dočasně spouštěla další vlákna ve vaší aplikaci, ale protože jste v režimu přerušení, jsou všechna vlákna ve vaší aplikaci obvykle zastavena. Povolení dočasného spuštění jiných vláken může mít neočekávané účinky na stav aplikace a ladicí program může ignorovat události, jako jsou zarážky a výjimky v těchto vláknech.
 
 ::: moniker range=">= vs-2019" 
-## <a name="search-in-the-watch-window"></a>Hledat v okno Kukátko
+## <a name="search-in-the-watch-window"></a>Hledání v okně Kukátka
 
-Klíčová slova můžete hledat ve sloupcích název, hodnota a typ okna **kukátka** pomocí panelu hledání nad každým oknem. Pro spuštění hledání stiskněte klávesu ENTER nebo vyberte jednu ze šipek. Probíhající hledání zrušíte tak, že na panelu hledání vyberete ikonu "x".
+Klíčová slova můžete vyhledat ve sloupcích Název, Hodnota a Typ okna **Kukátka** pomocí vyhledávacího panelu nad každým oknem. Stiskněte klávesu ENTER nebo vyberte jednu ze šipek, která provede hledání. Chcete-li zrušit probíhající hledání, vyberte na panelu hledání ikonu "x".
 
-Použijte šipky vlevo a vpravo (SHIFT + F3 a F3) k navigaci mezi nalezenými shodami.
+Pomocí levé a pravé šipky (Shift + F3, respektive) pro navigaci mezi nalezenými shodami.
 
-![Hledat v okně kukátka](../debugger/media/ee-search-watch.png "Hledat v okně kukátka")
+![Hledání v okně kukátka](../debugger/media/ee-search-watch.png "Hledání v okně kukátka")
 
-Chcete-li prohledávat více nebo méně důkladné výsledky, použijte rozevírací seznam **Hledat** v horní části okna **kukátka** a vyberte, kolik úrovní na hloubku chcete prohledávat vnořené objekty. 
+Chcete-li, aby vaše hledání bylo více či méně důkladné, použijte rozbalovací okno **Hledat hlouběji** v horní části okna **Kukátka** a vyberte, kolik úrovní hluboko chcete prohledávat do vnořených objektů. 
 
-## <a name="pin-properties-in-the-watch-window"></a>Připnout vlastnosti v okno Kukátko
+## <a name="pin-properties-in-the-watch-window"></a>Vlastnosti připnutí v okně Kukátka
 
 >[!NOTE]
-> Tato funkce je podporována v rozhraní .NET Core 3,0 nebo vyšším.
+> Tato funkce je podporována v rozhraní .NET Core 3.0 nebo vyšší.
 
-Pomocí nástroje **Pinnable Properties** můžete rychle zkontrolovat objekty podle jejich vlastností v okno kukátko.  Chcete-li použít tento nástroj, najeďte myší na vlastnost a vyberte ikonu připnutí, která se zobrazí, nebo klikněte pravým tlačítkem myši a v výsledné místní nabídce vyberte možnost **připnout člena jako oblíbenou** .  Tato vlastnost se zobrazí v horní části seznamu vlastností objektu a název vlastnosti a hodnota se zobrazí ve sloupci **hodnota** .  Chcete-li odebrat vlastnost, vyberte ikonu připnutí znovu nebo v místní nabídce vyberte možnost **odepnout člen jako oblíbenou** .
+Pomocí nástroje **Pinnable Properties** můžete rychle kontrolovat objekty podle jejich vlastností v okně Kukátka.  Chcete-li použít tento nástroj, najeďte na položku vlastnost a vyberte ikonu špendlíku, která se zobrazí nebo klepnete pravým tlačítkem myši, a ve výsledné kontextové nabídce vyberte možnost **Připnout člena jako oblíbenou.**  Tím se tato vlastnost probublává na začátek seznamu vlastností objektu a název a hodnota vlastnosti se zobrazí ve sloupci **Hodnota.**  Chcete-li vlastnost odepnout, vyberte ikonu špendlíku znovu nebo v místní nabídce vyberte volbu **Odepnout jako oblíbené.**
 
-![Připnout vlastnosti v okno Kukátko](../debugger/media/basic-pin-watch.gif "Připnout vlastnosti v okno Kukátko")
+![Vlastnosti připnutí v okně Kukátka](../debugger/media/basic-pin-watch.gif "Vlastnosti připnutí v okně Kukátka")
 
-Můžete také přepínat názvy vlastností a odfiltrovat připnuté vlastnosti při zobrazení seznamu vlastností objektu v okno kukátko.  Obě možnosti získáte tak, že vyberete tlačítka na panelu nástrojů nad oknem kukátko.
+Můžete také přepínat názvy vlastností a odfiltrovat nepřipnuté vlastnosti při prohlížení seznamu vlastností objektu v okně Kukátka.  K oběma možnostem můžete přistupovat výběrem tlačítek na panelu nástrojů nad oknem kukátka.
 
 ::: moniker-end
 
-### <a name="bkmk_refreshWatch"></a> Aktualizace hodnot sledování
+### <a name="refresh-watch-values"></a><a name="bkmk_refreshWatch"></a>Aktualizovat hodnoty sledování
 
-Ikona Aktualizovat (kruhovou šipku) se může objevit **Watch** okno při vyhodnocování výrazu. Ikona aktualizace označuje chybu nebo hodnotu, která je zastaralá.
+Při vyhodnocení výrazu se může v okně **Kukátko** zobrazit ikona aktualizace (kruhová šipka). Ikona aktualizace označuje chybu nebo hodnotu, která je zastaralá.
 
-Pokud chcete aktualizovat hodnotu, vyberte ikonu aktualizace nebo stisknutím klávesy MEZERNÍK. Ladicí program se pokusí o opětovné vyhodnocení výrazu. Ale nechcete nebo moct opětovné vyhodnocení výrazu, v závislosti na tom, proč nebyl vyhodnocen hodnotu.
+Chcete-li hodnotu aktualizovat, vyberte ikonu aktualizace nebo stiskněte mezerník. Ladicí program se pokusí přehodnocení výrazu. Však nemusí chtít nebo být schopen přehodnotit výraz, v závislosti na tom, proč hodnota nebyla vyhodnocena.
 
-Najeďte myší na ikonu aktualizace nebo se podívejte **hodnotu** sloupce z důvodu výraz nebyl vyhodnocen. Mezi důvody patří:
+Najeďte na ikonu aktualizace nebo z tohoto důvodu se podívejte do sloupce **Hodnota,** proč výraz nebyl vyhodnocen. Důvody zahrnují:
 
-- Došlo k chybě, protože se právě vyhodnotit výraz, stejně jako v předchozím příkladu. Může dojít k vypršení časového limitu nebo proměnná může být mimo rozsah.
+- Při vyhodnocování výrazu, stejně jako v předchozím příkladu, došlo k chybě. Může dojít k časovému rámci nebo proměnná může být mimo rozsah.
 
-- Má výraz volání funkce, které může způsobit vedlejší účinek v aplikaci. Zobrazit [výraz vedlejší účinky](#bkmk_sideEffects).
+- Výraz má volání funkce, které by mohlo vyvolat vedlejší účinek v aplikaci. Viz [Výraz vedlejší účinky](#bkmk_sideEffects).
 
-- Je zakázané automatické hodnocení vlastností a implicitních volání funkcí.
+- Automatické vyhodnocení vlastností a volání implicitních funkcí je zakázáno.
 
-Pokud na ikonu aktualizace se zobrazí, protože automatické hodnocení vlastností a volání implicitní funkce je zakázaná, můžete ji povolit tak, že vyberete **povolit vyhodnocování vlastností a jiných implicitních volání funkcí** v **nástroje**   >  **Možnosti** > **ladění** > **Obecné**.
+Pokud se ikona aktualizace zobrazí, protože je zakázáno automatické vyhodnocení vlastností a volání implicitních funkcí, můžete ji povolit výběrem **možnosti Povolit vyhodnocení vlastností a dalších implicitních volání funkcí** v**části Obecné****ladění** > **možností** >  **nástrojů** > .
 
-Demonstruje použití na ikonu aktualizace:
+Chcete-li demonstrovat pomocí ikony aktualizace:
 
-1. V **nástroje** > **možnosti** > **ladění** > **Obecné**, zrušte **Povolit vyhodnocování vlastností a jiných implicitních volání funkcí** zaškrtávací políčko.
+1. V části**Možnosti** >  **nástrojů** > **Ladění** > **obecné**, zrušte zaškrtnutí políčka **Povolit vyhodnocení vlastností a další implicitní volání funkce.**
 
-1. Zadejte následující kód a **Watch** okně Nastavení sledování u `list.Count` vlastnost.
+1. Zadejte následující kód a v okně **Kukátko** nastavte hodinky na `list.Count` vlastnost.
 
    ```csharp
    static void Main(string[] args)
@@ -147,36 +147,36 @@ Demonstruje použití na ikonu aktualizace:
    }
    ```
 
-1. Spusťte ladění. **Watch** okno zobrazuje něco jako následující zpráva:
+1. Začněte ladit. Okno **Kukátko** zobrazuje něco jako následující zprávu:
 
-   ![Aktualizovat kukátko](../debugger/media/refreshwatch.png "Aktualizovat kukátko")
+   ![Aktualizovat sledování](../debugger/media/refreshwatch.png "Aktualizovat sledování")
 
-1. Pokud chcete aktualizovat hodnotu, vyberte ikonu aktualizace nebo stisknutím klávesy MEZERNÍK. Ladicí program přehodnotí výraz.
+1. Chcete-li hodnotu aktualizovat, vyberte ikonu aktualizace nebo stiskněte mezerník. Ladicí program přehodnotí výraz.
 
-### <a name="bkmk_sideEffects"></a> Výraz vedlejší účinky
+### <a name="expression-side-effects"></a><a name="bkmk_sideEffects"></a>Vedlejší účinky výrazu
 
-Hodnocení některých výrazů může změnit hodnotu proměnné nebo jinak ovlivnit stav vaší aplikace. Například vyhodnocení následujícího výrazu změní hodnotu `var1`:
+Vyhodnocení některých výrazů může změnit hodnotu proměnné nebo jinak ovlivnit stav aplikace. Například vyhodnocení následujícího výrazu změní `var1`hodnotu :
 
 ```csharp
 var1 = var2
 ```
 
-Tento kód může způsobit, že [vedlejší účinek](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)). Vedlejší efekty můžou ztížit ladění tak, že změníte způsob, jakým vaše aplikace funguje.
+Tento kód může způsobit [nežádoucí účinek](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)). Vedlejší účinky mohou ztížit ladění změnou způsobu, jakým vaše aplikace funguje.
 
-Výraz s vedlejšími účinky se vyhodnotí pouze jednou, při prvním zadání. Potom výraz se zobrazí šedě ve **Watch** okna a další hodnocení jsou zakázána. Popisek nebo **hodnotu** sloupec vysvětluje, že výraz způsobuje vedlejší účinek. Opětovného hodnocení můžete vynutit tak, že vyberete ikonu aktualizace, které se zobrazí vedle hodnoty.
+Výraz s vedlejšími účinky je vyhodnocen pouze jednou, když jej poprvé zadáte. Poté se výraz zobrazí šedě v okně **kukátka** a další hodnocení jsou zakázána. Sloupec s popisem nebo **hodnotou** vysvětluje, že výraz způsobuje vedlejší účinek. Přehodnocení můžete vynutit výběrem ikony aktualizace, která se zobrazí vedle hodnoty.
 
-Chcete-li vypnout automatické vyhodnocování funkcí je jedním ze způsobů, aby se zabránilo označení vedlejší účinky. V **nástroje** > **možnosti** > **ladění** > **Obecné**, zrušte zaškrtnutí možnosti **Povolit vyhodnocování vlastností a jiných implicitních volání funkcí**.
+Jedním ze způsobů, jak zabránit označení vedlejších účinků, je vypnout automatické vyhodnocení funkce. V části**Možnosti** >  **nástrojů** > **Ladění** > **obecné**, odznačte **Povolit vyhodnocení vlastností a další implicitní volání funkce**.
 
-Pro C# pouze při hodnocení vlastnosti nebo implicitních volání funkcí je vypnutý, můžete vynutit hodnocení tak, že přidáte **ac** modifikátor formátu proměnné **název** v **Watch**  okna. Zobrazit [v jazyce C# specifikátory formátu](../debugger/format-specifiers-in-csharp.md).
+Pouze pro C# při vyhodnocení vlastností nebo volání implicitní funkce je vypnuto, můžete vynutit vyhodnocení přidáním modifikátor **formátu ac** do proměnné **Název** v okně **watch.** Viz [Formát specifikátorů v c#](../debugger/format-specifiers-in-csharp.md).
 
-## <a name="bkmk_objectIds"></a> Pomocí ID objektů v okně kukátko (C# a Visual Basic)
+## <a name="use-object-ids-in-the-watch-window-c-and-visual-basic"></a><a name="bkmk_objectIds"></a>Použití ID objektů v okně Kukátka (C# a Visual Basic)
 
-Někdy budete chtít sledovat chování s určitým objektem. Můžete například chtít sledovat objekt odkazuje místní proměnné po této proměnné je nepřejdou mimo rozsah. V C# a Visual Basic, můžete vytvořit ID objektů pro konkrétní instance typů odkazů a používat **Watch** okno a podmínky zarážky. ID objektu je generována modulem common language runtime (CLR) ladění služeb a přidružená k objektu.
+Někdy chcete sledovat chování určitého objektu. Můžete například sledovat objekt, na který odkazuje místní proměnná poté, co tato proměnná překročila rozsah. V jazyce C# a visual basicu můžete vytvořit ID objektů pro konkrétní instance typů odkazů a použít je v okně **Kukátka** a za podmínek zarážky. ID objektu je generováno služby ladění clr (COMMON Language runtime) a je přidruženo k objektu.
 
 > [!NOTE]
-> ID objektů vytvořit slabé odkazy, které není brání objekt uvolněn z paměti. Jsou platné pouze pro aktuální relaci ladění.
+> ID objektů vytvořit slabé odkazy, které nebrání objektu z uvolňování paměti. Jsou platné pouze pro aktuální relaci ladění.
 
-V následujícím kódu `MakePerson()` metoda vytvoří `Person` pomocí lokální proměnné:
+V následujícím kódu `MakePerson()` metoda vytvoří `Person` pomocí místní proměnné:
 
 ```csharp
 class Person
@@ -211,59 +211,59 @@ public class Program
 }
 ```
 
-Chcete zjistit název `Person` v `DoSomething()` metodu, můžete přidat odkaz na `Person` ID objektu v **Watch** okna.
+Chcete-li zjistit název `Person` v `DoSomething()` metodě, můžete přidat `Person` odkaz na ID objektu v okně **Kukátka.**
 
-1. Nastavte zarážku v kódu po `Person` objekt se vytvořil.
+1. Nastavte zarážku v `Person` kódu po vytvoření objektu.
 
-1. Spusťte ladění.
+1. Začněte ladit.
 
-1. Při spuštění, pozastavení na zarážce, otevřete **lokální** okno výběrem **ladění** > **Windows** > **místníchhodnot**.
+1. Při pozastavení provádění na zarážky otevřete okno **Locals** výběrem **ladění** > **windows** > **locals**.
 
-1. V **lokální** okna, klikněte pravým tlačítkem na `Person` proměnné a vyberte **Ujistěte se, ID objektu**.
+1. V okně **Locals** klepněte `Person` pravým tlačítkem myši na proměnnou a vyberte **příkaz Vytvořit ID objektu**.
 
-   Měli byste vidět znak dolaru ( **$** ) plus číslo v **lokální** okna, která je ID objektu.
+   V okně **Locals,** **$** což je ID objektu, by se měl zobrazit znak dolaru ( ) plus číslo.
 
-1. Přidat ID objektu **Watch** okna tak, že kliknete pravým tlačítkem ID objektu a vyberete **Přidat kukátko**.
+1. Přidejte ID objektu do okna **Kukátko** tak, že kliknete pravým tlačítkem myši na ID objektu a vyberete **přidat hodinky**.
 
-1. Nastavte další zarážku `DoSomething()` metody.
+1. Nastavte další zarážku v metodě. `DoSomething()`
 
-1. Pokračujte v ladění. Při pozastavení provádění v `DoSomething()` metody **Watch** v okně se zobrazí `Person` objektu.
+1. Pokračujte v ladění. Při pozastaví spuštění `DoSomething()` v metodě, `Person` okno **Watch** zobrazí objekt.
 
    > [!NOTE]
-   > Pokud chcete zobrazit vlastnosti objektu, například `Person.Name`, je nutné povolit vyhodnocování vlastností tak, že vyberete **nástroje** > **možnosti**  >   **Ladění** > **Obecné** > **povolit vyhodnocování vlastností a jiných implicitních volání funkcí**.
+   > Pokud chcete zobrazit vlastnosti objektu, `Person.Name`například , musíte povolit vyhodnocení vlastností výběrem**možnosti** >  **nástroje** > **ladění** > **obecné** > **povolit vyhodnocení vlastnosti a další implicitní volání funkcí**.
 
-## <a name="dynamic-view-and-the-watch-window"></a>Dynamické zobrazení a okno kukátka
+## <a name="dynamic-view-and-the-watch-window"></a>Dynamické zobrazení a okno Kukátka
 
-Použít dynamické některé skriptovací jazyky (například JavaScript nebo Python) nebo [duck](https://en.wikipedia.org/wiki/Duck_typing) zadáním a rozhraní .NET verze 4.0 a novější podporuje objekty, které je obtížné sledovat v normální ladění systému windows.
+Některé skriptovací jazyky (například JavaScript nebo Python) používají dynamické nebo [kachní](https://en.wikipedia.org/wiki/Duck_typing) psaní a .NET verze 4.0 a novější podporuje objekty, které je obtížné sledovat v normálních ladicích oknech.
 
-**Watch** okno zobrazí tyto objekty dynamických objektů, které jsou vytvořeny z typů, které implementují <xref:System.Dynamic.IDynamicMetaObjectProvider> rozhraní. Dynamický objekt zobrazit dynamičtí členové dynamické objekty, ale nepovolit úpravy hodnot členů.
+Okno **Kukátko** zobrazí tyto objekty jako dynamické <xref:System.Dynamic.IDynamicMetaObjectProvider> objekty, které jsou vytvořeny z typů, které implementují rozhraní. Uzly dynamických objektů zobrazují dynamické členy dynamických objektů, ale neumožňují úpravy hodnot členů.
 
-Chcete-li aktualizovat **dynamického zobrazení** hodnot, vyberte [ikonu aktualizace](#bkmk_refreshWatch) vedle uzlu dynamický objekt.
+Chcete-li aktualizovat hodnoty **dynamického zobrazení,** vyberte [ikonu aktualizace](#bkmk_refreshWatch) vedle uzlu dynamického objektu.
 
-K zobrazení pouze **dynamického zobrazení** objektu, přidejte **dynamické** specifikátor formátu za názvem dynamický objekt v **Watch** okno:
+Chcete-li zobrazit pouze **dynamické zobrazení** objektu, přidejte za název dynamického objektu v okně **Kukátko** specifikátor **dynamického** formátu:
 
-- Pro jazyk C#: `ObjectName, dynamic`
-- V jazyce Visual Basic: `$dynamic, ObjectName`
+- Pro C#:`ObjectName, dynamic`
+- Pro visual basic:`$dynamic, ObjectName`
 
 >[!NOTE]
->- C# Ladicí program nebude automaticky přehodnotit hodnoty **dynamického zobrazení** po kroku na další řádek kódu.
->- Visual Basic ladicí program automaticky aktualizuje výrazy přidané prostřednictvím **dynamického zobrazení**.
->- Vyhodnocování členů **dynamického zobrazení** může mít [vedlejší účinky](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)).
+>- Ladicí program Jazyka C# automaticky nepřehodnotí hodnoty v **dynamickém zobrazení,** když přejdete na další řádek kódu.
+>- Ladicí program jazyka Visual Basic automaticky aktualizuje výrazy přidané prostřednictvím **dynamického zobrazení**.
+>- Vyhodnocení členů **dynamického zobrazení** může mít [vedlejší účinky](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)).
 
-**Vložit nové kukátko. proměnné, která přetypovává objekt na dynamický objekt:**
+**Vložení nové proměnné sledování, která přetypuje objekt na dynamický objekt:**
 
-1. Klikněte pravým tlačítkem na podřízený uzel **dynamického zobrazení**.
-1. Zvolte **Přidat kukátko**. `object.name` Stane `((dynamic) object).name` a zobrazí se v novém **Watch** okna.
+1. Klepněte pravým tlačítkem myši na libovolnou podřízenou položku **dynamického zobrazení**.
+1. Zvolte **Přidat hodinky**. Stane `object.name` `((dynamic) object).name` se a zobrazí v novém okně **Kukátko.**
 
-Ladicí program se taky přidaly **dynamického zobrazení** podřízený uzel objekt, který má **automatické hodnoty** okna. Chcete-li otevřít **automatické hodnoty** okně během ladění, **ladění** > **Windows** > **automatické hodnoty**.
+Ladicí program také přidá podřízený uzel **dynamického zobrazení** objektu do okna **Autos.** Chcete-li otevřít okno **Autos,** vyberte během ladění **možnost Ladění** > **automatických užitků****systému Windows** > .
 
-**Dynamické zobrazení** také zlepšuje ladění pro objekty COM. Pokud ladicí program získá objekt modelu COM, který je obalen **System.__ComObject**, přidá **dynamického zobrazení** uzlu pro objekt.
+**Dynamické zobrazení** také vylepšuje ladění objektů MODELU COM. Když ladicí program získá objekt COM zabalený v **souboru System.__ComObject**, přidá uzel **dynamického zobrazení** pro objekt.
 
-## <a name="observe-a-single-variable-or-expression-with-quickwatch"></a>Podívejte se jednu proměnnou nebo výraz s QuickWatch
+## <a name="observe-a-single-variable-or-expression-with-quickwatch"></a>Sledování jedné proměnné nebo výrazu pomocí funkce QuickWatch
 
-Můžete použít **QuickWatch** dodržovat jednu proměnnou.
+**Pomocí funkce QuickWatch** můžete sledovat jednu proměnnou.
 
-Například následující kód:
+Například pro následující kód:
 
 ```csharp
 static void Main(string[] args)
@@ -278,32 +278,32 @@ static void Main(string[] args)
 }
 ```
 
-Sledovat `a` proměnné
+Chcete-li `a` pozorovat proměnnou,
 
-1. Nastavit zarážku na `a = a + b;` řádku.
+1. Nastavte zarážku `a = a + b;` na řádku.
 
-1. Spusťte ladění. Pozastaví spuštění na zarážce.
+1. Začněte ladit. Spuštění pozastaví na zarážky.
 
-1. Vyberte proměnnou `a` v kódu.
+1. Vyberte `a` proměnnou v kódu.
 
-1. Vyberte **ladění** > **QuickWatch**, stiskněte klávesu **Shift**+**F9**, nebo klikněte pravým tlačítkem a vyberte **QuickWatch**.
+1. Vyberte **Možnost Ladění hodinek** > **Rychlé sledování ,** stiskněte **shift**+**F9**nebo klepněte pravým tlačítkem myši a vyberte **quickwatch**.
 
-   **QuickWatch** se zobrazí dialogové okno. `a` Proměnná je v **výraz** pole s **hodnotu** z **1**.
+   Zobrazí se dialogové okno **Rychlé sledování.** Proměnná `a` je v poli **Výraz** s **hodnotou** **1**.
 
-   ![QuickWatch – proměnná](../debugger/media/quickwatchvariable.png "QuickWatch – proměnná")
+   ![Proměnná QuickWatch](../debugger/media/quickwatchvariable.png "Proměnná QuickWatch")
 
-1. Vyhodnotit výraz, který používá proměnné, zadejte výraz `a + b` v **výraz** a vyberte **přehodnotit**.
+1. Chcete-li výraz vyhodnotit pomocí proměnné, `a + b` zadejte výraz, například do pole **Výraz,** a vyberte **Přehodnoťte**.
 
    ![Výraz QuickWatch](../debugger/media/quickwatchexpression.png "Výraz QuickWatch")
 
-1. Přidání proměnné nebo výrazu z **QuickWatch** k **Watch** okně **Přidat kukátko**.
+1. Chcete-li přidat proměnnou nebo výraz z **hodinek QuickWatch** do okna **Kukátko,** vyberte **Přidat hodinky**.
 
-1. Vyberte **zavřete** zavřete **QuickWatch** okna. (**QuickWatch** je modální dialogové okno, takže nemůže pokračovat, ladění, jako je otevřený.)
+1. Vyberte **Zavřít,** chcete-li zavřít okno **QuickWatch.** **(QuickWatch** je modální dialog, takže nemůžete pokračovat v ladění, pokud je otevřen.)
 
-1. Pokračujte v ladění. Můžete sledovat v proměnné **Watch** okna.
+1. Pokračujte v ladění. Můžete sledovat proměnnou v okně **kukátko.**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Co je ladění?](../debugger/what-is-debugging.md)
-- [Techniky a nástroje ladění](../debugger/write-better-code-with-visual-studio.md)
+- [Techniky ladění a související nástroje](../debugger/write-better-code-with-visual-studio.md)
 - [První pohled na ladění](../debugger/debugger-feature-tour.md)
-- [Okno ladicího programu](../debugger/debugger-windows.md)
+- [Okna ladicího programu](../debugger/debugger-windows.md)

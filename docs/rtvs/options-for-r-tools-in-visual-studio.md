@@ -1,6 +1,6 @@
 ---
-title: Možnosti nástrojů jazyka R
-description: Referenční informace pro možnosti v sadě Visual Studio pro jazyk R a související funkce.
+title: Možnosti nástrojů R
+description: Odkaz na možnosti v sadě Visual Studio pro jazyk R a přidružené funkce.
 ms.date: 12/04/2017
 ms.topic: reference
 f1_keywords:
@@ -14,117 +14,117 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: c7c2cb57dc96d7bb0df09248eb7a877820e50521
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62999015"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79302705"
 ---
-# <a name="r-tools-for-visual-studio-options"></a>R Tools for Visual Studio options
+# <a name="r-tools-for-visual-studio-options"></a>Nástroje R pro možnosti sady Visual Studio
 
-Nastavení jsou přístupné prostřednictvím **nástroje R** > **možnosti** nabídky, nebo prostřednictvím **nástroje** > **možnosti** a posouvání, aby mohl **nástroje R**:
+K nastavení se přistupuje prostřednictvím nabídky**Možnosti** **nástrojů** > R nebo pomocí**nástrojů** **A** > nástrojů a posouváním na **nástroje R**:
 
-  ![Dialogové okno Možnosti pro nástroje jazyka R](media/options-dialog.png)
+  ![Dialogové okno Možnosti pro nástroje R](media/options-dialog.png)
 
-Možnosti a nastavení specifická pro R jsou přístupné pomocí níže uvedených metod. Musíte vybrat **zobrazit všechna nastavení** políčko v dolní části **možnosti** dialogové okno pro všechny tyto oddíly se zobrazí.
+Možnosti a nastavení specifické pro R jsou přístupné pomocí níže uvedených metod. Chcete-li zobrazit všechny tyto oddíly, musíte v dolní části dialogového okna **Možnosti** vybrat pole **Zobrazit všechna nastavení.**
 
-- Možnosti formátování kódu (viz [možnosti editoru](editing-r-code-in-visual-studio.md#editor-options): **Nástroje** > **možnosti** nabídce pak vyberte **textový Editor** > **R** > **formátování**
-- Možnosti linter (viz [Linting](linting-r-code.md)): **Nástroje** > **možnosti** nabídce pak vyberte **textový Editor** > **R** > **Lint**
-- Rozšířené možnosti editoru ([popsaných v tomto článku](#text-editor--r--advanced-options)): **Nástroje** > **možnosti** nabídce pak vyberte **textový Editor** > **R** > **Upřesnit**
-- Chování možnosti ([popsaných v tomto článku](#r-tools--advanced-options)): **Nástroje R** > **možnosti** nabídky, nebo **nástroje** > **možnosti**, přejděte k položce **nástroje R**.
+- Možnosti formátování kódu (viz [Možnosti editoru](editing-r-code-in-visual-studio.md#editor-options): Nabídka**Možnosti** **nástroje** > a pak vyberte **Text Editor** > **R** > **Formátování**
+- Volby linter (viz [Linting](linting-r-code.md)): Nabídka**Možnosti** **nástrojů** > a pak vyberte **Textový editor** > **R** > **Lint**
+- Upřesnit možnosti editoru ([popsané v tomto článku](#text-editor--r--advanced-options)): Nabídka**Možnosti** **nástrojů** > a pak vyberte **Textový editor** > **R** > **Upřesnit**
+- Možnosti chování ([popsané v tomto článku](#r-tools--advanced-options)): Nabídka**Možnosti** **nástroje** > R nebo **Možnosti nástrojů** > **Options**a potom přejděte na **položku Nástroje R**.
 
-**Nástroje R** > **nastavení pro datové vědy** příkaz ovlivňuje také celou řadu různých nastavení v sadě Visual Studio celkové. Tento příkaz je popsané v další části.
+Příkaz Nastavení**datové vědy** **nástroje R** > ovlivňuje také řadu různých nastavení v sadě Visual Studio celkově. Tento příkaz je popsán v další části.
 
 <a name="data-scientist-layout"></a>
 
-## <a name="r-tools--data-science-settings"></a>Nástroje R > Nastavení pro datové vědy
+## <a name="r-tools--data-science-settings"></a>Nástroje R > nastavení datové vědy
 
-**R Tools > Nastavení pro datové vědy** položky nabídky nakonfiguruje integrovaném vývojovém prostředí sady Visual Studio s rozložením, která je optimalizovaná pro potřeby odborníci přes data. Konkrétně tato volba otevře [interaktivní](interactive-repl-for-r-in-visual-studio.md), [Průzkumníka proměnných](variable-explorer.md), a [pracovní prostory](r-workspaces-in-visual-studio.md) windows:
+R **Nástroje > Nastavení datové vědy položky** nabídky konfiguruje Visual Studio IDE s rozložením, který je optimalizovaný pro potřeby datových vědců. Tato možnost konkrétně otevře okna [Interaktivní](interactive-repl-for-r-in-visual-studio.md), [Průzkumník proměnných](variable-explorer.md)a [Pracovní prostory:](r-workspaces-in-visual-studio.md)
 
-![Rozložení okna mezi odborníky přes data v sadě Visual Studio](media/installation-data-scientist-layout-result.png)
+![Rozložení okna datových vědců v sadě Visual Studio](media/installation-data-scientist-layout-result.png)
 
-Chcete-li později vrátit k jiné nastavení sady Visual Studio, nejprve pomocí **nástroje** > **nastavení importu a exportu** příkaz select **exportovat vybrané nastavení prostředí**a zadejte název souboru. Obnovení těchto nastavení, použijte stejný příkaz a vyberte **importovat vybrané nastavení prostředí**. Můžete také použít stejné příkazy, pokud změníte rozložení mezi odborníky přes data a chcete se vrátit později místo použití **nastavení pro datové vědy** přímo příkazu.
+Chcete-li se později vrátit k dalším nastavením sady Visual Studio, **nejprve** > použijte příkaz**Nástroje importu a nastavení exportu,** vyberte **Exportovat vybraná nastavení prostředí**a zadejte název souboru. Chcete-li tato nastavení obnovit, použijte stejný příkaz a vyberte **Importovat vybraná nastavení prostředí**. Můžete také použít stejné příkazy, pokud změníte rozložení datových vědců a chcete se k němu později vrátit, nikoli přímo pomocí příkazu **Nastavení datové vědy.**
 
-## <a name="text-editor--r--advanced-options"></a>Textový Editor > R > Upřesnit možnosti
+## <a name="text-editor--r--advanced-options"></a>Textový editor > R > upřesnit možnosti
 
-Tyto možnosti určují chování formátování, technologie IntelliSense, sbalování, odsazení a pro R. Kontrola syntaxe
+Tyto možnosti řídí chování formátování, technologie IntelliSense, osnovy, odsazení a kontroly syntaxe pro R.
 
-![Dialogové okno Možnosti pro R text editor pokročilé možnosti](media/options-dialog-advanced-text-editor.png)
+![Dialogové okno Možnosti pro rozšířené volby textového editoru R](media/options-dialog-advanced-text-editor.png)
 
-Každá možnost nastavená na zapnuto nebo vypnuto můžete řídit chování dotyčný. Podrobnosti o jednotlivých možností na podívejte se na podokno Nápověda v dolní části dialogového okna. Všimněte si, že můžete přetáhnout horní části tohoto podokna nápovědy až zkontrolujte podokno větší.
+Každá možnost je nastavena na zapnutí nebo vypnutí pro řízení chování v otázce. Podrobnosti o tom, co jednotlivé možnosti ovlivňují, nalézáte v podokně nápovědy v dolní části dialogového okna. Všimněte si, že můžete přetáhnout horní části podokna nápovědy nahoru, aby se podokno zvětšilo.
 
-![Rozbalit podokno Nápověda v dialogovém okně R text editor pokročilé možnosti](media/options-dialog-advanced-text-editor2.png)
+![Rozbalené podokno nápovědy v dialogovém okně rozšířených možností textového editoru R](media/options-dialog-advanced-text-editor2.png)
 
-## <a name="r-tools--advanced-options"></a>Nástroje R > Upřesnit možnosti
+## <a name="r-tools--advanced-options"></a>Nástroje R > rozšířené možnosti
 
-**Nástroje R** > **možnosti** otevře příkazu nabídky **možnosti** dialogové okno Možnosti R:
+Příkaz Příkaz **Možnosti** > **nástrojů** R otevře dialogové okno **Možnosti** na volby R:
 
-  ![Dialogové okno Možnosti pro nástroje jazyka R](media/options-dialog.png)
+  ![Dialogové okno Možnosti pro nástroje R](media/options-dialog.png)
 
 Následující části popisují různé možnosti, které jsou k dispozici na této stránce.
 
-### <a name="debugging"></a>Ladění
+### <a name="debugging"></a>ladění
 
-Tyto možnosti určují způsob zpracování hodnot v [Průzkumníka proměnných](variable-explorer.md) a v oknech ladicího programu, jako je sledovat a místní hodnoty (naleznete v tématu [kód ladit R](debugging-r-in-visual-studio.md)).
+Tyto možnosti řídí způsob zpracování hodnot v [Průzkumníku proměnných](variable-explorer.md) a v oknech ladicího programu, jako je Watch a Locals (viz [Kód Ladění R).](debugging-r-in-visual-studio.md)
 
 | Možnost | Výchozí hodnota | Popis |
 | --- | --- | --- |
-| Vyhodnotit aktivní vazby | `True` | Když `True`, zajistí, že vždycky vidíte aktuální hodnotu při kontrole proměnných a vlastností. Riziko se tohoto vyhodnocení výrazů může způsobit vedlejší účinky, v závislosti na tom, jak jsou implementované. |
-| Ukazovat proměnné začínající tečkou | `False` | Určuje, zda proměnné s předponou `.` jsou uvedeny. |
+| Vyhodnocení aktivních vazeb | `True` | When `True`, zajišťuje, že při kontrole proměnných a vlastností vždy uvidíte nejaktuálnější hodnotu. Riziko je, že hodnocení výrazy může způsobit vedlejší účinky, v závislosti na tom, jak byly implementovány. |
+| Zobrazit tečkové předponou proměnné | `False` | Určuje, zda budou zobrazeny proměnné s `.` předponou. |
 
 ### <a name="grid-view"></a>Zobrazení mřížky
 
 | Možnost | Výchozí hodnota | Popis |
 | --- | --- | --- |
-| Dynamické vyhodnocení | `False` | Ve výchozím nastavení `View(<expression>)` funkce pořídí snímek dat jako datový rámec, který může spotřebovat značnou paměť s velkými datovými sadami. Tuto volbu nastavíte `True` znamená, že je výraz vyhodnocen při mřížky aktualizuje k načtení jenom data, která se zobrazí. Nicméně pokud výraz změny dat také změní, které mohou být vhodný pro výrazy pip dplyr. |
+| Dynamické vyhodnocení | `False` | Ve výchozím `View(<expression>)` nastavení funkce pořídí snímek dat jako datový rámec, který může spotřebovat značnou paměť s velkými datovými sadami. Nastavení této `True` možnosti znamená, že výraz je vyhodnocen, když se mřížka aktualizuje, aby se načítaly pouze ta data, která se zobrazí. Pokud se však výraz změní, změní se také data, což může být nevhodné pro výrazy dplyr pip. |
 
-### <a name="help"></a>Help
+### <a name="help"></a>Nápověda
 
 | Možnost | Výchozí hodnota | Popis |
 | --- | --- | --- |
-| Webový prohlížeč na F1 | `Internal` | Určuje, jak nápovědy se zobrazí, když se hledaný termín pomocí **Ctrl**+**F1**. Pokud je nastavena na `Internal`, pomoc se vykreslí v rámci panelu nástrojů v sadě Visual Studio. Pokud je nastavena na `External`, nápovědy se zobrazí ve výchozím webovém prohlížeči. |
-| F1 Řetězec webového vyhledávání | `R site:stackoverflow.com` | Určuje, jak hledané výrazy jsou předány na vyhledávací web při stisknutí **Ctrl**+**F1** platností v editoru. Ve výchozím nastavení je řetězec `R site:stackoverflow.com`, která připojí `R` pro hledaný termín. `site:stackoverflow.com` Představuje direktivu na vyhledávací web, že má obor hledání stránky v rámci `stackoverflow.com` domény. |
-| Prohlížeč nápovědy pro R | `Automatic` | Určuje způsob zobrazení nápovědy při hledání pomocí dokumentace R **F1**, **?**, nebo **??** . Pokud je nastavena na `Automatic`, pomoc se vykreslí v příslušné okno. Nápověda HTML se například zobrazí v rámci panelu nástrojů sady Visual Studio, že se soubory PDF ve svém programu výchozí PDF. Pokud je nastavena na `External`, pomoc se vykreslí ve výchozím webovém prohlížeči. |
+| Webový prohlížeč F1 | `Internal` | Určuje způsob zobrazení nápovědy při hledání termínu pomocí **klávesctrl**+**f1**. Pokud je `Internal`nastavena na , nápověda je vykreslena v okně nástroje v sadě Visual Studio. Pokud je `External`nastavena na , zobrazí se nápověda ve výchozím webovém prohlížeči. |
+| F1 vyhledávací řetězec webu | `R site:stackoverflow.com` | Určuje, jak jsou vyhledávací termíny předávány do vašeho vyhledávače, když stisknete **kombinaci kláves**+**YF1** na termínu v editoru. Ve výchozím nastavení `R site:stackoverflow.com`je řetězec `R` , který se připojí k hledaný mů e-termín. Je `site:stackoverflow.com` direktiva pro vyhledávač, který mu říká, `stackoverflow.com` že rozsah hledání na stránky v rámci domény. |
+| R Prohlížeč nápovědy | `Automatic` | Určuje, jak se nápověda zobrazuje při prohledávání dokumentace jazyka R pomocí **f1**, **? nebo** **??**. Pokud je `Automatic`nastavena na , nápověda vykreslí v příslušném okně. Nápověda HTML se například zobrazí v okně nástroje Visual Studio, zatímco pdf se zobrazí ve výchozím programu PDF. Pokud je `External`nastavena na , nápověda je vykreslena ve výchozím webovém prohlížeči. |
 
 ### <a name="history"></a>Historie
 
 | Možnost | Výchozí hodnota | Popis |
 | --- | --- | --- |
-| Vždycky uložit historii | `True` | Určuje, zda RTVS zapisuje do historie příkazů *. RHistory* soubor ve svém pracovním adresáři při každém zavření projektu. Ukládá se do historie se stane, i v případě, že nechcete uložit projekt před ukončením. |
-| Resetovat vyhledávací filtr | `True` | Určuje, zda okno Historie můžete filtrovat historie příkazů zobrazíte jenom příkazy, které dílčí řetězec porovnání podmínky filtru v okně historie R. Toto nastavení určuje, jestli se má resetovat vyhledávací filtr historie při každém spuštění nového příkazu nebo přepnout na nový projekt, který aktivuje zatížení u různých *. RHistory* souboru. Ve výchozím nastavení `True` minimalizuje překvapením, že když spustíte příkaz s sadu filtrů a můžete divit, proč neměli jste spustili příkaz zobrazí v historii. |
-| Použít Víceřádkový výběr | `True` | Určuje, zda můžete vybrat více řádků příkazu v historii jediným kliknutím. Taky umožňuje směrem nahoru nebo dolů šipku navigace ve Windows Interaktivní příkazy spíše než řádky. |
+| Vždy ukládat historii | `True` | Určuje, zda rtvs zapíše historii příkazů do *. RHistory* v pracovním adresáři při každém zavření projektu. K uložení historie dojde i v případě, že projekt před ukončením neuložíte. |
+| Obnovit vyhledávací filtr | `True` | Určuje, zda může okno Historie filtrovat historii příkazů tak, aby zobrazovalo pouze příkazy, které odpovídají termínu filtru v dialogovém okně Historie R. Toto nastavení určuje, zda chcete obnovit filtr vyhledávání historie při každém spuštění nového příkazu nebo přepnout na nový projekt, který spustí zatížení jiného *. RHistory* soubor. Výchozí nastavení `True` minimalizuje překvapení při spuštění příkazu se sadou filtrů a divíte se, proč se příkaz, který jste právě spustili, neobjevil v historii. |
+| Použít víceřádkový výběr | `True` | Určuje, zda můžete jedním kliknutím vybrat víceřádkový příkaz v historii. Také umožňuje navigaci šipkou nahoru/dolů v interaktivním systému Windows podle příkazů, nikoli podle řádků. |
 
 ### <a name="html"></a>HTML
 
 | Možnost | Výchozí hodnota | Popis |
 | --- | --- | --- |
-| Prohlížeč stránek HTML | `External` | Určuje, kde je obsah, jako `ggvis` diagram, nebo `shiny` vykreslením aplikaci. `Internal` zobrazuje výstup ve formátu HTML v rámci panelu nástrojů v sadě Visual Studio; `External` zobrazí výstupu protokolu HTML ve vašem výchozím prohlížeči. |
+| Prohlížeč stránek HTML | `External` | Určuje, kde je `ggvis` vykreslen obsah, `shiny` například obrázek nebo aplikace. `Internal`zobrazuje výstup HTML v okně nástroje v sadě Visual Studio; `External` zobrazí výstup HTML ve výchozím prohlížeči. |
 
 ### <a name="logging"></a>Protokolování
 
 | Možnost | Výchozí hodnota | Popis |
 | --- | --- | --- |
-| Události protokolu | `Normal` | Určuje úroveň podrobností protokolování použít k diagnostice RTVS. Ve výchozím nastavení `Normal` vytvoří soubor protokolu v vaše `TEMP` adresáře. Pokud je nastavena na `Traffic`, RTVS zaznamenává všechny příkazy a odpovědí v relaci. Tyto soubory protokolu se nikdy opustit váš počítač, ale můžou být užitečné při diagnostikování problémů v RTVS. |
+| Protokolovat události | `Normal` | Řídí podrobnost protokolování používaného pro diagnostiku RTVS. Výchozí nastavení `Normal` vytvoří soubor protokolu `TEMP` v adresáři. Pokud je `Traffic`nastavena na , RTVS protokoly všechny příkazy a odpovědi ve vaší relaci. Tyto soubory protokolu nikdy opustit počítač, ale může být užitečné pro diagnostiku problémů v RTVS. |
 
 ### <a name="markdown"></a>Markdown
 
 | Možnost | Výchozí hodnota | Popis |
 | --- | --- | --- |
-| Prohlížeč náhledu markdownu | `External` | Určuje, kde se zobrazí výstup ve formátu RMarkdown HTML. `Internal` Zobrazí dokument RMarkdown HTML v rámci panelu nástrojů v sadě Visual Studio; `External` zobrazí RMarkdown HTML pomocí výchozí prohlížeč. |
+| Prohlížeč náhledu Markdownu | `External` | Určuje, kde se zobrazí výstup RMarkdown HTML. `Internal`zobrazí dokument HTML RMarkdown v okně nástroje v sadě Visual Studio; `External` zobrazí RMarkdown HTML pomocí výchozího prohlížeče. |
 
-### <a name="r-engine"></a>Modul pro R
+### <a name="r-engine"></a>R Motor
 
 | Možnost | Výchozí hodnota | Popis |
 | --- | --- | --- |
 | Znaková stránka | `(OS Default)` | Nastaví znakovou stránku (národní prostředí) pro R. Ve výchozím nastavení používá základní národní prostředí operačního systému. |
-| Zrcadlový server CRAN | `(Use .Rprofile)` | Nastaví výchozí zrcadlový server CRAN pro instalace balíčků. Ve výchozím nastavení `Use .Rprofile` respektuje zrcadlový server CRAN nastavení ve vašich *. RProfile* souboru. |
+| CRAN Zrcadlo | `(Use .Rprofile)` | Nastaví výchozí zrcadlo CRAN pro instalace balíčků. Výchozí nastavení `Use .Rprofile` respektuje nastavení CRAN Mirror ve vašem *. RProfile.* |
 
 ### <a name="workspace"></a>Pracovní prostor
 
 | Možnost | Výchozí hodnota | Popis |
 | --- | --- | --- |
-| Načíst pracovní prostor při otevření projektu | `No` | Nastavení na hodnotu `Yes` umožňuje načítání dat relace *. RData* souboru do globálního prostředí při otevření projektu. |
-| Vyzvat k uložení pracovního prostoru na resetovat | `Yes` | Nastavení na `No` zakáže výzvy k potvrzení uložení pracovního prostoru, když kliknete na tlačítko Obnovit v interaktivním okně. |
-| Uložit pracovní prostor při zavření projektu | `No` | Nastavení na hodnotu `Yes` umožňuje uložení globální prostředí tak, aby *. RData* souboru při zavření projektu. |
-| Před přepnutím pracovních prostorů zobrazit potvrzovací dialogové okno | `Yes` | Nastavení na `No` zakáže výzvy k potvrzení při přepínání mezi různé pracovní prostory. Zobrazit [přepínání mezi pracovními prostory](r-workspaces-in-visual-studio.md#switch-between-workspaces) |
-| Zobrazit indikátor zatížení počítače | `False` | Řídí viditelnost indikátorů zatížení procesoru/paměti/sítě na stavovém řádku. Protože indikátor vyvolává síťový provoz, je to užitečné `False` ve scénářích vzdáleného monitorovaný. Změnou této možnosti vyžaduje restartování sady Visual Studio. |
+| Načíst pracovní prostor při otevření projektu | `No` | Nastavení `Yes` umožňuje načítání dat relace z *. RData* do globálního prostředí při otevření projektu. |
+| Výzva k uložení pracovního prostoru při resetování | `Yes` | Nastavení `No` zakáže zobrazení výzvy k uložení pracovního prostoru po klepnutí na tlačítko Obnovit v interaktivním okně. |
+| Uložení pracovního prostoru při zavření projektu | `No` | Nastavení `Yes` umožňuje uložení globálního prostředí do *oblasti . RData* soubor při zavření projektu. |
+| Zobrazit dialogové okno potvrzení před přepnutím pracovních prostorů | `Yes` | Nastavení `No` zakázat výzvu uživateli k potvrzení při přepínání mezi různými pracovními prostory. Viz [Přepínání mezi pracovními plochami](r-workspaces-in-visual-studio.md#switch-between-workspaces) |
+| Zobrazit indikátor zatížení stroje | `False` | Řídí viditelnost indikátoru zatížení PROCESOR/Paměť/Síť ve stavovém řádku. Vzhledem k tomu, že indikátor vzniká síťový `False` provoz, je užitečné zachovat tento ve scénářích vzdáleného účtovaného podle objemu dat. Změna této možnosti vyžaduje restartování sady Visual Studio. |

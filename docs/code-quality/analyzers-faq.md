@@ -10,66 +10,66 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 680d52ff04553d399b6abeb53919d8aafd4fa792
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573245"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79301690"
 ---
 # <a name="code-analysis-faq"></a>Nejčastější dotazy k analýze kódu
 
-Tato stránka obsahuje odpovědi na některé nejčastější dotazy týkající se analýzy kódu založené na .NET Compiler Platform v aplikaci Visual Studio.
+Tato stránka obsahuje odpovědi na některé často kladené otázky týkající se analýzy kódu na platformě .NET Compiler Platform v sadě Visual Studio.
 
-## <a name="code-analysis-versus-editorconfig"></a>Analýza kódu oproti EditorConfig
+## <a name="code-analysis-versus-editorconfig"></a>Analýza kódu versus EditorConfig
 
-**Otázka**: mám použít analýzu kódu nebo EditorConfig pro kontrolu stylu kódu?
+**Otázka:** Mám použít analýzu kódu nebo EditorConfig pro kontrolu stylu kódu?
 
-Odpověď **: analýza**kódu a soubory EditorConfig fungují ručně. Při definování stylů kódu [v souboru EditorConfig](../ide/editorconfig-code-style-settings-reference.md) nebo na stránce [Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) ve skutečnosti konfigurujete analyzátory kódu, které jsou součástí sady Visual Studio. Soubory EditorConfig lze použít k povolení nebo zakázání pravidel analyzátoru a také ke konfiguraci některých balíčků analyzátoru NuGet, jako jsou například [analyzátory FxCop](configure-fxcop-analyzers.md).
+**A**: Analýza kódu a EditorConfig soubory pracují ruku v ruce. Když definujete styly kódu [v souboru EditorConfig](../ide/editorconfig-code-style-settings-reference.md) nebo na stránce [Možnosti textového editoru,](../ide/code-styles-and-code-cleanup.md) ve skutečnosti konfigurujete analyzátory kódu, které jsou integrovány do sady Visual Studio. EditorConfig soubory lze použít k povolení nebo zakázání pravidla analyzátoru, a také nakonfigurovat některé balíčky analyzátoru NuGet, jako jsou [fxcop analyzátory](configure-fxcop-analyzers.md).
 
-## <a name="editorconfig-versus-rule-sets"></a>EditorConfig oproti sadám pravidel
+## <a name="editorconfig-versus-rule-sets"></a>EditorConfig versus sady pravidel
 
-**Otázka**: mám nakonfigurovat analyzátory pomocí sady pravidel nebo souboru EditorConfig?
+**Otázka:** Mám nakonfigurovat analyzátory pomocí sady pravidel nebo souboru EditorConfig?
 
-Odpověď: sady pravidel a soubory EditorConfig mohou existovat společně a **lze je použít**ke konfiguraci analyzátorů. Soubory EditorConfig a sady pravidel umožňují povolit a zakázat pravidla a nastavit jejich závažnost.
+**A**: Sady pravidel a EditorConfig soubory mohou existovat vedle sebe a lze použít ke konfiguraci analyzátory. Soubory EditorConfig i sady pravidel umožňují povolit a zakázat pravidla a nastavit jejich závažnost.
 
-Soubory EditorConfig ale nabízejí další způsoby, jak pravidla konfigurovat:
+Soubory EditorConfig však nabízejí další způsoby konfigurace pravidel:
 
-- Pro analyzátory FxCop vám soubory EditorConfig umožňují [definovat, které typy kódu se mají analyzovat](fxcop-analyzer-options.md).
-- Pro analyzátory ve stylu kódu, které jsou součástí sady Visual Studio, EditorConfig soubory umožňují [definovat preferované styly kódu](../ide/editorconfig-code-style-settings-reference.md) pro základ kódu.
+- Pro analyzátory FxCop, EditorConfig soubory umožňují [definovat, které typy kódu k analýze](fxcop-analyzer-options.md).
+- Pro analyzátory stylu kódu, které jsou integrovány do sady Visual Studio, editorconfig soubory umožňují [definovat upřednostňované styly kódu](../ide/editorconfig-code-style-settings-reference.md) pro základ kódu.
 
-Kromě sad pravidel a souborů EditorConfig jsou některé analyzátory nakonfigurovány pomocí textových souborů označených jako [Další soubory](../ide/build-actions.md#build-action-values) pro kompilátory C# a VB.
+Kromě sady pravidel a EditorConfig soubory, některé analyzátory jsou konfigurovány pomocí textových souborů označených jako [další soubory](../ide/build-actions.md#build-action-values) pro c# a VB kompilátory.
 
 > [!NOTE]
-> - Soubory EditorConfig se dají použít jenom k povolení pravidel a nastavení jejich závažnosti v sadě Visual Studio 2019 verze 16,3 a novější.
-> - Soubory EditorConfig se nedají použít ke konfiguraci analýzy starší verze, zatímco sady pravidel můžou.
+> - EditorConfig soubory lze použít pouze k povolení pravidel a nastavit jejich závažnost v Sadě Visual Studio 2019 verze 16.3 a novější.
+> - EditorConfig soubory nelze použít ke konfiguraci starší analýzy, vzhledem k tomu, že sady pravidel může.
 
 ## <a name="code-analysis-in-ci-builds"></a>Analýza kódu v sestaveních CI
 
-**Otázka**: provádí analýzy kódu na základě .NET Compiler Platform v sestaveních průběžné integrace (CI)?
+**Otázka:** Funguje analýza kódu založená na platformě kompilátoru .NET v sestaveních průběžné integrace (CI)?
 
-**Odpověď:** Ano. Pro analyzátory, které jsou nainstalovány z balíčku NuGet, jsou tato pravidla [vynutila v době sestavování](roslyn-analyzers-overview.md#build-errors), včetně během sestavení CI. Analyzátory používané v sestaveních CI mají na zřeteli konfiguraci pravidel ze sad pravidel i souborů EditorConfig. Analyzátory kódu, které jsou součástí sady Visual Studio, nejsou aktuálně k dispozici jako balíček NuGet, takže tato pravidla se v sestavení CI nedají vymáhat.
+**A:** Ano. Pro analyzátory, které jsou nainstalovány z balíčku NuGet, tato pravidla jsou [vynucena v době sestavení](roslyn-analyzers-overview.md#build-errors), včetně během sestavení CI. Analyzátory používané v CI sestavení respektovat konfiguraci pravidel z obou sad pravidel a EditorConfig soubory. V současné době analyzátory kódu, které jsou integrovány do sady Visual Studio nejsou k dispozici jako balíček NuGet, a proto tato pravidla nejsou vynutitelné v sestavení CI.
 
 ## <a name="ide-analyzers-versus-stylecop"></a>Analyzátory IDE versus StyleCop
 
-**Otázka**: Jaký je rozdíl mezi analyzátory kódu integrovaného vývojového prostředí (IDE) sady Visual Studio a analyzátory StyleCop?
+**Otázka:** Jaký je rozdíl mezi analyzátory kódu IDE sady Visual Studio a analyzátory StyleCop?
 
-Odpověď **: rozhraní IDE sady Visual**Studio obsahuje integrované analyzátory, které hledají jak styl kódu, tak i problémy s kvalitou. Tato pravidla vám pomůžou používat nové jazykové funkce při jejich zavedení a zlepšení udržovatelnosti kódu. Analyzátory IDE se průběžně aktualizují s každou verzí sady Visual Studio.
+**A**: Visual Studio IDE obsahuje integrované analyzátory, které hledají styl kódu a problémy s kvalitou. Tato pravidla vám pomohou používat nové jazykové funkce při jejich zavedení a zlepšit udržovatelnost kódu. Analyzátory IDE jsou průběžně aktualizovány s každou verzí sady Visual Studio.
 
-[Analyzátory StyleCop](https://github.com/DotNetAnalyzers/StyleCopAnalyzers) jsou nainstalované analyzátory třetích stran jako balíček NuGet, který kontroluje konzistenci stylů ve vašem kódu. Obecně platí, že pravidla StyleCop umožňují nastavit osobní předvolby pro základ kódu bez doporučení jednoho stylu nad jiným.
+[Analyzátory StyleCop](https://github.com/DotNetAnalyzers/StyleCopAnalyzers) jsou analyzátory třetích stran nainstalované jako balíček NuGet, které kontrolují konzistenci stylu ve vašem kódu. Obecně pravidla StyleCop umožňují nastavit osobní předvolby pro základ kódu bez doporučování jednoho stylu nad jiným.
 
-## <a name="code-analyzers-versus-legacy-analysis"></a>Analyzátory kódu oproti starší analýze
+## <a name="code-analyzers-versus-legacy-analysis"></a>Analyzátory kódu versus starší analýza
 
-**Otázka**: Jaký je rozdíl mezi staršími verzemi analýzy a analýz kódu založenými na .NET Compiler Platform?
+**Otázka:** Jaký je rozdíl mezi starší analýzou a analýzou kódu na platformě .NET Compiler?
 
-Odpověď **: Analýza kódu na základě**.NET Compiler Platform analyzuje zdrojový kód v reálném čase a během kompilace, zatímco starší verze analýzy analyzuje binární soubory po dokončení sestavení. Další informace najdete v [nejčastějších dotazech](fxcop-analyzers-faq.md)k [analýze na základě .NET Compiler Platform](roslyn-analyzers-overview.md#source-code-analysis-versus-legacy-analysis) a analyzátoru FxCop.
+**A**: Analýza kódu založené na platformě .NET Compiler platformy analyzuje zdrojový kód v reálném čase a během kompilace, zatímco starší analýza analyzuje binární soubory po dokončení sestavení. Další informace naleznete v [tématu .NET Compiler Platform-based analysis versus legacy analysis](roslyn-analyzers-overview.md#source-code-analysis-versus-legacy-analysis) and [FxCop analyzátory FAQ](fxcop-analyzers-faq.md).
 
-## <a name="treat-warnings-as-errors"></a>Zpracovávat upozornění jako chyby
+## <a name="treat-warnings-as-errors"></a>Považovat upozornění za chyby
 
-**Otázka**: můj projekt používá možnost sestavení k považovat upozornění jako chyby. Po migraci ze starší verze analýzy do analýzy zdrojového kódu se nyní všechna upozornění analýzy kódu zobrazují jako chyby. Jak to můžu zabránit?
+**Otázka:** Můj projekt používá možnost sestavení k tomu, aby s upozorněními zacházel jako s chybami. Po migraci ze starší analýzy na analýzu zdrojového kódu se všechna upozornění na analýzu kódu nyní zobrazují jako chyby. Jak tomu mohu zabránit?
 
-Odpověď **: Chcete-li**zabránit tomu, aby se výstraha analýzy kódu nacházela jako chyby, postupujte podle následujících kroků:
+**A**: Chcete-li zabránit upozornění analýzy kódu z považovány za chyby, postupujte takto:
 
-  1. Vytvořte soubor. props s následujícím obsahem:
+  1. Vytvořte soubor .props s následujícím obsahem:
 
      ```xml
      <Project>
@@ -79,7 +79,7 @@ Odpověď **: Chcete-li**zabránit tomu, aby se výstraha analýzy kódu nacház
      </Project>
      ```
 
-  2. Přidejte řádek do souboru projektu. csproj nebo. vbproj pro import souboru. props, který jste vytvořili v předchozím kroku. Tento řádek musí být umístěn před řádky, které importují soubory FxCop Analyzer. props. Například pokud má soubor. props název CodeAnalysis. props:
+  2. Přidejte řádek do souboru projektu .csproj nebo .vbproj a importujte soubor .props, který jste vytvořili v předchozím kroku. Tento řádek musí být umístěn před všechny řádky, které importují soubory Analyzátoru FxCop .props. Pokud je například soubor .props pojmenován codeanalysis.props:
 
      ```xml
      ...
@@ -88,7 +88,7 @@ Odpověď **: Chcete-li**zabránit tomu, aby se výstraha analýzy kódu nacház
      ...
      ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přehled analyzátorů](roslyn-analyzers-overview.md)
-- [EditorConfig nastavení konvence psaní kódu .NET](../ide/editorconfig-code-style-settings-reference.md)
+- [Nastavení konvence kódování .NET pro EditorConfig](../ide/editorconfig-code-style-settings-reference.md)

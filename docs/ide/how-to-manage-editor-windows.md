@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Správa oken editoru'
+title: 'Postup: Správa editorních oken'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,47 +14,47 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4af752c99c87bf470922db03bf5d4746151fa8f2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591018"
 ---
-# <a name="how-to-manage-editor-windows"></a>Postupy: Správa oken editoru
+# <a name="how-to-manage-editor-windows"></a>Postup: Správa editorních oken
 
-Můžete pracovat s kódem v několika umístěních najednou. Provedete to rozdělením okna editoru nebo otevřením několika instancí oken editoru.
+Můžete pracovat na kódu na několika místech najednou. To provést rozdělením okna editoru nebo otevřením několika instancí oken editoru.
 
 > [!NOTE]
-> Ne všechny editory Windows podporují více instancí.
+> Ne všechny editor windows podporují více instancí.
 
 ## <a name="split-an-editor-window"></a>Rozdělení okna editoru
 
-Instanci okna editoru lze rozdělit do dvou samostatných zobrazení pro snazší úpravy.
+Instance okna editoru může být rozdělena do dvou samostatných zobrazení pro snadnější úpravy.
 
 ### <a name="to-split-a-pane"></a>Rozdělení podokna
 
-1. Klikněte v okně editoru, abyste mu pomohli fokus.
+1. Klikněte v okně editoru, aby se zaměřila.
 
-2. V nabídce **okna** vyberte **rozdělit**.
+2. V nabídce **Okno** vyberte **Rozdělit**.
 
-     Oblast úprav se rozdělí do dvou podoken oddělených dělicí příčkou. Tato podokna můžete posouvat nezávisle tak, že budete zobrazovat a upravovat různé části aktivního dokumentu současně. Všechny změny provedené v jednom podokně se projeví v druhém.
+     Oblast úprav se rozdělí na dvě podokna oddělená rozdělovačem. Tato podokna můžete posouvat nezávisle a současně zobrazit a upravit různé části aktivního dokumentu. Všechny změny provedené v jednom podokně se projeví v druhém podokně.
 
     > [!TIP]
-    > Chcete-li změnit jedno podokno větší než druhé, přetáhněte rozdělovač nahoru nebo dolů.
+    > Chcete-li, aby jedno podokno bylo větší než druhé, přetáhněte rozdělovač nahoru nebo dolů.
 
 ### <a name="to-return-to-single-pane-view"></a>Návrat do zobrazení s jedním podoknem
 
-- V nabídce **okno** vyberte **Odebrat rozdělení**.
+- V nabídce **Okno** vyberte **Odebrat rozdělení**.
 
-## <a name="create-new-windows"></a>Vytvořit nová okna
+## <a name="create-new-windows"></a>Vytvoření nových oken
 
-Můžete také vytvořit více instancí okna editoru. Tato funkce umožňuje otevřít dlouhý dokument ve více než jedné instanci editoru, takže můžete zobrazit a upravit různé oddíly současně v samostatných oknech Editor s plnou velikostí.
+Můžete také vytvořit více instancí okna editoru. Tato funkce umožňuje otevřít dlouhý dokument ve více než jedné instanci editoru, takže můžete zobrazit a upravit různé oddíly současně v samostatných oknech editoru v plné velikosti.
 
-- V nabídce **okno** klikněte na **nové okno**.
+- V nabídce **Window** klepněte na položku **Nové okno**.
 
-   Přidá se nová instance editoru s kartami.
+   Je přidána nová instance editoru s kartami.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Funkce editoru kódu](../ide/writing-code-in-the-code-and-text-editor.md)
 - [Přizpůsobení rozložení oken](../ide/customizing-window-layouts-in-visual-studio.md)

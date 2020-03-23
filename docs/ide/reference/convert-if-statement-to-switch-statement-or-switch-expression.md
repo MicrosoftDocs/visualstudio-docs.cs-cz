@@ -1,6 +1,6 @@
 ---
-title: Příkaz převést if na Switch nebo switch Expression
-ms.date: 02/12/2020
+title: Převod příkazu if na příkaz switch nebo výraz switch
+ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
@@ -9,33 +9,39 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: cb0c06fe0493f973ea9cf0a566ffda45a49eeeff
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: 93ad96809c77d5644b13e6221a41f0b182fb448f
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77280780"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094158"
 ---
-# <a name="convert-if-statement-to-switch-statement-or-switch-expression"></a>Příkaz převést if na Switch nebo switch Expression
+# <a name="convert-if-statement-to-switch-statement-or-switch-expression"></a>Převod příkazu if na příkaz switch nebo výraz switch
 
-Tento refaktoring platí pro:
+Toto refaktoring se vztahuje na:
 
 - C#
 
-**Co:** Převést příkaz if na [příkaz switch](/dotnet/csharp/language-reference/keywords/switch) nebo na C# [výraz přepínače](/dotnet/csharp/whats-new/csharp-8#switch-expressions)8,0.
+**Co:** Převeďte příkaz if na [příkaz switch](/dotnet/csharp/language-reference/keywords/switch) nebo na [výraz přepínače](/dotnet/csharp/whats-new/csharp-8#switch-expressions)Jazyka C# 8.0 .
 
-**Když:** Chcete převést příkaz `if` na příkaz `switch` nebo výraz `switch` a naopak. 
+**Kdy:** Chcete převést `if` příkaz na `switch` příkaz `switch` nebo výraz a naopak. 
 
-**Proč:** Pokud používáte příkaz `if`, tento refaktoring umožňuje snadnou přechod na příkazy `switch` nebo `switch` výrazy.
+**Proč:** Pokud používáte `if` příkaz, toto refaktoring umožňuje `switch` snadný `switch` přechod na příkazy nebo výrazy.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor do klíčového slova `if`.
-2. Stiskněte klávesu **Ctrl**+ **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
-3. Vyberte **převést na příkaz switch**.
+1. Umístěte kurzor `if` do klíčového slova.
+2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+3. Vyberte z následujících dvou možností: 
 
-   ![Příkaz převést if na Switch nebo switch Expression](media/convert-if-statement-to-switch-statement-or-switch-expression.png) 
+    Vyberte **Příkaz Převést na 'switch'**.
+
+   ![Převést příkaz if na příkaz switch](media/convert-if-to-switch-statement.png) 
+
+    Vyberte **Převést na výraz přepnout**. 
+
+    ![Převést příkaz if pro přepnutí výrazu](media/convert-if-to-switch-expression.png) 
 
 ## <a name="see-also"></a>Viz také
 
-- [Refaktoring](../refactoring-in-visual-studio.md)
+- [Refactoring](../refactoring-in-visual-studio.md)

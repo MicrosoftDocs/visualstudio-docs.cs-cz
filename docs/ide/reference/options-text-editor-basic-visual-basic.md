@@ -1,5 +1,5 @@
 ---
-title: Možnosti, textový editor, Basic (VB), Upřesnit
+title: Možnosti, Textový editor, základní (VB), upřesnit
 ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
@@ -18,96 +18,96 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11a069e17e615199e367683273adb85e771f1d9c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 562358ca90e223a07926aaa383ded41a5f7557cc
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75584514"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79431472"
 ---
-# <a name="options-text-editor-basic-visual-basic-advanced"></a>Možnosti, textový editor, Basic (Visual Basic), Upřesnit
-Stránka **vlastností specifická pro VB** se nachází ve složce **základní** ve složce **textový editor** v dialogovém okně **Možnosti** (nabídka**nástroje** ), která obsahuje následující vlastnosti:
+# <a name="options-text-editor-basic-visual-basic-advanced"></a>Možnosti, Textový editor, základní (Visual Basic), upřesnit
+Stránka **vlastností VB Specific** ve složce **Základní** ve složce **Textový editor** v dialogovém okně **Možnosti** **(Nástroje)** obsahuje následující vlastnosti:
 
 ## <a name="analysis"></a>Analýza
 
-- Povolení úplné analýzy řešení
+- Analýza živého kódu nebo obor analýzy pozadí
 
-   Povolí analýzu kódu pro všechny soubory v řešení, nikoli pouze otevřené soubory kódu. Další informace najdete v tématu [Úplná analýza řešení](../../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md).
+   Nakonfigurujte obor analýzy pozadí pro spravovaný kód. Další informace naleznete v [tématu Postup: Konfigurace oboru analýzy živého kódu pro spravovaný kód](../../code-quality/configure-live-code-analysis-scope-managed-code.md).
 
-## <a name="using-directives"></a>Direktivy using
+## <a name="using-directives"></a>Používání směrnic
 
-- Při řazení direktiv using umístit nejdřív direktivy System
+- Při řazení pomocí direktiv y nejprve umístěte direktivy "Systém"
 
-   Pokud je tato možnost vybrána, příkazy **Remove a Sort using** v nabídce po kliknutí pravým tlačítkem myši seřadí direktivy `using` a umístí do horní části seznamu obory názvů System.
+   Když je tato volba vybraná, příkaz **Odebrat a seřadit usings** v nabídce po kliknutí pravým tlačítkem myši seřadí `using` direktivy a umístí obory názvů Systém na začátek seznamu.
 
-- Samostatné použití skupin direktiv
+- Samostatné pomocí skupin direktiv
 
-   Pokud je tato možnost vybrána, příkaz **Odebrat a seřadit pomocí** v nabídce po kliknutí pravým tlačítkem myši oddělí `using` direktivy vložením prázdného řádku mezi skupiny směrnic, které mají stejný kořenový obor názvů.
+   Když je tato volba vybraná, příkaz **Odebrat a seřadit usings** v nabídce po kliknutí pravým tlačítkem myši oddělí direktivy `using` vložením prázdného řádku mezi skupinami direktiv, které mají stejný kořenový obor názvů.
 
-- Navrhnout použití typů v referenčních sestaveních
-- Navrhnout použití typů v balíčcích NuGet
+- Navrhnout použití pro typy v referenčních sestavách
+- Navrhnout použití pro typy v balíčcích NuGet
 
-   Pokud jsou tyto možnosti vybrány, je k dispozici [rychlá akce](../quick-actions.md) pro instalaci balíčku NuGet a přidání direktivy `using` pro neodkazované typy.
+   Pokud jsou vybrány tyto možnosti, [rychlá akce](../quick-actions.md) je k `using` dispozici k instalaci balíčku NuGet a přidat direktivu pro neodkazované typy.
 
-   ![Rychlá akce pro instalaci balíčku NuGet v aplikaci Visual Studio](media/nuget-lightbulb.png)
+   ![Rychlá akce pro instalaci balíčku NuGet v sadě Visual Studio](media/nuget-lightbulb.png)
 
-## <a name="highlighting"></a>Zvýrazňování
+## <a name="highlighting"></a>Zvýraznění
 
- **Povolit zvýraznění odkazů a klíčových slov**
+ **Povolení zvýraznění odkazů a klíčových slov**
 
-Textový editor může zvýraznit všechny výskyty symbolu nebo všechna klíčová slova v klauzuli, jako je například `If..Then`, `While...End While`nebo `Try...Catch...Finally`. Můžete přecházet mezi zvýrazněnými odkazy nebo klíčovými slovy stisknutím **kombinace kláves ctrl** + **SHIFT** + **šipka dolů** nebo **kombinací kláves CTRL** + **SHIFT** + **šipka nahoru**.
+Textový editor může zvýraznit všechny výskyty symbolu nebo `If..Then` `While...End While`všech `Try...Catch...Finally`klíčových slov v klauzuli, například , nebo . Mezi zvýrazněnými odkazy nebo klíčovými slovy můžete přecházet stisknutím kláves **Ctrl** + **Shift** + **Down nebo** **Ctrl** + **Shift** + Shift**arrow**.
 
 ## <a name="outlining"></a>Sbalování
 
-**Povolit režim sbalení**
+**Povolení režimu osnovy**
 
-Když otevřete soubor v editoru kódu, můžete zobrazit dokument v režimu sbalení. Další informace najdete v tématu [popisujícím sbalení](../../ide/outlining.md) . Když je vybraná tato možnost, funkce sbalení se aktivuje při otevření souboru.
+Když otevřete soubor v editoru kódu, můžete dokument zobrazit v režimu osnovy. Další informace naleznete [v tématu Osnova.](../../ide/outlining.md) Když je tato volba vybraná, funkce osnovy se aktivuje při otevření souboru.
 
-**Zobrazit oddělovače řádků procedury**
+**Zobrazit oddělovače čar procedury**
 
-Textový editor označuje vizuální rozsah procedur. Řádek se vykreslí ve zdrojových souborech *. vb* projektu v umístěních uvedených v následující tabulce:
+Textový editor označuje vizuální rozsah procedur. Čára je nakreslena ve zdrojových souborech *.vb* projektu v umístěních uvedených v následující tabulce:
 
-|Umístění ve zdrojovém souboru. vb|Příklad umístění řádku|
+|Umístění ve zdrojovém souboru .vb|Příklad umístění linky|
 |---------------------------------|------------------------------|
-|Po ukončení konstrukce deklarace bloku|– Na konci třídy, struktury, modulu, rozhraní nebo výčtu<br />– Za vlastností, funkcí nebo sub<br />– Není mezi klauzulemi Get a set ve vlastnosti.|
-|Po sadě jednoduchých konstrukcí|-Po příkazech importu před definicí typu v souboru třídy<br />– Po proměnných deklarovaných ve třídě, před všemi postupy|
-|Po deklaracích s jedním řádkem (deklarace na úrovni bez blokování)|– Následující příkazy pro import dědí příkazy, deklarace proměnných, deklarace událostí, deklarace delegátů a příkazy DLL Declare.|
+|Po uzavření konstrukce deklarace bloku|- Na konci třídy, struktury, modulu, rozhraní nebo výčtu<br />- Po vlastnosti, funkce nebo sub<br />- Ne mezi get a set klauzule v nemovitosti|
+|Po sadě jednořádkových konstrukcí|- Po příkazech importu před definicí typu v souboru třídy<br />- Po proměnných deklarovaných ve třídě, před všemi postupy|
+|Po deklaracích jednoho řádku (deklarace neblokové úrovně)|- Následující příkazy importu dědí příkazy, deklarace proměnných, deklarace událostí, deklarace delegátů a deklarované příkazy dll.|
 
-## <a name="block-structure-guides"></a>Vodítka struktury bloku
+## <a name="block-structure-guides"></a>Vodítka blokové struktury
 
-Je-li vybrána tato možnost, zobrazí se v editoru svislé čáry, které se zařadí do strukturovaných bloků kódu, což vám umožní snadno identifikovat jednotlivé bloky kódu. Například by se zobrazila čára mezi `Sub` a `EndSub` v příkazu `Sub`.
+Když je tato volba vybraná, v editoru se zobrazí svislé čáry, které jsou zaokřovány do strukturovaných bloků kódu, což umožňuje snadno identifikovat jednotlivé bloky kódu. Například byste viděli čáru `Sub` mezi `EndSub` a `Sub` v příkazu.
 
-## <a name="editor-help"></a>Pomocník s editorem
+## <a name="editor-help"></a>Nápověda k editoru
 
-**Poměrně se seznamem (přeformátování) kódu** Textový editor přeformátuje kód podle potřeby. Pokud je vybrána tato možnost, Editor kódu bude:
+**Pretty Výpis (přeformátování) kódu** Textový editor přeformátuje váš kód podle potřeby. Pokud je vybrána tato možnost, editor kódu:
 
-- Zarovnejte kód se správnou polohou tabulátoru.
+- Zarovnání kódu do správné polohy karty
 
-- Případná klíčová slova, proměnné a objekty se správným případem
+- Přesuzovat klíčová slova, proměnné a objekty do správného případu
 
-- Přidání chybějícího `Then` do příkazu `If...Then`
+- Přidání chybějícího `Then` `If...Then` do příkazu
 
-- Přidání závorek do volání funkce
+- Přidání závorek pro funkční volání
 
-- Přidat chybějící koncové uvozovky do řetězců
+- Přidání chybějících koncových uvozovek do řetězců
 
-- Přeformátovat exponenciální zápis
+- Přeformátovaný exponenciální zápis
 
 - Přeformátovat data
 
-**Automatické vložení koncových konstrukcí**
+**Automatické vkládání koncových konstrukcí**
 
-Při psaní – například první řádek deklarace procedury, `Sub Main`– a stiskněte klávesu **ENTER**, textový editor přidá vyhovující řádek `End Sub`. Podobně pokud přidáte smyčku [for](/dotnet/visual-basic/language-reference/statements/for-next-statement) , textový editor přidá příkaz, který odpovídá `Next`. Pokud je vybrána tato možnost, Editor kódu automaticky přidá koncovou konstrukci.
+Když píšete – například první řádek deklarace procedury `Sub Main`– a stiskněte `End Sub` **Enter**, textový editor přidá odpovídající řádek. Podobně pokud přidáte [for](/dotnet/visual-basic/language-reference/statements/for-next-statement) smyčky, textový editor přidá `Next` odpovídající příkaz. Když je vybrána tato možnost, editor kódu automaticky přidá koncovou konstrukci.
 
-**Automatické vložení členů rozhraní a MustOverride**
+**Automatické vkládání členů Rozhraní a MustOverride**
 
-Při potvrzení příkazu `Implements` nebo příkazu `Inherits` pro třídu vloží textový editor prototypy pro členy, kteří mají být implementováni nebo potlačeni v uvedeném pořadí.
+Když potvrdíte `Implements` příkaz `Inherits` nebo příkaz pro třídu, textový editor vloží prototypy pro členy, které mají být implementovány nebo přepsány.
 
 **Povolit návrhy oprav chyb**
 
-Textový editor může navrhovat řešení běžných chyb a umožňuje vybrat příslušnou opravu, která se pak použije na váš kód.
+Textový editor může navrhnout řešení běžných chyb a umožnit vám vybrat příslušnou opravu, která se pak použije na váš kód.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Obecné, Prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
+- [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
 - [Možnosti, Textový editor, Všechny jazyky, Tabulátory](../../ide/reference/options-text-editor-all-languages-tabs.md)

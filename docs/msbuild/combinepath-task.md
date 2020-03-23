@@ -1,5 +1,5 @@
 ---
-title: Úloha CombinePath – | Microsoft Docs
+title: Úkol CombinePath | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 533f87eba9032efa7dc60ac682bbe400cb640727
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634432"
 ---
 # <a name="combinepath-task"></a>CombinePath – úloha
@@ -28,18 +28,18 @@ ms.locfileid: "77634432"
 Zkombinuje zadané cesty do jedné cesty.
 ## <a name="task-parameters"></a>Parametry úlohy
 
- Následující tabulka popisuje parametry [úlohy CombinePath –](../msbuild/combinepath-task.md).
+ Následující tabulka popisuje parametry [úlohy CombinePath](../msbuild/combinepath-task.md).
 
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`BasePath`|Vyžaduje se `String` parametr.<br /><br /> Základní cesta, která se má zkombinovat s ostatními cestami. Může se jednat o relativní cestu, absolutní cestu nebo prázdnou hodnotu.|
-|`Paths`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Seznam jednotlivých cest, které mají být kombinovány s BasePath, aby tvořily kombinovanou cestu. Cesty mohou být relativní nebo absolutní.|
-|`CombinedPaths`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Kombinovaná cesta, která je vytvořena touto úlohou.|
+|`BasePath`|Požadovaný parametr `String`.<br /><br /> Základní cesta kombinovat s ostatními cestami. Může být relativní cesta, absolutní cesta nebo prázdné.|
+|`Paths`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Seznam jednotlivých cest kombinovat s BasePath tvořit kombinovanou cestu. Cesty mohou být relativní nebo absolutní.|
+|`CombinedPaths`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Kombinovaná cesta vytvořená tímto úkolem.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Viz také
 

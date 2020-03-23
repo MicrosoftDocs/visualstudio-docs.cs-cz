@@ -10,23 +10,23 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 760cf18062e607e9f9039c6cc5f4adf409134cb5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588990"
 ---
-# <a name="how-to-select-a-load-test-run-setting-to-use-from-the-command-line"></a>Postupy: Výběr nastavení, můžete používat z příkazového řádku pro spuštění zátěžového testu
+# <a name="how-to-select-a-load-test-run-setting-to-use-from-the-command-line"></a>Postup: Vyberte nastavení spuštění zátěžového testu, které se má použít z příkazového řádku.
 
-Zátěžový test může obsahovat *parametry běhu*, které jsou vlastnosti, které ovlivňují způsob běhu zátěžového testu. Parametry spuštění jsou uspořádány podle kategorií v **vlastnosti** okna. Zátěžový test při svém spuštění používá parametry spuštění, které jsou aktuálně nastaveny jako aktivní.
+Zátěžový test může zahrnovat *nastavení spuštění*, což jsou vlastnosti, které ovlivňují způsob spuštění zátěžového testu. Nastavení spuštění jsou uspořádána podle kategorií v okně **Vlastnosti.** Zátěžový test při svém spuštění používá parametry spuštění, které jsou aktuálně nastaveny jako aktivní.
 
-Pokud zátěžový test obsahuje pouze jeden parametr spuštění, jedná se vždy o aktivní uzel. Pokud zátěžový test obsahuje více uzlů parametrů spuštění, můžete vybrat ten, který má použít při spuštění zátěžového testu z příkazového řádku. Zobrazit [postupy: přidání dalších parametrů běhu k zátěžovému testu](../test/how-to-add-additional-run-settings-to-a-load-test.md).
+Pokud zátěžový test obsahuje pouze jeden parametr spuštění, jedná se vždy o aktivní uzel. Pokud zátěžový test obsahuje více uzlů nastavení spuštění, můžete vybrat ten, který chcete použít při spuštění zátěžového testu z příkazového řádku. Viz [Postup: Přidání dalších nastavení spuštění do zátěžového testu](../test/how-to-add-additional-run-settings-to-a-load-test.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="to-change-the-run-setting-from-the-command-line"></a>Chcete-li změnit nastavení spuštění z příkazového řádku
+## <a name="to-change-the-run-setting-from-the-command-line"></a>Změna nastavení spuštění z příkazového řádku
 
-1. Pokud chcete použít různé parametry spuštění z příkazového řádku využít tak strategii kontextových parametrů, použijte následující příkaz:
+1. Chcete-li použít jiné nastavení spuštění z příkazového řádku, abyste využili výhod strategie parametrů kontextu, použijte následující příkaz:
 
     `Set Test.UseRunSetting= CorporateStagingWebServer`
 
@@ -34,9 +34,9 @@ Pokud zátěžový test obsahuje pouze jeden parametr spuštění, jedná se vž
 
     `mstest /testcontainer:loadtest1.loadtest`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Konfigurace parametrů spuštění zátěžového testu](../test/configure-load-test-run-settings.md)
-- [Určení sad čítačů a mezních pravidel pro počítače v rámci zátěžového testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
-- [Postupy: přidání dalších parametrů běhu k zátěžovému testu](../test/how-to-add-additional-run-settings-to-a-load-test.md)
-- [Postupy: výběr aktivního parametru spuštění pro zátěžový test](../test/how-to-select-the-active-run-setting-for-a-load-test.md)
+- [Konfigurace nastavení spuštění zátěžového testu](../test/configure-load-test-run-settings.md)
+- [Určení sad čítačů a prahových hodnot pro počítače v zátěžovém testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
+- [Postup: Přidání dalších nastavení spuštění do zátěžového testu](../test/how-to-add-additional-run-settings-to-a-load-test.md)
+- [Postup: Vyberte nastavení aktivního spuštění pro zátěžový test](../test/how-to-select-the-active-run-setting-for-a-load-test.md)

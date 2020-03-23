@@ -1,47 +1,50 @@
 ---
-title: Odebrání nedosažitelného kódu refaktoringu
-ms.date: 01/26/2018
+title: Odebrání refaktoringu nedosažitelného kódu
+ms.date: 03/10/2020
 ms.topic: reference
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 62002e78513ecb6ebaefd8130255471d6ba93d0c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: cd827870f07fb3161674d287d20f266942e61afe
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75565484"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093984"
 ---
-# <a name="remove-unreachable-code-refactoring"></a>Odebrání nedosažitelného kódu refaktoringu
+# <a name="remove-unreachable-code-refactoring"></a>Odebrání refaktoringu nedosažitelného kódu
 
-Tento refaktoring platí pro:
+Toto refaktoring se vztahuje na:
 
 - C#
 
-**Co:** Odebere kód, který nebude nikdy proveden.
+- Visual Basic
 
-**Když:** Váš program nemá žádnou cestu k fragmentu kódu, takže fragment kódu není potřebný.
+**Co:** Odebere kód, který nikdy nebude proveden.
 
-**Proč:** Vylepšit čitelnost a udržovatelnost odebráním kódu, který je nadbytečný a nebude nikdy proveden.
+**Kdy:** Program nemá žádnou cestu k fragmentu kódu, takže tento fragment kódu není zbytečný.
+
+**Proč:** Zlepšit čitelnost a udržovatelnost odebráním kódu, který je nadbytečný a nikdy nebude proveden.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístíte kurzor kamkoliv v vyblednout si kód, který nedostupný:
+1. Umístěte kurzor kamkoli v nevyblednutém kódu, který je nedostupný:
 
-![Vyblednout nedosažitelný kód](media/unreachablecode-faded-cs.png)
+![Vybledlý nedostupný kód](media/unreachablecode-faded-cs.png)
 
-1. Dále proveďte jednu z následujících akcí:
+1. Dále proveďte jeden z následujících akcí:
 
-   - **Kombinace**
-      - Stiskněte klávesu **Ctrl**+ **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoring** a v okně Náhled vyberte možnost **Odebrat nedosažitelný kód** .
-   - **Stisknut**
-      - Klikněte na kód pravým tlačítkem, vyberte nabídku **rychlé akce a refaktoring** a v místní nabídce okna náhledu vyberte **Odebrat nedosažitelný kód** .
+   - **Klávesnice**
+      - Stiskněte **klávesu Ctrl**+**.** aktivujte nabídku **Rychlé akce a Refaktoringy** a v yberte **Odebrat nedostupný kód** z vyskakovacího okna Náhled.
+   - **Myš**
+      - Klikněte pravým tlačítkem myši na kód, vyberte nabídku **Rychlé akce a Refaktoringy** a z vyskakovacího okna Náhled vyberte **Odebrat nedostupný kód.**
 
-1. Až budete s změnou spokojeni, stiskněte klávesu **ENTER** nebo klikněte na opravit v nabídce a změny se potvrdí.
+1. Až budete se změnou spokojeni, stiskněte **Enter** nebo klikněte na opravu v nabídce a změny budou potvrzeny.
 
 Příklad:
 
@@ -62,7 +65,7 @@ private void Method()
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Refaktoring](../refactoring-in-visual-studio.md)
+- [Refactoring](../refactoring-in-visual-studio.md)
 - [Náhled změn](../../ide/preview-changes.md)

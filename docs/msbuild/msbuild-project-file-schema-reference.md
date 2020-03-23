@@ -1,5 +1,5 @@
 ---
-title: Referenční dokumentace schématu souboru projektu nástroje MSBuild | Microsoft Docs
+title: Odkaz na schéma souboru projektu MSBuild | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,52 +16,52 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 824a6f562638edb04854431c437289f2741c46d9
-ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78263086"
 ---
-# <a name="msbuild-project-file-schema-reference"></a>Referenční dokumentace schématu souboru projektu nástroje MSBuild
+# <a name="msbuild-project-file-schema-reference"></a>Odkaz na schéma souboru projektu MSBuild
 
-Poskytuje tabulku všech prvků schématu XML nástroje MSBuild s jejich dostupnými atributy a podřízenými prvky.
+Obsahuje tabulku všech prvků schématu XML MSBuild s jejich dostupnými atributy a podřízenými prvky.
 
- Nástroj MSBuild používá soubory projektu k tomu, aby vytvořil modul sestavení, který sestaví a jak ho sestavit. Soubory projektu MSBuild jsou soubory XML, které odpovídají schématu XML pro MSBuild. Tato část dokumentuje soubor definice schématu XML ( *. xsd*) pro nástroj MSBuild.
+ MSBuild používá soubory projektu pokyn modul sestavení, co sestavit a jak jej sestavit. Soubory projektu MSBuild jsou soubory XML, které dodržují schéma XML MSBuild. V této části je dokument dokument definice schématu XML (*xsd*) pro msbuild.
 
-Odkaz na schéma v souboru projektu MSBuild není vyžadován v aplikaci Visual Studio 2017 a novějším. Je-li k dispozici, měla by být ` http://schemas.microsoft.com/developer/msbuild/2003` bez ohledu na verzi sady Visual Studio.
+Odkaz na schéma v souboru projektu MSBuild není vyžadováno v sadě Visual Studio 2017 a novější. Pokud je k ` http://schemas.microsoft.com/developer/msbuild/2003` dispozici, by měla být bez ohledu na verzi sady Visual Studio.
 
-## <a name="msbuild-xml-schema-elements"></a>Prvky schématu XML pro MSBuild
+## <a name="msbuild-xml-schema-elements"></a>Prvky schématu XML sestavení MSBuild
 
- V následující tabulce jsou uvedeny všechny prvky schématu XML nástroje MSBuild spolu s jejich podřízenými elementy a atributy.
+ V následující tabulce jsou uvedeny všechny prvky schématu XML MSBuild spolu s jejich podřízenými prvky a atributy.
 
-|Prvek|Podřízené prvky|Atributy|
+|Element|Podřízené prvky|Atributy|
 |-------------|--------------------|----------------|
-|[Choose – element (MSBuild)](../msbuild/choose-element-msbuild.md)|Případech<br /><br /> Kdy|--|
-|[Import – element (MSBuild)](../msbuild/import-element-msbuild.md)|--|Podmínka<br /><br /> Projekt|
-|[Import – element](../msbuild/importgroup-element.md)|Import|Podmínka|
-|[Item – Element (MSBuild)](../msbuild/item-element-msbuild.md)|*ItemMetadata –*|Podmínka<br /><br /> Exclude<br /><br /> Zařadit členy<br /><br /> odebrat|
-|[ItemDefinitionGroup – Element (MSBuild)](../msbuild/itemdefinitiongroup-element-msbuild.md)|*Položka*|Podmínka|
-|[Item – Element (MSBuild)](../msbuild/itemgroup-element-msbuild.md)|*Položka*|Podmínka|
-|[ItemMetadata – – element (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)|*Položka*|Podmínka|
-|[Error – element (MSBuild)](../msbuild/onerror-element-msbuild.md)|--|Podmínka<br /><br /> ExecuteTargets|
-|[Jinak – element (MSBuild)](../msbuild/otherwise-element-msbuild.md)|Pomocí volby<br /><br /> ItemGroup<br /><br /> PropertyGroup|--|
-|[Output – element (MSBuild)](../msbuild/output-element-msbuild.md)|--|Podmínka<br /><br /> ItemName<br /><br /> Vlastnost PropertyName<br /><br /> TaskParameter|
-|[Element parametru](../msbuild/parameter-element.md)|--|Výstup<br /><br /> Zadanému ParameterType<br /><br /> Požadováno|
-|[Element Parameter](../msbuild/parametergroup-element.md)|*Ukazatele*|--|
-|[Project – element (MSBuild)](../msbuild/project-element-msbuild.md)|Pomocí volby<br /><br /> Import<br /><br /> ItemGroup<br /><br /> ProjectExtensions –<br /><br /> PropertyGroup<br /><br /> Cíl<br /><br /> UsingTask|DefaultTargets –<br /><br /> InitialTargets<br /><br /> ToolsVersion<br /><br /> TreatAsLocalProperty<br /><br /> xmlns|
-|[ProjectExtensions – – element (MSBuild)](../msbuild/projectextensions-element-msbuild.md)|--|--|
-|[Property – element (MSBuild)](../msbuild/property-element-msbuild.md)|--|Podmínka|
-|[Property – element (MSBuild)](../msbuild/propertygroup-element-msbuild.md)|*Vlastnost*|Podmínka|
-|[Element sady SDK (MSBuild)](../msbuild/sdk-element-msbuild.md)|--|Název<br /><br /> Version|
-|[Target – element (MSBuild)](../msbuild/target-element-msbuild.md)|OnError<br /><br /> *Úkol*|AfterTargets<br /><br /> BeforeTargets<br /><br /> Podmínka<br /><br /> DependsOnTargets<br /><br /> Vstupy<br /><br /> KeepDuplicateOutputs<br /><br /> Název<br /><br /> Výstupy<br /><br /> Vrací|
-|[Element Task cíle (MSBuild)](../msbuild/task-element-msbuild.md)|Výstup|Podmínka<br /><br /> ContinueOnError –<br /><br /> *Ukazatele*|
-|[Element Task pro UsingTask (MSBuild)](../msbuild/taskbody-element-msbuild.md)|*Data*|Vyhodnotit|
-|[UsingTask – element (MSBuild)](../msbuild/usingtask-element-msbuild.md)|ParameterGroup –<br /><br /> Úkol|AssemblyFile<br /><br /> Doplňk<br /><br /> Podmínka<br /><br /> TaskFactory<br /><br /> TaskName|
-|[When – element (MSBuild)](../msbuild/when-element-msbuild.md)|Pomocí volby<br /><br /> ItemGroup<br /><br /> PropertyGroup|Podmínka|
+|[Vybrat prvek (MSBuild)](../msbuild/choose-element-msbuild.md)|Jinak<br /><br /> Kdy|--|
+|[Prvek importu (MSBuild)](../msbuild/import-element-msbuild.md)|--|Podmínka<br /><br /> Project|
+|[Prvek ImportGroup](../msbuild/importgroup-element.md)|Import|Podmínka|
+|[Prvek položky (MSBuild)](../msbuild/item-element-msbuild.md)|*ItemMetaData*|Podmínka<br /><br /> Exclude<br /><br /> Zařadit členy<br /><br /> Odebrat|
+|[Element ItemDefinitionGroup (MSBuild)](../msbuild/itemdefinitiongroup-element-msbuild.md)|*Položka*|Podmínka|
+|[Element ItemGroup (MSBuild)](../msbuild/itemgroup-element-msbuild.md)|*Položka*|Podmínka|
+|[Element ItemMetadata (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)|*Položka*|Podmínka|
+|[Prvek OnError (MSBuild)](../msbuild/onerror-element-msbuild.md)|--|Podmínka<br /><br /> Spustit cíle|
+|[Jinak prvek (MSBuild)](../msbuild/otherwise-element-msbuild.md)|Pomocí volby<br /><br /> Skupina položek<br /><br /> Propertygroup|--|
+|[Výstupní prvek (MSBuild)](../msbuild/output-element-msbuild.md)|--|Podmínka<br /><br /> ItemName<br /><br /> PropertyName<br /><br /> Parametr_úkolu|
+|[Element parametru](../msbuild/parameter-element.md)|--|Výstup<br /><br /> ParametrType<br /><br /> Požaduje se|
+|[Element ParameterGroup](../msbuild/parametergroup-element.md)|*Parametr*|--|
+|[Prvek projektu (MSBuild)](../msbuild/project-element-msbuild.md)|Pomocí volby<br /><br /> Import<br /><br /> Skupina položek<br /><br /> Rozšíření projektu<br /><br /> Propertygroup<br /><br /> Cíl<br /><br /> UsingTask|Výchozí cíle<br /><br /> Počáteční cíle<br /><br /> ToolsVersion<br /><br /> TreatasLocalProperty<br /><br /> Xmlns|
+|[Prvek ProjectExtensions (MSBuild)](../msbuild/projectextensions-element-msbuild.md)|--|--|
+|[Element vlastnosti (MSBuild)](../msbuild/property-element-msbuild.md)|--|Podmínka|
+|[Element PropertyGroup (MSBuild)](../msbuild/propertygroup-element-msbuild.md)|*Vlastnost*|Podmínka|
+|[Prvek Sdk (MSBuild)](../msbuild/sdk-element-msbuild.md)|--|Name (Název)<br /><br /> Version|
+|[Cílový prvek (MSBuild)](../msbuild/target-element-msbuild.md)|Přichybě<br /><br /> *Úkol*|AfterTargets<br /><br /> Předcíle<br /><br /> Podmínka<br /><br /> DependsOnCíle<br /><br /> Vstupy<br /><br /> Zachovat duplikovatvýstupy<br /><br /> Name (Název)<br /><br /> Výstupy<br /><br /> Vrací|
+|[Prvek úkolu targetu (MSBuild)](../msbuild/task-element-msbuild.md)|Výstup|Podmínka<br /><br /> ContinueOnError<br /><br /> *Parametr*|
+|[Prvek úlohy UsingTask (MSBuild)](../msbuild/taskbody-element-msbuild.md)|*Data*|Vyhodnotit|
+|[UsingTask element (MSBuild)](../msbuild/usingtask-element-msbuild.md)|Skupina parametrů<br /><br /> Úkol|Assemblyfile<br /><br /> Assemblyname<br /><br /> Podmínka<br /><br /> Taskfactory<br /><br /> Název_úkolu|
+|[Když element (MSBuild)](../msbuild/when-element-msbuild.md)|Pomocí volby<br /><br /> Skupina položek<br /><br /> Propertygroup|Podmínka|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Podmínky](../msbuild/msbuild-conditions.md)
-- [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
-- [MSBuild](../msbuild/msbuild.md)
+- [Odkaz na sestavení msbuild](../msbuild/msbuild-reference.md)
+- [Msbuild](../msbuild/msbuild.md)

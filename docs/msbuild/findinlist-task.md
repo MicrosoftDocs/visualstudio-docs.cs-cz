@@ -1,5 +1,5 @@
 ---
-title: Úloha FindInList – | Microsoft Docs
+title: Úkol FindInList | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,32 +17,32 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 915265a775f572467ad1296499bdd3201adc1f8b
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634146"
 ---
 # <a name="findinlist-task"></a>FindInList – úloha
 
-V zadaném seznamu najde položku, která má odpovídající itemspec.
+V zadaném seznamu vyhledá položku, která má odpovídající itemspec.
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry [úlohy FindInList –](../msbuild/findinlist-task.md).
+ Následující tabulka popisuje parametry [úlohy FindInList](../msbuild/findinlist-task.md).
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`CaseSensitive`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, hledání rozlišuje velká a malá písmena; v opačném případě není. Výchozí hodnota je `true`.|
-|`FindLastMatch`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, vraťte poslední shodu; v opačném případě vrátí první shodu. Výchozí hodnota je `false`.|
-|`ItemFound`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>`[]` výstupní parametr jen pro čtení.<br /><br /> První shodná položka, která se nachází v seznamu, pokud existuje.|
-|`ItemSpecToFind`|Vyžaduje se `String` parametr.<br /><br /> ItemSpec, který se má vyhledat.|
-|`List`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Seznam, ve kterém se má hledat ItemSpec|
-|`MatchFileNameOnly`|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, porovná se jenom s názvem souboru, který je součástí ItemSpec; jinak se porovná s celým ItemSpec. Výchozí hodnota je `true`.|
+|`CaseSensitive`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true`hledání rozlišuje malá a velká písmena; v opačném případě tomu tak není. Výchozí hodnota `true`je .|
+|`FindLastMatch`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true`vrátíte poslední shodu; v opačném případě vraťte první shodu. Výchozí hodnota `false`je .|
+|`ItemFound`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr jen pro čtení.<br /><br /> První odpovídající položka nalezená v seznamu, pokud existuje.|
+|`ItemSpecToFind`|Požadovaný parametr `String`.<br /><br /> Itemspec hledat.|
+|`List`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Seznam, ve kterém chcete vyhledat položky pec.|
+|`MatchFileNameOnly`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true`, zápas proti pouze název souboru část itemspec; v opačném případě zápas proti celé itemspec. Výchozí hodnota `true`je .|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Viz také
 

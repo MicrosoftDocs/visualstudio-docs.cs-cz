@@ -13,85 +13,85 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe144e8de67264c9d89f6a240ef815afac9a4655
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 98db7cda02495d207d6e9387341173ea2efe22ca
+ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587560"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79431349"
 ---
-# <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Postupy: Konfigurace starší verze analýzy pro spravovaný kód
+# <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Postup: Konfigurace analýzy staršíverze pro spravovaný kód
 
-V sadě Visual Studio můžete zvolit ze seznamu [sad pravidel](../code-quality/rule-set-reference.md) analýzy kódu, které se mají použít pro projekt spravovaného kódu. Ve výchozím nastavení **Microsoft Minimální doporučená pravidla** je vybraná sada pravidel, můžete ale použít jinou sadu v případě potřeby pravidel. Sady pravidel lze použít na jeden nebo více projektů v řešení.
+V sadě Visual Studio můžete vybrat ze seznamu [sad pravidel](../code-quality/rule-set-reference.md) analýzy kódu, které se použijí pro projekt spravovaného kódu. Ve výchozím nastavení je vybrána sada pravidel **Minimální doporučená pravidla společnosti Microsoft,** ale v případě potřeby můžete použít jinou sadu pravidel. Sady pravidel lze použít na jeden nebo více projektů v řešení.
 
 > [!NOTE]
-> Tento článek se týká starší verze analýzy a [ne.NET Compiler Platform analyzátorů kódu na základě](use-roslyn-analyzers.md).
+> Tento článek se vztahuje na starší analýzy a nikoli na [analyzátory kódu založené na platformě .NET Compiler Platform](use-roslyn-analyzers.md).
 
-## <a name="configure-a-rule-set-for-a-net-framework-project"></a>Konfigurace sady pravidel pro .NET Framework projekt
+## <a name="configure-a-rule-set-for-a-net-framework-project"></a>Konfigurace sady pravidel pro projekt rozhraní .NET Framework
 
-1. Otevřít **analýzy kódu** karty na stránkách vlastností projektu. Můžete to udělat některým z těchto způsobů:
+1. Otevřete kartu **Analýza kódu** na stránkách vlastností projektu. To lze provést jedním z následujících způsobů:
 
-   - V **Průzkumníka řešení**, vyberte projekt. Na panelu nabídek vyberte **analyzovat** > **konfigurovat analýzu kódu** > **pro \<projectname >** .
+   - V **Průzkumníku řešení**vyberte projekt. Na řádku nabídek vyberte **Analyzovat** > **konfigurovat analýzu** > kódu**pro \<název projektu>**.
 
-   - Klikněte pravým tlačítkem na projekt v **Průzkumníka řešení** a vyberte **vlastnosti**a pak vyberte **analýzy kódu** kartu.
+   - Klikněte pravým tlačítkem myši na projekt v **Průzkumníku řešení** a vyberte **Vlastnosti**a pak vyberte kartu **Analýza kódu.**
 
-2. V **konfigurace** a **platformy** seznamy, vyberte sestavení konfigurace a cílovou platformu.
+2. V seznamech **Konfigurace** a **Platforma** vyberte konfiguraci sestavení a cílovou platformu.
 
 ::: moniker range="vs-2017"
 
-3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, vyberte možnost **Povolit analýzu kódu při sestavení**. Můžete také spustit analýzu kódu ručně tak, že vyberete **analyzovat** > **spustit analýzu kódu** > **spustit analýzu kódu na \<projectname >** .
+3. Chcete-li spustit analýzu kódu při každém sestavení projektu pomocí vybrané konfigurace, vyberte **možnost Povolit analýzu kódu při sestavení**. Analýzu kódu můžete spustit také ručně tak, že na>vyberete **analyzovat** > **analýzu** > spuštění analýzy kódu spuštění**analýzy \<kódu **.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, vyberte možnost **Spustit při sestavení** v části **binární analyzátory** . Můžete také spustit analýzu kódu ručně tak, že vyberete **analyzovat** > **spustit analýzu kódu** > **spustit analýzu kódu na \<projectname >** .
+3. Chcete-li spustit analýzu kódu při každém sestavení projektu pomocí vybrané konfigurace, vyberte **spustit při sestavení** v části Binární **analyzátory.** Analýzu staršíverze kódu můžete spustit také ručně, najdete v [tématu How to: Run Legacy Code Analysis Manually for Managed Code](how-to-run-legacy-code-analysis-manually-for-managed-code.md) for more details.
 
 ::: moniker-end
 
-4. Chcete-li zobrazit upozornění z generovaného kódu, zrušte **potlačit Výsledky generovaného kódu** zaškrtávací políčko.
+4. Chcete-li zobrazit upozornění z generovaného kódu, zrušte zaškrtnutí políčka **Potlačit výsledky z generovaného kódu.**
 
     > [!NOTE]
-    > Tato možnost není potlačit chyby analýzy kódu a upozornění z generovaného kódu při chyby a upozornění se zobrazí ve formulářích a šablony. Zdrojový kód formuláře nebo šablony lze zobrazit a udržovat a nebude přepsán.
+    > Tato možnost nepotlačí chyby analýzy kódu a upozornění z generovaného kódu, když se chyby a upozornění zobrazí ve formulářích a šablonách. Můžete zobrazit a udržovat zdrojový kód formuláře nebo šablony a nebude přepsán.
 
 ::: moniker range="vs-2017"
 
-5. V **spustit tuto sadu pravidel** seznamu, proveďte jednu z následujících akcí:
+5. V seznamu **Spustit tuto sadu pravidel** proveďte jednu z následujících akcí:
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-5. V seznamu **aktivní pravidla** proveďte jednu z následujících akcí:
+5. V seznamu **Aktivní pravidla** proveďte jeden z následujících akcí:
 
 ::: moniker-end
 
-   - Vyberte sadu pravidel, který chcete použít.
+   - Vyberte sadu pravidel, kterou chcete použít.
 
-   - Vyberte **\<procházet >** a vyhledejte existující sadu vlastních pravidel, která není v seznamu.
+   - Vyberte ** \<Procházet>** a vyhledejte existující vlastní sadu pravidel, která není v seznamu.
 
-   - Definování [vlastní sady pravidel](../code-quality/how-to-create-a-custom-rule-set.md).
+   - Definujte [vlastní sadu pravidel](../code-quality/how-to-create-a-custom-rule-set.md).
 
 ## <a name="specify-rule-sets-for-multiple-projects-in-a-solution"></a>Určení sad pravidel pro více projektů v řešení
 
-Ve výchozím nastavení, jsou přiřazeny všechny spravované projekty z řešení *Microsoft Minimální doporučená pravidla* sada pravidel analýzy kódu. Sady pravidel, které jsou přiřazeny k projektům v řešení můžete změnit **vlastnosti** dialogové okno pro řešení.
+Ve výchozím nastavení jsou všem spravovaným projektům řešení přiřazena sada pravidel analýzy kódu *minimálních doporučených pravidel společnosti Microsoft.* Sady pravidel, které jsou přiřazeny k projektům řešení, můžete změnit v dialogovém okně **Vlastnosti** řešení.
 
 1. Otevřete řešení v sadě Visual Studio.
 
-2. Na **analyzovat** nabídce vyberte možnost **konfigurovat analýzu kódu pro řešení**.
+2. V nabídce **Analyzovat** vyberte **konfigurovat analýzu kódu pro řešení**.
 
-3. V případě potřeby rozbalit **společné vlastnosti**a pak vyberte **nastavení analýzy kódu**.
+3. V případě potřeby rozbalte **položku Společné vlastnosti**a pak vyberte **nastavení analýzy kódu**.
 
 4. Můžete určit sadu pravidel pro jeden nebo více projektů:
 
-    - Chcete-li určit sadu pravidel pro individuální projekt, vyberte název projektu.
+    - Chcete-li určit sadu pravidel pro jednotlivé projekty, vyberte název projektu.
 
-    - Chcete-li určit sadu pravidel pro více projektů, podržte **Ctrl** a vyberte název projektu.
+    - Chcete-li určit sadu pravidel pro více projektů, podržte **stisknutou klávesu Ctrl** a vyberte názvy projektů.
 
-    - Chcete-li určit všechny projekty v řešení, podržte **Shift** a klikněte na tlačítko v seznamu projektu.
+    - Chcete-li zadat všechny projekty v řešení, podržte **stisknutou klávesu Shift** a klepněte na seznam projektů.
 
-5. Vyberte **sady pravidel** pole projektu a pak vyberte název pravidla nastavit, že chcete použít.
+5. Vyberte pole **Sada pravidel** projektu a pak vyberte název sady pravidel, kterou chcete použít.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Referenční dokumentace sady pravidel nástroje Analýza kódu](../code-quality/rule-set-reference.md)

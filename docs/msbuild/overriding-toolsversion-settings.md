@@ -1,5 +1,5 @@
 ---
-title: Přepsání nastavení ToolsVersion | Microsoft Docs
+title: Přepsání nástrojeNastavení verze | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,39 +12,39 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 13c33f0ef43707390aa32d4c26c0380a8a32883e
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633015"
 ---
 # <a name="override-toolsversion-settings"></a>Přepsat nastavení ToolsVersion
 
 Sadu nástrojů pro projekty a řešení můžete změnit jedním ze tří způsobů:
 
-1. Při sestavování projektu nebo řešení z příkazového řádku pomocí přepínače `-ToolsVersion` (při krátkém `-tv`).
+1. Pomocí přepínače `-ToolsVersion` (nebo `-tv`, zkráceně) při vytváření projektu nebo řešení z příkazového řádku.
 
-2. Nastavením parametru `ToolsVersion` v úloze MSBuild.
+2. Nastavením `ToolsVersion` parametru na úlohě MSBuild.
 
-3. Nastavením vlastnosti `$(ProjectToolsVersion)` v projektu v rámci řešení. To umožňuje sestavit projekt v řešení s verzí sady nástrojů, která se liší od pro ostatní projekty.
+3. Nastavením `$(ProjectToolsVersion)` vlastnosti na projektu v rámci řešení. To umožňuje vytvořit projekt v řešení s verzí sady nástrojů, která se liší od ostatních projektů.
 
-## <a name="override-the-toolsversion-settings-of-projects-and-solutions-on-command-line-builds"></a>Přepsat nastavení ToolsVersion projektů a řešení v sestaveních příkazového řádku
+## <a name="override-the-toolsversion-settings-of-projects-and-solutions-on-command-line-builds"></a>Přepsat nastavení ToolsVersion projektů a řešení na sestavení příkazového řádku
 
- I když projekty sady Visual Studio obvykle sestavují s ToolsVersion, které jsou zadány v souboru projektu, můžete použít přepínač `-ToolsVersion` (nebo `-tv`) na příkazovém řádku pro přepsání této hodnoty a sestavení všech projektů a jejich závislostí typu projekt-projekt s jinou sadou nástrojů. Příklad:
+ Přestože projekty sady Visual Studio obvykle sestavení s ToolsVersion `-ToolsVersion` zadané `-tv`v souboru projektu, můžete použít přepínač (nebo ) na příkazovém řádku přepsat tuto hodnotu a sestavit všechny projekty a jejich závislosti projektu na projekt s jinou sadou nástrojů. Například:
 
 ```cmd
 msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 ```
 
- V tomto příkladu jsou všechny projekty sestaveny pomocí ToolsVersion 12,0. (Ale další informace najdete v části [pořadí priorit](#order-of-precedence) dále v tomto tématu.)
+ V tomto příkladu jsou všechny projekty sestaveny pomocí ToolsVersion 12.0. (V tomto tématu však naleznete v části [Pořadí priorit](#order-of-precedence) dále.)
 
- Při použití přepínače `-tv` v příkazovém řádku můžete volitelně použít vlastnost `$(ProjectToolsVersion)` v jednotlivých projektech pro jejich sestavení s jinou hodnotou ToolsVersion než ostatní projekty v řešení.
+ Při použití `-tv` přepínače na příkazovém řádku, `$(ProjectToolsVersion)` můžete volitelně použít vlastnost v jednotlivých projektech k jejich sestavení s jinou ToolsVersion hodnotu než ostatní projekty v řešení.
 
-## <a name="override-the-toolsversion-settings-using-the-toolsversion-parameter-of-the-msbuild-task"></a>Přepsat nastavení ToolsVersion pomocí parametru ToolsVersion úlohy MSBuild
+## <a name="override-the-toolsversion-settings-using-the-toolsversion-parameter-of-the-msbuild-task"></a>Přepsat nastavení ToolsVersion pomocí toolsversion parametr úlohy MSBuild
 
- Úloha MSBuild je primárním prostředkem pro jeden projekt k sestavení jiného. Chcete-li povolit úlohu MSBuild pro sestavení projektu s jiným ToolsVersion, než je zadáno v projektu, poskytuje volitelný parametr úlohy s názvem `ToolsVersion`. Následující příklad ukazuje, jak použít tento parametr:
+ Úkol MSBuild je primární mašita pro jeden projekt k sestavení jiného projektu. Chcete-li povolit úkol MSBuild k sestavení projektu s jinou ToolsVersion než zadaný `ToolsVersion`v projektu, poskytuje volitelný parametr úkolu s názvem . Následující příklad ukazuje, jak použít tento parametr:
 
-1. Vytvořte soubor s názvem *Project. proj* , který obsahuje následující kód:
+1. Vytvořte soubor s názvem *projectA.proj,* který obsahuje následující kód:
 
     ```xml
     <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
@@ -62,7 +62,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
     </Project>
     ```
 
-2. Vytvořte další soubor s názvem *projectB. proj* , který obsahuje následující kód:
+2. Vytvořte jiný soubor s názvem *projectB.proj* a který obsahuje následující kód:
 
     ```xml
     <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
@@ -76,15 +76,15 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
     </Project>
     ```
 
-3. Do příkazového řádku zadejte následující příkaz:
+3. Na příkazovém řádku zadejte následující příkaz:
 
     ```cmd
     msbuild projectA.proj -t:go -toolsversion:3.5
     ```
 
-4. Zobrazí se následující výstup. Pro `projectA`nastavení `-toolsversion:3.5` na příkazovém řádku přepisuje nastavení `ToolsVersion=12.0` ve značce `Project`.
+4. Zobrazí se následující výstup. V `projectA`případě `-toolsversion:3.5` , nastavení na příkazovém řádku přepíše `ToolsVersion=12.0` nastavení ve značce. `Project`
 
-     `ProjectB` je volána úlohou v `projectA`. Tato úloha má `ToolsVersion=2.0`, která přepíše ostatní nastavení `ToolsVersion` pro `projectB`.
+     `ProjectB`je volána úkolem v aplikaci `projectA`. Tento úkol `ToolsVersion=2.0`má , který `ToolsVersion` přepíše ostatní nastavení pro `projectB`.
 
     ```
     Output:
@@ -99,37 +99,37 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 
 ## <a name="order-of-precedence"></a>Pořadí priorit
 
- Pořadí priorit od nejvyšších po nejnižší, které slouží k určení `ToolsVersion`:
+ Pořadí priorit, od nejvyšší k nejnižší, slouží `ToolsVersion` k určení je:
 
-1. Atribut `ToolsVersion` v úloze MSBuild, který se používá k sestavení projektu, pokud existuje.
+1. Atribut `ToolsVersion` úkolu MSBuild, který se používá k sestavení projektu, pokud existuje.
 
-2. Přepínač `-toolsversion` (nebo `-tv`), který je použit v příkazu MSBuild. exe, pokud existuje.
+2. Přepínač `-toolsversion` (nebo), `-tv`který se používá v příkazu msbuild.exe, pokud existuje.
 
-3. Pokud je nastavená proměnná prostředí `MSBUILDTREATALLTOOLSVERSIONSASCURRENT`, použijte aktuální `ToolsVersion`.
+3. Pokud je `MSBUILDTREATALLTOOLSVERSIONSASCURRENT` nastavena proměnná prostředí, použijte aktuální `ToolsVersion`.
 
-4. Pokud je proměnná prostředí `MSBUILDTREATHIGHERTOOLSVERSIONASCURRENT` nastavena a `ToolsVersion` definována v souboru projektu je větší než aktuální `ToolsVersion`, použijte aktuální `ToolsVersion`.
+4. Pokud je `MSBUILDTREATHIGHERTOOLSVERSIONASCURRENT` nastavena proměnná prostředí a `ToolsVersion` definice v `ToolsVersion`souboru projektu `ToolsVersion`je větší než aktuální , použijte aktuální .
 
-5. Pokud je nastavená proměnná prostředí `MSBUILDLEGACYDEFAULTTOOLSVERSION` nebo pokud `ToolsVersion` není nastavená, použijí se tyto kroky:
+5. Pokud je `MSBUILDLEGACYDEFAULTTOOLSVERSION` nastavena proměnná `ToolsVersion` prostředí nebo není nastavena, použijí se následující kroky:
 
-    1. Atribut `ToolsVersion` prvku [projektu](../msbuild/project-element-msbuild.md) v souboru projektu. Pokud tento atribut neexistuje, předpokládá se, že se jedná o aktuální verzi.
+    1. Atribut `ToolsVersion` [Project](../msbuild/project-element-msbuild.md) prvek souboru projektu. Pokud tento atribut neexistuje, předpokládá se, že se jedná o aktuální verzi.
 
-    2. Výchozí verze nástrojů v souboru *MSBuild. exe. config* .
+    2. Výchozí verze nástrojů v souboru *MSBuild.exe.config.*
 
-    3. Výchozí verze nástrojů v registru. Další informace najdete v tématu [standardní a vlastní konfigurace sady nástrojů](../msbuild/standard-and-custom-toolset-configurations.md).
+    3. Výchozí verze nástrojů v registru. Další informace naleznete [v tématu Standardní a vlastní konfigurace sady nástrojů](../msbuild/standard-and-custom-toolset-configurations.md).
 
-6. Pokud není nastavená proměnná prostředí `MSBUILDLEGACYDEFAULTTOOLSVERSION`, použijí se tyto kroky:
+6. Pokud proměnná `MSBUILDLEGACYDEFAULTTOOLSVERSION` prostředí není nastavena, použijí se následující kroky:
 
-    1. Pokud je proměnná prostředí `MSBUILDDEFAULTTOOLSVERSION` nastavená na `ToolsVersion`, která existuje, použijte ji.
+    1. Pokud je `MSBUILDDEFAULTTOOLSVERSION` proměnná prostředí `ToolsVersion` nastavena na existující, použijte ji.
 
-    2. Pokud je v *souboru MSBuild. exe. config*nastavena `DefaultOverrideToolsVersion`, použijte ji.
+    2. Pokud `DefaultOverrideToolsVersion` je nastavena v *MSBuild.exe.config*, použijte ji.
 
-    3. Pokud je v registru nastavená `DefaultOverrideToolsVersion`, použijte ji.
+    3. Pokud `DefaultOverrideToolsVersion` je nastavena v registru, použijte ji.
 
-    4. V opačném případě použijte aktuální `ToolsVersion`.
+    4. V opačném případě `ToolsVersion`použijte aktuální .
 
 ## <a name="see-also"></a>Viz také
 
-- [Cílení na více verzí](../msbuild/msbuild-multitargeting-overview.md)
-- [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
+- [Multicílení](../msbuild/msbuild-multitargeting-overview.md)
+- [Koncepty MSBuild](../msbuild/msbuild-concepts.md)
 - [Sada nástrojů (atribut ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)
 - [Standardní a vlastní konfigurace sady nástrojů](../msbuild/standard-and-custom-toolset-configurations.md)

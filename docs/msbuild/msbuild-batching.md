@@ -1,5 +1,5 @@
 ---
-title: Dávkování nástroje MSBuild | Microsoft Docs
+title: MSBuild dávkování | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,24 +12,24 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 78aeef8ea651aac1fe2a780207474399f4bbcf09
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633431"
 ---
-# <a name="msbuild-batching"></a>Dávkování nástroje MSBuild
+# <a name="msbuild-batching"></a>Dávkování msbuildu
 
-Nástroj MSBuild má možnost rozdělit seznamy položek do různých kategorií nebo dávky na základě metadat položky a spustit cíl nebo úlohu jednou pro každou dávku.
+MSBuild má schopnost rozdělit seznamy položek do různých kategorií nebo listy na základě metadat položky a spustit cíl nebo úkol jednou s každou dávkou.
 
 ## <a name="task-batching"></a>Dávkování úloh
 
-Dávkování úloh umožňuje zjednodušit soubory projektu tím, že poskytuje způsob, jak rozdělit seznamy položek do různých dávek a předat každou z těchto dávek do úlohy samostatně. To znamená, že soubor projektu potřebuje mít úlohu a její atributy deklarované pouze jednou, i když je možné ji spustit několikrát.
+Dávkování úkolů umožňuje zjednodušit soubory projektu tím, že poskytuje způsob, jak rozdělit seznamy položek do různých dávek a předat každou z těchto dávek do úkolu samostatně. To znamená, že soubor projektu musí mít pouze úkol a jeho atributy deklarované jednou, i když jej lze spustit několikrát.
 
-Určíte, že chcete, aby nástroj MSBuild prováděl dávkování s úkolem pomocí notace%(\<ItemMetaDataName >) v jednom z atributů úkolu. Následující příklad rozdělí seznam `Example` položky na dávky založené na hodnotě metadat `Color` položky a všechny dávky předává do úlohy `MyTask` samostatně.
+Určíte, že chcete, aby MSBuild prováděl dávkování s\<úkolem pomocí notace %( ItemMetaDataName>) v jednom z atributů úkolu. Následující příklad rozdělí `Example` seznam položek na dávky `Color` na základě hodnoty metadat položky a `MyTask` předá každou dávku úkolu samostatně.
 
 > [!NOTE]
-> Pokud neodkazujte na seznam položek jinde v atributech úlohy nebo název metadat může být nejednoznačný, můžete použít notaci%(\<ItemCollection. ItemMetaDataName >) k úplnému zařazení hodnoty metadat položky, která se má použít pro dávkování.
+> Pokud neodkazujete na seznam položek jinde v atributech úkolu nebo název metadat může být\<nejednoznačný, můžete použít notaci %( ItemCollection.ItemMetaDataName>) k úplnému kvalifikaci hodnoty metadat položky, která má být pro dávkování.
 
 ```xml
 <Project
@@ -53,13 +53,13 @@ Určíte, že chcete, aby nástroj MSBuild prováděl dávkování s úkolem pom
 </Project>
 ```
 
-Konkrétnější příklady dávkování najdete [v tématu Metadata položek v dávkování úloh](../msbuild/item-metadata-in-task-batching.md).
+Konkrétní příklady dávkování naleznete [v tématu Metadata položky v dávkování úloh](../msbuild/item-metadata-in-task-batching.md).
 
-## <a name="target-batching"></a>Dávkování cíle
+## <a name="target-batching"></a>Cílové dávkování
 
-Nástroj MSBuild kontroluje, zda jsou vstupy a výstupy cíle aktuální před spuštěním cíle. Pokud jsou vstupy i výstupy aktuální, přeskočí se cíl. Pokud úloha v cíli používá dávkování, nástroj MSBuild potřebuje určit, jestli jsou vstupy a výstupy pro každou dávku položek aktuální. V opačném případě se cíl spustí pokaždé, když je dosaženo.
+MSBuild zkontroluje, zda vstupy a výstupy cíle jsou aktuální před spuštěním cíle. Pokud jsou vstupy i výstupy aktuální, cíl je přeskočen. Pokud úloha uvnitř cíle používá dávkování, MSBuild potřebuje určit, zda vstupy a výstupy pro každou dávku položek je aktuální. V opačném případě je cíl proveden pokaždé, když je přístupů.
 
-Následující příklad ukazuje `Target` element, který obsahuje atribut `Outputs` se zápisem%(\<ItemMetaDataName >). Nástroj MSBuild rozdělí seznam `Example` položek na dávky založené na metadatech `Color` položky a analyzuje časová razítka výstupních souborů pro každou dávku. Pokud výstupy z dávky nejsou aktuální, je cíl spuštěn. V opačném případě se cíl přeskočí.
+Následující příklad ukazuje `Target` prvek, `Outputs` který obsahuje atribut\<s notací %( ItemMetaDataName>). MSBuild rozdělí `Example` seznam položek na dávky `Color` na základě metadat položky a analyzovat časová razítka výstupních souborů pro každou dávku. Pokud výstupy z dávky nejsou aktuální, cíl je spuštěn. V opačném případě je cíl přeskočen.
 
 ```xml
 <Project
@@ -85,27 +85,27 @@ Následující příklad ukazuje `Target` element, který obsahuje atribut `Outp
 </Project>
 ```
 
-Další příklad cílového dávkování najdete v tématu [Metadata položek v cílové dávce](../msbuild/item-metadata-in-target-batching.md).
+Další příklad cílového dávkování naleznete [v tématu Metadata položky v cílové dávkování](../msbuild/item-metadata-in-target-batching.md).
 
 ## <a name="property-functions-using-metadata"></a>Funkce vlastností pomocí metadat
 
-Dávkování lze řídit funkcemi vlastností, které zahrnují metadata. Například:
+Dávkování lze řídit funkcemi vlastností, které obsahují metadata. Například:
 
 `$([System.IO.Path]::Combine($(RootPath),%(Compile.Identity)))`
 
-používá <xref:System.IO.Path.Combine%2A> ke kombinování cesty ke kořenové složce s cestou položky kompilace.
+používá <xref:System.IO.Path.Combine%2A> ke zkombinování cesty kořenové složky s cestou compile položky.
 
-Funkce vlastností se nesmí vyskytovat v hodnotách metadat. Například:
+Funkce vlastností se nemusí zobrazit v rámci hodnot metadat. Například:
 
 `%(Compile.FullPath.Substring(0,3))`
 
 není povoleno.
 
-Další informace o funkcích vlastností naleznete v tématu [funkce vlastností](../msbuild/property-functions.md).
+Další informace o funkcích vlastností naleznete v [tématu Property functions](../msbuild/property-functions.md).
 
 ## <a name="see-also"></a>Viz také
 
-- [ItemMetadata – – element (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)
-- [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
-- [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
+- [Element ItemMetadata (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)
+- [Koncepty MSBuild](../msbuild/msbuild-concepts.md)
+- [Odkaz na sestavení msbuild](../msbuild/msbuild-reference.md)
 - [Pokročilé koncepty](../msbuild/msbuild-advanced-concepts.md)

@@ -13,29 +13,29 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c7df85c429794d61028d5304108d289dfe9bf496
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594237"
 ---
 # <a name="code-snippet-functions"></a>Funkce fragmentu kódu
 
-Existují tři funkce, které lze použít s C# fragmenty kódu. Funkce jsou zadány v prvku [funkce](../ide/code-snippets-schema-reference.md#function-element) fragmentu kódu. Informace o vytváření fragmentů kódu naleznete v tématu [fragmenty kódu](../ide/code-snippets.md).
+K dispozici jsou tři funkce, které lze použít s fragmenty kódu jazyka C#. Funkce jsou určeny v prvku [Function](../ide/code-snippets-schema-reference.md#function-element) fragmentu kódu. Informace o vytváření výstřižků kódu naleznete v [tématu Fragmenty kódu](../ide/code-snippets.md).
 
 ## <a name="functions"></a>Funkce
 
-Následující tabulka popisuje funkce, které jsou k dispozici pro použití s elementem `Function` v části fragmenty kódu.
+Následující tabulka popisuje funkce, které jsou `Function` k dispozici pro použití s elementem ve výstřižcích kódu.
 
 |Funkce|Popis|Jazyk|
 |--------------|-----------------|--------------|
-|`GenerateSwitchCases(EnumerationLiteral)`|Vygeneruje příkaz switch a sadu příkazů Case pro členy výčtu určené parametrem `EnumerationLiteral`. Parametr `EnumerationLiteral` musí být buď odkaz na literál výčtu, nebo typ výčtu.|C#|
-|`ClassName()`|Vrátí název třídy, která obsahuje vložený fragment kódu.|C#|
-|`SimpleTypeName(TypeName)`|Zmenší parametr *TypeName* na jeho nejjednodušší tvar v kontextu, ve kterém byl vyvolán fragment kódu.|C#|
+|`GenerateSwitchCases(EnumerationLiteral)`|Generuje switch příkaz a sadu case příkazy pro členy výčtu `EnumerationLiteral` určené parametrem. Parametr `EnumerationLiteral` musí být buď odkaz na výčet literálu nebo typ výčtu.|C#|
+|`ClassName()`|Vrátí název třídy, která obsahuje vložený úryvek.|C#|
+|`SimpleTypeName(TypeName)`|Redukuje *Parametr TypeName* na jeho nejjednodušší formu v kontextu, ve kterém byl vyvolán úryvek.|C#|
 
 ## <a name="generateswitchcases-example"></a>Příklad GenerateSwitchCases
 
-Následující příklad ukazuje, jak použít funkci `GenerateSwitchCases`. Po vložení tohoto fragmentu kódu a zadáním výčtu do `$switch_on$` literálu `$cases$` literál generuje příkaz `case` pro každou hodnotu ve výčtu.
+Následující příklad ukazuje, jak `GenerateSwitchCases` používat funkci. Když je tento výstřižek vložen a výčet `$switch_on$` je zadán `$cases$` do literálu, literál generuje `case` příkaz pro každou hodnotu ve výčtu.
 
 ```xml
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
@@ -75,9 +75,9 @@ Následující příklad ukazuje, jak použít funkci `GenerateSwitchCases`. Po 
 </CodeSnippets>
 ```
 
-## <a name="classname-example"></a>Příklad ClassName
+## <a name="classname-example"></a>Příklad Názvu třídy
 
-Následující příklad ukazuje, jak použít funkci `ClassName`. Po vložení tohoto fragmentu je `$classname$` literál nahrazen názvem ohraničující třídy v tomto umístění v souboru kódu.
+Následující příklad ukazuje, jak `ClassName` používat funkci. Po vložení tohoto úryvku `$classname$` je literál nahrazen názvem ohraničující třídy v tomto umístění v souboru kódu.
 
 ```xml
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
@@ -122,9 +122,9 @@ Následující příklad ukazuje, jak použít funkci `ClassName`. Po vložení 
 </CodeSnippets>
 ```
 
-## <a name="simpletypename-example"></a>Příklad SimpleType
+## <a name="simpletypename-example"></a>Příklad SimpleTypeName
 
-Tento příklad ukazuje, jak použít funkci `SimpleTypeName`. Když je tento fragment kódu vložen do souboru kódu, bude `$SystemConsole$` literál nahrazen nejjednodušším tvarem <xref:System.Console> typu v kontextu, ve kterém byl fragment vyvolán.
+Tento příklad ukazuje, `SimpleTypeName` jak používat funkci. Když je tento úryvek vložen do `$SystemConsole$` souboru kódu, literál bude nahrazen <xref:System.Console> nejjednodušší formou typu v kontextu, ve kterém byl fragment vyvolán.
 
 ```xml
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
@@ -155,7 +155,7 @@ Tento příklad ukazuje, jak použít funkci `SimpleTypeName`. Když je tento fr
 </CodeSnippets>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Element Function](../ide/code-snippets-schema-reference.md#function-element)
+- [Funkční prvek](../ide/code-snippets-schema-reference.md#function-element)
 - [Referenční informace ke schématu fragmentů kódu](../ide/code-snippets-schema-reference.md)

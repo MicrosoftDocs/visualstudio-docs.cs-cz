@@ -1,6 +1,6 @@
 ---
-title: Zvýšení produktivity pro vývoj pro .NET
-description: Přehled navigace, analýza kódu, testování částí a další funkce, které vám pomůžou psát lepší kód .NET rychleji.
+title: Zvyšte svou produktivitu pro vývoj rozhraní .NET
+description: Přehled navigace, analýzy kódu, testování částí a dalších funkcí, které vám pomohou rychleji psát kód .NET.
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
@@ -11,227 +11,227 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 0aa8e19f2be78671587dd1d9bc6254306c82a78c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75567499"
 ---
-# <a name="visual-studio-productivity-guide-for-c-developers"></a>Průvodce produktivitou sady Visual C# Studio pro vývojáře
+# <a name="visual-studio-productivity-guide-for-c-developers"></a>Visual Studio produktivity průvodce pro vývojáře C#
 
-Přečtěte si, jak Visual Studio umožňuje vývojářům zvýšit produktivitu než kdy dřív. Využijte výhod našich vylepšení výkonu a produktivity, jako je navigace do dekompilovaných sestavení, návrhy názvů **proměnných při psaní**, přejít na vše (**CTRL**+**t**) a přejděte na deklarace typu soubor/typ/člen/symbol, inteligentní **Pomocníka pro výjimky**, konfiguraci stylu kódu a vynucování a spoustu refaktoringů a oprav kódu.
+Zjistěte, jak Visual Studio dělá vývojáře produktivnějšími než kdy dřív. Využijte našich vylepšení výkonu a produktivity, jako je navigace do dekompilovaných sestavení, návrhy názvů proměnných při psaní, zobrazení hierarchie v **Průzkumníku testů**, Přechod na vše **(Ctrl**+**T)** pro navigaci na deklarace souboru/typu/člena/symbolu, inteligentní pomocník pro **výjimky**, konfiguraci a vynucení stylu kódu a mnoho refaktoringů a oprav kódu.
 
-## <a name="im-used-to-keyboard-shortcuts-from-a-different-editor"></a>Používám klávesové zkratky z jiného editoru
+## <a name="im-used-to-keyboard-shortcuts-from-a-different-editor"></a>Jsem zvyklý na klávesové zkratky z jiného editoru
 
 ::: moniker range="vs-2017"
 
-**Novinka ve Visual Studiu 2017 verze 15,8**
+**Novinka ve Visual Studiu 2017 verze 15.8**
 
 ::: moniker-end
 
-Pokud přecházíte z jiného rozhraní IDE nebo prostředí kódování, můžete změnit schéma klávesnice na *Visual Studio Code* nebo *reostřejšíer (Visual Studio)* :
+Pokud pocházíte z jiného prostředí IDE nebo kódování, můžete změnit schéma klávesnice na *Visual Studio Code* nebo *ReSharper (Visual Studio)*:
 
-![Schémata klávesnice v aplikaci Visual Studio](../ide/media/VS2017Guide-Keyboard.png)
+![Schémata klávesnice v sadě Visual Studio](../ide/media/VS2017Guide-Keyboard.png)
 
 Některá rozšíření také nabízejí schémata klávesnice:
 
-- [Klávesové zkratky pro Visual Studio (ReSharper/IntelliJ)](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.HotKeys)
-- [Emulace (Emacs)](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.EmacsEmulation)
+- [Klávesové zkratky pro visual studio (ReSharper/IntelliJ)](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.HotKeys)
+- [Emulace Emacsu](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.EmacsEmulation)
 - [VSVim](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim)
 
-Níže jsou uvedené oblíbené zkratky pro Visual Studio:
+Následují oblíbené klávesové zkratky sady Visual Studio:
 
 | Zástupce (všechny profily) | Příkaz | Popis |
 |-|-|-|
-| **Ctrl**+**T** | Přejít na vše | Přejít k libovolnému souboru, typu, členu nebo deklaraci symbolu |
-| **F12** (také **CTRL**+**kliknutí**) | Přejít k definici | Přejít na místo, kde je symbol definovaný |
-| **Ctrl**+**F12** | Přejít k implementaci | Přechod ze základního typu nebo členu na jeho různé implementace |
-| **Shift**+**F12** | Najít všechny odkazy | Zobrazit všechny odkazy na symboly nebo literály |
-| **Alt**+**Domů** | Přejít na základní | Navigace v řetězci dědičnosti |
-| **CTRL**+ **.** (také **Alt**+**zadat** v C# profilu) | Rychlé akce a refaktoringy | Podívejte se, jaké opravy kódu, akce generování kódu, refaktoringy nebo jiné rychlé akce jsou k dispozici na pozici kurzoru nebo výběru kódu. |
-| **Ctrl**+**D** | Duplicitní řádek | Duplikuje řádek kódu, ve kterém je kurzor (k dispozici v **aplikaci Visual Studio 2017 verze 15,6** a novější) |
-| **Shift**+**Alt**+ **+** / **-** | Výběr rozšíření/smlouvy | Rozšíří nebo vybírá aktuální výběr v editoru (k dispozici v **aplikaci Visual Studio 2017 verze 15,5** a novější). |
-| **Shift** + **ALT** +  **.** | Vložit další vyhovující blikající kurzor | Přidá výběr a blikající kurzor na další místo, které odpovídá aktuálnímu výběru (k dispozici v **aplikaci Visual Studio 2017 verze 15,8** a novější). |
-| **Ctrl**+**Q** | Hledat | Vyhledat všechna nastavení sady Visual Studio |
+| **Ctrl**+**T** | Přejít na vše | Přechod na libovolnou deklaraci souboru, typu, člena nebo symbolu |
+| **F12** (také **Ctrl**+**Klikněte)** | Přejít na definici | Přechod na místo, kde je definován symbol |
+| **Ctrl**+**F12** | Přejít na implementaci | Přechod ze základního typu nebo člena na jeho různé implementace |
+| **Posun**+**F12** | Najít všechny odkazy | Zobrazit všechny symboly nebo literálové odkazy |
+| **Alt**+**domů** | Přejít na základní typ | Navigace v řetězci dědičnosti nahoru |
+| **Sklávesa Ctrl**+**.** (také **Alt**+**Enter** v c# profilu) | Rychlé akce a refaktoringy | Podívejte se, jaké opravy kódu, akce generování kódu, refaktoringy nebo jiné rychlé akce jsou k dispozici na pozici kurzoru nebo výběru kódu |
+| **Ctrl**+**D** | Duplicitní řádek | Duplikuje řádek kódu, ve které se kurzor nachází (k dispozici ve **Visual Studiu 2017 verze 15.6** a novějších). |
+| **Posuntovat**+**s alternativním**+**+**/**-** | Rozbalit/Vybrat smlouvu | Rozbalí nebo uvedne aktuální výběr v editoru (k dispozici ve **Visual Studiu 2017 verze 15.5** a novější) |
+| **Shift** + **Alt** + **.** | Vložit další odpovídající stříšku | Přidá výběr a stříšku na další umístění, které odpovídá aktuální výběr (k dispozici v **Visual Studio 2017 verze 15.8** a novější) |
+| **Ctrl**+**Q** | Search | Hledat všechna nastavení sady Visual Studio |
 | **F5** | Spustit ladění | Spuštění ladění aplikace |
-| **Ctrl**+**F5** | Spustit bez ladění | Místní spuštění aplikace bez ladění |
-| **CTRL**+**K**,**D** (výchozí profil) nebo **CTRL**+**E**,**D** (C# profil) | Formátovat dokument | Vyčistí porušení formátování v souboru na základě nastavení nového řádku, mezer a odsazení. |
-| **CTRL**+ **\\** ,**CTRL**+**E** (výchozí profil) nebo **CTRL**+**W**,**E** (C# Profile) | Zobrazit Seznam chyb | Zobrazit všechny chyby v dokumentu, projektu nebo řešení |
-| **Alt** + **Page Up/Page Down** | Přejít na další/předchozí problém | Přejít na předchozí/další chybu, upozornění, návrh v dokumentu (k dispozici v **aplikaci Visual Studio 2017 verze 15,8** a novější) |
-| **Ctrl**+**K**, **/** | Přepnout komentář na jeden řádek/zrušit komentář | Tento příkaz přidá nebo odebere Jednořádkový komentář v závislosti na tom, jestli je váš výběr už připsaný do komentáře. |
-| **Ctrl**+**Shift**+ **/** | Přepnout komentář k bloku/zrušit komentář | Tento příkaz přidá nebo odebere komentáře blokování v závislosti na tom, co jste vybrali. |
+| **Ctrl**+**F5** | Spustit bez ladění | Spuštění aplikace místně bez ladění |
+| **Ctrl**+**K**,**D** (výchozí profil) nebo **Ctrl**+**E**,**D** (C# Profil) | Formátovat dokument | Vyčistí porušení formátování v souboru na základě nastavení nového řádku, mezer a odsazení. |
+| **Ctrl**+**Ctrl**+**E** **E** +**W** **Ctrl**, Ctrl E (výchozí profil) nebo Ctrl W , E (C# Profil)**\\** | Zobrazit seznam chyb | Zobrazení všech chyb v dokumentu, projektu nebo řešení |
+| **Alt** + **PgUp/PgDn** | Přejít na další/předchozí problém | Přechod na předchozí/další chybu, upozornění a návrh v dokumentu (k dispozici ve **Visual Studiu 2017 verze 15.8** a novějších) |
+| **Ctrl**+**K**,**/** | Přepnout komentář/komentář na jeden řádek | Tento příkaz přidá nebo odebere komentář jednoho řádku v závislosti na tom, zda je váš výběr již komentován. |
+| **Posun kláves ctrl**+**Shift**+**/** | Přepnout blok komentáře nebo odkomentáře | Tento příkaz přidá nebo odebere blokové komentáře v závislosti na tom, co jste vybrali. |
 
 > [!NOTE]
-> Některá rozšíření odváže výchozí klávesové zkratky sady Visual Studio. Chcete-li použít výše uvedené příkazy, obnovte vazby klíčů na výchozí hodnoty sady Visual Studio tak, že v **nabídce nástroje** > **nastavení pro Import a export** > **resetovat všechna nastavení** nebo **nástroje** > **Možnosti** > **Klávesová** > **reset**.
+> Některá rozšíření zrušit vazbu výchozí visual studio keybindings. Chcete-li použít výše uvedené příkazy, obnovte své klíče do výchozích hodnot sady Visual Studio tak, že přejdete na **položku Nástroje** > **pro import a export nastavení** > **Obnovit všechna nastavení** nebo Obnovit**Keyboard** > **klávesnici****možnosti** >  **nástroje** > .
 
-Další informace o klávesových zkratkách a příkazech najdete v tématech [zástupci produktivity](../ide/productivity-shortcuts.md) a [Oblíbené klávesové zkratky](default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md).
+Další informace o klávesových zkratkách a příkazech naleznete v [tématu Pracovní zkratky](../ide/productivity-shortcuts.md) a [Oblíbené klávesové zkratky](default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md).
 
 ## <a name="navigate-quickly-to-files-or-types"></a>Rychlé procházení souborů nebo typů
 
-Visual Studio obsahuje funkci s názvem **Přejít na vše** (**CTRL**+**t**). Možnost **Přejít na vše** vám umožní rychle přejít na libovolný soubor, typ, člen nebo deklaraci symbolu.
+Visual Studio má funkci s názvem **Přejít na vše** **(Ctrl**+**T).** **Možnost Přejít na vše** umožňuje rychle přejít na libovolnou deklaraci souboru, typu, člena nebo symbolu.
 
-- Změňte umístění tohoto panelu hledání nebo vypněte živý náhled navigace pomocí ikony **ozubeného kolečka** .
-- Filtrovat výsledky pomocí syntaxe, jako je například `t mytype`.
-- Umožňuje určit rozsah hledání pouze na aktuální dokument.
-- Ve stylu CamelCase se shoduje s případem, který je podporován.
+- Změňte umístění tohoto vyhledávacího panelu nebo vypněte náhled živé navigace pomocí ikony **ozubeného kola.**
+- Filtruje výsledky pomocí `t mytype`syntaxe, například .
+- Rozsah hledání pouze aktuální dokument.
+- Porovnávání camelů je podporováno.
 
-![Přejít na vše v aplikaci Visual Studio](../ide/media/VS2017Guide-go-to-all.png)
+![Přejít na vše ve Visual Studiu](../ide/media/VS2017Guide-go-to-all.png)
 
-## <a name="enforce-code-style-rules"></a>Vynutilit pravidla stylu kódu
+## <a name="enforce-code-style-rules"></a>Vynucení pravidel stylu kódu
 
-Soubor EditorConfig můžete použít k codifyí konvence kódování a jejich cestování se zdrojem.
+Soubor EditorConfig můžete použít ke kodifikaci konvencí kódování a nechat je cestovat se zdrojem.
 
-![Vynucení stylu kódu v aplikaci Visual Studio](../ide/media/VSGuide_CodeStyle.png)
+![Vynucení stylu kódu v sadě Visual Studio](../ide/media/VSGuide_CodeStyle.png)
 
-- Přidejte výchozí nebo. EditorConfig soubor s ČISTÝM stylem do projektu výběrem možnosti **přidat** > **novou položku**. V dialogovém okně **Přidat novou položku** vyhledejte "editorconfig". Vyberte jednu z šablon položek **souboru editorconfig** a pak zvolte **Přidat**.
+- Přidejte výchozí nebo . NET-style EditorConfig soubor do projektu výběrem **Přidat** > **novou položku**. V dialogovém okně **Přidat novou položku** vyhledejte "editorconfig". Vyberte některou ze šablon položek **editorconfig File** a pak zvolte **Přidat**.
 
-   ![Šablony položek EditorConfig v aplikaci Visual Studio](media/editorconfig-item-templates.png)
+   ![Šablony položek EditorConfig v sadě Visual Studio](media/editorconfig-item-templates.png)
 
 ::: moniker range=">=vs-2019"
 
-- Automaticky vytvořte soubor *. editorconfig* na základě nastavení stylu kódu v **nabídce nástroje** > **možnosti** > **textový editor** > **C#** > **stylu kódu**.
+- Automaticky vytvořte soubor *.editorconfig* na základě nastavení stylu kódu **v** > **Options** > **textovém editoru nástrojů** > **C#** > **Styl kódu**.
 
-   ![Generovat soubor. editorconfig z nastavení ve VS 2019](media/vs-2019/generate-editorconfig-file.png)
+   ![Generovat soubor .editorconfig z nastavení ve VS 2019](media/vs-2019/generate-editorconfig-file.png)
 
 ::: moniker-end
 
-- [Funkce odvození kódu](/visualstudio/intellicode/code-style-inference) IntelliCode pro Visual Studio odvodí vaše styly kódu z existujícího kódu. Pak vytvoří neprázdný soubor EditorConfig s předem definovanými preferencemi stylu kódu.
+- [Funkce odvození kódu](/visualstudio/intellicode/code-style-inference) IntelliCode pro Visual Studio odvodí styly kódu z existujícího kódu. Potom vytvoří neprázdný soubor EditorConfig s předvolbami stylu kódu, které jsou již definovány.
 
-- Nakonfigurujte úroveň závažnosti pravidla stylu kódu přímo v editoru. Pokud v současné době nemáte soubor. editorconfig, vygeneruje se jeden za vás. Umístěte kurzor na chybu, upozornění nebo návrh a zadejte **Ctrl**+ **.** Otevřete nabídku rychlé akce a refaktoringy. Vyberte možnost **Konfigurovat nebo potlačit problémy**. Potom vyberte pravidlo a zvolte úroveň závažnosti, kterou chcete pro toto pravidlo nakonfigurovat. Tím se aktualizuje stávající EditorConfig novou závažností pravidla.
+- Nakonfigurujte úroveň závažnosti pravidla stylu kódu přímo prostřednictvím editoru. Pokud aktuálně nemáte soubor .editorconfig, bude vygenerován za vás. Umístěte kurzor na chybu, upozornění nebo návrh a zadejte **ctrl**+**.** otevřete nabídku Rychlé akce a Refaktorings. Vyberte **Konfigurovat nebo potlačit problémy**. Potom vyberte pravidlo a zvolte úroveň závažnosti, kterou chcete pro toto pravidlo nakonfigurovat. Tím se aktualizuje stávající EditorConfig novou závažností pravidla.
 
    ![Konfigurace úrovně závažnosti pravidla stylu kódu přímo v editoru](../ide/media/configure-severity-level.png)
 
-Podívejte se na dokumentaci [Možnosti konvence kódování .NET](editorconfig-code-style-settings-reference.md) , která obsahuje také příklad kompletního souboru EditorConfig.
+Prohlédněte si dokumentaci k [možnostem konvence kódování .NET,](editorconfig-code-style-settings-reference.md) která také obsahuje příklad úplného souboru EditorConfig.
 
 ::: moniker range=">=vs-2019"
 
 ## <a name="code-cleanup"></a>Vyčištění kódu
 
-Visual Studio poskytuje formátování souboru kódu, včetně předvoleb stylu kódu, prostřednictvím funkce **Vyčištění kódu** na vyžádání. Chcete-li spustit nástroj Vyčištění kódu, klikněte na ikonu Broom ve spodní části editoru nebo stiskněte klávesovou **zkratku ctrl**+**K**, **CTRL**+**E**.
+Visual Studio poskytuje formátování souboru kódu na vyžádání, včetně předvoleb stylu kódu, prostřednictvím funkce **Vyčištění kódu.** Chcete-li spustit vyčištění kódu, klepněte na ikonu koště v dolní části editoru nebo stiskněte **kombinaci kláves Ctrl**+**K**, **Ctrl**+**E**.
 
-![Tlačítko pro vyčištění kódu v aplikaci Visual Studio 2019](media/execute-code-cleanup.png)
+![Tlačítko Vyčištění kódu v Visual Studiu 2019](media/execute-code-cleanup.png)
 
-Můžete také spustit vyčištění kódu v celém projektu nebo řešení. Klikněte pravým tlačítkem myši na název projektu nebo řešení v **Průzkumník řešení**, vyberte **Analýza a vyčištění kódu**a pak vyberte **Spustit vyčištění kódu**.
+Můžete také spustit vyčištění kódu v celém projektu nebo řešení. Klikněte pravým tlačítkem myši na název projektu nebo řešení v **Průzkumníku řešení**, vyberte **analyzovat a vyčistit kód**a pak vyberte Spustit vyčištění **kódu**.
 
-![Spustit čištění kódu v celém projektu nebo řešení](media/run-code-cleanup-project-solution.png)
+![Spuštění vyčištění kódu napříč celým projektem nebo řešením](media/run-code-cleanup-project-solution.png)
 
-Kromě formátování souboru pro mezery, odsazení, et zajistila, **Nástroj pro vyčištění kódu** používá také vybrané styly kódu. Vaše předvolby pro jednotlivé styly kódu jsou čteny ze [souboru EditorConfig](code-styles-and-code-cleanup.md#code-styles-in-editorconfig-files), pokud máte jeden pro projekt, nebo z [Nastavení stylu kódu](code-styles-and-code-cleanup.md#code-styles-in-the-options-dialog-box) v dialogovém okně **Možnosti** .
+Kromě formátování souboru pro mezery, odsazení a tak dále, **Vyčištění kódu** také použije vybrané styly kódu. Vaše předvolby pro každý styl kódu jsou čteny ze [souboru EditorConfig](code-styles-and-code-cleanup.md#code-styles-in-editorconfig-files), pokud máte jeden pro projekt nebo z [nastavení stylu kódu](code-styles-and-code-cleanup.md#code-styles-in-the-options-dialog-box) v dialogovém okně **Možnosti.**
 
 ::: moniker-end
 
-## <a name="refactorings-and-code-fixes"></a>Refaktoring a opravy kódu
+## <a name="refactorings-and-code-fixes"></a>Refaktoringy a opravy kódu
 
-Visual Studio obsahuje mnoho refaktoringů, akcí generování kódu a oprav kódu. Červené vlnovky reprezentují chyby, zelené vlnovky reprezentují upozornění a tři šedé tečky reprezentují návrhy kódu. K opravám kódu můžete získat přístup kliknutím na žárovku nebo na ikonu Screwdriver nebo stisknutím **kombinace kláves Ctrl**+ **.** nebo **Alt**+**ENTER**. Každá oprava je dodávána s oknem náhledu, které zobrazuje informace o živém kódu, jak oprava funguje.
+Visual Studio je dodáván s mnoha refaktorings, akce generování kódu a opravy kódu. Červené vlnovky představují chyby, zelené vlnovky představují upozornění a tři šedé tečky představují návrhy kódu. Ke opravám kódu se dostanete kliknutím na ikonu žárovky nebo šroubováku nebo stisknutím **klávesy Ctrl**+**.** nebo **Alt**+**Enter**. Každá oprava je dodávána s oknem náhledu, které zobrazuje rozdíl živého kódu o tom, jak oprava funguje.
 
 Mezi oblíbené rychlé opravy a refaktoringy patří:
 
-- přejmenování
+- Přejmenovat
 - extrahování metody
 - Změnit podpis metody
 - Generovat konstruktor
-- Generate – metoda
-- Přesunout typ do souboru
+- Generovat metodu
+- Přesunout text do souboru
 - Přidat kontrolu null
 - Přidat parametr
-- Odebrat nepotřebné direktivy using
-- Smyčka foreach do dotazu LINQ nebo na metodu LINQ
-- Vyžádané členy nahoru
+- Odebrání nepotřebných použití
+- Foreach Loop na LINQ query nebo linq metoda
+- Vytáhnout členy nahoru
 
-Další informace najdete v tématu [funkce pro generování kódu](code-generation-in-visual-studio.md).
+Další informace naleznete v [tématu funkce generování kódu](code-generation-in-visual-studio.md).
 
-Můžete [nainstalovat analyzátory FxCop](../code-quality/install-fxcop-analyzers.md) pro označení problémů s kódem. Nebo zapište vlastní refaktoring nebo opravu kódu pomocí [analyzátorů Roslyn](https://github.com/dotnet/roslyn/wiki/Getting-Started-Writing-a-Custom-Analyzer-&-Code-Fix).
+Můžete [nainstalovat analyzátory FxCop,](../code-quality/install-fxcop-analyzers.md) které označují problémy s kódem. Nebo napište vlastní refaktoring nebo opravu kódu pomocí [analyzátorů Roslyn](https://github.com/dotnet/roslyn/wiki/Getting-Started-Writing-a-Custom-Analyzer-&-Code-Fix).
 
-Několik členů komunity má napsaná bezplatná rozšíření, která přidávají další kontroly kódu:
+Několik členů komunity napsalo bezplatná rozšíření, která přidávají další kontroly kódu:
 
 - [Roslynator](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2017)
-- [SonarLint for Visual Studio](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2017)
-- [StyleCopAnalyzers](https://www.nuget.org/packages/stylecop.analyzers/)
-- [CodeCracker](https://www.nuget.org/packages/codecracker.CSharp/)
+- [SonarLint pro Visual Studio](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2017)
+- [StylCopAnalyzers](https://www.nuget.org/packages/stylecop.analyzers/)
+- [KódCracker](https://www.nuget.org/packages/codecracker.CSharp/)
 
-![Refaktoring v aplikaci Visual Studio](../ide/media/VSGuide_CodeAnalysis.png)
+![Refaktoringy v sadě Visual Studio](../ide/media/VSGuide_CodeAnalysis.png)
 
-## <a name="find-usages-go-to-implementation-and-navigate-to-decompiled-assemblies"></a>Najít použití, přejít k implementaci a přejít na dekompilovaná sestavení
+## <a name="find-usages-go-to-implementation-and-navigate-to-decompiled-assemblies"></a>Najít použití, přejít na implementaci a přejít na dekompilovaná sestavení
 
-Visual Studio obsahuje mnoho funkcí, které vám pomůžou vyhledávat a [Procházet váš kód](../ide/navigating-code.md).
+Visual Studio má mnoho funkcí, které vám pomohou vyhledávat a [procházet váš kód](../ide/navigating-code.md).
 
-| Funkce | Zástupce | Podrobnosti a vylepšení |
+| Funkce | Zástupce | Podrobnosti/vylepšení |
 |- | - | -|
-| Najít všechny odkazy | **Shift**+**F12**| Výsledky jsou barevné a lze je seskupit podle typu projektu, definice a odkazu, jako je například čtení nebo zápis. Můžete také zamknout výsledky. |
-| Přejít k implementaci | **Ctrl**+**F12** | Chcete-li přejít na přepsaného člena, můžete použít klíčové slovo `override` k přechodu na klíč |
-| Přejít k definici | **F12** nebo **Ctrl**+**Klikni**| Když kliknete na tlačítko Přejít na definici, stiskněte klávesu **CTRL** |
-| Náhled definice | **Alt**+**F12** | Vložené zobrazení definice |
-| Vizualizér struktur | Šedá, tečkované – čáry mezi závorkami | Zobrazení struktury kódu najeďte myší |
-| Navigace do dekompilovaných sestav | **F12** nebo **Ctrl**+**Klikni** | Povolením funkce přejděte na externí zdroj (dekompilovaný s ILSpy). **nástroje** > **Možnosti** > **textový editor** **C#**  >  > **Pokročilé** > **Povolit navigaci na dekompilované zdroje**. |
+| Najít všechny odkazy | **Posun**+**F12**| Výsledky jsou obarveny a mohou být seskupeny podle typu projektu, definice a typu odkazu, například pro čtení nebo zápis. Můžete také "zamknout" výsledky. |
+| Přejít na implementaci | **Ctrl**+**F12** | Pomocí klíčového slova Přejít na definici `override` můžete přejít na potlačený člen. |
+| Přejít na definici | **F12** nebo **Ctrl**+**klikněte**| Stisknutím **klávesy Ctrl** při kliknutí přejdete na definici. |
+| Náhled definice | **Alt**+**F12** | Vstěhovavé zobrazení definice |
+| Vizualizér struktury | Šedé, tečkované čáry mezi závorkami | Najeďte na to, abyste viděli strukturu kódu. |
+| Navigace do dekompilovaných sestavení | **F12** nebo **Ctrl**+**klikněte** | Přejděte na externí zdroj (dekompilovaný s ILSpy) povolením funkce:**Možnosti** >  **nástroje** > **Textový editor** > **C#** > **Upřesnit** > **Povolit navigaci na dekompilované zdroje**. |
 
 ![Přejít na vše a najít všechny odkazy](../ide/media/VSIDE_Productivity_Navigation.png)
 
 ## <a name="improved-intellisense"></a>Vylepšená technologie IntelliSense
 
-Použijte IntelliCode pro Visual Studio k získání [kontextového dokončování kódu](/visualstudio/intellicode/intellicode-visual-studio) namísto pouze abecedního seznamu. Můžete také vytvořit [vlastní model IntelliSense](/visualstudio/intellicode/custom-model-faq) na základě vlastních knihoven specifických pro doménu.
+Použití IntelliCode pro Visual Studio získat [dokončování kódu s ohledem na kontext](/visualstudio/intellicode/intellicode-visual-studio) namísto pouze abecední seznam. Můžete také trénovat [vlastní model IntelliSense](/visualstudio/intellicode/custom-model-faq) na základě vlastních knihoven specifických pro doménu.
 
-## <a name="unit-testing"></a>Testování jednotek
+## <a name="unit-testing"></a>Testování částí
 
-Od sady Visual Studio 2017 existuje mnoho vylepšení prostředí testování. Můžete testovat pomocí testovacích rozhraní MSTest V1, MSTest v2, NUnit nebo XUnit.
+Počínaje Visual Studio 2017, existuje mnoho vylepšení testování. Můžete testovat pomocí testovacích rámců MSTest v1, MSTest v2, NUnit nebo XUnit.
 
-- Zjišťování testů **Průzkumníka testů** je rychlé.
+- Zjišťování testů **průzkumníka testů** je rychlé.
 
-- Uspořádejte své testy v **Průzkumníku testů** pomocí *hierarchického řazení*.
+- Uspořádejte testy v **Průzkumníku testů** pomocí *hierarchického řazení*.
 
-   ![Zobrazení hierarchie pro text Explorer v aplikaci Visual Studio](../ide/media/VSGuide_Testing.png)
+   ![Zobrazení hierarchie pro Průzkumníka textu v sadě Visual Studio](../ide/media/VSGuide_Testing.png)
 
-- [Live Unit Testing](../test/live-unit-testing.md) průběžně spouští testy ovlivněné změnami kódu a aktualizuje ikony vloženého editoru, které vám umožní znát stav testů. Zahrnutí nebo vyloučení konkrétních testů nebo testovacích projektů ze sady Live test. (Pouze edice Visual Studio Enterprise.)
+- [Testování živých částí](../test/live-unit-testing.md) průběžně spouští testy ovlivněné změnami kódu a aktualizacemi vřádíkových editorů, abyste věděli o stavu testů. Zahrňte nebo vylučte konkrétní testy nebo testovací projekty ze sady živých testů. (Pouze edice Visual Studio Enterprise.)
 
-## <a name="debugging"></a>Ladění
+## <a name="debugging"></a>ladění
 
-Mezi možnosti ladění v aplikaci Visual Studio patří:
+Mezi možnosti ladění sady Visual Studio patří:
 
 ::: moniker range=">=vs-2019"
 
-- Možnost Hledat řetězec v oknech **kukátka**, **Automatické**hodnoty a **místní** hodnoty.
-- *Klikněte na tlačítko*, které vám umožní umístit ukazatel myši na řádek kódu, zobrazit zelenou ikonu přehrávání a spustit program, dokud nedosáhne tohoto řádku.
-- **Pomocný Pomocník pro výjimky**, který do nejvyšší úrovně v dialogovém okně umístí nejdůležitější informace, například o tom, která proměnná je `null` v `NullReferenceException`.
-- [Krok zpět ladění](../debugger/view-historical-application-state.md)vám umožní přejít zpět na předchozí zarážky nebo kroky a zobrazit stav aplikace, stejně jako v minulosti.
+- Možnost hledání řetězce v oknech **Watch**, **Autos**a **Locals.**
+- *Spustit klikněte*na tlačítko , který vám umožní najet vedle řádku kódu, klikněte na zelenou ikonu 'přehrát', která se zobrazí, a spusťte program, dokud nedosáhne tohoto řádku.
+- **Pomocník pro výjimky**, který umístí nejdůležitější informace na nejvyšší úroveň v `null` dialogovém `NullReferenceException`okně, například proměnná je v .
+- [Krok zpět ladění](../debugger/view-historical-application-state.md), který umožňuje přejít zpět na předchozí zarážky nebo kroky a zobrazit stav aplikace, jak tomu bylo v minulosti.
 - [Ladění snímků](/azure/application-insights/app-insights-snapshot-debugger), které umožňuje prozkoumat stav živé webové aplikace v okamžiku, kdy byla vyvolána výjimka (musí být v Azure).
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-- *Klikněte na tlačítko*, které vám umožní umístit ukazatel myši na řádek kódu, zobrazit zelenou ikonu přehrávání a spustit program, dokud nedosáhne tohoto řádku.
-- **Pomocný Pomocník pro výjimky**, který do nejvyšší úrovně v dialogovém okně umístí nejdůležitější informace, například o tom, která proměnná je `null` v `NullReferenceException`.
-- [Krok zpět ladění](../debugger/view-historical-application-state.md)vám umožní přejít zpět na předchozí zarážky nebo kroky a zobrazit stav aplikace, stejně jako v minulosti.
+- *Spustit klikněte*na tlačítko , který vám umožní najet vedle řádku kódu, klikněte na zelenou ikonu 'přehrát', která se zobrazí, a spusťte program, dokud nedosáhne tohoto řádku.
+- **Pomocník pro výjimky**, který umístí nejdůležitější informace na nejvyšší úroveň v `null` dialogovém `NullReferenceException`okně, například proměnná je v .
+- [Krok zpět ladění](../debugger/view-historical-application-state.md), který umožňuje přejít zpět na předchozí zarážky nebo kroky a zobrazit stav aplikace, jak tomu bylo v minulosti.
 - [Ladění snímků](/azure/application-insights/app-insights-snapshot-debugger), které umožňuje prozkoumat stav živé webové aplikace v okamžiku, kdy byla vyvolána výjimka (musí být v Azure).
 
 ::: moniker-end
 
-![Pomocník pro výjimky v aplikaci Visual Studio](../ide/media/VSGuide_Debugging.png)
+![Pomocník pro výjimky v sadě Visual Studio](../ide/media/VSGuide_Debugging.png)
 
 ## <a name="version-control"></a>Správa verzí
 
-Můžete použít Git nebo TFVC k uložení a aktualizaci kódu v aplikaci Visual Studio.
+Můžete použít git nebo TFVC k ukládání a aktualizaci kódu v sadě Visual Studio.
 
 ::: moniker range=">=vs-2019"
 
-- Nainstalujte žádosti o přijetí změn [pro Visual Studio](https://marketplace.visualstudio.com/items?itemName=vsideversioncontrolmsft.pr4vs) , které vám umožní vytvořit, zkontrolovat, rezervovat a spustit žádosti o přijetí změn bez nutnosti opustit aplikaci Visual Studio.
+- Nainstalujte [žádosti o přijetí vyžádat pro Visual Studio](https://marketplace.visualstudio.com/items?itemName=vsideversioncontrolmsft.pr4vs) k vytvoření, kontrole, rezervování a spuštění žádostí o přijetí vyžádat bez opuštění sady Visual Studio.
 
 ::: moniker-end
 
-- Uspořádejte místní změny v [Team Explorer](reference/team-explorer-reference.md) a pomocí stavového řádku Sledujte nevyřízená potvrzení a změny.
+- Uspořádejte místní změny v [Průzkumníkovi týmu](reference/team-explorer-reference.md) a pomocí stavového řádku můžete sledovat čekající potvrzení a změny.
 
-- Pomocí [nástrojů pro průběžné doručování pro rozšíření sady Visual Studio](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) nastavte průběžnou integraci a doručování pro projekty ASP.NET uvnitř sady Visual Studio.
+- Nastavte průběžnou integraci a doručování pro vaše projekty ASP.NET uvnitř sady Visual Studio pomocí [nástrojů nepřetržitého doručování pro](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) rozšíření Visual Studio.
 
-![Správa zdrojového kódu v aplikaci Visual Studio](../ide/media/VSIDE_Productivity_SourceControl.png)
+![Ovládací prvek zdroj v sadě Visual Studio](../ide/media/VSIDE_Productivity_SourceControl.png)
 
-## <a name="what-other-features-should-i-know-about"></a>O kterých dalších funkcích mám vědět?
+## <a name="what-other-features-should-i-know-about"></a>O jakých dalších funkcích bych měl vědět?
 
-Tady je seznam funkcí editoru a produktivity, které umožňují efektivnější psaní kódu. Je možné, že některé funkce budou potřeba povolit, protože jsou ve výchozím nastavení vypnuté (můžou na vašem počítači indexovat objekty, jsou kontroverzním nebo jsou aktuálně experimentální).
+Zde je seznam editoru a produktivity funkce, aby se psaní kódu efektivnější. Některé funkce může být nutné povolit, protože jsou ve výchozím nastavení vypnuté (mohou indexovat věci v počítači, jsou kontroverzní nebo jsou aktuálně experimentální).
 
 | Funkce | Podrobnosti | Jak povolit |
 |-|-|-|
-| Najít soubor v Průzkumník řešení | Zvýrazní aktivní soubor v **Průzkumník řešení** | **Nástroje** > **Možnosti** > **projekty a řešení** > **sledovat aktivní položku v Průzkumník řešení** |
-| Přidat použití pro typy v referenčních sestaveních a balíčcích NuGet | Zobrazuje žárovku chyby s opravou kódu pro instalaci balíčku NuGet pro neodkazový typ. | **Nástroje** > **Možnosti** > **textový editor** > **C#**  > **Pokročilé** > **navrhnout použití typů v referenčních sestaveních** a **navrhnout použití typů v balíčcích NuGet** |
-| Povolení úplné analýzy řešení | Zobrazit všechny chyby ve vašem řešení v **Seznam chyb** | **Nástroje** > **Možnosti** > **textový Editor** > **C#**  > **pokročilý** > **Povolit úplnou analýzu řešení** |
-| Povolit navigaci na dekompilované zdroje | Umožňuje přejít na definici typů/členů z externích zdrojů a použít Decompiler ILSpy k zobrazení těla metody. | **Nástroje** > **Možnosti** > **textový Editor** > **C#**  > **pokročilý** > **Povolit navigaci na dekompilované zdroje** |
-| Režim dokončení/návrhu | Změní chování při dokončování v IntelliSense. Vývojáři, kteří IntelliJ pozadí, obvykle používají jiné než výchozí nastavení. | **Nabídka** > **upravit** > **IntelliSense** > **Přepnout režim dokončení** |
-| [CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md) | Zobrazí referenční informace o kódu a historii změn v editoru. (Indikátory CodeLens správy zdrojového kódu nejsou k dispozici v edici Visual Studio Community Edition.) | **Nástroje** > **Možnosti** > **textový editor** > **všechny jazyky** > **CodeLens** |
-| [Fragmenty kódu](../ide/visual-csharp-code-snippets.md) | Běžný často používaný kód s kódem Help unstub | Zadejte název fragmentu a dvakrát stiskněte klávesu **TAB** . |
+| Hledání souboru v Průzkumníku řešení | Zvýraznění aktivního souboru v **Průzkumníku řešení** | **Možnosti** >  > nástrojů**Projekty a řešení** > **sledovat aktivní položku v Průzkumníku řešení** **Options** |
+| Přidání použití pro typy v referenčních sestaveních a balíčcích NuGet | Zobrazuje chybovou žárovku s opravou kódu pro instalaci balíčku NuGet pro neodkazovaný typ. | **Možnosti** > **Options** > **Advanced** > **Text Editor** > **C#****Suggest usings for types in reference assemblies** **Suggest usings for types in NuGet packages** nástrojů Textový editor C# Rozšířené Navrhnout použití pro typy v referenčních sestaveních a Navrhnout použití pro typy v balíčcích NuGet >  |
+| Povolení úplné analýzy řešení | Zobrazit všechny chyby v řešení v **seznamu chyb** | **Možnosti** > **Options** >  >  > **Advanced****Text Editor****C#****Enable full solution analysis** nástrojů Textový editor C# Upřesnit Povolit úplnou analýzu řešení >  |
+| Povolit navigaci pro dekompilované zdroje | Povolit přejít na definici typů/členů z externích zdrojů a použít dekompilátor ILSpy k zobrazení těl metod | **Možnosti** > **Options** >  >  > **Advanced****Text Editor****C#****Enable navigation to decompiled sources** nástrojů Textový editor C# Upřesnit Povolit navigaci do dekompilovaných zdrojů >  |
+| Režim dokončení/návrhu | Změní chování dokončení v intelliSense. Vývojáři se pozadím IntelliJ zde obvykle používají jiné než výchozí nastavení. | **Nabídka** > **Upravit** > **režim dokončování technologie** **IntelliSense** >  |
+| [CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md) | Zobrazí informace o odkazech na kód a historii změn v editoru. (Indikátory CodeLens správy zdrojového kódu nejsou k dispozici v edici Visual Studio Community.) | **Možnosti** >  > nástroje**Textový editor** > **všech jazyků** > **CodeLens** **Options** |
+| [Fragmenty kódu](../ide/visual-csharp-code-snippets.md) | Pomoc se zakázaným inzerováním běžného standardního kódu | Zadejte název úryvku a dvakrát stiskněte **klávesu Tab.** |

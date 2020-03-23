@@ -15,14 +15,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5d393890e6166b4a4ef53c9520a556e9a9edd64d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75597318"
 ---
 # <a name="toggle-breakpoint-command"></a>Přepnout zarážku – příkaz
-V závislosti na jejím aktuálním stavu na aktuální pozici v souboru se změní na zarážku, zapnout nebo vypnout.
+Zapne nebo vypne zarážku v závislosti na aktuálním stavu v aktuálním umístění v souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,10 +30,10 @@ V závislosti na jejím aktuálním stavu na aktuální pozici v souboru se změ
 Debug.ToggleBreakpoint [text]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 
 `text`\
-Volitelné. Je-li zadán text, je řádek označen jako pojmenovaná zarážka. V opačném případě je řádek označený jako Nepojmenovaná zarážka, což se podobá tomu, co se stane po stisknutí klávesy F9.
+Nepovinný parametr. Pokud je zadán text, řádek je označen jako pojmenovaná zarážka. V opačném případě je řádek označen jako nepojmenovaná zarážka, což je podobné tomu, co se stane, když stisknete klávesu F9.
 
 ## <a name="example"></a>Příklad
 Následující příklad přepíná aktuální zarážku.
@@ -42,9 +42,9 @@ Následující příklad přepíná aktuální zarážku.
 >Debug.ToggleBreakpoint
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Pole Najít/příkaz](../../ide/find-command-box.md)
+- [Najít/Příkazové pole](../../ide/find-command-box.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

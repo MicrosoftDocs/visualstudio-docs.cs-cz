@@ -9,44 +9,44 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 162632f0043d23fb111a9e455c1100f9506924a8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589510"
 ---
-# <a name="how-to-create-a-basic-color-shader"></a>Postupy: Vytvoření základního barevného shaderu
+# <a name="how-to-create-a-basic-color-shader"></a>Postupy: Vytvoření shaderu základní barvy
 
-Tento článek ukazuje, jak pomocí Návrháře shaderu a jazyka DGSL (Direct Graph shader) vytvořit plochý barevný shader. Tento shader nastaví konečnou barvu na konstantní hodnotu barvy RGB.
+Tento článek ukazuje, jak pomocí Návrhář shaderu a směrovaný graf shader jazyk (DGSL) k vytvoření shader plochých barev. Tento shader nastaví konečnou barvu na konstantní hodnotu barvy RGB.
 
-## <a name="create-a-flat-color-shader"></a>Vytvořit plochý barevný shader
+## <a name="create-a-flat-color-shader"></a>Vytvoření shaderu plochých barev
 
-Můžete implementovat plochý barevný shader napsáním hodnoty barvy barevné konstanty RGB do konečné výstupní barvy.
+Shader s plochými barvami můžete implementovat zápisem barevné hodnoty barevné konstanty RGB do konečné výstupní barvy.
 
-Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nástrojů** .
+Než začnete, ujistěte se, že jsou zobrazeny okno **Vlastnosti** a **panel nástrojů.**
 
-1. Vytvořte shader DGSL, se kterým chcete pracovat. Informace o tom, jak přidat DGSL shader do projektu, naleznete v části Začínáme v [Návrháři shaderu](../designers/shader-designer.md).
+1. Vytvořte shader DGSL pro práci. Informace o tom, jak přidat shader SChL do projektu, naleznete v části Začínáme v [návrháři shaderu](../designers/shader-designer.md).
 
-2. Odstraňte uzel **Barva bodu** . Pomocí nástroje pro **Výběr** vyberte uzel **Barva bodu** a pak na panelu nabídek zvolte možnost **Upravit** > **Odstranit**.
+2. Odstraňte uzel **Barva bodu.** Pomocí nástroje **pro výběr** vyberte uzel **Barva bodu** a potom na řádku nabídek zvolte **Upravit** > **odstranění**.
 
-3. Přidejte do grafu uzel **barevné konstanty** . V **sadě nástrojů**v části **konstanty**vyberte **barevný konstanta** a přesuňte ji na plochu návrhu.
+3. Přidejte do grafu uzel **Konstanta barev.** V **panelu nástrojů**včásti **Konstanty**vyberte **Konstanta barvy** a přesuňte ji na návrhovou plochu.
 
-4. Zadejte hodnotu barvy pro uzel **Color Constant** . Pomocí nástroje pro **Výběr** vyberte uzel **Barevná konstanta** a poté v okně **vlastnosti** ve vlastnosti **výstup** zadejte hodnotu barvy. V případě oranžová zadejte hodnotu (1,0, 0,5, 0,2, 1,0).
+4. Určete hodnotu barvy pro uzel **Konstanta barvy.** Nástrojem **pro výběr** vyberte uzel **Konstanta barvy** a pak v okně **Vlastnosti** ve vlastnosti **Output** určete hodnotu barvy. Pro oranžovou zadejte hodnotu (1,0, 0,5, 0,2, 1,0).
 
-5. Připojte barevnou konstantu k konečné barvě. Chcete-li vytvořit připojení, přesuňte terminál **RGB** uzlu **Color Constant** do terminálu **RGB** **koncového uzlu barvy** a poté přesuňte terminál **alfa** uzlu **Color Constant** do terminálu **alfa** koncového uzlu **barvy** . Tato připojení nastavily konečnou barvu na barevnou konstantu definovanou v předchozím kroku.
+5. Připojte barevnou konstantu ke konečné barvě. Chcete-li vytvořit připojení, přesuňte terminál **RGB** uzlu **Konstanta barev** do terminálu **RGB** uzlu **Konečné barvy** a potom přesuňte terminál **alfa** uzlu **Konstanta barev** do **terminálu Alfa** uzlu Konečné **barvy.** Tato připojení nastaví konečnou barvu na konstantu barvy definovanou v předchozím kroku.
 
-Následující ilustrace znázorňuje dokončený graf shaderu a náhled shaderu, který se použije pro datovou krychli.
+Následující obrázek znázorňuje dokončený graf shaderu a náhled shaderu aplikovaného na krychli.
 
 > [!NOTE]
-> Na ilustraci byla určena oranžová barva pro lepší ukázku účinku shaderu.
+> Na obrázku byla zadána oranžová barva, aby se lépe demonstroval účinek shaderu.
 
-![Graf shaderu a jeho výsledek na 3&#45;D modelu](../designers/media/digit-flat-color-effect.png)
+![Shader graf a jeho výsledek na 3&#45;D modelu](../designers/media/digit-flat-color-effect.png)
 
-Některé tvary mohou pro některé shadery poskytnout lepší náhled. Další informace o tom, jak zobrazit shadery v Návrháři shaderu, najdete v tématu [Shader Designer](../designers/shader-designer.md).
+Některé obrazce mohou některým shaderům poskytovat lepší náhledy. Další informace o zobrazení náhledu shaderů v návrháři shaderu naleznete v [tématu Shader Designer](../designers/shader-designer.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [Postupy: Export shaderu](../designers/how-to-export-a-shader.md)
-- [Návrhář shaderů](../designers/shader-designer.md)
-- [Uzly návrháře shaderu](../designers/shader-designer-nodes.md)
+- [Návrhář shaderu](../designers/shader-designer.md)
+- [Uzly Návrhářshaderu](../designers/shader-designer-nodes.md)

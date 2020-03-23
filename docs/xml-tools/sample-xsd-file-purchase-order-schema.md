@@ -1,5 +1,5 @@
 ---
-title: 'Ukázkový soubor XSD: schéma nákupní objednávky'
+title: 'Ukázkový soubor XSD: Schéma nákupní objednávky'
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: f92b63b5-ec61-43b5-ae1e-63432a7a7e30
@@ -9,15 +9,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d841b75b58dc977b5141dce0b8c7275e4a3ced8a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "75592565"
 ---
-# <a name="sample-xsd-file-purchase-order-schema"></a>Ukázkový soubor XSD: schéma nákupní objednávky
+# <a name="sample-xsd-file-purchase-order-schema"></a>Ukázkový soubor XSD: Schéma nákupní objednávky
 
-Následující soubor XSD se používá v různých příkladech v dokumentaci k Návrháři schématu XSD. Tento soubor je schéma nákupních objednávek.
+Následující soubor XSD se používá v různých příkladech v dokumentaci XSD Schema Designer. Tento soubor je schéma nákupní objednávky.
 
 ```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
@@ -88,4 +88,4 @@ Následující soubor XSD se používá v různých příkladech v dokumentaci k
 ```
 
 > [!NOTE]
-> Společnosti, organizace, produkty, názvy domén, e-mailové adresy, loga, osoby, místa a události použité v ukázkách jsou smyšlené. Žádné spojení se skutečnou společností, organizací, produktem, názvem domény, e-mailovou adresou, logem, osobou, místem nebo událostí není zamýšleno a nemůže být vyvozováno.
+> Zde uvedené příklady společností, organizací, produktů, názvů domén, e-mailových adres, log, osob, míst a událostí jsou smyšlené. Žádné spojení se skutečnou společností, organizací, produktem, názvem domény, e-mailovou adresou, logem, osobou, místy nebo událostmi není zamýšleno ani by nemělo být vyvozováno.

@@ -1,5 +1,5 @@
 ---
-title: Úloha GetOutOfDateItems | Microsoft Docs
+title: Úkol OutOutOutOutDateItems | Dokumenty společnosti Microsoft
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -18,31 +18,31 @@ ms.author: corob
 ms.workload:
 - multiple
 ms.openlocfilehash: bfa60ff0f7e4060f5725fe54bd5950d858b86a22
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77272402"
 ---
-# <a name="getoutofdateitems-task"></a>GetOutOfDateItems – úloha
+# <a name="getoutofdateitems-task"></a>Úloha GetOutOfDateItems
 
-Pomocný úkol, který čte starou tlogs, zapisuje nové tlogs a vrátí sadu položek, které nejsou aktuální.
+Pomocná úloha, která čte staré tlogy, zapisuje nové tlogy a vrací sadu položek, které nejsou aktuální.
 
 ## <a name="parameters"></a>Parametry
 
-Následující tabulka popisuje parametry úlohy **GetOutOfDateItems** .
+Následující tabulka popisuje parametry úlohy **GetOutOfDateItems.**
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**CheckForInterdependencies**|Volitelný parametr **bool** .|
-|**CommandMetadataName**|Volitelný **řetězcový** parametr.|
-|**DependenciesMetadataName**|Volitelný **řetězcový** parametr.|
-|**HasInterdependencies**|Volitelný výstupní parametr **bool**|
-|**OutOfDateSources**|Volitelný výstupní parametr **ITaskItem []** .|
-|**OutputsMetadataName**|Povinný parametr **řetězce**|
-|**Prostředky**|Volitelný parametr **ITaskItem []** .|
-|**TLogDirectory**|Povinný parametr **řetězce**|
-|**TLogNamePrefix**|Povinný parametr **řetězce**|
+|**Kontrola vzájemných závislostí**|Volitelný **parametr bool.**|
+|**PříkazNázev metadat**|Volitelný parametr **řetězce.**|
+|**Název metadat závislostí**|Volitelný parametr **řetězce.**|
+|**Vzájemné závislosti Has**|Volitelný výstupní parametr **bool.**|
+|**Zastaralé zdroje**|Volitelný výstupní parametr **ITaskItem[].**|
+|**VýstupyNázev metadat**|Povinný parametr **řetězce.**|
+|**Zdrojů**|Volitelný parametr **ITaskItem[].**|
+|**TlogDirectory**|Povinný parametr **řetězce.**|
+|**TLogNamePrefix**|Povinný parametr **řetězce.**|
 
 ## <a name="see-also"></a>Viz také
 

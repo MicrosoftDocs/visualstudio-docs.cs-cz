@@ -1,7 +1,7 @@
 ---
-title: Nainstalovat nástroje AI
-description: Popisuje instalaci nástrojů AI pro Visual Studio.
-keywords: AI, Visual Studio
+title: Instalace nástrojů AI
+description: Popisuje, jak nainstalovat nástroje AI pro Visual Studio.
+keywords: ai, vizuální studio
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -10,81 +10,81 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 ms.openlocfilehash: c1160c68c79dd595e82ecf761c6e441ecc906f62
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75915815"
 ---
-# <a name="installation"></a>Instalace služby
+# <a name="installation"></a>Instalace
 
-Visual Studio Tools for AI lze nainstalovat na 64bitové operační systémy 64 Windows.
+Visual Studio Tools for AI lze nainstalovat do 64bitových operačních systémů se systémem Windows.
 
-## <a name="install-visual-studio-tools-for-ai"></a>Nainstalovat Visual Studio Tools for AI
+## <a name="install-visual-studio-tools-for-ai"></a>Instalace nástrojů Sady Visual Studio pro umělou přípravu
 
-Toto rozšíření spolupracuje s Visual Studiem 2015 a sadou Visual Studio 2017, Community Edition nebo vyšší.
+Toto rozšíření funguje s Visual Studio 2015 a Visual Studio 2017, Community Edition nebo vyšší.
 
-Nástroje si můžete stáhnout z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vstoolsai-vs2017)nebo z aplikace Visual Studio:
+Nástroje si můžete stáhnout z [webu Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vstoolsai-vs2017)nebo z visual studia:
 
-1. Vyberte **nástroje** > **rozšíření a aktualizace**.
+1. Vyberte**možnost Rozšíření a aktualizace** **nástrojů** > .
 
-   ![Nabídka rozšíření a aktualizace v aplikaci Visual Studio](media/installation/extensions.png)
+   ![Nabídka Rozšíření a aktualizace v sadě Visual Studio](media/installation/extensions.png)
 
-2. V dialogovém okně **rozšíření a aktualizace** vyberte **online** na levé straně.
-3. Do vyhledávacího pole v pravém horním rohu zadejte nebo zadejte "Tools for AI".
-4. Z výsledků vyberte **Visual Studio Tools for AI** .
-5. Klikněte na tlačítko **Stáhnout**.
+2. V dialogovém okně **Rozšíření a aktualizace** vyberte **online** na levé straně.
+3. Do vyhledávacího pole v pravém horním rohu zadejte nebo zadejte "nástroje pro ai".
+4. Z výsledků vyberte **Nástroje visual studia pro umělou přípravu.**
+5. Klepněte na tlačítko **Stáhnout**.
 
 ## <a name="prepare-your-local-machine"></a>Příprava místního počítače
 
-Před školením modelů s hloubkovým učením v místním počítači se ujistěte, že máte nainstalované příslušné předpoklady. To zahrnuje, že budete mít k dispozici nejnovější ovladače a knihovny pro grafický procesor NVIDIA (pokud ho máte). Také se ujistěte, že máte nainstalované knihovny Pythonu a Pythonu, jako je NumPy, SciPy, a příslušné architektury hloubkového učení, jako je například Microsoft Cognitive Toolkit (CNTK), TensorFlow, Caffe2, MXNet, Keras, Theano, PyTorch a chainer, které plánujete použít ve vašem projektem.
+Před trénování modelů hloubkového učení v místním počítači se ujistěte, že máte nainstalované příslušné požadavky. To zahrnuje ujistěte se, že máte nejnovější ovladače a knihovny pro NVIDIA GPU (pokud máte jeden). Také se ujistěte, že jste nainstalovali knihovny Pythonu a Pythonu, jako jsou NumPy, SciPy a vhodné rámce pro hluboké učení, jako jsou Microsoft Cognitive Toolkit (CNTK), TensorFlow, Caffe2, MXNet, Keras, Theano, PyTorch a Chainer, které plánujete použít ve vašem Projektu.
 
 > [!NOTE]
-> Představení softwaru v následujících pododdílech je výňatkem z jejich domovské stránky.
+> Úvod softwaru v následujících podsekcích je výňatek z jejich domovských stránek.
 
-### <a name="nvidia-gpu-driver"></a>Ovladač NVIDIA GPU
+### <a name="nvidia-gpu-driver"></a>Ovladač GRAFICKÉ KARTY NVIDIA
 
-Architektury hloubkového učení využívají grafický procesor NVIDIA, aby se počítače urychlily rychlostí, přesností a škálováním na skutečné umělé poznatky. Pokud má počítač karty NVIDIA GPU, přečtěte si téma [Stažení ovladačů NVIDIA](https://www.nvidia.com/Download/index.aspx) nebo zkuste nainstalovat nejnovější ovladač aktualizací operačního systému.
+Rámce hlubokého učení využívají grafický procesor NVIDIA k tomu, aby se stroje učily rychlostí, přesností a měřítkem směrem ke skutečné umělé inteligenci. Pokud je v počítači grafické karty NVIDIA, přečtěte si informace [o stažení ovladače NVIDIA](https://www.nvidia.com/Download/index.aspx) nebo vyzkoušejte aktualizaci operačního systému a nainstalujte nejnovější ovladač.
 
-### <a name="cuda"></a>CUDA
+### <a name="cuda"></a>Cuda
 
-[CUDA](https://developer.nvidia.com/cuda-zone) je platforma pro paralelní výpočetní prostředí a programovací model vymysleli pomocí NVIDIA. Díky využití síly GPU může výrazně zvýšit výkon výpočetního výkonu. V současnosti jsou CUDA Toolkit 8,0 vyžadovány architekturou pro hloubkové učení.
+[CUDA](https://developer.nvidia.com/cuda-zone) je paralelní výpočetní platforma a programovací model vynalezený společností NVIDIA. Umožňuje dramatické zvýšení výpočetního výkonu využitím výkonu GPU. V současné době cuda toolkit 8.0 je vyžadována hluboké učení rámců.
 
-Instalace CUDA
+Instalace cuda
 
-- Navštivte tento [Web](https://developer.nvidia.com/cuda-80-ga2-download-archive), Stáhněte si CUDA a nainstalujte ho.
-- Nezapomeňte nainstalovat knihovny runtime CUDA a pak přidat binární cestu CUDA do proměnné prostředí% PATH% nebo $Path.
-- Ve Windows je ve výchozím nastavení tato cesta "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin".
+- Navštivte tento [web](https://developer.nvidia.com/cuda-80-ga2-download-archive), stáhněte cuda a nainstalujte jej.
+- Nezapomeňte nainstalovat knihovny runtime CUDA a pak přidat binární cestu CUDA do proměnné %PATH% nebo $Path prostředí.
+- V systému Windows je tato cesta ve výchozím nastavení "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin".
 
-![Instalace CUDA ve Windows](media/installation/install_cuda_win.png)
+![Instalace cuda v systému Windows](media/installation/install_cuda_win.png)
 
 ### <a name="cudnn"></a>cuDNN
 
-[cuDNN](https://developer.nvidia.com/cudnn) (CUDA neuronové Network Library) je knihovna primitivních primitiv pro rozsáhlou neuronové síť s grafickým procesorem (NVIDIA). cuDNN V6 vyžaduje nejnovější architektury hloubkového učení.
+[cuDNN](https://developer.nvidia.com/cudnn) (CUDA Deep Neural Network library) je gpu akcelerovaná knihovna primitivů pro hluboké neuronové sítě od NVIDIA. cuDNN v6 je vyžadováno nejnovějšími frameworky hlubokého učení.
 
 Instalace cuDNN:
 
-- Navštivte [vývojáře NVIDIA](https://developer.nvidia.com/rdp/cudnn-download) a stáhněte a nainstalujte si nejnovější balíček.
-- Zajistěte Přidání adresáře obsahujícího binární soubor cuDNN do proměnné prostředí% PATH% nebo $Path.
-- Ve Windows můžete zkopírovat cudnn64_6. dll do složky C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin.
+- Navštivte [nvidia developer](https://developer.nvidia.com/rdp/cudnn-download) a stáhněte a nainstalujte nejnovější balíček.
+- Ujistěte se, že přidáte adresář obsahující binární soubor cuDNN do %PATH% nebo $Path proměnné prostředí.
+- V systému Windows můžete cudnn64_6.dll zkopírovat do souboru C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin".
 
 > [!NOTE]
-> Předchozí architektury hloubkového učení, jako jsou CNTK 2,0 a TensorFlow 1.2.1, potřebují cuDNN v 5.1. Můžete však nainstalovat více verzí cuDNN dohromady.
+> Předchozí architektury hlubokého učení, jako jsou CNTK 2.0 a TensorFlow 1.2.1, potřebují cuDNN v5.1. Můžete však nainstalovat více verzí cuDNN společně.
 
 ### <a name="python"></a>Python
 
-Python byl primárním programovacím jazykem pro aplikace s hloubkovým učením. **64 – bit** Pro zajištění nejlepší kompatibility se doporučuje distribuce Pythonu a [3.5.4 Pythonu](https://www.python.org/downloads/release/python-354/) .
+Python byl primární programovací jazyk pro aplikace hlubokého učení. **64bitové** Je vyžadována distribuce Pythonu a [Python 3.5.4](https://www.python.org/downloads/release/python-354/) se doporučuje pro nejlepší kompatibilitu.
 
-### <a name="to-install-python-on-windows"></a>Instalace Pythonu ve Windows
+### <a name="to-install-python-on-windows"></a>Instalace Pythonu do Windows
 
-- Doporučujeme nainstalovat spouštěč Pythonu jenom pro sebe a přidat Python do proměnné prostředí% PATH%.
-- Nezapomeňte nainstalovat PIP, což je systém správy balíčků pro instalaci a správu softwarových balíčků napsaných v Pythonu.
+- Doporučujeme nainstalovat spouštěč Pythonu pouze pro sebe a přidat Python do proměnné prostředí %PATH%.
+- Ujistěte se, že nainstalovat pip, což je systém pro správu balíčků pro instalaci a správu softwarových balíčků napsaných v Pythonu.
 
-Architektury hloubkového učení využívají PIP pro vlastní instalaci.
+Hluboké učení rámce spoléhají na pip pro jejich vlastní instalaci.
 
-![Nainstalovat Python ve Windows](media/installation/install_python_win.png)
+![Instalace Pythonu ve Windows](media/installation/install_python_win.png)
 
-Pak musíme ověřit, jestli je Python 3,5 nainstalovaný správně, a upgradovat PIP na nejnovější verzi spuštěním následujících příkazů v terminálu:
+Potom musíme ověřit, zda je Python 3.5 správně nainstalován, a upgradovat pip na nejnovější verzi provedením následujících příkazů v terminálu:
 
 - **Windows**
 
@@ -98,7 +98,7 @@ Pak musíme ověřit, jestli je Python 3,5 nainstalovaný správně, a upgradova
   C:\Users\test>python -m pip install -U pip
   ```
 
-- **macOS**
+- **Macos**
 
   ```bash
   MyMac:~ test$ python3.5 -V
@@ -110,57 +110,57 @@ Pak musíme ověřit, jestli je Python 3,5 nainstalovaný správně, a upgradova
   MyMac:~ test$ python3.5 -m pip install -U pip
   ```
 
-### <a name="python-on-visual-studio"></a>Python v aplikaci Visual Studio
+### <a name="python-on-visual-studio"></a>Python ve visual studiu
 
-Python je plně podporovaný v aplikaci Visual Studio prostřednictvím rozšíření.
-Další informace najdete v o instalaci [Pythonu pro Visual Studio Tools](../python/installing-python-support-in-visual-studio.md) .
+Python je plně podporován v Sadě Visual Studio prostřednictvím rozšíření.
+Další informace o instalaci [Pythonu pro nástroje Visual Studia](../python/installing-python-support-in-visual-studio.md) najdete v dalších informacích.
 
 ### <a name="numpy-and-scipy"></a>NumPy a SciPy
 
-- **Numpy** je univerzální balíček pro zpracování polí určený k efektivní manipulaci s velkými multidimenzionálními poli libovolných záznamů, aniž by došlo k omezení příliš velkého počtu malých multidimenzionálních polí.
+- **NumPy** je univerzální balíček pro zpracování pole určený k efektivní manipulaci s velkými vícerozměrnými poli libovolných záznamů bez obětování příliš velké rychlosti pro malá vícerozměrná pole.
 
-- **SciPy** ("sigh koláč") je open source software pro matematické, vědecké a inženýry v závislosti na numpy. Od verze 1.0.0 nyní má SciPy oficiální předem sestavený balíček pro Windows.
+- **SciPy** (vyslovuje se "Sigh Pie") je open-source software pro matematiku, vědu a inženýrství, v závislosti na NumPy. Počínaje verzí 1.0.0 má scipy nyní oficiální předem sestavený balíček kol pro Windows.
 
-Pokud chcete nainstalovat NumPy a SciPy, spusťte v terminálu následující příkaz:
+Chcete-li nainstalovat NumPy a SciPy, spusťte v terminálu následující příkaz:
 
 ```bash
 pip3.5 install -U numpy scipy
 ```
 
 > [!NOTE]
-> Výše uvedený příkaz upgraduje stávající staré nebo neoficiální (např. balíčky třetích stran z http://www.lfd.uci.edu/~gohlke/pythonlibs/ pro Windows) NumPy a SciPy na nejnovější oficiální.
+> Výše uvedený příkaz upgraduje stávající staré nebo neoficiální (např. balíčky třetích stran z http://www.lfd.uci.edu/~gohlke/pythonlibs/ windows) NumPy a SciPy na nejnovější oficiální.
 
 ### <a name="microsoft-cognitive-toolkit-cntk"></a>Microsoft Cognitive Toolkit (CNTK)
 
-[Microsoft Cognitive Toolkit](https://cntk.ai) je jednotná sada nástrojů pro hloubkové učení, která popisuje sítě neuronové jako řadu výpočetních kroků prostřednictvím řízeného grafu. CNTK podporuje programovací jazyky Python i BrainScript.
+[Microsoft Cognitive Toolkit](https://cntk.ai) je jednotná sada nástrojů pro hluboké učení, která popisuje neuronové sítě jako řadu výpočetních kroků prostřednictvím řízeného grafu. CNTK podporuje programovací jazyky Pythonu i BrainScriptu.
 
 > [!NOTE]
-> CNTK v současné době nepodporuje macOS.
+> CNTK momentálně nepodporuje macOS.
 
-Pokud chcete nainstalovat balíček Pythonu CNTK, přečtěte si [článek Jak nainstalovat CNTK](/cognitive-toolkit/Setup-CNTK-on-your-machine).
+Chcete-li nainstalovat balíček CNTK Python, podívejte [se, jak nainstalovat CNTK](/cognitive-toolkit/Setup-CNTK-on-your-machine).
 
 ### <a name="tensorflow"></a>TensorFlow
 
-[TensorFlow](https://www.tensorflow.org/) je open source softwarová knihovna pro numerické výpočty pomocí grafů toku dat. Podrobnější informace o instalaci najdete [tady](https://www.tensorflow.org/install/) .
+[TensorFlow](https://www.tensorflow.org/) je open-source softwarová knihovna pro numerické výpočty pomocí grafů toku dat. Podrobné informace naleznete [zde.](https://www.tensorflow.org/install/)
 
 > [!NOTE]
-> Od verze 1,2 už TensorFlow neposkytuje podporu GPU pro macOS.
+> Od verze 1.2 tensorflow již neposkytuje podporu GPU pro macOS.
 
 ### <a name="caffe2"></a>Caffe2
 
-[Caffe2](https://caffe2.ai/) je odlehčená, modulární a škálovatelná architektura pro hloubkové učení. Caffe2 se sestavuje na původním Caffe a je navržena s ohledem na výraz, rychlost a modularitu.
+[Caffe2](https://caffe2.ai/) je lehký, modulární a škálovatelný rámec hlubokého učení. Caffe2, který vychází z původní kavárny Caffe, je navržen s ohledem na výraz, rychlost a modularitu.
 
-V současné době není k dispozici žádný předem sestavený balíček Caffe2 Pythonu.
+V současné době není k dispozici žádný předem postavený balíček caffe2 python kola.
 
-Pokud chcete sestavit ze zdrojového kódu, přejděte [sem](https://caffe2.ai/docs/getting-started.html) .
+Navštivte [zde](https://caffe2.ai/docs/getting-started.html) stavět ze zdrojového kódu.
 
 ### <a name="mxnet"></a>MXNet
 
-[Apache MXNet (inkubace)](https://mxnet.incubator.apache.org/) je rozhraní pro hloubkové učení navržené pro zajištění efektivity i flexibility. Umožňuje **kombinovat** [symbolické a imperativní programování](http://mxnet.io/architecture/index.html#deep-learning-system-design-concepts) , aby bylo možné maximalizovat efektivitu a produktivitu.
+[Apache MXNet (inkubace)](https://mxnet.incubator.apache.org/) je rámec hlubokého učení navržený jak pro efektivitu, tak pro flexibilitu. Umožňuje kombinovat **mix** [symbolické a imperativní programování](http://mxnet.io/architecture/index.html#deep-learning-system-design-concepts) pro maximalizaci efektivity a produktivity.
 
-Pokud chcete nainstalovat MXNet, spusťte v terminálu následující příkaz:
+Chcete-li nainstalovat síť MXNet, spusťte v terminálu následující příkaz:
 
-- S grafickým procesorem
+- S GPU
 
   ```bash
   pip3.5 install mxnet-cu80==0.12.0
@@ -174,9 +174,9 @@ Pokud chcete nainstalovat MXNet, spusťte v terminálu následující příkaz:
 
 ### <a name="keras"></a>Keras
 
-[Keras](https://keras.io/) je rozhraní API pro neuronové sítě vysoké úrovně, které je napsané v Pythonu, které je schopné provozovat v CNTK, TensorFlow nebo Theano. Byla vyvinuta se zaměřením na povolení rychlého experimentu. Možnost jít z nápadu na výsledek s nejmenším možným zpožděním je klíč k zajištění dobrého výzkumu.
+[Keras](https://keras.io/) je rozhraní API pro neuronové sítě na vysoké úrovni, napsané v Pythonu, které je schopné běžet na vrcholu CNTK, TensorFlow nebo Theano. Byl vyvinut se zaměřením na umožnění rychlého experimentování. Být schopen jít od nápadu k výsledku s co nejmenším zpožděním je klíčem k tomu dobrý výzkum.
 
-Pokud chcete nainstalovat Keras, spusťte v terminálu následující příkaz:
+Chcete-li nainstalovat Keras, spusťte v terminálu následující příkaz:
 
 ```bash
 pip3.5 install Keras==2.0.9
@@ -184,9 +184,9 @@ pip3.5 install Keras==2.0.9
 
 ### <a name="theano"></a>Theano
 
-[Theano](http://deeplearning.net/software/theano/) je knihovna Pythonu, která umožňuje efektivně definovat, optimalizovat a vyhodnocovat matematické výrazy, které zahrnují multidimenzionální pole.
+[Theano](http://deeplearning.net/software/theano/) je knihovna Pythonu, která umožňuje efektivně definovat, optimalizovat a vyhodnocovat matematické výrazy zahrnující vícerozměrná pole.
 
-Pokud chcete nainstalovat Theano, spusťte v terminálu následující příkaz:
+Chcete-li nainstalovat Theano, spusťte následující příkaz v terminálu:
 
 ```bash
 pip3.5 install Theano==0.9.0
@@ -194,33 +194,33 @@ pip3.5 install Theano==0.9.0
 
 ### <a name="pytorch"></a>PyTorch
 
-[PyTorch](https://pytorch.org/) je balíček Pythonu, který poskytuje dvě funkce na nejvyšší úrovni:
+[PyTorch](https://pytorch.org/) je python balíček, který poskytuje dvě funkce na vysoké úrovni:
 
-- Tensor výpočet (jako NumPy) se silným zrychlením GPU
-- Špičkové sítě neuronové postavené na páskovém systému automatického třídění
+- Tenzorová výpočetní doba (jako numpy) se silnou akcelerací GPU
+- Deep Neural Networks postavené na páskovém autogradovém systému
 
-Pokud chcete nainstalovat PyTorch, spusťte v terminálu následující příkaz:
+Chcete-li nainstalovat PyTorch, spusťte v terminálu následující příkaz:
 
 - **Windows**
 
-  Ještě není k dispozici žádný oficiální balíček kolečka. Balíček třetí strany si můžete stáhnout z [Anaconda](https://anaconda.org/pytorch/repo?type=all) nebo [univerzity Kalifornie](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pytorch).
+  Ještě tu není žádný oficiální balíček kol. Balíček třetí strany si můžete stáhnout z [Anacondy](https://anaconda.org/pytorch/repo?type=all) nebo [Kalifornské univerzity](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pytorch).
 
-  - Dekomprimujte ho do svého domovského adresáře, například *C:\Users\test\pytorch*.
-  - Přidejte *C:\Users\test\pytorch\Lib\site-Packages* do proměnné prostředí% PYTHONPATH%.
+  - Dekomprimujte jej do domovského adresáře, například *C:\Users\test\pytorch*.
+  - Přidejte *balíčky C:\Users\test\pytorch\Lib\site-packages* do proměnné prostředí %PYTHONPATH%.
 
     ```bash
     pip3 install http://download.pytorch.org/whl/cu80/torch-0.4.0-cp36-cp36m-win_amd64.whl
     pip3 install torchvision
     ```
 
-- **macOS**
+- **Macos**
 
   ```bash
   pip3.5 install http://download.pytorch.org/whl/torch-0.2.0.post3-cp35-cp35m-macosx_10_7_x86_64.whl
   ```
 
   > [!NOTE]
-  > binární soubory macOS nepodporují CUDA. Pokud potřebujete CUDA, nainstalujte ze zdroje.
+  > Binární soubory macOS nepodporují CUDA, nainstalujte ze zdroje, pokud je cuda potřeba
 
 - **Linux**
 
@@ -229,9 +229,9 @@ Pokud chcete nainstalovat PyTorch, spusťte v terminálu následující příkaz
   ```
 
   > [!NOTE]
-  > Tento jediný balíček podporuje GPU i procesor.
+  > Tento jediný balíček podporuje gpu i cpu.
 
-Nakonec nainstalujte torchvision na jiný systém než Windows:
+Nakonec nainstalujte torchvision na non-Windows:
 
 ```bash
 pip3.5 install torchvision
@@ -239,18 +239,18 @@ pip3.5 install torchvision
 
 ### <a name="chainer"></a>Chainer
 
-[Chainer](https://chainer.org/) je architektura pro hloubkové učení založená na Pythonu, která je zaměřená na flexibilitu. Poskytuje Automatická rozlišení rozhraní API na základě definice přístupu definovaného po spuštění (označované také jako dynamické výpočetní grafy), stejně jako rozhraní API na vysoké úrovni pro vytváření a výukové neuronové sítě.
+[Chainer](https://chainer.org/) je pythonský rámec hlubokého učení zaměřený na flexibilitu. Poskytuje automatická diferenciační api založená na přístupu definovat podle spuštění (označované také jako dynamické výpočetní grafy) a také objektově orientovaná lana API vysoké úrovně pro vytváření a trénování neuronových sítí.
 
-Pokud chcete povolit podporu CUDA, nainstalujte [CuPy](https://github.com/cupy/cupy):
+Chcete-li povolit podporu CUDA, nainstalujte [CuPy](https://github.com/cupy/cupy):
 
 ```bash
 pip3.5 install cupy
 ```
 
 > [!NOTE]
-> Ve Windows potřebujete verzi 2015 sady [Visual Studio](https://visualstudio.microsoft.com/) nebo [nástroje C++ Microsoft Visual Build](https://visualstudio.microsoft.com/visual-cpp-build-tools/) pro kompilaci CuPy s CUDA 8,0.
+> V systému Windows potřebujete 2015 verze [Sady Visual Nebo](https://visualstudio.microsoft.com/) Microsoft Visual [C++ nástroje pro sestavení](https://visualstudio.microsoft.com/visual-cpp-build-tools/) cupy s CUDA 8.0.
 
-Pokud chcete nainstalovat chainer, spusťte v terminálu následující příkaz:
+Chcete-li nainstalovat Chainer, spusťte v terminálu následující příkaz:
 
 ```bash
 pip3.5 install chainer==3.0.0

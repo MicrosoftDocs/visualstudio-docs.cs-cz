@@ -1,5 +1,5 @@
 ---
-title: Časy přemýšlení pro zátěžové testování
+title: Přemýšlejte o časech pro testování zatížení
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,51 +11,51 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 887d2af9e60be914bd74141041ecc375cfea4f00
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590030"
 ---
-# <a name="edit-think-times-to-simulate-website-human-interaction-delays-in-load-tests-scenarios"></a>Úprava časů pomýšlení pro simulaci zpoždění lidské interakce webu ve scénářích zátěžových testů
+# <a name="edit-think-times-to-simulate-website-human-interaction-delays-in-load-tests-scenarios"></a>Upravit doby přemýšlení pro simulaci zpoždění interakce s lidmi na webu ve scénářích zátěžových testů
 
-Časy přemýšlení se používají k simulaci lidského chování, které způsobuje, že lidé budou mezi interakcemi s webem čekat. Časy přemýšlení mezi požadavky v testu výkonnosti webu a mezi testovacími iteracemi ve scénáři zátěžového testu. Použití časů pomýšlení v zátěžovém testu může být užitečné při vytváření přesnějších simulací zatížení. Můžete změnit, zda se v zátěžových testech použijí nebo ignorují časy v promyšlenosti. Můžete změnit, zda jsou časy použití v zátěžových testech použity v **Editor zátěžového testu**.
+Myslíš, že časy se používají k simulaci lidského chování, které způsobuje, že lidé čekají mezi interakcemi s webovými stránkami. Myslíš, že časy dojít mezi požadavky v testu výkonu webu a mezi iterací testu ve scénáři zátěžového testu. Použití doby přemýšlení v zátěžovém testu může být užitečné při vytváření přesnějších simulací zatížení. Můžete změnit, zda se časy přemýšlení používají nebo ignorují v zátěžových testech. Můžete změnit, zda se časy přemýšlení používají v zátěžových testech v **Editoru zátěžového testu**.
 
-*Profil přemýšleje* je nastavení, které se vztahuje na scénář v rámci zátěžového testu. Toto nastavení určuje, zda jsou během zátěžového testu použity časy přemýšlení, které jsou uloženy v jednotlivých testech výkonu webu. Pokud chcete v některých testech výkonu webu použít časy promýšlení, ale ne jiné, musíte je umístit do různých scénářů. Další informace o scénářích najdete v tématu [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md).
+*Think profil* je nastavení, které se vztahuje na scénář v zátěžovém testu. Nastavení určuje, zda časy přemýšlení, které jsou uloženy v jednotlivých testech výkonu webu jsou použity během zátěžového testu. Pokud chcete použít doby přemýšlení v některých testech výkonu webu, ale ne v jiných, musíte je umístit v různých scénářích. Další informace o scénářích naleznete v [tématu Úprava scénářů zátěžového testu](../test/edit-load-test-scenarios.md).
 
-Zpočátku nastavíte, zda při vytváření zátěžového testu pomocí **nového Průvodce zátěžovým testem**použijete časy pomýšlení v zátěžových testech. Další informace najdete v tématu [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md).
+Zpočátku nastavíte, zda použijete časy přemýšlení v zátěžových testech při vytváření zátěžového testu pomocí **Průvodce novým zátěžového testu**. Další informace naleznete v [tématu Úprava scénářů zátěžového testu](../test/edit-load-test-scenarios.md).
 
-Možnosti **profilu promýšlení** jsou popsány v následujícím seznamu:
+Možnosti **profilu myšlenky** jsou popsány v následujícím seznamu:
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-**Zaokrouhl**
+**Vypnuto**
 
-Časy přemýšlení se ignorují. Toto nastavení použijte, pokud chcete vygenerovat maximální zatížení pro vysoce zatížený webový server. Nepoužívejte ji při pokusu o vytvoření realističtějších uživatelských interakcí s webovým serverem.
+Myslím, že časy jsou ignorovány. Toto nastavení použijte, pokud chcete generovat maximální zatížení, abyste silně zdůraznili webový server. Nepoužívejte jej při pokusu o vytvoření realističtějších interakcí uživatelů s webovým serverem.
 
-**On**
+**Zapnuto**
 
-Časy přemýšlení se používají přesně tak, jak byly zaznamenány v testu výkonnosti webu. Simuluje více uživatelů, kteří spouštějí testy výkonu webu přesně tak, jak jsou zaznamenané. Vzhledem k tomu, že zátěžový test simuluje více uživatelů, může při použití stejné doby pomýšlení vytvořit nepřirozený vzor zatížení synchronizovaných virtuálních uživatelů.
+Myslím, že časy se používají přesně tak, jak byly zaznamenány v testu výkonu webu. Simuluje více uživatelů, kteří spouštějí testy výkonu webu přesně tak, jak bylo zaznamenáno. Vzhledem k tomu, že zátěžový test simuluje více uživatelů, použití stejného času přemýšlení by mohlo vytvořit nepřirozený vzor zatížení synchronizovaných virtuálních uživatelů.
 
 **Normální distribuce**
 
-Používají se časy přemýšlení, ale jsou rozlišené na normální křivce. Nabízí realističtější simulaci virtuálních uživatelů mírně proměnlivou dobu promýšlení mezi požadavky.
+Myslím, že časy se používají, ale liší se na normální křivky. Poskytuje realističtější simulaci virtuálních uživatelů tím, že mírně mění dobu přemýšlení mezi požadavky.
 
 > [!NOTE]
-> Úplný seznam vlastnosti scénáře zátěžového testu a jejich popis najdete v části [vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
+> Úplný seznam vlastností scénáře zátěžového testu a jejich popisy naleznete v tématu [Load test scenario properties](../test/load-test-scenario-properties.md).
 
-## <a name="change-the-think-profile"></a>Změna profilu přemýšleje
+## <a name="change-the-think-profile"></a>Změna think profilu
 
-### <a name="to-change-a-think-profile-in-a-load-test-scenario"></a>Změna profilu pomýšlení ve scénáři zátěžového testu
+### <a name="to-change-a-think-profile-in-a-load-test-scenario"></a>Změna think profilu ve scénáři zátěžového testu
 
-1. Z projektu testování výkonu webu a zátěžového testu otevřete zátěžový test.
+1. Z webového výkonu a zatížení testovacího projektu otevřete zátěžový test.
 
-2. V **Editor zátěžového testu**vyberte uzel scénář, ve kterém chcete změnit **profil promyšlenosti**. **Profil promýšlení** se zobrazí v okně **vlastnosti** . Stisknutím klávesy **F4** zobrazíte **vlastnosti** okna.
+2. V **Editoru zátěžových testů**zvolte uzel scénáře, ve kterém chcete změnit **profil think**. **Profil think** se zobrazí v okně **Vlastnosti.** Stisknutím **klávesy F4** zobrazte okno **Vlastnosti.**
 
-3. V okně **vlastnosti** změňte vlastnost **profil přemýšlejí** .
+3. Změňte vlastnost **Think Profile** v okně **Vlastnosti.**
 
-4. Po dokončení změny vlastností vyberte v nabídce **soubor** možnost **Uložit** . Potom můžete spustit zátěžový test s novým profilem přemýšlejí.
+4. Po dokončení změny vlastností zvolte **Uložit** v nabídce **Soubor.** Potom můžete spustit zátěžový test s novým profilem think.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md)
+- [Upravit scénáře zátěžového testu](../test/edit-load-test-scenarios.md)

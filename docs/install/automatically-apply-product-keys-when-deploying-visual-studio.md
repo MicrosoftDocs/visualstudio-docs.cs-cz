@@ -1,6 +1,6 @@
 ---
-title: Automatické použití kódů product key
-description: Zjistěte, jak prostřednictvím kódu programu použití kódů product key při nasazení sady Visual Studio.
+title: Automatické použití kódů Product Key
+description: Přečtěte si, jak programově použít kódy Product Key při nasazení sady Visual Studio.
 ms.date: 09/24/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -13,34 +13,34 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: e7f331536de264186bc2977cc4acaaab02147e13
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115215"
 ---
 # <a name="automatically-apply-product-keys-when-deploying-visual-studio"></a>Automatické použití kódů Product Key při nasazení sady Visual Studio
 
-Můžete použít kód product key prostřednictvím kódu programu jako součást skriptu, který se používá k automatizaci nasazení sady Visual Studio. Můžete nastavit kód product key na zařízení prostřednictvím kódu programu při instalaci sady Visual Studio nebo po dokončení instalace.
+Kód Product Key můžete použít programově jako součást skriptu, který se používá k automatizaci nasazení sady Visual Studio. Kód Product Key můžete nastavit na zařízení programově buď během instalace sady Visual Studio, nebo po dokončení instalace.
 
-## <a name="apply-the-license-after-installation"></a>Použití licence, které jsou po instalaci
+## <a name="apply-the-license-after-installation"></a>Použití licence po instalaci
 
 ::: moniker range="vs-2017"
 
-Nainstalovaná verze sady Visual Studio s kódem product key můžete aktivovat pomocí `StorePID.exe` nástroj na cílových počítačích, v bezobslužném režimu. `StorePID.exe` program je nástroj, který nainstaluje sady Visual Studio 2017 následující výchozí umístění: <br> `C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE`
+Nainstalovanou verzi sady Visual Studio s kódem `StorePID.exe` Product Key můžete aktivovat pomocí nástroje na cílových počítačích v tichém režimu. `StorePID.exe`je nástroj, který se instaluje pomocí sady Visual Studio 2017 v následujícím výchozím umístění: <br> `C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE`
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Nainstalovaná verze sady Visual Studio s kódem product key můžete aktivovat pomocí `StorePID.exe` nástroj na cílových počítačích, v bezobslužném režimu. `StorePID.exe` je program, který se instaluje se sadou Visual Studio 2019 v následujících výchozích umístěních: <br> `C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE`
+Nainstalovanou verzi sady Visual Studio s kódem `StorePID.exe` Product Key můžete aktivovat pomocí nástroje na cílových počítačích v tichém režimu. `StorePID.exe`je nástroj, který se instaluje pomocí sady Visual Studio 2019 v následujícím výchozím umístění: <br> `C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE`
 
 ::: moniker-end
 
- Spustit `StorePID.exe` se zvýšenými oprávněními, buď pomocí agenta System Center nebo z příkazového řádku se zvýšenými oprávněními. Kód product key a kód produktu společnosti Microsoft (MPC) za ním.
+ Spouštět `StorePID.exe` se zvýšenými oprávněními, buď pomocí agenta System Center nebo příkazového řádku se zvýšenými oprávněními. Postupujte podle kódu Product Key a kódu produktu společnosti Microsoft (MPC).
 
 >[!IMPORTANT]
-> Ujistěte se, že mají být zahrnuty pomlček kód product key.
+> Nezapomeňte do kódu Product Key zahrnout pomlčky.
 
  ```cmd
  StorePID.exe [product key including the dashes] [MPC]
@@ -48,7 +48,7 @@ Nainstalovaná verze sady Visual Studio s kódem product key můžete aktivovat 
 
 ::: moniker range="vs-2017"
 
-Následující příklad ukazuje použití licence pro Visual Studio 2017 Enterprise, která má MPC 08860, příkazový řádek, kód product key z `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE`a které předpokládá výchozí umístění instalace:
+Následující příklad ukazuje příkazový řádek pro použití licence pro Visual Studio 2017 Enterprise, který má MPC 08860, kód Product Key aplikace `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE`a předpokládá výchozí umístění instalace:
 
 ```cmd
 "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\StorePID.exe" AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 08860
@@ -58,7 +58,7 @@ Následující příklad ukazuje použití licence pro Visual Studio 2017 Enterp
 
 ::: moniker range="vs-2019"
 
-Následující příklad ukazuje příkazový řádek pro použití licence sady Visual Studio 2019 Enterprise, která má MPC 09260, kód Product Key `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE`a předpokládá výchozí umístění instalace:
+Následující příklad ukazuje příkazový řádek pro použití licence pro Visual Studio 2019 Enterprise, který má MPC 09260, kód Product Key z `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE`, a předpokládá výchozí umístění instalace:
 
 ```cmd
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\StorePID.exe" AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 09260
@@ -68,9 +68,9 @@ Následující příklad ukazuje příkazový řádek pro použití licence sady
 
 ::: moniker range="vs-2017"
 
- V následující tabulce jsou uvedeny kódy MPC pro jednotlivé edice aplikace Visual Studio:
+ V následující tabulce jsou uvedeny kódy MPC pro každé vydání sady Visual Studio:
 
-| Edice sady Visual Studio                | MPC   |
+| Visual Studio Edition                | Mpc   |
 |--------------------------------------|-------|
 | Visual Studio Enterprise 2017        | 08860 |
 | Visual Studio Professional 2017      | 08862 |
@@ -80,16 +80,16 @@ Následující příklad ukazuje příkazový řádek pro použití licence sady
 
 ::: moniker range="vs-2019"
 
-| Edice sady Visual Studio                | MPC   |
+| Visual Studio Edition                | Mpc   |
 |--------------------------------------|-------|
 | Visual Studio Enterprise 2019        | 09260 |
 | Visual Studio Professional 2019      | 09262 |
 
 ::: moniker-end
 
-Pokud `StorePID.exe` úspěšně platí kód product key, vrátí se `%ERRORLEVEL%` 0. Pokud se zjistí chyby, vrátí jednu z následujících kódů, v závislosti na podmínce chyby:
+Pokud `StorePID.exe` úspěšně použije kód Product Key, `%ERRORLEVEL%` vrátí hodnotu 0. Pokud dojde k chybám, vrátí jeden z následujících kódů v závislosti na chybovém stavu:
 
-| Chyba                     | Kód |
+| Chyba                     | kód |
 |---------------------------|------|
 | `PID_ACTION_SUCCESS`      | 0    |
 | `PID_ACTION_NOTINSTALLED` | 1    |
@@ -100,11 +100,11 @@ Pokud `StorePID.exe` úspěšně platí kód product key, vrátí se `%ERRORLEVE
 | `PID_ACTION_NOUPGRADE`    | 6    |
 
 > [!NOTE]
-> Když spustíte virtuální instanci aplikace Visual Studio, ujistěte se, že jste také virtualizovat místní složku a registr. Pokud chcete řešit potíže s virtuálními instancemi, spusťte `C:\Program Files (x86)\Microsoft Visual Studio\<version>\Common7\IDE\DDConfigCA.exe`.  
+> Při spuštění virtuální instance sady Visual Studio, ujistěte se, že také virtualizovat místní AppData složky a registru. Chcete-li odstranit potíže `C:\Program Files (x86)\Microsoft Visual Studio\<version>\Common7\IDE\DDConfigCA.exe`s virtuálními instancemi, spusťte program .  
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Instalace sady Visual Studio](../install/install-visual-studio.md)
 * [Vytvoření offline instalace sady Visual Studio](../install/create-an-offline-installation-of-visual-studio.md)

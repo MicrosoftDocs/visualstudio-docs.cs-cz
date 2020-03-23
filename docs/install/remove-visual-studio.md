@@ -1,7 +1,7 @@
 ---
-title: Odebrání sady Visual Studio
+title: Odebrat Visual Studio
 titleSuffix: ''
-description: Přečtěte si, jak zcela odebrat Visual Studio z počítače, krok za krokem.
+description: Přečtěte si, jak aplikaci Visual Studio z počítače odebrat krok za krokem.
 ms.date: 12/19/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -23,46 +23,46 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: b0e8c8fe10451e9e5906eabf7f4f65086d147904
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76113707"
 ---
-# <a name="remove-visual-studio"></a>Odebrání sady Visual Studio
+# <a name="remove-visual-studio"></a>Odebrat Visual Studio
 
-Pokud se setkáte s závažnou chybou a nemůžete opravit nebo odinstalovat sadu Visual Studio, můžete spustit nástroj `InstallCleanup.exe` pro odebrání instalačních souborů a informací o produktu pro všechny nainstalované instance sady Visual Studio 2017 nebo Visual Studio 2019.
+Pokud dojde ke katastrofické chybě a nelze opravit nebo odinstalovat `InstallCleanup.exe` Visual Studio, můžete spustit nástroj odebrat instalační soubory a informace o produktu pro všechny nainstalované instance Visual Studio 2017 nebo Visual Studio 2019.
 
 > [!WARNING]
-> Pokud dojde k chybě opravy nebo odinstalace, použijte nástroj nástroji installcleanup **jenom jako poslední** . Tento nástroj může odinstalovat funkce z jiných instalací sady Visual Studio nebo jiných produktů, které může být také nutné opravit nebo přeinstalovat.
+> Nástroj InstallCleanup používejte **pouze jako poslední možnost,** pokud oprava nebo odinstalace selže. Tento nástroj může odinstalovat funkce z jiných instalací sady Visual Studio nebo jiných produktů, které pak může být také nutné opravit nebo přeinstalovat.
 
-## <a name="run-installcleanupexe"></a>Spusťte nástroji installcleanup. exe.
+## <a name="run-installcleanupexe"></a>Spuštění programu InstallCleanup.exe
 
-Pomocí některého z následujících přepínačů příkazového řádku můžete použít nástroj `InstallCleanup.exe`:
+S nástrojem můžete použít některý z následujících přepínačů příkazového `InstallCleanup.exe` řádku:
 
 | Přepínač | Chování |
 | ------ | -------- |
-| `-i`   | Tento přepínač je výchozí, pokud žádný jiný přepínač nepředává. Odstraní pouze hlavní instalační adresář a informace o produktu. Tento přepínač použijte, pokud chcete po spuštění nástroje `InstallCleanup.exe` znovu nainstalovat stejnou verzi sady Visual Studio. |
-| `-f`   | Tento přepínač odebere hlavní instalační adresář, informace o produktu a většinu dalších funkcí nainstalovaných mimo instalační adresář, které mohou být také sdíleny s jinými instalacemi sady Visual Studio nebo jinými produkty. Tento přepínač použijte, pokud chcete odebrat aplikaci Visual Studio, aniž byste ji chtěli nainstalovat později. |
+| `-i`   | Tento přepínač je výchozí, pokud není předán žádný jiný přepínač. Odebere pouze hlavní instalační adresář a informace o produktu. Tento přepínač použijte, pokud chcete po spuštění `InstallCleanup.exe` nástroje přeinstalovat stejnou verzi sady Visual Studio. |
+| `-f`   | Tento přepínač odebere hlavní instalační adresář, informace o produktu a většinu dalších funkcí nainstalovaných mimo instalační adresář, které mohou být také sdíleny s jinými instalacemi sady Visual Studio nebo jinými produkty. Tento přepínač použijte, pokud chcete aplikaci Visual Studio odebrat, aniž byste ji později znovu nainstalovali. |
 
-Tady je postup, jak spustit nástroj `InstallCleanup.exe`:
+Nástroj spustíte takto: `InstallCleanup.exe`
 
 1. Ukončete instalační program sady Visual Studio.
-1. Otevřete příkazový řádek správce. Chcete-li otevřít příkazový řádek správce, postupujte podle těchto kroků:
-   * Do pole "typ zde k hledání" zadejte **cmd** .
-   * Klikněte pravým tlačítkem myši na **příkazový řádek**a pak zvolte **Spustit jako správce**.
-1. Zadejte úplnou cestu k nástroji `InstallCleanup.exe` a přidejte přepínač příkazového řádku, který dáváte přednost. Ve výchozím nastavení je cesta nástroje následující:
+1. Otevřete příkazový řádek správce. Chcete-li otevřít příkazový řádek správce, postupujte takto:
+   * Do pole "Zadejte zde pro vyhledávání" zadejte **cmd.**
+   * Klepněte pravým tlačítkem myši na **příkazový řádek**a pak zvolte **Spustit jako správce**.
+1. Zadejte úplnou `InstallCleanup.exe` cestu nástroje a přidejte přepínač příkazového řádku, který dáváte přednost. Ve výchozím nastavení je cesta nástroje následující:
 
    ```
    C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\layout\InstallCleanup.exe
    ```
 
    > [!NOTE]
-   > Pokud nemůžete najít `InstallCleanup.exe` v adresáři Instalační program pro Visual Studio, který je vždycky umístěný v `%ProgramFiles(x86)%\Microsoft Visual Studio`, tady je postup pro další. Postupujte podle pokynů pro [instalaci sady Visual Studio](install-visual-studio.md). Až se zobrazí obrazovka pro výběr úlohy, zavřete okno a postupujte znovu podle pokynů na této stránce.
+   > Pokud nemůžete najít `InstallCleanup.exe` v adresáři Instalační služby sady Visual `%ProgramFiles(x86)%\Microsoft Visual Studio`Studio, který je vždy umístěn na , tady je co dělat dál. Podle pokynů [nainstalujte visual studio](install-visual-studio.md). Potom při zobrazení obrazovky výběru pracovního vytížení zavřete okno a postupujte podle kroků na této stránce znovu.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Instalace sady Visual Studio](install-visual-studio.md)
 * [Aktualizace sady Visual Studio](update-visual-studio.md)

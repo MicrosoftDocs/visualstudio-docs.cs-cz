@@ -1,6 +1,6 @@
 ---
 title: Vytvoření offline instalace
-description: Zjistěte, jak v režimu offline instalace sady Visual Studio, když máte nespolehlivým připojení k Internetu nebo s malou šířkou pásma.
+description: Přečtěte si, jak nainstalovat Visual Studio offline, pokud máte nespolehlivé připojení k internetu nebo malou šířku pásma.
 ms.date: 10/22/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -17,126 +17,126 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: d52dd064e895b1e35230b93c85a7a8499032943e
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114832"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Vytvoření offline instalace sady Visual Studio
 
 ::: moniker range="vs-2017"
 
-Jsme navrhovali Visual Studio 2017, aby dobře fungovaly v různých konfiguracích sítě a počítače. Přestože doporučujeme vám vyzkoušet [webovou Instalační službu sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads)&mdash;což je malý soubor a umožňuje aktuální nejnovější opravy a funkce&mdash;rozumí tomu, že nemusí být možné.
+Visual Studio 2017 jsme navrhli tak, aby dobře fungovalo v různých konfiguracích sítě a počítače. I když doporučujeme vyzkoušet [visual studio webový instalační program,](https://visualstudio.microsoft.com/vs/older-downloads)&mdash;který je malý soubor a&mdash;umožňuje zůstat aktuální se všemi nejnovějšími opravami a funkcemi chápeme, že nemusí být možné.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Navrhli jsme sadu Visual Studio 2019, aby dobře fungovala v nejrůznějších konfiguracích sítě a počítačů. Přestože doporučujeme vám vyzkoušet [webovou Instalační službu sady Visual Studio](https://visualstudio.microsoft.com/downloads)&mdash;což je malý soubor a umožňuje aktuální nejnovější opravy a funkce&mdash;rozumí tomu, že nemusí být možné.
+Visual Studio 2019 jsme navrhli tak, aby dobře fungovalo v různých konfiguracích v síti a počítačích. I když doporučujeme vyzkoušet [visual studio webový instalační program,](https://visualstudio.microsoft.com/downloads)&mdash;který je malý soubor a&mdash;umožňuje zůstat aktuální se všemi nejnovějšími opravami a funkcemi chápeme, že nemusí být možné.
 
 ::: moniker-end
 
-Například může mít nespolehlivé připojení k Internetu nebo, pokud má s malou šířkou pásma. Pokud ano, máte několik možností: můžete použít novou "Vše stáhnout, potom nainstalovat" funkcí ke stažení souborů, před instalací nebo příkazového řádku můžete vytvořit místní mezipaměť souborů.
+Můžete mít například nespolehlivé připojení k internetu nebo připojení s malou šířkou pásma. Pokud ano, máte několik možností: Můžete použít novou funkci "Stáhnout vše a poté nainstalovat" ke stažení souborů před instalací nebo můžete pomocí příkazového řádku vytvořit místní mezipaměť souborů.
 
 > [!NOTE]
-> Pokud jste podnikovým správcem, který chce provést nasazení sady Visual Studio do sítě klientských pracovních stanic, které jsou brány firewall z Internetu, přečtěte si článek [Vytvoření síťové instalace sady Visual Studio](../install/create-a-network-installation-of-visual-studio.md) a [nainstalujte certifikáty vyžadované pro instalační stránky systému Visual Studio pro offline instalaci](../install/install-certificates-for-visual-studio-offline.md) .
+> Pokud jste správce rozlehlé sítě, který chce provést nasazení sady Visual Studio do sítě klientských pracovních stanic, které jsou brány firewall z Internetu, přečtěte si naše [informace o vytvoření síťové instalace](../install/create-a-network-installation-of-visual-studio.md) sady Visual Studio a instalace [certifikátů požadovaných pro offline instalační](../install/install-certificates-for-visual-studio-offline.md) stránky sady Visual Studio.
 
-## <a name="use-the-download-all-then-install-feature"></a>Používá "vše stáhnout, potom nainstalovat" funkce
+## <a name="use-the-download-all-then-install-feature"></a>Použijte funkci "Stáhnout vše a poté nainstalovat"
 
 ::: moniker range="vs-2017"
 
-[**Novinka ve verzi 15,8**](/visualstudio/releasenotes/vs2017-relnotes-v15.8#install): po stažení webového instalačního programu vyberte možnost nový **Stáhnout vše a pak** z instalační program pro Visual Studio nainstalujte. Pokračujte s instalací.
+[**Novinka ve verzi 15.8**](/visualstudio/releasenotes/vs2017-relnotes-v15.8#install): Po stažení webového instalačního programu vyberte novou možnost **Stáhnout vše a pak nainstalovat** možnost z Instalační služby sady Visual Studio. Potom pokračujte v instalaci.
 
-   !["Vše stáhnout, potom nainstalovat" možnost](media/download-all-then-install.png)
+   ![Možnost "Stáhnout vše a pak nainstalovat"](media/download-all-then-install.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Po stažení webového instalačního programu vyberte možnost nové **Stáhnout vše a pak** z instalační program pro Visual Studio nainstalovat. Pokračujte s instalací.
+Po stažení webového instalačního programu vyberte novou možnost **Stáhnout vše a pak nainstalovat** možnost z Instalační služby sady Visual Studio. Potom pokračujte v instalaci.
 
-   !["Vše stáhnout, potom nainstalovat" možnost](media/vs-2019/download-all-then-install-from-installer.png)
+   ![Možnost "Stáhnout vše a pak nainstalovat"](media/vs-2019/download-all-then-install-from-installer.png)
 
 ::: moniker-end
 
-Navrhli jsme funkci stáhnout vše a pak nainstalovat, abyste mohli Visual Studio stáhnout jako jednu instalaci pro stejný počítač, na který jste ho stáhli. Tímto způsobem se můžete bezpečně odpojit od webu před instalací sady Visual Studio.
+Navrhli jsme funkci "Stáhnout vše a poté nainstalovat", abyste si mohli stáhnout visual studio jako jednu instalaci pro stejný počítač, do kterého jste jej stáhli. Tímto způsobem můžete bezpečně odpojit od webu před instalací sady Visual Studio.
 
 > [!IMPORTANT]
-> Nepoužívejte funkci stáhnout vše a potom nainstalovat a vytvořte offline mezipaměť, kterou chcete přenést do jiného počítače. Tento postup není navržený tak, aby fungoval. <br><br>Pokud chcete vytvořit offline mezipaměť pro instalaci sady Visual Studio na jiném počítači, přečtěte si část [použití příkazového řádku k vytvoření místní mezipaměti](#use-the-command-line-to-create-a-local-cache) na této stránce, kde najdete informace o tom, jak vytvořit místní mezipaměť, nebo na stránce [vytvořit síťovou instalaci sady Visual Studio](../install/create-a-network-installation-of-visual-studio.md) , kde najdete informace o tom, jak vytvořit síťovou mezipaměť.
+> Nepoužívejte funkci Stáhnout vše a poté ji nainstalujte k vytvoření mezipaměti offline, kterou chcete přenést do jiného počítače. Není to navrženo tak, aby to tak fungovalo. <br><br>Pokud chcete vytvořit offline mezipaměť pro instalaci sady Visual Studio do jiného počítače, naleznete informace o vytvoření síťové mezipaměti v [Create a network installation of Visual Studio](../install/create-a-network-installation-of-visual-studio.md) části Vytvoření síťové mezipaměti v části Vytvoření místní mezipaměti na [příkazovém řádku](#use-the-command-line-to-create-a-local-cache) na této stránce.
 
-## <a name="use-the-command-line-to-create-a-local-cache"></a>Místní mezipaměť vytvořit pomocí příkazového řádku
+## <a name="use-the-command-line-to-create-a-local-cache"></a>Vytvoření místní mezipaměti pomocí příkazového řádku
 
-Po stažení malé zaváděcí nástroj, použijte příkazový řádek k vytvoření místní mezipaměti. Potom použijte místní mezipaměti instalace sady Visual Studio. (Tento proces nahradí soubory ISO, které byly k dispozici pro předchozí verze).
+Po stažení malého zaváděcího nástroje vytvořte pomocí příkazového řádku místní mezipaměť. Potom použijte místní mezipaměti k instalaci sady Visual Studio. (Tento proces nahradí soubory ISO, které byly k dispozici pro předchozí verze.)
 
-Tady je způsob.
+Jak na to:
 
-### <a name="step-1---download-the-visual-studio-bootstrapper"></a>Krok 1 – stažení zaváděcího nástroje Visual Studio
+### <a name="step-1---download-the-visual-studio-bootstrapper"></a>Krok 1 – Stažení zaváděcího nástroje sady Visual Studio
 
-Musíte mít internetové připojení k dokončení tohoto kroku.
+K dokončení tohoto kroku musíte mít připojení k internetu.
 
 ::: moniker range="vs-2017"
 
-Další informace o tom, jak to udělat, najdete na stránce pro stažení [předchozích verzí sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/) , kde můžete získat zaváděcí nástroj pro visual Studio 2017.
+Pokud chcete získat zaváděcí nástroj pro Visual Studio 2017, podívejte se na stránku pro stažení [předchozích verzí Visual Studia,](https://visualstudio.microsoft.com/vs/older-downloads/) kde najdete podrobnosti o tom, jak to udělat.
 
-Spustitelný soubor instalace&mdash;nebo má být konkrétnější,&mdash;souboru zaváděcího nástroje by se měla shodovat s jedním z následujících způsobů.
+Váš spustitelný&mdash;soubor nastavení nebo být konkrétnější,&mdash;soubor zaváděcího nástroje by měl odpovídat nebo být podobný jedné z následujících.
 
-| Edice | Název souboru |
+| Edice | Název_souboru |
 |-------------|-----------------------|
 |Visual Studio Community | vs_community.exe |
 |Visual Studio Professional | vs_professional.exe |
 |Visual Studio Enterprise | vs_enterprise.exe |
-|Visual Studio Build Tools   | vs_buildtools. exe |
+|Visual Studio Build Tools   | vs_buildtools.exe |
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Začněte tím, že stažení zaváděcího nástroje Visual Studio pro vaši zvolenou edici sady Visual Studio. Váš soubor&mdash;nebo zaváděcí nástroj&mdash;bude odpovídat nebo se podobně jako na jednu z následujících akcí.
+Začněte stažením zaváděcího nástroje sady Visual Studio pro vybranou edici sady Visual Studio. Instalační soubor&mdash;nebo zaváděcí nástroj&mdash;se bude shodovat nebo se podobat jedné z následujících možností.
 
-| Edice                    | Soubor                                                                    |
+| Edice                    | File                                                                    |
 |----------------------------|-------------------------------------------------------------------------|
 | Visual Studio Community    | [vs_community.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)       |
 | Visual Studio Professional | [vs_professional.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019) |
 | Visual Studio Enterprise   | [vs_enterprise.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
-| Visual Studio Build Tools   | [vs_buildtools. exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
+| Visual Studio Build Tools   | [vs_buildtools.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
 
 ::: moniker-end
 
 >[!TIP]
->Pokud jste dříve stáhli soubor zaváděcího nástroje a chcete ověřit jeho verzi, tady je postup. V systému Windows otevřete Průzkumníka souborů, klikněte pravým tlačítkem na soubor zaváděcího nástroje, zvolte **vlastnosti**, klikněte na kartu **Podrobnosti** a pak zobrazte číslo **verze produktu** . Chcete-li toto číslo porovnat s vydáním sady Visual Studio, přejděte na stránku [čísla sestavení sady Visual Studio a data verzí](visual-studio-build-numbers-and-release-dates.md) .
+>Pokud jste dříve stáhli soubor zaváděcího nástroje a chcete ověřit jeho verzi, je toto postup. V systému Windows otevřete Průzkumníka souborů, klikněte pravým tlačítkem myši na soubor zaváděcího nástroje, zvolte **Vlastnosti**, zvolte kartu **Podrobnosti** a pak zobrazte číslo **verze produktu.** Chcete-li toto číslo porovnat s verzí sady Visual Studio, podívejte se na stránku [čísla sestavení sady Visual Studio a data vydání.](visual-studio-build-numbers-and-release-dates.md)
 
-### <a name="step-2---create-a-local-install-cache"></a>Krok 2: vytvoření mezipaměti místní instalace
+### <a name="step-2---create-a-local-install-cache"></a>Krok 2 – Vytvoření místní mezipaměti pro instalaci
 
-Musíte mít internetové připojení k dokončení tohoto kroku.
+K dokončení tohoto kroku musíte mít připojení k internetu.
 
 > [!IMPORTANT]
-> Pokud nainstalujete Visual Studio Community, musíte ho aktivovat do 30 dnů od instalace. To vyžaduje připojení k Internetu.
+> Pokud nainstalujete komunitu Sady Visual Studio, je nutné ji aktivovat do 30 dnů od instalace. To vyžaduje připojení k internetu.
 
-Otevřete příkazový řádek a použijte jeden z příkazů z následujících příkladů. Příklady, které jsou zde uvedeny předpokládají, že používáte komunitní edice sady Visual Studio; Upravte příkaz v závislosti na edici.
+Otevřete příkazový řádek a použijte jeden z příkazů z následujících příkladů. Příklady, které jsou zde uvedeny, předpokládají, že používáte verzi sady Visual Studio community; upravte příkaz podle potřeby pro vaši edici.
 
 > [!TIP]
-> Aby se zabránilo chybě, ujistěte se, že úplná cesta k instalaci je kratší než 80 znaků.
+> Chcete-li zabránit chybě, ujistěte se, že úplná instalační cesta je menší než 80 znaků.
 
-- Vývoj desktopových aplikací .NET a webové rozhraní .NET spusťte:
+- Pro vývoj webu a plochy .NET spusťte:
 
    ```cmd
     vs_community.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US
     ```
 
-- Vývoj pro Office a .NET desktop spusťte:
+- Pro vývoj aplikace .NET pro stolní počítače a Office spusťte:
 
    ```cmd
     vs_community.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.Office --includeOptional --lang en-US
     ```
 
-- Vývoje desktopových aplikací C++ pro spuštění:
+- Pro vývoj pracovních prostředí v jazyce C++ spusťte:
 
    ```cmd
     vs_community.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
     ```
 
-- Vytvoření kompletní místní rozložení se všemi funkcemi (bude to trvat dlouho&mdash;máme _velké_ funkcí!), spusťte:
+- Chcete-li vytvořit kompletní místní rozložení se všemi&mdash;funkcemi (to bude trvat dlouho, máme _spoustu_ funkcí!), Spusťte:
 
    ```cmd
     vs_community.exe --layout c:\vslayout --lang en-US
@@ -145,72 +145,72 @@ Otevřete příkazový řádek a použijte jeden z příkazů z následujících
 ::: moniker range="vs-2017"
 
    > [!NOTE]
-   > Kompletní rozložení sady Visual Studio vyžaduje minimálně 35 GB místa na disku. Další informace najdete v tématu [požadavky na systém](/visualstudio/productinfo/vs2017-system-requirements-vs/). A informace o tom, jak vytvořit rozložení pouze s komponentami, které chcete nainstalovat, naleznete v tématu [použití parametrů příkazového řádku pro instalaci sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md).
+   > Kompletní rozložení sady Visual Studio vyžaduje minimálně 35 GB místa na disku. Další informace naleznete v [tématu Systémové požadavky](/visualstudio/productinfo/vs2017-system-requirements-vs/). Informace o vytvoření rozložení pouze s komponentami, které chcete nainstalovat, naleznete v [tématu Instalace sady Visual Studio pomocí parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md).
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
    > [!NOTE]
-   > Kompletní rozložení sady Visual Studio vyžaduje minimálně 35 GB místa na disku. Další informace najdete v tématu [požadavky na systém](/visualstudio/releases/2019/system-requirements/). A informace o tom, jak vytvořit rozložení pouze s komponentami, které chcete nainstalovat, naleznete v tématu [použití parametrů příkazového řádku pro instalaci sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md).
+   > Kompletní rozložení sady Visual Studio vyžaduje minimálně 35 GB místa na disku. Další informace naleznete v [tématu Systémové požadavky](/visualstudio/releases/2019/system-requirements/). Informace o vytvoření rozložení pouze s komponentami, které chcete nainstalovat, naleznete v [tématu Instalace sady Visual Studio pomocí parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md).
 
 ::: moniker-end
 
-Pokud chcete nainstalovat jiný jazyk než angličtinu, změňte `en-US` národní prostředí z [seznam národních prostředí jazyka](#list-of-language-locales). Potom použijte [seznamu komponent a úlohy, které jsou k dispozici](workload-and-component-ids.md) můžete dále přizpůsobit vaše mezipaměť instalace.
+Chcete-li nainstalovat jiný jazyk než `en-US` angličtinu, změňte národní prostředí [ze seznamu národních prostředí jazyka](#list-of-language-locales). Potom použijte [seznam součástí a úloh, které jsou k dispozici](workload-and-component-ids.md) pro další přizpůsobení mezipaměti instalace.
 
-### <a name="step-3---install-visual-studio-from-the-local-cache"></a>Krok 3: instalace sady Visual Studio z místní mezipaměti
+### <a name="step-3---install-visual-studio-from-the-local-cache"></a>Krok 3 – Instalace sady Visual Studio z místní mezipaměti
 
 > [!TIP]
-> Při spuštění z mezipaměti místní instalace instalační program používal místní verze každý z těchto souborů. Ale pokud vyberete součásti během instalace, které nejsou v mezipaměti, instalační program se pokusí stáhnout z Internetu.
+> Při spuštění z místní mezipaměti instalace instalační program používá místní verze každého z těchto souborů. Pokud však během instalace vyberete součásti, které nejsou v mezipaměti, pokusí se je instalační program stáhnout z internetu.
 
 ::: moniker range="vs-2019"
 > [!IMPORTANT]
-> V případě instalace offline se zobrazí chybová zpráva s informacemi o tom, že produkt odpovídající následujícím parametrům nebyl nalezen, ujistěte se, že používáte přepínač `--noweb` s verzí 16.3.5 nebo novější.
+> Pokud se u offline instalací zobrazí chybová zpráva "Produkt odpovídající následujícím parametrům nebyl nalezen", `--noweb` ujistěte se, že používáte přepínač s verzí 16.3.5 nebo novější.
 >
 ::: moniker-end
 
-Chcete-li mít jistotu, že můžete nainstalovat pouze soubory, které jste předtím stáhli, použijte stejné možnosti příkazového řádku, které jste použili k vytvoření mezipaměti rozložení. Například, pokud jste vytvořili mezipaměť rozložení pomocí následujícího příkazu:
+Chcete-li se ujistit, že nainstalujete pouze soubory, které jste dříve stáhli, použijte stejné možnosti příkazového řádku, které jste použili k vytvoření mezipaměti rozložení. Pokud jste například vytvořili mezipaměť rozložení s následujícím příkazem:
 
 ```cmd
 vs_community.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US
 ```
 
-Spuštění instalace pak použijte tento příkaz:
+Potom pomocí tohoto příkazu spusťte instalaci:
 
 ```cmd
 c:\vslayout\vs_community.exe --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional
 ```
 
-Další příklady použití [parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)naleznete na stránce s [Příklady parametrů příkazového řádku pro instalaci sady Visual Studio](command-line-parameter-examples.md) . 
+Další příklady použití [parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)naleznete v [příkladech parametrů příkazového řádku pro](command-line-parameter-examples.md) stránku instalace sady Visual Studio. 
 
 > [!NOTE]
-> Pokud dojde k chybě, podpis je neplatný, je nutné nainstalovat aktualizace certifikátů. Otevřete složku pro certifikáty v offline mezipaměti. Klikněte dvakrát na každém ze souborů certifikátu a klikněte na Průvodce správce certifikátů. Pokud budete vyzváni k zadání hesla, ponechte prázdné.
+> Pokud se zobrazí chyba, že podpis je neplatný, je nutné nainstalovat aktualizované certifikáty. Otevřete složku Certifikáty v offline mezipaměti. Poklepejte na všechny soubory certifikátů a potom klikněte na průvodce Správce množek. Pokud budete požádáni o zadání hesla, ponechte ho prázdné.
 
-### <a name="list-of-language-locales"></a>Seznam národních prostředí jazyka
+### <a name="list-of-language-locales"></a>Seznam jazykových národních prostředí
 
-| **Jazyk národního prostředí** | **Jazyk** |
+| **Jazyk-národní prostředí** | **Jazyk** |
 | ----------------------- | --------------- |
 | cs-CZ | Čeština |
 | de-DE | Němčina |
-| en-US | angličtina |
+| cs-CZ | Angličtina |
 | es-ES | Španělština |
 | fr-FR | Francouzština |
-| IT-IT | Italština |
+| it-IT | Italština |
 | ja-JP | Japonština |
 | ko-KR | Korejština |
 | pl-PL | Polština |
 | pt-BR | Portugalština – Brazílie |
 | ru-RU | Ruština |
 | tr-TR | Turečtina |
-| zh-CN | Čínština (zjednodušená) |
-| zh-TW | Čínština (tradiční) |
+| zh-CN | Čínština – zjednodušená |
+| zh-TW | Čínština - tradiční |
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření síťové instalace sady Visual Studio](../install/create-a-network-installation-of-visual-studio.md)
 - [Aktualizace síťové instalace sady Visual Studio](update-a-network-installation-of-visual-studio.md)
-- [Instalace certifikátů vyžadovaných pro offline instalace sady Visual Studio](../install/install-certificates-for-visual-studio-offline.md)
-- [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
+- [Instalace certifikátů požadovaných pro offline instalaci sady Visual Studio](../install/install-certificates-for-visual-studio-offline.md)
+- [Instalace sady Visual Studio pomocí parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 - [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md)

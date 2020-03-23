@@ -14,35 +14,34 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cca0c55951d4928347528814d043bb8a7c55be9a
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: f6a465a752282f4a0dc00f3fb294ade4169bb19b
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633847"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093940"
 ---
-# <a name="how-to-extend-the-visual-studio-build-process"></a>Postupy: rozšíření procesu sestavení sady Visual Studio
+# <a name="how-to-extend-the-visual-studio-build-process"></a>Postup: Rozšíření procesu sestavení sady Visual Studio
 
-Proces sestavení sady Visual Studio je definován řadou souborů MSBuild *. targets* , které jsou importovány do souboru projektu. Jeden z těchto importovaných souborů, *Microsoft. Common. targets*, se dá rozšířit tak, aby bylo možné spouštět vlastní úlohy v několika fázích procesu sestavení. Tento článek vysvětluje dvě metody, které můžete použít k rozšiřování procesu sestavení sady Visual Studio:
+Proces sestavení sady Visual Studio je definován řadou souborů MSBuild *.targets,* které jsou importovány do souboru projektu. Jeden z těchto importovaných *souborů, Microsoft.Common.targets*, lze rozšířit tak, aby bylo možné spouštět vlastní úlohy na několika místech v procesu sestavení. Tento článek vysvětluje dvě metody, které můžete použít k rozšíření procesu sestavení sady Visual Studio:
 
-- Přepsání specifických předdefinovaných cílů definovaných v rámci běžných cílů (*Microsoft. Common. targets* nebo souborů, které importuje).
+- Přepsání konkrétních předdefinovaných cílů definovaných ve společných cílech (*Microsoft.Common.targets* nebo v importech souborů).
 
-- Přepsání vlastností "DependsOn" definovaných v běžných cílech.
-## <a name="override-predefined-targets"></a>Přepsání předdefinovaných cílů
+- Přepsání vlastností "DependsOn" definovaných ve společných cílech.
 
-## <a name="override-predefined-targets"></a>Přepsání předdefinovaných cílů
+## <a name="override-predefined-targets"></a>Přepsat předdefinované cíle
 
-Společné cíle obsahují sadu předdefinovaných prázdných cílů, které jsou volány před a za některými hlavními cíli v procesu sestavení. Například MSBuild volá `BeforeBuild` cíl před hlavní `CoreBuild` cíle a `AfterBuild` cíl po `CoreBuild` cíl. Ve výchozím nastavení nedělají prázdné cíle v běžných cílech nic, ale můžete přepsat jejich výchozí chování definováním cílů, které chcete v souboru projektu, který importuje společné cíle. Přepsáním předdefinovaných cílů můžete pomocí úloh MSBuild získat větší kontrolu nad procesem sestavení.
-Společné cíle obsahují sadu předdefinovaných prázdných cílů, které jsou volány před a za některými hlavními cíli v procesu sestavení. Například MSBuild volá `BeforeBuild` cíl před hlavní `CoreBuild` cíle a `AfterBuild` cíl po `CoreBuild` cíl. Ve výchozím nastavení nedělají prázdné cíle v běžných cílech nic, ale můžete přepsat jejich výchozí chování definováním cílů, které chcete v souboru projektu, který importuje společné cíle. Přepsáním předdefinovaných cílů můžete pomocí úloh MSBuild získat větší kontrolu nad procesem sestavení.
+Společné cíle obsahuje sadu předdefinovaných prázdných cílů, které jsou volány před a po některé z hlavních cílů v procesu sestavení. Například MSBuild volá `BeforeBuild` cíl před `CoreBuild` hlavním `AfterBuild` cílem a `CoreBuild` cíl po cíl. Ve výchozím nastavení prázdné cíle v běžných cílech nedělají nic, ale jejich výchozí chování můžete přepsat definováním požadovaných cílů v souboru projektu, který importuje společné cíle. Přepsáním předdefinovaných cílů můžete pomocí úloh MSBuild poskytnout větší kontrolu nad procesem sestavení.
+Společné cíle obsahuje sadu předdefinovaných prázdných cílů, které jsou volány před a po některé z hlavních cílů v procesu sestavení. Například MSBuild volá `BeforeBuild` cíl před `CoreBuild` hlavním `AfterBuild` cílem a `CoreBuild` cíl po cíl. Ve výchozím nastavení prázdné cíle v běžných cílech nedělají nic, ale jejich výchozí chování můžete přepsat definováním požadovaných cílů v souboru projektu, který importuje společné cíle. Přepsáním předdefinovaných cílů můžete pomocí úloh MSBuild poskytnout větší kontrolu nad procesem sestavení.
 
 > [!NOTE]
-> Projekty ve stylu sady SDK mají implicitní import cílů *za poslední řádek souboru projektu*. To znamená, že nemůžete přepsat výchozí cíle, pokud neurčíte své importy ručně, jak je popsáno v tématu [How to: use MSBuild Project SDK](how-to-use-project-sdk.md).
+> Projekty ve stylu sady SDK mají implicitní import cílů *za posledním řádkem souboru projektu*. To znamená, že výchozí cíle nelze přepsat ručně, jak je popsáno v [části Postup: Použití sad Sad SDK projektu MSBuild](how-to-use-project-sdk.md).
 
-#### <a name="to-override-a-predefined-target"></a>Chcete-li přepsat předdefinované cíle
+#### <a name="to-override-a-predefined-target"></a>Přepsání předdefinovaného cíle
 
-1. Identifikujte předdefinovaný cíl v rámci běžných cílů, které chcete přepsat. Najdete v následující tabulce pro úplný seznam cílů, které je možné bezpečně přepsat.
+1. Identifikujte předdefinovaný cíl ve společných cílech, které chcete přepsat. Úplný seznam cílů, které můžete bezpečně přepsat, naleznete v následující tabulce.
 
-2. Na konci souboru projektu definujte cíl nebo cíle, bezprostředně před tagem `</Project>`. Příklad:
+2. Definujte cíl nebo cíle na konci souboru `</Project>` projektu bezprostředně před značkou. Například:
 
     ```xml
     <Project>
@@ -56,31 +55,70 @@ Společné cíle obsahují sadu předdefinovaných prázdných cílů, které js
     </Project>
     ```
 
-3. Vytváření souboru projektu.
+3. Vytvořte soubor projektu.
 
-V následující tabulce jsou uvedeny všechny cíle v rámci běžných cílů, které lze bezpečně přepsat.
+V následující tabulce jsou uvedeny všechny cíle ve společných cílech, které můžete bezpečně přepsat.
 
-|Název cíle|Popis|
+|Cílový název|Popis|
 |-----------------|-----------------|
-|`BeforeCompile`, `AfterCompile`|Úlohy, které jsou vloženy do jednoho z těchto cílů spustit před nebo po dokončení základní kompilace. Většina nastavení se provádějí v jednom z těchto dva cíle.|
-|`BeforeBuild`, `AfterBuild`|Úlohy, které jsou vloženy v jednom z těchto cílů se spustí před nebo za všechno ostatní v sestavení. **Poznámka:**  Cíle `BeforeBuild` a `AfterBuild` jsou již definovány v komentářích na konci většiny souborů projektu, což vám umožní snadno přidat události před a po sestavení do souboru projektu.|
-|`BeforeRebuild`, `AfterRebuild`|Úlohy, které jsou vloženy v jednom z těchto cílů spustit před nebo po základní znovu sestavit funkcí je vyvolána. Pořadí cíle provádění v *Microsoft. Common.* targets je: `BeforeRebuild`, `Clean`, `Build`a potom `AfterRebuild`.|
-|`BeforeClean`, `AfterClean`|Úlohy, které jsou vloženy v jednom z těchto cílů spustit před nebo po základní vyčištění funkce vyvolána.|
-|`BeforePublish`, `AfterPublish`|Úlohy, které jsou vloženy v jednom z těchto cílů spustit před nebo po základní publikování funkcí je vyvolána.|
-|`BeforeResolveReferences`, `AfterResolveReferences`|Úlohy, které jsou vloženy v jednom z těchto cílů spustit před nebo po odkazy na sestavení se vyřeší.|
-|`BeforeResGen`, `AfterResGen`|Úlohy, které jsou vloženy v jednom z těchto cílů spustit před nebo po generování prostředků.|
+|`BeforeCompile`, `AfterCompile`|Úlohy, které jsou vloženy do jednoho z těchto cílů spustit před nebo po dokončení kompilace jádra. Většina úprav se provádí v jednom z těchto dvou cílů.|
+|`BeforeBuild`, `AfterBuild`|Úkoly, které jsou vloženy do jednoho z těchto cílů bude spuštěna před nebo po všechno ostatní v sestavení. **Poznámka:**  Cíle `BeforeBuild` `AfterBuild` a jsou již definovány v komentářích na konci většiny souborů projektu, což umožňuje snadno přidat události před a po sestavení do souboru projektu.|
+|`BeforeRebuild`, `AfterRebuild`|Úlohy, které jsou vloženy do jednoho z těchto cílů spustit před nebo po obnovení základní funkce je vyvolána. Pořadí provádění cíle v *Microsoft.Common.targets* `BeforeRebuild` `Clean`je: , , `Build`a potom `AfterRebuild`.|
+|`BeforeClean`, `AfterClean`|Úlohy, které jsou vloženy do jednoho z těchto cílů spustit před nebo po vyvolání základní čisté funkce.|
+|`BeforePublish`, `AfterPublish`|Úlohy, které jsou vloženy do jednoho z těchto cílů spustit před nebo po vyvolání základní funkce publikování.|
+|`BeforeResolveReferences`, `AfterResolveReferences`|Úkoly, které jsou vloženy do jednoho z těchto cílů spustit před nebo po sestavení odkazy jsou vyřešeny.|
+|`BeforeResGen`, `AfterResGen`|Úkoly, které jsou vloženy do jednoho z těchto cílů spustit před nebo po vygenerování prostředků.|
 
-## <a name="override-dependson-properties"></a>Přepsání vlastností DependsOn
+## <a name="example-aftertargets-and-beforetargets"></a>Příklad: AfterTargets a BeforeTargets
 
-Přepsání předdefinovaných cílů představuje snadný způsob, jak tento proces sestavení roztáhnout, protože nástroj MSBuild vyhodnocuje definici cílů sekvenčně, neexistuje žádný způsob, jak zabránit jinému projektu, který importuje projekt z přepsání cílů, které už máte. přetížen. Takže například poslední `AfterBuild` cíl definovaný v souboru projektu, poté, co byly importovány všechny ostatní projekty, bude ten, který se používá během sestavení.
+Následující příklad ukazuje, jak `AfterTargets` použít atribut k přidání vlastního cíle, který dělá něco s výstupními soubory. V tomto případě zkopíruje výstupní soubory do nové složky *CustomOutput*.  Příklad také ukazuje, jak vyčistit soubory vytvořené vlastní operace `CustomClean` sestavení s `BeforeTargets` cílem pomocí atributu a určení, `CoreClean` že vlastní čisté operace běží před cílem.
 
-Můžete chránit před nezamýšlenými přepsáními cílů přepsáním vlastností DependsOn, které se používají v `DependsOnTargets` atributů napříč běžnými cíli. Například cíl `Build` obsahuje `DependsOnTargets` hodnotu atributu `"$(BuildDependsOn)"`. Rozmyslete si:
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+   <TargetFramework>netcoreapp3.1</TargetFramework>
+   <_OutputCopyLocation>$(OutputPath)..\..\CustomOutput\</_OutputCopyLocation>
+</PropertyGroup>
+
+<Target Name="CustomAfterBuild" AfterTargets="Build">
+  <ItemGroup>
+    <_FilesToCopy Include="$(OutputPath)**\*"/>
+  </ItemGroup>
+  <Message Text="_FilesToCopy: @(_FilesToCopy)" Importance="high"/>
+
+  <Message Text="DestFiles:
+      @(_FilesToCopy->'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
+
+  <Copy SourceFiles="@(_FilesToCopy)"
+        DestinationFiles=
+        "@(_FilesToCopy->'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
+  </Target>
+
+  <Target Name="CustomClean" BeforeTargets="CoreClean">
+    <Message Text="Inside Custom Clean" Importance="high"/>
+    <ItemGroup>
+      <_CustomFilesToDelete Include="$(_OutputCopyLocation)**\*"/>
+    </ItemGroup>
+    <Delete Files='@(_CustomFilesToDelete)'/>
+  </Target>
+</Project>
+```
+
+> [!WARNING]
+> Nezapomeňte použít jiné názvy než předdefinované cíle uvedené v tabulce v předchozí části (například jsme pojmenovali vlastní cíl sestavení zde `CustomAfterBuild`, ne `AfterBuild`), protože tyto předdefinované cíle jsou přepsány importem sady SDK, který je také definuje. Nevidíte import cílového souboru, který přepíše tyto cíle, ale je implicitně přidán na konec `Sdk` souboru projektu při použití metody atributu odkazování na sdk.
+
+## <a name="override-dependson-properties"></a>Přepsat vlastnosti DependsOn
+
+Přepsání předdefinovaných cílů je snadný způsob, jak rozšířit proces sestavení, ale protože MSBuild vyhodnocuje definici cílů postupně, neexistuje žádný způsob, jak zabránit jinému projektu, který importuje projekt z přepsání cílů, které již máte Přepsání. Takže například poslední `AfterBuild` cíl definovaný v souboru projektu po importu všech ostatních projektů bude ten, který se používá během sestavení.
+
+Můžete chránit před nezamýšlenými přepsání cílů přepsánídependsOn `DependsOnTargets` vlastnosti, které se používají v atributy v rámci společné cíle. `Build` Cíl například obsahuje `DependsOnTargets` hodnotu `"$(BuildDependsOn)"`atributu . Rozmyslete si:
 
 ```xml
 <Target Name="Build" DependsOnTargets="$(BuildDependsOn)"/>
 ```
 
-Tato část XML značí, že před spuštěním cíle `Build` se musí nejdřív spustit všechny cíle zadané ve vlastnosti `BuildDependsOn`. Vlastnost `BuildDependsOn` je definována takto:
+Tato část jazyka XML `Build` označuje, že před spuštěním `BuildDependsOn` cíle musí být nejprve spuštěny všechny cíle zadané ve vlastnosti. Vlastnost `BuildDependsOn` je definována jako:
 
 ```xml
 <PropertyGroup>
@@ -92,7 +130,7 @@ Tato část XML značí, že před spuštěním cíle `Build` se musí nejdřív
 </PropertyGroup>
 ```
 
-Tuto hodnotu vlastnosti lze přepsat deklarací jiné vlastnosti s názvem `BuildDependsOn` na konci souboru projektu. Zahrnutím předchozí vlastnosti `BuildDependsOn` do nové vlastnosti můžete přidat nové cíle na začátek a konec cílového seznamu. Příklad:
+Tuto hodnotu vlastnosti můžete přepsat deklarováním jiné vlastnosti pojmenované `BuildDependsOn` na konci souboru projektu. Zahrnutím `BuildDependsOn` předchozí vlastnosti do nové vlastnosti můžete přidat nové cíle na začátek a konec cílového seznamu. Například:
 
 ```xml
 <PropertyGroup>
@@ -111,28 +149,82 @@ Tuto hodnotu vlastnosti lze přepsat deklarací jiné vlastnosti s názvem `Buil
 </Target>
 ```
 
-Projekty, které importuje soubory projektu můžete přepsat tyto vlastnosti, aniž byste museli přepsat přizpůsobení, které jste provedli.
+Projekty, které importují soubory projektu, mohou přepsat tyto vlastnosti bez přepsání provedených vlastních nastavení.
 
-#### <a name="to-override-a-dependson-property"></a>K přepsání vlastností DependsOn
+#### <a name="to-override-a-dependson-property"></a>Chcete-li přepsat DependsOn vlastnost
 
-1. Identifikujte předdefinovanou vlastnost DependsOn ve společných cílech, které chcete přepsat. Najdete v následující tabulce seznam běžně potlačených vlastností DependsOn.
+1. Identifikujte předdefinovanou vlastnost DependsOn ve společných cílech, které chcete přepsat. Seznam běžně přepsaných vlastností DependsOn naleznete v následující tabulce.
 
-2. Definujte další instanci vlastnosti nebo vlastnosti na konci souboru projektu. Do vlastnosti New přidejte původní vlastnost, například `$(BuildDependsOn)`.
+2. Definujte jinou instanci vlastnosti nebo vlastností na konci souboru projektu. Do nové vlastnosti `$(BuildDependsOn)`zahrňte například původní vlastnost.
 
-3. Definujte vlastní cíle před nebo po definici vlastnosti.
+3. Definujte vlastní cíle před nebo za definicí vlastnosti.
 
-4. Vytváření souboru projektu.
+4. Vytvořte soubor projektu.
 
-### <a name="commonly-overridden-dependson-properties"></a>Běžně potlačených vlastností DependsOn
+### <a name="commonly-overridden-dependson-properties"></a>Běžně přepsané dependson vlastnosti
 
 |Název vlastnosti|Popis|
 |-------------------|-----------------|
-|`BuildDependsOn`|Vlastnost, která má přepsat, pokud chcete vložit vlastní cíle před nebo po dokončení celého sestavení.|
-|`CleanDependsOn`|Vlastnost, která má přepsat, pokud chcete vyčistit výstup z vlastního procesu sestavení.|
-|`CompileDependsOn`|Vlastnost, která má přepsat, pokud chcete vložit vlastní procesy před nebo po kompilační krok.|
+|`BuildDependsOn`|Vlastnost přepsat, pokud chcete vložit vlastní cíle před nebo po celém procesu sestavení.|
+|`CleanDependsOn`|Vlastnost přepsat, pokud chcete vyčistit výstup z vlastního procesu sestavení.|
+|`CompileDependsOn`|Vlastnost přepsat, pokud chcete vložit vlastní procesy před nebo po kroku kompilace.|
+
+## <a name="example-builddependson-and-cleandependson"></a>Příklad: BuildDependsOn a CleanDependsOn
+
+Následující příklad je podobný `BeforeTargets` `AfterTargets` a příklad, ale ukazuje, jak dosáhnout podobné funkce. `BuildDependsOn` Rozšiřuje sestavení pomocí přidat vlastní úkol, `CustomAfterBuild` který zkopíruje výstupní soubory po sestavení `CustomClean` a také `CleanDependsOn`přidá odpovídající úlohu pomocí .  
+
+V tomto příkladu se jedná o projekt ve stylu sady SDK. Jak je uvedeno v poznámce o projektech ve stylu sady SDK dříve `Sdk` v tomto článku, je nutné použít metodu ručního importu namísto atributu, který visual studio používá při generování souborů projektu.
+
+```xml
+<Project>
+<Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+<PropertyGroup>
+   <TargetFramework>netcoreapp3.1</TargetFramework>
+</PropertyGroup>
+
+<Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+
+<PropertyGroup>
+   <BuildDependsOn>
+      $(BuildDependsOn);CustomAfterBuild
+    </BuildDependsOn>
+
+    <CleanDependsOn>
+      $(CleanDependsOn);CustomClean
+    </CleanDependsOn>
+
+    <_OutputCopyLocation>$(OutputPath)..\..\CustomOutput\</_OutputCopyLocation>
+  </PropertyGroup>
+
+<Target Name="CustomAfterBuild">
+  <ItemGroup>
+    <_FilesToCopy Include="$(OutputPath)**\*"/>
+  </ItemGroup>
+  <Message Text="_FilesToCopy: @(_FilesToCopy)" Importance="high"/>
+
+  <Message Text="DestFiles:
+      @(_FilesToCopy->'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
+
+  <Copy SourceFiles="@(_FilesToCopy)"
+        DestinationFiles=
+        "@(_FilesToCopy->'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
+  </Target>
+
+  <Target Name="CustomClean">
+    <Message Text="Inside Custom Clean" Importance="high"/>
+    <ItemGroup>
+      <_CustomFilesToDelete Include="$(_OutputCopyLocation)**\*"/>
+    </ItemGroup>
+    <Delete Files='@(_CustomFilesToDelete)'/>
+  </Target>
+</Project>
+```
+
+Pořadí prvků je důležité. `BuildDependsOn` Prvky `CleanDependsOn` a se musí zobrazit po importu standardního souboru cílů sady SDK.
 
 ## <a name="see-also"></a>Viz také
 
-- [Integrace sady Visual Studio](../msbuild/visual-studio-integration-msbuild.md)
-- [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
-- [soubory. targets](../msbuild/msbuild-dot-targets-files.md)
+- [Integrace se sadou Visual Studio](../msbuild/visual-studio-integration-msbuild.md)
+- [Koncepty MSBuild](../msbuild/msbuild-concepts.md)
+- [.targets soubory](../msbuild/msbuild-dot-targets-files.md)

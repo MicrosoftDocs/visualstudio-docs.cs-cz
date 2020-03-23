@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ed8ec8e7f990a4a2c5d943a15a105faa5ab23572
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589380"
 ---
 # <a name="symbol-path-command"></a>Cesta k symbolu – příkaz
@@ -30,13 +30,13 @@ Nastaví seznam adresářů pro ladicí program pro hledání symbolů.
 Debug.SymbolPath pathname1;pathname2;... pathnameN
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 `pathname`
 
-Volitelné. Středníkem oddělený seznam cest pro ladicí program pro hledání symbolů.
+Nepovinný parametr. Středník oddělený seznam cest pro ladicí program hledat symboly.
 
 ## <a name="remarks"></a>Poznámky
-Pokud není zadán žádný `pathname`, příkaz vypíše aktuální cesty k symbolům.
+Pokud `pathname` není zadán žádný, příkaz zobrazí seznam aktuálních cest symbolů.
 
 ## <a name="example"></a>Příklad
 Tento příklad přidá dvě cesty do seznamu adresářů symbolů.
@@ -46,13 +46,13 @@ Debug.SymbolPath C:\Symbol Path 1;C:\Symbol Path 2
 ```
 
 ## <a name="example"></a>Příklad
-V tomto příkladu se zobrazí seznam aktuálních cest k symbolům oddělený středníkem.
+Tento příklad zobrazuje seznam cest aktuálních symbolů oddělených středníkem.
 
 ```
 Debug.SymbolPath
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Příkazové okno](../../ide/reference/command-window.md)
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)

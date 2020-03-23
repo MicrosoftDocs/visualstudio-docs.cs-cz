@@ -1,5 +1,5 @@
 ---
-title: Chybová úloha | Microsoft Docs
+title: Chybová úloha | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bd5dd3214c9575a34e9265c33061b024648a221c
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634224"
 ---
 # <a name="error-task"></a>Error – úloha
@@ -31,26 +31,26 @@ Zastaví sestavení a zaznamená chybu na základě vyhodnoceného podmíněnéh
 
 ## <a name="parameters"></a>Parametry
 
-Následující tabulka popisuje parametry úlohy `Error`.
+Následující tabulka popisuje parametry `Error` úkolu.
 
 | Parametr | Popis |
 |---------------| - |
-| `Code` | Volitelný parametr `String`.<br /><br /> Kód chyby, který se má přidružit k chybě |
-| `File` | Volitelný parametr `String`.<br /><br /> Název souboru, který obsahuje chybu. Pokud není zadán žádný název souboru, bude použit soubor obsahující chybovou úlohu. |
-| `HelpKeyword` | Volitelný parametr `String`.<br /><br /> Klíčové slovo Help k přidružení k chybě |
-| `Text` | Volitelný parametr `String`.<br /><br /> Chybový text, který nástroj MSBuild zaznamená, pokud je parametr `Condition` vyhodnocen jako `true`. |
+| `Code` | Volitelný `String` parametr.<br /><br /> Kód chyby přidružit k chybě. |
+| `File` | Volitelný `String` parametr.<br /><br /> Název souboru, který obsahuje chybu. Pokud není k dispozici žádný název souboru, bude použit soubor obsahující úlohu Chyba. |
+| `HelpKeyword` | Volitelný `String` parametr.<br /><br /> Klíčové slovo nápovědy, které chcete přidružit k chybě. |
+| `Text` | Volitelný `String` parametr.<br /><br /> Text chyby, který MSBuild `Condition` protokoluje, `true`pokud parametr vyhodnotí na . |
 
 ## <a name="remarks"></a>Poznámky
 
-Úloha `Error` umožňuje projektům MSBuild vystavovat chybový text pro protokolovací nástroje a zastavit provádění sestavení.
+Úkol `Error` umožňuje MSBuild projekty vydávat chybový text do úhozů kláves a zastavit provádění sestavení.
 
-Pokud je parametr `Condition` vyhodnocen jako `true`, sestavení je zastaveno a zaprotokoluje se chyba. Pokud parametr `Condition` neexistuje, zaznamená se chyba a spuštění sestavení se zastaví. Další informace o protokolování naleznete v tématu [získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
+Pokud `Condition` je parametr `true`vyhodnocen do , sestavení je zastaveno a je zaznamenána chyba. Pokud `Condition` parametr neexistuje, je zaznamenána chyba a zastavení spuštění sestavení. Další informace o protokolování naleznete v [tématu Získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
 
-Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
+Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ověřuje, zda jsou nastaveny všechny požadované vlastnosti. Pokud nejsou nastaveny, projekt vyvolá událost chyby a zaznamená hodnotu parametru `Text` úlohy `Error`.
+Následující příklad kódu ověří, zda jsou nastaveny všechny požadované vlastnosti. Pokud nejsou nastaveny, projekt vyvolá chybovou událost a zaznamená hodnotu `Text` parametru `Error` úkolu.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

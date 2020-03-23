@@ -1,5 +1,5 @@
 ---
-title: Testovací kontrolér a role testovacího agenta pro automatizované testy
+title: Role testovacího řadiče a testovacího agenta pro automatizované testy
 ms.date: 10/20/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,104 +13,104 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f0ea644294ea79f1e4c044c0cebf3f427f5b672a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591187"
 ---
-# <a name="assign-roles-to-a-test-controller-and-test-agent"></a>Přiřazení rolí k testovacímu kontroleru a testovacímu agentovi
+# <a name="assign-roles-to-a-test-controller-and-test-agent"></a>Přiřazení rolí testovacímu řadiči a testovacímu agentovi
 
-Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které používá testovací kontrolér a testovací agenty k distribuci testování napříč několika počítači pomocí sady Visual Studio. Také ukazuje, jak přidat diagnostické a datové adaptéry do nastavení testu.
+Tento článek ukazuje, jak vytvořit a nakonfigurovat testovací nastavení, které používá testovací řadič a testovací agent k distribuci testování mezi několik počítačů pomocí sady Visual Studio. Také ukazuje, jak přidat diagnostické a datové adaptéry do nastavení testu.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Vytvořte testy jednotek nebo kódované testy uživatelského rozhraní, které chcete spustit s nastavením testu.
+- Vytvořte testy částí nebo kódované testy ui pro spuštění s nastavením testu.
 
-- Nainstalujte testovací kontrolér a testovací agenty. Informace o tom, jak nainstalovat testovací kontrolér a testovací agenty, najdete v tématu [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
+- Nainstalujte testovací řadič a testovací agenty. Informace o instalaci testovacího řadiče a testovacích agentů naleznete v [tématu Instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
 
 ## <a name="to-create-and-configure-a-test-setting"></a>Vytvoření a konfigurace nastavení testu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **položky řešení,** přejděte na **Přidat**a pak zvolte **Nová položka**.
+1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na **položku Položky řešení ,** přejděte na **Přidat**a pak zvolte Nová **položka**.
 
-     **Přidat novou položku** zobrazí se dialogové okno.
+     Zobrazí se dialogové okno **Přidat novou položku**.
 
-2. V **nainstalované šablony** podokně zvolte **nastavení testu**.
+2. V podokně **Nainstalované šablony** zvolte **Testovat nastavení**.
 
-3. Do pole **název** zadejte **TestSettingDistributedTestWalkthrough**.
+3. Do pole **Název** zadejte **testSettingDistributedTestWalkthrough**.
 
-4. Zvolte **přidat**.
+4. Zvolte **Přidat**.
 
-     Nový soubor test *TestSettingDistributedTestWalkthrough. testsettings* se zobrazí v **Průzkumník řešení**ve složce **položky řešení** .
+     Nový test *TestSettingDistributedTestWalkthrough.testsettings* soubor se zobrazí v **Průzkumníku řešení**, ve složce **Položky řešení.**
 
-     **Nastavení testu** se zobrazí dialogové okno. **Obecné** je vybrána stránka.
+     Zobrazí se dialogové okno **Nastavení testu.** Je vybrána stránka **Obecné.**
 
-     Teď můžete upravit a uložit hodnoty nastavení testu.
+     Nyní můžete upravovat a ukládat hodnoty nastavení testu.
 
-5. V části **název**, zadejte název pro nastavení testu.
+5. V **části Název**zadejte název nastavení testu.
 
 6. V části **Popis**zadejte **Nastavení distribuovaného testu**.
 
-7. Ponechte vybrané **výchozí schéma pojmenování** .
+7. Ponechat **vybrané výchozí schéma pojmenování.**
 
-## <a name="to-assign-roles-to-a-test-controller-and-test-agents"></a>Přiřazení rolí k testovacímu kontroleru a testovacím agentům
+## <a name="to-assign-roles-to-a-test-controller-and-test-agents"></a>Přiřazení rolí testovacímu řadiči a testovacím agentům
 
-1. Zvolte **role**.
+1. Zvolte **Role**.
 
-     **Role** zobrazí se stránka.
+     Zobrazí se stránka **Role.**
 
-2. Chcete-li spustit test vzdáleně, použijte rozevírací seznam **Metoda provedení testu** a vyberte **vzdálené spuštění**.
+2. Chcete-li spustit test vzdáleně, použijte rozevírací seznam **Metody spuštění testu** a vyberte možnost Vzdálené **spuštění**.
 
-3. V rozevíracím seznamu **kontrolér** zadejte název počítače [testovacího kontroléru](../test/lab-management/install-configure-test-agents.md).
+3. V rozevíracím seznamu **Řadič** zadejte název počítače [testovacího řadiče](../test/lab-management/install-configure-test-agents.md).
 
     > [!NOTE]
-    > Pokud přidáváte řadič poprvé, v rozevíracím seznamu nejsou uvedené žádné řadiče. Seznam je vyplněn předchozími řadiči, které jste zadali v rámci jiných nastaveních testu.
+    > Pokud je to poprvé, co přidáváte řadič, nejsou v rozevíracím seznamu uvedeny žádné řadiče. Seznam je naplněn předchozími řadiči, které jste zadali v jiných nastaveních testu.
 
-4. V části **role**klikněte na možnost **Přidat**.
+4. V části **Role**zvolte **Přidat**.
 
-5. Do zvýrazněného řádku ve sloupci **název** zadejte **Distribuovaný test**.
+5. Ve zvýrazněném řádku ve sloupci **Název** zadejte **Distributed test**.
 
 ## <a name="to-assign-a-diagnostic-and-data-adapter-to-your-test-setting"></a>Přiřazení diagnostického a datového adaptéru k nastavení testu
 
-1. Zvolte **dat a diagnostiky**.
+1. Zvolte **Data a diagnostika**.
 
-     **Dat a diagnostiky** zobrazí se stránka.
+     Zobrazí se stránka **Data a diagnostika.**
 
-2. V části **role**ověřte, že je vybraná role **distribuovaného testu** .
+2. V **části Role**ověřte, zda je vybrána role **distribuovaného testu.**
 
-3. V části **data a Diagnostika pro vybranou roli**vyberte adaptéry **IntelliTrace** a **Systémové informace** .
+3. V části **Data and Diagnostic for select role**vyberte adaptéry **IntelliTrace** a **System Information** .
 
-     Informace o těchto adaptérech a jiných adaptérech, které lze použít v nastavení testu, naleznete v tématu [Configure Unit Tests](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
+     Informace o těchto adaptérech a dalších adaptérech, které lze použít v testovacím nastavení, naleznete v [tématu Konfigurace testů částí](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
 
-4. Vyberte možnost **hostitelé**.
+4. Zvolte **Hostitelé**.
 
-5. Volitelné Pokud je v počítači spuštěná 64 verze Microsoft Windows a váš test jste zkompilováni pomocí **jakékoli konfigurace CPU** , použijte rozevírací seznam **Spustit test v systému 32 nebo 64 bitových procesů** a vyberte možnost **spouštět testy 64 v 64 procesu 16Bitového počítače v počítači s operačním**systémem.
+5. (Nepovinné) Pokud je váš počítač spuštěn v 64bitové verzi systému Microsoft Windows a test jste zkompilovali pomocí konfigurace **Libovolný procesor,** použijte **spustit test v 32bitovém nebo 64bitovém** seznamu procesů a vyberte Spustit testy v **64bitovém procesu v 64bitovém počítači**.
 
     > [!TIP]
-    > Pro maximální flexibilitu byste měli kompilovat testovací projekty s libovolnou konfigurací **procesoru** . Poté můžete spouštět na 32bitových a 64bitových agentech. Není k dispozici žádná výhoda pro kompilování testovacích projektů s **64** konfigurací.
+    > Pro maximální flexibilitu byste měli zkompilovat testovací projekty s konfigurací **libovolný procesor.** Pak můžete spustit na 32bitové i 64bitové agenty. Kompilace testovacích projektů s **64bitovou** konfigurací nemá žádnou výhodu.
 
-6. Chcete-li uložit nové nastavení testu, klikněte na tlačítko **použít**.
+6. Chcete-li uložit nové nastavení testu, zvolte **Použít**.
 
 7. Zvolte **Zavřít**.
 
 ::: moniker range="vs-2017"
 
-8. V nabídce **test** vyberte možnost **nastavení testu** > **Vyberte soubor nastavení testu** a pak zvolte soubor *TestSettingDistributedTestWalkthrough. testsettings* .
+8. V nabídce **Test** vyberte **Možnost Nastavení** > **testu Vybrat soubor nastavení testu** a pak zvolte soubor *TestSettingDistributedTestWalkthrough.testsettings.*
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-8. V nabídce **test** zvolte **možnost vybrat soubor nastavení**. Vyhledejte a vyberte soubor *TestSettingDistributedTestWalkthrough. testsettings* .
+8. V nabídce **Test** zvolte **Vybrat soubor nastavení**. Vyhledejte a vyberte soubor *TestSettingDistributedTestWalkthrough.testsettings.*
 
 ::: moniker-end
 
-9. Spusťte test obvyklým způsobem.
+9. Spusťte test jako obvykle.
 
-     Když kontroler testů zpracuje testy jednotek a kódované testy UI, kontroler testů rozdělí testy do skupin 100 a odešle je do počítače testovacího agenta. Například pokud máte 250 jednotkových testů a tři testovací agenty, do obdrží agent1 se pošle prvních 100 jednotek testů, do obdrží agent2 se pošle 100 další testy jednotek a zbývající testy 50 jednotek se odešlou do obdrží Agent3.
+     Když testovací regulátor zpracovává testy částí a kódované testy ui, testovací řadič rozdělí testy do skupin po 100 a odešle je do počítače testovacího agenta. Například pokud máte 250 testů částí a tři testovací agenti, prvních 100 testů částí budou odeslány agent1, dalších 100 testů částí budou odeslány agent2 a zbývajících 50 testů částí bude odeslána agent3.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md)

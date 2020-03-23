@@ -1,87 +1,92 @@
 ---
-title: Sbalení, odsazení a zarovnání refaktoringu
-description: Naučte se zalamovat a zarovnávat řetězce volání metod.
-ms.date: 02/19/2020
+title: Zalomit, odsadit a zarovnat refaktoringy
+description: Naučte se zabalit a zarovnat řetězy volání metod.
+ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 349f2eeccfea4fea03967929b01114c0de1af155
-ms.sourcegitcommit: 3c105990656cd509062ce60e52e776c794f6305d
+ms.openlocfilehash: d801f052cb02e6a5b53189eeae342b9015d30f9b
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77527666"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093876"
 ---
-# <a name="wrap-indent-and-align-refactorings"></a>Sbalení, odsazení a zarovnání refaktoringu
+# <a name="wrap-indent-and-align-refactorings"></a>Zalomit, odsadit a zarovnat refaktoringy
 
 ## <a name="wrap-and-align-call-chains"></a>Zalamování a zarovnávání posloupností volání
 
-Tento refaktoring platí pro:
-
-- C#
-
-**Co:** Umožňuje zalamovat a zarovnávat řetězce volání metod.
-
-**Když:** Máte dlouhý řetěz skládající se z několika volání metod v jednom příkazu.
-
-**Proč:** Čtení dlouhého seznamu je snazší, když se zabalí nebo odsadí podle preferencí uživatele.
-
-### <a name="how-to"></a>Postupy
-
-1. Umístěte kurzor do libovolného řetězce volání.
-2. Stiskněte klávesu **Ctrl**+ **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
-3. Chcete-li přijmout refaktoring, vyberte možnost zabalení **řetězu volání** nebo **zabalení a zarovnání řetězce volání** .
-
-   ![Zalamovat a zarovnávat řetězy volání](media/wrap-call-chain.png)
-
-## <a name="wrap-indent-and-align-parameters-or-arguments"></a>Sbalení, odsazení a zarovnání parametrů nebo argumentů
-
-Tento refaktoring platí pro:
+Toto refaktoring se vztahuje na:
 
 - C#
 
 - Visual Basic
 
-**Co:** Umožňuje zalamovat, odsazovat a zarovnávat parametry nebo argumenty.
+**Co:** Umožňuje zabalit a zarovnat řetězy volání metod.
 
-**Když:** Máte deklaraci metody nebo volání s více parametry nebo argumenty.
+**Kdy:** Máte dlouhý řetězec skládající se z několika volání metody v jednom příkazu.
 
-**Proč:** Čtení dlouhého seznamu parametrů nebo argumentů je snazší, když jsou zabalené nebo odsazené podle preferencí uživatele.
+**Proč:** Čtení dlouhého seznamu je jednodušší, když jsou zabaleny nebo odsazeny podle uživatelských preferencí.
+
+### <a name="how-to"></a>Postupy
+
+1. Umístěte kurzor do libovolného řetězce volání.
+2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+3. Vyberte **Obtékat řetězec volání** nebo **Obtékat a zarovnat řetězec volání,** chcete-li přijmout refaktoring.
+
+   ![Zalamování a zarovnání řetězů volání](media/wrap-call-chain.png)
+
+## <a name="wrap-indent-and-align-parameters-or-arguments"></a>Zalamování, odsazení a zarovnání parametrů nebo argumentů
+
+Toto refaktoring se vztahuje na:
+
+- C#
+
+- Visual Basic
+
+**Co:** Umožňuje zalamovat, odsadit a zarovnat parametry nebo argumenty.
+
+**Kdy:** Máte deklaraci metody nebo volání, které má více parametrů nebo argumentů.
+
+**Proč:** Čtení dlouhého seznamu parametrů nebo argumentů je jednodušší, když jsou zabaleny nebo odsazeny podle uživatelských preferencí.
 
 ### <a name="how-to"></a>Postupy
 
 1. Umístěte kurzor do seznamu parametrů.
-2. Stiskněte klávesu **Ctrl**+ **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
+2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
 
-   ![Zabalení, odsazení a zarovnání parametrů](media/wrap-parameters.png)
+   ![Parametry Zalamování, Odsazení a Zarovnání](media/wrap-parameters.png)
 
-3. Pokud chcete refaktoring přijmout, vyberte **zalamovat každý parametr** .
+3. Vyberte **Zalomit každý parametr,** chcete-li přijmout refaktoring.
 
 ## <a name="wrap-binary-expressions"></a>Balení binárních výrazů
 
-Tento refaktoring platí pro:
+Toto refaktoring se vztahuje na:
 
 - C#
 
-**Co:** Umožňuje zalamovat binární výrazy.
+- Visual Basic
 
-**Když:** Máte binární výraz.
+**Co:** Umožňuje zalomit binární výrazy.
 
-**Proč:** Čtení binárního výrazu je snazší, pokud je zabaleno do předvolby uživatele.
+**Kdy:** Máte binární výraz.
+
+**Proč:** Čtení binárního výrazu je snazší, když je zabalen do uživatelské předvolby.
 
 ### <a name="how-to"></a>Postupy
 
 1. Umístěte kurzor do binárního výrazu.
-2. Stiskněte klávesu **Ctrl**+ **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
-3. Kliknutím na **zalamovat výraz** přijměte refaktoring.
+2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+3. Vyberte **Zalamovat výraz,** chcete-li přijmout refaktoring.
 
-   ![Zalamovat a zarovnávat řetězy volání](media/wrap-binary-expression.png)
+   ![Zalamování a zarovnání řetězů volání](media/wrap-binary-expression.png)
 
 ## <a name="see-also"></a>Viz také
 
-- [Refaktoring](../refactoring-in-visual-studio.md)
+- [Refactoring](../refactoring-in-visual-studio.md)

@@ -14,47 +14,47 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0489f534466149a437384d4f21e34f1fa9e98c5b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596434"
 ---
 # <a name="toolbox-html-tab"></a>Panel nástrojů, karta HTML
 
-Karta **HTML** v sadě nástrojů poskytuje komponenty, které jsou užitečné pro webové stránky a webové formuláře. Chcete-li zobrazit tuto kartu, nejprve otevřete dokument pro úpravy v Návrháři HTML. V nabídce **zobrazení** klikněte na **panel nástrojů**a pak klikněte na kartu **HTML** sady nástrojů.
+Karta **HTML** v panelu nástrojů obsahuje komponenty, které jsou užitečné na webových stránkách a webových formulářích. Chcete-li tuto kartu zobrazit, otevřete nejprve dokument pro úpravy v návrháři HTML. V nabídce **View** klikněte na **Panel nástrojů**a potom klikněte na kartu **HTML** v panelu nástrojů.
 
-Chcete-li vytvořit instanci nástroje na kartě **HTML** , buď poklikejte na nástroj a přidejte ho do dokumentu v aktuálním místě vložení, nebo ho vyberte a přetáhněte ho na požadovanou pozici na ploše pro úpravy.
+Chcete-li vytvořit instanci nástroje na kartě **HTML,** poklepejte na nástroj a přidejte jej do dokumentu v aktuálním kurzoru nebo nástroj vyberte a přetáhněte ho do požadované polohy na editační ploše.
 
 ## <a name="ui-elements"></a>Prvky uživatelského rozhraní
 
-Ve výchozím nastavení jsou na kartě HTML k dispozici následující nástroje.
+Následující nástroje jsou ve výchozím nastavení k dispozici na kartě HTML.
 
-**Pointer**
+**Ukazatel**
 
-![ASP.NET Mobile Designer HTMLpage ukazatel](../../ide/reference/media/vxpointer.gif)
+![ukazatel HTMLpage návrháře ASP.NET mobilního](../../ide/reference/media/vxpointer.gif)
 
-Tento nástroj je vybraný ve výchozím nastavení, když se otevře kterákoli karta panelu nástrojů. Nedá se odstranit. Ukazatel umožňuje přetahovat objekty na zobrazení Návrh plochu, měnit jejich velikost a přemístit je na stránce nebo formuláři. Další informace najdete v tématu [nástrojů](../../ide/reference/toolbox.md).
+Tento nástroj je vybrán ve výchozím nastavení, když se otevře libovolná karta Panel u nástrojů. Nelze jej odstranit. Ukazatel umožňuje přetáhnout objekty na povrch návrhového pohledu, změnit jejich velikost a změnit jejich umístění na stránce nebo formuláři. Další informace naleznete v [tématu Toolbox](../../ide/reference/toolbox.md).
 
 **Vstup (tlačítko)**
 
 ![Tlačítko webové stránky HTML](../../ide/reference/media/vxbutton.gif)
 
-Vloží `input` prvek `type="button"`. Chcete-li změnit zobrazený text, upravte vlastnost `name`. Ve výchozím nastavení je `id="Button1"` vložen pro první tlačítko, `id="Button2"` pro druhý a tak dále.
+Vloží `input` prvek . `type="button"` Chcete-li změnit zobrazený text, `name` upravte vlastnost. Ve výchozím `id="Button1"` nastavení je vložen pro `id="Button2"` první tlačítko, pro druhé a tak dále.
 
-Při přetažení **vstupu (Button)** na zobrazení Návrh plochu se do dokumentu vloží kód HTML jako následující:
+Když přetáhnete **vstup (tlačítko)** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <input id="Button1" type="button" value="Button" name="Button1">
 ```
 
-**Vstup (reset)**
+**Vstup (Reset)**
 
-![Snímek obrazovky HTMLpageResetButton](../../ide/reference/media/vxreset.gif)
+![HTMLpageResetButton snímek obrazovky](../../ide/reference/media/vxreset.gif)
 
-Vloží `input` prvek `type="reset"`. Chcete-li změnit zobrazený text, upravte vlastnost `name`. Ve výchozím nastavení je `id="Reset1"` vložen pro tlačítko první Reset, `id="Reset2"` pro druhý atd.
+Vloží `input` prvek . `type="reset"` Chcete-li změnit zobrazený text, `name` upravte vlastnost. Ve výchozím `id="Reset1"` nastavení je vložen pro `id="Reset2"` první tlačítko reset, pro druhé a tak dále.
 
-Při přetažení **vstupu (reset)** na zobrazení Návrh plochu se do dokumentu vloží kód HTML podobný následujícímu:
+Když přetáhnete **vstup (Obnovit)** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <input id="Reset1" type="reset" value="Reset" name="Reset1">
@@ -62,11 +62,11 @@ Při přetažení **vstupu (reset)** na zobrazení Návrh plochu se do dokumentu
 
 **Vstup (Odeslat)**
 
-![Snímek obrazovky HTMLpageToolbarSubmitButton](../../ide/reference/media/vxsubmit.gif)
+![HTMLpageToolbarSubmitButton snímek obrazovky](../../ide/reference/media/vxsubmit.gif)
 
-Vloží `input` prvek `type="submit"`. Chcete-li změnit zobrazený text, upravte vlastnost `name`. Ve výchozím nastavení je `id="Submit1"` vložen pro první tlačítko Odeslat, `id="Submit2"` pro druhý atd.
+Vloží `input` prvek . `type="submit"` Chcete-li změnit zobrazený text, `name` upravte vlastnost. Ve výchozím `id="Submit1"` nastavení je vložen pro `id="Submit2"` první tlačítko odeslat, pro druhý a tak dále.
 
-Při přetažení **vstupu (Odeslat)** na zobrazení Návrh plochu se do dokumentu vloží kód HTML podobný následujícímu:
+Když přetáhnete **input (odeslat)** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <input id="Submit1" type="submit" value="Submit" name="Submit1">
@@ -74,68 +74,68 @@ Při přetažení **vstupu (Odeslat)** na zobrazení Návrh plochu se do dokumen
 
 **Vstup (text)**
 
-![Snímek obrazovky HTMLpageToolbarTextField](../../ide/reference/media/vxtextfield.gif)
+![HTMLpageToolbarTextField – snímek obrazovky](../../ide/reference/media/vxtextfield.gif)
 
-Vloží `input` prvek `type="text"` v dokumentu. Chcete-li změnit výchozí zobrazený text, upravte atribut `value`. Ve výchozím nastavení se `id="Text1"` vloží do prvního textového pole, `id="Text2"` pro druhý a tak dále.
+Vloží prvek `input` `type="text"` do dokumentu. Chcete-li změnit výchozí zobrazený text, upravte `value` atribut. Ve výchozím `id="Text1"` nastavení je vložen pro `id="Text2"` první textové pole, pro druhé a tak dále.
 
-Když přetáhnete **vstup (text)** na zobrazení Návrh plochu, do dokumentu se vloží kód HTML podobný následujícímu:
+Když přetáhnete **vstup (text)** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <input id="Text1" TYPE="text" value="Text Field" name="Text1">
 ```
 
 > [!IMPORTANT]
->Doporučuje se ověřovat všechny vstupy uživatelů. Další informace najdete v tématu [ověřování vstupu uživatele na webech ASP.NET Web Pages (Razor)](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites).
+>Doporučujeme ověřit všechny vstupy uživatele. Další informace naleznete [v tématu Ověřování vstupu uživatele v ASP.NET webech webových stránek (Razor).](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)
 
 **Vstup (soubor)**
 
 ![Pole souboru stránky HTML](../../ide/reference/media/vxfilefield.gif)
 
-Vloží `input` prvek `type="file"` v dokumentu. Ve výchozím nastavení se `id="File1"` vloží do pole první soubor, `id="File2"` pro druhý atd.
+Vloží prvek `input` `type="file"` do dokumentu. Ve výchozím `id="File1"` nastavení je vložen pro `id="File2"` první pole souboru, pro druhý a tak dále.
 
-Když přetáhnete **vstup (soubor)** na zobrazení Návrh plochu, do dokumentu se vloží kód HTML podobný následujícímu:
+Když přetáhnete **input (file)** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <input id="File1" type="file" name="File1">
 ```
 
 > [!IMPORTANT]
-> Doporučuje se ověřovat všechny vstupy uživatelů. Další informace najdete v tématu [ověřování vstupu uživatele na webech ASP.NET Web Pages (Razor)](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites).
+> Doporučujeme ověřit všechny vstupy uživatele. Další informace naleznete [v tématu Ověřování vstupu uživatele v ASP.NET webech webových stránek (Razor).](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)
 
 **Vstup (heslo)**
 
-![Pole hesla sady Visual Studio](../../ide/reference/media/vxpassword.gif)
+![Pole s heslem sady Visual Studio](../../ide/reference/media/vxpassword.gif)
 
-Vloží `input` prvek `type="password"`. Ve výchozím nastavení se `id="Password1"` vloží do pole první heslo, `id="Password2"` pro druhý atd.
+Vloží `input` prvek . `type="password"` Ve výchozím `id="Password1"` nastavení je vložen pro `id="Password2"` první heslo pole, pro druhé a tak dále.
 
-Při přetažení **vstupu (hesla)** na zobrazení Návrh plochu se do dokumentu vloží kód HTML jako následující:
+Když přetáhnete **vstup (heslo)** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <input id="Password1" type="password" name="Password1">
 ```
 
 > [!IMPORTANT]
-> Pokud vaše aplikace přenáší uživatelská jména a hesla, měli byste web nakonfigurovat tak, aby používal SSL (Secure Sockets Layer) (SSL) k šifrování přenosu. Další informace najdete v tématu [zabezpečení připojení](/previous-versions/tn-archive/bb418917(v=technet.10)). Kromě toho se doporučuje ověřit všechny vstupy uživatelů. Další informace najdete v tématu [ověřování vstupu uživatele na webech ASP.NET Web Pages (Razor)](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites).
+> Pokud vaše aplikace přenáší uživatelská jména a hesla, měli byste nakonfigurovat web tak, aby k šifrování přenosu používal ssl (Secure Sockets Layer). Další informace naleznete v tématu [Zabezpečení připojení](/previous-versions/tn-archive/bb418917(v=technet.10)). Dále je doporučeno ověřit všechny vstupy uživatele. Další informace naleznete [v tématu Ověřování vstupu uživatele v ASP.NET webech webových stránek (Razor).](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)
 
 **Vstup (zaškrtávací políčko)**
 
-![Zaškrtávací možnost panelu nástrojů HTML webové stránky](../../ide/reference/media/vxcheckbox.gif)
+![Možnost zaškrtávacího políčka panelu nástrojů webové stránky HTML](../../ide/reference/media/vxcheckbox.gif)
 
-Vloží `input` prvek `type="checkbox"`. Chcete-li změnit zobrazený text, upravte vlastnost `name`. Ve výchozím nastavení je `id="Checkbox1"` vložen pro první zaškrtávací políčko, `id="Checkbox2"` pro druhý atd.
+Vloží `input` prvek . `type="checkbox"` Chcete-li změnit zobrazený text, `name` upravte vlastnost. Ve výchozím `id="Checkbox1"` nastavení je vložen pro `id="Checkbox2"` první zaškrtávací políčko, pro druhé a tak dále.
 
-Při přetažení **vstupu (zaškrtávací políčko)** na zobrazení Návrh plochu se do dokumentu vloží kód HTML jako následující:
+Když přetáhnete **input (zaškrtávací políčko)** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <input id="Checkbox1" type="checkbox" name="Checkbox1">
 ```
 
-**Vstup (přepínač)**
+**Vstup (rádio)**
 
-![Snímek obrazovky VisualStudioHTMLpageRadioButton](../../ide/reference/media/vxradio.gif)
+![VisualStudioHTMLpageRadioButton – snímek obrazovky](../../ide/reference/media/vxradio.gif)
 
-Vloží `input` prvek `type="radio"`. Chcete-li změnit zobrazený text, upravte vlastnost `name`. Ve výchozím nastavení je `id="Radio1"` vložen pro první přepínač, `id="Radio2"` za sekundu a tak dále.
+Vloží `input` prvek . `type="radio"` Chcete-li změnit zobrazený text, `name` upravte vlastnost. Ve výchozím `id="Radio1"` nastavení je vložen pro `id="Radio2"` první přepínací tlačítko, pro druhé a tak dále.
 
-Při přetažení **vstupu (Radio)** na zobrazení Návrh plochu se do dokumentu vloží kód HTML podobný následujícímu:
+Když přetáhnete **vstup (Rádio)** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <input id="Radio1" type="radio" name="Radio1">
@@ -145,9 +145,9 @@ Při přetažení **vstupu (Radio)** na zobrazení Návrh plochu se do dokumentu
 
 ![Skrytá položka stránky HTML](../../ide/reference/media/vxhidden.gif)
 
-Vloží `input` prvek `type="hidden"`. Ve výchozím nastavení se `id="Hidden1"` vloží do prvního skrytého pole, `id="Hidden2"` pro druhý atd.
+Vloží `input` prvek . `type="hidden"` Ve výchozím `id="Hidden1"` nastavení je vložen pro `id="Hidden2"` první skryté pole, pro druhé a tak dále.
 
-Když přetáhnete **vstup (skrytý)** na zobrazení Návrh plochu, do dokumentu se vloží kód HTML podobný následujícímu:
+Když přetáhnete **vstup (Skrytý)** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <input id="Hidden1" type="hidden" name="Hidden1">
@@ -155,26 +155,26 @@ Když přetáhnete **vstup (skrytý)** na zobrazení Návrh plochu, do dokumentu
 
 **Textové pole**
 
-![Oblast textu na panelu nástrojů HTMLpage](../../ide/reference/media/vxtextarea.gif)
+![Textová oblast panelu nástrojů HTMLpage](../../ide/reference/media/vxtextarea.gif)
 
-Vloží prvek `textarea`. Můžete změnit velikost textové oblasti nebo použít posuvníky k zobrazení textu, který je delší než oblast zobrazení. Chcete-li změnit výchozí zobrazený text, upravte atribut `value`. Ve výchozím nastavení je `id="textarea1"` vložena první textová oblast, `id=" textarea 2"` pro druhý atd.
+Vloží `textarea` prvek. Můžete změnit velikost textové oblasti nebo pomocí posuvníků zobrazit text, který přesahuje oblast zobrazení. Chcete-li změnit výchozí zobrazený text, upravte `value` atribut. Ve výchozím `id="textarea1"` nastavení je vložena `id=" textarea 2"` první textová oblast pro druhou a tak dále.
 
-Při přetažení **komponenty TextArea** na zobrazení Návrh plochu se do dokumentu vloží kód HTML jako následující:
+Když přetáhnete **Textarea** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <textarea id=" textarea 1 name=" textarea 1" rows=2 cols=20></textarea>
 ```
 
 > [!IMPORTANT]
-> Doporučuje se ověřovat všechny vstupy uživatelů. Další informace najdete v tématu [ověřování vstupu uživatele na webech ASP.NET Web Pages (Razor)](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites).
+> Doporučujeme ověřit všechny vstupy uživatele. Další informace naleznete [v tématu Ověřování vstupu uživatele v ASP.NET webech webových stránek (Razor).](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)
 
-**Tabulka**
+**Table**
 
-![Snímek obrazovky HTMLpageToolbarTable](../../ide/reference/media/vxtable.gif)
+![HTMLpageToolbarTable snímek obrazovky](../../ide/reference/media/vxtable.gif)
 
-Vloží prvek `table`.
+Vloží `table` prvek.
 
-Když přetáhnete **tabulku** na zobrazení Návrh plochu, do dokumentu se vloží kód HTML podobný následujícímu:
+Když **přetáhnete tabulku** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <table cellspacing="1" width="75%" border=1> <tr><td></td></tr></table>
@@ -184,52 +184,52 @@ Když přetáhnete **tabulku** na zobrazení Návrh plochu, do dokumentu se vlo�
 
 ![Položka obrázku stránky HTML](../../ide/reference/media/vximage.gif)
 
-Vloží prvek `img`. Upravte tento prvek a určete jeho `src` a jeho `alt` text.
+Vloží `img` prvek. Upravte tento prvek `src` a `alt` určete jeho a jeho text.
 
-Při přetažení **obrázku** na zobrazení Návrh plochu se do dokumentu vloží kód HTML podobný následujícímu:
+Když **přetáhnete obraz** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <img alt="" src="">
 ```
 
-**Výběr**
+**Vybrat**
 
-![Panel nástrojů stránky HTML – rozevírací seznam](../../ide/reference/media/vxdropdown.gif)
+![Rozevírací seznam nástrojů stránky HTML](../../ide/reference/media/vxdropdown.gif)
 
-Vloží `select` prvek rozevíracího seznamu (bez atributu `size`). Ve výchozím nastavení je `id="select1"` vložen pro první seznam, `id="select2"` pro druhý a tak dále.
+Vloží rozevírací `select` prvek (bez atributu). `size` Ve výchozím `id="select1"` nastavení je vložen pro `id="select2"` první seznam, pro druhý a tak dále.
 
-Když přetáhnete **možnost vybrat** na zobrazení Návrh plochu, do dokumentu se vloží kód HTML podobný následujícímu:
+Když přetáhnete **Select** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <select id="select1" name="select1"><option selected></option></select>
 ```
 
-Můžete vytvořit víceřádkový `select` element zvětšením hodnoty vlastnosti Size.
+Víceřádkový `select` prvek můžete vytvořit zvýšením hodnoty vlastnosti size.
 
-**Horizontální pravidlo**
+**Vodorovné pravidlo**
 
-![Položka vodorovného pravidla stránky HTML](../../ide/reference/media/vxhorizontal.gif)
+![Vodorovná položka pravidla stránky HTML](../../ide/reference/media/vxhorizontal.gif)
 
-Vloží prvek `hr`. Chcete-li zvětšit tloušťku čáry, upravte atribut `size`.
+Vloží `hr` prvek. Chcete-li zvýšit tloušťku čáry, upravte `size` atribut.
 
-Když na zobrazení Návrh plochu přetáhnete **horizontální pravidlo** , do dokumentu se vloží kód HTML podobný následujícímu:
+Když přetáhnete **vodorovnou pravidlo** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <hr width="100%" size=1>
 ```
 
-**Značek**
+**Div**
 
 ![Popisek stránky HTML](../../ide/reference/media/vxlabel.gif)
 
-Vloží `div` element, který obsahuje atribut `ms_positioning="FlowLayout"`. S výjimkou šířky a výšky je tato položka shodná s panelem rozložení toku. Chcete-li formátovat text obsažený v prvku `div`, přidejte do počáteční značky atribut `class="stylename"`.
+Vloží `div` prvek, který `ms_positioning="FlowLayout"` obsahuje atribut. S výjimkou šířky a výšky je tato položka shodná s panelem Rozložení toku. Chcete-li formátovat text obsažený `div` v prvku, přidejte `class="stylename"` atribut do počáteční značky.
 
-Když přetáhnete **div** na zobrazení Návrh plochu, do dokumentu se vloží kód HTML jako následující:
+Když přetáhnete **Div** na povrch návrhového pohledu, do dokumentu se vloží značky HTML, jako je následující:
 
 ```html
 <div ms_positioning="FlowLayout" style="width: 70px; position: relative; height: 15px">Label</div>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Panel nástrojů](../../ide/reference/toolbox.md)
+- [Sada nástrojů](../../ide/reference/toolbox.md)

@@ -1,5 +1,5 @@
 ---
-title: Potlačení upozornění kompilátoru pro projekty a balíčky NuGet
+title: Potlačit upozornění kompilátoru pro projekty a balíčky NuGet
 ms.date: 01/24/2018
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -9,67 +9,67 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b604f6a1392353d304897a233b74c0d81fc258df
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114505"
 ---
-# <a name="how-to-suppress-compiler-warnings"></a>Postupy: potlačení upozornění kompilátoru
+# <a name="how-to-suppress-compiler-warnings"></a>Postup: Potlačení upozornění kompilátoru
 
-Pomocí filtrování jedné nebo více druhů upozornění kompilátoru můžete declutter protokolu sestavení. Například můžete chtít zkontrolovat jenom některé z výstupu, který se vygeneruje, když nastavíte úroveň podrobností protokolu sestavení na **normální**, **podrobné**, nebo **diagnostických**. Další informace o podrobnosti najdete v tématu [postupy: zobrazení, ukládání a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md).
+Protokol sestavení můžete odstranit tak, že odfiltrujete jeden nebo více druhů upozornění kompilátoru. Můžete například zkontrolovat pouze část výstupu, který je generován při nastavení podrobnosti protokolu sestavení na **normální**, **podrobné**nebo **diagnostické**. Další informace o podrobnostech naleznete v [tématu Postup: Zobrazení, uložení a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md).
 
-## <a name="suppress-specific-warnings-for-visual-c-or-f"></a>Potlačit specifická upozornění pro C# Visual nebo F\#
+## <a name="suppress-specific-warnings-for-visual-c-or-f"></a>Potlačit specifická upozornění pro visual c# nebo f\#
 
-Použití **sestavení** potlačit specifická upozornění pro na stránce vlastností C# a F# projekty.
+Stránka vlastností **Sestavení** slouží k potlačení konkrétních upozornění pro projekty Jazyka C# a F#.
 
-1. V **Průzkumníka řešení**, vyberte projekt, ve kterém chcete potlačit upozornění.
+1. V **Průzkumníku řešení**zvolte projekt, ve kterém chcete potlačit upozornění.
 
-1. V panelu nabídky zvolte **zobrazení** > **stránky vlastností**.
+1. Na řádku nabídek zvolte **Zobrazit** > **stránky vlastností**.
 
-1. Zvolte **sestavení** stránky.
+1. Zvolte stránku **Sestavení.**
 
-1. V **potlačit upozornění** zadejte chybových kódů upozornění, která chcete potlačit, oddělené středníky.
+1. V poli **Potlačit upozornění** zadejte chybové kódy upozornění, která chcete potlačit, oddělená středníky.
 
 1. Znovu sestavte řešení.
 
-## <a name="suppress-specific-warnings-for-c"></a>Potlačit specifická upozornění proC++
+## <a name="suppress-specific-warnings-for-c"></a>Potlačit konkrétní upozornění pro C++
 
-Použití **vlastnosti konfigurace** stránku vlastností můžete potlačit specifická upozornění pro projekty C++.
+Stránka **vlastností Vlastnosti konfigurace** slouží k potlačení konkrétních upozornění pro projekty jazyka C++.
 
-1. V **Průzkumníka řešení**, vyberte projekt nebo zdrojového souboru, ve kterém chcete potlačit upozornění.
+1. V **Průzkumníku řešení**zvolte projektový nebo zdrojový soubor, ve kterém chcete potlačit upozornění.
 
-1. V panelu nabídky zvolte **zobrazení** > **stránky vlastností**.
+1. Na řádku nabídek zvolte **Zobrazit** > **stránky vlastností**.
 
-1. Zvolte **vlastnosti konfigurace** kategorie, zvolte **C/C++** kategorie a klikněte na tlačítko **Upřesnit** stránky.
+1. Zvolte kategorii **Vlastnosti konfigurace,** zvolte kategorii **C/C++** a pak zvolte stránku **Upřesnit.**
 
 1. Proveďte jeden z následujících kroků:
 
-    - V **zakázat specifická upozornění** zadejte chybových kódů upozornění, která chcete potlačit, oddělené středníky.
+    - V poli **Zakázat konkrétní upozornění** zadejte kódy chyb upozornění, která chcete potlačit, oddělená středníkem.
 
-    - V **zakázat specifická upozornění** zvolte **upravit** a zobrazte další možnosti.
+    - V poli **Zakázat specifická upozornění** zvolte **Upravit,** chcete-li zobrazit další možnosti.
 
-1. Zvolte **OK** tlačítko a pak znovu sestavte řešení.
+1. Zvolte tlačítko **OK** a potom znovu vytvořte řešení.
 
-## <a name="suppress-warnings-for-visual-basic"></a>Potlačení upozornění v jazyce Visual Basic
+## <a name="suppress-warnings-for-visual-basic"></a>Potlačit upozornění pro jazyk Visual Basic
 
-Upozornění kompilátoru specifické pro jazyk Visual Basic můžete skrýt tak, že upravíte *.vbproj* souboru projektu. Potlačit upozornění podle *kategorie*, můžete použít [stránce Vlastnosti kompilace](../ide/reference/compile-page-project-designer-visual-basic.md). Další informace najdete v tématu [Konfigurace upozornění v jazyce Visual Basic](../ide/configuring-warnings-in-visual-basic.md).
+Konkrétní upozornění kompilátoru pro visual basic můžete skrýt úpravou souboru *.vbproj* pro projekt. Chcete-li potlačit upozornění podle *kategorie*, můžete použít [stránku vlastností Kompilace](../ide/reference/compile-page-project-designer-visual-basic.md). Další informace naleznete [v tématu Konfigurace upozornění v jazyce Visual Basic](../ide/configuring-warnings-in-visual-basic.md).
 
-### <a name="to-suppress-specific-warnings-for-visual-basic"></a>Chcete-li potlačit specifická upozornění v jazyce Visual Basic
+### <a name="to-suppress-specific-warnings-for-visual-basic"></a>Potlačení konkrétních upozornění pro jazyk Visual Basic
 
-Tento příklad ukazuje, jak upravit *.vbproj* souboru můžete potlačit upozornění kompilátoru specifické.
+Tento příklad ukazuje, jak upravit soubor *.vbproj* potlačit konkrétní upozornění kompilátoru.
 
-1. V **Průzkumníka řešení**, vyberte projekt, ve kterém chcete potlačit upozornění.
+1. V **Průzkumníku řešení**zvolte projekt, ve kterém chcete potlačit upozornění.
 
-1. V panelu nabídky zvolte **projektu** > **uvolnit projekt**.
+1. Na řádku nabídek zvolte **Project** > **Unload Project**.
 
-1. V **Průzkumník řešení**otevřete kliknutím pravým tlačítkem myši nebo místní nabídku pro projekt a pak zvolte **upravit \<ProjectName >. vbproj**.
+1. V **Průzkumníku řešení**otevřete nabídku projektu pravým tlačítkem nebo místní a pak zvolte ** \<Upravit název_projektu>.vbproj**.
 
-    XML souboru projektu se otevře v editoru kódu.
+    Soubor projektu XML se otevře v editoru kódu.
 
-1. Vyhledejte `<NoWarn>` – element pro konfiguraci sestavení je sestavujete s a přidejte jeden nebo více čísel upozornění jako hodnotu `<NoWarn>` elementu. Pokud zadáte více čísel upozornění, oddělte je čárkami.
+1. Vyhledejte `<NoWarn>` prvek pro konfiguraci sestavení, se kterou vytváříte, a přidejte `<NoWarn>` jedno nebo více čísel upozornění jako hodnotu prvku. Pokud zadáte více čísel upozornění, oddělte je čárkou.
 
-     Následující příklad ukazuje `<NoWarn>` – element pro *ladění* konfiguraci na x x86 sestavení platformy pomocí dvou upozornění kompilátoru potlačeno:
+     Následující příklad ukazuje `<NoWarn>` prvek pro konfiguraci sestavení *ladění* na platformě x86 se dvěma upozorněními kompilátoru:
 
     ```xml
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -87,7 +87,7 @@ Tento příklad ukazuje, jak upravit *.vbproj* souboru můžete potlačit upozor
     ```
 
    > [!NOTE]
-   > Projekty .NET core neobsahují skupiny vlastností konfigurace sestavení ve výchozím nastavení. Potlačit upozornění v projektu .NET Core, přidejte do souboru ručně oddíl konfigurace sestavení. Příklad:
+   > Základní projekty rozhraní .NET ve výchozím nastavení neobsahují skupiny vlastností konfigurace sestavení. Chcete-li potlačit upozornění v projektu .NET Core, přidejte oddíl konfigurace sestavení do souboru ručně. Například:
    >
    > ```xml
    > <Project Sdk="Microsoft.NET.Sdk">
@@ -102,36 +102,36 @@ Tento příklad ukazuje, jak upravit *.vbproj* souboru můžete potlačit upozor
    > </Project>
    > ```
 
-1. Uložit změny *.vbproj* souboru.
+1. Uložte změny do souboru *.vbproj.*
 
-1. V panelu nabídky zvolte **projektu** > **znovu načíst projekt**.
+1. Na řádku nabídek zvolte **Project** > **Reload Project**.
 
-1. V panelu nabídky zvolte **sestavení** > **znovu sestavit řešení**.
+1. Na řádku nabídek zvolte **Build** > **Rebuild Solution**.
 
-    **Výstup** okno přestane zobrazovat upozornění, která jste zadali.
+    **Okno Výstup** již nezobrazuje upozornění, která jste zadali.
 
-Další informace najdete v tématu [/nowarn – možnost kompilátoru](/dotnet/visual-basic/reference/command-line-compiler/nowarn) kompilátoru příkazového řádku jazyka Visual Basic.
+Další informace naleznete v [možnosti kompilátoru /nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) pro kompilátor příkazového řádku jazyka Visual Basic.
 
-## <a name="suppress-warnings-for-nuget-packages"></a>Potlačení upozornění pro balíčky NuGet
+## <a name="suppress-warnings-for-nuget-packages"></a>Potlačit upozornění pro balíčky NuGet
 
-V některých případech můžete chtít potlačit upozornění kompilátoru NuGet pro jeden balíček NuGet, ne pro celý projekt. Upozornění slouží účel, takže není nutné potlačení na úrovni projektu. Například jeden z NuGet upozornění zjistíte, že balíček nemusí být plně kompatibilní s vaším projektem. Pokud potlačení na úrovni projektu a později přidat další balíčky NuGet, by nikdy nevíte, pokud bylo vytváření upozornění kompatibility.
+V některých případech můžete chtít potlačit NuGet upozornění kompilátoru pro jeden balíček NuGet, namísto pro celý projekt. Upozornění slouží účelu, takže jej nechcete potlačit na úrovni projektu. Například jedno z upozornění NuGet vám řekne, že balíček nemusí být plně kompatibilní s projektem. Pokud jej potlačíte na úrovni projektu a později přidáte další balíček NuGet, nikdy byste nevěděli, pokud vytváří upozornění kompatibility.
 
-### <a name="to-suppress-a-specific-warning-for-a-single-nuget-package"></a>Pro potlačení konkrétního upozornění pro jeden balíček NuGet.
+### <a name="to-suppress-a-specific-warning-for-a-single-nuget-package"></a>Potlačení konkrétního upozornění pro jeden balíček NuGet
 
-1. V **Průzkumníka řešení**, vyberte balíček NuGet, které chcete potlačit upozornění kompilátoru pro.
+1. V **Průzkumníku řešení**vyberte balíček NuGet, pro který chcete potlačit upozornění kompilátoru.
 
    ![Balíček NuGet v Průzkumníku řešení](media/nuget-package-with-warning.png)
 
-1. V nabídce klepněte pravým tlačítkem nebo kontextu vyberte **vlastnosti**.
+1. V nabídce pravým tlačítkem nebo v místní nabídce vyberte **vlastnosti**.
 
-1. V **NoWarn** pole vlastností balíčku zadejte číslo upozornění, které chcete potlačit pro tento balíček. Pokud chcete více než jeden upozornění můžete potlačit, použijte čísel upozornění oddělte čárkou.
+1. Do pole **NoWarn** vlastností balíčku zadejte číslo upozornění, které chcete pro tento balíček potlačit. Chcete-li potlačit více než jedno upozornění, oddělte čísla upozornění pomocí čárky.
 
    ![Vlastnosti balíčku NuGet](media/nuget-properties-nowarn.png)
 
-   Upozornění zmizí z **Průzkumníka řešení** a **seznam chyb**.
+   Upozornění zmizí z **Průzkumníka řešení** a **seznamu chyb**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Návod: Sestavení aplikace](../ide/walkthrough-building-an-application.md)
-- [Postupy: zobrazení, ukládání a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md)
+- [Postup: Zobrazení, uložení a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md)
 - [Kompilace a sestavení](../ide/compiling-and-building-in-visual-studio.md)

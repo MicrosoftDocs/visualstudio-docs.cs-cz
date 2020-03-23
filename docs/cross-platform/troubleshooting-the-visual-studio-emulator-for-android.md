@@ -1,5 +1,5 @@
 ---
-title: Řešení potíží s emulátorem sady Visual Studio pro Android | Microsoft Docs
+title: Poradce při potížích s emulátorem sady Visual Studio pro Android | Dokumenty společnosti Microsoft
 ms.custom: ''
 ms.prod: visual-studio-dev15
 ms.date: 11/04/2016
@@ -13,306 +13,306 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 85a7748f25e284a7c746d5779b3d177a15e1d37b
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77272069"
 ---
 # <a name="troubleshoot-the-visual-studio-emulator-for-android"></a>Poradce při potížích s emulátorem sady Visual Studio pro Android
-Toto téma obsahuje informace, které vám pomohou vyřešit problémy, se kterými se můžete setkat při použití emulátoru sady Visual Studio pro Android.
+Toto téma obsahuje informace, které vám pomohou vyřešit problémy, které mohou narazíte při použití emulátoru Visual Studio pro Android.
 
 > [!WARNING]
-> Po nainstalování emulátoru, instalační program zkontroluje požadavky pro spuštění softwaru. Upozornění se zobrazí, pokud požadavky nejsou k dispozici, ale ta je není nutné pro instalaci.
+> Po instalaci emulátoru instalační program zkontroluje předpoklady pro spuštění softwaru. Zobrazí upozornění, pokud nejsou k dispozici požadavky, ale nevyžaduje je pro instalaci.
 
- Toto téma obsahuje následující části.
+ Toto téma obsahuje tyto části:
 
 - [Než začnete](#BeforeYouStart)
 
-- [Instalace emulátoru se nezdařila](#NoInstall)
+- [Emulátor se nepodaří nainstalovat](#NoInstall)
 
-- [Nejde se připojit k síťovým cílům v doméně nebo podnikové síti.](#DomainNetwork)
+- [Nelze se připojit k síťovým cílům v doméně nebo podnikové síti.](#DomainNetwork)
 
-- [Nelze se připojit k cílům v síti, pokud nastavení sítě vyžaduje ruční konfiguraci.](#ManualNetworkConfig)
+- [Nelze se připojit k cílům sítě, pokud nastavení sítě vyžaduje ruční konfiguraci.](#ManualNetworkConfig)
 
-- [Emulátor se spouští pomalu, nespustí se z důvodu vypršení časového limitu nebo se nasazení aplikace nezdařilo.](#SlowStart)
+- [Emulátor se spustí pomalu, nespustí se kvůli časovému výtce nebo se nasazení aplikace nezdaří.](#SlowStart)
 
-- [Emulátor se nepodařilo spustit.](#NoStart2)
+- [Emulátor se nespustí](#NoStart2)
 
-- [Spuštění emulátoru se nezdařilo (první použití)](#NoStart)
+- [Emulátor se nespustí (první použití)](#NoStart)
 
-- [Spuštění počítače po instalaci emulátoru se nezdařilo.](#NoBoot)
+- [Počítač se po instalaci emulátoru nespustí](#NoBoot)
 
-- [Visual Studio se zablokuje při pokusu o nasazení aplikace do emulátoru nebo se emulátor nezobrazuje jako cíl ladění v jiných prostředích.](#ADB)
+- [Visual Studio uvízne při pokusu o nasazení aplikace do emulátoru nebo emulátor nezobrazí jako ladicí cíl v jiných IDE](#ADB)
 
-- [Emulátor přestane reagovat, protože nedokázal nastavit port UDP.](#XamarinPlayer)
+- [Emulátor přestane reagovat, protože nelze nastavit port UDP.](#XamarinPlayer)
 
-- [Nejde připojit ladicí program k projektu Xamarin.](#Skylake)
+- [Ladicí program nelze připojit k projektu Xamarin.](#Skylake)
 
-- [Emulátor nemůže spustit aplikaci, která používá Služby Google Play](#GooglePlay)
+- [Emulátoru se nepodaří spustit aplikaci, která používá služby Google Play](#GooglePlay)
 
-- [Přetahování souborů, APK nebo souboru zip s příponou souboru ZIP nefunguje](#DragAndDrop)
+- [Přetažení souboru, souboru APK nebo flashable zip nefunguje](#DragAndDrop)
 
-- [Rozlišení obrazovky je nesprávné.](#Resolution)
+- [Rozlišení snímku obrazovky je nesprávné](#Resolution)
 
-- [Emulátor nedokáže vykreslovat obsah OpenGL.](#OpenGL)
+- [Emulátor nevykresluje obsah OpenGL](#OpenGL)
 
-- [Emulátor nereaguje na gesta s více dotyky.](#Multitouch)
+- [Emulátor nereaguje na vícedotyková gesta](#Multitouch)
 
-- [Prostředky podpory](#Support)
+- [Zdroje podpory](#Support)
 
-## <a name="BeforeYouStart"></a>Než začnete
- Než začnete řešit potíže, může být užitečné v následujících tématech:
+## <a name="before-you-start"></a><a name="BeforeYouStart"></a>Než začnete
+ Než začnete s odstraňováním potíží, může být užitečné zkontrolovat následující témata:
 
-- [Požadavky na systém pro emulátor sady Visual Studio pro Android](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)
+- [Systémové požadavky pro emulátor visual studio pro Android](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)
 
-## <a name="NoInstall"></a>Instalace emulátoru se nezdařila
- Pokud nemáte nainstalovanou technologii Hyper-V, zobrazí se následující zpráva při pokusu o instalaci emulátoru. Musíte mít počítač, který podporuje Hyper-v a musí být povolené.
+## <a name="emulator-fails-to-install"></a><a name="NoInstall"></a>Emulátor se nepodaří nainstalovat
+ Pokud nemáte nainstalovanou technologii Hyper-V, zobrazí se při pokusu o instalaci emulátoru následující zpráva. Musíte mít počítač, který podporuje HyperV a musí být povolen.
 
- ![Problém&#95;instalace&#95;&#95;pro Android EMU](../cross-platform/media/android_emu_install_issue.png "Android_Emu_Install_Issue")
+ ![Android&#95;Emu&#95;problém s&#95;instalací](../cross-platform/media/android_emu_install_issue.png "Android_Emu_Install_Issue")
 
 > [!NOTE]
-> Tato zpráva platí jak pro Visual Studio Emulator for Android a emulátor Windows Phone. Windows 8.1 a Windows 10 podporovat emulátor.
+> Tato zpráva platí pro emulátor Visual Studio pro Android a Emulátor Windows Phone. Windows 8.1 a Windows 10 podporují emulátor.
 
- Pokud se zobrazí tato zpráva, podívejte se na [požadavky na systém pro emulátor sady Visual Studio pro Android](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md) , abyste viděli, jestli můžete spustit emulátor.
+ Pokud se zobrazí tato zpráva, zkontrolujte [systémové požadavky pro emulátor Visual Studio pro Android](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md) a zjistěte, zda můžete spustit emulátor.
 
-## <a name="DomainNetwork"></a>Nejde se připojit k síťovým cílům v doméně nebo podnikové síti.
- Visual Studio Emulator for Android se zobrazí v síti jako samostatný zařízení pomocí jeho vlastní IP adresu. Není připojený k doméně Windows a nesdílí přihlašovací údaje domény nebo pracovní skupině se hostitelský počítač.
+## <a name="cannot-connect-to-network-destinations-on-a-domain-or-corporate-network"></a><a name="DomainNetwork"></a>Nelze se připojit k síťovým cílům v doméně nebo podnikové síti.
+ Emulátor visual studio pro Android se zobrazí v síti jako samostatné zařízení s vlastní IP adresou. Není připojen k doméně systému Windows a nesdílí pověření domény nebo pracovní skupiny s hostitelským počítačem.
 
- Pokud síť vyžaduje ověřování domény nebo pracovní skupiny pro základní síť a připojení k Internetu, obraťte se na správce IT se pro výjimku. Tato výjimka umožňuje vývojovém počítači, který bude sloužit jako počítač hranice a tak, aby přijímal připojení ze zařízení není připojené k doméně sítě jako emulátor.
+ Pokud vaše síť vyžaduje autorizaci domény nebo pracovní skupiny pro základní připojení k síti a Internetu, požádejte o výjimku správce IT. Tato výjimka umožňuje vývojovému počítači sloužit jako hraniční počítač a přijímat připojení ze síťových zařízení, která nejsou připojena k doméně, jako je emulátor.
 
- Visual Studio Emulator for Android také využívá vlastní sadu adresy MAC. Pokud nemůžete získat přístup k síti nebo k prostředkům sítě Internet z emulátoru, obraťte se na správce IT a ujistěte se, že jsou adresy MAC emulátoru autorizovány ve vaší síti.
+ Emulátor Visual Studio pro Android také používá vlastní sadu adres MAC. Pokud nemůžete získat přístup k síťovým nebo internetovým prostředkům z emulátoru, obraťte se na správce IT a ujistěte se, že adresy MAC emulátoru byly v síti autorizovány.
 
-#### <a name="to-view-the-emulators-mac-addresses"></a>Zobrazení adres MAC emulátoru
+#### <a name="to-view-the-emulators-mac-addresses"></a>Zobrazení MAC adres emulátoru
 
 1. Spusťte emulátor.
 
-2. Na panelu nástrojů emulátor, klikněte na tlačítko s dvojitou šipkou (>>) Chcete-li otevřít v okně Další nástroje.
+2. Na panelu nástrojů emulátoru otevřete klepnutím na tlačítko dvojité šipky (>>).
 
-3. V okně Další nástroje klikněte na kartu síť.
+3. V okně Další nástroje klikněte na kartu Síť.
 
-4. Na stránce sítě vyhledejte položky fyzickou adresu.
+4. Na stránce Síť vyhledejte položky fyzické adresy.
 
-## <a name="ManualNetworkConfig"></a>Nelze se připojit k cílům v síti, pokud nastavení sítě vyžaduje ruční konfiguraci.
- Pro připojení k síti cíle z emulátoru serveru, musí vaše síť splňovat následující požadavky:
+## <a name="cannot-connect-to-network-destinations-when-network-settings-require-manual-configuration"></a><a name="ManualNetworkConfig"></a>Nelze se připojit k cílům sítě, pokud nastavení sítě vyžaduje ruční konfiguraci.
+ Chcete-li se připojit k cílům sítě z emulátoru, musí síť splňovat následující požadavky:
 
-- DHCP. Emulátor vyžaduje DHCP, protože samotný nakonfiguruje jako samostatnou zařízení v síti s jeho vlastní IP adresu.
+- Dhcp. Emulátor vyžaduje službu DHCP, protože se konfiguruje jako samostatné zařízení v síti s vlastní adresou IP.
 
-- Automaticky nakonfigurované DNS a nastavení brány. Pro emulátor není možné ručně nakonfigurovat nastavení DNS a brány.
+- Automaticky nakonfigurované nastavení DNS a brány. Pro emulátor není možné ručně konfigurovat nastavení DNS a brány.
 
-  Pokud síť vyžaduje ručně nakonfigurované nastavení, obraťte se na správce IT k určení, jak můžete zajistit připojení k síti pro emulátor.
+  Pokud vaše síť vyžaduje ručně nakonfigurovaná nastavení, obraťte se na správce IT a zjistěte, jak můžete povolit připojení k síti pro emulátor.
 
-## <a name="SlowStart"></a>Emulátor se spouští pomalu, nespustí se z důvodu vypršení časového limitu nebo se nasazení aplikace nezdařilo.
- Za určitých podmínek emulátor trvá několik minut nebo nepodaří spustit z důvodu vypršení časového limitu. Po neúspěšném spuštění emulátoru se zobrazí následující zpráva: `App deployment failed. Please try again`. Následující podmínky může vést k této chybě.
+## <a name="emulator-starts-slowly-fails-to-start-due-to-a-timeout-or-app-deployment-fails"></a><a name="SlowStart"></a>Emulátor se spustí pomalu, nespustí se kvůli časovému výtce nebo se nasazení aplikace nezdaří.
+ Za určitých podmínek trvá spuštění emulátoru několik minut nebo se nespustí z důvodu časového oddlužení. Pokud se emulátor nespustí, zobrazí se `App deployment failed. Please try again`následující zpráva: . Následující podmínky může mít za následek tuto chybu.
 
-- Spuštění emulátoru Visual Studia pro Android z spouštěcí virtuální pevný disk. Tato konfigurace není podporovaná.
+- Spuštění emulátoru Visual Studio pro Android ze spouštěcího virtuálního pevného disku. Tato konfigurace není podporovaná.
 
-- Chybný pevný disk. Zvažte spuštění programu chkdsk.
+- Vadný pevný disk. Zvažte spuštění programu chkdsk.
 
-- Pevný disk, který je potřeba defragmentovat. Vezměte v úvahu defragmentace jednotce.
+- Pevný disk, který je třeba defragmentovat. Zvažte defragmentaci jednotky.
 
-- Pevný disk, který je téměř plná. Kontrola místa na jednotce.
+- Pevný disk, který je téměř plný. Zkontrolujte volné místo na jednotce.
 
-- Nedostatek paměti je k dispozici z důvodu ostatní spuštěné aplikace. Snížení počtu aplikací, které spotřebovávají paměť nebo zvětšete velikost paměti.
+- Nedostatek paměti je k dispozici z důvodu jiných spuštěných aplikací. Snižte počet aplikací, které spotřebovávají paměť, nebo zvyšte množství paměti.
 
-- Obecně platí všechny faktorem, který přispívá ke špatnému výkonu v systému. Začněte řešit potíže se součástí, která má nejnižší skóre v indexu prostředí Windows, které můžete vyhledat na stránce informace o výkonu a nástrojů ovládacích panelů.
+- Obecně platí, že jakýkoli faktor, který přispívá ke špatnému výkonu v systému. Začněte s odstraňováním potíží s komponentou, která má nejnižší dílčí skóre v indexu uživatelských zkušeností se systémem Windows, který najdete na stránce Informace o výkonu a nástroje v Ovládacích panelech.
 
-## <a name="NoStart2"></a>Emulátor se nepodařilo spustit.
- Pokud emulátor fungovala předtím, ale teď nefunguje, projděte si následující úlohy. Pokud používáte emulátor poprvé, přečtěte si článek o [spuštění emulátoru (první použití)](#NoStart) , než se pustíte do těchto kroků.
+## <a name="emulator-fails-to-start"></a><a name="NoStart2"></a>Emulátor se nespustí
+ Pokud emulátor pracoval dříve, ale nefunguje nyní, projděte si následující úkoly. Pokud používáte emulátor poprvé, naleznete v [tématu emulátor se nezdaří spuštění (první použití)](#NoStart) před pokusem o tyto kroky.
 
-- Odeberte ostatní instance Hyper-V emulátoru.
+- Odeberte všechny ostatní instance hyper-v emulátoru.
 
     1. Zavřete Visual Studio.
 
-    2. Otevřete Správce technologie Hyper-V a zastavte všechny instance Hyper-V emulátoru (virtuální počítače), která už jsou spuštěné a případně v poškozeném stavu.
+    2. Otevřete Správce technologie Hyper-V a zastavte všechny instance technologie Hyper-V emulátoru (virtuální počítače), které jsou již spuštěny a případně v poškozeném stavu.
 
-    3. Ve Správci technologie Hyper-V odstraňte všechny ostatní emulátor virtuálních počítačů.
+    3. Ve Správci technologie Hyper-V odstraňte všechny ostatní virtuální virtuální aplikace emulátoru.
 
-    4. Po restartování počítače.
+    4. Restartujte počítač.
 
-- Ujistěte se, že máte alespoň 4 GB systémové paměti a že není se využívat v jiných prostředků náročné programy a procesů (např. Zkuste zavřít všechna okna prohlížeče).
+- Ujistěte se, že máte alespoň 4 GB systémové paměti a že není spotřebována jinými programy a procesy náročnými na prostředky (zkuste například zavřít všechna okna prohlížeče).
 
-- Ve Správci technologie Hyper-V otevřete Správce virtuálních přepínačů a zkontrolujte, zda máte dvě síťové přepínače; Ověřte, že první z nich je interní přepínač a druhý je externí.
+- Ve Správci technologie Hyper-V otevřete Správce virtuálních přepínačů a zkontrolujte, zda máte dva síťové přepínače. ověřte, zda první je interní přepínač a druhý externí.
 
-     ![Přepínač&#95;&#95;muž&#95;V&#95;EMU V pro Android](../cross-platform/media/android_emu_v_switch_man.png "Android_Emu_V_Switch_Man")
+     ![Android&#95;Emu&#95;V&#95;Switch&#95;Man](../cross-platform/media/android_emu_v_switch_man.png "Android_Emu_V_Switch_Man")
 
-     Pokud není instalace správná a používáte Windows 10, můžete se pokusit [znovu nainstalovat síťová zařízení pomocí příkazu netcfg-d](https://support.microsoft.com/help/10741/windows-fix-network-connection-issues) (oddíl 6).
+     Pokud je instalace nesprávná a používáte Systém Windows 10, můžete se pokusit [přeinstalovat síťová zařízení pomocí příkazu netcfg -d](https://support.microsoft.com/help/10741/windows-fix-network-connection-issues) (oddíl 6).
 
-- Pokud tyto kroky problém nevyřeší, přečtěte si informace o softwaru třetích stran, který může kolidovat s emulátorem, v tématu [spuštění emulátoru se nespustí (první použití)](#NoStart) .
+- Pokud tyto kroky problém nevyřeší, naleznete [v tématu emulátor se nepodaří spustit (první použití)](#NoStart) informace o softwaru třetích stran, které mohou být rušivé v emulátoru.
 
-## <a name="NoStart"></a>Spuštění emulátoru se nezdařilo (první použití)
- Pokud emulátor nespustí, projděte si následující úkoly a identifikovat a opravit tento problém.
+## <a name="emulator-fails-to-start-first-use"></a><a name="NoStart"></a>Emulátor se nespustí (první použití)
+ Pokud se emulátor nespustí, projděte následující úkoly k identifikaci a vyřešení problému.
 
-- Ujistěte se, že jsou splněny minimální požadavky na hardware a správnost nastavení systému BIOS.
+- Zkontrolujte, zda jsou splněny minimální požadavky na hardware a zda jsou nastavení systému BIOS správná.
 
-   Emulátor a Windows 8 Hyper-V vyžaduje 64bitový procesor s druhou překlad adres úrovně (SLAT). Pro Intel musíte v podstatě Core i3 i5 nebo i7 procesoru (nebo jeden z mnoha Xeons). Seznam čipů AMD je k dispozici [zde](https://www.amd.com/en/support).
+   Emulátor a Windows 8 Hyper-V vyžadují 64bitový procesor s překladem adres druhé úrovně (SLAT). Pro Intel v podstatě potřebujete procesor Core i3, i5 nebo i7 (nebo jeden z mnoha Xeons). Seznam Čipů AMD je k dispozici [zde](https://www.amd.com/en/support).
 
-  1. Ujistěte se, že váš počítač splňuje [požadavky na systém](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md).
+  1. Zkontrolujte, zda počítač splňuje [systémové požadavky](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md).
 
-  2. Ověřte, že [Nástroj SLAT](https://slatstatuscheck.codeplex.com/) hlásí, že váš počítač podporuje technologii SLAT.
+  2. Ověřte, zda [nástroj SLAT](https://slatstatuscheck.codeplex.com/) hlásí, že váš počítač je schopen SLAT.
 
-  3. V rámci nastavení systému BIOS v počítači Ujistěte se, že je povoleno všechny technologie virtualizace. Pro každého výrobce hardwaru se můžou lišit přesné popisy systému BIOS. Obecně platí povolte funkce související s:
+  3. V rámci nastavení systému BIOS počítače zkontrolujte, zda je povolena veškerá technologie virtualizace. Přesné popisy systému BIOS se mohou u každého výrobce hardwaru lišit. Obecně povolte funkce související s:
 
-     - SLAT (překladu adres druhé úrovně)
+     - SLAT (překlad adresy druhé úrovně)
 
-     - EPT (Extended Page Tables) (Intel)
+     - EPT (rozšířené stránkovací tabulky) (Intel)
 
-     - NPT (vnořené Page Tables) (AMD)
+     - NPT (vnořené stránkovací tabulky) (AMD)
 
-     - RVI (Rapid Virtualization Indexing) (AMD)
+     - RVI (rychlé indexování virtualizace) (AMD)
 
-     - VMX (zkratka Intel označující podpora virtualizace s hardwarovým řízením)
+     - VMX (zkratka Intel označující podporu virtualizace s podporou virtualizace s hardwarovou podporou)
 
-     - SVM (zkratka AMD označující podpora virtualizace s hardwarovým řízením)
+     - SVM (zkratka AMD označující podporu virtualizace s podporou virtualizace s hardwarovou podporou)
 
-     - XD (spuštění zakázat) (Intel); Tato možnost musí být povolena
+     - XD (Spustit zakázat) (Intel); to musí být povoleno
 
-     - NX (žádné Execute)(AMD); Toto musí být povolena.
+     - NX (Bez spuštění)(AMD); to musí být povoleno.
 
-  4. Pokud tyto možnosti jsou k dispozici v systému BIOS, je zakážete.
+  4. Pokud jsou v systému BIOS k dispozici následující možnosti, zakažte je.
 
-     - Zakázat Intel VT-d
+     - Zakázání technologie Intel VT-d
 
-     - Zakázat Trusted Execution
+     - Zakázat důvěryhodné spuštění
 
-       Další informace najdete v tomto článku: Technet: jak Hyper-V: na oprava systému BIOS chyby povolení Hyper-V
+       Další informace naleznete v tomto článku: Technet: Hyper-V: Jak opravit chyby systému BIOS umožňující technologie Hyper-V
 
-  5. Ujistěte se, že máte alespoň 4 GB systémové paměti a že není právě využívat v jiných prostředků náročné aplikace a procesy.
+  5. Ujistěte se, že máte alespoň 4 GB systémové paměti a že není spotřebována jinými programy a procesy náročnými na prostředky.
 
-  6. Zkontrolujte, že se systémem Windows 8 Professional nebo vyšší (Windows Server 2008 se nepodporuje). Windows Server 2012 je podporována, ale je nutné povolit desktopové prostředí.
+  6. Zkontrolujte, zda používáte systém Windows 8 Professional nebo vyšší (systém Windows Server 2008 není podporován). Windows Server 2012 je podporovaný, ale je nutné povolit možnosti plochy.
 
-     Můžete si prohlédnout Prohlížeč událostí, jestli jsou všechny chyby hypervisoru. Provedete to tak, že otevřete Prohlížeč událostí (**Spusťte klíčovou**+**R**, pak zadáte `eventvwr`) a pak vyberete **protokoly Windows**, **systém**. Pak vyfiltrujte protokol podle zdroje událostí a nastavte zdroj na **Hyper-V-hypervisor**. Vyhledejte chyby vám pomůže identifikovat hlavní příčinu.
+     Můžete zkontrolovat Prohlížeč událostí a zjistit, zda se nezobrazují chyby hypervisoru. Chcete-li to provést, otevřete Prohlížeč `eventvwr`událostí ( Start**key**+**R**, potom zadejte ) a vyberte **windows protokoly**, **systém**. Potom filtrujte protokol podle zdroje událostí a nastavte zdroj na **Hyper-V-Hypervisor**. Zkontrolujte chyby, které pomáhají identifikovat hlavní příčinu.
 
-     Pokud váš procesor splňuje minimální požadavky, ale hypervisor stále nedaří, zvažte hledání na co si je upgrade systému BIOS dostupné pro váš počítač. Pokud existuje, a vy zvolíte upgradovat, je nutné sledovat všechna opatření od výrobce, při upgradu systému BIOS (jako je zajištění upgrade firmwaru systému BIOS není přerušení kvůli výpadku napájení, který může poškodit trvale systému BIOS).
+     Pokud váš procesor splňuje minimální požadavky, ale hypervisor stále selhává, zvažte zjištění, zda je pro váš počítač k dispozici upgrade systému BIOS. Pokud existuje a rozhodnete se provést upgrade, dodržujte při upgradu systému BIOS všechna opatření výrobce (například ujistěte se, že upgrade firmwaru systému BIOS není přerušen ztrátou napájení, která může trvale poškodit systém BIOS).
 
-- Ujistěte se, že máte alespoň 4 GB systémové paměti a že není právě využívat v jiných prostředků náročné aplikace a procesy.
+- Ujistěte se, že máte alespoň 4 GB systémové paměti a že není spotřebována jinými programy a procesy náročnými na prostředky.
 
-- Odebrat nebo zakázat ovladačů jiných výrobců nebo software, který může být zasahovala do virtuální sítě.
+- Odeberte nebo zakažte ovladače nebo software třetích stran, který může rušit virtuální síť.
 
-   Existují některé známé problémy s některými 3. stran produkty nainstalované v systému Windows 8 například síťové ovladače a protokoly, které nejsou plně kompatibilní s Hyper-V síťového zásobníku.
+   Existují některé známé problémy s některými produkty třetích stran nainstalovanými v systému Windows 8, jako jsou síťové ovladače nebo protokoly, které nejsou plně kompatibilní se síťovým zásobníkem Technologie Hyper-V.
 
-   Obecně platí bude až vývojářům tyto produkty se aktualizace softwaru se kvůli kompatibilitě s Windows 8 a technologie Hyper-V.
+   Obecně platí, že bude na vývojářích těchto produktů, aby aktualizovali svůj software tak, aby byl kompatibilní se systémy Windows 8 a Hyper-V.
 
-   Následující produkty mohou vyžadovat upgradování pro dodržování předpisů pro Windows 8: VirtualBox, virtuální počítače VMWare, 7 někteří klienti VPN software brány firewall, některé verze klientů Cisco VPN a dalšími systémy virtualizace. Spolupracovat s vývojáři sporná virtualizačního softwaru Doporučte jim upgrade softwaru, aby byl kompatibilní s Windows 8 a technologie Hyper-V.
+   Následující produkty mohou vyžadovat upgrade pro dodržování předpisů ve Windows 8: VirtualBox, Virtual PC 7, VMWare, někteří klienti VPN, softwarové brány firewall, některé verze klientů Cisco VPN a další virtualizační systémy. Spolupracujte s vývojářem sporného virtualizačního softwaru a povzbuďte je k upgradu softwaru tak, aby byl kompatibilní se systémy Windows 8 a Hyper-V.
 
-   Jako *alternativní řešení*můžete zakázat všechny ovladače a aplikace třetích stran, které by mohly být v konfliktu s virtuální sítí, kterou používá emulátor ke komunikaci se sadou Visual Studio. Tyto aplikace mohou zahrnovat:
+   Jako *řešení*můžete zakázat všechny ovladače a aplikace třetích stran, které mohou rušit virtuální síť používanou emulátorem ke komunikaci s aplikací Visual Studio. Tyto žádosti mohou zahrnovat:
 
-  - Antivirové aplikace (které integrovat do síťových protokolů)
+  - Antivirové aplikace (které se zavěsí do síťového zásobníku)
 
-  - Nástroje pro monitorování sítě
+  - Nástroje pro sledování sítě
 
-  - Nástroje protokolování sítě
+  - Nástroje pro protokolování sítě
 
-  - Monitorovací software jiných systému
+  - Jiný software pro sledování systému
 
-    Jiné možných alternativních nemá odinstalaci produktů dotaz (a žádosti o produktu pro vývojáře k uvolnění aktualizovanou verzi), je provést následující kroky.
+    Dalším možným zástupným řešením, které nechybí odinstalování daného produktu (a požadavek, aby vývojář produktu vydal aktualizovanou verzi), je provést následující kroky.
 
-  1. Spusťte Správce síťových připojení (na obrazovce Start zadejte `View Network Connections` a vyberte tuto možnost, chcete-li zobrazit síťová připojení.)
+  1. Spusťte Správce síťových připojení (na úvodní obrazovce zadejte `View Network Connections` a vyberte tuto možnost, chcete-li síťová připojení zobrazit.)
 
-  2. V případě adaptéru vEthernet (interní adaptér Ethernet Windows Phone emulátor interního přepínače) vyberte z kontextové nabídky možnost **vlastnosti** .
+  2. Pro adaptér vEthernet (Interní ethernetový port Windows Phone Emulátor interní přepínač) zvolte **Vlastnosti** z kontextové nabídky.
 
-      ![Virtuální adaptér používaný technologií Hyper&#45;V](../cross-platform/media/android_emu_virtual_adapter.png "Android_Emu_Virtual_Adapter")
+      ![Virtuální adaptér používaný hyper&#45;V](../cross-platform/media/android_emu_virtual_adapter.png "Android_Emu_Virtual_Adapter")
 
       Zde jsou zobrazeny vlastnosti adaptéru.
 
       ![Vlastnosti virtuálního adaptéru](../cross-platform/media/android_emu_virtual_adapter_properties.png "Android_Emu_Virtual_Adapter_Properties")
 
-  3. V případě tohoto adaptéru by se v rámci **tohoto připojení** měly vybrat jenom tyto položky:
+  3. Pro tento adaptér pouze položky, které by měly být vybrány v části **Toto připojení používá následující položky** by měly být následující:
 
      - Klient sítě Microsoft
 
-     - Plánovač paketů technologie QoS
+     - Plánovač paketů QoS
 
      - Sdílení souborů a tiskáren v sítích Microsoft
 
-     - Ovladač Microsoft LLDP protokolu
+     - Ovladač protokolu LLDP společnosti Microsoft
 
-     - Ovladač vstupně-výstupních operací mapovače zjišťování topologie linkové vrstvě
+     - Ovladač i/O mapovači mapovače topologie propojení
 
-     - Respondér zjišťování topologie linkové vrstvě
+     - Respond i pro zjišťování topologie linkové vrstvy
 
-     - Internet Protocol verze 6 (TCP/IPv6)
+     - Protokol IP verze 6 (TCP/IPv6)
 
      - Protokol IP verze 4 (TCP/IPv4)
 
-  4. Zrušte výběr další položky.
+  4. Odznačte všechny ostatní položky.
 
-     Nevýhodou použití této techniky je, že kdykoli nový 3. stran produkt instaluje nepodporované ovladače nebo pokaždé, když nainstalování emulátoru těchto kroků bude nutné jej opakovat.
+     Nevýhodou použití této techniky je, že kdykoli nový produkt třetí strany nainstaluje nepodporované ovladače nebo kdykoli je emulátor nainstalován, bude nutné tyto kroky opakovat.
 
-     Po odinstalování serveru produkty třetích stran, budete muset obnovit interní přepínač emulátoru Windows Phone. Postup:
+     Po odinstalování produktů třetích stran možná budete muset obnovit interní přepínač emulátoru Windows Phone. Postup:
 
-  - Otevřete Hyper-V a přejděte do Správce virtuálního přepínače. Vytvořte virtuální přepínač s názvem Windows Phone interní přepínač emulátoru a nastavte jeho typ připojení na **interní síť**.
+  - Otevřete Hyper V a přejděte do Správce virtuálních přepínačů. Vytvořte virtuální přepínač s názvem "Windows Phone Emulator Internal Switch" a nastavte jeho typ připojení k **interní síti**.
 
      ![Správce virtuálních přepínačů](../cross-platform/media/android_emu_virtual_switch_manager.png "Android_Emu_Virtual_Switch_Manager")
 
     Nyní spusťte emulátor. Mělo by to fungovat.
 
-## <a name="NoBoot"></a>Spuštění počítače po instalaci emulátoru se nezdařilo.
- Tomuto problému může dojít, pokud jsou splněny následující podmínky:
+## <a name="computer-fails-to-boot-after-installing-the-emulator"></a><a name="NoBoot"></a>Počítač se po instalaci emulátoru nespustí
+ K tomuto problému může dojít, pokud jsou splněny následující podmínky:
 
-- Počítač se základní desky GB.
+- Počítač má základní desku Gigabyte.
 
 - USB3 je povolena na základní desce.
 
-  Chcete-li tento problém vyřešit, zakažte USB3 v nastavení systému BIOS základní desky a restartujte počítač. Potom zkontrolujte, zda gigabajt vydal aktualizaci pro systém BIOS základní desky.
+  Chcete-li tento problém vyřešit, zakažte USB3 v nastavení systému BIOS základní desky a restartujte počítač. Pak zkontrolujte, zda Gigabyte vydala aktualizaci pro bios základní desky.
 
-  Další informace najdete v následujícím článku znalostní báze: [Chyba spuštění po instalaci role Hyper-V v systémech gigabajtů](https://support.microsoft.com/en-us/kb/2693144).
+  Další informace naleznete v následujícím článku znalostní báze Knowledge Base: [Selhání spuštění po instalaci role Hyper-V v systémech Gigabyte](https://support.microsoft.com/en-us/kb/2693144).
 
-## <a name="ADB"></a>Visual Studio se zablokuje při pokusu o nasazení aplikace do emulátoru nebo se emulátor nezobrazuje jako cíl ladění v jiných prostředích.
- Pokud je spuštěný emulátor, ale nezobrazí se chcete připojit k ADB (Android Debug Bridge) nebo se nezobrazují v nástroje pro Android, která využívají ADB (Android Studio nebo Eclipse), budete muset upravit, kde emulátor hledá ADB. Emulátor používá klíč registru pro určení základní umístění sady Android SDK a hledá soubor \platform-tools\adb.exe v tomto adresáři. Chcete-li změnit cesta sady Android SDK používaná emulátorem:
+## <a name="visual-studio-gets-stuck-trying-to-deploy-the-app-to-the-emulator-or-the-emulator-does-not-appear-as-a-debug-target-in-other-ides"></a><a name="ADB"></a>Visual Studio uvízne při pokusu o nasazení aplikace do emulátoru nebo emulátor nezobrazí jako ladicí cíl v jiných IDE
+ Pokud je emulátor spuštěn, ale nezdá se, že je připojen k ADB (Android Debug Bridge) nebo se nezobrazí v nástrojích Android, které využívají ADB (například Android Studio nebo Eclipse), možná budete muset upravit, kde emulátor hledá ADB. Emulátor používá klíč registru k identifikaci základního umístění sady Android SDK a vyhledá soubor \platform-tools\adb.exe pod tímto adresářem. Chcete-li upravit cestu sady Android SDK používanou emulátorem:
 
-- Otevřete Editor registru výběrem možnosti **Spustit** z kontextové nabídky tlačítka Start, zadáním `regedit` v dialogovém okně a kliknutím na **tlačítko OK**.
+- Otevřete Editor registru **Run** tak, že vyberete Spustit `regedit` z kontextové nabídky Tlačítka Start, zadáte do dialogového okna a zvolíte **OK**.
 
-- Ve stromu složek na levé straně přejděte na *HKEY_LOCAL_MACHINE \software\wow6432node\android SDK Tools* .
+- Přejděte do *HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Android SDK Tools* ve stromu složek vlevo.
 
-- Upravte proměnnou registru **path** tak, aby odpovídala cestě k vašemu Android SDK.
+- Upravte proměnnou **registru cesta** tak, aby odpovídala cestě k androids ddk.
 
-  Restartujte emulátor a byste teď měli zobrazíte emulátor připojen k ADB a související nástroje pro Android.
+  Restartujte emulátor a nyní byste měli být schopni vidět emulátor připojený k ADB a přidruženým nástrojům Android.
 
-## <a name="XamarinPlayer"></a>Emulátor přestane reagovat, protože nedokázal nastavit port UDP.
- Tento problém z důvodu nekompatibility s Xamarin Playerem může docházet. Pokud se zdá, že emulátor přestane reagovat nebo se zobrazí tato chybová zpráva, "emulátor se nemůže připojit k operačnímu systému zařízení: Nepodařilo se nastavit port UDP.  Některé funkce můžou být zakázané", může dojít k tomuto problému. Proveďte následující kroky.
+## <a name="emulator-hangs-because-it-couldnt-set-up-the-udp-port"></a><a name="XamarinPlayer"></a>Emulátor přestane reagovat, protože nelze nastavit port UDP.
+ K tomuto problému může dojít z důvodu nekompatibility s přehrávačem Xamarin. Pokud se zdá, že emulátor přestane reagovat nebo pokud se zobrazí tato chybová zpráva, "Emulátor se nemůže připojit k operačnímu systému zařízení: Nelze nastavit port UDP.  Některé funkce mohou být zakázány", může dojít k tomuto problému. Postupujte podle následujících kroků.
 
-1. Odinstalujte Xamarin Playeru.
+1. Odinstalujte přehrávač Xamarin.
 
-2. Ověřte, že tohoto virtuálního pole byla odebrána (Xamarin Playeru se spouští nad virtuální pole).
+2. Ověřte, zda byl virtuální rámeček odebrán (přehrávač Xamarin běží nad virtuálním boxem).
 
-3. Přejděte do Správce zařízení, vyberte možnost Zobrazit skrytá zařízení a odstraňte všechno kromě fyzické síťové karty.
+3. Přejděte do Správce zařízení, vyberte možnost zobrazení skrytých zařízení a pak odstraňte vše kromě fyzických síťových karet.
 
-4. Můžete vyzkoušet, odinstalace a opětovné instalace technologie Hyper-V po odebrání všech jiných fyzických síťových adaptérů.
+4. Po odebrání nefyzických síťových adaptérů můžete zkusit odinstalovat nebo přeinstalovat technologii Hyper-V.
 
-## <a name="Skylake"></a>Nejde připojit ladicí program k projektu Xamarin.
- Pokud používáte Windows 10 s procesory Intel Skylake, aplikace Xamarin se nemusí podařit spustit v emulátoru nebo k nim nemusí připojit ladicí program sady Visual Studio. Toto je kvůli problému s Hyper-V a Skylake procesory. Jako alternativní řešení proveďte následující kroky.
+## <a name="cannot-attach-debugger-to-a-xamarin-project"></a><a name="Skylake"></a>Ladicí program nelze připojit k projektu Xamarin.
+ Pokud používáte Windows 10 s procesory Intel Skylake, aplikace Xamarin nemusí selhat ke spuštění v emulátoru nebo visual studio ladicí program nemusí připojit k nim. To je způsobeno problémem s procesory Hyper-V a Skylake. Jako řešení postupujte podle následujících kroků.
 
-1. Otevřete Správce technologie Hyper-V a vyberte virtuální počítač pro emulátor profil, který se pomocí.
+1. Otevřete Správce technologie Hyper-V a vyberte virtuální počítač pro profil emulátoru, který používáte.
 
 2. Vyberte **Odstranit uložený stav** (vpravo dole).
 
-3. Zvolit **nastavení...**
+3. Zvolte **Nastavení...**
 
-4. Rozbalte uzel procesor a vyberte možnost **Kompatibilita**.
+4. Rozbalte uzel procesoru a zvolte **Kompatibilita**.
 
-5. Povolte **migraci do fyzického počítače s jinou verzí procesoru**.
+5. Povolit **migraci do fyzického počítače s jinou verzí procesoru**.
 
-6. Restartujte službu (v části **Akce**) a zkuste to znovu.
+6. Restartujte službu (v části **Akce)** a akci opakujte.
 
-## <a name="GooglePlay"></a>Emulátor nemůže spustit aplikaci, která používá Služby Google Play
- Emulátor se nedodává s knihovny služby Google Play. Emulátor však nepodporuje instalaci a přetažení aktualizačního souboru zip souborů.
+## <a name="emulator-fails-to-run-app-that-uses-google-play-services"></a><a name="GooglePlay"></a>Emulátoru se nepodaří spustit aplikaci, která používá služby Google Play
+ Emulátor se nedoručuje s knihovnami služeb Google Play. Emulátor však podporuje instalaci flashable zip souborů.
 
-## <a name="DragAndDrop"></a>Přetahování souborů, APK nebo souboru zip s příponou souboru ZIP nefunguje
- Emulátor používá ADB.exe pro usnadnění přenos souborů, když přetahujete souboru na obrazovku. Pokud narazíte na chybu při pokusu o přetažení souboru, to pravděpodobně znamená, že není emulátor připojen k ADB.exe. Chcete-li problém vyřešit, postupujte podle kroků v [aplikaci Visual Studio, které se pokouší o nasazení aplikace do emulátoru, nebo se emulátor nezobrazí jako cíl ladění v jiném](#ADB)prostředí.
+## <a name="drag-and-drop-of-a-file-apk-or-flashable-zip-file-does-not-work"></a><a name="DragAndDrop"></a>Přetažení souboru, souboru APK nebo flashable zip nefunguje
+ Emulátor používá ADB.exe k usnadnění přenosu souborů při přetažení souboru na obrazovku. Pokud při pokusu o přetažení souboru narazíte na chybu, pravděpodobně to znamená, že emulátor není připojen k souboru ADB.exe. Chcete-li vyřešit, postupujte podle kroků v [sadě Visual Studio uvízne při pokusu o nasazení aplikace do emulátoru nebo emulátor nezobrazí jako ladicí cíl v jiných IDE](#ADB).
 
-## <a name="Resolution"></a>Rozlišení obrazovky je nesprávné.
- Pokud naberete snímek obrazovky pomocí karty snímku obrazovky v **dalších oknech nástrojů** a výsledný obraz má neočekávanou velikost, možná budete muset před výběrem možnosti **zachytit**upravit úroveň přiblížení obrazovky. Emulátor trvá snímky obrazovky na rozlišení obrazovky na monitoru hostitelský počítač.
+## <a name="resolution-of-screenshot-is-incorrect"></a><a name="Resolution"></a>Rozlišení snímku obrazovky je nesprávné
+ Pokud pořídíte snímek obrazovky pomocí karty Snímek obrazovky v okně **Další nástroje** a výsledný obrázek má neočekávanou velikost, bude pravděpodobně nutné upravit úroveň zvětšení obrazovky před výběrem **možnosti Zachytit**. Emulátor pořizuje snímky obrazovky v rozlišení obrazovky na monitoru hostitelského počítače.
 
-## <a name="OpenGL"></a>Emulátor nedokáže vykreslovat obsah OpenGL.
- Emulátor vykresluje obsah OpenGL pomocí GPU vašeho hostitelského počítače a používá k převodu těchto volání do a z rozhraní DirectX rozlomený projekt. Pokud vaše aplikace správně vykresluje na zařízení ale nesprávně v emulátoru, je pravděpodobné, že zařízení je snížení rizik souvisejících s nesprávné volání OpenGL (například pomocí proměnné shaderu, které se neshodují s).
+## <a name="emulator-fails-to-render-opengl-content"></a><a name="OpenGL"></a>Emulátor nevykresluje obsah OpenGL
+ Emulátor vykresluje obsah OpenGL pomocí GPU hostitelského počítače a používá projekt ANGLE k převodu těchto volání do a z DirectX. Pokud vaše aplikace vykreslí správně na zařízení, ale nesprávně na emulátoru, je pravděpodobné, že zařízení je zmírnění nesprávné OpenGL volání (například pomocí shader proměnné, které se neshodují).
 
-## <a name="Multitouch"></a>Emulátor nereaguje na gesta s více dotyky.
- V některých případech se emulátor spustí a nereaguje na více dotyků buď prostřednictvím přímé interakce ze zobrazení dotykově ovládaný nebo pomocí nástroje více dotyků na panelu nástrojů emulátoru. Pokud se jedná o tento případ, klikněte na panelu nástrojů emulátoru na tlačítko **otočit** a pokuste se znovu použít dotykové ovládání. Pokud se problém nevyřeší, přečtěte si v emulátoru nepovedlo [se vykreslit problém s obsahem OpenGL](#OpenGL) .
+## <a name="emulator-does-not-respond-to-multi-touch-gestures"></a><a name="Multitouch"></a>Emulátor nereaguje na vícedotyková gesta
+ V některých případech se emulátor spustí a nebude reagovat na vícedotykové ovládání buď přímou interakcí z dotykového displeje nebo pomocí nástroje Multi-Touch Tool na panelu nástrojů emulátoru. V takovém případě zvolte tlačítko **Otočit** na panelu nástrojů emulátoru a pokuste se znovu použít vícedotykové ovládání. Pokud problém přetrvává, přečtěte si [emulátor nepodaří vykreslit problém s obsahem OpenGL.](#OpenGL)
 
-## <a name="Support"></a>Prostředky podpory
- Pokud hostitelský počítač splňuje požadavky na systém a narazíte na problém, která nejsou zahrnuta do tohoto průvodce odstraňováním potíží:
+## <a name="support-resources"></a><a name="Support"></a>Zdroje podpory
+ Pokud hostitelský počítač splňuje systémové požadavky a narazíte na problém, který není uveden v této příručce pro řešení potíží:
 
-- Položte otázku na StackOverflow pomocí značek [Androidu](https://stackoverflow.com/questions/tagged/android-emulator) a Visual-Studio.
+- Zeptejte se na StackOverflow pomocí [android-emulátor](https://stackoverflow.com/questions/tagged/android-emulator) a visual-studio tagy.
 
-- Nahlaste problém pomocí odeslat úsměv nástroje v sadě Visual Studio nebo v správce emulátoru.
+- Nahlaste problém pomocí nástroje Odeslat úsměv v sadě Visual Studio nebo ve Správci emulátorů.

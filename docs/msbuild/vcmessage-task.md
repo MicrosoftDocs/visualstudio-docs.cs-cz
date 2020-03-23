@@ -1,5 +1,5 @@
 ---
-title: Úloha VCMessage – | Microsoft Docs
+title: Úkol Zprávy VC | Dokumenty společnosti Microsoft
 ms.date: 06/27/2018
 ms.topic: reference
 f1_keywords:
@@ -20,29 +20,29 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a2247240ae0992c8275520ec5d7bf94d98ae1053
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77631208"
 ---
 # <a name="vcmessage-task"></a>VCMessage – úloha
 
-Zaznamená upozornění a chybové zprávy během sestavení.
+Protokoly upozornění a chybové zprávy během sestavení.
 
 ## <a name="remarks"></a>Poznámky
 
- Tato úloha pomáhá implementovat nástroj MSBuild C++ pro projekty a není určen pro volání uživatelem. Další informace naleznete v tématu <xref:Microsoft.Build.Utilities.TaskLoggingHelper>.
+ Tento úkol pomáhá implementovat msbuild pro projekty jazyka C++ a není určen k volání uživatelem. Další informace naleznete v tématu <xref:Microsoft.Build.Utilities.TaskLoggingHelper>.
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry úlohy **VCMessage –** .
+ Následující tabulka popisuje parametry úlohy **VCMessage.**
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**Argumenty**|Volitelný **řetězcový** parametr.<br /><br /> Seznam zpráv, které se mají zobrazit, oddělený středníkem.|
-|**Kód**|Povinný parametr **řetězce**<br /><br /> Číslo chyby, která tuto zprávu kvalifikuje.|
-|**Typ**|Volitelný **řetězcový** parametr.<br /><br /> Určuje druh zprávy, která se má vygenerovat. Chcete-li vygenerovat zprávu s upozorněním, zadejte buď "Warning", nebo "Error" (chyba).|
+|**Argumenty**|Volitelný **parametr String.**<br /><br /> Středník-oddělený seznam zpráv, které mají být zobrazeny.|
+|**kód**|Povinný **parametr String.**<br /><br /> Číslo chyby, která kvalifikuje zprávu.|
+|**Typ**|Volitelný **parametr String.**<br /><br /> Určuje druh zprávy, která má být vyzařována. Zadejte buď "Upozornění" pro vyzařující varovnou zprávu, nebo "Chyba" pro vyzařující chybovou zprávu.|
 
 ## <a name="see-also"></a>Viz také
 

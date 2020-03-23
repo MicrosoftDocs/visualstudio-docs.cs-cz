@@ -1,31 +1,31 @@
 ---
-title: Nainstalovat náhled nebo aktualizovat
-description: Pokyny pro aktualizaci Visual Studio pro Mac a přístup k verzím Preview, včetně sady Visual Studio 2019 pro verze Preview pro Mac.
+title: Instalace náhledu nebo aktualizace
+description: Pokyny pro aktualizaci Visual Studia pro Mac a přístup k verzím preview, včetně náhledů Visual Studia 2019 pro Mac.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 0E1EF257-9DE4-4653-9DF4-805CE007A1A1
 ms.openlocfilehash: b29c2531494369f96467a7c266b379b0f54d49cf
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74984013"
 ---
-# <a name="install-a-preview-version-of-visual-studio-for-mac"></a>Instalace verze Preview Visual Studio pro Mac
+# <a name="install-a-preview-version-of-visual-studio-for-mac"></a>Instalace verze Preview Visual Studia pro Mac
 
-Před vydáním nové verze Visual Studio pro Mac je k dispozici ve verzi Preview. Verze Preview nabízí možnost vyzkoušet si nové funkce a získat nejnovější opravy chyb, než budou plně začleněny do produktu.
+Před oficiálním vydáním nové verze Visual Studia for Mac je dostupná jako náhled. Verze preview vám dává možnost vyzkoušet si nové funkce a získat nejnovější opravy chyb předtím, než budou plně začleněny do produktu.
 
-Verze Preview Visual Studio pro Mac jsou distribuovány jako aktualizace, nikoli prostřednictvím samostatného stažení. Visual Studio pro Mac má dva kanály aktualizačních kanálů, jak je popsáno v článku o [aktualizaci](update.md) : **stabilní** a ve **verzi Preview**.
+Verze Preview Visual Studia pro Mac jsou distribuovány jako aktualizace, nikoli prostřednictvím samostatného stahování. Visual Studio pro Mac má dva kanály updater, jak je popsáno v článku [aktualizace:](update.md) **Stabilní** a **Náhled**.
 
-Většina verzí Preview bude k dispozici prostřednictvím kanálu **verze Preview** , ale vždy si přečtěte [poznámky k verzi Preview](/visualstudio/releasenotes/vs2019-mac-preview-relnotes) , abyste mohli získat nejpřesnější informace.
+Většina verzí preview bude dostupná v obou kanálech **náhledu,** ale vždy zkontrolujte, zda jsou [v poznámkách k verzi náhledu](/visualstudio/releasenotes/vs2019-mac-preview-relnotes) co nejpřesnější informace.
 
-K instalaci verze Preview Visual Studio pro Mac použijte následující postup:
+Pokud chcete nainstalovat náhled Visual Studia pro Mac, postupujte takto:
 
-1. Vyhledejte **aktualizace v aplikaci Visual Studio >** .
-2. V poli se seznamem aktualizovat kanál vyberte **Náhled**.
-3. Vyberte tlačítko **přepnout kanál** a přepněte se na vybraný kanál a začněte stahovat všechny nové aktualizace.
-4. Kliknutím na tlačítko **restartovat a nainstalovat aktualizace** spusťte instalaci aktualizací.
+1. Přejděte na **soubor Visual Studio > Vyhledat aktualizace**.
+2. V poli Se seznamem Aktualizovat kanál vyberte **Náhled**.
+3. Výběrem tlačítka **Přepnout kanál** přepněte na vybraný kanál a začněte stahovat nové aktualizace.
+4. Chcete-li začít instalovat aktualizace, vyberte tlačítko **Restartovat a nainstalovat aktualizace.**
 
-Další informace o aktualizaci v Visual Studio pro Mac najdete v článku o [aktualizaci](update.md) .
+Další informace o aktualizaci ve Visual Studiu pro Mac najdete v článku [o aktualizaci.](update.md)

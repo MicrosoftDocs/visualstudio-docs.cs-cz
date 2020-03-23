@@ -1,5 +1,5 @@
 ---
-title: Barvy a styly pro Visual Studio | Microsoft Docs
+title: Barvy a styling pro Visual Studio | Dokumenty společnosti Microsoft
 ms.date: 07/31/2017
 ms.topic: conceptual
 ms.assetid: 0e384ea1-4d9e-4307-8884-6e183900732c
@@ -9,122 +9,122 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4ceea00a3fa77a9c1106f24f28ac1d5890437b41
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408998"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303153"
 ---
-# <a name="colors-and-styling-for-visual-studio"></a>Barvy a styly pro sadu Visual Studio
+# <a name="colors-and-styling-for-visual-studio"></a>Barvy a styly pro Visual Studio
 
-## <a name="use-color-in-visual-studio"></a>Použití barev v aplikaci Visual Studio
+## <a name="use-color-in-visual-studio"></a>Použití barev v sadě Visual Studio
 
-V sadě Visual Studio barva se používá především jako komunikační nástroj, nejen jako dekorace. Použít barvu minimálně a vyhradit pro situace, ve které chcete:
+V sadě Visual Studio se barva používá především jako komunikační nástroj, nikoli pouze jako dekorace. Používejte barvu minimálně a rezervujte ji pro situace, kdy chcete:
 
-- Komunikaci význam nebo umístění (například modifikátory platformu a jazyk)
+- Komunikace významu nebo přidružení (například modifikátory platformy nebo jazyka)
 
-- Upoutat pozornost (například označující změnu stavu)
+- Upoutat pozornost (například označení změny stavu)
 
-- Lepší čitelnost a poskytovat zajímavá pro procházení uživatelského rozhraní
+- Zlepšete čitelnost a poskytněte orientační body pro navigaci v ui
 
-- Zvýšení žádoucí
+- Zvýšit vhodnost
 
-Existuje několik možností pro přiřazení barev k elementům uživatelského rozhraní v sadě Visual Studio. Někdy může být obtížné zjistit, kterou možnost byste měli použít, nebo jak ji používat správně. Toto téma vám pomůže:
+Existuje několik možností pro přiřazení barev prvkům uživatelského rozhraní v sadě Visual Studio. Někdy může být obtížné zjistit, kterou možnost máte použít, nebo jak ji správně používat. Toto téma vám pomůže:
 
-- Seznamte s různými službami a systémy, které slouží k definování barev v sadě Visual Studio.
+- Seznamte se s různými službami a systémy používanými k definování barev v sadě Visual Studio.
 
-- Výběr správné možnosti pro daný element.
+- Vyberte správnou možnost pro daný prvek.
 
-- Správně použijte možnost, kterou jste zvolili.
+- Správně použijte zvolenou možnost.
 
 > [!NOTE]
-> Nikdy nekódujte pevně hexadecimální, RGB nebo systémové barvy k prvkům uživatelského rozhraní. Pomocí služby umožňuje flexibilitu při ladění odstín. Kromě toho bez služby nebude možné využívat možnosti přepínání motivů [služby VSColor](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService).
+> Nikdy hardcode hex, RGB, nebo systémové barvy na prvky uživatelského rozhraní. Použití služeb umožňuje flexibilitu v ladění odstínu. Navíc bez služby nebudete moci využít možnosti přepínání motivů [služby VSColor](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService).
 
-### <a name="methods-for-assigning-color-to-visual-studio-interface-elements"></a>Prvky rozhraní metody pro přiřazení barev k sadě Visual Studio
+### <a name="methods-for-assigning-color-to-visual-studio-interface-elements"></a>Metody pro přiřazení barev prvkům rozhraní sady Visual Studio
 
-Zvolte metodu, která nejlépe odpovídá vaší prvky uživatelského rozhraní.
+Zvolte metodu, která nejlépe vyhovuje vašim prvkům uživatelského rozhraní.
 
-| Vaše uživatelské rozhraní | Metoda | Jaké jsou jejich? |
+| Vaše ui | Metoda | Co jsou zač? |
 | --- | --- | --- |
-| S vloženými nebo samostatné dialogových oknech. | **Systémové barvy** | Názvy systémů, které umožňují operačnímu systému definovat barvu a vzhled prvků uživatelského rozhraní, jako jsou běžné ovládací prvky dialogu. |
-| Máte vlastní uživatelské rozhraní, které mají být konzistentní s celkové prostředí VS a máte prvky uživatelského rozhraní, které odpovídají kategorii a sémantický význam sdílené tokenů. | **Společné sdílené barvy** | Existující názvy token předdefinované barvy pro konkrétní prvky uživatelského rozhraní |
-| Máte jednotlivé funkce nebo skupiny funkcí a neexistuje žádné sdílené barvy pro podobné prvky. | **Vlastní barvy** | Token názvy barev, které jsou specifické pro oblast, které není určené ke sdílení s další uživatelského rozhraní |
-| Chcete povolit koncovému uživateli přizpůsobit uživatelské rozhraní nebo obsah (například pro textových editorů nebo specializovaná návrháře windows). | **Přizpůsobení koncovým uživatelům**<br /><br />**(Nástroje &gt; možnosti dialogového okna)** | Nastavení definovaná na stránce písma a barvy dialogového okna **nástroje &gt; možnosti** nebo specializované stránky specifické pro jednu funkci uživatelského rozhraní. |
+| Máte vložená nebo samostatná dialogová okna. | **Systémové barvy** | Systémové názvy, které umožňují operačnímu systému definovat barvu a vzhled prvků uživatelského rozhraní, například běžné ovládací prvky dialogového okna. |
+| Máte vlastní uživatelské rozhraní, které chcete být konzistentní s celkovým prostředím VS a máte prvky uživatelského rozhraní, které odpovídají kategorii a sémantický význam sdílených tokenů. | **Běžné sdílené barvy** | Existující předdefinované názvy barevných tokenů pro určité prvky uživatelského rozhraní |
+| Máte jednotlivé funkce nebo skupinu funkcí a pro podobné prvky neexistuje žádná sdílená barva. | **Vlastní barvy** | Názvy barevných tokenů, které jsou specifické pro oblast a nejsou určeny ke sdílení s jiným uživatelským prostředím |
+| Chcete povolit koncovému uživateli přizpůsobit uživatelské rozhraní nebo obsah (například pro textové editory nebo specializované návrháře windows). | **Přizpůsobení koncových uživatelů**<br /><br />**(Dialogové &gt; okno Možnosti nástroje)** | Nastavení definovaná na stránce "Písma a barvy" v dialogovém okně **Možnosti nástrojů &gt; ** nebo na specializované stránce specifické pro jednu funkci ui. |
 
-### <a name="visual-studio-themes"></a>Visual Studio motivy
+### <a name="visual-studio-themes"></a>Motivy visual studia
 
-Sada Visual Studio nabízí tři různé barevné motivy: světlá, tmavá a modrá. Zjistí také režim s vysokým kontrastem, který je systémová barevný motiv určený pro usnadnění přístupu.
+Visual Studio obsahuje tři různé barevné motivy: světlé, tmavé a modré. Detekuje také režim vysokého kontrastu, což je barevný motiv pro celý systém určený pro usnadnění přístupu.
 
-Uživatelé jsou při prvním použití aplikace Visual Studio vyzváni k výběru motivu a mohou později přepnout motivy tak, že přejdete na **nástroje &gt; možností &gt; prostředí &gt; obecné** a zvolíte nový motiv z rozevírací nabídky "barevný motiv".
+Uživatelé jsou vyzváni k výběru motivu při prvním použití sady Visual Studio a jsou schopni přepnout motivy později přechodem na **nástroje &gt; možnosti &gt; prostředí &gt; obecné** a výběrnového motivu z rozbalovací nabídky "barevný motiv".
 
-Uživatelé také přepnout celý systémů do jednoho z několika vysokého kontrastu, motivů pomocí ovládacích panelů. Pokud uživatel vybere motiv s vysokým kontrastem, pak modulu pro výběr barvy motivu sady Visual Studio už má vliv na barev v sadě Visual Studio, i když žádné změny motivu se uloží pro, když uživatel ukončí režim s vysokým kontrastem. Další informace o režimu Vysoký kontrast najdete v tématu [výběr vysoký kontrast barev](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ChoosingHighContrastColors).
+Uživatelé mohou také pomocí Ovládacích panelů přepnout celé své systémy do jednoho z několika motivů s vysokým kontrastem. Pokud uživatel vybere motiv s vysokým kontrastem, volič barevného motivu sady Visual Studio již neovlivní barvy v sadě Visual Studio, i když se všechny změny motivu uloží, když uživatel ukončí režim vysokého kontrastu. Další informace o režimu Vysoký kontrast naleznete v [tématu Volba barev s vysokým kontrastem](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ChoosingHighContrastColors).
 
 ### <a name="the-vscolor-service"></a>Služba VSColor
 
-Visual Studio poskytuje službu prostředí barvy, známé jako VSColor služby, který umožňuje svázat barevných prvků uživatelského rozhraní s názvem záznam obsahující hodnoty barev pro každý motiv sady Visual Studio. Tím se zajistí, že vaše barvy se automaticky změní tak, aby odrážely aktuální uživatel vybral motiv nebo systém režim s vysokým kontrastem. Používání služby znamená, že implementace všechny změny motivů související barev je zpracována na jednom místě, a pokud používáte společné sdílené barvy ze služby, vaše uživatelské rozhraní bude automaticky odrážet nové motivy v budoucích verzích sady Visual Studio.
+Visual Studio poskytuje službu barev prostředí, známou jako služba VSColor, která umožňuje svázat barevné hodnoty prvků uživatelského rozhraní s pojmenovanou položkou obsahující barevné hodnoty pro každý motiv sady Visual Studio. Tím je zajištěno, že se barvy automaticky změní tak, aby odrážely aktuální motiv vybraný uživatelem nebo režim vysokého kontrastu systému. Použití služby znamená, že implementace všech změn barev souvisejících s motivem je zpracována na jednom místě a pokud používáte společné sdílené barvy ze služby, vaše ui bude automaticky odrážet nové motivy v budoucích verzích sady Visual Studio.
 
 ### <a name="implementation"></a>Implementace
 
-Zdrojový kód sady Visual Studio obsahuje několik definičních souborech balíčku, které obsahují seznamy tokenů názvy a hodnoty příslušných barvu pro každý motiv. Barva služby přečte VSColors definované v těchto definičních souborů balíčku. Tyto barvy jsou odkazovány v kódu XAML nebo v kódu a poté načteny prostřednictvím metody `IVsUIShell5.GetThemedColor` nebo mapování DynamicResource.
+Zdrojový kód sady Visual Studio obsahuje několik souborů definice balíčku, které obsahují seznamy názvů tokenů a příslušné hodnoty barev pro každý motiv. Služba barev čte VSColors definované v těchto souborech definice balíčku. Tyto barvy jsou odkazovány ve značkách XAML nebo `IVsUIShell5.GetThemedColor` v kódu a poté načteny prostřednictvím metody nebo mapování DynamicResource.
 
 ### <a name="system-colors"></a>Systémové barvy
 
-Běžné ovládací prvky odkazovat ve výchozím nastavení systémových barev. Pokud chcete, aby uživatelské rozhraní používalo systémové barvy, například při vytváření vloženého nebo samostatného dialogu, nemusíte nic dělat.
+Běžné ovládací prvky ve výchozím nastavení odkazují na systémové barvy. Pokud chcete, aby vaše uI používat systémové barvy, jako když vytváříte vložené nebo samostatné dialogové okno, nemusíte nic dělat.
 
-### <a name="common-shared-colors-in-the-vscolor-service"></a>Ve službě VSColor běžné sdílené barvy
+### <a name="common-shared-colors-in-the-vscolor-service"></a>Běžné sdílené barvy ve službě VSColor
 
-Vaše prvky rozhraní by měly odrážet celkové prostředí sady Visual Studio. Tím, že znovu použijete společné sdílené barvy, které jsou vhodné pro komponentu uživatelského rozhraní, kterou navrhujete, zajistíte, že vaše rozhraní je konzistentní s jinými rozhraními sady Visual Studio a že se barvy automaticky aktualizují při přidání nebo aktualizaci motivů.
+Prvky rozhraní by měly odrážet celkové prostředí sady Visual Studio. Opětovným použitím běžných sdílených barev, které jsou vhodné pro komponentu uživatelského rozhraní, kterou navrhujete, zajistíte, že vaše rozhraní je konzistentní s ostatními rozhraními sady Visual Studio a že se barvy automaticky aktualizují při přidání nebo aktualizaci motivů.
 
-Než začnete používat společné sdílené barvy, ujistěte se, že vám pochopit, jak správně používat. Nesprávné použití společné sdílené barvy může způsobit nekonzistentní, frustrující nebo matoucí prostředí pro vaše uživatele.
+Před použitím běžných sdílených barev se ujistěte, že rozumíte správnému použití. Nesprávné použití běžných sdílených barev může vést k nekonzistentnímu, frustrujícímu nebo matoucímu prostředí pro uživatele.
 
-### <a name="user-customizable-colors"></a>Uživatelsky přizpůsobitelnými barvy
+### <a name="user-customizable-colors"></a>Uživatelsky přizpůsobitelné barvy
 
-Viz: vystavení [barev koncovým uživatelům](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)
+Viz: [Vystavení barev koncovým uživatelům](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)
 
-V některých případech budete chtít, aby koncový uživatel mohl přizpůsobit uživatelské rozhraní, například když vytváříte Editor kódu nebo návrhovou plochu. Přizpůsobitelné komponenty uživatelského rozhraní jsou k dispozici v části **písma a barvy** dialogového okna **nástroje &gt; možnosti** , kde mohou uživatelé změnit barvu popředí, barvu pozadí nebo obojí.
+Někdy budete chtít povolit koncovému uživateli přizpůsobit uživatelské rozhraní, například při vytváření editoru kódu nebo návrhové plochy. Přizpůsobitelné komponenty uživatelského prostředí se nacházejí v části **Písma a barvy** v dialogovém okně **Možnosti nástrojů, &gt; ** kde mohou uživatelé změnit barvu popředí, barvu pozadí nebo obojí.
 
-![Dialogové okno Možnosti &gt; nástrojů](../../extensibility/ux-guidelines/media/0301-a_toolsoptionsdialog.png "0301 – a_ToolsOptionsDialog")<br />Dialogové okno Možnosti &gt; nástrojů
+![Dialogové &gt; okno Možnosti nástroje](../../extensibility/ux-guidelines/media/0301-a_toolsoptionsdialog.png "0301-a_ToolsOptionsDialog")<br />Dialogové &gt; okno Možnosti nástroje
 
-## <a name="BKMK_TheVSColorService"></a>Služba VSColor
+## <a name="the-vscolor-service"></a><a name="BKMK_TheVSColorService"></a>Služba VSColor
 
-Visual Studio poskytuje službu barva prostředí, označovaný taky jako služba VSColor nebo služba barva prostředí. Tato služba umožňuje svázat nastavení barev pro každý motiv obsahující název hodnota barvy barevných prvků uživatelského rozhraní. Službu VSColor musí použít pro všechny prvky uživatelského rozhraní tak, aby barvy automaticky změnit tak, aby odrážela aktuální uživatel vybral motiv a tak, aby uživatelské rozhraní svázaná se službou barva prostředí se bude integrovat s nové motivy v budoucích verzích sady Visual Studio.
+Visual Studio poskytuje službu barev prostředí, která se také nazývá služba VSColor nebo služba barvy prostředí. Tato služba umožňuje svázat barevné hodnoty prvků uživatelského rozhraní s sadou barev název-hodnota obsahující barvy pro každý motiv. Služba VSColor musí být použita pro všechny prvky uživatelského rozhraní, aby se barvy automaticky změnily tak, aby odrážely aktuální motiv vybraný uživatelem, a aby se uživatelské rozhraní vázané na službu barev prostředí integrovala s novými motivy v budoucích verzích sady Visual Studio.
 
 ### <a name="how-the-service-works"></a>Jak služba funguje
 
-Barva služby prostředí přečte že vscolors definované v .pkgdef součásti uživatelského rozhraní. Tyto VSColors jsou následně odkazovány v kódu XAML nebo kódu a jsou načteny prostřednictvím `IVsUIShell5.GetThemedColor` nebo mapování `DynamicResource`.
+Služba barev prostředí čte VSColors definované v .pkgdef pro komponentu ui. Tyto VSColors jsou pak odkazuje v XAML značky nebo `IVsUIShell5.GetThemedColor` kód `DynamicResource` a jsou načteny prostřednictvím nebo mapování.
 
-![Architektura služby Color Service prostředí](../../extensibility/ux-guidelines/media/0302-a_environmentcolorservicearchitecture.png "0302 – a_EnvironmentColorServiceArchitecture")<br />Architektura služby Color Service prostředí
+![Architektura barevné služby prostředí](../../extensibility/ux-guidelines/media/0302-a_environmentcolorservicearchitecture.png "0302-a_EnvironmentColorServiceArchitecture")<br />Architektura barevné služby prostředí
 
-### <a name="accessing-the-service"></a>Přístupu ke službě
+### <a name="accessing-the-service"></a>Přístup ke službě
 
-Existuje několik různých způsobů přístupu VSColor služby, v závislosti na tom, jaký druh barva tokeny můžete používají a jaký druh kódu, je nutné.
+Existuje několik různých způsobů, jak získat přístup ke službě VSColor, v závislosti na tom, jaký druh barevných tokenů používáte a jaký kód máte.
 
-#### <a name="predefined-environment-colors"></a>Prostředí předdefinované barvy
+#### <a name="predefined-environment-colors"></a>Předdefinované barvy prostředí
 
 ##### <a name="from-native-code"></a>Z nativního kódu
 
-Prostředí poskytuje službu, která poskytuje přístup k `COLORREF` barev. Služba/rozhraní je:
+Prostředí poskytuje službu, která `COLORREF` poskytuje přístup k barvy. Služba/rozhraní je:
 
 ```
 IVsUIShell2::GetVSSysColorEx(VSSYSCOLOR dwSysColIndex, DWORD *pdwRGBval)
 ```
 
-V souboru VSShell80. idl má výčet `__VSSYSCOLOREX` konstanty barev prostředí. Pokud ho chcete použít, předejte jako hodnotu indexu jednu z hodnot `enum __VSSYSCOLOREX` popsaných na webu MSDN nebo běžné číslo indexu, které rozhraní API systému Windows, `GetSysColor`akceptuje. Tím získá zpět hodnoty RGB barvy, který se má použít ve druhém parametru.
+V souboru VSShell80.idl má `__VSSYSCOLOREX` výčet konstanty barev prostředí. Chcete-li jej použít, předejte jako hodnotu `enum __VSSYSCOLOREX` indexu buď jednu z hodnot z dokumentovaných v `GetSysColor`msdn nebo běžné číslo indexu, které přijímá rozhraní API systému Windows, , . Tím získá zpět hodnotu RGB barvy, která by měla být použita v druhém parametru.
 
-Pokud uložíte pero nebo štětec s novou barvou, je nutné `AdviseBroadcastMessages` (z prostředí sady Visual Studio) a naslouchat `WM_SYSCOLORCHANGE` a `WM_THEMECHANGED` zpráv.
+Pokud ukládáte pero nebo štětec s `AdviseBroadcastMessages` novou barvou, musíte (mimo `WM_SYSCOLORCHANGE` prostředí `WM_THEMECHANGED` sady Visual Studio) a poslouchat a zprávy.
 
-Chcete-li získat přístup ke službě Color Service v nativním kódu, proveďte volání, které se podobá této:
+Chcete-li získat přístup ke službě barev v nativním kódu, provedete volání, které se podobá tomuto:
 
 ```
 pUIShell2->GetVSSysColorEx(VSCOLOR_COLOR_NAME, &rgbLOCAL_COLOR);
 ```
 
 > [!NOTE]
-> Hodnoty `COLORREF` vrácené `GetVSSysColorEx()`m obsahují pouze součásti R, G, B barvy motivu. Pokud položka motiv používá transparentnosti, hodnotu alfa kanálu se zahodí před vrácením. Proto pokud je potřeba použít barvu prostředí zájmu na místo, kde je kanál transparentnosti důležitý, měli byste místo `IVsUIShell2::GetVSSysColorEx`použít `IVsUIShell5.GetThemedColor`, jak je popsáno dále v tomto tématu.
+> Hodnoty `COLORREF` vrácené `GetVSSysColorEx()` podle obsahují pouze R,G,B součásti barvy motivu. Pokud položka motivu používá průhlednost, hodnota alfa kanálu se před vrácením zahodí. Proto pokud barva prostředí zájmu je třeba použít v místě, kde je `IVsUIShell5.GetThemedColor` důležité `IVsUIShell2::GetVSSysColorEx`kanálu transparentnosti, měli byste použít místo , jak je popsáno dále v tomto tématu.
 
 ##### <a name="from-managed-code"></a>Ze spravovaného kódu
 
-Přístup k službě VSColor prostřednictvím nativního kódu je poměrně jednoduché. Pokud pracujete prostřednictvím spravovaného kódu, ale zjišťování toho, jak používat službu může být složité. To na paměti tady je C# fragment kódu představením toho tento postup:
+Přístup ke službě VSColor prostřednictvím nativního kódu je poměrně jednoduchý. Pokud však pracujete prostřednictvím spravovaného kódu, může být určení způsobu použití služby složité. S ohledem na to je zde fragment kódu Jazyka C#, který tento proces prokazuje:
 
 ```csharp
 private void VSColorPaint(object sender, System.Windows.Forms.PaintEventArgs e)
@@ -153,9 +153,9 @@ Pokud pracujete v jazyce Visual Basic, použijte:
 Dim myColor As Color = ColorTranslator.FromWin32((Integer)win32Color)
 ```
 
-##### <a name="from-wpf-ui"></a>Z uživatelského rozhraní WPF
+##### <a name="from-wpf-ui"></a>Z wpf ui
 
-Pomocí hodnot exportovaných do `ResourceDictionary`aplikace můžete navazovat barvy sady Visual Studio. Níže je příklad použití prostředků z tabulky barev, stejně jako vytvoření vazby na data písma prostředí v XAML.
+Můžete svázat s barvami sady Visual Studio `ResourceDictionary`prostřednictvím hodnot exportovaných do aplikace . Níže je uveden příklad použití prostředků z tabulky barev a vazby na data písem prostředí v XAML.
 
 ```xml
 <Style TargetType="{x:Type Button}">
@@ -168,11 +168,11 @@ Pomocí hodnot exportovaných do `ResourceDictionary`aplikace můžete navazovat
 </Style>
 ```
 
-#### <a name="helper-classes-and-methods-for-managed-code"></a>Pomocné rutiny třídy a metody pro spravovaný kód
+#### <a name="helper-classes-and-methods-for-managed-code"></a>Pomocné třídy a metody spravovaného kódu
 
-Pro spravovaný kód obsahuje Knihovna architektury spravovaného balíčku (`Microsoft.VisualStudio.Shell.12.0.dll`) prostředí několik pomocných tříd usnadňujících použití barev motivů.
+Pro spravovaný kód obsahuje knihovna`Microsoft.VisualStudio.Shell.12.0.dll`rozhraní Managed Package Framework prostředí ( ) několik pomocných tříd usnadňujících použití tematických barev.
 
-Pomocné metody ve třídě `Microsoft.VisualStudio.Shell.VsColors` v poli MPF zahrnují `GetThemedGDIColor()` a `GetThemedWPFColor()`. Tyto pomocné metody vracejí hodnotu barvy položky motivu jako `System.Drawing.Color` nebo `System.Windows.Media.Color`, aby se použily v uživatelském rozhraní WinForms nebo WPF.
+Pomocné metody ve `Microsoft.VisualStudio.Shell.VsColors` třídě v `GetThemedGDIColor()` MPF zahrnují a `GetThemedWPFColor()`. Tyto pomocné metody vrátí hodnotu barvy `System.Drawing.Color` položky motivu jako nebo `System.Windows.Media.Color`, které mají být použity v WinForms nebo WPF UI.
 
 ```csharp
 IVsUIShell5 shell5;
@@ -221,14 +221,14 @@ public static System.Windows.Media.Color GetThemedWPFColor(this IVsUIShell5 vsUI
 }
 ```
 
-Třídy lze také získat VSCOLOR identifikátory pro danou WPF barva klíč prostředku, nebo naopak.
+Třídu lze také získat identifikátory VSCOLOR pro daný klíč prostředku wpf barvy nebo naopak.
 
 ```csharp
 public static string GetColorBaseKey(int vsSysColor);
 public static bool TryGetColorIDFromBaseKey(string baseKey, out int vsSysColor);
 ```
 
-Metody `VsColors` třídy dotazování na službu VSColor, aby vrátila hodnotu barvy pokaždé, když jsou vyvolány. Chcete-li získat hodnotu barvy jako `System.Drawing.Color`, je alternativa s vyšším výkonem místo toho použití metod `Microsoft.VisualStudio.PlatformUI.VSThemeColor` třídy, která ukládá do mezipaměti hodnoty barvy získané ze služby VSColor. Třída interně se přihlásí k odběru událostí zprávy všesměrového vysílání prostředí a zahodí hodnotu uloženou v mezipaměti při výskytu události měnící motiv. Navíc poskytuje třídy. Událost NET přívětivá přihlásit k odběru změn motiv. Pomocí události `ThemeChanged` přidejte novou obslužnou rutinu a pomocí metody `GetThemedColor()` Získejte hodnoty barev pro `ThemeResourceKeys` zájmu. Vzorový kód by mohl vypadat takto:
+Metody třídy `VsColors` dotaz u služby VSColor vrátit hodnotu barvy pokaždé, když jsou vyvolány. Chcete-li získat `System.Drawing.Color`hodnotu barvy jako , alternativou s `Microsoft.VisualStudio.PlatformUI.VSThemeColor` lepším výkonem je místo toho použít metody třídy, která ukládá hodnoty barev získané ze služby VSColor. Třída se interně přihlásí k událostem všesměrového vysílání prostředí a zahodí hodnotu uloženou v mezipaměti, když dojde k události změny motivu. Také třída poskytuje . NET-přátelské události přihlásit se ke změnám motivu. Pomocí `ThemeChanged` události přidejte novou obslužnou rutinu `GetThemedColor()` a `ThemeResourceKeys` pomocí metody můžete získat hodnoty barev pro zajímavé. Ukázkový kód může vypadat takto:
 
 ```csharp
 public MyWindowPanel()
@@ -267,170 +267,170 @@ protected override void Dispose(bool disposing)
 }
 ```
 
-## <a name="BKMK_ChoosingHighContrastColors"></a>Volba Vysoký kontrastch barev
+## <a name="choosing-high-contrast-colors"></a><a name="BKMK_ChoosingHighContrastColors"></a>Volba barev S vysokým kontrastem
 
 ### <a name="overview"></a>Přehled
 
-Windows používá několik motivů vysokého kontrastu úrovni systému, které zvyšují barevný kontrast textu, pozadí a obrázků, provádění prvky se zobrazí na obrazovce zřetelný. Z důvodu usnadnění je důležité, že prvky rozhraní sady Visual Studio nereaguje správně uživatelé přepněte motiv s vysokým kontrastem.
+Systém Windows používá několik vysoce kontrastních motivů na úrovni systému, které zvyšují barevný kontrast textu, pozadí a obrázků, takže prvky vypadají na obrazovce odlišněji. Z důvodů usnadnění přístupu je důležité, aby prvky rozhraní sady Visual Studio správně reagovaly, když uživatelé přepnou na motiv s vysokým kontrastem.
 
-Vysoký kontrast – motivy lze použít pouze na několik systémových barev. Pokud zvolíte, že váš systém názvy barev, mějte na paměti následující tipy:
+Pro motivy s vysokým kontrastem lze použít pouze několik systémových barev. Při výběru názvů systémových barev si zapamatujte následující tipy:
 
-- **Vyberte systémové barvy, které mají stejný sémantický význam** jako prvek, který barevně vybarvit. Například pokud zvolíte vysoký kontrast pro text v rámci časového období, použijte WindowText a není ControlText.
+- **Zvolte systémové barvy, které mají stejný sémantický význam** jako prvek, který zbarvíte. Pokud například vybíráte pro text v okně vysoce kontrastní barvu, použijte WindowText a not ControlText.
 
-- **Zvolte páry na popředí** nebo na pozadí společně nebo nebudete mít jistotu, že volba barvy bude fungovat ve všech motivech vysoký kontrast.
+- **Vyberte si nové prostředí / pozadí dvojice** dohromady, nebo nebudete mít jistotu, že vaše volba barev bude fungovat ve všech high contrast témata.
 
-- **Určete, které části uživatelského rozhraní jsou nejdůležitější a ujistěte se, že oblasti obsahu budou vystupovat.** Dojde ke ztrátě velkého množství podrobností, které malé rozdíly v barevných odstínech obvykle odlišují, takže použití silné barvy ohraničení je běžné pro definování oblastí obsahu, protože pro různé oblasti obsahu nejsou k dispozici žádné barevné varianty.
+- **Určete, které části vašeho hlavního nastavení jsou nejdůležitější, a ujistěte se, že oblasti obsahu budou vyčnívat.** Ztratíte mnoho detailů, které by jemné rozdíly v barevném odstínu normálně rozlišovaly, takže použití silných okrajových barev je společné pro definování oblastí obsahu, protože neexistují žádné barevné varianty pro různé oblasti obsahu.
 
-### <a name="system-color-set"></a>Sada barev systému
+### <a name="system-color-set"></a>Systémová barevná sada
 
-Tabulka na [blogu týmu WPF: SystemColors reference](https://blogs.msdn.microsoft.com/wpf/2010/11/30/systemcolors-reference/) označuje úplnou sadu systémových názvů barev a odpovídající odstíny zobrazené v jednotlivých motivech.
+Tabulka na [WPF Team Blog: SystemColors Reference](https://blogs.msdn.microsoft.com/wpf/2010/11/30/systemcolors-reference/) označuje úplnou sadu názvů systémových barev a odpovídající odstíny zobrazené v každém motivu.
 
-Při použití této omezené sady barev na vaše uživatelské rozhraní *se očekává, že přijdete o jemný detail, který se nachází v "normálním" motivu*. Tady je příklad uživatelského rozhraní s drobným šedé, které slouží k odlišení oblastí v rámci panelu nástrojů. V kombinaci s stejné okno zobrazuje v režimu vysokého kontrastu, uvidíte, že pozadí jsou stejné hue a ohraničení tyto oblasti jsou označeny ohraničení samostatně:
+Při použití této omezené sady barev v ui *se očekává, že ztratíte jemné detaily, které byly přítomny v "normální" motivy*. Zde je příklad ui s jemnými šedými barvami, které se používají k rozlišení oblastí v okně nástroje. Při spárování se stejným oknem zobrazeným v režimu vysoký kontrast můžete vidět, že všechna pozadí mají stejný odstín a ohraničení těchto oblastí je označeno pouze ohraničením:
 
-![Příklad toho, jak se v Vysoký kontrast ztratí informace o jemných podrobnostech](../../extensibility/ux-guidelines/media/030303-a_propertieswindow.png "030303 – a_PropertiesWindow")<br />Příklad toho, jak se v Vysoký kontrast ztratí informace o jemných podrobnostech
+![Příklad ztráty jemných detailů ve vysokém kontrastu](../../extensibility/ux-guidelines/media/030303-a_propertieswindow.png "030303-a_PropertiesWindow")<br />Příklad ztráty jemných detailů ve vysokém kontrastu
 
-#### <a name="choosing-text-colors-in-an-editor"></a>Výběr barvy textu v editoru
+#### <a name="choosing-text-colors-in-an-editor"></a>Výběr barev textu v editoru
 
-Barevný text se používá v editoru nebo na návrhové ploše k označení významu, jako je například umožnění snadné identifikace skupin podobných položek. V motiv s vysokým kontrastem ale nemáte schopnost rozlišovat mezi více než tři barvy textu. WindowText, GrayText a HotTrackText jsou k dispozici na površích WindowBackground pouze barvy. Protože nelze použít více než třemi barvami, pečlivě určit nejdůležitější rozdíly, které chcete zobrazit v režimu vysokého kontrastu.
+Obarvený text se používá v editoru nebo na návrhové ploše k označení významu, například umožňuje snadnou identifikaci skupin podobných položek. V motivu vysoký kontrast však nemáte možnost rozlišovat mezi více než třemi barvami textu. WindowText, GrayText a HotTrackText jsou jediné barvy dostupné na površích WindowBackground. Vzhledem k tomu, že nelze použít více než tři barvy, pečlivě zvolte nejdůležitější rozdíly, které chcete zobrazit v režimu vysoký kontrast.
 
-Odstíny pro každý token názvů povolené na povrchu editoru, jako jsou uvedeny v jednotlivých motiv s vysokým kontrastem:
+Odstíny pro každý z názvů tokenů povolených na povrchu editoru, jak se zobrazují v každém motivu s vysokým kontrastem:
 
-![Porovnání editoru Vysoký kontrast](../../extensibility/ux-guidelines/media/030303-b_hceditorcomparison.png "030303 – b_HCEditorComparison")<br />Porovnání editoru Vysoký kontrast
+![Porovnání editoru s vysokým kontrastem](../../extensibility/ux-guidelines/media/030303-b_hceditorcomparison.png "030303-b_HCEditorComparison")<br />Porovnání editoru s vysokým kontrastem
 
-Příklady editoru plochy v motivu modrý:
+Příklady povrchu editoru v modrém motivu:
 
-![Editor v modrém motivu](../../extensibility/ux-guidelines/media/030303-c_editorblue.png "030303 – c_EditorBlue")<br />Editor v modrém motivu
+![Motiv Editor v modré barvě](../../extensibility/ux-guidelines/media/030303-c_editorblue.png "030303-c_EditorBlue")<br />Motiv Editor v modré barvě
 
-![Editor v Vysoký kontrast #1 motiv](../../extensibility/ux-guidelines/media/030303-d_editorhc1.png "030303 – d_EditorHC1")<br />Editor v Vysoký kontrast #1 motiv
+![Motiv Editor s vysokým kontrastem #1](../../extensibility/ux-guidelines/media/030303-d_editorhc1.png "030303-d_EditorHC1")<br />Motiv Editor s vysokým kontrastem #1
 
-### <a name="usage-patterns"></a>Vzory využití
+### <a name="usage-patterns"></a>Vzorce použití
 
-Mnoho běžných prvků uživatelského rozhraní už má definované Vysoký kontrasté barvy. Tyto vzory využití může odkazovat při výběru vlastní systém názvy barev, tak, že vaše prvky uživatelského rozhraní jsou konzistentní s podobné součásti.
+Mnoho běžných prvků uživatelského rozhraní již má definované barvy s vysokým kontrastem. Tyto vzory použití můžete odkazovat při výběru vlastních názvů barev systému, takže prvky uživatelského rozhraní jsou konzistentní s podobnými součástmi.
 
-| Systémové barvy | Využití |
+| Barva systému | Využití |
 | --- | --- |
-| ActiveCaption | – Aktivní prostředí IDE a na tlačítku pro tlačítko, které se zobrazí při najetí myší a stisknutí klávesy<br />– Pozadí záhlaví pro prostředí IDE a pro vory v systému Windows<br />– Výchozí pozadí stavového řádku |
-| ActiveCaptionText | – Aktivní integrované vývojové prostředí (text a glyfy), které se zobrazuje v oknech záhlaví<br />– Pozadí a ohraničení aktivních tlačítek oken při přechodu myší a stisknutí klávesy |
-| Řízení | – Pole se seznamem, rozevírací seznam a ovládací prvek hledání výchozí a zakázané pozadí, včetně tlačítka rozevíracího seznamu<br />– Pozadí ukotvení cílového tlačítka<br />– Pozadí panelu příkazů<br />– Panel nástrojů – pozadí |
-| ControlDark | – IDE na pozadí<br />– Oddělovače panelu příkazů a nabídek<br />– Ohraničení panelu příkazů<br />– Stíny nabídky<br />-Panel nástrojů – výchozí nastavení a ohraničení a oddělovač najetí myší<br />– Pozadí tlačítka pro přetečení dokumentu<br />– Ohraničení glyfu cíle ukotvení |
-| ControlDarkDark |– Bez fokusu, vybrané okno karty dokumentu |
-| ControlLight |-Automaticky skrývat ohraničení tabulátoru<br />– Pole se seznamem a ohraničení rozevíracího seznamu<br />– Ukotvit cílové pozadí a ohraničení |
-| ControlLightLight | -Selected, cílené dočasné ohraničení |
-| ControlText | – Pole se seznamem a piktogram rozevíracího seznamu<br />-Panel nástrojů – nevybraný text karty |
-| GrayText |– Pole se seznamem a rozevírací seznam – zakázané ohraničení, rozevírací glyf, text a text položky nabídky<br />-Text nabídky disabled<br />-Search – text v záhlaví možností vyhledávání<br />-Oddělovač oddílu ovládacího prvku hledání |
-| Zvýraznění | – Všechny najetí myší a nahrané pozadí a ohraničení, s výjimkou pozadí rozevíracího seznamu pole se seznamem a ohraničení tlačítka pro přetečení dokumentu<br />– Pozadí vybraných položek |
-| HighlightText | – Všechny najetí myší a stisknutí popředí (text a glyfy)<br />– Okno nástrojů s fokusem a okno s kartami dokumentu – popředí<br />– Ohraničení pruhového okna nástroje s fokusem<br />– Zaměření, vybrané dočasné popředí karty<br />– Ohraničení tlačítka pro přetečení dokumentu při najetí myší a stisknutí klávesy<br />– Ohraničení vybrané ikony|
-| HotTrack | – Procházení posuvníku pozadí a ohraničení při stisknutí<br />– Glyf šipky posuvníku při stisknutí |
-| InactiveCaption | – Neaktivní piktogramy a glyfy tlačítek oken při najetí myší<br />– Pozadí záhlaví pro prostředí IDE a pro vory v systému Windows<br />– Zakázané pozadí ovládacího prvku hledání |
-| InactiveCaptionText | -Neaktivní integrované vývojové prostředí (IDE) a na popředí záhlaví oken (text a glyfy)<br />– Neaktivní tlačítka okna na pozadí a ohraničení při najetí myší<br />– Pozadí a ohraničení tlačítka panelu nástrojů bez fokusu<br />– Zakázané popředí ovládacího prvku hledání |
-| Nabídka | – Rozevírací nabídka – pozadí<br />-Pozadí zaškrtnuté a zakázané zaškrtnutí |
-| MenuText | – Ohraničení rozevírací nabídky<br />– Zaškrtnutí značek<br />– Glyfy nabídek<br />– Text rozevírací nabídky<br />– Ohraničení vybrané ikony |
-| Posuvník | – Posuvník a šipky posuvníku, všechny stavy |
-| Okno | -Automaticky skrývat pozadí karty<br />– Panel nabídek a pozadí příkazu<br />– Nevybrané nebo nevybrané pozadí karty okna dokumentu a ohraničení dokumentu pro otevřené i dočasné karty<br />– Pozadí panelu nástrojů na nevybraném panelu<br />-Panel nástrojů – pozadí, vybrané i nevybrané |
-| WindowFrame | – Ohraničení IDE |
-| WindowText | -Automaticky skrývat popředí tabulátoru<br />-Popředí vybraného nástroje – karta okna<br />– Karta okna dokumentu bez fokusu a nevybrané nebo nevybrané tlačítko s dočasnou kartou<br />– Stromové zobrazení výchozí popředí a najetí myší nad nevybraný glyf<br />-Panel nástrojů vybral ohraničení karty<br />– Posunutí pozadí, ohraničení a glyfy posuvníku |
+| Aktivní titulek | - Aktivní IDE a rafted okno tlačítko glyfy na vznášedlo a stiskněte<br />- Titulní lišta pozadí pro IDE a rafted okna<br />- Výchozí pozadí stavového řádku |
+| ActiveCaptionText | - Aktivní IDE a rafted okna pro titulní panel popředí (text a glyfy)<br />- Pozadí a hranice aktivních okenních tlačítek na vznášet a stiskněte |
+| Řízení | - Combo box, drop-down seznam, a řízení vyhledávání výchozí a zakázané pozadí, včetně drop-down tlačítko<br />- Dock cílové tlačítko pozadí<br />- Pozadí panelu příkazů<br />- Pozadí okna nástroje |
+| ControlDark | - IDE pozadí<br />- Oddělovače menu a panelu příkazů<br />- Ohraničení panelu příkazů<br />- Stíny menu<br />- Karta okna nástroje výchozí a jevem ohraničení a oddělovač<br />- Dokument dobře přetečení tlačítko pozadí<br />- Dok cíl glyf hranice |
+| ControlDarkDark |- Nezaostřené, vybrané okno karty dokumentu |
+| Řídicí světlo |- Automatické skrytí ohraničení karty<br />- Pole se seznamem a ohraničení rozevíracího seznamu<br />- Dock cílové pozadí a hranice |
+| ControlLightLight | - Vybraná, zaměřená prozatímní hranice |
+| ControlText | - Pole se seznamem a rozevírací seznam glyfů<br />- Okno nástroje nevybraný text karty |
+| Šedý text |- Pole se seznamem a rozevírací seznam zakázané ohraničení, rozevírací glyf, text a text položky nabídky<br />- Zakázaný text nabídky<br />- Search control 'možnosti vyhledávání' hlavičkový text<br />- Oddělovač kontrolních řezů vyhledávání |
+| Zvýraznit | - Všechny vznášet a stisknuté pozadí a ohraničení, s výjimkou pole se seznamem rozevírací tlačítko pozadí a dokument dobře přetečení tlačítko hranice<br />- Pozadí vybrané položky |
+| ZvýraznitText | - Všechny vznášet a lisované popředí (text a glyfy)<br />- Zaostřené okno nástroje a ovládací prvek okna karty dokumentu popředí<br />- Zaostřené okno okna okna záhlaví ohraničení<br />- Focused, vybrané prozatímní kartu popředí<br />- Dokument dobře přetečení tlačítko hranice na vznášet a stiskněte tlačítko<br />- Vybrané ohraničení ikony|
+| HotTrack | - Posuvník palec pozadí a ohraničení na stisknutí<br />- Posuvník šipka glyf na stisknutí |
+| Neaktivnítitulek | - Neaktivní IDE a rafted okno tlačítko glyfy na hover<br />- Titulní lišta pozadí pro IDE a rafted okna<br />- Zakázané pozadí řízení vyhledávání |
+| Neaktivní titulektextu | - Neaktivní IDE a rafted okna záhlaví popředí (text a glyfy)<br />- Neaktivní okna tlačítka pozadí a ohraničení na vznášet<br />- Nezaostřené okno nástroje pozadí a ohraničení<br />- Zakázané řízení vyhledávání popředí |
+| Nabídka | - Pozadí rozbalovací nabídky<br />- Zkontrolovat a zdravotně zkontrolovat zaškrtnutí pozadí |
+| Text nabídky | - Ohraničení rozevíracího lístku<br />- Kontrolní značky<br />- Menu glyfy<br />- Text rozevíracího menu<br />- Vybrané ohraničení ikony |
+| Posuvník | - Posuvník a posuvník šipka pozadí, všechny stavy |
+| Okno | - Auto-skrýt kartu pozadí<br />- Menu bar a příkaz police pozadí<br />- Nezaostřené nebo nevybrané pozadí karty okna dokumentu a ohraničení dokumentu, pro otevřené i prozatímní karty<br />- Nezaostřené pozadí záhlaví okna nástroje<br />- Pozadí karty okna nástroje, vybrané i nevybrané |
+| Rámeček okna | - IDE hranice |
+| Text okna | - Auto-skrýt kartu popředí<br />- Vybrané okno nástroje v popředí<br />- Nezaostřené okno dokumentu kartu a nezaostřené nebo nevybrané prozatímní kartu popředí<br />- Výchozí popředí stromového zobrazení a najeďte na nevybraný glyf<br />- Okno nástroje vybrané ohraničení karty<br />- Posuvník palec pozadí, ohraničení a glyf |
 
-## <a name="BKMK_ExposingColorsForEndUsers"></a>Vystavení barev koncovým uživatelům
+## <a name="exposing-colors-for-end-users"></a><a name="BKMK_ExposingColorsForEndUsers"></a>Vystavení barev koncovým uživatelům
 
 ### <a name="overview"></a>Přehled
 
-Někdy budete chtít, aby koncový uživatel mohl přizpůsobit uživatelské rozhraní, například když vytváříte Editor kódu nebo návrhovou plochu. Nejběžnější způsob, jak to provést, je pomocí dialogového okna **nástroje &gt; možnosti** . Pokud nemáte vysoce specializované uživatelské rozhraní, které vyžaduje speciální ovládací prvky, nejjednodušší způsob, jak prezentovat vlastní nastavení, je prostřednictvím stránky **písma a barvy** v části **prostředí** dialogového okna. Pro každý prvek, který zveřejníte pro přizpůsobení uživatel může zvolit změnit barvu popředí, pozadí nebo obojí.
+Někdy budete chtít povolit koncovému uživateli přizpůsobit uživatelské rozhraní, například při vytváření editoru kódu nebo návrhové plochy. Nejběžnější způsob, jak to provést, je pomocí dialogového **okna Možnosti &gt; nástrojů.** Pokud nemáte vysoce specializované uživatelské rozhraní, které vyžaduje speciální ovládací prvky, nejjednodušší způsob, jak prezentovat vlastní nastavení, je prostřednictvím stránky **Písma a barvy** v části **Prostředí** v dialogovém okně. Pro každý prvek, který zveřejňujete pro vlastní nastavení, může uživatel změnit barvu popředí, barvu pozadí nebo obojí.
 
-### <a name="building-a-vspackage-for-your-customizable-colors"></a>Vytváření balíčku VSPackage pro přizpůsobitelné barvy
+### <a name="building-a-vspackage-for-your-customizable-colors"></a>Vytvoření balíčku VSPackage pro přizpůsobitelné barvy
 
-VSPackage můžete řídit písma a barvy prostřednictvím vlastní kategorie a zobrazení položek na stránce vlastností písma a barvy. Při použití tohoto mechanismu musí sady VSPackage implementovat rozhraní [IVsFontAndColorDefaultsProvider](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider) a jeho přidružená rozhraní.
+A VSPackage můžete ovládat písma a barvy prostřednictvím vlastních kategorií a zobrazení položek na stránce vlastnosti Písma a barvy. Při použití tohoto mechanismu VSPackages musí implementovat [rozhraní IVsFontAndColorDefaultsProvider](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider) a jeho přidružené rozhraní.
 
-V zásadě tento mechanismus je možné změnit všechny existující zobrazit položky a kategorie, které je obsahují. Ale by neměly být použít změnit kategorii textový Editor, nebo jeho položky zobrazení. Další informace o kategorii textový editor najdete v tématu [Přehled písma a barev](/visualstudio/extensibility/font-and-color-overview?view=vs-2015).
+V zásadě tento mechanismus lze upravit všechny existující položky zobrazení a kategorie, které je obsahují. Však by neměl být použit k úpravě kategorie editoru textu nebo jeho zobrazení položek. Další informace o kategorii Textový editor naleznete v tématu [Přehled písem a barev](/visualstudio/extensibility/font-and-color-overview?view=vs-2015).
 
-Pokud chcete implementovat vlastní kategorie nebo zobrazit položky, musí VSPackage:
+Chcete-li implementovat vlastní kategorie nebo zobrazit položky, musí VSPackage:
 
-- **Vytvořte nebo Identifikujte kategorie v registru.** Implementace rozhraní IDE stránky vlastností **písma a barvy** používá tyto informace k řádnému dotazování na službu, která podporuje danou kategorii.
+- **Vytvořte nebo identifikujte kategorie v registru.** IDE implementace **písma a barvy** stránky vlastnosti používá tyto informace správně dotaz na službu podporující danou kategorii.
 
-- **Vytvořte nebo Identifikujte skupiny v registru (volitelné).** Může být užitečné k definování skupiny, která představuje sjednocení dvou nebo více kategorií. Pokud skupina je definována, rozhraní IDE automaticky sloučí podkategorie a distribuuje zobrazení položek v rámci skupiny.
+- **Vytvořte nebo identifikujte skupiny v registru (volitelné).** Může být užitečné definovat skupinu, která představuje sjednocení dvou nebo více kategorií. Pokud je definována skupina, ide automaticky sloučí podkategorie a distribuuje položky zobrazení v rámci skupiny.
 
-- **Implementujte podporu IDE.**
+- **Implementujte podporu ide.**
 
-- **Zpracuje změny písma a barev.**
+- **Zpracovat změny písma a barvy.**
 
-#### <a name="to-create-or-identify-categories"></a>K vytvoření nebo určení kategorie
+#### <a name="to-create-or-identify-categories"></a>Vytvoření nebo identifikace kategorií
 
-Vytvořte speciální typ položky registru Category v rámci `[HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\FontAndColors\\<Category\>]`, kde `<Category>` je nelokalizovaný název kategorie.
+Vytvořte zvláštní typ položky `[HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\FontAndColors\\<Category\>]` registru `<Category>` kategorie pod kde je nelokalizovaný název kategorie.
 
-Naplnění registru pomocí dvou hodnot:
+Naplňte registr dvěma hodnotami:
 
-| Název | Typ | Data | Popis |
+| Name (Název) | Typ | Data | Popis |
 | --- | --- | --- | --- |
-| Kategorie | REG_SZ | GUID | Vytvoří identifikátor GUID k identifikaci kategorii |
-| Balíček | REG_SZ | GUID | Identifikátor GUID služby VSPackage, která podporuje kategorii |
+| Kategorie | REG_SZ | GUID | Identifikátor GUID vytvořený k identifikaci kategorie |
+| Balíček | REG_SZ | GUID | Identifikátor GUID služby VSPackage, který podporuje kategorii |
 
  Služba zadaná v registru musí poskytovat implementaci [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) pro odpovídající kategorii.
 
-#### <a name="to-create-or-identify-groups"></a>Vytvořte nebo Identifikujte skupiny
+#### <a name="to-create-or-identify-groups"></a>Vytvoření nebo identifikace skupin
 
-Vytvořte speciální typ položky registru kategorie v `[HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\FontAndColors\\<group\>]`, kde `<group>` je nelokalizovaný název skupiny.
+Vytvořte zvláštní typ položky `[HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\FontAndColors\\<group\>]` registru `<group>` kategorie pod kde je nelokalizovaný název skupiny.
 
-Naplnění registru pomocí dvou hodnot:
+Naplňte registr dvěma hodnotami:
 
-| Název | Typ | Data | Popis |
+| Name (Název) | Typ | Data | Popis |
 |--- | --- | --- | --- |
-| Kategorie | REG_SZ | GUID | Vytvoří identifikátor GUID k identifikaci kategorii |
-| Balíček | REG_SZ | GUID | Identifikátor GUID služby VSPackage, která podporuje kategorii |
+| Kategorie | REG_SZ | GUID | Identifikátor GUID vytvořený k identifikaci kategorie |
+| Balíček | REG_SZ | GUID | Identifikátor GUID služby VSPackage, který podporuje kategorii |
 
-Služba zadaná v registru musí poskytovat implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> pro odpovídající skupinu.
+Služba zadaná v registru musí <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> poskytovat implementaci pro odpovídající skupinu.
 
-![Implementace IVsFontAndColorGroup](../../extensibility/ux-guidelines/media/0304-a_fontandcolorgroup.png "0304 – a_FontAndColorGroup")<br />Implementace `IVsFontAndColorGroup`
+![Implementace IVsFontAndColorGroup](../../extensibility/ux-guidelines/media/0304-a_fontandcolorgroup.png "0304-a_FontAndColorGroup")<br />Provádění`IVsFontAndColorGroup`
 
-### <a name="to-implement-ide-support"></a>K implementaci podpora integrované vývojové prostředí
+### <a name="to-implement-ide-support"></a>Implementace podpory ide
 
-Implementujte metodu [GetObject](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.getobject), která vrací rozhraní [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) nebo rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> k integrovanému vývojovém prostředí (IDE) pro každou kategorii nebo identifikátor GUID skupiny.
+Implementovat [GetObject](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.getobject), který vrátí buď [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) rozhraní nebo <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> rozhraní ide pro každou kategorii nebo skupiny GUID zadaný.
 
-Pro každou kategorii, kterou podporuje, VSPackage implementuje samostatnou instanci rozhraní [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) .
+Pro každou kategorii, kterou podporuje, VSPackage implementuje samostatnou instanci rozhraní [IVsFontAndColorDefaults.](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults)
 
-Metody implementované prostřednictvím [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) musí poskytovat integrované vývojové prostředí (IDE) s:
+Metody implementované prostřednictvím [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) musí poskytnout ide s:
 
-- Seznamy zobrazení položek v kategorii
+- Seznamy zobrazovaných položek v kategorii
 
-- Lokalizovatelné názvy pro zobrazení položek
+- Lokalizovatelné názvy pro zobrazované položky
 
-- Zobrazení informací pro každého člena kategorie
+- Zobrazit informace pro každého člena kategorie
 
 > [!NOTE]
-> Každá kategorie musí obsahovat alespoň jednu zobrazovanou položku.
+> Každá kategorie musí obsahovat alespoň jednu položku zobrazení.
 
-Rozhraní IDE používá rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> k definování sjednocení několika kategorií.
+Rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> používá rozhraní k definování sjednocení několika kategorií.
 
-Jeho implementace poskytuje integrované vývojové prostředí s:
+Jeho implementace poskytuje ide s:
 
 - Seznam kategorií, které tvoří danou skupinu
 
-- Přístup k instancím [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) , které podporují jednotlivé kategorie v rámci skupiny
+- Přístup k instancím [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) podporujících každou kategorii ve skupině
 
-- Názvy zdrojů lokalizovatelných skupin
+- Lokalizovatelné názvy skupin
 
-#### <a name="updating-the-ide"></a>Aktualizuje se rozhraní IDE
+#### <a name="updating-the-ide"></a>Aktualizace rozhraní IDE
 
-Rozhraní IDE ukládá do mezipaměti informace o nastavení písem a barev. Proto po jakékoliv úpravě konfigurace rozhraní IDE písma a barvy zajišťující, že je aktuální mezipaměti je osvědčeným postupem.
+IDE ukládá informace o nastavení písma a barev. Proto po jakékoli změně konfigurace písma a barvy ide, zajištění, že mezipaměť je aktuální je osvědčeným postupem.
 
-Aktualizace mezipaměti se provádí prostřednictvím rozhraní [IvsFontAndColorCacheManager](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) a je možné ji provést globálně nebo pouze na vybraných položkách.
+Aktualizace mezipaměti se provádí prostřednictvím rozhraní [IvsFontAndColorCacheManager](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) a lze provést globálně nebo pouze na vybraných položkách.
 
-### <a name="handling-font-and-color-changes"></a>Zpracování změn písma a barvy
+### <a name="handling-font-and-color-changes"></a>Zpracování změn písma a barev
 
-Pro podporu správně zabarvení textu, který zobrazí VSPackage, musí služba zabarvení podporující sady VSPackage reagovat na uživatelem iniciované změny prostřednictvím stránky vlastností písma a barvy.
+Chcete-li správně podporovat vybarvení textu, který zobrazí VSPackage, vybarvení služba podporující VSPackage musí reagovat na změny iniciované uživatelem provedené prostřednictvím fonty a barvy vlastnosti stránky.
 
-K tomuto účelu VSPackage musí:
+Chcete-li to provést, VSPackage musí:
 
-- **zpracujte události generované** rozhraním IDE implementací rozhraní [IVsFontAndColorEvents](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents) . Integrované vývojové prostředí volá metodu odpovídající následující stránky písma a barev uživatelské úpravy. Například volá metodu [OnFontChanged](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged) , pokud je vybráno nové písmo.
+- **zpracování událostí generovaných ide** implementací rozhraní [IVsFontAndColorEvents.](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents) Rozhraní IDE volá příslušnou metodu následující změny uživatele písma a barvy stránky. Například volá [OnFontChanged](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged) metoda, pokud je vybráno nové písmo.
 
-  **ANI**
+  **Nebo**
 
-- **cyklické dotazování na rozhraní IDE o změny**. To lze provést prostřednictvím rozhraní [Chyba metody IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) implementovaného systémem. I když primárně pro podporu trvalosti, metoda [GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem) může získat informace o písmech a barvách pro zobrazení položek. Další informace o nastavení písma a barev najdete v článku na webu MSDN, který [přistupuje k uloženým písmům a nastavením barev](/visualstudio/extensibility/accessing-stored-font-and-color-settings?view=vs-2015).
+- **dotazování ide pro změny**. To lze provést prostřednictvím systémem implementovaného rozhraní [IVsFontAndColorStorage.](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) Ačkoli především pro podporu trvalosti, [GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem) metoda můžete získat informace o písmu a barvě pro zobrazení položek. Další informace o nastavení písem a barev naleznete v článku MSDN [Přístup k uloženým nastavením písma a barev](/visualstudio/extensibility/accessing-stored-font-and-color-settings?view=vs-2015).
 
 > [!NOTE]
-> Aby bylo zajištěno, že jsou výsledky cyklického dotazování správné, pomocí rozhraní [IVsFontAndColorCacheManager](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) určete, zda je před voláním metod načtení z rozhraní [Chyba metody IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) nutné vyprázdnit mezipaměť a aktualizovat.
+> Chcete-li zajistit, že výsledky dotazování jsou správné, použijte [rozhraní IVsFontAndColorCacheManager](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) k určení, zda vyprázdnění mezipaměti a aktualizace jsou potřebné před voláním metody načítání [rozhraní IVsFontAndColorStorage.](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage)
 
-#### <a name="registering-custom-font-and-color-category-without-implementing-interfaces"></a>Registrace vlastní písma a barvy kategorie bez implementace rozhraní
+#### <a name="registering-custom-font-and-color-category-without-implementing-interfaces"></a>Registrace vlastních písem a barev Kategorie bez implementace rozhraní
 
-Následující příklad kódu ukazuje, jak zaregistrovat vlastní písma a barev kategorie bez implementace rozhraní:
+Následující příklad kódu ukazuje, jak zaregistrovat vlastní písmo a barvu Kategorie bez implementace rozhraní:
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\FontAndColors\CSharp Tool Window]
@@ -443,13 +443,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\FontAndColors\CSharp T
 
 Pro tento příklad kódu:
 
-- `"NameID"` = ID prostředku lokalizovaného názvu kategorie v balíčku
-- `"ToolWindowPackage"` = GUID balíčku
-- `"Category"="{9FF46859-A47E-47bf-8AC5-EC3DBE69D1FE}"` je pouze příklad a skutečná hodnota může být nový identifikátor GUID poskytnutý implementací.
+- `"NameID"`= ID prostředku lokalizovaného názvu kategorie v balíčku
+- `"ToolWindowPackage"`= IDENTIFIKÁTOR GUID balíčku
+- `"Category"="{9FF46859-A47E-47bf-8AC5-EC3DBE69D1FE}"`je pouze příklad a skutečná hodnota může být nový identifikátor GUID poskytnutý implementátorem.
 
-### <a name="set-the-font-and-color-property-category-guid"></a>Nastavit vlastnost kategorii písma a barvy GUID
+### <a name="set-the-font-and-color-property-category-guid"></a>Nastavení identifikátoru GUID vlastnosti Písmo a barva
 
-Následující příklad kódu ukazuje nastavení kategorie identifikátory GUID.
+Příklad kódu níže ukazuje nastavení kategorie GUID.
 
 ```csharp
 // m_pView is your IVsTextView

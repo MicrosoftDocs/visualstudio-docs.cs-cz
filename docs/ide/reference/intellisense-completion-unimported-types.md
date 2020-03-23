@@ -1,43 +1,46 @@
 ---
-title: Doplňování technologie IntelliSense pro neimportované typy
-description: Jak používat doplňování technologie IntelliSense pro typy, které jste ještě neimportovali s `using` směrnice.
-ms.date: 06/20/2019
+title: Dokončení technologie IntelliSense pro neimportované typy
+description: Jak používat dokončení technologie IntelliSense pro typy, které `using` jste ještě neimportovali se směrnicí.
+ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: f313cfa8520e4c13b310be0f9223466c529ca18f
-ms.sourcegitcommit: 16bcaca215de75479695738d3c2d703c78c3500e
+ms.openlocfilehash: 04ea7c94d3dd24c1a511544adca9bfac3370cd71
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67313209"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094257"
 ---
-# <a name="intellisense-completion-for-unimported-types"></a>Doplňování technologie IntelliSense pro neimportované typy
+# <a name="intellisense-completion-for-unimported-types"></a>Dokončení technologie IntelliSense pro neimportované typy
 
-Tento refaktoring platí pro:
+Toto refaktoring se vztahuje na:
 
 - C#
 
-**Co:** Technologie IntelliSense nabízí dokončování pro neimportované typy.
+- Visual Basic
 
-**Kdy:** Chcete přidat typ, který už má závislosti ve vašem projektu, ale příkaz import ještě nejsou přidané do souboru. 
+**Co:** Technologie IntelliSense poskytuje dokončení pro neimportované typy.
 
-**Proč:** Není nutné ručně přidejte příkaz importu do souboru.
+**Kdy:** Chcete přidat typ, který již má závislost v projektu, ale příkaz importu ještě nebyl přidán do souboru. 
+
+**Proč:** Není nutné ručně přidávat příkaz importu do souboru.
 
 ## <a name="how-to"></a>Postupy
 
-1. Jakmile začnete používat typ, který má závislosti ve vašem projektu, IntelliSense vám poskytne návrhy.
-2. Stisknutím klávesy **kartu**. 
+1. Jakmile začnete používat typ, který má závislost v projektu, IntelliSense vám dá návrhy.
+2. Stiskněte **klávesu Tab**. 
 
-   Příkaz importu přidá do souboru.
+   Příkaz importu bude přidán do souboru.
 
-   ![Doplňování technologie IntelliSense pro neimportované typy](media/intellisense-completion-unimported-types.png)
+   ![Dokončení technologie IntelliSense pro neimportované typy](media/intellisense-completion-unimported-types.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Refactoring](../refactoring-in-visual-studio.md)

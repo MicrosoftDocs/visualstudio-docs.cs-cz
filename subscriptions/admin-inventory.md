@@ -1,46 +1,46 @@
 ---
-title: Inventář předprodukčních prostředí | Visual Studio Marketplace
+title: Soupis předprodukčních prostředí | Tržiště visual studia
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 03/06/2020
 ms.topic: conceptual
-description: Další informace o responsibilty správců pro provádění předprodukčních inventářů
+description: Informace o odpovědnosti správců za provádění předvýrobních zásob
 ms.openlocfilehash: 722c72acde9ff0b1f7bcfc0c394a1e016c84b719
-ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "78937480"
 ---
-# <a name="inventory-of-pre-production-environment"></a>Inventář předprodukčního prostředí
-Předplatná sady Visual Studio zjednodušují správu prostředků, a to pomocí počítání uživatelů místo zařízení.
+# <a name="inventory-of-pre-production-environment"></a>Soupis předprodukčního prostředí
+Předplatná sady Visual Studio zjednodušují správu prostředků počítáním uživatelů, nikoli zařízení.
 
-Správci sady Visual Studio musí přiřadit předplatná sady Visual Studio **konkrétním pojmenovaným jednotlivcům**. Konvence pojmenování, jako je například dev1, Dev2 nebo použití názvů týmů, jako je "FeatureTeam", nejsou **povoleny**.
+Správci sady Visual Studio musí přiřadit předplatná sady Visual Studio **konkrétním osobám s názvem**. Zásady vytváření názvů, jako je Dev1, Dev2 nebo použití názvů týmů, například **FeatureTeam, nejsou povoleny**.
 
-Tady je několik způsobů, jak zjednodušit inventarizaci předprodukčního prostředí:
-- Zkontrolujte přiřazení uživatelů. Společnost Microsoft poskytuje web s názvem [portál pro správu sady Visual Studio](https://manage.visualstudio.com/) , který vám může pomáhat sledovat přiřazení předplatných sady Visual Studio.
-- K vypsání uživatelů můžete použít místní nebo cloudovou službu Active Directory. Pokud ke správě přístupu uživatelů používáte službu Active Directory, možná budete moct identifikovat vývojové a testovací uživatele podle jejich členství v adresáři.
-- Pro inventarizaci systémů použijte automatizované nástroje. Je také možné, že budete muset použít nástroj inventáře softwaru, který vám umožní spravovat softwarové prostředky a rozlišovat předprodukční prostředí z produkčních prostředí. Mnoho zákazníků s Microsoft System Center vytvoří konvence pro pojmenování, které vám pomůžou automatizovat tuto část procesu inventarizace.
-- Získejte nápovědu k ručnímu odsouhlasení. Zařadíte své zaměstnance, který vám umožní sjednotit vývoj a testování uživatelů pomocí vývojového a testovacího prostředí.
+Zde je několik způsobů, jak zjednodušit inventuru předprodukčního prostředí:
+- Zkontrolujte přiřazení uživatelů. Společnost Microsoft poskytuje web s názvem [Portál pro správu sady Visual Studio,](https://manage.visualstudio.com/) který vám pomůže sledovat přiřazení předplatného sady Visual Studio.
+- Pomocí místní nebo cloudové služby Active Directory můžete zobrazit seznam uživatelů. Pokud ke správě přístupu uživatelů používáte službu Active Directory, bude pravděpodobně možné identifikovat vývojové a testovací uživatele podle jejich členství v adresáři.
+- Používejte automatizované nástroje pro inventarizační systémy. Možná budete také muset použít nástroj pro inventuru softwaru, který vám pomůže spravovat prostředky softwaru a odlišit předprodukční prostředí od předprodukčních prostředí. Mnoho zákazníků se systémem Microsoft System Center vytváří konvence pojmenování, které pomáhají automatizovat tuto část procesu inventury.
+- Získejte pomoc s ručním odsouhlasením. Zařaďte své zaměstnance, kteří vám pomohou sladit vývoj a testovat uživatele s vaším vývojovým a testovacím prostředím.
 
-## <a name="resources"></a>Zdroje
+## <a name="resources"></a>Zdroje informací
 - [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [Multilicenční podmínky](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Další informace o zodpovědnostech pro správce:
+Další informace o odpovědnostech pro správce:
 - [Odpovědnosti správce](admin-responsibilities.md)
 - [Správa velkých týmů a externích dodavatelů](manage-teams.md)
 - [Sledování přiřazení uživatelů a zpracování objednávek](assignments-orders.md)
-- Použití [maximálního využití](maximum-usage.md) ke sledování závazků nákupu
+- Použití [maximální spotřeby](maximum-usage.md) ke sledování nákupních závazků
 
 
 

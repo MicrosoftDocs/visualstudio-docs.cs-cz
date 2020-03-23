@@ -1,5 +1,5 @@
 ---
-title: Základní informace o testování částí
+title: Základy testování částí
 ms.date: 08/07/2019
 ms.topic: conceptual
 f1_keywords:
@@ -10,60 +10,60 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 77ac5ffd14f97fd6fdd753327fe193ceb80ea57e
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75846933"
 ---
 # <a name="unit-test-basics"></a>Základní informace o testování částí
 
-Zkontrolujte, že je váš kód funguje podle očekávání tím vytváření a spouštění testování částí. Je volána testování, protože můžete rozdělit podle funkce programu do samostatných testovatelného chování, které můžete testovat jako jednotlivé *jednotky*. Visual Studio Test Explorer poskytuje flexibilní a efektivní způsob, jak spustit testování částí a zobrazit jejich výsledky v sadě Visual Studio. Visual Studio nainstaluje testování části Microsoft rozhraní pro spravovaný a nativní kód. Použití *jednotkových testů* vytvořit testy jednotek, je spustit a ohlásí výsledky těchto testů. Pokud provedete změny k testování, že váš kód stále pracuje správně testů jednotek spusťte znovu. Visual Studio Enterprise můžou k tomu automaticky [Live Unit Testing](live-unit-testing-intro.md), který zjistí testů, na váš kód změní a běží na pozadí při psaní.
+Zkontrolujte, zda váš kód funguje podle očekávání vytvořením a spuštěním testů částí. Říká se testování částí, protože rozdělení funkčnosti programu na diskrétní testovatelné chování, které můžete testovat jako jednotlivé *jednotky*. Visual Studio Test Explorer poskytuje flexibilní a efektivní způsob, jak spustit testy částí a zobrazit jejich výsledky v sadě Visual Studio. Visual Studio nainstaluje rozhraní microsoft testování částí pro spravovaný a nativní kód. Pomocí *rozhraní testování částí* vytvořit testování částí, spusťte je a sestavy výsledků těchto testů. Znovu spusťte testy částí, když provedete změny k testování, že váš kód stále pracuje správně. Visual Studio Enterprise to může udělat automaticky pomocí [živého testování částí](live-unit-testing-intro.md), který detekuje testy ovlivněné změnami kódu a spustí je na pozadí při psaní.
 
-Testování částí má největší vliv na kvalitu kódu, pokud je to nedílná součást pracovního postupu vývoje software. Jakmile napíšete funkce nebo další blok kódu aplikace, vytvořte testy jednotek, které ověří chování kódu v reakci na standard, hranice a správné případy vstupních dat a kontrolují žádné explicitní nebo implicitní předpoklady v kódu. S *vývoj řízený testy*, vytvořte jednotkové testy před napsáním kódu, proto použijete jako dokumentace k návrhu a funkční specifikace testů jednotek.
+Testování částí má největší vliv na kvalitu kódu, pokud je nedílnou součástí pracovního postupu vývoje softwaru. Jakmile napíšete funkci nebo jiný blok kódu aplikace, vytvořte testy částí, které ověřují chování kódu v reakci na standardní, hraniční a nesprávné případy vstupních dat a které kontrolují všechny explicitní nebo implicitní předpoklady provedené kódem. S *vývoj řízený testováním*, můžete vytvořit testy částí před zápisem kódu, takže použijete testování částí jako dokumentaci návrhu a funkční specifikace.
 
-Můžete rychle vytvořit projekty testů a testovací metody v kódu nebo ručně vytvořit testy podle potřeby. Když pomocí funkce IntelliTest dá prozkoumat kód .NET, můžete vygenerovat testovací data a sady testování částí. Pro každý příkaz v kódu se generuje zkušební vstup, který tento příkaz spustí. Zjistěte, jak [generování testů jednotek pro kód](generate-unit-tests-for-your-code-with-intellitest.md).
+Můžete rychle generovat testovací projekty a testovací metody z vašeho kódu nebo ručně vytvořit testy podle potřeby. Při použití IntelliTest prozkoumat váš kód .NET, můžete generovat testovací data a sadu testů částí. Pro každý příkaz v kódu se generuje zkušební vstup, který tento příkaz spustí.  Zjistěte, jak [generovat testy částí pro váš kód](generate-unit-tests-for-your-code-with-intellitest.md).
 
-Průzkumník testů také můžete spustit třetích stran a open source rozhraní pro testování částí, které mají implementované rozhraní doplněk Průzkumníka testů. Můžete přidat řadu tyto architektury prostřednictvím Správce rozšíření sady Visual Studio a v galerii sady Visual Studio. Další informace najdete v tématu [nainstalovat rozhraní pro testování jednotky třetí strany](../test/install-third-party-unit-test-frameworks.md).
+Průzkumník testů může také spustit rozhraní test ů třetích stran a jednotek s otevřeným zdrojovým kódem, které implementovaly rozhraní doplňků Průzkumníka testů. Mnoho z těchto architektur můžete přidat prostřednictvím Správce rozšíření sady Visual Studio a galerie Sady Visual Studio. Další informace naleznete [v tématu Instalace rozhraní test ů částí jiných výrobců](../test/install-third-party-unit-test-frameworks.md).
 
 ## <a name="get-started"></a>Začínáme
 
-Úvod do testování částí, která vás přesměruje přímo do psaní kódu naleznete v těchto tématech:
+Úvod k testování částí, který vás přenese přímo do kódování, najdete v jednom z těchto témat:
 
-- [Návod: Vytvoření a spuštění testů jednotek pro spravovaný kód](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+- [Návod: Vytváření a spouštění testů jednotek pro spravovaný kód](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
 
-- [Rychlý start: Testovací řízeného rozvoje pomocí Průzkumníka testů](../test/quick-start-test-driven-development-with-test-explorer.md)
+- [Úvodní příručka: Vývoj řízený testováním pomocí Průzkumníka testů](../test/quick-start-test-driven-development-with-test-explorer.md)
 
-- [Zápis testů jednotek pro C/C++ v sadě Visual Studio](../test/writing-unit-tests-for-c-cpp.md)
+- [Zápis testů částí pro C/C++ v sadě Visual Studio](../test/writing-unit-tests-for-c-cpp.md)
 
-## <a name="the-mybank-solution-example"></a>Příklad MyBank řešení
+## <a name="the-mybank-solution-example"></a>Příklad řešení MyBank
 
-V tomto článku používáme jako příklad vývoj fiktivní aplikace s názvem `MyBank`. Není nutné skutečný kód a postupujte v tomto tématu vysvětlené v částech. Testovací metody jsou napsané v jazyce C# a zobrazí s použitím Microsoft Unit Testing Framework pro spravovaný kód. Koncepty se však snadno přenést do jiných jazyků a architektur.
+V tomto článku používáme vývoj fiktivní `MyBank` aplikace s názvem jako příklad. Nepotřebujete skutečný kód, abyste se řídili vysvětleními v tomto tématu. Testovací metody jsou zapsány v C# a prezentovány pomocí microsoft testování částí framework pro spravovaný kód. Koncepty jsou však snadno přeneseny do jiných jazyků a rámců.
 
 ::: moniker range="vs-2017"
-![MyBank řešení](../test/media/ute_mybanksolution.png)
+![Řešení MyBank](../test/media/ute_mybanksolution.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-![Řešení MyBank 2019](../test/media/vs-2019/basics-mybank-solution.png)
+![MyBank Řešení 2019](../test/media/vs-2019/basics-mybank-solution.png)
 ::: moniker-end
 
-Naše první pokus o návrhu `MyBank` aplikace obsahuje komponentu účtů, která představuje individuálního účtu a jeho transakce se banky a databáze komponenty, která představuje funkci, která agregují a spravovat samostatné účty.
+Náš první pokus o `MyBank` návrh aplikace zahrnuje komponentu účtů, která představuje individuální účet a jeho transakce s bankou, a databázovou komponentu, která představuje funkci pro agregaci a správu jednotlivých účtů.
 
-Vytvoříme `MyBank` řešení, které obsahuje dva projekty:
+Vytváříme `MyBank` řešení, které obsahuje dva projekty:
 
 - `Accounts`
 
 - `BankDb`
 
-Naše první pokus o návrhu `Accounts` projekt obsahuje třídy pro uložení základní informace o účtu, rozhraní, které určuje běžné funkce jakýkoli typ účtu, jako je uložení a odebírá z účtu a třída prostředků odvozený z rozhraní, která představuje běžný účet. Můžeme začít projekty účty tak, že vytvoříte následující zdrojové soubory:
+Náš první pokus o `Accounts` návrh projektu obsahuje třídu pro uložení základních informací o účtu, rozhraní, které určuje běžné funkce libovolného typu účtu, jako je uložení a výběr majetku z účtu, a třídu odvozenou z rozhraní, které představuje běžný účet. Začínáme projekty účty vytvořením následujících zdrojových souborů:
 
-- *AccountInfo.cs* definující základní informace o účtu.
+- *AccountInfo.cs* definuje základní informace pro účet.
 
-- *IAccount.cs* definuje standardní `IAccount` rozhraní pro účet, včetně metod pro uložení a odebrání prostředků z účtu a k načtení zůstatek na účtu.
+- *IAccount.cs* definuje standardní `IAccount` rozhraní pro účet, včetně metod pro vklad a výběr aktiv z účtu a pro načtení zůstatku na účtu.
 
-- *CheckingAccount.cs* obsahuje `CheckingAccount` třídu, která implementuje `IAccount` rozhraní pro běžný účet.
+- *CheckingAccount.cs* obsahuje `CheckingAccount` třídu, `IAccount` která implementuje rozhraní pro běžný účet.
 
-Víme z prostředí, že tento jednou z věcí, které musíte provést stažení z účtu kontroluje se ujistěte, že vybíraná hodnota je menší než zůstatek na účtu. Proto jsme přepsat `IAccount.Withdraw` metoda `CheckingAccount` s metodou, která kontroluje pro tuto podmínku. Metoda může vypadat takto:
+Ze zkušenosti víme, že jedna věc, kterou musí výběr z běžnýho účtu udělat, je ujistit se, že stažená částka je nižší než zůstatek na účtu. Takže jsme přepsat `IAccount.Withdraw` metodu v `CheckingAccount` s metodou, která kontroluje pro tuto podmínku. Metoda může vypadat takto:
 
 ```csharp
 public void Withdraw(double amount)
@@ -79,100 +79,100 @@ public void Withdraw(double amount)
 }
 ```
 
-Když teď máme nějaký kód, je čas pro testování.
+Teď, když máme nějaký kód, je čas na testování.
 
-## <a name="create-unit-test-projects-and-test-methods"></a>Vytvoření projektů jednotkových testů a testovací metody
+## <a name="create-unit-test-projects-and-test-methods"></a>Vytvořit projekty testování částí a zkušební metody
 
-Je často rychlejší generování projektu testování částí a zástupných procedur testu jednotek z vašeho kódu. Nebo můžete vytvořit projekt testů jednotek a testů ručně v závislosti na vašich požadavcích. Pokud chcete vytvořit testování částí pomocí architektury třetích stran, budete potřebovat jednu z těchto rozšíření: [nunit](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension-18371) nebo [xUnit](https://marketplace.visualstudio.com/items?itemName=YowkoTsai.xUnitnetTestGenerator).
+Je často rychlejší generovat projekt testování částí a testování částí z vašeho kódu. Nebo můžete vytvořit projekt testování částí a testy ručně v závislosti na vašich požadavcích. Pokud chcete vytvořit testy částí s rámcem třetích stran, budete potřebovat jedno z těchto rozšíření nainstalováno: [NUnit](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension-18371) nebo [xUnit](https://marketplace.visualstudio.com/items?itemName=YowkoTsai.xUnitnetTestGenerator).
 
-### <a name="generate-unit-test-project-and-unit-test-stubs"></a>Generovat projekt testování částí a zástupné procedury pro testování částí
+### <a name="generate-unit-test-project-and-unit-test-stubs"></a>Generovat zkušební projekt částí a zkušební protokoly jednotek
 
-1. V okně editoru kódu klikněte pravým tlačítkem myši a v místní nabídce klikněte na příkaz [**vytvořit testy jednotek**](create-unit-tests-menu.md) .
+1. V okně editoru kódu klikněte pravým tlačítkem myši a zvolte [**Vytvořit testy částí**](create-unit-tests-menu.md) z nabídky po kliknutí pravým tlačítkem myši.
 
    ::: moniker range="vs-2017"
    ![V okně editoru zobrazte kontextovou nabídku](../test/media/createunittestsrightclick.png)
 
    > [!NOTE]
-   > Příkaz nabídky **vytvořit testy jednotek** je k dispozici pouze pro spravovaný kód, který cílí na .NET Framework (ale ne .NET Core).
+   > Příkaz **příkazu Vytvořit testy jednotek** je k dispozici pouze pro spravovaný kód, který cílí na rozhraní .NET Framework (ale ne na jádro .NET).
    ::: moniker-end
    ::: moniker range=">=vs-2019"
    ![V okně editoru zobrazte kontextovou nabídku](../test/media/vs-2019/basics-create-unit-tests.png)
 
    > [!NOTE]
-   > Příkaz nabídky **vytvořit testy jednotek** je k dispozici pouze pro spravovaný kód.
+   > Příkaz **Nabídky Vytvořit testy jednotek** je k dispozici pouze pro spravovaný kód.
    ::: moniker-end
 
-2. Klikněte na tlačítko **OK** přijměte výchozí hodnoty pro vytváření testů jednotek nebo změnu hodnoty použité k vytvoření a pojmenujte projekt testování částí a testy jednotek. Můžete vybrat kód, který se ve výchozím nastavení přidá do metody jednotkového testu.
+2. Klepnutím na **tlačítko OK** přijměte výchozí hodnoty pro vytvoření testů částí nebo změňte hodnoty použité k vytvoření a pojmenování projektu testování částí a testů částí. Můžete vybrat kód, který je přidán ve výchozím nastavení do metod testování částí.
 
-   ![Dialogové okno vytvořit testy jednotek v aplikaci Visual Studio](../test/media/create-unit-tests.png)
+   ![Dialogové okno Vytvořit testy částí v sadě Visual Studio](../test/media/create-unit-tests.png)
 
-3. Zástupné procedury testu jednotek se vytvoří v nový projekt testů jednotek pro všechny metody ve třídě.
+3. Zástupné procedury testování částí jsou vytvořeny v projektu testování nové jednotky pro všechny metody ve třídě.
 
    ::: moniker range="vs-2017"
-   ![Jednotkové testy jsou vytvořeny.](../test/media/createunittestsstubs.png)
+   ![Jednotkové testy jsou vytvořeny](../test/media/createunittestsstubs.png)
    ::: moniker-end
    ::: moniker range=">=vs-2019"
-   ![Jednotkové testy jsou vytvořeny.](../test/media/vs-2019/basics-test-stub.png)
+   ![Jednotkové testy jsou vytvořeny](../test/media/vs-2019/basics-test-stub.png)
    ::: moniker-end
 
-4. Teď přejděte k další postupy [přidejte kód do metody jednotkového testu](#write-your-tests) smysluplné testování částí a všechny další jednotky testů, které chcete přidat do důkladně otestujte svůj kód.
+4. Nyní přejděte dopředu a zjistěte, jak [přidat kód do testovacích metod částí,](#write-your-tests) aby byl test částí smysluplný, a všechny další testy částí, které můžete chtít přidat k důkladnému testování kódu.
 
-### <a name="create-the-unit-test-project-and-unit-tests-manually"></a>Vytvoření testování částí projektu a testy jednotek ručně
+### <a name="create-the-unit-test-project-and-unit-tests-manually"></a>Ruční vytvoření projektu testování částí a testů částí
 
-Projekt testování částí obvykle zrcadlí strukturu projektu jeden kód. V tomto příkladu MyBank přidejte dva projekty testů jednotek s názvem `AccountsTests` a `BankDbTests` k `MyBanks` řešení. Názvy projektů testů libovolného, ale přijetí standardní zásady vytváření názvů je vhodné.
+Projekt testování částí obvykle zrcadlí strukturu jednoho projektu kódu. V příkladu MyBank přidáte dva projekty `BankDbTests` testování `MyBanks` částí s názvem `AccountsTests` a do řešení. Názvy testovacích projektů jsou libovolné, ale přijetí standardní konvence pojmenování je vhodné.
 
-**Chcete-li přidat projekt do řešení pro testování částí:**
+**Přidání projektu testování částí do řešení:**
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a vyberte **Přidat** > **Nový** **projekt**.
+1. V **Průzkumníku řešení**klikněte pravým tlačítkem myši na řešení a zvolte **Přidat** > **nový** **projekt**.
 
 ::: moniker range="vs-2017"
 
-2. V **nový projekt** dialogového okna rozbalte **nainstalováno** uzlu, vyberte jazyk, který chcete použít pro testovací projekt a pak zvolte **testování**.
+2. V dialogovém okně **Nový projekt** rozbalte **nainstalovaný** uzel, zvolte jazyk, který chcete použít pro testovací projekt, a pak zvolte **Testovat**.
 
-3. Chcete-li použít jeden z rozhraní pro testování částí Microsoft, zvolte **projekt testů jednotek** ze seznamu šablon projektu. V opačném případě vyberte šablonu projektu jednotky testů, který chcete použít. K testování `Accounts` projektu v našem příkladu by projekt pojmenujte `AccountsTests`.
+3. Chcete-li použít jeden z rozhraní testování částí společnosti Microsoft, zvolte **Projekt testování částí** ze seznamu šablon projektu. V opačném případě zvolte šablonu projektu rozhraní testování částí, které chcete použít. Chcete-li `Accounts` otestovat projekt našeho příkladu, pojmenujete projekt `AccountsTests`.
 
    > [!NOTE]
-   > Ne všechna rozhraní pro testování částí třetích stran a open source poskytují šablony projektu sady Visual Studio. Informace o vytvoření projektu naleznete v dokumentu framework.
+   > Ne všechny architektury testování částí jiných výrobců a open source poskytují šablonu projektu sady Visual Studio. Informace o vytvoření projektu naleznete v rámcovém dokumentu.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Pomocí vyhledávacího pole šablony projektu vyhledejte šablonu projektu testování částí pro testovací rozhraní, které chcete použít.
+2. Pomocí vyhledávacího pole šablony projektu vyhledejte šablonu projektu testování částí pro testovací rámec, který chcete použít.
 
-3. Na další stránce pojmenujte projekt. K otestování `Accounts`ho projektu v našem příkladu můžete pojmenovat `AccountsTests`projektu.
+3. Na další stránce pojmenujte projekt. Chcete-li `Accounts` otestovat projekt našeho příkladu, můžete projekt `AccountsTests`pojmenovat .
 
 ::: moniker-end
 
-4. V projektu testování částí přidejte odkaz na projekt kódu v rámci testu v našem příkladu do projektu účty.
+4. V projektu testování částí přidejte odkaz na testovaný projekt kódu v našem příkladu na projekt účty.
 
    Chcete-li vytvořit odkaz na projekt kódu:
 
-   1. Vyberte projekt v **Průzkumníka řešení**.
+   1. Vyberte projekt v **Průzkumníku řešení**.
 
-   2. Na **projektu** nabídce zvolte **přidat odkaz**.
+   2. V nabídce **Projekt** zvolte **Přidat odkaz**.
 
-   3. Na **správce odkazů** dialogovém okně Otevřít **řešení** uzlu a zvolte **projekty**. Vyberte název projektu kódu a zavřete dialogové okno.
+   3. V dialogovém okně **Správce odkazů** otevřete uzel **Řešení** a zvolte **Projekty**. Vyberte název projektu kódu a zavřete dialogové okno.
 
-Každý projekt jednotkového testu obsahuje třídy, které zrcadlí názvy tříd v projektu kódu. V našem příkladu `AccountsTests` projekt bude obsahovat následující třídy:
+Každý projekt testování částí obsahuje třídy, které zrcadlí názvy tříd v projektu kódu. V našem příkladu `AccountsTests` by projekt obsahoval následující třídy:
 
-- `AccountInfoTests` Třída obsahující metody jednotkového testu pro `AccountInfo` třídy v `Accounts` projektu
+- `AccountInfoTests`třída obsahuje metody testování `AccountInfo` částí pro `Accounts` třídu v projektu
 
-- `CheckingAccountTests` Třída obsahující metody jednotkového testu pro `CheckingAccount` třídy.
+- `CheckingAccountTests`třída obsahuje metody testování `CheckingAccount` částí pro třídu.
 
-## <a name="write-your-tests"></a>Zápis testů
+## <a name="write-your-tests"></a>Napište své testy
 
-Testy jednotek, který používáte a IntelliSense ve Visual Studio vás provede zápis kódu pro testování částí pro kód projektu. Ke spuštění v **Průzkumníka testů**, většina architektur vyžadují, abyste přidali konkrétní atributy, které určují jednotky zkušební metody. Rozhraní také poskytují způsob – obvykle prostřednictvím Assert – příkazy nebo atributy metody – označuje, zda má testovací metoda předané nebo se nezdařilo. Ostatní atributy Identifikujte volitelné nastavení metody, které jsou při inicializaci třídy a před každou metodu testu a metody jejich vyřazování z provozu, které jsou spuštěny po jednotlivých zkušebních metod a zničen třídy.
+Rozhraní testování částí, které používáte a Visual Studio IntelliSense vás provede psaní kódu pro testování částí pro projekt kódu. Chcete-li spustit v **Průzkumníku testů**, většina rozhraní vyžadují přidat konkrétní atributy k identifikaci metody testování částí. Rámce také poskytují způsob – obvykle prostřednictvím assert příkazy nebo atributy metody – k označení, zda zkušební metoda prošla nebo se nezdařila. Jiné atributy identifikují volitelné metody nastavení, které jsou při inicializaci třídy a před každou zkušební metodou a metodami teardown, které jsou spuštěny po každé zkušební metodě a před zničením třídy.
 
-Vzor AAA (Assert uspořádat, Act) je běžný způsob psaní testů jednotek pro metody v rámci testu.
+Vzor AAA (Uspořádat, Jednat, Assert) je běžný způsob psaní testů částí pro testovnu.
 
-- **Uspořádat** část metodu testovací jednotky inicializuje objekty a nastaví hodnotu data, která se předá metodě v rámci testu.
+- Oddíl **Uspořádat** zkušební metody jednotky inicializuje objekty a nastaví hodnotu dat, která je předána do zkoušené metody.
 
-- **Act** část volá metodu v rámci testu s uspořádané parametry.
+- Část **Akt** vyvolá testovku s uspořádanými parametry.
 
-- **Assert** části ověřuje, že akce testované metody chová podle očekávání.
+- Assert **Assert** část ověří, že akce metody v testu se chová podle očekávání.
 
-K testování `CheckingAccount.Withdraw` metoda našeho příkladu jsme napsali dva testy: ten, který ověřuje standardní chování metody a jednu, která ověřuje, že se nepodaří stažení větší než zůstatek na účtu. V `CheckingAccountTests` třídy, jsme přidejte následující metody:
+Chcete-li `CheckingAccount.Withdraw` otestovat metodu našeho příkladu, můžeme napsat dva testy: jeden, který ověří standardní chování metody a jeden, který ověří, že stažení více než zůstatek se nezdaří. Ve `CheckingAccountTests` třídě přidáme následující metody:
 
 ```csharp
 [TestMethod]
@@ -202,17 +202,17 @@ public void Withdraw_AmountMoreThanBalance_Throws()
 }
 ```
 
-Další informace o rozhraní testování částí Microsoft naleznete v následujících tématech:
+Další informace o rozhraních testování částí společnosti Microsoft naleznete v jednom z následujících témat:
 
 - [Testování částí kódu](unit-test-your-code.md)
 
-- [Zápis testů jednotek pro C/C++](writing-unit-tests-for-c-cpp.md)
+- [Zápis testů částí pro C/C++](writing-unit-tests-for-c-cpp.md)
 
-- [Použití rozhraní MSTest při testech jednotek](using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)
+- [Použití architektury MSTest v jednotkových testech](using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)
 
-## <a name="set-timeouts-for-unit-tests"></a>Nastavit vypršení časového limitu pro testování částí
+## <a name="set-timeouts-for-unit-tests"></a>Nastavení časových lhůt pro testy částí
 
-Pokud používáte rozhraní MSTest Framework, můžete použít <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TimeoutAttribute> k nastavení časového limitu pro jednotlivé testovací metody:
+Pokud používáte architekturu MSTest, můžete <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TimeoutAttribute> použít k nastavení časového odčasového časového roku pro individuální testovací metodu:
 
 ```csharp
 [TestMethod]
@@ -222,7 +222,7 @@ public void My_Test()
 }
 ```
 
-Nastavit časový limit pro maximální povolený počet:
+Nastavení časového limitu na maximální povolenou hodnotu:
 
 ```csharp
 [TestMethod]
@@ -232,24 +232,24 @@ public void My_Test ()
 }
 ```
 
-## <a name="run-tests-in-test-explorer"></a>Spustit testy v Průzkumníku testů
+## <a name="run-tests-in-test-explorer"></a>Spuštění testů v Průzkumníkovi testů
 
-Když sestavíte testovací projekt, testy se zobrazí v **Průzkumníka testů**. Pokud **Průzkumník testů** není viditelný, zvolte **testovací** v nabídce sady Visual Studio, zvolte **Windows**a klikněte na tlačítko **Průzkumník testů**.
+Při vytváření testovacího projektu se testy zobrazí v **Průzkumníku testů**. Pokud **Průzkumník testů** není viditelný, zvolte **Testovat** v nabídce Visual Studio, zvolte **Windows**a pak zvolte **Test Explorer**.
 
 ::: moniker range="vs-2017"
-![Průzkumník testu jednotek](../test/media/ute_failedpassednotrunsummary.png)
+![Průzkumník testování částí](../test/media/ute_failedpassednotrunsummary.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-![Průzkumník testu jednotek](../test/media/vs-2019/basics-test-explorer.png)
+![Průzkumník testování částí](../test/media/vs-2019/basics-test-explorer.png)
 ::: moniker-end
 
-Když spouštíte, píšete a znovu spustíte testy, **Průzkumník testů** může zobrazit výsledky ve skupinách **neúspěšných testů**, **Úspěšné testy**, **přeskočené testy** a **nespouštět testy**. Na panelu nástrojů můžete vybrat jiné možnosti seskupení.
+Při spuštění, zápisu a opětovném spuštění testů může **Průzkumník testů** zobrazit výsledky ve skupinách **neúspěšných testů**, **Předané testy**, **Přeskočené testy** a **Nespouštět testy**. Na panelu nástrojů můžete zvolit různé možnosti podle skupiny.
 
-Můžete také filtrovat testy ve všech zobrazeních odpovídající text do vyhledávacího pole na globální úrovni nebo výběrem jedné z předdefinovaných filtrů. Kdykoli můžete spustit libovolných vybraných testů. Výsledky testovacího běhu se okamžitě zřejmý v panel úspěšný/selhání v horní části okna Průzkumníka. Podrobnosti výsledku testu metody se zobrazí, když vyberete testu.
+Testy můžete také filtrovat v libovolném zobrazení porovnáním textu ve vyhledávacím poli na globální úrovni nebo výběrem jednoho z předdefinovaných filtrů. Můžete spustit libovolný výběr testů kdykoli. Výsledky testu jsou okamžitě patrné v pruhu průchodu/selhání v horní části okna průzkumníka. Podrobnosti o výsledku zkušební metody jsou zobrazeny při výběru testu.
 
-### <a name="run-and-view-tests"></a>Spustit a zobrazit testy
+### <a name="run-and-view-tests"></a>Spuštění a zobrazení testů
 
-**Průzkumník testů** nástrojů umožňuje zjišťovat, uspořádání a spuštění testů, které vás zajímají.
+Panel nástrojů **Průzkumník testů** vám pomůže zjišťovat, organizovat a spouštět testy, které vás zajímají.
 
 ::: moniker range="vs-2017"
 ![Spuštění testů z panelu nástrojů Průzkumníka testů](../test/media/ute_toolbar.png)
@@ -258,92 +258,92 @@ Můžete také filtrovat testy ve všech zobrazeních odpovídající text do vy
 ![Spuštění testů z panelu nástrojů Průzkumníka testů](../test/media/vs-2019/test-explorer-toolbar-diagram-16-2.png)
 ::: moniker-end
 
-Můžete zvolit **spustit všechny** chcete spustit všechny testy, nebo zvolte **spustit** vybrat podmnožinu testů ke spuštění. Vyberte test, chcete-li zobrazit podrobnosti o testu v podokně podrobností testu. Zvolením možnosti **Otevřít test** z místní nabídky (klávesnice: **F12**) zobrazte zdrojový kód pro vybraný test.
+Můžete zvolit **Spustit vše** pro spuštění všech testů nebo zvolte **Spustit** a zvolte podmnožinu testů, které chcete spustit. Vyberte test pro zobrazení podrobností tohoto testu v podokně podrobností testu. Zvolte **Otevřít test** z nabídky po kliknutí pravým tlačítkem myši (Klávesnice: **F12**), chcete-li zobrazit zdrojový kód pro vybraný test.
 
 ::: moniker range="vs-2017"
 
-Je-li jednotlivé testy nemají žádné závislosti, které brání spuštění v libovolném pořadí, zapněte paralelní provádění testů s ![USTIT&#95;parallelicon&#45;malé](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může výrazně snížit čas potřebný ke spuštění všech testů.
+Pokud jednotlivé testy nemají žádné závislosti, které by bránily jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů s ![UTE&#95;parallelicon&#45;malý](../test/media/ute_parallelicon-small.png) přepínat na panelu nástrojů. To může výrazně zkrátit dobu trvalou ke spuštění všech testů.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní spuštění testů v nabídce nastavení na panelu nástrojů. To může výrazně snížit čas potřebný ke spuštění všech testů.
+Pokud jednotlivé testy nemají žádné závislosti, které brání jejich spuštění v libovolném pořadí, zapněte paralelní spuštění testu v nabídce nastavení panelu nástrojů. To může výrazně zkrátit dobu trvalou ke spuštění všech testů.
 
 ::: moniker-end
 
-### <a name="run-tests-after-every-build"></a>Spustit testy po každém sestavení
+### <a name="run-tests-after-every-build"></a>Spuštění testů po každém sestavení
 
 ::: moniker range="vs-2017"
 
 |Tlačítko|Popis|
 |-|-|
-|![Spustit po sestavení](../test/media/ute_runafterbuild_btn.png)|Chcete-li spustit testy jednotek po každém místním sestavení, zvolte možnost **test** v nabídce Standard a pak zvolte možnost **Spustit testy po sestavení** na panelu nástrojů **Průzkumníka testů** .|
+|![Spustit po sestavení](../test/media/ute_runafterbuild_btn.png)|Chcete-li spustit testy částí po každém místním sestavení, zvolte **Testovat** ve standardní nabídce a pak zvolte **Spustit testy po sestavení** na panelu nástrojů **Průzkumníka testů.**|
 
 > [!NOTE]
-> Spuštění testů jednotek po každém sestavení vyžaduje Visual Studio 2017 Enterprise Edition nebo Visual Studio 2019. V aplikaci Visual Studio 2019 je funkce k dispozici v komunitě a Professional Edition kromě Enterprise Edition.
+> Spuštění testů částí po každém sestavení vyžaduje visual studio 2017 Enterprise edition nebo Visual Studio 2019. V sadě Visual Studio 2019 je tato funkce k dispozici v edici Community a Professional kromě edice Enterprise.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Chcete-li spustit testy jednotek po každém místním sestavení, otevřete ikonu nastavení na panelu nástrojů Průzkumníka testů a vyberte možnost **Spustit testy po sestavení**.
+Chcete-li spustit testy částí po každém místním sestavení, otevřete ikonu nastavení na panelu nástrojů Průzkumníktestů a vyberte **spustit testy po sestavení**.
 
 ::: moniker-end
 
-### <a name="filter-and-group-the-test-list"></a>Filtr a seskupení seznamu testů
+### <a name="filter-and-group-the-test-list"></a>Filtrování a seskupit seznam testů
 
-Pokud máte velký počet testů, můžete zadat do vyhledávacího pole **Průzkumníka testů** , abyste seznam vyfiltroval podle zadaného řetězce. Můžete omezit další výběrem ze seznamu filtrů filtr události.
+Pokud máte velký počet testů, můžete zadat do vyhledávacího pole **Průzkumníka testů** a filtrovat seznam podle zadaného řetězce. Událost filtru můžete omezit více výběrem ze seznamu filtrů.
 
 ::: moniker range="vs-2017"
-![Vyhledávací filtr kategorií](../test/media/ute_searchfilter.png)
+![Kategorie vyhledávacího filtru](../test/media/ute_searchfilter.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-![Vyhledávací filtr kategorií](../test/media/vs-2019/test-explorer-search-filter-16-2.png)
+![Kategorie vyhledávacího filtru](../test/media/vs-2019/test-explorer-search-filter-16-2.png)
 ::: moniker-end
 
 |Tlačítko|Popis|
 |-|-|
-|![Tlačítko skupiny Průzkumníka testů](../test/media/ute_groupby_btn.png)|Chcete-li seskupit podle kategorie testů, zvolte **Group** tlačítko.|
+|![Tlačítko Skupiny Průzkumníka testů](../test/media/ute_groupby_btn.png)|Chcete-li testy seskupit podle kategorie, zvolte tlačítko **Seskupit podle.**|
 
-Další informace najdete v tématu [spouštění testů jednotek pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md).
+Další informace naleznete v [tématu Spuštění testů částí pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md).
 
-## <a name="qa"></a>FUNKCE Q &AMP; A
+## <a name="qa"></a>Q&A
 
-**Otázka: Jak mohu ladit testy jednotek?**
+**Otázka: Jak lze ladit testy částí?**
 
-**Odpověď:** použití **Průzkumník testů** spustíte relaci ladění pro testy. Krokování kódu s ladicím programem Visual Studio bez problémů přejdete vpřed a zpět mezi testováním částí a testovaný projekt. Spuštění ladění:
+**A:** Pomocí **Průzkumníka testů** spusťte relaci ladění testů. Krokování kódu s ladicím programem sady Visual Studio vás bez problémů přenese tam a zpět mezi testy částí a testovaného projektu. Zahájení ladění:
 
-1. V editoru sady Visual Studio nastavte zarážku v jedné nebo více testovacích metod, které chcete ladit.
+1. V editoru Visual Studio nastavte zarážku v jedné nebo více testovacích metod, které chcete ladit.
 
     > [!NOTE]
-    > Vzhledem k tomu, že zkušební metody lze spustit v libovolném pořadí, nastavte zarážky v všechny testovací metody, které chcete ladit.
+    > Vzhledem k tomu, že testovací metody lze spustit v libovolném pořadí, nastavte zarážky ve všech testovacích metod, které chcete ladit.
 
-2. V **Průzkumníka testů**, vyberte testovací metody a pak zvolte **ladit vybrané testy** z místní nabídky.
+2. V **Průzkumníkovi testů**vyberte testovací metody a v místní nabídce zvolte **Ladit vybrané testy.**
 
-Přečtěte si další podrobnosti o [ladění testů jednotek](../debugger/debugger-feature-tour.md).
+Další informace o [ladění testů částí](../debugger/debugger-feature-tour.md).
 
-**Otázka: Pokud používám TDD, postup generování kódu z mé testy?**
+**Otázka: Pokud používám TDD, jak mohu generovat kód z testů?**
 
-**A:** Pomocí rychlých akcí vygenerujte třídy a metody v kódu projektu. Zapište příkaz v testovací metodě, která volá třídu nebo metodu, kterou chcete vygenerovat, a pak otevřete žárovky, který se zobrazí pod chybou. Pokud je volání konstruktoru nové třídy, v nabídce vyberte možnost **generovat typ** a postupujte podle pokynů průvodce a vložte třídu do projektu kódu. Pokud je volání metody, v nabídce technologie IntelliSense vyberte možnost **generovat metodu** .
+**A:** Pomocí rychlých akcí vygenerujte třídy a metody v kódu projektu. Napište příkaz v testovací metodě, která volá třídu nebo metodu, kterou chcete generovat, a otevřete žárovku, která se zobrazí pod chybou. Pokud je volání konstruktoru nové třídy, zvolte **Generovat typ** z nabídky a postupujte podle průvodce pro vložení třídy do projektu kódu. Pokud je volání na metodu, zvolte **Generovat metodu** z nabídky IntelliSense.
 
 ::: moniker range="vs-2017"
-![Nabídka rychlé akce pro generování zástupných procedur pro generování metod](../test/media/ute_generatemethodstubintellisense.png)
+![Generovat nabídku rychlé akce se zakázaným inzerováním metod](../test/media/ute_generatemethodstubintellisense.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-![Nabídka rychlé akce pro generování zástupných procedur pro generování metod](../test/media/vs-2019/basics-generate-method-tdd.png)
+![Generovat nabídku rychlé akce se zakázaným inzerováním metod](../test/media/vs-2019/basics-generate-method-tdd.png)
 ::: moniker-end
 
-**Dotaz: lze vytvořit testy jednotek, neměl zabrat víc kopií dat jako vstup pro spuštění testu?**
+**Otázka: Lze vytvořit testy částí, které trvat více sad dat jako vstup ke spuštění testu?**
 
-**Odpověď:** Ano. *Test řízený daty metody* umožní otestovat rozsah hodnot s testovací metodou jednu jednotku. Použití `DataSource` atribut testovací metody, která určuje zdroj dat a tabulky, který obsahuje hodnoty proměnné, které chcete testovat.  V těle metody přiřazují hodnoty řádků do proměnných pomocí `TestContext.DataRow[` *Názevsloupce* `]` indexeru.
+**Odpověď:** Ano. *Testovací metody řízené daty* umožňují testovat rozsah hodnot pomocí jedné zkušební metody jednotky. Použijte `DataSource` atribut pro testovací metodu, která určuje zdroj dat a tabulku obsahující hodnoty proměnných, které chcete testovat.  V těle metody přiřadíte hodnoty řádků proměnným pomocí indexeru `TestContext.DataRow[` *ColumnName.* `]`
 
 > [!NOTE]
-> Tyto postupy platí pouze pro testovací metody, které zapisují pomocí rozhraní pro testování jednotek Microsoft pro spravovaný kód. Pokud používáte jiné rozhraní, najdete v dokumentaci rozhraní ekvivalentní funkce.
+> Tyto postupy platí pouze pro testovací metody, které píšete pomocí rozhraní Microsoft unit test framework pro spravovaný kód. Pokud používáte jiný rámec, podívejte se do rámcové dokumentace pro ekvivalentní funkce.
 
-Předpokládejme například, můžeme přidat zbytečné způsob `CheckingAccount` třídu, která má název `AddIntegerHelper`. `AddIntegerHelper` Přidá dvou celých čísel.
+Předpokládejme například, že přidáme `CheckingAccount` nepotřebnou `AddIntegerHelper`metodu do třídy s názvem . `AddIntegerHelper`přidá dvě celá čísla.
 
-Chcete-li vytvořit test řízený daty pro `AddIntegerHelper` metodě nejprve vytvoříme databázi aplikace Access s názvem *AccountsTest.accdb* a tabulku s názvem `AddIntegerHelperData`. `AddIntegerHelperData` Tabulka definuje sloupce, které chcete zadat prvního a druhého operandu sčítání a ve sloupci k určení očekávaný výsledek. Jsme počet řádků, vyplnit odpovídající hodnoty.
+Chcete-li vytvořit test řízený `AddIntegerHelper` daty pro metodu, nejprve vytvoříme databázi `AddIntegerHelperData`aplikace Access s názvem *AccountsTest.accdb* a tabulku s názvem . Tabulka `AddIntegerHelperData` definuje sloupce pro určení prvního a druhého operandů přidání a sloupec pro určení očekávaného výsledku. Vyplníme řadu řádků s příslušnými hodnotami.
 
 ```csharp
 [DataSource(
@@ -362,42 +362,42 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
 }
 ```
 
-Atributy metody spustí jednou pro každý řádek v tabulce. **Průzkumník testů** hlásí selhání testu pro metodu, pokud selžou i všechny iterace. Podokno podrobností výsledky testu pro metodu zobrazuje metodu úspěšného/neúspěšného stav pro každý řádek dat.
+Přiřazená metoda je spuštěna jednou pro každý řádek v tabulce. **Průzkumník testů** hlásí selhání testu pro metodu, pokud některá z iterací nezdaří. Podokno podrobností výsledků testu pro metodu zobrazuje metodu stavu průchodu/selhání pro každý řádek dat.
 
-Další informace o [testy jednotek řízené daty](../test/how-to-create-a-data-driven-unit-test.md).
+Další informace o [testech částí řízených daty](../test/how-to-create-a-data-driven-unit-test.md).
 
-**Dotaz: lze zobrazit, jak velká část kódu je testována mých testů jednotek?**
+**Otázka: Lze zobrazit, kolik kódu je testováno testy částí?**
 
-**Odpověď:** Ano. Můžete určit množství kódu, který je skutečně testován pomocí testu jednotek pomocí nástroje pokrytí kódu Visual Studio v Visual Studio Enterprise. Jsou podporovány nativní a spravované jazyky a všechna rozhraní pro testování částí, které můžou běžet v rámci testu rozhraní jednotky.
+**Odpověď:** Ano. Můžete určit množství kódu, který je ve skutečnosti testován testy částí pomocí nástroje pokrytí kódu Sady Visual Studio v sadě Visual Studio Enterprise. Nativní a spravované jazyky a všechny architektury testování částí, které lze spustit rozhraním testování částí jsou podporovány.
 
-Můžete spustit pokrytí kódem u vybraných testů nebo u všech testů v řešení. **Výsledky pokrytí kódu** okno zobrazuje procento bloků kódu produktu, které byly vykonány podle řádku, funkce, třídy, oboru názvů a modulu.
+Pokrytí kódu můžete spustit na vybraných testech nebo na všech testech v řešení. Okno **Výsledky pokrytí kódu** zobrazuje procento bloků kódu produktu, které byly uplatněny podle řádku, funkce, třídy, oboru názvů a modulu.
 
-Chcete-li spustit pokrytí kódu pro testovací metody v řešení, vyberte možnost **test** > **Analyzovat pokrytí kódu pro všechny testy**.
+Chcete-li spustit pokrytí kódu pro testovací metody v řešení, zvolte **Testovat** > **analyzovat pokrytí kódu pro všechny testy**.
 
-Výsledky pokrytí se zobrazí v **výsledky pokrytí kódu** okna.
+Výsledky disponibility se zobrazí v okně **Výsledky pokrytí kódu.**
 
 ![Výsledky pokrytí kódu](../test/media/ute_codecoverageresults.png)
 
 Další informace o [pokrytí kódu](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md) .
 
-**Dotaz: lze zkušební metody v okně můj kód, který mají vnější závislosti?**
+**Otázka: Lze testovat metody v kódu, které mají externí závislosti?**
 
-**Odpověď:** Ano. Pokud máte Visual Studio Enterprise, Microsoft Fakes lze použít s testovacími metodami, které zapisují pomocí rozhraní pro testování částí pro spravovaný kód.
+**Odpověď:** Ano. Pokud máte Visual Studio Enterprise, Microsoft Fakes lze použít s testovací metody, které píšete pomocí rozhraní testování částí pro spravovaný kód.
 
-Microsoft Fakes používá dva přístupy k vytvoření náhradní třídy u externích závislostí:
+Microsoft Fakes používá dva přístupy k vytvoření náhradní třídy pro externí závislosti:
 
-1. *Zástupné procedury* generovat náhradní třídy odvozené od nadřazené rozhraní cílovou třídu závislostí. Veřejné virtuální metody cílové třídy mohou být nahrazeny metody zástupných procedur.
+1. *Zástupné procedury* generují náhradní třídy odvozené z nadřazeného rozhraní cílové třídy závislostí. Metody se zakázaným inzerováním lze nahradit veřejné virtuální metody cílové třídy.
 
-2. *Překrytí* použít k rozdělení volání cílové metody k metodě náhradní překrytí pro nevirtuální metody instrumentace modulu runtime.
+2. *Překrytí* pomocí instrumentace za běhu přesměrovat volání na cílovou metodu na metodu náhradní překrytí pro nevirtuální metody.
 
-V oba přístupy pomocí generovaného delegáti volání metody závislostí můžete určit chování, které chcete v testovací metodě.
+V obou přístupech použijete generované delegáty volání metody závislosti k určení chování, které chcete v testovací metodě.
 
-Další informace o [izolace metody jednotkového testu s Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md).
+Další informace o [izolaci metod testování částí pomocí služby Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md).
 
-**Otázka: Mohu použít jiné rozhraní pro testování částí pro vytvoření testů jednotek?**
+**Otázka: Lze použít jiné rozhraní testování částí k vytvoření testování částí?**
 
-**Odpověď:** Ano, postupujte podle těchto kroků [najít a nainstalovat jiná rozhraní Framework](../test/install-third-party-unit-test-frameworks.md). Po restartování sady Visual Studio otevřete řešení k vytvoření testování částí a poté vyberte nainstalované rozhraní tady:
+**A:** Ano, pomocí těchto kroků [vyhledejte a nainstalujte další rozhraní](../test/install-third-party-unit-test-frameworks.md). Po restartování sady Visual Studio znovu otevřete řešení a vytvořte testy částí a vyberte zde nainstalované architektury:
 
-![Vyberte jiné nainstalované testování částí](../test/media/createunittestsdialogextensions.png)
+![Vyberte další architekturu testování nainstalované jednotky](../test/media/createunittestsdialogextensions.png)
 
-Vaše zástupné procedury testu jednotek se vytvoří pomocí vybrané architektuře.
+Vaše testovací útržky jednotky budou vytvořeny pomocí vybraného rozhraní.

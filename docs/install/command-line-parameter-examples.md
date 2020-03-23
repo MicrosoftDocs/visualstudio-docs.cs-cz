@@ -1,6 +1,6 @@
 ---
 title: Příklady parametrů příkazového řádku pro instalaci
-description: Přizpůsobení těchto příkladech, chcete-li vytvořit vlastní instalaci sady Visual Studio z příkazového řádku.
+description: Přizpůsobte si tyto příklady a vytvořte vlastní instalaci sady Visual Studio na příkazovém řádku.
 ms.date: 03/30/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -13,29 +13,29 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 8fc43cef8526b2ca79bb0b88a1d56ef4f4a2a65a
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77275264"
 ---
 # <a name="command-line-parameter-examples-for-visual-studio-installation"></a>Příklady parametrů příkazového řádku pro instalaci sady Visual Studio
 
-Pro ilustraci, jak [použít parametry příkazového řádku k instalaci sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md), je zde několik příkladů, které můžete přizpůsobit, aby odpovídaly vašim potřebám.
+Chcete-li ilustrovat, jak [používat parametry příkazového řádku k instalaci sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md), zde je několik příkladů, které můžete přizpůsobit tak, aby odpovídaly vašim potřebám.
 
-V každém příkladu `vs_enterprise.exe`, `vs_professional.exe` a `vs_community.exe` představuje příslušnou edici zaváděcího nástroje sady Visual Studio, což je malý (přibližně 1 MB) soubor, který iniciuje proces stahování. Pokud používáte jinou verzi, nahraďte název odpovídající zaváděcího nástroje.
+V každém `vs_enterprise.exe`příkladu `vs_community.exe` a `vs_professional.exe` představují příslušné vydání zaváděcího nástroje Sady Visual Studio, což je malý (přibližně 1 MB) soubor, který iniciuje proces stahování. Pokud používáte jinou edici, nahraďte příslušný název zaváděcího nástroje.
 
 > [!NOTE]
-> Všechny příkazy vyžadovat zvýšení oprávnění pro správu a řízení uživatelských účtů, výzva se zobrazí, pokud proces není spuštěn řádku se zvýšenými oprávněními.
+> Všechny příkazy vyžadují zvýšení oprávnění správce a zobrazí se výzva Řízení uživatelských účtů, pokud proces není spuštěn z výzvy se zvýšenými oprávněními.
 >
 > [!NOTE]
-> Můžete použít `^` znak na konci příkazového řádku, chcete-li zřetězit více řádků do jediného příkazu. Alternativně můžete umístit společně na jediném řádku tyto řádky. V PowerShellu je ekvivalentní znak pro`` ` ``(. zaškrtnutí).
+> Znak na `^` konci příkazového řádku můžete použít ke zřetězení více řádků do jednoho příkazu. Případně můžete jednoduše umístit tyto řádky dohromady na jeden řádek. V prostředí PowerShell je ekvivalentní`` ` ``znak backtick ( ).
 
-Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového řádku, najdete na stránce s [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md) .
+Seznamy úloh a součástí, které můžete nainstalovat pomocí příkazového řádku, najdete na stránce [ID úloh a součástí sady Visual Studio.](workload-and-component-ids.md)
 
-## <a name="using---installpath"></a>Pomocí--installPath
+## <a name="using---installpath"></a>Použití --installPath
 
-* Nainstalujte minimální instanci sady Visual Studio, s žádné interaktivní výzvy, ale zobrazuje průběh:
+* Nainstalujte minimální instanci sady Visual Studio bez interaktivních výzev, ale průběhu se zobrazí:
 
   ```cmd
    vs_enterprise.exe --installPath C:\minVS ^
@@ -43,7 +43,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
    --passive --norestart
   ```
 
-* Aktualizace instance sady Visual Studio pomocí příkazového řádku se žádné interaktivní výzvy, ale zobrazuje průběh:
+* Aktualizujte instanci sady Visual Studio pomocí příkazového řádku bez interaktivních výzev, ale průběhu:
 
    ```cmd
    vs_enterprise.exe --update --quiet --wait
@@ -51,9 +51,9 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
    ```
 
   > [!NOTE]
-  > Oba příkazy jsou doporučené. První příkaz aktualizuje instalační program sady Visual Studio. Druhý příkaz aktualizuje instanci sady Visual Studio. Aby se zabránilo dialogové okno Řízení uživatelských účtů, spusťte příkazový řádek jako správce.
+  > Oba příkazy se doporučuje. První příkaz aktualizuje Instalační program sady Visual Studio. Druhý příkaz aktualizuje instanci sady Visual Studio. Chcete-li se vyhnout dialogovému oknu Řízení uživatelských účtů, spusťte příkazový řádek jako správce.
 
-* Klasické pracovní plochy instanci sady Visual Studio tichou instalaci, Francouzská jazyková sada, vrací pouze v případě, že je nainstalován produkt.
+* Nainstalujte instanci plochy sady Visual Studio bezobslužně pomocí francouzské jazykové sady, která se vrací pouze v případě, že je produkt nainstalován.
 
   ```cmd
    vs_enterprise.exe --installPath C:\desktopVS ^
@@ -62,9 +62,9 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
    --includeRecommended --quiet --wait
   ```
 
-## <a name="using---wait"></a>Použití--Wait
+## <a name="using---wait"></a>Použití --wait
 
-* Použijte v dávkových souborech nebo skriptech k čekání na dokončení instalačního programu sady Visual Studio před provedením dalšího příkazu. V případě dávkových souborů bude proměnná prostředí `%ERRORLEVEL%` obsahovat vrácenou hodnotu příkazu, jak je popsáno v [parametrech příkazového řádku use pro instalaci sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md) . Některé příkazové nástroje vyžadují další parametry pro čekání na dokončení a získání návratové hodnoty instalačního programu. Následuje příklad dalších parametrů použitých s příkazem PowerShell Script Start-Process:
+* Slouží v dávkových souborech nebo skriptech a počkejte, až se instalační program sady Visual Studio dokončí, než bude proveden další příkaz. U dávkových `%ERRORLEVEL%` souborů bude proměnná prostředí obsahovat vrácenou hodnotu příkazu, jak je popsáno v [parametrech příkazového řádku Použít parametry příkazového řádku k instalaci](use-command-line-parameters-to-install-visual-studio.md) sady Visual Studio. Některé nástroje příkazu vyžadují další parametry, aby čekaly na dokončení a získaly vrácenou hodnotu instalačního programu. Následuje příklad dalších parametrů použitých s příkazem skriptu prostředí PowerShell "Start-Process":
 
    ```cmd
    start /wait vs_professional.exe --installPath "C:\VS" --passive --wait > nul
@@ -75,7 +75,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
    $exitCode = Start-Process -FilePath vs_enterprise.exe -ArgumentList "--installPath", "C:\VS", "--passive", "--wait" -Wait -PassThru
    ```
 
-   nebo
+   – nebo –
 
    ```powershell
     $startInfo = New-Object System.Diagnostics.ProcessStartInfo
@@ -87,11 +87,11 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
     $process.WaitForExit()
    ```
 
-* První '--wait ' je používán Instalační program pro Visual Studio a druhá '-wait ' je používána ' Start-proces ' k čekání na dokončení. Parametr-PassThru se používá v příkazu Start-Process k použití ukončovacího kódu instalačního programu pro jeho návratovou hodnotu.
+* První '--wait' používá Instalační služba sady Visual Studio a druhý '-Wait' se používá 'Start-Process' čekat na dokončení. Parametr '-PassThru' používá "Start-Process" k použití ukončovacího kódu instalačního programu pro jeho vrácenou hodnotu.
 
-## <a name="using---layout"></a>Pomocí parametru--rozložení
+## <a name="using---layout"></a>Použití --layout
 
-* Stáhněte si základní editor sady Visual Studio (nejvíce minimální konfigurace sady Visual Studio). Zahrnout pouze anglické jazykové sady:
+* Stáhněte si základní editor Visual Studio (minimální konfigurace sady Visual Studio). K dispozici je pouze anglická jazyková sada:
 
   ```cmd
    vs_community.exe --layout C:\VS ^
@@ -99,7 +99,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
    --add Microsoft.VisualStudio.Workload.CoreEditor
   ```
 
-* Stáhněte .NET desktop a webové úlohy .NET spolu s všechny doporučené součásti a rozšíření GitHub. Zahrnout pouze anglické jazykové sady:
+* Stáhněte si webové úlohy .NET pro stolní počítače a .NET spolu se všemi doporučenými součástmi a rozšířením GitHub. K dispozici je pouze anglická jazyková sada:
 
   ```cmd
    vs_community.exe --layout C:\VS ^
@@ -110,7 +110,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
    --includeRecommended
   ```
 
-## <a name="using---all"></a>Použití--All
+## <a name="using---all"></a>Použití --all
 
 * Spusťte interaktivní instalaci všech úloh a součástí, které jsou k dispozici v edici Visual Studio Enterprise:
 
@@ -118,20 +118,20 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
    vs_enterprise.exe --all
    ```
 
-## <a name="using---includerecommended"></a>Pomocí--includeRecommended
+## <a name="using---includerecommended"></a>Použití --includeRecommended
 
-* Instalace druhé pojmenované instance Visual Studio Professional na počítači s již nainstalovanou sadou Visual Studio Community Edition s podporou vývoje pro Node. js:
+* Nainstalujte druhou pojmenovanou instanci sady Visual Studio Professional do počítače s již nainstalovanou edicí Visual Studio Community s podporou vývoje node.js:
 
    ```cmd
    vs_professional.exe --installPath C:\VSforNode ^
    --add Microsoft.VisualStudio.Workload.Node --includeRecommended --nickname VSforNode
   ```
 
-## <a name="using---remove"></a>Pomocí parametru--odebrat
+## <a name="using---remove"></a>Použití --remove
 
 ::: moniker range="vs-2017"
 
-* Odebrat součást nástrojů pro profilaci z výchozího nainstalované instance sady Visual Studio:
+* Odeberte komponentu Nástroje profilování z výchozí instanci sady Visual Studio:
 
   ```cmd
    vs_enterprise.exe modify ^
@@ -144,7 +144,7 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
 
 ::: moniker range="vs-2019"
 
-* Odebrat součást nástrojů pro profilaci z výchozího nainstalované instance sady Visual Studio:
+* Odeberte komponentu Nástroje profilování z výchozí instanci sady Visual Studio:
 
   ```cmd
    vs_enterprise.exe modify ^
@@ -155,65 +155,65 @@ Seznam úloh a komponent, které můžete nainstalovat pomocí příkazového ř
 
 ::: moniker-end
 
-## <a name="using---path"></a>Pomocí parametru--cesty
+## <a name="using---path"></a>Použití --cesty
 
 ::: moniker range="vs-2017"
 
-Tyto parametry příkazového řádku jsou **v 15,7 nové**. Další informace o těchto možnostech naleznete na stránce [použití parametrů příkazového řádku pro instalaci sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md) .
+Tyto parametry příkazového řádku jsou **nové v 15.7**. Další informace o nich naleznete na stránce [Visual Studio Pomocí parametrů příkazového řádku.](use-command-line-parameters-to-install-visual-studio.md)
 
 ::: moniker-end
 
-* Pomocí instalace, mezipaměť a sdílené cesty:
+* Použití cesty instalace, mezipaměti a sdílených cest:
 
   `vs_enterprise.exe --add Microsoft.VisualStudio.Workload.CoreEditor --path install="C:\VS" --path cache="C:\VS\cache" --path shared="C:\VS\shared"`
 
-* Pomocí jenom cesty instalace a mezipaměti:
+* Použití pouze cest k instalaci a mezipaměti:
 
   `vs_enterprise.exe --add Microsoft.VisualStudio.Workload.CoreEditor --path install="C:\VS" --path cache="C:\VS\cache"`
 
-* Pomocí instalace a sdílené cesty:
+* Použití pouze instalačních a sdílených cest:
 
   `vs_enterprise.exe --add Microsoft.VisualStudio.Workload.CoreEditor --path install="C:\VS" --path shared="C:\VS\shared"`
 
-* Použití pouze instalační cesta:
+* Použití pouze instalační cesty:
 
   `vs_enterprise.exe --add Microsoft.VisualStudio.Workload.CoreEditor --path install="C:\VS"`
 
-## <a name="using-export"></a>Použití možnosti exportovat
+## <a name="using-export"></a>Použití exportu
 
 ::: moniker range="vs-2017"
 
-Tento příkaz příkazového řádku je **v 15,9 nový**. Další informace o tom, jak nainstalovat stránku sady Visual Studio, najdete v tématu [použití parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md) .
+Tento příkaz příkazového řádku je **nový v 15.9**. Další informace o něm naleznete na stránce [Visual Studio Pomocí parametrů příkazového řádku.](use-command-line-parameters-to-install-visual-studio.md)
 
 ::: moniker-end
 
-* Pomocí exportu a uložte výběr z instalace:
+* Použití exportu k uložení výběru z instalace:
 
   ```cmd
   "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe" export --installPath "C:\VS" --config "C:\.vsconfig"
   ```
 
-* Uložte vlastní výběr úplně od začátku pomocí exportu:
+* Použití exportu k uložení vlastního výběru od začátku:
 
   ```cmd
   "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe" export --add Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended --config "C:\.vsconfig"
   ```
 
-## <a name="using---config"></a>Pomocí--config
+## <a name="using---config"></a>Použití --config
 
 ::: moniker range="vs-2017"
 
-Tento parametr příkazového řádku je **v 15,9 nový**. Další informace o tom, jak nainstalovat stránku sady Visual Studio, najdete v tématu [použití parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md) .
+Tento parametr příkazového řádku je **nový v 15.9**. Další informace o něm naleznete na stránce [Visual Studio Pomocí parametrů příkazového řádku.](use-command-line-parameters-to-install-visual-studio.md)
 
 ::: moniker-end
 
-* Instalace úloh a součástí z předchozího uloženého instalace konfiguračního souboru pomocí--config:
+* Použití --config k instalaci úloh a součástí z dříve uloženého konfiguračního souboru instalace:
 
   ```cmd
   vs_enterprise.exe --config "C:\.vsconfig" --installPath "C:\VS"
   ```
 
-* Přidání úlohy a komponenty do existující instalace pomocí--config:
+* Použití --config k přidání úloh a součástí do existující instalace:
 
   ```cmd
   vs_enterprise.exe modify --installPath "C:\VS" --config "C:\.vsconfig"
@@ -223,7 +223,7 @@ Tento parametr příkazového řádku je **v 15,9 nový**. Další informace o t
 
 ## <a name="see-also"></a>Viz také
 
-* [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)
-* [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
+* [Příručka administrátora sady Visual Studio](visual-studio-administrator-guide.md)
+* [Instalace sady Visual Studio pomocí parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 * [Vytvoření offline instalace sady Visual Studio](create-an-offline-installation-of-visual-studio.md)
 * [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md)

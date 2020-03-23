@@ -10,37 +10,37 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 10433c63e0bad00d187f79634f74fa3727edc3dc
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76113294"
 ---
-# <a name="how-to-create-custom-graphs-in-load-test-results"></a>Postupy: vytváření vlastních grafů v načítání výsledků testu
+# <a name="how-to-create-custom-graphs-in-load-test-results"></a>Postup: Vytvoření vlastních grafů ve výsledcích zátěžového testu
 
-Můžete navrhovat grafy, které zobrazí konkrétní informace o výsledcích zátěžového testu. Navrhněte vlastní graf tak, že zadáte počítadla testu zatížení, které se zobrazí grafu.
+Můžete navrhnout grafy, které zobrazují konkrétní informace o výsledcích zátěžových testů. Vlastní graf navrhnete zadáním čítačů zátěžového testu, které se zobrazí v grafu.
 
-Následující postup můžete provést při spuštění zátěžového testu nebo po jeho dokončení.
+Můžete provést následující postup buď v době spuštění zátěžového testu, nebo po jeho dokončení.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="to-create-a-custom-load-test-results-graph"></a>K vytvoření grafu výsledků vlastní zátěžového testu
+## <a name="to-create-a-custom-load-test-results-graph"></a>Vytvoření grafu výsledků vlastních zátěžových testů
 
-1. Na **zátěžový Test** nástrojů, zvolte **přidat nový graf**.
+1. Na panelu nástrojů **Zátěžový test** zvolte **Přidat nový graf**.
 
-     \- nebo –
+     \-nebo -
 
-     Na **Analyzéru zátěžového testu**, klikněte pravým tlačítkem **čítače** panelu nebo v grafu a pak vyberte **přidat graf**.
+     V **analyzátoru zátěžového testu**klepněte pravým tlačítkem myši na panel **Čítače** nebo v grafu a pak vyberte **přidat graf**.
 
-     **Zadejte název grafu** se zobrazí dialogové okno.
+     Zobrazí se dialogové okno **Zadat název grafu.**
 
-2. V části **název grafu**, zadejte název pro graf a zvolte **OK**.
+2. V části **Název grafu**zadejte název grafu a zvolte **OK**.
 
-     Nový graf se zobrazí v **Analyzéru zátěžového testu**. Zobrazí se v panelu aktuálně vybranému grafu. nahradí grafu, který se zobrazí v panelu.
+     Nový graf se zobrazí v **analyzátoru zátěžového testu**. Zobrazí se v aktuálně vybraném panelu grafu; nahradí graf, který byl zobrazen v tomto panelu.
 
-3. Nový graf přizpůsobte tak, že přidáte čítače. Další informace najdete v tématu [postupy: Přidání a odstranění čítačů pro grafy](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md).
+3. Přizpůsobte nový graf přidáním čítačů. Další informace naleznete v [tématu Jak: Přidání a odstranění čítačů v grafech](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Analýza výsledků zátěžových testů v zobrazení grafů](../test/analyze-load-test-results-in-the-graphs-view.md)
-- [Postupy: Přidání a odstranění čítačů pro grafy](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)
+- [Analýza výsledků zátěžových testů v zobrazení Grafy](../test/analyze-load-test-results-in-the-graphs-view.md)
+- [Postup: Přidání a odstranění čítačů v grafech](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)

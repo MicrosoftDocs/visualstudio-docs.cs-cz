@@ -1,5 +1,5 @@
 ---
-title: Odstranit úlohu | Microsoft Docs
+title: Odstranit úkol | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c9effb00c613c5a61a5a8d4d89cbbe5b785601d8
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634276"
 ---
 # <a name="delete-task"></a>Delete – úloha
@@ -31,24 +31,24 @@ Odstraní zadané soubory.
 
 ## <a name="parameters"></a>Parametry
 
-Následující tabulka popisuje parametry úlohy `Delete`.
+Následující tabulka popisuje parametry `Delete` úkolu.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`DeletedFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem>parametr Output `[]`.<br /><br /> Určuje soubory, které se úspěšně odstranily.|
-|`Files`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje soubory, které se mají odstranit.|
-|`TreatErrorsAsWarnings`|Volitelný parametr `Boolean`<br /><br /> Pokud `true`, chyby se protokolují jako upozornění. Výchozí hodnota je `false`.|
+|`DeletedFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Určuje soubory, které byly úspěšně odstraněny.|
+|`Files`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje soubory, které chcete odstranit.|
+|`TreatErrorsAsWarnings`|Volitelný `Boolean` parametr<br /><br /> Pokud `true`jsou chyby zaznamenány jako upozornění. Výchozí hodnota je `false`.|
 
 ## <a name="remarks"></a>Poznámky
 
-Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, které sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
+Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
 
 > [!WARNING]
-> Při použití zástupných znaků s úkolem `Delete` buďte opatrní. Nesprávné soubory můžete snadno odstranit pomocí výrazů jako `$(SomeProperty)\**\*.*` nebo `$(SomeProperty)/**/*.*`, zejména pokud je vlastnost vyhodnocena jako prázdný řetězec. v takovém případě se parametr `Files` může vyhodnotit na kořenový adresář jednotky a odstranit mnohem více, než jste chtěli odstranit.
+> Buďte opatrní při použití zástupných znaků s úkolem. `Delete` Můžete snadno odstranit nesprávné soubory s `$(SomeProperty)\**\*.*` `$(SomeProperty)/**/*.*`výrazy jako nebo , zejména v případě, `Files` že vlastnost vyhodnotí na prázdný řetězec, v takovém případě parametr může vyhodnotit do kořenového adresáře jednotky a odstranit mnohem více, než jste chtěli odstranit.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad odstraní soubor *MyApp. pdb*.
+Následující příklad odstraní soubor *MyApp.pdb*.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

@@ -1,5 +1,5 @@
 ---
-title: Element parametru | Microsoft Docs
+title: Element skupiny parametrů | Dokumenty společnosti Microsoft
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -17,17 +17,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8c06b9c530d3fff0fdfa429df633daaa4dde8c52
-ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78263070"
 ---
-# <a name="parametergroup-element"></a>ParameterGroup – element
+# <a name="parametergroup-element"></a>Element ParameterGroup
 
-Obsahuje volitelný seznam parametrů, které budou k dispozici u úlohy vygenerované `TaskFactory``UsingTask`. Další informace naleznete v tématu [UsingTask element (MSBuild)](../msbuild/usingtask-element-msbuild.md).
+Obsahuje volitelný seznam parametrů, které budou k dispozici na úkolu, který je generován `UsingTask` `TaskFactory`. Další informace naleznete [v tématu UsingTask element (MSBuild)](../msbuild/usingtask-element-msbuild.md).
 
- \<projektu > \<UsingTask > \<parametru >
+ \<> \<projektu pomocí \<>> parametry>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,29 +35,29 @@ Obsahuje volitelný seznam parametrů, které budou k dispozici u úlohy vygener
 <ParameterGroup />
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
 
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Ukazatele](../msbuild/parameter-element.md)|Obsahuje informace o konkrétním parametru pro úkol, který je generován `TaskFactory``UsingTask`. Název prvku je název parametru.|
+|[Parametr](../msbuild/parameter-element.md)|Obsahuje informace o konkrétním parametru pro úkol, `UsingTask` `TaskFactory`který je generován . Název prvku je název parametru.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-| Prvek | Popis |
+| Element | Popis |
 | - | - |
-| [UsingTask](../msbuild/usingtask-element-msbuild.md) | Poskytuje způsob, jak registrovat úlohy v nástroji MSBuild. V projektu může být nula nebo více `UsingTask` prvků. |
+| [UsingTask](../msbuild/usingtask-element-msbuild.md) | Poskytuje způsob, jak zaregistrovat úkoly v MSBuild. V projektu může `UsingTask` být nula nebo více prvků. |
 
 ## <a name="example"></a>Příklad
 
- Následující příklad ukazuje použití prvku `ParameterGroup`.
+ Následující příklad ukazuje, jak `ParameterGroup` použít prvek.
 
 ```xml
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">
@@ -72,8 +72,8 @@ Obsahuje volitelný seznam parametrů, které budou k dispozici u úlohy vygener
 </UsingTask>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
-- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

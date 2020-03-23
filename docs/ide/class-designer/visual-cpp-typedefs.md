@@ -1,5 +1,5 @@
 ---
-title: C++Definice typedef v Návrhář tříd
+title: C++ Typedefs v Návrháři tříd
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,15 +14,15 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4c57382809b7730df2d7c674c24902d70ccab647
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590693"
 ---
-# <a name="c-typedefs-in-class-designer"></a>C++definice typedef v Návrhář tříd
+# <a name="c-typedefs-in-class-designer"></a>C++ typedefs v Návrháři tříd
 
-Příkazy [typedef](/cpp/cpp/aliases-and-typedefs-cpp#typedefs) vytvoří jednu nebo více vrstev dereference mezi názvem a jeho nadřízeným typem. **Návrhář tříd** podporuje C++ typy typedef, které jsou deklarovány pomocí klíčového slova `typedef`, například:
+[Příkazy Typedef](/cpp/cpp/aliases-and-typedefs-cpp#typedefs) vytvářejí jednu nebo více vrstev dereference mezi názvem a jeho základním typem. **Návrhář tříd** podporuje typy typedef jazyka C++, které jsou deklarovány pomocí klíčového slova `typedef`, například:
 
 ```cpp
 typedef class coord
@@ -33,28 +33,28 @@ typedef class coord
 } COORD;
 ```
 
-Pak můžete použít tento typ k deklaraci instance:
+Tento typ pak můžete použít k deklarování instance:
 
 `COORD OriginPoint;`
 
-## <a name="class-and-struct-shapes"></a>Obrazce třídy a struktury
+## <a name="class-and-struct-shapes"></a>Tvary tříd a struktury
 
-V **Návrhář tříd**má C++ definice typedef tvar typu určeného v typedef. Pokud zdroj deklaruje `typedef class`, má obrazec zaoblené rohy a **třídu**Label. U `typedef struct`tvar má čtvercové rohy a **strukturu**popisku.
+V **Návrháře tříd**má c++ typedef tvar typu určeného v typedef. Pokud zdroj deklaruje `typedef class`, má tvar zaoblené rohy a popisek **Class**. Pro `typedef struct`obrazec má čtvercové rohy a popisek **Struct**.
 
-Třídy a struktury mohou mít v rámci sebe vnořené definice typedef deklarované. V **Návrhář tříd**tvary třídy a struktury mohou zobrazit vnořené deklarace typedef jako vnořené tvary.
+Třídy a struktury mohou mít vnořené typedefs deklarované v nich. V **návrháři tříd**mohou obrazce třídy a struktury zobrazovat vnořené deklarace typedef jako vnořené obrazce.
 
-Tvary typedef podporují příkazy **Zobrazit jako přidružení** a **Zobrazit jako přidružení kolekce** v místní nabídce (kontextová nabídka) kliknutím pravým tlačítkem myši.
+Typy Typedef podporují příkazy **Zobrazit jako přidružení** a Zobrazit jako přidružení **kolekce** v nabídce pravým tlačítkem myši (místní nabídka).
 
-### <a name="class-typedef-example"></a>Definice třídy – příklad
+### <a name="class-typedef-example"></a>Příklad typedef třídy
 
 ```cpp
 class B {};
 typedef B MyB;
 ```
 
-![C++definice třídy v Návrhář tříd](media/cpp-class-typedef.png)
+![C++ class typedef v Návrháři tříd](media/cpp-class-typedef.png)
 
-### <a name="struct-typedef-example"></a>Příklad definice struktury
+### <a name="struct-typedef-example"></a>Příklad struktury typedef
 
 ```cpp
 typedef struct mystructtag
@@ -64,11 +64,11 @@ typedef struct mystructtag
 } mystruct;
 ```
 
-![C++definice typu struktury v Návrhář tříd](media/cpp-struct-typedef.png)
+![C++ struct typedef v Návrháři tříd](media/cpp-struct-typedef.png)
 
-## <a name="unnamed-typedefs"></a>Nepojmenované definice typedef
+## <a name="unnamed-typedefs"></a>Nepojmenované typedefs
 
-I když můžete deklarovat typedef bez názvu, **Návrhář tříd** nepoužívá název značky, který zadáte. **Návrhář tříd** používá název, který **zobrazení tříd** generuje. Například následující deklarace je platná, ale zobrazí se v **zobrazení tříd** a **Návrhář tříd** jako objekt s názvem **__unnamed**:
+I když můžete deklarovat typedef bez názvu, **Návrhář tříd** nepoužívá název značky, který zadáte. **Návrhář tříd** používá název, který generuje **zobrazení třídy.** Například následující deklarace je platná, ale zobrazí se v **zobrazení třídy** a **Návrháře tříd** jako objekt s názvem **__unnamed**:
 
 ```cpp
 typedef class coord
@@ -80,9 +80,9 @@ typedef class coord
 ```
 
 > [!NOTE]
-> **Návrhář tříd** nezobrazuje definice typedef, jehož typ zdroje je ukazatel na funkci.
+> **Návrhář třídy** nezobrazuje typedefs, jejichž zdrojový typ je ukazatel funkce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Práce s C++ kódem](working-with-visual-cpp-code.md)
-- [Definice typedef](/cpp/cpp/aliases-and-typedefs-cpp#typedefs)
+- [Práce s kódem Jazyka C++](working-with-visual-cpp-code.md)
+- [Typedefs](/cpp/cpp/aliases-and-typedefs-cpp#typedefs)

@@ -1,5 +1,5 @@
 ---
-title: Přidání vlastních sad čítačů pro zátěžové testování
+title: Přidat vlastní sady čítačů pro zátěžové testování
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,20 +11,20 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f7438f657af2ba40fbda5afefbd8a12cc56a2a4c
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114866"
 ---
-# <a name="how-to-add-custom-counter-sets-using-the-load-test-editor"></a>Postupy: Přidání vlastních sad čítačů pomocí editoru zátěžových testů
+# <a name="how-to-add-custom-counter-sets-using-the-load-test-editor"></a>Postup: Přidání vlastních sad čítačů pomocí Editoru zátěžového testu
 
-Když vytvoříte zátěžový test pomocí **nového Průvodce zátěžovým testem**, můžete přidat počáteční sadu čítačů. Ty nabízejí sadu předdefinovaných sad čítačů pro zátěžové testy.
+Při vytváření zátěžového testu pomocí **Průvodce novým zátěžovým testem**přidáte počáteční sadu čítačů. Ty nabízejí sadu předdefinovaných sad čítačů pro zátěžové testy.
 
 > [!NOTE]
-> Pokud jsou zátěžové testy distribuovány napříč vzdálenými počítači, jsou čítače kontroléru a agentů namapovány na sady čítačů kontrolérů a agentů. Další informace o použití vzdálených počítačů v zátěžovém testu naleznete v tématu [testovací kontrolery a testovací agenty](configure-test-agents-and-controllers-for-load-tests.md).
+> Pokud jsou zátěžové testy distribuovány napříč vzdálenými počítači, jsou čítače kontroléru a agentů namapovány na sady čítačů kontrolérů a agentů. Další informace o používání vzdálených počítačů v zátěžovém testu naleznete v [tématu Test controllers and test agents](configure-test-agents-and-controllers-for-load-tests.md).
 
-Můžete spravovat čítače v **editoru zátěžových testů**. Sady čítačů, které již byly přidány do testu jsou viditelné v **sad čítačů** uzel zátěžového testu. Po vytvoření zátěžového testu k němu lze přidat nové vlastní sady čítačů.
+Čítače spravujete v **Editoru zátěžových testů**. Sady čítačů, které jsou již přidány do testu jsou viditelné v uzlu **sady čítačů** zátěžového testu. Po vytvoření zátěžového testu k němu lze přidat nové vlastní sady čítačů.
 
 ![Vlastní sada čítačů](../test/media/loadtestcustomcounter.png)
 
@@ -34,19 +34,19 @@ Můžete spravovat čítače v **editoru zátěžových testů**. Sady čítač�
 
 1. Otevřete zátěžový test.
 
-2. Rozbalte **sady čítačů** uzlu. Jsou zobrazeny všechny sady čítačů, které byly přidány do zátěžového testu.
+2. Rozbalte uzel **sady čítačů.** Jsou zobrazeny všechny sady čítačů, které byly přidány do zátěžového testu.
 
-3. Klikněte pravým tlačítkem myši **sady čítačů** uzel a vyberte možnost **přidat vlastní sadu čítačů**.
-
-    > [!NOTE]
-    > Sadě čítačů je přidělen výchozí název, jako například **vlastní1**. Název lze změnit pomocí **vlastnosti** okna. Stisknutím klávesy **F4** zobrazíte **vlastnosti** okna.
-
-4. Chcete-li přidat čítače do vlastní počítadlo nastavit, klikněte pravým tlačítkem na novou sadu čítačů a klikněte na tlačítko **přidat čítače**. Další informace o přidávání čítačů naleznete v tématu [postupy: přidání čítačů do sad čítačů](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md).
+3. Klepněte pravým tlačítkem myši na uzel **Sady čítačů** a vyberte **přidat vlastní sadu čítačů**.
 
     > [!NOTE]
-    > Vlastní sadu čítačů lze také přidat kliknutím pravým tlačítkem myši na existující sadu čítačů, výběrem příkazu kopírování a následným vložením do uzlu sad čítačů. Další čítače, které jsou zkopírovány, ale nejsou vyžadovány, je možné odstranit. Můžete změnit název nové sady čítačů **vlastnosti** okna.
+    > Sada čítačů má výchozí název, například **Custom1**. Název můžete změnit pomocí okna **Vlastnosti.** Stisknutím **klávesy F4** zobrazte okno **Vlastnosti.**
 
-## <a name="see-also"></a>Viz také:
+4. Chcete-li do vlastní sady čítačů přidat čítače, klepněte pravým tlačítkem myši na novou sadu čítačů a pak zvolte **Přidat čítače**. Další informace o přidání čítačů naleznete v [tématu Jak: Přidání čítačů k sadám čítačů](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md).
 
-- [Určení sad čítačů a mezních pravidel pro počítače v rámci zátěžového testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
-- [Konfigurace parametrů spuštění zátěžového testu](../test/configure-load-test-run-settings.md)
+    > [!NOTE]
+    > Vlastní sadu čítačů lze také přidat kliknutím pravým tlačítkem myši na existující sadu čítačů, výběrem příkazu kopírování a následným vložením do uzlu sad čítačů. Další čítače, které jsou zkopírovány, ale nejsou vyžadovány, je možné odstranit. Název nové sady čítačů můžete změnit pomocí okna **Vlastnosti.**
+
+## <a name="see-also"></a>Viz také
+
+- [Určení sad čítačů a prahových hodnot pro počítače v zátěžovém testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
+- [Konfigurace nastavení spuštění zátěžového testu](../test/configure-load-test-run-settings.md)

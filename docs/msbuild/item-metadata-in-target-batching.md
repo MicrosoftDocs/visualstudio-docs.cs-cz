@@ -1,5 +1,5 @@
 ---
-title: Metadata položek v cílové dávce | Microsoft Docs
+title: Metadata položky v cílovém dávkování | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,21 +13,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 83a5d0c9dec280633d0a39573581c083e6ddd4d8
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633665"
 ---
-# <a name="item-metadata-in-target-batching"></a>Metadata položek v dávkování cíle
+# <a name="item-metadata-in-target-batching"></a>Metadata položky v cílovém dávkování
 
-Nástroj MSBuild má schopnost provádět analýzu závislostí na vstupech a výstupech cíle sestavení. Je-li zjištěno, že vstupy nebo výstupy cíle jsou aktuální, bude cíl vynechán a sestavení bude pokračovat. prvky `Target` používají atributy `Inputs` a `Outputs` k určení položek, které se mají zkontrolovat během analýzy závislostí.
+MSBuild má schopnost provádět analýzu závislostí na vstupy a výstupy cíle sestavení. Pokud je zjištěno, že vstupy nebo výstupy cíle jsou aktuální, cíl bude přeskočen a sestavení bude pokračovat. `Target`elementy `Inputs` používají `Outputs` atributy a k určení položek, které mají být kontrolovány během analýzy závislostí.
 
-Pokud cíl obsahuje úkol, který používá dávkové položky jako vstupy nebo výstupy, `Target` element Target by měl používat dávkování ve svých atributech `Inputs` nebo `Outputs`, aby nástroj MSBuild mohl přeskočit dávky položek, které jsou již aktuální.
+Pokud cíl obsahuje úkol, který používá dávkové položky `Target` jako vstupy nebo výstupy, `Inputs` `Outputs` prvek cíle by měl použít dávkování v jeho nebo atributy povolit MSBuild přeskočit dávky položek, které jsou již aktuální.
 
-## <a name="batch-targets"></a>Cíle dávky
+## <a name="batch-targets"></a>Dávkové cíle
 
-Následující příklad obsahuje seznam položek s názvem `Res`, který je rozdělen na dvě dávky založené na metadatech `Culture` položky. Každá z těchto dávek je předána do úlohy `AL`, která vytvoří výstupní sestavení pro každou dávku. Pomocí dávkového zpracování u atributu `Outputs` elementu `Target` může nástroj MSBuild určit, zda jsou jednotlivé dávky aktuální před spuštěním cíle. Bez použití cílového dávkování by úloha při každém spuštění cíle spouštěla obě dávky položek.
+Následující příklad obsahuje seznam `Res` položek s názvem, který je `Culture` rozdělen do dvou dávek na základě metadat položky. Každá z těchto dávek je `AL` předána do úlohy, která vytvoří výstupní sestavení pro každou dávku. Pomocí dávkování na `Outputs` atribut `Target` prvku MSBuild můžete určit, pokud každý z jednotlivých dávek je aktuální před spuštěním cíle. Bez použití cílové dávkování, obě dávky položek by být spuštěna úlohou při každém provedení cíle.
 
 ```xml
 <Project
@@ -69,7 +69,7 @@ Následující příklad obsahuje seznam položek s názvem `Res`, který je roz
 
 ## <a name="see-also"></a>Viz také
 
-- [Postupy: přírůstkové sestavení](../msbuild/how-to-build-incrementally.md)
+- [Postup: Sestavení postupně](../msbuild/how-to-build-incrementally.md)
 - [Dávkování](../msbuild/msbuild-batching.md)
-- [Target – element (MSBuild)](../msbuild/target-element-msbuild.md)
-- [Metadata položek v dávkování úloh](../msbuild/item-metadata-in-task-batching.md)
+- [Cílový prvek (MSBuild)](../msbuild/target-element-msbuild.md)
+- [Metadata položky v dávkování úloh](../msbuild/item-metadata-in-task-batching.md)

@@ -1,70 +1,70 @@
 ---
-title: Začínáme s portálem pro správu předplatných | Visual Studio Marketplace
+title: Začínáme s portálem pro správu předplatných | Tržiště visual studia
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 03/03/2020
 ms.topic: conceptual
-description: Naučte se, jak začít spravovat předplatná sady Visual Studio ve vaší organizaci pomocí portálu pro správu předplatných.
+description: Přečtěte si, jak začít spravovat předplatná Visual Studia vaší organizace pomocí portálu pro správu předplatných.
 ms.openlocfilehash: cc8a815317f46e01260f38e3ba974f89d928e49a
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "78408942"
 ---
-# <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Přehled portálu pro správu předplatných sady Visual Studio
+# <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Přehled portálu správce předplatných sady Visual Studio
 
 Portál pro správu předplatných sady Visual Studio poskytuje nástroje pro správu předplatných vaší organizace na jednom místě. 
 
 ## <a name="important-considerations"></a>Důležité informace
-Pamatujte na tyto body při použití portálu pro správu předplatných sady Visual Studio:
-- **Předplatná sady Visual Studio jsou licencovaná na uživatele.** Každý předplatitel může software používat na tolik počítačů, kolik jich je potřeba pro vývoj a testování.
-- **Přiřaďte každému předplatiteli jenom jednu úroveň předplatného**, která odpovídá předplatnému sady Visual Studio, které vaše organizace zakoupila. Pokud máte k těmto předplatitelům přiřazenou víc než jednu úroveň předplatného, upravte jejich nastavení tak, aby byla jenom jedna.
-- **Úroveň předplatného předplatitele se bude muset aktualizovat** , až se předplatné upgraduje (po zakoupení "podrobné" licence), nebo se obnoví na nižší úrovni.
-- **Nesdílejte předplatná mezi předplatiteli.** Předplatná musí být přiřazena k pojmenovaným jednotlivcům.  Přiřazení předplatných týmům se nepovoluje.  Musíte přiřadit předplatné všem, kdo používá celou aplikaci nebo výhody předplatného (software pro vývoj a testování, Microsoft Azure, e-Learning atd.).
+Při použití portálu pro správu předplatných sady Visual Studio mějte na paměti tyto body:
+- **Předplatná sady Visual Studio jsou licencována na uživatele.** Každý odběratel může používat software v tolika počítačích, kolik je potřeba pro vývoj a testování.
+- **Každému odběrateli přiřaďte pouze jednu úroveň předplatného**, která odpovídá předplatnému Visual Studia, které vaše organizace zakoupila. Pokud máte přiřazené předplatitele s více než jednou úrovní předplatného, upravte jejich nastavení tak, aby měli jenom jednu.
+- **Úroveň předplatného odběratele bude nutné aktualizovat** při upgradu předplatného (po zakoupení licence "step-up" nebo obnovena na nižší úrovni.
+- **Nesdílejte odběry mezi předplatiteli.** Předplatná musí být přiřazena k uvedeným osobám.  Přiřazení předplatných týmům není povoleno.  Předplatné musíte přiřadit každému, kdo využívá všechny výhody předplatného nebo jejich část (software pro vývoj a testování, Microsoft Azure, e-learning atd.).
 
-## <a name="the-subscribers-page"></a>Stránka předplatitelé
-Po přiřazení předplatných poskytuje karta spravovat předplatitele podrobné informace o předplatitelích, včetně těchto:
-- Křestní jméno a příjmení každého předplatitele.
-- E-mailová adresa pro tohoto uživatele
-- Úroveň předplatného, která je jim přiřazena.
-- Datum přiřazení jejich předplatného.
-- Datum vypršení platnosti předplatného.
+## <a name="the-subscribers-page"></a>Stránka Odběratelé
+Po přiřazení předplatných poskytuje karta Spravovat odběratele podrobné informace o odběratelích, včetně:
+- Jméno a příjmení každého odběratele.
+- E-mailová adresa tohoto uživatele.
+- Úroveň předplatného, která jim byla přiřazena.
+- Datum, kdy jim bylo přiřazeno jejich předplatné.
+- Datum vypršení platnosti pro jejich předplatné.
 - Volitelný textový popis.
-- Označení toho, zda bylo stahování odběratele povoleno nebo zakázáno.
+- Údaj o tom, zda bylo povoleno nebo zakázáno stahování odběratelů.
 - Země, ve které se nacházejí.
-- Jazykové předvolby pro e-maily týkající se komunikace přiřazení na portálu pro správu.
-- Volitelné pole pro jinou e-mailovou adresu, která se používá pro komunikaci než přihlášení.
+- Jejich jazyková preference pro zadání komunikační e-mail z portálu pro správu.
+- Volitelné pole pro jinou e-mailovou adresu používanou pro komunikaci než přihlášení.
 
-V levé horní části stránky je několik ikon, které můžete vybrat k zobrazení přehledu přiřazení předplatného, podrobností o smlouvě a sestavy maximálního využití.
+V levé horní části stránky je několik ikon, které můžete vybrat, abyste odhalili přehled přiřazení předplatného, podrobnosti o smlouvě a zprávu o maximálním využití.
 
-Chcete-li zobrazit další informace o počtu zakoupených a přiřazených licencí k předplatnému, které jsou ve vaší organizaci k dispozici pro každou smlouvu, klikněte na ikonu nahoru a povolte tak panel pro posunutí.
+Chcete-li zobrazit další informace o počtu zakoupených, přiřazených a stále dostupných licencí předplatného pro každou smlouvu ve vaší organizaci, povolte panel slide-out kliknutím na ikonu na začátek.
 > [!div class="mx-imgBorder"]
-> ![stránku předplatitelů portálu pro správu předplatných sady Visual Studio](_img/using-admin-portal/subscribers-page.png)
+> ![Stránka předplatitelů portálu pro předplatná visual studia](_img/using-admin-portal/subscribers-page.png)
 
-## <a name="the-details-page"></a>Stránka s podrobnostmi
-Další informace o zobrazené smlouvě získáte výběrem druhé ikony a kliknutím na ni zobrazíte kartu Podrobnosti smlouvy. Na panelu pro posunutí se zobrazuje stav smlouvy, účet nákupu, podrobnosti o organizaci, nadřízeného správce a další související informace.
+## <a name="the-details-page"></a>Stránka Podrobnosti
+Další informace o prohlížené smlouvě zobrazíte druhou ikonou a zobce, která se zobrazí na kartě Podrobnosti smlouvy. Vysunecí panel zobrazuje stav smlouvy, nákupní účet, podrobnosti o organizaci, super-administrátory a další relevantní informace.
 > [!div class="mx-imgBorder"]
-> ![stránce podrobností portálu pro správu předplatných sady Visual Studio](_img/using-admin-portal/details-page.png)
+> ![Stránka podrobností o podrobnostech portálu pro správu předplatných visual studia](_img/using-admin-portal/details-page.png)
 
-## <a name="resources"></a>Zdroje
+## <a name="resources"></a>Zdroje informací
 - [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Porovnání možností a cen předplatného](https://visualstudio.microsoft.com/vs/pricing)
 - [Porovnání funkcí integrovaných vývojových prostředí (IDE) sady Visual Studio](https://visualstudio.microsoft.com/vs/compare)
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Další informace o zodpovědnostech pro správce:
-- [Přehled odpovědností správce](admin-responsibilities.md)
-- [Inventář předprodukčního prostředí](admin-inventory.md)
+Další informace o odpovědnostech pro správce:
+- [Přehled povinností správce](admin-responsibilities.md)
+- [Soupis předprodukčního prostředí](admin-inventory.md)
 - [Správa velkých týmů a externích dodavatelů](manage-teams.md)
 - [Sledování přiřazení uživatelů a zpracování objednávek](assignments-orders.md)
-- Použití [maximálního využití](maximum-usage.md) ke sledování závazků nákupu
+- Použití [maximální spotřeby](maximum-usage.md) ke sledování nákupních závazků
 
