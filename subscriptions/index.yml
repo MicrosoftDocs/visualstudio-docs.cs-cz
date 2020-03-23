@@ -11,10 +11,10 @@ metadata:
   manager: lank
   ms.date: 12/04/2019
   ms.openlocfilehash: bde855a1550f304df07c22262d7cb07094b5bc9e
-  ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 12/06/2019
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "74883848"
 highlightedContent:
   items:
@@ -73,7 +73,7 @@ tools:
   - title: Visual Studio Code
     imageSrc: https://docs.microsoft.com/media/logos/logo_vs-code.svg
     url: https://code.visualstudio.com/docs
-  - title: Visual Studio for Mac
+  - title: Visual Studio pro Mac
     imageSrc: https://docs.microsoft.com/media/logos/logo_vs-mac.svg
     url: /visualstudio/mac/
   - title: Visual Studio App Center

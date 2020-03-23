@@ -20,7 +20,7 @@
           href: application-lifecycle-management-alm-with-xamarin-apps.md
         - name: 'Nastavení, instalace a ověření pro uživatele počítačů Mac'
           href: setup-install-and-verifications-for-mac-users.md
-    - name: Visual Studio Tools pro Apache Cordova
+    - name: Visual Studio Tools for Apache Cordova
       href: visual-studio-tools-for-apache-cordova.md
     - name: Visual Studio Tools for Unity
       items:
@@ -28,7 +28,7 @@
           href: visual-studio-tools-for-unity.md
         - name: Přehled
           href: overview-of-visual-studio-tools-for-unity.md
-        - name: Začínáme
+        - name: začínáme
           href: getting-started-with-visual-studio-tools-for-unity.md
         - name: Používání sady Visual Studio Tools for Unity
           href: using-visual-studio-tools-for-unity.md

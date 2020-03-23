@@ -4,7 +4,7 @@
       href: index.md
     - name: Úloha Aplikace pro datovou vědu a analýzu
       href: ../python/data-science-and-analytical-applications-workload.md
-- name: Rychlý start
+- name: Šablony Rychlý start
   items:
     - name: Instalace
       href: installing-r-tools-for-visual-studio.md
@@ -56,7 +56,7 @@
       href: variable-explorer.md
     - name: Ladění
       href: debugging-r-in-visual-studio.md
-- name: Odkaz
+- name: Referenční informace
   items:
     - name: Možnosti
       href: options-for-r-tools-in-visual-studio.md

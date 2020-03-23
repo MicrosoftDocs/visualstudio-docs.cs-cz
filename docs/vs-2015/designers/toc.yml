@@ -46,7 +46,7 @@
                   href: pen-tool-modifier-keys-in-blend.md
                 - name: Modifikační klávesy nástroje Přímý výběr
                   href: direct-selection-tool-modifier-keys-in-blend.md
-            - name: "Produkty a\_služby pro přístupnost"
+            - name: "Produkty a\_služby pro usnadnění"
               href: accessibility-products-and-services-blend.md
         - name: Klávesové zkratky Návrháře XAML v sadě Visual Studio a Blend pro Visual Studio
           href: keyboard-shortcuts-for-xaml-designer.md
@@ -204,5 +204,5 @@
               href: how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md
     - name: Knihovna obrázků sady Visual Studio
       href: the-visual-studio-image-library.md
-- name: Vývoj aplikací pomocí Návrháře postupu provádění
+- name: Vývoj aplikací pomocí návrháře postupu provádění
   href: ../workflow-designer/developing-applications-with-the-workflow-designer.md

@@ -10,10 +10,10 @@ metadata:
   manager: jillfra
   ms.date: 10/15/2019
   ms.openlocfilehash: 9f81043622a48bbda93e52216a3ce2a6cd9a01b2
-  ms.sourcegitcommit: 0d8488329263cc0743a89d43f6de863028e982ff
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 01/06/2020
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "75678945"
 landingContent:
 - title: Začínáme
@@ -42,7 +42,7 @@ landingContent:
       url: quickstart-vuejs-with-nodejs.md
     - text: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu
       url: tutorial-aspnet-with-typescript.md
-- title: Poznejte Visual Studio
+- title: Learn Visual Studio
   linkLists:
   - linkListType: how-to-guide
     links:

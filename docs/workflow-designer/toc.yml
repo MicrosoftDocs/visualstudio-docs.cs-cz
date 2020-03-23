@@ -164,7 +164,7 @@
           href: migration-activity-designers.md
         - name: Návrhář aktivity Interop
           href: interop-activity-designer.md
-- name: Ladit
+- name: Ladění
   items:
     - name: Ladění pracovních postupů
       href: debugging-workflows-with-the-workflow-designer.md
@@ -196,5 +196,5 @@
       href: workflow-designer-shell-features.md
     - name: Klávesové zkratky
       href: keyboard-shortcuts-in-the-workflow-designer.md
-    - name: Chybové zprávy
+    - name: chybové zprávy
       href: error-messages-in-workflow-designer.md

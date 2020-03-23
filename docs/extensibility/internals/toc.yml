@@ -208,9 +208,9 @@
   items:
     - name: Projekty
       href: projects.md
-    - name: 'Nová generace projektů: Pod kapotou, část 1'
+    - name: 'Nová generace projektů: Pod pokličkou, část první'
       href: new-project-generation-under-the-hood-part-one.md
-    - name: 'Nová generace projektů: Pod kapotou, část 2'
+    - name: 'Nová generace projektů: Pod pokličkou, část druhá'
       href: new-project-generation-under-the-hood-part-two.md
     - name: Typy projektů
       items:
@@ -486,9 +486,9 @@
           items:
             - name: Testovací příručka pro moduly plug-in správy zdrojového kódu
               href: test-guide-for-source-control-plug-ins.md
-            - name: 'Testovací oblast 1: Přidání do nebo otevření ze správy zdrojového kódu'
+            - name: 'Testovací oblast 1: Přidání nebo otevření ze správy zdrojového kódu'
               href: test-area-1-add-to-open-from-source-control.md
-            - name: 'Testovací oblast 2: Získání ze správy zdrojového kódu'
+            - name: 'Testovací oblast 2: Načtení ze správy zdrojového kódu'
               href: test-area-2-get-from-source-control.md
             - name: 'Testovací oblast 3: Rezervace a zrušení rezervace'
               href: test-area-3-check-out-undo-checkout.md
@@ -496,11 +496,11 @@
               href: test-area-4-check-in.md
             - name: 'Testovací oblast 5: Změna správy zdrojového kódu'
               href: test-area-5-change-source-control.md
-            - name: 'Testovací oblast 6: Odstranit'
+            - name: 'Testovací oblast 6: Odstranění'
               href: test-area-6-delete.md
-            - name: 'Testovací oblast 7: Sdílet'
+            - name: 'Testovací oblast 7: Sdílení'
               href: test-area-7-share.md
-            - name: 'Testovací oblast 8: Přepínání modulů plug-in'
+            - name: 'Testovací oblast 8: Přepínání modulu plug-in'
               href: test-area-8-plug-in-switching.md
     - name: Vytvoření balíčku VSPackage správy zdrojového kódu
       items:

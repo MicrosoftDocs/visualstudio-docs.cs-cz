@@ -52,15 +52,15 @@
       href: graphics-diagnostics-examples.md
     - name: 'Návod: Zaznamenání grafických informací'
       href: walkthrough-capturing-graphics-information.md
-    - name: 'Návod: Zaznamenání grafických informací prostřednictvím kódu programu'
+    - name: 'Návod: Zaznamenání grafických informací prostřednictvím kódu'
       href: walkthrough-capturing-graphics-information-programmatically.md
     - name: 'Návod: Chybějící objekty z důvodu stavu zařízení'
       href: walkthrough-missing-objects-due-to-device-state.md
-    - name: 'Návod: Chybějící objekty z důvodu použití vertex shaderu'
+    - name: "Návod: Chybějící objekty z\_důvodu použití funkce vertex shading"
       href: walkthrough-missing-objects-due-to-vertex-shading.md
-    - name: 'Návod: Chybějící objekty z důvodu nesprávné konfigurace kanálu'
+    - name: 'Návod: Chybějící objekty z důvodu nesprávné konfigurace zřetězení'
       href: walkthrough-missing-objects-due-to-misconfigured-pipeline.md
-    - name: 'Návod: Ladění chyb vykreslování způsobených stínováním'
+    - name: 'Návod: Ladění chyb při vykreslování způsobených stínováním'
       href: walkthrough-debugging-rendering-errors-due-to-shading.md
     - name: 'Návod: Použití diagnostiky grafiky k ladění výpočetního shaderu'
       href: walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md

@@ -11,10 +11,10 @@ metadata:
   f1_keywords:
   - MSDNSTART
   ms.openlocfilehash: 6ec31d2881abbfe2ae55174ea3f3fb15fd34651f
-  ms.sourcegitcommit: b016ea260856264eee730ee8cbcab198314a7ece
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 02/28/2020
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "77904058"
 highlightedContent:
   items:
@@ -122,7 +122,7 @@ tools:
     url: /visualstudio/rtvs/?view=vs-2017
 additionalContent:
   sections:
-  - title: Úkoly
+  - title: Úlohy
     items:
     - title: Vývoj
       summary: Vytváření a správa kódu pomocí editoru kódu
@@ -130,7 +130,7 @@ additionalContent:
     - title: Sestavení
       summary: Kompilace a sestavení zdrojového kódu
       url: ../ide/compiling-and-building-in-visual-studio.md
-    - title: Ladit
+    - title: Ladění
       summary: Prošetřování a opravy chyb v kódu
       url: ../debugger/index.yml
     - title: Test
@@ -160,7 +160,7 @@ additionalContent:
     - title: Vývoj s využitím kontejnerů Dockeru
       summary: Izolace modulárních součástí a zlepšení škálovatelnosti pomocí kontejnerů Dockeru
       url: ../containers/index.yml
-  - title: Úkoly
+  - title: Úlohy
     items:
     - title: Web a cloud
       links:
@@ -193,7 +193,7 @@ additionalContent:
       - text: Vývoj mobilních aplikací v jazyce JavaScript
         url: /visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017
         note: (jen Visual Studio 2017 a 2015)
-    - title: Hry
+    - title: Hraní her
       links:
       - text: Vývoj her pomocí Unity
         url: ../cross-platform/visual-studio-tools-for-unity.md
@@ -205,6 +205,6 @@ additionalContent:
         url: ../extensibility/index.yml
       - text: Vývoj linuxových aplikací v jazyce C++
         url: /cpp/linux/
-      - text: Vývoj multiplatformních aplikací pomocí rozhraní .NET Core
+      - text: Vývoj aplikací pro různé platformy pomocí rozhraní .NET Core
         url: /dotnet/core/
   footer: '[Blogy](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [Hlášení problémů](../ide/talk-to-us.md) - [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html)'

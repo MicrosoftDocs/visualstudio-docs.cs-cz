@@ -1,12 +1,12 @@
-- name: Visual Studio Tools for AI
+- name: Visual Studio Tools pro AI
   items:
-    - name: Visual Studio Tools for AI
+    - name: Visual Studio Tools pro AI
       href: index.yml
     - name: Přehled
       href: about-ai-tools.md
     - name: Instalace
       href: installation.md
-    - name: Rychlý start
+    - name: Šablony Rychlý start
       items:
         - name: Tensorflow + Python
           href: tensorflow-local.md
@@ -26,7 +26,7 @@
               href: create-project.md
             - name: Vytvoření projektu z úložiště GitHubu
               href: create-project-repo.md
-        - name: Vyzkoušejte svůj model
+        - name: Trénování vašeho modelu
           href: train-model.md
         - name: Zobrazení podrobností o úloze
           href: job-details.md

@@ -64,7 +64,7 @@
               href: walkthrough-creating-a-web-part-for-sharepoint.md
             - name: 'Návod: Vytvoření webové části pro službu SharePoint pomocí návrháře'
               href: walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md
-            - name: 'Návod: Vytvoření webové části Silverlight, která zobrazuje data OData pro SharePoint'
+            - name: 'Postupy: Vytvoření webové části Silverlight, která zobrazuje data OData pro SharePoint'
               href: walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint.md
         - name: Vytváření opakovaně použitelných ovládacích prvků pro webové části nebo stránky aplikací
           items:
@@ -126,7 +126,7 @@
           items:
             - name: Vytváření definic webu pro službu SharePoint
               href: creating-site-definitions-for-sharepoint.md
-            - name: 'Návod: Vytvoření základního projektu definice webu'
+            - name: 'Postupy: Vytvoření základního projektu definice webu'
               href: walkthrough-create-a-basic-site-definition-project.md
         - name: "Import položek z\_existující stránky SharePoint"
           items:
@@ -192,13 +192,13 @@
           items:
             - name: "Zobrazení a\_ladění kódu pro SharePoint"
               href: verifying-and-debugging-sharepoint-code.md
-            - name: "Návod: Ladění aplikace SharePoint s\_použitím technologie IntelliTrace"
+            - name: "Postupy: Ladění aplikace SharePoint s\_použitím technologie IntelliTrace"
               href: walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md
         - name: Profilování výkonu aplikací služby SharePoint
           items:
             - name: Profilování výkonu aplikací služby SharePoint
               href: profiling-the-performance-of-sharepoint-applications.md
-            - name: 'Návod: Profilace aplikace SharePoint'
+            - name: 'Postupy: Profilace aplikace SharePoint'
               href: walkthrough-profiling-a-sharepoint-application.md
         - name: "Rozdíly mezi řešeními v\_izolovaném prostoru a ve farmách"
           href: differences-between-sandboxed-and-farm-solutions.md
@@ -252,7 +252,7 @@
               href: how-to-set-sharepoint-deployment-commands.md
             - name: Úprava konfigurace nasazení SharePointu
               href: how-to-edit-a-sharepoint-deployment-configuration.md
-            - name: 'Návod: Nasazení definice seznamu úkolů projektu'
+            - name: 'Postupy: Nasazení definice seznamu úkolů projektu'
               href: walkthrough-deploying-a-project-task-list-definition.md
         - name: Nahraditelné parametry
           href: replaceable-parameters.md
@@ -290,13 +290,13 @@
                   href: how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md
                 - name: Vytváření šablon položek a projektů pro položky projektu služby SharePoint
                   href: creating-item-templates-and-project-templates-for-sharepoint-project-items.md
-                - name: 'Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 1'
+                - name: 'Vytvoření vlastní položky projektu akce pomocí šablony položky, část 1'
                   href: walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md
                 - name: 'Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 2'
                   href: walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md
                 - name: 'Návod: Vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1'
                   href: walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md
-                - name: 'Návod: Vytvoření položky projektu sloupce webu pomocí šablony projektu, část 2'
+                - name: 'Vytvoření položky projektu sloupce webu pomocí šablony projektu, část 2'
                   href: walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md
             - name: Rozšíření položek projektu služby SharePoint
               items:
@@ -308,7 +308,7 @@
                   href: how-to-add-a-shortcut-menu-item-to-a-sharepoint-project-item-extension.md
                 - name: Přidání vlastnosti do rozšíření položky projektu SharePointu
                   href: how-to-add-a-property-to-a-sharepoint-project-item-extension.md
-                - name: 'Návod: Rozšíření typu položky projektu SharePointu'
+                - name: 'Návod: Rozšiřování typu položky projektu SharePoint'
                   href: walkthrough-extending-a-sharepoint-project-item-type.md
             - name: Rozšíření projektů SharePoint
               items:
@@ -320,7 +320,7 @@
                   href: how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md
                 - name: Přidání vlastnosti do projektů SharePointu
                   href: how-to-add-a-property-to-sharepoint-projects.md
-                - name: 'Návod: Vytvoření rozšíření projektu SharePointu'
+                - name: 'Návod: Vytváření rozšíření projektu SharePoint'
                   href: walkthrough-creating-a-sharepoint-project-extension.md
             - name: Rozšíření balení a nasazení SharePoint
               items:
@@ -332,7 +332,7 @@
                   href: how-to-run-code-when-a-sharepoint-project-is-deployed-or-retracted.md
                 - name: Zpracování konfliktů nasazení
                   href: how-to-handle-deployment-conflicts.md
-                - name: 'Návod: Vytvoření vlastního kroku nasazení pro projekty SharePointu'
+                - name: 'Návod: Vytvoření vlastního kroku nasazení pro projekty SharePoint'
                   href: walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md
                 - name: Vytvoření vlastní funkce a pravidel ověřování balíčku pro řešení SharePointu
                   href: how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md
@@ -350,7 +350,7 @@
               href: how-to-add-a-custom-sharepoint-node-to-server-explorer.md
             - name: Získání dat pro předdefinovaný uzel SharePointu v Průzkumníku serveru
               href: how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer.md
-            - name: 'Návod: Rozšíření Průzkumníka serveru pro zobrazení webových částí'
+            - name: 'Návod: Rozšíření průzkumníka serveru pro zobrazení částí webu'
               href: walkthrough-extending-server-explorer-to-display-web-parts.md
         - name: Programování konceptů a funkcí pro rozšíření nástrojů SharePoint
           items:
@@ -364,7 +364,7 @@
                   href: how-to-create-a-sharepoint-command.md
                 - name: Provedení příkazu SharePointu
                   href: how-to-execute-a-sharepoint-command.md
-                - name: 'Návod: Volání do objektového modelu klienta služby SharePoint v rozšíření Průzkumníka serveru'
+                - name: 'Návod: Volání do modelu klientského objektu služby SharePoint v rozšíření průzkumníka serveru'
                   href: walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md
             - name: Použití služby projektu služby SharePoint
               items:
@@ -378,9 +378,9 @@
           href: debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md
         - name: Nasazování rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio
           href: deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md
-        - name: Odkaz
+        - name: Referenční informace
           items:
-            - name: Odkaz
+            - name: Referenční informace
               href: reference-sharepoint-tools-extensibility.md
             - name: Referenční dokumentace schématu položek projektu SharePoint
               items:
@@ -408,5 +408,5 @@
                   href: safecontrol-element.md
                 - name: SafeControls – element
                   href: safecontrols-element.md
-            - name: Referenční dokumentace ke knihovně API
+            - name: Referenční materiály k rozhraní API
               href: api-reference-sharepoint-tools-extensibility.md

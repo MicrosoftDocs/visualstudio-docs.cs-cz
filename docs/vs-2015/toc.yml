@@ -2,7 +2,7 @@
   items:
     - name: Vítá vás Visual Studio 2015
       href: welcome-to-visual-studio-2015.md
-    - name: Co je nového v sadě Visual Studio 2015
+    - name: Novinky v sadě Visual Studio 2015
       href: what-s-new-in-visual-studio-2015.md
     - name: Instalace sady Visual Studio 2015
       href: install/install-visual-studio-2015.md
@@ -14,7 +14,7 @@
       href: extensibility/visual-studio-sdk.md
     - name: "Přístup k\_datům"
       href: data-tools/accessing-data-in-visual-studio.md
-    - name: Vývoj mobilních řešení pro různé platformy
+    - name: Vývoj mobilních řešení napříč platformami
       href: cross-platform/cross-platform-mobile-development-in-visual-studio.md
     - name: Visual Basic
       href: /dotnet/visual-basic

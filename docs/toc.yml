@@ -331,6 +331,8 @@
                   href: ide/reference/generate-deconstructor.md
                 - name: Přidání parametru do metody
                   href: ide/reference/add-parameter.md
+                - name: Vygenerování parametru
+                  href: ide/reference/generate-parameter.md
                 - name: Generování soukromého pole z konstruktoru
                   href: ide/reference/generate-private-field-from-constructor.md
                 - name: Generování přepisu
@@ -350,6 +352,8 @@
                 - name: Přehled
                   displayName: refactoring
                   href: ide/refactoring-in-visual-studio.md
+                - name: Přidání kontrol hodnot null pro všechny parametry
+                  href: ide\reference\add-null-checks-for-parameters.md
                 - name: Změna podpisu metody
                   href: ide/reference/change-method-signature.md
                 - name: Převedení anonymního typu na třídu
@@ -378,8 +382,6 @@
                   href: ide/reference/extract-method.md
                 - name: Extrahování lokálních funkcí
                   href: ide/reference/extract-local-function.md
-                - name: Vygenerování parametru
-                  href: ide/reference/generate-parameter.md
                 - name: Vložená dočasná proměnná
                   href: ide/reference/inline-temporary-variable.md
                 - name: Neimportované typy dokončování IntelliSense

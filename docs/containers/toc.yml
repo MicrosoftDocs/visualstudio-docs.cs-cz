@@ -20,7 +20,7 @@
           href: tutorial-multicontainer.md
         - name: Kubernetes v sadě ‏Visual Studio
           href: tutorial-kubernetes-tools.md
-    - name: Postupy
+    - name: Postup
       items:
         - name: Ladění aplikace v místním kontejneru Dockeru
           href: edit-and-refresh.md
@@ -38,9 +38,9 @@
       items:
         - name: Jak Visual Studio vytváří kontejnerizované aplikace
           href: container-build.md
-    - name: Poradce při potížích
+    - name: Řešení potíží
       href: troubleshooting-docker-errors.md
-    - name: Odkaz
+    - name: Referenční informace
       items:
         - name: Vlastnosti nástroje MSBuild pro kontejnerové projekty
           href: container-msbuild-properties.md

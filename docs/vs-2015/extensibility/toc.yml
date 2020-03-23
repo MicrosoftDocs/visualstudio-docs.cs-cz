@@ -512,9 +512,9 @@
               href: registering-verbs-for-file-name-extensions.md
             - name: Správa přidružení souborů vedle sebe
               href: managing-side-by-side-file-associations.md
-- name: Archivace
+- name: Archiv
   items:
-    - name: Archivace
+    - name: Archiv
       href: archive.md
     - name: Zastaralá rozhraní v editoru
       items:
@@ -856,7 +856,7 @@
           href: capability-flags.md
         - name: Příznaky bitflag používané konkrétními příkazy
           href: bitflags-used-by-specific-commands.md
-        - name: Chybové kódy
+        - name: Kódy chyb
           href: error-codes.md
         - name: 'Řetězce, které slouží jako klíče pro vyhledání modulu plug-in pro správu zdrojového kódu'
           href: strings-used-as-keys-for-finding-a-source-control-plug-in.md
@@ -866,7 +866,7 @@
           href: best-practices-for-implementing-a-source-control-plug-in.md
         - name: Omezení délky řetězců
           href: restrictions-on-string-lengths.md
-        - name: Slovníček
+        - name: Glosář
           href: source-control-plug-in-glossary.md
         - name: Vypnutí upozornění kompatibility pro moduly plug-in zdroje ovládacího prvku
           href: how-to-turn-off-compatibility-warnings-for-source-control-plug-ins.md
@@ -892,7 +892,7 @@
           href: vstextbuffer-object.md
         - name: VSTextView – objekt
           href: vstextview-object.md
-    - name: Slovníček
+    - name: Glosář
       href: visual-studio-sdk-glossary.md
 - name: Vytvoření sady SDK (Software Development Kit)
   items:

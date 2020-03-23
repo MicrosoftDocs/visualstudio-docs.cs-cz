@@ -1,4 +1,4 @@
-## YamlMime:Landing
+### YamlMime:Landing
 title: Vývoj pro Azure pomocí sady Visual Studio
 metadata:
   title: Vývoj pro Azure
@@ -10,106 +10,112 @@ metadata:
   ms.topic: landing-page
   ms.date: 12/05/2019
   ms.author: ghogen
+  ms.openlocfilehash: 7d993a357094f52bc633da7e6fd22540a613c338
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 03/21/2020
+  ms.locfileid: "76022303"
 landingContent:
-  - title: Nasazení do Azure App Service
-    linkLists:
-      - linkListType: tutorial
-        links:
-          - text: Nasazení aplikace ASP.NET Core do Azure
-            url: /azure/app-service/app-service-web-get-started-dotnet-framework
-          - text: Nasazení webové aplikace ASP.NET do Azure
-            url: /aspnet/core/tutorials/publish-to-azure-webapp-using-vs
-          - text: Průběžné nasazování do Azure pomocí sady Visual Studio a systému Git
-            url: /aspnet/core/host-and-deploy/azure-apps/azure-continuous-deployment
-          - text: Průběžné nasazování do Azure pomocí Azure Pipelines
-            url: /azure/devops/pipelines/get-started-yaml
-          - text: Nasazení webové aplikace ASP.NET do virtuálního počítače Azure
-            url: /azure/virtual-machines/windows/publish-web-app-from-visual-studio
-  - title: 'App Services Azure, Logic Apps a Azure Functions'
-    linkLists:
-      - linkListType: tutorial
-        links:
-          - text: Sestavení a hostování webové aplikace pomocí Azure App Service
-            url: /azure/app-service/app-service-web-get-started-dotnet
-          - text: Sestavování automatizovaných a škálovatelných pracovních postupů pomocí Azure Logic Apps
-            url: /azure/logic-apps/quickstart-create-logic-apps-with-visual-studio
-          - text: Zpracovávání událostí pomocí Azure Functions
-            url: /azure/azure-functions/functions-create-your-first-function-visual-studio
-      - linkListType: overview
-        links:
-          - text: Sada Azure SDK pro vývojáře na platformách .NET a .NET Core
-            url: /dotnet/azure
-  - title: Kontejnerový vývoj
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Kontejnerový vývoj
-            url: /visualstudio/containers
-          - text: Nástroje kontejneru v sadě Visual Studio
-            url: /visualstudio/containers/overview
-          - text: Nástroje pro Kubernetes
-            url: /visualstudio/containers/tutorial-kubernetes-tools
-  - title: Ladění služeb Azure a analýza výkonu
-    linkLists:
-      - linkListType: tutorial
-        links:
-          - text: Ladění ASP.NET Core ve službě IIS v Azure
-            url: /visualstudio/debugger/remote-debugging-azure
-          - text: Ladění cloudové služby v Azure
-            url: vs-azure-tools-intellitrace-debug-published-cloud-services.md
-          - text: Ladění aplikace běžící na virtuálním počítači
-            url: vs-azure-tools-debug-cloud-services-virtual-machines.md
-          - text: Měření výkonu u cloudových služeb v Azure
-            url: vs-azure-tools-performance-profiling-cloud-services.md
-  - title: Připojené služby
-    linkLists:
-      - linkListType: tutorial
-        links:
-          - text: Azure Storage
-            url: vs-azure-tools-connected-services-storage.md
-          - text: Azure Key Vault
-            url: /azure/key-vault/vs-key-vault-add-connected-service
-          - text: Azure Active Directory
-            url: /azure/active-directory/develop/vs-active-directory-add-connected-service
-          - text: Cognitive Services – Analýza textu
-            url: /azure/cognitive-services/text-analytics/vs-text-connected-service
-          - text: Cognitive Services – Vyhledávání zpráv Bingu
-            url: /azure/cognitive-services/bing-news-search/vs-bing-news-search-connected-service
-          - text: Cognitive Services – Rozhraní API pro rozpoznávání tváře
-            url: /azure/cognitive-services/face/vs-face-connected-service
-          - text: Cognitive Services – Počítačové zpracování obrazu
-            url: /azure/cognitive-services/computer-vision/vs-computer-vision-connected-service
-  - title: Azure Cloud Services
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Vytváření a konfigurace projektů cloudových služeb Azure
-            url: vs-azure-tools-azure-project-create.md
-          - text: Ladění cloudových služeb v místním prostředí a v Azure
-            url: vs-azure-tools-debugging-cloud-services-overview.md
-          - text: Analýza výkonu pomocí profileru v sadě Visual Studio
-            url: vs-azure-tools-performance-profiling-cloud-services.md
-          - text: Nasazení cloudové služby do Azure
-            url: vs-azure-tools-publishing-a-cloud-service.md
-          - text: Monitorování a diagnostika cloudových služeb a virtuálních počítačů běžících v Azure
-            url: vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md
-  - title: Průzkumník cloudu
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Přístup k účtům Azure Storage v aplikaci Visual Studio
-            url: vs-azure-tools-storage-resources-server-explorer-browse-manage.md
-          - text: Přístup ke službě Virtual Machines ze sady Visual Studio
-            url: vs-azure-tools-virtual-machines-access-from-server-explorer.md
-  - title: Další zdroje
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Skupina prostředků Azure
-            url: /azure/azure-resource-manager/vs-azure-tools-resource-groups-deployment-projects-create-deploy
-          - text: Data Lake Analytics
-            url: /azure/data-lake-analytics/data-lake-analytics-data-lake-tools-get-started
-          - text: Stream Analytics
-            url: /azure/stream-analytics/stream-analytics-quick-create-vs
-          - text: Service Fabric
-            url: /azure/service-fabric/service-fabric-get-started
+- title: Nasazení do Azure App Service
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Nasazení aplikace ASP.NET Core do Azure
+      url: /azure/app-service/app-service-web-get-started-dotnet-framework
+    - text: Nasazení webové aplikace ASP.NET do Azure
+      url: /aspnet/core/tutorials/publish-to-azure-webapp-using-vs
+    - text: Průběžné nasazování do Azure pomocí sady Visual Studio a systému Git
+      url: /aspnet/core/host-and-deploy/azure-apps/azure-continuous-deployment
+    - text: Průběžné nasazování do Azure pomocí Azure Pipelines
+      url: /azure/devops/pipelines/get-started-yaml
+    - text: Nasazení webové aplikace ASP.NET do virtuálního počítače Azure
+      url: /azure/virtual-machines/windows/publish-web-app-from-visual-studio
+- title: App Services Azure, Logic Apps a Azure Functions
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Sestavení a hostování webové aplikace pomocí Azure App Service
+      url: /azure/app-service/app-service-web-get-started-dotnet
+    - text: Sestavování automatizovaných a škálovatelných pracovních postupů pomocí Azure Logic Apps
+      url: /azure/logic-apps/quickstart-create-logic-apps-with-visual-studio
+    - text: Zpracovávání událostí pomocí Azure Functions
+      url: /azure/azure-functions/functions-create-your-first-function-visual-studio
+  - linkListType: overview
+    links:
+    - text: Sada Azure SDK pro vývojáře na platformách .NET a .NET Core
+      url: /dotnet/azure
+- title: Kontejnerový vývoj
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Kontejnerový vývoj
+      url: /visualstudio/containers
+    - text: Nástroje kontejneru v sadě Visual Studio
+      url: /visualstudio/containers/overview
+    - text: Nástroje pro Kubernetes
+      url: /visualstudio/containers/tutorial-kubernetes-tools
+- title: Ladění služeb Azure a analýza výkonu
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Ladění ASP.NET Core ve službě IIS v Azure
+      url: /visualstudio/debugger/remote-debugging-azure
+    - text: Ladění cloudové služby v Azure
+      url: vs-azure-tools-intellitrace-debug-published-cloud-services.md
+    - text: Ladění aplikace běžící na virtuálním počítači
+      url: vs-azure-tools-debug-cloud-services-virtual-machines.md
+    - text: Měření výkonu u cloudových služeb v Azure
+      url: vs-azure-tools-performance-profiling-cloud-services.md
+- title: Připojené služby
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Azure Storage
+      url: vs-azure-tools-connected-services-storage.md
+    - text: Azure Key Vault
+      url: /azure/key-vault/vs-key-vault-add-connected-service
+    - text: Azure Active Directory
+      url: /azure/active-directory/develop/vs-active-directory-add-connected-service
+    - text: Cognitive Services – Analýza textu
+      url: /azure/cognitive-services/text-analytics/vs-text-connected-service
+    - text: Cognitive Services – Vyhledávání zpráv Bingu
+      url: /azure/cognitive-services/bing-news-search/vs-bing-news-search-connected-service
+    - text: Cognitive Services – Rozhraní API pro rozpoznávání tváře
+      url: /azure/cognitive-services/face/vs-face-connected-service
+    - text: Cognitive Services – Počítačové zpracování obrazu
+      url: /azure/cognitive-services/computer-vision/vs-computer-vision-connected-service
+- title: Azure Cloud Services
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Vytváření a konfigurace projektů cloudových služeb Azure
+      url: vs-azure-tools-azure-project-create.md
+    - text: Ladění cloudových služeb v místním prostředí a v Azure
+      url: vs-azure-tools-debugging-cloud-services-overview.md
+    - text: Analýza výkonu pomocí profileru v sadě Visual Studio
+      url: vs-azure-tools-performance-profiling-cloud-services.md
+    - text: Nasazení cloudové služby do Azure
+      url: vs-azure-tools-publishing-a-cloud-service.md
+    - text: Monitorování a diagnostika cloudových služeb a virtuálních počítačů běžících v Azure
+      url: vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md
+- title: Průzkumník cloudu
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Přístup k účtům Azure Storage v aplikaci Visual Studio
+      url: vs-azure-tools-storage-resources-server-explorer-browse-manage.md
+    - text: Přístup ke službě Virtual Machines ze sady Visual Studio
+      url: vs-azure-tools-virtual-machines-access-from-server-explorer.md
+- title: Další prostředky
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Skupina prostředků Azure
+      url: /azure/azure-resource-manager/vs-azure-tools-resource-groups-deployment-projects-create-deploy
+    - text: Data Lake Analytics
+      url: /azure/data-lake-analytics/data-lake-analytics-data-lake-tools-get-started
+    - text: Stream Analytics
+      url: /azure/stream-analytics/stream-analytics-quick-create-vs
+    - text: Service Fabric
+      url: /azure/service-fabric/service-fabric-get-started

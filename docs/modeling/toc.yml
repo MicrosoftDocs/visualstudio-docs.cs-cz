@@ -34,7 +34,7 @@
   items:
     - name: Vytváření modelů pro aplikaci
       href: create-models-for-your-app.md
-    - name: 'Diagramy závislostí: Odkaz'
+    - name: 'Diagramy závislostí: Referenční dokumentace'
       href: layer-diagrams-reference.md
     - name: 'Diagramy závislostí: Pokyny'
       href: layer-diagrams-guidelines.md
@@ -221,7 +221,7 @@
           href: accessing-models-from-text-templates.md
         - name: Použití rozšíření Visual Studio ModelBus v textové šabloně
           href: using-visual-studio-modelbus-in-a-text-template.md
-        - name: 'Návod: Ladění šablony textu přistupující k modelu'
+        - name: 'Návod: Ladění textové šablony přistupující k modelu'
           href: walkthrough-debugging-a-text-template-that-accesses-a-model.md
         - name: 'Návod: Připojení hostitele k procesoru vygenerovaných direktiv'
           href: walkthrough-connecting-a-host-to-a-generated-directive-processor.md
@@ -277,7 +277,7 @@
       items:
         - name: Přehled a postupy
           href: design-time-code-generation-by-using-t4-text-templates.md
-        - name: 'Návod: Vytvoření kódu pomocí šablon textu'
+        - name: 'Návod: Vytvoření kódu pomocí textových šablon'
           href: walkthrough-generating-code-by-using-text-templates.md
         - name: "Vytvoření kódu v\_procesu sestavení"
           href: code-generation-in-a-build-process.md
@@ -350,7 +350,7 @@
           items:
             - name: Zpracování textových šablon pomocí vlastního hostitele
               href: processing-text-templates-by-using-a-custom-host.md
-            - name: 'Návod: Vytvoření vlastního hostitele šablon textu'
+            - name: 'Návod: Vytvoření vlastního hostitele textových šablon'
               href: walkthrough-creating-a-custom-text-template-host.md
     - name: "Referenční dokumentace k\_rozhraní API pro textové šablony T4"
       href: api-reference-for-t4-text-templates.md

@@ -4,7 +4,7 @@
   href: installing-the-visual-studio-sdk.md
 - name: Začínáme s vývojem rozšíření sady Visual Studio
   href: starting-to-develop-visual-studio-extensions.md
-- name: 'Vytvořte své první rozšíření: Hello World'
+- name: 'Vytváření prvního rozšíření: Hello World'
   href: extensibility-hello-world.md
 - name: Novinky – Visual Studio 2019 SDK
   items:
@@ -148,7 +148,7 @@
           href: walkthrough-creating-a-view-adornment-commands-and-settings-column-guides.md
         - name: 'Návod: Zvýraznění textu'
           href: walkthrough-highlighting-text.md
-        - name: 'Návod: Sbalování'
+        - name: 'Návod: Sbalení'
           href: walkthrough-outlining.md
         - name: 'Návod: Zobrazení párových složených závorek'
           href: walkthrough-displaying-matching-braces.md
@@ -784,7 +784,7 @@
           href: capability-flags.md
         - name: Příznaky bitflag používané konkrétními příkazy
           href: bitflags-used-by-specific-commands.md
-        - name: Chybové kódy
+        - name: Kódy chyb
           href: error-codes.md
         - name: 'Řetězce, které slouží jako klíče pro vyhledání modulu plug-in pro správu zdrojového kódu'
           href: strings-used-as-keys-for-finding-a-source-control-plug-in.md

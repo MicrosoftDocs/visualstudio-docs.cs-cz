@@ -62,7 +62,7 @@
               href: basetype.md
             - name: CustomType
               href: customtype.md
-            - name: Rozměr
+            - name: Dimenze
               href: dimension.md
             - name: Výčet (Přístup k rozhraní ladění SDK)
               href: enum-debug-interface-access-sdk.md

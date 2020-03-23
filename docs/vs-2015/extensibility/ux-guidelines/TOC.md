@@ -1,4 +1,4 @@
-# [Pravidla pro práci s uživatelským prostředím sady Visual Studio](visual-studio-user-experience-guidelines.md)
+# [Pravidla pro práci s uživatelským rozhraním sady Visual Studio](visual-studio-user-experience-guidelines.md)
 ## [Základy uživatelského prostředí pro Visual Studio](ux-essentials-for-visual-studio.md)
 ## [Písma a formátování pro Visual Studio](fonts-and-formatting-for-visual-studio.md)
 ## [Barvy a styly pro Visual Studio](colors-and-styling-for-visual-studio.md)

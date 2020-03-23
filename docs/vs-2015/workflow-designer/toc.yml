@@ -50,7 +50,7 @@
               href: dowhile-activity-designer.md
             - name: ForEach\<T>
               href: foreach-t-activity-designer.md
-            - name: If
+            - name: Pokud uživatel
               href: if-activity-designer.md
             - name: Parallel
               href: parallel-activity-designer.md
@@ -66,11 +66,11 @@
               href: switch-t-activity-designer.md
             - name: While
               href: while-activity-designer.md
-        - name: Flowchart
+        - name: Vývojový diagram
           items:
-            - name: Flowchart
+            - name: Vývojový diagram
               href: flowchart-activity-designers.md
-            - name: Flowchart
+            - name: Vývojový diagram
               href: flowchart-activity-designer.md
             - name: FlowDecision
               href: flowdecision-activity-designer.md
@@ -82,33 +82,33 @@
               href: state-machine-activity-designers.md
             - name: StateMachine
               href: statemachine-activity-designer.md
-            - name: State
+            - name: Stav
               href: state-activity-designer.md
             - name: FinalState
               href: finalstate-activity-designer.md
             - name: Transition
               href: transition-activity-designer.md
-        - name: Messaging
+        - name: Zasílání zpráv
           items:
-            - name: Messaging
+            - name: Zasílání zpráv
               href: messaging-activity-designers.md
             - name: CorrelationScope
               href: correlationscope-activity-designer.md
             - name: InitializeCorrelation
               href: initializecorrelation-activity-designer.md
-            - name: Receive
+            - name: Přijmout
               href: receive-activity-designer.md
             - name: ReceiveAndSendReply
               href: receiveandsendreply-template-designer.md
-            - name: Send
+            - name: Odeslat
               href: send-activity-designer.md
             - name: SendAndReceiveReply
               href: sendandreceivereply-template-designer.md
             - name: TransactedReceiveScope
               href: transactedreceivescope-activity-designer.md
-        - name: Runtime
+        - name: Modul runtime
           items:
-            - name: Runtime
+            - name: Modul runtime
               href: runtime-activity-designers.md
             - name: Persist
               href: persist-activity-designer.md
@@ -118,9 +118,9 @@
           items:
             - name: Primitiva
               href: primitives-activity-designers.md
-            - name: Assign
+            - name: Přiřazení
               href: assign-activity-designer.md
-            - name: Delay
+            - name: Zpoždění
               href: delay-activity-designer.md
             - name: InvokeDelegate
               href: invokedelegate.md
@@ -142,9 +142,9 @@
               href: confirm-activity-designer.md
             - name: TransactionScope
               href: transactionscope-activity-designer.md
-        - name: Collection
+        - name: Kolekce
           items:
-            - name: Collection
+            - name: Kolekce
               href: collection-activity-designers.md
             - name: AddToCollection\<T>
               href: addtocollection-t-activity-designer.md
@@ -206,7 +206,7 @@
           href: workflow-designer-shell-features.md
         - name: Klávesové zkratky
           href: keyboard-shortcuts-in-the-workflow-designer.md
-        - name: Chybové zprávy
+        - name: chybové zprávy
           href: error-messages-in-workflow-designer.md
     - name: Vývoj aplikací pracovních postupů určených pro .NET Framework verze 3.0 nebo 3.5
       items:

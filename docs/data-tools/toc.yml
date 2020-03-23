@@ -20,7 +20,7 @@
       href: visual-studio-data-tools-for-dotnet.md
     - name: Entity Framework Tools
       href: entity-data-model-tools-in-visual-studio.md
-    - name: Datové sady
+    - name: DataSets
       items:
         - name: Nástroje datové sady
           href: dataset-tools-in-visual-studio.md
@@ -164,7 +164,7 @@
               href: display-related-data-in-wpf-applications.md
             - name: Vytvoření vazby ovládacích prvků k obrázkům z databáze
               href: bind-controls-to-pictures-from-a-database.md
-        - name: Ovládací prvky Windows Forms
+        - name: Windows Forms – ovládací prvky
           items:
             - name: Vytvoření vazby ovládacích prvků modelu Windows Forms k datům
               href: bind-windows-forms-controls-to-data-in-visual-studio.md
@@ -211,7 +211,7 @@
       href: upgrade-dot-mdf-files.md
     - name: Odstraňování chyb přístupu k datům
       href: additional-resources-for-troubleshooting-data-access-errors.md
-- name: Odkaz
+- name: Referenční informace
   items:
     - name: Návrhář relací objektů (Linq to SQL)
       items:

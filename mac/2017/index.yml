@@ -38,7 +38,7 @@ sections:
         items:
           - image:
               src: 'https://docs.microsoft.com/media/logos/logo_NETcore.svg'
-            text: ASP.NET Core
+            text: Jádro ASP.NET
             href: asp-net-core.md
           - image:
               src: 'https://docs.microsoft.com/media/logos/logo_azure.svg'
@@ -102,7 +102,7 @@ sections:
             html: <p>Spuštění aplikace v ladicím programu za účelem prozkoumání problémů</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_debug.svg'
-            title: Ladit
+            title: Ladění
           - href: version-control.md
             html: '<p>Získejte přístup ke zdrojovým úložištím Azure DevOps, Git nebo Subversion.</p>'
             image:

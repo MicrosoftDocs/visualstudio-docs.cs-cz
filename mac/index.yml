@@ -10,10 +10,10 @@ metadata:
   ms.date: 09/18/2019
   ms.topic: hub-page
   ms.openlocfilehash: 2ba2e1348a3abf5c914e1c686e5fd00ff186d9c0
-  ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 12/10/2019
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "74985044"
 highlightedContent:
   items:
@@ -32,7 +32,7 @@ highlightedContent:
 productDirectory:
   title: Co je možné sestavovat?
   items:
-  - title: ASP.NET Core
+  - title: Jádro ASP.NET
     imageSrc: https://docs.microsoft.com/media/logos/logo_NETcore.svg
     links:
     - url: ~/net-core-support.md
@@ -144,7 +144,7 @@ conceptualContent:
       text: Přístup pro předplatitele 
 additionalContent:
   sections:
-  - title: Úkoly
+  - title: Úlohy
     items:
     - title: Vývoj
       summary: Intellisense, refaktoring a zvýraznění syntaxe pro váš oblíbený jazyk
@@ -152,7 +152,7 @@ additionalContent:
     - title: Sestavení
       summary: Konfigurace kompilátoru a sestavení aplikace
       url: ~/compiling-and-building.md
-    - title: Ladit
+    - title: Ladění
       summary: Spuštění aplikace v ladicím programu za účelem prozkoumání problémů
       url: ~/debugging.md
     - title: Správa verzí

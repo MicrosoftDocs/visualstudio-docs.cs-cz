@@ -9,12 +9,12 @@ metadata:
   ms.author: mikejo
   manager: jillfra
   ms.date: 10/30/2019
-  ms.openlocfilehash: 668d0b5837bb13dd7bcf7367a2734a9ed019bd9c
-  ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+  ms.openlocfilehash: 94bbe9a81a38b255eba6cc6b15812743328a0f27
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 02/25/2020
-  ms.locfileid: "77578142"
+  ms.lasthandoff: 03/21/2020
+  ms.locfileid: "79549918"
 landingContent:
 - title: Informace o profilaci
   linkLists:
@@ -46,12 +46,12 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Tipy pro výkon
+      url: perftips.md
     - text: Měření využití procesoru z příkazového řádku
       url: profile-apps-from-command-line.md
     - text: Měření využití paměti u objektů .NET
       url: dotnet-alloc-tool.md
-    - text: Tipy pro výkon
-      url: perftips.md
     - text: Analýza spotřeby prostředků (XAML)
       url: application-timeline.md
     - text: Analýza využití GPU (Direct3D)

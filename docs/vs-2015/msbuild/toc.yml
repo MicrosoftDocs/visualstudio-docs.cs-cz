@@ -20,9 +20,9 @@
               href: how-to-build-the-same-source-files-with-different-options.md
             - name: Funkce vlastností
               href: property-functions.md
-        - name: Položky
+        - name: Items
           items:
-            - name: Položky
+            - name: Items
               href: msbuild-items.md
             - name: Výběr souborů k sestavení
               href: how-to-select-the-files-to-build.md
@@ -74,9 +74,9 @@
               href: how-to-build-incrementally.md
             - name: Vyčištění sestavení
               href: how-to-clean-a-build.md
-        - name: Úkoly
+        - name: Úlohy
           items:
-            - name: Úkoly
+            - name: Úlohy
               href: msbuild-tasks.md
             - name: Zápis úloh
               href: task-writing.md
@@ -156,7 +156,7 @@
                   href: how-to-configure-targets-and-tasks.md
             - name: Řešení potíží s cílením na rozhraní .NET Framework
               href: troubleshooting-dotnet-framework-targeting-errors.md
-        - name: Doporučené postupy
+        - name: Osvědčené postupy
           href: msbuild-best-practices.md
     - name: "Protokolování v\_nástroji MSBuild"
       items:
@@ -432,7 +432,7 @@
                   href: updatemanifestforbrowserapplication-task.md
         - name: Speciální řídicí znaky
           href: special-characters-to-escape.md
-    - name: Slovníček
+    - name: Glosář
       href: msbuild-glossary1.md
     - name: Další prostředky
       href: additional-msbuild-resources.md

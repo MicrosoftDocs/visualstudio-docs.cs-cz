@@ -14,9 +14,9 @@
       href: installing-python-support-in-visual-studio.md
     - name: Instalace interpretů Pythonu
       href: installing-python-interpreters.md
-- name: Rychlý start
+- name: Šablony Rychlý start
   items:
-    - name: Vytvoření webové aplikace pomocí Flasku
+    - name: Vytvoření webové aplikace pomocí Flask
       href: ../ide/quickstart-python.md
       maintainContext: true
     - name: Vytvoření projektu ze šablony
@@ -57,7 +57,7 @@
           href: learn-django-in-visual-studio-step-03-serve-static-files-and-add-pages.md
         - name: 4 – Použití šablony webového projektu Django
           href: learn-django-in-visual-studio-step-04-full-django-project-template.md
-        - name: 5 – Ověřování uživatelů
+        - name: 5. Ověřování uživatelů
           href: learn-django-in-visual-studio-step-05-django-authentication.md
         - name: 6 – Použití šablony webového projektu Django pro hlasování
           href: learn-django-in-visual-studio-step-06-polls-django-web-project-template.md
@@ -139,11 +139,11 @@
           href: debugging-symbols-for-mixed-mode-c-cpp-python.md
     - name: Profilace
       href: profiling-python-code-in-visual-studio.md
-    - name: Testování jednotek
+    - name: Testování částí
       href: unit-testing-python-in-visual-studio.md
     - name: Použití rozšíření Cookiecutter
       href: using-python-cookiecutter-templates.md
-- name: Odkaz
+- name: Referenční informace
   items:
     - name: Šablony položek
       href: python-item-templates.md

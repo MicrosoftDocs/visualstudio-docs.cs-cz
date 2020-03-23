@@ -14,7 +14,7 @@
           tocHref: /scripting/winscript/
           topicHref: /scripting/winscript/windows-script-interfaces
           items:
-            - name: Odkaz
+            - name: Referenční informace
               tocHref: /scripting/winscript/reference/
               topicHref: /scripting/winscript/reference/windows-script-interfaces-reference
         - name: JavaScript Runtime – hostování

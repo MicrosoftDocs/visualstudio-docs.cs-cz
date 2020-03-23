@@ -524,7 +524,7 @@
           href: securing-applications.md
         - name: Správa zabezpečení
           href: maintaining-security.md
-        - name: Oprávnění uživatele
+        - name: Uživatelská oprávnění
           href: user-permissions-and-visual-studio.md
         - name: Bibliografie k zabezpečení
           href: security-bibliography.md
@@ -616,7 +616,7 @@
               href: how-to-save-and-open-files-with-encoding.md
     - name: Přidání podpory editoru sady Visual Studio pro jiné jazyky
       href: adding-visual-studio-editor-support-for-other-languages.md
-    - name: Odkaz
+    - name: Referenční informace
       items:
         - name: Obecné elementy uživatelského rozhraní (Visual Studio)
           items:
