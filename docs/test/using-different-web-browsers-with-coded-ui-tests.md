@@ -8,29 +8,29 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 104bdcc7a3f609456d521e710ac6ec2aeda2bb75
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585571"
 ---
-# <a name="use-different-web-browsers-with-coded-ui-tests"></a>Použití různých webových prohlížečů s programovým testem uživatelského rozhraní
+# <a name="use-different-web-browsers-with-coded-ui-tests"></a>Použití různých webových prohlížečů s kódovými testy uživatelského rozhraní
 
 Programové testy UI mohou automatizovat testování webových aplikací tím, že zaznamenají vaše testy pomocí aplikace Internet Explorer. Potom můžete přizpůsobit test a přehrát jej buď pomocí aplikace Internet Explorer, nebo jiných typů prohlížečů pro tyto webové aplikace.
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-Nejprve nainstalujte [komponenty selen pro programové testování uživatelského rozhraní pro různé prohlížeče](https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting).
+Nejprve nainstalujte [součásti Selenu pro kódované testování mezi prohlížeči .](https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting)
 
 ## <a name="whats-supported-across-all-web-browsers"></a>Co je podporováno ve všech webových prohlížečích?
 
-- [Přidejte vlastní kód pro řídící funkce](https://devblogs.microsoft.com/devops/coded-ui-test-configuring-search-properties-while-recording-on-internet-explorer/) , jako jsou vlastnosti, hledání a čekání na přehrávání.
+- [Přidejte vlastní kód pro řízení funkcí,](https://devblogs.microsoft.com/devops/coded-ui-test-configuring-search-properties-while-recording-on-internet-explorer/) jako jsou vlastnosti, vyhledávání a číšníci přehrávání.
 
 - Automaticky otevíraná okna a dialogová okna
 
-- [Spustit základní JavaScript bez návratového typu](https://devblogs.microsoft.com/devops/introducing-javascript-execution-on-internetexplorer-and-crossbrowser-in-coded-ui-test/)
+- [Spuštění základního JavaScriptu bez návratového typu](https://devblogs.microsoft.com/devops/introducing-javascript-execution-on-internetexplorer-and-crossbrowser-in-coded-ui-test/)
 
-- Prohledat odolnost (pomocí inteligentní shody) a [vylepšení výkonu](https://devblogs.microsoft.com/devops/guidelines-on-improving-performance-of-coded-ui-test-playback/)
+- Odolnost vyhledávání (pomocí inteligentního shodu) a [vylepšení výkonu](https://devblogs.microsoft.com/devops/guidelines-on-improving-performance-of-coded-ui-test-playback/)
 
 ## <a name="why-should-i-use-coded-ui-tests-across-multiple-web-browser-types"></a>Proč bych měl používat programové testy UI napříč několika typy webových prohlížečů?
 
@@ -38,41 +38,41 @@ Při testování webové aplikace pomocí různých typů webových prohlížeč
 
 ## <a name="how-do-i-record-and-play-back-coded-ui-tests-on-web-applications-using-the-supported-web-browsers"></a>Jak mohu zaznamenat a přehrát programové testy UI webových aplikacích pomocí podporovaných webových prohlížečů?
 
-**Záznam:** Chcete-li zaznamenat test webové aplikace pomocí aplikace Internet Explorer, je nutné použít Tvůrce programového testu uživatelského rozhraní. Volitelně můžete pomocí předdefinované sady vlastností přidat kód pro ověření a přizpůsobení testovaných ovládacích prvků, jak byste to obvykle udělali v případě programových testů UI. Další informace naleznete v tématu [použití automatizace uživatelského rozhraní k otestování kódu](../test/use-ui-automation-to-test-your-code.md).
+**Záznam:** K zaznamenání testu webové aplikace pomocí aplikace Internet Explorer je nutné použít Tvůrce testů programového uživatelského rozhraní. Volitelně můžete pomocí předdefinované sady vlastností přidat kód pro ověření a přizpůsobení testovaných ovládacích prvků, jak byste to obvykle udělali v případě programových testů UI. Další informace naleznete v [tématu Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md).
 
 > [!NOTE]
 > Programové testy UI nelze zaznamenat pomocí prohlížečů Google Chrome nebo Mozilla Firefox.
 
-**Přehrávání pomocí aplikace Internet Explorer:** Pokud není explicitně zadán žádný prohlížeč, testy se ve výchozím nastavení spustí v aplikaci Internet Explorer. Můžete explicitně uvést prohlížeč, který se má použít, nastavením vlastnosti **BrowserWindow. CurrentBrowser** v kódu testu. Pro Internet Explorer by tato vlastnost měla být nastavená na **IE** nebo **Internet Explorer**.
+**Přehrání v aplikaci Internet Explorer:** Pokud není explicitně zadán žádný prohlížeč, testy budou ve výchozím nastavení spuštěny v aplikaci Internet Explorer. Můžete explicitně uvést prohlížeč, který má být použit nastavením **BrowserWindow.CurrentBrowser** vlastnost v testovacíkód. V aplikaci Internet Explorer by tato vlastnost měla být nastavena na **aplikaci Internet** Explorer nebo **Internet Explorer**.
 
-**Hraní webových prohlížečů, které nejsou v Internet Exploreru:** Chcete-li se vrátit k webovým prohlížečům, které nejsou v aplikaci Internet Explorer, změňte vlastnost BrowserWindow. CurrentBrowser v kódu testu na **Firefox** nebo **Chrome**.
+**Přehrávání s webovými prohlížeči, které nejsou v aplikaci Internet Explorer:** Chcete-li přehrávat webové prohlížeče jiné než Internet Explorer, změňte vlastnost BrowserWindow.CurrentBrowser v testovacím kódu na **Firefox** nebo **Chrome**.
 
-Chcete-li přehrát testy v webových prohlížečích bez prohlížeče IE, je nutné nainstalovat **komponenty selen pro testování programového uživatelského rozhraní pro různé prohlížeče**.
+Chcete-li přehrát testy na webových prohlížečích **Selenium components for Coded UI Cross Browser Testing**jiných než Internet,...
 
-### <a name="install-selenium-components"></a>Nainstalovat komponenty selenu
+### <a name="install-selenium-components"></a>Instalace součástí selenu
 
 ::: moniker range="vs-2017"
 
-1. V nabídce **nástroje** vyberte **rozšíření a aktualizace**.
+1. V nabídce **Nástroje** zvolte **Rozšíření a aktualizace**.
 
-2. V dialogovém okně **rozšíření a aktualizace** vyhledejte `Selenium components for Cross Browser Testing`.
+2. V dialogovém okně **Rozšíření a** `Selenium components for Cross Browser Testing`aktualizace vyhledejte .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. V nabídce **rozšíření** vyberte **Spravovat rozšíření**.
+1. V nabídce **Rozšíření** zvolte **Spravovat rozšíření**.
 
-2. V dialogovém okně **Spravovat rozšíření** vyhledejte `Selenium components for Cross Browser Testing`.
+2. V dialogovém okně **Spravovat** rozšíření `Selenium components for Cross Browser Testing`vyhledejte .
 
 ::: moniker-end
 
-3. Zvýrazněte rozšíření a klikněte na tlačítko **Stáhnout**.
+3. Zvýrazněte rozšíření a zvolte **Stáhnout**.
 
     > [!TIP]
-    > Komponenty selenu můžete také stáhnout pro testování programového uživatelského rozhraní v různých [prohlížečích.](https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting)
+    > Můžete si také stáhnout komponenty Selen pro kódované UI Cross Browser Testování [zde](https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting).
 
-Další informace o vytváření a používání programových testů UI naleznete v tématu [Create Code test UI](../test/use-ui-automation-to-test-your-code.md).
+Další informace o vytváření a používání kódovaných testů ui naleznete [v tématu Vytvoření kódovaných testů ui](../test/use-ui-automation-to-test-your-code.md).
 
 ### <a name="enable-debugging"></a>Povolení ladění
 
@@ -80,19 +80,19 @@ Chcete-li povolit ladění webové aplikace, je nutné dokončit následující 
 
 1. Povolit volbu Pouze vlastní kód:
 
-    1. V nabídce **nástroje** zvolte **Možnosti** a pak zvolte možnost **ladění**.
+    1. V nabídce **Nástroje** zvolte **Možnosti** a pak zvolte **Ladění**.
 
     2. Vyberte **povolit pouze můj kód**.
 
 2. Zakázání výjimek CLR:
 
-    1. V nabídce **ladění** vyberte možnost **výjimky**.
+    1. V nabídce **Ladění** zvolte **Výjimky**.
 
-    2. V případě **výjimek modulu CLR (Common Language Runtime)** zrušte kontrolu **neošetřeného uživatelem**.
+    2. U **běžných výjimek za běhu jazyka**odškrtnete **políčko Neošetřený uživatel**.
 
-Pokud nevidíte možnost změny `BrowserWindow.CurrentBrowser` v programovém testu UI, možná používáte verzi sady Visual Studio, která nepodporuje programové testy UI pomocí různých webových prohlížečů. Chcete-li použít tyto programové testy uživatelského rozhraní, je nutné použít edici Visual Studio Enterprise.
+Pokud nevidíte možnost změny `BrowserWindow.CurrentBrowser` v programovém testu uživatelského rozhraní, je možné, že používáte verzi sady Visual Studio, která nepodporuje kódované testy uživatelského rozhraní pomocí různých webových prohlížečů. Chcete-li použít takové kódované testy ui, musíte použít Visual Studio Enterprise edition.
 
-Tady je několik dalších věcí, které byste měli znát:
+Zde jsou některé další věci, které byste měli vědět:
 
 - Webový prohlížeč Apple Safari není podporován.
 
@@ -104,34 +104,34 @@ Tady je několik dalších věcí, které byste měli znát:
 
 ## <a name="tips"></a>Tipy
 
-Můžete nakonfigurovat výstup tak, aby obsahoval snímky obrazovky v kódovaných protokolech UI. K tomu je potřeba nastavit některá nastavení konfigurace v souboru *QTAgent32. exe. config* . Ve výchozím nastavení je tento soubor nainstalován v následujícím umístění:
+Můžete nakonfigurovat výstup tak, aby obsahoval snímky obrazovky v kódovaných protokolech UI. Chcete-li tak učinit, musíte nastavit některá nastavení konfigurace v souboru *QTAgent32.exe.config.* Ve výchozím nastavení je tento soubor nainstalován v následujícím umístění:
 
 *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE*
 
 Nastavte následující hodnoty:
 
-- `EqtTraceLevel` v části `system.diagnostics`.
+- `EqtTraceLevel`v `system.diagnostics` sekci.
 
 - `<add name="EqtTraceLevel" value="4" />`
 
-   Když nastavíte hodnotu na 3 nebo vyšší, snímky obrazovky se vyberou pro každou akci. Pokud je hodnota nastavena na 1 nebo 2, budou snímky obrazovky pořízeny pouze pro chybové akce.
+   Nastavením hodnoty na 3 nebo vyšší, screenshoty jsou pořízeny pro každou akci. Pokud je hodnota nastavena na 1 nebo 2, budou snímky obrazovky pořízeny pouze pro chybové akce.
 
-Další informace naleznete v tématu [Analýza programových testů uživatelského rozhraní pomocí protokolů kódovaného testu uživatelského rozhraní](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md).
+Další informace naleznete v [tématu Analýza kódovaných testů ui pomocí kódovaných protokolů testů ui](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md).
 
-## <a name="video-resources"></a>Zdroje videí
+## <a name="video-resources"></a>Video zdroje
 
-[Záznam v aplikaci IE a přehrávání všude](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!183&authkey=!ANqaLtCZbtJrImU)
+[Záznam na IE a přehrávání všude](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!183&authkey=!ANqaLtCZbtJrImU)
 
-[Vytváření testů pro různé prohlížeče pomocí Tvůrce programového testu uživatelského rozhraní](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!184&authkey=!AKG8CSow_qmeTq8)
+[Autor křížové testy prohlížeče s kódované UI test builder](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!184&authkey=!AKG8CSow_qmeTq8)
 
-[Vytváření testů pro různé prohlížeče pomocí jednoduchých ručního kódování bez mapování uživatelského rozhraní](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!186&authkey=!AJaEvxJnsefyAT4)
+[Autor cross browser testy pomocí plain hand kódování bez UI map](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!186&authkey=!AJaEvxJnsefyAT4)
 
-[Spuštění testů pro různé prohlížeče postupně na více prohlížečích](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!187&authkey=!ADI8eCQkxHnpOR8)
+[Spouštění testů mezi prohlížeči postupně ve více prohlížečích](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!187&authkey=!ADI8eCQkxHnpOR8)
 
-[Řešení potíží se selháním testů pro různé prohlížeče](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!182&authkey=!AEpS48i295B49FI)
+[Poradce při potížích s chybami testů mezi prohlížeči](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!182&authkey=!AEpS48i295B49FI)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)
-- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a zaznamenávání akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
-- [Analýza programových testů uživatelského rozhraní pomocí protokolů kódovaného testu uživatelského rozhraní](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)
+- [Testování kódu pomocí automatizace uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)
+- [Podporované konfigurace a platformy pro kódované testy a záznamy akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Analýza kódovaných testů ui pomocí kódovaných protokolů testů ui](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)

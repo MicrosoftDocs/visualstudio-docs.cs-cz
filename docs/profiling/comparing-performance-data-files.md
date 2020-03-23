@@ -1,5 +1,5 @@
 ---
-title: Porovnávání datových souborů výkonu | Microsoft Docs
+title: Porovnání datových souborů o výkonu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,25 +13,25 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 64842c5b4f622a1f76aa528360f79403ec92cb42
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74777852"
 ---
 # <a name="compare-performance-data-files"></a>Porovnání datových souborů výkonu
 
-Funkce porovnání datových souborů Nástroje pro profilaci umožňují vybrat dva soubory sestav (. *VSP* /or. *vsps*) soubory a vygenerujte sestavu, která zobrazuje rozdíly, regrese výkonu a vylepšení, k nimž došlo z jedné relace profilování na druhou.
+Funkce porovnání datových souborů nástroje profilování umožňuje vybrat dva soubory sestavy (.* vsp* /nebo . *vsps*) soubory a generovat sestavu, která zobrazuje rozdíly, regrese výkonu a vylepšení, ke kterým došlo z jedné relace profilování do druhé.
 
-Porovnávací sestava datových souborů z [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci porovnává výsledky analýzy v jednom souboru dat profilování s výsledky analýzy standardních hodnot v jiném datovém souboru. Oba datové soubory musí být vygenerovány pomocí stejné metody profilace. Sestava analyzovaných porovnání je uložena jako. soubor *vsps*
+Srovnávací sestava datových [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] souborů z nástrojů profilování porovnává výsledky analýzy v jednom souboru dat profilování s výsledky základní analýzy v jiném datovém souboru. Oba datové soubory musí být generovány pomocí stejné metody profilování. Sestava analyzovaných porovnání je uložena jako . *vsps.*
 
-Zobrazení sestavy porovnání prezentuje tabulková zobrazení změněných dat. V tabulce se zobrazí rozdílová hodnota nebo se změní ze směrného plánu. Rozdíl se vypočítá pomocí určení rozdílu mezi starou hodnotou, základní hodnotou a výslednou hodnotou z nové analýzy.
+Zobrazení sestavy porovnání představuje zobrazení tabulky změněných dat. Tabulka představuje rozdíl nebo změnu od směrného plánu. Delta se vypočítá určením rozdílu mezi starou hodnotou, hodnotou směrného plánu a výslednou hodnotou z nové analýzy.
 
-Porovnání dat profileru může být založeno na funkcích v kódu, modulech aplikace, řádcích, ukazateli instrukcí (IP) a typech.
+Porovnání dat profileru může být založeno na funkcích v kódu, modulech v aplikaci, řádcích, instrukčních ukazatelích (IP) a typech.
 
-Data profilace, která jsou k dispozici pro porovnání, zahrnují informace, které se zobrazí ve sloupcích. Definice těchto názvů sloupců najdete v tématu [zobrazení sestav výkonu](../profiling/performance-report-views.md).
+Profilování dat, která je k dispozici pro porovnání zahrnuje informace, které jsou zobrazeny ve sloupcích. Definice těchto názvů sloupců naleznete v tématu [Zobrazení sestavy výkonu](../profiling/performance-report-views.md).
 
-Prahovou hodnotu lze nastavit tak, aby snižovala šum a vyfiltroval všechna data v zobrazení srovnávací tabulky řádků, které se nezměnily zadanou hodnotou.
+Prahovou hodnotu lze nastavit tak, aby se snížil šum a odfiltrována všechna data v zobrazení srovnávací tabulky řádků, které se nezměnily o zadané množství.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

@@ -1,5 +1,5 @@
 ---
-title: Zobrazení modulů – data kolizí | Microsoft Docs
+title: Zobrazení modulů – data konfliktů | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,41 +12,41 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 2de844867e9c0a8d95abdaa13f860a6487254bfe
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74780010"
 ---
-# <a name="modules-view---contention-data"></a>Zobrazení modulů – data kolizí
-Zobrazení modulů dat o kolizí zobrazuje data souběžnosti seskupená podle modulů, které byly v datech profilování vzorků. Každý modul je kořenovým adresářem hierarchického stromu. Funkce modulu, ve kterém došlo k událostem sporů, jsou uvedeny pod uzlem modulu.
+# <a name="modules-view---contention-data"></a>Zobrazení modulů - data tvrzení
+Zobrazení modulů dat kolizí zobrazuje data souběžnosti seskupená podle modulů, které byly vzorkovány v datech profilování. Každý modul je kořenem hierarchického stromu. Funkce modulu, ve kterém došlo k konfliktní události jsou uvedeny v uzlu modulu.
 
- Pokud funkce prováděla vlastní kód při výskytu události kolizí, to znamená, že funkce byla v horní části zásobníku volání, zdrojové řádky a adresy instrukcí, které byly spuštěny, jsou uvedeny pod uzlem funkce. Vzhledem k tomu, že data jsou shromažďována pro zdrojový řádek nebo ukazatel instrukcí při provádění řádku nebo instrukce, jsou všechny a exkluzivní hodnoty vždy stejné pro data řádku i pro data instrukcí.
+ Pokud funkce prováděla svůj vlastní kód, když došlo k události konfliktu, to znamená, že funkce byla v horní části zásobníku volání, zdrojové řádky a instrukční adresy, které byly spuštěny, jsou uvedeny pod uzlem funkce. Vzhledem k tomu, že data jsou shromažďována pro zdrojový řádek nebo ukazatel instrukce při provádění řádku nebo instrukce, včetně a výhradní hodnoty jsou vždy stejné pro data řádku a data instrukce.
 
- V následující tabulce jsou popsány hodnoty sloupců v zobrazení modulů dat o kolizí.
+ Následující tabulka popisuje hodnoty sloupců v zobrazení modulů dat kolizí.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Výhradní čas zablokování**|– Pro funkci, čas, kdy byla tato funkce zablokována při provádění kódu v těle funkce. Čas zablokování ve funkcích, které byly volány funkcí, není zahrnutý.<br />– Pro modul součet exkluzivního času zablokování funkcí v modulu.<br />– Pro řádek nebo instrukci je čas, kdy byl tento řádek nebo instrukce zablokován, spuštěn.|
-|**% Výhradního času zablokování**|– Pro funkci nebo modul je procento veškerého času zablokování při spuštění profilování, které bylo výhradním časem zablokování této funkce nebo modulu.<br />– Pro řádek nebo instrukci je procento všech blokovaných časů v profilaci běhu, ve kterém se tento řádek nebo instrukce zablokovaly při provádění.|
-|**Exkluzivní spory**|– Pro funkci, kolikrát byla tato funkce zablokována při provádění kódu v těle funkce. Spory ve funkcích, které byly volány funkcí, nejsou zahrnuty.<br />– Pro modul součet exkluzivních sporů funkcí v modulu.<br />– Pro řádek nebo instrukci, kolikrát se zablokovalo spuštění tohoto řádku nebo instrukce.|
-|**% Výhradních sporů**|– Pro funkci nebo modul je procento všech sporů v rámci profilace spuštěných s výhradními spory této funkce nebo modulu.<br />– Pro řádek nebo instrukci procentuální podíl všech sporů v rámci profilace, které byly kolizí, které zablokovaly spuštění tohoto řádku nebo instrukce.|
-|**Celková doba zablokování**|– Pro funkci bylo zablokováno spuštění této funkce nebo funkce, která byla volána touto funkcí.<br />– Pro modul se součet času zablokování, ve kterém je minimálně jedna funkce z tohoto modulu v zásobníku.<br />– Pro řádek nebo instrukci je čas, kdy byl tento řádek nebo instrukce zablokován, spuštěn.|
-|**% Celkového času zablokování**|– Pro funkci nebo modul je procento veškerého času zablokování v běhu profilace, které se zablokovalo v čase této funkce nebo modulu.<br />– Pro řádek nebo instrukci je procento všech blokovaných časů v profilaci spuštěných, ve kterém se tento řádek nebo instrukce spouští.|
-|**Celkové spory**|– Pro funkci je zablokováno spuštění této funkce nebo funkce, která byla volána touto funkcí.<br />– Pro modul je počet sporů, ve kterých byla alespoň jedna funkce z tohoto modulu v zásobníku.<br />– Pro řádek nebo instrukci, kolikrát se zablokovalo spuštění tohoto řádku nebo instrukce.|
-|**% Celkových sporů**|– Pro funkci nebo modul je procento všech sporů v rámci profilace, kterým byly zahrnuté spory této funkce nebo modulu.<br />– Pro řádek nebo instrukci je procento všech blokovaných časů v profilaci spuštěných, ve kterém se tento řádek nebo instrukce spouští.|
+|**Exkluzivní blokovaný čas**|- Pro funkci čas, kdy tato funkce byla zablokována z provádění kódu v těle funkce. Blokovaný čas ve funkcích, které byly volány funkcí, není zahrnut.<br />- Pro modul, součet výhradního zablokovaného času funkcí v modulu.<br />- Pro řádek nebo instrukce, čas, který tento řádek nebo instrukce byla zablokována z provádění.|
+|**Výhradní blokovaný čas %**|- Pro funkci nebo modul, procento všech blokovaných času v profilování spustit, který byl výhradní blokovaný čas této funkce nebo modulu.<br />- Pro řádek nebo instrukce procento všech blokovaných čas v profilování spustit, ve kterém tento řádek nebo instrukce byla zablokována provádění.|
+|**Exkluzivní tvrzení**|- Pro funkci, kolikrát tato funkce byla zablokována z provádění kódu v těle funkce. Konflikty ve funkcích, které byly volány funkcí, nejsou zahrnuty.<br />- Pro modul, součet výhradních tvrzení funkcí v modulu.<br />- Pro řádek nebo instrukce, kolikrát tento řádek nebo instrukce byla zablokována z provádění.|
+|**Výhradní tvrzení %**|- Pro funkci nebo modul, procento všech tvrzení v profilování spustit, které byly výhradní tvrzení této funkce nebo modulu.<br />- Pro řádek nebo instrukce procento všech tvrzení v profilování spustit, které byly tvrzení, která zablokovala tento řádek nebo instrukce z provádění.|
+|**Včetně blokovaného času**|- Pro funkci čas, který tato funkce nebo funkce, která byla volána touto funkcí byla zablokována provádění.<br />- Pro modul, součet blokovaného času, ve kterém alespoň jedna funkce z tohoto modulu byl na zásobníku.<br />- Pro řádek nebo instrukce, čas, který tento řádek nebo instrukce byla zablokována z provádění.|
+|**Včetně blokovaného času %**|- Pro funkci nebo modul, procento všech blokovaných času v profilování spustit, který byl včetně blokovaný čas této funkce nebo modulu.<br />- Pro řádek nebo instrukce procento všech blokovaných čas v profilování spustit, ve kterém byl tento řádek nebo instrukce provádění.|
+|**Inkluzivní tvrzení**|- Pro funkci, kolikrát tato funkce nebo funkce, která byla volána touto funkcí byla zablokována provádění.<br />- Pro modul počet tvrzení, ve kterém alespoň jedna funkce z tohoto modulu byl na zásobníku.<br />- Pro řádek nebo instrukce, kolikrát tento řádek nebo instrukce byla zablokována z provádění.|
+|**Inkluzivní tvrzení %**|- Pro funkci nebo modul, procento všech tvrzení v profilování spustit, které byly včetně tvrzení této funkce nebo modulu.<br />- Pro řádek nebo instrukce procento všech blokovaných čas v profilování spustit, ve kterém byl tento řádek nebo instrukce provádění.|
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|
-|**Název modulu**|Název modulu, který obsahuje funkci, řádek nebo ukazatel na instrukci.|
-|**Cesta k modulu**|Cesta modulu obsahujícího ukazatel modulu, funkce, řádku nebo instrukce.|
-|**Jméno**|Název modulu nebo funkce.|
-|**ID procesu**|ID procesu (PID) pro spuštění profilace.|
-|**Název procesu**|Název procesu.|
-|**Zdrojový soubor**|Zdrojový soubor obsahující definici této funkce|
+|**Název modulu**|Název modulu, který obsahuje ukazatel funkce, řádku nebo instrukce.|
+|**Cesta modulu**|Cesta modulu, který obsahuje modul, funkce, řádek nebo ukazatel instrukce.|
+|**Název**|Název modulu nebo funkce.|
+|**ID procesu**|ID procesu (PID) profilování spustit.|
+|**Název procesu**|Název procesu|
+|**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici této funkce.|
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)
+## <a name="see-also"></a>Viz také
+- [Postup: Přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)
 - [Zobrazení modulů](../profiling/modules-view.md)
-- [Zobrazení modulů – instrumentace](../profiling/modules-view-dotnet-memory-instrumentation-data.md)
-- [Zobrazení modulů – vzorkování](../profiling/modules-view-dotnet-memory-sampling-data.md)
+- [Pohled modulů - instrumentace](../profiling/modules-view-dotnet-memory-instrumentation-data.md)
+- [Zobrazení modulů - odběr vzorků](../profiling/modules-view-dotnet-memory-sampling-data.md)
 - [Zobrazení modulů](../profiling/modules-view-instrumentation-data.md)
 - [Zobrazení modulů](../profiling/modules-view-sampling-data.md)

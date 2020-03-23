@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f920311301b722c11bea4a9f4eb90e9aa7663d80
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72747724"
 ---
 # <a name="set-radix-command"></a>Nastavit základ – příkaz
-Nastaví nebo vrátí číselnou základnu použitou k zobrazení celočíselných hodnot.
+Nastaví nebo vrátí číselnou základnu použitou k zobrazení celé hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,21 +29,21 @@ Nastaví nebo vrátí číselnou základnu použitou k zobrazení celočíselný
 Debug.SetRadix [10 | 16 | hex | dec]
 ```
 
-## <a name="arguments"></a>Arguments
-`10` nebo `16` nebo `hex` nebo `dec`
+## <a name="arguments"></a>Argumenty
+`10`nebo `16` `hex` nebo nebo`dec`
 
-Volitelné. Označuje desetinné číslo (10 nebo DEC) nebo hexadecimální (16 nebo hex). Pokud je argument vynechán, je vrácena aktuální hodnota základu.
+Nepovinný parametr. Označuje desetinné číslo (10 nebo dec) nebo šestnáctkové (16 nebo hex). Pokud je argument vynechán, je vrácena aktuální hodnota radix.
 
 ## <a name="example"></a>Příklad
-Tento příklad nastaví prostředí tak, aby zobrazovalo celočíselné hodnoty v šestnáctkovém formátu.
+Tento příklad nastaví prostředí tak, aby zobrazovala celé hodnoty v šestnáctkovém formátu.
 
 ```cmd
 >Debug.SetRadix hex
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Pole Najít/příkaz](../../ide/find-command-box.md)
+- [Najít/Příkazové pole](../../ide/find-command-box.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

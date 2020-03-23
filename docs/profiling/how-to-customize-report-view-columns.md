@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: přizpůsobení sloupců zobrazení sestavy | Microsoft Docs'
+title: 'Postup: Přizpůsobení sloupců zobrazení sestavy | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,14 +15,14 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 6a297e6bfbed5023db97cabd370679b0de6caaab
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778970"
 ---
-# <a name="how-to-customize-report-view-columns"></a>Postupy: přizpůsobení sloupců zobrazení sestavy
-Nástroje pro sledování výkonu v nástroji Visual Studio Team System Development Edition jsou plně integrované do integrovaného vývojového prostředí (IDE), aby poskytovaly bezproblémové uživatelské prostředí. Následující seznam představuje zástupce zobrazení, která lze přizpůsobit přidáním, odebráním a změnou uspořádání sloupců:
+# <a name="how-to-customize-report-view-columns"></a>Postup: Přizpůsobení sloupců zobrazení sestavy
+Nástroje pro sledování výkonu v sadě Visual Studio Team System Development Edition jsou plně integrovány do integrovaného vývojového prostředí (IDE), které poskytuje bezproblémové uživatelské prostředí. Následující seznam je reprezentativní pro zobrazení, která lze přizpůsobit přidáním, odebráním a změnou uspořádání sloupců:
 
 - [Zobrazení modulů](../profiling/modules-view.md)
 
@@ -48,12 +48,12 @@ Nástroje pro sledování výkonu v nástroji Visual Studio Team System Developm
 
 1. Otevřete zobrazení sestavy.
 
-2. Klikněte pravým tlačítkem myši na plochu zobrazení sestavy a potom klikněte na tlačítko **Přidat nebo odebrat sloupce**.
+2. Klikněte pravým tlačítkem myši na povrch zobrazení sestavy a potom klikněte na **Přidat nebo odebrat sloupce**.
 
-     Zobrazí se dialogové okno **Přidat nebo odebrat sloupce** .
+     Zobrazí se dialogové okno **Přidat nebo odebrat sloupce.**
 
 3. Vyberte sloupce, které chcete přidat.
 
-4. Chcete-li změnit pořadí sloupců, klikněte na tlačítko se šipkou.
+4. Chcete-li sloupce zřídit, klepněte na tlačítko se šipkou.
 
 5. Klikněte na tlačítko **OK**.

@@ -10,55 +10,55 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 39b174b0b134fdfdf26570565aa6aa756ba43c92
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588639"
 ---
-# <a name="test-controller-and-test-agent-requirements-for-load-testing"></a>Testovací kontrolér a testovací agent požadavky pro zátěžové testování
+# <a name="test-controller-and-test-agent-requirements-for-load-testing"></a>Požadavky zkušebního regulátoru a zkušebního činidla pro zátěžové zkoušky
 
-Některé typy včetně částí, výkonu webu, zátěžových testů a ručních testů jsou integrované do sady Visual Studio. Visual Studio umožňuje uživatelům aplikace Visual Studio Application Lifecycle Management ke spuštění testů na vzdálených počítačích pomocí testovacího kontroléru a jednoho nebo více agentů. Zobrazit [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
+Několik typů testů, včetně jednotky, výkonu webu, zatížení a ruční testy jsou integrovány do sady Visual Studio. Visual Studio umožňuje uživatelům správy životního cyklu aplikací sady Visual Studio spouštět testy ve vzdálených počítačích pomocí testovacího řadiče a jednoho nebo více agentů. Viz [Instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="hardware-and-software-requirements"></a>Požadavky na hardware a software
 
-Testovací kontrolér a testovací počítače agenta mají určité hardwarové a softwarové požadavky. Kromě toho pokud chcete nasadit řadič testu a počítače testovacích agentů ve více jazycích, je nutné naplánovat způsob podpory těchto jazyků.
+Testovací řadič i počítače testovacího agenta mají specifické požadavky na hardware a software. Kromě toho, pokud chcete nasadit testovací řadič a počítače testovacího agenta ve více jazycích, musíte naplánovat, jak tyto jazyky podporovat.
 
 ### <a name="hardware-requirements"></a>Požadavky na hardware
 
-V následující tabulce jsou uvedeny doporučené požadavky na hardware pro nasazení test kontroléru a testovacích agentů.
+V následující tabulce jsou uvedeny doporučené hardwarové požadavky pro nasazení testovacího řadiče a testovacích agentů.
 
-|**Konfigurace**|**Komponenta**|**CPU**|**HD**|**Paměť**|
+|**Konfigurace**|**Komponenta**|**Cpu**|**Hd**|**Paměti**|
 |-|-------------------|-|------------|-|
-|< 500 virtuálních uživatelů|Testovací agent|2,6 GHz|10 GB|2 GB|
-|< 1000 virtuálních uživatelů|Testovací agent|Dvoujádrový procesor 2,6 GHz|10 GB|2 GB|
-|N x 1000 virtuálních uživatelů|Testovací agent|Horizontální navýšení kapacity na N agentů každý s duálním procesorem 2,6 Ghz|10GB|2GB|
-|\< 30 počítačů v testovacím prostředí. To zahrnuje agenty a servery v rámci testu.|Kontroler testů|2,6 GHz|||
-|N x 30 počítačů v testovacím prostředí. To zahrnuje agenty a servery v rámci testu.|Kontroler testů|N procesorů 2,6 GHz|||
+|< 500 virtuálních uživatelů|Testovací činidlo|2,6 GHz|10 GB|2 GB|
+|< 1000 virtuálních uživatelů|Testovací činidlo|Duální procesor 2,6 GHz|10 GB|2 GB|
+|N x 1000 virtuálních uživatelů|Testovací činidlo|Horizontální navýšení kapacity pro agenty N s dual2.6 Ghz|10 GB|2 GB|
+|\<30 počítačů v testovacím prostředí. To zahrnuje agenty a servery testované.|Testovací řadič|2,6 GHz|||
+|N x 30 počítačů v testovacím prostředí. To zahrnuje agenty a servery testované.|Testovací řadič|N 2,6 GHz procesory|||
 
 > [!NOTE]
-> Počet virtuálních uživatelů se liší běžně z testu. Klíčové příčiny této odchylky je odchylka v *časy přemýšlení*, nebo zpoždění uživatele. Další informace najdete v tématu [zvažte úpravy časy pro simulaci prodlev při zásahem ze strany obsluhy webu](../test/edit-think-times-in-load-test-scenarios.md). V rámci zátěžového testu webové testy jsou obecně efektivnější a generují větší zatížení než testování částí. Čísla v předchozí tabulce jsou platné pro spuštění webových testů s 3 až 5 sekund časy přemýšlení u typické webové aplikace.
+> Počet virtuálních uživatelů se bude v jednotlivých testech značně lišit. Hlavní příčinou této odchylky je odchylka v *době přemýšlení*nebo zpoždění uživatelů. Další informace naleznete v [tématu Úprava doby přemýšlení pro simulaci zpoždění interakce s lidmi na webu](../test/edit-think-times-in-load-test-scenarios.md). V zátěžovém testu jsou webové testy obecně efektivnější a generují větší zatížení než testy částí. Čísla v předchozí tabulce jsou platná pro spuštění webových testů s 3-5 sekund časy přemýšlení na typické webové aplikace.
 
-Zde uvedené pokyny slouží jako obecné pokyny pro plánování hardwaru. Testování výkonu se liší, protože vždycky záleží na objemu testovacích dat a počtu testovacích agentů. Pro testovací agenty bude rychlost procesoru a paměti omezovat zkušební zatížení. Testovací kontroléry vyžadují větší prostředky, v závislosti na počtu testovacích agentů a množství dat v rámci testů.
+Zde uvedené pokyny jsou uvedeny jako obecné pokyny pro plánování hardwaru. Výkon testu se bude značně lišit v závislosti na množství testovacích dat a počtu testovacích agentů. U testovacích agentů bude rychlost procesoru a dostupná paměť omezit zatížení testu. Řadiče testů potřebují větší prostředky v závislosti na počtu testovacích agentů a množství dat zapojených do testů.
 
-Server, na kterém běží Visual Studio by měl mít spolehlivé síťové připojení s minimální šířkou pásma 1 MB/s a maximální čekací doba 350 MS. Měla by existovat žádná brána firewall mezi testovacími agenty a testovacím kontrolérem. Pokud váš testovací výkon nesplňuje vaše očekávání, zvažte upgrade konfigurace hardwaru.
+Server se spuštěným souborem Visual Studio by měl mít spolehlivé síťové připojení s minimální šířkou pásma 1 Mb/s a latencí maximálně 350 ms. Mezi testovacími agenty a testovacím řadičem by neměla existovat žádná brána firewall. Pokud výkon testu nesplňuje vaše očekávání, zvažte upgrade konfigurace hardwaru.
 
-### <a name="additional-hardware-considerations"></a>Další hardwarové požadavky
+### <a name="additional-hardware-considerations"></a>Další důležité informace o hardwaru
 
-Testovací agenti generuje velké množství dat na testovacích kontrolérech v závislosti na době trvání testu a velikost testu. Obecně platí je třeba naplánovat dalších 10 GB úložiště na pevném disku pro každých 24 hodin testovacích dat.
+Testovací agenti generovat velké množství dat na řadiče testu, v závislosti na trvání testu a velikost testu. Obecně byste měli naplánovat dalších 10 GB úložiště pevného disku pro každých 24 hodin testovacích dat.
 
-Kromě zde doporučeného hardwaru byste zvážit další hardware pro kritické servery, například redundantní napájecí zdroje a záložní ventilátory.
+Kromě zde doporučeného hardwaru byste měli zvážit další hardware pro kritické servery, jako jsou redundantní napájecí zdroje a redundantní ventilátory.
 
 ### <a name="language-requirements"></a>Jazykové požadavky
 
-Abyste zamezili nedorozumění a zjednodušili operaci, testovací kontrolér a testovací agenty musí být nakonfigurovaný pro použití stejného jazyka jako operační systém a že Team Foundation Server. Pokud testovací agent a testovací kontroler jsou nainstalované na různých počítačích, musí být nakonfigurované používat stejný jazyk. Můžete však nainstalovat jinou jazykovou verzi sady Visual Studio v anglickém operačního systému, tak dlouho, dokud tento jazyk odpovídá nasazení serveru Team Foundation Server.
+Aby se zabránilo nejasnostem a zjednodušit provoz, testovací řadič a testovací agenti by měly být nakonfigurovány tak, aby používaly stejný jazyk jako operační systém počítače a operační systém Team Foundation Server. Pokud jsou testovací agent a testovací řadič nainstalovány v různých počítačích, musí být nakonfigurovány tak, aby používaly stejný jazyk. Můžete však nainstalovat jinou jazykovou verzi sady Visual Studio do operačního systému v angličtině, pokud se tento jazyk shoduje s jazykem nasazení team foundation serveru.
 
-## <a name="monitor-agent-resources"></a>Sledování prostředků agenta
+## <a name="monitor-agent-resources"></a>Monitorování prostředků agenta
 
-Můžete monitorovat počítače agentů k určení potřeb prostředků pozorováním *QTAgent\*.exe* procesy, které se spustí a škálování během testů. Nejběžnější problémové místo v *QTAgent\*.exe* procesů je využití procesoru. Pokud využití procesoru je trvale v vysokou nineties je jako ukazatel toho, že agent je silně načítání. Další běžné problémovým místem je využití paměti. Vyhovovat i vašim náročným testy, monitorování těchto prostředků pomůže zjistit, zda by měl zvýšit prostředky počítače nebo jinak distribuci testů.
+Můžete sledovat počítače agentů k určení jejich potřeby prostředků sledováním procesů *QTAgent\*.exe,* které se spouštějí a škálují během testů. Nejběžnější mačkání bodů procesů *QTAgent\*.exe* je využití procesoru. Pokud využití procesoru je konzistentně ve vysokých devadesátých let pak je údaj, že agent je načten silně. Dalším společným kritickým bodem je využití paměti. Pro náročné testy může monitorování těchto prostředků pomoci určit, zda byste měli zvýšit prostředky počítačů nebo distribuovat testy jinak.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md)

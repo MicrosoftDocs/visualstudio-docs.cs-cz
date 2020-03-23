@@ -1,5 +1,5 @@
 ---
-title: C++Struktury v Návrhář tříd
+title: Struktury Jazyka C++ v návrháři tříd
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +11,15 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2aa8014835df2b5b2bd3dc68e2aaf0b079e001e8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590681"
 ---
-# <a name="c-structures-in-class-designer"></a>C++struktury v Návrhář tříd
+# <a name="c-structures-in-class-designer"></a>Struktury Jazyka C++ v návrháři tříd
 
-**Návrhář tříd** podporuje C++ struktury, které jsou deklarovány pomocí klíčového slova `struct`. Tady je příklad:
+**Class Designer** podporuje c++ struktury, které `struct`jsou deklarovány pomocí klíčového slova . Tady je příklad:
 
 ```cpp
 struct MyStructure
@@ -30,16 +30,16 @@ struct MyStructure
 };
 ```
 
-Další informace o použití typu `struct` naleznete v tématu [struct](/cpp/cpp/struct-cpp).
+Další informace o `struct` použití typu naleznete v [tématu struct](/cpp/cpp/struct-cpp).
 
-Obrazec C++ struktury v diagramu tříd vypadá a funguje jako obrazec třídy, s tím rozdílem, že popisek čte **strukturu** a má čtvercové rohy namísto zaoblených rohů.
+Obrazec struktury jazyka C++ v diagramu třídy vypadá a funguje jako obrazec třídy s tím rozdílem, že popisek čte **Struct** a má čtvercové rohy namísto zaoblených rohů.
 
-|Element kódu|Zobrazení Návrhář tříd|
+|Element kódu|Zobrazení Návrháře tříd|
 |------------------| - |
-|`struct StructureName {};`|**StructureName**<br /><br /> Struktura|
+|`struct StructureName {};`|**Název_struktury**<br /><br /> Struktura|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Práce s C++ kódem](working-with-visual-cpp-code.md)
-- [Třídy a struktury](/cpp/cpp/classes-and-structs-cpp)
-- [struct](/cpp/cpp/struct-cpp)
+- [Práce s kódem jazyka C++](working-with-visual-cpp-code.md)
+- [Třídy a struky](/cpp/cpp/classes-and-structs-cpp)
+- [Struct](/cpp/cpp/struct-cpp)

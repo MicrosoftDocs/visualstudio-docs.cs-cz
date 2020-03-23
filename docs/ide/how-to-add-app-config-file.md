@@ -1,5 +1,5 @@
 ---
-title: Jak do projektu přidat soubor app.config
+title: Jak přidat soubor app.config do projektu
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,35 +12,35 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 3eb813dc5d4389b002851a904d61219b0d5c316e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75593639"
 ---
-# <a name="how-to-add-an-application-configuration-file-to-a-c-project"></a>Postupy: Přidání konfiguračního souboru aplikace k C# projektu
+# <a name="how-to-add-an-application-configuration-file-to-a-c-project"></a>Postup: Přidání konfiguračního souboru aplikace do projektu jazyka C#
 
-Přidáním konfiguračního souboru aplikace (*app.config* soubor) do C# projektu, jak modul common language runtime vyhledá a načte soubory sestavení můžete přizpůsobit. Další informace o konfiguračních souborech aplikace najdete v tématu [jak běhové prostředí vyhledává sestavení (.NET Framework)](/dotnet/framework/deployment/how-the-runtime-locates-assemblies).
+Přidáním konfiguračního souboru aplikace (soubor*app.config)* do projektu Jazyka C# můžete přizpůsobit způsob, jakým běžný jazyk runtime vyhledá a načte soubory sestavení. Další informace o konfiguračních souborech aplikací naleznete [v tématu Jak runtime vyhledá sestavení (.NET Framework)](/dotnet/framework/deployment/how-the-runtime-locates-assemblies).
 
 > [!NOTE]
-> U aplikací pro UPW neobsahují *app.config* souboru.
+> Aplikace UPW neobsahují soubor *app.config.*
 
-Při sestavování projektu se automaticky zkopíruje vývojového prostředí vašeho *app.config* souboru, se změní název souboru kopie tak, aby odpovídaly spustitelný soubor a pak přesune kopírovat do **bin** adresář.
+Při vytváření projektu vývojové prostředí automaticky zkopíruje soubor *app.config,* změní název souboru kopie tak, aby odpovídal spustitelnému souboru, a pak ji přesune do **adresáře přihrádky.**
 
-## <a name="to-add-an-application-configuration-file-to-a-c-project"></a>Chcete-li přidat do konfiguračního souboru aplikace C# projektu
+## <a name="to-add-an-application-configuration-file-to-a-c-project"></a>Přidání konfiguračního souboru aplikace do projektu jazyka C#
 
-1. V panelu nabídky zvolte **projektu** > **přidat novou položku**.
+1. Na řádku nabídek zvolte Přidat**novou položku** **projektu** > .
 
-     **Přidat novou položku** zobrazí se dialogové okno.
+     Zobrazí se dialogové okno **Přidat novou položku**.
 
-1. Rozbalte **nainstalováno** > **Visual C# položky**a klikněte na tlačítko **konfiguračního souboru aplikace** šablony.
+1. Rozbalte **nainstalované** > **položky Visual C#** a pak zvolte šablonu **Konfigurační soubor aplikace.**
 
-1. V **název** textového pole zadejte název a klikněte na tlačítko **přidat** tlačítko.
+1. Do textového pole **Název** zadejte název a pak zvolte tlačítko **Přidat.**
 
-     Soubor s názvem *app.config* se přidá do vašeho projektu.
+     Do projektu je přidán soubor s názvem *app.config.*
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Správa nastavení aplikace (.NET)](../ide/managing-application-settings-dotnet.md)
-- [Schéma konfiguračního souboru (.NET Framework)](/dotnet/framework/configure-apps/file-schema/index)
-- [Konfigurace aplikace (.NET Framework)](/dotnet/framework/configure-apps/index)
+- [Schéma konfiguračního souboru (rozhraní.NET Framework)](/dotnet/framework/configure-apps/file-schema/index)
+- [Konfigurace aplikací (rozhraní.NET Framework)](/dotnet/framework/configure-apps/index)

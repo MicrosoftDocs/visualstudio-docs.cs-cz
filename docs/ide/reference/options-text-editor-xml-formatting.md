@@ -1,5 +1,5 @@
 ---
-title: Options, Text Editor, XML, Formatting
+title: Volby, Textový editor, XML, Formátování
 ms.date: 10/29/2018
 ms.topic: reference
 f1_keywords:
@@ -9,28 +9,28 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: b5dabfbc4f705d7de9fa881f373994714e43d26a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568136"
 ---
-# <a name="options-text-editor-xml-formatting"></a>Options, Text Editor, XML, Formatting
+# <a name="options-text-editor-xml-formatting"></a>Volby, Textový editor, XML, Formátování
 
-Stránka možnosti **formátování** slouží k určení způsobu formátování prvků a atributů v dokumentech XML. Chcete-li získat přístup k možnostem formátování XML, zvolte **nástroje** > **Možnosti** > **textový editor** > **XML**a pak zvolte možnost **formátování**.
+Stránka **Možnosti formátování** slouží k určení způsobu formátování prvků a atributů v dokumentech XML. Chcete-li získat přístup k možnostem formátování XML, zvolte**Možnosti** >  **nástrojů** > **Textový editor** > **XML**a pak zvolte **Formátování**.
 
 ## <a name="attributes"></a>Atributy
 
-**Zachovat ruční formátování atributu**
+**Zachovat ruční formátování atributů**
 
-Neměňte formát atributů. Toto nastavení je výchozí.
+Nepřeformátovat atributy. Toto nastavení je výchozí.
 
 > [!NOTE]
-> Pokud jsou atributy na více řádcích, Editor odsadí jednotlivé řádky atributů tak, aby odpovídaly odsazení nadřazeného elementu.
+> Pokud jsou atributy na více řádcích, editor odsaze každý řádek atributů tak, aby odpovídal odsazení nadřazeného prvku.
 
-**Zarovnat atributy každý na samostatný řádek**
+**Zarovnat atributy na samostatném řádku**
 
-Druhý a následující atributy zarovnejte svisle tak, aby odpovídaly odsazení prvního atributu. Následující text XML je příkladem způsobu zarovnání atributů:
+Zarovnejte druhý a následující atribut svisle tak, aby odpovídaly odsazení prvního atributu. Následující text XML je příkladem toho, jak by byly atributy zarovnány:
 
 ```xml
 <item id = "123-A"
@@ -39,23 +39,23 @@ Druhý a následující atributy zarovnejte svisle tak, aby odpovídaly odsazen�
 </item>
 ```
 
-## <a name="auto-reformat"></a>Automaticky přeformátovat
+## <a name="auto-reformat"></a>Automatický přeformátování
 
 **Při vložení ze schránky**
 
-Přeformátuje text XML vložený ze schránky.
+Přeformátovat text XML vložený ze schránky.
 
 **Po dokončení koncové značky**
 
-Přeformátuje prvek po dokončení koncové značky.
+Přeformátovat prvek po dokončení koncové značky.
 
 ## <a name="mixed-content"></a>Smíšený obsah
 
-**Formátovat smíšený obsah ve výchozím nastavení.**
+**Ve výchozím nastavení formátujte smíšený obsah.**
 
-Pokus o přeformátování smíšeného obsahu s výjimkou případů, kdy se obsah nachází v oboru `xml:space="preserve"`. Toto nastavení je výchozí.
+Pokus o přeformátování smíšeného obsahu, s `xml:space="preserve"` výjimkou případů, kdy je obsah nalezen v oboru. Toto nastavení je výchozí.
 
-Pokud element obsahuje kombinaci textu a značky, obsah se považuje za smíšený obsah. Následuje příklad prvku se smíšeným obsahem.
+Pokud prvek obsahuje kombinaci textu a značek, obsah se považuje za smíšený obsah. Následuje příklad prvku se smíšeným obsahem.
 
 ```xml
 <dir>c:\data\AlphaProject\
@@ -64,7 +64,7 @@ Pokud element obsahuje kombinaci textu a značky, obsah se považuje za smíšen
 </dir>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Možnosti XML – různé](options-text-editor-xml-miscellaneous.md)
-- [Nástroje XML v aplikaci Visual Studio](../../xml-tools/xml-tools-in-visual-studio.md)
+- [Volby XML – různé](options-text-editor-xml-miscellaneous.md)
+- [Nástroje XML v sadě Visual Studio](../../xml-tools/xml-tools-in-visual-studio.md)

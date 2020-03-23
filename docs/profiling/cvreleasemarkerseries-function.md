@@ -1,5 +1,5 @@
 ---
-title: Cvreleasemarkerseries – funkce | Dokumentace Microsoftu
+title: Funkce CvReleaseMarkerSeries | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d100b7ff37ea5a3cd224fd420f14e4cb23061903
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62974139"
 ---
-# <a name="cvreleasemarkerseries-function"></a>Cvreleasemarkerseries – funkce
-Uvolní značky řady. Nepoužívejte objekt řady značky po uvolnění jinak aplikace, mohou selhat. Nepodařilo se uvolnit značky řady způsobí, že nevracení paměti.
+# <a name="cvreleasemarkerseries-function"></a>CvReleaseMarkerSeries
+Uvolní řadu značek. Nepoužívejte objekt řady značek po uvolnění jinak aplikace může dojít k chybě. Selhání uvolnění značky série způsobí nevracení paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,13 +31,13 @@ HRESULT CvReleaseMarkerSeries(
 ```
 
 #### <a name="parameters"></a>Parametry
- `pMarkerSeries` Adresa proměnné objektu zprostředkovatele. Adresa nesmí být NULL, proměnná může mít libovolnou hodnotu.
+ `pMarkerSeries`Adresa proměnné objektu zprostředkovatele. Adresa nemůže být NULL, proměnná může mít libovolnou hodnotu.
 
 ## <a name="return-value"></a>Návratová hodnota
- S_OK při řady značky se úspěšně uvolnily nebo kód chyby v případě, že existuje byly všechny chyby. Použití makra SUCCEEDED nebo FAILED zkontrolujte chybovou podmínku.
+ S_OK, kdy je řada značek úspěšně uvolněna, nebo kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte následující/neúspěšná makra.
 
 ## <a name="requirements"></a>Požadavky
- **Header:** *cvmarkers.h*
+ **Záhlaví:** *cvmarkers.h*
 
-## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na knihovnu C++](../profiling/cpp-library-reference.md)

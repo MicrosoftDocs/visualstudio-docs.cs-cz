@@ -19,15 +19,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cda81d37be0246c1181b4d82cbd17c3119b94437
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568008"
 ---
 # <a name="out-devenvexe"></a>/Out (devenv.exe)
 
-Určuje soubor pro ukládání a zobrazování chyb při [spuštění](run-devenv-exe.md), [spuštění a ukončení](runexit-devenv-exe.md), [upgrade](upgrade-devenv-exe.md), [sestavení](build-devenv-exe.md), opětovné [sestavení](rebuild-devenv-exe.md), [Vyčištění](clean-devenv-exe.md)nebo [nasazení](deploy-devenv-exe.md) řešení.
+Určuje soubor, který má být při [spuštění](run-devenv-exe.md)ukládán a zobrazuje chyby , [spouštějí a ukončují](runexit-devenv-exe.md), [inovují](upgrade-devenv-exe.md), [vytvářejí](build-devenv-exe.md), [ukončují](clean-devenv-exe.md)nebo [nasazují](deploy-devenv-exe.md) řešení. [rebuild](rebuild-devenv-exe.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,33 +35,33 @@ Určuje soubor pro ukládání a zobrazování chyb při [spuštění](run-deven
 devenv /Out FileName
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 
-- *FileName*
+- *Název_souboru*
 
-  Požadováno. Cesta a název souboru, který má dostat výstup při vytváření spustitelného souboru.
+  Povinná hodnota. Cesta a název souboru pro příjem výstupu při vytváření spustitelného souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud je zadán neexistující název souboru, je soubor vytvořen automaticky. V opačném případě soubor již existuje a výsledky budou připojeny k existujícímu obsahu souboru.
+Pokud je zadán neexistující název souboru, soubor se vytvoří automaticky. V opačném případě soubor již existuje a výsledky jsou připojeny k existujícímu obsahu souboru.
 
-Chyby sestavení příkazového řádku se zobrazí v **příkazovém** okně a v zobrazení tvůrce řešení v okně **výstup** . Tento přepínač je vhodný pro zobrazení výsledků bezobslužných sestavení.
+Chyby sestavení příkazového řádku se zobrazují v okně **Příkaz** a v zobrazení Tvůrce řešení v okně **Výstup.** Tento přepínač je užitečný pro zobrazení výsledků bezobslužných sestavení.
 
 ## <a name="example"></a>Příklad
 
-V tomto příkladu se spustí `MySolution` a zapíše chyby do souboru `MyErrorLog.txt`.
+Tento příklad `MySolution` spustí a zapíše chyby do souboru `MyErrorLog.txt`.
 
 ```shell
 devenv /run "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /out "C:\MyErrorLog.txt"
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)
-- [/Run (devenv. exe)](../../ide/reference/run-devenv-exe.md)
-- [/RunExit (devenv. exe)](runexit-devenv-exe.md)
-- [/Upgrade (devenv. exe)](upgrade-devenv-exe.md)
-- [/Clean (devenv. exe)](clean-devenv-exe.md)
-- [/Build (devenv. exe)](../../ide/reference/build-devenv-exe.md)
-- [/Rebuild (devenv. exe)](../../ide/reference/rebuild-devenv-exe.md)
-- [/Deploy (devenv. exe)](../../ide/reference/deploy-devenv-exe.md)
+- [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md)
+- [/Run (devenv.exe)](../../ide/reference/run-devenv-exe.md)
+- [/RunExit (devenv.exe)](runexit-devenv-exe.md)
+- [/Upgrade (devenv.exe)](upgrade-devenv-exe.md)
+- [/Clean (devenv.exe)](clean-devenv-exe.md)
+- [/Sestavení (devenv.exe)](../../ide/reference/build-devenv-exe.md)
+- [/Znovu sestavit (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
+- [/Deploy (devenv.exe)](../../ide/reference/deploy-devenv-exe.md)

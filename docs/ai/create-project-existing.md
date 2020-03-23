@@ -8,38 +8,38 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 ms.openlocfilehash: 0981a276a21e1b3f816c6a182df29f1c4adb0d1c
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72777445"
 ---
 # <a name="create-an-ai-project-from-existing-code"></a>Vytvoření projektu AI z existujícího kódu
 
-Po [instalaci Visual Studio Tools for AI](installation.md)je možné snadno převést existující kód Pythonu do projektu sady Visual Studio.
+Po instalaci [nástrojů Sady Visual Studio pro umělou přípravu](installation.md)je snadné přenést existující kód Pythonu do projektu sady Visual Studio.
 
 > [!Important]
-> Proces popsaný tady nepřesouvá ani nekopíruje původní zdrojové soubory. Pokud chcete pracovat s kopií, nejprve složku duplikujte.
+> Zde popsaný proces nepřesouvá ani nekopíruje původní zdrojové soubory. Pokud chcete pracovat s kopií, nejprve ji duplikujte.
 
-1. Spusťte Visual Studio a vyberte **soubor > nový > projekt**.
+1. Spusťte Visual Studio a vyberte **Soubor > Nový > Project**.
 
-2. V dialogovém okně **Nový projekt** vyhledejte "**nástroje AI**", vyberte šablonu "**ze stávajícího kódu Python**", zadejte název a umístění projektu a vyberte **OK**.
+2. V dialogovém okně **Nový projekt** vyhledejte "**Nástroje AI**", vyberte šablonu **" Z existujícího kódu Pythonu**", pojmenujte projekt a pojmenujte a utekněte a vyberte **OK**.
 
    ![Nový projekt z existujícího kódu, krok 1](media/create-project-existing/new-ai-project.png)
 
-3. V průvodci, který se zobrazí, nastavte cestu k vašemu existujícímu kódu, nastavte filtr pro typy souborů a zadejte všechny cesty pro hledání, které váš projekt vyžaduje, a pak vyberte **OK**. Pokud si nejste jisti, jaké vyhledávací cesty jsou, ponechte toto pole prázdné.
+3. V průvodci, který se zobrazí, nastavte cestu k existujícímu kódu, nastavte filtr pro typy souborů a určete všechny cesty hledání, které projekt vyžaduje, a pak vyberte **OK**. Pokud nevíte, jaké jsou vyhledávací cesty, ponechte toto pole prázdné.
 
    ![Nový projekt z existujícího kódu, krok 2](media/create-project-existing/azurebatch-newproject.png)
 
-   Pokud je váš stávající kód součástí projektu Azure Machine Learning, zkontrolujte, zda **je složka Azure Machine Learning** , abyste zajistili úspěšný převod důležitých Azure Machine Learning podrobností konfigurace, jako je například účet experimentování, pracovní prostor, který Výpočetní kontexty, které se mají použít, a další.
+   Pokud je váš stávající kód součástí projektu Azure Machine Learning, zkontrolujte **složku Is Azure Machine Learning,** abyste zajistili úspěšný převod důležitých podrobností konfigurace Azure Machine Learning, jako je účet Experimentation, Workspace, které výpočetní kontexty a další.
 
-4. Chcete-li nastavit spouštěcí soubor, vyhledejte soubor v **Průzkumník řešení**, klikněte pravým tlačítkem myši a vyberte možnost **nastavit jako spouštěcí soubor**.
+4. Chcete-li nastavit spouštěcí soubor, vyhledejte jej v **Průzkumníku řešení**, klepněte pravým tlačítkem myši a vyberte **příkaz Nastavit jako spouštěcí soubor**.
 
-5. Spusťte program stisknutím **kombinace kláves Ctrl** +**F5** nebo výběrem možnosti **ladění > Spustit bez ladění**.
+5. Spusťte program stisknutím **klávesctrl**+**f5** nebo výběrem **ladění > Spustit bez ladění**.
 
 > [!div class="nextstepaction"]
-> [Kurz: práce s Pythonem v aplikaci Visual Studio](../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md)
+> [Kurz: Práce s Pythonem v Sadě Visual Studio](../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Ručně identifikovat existující prostředí Pythonu](../python/managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
+- [Ruční identifikace existujícího prostředí Pythonu](../python/managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)

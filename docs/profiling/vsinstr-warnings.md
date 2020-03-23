@@ -1,5 +1,5 @@
 ---
-title: Upozornění VSInstr | Microsoft Docs
+title: VSInstr Varování | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,33 +16,33 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: f1a0cba29caeda01de1154430af7a0d94bcfc2a5
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779945"
 ---
-# <a name="vsinstr-warnings"></a>Upozornění VSInstr
-V následující tabulce jsou uvedena upozornění vydaná nástrojem *VSInstr. exe* . Pomocí možnosti neupozorňovat spolu s čísly upozornění můžete potlačit zobrazování upozornění.
+# <a name="vsinstr-warnings"></a>VSInstr varování
+V následující tabulce jsou uvedena upozornění vydaná nástrojem *VSInstr.exe.* Možnost NOWARN spolu s výstražnými čísly můžete použít k potlačení zobrazení upozornění.
 
 |Číslo upozornění|Popis|
 |--------------------|-----------------|
-|**VSP1026**|Pokrytí není podporováno u knihoven, které neodkazují na MSCorLib. To je často případ pro přenosné knihovny.<br /><br />Možnost příkazového řádku [/EnableCodeCoverage](../test/vstest-console-options.md) se vyžaduje pro .NET Core.|
-|**VSP2000**|Vnitřní chyba Nelze získat název souboru modulu pro tento spustitelný soubor.|
-|**VSP2001**|název sestavení \<> je silně pojmenované sestavení. Předtím, než bude možné provést zpracování, je nutné ho znovu podepsat.<br /><br /> K tomuto upozornění dochází, je-li instrumentované sestavení instrumentované. Nástroj *sn. exe* můžete použít k opětovnému podepsání binárního souboru nebo k dočasnému vypnutí požadavku silného názvu. Další informace naleznete v tématu [sn. exe (Nástroj pro silný název)](/dotnet/framework/tools/sn-exe-strong-name-tool).|
-|**VSP2002**|Nepodařilo se najít funkci \<FuncName > v souboru \<filename ><br /><br /> K tomuto upozornění dochází, pokud funkce nemůže být umístěna v zadaném souboru.|
-|**VSP2003**|U funkce \<FuncName > v souboru \<filename > nebyl nalezen žádný průřez.<br /><br /> K tomuto upozornění dochází, pokud VSInstr nemůže nezruší průřezy. Pro optimalizaci kódu se používají různé přeskakování.|
-|**VSP2004**|Funkce \<FuncName > byla vyloučena pomocí přepínače příkazového řádku EXCLUDE, ale byla požadována, protože obsahovala křížové skoky.<br /><br /> K tomuto upozornění dochází, pokud byla funkce vyloučena pomocí možnosti vyloučit, ale je nutná během procesu instrumentace. Profiler automaticky obsahuje požadovanou funkci.|
-|**VSP2005**|Vnitřní chyba instrumentace \<text chyby ><br /><br /> Toto upozornění je vydáno, pokud instrumentaci nelze provést. Zkontrolujte text chyby a určete, zda může být opraven.|
-|**VSP2006**|Nelze najít soubor PDB pro \<název ><br /><br /> K tomuto upozornění dochází, pokud soubor PDB v cestě pro hledání neexistuje nebo se neshoduje s binárním souborem.|
-|**VSP2007**|\<filename > neobsahuje žádný instrumentující kód.<br /><br /> Toto upozornění se vydá, pokud jsou všechny funkce v binárním souboru vyloučené nebo pokud zadaný soubor obsahuje pouze prostředky.|
-|**VSP2008**|Nelze získat atributy zabezpečení z \<název >. Kód chyby \<kód ><br /><br /> K tomuto upozornění dochází, pokud uživatel nemá oprávnění READ_DAC. Během procesu instrumentace se Profiler pokusí zachovat původní seznam DACL pro binární soubor. Vzhledem k tomu, že je původní binární soubor nahrazen novým binárním souborem, je nutné zkopírovat seznam DACL z původního binárního souboru a použít ho na nový binární soubor. To může selhat, pokud uživatel nemá READ_DAC přístup k původnímu binárnímu souboru.|
-|**VSP2009**|Nelze nastavit atributy zabezpečení pro \<název >. Kód chyby \<číslo chyby ><br /><br /> K tomuto upozornění dochází, pokud uživatel nemá oprávnění WRITE_DAC. Během procesu instrumentace se Profiler pokusí zachovat původní seznam DACL pro binární soubor. Vzhledem k tomu, že je původní binární soubor nahrazen novým binárním souborem, je nutné zkopírovat seznam DACL z původního binárního souboru a použít ho na nový binární soubor. To může selhat, pokud uživatel nemá WRITE_DAC přístup k novému binárnímu souboru.|
-|**VSP2010**|Pro instrumentaci se konkrétně neberou žádné funkce, protože možnosti-INCLUDE/-EXCLUDE nejsou k dispozici.|
-|**VSP2011**|Include/Exclude funcspec \<název > neodpovídá žádným funkcím.|
-|**VSP2012**|Obrázek neobsahuje žádný kód, který by bylo možné instrumentovat pro pokrytí kódu.<br /><br /> Profiler neinstrumentuje následující typ kódu:<br /><br /> – Statické funkce CRT<br />-Spravované metody s atributem NonUserCodeAttribute<br />-Spravované metody s atributem DebuggerHiddenAttribute neovlivňuje<br />– Bloky MASM<br /><br /> Toto upozornění je generováno, pokud po tomto filtrování není ponechán žádný kód.|
-|**VSP2013**|Instrumentace této image vyžaduje, aby běžela jako 32 proces. Příznaky hlavičky CLR byly aktualizovány tak, aby odrážely tuto skutečnost.<br /><br /> Profiler změní binární soubor tak, aby 64 operační systémy mohli otevřít 32 proces v emulátoru WOW64. V případě knihoven (DLL) to může selhat, pokud jsou načteny do existujícího 64 procesu. Toto upozornění upozorňuje uživatele na závislost.|
-|**VSP2014**|Výsledný instrumentující obrázek je pravděpodobně neplatný a nemusí být spuštěn.<br /><br /> Tato zpráva se zobrazí, když má konečné instrumentované sestavení neplatnou hlavičku PE.|
+|**VSP1026**|Pokrytí není podporováno v knihovnách, které neodkazují na MSCorLib. To je často případ přenosných knihoven.<br /><br />Možnost příkazového řádku [/EnableCodeCoverage](../test/vstest-console-options.md) je vyžadována pro jádro .NET Core.|
+|**VSP2000**|Vnitřní chyba Pro tento spustitelný soubor nelze získat název souboru modulu.|
+|**VSP2001**|\<název sestavení> je silně pojmenované sestavení. Před spuštěním musí být znovu podepsán.<br /><br /> K tomuto upozornění dochází, když je podepsané sestavení instrumentované. Pomocí nástroje *sn.exe* můžete odstoupit od binárního souboru nebo dočasně vypnout požadavek na silný název. Další informace naleznete v [tématu Sn.exe (nástroj se silným názvem).](/dotnet/framework/tools/sn-exe-strong-name-tool)|
+|**VSP2002**|V> \<názvu souboru \<nelze najít funkci funcname><br /><br /> K tomuto upozornění dochází, pokud funkci nelze nalézt v zadaném souboru.|
+|**VSP2003**|V názvu souboru \< \<> nelze najít žádné křížové skoky na funkci funcname>.<br /><br /> K tomuto upozornění dochází, pokud VSInstr nelze zrušit křížové skoky. Křížové skoky se používají pro optimalizaci kódu.|
+|**VSP2004**|Funkce \<funcname> byla vyloučena pomocí přepínače příkazového řádku EXCLUDE, ale byla vyžadována, protože obsahovala křížový skok.<br /><br /> K tomuto upozornění dochází, pokud byla funkce vyloučena pomocí možnosti EXCLUDE, ale je potřeba během procesu instrumentace. Profiler automaticky obsahuje požadovanou funkci.|
+|**VSP2005**|Text chyby \<vnitřní instrumentace><br /><br /> Toto upozornění se vydává, pokud nelze provést instrumentaci. Zkontrolujte text chyby a zjistěte, zda jej lze opravit.|
+|**VSP2006**|Nelze najít pdb \<pro název><br /><br /> K tomuto upozornění dochází, pokud soubor PDB neexistuje v cestě hledání nebo neodpovídá binárnímu souboru.|
+|**VSP2007**|\<název souboru> neobsahuje žádný instrumentovatelný kód.<br /><br /> Toto upozornění je vydáno, pokud byly všechny funkce v binárním souboru vyloučeny nebo pokud zadaný soubor obsahuje pouze prostředky.|
+|**VSP2008**|Nelze získat atributy \<zabezpečení z> názvu. > \<kódu kódu chyby<br /><br /> K tomuto upozornění dochází, pokud uživatel nemá oprávnění READ_DAC. Během procesu instrumentace profiler pokusí zachovat původní DACL pro binární. Vzhledem k tomu, že původní binární soubor je nahrazen novým binárním souborem, musí být seznam DACL z původního binárního souboru zkopírován a použit na nový binární soubor. To může selhat, pokud uživatel nemá READ_DAC přístup k původnímu binárnímu souboru.|
+|**VSP2009**|Nelze nastavit atributy \<zabezpečení pro> názvů. Číslo \<chyby kódu><br /><br /> K tomuto upozornění dochází, pokud uživatel nemá WRITE_DAC oprávnění. Během procesu instrumentace profiler pokusí zachovat původní DACL pro binární. Vzhledem k tomu, že původní binární soubor je nahrazen novým binárním souborem, musí být seznam DACL z původního binárního souboru zkopírován a použit na nový binární soubor. To může selhat, pokud uživatel nemá WRITE_DAC přístup k novému binárnímu souboru.|
+|**VSP2010**|Pro instrumentaci nejsou speciálně vybrány žádné funkce z důvodu možností -INCLUDE/-EXCLUDE.|
+|**VSP2011**|Zahrnout/vyloučit název \<funcspec> neodpovídá žádné funkci|
+|**VSP2012**|Obrázek neobsahuje žádný kód, který může být instrumentován pro pokrytí kódu.<br /><br /> Profiler nepředstavuje tento typ kódu:<br /><br /> - Statické funkce CRT<br />- Spravované metody přiřazené s NonUserCodeAttribute<br />- Spravované metody přiřazené debuggerhiddenattribute<br />- MASM bloky<br /><br /> Toto upozornění je generováno, pokud po tomto filtrování nezbývá žádný kód.|
+|**VSP2013**|Instrumentace tohoto obrázku vyžaduje, aby byl spuštěn jako 32bitový proces. Příznaky hlavičky CLR byly aktualizovány tak, aby odrážely toto.<br /><br /> Profiler upraví binární tak, aby 64bitové operační systémy můžete otevřít 32bitový proces v wow64 emulátoru. Pro knihovny (DLL) to může selhat, pokud jsou načteny v existujícím 64bitovém procesu. Toto upozornění upozorní uživatele na závislost.|
+|**VSP2014**|Výsledný instrumentovaný obrázek se zdá být neplatný a nemusí být spuštěn.<br /><br /> Tato zpráva nastane, když konečné instrumentované sestavení má neplatné hlavičky PE.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [VSInstr](../profiling/vsinstr.md)

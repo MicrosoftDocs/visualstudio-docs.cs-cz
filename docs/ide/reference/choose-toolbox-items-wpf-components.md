@@ -13,57 +13,57 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 731fe05e90e01c60f0a7ff3a14917d6d7625bc1e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75570554"
 ---
 # <a name="choose-toolbox-items-wpf-components"></a>Výběr položek sady nástrojů, součásti WPF
 
-Tato karta dialogového okna **zvolit položky sady nástrojů** zobrazí seznam ovládacích prvků Windows Presentation Foundation (WPF), které jsou k dispozici v místním počítači. Chcete-li zobrazit tento seznam, vyberte možnost **zvolit položky sady nástrojů** v nabídce **nástroje** , chcete-li zobrazit dialogové okno **zvolit položky sady nástrojů** a pak vyberte kartu **komponenty WPF** . Pokud chcete uvedené součásti seřadit, vyberte libovolné záhlaví sloupce.
+Na této kartě dialogového okna **Zvolit položky panelu nástrojů** se zobrazí seznam ovládacích prvků WPF (Windows Presentation Foundation), které jsou k dispozici v místním počítači. Chcete-li tento seznam zobrazit, vyberte z nabídky **Nástroje** vybrat **položky panelu nástrojů,** chcete-li zobrazit dialogové okno **Zvolit položky panelu nástrojů,** a pak vyberte jeho kartu **Komponenty WPF.** Chcete-li uvedené součásti seřadit, vyberte libovolné záhlaví sloupce.
 
-- Pokud je vybráno zaškrtávací políčko vedle komponenty, zobrazí se v **sadě nástrojů**ikona této součásti.
+- Je-li zaškrtnuto políčko vedle součásti, zobrazí se v **panelu nástrojů**ikona této součásti .
 
     > [!TIP]
-    > Chcete-li přidat ovládací prvek WPF do dokumentu projektu, který je otevřen pro úpravy, přetáhněte ikonu **panelu nástrojů** na zobrazení Návrh plochu. Výchozí značky a kód pro komponentu jsou vloženy do projektu, který je připraven k úpravám. Další informace najdete v tématu [nástrojů](../../ide/reference/toolbox.md).
+    > Chcete-li přidat ovládací prvek WPF do dokumentu projektu, který je otevřený pro úpravy, přetáhněte jeho ikonu **Panelu nástrojů** na povrch návrhového pohledu. Výchozí značky a kód pro komponentu jsou vloženy do projektu, připravené pro úpravu. Další informace naleznete v [tématu Toolbox](../../ide/reference/toolbox.md).
 
-- Pokud je zaškrtnutí políčka vedle komponenty vymazáno, bude z **panelu nástrojů**odebrána odpovídající ikona.
+- Pokud políčko vedle součásti není zaškrtnuto, bude odpovídající ikona odebrána z **panelu nástrojů**.
 
     > [!NOTE]
-    > Komponenty rozhraní .NET nainstalované v počítači zůstávají dostupné bez ohledu na to, zda jsou ikony pro ně zobrazeny v sadě **nástrojů**.
+    > Součásti .NET nainstalované v počítači zůstávají k dispozici bez ohledu na to, zda jsou ikony pro ně zobrazeny v **panelu nástrojů**.
 
-Sloupce na kartě **komponenty WPF** obsahují následující informace:
+Sloupce na kartě **Komponenty WPF** obsahují následující informace:
 
-**Jméno**
+**Název**
 
-Obsahuje seznam názvů ovládacích prvků WPF, pro které existují položky v registru počítače.
+Uvádí názvy ovládacích prvků WPF, pro které existují položky v registru počítače.
 
 **Namespace**
 
-Zobrazuje hierarchii oboru názvů [rozhraní .NET API](/dotnet/api/?view=netframework-4.7) , který definuje strukturu komponenty. Pokud chcete zobrazit seznam dostupných součástí v rámci každého oboru názvů .NET nainstalovaného v počítači, seřaďte tento sloupec.
+Zobrazí hierarchii oboru názvů [rozhraní .NET API,](/dotnet/api/?view=netframework-4.7) který definuje strukturu komponenty. Seřazením podle tohoto sloupce zobrazíte seznam dostupných součástí v rámci každého oboru názvů .NET nainstalovaného v počítači.
 
 **Název sestavení**
 
-Zobrazuje název sestavení .NET, které zahrnuje obor názvů pro jednotlivé komponenty. Seřadit v tomto sloupci pro výpis oborů názvů obsažených v každém sestavení .NET nainstalovaném v počítači.
+Zobrazí název sestavení .NET, které obsahuje obor názvů pro každou součást. Seřazením podle tohoto sloupce zobrazíte seznam oborů názvů obsažených v každém sestavení rozhraní .NET nainstalovaném v počítači.
 
-**Službě**
+**Adresář**
 
-Zobrazuje umístění sestavení .NET. Výchozím umístěním pro všechna sestavení je globální mezipaměť sestavení (GAC). Další informace o globální mezipaměti sestavení (GAC) najdete v tématu [práce se sestaveními a globální mezipamětí sestavení](/dotnet/framework/app-domains/working-with-assemblies-and-the-gac).
+Zobrazí umístění sestavení .NET. Výchozí umístění pro všechna sestavení je globální mezipaměť sestavení. Další informace o globální mezipaměti sestavení naleznete v [tématu Práce s sestaveními a Globální mezipaměť sestavení](/dotnet/framework/app-domains/working-with-assemblies-and-the-gac).
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
-### <a name="filter"></a>Filtrovat
+### <a name="filter"></a>Filtr
 
-Filtruje seznam ovládacích prvků WPF v závislosti na řetězci, který zadáte do textového pole. Zobrazí se všechny shody ze všech čtyř sloupců.
+Filtruje seznam ovládacích prvků WPF na základě řetězce, který zadáte v textovém poli. Zobrazí se všechny shody z některého ze čtyř sloupců.
 
-**Jejich**
+**Vymazat**
 
 Vymaže řetězec filtru.
 
 **Procházet**
 
-Otevře dialogové okno **otevřít** , které umožňuje přejít na sestavení, která obsahují ovládací prvky WPF. Použijte k načtení sestavení, která nejsou umístěna v globální mezipaměti sestavení (GAC).
+Otevře dialogové okno **Otevřít,** které umožňuje přejít na sestavení, která obsahují ovládací prvky WPF. Slouží k načtení sestavení, které nejsou umístěny v globální mezipaměti sestavení.
 
 **Jazyk**
 
@@ -71,17 +71,17 @@ Zobrazuje lokalizovaný jazyk sestavení, který obsahuje vybraný ovládací pr
 
 ## <a name="limitations"></a>Omezení
 
-Přidání vlastního ovládacího prvku nebo <xref:System.Windows.Controls.UserControl> do sady nástrojů má následující omezení:
+Přidání vlastního ovládacího prvku nebo <xref:System.Windows.Controls.UserControl> panelu nástrojů má následující omezení:
 
 - Funguje pouze pro vlastní ovládací prvky definované mimo aktuální projekt.
 
-- Se neaktualizuje správně při změně konfigurace řešení z ladění na verzi nebo z verze na ladění. Důvodem je, že odkaz není odkazem na projekt, ale je místo toho pro sestavení na disku. Pokud je ovládací prvek součástí aktuálního řešení, při změně z ladění na verzi je váš projekt nadále odkazovat na ladicí verzi ovládacího prvku.
+- Neaktualizuje správně při změně konfigurace řešení z ladění na verzi nebo z verze na ladění. Důvodem je, že odkaz není odkaz na projekt, ale je pro sestavení na disku místo. Pokud je ovládací prvek součástí aktuálního řešení, při změně z ladění na verzi, váš projekt nadále odkazovat ladicí verze ovládacího prvku.
 
-Navíc platí, že pokud se pro vlastní ovládací prvek aplikují metadata pro dobu návrhu a tato metadata určují, že [Microsoft. Windows. Design. ToolboxBrowsableAttribute](/previous-versions/visualstudio/visual-studio-2010/bb547991(v=vs.100)) je nastavené na `false`, ovládací prvek se v sadě nástrojů nezobrazí.
+Kromě toho pokud je metadata návrhu použita na vlastní ovládací prvek a tato metadata určují, že atribut `false` [Microsoft.Windows.Design.ToolboxBrowsableAttribute](/previous-versions/visualstudio/visual-studio-2010/bb547991(v=vs.100)) je nastaven na , ovládací prvek se nezobrazí v panelu nástrojů.
 
-Můžete odkazovat na ovládací prvky přímo v zobrazení XAML mapováním oboru názvů a sestavení pro váš ovládací prvek.
+Ovládací prvky můžete odkazovat přímo v zobrazení XAML mapováním oboru názvů a sestavení pro ovládací prvek.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Panel nástrojů](../../ide/reference/toolbox.md)
+- [Sada nástrojů](../../ide/reference/toolbox.md)
 - [Začínáme s WPF (Windows Presentation Foundation)](../../designers/getting-started-with-wpf.md)

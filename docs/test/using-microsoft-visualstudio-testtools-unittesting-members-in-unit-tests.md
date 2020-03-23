@@ -1,5 +1,5 @@
 ---
-title: Použití Microsoft. VisualStudio. TestTools. UnitTesting v testování částí
+title: Použití microsoft.VisualStudio.TestTools.UnitTesting v jednotkových testech
 ms.date: 03/02/2018
 ms.topic: reference
 ms.author: mikejo
@@ -8,30 +8,30 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: e45df63f36947b5f6f0aad77bb8eebcab4aca731
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585558"
 ---
-# <a name="use-the-mstest-framework-in-unit-tests"></a>Použití rozhraní MSTest v testování částí
+# <a name="use-the-mstest-framework-in-unit-tests"></a>Použití architektury MSTest v jednotkových testech
 
-Rozhraní [MSTest](<xref:Microsoft.VisualStudio.TestTools.UnitTesting>) podporuje testování částí v aplikaci Visual Studio. Při kódování testů jednotek použijte třídy a členy v oboru názvů <xref:Microsoft.VisualStudio.TestTools.UnitTesting>. Můžete je také použít při rerafinaci testu jednotek, který byl vygenerován z kódu.
+Rozhraní [MSTest](<xref:Microsoft.VisualStudio.TestTools.UnitTesting>) podporuje testování částí v sadě Visual Studio. Třídy a členy <xref:Microsoft.VisualStudio.TestTools.UnitTesting> v oboru názvů při kódování testů částí. Můžete je také použít při zdokonalování testování částí, který byl vygenerován z kódu.
 
-## <a name="framework-members"></a>Členové architektury
+## <a name="framework-members"></a>Členové rámce
 
-Abychom vám pomohli poskytnout jasný přehled rozhraní testování částí, Tato část uspořádá členy <xref:Microsoft.VisualStudio.TestTools.UnitTesting> oboru názvů do skupin souvisejících funkcí.
+Chcete-li poskytnout jasnější přehled o rozhraní testování částí, tato <xref:Microsoft.VisualStudio.TestTools.UnitTesting> část uspořádá členy oboru názvů do skupin souvisejících funkcí.
 
 > [!NOTE]
-> Prvky atributu, jejichž názvy končí na "Attribute", lze použít buď s atributem "nebo bez" atributu "na konci. Například následující dvě příklady kódu mají stejnou funkci:
+> Atribut ové prvky, jejichž názvy končí "Atribut", lze použít buď s nebo bez "Atribut" na konci. Například následující dva příklady kódu fungují stejně:
 >
 > `[TestClass()]`
 >
 > `[TestClassAttribute()]`
 
-### <a name="members-used-for-data-driven-testing"></a>Členy používané pro testování řízené daty
+### <a name="members-used-for-data-driven-testing"></a>Členy používané pro testování založené na datech
 
-Pomocí následujících prvků nastavte testy jednotek řízené daty. Další informace najdete v tématu [Vytvoření testu jednotek řízeného daty](../test/how-to-create-a-data-driven-unit-test.md) a [použití konfiguračního souboru k definování zdroje dat](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md).
+Následující prvky slouží k nastavení testů částí řízených daty. Další informace naleznete [v tématu Vytvoření testu částí řízených daty](../test/how-to-create-a-data-driven-unit-test.md) a [Definování zdroje dat pomocí konfiguračního souboru](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md).
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataAccessMethod>
 
@@ -41,13 +41,13 @@ Pomocí následujících prvků nastavte testy jednotek řízené daty. Další 
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection>
 
-## <a name="attributes-used-to-establish-a-calling-order"></a>Atributy používané k vytvoření pořadí volání
+## <a name="attributes-used-to-establish-a-calling-order"></a>Atributy používané k vytvoření volací objednávky
 
-Prvek kódu upravený jedním z následujících atributů je volán v okamžiku, kdy zadáte. Další informace naleznete v tématu [anatomie testu jednotek](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144).
+Prvek kódu zdobený jedním z následujících atributů je volán v okamžiku, kdy zadáte. Další informace naleznete [v tématu Anatomie jednotkového testu](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144).
 
 ### <a name="attributes-for-assemblies"></a>Atributy pro sestavení
 
-Atributem AssemblyInitialize a atributem AssemblyCleanup jsou volány hned po načtení sestavení a napravo před uvolněním sestavení.
+SestavaInitialize a AssemblyCleanup jsou volána ihned po sestavení je načten a těsně před sestavení je uvolněna.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssemblyInitializeAttribute>
 
@@ -55,13 +55,13 @@ Atributem AssemblyInitialize a atributem AssemblyCleanup jsou volány hned po na
 
 ### <a name="attributes-for-classes"></a>Atributy pro třídy
 
-ClassInitialize a ClassCleanup jsou volány hned po načtení třídy a správné před uvolněním třídy.
+ClassInitialize a ClassCleanup jsou volány hned po načtení třídy a těsně před uvolněním třídy.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute>
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute>
 
-### <a name="attributes-for-test-methods"></a>Atributy testovacích metod
+### <a name="attributes-for-test-methods"></a>Atributy pro zkušební metody
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute>
 
@@ -69,15 +69,15 @@ ClassInitialize a ClassCleanup jsou volány hned po načtení třídy a správn�
 
 ## <a name="attributes-used-to-identify-test-classes-and-methods"></a>Atributy používané k identifikaci testovacích tříd a metod
 
-Každá testovací třída musí mít atribut `TestClass` a každá testovací metoda musí mít atribut `TestMethod`. Další informace naleznete v tématu [anatomie testu jednotek](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144).
+Každá testovací třída `TestClass` musí mít atribut a každá `TestMethod` zkušební metoda musí mít atribut. Další informace naleznete [v tématu Anatomie jednotkového testu](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144).
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute>
 
-## <a name="assert-classes-and-related-exceptions"></a>Vyhodnocení tříd a souvisejících výjimek
+## <a name="assert-classes-and-related-exceptions"></a>Assert třídy a související výjimky
 
-Testy jednotek mohou ověřit konkrétní chování aplikace podle jejich použití různými druhy kontrolních výrazů, výjimek a atributů. Další informace najdete v tématu [použití tříd Assert](../test/using-the-assert-classes.md).
+Testy částí můžete ověřit chování konkrétní aplikace jejich použití různých druhů kontrolnívýrazy, výjimky a atributy. Další informace naleznete [v tématu Using the assert classes](../test/using-the-assert-classes.md).
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>
 
@@ -95,7 +95,7 @@ Testy jednotek mohou ověřit konkrétní chování aplikace podle jejich použi
 
 ## <a name="the-testcontext-class"></a>Třída TestContext
 
-Následující atributy a hodnoty, které jsou přiřazeny, se zobrazí v okno Vlastnosti sady Visual Studio pro konkrétní testovací metodu. Tyto atributy nejsou určeny pro použití v kódu testu jednotek. Místo toho ovlivňují způsoby použití nebo spuštění testu jednotky, a to buď prostřednictvím integrovaného vývojového prostředí (IDE) sady Visual Studio, nebo pomocí testovacího modulu sady Visual Studio. Například některé z těchto atributů se zobrazí jako sloupce v okně **Test Manager** a v **výsledky testů** okně, což znamená, že je můžete použít k seskupení a seřazení testů a výsledků testů. Jeden z těchto atributů je <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute>, který použijete k přidání libovolných metadat k jednotkovým testům. Můžete ji například použít k uložení názvu testu průchodu, který tento test pokrývá, označením testu jednotky pomocí `[TestProperty("TestPass", "Accessibility")]`. Nebo můžete použít k uložení indikátoru typu testu, který je v `[TestProperty("TestKind", "Localization")]`. Vlastnost, kterou vytvoříte pomocí tohoto atributu a hodnotu vlastnosti, kterou přiřadíte, se zobrazí v okně **vlastnosti** sady Visual Studio pod položkou **test**pro daný nadpis.
+Následující atributy a hodnoty, které jim byly přiřazeny, se zobrazí v okně Vlastnosti sady Visual Studio pro konkrétní testovací metodu. Tyto atributy nejsou určeny pro přístup prostřednictvím kódu testování částí. Místo toho ovlivňují způsoby použití nebo spuštění testu částí, a to buď prostřednictvím ide sady Visual Studio, nebo testovacím strojem sady Visual Studio. Některé z těchto atributů se například zobrazí jako sloupce v okně **Správce testů** a v okně **Výsledky testů,** což znamená, že je můžete použít k seskupení a řazení testů a výsledků testů. Jeden takový <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute>atribut je , který slouží k přidání libovolných metadat do testů částí. Můžete jej například použít k uložení názvu testovacího průchodu, který tento `[TestProperty("TestPass", "Accessibility")]`test pokrývá, označením testu částí pomocí . Nebo jej můžete použít k uložení indikátoru druhu testu, který je s `[TestProperty("TestKind", "Localization")]`. Vlastnost, kterou vytvoříte pomocí tohoto atributu, a hodnota vlastnosti, kterou přiřadíte, se zobrazí v okně **Vlastnosti** sady Visual Studio pod nadpisem **Test specific**.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>
 
@@ -111,28 +111,28 @@ Následující atributy a hodnoty, které jsou přiřazeny, se zobrazí v okno V
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.WorkItemAttribute>
 
-## <a name="test-configuration-classes"></a>Třídy konfigurace testu
+## <a name="test-configuration-classes"></a>Testovat třídy konfigurace
 
-- [ObjectType](/previous-versions/visualstudio/visual-studio-2013/dd987428(v=vs.120))
+- [Type objektu](/previous-versions/visualstudio/visual-studio-2013/dd987428(v=vs.120))
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection>
 
 ## <a name="attributes-used-to-generate-reports"></a>Atributy používané ke generování sestav
 
-Atributy v této části se vztahují na testovací metodu, kterou upraví na entity v hierarchii projektu Team Foundation Server týmového projektu.
+Atributy v této části se týkají testovací metody, které zdobí entity v hierarchii projektu týmového projektu Team Foundation Server.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.CssIterationAttribute>
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.CssProjectStructureAttribute>
 
-## <a name="classes-used-with-private-accessors"></a>Třídy používané s privátními přistupujícími objekty
+## <a name="classes-used-with-private-accessors"></a>Třídy používané s privátními přístupovými mikinami
 
-Můžete vygenerovat test jednotky pro soukromou metodu. Tato generace vytvoří třídu soukromého přístupového objektu, která vytvoří instanci objektu třídy <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject>. Třída <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject> je Obálková třída, která používá reflexi v rámci procesu privátního přístupového objektu. Třída <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType> je podobná, ale používá se pro volání privátních statických metod namísto volání metod soukromé instance.
+Můžete vygenerovat testování částí pro soukromou metodu. Toto generování vytvoří třídu soukromého přistupujícího <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject> objektu, která vytváří instance objektu třídy. Třída <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject> je obálka třídy, která používá reflexe jako součást procesu soukromého přístupového procesu. Třída <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType> je podobná, ale používá se pro volání privátních statických metod namísto volání metod privátní instance.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject>
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType>
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- Referenční dokumentace <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting>referenční dokumentace

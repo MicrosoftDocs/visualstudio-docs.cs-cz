@@ -1,5 +1,5 @@
 ---
-title: Ukládání informací o symbolech pomocí datových souborů výkonu | Microsoft Docs
+title: Ukládání informací o symbolech pomocí datových souborů výkonu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,56 +12,56 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 74137752900d082c545dd5e5271b7700ec81fa01
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778294"
 ---
 # <a name="saving-symbol-information-with-performance-data-files"></a>Ukládání informací o symbolech se soubory s údaji o výkonu
 
-Pokud používáte Visual Studio IDE k analýze souborů a plánujete přesunout soubor VSP do jiného počítače, musíte nastavit nastavení projektu výkonu pro ukládání nebo *serializaci* symbolů v souboru sestavy. Tím se zvětší velikost souboru sestavy. Serializace symbolů je nutná ze dvou důvodů:
+Pokud používáte ide sady Visual Studio k analýze souborů a plánujete přesunout soubor VSP do jiného počítače, je nutné nastavit nastavení projektu výkonu pro uložení nebo *serializaci* symbolů v souboru sestavy. Tím se zvětší velikost souboru sestavy. Serializace symbolů je nezbytná ze dvou důvodů:
 
-- Pro vložení symbolů kódu do sestavy o výkonu před tím, než jsou cílová sestavení ztracena z jejich umístění v dočasném úložišti.
+- Chcete-li vložit symboly kódu do sestavy výkonu před cílové sestavení jsou ztraceny z jejich umístění v dočasném úložišti.
 
-- Chcete-li zachovat symboly, aby sestava výkonu byla přenosná z profilované počítače, a vypíše stejné informace, pokud je sestava otevřena pro analýzu na jiném počítači, což může mít různé symboly.
+- Chcete-li zachovat symboly, tak, aby zpráva o výkonu je přenosný z profilovaného počítače a výstupy stejné informace, pokud je sestava otevřena pro analýzu v jiném počítači, který může mít různé symboly.
 
-Můžete serializovat symboly z integrovaného vývojového prostředí (IDE) sady Visual Studio nebo z příkazového řádku:
+Symboly můžete serializovat z ide sady Visual Studio nebo z příkazového řádku:
 
-- Chcete-li serializovat symboly v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí, přejděte na panel nabídek **nástroje** a pak klikněte na tlačítko **Možnosti**. V okně **Možnosti** vyberte nástroje pro **sledování výkonu**a pak zaškrtněte políčko **automaticky serializovat informace o symbolech** .
+- Chcete-li v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] prostředí IDE serializovat symboly, přejděte na panelu nabídek na **položku Nástroje** a klepněte na příkaz **Možnosti**. V okně **Možnosti** vyberte **Nástroje výkonu**a zaškrtněte políčko **Automaticky serializovat informace o symbolu.**
 
-- PACKSYMBOLS je ekvivalentní možnost příkazového řádku při ukládání souborů sestav. K serializaci symbolů zadejte **VSPerfReport/Summary: ALL/packsymbols filename. vsp**.
+- PACKSYMBOLS je ekvivalentní možnost příkazového řádku při ukládání souborů sestavy. Chcete-li serializovat symboly, zadejte **vsperfreport /summary:all /packsymbols filename.vsp**.
 
-## <a name="troubleshooting-symbol-problems"></a>Řešení potíží se symboly
+## <a name="troubleshooting-symbol-problems"></a>Poradce při potížích se symboly
 
-Pokud nevidíte žádné symboly ve vlastním kódu, jsou k dispozici některá běžná řešení:
+Pokud ve vlastním kódu nevidíte žádné symboly, jsou k dispozici některá běžná řešení:
 
-- Spusťte VSPerfReport/debugsympath na příkazovém řádku pro zobrazení úplného seznamu umístění, kde komponenty profileru načítají informace o symbolech a zda se použité soubory symbolů shodují se soubory, které váš projekt používá.
+- Spusťte vsperfreport /debugsympath na příkazovém řádku a zobrazte úplný seznam umístění, kde komponenty profileru načítají informace o symbolech a zda se používané soubory symbolů shodují se soubory, které projekt používá.
 
-- Ujistěte se, že jste spustili VSPerfReport pomocí příznaku/PACKSYMBOLS nebo v prostředí IDE [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], že máte vybranou možnost informace o serializaci symbolů v části Obecné možnosti Průzkumníka výkonu.
+- Ujistěte se, že spustíte vsperfreport s příznakem /PACKSYMBOLS nebo v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] rozhraní IDE, že máte možnost serializovat informace o symbolu vybranou v obecných možnostech průzkumníka výkonu.
 
-- Pokud jste shromáždili data typu, přidejte/SUMMARY: TYPE do příkazového řádku VSPerfReport.
+- Pokud jste shromáždili data typu, přidejte /SUMMARY:TYPE do příkazového řádku vsperfreport.
 
-  Pokud nevidíte symboly z Windows nebo jiných programů Microsoftu:
+  Pokud nevidíte symboly ze systému Windows nebo jiných programů společnosti Microsoft:
 
-- Ujistěte se, že jste nastavili cestu k mezipaměti symbolů Windows. Chcete-li nastavit cestu k mezipaměti symbolů, proveďte jednu z následujících akcí:
+- Ujistěte se, že jste nastavili cestu mezipaměť symbolů systému Windows. Chcete-li nastavit cestu mezipaměti symbolů, proveďte jeden z následujících akcí:
 
-  - Nastavte možnost ladicí program-> symboly v rozhraní IDE [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] na správnou cestu.
+  - Nastavte volbu Symboly >ladicího programu v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ide na správnou cestu.
 
-  - Přidejte do příkazového řádku VSPerfReport možnost-SymbolPath, aby se zahrnuly vaše symboly.
+  - Přidejte volbu -symbolpath do příkazového řádku VSPerfReport, aby obsahovala vaše symboly.
 
-- Pokud nevidíte žádné symboly v [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], ujistěte se, že je správně nastavený symbolový server pro server ASP.
+- Pokud v [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]aplikaci nevidíte žádné symboly , ujistěte se, že je server symbolů správně nastaven pro server ASP.
 
-## <a name="repacking-symbols"></a>Opětovné balení symbolů
+## <a name="repacking-symbols"></a>Přebalování symbolů
 
-Pokud chcete znovu zabalit symboly do sestavy, můžete k tomu použít nástroj příkazového řádku VsPerfReport. Použijte následující příkazové řádky:
+Pokud chcete znovu zabalit symboly do sestavy, můžete to provést pomocí nástroje příkazového řádku VsPerfReport. Použijte následující příkazové řádky:
 
-VsPerfReport-clearpackedsymbols název_souboru. vsp
+VsPerfReport -clearpackedsymbols filename.vsp
 
-VsPerfReport-packsymbols-Summary: ALL filename. vsp
+VsPerfReport -packsymbols -summary:all filename.vsp
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukládání a export dat nástrojů pro sledování výkonu](../profiling/saving-and-exporting-performance-tools-data.md)
-[: odkazování na informace o symbolech Windows](../profiling/how-to-reference-windows-symbol-information.md)
-[VSPerfReport](../profiling/vsperfreport.md)
+[Ukládání a export dat](../profiling/saving-and-exporting-performance-tools-data.md)
+nástrojů výkonu[Postup: Odkaz na informace o symbolu](../profiling/how-to-reference-windows-symbol-information.md)
+systému Windows[VSPerfReport](../profiling/vsperfreport.md)

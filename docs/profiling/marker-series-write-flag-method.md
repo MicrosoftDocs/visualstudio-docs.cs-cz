@@ -1,5 +1,5 @@
 ---
-title: marker_series::write_flag – metoda | Dokumentace Microsoftu
+title: marker_series::write_flag metoda | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f09cca9bd1e3babccb0debc369881a0efa00fa0b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62830808"
 ---
-# <a name="markerserieswriteflag-method"></a>marker_series::write_flag – metoda
-Příznak, který zapisuje do souboru trasování vizualizátoru souběžnosti.
+# <a name="marker_serieswrite_flag-method"></a>marker_series::write_flag metoda
+Zapíše příznak do trasovacího souboru vizualizéru souběžnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,16 +48,16 @@ void write_flag(
 ```
 
 #### <a name="parameters"></a>Parametry
- `_Format` Složený řetězec formátu, který obsahuje textu smíšeného s nula nebo více položek formátu, který odpovídá objektům v seznamu argumentů.
+ `_Format`Složený formátovací řetězec, který obsahuje text smíchaný s nulovými nebo více položkami formátu, které odpovídají objektům v seznamu argumentů.
 
- `_Importance` Úroveň důležitosti.
+ `_Importance`Úroveň důležitosti.
 
- `_Category` Kategorie.
+ `_Category`Kategorie.
 
 ## <a name="requirements"></a>Požadavky
  **Záhlaví:** *cvmarkersobj.h*
 
- **Namespace:** Concurrency::diagnostic
+ **Obor názvů:** Souběžnost::diagnostik
 
-## <a name="see-also"></a>Viz také:
-- [marker_series – třída](../profiling/marker-series-class.md)
+## <a name="see-also"></a>Viz také
+- [marker_series třída](../profiling/marker-series-class.md)

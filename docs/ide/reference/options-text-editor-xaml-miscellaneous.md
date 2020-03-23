@@ -1,5 +1,5 @@
 ---
-title: Možnosti, textový editor, XAML, různé
+title: Možnosti, Textový editor, XAML, Různé
 ms.date: 10/29/2018
 ms.topic: reference
 f1_keywords:
@@ -29,31 +29,31 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: cec66cdb2de3f89358cd0ee90867154cc374a7fd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568201"
 ---
-# <a name="options-text-editor-xaml-miscellaneous"></a>Možnosti, textový editor, XAML, různé
+# <a name="options-text-editor-xaml-miscellaneous"></a>Možnosti, Textový editor, XAML, Různé
 
-Pomocí stránky vlastností **různé** určete způsob formátování prvků a atributů v dokumentech jazyka XAML. Chcete-li otevřít dialogové okno **Možnosti** , klikněte na nabídku **nástroje** a pak klikněte na tlačítko **Možnosti**. Chcete-li získat přístup k stránce vlastností **různé** , rozbalte uzel **textový Editor** > **XAML** > **různých** uzlech.
+Pomocí stránky **Vlastností Různé** určete, jak jsou prvky a atributy formátovány v dokumentech XAML. Dialogové okno **Možnosti otevřete,** klepněte na nabídku **Nástroje** a potom klepněte na příkaz **Možnosti**. Chcete-li získat přístup ke stránce **vlastností Různé,** rozbalte **textový editor** > **XAML** > **Různé** uzly.
 
-## <a name="auto-insert"></a>Automaticky vložit
+## <a name="auto-insert"></a>Automatické vkládání
 
-Toto nastavení použijte k určení, kdy se značky a uvozovky generují automaticky.
+Toto nastavení slouží k řízení automatického generování značek a uvozovek.
 
 |||
 |-|-|
-|**Uzavírací značky**|Určuje, zda je uzavírací značka elementu generována automaticky při zavření počáteční značky s větším než znakem (>).|
-|**Uvozovky atributů**|Určuje, zda se mají při výběru hodnoty atributu v rozevíracím seznamu dokončování příkazů generovat ohraničující uvozovky.|
-|**Pravé složené závorky pro třída MarkupExtensions**|Určuje, zda je pravá složená závorka ( **}** ) rozšíření značek generována automaticky při zadání znaku levé složené závorky ( **{** ).|
-|**Čárky pro oddělení parametrů MarkupExtension**|Určuje, zda jsou generovány čárky při psaní více než jednoho parametru v rozšíření značek.|
+|**Uzavírací značky**|Určuje, zda je uzavírací značka prvku automaticky generována při zavření otevírací značky znakem větší než (>).|
+|**Atributové uvozovky**|Určuje, zda jsou ohraničující uvozovky generovány, když je v rozevíracím seznamu dokončení příkazu vybrána hodnota atributu.|
+|**Uzavírací závorky pro markupextensions**|Určuje, zda je při zadání počátečního znaku složená závorka ( { ) automaticky generována složená závorka značky (**}**).**}**|
+|**Čárky pro oddělení parametrů MarkupExtension**|Určuje, zda budou čárky generovány při zadání více než jednoho parametru do rozšíření značek.|
 
 ## <a name="errors-and-warnings"></a>Chyby a upozornění
 
-Toto nastavení použijte k určení, kdy se automaticky generují chyby a upozornění. Další informace naleznete v tématu [chyby a upozornění XAML](../../xaml-tools/xaml-errors-warnings.md).
+Toto nastavení slouží k řízení automatického generování chyb a upozornění. Další informace naleznete v [tématu Chyby a upozornění XAML](../../xaml-tools/xaml-errors-warnings.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [XAML ve WPF](/dotnet/framework/wpf/advanced/xaml-in-wpf)

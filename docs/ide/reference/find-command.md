@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 288fb294ab712713d6be116f46ca159ea40a6e67
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595641"
 ---
 # <a name="find-command"></a>Najít – příkaz
-Vyhledá soubory pomocí podmnožiny možností dostupných na kartě **najít v souborech** okna **Najít a nahradit** .
+Prohledává soubory pomocí podmnožiny možností dostupných na kartě **Najít v souborech** v okně **Najít a nahradit.**
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,56 +30,56 @@ Edit.Find findwhat [/case] [/doc | /proc | /open | /sel]
 [/markall] [/options] [/reset] [/up] [/wild | /regex] [/word]
 ```
 
-## <a name="arguments"></a>Arguments
-`findwhat` nutné. Text, který se má shodovat.
+## <a name="arguments"></a>Argumenty
+`findwhat`Požadované. Text, který má odpovídat.
 
 ## <a name="switches"></a>Přepínače
-/Case nebo/c\
-Volitelné. Shody se objeví pouze v případě, že velká a malá písmena přesně odpovídají znakům zadaným v argumentu `findwhat`.
+/case nebo /c\
+Nepovinný parametr. Shody dojít pouze v případě, že velká a `findwhat` malá písmena přesně odpovídají těm, které jsou zadány v argumentu.
 
-/doc nebo/D\
-Volitelné. Vyhledá pouze aktuální dokument. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open`nebo `/sel`.
+/doc nebo /d\
+Nepovinný parametr. Prohledá pouze aktuální dokument. Zadejte pouze jeden z dostupných `/proc` `/open`oborů `/sel`hledání , `/doc`, , nebo .
 
-/markall nebo/m\
-Volitelné. Umístí grafiku na každý řádek, který obsahuje shodu hledání v rámci aktuálního dokumentu.
+/markall nebo /m\
+Nepovinný parametr. Umístí grafiku na každý řádek, který obsahuje shodu hledání v aktuálním dokumentu.
 
-/Open nebo/o\
-Volitelné. Vyhledá všechny otevřené dokumenty, jako by se jednalo o jeden dokument. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open`nebo `/sel`.
+/open nebo /o\
+Nepovinný parametr. Prohledává všechny otevřené dokumenty, jako by se jednalo o jeden dokument. Zadejte pouze jeden z dostupných `/proc` `/open`oborů `/sel`hledání , `/doc`, , nebo .
 
-/Options nebo/T\
-Volitelné. Zobrazí seznam aktuálních nastavení možností hledání a neprovádí hledání.
+/options nebo /t\
+Nepovinný parametr. Zobrazí seznam aktuálního nastavení možností hledání a neprovede vyhledávání.
 
-/Proc nebo/p\
-Volitelné. Vyhledá pouze aktuální proceduru. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open`nebo `/sel`.
+/proc nebo /p\
+Nepovinný parametr. Prohledá pouze aktuální postup. Zadejte pouze jeden z dostupných `/proc` `/open`oborů `/sel`hledání , `/doc`, , nebo .
 
-/Reset po vyčištění nebo/e\
-Volitelné. Vrátí možnosti hledání do jejich výchozího nastavení a neprovádí hledání.
+/reset nebo /e\
+Nepovinný parametr. Vrátí možnosti hledání do výchozího nastavení a neprovede hledání.
 
-/SEL nebo/s\
-Volitelné. Vyhledá pouze aktuální výběr. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open`nebo `/sel`.
+/sel nebo /s\
+Nepovinný parametr. Prohledá pouze aktuální výběr. Zadejte pouze jeden z dostupných `/proc` `/open`oborů `/sel`hledání , `/doc`, , nebo .
 
-/up nebo/u\
-Volitelné. Vyhledá z aktuálního umístění v souboru směrem k začátku souboru. Ve výchozím nastavení vyhledávání začíná na aktuálním umístění v souboru a hledá na konci souboru.
+/nahoru nebo /u\
+Nepovinný parametr. Prohledá z aktuálního umístění v souboru směrem k začátku souboru. Ve výchozím nastavení hledání začíná v aktuálním umístění v souboru a hledání ke konci souboru.
 
-/Regex nebo/r\
-Volitelné. Používá předem definované speciální znaky v argumentu `findwhat` jako notace, které reprezentují vzory textu, nikoli literální znaky. Úplný seznam znaků regulárních výrazů naleznete v tématu [regulární výrazy](../../ide/using-regular-expressions-in-visual-studio.md).
+/regex nebo /r\
+Nepovinný parametr. Používá předdefinované speciální znaky `findwhat` v argumentu jako zápisy, které představují vzorky textu spíše než literál znaky. Úplný seznam znaků regulárních výrazů naleznete [v tématu Regulární výrazy](../../ide/using-regular-expressions-in-visual-studio.md).
 
-/Wild nebo/l\
-Volitelné. Používá předem definované speciální znaky v argumentu `findwhat` jako notace, které reprezentují znak nebo sekvenci znaků.
+/wild nebo /l\
+Nepovinný parametr. Používá předdefinované speciální znaky `findwhat` v argumentu jako zápisy představující znak nebo posloupnost znaků.
 
-/Word nebo/W\
-Volitelné. Vyhledává pouze celá slova.
+/word nebo /w\
+Nepovinný parametr. Vyhledá pouze celá slova.
 
 ## <a name="example"></a>Příklad
-V tomto příkladu se v aktuálně vybrané části kódu provede hledání s rozlišováním velkých a malých písmen pro slovo "someString".
+Tento příklad provádí hledání rozlišování velkých a malých písmen pro slovo "somestring" v aktuálně vybrané části kódu.
 
 ```cmd
 >Edit.Find somestring /sel /case
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Pole Najít/příkaz](../../ide/find-command-box.md)
+- [Najít/Příkazové pole](../../ide/find-command-box.md)
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

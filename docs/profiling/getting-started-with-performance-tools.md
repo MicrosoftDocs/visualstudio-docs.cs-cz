@@ -1,5 +1,5 @@
 ---
-title: Začínáme s nástroji pro výkon | Microsoft Docs
+title: Začínáme s nástroji pro výkon | Dokumenty společnosti Microsoft
 ms.date: 11/04/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,23 +13,23 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: faba7a6d2e698e919c0f0adca6fa574838b8b3c4
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779204"
 ---
-# <a name="getting-started-with-performance-tools"></a>Začínáme s nástroji pro sledování výkonu
+# <a name="getting-started-with-performance-tools"></a>Začínáme s nástroji pro výkon
 
-Visual Studio nabízí několik způsobů, jak shromažďovat, zobrazovat a analyzovat data o výkonu kódu. V mnoha případech nejlepší způsob, jak začít pracovat s nástroji pro výkon, je použít výchozí nastavení **Průvodce výkonem**. Průvodce shromažďuje statistiku aplikací, které mohou ukazovat na problémy s výkonem ve vašem kódu.
+Visual Studio nabízí několik způsobů, jak shromažďovat, zobrazovat a analyzovat data o výkonu kódu. V mnoha případech je nejlepším způsobem, jak začít s nástroji pro výkon, použít výchozí nastavení **Průvodce výkonem**. Průvodce shromažďuje statistiky aplikací, které mohou ukazovat na problémy s výkonem ve vašem kódu.
 
-- Upozornění na výkon, která vás upozorňují na běžné problémy s kódováním, se zobrazí v okně Visual Studio **Seznam chyb** . Můžete přejít z upozornění na zdrojový kód a podrobná témata nápovědy, která vám pomohou psát efektivnější kód.
+- Upozornění na výkon, která vás upozorňují na běžné problémy s kódováním, se zobrazí v okně **Seznam chyb** sady Visual Studio. Můžete přejít z upozornění do zdrojového kódu a podrobná témata nápovědy, které vám pomohou napsat efektivnější kód.
 
-- Sestavy o výkonu poskytují zobrazení na různých úrovních struktury vaší aplikace, řádků zdrojového kódu a procesů. Sestavy o výkonu zobrazují data o spuštění aplikace od volajících a volaných funkcí konkrétní funkce do stromu volání celé aplikace.
+- Sestavy výkonu poskytují zobrazení na různých úrovních struktury aplikace, řádky zdrojového kódu a procesy. Sestavy výkonu zobrazují data spuštění aplikace, od volajících a volaných funkcí určité funkce až po strom volání celé aplikace.
 
-Chcete-li rychle vytvořit profil projektu, aplikace nebo webu ASP.NET, vyberte možnost **ladit** > **Performance Profiler**a vyberte **Průvodce výkonem**. Podrobné pokyny najdete v tématu [Příručka pro začátečníky k profilaci výkonu](../profiling/beginners-guide-to-cpu-sampling.md) a [Postupy: shromažďování dat o výkonu pro web](../profiling/how-to-collect-performance-data-for-a-web-site.md).
+Chcete-li rychle profilovat projekt, aplikaci nebo ASP.NET webu, vyberte **ladit** > **nástroj Profiler výkonu**a vyberte Průvodce **výkonem**. Podrobné pokyny naleznete v [tématu Příručka pro začátečníky k profilování výkonu](../profiling/beginners-guide-to-cpu-sampling.md) a [jak: Shromažďovat údaje o výkonu pro web](../profiling/how-to-collect-performance-data-for-a-web-site.md).
 
-Pokud chcete ručně zadat a nakonfigurovat relaci profilace výkonu, vyberte **ladit** > **Profiler** > **prohlížeč výkonu**. Ke konfiguraci relací použijte složku **cíle** a stránky **vlastností** v **prohlížeč výkonu** . Pokyny najdete v tématu [Postup: Ruční vytvoření relací výkonu](../profiling/how-to-manually-create-performance-sessions.md).
+Chcete-li ručně určit a nakonfigurovat relaci profilování výkonu, vyberte **možnost Ladění** > **Průzkumníka výkonu****profileru** > . Ke konfiguraci relací použijte stránky **Cíla** a **Vlastnosti** v **Průzkumníku výkonu.** Pokyny naleznete v [tématu Postup: Ruční vytvoření relací výkonu](../profiling/how-to-manually-create-performance-sessions.md).
 
 **Viz také:**
 

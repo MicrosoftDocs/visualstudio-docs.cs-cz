@@ -1,5 +1,5 @@
 ---
-title: Uložit protokol testu zatížení pro neúspěšné testy
+title: Uložit protokol zátěžového testu pro selhání testu
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,18 +10,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6b47010a68520379afd8e0d969fa99169cb1ff0b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588951"
 ---
-# <a name="how-to-specify-if-test-failures-are-saved-to-test-logs-using-the-load-test-editor"></a>Postupy: určení, zda jsou ukládána selhání testů pro testování protokolů pomocí editoru zátěžových testů
+# <a name="how-to-specify-if-test-failures-are-saved-to-test-logs-using-the-load-test-editor"></a>Postup: Určete, zda jsou uloženy chyby testu pro testovací protokoly pomocí Editoru zátěžového testu
 
-Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**, můžete použít **editoru zátěžového testu** Chcete-li změnit vlastnosti zátěžového testu odpovídá potřebám a cílům testování. Zobrazit [návod: vytvoření a spuštění zátěžového testu](../test/walkthrough-create-and-run-a-load-test.md). Můžete zadat, pokud chcete protokol testu uložit Pokud selhání testu v rámci zátěžového testu tak, že změníte **při selhání testu uložit protokol** vlastnost.
+Po vytvoření zátěžového testu pomocí **Průvodce novým zátěžovým testem**můžete pomocí **Editoru zátěžového testu** změnit vlastnosti zátěžového testu tak, aby vyhovovaly vašim potřebám a cílům testování. Viz [návod: Vytvoření a spuštění zátěžového testu](../test/walkthrough-create-and-run-a-load-test.md). Můžete určit, zda chcete mít testovací protokol uložen, pokud test selže v zátěžovém testu změnou **vlastnosti Uložit protokol při selhání testu.**
 
 > [!NOTE]
-> Úplný seznam vlastností parametrů spuštění a jejich popis najdete v části [zátěžového testu spusťte nastavení](../test/load-test-run-settings-properties.md).
+> Úplný seznam vlastností nastavení spuštění a jejich popisy naleznete v tématu [Načtení vlastností nastavení spuštění testu](../test/load-test-run-settings-properties.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -29,21 +29,21 @@ Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým te
 
 1. Otevřete zátěžový test.
 
-     **Editoru zátěžových testů** se zobrazí. Zobrazí se strom zátěžového testu.
+     Zobrazí se **Editor zátěžového testu.** Zobrazí se strom zátěžového testu.
 
-2. V zátěžového testu stromů **parametrů běhu** složky, vyberte uzel parametrů spuštění, který chcete zadat maximální počet iterací testu.
+2. Ve složce Spustit **nastavení** zátěžového testu zvolte uzel nastavení spuštění, pro který chcete zadat maximální počet iterací testu.
 
-3. Na **zobrazení** nabídce vyberte možnost **okno vlastností**.
+3. V nabídce **Zobrazení** vyberte **Okno vlastnosti**.
 
-     Vlastnosti parametrů běhu kategorií a jsou zobrazeny v **vlastnosti** okna.
+     Kategorie a vlastnosti nastavení spuštění jsou zobrazeny v okně **Vlastnosti.**
 
-4. V **při selhání testu uložit protokol** vlastnosti, vyberte buď **True** nebo **False** k určení, zda chcete uložit protokol testu v případě selhání testu ve scénáři.
+4. Ve vlastnosti **Uložit protokol při selhání testu** vyberte **true** nebo **false** a určete, zda chcete uložit protokol testu v případě selhání testu ve scénáři.
 
-     Po dokončení změn vlastnosti, zvolte **Uložit** na **souboru** nabídky.
+     Po dokončení změny vlastnosti zvolte **Uložit** v nabídce **Soubor.**
 
-     Data uložená v protokolu lze zobrazit pomocí tabulkového zobrazení v Analyzéru zátěžového testu. Další informace najdete v tématu [Analýza výsledků zátěžových testů a chyb v tabulkovém zobrazení](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+     Data uložená v protokolu lze zobrazit pomocí tabulkového zobrazení v Analyzéru zátěžového testu. Další informace naleznete [v tématu Analýza výsledků zátěžových testů a chyb v zobrazení Tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md)
+- [Upravit scénáře zátěžového testu](../test/edit-load-test-scenarios.md)
 - [Návod: Vytvoření a spuštění zátěžového testu](../test/walkthrough-create-and-run-a-load-test.md)

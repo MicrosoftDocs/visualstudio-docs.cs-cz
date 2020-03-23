@@ -1,5 +1,5 @@
 ---
-title: WaitStart | Microsoft Docs
+title: WaitStart | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 6c737177-2dfb-4150-963e-a49ac9aaa591
@@ -10,16 +10,16 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 1cbabcf86afa9770f1616c7e4e508af1c9afa1ba
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779854"
 ---
 # <a name="waitstart"></a>WaitStart
-Možnost WaitStart způsobí, že se spustí dílčí příkaz *VSPerfCmd. exe* , aby se vrátil jenom v případě, že se Profiler inicializoval nebo když uplyne zadaný počet sekund. Ve výchozím nastavení se příkaz Start vrátí hned. Pokud se spustí dílčí příkaz bez inicializace profileru, vrátí se chyba. Pokud není zadaný počet sekund, příkaz Start počká na neomezenou dobu.
+WaitStart Možnost způsobí, že *VSPerfCmd.exe* Start dílčí příkaz vrátit pouze v případě, že profiler inicializoval nebo po uplynutí zadaného počtu sekund. Ve výchozím nastavení se příkaz Start vrátí okamžitě. Pokud se příkaz Start sub vrátí bez inicializace profileru, je vrácena chyba. Pokud není zadán počet sekund, příkaz Start čeká neomezeně dlouho.
 
- Možnost WaitStart je užitečná v dávkových souborech, aby bylo zajištěno, že Profiler byl inicializován.
+ Možnost WaitStart je užitečná v dávkových souborech, aby se ujistil, že profiler byl inicializován.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,17 +28,17 @@ VSPerfCmd.exe /Start:Method /Output:FileName[Options] /WaitStart[:Seconds]
 ```
 
 #### <a name="parameters"></a>Parametry
- `Seconds` počet sekund, po které se má čekat, než se vrátí z příkazu Start sub.
+ `Seconds`Počet sekund čekání před návratem z dílčího příkazu Start.
 
 ## <a name="required-options"></a>Požadované možnosti
  Možnost WaitStart lze použít pouze s dílčím příkazem Start.
 
- **Output:** `filename` Určuje název výstupního souboru.
+ **Výstup:** `filename` Určuje název výstupního souboru.
 
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="example"></a>Příklad
- V tomto příkladu dávkového souboru bude spouštěcí příkaz čekat 5 sekund, než se Profiler inicializuje.
+ V tomto příkladu dávkového souboru bude příkaz Start čekat 5 sekund, než se inicializuje profiler.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp /WaitStart:5

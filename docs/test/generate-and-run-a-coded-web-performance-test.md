@@ -1,5 +1,5 @@
 ---
-title: Kódované testy webového výkonu
+title: Kódované testy výkonu webu
 ms.date: 10/03/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,39 +15,39 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4297f60c74e32b904d7c36912a8377d33f23ebdf
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589575"
 ---
 # <a name="generate-and-run-a-coded-web-performance-test"></a>Generování a spuštění programového testu výkonnosti webu
 
-Testy webového výkonu jsou zaznamenány procházením webové aplikace. Testy jsou zahrnuty v zátěžových testech k měření výkonu webové aplikace v rámci zátěže více uživatelů. Test výkonnosti webu lze převést na skript založený na kódu, který můžete upravit a přizpůsobit stejně jako jiný zdrojový kód. Můžete například přidat konstrukce větvení a smyček.
+Testy výkonu webu se zaznamenávají procházením webové aplikace. Testy jsou zahrnuty v zátěžových testech pro měření výkonu webové aplikace pod tlakem více uživatelů. Test výkonu webu lze převést na skript založený na kódu, který můžete upravit a přizpůsobit jako jakýkoli jiný zdrojový kód. Můžete například přidat smyčky a větvení konstrukce.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="generate-a-coded-web-performance-test"></a>Generování programový test výkonnosti webu
+## <a name="generate-a-coded-web-performance-test"></a>Generovat kódovaný test výkonu webu
 
-1. Pokud jste ještě nevytvořili test výkonnosti webu, přečtěte si téma [zaznamenání testu výkonu webu](/azure/devops/test/load-test/run-performance-tests-app-before-release#create-a-web-performance-and-load-test-project).
+1. Pokud jste nevytvořili test výkonu webu, přečtěte si informace [o záznamu testu výkonu webu](/azure/devops/test/load-test/run-performance-tests-app-before-release#create-a-web-performance-and-load-test-project).
 
-2. Generovat kódovaný test.
+2. Vygenerujte kódovaný test.
 
-     ![Generování programový test výkonnosti webu](../test/media/web_test_coded_generate.png)
+     ![Generovat kódovaný test výkonu webu](../test/media/web_test_coded_generate.png)
 
-3. Název testu.
+3. Pojmenujte test.
 
-     ![Zadejte název programového testu výkonnosti webu](../test/media/web_test_coded_generate_nametest.png)
+     ![Zadejte název kódovaného testu výkonu webu.](../test/media/web_test_coded_generate_nametest.png)
 
-     V editoru kódu se otevře nový kódovaný test.
+     Nový kódovaný test se otevře v editoru kódu.
 
-     V závislosti na tom, které webového výkonu a zatížení testovací projekt šablony jste přidali do svého řešení se vygeneruje kód v jazyce Visual Basic nebo Visual C#.
+     V závislosti na tom, který výkon webu a šablona projektu zátěžového testu, kterou jste přidali do vašeho řešení, bude kód vygenerován v jazyce Visual Basic nebo Visual C#.
 
      ![V editoru kódu se otevře nový kódovaný test](../test/media/web_test_coded_generate_opencodeeditor.png)
 
-     Zobrazí se v kódu, že metoda GetRequestEnumerator() v C# nebo metoda Run() v jazyce Visual Basic obsahuje každý ověřovací pravidlo a webové požadavky, které byly v zaznamenaném testu.
+     Můžete vidět v kódu, který GetRequestEnumerator() metoda v jazyce C#, nebo Run() metoda v jazyce Visual Basic, obsahuje každé ověřovací pravidlo a webový požadavek, který byl v překódovaný test.
 
-4. Pokud chcete prokázat Přidání jednoduchého kódu, přejděte na konec metody a za kód poslední webové žádosti a přidejte následující kód:
+4. Chcete-li demonstrovat přidání nějakého jednoduchého kódu, přejděte dolů na konec metody a za kód pro poslední webový požadavek a přidejte následující kód:
 
     ```c#
     if (DateTime.Today.DayOfWeek == DayOfWeek.Wednesday)
@@ -72,29 +72,29 @@ Testy webového výkonu jsou zaznamenány procházením webové aplikace. Testy 
     End If
     ```
 
-5. Sestavte řešení, chcete-li ověřit, že váš vlastní kód zkompiluje.
+5. Vytvořte řešení a ověřte, zda se váš vlastní kód zkompiluje.
 
 6. Spusťte test.
 
-     ![Spustit programový test výkonnosti webu](../test/media/web_test_coded_generate_run.png)
+     ![Spuštění kódovaného testu výkonu webu](../test/media/web_test_coded_generate_run.png)
 
-     A protože den toto bylo spuštěno právě ve středu...
+     A protože ten den, kdy se to rozběhla, byla středa...
 
-     ![Výsledky testu webového výkonu](../test/media/web_test_coded_generate_results.png)
+     ![Výsledky testů výkonnosti webu](../test/media/web_test_coded_generate_results.png)
 
-## <a name="qa"></a>FUNKCE Q &AMP; A
+## <a name="qa"></a>Q&A
 
-### <a name="q-can-i-run-more-than-one-test-at-a-time"></a>Dotaz: lze současně spustit více než jeden test?
-**A:** Ano, můžete použít místní nabídku (kontext) na **Průzkumník řešení**.
+### <a name="q-can-i-run-more-than-one-test-at-a-time"></a>Otázka: Mohu spustit více než jeden test najednou?
+**A:** Ano, použijte v **Průzkumníku řešení**nabídku pravým tlačítkem myši (kontext).
 
-### <a name="q-should-i-add-a-data-source-before-or-after-i-generate-a-coded-test"></a>Dotaz: je třeba přidat zdroj dat, před nebo po generování kódovaného testu?
-**O:** je snadno přidávat [zdroj dat](../test/add-a-data-source-to-a-web-performance-test.md) před generováním kódovaného testu, protože kód se automaticky vygeneruje pro vás.
+### <a name="q-should-i-add-a-data-source-before-or-after-i-generate-a-coded-test"></a>Otázka: Mám přidat zdroj dat před nebo po vygenerování kódovaného testu?
+**A:** Je snazší přidat [zdroj dat](../test/add-a-data-source-to-a-web-performance-test.md) před generováním kódovaného testu, protože kód bude automaticky generován za vás.
 
-Když spustíte programový test se zdrojem dat, může se zobrazit následující chybová zpráva:
+Při spuštění kódovaného testu se zdrojem dat se může zobrazit následující chybová zpráva:
 
-**Nelze spustit test \<název testu > na agentovi \<název počítače >: není nastavený na instanci objektu odkaz na objekt.**
+**Nelze spustit \<test Name> \<na název počítače agenta>: Odkaz na objekt není nastaven na instanci objektu.**
 
-Tato situace může nastat, protože máte definovaný atribut pro třídu testování bez odpovídajícího atributu databindingattribute Datasourceattribute. Chcete-li vyřešit tuto chybu, přidejte odpovídající DataBindingAttribute, odstraňte ho nebo komentář z kódu.
+K tomu může dojít, protože máte DataSourceAttribute definované pro testovací třídu, bez odpovídající DataBindingAttribute. Chcete-li tuto chybu vyřešit, přidejte příslušný atribut DataBindingAttribute, odstraňte jej nebo zakomentujte z kódu.
 
-### <a name="q-should-i-add-validation-and-extraction-rules-before-or-after-i-generate-a-coded-test"></a>Dotaz: je třeba přidání pravidel ověřování a extrakce, před nebo po generování kódovaného testu?
-**Odpověď:** je snazší pro přidání pravidel ověřování a pravidla extrakce před generováním kódovaného testu; doporučujeme však, že používáte [programové testy UI](../test/use-ui-automation-to-test-your-code.md) pro účely ověření.
+### <a name="q-should-i-add-validation-and-extraction-rules-before-or-after-i-generate-a-coded-test"></a>Otázka: Mám přidat ověřovací a extrakční pravidla před nebo po generování kódovaného testu?
+**A:** Je snazší přidat ověřovací pravidla a pravidla extrakce před generováním kódovaného testu; doporučujeme však použít [kódované testy ui](../test/use-ui-automation-to-test-your-code.md) pro účely ověření.

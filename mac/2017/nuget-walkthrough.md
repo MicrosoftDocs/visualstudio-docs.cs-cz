@@ -1,69 +1,69 @@
 ---
 title: Zahrnutí balíčku NuGet do projektu
-description: Tento dokument popisuje, jak zahrnout balíček NuGet do projektu Xamarin. Provede vás tím, že najde a stáhne balíček a také zavádí funkce integrace IDE.
+description: Tento dokument popisuje, jak zahrnout balíček NuGet v projektu Xamarin. Prochází hledáním a stahováním balíčku a také zavedením integračních funkcí ide.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 04/14/2017
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: video
 ms.openlocfilehash: 728a225f4a1d14af986039cae7cb2fc8a493ecc9
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74983301"
 ---
 # <a name="include-a-nuget-package-in-your-project"></a>Zahrnutí balíčku NuGet do projektu
 
-NuGet je nejoblíbenější správce balíčků pro vývoj pro .NET a je integrovaný do Visual Studio pro Mac a sady Visual Studio ve Windows. Pomocí integrovaného vývojového prostředí (IDE) můžete v projektech Xamarin. iOS a Xamarin. Android vyhledat balíčky a přidat je do nich.
+NuGet je nejoblíbenější správce balíčků pro vývoj rozhraní .NET a je integrován do sady Visual Studio pro Mac a Visual Studio v systému Windows. Můžete vyhledávat a přidávat balíčky do projektů Xamarin.iOS a Xamarin.Android pomocí ide.
 
-Tento článek popisuje, jak zahrnout balíček NuGet do projektu a demonstruje řetěz nástrojů, který tento proces způsobuje bez problémů.
+Tento článek popisuje, jak zahrnout balíček NuGet v projektu a ukazuje řetězec nástrojů, který umožňuje proces bezproblémový.
 
-## <a name="nuget-in-visual-studio-for-mac"></a>NuGet v Visual Studio pro Mac
+## <a name="nuget-in-visual-studio-for-mac"></a>NuGet ve Visual Studiu pro Mac
 
-Abychom předvedli funkci balíčku NuGet, nejprve si projdeme vytvořením nové aplikace a přidáním balíčku do ní. Pak se podíváme na funkce IDE, které vám pomůžou spravovat balíčky.
+Chcete-li demonstrovat funkce balíčku NuGet, nejprve projdeme vytvoření majestátně a přidáme do ní balíček. Pak budeme diskutovat o funkcích IDE, které pomáhají spravovat balíčky.
 
 ## <a name="create-a-new-project"></a>Vytvoření nového projektu
 
-Nejprve vytvořte projekt s názvem `HelloNuget`, jak je znázorněno níže. Tento příklad ukazuje šablonu aplikace s jedním zobrazením pro iOS, ale všechny podporované typy projektu budou fungovat:
+Nejprve vytvořte `HelloNuget` projekt s názvem, jak je znázorněno níže. Tento příklad ukazuje šablonu aplikace pro jednotné zobrazení iOS, ale jakýkoli podporovaný typ projektu by fungoval:
 
-![Vytvořit nový projekt pro iOS](media/nuget-walkthrough-NewProject.png)
+![Vytvoření nového projektu iOS](media/nuget-walkthrough-NewProject.png)
 
 ## <a name="adding-a-package"></a>Přidání balíčku
 
-Po otevření projektu v Visual Studio pro Mac klikněte pravým tlačítkem na složku **balíčky** v **oblast řešení** a vyberte **Přidat balíčky**:
+Když je projekt otevřený v Sadě Visual Studio for Mac, klikněte pravým tlačítkem myši na složku **Balíčky** na **panelu řešení** a vyberte **Přidat balíčky**:
 
-![Akce kontextu přidání nového balíčku NuGet](media/nuget-walkthrough-PackagesMenu.png)
+![Přidat novou akci kontextu balíčku NuGet](media/nuget-walkthrough-PackagesMenu.png)
 
-Tím se otevře okno **Přidat balíčky** . Zajistěte, aby byl zdrojový rozevírací seznam nastaven na `nuget.org`:
+Tím se spustí okno **Přidat balíčky.** Ujistěte se, že zdroj rozevírací, je nastavena na `nuget.org`:
 
-![Rozevírací seznam zdrojového seznamu](media/nuget-walkthrough-Source.png)
+![Rozevírací seznam zdroje](media/nuget-walkthrough-Source.png)
 
-Po otevření okna se načte seznam balíčků z výchozího zdroje balíčku: nuget.org. Počáteční výsledky vypadají takto:
+Když se otevře okno načte seznam balíčků z výchozího zdroje balíčku: nuget.org. Počáteční výsledky vypadají takto:
 
-![Výpis balíčků NuGet](media/nuget-walkthrough-AddPackages1.png)
+![Seznam nugetových balíčků](media/nuget-walkthrough-AddPackages1.png)
 
-Pomocí vyhledávacího pole v pravém horním rohu Najděte konkrétní balíček, například `azure`. Po nalezení balíčku, který chcete použít, ho vyberte a kliknutím na tlačítko **Přidat balíček** zahajte instalaci.
+Pomocí vyhledávacího pole v pravém horním rohu vyhledejte `azure`konkrétní balíček, například . Až najdete balíček, který chcete použít, vyberte ho a klepnutím na tlačítko **Přidat balíček** zahájíte instalaci.
 
-[Přidat balíček NuGet Azure](media/nuget-walkthrough-AddPackages2.png)
+[Přidat balíček Azure NuGet](media/nuget-walkthrough-AddPackages2.png)
 
-Po stažení balíčku se do projektu přidá. Řešení se změní následujícím způsobem:
+Jakmile je balíček stažen, bude přidán do vašeho projektu. Řešení se změní takto:
 
-* Uzel **odkazy** bude obsahovat seznam všech sestavení, která jsou součástí balíčku NuGet.
-* Uzel **balíčky** zobrazí každý balíček NuGet, který jste stáhli. Balíček můžete aktualizovat nebo odebrat z tohoto seznamu.
-* Do projektu bude přidán soubor **Packages. config** . Tento soubor XML je používán rozhraním IDE ke sledování, které verze balíčku jsou odkazovány v tomto projektu. Tento soubor by neměl být upravován ručně, ale měli byste ho udržovat ve správě verzí. Všimněte si, že soubor Project. JSON lze použít místo souboru Packages. config. Soubor Project. JSON je nový formát souboru balíčku, který je představený s NuGet 3, který podporuje přenosné obnovení. Podrobnější informace o Project. JSON najdete v [dokumentaci k NuGet](/NuGet/Schema/Project-Json). Soubor Project. JSON je nutné přidat ručně a projekt se zavřel a znovu otevřel před tím, než se v Visual Studio pro Mac použije soubor Project. JSON.
+* Uzel **Reference** bude obsahovat seznam všech sestavení, které jsou součástí balíčku NuGet.
+* Uzel **Balíčky** zobrazí každý balíček NuGet, který jste stáhli. Balíček můžete aktualizovat nebo odebrat z tohoto seznamu.
+* Do projektu bude přidán soubor **packages.config.** Tento soubor XML používá rozhraní IDE ke sledování, na které verze balíčků se v tomto projektu odkazuje. Tento soubor by neměl být ručně upravován, ale měli byste jej uchovávat ve správě verzí. Všimněte si, že soubor project.json lze použít místo souboru packages.config. Soubor project.json je nový formát souboru balíčku představený s NuGet 3, který podporuje přenosné obnovení. Podrobnější informace o souboru project.json naleznete v [dokumentaci NuGet](/NuGet/Schema/Project-Json). Soubor project.json je třeba přidat ručně a projekt uzavřen a znovu otevřen před project.json soubor se používá v sadě Visual Studio for Mac.
 
-## <a name="using-nuget-packages"></a>Používání balíčků NuGet
+## <a name="using-nuget-packages"></a>Použití balíčků NuGet
 
-Po přidání balíčku NuGet a aktualizace odkazů na projekt můžete programovat s rozhraními API stejně jako v případě jakýchkoli odkazů na projekt.
+Po přidání balíčku NuGet a aktualizace odkazů na projekt můžete naprogramovat proti api stejně jako u libovolného odkazu na projekt.
 
-Zajistěte, abyste do horní části souboru přidali všechny požadované direktivy `using`:
+Ujistěte se, `using` že přidáte všechny požadované direktivy do horní části souboru:
 
 ```csharp
 using Newtonsoft.Json;
 ```
 
-Většina NuGet poskytuje další informace, jako je například soubor READme nebo stránka projektu s odkazem na zdroj NuGet. Odkaz na tuto stránku můžete normálně najít v balíčku BLURB na stránce přidat balíčky:
+Většina NuGet poskytují další informace, jako je například readme nebo odkaz na stránku projektu nuget. Odkaz na to můžete obvykle najít v reklamě na balíček na stránce Přidat balíčky:
 
 [Zobrazit odkaz na stránku projektu](media/nuget-walkthrough-project-page.png)
 
@@ -71,54 +71,54 @@ Většina NuGet poskytuje další informace, jako je například soubor READme n
 
 ## <a name="package-updates"></a>Aktualizace balíčků
 
-Aktualizace balíčků se dají provést najednou, a to tak, že pravým tlačítkem myši kliknete na uzel **balíčky** nebo na jednotlivé komponenty zvlášť.
+Aktualizace balíčků lze provádět buď všechny najednou, kliknutím pravým tlačítkem myši na uzel **Balíčky** nebo jednotlivě na každé součásti.
 
-Kliknutím pravým tlačítkem na **balíčky** získáte přístup k místní nabídce:
+Kliknutím pravým tlačítkem myši na **balíčky** zobrazíte kontextovou nabídku:
 
-![Nabídka balíčky](media/nuget-walkthrough-PackagesMenu.png)
+![Nabídka Balíčky](media/nuget-walkthrough-PackagesMenu.png)
 
-* **Přidat balíčky** – otevře okno pro přidání dalších balíčků do projektu.
-* **Aktualizace** – zkontroluje zdrojový server pro každý balíček a stáhne všechny novější verze.
-* **Obnovit** – stáhne všechny chybějící balíčky (bez aktualizace existujících balíčků na novější verze).
+* **Přidat balíčky** - Otevře okno pro přidání dalších balíčků do projektu.
+* **Aktualizace** - Zkontroluje zdrojový server pro každý balíček a stáhne všechny novější verze.
+* **Obnovení** – Stáhne všechny chybějící balíčky (bez aktualizace existujících balíčků na novější verze).
 
-Možnosti aktualizace a obnovení jsou také k dispozici na úrovni řešení a mají vliv na všechny projekty v řešení.
+Možnosti aktualizace a obnovení jsou také k dispozici na úrovni řešení a ovlivňují všechny projekty v řešení.
 
-Můžete také kliknout pravým tlačítkem na jednotlivé balíčky a získat přístup k místní nabídce:
+Můžete také kliknout pravým tlačítkem myši na jednotlivé balíčky pro přístup k kontextové nabídce:
 
-![Nabídka balíčky](media/nuget-walkthrough-PackageMenu.png)
+![Nabídka Balíčky](media/nuget-walkthrough-PackageMenu.png)
 
-* **Číslo verze** – číslo verze je zakázaná položka nabídky – je k dispozici pouze pro informativní účely.
-* **Aktualizace** – zkontroluje zdrojový server a stáhne novější verzi (pokud existuje).
-* **Odebrat** – odebere balíček z tohoto projektu a odebere příslušná sestavení z odkazů projektu.
+* **Číslo verze** - Číslo verze je zakázaná položka nabídky - je poskytována pouze pro informační účely.
+* **Update** - Zkontroluje zdrojový server a stáhne novější verzi (pokud existuje).
+* **Odebrat** - Odebere balíček z tohoto projektu a odebere příslušná sestavení z odkazů projektu.
 
-## <a name="adding-package-sources"></a>Přidávání zdrojů balíčků
+## <a name="adding-package-sources"></a>Přidání zdrojů balíčků
 
-Balíčky dostupné pro instalaci se zpočátku načítají z nuget.org. Do Visual Studio pro Mac však můžete přidat další umístění balíčků. To může být užitečné při testování vlastních balíčků NuGet ve vývoji nebo při používání privátního serveru NuGet v rámci vaší společnosti nebo organizace.
+Balíčky, které jsou k dispozici pro instalaci, jsou zpočátku načteny z nuget.org. Do Visual Studia for Mac však můžete přidat další umístění balíčků. To může být užitečné pro testování vlastní chod nuget balíčky ve vývoji nebo použít soukromý server NuGet uvnitř vaší společnosti nebo organizace.
 
-V Visual Studio pro Mac přejděte do části **Visual Studio > předvolby > > zdrojů NuGet** , abyste mohli zobrazit a upravit seznam zdrojů balíčků. Všimněte si, že zdrojem může být vzdálený server (určený adresou URL) nebo místní adresář.
+V Sadě Visual Studio pro Mac přejděte do **předvoleb > sady Visual Studio > NuGet > zdroje** a zobrazte a upravte seznam zdrojů balíčků. Všimněte si, že zdroje mů e být vzdálený server (určený adresou URL) nebo místní adresář.
 
 ![Zdroje balíčků](media/nuget-walkthrough-PackageSource.png)
 
-Klikněte na tlačítko **Přidat** a nastavte nový zdroj. Zadejte popisný název a adresu URL (nebo cestu k souboru) do zdroje balíčku. Pokud je zdrojem zabezpečený webový server, zadejte taky uživatelské jméno a heslo. jinak ponechte prázdné tyto položky:
+Kliknutím na **Přidat** nastavte nový zdroj. Zadejte popisný název a adresu URL (nebo cestu k souboru) ke zdroji balíčku. Pokud je zdrojem zabezpečený webový server, zadejte také uživatelské jméno a heslo, jinak ponechte tyto položky prázdné:
 
 ![Přidat zdroje balíčků](media/nuget-walkthrough-PackageSource2.png)
 
-Při hledání balíčků se pak dají vybrat různé zdroje:
+Při hledání balíčků lze vybrat různé zdroje:
 
 ![Přidat zdroje balíčků](media/nuget-walkthrough-PackageSource3.png)
 
 ## <a name="version-control"></a>Správa verzí
 
-Dokumentace k NuGet popisuje [použití NuGet bez potvrzení balíčků do správy zdrojových kódů](/nuget/consume-packages/packages-and-source-control). Pokud si nepřejete ukládat binární soubory a nepoužívané informace ve správě zdrojového kódu, můžete nakonfigurovat Visual Studio pro Mac pro automatické obnovení balíčků ze serveru. To znamená, že když vývojář poprvé načte projekt ze správy zdrojového kódu, Visual Studio pro Mac bude automaticky stahovat a instalovat požadované balíčky.
+Dokumentace NuGet popisuje [pomocí NuGet bez potvrzení balíčků do správy zdrojového kódu](/nuget/consume-packages/packages-and-source-control). Pokud nechcete ukládat binární soubory a nepoužívané informace do správy zdrojového kódu, můžete nakonfigurovat Visual Studio pro Mac tak, aby automaticky obnovovala balíčky ze serveru. To znamená, že když vývojář načte projekt ze správy zdrojového kódu poprvé, Visual Studio pro Mac automaticky stáhne a nainstaluje požadované balíčky.
 
-![Automaticky obnovit balíčky](media/nuget-walkthrough-AutoRestore.png)
+![Automatické obnovení balíčků](media/nuget-walkthrough-AutoRestore.png)
 
-Podrobnosti o tom, jak vyloučit `packages` adresář ze sledování, najdete v dokumentaci ke správě zdrojového kódu.
+Podrobnosti o tom, jak vyloučit `packages` sledovaný adresář, naleznete v konkrétní dokumentaci správy zdrojového kódu.
 
 ## <a name="related-video"></a>Související video
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Using-NuGet/player]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-* [Instalace a použití balíčku v aplikaci Visual Studio (v systému Windows)](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+* [Instalace a použití balíčku v sadě Visual Studio (ve Windows)](/nuget/quickstart/install-and-use-a-package-in-visual-studio)

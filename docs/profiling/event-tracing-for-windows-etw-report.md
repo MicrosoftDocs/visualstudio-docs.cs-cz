@@ -1,5 +1,5 @@
 ---
-title: Sestava trasování událostí pro Windows (ETW) | Microsoft Docs
+title: Sestava sledování událostí pro Windows (ETW) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,29 +13,29 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 19412d184377637c29f34b2fe3ffd033f176b97c
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779295"
 ---
 # <a name="event-tracing-for-windows-etw-report"></a>Sestava trasování událostí pro Windows (ETW)
-Sestava trasování událostí pro Windows (ETW) zobrazuje události ETW, které byly zaznamenány v relaci výkonu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci. Data ETW se shromažďují v binárním souboru (. *ETL*).
+Sestava trasování událostí pro Windows (ETW) uvádí události ETW, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] které byly zaznamenány v relaci výkonu nástrojů profilování. Data ETW jsou shromažďována v binárním souboru (.* etl*) souboru.
 
 > [!NOTE]
-> V rozhraní [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nemůžete zobrazit sestavy ETW.
+> Nelze zobrazit sestavy ETW v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] rozhraní.
 
-- Informace o tom, jak shromažďovat trasování událostí pro Windows pomocí Nástroje pro profilaci z rozhraní [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], najdete v tématu [Postupy: shromáždění dat trasování událostí pro Windows (ETW)](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md).
+- Informace o tom, jak shromažďovat ETW pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástrojů profilování z rozhraní, naleznete v tématu [How to: Collect Event Tracing for Windows (ETW) data](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md).
 
-- Informace o tom, jak shromažďovat data ETW pomocí nástrojů příkazového řádku [VSPerfCmd](../profiling/vsperfcmd.md) , najdete v tématu [události](../profiling/events-vsperfcmd.md).
+- Informace o shromažďování dat ETW pomocí nástrojů příkazového řádku [VSPerfCmd](../profiling/vsperfcmd.md) naleznete v [tématu Události](../profiling/events-vsperfcmd.md).
 
-- Sestavu ETW vygenerujete pomocí příkazu **VSReport/Summary: ETW** . Další informace najdete v tématu [VSPerfReport](../profiling/vsperfreport.md).
+- Vygenerujete sestavu ETW pomocí příkazu **VSReport/Summary:ETW.** Další informace naleznete [v tématu VSPerfReport](../profiling/vsperfreport.md).
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Časové razítko**|Určuje, kdy došlo k události.|
-|**ID procesu**|Určuje proces, který vygeneroval událost.|
-|**ID vlákna**|Identifikuje vlákno, které událost vygenerovalo.|
-|**Popis**|Identifikuje poskytovatele událostí.|
-|**Textový**|Identifikuje typ události.|
-|**Vlastnosti**|Vlastnosti události Každá událost je dvojice název-hodnota oddělená čárkou, která je uzavřená v závorkách.|
+|**Časové razítko**|Identifikuje, kdy k události došlo.|
+|**ID procesu**|Identifikuje proces, který vygeneroval událost.|
+|**ID vlákna**|Identifikuje vlákno, které vygenerovalo událost.|
+|**Popis**|Identifikuje zprostředkovatele události.|
+|**Typ**|Identifikuje typ události.|
+|**Vlastnosti**|Vlastnosti události. Každá událost je pár oddělený od čárek a hodnota názvu, který je uzavřen v závorkách.|

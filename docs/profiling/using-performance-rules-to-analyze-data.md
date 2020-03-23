@@ -1,5 +1,5 @@
 ---
-title: Použití pravidel výkonu k analýze dat | Microsoft Docs
+title: Použití pravidel výkonu k analýze dat | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1deed23e-b31b-4714-982f-08ceebfc3096
@@ -10,27 +10,27 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: f5af6b366a1181187c23327449ade8e03e30107f
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778060"
 ---
 # <a name="use-performance-rules-to-analyze-data"></a>Použití pravidel výkonu k analýze dat
-Upozornění na výkon [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci indikují problémy v profilované aplikaci, která může zpomalit spuštění programu. Upozornění mohou také indikovat, že možná budete muset změnit metody kolekce a shromažďovat tak užitečnější data. Upozornění na výkon se generují automaticky v relaci profilace. Při otevření datového souboru profilování v aplikaci Visual Studio se v okně **Seznam chyb** zobrazí upozornění. V okně **Seznam chyb** můžete najít zdrojový kód problému a můžete zobrazit podrobné informace o chybě, například informace o tom, jak tento problém vyřešit. Můžete také zakázat upozornění, u kterých nejste zajímat.
+Upozornění výkonu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástroje profilování označují problémy v profilované aplikaci, která může zpomalit spuštění programu. Upozornění může také znamenat, že budete muset změnit metody shromažďování shromažďovat další užitečná data. Upozornění na výkon jsou generována automaticky v relaci profilování. Upozornění se zobrazí v okně **Seznam chyb** při otevření datového souboru profilování v sadě Visual Studio. V okně **Seznam chyb** můžete vyhledat zdrojový kód problému a zobrazit podrobné informace o chybě, například informace o řešení problému. Můžete také zakázat upozornění, která vás nezajímají.
 
 > [!NOTE]
-> Upozornění výkonu profileru jsou generována dynamickou analýzou spuštění programu a jsou nezávislá na upozorněních analýzy kódu. Analýza kódu může také generovat upozornění na výkon pro spravovaný kód na základě statické analýzy zdrojového kódu. Další informace najdete v tématu [Analýza kvality spravovaného kódu](../code-quality/code-analysis-for-managed-code-overview.md) a [Upozornění výkonu](../code-quality/performance-warnings.md).
+> Upozornění na výkon profileru jsou generována dynamickou analýzou provádění programu a jsou nezávislá na upozorněních analýzy kódu. Analýza kódu může také generovat upozornění na výkon spravovaného kódu na základě statické analýzy zdrojového kódu. Další informace naleznete v [tématu Analýza kvality spravovaného kódu](../code-quality/code-analysis-for-managed-code-overview.md) a [upozornění na výkon](../code-quality/performance-warnings.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
-- [Postupy: Zobrazování upozornění výkonu](../profiling/how-to-view-performance-warnings.md)
+- [Postup: Zobrazení upozornění na výkon](../profiling/how-to-view-performance-warnings.md)
 
- Poskytuje informace o tom, jak otevřít okno **Seznam chyb** pro zobrazení upozornění výkonu profileru.
+ Obsahuje informace o otevření okna **Seznam chyb** pro zobrazení upozornění na výkon profileru.
 
-- [Postupy: Konfigurace pravidel výkonu](../profiling/how-to-configure-performance-rules.md)
+- [Postup: Konfigurace pravidel výkonu](../profiling/how-to-configure-performance-rules.md)
 
- Poskytuje informace o tom, jak zapnout nebo vypnout jednotlivá upozornění na výkon.
+ Obsahuje informace o zapnutí nebo vypnutí jednotlivých upozornění na výkon.
 
 - [Referenční dokumentace pravidel výkonu](../profiling/performance-rules-reference.md)
 
- Poskytuje podrobné informace o upozorněních týkajících se výkonu profileru.
+ Obsahuje podrobné informace o upozorněních na výkon profileru.

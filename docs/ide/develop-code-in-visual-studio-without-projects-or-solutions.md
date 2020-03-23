@@ -12,112 +12,112 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d7a9459868d569a7466dccf92e4b548c0500bf80
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596291"
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>Vývoj kódu v sadě Visual Studio bez projektů nebo řešení
 
-Můžete otevřít kód prakticky z jakéhokoli typu projektu založeného na adresáři do sady Visual Studio, aniž by bylo nutné pro řešení nebo soubor projektu. To znamená, že můžete, například naklonování úložiště na Githubu, otevřete ho přímo do sady Visual Studio a začít vyvíjet, bez nutnosti vytvářet řešení nebo projektu. V případě potřeby můžete zadat úkoly vlastního sestavení a spuštění parametry prostřednictvím jednoduché soubory JSON.
+Můžete otevřít kód z téměř libovolného typu projektu založeného na adresáři do sady Visual Studio bez nutnosti řešení nebo souboru projektu. To znamená, že můžete například klonovat úložiště na GitHubu, otevřít ho přímo do sady Visual Studio a začít vyvíjet, aniž byste museli vytvářet řešení nebo projekt. V případě potřeby můžete zadat vlastní úlohy sestavení a parametry spuštění prostřednictvím jednoduchých souborů JSON.
 
-Po otevření souborů kódu v sadě Visual Studio **Průzkumníka řešení** zobrazí všechny soubory ve složce. Můžete kliknout na jakýkoli soubor můžete začít s jeho úpravami. Na pozadí spustí aplikace Visual Studio indexování soubory, které chcete povolit technologii IntelliSense, navigace a funkcí refaktoringu. Úpravy, vytváření, přesunout a odstranit soubory, Visual Studio automaticky sleduje změny a průběžně aktualizuje jeho index IntelliSense. Kód se zobrazí s barevné zvýrazňování syntaxe a v mnoha případech zahrnují základní doplňování technologie IntelliSense.
+Po otevření souborů kódu v sadě Visual Studio **průzkumník řešení** zobrazí všechny soubory ve složce. Můžete kliknout na libovolný soubor a začít jej upravovat. Na pozadí visual studio spustí indexování souborů, aby povolilo funkce Technologie IntelliSense, navigace a refaktoringu. Při úpravách, vytváření, přesouvání nebo odstraňování souborů aplikace Visual Studio automaticky sleduje změny a průběžně aktualizuje svůj index Technologie IntelliSense. Kód se zobrazí s vybarvení syntaxe a v mnoha případech zahrnout základní intelliSense prohlášení dokončení.
 
-## <a name="open-any-code"></a>Otevřete libovolný kód
+## <a name="open-any-code"></a>Otevřít libovolný kód
 
-Kód do sady Visual Studio můžete otevřít v některém z následujících způsobů:
+Kód do sady Visual Studio můžete otevřít libovolným z následujících způsobů:
 
-- Na řádku nabídek sady Visual Studio, zvolte **souboru** > **otevřít** > **složky**a pak přejděte do umístění v kódu.
+- Na panelu nabídek Sady Visual Studio zvolte Složka > **otevření** > **Folder** **souboru**a pak přejděte na umístění kódu.
 
-- V nabídce kontextu (klikněte pravým tlačítkem) složce obsahující kód, zvolte **otevřít v sadě Visual Studio** příkazu.
+- V kontextové nabídce (po klepnutí pravým tlačítkem myši) složky obsahující kód zvolte příkaz **Otevřít v sadě Visual Studio.**
 
 ::: moniker range="vs-2017"
-- Zvolte **otevřít složku** odkaz v sadě Visual Studio **úvodní stránka**.
+- Zvolte odkaz **Otevřít složku** na **úvodní stránce**sady Visual Studio .
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-- V okně Start klikněte na odkaz **Otevřít složku** .
+- V úvodním okně zvolte odkaz **Otevřít složku.**
 ::: moniker-end
 
-- Pokud jste uživatelem klávesnice, stiskněte **Ctrl**+**Shift**+**Alt**+**O** ve Vizuálu Studio.
+- Pokud jste uživatel klávesnice, stiskněte v sadě Visual Studio **kombinaci kláves Ctrl**+**Shift**+**Alt**+**O.**
 
-- Otevření kódu z naklonovaného úložiště GitHub.
+- Otevřete kód z klonovaného úložiště GitHub.
 
-### <a name="to-open-code-from-a-cloned-github-repo"></a>Chcete-li spustit kód z naklonovaného úložiště GitHub
+### <a name="to-open-code-from-a-cloned-github-repo"></a>Otevření kódu z klonovaného úložiště GitHub
 
-Následující příklad ukazuje, jak naklonujte úložiště GitHub a pak otevřete svůj kód v sadě Visual Studio. Chcete-li provést tento postup, musíte mít účet GitHub a Git pro Windows nainstalovaný ve vašem systému. Zobrazit [zaregistrovat nový účet GitHub](https://help.github.com/articles/signing-up-for-a-new-github-account/) a [Git pro Windows](https://git-for-windows.github.io/) Další informace.
+Následující příklad ukazuje, jak klonovat úložiště GitHub a pak otevřít jeho kód v sadě Visual Studio. Chcete-li postupovat podle tohoto postupu, musíte mít v systému nainstalovaný účet GitHub a Git pro Windows. Další informace najdete [v tématu Registrace nového účtu GitHub](https://help.github.com/articles/signing-up-for-a-new-github-account/) a [Git u Windows.](https://git-for-windows.github.io/)
 
-1. Přejděte do úložiště, které chcete naklonovat na Githubu.
+1. Přejděte do úložiště, které chcete naklonovat na GitHubu.
 
-1. Zvolte **klonovat nebo stáhnout** tlačítko a klikněte na tlačítko **kopírování do schránky** tlačítko v rozevírací nabídce pro kopírování platnost zabezpečené adresy URL pro úložiště GitHub.
+1. Zvolte tlačítko **Klonovat nebo Stáhnout** a pak v rozevírací nabídce zvolte tlačítko **Kopírovat do schránky,** chcete-li zkopírovat zabezpečenou adresu URL úložiště GitHub.
 
-   ![Tlačítko clone Githubu](./media/VSIDE_Code_Clone.png)
+   ![Tlačítko klonování GitHubu](./media/VSIDE_Code_Clone.png)
 
-1. V sadě Visual Studio, zvolte **Team Exploreru** karty otevřete **Team Exploreru**. Pokud nevidíte kartu, otevřete ho z **zobrazení** > **Team Exploreru**.
+1. V Sadě Visual Studio zvolte kartu **Průzkumník týmu** a otevřete **Průzkumníka týmu**. Pokud kartu nevidíte, otevřete ji v **Aplikaci View** > **Team Explorer**.
 
-1. V Průzkumníku týmových projektů v části **místní úložiště Git** zvolte **klonování** příkaz a vložte adresu URL stránky Githubu do textového pole.
+1. V Průzkumníkovi týmu vyberte v části **Místní úložiště Git** příkaz **Clone** a pak do textového pole vložte adresu URL stránky GitHub.
 
-   ![Klonování projektu z](./media/VSIDE_Code_Clone2.png)
+   ![Klonovat projekt](./media/VSIDE_Code_Clone2.png)
 
-1. Zvolte **klonování** tlačítko naklonujte soubory projektu do místního úložiště Git. V závislosti na velikosti úložiště tento proces může trvat několik minut.
+1. Zvolte tlačítko **Klonování,** chcete-li klonovat soubory projektu do místního úložiště Git. V závislosti na velikosti repo může tento proces trvat několik minut.
 
-1. Po úložiště klonování k vašemu systému, v **Team Exploreru**, zvolte **otevřít** příkaz v nabídce kontextu (klikněte pravým tlačítkem) pro nově naklonované úložiště.
+1. Po naklonování repo do vašeho systému zvolte v **Průzkumníkovi týmu**příkaz **Otevřít** v kontextové nabídce (po kliknutí pravým tlačítkem myši) nově klonovaného repo.
 
-   ![Naklonované úložiště](./media/VSIDE_Code_Clone3.png)
+   ![Klonované repo](./media/VSIDE_Code_Clone3.png)
 
-1. Zvolte **zobrazit zobrazení složky** příkaz pro zobrazování souborů v **Průzkumníka řešení**.
+1. Chcete-li soubory zobrazit v **Průzkumníku řešení**, zvolte příkaz **Zobrazit zobrazení složky** .
 
-   ![Ukázat zobrazení složky](./media/VSIDE_Code_Clone3_show.png)
+   ![Zobrazit zobrazení složky](./media/VSIDE_Code_Clone3_show.png)
 
-   Teď můžete procházet složky a soubory do naklonovaného úložiště a zobrazit a vyhledat kód v editoru sady Visual Studio code, s barevné zvýrazňování syntaxe a další funkce.
+   Nyní můžete procházet složky a soubory v klonovaném repo a prohlížet a prohledávat kód v editoru kódu sady Visual Studio, doplněný o vybarvení syntaxe a další funkce.
 
 ## <a name="run-and-debug-your-code"></a>Spuštění a ladění kódu
 
-Lze ladit kód v sadě Visual Studio bez projektů nebo řešení. Chcete-li ladit některé jazyky, budete muset zadat platné *spouštěcí soubor* v základu kódu, jako je například skript, spustitelný soubor nebo projektu. Pole rozevíracího seznamu vedle položky **Start** tlačítko na panelu nástrojů jsou uvedeny všechny položky po spuštění, které sada Visual Studio zjistí a také položky konkrétně určit. Visual Studio spustí tento kód nejprve při ladění vašeho kódu.
+Můžete ladit kód v sadě Visual Studio bez projektu nebo řešení! Chcete-li ladit některé jazyky, bude pravděpodobně nutné zadat platný *spouštěcí soubor* v základu kódu, například skript, spustitelný soubor nebo projekt. V rozevíracím seznamu vedle tlačítka **Start** na panelu nástrojů jsou uvedeny všechny položky po spuštění, které aplikace Visual Studio zjistí, a také položky, které určíte. Visual Studio spustí tento kód jako první při ladění kódu.
 
-Konfigurace váš kód běžet v sadě Visual Studio se liší v závislosti na tom, jaký kód je a co jsou nástroje pro sestavení.
+Konfigurace kódu pro spuštění v sadě Visual Studio se liší v závislosti na tom, jaký druh kódu je a jaké jsou nástroje sestavení.
 
-### <a name="codebases-that-use-msbuild"></a>Základů kódu, které používají nástroje MSBuild
+### <a name="codebases-that-use-msbuild"></a>Základy kódu, které používají MSBuild
 
-Založené na MSBuild základů kódu může mít více konfigurací sestavení, které se zobrazují v **Start** tlačítka rozevíracího seznamu. Vyberte soubor, který chcete použít jako položku při spuštění a klikněte na tlačítko **Start** spusťte ladění.
+Základy kódu založené na msbuildu mohou mít více konfigurací sestavení, které se zobrazí v rozevíracím seznamu tlačítka **Start.** Vyberte soubor, který chcete použít jako položku po spuštění, a pak zvolte tlačítko **Start** a začněte ladění.
 
 > [!NOTE]
-> Pro C# a základů kódu jazyka Visual Basic, musíte mít **vývoj desktopových aplikací .NET** nainstalovaná úloha. Pro základů kódu C++, musíte mít **vývoj desktopových aplikací pomocí C++** nainstalovaná úloha.
+> Pro c# a Visual Basic codebases musíte mít nainstalovanou pracovní zátěž pro vývoj pracovních prostředí **.NET.** Pro základy kódu jazyka C++ musíte mít nainstalovaný vývoj plochy s úlohami **Jazyka C++.**
 
-### <a name="codebases-that-use-custom-build-tools"></a>Základy kódu tohoto použití vlastních sestavovacích nástrojů
+### <a name="codebases-that-use-custom-build-tools"></a>Základy kódu, které používají vlastní nástroje sestavení
 
-Pokud váš kód používá vlastní nástroje pro vytváření, pak je zapotřebí sdělit sady Visual Studio vytvoření kódu pomocí *úlohy sestavení* , která jsou definována v *.json* souboru. Další informace najdete v tématu [přizpůsobení sestavení a ladění úloh](../ide/customize-build-and-debug-tasks-in-visual-studio.md).
+Pokud váš základ kódu používá vlastní nástroje sestavení, musíte aplikaci Visual Studio sdělit, jak vytvořit kód pomocí *úloh sestavení,* které jsou definovány v souboru *JSON.* Další informace naleznete v [tématu Customize build and debug tasks](../ide/customize-build-and-debug-tasks-in-visual-studio.md).
 
-### <a name="codebases-that-contain-python-or-javascript-code"></a>Základů kódu, které obsahují kód Python nebo JavaScript
+### <a name="codebases-that-contain-python-or-javascript-code"></a>Základy kódu, které obsahují kód Pythonu nebo JavaScriptu
 
-Pokud vašeho základu kódu obsahuje kód Python nebo JavaScript, není nutné ke konfiguraci libovolné *.json* soubory, ale je nutné nainstalovat odpovídající úlohy. Také musíte nakonfigurovat spouštěcí skript:
+Pokud váš kódovací systém obsahuje kód Pythonu nebo JavaScriptu, není nutné konfigurovat žádné *soubory JSON,* ale musíte nainstalovat odpovídající úlohu. Je také nutné nakonfigurovat spouštěcí skript:
 
-1. Nainstalujte [vývoj v Node.js](https://visualstudio.microsoft.com/vs/node-js/) nebo [vývoj v jazyce Python](https://visualstudio.microsoft.com/vs/python/) úloh výběrem **nástroje** > **stažení nástrojů a funkcí**, nebo zavření sady Visual Studio a spuštěním instalačního programu sady Visual Studio.
+1. Nainstalujte [úlohu vývoje Node.js](https://visualstudio.microsoft.com/vs/node-js/) nebo [Pythonu](https://visualstudio.microsoft.com/vs/python/) výběrem **nástroje** > **získat nástroje a funkce**nebo zavřením sady Visual Studio a spuštěním Instalační služby sady Visual Studio.
 
-   ![Úlohy související s vývojem Node.js a Pythonu](media/python_nodejs_workloads.png)
+   ![Vývojové úlohy Node.js a Pythonu](media/python_nodejs_workloads.png)
 
-1. V **Průzkumníka řešení**, v nabídce klikněte pravým tlačítkem nebo místní soubor jazyka JavaScript nebo Python, zvolte **nastavit jako položku při spuštění** příkazu.
+1. V **Průzkumníku řešení**zvolte v Průzkumníku řešení v nabídce javascriptu nebo pythonu v nabídce pravého tlačítka nebo kontextového příkazu Nastavit jako **položku po spuštění.**
 
-1. Zvolte **Start** spusťte ladění.
+1. Chcete-li zahájit ladění, zvolte tlačítko **Start.**
 
-### <a name="codebases-that-contain-c-code"></a>Základů kódu, které obsahují kód jazyka C++
+### <a name="codebases-that-contain-c-code"></a>Základy kódu, které obsahují kód jazyka C++
 
-Informace o otevření kódu jazyka C++ bez řešení nebo projektů v sadě Visual Studio najdete v tématu [projekty otevřít složku pro jazyk C++](/cpp/build/open-folder-projects-cpp).
+Informace o otevření kódu jazyka C++ bez řešení nebo projektů v sadě Visual Studio naleznete v [tématu Open Folder projects for C++](/cpp/build/open-folder-projects-cpp).
 
-### <a name="codebases-that-contain-a-visual-studio-project"></a>Základů kódu, které obsahují projekt sady Visual Studio
+### <a name="codebases-that-contain-a-visual-studio-project"></a>Základy kódu, které obsahují projekt sady Visual Studio
 
-Pokud váš kód složka obsahuje projekt sady Visual Studio, můžete určit projektu jako položku při spuštění.
+Pokud složka kódu obsahuje projekt sady Visual Studio, můžete projekt označit jako položku po spuštění.
 
-![Nastavení projektu jako položku při spuštění](media/customize-set-project-as-startup-item.png)
+![Nastavit projekt jako položku po spuštění](media/customize-set-project-as-startup-item.png)
 
-**Start** změny textu tlačítka tak, aby odrážely, že projekt je položku při spuštění.
+Text tlačítka **Start** se změní tak, aby odrážel, že projekt je položkou po spuštění.
 
-![Projekt na tlačítko Start](media/customize-start-button-project.png)
+![Tlačítko Projekt na začátku](media/customize-start-button-project.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přizpůsobení úloh sestavení a ladění](../ide/customize-build-and-debug-tasks-in-visual-studio.md)
 - [Projekty Otevřít složku pro C++](/cpp/build/open-folder-projects-cpp)
-- [Projekty CMake v jazyce C++](/cpp/build/cmake-projects-in-visual-studio)
-- [Psaní kódu v editoru kódu a text](../ide/writing-code-in-the-code-and-text-editor.md)
+- [CMake projekty v jazyce C++](/cpp/build/cmake-projects-in-visual-studio)
+- [Psaní kódu v kódu a textovém editoru](../ide/writing-code-in-the-code-and-text-editor.md)

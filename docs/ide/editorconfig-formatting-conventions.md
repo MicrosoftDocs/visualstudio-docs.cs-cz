@@ -1,5 +1,5 @@
 ---
-title: Konvence formátování .NET pro EditorConfig
+title: Konvence formátování rozhraní .NET pro editorconfig
 ms.date: 07/17/2019
 ms.topic: reference
 dev_langs:
@@ -14,41 +14,41 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 64f6a45b3a5cc49cd541ceb905356093ea4ec221
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589224"
 ---
 # <a name="formatting-conventions"></a>Konvence formátování
 
-Do těchto kategorií patří konvence formátování pro EditorConfig pro Visual Studio:
+Konvence formátování pro EditorConfig pro Visual Studio spadají do těchto kategorií:
 
-- [Nastavení formátování .NET](#net-formatting-settings)
+- [Nastavení formátování rozhraní .NET](#net-formatting-settings)
 
-- [C#nastavení formátování](#c-formatting-settings)
+- [Nastavení formátování Jazyka C#](#c-formatting-settings)
 
 ## <a name="rule-format"></a>Formát pravidla
 
-Pravidla pro konvence formátování mají následující formát:
+Pravidla pro formátování konvencí mají následující formát:
 
 `rule_name = value`
 
-Pro mnoho pravidel zadáte buď `true` (preferovat tento styl), nebo `false` (nedoporučujeme tento styl) pro `value`. Pro jiná pravidla zadáte hodnotu, například `flush_left` nebo `before_and_after`, která popisuje, kdy a kde se má pravidlo použít. Neurčíte závažnost.
+Pro mnoho pravidel zadáte `true` buď (upřednostňujte tento styl) `false` `value`nebo (nedávají tento styl) pro . Pro ostatní pravidla zadáte hodnotu, například `flush_left` nebo `before_and_after` popíšete, kdy a kde se má pravidlo použít. Nezadáte závažnost.
 
-## <a name="net-formatting-settings"></a>Nastavení formátování .NET
+## <a name="net-formatting-settings"></a>Nastavení formátování rozhraní .NET
 
-Pravidla formátování v této části se vztahují na C# kód a Visual Basic.
+Pravidla formátování v této části platí pro kód jazyka C# a jazyka Visual Basic.
 
-- [Uspořádat direktivy using](#organize-using-directives)
+- [Uspořádání použití](#organize-using-directives)
   - dotnet_sort_system_directives_first
   - dotnet_separate_import_directive_groups
 
-### <a name="organize-using-directives"></a>Uspořádat direktivy using
+### <a name="organize-using-directives"></a>Uspořádání pomocí direktiv
 
-Tato pravidla formátování se týkají řazení a zobrazování direktiv `using` a příkazů `Imports`.
+Tato pravidla formátování se týkají řazení `using` a zobrazení `Imports` směrnic a příkazů.
 
-Příklad souboru *. editorconfig* :
+Příklad souboru *.editorconfig:*
 
 ```ini
 # .NET formatting settings
@@ -57,14 +57,14 @@ dotnet_sort_system_directives_first = true
 dotnet_separate_import_directive_groups = true
 ```
 
-#### <a name="dotnet_sort_system_directives_first"></a>dotnet\_řazení\_systémových\_directives_first
+#### <a name="dotnet_sort_system_directives_first"></a>directives_first řazení\_\_\_dotnet
 
 |||
 |-|-|
 | **Název pravidla** | dotnet_sort_system_directives_first |
-| **Příslušné jazyky** | C# a Visual Basic |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `true` – Sorting System. * `using` direktivy abecedně a umístit je před jiné direktivy using.<br /><br />`false` – neumísťujte direktivy System. * `using` před jinými direktivami `using`. |
+| **Použitelné jazyky** | C# a Visual Basic |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- Třídit `using` systém.* direktivy abecedně, a umístěte je před jinými pomocí směrnic.<br /><br />`false`- Neumisťuj `using` směrnice `using` systému před jiné směrnice. |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -81,14 +81,14 @@ using Octokit;
 using System.Threading.Tasks;
 ```
 
-#### <a name="dotnet_separate_import_directive_groups"></a>dotnet\_oddělené\_import\_direktivy\_skupiny
+#### <a name="dotnet_separate_import_directive_groups"></a>dotnet\_\_samostatné\_\_dovozní direktivní skupiny
 
 |||
 |-|-|
 | **Název pravidla** | dotnet_separate_import_directive_groups |
-| **Příslušné jazyky** | C# a Visual Basic |
-| **Představená verze** | Visual Studio 2017 verze 15.5 |
-| **Hodnoty** | `true` – vložte mezi skupiny direktiv `using` prázdný řádek.<br /><br />`false` – neumísťují prázdný řádek mezi skupiny direktiv `using`. |
+| **Použitelné jazyky** | C# a Visual Basic |
+| **Zavedená verze** | Visual Studio 2017 verze 15.5 |
+| **Hodnoty** | `true`- Umístěte prázdnou `using` čáru mezi skupiny direktiv.<br /><br />`false`- Neumisťuj prázdnou čáru mezi `using` skupiny direktiv. |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -106,9 +106,9 @@ using System.Threading.Tasks;
 using Octokit;
 ```
 
-## <a name="c-formatting-settings"></a>C#nastavení formátování
+## <a name="c-formatting-settings"></a>Nastavení formátování Jazyka C#
 
-Pravidla formátování v této části se vztahují pouze na C# kód.
+Pravidla formátování v této části platí pouze pro kód jazyka C#.
 
 - [Možnosti nového řádku](#new-line-options)
   - csharp_new_line_before_open_brace
@@ -118,14 +118,14 @@ Pravidla formátování v této části se vztahují pouze na C# kód.
   - csharp_new_line_before_members_in_object_initializers
   - csharp_new_line_before_members_in_anonymous_types
   - csharp_new_line_between_query_expression_clauses
-- [Možnosti odsazení](#indentation-options)
+- [Volby odsazení](#indentation-options)
   - csharp_indent_case_contents
   - csharp_indent_switch_labels
   - csharp_indent_labels
   - csharp_indent_block_contents
   - csharp_indent_braces
   - csharp_indent_case_contents_when_block
-- [Možnosti mezer](#spacing-options)
+- [Volby mezer](#spacing-options)
   - csharp_space_after_cast
   - csharp_space_after_keywords_in_control_flow_statements
   - csharp_space_between_parentheses
@@ -148,15 +148,15 @@ Pravidla formátování v této části se vztahují pouze na C# kód.
   - csharp_space_before_open_square_brackets
   - csharp_space_between_empty_square_brackets
   - csharp_space_between_square_brackets
-- [Možnosti zalamování](#wrap-options)
+- [Možnosti obtékání](#wrap-options)
   - csharp_preserve_single_line_statements
   - csharp_preserve_single_line_blocks
 
-### <a name="new-line-options"></a>Možnosti pro nové řádky
+### <a name="new-line-options"></a>Možnosti nového řádku
 
 Tato pravidla formátování se týkají použití nových řádků pro formátování kódu.
 
-Příklad souboru *. editorconfig* :
+Příklad souboru *.editorconfig:*
 
 ```ini
 # CSharp formatting settings:
@@ -170,16 +170,16 @@ csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_between_query_expression_clauses = true
 ```
 
-#### <a name="csharp_new_line_before_open_brace"></a>csharp\_new\_line\_before\_open_brace
+#### <a name="csharp_new_line_before_open_brace"></a>csharp\_\_nový\_\_řádek před open_brace
 
-Toto pravidlo se týká, zda by měla být otevřená `{`a složené závorky na stejném řádku jako předchozí kód, nebo na nový řádek. Pro toto pravidlo zadáte **všechny**, **žádné**nebo jeden nebo více elementů kódu, jako jsou **metody** nebo **vlastnosti**, které definují, kdy má být toto pravidlo použito. Chcete-li zadat více prvků kódu, oddělte je čárkou (,).
+Toto pravidlo se `{` týká, zda má být otevřená závorka umístěna na stejném řádku jako předchozí kód nebo na nový řádek. Pro toto pravidlo určíte **všechny**, **žádné**nebo jeden nebo více prvků kódu, jako jsou **metody** nebo **vlastnosti**, aby bylo možné definovat, kdy má být toto pravidlo použito. Chcete-li zadat více prvků kódu, oddělte je čárkou (,).
 
 |||
 |-|-|
 | **Název pravidla** | csharp_new_line_before_open_brace |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `all` – vyžaduje, aby byly složené závorky na novém řádku pro všechny výrazy ("Allman" stylu).<br /><br />`none` – vyžaduje, aby byly složené závorky na stejném řádku pro všechny výrazy ("K & R").<br /><br />`accessors`, `anonymous_methods`, `anonymous_types`, `control_blocks`, `events`, `indexers`, `lambdas`, `local_functions`, `methods`, `object_collection_array_initializers``properties``types` – vyžadují, aby byly složené závorky na novém řádku pro zadaný element kódu (Allman). |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `all`- Vyžadovat závorky, které mají být na novém řádku pro všechny výrazy ("Allman" styl).<br /><br />`none`- Vyžadovat, aby závorky byly na stejném řádku pro všechny výrazy ("K&R").<br /><br />`accessors`, `anonymous_methods` `anonymous_types`, `control_blocks` `events`, `indexers` `lambdas`, `local_functions` `methods`, `object_collection_array_initializers` `properties`, `types` , , , , - Vyžadovat, aby závorky byly na novém řádku pro zadaný kódový prvek (styl Allman). |
 | **Výchozí nastavení sady Visual Studio** | `all` |
 
 Příklady kódu:
@@ -202,14 +202,14 @@ void MyMethod() {
 }
 ```
 
-#### <a name="csharp_new_line_before_else"></a>CSharp\_nové\_řádku\_before_else
+#### <a name="csharp_new_line_before_else"></a>csharp\_\_nový\_řádek before_else
 
 |||
 |-|-|
 | **Název pravidla** | csharp_new_line_before_else |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `else` příkazy `true` umístit na nový řádek.<br /><br />`else` příkazy `false` umístit na stejný řádek. |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- `else` Umístěte příkazy na nový řádek.<br /><br />`false`- `else` Umístěte příkazy na stejný řádek. |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -231,14 +231,14 @@ if (...) {
 }
 ```
 
-#### <a name="csharp_new_line_before_catch"></a>CSharp\_nové\_řádku\_before_catch
+#### <a name="csharp_new_line_before_catch"></a>csharp\_\_nový\_řádek before_catch
 
 |||
 |-|-|
 | **Název pravidla** | csharp_new_line_before_catch |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `catch` příkazy `true` umístit na nový řádek.<br /><br />`catch` příkazy `false` umístit na stejný řádek. |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- `catch` Umístěte příkazy na nový řádek.<br /><br />`false`- `catch` Umístěte příkazy na stejný řádek. |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -260,14 +260,14 @@ try {
 }
 ```
 
-#### <a name="csharp_new_line_before_finally"></a>CSharp\_nové\_řádku\_before_finally
+#### <a name="csharp_new_line_before_finally"></a>csharp\_\_nový\_řádek before_finally
 
 |||
 |-|-|
 | **Název pravidla** | csharp_new_line_before_finally |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `true` – vyžaduje, aby byly příkazy `finally` na novém řádku za pravou závorkou.<br /><br />`false` – vyžaduje, aby příkazy `finally` byly na stejném řádku jako pravá složená závorka. |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- `finally` Vyžadovat, aby příkazy byly na novém řádku po závěrečné závorce.<br /><br />`false`- `finally` Vyžadovat, aby příkazy byly na stejném řádku jako uzavírací závorka. |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -294,14 +294,14 @@ try {
 }
 ```
 
-#### <a name="csharp_new_line_before_members_in_object_initializers"></a>CSharp\_nové\_řádku\_před\_členů\_\_
+#### <a name="csharp_new_line_before_members_in_object_initializers"></a>csharp\_\_nový\_\_řádek\_\_před členy v object_initializers
 
 |||
 |-|-|
 | **Název pravidla** | csharp_new_line_before_members_in_object_initializers |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `true` – vyžaduje, aby členové inicializátorů objektů byli na samostatných řádcích<br /><br />`false` – vyžaduje, aby členové inicializátorů objektů byli na stejném řádku |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- Vyžadovat členy inicializačních objektů, které mají být na samostatných řádcích<br /><br />`false`- Vyžadovat členy inicializačních objektů, které mají být na stejném řádku |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -321,14 +321,14 @@ var z = new B()
 }
 ```
 
-#### <a name="csharp_new_line_before_members_in_anonymous_types"></a>csharp\_new\_line\_before\_members\_in\_anonymous_types
+#### <a name="csharp_new_line_before_members_in_anonymous_types"></a>csharp\_\_nový\_\_řádek\_\_před členy v anonymous_types
 
 |||
 |-|-|
 | **Název pravidla** | csharp_new_line_before_members_in_anonymous_types |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `true` – vyžaduje, aby členové anonymních typů byli na samostatných řádcích<br /><br />`false` – vyžaduje, aby byli členové anonymních typů na stejném řádku. |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- Vyžadovat, aby členové anonymních typů byli na samostatných řádcích<br /><br />`false`- Vyžadovat, aby členové anonymních typů byli na stejném řádku |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -353,9 +353,9 @@ var z = new
 |||
 |-|-|
 | **Název pravidla** | csharp_new_line_between_query_expression_clauses |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `true` – vyžaduje, aby elementy klauzulí výrazů dotazu byly na samostatných řádcích.<br /><br />`false` – vyžaduje, aby elementy klauzule dotazu Expression byly na stejném řádku. |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- Vyžadovat prvky klauzulí výrazu dotazu, které mají být na samostatných řádcích<br /><br />`false`- Vyžadovat prvky klauzule výrazdotaz být na stejném řádku |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -371,11 +371,11 @@ var q = from a in e from b in e
         select a * b;
 ```
 
-### <a name="indentation-options"></a>Možnosti odsazení
+### <a name="indentation-options"></a>Volby odsazení
 
 Tato pravidla formátování se týkají použití odsazení k formátování kódu.
 
-Příklad souboru *. editorconfig* :
+Příklad souboru *.editorconfig:*
 
 ```ini
 # CSharp formatting settings:
@@ -388,18 +388,18 @@ csharp_indent_braces = false
 csharp_indent_case_contents_when_block = true
 ```
 
-#### <a name="csharp_indent_case_contents"></a>csharp\_indent\_case_contents
+#### <a name="csharp_indent_case_contents"></a>costře\_odsazení\_case_contents
 
 |||
 |-|-|
 | **Název pravidla** | csharp_indent_case_contents |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `true` – odsazení obsahu `switch` případu<br /><br />`false` – nesazovat `switch` velikost písmen |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- Odsazení `switch` obsahu případu<br /><br />`false`- Obsah případu `switch` neodsouvají |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
-- Když je toto pravidlo nastavené na **true**, i.
-- Když je toto pravidlo nastavené na **false**, d.
+- Pokud je toto pravidlo nastaveno na **hodnotu true**, i.
+- Pokud je toto pravidlo nastaveno na **hodnotu false**, d.
 
 Příklady kódu:
 
@@ -431,14 +431,14 @@ switch(c) {
 }
 ```
 
-#### <a name="csharp_indent_switch_labels"></a>csharp\_indent\_switch_labels
+#### <a name="csharp_indent_switch_labels"></a>costře\_odsazení\_switch_labels
 
 |||
 |-|-|
 | **Název pravidla** | csharp_indent_switch_labels |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | popisky `switch` `true`-odsazení<br /><br />`false` – nesazovat `switch` popisky |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- Odsazení `switch` štítků<br /><br />`false`- Neodsouvat `switch` popisky |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -476,9 +476,9 @@ default:
 |||
 |-|-|
 | **Název pravidla** | csharp_indent_labels |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `flush_left` – popisky se umístí do sloupce úplně vlevo.<br /><br />`one_less_than_current` – popisky se umístí do aktuálního kontextu o jedno méně odsazení.<br /><br />`no_change` – popisky jsou umístěné ve stejné odsazení jako aktuální kontext. |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `flush_left`- Popisky jsou umístěny v levém sloupci<br /><br />`one_less_than_current`- Popisky jsou umístěny v jedné menší odsazení aktuálního kontextu.<br /><br />`no_change`- Popisky jsou umístěny ve stejné odrážce jako aktuální kontext. |
 | **Výchozí nastavení sady Visual Studio** | `no_change` |
 
 Příklady kódu:
@@ -529,7 +529,7 @@ class C
 |||
 |-|-|
 | **Název pravidla** | csharp_indent_block_contents |
-| **Příslušné jazyky** | C# |
+| **Použitelné jazyky** | C# |
 | **Hodnoty** | `true` - <br /><br />`false` -  |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
@@ -554,7 +554,7 @@ Console.WriteLine("Hello");
 |||
 |-|-|
 | **Název pravidla** | csharp_indent_braces |
-| **Příslušné jazyky** | C# |
+| **Použitelné jazyky** | C# |
 | **Hodnoty** | `true` - <br /><br />`false` -  |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
@@ -579,7 +579,7 @@ static void Hello()
 |||
 |-|-|
 | **Název pravidla** | csharp_indent_case_contents_when_block |
-| **Příslušné jazyky** | C# |
+| **Použitelné jazyky** | C# |
 | **Hodnoty** | `true` - <br /><br />`false` -  |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
@@ -601,11 +601,11 @@ case 0:
 }
 ```
 
-### <a name="spacing-options"></a>Možnosti mezer
+### <a name="spacing-options"></a>Volby mezer
 
-Tato pravidla formátování se týkají použití znaků mezer k formátování kódu.
+Tato pravidla formátování se týkají použití znaků mezer y pro formátování kódu.
 
-Příklad souboru *. editorconfig* :
+Příklad souboru *.editorconfig:*
 
 ```ini
 # CSharp formatting settings:
@@ -634,14 +634,14 @@ csharp_space_between_empty_square_brackets = false
 csharp_space_between_square_brackets = false
 ```
 
-#### <a name="csharp_space_after_cast"></a>csharp\_space\_after_cast
+#### <a name="csharp_space_after_cast"></a>csharp\_\_prostor after_cast
 
 |||
 |-|-|
 | **Název pravidla** | csharp_space_after_cast |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `true` – umístit znak mezery mezi přetypování a hodnotu<br /><br />`false` – odebere mezeru mezi přetypováním a hodnotou. |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- Umístěte znak mezery mezi přetypátku a hodnotu.<br /><br />`false`- Odstraňte mezeru mezi přetypátkem a hodnotou |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -659,9 +659,9 @@ int y = (int)x;
 |||
 |-|-|
 | **Název pravidla** | csharp_space_after_keywords_in_control_flow_statements |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `true` – umístit znak mezery za klíčové slovo v příkazu toku řízení, jako je například smyčka `for`<br /><br />`false` – odebrat mezeru za klíčovým slovem v příkazu toku řízení, jako je například smyčka `for` |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- Umístěte znak mezery za klíčové slovo do `for` příkazu toku ovládacího prvku, jako je smyčka<br /><br />`false`- Odebrání mezery za klíčovým slovem `for` v příkazu toku ovládacího prvku, jako je smyčka |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -679,12 +679,12 @@ for(int i;i<x;i++) { ... }
 |||
 |-|-|
 | **Název pravidla** | csharp_space_between_parentheses |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `control_flow_statements` – umístit mezeru mezi kulaté závorky příkazů toku řízení<br /><br />`expressions` – umístit mezeru mezi kulaté závorky výrazů<br /><br />místo mezi závorkami v přetypováních typů `type_casts` mezera |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `control_flow_statements`- Umístěte mezeru mezi závorky příkazů toku řízení<br /><br />`expressions`- Umístěte mezeru mezi závorky výrazů<br /><br />`type_casts`- Umístěte mezeru mezi závorky v přetypových náhonech |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
-Pokud toto pravidlo vynecháte nebo použijete jinou hodnotu než `control_flow_statements`, `expressions`nebo `type_casts`, nastavení se nepoužije.
+Pokud toto pravidlo vynechete `control_flow_statements` `expressions`nebo `type_casts`použijete jinou hodnotu než , , nebo , nastavení se nepoužije.
 
 Příklady kódu:
 
@@ -699,14 +699,14 @@ var z = ( x * y ) - ( ( y - x ) * 3 );
 int y = ( int )x;
 ```
 
-#### <a name="csharp_space_before_colon_in_inheritance_clause"></a>CSharp\_mezeru\_před\_dvojtečkou\_v\_inheritance_clause
+#### <a name="csharp_space_before_colon_in_inheritance_clause"></a>csharp\_\_prostor\_\_před\_dvojtečkou v inheritance_clause
 
 |||
 |-|-|
 | **Název pravidla** | csharp_space_before_colon_in_inheritance_clause |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,7 |
-| **Hodnoty** | `true` – umístit znak mezery před dvojtečku pro základy nebo rozhraní v deklaraci typu<br /><br />`false` – odebrání mezery před dvojtečkou pro základy nebo rozhraní v deklaraci typu |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.7 |
+| **Hodnoty** | `true`- Umístěte znak mezery před dvojtečku pro základny nebo rozhraní v deklaraci typu<br /><br />`false`- Odstranit prostor před dvojtečkou pro základny nebo rozhraní v deklaraci typu |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -735,14 +735,14 @@ class C: I
 }
 ```
 
-#### <a name="csharp_space_after_colon_in_inheritance_clause"></a>CSharp\_místo\_po\_dvojtečkě\_v\_inheritance_clause
+#### <a name="csharp_space_after_colon_in_inheritance_clause"></a>csharp\_\_prostor\_\_za\_dvojtečkou v inheritance_clause
 
 |||
 |-|-|
 | **Název pravidla** | csharp_space_after_colon_in_inheritance_clause |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,7 |
-| **Hodnoty** | `true` – umístit znak mezery za dvojtečku pro základny nebo rozhraní v deklaraci typu<br /><br />`false` – odebrání místa za dvojtečkou pro základny nebo rozhraní v deklaraci typu |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.7 |
+| **Hodnoty** | `true`- Umístěte znak mezery za dvojtečku pro základny nebo rozhraní v deklaraci typu<br /><br />`false`- Odstranit prostor za dvojtečkou pro základny nebo rozhraní v deklaraci typu |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -771,17 +771,17 @@ class C :I
 }
 ```
 
-#### <a name="csharp_space_around_binary_operators"></a>CSharp\_mezeru\_kolem\_binary_operators
+#### <a name="csharp_space_around_binary_operators"></a>csharp\_\_prostor\_kolem binary_operators
 
 |||
 |-|-|
 | **Název pravidla** | csharp_space_around_binary_operators |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,7 |
-| **Hodnoty** | `before_and_after` – vložit mezeru před a za binární operátor<br /><br />`none` – odebrat mezery před a za binárním operátorem<br /><br />`ignore` – ignorovat mezery kolem binárních operátorů |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.7 |
+| **Hodnoty** | `before_and_after`- Vložit mezeru před a za binární operátor<br /><br />`none`- Odstraňte mezery před a za binární operátor<br /><br />`ignore`- Ignorovat mezery kolem binárníoperátory |
 | **Výchozí nastavení sady Visual Studio** | `before_and_after` |
 
-Pokud toto pravidlo vynecháte nebo použijete jinou hodnotu než `before_and_after`, `none`nebo `ignore`, nastavení se nepoužije.
+Pokud toto pravidlo vynechete `before_and_after`nebo `none`použijete jinou hodnotu než , , nebo `ignore`, nastavení nebude použito.
 
 Příklady kódu:
 
@@ -801,9 +801,9 @@ return x  *  (x-y);
 |||
 |-|-|
 | **Název pravidla** | csharp_space_between_method_declaration_parameter_list_parentheses |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `true` – umístit znak mezery za levou (otevírací) závorku a před pravou (uzavírací) závorku seznamu parametrů deklarace<br /><br />`false` – odebrání znaků mezer za levou (otevírací) závorku a před pravou závorkou seznamu parametrů deklarace metody |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- Umístěte znak mezery za počáteční závorku a před uzavírací závorku seznamu parametrů deklarace metody.<br /><br />`false`- Odstranění znaků mezer za počáteční závorkou a před uzávěrkou závorek seznamu parametrů deklarace metody |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -821,9 +821,9 @@ void Bark(int x) { ... }
 |||
 |-|-|
 | **Název pravidla** | csharp_space_between_method_declaration_empty_parameter_list_parentheses |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,7 |
-| **Hodnoty** | `true` – vložit mezeru mezi kulaté závorky v seznamu parametrů pro deklaraci metody<br /><br />`false` – odebrat místo v rámci prázdných závorek seznamu parametrů pro deklaraci metody |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.7 |
+| **Hodnoty** | `true`- Vložit mezeru v závorce seznamu prázdných parametrů pro deklaraci metody<br /><br />`false`- Odebrání místa v závorce seznamu prázdných parametrů pro deklaraci metody |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -857,8 +857,8 @@ void Goo(int x)
 |||
 |-|-|
 | **Název pravidla** | csharp_space_between_method_declaration_name_and_open_parenthesis |
-| **Příslušné jazyky** | C# |
-| **Hodnoty** | `true` – umístit znak mezery mezi název metody a levou závorku v deklaraci metody<br /><br />`false` – odebrání znaků mezer mezi názvem metody a levou závorkou v deklaraci metody |
+| **Použitelné jazyky** | C# |
+| **Hodnoty** | `true`- Umístěte znak mezery mezi název metody a počáteční závorku v deklaraci metody<br /><br />`false`- Odstranit znaky mezery mezi názvem metody a počáteční závorkou v deklaraci metody |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -876,9 +876,9 @@ void M() { }
 |||
 |-|-|
 | **Název pravidla** | csharp_space_between_method_call_parameter_list_parentheses |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `true` – umístit znak mezery za levou (otevírací) závorku a před pravou (uzavírací) závorku volání metody<br /><br />`false` – odebrání znaků mezer za levou (otevírací) závorku a před pravou závorkou volání metody |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- Umístěte znak mezery za počáteční závorku a před uzavírací závorku volání metody<br /><br />`false`- Odstranění znaků mezer za počáteční závorkou a před uzávěrkou závorky volání metody |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -896,9 +896,9 @@ MyMethod(argument);
 |||
 |-|-|
 | **Název pravidla** | csharp_space_between_method_call_empty_parameter_list_parentheses |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,7 |
-| **Hodnoty** | `true` – vložit mezeru mezi závorky v prázdném seznamu argumentů<br /><br />`false` – odebrat místo v rámci prázdných závorek seznamu argumentů |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.7 |
+| **Hodnoty** | `true`- Vložení mezery do prázdných závorek seznamu argumentů<br /><br />`false`- Odstranění místa v prázdných závorcích seznamu argumentů |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -932,9 +932,9 @@ void Goo(int x)
 |||
 |-|-|
 | **Název pravidla** | csharp_space_between_method_call_name_and_opening_parenthesis |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,7 |
-| **Hodnoty** | `true` – vložit mezeru mezi název volání metody a levou (otevírací) závorku<br /><br />`false` – odebere mezeru mezi názvem volání metody a levou závorkou. |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.7 |
+| **Hodnoty** | `true`- Vložení mezery mezi název volání metody a počáteční závorky<br /><br />`false`- Odstranit mezeru mezi názvem volání metody a otevřenízávapoložkami |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -968,8 +968,8 @@ void Goo(int x)
 |||
 |-|-|
 | **Název pravidla** | csharp_space_after_comma |
-| **Příslušné jazyky** | C# |
-| **Hodnoty** | `true` – vložit mezeru za čárku<br /><br />`false` – odebrat mezeru za čárkou |
+| **Použitelné jazyky** | C# |
+| **Hodnoty** | `true`- Vložit mezeru za čárku<br /><br />`false`- Odstraňte místo po čárce |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -987,8 +987,8 @@ int[] x = new int[] { 1,2,3,4,5 }
 |||
 |-|-|
 | **Název pravidla** | csharp_space_before_comma |
-| **Příslušné jazyky** | C# |
-| **Hodnoty** | `true` – vložit mezeru před čárku<br /><br />`false` – odebrat mezeru před čárkou |
+| **Použitelné jazyky** | C# |
+| **Hodnoty** | `true`- Vložit mezeru před čárkou<br /><br />`false`- Odstraňte místo před čárkou |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -1006,8 +1006,8 @@ int[] x = new int[] { 1, 2, 3, 4, 5 };
 |||
 |-|-|
 | **Název pravidla** | csharp_space_after_dot |
-| **Příslušné jazyky** | C# |
-| **Hodnoty** | `true` – vložte mezeru za tečku<br /><br />`false` – odebrání mezery za tečkou |
+| **Použitelné jazyky** | C# |
+| **Hodnoty** | `true`- Vložit mezeru za tečku<br /><br />`false`- Odstraňte místo po tečku |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -1025,8 +1025,8 @@ this.Goo();
 |||
 |-|-|
 | **Název pravidla** | csharp_space_before_dot |
-| **Příslušné jazyky** | C# |
-| **Hodnoty** | `true` – vložit mezeru před tečku <br /><br />`false` – odebrání mezery před tečkou |
+| **Použitelné jazyky** | C# |
+| **Hodnoty** | `true`- Vložte místo před tečku <br /><br />`false`- Odstraňte místo před tečkou |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -1044,8 +1044,8 @@ this.Goo();
 |||
 |-|-|
 | **Název pravidla** | csharp_space_after_semicolon_in_for_statement |
-| **Příslušné jazyky** | C# |
-| **Hodnoty** | `true` – vložte mezeru za každý středník v příkazu `for`<br /><br />`false` – odebrat mezeru za každým středníkem v příkazu `for` |
+| **Použitelné jazyky** | C# |
+| **Hodnoty** | `true`- Vložit mezeru za `for` každý středník v příkazu<br /><br />`false`- Odstranit prostor po každém `for` středníku v příkazu |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -1063,8 +1063,8 @@ for (int i = 0;i < x.Length;i++)
 |||
 |-|-|
 | **Název pravidla** | csharp_space_before_semicolon_in_for_statement |
-| **Příslušné jazyky** | C# |
-| **Hodnoty** | `true` – vložte mezeru před každý středník v příkazu `for` <br /><br />`false` – před každým středníkem v příkazu `for` odebrat mezeru. |
+| **Použitelné jazyky** | C# |
+| **Hodnoty** | `true`- Vložit mezeru před `for` každý středník v příkazu <br /><br />`false`- Odstranit prostor před každým `for` středníkem v příkazu |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -1082,8 +1082,8 @@ for (int i = 0; i < x.Length; i++)
 |||
 |-|-|
 | **Název pravidla** | csharp_space_around_declaration_statements |
-| **Příslušné jazyky** | C# |
-| **Hodnoty** | `ignore` – v příkazech deklarace se neodstraňují nadbytečné znaky<br /><br />`false` – odebrání nadbytečného znaku mezery v deklaracích příkazů |
+| **Použitelné jazyky** | C# |
+| **Hodnoty** | `ignore`- Neodstraňujte další mezery znaky v prohlášení příkazy<br /><br />`false`- Odstranit další mezery znaky v příkazech prohlášení |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -1101,8 +1101,8 @@ int x = 0;
 |||
 |-|-|
 | **Název pravidla** | csharp_space_before_open_square_brackets |
-| **Příslušné jazyky** | C# |
-| **Hodnoty** | `true` – vložte mezeru před levou hranatou závorku `[` <br /><br />`false` – před levou hranatou závorkou odebrat mezeru `[` |
+| **Použitelné jazyky** | C# |
+| **Hodnoty** | `true`- Vložte místo před otevřením hranatých závorek`[` <br /><br />`false`- Odstraňte prostor před otevřením hranaté závorky`[` |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -1120,8 +1120,8 @@ int[] numbers = new int[] { 1, 2, 3, 4, 5 };
 |||
 |-|-|
 | **Název pravidla** | csharp_space_between_empty_square_brackets |
-| **Příslušné jazyky** | C# |
-| **Hodnoty** | `true` – vložit mezeru mezi prázdné hranaté závorky `[ ]` <br /><br />`false` – odstranění mezery mezi prázdnými hranatými závorkami `[]` |
+| **Použitelné jazyky** | C# |
+| **Hodnoty** | `true`- Vložte mezeru mezi prázdné hranaté závorky`[ ]` <br /><br />`false`- Odstraňte mezeru mezi prázdnými hranaté závorky`[]` |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -1139,8 +1139,8 @@ int[] numbers = new int[] { 1, 2, 3, 4, 5 };
 |||
 |-|-|
 | **Název pravidla** | csharp_space_between_square_brackets |
-| **Příslušné jazyky** | C# |
-| **Hodnoty** | `true` – vkládat znaky mezer v neprázdných hranatých závorkách `[ 0 ]` <br /><br />`false` – odebrání znaků mezery v neprázdných hranatých závorkách `[0]` |
+| **Použitelné jazyky** | C# |
+| **Hodnoty** | `true`- Vložte mezery znaky v neprázdných hranatých závorkách`[ 0 ]` <br /><br />`false`- Odstraňte mezery znaky v neprázdných hranatých závorkách`[0]` |
 | **Výchozí nastavení sady Visual Studio** | `false` |
 
 Příklady kódu:
@@ -1153,11 +1153,11 @@ int index = numbers[ 0 ];
 int index = numbers[0];
 ```
 
-### <a name="wrap-options"></a>Možnosti zalamování
+### <a name="wrap-options"></a>Možnosti obtékání
 
-Tato pravidla formátování se týkají použití jednoho řádku oproti samostatným řádkům pro příkazy a bloky kódu.
+Tato pravidla formátování se týkají použití jednoho řádky versus samostatné řádky pro příkazy a bloky kódu.
 
-Příklad souboru *. editorconfig* :
+Příklad souboru *.editorconfig:*
 
 ```ini
 # CSharp formatting settings:
@@ -1171,9 +1171,9 @@ csharp_preserve_single_line_blocks = true
 |||
 |-|-|
 | **Název pravidla** | csharp_preserve_single_line_statements |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | příkazy `true`-opustit a deklarace členů na stejném řádku<br /><br />příkazy `false`-opustit a deklarace členů na různých řádcích |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- Leave prohlášení a prohlášení členů na stejném řádku<br /><br />`false`- Leave prohlášení a prohlášení členů na různých řádcích |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -1192,9 +1192,9 @@ string name = "John";
 |||
 |-|-|
 | **Název pravidla** | csharp_preserve_single_line_blocks |
-| **Příslušné jazyky** | C# |
-| **Představená verze** | Visual Studio 2017 verze 15,3 |
-| **Hodnoty** | `true`-ponechat blok kódu na jednom řádku<br /><br />`false`-ponechat blok kódu na samostatných řádcích |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** | Visual Studio 2017 verze 15.3 |
+| **Hodnoty** | `true`- Opustit blok kódu na jednom řádku<br /><br />`false`- Ponechat blok kódu na samostatných řádcích |
 | **Výchozí nastavení sady Visual Studio** | `true` |
 
 Příklady kódu:
@@ -1210,8 +1210,8 @@ public int MyProperty
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Jazykové konvence](editorconfig-language-conventions.md)
+- [Konvence jazyka](editorconfig-language-conventions.md)
 - [Zásady vytváření názvů](editorconfig-naming-conventions.md)
-- [EditorConfig nastavení konvence psaní kódu .NET](editorconfig-code-style-settings-reference.md)
+- [Nastavení konvence kódování .NET pro EditorConfig](editorconfig-code-style-settings-reference.md)

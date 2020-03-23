@@ -1,5 +1,5 @@
 ---
-title: AutoMark | Microsoft Docs
+title: Automark | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c4de965e-0364-4f78-9936-1f509e85df74
@@ -10,16 +10,16 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 072f80508f81a7b42ad481048f604cbd4c54af88
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779789"
 ---
 # <a name="automark"></a>AutoMark
-Možnost **AutoMark** určuje počet milisekund mezi kolekcí událostí čítače výkonu softwaru systému Windows. Čítače výkonu systému Windows jsou zadány v možnosti **WinCounter** .
+Možnost **automatického označení** určuje počet milisekund mezi shromažďováním událostí čítače výkonu softwaru systému Windows. Čítače výkonu systému Windows jsou určeny v možnosti **WinCounter.**
 
- V příkazovém řádku lze zadat pouze jednu možnost automatického **označení** . Všimněte si, že interval vzorkování **WinCounter** určený parametrem **AutoMark** je nezávislý na hlavním intervalu vzorkování.
+ Na příkazovém řádku lze zadat pouze jednu možnost **automatického značky.** Všimněte si, že **wincounter** vzorkovací interval určený **automark** je nezávislý na hlavní vzorkovací interval.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,10 +28,10 @@ VSPerfCmd.exe /Start:Method /WinCounter:Path /AutoMark:Milliseconds
 ```
 
 #### <a name="parameters"></a>Parametry
- `Milliseconds` určuje počet milisekund mezi kolekcemi událostí čítače výkonu systému Windows.
+ `Milliseconds`Určuje počet milisekund mezi kolekcemi událostí čítače výkonu systému Windows.
 
 ## <a name="required-options"></a>Požadované možnosti
- **WinCounter:** `Path` určuje čítač výkonu systému Windows, který má být shromážděn. Pokud používáte metodu instrumentace, je možné zadat více čítačů systému Windows. Při použití metody vzorkování lze zadat pouze jeden čítač softwaru. Možnost **WinCounter** je nutné zadat na příkazovém řádku, který obsahuje možnost **Start** .
+ **WinCounter:** `Path` Určuje čítač výkonu systému Windows shromažďovat. Pokud používáte metodu instrumentace, lze zadat více čítačů systému Windows. Pokud používáte metodu vzorkování, lze zadat pouze jeden čítač softwaru. Možnost **WinCounter** musí být zadána v příkazovém řádku, který obsahuje možnost **Start.**
 
 ## <a name="example"></a>Příklad
  V tomto příkladu je pro dva čítače výkonu systému Windows nastaven interval vzorkování 1000 milisekund.
@@ -41,8 +41,8 @@ VSPerfCmd.exe /Start:Trace /Output:TestApp.exe.vsp /WinCounter:"\Process(*)\% Pr
 VSPerfCmd.exe /Launch:TestApp.exe
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [VSPerfCmd](../profiling/vsperfcmd.md)
 - [Profilovat samostatné aplikace](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [ASP.NET webové aplikace Profile](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [Profilovací služby](../profiling/command-line-profiling-of-services.md)
+- [Profil ASP.NET webových aplikací](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profilové služby](../profiling/command-line-profiling-of-services.md)

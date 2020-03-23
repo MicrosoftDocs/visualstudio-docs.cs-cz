@@ -17,46 +17,46 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b21cdb9136abe1e960e5b74bbf09e7d1694519d7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568955"
 ---
 # <a name="immediate-window"></a>Příkazové podokno
 
-Použijte **příkazové** okno pro ladění a vyhodnocení výrazů, příkazů Execute a tisku hodnot proměnných. **Příkazové** okno vyhodnotí výrazy sestavením a použitím aktuálně vybraného projektu.
+Okno **Okamžité** slouží k ladění a vyhodnocování výrazů, spouštění příkazů a tisku hodnot proměnných. Okno **Okamžité** vyhodnocuje výrazy sestavením a použitím aktuálně vybraného projektu.
 
-Chcete-li zobrazit okno **okamžité** , otevřete projekt pro úpravy a pak zvolte možnost **ladění** > **Windows** > **přímo** nebo stiskněte klávesu **CTRL**+**ALT**+**I**. Můžete také zadat **Debug. Immediate** v **příkazovém** okně.
+Chcete-li zobrazit okno **Okamžité,** otevřete projekt pro úpravy a pak zvolte **Ladění** > **systému Windows** > **Immediate** nebo stiskněte **kombinaci kláves Ctrl**+**Alt**+**I**. Můžete také zadat **Debug.Immediate** v okně **příkazu.**
 
-**Příkazové** okno podporuje technologii IntelliSense.
+Okno **Immediate** podporuje technologii IntelliSense.
 
-## <a name="display-the-values-of-variables"></a>Zobrazit hodnoty proměnných
+## <a name="display-the-values-of-variables"></a>Zobrazení hodnot proměnných
 
-**Okamžité** okno je užitečné zejména při ladění aplikace. Chcete-li například zjistit hodnotu proměnné `varA`, můžete použít [příkaz Print](../../ide/reference/print-command.md):
+Okno **Okamžité** je užitečné zejména při ladění aplikace. Chcete-li například zkontrolovat hodnotu proměnné `varA`, můžete použít příkaz [Tisk](../../ide/reference/print-command.md):
 
 ```cmd
 >Debug.Print varA
 ```
 
-Otazník (?) je alias pro `Debug.Print`, takže tento příkaz lze také zapsat:
+Otazník (?) je `Debug.Print`alias pro , takže tento příkaz může být také zapsán:
 
 ```cmd
 ? varA
 ```
 
-Obě verze tohoto příkazu vracejí hodnotu proměnné `varA`.
+Obě verze tohoto příkazu vrátí hodnotu proměnné `varA`.
 
 > [!TIP]
-> Chcete-li vydat příkaz sady Visual Studio v **příkazovém** okně, je nutné předvyplnit příkaz znakem větším než (>). Chcete-li zadat více příkazů, přepněte na [okno příkaz](command-window.md).
+> Chcete-li vydat příkaz sady Visual Studio v okně **Okamžité,** musíte předřadit příkaz s větším než znaménko (>). Chcete-li zadat více příkazů, přepněte do [okna Příkaz](command-window.md).
 
-## <a name="design-time-expression-evaluation"></a>Vyhodnocení výrazu pro dobu návrhu
+## <a name="design-time-expression-evaluation"></a>Vyhodnocení výrazu v době návrhu
 
-Můžete použít **příkazové** okno k provedení funkce nebo podrutiny v době návrhu.
+Okno **Okamžité** můžete použít ke spuštění funkce nebo podprogramu v době návrhu.
 
-### <a name="execute-a-function-at-design-time"></a>Spustit funkci v době návrhu
+### <a name="execute-a-function-at-design-time"></a>Provedení funkce v době návrhu
 
-1. Zkopírujte následující kód do Visual Basic konzolové aplikace:
+1. Zkopírujte následující kód do konzolové aplikace jazyka Visual Basic:
 
    ```vb
    Module Module1
@@ -72,38 +72,38 @@ Můžete použít **příkazové** okno k provedení funkce nebo podrutiny v dob
    End Module
    ```
 
-2. V nabídce **ladění** vyberte možnost **Windows** > **Immediate**.
+2. V nabídce **Ladění** zvolte **Windows** > **Immediate**.
 
-3. Zadejte `?MyFunction(2)` do příkazového **podokna** a stiskněte klávesu **ENTER**.
+3. Zadejte `?MyFunction(2)` okno **Okamžité** a stiskněte **Enter**.
 
-    Okno **okamžité** spustí `MyFunction` a zobrazí `4`.
+    Okno **Immediate** `MyFunction` se `4`spustí a zobrazí .
 
-Pokud funkce nebo podprogram obsahuje zarážku, aplikace Visual Studio přeruší provádění v příslušném bodě. Potom můžete ladicí program windows prozkoumat stav vaší aplikace. Další informace naleznete v tématu [Návod: ladění v době návrhu](../../debugger/walkthrough-debugging-at-design-time.md).
+Pokud funkce nebo podprogram obsahuje zarážku, Visual Studio přeruší spuštění v příslušném bodě. Potom můžete použít okna ladicího programu ke kontrole stavu programu. Další informace naleznete [v tématu Návod: Ladění v době návrhu](../../debugger/walkthrough-debugging-at-design-time.md).
 
-Vyhodnocení výrazu v době návrhu nelze použít v typech projektů, které vyžadují spuštění spouštěcího prostředí, včetně Visual Studio Tools for Office projektů, webových projektů, projektů inteligentních zařízení a projektů SQL.
+Hodnocení výrazů v návrhu nelze použít v typech projektů, které vyžadují spuštění prostředí spuštění, včetně nástrojů sady Visual Studio pro projekty sady Office, webových projektů, projektů inteligentních zařízení a projektů SQL.
 
-### <a name="design-time-expression-evaluation-in-multi-project-solutions"></a>Vyhodnocení výrazu v době návrhu v řešeních s více projekty
+### <a name="design-time-expression-evaluation-in-multi-project-solutions"></a>Vyhodnocení exprese v době návrhu v řešeních pro více projektů
 
-Při vytváření kontextu pro vyhodnocení výrazu v době návrhu aplikace Visual Studio odkazuje na aktuálně vybraný projekt v Průzkumník řešení. Pokud není vybrán žádný projekt v Průzkumník řešení, Visual Studio se pokusí vyhodnotit funkci proti spouštěnému projektu. Pokud funkci nejde vyhodnotit v aktuálním kontextu, zobrazí se chybová zpráva. Pokud se pokoušíte vyhodnotit funkci v projektu, který není spouštěným projektem pro řešení, a zobrazí se chyba, zkuste projekt vybrat v Průzkumník řešení a znovu se pokuste o vyhodnocení.
+Při vytváření kontextu pro vyhodnocení výrazu návrhu visual studio odkazuje na aktuálně vybraný projekt v Průzkumníku řešení. Pokud není vybrán žádný projekt v Průzkumníku řešení, Visual Studio se pokusí vyhodnotit funkci proti projektu po spuštění. Pokud funkci nelze vyhodnotit v aktuálním kontextu, zobrazí se chybová zpráva. Pokud se pokoušíte vyhodnotit funkci v projektu, který není projekt spuštění řešení a zobrazí se chyba, zkuste vybrat projekt v Průzkumníku řešení a pokus te se o vyhodnocení znovu.
 
-## <a name="enter-commands"></a>Zadat příkazy
+## <a name="enter-commands"></a>Zadávání příkazů
 
-Při vydávání příkazů sady Visual Studio v **příkazovém** okně zadejte symbol větší než (>). Pomocí šipek **nahoru** a **dolů** můžete procházet dříve použité příkazy.
+Při vydávání příkazů sady Visual Studio v okně **Okamžité** zadejte větší než znaménko (>). Pomocí **kláves se šipkami nahoru** a **šipkami dolů** můžete procházet dříve použité příkazy.
 
-|Úloha|Řešení|Příklad|
+|Úkol|Řešení|Příklad|
 |----------|--------------|-------------|
-|Vyhodnotit výraz.|Předtvářte výraz otazníkem (?).|`? a+b`|
-|Dočasné zadání režimu příkazů v přímém režimu (pro spuštění jednoho příkazu).|Zadejte příkaz s znakem větším než (>).|`>alias`|
-|Přepněte na okno Příkaz.|Do okna zadejte `cmd`, před něj uveďte symbol větší než (>).|`>cmd`|
-|Přepněte zpátky do příkazového podokna.|Do okna zadejte `immed` bez znaménka "větší než" (>).|`immed`|
+|Vyhodnoťte výraz.|Předmluva výrazu s otazníkem (?).|`? a+b`|
+|Dočasně zadejte režim příkazu v režimu Okamžité (pro spuštění jediného příkazu).|Zadejte příkaz a předepište ho s větším než znakem (>).|`>alias`|
+|Přepněte do okna Příkaz.|Zadejte `cmd` do okna, předlít ji s větší než znaménko (>).|`>cmd`|
+|Přepněte zpět do okna Okamžité.|Vstupdo `immed` okna bez větší než znaménko (>).|`immed`|
 
 ## <a name="mark-mode"></a>Režim označení
 
-Když kliknete na libovolný předchozí řádek v **příkazovém** podokně, automaticky se posune do režimu označení. To vám umožní vybrat, upravit a zkopírovat text předchozích příkazů jako v libovolném textovém editoru a vložit je do aktuálního řádku.
+Když kliknete na jakýkoli předchozí řádek v okně **Okamžité,** automaticky se přesunete do režimu Označit. To vám umožní vybrat, upravit a zkopírovat text předchozích příkazů stejně jako v libovolném textovém editoru a vložit je do aktuálního řádku.
 
 ## <a name="examples"></a>Příklady
 
-Následující příklad ukazuje čtyři výrazy a jejich výsledek v **příkazovém** okně pro Visual Basic projekt.
+Následující příklad ukazuje čtyři výrazy a jejich výsledek v **okně Okamžité** pro projekt jazyka.
 
 ```cmd
 j = 2
@@ -119,17 +119,17 @@ Expression has been evaluated and has no value
 26
 ```
 
-## <a name="first-chance-exception-notifications"></a>Oznámení o první pravděpodobné výjimce
+## <a name="first-chance-exception-notifications"></a>Oznámení o výjimce první šance
 
-V některých konfiguracích nastavení se v **příkazovém podokně** zobrazují oznámení o první pravděpodobné výjimce.
+V některých konfiguracích nastavení jsou oznámení o výjimce první šance zobrazena v okně **Okamžité.**
 
-### <a name="toggle-first-chance-exception-notifications-in-the-immediate-window"></a>Přepínání oznámení o první odpovídající výjimce v příkazovém podokně
+### <a name="toggle-first-chance-exception-notifications-in-the-immediate-window"></a>Přepnout oznámení o výjimce první šance v okně Okamžité
 
-1. V nabídce **zobrazení** klikněte na položku **ostatní okna**a klikněte na možnost **výstup**.
+1. V nabídce **View** klepněte na **položku Jiný systém Windows**a klepněte na příkaz **Výstup**.
 
-2. Klikněte pravým tlačítkem myši na oblast textu v okně **výstup** a pak vyberte nebo zrušte výběr **zprávy o výjimce**.
+2. Klepněte pravým tlačítkem myši na textovou oblast okna **Výstup** a pak vyberte nebo odznačte **zprávy výjimek**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Procházení kódu s ladicím programem](../../debugger/navigating-through-code-with-the-debugger.md)
 - [Příkazové okno](../../ide/reference/command-window.md)

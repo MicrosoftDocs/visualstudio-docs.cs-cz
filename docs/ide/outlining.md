@@ -1,5 +1,5 @@
 ---
-title: Rozbalení a sbalení oblasti kódu
+title: Sbalení a rozšíření oblastí kódu
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,44 +16,44 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 781c9a6bc30f7d3a29bcb89e743600e6b29e6445
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585753"
 ---
 # <a name="outlining"></a>Sbalování
 
-Můžete také skrýt nějaký kód ze zobrazení sbalením oblasti kódu tak, aby se objevila pod znaménko plus ( **+** ). Rozbalte sbalený oblast kliknutím na symbol plus. Pokud jste uživatelem klávesnice, můžete zvolit **Ctrl**+**M**+**M** můžete rozbalit nebo sbalit. Sbalování oblastí můžete také sbalit dvojitým kliknutím na kterýkoli řádek v oblasti na okraji osnovy, které se zobrazí vlevo kód. Když najedete myší sbaleného regionu, můžete zobrazit obsah sbaleného regionu jako popisek.
+Můžete skrýt některé kód ze zobrazení sbalením oblasti kódu tak, aby**+** se zobrazí pod znaménkem plus ( ). Sbalenou oblast rozbalíte kliknutím na znaménko plus. Pokud jste uživatel klávesnice, můžete zvolit **Ctrl**+**M**+**M** sbalit a rozbalit. Oblast osnovy můžete také sbalit poklepáním na libovolný řádek v oblasti na okraji osnovy, který se zobrazí vlevo od kódu. Obsah sbalené oblasti můžete zobrazit jako popis, když nastoli na sbalenou oblast.
 
 > [!NOTE]
-> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac, najdete v části [Editor zdrojového kódu (Visual Studio for Mac)](/visualstudio/mac/source-editor).
+> Toto téma platí pro Visual Studio v systému Windows. Visual Studio pro Mac najdete [v tématu Zdrojový editor (Visual Studio pro Mac).](/visualstudio/mac/source-editor)
 
-Když najedete myší na okraji pomocí myši, jsou také zvýrazněna oblastí na okraji osnovy. Výchozí barva zvýraznění se může zdát slabé místo v některých konfiguracích barvu. Můžete změnit v **nástroje** > **možnosti** > **prostředí** > **písma a barvy**  >  **Sbalitelná oblast**.
+Oblasti v okraji osnovy se také zvýrazní, když na okraj najedete myší. Výchozí barva zvýraznění se může v některých barevných konfiguracích jevit jako spíše slabá. Můžete jej změnit v **možnosti nástroje** > **prostředí** > **Environment** > **písma a barvy** > **sbalitelné oblasti**.
 
-Pokud pracujete v osnovy kódu, můžete rozbalit oddíly, které chcete pracovat, je sbalení při dokončení a poté přesuňte do další sekce. Pokud nechcete, aby sbalování zobrazí, můžete použít **ukončit sbalování** příkazu odeberte informace osnovy bez narušení základní kód.
+Při práci v kódu s přehledem můžete rozbalit oddíly, na kterých chcete pracovat, sbalit je po dokončení a pak přesunout do jiných oddílů. Pokud si nepřejete, aby se zobrazovalo osnovy, můžete pomocí příkazu **Zastavit osnovu** odebrat informace osnovy, aniž byste narušili základní kód.
 
-**Zpět** a **znovu** příkazy na **upravit** nabídky, ovlivňují tyto akce. **Kopírování**, **Vyjmout**, **vložit**, a operace přetažení myší zachovat popisující informací, ale stav sbalitelná oblast. Například při kopírování oblast, která je sbalena, **vložte** operace se vložit zkopírovaný text jako rozbalená oblast.
+Příkazy **Vrátit** a **znovu v** nabídce **Úpravy** ovlivní tyto akce. Operace **Kopírování**, **Vyjmout**, **Vložit**a přetažení zachovávají informace o osnovách, ale ne o stavu sbalitelné oblasti. Například při kopírování oblasti, která je sbalená, operace **Vložit** vloží zkopírovaný text jako rozbalené oblasti.
 
 > [!CAUTION]
-> Při změně ohraničené oblasti osnovu mohou být ztraceny. Například odstranění nebo operace hledání a nahrazení můžou vymazat konec oblasti.
+> Změníte-li nastíněnou oblast, může dojít ke ztrátě osnovy. Například odstranění nebo najít a nahradit operace může vymazat konec oblasti.
 
-Následující příkazy můžete najít na **upravit** > **Osnova** podnabídka.
+Následující příkazy naleznete v podnabídce **Upravit** > **osnovy.**
 
 |||
 |-|-|
-|Skrýt výběr|(**Ctrl**+**M**, **Ctrl**+**H**)-sbalí vybraný blok kódu, který by se obvykle k dispozici pro sbalení, třeba `if` bloku. Chcete-li odebrat vlastní oblasti, použijte **Zastavit skrývání aktuálního** (nebo **Ctrl**+**M**, **Ctrl** + **U**). Není k dispozici v jazyce Visual Basic.|
-|Přepne sbalování osnovy|– Vrátí aktuální stav skrytý nebo rozšířené nejvnitřnější sbalení části, pokud kurzor spočívá ve vnořených sbalenou část.|
-|Přepnout všechny osnovy|(**Ctrl**+**M**, **Ctrl**+**L**) – nastaví všechny oblasti stejné rozbalit nebo sbalit stavu. Pokud jsou rozbaleny v některých oblastech a některé sbalena, pak sbalených oblasti jsou rozbaleny.|
-|Ukončit sbalování|(**Ctrl**+**M**, **Ctrl**+**P**) – odebere všechny osnovy informace pro celý dokument.|
-|Zastavit skrývání aktuálního|(**Ctrl**+**M**, **Ctrl**+**U**) – odebere sbalování informace pro aktuálně vybrané uživatelem definované oblasti. Není k dispozici v jazyce Visual Basic.|
-|Sbalit do definic|(**Ctrl**+**M**, **Ctrl**+**O**)-sbalí všechny typy jako objekty její členové.|
-|Sbalit blok:\<logické hraniční >|(C++) Sbalí oblast ve funkci, která obsahuje bod vložení. Například pokud se kurzor nachází uvnitř smyčky, smyčky je skrytá.|
-|Sbalit vše do: \<logické struktury >|(C++) Sbalí všechny struktury uvnitř funkce.|
+|Skrýt výběr|(**Ctrl**+**M**, **Ctrl**+**H**) - Sbalí vybraný blok kódu, který `if` by normálně nebyl k dispozici pro osnovu, například blok. Chcete-li odebrat vlastní oblast, použijte **použít možnost Zastavit skrytí aktuálního** stavu (nebo **Ctrl**+**M**, **Ctrl**+**U**). Není k dispozici v jazyce Visual Basic.|
+|Přepnout rozšíření osnovy|- Obrátí aktuální skrytý nebo rozšířený stav nejvnitřnějšího oddílu osnovy, když kurzor leží v vnořené sbalené části.|
+|Přepnout všechny osnovy|(**Ctrl**+**M**, **Ctrl**+**L**) - Nastaví všechny oblasti do stejného sbaleného nebo rozbaleného stavu. Pokud jsou některé oblasti rozbaleny a některé sbaleny, pak se rozbalí sbalené oblasti.|
+|Zastavit osnovu|**(Ctrl**+**M**, **Ctrl**+**P**) - Odstraní všechny informace o výsuších pro celý dokument.|
+|Zastavit skrytí aktuálního stavu|(**Ctrl**+**M**, **Ctrl**+**U**) - Odebere informace o osnově pro aktuálně vybranou uživatelem definovanou oblast. Není k dispozici v jazyce Visual Basic.|
+|Sbalit na definice|(**Ctrl**+**M**, **Ctrl**+**O**) - Sbalí členy všech typů.|
+|Sbalit\<blok: logická hranice>|(C++) Sbalí oblast funkce obsahující kurzor. Pokud například kurzor leží uvnitř smyčky, smyčka je skrytá.|
+|Sbalit \<vše v: logické struktury>|(C++) Sbalí všechny struktury uvnitř funkce.|
 
-Visual Studio SDK můžete použít také k definování oblastí textu, které chcete rozbalit nebo sbalit. Zobrazit [návod: sbalení](../extensibility/walkthrough-outlining.md).
+Pomocí sady Visual Studio SDK můžete také definovat textové oblasti, které chcete rozbalit nebo sbalit. Viz [návod: Osnova](../extensibility/walkthrough-outlining.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Funkce editoru kódu](../ide/writing-code-in-the-code-and-text-editor.md)
-- [Editor zdrojového kódu (Visual Studio for Mac)](/visualstudio/mac/source-editor)
+- [Zdrojový editor (Visual Studio pro Mac)](/visualstudio/mac/source-editor)
