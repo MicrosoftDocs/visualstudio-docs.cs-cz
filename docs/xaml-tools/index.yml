@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: Dokumentace k nástrojům XAML
-summary: Visual Studio poskytuje několik nástrojů, které vám pomůžou vytvořit aplikace založené na jazyce XAML. Mezi ně patří Editor XAML a Návrhář a také funkce ladění.
+summary: Visual Studio nabízí několik nástrojů, které vám pomůžou vytvořit aplikace založené na jazyce XAML. Mezi ně patří editor a návrhář XAML a také funkce ladění.
 metadata:
   title: Dokumentace k nástrojům XAML
-  description: Přejděte na jiné stránky, které vám pomůžou naučit se používat nástroje XAML v aplikaci Visual Studio.
+  description: Přejděte na další stránky, které vám pomůžou naučit se pracovat s nástroji jazyka XAML v sadě Visual Studio.
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-designers
   ms.topic: landing-page
@@ -11,25 +11,25 @@ metadata:
   ms.author: jillfra
   ms.date: 10/10/2019
   ms.openlocfilehash: 45f9459ff4778b58ae3d553a03b2e5c1773614b6
-  ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 11/22/2019
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "74316415"
 landingContent:
-- title: Informace o XAML
+- title: Seznamte se s jazykem XAML
   linkLists:
   - linkListType: overview
     links:
     - text: Přehled XAML
       url: xaml-overview.md
-- title: Použít Návrhář XAML
+- title: Práce s Návrhářem XAML
   linkLists:
   - linkListType: overview
     links:
     - text: Návrh XAML v sadě Visual Studio a Blendu
       url: designing-xaml-in-visual-studio.md
-    - text: O Návrhář XAML
+    - text: Návrhář XAML
       url: creating-a-ui-by-using-xaml-designer-in-visual-studio.md
 - title: Ladění kódu XAML
   linkLists:
@@ -37,7 +37,7 @@ landingContent:
     links:
     - text: Psaní a ladění spuštěného kódu XAML
       url: xaml-hot-reload.md
-    - text: Kontrola vlastností XAML
+    - text: Vlastnosti jazyka XAML
       url: inspect-xaml-properties-while-debugging.md
     - text: Ladění aplikací pro WPF
       url: ../debugger/debugging-wpf.md
@@ -53,15 +53,15 @@ landingContent:
       url: ../designers/introduction-to-wpf.md
   - linkListType: get-started
     links:
-    - text: Začínáme s WPF v aplikaci Visual Studio
+    - text: Začínáme se subsystémem WPF v sadě Visual Studio
       url: ../designers/getting-started-with-wpf.md
 - title: Vývoj aplikací pro UWP
   linkLists:
   - linkListType: overview
     links:
-    - text: Přehled UWP
+    - text: Přehled UPW
       url: /windows/uwp/get-started/
   - linkListType: get-started
     links:
-    - text: Začínáme s UWP v prostředí Visual Studio
+    - text: Začínáme s UWP v sadě Visual Studio
       url: /windows/uwp/get-started/get-set-up

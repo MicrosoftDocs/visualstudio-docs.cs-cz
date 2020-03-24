@@ -1,0 +1,238 @@
+- name: Visual Studio for Mac
+  href: index.yml
+- name: Začínáme
+  items:
+    - name: Prohlídka integrovaného vývojového prostředí (IDE)
+      href: ide-tour.md
+    - name: Visual Studio pro Mac pro uživatele Windows
+      href: vsmac-for-windows-users.md
+- name: Instalace
+  items:
+    - name: Instalace sady Visual Studio 2019 pro Mac
+      href: installation.md
+    - name: Instalace a používání za bránou firewall nebo proxy serverem
+      href: install-behind-a-firewall-or-proxy-server.md
+    - name: Instalace verze Preview
+      href: install-preview.md
+    - name: Aktualizace
+      href: update.md
+    - name: Odinstalovat
+      href: uninstall.md
+- name: Uživatelské účty
+  items:
+    - name: Přehled
+      href: user-accounts.md
+    - name: Přihlášení
+      href: signing-in.md
+    - name: Povolení předplatného
+      href: enable-subscription.md
+- name: Přizpůsobení integrovaného vývojového prostředí (IDE)
+  items:
+    - name: Přizpůsobení vzhledu a chování integrovaného vývojového prostředí (IDE)
+      href: customizing-the-ide.md
+    - name: Rozšíření sady Visual Studio pro Mac
+      href: extending-visual-studio-mac.md
+- name: "Projekty a\_řešení"
+  items:
+    - name: Přehled
+      href: projects-and-solutions.md
+    - name: Vytváření nových projektů
+      href: create-new-projects.md
+    - name: Přidávání a odebírání projektových položek
+      href: add-and-remove-project-items.md
+    - name: Správa vlastností řešení a projektu
+      href: managing-solutions-and-project-properties.md
+    - name: Cílení na více verzí
+      href: project-multitargeting.md
+    - name: Správa odkazů v projektu
+      items:
+        - name: Přehled
+          href: managing-references-in-a-project.md
+        - name: 'Návod: Zahrnutí balíčku NuGet do projektu'
+          href: nuget-walkthrough.md
+    - name: Správa prostředků aplikace
+      href: managing-app-resources.md
+    - name: 'Postupy: Otevření více řešení nebo instancí'
+      href: open-multiple-solutions.md
+- name: Editor zdroje
+  items:
+    - name: Funkce editoru
+      href: source-editor.md
+    - name: Refaktoring
+      href: refactoring.md
+    - name: IntelliSense
+      href: intellisense.md
+    - name: Zobrazení importovaných položek
+      href: show-imports.md
+    - name: Úpravy s více kurzory
+      href: multi-caret-editing.md
+    - name: Komentáře
+      href: comments.md
+    - name: Chování editoru
+      href: editor-behavior.md
+    - name: Komentáře k úkolům
+      href: task-comments.md
+    - name: Fragmenty kódu
+      href: snippets.md
+    - name: Výběr bloku
+      href: block-selection.md
+    - name: Motivy editoru
+      href: editor-themes.md
+    - name: EditorConfig
+      href: editorconfig.md
+    - name: Výchozí klávesové zkratky
+      href: keyboard-shortcuts.md
+- name: Ladění
+  items:
+    - name: Přehled
+      href: debugging.md
+    - name: Vizualizace dat
+      href: data-visualizations.md
+    - name: Ladění balíčků NuGet pomocí odkazu na zdroj
+      href: source-link.md
+- name: Kompilace a sestavení
+  items:
+    - name: Přehled
+      href: compiling-and-building.md
+    - name: "Sestavování a\_čištění projektů a\_řešení"
+      href: building-and-cleaning-projects-and-solutions.md
+    - name: Akce sestavení
+      href: build-actions.md
+    - name: 'Postupy: Nastavení více projektů po spuštění'
+      href: set-startup-projects.md
+    - name: Přizpůsobení sestavovacího systému
+      href: customizing-build-system.md
+    - name: Konfigurace
+      items:
+        - name: Principy konfigurací sestavení
+          href: configurations.md
+        - name: Vytvoření a úprava konfigurací
+          href: create-and-edit-configurations.md
+- name: Správa verzí
+  items:
+    - name: Přehled
+      href: version-control.md
+    - name: Nastavení úložiště Git
+      href: set-up-git-repository.md
+    - name: Práce s úložištěm Git
+      href: working-with-git.md
+    - name: Nastavení úložiště Subversion
+      href: set-up-subversion-repository.md
+    - name: Práce s úložištěm Subversion
+      href: working-with-subversion.md
+- name: Nasazení webové aplikace
+  items:
+    - name: Přehled
+      href: web-app-deployment.md
+    - name: Publikování do Azure App Service
+      href: publish-app-svc.md
+    - name: Publikování do složky
+      href: publish-folder.md
+- name: Úkoly
+  items:
+    - name: Dostupné sady funkcí
+      href: workloads.md
+    - name: ASP.NET Core
+      items:
+        - name: Podpora platformy .NET Core
+          href: net-core-support.md
+        - name: Začínáme s ASP.NET Core
+          href: asp-net-core.md
+        - name: Vytváření aplikací ASP.NET Core v sadě Visual Studio pro Mac
+          href: building-asp-net-core.md
+        - name: Razor
+          href: razor.md
+        - name: Blazor
+          href: blazor.md
+        - name: JavaScript a TypeScript
+          href: javascript.md
+        - name: launchSettings.json
+          href: launch-settings.md
+    - name: Azure
+      items:
+        - name: Přehled
+          href: azure-workload.md
+        - name: Úvod do Azure Functions
+          href: azure-functions.md
+        - name: 'Kurz: Azure Functions'
+          href: azure-functions-lab.md
+        - name: Připojené služby
+          href: connected-services.md
+    - name: Docker
+      items:
+        - name: Začínáme s Dockerem
+          href: docker-quickstart.md
+        - name: Vytvoření vícekontejnerové aplikace pomocí nástroje Docker Compose
+          href: docker-multi-container.md
+    - name: Vývoj her pro Unity
+      items:
+        - name: Vývoj her pro Unity
+          href: unity-tools.md
+        - name: Instalace
+          href: setup-vsmac-tools-unity.md
+        - name: Začínáme s Unity
+          href: unity-walkthrough.md
+        - name: Používání nástrojů Unity
+          href: using-vsmac-tools-unity.md
+        - name: Používání .NET 4.x v Unity
+          href: /visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context
+        - name: Protokol změn
+          href: /visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context
+    - name: Mobilní aplikace s Xamarinem
+      href: /visualstudio/mac/xamarin
+- name: Usnadnění
+  items:
+    - name: Přehled
+      href: accessibility.md
+    - name: Nastavení možností usnadnění přístupu v integrovaném vývojovém prostředí
+      href: accessibility-ide-options.md
+    - name: Nástroje a funkce pro usnadnění macOS
+      items:
+        - name: Použití nástrojů pro usnadnění přístupu v systému macOS
+          href: accessibility-macos.md
+        - name: Navigace s použitím klávesnice
+          href: accessibility-keyboard.md
+        - name: Použití funkce VoiceOver
+          href: accessibility-voiceover.md
+- name: Videokurzy
+  items:
+    - name: Začínáme s ASP.NET Core s použitím sady Visual Studio pro Mac
+      href: tutorial-aspnet-core-vsmac-getting-started.md
+    - name: Rozšíření existující webové aplikace ASP.NET Core
+      href: tutorial-aspnet-core-vsmac-extending.md
+- name: Visual Studio pro Mac pro uživatele Windows
+  href: vsmac-for-windows-users.md
+- name: Poradce při potížích
+  items:
+    - name: Protokoly a výjimky
+      href: troubleshooting.md
+    - name: Program Zlepšování softwaru a služeb na základě zkušeností uživatelů pro Visual Studio
+      href: visual-studio-experience-improvement-program.md
+    - name: Nahlášení problému
+      href: report-a-problem.md
+    - name: 'Řešení potíží: Podporuje Visual Studio pro Mac Správu verzí Team Foundation?'
+      href: tf-version-control.md
+    - name: 'Řešení potíží: Proč se mi nezobrazují všechny šablony?'
+      href: troubleshooting-no-templates.md
+    - name: 'Řešení potíží: Aktualizátor obsahuje chyby načítání informací'
+      href: updater-troubleshooting.md
+- name: Zpráva k vydání verze
+  href: /visualstudio/releasenotes/vs2019-mac-relnotes
+- name: Zpráva k vydání verze Preview
+  href: /visualstudio/releasenotes/vs2019-mac-preview-relnotes
+- name: Ukázky
+  items:
+    - name: Vybrané ukázky
+      href: samples/index.yml
+    - name: Všechny ukázky ASP.NET Core
+      href: /samples/browse/?products=aspnet-core
+    - name: Všechny ukázky .NET Core
+      href: /samples/browse/?products=dotnet-core
+    - name: Všechny ukázky Xamarin.Forms
+      href: /xamarin/xamarin-forms/samples/
+    - name: Všechny ukázky Xamarin.iOS
+      href: /xamarin/ios/samples/
+    - name: Všechny ukázky Xamarin.Android
+      href: /xamarin/android/samples/
+    - name: Všechny ukázky Xamarin.Mac
+      href: /xamarin/mac/samples/

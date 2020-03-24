@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: Kurzy pro Visual Studio | Visual Basic
-summary: Vytvářejte Visual Basic aplikace pomocí sady Visual Studio.
+summary: Vytváření aplikací v jazyce Visual Basic pomocí sady Visual Studio
 metadata:
-  title: Vývoj Visual Basic se sadou Visual Studio
-  description: Vytvářejte Visual Basic aplikace pomocí sady Visual Studio.
+  title: Vývoj v jazyce Visual Basic pomocí sady Visual Studio
+  description: Vytváření aplikací v jazyce Visual Basic s využitím sady Visual Studio
   ms.custom: seodec18
   ms.topic: landing-page
   ms.date: 11/19/2019
@@ -15,10 +15,10 @@ metadata:
   dev_langs:
   - VB
   ms.openlocfilehash: 3462f85ea571e163617c6c5f315a28c98342acab
-  ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 11/19/2019
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "74188621"
 landingContent:
 - title: Začínáme
@@ -29,17 +29,17 @@ landingContent:
       url: ../../install/install-visual-studio.md
   - linkListType: get-started
     links:
-    - text: Spustit prohlídku s asistencí
+    - text: Spuštění průvodce
       url: visual-studio-ide.md
   - linkListType: quickstart
     links:
-    - text: Vytvoření konzolové aplikace "Hello World"
+    - text: Vytvoření konzolové aplikace Hello World
       url: ../../ide/quickstart-visual-basic-console.md
-- title: Vytváření Visual Basicch aplikací
+- title: Vytváření aplikací v jazyce Visual Basic
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Vytvoření aplikace konzoly
+    - text: Vytvoření konzolové aplikace
       url: tutorial-console.md
     - text: Vytvoření desktopové aplikace pro Windows
       url: tutorial-wpf.md

@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Analýza kódu v aplikaci Visual Studio
-summary: Visual Studio poskytuje několik různých nástrojů pro analýzu a vylepšení kvality kódu.
+title: Analýza kódu v sadě Visual Studio
+summary: Visual Studio nabízí několik různých nástrojů pro analýzu a vylepšení kvality kódu.
 metadata:
   title: Analyzátory kódu
-  description: Přečtěte si, jak vám může Visual Studio při analýze kvality kódu.
+  description: Přečtěte si, jak vám může sada Visual Studio pomoct analyzovat kvalitu kódu.
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
   ms.topic: landing-page
@@ -11,21 +11,21 @@ metadata:
   ms.author: jillfra
   ms.date: 10/15/2019
   ms.openlocfilehash: 45be3779e7ed8a625d9029c8eb03a69374c43ae8
-  ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 11/22/2019
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "74316360"
 landingContent:
-- title: Analýza jazyka C C++ a kódu
+- title: Analýza kódu v jazyce C a C++
   linkLists:
   - linkListType: overview
     links:
-    - text: Analýza jazyka C C++ a kódu
+    - text: Analýza kódu v jazyce C a C++
       url: code-analysis-for-c-cpp-overview.md
   - linkListType: reference
     links:
-    - text: C++upozornění analýzy kódu
+    - text: Upozornění analýzy kódu v jazyce C++
       url: code-analysis-for-c-cpp-warnings.md
 - title: Analýza kvality spravovaného kódu
   linkLists:
@@ -47,11 +47,11 @@ landingContent:
     links:
     - text: Upozornění analýzy spravovaného kódu
       url: code-analysis-for-managed-code-warnings.md
-- title: Analýza spravovaného stylu kódu
+- title: Analýza stylu spravovaného kódu
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Analyzovat styl kódu
+    - text: Analýza stylu kódu
       url: ../ide/create-portable-custom-editor-options.md
 - title: Měření složitosti kódu
   linkLists:

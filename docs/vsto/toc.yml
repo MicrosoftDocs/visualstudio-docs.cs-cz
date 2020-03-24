@@ -794,6 +794,8 @@
               href: deploying-an-office-solution-by-using-clickonce.md
             - name: "Nasazení řešení Office s\_použitím Instalační služby systému Windows"
               href: deploying-an-office-solution-by-using-windows-installer.md
+            - name: Nasazení řešení Office pomocí projektů instalace sady Visual Studio
+              href: deploying-a-vsto-solution-by-using-windows-installer.md
             - name: "Řešení potíží s\_nasazením řešení pro systém Office"
               items:
                 - name: "Řešení potíží s\_nasazením řešení pro systém Office"

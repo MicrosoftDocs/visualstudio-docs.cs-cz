@@ -14,10 +14,12 @@
           href: install-roslyn-analyzers.md
         - name: Konfigurace analyzátorů zdrojového kódu
           href: use-roslyn-analyzers.md
+        - name: Rozsah dynamické analýzy kódu
+          href: configure-live-code-analysis-scope-managed-code.md
+        - name: Ruční spuštění analýzy kódu
+          href: how-to-run-code-analysis-manually-for-managed-code.md
         - name: Zakázání analýzy kódu
           href: disable-code-analysis.md
-        - name: Povolení úplné analýzy řešení
-          href: how-to-enable-and-disable-full-solution-analysis-for-managed-code.md
         - name: Nejčastější dotazy
           href: analyzers-faq.md
         - name: Analyzátory FxCop
@@ -50,7 +52,7 @@
         - name: Migrace na analyzátory FxCop
           href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
         - name: Ruční spuštění starší verze analýzy
-          href: how-to-run-code-analysis-manually-for-managed-code.md
+          href: how-to-run-legacy-code-analysis-manually-for-managed-code.md
         - name: Konfigurace
           items:
             - name: Konfigurace starší verze analýzy

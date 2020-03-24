@@ -1,10 +1,10 @@
 ### YamlMime:Hub
-title: Dokumentace k produktové rodině sady Visual Studio
-summary: Prozkoumejte dokumentaci pro produktovou řadu Visual Studio.
+title: Dokumentace k produktové řadě sady Visual Studio
+summary: Projděte si dokumentaci produktové řady sady Visual Studio.
 brand: visual-studio
 metadata:
-  title: Dokumentace k produktové rodině sady Visual Studio
-  description: Prozkoumejte dokumentaci pro produktovou řadu Visual Studio.
+  title: Dokumentace k produktové řadě sady Visual Studio
+  description: Projděte si dokumentaci produktové řady sady Visual Studio.
   ms.topic: hub-page
   ms.date: 11/13/2019
   searchScope: []
@@ -15,10 +15,10 @@ metadata:
   monikerRange: '>=vs-2017'
   hide_bc: true
   ms.openlocfilehash: b36b1835f38a4ce6fe46d72935dc8cfc144561c3
-  ms.sourcegitcommit: 890ae10c8ea3bff8306ed25b06256578dee08397
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 11/15/2019
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "74118930"
 productDirectory:
   items:
@@ -26,7 +26,7 @@ productDirectory:
     imageSrc: ./media/vs-ide-2019.svg
     links:
     - url: /visualstudio/windows?view=vs-2019
-      text: Visual Studio 2019 (aktuální)
+      text: Visual Studio 2019 (aktuální verze)
     - url: /visualstudio/windows?view=vs-2017
       text: Visual Studio 2017
     - url: https://docs.microsoft.com/previous-versions/visualstudio/
@@ -39,7 +39,7 @@ productDirectory:
     imageSrc: ./media/vs-mac-2019.svg
     links:
     - url: https://docs.microsoft.com/visualstudio/mac
-      text: Visual Studio 2019 pro Mac (aktuální)
+      text: Visual Studio 2019 pro Mac (aktuální verze)
     - url: https://docs.microsoft.com/visualstudio/mac/?view=vsmac-2017
       text: Visual Studio 2017 for Mac
     - url: https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes
@@ -68,7 +68,7 @@ productDirectory:
     - url: https://docs.microsoft.com/visualstudio/subscriptions
       text: Dokumentace
     - url: https://visualstudio.microsoft.com/subscriptions
-      text: Informace o visualstudio.com
+      text: Informace na webu visualstudio.com
     - url: https://my.visualstudio.com
       text: Portál
     - url: https://manage.visualstudio.com

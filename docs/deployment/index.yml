@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Dokumentace k nasazení sady Visual Studio
+title: Dokumentace pro nasazení pomocí sady Visual Studio
 summary: Naučte se nasazovat aplikace, služby a komponenty pomocí sady Visual Studio.
 metadata:
   title: Nasazení v sadě Visual Studio
@@ -10,13 +10,13 @@ metadata:
   manager: jillfra
   ms.date: 09/17/2019
   ms.openlocfilehash: a2fc975c390283104fc4aa2c79244dba7e4e669e
-  ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
-  ms.translationtype: MT
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/24/2019
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "71238094"
 landingContent:
-- title: O nasazení
+- title: Informace o nasazení
   linkLists:
   - linkListType: overview
     links:
@@ -30,17 +30,17 @@ landingContent:
     links:
     - text: Publikování do Azure App Service
       url: quickstart-deploy-to-azure.md
-    - text: Publikování na App Service pro Linux
+    - text: Publikování do App Service pro Linux
       url: quickstart-deploy-to-linux.md
-    - text: Publikování na webu
+    - text: Publikování na webovou stránku
       url: quickstart-deploy-to-a-web-site.md
-    - text: Publikovat do místní složky
+    - text: Publikování do místní složky
       url: quickstart-deploy-to-local-folder.md
 - title: Nasazení aplikací .NET
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Nasazení aplikací .NET Core
+    - text: Nasazování aplikací .NET Core
       url: /dotnet/core/deploying/deploy-with-vs
     - text: Nasazení desktopové aplikace pomocí technologie ClickOnce
       url: how-to-publish-a-clickonce-application-using-the-publish-wizard.md
@@ -54,9 +54,9 @@ landingContent:
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Publikovat na NuGet.org (.NET Standard)
+    - text: Publikování do NuGet.org (.NET Standard)
       url: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
-    - text: Publikovat na NuGet.org (.NET Framework)
+    - text: Publikování do NuGet.org (.NET Framework)
       url: /nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework
 - title: Nasazení aplikací ASP.NET
   linkLists:
@@ -68,7 +68,7 @@ landingContent:
       url: tutorial-import-publish-settings-iis.md
     - text: Publikování pomocí Gitu
       url: /aspnet/core/host-and-deploy/azure-apps/azure-continuous-deployment
-- title: Nasazení C++ aplikací
+- title: Nasazení aplikací C++
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -82,7 +82,7 @@ landingContent:
     links:
     - text: Publikování do App Service pro Linux
       url: ../python/publishing-python-web-applications-to-azure-from-visual-studio.md
-- title: Nasazení aplikací v Node. js
+- title: Nasazení aplikace Node.js
   linkLists:
   - linkListType: tutorial
     links:

@@ -1,7 +1,7 @@
 ---
 layout: LandingPage
-title: Vytváření aplikací jazyka JavaScript v sadě Visual Studio | Dokumentace Microsoftu
-description: Zjistěte, jak vytvářet aplikace pomocí sady Visual Studio 2017.
+title: Vytvoření aplikací v jazyce JavaScript v sadě Visual Studio | Microsoft Docs
+description: Naučte se používat Visual Studio 2017 k vytváření aplikací.
 ms.topic: landing-page
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-nodejs
@@ -9,19 +9,19 @@ ms.author: mikejo
 author: mikejo5000
 manager: jillfra
 ms.openlocfilehash: baf650ba27d20424669bbdf47fffdac575f542b4
-ms.sourcegitcommit: 6196d0b7fdcb08ba6d28a8151ad36b8d1139f2cc
-ms.translationtype: MT
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "65225649"
 ---
 # <a name="javascript-in-visual-studio"></a>JavaScript ve Visual Studiu 2012
 
-Visual Studio poskytuje několik různých nástrojů, které vám pomůžou vytvořit aplikace s využitím jazyka JavaScript nebo TypeScript.
+Visual Studio nabízí několik různých nástrojů, které vám pomůžou vytvořit aplikace pomocí jazyka JavaScript nebo TypeScript.
 
 <!-- markdownlint-disable MD033 -->
 
-<h2>Zjistěte, jak pomocí jazyka JavaScript v sadě Visual Studio s zprovoznění během 5 minut</h2>
+<h2>Naučte se používat JavaScript v sadě Visual Studio pomocí rychlého průvodce Zprovoznění během 5 minut.</h2>
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -53,7 +53,7 @@ Visual Studio poskytuje několik různých nástrojů, které vám pomůžou vyt
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Vytvoření aplikace pro Vue.js</h3>
+                        <h3>Vytvoření aplikace Vue.js</h3>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@ Visual Studio poskytuje několik různých nástrojů, které vám pomůžou vyt
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Vytvoření aplikace pro Universal Windows (UPW)</h3>
+                        <h3>Vytvoření univerzální aplikace pro Windows (UWP)</h3>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@ Visual Studio poskytuje několik různých nástrojů, které vám pomůžou vyt
     </li>
 </ul>
 
-<h2>Seznamte se blíž s kurzy</h2>
+<h2>Prohlubte si vědomosti pomocí kurzů</h2>
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -94,7 +94,7 @@ Visual Studio poskytuje několik různých nástrojů, které vám pomůžou vyt
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Vytvoření aplikace pomocí ASP.NET a AngularJS</h3>
+                        <h3>Vytvoření aplikace pomocí platformy ASP.NET a frameworku AngularJS</h3>
                     </div>
                 </div>
             </div>
@@ -148,7 +148,7 @@ Visual Studio poskytuje několik různých nástrojů, které vám pomůžou vyt
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Vytvoření aplikace pomocí Apache Cordova</h3>
+                        <h3>Vytvoření aplikace pomocí technologie Apache Cordova</h3>
                     </div>
                 </div>
             </div>
@@ -206,7 +206,7 @@ Visual Studio poskytuje několik různých nástrojů, které vám pomůžou vyt
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Skriptovací rozhraní Windows (archiv)</h3>
+                        <h3>Skriptovací rozhraní systému Windows (archiv)</h3>
                     </div>
                 </div>
             </div>

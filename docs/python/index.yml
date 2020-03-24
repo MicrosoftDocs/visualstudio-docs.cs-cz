@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Visual Studio | Dokumentace k Pythonu
+title: Visual Studio | Dokumentace pro Python
 summary: Kurzy a koncepční články o vývoji aplikací v Pythonu pomocí sady Visual Studio.
 metadata:
-  title: Vývoj v Pythonu se sadou Visual Studio
-  description: Kurzy a koncepční články o vývoji aplikací v Pythonu pomocí sady Visual Studio.
+  title: Vývoj v Pythonu v sadě Visual Studio
+  description: Kurzy a koncepční články o vývoji aplikací v Pythonu pomocí sady Visual Studio
   ms.prod: visual-studio-windows
   ms.technology: vs-python
   ms.topic: landing-page
@@ -12,13 +12,13 @@ metadata:
   ms.author: joshuapa
   ms.date: 09/23/2019
   ms.openlocfilehash: e85bdedfc91c949213528718d147a7f1890964ce
-  ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
-  ms.translationtype: MT
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/27/2019
+  ms.lasthandoff: 03/21/2020
   ms.locfileid: "71322475"
 landingContent:
-- title: O podpoře Pythonu v aplikaci Visual Studio
+- title: Podpora Pythonu v sadě Visual Studio
   linkLists:
   - linkListType: overview
     links:
@@ -30,29 +30,29 @@ landingContent:
   linkLists:
   - linkListType: get-started
     links:
-    - text: Instalace podpory Pythonu v sadě Visual Studio
+    - text: Instalace podpory jazyka Python v sadě Visual Studio
       url: installing-python-support-in-visual-studio.md
     - text: Psaní kódu a jeho úpravy
       url: editing-python-code-in-visual-studio.md
     - text: Ladění kódu
       url: debugging-python-in-visual-studio.md
-    - text: Psání a spouštění testů
+    - text: Vytvoření a spouštění testování
       url: unit-testing-python-in-visual-studio.md
     - text: Použití interaktivní funkce REPL
       url: python-interactive-repl-in-visual-studio.md
     - text: Správa prostředí Pythonu
       url: managing-python-environments-in-visual-studio.md
-    - text: Zápis C/C++ rozšíření pro Python
+    - text: Vytvoření rozšíření C/C++ pro Python
       url: working-with-c-cpp-python-in-visual-studio.md
   - linkListType: tutorial
     links:
-    - text: Práce s Pythonem v aplikaci Visual Studio
+    - text: Práce s Pythonem v sadě Visual Studio
       url: tutorial-working-with-python-in-visual-studio-step-00-installation.md
-- title: Začínáme s vývojem pro web
+- title: Začínáme s vývojem webu
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Vytvoření webové aplikace s využitím Django Framework
+    - text: Vytvoření webové aplikace s využitím frameworku Django
       url: learn-django-in-visual-studio-step-01-project-and-solution.md
-    - text: Vytvoření webové aplikace s využitím architektury baněk
+    - text: Vytvoření webové aplikace s využitím framworku Flask
       url: learn-flask-visual-studio-step-01-project-solution.md
