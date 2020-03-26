@@ -1,17 +1,18 @@
 ---
 title: Výhody účtu pro vývojáře systému Windows v předplatných sady Visual Studio | Dokumenty společnosti Microsoft
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/18/2019
+ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
+ms.date: 03/26/2020
 ms.topic: conceptual
 description: Přečtěte si o vývojářském účtu Windows, který je součástí předplatného Sady Visual Studio.
-ms.openlocfilehash: 7ba77979c47d61cd230351a352d85baa7c1eae9a
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 795eccdf72fad7df760d709b44351444b6dea424
+ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74491279"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301855"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Účet pro vývojáře Windows v předplatných Visual Studia
 Váš vývojářský účet Windows, který je součástí vybraného předplatného Visual Studia, vám umožní odesílat bezplatné a placené aplikace pro Windows do Windows Storu.
@@ -63,6 +64,12 @@ Nejste si jisti, které předplatné používáte?  Připojte [https://my.visual
 - [Vývoj pro Windows](/windows/)
 - Chcete-li pomoci s prodejem, předplatným, účty a fakturací pro předplatná sady Visual Studio, obraťte se na [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio .
 - Máte dotaz týkající se ide sady Visual Studio, služeb Azure DevOps Services nebo jiných produktů nebo služeb sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Nezapomeňte aktivovat tyto skvělé výhody, abyste co nejlépe zintenzívnit předplatné Sady Visual Studio:

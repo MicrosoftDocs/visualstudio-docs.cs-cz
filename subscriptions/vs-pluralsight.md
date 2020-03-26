@@ -1,17 +1,18 @@
 ---
 title: Výhody pluralsightu v předplatných Visual Studia | Dokumenty společnosti Microsoft
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/18/2019
+ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
+ms.date: 03/26/2020
 ms.topic: conceptual
 description: Přečtěte si o trénovacím předplatném Pluralsight, které je součástí vybraných předplatných Sady Visual Studio.
-ms.openlocfilehash: f76db59053451ca58890ec055295758add482725
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 71af6f269fe84ef633215dcb526b89dffe8481a0
+ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "77192413"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301882"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Výhody školení Pluralsight v předplatných Sady Visual Studio
 
@@ -96,6 +97,12 @@ A: Na konci svého bezplatného předplatného Pluralsight se můžete rozhodnou
 - [Centrum nápovědy Pluralsight](https://help.pluralsight.com/help) poskytuje pomoc při kurzech Pluralsight nebo při používání webových stránek Pluralsight.
 - Chcete-li pomoci s prodejem, předplatným, účty a fakturací pro předplatná sady Visual Studio, obraťte se na [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio .
 - Máte dotaz týkající se ide sady Visual Studio, služeb Azure DevOps Services nebo jiných produktů nebo služeb sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Po vytvoření účtu můžete začít trénovat.  Navštivte [https://www.pluralsight.com](https://www.pluralsight.com) a klepněte na **přihlaste** se v pravém horním rohu stránky a začněte nový kurz nebo se vraťte k kurzu, který již probíhá.

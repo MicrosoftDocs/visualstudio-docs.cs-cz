@@ -1,17 +1,18 @@
 ---
 title: Parasoft Virtualizovat / SOAtest Professional Desktop Benefit | Dokumenty společnosti Microsoft
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/18/2019
+ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
+ms.date: 03/26/2020
 ms.topic: conceptual
 description: Přečtěte si, jak aktivovat předplatné Parasoft Virtualize/SOA Test Professional, které je součástí předplatného sady Visual Studio.
-ms.openlocfilehash: 036b265f9ca1accc7027477abfc27ce4e66c4033
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 5f6673ecd3721232feb727ceda2c399e2ee12348
+ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74161937"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301900"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Parasoft Virtualize/SOAtest Professional Desktop v předplatných Visual Studio
 
@@ -92,6 +93,12 @@ Test dříve a častěji.  Simulujte a otestujte chování nedostupných vyvíje
   - Centrum zdrojů Parasoft:https://www.parasoft.com/resources/
 - Chcete-li pomoci s prodejem, předplatným, účty a fakturací pro předplatná sady Visual Studio, obraťte se na [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio .
 - Máte dotaz týkající se ide sady Visual Studio, služeb Azure DevOps Services nebo jiných produktů nebo služeb sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Využijte vlastní vývojové izolované hody aktivací [individuálního kreditu Azure DevTest](vs-azure.md). 

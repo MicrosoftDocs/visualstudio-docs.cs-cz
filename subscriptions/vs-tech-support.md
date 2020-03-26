@@ -1,17 +1,18 @@
 ---
 title: Výhoda technické podpory
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/18/2019
+ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
+ms.date: 03/26/2020
 ms.topic: conceptual
 description: Přečtěte si, jak aktivovat výhodu technické podpory, která je součástí předplatného sady Visual Studio.
-ms.openlocfilehash: f7c1353e9f9759b91a7d83d8296a036bb5b80dd7
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 7fd2bd8b3e2f192f82dd2cccf89798b9b2413e62
+ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74706984"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301939"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Aktivace a využití výhody technické podpory v předplatných Sady Visual Studio
 Výhoda technické podpory v předplatných sady Visual Studio je určena k řešení problémů s opravami v **neprodukčních prostředích** pro produkty, které jsou stále ve fázi hlavní fáze podpory [životního cyklu podpory](https://support.microsoft.com/lifecycle/search). Standardní a roční cloudová předplatná Visual Studio Enterprise obdrží čtyři incidenty, zatímco standardní a roční cloudová předplatná Visual Studio Professional obdrží dva incidenty, a to až na 1 rok z aktivace zaměstnaneckých výhod. Aktivace zaměstnaneckých výhod musí proběhnout, když je předplatné aktuální.
@@ -125,6 +126,12 @@ Pokud chcete využít výhodu technické podpory předplatného Visual Studia pr
 <sup>2</sup> *Obsahuje: Imagine Standard.*
 
 Nejste si jisti, které předplatné používáte?  Připojte [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) se k zobrazení všech předplatných přiřazených k vaší e-mailové adrese. Pokud nevidíte všechna předplatná, je možné, že máte jedno nebo více přiřazených k jiné e-mailové adrese.  Abyste se pomocí této e-mailové adresy zobcí, musíte se přihlásit pomocí této e-mailové adresy.
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Nezapomeňte aktivovat tyto skvělé výhody, abyste co nejlépe zintenzívnit předplatné Sady Visual Studio:

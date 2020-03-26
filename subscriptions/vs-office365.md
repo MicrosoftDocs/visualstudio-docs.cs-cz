@@ -1,17 +1,18 @@
 ---
 title: Výhoda Office 365 Pro Plus | Dokumenty společnosti Microsoft
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 08/02/2019
+ms.assetid: 9c70adf7-7d1b-4322-8e34-9149e8735a13
+ms.date: 03/26/2020
 ms.topic: conceptual
 description: Přečtěte si o výhodách Office 365 Pro Plus, které jsou součástí některých předplatných Visual Studia.
-ms.openlocfilehash: 4f8ad514cae626e824171937cd627b110980dbca
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: ce0527fbf4912ed55ed99f9368c8f10dde68a091
+ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "77904149"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301913"
 ---
 # <a name="office-365-pro-plus-in-visual-studio-subscriptions"></a>Předplatná Office 365 Pro Plus v Předplatná Visual Studia
 

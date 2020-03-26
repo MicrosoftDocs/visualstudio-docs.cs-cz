@@ -1,17 +1,18 @@
 ---
 title: Výhody Power BI Pro v předplatných Visual Studia | Dokumenty společnosti Microsoft
 author: evanwindom
-ms.author: jaunger
-manager: evelynp
-ms.date: 11/18/2019
+ms.author: v-evwin
+manager: lank
+ms.assetid: 383fc910-3f4c-474a-a3f8-0f13525f05e9
+ms.date: 03/26/2020
 ms.topic: conceptual
 description: Přečtěte si o předplatném Power BI Pro, které je součástí vybraných předplatných Visual Studia.
-ms.openlocfilehash: 8e7046d8fc16868e23978203cf2bc400c70b6b8d
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 1d6288c1a3360aaf48c220e73a11f2b4251b8806
+ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74161945"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301925"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Předplatná Power BI Pro v Předplatným Visual Studia
 
@@ -111,6 +112,12 @@ A: Ne.  Zaměstnanecké výhody Power BI Pro nelze přidat k vládním nájemní
   - Prozkoumejte hlavní problémy, získejte pomoc od komunity nebo odešlete lístek podpory na [stránce podpory](https://powerbi.microsoft.com/support/).
 - Chcete-li pomoci s prodejem, předplatným, účty a fakturací pro předplatná sady Visual Studio, obraťte se na [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio .
 - Máte dotaz týkající se ide sady Visual Studio, služeb Azure DevOps Services nebo jiných produktů nebo služeb sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 - Pokud chcete aktivovat výhodu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)Power BI Pro, navštivte .
