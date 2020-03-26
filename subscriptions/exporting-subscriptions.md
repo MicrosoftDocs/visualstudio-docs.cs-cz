@@ -3,15 +3,16 @@ title: Informace o vývozním předplatném | Dokumenty společnosti Microsoft
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: 14e4cffb-a695-436c-b269-7820f7411f4e
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: Přečtěte si, jak exportovat seznam odběratelů a podrobnosti o jejich přiřazení předplatného.
-ms.openlocfilehash: a7e6f6040daca541a689f1e4ad6297e17014dbed
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: dd24e9deb6225b3a8b88a461904fefb42ba4a912
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78263214"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232500"
 ---
 # <a name="export-subscription-information"></a>Export informací o předplatném
 Na [portálu pro správu](https://manage.visualstudio.com)předplatných sady Visual Studio můžete exportovat seznam odběratelů a podrobnosti o jejich přiřazeních. Tyto informace zahrnují jejich jméno, e-mailovou adresu, alternativní e-mailovou adresu, úroveň předplatného, přiřazené datum, stav aktivace, datum vypršení platnosti, referenční pole, zda jsou povoleny stahování, země, jazyk, stav předplatného a předplatné Identifikátor guid.  Seznam je exportován jako soubor CSV, který lze snadno otevřít v aplikaci Microsoft Excel pro vytváření grafů, kontů a dalších artefaktů.

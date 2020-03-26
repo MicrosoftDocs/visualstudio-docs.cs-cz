@@ -2,22 +2,22 @@
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 03/02/2019
+ms.date: 03/23/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: a2a8a5bc03baf51f684777f39f0815699c6c77af
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f8f4645c9b69ff0fa7aa332f0716cc07b7a46e8a
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76159249"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80234247"
 ---
 ## <a name="get-support"></a>Získat podporu
 
 Někdy se věci mohou pokazit. Pokud se instalace sady Visual Studio nezdaří, [přečtěte si článek Poradce při potížích s instalací a upgradem sady Visual Studio.](../troubleshooting-installation-issues.md)
 
-Nabízíme také možnost podpory [**živého chatu**](https://visualstudio.microsoft.com/vs/support/#talktous) (pouze v angličtině) pro problémy související s instalací.
+Nabízíme také možnost podpory [**instalačního chatu**](https://visualstudio.microsoft.com/vs/support/#talktous) (pouze v angličtině) pro problémy související s instalací.
 
 Zde je několik dalších možností podpory:
 

@@ -1,17 +1,18 @@
 ---
 title: Identity pro předplatitele sady Visual Studio
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: 86f2856c-8adf-4085-9962-f4136679e5ed
 ms.date: 07/19/2019
 ms.topic: conceptual
 description: Jak přidat alternativní identitu pro vaše předplatné Visual Studia, které se používá pro Azure DevOps a Azure
-ms.openlocfilehash: e19774f2314280b2e5a995a7d83336f1403682a4
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: ff5166da3cb782c0750b0ce61fdafec375811ff4
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "72816556"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232003"
 ---
 # <a name="identities-for-visual-studio-subscribers"></a>Identity pro předplatitele sady Visual Studio
 Když aktivujete předplatné sady Visual Studio, propojíme identitu (nebo přihlášení), kterou jste použili při aktivaci s předplatným Sady Visual Studio. Tímto způsobem vás poznáme na [portálu předplatitelů Visual Studia](https://my.visualstudio.com?wt.mc_id=o~msft~docs), v Azure DevOps a v Azure.
@@ -57,3 +58,15 @@ A: Azure DevOps by měl automaticky rozpoznat vaše předplatné při přihláš
 * Než se přihlásíte k Azure DevOps, navštivte [portál předplatitelů Visual Studia](https://my.visualstudio.com?wt.mc_id=o~msft~docs) alespoň jednou.
 
 Pokud Azure DevOps stále nerozpozná vaše předplatné, obraťte se na [podporu Azure DevOps](https://azure.microsoft.com/support/devops/).
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
+
+## <a name="next-steps"></a>Další kroky 
+Další informace o používání Azure, Azure DevOps nebo IDE Visual Studia najdete v těchto zdrojích:
+- [Azure](vs-azure.md)
+- [Azure DevOps](vs-azure-devops.md)
+- [Visual Studio](vs-ide-benefit.md)

@@ -3,15 +3,16 @@ title: Hledání a nárokování kódů Product Key v předplatných sady Visual
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: da8df006-4896-4ff9-b487-698d78deabc3
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Přečtěte si, jak najít, nárokovat a exportovat kódy Product Key v předplatných Visual Studia
-ms.openlocfilehash: 984a89f5085867ea7b23735d05d0e22ef51dcfdb
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 3946388669533a59176dc79cd72f238994a0a01b
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78937496"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232489"
 ---
 # <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>Hledání a nárokování kódů Product Key v předplatných Sady Visual Studio
 Tento článek vysvětluje, jak vyhledat, vyžádat https://my.visualstudio.com/productkeysa exportovat kódy Product Key z .  Další informace o aktivaci produktu pomocí klíčových, maloobchodních a hromadných verzí klíčů a denních limitů deklarací kódu Product Key naleznete v [přehledu kódů Product Key](product-keys.md).

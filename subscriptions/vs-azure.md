@@ -7,12 +7,12 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 03/18/2020
 ms.topic: conceptual
 description: Přečtěte si, jak aktivovat individuální kreditAzure DevTest, který je součástí předplatného Visual Studia.
-ms.openlocfilehash: 8c7f8d2d79655c9bdd33827dc3ae2e48dc51b853
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 8cf79c9f4ce9230195e2fdbf551320c3532ad42d
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79508963"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232028"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Použití předplatných Microsoft Azure ve Visual Studiu
 Jako předplatitel Visual Studia můžete používat Microsoft Azure bez dalších poplatků.  S [vaším měsíčním individuálním kreditem Azure DevTest](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)je Azure vaším osobním pískovištěm pro vývoj a testování.  Můžete zřídit virtuální počítače, cloudové služby a další prostředky Azure.  Výše kreditu se liší podle úrovně předplatného.
@@ -112,6 +112,12 @@ Pokud se domníváte, že jste tento e-mail obdrželi omylem, obraťte se na [z�
   - [Tipy pro Azure & triky](https://microsoft.github.io/AzureTipsAndTricks/ "Tipy pro Azure & triky") 
 - Chcete-li pomoci s prodejem, předplatným, účty a fakturací pro předplatná sady Visual Studio, obraťte se na [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio .
 - Máte dotaz týkající se ide sady Visual Studio, služeb Azure DevOps Services nebo jiných produktů nebo služeb sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Další informace o nástrojích a službách společnosti Microsoft naleznete v dokumentaci k:

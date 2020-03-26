@@ -1,17 +1,18 @@
 ---
 title: Přístup k portálu pro správu pro zákazníky s hromadnými licencemi | Dokumenty společnosti Microsoft
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: 7aaa4727-00ef-41dc-937d-8d46973aaf56
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: Zjistěte, jak mají správci na volume license složených smlouvách přístup k portálu pro správu předplatných sady Visual Studio
-ms.openlocfilehash: f0907d7fb6d2bf3e740efdae32c77754217f6afb
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 2fd2ab46100cc8c7f968b35e6ae0103092e4e684
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78408893"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233134"
 ---
 # <a name="accessing-the-administration-portal-as-an-admin-on-a-volume-license-agreement"></a>Přístup k portálu pro správu jako správce smlouvy o hromadné licenci
 
@@ -24,7 +25,7 @@ Jakmile se přihlásíte, budete automaticky nastaveni jako super správce a mů
 
 To platí pro všechny typy multilicenčních smluv, včetně, ale bez omezení na: Podnikové smlouvy, Enterprise předplatné, Select, Select Plus, Open, Open License, Govt. a Akademické smlouvy. 
 
-## <a name="resources"></a>Zdroje informací
+## <a name="resources"></a>Prostředky
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 
 ## <a name="see-also"></a>Viz také

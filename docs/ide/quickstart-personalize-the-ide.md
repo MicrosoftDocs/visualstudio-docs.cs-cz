@@ -1,18 +1,18 @@
 ---
 title: Nastavení barevného motivu a písem
-ms.date: 11/20/2017
+ms.date: 03/23/2020
 ms.topic: quickstart
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11cd73574f42fffb7bcfcda5ab47496fe92565c7
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 2c0b7b4e439f33e4e2eed8609d7e85e098068aea
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75596941"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233155"
 ---
 # <a name="personalize-the-visual-studio-ide-and-editor"></a>Přizpůsobení rozhraní IDE a editoru sady Visual Studio
 
@@ -52,8 +52,19 @@ Výchozí barevný motiv pro uživatelské rozhraní sady Visual Studio se nazý
 
    ::: moniker-end
 
+::: moniker range="vs-2017"
+
 > [!TIP]
 > Další předdefinované motivy můžete nainstalovat instalací **Editoru barevných motivů sady Visual Studio** z [webu Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor). Po instalaci tohoto nástroje se v rozevíracím seznamu **Barevný motiv** zobrazí další barevné motivy.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+> [!TIP]
+> Vlastní motivy můžete vytvořit instalací **Návrháře motivů barev sady Visual Studio** z webu Visual Studio [Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-madsk.ColorThemeDesigner).
+
+::: moniker-end
 
 ## <a name="change-text-color"></a>Změna barvy textu
 

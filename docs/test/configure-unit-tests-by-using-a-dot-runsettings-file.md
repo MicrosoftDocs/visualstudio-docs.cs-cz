@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 16ba88a11acd488ba70096e0b394a734e65011f5
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: cad3a644935e14a605dbef02bddc1f9337c1f5e9
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79549913"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233087"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *.runsettings*
 
@@ -259,6 +259,7 @@ Prvek **RunConfiguration** může obsahovat následující prvky:
 |**TestAdaptersPaths**||Jedna nebo více cest do adresáře, kde jsou umístěny testadapters|
 |**MaxCpuCount**|1|Toto nastavení řídí stupeň paralelního provádění testů při spuštění testů částí pomocí dostupných jader v počítači. Modul provádění testu spustí jako odlišný proces na každé dostupné jádro a dává každé jádro kontejner s testy ke spuštění. Kontejner může být sestavení, DLL nebo relevantní artefakt. Testovací kontejner je plánovací jednotka. V každém kontejneru testy jsou spuštěny podle testovacího rámce. Pokud existuje mnoho kontejnerů, pak jako procesy dokončení provádění testů v kontejneru, jsou uvedeny další kontejner k dispozici.<br /><br />MaxCpuCount může být:<br /><br />n, kde 1 <= n <= počet jader: jsou spuštěny až n procesy<br /><br />n, kde n = jakákoli jiná hodnota: počet zahájených procesů může být až do počtu dostupných jader. Například nastavte n = 0, aby platforma automaticky rozhodla optimální počet procesů, které mají být spuštěny na základě prostředí.|
 |**TestSessionTimeout**||Umožňuje uživatelům ukončit testovací relaci, pokud překročí daný časový limit. Nastavení časového opovce zajišťuje, že prostředky jsou dobře spotřebovány a testovací relace jsou omezeny na nastavený čas. Nastavení je k dispozici ve **Visual Studiu 2017 verze 15.5** a novější.|
+|**DotnetHostPath**||Zadejte vlastní cestu k dotnet hostitele, který se používá ke spuštění testhost. To je užitečné při vytváření vlastní dotnet, například při vytváření úložiště dotnet/runtime. Zadání této možnosti přeskočí hledání testhost.exe a bude vždy používat testhost.dll. 
 
 ### <a name="diagnostic-data-adapters-data-collectors"></a>Adaptéry diagnostických dat (sběrače dat)
 

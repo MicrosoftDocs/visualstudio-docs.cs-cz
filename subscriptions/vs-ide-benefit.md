@@ -1,17 +1,18 @@
 ---
 title: Výhody ide visual studio v předplatném Visual Studia | Dokumenty společnosti Microsoft
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/14/2019
+ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
+ms.date: 03/25/2020
 ms.topic: conceptual
 description: Přečtěte si, jak stáhnout a nainstalovat rozhraní IDE sady Visual Studio, které je součástí předplatného sady Visual Studio.
-ms.openlocfilehash: fd140dfe1853e6799a960fd8e251a566954bf143
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 154e5449603a8a92d2c2a52887fc4631b8dd0ab9
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74491589"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273969"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Výhoda Visual Studia 2019
 
@@ -80,6 +81,12 @@ Nejste si jisti, které předplatné používáte?  Připojte [https://my.visual
   - Technická podpora:[https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
   - [Dokumentace](/visualstudio/)
 - Chcete-li pomoci s prodejem, předplatným, účty a fakturací pro předplatná sady Visual Studio, obraťte se na [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio .
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Po instalaci sady Visual Studio nezapomeňte aktivovat tyto další důležité výhody:

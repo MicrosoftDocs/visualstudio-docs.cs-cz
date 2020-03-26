@@ -3,15 +3,16 @@ title: Řízení velkých týmů a externích dodavatelů | Tržiště visual st
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: 3fc57f5f-2446-4774-9f8f-98ea1340f6b2
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Přečtěte si o odpovědnosti správců za správu předplatných pro velké týmy i externí dodavatele.
-ms.openlocfilehash: 2f51febfa3cab6f3200b364cce1cc02e438a0384
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 9753c7a69b5334abd0e4ccb299ece3a5403517bc
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78947065"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232325"
 ---
 # <a name="large-teams-and-external-contractors"></a>Velké týmy a externí dodavatelé
 Správci předplatných sady Visual Studio zodpovídají za to, že každý uživatel, který pracuje s licencovaným softwarem sady Visual Studio, bude mít odpovídající licenci s vlastním předplatným sady Visual Studio.
@@ -28,7 +29,7 @@ Každá organizace je jiná, ale typický seznam týmů zapojených do vývoje m
 ## <a name="external-contractors-and-partners"></a>Externí dodavatelé a partneři
 Externí dodavatelé mohou přinést licence pro interakci s prostředím s licencí sady Visual Studio. Certifikovaní partneři společnosti Microsoft mohou získat několik bezplatných předplatných sady Visual Studio pro interní použití. Tato předplatná však nepokrývají aktivity vytvářející příjmy, jako je například vývoj vlastního softwaru pro zákazníka. Požádejte partnery, aby vám zaslali certifikovaný dopis, který vysvětluje licence, které poskytují, a ty, které potřebují k obstarání.
 
-## <a name="resources"></a>Zdroje informací
+## <a name="resources"></a>Prostředky
 - [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [Multilicenční podmínky](https://www.microsoft.com/licensing/product-licensing/products.aspx)

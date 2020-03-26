@@ -1,17 +1,18 @@
 ---
 title: Výhody zvýraznění cast u předplatných sady Visual Studio | Dokumenty společnosti Microsoft
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: 92e8957f-c690-46bd-a812-3efd06a2bc6b
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Informace o výhodách cast highlight dostupných ve vybraných předplatných sady Visual Studio
-ms.openlocfilehash: 7b06800bd53e2843015f3f3509a4a2c7e0eae671
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: f3f21a29e8ad710471eddadfbd5c98677db3098e
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78257173"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274021"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Výhoda zvýraznění CAST v předplatných Visual Studia
 Vývojáři potřebují při migraci do cloudu důležité informace o svém softwaru. Pomocí funkce CAST Highlight můžou předplatitelé Visual Studia rychle skenovat zdrojový kód aplikace, aby identifikovali připravenost svých aplikací pro migraci do Azure v cloudu a sledovali průběh aplikace během migrace i po ní.

@@ -3,15 +3,16 @@ title: Partneři spravující předplatná Sady Visual Studio pro zákazníky | 
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: 6866dfab-c4fa-428e-bb0d-7b202c81f770
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Zjistěte, jak partneři spravují předplatná sady Visual Studio pro své zákazníky.
-ms.openlocfilehash: 53f19b76d79bb7f2e6246c9f5b2866bbf9262dfe
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: bf1fe706a0e1ee0b027e465c0bfaa8c0d326ee99
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78947077"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232299"
 ---
 # <a name="partners-managing-subscriptions-on-behalf-of-customers"></a>Partneři spravující předplatná jménem zákazníků
 Chcete-li spravovat předplatná na [portálu pro správu předplatných](https://manage.visualstudio.com)sady Visual Studio , je několik kroků, které budou muset dodržovat. Tento proces bude:
@@ -49,8 +50,8 @@ Tento scénář platí pro nové partnery, kteří již zadali nové objednávky
 > [!NOTE]
 > Zákazník obdrží e-mail s oznámením, že partner byl přidán do otevřené licence. Mohou odebrat přístup partnera.
 
-## <a name="resources"></a>Zdroje informací
-- [White paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
+## <a name="resources"></a>Prostředky
+- [White paper k licencování sady Visual Studio](https://aka.ms/vslicensing)
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [Podmínky multilicenčních programů](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 

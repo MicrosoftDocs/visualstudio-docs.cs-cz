@@ -1,17 +1,18 @@
 ---
 title: Výhoda programu Concierge Chat v předplaceném předplatném sady Visual Studio | Dokumenty společnosti Microsoft
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/13/2019
+ms.assetid: dcd99e32-c9f3-4e19-8428-319dfa220463
+ms.date: 03/25/2020
 ms.topic: conceptual
 description: Přečtěte si o výhodách concierge chatu zahrnutých v předplatných Visual Studia.
-ms.openlocfilehash: 83fdb9a21528e00db1ef8652846c6b852c5c6067
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 6b6ed0635f86abb94fd3693d14b53a9ff1f7c936
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74099579"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273995"
 ---
 # <a name="concierge-chat-in-visual-studio-subscriptions"></a>Concierge Chat v předplatných Visual Studia
 Služba Concierge Chat poskytuje pomoc při hledání informací o produktech a technické dokumentaci a také pomoc s využitím výhod předplatného sady Visual Studio.
@@ -59,6 +60,12 @@ Nejste si jisti, které předplatné používáte?  Připojte [https://my.visual
 ## <a name="support-resources"></a>Zdroje podpory
 - Chcete-li pomoci s prodejem, předplatným, účty a fakturací pro předplatná sady Visual Studio, obraťte se na [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio .
 - Máte dotaz týkající se ide sady Visual Studio, služeb Azure DevOps Services nebo jiných produktů nebo služeb sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Další informace o nástrojích a službách společnosti Microsoft naleznete v dokumentaci k:

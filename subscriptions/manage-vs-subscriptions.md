@@ -3,15 +3,16 @@ title: Správa předplatných sady Visual Studio
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Přečtěte si, jak maximálně využít předplatná Sady Visual Studio
-ms.openlocfilehash: 97220a64c72d37d53eccbaba5c8e79697f2f25ab
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 8790897f0e5169aebc020035b4c8c1d5749c230e
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79303370"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232360"
 ---
 # <a name="managing-subscriptions"></a>Správa předplatných
 

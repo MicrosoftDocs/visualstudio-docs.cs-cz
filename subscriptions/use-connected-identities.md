@@ -1,18 +1,19 @@
 ---
 title: Jak používat připojený účet Microsoft a identity Služby Azure Active Directory | Dokumenty společnosti Microsoft
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: 50ce0445-ef1a-4e92-b9d0-aebb2155a111
 ms.date: 03/11/2020
 ms.topic: conceptual
 robots: noindex, nofollow
 description: Přečtěte si, jak pracovat s připojenými účty Microsoft a identitami Azure Active Directory
-ms.openlocfilehash: 3dcb41a26f27e5135962edf7ff933de40ccefe5e
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: b88c978f330520af62f51e372db93475b71caa36
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79508976"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233178"
 ---
 # <a name="how-to-use-connected-identities-in-visual-studio-subscriptions"></a>Použití připojených identit v předplatných Sady Visual Studio
 Pokud obdržíte předplatné Visual Studia prostřednictvím práce nebo školy a pomocí svého účtu Microsoft (MSA) se přihlásíte, správce předplatných může připojit vaši MSA k vaší identitě ve službě Azure Active Directory (Azure AD) vaší organizace.  Tím se změní způsob přístupu k některým výhodám zahrnutým v předplatném. 

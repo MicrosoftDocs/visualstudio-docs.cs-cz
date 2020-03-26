@@ -9,12 +9,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 5a1c449a77e3000205ee81f5414949743b6035c4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 17bdd86829da199e01a527aa382b8ed3bdfade17
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77272273"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232945"
 ---
 # <a name="devops-with-unity-apps"></a>DevOps s aplikacemi Unity
 
@@ -93,7 +93,7 @@ Referenční odkaz: ** [Azure Pipelines](/azure/devops/pipelines/index?view=vsts
 |Ruční testování|Ano||
 |Správce testů (testy záznamu a přehrávání)|Pouze zařízení s Windows a emulátory Androidu||
 |Pokrytí kódu|neuvedeno|Není použitelné jako testování částí se stane v unity a ne Visual Studio, viz níže.|
-|[Testování částí kódu](../test/unit-test-your-code.md)|V rámci unity, ale ne Visual Studio|Unity poskytuje vlastní rozhraní testování částí jako součást [nástroje Unity test](https://www.assetstore.unity3d.com/en/#!/content/13802) (Unity Asset Store). Výsledky testování částí jsou hlášeny v unity a nebudou se zobrazí v rámci sady Visual Studio.|
+|[Testování částí kódu](../test/unit-test-your-code.md)|V rámci unity, ale ne Visual Studio|Unity poskytuje vlastní rozhraní testování částí jako součást [nástroje Unity test](https://assetstore.unity.com/packages/tools/utilities/unity-test-tools-13802) (Unity Asset Store). Výsledky testování částí jsou hlášeny v unity a nebudou se zobrazí v rámci sady Visual Studio.|
 |[Testování kódu pomocí automatizace uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)|Ne|Programové testy ui spoléhají na čitelné ovládací prvky v rozhraní ui aplikace; Unity aplikace mají grafickou povahu, a proto obsah není čitelný pomocí programové nástroje pro testování uživatelského prostředí.|
 
 ## <a name="improve-code-quality"></a>Zlepšení kvality kódu
@@ -124,4 +124,4 @@ Referenční odkaz: ** [Monitor s HockeyApp](https://www.hockeyapp.net/features/
 
 |Funkce|Podporováno pomocí unity|Další komentáře|
 |-------------|--------------------------|-------------------------|
-|Crash analytics, telemetrie a distribuce beta verze|Ano|HockeyApp je primárně užitečný pro zpracování distribuce beta verzí a získávání zpráv o selhání.<br /><br /> Pro telemetrii ze skriptů jazyka C# je možné použít libovolný analytický rámec za předpokladu, že je spuštěn na verzi rozhraní .NET, kterou používá Unity. To však umožňuje analýzy pouze v rámci hernískripty a ne hlouběji uvnitř unity motoru. V současné době neexistuje žádný plugin pro Application Insights, ale pluginy jsou k dispozici pro další analytická řešení, jako je [Unity Analytics](https://www.assetstore.unity3d.com/en/#!/content/28120) a [Google Analytics](https://github.com/googleanalytics/google-analytics-plugin-for-unity). Služby jako Unity Analytics, které chápou povahu projektu Unity, budou samozřejmě poskytovat mnohem smysluplnější analýzu než obecné rámce.|
+|Crash analytics, telemetrie a distribuce beta verze|Ano|HockeyApp je primárně užitečný pro zpracování distribuce beta verzí a získávání zpráv o selhání.<br /><br /> Pro telemetrii ze skriptů jazyka C# je možné použít libovolný analytický rámec za předpokladu, že je spuštěn na verzi rozhraní .NET, kterou používá Unity. To však umožňuje analýzy pouze v rámci hernískripty a ne hlouběji uvnitř unity motoru. V současné době neexistuje žádný plugin pro Application Insights, ale pluginy jsou k dispozici pro další analytická řešení, jako je [Unity Analytics](https://assetstore.unity.com/packages/add-ons/services/analytics/unity-analytics-28120) a [Google Analytics](https://github.com/googleanalytics/google-analytics-plugin-for-unity). Služby jako Unity Analytics, které chápou povahu projektu Unity, budou samozřejmě poskytovat mnohem smysluplnější analýzu než obecné rámce.|

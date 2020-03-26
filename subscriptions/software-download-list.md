@@ -1,17 +1,18 @@
 ---
 title: Jaký software je k dispozici ke stažení? | Dokumentace Microsoftu
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: c2878e28-eb5d-4adb-8d7d-a95ffea703a9
 ms.date: 03/11/2020
 ms.topic: conceptual
 description: Vyhledejte seznam souborů ke stažení softwaru, který je součástí předplatného sady Visual Studio.
-ms.openlocfilehash: e4349e67c08ad424d0e06cb91c2b89620a44b741
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: cb66eb3bd90bbf26e5900a8286db78ecb12df707
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79508719"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233188"
 ---
 # <a name="what-software-is-available-for-download"></a>Jaký software je k dispozici ke stažení?
 

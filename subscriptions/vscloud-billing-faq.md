@@ -1,17 +1,18 @@
 ---
 title: Nejčastější dotazy k fakturaci pro cloudová předplatná Visual Studio Enterprise a Visual Studio Professional
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 07/28/2019
+ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
+ms.date: 03/24/2020
 ms.topic: conceptual
 description: Otázky k fakturaci pro cloudová předplatná.
-ms.openlocfilehash: c4544df196d3e861522dfcbb877a90a5656ad7ba
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: a9845078a17425322dfd86bf417daa24238c7b0f
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "75851411"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273826"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Nejčastější dotazy k fakturaci předplatných visual ateliéru
 Nezapomeňte [porovnat výhody cloudového předplatného a ceny,](https://visualstudio.microsoft.com/vs/pricing/) abyste porozuměli výhodám každého předplatného sady Visual Studio, s porovnáním mezi předplatnými cloudu a standardního visual studia, podrobnostmi o výhodách pro předplatitele a dalšími.
@@ -94,6 +95,12 @@ A: Ano, můžete, pokud váš prodejce se účastní programu Poskytovatele clou
 - [Portál správy předplatných visual studia](https://manage.visualstudio.com/)
 - [Podpora předplatného sady Visual Studio](https://visualstudio.microsoft.com/vs/support/)
 - [Nákup předplatného visual studia cloud pro poskytovatele služeb na uspono](vscloud-csp.md)
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Kupte si cloudová předplatná nyní

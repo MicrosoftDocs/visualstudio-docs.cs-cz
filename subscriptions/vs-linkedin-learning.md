@@ -1,17 +1,18 @@
 ---
 title: Výhody pro výuku linkedinu v předplatných Visual Studia | Dokumenty společnosti Microsoft
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 02/12/2020
+ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
+ms.date: 03/25/2020
 ms.topic: conceptual
 description: Přečtěte si o výhodách Služby LinkedIn Learning, která je součástí předplatného LinkedIn Premium zahrnutého ve vybraných předplatných Visual Studia.
-ms.openlocfilehash: f6c5206055835605ae529f1f07159611bcd6bf7d
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 57744c21123188448048b469aa06153cf81a949f
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "77278845"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273956"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Výhoda pro výuku LinkedIn v předplatných Visual Studia
 
@@ -95,6 +96,12 @@ A: Ne, linkedin učení nabídka je k dispozici pouze pro nové předplatitele.
   - Pomoc s obecnými dotazy týkajícími se [LinkedIn,](https://www.linkedin.com/help/linkedin) jako je vytváření účtů a profilů a udržování sítě.
 - Chcete-li pomoci s prodejem, předplatným, účty a fakturací pro předplatná sady Visual Studio, obraťte se na [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio .
 - Máte dotaz týkající se ide sady Visual Studio, služeb Azure DevOps Services nebo jiných produktů nebo služeb sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Podívejte se na zbývající výhody, které jsou součástí předplatného. Navštivte [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).

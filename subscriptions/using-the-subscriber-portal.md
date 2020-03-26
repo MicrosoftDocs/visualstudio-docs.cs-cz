@@ -1,17 +1,18 @@
 ---
 title: Používání portálu https://my.visualstudio.com pro předplatitele - | Dokumenty společnosti Microsoft
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: 8470f035-2a82-4052-9a12-6f24ce796861
 ms.date: 07/19/2019
 ms.topic: conceptual
 description: Informace o celé řadě výhod, které máte k dispozici na portálu předplatných Sady Visual Studio
-ms.openlocfilehash: 13266e018f122ae2b890e8c92bff71ce3016de75
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 5403880dc5a2ac62cd23800cea5acacd2766bc6f
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "75546223"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232189"
 ---
 # <a name="using-the-subscriber-portal---myvisualstudiocom"></a>Používání portálu pro předplatitele - my.visualstudio.com
 
@@ -24,7 +25,7 @@ Portál je uspořádán na šest stran.  Každá stránka poskytuje přístup k 
 ## <a name="benefits"></a>[Výhody](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
 Nástroje a služby, které jsou součástí vašeho předplatného, se na stránce Výhody zobrazují jako "dlaždice".  Ne všechny výhody jsou součástí všech předplatných. Dlaždice jsou seskupeny do tří kategorií: Nástroje, Profesionální rozvoj a Podpora.  
 
-### <a name="tools"></a>nástroje
+### <a name="tools"></a>Nástroje
 Kategorie Nástroje je místo, kde najdete základní vývojové nástroje, jako je například Visual Studio IDE, Azure DevOps, stejně jako nástroje poskytované našimi partnery.  Uvidíte také služby, jako je Azure a Visual Studio App Center.
 
 ### <a name="professional-development"></a>Profesionální vývoj
@@ -51,6 +52,12 @@ Kromě jednotlivých výhod, které se nacházejí v kategorii Podpora na strán
 ## <a name="marketplace"></a>[Marketplace](https://marketplace.visualstudio.com/)
 
 Potřebujete obnovit cloudové předplatné Sady Visual Studio?  Chcete stáhnout nejnovější rozšíření pro řadu produktů sady Visual Studio?  Marketplace pomáhá uživatelům najít rozšíření, nástroje a služby, které azure devops, Azure DevOps Server a Visual Studio Code ještě lepší. Můžete se dokonce stát vydavatelem a publikovat vlastní rozšíření na Marketplace.
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Přihlaste se [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) na portál u a podívejte se na své výhody.  Další informace o přihlášení k portálu se můžete dozvědět také pomocí [účtu Microsoft](sign-in-msa.md) (MSA), [pracovního nebo školního účtu a](sign-in-work.md)dokonce i účtu [GitHub](sign-in-github.md). 

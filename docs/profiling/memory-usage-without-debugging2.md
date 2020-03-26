@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eaf853cd19a44af4cb8510fde11da95bfa7de5c1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b05787802b72eb4d14e1b2b56765bb246b9ada51
+ms.sourcegitcommit: ee12b14f306ad8f49b77b08d3a16d9f54426e7ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77578343"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256241"
 ---
 # <a name="analyze-memory-usage-without-the-debugger"></a>Analýza využití paměti bez ladicího programu
 
@@ -89,13 +89,13 @@ V sestavě snímku můžete rozbalit položky **typu objektu** a zobrazit podř�
 
 Pokud je **typ objektu** modrý, můžete jej vybrat a přejít na objekt ve zdrojovém kódu v samostatném okně.
 
-Typy, které nelze identifikovat nebo jejichž zapojení do kódu nerozumíte jsou pravděpodobně .NET Framework, operační systém nebo kompilátor objekty. Nástroj **využití paměti** zobrazí tyto objekty, pokud jsou zapojeny do řetězců vlastnictví objektů.
+Typy, které nelze identifikovat nebo jejichž zapojení do kódu nerozumíte jsou pravděpodobně .NET, operační systém nebo objekty kompilátoru. Nástroj **využití paměti** zobrazí tyto objekty, pokud jsou zapojeny do řetězců vlastnictví objektů.
 
 V sestavě snímek:
 
 - Strom **spravované haldy** zobrazuje typy a instance v sestavě. Výběrem typu nebo instance se zobrazí stromy **Cesty ke kořenovým** a **odkazovaných objektů** pro vybranou položku.
 
-- **Cesta ke kořenovému** stromu zobrazuje řetězec objektů, které odkazují na typ nebo instanci. Systém uvolňování paměti rozhraní .NET Framework vyčistí paměť pro objekt pouze v případě, že byly vydány všechny odkazy na něj.
+- **Cesta ke kořenovému** stromu zobrazuje řetězec objektů, které odkazují na typ nebo instanci. Systém uvolňování paměti .NET vyčistí paměť pro objekt pouze v případě, že byly vydány všechny odkazy na něj.
 
 - Strom **Odkazované typy** nebo **Odkazované objekty** zobrazuje objekty, na které odkazuje vybraný typ nebo instance.
 
@@ -135,7 +135,7 @@ Strom **spravované haldy** v sestavě podrobností snímku má následující s
 |**Modul**|Modul, který obsahuje objekt.|
 
 ### <a name="paths-to-root-tree-snapshot-details-reports"></a><a name="BKMK_Paths_to_Root_tree__Snapshot_details_"></a>Cesty ke kořenovému stromu (sestavy podrobností snímku)
-**Cesta ke kořenovému stromu** zobrazuje řetězec objektů, které odkazují na typ nebo instanci. Systém uvolňování paměti rozhraní .NET Framework vyčistí paměť pro objekt pouze v případě, že byly vydány všechny odkazy na něj.
+**Cesta ke kořenovému stromu** zobrazuje řetězec objektů, které odkazují na typ nebo instanci. Systém uvolňování paměti .NET vyčistí paměť pro objekt pouze v případě, že byly vydány všechny odkazy na něj.
 
 U typu ve stromu **Cesty ke kořenovému** stromu se ve sloupci **Počet odkazů** zobrazí počet objektů, které uchovávají odkazy na tento typ.
 
@@ -185,7 +185,7 @@ Strom **spravované haldy** v sestavě rozdíl u snímku má následující slou
 
 ### <a name="paths-to-root-tree-snapshot-diff-reports"></a><a name="BKMK_Paths_to_Root_tree__Snapshot_diff_"></a>Cesty ke kořenovému stromu (sestavy rozdílu snímků)
 
-**Cesta ke kořenovému stromu** zobrazuje řetězec objektů, které odkazují na typ nebo instanci. Systém uvolňování paměti rozhraní .NET Framework vyčistí paměť pro objekt pouze v případě, že byly vydány všechny odkazy na něj.
+**Cesta ke kořenovému stromu** zobrazuje řetězec objektů, které odkazují na typ nebo instanci. Systém uvolňování paměti .NET vyčistí paměť pro objekt pouze v případě, že byly vydány všechny odkazy na něj.
 
 U typu ve stromu **Cesty ke kořenovému** stromu se ve sloupci **Počet odkazů** zobrazí počet objektů, které uchovávají odkazy na tento typ. Rozdíl v počtu od předchozího snímku je ve sloupci **Odkaz diff.**
 

@@ -1,17 +1,18 @@
 ---
 title: Nákup předplatného visual studia cloud pro poskytovatele služeb na uspono
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 07/28/2019
+ms.assetid: d2ab13ed-ef79-4ef0-8736-eccd04bc6020
+ms.date: 03/24/2020
 ms.topic: conceptual
 description: Informace pro poskytovatele cloudových řešení o tom, jak nakupovat a spravovat předplatná cloudu sady Visual Studio pro vaše zákazníky.
-ms.openlocfilehash: 7cc5a04a26a3120d88a931dde47c3b249c082791
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 76c56759fdc07104290c45d1c4fc345bf0bad8b7
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "75851404"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273865"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>Nákup a správa cloudových předplatných Sady Visual Studio pro vaše zákazníky
 Partneři v programu [Zprostředkovatel cloudových řešení (CSP)](https://partner.microsoft.com/cloud-solution-provider) mohou zakoupit předplatná cloudu Visual Studio Enterprise a Visual Studio Professional pro své zákazníky.
@@ -105,3 +106,11 @@ A: Ne, ceny pro předplatná sady Visual Studio jsou ploché. Stejná cena je na
 ### <a name="q-are-there-azure-devtest-pricing-options-for-csps"></a>Otázka: Existují možnosti azure dev/test cen pro csp?
 A: Ne v tomto okamžiku. Vaši zákazníci mohou využít [ceny Azure pro vývoj a testování](https://azure.microsoft.com/pricing/dev-test/), ale pro csp nemáme nic konkrétně.
 
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
+
+## <a name="next-steps"></a>Další kroky
+Odpovědi na běžné otázky týkající se fakturace najdete v [nejčastějších dotazech](vscloud-billing-faq.md) k fakturaci v cloudu.  

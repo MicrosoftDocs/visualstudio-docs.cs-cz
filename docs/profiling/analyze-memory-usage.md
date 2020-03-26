@@ -8,22 +8,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ddb082bf2451759be239d5c16404e82bcd84733
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 43126f4bba8afc50fc5c1e4cf6a3b9a67c6f340c
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77578163"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233064"
 ---
 # <a name="analyze-memory-usage"></a>Analýza využití paměti
 
-chcete-li najít nevracení paměti a neefektivní využití paměti, můžete použít nástroje, jako je například ladicí program integrované využití paměti diagnostický nástroj nebo nástroje v profileru výkonu, jako je například nástroj pro alokaci objektů .NET a posmrtné využití paměti. Nástroj využití paměti umožňuje pořizovat jeden nebo více *snímků* spravované a nativní paměti haldy. Můžete shromažďovat snímky aplikací .NET, ASP.NET, nativní nebo smíšený režim (.NET a nativní). 
+chcete-li najít nevracení paměti a neefektivní využití paměti, můžete použít nástroje, jako je například ladicí program integrované využití paměti diagnostický nástroj nebo nástroje v profileru výkonu, jako je například nástroj pro alokaci objektů .NET a posmrtné využití paměti.
 
-Nástroj **Využití paměti** lze spustit v otevřeném projektu Sady Visual Studio, v nainstalované aplikaci Microsoft Store nebo připojenéke spuštěné aplikaci nebo procesu. Nástroj můžete spustit na místních nebo vzdálených počítačích nebo na simulátoru nebo emulátoru. Další informace naleznete [v tématu Spuštění nástrojů profilování s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
+Nástroj využití paměti umožňuje pořizovat jeden nebo více *snímků* spravované a nativní paměti haldy. Můžete shromažďovat snímky aplikací .NET, ASP.NET, nativní nebo smíšený režim (.NET a nativní). Nástroj **Využití paměti** lze spustit v otevřeném projektu Sady Visual Studio, v nainstalované aplikaci Microsoft Store nebo připojenéke spuštěné aplikaci nebo procesu. Nástroj můžete spustit na místních nebo vzdálených počítačích nebo na simulátoru nebo emulátoru. Nástroj Využití **paměti** můžete spustit s laděním nebo bez něj. Další informace naleznete [v tématu Spuštění nástrojů profilování s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). V ladicím programu můžete zapínat a vypínat profilování paměti a zobrazit rozdělení využití paměti na objekt. Výsledky využití paměti můžete zobrazit při pozastavení provádění, například v zarážky.
 
-Nástroj Využití **paměti** můžete spustit s laděním nebo bez něj. V ladicím programu můžete zapínat a vypínat profilování paměti a zobrazit rozdělení využití paměti na objekt. Výsledky využití paměti můžete zobrazit při pozastavení provádění, například v zarážky.
-
-Nástroj **pro alokaci objektů .NET** je spuštěn pouze jako nástroj po smrti.
+Nástroj **pro alokaci objektů .NET** pomáhá identifikovat vzory přidělení a anomálie v kódu .NET. Tento nástroj běží pouze jako post-mortem nástroj.
 
 Podrobné pokyny, které popisují použití nástrojů pro analýzu paměti, naleznete v tématu [Analýza využití paměti](../profiling/memory-usage.md) a nástroje pro [alokaci objektů .NET](../profiling/dotnet-alloc-tool.md).
 

@@ -3,15 +3,16 @@ title: Předplatná sady Visual Studio nabízená startupům prostřednictvím p
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: 71af88da-b9fa-4d12-999c-7d461f3df0ec
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Podrobnosti o předplatnéjsou nabízeny prostřednictvím programu Microsoft pro startupy.
-ms.openlocfilehash: 11cc8b0fbc75a17d2aeaf21128359ab040b982ea
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 6c2fdcfc9fa71c1906a1033ac719b07cb0b157a4
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78947115"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233260"
 ---
 # <a name="visual-studio-subscriptions-offered-to-startups"></a>Předplatná sady Visual Studio nabízená startupům
 Kvalifikovaní startupy, které se připojí k programu Microsoft for Startups, mohou získat 5 [měsíčních cloudových předplatných](https://visualstudio.microsoft.com/vs/pricing/)sady Visual Studio Enterprise . 

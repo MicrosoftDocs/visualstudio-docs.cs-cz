@@ -3,15 +3,16 @@ title: Použití funkce Maximální využití na portálu pro správu
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: c473b01f-2dfe-4cc2-ad29-bb5e2a268123
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: Přečtěte si, jak zobrazit maximální počet přiřazených předplatných na portálu pro správu.
-ms.openlocfilehash: 9d9aa2d83a84fcdecf1749e3730d43dabf7bd52d
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 3f62c251262bc16f8f214c6f7bcc22674c7430b2
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78410315"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232261"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>Použití funkce maximálního využití ke sledování počtu přiřazených předplatných
 Nová funkce na portálu pro správu předplatných sady Visual Studio vám pomůže sledovat, kolik předplatných jste zakoupili a přiřadili, a identifikuje maximální počet předplatných jednotlivých úrovní, které jste přiřadili, a to jak v minulém roce, tak v celém roce. dobu trvání vaší smlouvy(ů). 
@@ -36,7 +37,7 @@ Pro každou úroveň předplatného sestava zobrazuje datum, kdy jste dosáhli n
 ### <a name="q-how-is-the-information-in-the-maximum-usage-different-from-the-assignment-information-available-in-the-overview-section-on-the-left-side-of-the-portal"></a>Otázka: Jak se informace v maximálním využití liší od informací o přiřazení dostupných v části "Přehled" na levé straně portálu?
 A: Informace v přehledu zobrazuje *aktuální* přiřazení a dostupná předplatná pro každou úroveň předplatného.  To se může velmi lišit od maximálního počtu předplatných přidělených pro smlouvu během aktuálního roku nebo doby trvání smlouvy.  Funkce maximálního využití umožňuje zjistit, kdy bylo dosaženo maximální úrovně přiřazení a jaké úrovně byly.  To je důležitý rozdíl, protože fakturace pro odběry během true-up je založena na maximální počet předplatných přiřazených v libovolném okamžiku v průběhu roku. 
 
-## <a name="resources"></a>Zdroje informací
+## <a name="resources"></a>Prostředky
 - [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [Multilicenční podmínky](https://www.microsoft.com/licensing/product-licensing/products.aspx)

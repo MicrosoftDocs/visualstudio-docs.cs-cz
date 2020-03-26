@@ -3,15 +3,16 @@ title: Předplatná sady Visual Studio nabízená partnerům v síti Microsoft P
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: 7f4399d8-41da-41e5-a666-acc34958b8c0
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Podrobnosti o tom, jaké předplatná jsou nabízeny, jaká pravidla platí a kolik předplatných je nabízeno v programu MPN.
-ms.openlocfilehash: ddafa2daef34d4a23de448235ffa186c1bb27319
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: c463ee24b9c145de6fdbca9b1971b0fc767df694
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78947043"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232337"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Předplatná sady Visual Studio nabízená partnerům v síti Microsoft Partner Network (MPN)
 
@@ -69,7 +70,7 @@ Toto interní omezení pouze pro použití v podstatě znamená, že partneři n
 
 S předplatným imp, které jsou nabízeny prostřednictvím programu MPN, se licencovaný uživatel musí přihlásit k sadě Visual Studio pomocí stejné identity nebo přihlášení, která byla použita k aktivaci předplatného sady Visual Studio. Kódy Product Key nejsou nabízeny k odemknutí produktu; Přihlášení je jedinou možností pro spuštění sady Visual Studio. Předplatitel sady Visual Studio může pracovat offline až 30 dní, než Visual Studio přestane fungovat. Při práci online visual studio tiše aktualizuje stav licence uživatele pravidelně zajistit, že předplatné je stále platný.
 
-## <a name="resources"></a>Zdroje informací
+## <a name="resources"></a>Prostředky
 
 - [Průvodce programem MPN](https://assets.microsoft.com/en-us/Program-Administrator-Guide-to-Software-and-Online-Services-Benefits_1.pdf) – obsahuje pokyny, jak přiřadit předplatná sady Visual Studio zaměstnancům programu MPN.
 - [Přiřazení předplatných sady Visual Studio zaměstnancům programu MPN](manage-mpn-subscriptions.md)

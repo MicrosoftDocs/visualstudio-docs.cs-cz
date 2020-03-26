@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Zjistěte, jak mohou správci přiřazovat licence více odběratelům pomocí funkce Hromadné přidání nebo skupin služby Microsoft Azure Active Directory.
-ms.openlocfilehash: 3a4a6c400a17d52cdd67391a45ba088cdbb7af01
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 5a1327e497a48b6173afd4a7ad095dfcabacd098
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79988492"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274060"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Přiřazení předplatných více uživatelům
 Portál správy předplatných umožňuje přidávat uživatele jednou za čas nebo ve velkých skupinách.  Informace o přidání jednotlivých uživatelů naleznete v tématu [Přidání jednotlivých uživatelů](assign-license.md).
@@ -104,6 +104,10 @@ Použití této funkce usnadňuje možnost i nadále se přibližovat přiřazen
 7. Chcete-li přidanou skupinu zobrazit, přejděte na konec seznamu uživatelů.  
 
 8. Výběrem **možnosti Zobrazit odběratele** zobrazíte členy skupiny. Můžete zobrazit podrobnosti o odběratelích ve skupině, ale nelze provádět žádné úpravy odběratelů nebo předplatných, které jsou přiřazeny.    
+
+> [!NOTE]
+> Pokud jste již přiřadili předplatná jednotlivě uživatelům, kteří jsou následně přidáni jako součást skupiny Azure AD, budou přidány jako součást skupiny a již nebudou uvedeny jednotlivě. Pokud je však individuální předplatné pro jinou úroveň předplatného, budou mít dvě předplatná.  Příklad: Pokud má uživatel individuální předplatné sady Visual Studio Professional a je členem skupiny, ke které přiřadíte předplatná sady Visual Studio Enterprise, bude mít obojí.  
+
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4rvvW]
 

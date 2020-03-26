@@ -1,17 +1,18 @@
 ---
 title: Jak zakoupit předplatná cloudu sady Visual Studio
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 07/28/2019
+ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
+ms.date: 03/24/2020
 ms.topic: conceptual
 description: Pronajměte si Visual Studio Professional nebo Visual Studio Enterprise na měsíční nebo roční bázi bez dlouhodobé smlouvy.
-ms.openlocfilehash: c31a6cb89d34456678c82ce683535005f581376d
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: babf05c991bd323f2ebe2385085a1d9fc3b1acf8
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "71962952"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273943"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Zakoupení předplatných cloudů Visual Studio Professional a Visual Studio Enterprise
 [Předplatná Visual Studio Professional a Visual Studio Enterprise](https://visualstudio.microsoft.com/subscriptions/) si můžete zakoupit na webu Visual Studio [Marketplace](https://marketplace.visualstudio.com). Tyto služby se nazývají **"cloudová předplatná"**.
@@ -118,6 +119,12 @@ A: I když nebudou moci koupit další předplatné Cloud Roční, existuje mnoh
 - [Podpora předplatného sady Visual Studio](https://visualstudio.microsoft.com/vs/support/)
 - [Nejčastější dotazy k fakturaci předplatného visual studia v cloudu](vscloud-billing-faq.md)
 - [Nákup předplatného visual studia cloud pro poskytovatele služeb na uspono](vscloud-csp.md)
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Zakoupení cloudových předplatných

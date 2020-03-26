@@ -1,17 +1,18 @@
 ---
 title: Výhody EMS | Dokumenty společnosti Microsoft
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/13/2019
+ms.assetid: bada7a96-a969-4459-a2ac-7f253149d925
+ms.date: 03/25/2020
 ms.topic: conceptual
 description: Přečtěte si o výhodách Enterprise Mobility + Zabezpečení, které jsou součástí předplatného Sady Visual Studio.
-ms.openlocfilehash: a8ea7cba0c23129e9dd7669c474f54675a12e619
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: e66e760cc8400e1f81c396c0e62ff57bf6356153
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74099549"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273917"
 ---
 # <a name="enterprise-mobility--security-ems-in-visual-studio-subscriptions"></a>Podniková mobilita + zabezpečení (EMS) v předplatných Visual Studia
 
@@ -47,6 +48,12 @@ Nejste si jisti, které předplatné používáte?  Připojte [https://my.visual
 - Technickou podporu s jakoukoli součástí EMS naleznete v [nejčastějších dotazech k podpoře EMS](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-support-faq) a vyhledejte správnou podporu pro vaši otázku.
 - Chcete-li pomoci s prodejem, předplatným, účty a fakturací pro předplatná sady Visual Studio, obraťte se na [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio .
 - Máte dotaz týkající se ide sady Visual Studio, služeb Azure DevOps Services nebo jiných produktů nebo služeb sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
+
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Pokud jste ještě neaktivovali individuální kreditazure devTest, který [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) je součástí vašeho předplatného, navštivte a klikněte na dlaždici Azure v kategorii Nástroje a nastavte předplatné Azure a uplatněte si individuální kredit Azure DevTest.

@@ -1,17 +1,18 @@
 ---
 title: Výhody cloudpilotu do předplatných Visual Studia | Dokumenty společnosti Microsoft
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/13/2019
+ms.assetid: 6255b6a3-f101-4b2c-b7fa-851eccc944b2
+ms.date: 03/24/2020
 ms.topic: conceptual
 description: Informace o výhodách CloudPilot dostupných ve vybraných předplatných Visual Studia
-ms.openlocfilehash: 253a1b1c3b6996a200a236661d621c43975cb1ed
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: bebffb505f5c2b0fff7167ed2cccf629be1e7543
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74099620"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274034"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>Výhody CloudPilot v předplatných Visual Studia
 V několika jednoduchých krocích přesuňte své aplikace do Microsoft Azure. Během několika minut identifikujte všechny požadované změny kódu až do řádku kódu pro úspěšnou migraci na: Kontejnery, virtuální počítače, aplikační služby, SQL Azure a/nebo SQL MI. Potom migrujte aplikace do Azure pomocí průvodců využívajících ASR, DMA a DMS.
@@ -83,6 +84,11 @@ Nejste si jisti, které předplatné používáte?  Připojte [https://my.visual
 - Chcete-li pomoci s prodejem, předplatným, účty a fakturací pro předplatná sady Visual Studio, obraťte se na [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio .
 - Máte dotaz týkající se ide sady Visual Studio, služeb Azure DevOps Services nebo jiných produktů nebo služeb sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="see-also"></a>Viz také
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
+## <a name="next-steps"></a>Další kroky
 Pokud jste ještě neaktivovali individuální kreditazure devTest, který [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) je součástí vašeho předplatného, navštivte a klikněte na dlaždici Azure v kategorii Nástroje a nastavte předplatné Azure a uplatněte si individuální kredit Azure DevTest.

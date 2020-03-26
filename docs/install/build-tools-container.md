@@ -2,7 +2,7 @@
 title: Instalace nástrojů pro sestavení sady Visual Studio do kontejneru
 titleSuffix: ''
 description: Zjistěte, jak nainstalovat nástroje pro sestavení sady Visual Studio do kontejneru windows pro podporu průběžné integrace a nepřetržitého doručování (CI/CD).
-ms.date: 07/03/2019
+ms.date: 03/25/2020
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: d5c038e2-e70d-411e-950c-8a54917b578a
@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 53049d37f23a72adb337cdad629f4c689c83707e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 61ec972bd5e361c4417e49092de5976000a6da5f
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114605"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273891"
 ---
 # <a name="install-build-tools-into-a-container"></a>Instalace nástrojů sestavení do kontejneru
 
@@ -71,22 +71,24 @@ Uložte následující příklad Souboru Dockerfile do nového souboru na disku.
    # Download the Build Tools bootstrapper.
    ADD https://aka.ms/vs/15/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
 
-   # Install Build Tools excluding workloads and components with known issues.
+   # Install Build Tools with the Microsoft.VisualStudio.Workload.AzureBuildTools workload, excluding workloads and components with known issues.
    RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
        --installPath C:\BuildTools `
-       --all `
+       --add Microsoft.VisualStudio.Workload.AzureBuildTools `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
        --remove Microsoft.VisualStudio.Component.Windows81SDK `
     || IF "%ERRORLEVEL%"=="3010" EXIT 0
 
-   # Start developer command prompt with any other commands specified.
-   ENTRYPOINT C:\BuildTools\Common7\Tools\VsDevCmd.bat &&
-
-   # Default to PowerShell if no other command specified.
-   CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
+   # Define the entry point for the Docker container.
+   # This entry point starts the developer command prompt and launches the PowerShell shell.
+   ENTRYPOINT ["C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat", "&&", "powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
    ```
+
+   > [!TIP]
+   > Seznam úloh a součástí naleznete v [adresáři komponent y Nástroje pro sestavení sady Visual Studio](workload-component-id-vs-build-tools.md).
+   >
 
    > [!WARNING]
    > Pokud bitovou kopii založíte přímo na microsoft/windowsservercore nebo mcr.microsoft.com/windows/servercore (viz [katalog kontejnerů syndikátorů společnosti Microsoft](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/)), nemusí být rozhraní .NET Framework správně nainstalováno a není uvedena žádná chyba instalace. Spravovaný kód se nemusí spustit po dokončení instalace. Místo toho založte obrázek na [microsoft/dotnet-framework:4.7.2](https://hub.docker.com/r/microsoft/dotnet-framework) nebo novější. Všimněte si také, že obrázky, které jsou označeny verze `SHELL`4.7.2 `RUN` `ENTRYPOINT` nebo novější může použít PowerShell jako výchozí , což způsobí, že a pokyny k selhání.
@@ -94,7 +96,7 @@ Uložte následující příklad Souboru Dockerfile do nového souboru na disku.
    > Visual Studio 2017 verze 15.8 nebo starší (jakýkoli produkt) nebude správně nainstalovat na mcr.microsoft.com/windows/servercore:1809 nebo novější. Nezobrazí se žádná chyba.
    >
    > Kompatibilita verzí kontejneru windows a [zjistěte,](/virtualization/windowscontainers/deploy-containers/version-compatibility) které verze operačního systému kontejneru jsou podporovány na verzích hostitelského operačního systému a [známé problémy pro kontejnery](build-tools-container-issues.md) pro známé problémy.
-
+   
    ::: moniker-end
 
    ::: moniker range="vs-2019"
@@ -111,22 +113,24 @@ Uložte následující příklad Souboru Dockerfile do nového souboru na disku.
    # Download the Build Tools bootstrapper.
    ADD https://aka.ms/vs/16/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
 
-   # Install Build Tools excluding workloads and components with known issues.
+   # Install Build Tools with the Microsoft.VisualStudio.Workload.AzureBuildTools workload, excluding workloads and components with known issues.
    RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
        --installPath C:\BuildTools `
-       --all `
+       --add Microsoft.VisualStudio.Workload.AzureBuildTools `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
        --remove Microsoft.VisualStudio.Component.Windows81SDK `
     || IF "%ERRORLEVEL%"=="3010" EXIT 0
 
-   # Start developer command prompt with any other commands specified.
-   ENTRYPOINT C:\BuildTools\Common7\Tools\VsDevCmd.bat &&
-
-   # Default to PowerShell if no other command specified.
-   CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
+   # Define the entry point for the docker container.
+   # This entry point starts the developer command prompt and launches the PowerShell shell.
+   ENTRYPOINT ["C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat", "&&", "powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
    ```
+
+   > [!TIP]
+   > Seznam úloh a součástí naleznete v [adresáři komponent y Nástroje pro sestavení sady Visual Studio](workload-component-id-vs-build-tools.md).
+   >
 
    > [!WARNING]
    > Pokud bitovou kopii založíte přímo na microsoft/windowsservercore, rozhraní .NET Framework se nemusí správně nainstalovat a není uvedena žádná chyba instalace. Spravovaný kód se nemusí spustit po dokončení instalace. Místo toho založte obrázek na [microsoft/dotnet-framework:4.8](https://hub.docker.com/r/microsoft/dotnet-framework) nebo novější. Všimněte si také, že obrázky, které jsou označeny `SHELL`verze 4.8 `RUN` `ENTRYPOINT` nebo novější může použít PowerShell jako výchozí , což způsobí, že a pokyny k selhání.
@@ -189,6 +193,15 @@ Teď, když jste vytvořili bitovou kopii, můžete ji spustit v kontejneru a pr
    ::: moniker-end
 
 Chcete-li tuto bitovou kopii použít pro pracovní postup CI/CD, můžete ji publikovat do vlastního [registru kontejnerů Azure](https://azure.microsoft.com/services/container-registry) nebo do jiného interního [registru Dockeru,](https://docs.docker.com/registry/deploying) takže servery je potřeba pouze k jeho vyhledání.
+
+   > [!NOTE]
+   > Pokud se nespustí kontejner Dockeru, pravděpodobně dojde k problému s instalací sady Visual Studio. Můžete aktualizovat Dockerfile odebrat krok, který volá dávkový příkaz Visual Studio. To umožňuje spustit kontejner Dockeru a číst protokoly chyb instalace.
+   >
+   > V souboru Dockerfile `C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat` odeberte parametry a `&&` z příkazu. `ENTRYPOINT` Příkaz by nyní `ENTRYPOINT ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]`měl být . Dále znovu vytvořte soubor `run` Dockerfile a spusťte příkaz pro přístup k souborům kontejnerů. Chcete-li vyhledat protokoly chyb `$env:TEMP` instalace, přejděte do adresáře a vyhledejte `dd_setup_<timestamp>_errors.log` soubor.
+   >
+   > Po identifikaci a opravě problému s `C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat` `&&` instalací můžete přidat `ENTRYPOINT` parametry a zpět do příkazu a znovu vytvořit soubor Dockerfile.
+   >
+   > Další informace naleznete v [tématu Známé problémy pro kontejnery](build-tools-container-issues.md).
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

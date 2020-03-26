@@ -3,15 +3,16 @@ title: Odstranění přiřazení předplatného na portálu pro správu předpla
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: e49242bc-e9f2-49e8-8caa-f574d508aba6
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: Zjistěte, jak mohou správci odstranit přiřazení předplatného
-ms.openlocfilehash: 6ed64f5c05f77bea7f157eee9e29bbb05aa8730d
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: a884cb56b9c04558023659317ecce2d06a8ec54d
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78263240"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232543"
 ---
 # <a name="delete-assignments-in-visual-studio-subscriptions"></a>Odstranění přiřazení v předplatných Visual Studia
 Pokud odběratel již nevyžaduje předplatné sady Visual Studio, například když opustí společnost, dokončí projekt nebo přepne na novou roli úlohy, můžete odebrat jeho předplatné a přiřadit ho někomu jinému. Vezměte prosím na vědomí, že při opětovném přiřazení předplatného nebudou obnoveny všechny výhody pro předplatitele.  Nový uživatel bude moci nárokovat všechny nevyzvednuté klíče a zobrazit dříve nárokované klíče, ale limity deklarací se neresetují. **not**  Pro organizace, které mají podnikové smlouvy (EA), budou všechny výhody, které byly použity původním uživatelem, jako je například školení Pluralsight, resetovány. 

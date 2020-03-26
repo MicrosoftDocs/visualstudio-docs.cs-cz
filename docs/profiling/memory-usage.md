@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2876e1b25380719a4424c5828c8b37fb5bb72b41
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: dc0d97b1e2b2e27ebc8ddb898795c1767155c1cb
+ms.sourcegitcommit: ee12b14f306ad8f49b77b08d3a16d9f54426e7ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75929235"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256189"
 ---
 # <a name="measure-memory-usage-in-visual-studio"></a>Měření využití paměti v sadě Visual Studio
 
@@ -117,7 +117,7 @@ Chcete-li analyzovat využití paměti, klepněte na jeden z odkazů, které ote
 
  Horní podokno zobrazuje počet a velikost typů ve snímku, včetně velikosti všech objektů, na které odkazuje typ (**Včetně velikosti**).
 
- Strom **Cesty ke kořenům** v dolním podokně zobrazuje objekty, které odkazují na typ vybraný v horním podokně. Systém uvolňování paměti rozhraní .NET Framework vyčistí paměť pro objekt pouze v případě, že byl vydán poslední typ, který na něj odkazuje.
+ Strom **Cesty ke kořenům** v dolním podokně zobrazuje objekty, které odkazují na typ vybraný v horním podokně. Uvolňování paměti .NET vyčistí paměť pro objekt pouze v případě, že byl vydán poslední typ, který na něj odkazuje.
 
  Strom **Odkazované objekty** zobrazuje odkazy, které jsou podrženy typem vybraným v horním podokně.
 

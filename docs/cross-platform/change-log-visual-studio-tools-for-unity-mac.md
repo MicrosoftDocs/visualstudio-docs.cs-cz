@@ -10,16 +10,84 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: fe317d446ddc9196df02dfafcf0397f8815574c3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5599153f79b273249e93c48aaa197214d92f5fe7
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74771540"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232923"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>Protokol změn (Visual Studio Tools for Unity, Mac)
 
 Visual Studio Tools for Unity change log.
+
+## <a name="2520"></a>2.5.2.0
+
+Vydáno 23.března 2020
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Ladicí program:**
+
+  - Opravena registrace závitů při připojení.
+
+## <a name="2510"></a>2.5.1.0
+
+Vydáno 3.
+
+### <a name="new-features"></a>Nové funkce
+
+- **Integrace:**
+
+  - Přidáno tlumič [`IDE0051`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0008.md)pro . Soukromé metody používané s Invoke, InvokeRepeating, StartCoroutine nebo StopCoroutine by neměly být označeny jako nepoužívané.
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Integrace:**
+
+  - Opravena dokumentace OnDrawGizmos/OnDrawGizmosVybraná
+
+- **Hodnocení:**
+
+  - Opravena kontrola argumentů lambda.
+
+## <a name="2501"></a>2.5.0.1
+
+Vydáno 19.února 2020
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Integrace:**
+
+  - Opravena [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0006.md) diagnostická kontrola nesprávného podpisu zprávy. Při kontrole typů s více úrovněmi dědičnosti může tato `warning AD0001: Analyzer 'Microsoft.Unity.Analyzers.MessageSignatureAnalyzer' threw an exception of type 'System.ArgumentException' with message 'An item with the same key has already been added`diagnostika selhat s následující zprávou: .
+
+## <a name="2500"></a>2.5.0.0
+
+Vydáno 22.ledna 2020
+
+### <a name="new-features"></a>Nové funkce
+
+- **Integrace:**
+
+  - Přidána podpora pro soubory HLSL.
+  
+  - Přepnul do nového dialogového okna složky.
+  
+  - Přepnul do nové mřížky dostupných vlastností pro nastavení.
+
+  - Přidáno tlumič [`IDE0051`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0006.md)pro . Soukromá pole `SerializeField` s atributem by neměla být označena jako nepoužitá.
+
+  - Přidáno tlumič [`CS0649`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0007.md)pro . Pole s `SerializeField` atributem by neměla být označena jako nepřiřazená.  
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Integrace:**
+
+  - Opraveno generování`GenerateTargetFrameworkMonikerAttribute` projektu (cíl nebyl vždy správně umístěn)
+
+- **Hodnocení:**
+
+  - Opraveno vyhodnocení řetězce (nepoužití volání ToString()
 
 ## <a name="2420"></a>2.4.2.0
 

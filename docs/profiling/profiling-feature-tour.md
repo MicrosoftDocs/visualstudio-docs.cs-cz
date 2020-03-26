@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 688a446fbbaf1c2c56b9304576224a70f71064d8
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: a2d23620a1861396971c79551088b898c9b77c86
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79550118"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233099"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>Úvodní příručka: První pohled na nástroje profilování
 
@@ -74,9 +74,9 @@ PerfTips zobrazit stejné události, které se také zobrazí v zobrazení **Ud�
 
 ## <a name="analyze-memory-usage"></a>Analýza využití paměti
 
-Diagnostické **nástroje** okno také umožňuje vyhodnotit využití paměti ve vaší aplikaci. Můžete se například podívat na počet a velikost objektů na haldě. Podrobnější pokyny k analýze paměti naleznete v [tématu Analýza využití paměti](../profiling/memory-usage.md).
+Diagnostické **nástroje** okno také umožňuje vyhodnotit využití paměti v aplikaci pomocí nástroje **využití paměti.** Můžete se například podívat na počet a velikost objektů na haldě. Podrobnější pokyny k analýze paměti naleznete v [tématu Analýza využití paměti](../profiling/memory-usage.md). Jiný nástroj pro analýzu paměti, [nástroj pro alokaci objektů .NET](../profiling/dotnet-alloc-tool.md), vám pomůže identifikovat vzory přidělení a anomálie v kódu .NET.
 
-Chcete-li analyzovat využití paměti při ladění, je třeba pořizovat alespoň jeden snímek paměti. Často je nejlepší způsob, jak analyzovat paměť je vzít dva snímky; první právo před podezření na problém paměti a druhý snímek hned po podezření na problém paměti dojde. Pak můžete zobrazit rozdíl dvou snímků a přesně vidět, co se změnilo.
+Chcete-li analyzovat využití paměti s ladicím programem integrované využití paměti příliš, je třeba provést alespoň jeden snímek paměti. Často je nejlepší způsob, jak analyzovat paměť je vzít dva snímky; první právo před podezření na problém paměti a druhý snímek hned po podezření na problém paměti dojde. Pak můžete zobrazit rozdíl dvou snímků a přesně vidět, co se změnilo.
 
 ![Pořízení snímku v diagnostických nástrojích](../profiling/media/prof-tour-take-snapshots.gif "Diagnostické nástroje pořizovat snímky")
 

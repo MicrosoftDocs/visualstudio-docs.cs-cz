@@ -1,7 +1,7 @@
 ---
 title: Protokol změn (Nástroje sady Visual Studio pro jednotu, Windows) | Dokumenty společnosti Microsoft
 ms.custom: ''
-ms.date: 12/02/2019
+ms.date: 3/23/2019
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
@@ -10,16 +10,66 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 0e1810f452f48c95e0c4e8117820be3598b0f139
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0b1d735cd05f79eaabd00a575a6c050b37ce2d16
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74706787"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232827"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>Protokol změn (Nástroje visual studia pro jednotu, Windows)
 
 Visual Studio Tools for Unity change log.
+
+## <a name="4510"></a>4.5.1.0
+
+Vydáno 16.března 2020
+
+### <a name="new-features"></a>Nové funkce
+
+- **Integrace:**
+
+  - Přidáno tlumič [`IDE0051`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0008.md)pro . Soukromé metody používané s Invoke, InvokeRepeating, StartCoroutine nebo StopCoroutine by neměly být označeny jako nepoužívané.
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Integrace:**
+
+  - Opravena dokumentace OnDrawGizmos/OnDrawGizmosVybraná
+
+- **Hodnocení:**
+
+  - Opravena kontrola argumentů lambda.
+
+## <a name="4501"></a>4.5.0.1
+
+Vydáno 19.února 2020
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Integrace:**
+
+  - Opravena [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0006.md) diagnostická kontrola nesprávného podpisu zprávy. Při kontrole typů s více úrovněmi dědičnosti může tato `warning AD0001: Analyzer 'Microsoft.Unity.Analyzers.MessageSignatureAnalyzer' threw an exception of type 'System.ArgumentException' with message 'An item with the same key has already been added`diagnostika selhat s následující zprávou: .
+
+## <a name="4500"></a>4.5.0.0
+
+Vydáno 22.ledna 2020
+
+### <a name="new-features"></a>Nové funkce
+
+- **Integrace:**
+
+  - Přidána podpora pro soubory HLSL.
+  
+  - Přidáno tlumič [`IDE0051`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0006.md)pro . Soukromá pole `SerializeField` s atributem by neměla být označena jako nepoužitá.
+  
+  - Přidáno tlumič [`CS0649`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0007.md)pro . Pole s `SerializeField` atributem by neměla být označena jako nepřiřazená.  
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Integrace:**
+
+  - Opraveno generování`GenerateTargetFrameworkMonikerAttribute` projektu (cíl nebyl vždy správně umístěn)
 
 ## <a name="4420"></a>4.4.2.0
 
@@ -49,7 +99,7 @@ Vydáno listopad 6, 2019
 
 - **Integrace:**
 
-  - Opraven analyzátor `UNT0002` porovnání tagů s pokročilými binárními a vyvolávacími výrazy.
+  - Opraven analyzátor [`UNT0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0002.md) porovnání tagů s pokročilými binárními a vyvolávacími výrazy.
 
 ### <a name="deprecated-features"></a>Zastaralé funkce
 
@@ -65,7 +115,7 @@ Vydáno říjen 15, 2019
 
 - **Integrace:**
 
-  - Přidáno supresorové pro `IDE0060` (nepoužitý parametr) pro všechny zprávy Unity.
+  - Přidáno supresorové pro [`IDE0060`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0005.md) (nepoužitý parametr) pro všechny zprávy Unity.
   
   - Byl přidán rychlý popis pro `TooltipAttribute`pole označená písmenem . (To bude fungovat pro jednoduchý get přistupující ho pomocí tohoto pole také).
 
@@ -88,21 +138,21 @@ Vydáno září 16, 2019
 - **Integrace:**
 
   - Prohloubili jsme pochopení, že Visual Studio má pro unity projekty přidáním nové diagnostiky specifické pro Unity. Také jsme zvýšili inteligenci integrovaného vývojového prostředí (IDE) tím, že jsme potlačili obecnou diagnostiku C#, která se nevztahuje na projekty Unity. Například rozhraní IDE nezobrazí rychlou opravu pro změnu `readonly` proměnné inspektoru, na kterou by se zabránilo úpravě proměnné v Editoru unity.
-    - `UNT0001`: Unity zprávy jsou volány za běhu i v případě, že jsou prázdné, nedeklarujte je, aby se zabránilo uncesseray zpracování unity runtime.
-    - `UNT0002`: Porovnání značek pomocí rovnosti řetězců je pomalejší než předdefinovaná metoda CompareTag.
-    - `UNT0003`: Použití obecné ho formuláře GetComponent je upřednostňováno pro bezpečnost typů.
-    - `UNT0004`: Zpráva aktualizace závisí na kratech snímků a měla by místo Time.fixedDeltaTime používat time.deltaTime.
-    - `UNT0005`: FixedUpdate zpráva je frame-rate nezávislé a měl by použít Time.fixedDeltaTime místo Time.deltaTime.
-    - `UNT0006`: Pro tuto zprávu Unity byl zjištěn nesprávný podpis metody.
-    - `UNT0007`: Unity přepíše operátor porovnání null pro Unity objekty, které je nekompatibilní s null coalescing.
-    - `UNT0008`: Unity přepíše operátor porovnání null pro Unity objekty, které je nekompatibilní s null šíření.
-    - `UNT0009`: Při použití InitializeOnLoad atribut třídy, je třeba zadat statický konstruktor. Atribut InitializeOnLoad zajistí, že bude volán při spuštění editoru.
-    - `UNT0010`: MonoBehaviours by měly být vytvořeny pouze pomocí AddComponent(). Objekt MonoBehaviour je komponenta, která musí být připojená k objektu GameObject.
-    - `UNT0011`: ScriptableObject by měl být vytvořen pouze pomocí CreateInstance(). Objekt ScriptableObject musí být vytvořený modulem Unity, aby zpracovával metody zpráv Unity.
-    - `USP0001`for `IDE0029`: Unity objekty by neměly používat null coalescing.
-    - `USP0002`pro `IDE0031`: Unity objekty by neměly používat null šíření.
-    - `USP0003`for `IDE0051`: Unity zprávy jsou vyvolány unity runtime.
-    - `USP0004`pro `IDE0044`: Pole s atributem SerializeField by neměla být jen pro čtení.
+    - [`UNT0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0001.md): Unity zprávy jsou volány za běhu i v případě, že jsou prázdné, nedeklarujte je, aby se zabránilo uncesseray zpracování unity runtime.
+    - [`UNT0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0002.md): Porovnání značek pomocí rovnosti řetězců je pomalejší než předdefinovaná metoda CompareTag.
+    - [`UNT0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0003.md): Použití obecné ho formuláře GetComponent je upřednostňováno pro bezpečnost typů.
+    - [`UNT0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0004.md): Zpráva aktualizace závisí na kratech snímků a měla by místo Time.fixedDeltaTime používat time.deltaTime.
+    - [`UNT0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0005.md): FixedUpdate zpráva je frame-rate nezávislé a měl by použít Time.fixedDeltaTime místo Time.deltaTime.
+    - [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0006.md): Pro tuto zprávu Unity byl zjištěn nesprávný podpis metody.
+    - [`UNT0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0007.md): Unity přepíše operátor porovnání null pro Unity objekty, které je nekompatibilní s null coalescing.
+    - [`UNT0008`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0008.md): Unity přepíše operátor porovnání null pro Unity objekty, které je nekompatibilní s null šíření.
+    - [`UNT0009`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0009.md): Při použití InitializeOnLoad atribut třídy, je třeba zadat statický konstruktor. Atribut InitializeOnLoad zajistí, že bude volán při spuštění editoru.
+    - [`UNT0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0010.md): MonoBehaviours by měly být vytvořeny pouze pomocí AddComponent(). Objekt MonoBehaviour je komponenta, která musí být připojená k objektu GameObject.
+    - [`UNT0011`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0011.md): ScriptableObject by měl být vytvořen pouze pomocí CreateInstance(). Objekt ScriptableObject musí být vytvořený modulem Unity, aby zpracovával metody zpráv Unity.
+    - [`USP0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0001.md)for `IDE0029`: Unity objekty by neměly používat null coalescing.
+    - [`USP0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0002.md)pro `IDE0031`: Unity objekty by neměly používat null šíření.
+    - [`USP0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0003.md)for `IDE0051`: Unity zprávy jsou vyvolány unity runtime.
+    - [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0004.md)pro `IDE0044`: Pole s atributem SerializeField by neměla být jen pro čtení.
 
 ## <a name="4310"></a>4.3.1.0
 

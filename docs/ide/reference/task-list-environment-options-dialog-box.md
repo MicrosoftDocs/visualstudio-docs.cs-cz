@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 05c337a6e809f85490e651fecf405b44e9f28930
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e28b3b9c3fe4d6e89228dc18ba8b98aa5e0d2e76
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75592006"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233119"
 ---
 # <a name="options-dialog-box-environment--task-list"></a>Dialogové okno Možnosti: Seznam úkolů prostředí \>
 
@@ -64,4 +64,4 @@ Klepnutím provedete změny existujícího tokenu pomocí hodnot zadaných v pol
 ## <a name="see-also"></a>Viz také
 
 - [Použití seznamu úloh](../../ide/using-the-task-list.md)
-- [Sett Záložky v kódu](../../ide/setting-bookmarks-in-code.md)
+- [Nastavení záložek v kódu](../../ide/setting-bookmarks-in-code.md)

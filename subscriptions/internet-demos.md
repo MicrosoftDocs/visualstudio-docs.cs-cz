@@ -3,15 +3,16 @@ title: Použití kódů Product Key k podpoře internetových předvádění pro
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: 1c5ede60-cb5a-4d5f-a6a2-a1f536f6c4ad
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Naučte se používat kódy Product Key k podpoře internetových ukázek prostřednictvím Terminálové služby a povolit přístup rds
-ms.openlocfilehash: c02bce8fe098c75f0405fdd4e9ba5f0f143401fa
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 2d5f23f0d161ee9f50569e0ff7f8ce585c8c49ff
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78937465"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232432"
 ---
 # <a name="internet-demonstrations-via-terminal-services"></a>Internetové demonstrace prostřednictvím Terminálové služby
 S předplatným sady Visual Studio můžete koncovým uživatelům poskytovat přístup k internetovým ukázkám programů prostřednictvím Terminálové služby (Windows Server 2003 nebo Windows Server 2008) nebo Služby vzdálené plochy (Windows Server 2008 R2 a novější). Tímto způsobem může k vaší demonstraci současně přistupovat až 200 anonymních uživatelů. Ukázka nesmí používat produkční data. Předplatitelé sady Visual Studio mají licenci k předvádění svých aplikací koncovým uživatelům. Tato internetová ukázka pomocí Terminálové služby (TS) nebo vzdálené služby vzdálené plochy (RDS) je jediným scénářem, kdy koncoví uživatelé bez předplatného sady Visual Studio mohou pracovat s demonstrační aplikací, pokud je software licencován prostřednictvím aplikace Visual Studio předplatná.
