@@ -47,7 +47,7 @@
                   topicHref: /visualstudio/profiling/index
                 - name: Testování
                   tocHref: /visualstudio/test/
-                  topicHref: /visualstudio/test/improve-code-quality
+                  topicHref: /visualstudio/test/index
                 - name: Návrhář postupu provádění
                   tocHref: /visualstudio/workflow-designer/
                   topicHref: /visualstudio/workflow-designer/developing-applications-with-the-workflow-designer
@@ -74,7 +74,7 @@
                   tocHref: /visualstudio/extensibility/debugger/
                   topicHref: /visualstudio/extensibility/debugger/visual-studio-debugger-extensibility
                   items:
-                    - name: Referenční informace
+                    - name: Odkaz
                       tocHref: /visualstudio/extensibility/debugger/reference/
                       topicHref: /visualstudio/extensibility/debugger/reference/reference-visual-studio-debugging-apis
                 - name: Pravidla pro práci s uživatelským prostředím
