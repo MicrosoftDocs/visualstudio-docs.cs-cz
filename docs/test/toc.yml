@@ -1,5 +1,9 @@
 - name: Testovací nástroje v sadě Visual Studio
-  href: improve-code-quality.md
+  href: index.yml
+- name: Přehled
+  items:
+    - name: První seznámení s testovacími nástroji
+      href: improve-code-quality.md
 - name: Testování jednotek
   items:
     - name: Přehled nástrojů pro testy jednotek
@@ -14,14 +18,10 @@
       href: create-unit-tests-menu.md
     - name: IntelliTest
       items:
+        - name: Přehled
+          href: intellitest-manual/index.md
         - name: 'Postupy: Generování testů jednotek pomocí funkce IntelliTest'
           href: generate-unit-tests-for-your-code-with-intellitest.md
-        - name: Přehled
-          href: intellitest-manual/introduction.md
-        - name: Začínáme
-          href: intellitest-manual/getting-started.md
-        - name: Indexování oddílů
-          href: intellitest-manual/index.md
         - name: Generování testů
           href: intellitest-manual/test-generation.md
         - name: Dynamické symbolické spuštění

@@ -1,0 +1,64 @@
+### YamlMime:Landing
+title: Testovací nástroje v sadě Visual Studio
+summary: Testovací nástroje sady Visual Studio můžou vám a vašemu týmu pomoct s vývojem a udržováním vysoké úrovně kvality kódu.
+metadata:
+  title: Testovací nástroje v sadě Visual Studio
+  description: Tady se dozvíte, jak používat Visual Studio k testování kódu.
+  ms.topic: landing-page
+  author: mikejo5000
+  ms.author: mikejo
+  manager: jillfra
+  ms.date: 03/23/2020
+  ms.openlocfilehash: cb29c5219cb3ad73cf8a3efeecaf344c7af81968
+  ms.sourcegitcommit: ee12b14f306ad8f49b77b08d3a16d9f54426e7ca
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 03/25/2020
+  ms.locfileid: "80261573"
+landingContent:
+- title: Informace k testovacím nástrojům
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: První seznámení s testovacími nástroji
+      url: improve-code-quality.md
+    - text: Přehled nástrojů pro testy jednotek
+      url: unit-test-your-code.md
+    - text: Přehled funkce Live Unit Testing
+      url: live-unit-testing-intro.md
+- title: Testování jednotek
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Začínáme s testováním jednotek
+      url: getting-started-with-unit-testing.md
+    - text: Vytváření a spouštění testů jednotek pro spravovaný kód
+      url: walkthrough-creating-and-running-unit-tests-for-managed-code.md
+    - text: Spouštění testů částí pomocí Průzkumníka testů
+      url: run-unit-tests-with-test-explorer.md
+    - text: Začínáme s funkcí Live Unit Testing
+      url: live-unit-testing-start.md
+    - text: Generování testů jednotek (IntelliTest)
+      url: generate-unit-tests-for-your-code-with-intellitest.md
+- title: Další testovací nástroje
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Rozsah testování kódu – Určení rozsahu testovaného kódu
+      url: using-code-coverage-to-determine-how-much-code-is-being-tested.md
+    - text: Microsoft Fakes – Izolace testovaného kódu
+      url: isolating-code-under-test-with-microsoft-fakes.md
+    - text: Programové uživatelské rozhraní (zastaralé)
+      url: use-ui-automation-to-test-your-code.md
+    - text: Zátěžové testování (zastaralé)
+      url: quickstart-create-a-load-test-project.md
+- title: Související nástroje (Azure DevOps)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Průzkumné a manuální testování (Azure Test Plans)
+      url: /azure/devops/test/overview?view=azure-devops
+    - text: Zátěžové testování (Azure Test Plans)
+      url: /azure/devops/test/load-test/getting-started-with-performance-testing?view=azure-devops
+    - text: Průběžné testování (Azure Pipelines)
+      url: /azure/devops/pipelines/?view=azure-devops
