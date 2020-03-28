@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79686132adce043b4864d545f0912564709cfe2c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 472d4c9c4c44176048a1bfd8c0791a1a406b95bd
+ms.sourcegitcommit: 8ff6c6975148ce43bdac21c8995fbab910c312fe
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631975"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80375553"
 ---
 # <a name="target-element-msbuild"></a>Cílový prvek (MSBuild)
 
@@ -59,7 +59,7 @@ Obsahuje sadu úloh pro MSBuild provádět postupně.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Name`|Požadovaný atribut.<br /><br /> Název cíle|
+|`Name`|Požadovaný atribut.<br /><br /> Název cíle Cílový název může obsahovat `$@()%*?.`libovolný znak s výjimkou .|
 |`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Pokud je podmínka `false`vyhodnocena na , cíl neprovede tělo cíle nebo `DependsOnTargets` žádné cíle, které jsou nastaveny v atributu. Další informace o podmínkách naleznete v tématu [Podmínky](../msbuild/msbuild-conditions.md).|
 |`Inputs`|Nepovinný atribut.<br /><br /> Soubory, které tvoří vstupy do tohoto cíle. Více souborů je odděleno středníky. Časová razítka souborů budou porovnána s časovými razítky souborů `Outputs` `Target` v souborech, aby bylo možné určit, zda je aktuální. Další informace naleznete [v tématu Přírůstková sestavení](../msbuild/incremental-builds.md), [Postup: Sestavení postupně](../msbuild/how-to-build-incrementally.md)a [Transformace](../msbuild/msbuild-transforms.md).|
 |`Outputs`|Nepovinný atribut.<br /><br /> Soubory, které tvoří výstupy do tohoto cíle. Více souborů je odděleno středníky. Časová razítka souborů budou porovnána s časovými razítky souborů `Inputs` `Target` v souborech, aby bylo možné určit, zda je aktuální. Další informace naleznete [v tématu Přírůstková sestavení](../msbuild/incremental-builds.md), [Postup: Sestavení postupně](../msbuild/how-to-build-incrementally.md)a [Transformace](../msbuild/msbuild-transforms.md).|
