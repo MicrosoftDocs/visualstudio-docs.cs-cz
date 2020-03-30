@@ -1,5 +1,5 @@
 ---
-title: Nasazení aplikací ClickOnce bez nového podpisu
+title: Nasazení aplikací ClickOnce bez opětovného podepisování
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,48 +19,48 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b1abda86c8fdd80c20b03a6d3869d025d0a7aaa
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 89e1d7970b26d5ba9bd49090362a6a4e8c09f78d
+ms.sourcegitcommit: d6828e7422c8d74ec1e99146fedf0a05f757245f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263286"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80395322"
 ---
-# <a name="deploy-clickonce-applications-for-testing-and-production-servers-without-resigning"></a>Nasazení aplikací ClickOnce pro testování a produkční servery bez opětovného podpisu
-Tento článek popisuje funkce zavedené v rozhraní .NET Framework verze 3.5, která umožňuje nasazení aplikací ClickOnce z více umístění v síti bez opětovné podepsání nebo změna ClickOnce, manifesty ClickOnce.
+# <a name="deploy-clickonce-applications-for-testing-and-production-servers-without-resigning"></a>Nasazení aplikací ClickOnce pro testování a produkční servery bez rezignování
+Tento článek popisuje funkci ClickOnce zavedenou v rozhraní .NET Framework verze 3.5, která umožňuje nasazení aplikací ClickOnce z více síťových umístění bez opětovného podepsání nebo změny manifestů ClickOnce.
 
 > [!NOTE]
-> Opětovné podepisování je stále upřednostňovanou metodou pro nasazení nové verze aplikací. Kdykoli je to možné, použijte metodu opětovného podepisování. Další informace najdete v tématu [ *Mage.exe* (Manifest Generation and Editing Tool)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool).
+> Rezignace je stále upřednostňovanou metodou pro nasazení nových verzí aplikací. Kdykoli je to možné, použijte metodu reřazení. Další informace naleznete v [ *tématu Mage.exe* (Nástroj pro generování a úpravy manifestu).](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)
 
- Vývojáři třetích stran a nezávislé výrobce softwaru můžete vyjádřit výslovný souhlas k této funkci snadnější svým zákazníkům aktualizovat svoje aplikace. Tuto funkci můžete použít v následujících situacích:
+ Vývojáři a nestátní výrobci softwaru třetích stran se mohou k této funkci přihlásit, což zákazníkům usnadňuje aktualizaci aplikací. Tuto funkci lze použít v následujících situacích:
 
-- Při aktualizaci aplikace, není při první instalaci aplikace.
+- Při aktualizaci aplikace, nikoli pro první instalaci aplikace.
 
-- Pokud existuje pouze jedna konfigurace aplikace na počítači. Například pokud aplikace je nakonfigurovaná tak, aby odkazoval na dvou různých databázích, nemůžete použít tuto funkci.
+- Pokud je v počítači pouze jedna konfigurace aplikace. Pokud je například aplikace nakonfigurována tak, aby ukazovala na dvě různé databáze, nelze tuto funkci použít.
 
-## <a name="exclude-deploymentprovider-from-deployment-manifests"></a>Vyloučení deploymentProvider manifesty nasazení
- V rozhraní .NET Framework 2.0 a rozhraní .NET Framework 3.0, musí každá aplikace ClickOnce, která nainstaluje systém, hledá offline dostupnosti seznamu `deploymentProvider` v manifestu nasazení. `deploymentProvider` Se často označuje jako umístění aktualizace; je umístění, kde ClickOnce vyhledá aktualizace aplikace. Tento požadavek, spolu s potřebu vydavatelé aplikací k podepisování svých nasazení bylo obtížné zjišťovat společnosti k aktualizaci aplikace ClickOnce od dodavatele nebo jiné aplikace třetí strany. Také umožňuje složitější nasazení stejnou aplikaci z více míst ve stejné síti.
+## <a name="exclude-deploymentprovider-from-deployment-manifests"></a>Vyloučit zprostředkovatele nasazení z manifestů nasazení
+ V rozhraní .NET Framework 2.0 a .NET Framework 3.0 musí všechny aplikace ClickOnce, `deploymentProvider` které se nainstalují do systému pro dostupnost offline, uvést a v manifestu nasazení. Často `deploymentProvider` se označuje jako umístění aktualizace; je umístění, kde ClickOnce kontroluje aktualizace aplikace. Tento požadavek spolu s potřebou vydavatelů aplikací podepsat jejich nasazení, ztížilo společnosti aktualizaci aplikace ClickOnce od dodavatele nebo jiné třetí strany. Také ztěžuje nasazení stejné aplikace z více míst ve stejné síti.
 
- Změny, které byly provedeny ClickOnce v rozhraní .NET Framework 3.5 je možné třetí straně poskytnout aplikace ClickOnce do jiné organizace, které pak můžete nasadit aplikaci na vlastní síť.
+ Se změnami, které byly provedeny ClickOnce v rozhraní .NET Framework 3.5, je možné, aby třetí strana poskytla aplikaci ClickOnce jiné organizaci, která pak může nasadit aplikaci ve vlastní síti.
 
- Aby bylo možné tuto funkci využít, musí vývojáři aplikací ClickOnce vyloučit `deploymentProvider` z jejich nasazení manifestů. Tento požadavek znamená, že je nutné vyloučit `-providerUrl` manifesty argument, když vytvoříte nasazení s Mage.exe. Nebo, pokud jsou generování manifesty nasazení s MageUI.exe, je třeba Ujistěte se, že **umístění spuštění** textového pole na **Manifest aplikace** karta je ponecháno prázdné.
+ Chcete-li využít této funkce, vývojáři clickonce `deploymentProvider` aplikací musí vyloučit z jejich manifesty nasazení. Tento požadavek znamená, `-providerUrl` že je nutné vyloučit argument při vytváření manifestů nasazení s Mage.exe. Nebo pokud generujete manifesty nasazení s MageUI.exe, musíte se ujistit, že textové pole **Umístění spuštění** na kartě **Manifest aplikace** zůstane prázdné.
 
-## <a name="deploymentprovider-and-application-updates"></a>aktualizace deploymentProvider a aplikace
- Od verze rozhraní .NET Framework 3.5, nepotřebujete k určení `deploymentProvider` v manifestu nasazení k nasazení aplikace ClickOnce pro použití online i offline. Tato změna podporuje scénář, kde je potřeba balíček a podepsat nasazení, ale povolit jinými společnostmi dohody o nasazení aplikace v jejich sítích.
+## <a name="deploymentprovider-and-application-updates"></a>deploymentProvider a aktualizace aplikací
+ Počínaje rozhraním .NET Framework 3.5 již není `deploymentProvider` nutné zadat v manifestu nasazení, abyste mohli nasadit aplikaci ClickOnce pro online i offline použití. Tato změna podporuje scénář, kde je třeba zabalit a podepsat nasazení sami, ale umožnit jiným společnostem nasadit aplikaci přes jejich sítě.
 
- Je důležité si pamatovat, že aplikace, které vyloučit `deploymentProvider` nelze změnit jejich umístění instalace během aktualizace, dokud nebude dodána aktualizace, která zahrnuje `deploymentProvider` označit znovu.
+ Důležité je mít na paměti, `deploymentProvider` že aplikace, které vylučují, nemohou `deploymentProvider` během aktualizací změnit umístění instalace, dokud znovu nedodají aktualizaci, která značku obsahuje.
 
- Tady jsou dva příklady pro objasnění tohoto bodu. V prvním příkladu, publikování aplikace ClickOnce, která nemá žádné `deploymentProvider` značku a zeptejte se uživatele k jeho nainstalování z http://www.adatum.com/MyApplication/. Pokud je rozhodnout, kterou chcete publikovat další aktualizace aplikací z http://subdomain.adatum.com/MyApplication/, nemůžete nijak to zaznamenat v manifestu nasazení, který se nachází v http://www.adatum.com/MyApplication/. Jedním ze dvou kroků:
+ Zde jsou dva příklady, které tento bod objasňují. V prvním příkladu publikujete aplikaci `deploymentProvider` ClickOnce, která nemá žádnou `http://www.adatum.com/MyApplication/`značku, a požádáte uživatele o instalaci z aplikace . Pokud se rozhodnete publikovat další aktualizaci aplikace `http://subdomain.adatum.com/MyApplication/`z aplikace , nemáte žádný způsob, jak to `http://www.adatum.com/MyApplication/`znamenat v manifestu nasazení, který je umístěn v aplikaci . Můžete provést jednu ze dvou věcí:
 
-- Řekněte uživatelům, aby odinstalovat předchozí verzi a nainstalujte novou verzi z nového umístění.
+- Řekněte uživatelům, aby odinstalovali předchozí verzi a nainstalovali novou verzi z nového umístění.
 
-- Zahrnout aktualizace na http://www.adatum.com/MyApplication/ , který obsahuje `deploymentProvider` odkazující na http://www.adatum.com/MyApplication/. Uvolněte později s jinou aktualizaci `deploymentProvider` odkazující na http://subdomain.adatum.com/MyApplication/.
+- Zahrnout aktualizaci, která `deploymentProvider` zahrnuje `http://www.adatum.com/MyApplication/`odkazování na `http://www.adatum.com/MyApplication/` . Potom uvolněte další `deploymentProvider` aktualizaci později s odkazem na `http://subdomain.adatum.com/MyApplication/`.
 
-  V druhém příkladu publikování aplikace ClickOnce, která určuje `deploymentProvider`, a potom se rozhodnete ho odebrat. Jednou na novou verzi bez `deploymentProvider` se stáhne do klientů, nelze přesměrovat cestu používané pro aktualizace, dokud vydání verze aplikace, která má `deploymentProvider` obnovit. Stejně jako v prvním příkladu `deploymentProvider` zpočátku musí odkazovat na aktuální umístění aktualizace, nikoliv do nového umístění. V takovém případě pokud se pokusíte vložit `deploymentProvider` , který odkazuje na http://subdomain.adatum.com/MyApplication/, příští aktualizace selže.
+  V druhém příkladu publikujete aplikaci `deploymentProvider`ClickOnce, která určuje , a pak se rozhodnete ji odebrat. Jakmile je nová `deploymentProvider` verze bez stažena klientům, nelze přesměrovat cestu použitou pro aktualizace, dokud neuvolníte verzi aplikace, která byla obnovena. `deploymentProvider` Stejně jako v `deploymentProvider` prvním příkladu musí zpočátku ukazovat na aktuální umístění aktualizace, nikoli na nové umístění. V tomto případě pokud se `deploymentProvider` pokusíte vložit, který odkazuje na `http://subdomain.adatum.com/MyApplication/`, pak další aktualizace se nezdaří.
 
 ## <a name="create-a-deployment"></a>Vytvoření nasazení
- Podrobné pokyny k vytvoření nasazení, která se dají nasadit z různých síťových umístěních, najdete v části [názorný postup: Ruční nasazení aplikace ClickOnce, která nevyžaduje opětovné podepsání a které zachovává údaje o poskytovateli](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md).
+ Podrobné pokyny k vytváření nasazení, která lze nasadit z různých síťových umístění, naleznete [v návodu: Ruční nasazení aplikace ClickOnce, která nevyžaduje opětovné podepsání a která zachová informace o značce](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md).
 
-## <a name="see-also"></a>Viz také:
-- [*Mage.exe* (Manifest Generation and Editing Tool)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)
-- [*MageUI.exe* (Manifest Generation and Editing Tool, grafický klient)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)
+## <a name="see-also"></a>Viz také
+- [*Mage.exe* (Nástroj pro generování a úpravy manifestu)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)
+- [*MageUI.exe* (Nástroj pro generování a úpravy manifestu, grafický klient)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)
