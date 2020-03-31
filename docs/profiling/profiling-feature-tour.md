@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2d23620a1861396971c79551088b898c9b77c86
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: b1ee476a518444bfff7a97a12c9fd814e9509239
+ms.sourcegitcommit: 0ba0cbff77eac15feab1a73eeee3667006794b29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233099"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80412040"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>Úvodní příručka: První pohled na nástroje profilování
 
@@ -36,6 +36,21 @@ Okno **Diagnostické nástroje** je často upřednostňovaným způsobem profilo
 > [!NOTE]
 > Můžete použít post-mortem nástroje se systémem Windows 7 a novější. Windows 8 a novější je nutné spustit profilování nástroje s ladicím programem **(Diagnostické nástroje** okna).
 
+## <a name="examine-performance-using-perftips"></a>Zkontrolujte výkon pomocí perftips
+
+Nejjednodušší způsob zobrazení informací o výkonu je často použití [tipů PerfTips](../profiling/perftips.md). Pomocí perftips můžete zobrazit informace o výkonu při interakci s kódem. Můžete zkontrolovat informace, jako je například doba trvání události (měřeno od kdy byl ladicí program naposledy pozastaven, nebo kdy byla aplikace spuštěna). Pokud například krokujete kód (F10, F11), perfTips zobrazí dobu trvání běhu aplikace od předchozí operace kroku k aktuálnímu kroku.
+
+![Profilování Popisy prohlídek](../profiling/media/prof-tour-perf-tips.png "Profilování Popisy prohlídek")
+
+Pomocí kláves PerfTips můžete zkontrolovat, jak dlouho trvá spuštění bloku kódu nebo jak dlouho trvá dokončení jedné funkce.
+
+PerfTips zobrazit stejné události, které se také zobrazí v zobrazení **Události** diagnostické nástroje. V zobrazení **Události** můžete zobrazit různé události, ke kterým dochází při ladění, jako je například nastavení zarážky nebo krokování kódu operace.
+
+![Zobrazení události diagnostických nástrojů](../profiling/media/prof-tour-events.png "Diagnostické nástroje zobrazit události")
+
+ > [!NOTE]
+ > Pokud máte Visual Studio Enterprise, můžete také zobrazit [intelliTrace události](../debugger/intellitrace.md) na této kartě.
+
 ## <a name="analyze-cpu-usage"></a>Analýza využití procesoru
 
 Nástroj využití procesoru je vhodné místo pro zahájení analýzy výkonu aplikace. To vám řekne více o prostředky procesoru, které vaše aplikace spotřebovává. Podrobnější návod nástroje využití procesoru najdete v tématu [Měření výkonu aplikace analýzou využití procesoru](../profiling/beginners-guide-to-performance-profiling.md).
@@ -53,24 +68,6 @@ Zobrazení **Využití procesoru** zobrazuje seznam funkcí seřazených podle n
 Poklepejte na funkci, která vás zajímá, a uvidíte podrobnější tří-panel "motýl" pohled, s vybranou funkcí ve středu okna, volající funkce na levé straně, a volal funkce na pravé straně. Část **Tělo funkce** zobrazuje celkovou dobu (a procento času) stráveného v těle funkce s výjimkou času stráveného voláním a voláním funkcí. Tato data vám mohou pomoci vyhodnotit, zda samotná funkce je problémové místo výkonu.
 
 ![Diagnostické nástroje volající volaný "motýl" pohled](../profiling/media/prof-tour-cpu-usage-caller-callee.png "Diagnostické nástroje zobrazení volajícího volacího volání")
-
-> [!TIP]
-> Chcete-li analyzovat výkon, můžete také použít [PerfTips](#examine-performance-events-using-perftips) krokovat kód a určit, jak dlouho trvá konkrétní funkce nebo bloky kódu k dokončení.
-
-## <a name="examine-performance-events-using-perftips"></a>Prozkoumejte události výkonu pomocí perftips
-
-Nejjednodušší způsob zobrazení informací o výkonu je často použití [tipů PerfTips](../profiling/perftips.md). Pomocí perftips můžete zobrazit informace o výkonu při interakci s kódem. Můžete zkontrolovat informace, jako je například doba trvání události (měřeno od kdy byl ladicí program naposledy pozastaven, nebo kdy byla aplikace spuštěna). Pokud například krokujete kód (F10, F11), perfTips zobrazí dobu trvání běhu aplikace od předchozí operace kroku k aktuálnímu kroku.
-
-![Profilování Popisy prohlídek](../profiling/media/prof-tour-perf-tips.png "Profilování Popisy prohlídek")
-
-Pomocí kláves PerfTips můžete zkontrolovat, jak dlouho trvá spuštění bloku kódu nebo jak dlouho trvá dokončení jedné funkce.
-
-PerfTips zobrazit stejné události, které se také zobrazí v zobrazení **Události** diagnostické nástroje. V zobrazení **Události** můžete zobrazit různé události, ke kterým dochází při ladění, jako je například nastavení zarážky nebo krokování kódu operace.
-
-![Zobrazení události diagnostických nástrojů](../profiling/media/prof-tour-events.png "Diagnostické nástroje zobrazit události")
-
- > [!NOTE]
- > Pokud máte Visual Studio Enterprise, můžete také zobrazit [intelliTrace události](../debugger/intellitrace.md) na této kartě.
 
 ## <a name="analyze-memory-usage"></a>Analýza využití paměti
 

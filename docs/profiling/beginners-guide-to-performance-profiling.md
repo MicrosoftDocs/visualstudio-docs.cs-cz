@@ -17,16 +17,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d106b15a94e00915f8cd0fd2e69c2918f9fbead9
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 1ac7d23c1d4cb245366ecf03c1a8a0e67b11cb55
+ms.sourcegitcommit: 0ba0cbff77eac15feab1a73eeee3667006794b29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79549851"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80412027"
 ---
 # <a name="measure-application-performance-by-analyzing-cpu-usage"></a>Měření výkonu aplikací analýzou využití procesoru
 
-Nástroje pro profilaci v sadě Visual Studio můžete použít k analýze problémů s výkonem aplikace. Tento článek ukazuje, jak pomocí karty **Využití procesoru** diagnostické nástroje získat údaje o výkonu pro vaši aplikaci a také poskytuje informace o používání PerfTips.
+Nástroje pro profilaci v sadě Visual Studio můžete použít k analýze problémů s výkonem aplikace. Tento článek ukazuje, jak pomocí karty **Využití procesoru** diagnostické nástroje získat údaje o výkonu pro vaši aplikaci.
 
 Když se ladicí program pozastaví, shromáždí nástroj **Využití procesoru** informace o funkcích spuštěných ve vaší aplikaci. Nástroj zobrazí seznam funkcí, které pracovaly, a nabídce graf s časovou osou, který můžete použít k podrobnému řešení konkrétních úseků vzorkovací relace.
 
@@ -35,7 +35,7 @@ Diagnostické centrum nabízí řadu dalších možností, jak spustit a spravov
 > [!Important]
 > Diagnostické nástroje jsou podporované pro vývoj rozhraní .NET v sadě Visual Studio, včetně ASP.NET, nativního vývoje a vývoje v jazyce C++.
 
-V tomto článku budeme diskutovat o analýze využití procesoru v normální mašit pracovní postup. Využití procesoru také můžete analyzovat bez připojeného ladicího programu nebo se můžete zaměřit na spuštěnou aplikaci. Další informace najdete v tématu věnovaném [shromažďování profilačních dat bez ladění](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging) v článku o [spuštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
+V tomto článku budeme diskutovat o analýze využití procesoru v normální mašit pracovní postup. Využití procesoru také můžete analyzovat bez připojeného ladicího programu nebo se můžete zaměřit na spuštěnou aplikaci. Další informace najdete v tématu věnovaném [shromažďování profilačních dat bez ladění](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging) v článku o [spuštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). Můžete také použít jiný nástroj [profilování, PerfTips](../profiling/perftips.md), krokovat kód a určit, jak dlouho trvá konkrétní funkce nebo bloky kódu k dokončení.
 
 Můžete použít profilování nástroje bez ladicího programu se systémem Windows 7 a novější. Windows 8 a novější je nutné spustit profilování nástroje s ladicím programem **(Diagnostické nástroje** okna).
 
@@ -77,15 +77,9 @@ V tomto kurzu provedete následující:
 
      Když zvolíte **Zaznamenat profil CPU**, Visual Studio začne nahrávat funkce a zjistí dobu potřebnou k jejich provedení. Shromážděná data můžete zobrazit, jen když se aplikace zastaví na zarážce.
 
-     > [!TIP]
-     > Chcete-li analyzovat výkon, můžete také použít [PerfTips](../profiling/perftips.md) krokovat kód a určit, jak dlouho trvá konkrétní funkce nebo bloky kódu k dokončení.
-
 8. Stiskněte klávesu F5, kterou spustíte aplikaci až ke druhé zarážce.
 
      Teď máte údaje o výkonu aplikace přesně pro oblast kódu spuštěnou mezi dvěma zarážkami.
-
-     >[!TIP]
-     > Při pozastavení na zarážku nebo krokování kódu operace, můžete také analyzovat výkon pomocí [PerfTips](#analyze-performance-using-perftips).
 
      Profiler začne připravovat údaje o vlákně. Počkejte, až skončí.
 
@@ -163,12 +157,6 @@ Analýzu dat doporučujeme začít tím, že zkontrolujete seznam funkcí na kar
 
     > [!NOTE]
     > Pokud se zobrazí kód ve stromu volání označené jako "přerušený" kód nebo "nepřechůzovatelný zásobník", znamená to, že události trasování událostí pro Windows (ETW) byly pravděpodobně vynechány. Zkuste shromažďování stejné trasování podruhé k vyřešení problému.
-
-## <a name="analyze-performance-using-perftips"></a>Analýza výkonu pomocí perftips
-
-Při spuštění kódu v ladicím programu můžete také použít [PerfTips](../profiling/perftips.md) pro hloubkovou analýzu výkonu. Pomocí perftips můžete zobrazit informace o výkonu při interakci s kódem. Můžete zkontrolovat informace, jako je například doba trvání události (měřeno od kdy byl ladicí program naposledy pozastaven, nebo kdy byla aplikace spuštěna). Pokud například krokujete kód (F10, F11), perfTips zobrazí dobu trvání běhu aplikace od předchozí operace kroku k aktuálnímu kroku.
-
-![Analýza pomocí perftips](../profiling/media/diag-tools-perftips.png "AnalyzovatTipy Perf")
 
 ## <a name="view-external-code"></a>Zobrazení externího kódu
 

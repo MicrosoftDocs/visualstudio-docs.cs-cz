@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58c91590e751970f9291c8e13ccb9fc2abcc8728
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 602a185b598410de47dc9d3c98ca2b0ae3c45633
+ms.sourcegitcommit: 0ba0cbff77eac15feab1a73eeee3667006794b29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79550081"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80412011"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c"></a>Úvodní příručka: Analýza dat o využití procesoru v sadě Visual Studio (C++)
 
 Visual Studio poskytuje mnoho výkonných funkcí, které vám pomohou analyzovat problémy s výkonem ve vaší aplikaci. Toto téma poskytuje rychlý způsob, jak se naučit některé základní funkce. Zde se podíváme na nástroj k identifikaci kritických bodů výkonu kvůli vysokému využití procesoru. Diagnostické nástroje jsou podporované pro vývoj rozhraní .NET v sadě Visual Studio, včetně ASP.NET, nativního vývoje a vývoje v jazyce C++.
 
-Diagnostické centrum nabízí řadu dalších možností, jak spustit a spravovat diagnostické relace. Pokud nástroj **využití procesoru** popsaný zde neposkytuje data, která potřebujete, [ostatní profilovací nástroje](../profiling/profiling-feature-tour.md) poskytují různé druhy informací, které by vám mohly být užitečné. V řadě případů může být kritickým bodem aplikace něco jiného než procesor, třeba paměť, vykreslování uživatelského rozhraní nebo dlouhá odezva síťového požadavku. Diagnostické centrum nabízí řadu dalších možností, jak data tohoto druhu zaznamenávat a analyzovat.
+Diagnostické centrum nabízí řadu dalších možností, jak spustit a spravovat diagnostické relace. Pokud nástroj **využití procesoru** popsaný zde neposkytuje data, která potřebujete, [ostatní profilovací nástroje](../profiling/profiling-feature-tour.md) poskytují různé druhy informací, které by vám mohly být užitečné. V řadě případů může být kritickým bodem aplikace něco jiného než procesor, třeba paměť, vykreslování uživatelského rozhraní nebo dlouhá odezva síťového požadavku. Diagnostické centrum nabízí řadu dalších možností, jak data tohoto druhu zaznamenávat a analyzovat. [PerfTips](../profiling/perftips.md), další profilovací nástroj integrovaný v ladicím programu, také umožňuje krokovat kód a určit, jak dlouho trvá dokončení určitých funkcí nebo bloků kódu.
 
 Windows 8 a novější je nutné spustit profilování nástroje s ladicím programem **(Diagnostické nástroje** okna). V systému Windows 7 a novějších můžete použít nástroj post-mortem, [Performance Profiler](../profiling/profiling-feature-tour.md).
 
@@ -143,9 +143,6 @@ Windows 8 a novější je nutné spustit profilování nástroje s ladicím prog
      ![Nastavení zarážek pro profilování](../profiling/media/quickstart-cpu-usage-breakpoints-cplusplus.png "Nastavení zarážek pro profilování")
 
     Nastavením dvou zarážek omezíte shromažďování dat jenom na analyzovanou část kódu.
-
-    >[!TIP]
-    > Při pozastavení na zarážku nebo krokování kódu operace, můžete také analyzovat výkon pomocí [PerfTips](../profiling/perftips.md).
 
 3. Okno **Diagnostické nástroje** je již viditelné, pokud jste ho nevypnuli. Chcete-li okno znovu vyvolat, klepněte na tlačítko **Ladit** > **diagnostické nástroje služby****Windows** > Show .
 
