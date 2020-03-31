@@ -329,6 +329,8 @@
                   href: ide/reference/generate-constructor.md
                 - name: Generování dekonstruktorů
                   href: ide/reference/generate-deconstructor.md
+                - name: Přidání explicitního přetypování
+                  href: ide/reference/add-explicit-cast.md
                 - name: Přidání parametru do metody
                   href: ide/reference/add-parameter.md
                 - name: Vygenerování parametru
@@ -360,6 +362,8 @@
                   href: ide/reference/convert-anonymous-type-to-class.md
                 - name: Převedení anonymního typu na řazenou kolekci členů
                   href: ide/reference/convert-anonymous-type-to-tuple.md
+                - name: Převod mezi automatickou a celou vlastností
+                  href: ide/reference/convert-between-auto-property-and-full-property.md
                 - name: Konverze mezi cyklem for a příkazem foreach
                   href: ide/reference/convert-for-loop-to-foreach.md
                 - name: Konverze mezi metodou a vlastností Get

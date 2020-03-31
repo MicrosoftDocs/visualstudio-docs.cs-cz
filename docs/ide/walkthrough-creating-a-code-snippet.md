@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: adb0415e926bba9a1809c77f0f35b43d78263f43
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2554729be8f3b9697d1407befd68cbb21fac10dd
+ms.sourcegitcommit: 992dd075e65b5f3adefc1ff758975298c47381e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75597292"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80435042"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>Návod: Vytvoření fragmentu kódu
 
@@ -54,7 +54,7 @@ Základní šablona výstřižku je následující kód XML:
 
 2. Vyplňte název výstřižku v elementu **Název.** Použijte název **odmocnina**.
 
-3. Vyplňte jazyk úryvku v atributu **Language** elementu **Kód.** Pro C#použijte **CSharp**a Visual Basic použijte **VB**.
+3. Vyplňte jazyk úryvku v atributu **Language** elementu **Kód.** Pro C#použijte **CSharp**, pro Visual Basic, použijte **VB**a pro C++ použijte **CPP**.
 
    > [!TIP]
    > Chcete-li zobrazit všechny dostupné hodnoty jazyka, projděte si [oddíl Atributy elementu Kód](code-snippets-schema-reference.md#attributes) na referenční stránce [schema fragmentů kódu.](code-snippets-schema-reference.md)
