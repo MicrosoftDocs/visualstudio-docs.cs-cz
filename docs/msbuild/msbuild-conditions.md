@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e69e5c8fc7404c0c313774271fd07b6315e5270
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0d51aa0a5ef995abbe150160e378aa8885cc9706
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633366"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472682"
 ---
 # <a name="msbuild-conditions"></a>Podmínky msbuildu
 
@@ -39,6 +39,22 @@ MSBuild podporuje konkrétní sadu podmínek, které `Condition` lze použít v�
 |Nebo|Vyhodnotí, `true` pokud alespoň jeden z operandů vyhodnotí `true`.|
 |()|Seskupovací mechanismus, který vyhodnocuje, `true` pokud výrazy obsažené uvnitř vyhodnotit `true`.|
 |$if$ ( %expression% ), $else$, $endif$|Zkontroluje, `%expression%` zda zadaný odpovídá řetězcové hodnotě předaného parametru vlastní šablony. Pokud `$if$` je podmínka `true`vyhodnocena do , pak jsou její příkazy spuštěny; v opačném `$else$` případě je podmínka zkontrolována. Pokud `$else$` je `true`podmínka , pak jeho příkazy jsou spuštěny; v opačném `$endif$` případě podmínka ukončí vyhodnocení výrazu.<br /><br /> Příklady použití naleznete v tématu [Visual Studio project/item template parameter logic](https://stackoverflow.com/questions/6709057/visual-studio-project-item-template-parameter-logic).|
+
+Můžete použít metody řetězce v podmínkách, jak je znázorněno v následujícím příkladu, ve kterém <xref:System.String.TrimEnd> se používá funkce k porovnání pouze příslušné části řetězce, k rozlišení mezi rozhraními .NET Framework a .NET Core target frameworks.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net45;net48;netstandard2.1;netcoreapp2.1;netcoreapp3.1</TargetFrameworks>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(TargetFramework.TrimEnd('0123456789.'))' == 'net'">
+        <!-- Properties for .NET Framework -->
+    </PropertyGroup>
+
+</Project>
+```
 
 ## <a name="see-also"></a>Viz také
 

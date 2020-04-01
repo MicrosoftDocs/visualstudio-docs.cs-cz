@@ -1,6 +1,6 @@
 ---
 title: Cílené rozhraní .NET
-ms.date: 02/06/2018
+ms.date: 03/31/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - targeting .NET Framework [Visual Studio]
@@ -11,20 +11,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec81b38ab68c327f25c9f94b6329a700e2662383
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 48d770f5d88e19c749c1a1e657c369089d4c7afb
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79303419"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472732"
 ---
 # <a name="framework-targeting-overview"></a>Přehled cílení na rozhraní
 
 V sadě Visual Studio můžete určit verzi rozhraní .NET, na kterou má projekt cílit. Cílení na architekturu pomáhá zaručit, že aplikace používá pouze funkce, které jsou k dispozici v zadané verzi rozhraní. Aby se aplikace rozhraní .NET Framework spouštěla v jiném počítači, musí být verze architektury, na kterou se aplikace zaměřuje, kompatibilní s verzí rozhraní framework, která je nainstalována v počítači.
 
-Řešení sady Visual Studio může obsahovat projekty, které cílí na různé verze rozhraní .NET.
-
-Další informace o cílových architekturách naleznete [v tématu Target Frameworks](/dotnet/standard/frameworks).
+Řešení sady Visual Studio může obsahovat projekty, které cílí na různé verze rozhraní .NET.  Všimněte si však, že můžete sestavit pouze proti jedné verzi rozhraní .NET buď pomocí odkazpodmínek pro jedno sestavení nebo rekurzivně sestavit různé binární soubory pro každou verzi.  Další informace o cílových architekturách naleznete [v tématu Target Frameworks](/dotnet/standard/frameworks).
 
 > [!TIP]
 > Můžete také cílit na aplikace pro různé platformy. Další informace naleznete v tématu [Multitargeting](../msbuild/msbuild-multitargeting-overview.md).

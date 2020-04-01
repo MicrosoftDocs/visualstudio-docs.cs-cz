@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.prod: visual-studio-dev16
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 3869cf025b4ed0e744a7fea929aac38acb7dd816
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: bd9ac1bda9cb5f5d9cc5d84248200434426307c8
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76922997"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80501939"
 ---
 Pomocí Visual Studia můžete snadno vytvářet, ladit a spouštět kontejnerizované aplikace .NET, ASP.NET a ASP.NET Core a publikovat je do registru kontejnerů Azure (ACR), Docker Hubu, služby Azure App Service nebo vlastního registru kontejnerů. V tomto článku publikujeme aplikaci ASP.NET Core do ACR.
 
@@ -74,6 +74,9 @@ Když je zaškrtnuto políčko **Konfigurovat pro protokol HTTPS** nového dialo
 Vyberte **Docker** z rozevíracího okna ladění na panelu nástrojů a začněte ladit aplikaci. Může se zobrazit zpráva s výzvou k důvěře certifikátu. zvolte důvěřovat certifikátu, aby mohl pokračovat.
 
 Možnost **Nástroje kontejneru** v okně **Výstup** ukazuje, jaké akce probíhají. Poprvé může chvíli trvat, než se základní obrázek stáhne, ale při následných spuštěních je mnohem rychlejší.
+
+>[!NOTE]
+> Pokud potřebujete změnit porty pro ladění, můžete to udělat v souboru *launchSettings.json.* Viz [Nastavení spuštění kontejneru](../../container-launch-settings.md).
 
 ## <a name="containers-window"></a>Okno kontejnerů
 

@@ -1,6 +1,6 @@
 ---
 title: Referenční informace ke schématu fragmentů kódu
-ms.date: 02/25/2019
+ms.date: 03/31/2020
 ms.topic: reference
 helpviewer_keywords:
 - schema reference [Visual Studio]
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22f84fbe5188e74acbf24256444ad11dd9c64347
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 867aac31f1515136e3aa9f0a6f171ec425d90cf7
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79301837"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472794"
 ---
 # <a name="code-snippets-schema-reference"></a>Referenční informace ke schématu fragmentů kódu
 
@@ -235,7 +235,7 @@ Je vyžadována textová hodnota. Tento text popisuje fragment kódu.
 Určuje funkci, která se má provést, když literál nebo objekt získá fokus v sadě Visual Studio.
 
 > [!NOTE]
-> Prvek `Function` je podporován pouze v fragmenty kódu Jazyka C#.
+> Ne všechny `function` jazyky podporují prvky. Podívejte se na jazykově specifickou dokumentaci pro funkce, které jsou k dispozici.
 
 ```xml
 <Function>

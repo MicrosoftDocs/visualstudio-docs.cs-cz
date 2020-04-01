@@ -1,6 +1,6 @@
 ---
 title: 'Krok 6: Přidání časovače'
-ms.date: 11/04/2016
+ms.date: 03/31/2020
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
@@ -13,12 +13,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23d050df688d4d1efec75245e6f48d748464170c
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 0473ab07155e0f132e8e6207361e409b804257f2
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77579323"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472777"
 ---
 # <a name="step-6-add-a-timer"></a>Krok 6: Přidání časovače
 Dále přidáte <xref:System.Windows.Forms.Timer> ovládací prvek do odpovídající hry. Časovač čeká zadaný počet milisekund a potom vyvolá událost, označovanou jako *značka*. To je užitečné při spuštění akce nebo opakování akce v pravidelných intervalech. V takovém případě můžete pomocí časovače povolit hráči zvolit dvě ikony a pokud se ikony neshodují, po krátké době tyto ikony opět skrýt.
@@ -48,12 +48,12 @@ Dále přidáte <xref:System.Windows.Forms.Timer> ovládací prvek do odpovídaj
     > [!NOTE]
     > Timer Objekt má `Start()` metodu, která spustí `Stop()` časovač a metoda, která jej zastaví. Když nastavíte **povolenou** vlastnost časovače na **hodnotu True** v okně **Vlastnosti,** začne tikat, jakmile program začne. Ale když necháte nastavena na **False**, nezačne `Start()` tikat, dokud jeho metoda je volána. Normálně časovač spustí jeho Tick událost znovu a znovu, pomocí **Interval** vlastnost k určení, kolik milisekund čekat mezi značkami. Možná jste si všimli, `Stop()` jak je metoda časovače volána uvnitř tick události. To umístí časovač do *režimu jednoho* `Start()` snímku , což znamená, že při volání metody čeká na zadaný interval, spustí jednu událost Tick a pak se zastaví.
 
-4. Chcete-li zobrazit nový časovač v akci, přejděte do editoru kódu `label_Click()` a přidejte následující kód do horní a dolní části metody obslužné rutiny události. (Přidáváte příkaz `if` na začátek a tři příkazy na konec; zbytek metody zůstane stejný.)
+4. Chcete-li zobrazit nový časovač v akci, přejděte do editoru kódu `label_Click()` a přidejte následující kód do horní a dolní části metody obslužné rutiny události. (Přidáváte dva `if` příkazy na začátek a tři příkazy na konec; zbytek metody zůstane stejný.)
 
      [!code-csharp[VbExpressTutorial4Step6#8](../ide/codesnippet/CSharp/step-6-add-a-timer_2.cs)]
      [!code-vb[VbExpressTutorial4Step6#8](../ide/codesnippet/VisualBasic/step-6-add-a-timer_2.vb)]
 
-     Kód v horní části metody zkontroluje, zda byl časovač spuštěn kontrolou hodnoty **Vlastnost Ipovač.** Pokud si hráč vybere první a druhý ovládací prvk Label a spustí se časovač, volba třetího štítku nic neudělá.
+     Kód v horní části metody zkontroluje, zda byl časovač spuštěn kontrolou hodnoty **Vlastnost Ipovač.** Pokud si hráč vybere první a druhý ovládací prvk Label a spustí se časovač, volba třetího štítku nic neudělá. To také zabraňuje hráči rychle kliknutím potřetí před hra je připravena na další první kliknutí. 
 
      Kód v dolní části metody `secondClicked` nastaví referenční proměnnou ke sledování druhého ovládacího prvku Label, který hráč zvolil, a pak nastaví barvu ikony tohoto popisku na černou, aby byla viditelná. Poté spustí časovač v jednorázovém režimu, takže čeká 750 milisekund a potom vyvolá jednu událost impulzu. Obslužná rutina události Tick časovače `firstClicked` skryje dvě ikony a obnoví proměnné a `secondClicked` referenční proměnné, takže formulář je připraven pro hráče vybrat jiný pár ikon.
 

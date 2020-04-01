@@ -1,16 +1,16 @@
 ---
 title: Připojení k projektům v Průzkumníkovi týmu
-ms.date: 12/04/2018
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: 936fcb598ccb7919eca0a35a1191732bce1c8e23
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: fe4ce27d8783d457015310ef4d6fadfde230b97c
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75585480"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472749"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Připojení k projektům v Průzkumníkovi týmu
 
@@ -44,3 +44,4 @@ Připojení k projektu:
 
 - [Referenční dokumentace k Team Exploreru](reference/team-explorer-reference.md)
 - [Připojení k projektu (Azure DevOps)](/azure/devops/organizations/projects/connect-to-projects)
+- [Poradce při potížích s připojením k projektu](/azure/devops/user-guide/troubleshoot-connection?view=azure-devops)

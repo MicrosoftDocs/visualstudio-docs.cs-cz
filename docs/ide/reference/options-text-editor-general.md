@@ -33,12 +33,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ebe526bbac859777edb4c2c78c65a1cdbd27fc85
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ed55d65555425b04749696b5510cfe799d2a1194
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75568409"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472818"
 ---
 # <a name="options-dialog-box-text-editor--general"></a>Dialogové okno Možnosti: Obecné editoru \> textu
 
@@ -93,6 +93,10 @@ Je-li tato možnost vybrána, zobrazí šedé pole kolem řádku kódu, ve kter�
 ### <a name="show-structure-guide-lines"></a>Zobrazit vodicí čáry struktury
 
 Když je tato volba vybraná, v editoru se zobrazí svislé čáry, které jsou zaokřovány do strukturovaných bloků kódu, což umožňuje snadno identifikovat jednotlivé bloky kódu.
+
+### <a name="show-file-health-indicator"></a>Zobrazit indikátor stavu souboru
+
+Je-li tato možnost vybrána, zobrazí se v levém dolním rohu editoru čára indikátoru stavu souboru (chyby, upozornění) s možnostmi vyčištění kódu.
 
 ## <a name="see-also"></a>Viz také
 

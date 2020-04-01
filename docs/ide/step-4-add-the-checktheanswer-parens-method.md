@@ -1,5 +1,5 @@
 ---
-title: 'Krok 4: Přidání metody CheckTheAnswer().'
+title: 'Krok 4: Přidání metody CheckTheAnswer()'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,14 +13,14 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: def01817fbd42a0da1a0392e00ba9ccff6876470
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 199cee66013392a253139abf8ef1b88b502abac2
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77579842"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472621"
 ---
-# <a name="step-4-add-the-checktheanswer-method"></a>Krok 4: Přidání metody CheckTheAnswer().
+# <a name="step-4-add-the-checktheanswer-method"></a>Krok 4: Přidání metody CheckTheAnswer()
 
 Ve čtvrté části tohoto kurzu napíšete metodu , která určuje, `CheckTheAnswer()`zda jsou správné odpovědi na matematické problémy. Toto téma je součástí série kurzů o základních konceptech kódování. Přehled kurzu najdete v [tématu Výuka 2: Vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
@@ -32,7 +32,7 @@ Ve čtvrté části tohoto kurzu napíšete metodu , která určuje, `CheckTheAn
 > [!NOTE]
 > Pokud jste po spolu v jazyce Visual `Function` Basic, budete `Sub` používat klíčové slovo namísto obvyklé klíčové slovo, protože tato metoda vrátí hodnotu. Je to opravdu tak jednoduché: sub nevrátí hodnotu, ale funkce ano.
 
-1. Přidejte `CheckTheAnswer()` metodu.
+1. Přidejte `CheckTheAnswer()` metodu. Tato metoda by měla být v souladu s `StartTheQuiz()`jinými metodami, které jste provedli, například .
 
      Při volání této metody přidá hodnoty addend1 a addend2 a porovná výsledek s <xref:System.Windows.Forms.NumericUpDown> hodnotou v ovládacím prvku součtu. Pokud jsou hodnoty stejné, metoda vrátí `true`hodnotu . V opačném případě vrátí `false`metoda hodnotu . Váš kód by měl vypadat takto.
 
@@ -43,7 +43,7 @@ Ve čtvrté části tohoto kurzu napíšete metodu , která určuje, `CheckTheAn
 
      Dále zkontrolujete odpověď aktualizací kódu v metodě pro obslužnou rutinu <xref:System.Windows.Forms.Timer.Tick> události časovače pro volání nové `CheckTheAnswer()` metody.
 
-2. Přidejte následující kód `if else` do příkazu.
+2. Přidejte následující kód `if else` do `Timer1_Tick()` příkazu v metodě, takže časovač se zastaví, když uživatel dostane správnou odpověď.
 
      [!code-vb[VbExpressTutorial3Step4#10](../ide/codesnippet/VisualBasic/step-4-add-the-checktheanswer-parens-method_2.vb)]
      [!code-csharp[VbExpressTutorial3Step4#10](../ide/codesnippet/CSharp/step-4-add-the-checktheanswer-parens-method_2.cs)]

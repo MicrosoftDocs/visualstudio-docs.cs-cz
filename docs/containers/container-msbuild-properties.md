@@ -6,16 +6,16 @@ ms.author: ghogen
 ms.date: 06/06/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 987d358abcccadf36d15593722ff55ba4b879d03
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3caa8a76f461515c0d2265590383861b6e10d0a1
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "71950687"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472667"
 ---
 # <a name="container-tools-build-properties"></a>Kontejnerové nástroje sestavení vlastnosti
 
-Můžete přizpůsobit, jak Visual Studio staví projekty kontejnerů nastavením vlastností, které MSBuild používá k sestavení projektu. Můžete například změnit název souboru Dockerfile, zadat značky a popisky pro obrázky, poskytnout další argumenty předané příkazům Dockeru a určit, zda Visual Studio provádí určité optimalizace výkonu, jako je vytváření mimo prostředí kontejneru. Můžete také nastavit vlastnosti ladění, jako je například název spustitelného souboru ke spuštění a argumenty příkazového řádku, které chcete poskytnout.
+Můžete přizpůsobit, jak Visual Studio staví projekty kontejnerů nastavením vlastností, které MSBuild používá k sestavení projektu. Můžete například změnit název souboru Dockerfile, zadat značky a popisky pro vaše image, poskytnout další argumenty předané příkazům Dockeru a určit, zda Visual Studio provádí určité optimalizace výkonu, jako je vytváření mimo prostředí kontejneru. Můžete také nastavit vlastnosti ladění, jako je například název spustitelného souboru ke spuštění a argumenty příkazového řádku, které chcete poskytnout.
 
 Chcete-li nastavit hodnotu vlastnosti, upravte soubor projektu. Předpokládejme například, že váš dockerfile se nazývá *MyDockerfile*. Vlastnost v `DockerfileFile` souboru projektu můžete nastavit následujícím způsobem.
 
@@ -41,7 +41,7 @@ V následující tabulce jsou uvedeny vlastnosti MSBuild, které jsou k dispozic
 | DockerImageLabels | Výchozí sada popisků aplikovaných na image Dockeru. | com.microsoft.created-by=visual-studio;com.microsoft.visual-studio.project-name=$(MSBuildProjectName) |1.5.4 nebo novější|
 | DockerFastModeProjectMountDirectory|V **rychlém režimu**tato vlastnost určuje, kde je výstupní adresář projektu připojen ke svazku do spuštěného kontejneru.|C:\app (Windows) nebo /app (Linux)|1.9.2 nebo novější|
 | DockerfileBuildArguments | Další argumenty předané příkazu sestavení Dockeru. | Neužívá se. |1.0.1872750 nebo novější|
-| DockerfileContext | Výchozí kontext použitý při vytváření image Dockeru. | Sada visual studio. |1.0.1872750 nebo novější|
+| DockerfileContext | Výchozí kontext používaný při vytváření image Dockeru jako cesta vzhledem k dockerfile. | Sada visual studio. |1.0.1872750 nebo novější|
 | DockerfileFastModeStage | Fáze Dockerfile (to znamená cíl), která se má použít při vytváření bitové kopie v režimu ladění. | První fáze nalezená v Dockerfile (základna) |
 | Soubor dockeru | Popisuje výchozí soubor Dockerfile, který bude použit k sestavení nebo spuštění kontejneru pro projekt. To může být také cesta. | Soubor dockeru |1.0.1872750 nebo novější|
 | DockerfileRunArguments | Další argumenty předané příkazu spuštění Dockeru. | Neužívá se. |1.0.1872750 nebo novější|

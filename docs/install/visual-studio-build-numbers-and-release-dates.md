@@ -5,18 +5,18 @@ description: Seznam vydaných verzí a čísel sestavení pro visual studio seř
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 03/26/2020
+ms.date: 03/31/2020
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 05808737a735160c995aafb7d2e9b12ccbb13e1b
-ms.sourcegitcommit: 0d08e2c1d9940a6ac2c7f647e9454b42011ebc63
+ms.openlocfilehash: 6eb4a72b4ce430e59c8760a5281fdab5fc7f3766
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80329529"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472701"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Čísla sestavení a data vydání sady Visual Studio
 
@@ -28,6 +28,7 @@ V následující tabulce jsou uvedena čísla sestavení a data vydání pro Vis
 
 | **Verze**| **Kanál** | **Datum vydání** | **Sestavení verze** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.5.2 | Vydat | 31. března 2020 | 16.5.29926.136 |
 | 16.6.0 | Preview 2 | 26. března 2020 | 16.6.29924.181 |
 | 16.5.1 | Vydat | 24. března 2020 | 16.5.29920.165 |
 | 16.6.0 | Náhled 1 | 16. března 2020 | 16.6.29911.98 |
@@ -307,6 +308,6 @@ V následující tabulce jsou uvedena čísla sestavení a data vydání pro Vis
 ## <a name="see-also"></a>Viz také
 
 * [Visual Studio vydání rytmus](/visualstudio/productinfo/release-rhythm/)
-* [Průvodce správcem sady Visual Studio](visual-studio-administrator-guide.md)
-* [Instalace sady Visual Studio pomocí parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
+* [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)
+* [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 * [Nástroje pro zjišťování a správu instancí sady Visual Studio](tools-for-managing-visual-studio-instances.md)

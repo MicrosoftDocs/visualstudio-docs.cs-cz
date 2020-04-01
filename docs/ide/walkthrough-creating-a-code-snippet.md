@@ -1,6 +1,6 @@
 ---
 title: 'Návod: Vytvoření fragmentu kódu'
-ms.date: 06/10/2019
+ms.date: 03/31/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code snippets, creating
@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 2554729be8f3b9697d1407befd68cbb21fac10dd
-ms.sourcegitcommit: 992dd075e65b5f3adefc1ff758975298c47381e7
+ms.openlocfilehash: 1bfadb4b8d1836d131b669ea43f28f522f3fbd8b
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80435042"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472807"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>Návod: Vytvoření fragmentu kódu
 
