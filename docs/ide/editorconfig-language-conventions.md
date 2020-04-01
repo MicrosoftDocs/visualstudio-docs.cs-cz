@@ -1,24 +1,24 @@
 ---
 title: Konvence jazyka .NET pro EditorConfig
-ms.date: 09/23/2019
+ms.date: 03/31/2020
 ms.topic: reference
 dev_langs:
 - CSharp
 - VB
 helpviewer_keywords:
 - language code style rules [EditorConfig]
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 471932f6a097879da194dc6bb4f18807f2323397
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0c06d6c16082a8300092e36b9bbed126c66f8af4
+ms.sourcegitcommit: 334024a43477290ecc610e70c80a0f772787a7d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79301893"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80528032"
 ---
 # <a name="language-conventions"></a>Konvence jazyka
 
@@ -94,7 +94,6 @@ Pravidla stylu v této části platí pro c# a visual basic.
   - předdefinovaný\_\_text\_\_stylu dotnet pro\_member_access
 - [Předvolby modifikátoru](#normalize-modifiers)
   - dotnet\_\_styl\_vyžadují accessibility_modifiers
-  - csharp\_\_preferoval modifier_order
   - \_přednostní\_modifier_order jazyka\_
   - Pole jen\_\_pro\_čtení stylu dotnet
 - [Předvolby závorek](#parentheses-preferences)
@@ -116,6 +115,7 @@ Pravidla stylu v této části platí pro c# a visual basic.
 - [Předvolby kontroly "Null"](#null-checking-preferences)
   - coalesce_expression stylu\_\_dotnet
   - null_propagation stylu\_\_dotnet
+  - Dotnet\_\_styl\_\_preferuje\_\_je\_kontrola null\_\_nad metodou rovnosti odkazů
 
 ### <a name="this-and-me-qualifiers"></a><a name="this-and-me"></a>"Tohle." a "Já". Kvalifikátory
 
@@ -407,6 +407,43 @@ Příklady kódu:
 Public Class MyClass
     Private Shared ReadOnly daysInYear As Int = 365
 End Class
+```
+
+#### <a name="visual_basic_style_unused_value_expression_statement_preference"></a>visual_basic_style_unused_value_expression_statement_preference
+
+|||
+|-|-|
+| **Název pravidla** | visual_basic_style_unused_value_expression_statement_preference |
+| **ID pravidla** | IDE0058 |
+| **Použitelné jazyky** | Visual Basic |
+| **Hodnoty** | `unused_local_variable:silent` |
+| **Výchozí nastavení sady Visual Studio** | `unused_local_variable:silent` |
+
+Příklady kódu:
+
+```vb
+' visual_basic_style_unused_value_expression_statement_preference = unused_local_variable:silent
+
+Dim unused = Computation()
+```
+
+#### <a name="visual_basic_style_unused_value_assignment_preference"></a>visual_basic_style_unused_value_assignment_preference
+
+|||
+|-|-|
+| **Název pravidla** | visual_basic_style_unused_value_assignment_preference |
+| **ID pravidla** | IDE0059 |
+| **Použitelné jazyky** | Visual Basic |
+| **Hodnoty** | `unused_local_variable:silent` |
+| **Výchozí nastavení sady Visual Studio** | `unused_local_variable:silent` |
+
+Příklady kódu:
+
+```vb
+' visual_basic_style_unused_value_assignment_preference = unused_local_variable:suggestion
+
+Dim unused = Computation()
+Dim x = 1;
 ```
 
 #### <a name="dotnet_style_readonly_field"></a>dotnet_style_readonly_field
@@ -941,6 +978,7 @@ Tato pravidla se mohou v souboru *.editorconfig* zobrazit následujícím způso
 [*.{cs,vb}]
 dotnet_style_coalesce_expression = true:suggestion
 dotnet_style_null_propagation = true:suggestion
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:silent
 ```
 
 #### <a name="dotnet_style_coalesce_expression"></a>coalesce_expression stylu\_\_dotnet
@@ -1002,6 +1040,16 @@ Dim v = o?.ToString()
 Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or
 Dim v = If(o IsNot Nothing, o.ToString(), Nothing)
 ```
+
+### <a name="dotnet_style_prefer_is_null_check_over_reference_equality_method"></a>Dotnet\_\_styl\_\_preferuje\_\_je\_kontrola null\_\_nad metodou rovnosti odkazů
+
+|||
+|-|-|
+| **Název pravidla** | dotnet_style_prefer_is_null_check_over_reference_equality_method |
+| **ID pravidla** | IDE0041 |
+| **Použitelné jazyky** | C# 6.0+ a Visual Basic 14+ |
+| **Hodnoty** | `true`- Prefer je null check over reference equality method<br /><br />`false`- Preferovat referenční metodu rovnosti nad je kontrola null |
+| **Výchozí nastavení sady Visual Studio** | `true:silent` |
 
 ## <a name="net-code-quality-settings"></a>Nastavení kvality kódu .NET
 
@@ -1071,7 +1119,7 @@ Pravidla stylu v této části platí pouze pro C#.
   - csharp\_\_styl\_výraz bodied_accessors
   - výraz\_\_stylu\_csharp bodied_lambdas
   - výraz\_stylu\_\_csharp\_local_functions
-- [Porovnávání vzorů](#pattern-matching)
+- [Porovnávání](#pattern-matching)
   - csharp\_\_styl\_\_vzor\_\_odpovídající\_přes je s cast_check
   - csharp\_\_styl\_\_vzor\_\_odpovídající\_přes jako u null_check
 - [Vložené deklarace proměnných](#inlined-variable-declarations)
@@ -1081,6 +1129,7 @@ Pravidla stylu v této části platí pouze pro C#.
 - [Předvolby kontroly "Null"](#c-null-checking-preferences)
   - csharp\_\_styl throw_expression
   - podmíněný\_\_delegate_call\_stylu csharp
+- [Předvolby modifikátoru](#normalize-modifiers) -csharp\_preferované\_modifier_order
 - [Předvolby bloku kódu](#code-block-preferences)
   - csharp\_prefer_braces
 - [Předvolby nevyužitých hodnot](#unused-value-preferences)

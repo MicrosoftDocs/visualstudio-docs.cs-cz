@@ -1,21 +1,21 @@
 ---
 title: Konvence pojmenování rozhraní .NET pro soubory EditorConfig
-ms.date: 08/07/2019
+ms.date: 03/31/2020
 ms.topic: reference
 helpviewer_keywords:
 - naming conventions [EditorConfig]
 - EditorConfig naming conventions
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5c4115f4d63456e105fb4a6770fd1650938770d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ccf62c5ffc3f526eada85478f37480fcf5d75cba
+ms.sourcegitcommit: 334024a43477290ecc610e70c80a0f772787a7d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588600"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80528018"
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>Konvence pojmenování rozhraní .NET pro editorConfig
 
@@ -42,7 +42,7 @@ Chcete-li popsat druh symbolů, na které se má použít pravidlo pojmenování
 V následujícím seznamu jsou uvedeny přípustné hodnoty a můžete zadat více hodnot jejich oddělením čárkou.
 
 - \*(Tuto hodnotu použijte k určení všech symbolů)
-- Obor názvů
+- namespace
 - třída
 - struct 
 - rozhraní
@@ -56,6 +56,8 @@ V následujícím seznamu jsou uvedeny přípustné hodnoty a můžete zadat ví
 - type_parameter
 - local
 - local_function
+
+[!NOTE] Členové řazené kolekce členů nejsou aktuálně podporovány.
 
 ### <a name="accessibility-levels-of-symbols"></a>Úrovně přístupnosti symbolů
 

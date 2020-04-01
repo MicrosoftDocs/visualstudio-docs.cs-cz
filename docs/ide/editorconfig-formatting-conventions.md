@@ -1,24 +1,24 @@
 ---
 title: Konvence formátování rozhraní .NET pro editorconfig
-ms.date: 07/17/2019
+ms.date: 03/31/2020
 ms.topic: reference
 dev_langs:
 - CSharp
 - VB
 helpviewer_keywords:
 - formatting conventions [EditorConfig]
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 64f6a45b3a5cc49cd541ceb905356093ea4ec221
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f10d4c710c0686b22e29883cabc21550ffd32f8c
+ms.sourcegitcommit: 334024a43477290ecc610e70c80a0f772787a7d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589224"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80527976"
 ---
 # <a name="formatting-conventions"></a>Konvence formátování
 
@@ -151,6 +151,8 @@ Pravidla formátování v této části platí pouze pro kód jazyka C#.
 - [Možnosti obtékání](#wrap-options)
   - csharp_preserve_single_line_statements
   - csharp_preserve_single_line_blocks
+- [Použití možností direktivy](#using-directive-options) 
+  - csharp_using_directive_placement
 
 ### <a name="new-line-options"></a>Možnosti nového řádku
 
@@ -1207,6 +1209,50 @@ public int Foo { get; set; }
 public int MyProperty
 {
     get; set;
+}
+```
+
+- [Použití možností direktivy](#using-directive-options) 
+  - csharp_using_directive_placement
+  
+### <a name="using-directive-options"></a>Použití možností direktivy
+
+Toto pravidlo formátování se týká použití použití direktiv umístěných uvnitř versus mimo obor názvů.
+
+Příklad souboru *.editorconfig:*
+
+```ini
+# 'using' directive preferences
+[*.cs]
+csharp_using_directive_placement = outside_namespace
+csharp_using_directive_placement = inside_namespace
+```
+
+#### <a name="csharp_using_directive_placement"></a>csharp_using_directive_placement
+
+|||
+|-|-|
+| **Název pravidla** | csharp_using_directive_placement |
+| **Použitelné jazyky** | C# |
+| **Zavedená verze** |  Visual Studio 2019 verze 16.1 |
+| **Hodnoty** | `outside_namespace`- Opustit pomocí direktiv mimo obor názvů<br /><br />`inside_namespace`- Nechte pomocí direktiv uvnitř oboru názvů |
+| **Výchozí nastavení sady Visual Studio** | `outside_namespace` |
+
+Příklady kódu:
+
+```csharp
+// csharp_using_directive_placement = outside_namespace
+using System;
+
+namespace Conventions
+{
+
+}
+
+// csharp_using_directive_placement = inside_namespace
+namespace Conventions
+{
+    using System;
 }
 ```
 
