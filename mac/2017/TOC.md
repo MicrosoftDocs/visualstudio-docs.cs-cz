@@ -52,9 +52,9 @@
 ## [Nastavení úložiště Subversion](/visualstudio/mac/set-up-subversion-repository)
 ## [Práce s úložištěm Subversion](/visualstudio/mac/working-with-subversion)
 
-# [Nasazení webové aplikace](/visualstudio/mac/web-app-deployment.md)
-## [Publikování do Azure App Service](/visualstudio/mac/publish-app-svc.md)
-## [Publikování do složky](/visualstudio/mac/publish-folder.md)
+# [Nasazení webové aplikace](/visualstudio/mac/web-app-deployment)
+## [Publikování do Azure App Service](/visualstudio/mac/publish-app-svc)
+## [Publikování do složky](/visualstudio/mac/publish-folder)
 
 # [Úlohy](/visualstudio/mac/workloads)
 ## [ASP.NET Core](/visualstudio/mac/asp-net-core)
