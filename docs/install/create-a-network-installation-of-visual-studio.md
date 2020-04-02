@@ -1,7 +1,7 @@
 ---
 title: Vytvoření síťové instalace
 description: Přečtěte si, jak vytvořit instalační bod sítě pro nasazení sady Visual Studio v rámci rozlehlé sítě.
-ms.date: 10/29/2019
+ms.date: 03/27/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: bc31b6c5286e5d02d5fd6d4da441a001f190de90
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ea7efd82aa25844e8eb33745aa53d44be1ed14f6
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79303405"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80544064"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Vytvoření síťové instalace sady Visual Studio
 
@@ -237,8 +237,11 @@ Správci mohou nasadit aplikaci Visual Studio na klientské pracovní stanice ja
 
 Při instalaci z rozložení je nainstalovaný obsah získán z rozložení. Pokud však vyberete komponentu, která není v rozvržení, bude získána z internetu.  Pokud chcete zabránit nastavení sady Visual Studio ve stahování obsahu, který `--noWeb` chybí v rozložení, použijte tuto možnost. Pokud `--noWeb` je použit a v rozvržení chybí veškerý obsah, který je vybrán k instalaci, instalace se nezdaří.
 
+> [!TIP]
+> Chcete-li nainstalovat ze zdroje offline do počítače, který není `--noWeb` `--noUpdateInstaller` připojen k internetu, zadejte možnosti i možnosti. První z nich zabraňuje stahování aktualizovaných úloh, součástí a tak dále. Ten zabraňuje instalačnímu programu v samoaktualizaci z webu.
+
 > [!IMPORTANT]
-> Tato `--noWeb` možnost nezabrání nastavení sady Visual Studio v kontrole aktualizací. Další informace naleznete na stránce [Řízení aktualizací nasazení sady Visual Studio v síti.](controlling-updates-to-visual-studio-deployments.md)
+> Tato `--noWeb` možnost nezabrání nastavení sady Visual Studio v počítači připojeném k internetu z kontroly aktualizací. Další informace naleznete na stránce [Řízení aktualizací nasazení sady Visual Studio v síti.](controlling-updates-to-visual-studio-deployments.md)
 
 ### <a name="error-codes"></a>Kódy chyb
 
@@ -280,17 +283,18 @@ Pokud potřebujete vytvořit rozložení pro starší verzi sady Visual [https:/
 
 Pokud narazíte na problém s offline instalací, chceme o něm vědět. Nejlepší způsob, jak nám to říct, je použít nástroj [Nahlásit problém.](../ide/how-to-report-a-problem-with-visual-studio.md) Při použití tohoto nástroje nám můžete poslat telemetrii a protokoly, které potřebujeme, aby nám pomohli diagnostikovat a opravit problém.
 
-Nabízíme také možnost podpory [**živého chatu**](https://visualstudio.microsoft.com/vs/support/#talktous) (pouze v angličtině) pro problémy související s instalací.
+Nabízíme také možnost podpory [**instalačního chatu**](https://visualstudio.microsoft.com/vs/support/#talktous) (pouze v angličtině) pro problémy související s instalací.
 
 Máme k dispozici i další možnosti podpory. Seznam najdete na stránce [Zpětná vazba.](../ide/feedback-options.md)
 
 ## <a name="see-also"></a>Viz také
 
-- [Průvodce správcem sady Visual Studio](visual-studio-administrator-guide.md)
+- [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)
 - [Aktualizace síťové instalace sady Visual Studio](update-a-network-installation-of-visual-studio.md)
 - [Poradce při potížích se sítí při instalaci nebo použití sady Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md)
 - [Řízení aktualizací nasazení sady Visual Studio v síti](controlling-updates-to-visual-studio-deployments.md)
 - [Životní cyklus produktu Visual Studio a servis](/visualstudio/releases/2019/servicing/)
 - [Aktualizace sady Visual Studio v servisním směrném plánu](update-servicing-baseline.md)
-- [Instalace sady Visual Studio pomocí parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
+- [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 - [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md)
+- [Instalace certifikátů požadovaných pro offline instalaci sady Visual Studio](/install-certificates-for-visual-studio-offline.md)

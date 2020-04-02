@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 12/20/2019
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
-ms.openlocfilehash: 30826f68be1ef2f29940c8f9c95b2b79435e0a2a
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: dd4db2502c65e9330bde5f475fc97b2e86a49e4a
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75852041"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80544029"
 ---
 # <a name="extending-visual-studio-for-mac"></a>Rozšíření sady Visual Studio pro Mac
 
@@ -161,7 +161,7 @@ Informace o rozsahu oblastí, které jsou k dispozici pro vývoj, naleznete v [r
 
 ## <a name="extending-the-new-editor"></a>Rozšíření nového editoru
 
-Visual Studio for Mac [představuje nové nativní textové editoru kakaa](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes#RTW) vytvořené na vrstvách stejného editoru z Visual Studia v systému Windows.
+Visual Studio for Mac [představuje nové nativní textové editoru kakaa](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes) vytvořené na vrstvách stejného editoru z Visual Studia v systému Windows.
 
 Jednou z mnoha výhod sdílení editoru mezi Visual Studio a Visual Studio pro Mac je, že kód cílení na editor Visual Studio lze přizpůsobit pro spuštění na Visual Studio pro Mac.
 

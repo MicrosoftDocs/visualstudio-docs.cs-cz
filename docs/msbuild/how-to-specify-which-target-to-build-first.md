@@ -12,19 +12,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e008e3181cd7c633179f35e7639265a2495fafe2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c679b2a43ec799035f9bafb6a03a546808498342
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633795"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80543992"
 ---
 # <a name="how-to-specify-which-target-to-build-first"></a>Postup: Určete, který cíl má být sestavován jako první
 
 Soubor projektu může obsahovat `Target` jeden nebo více prvků, které definují způsob vytvoření projektu. Modul Microsoft Build Engine (MSBuild) vytvoří první projekt, který najde, a všechny `DefaultTargets` závislosti, `InitialTargets` pokud soubor projektu obsahuje atribut, atribut nebo cíl je určen na příkazovém řádku pomocí **přepínače -target.**
 ## <a name="use-the-initialtargets-attribute"></a>Použití atributu InitialTargets
 
- Atribut `InitialTargets` `Project` prvku určuje cíl, který bude spuštěn jako první, i když jsou `DefaultTargets` cíle zadány na příkazovém řádku nebo v atributu.
 Atribut `InitialTargets` `Project` prvku určuje cíl, který bude spuštěn jako první, i když jsou `DefaultTargets` cíle zadány na příkazovém řádku nebo v atributu.
 
 #### <a name="to-specify-one-initial-target"></a>Určení jednoho počátečního cíle
@@ -77,6 +76,6 @@ Atribut `InitialTargets` `Project` prvku určuje cíl, který bude spuštěn jak
 
 ## <a name="see-also"></a>Viz také
 
-- [Msbuild](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)
 - [Cíle](../msbuild/msbuild-targets.md)
 - [Postup: Čištění sestavení](../msbuild/how-to-clean-a-build.md)

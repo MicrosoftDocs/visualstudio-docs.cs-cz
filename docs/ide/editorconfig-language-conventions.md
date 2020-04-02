@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0c06d6c16082a8300092e36b9bbed126c66f8af4
-ms.sourcegitcommit: 334024a43477290ecc610e70c80a0f772787a7d6
+ms.openlocfilehash: a3f80eb555ef11a1e0a462e93d4508e778bd987d
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80528032"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80544017"
 ---
 # <a name="language-conventions"></a>Konvence jazyka
 
@@ -108,7 +108,6 @@ Pravidla stylu v této části platí pro c# a visual basic.
   - dotnet\_\_styl\_raději\_odvodit tuple_names
   - Dotnet\_\_styl\_preferují\_\_odvozené\_anonymní typ member_names
   - dotnet\_\_styl\_\_preferují automatické vlastnosti
-  - Dotnet\_\_styl\_\_preferuje\_\_je\_kontrola null\_\_nad metodou rovnosti odkazů
   - Dotnet\_\_styl\_\_upřednostňovat podmíněný výraz\_před přiřazením\_
   - Dotnet\_\_styl\_\_upřednostňovat podmíněný výraz\_před návratem\_
   - Dotnet\_\_styl\_\_preferují složené přiřazení
@@ -1129,7 +1128,8 @@ Pravidla stylu v této části platí pouze pro C#.
 - [Předvolby kontroly "Null"](#c-null-checking-preferences)
   - csharp\_\_styl throw_expression
   - podmíněný\_\_delegate_call\_stylu csharp
-- [Předvolby modifikátoru](#normalize-modifiers) -csharp\_preferované\_modifier_order
+- [Předvolby modifikátoru](#normalize-modifiers)
+  - csharp\_\_preferoval modifier_order
 - [Předvolby bloku kódu](#code-block-preferences)
   - csharp\_prefer_braces
 - [Předvolby nevyužitých hodnot](#unused-value-preferences)

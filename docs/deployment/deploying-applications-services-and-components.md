@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 006ecdffd7b109c32f7063fee5f454e43c6c4597
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 1a45dea4b386be418f078f6947487b42f7d968e7
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "72806927"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80543956"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>První pohled na nasazení v sadě Visual Studio
 
@@ -146,7 +146,7 @@ Azure Pipelines můžete použít k povolení průběžného nasazení vaší ap
 
 | Typ aplikace | Scénář nasazení | Odkaz |
 | --- | --- | --- |
-| **Aplikace Office** | Doplněk pro Office můžete publikovat z Visual Studia. | [Nasazení a publikování doplňku Office](https://dev.office.com/docs/add-ins/publish/publish) |
+| **Aplikace Office** | Doplněk pro Office můžete publikovat z Visual Studia. | [Nasazení a publikování doplňku Office](/office/dev/add-ins/publish/publish) |
 | **Služba WCF nebo OData** | Jiné aplikace mohou používat služby WCF RIA, které nasadíte na webový server. | [Vývoj a nasazení datových služeb WCF](/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
 | **LightSwitch** | LightSwitch už není podporován od Visual Studia 2017, ale pořád se dá nasadit z Visual Studia 2015 a staršího. | [Nasazení aplikací LightSwitch](https://msdn.microsoft.com/Library/4818d933-295c-4ecc-9148-7ad9ca28dcdb) |
 

@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 8be56581374aefbef41a5173836d1189cceff290
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: cb559bc21b70b66d64bc44fb4269c97304dd81c3
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77579997"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80543933"
 ---
 # <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>Kurz: Vytvořte první univerzální aplikaci platformy Windows v sadě Visual Studio s xaml a c&#35;
 
@@ -42,6 +42,9 @@ Nejprve vytvořte projekt univerzální platformy Windows. Typ projektu je dodá
 1. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
 
 1. V levém podokně dialogového okna **Nový projekt** rozbalte **položku Visual C#** a pak zvolte **Windows Universal**. V prostředním podokně zvolte **Prázdná aplikace (Univerzální Windows).** Poté pojmenujte projekt *HelloWorld* a zvolte **OK**.
+
+   > [!NOTE]
+   > Ujistěte se, že umístění zdrojového projektu je na jednotce ve formátu **NTFS (New Technology File System),** například na jednotce operačního systému (OS). V opačném případě může mít potíže se sestavením a spuštěním projektu. 
 
    ![Šablona projektu Windows Universal v dialogovém okně Nový projekt v prostředí IDE sady Visual Studio](media/new-project-csharp-uwp-helloworld.png)
 

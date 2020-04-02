@@ -6,12 +6,12 @@ ms.author: sayedha
 ms.date: 04/02/2019
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
-ms.openlocfilehash: d0e00929de11ff3fd820670be2bb6361cfb5fa6c
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: cfe7e7f852530c32efbbaec2fbc92060fadeb40e
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75405006"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80543900"
 ---
 # <a name="getting-started-with-aspnet-core"></a>Začínáme s ASP.NET Core
 
@@ -236,7 +236,7 @@ Ujistěte se, že úspěšně provést všechny kroky, aby bylo zajištěno, že
 
 Tato příručka poskytla úvod do ASP.NET Core. Popisuje, co to je, kdy ji použít a za předpokladu, informace o jeho použití v sadě Visual Studio for Mac.
 Další informace o dalších krocích zde naleznete v následujících průvodcích:
-- [ASP.NET hlavní](/aspnet/core/?view=aspnetcore-2.1#build-web-apis-and-web-ui-using-aspnet-core-mvc) dokumenty.
+- [ASP.NET hlavní](/aspnet/core/?view=aspnetcore-2.1) dokumenty.
 - [Vytváření back-endových služeb pro nativní mobilní aplikace](/aspnet/core/mobile/native-mobile-backend), které ukazují, jak vytvořit službu REST pomocí ASP.NET Core pro aplikaci Xamarin.Forms.
 - [ASP.NET základní praktickou laboratoř](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started).
 

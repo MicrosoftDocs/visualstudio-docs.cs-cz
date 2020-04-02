@@ -10,12 +10,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ccf62c5ffc3f526eada85478f37480fcf5d75cba
-ms.sourcegitcommit: 334024a43477290ecc610e70c80a0f772787a7d6
+ms.openlocfilehash: d4864cc20813bc57b35e315a3b415cb6902e6361
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80528018"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80543994"
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>Konvence pojmenování rozhraní .NET pro editorConfig
 
@@ -57,7 +57,8 @@ V následujícím seznamu jsou uvedeny přípustné hodnoty a můžete zadat ví
 - local
 - local_function
 
-[!NOTE] Členové řazené kolekce členů nejsou aktuálně podporovány.
+> [!NOTE] 
+> Členové řazené kolekce členů nejsou aktuálně podporovány.
 
 ### <a name="accessibility-levels-of-symbols"></a>Úrovně přístupnosti symbolů
 
