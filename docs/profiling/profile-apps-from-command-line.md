@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: c109e2ae1db28f8e08ed7c34a7ee0871a6efe670
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 18850a6e365988abd33b7e2e2a3972ba5cb0a91a
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77558118"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638695"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>Měření výkonu aplikace z příkazového řádku
 
@@ -29,9 +29,11 @@ V příkladu popsaném v tomto článku shromažďujete informace o výkonu prog
 
 ## <a name="prerequisites"></a>Požadavky
 
-* Visual Studio 2019 Preview 3 nebo novější verze
+* Visual Studio 2019 nebo novější verze
 
 * Znalost nástrojů příkazového řádku
+
+* Chcete-li shromažďovat informace o výkonu vzdáleného počítače bez nainstalovaného sady Visual Studio, nainstalujte do vzdáleného počítače [nástroje performance pro sady Visual Studio.](https://visualstudio.microsoft.com/downloads#performance-tools-for-visual-studio-2019) Verze nástrojů musí odpovídat verzi sady Visual Studio.
 
 ## <a name="collect-performance-data"></a>Shromažďování údajů o výkonu
 

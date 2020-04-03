@@ -2,19 +2,20 @@
 title: Instalace nástrojů AI
 description: Popisuje, jak nainstalovat nástroje AI pro Visual Studio.
 keywords: ai, vizuální studio
-author: lisawong19
-ms.author: liwong
-manager: routlaw
+author: jillre
+ms.author: jillfra
+manager: jillfra
+monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: c1160c68c79dd595e82ecf761c6e441ecc906f62
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a83deb968811159cfaeddaf537624e21b37e98c7
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75915815"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638580"
 ---
 # <a name="installation"></a>Instalace
 
@@ -37,7 +38,7 @@ Nástroje si můžete stáhnout z [webu Visual Studio Marketplace](https://marke
 
 ## <a name="prepare-your-local-machine"></a>Příprava místního počítače
 
-Před trénování modelů hloubkového učení v místním počítači se ujistěte, že máte nainstalované příslušné požadavky. To zahrnuje ujistěte se, že máte nejnovější ovladače a knihovny pro NVIDIA GPU (pokud máte jeden). Také se ujistěte, že jste nainstalovali knihovny Pythonu a Pythonu, jako jsou NumPy, SciPy a vhodné rámce pro hluboké učení, jako jsou Microsoft Cognitive Toolkit (CNTK), TensorFlow, Caffe2, MXNet, Keras, Theano, PyTorch a Chainer, které plánujete použít ve vašem Projektu.
+Před trénování modelů hloubkového učení v místním počítači se ujistěte, že máte nainstalované příslušné požadavky. To zahrnuje ujistěte se, že máte nejnovější ovladače a knihovny pro NVIDIA GPU (pokud máte jeden). Také se ujistěte, že jste nainstalovali knihovny Pythonu a Pythonu, jako jsou NumPy, SciPy a vhodné architektury pro hluboké učení, jako jsou Microsoft Cognitive Toolkit (CNTK), TensorFlow, Caffe2, MXNet, Keras, Theano, PyTorch a Chainer, které plánujete použít ve svém projektu.
 
 > [!NOTE]
 > Úvod softwaru v následujících podsekcích je výňatek z jejich domovských stránek.

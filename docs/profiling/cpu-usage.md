@@ -1,7 +1,7 @@
 ---
 title: Analýza využití procesoru | Dokumenty společnosti Microsoft
 ms.custom: seodec18
-ms.date: 11/04/2018
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.assetid: 7501a20d-04a1-480f-a69c-201524aa709d
 author: mikejo5000
@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 351247f50560896d53267fcf8d7f4a66a81b9461
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 88272af1733dbbaf7f46743388a8ecb6522e9f1a
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62553496"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638835"
 ---
 # <a name="analyze-cpu-usage"></a>Analýza využití procesoru
 
 Dobrým způsobem, jak začít vyšetřovat problémy s výkonem ve vaší aplikaci, je pochopit jeho využití procesoru. Nástroj **výkon využití procesoru** zobrazuje čas a procento procesoru strávené prováděním kódu v aplikacích C++, C#/Visual Basic a JavaScript.
 
-Nástroj **využití procesoru** lze spustit v otevřeném projektu Sady Visual Studio, v nainstalované aplikaci Microsoft Store nebo připojené ke spuštěné aplikaci nebo procesu. Nástroj můžete spustit na místních nebo vzdálených počítačích nebo na simulátoru nebo emulátoru. Další informace naleznete [v tématu Spuštění nástrojů profilování s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
+Nástroj **využití procesoru** lze spustit v otevřeném projektu Sady Visual Studio, v nainstalované aplikaci Microsoft Store nebo připojené ke spuštěné aplikaci nebo procesu. Další informace naleznete [v tématu Spuštění nástrojů profilování s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
 Nástroj využití **procesoru** můžete spustit s laděním nebo bez něj. V ladicím programu můžete zapínat a vypínat profilování procesoru a zobrazit rozpis využití procesoru podle funkce. Výsledky využití procesoru můžete zobrazit při pozastavení provádění, například v zarážky.
 
@@ -33,7 +33,7 @@ Obvykle místní počítač nejlépe replikuje nainstalované spuštění aplika
 
 ## <a name="collect-cpu-usage-data"></a>Shromažďovat data o využití procesoru
 
-1. V projektu Sady Visual Studio nastavte konfiguraci řešení na **Release** a jako cíl nasazení vyberte **místní počítač.**
+1. V projektu Sady Visual Studio nastavte konfiguraci řešení na **Release** a jako cíl nasazení vyberte **místní debugger systému Windows** (nebo místní **počítač).**
 
     ![Vybrat uvolnění a místní počítač](../profiling/media/cpuuse_selectreleaselocalmachine.png "Vybrat uvolnění a místní počítač")
 

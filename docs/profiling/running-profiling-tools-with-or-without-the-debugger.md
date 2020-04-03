@@ -1,6 +1,6 @@
 ---
 title: Spuštění nástrojů profilování s ladicím programem nebo bez něj | Dokumenty společnosti Microsoft
-ms.date: 11/04/2018
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.assetid: 3fcdccad-c1bd-4c67-bcec-bf33a8fb5d63
 author: mikejo5000
@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 273dc6770f2928ed65d6a473b7f1986bc353687e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: cf544b3bec9b492f1d1669549ba5501a52f7d5f2
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62999465"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638815"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>Spouštění nástrojů pro profilaci s ladicím programem nebo bez něj
 
@@ -33,23 +33,21 @@ Chcete-li se rozhodnout, které nástroje a výsledky použít, zvažte následu
 - Samotný ladicí program mění dobu výkonu, stejně jako nezbytné operace ladicího programu, jako je zachycení událostí výjimky a zatížení modulu.
 - Čísla výkonu sestavení uvolněte v nástrojích **Profiler výkonu** jsou nejpřesnější a nejpřesnější. Výsledky nástrojů integrované s ladicími programy jsou nejužitečnější pro porovnání s jinými měřeními souvisejícími s laděním.
 
+Pro využití procesoru můžete spustit nástroj na vzdáleném počítači pomocí nástrojů příkazového řádku.
+
 ## <a name="collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a>Shromažďování dat profilování při ladění
 
 Když začnete ladění v sadě Visual Studio výběrem **ladění začít** > ladění nebo stisknutím**klávesy** **F5**, zobrazí se ve výchozím nastavení okno **Diagnostické nástroje.** Chcete-li jej otevřít ručně, vyberte **možnost Ladění** > **diagnostických nástrojů služby****Windows** > Show . V okně **Diagnostické nástroje** se zobrazují informace o událostech, paměti procesu a využití procesoru.
 
 ![Diagnostické nástroje](../profiling/media/diagnostictools-update1.png "Diagnostické nástroje")
 
-- Pomocí ikony **Nastavení** na panelu nástrojů vyberte, zda chcete zobrazit **využití paměti**, **analýzu ui**a **využití procesoru**.
+- Pomocí ikony **Nastavení** na panelu nástrojů vyberte, zda chcete zobrazit **využití paměti** nebo **využití procesoru**.
 
 - V **Settings** rozevíracím okně **Nastavení** otevřete **stránky vlastností Nástroje diagnostiky** s dalšími možnostmi.
 
 - Pokud používáte Visual Studio Enterprise, můžete povolit nebo zakázat IntelliTrace v části Visual Studio **Tools** > **Options** > **IntelliTrace**.
 
 Diagnostická relace končí, když zastavíte ladění.
-
-Můžete také zobrazit **diagnostické nástroje** pro vzdálené ladění cílů. Pro vzdálené ladění a profilování visual studio vzdálený ladicí program musí být nainstalován a spuštěn na vzdáleném cíli.
-- Vzdálené ladění a profilování projektů aplikací plochy naleznete [v tématu Vzdálené ladění](../debugger/remote-debugging.md).
-- Vzdálené ladění a profilování aplikací UPW naleznete v tématu [Ladění aplikací UPW na vzdálených počítačích](../debugger/run-windows-store-apps-on-a-remote-machine.md).
 
 ### <a name="the-events-tab"></a>Karta Události
 
@@ -69,7 +67,9 @@ Další informace naleznete v [tématu Hledání a filtrování karty Události 
 
 Chcete-li shromažďovat data o výkonu bez ladění, můžete spustit nástroje **Profiler výkonu.** Některé nástroje profilování vyžadují ke spuštění oprávnění správce. Visual Studio můžete otevřít jako správce nebo můžete spustit nástroje jako správce při spuštění diagnostické relace.
 
-1. S otevřeným projektem v sadě Visual Studio vyberte **ladit** > **profilování výkonu**nebo stiskněte **alt**+**F2**.
+1. Při otevření projektu v sadě Visual Studio nastavte konfiguraci řešení na **Release** a jako cíl nasazení vyberte **místní debugger systému Windows** (nebo místní **počítač).**
+
+1. Vyberte **možnost Ladění** > **profilu výkonu**nebo stiskněte **klávesu Alt**+**F2**.
 
 1. Na stránce spuštění diagnostiky vyberte jeden nebo více nástrojů, které chcete spustit. Zobrazí se pouze nástroje, které jsou použitelné pro typ projektu, operační systém a programovací jazyk. Vyberte **Zobrazit všechny nástroje,** chcete-li zobrazit také nástroje, které jsou pro tuto diagnostickou relaci zakázány. Tady je postup, jak můžou vaše volby vypadat pro aplikaci C# UWP:
 
@@ -103,13 +103,20 @@ Sestavy můžete uložit a otevřít je ze seznamu **Naposledy otevřené relace
 
 ## <a name="run-diagnostic-sessions-on-installed-or-running-apps"></a>Spuštění diagnostických relací na nainstalovaných nebo spuštěných aplikacích
 
- Kromě spuštění aplikace z projektu Visual Studio můžete také spouštět diagnostické relace na alternativní cíle. Můžete například diagnostikovat problémy s výkonem v aplikaci, která byla nainstalovaná z Windows App Storu.
+Kromě spuštění aplikace z projektu Visual Studio můžete také spouštět diagnostické relace na alternativní cíle. Můžete například diagnostikovat problémy s výkonem v aplikaci, která byla nainstalovaná z Windows App Storu. V profileru výkonu vyberte z rozevíracího seznamu v části **Změnit cíl**.
 
- ![Zvolit cíl analýzy diagnostických nástrojů](../profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")
+![Zvolit cíl analýzy diagnostických nástrojů](../profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")
 
- Můžete spustit aplikace, které jsou již nainstalovány, nebo připojit diagnostické nástroje k aplikacím a procesům, které jsou již spuštěny. Když vyberete **Spuštěná aplikace** nebo **Nainstalovaná aplikace**, vyberete aplikaci ze seznamu, který vyhledá aplikace v zadaném cíli nasazení. Tento cíl může být místní nebo vzdálený počítač.
+Můžete spustit aplikace, které jsou již nainstalovány, nebo připojit diagnostické nástroje k aplikacím a procesům, které jsou již spuštěny.
 
- ![Výběr spuštěné nebo nainstalované aplikace pro diagnostiku](../profiling/media/pdhub_selectrunningapp.png "PDHUB_SelectRunningApp")
+Pokud jako cíl analýzy zvolíte **spustitelný soubor,** můžete zadat cestu k souboru *EXE* v místním nebo vzdáleném počítači. V obou případech je spuštěn *a. exe* místně. Doporučujeme však profilovat aplikaci otevřením řešení v sadě Visual Studio.
+
+Pro aplikaci UPW vyberete možnost **Spuštěná aplikace** nebo **Nainstalovaná aplikace**možnost Aplikace ze seznamu, který vyhledá aplikace v zadaném cíli nasazení. Tento cíl může být místní nebo vzdálený počítač. Chcete-li profilovat aplikaci UPW ve vzdáleném počítači, musíte v dialogovém okně **Vzdálená připojení** vybrat **univerzální (nešifrovaný protokol).**
+
+![Výběr spuštěné nebo nainstalované aplikace pro diagnostiku](../profiling/media/pdhub_selectrunningapp.png "PDHUB_SelectRunningApp")
+
+> [!NOTE]
+> Další scénáře, které vyžadují vzdálené použití nástrojů profilování, viz [Měření výkonu aplikace z příkazového řádku](../profiling/profile-apps-from-command-line.md). Pomocí nástrojů příkazového řádku můžete použít použití s nástrojem Využití procesoru a nástrojem pro alokaci objektů .NET.
 
 ## <a name="see-also"></a>Viz také
 

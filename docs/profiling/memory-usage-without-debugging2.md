@@ -1,7 +1,7 @@
 ---
 title: Analýza využití paměti bez ladění | Dokumenty společnosti Microsoft
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 04/02/2020
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -13,28 +13,32 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b05787802b72eb4d14e1b2b56765bb246b9ada51
-ms.sourcegitcommit: ee12b14f306ad8f49b77b08d3a16d9f54426e7ca
+ms.openlocfilehash: 5af369669245bca9c5de74566dd8594164acf8bb
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256241"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638826"
 ---
 # <a name="analyze-memory-usage-without-the-debugger"></a>Analýza využití paměti bez ladicího programu
 
 Nástroj **využití paměti** monitoruje využití paměti vaší aplikace. Pomocí tohoto nástroje můžete studovat efekty paměti v reálném čase scénářů, které aktivně vyvíjíte v sadě Visual Studio. Můžete pořizovat podrobné snímky stavů paměti aplikace a porovnávat snímky a najít hlavní příčiny problémů s pamětí.
 
-Nástroj **využití paměti** lze spustit s ladicím programem nebo bez něj. Následující pokyny ukazují, jak používat nástroj **využití paměti** bez ladicího programu v nástroji Visual Studio **Performance Profiler**.
+Nástroj **Využití paměti** lze spustit s [ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). V tomto článku ukážeme, jak používat nástroj **využití paměti** bez ladicího programu v profileru visual studio **performance profiler**.
 
 ## <a name="memory-usage-diagnostic-sessions"></a>Diagnostické relace využití paměti
 
 **Spuštění diagnostické relace využití paměti:**
 
-1. Otevřete projekt C# Universal Windows (UPW) v sadě Visual Studio.
+1. Otevřete projekt v sadě Visual Studio.
+
+   Nástroj využití paměti podporuje aplikace .NET, ASP.NET, nativní nebo smíšený režim (.NET a nativní).
+
+1. V nabídce Ladění nastavte konfiguraci řešení na **Release** a jako cíl nasazení vyberte **místní debugger systému Windows** (nebo místní **počítač).**
 
 1. Na řádku nabídek zvolte **Ladění** > **profileru výkonu**.
 
-1. Vyberte **Využití paměti**a pak vyberte **Start**.
+1. V části **Dostupné nástroje**vyberte **Využití paměti**a pak vyberte **Start**.
 
    ![Spuštění diagnostické relace využití paměti](../profiling/media/memuse_start_diagnosticssession.png "Spuštění diagnostické relace využití paměti")
 

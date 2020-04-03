@@ -1,18 +1,19 @@
 ---
 title: Zobrazit poslední úlohy
-author: lisawong19
-ms.author: liwong
-manager: routlaw
+author: jillre
+ms.author: jillfra
+manager: jillfra
+monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 79b396946666077dcdedb3ee2a5ab891c2bb4fb8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 55865e4907175664e8a8bfb8a813ff8d02c85b69
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72777398"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638435"
 ---
 # <a name="view-recent-job-performance-and-details"></a>Zobrazit nedávný výkon úlohy a podrobnosti
 
