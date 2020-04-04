@@ -2,7 +2,7 @@
   href: index.yml
 - name: Přehled
   href: profiling-overview.md
-- name: Šablony Rychlý start
+- name: Rychlý start
   items:
     - name: První seznámení s profilací
       href: profiling-feature-tour.md
@@ -14,7 +14,7 @@
       href: quickstart-cpu-usage-aspnet.md
 - name: Kurzy
   items:
-    - name: Výkon aplikace profilu v sadě Visual Studio
+    - name: Profilování výkonu aplikace v sadě Visual Studio
       href: beginners-guide-to-performance-profiling.md
     - name: Využití paměti profilu v sadě Visual Studio
       href: memory-usage.md
@@ -24,20 +24,20 @@
       href: running-profiling-tools-with-or-without-the-debugger.md
 - name: Návody
   items:
-    - name: Využití procesoru
-      href: cpu-usage.md
     - name: Použití tipů pro výkon
       href: perftips.md
+    - name: Využití procesoru
+      href: cpu-usage.md
     - name: Využití paměti
       items:
         - name: Analýza využití paměti
           href: analyze-memory-usage.md
         - name: Analýza využití paměti u objektů .NET
           href: dotnet-alloc-tool.md
-        - name: Vlastní nativní události haldy Trasování událostí pro Windows
-          href: custom-native-etw-heap-events.md
         - name: Využití paměti bez ladicího programu
           href: memory-usage-without-debugging2.md
+        - name: Vlastní nativní události haldy Trasování událostí pro Windows
+          href: custom-native-etw-heap-events.md
     - name: Měření výkonu z příkazového řádku
       href: profile-apps-from-command-line.md
     - name: Analýza využití GPU
@@ -186,35 +186,35 @@
                       items:
                         - name: Přehled pravidel výkonu použití rozhraní .NET Framework
                           href: dotnet-framework-usage-performance-rules.md
-                        - name: 'DA0001: Pro zřetězování používejte StringBuilder'
+                        - name: 'DA0001: Použití třídy StringBuilder ke zřetězení'
                           href: da0001-use-stringbuilder-for-concatenations.md
                         - name: 'DA0005: Časté shromažďování GC2'
                           href: da0005-frequent-gc2-collections.md
-                        - name: 'DA0006: Přepište Equals() pro hodnoty'
+                        - name: 'DA0006: Přepis Equals() pro typy hodnot'
                           href: da0006-override-equals-parens-for-value-types.md
-                        - name: 'DA0007: Vyhněte se použití výjimek pro tok řízení'
+                        - name: 'DA0007: Vyhnutí se použití výjimek pro tok řízení'
                           href: da0007-avoid-using-exceptions-for-control-flow.md
-                        - name: 'DA0010: Náročná metoda GetHashCode'
+                        - name: 'DA0010: Náročná funkce GetHashCode'
                           href: da0010-expensive-gethashcode.md
-                        - name: 'DA0011: Náročná metoda CompareTo'
+                        - name: 'DA0011: Náročná funkce CompareTo'
                           href: da0011-expensive-compareto.md
-                        - name: 'DA0012: Vysoký objem odrazů'
+                        - name: 'DA0012: Velký počet reflexí'
                           href: da0012-significant-amount-of-reflection.md
-                        - name: 'DA0013: Vysoké použití String.Split nebo String.Substring'
+                        - name: 'DA0013: Vysoký výskyt použití String.Split nebo String.Substring'
                           href: da0013-high-usage-of-string-split-or-string-substring.md
                         - name: 'DA0018: 32bitová aplikace spuštěná v limitech paměti spravovaného procesu'
                           href: da0018-32-bit-application-running-at-process-managed-memory-limits.md
-                        - name: 'DA0021: Vysoká míra 1. generace uvolňování pamětí'
+                        - name: 'DA0021: Vysoká míra 1. generace uvolňování paměti'
                           href: da0021-high-rate-of-gen-1-garbage-collections.md
-                        - name: 'DA0022: Vysoká míra 2. generace uvolňování pamětí'
+                        - name: 'DA0022: Vysoká míra 2. generace uvolňování paměti'
                           href: da0022-high-rate-of-gen-2-garbage-collections.md
                         - name: 'DA0023: Vysoký čas procesoru uvolňování paměti'
                           href: da0023-high-gc-cpu-time.md
                         - name: 'DA0024: Nadměrný čas procesoru uvolňování paměti'
                           href: da0024-excessive-gc-cpu-time.md
-                        - name: 'DA0038: Vysoká míra kolizí zámků'
+                        - name: 'DA0038: Vysoká míra konfliktů zámků'
                           href: da0038-high-rate-of-lock-contentions.md
-                        - name: 'DA0039: Velmi vysoká míra kolizí zámků'
+                        - name: 'DA0039: Velmi vysoká míra konfliktů zámků'
                           href: da0039-very-high-rate-of-lock-contentions.md
                     - name: Pravidla výkonu paměti a stránkování
                       items:
@@ -230,33 +230,33 @@
                           href: profiling-tools-usage-rules.md
                         - name: 'DA0002: Chybí knihovna VSPerfCorProf.dll'
                           href: da0002-vsperfcorprof-dll-is-missing.md
-                        - name: 'DA0003: Vysoký počet ukázek jádra'
+                        - name: 'DA0003: Velký počet vzorků jádra'
                           href: da0003-many-kernel-samples.md
                         - name: 'DA0004: Vysoké využití procesoru'
                           href: da0004-high-processor-usage.md
-                        - name: 'DA0008: Shromážděno málo ukázek'
+                        - name: 'DA0008: Shromážděno málo vzorků'
                           href: da0008-few-samples-collected.md
                         - name: 'DA0026: Nadměrný čas zpracování procesoru jádra'
                           href: da0026-excessive-kernel-cpu-time-processing.md
                         - name: 'DA0029: Nepodporovaná verze CLR'
                           href: da0029-unsupported-clr-version.md
-                        - name: 'DA0030: Získat Měření interakce vrstev pro databázové projekty'
+                        - name: 'DA0030: Získání měření interakce vrstev pro databázové projekty'
                           href: da0030-gather-tier-interaction-measurements-for-database-projects.md
                     - name: Pravidla výkonu sledování prostředků
                       items:
                         - name: Přehled pravidel výkonu sledování prostředků
                           href: resource-monitoring-performance-rules.md
-                        - name: 'DA0501: Průměr spotřeby procesoru profilovaným procesem'
+                        - name: 'DA0501: Průměrná spotřeba procesoru profilovaným procesem'
                           href: da0501-average-cpu-consumption-by-the-process-being-profiled.md
-                        - name: 'DA0502: Maximum Spotřeby procesoru profilovaným Procesem'
+                        - name: 'DA0502: Maximální spotřeba procesoru profilovaným procesem'
                           href: da0502-maximum-cpu-consumption-by-the-process-being-profiled.md
-                        - name: 'DA0503: Průměr Pracovní sady v bajtech pro profilovaný Proces'
+                        - name: 'DA0503: Průměrná pracovní sada v bajtech profilovaného procesu'
                           href: da0503-average-working-set-in-bytes-for-the-process-being-profiled.md
-                        - name: 'DA0504: Maximum Pracovní sady v bajtech pro profilovaný Proces'
+                        - name: 'DA0504: Maximální pracovní sada v bajtech profilovaného procesu'
                           href: da0504-maximum-working-set-in-bytes-for-the-process-being-profiled.md
-                        - name: 'DA0505: Průměr Nesdílených bajtů přidělených pro profilovaný Proces'
+                        - name: 'DA0505: Průměrné nesdílené bajty přidělené profilovanému procesu'
                           href: da0505-average-private-bytes-allocated-for-the-process-being-profiled.md
-                        - name: 'DA0506: Maximum Nesdílených bajtů přidělených pro profilovaný Proces'
+                        - name: 'DA0506: Maximální nesdílené bajty přidělené profilovanému procesu'
                           href: da0506-maximum-private-bytes-allocated-for-the-process-being-profiled.md
             - name: Zobrazení sestav výkonu
               items:
@@ -572,7 +572,7 @@
                   items:
                     - name: VSPerfCmd
                       href: vsperfcmd.md
-                    - name: Start
+                    - name: Spustit
                       href: start.md
                     - name: CrossSession
                       href: crosssession.md
@@ -592,7 +592,7 @@
                       href: querycounters.md
                     - name: Události (VSPerfCmd)
                       href: events-vsperfcmd.md
-                    - name: Shutdown
+                    - name: Vypnutí
                       href: shutdown.md
                     - name: GlobalOn a GlobalOff
                       href: globalon-and-globaloff.md
@@ -622,7 +622,7 @@
                       href: lineoff.md
                     - name: Konzola
                       href: console.md
-                    - name: Status
+                    - name: Stav
                       href: status.md
                     - name: TargetCLR
                       href: targetclr.md
@@ -860,7 +860,7 @@
           href: concurrency-visualizer-command-line-utility-cvcollectioncmd.md
     - name: Analýza spotřeby energie v aplikacích pro Store
       href: analyze-energy-use-in-store-apps.md
-- name: Zdroje
+- name: Prostředky
   items:
     - name: Novinky v nástrojích pro profilaci
       href: what-s-new-in-profiling-tools.md
