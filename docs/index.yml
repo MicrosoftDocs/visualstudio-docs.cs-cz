@@ -14,12 +14,12 @@ metadata:
   ms.manager: jillfra
   monikerRange: '>=vs-2017'
   hide_bc: true
-  ms.openlocfilehash: b36b1835f38a4ce6fe46d72935dc8cfc144561c3
-  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.openlocfilehash: 157d3bc451829b0c91772a66222b563cd07a5eaf
+  ms.sourcegitcommit: 20049ffecc08fdfae45406c26190de900357eef6
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 03/21/2020
-  ms.locfileid: "74118930"
+  ms.lasthandoff: 04/02/2020
+  ms.locfileid: "80620640"
 productDirectory:
   items:
   - title: Visual Studio
@@ -54,6 +54,15 @@ productDirectory:
     - url: https://code.visualstudio.com/updates
       text: Zpráva k vydání verze
     - url: https://code.visualstudio.com
+      text: Stránka produktu
+  - title: Visual Studio Online
+    imageSrc: ./media/vs-ide-2019.svg
+    links:
+    - url: https://docs.microsoft.com/visualstudio/online/
+      text: Dokumentace
+    - url: https://code.visualstudio.com/docs/remote/vsonline
+      text: Použití se sadou Visual Studio Code
+    - url: https://visualstudio.microsoft.com/services/visual-studio-online/
       text: Stránka produktu
   - title: Visual Studio App Center
     imageSrc: ./media/vs-mobile-center.svg
