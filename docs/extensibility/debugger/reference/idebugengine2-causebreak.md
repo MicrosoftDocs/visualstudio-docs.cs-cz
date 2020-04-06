@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::CauseBreak | Dokumentace Microsoftu
+title: IDebugEngine2::CauseBreak | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngine2::CauseBreak
 ms.assetid: 17fe4698-b04e-4798-8412-80e0da60c387
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 93f9937609a09439b265946e76f0af0381d488f1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 62be3ce13ecbc3180cf2bbcce26b04f3d79edb1a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330135"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731165"
 ---
 # <a name="idebugengine2causebreak"></a>IDebugEngine2::CauseBreak
-Požadavky, že všechny programy právě laděny ve tento ladicí stroj (DE) pro zastavení provádění příště, jeden z jejich vláken pokusí o spuštění.
+Požaduje, aby všechny programy, které jsou laděny tímto ladicím strojem (DE), aby se zastavilo provádění při příštím pokusu o spuštění jednoho z jejich vláken.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,11 +38,11 @@ int CauseBreak();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je asynchronní: [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) události se odešle, když program další pokusy o spuštění po volání této metody.
+ Tato metoda je asynchronní: Událost [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) je odeslána při dalším pokusu programu o spuštění po volání této metody.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

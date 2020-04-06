@@ -1,5 +1,5 @@
 ---
-title: Assembly – Element (rozšíření Průvodce pro šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Element sestavení (rozšíření Průvodce šablonou sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Assembly element [Visual Studio Template Wizard Extension]
 - <Assembly> element [Visual Studio Template Wizard Extension]
 ms.assetid: 0c3dc280-1753-4ea2-a13c-d31d13b935b2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 68fb795005f1f653893147f7013117112f803211
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 43f5adb8abc17f0509fb58263f307e5051af85dc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352216"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740063"
 ---
-# <a name="assembly-element-visual-studio-template-wizard-extension"></a>Assembly – element (rozšíření Průvodce pro šablony sady Visual Studio)
-Určuje název nebo silný název sestavení, který implementuje `IWizard` rozhraní.
+# <a name="assembly-element-visual-studio-template-wizard-extension"></a>Element sestavení (rozšíření průvodce šablonou sady Visual Studio)
+Určuje název nebo silný název sestavení, které `IWizard` implementuje rozhraní.
 
- \<Vstemplate – > \<WizardExtension > \<sestavení >
+ \<> \<sestavení \<> vstemplate> rozšíření montovního>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,31 +32,31 @@ Určuje název nebo silný název sestavení, který implementuje `IWizard` rozh
 <Assembly>AssemblyName</Assembly>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Obsahuje elementy registrace pro přizpůsobení Průvodce šablonou.|
+|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Obsahuje registrační prvky pro přizpůsobení průvodce šablonou.|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Tento text určuje sestavení, který implementuje `IWizard` rozhraní. Tento název sestavení musí být zadán jako název úplné sestavení. Například, `MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null`.
+ Tento text určuje sestavení, které `IWizard` implementuje rozhraní. Tento název sestavení musí být zadán jako úplný název sestavení. Například, `MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null`.
 
 ## <a name="remarks"></a>Poznámky
- `Assembly` je vyžadovaný podřízený prvek `WizardExtension`.
+ `Assembly`je povinnýpodřízený `WizardExtension`prvek .
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metadata pro šablony standardní projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikace Windows.
+ Následující příklad ilustruje metadata pro standardní šablonu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu pro aplikaci systému Windows.
 
 ```xml
 <VSTemplate Version="3.0.0" Type="Item"
@@ -86,8 +86,8 @@ Určuje název nebo silný název sestavení, který implementuje `IWizard` rozh
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Postupy: Použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md)
+- [Postup: Použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointErrorEvent2 | Dokumentace Microsoftu
+title: IDebugBreakpointErrorEvent2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakpointErrorEvent2
 ms.assetid: adee79df-8db5-4510-a7df-c50f4dbf5e35
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bae4a63ef03ca3b8d3fa642f7333ff2357084b47
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 09cb93f0f16420e56104f371d9caab262873390f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352938"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735052"
 ---
 # <a name="idebugbreakpointerrorevent2"></a>IDebugBreakpointErrorEvent2
-Toto rozhraní informuje správce ladění relace (SDM), čekající zarážkou nebylo možné svázat načíst programu, buď z důvodu upozornění nebo chybu.
+Toto rozhraní informuje správce ladění relace (SDM), že čekající zarážka nemůže být vázána na načtený program, a to buď z důvodu upozornění nebo chyby.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,22 +29,22 @@ IDebugBreakpointErrorEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- DE implementuje toto rozhraní jako součást jeho podporu pro zarážky. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí implementovat rozhraní na stejný objekt jako toto rozhraní (SDM používá [QueryInterface](/cpp/atl/queryinterface) přístup `IDebugEvent2` rozhraní).
+ DE implementuje toto rozhraní jako součást jeho podporu pro zarážky. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto `IDebugEvent2` rozhraní (SDM používá [QueryInterface](/cpp/atl/queryinterface) pro přístup k rozhraní).
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- DE vytvoří a odešle tento objekt událost, když čekající zarážka nemůže být vázán k laděnému programu. Událost je odeslána pomocí [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) poskytnutých SDM při připojení k laděnému programu funkce zpětného volání.
+ De vytvoří a odešle tento objekt události, když čekající zarážka nemůže být vázána na program, který je laděn. Událost je odeslána pomocí funkce zpětného volání [IDebugCallBack2](../../../extensibility/debugger/reference/idebugeventcallback2.md) zajišťované sdm, když je připojena k programu, který je odladěn.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IDebugBreakpointErrorEvent2`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IDebugBreakpointErrorEvent2`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetErrorBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md)|Získá [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) rozhraní, které popisuje upozornění nebo chyby.|
+|[GetErrorBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md)|Získá rozhraní [IDebugErrorBreakpoint2,](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) který popisuje upozornění nebo chybu.|
 
 ## <a name="remarks"></a>Poznámky
- Pokaždé, když je vázán na zarážku, událost je odeslána SDM. Pokud nemůže být vázán zarážku, `IDebugBreakpointErrorEvent2` odeslané; jinak [IDebugBreakpointBoundEvent2](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) se odesílají.
+ Vždy, když je zarážka vázána, událost je odeslána do SDM. Pokud zarážka nemůže `IDebugBreakpointErrorEvent2` být vázána, je odeslána; v opačném případě je [odeslána iDebugBreakpointBoundEvent2.](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md)
 
- Například pokud podmínka přidružená k čekající zarážka nepodaří analyzovat nebo vyhodnocení, upozornění přijde, že v tuto chvíli nemůže být vázaný čekající zarážka. To může dojít, pokud ještě nenačetl kód pro zarážku.
+ Například pokud se nepodaří analyzovat nebo vyhodnotit podmínku přidruženou k čekající zarážky, je odesláno upozornění, že čekající zarážka nemůže být v tuto chvíli vázána. Tato situace může nastat, pokud kód pro zarážku ještě nebyl načten.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -53,7 +53,7 @@ IDebugBreakpointErrorEvent2 : IUnknown
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)
 - [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

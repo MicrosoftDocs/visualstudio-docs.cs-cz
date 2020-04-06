@@ -1,28 +1,28 @@
 ---
-title: IDebugSymbolProviderDirect::GetCurrentModulesInfo | Dokumentace Microsoftu
+title: IDebugSymbolProviderDirect::GetCurrentModulesInfo | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSymbolProviderDirect::GetCurrentModulesInfo
 - GetCurrentModulesInfo
 ms.assetid: b3b45ed2-ea4e-4389-b78a-11fc9796a6c1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 67afbf985a8fb9934c1a105d1620becc80f00535
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a51a7bbbe081d323ea478b64917507ce43b45762
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347430"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719117"
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesinfo"></a>IDebugSymbolProviderDirect::GetCurrentModulesInfo
-Načte informace o modulech ve skupině symbol.
+Načte informace o modulech ve skupině symbolů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,22 +48,22 @@ int GetCurrentModulesInfo(
 
 ## <a name="parameters"></a>Parametry
 `pCount`\
-[in] Počet modulů v `ppGuids` pole.
+[v] Počet modulů v `ppGuids` poli.
 
 `ppGuids`\
-[in] Pole, které obsahuje jedinečné identifikátory pro moduly.
+[v] Pole, které obsahuje jedinečné identifikátory modulů.
 
 `pADIds`\
-[in] Identifikátory pro domény aplikace.
+[v] Identifikátory pro aplikační domény.
 
 `pCurrentState`\
-[in] Aktuální stav skupiny symbol.
+[v] Aktuální stav skupiny symbolů.
 
 `ppCDModItfs`\
-[out] Vrátí objekt, který obsahuje moduly ve skupině symbol.
+[out] Vrátí objekt, který obsahuje moduly ve skupině symbolů.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

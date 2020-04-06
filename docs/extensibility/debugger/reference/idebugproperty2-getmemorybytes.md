@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetMemoryBytes | Dokumentace Microsoftu
+title: Vlastnost IDebugProperty2::GetMemoryBytes | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty2::GetMemoryBytes
 ms.assetid: b32042ed-7a06-4b4a-99ef-fe03b0aa61cc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e6d6c689f704c91e36762db7405e3e28ee6829bf
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7d13fa3821a6d7bf861cd160a5588d0788b92243
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66343102"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721474"
 ---
 # <a name="idebugproperty2getmemorybytes"></a>IDebugProperty2::GetMemoryBytes
-Získá počet bajtů paměti, které tvoří hodnotu vlastnosti.
+Získá bajtů paměti, které tvoří hodnotu vlastnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,11 +41,11 @@ int GetMemoryBytes ( 
 
 ## <a name="parameters"></a>Parametry
 `ppMemoryBytes`\
-[out] Vrátí [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) objekt, který můžete použít k načtení paměť, která obsahuje hodnotu vlastnosti.
+[out] Vrátí objekt [IDebugMemoryBytes2,](../../../extensibility/debugger/reference/idebugmemorybytes2.md) který lze použít k načtení paměti, která obsahuje hodnotu vlastnosti.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `S_GETMEMORYBYTES_NO_MEMORY_BYTES` Pokud nejsou žádné bajty paměti k načtení.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `S_GETMEMORYBYTES_NO_MEMORY_BYTES` pokud neexistují žádné bajty paměti načíst.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)
 - [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)

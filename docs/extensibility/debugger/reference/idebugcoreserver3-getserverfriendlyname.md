@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::GetServerFriendlyName | Microsoft Docs
+title: IDebugCoreServer3::GetServerFriendlyName | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCoreServer3::GetServerFriendlyName
 ms.assetid: 7035b904-b3d7-4d9b-98d9-65714b8a8b9f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ba0675038a495a91755794d7e43ad57cfc7d438a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: eec30783041a1240d8f85815c06f4ca60729a484
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326955"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732894"
 ---
 # <a name="idebugcoreserver3getserverfriendlyname"></a>IDebugCoreServer3::GetServerFriendlyName
 Načte popisný název serveru.
@@ -44,16 +44,16 @@ int GetServerFriendlyName(
 [out] Vrátí popisný název serveru.
 
 > [!NOTE]
-> Volající zodpovídá za uvolnění řetězec.
+> Volající je zodpovědný za uvolnění řetězce.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pro servery se spustí uživatele název vrácený touto metodou je úplný název serveru. Pro servery se automaticky spustí název je, že počítače na serveru běží.
+ U serverů spuštěných uživatelem je název vrácený touto metodou úplný název serveru. U automaticky spuštěných serverů se jedná o počítač, na který server běží.
 
- Název počítače založenému na záznamech, zavolejte [GetServerName](../../../extensibility/debugger/reference/idebugcoreserver3-getservername.md) metody.
+ Název orientovaný na počítač zavolejte metodu [GetServerName.](../../../extensibility/debugger/reference/idebugcoreserver3-getservername.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)
 - [GetServerName](../../../extensibility/debugger/reference/idebugcoreserver3-getservername.md)

@@ -1,5 +1,5 @@
 ---
-title: AD_PROCESS_ID | Dokumentace Microsoftu
+title: AD_PROCESS_ID | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - AD_PROCESS_ID union
 ms.assetid: 4cb40d12-2e92-4f09-83f4-689928bd65b3
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1893b78063e045f341af246fc0ef2c0f2ad1538e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 96a834725f1cf5b14f12a4c1554e67477768ef23
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351416"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738162"
 ---
-# <a name="adprocessid"></a>AD_PROCESS_ID
-Určuje ID procesu, který může být ID systému nebo identifikátor GUID.
+# <a name="ad_process_id"></a>AD_PROCESS_ID
+Určuje ID procesu, kterým může být ID systému nebo identifikátor GUID.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,18 +49,18 @@ public struct AD_PROCESS_ID {
 
 ## <a name="members"></a>Členové
 `ProcessIdType`\
-Hodnota z [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) výčet určující, jak interpretovat `ProcessId` sjednocení (nebo pro spravovaný kód, který člen struktury pro přístup k).
+Hodnota z [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) výčtu určující, jak `ProcessId` interpretovat unie (nebo pro spravovaný kód, který člen struktury pro přístup).
 
 `dwProcessId`\
-ID procesu jako hodnotu ze systému.
+ID procesu jako hodnota ze systému.
 
 `guidProcessId`\
 ID procesu jako identifikátor GUID.
 
-dwUnused odsazení.
+dwUnused Padding.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je předán do následujících metod:
+Tato struktura je předána následujícím metodám:
 
 - [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)
 
@@ -83,7 +83,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)
 - [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

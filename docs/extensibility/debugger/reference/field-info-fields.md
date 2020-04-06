@@ -1,5 +1,5 @@
 ---
-title: FIELD_INFO_FIELDS | Dokumentace Microsoftu
+title: FIELD_INFO_FIELDS | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - FIELD_INFO_FIELDS enumeration
 ms.assetid: a69487d2-e701-4165-804a-8a011df9a3bd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 01853df78bfe731ea4b7159f7b3ebe352f3c5eaa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9a3d2e796d37606c51918d8e49db920161d63f55
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337671"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736905"
 ---
-# <a name="fieldinfofields"></a>FIELD_INFO_FIELDS
-Určuje, jaké informace o načtení [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objektu.
+# <a name="field_info_fields"></a>FIELD_INFO_FIELDS
+Určuje, jaké informace se mají načíst o objektu [IDebugField.](../../../extensibility/debugger/reference/idebugfield.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,25 +50,25 @@ public enum enum_FIELD_INFO_FIELDS {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `FIF_FULLNAME`\
-Inicializace/použít `bstrFullName` pole [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) struktury.
+Inicializovat/použít `bstrFullName` pole ve [struktuře FIELD_INFO.](../../../extensibility/debugger/reference/field-info.md)
 
 `FIF_NAME`\
-Inicializace/použít `bstrName` pole `FIELD_INFO` struktury.
+Inicializovat/použít `bstrName` pole `FIELD_INFO` ve struktuře.
 
 `FIF_TYPE`\
-Inicializace/použít `bstrType` pole `FIELD_INFO` struktury.
+Inicializovat/použít `bstrType` pole `FIELD_INFO` ve struktuře.
 
 `FIF_MODIFIERS`\
-Inicializace/použít `bstrModifiers` pole `FIELD_INFO` struktury.
+Inicializovat/použít `bstrModifiers` pole `FIELD_INFO` ve struktuře.
 
 ## <a name="remarks"></a>Poznámky
-Tyto hodnoty jsou také předat jako argument [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) metody určíte, jaké pole [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) struktury mají být inicializovány.
+Tyto hodnoty jsou také předány jako argument [getinfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) metoda určit, která pole [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) struktury mají být inicializovány.
 
-Tyto hodnoty jsou také používány v `dwFields` člena `FIELD_INFO` struktury k označení pole, která se používá a je platný.
+Tyto hodnoty se také `dwFields` používají `FIELD_INFO` v člen struktury k označení, která pole se používají a jsou platná.
 
-Tyto příznaky lze kombinovat pomocí logické bitové `OR`.
+Tyto příznaky mohou být kombinovány `OR`s bitovým .
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: sh.h
@@ -77,7 +77,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

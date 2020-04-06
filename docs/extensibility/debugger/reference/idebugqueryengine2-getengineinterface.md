@@ -1,5 +1,5 @@
 ---
-title: IDebugQueryEngine2::GetEngineInterface | Dokumentace Microsoftu
+title: IDebugQueryEngine2::GetEngineInterface | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugQueryEngine2::GetEngineInterface
 ms.assetid: ed84aa98-7ec7-48f3-97ae-821090bc3664
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c720ac348179ec979ba1ffbc1488244ca69246c4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 82f3214783a35e668bf3164c8659f60f863e9a43
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339918"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720674"
 ---
 # <a name="idebugqueryengine2getengineinterface"></a>IDebugQueryEngine2::GetEngineInterface
-Získá rozhraním vlastního ladicího stroje (DE).
+Získá rozhraní vlastního ladicího modulu (DE).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,15 +41,15 @@ int GetEngineInterface( 
 
 ## <a name="parameters"></a>Parametry
 `ppUnk`\
-[out] Vrátí `IUnknown` objekt představuje ladicího stroje (DE) a který může být dotázán na platná rozhraní přidružené k Zavedenými (například [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) nebo [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)).
+[out] Vrátí `IUnknown` objekt představuje ladicí modul (DE), který může být dotazován pro jakékoli jiné platné rozhraní přidružené k DE (například [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) nebo [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)).
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Výsledný rozhraní by měl použít opatrně, protože volání prostřednictvím rozhraní načíst z této metody obchází zpracování správce ladění relace a může vést k SDM převedení do špatném stavu nebo generování chyb během ladění.
+ Výsledné rozhraní by měl být používán s opatrností, protože volání prostřednictvím rozhraní načtených z této metody obchází zpracování správce ladění relace a může mít za následek SDM dostat do špatného stavu nebo generování chyb při ladění.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugQueryEngine2](../../../extensibility/debugger/reference/idebugqueryengine2.md)
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)
 - [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)

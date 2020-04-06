@@ -1,5 +1,5 @@
 ---
-title: BPRESI_FIELDS | Dokumentace Microsoftu
+title: BPRESI_FIELDS | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BPRESI_FIELDS enumeration
 ms.assetid: 99f17b1e-3e67-4f85-89d6-5c6cf45c8008
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 82a286bea92c778ab150cacdc80d79f8ac283469
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 837bb7d25ab8dea2b146a98cc65d320b58162685
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350482"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737718"
 ---
-# <a name="bpresifields"></a>BPRESI_FIELDS
-Určuje informace, který se má načíst informace o úspěšného vyřešení zarážku.
+# <a name="bpresi_fields"></a>BPRESI_FIELDS
+Určuje informace, které mají být načteny o úspěšném vyřešení zarážky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,25 +46,25 @@ public enum enum_BPRESI_FIELDS {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `BPRESI_BPRESLOCATION`\
-Inicializace/použít `bpResLocation` oblasti (umístění zarážky řešení) [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) struktury.
+Inicializovat/použít `bpResLocation` pole (umístění rozlišení zarážky) struktury [BP_RESOLUTION_INFO.](../../../extensibility/debugger/reference/bp-resolution-info.md)
 
 `BPRESI_PROGRAM`\
-Inicializace/použít `pProgram` pole `BP_RESOLUTION_INFO` struktury.
+Inicializovat/použít `pProgram` pole `BP_RESOLUTION_INFO` struktury.
 
 `BPRESI_THREAD`\
-Inicializace/použít `pThread` pole `BP_RESOLUTION_INFO` struktury.
+Inicializovat/použít `pThread` pole `BP_RESOLUTION_INFO` struktury.
 
 `BPRESI_ALLFIELDS`\
 Určuje všechna pole.
 
 ## <a name="remarks"></a>Poznámky
-Předány [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) indikace polí s [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) struktury mají být inicializovány.
+Předána [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) metoda k označení, která pole [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) struktury mají být inicializovány.
 
-Tyto příznaky jsou také použity k označení polí s `BP_RESOLUTION_INFO` struktury jsou používány a platné při vrácení této struktury.
+Tyto příznaky se také používají k `BP_RESOLUTION_INFO` označení, která pole struktury se používají a jsou platné při vrácení této struktury.
 
-Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.
+Tyto hodnoty mohou být kombinovány `OR`s bitovým .
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -73,7 +73,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)
 - [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)

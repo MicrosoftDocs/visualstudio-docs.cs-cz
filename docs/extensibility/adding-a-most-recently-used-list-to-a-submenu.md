@@ -1,5 +1,5 @@
 ---
-title: Přidání naposledy použité do podnabídky seznamu | Dokumentace Microsoftu
+title: Přidání naposledy použitého seznamu do podnabídky | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,50 +7,50 @@ helpviewer_keywords:
 - menus, creating MRU list
 - most recently used
 ms.assetid: 27d4bbcf-99b1-498f-8b66-40002e3db0f8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6eb32f81947f7359f5912e8a558e8df5002a0b80
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cf389c0da7ec0aafb6e47dae8f09ffdc3b1d1e4d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352398"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740297"
 ---
-# <a name="add-a-most-recently-used-list-to-a-submenu"></a>Přidat že naposledy použitou seznamu do podnabídky
-Tento návod vychází z ukázky v [přidání podnabídky do nabídky](../extensibility/adding-a-submenu-to-a-menu.md)a ukazuje, jak přidat dynamický seznam do podnabídky. V seznamu dynamického tento balíček je základem pro vytvoření seznamu naposledy (použitých).
+# <a name="add-a-most-recently-used-list-to-a-submenu"></a>Přidání naposledy použitého seznamu do podnabídky
+Tento návod vychází z ukázek v [části Přidat podnabídku do nabídky](../extensibility/adding-a-submenu-to-a-menu.md)a ukazuje, jak přidat dynamický seznam do podnabídky. Dynamický seznam tvoří základ pro vytvoření seznamu naposledy použitých (MRU).
 
-Dynamická nabídka seznamu začíná zástupný symbol v nabídce. Pokaždé, když se zobrazí v nabídce, integrovaného vývojového prostředí (IDE) sady Visual Studio vyzve sady VSPackage pro všechny příkazy, které se mají zobrazit na zástupný symbol. Dynamický seznam se může nacházet kdekoli v nabídce. Dynamické seznamy jsou však obvykle ukládají a zobrazí samy o sobě z podnabídky nebo na dolním okraji nabídek. Když použijete tyto způsoby návrhu, povolíte dynamické seznam příkazů, tím rozbalíte a smlouvy, aniž by to ovlivnilo pozice dalších příkazů v nabídce. V tomto podrobném návodu zobrazí se v dolní části existující podnabídky, oddělené od zbytku podnabídky řádku dynamického seznamu naposledy použitých.
+Dynamický seznam nabídek začíná zástupným symbolem v nabídce. Pokaždé, když je zobrazena nabídka, Visual Studio integrované vývojové prostředí (IDE) požádá VSPackage pro všechny příkazy, které by měly být zobrazeny na zástupný symbol. Dynamický seznam může nastat kdekoli v nabídce. Dynamické seznamy jsou však obvykle uloženy a zobrazeny samy o sobě v podnabídkách nebo v dolní části nabídek. Pomocí těchto návrhových vzorů povolíte dynamické mušce příkazů pro rozbalení a smršťování bez ovlivnění umístění jiných příkazů v nabídce. V tomto návodu je dynamický seznam OBJEKTU řízení o obrazových oknech zobrazen v dolní části existující podnabídky, která je oddělena od zbytku podnabídky čárou.
 
-Seznam dynamického technicky, lze také použít na panelu nástrojů. Ale jsme Zabraňte tohle využívání, protože panelu nástrojů zůstanou beze změny, pokud uživatel provede určité kroky ho změnit.
+Technicky lze dynamický seznam použít také na panel nástrojů. Doporučujeme však, aby použití, protože panel nástrojů by měl zůstat beze změny, pokud uživatel provede konkrétní kroky ke změně.
 
-Tento návod vytvoří seznam naposledy použitých čtyři položek, které se mění jejich pořadí pokaždé, když je vybrána, že jedna z nich (vybrané položky se přesune do horní části seznamu).
+Tento návod vytvoří seznam NAPOSLEDY DIčna čtyři položky, které změní své pořadí pokaždé, když je vybrána jedna z nich (vybraná položka se přesune na začátek seznamu).
 
-Další informace o nabídkách a *.vsct* soubory, naleznete v tématu [příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md).
+Další informace o nabídkách a *souborech VSCT naleznete v* [tématu Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md).
 
 ## <a name="prerequisites"></a>Požadavky
-Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
+Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sady Visual Studio SDK. Další informace naleznete v [tématu Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
-## <a name="create-an-extension"></a>Vytvořit rozšíření
+## <a name="create-an-extension"></a>Vytvoření rozšíření
 
-- Postupujte podle pokynů v [přidání podnabídky do nabídky](../extensibility/adding-a-submenu-to-a-menu.md) Vytvoření podnabídky, která se mění v následujících postupech.
+- Postupujte podle postupů v [přidání podnabídky do nabídky](../extensibility/adding-a-submenu-to-a-menu.md) k vytvoření podnabídky, která je upravena v následujících postupech.
 
-  V postupech v tomto názorném postupu se předpokládá, že je název sady VSPackage `TopLevelMenu`, což je název, který se používá v [přidání nabídky na řádku nabídek sady Visual Studio](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md).
+  Postupy v tomto návodu předpokládají, že název `TopLevelMenu`balíčku VSPackage je , což je název, který se používá v [nabídce Přidat nabídku na řádek nabídek sady Visual Studio](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md).
 
-## <a name="create-a-dynamic-item-list-command"></a>Vytvoření příkazu dynamické položky seznamu
+## <a name="create-a-dynamic-item-list-command"></a>Vytvoření příkazu seznamu dynamických položek
 
-1. Otevřít *TestCommandPackage.vsct*.
+1. Otevřete *soubor TestCommandPackage.vsct*.
 
-2. V `Symbols` sekci `GuidSymbol` symbol pro uzel s názvem guidTestCommandPackageCmdSet, přidat `MRUListGroup` skupiny a `cmdidMRUList` příkaz následujícím způsobem.
+2. V `Symbols` části v `GuidSymbol` uzlu s názvem guidTestCommandPackageCmdSet přidejte `MRUListGroup` symbol `cmdidMRUList` pro skupinu a příkaz, následujícím způsobem.
 
     ```csharp
     <IDSymbol name="MRUListGroup" value="0x1200"/>
     <IDSymbol name="cmdidMRUList" value="0x0200"/>
     ```
 
-3. V `Groups` části, přidejte skupinu deklarovaný po existující položky skupiny.
+3. V `Groups` části přidejte deklarovanou skupinu za existující položky skupiny.
 
     ```cpp
     <Group guid="guidTestCommandPackageCmdSet" id="MRUListGroup"
@@ -60,7 +60,7 @@ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual St
 
     ```
 
-4. V `Buttons` části, přidejte uzel k reprezentaci příkazu nově deklarovaný po existující položky tlačítko.
+4. V `Buttons` části přidejte uzel představující nově deklarovaný příkaz za existující položky tlačítka.
 
     ```csharp
     <Button guid="guidTestCommandPackageCmdSet" id="cmdidMRUList"
@@ -74,15 +74,15 @@ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual St
     </Button>
     ```
 
-    `DynamicItemStart` Příznak umožňuje příkazu generována dynamicky.
+    Příznak `DynamicItemStart` umožňuje příkaz, který má být generován dynamicky.
 
-5. Projekt sestavit a spustit ladění k testování zobrazení nového příkazu.
+5. Sestavení projektu a spuštění ladění otestovat zobrazení nového příkazu.
 
-    Na **TestMenu** nabídky, klikněte na nové podnabídky **podnabídka**, chcete-li zobrazit nový příkaz **zástupný symbol seznamu naposledy použitých položek**. Po dokončení implementace dynamického seznamu naposledy použitých příkazů v dalším postupu, tento příkaz Popisek se nahradí seznamu pokaždé, když je otevřen v podnabídce.
+    V nabídce **TestMenu** klepněte na novou podnabídku **Dílčí nabídka**, chcete-li zobrazit nový příkaz **Zástupný symbol MRU**. Po dynamické mdc seznam příkazů je implementována v dalším postupu, tento popisek příkazu bude nahrazen tímto seznamem při každém otevření podnabídky.
 
-## <a name="filling-the-mru-list"></a>Vyplnění seznamu naposledy použitých
+## <a name="filling-the-mru-list"></a>Vyplnění seznamu MRU
 
-1. V *TestCommandPackageGuids.cs*, přidejte následující řádky za existující identifikátory příkazů v `TestCommandPackageGuids` definici třídy.
+1. V *TestCommandPackageGuids.cs*přidejte následující řádky za existující ID příkazů v definici třídy. `TestCommandPackageGuids`
 
     ```csharp
     public const string guidTestCommandPackageCmdSet = "00000000-0000-0000-0000-00000000"; // get the GUID from the .vsct file
@@ -95,13 +95,13 @@ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual St
     using System.Collections;
     ```
 
-3. Přidejte následující kód v konstruktoru TestCommand po posledním volání AddCommand. `InitMRUMenu` Bude obsahovat definici později
+3. Přidejte následující kód do konstruktoru TestCommand po posledním volání AddCommand. Bude `InitMRUMenu` definována později
 
     ```csharp
     this.InitMRUMenu(commandService);
     ```
 
-4. Přidejte následující kód ve třídě TestCommand. Tento kód inicializuje seznam řetězců, které představují položky, které chcete zobrazit v seznamu naposledy použitých.
+4. Přidejte následující kód do třídy TestCommand. Tento kód inicializuje seznam řetězců, které představují položky, které mají být zobrazeny v seznamu MRU.
 
     ```csharp
     private int numMRUItems = 4;
@@ -125,7 +125,7 @@ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual St
     }
     ```
 
-5. Po `InitializeMRUList` metodu, přidejte `InitMRUMenu` metody. To inicializuje seznamu naposledy použitých položek seznamu příkazů.
+5. Po `InitializeMRUList` metodě přidejte metodu. `InitMRUMenu` Tím se inicializují příkazy nabídky seznamu MRU.
 
     ```csharp
     private void InitMRUMenu(OleMenuCommandService mcs)
@@ -143,9 +143,9 @@ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual St
     }
     ```
 
-    V seznamu naposledy použitých musíte vytvořit objekt příkazu nabídky pro každou položku je to možné. Volání rozhraní IDE `OnMRUQueryStatus` metoda pro každou položku v seznamu naposledy použitých, dokud nebyly nalezeny žádné další položky. Ve spravovaném kódu je nejprve vytvořte všechny možné položky jedině pro integrované vývojové prostředí vědět, že neexistují žádné další položky. Pokud chcete, můžete označit další položky jako nejsou viditelné v prvním pomocí `mc.Visible = false;` po vytvoření příkazu nabídky. Tyto položky můžete pak nastavena jako viditelná později pomocí `mc.Visible = true;` v `OnMRUQueryStatus` metody.
+    Je nutné vytvořit objekt příkazu nabídky pro každou možnou položku v seznamu mru. IDE volá `OnMRUQueryStatus` metodu pro každou položku v seznamu MRU, dokud neexistují žádné další položky. Ve spravovaném kódu je jediným způsobem, jak ide vědět, že neexistují žádné další položky je nejprve vytvořit všechny možné položky. Pokud chcete, můžete označit další položky jako `mc.Visible = false;` neviditelné nejprve pomocí po vytvoření příkazu nabídky. Tyto položky pak mohou být `mc.Visible = true;` viditelné `OnMRUQueryStatus` později pomocí metody.
 
-6. Po `InitMRUMenu` metodu, přidejte následující `OnMRUQueryStatus` metody. To je obslužná rutina, která nastaví text pro každou položku seznamu naposledy použitých položek.
+6. Po `InitMRUMenu` metodě přidejte `OnMRUQueryStatus` následující metodu. Toto je obslužná rutina, která nastaví text pro každou položku MRU.
 
     ```csharp
     private void OnMRUQueryStatus(object sender, EventArgs e)
@@ -162,7 +162,7 @@ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual St
     }
     ```
 
-7. Po `OnMRUQueryStatus` metodu, přidejte následující `OnMRUExec` metody. To je obslužná rutina pro výběr položky seznamu naposledy použitých položek. Tato metoda Přesune vybrané položky nahoru v seznamu a potom v okně se zprávou zobrazí vybranou položku.
+7. Po `OnMRUQueryStatus` metodě přidejte `OnMRUExec` následující metodu. Toto je obslužná rutina pro výběr položky MRU. Tato metoda přesune vybranou položku na začátek seznamu a poté zobrazí vybranou položku v poli se zprávou.
 
     ```csharp
     private void OnMRUExec(object sender, EventArgs e)
@@ -188,18 +188,18 @@ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual St
 
     ```
 
-## <a name="testing-the-mru-list"></a>Testování do seznamu naposledy použitých
+## <a name="testing-the-mru-list"></a>Testování seznamu MRU
 
-1. Sestavte projekt a spusťte ladění.
+1. Sestavení projektu a začít ladění.
 
-2. Na **TestMenu** nabídky, klikněte na tlačítko **vyvolat TestCommand**. Tím se zobrazí okno se zprávou, která označuje, že jste vybrali příkazu.
+2. V nabídce **TestMenu** klepněte na tlačítko **Vyvolat příkaz TestCommand**. Tím se zobrazí okno se zprávou, která označuje, že byl vybrán příkaz.
 
     > [!NOTE]
-    > Tento krok je nutný k vynucení balíčku VSPackage pro načtení a správné zobrazení seznamu naposledy použitých. Pokud tento krok přeskočíte, se nezobrazí seznam naposledy použitých položek.
+    > Tento krok je nutné vynutit VSPackage načíst a správně zobrazit seznam MRU. Pokud tento krok přeskočíte, seznam MRU se nezobrazí.
 
-3. Na **nabídka testu** nabídky, klikněte na tlačítko **podnabídka**. Zobrazí se seznam čtyři položky na konci podnabídky pod oddělovačem. Po kliknutí na **3 položky**, by měla objevit a zobrazit text, okno se zprávou **vybrané položky 3**. (Pokud se nezobrazí seznam čtyři položky, ujistěte se, že jste postupovali podle pokynů v dřívějším kroku.)
+3. V nabídce **Nabídka Test** klepněte na **položku Dílčí nabídka**. Seznam čtyř položek se zobrazí na konci podnabídky pod oddělovačem. Když klepnete na **položku 3**, mělo by se zobrazit okno se zprávou a zobrazit text **Vybraná položka 3**. (Pokud není zobrazen seznam čtyř položek, ujistěte se, že jste postupovali podle pokynů v předchozím kroku.)
 
-4. Otevřete podnabídku znovu. Všimněte si, že **3 položky** je teď v horní části seznamu a ostatní položky byly nahrány o jednu pozici dolů. Klikněte na tlačítko **3 položky** znovu a Všimněte si, že se stále zobrazuje okno se zprávou **vybrané položky 3**, což znamená, že text přesunula správně na novou pozici spolu s příkaz popisek.
+4. Znovu otevřete podnabídku. Všimněte si, že **položka 3** je nyní v horní části seznamu a ostatní položky byly posunuty dolů o jednu pozici. Klepněte znovu na **položku 3** a všimněte si, že v poli se zprávou se stále zobrazuje **vybraná položka 3**, což znamená, že text byl správně přesunut na novou pozici spolu s popiskem příkazu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Dynamické přidávání položek nabídky](../extensibility/dynamically-adding-menu-items.md)

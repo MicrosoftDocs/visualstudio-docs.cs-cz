@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::EnumCodeContexts | Dokumentace Microsoftu
+title: IDebugProgram2::EnumCodeContexts | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgram2::EnumCodeContexts
 ms.assetid: 478e06a2-07bb-4841-8887-deab0f42ebd0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2b710c48d8fe030bab1f7ea6b2fe76a10b879499
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c22a5ce398e76ee97b2f0448900fd4e38f996615
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326716"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723047"
 ---
 # <a name="idebugprogram2enumcodecontexts"></a>IDebugProgram2::EnumCodeContexts
-Načte seznam kontexty kód pro danou pozici ve zdrojovém souboru.
+Načte seznam kontextů kódu pro danou pozici ve zdrojovém souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,17 +43,17 @@ int EnumCodeContexts( 
 
 ## <a name="parameters"></a>Parametry
 `pDocPos`\
-[in] [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) objekt představující abstraktní pozice ve zdrojovém souboru ví, rozhraní IDE.
+[v] Objekt [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) představující abstraktní pozici ve zdrojovém souboru známém ide.
 
-`ppEnum` [out] Vrátí [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md) objekt, který obsahuje seznam kontext kódu.
+`ppEnum`[out] Vrátí objekt [IEnumDebugCodeContexts2,](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md) který obsahuje seznam kontextů kódu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda umožňuje ladicí relace správci nebo integrované vývojové prostředí pro mapování pozici zdrojového souboru na pozici kódu. Více než jeden kontext kódu je vrácena, pokud zdroj generuje více bloků kódu (například šablony jazyka C++).
+ Tato metoda umožňuje správce ladění relace (SDM) nebo IDE mapovat umístění zdrojového souboru do pozice kódu. Více než jeden kontext kódu je vrácena, pokud zdroj generuje více bloků kódu (například šablony C++).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)
 - [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)

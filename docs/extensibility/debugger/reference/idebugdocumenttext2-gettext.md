@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText2::GetText | Dokumentace Microsoftu
+title: IDebugDocumentText2::GetText | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentText2::GetText
 ms.assetid: f8c15a58-da77-473e-a721-7a094e306c63
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d2906c4421c570542579d0326167cd6ecbafb395
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2429bdf3f09eff168210a7b835a9e506d74d63ea
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330655"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731571"
 ---
 # <a name="idebugdocumenttext2gettext"></a>IDebugDocumentText2::GetText
-Získá text ze zadaného umístění v dokumentu.
+Načte text ze zadaného umístění v dokumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,22 +47,22 @@ int GetText(
 
 ## <a name="parameters"></a>Parametry
 `pos`\
-[in] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která označuje umístění textu, který se má načíst.
+[v] Struktura [TEXT_POSITION,](../../../extensibility/debugger/reference/text-position.md) která označuje umístění textu, který má být načten.
 
 `cMaxChars`\
-[in] Maximální počet znaků textu, který se má načíst.
+[v] Maximální počet znaků textu, který má být načten.
 
 `pText`\
-[out v] Ukazatel do vyrovnávací paměti, která se vyplní požadovaný text. Tuto vyrovnávací paměť musí být schopen obsahovat alespoň `cMaxChars` počet širokých znaků.
+[dovnitř, ven] Ukazatel na vyrovnávací paměť, která má být vyplněna požadovaným textem. Tato vyrovnávací paměť musí obsahovat alespoň `cMaxChars` počet širokých znaků.
 
 `pcNumChars`\
-[out] Vrátí počet znaků ve skutečnosti načíst.
+[out] Vrátí počet znaků skutečně načtených.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, jak tuto metodu lze volat z jazyka C#.
+Tento příklad ukazuje, jak lze tuto metodu volat z jazyka C#.
 
 ```csharp
 using System.Runtime.Interop.Services;
@@ -100,6 +100,6 @@ namespace Mynamespace
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)
 - [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

@@ -1,5 +1,5 @@
 ---
-title: IEnumCodePaths2::Reset | Dokumentace Microsoftu
+title: IEnumCodePaths2::Obnovit | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumCodePaths2::Reset
 ms.assetid: 490c0e19-ff4b-4673-bd06-cdee996ac226
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 18504e8cfb40614c4725456ab5c73c74231a3b7b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2392c25513b53137e5cdca332bc133ab998be999
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319623"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80717790"
 ---
 # <a name="ienumcodepaths2reset"></a>IEnumCodePaths2::Reset
-Obnoví výčtu na první prvek.
+Obnoví výčet na první prvek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,10 +38,10 @@ int Reset();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Až tato metoda je volána, další volání [Další](../../../extensibility/debugger/reference/ienumcodepaths2-next.md) metoda vrátí první prvek výčtu.
+ Po volání této metody další volání [Next](../../../extensibility/debugger/reference/ienumcodepaths2-next.md) metoda vrátí první prvek výčtu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md)

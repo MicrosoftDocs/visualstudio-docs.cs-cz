@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetSize | Dokumentace Microsoftu
+title: IDebugProperty2::GetSize | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty2::GetSize
 ms.assetid: 0deb8ec5-d6fb-4622-bb14-0c46b9459cc6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b76a6a563a4a9ecd63c81c897a1ba21b3a977b80
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3f57a742bae0217493d8869b257e4a17839e4e14
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314657"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721331"
 ---
 # <a name="idebugproperty2getsize"></a>IDebugProperty2::GetSize
-Získá velikost v bajtech, hodnota vlastnosti.
+Získá velikost v bajtů, hodnoty vlastnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,10 +41,10 @@ int GetSize ( 
 
 ## <a name="parameters"></a>Parametry
 `pdwSize`\
-[out] Vrátí velikost v bajtech, hodnota vlastnosti.
+[out] Vrátí velikost hodnoty vlastnosti v bajtech.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `S_GETSIZE_NO_SIZE` Pokud vlastnost nemá žádný velikost.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `S_GETSIZE_NO_SIZE` pokud vlastnost nemá žádnou velikost.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

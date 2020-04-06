@@ -1,27 +1,27 @@
 ---
-title: IDebugProcessQueryProperties::QueryProperties | Dokumentace Microsoftu
+title: IDebugProcessQueryProperties::Vlastnosti dotazu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugProcessQueryProperties::QueryProperties
 ms.assetid: 976a9962-b689-45bb-afb6-16b2c5dbc3b8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a26cbb1781561b6fb4d54da3cfaea9a9fbae7699
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4daac369485febe38e3366d413985bda90b30f05
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311585"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723319"
 ---
 # <a name="idebugprocessquerypropertiesqueryproperties"></a>IDebugProcessQueryProperties::QueryProperties
-Tato metoda dotazy pro hodnoty zadané vlastnosti ladění procesu.
+Tato metoda se dotazuje na zadané hodnoty vlastností procesu ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,10 +41,10 @@ int QueryProperties(
 
 ## <a name="parameters"></a>Parametry
 `celt`\
-[in] Velikost pole obsahující definice vlastností a hodnot vlastností.
+[v] Velikost polí obsahujících definice vlastností a hodnoty vlastností.
 
 `dwPropType`\
-[in] Pole, která obsahuje definice vlastnosti poslal dotaz. Možné hodnoty jsou:
+[v] Pole, které obsahuje definice dotazovaných vlastností. Možné hodnoty jsou:
 
 - PROCESS_PROPERTY_COMMAND_LINE = 1
 
@@ -56,10 +56,10 @@ int QueryProperties(
 [out] Pole obsahující hodnoty vlastností.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda se používá jen zřídka.
+ Tato metoda se používá zřídka.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProcessQueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties.md)

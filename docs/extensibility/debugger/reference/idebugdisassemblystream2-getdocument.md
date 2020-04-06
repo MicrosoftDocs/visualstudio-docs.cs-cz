@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetDocument | Dokumentace Microsoftu
+title: IDebugDisassemblyStream2::GetDocument | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDisassemblyStream2::GetDocument
 ms.assetid: 3d039a44-ebaa-4413-ac18-7cfd92c408bd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a043d5462ad206395cb7d70d28152c19a7df6460
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cf5d1a73e15ad38bf14d954718ce97c088b2e525
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310434"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732184"
 ---
 # <a name="idebugdisassemblystream2getdocument"></a>IDebugDisassemblyStream2::GetDocument
-Získá zdrojový dokument přidružený k této vstupního datového proudu.
+Získá zdrojový dokument přidružený k tomuto vstupnímu datovému proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,17 +43,17 @@ int GetDocument( 
 
 ## <a name="parameters"></a>Parametry
 `bstrDocumentUrl`\
-[in] Adresa URL dokumentu.
+[v] Adresa URL dokumentu.
 
 `ppDocument`\
-[out] Vrátí [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) objekt představující dokumentu.
+[out] Vrátí objekt [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) představující dokument.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je implementována pomocí ladicími stroji, které mají textové dokumenty, které nejsou uloženy v souboru aplikace skutečný.
+ Tato metoda je implementována ladicí mi se stroje, které mají textové dokumenty, které nejsou uloženy ve skutečném souboru.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)
 - [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject::GetElements | Dokumentace Microsoftu
+title: IDebugArrayObject::GetElements | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugArrayObject::GetElements method
 ms.assetid: f6a6262f-5183-46ce-8a45-33ef46088b98
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 915724fa5790c6b8c9fde2706b1222db239cb4ab
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: be06acbef93d8858557fea5bd7563168be2d28aa
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351799"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736248"
 ---
 # <a name="idebugarrayobjectgetelements"></a>IDebugArrayObject::GetElements
-Získá enumerátor všech prvků pole.
+Získá čítač všech prvků pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetElements(
 
 ## <a name="parameters"></a>Parametry
 `ppEnum`\
-[out] Vrátí [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md) objekt, který umožňuje vytváření výčtu přes všechny prvky.
+[out] Vrátí objekt [IEnumDebugObjects,](../../../extensibility/debugger/reference/ienumdebugobjects.md) který umožňuje výčet přes všechny prvky.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Jako alternativu použijte [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) a [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) metody k iteraci v rámci prvků.
+ Jako alternativu použijte [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) a [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) metody iterate prostřednictvím prvků.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

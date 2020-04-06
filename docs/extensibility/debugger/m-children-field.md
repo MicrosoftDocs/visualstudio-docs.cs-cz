@@ -1,30 +1,30 @@
 ---
-title: m_children – pole | Dokumentace Microsoftu
+title: m_children pole | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - m_children field, ContingentProperties class [.NET Framework debug engines]
 ms.assetid: 0a3b5653-7bc0-4a7a-8963-9020bc52b9cb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab6446b18350fe1f11e0b164d9eb4bff39035ddb
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 07933fd4c9f359e72714600abdf8b4ee29268f84
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330895"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738422"
 ---
-# <a name="mchildren-field"></a>m_children – pole
-Seznam podřízených úloh, které jsou registrované s touto úlohou.
+# <a name="m_children-field"></a>m_children pole
+Seznam podřízených úkolů, které jsou registrovány s tímto úkolem.
 
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>
+ **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Sestavení:** mscorlib (v *mscorlib.dll*)
+ **Sestava:** mscorlib (v *mscorlib.dll*)
 
- Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.
+ Vzhledem k tomu, že k tomuto internímu členu nemáte přístup z rozhraní .NET Framework, je ve společném zprostředkujícím jazyce (CIL) k dispozici následující syntaxe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,9 +33,9 @@ Seznam podřízených úloh, které jsou registrované s touto úlohou.
 ```
 
 ## <a name="remarks"></a>Poznámky
- Když úloha běží, by měl přístup pouze vlákno, které provádí úlohy Toto pole.
+ Při spuštění úlohy by měl přístup k tomuto poli přistupovat pouze vlákno, které úlohu provede.
 
- Pokud je úkol dokončen, ostatní vlákna tak dlouho, dokud není nic k němu přidat nebo odebrat cokoli z něj přístupná toto pole.
+ Pokud je úkol dokončen, ostatní vlákna mají přístup k tomuto poli, pokud k němu nic nepřidají ani z něj nic neodeberou.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Třída ContingentProperties](../../extensibility/debugger/contingentproperties-class-internal-members.md)

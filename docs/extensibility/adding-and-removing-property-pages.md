@@ -1,5 +1,5 @@
 ---
-title: Přidávání a odebírání stránek vlastností | Dokumentace Microsoftu
+title: Přidání a odebrání stránek vlastností | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,32 +7,32 @@ helpviewer_keywords:
 - property pages, project subtypes
 - property pages, removing
 ms.assetid: 34853412-ab8a-4caa-9601-7d0727b2985d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03974bba0ca93242cf044a58bbb60ca772a369ce
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4c3df3104e48ca0ee972e1a27f2c32fd0661088b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352307"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740205"
 ---
-# <a name="add-and-remove-property-pages"></a>Přidávat a odebírat stránky vlastností
+# <a name="add-and-remove-property-pages"></a>Přidání a odebrání stránek vlastností
 
-Poskytuje centralizovaného umístění pro správu vlastnosti projektu, nastavení a prostředky v Návrháři projektu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Zobrazí se jako v jednom okně [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE) a obsahuje mnoho podokna na pravé straně, které jsou přístupné prostřednictvím karty na levé straně. Podokna (často označované jako stránky vlastností) v Návrháři projektu se liší podle typu projektu a jazyk. Návrhář projektu lze přistupovat pomocí **vlastnosti** příkaz **projektu** nabídky.
+Návrhář projektu poskytuje centralizované umístění pro správu vlastností, nastavení a zdrojů projektu v aplikaci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Zobrazí se jako jedno [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] okno v integrovaném vývojovém prostředí (IDE) a obsahuje několik podoken vpravo, které jsou přístupné prostřednictvím karet na levé straně. Podokna (často označovaná jako stránky vlastností) v Návrháři projektu se liší podle typu projektu a jazyka. Návrhář projektu je přístupný pomocí příkazu **Vlastnosti** v nabídce **Projekt.**
 
-Podtyp projektu je často potřeba zobrazí další stránky vlastností v Návrháři projektu. Některé podtypů projektů, může vyžadovat odebrat integrované vlastnosti stránky. Provést buď, musí implementovat vaše podtyp projektu <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> rozhraní a přepsat <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> metody. Přepíše tuto metodu a použitím `propId` parametr obsahující jednu z hodnot <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> výčet, můžete filtrovat, přidat nebo odebrat vlastnosti projektu. Například můžete potřebovat přidat stránku na stránkách vlastností závislé na konfiguraci. Chcete-li to provést, musíte k filtrování stránky vlastností závislé na konfiguraci a pak přidejte novou stránku do existujícího seznamu.
+Podtyp projektu často potřebuje zobrazit další stránky vlastností v Návrháři projektu. Podobně některé podtypy projektu mohou vyžadovat odebrání předdefinovaných stránek vlastností. Chcete-li provést buď, musí <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> projekt podtyp <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> implementovat rozhraní a přepsat metodu. Přepsáním této `propId` metody a použitím parametru <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> obsahujícího jednu z hodnot výčtu můžete filtrovat, přidávat nebo odebírat vlastnosti projektu. Může být například nutné přidat stránku na stránky vlastností závislé na konfiguraci. Chcete-li to provést, je třeba filtrovat stránky vlastností závislé na konfiguraci a potom přidat novou stránku do existujícího seznamu.
 
-## <a name="add-and-remove-property-pages-in-project-designer"></a>Přidávat a odebírat stránky vlastností v Návrháři projektu
+## <a name="add-and-remove-property-pages-in-project-designer"></a>Přidání a odebrání stránek vlastností v Návrháři projektů
 
 ### <a name="remove-a-property-page"></a>Odebrání stránky vlastností
 
-1. Přepsat `GetProperty(uint itemId, int propId, out object property)` metoda k filtrování stránky vlastností a získat `clsids` seznamu.
+1. Přepište `GetProperty(uint itemId, int propId, out object property)` metodu pro filtrování stránek `clsids` vlastností a získání seznamu.
 
     ```vb
     Protected Overrides int GetProperty(uint itemId, int propId, out object property)
@@ -77,7 +77,7 @@ Podtyp projektu je často potřeba zobrazí další stránky vlastností v Návr
     }
     ```
 
-2. Odeberte **události sestavení** stránky získané `clsids` seznamu.
+2. Odeberte stránku `clsids` Události **sestavení** ze seznamu získané.
 
     ```vb
     Private buildEventsPageGuid As String = "{1E78F8DB-6C07-4D61-A18F-7514010ABD56}"
@@ -113,7 +113,7 @@ Podtyp projektu je často potřeba zobrazí další stránky vlastností v Návr
 
 ### <a name="add-a-property-page"></a>Přidání stránky vlastností
 
-1. Vytvoření stránky vlastností, které chcete přidat.
+1. Vytvořte stránku vlastností, kterou chcete přidat.
 
     ```vb
     Class DeployPropertyPage
@@ -158,7 +158,7 @@ Podtyp projektu je často potřeba zobrazí další stránky vlastností v Návr
     }
     ```
 
-2. Zaregistrujte nové stránky vlastností.
+2. Zaregistrujte novou stránku vlastnosti.
 
     ```vb
     <MSVSIP.ProvideObject(GetType(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)>
@@ -168,7 +168,7 @@ Podtyp projektu je často potřeba zobrazí další stránky vlastností v Návr
     [MSVSIP.ProvideObject(typeof(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)]
     ```
 
-3. Přepsat `GetProperty(uint itemId, int propId, out object property)` metoda k filtrování stránky vlastností, získání `clsids` seznamu a přidat nové stránky vlastností.
+3. Přepište `GetProperty(uint itemId, int propId, out object property)` metodu pro filtrování stránek `clsids` vlastností, získejte seznam a přidejte novou stránku vlastností.
 
     ```vb
     Protected Overrides Function GetProperty(ByVal itemId As UInteger, ByVal propId As Integer, ByRef [property] As Object) As Integer
@@ -206,6 +206,6 @@ Podtyp projektu je často potřeba zobrazí další stránky vlastností v Návr
     }
     ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Podtypy projektů](../extensibility/internals/project-subtypes.md)
+- [Podtypy projektu](../extensibility/internals/project-subtypes.md)

@@ -1,27 +1,27 @@
 ---
-title: IDebugSettingsCallback2::EnumEEs | Dokumentace Microsoftu
+title: IDebugSettingsCallback2::EnumEEs | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSettingsCallback2::EnumEEs
 ms.assetid: 9f884c49-426f-461b-b547-9d909486e73f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dc9073ae5244b05234b3f37874bd6bcd6347954f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 19e0763ad74b3486b8bc2548ec129d9e95feb771
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322151"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720241"
 ---
 # <a name="idebugsettingscallback2enumees"></a>IDebugSettingsCallback2::EnumEEs
-Vytvoří výčet vyhodnocení výrazu dostupné zadané identifikátory jazyka a dodavatele.
+Vyjmenovává dostupné vyhodnocení výrazů s ohledem na identifikátory jazyka a dodavatele.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,19 +45,19 @@ public int EnumEEs(
 
 ## <a name="parameters"></a>Parametry
 `celtBuffer`\
-[in] Počet prvků v objektu `pceltEEs` vyrovnávací paměti.
+[v] Počet prvků ve `pceltEEs` vyrovnávací paměti.
 
 `rgguidLang`\
-[out v] Jedinečný identifikátor pro programovací jazyk.
+[dovnitř, ven] Jedinečný identifikátor programovacího jazyka
 
 `rgguidVendor`\
-[out v] Jedinečný identifikátor pro dodavatele.
+[dovnitř, ven] Jedinečný identifikátor dodavatele
 
 `pceltEEs`\
-[out v] Pole vyhodnocovače výrazů.
+[dovnitř, ven] Pole vyhodnocení výrazů.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

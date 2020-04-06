@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::CreateInstanceInServer | Dokumentace Microsoftu
+title: IDebugCoreServer3::CreateInstanceInServer | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCoreServer3::CreateInstanceInServer
 ms.assetid: 76f36bae-f6ab-413c-a8a9-8808bfeba05b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7e74ea66f5b8ecd04acfbc2617f91bcaf0f7ecbd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2346bb76fe604265a309a51f48b734fc6f2ab8d0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66332415"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80733015"
 ---
 # <a name="idebugcoreserver3createinstanceinserver"></a>IDebugCoreServer3::CreateInstanceInServer
-Vytvoří instanci ladicího stroje na serveru.
+Vytvoří instanci ladicího modulu na serveru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,23 +49,23 @@ int CreateInstanceInServer(
 
 ## <a name="parameters"></a>Parametry
 `szDll`\
-[in] Cesta k souboru dll, která implementuje identifikátor CLSID určený v `clsidObject` parametru. Pokud je to `NULL`, pak modelu COM `CoCreateInstance` funkce je volána.
+[v] Cesta k dll, který implementuje CLSID zadaný v parametru. `clsidObject` Pokud je `NULL`to , `CoCreateInstance` pak com funkce je volána.
 
 `wLangId`\
-[in] Národní prostředí ladicího stroje. To může být 0, pokud [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md) by neměla být volána metoda.
+[v] Národní prostředí ladicího modulu. To může být 0, pokud [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md) metoda by neměla být volána.
 
 `clsidObject`\
-[in] Identifikátor CLSID ladicího stroje vytvořit.
+[v] CLSID ladicího modulu k vytvoření.
 
 `riid`\
-[in] Rozhraní ID pro načtení z objektu třídy konkrétní rozhraní.
+[v] ID rozhraní konkrétní rozhraní načíst z objektu třídy.
 
 `ppvObject`\
-[out] `IUnknown` rozhraní z instance objektu. Přetypování nebo přeuspořádat tento objekt na požadované rozhraní.
+[out] `IUnknown` rozhraní z instanciovaného objektu. Přetypovací nebo zařazovací tento objekt na požadované rozhraní.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)
 - [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md)

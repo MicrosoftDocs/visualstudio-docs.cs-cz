@@ -1,5 +1,5 @@
 ---
-title: DisassemblyData | Dokumentace Microsoftu
+title: DemontážData | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - DisassemblyData structure
 ms.assetid: 10e70aa7-9381-40d3-bdd1-d2cad78ef16c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: edc91cf8599a8591b70d14c49611ff64d5e957e6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9dcf3316ba57bbb25ee171cba7e4edc4923fa270
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318229"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737281"
 ---
 # <a name="disassemblydata"></a>DisassemblyData
-Popisuje jedna instrukce zpětný překlad pro integrované vývojové prostředí (IDE) pro zobrazení.
+Popisuje jednu demontáž instrukce pro integrované vývojové prostředí (IDE) pro zobrazení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,56 +65,56 @@ public struct DisassemblyData { 
 
 ## <a name="members"></a>Členové
 `dwFields`\
-[DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) konstanta, která určuje, která pole jsou vyplněna.
+Konstanta [DISASSEMBLY_STREAM_FIELDS,](../../../extensibility/debugger/reference/disassembly-stream-fields.md) která určuje, která pole jsou vyplněna.
 
 `bstrAddress`\
-Adresa jako posun od některé počáteční bod (obvykle začátek přidružené funkce).
+Adresa jako posun od některého počátečního bodu (obvykle začátek přidružené funkce).
 
 `bstrCodeBytes`\
-Počet bajtů kód pro tuto instrukci.
+Kód bajtu pro tuto instrukci.
 
 `bstrOpcode`\
-Operační kód pro tuto instrukci.
+Opcode pro tuto instrukci.
 
 `bstrOperands`\
 Operandy pro tuto instrukci.
 
 `bstrSymbol`\
-Název symbolu, pokud existuje, přidružené k adresám (veřejnými symboly, popisek a tak dále).
+Případný název symbolu přidružený k adrese (veřejný symbol, popisek a tak dále).
 
 `uCodeLocationId`\
-Identifikátor umístění kódu pro tento řádek zpětně přeložený. Pokud adresu kontext kódu jeden řádek je větší než adresu kód kontextu, identifikátor umístění zpětně přeložený kód prvního také být větší než identifikátor umístění kódu druhého.
+Identifikátor umístění kódu pro tento rozložený řádek. Pokud je adresa kontextu kódu jednoho řádku větší než adresa kontextu kódu jiného, bude dezsestavený identifikátor umístění kódu prvního také větší než identifikátor umístění kódu druhého.
 
 `posBeg`\
-[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) , který odpovídá na pozici v dokumentu, kde začíná data zpětný překlad.
+[TEXT_POSITION,](../../../extensibility/debugger/reference/text-position.md) která odpovídá pozici v dokumentu, kde začíná data demontáže.
 
 `posEnd`\
-[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) , který odpovídá pozici v dokumentu, kde končí data zpětný překlad.
+[TEXT_POSITION,](../../../extensibility/debugger/reference/text-position.md) která odpovídá pozici v dokumentu, kde končí data demontáže.
 
 `bstrDocumentUrl`\
-Pro textové dokumenty, které můžou být vyjádřeny jako názvy souborů `bstrDocumentUrl` pole se vyplní název souboru, kde lze nalézt zdroj, pomocí formátu `file://file name`.
+U textových dokumentů, které mohou `bstrDocumentUrl` být reprezentovány jako názvy souborů, je pole vyplněno názvem souboru, kde lze zdroj nalézt, pomocí formátu `file://file name`.
 
-Pro textové dokumenty, které nemůže být reprezentovaná jako názvy souborů `bstrDocumentUrl` je jedinečný identifikátor pro dokument a ladicí stroj musí implementovat [GetDocument](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md) metody.
+Pro textové dokumenty, které nemohou `bstrDocumentUrl` být reprezentovány jako názvy souborů, je jedinečný identifikátor dokumentu a ladicí modul musí implementovat metodu [GetDocument.](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md)
 
-Toto pole může obsahovat také další informace o kontrolních součtů. Podrobnosti najdete v části poznámky.
+Toto pole může také obsahovat další informace o kontrolních součtech. Podrobnosti najdete v části Poznámky.
 
 `dwByteOffset`\
-Počet bajtů, které se podle pokynů od začátku řádku kódu.
+Počet bajtů instrukce je od začátku řádku kódu.
 
 `dwFlags`\
-[DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md) konstanta, která určuje, které příznaky jsou aktivní.
+Konstanta [DISASSEMBLY_FLAGS,](../../../extensibility/debugger/reference/disassembly-flags.md) která určuje, které příznaky jsou aktivní.
 
 ## <a name="remarks"></a>Poznámky
-Každý `DisassemblyData` struktura popisuje jedna instrukce zpětný překlad. Vrátí pole těchto struktur [čtení](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) metoda.
+Každá `DisassemblyData` struktura popisuje jednu instrukci demontáže. Pole těchto struktur je vrácena z [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) metody.
 
-[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura se používá pro textový pouze dokumenty. Zdrojový kód rozsah pro tuto instrukci vyplnění jenom pro první instrukci nevygeneruje příkaz nebo řádku, například když `dwByteOffset == 0`.
+Struktura [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) se používá pouze pro textové dokumenty. Rozsah zdrojového kódu pro tuto instrukci je vyplněn pouze pro první instrukce `dwByteOffset == 0`generované z příkazu nebo řádku, například když .
 
-Kód, můžete získat pro dokumenty, které jsou mimo textovou, kontext dokumentu a `bstrDocumentUrl` pole musí mít hodnotu null. Pokud `bstrDocumentUrl` pole je stejné jako `bstrDocumentUrl` pole v předchozí `DisassemblyData` prvek pole a pak nastavit `bstrDocumentUrl` na hodnotu null.
+Pro dokumenty, které nejsou textové, lze z kódu získat kontext `bstrDocumentUrl` dokumentu a pole by mělo mít nulovou hodnotu. Pokud `bstrDocumentUrl` je pole stejné `bstrDocumentUrl` jako pole `DisassemblyData` v předchozím prvku `bstrDocumentUrl` pole, nastavte hodnotu null.
 
-Pokud `dwFlags` pole má `DF_DOCUMENT_CHECKSUM` příznak nastaven, pak údaj o kontrolním součtu další následuje řetězec, který odkazuje `bstrDocumentUrl` pole. Konkrétně po řetězec s hodnotou null zakončení, existuje následuje identifikátor GUID identifikující kontrolního součtu algoritmus, který je zase následovaný 4 bajty. hodnota označující počet bajtů v kontrolního součtu a, který pak následuje kontrolní součet bajtů. Podívejte se na příklad v tomto tématu o tom, jak kódování a dekódování toto pole v [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)].
+Pokud `dwFlags` je v `DF_DOCUMENT_CHECKSUM` poli nastaven příznak, následují další informace kontrolního `bstrDocumentUrl` součtu za řetězcem, na který pole ukazuje. Konkrétně po zakončení nulového řetězce následuje identifikátor GUID identifikující algoritmus kontrolního součtu, který je zase následovaný hodnotou 4 bajtů označující počet bajtů v kontrolním součtu a za ním následují bajty kontrolního součtu. V tomto tématu najdete příklad kódování a dekódování tohoto pole v aplikaci [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)].
 
 ## <a name="example"></a>Příklad
-`bstrDocumentUrl` Pole může obsahovat další informace než řetězce, pokud `DF_DOCUMENT_CHECKSUM` je nastavený příznak. Proces vytváření a čtení tohoto řetězce s kódováním je jednoduché v [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)]. Nicméně v [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)], je další věci. Pro ty, kteří jsou zajímá vás, následující příklad ukazuje jeden způsob, jak vytvořit řetězec zakódovaný z [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] a jeden ze způsobů, jak k dekódování kódovaný řetězec v [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)].
+Pole `bstrDocumentUrl` může obsahovat další informace než `DF_DOCUMENT_CHECKSUM` řetězec, pokud je nastaven příznak. Proces vytváření a čtení tohoto kódovaného [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)]řetězce je v . Nicméně, [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]v , to je jiná věc. Pro ty, kteří jsou zvědaví, následující příklad ukazuje jeden [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] způsob, jak vytvořit kódovaný řetězec [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]z a jeden způsob, jak dekódovat kódovaný řetězec v .
 
 ```csharp
 using System;
@@ -226,9 +226,9 @@ namespace MyNamespace
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
-- [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)
+- [Čtení](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)
 - [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)
 - [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

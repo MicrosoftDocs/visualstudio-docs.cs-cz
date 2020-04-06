@@ -1,5 +1,5 @@
 ---
-title: Změna vzhledu příkazu | Dokumentace Microsoftu
+title: Změna vzhledu příkazu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,48 +7,48 @@ helpviewer_keywords:
 - menu commands, changing appearance
 - menus, changing command appearance
 ms.assetid: da2474fa-f92d-4e9e-b8bf-67c61bf249c2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 119ce68dca4dfdea44cc7160855733080bc8e9ca
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 653f516dda89f4895b8d19d77f7f49bf9c6aa45b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321104"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739862"
 ---
 # <a name="change-the-appearance-of-a-command"></a>Změna vzhledu příkazu
-Změnou vzhledu příkazu můžete poskytnou zpětnou vazbu uživatelů. Například můžete příkazu, který bude vypadat jinak, pokud není k dispozici. Můžete provést příkazy k dispozici nebo není k dispozici, skrýt nebo zobrazit, nebo zaškrtněte nebo zrušte jejich zaškrtnutí v nabídce.
+Zpětnou vazbu můžete uživateli poskytnout změnou vzhledu příkazu. Můžete například chtít, aby příkaz vypadal jinak, pokud není k dispozici. Příkazy můžete zpřístupnit nebo zpřístupnit, skrýt nebo zobrazit nebo je v nabídce zkontrolovat nebo zrušit jejich zaškrtnutí.
 
-Změna vzhledu příkazu, proveďte jednu z těchto akcí:
+Chcete-li změnit vzhled příkazu, proveďte jednu z těchto akcí:
 
-- Zadejte odpovídající příznaky v definici příkaz v tabulce souboru příkazů.
+- Zadejte příslušné příznaky v definici příkazu v souboru tabulky příkazů.
 
-- Použití <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService> služby.
+- Použijte <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService> službu.
 
-- Implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní a úpravám objektů nezpracované příkazu.
+- Implementujte <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní a upravte nezpracovaná příkazová objekty.
 
-  Následující kroky ukazují, jak najít a aktualizovat vzhledu příkazu pomocí Managed Package Framework (MPF).
+  Následující kroky ukazují, jak najít a aktualizovat vzhled příkazu pomocí rozhraní MPF (Managed Package Framework).
 
-### <a name="to-change-the-appearance-of-a-menu-command"></a>Chcete-li změnit vzhled příkazu nabídky
+### <a name="to-change-the-appearance-of-a-menu-command"></a>Změna vzhledu příkazu nabídky
 
-1. Postupujte podle pokynů v [změní celý text příkazu nabídky](../extensibility/changing-the-text-of-a-menu-command.md) vytvořit položku nabídky s názvem `New Text`.
+1. Podle pokynů v části [Změna textu příkazu nabídky](../extensibility/changing-the-text-of-a-menu-command.md) `New Text`vytvořte položku nabídky s názvem .
 
-2. V *ChangeMenuText.cs* soubor, přidejte následující příkaz using:
+2. Do *souboru ChangeMenuText.cs* přidejte následující příkaz using:
 
     ```csharp
     using System.Security.Permissions;
     ```
 
-3. V *ChangeMenuTextPackageGuids.cs* přidejte následující řádek:
+3. Do *souboru ChangeMenuTextPackageGuids.cs* přidejte následující řádek:
 
     ```csharp
     public const string guidChangeMenuTextPackageCmdSet= "00000000-0000-0000-0000-00000000";  // get the GUID from the .vsct file
     ```
 
-4. V *ChangeMenuText.cs* souboru, nahraďte kód v metodě ShowMessageBox následujícím kódem:
+4. V *souboru ChangeMenuText.cs* nahraďte kód v metodě ShowMessageBox následujícím:
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -59,7 +59,7 @@ Změna vzhledu příkazu, proveďte jednu z těchto akcí:
     }
     ```
 
-5. Získat příkaz, který chcete aktualizovat z <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService> objekt a potom nastavte příslušné vlastnosti v objektu command. Například následující metoda provede zadaný příkaz z příkazu VSPackage nastavení k dispozici nebo není k dispozici. Následující kód vytvoří položka nabídky s názvem `New Text` není k dispozici, až se kliklo.
+5. Získejte příkaz, který chcete <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService> aktualizovat z objektu, a nastavte příslušné vlastnosti objektu příkazu. Například následující metoda zpřístupňuje zadaný příkaz ze sady příkazů VSPackage nebo není k dispozici. Následující kód znepřístupní `New Text` položku nabídky po klepnutí na ni.
 
     ```csharp
     public bool ChangeMyCommand(int cmdID, bool enableCmd)
@@ -78,14 +78,14 @@ Změna vzhledu příkazu, proveďte jednu z těchto akcí:
     }
     ```
 
-6. Sestavte projekt a spusťte ladění. Experimentální instanci sady Visual Studio by se zobrazit.
+6. Sestavení projektu a začít ladění. Experimentální instance sady Visual Studio by se měla zobrazit.
 
-7. Na **nástroje** nabídky, klikněte na tlačítko **vyvolat ChangeMenuText** příkazu. V tomto okamžiku je název příkazu **vyvolat ChangeMenuText**, takže nemá volat obslužná rutina příkazu **ChangeMyCommand()** .
+7. V nabídce **Nástroje** klepněte na příkaz **Invoke ChangeMenuText** . V tomto okamžiku je název příkazu **Invoke ChangeMenuText**, takže obslužná rutina příkazu nevolá **ChangeMyCommand()**.
 
-8. Na **nástroje** nabídky, měli byste vidět **nový Text**. Klikněte na tlačítko **nový Text**. Příkaz by měl nyní být zobrazena šedě.
+8. V nabídce **Nástroje** byste nyní měli vidět **Nový text**. Klepněte na **položku Nový text**. Příkaz by nyní měl být zašedlý.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)
-- [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [Rozšiřování nabídek a příkazů](../extensibility/extending-menus-and-commands.md)
-- [Visual Studio tabulky příkazů (. Soubory Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Jak VSPackages přidat prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [Rozšíření nabídek a příkazů](../extensibility/extending-menus-and-commands.md)
+- [Visual Studio příkaz tabulky (. Vsct) Soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

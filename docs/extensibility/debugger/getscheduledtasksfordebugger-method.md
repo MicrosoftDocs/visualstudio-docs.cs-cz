@@ -1,30 +1,30 @@
 ---
-title: Getscheduledtasksfordebugger – metoda | Dokumentace Microsoftu
+title: Metoda GetScheduledTasksForDebugger | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - GetScheduledTasksForDebugger method, TaskScheduler class [.NET Framework debug engines]
 ms.assetid: 7c9b4cde-6e4a-4cef-929f-7d02b1da5762
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 49a63462eece9bef09579c7284f72790a3914bc2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fca6c8e92cd0b4755bd79b8e142a7e1d283f868d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353733"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738659"
 ---
 # <a name="getscheduledtasksfordebugger-method"></a>GetScheduledTasksForDebugger – metoda
 Načte pole všech naplánovaných úloh.
 
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>
+ **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Sestavení:** mscorlib (v *mscorlib.dll*)
+ **Sestava:** mscorlib (v *mscorlib.dll*)
 
- Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.
+ Vzhledem k tomu, že k tomuto internímu členu nemáte přístup z rozhraní .NET Framework, je ve společném zprostředkujícím jazyce (CIL) k dispozici následující syntaxe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ Načte pole všech naplánovaných úloh.
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Pole všech naplánovaných úloh. Každý úkol je spuštěn nebo byl dokončen.
+ Pole všech naplánovaných úloh. Každá úloha je spuštěna nebo byla dokončena.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda není bezpečná a byste neměli používat souběžně s jinými instancemi <xref:System.Threading.Tasks.TaskScheduler>. Tuto metodu lze volejte z ladicího programu pouze v případě, že ladicí program byla pozastavena všechna ostatní vlákna.
+ Tato metoda není bezpečná pro přístup z více vláken a <xref:System.Threading.Tasks.TaskScheduler>neměli byste ji používat souběžně s jinými instancemi rozhraní . Volání této metody z ladicího programu pouze v případě, že ladicí program pozastavil všechna ostatní vlákna.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Třída TaskScheduler](../../extensibility/debugger/taskscheduler-class-internal-members.md)

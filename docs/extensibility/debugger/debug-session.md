@@ -1,29 +1,29 @@
 ---
-title: Ladicí relace | Dokumentace Microsoftu
+title: Ladicí relace | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], sessions
 ms.assetid: 18d82199-b2d4-47a9-924f-ab64faf60ca1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f539fe73263e6f58b96e63da1f766d372b11e57
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 664bcc4790d642ec5ea006cc42b3cf29885e9018
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336517"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739002"
 ---
-# <a name="debug-session"></a>Ladicí relace
-Z hlediska architektury ladicího programu *relace*:
+# <a name="debug-session"></a>Relace ladění
+Pokud jde o architekturu ladicího programu, *relace*:
 
-- Je sada všechny procesy, související nebo nepříbuzné, spustit nebo připojit z jedné instance rozhraní IDE.
+- Je sada všech procesů, související nebo nesouvisející, které byly spuštěny nebo připojeny z jedné instance ide.
 
-- Je implementováno správce ladění relace (SDM). Další informace najdete v tématu [správce ladění relace](../../extensibility/debugger/session-debug-manager.md).
+- Je implementována správcem ladění relace (SDM). Další informace naleznete v [tématu Session Debug Manager](../../extensibility/debugger/session-debug-manager.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Správce ladění relace](../../extensibility/debugger/session-debug-manager.md)
-- [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)
+- [Koncepty ladicích programů](../../extensibility/debugger/debugger-concepts.md)

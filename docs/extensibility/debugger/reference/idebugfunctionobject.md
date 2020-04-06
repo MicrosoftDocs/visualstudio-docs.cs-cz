@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject | Dokumentace Microsoftu
+title: IDebugFunctionObject | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugFunctionObject interface
 ms.assetid: 8d94e97c-a9d1-400c-8a98-a44b5385b33a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5fb0d969268e7765abe5c3ebdc9fc000a10a3aa0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6433c1f2c540b040a3b3beccc264377e69592387
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313440"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728500"
 ---
 # <a name="idebugfunctionobject"></a>IDebugFunctionObject
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [spravované ukázka Chyba při vyhodnocování výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [Vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
  Toto rozhraní představuje funkci.
 
@@ -32,25 +32,25 @@ IDebugFunctionObject : IDebugObject
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Vyhodnocovače výrazů implementuje toto rozhraní k reprezentaci funkce.
+ Vyhodnocení výrazu implementuje toto rozhraní představují funkci.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Toto rozhraní je specializací [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) rozhraní a získaná pomocí [QueryInterface](/cpp/atl/queryinterface) na `IDebugObject` rozhraní.
+ Toto rozhraní je specializace rozhraní [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) a je `IDebugObject` získánpomocí [QueryInterface](/cpp/atl/queryinterface) na rozhraní.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- Kromě metod zděděných z [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md), `IDebugFunctionObject` rozhraní poskytuje následující metody.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ Kromě metod zděděných z [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)rozhraní `IDebugFunctionObject` zveřejňuje následující metody.
 
 |Metoda|Popis|
 |------------|-----------------|
 |[CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md)|Vytvoří primitivní datový objekt.|
 |[CreateObject](../../../extensibility/debugger/reference/idebugfunctionobject-createobject.md)|Vytvoří objekt pomocí konstruktoru.|
-|[CreateObjectNoConstructor](../../../extensibility/debugger/reference/idebugfunctionobject-createobjectnoconstructor.md)|Vytvoří objekt se žádný konstruktor.|
-|[CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md)|Vytvoří objekt typu pole.|
+|[CreateObjectNoConstructor](../../../extensibility/debugger/reference/idebugfunctionobject-createobjectnoconstructor.md)|Vytvoří objekt bez konstruktoru.|
+|[CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md)|Vytvoří objekt pole.|
 |[CreateStringObject](../../../extensibility/debugger/reference/idebugfunctionobject-createstringobject.md)|Vytvoří objekt řetězce.|
-|[Evaluate](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md)|Volá funkci a vrátí výslednou hodnotu jako objekt.|
+|[Vyhodnotit](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md)|Volá funkci a vrátí výslednou hodnotu jako objekt.|
 
 ## <a name="remarks"></a>Poznámky
- Toto rozhraní umožňuje vyhodnocovač výrazů pro reprezentaci funkce v strom analýzy. `Create` Metod v tomto rozhraní se používají k vytvoření objektů představujících vstupních parametrů metody. Funkce mohou být provedeny poté voláním [vyhodnotit](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md) metodu, která vrací objekt, který reprezentuje návratovou hodnotu funkce.
+ Toto rozhraní umožňuje vyhodnocení výrazu představují funkce ve stromu analýzy. Metody `Create` v tomto rozhraní se používají k vytvoření objektů představujících vstupní parametry metody. Funkce pak může být spuštěna voláním metody [Evaluate,](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md) která vrací objekt představující vrácenou hodnotu funkce.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: ee.h
@@ -59,6 +59,6 @@ IDebugFunctionObject : IDebugObject
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní pro vyhodnocení výrazu](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

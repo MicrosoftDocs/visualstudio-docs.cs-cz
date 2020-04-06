@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_FLAGS | Dokumentace Microsoftu
+title: DISASSEMBLY_FLAGS | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - DISASSEMBLY_FLAGS enumeration
 ms.assetid: c1ec5a4d-5d42-4660-932c-7348550140cb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0160a14a4ad20e7144e48f767fad88951ca1e473
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ba6d9db3ad2cb1f9bbc9e3cea27aba939c6dd499
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318393"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737369"
 ---
-# <a name="disassemblyflags"></a>DISASSEMBLY_FLAGS
-Určuje příznaky pro převod do strojového jazyka.
+# <a name="disassembly_flags"></a>DISASSEMBLY_FLAGS
+Určuje příznaky pro demontáž.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,29 +50,29 @@ public enum enum_DISASSEMBLY_FLAGS {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `DF_DOCUMENTCHANGE`\
-Označuje, že tento pokyn je v jiném dokumentu než ta předchozí.
+Označuje, že tato instrukce je v jiném dokumentu než předchozí.
 
 `DF_DISABLED`\
-Označuje, že tento pokyn nebude provedeno.
+Označuje, že tato instrukce nebude provedena.
 
 `DF_INSTRUCTION_ACTIVE`\
-Označuje, že je tento pokyn jeden další pokyny, který se spustí (může existovat více než jeden).
+Označuje, že tento pokyn je jedním z dalších pokynů, které mají být provedeny (může být více než jeden).
 
 `DF_DATA`\
-Označuje, že tento pokyn je ve skutečnosti data (ne kódu).
+Označuje, že tato instrukce je opravdu data (ne kód).
 
 `DF_HASSOURCE`\
-Označuje, že tento pokyn má zdroj. Některé pokyny, jako je například profilace nebo uvolňování paměti kolekce kód, mít žádný odpovídající zdroj.
+Označuje, že tato instrukce má zdroj. Některé pokyny, například profilování nebo kód uvolňování paměti, nemají žádný odpovídající zdroj.
 
 `DF_DOCUMENT_CHECKSUM`\
-Označuje, že `bstrDocumentUrl` pole obsahovat data kontrolních součtů za adresu URL dokumentu. V části poznámky [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) strukturu pro způsob uložení dat kontrolního součtu.
+Označuje, `bstrDocumentUrl` že pole obsahuje data kontrolního součtu za adresou URL dokumentu. Informace o způsobu ukládání dat kontrolního součtu naleznete v části Poznámky pro strukturu [DisassemblyData.](../../../extensibility/debugger/reference/disassemblydata.md)
 
 ## <a name="remarks"></a>Poznámky
-Použít jako `dwFlags` člena [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktury.
+Používá se `dwFlags` jako člen struktury [DisassemblyData.](../../../extensibility/debugger/reference/disassemblydata.md)
 
-Tyto příznaky lze kombinovat pomocí logické bitové `OR`.
+Tyto příznaky mohou být kombinovány `OR`s bitovým .
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -81,6 +81,6 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)

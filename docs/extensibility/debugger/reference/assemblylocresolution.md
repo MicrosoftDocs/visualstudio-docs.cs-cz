@@ -1,5 +1,5 @@
 ---
-title: ASSEMBLYLOCRESOLUTION | Dokumentace Microsoftu
+title: ASSEMBLYLOCŘEŠENÍ | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - ASSEMBLYLOCRESOLUTION enumeration
 ms.assetid: 0bcfe85c-5f37-4a9d-bf2b-141acd96ad67
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0a229fc7f0a59f8b5ca5d2d71a6d8bf0a01f76b4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cbd015408cbefd1861f6e795447a5302efabb0dc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66327384"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738136"
 ---
 # <a name="assemblylocresolution"></a>ASSEMBLYLOCRESOLUTION
-Určuje, kde je umístěné sestavení.
+Určuje, kde se nachází sestavení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,23 +46,23 @@ public enum enum_ASSEMBLYLOCRESOLUTION {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `ALR_NAME`\
-Sestavení se nachází v aktuálním oboru názvů.
+Sestavení je umístěno v aktuálním oboru názvů.
 
 `ALR_USERDIR`\
-Sestavení je umístěn v adresáři uživatele.
+Sestavení je umístěno v adresáři uživatele.
 
 `ALR_SHAREDDIR`\
-Sestavení je umístěn ve sdíleném adresáři.
+Sestavení je umístěno ve sdíleném adresáři.
 
 `ALR_REMOTEDIR`\
-Sestavení je umístěno do vzdáleného adresáře.
+Sestavení je umístěno ve vzdáleném adresáři.
 
 ## <a name="remarks"></a>Poznámky
-Tyto hodnoty jsou vráceny prostřednictvím [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md) a [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md) metody.
+Tyto hodnoty jsou vráceny [resolveassemblyref](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md) a [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md) metody.
 
-Tyto hodnoty je možné kombinovat s `OR` operace.
+Tyto hodnoty lze kombinovat `OR` s operací.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -71,7 +71,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)
 - [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md)

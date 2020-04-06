@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2::TerminateProcess | Dokumentace Microsoftu
+title: IDebugPortEx2::Ukončit proces | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPortEx2::TerminateProcess
 ms.assetid: bf8fa94c-6d9d-4e4f-ac08-3b44ba5ace68
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 857bfda587badfdce5d94c53bae402f32d93695b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 73c9a02f5b114d49afffec2b349ce6621871f789
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66340445"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725016"
 ---
 # <a name="idebugportex2terminateprocess"></a>IDebugPortEx2::TerminateProcess
-Ukončení procesu.
+Ukončí proces.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,11 +41,11 @@ int TerminateProcess( 
 
 ## <a name="parameters"></a>Parametry
 `pPortProcess`\
-[in] [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) objekt reprezentující proces ukončen.
+[v] [Objekt IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) představující proces, který má být ukončen.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

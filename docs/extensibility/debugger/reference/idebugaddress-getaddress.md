@@ -1,5 +1,5 @@
 ---
-title: IDebugAddress::GetAddress | Dokumentace Microsoftu
+title: IDebugAddress::GetAddress | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugAddress:GetAddress method
 ms.assetid: 2590387b-5d36-4116-9a75-737957b8898e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f787f041c6c39b8120a768f9288efe86649bb227
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 162a64c9118bdcde23208082350005e607a237b8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66317994"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736607"
 ---
 # <a name="idebugaddressgetaddress"></a>IDebugAddress::GetAddress
-Vrací strukturu popisující objekt a jeho umístění v rámci jeho rozsah nebo kontejneru.
+Vrátí strukturu popisující objekt a jeho umístění v rámci jeho oboru nebo kontejneru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetAddress(
 
 ## <a name="parameters"></a>Parametry
 `pAddress`\
-[out v] A [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) struktura, která je vyplněna touto metodou.
+[dovnitř, ven] DEBUG_ADDRESS [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) struktury, která je vyplněna touto metodou.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) struktura je předaný této metodě, která ji doplní pomocí příslušné informace. Způsob interpretace těchto informací závisí na typ vrácené informace a samotná obslužná rutina symbol. Zobrazit [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) další podrobnosti.
+ DEBUG_ADDRESS [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) struktura je předána této metodě, která ji pak vyplní příslušnými informacemi. Způsob interpretace těchto informací závisí na druhu vrácených informací a samotné obslužné rutině symbolu. Další podrobnosti najdete [DEBUG_ADDRESS.](../../../extensibility/debugger/reference/debug-address.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)

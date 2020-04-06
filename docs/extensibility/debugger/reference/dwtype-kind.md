@@ -1,5 +1,5 @@
 ---
-title: dwTYPE_KIND | Dokumentace Microsoftu
+title: dwTYPE_KIND | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - dwTYPE_KIND enumeration
 ms.assetid: 6ff56b0f-c502-4e6c-9829-bfa05361b783
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 12fe23d53939303be6b7e6a20ff12d2524d71593
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a9d790f12d3fc21bbae7373470746af2ebfe6dc9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318130"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737190"
 ---
-# <a name="dwtypekind"></a>dwTYPE_KIND
-Určuje, jak interpretovat typ [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objektu.
+# <a name="dwtype_kind"></a>dwTYPE_KIND
+Určuje, jak interpretovat typ objektu [IDebugField.](../../../extensibility/debugger/reference/idebugfield.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,18 +45,18 @@ public enum enum_dwTYPE_KIND {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `TYPE_KIND_METADATA`\
-[TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) sjednocení by měl být interpretován jako [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) struktury.
+Svaz [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) by měl být vykládán jako [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) struktura.
 
 `TYPE_KIND_PDB`\
-`TYPE_INFO` Sjednocení by měl být interpretován jako [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) struktury.
+Unie `TYPE_INFO` by měla být vykládána jako [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) struktura.
 
 `TYPE_KIND_BUILT`\
-`TYPE_INFO` Sjednocení by měl být interpretován jako [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) struktury.
+Unie `TYPE_INFO` by měla být vykládána jako [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) struktura.
 
 ## <a name="remarks"></a>Poznámky
-Joinkind hodnoty tento výčet `dwKind` pole [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) struktury a slouží k určení, jak interpretovat `type` člen sjednocení. `TYPE_INFO` Struktura je vrácený voláním [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) metody.
+Hodnoty tohoto výčtu se `dwKind` zobrazí v poli [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) struktury a slouží `type` k určení, jak interpretovat člena unie. Struktura `TYPE_INFO` je vrácena voláním [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) metoda.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: sh.h
@@ -65,7 +65,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)
 - [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)

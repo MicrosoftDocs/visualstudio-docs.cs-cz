@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::GetName | Dokumentace Microsoftu
+title: IDebugDocumentContext2::GetName | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentContext2::GetName
 ms.assetid: 546c5b2e-f166-4edb-9e61-57d797ca98a1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d968a908a43b215162a46cea7d9e0251ff40d431
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 253ef509a60e8bb2ce177235f4b93b370e66f484
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349122"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731806"
 ---
 # <a name="idebugdocumentcontext2getname"></a>IDebugDocumentContext2::GetName
 Získá zobrazitelný název dokumentu, který obsahuje tento kontext dokumentu.
@@ -43,19 +43,19 @@ int GetName(
 
 ## <a name="parameters"></a>Parametry
 `gnType`\
-[in] Hodnota z [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) výčet, který určuje typ název, který vrátí.
+[v] Hodnota z [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) výčtu, který určuje typ názvu, který má být vrácen.
 
 `pbstrFileName`\
 [out] Vrátí název souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Tato metoda obvykle předává volání [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md) metodu, pokud kontext dokumentu je zapsán pro uložení názvu dokumentu (jak je vidět příklad).
+Tato metoda obvykle předává volání [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md) metoda, pokud kontext dokumentu je zapsán a uložit název dokumentu sám (jako příklad show).
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CDebugContext` objekt, který zveřejňuje [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) rozhraní.
+Následující příklad ukazuje, jak implementovat `CDebugContext` tuto metodu pro jednoduchý objekt, který zveřejňuje rozhraní [IDebugDocumentContext2.](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)
 
 ```cpp
 HRESULT CDebugContext::GetName(GETNAME_TYPE gnType, BSTR* pbstrFileName)
@@ -94,6 +94,6 @@ HRESULT CDebugContext::GetName(GETNAME_TYPE gnType, BSTR* pbstrFileName)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)
 - [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)

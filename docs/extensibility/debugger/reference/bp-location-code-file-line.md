@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_CODE_FILE_LINE | Dokumentace Microsoftu
+title: BP_LOCATION_CODE_FILE_LINE | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BP_LOCATION_CODE_FILE_LINE structure
 ms.assetid: 3ff32032-d412-44d3-91bf-870cc354a09e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
-ms.openlocfilehash: 9e2cdcce6895d88f4a3ea1096bd419d951a1f545
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e338c3b24ade2cf7663b77abea64f58425d3a068
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319068"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738010"
 ---
-# <a name="bplocationcodefileline"></a>BP_LOCATION_CODE_FILE_LINE
-Obsahuje data pro umístění zarážky na konkrétní řádek v souboru zdrojového kódu.
+# <a name="bp_location_code_file_line"></a>BP_LOCATION_CODE_FILE_LINE
+Obsahuje data pro umístění zarážky na určitém řádku ve zdrojovém souboru kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,13 +35,13 @@ typedef struct _BP_LOCATION_CODE_FILE_LINE {
 
 ## <a name="members"></a>Členové
 `bstrContext`\
-Kontext k zarážce, obvykle název metody nebo funkce jako zobrazené v zásobníku volání.
+Kontext zarážky, obvykle název metody nebo funkce, jak je vidět na zásobníku volání.
 
 `pDocPos`\
-[IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) objekt, který reprezentuje dokument umístění zarážky.
+[Objekt IDebugDocumentPosition2,](../../../extensibility/debugger/reference/idebugdocumentposition2.md) který představuje pozici dokumentu zarážky.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je členem skupiny [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktury v rámci sjednocení.
+Tato struktura je členem [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktury jako součást unie.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -50,7 +50,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)
 - [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)

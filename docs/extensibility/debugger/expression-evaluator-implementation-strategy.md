@@ -1,34 +1,34 @@
 ---
-title: Strategie implementace vyhodnocovače výrazů | Dokumentace Microsoftu
+title: Strategie implementace evaluátoru výrazů | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - expression evaluation, implementation strategy
 - debug engines, implementation strategies
 ms.assetid: 1bccaeb3-8109-4128-ae79-16fd8fbbaaa2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee0842f8375faeca7e715d4b20c73ca13598dbc3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3922689c20c839b3c0c2b2440bc9fefd5d25c80a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353742"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738670"
 ---
-# <a name="expression-evaluator-implementation-strategy"></a>Strategie implementace vyhodnocovače výrazů
+# <a name="expression-evaluator-implementation-strategy"></a>Strategie implementace vyhodnocení výrazu
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka Chyba při vyhodnocování výrazu spravované](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Jedním z přístupů k rychlému vytváření vyhodnocovače výrazů (EE), je nejprve implementovat minimální kód, který chcete-li zobrazit místní proměnné v **lokální** okna. Je vhodné Pamatujte si, že každý řádek v **lokální** okně se zobrazí název, typ a hodnotu místní proměnné, a všech tří jsou reprezentovány [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objektu. Název, typ a hodnotu lokální proměnné se získávají z `IDebugProperty2` objektu voláním jeho [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) metoda. Další informace o tom, jak zobrazit místní proměnné v **lokální** okna, naleznete v tématu [zobrazení místních hodnot](../../extensibility/debugger/displaying-locals.md).
+ Jedním z přístupů k rychlému vytvoření vyhodnocení výrazu (EE) je nejprve implementovat minimální kód potřebný k zobrazení místních proměnných v okně **Locals.** Je užitečné si uvědomit, že každý řádek v okně **Locals** zobrazuje název, typ a hodnotu místní proměnné a že všechny tři jsou reprezentovány objektem [IDebugProperty2.](../../extensibility/debugger/reference/idebugproperty2.md) Název, typ a hodnota místní proměnné se `IDebugProperty2` získá z objektu voláním metody [GetPropertyInfo.](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) Další informace o zobrazení místních proměnných v okně **Locals** naleznete v [tématu Zobrazení místních obyvatel](../../extensibility/debugger/displaying-locals.md).
 
 ## <a name="discussion"></a>Diskuse
- Možnou implementaci sekvence začíná implementace [IDebugExpressionEvaluator](../../extensibility/debugger/reference/idebugexpressionevaluator.md). [Analyzovat](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) a [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) musí být implementované metody k zobrazení místních hodnot. Volání `IDebugExpressionEvaluator::GetMethodProperty` vrátí `IDebugProperty2` objekt, který představuje metodu: to znamená, [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) objektu. Metody, samotné se nezobrazují v **lokální** okna.
+ Možná sekvence implementace začíná implementací [IDebugExpressionEvaluator](../../extensibility/debugger/reference/idebugexpressionevaluator.md). [Parse](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) a [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) metody musí být implementovány k zobrazení locals. Volání `IDebugExpressionEvaluator::GetMethodProperty` vrátí `IDebugProperty2` objekt, který představuje metodu: to znamená objekt [IDebugMethodField.](../../extensibility/debugger/reference/idebugmethodfield.md) Samotné metody nejsou zobrazeny v okně **Locals.**
 
- [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) metoda by měla být implementována dále. Ladicí stroj (DE) volá tuto metodu za účelem získání seznamu místních proměnných a argumentů předáním `IDebugProperty2::EnumChildren` `guidFilter` argument `guidFilterLocalsPlusArgs`. `IDebugProperty2::EnumChildren` volání [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) a [EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md), kombinaci výsledků v jeden výčet. Zobrazit [zobrazení místních hodnot](../../extensibility/debugger/displaying-locals.md) další podrobnosti.
+ [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) Metoda by měla být implementována další. Ladicí modul (DE) volá tuto metodu získat seznam místních `IDebugProperty2::EnumChildren` `guidFilter` proměnných `guidFilterLocalsPlusArgs`a argumentů předáním argument . `IDebugProperty2::EnumChildren`volá [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) a [EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md), kombinující výsledky v jednom výčtu. Další podrobnosti [najdete v tématu Zobrazení místních obyvatel.](../../extensibility/debugger/displaying-locals.md)
 
-## <a name="see-also"></a>Viz také:
-- [Implementace vyhodnocovače výrazů](../../extensibility/debugger/implementing-an-expression-evaluator.md)
-- [Zobrazení místních hodnot](../../extensibility/debugger/displaying-locals.md)
+## <a name="see-also"></a>Viz také
+- [Implementace vyhodnocení výrazu](../../extensibility/debugger/implementing-an-expression-evaluator.md)
+- [Zobrazit místní obyvatele](../../extensibility/debugger/displaying-locals.md)

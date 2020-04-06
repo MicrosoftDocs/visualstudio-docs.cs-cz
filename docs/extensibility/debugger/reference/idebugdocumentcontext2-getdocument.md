@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::GetDocument | Dokumentace Microsoftu
+title: IDebugDocumentContext2::GetDocument | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentContext2::GetDocument
 ms.assetid: c6d46c5d-ade8-4dc8-9862-8fc7876658c4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2ce07bd2274bc2a4881acd98fb73266fc90c7bd8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6bb93fe3efb4bc114cf583e8e2c066c337109d12
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341280"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731834"
 ---
 # <a name="idebugdocumentcontext2getdocument"></a>IDebugDocumentContext2::GetDocument
 Získá dokument, který obsahuje tento kontext dokumentu.
@@ -41,14 +41,14 @@ int GetDocument( 
 
 ## <a name="parameters"></a>Parametry
 `ppDocument`\
-[out] Vrátí [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) objekt, který reprezentuje dokument, který obsahuje tento kontext dokumentu.
+[out] Vrátí objekt [IDebugDocument2,](../../../extensibility/debugger/reference/idebugdocument2.md) který představuje dokument, který obsahuje tento kontext dokumentu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je pro tyto moduly ladění, které poskytují dokumentů přímo do integrovaného vývojového prostředí. Jinak tato metoda by měla vrátit `E_NOTIMPL`.
+ Tato metoda je pro ty ladicí moduly, které poskytují dokumenty přímo do ide. V opačném případě `E_NOTIMPL`by tato metoda měla vrátit .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)
 - [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

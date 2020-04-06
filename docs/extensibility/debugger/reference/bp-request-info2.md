@@ -1,5 +1,5 @@
 ---
-title: BP_REQUEST_INFO2 | Dokumentace Microsoftu
+title: BP_REQUEST_INFO2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_REQUEST_INFO2 structure
 ms.assetid: 008c87f7-a76e-43d3-8904-11b225d6a9a5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8f9c601cf1620d002bd86b8bc110d28bdb533e61
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 04d1db2ca8176678d8a72a84ede2bddcbfa2f152
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352950"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737876"
 ---
-# <a name="bprequestinfo2"></a>BP_REQUEST_INFO2
-Obsahuje informace potřebné k implementaci zarážku, včetně dodavatele identifikátor GUID, omezení a zarážky s trasováním.
+# <a name="bp_request_info2"></a>BP_REQUEST_INFO2
+Obsahuje informace potřebné k implementaci zarážky, včetně identifikátoru GUID dodavatele, omezení a trasovacího bodu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,46 +65,46 @@ public struct BP_REQUEST_INFO2 {
 
 ## <a name="members"></a>Členové
 `dwFields`\
-Kombinace příznaků z [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) výčet, který určuje, která pole jsou vyplněna.
+Kombinace příznaků z [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) výčtu, který určuje, která pole jsou vyplněna.
 
 `guidLanguage`\
 Identifikátor GUID jazyka.
 
 `bpLocation`\
-[BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktura, která určuje typ umístění zarážky.
+[BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktury, která určuje typ umístění zarážky.
 
 `pProgram`\
-[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekt, který reprezentuje aplikaci, ve kterém dochází k zarážce.
+[Objekt IDebugProgram2,](../../../extensibility/debugger/reference/idebugprogram2.md) který představuje aplikaci, ve které dochází k zarážky.
 
 `bstrProgramName`\
-Název aplikace, ve kterém dochází k zarážce.
+Název aplikace, ve kterém dojde k zarážce.
 
 `pThread`\
-[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt, který reprezentuje vláken, ve kterém dochází k zarážce.
+[Objekt IDebugThread2,](../../../extensibility/debugger/reference/idebugthread2.md) který představuje vlákno, ve kterém dojde k zarážky.
 
 `bstrThreadName`\
-Název vlákna, ve kterém dochází k zarážce.
+Název vlákna, ve kterém dochází k zarážky.
 
 `bpCondition`\
-[BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) struktura, která popisuje podmínky, za kterých se zarážka aktivuje.
+[BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) struktura, která popisuje podmínky, za kterých bude zarážky požáru.
 
 `bpPassCount`\
-[BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) strukturu, která obsahuje informace o počtu průchodu této zarážky.
+[BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) struktura, která obsahuje informace o počtu průchodů zarážky.
 
 `dwFlags`\
-Kombinace příznaků z [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) výčet, který určuje příznaky pro požadované zarážky.
+Kombinace příznaků z [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) výčtu, který určuje příznaky pro požadovanou zarážku.
 
 `guidVendor`\
-Identifikátor GUID dodavatele. Může mít hodnotu null.
+IDENTIFIKÁTOR GUID dodavatele. Může být hodnota null.
 
 `bstrConstraint`\
-Název omezení zarážku. Může mít hodnotu null.
+Název omezení zarážky. Může být hodnota null.
 
 `bstrTracepoint`\
-Název bodu trasování. Může mít hodnotu null.
+Název bodu trasování. Může být hodnota null.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je vrácený [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md) metody.
+Tato struktura je vrácena [metodou GetRequestInfo2.](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -113,7 +113,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)
 - [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::EnumStaticLocals | Dokumentace Microsoftu
+title: IDebugMethodField::EnumStaticLocals | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugMethodField::EnumStaticLocals method
 ms.assetid: e0c522c4-f759-4c32-ae87-7abcb573e77d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 006f1975c18aa7464531654d9b71fd857953afc9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6e0a89b4c1ac4318b6dd070dc086b86b45ad24fa
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324247"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727154"
 ---
 # <a name="idebugmethodfieldenumstaticlocals"></a>IDebugMethodField::EnumStaticLocals
-Vytvoří čítač pro statické lokální proměnné metody.
+Vytvoří čítač pro statické místní proměnné metody.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,15 +41,15 @@ int EnumStaticLocals(
 
 ## <a name="parameters"></a>Parametry
 `ppLocals`\
-[out] Vrátí [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objekt představující seznam statické lokální proměnné. Vrátí hodnotu null, pokud neexistují žádné statické lokální proměnné.
+[out] Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam statických místních obyvatel. Vrátí hodnotu null, pokud neexistují žádné statické locals.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK nebo vrátí S_FALSE v případě, že neexistují žádné statické lokální proměnné. V opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK nebo vrátí S_FALSE pokud neexistují žádné statické místní. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Každý prvek je [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objektu, který představuje různé druhy statické lokální proměnné. Volání [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) metoda na každém objektu k určení přesně jaký druh statické místní objekt představuje.
+ Každý prvek je [Objekt IDebugField](../../../extensibility/debugger/reference/idebugfield.md) představující různé typy statické místní. Volání [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) metoda na každý objekt přesně určit, jaký druh statické místní objekt představuje.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

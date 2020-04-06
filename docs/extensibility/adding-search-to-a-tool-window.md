@@ -1,60 +1,60 @@
 ---
-title: Přidání vyhledávání do okna nástroje | Microsoft Docs
+title: Přidání hledání do okna nástroje | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - tool windows, adding search
 ms.assetid: f78c4892-8060-49c4-8ecd-4360f1b4d133
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4414f6d907424a1abb56bccd1d1b125444e7c716
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f9112a3368ba604c4291f9018e763022e953c4fc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648003"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740148"
 ---
-# <a name="add-search-to-a-tool-window"></a>Přidání vyhledávání do okna nástroje
-Při vytváření nebo aktualizaci okna nástroje ve vašem rozšíření můžete přidat stejné funkce hledání, které se zobrazí jinde v aplikaci Visual Studio. Tato funkce zahrnuje tyto funkce:
+# <a name="add-search-to-a-tool-window"></a>Přidání hledání do okna nástroje
+Když v rozšíření vytvoříte nebo aktualizujete okno nástroje, můžete přidat stejnou funkci hledání, která se zobrazí jinde v sadě Visual Studio. Tato funkce zahrnuje následující funkce:
 
 - Vyhledávací pole, které je vždy umístěno ve vlastní oblasti panelu nástrojů.
 
-- Indikátor průběhu, který je v samotném vyhledávacím poli překrytý
+- Indikátor průběhu, který je překrytý na samotném vyhledávacím poli.
 
-- Možnost Zobrazit výsledky hned po zadání jednotlivých znaků (okamžité hledání) nebo jenom po zvolení klávesy **ENTER** (hledání na vyžádání).
+- Možnost zobrazit výsledky, jakmile zadáte každý znak (okamžité vyhledávání) nebo pouze po výběru klávesy **Enter** (vyhledávání na vyžádání).
 
-- Seznam zobrazující výrazy, pro které jste prohledali poslední.
+- Seznam, který zobrazuje termíny, pro které jste hledali naposledy.
 
-- Možnost filtrovat hledání podle konkrétních polí nebo aspektů cílů hledání.
+- Možnost filtrovat vyhledávání podle konkrétních polí nebo aspektů cílů vyhledávání.
 
-Podle tohoto návodu se dozvíte, jak provádět následující úlohy:
+Podle tohoto návodu se dozvíte, jak provádět následující úkoly:
 
 1. Vytvořte projekt VSPackage.
 
-2. Vytvořte okno nástroje, které obsahuje UserControl s textovým polem jen pro čtení.
+2. Vytvořte okno nástroje, které obsahuje UserControl s textbox jen pro čtení.
 
 3. Přidejte vyhledávací pole do okna nástroje.
 
-4. Přidejte implementaci vyhledávání.
+4. Přidejte implementaci hledání.
 
-5. Umožňuje okamžité vyhledávání a zobrazení indikátoru průběhu.
+5. Povolte okamžité vyhledávání a zobrazení indikátoru průběhu.
 
-6. Přidejte možnost **případu shody** .
+6. Přidejte možnost **Spárovat případ.**
 
-7. Přidejte filtr na **sudé řádky** .
+7. Přidejte **filtr pro rovné řádky hledání.**
 
 ## <a name="to-create-a-vsix-project"></a>Vytvoření projektu VSIX
 
-1. Vytvořte projekt VSIX s názvem `TestToolWindowSearch` s oknem nástrojů s názvem **TestSearch**. Pokud potřebujete pomoc, přečtěte si téma [Vytvoření rozšíření pomocí okna nástroje](../extensibility/creating-an-extension-with-a-tool-window.md).
+1. Vytvořte projekt VSIX s názvem `TestToolWindowSearch` s oknem nástroje s názvem **TestSearch**. Pokud potřebujete pomoc, přečtěte si téma [Vytvoření rozšíření pomocí okna nástroje](../extensibility/creating-an-extension-with-a-tool-window.md).
 
 ## <a name="to-create-a-tool-window"></a>Vytvoření okna nástroje
 
-1. V projektu `TestToolWindowSearch` otevřete soubor *TestSearchControl. XAML* .
+1. V `TestToolWindowSearch` projektu otevřete soubor *TestSearchControl.xaml.*
 
-2. Existující blok `<StackPanel>` nahraďte následujícím blokem, který do <xref:System.Windows.Controls.UserControl> v okně nástroje přidá <xref:System.Windows.Controls.TextBox> jen pro čtení.
+2. Nahraďte `<StackPanel>` existující blok následujícím blokem, který <xref:System.Windows.Controls.TextBox> přidá <xref:System.Windows.Controls.UserControl> jen pro čtení do okna nástroje.
 
     ```xaml
     <StackPanel Orientation="Vertical">
@@ -65,32 +65,32 @@ Podle tohoto návodu se dozvíte, jak provádět následující úlohy:
     </StackPanel>
     ```
 
-3. Do souboru *TestSearchControl.XAML.cs* přidejte následující direktivu using:
+3. Do *TestSearchControl.xaml.cs* souboru přidejte následující příkaz using směrnice:
 
     ```csharp
     using System.Text;
     ```
 
-4. Odeberte metodu `button1_Click()`.
+4. Odeberte metodu. `button1_Click()`
 
      Do třídy **TestSearchControl** přidejte následující kód.
 
-     Tento kód přidá vlastnost Public <xref:System.Windows.Controls.TextBox> s názvem **SearchResultsTextBox** a vlastnost veřejného řetězce s názvem **SearchContent**. V konstruktoru je SearchResultsTextBox nastaveno na textové pole a SearchContent je inicializována na sadu řetězců oddělenými na nový řádek. Obsah textového pole je také inicializován do sady řetězců.
+     Tento kód přidá <xref:System.Windows.Controls.TextBox> veřejnou vlastnost s názvem **SearchResultsTextBox** a vlastnost veřejného řetězce s názvem **SearchContent**. V konstruktoru je SearchResultsTextBox nastaven na textové pole a SearchContent je inicializován na novou sadu řetězců oddělených novým řádkem. Obsah textového pole je také inicializován na sadu řetězců.
 
      [!code-csharp[ToolWindowSearch#1](../extensibility/codesnippet/CSharp/adding-search-to-a-tool-window_1.cs)]
      [!code-vb[ToolWindowSearch#1](../extensibility/codesnippet/VisualBasic/adding-search-to-a-tool-window_1.vb)]
 
-5. Sestavte projekt a spusťte ladění. Zobrazí se experimentální instance aplikace Visual Studio.
+5. Sestavení projektu a začít ladění. Zobrazí se experimentální instance sady Visual Studio.
 
-6. Na panelu nabídek vyberte možnost **zobrazit**  > **jiné Windows**  > **TestSearch**.
+6. Na řádku nabídek zvolte **Zobrazit** > jiné**testovací vyhledávání systému****Windows** > .
 
-     Zobrazí se okno nástroje, ale ovládací prvek hledání ještě není zobrazen.
+     Zobrazí se okno nástroje, ale ovládací prvek hledání se ještě nezobrazí.
 
 ## <a name="to-add-a-search-box-to-the-tool-window"></a>Přidání vyhledávacího pole do okna nástroje
 
-1. Do souboru *TestSearch.cs* přidejte následující kód do třídy `TestSearch`. Kód Přepisuje vlastnost <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> tak, aby přistupující objekt get vrátil `true`.
+1. V *souboru TestSearch.cs* přidejte do `TestSearch` třídy následující kód. Kód přepíše <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> vlastnost tak, aby get `true`přistupující objekt vrátí .
 
-     Chcete-li povolit hledání, je nutné přepsat vlastnost <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A>. Třída <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch> a poskytuje výchozí implementaci, která neumožňuje vyhledávání.
+     Chcete-li povolit vyhledávání, <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> je nutné přepsat vlastnost. Třída <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch> a poskytuje výchozí implementaci, která neumožňuje vyhledávání.
 
     ```csharp
     public override bool SearchEnabled
@@ -99,16 +99,16 @@ Podle tohoto návodu se dozvíte, jak provádět následující úlohy:
     }
     ```
 
-2. Sestavte projekt a spusťte ladění. Objeví se experimentální instance.
+2. Sestavení projektu a začít ladění. Zobrazí se experimentální instance.
 
-3. V experimentální instanci aplikace Visual Studio otevřete **TestSearch**.
+3. V experimentální instanci sady Visual Studio otevřete **testSearch**.
 
-     V horní části okna nástroje se zobrazí ovládací prvek hledání s vodoznakem **vyhledávání** a ikonou lupy. Hledání ale ještě nefunguje, protože proces vyhledávání není implementovaný.
+     V horní části okna nástroje se zobrazí ovládací prvek hledání s vodoznakem **Hledat** a ikonou lupy. Hledání však ještě nefunguje, protože proces hledání nebyl implementován.
 
-## <a name="to-add-the-search-implementation"></a>Přidání implementace vyhledávání
- Pokud povolíte vyhledávání na <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>, jako v předchozím postupu, okno nástroje vytvoří hostitele vyhledávání. Tento hostitel nastavuje a spravuje procesy hledání, které se vždy vyskytují ve vlákně na pozadí. Vzhledem k tomu, že třída <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> spravuje vytváření hostitele vyhledávání a nastavení hledání, potřebujete pouze vytvořit úlohu vyhledávání a zadat metodu hledání. Proces vyhledávání probíhá ve vlákně na pozadí a volání ovládacího prvku okna nástroje se vyskytnou ve vlákně uživatelského rozhraní. Proto je nutné použít metodu [ThreadHelper. Invoke *](https://msdn.microsoft.com/data/ee197798(v=vs.85)) ke správě všech volání, která jste provedli při práci s ovládacím prvkem.
+## <a name="to-add-the-search-implementation"></a>Přidání implementace hledání
+ Pokud povolíte hledání <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>v souboru , stejně jako v předchozím postupu, okno nástroje vytvoří hostitele hledání. Tento hostitel nastavuje a spravuje procesy vyhledávání, které se vždy vyskytují ve vlákně na pozadí. Vzhledem <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> k tomu, že třída spravuje vytvoření hostitele vyhledávání a nastavení hledání, stačí vytvořit úlohu hledání a poskytnout metodu hledání. Proces hledání probíhá ve vlákně na pozadí a volání ovládacího prvku okna nástroje dochází ve vlákně uživatelského rozhraní. Proto je nutné použít [ThreadHelper.Invoke *](https://msdn.microsoft.com/data/ee197798(v=vs.85)) metoda ke správě všechna volání, která provedete při práci s ovládacím prvkem.
 
-1. Do souboru *TestSearch.cs* přidejte následující direktivy `using`:
+1. Do souboru *TestSearch.cs* přidejte následující `using` direktivy:
 
     ```csharp
     using System;
@@ -123,15 +123,15 @@ Podle tohoto návodu se dozvíte, jak provádět následující úlohy:
     using Microsoft.VisualStudio.Shell.Interop;
     ```
 
-2. Ve třídě `TestSearch` přidejte následující kód, který provede následující akce:
+2. Do `TestSearch` třídy přidejte následující kód, který provádí následující akce:
 
-    - Přepíše metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> pro vytvoření úlohy vyhledávání.
+    - Přepíše <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> metodu a vytvoří úlohu hledání.
 
-    - Přepíše metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A>, aby obnovila stav textového pole. Tato metoda je volána, když uživatel zruší úkol vyhledávání a když uživatel nastaví nebo zruší nastavení možností nebo filtrů. @No__t_0 i <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> jsou volány ve vlákně uživatelského rozhraní. Proto nemusíte přistupovat k textovému poli prostřednictvím metody [ThreadHelper. Invoke *](https://msdn.microsoft.com/data/ee197798(v=vs.85)) .
+    - Přepíše <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> metodu k obnovení stavu textového pole. Tato metoda se nazývá, když uživatel zruší úlohu hledání a když uživatel nastaví nebo zruší nastavení možností nebo filtrů. Oba <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> a jsou volány na vlákno uživatelského rozhraní. Proto není nutné získat přístup k textovému poli pomocí [ThreadHelper.Invoke*metoda.](https://msdn.microsoft.com/data/ee197798(v=vs.85))
 
-    - Vytvoří třídu s názvem `TestSearchTask`, která dědí z <xref:Microsoft.VisualStudio.Shell.VsSearchTask>, která poskytuje výchozí implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask>.
+    - Vytvoří třídu s `TestSearchTask` názvem, která <xref:Microsoft.VisualStudio.Shell.VsSearchTask>dědí z , <xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask>která poskytuje výchozí implementaci .
 
-         V `TestSearchTask` konstruktor nastaví soukromé pole, které odkazuje na okno nástroje. Chcete-li poskytnout metodu hledání, přepište metody <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> a <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A>. @No__t_0 metoda je místo, kde implementujete proces vyhledávání. Tento proces zahrnuje provedení hledání, zobrazení výsledků hledání v textovém poli a volání implementace základní třídy této metody, která oznamuje, že vyhledávání bylo dokončeno.
+         V `TestSearchTask`aplikace nastaví konstruktor soukromé pole, které odkazuje na okno nástroje. Chcete-li poskytnout metodu hledání, přepište metody <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> a. <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A> Metoda <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> je místo, kde implementovat proces hledání. Tento proces zahrnuje provedení hledání, zobrazení výsledků hledání v textovém poli a volání implementace základní třídy této metody k oznámení, že hledání je dokončeno.
 
     ```csharp
     public override IVsSearchTask CreateSearch(uint dwCookie, IVsSearchQuery pSearchQuery, IVsSearchCallback pSearchCallback)
@@ -228,18 +228,18 @@ Podle tohoto návodu se dozvíte, jak provádět následující úlohy:
     }
     ```
 
-3. Otestujte svou implementaci hledání provedením následujících kroků:
+3. Otestujte implementaci vyhledávání provedením následujících kroků:
 
-    1. Znovu sestavte projekt a spusťte ladění.
+    1. Znovu sestavte projekt a začněte ladění.
 
-    2. V experimentální instanci aplikace Visual Studio otevřete znovu okno nástroje, do okna hledání zadejte nějaký hledaný text a klikněte na tlačítko **ENTER**.
+    2. V experimentální instanci sady Visual Studio znovu otevřete okno nástroje, zadejte do vyhledávacího okna nějaký hledaný text a klepněte na tlačítko **ENTER**.
 
          Měly by se zobrazit správné výsledky.
 
 ## <a name="to-customize-the-search-behavior"></a>Přizpůsobení chování hledání
- Změnou nastavení vyhledávání můžete vytvořit nejrůznější změny v tom, jak se ovládací prvek hledání zobrazí a jak se bude hledání provádět. Můžete například změnit vodoznak (výchozí text, který se zobrazí v poli hledání), minimální a maximální šířka ovládacího prvku hledání a zda se má zobrazit indikátor průběhu. Můžete také změnit bod, ve kterém se výsledky hledání začnou zobrazovat (na vyžádání nebo okamžité hledání) a jestli se má zobrazit seznam podmínek, pro které jste v poslední době prohledali. Úplný seznam nastavení najdete ve třídě <xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource>.
+ Změnou nastavení vyhledávání můžete provést různé změny ve způsobu, jakým se ovládací prvek vyhledávání zobrazuje a jak se vyhledávání provádí. Můžete například změnit vodoznak (výchozí text, který se zobrazí ve vyhledávacím poli), minimální a maximální šířku ovládacího prvku hledání a zda se má zobrazit indikátor průběhu. Můžete také změnit bod, ve kterém se začnou zobrazovat výsledky hledání (na vyžádání nebo okamžité vyhledávání) a zda chcete zobrazit seznam výrazů, pro které jste nedávno hledali. Kompletní seznam nastavení najdete ve <xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource> třídě.
 
-1. V souboru * TestSearch.cs * přidejte následující kód do třídy `TestSearch`. Tento kód umožňuje okamžité hledání namísto vyhledávání na vyžádání (to znamená, že uživatel nemusí kliknout na tlačítko **ENTER**). Kód přepíše metodu `ProvideSearchSettings` ve třídě `TestSearch`, která je nutná ke změně výchozího nastavení.
+1. V souboru* TestSearch.cs* přidejte do `TestSearch` třídy následující kód. Tento kód umožňuje okamžité vyhledávání namísto vyhledávání na vyžádání (což znamená, že uživatel nemusí klepnout na **klávesu ENTER**). Kód přepíše `ProvideSearchSettings` metodu `TestSearch` ve třídě, která je nezbytná ke změně výchozího nastavení.
 
     ```csharp
     public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)
@@ -249,11 +249,11 @@ Podle tohoto návodu se dozvíte, jak provádět následující úlohy:
             (uint)VSSEARCHSTARTTYPE.SST_INSTANT);}
     ```
 
-2. Otestujte nové nastavení tak, že znovu sestavíte řešení a restartujete ladicí program.
+2. Otestujte nové nastavení opětovným sestavením řešení a restartováním ladicího programu.
 
-     Výsledky hledání se zobrazí pokaždé, když do vyhledávacího pole zadáte nějaký znak.
+     Výsledky hledání se zobrazí pokaždé, když zadáte znak do vyhledávacího pole.
 
-3. Do metody `ProvideSearchSettings` přidejte následující řádek, který umožňuje zobrazení indikátoru průběhu.
+3. Do `ProvideSearchSettings` metody přidejte následující řádek, který umožňuje zobrazení indikátoru průběhu.
 
     ```csharp
     public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)
@@ -267,26 +267,26 @@ Podle tohoto návodu se dozvíte, jak provádět následující úlohy:
     }
     ```
 
-     Aby se indikátor průběhu zobrazil, musí být průběh nahlášený. Chcete-li ohlásit průběh, odkomentujte následující kód v metodě `OnStartSearch` `TestSearchTask` třídy:
+     Aby se panel průběhu zobrazil, musí být hlášen průběh. Chcete-li ohlásit průběh, odkomentujte následující kód v metodě `OnStartSearch` třídy: `TestSearchTask`
 
     ```csharp
     SearchCallback.ReportProgress(this, progress++, (uint)contentArr.GetLength(0));
     ```
 
-4. Chcete-li zpomalit zpracování dostatečně tak, že indikátor průběhu je viditelný, odkomentujte následující řádek v metodě `OnStartSearch` `TestSearchTask` třídy:
+4. Chcete-li zpomalit zpracování natolik, že indikátor průběhu `OnStartSearch` je viditelný, odkomentujte následující řádek v metodě `TestSearchTask` třídy:
 
     ```csharp
     System.Threading.Thread.Sleep(100);
     ```
 
-5. Otestujte nové nastavení tak, že znovu sestavíte řešení a začnete ladit.
+5. Otestujte nové nastavení opětovným sestavením řešení a zahájením ladění.
 
-     Indikátor průběhu se zobrazí v okně hledání (jako modrý řádek pod textovým polem hledání) pokaždé, když provedete hledání.
+     Indikátor průběhu se zobrazí v okně hledání (jako modrá čára pod vyhledávacím textovým polem) při každém hledání.
 
-## <a name="to-enable-users-to-refine-their-searches"></a>Umožnění uživatelům Upřesnit jejich hledání
- Uživatelům můžete dovolit Upřesnit jejich hledání pomocí možností, jako je například **rozlišovat velká a malá písmena** nebo **Vyhledat celé slovo**. Možnosti mohou být logická hodnota, která se zobrazí jako zaškrtávací políčka nebo příkazy, které se zobrazí jako tlačítka. V tomto návodu vytvoříte logickou možnost.
+## <a name="to-enable-users-to-refine-their-searches"></a>Povolení uživatelům upřesnit jejich hledání
+ Uživatelům můžete povolit, aby upřesnili svá hledání pomocí možností, jako je **například případ shody** nebo **shoda celého slova**. Možnosti mohou být logické, které se zobrazují jako zaškrtávací políčka, nebo příkazy, které se zobrazují jako tlačítka. V tomto návodu vytvoříte logickou možnost.
 
-1. Do souboru *TestSearch.cs* přidejte následující kód do třídy `TestSearch`. Kód přepíše metodu `SearchOptionsEnum`, která umožňuje, aby implementace vyhledávání zjistila, zda je daná možnost zapnutá nebo vypnutá. Kód v `SearchOptionsEnum` přidá možnost pro párování <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions> enumerátoru. Možnost rozlišovat velikost písmen je také k dispozici jako vlastnost `MatchCaseOption`.
+1. V *souboru TestSearch.cs* přidejte do `TestSearch` třídy následující kód. Kód přepíše `SearchOptionsEnum` metodu, která umožňuje implementaci hledání zjistit, zda je daná možnost zapnuta nebo vypnuta. Kód v `SearchOptionsEnum` přidá možnost spárovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions> případ čítače výčtu. Možnost shody případu je také `MatchCaseOption` k dispozici jako vlastnost.
 
     ```csharp
     private IVsEnumWindowSearchOptions m_optionsEnum;
@@ -320,7 +320,7 @@ Podle tohoto návodu se dozvíte, jak provádět následující úlohy:
     }
     ```
 
-2. V `TestSearchTask` třídy odkomentujte následující řádek v metodě `OnStartSearch`:
+2. Ve `TestSearchTask` třídě odkomentujte následující `OnStartSearch` řádek v metodě:
 
     ```csharp
     matchCase = m_toolWindow.MatchCaseOption.Value;
@@ -328,18 +328,18 @@ Podle tohoto návodu se dozvíte, jak provádět následující úlohy:
 
 3. Otestujte možnost:
 
-    1. Sestavte projekt a spusťte ladění. Objeví se experimentální instance.
+    1. Sestavení projektu a začít ladění. Zobrazí se experimentální instance.
 
-    2. V okně nástroje klikněte na šipku dolů na pravé straně textového pole.
+    2. V okně nástroje zvolte šipku dolů na pravé straně textového pole.
 
-         Zobrazí se zaškrtávací políčko Rozlišovat **velikost písmen** .
+         Zobrazí se políčko **Spárovat případ.**
 
-    3. Zaškrtněte políčko Rozlišovat **velká a malá písmena** a pak proveďte několik hledání.
+    3. Zaškrtněte políčko **Srovnat malá a velká písmena** a proveďte některá hledání.
 
 ## <a name="to-add-a-search-filter"></a>Přidání vyhledávacího filtru
- Můžete přidat vyhledávací filtry, které uživatelům umožňují upřesnit sadu cílů hledání. Můžete například filtrovat soubory v Průzkumníku souborů podle data, kdy byly naposledy upraveny a jejich přípony názvů souborů. V tomto návodu přidáte filtr jenom pro sudé řádky. Když uživatel zvolí tento filtr, hostitel vyhledávání přidá řetězce, které zadáte do vyhledávacího dotazu. Pak můžete identifikovat tyto řetězce v metodě hledání a odpovídajícím způsobem filtrovat cíle hledání.
+ Můžete přidat vyhledávací filtry, které uživatelům umožní upřesnit sadu cílů hledání. Můžete například filtrovat soubory v Průzkumníkovi souborů podle dat, kdy byly naposledy upraveny, a podle jejich přípon názvů souborů. V tomto návodu přidáte filtr pouze pro sudé řádky. Když uživatel vybere tento filtr, hostitel hledání přidá řetězce, které zadáte do vyhledávacího dotazu. Tyto řetězce pak můžete identifikovat uvnitř metody vyhledávání a odpovídajícím způsobem filtrovat cíle hledání.
 
-1. Do souboru *TestSearch.cs* přidejte následující kód do třídy `TestSearch`. Kód implementuje `SearchFiltersEnum` přidáním <xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter>, který určuje filtrování výsledků hledání tak, aby se zobrazily pouze sudé řádky.
+1. V *souboru TestSearch.cs* přidejte do `TestSearch` třídy následující kód. Kód implementuje `SearchFiltersEnum` <xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter> přidáním, který určuje filtrovat výsledky hledání tak, aby se zobrazily pouze sudé řádky.
 
     ```csharp
     public override IVsEnumWindowSearchFilters SearchFiltersEnum
@@ -354,9 +354,9 @@ Podle tohoto návodu se dozvíte, jak provádět následující úlohy:
 
     ```
 
-     Nyní ovládací prvek hledání zobrazí `Search even lines only` vyhledávacího filtru. Když uživatel zvolí filtr, zobrazí se `lines:"even"` řetězec ve vyhledávacím poli. Další kritéria hledání se mohou objevit ve stejnou dobu jako filtr. Vyhledávací řetězce mohou být zobrazeny před filtrem, za filtrem nebo obojím.
+     Nyní ovládací prvek hledání `Search even lines only`zobrazí vyhledávací filtr . Když uživatel vybere filtr, řetězec `lines:"even"` se zobrazí ve vyhledávacím poli. Další kritéria vyhledávání se mohou zobrazit současně s filtrem. Vyhledávací řetězce se mohou zobrazit před filtrem, za filtrem nebo obojím.
 
-2. V souboru *TestSearch.cs* přidejte následující metody do třídy `TestSearchTask`, která je ve třídě `TestSearch`. Tyto metody podporují metodu `OnStartSearch`, kterou upravíte v dalším kroku.
+2. V *souboru TestSearch.cs* přidejte do `TestSearchTask` třídy následující `TestSearch` metody, které jsou ve třídě. Tyto metody `OnStartSearch` podporují metodu, kterou upravíte v dalším kroku.
 
     ```csharp
     private string RemoveFromString(string origString, string stringToRemove)
@@ -384,7 +384,7 @@ Podle tohoto návodu se dozvíte, jak provádět následující úlohy:
     }
     ```
 
-3. Ve třídě `TestSearchTask` aktualizujte metodu `OnStartSearch` pomocí následujícího kódu. Tato změna aktualizuje kód tak, aby podporoval filtr.
+3. Ve `TestSearchTask` třídě aktualizujte `OnStartSearch` metodu následujícím kódem. Tato změna aktualizuje kód pro podporu filtru.
 
     ```csharp
     protected override void OnStartSearch()
@@ -465,30 +465,30 @@ Podle tohoto návodu se dozvíte, jak provádět následující úlohy:
 
 4. Otestujte svůj kód.
 
-5. Sestavte projekt a spusťte ladění. V experimentální instanci aplikace Visual Studio otevřete okno nástroje a pak zvolte šipku dolů v ovládacím prvku hledání.
+5. Sestavení projektu a začít ladění. V experimentální instanci sady Visual Studio otevřete okno nástroje a pak v ovládacím prvku hledání zvolte šipku dolů.
 
-     Políčko Rozlišovat **velikost písmen** a zobrazit pouze filtr na **stejné řádky** .
+     Zobrazí se **políčko Spárovat případ** a pouze filtr **Hledat sudé řádky.**
 
-6. Vyberte filtr.
+6. Zvolte filtr.
 
-     Vyhledávací pole obsahuje **řádky: "i"** a zobrazí se následující výsledky:
+     Vyhledávací pole obsahuje **řádky:"sudý"** a zobrazí se následující výsledky:
 
      2 dobré
 
-     4 dobré
+     4 Dobrý
 
-     6
+     6 Sbohem
 
-7. Odstraňte `lines:"even"` z vyhledávacího pole, zaškrtněte políčko Rozlišovat **velikost písmen** a potom do vyhledávacího pole zadejte `g`.
+7. Odstranit `lines:"even"` z vyhledávacího pole zaškrtněte políčko **Srovnat případ** a zadejte `g` do vyhledávacího pole.
 
      Zobrazí se následující výsledky:
 
-     1 přejít
+     1 jít
 
      2 dobré
 
-     5 nejenom
+     5 sbohem
 
-8. Na pravé straně vyhledávacího pole vyberte X.
+8. Zvolte X na pravé straně vyhledávacího pole.
 
-     Hledání se vymaže a zobrazí se původní obsah. Je však stále zaškrtnuto políčko Rozlišovat **velikost písmen** .
+     Hledání je vymazáno a zobrazí se původní obsah. Je však stále zaškrtnuto políčko **Spárovat případ.**

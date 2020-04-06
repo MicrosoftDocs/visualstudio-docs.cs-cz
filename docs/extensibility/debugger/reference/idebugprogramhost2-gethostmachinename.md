@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramHost2::GetHostMachineName | Dokumentace Microsoftu
+title: IDebugProgramHost2::GetHostMachineName | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramHost2::GetHostMachineName
 ms.assetid: 4677ffe4-aa9b-4450-a63b-74cd3984d956
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6843856605505e23fc6c76834e83d54a998c90c8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a3e134a4e766583c8996c01cb02789202b819bd1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325142"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722304"
 ---
 # <a name="idebugprogramhost2gethostmachinename"></a>IDebugProgramHost2::GetHostMachineName
-Získá název počítače, na kterém je spuštěn proces, který je hostitelem tohoto programu.
+Získá název počítače, který je spuštěn v procesu hostujícím tento program.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,7 +44,7 @@ int GetHostMachineName( 
 [out] Vrátí název počítače.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)

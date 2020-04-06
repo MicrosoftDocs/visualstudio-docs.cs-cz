@@ -1,5 +1,5 @@
 ---
-title: CANSTOP_REASON | Microsoft Docs
+title: CANSTOP_REASON | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - CANSTOP_REASON enumeration
 ms.assetid: 6da944eb-36cd-4a8c-8d71-544c775cfcc1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 18861d7aa19281528e9a100f57399451194598a9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d7be361d4468584c109db52f487b3de3c1fdff0a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66327253"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737680"
 ---
-# <a name="canstopreason"></a>CANSTOP_REASON
-Umožňuje určit, pokud program můžete zastavit provádění po dosažení určitého bodu v provádění.
+# <a name="canstop_reason"></a>CANSTOP_REASON
+Slouží k určení, pokud program může zastavit provádění po dosažení určitého bodu v provádění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,15 +42,15 @@ public enum enum_CANSTOP_REASON {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `CANSTOP_ENTRYPOINT`\
-Určuje vstupní bod určený program.
+Určuje vstupní bod daného programu.
 
 `CANSTOP_STEPIN`\
-Určuje vstup do funkce.
+Určuje krokování do funkce.
 
 ## <a name="remarks"></a>Poznámky
-Předán jako argument [getreason –](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) metody pro potvrzení se relace ladění správce (SDM), pokud je v pořádku po dosažení vstupní bod programu nebo po přechodu na funkci nebo metodu.
+Předánjako argument [getreason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) metoda potvrdit pomocí správce ladění relace (SDM), pokud je v pořádku zastavit po dosažení vstupníbod programu nebo po krokování do funkce nebo metody.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -59,6 +59,6 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md)

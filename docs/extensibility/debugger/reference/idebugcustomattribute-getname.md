@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetName | Dokumentace Microsoftu
+title: Atribut IDebugCustomAttribute::GetName | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCustomAttribute::GetName
 ms.assetid: ba509cc5-5816-4925-a094-4c72d88c360c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3ed7abc9682d0a9f56c50fe7510ed3f276a6bf5a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 15d435d043d0e3863358628fa12016431a417918
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315210"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732770"
 ---
 # <a name="idebugcustomattributegetname"></a>IDebugCustomAttribute::GetName
-Získá název vlastního atributu.
+Získá název vlastní atribut.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,10 +44,10 @@ int GetName(
 [out] Vrátí řetězec obsahující název vlastního atributu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pojmenované vrácený touto metodou odpovídá názvu třídy, který deklaruje atribut. To může přesně odpovídat názvu vlastní třídy vlastní atribut jako C# umožňuje příponu "Atribut" chcete vyřadit z názvu vlastního atributu při použití v deklaraci.
+ Pojmenovaný vrácený touto metodou odpovídá názvu třídy použité k deklarování atributu. To nemusí přesně odpovídat názvu vlastní třídy atributu sám jako C# umožňuje "Atribut" přípona, která má být vynechána z názvu vlastního atributu při použití v deklaraci.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

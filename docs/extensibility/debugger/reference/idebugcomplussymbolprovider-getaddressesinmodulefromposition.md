@@ -1,28 +1,28 @@
 ---
-title: IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition | Dokumentace Microsoftu
+title: IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - GetAddressesInModuleFromPosition
 - IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
 ms.assetid: f901c66e-f53c-4ea0-8004-d8fcbf46f916
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3000b93a9ce7f3ba56325943d48c5ac686ddde38
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f7295d49faa8799731a13f500b31d436df6dc66a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338716"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734028"
 ---
 # <a name="idebugcomplussymbolprovidergetaddressesinmodulefromposition"></a>IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
-Pozice dokumentu v zadaném modulu se mapuje na pole adresy ladění.
+Mapuje pozici dokumentu v zadaném modulu na pole ladicích adres.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,28 +50,28 @@ int GetAddressesInModuleFromPosition(
 
 ## <a name="parameters"></a>Parametry
 `ulAppDomainID`\
-[in] Identifikátor domény aplikace.
+[v] Identifikátor domény aplikace.
 
 `guidModule`\
-[in] Jedinečný identifikátor modulu.
+[v] Jedinečný identifikátor modulu
 
 `pDocPos`\
-[in] Pozice dokumentu.
+[v] Pozice dokumentu.
 
 `fStatmentOnly`\
-[in] Pokud `TRUE`, omezuje ladění adresy, které mají jeden příkaz.
+[v] Pokud `TRUE`, omezuje ladicí adresy na jeden příkaz.
 
 `ppEnumBegAddresses`\
-[out] Vrátí enumerátor pro počáteční adresy ladění, které jsou přidružené k tomuto prohlášení nebo řádku.
+[out] Vrátí čítač výčtu pro počáteční ladicí adresy, které jsou přidruženy k tomuto příkazu nebo řádku.
 
 `ppEnumEndAddresses`\
-[out] Vrátí enumerátor pro koncové adresy ladění, které jsou přidružené k tomuto prohlášení nebo řádku.
+[out] Vrátí čítač výčtu pro koncové adresy ladění, které jsou přidruženy k tomuto příkazu nebo řádku.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.
+ Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugSymbolProvider** objekt, který zveřejňuje rozhraní [IDebugComPlusSymbolProvider.](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetAddressesInModuleFromPosition(
@@ -222,5 +222,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

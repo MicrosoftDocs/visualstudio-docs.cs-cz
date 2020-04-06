@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine3::SetJustMyCodeState | Microsoft Docs
+title: IDebugEngine3::SetJustMyCodeState | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngine3::SetJustMyCodeState
 ms.assetid: 8ec17fbf-df93-424a-b2ed-fd1e5ee51256
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f53b0eb95a2a91f34917b05cadffda2f4aa9a8b1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9930f8ecf0c2f9b6fff4ce1c9e3edb935c5a7912
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322317"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730681"
 ---
 # <a name="idebugengine3setjustmycodestate"></a>IDebugEngine3::SetJustMyCodeState
-Tato metoda informuje o informace o stavu JustMyCode ladicího stroje.
+Tato metoda informuje ladicí stroj o informacích o stavu JustMyCode.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,20 +45,20 @@ int SetJustMyCodeState(
 
 ## <a name="parameters"></a>Parametry
 `fUpdate`\
-[in] Nenulový (`TRUE`) aktualizovat informace o aktuálním nula (`FALSE`) Chcete-li obnovit všechny informace (ignorování nic předtím nastavili).
+[v] Nenulová`TRUE`( ) pro aktualizaci aktuálních informací, nula (`FALSE`) pro resetování všech informací (ignorování všeho, co bylo dříve nastaveno).
 
 `dwModules`\
-[in] Počet struktur informace `rgJMCSpec.`
+[v] Počet informačních struktur`rgJMCSpec.`
 
 `rgJMCSpec`\
-[in] Pole [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) strukturách.
+[v] Pole [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) struktur, které chcete použít.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- JustMyCode je Princip ladění pouze kód, který patří uživateli a ignoruje všechny mezikódu, jako je například kód systému – i v případě, že zdrojový kód je k dispozici pro tento kód systému.
+ JustMyCode je koncept ladění pouze kód, který patří uživateli a ignoruje všechny zprostředkující kód, jako je například systémový kód – i v případě, že zdrojový kód je k dispozici pro tento systémový kód.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)
 - [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md)

@@ -1,5 +1,5 @@
 ---
-title: Začínáme s rozšiřitelností ladicího programu | Dokumentace Microsoftu
+title: Začínáme s rozšiřitelností ladicího programu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,40 +7,40 @@ helpviewer_keywords:
 - debugging [Debugging SDK], getting started
 - Debugging SDK, getting started
 ms.assetid: d6ce6f43-1409-4bf7-93cd-f3464ca23504
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 99e2dabf18d3d00034d65a94c41f2e435ad64114
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 153db8889c78890a31a2e8003e6aa95ed24a02eb
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350016"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738592"
 ---
 # <a name="get-started-with-debugger-extensibility"></a>Začínáme s rozšiřitelností ladicího programu
-[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] Poskytuje informace, které potřebujete k vytváření a přizpůsobování umožňuje ladit programy v rámci komponenty ladicího programu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostředí.
+Poskytuje [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] informace, které potřebujete k vytvoření a přizpůsobení součástí ladicího programu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] používaných k ladění programů z prostředí.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění bylo přidáno vylepšení se odvozené z rozsáhlé použitelnost testů na předchozí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladicí programy. Můžete použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění krokovat vícejazyčné aplikace, nebo můžete implementovat na průběžné úpravy proměnných při ladění aplikací a řešení pro více jazyků.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ladění přidalvylepšení odvozené z rozsáhlé testování použitelnosti provádí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] na předchozí ladicí program. Ladění můžete [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] použít k procházení vícejazyčné aplikace nebo můžete implementovat průběžné úpravy proměnných při ladění aplikací a vícejazyčných řešení.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění je provedeno out-of-process program, který se právě ladí a proto je teď míň obtěžující do procesního prostoru aplikace. V důsledku toho je usnadňuje psaní součásti, které pracují s ladicím programem, aniž by to ovlivnilo ladicí program.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ladění je spuštěnmimo proces s programem, který je laděn, a proto je méně rušivý v prostoru procesu aplikace. V důsledku toho je snazší psát součásti, které interagují s ladicím programem bez ovlivnění ladicího programu.
 
- Na co nejlíp využít [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)], měli byste se seznámit s následujícími položkami:
+ Chcete-li [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]nejlépe používat , měli byste být obeznámeni s následujícími položkami:
 
-- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Integrované vývojové prostředí (IDE)
+- Integrované [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vývojové prostředí (IDE)
 
 - Programovací jazyk C++
 
-- KNIHOVNY ATL MODELU COM
+- Koma z ATL
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Plán pro rozšíření ladicího programu](../../extensibility/debugger/roadmap-for-extending-the-debugger.md) popisuje proces implementace produktu, v závislosti na vaší kompilátoru a její výstup ladění.
+ [Plán rozšíření ladicího programu](../../extensibility/debugger/roadmap-for-extending-the-debugger.md) Popisuje proces implementace ladění v produktu, v závislosti na kompilátoru a jeho výstupu.
 
- [Komponenty ladicího programu](../../extensibility/debugger/debugger-components.md) najdete zde přehled [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění komponenty, které zahrnují ladicího stroje (DE), Chyba při vyhodnocování výrazu (EE) a obslužné rutiny symbolů (SH).
+ [Součásti ladicího programu](../../extensibility/debugger/debugger-components.md) Obsahuje přehled ladicích [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] součástí, které zahrnují ladicí modul (DE), vyhodnocení výrazu (EE) a obslužnou rutinu symbolu (SH).
 
- [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md) popisuje hlavní koncepty ladění architektury.
+ [Koncepty ladicích programů](../../extensibility/debugger/debugger-concepts.md) Popisuje hlavní ladění architektonických konceptů.
 
- [Kontexty ladicího programu](../../extensibility/debugger/debugger-contexts.md) vysvětluje, jak funguje ladicího stroje (DE) současně v kontextech hodnocení kódu, dokumentace a výraz. Popisuje všech třech kontextech, umístění, pozice nebo vyhodnocení relevantní k němu.
+ [Kontexty ladicího programu](../../extensibility/debugger/debugger-contexts.md) Vysvětluje, jak ladicí modul (DE) pracuje současně v kontextu kódování kódu, dokumentace a výrazu. Popisuje pro každý ze tří kontextů umístění, umístění nebo hodnocení, které jsou pro něj relevantní.
 
- [Ladění úlohy](../../extensibility/debugger/debugging-tasks.md) obsahuje odkazy na různé úlohy ladění, například spuštění programu a vyhodnocení výrazů.
+ [Ladění úkolů](../../extensibility/debugger/debugging-tasks.md) Obsahuje odkazy na různé úlohy ladění, jako je například spuštění programu a vyhodnocení výrazů.

@@ -1,24 +1,24 @@
 ---
-title: IDebugDynamicFieldCOMPlus | Dokumentace Microsoftu
+title: IDebugDynamicFieldCOMPlus | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugDynamicFieldCOMPlus interface
 ms.assetid: c3a25f27-327a-4bdb-b026-27d436ddcd0c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 824498f3d7657bcc5984d31a1abaa4e97c4a9a7d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 823057303655da59494680ce9f591b252e28f792
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330212"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731223"
 ---
 # <a name="idebugdynamicfieldcomplus"></a>IDebugDynamicFieldCOMPlus
-Představuje dynamické pole pro [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) objektu.
+Představuje dynamické pole pro objekt [IDebugBinder.](../../../extensibility/debugger/reference/idebugbinder.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,12 +27,12 @@ IDebugDynamicFieldCOMPlus : IDebugDynamicField
 ```
 
 ## <a name="methods"></a>Metody
- Kromě metod na [IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md) rozhraní, toto rozhraní implementuje následujících metod:
+ Kromě metod v rozhraní [IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md) toto rozhraní implementuje následující metody:
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetTypeFromPrimitive](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromprimitive.md)|Načte typ daného jeho primitivního typu.|
-|[GetTypeFromTypeDef](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromtypedef.md)|Získá typ zadané svůj token.|
+|[GetTypeFromPrimitive](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromprimitive.md)|Načte typ daný jeho primitivní typ.|
+|[GetTypeFromTypeDef](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromtypedef.md)|Načte typ daný jeho token.|
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: Sh.h

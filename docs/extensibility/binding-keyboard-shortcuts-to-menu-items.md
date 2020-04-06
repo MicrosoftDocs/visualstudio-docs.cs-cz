@@ -1,5 +1,5 @@
 ---
-title: Vázání klávesových zkratek k položkám nabídky | Microsoft Docs
+title: Vazby klávesových zkratek na položky nabídky | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,59 +9,59 @@ helpviewer_keywords:
 - keyboard shortcuts
 - menu items
 ms.assetid: 19f483b6-4d3e-424e-9d68-dc129c788e47
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98c0b6f5b26e7f423f2a89f680395ceaba7286bc
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 94feafbc614be61aaa4eef9e26669c0fbe901ed5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982275"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740020"
 ---
-# <a name="bind-keyboard-shortcuts-to-menu-items"></a>Vázání klávesových zkratek k položkám nabídky
-Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, stačí přidat položku do souboru *. vsct* pro balíček. Toto téma vysvětluje, jak namapovat klávesovou zkratku na vlastní tlačítko, položku nabídky nebo příkaz panelu nástrojů a jak použít mapování klávesnice ve výchozím editoru nebo omezit na vlastní editor.
+# <a name="bind-keyboard-shortcuts-to-menu-items"></a>Svázání klávesových zkratek s položkami nabídky
+Chcete-li svázat klávesovou zkratku s příkazem vlastní nabídky, stačí přidat položku do souboru *.vsct* pro balíček. Toto téma vysvětluje, jak mapovat klávesovou zkratku na vlastní tlačítko, položku nabídky nebo příkaz panelu nástrojů a jak použít mapování klávesnice ve výchozím editoru nebo omezit na vlastní editor.
 
- Chcete-li přiřadit klávesové zkratky existujícím položkám nabídky sady Visual Studio, přečtěte si téma [identifikace a přizpůsobení klávesových zkratek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
+ Informace o přiřazení klávesových zkratek k existujícím položkám nabídky sady Visual Studio naleznete v [tématu Identifikace a přizpůsobení klávesových zkratek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
 
-## <a name="choose-a-key-combination"></a>Zvolit kombinaci kláves
- V aplikaci Visual Studio se již používá mnoho klávesových zkratek. Neměli byste přiřadit stejný zástupce více než jednomu příkazu, protože duplicitní vazby je obtížné detekovat a mohou také způsobovat nepředvídatelné výsledky. Proto je vhodné před přiřazením ověřit dostupnost zástupce.
+## <a name="choose-a-key-combination"></a>Vyberte si kombinaci kláves
+ Mnoho klávesových zkratek se již používá v sadě Visual Studio. Neměli byste přiřadit stejný zástupce více než jeden příkaz, protože duplicitní vazby jsou obtížné zjistit a může také způsobit nepředvídatelné výsledky. Proto je vhodné ověřit dostupnost zástupce před jeho přiřazením.
 
 ### <a name="to-verify-the-availability-of-a-keyboard-shortcut"></a>Ověření dostupnosti klávesové zkratky
 
-1. V okně **nástroje** > **Možnosti** > **prostředí** vyberte možnost **klávesnice**.
+1. V okně**Prostředí** **možností** >  **nástrojů** > vyberte **klávesy Klávesnice**.
 
-2. Ujistěte se, že je **Nový zástupce v** sadě nastavený na **globální**.
+2. Ujistěte se, že **je funkce Použít nový zástupce v** programu **Globální**.
 
-3. V poli **klávesových zkratek klávesových zkratek** zadejte klávesovou zkratku, kterou chcete použít.
+3. Do pole **Stiskněte klávesové zkratky** zadejte klávesovou zkratku, kterou chcete použít.
 
-    Pokud je zástupce již použit v aplikaci Visual Studio, **zástupce aktuálně používaný** v poli zobrazí příkaz, který zástupce aktuálně volá.
+    Pokud je zástupce již použit v sadě Visual Studio, zobrazí se v poli Zástupce aktuálně používaný v **aplikaci** Příkaz, který zástupce aktuálně volá.
 
-4. Vyzkoušejte různé kombinace klíčů, dokud nezjistíte, která z nich není namapovaná.
+4. Vyzkoušejte různé kombinace klíčů, dokud nenajdete ten, který není namapován.
 
    > [!NOTE]
-   > Klávesové zkratky, které používají **ALT** , můžou otevřít nabídku a ne přímo spustit příkaz. Proto může být **zástupce aktuálně používaný v** boxu při psaní zástupce, který obsahuje **ALT**, prázdný. Můžete ověřit, že zástupce neotevře nabídku zavřením dialogového okna **Možnosti** a následným stisknutím kláves.
+   > Klávesové zkratky, které používají **alt,** mohou otevřít nabídku a ne přímo spustit příkaz. **Proto zástupce aktuálně používá** pole může být prázdné při zadání zástupce, který obsahuje **Alt**. Můžete ověřit, zda zástupce neotevře nabídku, zavřením dialogového okna **Možnosti** a stisknutím kláves.
 
-   Následující postup předpokládá, že máte existující VSPackage s příkazem nabídky. Pokud k tomu potřebujete pomoc, podívejte se na [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
+   Následující postup předpokládá, že máte existující VSPackage s příkazem nabídky. Pokud potřebujete pomoc, podívejte se na [Vytvořit rozšíření s příkazem nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
 
 ### <a name="to-assign-a-keyboard-shortcut-to-a-command"></a>Přiřazení klávesové zkratky k příkazu
 
-1. Otevřete soubor *. vsct* pro váš balíček.
+1. Otevřete soubor *.vsct* pro váš balíček.
 
-2. Po `<Commands>`, pokud ještě neexistuje, vytvořte prázdný oddíl `<KeyBindings>`.
+2. Vytvořte `<KeyBindings>` prázdný oddíl `<Commands>` za if, který ještě není k dispozici.
 
    > [!WARNING]
-   > Další informace o vazbách klíčů naleznete v tématu [Binding](../extensibility/keybinding-element.md).
+   > Další informace o klíč vazby naleznete v [tématu Keybinding](../extensibility/keybinding-element.md).
 
-    V části `<KeyBindings>` vytvořte položku `<KeyBinding>`.
+    V `<KeyBindings>` části vytvořte `<KeyBinding>` položku.
 
-    Nastavte atributy `guid` a `id` na hodnoty příkazu, který chcete vyvolat.
+    Nastavte `guid` atributy a `id` na atributy příkazu, který chcete vyvolat.
 
-    Nastavte atribut `mod1` pro **řízení**, **ALT**nebo **SHIFT**.
+    Nastavte `mod1` atribut na **Control**, **Alt**nebo **Shift**.
 
-    Oddíl vazeb klíčů by měl vypadat přibližně takto:
+    KeyBindings části by měl vypadat podobně:
 
    ```xml
    <KeyBindings>
@@ -71,18 +71,18 @@ Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, st
 
    ```
 
-   Pokud vaše klávesová zkratka vyžaduje více než dva klíče, nastavte atributy `mod2` a `key2`.
+   Pokud klávesová zkratka vyžaduje více `mod2` než `key2` dvě klávesy, nastavte atributy a.
 
-   Ve většině případů by se **SHIFT** neměl používat bez druhého modifikátoru, protože jeho stisknutí má za následek, že většina alfanumerických klíčů zapíše velké písmeno nebo symbol.
+   Ve většině situací **shift** by neměl být používán bez druhého modifikátoru, protože stisknutím tohoto tlačítka již většina alfanumerických kláves zadá velké písmeno nebo symbol.
 
-   Kódy virtuálních klíčů umožňují přístup ke speciálním klíčům, ke kterým není přiřazen znak, například klávesy funkcí a klávesa **BACKSPACE** . Další informace najdete v tématu [kódy virtuálních klíčů](/windows/desktop/inputdev/virtual-key-codes).
+   Kódy virtuálních klíčů umožňují přístup ke speciálním klíčům, ke kterým není přidružen znak, například funkční klávesy a klávesa **Backspace.** Další informace naleznete v [tématu Virtual-key codes](/windows/desktop/inputdev/virtual-key-codes).
 
-   Chcete-li příkaz zpřístupnit v editoru sady Visual Studio, nastavte atribut `editor` na hodnotu `guidVSStd97`.
+   Chcete-li příkaz zpřístupnit v editoru `editor` sady `guidVSStd97`Visual Studio, nastavte atribut na .
 
-   Chcete-li, aby byl příkaz dostupný pouze ve vlastním editoru, nastavte atribut `editor` na název vlastního editoru vygenerovaného šablonou [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] při vytváření balíčku VSPackage, který obsahuje vlastní editor. Chcete-li zjistit hodnotu názvu, vyhledejte v sekci `<Symbols>` `<GuidSymbol>` uzel, jehož atribut `name` končí na "`editorfactory`". Toto je název vlastního editoru.
+   Chcete-li příkaz zpřístupnit pouze ve vlastním `editor` editoru, nastavte atribut na název vlastního [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] editoru, který byl vygenerován šablonou balíčku při vytváření balíčku, který obsahuje vlastní editor. Chcete-li najít hodnotu `<Symbols>` názvu, `<GuidSymbol>` vyhledejte `name` v části`editorfactory`uzel, jehož atribut končí na " . Toto je název vlastního editoru.
 
 ## <a name="example"></a>Příklad
- Tento příklad váže klávesovou zkratku **Ctrl**+**ALT**+**C** k příkazu s názvem `cmdidMyCommand` v balíčku s názvem `MyPackage`.
+ Tento příklad sváže klávesovou zkratku **Ctrl**+**Alt**+**C** s příkazem pojmenovaným `cmdidMyCommand` v balíčku s názvem `MyPackage`.
 
 ```
 <CommandTable>
@@ -99,11 +99,11 @@ Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, st
 ```
 
 ## <a name="example"></a>Příklad
- Tento příklad váže klávesovou zkratku **Ctrl**+**B** k příkazu s názvem `cmdidBold` v projektu s názvem `TestEditor`. Příkaz je k dispozici pouze ve vlastním editoru, nikoli v jiných editorech.
+ Tento příklad sváže klávesovou zkratku **Ctrl**+**B** s příkazem pojmenovaným `cmdidBold` v projektu s názvem `TestEditor`. Příkaz je k dispozici pouze ve vlastním editoru a nikoli v jiných editorech.
 
 ```xml
 <KeyBinding guid="guidVSStd97" id="cmdidBold" editor="guidTestEditorEditorFactory" key1="B" mod1="Control" />
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Rozšiřování nabídek a příkazů](../extensibility/extending-menus-and-commands.md)
+## <a name="see-also"></a>Viz také
+- [Rozšíření nabídek a příkazů](../extensibility/extending-menus-and-commands.md)

@@ -1,27 +1,27 @@
 ---
-title: IDebugGenericParamField::GetOwner | Dokumentace Microsoftu
+title: IDebugGenericParamField::GetOwner | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugGenericParamField::GetOwner
 ms.assetid: c7f6d166-a69e-40c4-bd0b-1a1fdf9aaacf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9752dfa90250bd427cb7a3d18e6e73775f25efb9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 040b8cf21cda1a0634c1c423516109b1ef214f01
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330290"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727871"
 ---
 # <a name="idebuggenericparamfieldgetowner"></a>IDebugGenericParamField::GetOwner
-Načte typ nebo metoda vlastníka tento obecný parametr.
+Načte typ nebo vlastník metody tohoto obecného parametru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ int GetOwner(
 
 ## <a name="parameters"></a>Parametry
 `ppOwner`\
-[out] Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objekt, který vlastní tento obecný parametr.
+[out] Vrátí objekt [IDebugField,](../../../extensibility/debugger/reference/idebugfield.md) který vlastní tento obecný parametr.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugGenericParamFieldType** objekt, který zveřejňuje [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) rozhraní.
+Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugGenericParamFieldType** objekt, který zpřístupňuje rozhraní [IDebugGenericParamField.](../../../extensibility/debugger/reference/idebuggenericparamfield.md)
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetOwner(IDebugField** ppOwner)
@@ -95,5 +95,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)

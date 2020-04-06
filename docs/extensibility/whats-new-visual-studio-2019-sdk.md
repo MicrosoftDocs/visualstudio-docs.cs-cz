@@ -1,65 +1,65 @@
 ---
-title: Co je nového ve Visual Studio SDK. 2019 | Dokumentace Microsoftu
+title: Co je nového ve sadě Visual Studio 2019 SDK | Dokumenty společnosti Microsoft
 ms.date: 03/29/2019
 ms.topic: conceptual
 ms.assetid: 4a07607b-0c87-4866-acd8-6d68358d6a47
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d4be152cfb39ddea9ddaeea56464a3447be4f2c6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 187d3df4b5bcefefc0135c010c7d98951e9b3af8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320610"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740396"
 ---
-# <a name="whats-new-in-the-visual-studio-2019-sdk"></a>Co je nového ve Visual Studio SDK. 2019
+# <a name="whats-new-in-the-visual-studio-2019-sdk"></a>Co je nového v sadě Visual Studio 2019 SDK
 
-Visual Studio SDK obsahuje následující nové a aktualizované funkce pro Visual Studio 2019.
+Sada Visual Studio SDK obsahuje následující nové a aktualizované funkce pro Visual Studio 2019.
 
-## <a name="synchronously-autoloaded-extensions-warning"></a>Synchronně rozšíření automaticky načtený upozornění
+## <a name="synchronously-autoloaded-extensions-warning"></a>Upozornění synchronně automaticky načtených rozšíření
 
-Uživatelům se nyní zobrazí upozornění, pokud kterýkoliv z jejich nainstalovaná rozšíření je synchronně automaticky načtený při spuštění. Další informace o upozornění na [synchronně rozšíření automaticky načtený](synchronously-autoloaded-extensions.md).
+Uživatelé se nyní zobrazí upozornění, pokud některý z jejich nainstalovaných rozšíření jsou synchronně automaticky načíst při spuštění. Další informace o upozornění na [synchronně automaticky načtené rozšíření](synchronously-autoloaded-extensions.md).
 
-## <a name="single-unified-visual-studio-sdk"></a>Jediné, jednotné Visual Studio SDK
+## <a name="single-unified-visual-studio-sdk"></a>Samostatná sada Visual Studio SDK
 
-Teď můžete získat všechny prostředky sady Visual Studio SDK prostřednictvím jeden balíček NuGet [Microsoft.VisualStudio.SDK](https://www.nuget.org/packages/microsoft.visualstudio.sdk).
+Nyní můžete získat všechny prostředky sady Visual Studio SDK prostřednictvím jednoho balíčku NuGet [Microsoft.VisualStudio.SDK](https://www.nuget.org/packages/microsoft.visualstudio.sdk).
 
-## <a name="editor-registration-enhancements"></a>Vylepšení editoru registrace
+## <a name="editor-registration-enhancements"></a>Vylepšení registrace editoru
 
-Od jeho vytvoření se Visual Studio podporuje registraci vlastního editoru, kde editoru můžete deklarovat její přidružení pro konkrétní rozšíření (například .xaml a .rc), nebo, který je vhodný pro jakoukoli příponu (. *). Od verze Visual Studio 2019 verze 16.1, můžeme rozšířit podporu pro registraci editoru.
+Od svého vytvoření Visual Studio podporuje registraci vlastního editoru, kde editor může deklarovat jeho spřažení pro konkrétní rozšíření (například .xaml a .rc), nebo že je vhodný pro jakékoli rozšíření (.*). Počínaje Visual Studio 2019 verze 16.1, rozšiřujeme podporu pro registraci editoru.
 
 ### <a name="filenames"></a>Názvy souborů
 
-Kromě, nebo místo registrace podpory pro specifickou příponu souboru, můžete zaregistrovat editor podporuje konkrétní názvy souborů s použitím nového `ProvideEditorFilename` atribut balíčku editoru.
+Kromě nebo místo registrace podpory pro konkrétní příponu souboru může editor zaregistrovat, že `ProvideEditorFilename` podporuje konkrétní názvy souborů, použitím nového atributu na balíček editoru.
 
-Například editor, který podporuje všechny soubory .json by použít `ProvideEditorExtension` atribut svého balíčku:
+Například editor, který podporuje všechny soubory JSON, by tento `ProvideEditorExtension` atribut použil na svůj balíček:
 
 ```cs
 [ProvideEditorExtension(typeof(MyEditor), ".json", MyEditor.Priority)]
 ```
 
-Počínaje 16.1, pokud MyEditor podporuje pouze několik souborů dobře známé .json, můžete místo toho použije tyto `ProvideEditorFilename` atributy do svého balíčku:
+Počínaje 16.1, pokud MyEditor podporuje pouze několik známých souborů JSON, `ProvideEditorFilename` může místo toho použít tyto atributy na svůj balíček:
 
 ```cs
 [ProvideEditorFilename(typeof(MyEditor), "particular.json", MyEditor.Priority)]
 [ProvideEditorFilename(typeof(MyEditor), "special.json",    MyEditor.Priority)]
 ```
 
-### <a name="uicontexts"></a>Kontextu UIContexts
+### <a name="uicontexts"></a>Kontexty u
 
-Editor můžete registrovat jednu nebo více kontextu UIContexts, které představují, je-li povolena. S použitím jednoho nebo víc instancí jsou registrovány kontextu UIContexts `ProvideEditorUIContextAttribute` do balíčku, která se registruje v editoru.
+Editor můžete zaregistrovat jeden nebo více UIContexts, které představují, když je povolena. UIContexts jsou registrovány použitím jedné `ProvideEditorUIContextAttribute` nebo více instancí balíčku, který registruje editor.
 
-Pokud editor registrovaného kontextu UIContexts:
+Pokud editor zaregistroval UIContexts:
 
-- Pokud alespoň jedna z jeho registrovaného kontextu UIContexts aktivní při otevření souboru s danou příponou, editoru je zahrnutý do vyhledávání editoru.
-- Pokud žádná z registrovaného kontextu UIContexts není aktivní, editoru není zahrnutý do vyhledávání editoru.
+- Pokud alespoň jeden z jeho registrovaných UIContexts je aktivní při otevření souboru s danou příponou, editor je součástí hledání editoru.
+- Pokud žádný z registrovaných UIContexts je aktivní, editor není součástí hledání editoru.
 
-Pokud editor není zaregistrovat libovolný kontextu UIContexts, je vždy součástí hledání editor pro tuto příponu.
+Pokud editor nezaregistruje žádné UIContexts, je vždy součástí hledání editoru pro toto rozšíření.
 
-Například, pokud editor je k dispozici pouze při C# projektu je otevřen, tato přidružení ji lze deklarovat s použitím `ProvideEditorUIContext` atribut:
+Například pokud editor je k dispozici pouze v případě, že je otevřen projekt jazyka `ProvideEditorUIContext` C#, může deklarovat tuto spřažení použitím atributu:
 
 ```cs
 [ProvideEditorUIContext(typeof(MyEditor), KnownUIContexts.CSharpProjectContext)]

@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider | Dokumentace Microsoftu
+title: IEEVisualizerDataProvider | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - IEEVisualizerDataProvider interface
 ms.assetid: 5fdfe6e3-b94e-4edb-acc5-41d8773d8ca5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 269f154083f3589e989a6ca2f9ce0835b249181a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a10f306b6c507f6db7add17931b8a38d926a37d9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350178"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718051"
 ---
 # <a name="ieevisualizerdataprovider"></a>IEEVisualizerDataProvider
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [spravované ukázka Chyba při vyhodnocování výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [Vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Toto rozhraní umožňuje změnit hodnoty objektu prostřednictvím vizualizér typů.
+ Toto rozhraní poskytuje možnost změnit hodnotu objektu prostřednictvím vizualizéru typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,22 +35,22 @@ IEEVisualizerDataProvider : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Chyba při vyhodnocování výrazu implementuje toto rozhraní pro podporu změny dat na vlastnost objektu prostřednictvím vizualizér typů.
+ Vyhodnocení výrazu implementuje toto rozhraní pro podporu úpravy dat na objekt vlastnosti prostřednictvím vizualizéru typu.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Toto rozhraní je použité při vytváření [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) objektu přímo pomocí volání [CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md). Zobrazit [Visualizing a zobrazení dat](../../../extensibility/debugger/visualizing-and-viewing-data.md) další podrobnosti.
+ Toto rozhraní se používá při vytváření objektu [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) prostřednictvím volání [CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md). Další podrobnosti najdete v [tématu Vizualizace a zobrazení dat.](../../../extensibility/debugger/visualizing-and-viewing-data.md)
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
 
 |Metoda|Popis|
 |------------|-----------------|
-|[CanSetObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-cansetobjectforvisualizer.md)|Určuje, zda je možné aktualizovat objektu (a následně jeho hodnotu), který představuje tento vizualizér.|
-|[GetNewObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getnewobjectforvisualizer.md)|Pro tento vizualizátor Vynutí opakované vyhodnocení objektu.|
-|[GetObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getobjectforvisualizer.md)|Získá existující objekt pro tento vizualizátor (žádné vyhodnocení se provádí).|
-|[SetObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-setobjectforvisualizer.md)|Aktualizuje objekt pro tento vizualizátor, a tím změnit hodnotu, kterou představuje vizualizér.|
+|[CanSetObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-cansetobjectforvisualizer.md)|Určuje, zda je možné aktualizovat objekt (a následně jeho hodnotu), kterou představuje tento vizualizér.|
+|[GetNewObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getnewobjectforvisualizer.md)|Vynutí přehodnocení objektu pro tento vizualizér.|
+|[GetObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getobjectforvisualizer.md)|Získá existující objekt pro tento vizualizér (žádné vyhodnocení se provádí).|
+|[SetObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-setobjectforvisualizer.md)|Aktualizuje objekt pro tento vizualizér, a tím změní hodnotu, kterou vizualizační systém představuje.|
 
 ## <a name="remarks"></a>Poznámky
- Služby visualizéru (představované výrazem [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) rozhraní a vrácené [CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)) udržuje odkaz na objekt implementace `IEEVisualizerDataProvider` rozhraní . V důsledku toho `IEEVisualizerDataProvider` rozhraní by neměl být implementováno na stejný objekt, který implementuje [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) Pokud tento objekt uchovává odkaz na `IEEVisualizerService` objektu: cyklický odkaz výsledky a zablokování dochází tehdy, když objekty jsou zničeny. Doporučený postup je pro implementaci `IEEVisualizerDataProvider` na samostatný objekt, ke kterému `IDebugProperty2` objektu delegáti bez volání `IUnknown::AddRef` na něm.
+ Visualizer služby (reprezentované rozhraní [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) a vrácené [CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)) `IEEVisualizerDataProvider` udržuje odkaz na objekt implementující rozhraní. V důsledku toho `IEEVisualizerDataProvider` rozhraní by neměla být implementována na stejný objekt, který implementuje `IEEVisualizerService` [IDebugProperty2,](../../../extensibility/debugger/reference/idebugproperty2.md) pokud tento objekt udržuje odkaz na objekt: cyklický odkaz výsledky a zablokování dojde při zničení objektů. Doporučeným přístupem je `IEEVisualizerDataProvider` implementace na samostatný `IDebugProperty2` objekt, na `IUnknown::AddRef` který objekt deleguje bez volání na něj.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: ee.h
@@ -59,7 +59,7 @@ IEEVisualizerDataProvider : IUnknown
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní pro vyhodnocení výrazu](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)
 - [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

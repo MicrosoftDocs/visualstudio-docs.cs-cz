@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugCodeContexts2::Reset | Dokumentace Microsoftu
+title: IEnumDebugCodeContexts2::Obnovit | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugCodeContexts2::Reset
 ms.assetid: df6cf1e3-2ef8-4d38-81a0-8e9adf151884
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 974313e83e8a7bee87eaee25cfb9b542bce55745
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 63c3655ded1c6379b390cacff73d9d101b230e48
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335050"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80717295"
 ---
 # <a name="ienumdebugcodecontexts2reset"></a>IEnumDebugCodeContexts2::Reset
-Obnoví výčtu na první prvek.
+Obnoví výčet na první prvek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,10 +38,10 @@ int Reset();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Až tato metoda je volána, další volání [Další](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-next.md) metoda vrátí první prvek výčtu.
+ Po volání této metody další volání [Next](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-next.md) metoda vrátí první prvek výčtu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)

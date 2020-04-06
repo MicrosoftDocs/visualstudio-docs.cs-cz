@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::GetDefaultIndexer | Dokumentace Microsoftu
+title: IDebugClassField::GetDefaultIndexer | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugClassField::GetDefaultIndexer method
 ms.assetid: 47ce4f45-3816-4b40-909c-5032d0692d75
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 95387f65382c970ec2e9847e95ff49e139cf69b8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 57e00107374485043af370967794bdade1c213d1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350757"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734418"
 ---
 # <a name="idebugclassfieldgetdefaultindexer"></a>IDebugClassField::GetDefaultIndexer
-Získá název výchozímu indexeru.
+Získá název výchozí indexeru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,13 +40,13 @@ int GetDefaultIndexer(
 ```
 
 ## <a name="parameters"></a>Parametry
-`pbstrIndexer` [out] Vrátí řetězec obsahující název výchozí indexeru.
+`pbstrIndexer`[out] Vrátí řetězec obsahující název výchozího indexeru.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK nebo vrátí S_FALSE v případě, že neexistuje žádný výchozí indexer. V opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK nebo vrátí S_FALSE pokud neexistuje žádný výchozí indexer. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Indexer výchozí třídy je vlastnost, která je označena jako `Default` vlastnost pro pole přístupy. To je specifické pro [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]. Tady je příklad výchozímu indexeru deklarované v [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] a způsobu jejich použití.
+ Výchozí indexer třídy je vlastnost, která `Default` je označena jako vlastnost pro přístupy pole. To je [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]specifické pro . Zde je příklad výchozí indexer [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] deklarované v a jak se používá.
 
 ```vb
 Imports System.Collections;
@@ -78,5 +78,5 @@ Function GetItem(Index as Integer) as Integer
 End Function
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

@@ -1,5 +1,5 @@
 ---
-title: PENDING_BP_STATE_FLAGS | Microsoft Docs
+title: PENDING_BP_STATE_FLAGS | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - PENDING_BP_STATE_FLAGS enumeration
 ms.assetid: 85522449-3fd8-4da5-b0fe-a43160e0c33b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f3b51d7c30650087c6611b79ec0b91e2a6bb83b1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6da1a956ac958a95dd0c433283a71af0a9b29d1e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349896"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714096"
 ---
-# <a name="pendingbpstateflags"></a>PENDING_BP_STATE_FLAGS
-Určuje příznaky stavu čekající zarážka.
+# <a name="pending_bp_state_flags"></a>PENDING_BP_STATE_FLAGS
+Určuje příznaky stavu čekající na vyřízení zarážky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,13 +42,13 @@ public enum enum_PENDING_BP_STATE_FLAGS { 
 };
 ```
 
-## <a name="fields"></a>Pole
- `PBPSF_NONE` Zástupný symbol.
+## <a name="fields"></a>Fields (Pole)
+ `PBPSF_NONE`Zástupný.
 
- `PBPSF_VIRTUALIZED` Určuje, virtualizovaných čekajících zarážek, ten, který má být vázaný pokaždé, když je načten nový kód.
+ `PBPSF_VIRTUALIZED`Určuje virtualizovanou čekající zarážku, která má být vázána při každém načtení nového kódu.
 
 ## <a name="remarks"></a>Poznámky
- Používá pro `flags` člena [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) struktury.
+ Používá se `flags` pro člen [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) struktury.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -57,6 +57,6 @@ public enum enum_PENDING_BP_STATE_FLAGS { 
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)

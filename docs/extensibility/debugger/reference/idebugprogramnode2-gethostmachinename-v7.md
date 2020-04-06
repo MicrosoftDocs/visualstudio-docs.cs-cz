@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetHostMachineName_V7 | Dokumentace Microsoftu
+title: IDebugProgramNode2::GetHostMachineName_V7 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramNode2::GetHostMachineName_V7
 - IDebugProgramNode2::GetHostMachineNameIDebugProgramNode2::GetHostMachineName
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 03b2566d2c93181439ddecb9d87c5da59b6e6090
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a8c328c83ebe52f842b1990debe07aed3fd764c1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351148"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722080"
 ---
-# <a name="idebugprogramnode2gethostmachinenamev7"></a>IDebugProgramNode2::GetHostMachineName_V7
+# <a name="idebugprogramnode2gethostmachinename_v7"></a>IDebugProgramNode2::GetHostMachineName_V7
 
 > [!Note]
-> ZASTARALÉ. NEPOUŽÍVEJTE.
+> Zastaralé. NEPOUŽÍVEJTE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,17 +44,17 @@ int GetHostMachineName_V7 (
 ## <a name="parameters"></a>Parametry
 
 `pbstrHostMachineName`\
-[out] Vrátí název počítače, ve kterém je aplikace spuštěna.
+[out] Vrátí název počítače, ve kterém je program spuštěn.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Implementace by měla vždy vrátit `E_NOTIMPL`.
+Implementace by měla `E_NOTIMPL`vždy vrátit .
 
 ## <a name="remarks"></a>Poznámky
 
 > [!WARNING]
-> Od verze Visual Studio 2005, tato metoda se už nepoužívá a by měl vždy vrátit `E_NOTIMPL`.
+> Od sady Visual Studio 2005 se tato metoda `E_NOTIMPL`již nepoužívá a měla by vždy vrátit .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

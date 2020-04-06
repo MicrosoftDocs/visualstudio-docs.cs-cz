@@ -1,5 +1,5 @@
 ---
-title: BP_ERROR_TYPE | Dokumentace Microsoftu
+title: BP_ERROR_TYPE | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BP_ERROR_TYPE enumeration
 ms.assetid: c483eaab-db29-46de-bfdb-5c2a9a9cfb68
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3dc51691d4d424ee4d1c1a450f1e4e32b78e0e6e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e777e1f8cb67187a81f8f3bb4f79299939bfa31c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319299"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738077"
 ---
-# <a name="bperrortype"></a>BP_ERROR_TYPE
+# <a name="bp_error_type"></a>BP_ERROR_TYPE
 Určuje typ chyby zarážky.
 
 ## <a name="syntax"></a>Syntaxe
@@ -60,44 +60,44 @@ public enum enum_BP_ERROR_TYPE {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `BPET_NONE`\
-Určuje žádná chyba zarážky.
+Neurčuje žádnou chybu zarážky.
 
 `BPET_TYPE_WARNING`\
-Určuje Chyba zarážky upozornění style.
+Určuje chybu zarážky ve stylu varovného stylu.
 
 `BPET_TYPE_ERROR`\
-Určuje chybu stylu chyby zarážky.
+Určuje chybu zarážky chybového stylu.
 
 `BPET_SEV_HIGH`\
-Určuje Chyba zarážky vysokou závažností.
+Určuje chybu zarážky s vysokou závažností.
 
 `BPET_SEV_GENERAL`\
-Určuje střední závažností zarážky chyb.
+Určuje chybu zarážky se střední závažností.
 
 `BPET_SEV_LOW`\
-Určuje chybu s nízkou závažností zarážku.
+Určuje chybu zarážky s nízkou závažností.
 
 `BPET_TYPE_MASK`\
-Určuje chybu maska – vizuální styl zarážku.
+Určuje chybu zarážky ve stylu masky.
 
 `BPET_SEV_MASK`\
-Určuje závažnost. maska stylu zarážky chyb.
+Určuje chybu zarážky ve stylu masky závažnosti.
 
 `BPET_GENERAL_WARNING`\
-Určuje Obecné upozornění stylu zarážky chyb.
+Určuje chybu zarážky ve stylu obecného upozornění.
 
 `BPET_GENERAL_ERROR`\
-Určuje obecné stylu chyby zarážky chyb.
+Určuje chybu zarážky ve stylu obecné chyby.
 
 `BPET_ALL`\
-Určuje všechny typy chyb zarážku.
+Určuje všechny typy chyb zarážky.
 
 ## <a name="remarks"></a>Poznámky
-Tyto hodnoty lze kombinovat pomocí logické bitové `OR` a používá se pro `dwType` člena [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury. Předán jako parametr [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) metody.
+Tyto hodnoty mohou být kombinovány `OR` s bitovým a použít pro `dwType` člen [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury. Předánjako parametr metodě [EnumErrorBreakpoints.](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)
 
-Typ chyby zarážky se skládá z typu a závažnosti. To znamená, že je typ chyby zarážky nikdy pouze typ (například `BPET_TYPE_ERROR`,) nebo závažnosti (například `BPET_SEV_GENERAL`) samostatně. `BPET_GENERAL_WARNING` a `BPET_GENERAL_ERROR` poskytují předem definovaných hodnot pro obecné upozornění a chyby zarážky.
+Typ chyby zarážky se skládá z typu a závažnosti. To znamená, že typ chyby zarážky není `BPET_TYPE_ERROR`nikdy jen typ (například `BPET_SEV_GENERAL`,) nebo závažnost (například ) sama o sobě. `BPET_GENERAL_WARNING`a `BPET_GENERAL_ERROR` poskytují předdefinované hodnoty pro obecné upozornění a chybové zarážky.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -106,7 +106,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)
 - [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::GetLanguageInfo | Dokumentace Microsoftu
+title: IDebugDocumentContext2::GetLanguageInfo | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentContext2::GetLanguageInfo
 ms.assetid: 6a212ee5-414c-4eb5-ab11-19db1786943d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6b58d0ba0ec2fc10f584dc85b716852893719b27
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9d139029bf65149ae59fb037434f6e7d6298f1d5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350002"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731857"
 ---
 # <a name="idebugdocumentcontext2getlanguageinfo"></a>IDebugDocumentContext2::GetLanguageInfo
-Získá jazyk spojený s tímto kontextem dokumentu.
+Získá jazyk přidružený k tomuto kontextu dokumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,16 +43,16 @@ int GetLanguageInfo(
 
 ## <a name="parameters"></a>Parametry
 `pbstrLanguage`\
-[out] Vrátí název jazyka, který implementuje kód v kontextu tohoto dokumentu.
+[out] Vrátí název jazyka, který implementuje kód v tomto kontextu dokumentu.
 
 `pguidLanguage`\
-[out] Vrátí identifikátor GUID jazyka, který implementuje kód v kontextu tohoto dokumentu. Například `guidVBScriptLang` nebo `guidCPPLang`. Tento identifikátor GUID není omezena pouze na jazyky poskytnutých [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)].
+[out] Vrátí identifikátor GUID jazyka, který implementuje kód v tomto kontextu dokumentu. Příkladem je `guidVBScriptLang` nebo `guidCPPLang`. Tento identifikátor GUID se neomezuje [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]pouze na jazyky dodané společností .
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CDebugContext` objekt, který zveřejňuje [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) rozhraní.
+Následující příklad ukazuje, jak implementovat `CDebugContext` tuto metodu pro jednoduchý objekt, který zveřejňuje rozhraní [IDebugDocumentContext2.](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)
 
 ```cpp
 HRESULT CDebugContext::GetLanguageInfo(BSTR* pbstrLanguage, GUID* pguidLanguage)
@@ -83,5 +83,5 @@ HRESULT CDebugContext::GetLanguageInfo(BSTR* pbstrLanguage, GUID* pguidLanguage)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

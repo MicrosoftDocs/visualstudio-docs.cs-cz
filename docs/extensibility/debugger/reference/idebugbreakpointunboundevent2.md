@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointUnboundEvent2 | Dokumentace Microsoftu
+title: IDebugBreakpointUnboundEvent2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakpointUnboundEvent2
 ms.assetid: 6b1e1863-0c64-4d85-8ab9-aface522fdea
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94adbbefc6307d18906c3c88de3c8a68e74d04a3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1e1d15936316d08a712e3d6f3fdc7a3a73be613d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351292"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734636"
 ---
 # <a name="idebugbreakpointunboundevent2"></a>IDebugBreakpointUnboundEvent2
-Toto rozhraní informuje správce ladění relace (SDM), že byla vázaná zarážka svázána načíst program.
+Toto rozhraní informuje správce ladění relace (SDM), že vázaná zarážka byla nevázaná z načteného programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,21 +29,21 @@ IDebugBreakpointUnboundEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Ladicí stroj (DE) implementuje toto rozhraní jako součást jeho podporu pro zarážky. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí implementovat rozhraní na stejný objekt jako toto rozhraní (SDM používá [QueryInterface](/cpp/atl/queryinterface) přístup `IDebugEvent2` rozhraní).
+ Ladicí modul (DE) implementuje toto rozhraní jako součást jeho podporu pro zarážky. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto `IDebugEvent2` rozhraní (SDM používá [QueryInterface](/cpp/atl/queryinterface) pro přístup k rozhraní).
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- DE vytvoří a odešle tento objekt událost, když vázaná zarážka nevázaná. Událost je odeslána pomocí [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) poskytnutých SDM při připojení k laděnému programu funkce zpětného volání.
+ DE vytvoří a odešle tento objekt události, pokud vázaná zarážka byla nevázaná. Událost je odeslána pomocí funkce zpětného volání [IDebugCallBack2](../../../extensibility/debugger/reference/idebugeventcallback2.md) zajišťované sdm, když je připojena k programu, který je odladěn.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IDebugBreakpointUnboundEvent2`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IDebugBreakpointUnboundEvent2`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getbreakpoint.md)|Získá zarážce, kterou začal být nevázaného.|
-|[GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)|Získá z důvodů, proč nevázaná zarážku.|
+|[GetBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getbreakpoint.md)|Získá zarážku, která se stala nevázaný.|
+|[GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)|Získá důvod, proč zarážka byla nevázaná.|
 
 ## <a name="remarks"></a>Poznámky
- Při uvolnění ladicí stroj knihovny DLL nebo třídy, musí být všechny zarážky, které byly vázané na kód v tomto modulu svázána laděnému programu. `IDebugBreakpointUnboundEvent2` Odeslány pro každý nevázaného zarážku.
+ Při ladění modulu DLL nebo třídy uvolní, všechny zarážky, které byly vázány na kód v tomto modulu musí být bez závazků z programu, který je laděn. Je `IDebugBreakpointUnboundEvent2` odeslána pro každou nevázanou zarážku.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -52,7 +52,7 @@ IDebugBreakpointUnboundEvent2 : IUnknown
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 - [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

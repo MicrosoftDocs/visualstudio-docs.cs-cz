@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery2::IsCustomAttributeDefined | Dokumentace Microsoftu
+title: IDebugCustomAttributeQuery2::IsCustomAttributeDefined | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCustomAttributeQuery2::IsCustomAttributeDefined
 ms.assetid: 5c07cc52-6d2d-42df-9d76-9f1f769641db
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0e2ecd70eeeddb4b61d8ed8d307bd579c68ef519
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7be649a5d65f88d8263bbe8950fda1a157855ed2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335829"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732533"
 ---
 # <a name="idebugcustomattributequery2iscustomattributedefined"></a>IDebugCustomAttributeQuery2::IsCustomAttributeDefined
-Určuje, zda existuje vlastní atribut podle názvu.
+Určuje, zda vlastní atribut existuje podle názvu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int IsCustomAttributeDefined(
 
 ## <a name="parameters"></a>Parametry
 `pszCustomAttributeName`\
-[in] Řetězec obsahující název vlastního atributu k vyhledání.
+[v] Řetězec obsahující název vlastního atributu, který chcete najít.
 
 ## <a name="return-value"></a>Návratová hodnota
- Vrátí hodnotu S_OK, pokud je vlastní atribut je definován v tomto poli, jinak vrátí S_FALSE.
+ Vrátí S_OK pokud je v tomto poli definován vlastní atribut, jinak vrátí S_FALSE.
 
 ## <a name="remarks"></a>Poznámky
- Chcete-li získat atribut bajtů spojené s vlastní atribut, zavolejte [getcustomattributebyname –](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md) metody.
+ Chcete-li získat bajty atributu přidružené k vlastnímu atributu, zavolejte metodu [GetCustomAttributeByName.](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)

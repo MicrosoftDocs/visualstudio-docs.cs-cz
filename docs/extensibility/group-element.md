@@ -1,24 +1,24 @@
 ---
-title: Seskupit Element | Dokumentace Microsoftu
+title: Prvek skupiny | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, Groups
 - Groups element (VSCT XML schema)
 ms.assetid: 69faee18-cbf4-470a-b952-c1919c583df8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c3c1c4bedc5ff44f797e6b46e351dc3753362501
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 26479257511d74f122dd4064330f5b6a1e8dadd3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342358"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711235"
 ---
-# <a name="group-element"></a>Skupinového elementu
+# <a name="group-element"></a>Prvek skupiny
 Definuje skupinu příkazů VSPackage.
 
 ## <a name="syntax"></a>Syntaxe
@@ -29,30 +29,30 @@ Definuje skupinu příkazů VSPackage.
 </Group>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|identifikátor GUID|Povinný parametr. Identifikátor GUID identifikátoru GUID a ID příkazu.|
-|id|Povinný parametr. ID identifikátoru GUID a ID příkazu.|
-|priorita|Volitelné. Číselná hodnota, která určuje prioritu.|
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Identifikátor guid|Povinná hodnota. Identifikátor GUID identifikátoru příkazu GUID/ID.|
+|id|Povinná hodnota. ID identifikátoru příkazu GUID/ID.|
+|Prioritou|Nepovinný parametr. Číselná hodnota, která určuje prioritu.|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|Nadřazené|Volitelné. Nadřazený prvek tlačítko.|
+|Nadřazený|Nepovinný parametr. Nadřazený prvek tlačítka.|
 |Poznámka|Volitelný komentář.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Groups – element](../extensibility/groups-element.md)|Obsahuje položky, které definují skupiny příkaz VSPackage.|
+|[Prvek Skupiny](../extensibility/groups-element.md)|Obsahuje položky, které definují skupiny příkazů VSPackage.|
 
 ## <a name="example"></a>Příklad
 
@@ -62,5 +62,5 @@ Definuje skupinu příkazů VSPackage.
 </Group>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Soubory tabulky (.vsct) příkaz pro Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také
+- [Soubory příkazů sady Visual Studio (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

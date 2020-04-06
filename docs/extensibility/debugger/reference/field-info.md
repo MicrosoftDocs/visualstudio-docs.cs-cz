@@ -1,5 +1,5 @@
 ---
-title: FIELD_INFO | Dokumentace Microsoftu
+title: FIELD_INFO | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - FIELD_INFO structure
 ms.assetid: bfafef6d-0c83-43d7-a779-1f0d24b166a1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 352e4bdf6c79dc67f0bf396cb1164e96e80fbf5f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6e2089746adecc583d04176afca18ad19826ea53
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337705"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736898"
 ---
-# <a name="fieldinfo"></a>FIELD_INFO
-Tato struktura popisuje místní proměnná, parametr nebo jiné pole.
+# <a name="field_info"></a>FIELD_INFO
+Tato struktura popisuje místní proměnnou, parametr nebo jiné pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,10 +49,10 @@ public struct FIELD_INFO {
 
 ## <a name="members"></a>Členové
 `dwFields`\
-Kombinace příznaků z [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) výčet, který určuje členy, které jsou vyplněna.
+Kombinace příznaků z [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) výčtu, který určuje, které členy jsou vyplněny.
 
 `bstrFullName`\
-Celý název pole.
+Úplný název pole.
 
 `bstrName`\
 Krátký název pole.
@@ -61,10 +61,10 @@ Krátký název pole.
 Typ pole.
 
 `dwModifiers`\
-Kombinace příznaků z [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) výčet, který popisuje pole.
+Kombinace příznaků z [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) výčtu, který popisuje pole.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je předán [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) metody, kde je vyplněna.
+Tato struktura je předána [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) metoda, kde je vyplněna.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: sh.h
@@ -73,7 +73,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)
 - [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)

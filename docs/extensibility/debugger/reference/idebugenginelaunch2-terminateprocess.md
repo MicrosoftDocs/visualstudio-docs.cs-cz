@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineLaunch2::TerminateProcess | Dokumentace Microsoftu
+title: IDebugEngineLaunch2::Ukončit proces | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngineLaunch2::TerminateProcess
 ms.assetid: f7039e7f-5f57-4222-9ad2-11a66b2da6e0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 88536211083650fa1a6fe606c78bd7ecf9037c98
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 971259edc89d1ad8be01b6e6e4db46f760534349
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337189"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730508"
 ---
 # <a name="idebugenginelaunch2terminateprocess"></a>IDebugEngineLaunch2::TerminateProcess
-Ukončení procesu.
+Ukončí proces.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,15 +41,15 @@ int TerminateProcess ( 
 
 ## <a name="parameters"></a>Parametry
 `pProcess`\
-[in] [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) objekt, který reprezentuje proces ukončen.
+[v] [Objekt IDebugProcess2,](../../../extensibility/debugger/reference/idebugprocess2.md) který představuje proces, který má být ukončen.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Volání [CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md) metoda před voláním této metody.
+ Před voláním této metody zavolejte metodu [CanTerminateProcess.](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md)

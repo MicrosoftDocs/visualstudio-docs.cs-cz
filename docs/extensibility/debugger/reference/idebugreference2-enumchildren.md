@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::EnumChildren | Dokumentace Microsoftu
+title: IDebugReference2::EnumChildren | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugReference2::EnumChildren
 ms.assetid: 35b3c2f3-69f4-4013-b555-f847221f62e8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 432a3c25722ae7adb966efa6998c42680bd60307
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 96b2fec782ce88dfb2200df35f56b35b304beda5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335776"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720635"
 ---
 # <a name="idebugreference2enumchildren"></a>IDebugReference2::EnumChildren
-Získání seznamu vybrané podřízené objekty daného odkazu. Vyhrazeno pro budoucí použití.
+Získejte seznam vybraných podřízených položek odkazu. Vyhrazeno pro budoucí použití.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,27 +51,27 @@ int EnumChildren ( 
 
 ## <a name="parameters"></a>Parametry
 `dwFields`\
-[in] Kombinace příznaků z [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) výčet, který určuje pole, která v výčtu [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury mají být vyplněna.
+[v] Kombinace příznaků z [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) výčtu, který určuje, která pole ve výčtu [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury mají být vyplněny.
 
 `dwRadix`\
-[in] Základ, který se má použít v jakékoli číselné informace o formátování.
+[v] Radix, který se použije při formátování všech číselných informací.
 
 `dwAttribFilter`\
-[in] Kombinace příznaků z [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) výčet, který se používá jako filtr v kombinaci s `pszNameFilter` parametr vybrat, které struktury jsou pro provedení výčtu.
+[v] Kombinace příznaků z [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) výčtu, který se používá jako `pszNameFilter` filtr v kombinaci s parametrem pro výběr struktur, které mají být výčtu.
 
 `pszNameFilter`\
-[in] Řetězec určující filtr, jako je například "MyX" použijete v kombinaci s `dwAttribFilter` parametr vyberte struktury pro provedení výčtu.
+[v] Řetězec určující filtr, například "MyX", který se `dwAttribFilter` používá v kombinaci s parametrem pro výběr struktur, které mají být uvedeny ve výčtu.
 
 `dwTimeout`\
-[in] Maximální doba v milisekundách pro čekání před návratem z této metody. Použití `INFINITE` čekat po neomezenou dobu.
+[v] Maximální doba v milisekundách čekání před návratem z této metody. Slouží `INFINITE` k čekání na neurčito.
 
 `ppEnum`\
-[out] Vrátí [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) objekt, který obsahuje seznam požadované podřízené vlastnosti.
+[out] Vrátí objekt [IEnumDebugReferenceInfo2,](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) který obsahuje seznam požadovaných podřízených vlastností.
 
 ## <a name="return-value"></a>Návratová hodnota
- Vždy vrátí `E_NOTIMPL`.
+ Vždy vrátí hodnotu `E_NOTIMPL`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)
 - [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)
 - [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)

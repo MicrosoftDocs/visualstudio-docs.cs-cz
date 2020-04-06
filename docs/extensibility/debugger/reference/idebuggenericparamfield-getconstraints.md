@@ -1,28 +1,28 @@
 ---
-title: IDebugGenericParamField::GetConstraints | Dokumentace Microsoftu
+title: IDebugGenericParamField::GetConstraints | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugGenericParamField::GetConstraints
 - GetConstraints
 ms.assetid: 86a78b5a-ee0f-4999-a0ba-919d3dc7d969
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0821b98250b26d6eafa5f1e02a3c2ef8c07562f7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8a078beaac1cf9ef0255ff7b8d0bcbc4f568fdb8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330415"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728007"
 ---
 # <a name="idebuggenericparamfieldgetconstraints"></a>IDebugGenericParamField::GetConstraints
-Získá omezení, které jsou přidruženy tento obecný parametr.
+Načte omezení, které jsou přidruženy k tomuto obecnému parametru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,19 +44,19 @@ int GetConstraints(
 
 ## <a name="parameters"></a>Parametry
 `cConstraints`\
-[in] Počet omezení.
+[v] Počet omezení.
 
 `ppConstraints`\
-[out] Vrátí pole obsahující omezení spojené s tímto polem.
+[out] Vrátí pole, které obsahuje omezení přidružená k tomuto poli.
 
 `pcConstraints`\
-[out v] Počet omezení `ppConstraints` pole.
+[dovnitř, ven] Počet omezení v `ppConstraints` poli.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugGenericParamFieldType** objekt, který zveřejňuje [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) rozhraní.
+Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugGenericParamFieldType** objekt, který zpřístupňuje rozhraní [IDebugGenericParamField.](../../../extensibility/debugger/reference/idebuggenericparamfield.md)
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetConstraints(
@@ -151,5 +151,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)

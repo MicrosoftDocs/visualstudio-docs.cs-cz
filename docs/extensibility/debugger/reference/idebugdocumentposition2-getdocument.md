@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentPosition2::GetDocument | Dokumentace Microsoftu
+title: IDebugDocumentPosition2::GetDocument | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentPosition2::GetDocument
 ms.assetid: eaa172c9-5748-4ce1-a0e2-33c2063f6752
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 81a394398f719e50afc178b3c57161e3ceb61ee5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1f167c581ea07225774d9a34e42058d6616f0f89
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326564"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731699"
 ---
 # <a name="idebugdocumentposition2getdocument"></a>IDebugDocumentPosition2::GetDocument
-Získá aktuálního dokumentu.
+Získá obsahující dokument.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,11 +41,11 @@ int GetDocument( 
 
 ## <a name="parameters"></a>Parametry
 `ppDoc`\
-[out] Vrátí [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) objekt, který reprezentuje dokument obsahující tuto pozici.
+[out] Vrátí objekt [IDebugDocument2,](../../../extensibility/debugger/reference/idebugdocument2.md) který představuje dokument obsahující tuto pozici.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)
 - [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

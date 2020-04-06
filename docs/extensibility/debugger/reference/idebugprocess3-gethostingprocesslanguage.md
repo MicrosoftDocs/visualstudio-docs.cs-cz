@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::GetHostingProcessLanguage | Dokumentace Microsoftu
+title: IDebugProcess3::GetHostingProcessLanguage | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcess3::GetHostingProcessLanguage
 ms.assetid: 52fca002-a9ef-43b1-9192-afbe7bb59ad4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 36098cf1fa19228962743856a814f0d094439edd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3b27be0850755a1a2808c8c5c758a3ad59b41d7e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313906"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723617"
 ---
 # <a name="idebugprocess3gethostingprocesslanguage"></a>IDebugProcess3::GetHostingProcessLanguage
-Tato metoda vrátí hodnotu `GUID` představující jazyka tento proces úmluvu volání [SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md).
+Tato metoda `GUID` vrátí představující jazyk tohoto procesu, jak je nastaven volání [MKTProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,11 +41,11 @@ int GetHostingProcessLanguage(
 
 ## <a name="parameters"></a>Parametry
 `pguidLang`\
-[out] `GUID` Jazyka tohoto procesu. `GUID_NULL` (C++) nebo `Guid.Empty` (C#) znamená, že není nastaven jazyk.
+[out] Jazyk `GUID` tohoto procesu. `GUID_NULL`(C++) `Guid.Empty` nebo (C#) znamená, že jazyk není nastaven.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)
 - [SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2::GetName | Dokumentace Microsoftu
+title: IDebugMemoryContext2::GetName | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - IDebugMemoryContext2::GetName method
 - GetName method
 ms.assetid: 8c212556-7d9e-4d68-b2a9-8212f50d0287
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ee8dd65a3bcaef7fd5a23da6c2a5f9c21a4838af
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b8a13c078340eafcff9440e41afd468ba95f9849
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346997"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727448"
 ---
 # <a name="idebugmemorycontext2getname"></a>IDebugMemoryContext2::GetName
-Načte uživatele zobrazitelné název pro tento kontext.
+Načte uživatelem zobrazitelný název pro tento kontext.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,10 +45,10 @@ int GetName(
 [out] Vrátí název kontextu paměti.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Název místní paměti se obvykle nepoužívá.
+ Název kontextu paměti se obvykle nepoužívá.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

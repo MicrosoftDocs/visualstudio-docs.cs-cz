@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::SetPassCount | Dokumentace Microsoftu
+title: IDebugBoundBreakpoint2::SetPassCount | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - SetPassCount method
 - IDebugBoundBreakpoint2::SetPassCount method
 ms.assetid: b32c12f9-b34d-43bd-a1b9-61af6cf8e51b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ee0032a079ff9c67e0a2de350e0405cfa20303db
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bcc7bd57ce0c392a2874f107c6e4d8d5753399d3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314513"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735442"
 ---
 # <a name="idebugboundbreakpoint2setpasscount"></a>IDebugBoundBreakpoint2::SetPassCount
-Nastavuje nebo mění pass počet, přidružený k vázaná zarážka.
+Nastaví nebo změní počet průchodů přidružených k této vázané zarážky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,17 +42,17 @@ int SetPassCount( 
 
 ## <a name="parameters"></a>Parametry
 `bpPassCount`\
-[in] [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) struktura, která určuje počet pass.
+[v] [Struktura BP_PASSCOUNT,](../../../extensibility/debugger/reference/bp-passcount.md) která určuje počet průchodů.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_BP_DELETED` Pokud státu objekt vázaná zarážka nastavená na `BPS_DELETED` (součástí [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) výčet).
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `E_BP_DELETED` pokud je nastaven stav vázaného `BPS_DELETED` objektu zarážky (část [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) výčet).
 
 ## <a name="remarks"></a>Poznámky
- Počet průchodu určí, když se aktivuje zarážku. Aktuální heslo nebo počet průchodů lze získat voláním [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md) metody.
+ Počet průchodů určuje, kdy je aktivována zarážka. Aktuální pass nebo počet přístupů lze získat voláním [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md) metoda.
 
- Dojde ke ztrátě libovolným počtem pass, která byla dříve přidružená k této zarážky.
+ Počet průchodů, který byl dříve přidružen k této zarážky, bude ztracen.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 - [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md)
 - [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)

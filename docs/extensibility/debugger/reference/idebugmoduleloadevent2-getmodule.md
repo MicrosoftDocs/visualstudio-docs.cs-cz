@@ -1,5 +1,5 @@
 ---
-title: IDebugModuleLoadEvent2::GetModule | Dokumentace Microsoftu
+title: IDebugModuleLoadEvent2::GetModule | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugModuleLoadEvent2::GetModule
 ms.assetid: c86482bb-9ce5-4e63-bbe0-969b50169424
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6ee91686051440fe44efd1f4e4f9ba933f3e0c99
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b90547709e5524ce005b0598b0b8d482cfecf173
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323703"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726722"
 ---
 # <a name="idebugmoduleloadevent2getmodule"></a>IDebugModuleLoadEvent2::GetModule
-Získá modul, který je načten nebo byla uvolněna.
+Získá modul, který je právě načten nebo uvolněn.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,17 +45,17 @@ int GetModule( 
 
 ## <a name="parameters"></a>Parametry
 `pModule`\
-[out] Vrátí [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) objekt, který představuje modul, který je načítání nebo uvolnění.
+[out] Vrátí objekt [IDebugModule2,](../../../extensibility/debugger/reference/idebugmodule2.md) který představuje modul, který je načítání nebo uvolnění.
 
 `pbstrDebugMessage`\
-[out v] Vrátí volitelnou zprávu s popisem této události. Pokud je tento parametr hodnotu null, je požadována žádná zpráva.
+[dovnitř, ven] Vrátí volitelnou zprávu popisující tuto událost. Pokud je tento parametr nulovou hodnotou, není požadována žádná zpráva.
 
 `pbLoad`\
-[out v] Nenulová (`TRUE`) Pokud modul je nula a načítání (`FALSE`) Pokud uvolnění modulu. Pokud je tento parametr hodnotu null, je požadována bez stavu.
+[dovnitř, ven] Nenulová`TRUE`( ), pokud se`FALSE`modul načítá, a nula ( ), pokud se modul vykládá. Pokud je tento parametr nulovou hodnotou, není požadován žádný stav.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugModuleLoadEvent2](../../../extensibility/debugger/reference/idebugmoduleloadevent2.md)
 - [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)

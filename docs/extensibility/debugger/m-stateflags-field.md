@@ -1,30 +1,30 @@
 ---
-title: m_stateflags – pole | Dokumentace Microsoftu
+title: m_stateFlags pole | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - m_stateFlags field, Task class [.NET Framework debug engines]
 ms.assetid: 82b20efc-08f2-4cd2-91f6-4e01e3da906b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8dee91fa96e16cdc2cd1cd75083c381422a99092
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b504d134c8951072795dc2e202cf05082b12cb64
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330854"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738387"
 ---
-# <a name="mstateflags-field"></a>m_stateflags – pole
-Ukládá informace o aktuálním stavu <xref:System.Threading.Tasks.Task> objektu.
+# <a name="m_stateflags-field"></a>m_stateFlags pole
+Ukládá informace o aktuálním <xref:System.Threading.Tasks.Task> stavu objektu.
 
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>
+ **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Sestavení:** mscorlib (v *mscorlib.dll*)
+ **Sestava:** mscorlib (v *mscorlib.dll*)
 
- Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.
+ Vzhledem k tomu, že k tomuto internímu členu nemáte přístup z rozhraní .NET Framework, je ve společném zprostředkujícím jazyce (CIL) k dispozici následující syntaxe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,9 +33,9 @@ Ukládá informace o aktuálním stavu <xref:System.Threading.Tasks.Task> objekt
 ```
 
 ## <a name="remarks"></a>Poznámky
- Obvykle se používá <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=fullName> vlastnosti pro přístup k této hodnotě.
+ Obvykle používáte <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=fullName> vlastnost pro přístup k této hodnotě.
 
- Tento člen může být libovolnou kombinací těchto hodnot:
+ Tento člen může být libovolná kombinace následujících hodnot:
 
 - [TASK_STATE_EXECUTED](../../extensibility/debugger/task-state-executed-field.md)
 
@@ -47,5 +47,5 @@ Ukládá informace o aktuálním stavu <xref:System.Threading.Tasks.Task> objekt
 
 - [TASK_STATE_RAN_TO_COMPLETION](../../extensibility/debugger/task-state-ran-to-completion-field.md)
 
-## <a name="see-also"></a>Viz také:
-- [Třída úlohy](../../extensibility/debugger/task-class-internal-members.md)
+## <a name="see-also"></a>Viz také
+- [Třída úkolu](../../extensibility/debugger/task-class-internal-members.md)

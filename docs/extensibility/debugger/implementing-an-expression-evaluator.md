@@ -1,36 +1,36 @@
 ---
-title: Implementace vyhodnocovače výrazů | Dokumentace Microsoftu
+title: Implementace vyhodnocení výrazu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - expression evaluators
 - debugging [Debugging SDK], expression evaluators
 ms.assetid: e9ada7be-845e-4baa-bf8f-e4890e7ba490
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 66a1a0cb78036982923d20e39a3a4c32b288e459
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a8c7c9a1130794dd4c28f212afd6cb3c030f5a1b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326197"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738542"
 ---
-# <a name="implement-an-expression-evaluator"></a>Implementace vyhodnocovače výrazů
+# <a name="implement-an-expression-evaluator"></a>Implementace vyhodnocení výrazu
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka Chyba při vyhodnocování výrazu spravované](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Vyhodnocení výrazu je komplexní souhra grafů mezi ladicího stroje (DE), poskytovatel symbolů (SP), objekt vazače a vyhodnocovací filtr výrazů (EE). Tyto čtyři komponenty jsou připojené rozhraní, které jsou implementované jedna komponenta a využívat jiným.
+ Vyhodnocení výrazu je složitá souhra mezi ladicím strojem (DE), zprostředkovatelem symbolu (SP), objektem pořadače a vyhodnocením výrazu (EE). Tyto čtyři součásti jsou propojeny rozhraními, které jsou implementovány jednou komponentou a spotřebovány jinou.
 
- EE trvá výrazu z DE ve formě řetězce a analyzuje nebo vyhodnotí ji. EE spustí následující rozhraní, které se spotřebovávají DE:
+ EE bere výraz z DE ve formě řetězce a analyzuje nebo vyhodnocuje. EE spouští následující rozhraní, která de spotřebovává:
 
 - [IDebugExpressionEvaluator](../../extensibility/debugger/reference/idebugexpressionevaluator.md)
 
 - [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)
 
-  EE volá objekt vazače poskytnutých DE, k získání hodnoty symbolů a objekty. EE využívá následujících rozhraní, které jsou implementované DE:
+  EE volá objekt pořadače, dodaný DE, chcete-li získat hodnotu symbolů a objektů. EE spotřebovává následující rozhraní, které jsou implementovány DE:
 
 - [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)
 
@@ -46,9 +46,9 @@ ms.locfileid: "66326197"
 
 - [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)
 
-  Spouští EE [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md). `IDebugProperty2` poskytuje mechanismus pro popisující výsledek vyhodnocení výrazu, jako jsou místní proměnné, jednoduchého typu nebo objekt k sadě Visual Studio, která zobrazí příslušné informace v **lokální**, **Watch** , nebo **okamžité** okna.
+  EE spustí [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md). `IDebugProperty2`Poskytuje mechanismus pro popis výsledku vyhodnocení výrazu, jako je například místní proměnná, primitivní nebo objekt visual studio, který pak zobrazí příslušné informace v **locals**, **Watch**nebo **Immediate** okno.
 
-  SP je přidělena EE tak DE při požádá o informace. SP spustí rozhraní, které popisují adresy a pole, jako je například následující rozhraní a vy:
+  Sp je dána EE de, když žádá o informace. Sp spustí rozhraní, která popisují adresy a pole, jako jsou následující rozhraní a jejich deriváty:
 
 - [IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md)
 
@@ -56,10 +56,10 @@ ms.locfileid: "66326197"
 
 - [IDebugField](../../extensibility/debugger/reference/idebugfield.md)
 
-  EE využívá všechny z těchto rozhraní.
+  EE spotřebovává všechna tato rozhraní.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Strategie implementace vyhodnocovače výrazů](../../extensibility/debugger/expression-evaluator-implementation-strategy.md) definuje tří kroků pro výraz strategie implementace vyhodnocovače (EE).
+ [Strategie implementace vyhodnocení výrazu](../../extensibility/debugger/expression-evaluator-implementation-strategy.md) Definuje třístupňový proces pro strategii implementace vyhodnocení výrazu (EE).
 
-## <a name="see-also"></a>Viz také:
-- [Zápis vyhodnocovací filtr výrazů modulu CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
+## <a name="see-also"></a>Viz také
+- [Zápis vyhodnocení výrazu CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

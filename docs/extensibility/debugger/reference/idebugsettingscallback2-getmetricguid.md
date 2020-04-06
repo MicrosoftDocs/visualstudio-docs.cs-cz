@@ -1,27 +1,27 @@
 ---
-title: IDebugSettingsCallback2::GetMetricGuid | Dokumentace Microsoftu
+title: IDebugSettingsCallback2::GetMetricGuid | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSettingsCallback2::GetMetricGuid
 ms.assetid: 91092763-3362-4857-adf0-231bc1254206
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b46037619bf7e43b647d4e3bc557c8ae9290cbd1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 08f03e0d09db17e3dbcda30588191ff3efcb1c41
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321996"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719976"
 ---
 # <a name="idebugsettingscallback2getmetricguid"></a>IDebugSettingsCallback2::GetMetricGuid
-Získá jedinečný identifikátor metriku jeho název.
+Načte jedinečný identifikátor metriky s jeho názvem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,19 +45,19 @@ private int GetMetricGuid(
 
 ## <a name="parameters"></a>Parametry
 `pszType`\
-[in] Typ metriky.
+[v] Typ metriky.
 
 `guidSection`\
-[in] Jedinečný identifikátor oddílu.
+[v] Jedinečný identifikátor oddílu
 
 `pszMetric`\
-[in] Název metriky.
+[v] Název metriky.
 
 `pguidValue`\
-[out] Vrací jedinečný identifikátor metriky.
+[out] Vrátí jedinečný identifikátor metriky.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

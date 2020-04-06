@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText2::GetSize | Dokumentace Microsoftu
+title: IDebugDocumentText2::GetSize | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentText2::GetSize
 ms.assetid: bf515a8f-dcee-4004-8f81-543d547ceaae
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7f382b1d27a83e4493431ac8e6cca3d6aef9dd72
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: edc4a209537ca4bd54d3f6d9343d1496ab7c0e90
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337380"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731588"
 ---
 # <a name="idebugdocumenttext2getsize"></a>IDebugDocumentText2::GetSize
-Získá velikost textu na této pozici v dokumentu.
+Načte velikost textu na tomto místě v dokumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,13 +49,13 @@ int GetSize( 
 [out] Vrátí počet znaků textu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
 
- [C++ pouze] Pokud konkrétní hodnoty není žádoucí, předejte hodnotu NULL pro parametr.
+ [Pouze C++] Pokud určitá hodnota není žádoucí, předajte hodnotu NULL pro parametr.
 
- [C# pouze] Je třeba zadat oba parametry.
+ [Pouze C#] Musí být zadány oba parametry.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)

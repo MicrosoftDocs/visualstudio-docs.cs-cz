@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::EnumParameters | Dokumentace Microsoftu
+title: IDebugMethodField::EnumParameters | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugMethodField::EnumParameters method
 ms.assetid: d77b1197-deb6-4144-8d1b-8b09949ccfac
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4d455d380f66689cd2245070a7ef0bf9290a2455
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 13df02cf5870e630c4aecb34e9295d218ba7a0eb
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324224"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727193"
 ---
 # <a name="idebugmethodfieldenumparameters"></a>IDebugMethodField::EnumParameters
-Vytvoří čítač pro parametry metody.
+Vytvoří čítač výčtu pro parametry metody.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,19 +41,19 @@ int EnumParameters(
 
 ## <a name="parameters"></a>Parametry
 `ppParams`\
-[out] Vrátí [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objekt představující seznam parametrů metody; v opačném případě vrátí hodnotu null, pokud neexistují žádné parametry.
+[out] Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam parametrů metody. v opačném případě vrátí hodnotu null, pokud neexistují žádné parametry.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK nebo vrátí S_FALSE v případě, že neexistují žádné parametry. V opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK nebo vrátí S_FALSE pokud neexistují žádné parametry. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Každý prvek je [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objektu, který představuje různé typy parametrů. Volání [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) metoda na každém objektu k určení přesně jaký druh parametr objekt představuje.
+ Každý prvek je [Objekt IDebugField](../../../extensibility/debugger/reference/idebugfield.md) představující různé typy parametrů. Volání [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) metoda na každý objekt přesně určit, jaký druh parametru objektu představuje.
 
- Parametr zahrnuje jeho název proměnné a jeho typu. První parametr metody třídy je obvykle ukazatel "Tento".
+ Parametr obsahuje název proměnné i typ. První parametr metody třídy je obvykle ukazatel "this".
 
- Pokud pouze typy parametrů je potřeba, zavolejte [EnumArguments](../../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) metody.
+ Pokud jsou potřeba pouze typy parametrů, zavolejte metodu [EnumArguments.](../../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

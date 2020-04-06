@@ -1,37 +1,37 @@
 ---
-title: Získání portu | Dokumentace Microsoftu
+title: Získání port | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - ports, getting
 - debugging [Debugging SDK], ports
 ms.assetid: 745c2337-cfff-4d02-b49c-3ca7c4945c5e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4a57fc69f2ff5b49f1ad4e5449daddda5ff764d8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7bf4948e7cb2590136774eab76fbafec91dbfa40
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353785"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738631"
 ---
 # <a name="get-a-port"></a>Získání portu
-Port představuje připojení k počítači, na kterém běží procesů. Tento počítač může být v místním počítači nebo vzdáleného počítače (který může potenciálně být bez Windows-based operační systém, najdete v článku [porty](../../extensibility/debugger/ports.md) Další informace).
+Port představuje připojení k počítači, na kterém jsou spuštěny procesy. Tento počítač může být místní počítač nebo vzdálený počítač (který by mohl být spuštěn operační systém, který není založen na systému Windows; další informace naleznete v [tématu Porty).](../../extensibility/debugger/ports.md)
 
-Port je reprezentována [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) rozhraní. Používá se k získání informací o procesy spuštěné na počítači, který port, který je připojen k.
+Port je reprezentován rozhraním [IDebugPort2.](../../extensibility/debugger/reference/idebugport2.md) Používá se k získání informací o procesech spuštěných v počítači, ke které je port připojen.
 
-Ladicí stroj potřebuje přístup k portu, pokud chcete zaregistrovat program uzly s portem a požadavky na informace o procesu. Například, pokud ladicí stroj implementuje [IDebugProgramProvider2](../../extensibility/debugger/reference/idebugprogramprovider2.md) implementace pro rozhraní [GetProviderProcessData](../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) metoda může požádat o nezbytný proces port informace se mají vrátit.
+Ladicí modul potřebuje přístup k portu, aby mohl zaregistrovat uzly programů s portem a uspokojit požadavky na informace o procesu. Například pokud ladicí modul implementuje rozhraní [IDebugProgramProvider2,](../../extensibility/debugger/reference/idebugprogramprovider2.md) implementace metody [GetProviderProcessData](../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) může požádat port o vrácení nezbytných informací o procesu.
 
-Visual Studio poskytuje nezbytné port ladicího stroje a získá tento port od jiného dodavatele portu. Pokud program je připojen k (buď v rámci ladicího programu nebo z důvodu výjimky byla vyvolána, která se aktivuje dialogové okno Just-in-Time [JIT]), uživatel dostane volba přenosu (jiný název pro dodavatele portu) používat. V opačném případě, pokud uživatel spustí program z v rámci ladicího programu, systém projektu určuje dodavatele portu používat. V obou případech sady Visual Studio vytvoří instanci dodavatele portu, reprezentovaný [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) rozhraní a požádá o nový port voláním [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) s [ IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) rozhraní. Tento port je pak předán ladicí stroj v podobě jednoho nebo druhého.
+Visual Studio dodává potřebný port do ladicího modulu a získá tento port od dodavatele portu. Pokud je připojen program (buď z v rámci ladicího programu nebo z důvodu byla vyvolána výjimka, která aktivuje dialogové okno Just-in-Time [JIT], uživatel je uveden výběr přenosu (jiný název pro dodavatele portu) k použití. V opačném případě, pokud uživatel spustí program z ladicího programu, systém projektu určuje dodavatele portu, který má být používán. V obou těchto případě Visual Studio instancee dodavatele portu, reprezentované [rozhraní IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) a požádá o nový port voláním [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) s [rozhraním IDebugPortRequest2.](../../extensibility/debugger/reference/idebugportrequest2.md) Tento port je pak předán ladicí mu motoru v jednom nebo druhém formuláři.
 
 ## <a name="example"></a>Příklad
-Tento fragment kódu ukazuje, jak používat port zadaný pro [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) k registraci uzlu aplikace v [ResumeProcess](../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md). Pro přehlednost byly vynechány parametry nemají přímou souvislost tento koncept.
+Tento fragment kódu ukazuje, jak použít port dodaný [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) k registraci uzlu programu v [ResumeProcess](../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md). Parametry, které přímo nesouvisejí s tímto konceptem, byly pro přehlednost vynechány.
 
 > [!NOTE]
-> Tento příklad používá port, který můžete spustit a pokračovat v procesu a předpokládá, že [IDebugPortEx2](../../extensibility/debugger/reference/idebugportex2.md) rozhraní je implementováno na portu. Toto je v žádném smyslu jediný způsob, jak provádět tyto úlohy a je možné, že port nemusí i možné zahrnutí jiné než a program [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) k němu.
+> Tento příklad používá port ke spuštění a obnovení procesu a předpokládá, že rozhraní [IDebugPortEx2](../../extensibility/debugger/reference/idebugportex2.md) je implementováno na portu. To není v žádném případě jediný způsob, jak provádět tyto úkoly, a je možné, že port nemusí být ani zapojeny jiné než mít programu [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) uvedeny na to.
 
 ```cpp
 // This is an IDebugEngineLaunch2 method.
@@ -96,8 +96,8 @@ HRESULT CDebugEngine::ResumeProcess(IDebugProcess2 *pDebugProcess)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Registrace programu](../../extensibility/debugger/registering-the-program.md)
-- [Povolení ladění programu](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)
-- [Dodavatelé portů](../../extensibility/debugger/port-suppliers.md)
+- [Povolení odlazení programu](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)
+- [Dodavatelé přístavů](../../extensibility/debugger/port-suppliers.md)
 - [Porty](../../extensibility/debugger/ports.md)

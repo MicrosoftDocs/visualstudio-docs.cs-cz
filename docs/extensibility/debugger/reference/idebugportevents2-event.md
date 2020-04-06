@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEvents2::Event | Dokumentace Microsoftu
+title: IDebugPortEvents2::Událost | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPortEvents2::Event
 ms.assetid: 5cc813f7-04a1-4462-9ea7-fbddcf0e0143
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6ede9055f97a796e4e007914f68e370d4ff81420
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 931be468f6321250481aec79688f7f326abcfcac
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326749"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725246"
 ---
 # <a name="idebugportevents2event"></a>IDebugPortEvents2::Event
-Tato metoda odesílá události, které místo vytváření a ničení procesy a programů na portu.
+Tato metoda odesílá události, které znamená vytvoření a zničení procesů a programů na portu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,19 +51,19 @@ int Event(
 
 ## <a name="parameters"></a>Parametry
 `pMachine`\
-[in] [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) objekt, který představuje server pro ladění (je jedna pro každou instanci [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]) ve kterém došlo k události.
+[v] Objekt [IDebugCoreServer2,](../../../extensibility/debugger/reference/idebugcoreserver2.md) který představuje ladicí server (je [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]jeden pro každou instanci ) ve kterém došlo k události.
 
 `pPort`\
-[in] [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) objekt, který reprezentuje port, ve kterém došlo k události.
+[v] [Objekt IDebugPort2,](../../../extensibility/debugger/reference/idebugport2.md) který představuje port, ve kterém došlo k události.
 
 `pProcess`\
-[in] [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) objekt, který představuje proces, ve kterém došlo k události.
+[v] [Objekt IDebugProcess2,](../../../extensibility/debugger/reference/idebugprocess2.md) který představuje proces, ve kterém došlo k události.
 
 `pProgram`\
-[in] [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekt, který reprezentuje program, ve kterém došlo k události.
+[v] [Objekt IDebugProgram2,](../../../extensibility/debugger/reference/idebugprogram2.md) který představuje program, ve kterém došlo k události.
 
 `pEvent`\
-[in] [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) objekt, který identifikuje událost. Možné události jsou následující:
+[v] [Objekt IDebugEvent2,](../../../extensibility/debugger/reference/idebugevent2.md) který identifikuje událost. Možné události jsou následující:
 
 - [IDebugProcessCreateEvent2](../../../extensibility/debugger/reference/idebugprocesscreateevent2.md)
 
@@ -74,12 +74,12 @@ int Event(
 - [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)
 
 `riidEvent`\
-[in] Identifikátor GUID události. Protože události je přetypován na [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) před voláním této metody, tento identifikátor je snazší zjistit, která událost je odesíláno.
+[v] Identifikátor GUID události. Vzhledem k tomu, že událost je přetypována na [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) před voláním této metody, tento identifikátor usnadňuje určení, která událost je odesílána.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md)
 - [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

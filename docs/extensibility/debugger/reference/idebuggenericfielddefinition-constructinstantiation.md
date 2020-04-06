@@ -1,28 +1,28 @@
 ---
-title: IDebugGenericFieldDefinition::ConstructInstantiation | Dokumentace Microsoftu
+title: IDebugGenericFieldDefinition::ConstructInstantiation | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - ConstructInstantiation
 - IDebugGenericFieldDefinition::ConstructInstantiation
 ms.assetid: ef8ae261-a98b-4dc2-93b3-7c5191818ba2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 89f7ecfc79cc2a4279a8ca0fccfc527ef63e603b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 352018e50b955ed414af974bc21b62775fd55f53
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313216"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728262"
 ---
 # <a name="idebuggenericfielddefinitionconstructinstantiation"></a>IDebugGenericFieldDefinition::ConstructInstantiation
-Vytvoří instanci pole zadané pole argumentů typu.
+Vytvoří instanci pole s polem argumentů typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,19 +44,19 @@ int ConstructInstantiation(
 
 ## <a name="parameters"></a>Parametry
 `cArgs`\
-[in] Počet argumentů `ppArgs` pole.
+[v] Počet argumentů v `ppArgs` poli.
 
 `ppArgs`\
-[in] Pole, které obsahuje argumenty typu. Argumenty typu musí být uzavřený typy (obecné nebo zcela vytvořenou instanci obecné typy).
+[v] Pole, které obsahuje argumenty typu. Argumenty typu musí být uzavřené typy (neobecné nebo plně instanciované obecné typy).
 
 `ppConstructedField`\
-[out] Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) rozhraní, které představuje nové pole.
+[out] Vrátí rozhraní [IDebugField,](../../../extensibility/debugger/reference/idebugfield.md) které představuje nové pole.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Omezení nekontrolují.
+ Omezení nejsou kontrolovány.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

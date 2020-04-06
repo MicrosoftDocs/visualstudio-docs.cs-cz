@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::Attach_V7 | Dokumentace Microsoftu
+title: IDebugProgramNode2::Attach_V7 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramNode2::Attach_V7
 - IDebugProgramNode2::Attach
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a90b162476872700ee0ec69a3bb9e6e575e7862a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bdee5b224ae38c3474009aeaf26e783ebc5dd139
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351184"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722137"
 ---
-# <a name="idebugprogramnode2attachv7"></a>IDebugProgramNode2::Attach_V7
+# <a name="idebugprogramnode2attach_v7"></a>IDebugProgramNode2::Attach_V7
 
 > [!Note]
-> ZASTARALÉ. NEPOUŽÍVEJTE.
+> Zastaralé. NEPOUŽÍVEJTE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,36 +48,36 @@ int Attach_V7 (
 ## <a name="parameters"></a>Parametry
 
 `pMDMProgram`\
-[in] [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) rozhraní, které představuje připojení k programu.
+[v] [Rozhraní IDebugProgram2,](../../../extensibility/debugger/reference/idebugprogram2.md) které představuje program připojit.
 
 `pCallback`\
-[in] [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) rozhraní použité k odesílání událostí ladění na SDM.
+[v] [Rozhraní IDebugCallBackback2,](../../../extensibility/debugger/reference/idebugeventcallback2.md) které má být použito k odeslání ladicích událostí do modulu SDM.
 
 `dwReason`\
-[in] Hodnota z [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) výčet, který je obsažený důvod připojení.
+[v] Hodnota z [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) výčtu, který určuje důvod pro připojení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Implementace by měla vždy vrátit `E_NOTIMPL`.
+Implementace by měla `E_NOTIMPL`vždy vrátit .
 
 ## <a name="remarks"></a>Poznámky
 
 > [!WARNING]
-> Od verze Visual Studio 2005, tato metoda se už nepoužívá a by měl vždy vrátit `E_NOTIMPL`. Zobrazit [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md) rozhraní alternativní způsob, pokud uzel program potřebuje k označení, nemůže být připojen k nebo pokud uzel programu je jednoduše nastavení program `GUID`. V opačném případě implementovat [připojit](../../../extensibility/debugger/reference/idebugengine2-attach.md) metody.
+> Od sady Visual Studio 2005 se tato metoda `E_NOTIMPL`již nepoužívá a měla by vždy vrátit . Alternativní přístup naleznete v rozhraní [IDebugProgramNodeAttach2,](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md) pokud uzel programu potřebuje označit, že jej nelze připojit nebo `GUID`pokud uzel programu jednoduše nastavuje program . V opačném případě implementujte Metodu [Attach.](../../../extensibility/debugger/reference/idebugengine2-attach.md)
 
-## <a name="prior-to-visual-studio-2005"></a>Před Visual Studio 2005
+## <a name="prior-to-visual-studio-2005"></a>Před visual studio 2005
 
-Tato metoda musí být implementována pouze v případě, že je DE běží v adresním prostoru programu, který se právě ladí. Jinak tato metoda by měla vrátit `S_FALSE`.
+Tuto metodu je třeba implementovat pouze v případě, že DE běží v adresním prostoru programu, který je laděn. V opačném případě `S_FALSE`by tato metoda měla vrátit .
 
-Když tato metoda je volána, musíte odeslat DE [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md) události objektu, pokud nebyl odeslán již pro tuto instanci [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) rozhraní, stejně jako [ IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) a [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md) objekty událostí. [IDebugEntryPointEvent2](../../../extensibility/debugger/reference/idebugentrypointevent2.md) události objektu je potom odeslán, pokud `dwReason` parametr `ATTACH_REASON_LAUNCH`.
+Při volání této metody musí DE odeslat objekt události [IDebugEngineCreateEvent2,](../../../extensibility/debugger/reference/idebugenginecreateevent2.md) pokud ještě nebyl odeslán pro tuto instanci rozhraní [IDebugEngine2,](../../../extensibility/debugger/reference/idebugengine2.md) stejně jako objekty událostí [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) a [IDebugLoadCompleteEvent2.](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md) Objekt události [IDebugEntryPointEvent2](../../../extensibility/debugger/reference/idebugentrypointevent2.md) je pak `dwReason` odeslán, pokud je `ATTACH_REASON_LAUNCH`parametr .
 
-DE musí volat [GetProgramId](../../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) metodu [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekt Poskytnutý [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) události objektu a uložit identifikátor GUID tohoto programu v instanci data `IDebugProgram2` implementované DE objektu.
+De musí volat metodu [GetProgramId](../../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) na objektu [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) dodávaném objektem události [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) a musí `IDebugProgram2` ukládat identifikátor GUID tohoto programu v datech instance pro objekt implementovaný de.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)
 - [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md)
-- [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)
+- [Připojit](../../../extensibility/debugger/reference/idebugengine2-attach.md)
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)
 - [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md)

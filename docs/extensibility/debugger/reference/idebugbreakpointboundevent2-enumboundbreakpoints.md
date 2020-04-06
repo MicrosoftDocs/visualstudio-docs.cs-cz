@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointBoundEvent2::EnumBoundBreakpoints | Dokumentace Microsoftu
+title: IDebugBreakpointBoundEvent2::EnumBoundBreakpoints | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakpointBoundEvent2::EnumBoundBreakpoints
 ms.assetid: 1f588feb-522e-488d-be92-7bc19b9e3688
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2584e49209dd95c3d43673eadf72e138ac828f57
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2f208c52bd45953aaad9efab9b6b65b15b3b759c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314391"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735355"
 ---
 # <a name="idebugbreakpointboundevent2enumboundbreakpoints"></a>IDebugBreakpointBoundEvent2::EnumBoundBreakpoints
-Vytvoří čítač zarážek, které byly vázané na této události.
+Vytvoří čítač zarážky, které byly vázány na tuto událost.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,16 +41,16 @@ int EnumBoundBreakpoints( 
 
 ## <a name="parameters"></a>Parametry
 `ppEnum`\
-[out] Vrátí [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) vázaný objekt, který uvádí všechny zarážky z této události.
+[out] Vrátí objekt [IEnumDebugBoundBreakpoints2,](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) který vyjmenovává všechny zarážky vázané z této události.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádná vázaná zarážka; v opačném případě vrátí kód chyby.
+Pokud je `S_OK`úspěšná, vrátí . Vrátí, `S_FALSE` pokud neexistují žádné vázané zarážky; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Seznam vazby zarážky je pro tyto mez s touto událostí a nemusí být úplný seznam zarážky z čekající zarážka vázána. Chcete-li získat seznam všechny zarážky, které jsou vázány na čekající zarážkou, zavolejte [GetPendingBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-getpendingbreakpoint.md) metodu k získání přidruženého [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) objekt a následně zavolat [ EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) metodu k získání [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) objekt, který obsahuje všechny vazby zarážky pro čekající zarážka.
+Seznam vázaných zarážek je pro ty, které jsou vázány na tuto událost a nemusí být celý seznam zarážek vázaných z čekající zarážky. Chcete-li získat seznam všech zarážek vázaných na čekající zarážku, zavolejte metodu [GetPendingBreakpoint,](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-getpendingbreakpoint.md) abyste získali přidružený objekt [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) a pak zavolejte metodu [EnumBoundBreakpoints,](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) abyste získali objekt [IEnumDebugBoundBreakpoints2,](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) který obsahuje všechny vázané zarážky pro čekající zarážku.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak pro tuto metodu implementovat **CBreakpointSetDebugEventBase** objekt, který zveřejňuje [IDebugBreakpointBoundEvent2](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) rozhraní.
+Následující příklad ukazuje, jak implementovat tuto metodu pro **cBreakpointSetDebugEventBase** objekt, který zpřístupňuje rozhraní [IDebugBreakpointBoundEvent2.](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md)
 
 ```cpp
 STDMETHODIMP CBreakpointSetDebugEventBase::EnumBoundBreakpoints(
@@ -77,7 +77,7 @@ STDMETHODIMP CBreakpointSetDebugEventBase::EnumBoundBreakpoints(
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugBreakpointBoundEvent2](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md)
 - [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md)
 - [GetPendingBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-getpendingbreakpoint.md)

@@ -1,5 +1,5 @@
 ---
-title: ADDRESS_KIND | Dokumentace Microsoftu
+title: ADDRESS_KIND | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - ADDRESS_KIND enumeration
 ms.assetid: 3a12fbec-7088-4cf9-8f6f-ad8ddec6009a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f80eb44c4f24340d26ab0b7aa1b5290760da6c77
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1298df79bbe34b240d6e7b186f42e20b3d1a89de
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66327342"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738159"
 ---
-# <a name="addresskind"></a>ADDRESS_KIND
-Určuje typy adres.
+# <a name="address_kind"></a>ADDRESS_KIND
+Určuje druhy adres.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,36 +56,36 @@ public enum enum_ADDRESS_KIND {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `ADDRESS_KIND_NATIVE`\
-Nativní adresu reprezentována [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md) struktury.
+Nativní adresa reprezentovaná [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md) struktury.
 
 `ADDRESS_KIND_UNMANAGED_THIS_RELATIVE`\
-Nespravované adresu vzhledem k `this` (`Me` v jazyce Visual Basic) ukazatele a reprezentována [UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) struktury.
+Nespravovaná adresa `this` `Me` vzhledem k ukazateli ( v jazyce Visual Basic) a reprezentovaná [UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) struktury.
 
 `ADDRESS_KIND_UNMANAGED_PHYSICAL`\
-Nespravované fyzické adrese reprezentované výrazem [UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) struktury.
+Nespravovaná fyzická adresa reprezentovaná [strukturou UNMANAGED_ADDRESS_PHYSICAL.](../../../extensibility/debugger/reference/unmanaged-address-physical.md)
 
 `ADDRESS_KIND_METHOD`\
-Metoda třídy, reprezentovaný [METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) struktury.
+Metoda třídy, reprezentovaná [METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) struktury.
 
 `ADDRESS_KIND_FIELD`\
-O pole třídy reprezentována [METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) struktury.
+Pole třídy reprezentované [METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) strukturou.
 
 `ADDRESS_KIND_LOCAL`\
-Adresa se pro místní proměnné a je reprezentována [METADATA_ADDRESS_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md) struktury.
+Adresa je pro místní proměnnou a je reprezentována [strukturou METADATA_ADDRESS_LOCAL.](../../../extensibility/debugger/reference/metadata-address-local.md)
 
 `ADDRESS_KIND_PARAM`\
-Parametr metody nebo funkce, která je reprezentována [METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md) struktury.
+Parametr metody nebo funkce reprezentovaný [METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md) struktury.
 
 `ADDRESS_KIND_ARRAYELEM`\
-K elementu pole reprezentována [METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) struktury.
+Prvek pole, reprezentovaný [METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) struktury.
 
 `ADDRESS_KIND_RETVAL`\
-Návratovou hodnotu, reprezentovaný [METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md) struktury.
+Vrácená hodnota reprezentovaná [METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md) struktury.
 
 ## <a name="remarks"></a>Poznámky
-[GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) vrátí metoda [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) struktura, která obsahuje možné struktur, sjednocení [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) struktury. `dwKind` Pole `DEBUG_ADDRESS_UNION` struktury blokování `ADDRESS_KIND` hodnotu a popisuje, jak interpretovat pole typu union.
+[GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) Metoda vrátí [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) struktury, která obsahuje sjednocení možných struktur, [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) struktury. Pole `dwKind` `DEBUG_ADDRESS_UNION` struktury obsahuje hodnotu `ADDRESS_KIND` a popisuje, jak interpretovat pole sjednocení.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: sh.h
@@ -94,7 +94,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)
 - [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetStringFromValue | Dokumentace Microsoftu
+title: IDebugEnumField::GetStringFromValue | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEnumField::GetStringFromValue method
 ms.assetid: 5f95fd0c-fdce-497f-9f54-2ad8749494e9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cd7466e5390cff747532dca0343680cf359db46a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5de59c573f7e233ea2aacb0dfa38826051c59373
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345090"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730285"
 ---
 # <a name="idebugenumfieldgetstringfromvalue"></a>IDebugEnumField::GetStringFromValue
-Tato metoda získává název zadaný hodnotou konstanty výčtu.
+Tato metoda získá název konstanty výčtu dané jeho hodnotu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,16 +43,16 @@ int GetStringFromValue(
 
 ## <a name="parameters"></a>Parametry
 `value`\
-[in] Hodnota, pro které chcete získat název výčtu konstant.
+[v] Hodnota, pro kterou chcete získat název konstanty výčtu.
 
 `pbstrValue`\
 [out] Vrátí název konstanty výčtu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` Pokud hodnota nemá žádný přidružený název nebo vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném `S_FALSE` případě vrátí, pokud hodnota nemá žádný přidružený název nebo vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pokud existuje více než jeden název spojený se stejnou hodnotou, bude vrácena křestní jméno definované ve výčtu.
+ Pokud existuje více než jeden název přidružený ke stejné hodnotě, bude vrácen první název definovaný ve výčtu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::EnumAllLocals | Dokumentace Microsoftu
+title: IDebugMethodField::EnumAllLocals | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugMethodField::EnumAllLocals method
 ms.assetid: 0bc7cc13-2628-4bd8-8c06-4d2aa6755ea8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bd0bc879cccf2bc806d73bfac47bc4795749e0cf
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 50da5af616c56276a0299a0d08e6eeb0b88181cc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346950"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727340"
 ---
 # <a name="idebugmethodfieldenumalllocals"></a>IDebugMethodField::EnumAllLocals
-Vytvoří čítač pro všechny místní proměnné metody, včetně těch kompilátorem generované interně.
+Vytvoří čítač výčtu pro všechny místní proměnné metody, včetně těch, které jsou generovány interně kompilátorem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,20 +43,20 @@ int EnumAllLocals(
 
 ## <a name="parameters"></a>Parametry
 `pAddress`\
-[in] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) objekt představující adresu ladění v rámci metody, přejdete na konkrétním oboru nebo kontextu.
+[v] Objekt [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) představující ladicí adresu v rámci metody, odkazující na určitý obor nebo kontext.
 
 `ppLocals`\
-[out] Vrátí [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objekt představující seznam všech místních hodnot v zadaném oboru; v opačném případě vrátí hodnotu null označující žádné místní hodnoty.
+[out] Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam všech místních obyvatel v zadaném oboru. v opačném případě vrátí hodnotu null označující žádné místní.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK nebo vrátí S_FALSE v případě, že neexistují žádné místní hodnoty. V opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK nebo vrátí S_FALSE pokud neexistují žádné místní. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Jsou uvedené pouze proměnné definované v rámci bloku, který obsahuje adresu daného ladění. Tato metoda zahrnuje všechny místní hodnoty generovaný kompilátorem. Pokud jsou všechny, které je potřeba lokální explicitně definovaný ve zdroji, volání [EnumLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) metody.
+ Jsou uvedeny pouze proměnné definované v rámci bloku, který obsahuje danou adresu ladění. Tato metoda zahrnuje všechny místní hodnoty generované kompilátorem. Pokud vše, co je potřeba, jsou locals explicitně definované ve zdroji, volání [EnumLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) metoda.
 
- Metoda může obsahovat více bloků nebo kontextu oboru.
+ Metoda může obsahovat více kontextů oboru nebo bloků.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)
 - [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

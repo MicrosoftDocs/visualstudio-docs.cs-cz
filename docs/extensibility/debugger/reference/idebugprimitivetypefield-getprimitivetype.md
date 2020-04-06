@@ -1,28 +1,28 @@
 ---
-title: IDebugPrimitiveTypeField::GetPrimitiveType | Dokumentace Microsoftu
+title: IDebugPrimitiveTypePole::GetPrimitiveType | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - GetPrimitiveType
 - IDebugPrimitiveTypeField::GetPrimitiveType
 ms.assetid: a186c922-bbfe-478c-a744-b21eb4672d8f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0eed7b3243b56e0b01240ed5a0f8cd4e823354dc
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a66c7c2e312795fa4303c8702e70cd509536de98
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353267"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80724277"
 ---
 # <a name="idebugprimitivetypefieldgetprimitivetype"></a>IDebugPrimitiveTypeField::GetPrimitiveType
-Získá primitivní typ, který je spojen s tímto polem.
+Načte primitivní typ, který je přidružen k tomuto poli.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,10 +40,10 @@ int GetPrimitiveType (
 
 ## <a name="parameters"></a>Parametry
 `pdwType`\
-[out] Hodnota z [corelementtype – výčet](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) , která představuje primitivního typu.
+[out] Hodnota z [Výčtu CorElementType,](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) která představuje primitivní typ.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE`.
+ V případě `S_OK`úspěchu vrátí ; v opačném `S_FALSE`případě vrátí .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugPrimitiveTypeField](../../../extensibility/debugger/reference/idebugprimitivetypefield.md)

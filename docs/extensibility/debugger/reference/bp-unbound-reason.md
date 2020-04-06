@@ -1,5 +1,5 @@
 ---
-title: BP_UNBOUND_REASON | Microsoft Docs
+title: BP_UNBOUND_REASON | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_UNBOUND_REASON enumeration
 ms.assetid: 939b6f9c-113b-471d-9f30-b03871af6285
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9de6812f3a61feca8ca8e7153fb281369c3312bd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b0ee695e1108bf9f1c6069084a0826ee23bf37d4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350556"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737782"
 ---
-# <a name="bpunboundreason"></a>BP_UNBOUND_REASON
-Poskytuje z důvodů, proč nevázaná zarážku.
+# <a name="bp_unbound_reason"></a>BP_UNBOUND_REASON
+Poskytuje důvod, proč byla zarážka nevázaná.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,21 +46,21 @@ public enum enum_BP_UNBOUND_REASON {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `BPUR_UNKNOWN`\
-Důvodem neznámý.
+Důvod není znám.
 
 `BPUR_CODE_UNLOADED`\
 Kód, který obsahuje zarážku byl uvolněn.
 
 `BPUR_BREAKPOINT_REBIND`\
-Zarážku bylo znovu připojeno, do jiného umístění. To může dojít po úpravě a pokračovat v operacích přesun zarážku nebo zarážku je vázán na soubor s cestou, která již není platný.
+Zarážka byla odskočit do jiného umístění. K tomu může dojít po úpravách a pokračování operací, když se přesune zarážka nebo když je zarážka vázána na soubor s cestou, která již není platná.
 
 `BPUR_ BREAKPOINT_ERROR`\
-Zarážka je určena jako chybu po je vázán. K tomu dochází na spravovaných zarážky, jejíž podmínky už nejsou platné.
+Zarážka je určena být omylem po je vázán. K tomu dochází u spravovaných zarážek, jejichž podmínky již nejsou platné.
 
 ## <a name="remarks"></a>Poznámky
-Vrácené [getreason –](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) metody.
+Vráceno [Metodou GetReason.](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -69,6 +69,6 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)

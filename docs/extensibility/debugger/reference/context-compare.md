@@ -1,5 +1,5 @@
 ---
-title: CONTEXT_COMPARE | Dokumentace Microsoftu
+title: CONTEXT_COMPARE | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - CONTEXT_COMPARE enumeration
 ms.assetid: 701ed61c-a320-4c20-a335-0b840024abc0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 28e81e8247e0ab7a7b2e972209805c8bcff053a7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1c88b50644d1adda2dd0eaa3b74a828f9739d70b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346403"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737605"
 ---
-# <a name="contextcompare"></a>CONTEXT_COMPARE
+# <a name="context_compare"></a>CONTEXT_COMPARE
 Určuje kritéria pro porovnání dvou kontextů paměti.
 
 ## <a name="syntax"></a>Syntaxe
@@ -56,38 +56,38 @@ public enum enum_CONTEXT_COMPARE {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `CONTEXT_EQUAL`\
-Vyhledá první kontext paměti v seznamu, který je roven cílový kontext paměti.
+Najděte první kontext paměti v seznamu, který se rovná kontextu cílové paměti.
 
 `CONTEXT_LESS_THAN`\
-Vyhledá první kontext paměti v seznamu, která je menší než cílový kontext paměti.
+Najděte první kontext paměti v seznamu, který je menší než kontext cílové paměti.
 
 `CONTEXT_GREATER_THAN`\
-Vyhledá první kontext paměti v seznamu, která je větší než cílový kontext paměti.
+Najděte první kontext paměti v seznamu, který je větší než kontext cílové paměti.
 
 `CONTEXT_LESS_THAN_OR_EQUAL`\
-Vyhledá první kontext paměti v seznamu, která je menší než nebo rovna hodnotě cílový kontext paměti.
+Najděte první kontext paměti v seznamu, který je menší nebo roven kontextu cílové paměti.
 
 `CONTEXT_GREATER_THAN_OR_EQUAL`\
-Najdete první paměťové oblasti v seznamu, který je větší než nebo rovna hodnotě cílový kontext paměti.
+Najděte první kontext paměti v seznamu, který je větší nebo roven kontextu cílové paměti.
 
 `CONTEXT_SAME_SCOPE`\
-Vyhledá první kontext paměti v seznamu, který je ve stejném oboru jako cílový kontext paměti.
+Najděte první kontext paměti v seznamu, který je ve stejném oboru jako kontext cílové paměti.
 
 `CONTEXT_SAME_FUNCTION`\
-Najdete první paměťové oblasti v seznamu, který je ve stejné funkci jako cílový obor paměti.
+Najděte první kontext paměti v seznamu, který je ve stejné funkci jako cílový rozsah paměti.
 
 `CONTEXT_SAME_MODULE`\
-Vyhledá první kontext paměti v seznamu, který je ve stejném modulu jako cílový kontext paměti.
+Najděte první kontext paměti v seznamu, který je ve stejném modulu jako kontext cílové paměti.
 
 `CONTEXT_SAME_PROCESS`\
-Vyhledá první kontext paměti v seznamu, který je ve stejném procesu jako cílový kontext paměti.
+Najděte první kontext paměti v seznamu, který je ve stejném procesu jako kontext cílové paměti.
 
 ## <a name="remarks"></a>Poznámky
-Předán jako argument [porovnání](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md) metody.
+Předánjako argument [compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md) metody.
 
-Tyto hodnoty se používají k vyhledání prvního kontextu paměti v seznamu, který splňuje zadané porovnávací kritéria. Kontext paměti je uveden seznam kontexty paměti se porovnat proti prostřednictvím `IDebugMemoryContext2::Compare` metody. První kontext paměti v seznamu, pro který je operátor porovnání `true` je poté vrácen.
+Tyto hodnoty se používají k nalezení prvního kontextu paměti v seznamu, který splňuje zadaná kritéria porovnání. Kontext paměti je uveden seznam kontextů paměti porovnat `IDebugMemoryContext2::Compare` sám proti prostřednictvím metody. První kontext paměti v seznamu, pro `true` který je potom vrácena operátor porovnání.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -96,6 +96,6 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
-- [Compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)
+- [Porovnání](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)

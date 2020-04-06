@@ -1,25 +1,25 @@
 ---
-title: IDebugAlias2::GetAppDomainId | Dokumentace Microsoftu
+title: IDebugAlias2::GetAppDomainId | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - GetAppDomainId
 - IDebugAlias2::GetAppDomainId
 ms.assetid: 23581aaa-5a53-4859-b264-eca49fc44bcd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b40d52c5eedf0defb845f1944acd166d48dca1ee
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: aca8f2311b58fc7e73f9eb4f4c14f993c88b9a62
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338164"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736413"
 ---
 # <a name="idebugalias2getappdomainid"></a>IDebugAlias2::GetAppDomainId
 Načte identifikátor pro doménu aplikace.
@@ -43,10 +43,10 @@ int GetAppDomainId (
 [out] Vrátí identifikátor domény aplikace.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pokaždé, když se aplikace restartuje změny identifikátor domény aplikace a novou doménu aplikace se vytvoří.
+ Identifikátor domény aplikace se změní při každém restartování aplikace a vytvoření nové domény aplikace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugAlias2](../../../extensibility/debugger/reference/idebugalias2.md)
