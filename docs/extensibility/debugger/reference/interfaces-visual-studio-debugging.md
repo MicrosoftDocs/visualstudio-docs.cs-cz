@@ -1,42 +1,42 @@
 ---
-title: Rozhraní (ladění sady Visual Studio) | Dokumentace Microsoftu
+title: Rozhraní (ladění sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], interfaces
 ms.assetid: 79875cbb-f946-49d4-94eb-941d0e1a40b2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e0359ffc4ce634a6bf22759265c92ea7c299cc30
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d31eb6900841dee9d2675e87bac573b432ff2acb
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350233"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80715072"
 ---
 # <a name="interfaces-visual-studio-debugging"></a>Rozhraní (Ladění sady Visual Studio)
-Metody abecedním pořadí v rámci každé rozhraní v tabulce obsahu a na stránce rozhraní v tabulce Vtable pořadí.
+Metody jsou uvedeny abecedně pod každým rozhraním v obsahu a na stránce rozhraní v pořadí Vtable.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)
 
- Popisuje rozhraní používaných pro ladicí stroj.
+ Popisuje rozhraní používaná v ladicím modulu.
 
 - [Rozhraní pro vyhodnocení výrazu](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
 
- Popisuje rozhraní, která se vyhodnotí výrazy v zásobníku volání během režimu pozastavení.
+ Popisuje rozhraní, které vyhodnocují výrazy v zásobníku volání během režimu přerušení.
 
 - [Rozhraní poskytovatele symbolů ](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
 
- Popisuje rozhraní, která implementuje poskytovatel symbolů pro přidružení typů na identifikátory.
+ Popisuje rozhraní, která zprostředkovatel symbolimplementuje přidružit typy identifikátory.
 
 ## <a name="related-sections"></a>Související oddíly
-- [Referenční dokumentace ke knihovně API](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)
+- [Referenční informace k rozhraním API](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)
 
- Obsahuje dokumentaci pro rozhraní, výčty a struktury [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] ladění sady SDK.
+ Obsahuje dokumentaci pro rozhraní, čítače výčtu [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] a struktury ladění sdk.
 
-## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace ke knihovně API](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)
+## <a name="see-also"></a>Viz také
+- [Referenční informace k rozhraním API](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

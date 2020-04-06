@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugCustomAttributes::Clone | Dokumentace Microsoftu
+title: IEnumDebugCustomAttributes::Klonovat | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugCustomAttributes::Clone
 ms.assetid: e6825000-e195-42b4-b296-bfe1e533d79b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b9d23cffa6b0d6cd01005a5e8aac39515ab86d26
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b3c6cd55293bf34b0c2780dd76eaf8f4ee81bb69
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324383"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80717257"
 ---
 # <a name="ienumdebugcustomattributesclone"></a>IEnumDebugCustomAttributes::Clone
-Vytvoří čítač, který obsahuje stejného stavu jako aktuální enumerátor výčtu.
+Vytvoří čítač výčtu, který obsahuje stejný stav výčtu jako aktuální čítač výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int Clone(
 
 ## <a name="parameters"></a>Parametry
 `ppEnum`\
-[out] Vrátí kopii objektu tento výčet jako samostatný objekt.
+[out] Vrátí kopii tohoto výčtu jako samostatný objekt.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Kopírování výčet má stejného stavu jako původní v době, kdy tato metoda je volána. Ale tuto kopii a původní stavy jsou oddělené a je možné změnit individuálně.
+ Kopie výčtu má stejný stav jako originál v době, kdy je tato metoda volána. Stavy kopie a originálu jsou však samostatné a lze je změnit jednotlivě.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

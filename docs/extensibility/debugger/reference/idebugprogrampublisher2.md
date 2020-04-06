@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2 | Dokumentace Microsoftu
+title: IDebugProgramPublisher2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramPublisher2 interface
 ms.assetid: b1d17f63-7146-4076-a588-034cfc6858b9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f94e7ea830a49db5b95bae3d0d6c50f73e6d3d64
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b17f5bab02e49951eb1647af95641af807c44863
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66343137"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721522"
 ---
 # <a name="idebugprogrampublisher2"></a>IDebugProgramPublisher2
-Toto rozhraní podporuje ladicí stroj (DE) nebo vlastní port dodavatelů k registraci programy pro ladění.
+Toto rozhraní umožňuje ladicímu modulu (DE) nebo dodavatelům vlastních portů registrovat programy pro ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,24 +29,24 @@ IDebugProgramPublisher2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
-Visual Studio implementuje toto rozhraní zaregistrovat programy, který se právě ladí, aby bylo možné je zpřístupněte pro ladění napříč více procesy.
+Visual Studio implementuje toto rozhraní zaregistrovat programy, které jsou laděny tak, aby byly viditelné pro ladění ve více procesech.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Volání modelu COM `CoCreateInstance` s funkcí `CLSID_ProgramPublisher` získat toto rozhraní (podívejte se na příklad). Zavedenými nebo dodavatele port. Tento vlastní port používá toto rozhraní zaregistrovat uzly programů, které představují programy, které jsou právě laděny.
+Volání `CoCreateInstance` funkce COM `CLSID_ProgramPublisher` s získat toto rozhraní (viz příklad). De nebo dodavatel vlastního portu používá toto rozhraní k registraci programových uzlů, které představují programy, které jsou laděny.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
-Toto rozhraní implementuje následujících metod:
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+Toto rozhraní implementuje následující metody:
 
 |Metoda|Popis|
 |------------|-----------------|
-|[PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)|Zpřístupní uzlu program DEs a relace ladění správci.|
-|[UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)|Odebere program uzlu tak, aby již není k dispozici.|
-|[PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)|Zpřístupní program DEs a SDM.|
-|[UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)|Odebere program, takže už nejsou k dispozici.|
-|[SetDebuggerPresent](../../../extensibility/debugger/reference/idebugprogrampublisher2-setdebuggerpresent.md)|Nastaví příznak označující, zda ladicí program je k dispozici.|
+|[PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)|Zpřístupní uzel programu pro des a správce ladění relace (SDM).|
+|[UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)|Odebere uzel programu tak, aby již není k dispozici.|
+|[PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)|Zpřístupní program pro des a SDM.|
+|[UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)|Odebere program, takže již není k dispozici.|
+|[SetDebuggerPresent](../../../extensibility/debugger/reference/idebugprogrampublisher2-setdebuggerpresent.md)|Nastaví příznak označující, že ladicí program je k dispozici.|
 
 ## <a name="remarks"></a>Poznámky
-Toto rozhraní umožňuje programy a uzly programů k dispozici (tedy "publikují") pro algoritmus DEs a správce ladění relace (SDM). Chcete-li získat přístup k publikované programy a uzly programů, použijte [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) rozhraní. Toto je jediný způsob, jakým Visual Studio dokáže rozpoznat, že je program laděn.
+Toto rozhraní zpřístupňuje programy a uzly programů (to znamená "publikuje" pro použití des a správce ladění relace (SDM). Chcete-li získat přístup k publikovaným programům a uzlům programů, použijte rozhraní [IDebugProgramProvider2.](../../../extensibility/debugger/reference/idebugprogramprovider2.md) Toto je jediný způsob, jak visual studio může rozpoznat, že program je laděný.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -56,7 +56,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, jak vytvořit instanci vydavatele aplikace a registrovat uzel programu. To je převzata z kurzu [publikování uzlu Program](https://msdn.microsoft.com/library/d0100e02-4e2b-4e72-9e90-f7bc11777bae).
+Tento příklad ukazuje, jak vytvořit konkretizovat vydavatele programu a zaregistrovat uzel programu. To je převzato z [kurzu, Publikování uzel programu](https://msdn.microsoft.com/library/d0100e02-4e2b-4e72-9e90-f7bc11777bae).
 
 ```cpp
 // This is how m_srpProgramPublisher is defined in the class definition:
@@ -89,6 +89,6 @@ void CProgram::Start(IDebugEngine2 * pEngine)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)
 - [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)

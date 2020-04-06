@@ -1,5 +1,5 @@
 ---
-title: Prvky modelu projektu | Dokumentace Microsoftu
+title: Prvky modelu projektu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,43 +7,43 @@ helpviewer_keywords:
 - project models
 - projects [Visual Studio SDK], elements
 ms.assetid: a1dbe0dc-68da-45d7-8704-5b43ff7e4fc4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b37997c4245d8234d72ae14a9dda23f44fe2b26
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cf847e35878dc84bb32fe81053c01c23e565fc4c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351588"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80708528"
 ---
 # <a name="elements-of-a-project-model"></a>Prvky modelu projektu
-Rozhraní a implementace všech projektů v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sdílet základní struktura: modelu projektu pro váš typ projektu. V modelu projektu, který je sady VSPackage, kterou vyvíjíte, můžete vytvořit objekty, které splňují vaše rozhodnutí o návrhu a fungují společně s globální funkce poskytované službou integrovaného vývojového prostředí. I když můžete řídit, jak je trvalý položku projektu, například můžete neovládají oznámení, že soubor musí nastavit jako trvalý. Když uživatel umístí fokus na otevřeném projektu položku a vybere **Uložit** na **souboru** nabídce [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nabídky panelu, musí kód typu projektu zachytit příkazu v prostředí IDE, zachovat souboru, a odesílat oznámení zpět do integrovaného vývojového prostředí, že soubor je již změnit.
+Rozhraní a implementace všech projektů [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v sdílet základní strukturu: model projektu pro typ projektu. V modelu projektu, což je VSPackage vyvíjíte, můžete vytvořit objekty, které jsou v souladu s rozhodnutími o návrhu a pracovat společně s globální funkce poskytované ide. I když řídíte, jak je položka projektu trvalé, například nemáte řízení oznámení, že soubor musí být trvalé. Když uživatel umístí fokus na otevřenou položku projektu a [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vybere **uložit** do nabídky **Soubor** na panelu nabídek, musí kód typu projektu zachytit příkaz z rozhraní IDE, zachovat soubor a odeslat oznámení zpět do rozhraní IDE, že soubor již není změněn.
 
- Vaše VSPackage komunikuje s integrovaným vývojovým prostředím prostřednictvím služeb, které poskytují přístup k rozhraní IDE. Prostřednictvím určitých služeb, monitorování a trasy například příkazy a poskytují kontextové informace pro výběrech v projektu. Všechny globální funkce integrovaného vývojového prostředí potřebné pro vaše VSPackage poskytuje služby. Další informace o službách najdete v tématu [jak: Získání služby](../../extensibility/how-to-get-a-service.md).
+ Váš VSPackage spolupracuje s ide prostřednictvím služeb, které poskytují přístup k rozhraní IDE. Například prostřednictvím určitých služeb můžete sledovat a směrovat příkazy a poskytovat kontextové informace pro výběry provedené v projektu. Všechny globální funkce IDE potřebné pro váš VSPackage jsou poskytovány službami. Další informace o službách naleznete v [tématu How to: Get a service](../../extensibility/how-to-get-a-service.md).
 
- Další důležité informace o implementaci:
+ Další aspekty implementace:
 
-- Model jeden projekt může obsahovat více než jeden typ projektu.
+- Jeden model projektu může obsahovat více než jeden typ projektu.
 
-- Typy projektů a odebrání dodatečné projektu továren jsou registrovány nezávisle na sobě identifikátory GUID.
+- Typy projektů a související továrny projektu jsou registrovány nezávisle na identifikátorech GUID.
 
-- Soubor šablony nebo Průvodce inicializovat nový soubor projektu, když uživatel vytvoří nový projekt přes musí mít každý projekt [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] uživatelského rozhraní. Například [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] šablony inicializovat, co se nakonec stanou soubory .vcproj.
+- Každý projekt musí mít soubor šablony nebo průvodce pro inicializaci nového [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] souboru projektu, když uživatel vytvoří nový projekt prostřednictvím uživatelského rozhraní. Například [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] šablony inicializovat, co nakonec stane .vcproj soubory.
 
-  Následující obrázek znázorňuje primární rozhraní, služby a objekty, které tvoří implementaci obvyklou pro projekty. Můžete použít aplikaci pomocné rutiny, `HierUtil7`, chcete-li vytvořit objekty a ostatní programovací často používaný text. Další informace o `HierUtil7` pomocné rutiny aplikace, najdete v článku [HierUtil7 použití projektu třídy k implementaci typu projektu (C++)](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346).
+  Následující obrázek znázorňuje primární rozhraní, služby a objekty, které tvoří typické implementace projektu. Pomocník aplikace , `HierUtil7`můžete vytvořit základní objekty a další programovací text. Další informace o `HierUtil7` pomocníkovi aplikace naleznete v [tématu Použití tříd projektu HierUtil7 k implementaci typu projektu (C++).](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346)
 
-  ![Visual Studio projekt modelu grafika](../../extensibility/internals/media/vsprojectmodel.gif "vsProjectModel") modelu projektu
+  ![Obrázek modelu projektu visual studia](../../extensibility/internals/media/vsprojectmodel.gif "vsProjectModel") Model projektu
 
-  Další informace o rozhraní a služby uvedené v předchozím diagramu a další volitelné rozhraní není zahrnuta v diagramu najdete v tématu [základní komponenty modelu projektu](../../extensibility/internals/project-model-core-components.md).
+  Další informace o rozhraních a službách uvedených v předchozím diagramu a dalších volitelných rozhraních, která nejsou součástí diagramu, naleznete v [tématu Součásti jádra modelu aplikace Project](../../extensibility/internals/project-model-core-components.md).
 
-  Projekty mohou podporovat příkazy a proto musí implementovat <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní k účasti v příkazu směrování přes příkaz kontextu identifikátory GUID.
+  Projekty mohou podporovat příkazy <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> a proto musí implementovat rozhraní k účasti na směrování příkazů prostřednictvím identifikátorů GUID kontextu příkazu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Kontrolní seznam: Vytvoření nových typů projektů](../../extensibility/internals/checklist-creating-new-project-types.md)
-- [Použití HierUtil7 projektu třídy k implementaci typu projektu (C++)](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346)
-- [Základní komponenty modelu projektu](../../extensibility/internals/project-model-core-components.md)
-- [Vytvoření instance projektu pomocí objektů pro vytváření projektů](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)
-- [Postupy: Získání služby](../../extensibility/how-to-get-a-service.md)
+- [Použití tříd projektu HierUtil7 k implementaci typu projektu (C++)](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346)
+- [Základní součásti modelu projektu](../../extensibility/internals/project-model-core-components.md)
+- [Vytvoření instancí projektu pomocí továren projektu](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)
+- [Postup: Získání služby](../../extensibility/how-to-get-a-service.md)
 - [Vytvořit typy projektů](../../extensibility/internals/creating-project-types.md)

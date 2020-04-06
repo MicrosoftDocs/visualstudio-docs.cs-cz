@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::ResolveAssemblyRef | Dokumentace Microsoftu
+title: IPropertyProxyeeSide::ResolveAssemblyRef | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IPropertyProxyEESide::ResolveAssemblyRef
 ms.assetid: 662ca0a6-dad0-4c00-a718-bb3bbc5bd9da
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3d2fd21b39e171238319c857ad0384db1d7635d7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c54945b0c89fb9608fab6aa70dcc63a7c6ae42df
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353458"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714879"
 ---
 # <a name="ipropertyproxyeesideresolveassemblyref"></a>IPropertyProxyEESide::ResolveAssemblyRef
-Určuje umístění zadané spravované sestavení odkazu.
+Určuje umístění zadaného odkazu spravovaného sestavení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,27 +49,27 @@ int ResolveAssemblyRef(
 
 ## <a name="parameters"></a>Parametry
 `assemName`\
-[in] Název sestavení, chcete-li vyřešit.
+[v] Název sestavení, které chcete vyřešit.
 
 `assemBytes`\
-[out] Vrátí [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) objekt, který obsahuje počet bajtů sestavení přidružené k odkazu.
+[out] Vrátí objekt [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) obsahující bajty sestavení přidružené k odkazu.
 
 `assemPdb`\
-[out] Vrátí `IEEDataStorage` objekt, který obsahuje symbol ukládat data přidružená k tomuto odkazu.
+[out] Vrátí `IEEDataStorage` objekt obsahující data úložiště symbolů spojená s tímto odkazem.
 
 `assemLocation`\
-[out] Vrátí cestu umístění tohoto odkazu.
+[out] Vrátí umístění cesty tohoto odkazu.
 
 `alr`\
-[out] Vrátí hodnotu z [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) výčet označující umístění této referenční sestavení.
+[out] Vrátí hodnotu z výčtu [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) označující umístění sestavení tohoto odkazu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda není implementována obvykle ve vyhodnocovací filtr vlastních výrazů.
+ Tato metoda není obvykle implementována vlastní výraz vyhodnocení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)
 - [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)
 - [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)

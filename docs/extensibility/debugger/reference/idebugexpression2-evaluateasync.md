@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2::EvaluateAsync | Dokumentace Microsoftu
+title: IDebugExpression2::EvaluateAsync | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExpression2::EvaluateAsync
 ms.assetid: 848fe6cb-0759-42f2-890b-d2b551c527d6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dd5c0c6c056dc72f3db49a9d666d6f2ba6295791
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2cd1eba56f8e3c5a1a779acc3330790e9ba2bc96
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326019"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729761"
 ---
 # <a name="idebugexpression2evaluateasync"></a>IDebugExpression2::EvaluateAsync
-Tato metoda asynchronně vyhodnotí výraz.
+Tato metoda vyhodnocuje výraz asynchronně.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,23 +43,23 @@ int EvaluateAsync(
 
 ## <a name="parameters"></a>Parametry
 `dwFlags`\
-[in] Kombinace příznaků z [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) výčet, který řídí vyhodnocení výrazu.
+[v] Kombinace příznaků z výčtu [EVALFLAGS,](../../../extensibility/debugger/reference/evalflags.md) které řídí vyhodnocení výrazu.
 
 `pExprCallback`\
-[in] Tento parametr je vždy hodnota null.
+[v] Tento parametr je vždy nulovou hodnotou.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Typické chybový kód je:
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Typický kód chyby je:
 
 |Chyba|Popis|
 |-----------|-----------------|
-|E_EVALUATE_BUSY_WITH_EVALUATION|Jiný výraz je právě vyhodnocována a vyhodnocení souběžných výrazu se nepodporuje.|
+|E_EVALUATE_BUSY_WITH_EVALUATION|V současné době je vyhodnocován jiný výraz a současné vyhodnocení výrazu není podporováno.|
 
 ## <a name="remarks"></a>Poznámky
-Tato metoda by měla vrátit okamžitě po zahájení jeho vyhodnocení výrazu. Při úspěšném vyhodnocení výrazu, [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) se musí odeslat na [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) události zpětného volání, jak prostřednictvím [připojit ](../../../extensibility/debugger/reference/idebugprogram2-attach.md) nebo [připojit](../../../extensibility/debugger/reference/idebugengine2-attach.md).
+Tato metoda by měla vrátit ihned po spuštění vyhodnocení výrazu. Pokud je výraz úspěšně vyhodnocen, musí být [iDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) odeslán do zpětného volání události [IDebugEventCallback2,](../../../extensibility/debugger/reference/idebugeventcallback2.md) které je zasunuto prostřednictvím [Attach](../../../extensibility/debugger/reference/idebugprogram2-attach.md) nebo [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md).
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CExpression` objekt, který implementuje [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) rozhraní.
+Následující příklad ukazuje, jak implementovat `CExpression` tuto metodu pro jednoduchý objekt, který implementuje rozhraní [IDebugExpression2.](../../../extensibility/debugger/reference/idebugexpression2.md)
 
 ```cpp
 HRESULT CExpression::EvaluateAsync(EVALFLAGS dwFlags,
@@ -75,7 +75,7 @@ HRESULT CExpression::EvaluateAsync(EVALFLAGS dwFlags,
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)
 - [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)
 - [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)

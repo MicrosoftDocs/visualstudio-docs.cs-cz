@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugModules2 | Dokumentace Microsoftu
+title: IEnumDebugModules2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugModules2
 ms.assetid: 4fe28074-a960-41ad-b74d-b57f04c0c0ad
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd6d7dc2cba76443d409feef4f2fe9dd0cd04e33
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 612285aa4d5a249c0f922ccae88d98a7df83187b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339646"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80716444"
 ---
 # <a name="ienumdebugmodules2"></a>IEnumDebugModules2
-Toto rozhraní se zobrazí seznam modulů.
+Toto rozhraní obsahuje výčet seznamu modulů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,26 +29,26 @@ IEnumDebugModules2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Ladicí stroj (DE) implementuje toto rozhraní představující seznam modulů pro program.
+ Ladicí modul (DE) implementuje toto rozhraní představující seznam modulů načtených pro program.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Visual Studio volání [enummodules –](../../../extensibility/debugger/reference/idebugprogram2-enummodules.md) k získání tohoto rozhraní.
+ Visual Studio volá [EnumModules](../../../extensibility/debugger/reference/idebugprogram2-enummodules.md) získat toto rozhraní.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IEnumDebugModules2`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IEnumDebugModules2`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[Next](../../../extensibility/debugger/reference/ienumdebugmodules2-next.md)|Načte zadaný počet modulů v sekvenci výčtu.|
-|[Skip](../../../extensibility/debugger/reference/ienumdebugmodules2-skip.md)|Vynechá zadaný počet modulů v sekvenci výčtu.|
-|[Reset](../../../extensibility/debugger/reference/ienumdebugmodules2-reset.md)|Návrat na začátek sekvence výčtu.|
-|[Clone](../../../extensibility/debugger/reference/ienumdebugmodules2-clone.md)|Vytvoří čítač, který obsahuje stejného stavu jako aktuální enumerátor výčtu.|
+|[Další](../../../extensibility/debugger/reference/ienumdebugmodules2-next.md)|Načte zadaný počet modulů v pořadí výčtu.|
+|[Přeskočit](../../../extensibility/debugger/reference/ienumdebugmodules2-skip.md)|Přeskočí zadaný počet modulů v pořadí výčtu.|
+|[Resetovat](../../../extensibility/debugger/reference/ienumdebugmodules2-reset.md)|Obnoví pořadí výčtu na začátek.|
+|[Klonování](../../../extensibility/debugger/reference/ienumdebugmodules2-clone.md)|Vytvoří čítač výčtu, který obsahuje stejný stav výčtu jako aktuální čítač výčtu.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugmodules2-getcount.md)|Získá počet modulů.|
 
 ## <a name="remarks"></a>Poznámky
- Visual Studio používá toto rozhraní primárně k aktualizaci **moduly** okna.
+ Visual Studio používá toto rozhraní především k aktualizaci okna **Moduly.**
 
- Pro účely ladění v sadě Visual Studio, programu je logická posloupnost kód pokyny, které lze napříč hranicemi modulu, proto potřeba seznam modulů pro jeden [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) rozhraní. První modul v seznamu obvykle obsahuje počáteční vstupní bod pro přidružené aplikace.
+ Pro účely ladění v sadě Visual Studio je program logickou posloupností pokynů kódu, které mohou překročit hranice modulu, proto je potřeba seznam modulů pro jedno rozhraní [IDebugProgram2.](../../../extensibility/debugger/reference/idebugprogram2.md) První modul v seznamu obvykle obsahuje počáteční vstupní bod pro přidružený program.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -57,7 +57,7 @@ IEnumDebugModules2 : IUnknown
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [EnumModules](../../../extensibility/debugger/reference/idebugprogram2-enummodules.md)

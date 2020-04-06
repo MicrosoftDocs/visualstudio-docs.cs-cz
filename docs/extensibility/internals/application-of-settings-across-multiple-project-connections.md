@@ -1,38 +1,38 @@
 ---
-title: Aplikace nastavení napříč různými připojeními projektů | Dokumentace Microsoftu
+title: Aplikace nastavení napříč více připojeními k projektu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, application of settings
 ms.assetid: 2116d3d0-c46c-4d0a-b482-08a178584f46
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 480ccaac58e67a959454e9d4afa9aa57e817c693
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bcaed0f7f2380dd36bcbffd776839025fe9efa16
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315847"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710065"
 ---
-# <a name="application-of-settings-across-multiple-project-connections"></a>Aplikace nastavení napříč různými připojeními projektů
-Modul plug-in správy zdrojového kódu vytvořených pomocí verze 1.2 zdrojový ovládací prvek modulu Plug-in API můžete použít dávkové operace ke spuštění stejnou operaci správy zdrojových kódů napříč více projekty nebo více kontexty připojení. Dávky je možné vyloučit redundantní, dialogová okna uživatelským prostředím jednotlivých projektů.
+# <a name="application-of-settings-across-multiple-project-connections"></a>Použití nastavení napříč více připojeními projektu
+Modul plug-in správy zdrojového kódu vytvořený pomocí rozhraní API plug-in správy zdrojového kódu verze 1.2 může pomocí dávkové operace provést stejnou operaci správy zdrojového kódu ve více projektech nebo v kontextu připojení. Listy lze použít k odstranění redundantních dialogových oken pro jednotlivé projekty z uživatelského prostředí.
 
- Pokud uživatel vybere více položek, které patří do více než jedno připojení v modulu plug-in správy zdrojového kódu, vytvořené pomocí zdrojového ovládacího prvku modulu Plug-in API verze 1.1 (například dvě webové projekty na počítačích jinou sdílenou složku) a ověří je, uživateli se zobrazí stejné Dialogové okno opakovaně. Této situaci dojde i v případě, že uživatel klikne **použít u všech** zaškrtněte políčko v dialogovém okně, protože rozhraní IDE obnoví svůj stav pro každý kontext připojení.
+ Pokud uživatel vybere více položek, které patří k více než jednomu připojení v modulu plug-in správy zdrojového kódu vytvořenépomocí modulu plug-in modulu zdrojového kódu rozhraní API verze 1.1 (například dva webové projekty na různých počítačích pro sdílení souborů) a rezervuje je, uživatel se opakovaně zobrazí stejné dialogové okno. K tomuto scénáři dochází i v případě, že uživatel klepne na **zaškrtávací políčko Použít na vše** v dialogovém okně, protože rozhraní IDE obnoví svůj stav pro každý kontext připojení.
 
-## <a name="new-capability-flag"></a>Nový příznak funkce
- `SccBeginBatch` Funkce nastaví `SCC_CAP_BATCH` příznak označující, že dávkové operace probíhá.
+## <a name="new-capability-flag"></a>Příznak nové schopnosti
+ Funkce `SccBeginBatch` nastaví `SCC_CAP_BATCH` příznak označující, že probíhá dávková operace.
 
 ## <a name="new-functions"></a>Nové funkce
-Následující nové funkce podporují dávkové operace:
+Následující nové funkce podporují dávkovou operaci:
 
 - [SccBeginBatch](../../extensibility/sccbeginbatch-function.md)
 
 - [SccEndBatch](../../extensibility/sccendbatch-function.md)
 
-`SCCBeginBatch` Funkce spustí skupinu operací správy zdrojů. `SccEndBatch` Funkce uzavře skupině. Skupiny nemůže být vnořený.
+Funkce `SCCBeginBatch` spustí skupinu operací správy zdrojového kódu. Funkce `SccEndBatch` zavře skupinu. Skupiny nemusí být vnořené.
 
-## <a name="see-also"></a>Viz také:
-- [Co je nového v zdrojový ovládací prvek modulu Plug-in API verze 1.2](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)
+## <a name="see-also"></a>Viz také
+- [Co je nového v rozhraní Plug-in Plug-in API správy zdrojového kódu verze 1.2](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

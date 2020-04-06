@@ -1,5 +1,5 @@
 ---
-title: Rozšíření vlastností a okno Vlastnosti | Dokumentace Microsoftu
+title: Rozšíření vlastností a okna vlastností | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - SelectionContainer class
 - SelectableObjects property
 ms.assetid: 1e925025-3d21-4cdb-a917-78db7bb78fe9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50f403c6bb92dbd11b53c5814fb6c9c7f512be42
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 14cc7bba8f5255d612c0f429aab5acf36729b506
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313060"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711742"
 ---
-# <a name="extend-properties-and-the-property-window"></a>Rozšíření vlastností a okno Vlastnosti
-**Vlastnosti** okno umožňuje zobrazit a upravit vlastnosti doby návrhu a událostí vybraných objektů.
+# <a name="extend-properties-and-the-property-window"></a>Rozšířit vlastnosti a okno Vlastnosti
+Okno **Vlastnosti** slouží k zobrazení a úpravám vlastností návrhu a událostí vybraných objektů.
 
- Když vyberete objektu v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], veřejné vlastnosti tohoto objektu se zobrazí v **vlastnosti** okna. Další informace najdete v tématu [přehled okna vlastnosti](../extensibility/internals/properties-window-overview.md).
+ Když vyberete objekt [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]v aplikaci , zobrazí se veřejné vlastnosti tohoto objektu v okně **Vlastnosti.** Další informace naleznete v tématu [Přehled okna Vlastnosti](../extensibility/internals/properties-window-overview.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
-- [Vystavení vlastností v okně Vlastnosti](../extensibility/exposing-properties-to-the-properties-window.md) vysvětluje, jak může mít vlastní vlastnosti v okně Vlastnosti.
+- [Vystavit vlastnosti oknu Vlastnosti](../extensibility/exposing-properties-to-the-properties-window.md) Vysvětluje, jak můžete mít vlastní vlastnosti zobrazeny v okně Vlastnosti.
 
-- [Získání vlastností projektu](../extensibility/getting-project-properties.md) vysvětluje, jak získat vlastnosti projektu.
+- [Získat vlastnosti projektu](../extensibility/getting-project-properties.md) Vysvětluje, jak získat vlastnosti projektu.

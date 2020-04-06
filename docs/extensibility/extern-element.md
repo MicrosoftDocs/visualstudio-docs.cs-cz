@@ -1,5 +1,5 @@
 ---
-title: Extern – Element | Dokumentace Microsoftu
+title: Extern Element | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - VSCT XML schema elements, Extern
 - Extern element (VSCT XML schema)
 ms.assetid: db6c3ddd-a1ba-450a-897a-bb568a5377fc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 34e38618a153aa74bdc2449895272fc9e399c82d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2cf6f9db77abaa7034af8d074b9833a4c1560f07
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342803"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711489"
 ---
-# <a name="extern-element"></a>Extern – element
-Extern element odkazuje libovolné externích záhlaví ( *.h*) soubory sloučit s *.vsct* soubor v době kompilace. Soubory, které chcete sloučit, musí být na cesty zahrnutí zadaný pro kompilátor VSCT nebo odkazuje [zahrnutý element](../extensibility/include-element.md). Soubory mohou být buď *.vsct* soubory nebo soubory hlaviček jazyka C++.
+# <a name="extern-element"></a>Extern prvek
+Extern element odkazuje na všechny externí hlavičky (*.h*) soubory sloučit se souborem *.vsct* v době kompilace. Soubory, které mají být sloučeny, musí být na cestě Zahrnout, která je dána kompilátoru VSCT nebo na kterou odkazuje [prvek Include](../extensibility/include-element.md). Soubory mohou být jiné *soubory .vsct* nebo c++ hlavičkové soubory.
 
- Definice v souborech hlaviček musí být ve formátu "#define [Symbol] [hodnota]" hodnota může být další symbol, pokud je již definován. Podmíněné příkazy příkaz položek lze definice. Jakýkoli symbol doopravdy nepoužije se zahodí.
+ Definice v souborech hlaviček musí mít tvar "#define [Symbol] [Value]" Hodnota může být jiným symbolem, pokud je dříve definována. Definice mohou být použity v podmíněných příkazech příkazových položek. Všechny symboly, které nebyly skutečně použity, budou zahozeny.
 
- Extern – Element commandtable – Element
+ CommandTable Element Extern Element
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,28 +33,28 @@ Extern element odkazuje libovolné externích záhlaví ( *.h*) soubory sloučit
 <Extern href="stdidcmd.h" />
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|href|Povinný parametr. Cesta k souboru hlaviček:<br /><br /> href="stdidcmd.h"|
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
-|jazyk|Volitelné. Výchozí jazyk všech [ \<řetězce >](../extensibility/strings-element.md) elementy v tabulce příkazu:<br /><br /> jazyk = "en-us"|
+|Href|Povinná hodnota. Cesta k souboru záhlaví:<br /><br /> href="stdidcmd.h"|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|language|Nepovinný parametr. Výchozí jazyk všech [ \<řetězců>](../extensibility/strings-element.md) prvků v tabulce příkazů:<br /><br /> language="en-us"|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|Žádné|Žádné|
+|Žádné.|Žádné.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Commandtable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy – to znamená, položek nabídky, nabídky, panely nástrojů a pole se seznamem – poskytující VSPackage rozhraní IDE.|
+|[Element CommandTable](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy – to znamená položky nabídky, nabídky, panely nástrojů a pole se seznamem – které vspackage poskytuje ide.|
 
 ## <a name="example"></a>Příklad
 
@@ -68,7 +68,7 @@ Extern element odkazuje libovolné externích záhlaví ( *.h*) soubory sloučit
 </CommandTable>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Soubory tabulky (.vsct) příkaz pro Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-- [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+## <a name="see-also"></a>Viz také
+- [Soubory příkazů sady Visual Studio (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Jak VSPackages přidat prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

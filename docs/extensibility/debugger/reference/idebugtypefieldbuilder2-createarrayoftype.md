@@ -1,28 +1,28 @@
 ---
-title: IDebugTypeFieldBuilder2::CreateArrayOfType | Dokumentace Microsoftu
+title: IDebugTypeFieldBuilder2::CreateArrayOfType | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugTypeFieldBuilder2::CreateArrayOfType
 - CreateArrayOfType
 ms.assetid: 85166ac9-0bff-49a0-b2fd-ca7f7a8eae4b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fa151c93589ee691abd005df9e4ff6b68698b661
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3d7a229ea92b57252a9f01976e7b5c80348bd314
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319782"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718310"
 ---
 # <a name="idebugtypefieldbuilder2createarrayoftype"></a>IDebugTypeFieldBuilder2::CreateArrayOfType
-Vytvoří pole určeného typu a velikosti.
+Vytvoří pole zadaného typu a velikosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,16 +44,16 @@ int CreateArrayOfType (
 
 ## <a name="parameters"></a>Parametry
 `pTypeField`\
-[in] Typ prvků, které bude obsahovat pole.
+[v] Typ prvků, které pole bude držet.
 
 `rank`\
-[in] Počet prvků v poli.
+[v] Počet prvků v poli.
 
 `pArrayOfTypeField`\
-[out] Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objekty, které představují nové pole.
+[out] Vrátí objekty [IDebugField,](../../../extensibility/debugger/reference/idebugfield.md) které představují nové pole.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugTypeFieldBuilder2](../../../extensibility/debugger/reference/idebugtypefieldbuilder2.md)

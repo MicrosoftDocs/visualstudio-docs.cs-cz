@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugAddresses::Clone | Dokumentace Microsoftu
+title: IEnumDebugAddresses::Klonování | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugAddresses::Clone method
 ms.assetid: 71189a00-34eb-4c71-b96e-8bd6e70c6966
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e5de8bd89d928bafe86bec0a502c1a5427db2d5f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f163f2733f237b30b668c2c46473e152718dd6fc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330059"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80717711"
 ---
 # <a name="ienumdebugaddressesclone"></a>IEnumDebugAddresses::Clone
-Tato metoda vrátí kopii objektu do aktuálního výčtu jako samostatný objekt.
+Tato metoda vrátí kopii aktuálnívýčty jako samostatný objekt.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int Clone(
 
 ## <a name="parameters"></a>Parametry
 `ppEnum`\
-[out] Vrátí kopii objektu tento výčet jako samostatný objekt.
+[out] Vrátí kopii tohoto výčtu jako samostatný objekt.
 
 ## <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Kopírování výčet má stejného stavu jako původní v době, kdy tato metoda je volána. Ale tuto kopii a původní stavy jsou oddělené a je možné změnit individuálně.
+ Kopie výčtu má stejný stav jako originál v době, kdy je tato metoda volána. Stavy kopie a originálu jsou však samostatné a lze je změnit jednotlivě.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)

@@ -1,5 +1,5 @@
 ---
-title: MACHINE_INFO_FLAGS | Dokumentace Microsoftu
+title: MACHINE_INFO_FLAGS | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - MACHINE_INFO_FLAGS enumeration
 ms.assetid: 1482095d-9a2e-4ef1-9e14-362c0b85194e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 77d2c9af733f192526970d08d0ae3d24d2a5bf3f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b74955d65ff34c4787de03c3b03383fe7eb702cc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339239"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714527"
 ---
-# <a name="machineinfoflags"></a>MACHINE_INFO_FLAGS
-Použít k popisu na počítači.
+# <a name="machine_info_flags"></a>MACHINE_INFO_FLAGS
+Používá se k popisu stroje.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,12 +40,12 @@ public enum enum_MACHINE_INFO_FLAGS { 
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
  `MCIFLAG_TERMINAL_SERVICES_AVAILABLE`\
- Určuje, že Terminálové služby jsou k dispozici.
+ Označuje, že terminálové služby jsou k dispozici.
 
 ## <a name="remarks"></a>Poznámky
- Použít jako `Flags` člena [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) struktury.
+ Používá se `Flags` jako člen [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) struktury.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -54,6 +54,6 @@ public enum enum_MACHINE_INFO_FLAGS { 
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [MACHINE_INFO_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md)

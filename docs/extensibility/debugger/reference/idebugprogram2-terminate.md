@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Terminate | Dokumentace Microsoftu
+title: IDebugProgram2::Ukončit | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgram2::Terminate
 ms.assetid: 4d3127d3-b1e9-4b28-ac22-2f2eea255f86
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 16a6d60173090642bda7d8fd940ecf0699e1d7ec
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 913c90e34e308ce5bb4ceecface739afc8d03f3d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331500"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722744"
 ---
 # <a name="idebugprogram2terminate"></a>IDebugProgram2::Terminate
 Ukončí program.
@@ -38,13 +38,13 @@ int Terminate();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pokud je to možné bude program ukončen a byla uvolněna z procesu. v opačném případě ladicího stroje (DE) provede všechny potřebné vyčištění.
+ Pokud je to možné, program bude ukončen a uvolněn z procesu; v opačném případě ladicí modul (DE) provede všechny nezbytné vyčištění.
 
- Tato metoda nebo [Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md) metoda je volána metodou rozhraní IDE, obvykle v reakci na zastavení ladění všechny uživatele. Implementace této metody by v ideálním případě ukončit program v rámci procesu. Pokud to není možné, DE by měl bránit spouštění všech dalších v tomto procesu programu (a proveďte všechny potřebné vyčištění). Pokud `IDebugProcess2::Terminate` byla volána metoda integrovaným vývojovým prostředím, celý proces bude ukončen nějakou dobu po `IDebugProgram2::Terminate` metoda je volána.
+ Tato metoda nebo [Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md) metoda je volána IDE, obvykle v reakci na uživatele zastavení všech ladění. Implementace této metody by měla v ideálním případě ukončit program v rámci procesu. Pokud to není možné, DE by měl zabránit spuštění programu nic víc v tomto procesu (a provést všechny nezbytné vyčištění). Pokud `IDebugProcess2::Terminate` byla metoda volána ide, celý proces bude ukončen `IDebugProgram2::Terminate` a někdy po volání metody.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)

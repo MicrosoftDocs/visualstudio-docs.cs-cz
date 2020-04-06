@@ -1,143 +1,143 @@
 ---
-title: Struktury a sjednocení | Dokumentace Microsoftu
+title: Struktury a odbory | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - structures [Visual Studio SDK]
 ms.assetid: 9ff0a8f8-1ee6-4fdd-8b80-206436ff589b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2da39e0327f9a0be2cf0f61227de5ea51af03285
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 19d8f547d98488edffc6049be7619e5b5e921d93
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66329121"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713497"
 ---
 # <a name="structures-and-unions"></a>Struktury a sjednocení
-Níže jsou struktury a sjednocení v aplikaci Visual Studio SDK ladění.
+Následují struktury a sjednocení v sadě Visual Studio ladění SDK.
 
-- [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) Určuje ID procesu, který může být ID systému nebo identifikátor GUID.
+- [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) Určuje ID procesu, kterým může být ID systému nebo identifikátor GUID.
 
-- [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) popisuje podmínky, za kterých bude platit zarážku.
+- [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) Popisuje podmínky, za kterých bude zarážky požáru.
 
-- [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) popisuje řešení k chybě zarážku, včetně umístění, aplikace a vlákna.
+- [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) Popisuje řešení zarážky chyby, včetně umístění, programu a vlákna.
 
-- [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) Určuje typ struktury, na které se používají k popisu umístění zarážky.
+- [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) Určuje typ struktury použité k popisu umístění zarážky.
 
-- [BP_LOCATION_CODE_ADDRESS](../../../extensibility/debugger/reference/bp-location-code-address.md) definuje součásti, které popisují umístění zarážky na adrese v kódu.
+- [BP_LOCATION_CODE_ADDRESS](../../../extensibility/debugger/reference/bp-location-code-address.md) Definuje součásti, které popisují umístění zarážky na adrese v kódu.
 
-- [BP_LOCATION_CODE_CONTEXT](../../../extensibility/debugger/reference/bp-location-code-context.md) popisuje umístění zarážky, který je vázán přímo na adresu v programu, který se právě ladí.
+- [BP_LOCATION_CODE_CONTEXT](../../../extensibility/debugger/reference/bp-location-code-context.md) Popisuje umístění zarážky, která je vázána přímo na adresu v laděné programu.
 
-- [BP_LOCATION_CODE_FILE_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md) popisuje umístění zarážky na řádku ve zdrojovém souboru kódu.
+- [BP_LOCATION_CODE_FILE_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md) Popisuje umístění zarážky na řádku ve zdrojovém souboru kódu.
 
-- [BP_LOCATION_CODE_FUNC_OFFSET](../../../extensibility/debugger/reference/bp-location-code-func-offset.md) popisuje posunu umístění zarážky na funkci v kódu.
+- [BP_LOCATION_CODE_FUNC_OFFSET](../../../extensibility/debugger/reference/bp-location-code-func-offset.md) Popisuje umístění posunu zarážky na funkci v kódu.
 
-- [BP_LOCATION_CODE_STRING](../../../extensibility/debugger/reference/bp-location-code-string.md) používá k nastavení kódu zarážky založené na řetězec, který může uživatel zadat z integrovaného vývojového prostředí.
+- [BP_LOCATION_CODE_STRING](../../../extensibility/debugger/reference/bp-location-code-string.md) Používá se pro nastavení zarážek kódu na základě řetězce, který může uživatel zadat z rozhraní IDE.
 
-- [BP_LOCATION_DATA_STRING](../../../extensibility/debugger/reference/bp-location-data-string.md) používá k nastavení datové zarážky, které jsou založeny na řetězec, který může uživatel zadat z integrovaného vývojového prostředí.
+- [BP_LOCATION_DATA_STRING](../../../extensibility/debugger/reference/bp-location-data-string.md) Používá se pro nastavení zarážek dat, které jsou založeny na řetězci, který může uživatel zadat z rozhraní IDE.
 
-- [BP_LOCATION_RESOLUTION](../../../extensibility/debugger/reference/bp-location-resolution.md) popisuje řešení zarážky v konkrétním umístění.
+- [BP_LOCATION_RESOLUTION](../../../extensibility/debugger/reference/bp-location-resolution.md) Popisuje rozlišení zarážky v určitém umístění.
 
-- [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) popisuje počet a podmínky, na kterých bude vyvoláno zarážku po s dřív Bezproblémová.
+- [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) Popisuje počet a podmínky, za kterých bude aktivována zarážka po předchozí předání.
 
-- [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) obsahuje informace potřebné k implementaci zarážku.
+- [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) Obsahuje informace potřebné k implementaci zarážky.
 
-- [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) obsahuje informace potřebné k implementaci zarážky (stejné jako [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) struktura zahrnuje ale identifikátor GUID, omezení a zarážky s trasováním informace dodavatele).
+- [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) Obsahuje informace potřebné k implementaci zarážky (stejné jako [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) struktury, ale obsahuje identifikátor GUID dodavatele, omezení a informace o trasovacích bodech).
 
-- [BP_RESOLUTION_CODE](../../../extensibility/debugger/reference/bp-resolution-code.md) popisuje umístění zarážky kódu.
+- [BP_RESOLUTION_CODE](../../../extensibility/debugger/reference/bp-resolution-code.md) Popisuje umístění zarážky kódu.
 
-- [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) popisuje výsledek vazby datové zarážky.
+- [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) Popisuje výsledek vazby zarážky dat.
 
-- [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) popisuje informace o vázaná zarážka kódu zarážku nebo zarážku data.
+- [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) Popisuje vázané informace o zarážky pro zarážku kódu nebo zarážky dat.
 
-- [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) určuje strukturu řešení umístění zarážky.
+- [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) Určuje strukturu umístění rozlišení zarážky.
 
-- [BSTR_ARRAY](../../../extensibility/debugger/reference/bstr-array.md) popisuje pole řetězců.
+- [BSTR_ARRAY](../../../extensibility/debugger/reference/bstr-array.md) Popisuje pole řetězců.
 
-- [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) Určuje informace o typ pole z metadat.
+- [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) Určuje informace o typu pole převzatém z metadat.
 
-- [CODE_PATH](../../../extensibility/debugger/reference/code-path.md) popisuje volání funkce nebo metody.
+- [CODE_PATH](../../../extensibility/debugger/reference/code-path.md) Popisuje volání funkce nebo metody.
 
-- [COMPUTER_INFO](../../../extensibility/debugger/reference/computer-info.md) popisuje počítače, na kterém je spuštěný ladicí program.
+- [COMPUTER_INFO](../../../extensibility/debugger/reference/computer-info.md) Popisuje počítač, ve kterém je ladicí program spuštěn.
 
-- [CONST_GUID_ARRAY](../../../extensibility/debugger/reference/const-guid-array.md) popisuje seznamu identifikátorů GUID.
+- [CONST_GUID_ARRAY](../../../extensibility/debugger/reference/const-guid-array.md) Popisuje seznam identifikátorů GUID.
 
-- [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) popisuje místní paměti nebo kontext kódu.
+- [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) Popisuje kontext paměti nebo kontext kódu.
 
-- [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) popisuje adresu v programu, který se právě ladí.
+- [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) Popisuje adresu v laděné programu.
 
-- [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) představuje jeden z několika různých druhů adresy.
+- [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) Představuje jeden z mnoha různých druhů adres.
 
-- [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) určuje vlastní prohlížeč nebo vizualizér typů.
+- [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) Identifikuje vlastní prohlížeč nebo vizualizér typu.
 
-- [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) popisuje vlastnost, která ladění pak popisuje objekt hierarchickou povahu, který má název, typ a hodnotu.
+- [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) Popisuje ladicí vlastnost, která zase popisuje objekt hierarchické povahy, který má název, typ a hodnotu.
 
-- [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) popisuje odkaz.
+- [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) Popisuje odkaz.
 
-- [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) popisuje zpětný překlad do integrovaného vývojového prostředí pro zobrazení.
+- [DemontážData](../../../extensibility/debugger/reference/disassemblydata.md) Popisuje demontáž na ide pro zobrazení.
 
-- [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) popisuje chybu výjimky nebo za běhu vyvolané laděnému programu.
+- [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) Popisuje výjimku nebo chybu za běhu vyváděnou laděným programem.
 
-- [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) popisuje místní proměnná, parametr nebo jiné pole.
+- [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) Popisuje místní proměnnou, parametr nebo jiné pole.
 
-- [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) popisuje rámec zásobníku.
+- [INFORMACE O RÁMCI](../../../extensibility/debugger/reference/frameinfo.md) Popisuje rámec zásobníku.
 
-- [GUID_ARRAY](../../../extensibility/debugger/reference/guid-array.md) popisuje celou řadu jedinečné identifikátory pro dostupné ladicí stroj.
+- [GUID_ARRAY](../../../extensibility/debugger/reference/guid-array.md) Popisuje pole jedinečných identifikátorů pro dostupné ladicí moduly.
 
-- [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) použít k nastavení JustMyCode informace pro modul.
+- [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) Slouží k nastavení justmycode informace pro modul.
 
-- [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) popisuje konkrétní počítač.
+- [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) Popisuje konkrétní stroj.
 
-- [METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) popisuje k elementu pole v rámci pole.
+- [METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) Popisuje prvek pole v rámci pole.
 
-- [METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) popisuje adresy pole třídy nebo struktury.
+- [METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) Popisuje adresu pole třídy nebo struktury.
 
-- [METADATA_ADDRESS_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md) popisuje adresu místní proměnné v rámci oboru (obvykle funkce nebo metoda).
+- [METADATA_ADDRESS_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md) Popisuje adresu místní proměnné v rámci oboru (obvykle funkce nebo metody).
 
-- [METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) popisuje adresu metody třídy.
+- [METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) Popisuje adresu metody třídy.
 
-- [METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md) popisuje parametr metody nebo funkce.
+- [METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md) Popisuje parametr metody nebo funkce.
 
-- [METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md) popisuje návratovou hodnotu z metody nebo funkce.
+- [METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md) Popisuje vrácenou hodnotu z metody nebo funkce.
 
-- [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) popisuje typ pole z metadat.
+- [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) Popisuje typ pole převzatý z metadat.
 
-- [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) popisuje konkrétního modulu (knihovny DLL, EXE nebo sestavení).
+- [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) Popisuje konkrétní modul (DLL, EXE nebo sestavení).
 
-- [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) popisuje informace o vyhledávací cesty symbolů, které byly prohledány stavu.
+- [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) Popisuje informace o stavu prohledávaných cest symbolů.
 
-- [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md) popisuje nativní adresu.
+- [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md) Popisuje nativní adresu.
 
-- [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) popisuje typ pole z symbolů ze souboru PDB.
+- [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) Popisuje typ pole převzatý ze symbolu PDB.
 
-- [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) popisuje stav zarážky, která jsou připravená k vytvoření vazby na místa v kódu.
+- [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) Popisuje stav zarážky, která je připravena k vytvoření vazby na umístění kódu.
 
-- [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) popisuje proces.
+- [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) Popisuje proces.
 
-- [PROGRAM_NODE_ARRAY](../../../extensibility/debugger/reference/program-node-array.md) popisuje seznam [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objekty, které představují uzly programů.
+- [PROGRAM_NODE_ARRAY](../../../extensibility/debugger/reference/program-node-array.md) Popisuje seznam objektů [IDebugProgramNode2,](../../../extensibility/debugger/reference/idebugprogramnode2.md) které představují uzly programů.
 
-- [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) popisuje procesy spuštěné na počítači.
+- [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) Popisuje procesy spuštěné v počítači.
 
-- [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) popisuje umístění řádku a sloupci v zadaném textu.
+- [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) Popisuje umístění řádku a sloupce v daném textu.
 
-- [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) popisuje vlastnosti vlákno.
+- [VLASTNOSTI VLÁKEN](../../../extensibility/debugger/reference/threadproperties.md) Popisuje vlastnosti vlákna.
 
-- [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) popisuje typ pole.
+- [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) Popisuje typ pole.
 
-- [UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) popisuje fyzickou adresu.
+- [UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) Popisuje fyzickou adresu.
 
-- [UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) popisuje adresu, která je vzhledem k `this` ukazatel (`Me` v jazyce Visual Basic).
+- [UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) Popisuje adresu, která je `this` relativní`Me` k ukazateli (v jazyce Visual Basic).
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h sh.h či ee.h
+ Záhlaví: msdbg.h, sh.h nebo ee.h
 
  Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace ke knihovně API](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)
+## <a name="see-also"></a>Viz také
+- [Referenční informace k rozhraním API](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

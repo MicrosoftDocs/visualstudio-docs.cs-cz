@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::SetValueAsReference | Dokumentace Microsoftu
+title: IDebugReference2::SetValueAsReference | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugReference2::SetValueAsReference
 ms.assetid: 94a545d2-16b9-45e9-b2e7-4e49ff90aad0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 108061d4957b03d049897985da849ab86563ea47
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f4767dbe08e716d64ea03c18a1c4a6f7d6690a7b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339756"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720303"
 ---
 # <a name="idebugreference2setvalueasreference"></a>IDebugReference2::SetValueAsReference
 Nastaví hodnotu odkazu z jiného odkazu. Vyhrazeno pro budoucí použití.
@@ -47,19 +47,19 @@ int SetValueAsReference ( 
 
 ## <a name="parameters"></a>Parametry
 `rgpArgs`\
-[in] Pole [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objekty sloužící k určení, jak nastavit hodnotu odkazu.
+[v] Pole objektů [IDebugReference2,](../../../extensibility/debugger/reference/idebugreference2.md) které slouží k určení způsobu nastavení referenční hodnoty.
 
 `dwArgCount`\
-[in] Počet odkazů v poli.
+[v] Počet odkazů v poli.
 
 `pValue`\
-[in] [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objekt, ze kterého chcete nastavit hodnotu vlastnosti.
+[v] Objekt [IDebugReference2,](../../../extensibility/debugger/reference/idebugreference2.md) ze kterého chcete nastavit hodnotu vlastnosti.
 
 `dwTimeout`\
-[in] Maximální doba v milisekundách pro čekání před návratem z této metody. Použití `INFINITE` čekat po neomezenou dobu.
+[v] Maximální doba v milisekundách čekání před návratem z této metody. Slouží `INFINITE` k čekání na neurčito.
 
 ## <a name="return-value"></a>Návratová hodnota
- Vždy vrátí `E_NOTIMPL`.
+ Vždy vrátí hodnotu `E_NOTIMPL`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

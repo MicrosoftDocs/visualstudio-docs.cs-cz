@@ -1,5 +1,5 @@
 ---
-title: IDebugManagedObject::SetFromManagedObject | Dokumentace Microsoftu
+title: IDebugManagedObject::SetFromManagedObject | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugManagedObject::SetFromManagedObject method
 ms.assetid: 8700ee8d-2704-4580-bccc-046837a24edd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bf82275bf3375098cc8a8bcbeb200846252d2cec
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4056befa0b5b053d480983901b24feb6b25cf538
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349380"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727697"
 ---
 # <a name="idebugmanagedobjectsetfrommanagedobject"></a>IDebugManagedObject::SetFromManagedObject
-Nastaví hodnotu vlastnosti instance objekt třídy hodnoty z instance třídy hodnotu zadat jako parametr.
+Nastaví hodnotu instance objektu třídy hodnoty z instance třídy hodnoty poskytnuté jako parametr.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int SetFromManagedObject(
 
 ## <a name="parameters"></a>Parametry
 `pManagedObject`\
-[in] Rozhraní, která představuje spravovaný objekt, který obsahuje novou hodnotu.
+[v] Rozhraní, které představuje spravovaný objekt obsahující novou hodnotu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda se používá ke změně spravovaný objekt reprezentovaný hodnotou [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) objektu.
+ Tato metoda se používá ke změně spravovaného objektu reprezentovaného objektem [IDebugManagedObject.](../../../extensibility/debugger/reference/idebugmanagedobject.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

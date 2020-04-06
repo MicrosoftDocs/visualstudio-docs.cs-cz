@@ -1,27 +1,27 @@
 ---
-title: IDebugProcessQueryProperties::QueryProperty | Dokumentace Microsoftu
+title: IDebugProcessQueryProperties::Vlastnost queryProperty | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugProcessQueryProperties::QueryProperty
 ms.assetid: 9a91707d-a590-44ef-b122-69d9816a7a79
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b1a5a57cb0aa2e5173886b36a58da19a70aae707
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b190d7ed1d3690be898334270bbd1d16584b81a7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311577"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723293"
 ---
 # <a name="idebugprocessquerypropertiesqueryproperty"></a>IDebugProcessQueryProperties::QueryProperty
-Tato metoda dotazy na hodnotu zadané vlastnosti ladění procesu.
+Tato metoda se dotazuje na zadanou hodnotu vlastnosti procesu ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,7 +39,7 @@ int QueryProperty(
 
 ## <a name="parameters"></a>Parametry
 `dwPropType`\
-[in] Definice vlastnosti dotazovat. Hodnoty jsou:
+[v] Definice vlastnosti dotazované. Hodnoty jsou:
 
 - PROCESS_PROPERTY_COMMAND_LINE = 1
 
@@ -51,10 +51,10 @@ int QueryProperty(
 [out] Hodnota vlastnosti.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda se používá jen zřídka.
+ Tato metoda se používá zřídka.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProcessQueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties.md)

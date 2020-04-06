@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::Compare | Dokumentace Microsoftu
+title: IDebugDocumentContext2::Porovnat | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentContext2::Compare
 ms.assetid: 2327b1ba-52d0-42fb-a01e-63cb4b332d2f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0f21b338511890879d805ce49377554719070604
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b0e46f765c8e4c0e12c3bb9447e0713919fae7b8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344390"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731890"
 ---
 # <a name="idebugdocumentcontext2compare"></a>IDebugDocumentContext2::Compare
-Porovná tento kontext dokumentu do daného pole kontextů dokumentu.
+Porovná tento kontext dokumentu s daným polem kontextů dokumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,23 +47,23 @@ int Compare( 
 
 ## <a name="parameters"></a>Parametry
 `compare`\
-[in] Hodnota z [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md) výčet, který určuje typ porovnání.
+[v] Hodnota z [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md) výčtu, který určuje typ porovnání.
 
 `rgpDocContextSet`\
-[in] Pole [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) objekty, které představují dokumentu kontexty porovnávané hodnotě.
+[v] Pole [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) objekty, které představují kontexty dokumentu ve srovnání s.
 
 `dwDocContextSetLen`\
-[in] Délka pole kontexty dokumentu k porovnání.
+[v] Délka pole kontextu dokumentu porovnat.
 
 `pdwDocContext`\
-[out] Vrátí index do `rgpDocContextSet` pole první kontext dokumentu, který vyhovuje porovnání.
+[out] Vrátí index do `rgpDocContextSet` pole prvního kontextu dokumentu, který splňuje porovnání.
 
 ## <a name="return-value"></a>Návratová hodnota
- Vrátí `S_OK` Pokud byla nalezena shoda. Vrátí `S_FALSE` Pokud nebyla nalezena žádná shoda. V opačném případě vrátí kód chyby.
+ Vrátí, `S_OK` pokud byla nalezena shoda. Vrátí, `S_FALSE` pokud nebyla nalezena žádná shoda. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) objekty, které jsou předány jako pole musí být implementované stejné ladicího stroje, který implementuje `IDebugDocumentContext2` objekt volána na; v opačném případě porovnání není platný.
+ [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) objekty, které jsou předány v poli musí být implementována stejným ladicí stroj, který implementuje `IDebugDocumentContext2` objekt je volána; v opačném případě není porovnání platné.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)
 - [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md)

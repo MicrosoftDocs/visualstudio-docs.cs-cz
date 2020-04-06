@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetHostPid | Dokumentace Microsoftu
+title: IDebugProgramNode2::GetHostPid | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramNode2::GetHostPid
 ms.assetid: e65b4b15-46d8-4ca7-9456-2b4c078f7cf9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8ad7ba35bcc95434e7857c9b4f89b10fd332366c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1257bda23bcdfaceb58d1d087ae2848be8f969b1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351174"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722034"
 ---
 # <a name="idebugprogramnode2gethostpid"></a>IDebugProgramNode2::GetHostPid
-Získá identifikátor procesu systému pro proces, který je hostitelem programu.
+Získá identifikátor systémového procesu pro proces hostující program.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetHostPid ( 
 
 ## <a name="parameters"></a>Parametry
 `pdwHostPid`\
-[out] Vrátí identifikátor procesu systému pro hostitelský proces.
+[out] Vrátí identifikátor systémového procesu pro proces hostování.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CProgram` objekt, který implementuje [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) rozhraní.
+ Následující příklad ukazuje, jak implementovat `CProgram` tuto metodu pro jednoduchý objekt, který implementuje rozhraní [IDebugProgramNode2.](../../../extensibility/debugger/reference/idebugprogramnode2.md)
 
 ```cpp
 HRESULT CProgram::GetHostPid(AD_PROCESS_ID* pdwHostPid) {
@@ -62,5 +62,5 @@ HRESULT CProgram::GetHostPid(AD_PROCESS_ID* pdwHostPid) {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

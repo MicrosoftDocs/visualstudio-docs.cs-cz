@@ -1,28 +1,28 @@
 ---
-title: IDebugFunctionObject2::CreateStringObjectWithLength | Microsoft Docs
+title: IDebugFunctionObject2::CreateStringObjectWithLength | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - CreateStringObjectWithLength
 - IDebugFunctionObject2::CreateStringObjectWithLength
 ms.assetid: 1f43ec66-1615-4a4c-8b9d-e933f549f96d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ce0fdafc6835fdccc87638e17d3bbd01a1415abb
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 937d325f8637a3260121def189d472dcfb3e1309
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313511"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728462"
 ---
 # <a name="idebugfunctionobject2createstringobjectwithlength"></a>IDebugFunctionObject2::CreateStringObjectWithLength
-Vytvoří objekt string, který má zadanou délku.
+Vytvoří objekt řetězce, který má zadanou délku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,16 +44,16 @@ int CreateStringObjectWithLength (
 
 ## <a name="parameters"></a>Parametry
 `pcstrString`\
-[in] Řetězcová hodnota pro objekt řetězce.
+[v] Hodnota řetězce pro objekt řetězce.
 
 `uiLength`\
-[in] Délka řetězce v bajtech.
+[v] Délka řetězce v bajtů.
 
 `ppObject`\
-[out] Vrátí [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekt, který reprezentuje objekt nově vytvořeného řetězce.
+[out] Vrátí objekt [IDebugObject,](../../../extensibility/debugger/reference/idebugobject.md) který představuje nově vytvořený objekt řetězce.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

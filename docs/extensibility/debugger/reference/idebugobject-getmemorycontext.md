@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetMemoryContext | Dokumentace Microsoftu
+title: IDebugObject::GetMemoryContext | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugObject::GetMemoryContext method
 ms.assetid: 6760a0d3-a898-4e81-b68f-c45c584b225b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 38f913952c3e2f58b0d7bd2a27ac20e8f754da2f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 16427685765c1471fba3993743efc204cb99c367
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323628"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726665"
 ---
 # <a name="idebugobjectgetmemorycontext"></a>IDebugObject::GetMemoryContext
-Získá kontext paměti, který představuje adresu hodnotu objektu.
+Získá kontext paměti, který představuje adresu hodnoty objektu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetMemoryContext(
 
 ## <a name="parameters"></a>Parametry
 `pContext`\
-[out] Vrátí [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objekt představující adresu hodnotu objektu.
+[out] Vrátí objekt [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) představující adresu hodnoty objektu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Kontext vrácené paměti určuje adresu hodnotu reprezentovaný tímto objektem [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objektu.
+ Kontext vrácené paměti určuje adresu hodnoty reprezentované tímto objektem [IDebugObject.](../../../extensibility/debugger/reference/idebugobject.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

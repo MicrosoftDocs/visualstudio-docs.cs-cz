@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::Detach | Dokumentace Microsoftu
+title: IDebugProcess2::Detach | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcess2::Detach
 ms.assetid: ee2b9084-2db1-4e49-a1d9-387284b7c3f8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3948ecce15b9b2b2e8b3bf974ecc2277d9fa0360
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9036ebc44835ab6c3ebd08b9fad4408d9cb97461
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353200"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80724122"
 ---
 # <a name="idebugprocess2detach"></a>IDebugProcess2::Detach
-Ladicí program z tohoto procesu se odpojí odpojíte všechny programy v procesu.
+Odpojí ladicí program od tohoto procesu odpojením všech programů v procesu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,10 +38,10 @@ int Detach();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Všechny programy a procesu pokračovat v běhu, ale už nejsou součástí relace ladění. Po odpojení operace dokončena, žádné další ladění, bude odeslána události pro tento proces (a jeho programy).
+ Všechny programy a proces pokračovat v běhu, ale již nejsou součástí relace ladění. Po dokončení operace odpojení nebudou odeslány žádné další události ladění pro tento proces (a jeho programy).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

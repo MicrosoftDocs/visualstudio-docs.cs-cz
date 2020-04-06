@@ -1,27 +1,27 @@
 ---
-title: IDebugSettingsCallback2::GetEEMetricFile | Dokumentace Microsoftu
+title: IDebugSettingsCallback2::GetEEMetricFile | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSettingsCallback2::GetEEMetricFile
 ms.assetid: 3a0bf9e5-bbd2-4d15-840d-8244732787fc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 824b947af25ef825d4f02983e17ecad3105028f3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2aafda1563d2f948ea0871f920faa8bbbef766f7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322134"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720046"
 ---
 # <a name="idebugsettingscallback2geteemetricfile"></a>IDebugSettingsCallback2::GetEEMetricFile
-Načte soubor metriky Chyba při vyhodnocování výrazu danou název nebo metriku.
+Načte soubor metriky vyhodnocení výrazu s názvem nebo metrikou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,19 +45,19 @@ private int GetEEMetricFile(
 
 ## <a name="parameters"></a>Parametry
 `guidLang`\
-[in] Jedinečný identifikátor programovací jazyk.
+[v] Jedinečný identifikátor programovacího jazyka
 
 `guidVendor`\
-[in] Jedinečný identifikátor na dodavatele.
+[v] Jedinečný identifikátor dodavatele
 
 `pszMetric`\
-[in] Název metriky.
+[v] Název metriky.
 
 `pbstrValue`\
 [out] Vrátí obsah souboru metriky jako řetězec.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

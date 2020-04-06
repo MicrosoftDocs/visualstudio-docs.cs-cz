@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetPhysicalStackRange | Dokumentace Microsoftu
+title: IDebugStackFrame2::GetPhysicalStackRange | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugStackFrame2::GetPhysicalStackRange
 ms.assetid: 2f6992e2-ac1c-433f-83b7-a7f83a4ce63d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2cf0db9fa776116f1536ae137444160385a8b6a1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3df924c6c8a4373082d61575e4ad8a7ec3f161d1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347716"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719668"
 ---
 # <a name="idebugstackframe2getphysicalstackrange"></a>IDebugStackFrame2::GetPhysicalStackRange
-Získá vyjádření závislé na počítači rozsahu fyzické adresy přidružený blok zásobníku.
+Získá počítačově závislé reprezentace rozsahu fyzických adres spojených s rámcem zásobníku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,18 +43,18 @@ int GetPhysicalStackRange ( 
 
 ## <a name="parameters"></a>Parametry
 `paddrMin`\
-[out] Vrátí nejnižší fyzické adresy přidružené k tento rámec zásobníku.
+[out] Vrátí nejnižší fyzickou adresu přidruženou k tomuto rámci zásobníku.
 
 `paddrMax`\
-[out] Vrátí nejvyšší fyzické adresy přidružené k tento rámec zásobníku.
+[out] Vrátí nejvyšší fyzickou adresu přidruženou k tomuto rámci zásobníku.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Informace o vrácený touto metodou používá správce ladění relace (SDM) řazení zásobníku.
+ Informace vrácené touto metodou používá správce ladění relace (SDM) k řazení rámců zásobníku.
 
- Předpokládá se, že zásobník volání roste dolů, to znamená, že jsou přidány nové bloky zásobníku stále nižší adresy paměti. Za běhu architektury musíte zadat rozsahy adres fyzického zásobníku, které odpovídají tento předpoklad.
+ Předpokládá se, že zásobník volání roste dolů, to znamená, že nové rámce zásobníku jsou přidány na stále nižší adresy paměti. Architektura za běhu musí poskytovat fyzické rozsahy zásobníku, které odpovídají tomuto předpokladu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

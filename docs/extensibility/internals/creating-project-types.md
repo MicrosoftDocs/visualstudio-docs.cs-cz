@@ -1,72 +1,72 @@
 ---
-title: Vytváření typů projektů | Dokumentace Microsoftu
+title: Vytváření typů projektů | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - project types, new
 - projects [Visual Studio SDK], new project types
 ms.assetid: bdb2d22e-d622-450c-bb2d-98152a745fcf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 005765cb66a23f2efcf0c8defb323120d79bef60
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d2398b63b8cd52784252cfc764bb6c6a30e1accc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314562"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709072"
 ---
 # <a name="create-project-types"></a>Vytvořit typy projektů
-Můžete rozšířit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tak, že vytvoříte nový typ projektu. Pokud chcete vytvořit nový typ projektu, musíte porozumět několika konceptům a dokončit několik kroků. Následující témata poskytují přehled o tom, jak vytvořit typy projektů.
+Můžete rozšířit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vytvořením nového typu projektu. Chcete-li vytvořit nový typ projektu, musíte pochopit několik konceptů a provést několik kroků. Následující témata poskytují přehled o tom, jak vytvořit typy projektů.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Rozhodnutí o návrhu typu projektu](../../extensibility/internals/project-type-design-decisions.md)
 
- Tento článek popisuje položky, trvalost souborů projektu a závazku mechanik rozhodnutí, které je nutné provést před vytvořením nového typu projektu.
+ Popisuje položku, trvalost souboru projektu a rozhodnutí o návrhu mechaniky závazku, která je třeba provést před vytvořením nového typu projektu.
 
 - [Kontrolní seznam: Vytvoření nových typů projektů](../../extensibility/internals/checklist-creating-new-project-types.md)
 
- Poskytuje přehled kroků, které musíte provést, chcete-li vytvořit nový typ projektu, který podporuje programovací úlohy, jako jsou úpravy kódu a kompilaci, sestavování, ladění a nasazování aplikací ve vašem projektu.
+ Obsahuje přehled kroků, které je nutné postupovat k vytvoření nového typu projektu, který podporuje takové programovací úlohy, jako je úprava kódu a kompilace, vytváření, ladění a nasazování aplikací v projektu.
 
-- [Vytvoření instance projektu pomocí objektů pro vytváření projektů](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)
+- [Vytvoření instancí projektu pomocí továren projektu](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)
 
- Poskytuje informace o tom, jak zadat a použít objekt pro vytváření projektu k vytvoření instance nového projektu.
+ Obsahuje informace o tom, jak poskytnout a použít továrnu projektu k vytvoření instancí nového projektu.
 
 - [Registrace typu projektu](../../extensibility/internals/registering-a-project-type.md)
 
- Poskytuje příklady příkazů z registru, které poskytují výchozí cesty a data a tabulky, které obsahují položky z registru skriptu příkazu for each.
+ Poskytuje ukázky kódu příkazů z registru, které poskytují výchozí cesty a data, a tabulku, která obsahuje položky ze skriptu registru pro každý příkaz.
 
-- [Trvalost projektu](../../extensibility/internals/project-persistence.md)
+- [Trvalosti projektu](../../extensibility/internals/project-persistence.md)
 
- Popisuje způsob používání `IPersistFileFormat` zachování souborů a objektů nezaložené souboru projektu.
+ Popisuje použití `IPersistFileFormat` zachovat soubor i nezaložené na souboru objekty projektu.
 
 - [Použití nástroje MSBuild](../../extensibility/internals/using-msbuild.md)
 
- Popisuje, jak můžete pomocí typu projektu [!INCLUDE[vstecmsbuild](../../extensibility/internals/includes/vstecmsbuild_md.md)] modul umožňuje uživatelům sestavení ze sestavení [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a na příkazovém řádku.
+ Popisuje, jak typ projektu [!INCLUDE[vstecmsbuild](../../extensibility/internals/includes/vstecmsbuild_md.md)] můžete použít modul sestavení, aby uživatelé stavět z [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a na příkazovém řádku.
 
 ## <a name="related-sections"></a>Související oddíly
-- [Podpůrné nástroje procházení symbolů](../../extensibility/internals/supporting-symbol-browsing-tools.md)
+- [Podpora nástrojů pro procházení symbolů](../../extensibility/internals/supporting-symbol-browsing-tools.md)
 
- Popisuje architekturu kódu zobrazení nástroje, jako **prohlížeče objektů** a **zobrazení tříd** okna. Popisuje rozhraní a metody, které se používají k implementaci procházet objekty v sadě VSPackage.
+ Vysvětluje architekturu nástrojů pro zobrazení kódu, jako je prohlížeč **objektů** a okno **Zobrazení tříd.** Popisuje rozhraní a metody, které se používají k implementaci procházení objektů v Balíčku VSPackage.
 
-- [Přidat projekt a šablony položek projektu](../../extensibility/internals/adding-project-and-project-item-templates.md)
+- [Přidání šablon položek projektu a projektu](../../extensibility/internals/adding-project-and-project-item-templates.md)
 
- Tento článek popisuje význam, které projekty hrají při určování, které editor se používá při otevření položky projektu a jak lze ovládat prostředky projektu.
+ Popisuje význam, který projekty hrají při určování, který editor se používá při otevření položky projektu a jak lze manipulovat s prostředky projektu.
 
-- [Instalace balíčků VSPackage pomocí Instalační služby systému Windows](../../extensibility/internals/installing-vspackages-with-windows-installer.md)
+- [Instalace balíčků VSPackages pomocí Instalační služby systému Windows](../../extensibility/internals/installing-vspackages-with-windows-installer.md)
 
- Ukazuje, jak poskytnout vašeho balíčku VSPackage svou vlastní jedinečnou identitu a postup při zabalení vaší knihovny DLL balíčku VSPackage a další informace v balíčku Instalační služby systému Windows ( *. MSI* souboru) pro nasazení tak, aby vaši zákazníci.
+ Ukazuje, jak dát vspackage vlastní jedinečnou identitu a jak zabalit knihovny DLL balíčku VSPackage a další informace v balíčku Instalační služby systému Windows (*. msi)* pro nasazení pro vaše zákazníky.
 
 - [Hierarchie v sadě Visual Studio](../../extensibility/internals/hierarchies-in-visual-studio.md)
 
- Popisuje, jak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zobrazení a adresy hierarchie.
+ Popisuje způsob [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zobrazení a adres hierarchií.
 
 - [Balíčky VSPackage](../../extensibility/internals/vspackages.md)
 
- Obsahuje základní informace o balíčku VSPackage Instalovatelné objekt modelu COM, který rozšiřuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostředí a popisuje, jak implementovat vlastní VSPackage.
+ Obsahuje přehled VSPackage, instalovatelný objekt COM, který [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rozšiřuje prostředí a popisuje, jak implementovat vlastní VSPackage.
 
 - [Typy projektů](../../extensibility/internals/project-types.md)
 
- Popisuje, jak pomocí projektů Úprava kódu, kompilaci a vytváření kódu a spuštění a ladění kódu a poskytuje odkazy na témata podrobné informace o tom, jak vytvořit typy projektů.
+ Popisuje, jak pomocí projektů upravit kód, kompilovat a sestavit kód a spustit a ladit kód a poskytuje odkazy na podrobná témata o tom, jak vytvořit typy projektů.

@@ -1,27 +1,27 @@
 ---
-title: PROCESS_INFO_FLAGS | Dokumentace Microsoftu
+title: PROCESS_INFO_FLAGS | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - PROCESS_INFO_FLAGS
 helpviewer_keywords:
 - PROCESS_INFO_FLAGS enumeration
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e0694d83409a492a1d950a17ac5e2298ba9b8578
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 36c4cbbe17a109eacd69b76500e8c10d21d2d554
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309390"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713954"
 ---
-# <a name="processinfoflags"></a>PROCESS_INFO_FLAGS
+# <a name="process_info_flags"></a>PROCESS_INFO_FLAGS
 
 Popisuje nebo určuje vlastnosti procesu.
 
@@ -46,25 +46,25 @@ enum enum_PROCESS_INFO_FLAGS { 
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 
 `PIFLAG_SYSTEM_PROCESS`\
 Označuje, že proces je systémový proces.
 
 `PIFLAG_DEBUGGER_ATTACHED`\
-Označuje, že proces je laděn ladicím programem. Může se jednat [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] ladicího programu, nebo mohou být některé další ladicího programu, například WinDbg.
+Označuje, že proces je laděn ladicím programem. Může to [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] být ladicí program, nebo může být nějaký jiný ladicí program, například WinDbg.
 
 `PIFLAG_PROCESS_STOPPED`\
-Označuje, že proces se ukončí. Platí, pouze pokud `PIFLAG_DEBUGGER_ATTACHED` taky. K dispozici v sadě Visual Studio 2005 a novějších.
+Označuje, že proces je zastaven. Platí pouze `PIFLAG_DEBUGGER_ATTACHED` v případě, že je také zadán. K dispozici v sadě Visual Studio 2005 a novější.
 
 `PIFLAG_PROCESS_RUNNING`\
-Označuje, že je proces spuštěn. Platí, pouze pokud `PIFLAG_DEBUGGER_ATTACHED` taky. K dispozici v sadě Visual Studio 2005 a novějších.
+Označuje, že proces je spuštěn. Platí pouze `PIFLAG_DEBUGGER_ATTACHED` v případě, že je také zadán. K dispozici v sadě Visual Studio 2005 a novější.
 
 ## <a name="remarks"></a>Poznámky
 
-Používá pro `Flags` člena [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) struktury.
+Používá se `Flags` pro člen [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) struktury.
 
-Tyto příznaky lze kombinovat pomocí logické bitové `OR`.
+Tyto příznaky mohou být kombinovány `OR`s bitovým .
 
 ## <a name="requirements"></a>Požadavky
 
@@ -74,7 +74,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

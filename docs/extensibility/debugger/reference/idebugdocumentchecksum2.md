@@ -1,24 +1,24 @@
 ---
-title: IDebugDocumentChecksum2 | Dokumentace Microsoftu
+title: IDebugDocumentChecksum2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugDocumentChecksum2 interface
 ms.assetid: 6d22fa94-21aa-46cb-b5b5-32a6399ebb20
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b4bfc51595e6414a3760d4e57ab6f9791259f83
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 03cfb29cc54a2f0ab18bce3ec0761cfab62e20df
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341290"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731900"
 ---
 # <a name="idebugdocumentchecksum2"></a>IDebugDocumentChecksum2
-Představuje kontrolní součet pro ladicí dokumentu a umožňuje předání kontrolní součet mezi komponentami.
+Představuje kontrolní součet pro ladicí dokument a umožňuje předávání kontrolního součtu mezi součástmi.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,14 +27,14 @@ IDebugDocumentChecksum2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Toto rozhraní může být implementováno komponentou, který zpřístupňuje [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) rozhraní. Ale ho hlavně implementují moduly ladění tak, aby kontrolního součtu vložených v souboru symbol (*.pdb) můžete předán zpět do integrovaného vývojového prostředí a použít při hledání zdroj.
+ Toto rozhraní může být implementováno libovolnou komponentou, která zveřejňuje rozhraní [IDebugDocumentContext2.](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) Je však hlavně implementována ladicími moduly tak, aby kontrolní součet vložený do souboru symbolů (*.pdb) mohl být předán zpět do integrovaného systému ide a použit při hledání zdroje.
 
 ## <a name="methods"></a>Metody
- V následující tabulce jsou uvedeny metody objektu `IDebugDocumentChecksum2`.
+ V následující tabulce jsou `IDebugDocumentChecksum2`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetChecksumAndAlgorithmId](../../../extensibility/debugger/reference/idebugdocumentchecksum2-getchecksumandalgorithmid.md)|Načte identifikátor dokumentu. kontrolní součet a algoritmus maximální počet bajtů, které mají použít.|
+|[GetChecksumAndAlgorithmId](../../../extensibility/debugger/reference/idebugdocumentchecksum2-getchecksumandalgorithmid.md)|Načte kontrolní součet dokumentu a identifikátor algoritmu s maximálním počtem bajtů, které mají být používány.|
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: Msdbg.h

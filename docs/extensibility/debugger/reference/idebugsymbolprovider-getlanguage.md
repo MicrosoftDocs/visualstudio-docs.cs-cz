@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetLanguage | Dokumentace Microsoftu
+title: IDebugSymbolProvider::GetLanguage | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugSymbolProvider::GetLanguage method
 ms.assetid: e4142183-3d8b-418f-907f-4ee4c753d8ce
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dfa11a1df6460c08431d7b23fabe5d94674baad2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 876466d3617131815f6aa48b8b7dfb68b645ecb2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347604"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719237"
 ---
 # <a name="idebugsymbolprovidergetlanguage"></a>IDebugSymbolProvider::GetLanguage
-Tato metoda načte jazyk, ve kterém byla použita pro kompilaci kódu na adrese ladění.
+Tato metoda získá jazyk, který byl použit ke kompilaci kódu na ladicí adresu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,20 +45,20 @@ int GetLanguage(
 
 ## <a name="parameters"></a>Parametry
 `pAddress`\
-[in] Adresa objektu reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.
+[v] Objekt adresy reprezentované rozhraním [IDebugAddress.](../../../extensibility/debugger/reference/idebugaddress.md)
 
 `pguidLanguage`\
-[out] Vrátí `GUID` , který určuje jazyk.
+[out] Vrátí `GUID` a, který určuje jazyk.
 
 `pguidLanguageVendor`\
-[out] Vrátí `GUID` , který určuje jazyk dodavatele.
+[out] Vrátí `GUID` a, který určuje dodavatele jazyka.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Ladicí stroj volá tuto metodu za účelem získání informací, že je potřeba vybrat vyhodnocovací filtr výrazů správné.
+ Ladicí modul volá tuto metodu k získání informací, které potřebuje k výběru správného vyhodnocení výrazu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)
 - [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)

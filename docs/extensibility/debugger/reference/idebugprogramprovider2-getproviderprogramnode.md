@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::GetProviderProgramNode | Dokumentace Microsoftu
+title: IDebugProgramProvider2::GetProviderProgramNode | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramProvider2::GetProviderProgramNode
 ms.assetid: e62e8e83-acbb-4c52-aedf-ffbd4670db29
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7629a60f3393f996a456c907ec150be202a0bb94
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fd8ca7d5120ba20695caef2e9021ee25869df72f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349821"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721803"
 ---
 # <a name="idebugprogramprovider2getproviderprogramnode"></a>IDebugProgramProvider2::GetProviderProgramNode
-Načte uzel program pro konkrétní aplikaci.
+Načte uzel programu pro určitý program.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,33 +51,33 @@ int GetProviderProgramNode(
 
 ## <a name="parameters"></a>Parametry
 `Flags`\
-[in] Kombinace příznaků z [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) výčtu. Následující příznaky jsou typické pro toto volání:
+[v] Kombinace příznaků z [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) výčtu. Pro toto volání jsou typické následující příznaky:
 
 |Příznak|Popis|
 |----------|-----------------|
-|`PFLAG_REMOTE_PORT`|Volající běží na vzdáleném počítači.|
-|`PFLAG_DEBUGGEE`|Volající je momentálně laděna (Další informace o zařazování bude vrácen pro každý uzel).|
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|Volající, byl připojený k ale není spuštěn pomocí ladicího programu.|
+|`PFLAG_REMOTE_PORT`|Volající je spuštěn na vzdáleném počítači.|
+|`PFLAG_DEBUGGEE`|Volající je aktuálně laděno (další informace o zařazování budou vráceny pro každý uzel).|
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|Volající byl připojen k ladicímu programu, ale nebyl spuštěn.|
 
 `pPort`\
-[in] Port volající proces běží na.
+[v] Port, na který je spuštěn volající proces.
 
 `processId`\
-[in] [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktura obsahující dotyčný ID procesu, který obsahuje program.
+[v] [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktury, která obsahuje ID procesu, který obsahuje daný program.
 
 `guidEngine`\
-[in] Identifikátor GUID ladicího stroje, který program je připojen k (pokud existuje).
+[v] Identifikátor GUID ladicího modulu, ke kterému je program připojen (pokud existuje).
 
 `programId`\
-[in] ID aplikace, pro které chcete získat uzel programu.
+[v] ID programu, pro který chcete získat uzel programu.
 
 `ppProgramNode`\
-[out] [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objekt představující uzel pro požadovaný program.
+[out] Objekt [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) představující požadovaný uzel programu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)
 - [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)
 - [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

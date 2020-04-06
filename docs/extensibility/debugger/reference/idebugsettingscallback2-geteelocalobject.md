@@ -1,27 +1,27 @@
 ---
-title: IDebugSettingsCallback2::GetEELocalObject | Dokumentace Microsoftu
+title: IDebugSettingsCallback2::GetEELocalObject | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSettingsCallback2::GetEELocalObject
 ms.assetid: e69a3469-a049-420c-b918-c48a1e7b9baf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 561f6727ca0273d5d59434a7bfdd0cdc00533754
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fc205392f325a014bfe07b02b64cd8b0050ce079
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322198"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720066"
 ---
 # <a name="idebugsettingscallback2geteelocalobject"></a>IDebugSettingsCallback2::GetEELocalObject
-Načte objekt místní Chyba při vyhodnocování výrazu daný název metriky.
+Načte místní objekt vyhodnocení výrazu s názvem metriky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,19 +45,19 @@ private int GetEELocalObject(
 
 ## <a name="parameters"></a>Parametry
 `guidLang`\
-[in] Jedinečný identifikátor programovací jazyk.
+[v] Jedinečný identifikátor programovacího jazyka
 
 `guidVendor`\
-[in] Jedinečný identifikátor na dodavatele.
+[v] Jedinečný identifikátor dodavatele
 
 `pszMetric`\
-[in] Název metriky.
+[v] Název metriky.
 
 `ppUnk`\
-[out] Vrátí výraz Chyba při vyhodnocování místní objekt.
+[out] Vrátí místní objekt vyhodnocení výrazu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

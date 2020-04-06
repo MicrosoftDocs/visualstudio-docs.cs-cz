@@ -1,5 +1,5 @@
 ---
-title: Otevření a uložení položek projektu | Dokumentace Microsoftu
+title: Otevírání a ukládání položek projektu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,59 +7,59 @@ helpviewer_keywords:
 - files [Visual Studio], opening and saving
 - editors [Visual Studio SDK], file persistence
 ms.assetid: f71898ad-335f-4c43-a177-4da87078afd1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77a3417bc15bc9c4c6149b4e77dc4fdcebe5cd6e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bbb89d99e401be6bae7d8ee9be8ee33fa7574723
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314937"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80706968"
 ---
 # <a name="opening-and-saving-project-items"></a>Otevření a uložení položek projektu
-Když přidáte nový typ projektu, musíte spravovat otevírání a ukládání souborů v projektech [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE). Následující témata popisují různé přístupy k otevírání a ukládání souborů.
+Přidáte-li nový typ projektu, je nutné spravovat otevírání a [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ukládání souborů projektů v integrovaném vývojovém prostředí (IDE). Následující témata popisují různé přístupy k otevírání a ukládání souborů.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Zobrazení souborů pomocí příkazu Otevřít soubor](../../extensibility/internals/displaying-files-by-using-the-open-file-command.md)
 
- Poskytuje podrobné vysvětlení způsobu, jakým zpracovává integrovaného vývojového prostředí **otevřít soubor** příkazu a roli projektů při reagování na tento příkaz.
+ Poskytuje podrobné vysvětlení, jak ide zpracovává příkaz **Otevřít soubor** a roli projektů v reakci na tento příkaz.
 
 - [Zobrazení souborů pomocí příkazu Otevřít v aplikaci](../../extensibility/internals/displaying-files-by-using-the-open-with-command.md)
 
- Poskytuje podrobné vysvětlení způsobu, jakým zpracovává integrovaného vývojového prostředí **otevřít v** příkaz dotazování otevření souboru, který má některé volba standardních editorů.
+ Poskytuje podrobné podrobné vysvětlení, jak rozhraní IDE zpracovává příkaz **Otevřít s,** což vyzve k otevření souboru, který má určitý výběr standardních editorů.
 
-- [Postupy: Otevření editorů pro konkrétní projekt](../../extensibility/how-to-open-project-specific-editors.md)
+- [Postupy: Otevření editoru pro konkrétní projekt](../../extensibility/how-to-open-project-specific-editors.md)
 
- Obsahuje podrobné pokyny pro určení, že soubory určitého typu ve vašem projektu by měla otevřít pomocí editoru specifické pro projekt.
+ Obsahuje podrobné pokyny pro určení, že soubory určitého typu v projektu by měly být otevřeny pomocí editoru specifického pro projekt.
 
 - [Postupy: Otevření standardních editorů](../../extensibility/how-to-open-standard-editors.md)
 
- Obsahuje podrobné pokyny pro zadání povolení integrovaného vývojového prostředí otevřete standardní editor pro soubory ve vašem typu projektu.
+ Obsahuje podrobné pokyny pro určení, jak povolit rozhraní IDE otevřít standardní editor pro soubory v typu projektu.
 
 - [Postupy: Otevření editorů pro otevřené dokumenty](../../extensibility/how-to-open-editors-for-open-documents.md)
 
- Obsahuje podrobné pokyny k otevření editoru specifické pro projekt pro otevření souboru.
+ Obsahuje podrobné pokyny k otevření editoru specifického pro projekt pro otevřený soubor.
 
 - [Uložení standardního dokumentu](../../extensibility/internals/saving-a-standard-document.md)
 
- Poskytuje podrobné vysvětlení způsobu, jakým zpracovává integrovaného vývojového prostředí **Uložit**, **uložit jako**, a **Uložit vše** příkazy pro dokument otevřen v standardní editor.
+ Poskytuje podrobné vysvětlení, jak rozhraní IDE zpracovává příkazy **Uložit**, **Uložit jako**a **Uložit vše** pro dokument otevřený ve standardním editoru.
 
 - [Uložení vlastního dokumentu](../../extensibility/internals/saving-a-custom-document.md)
 
- Obsahuje diagram a podrobné vysvětlení způsobu, jakým zpracovává integrovaného vývojového prostředí **Uložit**, **uložit jako**, a **Uložit vše** otevřené příkazy pro dokumenty ve vlastním editoru.
+ Poskytuje diagram a podrobné vysvětlení, jak rozhraní IDE zpracovává příkazy **Uložit**, **Uložit jako**a **Uložit všechny** pro dokumenty otevřené ve vlastním editoru.
 
 - [Určení editoru, který otevře soubor v projektu](../../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)
 
- Tento článek popisuje proces, který následuje integrovaného vývojového prostředí a vyberte příslušnou editoru nebo návrháře pro soubor.
+ Popisuje proces, který sleduje rozhraní IDE a vybere příslušný editor nebo návrhář e-souboru.
 
 ## <a name="related-sections"></a>Související oddíly
 - [Vytváření vlastních editorů a návrhářů](../../extensibility/creating-custom-editors-and-designers.md)
 
- Jsou uvedeny čtyři typy editorů, rozhraní IDE může být hostitelem a poskytuje popisy jednotlivých editoru.
+ Uvádí čtyři typy editorů, které může ide hostovat a poskytuje popisy každého editoru.
 
 - [Typy projektů](../../extensibility/internals/project-types.md)
 
- Tento článek popisuje, jak řídit projekty tak, že kód je zkompilován a sestaven, způsobu otevírání editory a formátování položek projektu.
+ Popisuje, jak projekty řídí způsob, jakým je kód kompilován a sestaven, jak jsou otevřeny editory a jak jsou formátovány položky projektu.

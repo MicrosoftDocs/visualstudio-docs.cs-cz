@@ -1,25 +1,25 @@
 ---
-title: IDebugObject::IsProxy | Dokumentace Microsoftu
+title: IDebugObject::IsProxy | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugObject::IsProxy
 - IsProxy
 ms.assetid: 06c66b87-db95-4400-ab26-5d33e743a439
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9e72df4bd42df8d060ffab5f5ba5a2f44cbc06f9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6cab0d0d0f5f1c2e491c9aa0fe9efd26b39e51df
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323423"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726485"
 ---
 # <a name="idebugobjectisproxy"></a>IDebugObject::IsProxy
 Určuje, zda je objekt transparentní proxy server.
@@ -40,13 +40,13 @@ int IsProxy (
 
 ## <a name="parameters"></a>Parametry
 `pfIsProxy`\
-[out] `TRUE` Pokud objekt je transparentní proxy server; v opačném případě `FALSE`.
+[out] `TRUE` pokud je objekt transparentní proxy; v `FALSE`opačném případě .
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je implementována výchozí modul ladění C++.
+ Tato metoda je implementována výchozím ladicím motorem jazyka C++.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

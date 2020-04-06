@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::GetServer | Dokumentace Microsoftu
+title: IDebugProcess2::GetServer | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcess2::GetServer
 ms.assetid: 8f73c530-cceb-4f1f-8c63-1cc0ccd4a310
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 20eed8cb3689ac58b1303f4dec7359d75d0c0f40
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5f54faf50f5307a1c4c67d07efccd5747918e322
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66343641"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723898"
 ---
 # <a name="idebugprocess2getserver"></a>IDebugProcess2::GetServer
-Získá serveru, na kterém je spuštěn tento proces.
+Získá server, který je spuštěn na tomto procesu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,14 +41,14 @@ int GetServer( 
 
 ## <a name="parameters"></a>Parametry
 `ppServer`\
-[out] Vrátí [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) objekt, který představuje server, na kterém je spuštěný tento proces.
+[out] Vrátí objekt [IDebugCoreServer2,](../../../extensibility/debugger/reference/idebugcoreserver2.md) který představuje server, na kterém je tento proces spuštěn.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Více než jeden server může běžet na jednom počítači.
+ V jednom počítači může být spuštěno více serverů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Virtualize | Dokumentace Microsoftu
+title: IDebugPendingBreakpoint2::Virtualizovat | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - Virtualize method
 - IDebugPendingBreakpoint2::Virtualize method
 ms.assetid: 58c8e9a5-4494-47c2-bddb-56f628da6a2d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f805c00e2a8cc595477348ba9f3dd617b61a1dfd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7ad5aac997cf694a7cf8fa887ae63fbef54ca07f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339053"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725666"
 ---
 # <a name="idebugpendingbreakpoint2virtualize"></a>IDebugPendingBreakpoint2::Virtualize
-Přepíná virtualizované stavu tohoto objektu čekajících zarážek. Když je virtualizované čekající zarážkou, ladicí stroj se pokusí vytvořit vazbu pokaždé, když se nový kód načte do programu.
+Přepíná virtualizovaný stav této čekající zarážky. Při virtualizace čekající zarážky, ladicí modul se pokusí svázat pokaždé, když nový kód načte do programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,16 +42,16 @@ int Virtualize(
 
 ## <a name="parameters"></a>Parametry
 `fVirtualize`\
-[in] Nastavit na nenulovou hodnotu (`TRUE`) pro virtualizaci čekající zarážka nebo na hodnotu nula (`FALSE`) Chcete-li vypnout virtualizace.
+[v] Nastavte na nenulovou hodnotu (`TRUE`) pro virtualizaci`FALSE`čekající zarážky nebo na nulu ( ) pro vypnutí virtualizace.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_BP_DELETED` Pokud zarážka byla odstraněna.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `E_BP_DELETED` pokud byla zarážka odstraněna.
 
 ## <a name="remarks"></a>Poznámky
-Virtualizované zarážku je vázán pokaždé, když je načten kódu.
+Virtualizovaná zarážka je vázána při každém načtení kódu.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CPendingBreakpoint` objekt, který zveřejňuje [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) rozhraní.
+Následující příklad ukazuje, jak implementovat `CPendingBreakpoint` tuto metodu pro jednoduchý objekt, který zveřejňuje rozhraní [IDebugPendingBreakpoint2.](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
 
 ```cpp
 HRESULT CPendingBreakpoint::Virtualize(BOOL fVirtualize)
@@ -85,5 +85,5 @@ HRESULT CPendingBreakpoint::Virtualize(BOOL fVirtualize)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetEEService | Dokumentace Microsoftu
+title: IDebugBinder3::GetEEService | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBinder3::GetEEService method
 ms.assetid: eb07aa40-8cd9-4a52-a4c7-4affd2307a01
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3afc38551dc04e7fc7f6d55df81c5b7248127acd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7c08d7df4a6b05be489f6b9ab06569c085f3b1f8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66327135"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735823"
 ---
 # <a name="idebugbinder3geteeservice"></a>IDebugBinder3::GetEEService
 Tato metoda vrátí požadovanou službu.
@@ -47,24 +47,24 @@ Int GetEEService(
 
 ## <a name="parameters"></a>Parametry
 `vendor`\
-[in] `GUID` dodavatele (hodnota null je přijatelná).
+[v] `GUID` dodavatele (hodnota null je přijatelná).
 
 `language`\
-[in] `GUID` jazyka (hodnota null je přijatelná).
+[v] `GUID` jazyka (hodnota null je přijatelná).
 
 `iid`\
-[in] `IID` služby získat.
+[v] `IID` služby, kterou chcete získat.
 
 `ppService`\
-[out] Rozhraní pro požadovanou službu.
+[out] Rozhraní k požadované službě.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Předání `IID` pro [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md) rozhraní (`IID_IEEVisualizerServiceProvider`) Pokud je k dispozici služba vizualizér typů. Pokud ano, můžete získat vyhodnocovací filtr výrazů [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) rozhraní pro podporu vizualizérů typů. Zobrazit [Visualizing a zobrazení dat](../../../extensibility/debugger/visualizing-and-viewing-data.md) podrobnosti.
+ Předajte `IID` pro rozhraní [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md) (`IID_IEEVisualizerServiceProvider`) a zjistěte, zda je k dispozici služba Type Visualizer. Pokud ano, vyhodnocení výrazu můžete získat [rozhraní IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) pro podporu typu vizualizéry. Podrobnosti najdete [v tématu Vizualizace a zobrazení dat.](../../../extensibility/debugger/visualizing-and-viewing-data.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)
 - [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)
 - [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

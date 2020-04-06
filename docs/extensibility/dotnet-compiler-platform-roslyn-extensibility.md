@@ -1,24 +1,24 @@
 ---
-title: Sada .NET compiler Platform (&quot;Roslyn&quot;) rozšiřitelnost | Dokumentace Microsoftu
+title: Rozšiřitelnost kompilátoru .NET (&quot;Roslyn&quot;) Rozšiřitelnost | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 564201b3-1e18-4b88-b615-42c2f57f3fe8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b910d1eb8dcbbe6696c447a7c3a94db533dbbcb3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 62ceac6e2be8a0a84d82f6b86b685c7c8b20a182
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347900"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712081"
 ---
-# <a name="net-compiler-platform-quotroslynquot-extensibility"></a>Sada .NET compiler Platform (&quot;Roslyn&quot;) rozšiřitelnosti
-Cíle základní platformě kompilátoru .NET ("Roslyn") se vám otevírají kompilátory jazyků C# a Visual Basic a povolení nástroje a mají vývojáři pro sdílení v kompilátorech široké škály informací o programech. Nástroje pro analýzu kódu zlepšení kvality kódu a kódu generátorů podpory vytváření aplikací. Jak získat inteligentnější nástroje, potřebujete přístup v více a více poznatků hloubkové kódu, které mají pouze kompilátory. Kompilátory Roslyn namísto neprůhledné překladače (zdrojový kód v a objektový kód navýšení kapacity), nabízejí rozhraní API, která můžete použít pro úlohy související s kódem v nástroje a aplikace.
+# <a name="net-compiler-platform-quotroslynquot-extensibility"></a>Rozšiřitelnost platformy&quot;kompilátoru .NET (Roslyn)&quot;
+Hlavním posláním platformy kompilátoru .NET ("Roslyn") je otevření kompilátorů jazyka C# a Visual Basic a umožnění nástrojům a vývojářům sdílet bohaté informace, které mají kompilátory o programech. Nástroje pro analýzu kódu zlepšují kvalitu kódu a generátory kódu pomáhají při konstrukci aplikací. Jak se nástroje zpřesňují, potřebují přístup k více a více znalostem hlubokého kódu, které mají pouze kompilátory. Namísto neprůhledných překladačů (zdrojový kód a kód objektu out), kompilátory Roslyn nabízejí api, které můžete použít pro úlohy související s kódem ve vašich nástrojích a aplikacích.
 
- Nejlepší je, že kompilátory Roslyn, jejich rozhraní API, ukázky a názorné postupy a nástroje postavené na těchto rozhraní API jsou všechny plně open source v [github.com/dotnet/roslyn](https://github.com/dotnet/Roslyn). Přejděte na web OSS a další informace a začít pracovat s Roslyn. Najdete odkazy na získat všechny nejnovější C# a funkcí Visual Basic, které vám můžou pomoct koncovým uživatelem, jakož i odkazy začít jako nástroj Tvůrce využívají Roslyn API.
+ Nejlepší na tom je, že kompilátory Roslyn, jejich api, ukázky a návody a skutečné nástroje postavené na těchto apich jsou plně open source na [github.com/dotnet/roslyn](https://github.com/dotnet/Roslyn). Prosím, přejděte na stránky OSS se dozvědět více a začít s Roslyn. Najdete odkazy získat nejnovější c# a visual basic funkce, které můžete použít jako koncový uživatel, stejně jako odkazy, jak začít jako tvůrce nástrojů využití roslyn rozhraní API.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Začínáme s analyzátory Roslyn](../extensibility/getting-started-with-roslyn-analyzers.md)

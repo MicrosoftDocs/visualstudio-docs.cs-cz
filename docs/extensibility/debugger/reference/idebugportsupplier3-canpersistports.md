@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier3::CanPersistPorts | Dokumentace Microsoftu
+title: IDebugPortSupplier3::CanPersistPorts | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPortSupplier3::CanPersistPorts
 ms.assetid: 4127760c-e602-4e86-9232-457e382a52c7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 11bc6e21e8b70a5bd95c001f4173a7da3f3fe4be
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2bf436d788b517300bee9a13b66b0ca3747bcc43
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66340061"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80724458"
 ---
 # <a name="idebugportsupplier3canpersistports"></a>IDebugPortSupplier3::CanPersistPorts
-Tato metoda určuje, zda dodavatele portu můžete zachovaly porty (je zápis na disk) mezi vyvolání ladicího programu.
+Tato metoda určuje, zda dodavatel portu může zachovat porty (zápisem na disk) mezi vyvolání ladicího programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,13 +36,13 @@ int CanPersistPorts();
 ```
 
 ## <a name="parameters"></a>Parametry
- Žádné
+ Žádné.
 
 ## <a name="return-value"></a>Návratová hodnota
- `S_OK` Pokud porty můžete nastavit jako trvalý, nebo `S_FALSE` k označení, že porty nelze nastavit jako trvalý.
+ `S_OK`pokud porty mohou být `S_FALSE` trvalé, nebo označit, že porty nelze trvalé.
 
 ## <a name="remarks"></a>Poznámky
- Pokud dodavatele portu můžete zachovat porty, měl by to dělat, když je zničen a při vytváření její instance znovu je načtěte.
+ Pokud dodavatel portu může zachovat porty, by měl tak učinit, když je zničen a potom znovu načíst, když je vytvořena instance znovu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugPortSupplier3](../../../extensibility/debugger/reference/idebugportsupplier3.md)

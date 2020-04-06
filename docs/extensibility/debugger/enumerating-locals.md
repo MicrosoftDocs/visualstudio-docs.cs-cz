@@ -1,47 +1,47 @@
 ---
-title: Vytváření výčtu lokální | Dokumentace Microsoftu
+title: Výčet místních obyvatel | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], enumerating locals
 - expression evaluation, enumerating locals
 ms.assetid: 254a88e7-d3a7-447a-bd0c-8985e73d85cf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32700d32b65503cf696b180793e0d9d471571b0a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 540c062d3d4f73a5468b39629fc277e6fd10df7d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315460"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738868"
 ---
-# <a name="enumerate-locals"></a>Vytvořit výčet místních hodnot
+# <a name="enumerate-locals"></a>Vyjmenovat místní obyvatele
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka Chyba při vyhodnocování výrazu spravované](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
-Když je připraven k naplnění sady Visual Studio **lokální** okně, které volá [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) na [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objekt vrácený z [ GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) (viz [implementace GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md)). `IDebugProperty2::EnumChildren` Vrátí [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) objektu.
+Když Visual Studio je připraven k naplnění **locals** okno, volá [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) na [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objektvrácený z [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) (viz [Implementace GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md)). `IDebugProperty2::EnumChildren`vrátí objekt [IEnumDebugProperty2.](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)
 
-Implementace `IDebugProperty2::EnumChildren` provádí následující úlohy:
+Implementace `IDebugProperty2::EnumChildren` provádí následující úkoly:
 
-1. Zajišťuje, že to je představující metodu.
+1. Zajišťuje, že to představuje metodu.
 
-2. Používá `guidFilter` argument určit, která metoda se má volat [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) objektu. Pokud `guidFilter` rovná:
+2. Používá `guidFilter` argument k určení, která metoda má být volána na objekt [IDebugMethodField.](../../extensibility/debugger/reference/idebugmethodfield.md) Pokud `guidFilter` se rovná:
 
-    1. `guidFilterLocals`, volání [EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) získat [IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md) objektu.
+    1. `guidFilterLocals`, volejte [EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) získat objekt [IEnumDebugFields.](../../extensibility/debugger/reference/ienumdebugfields.md)
 
-    2. `guidFilterArgs`, volání [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) získat `IEnumDebugFields` objektu.
+    2. `guidFilterArgs`, volání [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) `IEnumDebugFields` získat objekt.
 
-    3. `guidFilterLocalsPlusArgs`, syntetizace výčet, který kombinuje výsledky z `IDebugMethodField::EnumLocals` a `IDebugMethodField::EnumArguments`. Tato syntézu je reprezentován třídou `CEnumMethodField`.
+    3. `guidFilterLocalsPlusArgs`, syntetizovat výčet, který kombinuje `IDebugMethodField::EnumLocals` `IDebugMethodField::EnumArguments`výsledky z a . Tato syntéza je `CEnumMethodField`reprezentována třídou .
 
-3. Vytvoří instanci třídy (volá `CEnumPropertyInfo` v tomto příkladu), který implementuje `IEnumDebugPropertyInfo2` rozhraní a obsahuje `IEnumDebugFields` objektu.
+3. Konitekátuje `CEnumPropertyInfo` třídu (volanou `IEnumDebugPropertyInfo2` v tomto `IEnumDebugFields` příkladu), která implementuje rozhraní a obsahuje objekt.
 
 4. Vrátí `IEnumDebugProperty2Info2` rozhraní z `CEnumPropertyInfo` objektu.
 
 ## <a name="managed-code"></a>Spravovaný kód
-Tento příklad ukazuje implementaci `IDebugProperty2::EnumChildren` ve spravovaném kódu.
+Tento příklad ukazuje `IDebugProperty2::EnumChildren` implementaci ve spravovaném kódu.
 
 ```csharp
 namespace EEMC
@@ -120,7 +120,7 @@ namespace EEMC
 ```
 
 ## <a name="unmanaged-code"></a>Nespravovaný kód
- Tento příklad ukazuje implementaci `IDebugProperty2::EnumChildren` v nespravovaném kódu.
+ Tento příklad ukazuje `IDebugProperty2::EnumChildren` implementaci v nespravovaném kódu.
 
 ```cpp
 STDMETHODIMP CFieldProperty::EnumChildren(
@@ -245,7 +245,7 @@ STDMETHODIMP CFieldProperty::EnumChildren(
 }
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Ukázková implementace místních hodnot](../../extensibility/debugger/sample-implementation-of-locals.md)
-- [Implementace GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md)
-- [Kontext vyhodnocení](../../extensibility/debugger/evaluation-context.md)
+## <a name="see-also"></a>Viz také
+- [Ukázková implementace místních obyvatel](../../extensibility/debugger/sample-implementation-of-locals.md)
+- [Implementovat vlastnost GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md)
+- [Souvislosti hodnocení](../../extensibility/debugger/evaluation-context.md)

@@ -1,28 +1,28 @@
 ---
-title: IDebugGenericFieldInstance::TypeArgumentCount | Dokumentace Microsoftu
+title: IDebugGenericFieldInstance::TypeArgumentCount | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - TypeArgumentCount
 - IDebugGenericFieldInstance::TypeArgumentCount
 ms.assetid: e662c5ea-a5c1-478e-a268-5980dadffcd1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 89f1a92cc5e595bd2574174f0d0776c6605e42da
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0f0272e86f5c1bbbd840ee222b2048440338302d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337015"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728150"
 ---
 # <a name="idebuggenericfieldinstancetypeargumentcount"></a>IDebugGenericFieldInstance::TypeArgumentCount
-Vrátí číslo typu parametru argumenty pro tuto instanci.
+Vrátí počet argumentů parametru typu pro tuto instanci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,13 +40,13 @@ int TypeArgumentCount(
 
 ## <a name="parameters"></a>Parametry
 `pcArgs`\
-[out v] Počet argumentů pro parametr typu pro tuto instanci.
+[dovnitř, ven] Počet argumentů parametru typu pro tuto instanci.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Například pokud seznam\<int >, tato metoda vrátí hodnotu 1 a pokud je seznam\<int, float2 > Tato metoda vrátí hodnotu 2. Tato metoda vrátí hodnotu 0, pokud nejsou žádné argumenty typu.
+ Například pokud\<List int>, tato metoda vrátí\<1 a pokud List int,float2> tato metoda vrátí 2. Tato metoda vrátí 0, pokud neexistují žádné argumenty typu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)

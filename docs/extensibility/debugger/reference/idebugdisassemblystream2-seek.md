@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::Seek | Dokumentace Microsoftu
+title: IDebugDisassemblyStream2::Seek | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDisassemblyStream2::Seek
 ms.assetid: afec3008-b1e0-4803-ad24-195dbfb6497e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e97da5b4b65b18c9d4c745dea2cb5f0915862731
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4954b3b278b3c7a6b798a4ffda3856ab8bb200c1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310359"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732084"
 ---
 # <a name="idebugdisassemblystream2seek"></a>IDebugDisassemblyStream2::Seek
-Přesune ukazatel čtení ve službě stream zpětný překlad daný počet instrukcí vzhledem k zadané pozici.
+Přesune ukazatel pro čtení v datovém proudu demontáže o daný počet instrukcí vzhledem k zadané poloze.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,24 +47,24 @@ int Seek( 
 
 ## <a name="parameters"></a>Parametry
 `dwSeekStart`\
-[in] Hodnota z [SEEK_START](../../../extensibility/debugger/reference/seek-start.md) výčet, který určuje relativní umístění a spusťte proces hledání.
+[v] Hodnota z [SEEK_START](../../../extensibility/debugger/reference/seek-start.md) výčtu, který určuje relativní pozici zahájit proces hledání.
 
 `pCodeContext`\
-[in] [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) představující kontext kódu, který je operace seek vzhledem k objektu. Tento parametr se používá jenom v případě `dwSeekStart`  =  `SEEK_START_CODECONTEXT`; v opačném případě tento parametr je ignorován a může mít hodnotu null.
+[v] [Objekt IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) představující kontext kódu, ke kterému je operace hledání relativní. Tento parametr se `dwSeekStart`  =  `SEEK_START_CODECONTEXT`používá pouze v případě ; v opačném případě je tento parametr ignorován a může být nulovou hodnotou.
 
 `uCodeLocationId`\
-[in] Identifikátor umístění kódu, který je operace seek vzhledem k. Tento parametr se používá, pokud `dwSeekStart`  =  `SEEK_START_CODELOCID`; v opačném případě tento parametr je ignorován a je možné nastavit na hodnotu 0. V části poznámky [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md) metoda popis identifikátor umístění kódu.
+[v] Identifikátor umístění kódu, který je vzhledem k operaci hledání. Tento parametr se `dwSeekStart`  =  `SEEK_START_CODELOCID`použije, pokud ; v opačném případě je tento parametr ignorován a lze jej nastavit na hodnotu 0. Popis identifikátoru umístění kódu naleznete v části Poznámky u metody [GetCodeLocationId.](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md)
 
 `iInstructions`\
-[in] Počet instrukcí přesunout vzhledem k pozice zadané v `dwSeekStart`. Tato hodnota může být záporná hodnota, při přesunutí zpětně.
+[v] Počet pokynů k přesunutí vzhledem k `dwSeekStart`poloze určené v . Tato hodnota může být záporná pro posun dozadu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud hledání pozice na místo mimo seznamu k dispozici pokyny. V opačném případě vrátí kód chyby.
+ Pokud je `S_OK`úspěšná, vrátí . Vrátí, `S_FALSE` pokud byla pozice hledání do bodu mimo seznam dostupných pokynů. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pokud bylo hledání pozice před začátek seznamu, pozici pro čtení je nastaven na první instrukce v seznamu. Pokud se na místo na konci seznamu, pozici pro čtení nastavená na poslední instrukce v seznamu.
+ Pokud hledání bylo na pozici před začátkem seznamu, pozice pro čtení je nastavena na první instrukce v seznamu. Pokud see byl na pozici po skončení seznamu, pozice pro čtení je nastavena na poslední instrukce v seznamu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)
 - [SEEK_START](../../../extensibility/debugger/reference/seek-start.md)
 - [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

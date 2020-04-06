@@ -1,5 +1,5 @@
 ---
-title: Odkazovat na Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Referenční prvek (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Reference element [Visual Studio templates]
 - <Reference> element [Visual Studio templates]
 ms.assetid: 852772ea-c324-42e9-8c8a-6d565414a109
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 46c9cbde1186a0dd764c3075ef1566eb1fd5ea07
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 11d893f6268a69172d27a0f7caee707767abfe89
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334391"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701628"
 ---
-# <a name="reference-element-visual-studio-templates"></a>Reference – element (šablony sady Visual Studio)
-Určuje odkaz na sestavení přidat, pokud je položka přidána do projektu.
+# <a name="reference-element-visual-studio-templates"></a>Referenční prvek (šablony sady Visual Studio)
+Určuje odkaz na sestavení, který má být přidán při přidání položky do projektu.
 
- \<Vstemplate – > \<TemplateContent > \<odkazy > \<odkaz >
+ \<VSTemplate \<> TemplateContent \<> \<odkazy> referenční>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,31 +34,31 @@ Určuje odkaz na sestavení přidat, pokud je položka přidána do projektu.
 </Reference>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Assembly](../extensibility/assembly-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Určuje informace o sestavení, který používá šablonu přidáte odkaz na toto sestavení do projektů. Musí obsahovat jeden `Assembly` element v každé `Reference` elementu.|
+|[Sestavení](../extensibility/assembly-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Určuje informace o sestavení, které šablona používá k přidání odkazu na toto sestavení do projektů. V každém `Reference` `Assembly` prvku musí být jeden prvek.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Odkazy](../extensibility/references-element-visual-studio-templates.md)|Seskupuje odkazy na sestavení, které šablona přidá do projektů.|
+|[Odkazy](../extensibility/references-element-visual-studio-templates.md)|Seskupí odkazy na sestavení, které šablona přidá k projektům.|
 
 ## <a name="remarks"></a>Poznámky
- `Reference` je vyžadovaný podřízený prvek `References`.
+ `Reference`je povinnýpodřízený `References`prvek .
 
- `Reference` a `References` prvky lze použít pouze v *.vstemplate* soubory, které mají `Type` hodnotu atributu `Item`.
+ `Reference` Prvky `References` a lze použít pouze v souborech `Type` *.vstemplate,* které mají hodnotu atributu `Item`.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, `TemplateContent` elementu šablony položky. Přidá odkazy na tato konfigurace XML *System.dll* a *System.Data.dll* sestavení.
+ Následující příklad ilustruje `TemplateContent` prvek šablony položky. Tento jazyk XML přidává odkazy na sestavení *System.dll* a *System.Data.dll.*
 
 ```xml
 <TemplateContent>
@@ -78,6 +78,6 @@ Určuje odkaz na sestavení přidat, pokud je položka přidána do projektu.
 </TemplateContent>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

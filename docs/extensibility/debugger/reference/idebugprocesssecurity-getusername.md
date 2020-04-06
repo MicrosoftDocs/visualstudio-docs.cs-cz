@@ -1,24 +1,24 @@
 ---
-title: IDebugProcessSecurity::GetUserName | Dokumentace Microsoftu
+title: IDebugProcessSecurity::GetUserName | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugProcessSecurity::GetUserName
 ms.assetid: c73c60ac-da6e-45ae-8f04-95353a24ca3e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a42b67eb3fd308011bf725f8dd7e24a4d9ddca6f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ef00a0b7489c3e5cb709520546f3d3f26c8a4eba
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311527"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723255"
 ---
 # <a name="idebugprocesssecuritygetusername"></a>IDebugProcessSecurity::GetUserName
 Získá uživatelské jméno od dodavatele portu.
@@ -42,10 +42,10 @@ int GetUserName (
 [out] Řetězec obsahující uživatelské jméno.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud metoda uspěje, vrátí `S_OK`. V opačném případě vrátí kód chyby.
+ Pokud je metoda úspěšná, vrátí `S_OK`. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- `GetUserName` Vrátí uživatelské jméno, které se zobrazí **uživatelské jméno** sloupec **připojit k procesu** dialogové okno. Chcete-li zobrazit **připojit k procesu** dialogové okno, klikněte na tlačítko **připojit k procesu** na **nástroje** v nabídce [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE).
+ `GetUserName`vrátí uživatelské jméno zobrazené ve sloupci **Uživatelské jméno** dialogového okna Připojit **k procesu.** Chcete-li zobrazit dialogové okno **Připojit k procesu,** klepněte na **tlačítko Připojit k procesu** v nabídce **Nástroje** v integrovaném vývojovém [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] prostředí (IDE).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

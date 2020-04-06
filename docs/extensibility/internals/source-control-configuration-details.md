@@ -1,56 +1,56 @@
 ---
-title: Podrobnosti o konfiguraci správy zdrojového kódu | Microsoft Docs
+title: Podrobnosti konfigurace správy zdrojového kódu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], configuration details
 ms.assetid: adbee9fc-7a2e-4abe-a3b8-e6615bcd797f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0a6c51dfe4ad9378af04da61dbd7e9011c4678f1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7cf4a5c55e8093e5dcd6406cde1c60f642188495
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72723799"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80705284"
 ---
 # <a name="source-control-configuration-details"></a>Podrobnosti konfigurace správy zdrojového kódu
-Aby bylo možné implementovat správu zdrojového kódu, je nutné správně nakonfigurovat systém projektu nebo editor, aby bylo možné provést následující akce:
+Chcete-li implementovat správou zdrojového kódu, je třeba správně nakonfigurovat systém nebo editor projektu takto:
 
-- Požádat o oprávnění k přechodu na změněný stav
+- Požádat o povolení k přechodu do změněného stavu
 
-- Požádat o oprávnění k uložení souboru
+- Žádost o oprávnění k uložení souboru
 
-- Požádat o oprávnění k přidání, odebrání nebo přejmenování souborů v projektu
+- Žádost o oprávnění k přidání, odebrání nebo přejmenování souborů v projektu
 
-## <a name="request-permission-to-transition-to-changed-state"></a>Požádat o oprávnění k přechodu na změněný stav
- Projekt nebo editor musí požádat o oprávnění k přechodu do změněného (nečistého) stavu voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>. Každý editor, který implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData.IsDocDataDirty%2A> musí volat <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> a přijmout schválení pro změnu dokumentu z prostředí před vrácením `True` pro <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData.IsDocDataDirty%2A>. Projekt je v podstatě editor pro soubor projektu a výsledkem je stejná zodpovědnost za implementaci sledování změny stavu projektu jako textový editor pro jeho soubory. Prostředí zpracovává změněný stav řešení, ale je nutné zpracovat změněný stav libovolného objektu, který řešení odkazuje, ale neukládá, jako soubor projektu nebo jeho položky. Obecně platí, že pokud je váš projekt nebo editor zodpovědný za správu trvalosti položky, zodpovídá za implementaci sledování stavu změny.
+## <a name="request-permission-to-transition-to-changed-state"></a>Požádat o oprávnění k přechodu do změněného stavu
+ Projekt nebo editor musí požádat o oprávnění k přechodu do změněného (dirty) stavu voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>. Každý editor, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData.IsDocDataDirty%2A> který <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> implementuje musí volat a přijímat schválení `True` <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData.IsDocDataDirty%2A>změnit dokument z prostředí před návratem pro . Projekt je v podstatě editor pro soubor projektu a jako výsledek má stejnou odpovědnost za implementaci sledování změněného stavu pro soubor projektu jako textový editor pro jeho soubory. Prostředí zpracovává změněný stav řešení, ale je nutné zpracovat změněný stav libovolného objektu, na který řešení odkazuje, ale neukládá, jako je soubor projektu nebo jeho položky. Obecně platí, že pokud váš projekt nebo editor je zodpovědný za správu trvalosti pro položku, pak je zodpovědný za implementaci sledování změněného stavu.
 
- V reakci na volání `IVsQueryEditQuerySave2::QueryEditFiles` může prostředí provádět následující akce:
+ V reakci `IVsQueryEditQuerySave2::QueryEditFiles` na volání prostředí může provést následující:
 
-- Zamítnout volání ke změně. v takovém případě musí Editor nebo projekt zůstat ve stavu Unchanged (Clean).
+- Odmítnout volání změnit, v takovém případě editor nebo projekt musí zůstat v nezměněném (čistém) stavu.
 
-- Označuje, že se data dokumentu mají znovu načíst. V případě projektu prostředí znovu nasadí data projektu. Editor musí znovu načíst data z disku prostřednictvím implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.ReloadDocData%2A>. V obou případech se kontext v projektu nebo editoru může změnit, když jsou data znovu načtena.
+- Označte, že data dokumentu by měla být znovu načtena. Pro projekt prostředí znovu načte data pro projekt. Editor musí znovu načíst data <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.ReloadDocData%2A> z disku prostřednictvím jeho implementace. V obou případech kontext v projektu nebo editoru můžete změnit při opětovném načtení dat.
 
-  Je to složitá a obtížná úloha pro zpětnému pozměněníí příslušných `IVsQueryEditQuerySave2::QueryEditFiles` volání do stávající základny kódu. V důsledku toho by tato volání měla být integrována během vytváření projektu nebo editoru.
+  Jedná se o složitý a obtížný `IVsQueryEditQuerySave2::QueryEditFiles` úkol dovybavit odpovídající volání na existující základ kódu. V důsledku toho by tyto výzvy měly být integrovány při vytváření projektu nebo editoru.
 
-## <a name="request-permission-to-save-a-file"></a>Požádat o oprávnění k uložení souboru
- Před tím, než projekt nebo editor uloží soubor, musí volat <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFile%2A> nebo <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A>. Pro soubory projektu jsou tato volání automaticky dokončena řešením, které ví, kdy uložit soubor projektu. Editory jsou zodpovědné za provedení těchto volání, pokud Editor implementace `IVsPersistDocData2` nepoužívá pomocnou funkci <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SaveDocDataToFile%2A>. Pokud editor implementuje `IVsPersistDocData2` tímto způsobem, pak volání `IVsQueryEditQuerySave2::QuerySaveFile` nebo `IVsQueryEditQuerySave2::QuerySaveFiles` je provedeno za vás.
+## <a name="request-permission-to-save-a-file"></a>Žádost o oprávnění k uložení souboru
+ Před uložením souboru musí projekt nebo <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFile%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A>editor volat nebo . U souborů projektu jsou tato volání automaticky dokončena řešením, které ví, kdy uložit soubor projektu. Editory jsou odpovědné za provádění těchto `IVsPersistDocData2` volání, pokud <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SaveDocDataToFile%2A>editor implementace používá pomocnou funkci . Pokud váš editor `IVsPersistDocData2` implementuje tímto `IVsQueryEditQuerySave2::QuerySaveFile` způsobem, pak volání nebo `IVsQueryEditQuerySave2::QuerySaveFiles` je za vás.
 
 > [!NOTE]
-> Tyto výzvy vždy provedete bez přerušení – tedy v době, kdy je váš Editor schopný přijmout zrušení.
+> Vždy uskutečujte tato volání preventivně – to znamená v době, kdy editor může přijímat zrušení.
 
-## <a name="request-permission-to-add-remove-or-rename-files-in-the-project"></a>Požádat o oprávnění k přidání, odebrání nebo přejmenování souborů v projektu
- Předtím, než projekt může přidat, přejmenovat nebo odebrat soubor nebo adresář, musí volat příslušnou metodu `IVsTrackProjectDocuments2::OnQuery*` pro vyžádání oprávnění z prostředí. Pokud je uděleno oprávnění, projekt musí dokončit operaci a poté zavolat příslušnou metodu `IVsTrackProjectDocuments2::OnAfter*` pro informování prostředí, že operace byla dokončena. Projekt musí volat metody rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> pro všechny soubory (například speciální soubory) a ne pouze nadřazené soubory. Volání souborů jsou povinná, ale volání adresáře jsou volitelná. Pokud má váš projekt informace o adresáři, pak by měl volat příslušné <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> metody, ale pokud tyto informace neobsahuje, bude prostředí odvodit informace o adresáři.
+## <a name="request-permission-to-add-remove-or-rename-files-in-the-project"></a>Žádost o oprávnění k přidání, odebrání nebo přejmenování souborů v projektu
+ Před přidáním, přejmenováním nebo odebráním souboru nebo adresáře musí projekt zavolat příslušnou `IVsTrackProjectDocuments2::OnQuery*` metodu a požádat o oprávnění z prostředí. Pokud je uděleno oprávnění, pak projekt musí dokončit `IVsTrackProjectDocuments2::OnAfter*` operaci a potom volání příslušné metody upozornit prostředí, že operace je dokončena. Projekt musí volat metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> rozhraní pro všechny soubory (například speciální soubory) a nikoli pouze nadřazené soubory. Volání souborů jsou povinná, ale volání adresáře jsou volitelná. Pokud projekt obsahuje informace o adresáři, <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> měl by volat příslušné metody, ale pokud tyto informace nemá, bude prostředí odvodit informace o adresáři.
 
- Projekt by neměl volat metody `IVsTrackProjectDocuments2` v projektu otevřít nebo zavřít. Naslouchací procesy, které chtějí tyto informace při spuštění, můžou počkat na událost <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenSolution%2A> a iterovat přes řešení, aby našli informace, které potřebují. Při vypnutí se tyto informace nevyžadují. `IVsTrackProjectDocuments2` k dispozici z <xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackProjectDocuments>.
+ Projekt by neměl volat `IVsTrackProjectDocuments2` metody při otevření nebo zavření projektu. Naslouchací procesy, které <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenSolution%2A> chtějí tyto informace při spuštění můžete čekat na událost a iterovat prostřednictvím řešení najít informace, které potřebují. Při vypnutí nejsou tyto informace potřeba. `IVsTrackProjectDocuments2`je poskytována <xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackProjectDocuments>z .
 
- Pro každou akci přidání, přejmenování a odebrání je k dispozici `OnQuery*` metoda a metoda `OnAfter*`. Voláním metody `OnQuery*` můžete požádat o oprávnění k přidání, přejmenování nebo odebrání souboru nebo adresáře. Po přidání, přejmenování nebo odebrání souboru nebo adresáře volejte metodu `OnAfter*` a stav projektu odpovídá novému stavu.
+ Pro každou akci přidání, přejmenování a `OnQuery*` odebrání existuje `OnAfter*` metoda a metoda. Volání `OnQuery*` maješku požádat o oprávnění k přidání, přejmenování nebo odebrání souboru nebo adresáře. Volání `OnAfter*` metody po souboru nebo adresáře byla přidána, přejmenována nebo odebrána a stav projektu odráží nový stav.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFile%2A>

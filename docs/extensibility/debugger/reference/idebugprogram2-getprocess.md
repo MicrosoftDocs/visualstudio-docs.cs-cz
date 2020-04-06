@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::GetProcess | Dokumentace Microsoftu
+title: IDebugProgram2::GetProcess | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgram2::GetProcess
 ms.assetid: 1d602485-ebaf-451c-9165-f2e226f20a90
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b307fb7b4a25fc5a84b30eefd65e72b4f387a07d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: aca1842e92e7e1c164a6468e6c1e94a352ef67c0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313764"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722793"
 ---
 # <a name="idebugprogram2getprocess"></a>IDebugProgram2::GetProcess
-Získáte, na kterém tento program běží v procesu.
+Získejte proces, ve které je tento program spuštěn.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,17 +41,17 @@ int GetProcess(
 
 ## <a name="parameters"></a>Parametry
 `ppProcess`\
-[out] Vrátí [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) rozhraní, které představuje proces.
+[out] Vrátí rozhraní [IDebugProcess2,](../../../extensibility/debugger/reference/idebugprocess2.md) které představuje proces.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pokud ladicí stroj (DE) implementuje [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md) rozhraní, je DE implementace této metody by měla vždy vrátit `E_NOTIMPL` protože Zavedenými nedokáže určit, který proces běží v aplikaci a proto nelze splňovat implementace této metody.
+ Pokud ladicí modul (DE) implementuje rozhraní [IDebugEngineLaunch2,](../../../extensibility/debugger/reference/idebugenginelaunch2.md) de implementace `E_NOTIMPL` této metody by měla vždy vrátit, protože DE nelze určit, který proces je spuštěn v a proto nemůže uspokojit implementaci této metody.
 
- Implementace `IDebugEngineLaunch2` rozhraní znamená, že je DE musí vědět, jak vytvořit proces; proto, Německo provádění [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) je schopen vědět, jaký proces běží v rozhraní.
+ Implementace `IDebugEngineLaunch2` rozhraní znamená, že DE musí vědět, jak vytvořit proces; proto de implementace rozhraní [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) je schopen vědět, jaký proces je spuštěn v.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)

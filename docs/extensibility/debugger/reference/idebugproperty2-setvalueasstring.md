@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::SetValueAsString | Dokumentace Microsoftu
+title: Vlastnost IDebugProperty2::SetValueAsString | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty2::SetValueAsString
 ms.assetid: 9e6a5054-41b7-4223-b509-b93689d366a5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 27b481165cf95a97d7674d52d8553426dfb6417c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 112ded163f38b93e9918387d8ca6beafb8282647
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314597"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721238"
 ---
 # <a name="idebugproperty2setvalueasstring"></a>IDebugProperty2::SetValueAsString
-Nastaví hodnotu vlastnosti ze zadaného řetězce.
+Nastaví hodnotu vlastnosti z daného řetězce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,21 +45,21 @@ int SetValueAsString ( 
 
 ## <a name="parameters"></a>Parametry
 `pszValue`\
-[in] Řetězec obsahující hodnotu, která se má nastavit.
+[v] Řetězec obsahující hodnotu, která má být nastavena.
 
 `nRadix`\
-[in] Základ, který se má použít při interpretaci jakékoli číselné informace. To může být 0 pokusí automaticky zjistit základ číselné soustavy.
+[v] Radix, který se použije při interpretaci jakýchkoli číselných informací. To může být 0 pokusit se určit radix automaticky.
 
 `dwTimeout`\
-[in] Určuje maximální dobu (v milisekundách) čekání před návratem z této metody. Použití `INFINITE` čekat po neomezenou dobu.
+[v] Určuje maximální dobu v milisekundách, po kterou se má čekat před návratem z této metody. Slouží `INFINITE` k čekání na neurčito.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. V následující tabulce jsou uvedeny další možné hodnoty.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. V následující tabulce jsou uvedeny další možné hodnoty.
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|`E_SETVALUE_VALUE_CANNOT_BE_SET`|Řetězec se nedá převést na hodnotu vlastnosti nebo nelze nastavit hodnotu vlastnosti.|
+|`E_SETVALUE_VALUE_CANNOT_BE_SET`|Řetězec nelze převést na hodnotu vlastnosti nebo nelze nastavit hodnotu vlastnosti.|
 |`E_SETVALUE_VALUE_IS_READONLY`|Vlastnost je jen pro čtení.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

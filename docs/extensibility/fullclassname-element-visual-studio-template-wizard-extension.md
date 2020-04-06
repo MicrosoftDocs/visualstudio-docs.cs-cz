@@ -1,5 +1,5 @@
 ---
-title: Fullclassname – element (rozšíření Průvodce pro šablony VS)
+title: Element FullClassName (rozšíření průvodce šablonou VS)
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -8,22 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - FullClassName element [Visual Studio project template]
 ms.assetid: 651e1010-d529-4856-85ff-c77ceca5d2ed
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 63b7e480944e8f5519db1c9cfd123c07a0cf6208
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3e533fdf5b5497b17949581801721136b18bc2d1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342632"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711421"
 ---
-# <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>Fullclassname – element (rozšíření Průvodce pro šablony sady Visual Studio)
-Plně kvalifikovaný název třídy, která implementuje `IWizard` rozhraní.
+# <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>Element FullClassName (rozšíření průvodce šablonou sady Visual Studio)
+Plně kvalifikovaný název třídy, která `IWizard` implementuje rozhraní.
 
- \<Vstemplate – > \<WizardExtension >... \<FullClassName>
+ \<vstemplate \<> rozšíření> ... \<FullClassName>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,31 +31,31 @@ Plně kvalifikovaný název třídy, která implementuje `IWizard` rozhraní.
 <FullClassName>ClassName</FullClassName>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Obsahuje elementy registrace pro přizpůsobení Průvodce šablonou.|
+|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Obsahuje registrační prvky pro přizpůsobení průvodce šablonou.|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Tento text určuje třídu, která implementuje `IWizard` rozhraní. Zadaná třída musí existovat v sestavení určeném parametrem [sestavení](../extensibility/assembly-element-visual-studio-template-wizard-extension.md) elementu.
+ Tento text určuje třídu, `IWizard` která implementuje rozhraní. Zadaná třída musí existovat v sestavení určeném elementem [Assembly.](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)
 
 ## <a name="remarks"></a>Poznámky
- `FullClassName` je vyžadovaný podřízený prvek `WizardExtension`.
+ `FullClassName`je povinnýpodřízený `WizardExtension`prvek .
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metadata pro šablony standardní projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikace Windows.
+ Následující příklad ilustruje metadata pro standardní šablonu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu pro aplikaci systému Windows.
 
 ```
 <VSTemplate Version="3.0.0" Type="Item"
@@ -85,7 +85,7 @@ Plně kvalifikovaný název třídy, která implementuje `IWizard` rozhraní.
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Postupy: Použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md)
+- [Postup: Použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md)

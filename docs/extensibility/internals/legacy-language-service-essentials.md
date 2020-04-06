@@ -1,5 +1,5 @@
 ---
-title: Základy služby starší verze jazyka | Dokumentace Microsoftu
+title: Základy starších jazykových služeb | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,41 +8,41 @@ helpviewer_keywords:
 - Visual Studio, integrating programming languages
 - programming languages, integrating into Visual Studio
 ms.assetid: c15e0ccb-e7c5-4dbb-affb-fe3d3244debe
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6259adde14f6579b43d63adc44a66b02aea3957f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 501bccf755293e86e8a9dc23fce125a10c882376
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344894"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707427"
 ---
 # <a name="legacy-language-service-essentials"></a>Základy služby starší verze jazyka
-Služba jazyka pro integraci programovací jazyk do sady Visual Studio je nutné zadat. Toto téma popisuje funkce dostupné ve službě starší verze jazyka services.
+Je nutné poskytnout jazykovou službu pro integraci programovacího jazyka do sady Visual Studio. Toto téma vysvětluje funkce dostupné ve službách starších jazyků.
 
- Služby starší verze jazyka jsou implementovány jako součást sady VSPackage, ale novější způsob implementace funkce služba jazyka je pro použití rozšíření MEF. Další informace o nový způsob implementace služby jazyka najdete v tématu [Editor a rozšíření služeb jazyka](../../extensibility/editor-and-language-service-extensions.md).
+ Starší jazykové služby jsou implementovány jako součást VSPackage, ale novější způsob implementace funkcí služby jazyka je použití rozšíření MEF. Další informace o novém způsobu implementace jazykové služby naleznete v [tématu Editor and Language Service Extensions](../../extensibility/editor-and-language-service-extensions.md).
 
 > [!NOTE]
-> Doporučujeme vám, že začnete používat nový editor API co nejdříve. Tím vylepšíme výkonu vaší služby jazyka a umožňují využívat nové funkce editoru.
+> Doporučujeme, abyste co nejdříve začali používat nové rozhraní API editoru. Tím se zlepší výkon služby jazyka a umožní vám využít nové funkce editoru.
 
- Starší verze jazyka služby poskytují následující funkce:
+ Služby starších jazyků poskytují následující funkce:
 
 |Funkce|Popis|
 |-------------|-----------------|
-|Barevné zvýrazňování syntaxe|Způsobí, že zobrazení editoru pro zobrazení různé barvy a styly písem definované pro různé prvky jazyka. Toto rozlišení usnadní číst a upravovat soubory.<br /><br /> Obecné informace najdete v tématu [barevné zvýraznění syntaxe ve službě starší verze jazyka](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md).<br /><br /> Informace o této funkci v rámci spravovaného balíčku (MPF) najdete v tématu [barevné zvýrazňování syntaxe ve službě starší verze jazyka](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md).|
-|Dokončování příkazů|Dokončení příkazu nebo klíčové slovo, že uživatel začal psát. Doplňování výrazů pomáhají uživatelům snadněji, zadejte obtížné příkazy s kratším a méně pravděpodobnost chyby.<br /><br /> Obecné informace najdete v tématu [dokončování příkazů ve službě starší verze jazyka](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md).<br /><br /> Informace o této funkci ve MPF najdete v tématu [dokončování slov ve službě starší verze jazyka](../../extensibility/internals/word-completion-in-a-legacy-language-service.md).|
-|Párování závorek|Stručný přehled spárovaná znaky, jako jsou složené závorky. Když uživatel zadá znak pravé, jako "}", párování složených závorek zvýrazní odpovídající počáteční znak, například "{". Když existuje několik úrovní nadřazené znaků, tato funkce pomáhá uživatelům potvrďte, že jsou správně spárované ohraničující znaků.<br /><br /> Informace o této funkci ve MPF najdete v tématu [závorky ve službě starší verze jazyka](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md).|
-|Informace o popisy parametrů|Zobrazí seznam možných podpisy pro přetíženou metodu, která je aktuálně zadání uživatele.<br /><br /> Obecné informace najdete v tématu [informace o parametrech ve službě starší verze jazyka](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md).<br /><br /> Informace o této funkci ve MPF najdete v tématu [informace o parametrech ve službě starší verze jazyka](../../extensibility/internals/parameter-info-in-a-legacy-language-service2.md).|
-|Označování chyb|Zobrazí červenou vlnovkou, označované také jako podtržení, v části textu, který je syntakticky nesprávný. Označování chyb se obvykle používají, aby vědět, překlepy v klíčových slovech, neuzavřený závorky, neplatné znaky a podobné chyby uživatele.<br /><br /> Ve třídách MPF označování chyb jsou zpracovány v automaticky <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddError%2A> metodu <xref:Microsoft.VisualStudio.Package.AuthoringSink> třídy.|
+|Zbarvení syntaxe|Způsobí, že zobrazení editoru zobrazí různé barvy a styly písma pro různé prvky jazyka. Tato diferenciace může usnadnit čtení a úpravy souborů.<br /><br /> Obecné informace naleznete [v tématu Syntax coloring in a Legacy Language Service](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md).<br /><br /> Informace o této funkci v rámci spravovaného balíčku (MPF) naleznete [v tématu Syntax colorizing in a Legacy Language Service](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md).|
+|Dokončení výkazu|Dokončí příkaz nebo klíčové slovo, které uživatel začal psát. Dokončování příkazů pomáhá uživatelům zadávat obtížné příkazy snadněji, s menším počtem psaní a menšími šancemi na chybu.<br /><br /> Obecné informace naleznete [v tématu Dokončení výkazu ve službě starší verze jazyka](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md).<br /><br /> Informace o této funkci v MPF naleznete v tématu [Dokončení aplikace Word ve službě starší jazyk](../../extensibility/internals/word-completion-in-a-legacy-language-service.md).|
+|Shoda složených závorek|Zvýrazní spárované znaky, například závorky. Když uživatel zadá uzavírací znak, například "}", porovnává složená závorka zvýrazní odpovídající počáteční znak, například "{". Pokud existuje několik úrovní ohraničujících znaků, tato funkce pomáhá uživatelům potvrdit, že ohraničující znaky jsou spárovány správně.<br /><br /> Informace o této funkci v MPF naleznete v tématu [Rovnátka odpovídající ve službě starší jazyk](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md).|
+|Popisky informací o parametrech|Zobrazí seznam možných podpisů přetížené metody, kterou uživatel právě zadává.<br /><br /> Obecné informace naleznete [v tématu Informace o parametrech ve službě staršího jazyka](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md).<br /><br /> Informace o této funkci v MPF naleznete v [tématu Informace o parametrech ve službě staršího jazyka](../../extensibility/internals/parameter-info-in-a-legacy-language-service2.md).|
+|Značky chyb|Zobrazí podtržení červenou vlnovkou, označované také jako vlnité, pod textem, který je syntakticky nesprávný. Značky chyb se obvykle používají k tomu, aby si uživatelé uvědomili chybně napsaná klíčová slova, neuzavřené závorky, neplatné znaky a podobné chyby.<br /><br /> Ve třídách MPF jsou značky chyb <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddError%2A> zpracovány <xref:Microsoft.VisualStudio.Package.AuthoringSink> automaticky v metodě třídy.|
 
- Mnohé z těchto funkcí vyžadovat služba jazyka analyzovat zdrojový kód. Často můžete opakovaně použít tokenizaci a analýzu kódu pro kompilátor nebo překladač.
+ Mnoho z těchto funkcí vyžaduje službu jazyka k analýzě zdrojového kódu. Často můžete znovu použít tokenizační a analyzující kód pro kompilátor nebo interpret.
 
- Tyto funkce se vztahují k podpoře programovacích jazyků, ale nejsou součástí jazykových služeb:
+ Následující funkce souvisejí s podporou programovacích jazyků, ale nejsou součástí jazykových služeb:
 
 | Funkce | Popis |
 |-----------------------| - |
-| Vyhodnocovače výrazů | Podporuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladicí program ověřování zarážek a poskytnutím seznam výrazů, který se má zobrazit v **automatické hodnoty** okno ladění.<br /><br /> Další informace najdete v tématu [podpora služby jazyka pro ladění](../../extensibility/internals/language-service-support-for-debugging.md). |
-| Nástroje procházení symbolů | Podporuje **Prohlížeč objektů**, **zobrazení tříd**, **prohlížeč volání**, a **výsledky hledání symbolu**. |
+| Vyhodnocení výrazů | Podporuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladicí program ověřením zarážek a zadáním seznamu výrazů, které mají být zobrazeny v okně ladění **Autos.**<br /><br /> Další informace naleznete v [tématu Podpora jazykových služeb pro ladění](../../extensibility/internals/language-service-support-for-debugging.md). |
+| Nástroje pro procházení symbolů | Podporuje **prohlížeč objektů**, zobrazení **tříd**, **prohlížeč volání**a výsledky **hledání symbolů**. |

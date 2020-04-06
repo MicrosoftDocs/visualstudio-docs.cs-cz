@@ -1,44 +1,44 @@
 ---
-title: Příkaz směrování v balíčcích VSPackage | Dokumentace Microsoftu
+title: Směrování příkazů v balíčcích VSPackages | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - commands, routing
 - command routing, Visual Studio SDK
 ms.assetid: a9c7f9ae-3594-4557-a314-8cf76f5f8772
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a534a015f57a738ca65895002a6fec4454f0ae97
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 957ddcca46365a882609c15c96d666c2848ace6c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342230"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709557"
 ---
-# <a name="command-routing-in-vspackages"></a>Směrování příkazů v balíčcích VSPackage
-Příkaz se směruje do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] na základě kontextu, ve kterém je spuštěn. Z pasivního počáteční kontextu se směruje do globální kontext.
+# <a name="command-routing-in-vspackages"></a>Směrování příkazů v balíčcích VSPackages
+Příkaz je směrován [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v na základě kontextu, ve kterém je spuštěn. Je směrovánz počátečního kontextu do globálního kontextu.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Algoritmus směrování příkazů](../../extensibility/internals/command-routing-algorithm.md)
 
- Popisuje pořadí řešení směrování příkazu.
+ Popisuje pořadí překladu směrování příkazů.
 
 - [Dostupnost příkazu](../../extensibility/internals/command-availability.md)
 
- Tento článek popisuje směrování příkazů.
+ Popisuje směrování příkazů.
 
-- [Příkazy a nabídky, které používají spolupracující sestavení](../../extensibility/internals/commands-and-menus-that-use-interop-assemblies.md)
+- [Příkazy a nabídky, které používají mezioperační sestavy](../../extensibility/internals/commands-and-menus-that-use-interop-assemblies.md)
 
- Tento článek popisuje důležité informace o směrování příkazů mezi spravovaným kódem a modelu COM.
+ Popisuje důležité informace v příkazech směrování mezi spravovaným kódem a com.
 
 ## <a name="related-sections"></a>Související oddíly
-- [Kontextové objekty výběru](../../extensibility/internals/selection-context-objects.md)
+- [Objekty kontextu výběru](../../extensibility/internals/selection-context-objects.md)
 
- Tento článek popisuje model pro určení uživatele výběr kontextu fokus na okno.
+ Popisuje model, jak můžete určit zaměření kontextu výběru uživatele v okně.
 
 - [Příkazy, nabídky a panely nástrojů](../../extensibility/internals/commands-menus-and-toolbars.md)
 
- Vysvětluje, jak vytvářet uživatelské rozhraní, která zahrnuje nabídky, panely nástrojů a příkaz pole se seznamem.
+ Vysvětluje, jak vytvořit nové prostředí, které obsahuje nabídky, panely nástrojů a pole se seznamem příkazů.

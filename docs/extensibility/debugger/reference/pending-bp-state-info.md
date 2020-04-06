@@ -1,5 +1,5 @@
 ---
-title: PENDING_BP_STATE_INFO | Microsoft Docs
+title: PENDING_BP_STATE_INFO | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - PENDING_BP_STATE_INFO structure
 ms.assetid: 4d73ceff-43f9-4e95-8dba-88e1fab2def3
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 306f3f6ac5f12d2a26da958d50fae87c6e174355
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d66ecc63e133a75148f06b59b8f1ccf61fe2658d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349880"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714082"
 ---
-# <a name="pendingbpstateinfo"></a>PENDING_BP_STATE_INFO
-Obsahuje informace o stavu, který je připravený k připojení k umístění kódu zarážku.
+# <a name="pending_bp_state_info"></a>PENDING_BP_STATE_INFO
+Obsahuje informace o stavu zarážky, která je připravena k vazbě na umístění kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,13 +43,13 @@ public struct PENDING_BP_STATE_INFO { 
 
 ## <a name="members"></a>Členové
  `state`\
- Hodnota z [PENDING_BP_STATE](../../../extensibility/debugger/reference/pending-bp-state.md) výčet, který určuje stav čekající zarážka.
+ Hodnota z [výčtu PENDING_BP_STATE,](../../../extensibility/debugger/reference/pending-bp-state.md) který určuje stav čekající zarážky.
 
  `flags`\
- Kombinace příznaků z [PENDING_BP_STATE_FLAGS](../../../extensibility/debugger/reference/pending-bp-state-flags.md) výčet, který určuje, zda je virtualizovaný zarážku.
+ Kombinace příznaků z [PENDING_BP_STATE_FLAGS](../../../extensibility/debugger/reference/pending-bp-state-flags.md) výčtu, který určuje, zda je zarážky virtualizována.
 
 ## <a name="remarks"></a>Poznámky
- Tato struktura je předán [GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md) metody, kde je vyplněna.
+ Tato struktura je předána [GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md) metoda, kde je vyplněna.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -58,7 +58,7 @@ public struct PENDING_BP_STATE_INFO { 
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)
 - [PENDING_BP_STATE](../../../extensibility/debugger/reference/pending-bp-state.md)

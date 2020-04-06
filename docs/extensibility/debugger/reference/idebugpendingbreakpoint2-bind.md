@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Bind | Dokumentace Microsoftu
+title: IDebugPendingBreakpoint2::Bind | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - Bind method
 - IDebugPendingBreakpoint2::Bind method
 ms.assetid: 46e3f307-219d-40cd-a929-d41399c60ecf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2ba30628c426bd7031d750838491f9bcc70c14a9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 83d48e8df847620716b0f581be65ded48e2e5a13
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350741"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725986"
 ---
 # <a name="idebugpendingbreakpoint2bind"></a>IDebugPendingBreakpoint2::Bind
-Vytvoří vazbu zarážka čeká na jeden nebo více umístění kódu.
+Váže tuto čekající zarážku na jedno nebo více umístění kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,14 +39,14 @@ int Bind();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_BP_DELETED` Pokud zarážka byla odstraněna.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `E_BP_DELETED` pokud byla zarážka odstraněna.
 
 ## <a name="remarks"></a>Poznámky
- Když tato metoda je volána, ladicí stroj (DE) by měl pokusit o svázání tohoto čekající zarážka ke všem místům kódu, které odpovídají.
+ Při volání této metody ladicí modul (DE) by se měl pokusit svázat tuto čekající zarážku na všechna umístění kódu, které odpovídají.
 
- Po návratu tato metoda volající potřebuje čekání na události, které naznačují, že čekající zarážka má vázané nebo před za předpokladu, že došlo k chybě a, které volá, aby [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) nebo [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md).methods projde všechny zarážky s vazbou nebo došlo k chybě, v uvedeném pořadí.
+ Poté, co tato metoda vrátí, volající musí čekat na události označující, že čekající zarážka má vázána nebo je v omylu před za předpokladu, že volání [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) nebo [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md).methods bude výčet všech vázaných nebo chybových zarážek, resp.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
 - [IDebugBreakpointBoundEvent2](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md)
 - [IDebugBreakpointErrorEvent2](../../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md)

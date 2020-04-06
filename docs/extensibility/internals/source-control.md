@@ -1,47 +1,47 @@
 ---
-title: Správa zdrojového kódu | Dokumentace Microsoftu
+title: Kontrola zdrojového kódu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK]
 ms.assetid: 13d5728c-4e28-42e4-944a-a565b1765ef8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 12b6cc2b4218f8bf00d338c609442d217ae3678f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8ff7904e9abc3df8ed36f8c196ce4c1175b4d9af
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322469"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80704984"
 ---
 # <a name="source-control"></a>Správa zdrojového kódu
-Tato část popisuje možnosti pro implementaci správy zdrojového kódu jako integrovaná funkce [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], buď pomocí modulu plug-in správy zdrojového kódu nebo balíčku VSPackage správy zdrojového kódu.
+Tato část popisuje možnosti pro implementaci správy zdrojového kódu jako integrované funkce [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], a to buď prostřednictvím modulu plug-in správy zdrojového kódu nebo správy zdrojového kódu VSPackage.
 
 ## <a name="in-this-section"></a>V tomto oddílu
-- [Základy](../../extensibility/internals/source-control-integration-essentials.md)
+- [Essentials](../../extensibility/internals/source-control-integration-essentials.md)
 
- Uvádí důležité informace, které chcete začít pracovat se správou zdrojového kódu.
+ Představuje důležité informace, které je nutné začít pracovat se správou zdrojového kódu.
 
 - [Přehled](../../extensibility/internals/source-control-integration-overview.md)
 
- Přehled dvě dostupné možnosti pro implementaci správy zdrojového kódu.
+ Přehled dvou dostupných možností pro implementaci správy zdrojového kódu.
 
 - [Vytvoření modulu plug-in správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-plug-in.md)
 
- Tento článek popisuje postup vytvoření správy zdrojového kódu modulu plug-in, který poskytuje funkce správy zdrojového kódu až [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zdrojového ovládacího prvku uživatelského rozhraní (UI).
+ Popisuje, jak vytvořit modul plug-in správy zdrojového kódu, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] který poskytuje funkce správy zdrojového kódu prostřednictvím uživatelského rozhraní správy zdrojového kódu( UI).
 
 - [Vytvoření balíčku VSPackage správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-vspackage.md)
 
- Tento článek popisuje postup vytvoření balíčku VSPackage, který nejen poskytuje funkce správy zdrojového kódu však lze použít k přizpůsobení správy zdrojového kódu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zdrojového ovládacího prvku uživatelského rozhraní.
+ Popisuje, jak vytvořit zdrojového ovládacího prvku VSPackage, který poskytuje nejen funkce [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] správy zdrojového kódu, ale lze jej přizpůsobit ui správy zdrojového kódu.
 
 ## <a name="related-sections"></a>Související oddíly
 - [Moduly plug-in správy zdrojového kódu](../../extensibility/source-control-plug-ins.md)
 
- Referenční informace pro rozhraní API modulu Plug-in zdroje ovládacího prvku.
+ Odkaz na rozhraní plug-in správy zdrojového kódu.
 
 - [Rozšíření projektů](../../extensibility/extending-projects.md)
 
- Popisuje způsob použití [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projekty a řešení pro uspořádání souborů s kódem a soubory prostředků a jak implementovat správy zdrojového kódu.
+ Popisuje použití [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projektů a řešení k uspořádání souborů kódu a souborů prostředků a jak implementovat správu zdrojového kódu.

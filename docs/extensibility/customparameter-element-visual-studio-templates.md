@@ -1,5 +1,5 @@
 ---
-title: CustomParameter – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Element CustomParameter (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - CustomParameters element [Visual Studio project templates]
 ms.assetid: 743c4489-74ac-403a-bbaa-eed7d785a3ac
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bbf76edec01cce52768f36dc534d50b580b64230
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9063a354f03b896e189566e8d84a18caf7509db8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322266"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739426"
 ---
-# <a name="customparameter-element-visual-studio-templates"></a>CustomParameter – element (šablony sady Visual Studio)
-Obsahuje název vlastní parametr a hodnotu použijte, pokud projekt nebo položku je vytvořen z šablony.
+# <a name="customparameter-element-visual-studio-templates"></a>Element CustomParameter (šablony sady Visual Studio)
+Obsahuje vlastní název parametru a hodnotu, která se má použít při vytvoření projektu nebo položky ze šablony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,30 +29,30 @@ Obsahuje název vlastní parametr a hodnotu použijte, pokud projekt nebo polož
 <CustomParameter Name="name" Value="value">
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Name`|Povinný parametr. Název parametru Formát pro parametry je $*název*$.|
-|`Value`|Povinný parametr. Nahrazující hodnotou parametru.|
+|`Name`|Povinná hodnota. Název parametru Formát parametrů je $*name*$.|
+|`Value`|Povinná hodnota. Hodnota nahrazení parametru.|
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[CustomParameters –](../extensibility/customparameters-element-visual-studio-templates.md)|Skupiny vlastní parametry, které mají být předány do Průvodce vytvořením šablony, když Průvodce provede nahrazení parametru.|
+|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|Seskupí vlastní parametry, které mají být předány průvodci šablonou, když průvodce provede nahrazení parametrů.|
 
 ## <a name="remarks"></a>Poznámky
- Pokud šablona obsahuje `CustomParameter` prvky, každá instance `Name` nahradí atribut `Value` atribut v vytvořené soubory projektu nebo položky.
+ Pokud šablona `CustomParameter` obsahuje prvky, každá instance `Name` `Value` atributu je nahrazen atributem v vytvořeném projektu nebo souborech položek.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, jak použít několik vlastních parametrů v šabloně. Při vytvoření projektu nebo položky ze šablony s následující vlastní parametry všechny výskyty `$color1$` a `$color2$` v šabloně se nahradí soubory `Red` a `Blue`v uvedeném pořadí.
+ Následující příklad ukazuje, jak používat několik vlastních parametrů v šabloně. Při vytvoření projektu nebo položky ze šablony s následujícími vlastními `$color2$` parametry budou všechny instance `Red` `Blue`souborů šablony nahrazeny `$color1$` a , resp.
 
 ```
 <CustomParameters>
@@ -61,7 +61,7 @@ Obsahuje název vlastní parametr a hodnotu použijte, pokud projekt nebo polož
 </CustomParameters>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [CustomParameters – element (šablony sady Visual Studio)](../extensibility/customparameters-element-visual-studio-templates.md)
+## <a name="see-also"></a>Viz také
+- [Element CustomParameters (šablony sady Visual Studio)](../extensibility/customparameters-element-visual-studio-templates.md)
 - [Parametry šablony](../ide/template-parameters.md)
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)

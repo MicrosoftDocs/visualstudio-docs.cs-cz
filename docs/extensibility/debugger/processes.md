@@ -1,45 +1,45 @@
 ---
-title: Procesy | Dokumentace Microsoftu
+title: Procesy | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], processes
 ms.assetid: a6a1efdc-b243-40c8-a778-6f69f6b018be
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c45fc70fe61c7221a8042d275dd44d69eb5d11e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 392c59b90bb117dded0f528bc33a617370b091a7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351495"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738244"
 ---
 # <a name="processes"></a>Procesy
-V architektuře ladicího programu *procesu*:
+V architektuře ladicího programu *proces*:
 
-- Je kontejner pro sadu aplikací. Je úzce analogické k procesu Windows, což je kontejner pro sadu vláken.
+- Je kontejner pro sadu programů. Je úzce podobný procesu systému Windows, což je kontejner pro sadu vláken.
 
-- Můžete identifikovat podle názvu, identifikátor nebo identifikátor fyzické.
+- Dokáže se identifikovat podle názvu, identifikátoru nebo fyzického identifikátoru.
 
-- Můžete zobrazit výčet všechny spuštěné programy (a jejich vláken).
+- Můžete vytvořit výčet všech spuštěných programů (a jejich vláken).
 
-- Můžete popsat samostatně, port, který běží v a na počítač, který jej obsahuje.
+- Může popsat sám, port, který je spuštěn v a počítač, který jej obsahuje.
 
-- Můžete vytvořit jednu nebo další programy, ukončit libovolného z programů, které vytvoří nebo způsobit zastavení programu.
+- Může vytvořit jeden nebo více programů, ukončit některý z vytvářených programů nebo způsobit ukončení programu.
 
-- Je reprezentován [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md) rozhraní, který je vytvořen při spuštění procesu. Spustí proces buď relaci ladění správci nebo [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md).
+- Je reprezentován [rozhraní MDebugProcess2,](../../extensibility/debugger/reference/idebugprocess2.md) který je vytvořen při spuštění procesu. Proces je spuštěn správcem ladění relace (SDM) nebo [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md).
 
-  Ladění balíčku můžete připojit ladicí stroj (DE) k procesu voláním [připojit](../../extensibility/debugger/reference/idebugprocess2-attach.md), což znamená, že je DE připojí všechny možné programů spuštěných v rámci procesu, který dokáže zpracovat. Například pokud modul common language runtime DE připojí se k procesu, se připojí pouze pro programy, na kterých běží spravovaný kód.
+  Ladicí balíček můžete připojit ladicí modul (DE) k procesu voláním [Připojit](../../extensibility/debugger/reference/idebugprocess2-attach.md), což znamená, že DE připojí ke všem možným programům spuštěným v procesu, který může zpracovat. Například pokud se k procesu připojí běžný jazyk runtime DE, připojí se pouze k programům, které spouštějí spravovaný kód.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Programy](../../extensibility/debugger/programs.md)
 - [Vlákna](../../extensibility/debugger/threads.md)
-- [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)
-- [Ladění balíčku](../../extensibility/debugger/debug-package.md)
-- [Ladicí stroj](../../extensibility/debugger/debug-engine.md)
+- [Koncepty ladicích programů](../../extensibility/debugger/debugger-concepts.md)
+- [Ladicí balíček](../../extensibility/debugger/debug-package.md)
+- [Ladicí modul](../../extensibility/debugger/debug-engine.md)
 - [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)
 - [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)
-- [Attach](../../extensibility/debugger/reference/idebugprocess2-attach.md)
+- [Připojit](../../extensibility/debugger/reference/idebugprocess2-attach.md)

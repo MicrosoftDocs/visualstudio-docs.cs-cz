@@ -1,40 +1,40 @@
 ---
-title: Podpora automatizace pro stránky možností | Microsoft Docs
+title: Podpora automatizace pro stránky možností | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], automation support
 - automation [Visual Studio SDK], creating Tools Options pages
 ms.assetid: 0b25b82c-7432-4e0a-9e84-350269ba8260
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03360bfc01110e7b4ef73956f0199aaaed9cee2c
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: fe45238948d5b4cdebbf9f002f6b242515e7622e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75848971"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709934"
 ---
-# <a name="automation-support-for-options-pages"></a>Podpora automatizace pro stránky možností
-Sady VSPackage mohou poskytnout dialogová okna vlastních **možností** do nabídky **nástroje** (stránky**možností nástrojů** ) v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a mohou je zpřístupnit modelu automatizace.
+# <a name="automation-support-for-options-pages"></a>Podpora automatizace pro stránky Možnosti
+VSPackages můžete poskytnout vlastní **možnosti** dialogových oken do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nabídky **Nástroje** **(Nástroje Možnosti** stránky) v a může zpřístupnit je pro model automatizace.
 
 ## <a name="tools-options-pages"></a>stránky Možnosti nástrojů
- Aby bylo možné vytvořit stránku **možností nástroje** , VSPackage musí poskytnout implementaci uživatelského ovládacího prvku vrácenou do prostředí prostřednictvím implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> metody VSPackage. (Nebo, pro spravovaný kód, metoda <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A>.)
+ Chcete-li vytvořit tools **options** stránku, VSPackage musí poskytnout implementaci uživatelského ovládacího prvku <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> vrácena do prostředí prostřednictvím implementace VSPackage metody. (Nebo pro spravovaný <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> kód metoda.)
 
- Je volitelná, ale důrazně se doporučuje, aby byl přístup k této nové stránce povolen pomocí modelu automatizace. Můžete to udělat pomocí následujících kroků:
+ Je volitelné, ale důrazně doporučujeme, aby přístup k této nové stránce prostřednictvím modelu automatizace. Můžete tak učinit pomocí následujících kroků:
 
-1. Rozšíří objekt <xref:EnvDTE._DTE.Properties%2A> pomocí implementace objektu odvozeného rozhraním IDispatch.
+1. Rozšiřte <xref:EnvDTE._DTE.Properties%2A> objekt prostřednictvím implementace objektu odvozeného z IDispatch.
 
-2. Vraťte implementaci metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> (nebo pro spravovaný kód metodu <xref:Microsoft.VisualStudio.Shell.Package.GetAutomationObject%2A>) na objekt odvozený od rozhraní IDispatch.
+2. Vrátí implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> metody (nebo pro spravovaný kód <xref:Microsoft.VisualStudio.Shell.Package.GetAutomationObject%2A> metody) na objekt odvozený od IDispatch.
 
-3. Když příjemce automatizace volá metodu <xref:EnvDTE._DTE.Properties%2A> na stránce vlastností vlastní **Možnosti** , prostředí používá metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> k získání vlastní implementace automatizace stránky **možností nástrojů** .
+3. Když spotřebitel automatizace <xref:EnvDTE._DTE.Properties%2A> volá metodu na **vlastní** option <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> vlastnost stránky, prostředí používá metodu k získání vlastní **tools možnosti** implementace automatizace stránky.
 
-4. Automatizační objekt sady VSPackage se pak použije k poskytnutí každého <xref:EnvDTE.Property> vráceného <xref:EnvDTE._DTE.Properties%2A>.
+4. Objekt automatizace VSPackage se pak používá <xref:EnvDTE.Property> k <xref:EnvDTE._DTE.Properties%2A>poskytnutí každé vrácené .
 
-   Ukázku implementace vlastní **Možnosti nástrojů** naleznete v tématu [VSSDK Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
+   Ukázka implementace vlastní stránky **Možnosti nástrojů** naleznete [v tématu Ukázky sady VSSDK](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
 
-## <a name="see-also"></a>Viz také:
-- [Vystavení objektů projektu](../../extensibility/internals/exposing-project-objects.md)
+## <a name="see-also"></a>Viz také
+- [Vystavit objekty projektu](../../extensibility/internals/exposing-project-objects.md)

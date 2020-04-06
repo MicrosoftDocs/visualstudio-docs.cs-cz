@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugFields::Reset | Dokumentace Microsoftu
+title: IEnumDebugFields::Obnovit | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugFields::Reset method
 ms.assetid: 38ff61e4-0120-42e8-971a-16be6050b425
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c50a5e2ed55bf1550ca4a70bc566fb2504b100a3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: be33249ef583776f613c6716143249e3ce31bc8d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350417"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80716841"
 ---
 # <a name="ienumdebugfieldsreset"></a>IEnumDebugFields::Reset
-Tato metoda resetuje na první prvek výčtu.
+Tato metoda obnoví výčet na první prvek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,11 +39,11 @@ int Reset();
  Žádný
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Až tato metoda je volána, další volání [Další](../../../extensibility/debugger/reference/ienumdebugfields-next.md) vrátí první prvek výčtu.
+ Po volání této metody další volání [Next](../../../extensibility/debugger/reference/ienumdebugfields-next.md) vrátí první prvek výčtu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)
-- [Next](../../../extensibility/debugger/reference/ienumdebugfields-next.md)
+- [Další](../../../extensibility/debugger/reference/ienumdebugfields-next.md)

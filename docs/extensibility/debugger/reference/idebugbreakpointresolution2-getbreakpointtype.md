@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointResolution2::GetBreakpointType | Dokumentace Microsoftu
+title: IDebugBreakpointResolution2::GetBreakpointType | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakpointResolution2::GetBreakpointType
 ms.assetid: 2b707fb9-f703-4c78-91bf-7434f57790a0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a8e8d7c77b9020df577e611f8a27116fa7a7b6db
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2949366eeb3e79a732e94a4a8f8e9912048c6452
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352885"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734806"
 ---
 # <a name="idebugbreakpointresolution2getbreakpointtype"></a>IDebugBreakpointResolution2::GetBreakpointType
-Získá typ zarážky reprezentována toto řešení.
+Získá typ zarážky reprezentované toto řešení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,16 +41,16 @@ int GetBreakpointType( 
 
 ## <a name="parameters"></a>Parametry
 `pBPType`\
-[out] Vrátí hodnotu z [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) výčet, který určuje typ této zarážky.
+[out] Vrátí hodnotu z [výčtu BP_TYPE,](../../../extensibility/debugger/reference/bp-type.md) který určuje typ této zarážky.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí E_FAIL, pokud `bpResLocation` pole v přidruženém [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) struktura není platná.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí E_FAIL `bpResLocation` pokud pole v přidružené [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) struktuře není platné.
 
 ## <a name="remarks"></a>Poznámky
-Zarážka může být kód nebo datové zarážky, třeba.
+Zarážka může být kód nebo zarážky dat, například.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CDebugBreakpointResolution` objekt, který zveřejňuje [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) rozhraní.
+Následující příklad ukazuje, jak implementovat `CDebugBreakpointResolution` tuto metodu pro jednoduchý objekt, který zveřejňuje rozhraní [IDebugBreakpointResolution2.](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)
 
 ```
 HRESULT CDebugBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)
@@ -83,7 +83,7 @@ HRESULT CDebugBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)
 - [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)
 - [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)

@@ -1,37 +1,37 @@
 ---
-title: Příloha založená na spuštění | Dokumentace Microsoftu
+title: Příloha založená na spuštění | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, launching
 - debug engines, attaching to programs
 ms.assetid: 362f00ac-1909-4a3a-bacb-c0ceb5549816
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 638eaea19b4f21e749fbd3db845f18eb573420f2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4910a97350366500b56593ec0076fdf0990b6d8f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344149"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738469"
 ---
 # <a name="launch-based-attachment"></a>Příloha založená na spuštění
-Příloha založená na spuštění programu je automatické. Při spuštění procesu hostování program podle SDM Příloha založená na spuštění se řídí podobná metoda ručního přílohy cestu. Informace najdete v tématu [připojit k programu](../../extensibility/debugger/attaching-to-the-program.md).
+Příloha programu založená na spuštění je automatická. Když je proces hostující program spuštěn sm, příloha založená na spuštění následuje cestu podobnou metodě ručního připojení. Další informace naleznete v [tématu Připojení k programu](../../extensibility/debugger/attaching-to-the-program.md).
 
-## <a name="the-attaching-process"></a>Proces připojení
- Hlavní rozdíl je posloupnost událostí po **připojit** volání následujícím způsobem:
+## <a name="the-attaching-process"></a>Proces připojování
+ Hlavní rozdíl je posloupnost událostí po **Připojit** volání, takto:
 
-1. Odeslání **IDebugEngineCreateEvent2** objekt SDM události. Podrobnosti najdete v tématu [odesílání událostí](../../extensibility/debugger/sending-events.md).
+1. Odešlete objekt u události **IDebugEngineCreateEvent2** do objektu SDM. Podrobnosti naleznete v tématu [Odesílání událostí](../../extensibility/debugger/sending-events.md).
 
-2. Volání `IDebugProgram2::GetProgramId` metodu na **IDebugProgram2** předán rozhraní **připojit** metody.
+2. Volání `IDebugProgram2::GetProgramId` metody v rozhraní **IDebugProgram2** předané **metodě Attach.**
 
-3. Odeslání **IDebugProgramCreateEvent2** události objektu oznámit SDM, místní **IDebugProgram2** byl vytvořen objekt představující program DE.
+3. Odešlete objekt události **IDebugProgramCreateEvent2,** který oznámí objektu SDM, že byl vytvořen místní objekt **IDebugProgram2,** který představuje program de.
 
-4. Odeslání [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) události objektu oznámit SDM, že se vytvoří nové vlákno pro proces, který spustil.
+4. Odešlete objekt události [IDebugThreadCreateEvent2,](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) který upozorní objekt SDM, že je pro proces, který byl spuštěn, vytvořen nový podproces.
 
-## <a name="see-also"></a>Viz také:
-- [Odesílání požadovaných událostí](../../extensibility/debugger/sending-the-required-events.md)
-- [Povolit program k ladění](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)
+## <a name="see-also"></a>Viz také
+- [Odeslat požadované události](../../extensibility/debugger/sending-the-required-events.md)
+- [Povolení odlažení programu](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

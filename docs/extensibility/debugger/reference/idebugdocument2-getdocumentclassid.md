@@ -1,5 +1,5 @@
 ---
-title: IDebugDocument2::GetDocumentClassID | Microsoft Docs
+title: IDebugDocument2::GetDocumentClassID | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocument2::GetDocumentClassID
 ms.assetid: 111c2b85-ebfa-487f-b896-2ec4a3eac4d1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 51a4ed842a2f65f37abf6f83ac70d6ce03b9a2e8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 71683c91082f477da530ec1be1fdc7627d6a7635
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310288"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732026"
 ---
 # <a name="idebugdocument2getdocumentclassid"></a>IDebugDocument2::GetDocumentClassID
 Získá identifikátor třídy dokumentu.
@@ -40,13 +40,13 @@ int GetDocumentClassID( 
 ```
 
 ## <a name="parameters"></a>Parametry
-`pclsid` [out] Vrátí identifikátor GUID, který je ID třídy dokumentu.
+`pclsid`[out] Vrátí identifikátor GUID, který je ID třídy dokumentu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Identifikátor GUID třídy lze použít k vytvoření instance jednotlivých tříd, z nichž každý představuje dokument.
+ Identifikátor GUID třídy lze použít k vytvoření instance jednotlivých tříd, z nichž každá představuje dokument.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

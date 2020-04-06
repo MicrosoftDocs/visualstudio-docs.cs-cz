@@ -1,5 +1,5 @@
 ---
-title: Enumerátor kódu stavu souboru | Dokumentace Microsoftu
+title: Enumerátor kódu stavu souboru | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - SccStatus enumerator
 - file status code enumerator
 ms.assetid: 5c37876b-c83c-4ca1-837b-57cd465a879a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94bd9ff93872139fc056c4c8bb7a59191616919e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 184c8686ea184aea2cbd0a64873718cbe72f7615
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342688"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711457"
 ---
-# <a name="file-status-code-enumerator"></a>Enumerátor kódu stavu souboru
-`SccStatus` Obsahuje čítače výčtu s názvem konstantní hodnoty, které určují stav souboru v systému správy zdrojového kódu. Tento výčet je používán [sccqueryinfo –](../extensibility/sccqueryinfo-function.md) a `POPLISTFUNC` funkce zpětného volání (viz [POPLISTFUNC](../extensibility/poplistfunc.md) podrobnosti).
+# <a name="file-status-code-enumerator"></a>Čítač stavového kódu souboru
+Čítač `SccStatus` obsahuje pojmenované konstantní hodnoty, které určují stav souboru v systému správy zdrojového kódu. Tento výčet používá [SccQueryInfo](../extensibility/sccqueryinfo-function.md) a `POPLISTFUNC` funkce zpětného volání (podrobnosti naleznete v tématu [POPLISTFUNC).](../extensibility/poplistfunc.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,43 +49,43 @@ enum SccStatus {
 ```
 
 ## <a name="members"></a>Členové
- Nebylo možné získat stav SCC_STATUS_INVALID; Nespoléhejte na to.
+ SCC_STATUS_INVALID status nelze získat; nespoléhejte na to.
 
- SCC_STATUS_NOTCONTROLLED soubor není pod správou zdrojových kódů.
+ SCC_STATUS_NOTCONTROLLED soubor není pod sohledem zdrojového kódu.
 
- SCC_STATUS_CONTROLLED soubor podléhá správě zdrojového kódu.
+ SCC_STATUS_CONTROLLED soubor je pod shodou zdrojového kódu.
 
- SCC_STATUS_CHECKEDOUT kontroluje navýšení kapacity o aktuálního uživatele na místním disku.
+ SCC_STATUS_CHECKEDOUT Rezervováno aktuálním uživatelem na místním disku.
 
- Soubor SCC_STATUS_OUTOTHER je rezervována jiným uživatelem.
+ SCC_STATUS_OUTOTHER soubor je rezervován jiným uživatelem.
 
- SCC_STATUS_OUTEXCLUSIVE soubor je exkluzivně zaregistrován.
+ SCC_STATUS_OUTEXCLUSIVE soubor je výhradně rezervován.
 
- Soubor SCC_STATUS_OUTMULTIPLE je rezervován více než jeden uživatel.
+ SCC_STATUS_OUTMULTIPLE soubor je rezervován více než jedním uživatelem.
 
- SCC_STATUS_OUTOFDATE soubor není nejnovější.
+ SCC_STATUS_OUTOFDATE Soubor není nejnovější.
 
- SCC_STATUS_DELETED soubor byl odstraněn z projektu.
+ SCC_STATUS_DELETED soubor byl z projektu odstraněn.
 
- SCC_STATUS_LOCKED soubor je uzamčen; žádné další verze povolené.
+ SCC_STATUS_LOCKED soubor je uzamčen; žádné další verze povoleny.
 
- Soubor SCC_STATUS_MERGED byla sloučit, ale dosud opraveno/ověření.
+ SCC_STATUS_MERGED soubor byl sloučen, ale ještě nebyl opraven/ověřen.
 
- SCC_STATUS_SHARED souborů se sdílí mezi projekty.
+ SCC_STATUS_SHARED Soubor je sdílen mezi projekty.
 
- Sdílení souboru SCC_STATUS_PINNED explicitní verzi.
+ SCC_STATUS_PINNED soubor je sdílen s explicitní verzí.
 
- SCC_STATUS_MODIFIED soubor se upravil/nefunkční/došlo k porušení.
+ SCC_STATUS_MODIFIED soubor byl změněn/poškozen/porušen.
 
- Soubor SCC_STATUS_OUTBYUSER je rezervována aktuálního uživatele.
+ soubor SCC_STATUS_OUTBYUSER je rezervován aktuálním uživatelem.
 
- Soubor SCC_STATUS_NOMERGE nikdy sloučením s a před GET nemusí být uložen.
+ SCC_STATUS_NOMERGE soubor nelze nikdy sloučit s a nemusí být uloženy před GET.
 
- SCC_STATUS_RESERVED_1 vyhrazený pro interní použití.
+ SCC_STATUS_RESERVED_1 Vyhrazeno pro interní použití.
 
- SCC_STATUS_RESERVED_2 vyhrazený pro interní použití.
+ SCC_STATUS_RESERVED_2 Vyhrazeno pro interní použití.
 
-## <a name="see-also"></a>Viz také:
-- [Ovládací prvek moduly plug-in zdrojového kódu](../extensibility/source-control-plug-ins.md)
+## <a name="see-also"></a>Viz také
+- [Moduly plug-in pro směřuje zdroj](../extensibility/source-control-plug-ins.md)
 - [SccQueryInfo](../extensibility/sccqueryinfo-function.md)
 - [POPLISTFUNC](../extensibility/poplistfunc.md)

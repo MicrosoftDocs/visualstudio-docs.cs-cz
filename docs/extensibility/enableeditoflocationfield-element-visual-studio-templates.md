@@ -1,27 +1,27 @@
 ---
-title: Enableeditoflocationfield – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: PovolitEditofLocationField Element (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - EnableEditOfLocationField (Visual Studio project templates)
 ms.assetid: 51a91963-8a3f-4741-928e-bc90c11473bb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82a65115ce5df0f57ad9e6ea18a5637e035fed66
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0e15e2f5c070b8a8c565497c6ba3fc6490b87591
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334542"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711996"
 ---
-# <a name="enableeditoflocationfield-element-visual-studio-templates"></a>Enableeditoflocationfield – element (šablony sady Visual Studio)
-Určuje, pokud uživatel může upravovat pole umístění.
+# <a name="enableeditoflocationfield-element-visual-studio-templates"></a>PovolitEditOfLocationField element (šablony sady Visual Studio)
+Určuje, zda může uživatel pole umístění upravit.
 
- \<VSTemplate> \<TemplateData> \<EnableEditOfLocationField>
+ \<VSTemplate \<> TemplateData> \<EnableEditOfLocationField>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,33 +29,33 @@ Určuje, pokud uživatel může upravovat pole umístění.
 <EnableEditOfLocationField> true/false </EnableEditOfLocationField>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádný
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+ Žádný
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být buď `true` nebo `false`, která udává určuje, jestli uživatel může upravovat **umístění** textového pole na **nový projekt** dialogové okno.
+ Text musí být `true` `false`buď nebo označující, zda může uživatel upravit textové pole **Umístění** v dialogovém okně **Nový projekt.**
 
 ## <a name="remarks"></a>Poznámky
- `EnableEditOfLocationField` je volitelný prvek. Výchozí hodnota je `true`, který umožňuje uživateli upravit hodnotu v **umístění** textové pole **nový projekt** dialogové okno.
+ `EnableEditOfLocationField`je volitelný prvek. Výchozí hodnota `true`je , která umožňuje uživateli upravit hodnotu v textovém poli **Umístění** v dialogovém okně **Nový projekt.**
 
- V **nový projekt** dialogové okno, **umístění** textového pole určuje adresář, ve kterém je uložený nový projekt.
+ V dialogovém okně **Nový projekt** určuje textové pole **Umístění** adresář, do kterého je uložen nový projekt.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metadata [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikace Windows.
+ Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikaci systému Windows.
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -83,6 +83,6 @@ Určuje, pokud uživatel může upravovat pole umístění.
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugErrorBreakpoints2 | Dokumentace Microsoftu
+title: IEnumDebugErrorBreakpoints2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugErrorBreakpoints2
 ms.assetid: ffdad73d-969a-45ef-9ad1-7f5d3b814018
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d204b29b46e257d4ca0b8c4102c3a64e9e78adf1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ea841a095964b71e301e966bfd0a10c8f7c0c65d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66317233"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80716880"
 ---
 # <a name="ienumdebugerrorbreakpoints2"></a>IEnumDebugErrorBreakpoints2
-Toto rozhraní zobrazí chyba zarážky přidružené čekající zarážkou.
+Toto rozhraní vyjmenovává zarážky chyby spojené s čekající zarážky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,24 +29,24 @@ IEnumDebugErrorBreakpoints2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Ladicí stroj (DE) implementuje toto rozhraní jako součást jeho podporu pro zarážky.
+ Ladicí modul (DE) implementuje toto rozhraní jako součást jeho podporu pro zarážky.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Visual Studio volání [CanBind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md) získat toto rozhraní představující seznam zarážky, které nemůže být vázán, nebo [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) získat toto rozhraní představující seznam zarážky které nejsou vázány.
+ Visual Studio volá [CanBind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md) získat toto rozhraní představující seznam zarážek, které nelze svázat nebo [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) získat toto rozhraní představující seznam zarážek, které nebyly vázány.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IEnumDebugErrorBreakpoints2`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IEnumDebugErrorBreakpoints2`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[Next](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-next.md)|Načte zadaný počet Chyba zarážky v sekvenci výčtu.|
-|[Skip](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-skip.md)|Vynechá zadaný počet Chyba zarážky v sekvenci výčtu.|
-|[Reset](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-reset.md)|Návrat na začátek sekvence výčtu.|
-|[Clone](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-clone.md)|Vytvoří čítač, který obsahuje stejného stavu jako aktuální enumerátor výčtu.|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-getcount.md)|Získá počet Chyba zarážky v enumerátor.|
+|[Další](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-next.md)|Načte zadaný počet zarážek chyby v pořadí výčtu.|
+|[Přeskočit](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-skip.md)|Přeskočí zadaný počet zarážek chyby v pořadí výčtu.|
+|[Resetovat](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-reset.md)|Obnoví pořadí výčtu na začátek.|
+|[Klonování](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-clone.md)|Vytvoří čítač výčtu, který obsahuje stejný stav výčtu jako aktuální čítač výčtu.|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-getcount.md)|Získá počet zarážek chyby v čítači výčtu.|
 
 ## <a name="remarks"></a>Poznámky
- Toto rozhraní obsahuje seznam [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) rozhraní, z nichž každý popisuje zarážku nebylo možné svázat a proč ho nebylo možné svázat. Visual Studio používá `IEnumDebugErrorBreakpoint2` rozhraní aktualizovat zarážky uvedené v integrovaném vývojovém prostředí.
+ Toto rozhraní obsahuje seznam rozhraní [IDebugErrorBreakpoint2,](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) z nichž každý popisuje zarážku, která nemohla být vázána a proč nemůže být vázána. Visual Studio `IEnumDebugErrorBreakpoint2` používá rozhraní k aktualizaci zarážek zobrazených v rozhraní IDE.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -55,7 +55,7 @@ IEnumDebugErrorBreakpoints2 : IUnknown
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)
 - [CanBind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)
 - [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)

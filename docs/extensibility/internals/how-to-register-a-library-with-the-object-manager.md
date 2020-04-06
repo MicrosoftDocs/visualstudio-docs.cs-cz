@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Registrace knihovny pomocí Správce objektů | Dokumentace Microsoftu'
+title: 'Postup: Registrace knihovny u Správce objektů | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,36 +9,36 @@ helpviewer_keywords:
 - IVsObjectManager2 interface, registering library with object manager
 - libraries, symbol-browsing tools
 ms.assetid: f124dd05-cb0f-44ad-bb2a-7c0b34ef4038
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7481b9710237bcd1e624b07f8985b5708f271bef
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4bd1032d2ba67a0c0f3338560a80038ed3215531
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66312056"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707947"
 ---
-# <a name="how-to-register-a-library-with-the-object-manager"></a>Postupy: Registrace knihovny pomocí Správce objektů
-Procházení symbolů nástrojů, jako je například **zobrazení tříd**, **prohlížeče objektů**, **volání prohlížeče** a **výsledky hledáni symbolu**, vám umožní zobrazit symboly v projektu nebo v externích součástí. Symboly zahrnovat obory názvů, třídy, rozhraní, metody a další prvky jazyka. Knihovny sledovat tyto symboly a zpřístupnit jim [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] správce objektů, které naplňuje nástroje s daty.
+# <a name="how-to-register-a-library-with-the-object-manager"></a>Postup: Registrace knihovny u správce objektů
+Nástroje pro procházení symbolů, jako je **zobrazení tříd**, **prohlížeč objektů**, **prohlížeč volání** a výsledky **hledání symbolů**, umožňují zobrazit symboly v projektu nebo v externích součástech. Symboly zahrnují jmenné prostory, třídy, rozhraní, metody a další prvky jazyka. Knihovny sledovat tyto symboly a [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vystavit je správce objektů, který naplní nástroje s daty.
 
- Objekt správce uchovává informace o všech dostupných knihoven. Každou knihovnu musí zaregistrovat pomocí správce objekt ještě před poskytnutím symboly pro nástroje procházení symbolů.
+ Správce objektů sleduje všechny dostupné knihovny. Každá knihovna se musí zaregistrovat u správce objektů před poskytnutím symbolů pro nástroje pro procházení symbolů.
 
- Obvykle je zaregistrovat do knihovny při načtení VSPackage. Však to můžete udělat později podle potřeby. Při vypnutí sady VSPackage můžete zrušit registraci knihovny.
+ Obvykle zaregistrujete knihovnu při načtení VSPackage. Nicméně, to může být provedeno v jiném čase podle potřeby. Zrušíte registraci knihovny při vypnutí VSPackage.
 
- Pokud chcete zaregistrovat knihovnu, použijte <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterLibrary%2A> metody. Pro knihovny spravovaného kódu, použijte <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> metody.
+ Chcete-li zaregistrovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterLibrary%2A> knihovnu, použijte metodu. Pro knihovnu spravovaných kódů použijte metodu. <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A>
 
- Chcete-li zrušit registraci knihovny, použijte <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A> metody.
+ Chcete-li zrušit registraci <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A> knihovny, použijte metodu.
 
- K získání odkazu na objekt správce <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>, předat <xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager> ID do služby `GetService` metoda.
+ Chcete-li získat odkaz na <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>správce <xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager> objektů, předavažte metodu ID služby. `GetService`
 
-## <a name="register-and-unregister-a-library-with-the-object-manager"></a>Registrace a zrušení registrace knihovny pomocí Správce objektů
+## <a name="register-and-unregister-a-library-with-the-object-manager"></a>Registrace a zrušení registrace knihovny u správce objektů
 
-### <a name="to-register-a-library-with-the-object-manager"></a>Registrace knihovny pomocí Správce objektů
+### <a name="to-register-a-library-with-the-object-manager"></a>Registrace knihovny u správce objektů
 
-1. Vytvoření knihovny.
+1. Vytvořte knihovnu.
 
     ```vb
     Private m_CallBrowserLibrary As CallBrowser.Library = Nothing
@@ -55,7 +55,7 @@ Procházení symbolů nástrojů, jako je například **zobrazení tříd**, **p
 
     ```
 
-2. Získání odkazu na objekt <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> zadejte a volat <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> metody.
+2. Získejte odkaz na objekt <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> typu a <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> volání metody.
 
     ```vb
     Private Sub RegisterLibrary()
@@ -109,9 +109,9 @@ Procházení symbolů nástrojů, jako je například **zobrazení tříd**, **p
 
     ```
 
-### <a name="to-unregister-a-library-with-the-object-manager"></a>Zrušení registrace knihovny pomocí Správce objektů
+### <a name="to-unregister-a-library-with-the-object-manager"></a>Zrušení registrace knihovny u správce objektů
 
-1. Získání odkazu na objekt <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> zadejte a volat <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A> metody.
+1. Získejte odkaz na objekt <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> typu a <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A> volání metody.
 
     ```vb
     Private Sub UnregisterLibrary()
@@ -164,7 +164,7 @@ Procházení symbolů nástrojů, jako je například **zobrazení tříd**, **p
 
     ```
 
-## <a name="see-also"></a>Viz také:
-- [Rozšíření služeb starší verze jazyka](../../extensibility/internals/legacy-language-service-extensibility.md)
-- [Podpůrné nástroje procházení symbolů](../../extensibility/internals/supporting-symbol-browsing-tools.md)
-- [Postupy: Zveřejnění seznamů symbolů poskytovaných knihovnou správci objektů](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)
+## <a name="see-also"></a>Viz také
+- [Rozšiřitelnost služby starších jazyků](../../extensibility/internals/legacy-language-service-extensibility.md)
+- [Podpora nástrojů pro procházení symbolů](../../extensibility/internals/supporting-symbol-browsing-tools.md)
+- [Postup: Vystavit seznamy symbolů poskytovaných knihovnou správci objektů](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::Resume | Dokumentace Microsoftu
+title: IDebugThread2::Resume | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugThread2::Resume
 ms.assetid: 36aad682-b0b9-40a2-b3fc-f0e61d41cdbc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a312b18fead71b343fd1b9beafcf36c904bf1b24
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3899dea7c33946588de4308f42b948ede703361a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320139"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718683"
 ---
 # <a name="idebugthread2resume"></a>IDebugThread2::Resume
 Pokračuje v provádění vlákna.
@@ -44,13 +44,13 @@ int Resume ( 
 [out] Vrátí počet pozastavení po operaci obnovení.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Každé volání této metody sníží počet potlačení dokud nedosáhne 0 na dobu, ve skutečnosti pokračování provádění. Zobrazí se tento počet pozastavení v **vlákna** okno ladění.
+ Každé volání této metody sníží počet pozastavení, dokud nedosáhne 0, kdy je spuštění skutečně obnoveno. Tento počet pozastavení se zobrazí v okně ladění **vlákna.**
 
- Pro každé volání této metody musí být předchozí volání [pozastavit](../../../extensibility/debugger/reference/idebugthread2-suspend.md) metody. Počet potlačení Určuje, kolikrát `IDebugThread2::Suspend` dosud byla volána metoda.
+ Pro každé volání této metody musí být předchozí volání [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md) metody. Počet pozastavení určuje, kolikrát `IDebugThread2::Suspend` byla metoda volána tak daleko.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)
 - [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md)

@@ -1,5 +1,5 @@
 ---
-title: IEEDataStorage::GetSize | Dokumentace Microsoftu
+title: IEEDataStorage::GetSize | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEEDataStorage::GetSize
 ms.assetid: 33d232c4-1239-4abc-922b-e1bc5b908169
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 81796fe12c72e2e64f1eb1d5b1cc09e66112d13d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e7d9000889d082826f46bdceb0476dd5d06c24d2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319667"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718192"
 ---
 # <a name="ieedatastoragegetsize"></a>IEEDataStorage::GetSize
 Vrátí počet bajtů obsažených v tomto objektu.
@@ -44,11 +44,11 @@ int GetSize(
 [out] Počet bajtů obsažených v tomto objektu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Použití [GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md) metodu pro načtení bajtů skutečná data.
+ Pomocí metody [GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md) načtěte skutečné datové bajty.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)
 - [GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md)

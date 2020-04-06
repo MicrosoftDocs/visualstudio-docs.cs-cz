@@ -1,5 +1,5 @@
 ---
-title: IDebugDefaultPort2::GetServer | Dokumentace Microsoftu
+title: IDebugDefaultPort2::GetServer | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDefaultPort2::GetServer
 ms.assetid: cacb4b74-0f39-471c-af38-54b73f5b2868
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4c959c84335023a3d187808d754b44b4a0d2b950
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3dbe6d813b85865b0fdbc20296473684203a3f1e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351747"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732383"
 ---
 # <a name="idebugdefaultport2getserver"></a>IDebugDefaultPort2::GetServer
-Tato metoda získá rozhraní, který je tento port na serveru.
+Tato metoda získá rozhraní k serveru, který je na tomto portu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,14 +41,14 @@ int GetServer(
 
 ## <a name="parameters"></a>Parametry
 `ppServer`\
-[out] Vrátí implementaci objektu [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md) rozhraní.
+[out] Vrátí objekt implementující rozhraní [IDebugCoreServer3.](../../../extensibility/debugger/reference/idebugcoreserver3.md)
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md) je realizován pomocí sady Visual Studio a představuje port, který se nachází na serveru.
+ [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md) je implementován Visual Studio a představuje server, který je umístěn na portu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

@@ -1,40 +1,40 @@
 ---
-title: 'Postupy: Použití předdefinovaných položek které lze zabarvit | Dokumentace Microsoftu'
+title: 'Postup: Použití předdefinovaných barevných položek | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - colorable items
 - language services, built-in colorable items
 ms.assetid: 5e5f3436-6bad-4fd2-8823-6a30353ba648
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae1c327c14ed2b349ee02566c5cdfd38b9a07859
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 34e07894c3306f544396e53001990f7b9a2df5a0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311968"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707792"
 ---
-# <a name="how-to-use-built-in-colorable-items"></a>Postupy: Použití předdefinovaných položek které lze zabarvit
-Než použijete integrovanou které lze zabarvit položky, můžete musí nejprve signalizuje, že do integrovaného vývojového prostředí (IDE), že nejsou poskytnutí vlastní vlastní které lze zabarvit položek, které v tomto případě by byly <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> objekty. To provedete tak, že nastavíte položku registru pro službu jazyka.
+# <a name="how-to-use-built-in-colorable-items"></a>Postup: Použití vestavěných barevných položek
+Před použitím předdefinovaných barevných položek je nutné nejprve signalizovat integrovanému vývojovému prostředí (IDE), že neposkytujete vlastní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> vlastní barevné položky, což by v tomto případě byly objekty. To provést nastavením položky registru pro jazykovou službu.
 
-## <a name="to-use-built-in-colorable-items"></a>Použití předdefinovaných položek které lze zabarvit
+## <a name="to-use-built-in-colorable-items"></a>Použití vestavěných barevných položek
 
-1. V části **HKEY_LOCAL_MACHINE\VisualStudio\\< X.Y > \Languages\Language služby\\< název jazyka\>** , kde \<X.Y > je verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a \<Název jazyka > je název jazyka, vytvořit vstupní hodnotu registru DWORD s názvem **RequestStockColors**.
+1. V **části\\ HKEY_LOCAL_MACHINE\VisualStudio<X.Y\\>\Languages\Language Services<Language Name\>**, kde \<X.Y> je verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a \<název jazyka> je název vašeho jazyka, vytvořte hodnotu položky registru DWORD nazvanou **RequestStockColors**.
 
-2. Nastavte **RequestStockColors** hodnotu položky registru *1*.
+2. Nastavte hodnotu položky registru **RequestStockColors** na *hodnotu 1*.
 
-    Po vytvoření položka registru, vaše colorizer <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> metoda může použít jako objekty její členové <xref:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS> výčet k vyplnění pole barevnými atributy pro použití v editoru.
+    Po vytvoření položky registru může <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> metoda colorizeru použít <xref:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS> členy výčtu k vyplnění pole atributů barev pro použití editorem.
 
    > [!NOTE]
-   > Pokud poskytujete vlastní, které lze zabarvit položky není nastavený této položky registru. Další informace najdete v tématu [vlastní, které lze zabarvit položky](../../extensibility/internals/custom-colorable-items.md).
+   > Nenastavovat tuto položku registru, pokud poskytujete vlastní barevné položky. Další informace naleznete [v tématu Vlastní barevné položky](../../extensibility/internals/custom-colorable-items.md).
 
-## <a name="see-also"></a>Viz také:
-- [Barevné zvýrazňování syntaxe ve vlastních editorech](../../extensibility/syntax-coloring-in-custom-editors.md)
-- [Barevné zvýrazňování syntaxe ve službě starší verze jazyka](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)
-- [Implementace barevného zvýrazňování syntaxe](../../extensibility/internals/implementing-syntax-coloring.md)
-- [Vlastní položky které lze zabarvit](../../extensibility/internals/custom-colorable-items.md)
-- [Registrace služby starší verze jazyka](../../extensibility/internals/registering-a-legacy-language-service2.md)
+## <a name="see-also"></a>Viz také
+- [Syntaxe barvení ve vlastních editorech](../../extensibility/syntax-coloring-in-custom-editors.md)
+- [Vybarvení syntaxe ve službě starších jazyků](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)
+- [Implementace vybarvení syntaxe](../../extensibility/internals/implementing-syntax-coloring.md)
+- [Vlastní barevné položky](../../extensibility/internals/custom-colorable-items.md)
+- [Registrace služby staršího jazyka](../../extensibility/internals/registering-a-legacy-language-service2.md)

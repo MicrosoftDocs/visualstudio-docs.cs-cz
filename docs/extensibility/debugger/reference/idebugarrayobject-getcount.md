@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject::GetCount | Dokumentace Microsoftu
+title: IDebugArrayObject::GetCount | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugArrayObject::GetCount method
 ms.assetid: 7931f3f7-033c-4bf8-8abd-95183952ebb0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ac21ac30e1f4511efa1ec8a7fe27129bf2ddb3a1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d9d5e322b7bcd5238335c74caa21989f1f1962ce
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321665"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736208"
 ---
 # <a name="idebugarrayobjectgetcount"></a>IDebugArrayObject::GetCount
-Získá počet elementů v poli.
+Získá počet prvků v poli.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,10 +44,10 @@ int GetCount(
 [out] Vrátí počet.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda považuje všechny prvky objektu pole jednorozměrné pole, i když objekt pole je vícerozměrné. Mějme například pole `myarray[3][2][6]`, tato metoda vrátí 36 `pdwElements` parametru. Použití [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) metodu pro načtení jednotlivých prvků jeden po druhém.
+ Tato metoda vidí všechny prvky objektu pole jako jednorozměrné pole, i když je objekt pole vícerozměrný. Například vzhledem `myarray[3][2][6]`k poli , tato metoda `pdwElements` vrátí 36 v parametru. Použijte [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) metoda načíst jednotlivé prvky jeden po druhém.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

@@ -1,26 +1,26 @@
 ---
-title: Rozšíření řešení | Dokumentace Microsoftu
+title: Rozšíření řešení | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 5cb60183-2a87-4551-a19f-c7c4e65d60c0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1fd58ea0f898f1840d63a436b4fe28787e89e613
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 40a9591418dd3d2fb53bee29dfb8192a368e4047
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313012"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711728"
 ---
-# <a name="extend-solutions"></a>Rozšíření řešení
-Řešení je seskupení jednoho nebo více projektů, které vzájemně spolupracují na vytvoření aplikace.
+# <a name="extend-solutions"></a>Rozšířit řešení
+Řešení je seskupení jednoho nebo více projektů, které spolupracují na vytvoření aplikace.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- Následující postupy ukazují některé způsoby, ve kterém můžete rozšířit řešení.
+ Následující návody ukazují některé způsoby, kterými můžete rozšířit řešení.
 
-1. [Rozšíření filtru Průzkumníka řešení](../extensibility/extending-the-solution-explorer-filter.md) vysvětluje, jak filtrovat, co se zobrazí v Průzkumníku řešení.
+1. [Rozšířit filtr Průzkumník a řešení](../extensibility/extending-the-solution-explorer-filter.md) vysvětluje, jak filtrovat, co průzkumník řešení zobrazuje.
 
-2. [Správa načítání projektů v řešení](../extensibility/managing-project-loading-in-a-solution.md) vysvětluje, jak Správa načítání projektů pro zlepšení výkonu, pokud uživatel načte řešení.
+2. [Správa načítání projektu v řešení](../extensibility/managing-project-loading-in-a-solution.md) vysvětluje, jak spravovat načítání projektu ke zlepšení výkonu, když uživatel načte řešení.

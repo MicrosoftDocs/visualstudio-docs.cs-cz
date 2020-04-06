@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2 | Dokumentace Microsoftu
+title: IDebugExpression2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExpression2 interface
 ms.assetid: f5e4b124-1e30-47c8-a511-80084a02dba5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 694db3cc5292f11f1718a51e31deec4a8e456b54
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c2e23ad4f673e4e150ea677d993c5b36a4e386c2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325969"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729687"
 ---
 # <a name="idebugexpression2"></a>IDebugExpression2
-Toto rozhraní představuje analyzovaný výraz připravené pro vazby a hodnocení.
+Toto rozhraní představuje analyzovaný výraz připravený pro vazbu a vyhodnocení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,26 +29,26 @@ IDebugExpression2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Ladicí stroj (DE) implementuje toto rozhraní k reprezentaci výrazu analyzovaný připraven k vyhodnocení.
+ Ladicí modul (DE) implementuje toto rozhraní představující analyzovaný výraz připravený k vyhodnocení.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Volání [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) vrátí toto rozhraní. [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) vrátí [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) rozhraní. Tato rozhraní jsou přístupné pouze v případě, že byl pozastaven laděnému programu a rámec zásobníku je k dispozici.
+ Volání [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) vrátí toto rozhraní. [Funkce GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) vrátí rozhraní [IDebugExpressionContext2.](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) Tato rozhraní jsou přístupná pouze v případě, že byl program, který je laděn, pozastaven a je k dispozici rámec zásobníku.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IDebugExpression2`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IDebugExpression2`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)|Tento výraz vyhodnotí asynchronně.|
-|[Abort](../../../extensibility/debugger/reference/idebugexpression2-abort.md)|Ukončí asynchronní výraz hodnocení.|
-|[EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)|Tento výraz vyhodnotí synchronně.|
+|[EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)|Vyhodnotí tento výraz asynchronně.|
+|[Přerušení](../../../extensibility/debugger/reference/idebugexpression2-abort.md)|Ukončí vyhodnocení asynchronního výrazu.|
+|[EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)|Vyhodnotí tento výraz synchronně.|
 
 ## <a name="remarks"></a>Poznámky
- Když program se zastavil, Správce ladění relace (SDM) získává rámec zásobníku z DE voláním [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md). Pak zavolá SDM [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) zobrazíte [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) rozhraní. Následuje volání [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) vytvořit `IDebugExpression2` rozhraní, které představuje analyzovaný výraz, který je připravený k vyhodnocení.
+ Pokud program byl zastaven, správce ladění relace (SDM) získá rámec zásobníku z DE s voláním [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md). SDM pak volá [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) získat rozhraní [IDebugExpressionContext2.](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) Následuje volání [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) k vytvoření `IDebugExpression2` rozhraní, které představuje analyzovaný výraz připravený k vyhodnocení.
 
- SDM zavolá buď [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) nebo [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) skutečně vyhodnotí výraz a hodnotu.
+ SDM volá buď [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) nebo [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) skutečně vyhodnotit výraz a vytvořit hodnotu.
 
- V implementaci `IDebugExpressionContext2::ParseText`, DE používá modelu COM `CoCreateInstance` funkci pro vytvoření instance vyhodnocovače výrazů a získat [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md) rozhraní (podívejte se na příklad v `IDebugExpressionEvaluator` rozhraní). Pak zavolá DE [analyzovat](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) získat [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) rozhraní. Toto rozhraní se používá při provádění `IDebugExpression2::EvaluateSync` a `IDebugExpression2::EvaluateAsync` pro provedení vyhodnocení.
+ V implementaci `IDebugExpressionContext2::ParseText`aplikace de používá `CoCreateInstance` funkci COM k vytvoření instance vyhodnocení výrazu a získání rozhraní [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md) (viz příklad v `IDebugExpressionEvaluator` rozhraní). DE pak volá [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) získat rozhraní [IDebugParsedExpression.](../../../extensibility/debugger/reference/idebugparsedexpression.md) Toto rozhraní se používá `IDebugExpression2::EvaluateSync` `IDebugExpression2::EvaluateAsync` při implementaci a provedení vyhodnocení.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -57,6 +57,6 @@ IDebugExpression2 : IUnknown
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)
 - [GetExpression](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getexpression.md)

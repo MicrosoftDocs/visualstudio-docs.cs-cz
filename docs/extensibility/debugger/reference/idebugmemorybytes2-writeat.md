@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryBytes2::WriteAt | Dokumentace Microsoftu
+title: IDebugMemoryBytes2::WriteAt | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - IDebugMemoryBytes2::WriteAt method
 - WriteAt method
 ms.assetid: 61cc3704-47fa-4d9b-aa62-bb4585ac8fb1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5eefaee08d64952681e91711cdf8347186123e57
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ac9113424c6cd5cce230774a6e5335ffa4d4ba77
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347139"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727527"
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
-Zapíše zadaný počet bajtů paměti, spouští se na zadané adrese.
+Zapíše zadaný počet bajtů paměti počínaje zadanou adresou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,20 +46,20 @@ int WriteAt(
 
 ## <a name="parameters"></a>Parametry
 `pStartContext`\
-[in] [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objekt, který určuje, kde začít psát bajtů.
+[v] Objekt [IDebugMemoryContext2,](../../../extensibility/debugger/reference/idebugmemorycontext2.md) který určuje, kde začít psát bajty.
 
 `dwCount`\
-[in] Počet bajtů k zápisu.
+[v] Počet bajtů zapsat.
 
 `rgbMemory`\
-[in] Bajty k zápisu. Toto pole je považován za nejméně `dwCount` bajty.
+[v] Bajtů psát. Předpokládá se, že toto pole má velikost alespoň `dwCount` bajtů.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` Pokud ne všechny bajty může být napsaná nebo vrátí kód chyby (obvykle `E_FAIL`).
+ V případě `S_OK`úspěchu vrátí ; v opačném `S_FALSE` případě vrátí, pokud ne všechny bajty mohou `E_FAIL`být zapsány nebo vrátí kód chyby (obvykle).
 
 ## <a name="remarks"></a>Poznámky
- Pokud počáteční adresa není v rámci okna paměť představovaného tímto rozhraním [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) objektů, dojde k žádné psaní a chybovým kódem `E_FAIL` je vrácena – i v případě, že do paměťový prostor se překrývá velikost pro zápis.
+ Pokud počáteční adresa není v okně paměti reprezentované tento objekt [IDebugMemoryBytes2,](../../../extensibility/debugger/reference/idebugmemorybytes2.md) dojde k žádné zápisu a `E_FAIL` je vrácen kód chyby – i v případě, že částka zápisu překrývá do paměťového prostoru.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

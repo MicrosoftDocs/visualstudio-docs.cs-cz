@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::DestroyProgram | Dokumentace Microsoftu
+title: IDebugEngine2::DestroyProgram | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngine2::DestroyProgram
 ms.assetid: 0c9e2698-c70f-4770-a7bb-39650e9c3a1f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c20459329eeb9e61447c707ef6c95adf01945e5d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ce139dd22361d9914693cbe8ad723656ab7d4f26
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330077"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731107"
 ---
 # <a name="idebugengine2destroyprogram"></a>IDebugEngine2::DestroyProgram
-Informuje o tom ladicího stroje (DE), který byl zadaný program atypicky ukončen a že je DE musí vyčistit všechny odkazy na program a odeslat program zrušení události.
+Informuje ladicí modul (DE), že zadaný program byl atypicky ukončen a že DE by měl vyčistit všechny odkazy na program a odeslat událost zničení programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,17 +41,17 @@ int DestroyProgram( 
 
 ## <a name="parameters"></a>Parametry
 `pProgram`\
-[in] [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekt, který reprezentuje program, který byl atypicky ukončen.
+[v] [Objekt IDebugProgram2,](../../../extensibility/debugger/reference/idebugprogram2.md) který představuje program, který byl atypicky ukončen.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Po zavolání této metody je DE odešle [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) události zpět do Správce ladění relace (SDM).
+ Po volání této metody DE následně odešle událost [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) zpět do správce ladění relace (SDM).
 
- Tato metoda není implementována (vrátí `E_NOTIMPL`) Pokud je DE běží ve stejném procesu jako program, který se právě ladí. Tato metoda je implementována pouze v případě, že je DE běží ve stejném procesu jako SDM.
+ Tato metoda není implementována (vrátí), `E_NOTIMPL`pokud DE běží ve stejném procesu jako program, který je laděn. Tato metoda je implementována pouze v případě, že DE běží ve stejném procesu jako SDM.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)
 - [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

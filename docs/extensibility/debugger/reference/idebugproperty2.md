@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2 | Dokumentace Microsoftu
+title: IDebugProperty2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty2 interface
 ms.assetid: a7d5c70f-a1a5-4120-9f70-184e01c25bff
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ef390f3f67a0c0678854020e33725b2f88439ff9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4b04abdac135143ccbbd1b8e5632bf85c974f29d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66308909"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721223"
 ---
 # <a name="idebugproperty2"></a>IDebugProperty2
-Toto rozhraní představuje vlastnost rámce zásobníku, vlastnost dokumentu program nebo některé jiné vlastnosti. Vlastnost je obvykle výsledkem vyhodnocení výrazu.
+Toto rozhraní představuje vlastnost rámce zásobníku, vlastnost dokumentu programu nebo jinou vlastnost. Vlastnost je obvykle výsledkem vyhodnocení výrazu.
 
 > [!NOTE]
-> Toto použití "vlastnosti" neměly by být zaměňovány s znamená členské proměnné třídy, i když `IDebugProperty2` může představovat taková entita.
+> Toto použití "vlastnost" by neměla být zaměňována `IDebugProperty2` s tím smyslu členské proměnné třídy, i když může představovat takovou entitu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,42 +32,42 @@ IDebugProperty2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- DE implementuje toto rozhraní představující konkrétní typ hodnoty. Hodnota může být například číselnou hodnotu jako výsledek vyhodnocení výrazu, kontext paměti pro zobrazování paměti nebo seznam registrů a jejich hodnoty.
+ DE implementuje toto rozhraní představují určitý druh hodnoty. Hodnota může být například číselná hodnota v důsledku vyhodnocení výrazu, kontext paměti používaný pro zobrazení paměti nebo seznam registrů a jejich hodnot.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Volání [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) nebo [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) získat toto rozhraní, která reprezentuje výsledek hodnocení. `IDebugExpression2::EvaluateAsync` Vrátí toto rozhraní odesláním [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) rozhraní SDM, která pak volá [GetResult](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getresult.md) načíst vlastnost.
+ Volání [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) nebo [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) získat toto rozhraní, které představuje výsledek hodnocení. `IDebugExpression2::EvaluateAsync`vrátí toto rozhraní odesláním rozhraní [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) do sdm, což zase volá [GetResult](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getresult.md) k načtení vlastnosti.
 
-- [GetDebugProperty](../../../extensibility/debugger/reference/idebugpropertycreateevent2-getdebugproperty.md) vrátí toto rozhraní k poskytování přidruženého skriptovacího dokumentu.
+- [Funkce GetDebugProperty](../../../extensibility/debugger/reference/idebugpropertycreateevent2-getdebugproperty.md) vrátí toto rozhraní, aby poskytla přidružený dokument skriptu.
 
-- [GetReturnValue](../../../extensibility/debugger/reference/idebugreturnvalueevent2-getreturnvalue.md) vrátí toto rozhraní k reprezentaci návratovou hodnotu funkce.
+- [Funkce GetReturnValue](../../../extensibility/debugger/reference/idebugreturnvalueevent2-getreturnvalue.md) vrátí toto rozhraní jako návratovou hodnotu funkce.
 
-- [GetDebugProperty](../../../extensibility/debugger/reference/idebugprogram2-getdebugproperty.md) vrátí toto rozhraní k reprezentaci různé vlastnosti programu, jako je například název, nebo místní paměti.
+- [GetDebugProperty](../../../extensibility/debugger/reference/idebugprogram2-getdebugproperty.md) vrátí toto rozhraní představují různé vlastnosti programu, jako je například název nebo kontext paměti.
 
-- [GetDebugProperty](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) vrátí toto rozhraní k reprezentaci různých vlastností rámce zásobníku, jako jsou místní proměnné.
+- [GetDebugProperty](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) vrátí toto rozhraní představují různé vlastnosti rámce zásobníku, jako jsou například místní proměnné.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IDebugProperty2`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IDebugProperty2`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)|Vyplní [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktura, která popisuje vlastnosti.|
+|[GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)|Vyplní [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) strukturu, která popisuje vlastnost.|
 |[SetValueAsString](../../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md)|Nastaví hodnotu vlastnosti z řetězce.|
 |[SetValueAsReference](../../../extensibility/debugger/reference/idebugproperty2-setvalueasreference.md)|Nastaví hodnotu vlastnosti z hodnoty daného odkazu.|
-|[EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)|Vytvoří výčet podřízené vlastnosti.|
-|[GetParent](../../../extensibility/debugger/reference/idebugproperty2-getparent.md)|Vrací nadřazeného člena vlastnost.|
-|[GetDerivedMostProperty](../../../extensibility/debugger/reference/idebugproperty2-getderivedmostproperty.md)|Vrátí vlastnosti, která popisuje vlastnosti nejvíce odvozenému vlastnosti.|
-|[GetMemoryBytes](../../../extensibility/debugger/reference/idebugproperty2-getmemorybytes.md)|Vrátí počet bajtů paměti, které tvoří hodnotu vlastnosti.|
+|[EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)|Vyjmenovává děti z nemovitosti.|
+|[GetParent](../../../extensibility/debugger/reference/idebugproperty2-getparent.md)|Vrátí nadřazenou vlastnost.|
+|[GetDerivedMostProperty](../../../extensibility/debugger/reference/idebugproperty2-getderivedmostproperty.md)|Vrátí vlastnost, která popisuje nejvíce odvozené vlastnosti vlastnosti.|
+|[GetMemoryBytes](../../../extensibility/debugger/reference/idebugproperty2-getmemorybytes.md)|Vrátí bajty paměti, které tvoří hodnotu vlastnosti.|
 |[GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md)|Vrátí kontext paměti pro hodnotu vlastnosti.|
-|[GetSize](../../../extensibility/debugger/reference/idebugproperty2-getsize.md)|Vrátí velikost v bajtech, hodnota vlastnosti.|
+|[GetSize](../../../extensibility/debugger/reference/idebugproperty2-getsize.md)|Vrátí velikost hodnoty vlastnosti v bajtech.|
 |[GetReference](../../../extensibility/debugger/reference/idebugproperty2-getreference.md)|Vrátí odkaz na hodnotu této vlastnosti.|
 |[GetExtendedInfo](../../../extensibility/debugger/reference/idebugproperty2-getextendedinfo.md)|Vrátí rozšířené informace o vlastnosti.|
 
 ## <a name="remarks"></a>Poznámky
- Vlastnost, reprezentovaný hodnotou `IDebugProperty2` rozhraní, si lze představit jako hodnotu s názvem, typem a adresu. Další obecné řečeno `IDebugProperty2` může představovat cokoli, co má hierarchickou strukturu s nadřazených a podřízených uzlů.
+ Vlastnost, jak je `IDebugProperty2` reprezentovánrozhraní, lze si myslet jako hodnotu s názvem, typ a adresu. Obecněji řečeno, `IDebugProperty2` může představovat cokoli, co má hierarchickou strukturu, s rodiči a podřízenými uzly.
 
- Vlastnost je obvykle přechodné, například trvající pouze tak dlouho, dokud aktuální rámec zásobníku. Na druhé straně odkazu, reprezentovaný hodnotou [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) rozhraní, má platnost tak dlouho, dokud hodnota zůstane v paměti.
+ Vlastnost je obvykle přechodné, trvající pouze tak dlouho, jak aktuální rámec zásobníku, například. Na druhé straně odkaz, jak je reprezentován rozhraní [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) trvá tak dlouho, dokud hodnota zůstane v paměti.
 
- Integrované vývojové prostředí můžete použít `IDebugProperty2` rozhraní umožňuje uživatelům procházení a změna vlastností za běhu.
+ Rozhraní IDE můžete `IDebugProperty2` použít rozhraní, aby uživatelé procházet a upravovat vlastnosti za běhu.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -76,7 +76,7 @@ IDebugProperty2 : IUnknown
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)
 - [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

@@ -1,25 +1,25 @@
 ---
-title: Guidsymbol – Element | Dokumentace Microsoftu
+title: Prvek guidsymbol | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, GuidSymbol
 - GuidSymbol element (VSCT XML schema)
 ms.assetid: 11fb3545-8974-4776-9a54-6b6e7739ae31
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bebcec561f915bd8223d0adc183293a1760c261d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 59068a9ac9f952b5370681b3684ce4234354afc9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342216"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711131"
 ---
-# <a name="guidsymbol-element"></a>Guidsymbol – element
-`GuidSymbol` Prvek obsahuje GUID GUID:ID pár, který představuje nabídky, skupiny nebo příkaz. ID pochází z `IDSymbol` prvek `GuidSymbol` elementu. `GuidSymbol` Element má `name` atribut, který poskytuje popisný název pro identifikátor GUID, který je součástí `value` atribut.
+# <a name="guidsymbol-element"></a>Element GuidSymbol
+Prvek `GuidSymbol` obsahuje identifikátor GUID dvojice GUID:ID, která představuje nabídku, skupinu nebo příkaz. ID pochází z `IDSymbol` prvku `GuidSymbol` v prvku. Prvek `GuidSymbol` má `name` atribut, který poskytuje popisný název identifikátoru GUID, který je obsažen v atributu. `value`
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,30 +30,30 @@ ms.locfileid: "66342216"
 </GuidSymbol>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|name|Povinný parametr. Název symbolu identifikátor GUID.|
-|value|Povinný parametr. Identifikátor GUID symbol identifikátor GUID.|
+|jméno|Povinná hodnota. Název symbolu GUID.|
+|value|Povinná hodnota. IDENTIFIKÁTOR GUID symbolu GUID.|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Idsymbol – element](../extensibility/idsymbol-element.md)|Obsahuje ID GUID:ID pár, který představuje nabídky, skupiny nebo příkaz.|
+|[Prvek IDSymbol](../extensibility/idsymbol-element.md)|Obsahuje ID dvojice GUID:ID, která představuje nabídku, skupinu nebo příkaz.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Symbols – element](../extensibility/symbols-element.md)|Skupiny `GuidSymbol` prvky *.vsct* souboru.|
+|[Prvek symbolů](../extensibility/symbols-element.md)|Seskupí `GuidSymbol` prvky v souboru *.vsct.*|
 
 ## <a name="remarks"></a>Poznámky
- Obvykle *.vsct* soubor obsahuje tři `GuidSymbol` prvků v jeho `Symbols` části, z nich je pro balíček samotné, jeden pro sadu příkazů (kolekce nabídky, skupiny a příkazy, že balíček je k dispozici) a jeden pro rastrové obrázky, které poskytují ikony pro tlačítka a další vizuální komponenty. Každý `IDSymbol` element v danou `GuidSymbol` element musí mít jedinečný `value`. Ale `IDSymbol` prvky, které mají stejné hodnoty může existovat v balíčku tak dlouho, dokud mají jiné nadřazené položky.
+ Soubor *.vsct* obvykle obsahuje `GuidSymbol` tři prvky ve své `Symbols` části, jeden pro samotný balíček, jeden pro sadu příkazů (kolekce nabídek, skupin a příkazů, které balíček zpřístupňuje) a jeden pro bitmapy, které poskytují ikony pro tlačítka a další vizuální součásti. Každý `IDSymbol` prvek v `GuidSymbol` daném prvku `value`musí mít jedinečný . Prvky, které mají stejné hodnoty však mohou existovat v balíčku tak dlouho, `IDSymbol` dokud mají různé rodiče.
 
-## <a name="see-also"></a>Viz také:
-- [Soubory tabulky (.vsct) příkaz pro Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také
+- [Soubory příkazů sady Visual Studio (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

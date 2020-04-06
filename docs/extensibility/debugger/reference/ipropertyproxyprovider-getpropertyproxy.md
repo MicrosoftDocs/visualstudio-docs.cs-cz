@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyProvider::GetPropertyProxy | Dokumentace Microsoftu
+title: IPropertyProxyProvider::GetPropertyProxy | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IPropertyProxyProvider::GetPropertyProxy
 ms.assetid: 3ebb7515-5bfe-48f4-9b8d-721b8f664eb6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7c7769fc58b41101be8a06cf49b309fda3e64a81
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 35c23fc56c883845bdb7fb73daa60a845ee5e21a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353423"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714827"
 ---
 # <a name="ipropertyproxyprovidergetpropertyproxy"></a>IPropertyProxyProvider::GetPropertyProxy
-Načte proxy rozhraní vlastností pro ID zadaný proxy serveru.
+Načte rozhraní proxy vlastnosti pro zadané ID serveru proxy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,18 +43,18 @@ int GetPropertyProxy(
 
 ## <a name="parameters"></a>Parametry
 `dwID`\
-[in] ID proxy požadovanou vlastnost.
+[v] ID požadované vlastnosti proxy.
 
 `proxy`\
-[out] Vrátí [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) objektu.
+[out] Vrátí objekt [IPropertyProxyEESide.](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pro podporu externí vizualizátory, tato metoda obvykle předává volání [GetPropertyProxy](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md) metody. Zobrazit [Visualizing a zobrazení dat](../../../extensibility/debugger/visualizing-and-viewing-data.md) podrobnosti o jak získat IEEVisualizerService.
+ Pro podporu vizualizérů externího typu tato metoda obvykle předává volání metodě [GetPropertyProxy.](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md) [Vizualizace a zobrazení dat](../../../extensibility/debugger/visualizing-and-viewing-data.md) podrobnosti o tom, jak je získána IEEVisualizerService.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IPropertyProxyProvider](../../../extensibility/debugger/reference/ipropertyproxyprovider.md)
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)
 - [GetPropertyProxy](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md)

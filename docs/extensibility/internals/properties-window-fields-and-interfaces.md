@@ -1,95 +1,95 @@
 ---
-title: Vlastnosti pole a rozhraní okna | Dokumentace Microsoftu
+title: Vlastnosti Okenní pole a rozhraní | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Properties window, fields and interfaces
 ms.assetid: 0328f0e5-2380-4a7a-a872-b547cb775050
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 379eaa6e154b77d10463514a63978708bf2b89d0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9529708c781e7fdb04c3b4c5ee143b7605857e84
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347884"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80706162"
 ---
 # <a name="properties-window-fields-and-interfaces"></a>Pole a rozhraní okna Vlastnosti
-Model pro výběr k určení, které informace se zobrazují v **vlastnosti** okna je založen na okně, které má fokus v integrovaném vývojovém prostředí. Každé okno a objekt v rámci vybrané okno může mít objekt kontextu jeho výběr do kontextu globálního výběru. Prostředí aktualizuje kontext globálního výběru s hodnotami z okna rámce, když je toto okno fokus. Při změně fokusu zločinců se stejně kontext výběru.
+Model pro výběr k určení, jaké informace se zobrazí v okně **Vlastnosti** je založena na okno, které má fokus v rozhraní IDE. Každé okno a objekt ve vybraném okně mohou mít objekt kontextu výběru posunutdo kontextu globálního výběru. Prostředí aktualizuje kontext globálního výběru hodnotami z okna, když má toto okno fokus. Když se změní fokus, tak se kontext výběru.
 
-## <a name="tracking-selection-in-the-ide"></a>Výběr sledování v integrovaném vývojovém prostředí
- Rámeček okna nebo webu, vlastní rozhraní IDE má služby zvané <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection>. Následující kroky ukazují, jak se změna ve výběru, způsobené uživateli změnit fokus na další otevřete okno nebo výběrem jiné položce v **Průzkumníka řešení**, je implementováno s cílem změnit obsah zobrazený v  **Vlastnosti** okna.
+## <a name="tracking-selection-in-the-ide"></a>Sledování výběru v ide
+ Rámec okna nebo web, vlastněný ide, má <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection>službu s názvem . Následující kroky ukazují, jak je implementována změna výběru způsobená uživatelem, který buď změní fokus na jiné otevřené okno, nebo vybere jinou položku projektu v **Průzkumníku řešení**, pro změnu obsahu zobrazeného v okně **Vlastnosti.**
 
-1. Objekt vytvořený pomocí vašeho balíčku VSPackage, která je umístěna ve voláních vybrané okno <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> mít <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> vyvolat <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection>.
+1. Objekt vytvořený vspackage, který je umístěn ve <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> vybraném <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection>okně volání vyvolat .
 
-2. Zásobník pro výběr poskytované vybrané okno vytvoří vlastní <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> objektu. Když změny výběru sady VSPackage volá <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> upozornit všechny moduly pro naslouchání v prostředí, včetně **vlastnosti** okna změny. Poskytuje také přístup k informacím o hierarchii a položky související s nový výběr.
+2. Kontejner výběru, který poskytuje vybrané okno, <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> vytvoří svůj vlastní objekt. Když se změní výběr, VSPackage volá <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> upozornit všechny posluchače v prostředí, včetně okna **Vlastnosti,** změny. Poskytuje také přístup k informacím o hierarchii a položce souvisejících s novým výběrem.
 
-3. Volání <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> a předají se jí položky vybrané hierarchie `VSHPROPID_BrowseObject` naplní parametr <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> objektu.
+3. Volání <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> a předání vybraných položek `VSHPROPID_BrowseObject` hierarchie v <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> parametru naplní objekt.
 
-4. Objekt odvozený od [rozhraní IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) se vrátí [__VSHPROPID. VSHPROPID_BrowseObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>) pro požadované položky a prostředí zabalí jej do <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> (viz následující krok). Pokud selže volání prostředí volá druhé `IVsHierarchy::GetProperty`, předají se jí zásobník pro výběr [__VSHPROPID. VSHPROPID_SelContainer](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_SelContainer>) , zadejte hierarchie položky nebo položek.
+4. Objekt odvozený z [rozhraní IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) je vrácen [a __VSHPROPID. VSHPROPID_BrowseObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>) pro požadovanou položku a prostředí <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> ji zabalí do (viz následující krok). Pokud volání selže, prostředí provede druhé `IVsHierarchy::GetProperty`volání , předání kontejneru výběru [__VSHPROPID. VSHPROPID_SelContainer,](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_SelContainer>) které položka hierarchie nebo položky poskytují.
 
-    Váš projekt se nevytvoří VSPackage <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> vzhledem k tomu, že v okně prostředí poskytované VSPackage, která ho implementuje (například **Průzkumníka řešení**) vytvoří <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> svým jménem.
+    Váš projekt VSPackage <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> nevytvoří, protože okno dodané prostředím VSPackage, který jej <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> implementuje (například **Průzkumník řešení**) vytvoří jeho jménem.
 
-5. Prostředí volá metody pro <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> získat objekty na základě `IDispatch` rozhraní vyplnit **vlastnosti** okna.
+5. Prostředí vyvolá metody <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> získání objektů na základě `IDispatch` rozhraní k vyplnění okna **Vlastnosti.**
 
-   Když je hodnota v **vlastnosti** okno se změní, implementujte rozšíření VSPackages `IVsTrackSelectionEx::OnElementValueChangeEx` a `IVsTrackSelectionEx::OnSelectionChangeEx` informuje změna hodnoty prvku. Potom se vyvolá prostředí <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> nebo <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> zachovat informace zobrazené v **vlastnosti** okno Synchronizovat s hodnotami vlastností. Další informace najdete v tématu [aktualizuje hodnoty vlastností v okně Vlastnosti](#updating-property-values-in-the-properties-window).
+   Při změně hodnoty v okně **Vlastnosti** VSPackages implementovat `IVsTrackSelectionEx::OnElementValueChangeEx` a `IVsTrackSelectionEx::OnSelectionChangeEx` hlásit změnu na hodnotu prvku. Prostředí pak vyvolá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> nebo zachovat informace zobrazené v okně **Vlastnosti** synchronizovány s hodnotami vlastností. Další informace naleznete [v tématu Aktualizace hodnot vlastností v okně Vlastnosti](#updating-property-values-in-the-properties-window).
 
-   Kromě výběru jiné položky projektu v **Průzkumníka řešení** k zobrazení vlastností souvisejících s danou položku, můžete také zvolit jiný objekt z v rámci okna formuláře nebo dokumentu pomocí rozevíracího seznamu k dispozici na **Vlastnosti** okna. Další informace najdete v tématu [seznam objektů okna vlastnosti](../../extensibility/internals/properties-window-object-list.md).
+   Kromě výběru jiné položky projektu v **Průzkumníku řešení** pro zobrazení vlastností souvisejících s uvedenou položkou můžete také zvolit jiný objekt z okna formuláře nebo dokumentu pomocí rozevíracího seznamu dostupného v okně **Vlastnosti.** Další informace naleznete v [tématu Properties Window Object List](../../extensibility/internals/properties-window-object-list.md).
 
-   Můžete změnit způsob zobrazením informací **vlastnosti** mřížky okna okno z abecedního do kategorií, a pokud je k dispozici, můžete otevřít stránku vlastnosti pro vybraný objekt také kliknutím na odpovídající tlačítko na  **Vlastnosti** okna. Další informace najdete v tématu [tlačítka okna vlastnosti](../../extensibility/internals/properties-window-buttons.md) a [stránky vlastností](../../extensibility/internals/property-pages.md).
+   Způsob zobrazení informací v **mřížce** okna Vlastnosti můžete změnit z abecední na kategorickou, a pokud je k dispozici, můžete také otevřít stránku vlastností vybraného objektu klepnutím na příslušná tlačítka v okně **Vlastnosti.** Další informace naleznete v [tématu Tlačítka oken vlastností a](../../extensibility/internals/properties-window-buttons.md) [Stránky vlastností](../../extensibility/internals/property-pages.md).
 
-   Nakonec dolní části **vlastnosti** okno obsahuje také popis vybraném v poli **vlastnosti** mřížky okna okno. Další informace najdete v tématu [získávání popisy pole v okně Vlastnosti](#getting-field-descriptions-from-the-properties-window).
+   Nakonec v dolní části okna **Vlastnosti** také obsahuje popis pole vybraného v mřížce okna **Vlastnosti.** Další informace naleznete v [tématu Získání popisů polí z okna Vlastnosti](#getting-field-descriptions-from-the-properties-window).
 
-## <a name="updating-property-values-in-the-properties-window"></a> Aktualizuje hodnoty vlastností v okně Vlastnosti
-Existují dva způsoby, jak zachovat **vlastnosti** okno, které jsou synchronizované s změně hodnoty vlastnosti. První je pro volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> rozhraní, které poskytuje přístup k základní oddílová funkce, včetně přístupu k a vytvoření oken nástrojů a dokumentu poskytovaných prostředím. Následující kroky popisují proces synchronizace.
+## <a name="updating-property-values-in-the-properties-window"></a><a name="updating-property-values-in-the-properties-window"></a>Aktualizace hodnot vlastností v okně Vlastnosti
+Okno **Vlastnosti** lze synchronizovat se změnami hodnoty vlastnosti dvěma způsoby. Prvním z nich <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> je volání rozhraní, které poskytuje přístup k základním funkcím oken, včetně přístupu a vytváření oken nástrojů a dokumentů poskytovaných prostředím. Následující kroky popisují tento proces synchronizace.
 
-### <a name="updating-property-values-using-ivsuishell"></a>Aktualizuje hodnoty vlastností pomocí IVsUIShell
+### <a name="updating-property-values-using-ivsuishell"></a>Aktualizace hodnot vlastností pomocí prostředí IVsUIShell
 
-#### <a name="to-update-property-values-using-the-ivsuishell-interface"></a>Chcete-li aktualizovat pomocí rozhraní IVsUIShell hodnoty vlastností
+#### <a name="to-update-property-values-using-the-ivsuishell-interface"></a>Aktualizace hodnot vlastností pomocí rozhraní IVsUIShell
 
-1. Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> (prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> služby) kdykoli VSPackages, projekty, nebo editory musíte vytvořit nebo výčet nástroj nebo dokumentu.
+1. Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> (prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> služby) kdykoli VSPackages, projekty nebo editory potřebují vytvořit nebo výčet nástrojů nebo oken dokumentů.
 
-2. Implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.RefreshPropertyBrowser%2A> zachovat **vlastnosti** okno, které jsou synchronizované s změny vlastností pro projekt (nebo vybraný objekt prochází se jím podle **vlastnosti** okno) bez implementace <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> MSMQEvent_Arrived; <xref:Microsoft.VisualStudio.OLE.Interop.IPropertyNotifySink.OnChanged%2A> události.
+2. Implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.RefreshPropertyBrowser%2A> zachovat **vlastnosti** okna v synchronizaci se změnami vlastností pro projekt (nebo jakýkoli <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> jiný vybraný objekt procházet okno **vlastnosti)** bez implementace a vypalování <xref:Microsoft.VisualStudio.OLE.Interop.IPropertyNotifySink.OnChanged%2A> událostí.
 
-3. Implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.AdviseHierarchyEvents%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.UnadviseHierarchyEvents%2A> k zahájení a zakázat, klientské oznámení událostí hierarchii bez nutnosti hierarchii k implementaci <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>.
+3. Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.AdviseHierarchyEvents%2A> metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.UnadviseHierarchyEvents%2A> a zavést a zakázat, respektive klienta oznámení událostí <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>hierarchie bez nutnosti hierarchie k implementaci .
 
-### <a name="updating-property-values-using-iconnection"></a>Aktualizuje se pomocí připojení IConnection hodnoty vlastností
- Druhý způsob, jak uchovávat **vlastnosti** je okno, které jsou synchronizované s změně hodnoty vlastnosti k implementaci `IConnection` umožňující připojení k objektu k označení existenci odchozí rozhraní. Pokud chcete lokalizovat název vlastnosti, jsou odvozeny z objektu <xref:System.ComponentModel.ICustomTypeDescriptor>. <xref:System.ComponentModel.ICustomTypeDescriptor> Implementace můžete upravit vlastnosti popisovače vrátí a změnit název vlastnosti. Chcete-li lokalizovat popis, vytvořit atribut, který je odvozen od <xref:System.ComponentModel.DescriptionAttribute> a přepsat vlastnost Popis.
+### <a name="updating-property-values-using-iconnection"></a>Aktualizace hodnot vlastností pomocí připojení IConnection
+ Druhým způsobem, jak zachovat **vlastnosti** okna v synchronizaci se změnami hodnoty vlastností je implementovat `IConnection` na připojitelný objekt k označení existence odchozí rozhraní. Pokud chcete lokalizovat název vlastnosti, odvodit objekt z <xref:System.ComponentModel.ICustomTypeDescriptor>. Implementace <xref:System.ComponentModel.ICustomTypeDescriptor> můžete změnit popisovače vlastností, které vrátí a změnit název vlastnosti. Chcete-li lokalizovat popis, vytvořte <xref:System.ComponentModel.DescriptionAttribute> atribut, který je odvozen od vlastnosti Description a přepište ji.
 
-#### <a name="considerations-in-implementing-the-iconnection-interface"></a>Důležité informace při implementaci rozhraní připojení IConnection
+#### <a name="considerations-in-implementing-the-iconnection-interface"></a>Důležité informace o implementaci rozhraní IConnection
 
-1. `IConnection` poskytuje přístup k enumerátoru dílčí objekt se <xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints> rozhraní. Také poskytuje přístup ke všem připojení bodu dílčí objektům, každý z která implementuje <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> rozhraní.
+1. `IConnection`poskytuje přístup k podobjektu čítače s rozhraním. <xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints> Poskytuje také přístup ke všem dílčím objektům spojovacího <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> bodu, z nichž každý implementuje rozhraní.
 
-2. Libovolný objekt procházet zodpovídá za implementace <xref:Microsoft.VisualStudio.OLE.Interop.IPropertyNotifySink> událostí. **Vlastnosti** okno vás upozorní, události nastavený prostřednictvím `IConnection`.
+2. Každý objekt procházení je zodpovědný <xref:Microsoft.VisualStudio.OLE.Interop.IPropertyNotifySink> za implementaci události. Okno **Vlastnosti** bude poskytovat poradenství `IConnection`pro událost nastavenou prostřednictvím .
 
-3. Spojovací bod určuje, kolik připojení (jeden nebo více) povoluje v jeho provádění <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint.Advise%2A>. Spojovací bod, který umožňuje pouze jedno rozhraní můžou vrátit <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL> z <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint.EnumConnections%2A> metody.
+3. Spojovací bod určuje, kolik připojení (jeden nebo více) <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint.Advise%2A>umožňuje v jeho implementaci . Spojovací bod, který umožňuje pouze <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL> jedno <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint.EnumConnections%2A> rozhraní může vrátit z metody.
 
-4. Klient může volat `IConnection` rozhraní se získat přístup k enumerátoru dílčí objekt se <xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints> rozhraní. <xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints> Rozhraní může být volána pro výčet spojovacích bodů pro každou odchozí ID rozhraní (IID).
+4. Klient může volat `IConnection` rozhraní získat přístup k podobjektu čítače s rozhraním. <xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints> Rozhraní <xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints> pak může být voláno k výčetu spojovacích bodů pro každé ID odchozí rozhraní (IID).
 
-5. `IConnection` Můžete také volat získat přístup k připojení bodu podřízených objektů s <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> pro každou odchozí identifikátor IID rozhraní. Až <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> rozhraní, klient spustí nebo ukončí advisory smyčky s umožňující připojení k objektu a klienta vlastní synchronizaci. Klient může také volat <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> rozhraní získat objekt enumerátoru s <xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnections> rozhraní pro připojení, která ví o zobrazení výčtu.
+5. `IConnection`lze také volat získat přístup k dílčím <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> objektům spojovacího bodu s rozhraním pro každé odchozí ID. Prostřednictvím <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> rozhraní klient spustí nebo ukončí poradní smyčku s připojitelný objekt a vlastní synchronizaci klienta. Klient může také <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> volat rozhraní získat objekt enumerator s rozhraním <xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnections> výčet připojení, které ví o.
 
-## <a name="getting-field-descriptions-from-the-properties-window"></a> Získávání popisy pole z okna Vlastnosti
-V dolní části **vlastnosti** okně oblasti popisu zobrazí informace související s vybranou vlastnost pole. Tato funkce je ve výchozím nastavení zapnutá. Pokud chcete skrýt pole Popis, klikněte pravým tlačítkem myši **vlastnosti** okno a klikněte na tlačítko **popis**. Tím také odstraněn znak zaškrtnutí vedle položky **popis** title v nabídce okno. Pole lze zobrazit znovu pomocí stejných kroků, chcete-li přepnout **popis** zpět na.
+## <a name="getting-field-descriptions-from-the-properties-window"></a><a name="getting-field-descriptions-from-the-properties-window"></a>Získání popisů polí z okna Vlastnosti
+V dolní části okna **Vlastnosti** se v oblasti popisu zobrazí informace související s vybraným polem vlastností. Tato funkce je ve výchozím nastavení zapnutá. Pokud chcete pole popisu skrýt, klepněte pravým tlačítkem myši na okno **Vlastnosti** a klepněte na příkaz **Popis**. Tím také odeberete zaškrtnutí vedle názvu **popis** v okně nabídky. Pole můžete znovu zobrazit podle stejných kroků, abyste mohli **přepnout zpět na Popis.**
 
- Informace v poli popisu pocházejí z <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>. Každá metoda, rozhraní, coclass a tak dále může mít nelokalizované `helpstring` atribut v knihovně typů. **Vlastnosti** okno načte řetězec z <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo.GetDocumentation%2A>.
+ Informace v poli popisu <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>pocházejí z . Každá metoda, rozhraní, coclass a tak dále `helpstring` může mít nelokalizovaný atribut v knihovně typů. Okno **Vlastnosti** načte <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo.GetDocumentation%2A>řetězec z aplikace .
 
-### <a name="to-specify-localized-help-strings"></a>Chcete-li zadat řetězce lokalizované nápovědy
+### <a name="to-specify-localized-help-strings"></a>Určení lokalizovaných řetězců nápovědy
 
-1. Přidat `helpstringdll` atribut příkaz library v knihovně typů (`typelib`).
+1. Přidejte `helpstringdll` atribut do příkazu knihovny`typelib`v knihovně typů ( ).
 
    > [!NOTE]
-   > Tento krok je volitelný, pokud knihovna typů nachází v objektový soubor knihovny (.olb).
+   > Tento krok je volitelný, pokud je knihovna typů v souboru knihovny objektů (.olb).
 
-2. Zadejte `helpstringcontext` atributy pro řetězce. Můžete také určit `helpstring` atributy.
+2. Zadejte `helpstringcontext` atributy pro řetězce. Můžete také `helpstring` zadat atributy.
 
-    Tyto atributy se liší od `helpfile` a `helpcontext` atributy, které jsou obsaženy ve skutečné chm témata nápovědy souboru.
+    Tyto atributy se `helpfile` liší `helpcontext` od atributů a, které jsou obsaženy v tématech nápovědy k souboru CHM.
 
-   Načíst informace o popisu, který se má zobrazit jako název zvýrazněný vlastnost **vlastnosti** volání okno <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetDocumentation2%2A> pro vlastnost, která je vybrána, zadáte požadované `lcid` atribut pro výstupní řetězec. Interně <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2> Vyhledá zadaný v souboru .dll `helpstringdll` atribut a volání `DLLGetDocumentation` na tento soubor .dll pomocí zadaného kontextu a `lcid` atribut.
+   Chcete-li načíst informace o popisu, které mají být <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetDocumentation2%2A> zobrazeny pro zvýrazněný název vlastnosti, zavolá okno `lcid` **Vlastnosti** vybranou vlastnost a určí požadovaný atribut pro výstupní řetězec. Interně <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2> vyhledá soubor DLL zadaný `helpstringdll` v `DLLGetDocumentation` atributu a zavolá tento soubor `lcid` DLL se zadaným kontextem a atributem.
 
-   Signatura a implementace `DLLGetDocumentation` jsou:
+   Podpis a provádění `DLLGetDocumentation` jsou:
 
 ```cpp
 STDAPI DLLGetDocumentation
@@ -102,18 +102,18 @@ STDAPI DLLGetDocumentation
 );
 ```
 
- `DLLGetDocumentation` Funkce musí být definovaný v souboru .def knihovny DLL export.
+ Funkce `DLLGetDocumentation` musí být export definovaný v souboru .def pro dll.
 
- Interně je vytvořen soubor olb, což je ve skutečnosti knihovny DLL. Tato knihovna DLL obsahuje jeden prostředek, souboru typu knihovna (.tlb) a jeden exportované funkce `DLLGetDocumentation`.
+ Interně je vytvořen soubor .olb, který je ve skutečnosti DLL. Tato knihovna DLL obsahuje jeden prostředek, soubor knihovny typů (.tlb) a jednu exportovnou funkci `DLLGetDocumentation`.
 
- V případě .olb soubory `helpstringdll` atribut je volitelný, protože je stejný soubor, který obsahuje samotný soubor .tlb.
+ V případě souborů OLB je `helpstringdll` atribut volitelný, protože se jedná o stejný soubor, který obsahuje samotný soubor .tlb.
 
- Chcete-li získat řetězců se zobrazí v **popisy** podokno, tedy minimální, je nutné provést je zadejte `helpstring` atribut v knihovně typů. Pokud chcete tyto řetězce lokalizaci, budete muset zadat `helpstringdll` (volitelné) atribut a `helpstringcontext` atribut (povinné) a implementujte `DLLGetDocumentation`.
+ Chcete-li získat řetězce, které se zobrazí v podokně **Popisy,** `helpstring` je tedy nutné zadat atribut v knihovně typů. Pokud chcete, aby tyto řetězce byly lokalizovány, musíte `helpstringdll` zadat `helpstringcontext` (volitelný) atribut `DLLGetDocumentation`a (povinný) atribut a implementovat .
 
- Nejsou žádná další rozhraní, které je třeba k implementaci při získávání lokalizovaných informací prostřednictvím vaší idl `helpstringcontext` atribut a `DLLGetDocumentation`.
+ Neexistují žádné další rozhraní, které je třeba implementovat při získávání `helpstringcontext` lokalizované informace prostřednictvím atributu idl a `DLLGetDocumentation`.
 
- Jiný způsob, jak získat lokalizovaný název a popis vlastnosti je implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.GetLocalizedPropertyInfo%2A>. Další informace týkající se implementace této metody naleznete v tématu [vlastností pole a rozhraní okna](../../extensibility/internals/properties-window-fields-and-interfaces.md).
+ Dalším způsobem získání lokalizovaného názvu a popisu <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.GetLocalizedPropertyInfo%2A>vlastnosti je implementace . Další informace týkající se implementace této metody naleznete v [tématu Properties Window Fields and Interfaces](../../extensibility/internals/properties-window-fields-and-interfaces.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Rozšíření vlastností](../../extensibility/internals/extending-properties.md)

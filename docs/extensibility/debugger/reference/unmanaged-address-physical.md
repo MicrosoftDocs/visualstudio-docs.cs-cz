@@ -1,5 +1,5 @@
 ---
-title: UNMANAGED_ADDRESS_PHYSICAL | Dokumentace Microsoftu
+title: UNMANAGED_ADDRESS_PHYSICAL | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - UNMANAGED_ADDRESS_PHYSICAL structure
 ms.assetid: fed09686-caa6-4efc-851e-a0432019e9d0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 93f6d1094a490041cd04a47fa073d2e75b8d2e23
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9070fcfbf79fb96ecff87a793c221f3e7a65c2ae
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316112"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713278"
 ---
-# <a name="unmanagedaddressphysical"></a>UNMANAGED_ADDRESS_PHYSICAL
+# <a name="unmanaged_address_physical"></a>UNMANAGED_ADDRESS_PHYSICAL
 Tato struktura představuje fyzickou adresu.
 
 ## <a name="syntax"></a>Syntaxe
@@ -41,10 +41,10 @@ public struct UNMANAGED_ADDRESS_PHYSICAL {
 
 ## <a name="members"></a>Členové
  `offset`\
- Posun 64-bit na fyzický adresní prostor.
+ 64bitový posun do fyzického adresního prostoru.
 
 ## <a name="remarks"></a>Poznámky
- Tato struktura je součástí sjednocení v [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) strukturu, kdy `dwKind` pole `DEBUG_ADDRESS_UNION` struktura je nastavena na `ADDRESS_KIND_UNMANAGED_PHYSICAL` (hodnotu z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet).
+ Tato struktura je součástí unie ve struktuře [DEBUG_ADDRESS_UNION,](../../../extensibility/debugger/reference/debug-address-union.md) když `dwKind` je pole `DEBUG_ADDRESS_UNION` struktury nastaveno na `ADDRESS_KIND_UNMANAGED_PHYSICAL` (hodnota z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčtu).
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: sh.h
@@ -53,6 +53,6 @@ public struct UNMANAGED_ADDRESS_PHYSICAL {
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)

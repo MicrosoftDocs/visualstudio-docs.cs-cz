@@ -1,57 +1,57 @@
 ---
-title: 'Testovací oblast 2: získat ze správy zdrojového kódu | Microsoft Docs'
+title: 'Testovací oblast 2: Získat ze správy zdrojového kódu | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, getting items from source control
 - source control [Visual Studio SDK], getting items from
 ms.assetid: cbd345c5-ca43-4630-b7a4-85564f4e2090
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dca98c927209062d2a1fc67c309d2f32c18d1b5d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c213e2774730596db8b8e4f2d0691472495222e7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72722574"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80704602"
 ---
 # <a name="test-area-2-get-from-source-control"></a>Testovací oblast 2: Načtení ze správy zdrojového kódu
-Tato testovací oblast pokrývá testovací případy pro načítání položek z úložiště verzí pomocí příkazu Get. Tyto testovací případy lze použít pro místní i pro webové projekty.
+Tato testovací oblast zahrnuje testovací případy pro načítání položek z úložiště verzí pomocí příkazu Get. Tyto testovací případy lze použít pro místní i webové projekty.
 
 ## <a name="command-menu-access"></a>Přístup k nabídce příkazů
- V testovacích případech se používají následující [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] cesty nabídky integrovaného vývojového prostředí.
+ Následující [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] cesty nabídky integrované vývojové prostředí se používají v testovacích případech.
 
-##### <a name="get-latest-version"></a>Získat nejnovější verzi:
+##### <a name="get-latest-version"></a>Získejte nejnovější verzi:
 
-- **Soubor**, Správa **zdrojového kódu**, **získat nejnovější verzi**.
+- **Soubor**, **Správa zdrojového kódu**, **Získat nejnovější verzi**.
 
 - **Soubor**, **získat nejnovější verzi**.
 
-- Místní nabídka – **získat nejnovější verzi**
+- Místní **nabídka, Získat nejnovější verzi**.
 
-- Get: **File**, **Source Control**, **Get**.
+- Získat: **Soubor**, **Řízení zdrojového kódu**, **Získat**.
 
 ## <a name="expected-behavior"></a>Očekávané chování
 
-##### <a name="get-latest-version"></a>Získat nejnovější verzi:
- Provede tiché načtení nejnovější verze položky z verze Store (bez uživatelského rozhraní).
+##### <a name="get-latest-version"></a>Získejte nejnovější verzi:
+ Provede tiché (žádné ui) načítání nejnovější verze položky z úložiště verzí.
 
-##### <a name="get"></a>Čtěte
- Zobrazí dialogové okno **získat** , ve kterém může uživatel provést změny v sadě souborů, která bude načtena, a změnit možnosti, které mají vliv na to, jak jsou soubory načteny.
+##### <a name="get"></a>Dostat:
+ Zobrazí dialogové okno **Získat** a umožní uživateli provádět změny sady souborů, která bude načtena, a také upravit možnosti, které ovlivňují způsob načítání souborů.
 
 ## <a name="test-cases"></a>Testovací případy
 
 |Akce|Testovací kroky|Očekávané výsledky k ověření|
 |------------|----------------|--------------------------------|
-|Získat nejnovější verzi souboru, který neexistuje v místním prostředí|1. Vytvořte projekt.<br />2. přidejte položku do projektu.<br />3. Umístěte projekt pod správu zdrojového kódu.<br />4. Odstraňte místní kopii položky.<br />5. načíst nejnovější verzi položky (místní nabídka, **získat nejnovější verzi**)|Soubor položky se načte lokálně.|
-|Získat soubor, který neexistuje místně|1. Vytvořte projekt.<br />2. přidejte položku do projektu.<br />3. Umístěte projekt pod správu zdrojového kódu.<br />4. Odstraňte místní kopii položky.<br />5. Získejte položku (**soubor**, **zdrojový ovládací prvek**, **získat** \<item >).|Soubor položky se načte lokálně.|
-|Získat soubor, který byl registrován exkluzivně a lokálně pozměněn|1. Vytvořte projekt.<br />2. přidejte položku do projektu.<br />3. Umístěte projekt pod správu zdrojového kódu.<br />4. Prohlédněte si výhradně položku projektu.<br />5. Upravte místní kopii.<br />6. Získejte nejnovější verzi položky (**soubor**, **získat nejnovější verzi** \<item >). V případě úspěšného provedení tohoto kroku pokračujte dalším krokem.<br />7. v dialogovém okně upozornění klikněte na tlačítko **nahradit** .|**Výsledek z kroku 6** `:`<br /><br /> Dialogové okno upozornění označuje, že je soubor rezervován.<br /><br /> **Výsledek z kroku 7:**<br /><br /> Změněný místní soubor je nahrazen původní verzí z úložiště verzí.<br /><br /> Soubor je pro čtení i zápis.|
-|Získat a nahradit soubor, který je rezervován, sdílen a upravován místně|1. Vytvořte nový projekt.<br />2. přidejte položku do projektu.<br />3. Umístěte projekt pod správu zdrojového kódu.<br />4. Prohlédněte si položku projektu jako sdílenou.<br />5. Upravte místní kopii.<br />6. Získejte nejnovější verzi položky (**soubor**, **získat nejnovější verzi** \<item >). V případě úspěšného provedení tohoto kroku pokračujte dalším krokem.<br />7. v dialogovém okně upozornění klikněte na **nahradit** .|**Výsledek z kroku 6:**<br /><br /> Dialogové okno upozornění označuje, že je soubor rezervován.<br /><br /> **Výsledek z kroku 7:**<br /><br /> Změněný místní soubor je nahrazen původní verzí z úložiště verzí.<br /><br /> Soubor je pro čtení i zápis.|
-|Získat soubor, který existuje místně, stejný jako nejnovější verze v úložišti verzí|1. Vytvořte nový projekt.<br />2. přidejte položku do projektu.<br />3. Umístěte projekt pod správu zdrojového kódu.<br />4. Získejte položku (**soubor**, **zdrojový ovládací prvek**, **získat** \<item >).|Místní soubor je nezměněný.|
-|Získání řešení pomocí jednoho projektu|1. Vytvořte řešení pomocí jednoho projektu.<br />2. Umístěte řešení do správy zdrojového kódu.<br />3. Odstraňte všechny soubory projektu místně.<br />4. Získejte řešení (**soubor**, Správa **zdrojového kódu**, **získat**).|Všechny odstraněné soubory se obnoví místně.|
+|Získat nejnovější verzi souboru, který neexistuje místně|1. Vytvořte projekt.<br />2. Přidejte položku do projektu.<br />3. Vložte projekt pod sohledem zdroje.<br />4. Odstraňte místní kopii položky.<br />5. Získejte nejnovější verzi položky (Místní nabídka, **Získat nejnovější verzi).**|Soubor položky je načten místně.|
+|Získat soubor, který neexistuje místně|1. Vytvořte projekt.<br />2. Přidejte položku do projektu.<br />3. Vložte projekt pod sohledem zdroje.<br />4. Odstraňte místní kopii položky.<br />5. Získejte položku **(Soubor,** **Řízení zdrojového kódu**, **Získat** \<položku>).|Soubor položky je načten místně.|
+|Získejte soubor, který byl rezervován výhradně a upraven místně|1. Vytvořte projekt.<br />2. Přidejte položku do projektu.<br />3. Vložte projekt pod sohledem zdroje.<br />4. Podívejte se na položku projektu výhradně.<br />5. Upravte místní kopii.<br />6. Získejte nejnovější verzi položky **(Soubor**, **Získejte nejnovější verzi položky** \<>). Pokud je tento krok úspěšný, pokračujte dalším krokem.<br />7. V dialogovém okně upozornění klepněte na tlačítko **Nahradit.**|**ReResult z kroku 6**`:`<br /><br /> Dialogové okno Upozornění označuje, že soubor je rezervován.<br /><br /> **ReResult z kroku 7:**<br /><br /> Změněný místní soubor je nahrazen původní verzí z úložiště verzí.<br /><br /> Soubor je čtení/zápis.|
+|Získat a nahradit soubor, který je rezervován, sdílen a upraven místně|1. Vytvořte nový projekt.<br />2. Přidejte položku do projektu.<br />3. Vložte projekt pod sohledem zdroje.<br />4. Podívejte se na položku projektu jako sdílenou.<br />5. Upravte místní kopii.<br />6. Získejte nejnovější verzi položky **(Soubor**, **Získejte nejnovější verzi položky** \<>). Pokud je tento krok úspěšný, pokračujte dalším krokem.<br />7. V dialogovém okně upozornění klepněte na **tlačítko Nahradit.**|**Výsledek kroku 6:**<br /><br /> Dialogové okno Upozornění označuje, že soubor je rezervován.<br /><br /> **Výsledek kroku 7:**<br /><br /> Změněný místní soubor je nahrazen původní verzí z úložiště verzí.<br /><br /> Soubor je čtení/zápis.|
+|Získejte soubor, který existuje místně, stejně jako nejnovější verze v úložišti verzí|1. Vytvořte nový projekt.<br />2. Přidejte položku do projektu.<br />3. Vložte projekt pod sohledem zdroje.<br />4. Získejte položku **(Soubor,** **Řízení zdrojového kódu**, **Získat** \<položku>).|Místní soubor se nezmění.|
+|Získejte řešení s jedním projektem|1. Vytvořte řešení s jedním projektem.<br />2. Umístěte roztok pod spouštění zdrojů.<br />3. Odstraňte všechny soubory projektu místně.<br />4. Získejte řešení **(Soubor,** **Zdrojové zdroje**, **Get).**|Všechny smazané soubory jsou obnoveny místně.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Testovací příručka pro moduly plug-in správy zdrojového kódu](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::SetValueAsStringWithError | Dokumentace Microsoftu
+title: IDebugProperty3::SetValueAsStringWithError | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty3::SetValueAsStringWithError
 ms.assetid: b378368f-4a45-4b2f-8e3d-3bff7a18ab17
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 61a39d3b68deec2dd51c49113355a8ed6c69325c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fb3441dabba1ff13600a9e505eeaec5ae93acd8e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348820"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721076"
 ---
 # <a name="idebugproperty3setvalueasstringwitherror"></a>IDebugProperty3::SetValueAsStringWithError
-Nastaví hodnotu této vlastnosti a vrátí chybovou zprávu, pokud je to nutné.
+Nastaví hodnotu této vlastnosti a v případě potřeby vrátí chybovou zprávu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,25 +47,25 @@ int SetValueAsStringWithError(
 
 ## <a name="parameters"></a>Parametry
 `pszValue`\
-[in] Hodnota k nastavení.
+[v] Hodnota nastavena.
 
 `dwRadix`\
-[in] Základ číselné soustavy nastaví se hodnota.
+[v] Radix nastavené hodnoty.
 
 `dwTimeout`\
-[in] Doba čekání nastavit hodnotu (`INFINITE` znamená, že stále čekat).
+[v] Doba čekání na hodnotu, která má`INFINITE` být nastavena (znamená čekat navždy).
 
 `errorString`\
-[out] Pokud došlo k chybě, nastavením této hodnoty, to obsahuje příčinu selhání.
+[out] Pokud došlo k chybě nastavení hodnoty, to platí důvod selhání.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Příchozí hodnotou může být výraz, který se má vyhodnotit.
+Příchozí hodnota může být výraz, který má být vyhodnocen.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak pro tuto metodu implementovat **CProperty** objekt, který zveřejňuje [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) rozhraní.
+Následující příklad ukazuje, jak implementovat tuto metodu pro **cproperty** objekt, který zveřejňuje rozhraní [IDebugProperty3.](../../../extensibility/debugger/reference/idebugproperty3.md)
 
 ```cpp
 HRESULT CProperty::SetValueAsStringWithError(
@@ -169,5 +169,5 @@ HRESULT CProperty::SetValueAsStringWithError(
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)

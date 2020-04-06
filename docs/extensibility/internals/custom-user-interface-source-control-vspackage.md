@@ -1,64 +1,64 @@
 ---
-title: Vlastní uživatelské rozhraní (řízení zdrojového balíčku VSPackage) | Dokumentace Microsoftu
+title: Vlastní uživatelské rozhraní (správa zdrojového kódu VSPackage) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - user interface, source control packages
 - source control packages, user interface
 ms.assetid: f35ddb24-53bf-461e-b34f-7414f657c082
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9d27fe21fb577f2e3610bf30109aa8c0b7f17a12
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a6ef807cef17a6ca3cddfee05ba57ace27e34a9e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66312201"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80708934"
 ---
-# <a name="custom-user-interface-source-control-vspackage"></a>Vlastní uživatelské rozhraní (řízení zdrojového balíčku VSPackage)
-Deklaruje VSPackage jeho položky nabídky a výchozího stavu prostřednictvím tabulky příkazů sady Visual Studio ( *.vsct*) soubor. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Integrované vývojové prostředí (IDE) zobrazí položky nabídky v jejich výchozí stavy, dokud načtení sady VSPackage. Následně <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metoda je volána k povolení nebo zakázání položky nabídky.
+# <a name="custom-user-interface-source-control-vspackage"></a>Vlastní uživatelské rozhraní (správa zdrojového kódu VSPackage)
+A VSPackage deklaruje své položky nabídky a jejich výchozí stavy prostřednictvím souboru příkazu Visual Studio (*.vsct*). Integrované [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vývojové prostředí (IDE) zobrazí položky nabídky v jejich výchozí stavy, dokud vSPackage je načten. Následně <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> je metoda volána k povolení nebo zakázání položek nabídky.
 
- VSPackage můžete nastavit klíč registru, takže sady VSPackage mohou být načteny automaticky v závislosti na kontextu příkaz uživatelské rozhraní (UI), i když obvykle správy zdrojových kódů VSPackage by se měly načíst na požádání namísto pouze přepnutí na konkrétním kontextu uživatelského rozhraní. Další informace o **AutoLoadPackages** klíče najdete v tématu registru [Správa balíčky VSPackages](../../extensibility/managing-vspackages.md).
+ VSPackage můžete nastavit klíč registru, takže VSPackage lze automaticky načíst v závislosti na kontextu uživatelského rozhraní příkazu (UI), i když obvykle zdroj ovládacího prvku VSPackage by měl načíst na vyžádání namísto pouze přepnutí do určitého kontextu uživatelského rozhraní. Další informace o klíči registru **AutoLoadPackages** naleznete v [tématu Správa balíčků VSPackages](../../extensibility/managing-vspackages.md).
 
-## <a name="vspackage-ui"></a>Uživatelské rozhraní balíčku VSPackage
- Zdrojový ovládací prvek balíček je implementovaný jako VSPackage a nepoužívá žádné uživatelské rozhraní z [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Každý ovládací prvek zdroje balíčku VSPackage musíte zadat své vlastní prvky uživatelského rozhraní, jako je například položky nabídky, skupiny nabídek, okna nástrojů, panelů nástrojů a všechny požadované uživatelského rozhraní pro nastavení možností konkrétní do správy zdrojového kódu VSPackage. Tyto prvky uživatelského rozhraní je možné povolit staticky nebo dynamicky. Statické prvky uživatelského rozhraní jsou definovány v *.vsct* souboru a zobrazují, jestli sady VSPackage je načtena, nebo ne. Dynamické prvky uživatelského rozhraní může být viditelné v závislosti na kontextu uživatelského rozhraní konkrétním příkazem, například <xref:EnvDTE.Constants.vsContextNoSolution>, nebo jako výsledek volání <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metody. Viditelnost dynamické prvky uživatelského rozhraní v souladu s strategie pro opožděné načtení rozšíření VSPackages.
+## <a name="vspackage-ui"></a>VSPackage UI
+ Balíček správy zdrojového kódu je implementován jako VSPackage a nepoužívá žádné ui z [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Každý zdrojový prvek VSPackage musí zadat své vlastní prvky uživatelského rozhraní, jako jsou položky nabídky, skupiny nabídek, okna nástrojů, panely nástrojů a všechny požadované uživatelské rozhraní pro nastavení možností specifických pro zdrojového ovládacího prvku VSPackage. Tyto prvky uživatelského rozhraní lze povolit staticky nebo dynamicky. Statické prvky uživatelského rozhraní jsou definovány v souboru *.vsct* a jsou zobrazeny bez ohledu na to, zda je balíček VSPackage načten či nikoli. Dynamické prvky uživatelského rozhraní mohou být viditelné v <xref:EnvDTE.Constants.vsContextNoSolution>závislosti na kontextu určitého uživatelského rozhraní příkazu, například , nebo jako výsledek volání <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metody. Viditelnost dynamických prvků uživatelského rozhraní je v souladu se strategií pro zpožděné načítání VSPackages.
 
-## <a name="ui-constraints-on-source-control-vspackages"></a>Omezení uživatelského rozhraní v balíčcích VSPackage správy zdrojového kódu
- Vzhledem k tomu, že ovládací prvek zdroje balíčku VSPackage nelze odebrat z prostředí IDE až po načtení, musí být možné je zadat v neaktivním stavu sady VSPackage. Když VSPackage obdrží oznámení, že není už aktivní, sady VSPackage zakáže jeho uživatelské rozhraní a ignoruje zásahu externí prostředí IDE. Implementace sady VSPackage <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metoda by měla příkazy skryje, když sady VSPackage není aktivní.
+## <a name="ui-constraints-on-source-control-vspackages"></a>Omezení u ina na zdrojové správě VSPackages
+ Vzhledem k tomu, že zdrojový ovládací prvek VSPackage nelze odebrat z ide po jeho načtení, VSPackage musí být schopen zadat neaktivní stav. Když VSPackage obdrží oznámení, že již není aktivní, VSPackage zakáže jeho uznané a ignoruje všechny externí ide interakce. VSPackage implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metody by měl skrýt příkazy, pokud VSPackage není aktivní.
 
- Každý musí implementovat balíčku VSPackage správy zdrojového kódu `IVsSccProvider` rozhraní. Dvě metody v rozhraní, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A>, musí být implementované sady VSPackage.
+ Každý zdrojový prvek VSPackage `IVsSccProvider` musí implementovat rozhraní. Dvě metody na <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A> rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A>a , musí být implementovány VSPackage.
 
- Ovládací prvek zdroje balíčku VSPackage může odběru jste se přihlásili k různým událostem IDE, které jsou implementované <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>, <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2>, a tak dále. Navíc sady VSPackage může implementovali rozhraní registru povoleny zpětné volání, jako <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>. Tato rozhraní musí všechny se ignoruje, pokud neaktivní.
+ Zdroj ovládacího prvku VSPackage může mít přihlášeni k odběru <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3> <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2>různých událostí ide, které jsou implementovány , a tak dále. VSPackage také může mít implementovány registry povoleno rozhraní pro <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>zpětné volání, jako je například . Tato rozhraní musí být ignorovány, pokud nejsou aktivní.
 
- Následující seznam obsahuje rozhraní ovlivněnému v aktivním stavu balíčku VSPackage správy zdrojového kódu:
+ V následujícím seznamu jsou uvedena rozhraní ovlivněná aktivním stavem správy zdrojového kódu VSPackage:
 
-- Sledování událostí dokumenty projektu.
+- Sledování událostí dokumentů projektu.
 
-- Řešení události.
+- Události řešení.
 
-- Rozhraní trvalého řešení. Pokud je neaktivní, by neměla balíčky zapisovat do *.sln* a *.suo* soubory.
+- Rozhraní perzistence řešení. Pokud jsou balíčky neaktivní, neměly by zapisovat do souborů *.sln* a *.suo.*
 
-- Prvky pro otevřenou vlastnost.
+- Zařízení prorozšíření vlastností.
 
-  Požadovaný <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>, a také všechny volitelné rozhraní související se správou zdrojového kódu nejsou volána, když ovládací prvek zdroje balíčku VSPackage je neaktivní.
+  Povinné <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>, a také všechny volitelné rozhraní přidružené ke sněmu zdrojového kódu nejsou volány, pokud je neaktivní ovládací prvek zdroj Ového kódu VSPackage.
 
-  Když [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] spustí rozhraní IDE, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nastaví kontext příkaz uživatelského rozhraní na ID ovládacího prvku zdroje aktuální výchozí ID balíčku VSPackage. To způsobí, že statické uživatelského ovládacího prvku aktivní zdroje balíčku VSPackage se zobrazí v integrovaném vývojovém prostředí bez skutečně načtení sady VSPackage. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pozastaví VSPackage k registraci ve službě [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterScciProvider> předtím, než provede všechna volání do sady VSPackage.
+  Při [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] spuštění ide [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nastaví kontext příkazu ui na ID aktuální výchozí ovládací prvek zdrojOvého kódu VSPackage ID. To způsobí, že statické ui aktivní správy zdrojového kódu VSPackage se zobrazí v ide bez skutečného načtení VSPackage. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]pozastaví pro VSPackage zaregistrovat [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterScciProvider> se prostřednictvím před provede volání VSPackage.
 
-  Následující tabulka popisuje konkrétní podrobnosti o tom, jak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] skryje různé položky uživatelského rozhraní IDE.
+  Následující tabulka popisuje konkrétní podrobnosti [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] o tom, jak ide skryje různé položky ui.
 
-| Položka uživatelského rozhraní | Popis |
+| Položka uj. | Popis |
 | - | - |
-| Nabídky a panely nástrojů | Zdrojový ovládací prvek balíček musíte nastavit počáteční stav viditelnosti nabídek a panelů nástrojů pro balíček ID zdrojového ovládacího prvku v [visibilityconstraints –](../../extensibility/visibilityconstraints-element.md) část *.vsct* souboru. Díky tomu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí odpovídajícím způsobem nastavit stav položky nabídky bez načítání sady VSPackage a volání implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metoda. |
-| Nástroje systému windows | Ovládací prvek zdroje balíčku VSPackage skryje všechny okna nástrojů, který ho vlastní, když se provádí neaktivní. |
-| Možnosti stránky konkrétní balíčku VSPackage správy zdrojového kódu | Klíč registru **HKLM\SOFTWARE\Microsoft\VisualStudio\X.Y\ToolsOptionsPages\VisibilityCmdUIContexts** umožňuje nastavit VSPackage kontextech, ve kterých se vyžaduje její stránky možností, které se zobrazí. Položky registru pod tímto klíčem musel být vytvořené pomocí služby ID (SID) pro službu správy zdrojových kódů a přiřadíte jí hodnotu DWORD na 1. Pokaždé, když se uživatelského rozhraní dojde k události v kontextu, který je zaregistrován balíčku VSPackage správy zdrojového kódu, bude volána sady VSPackage, pokud je aktivní. |
+| Nabídky a panely nástrojů | Balíček správy zdrojového kódu musí nastavit počáteční stavy viditelnosti nabídky a panelu nástrojů na ID balíčku správy zdrojového kódu v části [VisibilityConstraints](../../extensibility/visibilityconstraints-element.md) souboru *.vsct.* To umožňuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ide nastavit stav položek nabídky vhodně bez načtení VSPackage <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> a volání implementace metody. |
+| Okna nástrojů | Zdrojový prvek VSPackage skryje všechna okna nástrojů, která vlastní, když je neaktivní. |
+| Stránky možností specifické pro ovládací prvek VSPackage | Klíč registru **HKLM\SOFTWARE\Microsoft\VisualStudio\X.Y\ToolsOptionsPages\VisibilityCmdUIContexts** umožňuje vspackage nastavit kontexty, ve kterých vyžaduje, aby jeho možnosti stránky, které mají být zobrazeny. Položka registru pod tímto klíčem by musela být vytvořena pomocí ID služby (SID) služby správy zdrojového kódu a přiřazením hodnoty DWORD 1. Vždy, když dojde k události ui v kontextu správy zdrojového kódu VSPackage je registrována, Bude VSPackage volána, pokud je aktivní. |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterScciProvider>
 - <xref:EnvDTE.Constants.vsContextNoSolution>
-- [Správa rozšíření VSPackages](../../extensibility/managing-vspackages.md)
+- [Správa balíčků VSPackage](../../extensibility/managing-vspackages.md)

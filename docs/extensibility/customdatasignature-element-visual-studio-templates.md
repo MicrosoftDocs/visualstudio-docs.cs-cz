@@ -1,5 +1,5 @@
 ---
-title: CustomDataSignature – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Element CustomDataSignature (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - <CustomDataSignature> Element (Visual Studio Templates)
 - CustomDataSignature Element (Visual Studio Templates)
 ms.assetid: 8c3db51d-7014-4484-802a-15aa1353dbdb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: db2b4d089495245d1a37469df1dc43a19be31866
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ec8bae34da0f007bac65f26c4e442c1d03e56d08
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351981"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739439"
 ---
-# <a name="customdatasignature-element-visual-studio-templates"></a>CustomDataSignature – element (šablony sady Visual Studio)
-Určuje text podpis vyhledejte vlastní data.
+# <a name="customdatasignature-element-visual-studio-templates"></a>Element CustomDataSignature (šablony sady Visual Studio)
+Určuje textový podpis pro vyhledání vlastních dat.
 
- \<Vstemplate – > \<TemplateData > \<CustomDataSignature >
+ \<VSTemplate \<> TemplateData> \<CustomDataSignature>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,29 +30,29 @@ Určuje text podpis vyhledejte vlastní data.
 <CustomDataSignature>"string"</CustomDataSignature>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazí buď **nový projekt** nebo **přidat novou položku** dialogové okno.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text je řetězec, který nemá podpis text, který je potřeba najít vlastní data.
+ Text je řetězec, který má textový podpis, který je nutný k vyhledání vlastních dat.
 
 ## <a name="remarks"></a>Poznámky
- `CustomDataSignature` je volitelný prvek.
+ `CustomDataSignature`je volitelný prvek.
 
-## <a name="see-also"></a>Viz také:
-- [Odkaz na schéma Visual Studio šablon](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

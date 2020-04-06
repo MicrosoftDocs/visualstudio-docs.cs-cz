@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_METHOD | Dokumentace Microsoftu
+title: METADATA_ADDRESS_METHOD | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - METADATA_ADDRESS_METHOD structure
 ms.assetid: fc0e5370-1b4f-4867-837f-0d63c4b9dd09
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 03a8e4850a2a18ec55655934618ba42a694b412d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bc3dd7a34e4f9a3e1b933781aeaf4e18cad7ec17
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347354"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714458"
 ---
-# <a name="metadataaddressmethod"></a>METADATA_ADDRESS_METHOD
+# <a name="metadata_address_method"></a>METADATA_ADDRESS_METHOD
 Tato struktura představuje adresu metody třídy.
 
 ## <a name="syntax"></a>Syntaxe
@@ -47,16 +47,16 @@ public struct METADATA_ADDRESS_METHOD {
  `tokMethod`\
  ID metody.
 
- [C++] `_mdToken` je `typedef` pro 32bitovou verzi `int`.
+ [C++] `_mdToken` je `typedef` pro 32bitový `int`.
 
  `dwOffset`\
- Posun od začátku třídy k této metodě (může představovat posun v tabulce vtable).
+ Posun od začátku třídy k této metodě (může představovat posun do vtable).
 
  `dwVersion`\
- Verze – metoda (Tato hodnota je jedinečné pro poskytovatele symbolů).
+ Verze metody (tato hodnota je jedinečná pro zprostředkovatele symbolů).
 
 ## <a name="remarks"></a>Poznámky
- Tato struktura je součástí sjednocení v [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) strukturu, kdy `dwKind` pole `DEBUG_ADDRESS_UNION` struktura je nastavena na `ADDRESS_KIND_METHOD` (hodnotu z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet).
+ Tato struktura je součástí unie ve struktuře [DEBUG_ADDRESS_UNION,](../../../extensibility/debugger/reference/debug-address-union.md) když `dwKind` je pole `DEBUG_ADDRESS_UNION` struktury nastaveno na `ADDRESS_KIND_METHOD` (hodnota z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčtu).
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: sh.h
@@ -65,7 +65,7 @@ public struct METADATA_ADDRESS_METHOD {
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)
 - [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

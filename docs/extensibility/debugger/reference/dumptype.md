@@ -1,5 +1,5 @@
 ---
-title: DUMPTYPE | Dokumentace Microsoftu
+title: TYP VÝPISU | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - DUMPTYPE enumeration
 ms.assetid: ea8160db-8732-4056-a1d7-892ef72da71e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7edb3129733aec29bb5eda64d388024bec4d5ece
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0d4d42709efdefe097b4c8a78a0b00f45f2e1a2b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318194"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737200"
 ---
 # <a name="dumptype"></a>DUMPTYPE
-Určuje, jak velká část stavu programu (například běžící vlákna, rámce zásobníku a aktuální adresa instrukce) pro výpis.
+Určuje, kolik stavu programu (například spuštěných vláken, rámců zásobníku a aktuální adresy instrukcí) má být uloženo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,15 +42,15 @@ public enum enum_DUMPTYPE {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `DUMP_MINIDUMP`\
-Určuje malý, compact s výpisem paměti.
+Určuje malý, kompaktní výpis.
 
 `DUMP_FULLDUMP`\
-Určuje velké a kompletní výpis paměti.
+Určuje velký úplný výpis.
 
 ## <a name="remarks"></a>Poznámky
-Předán jako argument [WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md) metody.
+Předánjako argument metodě [WriteDump.](../../../extensibility/debugger/reference/idebugprogram2-writedump.md)
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -59,6 +59,6 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md)

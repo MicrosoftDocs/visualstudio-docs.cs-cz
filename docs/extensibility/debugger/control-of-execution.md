@@ -1,63 +1,63 @@
 ---
-title: Řízení spouštění | Dokumentace Microsoftu
+title: Kontrola exekuce | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], control of execution
 ms.assetid: 97071846-007e-450f-95a6-f072d0f5e61e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0d7594b91c67fb77d02e238a9336beb8d939714e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e2d338c5470611a5eea0c6279404c4eaddebb2d0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345528"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739072"
 ---
-# <a name="control-of-execution"></a>Řízení spouštění
-Ladicí stroj (DE) jednoho z následujících událostí obvykle odešle jako poslední události po spuštění:
+# <a name="control-of-execution"></a>Řízení provádění
+Ladicí modul (DE) obvykle odesílá jednu z následujících událostí jako poslední událost při spuštění:
 
-- Událost bodu položku, pokud připojení na nově otevřeném program
+- Událost vstupního bodu, pokud se připojuje k nově spuštěnému programu
 
-- Událost dokončení zatížení, pokud se připojuje k programu, který je již spuštěna
+- Událost dokončení načítání, pokud se připojujete k programu, který je již spuštěn
 
-  Obě tyto události patří události zastavení, což znamená, že je DE čeká na odpověď od uživatele prostřednictvím integrovaného vývojového prostředí. Další informace najdete v tématu [provozní režimy](../../extensibility/debugger/operational-modes.md).
+  Obě tyto události jsou zastavení události, což znamená, že DE čeká na odpověď od uživatele pomocí ide. Další informace naleznete v [tématu Provozní režimy](../../extensibility/debugger/operational-modes.md).
 
-## <a name="stopping-event"></a>Zastavení událostí
- Kdy je odesílat událostí ukončení relace ladění:
+## <a name="stopping-event"></a>Zastavení události
+ Při zastavení událost je odeslána do relace ladění:
 
-1. Aplikace a vlákna, které obsahují aktuální ukazatel příkazu můžete získat rozhraní události.
+1. Program a podproces, které obsahují aktuální ukazatel instrukce lze získat z rozhraní události.
 
-2. Rozhraní IDE zjistí aktuálního souboru se zdrojovým kódem a umístění, která se zobrazí jako zvýrazněné v editoru.
+2. Rozhraní IDE určuje aktuální soubor zdrojového kódu a pozici, která se zobrazí jako zvýrazněné v editoru.
 
-3. Relace ladění se obvykle reakce na tento první událost zastavení voláním programu **pokračovat** metody.
+3. Relace ladění obvykle reaguje na tuto první událost zastavení voláním metody **Continue** programu.
 
-4. Program se pak spustí, dokud nenarazí na zastavení podmínku, třeba dosažení zarážky. V takovém případě je DE odešle událost zarážky relace ladění. Událost zarážky je zastavení, a DE znovu čeká na odpověď uživatele.
+4. Program se pak spustí, dokud nenarazí na podmínku zastavení, například s chytnout zarážku. V takovém případě DE odešle událost zarážky do relace ladění. Událost zarážky je událost zastavení a DE opět čeká na odpověď uživatele.
 
-5. Pokud se uživatel rozhodne krokovat do, nad nebo ve funkci, rozhraní IDE zobrazí výzvu ladicí relace pro volání programu `Step` metody. Rozhraní IDE pak předá jednotka kroku (instrukce, příkaz nebo řádek) a typ kroku (ať už krokovat do, přes nebo mimo funkci). Po dokončení kroku DE odešle událost dokončení kroku ladicí relaci, což je událostí ukončení.
-
-    -nebo-
-
-    Pokud se uživatel rozhodne má pokračovat provedením z aktuální ukazatele na instrukci, rozhraní IDE zobrazí výzvu ladicí relace pro volání programu **Execute** metody. Program pokračuje v provádění dokud nenarazí na další podmínky zastavení.
+5. Pokud se uživatel rozhodne vstoupit do, přes nebo z funkce, ide vyzve relaci ladění k `Step` volání metody programu. IDE pak předá jednotku kroku (instrukce, příkaz nebo řádek) a typ kroku (zda krok do, přes nebo z funkce). Po dokončení kroku DE odešle událost dokončení kroku do relace ladění, což je událost zastavení.
 
     -nebo-
 
-    Pokud se bude ignorovat událostí konkrétní ukončení relace ladění, relace ladění zavolá programu **pokračovat** metody. Pokud program byl krokování do, nad nebo ve funkci, pokud došlo ke stavu zastavení, potom pokračuje v kroku.
+    Pokud se uživatel rozhodne pokračovat v provádění z aktuálního ukazatele instrukce, ide vyzve relaci ladění k volání metody **spuštění** programu. Program pokračuje v provádění, dokud nenarazí na další podmínku zastavení.
 
-   Prostřednictvím kódu programu, když je DE narazí na podmínku přerušení, odešle tyto události zastavení jako [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) nebo [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) do Správce ladění relace (SDM) prostřednictvím [IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md) rozhraní. Předá DE [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) a [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md) rozhraní, které představují program a vlákna obsahující aktuální ukazatel příkazu. Volání SDM [IDebugThread2::EnumFrameInfo](../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) rámec na vrcholu zásobníku a volání [IDebugStackFrame2::GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) získat kontext dokumentu spojený s aktuální instrukce ukazatel. Kontext tohoto dokumentu je obvykle zdrojový kód souboru název, řádek a sloupec číslo. Integrované vývojové prostředí, používá tato zvýrazněte zdrojový kód, který obsahuje aktuální ukazatel příkazu.
+    -nebo-
 
-   SDM obvykle reakce na tento první událost zastavení voláním [IDebugProgram2::Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md). Program pak spustí, dokud nenarazí na zastavení podmínku, třeba dosažení zarážky, odešle žádost případ DE [IDebugBreakpointEvent2 rozhraní](../../extensibility/debugger/reference/idebugbreakpointevent2.md) k SDM. Událost zarážky je zastavení, a DE znovu čeká na odpověď uživatele.
+    Pokud je relace ladění ignorovat konkrétní událost zastavení, relace ladění volá metodu **Continue** programu. Pokud program byl krokování do, přes nebo z funkce, když došlo k zastavení podmínku, pak pokračuje krok.
 
-   Pokud se uživatel rozhodne krokovat do, nad nebo ve funkci, rozhraní IDE zobrazí výzvu SDM volat [IDebugProgram2::Step](../../extensibility/debugger/reference/idebugprogram2-step.md). Rozhraní IDE se pak předá [STEPUNIT](../../extensibility/debugger/reference/stepunit.md) (instrukce, příkaz nebo řádek) a [STEPKIND](../../extensibility/debugger/reference/stepkind.md), to znamená, zda krokovat do, přes nebo mimo funkci. Po dokončení kroku odešle DE [IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md) rozhraní SDM, což je událostí ukončení.
+   Programově, když DE narazí na podmínku zastavení, odešle takové události zastavení jako [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) nebo [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) do správce ladění relace (SDM) pomocí rozhraní [IDebugCallBackback2.](../../extensibility/debugger/reference/idebugeventcallback2.md) De předá [Rozhraní IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) a [IDebugThread2,](../../extensibility/debugger/reference/idebugthread2.md) které představují program a vlákno obsahující aktuální ukazatel instrukce. SDM volá [IDebugThread2::EnumFrameInfo](../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) získat horní rámec zásobníku a volání [IDebugStackFrame2::GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) získat kontext dokumentu spojené s aktuální ukazatel instrukce. Tento kontext dokumentu je obvykle název souboru zdrojového kódu, řádek a číslo sloupce. IDE používá k zvýraznění zdrojového kódu, který obsahuje aktuální ukazatel instrukce.
 
-   Pokud se uživatel rozhodne má pokračovat provedením z aktuální ukazatele na instrukci, rozhraní IDE požádá SDM volat [IDebugProgram2::Execute](../../extensibility/debugger/reference/idebugprogram2-execute.md). Program pokračuje v provádění dokud nenarazí na další podmínky zastavení.
+   SDM obvykle reaguje na tuto první událost zastavení voláním [IDebugProgram2::Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md). Program se pak spustí, dokud nenarazí na podmínku zastavení, jako je například stisknutí zarážky, v takovém případě DE odešle [rozhraní IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md) do sdm. Událost zarážky je událost zastavení a DE opět čeká na odpověď uživatele.
 
-   Pokud balíček ladění bude ignorovat konkrétní zastavení událostí, zavolá ladit balíček SDM, která volá [IDebugProgram2::Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md). Pokud program byl krokování do, nad nebo ve funkci, pokud došlo ke stavu zastavení, bude pokračovat v kroku. Z toho vyplývá, že program udržuje krokování stavu, takže ví, jak pokračovat.
+   Pokud se uživatel rozhodne vstoupit do, přes nebo z funkce, ide vyzve SDM volat [IDebugProgram2::Step](../../extensibility/debugger/reference/idebugprogram2-step.md). IDE pak předá [STEPUNIT](../../extensibility/debugger/reference/stepunit.md) (instrukce, příkaz nebo řádek) a [STEPKIND](../../extensibility/debugger/reference/stepkind.md), to znamená, zda krok do, přes nebo z funkce. Po dokončení kroku DE odešle rozhraní [IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md) do SDM, což je událost zastavení.
 
-   Volání SDM provede `Step`, **Execute**, a **pokračovat** jsou asynchronní, což znamená, SDM očekává, že volání rychle vrátit. Pokud je DE odešle SDM událostí ukončení ve stejném vlákně před `Step`, **Execute**, nebo **pokračovat** vrátí SDM přestane reagovat.
+   Pokud se uživatel rozhodne pokračovat v provádění z aktuálního ukazatele instrukce, ide požádá SDM volat [IDebugProgram2::Execute](../../extensibility/debugger/reference/idebugprogram2-execute.md). Program pokračuje v provádění, dokud nenarazí na další podmínku zastavení.
 
-## <a name="see-also"></a>Viz také:
-- [Ladění úloh](../../extensibility/debugger/debugging-tasks.md)
+   Pokud je ladicí balíček ignorovat konkrétní událost zastavení, ladicí balíček volá SDM, který volá [IDebugProgram2::Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md). Pokud program byl krokování do, přes nebo z funkce, když došlo k zastavení podmínku, pokračuje krok. To znamená, že program udržuje krokový stav, takže ví, jak pokračovat.
+
+   Volání SDM provede `Step`, **Execute**a **Continue** jsou asynchronní, což znamená, že SDM očekává, že volání rychle vrátit. Pokud DE odešle Událost zastavení SDM ve `Step`stejném vlákně před , **Execute**, nebo **Pokračovat** vrátí, sDM zablokuje.
+
+## <a name="see-also"></a>Viz také
+- [Ladění úkolů](../../extensibility/debugger/debugging-tasks.md)

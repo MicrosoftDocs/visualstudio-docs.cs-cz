@@ -1,25 +1,25 @@
 ---
-title: Bitmaps – Element | Dokumentace Microsoftu
+title: Prvek rastrů | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, Bitmaps
 - Bitmaps element (VSCT XML schema)
 ms.assetid: 74652e1b-fcfa-421b-aa9f-fbc081d3b476
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00486f4edd68d2cc5e158d567a28f78ef12f8cd1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 85310923134a6db59f1b6a3a15ac4b96a127e239
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333402"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739985"
 ---
-# <a name="bitmaps-element"></a>Bitmaps – element
-Skupiny [rastrový obrázek element](../extensibility/bitmap-element.md) elementy.
+# <a name="bitmaps-element"></a>Bitmapový prvek
+Seskupí prvky [bitmapového prvku.](../extensibility/bitmap-element.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,27 +30,27 @@ Skupiny [rastrový obrázek element](../extensibility/bitmap-element.md) element
 </Bitmaps>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Bitmaps – element](../extensibility/bitmaps-element.md)|Seskupí elementy rastrového obrázku.|
-|[Bitmap – element](../extensibility/bitmap-element.md)|Definuje rastrový obrázek.|
+|[Bitmapový prvek](../extensibility/bitmaps-element.md)|Seskupí bitmapové prvky.|
+|[Bitmapový prvek](../extensibility/bitmap-element.md)|Definuje bitmapu.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Commands – element](../extensibility/commands-element.md)|Představuje kolekci příkazů na panelu nástrojů VSPackage.|
+|[Element příkazy](../extensibility/commands-element.md)|Představuje kolekci příkazů na panelu nástrojů VSPackage.|
 
 ## <a name="example"></a>Příklad
 
@@ -62,6 +62,6 @@ Skupiny [rastrový obrázek element](../extensibility/bitmap-element.md) element
 </Bitmaps>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+## <a name="see-also"></a>Viz také
+- [Jak VSPackages přidat prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

@@ -1,5 +1,5 @@
 ---
-title: Využití RDT_ReadLock | Dokumentace Microsoftu
+title: RDT_ReadLock použití | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,36 +8,36 @@ helpviewer_keywords:
 - RDT_EditLock
 - invisible
 ms.assetid: b935fc82-9d6b-4a8d-9b70-e9a5c5ad4a55
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8c11cee4c1f8c150fc8bcf42b3dbc1a193d3441a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fb897fab61e1e14b52863b5853748c685200d5ba
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341360"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80705920"
 ---
-# <a name="rdtreadlock-usage"></a>Využití RDT_ReadLock
+# <a name="rdt_readlock-usage"></a>Využití RDT_ReadLock
 
-[_VSRDTFLAGS. RDT_ReadLock](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS.RDT_ReadLock>) je příznak, který obsahuje logiku pro uzamčení dokumentu v systémem dokumentu tabulky (r...), který je uvedený seznam všech dokumentů, které jsou právě otevřeny v integrovaném vývojovém prostředí sady Visual Studio. Tento příznak určuje, kdy jsou otevřené dokumenty a zda dokument je zobrazen v uživatelském rozhraní nebo pevné nezaregistroval v paměti.
+[_VSRDTFLAGS. RDT_ReadLock](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS.RDT_ReadLock>) je příznak, který poskytuje logiku pro uzamčení dokumentu v tabulce spuštěných dokumentů (RDT), což je seznam všech dokumentů, které jsou aktuálně otevřeny v ide sady Visual Studio. Tento příznak určuje, kdy jsou dokumenty otevřeny a zda je dokument viditelný v uživatelském rozhraní nebo držen neviditelně v paměti.
 
-Obecně platí, použijete [_VSRDTFLAGS. RDT_ReadLock](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS.RDT_ReadLock>) při je splněna jedna z následujících akcí:
+Obecně platí, že používáte [_VSRDTFLAGS. RDT_ReadLock,](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS.RDT_ReadLock>) pokud platí jedna z následujících podmínek:
 
-- Chcete otevřít dokument transparentně a jen pro čtení, ale je ještě není vytvořeno, který <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> by vlastnit.
+- Chcete otevřít dokument neviditelně a jen pro čtení, ale ještě <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> není stanoven, který by měl vlastnit.
 
-- Chcete uživateli výzva k uložení dokumentu, kterou jste otevřeli nezaregistroval předtím, než uživatel zobrazí v uživatelském rozhraní a pak se pokusila zavřít ho.
+- Chcete, aby byl uživatel vyzván k uložení dokumentu, který byl neviditelně otevřen, než jej uživatel zobrazil v uživatelském rozhraní a poté se jej pokusil zavřít.
 
-## <a name="how-to-manage-visible-and-invisible-documents"></a>Jak spravovat viditelné a neviditelné dokumenty
+## <a name="how-to-manage-visible-and-invisible-documents"></a>Správa viditelných a neviditelných dokumentů
 
-Když uživatel otevře dokument v Uživatelském rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> vlastník dokumentu musí být stanovena a [_VSRDTFLAGS. RDT_EditLock](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS.RDT_EditLock>) musí být nastaven příznak. Pokud ne <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> vlastníka je možné navázat, pak dokument se neuloží, když uživatel klikne **Uložit vše** nebo ukončí rozhraní IDE. To znamená, že pokud je otevřený dokument nezaregistroval tam, kde je změněný v paměti a uživatel je vyzván k uložení dokumentu na vypnutí nebo uložit, pokud **Uložit vše** je vybrán, pak `RDT_ReadLock` nelze použít. Místo toho je nutné použít `RDT_EditLock` a registrovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocumentLockHolder> při [__VSREGDOCLOCKHOLDER. RDLH_WeakLockHolder](<xref:Microsoft.VisualStudio.Shell.Interop.__VSREGDOCLOCKHOLDER.RDLH_WeakLockHolder>) příznak.
+Když uživatel otevře dokument v uživatelském <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> rozhraní, musí být vytvořen vlastník dokumentu a [_VSRDTFLAGS. RDT_EditLock](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS.RDT_EditLock>) příznak musí být nastaven. Pokud <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> nelze vytvořit žádného vlastníka, nebude dokument uložen, když uživatel klepne na tlačítko **Uložit vše** nebo zavře rozhraní IDE. To znamená, že pokud je dokument otevřen neviditelně tam, kde je upraven v paměti, a uživatel je vyzván `RDT_ReadLock` k uložení dokumentu při vypnutí nebo uložení, pokud je vybrána možnost **Uložit vše,** nelze použít. Místo toho je `RDT_EditLock` nutné použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocumentLockHolder> a zaregistrovat při [__VSREGDOCLOCKHOLDER. RDLH_WeakLockHolder](<xref:Microsoft.VisualStudio.Shell.Interop.__VSREGDOCLOCKHOLDER.RDLH_WeakLockHolder>) vlajka.
 
-## <a name="rdteditlock-and-document-modification"></a>RDT_EditLock a úpravy dokumentu
+## <a name="rdt_editlock-and-document-modification"></a>RDT_EditLock a úpravy dokumentu
 
-Předchozí příznak uvedených označuje, že neviditelné otevření dokumentu přinese jeho `RDT_EditLock` při otevření dokumentu uživatelem do viditelné **DocumentWindow**. V takovém případě uživateli zobrazí s **Uložit** výzvu při viditelných **DocumentWindow** je zavřený. `Microsoft.VisualStudio.Package.Automation.OAProject.CodeModel` implementace, které používají <xref:Microsoft.VisualStudio.Shell.Interop.IVsInvisibleEditorManager> služby zpočátku fungovat, pokud je to jenom `RDT_ReadLock` se provede, (to znamená, když dokument je otevřen nezaregistroval k analýze informací o). Později, pokud je třeba upravit dokument, pak zámek se upgraduje na slabé **RDT_EditLock**. Pokud uživatel potom otevře dokument v viditelné **DocumentWindow**, `CodeModel`společnosti slabé `RDT_EditLock` vydání.
+Předchozí příznak uvedené označuje, že neviditelné otevření `RDT_EditLock` dokumentu přinese jeho při otevření dokumentu uživatelem do viditelné **DocumentWindow**. V takovém případě je uživateli zobrazí výzva **Uložit** při zavření **viditelnédocumentwindow.** `Microsoft.VisualStudio.Package.Automation.OAProject.CodeModel`implementace, které <xref:Microsoft.VisualStudio.Shell.Interop.IVsInvisibleEditorManager> používají službu zpočátku pracovat, když je přijata `RDT_ReadLock` pouze (tj. při otevření dokumentu neviditelně analyzovat informace). Později pokud dokument musí být změněn, pak zámek je upgradován na slabé **RDT_EditLock**. Pokud uživatel pak otevře dokument ve viditelném `CodeModel` **DocumentWindow**, 's slabé `RDT_EditLock` je uvolněna.
 
-Pokud uživatel potom jej zavře **DocumentWindow** a zvolí **ne** po zobrazení výzvy k uložení otevřít dokument, pak bude `CodeModel` implementace uvolní všechny informace v dokumentu a znovu neotevře dokument z disku neviditelné při příštím Další informace jsou nezbytné k dokumentu. Subtlety toto chování je instanci, kde uživatel otevře **DocumentWindow** neviditelné otevřeného dokumentu, změní se zavře a následně klikne **ne** po zobrazení výzvy k uložení dokumentu. V tomto případě, pokud má dokument `RDT_ReadLock`, dokument nebude ve skutečnosti byl a upravený dokument zůstanou otevřené nezaregistroval v paměti, i když se uživatel rozhodl nechcete uložit dokument.
+Pokud uživatel potom zavře **DocumentWindow** a zvolí **Ne** po zobrazení výzvy `CodeModel` k uložení otevřeného dokumentu, pak implementace naloží všechny informace v dokumentu a znovu otevře dokument z disku neviditelně příště další informace je požadováno pro dokument. Jemnost tohoto chování je instance, kde uživatel otevře **DocumentWindow** neviditelného otevřeného dokumentu, upraví jej, zavře a pak zvolí **Ne,** když se zobrazí výzva k uložení dokumentu. V tomto případě, pokud `RDT_ReadLock`dokument má , pak dokument nebude ve skutečnosti uzavřen a upravený dokument zůstane otevřený neviditelně v paměti, i když se uživatel rozhodl dokument neukládat.
 
-Pokud neviditelné otevření dokumentu používá weak `RDT_EditLock`, pak bude vrácen platnost zámku, když uživatel otevře dokument viditelně a žádné další zámky. Když uživatel zavírá **DocumentWindow** a zvolí **ne** po zobrazení výzvy k uložení dokumentu, pak dokument musíte zavřít z paměti. To znamená, že neviditelné klient musí naslouchat událostem rámcový sledovat výskyt této události. Dalším vyžádáním dokumentu dokumentu musí být znovu otevřít.
+Pokud neviditelné otevření dokumentu používá `RDT_EditLock`slabé , pak dává svůj zámek, když uživatel otevře dokument viditelně a žádné jiné zámky jsou drženy. Když uživatel zavře **DocumentWindow** a zvolí **Ne** po zobrazení výzvy k uložení dokumentu, pak dokument musí být uzavřen z paměti. To znamená, že neviditelný klient musí naslouchat událostem RDT ke sledování tohoto výskytu. Při příštím požadování musí být dokument znovu otevřen.
