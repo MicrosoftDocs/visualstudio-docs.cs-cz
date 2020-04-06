@@ -1,54 +1,54 @@
 ---
-title: Vytvoření kategorie nastavení | Dokumentace Microsoftu
+title: Vytvoření kategorie nastavení | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - profile settings, creating categories
 ms.assetid: 97c88693-05ff-499e-8c43-352ee073dcb7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 02ef202436e12ae075c41f507577bacaa968c60b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5f4b2fa9d82181d0eb899bf9680e8a9debd6c50b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341584"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739604"
 ---
 # <a name="create-a-settings-category"></a>Vytvoření kategorie nastavení
 
-V tomto názorném postupu vytvoření kategorie nastavení sady Visual Studio a použít ho k uložení hodnot a obnovení hodnoty ze souboru nastavení. Nastavení kategorie je skupina souvisejících vlastností, které se zobrazují jako "bod vlastní nastavení"; To znamená, že jako zaškrtávací políčko v **Import a export nastavení** průvodce. (Najdete ho na **nástroje** nabídky.) Nastavení se uloží nebo obnovili kategorii a individuální nastavení nejsou zobrazeny v průvodci. Další informace najdete v tématu [nastavení prostředí](../ide/environment-settings.md).
+V tomto návodu vytvoříte kategorii nastavení sady Visual Studio a použijete ji k ukládání hodnot a obnovení hodnot ze souboru nastavení. Kategorie nastavení je skupina souvisejících vlastností, které se zobrazují jako "vlastní bod nastavení"; to znamená, že jako zaškrtávací políčko v průvodci **Nastavení importu a exportu.** (Najdete ji v nabídce **Nástroje.)** Nastavení jsou uložena nebo obnovena jako kategorie a jednotlivá nastavení se v průvodci nezobrazí. Další informace naleznete v [tématu Nastavení prostředí](../ide/environment-settings.md).
 
-Vytvoření kategorie nastavení odvozením z <xref:Microsoft.VisualStudio.Shell.DialogPage> třídy.
+Kategorie nastavení vytvoříte odvozením z <xref:Microsoft.VisualStudio.Shell.DialogPage> třídy.
 
-Chcete-li spustit Tento názorný postup, musíte nejdřív dokončit první část [vytvoření stránky možnosti](../extensibility/creating-an-options-page.md). Výsledný mřížky vlastností možnosti umožňuje zkontrolovat a změnit vlastnosti v kategorii. Po uložení vlastnosti kategorie v souboru nastavení zkontrolujte v souboru chcete zobrazit, jak jsou uložené hodnoty vlastností.
+Chcete-li tento návod spustit, musíte nejprve dokončit první oddíl [stránky Vytvořit možnosti](../extensibility/creating-an-options-page.md). Výsledná mřížka vlastností Options umožňuje prozkoumat a změnit vlastnosti v kategorii. Po uložení kategorie vlastností do souboru nastavení zkontrolujte soubor, abyste zjistili, jak jsou uloženy hodnoty vlastností.
 
 ## <a name="prerequisites"></a>Požadavky
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby stažení. Je součástí volitelné funkce v nastavení sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace naleznete [v tématu Instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-settings-category"></a>Vytvoření kategorie nastavení
- V této části použijete k uložení a obnovení hodnoty kategorie nastavení bodu vlastní nastavení.
+ V této části použijete vlastní bod nastavení k uložení a obnovení hodnot kategorie nastavení.
 
 ### <a name="to-create-a-settings-category"></a>Vytvoření kategorie nastavení
 
-1. Dokončení [vytvoření stránky možnosti](../extensibility/creating-an-options-page.md).
+1. Vyplňte [stránku Vytvořit možnosti](../extensibility/creating-an-options-page.md).
 
-2. Otevřít *VSPackage.resx* a přidejte tyto tři řetězcové prostředky:
+2. Otevřete soubor *VSPackage.resx* a přidejte tyto tři řetězcové prostředky:
 
-    |Name|Hodnota|
+    |Name (Název)|Hodnota|
     |----------|-----------|
     |106|Moje kategorie|
     |107|Moje nastavení|
     |108|OptionInteger a OptionFloat|
 
-     Tím se vytvoří prostředky tento název kategorie "My kategorie", objektu "nastavení" a "A OptionInteger OptionFloat" Popis kategorie.
+     Tím se vytvoří prostředky, které pojmenují kategorii "Moje kategorie", objekt "Moje nastavení" a popis kategorie "OptionInteger a OptionFloat".
 
     > [!NOTE]
-    > Z těchto tří pouze na název kategorie se nezobrazují v **nastavení importu a exportu** průvodce.
+    > Z těchto tří se v Průvodci **importem a exportem nastavení** nezobrazí pouze název kategorie.
 
-3. V *MyToolsOptionsPackage.cs*, přidejte `float` vlastnost s názvem `OptionFloat` k `OptionPageGrid` třídy, jak je znázorněno v následujícím příkladu.
+3. V *MyToolsOptionsPackage.cs*přidejte `float` `OptionFloat` vlastnost `OptionPageGrid` s názvem do třídy, jak je znázorněno v následujícím příkladu.
 
     ```csharp
     public class OptionPageGrid : DialogPage
@@ -76,51 +76,51 @@ Chcete-li spustit Tento názorný postup, musíte nejdřív dokončit první č�
     ```
 
     > [!NOTE]
-    > `OptionPageGrid` Kategorii s názvem "My kategorie" nyní se skládá ze dvou vlastností `OptionInteger` a `OptionFloat`.
+    > Kategorie `OptionPageGrid` s názvem "Moje kategorie" se nyní skládá `OptionInteger` `OptionFloat`ze dvou vlastností a .
 
-4. Přidat <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> k `MyToolsOptionsPackage` třídy a poskytněte CategoryName "My kategorie", jí ObjectName "Nastavení" a isToolsOptionPage nastavena na hodnotu true. Nastavení categoryResourceID, objectNameResourceID a DescriptionResourceID na odpovídající prostředek řetězce, který ID vytvořili dříve.
+4. Přidejte <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> a `MyToolsOptionsPackage` do třídy a dát mu CategoryName "Moje kategorie", dát mu ObjectName "Moje nastavení", a nastavte isToolsOptionPage na true. Nastavte kategorii ResourceID, objectNameResourceID a DescriptionResourceID na odpovídající dříve vytvořená ID prostředků řetězce.
 
     ```csharp
     [ProvideProfileAttribute(typeof(OptionPageGrid),
         "My Category", "My Settings", 106, 107, isToolsOptionPage:true, DescriptionResourceID = 108)]
     ```
 
-5. Sestavte projekt a spusťte ladění. V experimentální instanci byste měli vidět, který **stránku mřížky** nyní obsahuje hodnoty celé číslo a plovoucí desetinnou čárkou.
+5. Sestavení projektu a začít ladění. V experimentální instanci byste měli vidět, že **moje stránka mřížky** má nyní celé číslo a float hodnoty.
 
 ## <a name="examine-the-settings-file"></a>Zkontrolujte soubor nastavení
- V této části exportovat do souboru nastavení hodnot vlastností kategorie. Zkontrolujte v souboru a poté importovat hodnoty zpět do kategorie vlastnosti.
+ V této části exportujete hodnoty kategorií vlastností do souboru nastavení. Zkontrolujte soubor a potom importujte hodnoty zpět do kategorie vlastností.
 
-1. Spusťte projekt v režimu ladění stisknutím kombinace kláves **F5**. Otevře se experimentální instance.
+1. Spusťte projekt v režimu ladění stisknutím **klávesy F5**. Tím se spustí experimentální instance.
 
-2. Otevřít **nástroje** > **možnosti** dialogového okna.
+2. Otevřete dialogové okno**Možnosti** **nástrojů.** > 
 
-3. V zobrazení stromu v levém podokně rozbalte **kategorie Mé** a potom klikněte na tlačítko **stránku mřížky**.
+3. Ve stromovém zobrazení v levém podokně **rozbalte položku Moje kategorie** a potom klepněte na **položku Moje stránka mřížky**.
 
-4. Změňte hodnotu vlastnosti **OptionFloat** k 3.1416 a **OptionInteger** do 12. Klikněte na **OK**.
+4. Změňte hodnotu **OptionFloat** na 3.1416 a **OptionInteger** na 12. Klikněte na tlačítko **OK**.
 
-5. Na **nástroje** nabídky, klikněte na tlačítko **nastavení importu a exportu**.
+5. V nabídce **Nástroje** klepněte na **položku Importovat a exportovat nastavení**.
 
-     **Nastavení importu a exportu** průvodce se zobrazí.
+     Zobrazí se Průvodce **nastavením importu a exportu.**
 
-6. Ujistěte se, že **exportovat vybrané nastavení prostředí** je vybrána a potom klikněte na tlačítko **Další**.
+6. Zkontrolujte, zda je vybraná volba **Exportovat vybraná nastavení prostředí,** a klepněte na tlačítko **Další**.
 
-     **Zvolte nastavení pro Export** se zobrazí stránka.
+     Zobrazí se stránka **Zvolit nastavení exportu.**
 
-7. Klikněte na tlačítko **nastavení**.
+7. Klepněte na **položku Moje nastavení**.
 
-     **Popis** změny **OptionInteger a OptionFloat**.
+     **Popis** se změní na **OptionInteger a OptionFloat**.
 
-8. Ujistěte se, že **má nastavení** je jediná kategorie, která je vybrána a potom klikněte na tlačítko **Další**.
+8. Zkontrolujte, zda je **moje nastavení** jedinou vybranou kategorií, a klepněte na tlačítko **Další**.
 
-     **Názvu souboru nastavení** se zobrazí stránka.
+     Zobrazí se stránka **Název souboru nastavení.**
 
-9. Pojmenujte nový soubor nastavení *MySettings.vssettings* a uložte ho do příslušného adresáře. Klikněte na tlačítko **Dokončit**.
+9. Pojmenujte nový soubor nastavení *MySettings.vssettings* a uložte jej do příslušného adresáře. Klikněte na **Finish** (Dokončit).
 
-     **Exportovat kompletní** stránku sestavy, nastavení bylo úspěšně exportováno.
+     Stránka **Exportovat dokončena** hlásí, že nastavení bylo úspěšně exportováno.
 
-10. Na **souboru** nabídky, přejděte k **otevřít**a potom klikněte na tlačítko **souboru**. Vyhledejte *MySettings.vssettings* a otevřete ho.
+10. V nabídce **Soubor** přejděte na **Otevřít**a potom klepněte na **příkaz Soubor**. Vyhledejte *soubor MySettings.vssettings* a otevřete jej.
 
-     Můžete najít vlastnost kategorii, kterou jste exportovali v následující části souboru (vaše GUID se bude lišit).
+     Kategorii vlastností, kterou jste exportovali, najdete v následující části souboru (identifikátory GUID se budou lišit).
 
     ```
     <Category name="My Category_My Settings"
@@ -133,24 +133,24 @@ Chcete-li spustit Tento názorný postup, musíte nejdřív dokončit první č�
     </Category>
     ```
 
-     Všimněte si, že název úplnou kategorii je tvořen přidáním podtržítka na název kategorie, za nímž následuje název objektu. OptionFloat a OptionInteger zobrazí v kategorii, spolu s jejich exportovaných hodnot.
+     Všimněte si, že úplný název kategorie je tvořen přidáním podtržítka do názvu kategorie následované názvem objektu. OptionFloat a OptionInteger se zobrazí v kategorii spolu s jejich exportovanými hodnotami.
 
-11. Zavřete soubor nastavení bez provedení změn.
+11. Zavřete soubor nastavení bez změny.
 
-12. Na **nástroje** nabídky, klikněte na tlačítko **možnosti**, rozbalte **kategorie Mé**, klikněte na tlačítko **stránku mřížky** a potom změňte hodnotu vlastnosti  **OptionFloat** 1.0 a **OptionInteger** na hodnotu 1. Klikněte na **OK**.
+12. V nabídce **Nástroje** klikněte na **Možnosti**, rozbalte **položku Moje kategorie**, klikněte na Stránka **mřížky** a změňte hodnotu **OptionFloat** na 1,0 a **OptionInteger** na 1. Klikněte na tlačítko **OK**.
 
-13. Na **nástroje** nabídky, klikněte na tlačítko **nastavení importu a exportu**vyberte **importovat vybrané nastavení prostředí**a potom klikněte na tlačítko **Další**.
+13. V nabídce **Nástroje** klepněte na **položku Importovat a exportovat nastavení**, vyberte **Importovat vybraná nastavení prostředí**a potom klepněte na tlačítko **Další**.
 
-     **Uložit aktuální nastavení** se zobrazí stránka.
+     Zobrazí se stránka **Uložit aktuální nastavení.**
 
-14. Vyberte **Ne, importovat nové nastavení** a potom klikněte na tlačítko **Další**.
+14. Vyberte **Ne, stačí importovat nová nastavení** a potom klepnout na tlačítko **Další**.
 
-     **Vybrat kolekce nastavení pro Import** se zobrazí stránka.
+     Zobrazí se stránka **Vybrat kolekci nastavení k importu.**
 
-15. Vyberte *MySettings.vssettings* soubor **má nastavení** uzlu ve stromovém zobrazení. Pokud soubor není uvedené ve stromovém zobrazení, klikněte na tlačítko **Procházet** a vyhledejte ho. Klikněte na **Další**.
+15. Vyberte soubor *MySettings.vssettings* v uzlu **Moje nastavení** stromového zobrazení. Pokud se soubor ve stromovém zobrazení nezobrazí, klikněte na **Procházet** a najděte ho. Klikněte na **Další**.
 
-     **Zvolte nastavení pro Import** zobrazí se dialogové okno.
+     Zobrazí se dialogové okno **Zvolit nastavení k importu.**
 
-16. Ujistěte se, že **má nastavení** je vybrána a potom klikněte na tlačítko **Dokončit**. Když **úplný Import** stránky se zobrazí, klikněte na tlačítko **Zavřít**.
+16. Zkontrolujte, zda je vybraná možnost **Moje nastavení,** a klepněte na tlačítko **Dokončit**. Po zobrazení stránky **Importovat dokončeno** klepněte na **tlačítko Zavřít**.
 
-17. Na **nástroje** nabídky, klikněte na tlačítko **možnosti**, rozbalte **kategorie Mé**, klikněte na tlačítko **stránku mřížky** a ověřte, zda hodnoty vlastností kategorie bylo obnoveno.
+17. V nabídce **Nástroje** klikněte na **Možnosti**, rozbalte **položku Moje kategorie**, klikněte na Stránka **mřížky** a ověřte, zda byly obnoveny hodnoty kategorie vlastností.

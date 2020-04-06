@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::Parse | Dokumentace Microsoftu
+title: IDebugExpressionEvaluator::Parse | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExpressionEvaluator::Parse method
 ms.assetid: e6e31b3a-63a7-4293-bcda-267eb78dffb6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b732369aa5cf5a828dfad512c643f109346abcb7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d1af9d3f253a9849f54bb5a50d432b98eb4ad7b8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325656"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729489"
 ---
 # <a name="idebugexpressionevaluatorparse"></a>IDebugExpressionEvaluator::Parse
-Tato metoda převede řetězec s výrazem na analyzovaný výrazu.
+Tato metoda převede řetězec výrazu na analyzovaný výraz.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,30 +51,30 @@ int Parse(
 
 ## <a name="parameters"></a>Parametry
 `upstrExpression`\
-[in] Řetězec výrazu, který má být analyzován.
+[v] Řetězec výrazu, který má být analyzován.
 
 `dwFlags`\
-[in] Kolekce [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) konstanty, které určují, jak má být analyzován výraz.
+[v] Kolekce [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) konstanty, které určují, jak má být výraz analyzován.
 
 `nRadix`\
-[in] Základ, který se má použít pro interpretaci jakékoli číselné informace.
+[v] Radix slouží k interpretaci jakýchkoli číselných informací.
 
 `pbstrError`\
-[out] Vrátí chybu jako čitelný text.
+[out] Vrátí chybu jako text čitelný pro člověka.
 
 `pichError`\
-[out] Vrátí pozici znaku start Chyba v řetězci výraz.
+[out] Vrátí pozici znaku začátku chyby v řetězci výrazu.
 
 `ppParsedExpression`\
-[out] Vrátí analyzovaný výrazu v [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) objektu.
+[out] Vrátí analyzovaný výraz v objektu [IDebugParsedExpression.](../../../extensibility/debugger/reference/idebugparsedexpression.md)
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda vytváří analyzovaný výrazu, nikoli skutečnou hodnotu. Analyzovaná výrazu je připraven k vyhodnocení, to znamená, převést na hodnotu.
+ Tato metoda vytváří analyzovaný výraz, nikoli skutečnou hodnotu. Analyzovaný výraz je připraven k vyhodnocení, to znamená, že převedenna hodnotu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)
 - [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md)
 - [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)

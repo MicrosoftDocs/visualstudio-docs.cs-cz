@@ -1,5 +1,5 @@
 ---
-title: FRAMEINFO | Microsoft Docs
+title: FRAMEINFO | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - FRAMEINFO structure
 ms.assetid: 95001b89-dddb-45bb-889d-8327994e38a5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: eb6a4a9f7408e5bcd03da464bfbc8ade3fa39e7e
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: c40361a9739bf468de2038df4325fa1ac98337c1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681096"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736794"
 ---
 # <a name="frameinfo"></a>FRAMEINFO
 Popisuje rámec zásobníku.
@@ -65,55 +65,55 @@ public struct FRAMEINFO {
 
 ## <a name="members"></a>Členové
 `m_dwValidFields`\
-Kombinace příznaků z výčtu [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) , která určuje, která pole jsou vyplněna.
+Kombinace příznaků z [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) výčtu, který určuje, která pole jsou vyplněna.
 
 `m_bstrFuncName`\
-Název funkce spojený s rámcem zásobníku.
+Název funkce přidružený k rámečku zásobníku.
 
 `m_bstrReturnType`\
-Návratový typ spojený s rámcem zásobníku.
+Návratový typ přidružený k rámečku zásobníku.
 
 `m_bstrArgs`\
-Argumenty funkce spojené s rámcem zásobníku.
+Argumenty funkce přidružené k rámci zásobníku.
 
 `m_bstrLanguage`\
-Jazyk, ve kterém je funkce implementována.
+Jazyk, ve kterém je implementována funkce.
 
 `m_bstrModule`\
-Název modulu spojený s rámcem zásobníku.
+Název modulu přidružený k rámečku zásobníku.
 
 `m_addrMin`\
-Minimální adresa fyzického zásobníku.
+Minimální fyzická adresa zásobníku.
 
 `m_addrMAX`\
-Maximální adresa fyzického zásobníku.
+Maximální fyzická adresa zásobníku.
 
 `m_pFrame`\
-Objekt [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) , který představuje tento rámec zásobníku.
+[Objekt IDebugStackFrame2,](../../../extensibility/debugger/reference/idebugstackframe2.md) který představuje tento rámec zásobníku.
 
 `m_pModule`\
-Objekt [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) , který představuje modul, který obsahuje tento rámec zásobníku.
+[Objekt IDebugModule2,](../../../extensibility/debugger/reference/idebugmodule2.md) který představuje modul, který obsahuje tento rámec zásobníku.
 
 `m_fHasDebugInfo`\
-Non-Zero (`TRUE`), pokud informace o ladění existují v daném snímku.
+Nenulová`TRUE`( ), pokud v daném rámci existují informace o ladění.
 
 `m_fStaleCode`\
-Non-Zero (`TRUE`), pokud je rámec zásobníku přidružen k kódu, který již není platný.
+Nenulová`TRUE`( ), pokud je rámec zásobníku přidružen ke kódu, který již není platný.
 
 `m_fAnnotatedFrame`\
-Nenulová (`TRUE`), pokud je bloku zásobníku opatřeno poznámkou v rámci Správce ladění relace (SDM).
+Nenulová`TRUE`( ), pokud je rámeček zásobníku anotován správcem ladění relace (SDM).
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je předána metodě [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) , která bude vyplněna. Tato struktura je také obsažena v seznamu, který je obsažen v rozhraní [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) , které je zase vráceno voláním metody [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) .
+Tato struktura je předána [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) metoda, která má být vyplněna. Tato struktura je také obsažena v seznamu, který je obsažen v rozhraní [IEnumDebugFrameInfo2,](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) který je zase vrácen z volání metody [EnumFrameInfo.](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg. h
+Záhlaví: msdbg.h
 
 Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugField | Dokumentace Microsoftu
+title: IDebugField | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugField interface
 ms.assetid: adecdd1c-b1b9-4027-92da-74cbe910636f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 80def3f9c3d270ebd6f2217f6ce39f07ef27b119
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8c7a25246f42d288020481330fe60e312849862d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337524"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728751"
 ---
 # <a name="idebugfield"></a>IDebugField
-Toto rozhraní představuje pole, to znamená, popis symbol nebo typu.
+Toto rozhraní představuje pole, to znamená popis symbolu nebo typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,30 +29,30 @@ IDebugField : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Poskytovatel symbolů implementuje toto rozhraní jako základní třída pro všechna pole.
+ Zprostředkovatel symbolu implementuje toto rozhraní jako základní třídu pro všechna pole.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Toto rozhraní je základní třída pro všechna pole. Na základě návratové hodnoty [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md), toto rozhraní může vrátit více specializované rozhraní pomocí [QueryInterface](/cpp/atl/queryinterface). Kromě toho mnoho rozhraní vrátit `IDebugField` objekty z různých metod.
+ Toto rozhraní je základní třídou pro všechna pole. Na základě vrácené hodnoty [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md), toto rozhraní může vrátit více specializovaných rozhraní pomocí [QueryInterface](/cpp/atl/queryinterface). Kromě toho mnoho rozhraní `IDebugField` vrátit objekty z různých metod.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IDebugField`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IDebugField`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)|Získá zobrazitelný informací o symbolu nebo typu.|
-|[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)|Získá druh typu pole.|
+|[GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)|Získá zobrazitelné informace o symbolnebo typ.|
+|[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)|Získá druh pole.|
 |[GetType](../../../extensibility/debugger/reference/idebugfield-gettype.md)|Získá typ pole.|
 |[GetContainer](../../../extensibility/debugger/reference/idebugfield-getcontainer.md)|Získá kontejner pole.|
 |[GetAddress](../../../extensibility/debugger/reference/idebugfield-getaddress.md)|Získá adresu pole.|
-|[GetSize](../../../extensibility/debugger/reference/idebugfield-getsize.md)|Získá velikost pole, v bajtech.|
-|[GetExtendedInfo](../../../extensibility/debugger/reference/idebugfield-getextendedinfo.md)|Získá rozšířené informace o pole.|
+|[GetSize](../../../extensibility/debugger/reference/idebugfield-getsize.md)|Získá velikost pole v bajtů.|
+|[GetExtendedInfo](../../../extensibility/debugger/reference/idebugfield-getextendedinfo.md)|Získá rozšířené informace o poli.|
 |[Equal](../../../extensibility/debugger/reference/idebugfield-equal.md)|Porovná dvě pole.|
-|[GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)|Získá typ nezávislé na informace o symbolu nebo typu.|
+|[GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)|Získá nezávislé informace o symbolnebo typ.|
 
 ## <a name="remarks"></a>Poznámky
- Jazyk C odpovídá typu `typedef`.
+ Typ je ekvivalentní jazyku `typedef`C .
 
- V následujícím příkladu jazyka C++ `weather` je typem třídy a `sunny` a `stormy` jsou symboly:
+ V následujícím příkladu jazyka `weather` C++ je `sunny` typ `stormy` třídy a jsou symboly:
 
 ```cpp
 class weather;
@@ -60,7 +60,7 @@ weather sunny;
 weather stormy;
 ```
 
- Zda symbol představuje pole nebo typu se dají určit pomocí volání [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) a podíváte [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) výsledek. Pokud `FIELD_KIND_TYPE` bit nastaven, pole je typ a pokud `FIELD_KIND_SYMBOL` bit nastaven, je třeba otazník.
+ Zda pole představuje symbol nebo typ lze určit voláním [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) a zkoumání [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) výsledek. Pokud `FIELD_KIND_TYPE` je bit nastaven, pole je typ `FIELD_KIND_SYMBOL` a pokud je bit nastaven, jedná se o symbol.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: sh.h
@@ -69,5 +69,5 @@ weather stormy;
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní poskytovatele symbolů ](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

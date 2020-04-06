@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::GetReferenceInfo | Dokumentace Microsoftu
+title: IDebugReference2::GetReferenceInfo | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugReference2::GetReferenceInfo
 ms.assetid: ae611714-f114-4cf2-b5bb-37461e6ff289
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c1ad9a3f23037a4413811e0d98304ceedf0620ac
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4fa198a3ded56a0dd054cf225bfb6b10968d1da3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345647"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720418"
 ---
 # <a name="idebugreference2getreferenceinfo"></a>IDebugReference2::GetReferenceInfo
-Získá [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktura, která popisuje odkaz. Vyhrazeno pro budoucí použití.
+Získá [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) strukturu, která popisuje odkaz. Vyhrazeno pro budoucí použití.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,27 +51,27 @@ int GetReferenceInfo ( 
 
 ## <a name="parameters"></a>Parametry
 `dwFields`\
-[in] Kombinace příznaků z [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) výčet, který zjistit pole pro vyplnění navýšení kapacity [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury.
+[v] Kombinace příznaků z [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) výčtu, které určují pole, která mají být vyplněna ve struktuře [DEBUG_REFERENCE_INFO.](../../../extensibility/debugger/reference/debug-reference-info.md)
 
 `nRadix`\
-[in] Základ, který se má použít v jakékoli číselné informace o formátování.
+[v] Radix, který se použije při formátování všech číselných informací.
 
 `dwTimeout`\
-[in] Maximální doba v milisekundách pro čekání před návratem z této metody. Použití `INFINITE` čekat po neomezenou dobu.
+[v] Maximální doba v milisekundách čekání před návratem z této metody. Slouží `INFINITE` k čekání na neurčito.
 
 `rgpArgs`\
-[in] Pole [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objekty. Vyhrazeno pro budoucí použití; Nastavte na hodnotu null.
+[v] Pole [iDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objekty. Vyhrazeno pro budoucí použití; nastavena na hodnotu null.
 
 `dwArgCount`\
-[in] Počet argumentů reference `rgpArgs` pole. Vyhrazeno pro budoucí použití; Nastavte na hodnotu 0.
+[v] Počet argumentů odkazu v `rgpArgs` poli. Vyhrazeno pro budoucí použití; nastavena na 0.
 
 `pReferenceInfo`\
-[out] A [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktura, která se vyplní popis vlastnosti.
+[out] Struktura [DEBUG_REFERENCE_INFO,](../../../extensibility/debugger/reference/debug-reference-info.md) která je vyplněna s popisem vlastnosti.
 
 ## <a name="return-value"></a>Návratová hodnota
- Vždy vrátí `E_NOTIMPL`.
+ Vždy vrátí hodnotu `E_NOTIMPL`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)
 - [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)
 - [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)

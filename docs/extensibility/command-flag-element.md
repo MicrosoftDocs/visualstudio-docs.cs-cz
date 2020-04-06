@@ -1,25 +1,25 @@
 ---
-title: Command Flag – Element | Dokumentace Microsoftu
+title: Element příkazového příznaku | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - CommandFlag element (VSCT XML schema)
 - VSCT XML schema elements, CommandFlag
 ms.assetid: 5ef63399-d2db-4dc1-97ce-be1bd4ef4e39
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a38708d6256556693b7ab1dfc8c04b79f484ee8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7173bc1ebc5507eadf319c0374f4c878dea62857
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334841"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739774"
 ---
-# <a name="command-flag-eelement"></a>Příkaz příznak Eelement
-Upraví svého nadřízeného elementu.
+# <a name="command-flag-eelement"></a>Příkazový příznak Eelement
+Upraví nadřazený prvek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,53 +27,53 @@ Upraví svého nadřízeného elementu.
 <CommandFlag>DynamicVisibility</CommandFlag>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
- Následující část popisuje hodnoty platný prvek.
+## <a name="attributes-and-elements"></a>Atributy a prvky
+ Následující část popisuje platné hodnoty prvků.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené prvky
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|AllowParams|Označuje, že uživatelé můžou zadat parametry příkazu v **příkaz** okno při zadání kanonický název příkazu.<br /><br /> Platí pro: `Button`|
-|AlwaysCreate|Nabídka se vytvoří i v případě, že nemá žádné skupiny ani tlačítka.<br /><br /> Platí pro: `Menu`|
-|CaseSensitive|Uživatelské položky jsou malá a velká písmena.<br /><br /> Platí pro: `Combo`|
-|CommandWellOnly|Tento příznak použijte, pokud tento příkaz nezobrazí v nabídce nejvyšší úrovně a chcete, aby byla k dispozici pro přizpůsobení na další prostředí, například pro jeho vazbu na klávesovou zkratku. Po instalaci sady VSPackage těchto příkazů můžete přizpůsobit tak, že otevřete **možnosti** dialogové okno a poté úpravou příkaz umístění v rámci **klávesnice prostředí** kategorie. Tento příznak nemá vliv na umístění v místní nabídky, panely nástrojů, nabídky řadiče nebo dílčích nabídek.<br /><br /> Platné pro: `Button`, `Combo`|
-|DefaultDisabled|Ve výchozím nastavení, je příkaz zakázaná, pokud není načten sady VSPackage, který jej implementuje nebo `QueryStatus` nebyla zavolána metoda.<br /><br /> Platné pro: `Button`, `Combo`|
-|DefaultDocked|Ukotvit ve výchozím nastavení. Toto nastavení už se vztahuje na panely nástrojů, protože jsou vždy ukotven.|
-|DefaultInvisible|Ve výchozím nastavení, je neviditelný, pokud není načten sady VSPackage, který jej implementuje příkaz nebo `QueryStatus` nebyla zavolána metoda.<br /><br /> Doporučujeme vám, že zkombinujete to s `DynamicVisibility` příznak.<br /><br /> Platné pro: `Button`, `Combo`, `Menu`|
-|DontCache|Vývojové prostředí neukládá do mezipaměti `QueryStatus` výsledky metody pro tento příkaz.<br /><br /> Pro nabídku znamená to kontroleru nabídky nemají ukládat do mezipaměti text položky nabídky. Tento příznak použijte, pokud nabídka obsahuje dynamické položky nebo položky, které mají dynamický text.<br /><br /> Platné pro: `Button`, `Menu`|
-|DynamicItemStart|Označuje začátek dynamického seznamu. To umožňuje prostředí tak, aby sestavení seznamu postupně voláním `QueryStatus` metodu na položky seznamu, dokud se nevrátí OLECMDERR_E_UNSUPPORTED příznak. Tento postup funguje dobře pro položky, jako je naposledy použité Naposledy použitých seznamech a seznamů oken.<br /><br /> Platí pro: `Button`|
-|DynamicVisibility|Viditelnost příkaz lze změnit prostřednictvím `QueryStatus` metoda nebo prostřednictvím kontextu identifikátor GUID, který je součástí `VisibilityConstraints` části.<br /><br /> Platí pro příkazy, které se zobrazují v nabídkách a panelech nástrojů, ale ne na nejvyšší úrovni panely nástrojů, které se zobrazí v hlavním okně. Položky panelu nástrojů nejvyšší úrovně mohou být zakázané, ale není skrytý, pokud je příznak OLECMDF_INVISIBLE vrácen z `QueryStatus` metody. Příkazy nástrojů, které se zobrazují na panelech nástrojů lze skrýt.<br /><br /> V nabídce tento příznak také určuje, že ho automaticky skryt, pokud její členové budou skryti. Tento příznak se obvykle přiřadí podnabídek vzhledem k tomu, že už máte toto chování nabídek nejvyšší úrovně.<br /><br /> Tento příznak by měly být kombinované pomocí `DefaultInvisible` příznak.<br /><br /> Platné pro: `Button`, `Combo`, `Menu`|
-|FilterKeys|Filtrování klíče tématu v části [prvek pole se seznamem](../extensibility/combo-element.md).<br /><br /> Platí pro: `Combo`|
-|FixMenuController|Pokud tento příkaz je umístěn na kontroleru nabídky, příkaz je vždy výchozí; To znamená příkaz se vybere pokaždé, když se vybere tlačítko kontroleru nabídky, samotného. Pokud má kontroleru nabídky `TextIsAnchorCommand` příznak nastaven, pak kontroleru nabídky přijímá také jeho text příkazu, který má `FixMenuController` příznak.<br /><br /> By měl mít jenom jeden příkaz na kontroleru nabídky `FixMenuController` příznak. Pokud je označeno tak více než jednoho příkazu, poslední příkaz v nabídce stane výchozí příkaz.<br /><br /> Platí pro: `Button`|
-|IconAndText|Zobrazte ikonu a text nabídky a panelu nástrojů.<br /><br /> Platné pro: `Button`, `Combo`, `Menu`|
-|NoAutoComplete|Funkce automatického dokončování je zakázaná.<br /><br /> Platí pro: `Combo`|
-|NoButtonCustomize|Nenechte uživatel toto tlačítko Přizpůsobit.<br /><br /> Platné pro: `Button`, `Combo`|
-|NoKeyCustomize|Přizpůsobení klávesnice není doporučeno zapínat.<br /><br /> Platné pro: `Button`, `Combo`|
-|NoShowOnMenuController|Pokud tento příkaz je umístěn na kontroleru nabídky, příkaz se v rozevíracím seznamu nezobrazí.<br /><br /> Platí pro: `Button`|
-|NotInTBList|Nezobrazí v seznamu dostupných panelů nástrojů. Toto je platná pouze pro typy nabídky panelu nástrojů.<br /><br /> Platí pro: `Menu`|
-|NoToolbarClose|Uživatel nemůže zavřít panel nástrojů. Toto je platná pouze pro typy nabídky panelu nástrojů.<br /><br /> Platí pro: `Menu`|
-|PICT|Zobrazit pouze ikonu na panelu nástrojů, ale pouze text v nabídce. Pokud není zadána žádná ikona, zobrazí na panelu nástrojů kliknout, čímž prázdné místo.<br /><br /> Platí pro: `Button`|
-|PostExec|Provádí se příkaz neblokující. Vývojové prostředí odloží spuštění, dokud nejsou dokončeny všechny předběžného zpracování dotazů.<br /><br /> Platí pro: `Button`|
-|RouteToDocs|Příkaz se směruje do aktivního dokumentu.<br /><br /> Platí pro: `Button`|
-|StretchHorizontally|Když je tento příznak nastaven, stane se šířku minimální šířku pro pole se seznamem a pokud je na panelu nástrojů volného místa, pole se seznamem roztáhne, aby vyplnil dostupné místo. K tomu dochází pouze v případě, že je vodorovně ukotvení panelu nástrojů a pouze jeden pole se seznamem na panelu nástrojů můžete použít příznak (příznaku je ignorována pro všechny s výjimkou první pole se seznamem).<br /><br /> Platí pro: `Combo`|
-|TextMenuUseButton|Použití `ButtonText` pole pro nabídky. Je výchozí pole `MenuText` Pokud je zadán.<br /><br /> Platí pro: `Button`|
-|TextChanges|Text příkazu nebo v nabídce můžete změnit za běhu, obvykle prostřednictvím `QueryStatus` metody.<br /><br /> Platné pro: `Button`, `Menu`|
-|TextChangesButton|Platí pro: `Button`|
-|TextIsAnchorCommand|U kontroleru nabídky je text nabídky provedou z příkazu výchozí (ukotvení). Příkaz ukotvení je poslední příkaz vybrané nebo stisknutého. Pokud není tento příznak nastaven, používá kontroleru nabídky vlastní `MenuText` pole. Ale kliknete na kontroleru nabídky umožňuje stále poslední vybraný příkaz z tohoto kontroléru.<br /><br /> Doporučujeme vám, že zkombinujete tento příznak se `TextChanges` příznak.<br /><br /> Tento příznak platí pouze pro nabídky typu MenuController nebo MenuControllerLatched.<br /><br /> Platí pro: `Menu`|
-|TextMenuCtrlUseMenu|Použití `MenuText` pole na řadičích nabídky. Je výchozí pole `ButtonText`.<br /><br /> Platí pro: `Button`|
-|TextMenuUseButton|Použití `ButtonText` pole pro nabídky. Je výchozí pole `MenuText` Pokud je zadán.<br /><br /> Platí pro: `Button`|
-|TextOnly|Zobrazit pouze text na panelu nástrojů nebo nabídky, ale žádná ikona, i když je zadaný na ikonu.<br /><br /> Platí pro: `Button`|
+|AllowParams|Označuje, že uživatelé mohou zadat parametry příkazu do okna **Příkaz** při zadávání kanonického názvu příkazu.<br /><br /> Platí pro:`Button`|
+|Alwayscreate|Nabídka je vytvořena i v případě, že nemá žádné skupiny nebo tlačítka.<br /><br /> Platí pro:`Menu`|
+|Malá a velká písmena|Položky uživatele rozlišují malá a velká písmena.<br /><br /> Platí pro:`Combo`|
+|Pouze příkaz|Tento příznak použijte, pokud se příkaz nezobrazí v nabídce nejvyšší úrovně a chcete jej zpřístupnit pro další přizpůsobení prostředí, například pro vazbu na klávesovou zkratku. Po instalaci balíčku VSPackage můžete tyto příkazy přizpůsobit otevřením dialogového okna **Možnosti** a úpravou umístění příkazů v kategorii **Prostředí klávesnice.** Tento příznak nemá vliv na umístění v místních nabídkách, panelech nástrojů, řadičích nabídek nebo podnabídkách.<br /><br /> Platí pro: `Button`,`Combo`|
+|Výchozí zakázáno|Ve výchozím nastavení je příkaz zakázán, pokud není načten balíček `QueryStatus` VSPackage, který jej implementuje, nebo nebyla metoda volána.<br /><br /> Platí pro: `Button`,`Combo`|
+|DefaultDocked|Ve výchozím nastavení ukotveno. Toto nastavení již neplatí pro panely nástrojů, protože jsou vždy ukotveny.|
+|Výchozí neviditelné|Ve výchozím nastavení je příkaz neviditelný, pokud není načten vbalíček VSPackage, který jej implementuje, nebo nebyla volána `QueryStatus` metoda.<br /><br /> Doporučujeme kombinovat s vlajkou. `DynamicVisibility`<br /><br /> Platí `Button`pro: `Combo`, ,`Menu`|
+|DontCache|Vývojové prostředí není mezipaměti `QueryStatus` výsledky metody pro tento příkaz.<br /><br /> V nabídce to říká řadiči nabídky, aby neukládat do mezipaměti text jeho položek nabídky. Tento příznak použijte, pokud nabídka obsahuje dynamické položky nebo položky s dynamickým textem.<br /><br /> Platí pro: `Button`,`Menu`|
+|DynamicItemStart|Označuje začátek dynamického seznamu. To umožňuje prostředí sestavit seznam postupným `QueryStatus` voláním metody v položkách seznamu, dokud není vrácen příznak OLECMDERR_E_UNSUPPORTED. To funguje dobře pro položky, jako jsou naposledy použité (MRU) seznamy a seznamy oken.<br /><br /> Platí pro:`Button`|
+|Dynamická viditelnost|Viditelnost příkazu lze změnit prostřednictvím `QueryStatus` metody nebo prostřednictvím identifikátoru GUID kontextu, který je součástí oddílu. `VisibilityConstraints`<br /><br /> Platí pro příkazy, které se zobrazují v nabídkách a panelech nástrojů okna nástrojů, ale ne na panelech nástrojů nejvyšší úrovně, které se zobrazují v hlavním okně. Položky panelu nástrojů nejvyšší úrovně mohou být zakázány, ale `QueryStatus` ne skryté, když je z metody vrácen příznak OLECMDF_INVISIBLE. Příkazy panelu nástrojů, které se zobrazují na panelech nástrojů okna nástrojů, mohou být skryté.<br /><br /> V nabídce tento příznak také označuje, že by měl být automaticky skryt, když jsou skryty všechny jeho členy. Tento příznak je obvykle přiřazen k podnabídkám, protože nabídky nejvyšší úrovně již toto chování mají.<br /><br /> Tato vlajka by měla `DefaultInvisible` být kombinována s vlajkou.<br /><br /> Platí `Button`pro: `Combo`, ,`Menu`|
+|Funkce FilterKeys|Viz téma Filtrování klíčů v části [Combo Element](../extensibility/combo-element.md).<br /><br /> Platí pro:`Combo`|
+|FixMenuController|Pokud je tento příkaz umístěn na řadiči nabídky, je příkaz vždy výchozí; to znamená, že příkaz je vybrán vždy, když je vybráno tlačítko ovladače nabídky. Pokud je nastaven `TextIsAnchorCommand` příznak, pak řadič nabídky také přebírá jeho text `FixMenuController` z příkazu, který má příznak.<br /><br /> Příznak by měl mít pouze `FixMenuController` jeden příkaz na řadiči nabídky. Pokud je takto označeno více příkazů, stane se výchozím příkazem poslední příkaz v nabídce.<br /><br /> Platí pro:`Button`|
+|IconAndText|Zobrazí ikonu a text v nabídce a panelu nástrojů.<br /><br /> Platí `Button`pro: `Combo`, ,`Menu`|
+|NoAutoComplete|Funkce automatického dokončování je zakázána.<br /><br /> Platí pro:`Combo`|
+|NoButtonCustomize|Nedovolte, aby uživatel přizpůsobit toto tlačítko.<br /><br /> Platí pro: `Button`,`Combo`|
+|NoKeyCustomize|Nepovolujte přizpůsobení klávesnice.<br /><br /> Platí pro: `Button`,`Combo`|
+|Řadič noshowonmenucontroller|Pokud je tento příkaz umístěn na řadiči nabídky, příkaz se v rozevíracím seznamu nezobrazí.<br /><br /> Platí pro:`Button`|
+|NotInTBList|Nezobrazí se v seznamu dostupných panelů nástrojů. To platí pouze pro typy nabídek panelu nástrojů.<br /><br /> Platí pro:`Menu`|
+|Zavřít panel NoToolbar|Uživatel nemůže zavřít panel nástrojů. To platí pouze pro typy nabídek panelu nástrojů.<br /><br /> Platí pro:`Menu`|
+|Pict|Zobrazí pouze ikonu na panelu nástrojů, ale pouze text v nabídce. Pokud není zadána žádná ikona, zobrazí na panelu nástrojů prázdné místo, na které lze kliknout.<br /><br /> Platí pro:`Button`|
+|PostExec|Způsobí, že příkaz neblokuje. Vývojové prostředí odkládá spuštění, dokud nebudou dokončeny všechny dotazy předběžného zpracování.<br /><br /> Platí pro:`Button`|
+|RouteToDocs|Příkaz je směrován do aktivního dokumentu.<br /><br /> Platí pro:`Button`|
+|RoztáhnoutVodorovně|Je-li tento příznak nastaven, šířka se stane minimální šířkou pole se seznamem a pokud je na panelu nástrojů místo, pole se seznamem se roztáhne tak, aby vyplnilo dostupné místo. K tomu dochází pouze v případě, že panel nástrojů je vodorovně ukotven a pouze jeden pole se seznamem na panelu nástrojů může použít příznak (příznak je ignorován na všech kromě prvního pole se seznamem).<br /><br /> Platí pro:`Combo`|
+|TextMenuUseButton|Toto `ButtonText` pole použijte pro nabídky. Výchozí pole `MenuText` je, pokud je zadáno.<br /><br /> Platí pro:`Button`|
+|TextZměny|Příkaz nebo text nabídky lze změnit za běhu, `QueryStatus` obvykle prostřednictvím metody.<br /><br /> Platí pro: `Button`,`Menu`|
+|TextChangesButton|Platí pro:`Button`|
+|TextIsAnchorCommand|Pro řadič nabídky je text nabídky převzat z výchozího příkazu (kotva). Příkaz kotvy je poslední vybraný nebo západný příkaz. Pokud tento příznak není nastaven, ovladač `MenuText` nabídky používá vlastní pole. Klepnutí na řadič nabídky však stále umožňuje poslední vybraný příkaz z tohoto řadiče.<br /><br /> Doporučujeme kombinovat tuto vlajku `TextChanges` s vlajkou.<br /><br /> Tento příznak se vztahuje pouze na nabídky typu MenuController nebo MenuControllerLatched.<br /><br /> Platí pro:`Menu`|
+|TextMenuCtrlUseMenu|Použijte `MenuText` pole na řadičích nabídek. Výchozí pole `ButtonText`je .<br /><br /> Platí pro:`Button`|
+|TextMenuUseButton|Toto `ButtonText` pole použijte pro nabídky. Výchozí pole `MenuText` je, pokud je zadáno.<br /><br /> Platí pro:`Button`|
+|TextPouze|Zobrazí pouze text na panelu nástrojů nebo v nabídce, ale bez ikony, i když je ikona zadána.<br /><br /> Platí pro:`Button`|
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Buttons – element](../extensibility/buttons-element.md)|Obsahuje skupinu pro [Button element](../extensibility/button-element.md) elementy.|
-|[Menus – element](../extensibility/menus-element.md)|Definuje všechny nabídky, které implementuje VSPackage.|
+|[Prvek tlačítek](../extensibility/buttons-element.md)|Poskytuje skupinu pro [prvky Button elementu.](../extensibility/button-element.md)|
+|[Prvek nabídek](../extensibility/menus-element.md)|Definuje všechny nabídky, které implementuje VSPackage.|
 
-## <a name="see-also"></a>Viz také:
-- [Visual Studio tabulky příkazů (. Soubory Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také
+- [Visual Studio příkaz tabulky (. Vsct) Soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

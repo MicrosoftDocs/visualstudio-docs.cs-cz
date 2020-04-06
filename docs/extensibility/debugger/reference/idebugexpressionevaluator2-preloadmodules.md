@@ -1,28 +1,28 @@
 ---
-title: IDebugExpressionEvaluator2::PreloadModules | Dokumentace Microsoftu
+title: IDebugExpressionEvaluator2::PreloadModules | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugExpressionEvaluator2::PreloadModules
 - PreloadModules
 ms.assetid: bcf9b968-ee14-4a92-88ad-926268a44e03
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 46df8c3d50a08098ca75e7b115a931ad7580a91b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: db345fb2936ef7278675407549798ae669487f06
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325509"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729330"
 ---
 # <a name="idebugexpressionevaluator2preloadmodules"></a>IDebugExpressionEvaluator2::PreloadModules
-Automaticky načte moduly určený zprostředkovatel zadaný symbol.
+Předem načte moduly určené zadaným poskytovatelem symbolů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,16 +40,16 @@ int PreloadModules (
 
 ## <a name="parameters"></a>Parametry
 `pSym`\
-[in] Poskytovatel symbolů, pro kterou budou automaticky načtena moduly.
+[v] Zprostředkovatel symbolů, pro kterého budou moduly předinstalovány.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Tato volitelná metoda se používá při hostování procesu připojit. EE dává možnost "zahřívání", jako součást připojení.
+Tato volitelná metoda se používá při připojení hostitelského procesu. To dává EE šanci 'zahřát' jako součást připojit.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak pro tuto metodu implementovat **ExpressionEvaluatorPackage** objekt, který zveřejňuje [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) rozhraní.
+Následující příklad ukazuje, jak implementovat tuto metodu pro **ExpressionEvaluatorPackage** objekt, který zpřístupňuje rozhraní [IDebugExpressionEvaluator2.](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)
 
 ```cpp
 STDMETHODIMP ExpressionEvaluatorPackage::PreloadModules
@@ -77,5 +77,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

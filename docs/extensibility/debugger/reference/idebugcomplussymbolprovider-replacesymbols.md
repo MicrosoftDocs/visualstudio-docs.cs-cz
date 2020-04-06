@@ -1,28 +1,28 @@
 ---
-title: IDebugComPlusSymbolProvider::ReplaceSymbols | Dokumentace Microsoftu
+title: IDebugComPlusSymbolProvider::ReplaceSymbols | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - ReplaceSymbols
 - IDebugComPlusSymbolProvider::ReplaceSymbols
 ms.assetid: 82fbc8db-c4b1-432f-bec9-1a9dc09570be
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 15af82459df5b2c8406280287115fbe345a63788
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 90ef0ae096618b776182b397d196f2a4477abe5d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352823"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80733599"
 ---
 # <a name="idebugcomplussymbolproviderreplacesymbols"></a>IDebugComPlusSymbolProvider::ReplaceSymbols
-Nahradí aktuální symboly ladění programů v zadaného datového proudu.
+Nahradí aktuální symboly ladění symboly v zadaném datovém proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,19 +44,19 @@ int ReplaceSymbols(
 
 ## <a name="parameters"></a>Parametry
 `ulAppDomainID`\
-[in] Identifikátor domény aplikace.
+[v] Identifikátor domény aplikace.
 
 `guidModule`\
-[in] Jedinečný identifikátor modulu.
+[v] Jedinečný identifikátor modulu
 
 `pStream`\
-[in] Datový proud, který obsahuje nové symboly.
+[v] Datový proud, který obsahuje nové symboly.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.
+Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugSymbolProvider** objekt, který zveřejňuje rozhraní [IDebugComPlusSymbolProvider.](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)
 
 ```cpp
 HRESULT CDebugSymbolProvider::ReplaceSymbols(
@@ -81,5 +81,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

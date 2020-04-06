@@ -1,47 +1,47 @@
 ---
-title: Vytvoření vlastní úvodní stránku | Dokumentace Microsoftu
+title: Vytvoření vlastní úvodní stránky | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d67e0c53-9f5a-45fb-a929-b9d2125c3c82
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 2b0b8c6fde31f4f4d9573381e511465e60086add
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3ac0abfe9eedf1c03a8be3bacddbe06ff5698380
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336668"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739639"
 ---
 # <a name="creating-a-custom-start-page"></a>Vytvoření vlastní úvodní stránky
 
-Můžete vytvořit vlastní úvodní stránky pomocí následujících kroků v tomto dokumentu.
+Vlastní úvodní stránku můžete vytvořit podle kroků v tomto dokumentu.
 
-## <a name="create-a-blank-start-page"></a>Vytvoření prázdné úvodní stránka
+## <a name="create-a-blank-start-page"></a>Vytvoření prázdné úvodní stránky
 
-Nejprve se přesvědčte, tak, že vytvoříte prázdný úvodní stránka *.xaml* soubor, který má strukturu značku, která sadě Visual Studio rozpozná. Pak přidejte značky a modelu code-behind vzhled a funkce, které chcete vytvořit.
+Nejprve vytvořte prázdnou úvodní stránku vytvořením souboru *XAML,* který má strukturu značek, kterou visual studio rozpozná. Potom přidejte značky a kód na pozadí k vytvoření vzhledu a funkce, které chcete.
 
-1. Vytvořte nový projekt typu **aplikace WPF** (**Visual C#**  > **Windows Desktop**).
+1. Vytvořte nový projekt typu **WPF aplikace** (**Visual C#** > **Windows Desktop**).
 
-2. Přidejte odkaz na `Microsoft.VisualStudio.Shell.14.0`.
+2. Přidejte odkaz `Microsoft.VisualStudio.Shell.14.0`na .
 
-3. Otevřete soubor XAML v editoru XML a změňte na nejvyšší úrovni \<okna > element \<UserControl > element bez odebrání všech deklarace oboru názvů.
+3. Otevřete soubor XAML v editoru XML \<a změňte \<element> okna nejvyšší úrovně na element UserControl> bez odebrání všech deklarací oboru názvů.
 
-4. Odeberte `x:Class` prohlášením element nejvyšší úrovně. Díky tomu obsah XAML kompatibilní s oknem nástroje Visual Studio, který je hostitelem úvodní stránky.
+4. Odeberte deklaraci `x:Class` z prvku nejvyšší úrovně. Díky obsahu XAML kompatibilní s oknem nástroje Visual Studio, který je hostitelem úvodní stránky.
 
-5. Přidejte následující deklarace oborů názvů na nejvyšší úrovni \<UserControl > element.
+5. Přidejte následující deklarace oboru názvů \<do prvku> ovládacího prvku UserControl nejvyšší úrovně.
 
     ```vb
     xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.14.0"
     xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"
     ```
 
-     Tyto obory názvů umožňují přístup k příkazy sady Visual Studio, ovládací prvky a nastavení uživatelského rozhraní. Další informace najdete v tématu [příkazy přidat sady Visual Studio na úvodní stránku](../extensibility/adding-visual-studio-commands-to-a-start-page.md).
+     Tyto obory názvů umožňují přístup k příkazům, ovládacím prvkům a nastavení uživatelského rozhraní sady Visual Studio. Další informace naleznete v [tématu Přidání příkazů sady Visual Studio na úvodní stránku](../extensibility/adding-visual-studio-commands-to-a-start-page.md).
 
-     Následující příklad ukazuje značky *.xaml* soubor pro prázdné úvodní stránka. Všechny vlastní obsah by měly patřit do vnitřní <xref:System.Windows.Controls.Grid> elementu.
+     Následující příklad ukazuje značky v souboru *XAML* pro prázdnou úvodní stránku. Jakýkoli vlastní obsah by <xref:System.Windows.Controls.Grid> měl jít do vnitřního prvku.
 
     ```vb
     <UserControl
@@ -61,34 +61,34 @@ Nejprve se přesvědčte, tak, že vytvoříte prázdný úvodní stránka *.xam
     </UserControl>
     ```
 
-6. Přidání ovládacích prvků do prázdné \<UserControl > element tak, aby vyplnil ve vaší vlastní úvodní stránky. Informace o tom, jak přidat funkce, které jsou specifické pro Visual Studio najdete v tématu [příkazy přidat sady Visual Studio na úvodní stránku](../extensibility/adding-visual-studio-commands-to-a-start-page.md).
+6. Přidejte ovládací \<prvky do prázdného prvku UserControl>, který vyplní vlastní úvodní stránku. Informace o přidání funkcí specifických pro Visual Studio naleznete v [tématu Přidání příkazů sady Visual Studio na úvodní stránku](../extensibility/adding-visual-studio-commands-to-a-start-page.md).
 
-## <a name="test-and-apply-the-custom-start-page"></a>Testování a použít vlastní úvodní stránky
+## <a name="test-and-apply-the-custom-start-page"></a>Testování a použití vlastní úvodní stránky
 
-Nenastavujte primární instance sady Visual Studio spuštěné vlastní úvodní stránku, dokud můžete ověřit, že nehavaruje sady Visual Studio. Místo toho ji otestujte v experimentální instanci aplikace.
+Nenastavujte primární instanci sady Visual Studio tak, aby spouštěla vlastní úvodní stránku, dokud neověříte, že se nezhroutí visual studio. Místo toho jej otestujte v experimentální instanci.
 
-### <a name="to-test-a-manually-created-custom-start-page"></a>K testování ručně vytvořili vlastní úvodní stránky
+### <a name="to-test-a-manually-created-custom-start-page"></a>Testování ručně vytvořené vlastní úvodní stránky
 
-1. Zkopírujte soubor XAML a všechny podpůrné textové soubory nebo značky soubory do *%USERPROFILE%\My Documents\Visual Studio 2015\StartPages\\*  složky.
+1. Zkopírujte soubor XAML a všechny podpůrné textové soubory nebo soubory značek do složky *%USERPROFILE%\My\\ Documents\Visual Studio 2015\StartPages.*
 
-2. Pokud úvodní stránky odkazuje na všechny ovládací prvky nebo typy v sestavení, které nejsou nainstalované Visual Studio, zkopírujte sestavení a vložte je do *{instalační složky sady Visual Studio} \Common7\IDE\PrivateAssemblies\\* .
+2. Pokud úvodní stránka odkazuje na ovládací prvky nebo typy v sestaveních, které nejsou nainstalovány aplikací Visual Studio, zkopírujte sestavení a vložte je do *instalační složky {Visual Studio}\Common7\IDE\PrivateAssemblies\\*.
 
-3. Na příkazovém řádku aplikace Visual Studio, zadejte **devenv /rootsuffix Exp** otevřete experimentální instanci sady Visual Studio.
+3. Na příkazovém řádku sady Visual Studio zadejte **příkaz devenv /rootsuffix Exp,** chcete-li otevřít experimentální instanci sady Visual Studio.
 
-4. V experimentální instanci aplikace, přejděte **nástroje** > **možnosti** > **prostředí** > **spuštění** stránky a vyberte soubor XAML z **přizpůsobit úvodní stránku** rozevíracího seznamu.
+4. V experimentální instanci přejděte na**úvodní** stránku**prostředí** >  **Tools** > **Options** > Environment a vyberte soubor XAML v rozevíracím seznamu Přizpůsobit úvodní **stránku.**
 
-5. Na **zobrazení** nabídky, klikněte na tlačítko **úvodní stránka**.
+5. V nabídce **Zobrazení** klepněte na tlačítko **Úvodní stránka**.
 
-     Vlastní úvodní stránku má být zobrazena. Pokud chcete změnit všechny soubory, můžete musí Ukončete experimentální instanci, proveďte požadované změny, zkopírujte a vložte změněných souborů a znovu otevřete experimentální instanci a zobrazte změny.
+     Měla by být zobrazena vlastní úvodní stránka. Pokud chcete změnit všechny soubory, musíte zavřít experimentální instanci, provést změny, zkopírovat a vložit změněné soubory a pak znovu otevřít experimentální instanci pro zobrazení změn.
 
-### <a name="to-apply-the-custom-start-page-in-the-primary-instance-of-visual-studio"></a>Chcete-li použít vlastní úvodní stránku v primární instance sady Visual Studio
+### <a name="to-apply-the-custom-start-page-in-the-primary-instance-of-visual-studio"></a>Použití vlastní úvodní stránky v primární instanci sady Visual Studio
 
-- Poté, co jste otestovali úvodní stránku a to přijde stabilní, použijte **přizpůsobit úvodní stránku** možnost **možnosti** dialogové okno vybrat jako úvodní stránku v primární instance sady Visual Studio
+- Po otestování úvodní stránky a zjistíní, že je stabilní, použijte možnost **Přizpůsobit úvodní stránku** v dialogovém okně **Možnosti** a vyberte ji jako úvodní stránku v primární instanci sady Visual Studio.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Návod: Přidat vlastní XAML na úvodní stránku](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)
-- [Přidat uživatelský ovládací prvek na úvodní stránku](../extensibility/adding-user-control-to-the-start-page.md)
-- [Přidání příkazů sady Visual Studio pro úvodní stránku](../extensibility/adding-visual-studio-commands-to-a-start-page.md)
-- [Návod: Ukládat nastavení uživatele na úvodní stránce](../extensibility/walkthrough-saving-user-settings-on-a-start-page.md)
-- [Nasazení vlastní úvodní stránky](../extensibility/deploying-custom-start-pages.md)
+- [Návod: Přidání vlastního xaml na úvodní stránku](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)
+- [Přidání uživatelského ovládacího prvku na úvodní stránku](../extensibility/adding-user-control-to-the-start-page.md)
+- [Přidání příkazů sady Visual Studio na úvodní stránku](../extensibility/adding-visual-studio-commands-to-a-start-page.md)
+- [Návod: Uložení uživatelských nastavení na úvodní stránce](../extensibility/walkthrough-saving-user-settings-on-a-start-page.md)
+- [Nasazení vlastních úvodních stránek](../extensibility/deploying-custom-start-pages.md)

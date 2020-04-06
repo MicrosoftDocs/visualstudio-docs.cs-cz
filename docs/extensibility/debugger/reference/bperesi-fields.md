@@ -1,5 +1,5 @@
 ---
-title: BPERESI_FIELDS | Dokumentace Microsoftu
+title: BPERESI_FIELDS | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BPERESI_FIELDS enumeration
 ms.assetid: dd7dd89c-1043-46a1-a929-099cc039c344
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f9db96713ba8bb0f3cd421c48ef602e25c2d25a1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: af2f20e7d3abd79261dc18753a7eb940666fc186
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350526"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737763"
 ---
-# <a name="bperesifields"></a>BPERESI_FIELDS
-Určuje informace, které se mají načíst informace o neúspěšných rozlišení zarážku.
+# <a name="bperesi_fields"></a>BPERESI_FIELDS
+Určuje informace, které mají být načteny o neúspěšném vyřešení zarážky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,31 +50,31 @@ public enum enum_BPERESI_FIELDS {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `PERESI_BPRESLOCATION`\
-Inicializace/použít `bpResLocation` oblasti (umístění zarážky řešení) [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury.
+Inicializovat/použít `bpResLocation` pole (umístění rozlišení zarážky) [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury.
 
 `BPERESI_PROGRAM`\
-Inicializace/použít `pProgram` pole `BP_ERROR_RESOLUTION_INFO` struktury.
+Inicializovat/použít `pProgram` pole `BP_ERROR_RESOLUTION_INFO` struktury.
 
 `BPERESI_THREAD`\
-Inicializace/použít `pThread` pole `BP_ERROR_RESOLUTION_INFO` struktury.
+Inicializovat/použít `pThread` pole `BP_ERROR_RESOLUTION_INFO` struktury.
 
 `BPERESI_MESSAGE`\
-Inicializace/použít `bstrMessage` pole `BP_ERROR_RESOLUTION_INFO` struktury.
+Inicializovat/použít `bstrMessage` pole `BP_ERROR_RESOLUTION_INFO` struktury.
 
 `BPERESI_TYPE`\
-Inicializace/použít `dwType` pole (typ zarážky) `BP_ERROR_RESOLUTION_INFO` struktury.
+Inicializovat/použít `dwType` pole (typ zarážky) `BP_ERROR_RESOLUTION_INFO` struktury.
 
 `BPERESI_ALLFIELDS`\
-Inicializace/použít všechna pole `BP_ERROR_RESOLUTION_INFO` struktury.
+Inicializovat/použít všechna `BP_ERROR_RESOLUTION_INFO` pole struktury.
 
 ## <a name="remarks"></a>Poznámky
-Předán jako parametr [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) indikace polí s [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury mají být inicializovány.
+Předánjako parametr [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) metoda k označení, která pole [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury mají být inicializovány.
 
-Tyto hodnoty jsou také použity k označení, která pole v `BP_ERROR_RESOLUTION_INFO` struktury jsou používány a platné při vrácení této struktury.
+Tyto hodnoty se také používají k `BP_ERROR_RESOLUTION_INFO` označení, která pole ve struktuře se používají a jsou platná při vrácení této struktury.
 
-Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.
+Tyto hodnoty mohou být kombinovány `OR`s bitovým .
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -83,7 +83,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)
 - [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)

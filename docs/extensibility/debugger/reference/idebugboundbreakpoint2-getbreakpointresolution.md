@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::GetBreakpointResolution | Dokumentace Microsoftu
+title: IDebugBoundBreakpoint2::GetBreakpointResolution | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - GetBreakpointResolution method
 - IDebugBoundBreakpoint2::GetBreakpointResolution method
 ms.assetid: 4479ac61-18a9-4a30-b213-9921c5af9a26
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6b4532d6d59679b5268007540a3842e681d829ab
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ab88009eb1c1bbbd59bbad2dfcbf62567db3941f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320537"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735573"
 ---
 # <a name="idebugboundbreakpoint2getbreakpointresolution"></a>IDebugBoundBreakpoint2::GetBreakpointResolution
-Získá řešení zarážek, který popisuje tuto zarážku.
+Získá rozlišení zarážky, která popisuje tuto zarážku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,20 +42,20 @@ int GetBreakpointResolution( 
 
 ## <a name="parameters"></a>Parametry
 `ppBPResolution`\
-[out] Vrátí [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) rozhraní, které představuje jeden z následujících akcí:
+[out] Vrátí rozhraní [IDebugBreakpointResolution2,](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) které představuje jednu z následujících možností:
 
-- Objekt rozlišení zarážky, popisující místo v kódu, kde byla svázána kódu zarážku.
+- Objekt rozlišení zarážky, který popisuje umístění v kódu, kde byla vázána zarážka kódu.
 
-- Umístění dat, kde má datová zarážka vázána.
+- Umístění dat, kde je vázána zarážka dat.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_BP_DELETED` Pokud státu objekt vázaná zarážka nastavená na `BPS_DELETED` (součástí [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) výčet).
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `E_BP_DELETED` pokud je nastaven stav vázaného `BPS_DELETED` objektu zarážky (část [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) výčet).
 
 ## <a name="remarks"></a>Poznámky
-Volání [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md) metodu pro určení, zda je řešení zarážek pro kód nebo data.
+Volání [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md) metoda k určení, pokud je rozlišení zarážky pro kód nebo data.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CBoundBreakpoint` objekt, který zveřejňuje [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) rozhraní.
+Následující příklad ukazuje, jak implementovat `CBoundBreakpoint` tuto metodu pro jednoduchý objekt, který zveřejňuje rozhraní [IDebugBoundBreakpoint2.](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 
 ```
 HRESULT CBoundBreakpoint::GetBreakpointResolution(
@@ -88,7 +88,7 @@ HRESULT CBoundBreakpoint::GetBreakpointResolution(
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 - [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)
 - [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)

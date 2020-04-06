@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::CreateStringObject | Dokumentace Microsoftu
+title: IDebugFunctionObject::CreateStringObject | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugFunctionObject::CreateStringObject method
 ms.assetid: fd6070ab-07d4-4ea1-8d71-b16592d6f1a7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 620aef7474f7f669e22fcb44c7df2611dc50bafb
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 40a13b9b388caa6a1ae6e3e470e4ea02553fa0ac
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313611"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728519"
 ---
 # <a name="idebugfunctionobjectcreatestringobject"></a>IDebugFunctionObject::CreateStringObject
 Vytvoří objekt řetězce.
@@ -43,16 +43,16 @@ int CreateStringObject(
 
 ## <a name="parameters"></a>Parametry
 `pcstrString`\
-[in] Řetězcová hodnota pro objekt řetězce.
+[v] Hodnota řetězce pro objekt řetězce.
 
 `ppObject`\
-[out] Vrátí [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekt, který reprezentuje objekt nově vytvořeného řetězce.
+[out] Vrátí objekt [IDebugObject,](../../../extensibility/debugger/reference/idebugobject.md) který představuje nově vytvořený objekt řetězce.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Volejte tuto metodu za účelem vytvoření objektu, který představuje řetězec, který je parametr funkce, která je reprezentována [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) rozhraní.
+ Volání této metody k vytvoření objektu, který představuje řetězec, který je parametrem funkce, která je reprezentována rozhraním [IDebugFunctionObject.](../../../extensibility/debugger/reference/idebugfunctionobject.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

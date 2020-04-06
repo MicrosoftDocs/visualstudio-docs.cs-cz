@@ -1,31 +1,31 @@
 ---
-title: Třída ContingentProperties – vnitřní členy | Dokumentace Microsoftu
+title: Třída ContingentProperties - Interní členové | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - ContingentProperties class [.NET Framework debug engines]
 - debug engines, ContingentProperties class [.NET Framework]
 ms.assetid: c49d1362-ab1c-4b6d-9950-fcae40e0e66b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a7b9775ed74e7ae81768f180e596f171b2c99cba
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c6441cafcc34a06464061b41691ea5faa32fc359
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344324"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739099"
 ---
-# <a name="contingentproperties-class---internal-members"></a>Třída ContingentProperties – vnitřní členy
-Obsahuje další vlastnosti <xref:System.Threading.Tasks.Task> objektu.
+# <a name="contingentproperties-class---internal-members"></a>Třída ContingentProperties - interní členy
+Obsahuje další vlastnosti objektu. <xref:System.Threading.Tasks.Task>
 
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>
+ **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Sestavení:** mscorlib (v knihovně mscorlib.dll)
+ **Sestava:** mscorlib (v mscorlib.dll)
 
- Protože tyto vnitřní členy nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.
+ Vzhledem k tomu, že k těmto interním členům nelze získat přístup z rozhraní .NET Framework, je ve společném zprostředkujícím jazyce (CIL) k dispozici následující syntaxe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,14 +36,14 @@ Obsahuje další vlastnosti <xref:System.Threading.Tasks.Task> objektu.
 
 ## <a name="members"></a>Členové
 
-### <a name="fields"></a>Pole
+### <a name="fields"></a>Fields (Pole)
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[m_children](../../extensibility/debugger/m-children-field.md)|Seznam podřízených úloh, které jsou registrované s touto úlohou.|
+|[m_children](../../extensibility/debugger/m-children-field.md)|Seznam podřízených úkolů, které jsou registrovány s tímto úkolem.|
 
 ## <a name="remarks"></a>Poznámky
- Rozhraní .NET Framework inicializuje pole této třídy, jenom když jsou potřeba.
+ Rozhraní .NET Framework inicializuje pole této třídy pouze v případě, že jsou potřeba.
 
-## <a name="see-also"></a>Viz také:
-- [Interní informace o paralelním rozšíření pro rozhraní .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+## <a name="see-also"></a>Viz také
+- [Vnitřní rozhraní paralelního rozšíření pro rozhraní .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

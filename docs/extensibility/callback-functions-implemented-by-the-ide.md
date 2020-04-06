@@ -1,48 +1,48 @@
 ---
-title: Funkce zpětného volání implementované integrovaným vývojovým prostředím | Dokumentace Microsoftu
+title: Funkce zpětného volání implementované ide | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, callback functions
 - callback functions, source control plug-ins
 ms.assetid: 4a8833f0-6ac0-4ea7-9400-8275aa991468
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dff6ee0a81472ea556aaca478a2ff33db93fe871
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 666486f5b800707a4467a129abeed7a13306f10a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321173"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739894"
 ---
-# <a name="callback-functions-implemented-by-the-ide"></a>Funkce zpětného volání implementované integrovaným vývojovým prostředím
-Aby integrace s integrované vývojové prostředí (IDE) jako bezproblémové nejrychleji a poskytovat jednotné koncových uživatelů, modul plug-in správy zdrojového kódu můžete použít funkce zpětného volání implementované integrovaným vývojovým prostředím. Modul plug-in může volat tyto funkce ve vhodných chvílích při operaci správy zdrojových kódů k předávání informací do integrovaného vývojového prostředí; integrované vývojové prostředí můžete tyto informace zobrazit jako vložené prvky v jeho nativním uživatelským rozhraním. Uživatel má méně fragmentované prostředí v tomto scénáři než hodnotě modulu plug-in použijí své vlastní uživatelské rozhraní.
+# <a name="callback-functions-implemented-by-the-ide"></a>Funkce zpětného volání implementované ide
+Chcete-li, aby integrace s integrovaným vývojovým prostředím (IDE) byla co nejhladší a aby bylo zajištěno jednotné prostředí pro koncové uživatele, může modul plug-in správy zdrojového kódu používat funkce zpětného volání implementované rozhraním IDE. Modul plug-in může volat tyto funkce ve vhodných časech během operace správy zdrojového kódu předat informace do ide; Rozhraní IDE pak může zobrazit tyto informace jako vložené prvky v nativním uživatelském rozhraní. Uživatel má méně fragmentované prostředí v tomto scénáři, než pokud modul plug-in používá vlastní uživatelské rozhraní.
 
- Požadovaný hlavičkový soubor je *scc.h*. Výchozí umístění je *\Program Files\VSIP 8.0\EnvSDK\common\inc\\* . Je také ve složce VSIP, který má modul plug-in Ukázka ovládacího prvku zdroje na *\Program Files\VSIP 8.0\MSSCCI\\* .
+ Požadovaný soubor záhlaví je *scc.h*. Výchozí umístění je *\Program Files\VSIP 8.0\EnvSDK\common\inc\\*. Je také ve složce VSIP, která má ukázku modulu plug-in správy zdrojového kódu na *adrese \Program Files\VSIP 8.0\MSSCCI\\*.
 
 ## <a name="in-this-section"></a>V tomto oddílu
-- [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) popisuje funkce zpětného volání, který používá [sccopenproject –](../extensibility/sccopenproject-function.md) pro zobrazení zpráv ze správy zdrojového kódu modulu plug-in pomocí integrovaného vývojového prostředí.
+- [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) Popisuje funkci zpětného volání, kterou používá [SccOpenProject](../extensibility/sccopenproject-function.md) k zobrazení zpráv z modulu plug-in správy zdrojového kódu prostřednictvím ide.
 
-- [POPLISTFUNC](../extensibility/poplistfunc.md) popisuje funkce zpětného volání, který používá [sccpopulatelist –](../extensibility/sccpopulatelist-function.md) Při integrovaném vývojovém prostředí nemá úplný přístup k informacím, které je k dispozici pouze pro modul plug-in, jako je úplný seznam správy zdrojového kódu soubory pod správu verzí.
+- [POPLISTFUNC](../extensibility/poplistfunc.md) Popisuje funkci zpětného volání, kterou používá [funkce SccPopulateList,](../extensibility/sccpopulatelist-function.md) pokud rozhraní IDE nemá úplný přístup k informacím, které jsou k dispozici pouze pro modul plug-in správy zdrojového kódu, například úplný seznam souborů pod správou verzí.
 
-- [QUERYCHANGESFUNC](../extensibility/querychangesfunc.md) popisuje funkce zpětného volání používané [sccquerychanges –](../extensibility/sccquerychanges-function.md) operace.
+- [QUERYCHANGESFUNC](../extensibility/querychangesfunc.md) Popisuje funkci zpětného volání, která je používána operací [SccQueryChanges.](../extensibility/sccquerychanges-function.md)
 
-- [POPDIRLISTFUNC](../extensibility/popdirlistfunc.md) popisuje funkce zpětného volání používané [sccpopulatedirlist –](../extensibility/sccpopulatedirlist-function.md) operace.
+- [POPDIRLISTFUNC](../extensibility/popdirlistfunc.md) Popisuje funkci zpětného volání, která je používána operací [SccPopulateDirList.](../extensibility/sccpopulatedirlist-function.md)
 
-- [OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md) popisuje nastavení voláním funkce zpětného volání [sccsetoption –](../extensibility/sccsetoption-function.md) , která umožňuje komunikovat, název změny zpět do integrovaného vývojového prostředí modulu plug-in správy zdrojového kódu.
+- [OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md) Popisuje funkci zpětného volání nastavenou voláním [sccSetOption,](../extensibility/sccsetoption-function.md) která umožňuje modulu plug-in správy zdrojového kódu komunikovat změny názvů zpět do ide.
 
 ## <a name="related-sections"></a>Související oddíly
-- [Sccopenproject –](../extensibility/sccopenproject-function.md) otevře projekt.
+- [Projekt SccOpen](../extensibility/sccopenproject-function.md) Otevře projekt.
 
-- [Sccpopulatelist –](../extensibility/sccpopulatelist-function.md) zkontroluje seznam souborů pro jejich aktuální stav. Kromě toho používá `pfnPopulate` funkce oznámit volajícímu, soubor neodpovídá kritériím pro `nCommand`.
+- [SccPopulateList](../extensibility/sccpopulatelist-function.md) Zkontroluje seznam souborů pro jejich aktuální stav. Kromě toho používá `pfnPopulate` funkci upozornit volajícího, pokud soubor neodpovídá `nCommand`kritériím pro .
 
-- [Sccpopulatedirlist –](../extensibility/sccpopulatedirlist-function.md) zkontroluje seznam adresářů a souborů v projektu nebo v projektech, které jsou pod správou zdrojových kódů. Každý název adresáře a souboru nalezena je předán funkci zpětného volání.
+- [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) Zkontroluje seznam adresářů a souborů v projektu nebo projekty, které jsou pod smytem zdrojového kódu. Každý nalezený adresář a název souboru je předán funkci zpětného volání.
 
-- [Sccquerychanges –](../extensibility/sccquerychanges-function.md) prozkoumá změn názvů, které byly provedeny seznam souborů. Každý název souboru je předán funkci zpětného volání společně s jeho změna stavu.
+- [SccQueryChanges](../extensibility/sccquerychanges-function.md) Zkoumá změny názvů, které byly provedeny v seznamu souborů. Každý název souboru je předán funkci zpětného volání spolu s jeho stavem změny.
 
-- [Sccsetoption –](../extensibility/sccsetoption-function.md) nastaví širokou škálu možností. Jednotlivé možnosti začíná `SCC_OPT_xxx` a má vlastní definované sady hodnot.
+- [SccSetOption](../extensibility/sccsetoption-function.md) Nastaví širokou škálu možností. Každá možnost `SCC_OPT_xxx` začíná a má vlastní definovanou sadu hodnot.
 
-- [Moduly plug-in správy zdrojového](../extensibility/source-control-plug-ins.md) popisuje obsah části reference sady SDK modulu Plug-in zdroje ovládacího prvku.
+- [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md) Popisuje obsah referenční části sady SDK modulu plug-in správy zdrojového kódu.

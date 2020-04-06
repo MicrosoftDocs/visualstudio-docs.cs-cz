@@ -1,27 +1,27 @@
 ---
-title: EVALFLAGS90 | Dokumentace Microsoftu
+title: EVALFLAGS90 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - EVALFLAGS90 enumeration
 ms.assetid: 64fb0139-8b04-4726-b52c-db2e04d65498
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 24afc4456570ff0c3e5dc1eb56789984bf18ac58
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 01951885541ba4acce33f3e4f06f7106116ccc62
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337834"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737099"
 ---
 # <a name="evalflags90"></a>EVALFLAGS90
-Vytvoří výčet platné hodnoty pro příznaky, které řídí vyhodnocení výrazu. Tento výčet rozšiřuje [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) výčtu.
+Vyjmenová vhodnotit platné hodnoty pro příznaky, které řídí vyhodnocení výrazu. Tento výčet rozšiřuje výčtu [EVALFLAGS.](../../../extensibility/debugger/reference/evalflags.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,36 +64,36 @@ public enum enum_EVALFLAGS90
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `EVAL90_RETURNVALUE`\
-Určuje, že návratová hodnota, pokud existuje, vyhodnocen.
+Určuje, že vrácená hodnota, pokud existuje, bude vyhodnocena.
 
 `EVAL90_NOSIDEEFFECTS`\
-Určuje, že nebudou povoleny vedlejší účinky.
+Určuje, že vedlejší účinky nebudou povoleny.
 
 `EVAL90_ALLOWBPS`\
-Určuje zastavení zarážky.
+Určuje zastavení zarážek.
 
 `EVAL90_ALLOWERRORREPORT`\
-Určuje tuto chybu generování sestav k hostiteli mají být povolena. Používá se především pro vyhodnocení výrazu ve skriptu v aplikaci Internet Explorer.
+Určuje, že má být povoleno hlášení chyb hostiteli. Používá se především pro vyhodnocení výrazu ve skriptu v aplikaci Internet Explorer.
 
 `EVAL90_FUNCTION_AS_ADDRESS`\
-Funkce sil má být vyhodnocen jako adresy, namísto volání funkce.
+Vynutí vyhodnocení funkcí jako adres, namísto vyvolání funkce.
 
 `EVAL90_NOFUNCEVAL`\
-Zabraňuje vyhodnocení funkce. Představme si třeba, `int` token ve výrazu `myExpression(int) + 10`. Tato funkce může být správně vyhodnocen jako adresa, ale ne jako hodnotu.
+Zabrání vyhodnocení funkce. Zvažte například `int` token ve `myExpression(int) + 10`výrazu . Tato funkce může být správně vyhodnocena jako adresa, ale ne jako hodnota.
 
 `EVAL90_NOEVENTS`\
-Příznak označující, že správce ladění relace (SDM) nebo integrovaném vývojovém prostředí by se neměly posílat události, ke kterým dochází při vyhodnocení výrazu.
+Příznak označující, že události, ke kterým dojde během vyhodnocení výrazu by neměly být odeslány do relace ladicí správce (SDM) nebo ide.
 
 `EVAL90_DESIGN_TIME_EXPR_EVAL`\
-Umožňuje vyhodnocování výrazu v době návrhu.
+Umožňuje vyhodnocení výrazu v době návrhu.
 
 `EVAL90_ALLOW_IMPLICIT_VARS`\
-Umožňuje implicitní vytváření proměnných.
+Umožňuje implicitní vytvoření proměnné.
 
 `EVAL90_FORCE_EVALUATION_NOW`\
-Vyhodnocení vynutí okamžité. To je užitečné při obsluze žádosti, jako je například požadavek uživatele.
+Vynutí okamžité vyhodnocení. To je užitečné při obsluhě požadavku, jako je například požadavek uživatele.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: Msdbg90.h
@@ -102,5 +102,5 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

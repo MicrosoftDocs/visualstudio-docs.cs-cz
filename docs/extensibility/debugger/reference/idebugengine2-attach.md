@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::Attach | Dokumentace Microsoftu
+title: IDebugEngine2::Připojit | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngine2::Attach
 ms.assetid: 173dcbda-5019-4c5e-bca9-a071838b5739
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bc70b27793e722db4a07107d419b383a76207322
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 93890885dbbdfd3cc26984590955681487977200
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330158"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731214"
 ---
 # <a name="idebugengine2attach"></a>IDebugEngine2::Attach
-Připojí ladicí stroj (DE) pro program nebo programy. Když DE je spuštěné v rámci procesu SDM volány správce ladění relace (SDM).
+Připojí ladicí modul (DE) k programu nebo programům. Volat správce ladění relace (SDM) při DE je spuštěn v procesu s SDM.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,47 +49,47 @@ int Attach( 
 
 ## <a name="parameters"></a>Parametry
 `pProgram`\
-[in] Pole [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekty, které představují programy k bude připojený. Jedná se o programy portu.
+[v] Pole [iDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekty, které představují programy, které mají být připojeny k. Jedná se o přístavní programy.
 
 `rgpProgramNodes`\
-[in] Pole [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objekty, které představují program uzlů, jeden pro každou aplikaci. Uzly programů v tomto poli představují stejné programy jako v `pProgram`. Uzly programů jsou uvedeny tak, aby DE můžete identifikovat programy se připojit k.
+[v] Pole objektů [IDebugProgramNode2,](../../../extensibility/debugger/reference/idebugprogramnode2.md) které představují uzly programu, jeden pro každý program. Programové uzly v tomto poli `pProgram`představují stejné programy jako v . Uzly programu jsou uvedeny tak, aby DE můžete identifikovat programy připojit.
 
 `celtPrograms`\
-[in] Počet aplikací a program uzlech v `pProgram` a `rgpProgramNodes` pole.
+[v] Počet programů nebo uzly programů `pProgram` `rgpProgramNodes` v polích a.
 
 `pCallback`\
-[in] [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objekt, který se má použít k odesílání událostí ladění na SDM.
+[v] [Objekt IDebugCallBackback2,](../../../extensibility/debugger/reference/idebugeventcallback2.md) který má být použit k odeslání ladicích událostí do sdm.
 
 `dwReason`\
-[in] Hodnota z [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) výčet, který je obsažený důvod připojení těchto programů. Další informace najdete v části poznámky.
+[v] Hodnota z [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) výčtu, který určuje důvod pro připojení těchto programů. Další informace naleznete v části Poznámky.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Existují tři důvody pro připojení k programu, následujícím způsobem:
+ Existují tři důvody pro připojení k programu, a to následovně:
 
-- `ATTACH_REASON_LAUNCH` Označuje, že je DE je připojení k programu, protože uživatel spustí proces, který jej obsahuje.
+- `ATTACH_REASON_LAUNCH`označuje, že DE se připojuje k programu, protože uživatel spustil proces, který jej obsahuje.
 
-- `ATTACH_REASON_USER` Označuje, že uživatel explicitně požaduje DE se připojit k programu (nebo proces, který obsahuje program).
+- `ATTACH_REASON_USER`označuje, že uživatel výslovně požádal DE připojit k programu (nebo proces, který obsahuje program).
 
-- `ATTACH_REASON_AUTO` Označuje, že je DE je připojení ke konkrétní programu, protože ji už ladí další programy v určitém procesu. To se také nazývá Automatické připojení.
+- `ATTACH_REASON_AUTO`označuje, že de se připojuje k určitému programu, protože již ladí jiné programy v určitém procesu. To se také nazývá automatické připojení.
 
-  Pokud tato metoda je volána, DE není potřeba tyto události odesílat v pořadí:
+  Při volání této metody DE musí odeslat tyto události v pořadí:
 
-1. [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md) (pokud ho už se neodeslala pro konkrétní instanci ladicí stroj)
+1. [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md) (pokud ještě nebylodeslán pro konkrétní instanci ladicího modulu)
 
 2. [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md)
 
 3. [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md)
 
-   Kromě toho, pokud je důvodem připojení `ATTACH_REASON_LAUNCH`, DE musí odeslat [IDebugEntryPointEvent2](../../../extensibility/debugger/reference/idebugentrypointevent2.md) událostí.
+   Kromě toho pokud je `ATTACH_REASON_LAUNCH`důvodem pro připojení , DE potřebuje odeslat událost [IDebugEntryPointEvent2.](../../../extensibility/debugger/reference/idebugentrypointevent2.md)
 
-   Jednou získá DE [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objektu odpovídající program laděn, je možné zadávat dotazy pro všechny privátní rozhraní.
+   Jakmile DE získá objekt [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) odpovídající program, který je laděn, může být dotazován pro libovolné privátní rozhraní.
 
-   Před voláním metody program uzlu v poli uvedena v každém `pProgram` nebo `rgpProgramNodes`, zosobnění, pokud je to nutné, by měla být povolená na `IDebugProgram2` rozhraní, které představuje uzel programu. Za normálních okolností však tento krok není nezbytný. Další informace najdete v tématu [problémy se zabezpečením](../../../extensibility/debugger/security-issues.md).
+   Před voláním metody uzlu programu v poli `pProgram` `rgpProgramNodes`dané nebo , zosobnění, v `IDebugProgram2` případě potřeby by měla být povolena v rozhraní, které představuje uzel programu. Za normálních okolností však tento krok není nutný. Další informace naleznete v [tématu Problémy se zabezpečením](../../../extensibility/debugger/security-issues.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

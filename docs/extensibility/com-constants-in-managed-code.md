@@ -1,26 +1,26 @@
 ---
-title: Konstanty modelu COM ve spravovaném kódu | Dokumentace Microsoftu
+title: Konstanty COM ve spravovaném kódu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - managed VSPackages, COM constants and macros
 ms.assetid: b6663608-b049-44b0-a75b-080fdc5faafc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d855142ad51f5433fbf0053cfbcfc1d8bef8871d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 919d000e44b90e975543f8aa6419968a40149adf
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350713"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739826"
 ---
-# <a name="com-constants-in-managed-code"></a>Konstanty modelu COM ve spravovaném kódu
-Managed Package Framework (MPF) zpřístupňuje některé standardní konstanty modelu COM pro spravovaný kód. Tyto konstanty jsou uvedeny níže pro vaši informaci.
+# <a name="com-constants-in-managed-code"></a>Konstanty COM ve spravovaném kódu
+Rozhraní MPF (Managed Package Framework) zpřístupňuje některé standardní konstanty COM spravovanému kódu. Tyto konstanty jsou uvedeny níže pro váš odkaz.
 
-## <a name="boolean-hresult-values"></a>Hodnoty Boolean HRESULT
+## <a name="boolean-hresult-values"></a>Logické hodnoty HRESULT
  <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>
 
  <xref:Microsoft.VisualStudio.VSConstants.S_OK>
@@ -50,7 +50,7 @@ Managed Package Framework (MPF) zpřístupňuje některé standardní konstanty 
 
  <xref:Microsoft.VisualStudio.VSConstants.UNDO_E_CLIENTABORT>
 
-## <a name="ole-errors"></a>OLE – chyby
+## <a name="ole-errors"></a>Chyby OLE
  <xref:Microsoft.VisualStudio.VSConstants.OLE_E_ADVF>
 
  <xref:Microsoft.VisualStudio.VSConstants.OLE_E_ADVISENOTSUPPORTED>
@@ -89,7 +89,7 @@ Managed Package Framework (MPF) zpřístupňuje některé standardní konstanty 
 
  <xref:Microsoft.VisualStudio.VSConstants.OLE_E_WRONGCOMPOBJ>
 
-## <a name="ole-dispatch-errors"></a>Chyby odbavení OLE
+## <a name="ole-dispatch-errors"></a>Chyby odeslání OLE
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_ARRAYISLOCKED>
 
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_BADCALLEE>
@@ -126,5 +126,5 @@ Managed Package Framework (MPF) zpřístupňuje některé standardní konstanty 
 
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_UNKNOWNNAME>
 
-## <a name="see-also"></a>Viz také:
-- [Zpracování chyb a návratových hodnot](../extensibility/error-handling-and-return-values.md)
+## <a name="see-also"></a>Viz také
+- [Zpracování chyb a vrácení hodnot](../extensibility/error-handling-and-return-values.md)

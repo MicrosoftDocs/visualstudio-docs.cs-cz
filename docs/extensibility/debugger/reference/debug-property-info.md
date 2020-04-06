@@ -1,5 +1,5 @@
 ---
-title: DEBUG_PROPERTY_INFO | Dokumentace Microsoftu
+title: DEBUG_PROPERTY_INFO | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - DEBUG_PROPERTY_INFO structure
 ms.assetid: 5a085d18-62c6-4740-b9e9-3f5db6bfdf7f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7804cfad48d5029e16619b5ae524fa6e761f11b4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 34fc1b5103949a767a3ee448618cbb708ea6a48b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346171"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737447"
 ---
-# <a name="debugpropertyinfo"></a>DEBUG_PROPERTY_INFO
+# <a name="debug_property_info"></a>DEBUG_PROPERTY_INFO
 Obsahuje informace o vlastnosti ladění.
 
 ## <a name="syntax"></a>Syntaxe
@@ -53,13 +53,13 @@ public struct DEBUG_PROPERTY_INFO {
 
 ## <a name="members"></a>Členové
 `dwValidFields`\
-Kombinace příznaků z [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) výčet, který určuje, která pole jsou vyplněna.
+Kombinace příznaků z [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) výčtu, která určuje, která pole jsou vyplněna.
 
 `bstrFullName`\
-Celý název vlastnosti.
+Úplný název vlastnosti.
 
 `bstrName`\
-Název vlastnosti v rámci kontextu.
+Název vlastnosti v kontextu.
 
 `bstrType`\
 Typ vlastnosti jako formátovaný řetězec.
@@ -68,15 +68,15 @@ Typ vlastnosti jako formátovaný řetězec.
 Hodnota vlastnosti jako formátovaný řetězec.
 
 `pProperty`\
-[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objektem popsaným touto strukturou.
+[Objekt IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) popsaný touto strukturou.
 
 `dwAttrib`\
-Kombinace příznaků z [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) výčet popisující vlastnosti této vlastnosti.
+Kombinace příznaků z [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) výčtu popisující atributy této vlastnosti.
 
 ## <a name="remarks"></a>Poznámky
-Vlastnost je objekt hierarchickou povahu, který má název, typ a hodnotu. Například vlastnost popsat lokální proměnné, parametry, sledovat proměnné a výrazy a registry.
+Vlastnost je objekt hierarchické povahy, který má název, typ a hodnotu. Vlastnost může například popisovat místní proměnné, parametry, sledovat proměnné a výrazy a registry.
 
-Tato struktura je předán [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) metody, kde je vyplněna. Tato struktura je také vrácen jako část seznamu z této struktury [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) rozhraní, které je pak vrácen z volání [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) a [ Enumproperties –](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) metody.
+Tato struktura je předána [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) metoda, kde je vyplněna. Tato struktura je také vrácena jako součást seznamu této struktury z rozhraní [IEnumDebugPropertyInfo2,](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) které je vráceno z volání metod [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) a [EnumProperties.](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md)
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -85,7 +85,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)
 - [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)

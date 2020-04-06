@@ -1,5 +1,5 @@
 ---
-title: AD_PROCESS_ID_TYPE | Dokumentace Microsoftu
+title: AD_PROCESS_ID_TYPE | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - AD_PROCESS_ID_TYPE enumeration
 ms.assetid: 0aab80e9-285a-4697-94ac-c864d42a6aaa
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a9df097037a84af9da63f0a98ee6cfa3b28cfcdd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a88fbe97cede8d343f1a96bc1917a69b8905b02b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351394"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738198"
 ---
-# <a name="adprocessidtype"></a>AD_PROCESS_ID_TYPE
-Určuje, jak interpretovat ID procesu v [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktury.
+# <a name="ad_process_id_type"></a>AD_PROCESS_ID_TYPE
+Určuje způsob interpretace ID procesu ve [struktuře AD_PROCESS_ID.](../../../extensibility/debugger/reference/ad-process-id.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,15 +42,15 @@ public enum enum_AD_PROCESS_ID {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `AD_PROCESS_ID_SYSTEM`\
-ID procesu je identifikátor systému. Použití `ProcessId.dwProcessId` pole [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktury.
+ID procesu je identifikátor systému. Použijte `ProcessId.dwProcessId` pole [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktury.
 
 `AD_PROCESS_ID_GUID`\
-ID procesu je identifikátor GUID. Použití `ProcessId.guidProcessId` pole `AD_PROCESS_ID` struktury.
+ID procesu je identifikátor GUID. Použijte `ProcessId.guidProcessId` pole `AD_PROCESS_ID` struktury.
 
 ## <a name="remarks"></a>Poznámky
-Používá pro `ProcessIdType` člena [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) strukturu, která určuje typ ID procesu, který je obsažen ve struktuře. Určuje, jak interpretovat `ProcessId` sjednocení ve struktuře.
+Používá se `ProcessIdType` pro člen [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktury k identifikaci typu ID procesu, který je obsažen ve struktuře. Určuje, jak interpretovat `ProcessId` unie ve struktuře.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -59,6 +59,6 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

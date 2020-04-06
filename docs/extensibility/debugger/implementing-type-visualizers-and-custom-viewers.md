@@ -1,39 +1,39 @@
 ---
-title: Implementace Vizualizérů typů a vlastních prohlížečů | Dokumentace Microsoftu
+title: Implementace vizualizérů typů a vlastních prohlížečů | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], custom viewer
 - debugging [Debugging SDK], type visualizer
 ms.assetid: abef18c0-8272-4451-b82a-b4624edaba7d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0f7e977df6236ea8c3310312114ba4fa30d5003a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c2ebbb5c8e27df4ae4baf2d9a9f1c3314188e2b3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344205"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738510"
 ---
 # <a name="implement-type-visualizers-and-custom-viewers"></a>Implementace vizualizérů typů a vlastních prohlížečů
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka Chyba při vyhodnocování výrazu spravované](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Vizualizérů typů a vlastních prohlížečů může uživatel zobrazit data určitého typu tak, aby lépe vystihuje než jednoduché výpis šestnáctkových čísel. Vyhodnocovače výrazů (EE) můžete přidružit konkrétní typy dat nebo proměnné vlastních prohlížečů. Tyto vlastní prohlížeče jsou implementované EE. EE může také podporovat vizualizátory, externí typ, které může pocházet z jiného dodavatele třetích stran nebo dokonce koncového uživatele.
+ Zadejte vizualizéry a vlastní prohlížeče umožňují uživateli zobrazit data určitého typu způsobem, který je smysluplnější než jednoduchý šestnáctkový výpis čísel. Vyhodnocení výrazu (EE) může přidružit vlastní prohlížeče ke konkrétním typům dat nebo proměnných. Tyto vlastní prohlížeče jsou implementovány EE. EE může také podporovat vizualizéry externího typu, které mohou pocházet od jiného dodavatele třetí strany nebo dokonce od koncového uživatele.
 
 ## <a name="discussion"></a>Diskuse
 
-### <a name="type-visualizers"></a>Vizualizérů typů
- Visual Studio vyzve k zadání seznam vizualizérů typů a vlastních prohlížečů pro každý objekt, který se má zobrazit v okně kukátko. Vyhodnocovače výrazů (EE) poskytuje seznam, pro každý typ, pro kterou chce podporovat vizualizérů typů a vlastních prohlížečů. Volání [GetCustomViewerCount](../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) a [GetCustomViewerList](../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) spustit celý proces přístup k vizualizérů typů a vlastních prohlížečů (viz [Visualizing a zobrazení dat](../../extensibility/debugger/visualizing-and-viewing-data.md)podrobnosti o volací sekvence).
+### <a name="type-visualizers"></a>Typ vizualizéry
+ Visual Studio požádá o seznam vizualizérů typu a vlastní prohlížeče pro každý objekt, který má být zobrazen v okně kukátka. Vyhodnocení výrazu (EE) poskytuje takový seznam pro každý typ, pro který chce podporovat vizualizéry typu a vlastní prohlížeče. Volání [GetCustomViewerCount](../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) a [GetCustomViewerList](../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) spustit celý proces přístupu k typu vizualizéry a vlastní prohlížeče (vizualizovat [a zobrazení dat](../../extensibility/debugger/visualizing-and-viewing-data.md) pro podrobnosti o pořadí volání).
 
-### <a name="custom-viewers"></a>Vlastních prohlížečů
- Vlastních prohlížečů jsou implementovány v EE pro konkrétní datový typ a jsou reprezentovány [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md) rozhraní. Vlastní prohlížeč není tak účinná jako typ vizualizéru, protože je k dispozici pouze při provádění EE, který implementuje tuto konkrétní vlastní prohlížeč. Implementace vlastní prohlížeč je jednodušší než implementace vizualizérů typů podporu. Však podporuje vizualizérů typů poskytuje maximální flexibilitu pro koncového uživatele pro vizualizaci svá data. Zbytek této diskuse se týká pouze vizualizérů typů.
+### <a name="custom-viewers"></a>Vlastní prohlížeče
+ Vlastní prohlížeče jsou implementovány v EE pro konkrétní datový typ a jsou reprezentovány rozhraním [IDebugCustomViewer.](../../extensibility/debugger/reference/idebugcustomviewer.md) Vlastní prohlížeč není tak flexibilní jako vizualizér typu, protože je k dispozici pouze v případě, že eE, který implementuje tento konkrétní vlastní prohlížeč je spuštěn. Implementace vlastního prohlížeče je jednodušší než implementace podpory pro vizualizéry typů. Podpora vizualizérů typu však poskytuje maximální flexibilitu koncovému uživateli pro vizualizaci dat. Zbývající část této diskuse se týká pouze typ vizualizéry.
 
 ## <a name="interfaces"></a>Rozhraní
- EE implementuje následující rozhraní pro podporu vizualizérů typu, který se má používat Visual Studio:
+ EE implementuje následující rozhraní pro podporu vizualizérů typu, které mají být spotřebovány visual studio:
 
 - [IEEVisualizerDataProvider](../../extensibility/debugger/reference/ieevisualizerdataprovider.md)
 
@@ -47,7 +47,7 @@ ms.locfileid: "66344205"
 
 - [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)
 
-  EE spotřebovává následující rozhraní pro podporu vizualizérů typů:
+  EE spotřebovává následující rozhraní pro podporu vizualizérů typu:
 
 - [IEEVisualizerService](../../extensibility/debugger/reference/ieevisualizerservice.md)
 
@@ -55,7 +55,7 @@ ms.locfileid: "66344205"
 
 - [IDebugBinder3](../../extensibility/debugger/reference/idebugbinder3.md)
 
-## <a name="see-also"></a>Viz také:
-- [Zápis vyhodnocovací filtr výrazů modulu CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
+## <a name="see-also"></a>Viz také
+- [Zápis vyhodnocení výrazu CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
 - [Vizualizace a zobrazení dat](../../extensibility/debugger/visualizing-and-viewing-data.md)
 - [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md)

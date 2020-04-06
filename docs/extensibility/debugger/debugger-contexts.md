@@ -1,43 +1,43 @@
 ---
-title: Kontexty ladicího programu | Dokumentace Microsoftu
+title: Kontexty ladicího programu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], contexts
 ms.assetid: 79808036-b680-4e4c-9c61-4ed43aa11323
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 011999929fd4cb1508bf4958629e622684f35739
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 56825fe299147e60c5ed9dfcefa491a427ab59e4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345998"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738973"
 ---
 # <a name="debugger-contexts"></a>Kontexty ladicího programu
-V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění, ladicí stroj (DE) pracuje současně v rámci několika různých kontextech, následujícím způsobem:
+Při [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění ladicí modul (DE) pracuje současně v několika odlišných kontextech, a to následovně:
 
-- Kontext kódu, která popisuje aktuální umístění v datovém proudu provádění programu.
+- Kontext kódu, který popisuje aktuální umístění v proudu spuštění programu.
 
-- Dokumentace ke službě kontext nebo umístění, která popisuje aktuální pozici ve zdrojovém dokumentu.
+- Kontext dokumentace nebo pozice, která popisuje aktuální pozici v rámci zdrojového dokumentu.
 
-- Kontext vyhodnocení výrazu, popisující kontext, ve výrazu, který bude vyhodnocení proběhnout.
+- Kontext vyhodnocení výrazu, který popisuje kontext, ve kterém bude hodnocení výrazu probíhat.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Kontext kódu](../../extensibility/debugger/code-context.md) popisuje kontext kódu jako adresa ve službě stream instrukce programu v dnešní za běhu architektury oproti netradičních jazyky, ve kterém kód nemusí reprezentovat pokyny, ale jiným způsobem.
+ [Kontext kódu](../../extensibility/debugger/code-context.md) Popisuje kontext kódu jako adresu v proudu instrukcí programu v dnešní chodové architektury versus netradiční jazyky, kde kód nemusí být reprezentován pokyny, ale některé jiné prostředky.
 
- [Pozice dokumentu](../../extensibility/debugger/document-position.md) definuje pozice dokumentu v ladění sady Visual Studio prostřednictvím abstrakce pozice ve zdrojovém souboru, protože ví, rozhraní IDE.
+ [Pozice dokumentu](../../extensibility/debugger/document-position.md) Definuje pozici dokumentu v aplikaci Visual Studio ladění pomocí abstrakce pozice ve zdrojovém souboru, jak je známo ide.
 
- [Kontext dokumentu](../../extensibility/debugger/document-context.md) popisuje, jaké kontext dokumentu představuje v ladění sady Visual Studio ve vztahu k zdrojový soubor. Popisuje také způsob mapování obslužné rutiny symbolů kontext kódu do kontextu dokumentace ke službě.
+ [Kontext dokumentu](../../extensibility/debugger/document-context.md) Popisuje, co kontext dokumentu představuje v aplikaci Visual Studio ladění ve vztahu ke zdrojovému souboru. Také popisuje, jak obslužná rutina symbolu mapuje kontext kódu do kontextu dokumentace.
 
- [Kontext vyhodnocení výrazu](../../extensibility/debugger/expression-evaluation-context.md) obsahuje informace kontextu vyhodnocení výrazu v sadě Visual Studio. Třeba kontextu vyhodnocení výrazu přidružený blok zásobníku poskytuje kontext za vaše rozhodnutí vyzkoušet lokální proměnné, parametry metody a členy třídy.
+ [Kontext vyhodnocení výrazu](../../extensibility/debugger/expression-evaluation-context.md) Obsahuje informace o kontextu vyhodnocení výrazu v sadě Visual Studio. Například kontext vyhodnocení výrazu přidružený k rámečku zásobníku poskytuje kontext pro vyhodnocení místních proměnných, parametrů metody a členů třídy.
 
 ## <a name="related-sections"></a>Související oddíly
- [Ladění koncepty](../../extensibility/debugger/debugger-concepts.md) popisuje hlavní koncepty ladění architektury.
+ [Koncepty ladění](../../extensibility/debugger/debugger-concepts.md) Popisuje hlavní ladění architektonických konceptů.
 
- [Ladění komponenty](../../extensibility/debugger/debugger-components.md) obsahuje základní informace o ladění komponenty, které zahrnují ladicího stroje (DE), Chyba při vyhodnocování výrazu (EE) a obslužné rutiny symbolů (SH) sady Visual Studio.
+ [Ladění součástí](../../extensibility/debugger/debugger-components.md) Obsahuje přehled součástí ladění sady Visual Studio, které zahrnují ladicí modul (DE), vyhodnocení výrazu (EE) a obslužnou rutinu symbolu (SH).
 
- [Ladění úlohy](../../extensibility/debugger/debugging-tasks.md) obsahuje odkazy na různé úlohy ladění, například spuštění programu a vyhodnocení výrazů.
+ [Ladění úkolů](../../extensibility/debugger/debugging-tasks.md) Obsahuje odkazy na různé úlohy ladění, jako je například spuštění programu a vyhodnocení výrazů.

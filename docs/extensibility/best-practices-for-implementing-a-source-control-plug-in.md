@@ -1,5 +1,5 @@
 ---
-title: Osvědčené postupy pro implementaci modulu Plug-in správy zdrojového kódu | Dokumentace Microsoftu
+title: Doporučené postupy pro implementaci modulu plug-in správy zdrojového kódu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,56 +7,56 @@ helpviewer_keywords:
 - best practices, source control plug-ins
 - source control [Visual Studio SDK], plug-ins
 ms.assetid: 85e73b73-29dc-464f-8734-ed308742c435
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 89bc4065a450f82b3cdec33e94f4e17ea700d3c7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 68491f22d63ae3ebb664b7c22188a661dccbf39a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352206"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740053"
 ---
-# <a name="best-practices-for-implementing-a-source-control-plug-in"></a>Osvědčené postupy pro implementaci modulu plug-in správy zdrojového kódu
-Následující podrobnosti vám můžou pomoct spolehlivě implementovat v modulu plug-in správy zdrojového kódu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+# <a name="best-practices-for-implementing-a-source-control-plug-in"></a>Doporučené postupy pro implementaci modulu plug-in správy zdrojového kódu
+Následující technické podrobnosti vám mohou pomoci spolehlivě implementovat modul plug-in správy zdrojového kódu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
 
-## <a name="memory-management-issues"></a>Problémy s pamětí správy
- Ve většině případů integrovaného vývojového prostředí (IDE), což je volající, uvolní a přidělí paměť. Modul plug-in správy zdrojového kódu vrátí v volající – přidělené vyrovnávací paměti řetězců a dalších položek. Výjimky jsou uvedeny v popisech konkrétní funkce, kde k nim dojde.
+## <a name="memory-management-issues"></a>Problémy se správou paměti
+ Ve většině případů integrované vývojové prostředí (IDE), což je volající, uvolní a přidělí paměť. Modul plug-in správy zdrojového kódu vrátí řetězce a další položky v vyrovnávacích vyrovnávacích paměti přidělené volajícím. Výjimky jsou uvedeny v popisech konkrétních funkcí, kde k nim dochází.
 
-## <a name="arrays-of-file-names"></a>Pole s názvy souborů
- Pole souborů, které je předána, není předán jako souvislý pole názvů souborů. Je předán jako pole ukazatelů na názvy souborů. Například v [sccget –](../extensibility/sccget-function.md), názvy souborů jsou předávány `lpFileNames` parametr, kde `lpFileNames` je ve skutečnosti ukazatel `char **`. `lpFileNames`[0] je ukazatel na název prvního `lpFileNames`[1] ukazatel na název druhého a tak dále.
+## <a name="arrays-of-file-names"></a>Pole názvů souborů
+ Při předání pole souborů není předánjako souvislé pole názvů souborů. Je předán jako pole ukazatelů na názvy souborů. Například v [SccGet](../extensibility/sccget-function.md), názvy souborů `lpFileNames` jsou předány parametrem, `lpFileNames` `char **`kde je ve skutečnosti ukazatel na . `lpFileNames`[0] je ukazatel na křestní `lpFileNames`jméno, [1] je ukazatel na druhé jméno a tak dále.
 
-## <a name="large-model"></a>Velké modelu
- Všechny odkazy jsou 32 bitů, dokonce i v 16bitových operačních systémech.
+## <a name="large-model"></a>Velký model
+ Všechny ukazatele jsou 32 bitů, a to i v 16bitových operačních systémech.
 
-## <a name="fully-qualified-paths"></a>Plně kvalifikovanou cestou
- Kde názvy souborů nebo adresářů jsou zadané jako argumenty, musí být plně kvalifikované cesty nebo cesty UNC, bez koncová zpětná lomítka. Je odpovědností pro převod do relativní cesty, pokud požadavek, který je základní systém správy zdrojového kódu modulu plug-in správy zdrojového kódu.
+## <a name="fully-qualified-paths"></a>Plně kvalifikované cesty
+ Pokud jsou názvy souborů nebo adresáře určeny jako argumenty, musí se jednat o plně kvalifikované cesty nebo cesty UNC bez koncových zpětných lomítk. Je odpovědností modulu plug-in správy zdrojového kódu přeložit tyto relativní cesty, pokud je požadavek základního systému správy zdrojového kódu.
 
-## <a name="specify-a-fully-qualified-path-for-the-registered-dll"></a>Zadejte plně kvalifikovanou cestu pro registrovanou knihovnu DLL
- Integrované vývojové prostředí už nenačte knihovny DLL z relativní cesty (například *.\NewProvider.dll*). Je třeba zadat úplnou cestu knihovny DLL (například *C:\Providers\NewProvider.dll*). Tento požadavek posiluje zabezpečení integrované vývojové prostředí tím, že zabrání načítání ovládacího prvku neoprávněným nebo zosobněného zdroje knihovny DLL.
+## <a name="specify-a-fully-qualified-path-for-the-registered-dll"></a>Zadejte plně kvalifikovanou cestu pro registrovanou dll.
+ IDE již nenačte knihovny DLL z relativních cest (například *.\NewProvider.dll).* Musí být zadána úplná cesta knihovny DLL (například *C:\Providers\NewProvider.dll*). Tento požadavek posiluje zabezpečení ide tím, že brání načítání neoprávněných nebo zosobněné knihovny DLL správy zdrojového kódu.
 
-## <a name="check-for-an-existing-vssci-plug-in-when-you-install-your-source-control-plug-in"></a>Vyhledat existující VSSCI modulu plug-in, když nainstalujete modul plug-in správy zdrojů
- Uživatel, který má v plánu nainstalovat modul plug-in správy zdrojů už můžete mít stávající plug-in správy zdrojových kódů v počítači nainstalována. Instalace programu pro modul plug-in, vytvořit měli určit, zda jsou existující hodnoty pro klíče registru relevantní. Pokud tyto klíče jsou už nastavené, instalační program by měl požádat uživatele, jestli se má zaregistrovat jako modul plug-in správy zdrojového výchozí modul plug-in a nahradí je již nainstalována.
+## <a name="check-for-an-existing-vssci-plug-in-when-you-install-your-source-control-plug-in"></a>Při instalaci modulu plug-in pro řízení zdrojového kódu zkontrolujte existující modul plug-in VSSCI
+ Uživatel, který plánuje instalaci modulu plug-in správy zdrojového kódu, již může mít v počítači nainstalován existující modul plug-in správy zdrojového kódu. Instalační (instalační) program modulu plug-in, který vytvoříte, by měl určit, zda existují existující hodnoty pro příslušné klíče registru. Pokud jsou tyto klíče již nastaveny, instalační program by se měl uživatele zeptat, zda má modul plug-in zaregistrovat jako výchozí modul plug-in správy zdrojového kódu a nahradit modul, který je již nainstalován.
 
-## <a name="error-result-codes-and-reporting"></a>Chybové kódy výsledků a vytváření sestav
- `SCC_OK` Vrátit kód pro funkce ovládacího prvku zdroje označuje, že byla operace úspěšná pro všechny soubory. Pokud se operace nezdaří, očekává se, že vrátí poslední kód chyby.
+## <a name="error-result-codes-and-reporting"></a>Kódy výsledků chyb a vykazování
+ Návratový `SCC_OK` kód funkce správy zdrojového kódu označuje, že operace byla úspěšná pro všechny soubory. Pokud se operace nezdaří, očekává se, že vrátí poslední chybový kód.
 
- Pravidla pro vytváření sestav je, že pokud dojde k chybě v rozhraní IDE, rozhraní IDE je zodpovědný za sestavy. Pokud dojde k chybě v systému správy zdrojového kódu, je zodpovědná za generování sestav se modul plug-in správy zdrojového kódu. Například **aktuálně nejsou vybrány žádné soubory** by byla nahlášena integrovaným vývojovým prostředím, zatímco **tento soubor je již rezervován** by byla nahlášena pomocí modulu plug-in.
+ Pravidlo pro vykazování je, že pokud dojde k chybě v rozhraní IDE, ide je zodpovědný za hlášení. Pokud dojde k chybě v systému správy zdrojového kódu, modul plug-in správy zdrojového kódu je zodpovědný za jeho nahlášení. Například **žádné soubory jsou aktuálně vybrány** by být hlášeny ide, vzhledem k tomu, **tento soubor je již rezervován** by být hlášeny modul plug-in.
 
-## <a name="the-context-structure"></a>Struktura kontextu
- Během volání [sccinitialize –](../extensibility/sccinitialize-function.md), volající předá `ppvContext` parametr, který je neinicializované popisovač typu void. Modul plug-in správy zdrojového kódu můžete ignorovat tento parametr nebo ho můžete přidělit strukturu jakéhokoli druhu a ukazatel na danou strukturu do ukazatel předaný. Rozhraní IDE nerozumí tuto strukturu, ale předává ukazatel na tuto strukturu do každé volání v modulu plug-in. To poskytuje informace o mezipaměti cenné kontextu v modulu plug-in, můžete použít k udržování informací o globální stav, který bude zachován ve volání funkce bez použití globálních proměnných. Modul plug-in je zodpovědný za uvolnění konstrukce na volání [sccuninitialize –](../extensibility/sccuninitialize-function.md).
+## <a name="the-context-structure"></a>Kontextová struktura
+ Během volání [SccInitialize](../extensibility/sccinitialize-function.md), volající předá `ppvContext` parametr, který je neinicializovaný popisovač void. Modul plug-in správy zdrojového kódu můžete ignorovat tento parametr nebo může přidělit strukturu jakéhokoli druhu a dát ukazatel na tuto strukturu do předaného ukazatele. IDE nerozumí této struktuře, ale předá ukazatel na tuto strukturu do každé jiné volání v modulu plug-in. To poskytuje cenné informace o mezipaměti kontextu do modulu plug-in, který lze použít k udržování informací o globálním stavu, který přetrvává napříč volánífunkce bez použití globálníproměnné. Modul plug-in je zodpovědný za uvolnění struktury při volání [SccUninitialize](../extensibility/sccuninitialize-function.md).
 
- Pokud modul plug-in nastaví `SCC_CAP_REENTRANT` bit v [sccinitialize –](../extensibility/sccinitialize-function.md) (konkrétně v `lpSccCaps` parametr), více kontextu struktury se používají ke sledování všech projektů, které jsou otevřené.
+ Pokud modul plug-in `SCC_CAP_REENTRANT` nastaví bit v [SccInitialize](../extensibility/sccinitialize-function.md) (konkrétně v parametru), `lpSccCaps` více kontextové struktury se používají ke sledování všech projektů, které jsou otevřené.
 
-## <a name="bitflags-and-other-command-options"></a>Příznaky Bitflag a další možnosti příkazu
- Pro každý příkaz, jako [sccget –](../extensibility/sccget-function.md), integrovaném vývojovém prostředí můžete určit řadu možností, které mění chování příkazu.
+## <a name="bitflags-and-other-command-options"></a>Bitové příznaky a další možnosti příkazů
+ Pro každý příkaz, jako je například [SccGet](../extensibility/sccget-function.md), ide můžete určit mnoho možností, které mění chování příkazu.
 
- Rozhraní API podporuje nastavení některé možnosti integrovaným vývojovým prostředím prostřednictvím `fOptions` parametru. Tyto možnosti jsou popsány v [příznaky Bitflag používané konkrétními příkazy](../extensibility/bitflags-used-by-specific-commands.md) společně s příkazy, které mají vliv. Obecně jsou tyto možnosti, u kterých by se uživateli výzva.
+ Rozhraní API podporuje nastavení určitých možností pomocí `fOptions` rozhraní IDE prostřednictvím parametru. Tyto možnosti jsou popsány v [Bitflags používá konkrétní příkazy](../extensibility/bitflags-used-by-specific-commands.md) spolu s příkazy, které ovlivňují. Obecně se jedná o možnosti, pro které by uživatel nebyl vyzván.
 
- Nejčastěji uživatelem konfigurovatelné nastavení možnosti nejsou definované tímto způsobem, protože se výrazně lišit mezi plug-in zdroje ovládacího prvku. Proto je doporučené mechanismus **Upřesnit** tlačítko. Například v **získat** dialogové okno, rozhraní IDE zobrazí pouze informace, které rozumí, ale zobrazí se také **Upřesnit** tlačítko, pokud má modul plug-in možnosti pro tento příkaz. Pokud uživatel klikne **Upřesnit** tlačítko, volání integrovaného vývojového prostředí [sccgetcommandoptions –](../extensibility/sccgetcommandoptions-function.md) umožňující uživateli informace, například bitové příznaky nebo datum/čas výzvu, aby modul plug-in správy zdrojového kódu. Modul plug-in vrátí tyto informace ve struktuře, která je předána zpět během `SccGet` příkazu.
+ Většina uživatelsky konfigurovatelných možností nastavení není tímto způsobem definována, protože se mezi moduly plug-in správy zdrojového kódu značně liší. Proto je doporučenýmechanismum **tlačítko Upřesnit.** Například v dialogovém okně **Získat** ide zobrazí pouze informace, kterým rozumí, ale také zobrazí **tlačítko Upřesnit,** pokud modul plug-in obsahuje možnosti pro tento příkaz. Když uživatel klepne na tlačítko **Upřesnit,** ide volá [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) povolit modul plug-in správy zdrojového kódu vyzvat uživatele k zadání informací, jako jsou například bitflags nebo datum a čas. Modul plug-in vrátí tyto informace ve struktuře, která je předána zpět během příkazu. `SccGet`
 
-## <a name="see-also"></a>Viz také:
-- [Ovládací prvek moduly plug-in zdrojového kódu](../extensibility/source-control-plug-ins.md)
+## <a name="see-also"></a>Viz také
+- [Moduly plug-in pro směřuje zdroj](../extensibility/source-control-plug-ins.md)
 - [Vytvoření modulu plug-in správy zdrojového kódu](../extensibility/internals/creating-a-source-control-plug-in.md)

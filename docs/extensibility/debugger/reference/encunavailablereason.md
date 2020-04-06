@@ -1,5 +1,5 @@
 ---
-title: EncUnavailableReason | Dokumentace Microsoftu
+title: EncUnavailableReason | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - EncUnavailableReason enumeration
 ms.assetid: c10aa4c0-d7e0-4de1-b8ff-7e050985eb12
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7db94a181d87791edb242d69b461f90c42a5e080
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 28863549ab3eac96322530bc85c52697f20448c8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318161"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737166"
 ---
 # <a name="encunavailablereason"></a>EncUnavailableReason
-`This is for internal use only!` Představuje důvody, které **upravit a pokračovat** není k dispozici.
+`This is for internal use only!`Představuje důvody, které **upravit a pokračovat** není k dispozici.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,30 +52,30 @@ public enum EncUnavailableReason {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `ENCUN_NONE`\
-Žádné konkrétní důvod, proč upravit a pokračovat není k dispozici.
+Není k dispozici žádný konkrétní důvod, proč není k dispozici možnost Upravit a pokračovat.
 
 `ENCUN_INTEROP`\
-Upravit a pokračovat není během volání rozhraní InterOp k dispozici.
+Upravit a pokračovat není k dispozici během interop volání.
 
 `ENCUN_SQLCLR`\
-Upravit a pokračovat není při volání procedury SQL, která používá Common Language Runtime (CLR) k dispozici.
+Upravit a pokračovat není k dispozici během volání procedury SQL, který používá modul CLR (Common Language Runtime).
 
 `ENCUN_MINIDUMP`\
-Upravit a pokračovat není při zpracování mini výpis paměti k dispozici.
+Upravit a pokračovat není k dispozici při zpracování mini-dump.
 
 `ENCUN_EMBEDDED`\
-Při zpracování vloženého kódu, upravit a pokračovat není k dispozici.
+Upravit a pokračovat není k dispozici při zpracování vloženého kódu.
 
 `ENCUN_ATTACH`\
-Upravit a pokračovat není k dispozici protože relace byla přiřazena, nespustí, ladicím programem.
+Upravit a pokračovat není k dispozici, protože relace byla připojena k ladicímu programu, nikoli spuštěna.
 
 `ENCUN_WIN64`\
-Upravit a pokračovat není při zpracování kódu Windows 64-bit k dispozici.
+Úpravy a pokračování nejsou při zpracování 64bitového kódu systému Windows k dispozici.
 
 ## <a name="remarks"></a>Poznámky
-Tento výčet je pro interní použití pouze podle [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]. [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) a [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) metod, jak je implementován dodavatelem port. Tento vlastní port byste vždy vrátí `E_NOTIMPL`.
+Tento výčet je určen pouze [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]pro interní použití společností . [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) a [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) metody implementované dodavatelem vlastního `E_NOTIMPL`portu by měl y vždy vrátit .
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.idl
@@ -84,7 +84,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 
 - [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugEvent2 | Dokumentace Microsoftu
+title: IDebugEvent2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEvent2 interface
 ms.assetid: de3d714d-96fb-4e12-b66b-a75391472153
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f87184481c5d01e74d284b175078b67f6f2612d1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a6341f8003b962a7f45420b076b23623ebdaf861
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310601"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729909"
 ---
 # <a name="idebugevent2"></a>IDebugEvent2
-Toto rozhraní se používá ke komunikaci důležitých informací o ladění, jako je například pozastavení na zarážce a méně důležité informace, jako je například zprávu ladění.
+Toto rozhraní se používá ke komunikaci kritické informace o ladění, jako je například zastavení na zarážky a nedůležité informace, jako je například ladicí zpráva.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,20 +29,20 @@ IDebugEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Ladicí stroj (DE) a vlastní port dodavatele implementovat toto rozhraní na stejný objekt jako všechny ostatní události rozhraní.
+ Ladicí modul (DE) a dodavatel vlastního portu implementují toto rozhraní na stejném objektu jako všechna ostatní rozhraní událostí.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Pomocí rozhraní argument ID (IID) k [události](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) nebo [události](../../../extensibility/debugger/reference/idebugportevents2-event.md), Správce ladění relace (SDM) volá [QueryInterface](/cpp/atl/queryinterface) na `IDebugEvent2` rozhraní získat rozhraní odpovídající události.
+ Pomocí argumentu ID rozhraní , který je dán [události](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) nebo [události](../../../extensibility/debugger/reference/idebugportevents2-event.md), zavolá správce ladění `IDebugEvent2` relace (SDM) rozhraní [QueryInterface](/cpp/atl/queryinterface) v rozhraní, aby získal příslušné rozhraní události.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IDebugEvent2`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IDebugEvent2`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
 |[GetAttributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md)|Získá atributy pro tuto událost ladění.|
 
 ## <a name="remarks"></a>Poznámky
- Konkrétnější události rozhraní, jako například [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md), není odvozen z rozhraní IDebugEvent2, ale místo toho jsou implementované jako samostatné rozhraní na stejný objekt jako `IDebugEvent2`.
+ Konkrétnější rozhraní událostí, například [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md), nejsou odvozeny z rozhraní IDebugEvent2, ale jsou místo `IDebugEvent2`toho implementovány jako samostatné rozhraní na stejném objektu jako .
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -51,7 +51,7 @@ IDebugEvent2 : IUnknown
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)
-- [Event](../../../extensibility/debugger/reference/idebugportevents2-event.md)
-- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+- [Událost](../../../extensibility/debugger/reference/idebugportevents2-event.md)
+- [Událost](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

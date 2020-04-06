@@ -1,42 +1,42 @@
 ---
-title: Programy | Dokumentace Microsoftu
+title: Programy | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], programs
 - programs, debugging
 ms.assetid: e1f955d8-95da-493b-837e-e97741a26d7e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e70a970aad250a30e19fd27ac3a47732952b3bf1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d3fd1db5add74d2d94467e1f369916feb5f30d4a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351398"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738206"
 ---
 # <a name="programs"></a>Programy
 V architektuře ladicího programu *program*:
 
-- Je kontejner pro sadu vláken a sady modulů. Program nemá žádné jeden přirovnání v operačním systému Windows.
+- Je kontejner pro sadu podprocesů a sadu modulů. Program nemá v operačním systému Windows žádnou analogii.
 
-     Program je druh podproces. Například při ladění webu, skript se dají považovat za programu. Při spuštění skriptu v procesu skriptovací stroj nezávisle na jiné skripty také má svou vlastní sadu vláken. Ladicí stroj (DE) připojí k programu a nikoli do procesu nebo vlákna.
+     Program je druh dílčího procesu. Například při ladění webu skript lze považovat za program. Zatímco skript běží v procesu skriptovacího stroje, nezávisle na jiných skriptech, má také vlastní sadu vláken. Ladicí modul (DE) se připojí k programu, nikoli k procesu nebo vláknu.
 
-- Můžete identifikovat samostatně a běží v procesu. Program lze připojit k, být odpojen od a popisují DE, který byl vytvořen, pokud existuje. Program můžete také spustit, zastavit, pokračovat a být ukončen.
+- Dokáže se identifikovat a proces, ve kterých běží. Program lze připojit, odpojit od a popsat DE, který jej vytvořil, pokud existuje. Program může také spustit, zastavit, pokračovat a být ukončen.
 
-- Můžete zobrazit výčet všech podprocesů. Program lze také zadat vlastní datový proud zpětný překlad a můžete zobrazit výčet všech kontextech kód z daného dokumentu pozice.
+- Můžete výčet všech jeho podprocesů. Program může také zadat vlastní datový proud demontáže a může vytvořit výčet všech kontextů kódu dané pozice dokumentu.
 
-- Je reprezentován [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) rozhraní vytvořené předtím, než je připojen program, nebo jako součást procesu připojení, v závislosti na implementaci. Při port vytvoří výčet programy, které proces, každý program je vytvořena v souladu s odpovídající [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) rozhraní předán jako argument [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md). Ladicí stroj také vytvořit `IDebugProgram2` rozhraní k reprezentaci programy, tyto programy nejsou vytvářena v souladu s uzlem programu. `IDebugProgramNode2` Rozhraní vytvořené Zavedenými se používají pro skutečné ladění, zatímco vytvořených port se používá pouze pro zjištění, jaké programy jsou spuštěny v procesu.
+- Je reprezentován [rozhraním IDebugProgram2,](../../extensibility/debugger/reference/idebugprogram2.md) vytvořené před připojením programu nebo jako součást procesu připojení, v závislosti na implementaci. Když port vytvoří výčet programů procesu, každý program je vytvořen v souladu s odpovídající [rozhraní IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) předán jako argument [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md). Zatímco ladicí `IDebugProgram2` moduly také vytvářejí rozhraní představující programy, tyto programy nejsou vytvořeny v souladu s programovým uzdlením. Rozhraní `IDebugProgramNode2` vytvořená DE se používají pro skutečné ladění, zatímco rozhraní vytvořená portem se používají pouze pro zjišťování, které programy jsou spuštěny v procesu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Procesy](../../extensibility/debugger/processes.md)
 - [Uzly programů](../../extensibility/debugger/program-nodes.md)
 - [Moduly](../../extensibility/debugger/modules.md)
-- [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)
-- [Ladicí stroj](../../extensibility/debugger/debug-engine.md)
+- [Koncepty ladicích programů](../../extensibility/debugger/debugger-concepts.md)
+- [Ladicí modul](../../extensibility/debugger/debug-engine.md)
 - [Pozice dokumentu](../../extensibility/debugger/document-position.md)
 - [Kontext kódu](../../extensibility/debugger/code-context.md)
 - [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)

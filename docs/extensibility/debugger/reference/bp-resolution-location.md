@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_LOCATION | Dokumentace Microsoftu
+title: BP_RESOLUTION_LOCATION | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_RESOLUTION_LOCATION structure
 ms.assetid: 21dc5246-69c1-43e3-855c-9cd4e596c0e6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ed287f2d90e1ee92c7e0fd4ae685fbb9f38854f4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4b11d80e90daec19a14ca509e5a4b9bdb2d1ced4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350587"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737820"
 ---
-# <a name="bpresolutionlocation"></a>BP_RESOLUTION_LOCATION
-Určuje strukturu řešení umístění zarážky.
+# <a name="bp_resolution_location"></a>BP_RESOLUTION_LOCATION
+Určuje strukturu umístění rozlišení zarážky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,41 +50,41 @@ public struct BP_RESOLUTION_LOCATION {
 
 ## <a name="members"></a>Členové
 `bpType`\
-Hodnota z [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) výčet, který určuje, jak interpretovat `bpResLocation` sjednocení nebo `unionmemberX` členy.
+Hodnota z [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) výčtu, který určuje, `bpResLocation` jak `unionmemberX` interpretovat unie nebo členy.
 
 `bpResLocation.bpresCode`\
-[C++ pouze] Obsahuje [BP_RESOLUTION_CODE](../../../extensibility/debugger/reference/bp-resolution-code.md) strukturu Pokud `bpType`  =  `BPT_CODE`.
+[Pouze C++] Obsahuje [strukturu](../../../extensibility/debugger/reference/bp-resolution-code.md) BP_RESOLUTION_CODE `bpType`  =  `BPT_CODE`if .
 
 `bpResLocation.bpresData`\
-[C++ pouze] Obsahuje [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) strukturu Pokud `bpType`  =  `BPT_DATA`.
+[Pouze C++] Obsahuje [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) strukturu `bpType`  =  `BPT_DATA`if .
 
 `bpResLocation.unused`\
-[C++ pouze] Zástupný symbol.
+[Pouze C++] Zástupný symbol.
 
 `unionmember1`\
-[C# pouze] Viz poznámky o tom, jak interpretovat.
+[Pouze C#] Viz Poznámky k interpretaci.
 
 `unionmember2`\
-[C# pouze] Viz poznámky o tom, jak interpretovat.
+[Pouze C#] Viz Poznámky k interpretaci.
 
 `unionmember3`\
-[C# pouze] Viz poznámky o tom, jak interpretovat.
+[Pouze C#] Viz Poznámky k interpretaci.
 
 `unionmember4`\
-[C# pouze] Viz poznámky o tom, jak interpretovat.
+[Pouze C#] Viz Poznámky k interpretaci.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je členem skupiny [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) a [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) struktury.
+Tato struktura je členem [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) a [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) struktur.
 
- [C# pouze] `unionmemberX` Členy se interpretují podle následující tabulky. Podívejte se dolů levém sloupci `bpType` hodnoty napříč pak určit, co každý `unionmemberX` člen představuje a zařazování `unionmemberX` odpovídajícím způsobem. Podívejte se na příklad pro způsob, jak interpretovat tato struktura v jazyce C#.
+ [Pouze C#] Členy `unionmemberX` jsou interpretovány podle následující tabulky. Podívejte se do levého sloupce pro hodnotu `bpType` pak napříč určit, co každý `unionmemberX` člen představuje a zařazovat `unionmemberX` odpovídajícím způsobem. Viz Příklad způsob, jak interpretovat tuto strukturu v C#.
 
 |`bpLocationType`|`unionmember1`|`unionmember2`|`unionmember3`|`unionmember4`|
 |----------------------|--------------------|--------------------|--------------------|--------------------|
 |`BPT_CODE`|[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)|-|-|-|
-|`BPT_DATA`|`string` (výraz data)|`string` (název funkce)|`string` (název image)|`enum_BP_RES_DATA_FLAGS`|
+|`BPT_DATA`|`string`(datový výraz)|`string`(název funkce)|`string`(název obrázku)|`enum_BP_RES_DATA_FLAGS`|
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, jak interpretovat `BP_RESOLUTION_LOCATION` struktura v jazyce C#.
+Tento příklad ukazuje, `BP_RESOLUTION_LOCATION` jak interpretovat strukturu v C#.
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)
 - [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)

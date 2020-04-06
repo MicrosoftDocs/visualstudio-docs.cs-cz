@@ -1,5 +1,5 @@
 ---
-title: Assembly – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Element sestavení (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Assembly element [Visual Studio templates]
 - <Assembly> element [Visual Studio templates]
 ms.assetid: 9242f76a-1273-4b8a-8f26-6606f91829ef
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 13c52b7f913e35ace3e0fd41227e27b6c00e90e2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c80044657b16448ba4567fff839274226985fa14
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352199"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740042"
 ---
-# <a name="assembly-element-visual-studio-templates"></a>Assembly – element (šablony sady Visual Studio)
-Určuje informace o sestavení, který používá šablonu přidáte odkaz na toto sestavení do projektů.
+# <a name="assembly-element-visual-studio-templates"></a>Element sestavení (šablony sady Visual Studio)
+Určuje informace o sestavení, které šablona používá k přidání odkazu na toto sestavení do projektů.
 
- \<Vstemplate – > \<TemplateContent > \<odkazy > \<odkaz > \<sestavení >
+ \<VSTemplate \<> TemplateContent \<> \<odkazy \<> reference>> sestavení
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,27 +32,27 @@ Určuje informace o sestavení, který používá šablonu přidáte odkaz na to
 <Assembly> AssemblyName </Assembly>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Referenční informace](../extensibility/reference-element-visual-studio-templates.md)|Určuje odkaz na sestavení přidat, pokud je položka přidána do projektu.|
+|[Referenční informace](../extensibility/reference-element-visual-studio-templates.md)|Určuje odkaz na sestavení, který má být přidán při přidání položky do projektu.|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Tento text určuje sestavení, které chcete přidat do projektu při vytváření instance šablony položky. Tento název sestavení musí být zadán v jednom z následujících způsobů:
+ Tento text určuje sestavení, které má být při vytváření instancí vytvořena šablona položky. Tento název sestavení musí být zadán jedním z následujících způsobů:
 
-- Jako název úplné sestavení. Příklad:
+- Jako úplný název sestavení. Například:
 
     ```
     <Assembly>
@@ -60,19 +60,19 @@ Určuje informace o sestavení, který používá šablonu přidáte odkaz na to
     </Assembly>
     ```
 
-- Jako jednoduchý text odkazu. Příklad:
+- Jako jednoduchý textový odkaz. Například:
 
     ```
     <Assembly> System </Assembly>
     ```
 
 ## <a name="remarks"></a>Poznámky
- `Assembly` je vyžadovaný podřízený prvek `Reference`.
+ `Assembly`je povinnýpodřízený `Reference`prvek .
 
- `Reference`, `References,` a `Assembly` prvky lze použít pouze v *.vstemplate* soubory, které mají `Type` hodnotu atributu `Item`.
+ `Reference`Prvky `References,` `Assembly` , a lze použít pouze v souborech `Type` *.vstemplate,* které mají hodnotu atributu `Item`.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, `TemplateContent` elementu šablony položky. Přidá odkazy na tato konfigurace XML *System.dll* a *System.Data.dll* sestavení.
+ Následující příklad ilustruje `TemplateContent` prvek šablony položky. Tento jazyk XML přidává odkazy na sestavení *System.dll* a *System.Data.dll.*
 
 ```
 <TemplateContent>
@@ -92,6 +92,6 @@ Určuje informace o sestavení, který používá šablonu přidáte odkaz na to
 </TemplateContent>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

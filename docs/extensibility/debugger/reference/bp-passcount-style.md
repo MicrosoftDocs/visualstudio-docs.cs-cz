@@ -1,5 +1,5 @@
 ---
-title: BP_PASSCOUNT_STYLE | Dokumentace Microsoftu
+title: BP_PASSCOUNT_STYLE | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_PASSCOUNT_STYLE structure
 ms.assetid: 0a647047-e2d5-4724-a0b8-68108425ecad
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4ea44ef70ba086a58454891987711ce7cca643e8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1633c5e9aa6ff251fedce83a0243664cd9e0e0a7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353053"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737917"
 ---
-# <a name="bppasscountstyle"></a>BP_PASSCOUNT_STYLE
-Určuje podmínku, počet průchodu zarážky, který způsobí, že zarážka má provést, přidružené.
+# <a name="bp_passcount_style"></a>BP_PASSCOUNT_STYLE
+Určuje podmínku přidruženou k počtu průchodů zarážky, která způsobí, že se zarážka zapálí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,21 +46,21 @@ public enum enum_BP_PASSCOUNT_STYLE {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `BP_PASSCOUNT_NONE`\
-Určuje styl počet pass bez zarážek.
+Určuje žádný styl počtu průchodů zarážky.
 
 `BP_PASSCOUNT_EQUAL`\
-Nastaví styl počet průchodu zarážky rovno. Zarážka je vyvoláno, pokud počet pokusů, které je zarážka dosažena rovná počtu průchodu.
+Nastaví styl počtu průchodů zarážky na stejný. Zarážka se aktivuje, když počet, kolikrát je zarážka přístupů rovná počet průchodů.
 
 `BP_PASSCOUNT_EQUAL_OR_GREATER`\
-Nastaví styl počet průchodu zarážky na stejné nebo větší. Zarážka aktivuje se v případě, že počet pokusů, které je zarážka dosažena je roven nebo větší než počet pass.
+Nastaví styl počtu průchodů zarážky na stejný nebo větší. Zarážka je aktivována, když počet, kolikrát je zarážka přístupů je rovna nebo větší než počet průchodů.
 
 `BP_PASSCOUNT_MOD`\
-Určuje, počet průchodů modulo. Například, pokud je počet průchodu typu `BP_PASSCOUNT_MOD` a je hodnota počtu průchodu 4, aktivována zarážka pokaždé, když je počet průchodů násobek čísla 4.
+Určuje počet modulo passů. Například pokud počet průchodů je `BP_PASSCOUNT_MOD` typu a hodnota počtu průchodů je 4, zarážka aktivuje pokaždé, když počet přístupů je násobek 4.
 
 ## <a name="remarks"></a>Poznámky
-Používá pro `stylePassCount` člena [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) struktura, která je členem skupiny [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) a [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) struktury.
+Používá se `stylePassCount` pro člen [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) struktury, která je zase členem [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) a [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) struktury.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -69,7 +69,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)
 - [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)

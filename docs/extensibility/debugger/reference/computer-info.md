@@ -1,27 +1,27 @@
 ---
-title: COMPUTER_INFO | Dokumentace Microsoftu
+title: COMPUTER_INFO | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - COMPUTER_INFO structure
 ms.assetid: 943085b2-f165-462d-9a4e-2086f0cdfff4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 55d3eb6c321875b479d8df597b963fc3ac30db12
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 27794dff51646b72dbbfda81ead02e5206ade78b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346574"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737665"
 ---
-# <a name="computerinfo"></a>COMPUTER_INFO
-Popisuje počítače, na kterém je spuštěný ladicí program.
+# <a name="computer_info"></a>COMPUTER_INFO
+Popisuje počítač, ve kterém je ladicí program spuštěn.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,16 +45,16 @@ public struct COMPUTER_INFO
 
 ## <a name="members"></a>Členové
 `wProcessorArchitecture`\
-Architektura mikroprocesoru identifikuje.
+Identifikuje architekturu mikroprocesoru.
 
 `wSuiteMask`\
-Identifikuje sadu masky.
+Identifikuje masku apartmá.
 
 `dwOperatingSystemVersion`\
 Číslo verze operačního systému.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je vrácený [GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md) metody.
+Tato struktura je vrácena [metodou GetComputerInfo.](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: Msdbg.h
@@ -63,6 +63,6 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)

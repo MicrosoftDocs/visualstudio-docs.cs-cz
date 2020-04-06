@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetTypeArgumentCount | Dokumentace Microsoftu
+title: IDebugBinder3::GetTypeArgumentCount | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBinder3::GetTypeArgumentCount method
 ms.assetid: caf68de6-6f7c-4efd-b803-121347a5032e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b9dff83d4d9c09ebc2572fa3897ae528d2adce4b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: db43ed4dc178cf5080822e2dc387b5faa4bc5cd1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330764"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735710"
 ---
 # <a name="idebugbinder3gettypeargumentcount"></a>IDebugBinder3::GetTypeArgumentCount
-Tato metoda vrátí počet typů argumentů, které jsou přidružené k tomuto objektu.
+Tato metoda vrátí počet typů argumentů přidružených k tomuto objektu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,14 +41,14 @@ int GetTypeArgumentCount(
 
 ## <a name="parameters"></a>Parametry
 `uCount`\
-[out] Počet typů argumentů, které jsou přidružené k tomuto objektu.
+[out] Počet typů argumentů přidružených k tomuto objektu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Hodnota vrácená touto metodou je možné přidělit pole pro použití se službou [gettypearguments –](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md) metody.
+ Hodnotu vrácenou touto metodou lze použít k přidělení pole pro použití s metodou [GetTypeArguments.](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)
 - [GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md)

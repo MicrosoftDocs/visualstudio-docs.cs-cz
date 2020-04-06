@@ -1,5 +1,5 @@
 ---
-title: BPREQI_FIELDS | Dokumentace Microsoftu
+title: BPREQI_FIELDS | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BPREQI_FIELDS enumeration
 ms.assetid: 679e771e-4a79-484e-af37-f962ef4aa245
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 757b8bfeeed2a7d75f3a0b4203b80b464e5b39fa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4c0e10b6c253c61a9e68e0cf161201f7d2520ae6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350511"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737747"
 ---
-# <a name="bpreqifields"></a>BPREQI_FIELDS
-Určuje informace, které se mají načíst informace o požadavku zarážku.
+# <a name="bpreqi_fields"></a>BPREQI_FIELDS
+Určuje informace, které mají být načteny o požadavku na zarážku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,55 +66,55 @@ public enum enum_BPREQI_FIELDS {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `BPREQI_BPLOCATION`\
-Inicializace/použít `bpLocation` oblasti (umístění zarážky) [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) nebo [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) struktury.
+Inicializovat/použít `bpLocation` pole (umístění zarážky) [struktury BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) nebo [BP_REQUEST_INFO2.](../../../extensibility/debugger/reference/bp-request-info2.md)
 
 `BPREQI_LANGUAGE`\
-Inicializace/použít `guidLanguage` pole `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
+Inicializovat/použít `guidLanguage` pole `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
 
 `BPREQI_PROGRAM`\
-Inicializace/použít `pProgram` pole `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
+Inicializovat/použít `pProgram` pole `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
 
 `BPREQI_PROGRAMNAME`\
-Inicializace/použít `bstrProgramName` pole `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
+Inicializovat/použít `bstrProgramName` pole `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
 
 `BPREQI_THREAD`\
-Inicializace/použít `pThread` pole `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
+Inicializovat/použít `pThread` pole `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
 
 `BPREQI_THREADNAME`\
-Inicializace/použít `bstrThreadName` pole `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
+Inicializovat/použít `bstrThreadName` pole `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
 
 `BPREQI_PASSCOUNT`\
-Inicializace/použít `bpPassCount` pole `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
+Inicializovat/použít `bpPassCount` pole `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
 
 `BPREQI_CONDITION`\
-Inicializace/použít `bpCondition` pole (podmínka zarážky) `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
+Inicializovat/použít `bpCondition` pole (podmínka `BP_REQUEST_INFO` zarážky) `BP_REQUEST_INFO2` nebo struktury.
 
 `BPREQI_FLAGS`\
-Inicializace/použít `dwFlags` pole `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
+Inicializovat/použít `dwFlags` pole `BP_REQUEST_INFO` nebo `BP_REQUEST_INFO2` struktury.
 
 `BPREQI_ALLOLDFIELDS`\
-Inicializace/použít pro všechna pole nástroje `BP_REQUEST_INFO` struktury.
+Inicializovat/použít všechna pole `BP_REQUEST_INFO` pro strukturu.
 
 `BPREQI_VENDOR`\
-Inicializace/použít `guidVendor` pole `BP_REQUEST_INFO2` struktury.
+Inicializovat/použít `guidVendor` pole `BP_REQUEST_INFO2` struktury.
 
 `BPREQI_CONSTRAINT`\
-Inicializace/použít `bstrConstraint` pole `BP_REQUEST_INFO2` struktury.
+Inicializovat/použít `bstrConstraint` pole `BP_REQUEST_INFO2` struktury.
 
 `BPREQI_TRACEPOINT`\
-Inicializace/použít `bstrTracepoint` pole `BP_REQUEST_INFO2` struktury.
+Inicializovat/použít `bstrTracepoint` pole `BP_REQUEST_INFO2` struktury.
 
 `BPREQI_ALLFIELDS`\
-Určuje všechna pole `BP_REQUEST_INFO2` struktury.
+Určuje všechna pole `BP_REQUEST_INFO2` pro strukturu.
 
 ## <a name="remarks"></a>Poznámky
-Předán jako argument [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) a [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) metody k určení polí s [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) a [BP_REQUEST_INFO2 ](../../../extensibility/debugger/reference/bp-request-info2.md) struktury mají být inicializovány.
+Předánjako argument [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) a [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) metody určit, která pole [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) a [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) struktury mají být inicializovány.
 
-Tyto příznaky jsou také použity k označení polí s `BP_REQUEST_INFO` a `BP_REQUEST_INFO2` struktury jsou používány a platný, pokud každá struktura je vrácen.
+Tyto příznaky se také používají k `BP_REQUEST_INFO` `BP_REQUEST_INFO2` označení, která pole a struktury se používají a jsou platné při vrácení každé struktury.
 
-Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.
+Tyto hodnoty mohou být kombinovány `OR`s bitovým .
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -123,7 +123,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)
 - [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)

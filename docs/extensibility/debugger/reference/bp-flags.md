@@ -1,5 +1,5 @@
 ---
-title: BP_FLAGS | Dokumentace Microsoftu
+title: BP_FLAGS | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_FLAGS enumeration
 ms.assetid: c45dfc74-5e7f-4f1e-a147-ab2a55dccbd0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 31f5153c3a2d0b55829a7743840fe8a791f023d0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 62626ff75a4545d89835d3136649191004291f8f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319225"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738059"
 ---
-# <a name="bpflags"></a>BP_FLAGS
-Poskytuje volitelné příznaky, které slouží k zadání dalších informací při nastavení zarážky.
+# <a name="bp_flags"></a>BP_FLAGS
+Obsahuje volitelné příznaky, které mohou být použity k určení další informace při nastavování zarážky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,20 +44,20 @@ public enum enum_BP_FLAGS {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `BP_FLAG_NONE`\
-Určuje příznak bez zarážek.
+Neurčuje žádný příznak zarážky.
 
 `BP_FLAG_MAP_DOCPOSITION`\
-Určuje, že ladicí stroj (DE) by měla být mapována zarážky pomocí umístění dokumentu. To se vztahuje pouze na zarážky nastavené v skript orientovaného zdrojových souborech, jako je například stránek ASP (Active Server).
+Určuje, že ladicí modul (DE) by měl mapovat zarážku pomocí polohy dokumentu. To platí pouze pro zarážky nastavené ve skriptně orientovaných zdrojových souborech, jako jsou stránky Active Server Pages (ASP).
 
 `BP_FLAG_DONT_STOP`\
-Určuje, že zarážka by měla být zpracovány ladicího stroje, ale, že ladicí stroj nakonec by neměl zastavit existuje (to znamená, [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) objektu události nesmí být rozesílaná). Tento příznak slouží k používá hlavně s zarážky s trasováním.
+Určuje, že zarážka by měla být zpracována ladicím strojem, ale že ladicí modul by se nakonec neměl zastavit (to znamená, že objekt události [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) by neměl být odeslán). Tento příznak je určen pro použití především s trasovací body.
 
 ## <a name="remarks"></a>Poznámky
-Používá pro `dwFlags` člena [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) a [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) struktury.
+Používá se `dwFlags` pro členy [struktury BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) a [BP_REQUEST_INFO2.](../../../extensibility/debugger/reference/bp-request-info2.md)
 
-Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.
+Tyto hodnoty mohou být kombinovány `OR`s bitovým .
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -66,7 +66,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)
 - [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)

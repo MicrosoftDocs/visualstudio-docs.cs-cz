@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute | Dokumentace Microsoftu
+title: Atribut IDebugCustomAttribute | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCustomAttribute interface
 ms.assetid: c5ae41e9-00b9-4cca-871d-b8de9ef390d1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae596c781d864f97087371fcb10595aa5f6a8ee9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a31133139d0104cd29f5d0d0e760bd78ec5783fd
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346128"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732680"
 ---
 # <a name="idebugcustomattribute"></a>IDebugCustomAttribute
-Toto rozhraní představuje atribut vlastní a můžete zadat název, nadřazený a třídy typu atributu.
+Toto rozhraní představuje vlastní atribut a může poskytnout název, nadřazený a typ třídy atributu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,23 +29,23 @@ IDebugCustomAttribute : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Poskytovatel symbolů implementuje toto rozhraní, aby bylo možné podporovat vlastní atributy přidružené k symbolu. Obvykle je implementované v jeho vlastní objekt.
+ Zprostředkovatel symbolu implementuje toto rozhraní za účelem podpory vlastních atributů přidružených ke symbolu. Obvykle je implementována na vlastní objekt.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Volání [Další](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md) vrátí toto rozhraní. Volání [enumcustomattributes –](../../../extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes.md) vrátí metoda [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) rozhraní.
+ Volání [Next](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md) vrátí toto rozhraní. Volání metody [EnumCustomAttributes](../../../extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes.md) vrátí rozhraní [IEnumDebugCustomAttributes.](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IDebugCustomAttribute`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IDebugCustomAttribute`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetParentField](../../../extensibility/debugger/reference/idebugcustomattribute-getparentfield.md)|Získá pole, ke kterému je připojený aktuální atribut.|
-|[GetAttributeTypeField](../../../extensibility/debugger/reference/idebugcustomattribute-getattributetypefield.md)|Získá typ vlastního atributu třídy.|
-|[GetName](../../../extensibility/debugger/reference/idebugcustomattribute-getname.md)|Získá název vlastního atributu.|
+|[GetParentField](../../../extensibility/debugger/reference/idebugcustomattribute-getparentfield.md)|Získá pole, ke kterému je připojen aktuální atribut.|
+|[GetAttributeTypeField](../../../extensibility/debugger/reference/idebugcustomattribute-getattributetypefield.md)|Získá typ třídy vlastní atribut.|
+|[GetName](../../../extensibility/debugger/reference/idebugcustomattribute-getname.md)|Získá název vlastní atribut.|
 |[GetAttributeBytes](../../../extensibility/debugger/reference/idebugcustomattribute-getattributebytes.md)|Získá informace o atributu jako objekt blob bajtů.|
 
 ## <a name="remarks"></a>Poznámky
- Vlastní atribut je struktura jazyka C#, který poskytuje vlastní metadata přidružená k dané třídy nebo metody.
+ Vlastní atribut je struktura pro C#, která poskytuje vlastní metadata přidružená k určité třídě nebo metodě.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: sh.h
@@ -54,7 +54,7 @@ IDebugCustomAttribute : IUnknown
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní poskytovatele symbolů ](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)
 - [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)

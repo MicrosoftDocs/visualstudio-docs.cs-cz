@@ -1,5 +1,5 @@
 ---
-title: CustomParameters – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Element CustomParameters (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - CustomParameters element [Visual Studio project templates]
 ms.assetid: cf3efc91-1532-4022-bbb8-a18658424fee
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8089e84f5414798fdf6a4707e8bde65e4df5e0a2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f524996c226f001c68ddc7ac9aa8cb3b99857fc5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350209"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739418"
 ---
-# <a name="customparameters-element-visual-studio-templates"></a>CustomParameters – element (šablony sady Visual Studio)
-Skupiny vlastní parametry, které mají být předány do Průvodce vytvořením šablony, když Průvodce provede nahrazení parametru.
+# <a name="customparameters-element-visual-studio-templates"></a>Element CustomParameters (šablony sady Visual Studio)
+Seskupí vlastní parametry, které mají být předány průvodci šablonou, když průvodce provede nahrazení parametrů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,28 +32,28 @@ Skupiny vlastní parametry, které mají být předány do Průvodce vytvoření
 </CustomParameters>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[CustomParameter –](../extensibility/customparameter-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Obsahuje název vlastní parametr a hodnotu použijte, pokud projekt nebo položku je vytvořen z šablony. Může být nula nebo více `CustomParameter` prvky `CustomParameters` elementu.|
+|[CustomParameter](../extensibility/customparameter-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Obsahuje vlastní název parametru a hodnotu, která se má použít při vytvoření projektu nebo položky ze šablony. V prvku může `CustomParameter` být nula `CustomParameters` nebo více prvků.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Určuje obsah značek šablony.|
+|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Určuje obsah šablony.|
 
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, jak použít několik vlastních parametrů v šabloně. Při vytvoření projektu nebo položky ze šablony s následující vlastní parametry všechny výskyty `$color1$` a `$color2$` v šabloně se nahradí soubory `Red` a `Blue`v uvedeném pořadí.
+ Následující příklad ukazuje, jak používat několik vlastních parametrů v šabloně. Při vytvoření projektu nebo položky ze šablony s následujícími vlastními `$color2$` parametry budou všechny instance `Red` `Blue`souborů šablony nahrazeny `$color1$` a , resp.
 
 ```
 <CustomParameters>
@@ -62,7 +62,7 @@ Skupiny vlastní parametry, které mají být předány do Průvodce vytvoření
 </CustomParameters>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [CustomParameter – element (šablony sady Visual Studio)](../extensibility/customparameter-element-visual-studio-templates.md)
+## <a name="see-also"></a>Viz také
+- [Element CustomParameter (šablony sady Visual Studio)](../extensibility/customparameter-element-visual-studio-templates.md)
 - [Parametry šablony](../ide/template-parameters.md)
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)

@@ -1,28 +1,28 @@
 ---
-title: IDebugExpressionEvaluator2::GetService | Dokumentace Microsoftu
+title: IDebugExpressionEvaluator2::GetService | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugExpressionEvaluator2::GetService
 - GetService
 ms.assetid: f8988a9e-9d18-42af-84a7-55f41e9adf63
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 42a4027b4153f262eb8164a915f229f04c7cbed4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c5428606ad54c7938037c3ffecf04f1cfe41787c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325553"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729350"
 ---
 # <a name="idebugexpressionevaluator2getservice"></a>IDebugExpressionEvaluator2::GetService
-Načte službu objekt dle jejich jedinečného identifikátoru.
+Načte objekt služby s jeho jedinečným identifikátorem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,16 +42,16 @@ int GetService (
 
 ## <a name="parameters"></a>Parametry
 `uid`\
-[in] Jedinečný identifikátor služby k načtení.
+[v] Jedinečný identifikátor služby, kterou chcete načíst.
 
 `ppService`\
 [out] Vrátí objekt, který představuje službu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- To mohou být spotřebovány vyhodnocení výrazu třetích stran získat services z jiného vyhodnocovací filtr výrazů. Například tato metoda může získat rozhraní pro služby visualizéru z výchozí vyhodnocovací filtr výrazů. Je nepravděpodobné, že je nutné implementovat toto rozhraní vyhodnocovače výrazů třetích stran.
+ To může být spotřebována vyhodnocení výrazu třetí strany získat služby od jiného vyhodnocení výrazu. Tato metoda může být například použita k získání rozhraní pro službu vizualizéru od výchozího vyhodnocení výrazu. Vyhodnocení výrazů třetích stran je nepravděpodobné, že bude nutné implementovat toto rozhraní.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

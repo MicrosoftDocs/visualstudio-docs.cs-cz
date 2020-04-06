@@ -1,28 +1,28 @@
 ---
-title: IDebugComPlusSymbolProvider::GetSymAttribute | Dokumentace Microsoftu
+title: IDebugComPlusSymbolProvider::GetSymAttribute | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugComPlusSymbolProvider::GetSymAttribute
 - GetSymAttribute
 ms.assetid: 6cbaac92-a60b-4165-a7f5-c34407770f3c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5d4da2269211d4ae3e61061cbd3dee5f9d5e1264
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cb405bd0cf6f3ec846e3b146e4fd02399d583fb7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336692"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80733768"
 ---
 # <a name="idebugcomplussymbolprovidergetsymattribute"></a>IDebugComPlusSymbolProvider::GetSymAttribute
-Načte symboly ladění s atributem daná nadřazená pro zadaný modul.
+Načte symboly ladění s daným nadřazeným atributem pro zadaný modul.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,19 +52,19 @@ int GetSymAttribute (
 
 ## <a name="parameters"></a>Parametry
 `ulAppDomainID`\
-[in] Identifikátor domény aplikace.
+[v] Identifikátor domény aplikace.
 
 `guidModule`\
-[in] Jedinečný identifikátor modulu.
+[v] Jedinečný identifikátor modulu
 
 `tokParent`\
-[in] Token pro nadřazený atribut.
+[v] Token pro nadřazený atribut.
 
 `pstrName`\
-[in] Název modulu.
+[v] Název modulu.
 
 `cBuffer`\
-[in] Počet bajtů potřebných pro výstup `buffer`.
+[v] Počet bajtů požadovaných `buffer`pro výstup .
 
 `pcBuffer`\
 [out] Délka výstupu `buffer`.
@@ -73,10 +73,10 @@ int GetSymAttribute (
 [out] Pole, které obsahuje symboly.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.
+Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugSymbolProvider** objekt, který zveřejňuje rozhraní [IDebugComPlusSymbolProvider.](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetSymAttribute(
@@ -106,5 +106,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

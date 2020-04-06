@@ -1,28 +1,28 @@
 ---
-title: IDebugBinder3::GetMemoryContext64 | Dokumentace Microsoftu
+title: IDebugBinder3::GetMemoryContext64 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - GetMemoryContext64
 - IDebugBinder3::GetMemoryContext64
 ms.assetid: f021fd16-9fc7-4c41-86af-e54e6224cfbb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 92c589951e9b65536be5474f56eb6b959232b738
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3f76d84f0403a853ae7e297084f8745d7428386a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66327072"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735739"
 ---
 # <a name="idebugbinder3getmemorycontext64"></a>IDebugBinder3::GetMemoryContext64
-Převede objekt umístění nebo adresu paměti 64-bit na místní paměti.
+Převede umístění objektu nebo adresu 64bitové paměti na kontext paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,19 +44,19 @@ int GetMemoryContext64 (
 
 ## <a name="parameters"></a>Parametry
 `pField`\
-[in] [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , který popisuje objekt, který má být vyhledán. Pokud `NULL`, pak použijte `dwConstant` místo.
+[v] [Pole IDebugField,](../../../extensibility/debugger/reference/idebugfield.md) který popisuje objekt vyhledejte. Pokud `NULL`, `dwConstant` použijte místo.
 
 `uConstant`\
-[in] Adresa paměti 64-bit, jako je například 0x50000000.
+[v] 64bitová adresa paměti, například 0x50000000.
 
 `ppMemCxt`\
-[out] Vrátí [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) rozhraní, které představuje adresu objektu, nebo adresy v paměti.
+[out] Vrátí rozhraní [IDebugMemoryContext2,](../../../extensibility/debugger/reference/idebugmemorycontext2.md) které představuje adresu objektu nebo adresu v paměti.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklady vytvoří objekt, který implementuje [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md) rozhraní a tato metoda používá k načtení kontextu paměti.
+Následující příklady vytvoří objekt, který implementuje rozhraní [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md) a používá tuto metodu k načtení kontextu paměti.
 
 ```cpp
 HRESULT CValueProperty::GetMemoryContext ( IDebugMemoryContext2** out_ppMemoryContext )
@@ -129,5 +129,5 @@ HRESULT CValueProperty::GetMemoryContext ( IDebugMemoryContext2** out_ppMemoryCo
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

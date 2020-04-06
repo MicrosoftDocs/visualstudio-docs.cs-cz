@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext2::GetLanguageInfo | Dokumentace Microsoftu
+title: IDebugCodeContext2::GetLanguageInfo | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCodeContext2::GetLanguageInfo
 ms.assetid: 03002ef1-9fe6-44b6-b23b-ef7b86b2b21b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 08138fcd67e7d4fd5115ac13fe1b8348f76245d8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 465cc07b3ca75835afe0737fb22ba403acc4098b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339016"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734240"
 ---
 # <a name="idebugcodecontext2getlanguageinfo"></a>IDebugCodeContext2::GetLanguageInfo
 Získá informace o jazyce pro tento kontext kódu.
@@ -43,16 +43,16 @@ int GetLanguageInfo( 
 
 ## <a name="parameters"></a>Parametry
 `pbstrLanguage`\
-[out v] Vrátí řetězec, který obsahuje název jazyka, například "C++."
+[dovnitř, ven] Vrátí řetězec, který obsahuje název jazyka, například "C++.".
 
 `pguidLanguage`\
-[out v] Vrátí identifikátor GUID pro jazyk kódu kontextu, například `guidCPPLang`.
+[dovnitř, ven] Vrátí identifikátor GUID pro jazyk kontextu kódu, `guidCPPLang`například .
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Nejméně jeden z parametrů musí vrátit nenulovou hodnotu.
+ Alespoň jeden z parametrů musí vrátit hodnotu nenulové hodnoty.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

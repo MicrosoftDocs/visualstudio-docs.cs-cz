@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextEvents2::onReplaceText | Microsoft Docs
+title: IDebugDocumentTextEvents2::onReplaceText | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentTextEvents2::onReplaceText
 ms.assetid: cb39f025-66d8-4dc0-bef6-1bdc8e07db92
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1913bf42be298f6a4e8dd96c3116b49d8fb0abbe
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 812c77522213791519057d43ca3e725b6660612d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330594"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731412"
 ---
 # <a name="idebugdocumenttextevents2onreplacetext"></a>IDebugDocumentTextEvents2::onReplaceText
-Upozorní balíček ladění, text se nahradil v dokumentu.
+Upozorní ladicí balíček, že text byl v dokumentu nahrazen.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,14 +43,14 @@ int onReplaceText( 
 
 ## <a name="parameters"></a>Parametry
 `pos`\
-[in] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) indikuje, ve kterém byl text nahrazen.
+[v] TEXT_POSITION [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) označuje, kde byl text nahrazen.
 
 `dwNumToReplace`\
-[in] Určuje počet znaků textu, které nebyly nahrazeny.
+[v] Určuje počet znaků nahrazených textu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)
 - [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

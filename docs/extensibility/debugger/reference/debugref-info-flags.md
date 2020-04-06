@@ -1,5 +1,5 @@
 ---
-title: DEBUGREF_INFO_FLAGS | Dokumentace Microsoftu
+title: DEBUGREF_INFO_FLAGS | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - DEBUGREF_INFO_FLAGS enumeration
 ms.assetid: 1b043327-302a-4f6d-b51d-f94f9d7c7f9d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1adab87ed09ca2ff16d837da084d8cc0b76956fe
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cb10ae5d3b4ce9f8aa777f643d412e075bd5293f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318357"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737385"
 ---
-# <a name="debugrefinfoflags"></a>DEBUGREF_INFO_FLAGS
-Určuje, jaké informace se mají načíst informace o ladění referenční objekt.
+# <a name="debugref_info_flags"></a>DEBUGREF_INFO_FLAGS
+Určuje, jaké informace o referenčním objektu ladění mají být načteny.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,40 +56,40 @@ public enum enum_DEBUGREF_INFO_FLAGS {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `DEBUGREF_INFO_NAME`\
-Inicializace/použít `bstrName` pole ve struktuře.
+Inicializovat/použít `bstrName` pole ve struktuře.
 
 `DEBUGREF_INFO_TYPE`\
-Inicializace/použít `bstrType` pole ve struktuře.
+Inicializovat/použít `bstrType` pole ve struktuře.
 
 `DEBUGREF_INFO_VALUE`\
-Inicializace/použít `bstrValue` pole ve struktuře.
+Inicializovat/použít `bstrValue` pole ve struktuře.
 
 `DEBUGREF_INFO_ATTRIB`\
-Inicializace/použít `dwAttrib` pole ve struktuře.
+Inicializovat/použít `dwAttrib` pole ve struktuře.
 
 `DEBUGREF_INFO_REFTYPE`\
-Inicializace/použít `dwRefType` pole ve struktuře.
+Inicializovat/použít `dwRefType` pole ve struktuře.
 
 `DEBUGREF_INFO_REF`\
-Inicializace/použít `pReference` pole ve struktuře.
+Inicializovat/použít `pReference` pole ve struktuře.
 
 `DEBUGREF_INFO_VALUE_AUTOEXPAND`\
-V poli hodnota by měla obsahovat hodnotu rozšířit automaticky, pokud je k dispozici pro tento typ objektu.
+Pole hodnoty by mělo obsahovat hodnotu automatického rozbalení, pokud je k dispozici, pro tento typ objektu.
 
 `DEBUGREF_INFO_NONE`\
-Určuje, jestli jsou nastavené žádné příznaky.
+Označuje, že nejsou nastaveny žádné příznaky.
 
 `DEBUGREF_INFO_ALL`\
-Označuje masku příznaky.
+Označuje masku příznaků.
 
 ## <a name="remarks"></a>Poznámky
-Tyto příznaky jsou předány [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) a [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) metody označíte, která pole [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury mají být inicializovány.
+Tyto příznaky jsou předány [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) a [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) metody k označení, která pole [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury mají být inicializovány.
 
-Používá pro `dwFields` člena `DEBUG_REFERENCE_INFO` struktury k označení pole, která se používá a je platný vrátila strukturu.
+Používá se `dwFields` pro `DEBUG_REFERENCE_INFO` člen struktury k označení, která pole se používají a jsou platné při vrácení struktury.
 
-Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.
+Tyto hodnoty mohou být kombinovány `OR`s bitovým .
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -98,7 +98,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)
 - [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)

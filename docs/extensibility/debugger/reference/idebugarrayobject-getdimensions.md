@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject::GetDimensions | Dokumentace Microsoftu
+title: IDebugArrayObject::GetDimensions | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugArrayObject::GetDimensions method
 ms.assetid: 113e0aff-9028-49d6-b104-9fe7be4772d7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 781da7eadce78d5332befe91231131f02341574b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 527f79724aeac0de58d0ae63c9c2408ed2eca9ec
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318994"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736158"
 ---
 # <a name="idebugarrayobjectgetdimensions"></a>IDebugArrayObject::GetDimensions
-Získá rozměry pole.
+Získá dimenze pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,16 +40,16 @@ int GetDimensions(
 
 ## <a name="parameters"></a>Parametry
 `dwCount`\
-[in] Počet dimenzí pro načtení.
+[v] Počet dimenzí, které chcete načíst.
 
 `dwDimensions`\
-[out v] Pole, které se vyplní velikosti jednotlivých rozměrů. `dwCount` Určuje maximální velikost `dwDimensions` pole.
+[dovnitř, ven] Pole, které je vyplněno s velikostmi každé dimenze. `dwCount`určuje maximální velikost `dwDimensions` pole.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Vícerozměrné pole může mít různé velikosti pro jednotlivé rozměry. Mějme například trojrozměrného pole `myarray[3][2][6]`, vrátí tato metoda 3, 2 a 6 `dwDimensions` parametrů v tomto pořadí.
+ Vícerozměrné pole může mít různé velikosti pro každou dimenzi. Například vzhledem k trojrozměrné pole `myarray[3][2][6]`, tato metoda vrátí `dwDimensions` 3, 2 a 6 v parametru v tomto pořadí.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

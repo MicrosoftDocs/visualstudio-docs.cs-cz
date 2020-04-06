@@ -1,27 +1,27 @@
 ---
-title: Commandplacement – Element | Dokumentace Microsoftu
+title: Element commandplacementu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - CommandPlacements element (VSCT XML schema)
 - VSCT XML schema elements, CommandPlacements
 ms.assetid: 2cbd7ac8-c55a-43d8-a26d-713b3d790016
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c43dab922d51d2d3f96ffaba0ef24f8f0e18fa1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: dcf9f23b5e860b895baa4c2a7a783f2ee15fcc77
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341872"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739741"
 ---
-# <a name="commandplacement-element"></a>Commandplacement – element
-Commandplacement – element umožňuje tlačítka, skupiny a nabídek, které mají být zahrnuty do více než jedné skupině nebo v nabídce. Pomocí commandplacement – element nemáte zcela předefinovat tyto položky, aby bylo možné změnit vzhled uživatelského rozhraní.
+# <a name="commandplacement-element"></a>Element CommandPlacement
+Element CommandPlacement umožňuje, aby tlačítka, skupiny a nabídky byly zahrnuty do více než jedné skupiny nebo nabídky. Pomocí CommandPlacement element, není nutné zcela předefinovat tyto položky, aby se změnit vzhled uživatelského rozhraní.
 
- Další informace najdete v tématu [vytváření znovu použitelných skupin tlačítek](../extensibility/creating-reusable-groups-of-buttons.md).
+ Další informace naleznete v [tématu Vytvoření opakovaně použitelných skupin tlačítek](../extensibility/creating-reusable-groups-of-buttons.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,29 +31,29 @@ Commandplacement – element umožňuje tlačítka, skupiny a nabídek, které m
 </CommandPlacement>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|identifikátor GUID|Povinný parametr. Identifikátor guid sady příkazů, jak jsou definovány v [Symbols – element](../extensibility/symbols-element.md).|
-|id|Povinný parametr. Id nabídky, skupiny nebo příkaz, který byl umístěn, jak jsou definovány v `Symbols Element`.|
-|priorita|Povinný parametr. Určuje vizuální umístění položky v svého nadřízeného elementu.|
-|Podmínka|Volitelné. Zobrazit [podmíněného Aattributes](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Identifikátor guid|Povinná hodnota. Identifikátor GUID sady příkazů, jak je definován v [symboliku Symboly .](../extensibility/symbols-element.md)|
+|id|Povinná hodnota. Id nabídky, skupiny nebo příkazu, který má `Symbols Element`být umístěn, jak je definováno v .|
+|Prioritou|Povinná hodnota. Určuje vizuální polohu položky v nadřazeném prvku.|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|Nadřazené|Povinný parametr. Nabídky nebo skupiny, který je hostitelem položka, která má být umístěn.|
+|Nadřazený|Povinná hodnota. Nabídka nebo skupina, která je hostitelem položky, která má být umístěna.|
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Commandplacements – element](../extensibility/commandplacements-element.md)|Určuje skupiny commandplacements – a commandplacement – prvků.|
+|[Element CommandPlacements](../extensibility/commandplacements-element.md)|Určuje skupiny elementů CommandPlacements a CommandPlacement.|
 
 ## <a name="example"></a>Příklad
 
@@ -66,6 +66,6 @@ Commandplacement – element umožňuje tlačítka, skupiny a nabídek, které m
 </CommandPlacements>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Commandplacements – element](../extensibility/commandplacements-element.md)
-- [Soubory tabulky (.vsct) příkaz pro Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také
+- [Element CommandPlacements](../extensibility/commandplacements-element.md)
+- [Soubory příkazů sady Visual Studio (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

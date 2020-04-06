@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::Read | Dokumentace Microsoftu
+title: IDebugDisassemblyStream2::Číst | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDisassemblyStream2::Read
 ms.assetid: 7db5f6bb-73ee-45bc-b187-c1b6aa2dfdd5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c74ed1de1d12cc7384ee8f7d27dad910c7b9c9d5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4a4f5c0250405c2e2a0314b52c4cbc64d749fc0a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310358"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732093"
 ---
 # <a name="idebugdisassemblystream2read"></a>IDebugDisassemblyStream2::Read
-Přečte pokyny od aktuální pozice v datovém proudu zpětný překlad.
+Přečte pokyny počínaje aktuální polohou v datovém proudu demontáže.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,28 +47,28 @@ int Read( 
 
 ## <a name="parameters"></a>Parametry
 `dwInstructions`\
-[in] Počet instrukcí pro převod ze strojového kódu. Tato hodnota je taky maximální délka `prgDisassembly` pole.
+[v] Počet pokynů k demontáži. Tato hodnota je také maximální `prgDisassembly` délka pole.
 
 `dwFields`\
-[in] Kombinace příznaků z [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) výčet důvody, které pole `prgDisassembly` mají doplnit.
+[v] Kombinace příznaků z [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) výčtu, které `prgDisassembly` označují, která pole mají být vyplněna.
 
 `pdwInstructionsRead`\
-[out] Vrátí počet instrukcí ve skutečnosti zpětně překládán.
+[out] Vrátí počet skutečně rozebránin instrukcí.
 
 `prgDisassembly`\
-[out] Pole [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktury, které se vyplní zpětně přeložený kód jednu strukturu za zpětně přeložený instrukce. Délka tohoto pole závisí `dwInstructions` parametru.
+[out] Pole [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktury, která je vyplněna s rozložený kód, jedna struktura na rozložené instrukce. Délka tohoto pole je dána `dwInstructions` parametrem.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Maximální počet pokyny, které jsou k dispozici v aktuálním oboru, které lze získat voláním [getsize –](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) metody.
+ Maximální počet instrukcí, které jsou k dispozici v aktuálním oboru lze získat voláním [GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) metoda.
 
- Aktuální pozici, kde je další instrukci čtení z lze změnit pomocí volání [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) metoda.
+ Aktuální pozici, kde je číst další instrukce z lze změnit voláním [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) metoda.
 
- `DSF_OPERANDS_SYMBOLS` Příznak lze přidat do `DSF_OPERANDS` příznak v `dwFields` parametr k označení, že názvy symbolů má být použit při zpětném překladu pokyny.
+ Příznak `DSF_OPERANDS_SYMBOLS` lze přidat do `DSF_OPERANDS` příznaku `dwFields` v parametru označující, že názvy symbolů by měly být použity při rozebrání pokyny.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)
 - [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)
 - [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)

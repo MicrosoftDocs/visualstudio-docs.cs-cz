@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsEqual | Dokumentace Microsoftu
+title: IDebugObject::IsEqual | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugObject::IsEqual method
 ms.assetid: 4b76e663-ef2e-41ff-9be1-bf26d666a34a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cf592fa83a18c47bf676b84073c0be0e4cb476e8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 13018e31fb5f8bed89a0a290d687360a605a855d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323588"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726500"
 ---
 # <a name="idebugobjectisequal"></a>IDebugObject::IsEqual
 Porovná objekt s tímto objektem.
@@ -43,16 +43,16 @@ int IsEqual(
 
 ## <a name="parameters"></a>Parametry
 `pObject`\
-[in] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekt představující objekt k porovnání s.
+[v] Objekt [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) představující objekt, se který má být porovnán.
 
 `pfIsEqual`\
-[out] Vrátí nenulovou (`TRUE`) Pokud jsou hodnoty objekty stejné; jinak, vrátí hodnotu 0 (`FALSE`).
+[out] Vrátí hodnotu`TRUE`nenulová ( ), pokud jsou hodnoty objektů stejné; v opačném případě`FALSE`vrátí hodnotu nula ( ).
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Obvykle tuto metodu můžete porovnat adresy hodnoty reprezentované `pObject` parametr a to [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekt; Pokud adresy jsou si rovny, pak objekty lze považovat za stejné.
+ Tato metoda může obvykle porovnat adresy hodnot reprezentované parametrem `pObject` a tento objekt [IDebugObject;](../../../extensibility/debugger/reference/idebugobject.md) Pokud jsou adresy stejné, pak objekty lze považovat za rovné.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

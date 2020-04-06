@@ -1,5 +1,5 @@
 ---
-title: GETNAME_TYPE | Dokumentace Microsoftu
+title: GETNAME_TYPE | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - GETNAME_TYPE enumeration
 ms.assetid: 2f9f1679-e9e8-4c9c-ac90-aa07bfe69914
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1bdcbc4171c8a481ee0c45456ef5600f5150c6d0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1d0d146ec4ed7340bde36b298df9d455257b35fe
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66317587"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736672"
 ---
-# <a name="getnametype"></a>GETNAME_TYPE
-Určuje název typu souborů, které mají načíst.
+# <a name="getname_type"></a>GETNAME_TYPE
+Určuje typ názvu souborů, které mají být načteny.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,30 +52,30 @@ public enum enum_GETNAME_TYPE {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `GN_NAME`\
-Určuje popisný název dokumentu nebo kontext.
+Určuje popisný název dokumentu nebo kontextu.
 
 `GN_FILENAME`\
-Určuje úplnou cestu dokumentu nebo kontext.
+Určuje úplnou cestu k dokumentu nebo kontextu.
 
 `GN_BASENAME`\
-Určuje název základního souboru místo úplnou cestu k dokumentu nebo kontext.
+Určuje název základního souboru namísto úplné cesty k dokumentu nebo kontextu.
 
 `GN_MONIKERNAME`\
-Určuje jedinečný název dokumentu nebo kontext ve formě monikeru.
+Určuje jedinečný název dokumentu nebo kontextu ve formě zástupného názvu.
 
 `GN_URL`\
-Určuje název adresy URL dokumentu nebo kontext.
+Určuje název adresy URL dokumentu nebo kontextu.
 
 `GN_TITLE`\
 Určuje název dokumentu, pokud existuje.
 
 `GN_STARTPAGEURL`\
-Získá počáteční adresa URL stránky pro procesy.
+Získá adresu URL počáteční stránky pro procesy.
 
 ## <a name="remarks"></a>Poznámky
-Tyto hodnoty jsou předány jako parametry [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md), [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md), a [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) metody k určení, jaký typ název, který vrátí.
+Tyto hodnoty jsou předány jako parametry [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md), [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)a [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) metody určit, jaký druh názvu vrátit.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -84,7 +84,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md)
 - [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)

@@ -1,41 +1,41 @@
 ---
-title: Zobrazení místních hodnot | Dokumentace Microsoftu
+title: Zobrazení místních obyvatel | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation, displaying locals
 ms.assetid: 62264cec-845b-4233-aed7-0b038fa79250
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a8a73fb8ab95602538be56f18834233dbad7132
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4d44b276aeb9c6acb0ef34cc186662d49246de7d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345790"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738928"
 ---
-# <a name="display-locals"></a>Zobrazení místních hodnot
+# <a name="display-locals"></a>Zobrazit místní obyvatele
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka Chyba při vyhodnocování výrazu spravované](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Spuštění vždycky probíhá v rámci metody, označované také jako obsahující metodu nebo aktuální metoda. Při pozastavení provádění volání sady Visual Studio ladicího stroje (DE) zobrazíte seznam místní proměnné a argumenty, se nazývají lokální proměnné metodu. Visual Studio zobrazí tyto místní hodnoty a jejich hodnoty v **lokální** okna.
+ Provádění vždy probíhá v rámci metody, označované také jako obsahující metoda nebo aktuální metoda. Při pozastavení provádění Visual Studio volá ladicí modul (DE) získat seznam místních proměnných a argumentů, souhrnně nazývá místní metody. Visual Studio zobrazí tyto místní a jejich hodnoty v okně **Locals.**
 
- Chcete-li zobrazit místní hodnoty, DE volá [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) metodu, která náleží EE a dá jí kontext vyhodnocení, který je, poskytovatel symbolů (SP), aktuální adresu spuštění a objekt vazače. Další informace najdete v tématu [kontext vyhodnocení](../../extensibility/debugger/evaluation-context.md). Pokud bude volání úspěšné, `IDebugExpressionEvaluator::GetMethodProperty` vrátí metoda [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objektu, který představuje metodu, která obsahuje aktuální adresu spuštění.
+ Chcete-li zobrazit místní, DE volá [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) metoda patřící do EE a dává mu kontext hodnocení, to znamená, že zprostředkovatel symbol (SP), aktuální adresu spuštění a objekt pořadače. Další informace naleznete v [tématu Hodnocení kontextu](../../extensibility/debugger/evaluation-context.md). Pokud je volání úspěšné, `IDebugExpressionEvaluator::GetMethodProperty` metoda vrátí objekt [IDebugProperty2,](../../extensibility/debugger/reference/idebugproperty2.md) který představuje metodu, která obsahuje aktuální adresu spuštění.
 
- Volání DE [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) zobrazíte [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) objektu, který je filtrovaná, aby vrátit pouze místní hodnoty a přezkoumána za účelem vytvoření seznamu [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md)struktury. Každá struktura obsahuje název, typ a hodnotu lokální. Typ a hodnota jsou uloženy jako formátovaných řetězců vhodnou k zobrazení. Název, typ a hodnota se obvykle zobrazují společně v jednom řádku **lokální** okna.
+ DE volá [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) získat [Objekt IEnumDebugPropertyInfo2,](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) který je filtrován vrátit pouze locals a výčtu k vytvoření seznamu [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) struktur. Každá struktura obsahuje název, typ a hodnotu místní. Typ a hodnota jsou uloženy jako formátované řetězce, vhodné pro zobrazení. Název, typ a hodnota jsou obvykle zobrazeny společně v jednom řádku okna **Locals.**
 
 > [!NOTE]
-> **QuickWatch** a **Watch** proměnné ve stejném formátu název, hodnotu a typ zobrazení systému windows. Ale tyto hodnoty jsou získány pomocí volání [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) místo `IDebugProperty2::EnumChildren`.
+> Okna **QuickWatch** a **Watch** také zobrazují proměnné se stejným formátem názvu, hodnoty a typu. Tyto hodnoty jsou však získány voláním [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) namísto `IDebugProperty2::EnumChildren`.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Ukázková implementace místních hodnot](../../extensibility/debugger/sample-implementation-of-locals.md) se používají příklady pro jednotlivé kroky v procesu implementace místních hodnot.
+ [Ukázková implementace místních obyvatel](../../extensibility/debugger/sample-implementation-of-locals.md) Používá příklady krokovat proces implementace místních obyvatel.
 
 ## <a name="related-sections"></a>Související oddíly
- [Kontext vyhodnocení](../../extensibility/debugger/evaluation-context.md) vysvětluje, že když se ladicí stroj (DE) volá vyhodnocovací filtr výrazů (EE), předá tři argumenty.
+ [Souvislosti hodnocení](../../extensibility/debugger/evaluation-context.md) Vysvětluje, že když ladicí modul (DE) volá vyhodnocení výrazu (EE), předá tři argumenty.
 
-## <a name="see-also"></a>Viz také:
- [Zápis vyhodnocovací filtr výrazů modulu CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
+## <a name="see-also"></a>Viz také
+ [Napsat vyhodnocení výrazu CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

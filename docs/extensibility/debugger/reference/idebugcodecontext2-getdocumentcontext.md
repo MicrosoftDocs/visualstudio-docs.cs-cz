@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext2::GetDocumentContext | Dokumentace Microsoftu
+title: IDebugCodeContext2::GetDocumentContext | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCodeContext2::GetDocumentContext
 ms.assetid: d552cc92-963f-43c1-949f-ae6b63a427b8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a12838db0687fd7ebe20a5c576db0e06ece49107
-ms.sourcegitcommit: 34807a6b6105ae7839adde8ff994c85182ad3aff
+ms.openlocfilehash: 46510ce794ea30fdd365a77007b962a1eafd5d31
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67342402"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734346"
 ---
 # <a name="idebugcodecontext2getdocumentcontext"></a>IDebugCodeContext2::GetDocumentContext
-Získá kontext dokumentu, který odpovídá tento kontext kódu. Kontext dokumentu představuje pozici ve zdrojovém souboru, který odpovídá zdrojový kód, který vygeneroval tento pokyn.
+Získá kontext dokumentu, který odpovídá tomuto kontextu kódu. Kontext dokumentu představuje pozici ve zdrojovém souboru, která odpovídá zdrojovému kódu, který generoval tuto instrukci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,14 +41,14 @@ int GetDocumentContext( 
 
 ## <a name="parameters"></a>Parametry
 `ppSrcCxt`\
-[out] Vrátí [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) objekt, který odpovídá kontext kódu. Pokud `S_OK` se vrátí, by měla být za jinou hodnotu než`null`.
+[out] Vrátí objekt [IDebugDocumentContext2,](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) který odpovídá kontextu kódu. Pokud `S_OK` je vrácena, ths`null`by měla být non- .
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Ladicí stroj by měla vrátit kód chyby, jako `E_FAIL` při `out` parametr `null` například pokud má kontext kódu není přidružena zdrojová umístění.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Ladicí modul by měl vrátit `E_FAIL` kód `out` selhání, například když je `null` parametr například když kontext kódu nemá žádnou přidruženou zdrojovou pozici.
 
 ## <a name="remarks"></a>Poznámky
- Obecně platí kontext dokumentu můžete představit jako pozici ve zdrojovém souboru kontext kódu je pozice instrukce pro kód ve službě stream provádění.
+ Obecně kontextu dokumentu lze považovat za pozici ve zdrojovém souboru, zatímco kontext kódu je pozice instrukce kódu v proudu spuštění.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

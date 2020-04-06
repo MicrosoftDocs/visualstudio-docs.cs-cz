@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointEvent2 | Dokumentace Microsoftu
+title: IDebugBreakpointEvent2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakpointEvent2 interface
 ms.assetid: 50b3a7a7-331b-42c8-922c-ff3522ebe1da
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 223a33e39847382ecd25f50c320ab68a2b0e8079
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f59bdef49f5c7b9c4dc345ba1862f3f08042428e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330374"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735024"
 ---
 # <a name="idebugbreakpointevent2"></a>IDebugBreakpointEvent2
-Ladicí stroj (DE) pošle toto rozhraní Správce ladění relace (SDM), když program zastaví na zarážce.
+Ladicí modul (DE) odešle toto rozhraní správci ladění relace (SDM), když se program zastaví na zarážky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,17 +29,17 @@ IDebugBreakpointEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- DE implementuje toto rozhraní jako součást jeho podporu pro zarážky. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí implementovat rozhraní na stejný objekt jako toto rozhraní (SDM používá [QueryInterface](/cpp/atl/queryinterface) přístup `IDebugEvent2` rozhraní).
+ DE implementuje toto rozhraní jako součást jeho podporu pro zarážky. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto `IDebugEvent2` rozhraní (SDM používá [QueryInterface](/cpp/atl/queryinterface) pro přístup k rozhraní).
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- DE vytvoří a odešle tento objekt událost, když jeden zarážky v programu. Událost je odeslána pomocí [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) poskytnutých SDM při připojení k laděnému programu funkce zpětného volání.
+ DE vytvoří a odešle tento objekt události, pokud je v programu zjištěna alespoň jedna zarážka. Událost je odeslána pomocí funkce zpětného volání [IDebugCallBack2](../../../extensibility/debugger/reference/idebugeventcallback2.md) zajišťované sdm, když je připojena k programu, který je odladěn.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IDebugBreakpointEvent2`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IDebugBreakpointEvent2`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[EnumBreakpoints](../../../extensibility/debugger/reference/idebugbreakpointevent2-enumbreakpoints.md)|Vytvoří čítač pro všechny zarážky, které aktivuje na aktuální umístění v kódu.|
+|[EnumBreakpoints](../../../extensibility/debugger/reference/idebugbreakpointevent2-enumbreakpoints.md)|Vytvoří čítač výčtu pro všechny zarážky, které jsou aktivovány v aktuálním umístění kódu.|
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -48,6 +48,6 @@ IDebugBreakpointEvent2 : IUnknown
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)
 - [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

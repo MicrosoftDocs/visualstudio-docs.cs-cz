@@ -1,30 +1,30 @@
 ---
-title: Asynctaskmethodbuilder.m_builder – pole | Dokumentace Microsoftu
+title: Pole AsyncTaskMethodBuilder.m_builder | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - m_builder field, AsyncTaskMethodBuilder structure [.NET Framework debug engines]
 ms.assetid: bfaf25a2-0f08-413f-b474-9ce0d97c0eeb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61a4f761671c67ee1fe77883534b585f4f2f3715
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0dd8bd1215700b8387f420e3aaec7e2ce73d9fec
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322299"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739400"
 ---
-# <a name="asynctaskmethodbuildermbuilder-field"></a>Asynctaskmethodbuilder.m_builder – pole
-Reprezentuje obecný tvůrce objektu, ke kterému tato instance neobecných delegátů.
+# <a name="asynctaskmethodbuilderm_builder-field"></a>Pole AsyncTaskMethodBuilder.m_builder
+Představuje obecný objekt tvůrce, na který tato neobecná instance deleguje.
 
- **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>
+ **Obor názvů:**<xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
- **Sestavení:** mscorlib (v knihovně mscorlib.dll)
+ **Sestava:** mscorlib (v mscorlib.dll)
 
- Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.
+ Vzhledem k tomu, že k tomuto internímu členu nelze získat přístup z rozhraní .NET Framework, je ve společném zprostředkujícím jazyce (CIL) k dispozici následující syntaxe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,6 +34,6 @@ Reprezentuje obecný tvůrce objektu, ke kterému tato instance neobecných dele
 
 ## <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder>
-- [Interní informace o paralelním rozšíření pro rozhraní .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [Vnitřní rozhraní paralelního rozšíření pro rozhraní .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

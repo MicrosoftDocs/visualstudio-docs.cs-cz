@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject::GetRank | Dokumentace Microsoftu
+title: IDebugArrayObject::GetRank | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugArrayObject::GetRank method
 ms.assetid: 9948551a-e334-4ff6-979c-08dab633b9b6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9a733baf1be2e5a249c214547b31465bb2464ed6
-ms.sourcegitcommit: 6f7a740750b2cd17ea2275c3d046caebc9782917
+ms.openlocfilehash: c645683cf1f842afdecba3c3dee8942a3fd6971a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "66351781"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736188"
 ---
 # <a name="idebugarrayobjectgetrank"></a>IDebugArrayObject::GetRank
-Zjistí řád objektu array, to znamená, počet rozměrů.
+Získá pořadí pole, to znamená počet dimenzí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetRank(
 
 ## <a name="parameters"></a>Parametry
 `pdwRank`\
-[out] Vrátí počet rozměrů.
+[out] Vrátí pořadí.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Použití [getdimensions –](../../../extensibility/debugger/reference/idebugarrayobject-getdimensions.md) metody k získání velikosti jednotlivých rozměrů objektu array.
+ Pomocí metody [GetDimensions](../../../extensibility/debugger/reference/idebugarrayobject-getdimensions.md) načtěte velikost každé dimenze objektu pole.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

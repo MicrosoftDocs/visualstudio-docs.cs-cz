@@ -1,28 +1,28 @@
 ---
-title: IDebugComPlusSymbolProvider2::IsAddressSequencePoint | Dokumentace Microsoftu
+title: IDebugComPlusSymbolProvider2::IsAddressSequencePoint | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugComPlusSymbolProvider2::IsAddressSequencePoint
 - IsAddressSequencePoint
 ms.assetid: 89b27c57-5295-428b-8229-a402500d8cd3
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e6531bbb3d375eea30c6e863cdef905c82aa33ef
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5b9f1f3df8b96e9f9b25bf630206ce37bcd27635
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334692"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80733403"
 ---
 # <a name="idebugcomplussymbolprovider2isaddresssequencepoint"></a>IDebugComPlusSymbolProvider2::IsAddressSequencePoint
-Určuje, zda je adresa pro zadaný ladění bodu sekvence.
+Určuje, zda je zadaná ladicí adresa pořadovým bodem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,13 +40,13 @@ int IsAddressSequencePoint(
 
 ## <a name="parameters"></a>Parametry
 `pAddress`\
-[in] Ladění adresu, která je reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.
+[v] Ladicí adresa, která je reprezentována rozhraním [IDebugAddress.](../../../extensibility/debugger/reference/idebugaddress.md)
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud adresa pro ladění bod sekvence, vrátí `S_OK`; v opačném případě vrátí `S_FALSE`.
+Pokud je ladicí adresa pořadovým bodem, vrátí funkce `S_OK`; v opačném `S_FALSE`případě vrátí .
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) rozhraní.
+Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugSymbolProvider** objekt, který zveřejňuje rozhraní [IDebugComPlusSymbolProvider2.](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)
 
 ```cpp
 HRESULT CDebugSymbolProvider::IsAddressSequencePoint(
@@ -86,5 +86,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

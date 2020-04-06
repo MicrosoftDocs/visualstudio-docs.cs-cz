@@ -1,28 +1,28 @@
 ---
-title: IDebugCustomAttributeQuery::IsCustomAttributeDefined | Dokumentace Microsoftu
+title: IDebugCustomAttributeQuery::IsCustomAttributeDefined | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugCustomAttributeQuery::IsCustomAttributeDefined
 - IsCustomAttributeDefined
 ms.assetid: c7425db6-4347-4f69-8f88-337ddaa34fa6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5f4359d2360f1186404229397bbb00f916fbcea8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3b0be4f8afdfe5320bdf871586f8c0e8f648ae84
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346067"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732627"
 ---
 # <a name="idebugcustomattributequeryiscustomattributedefined"></a>IDebugCustomAttributeQuery::IsCustomAttributeDefined
-Určuje, zda je definována zadaného vlastního atributu.
+Určuje, zda je definován zadaný vlastní atribut.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,13 +40,13 @@ int IsCustomAttributeDefined(
 
 ## <a name="parameters"></a>Parametry
 `pszCustomAttributeName`\
-[in] Název vlastního atributu.
+[v] Název vlastního atributu.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je definován vlastní atribut, vrátí `S_OK`; v opačném případě vrátí `S_FALSE`.
+Pokud je definován vlastní `S_OK`atribut, vrátí ; v opačném `S_FALSE`případě vrátí .
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugClassFieldSymbol** objekt, který zveřejňuje [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) rozhraní.
+Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugClassFieldSymbol** objekt, který zveřejňuje rozhraní [IDebugCustomAttributeQuery.](../../../extensibility/debugger/reference/idebugcustomattributequery.md)
 
 ```cpp
 HRESULT CDebugClassFieldSymbol::IsCustomAttributeDefined(
@@ -85,5 +85,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md)

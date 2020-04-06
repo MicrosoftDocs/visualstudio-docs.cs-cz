@@ -1,5 +1,5 @@
 ---
-title: BP_ERROR_RESOLUTION_INFO | Dokumentace Microsoftu
+title: BP_ERROR_RESOLUTION_INFO | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_ERROR_RESOLUTION_INFO structure
 ms.assetid: a6b83242-5728-4716-80f3-840c96d59c6c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dca7dcac5dc7ccf4d30d9b61165771ba464bbcf9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d48c4bc888db0ad8be6a0d6e98eeea2223a27e8a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351833"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738082"
 ---
-# <a name="bperrorresolutioninfo"></a>BP_ERROR_RESOLUTION_INFO
-Popisuje řešení k chybě zarážku, včetně umístění, aplikace a vlákna.
+# <a name="bp_error_resolution_info"></a>BP_ERROR_RESOLUTION_INFO
+Popisuje řešení zarážky chyby, včetně umístění, programu a vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,25 +51,25 @@ public struct BP_ERROR_RESOLUTION_INFO {
 
 ## <a name="members"></a>Členové
 `dwFields`\
-Kombinací hodnot z [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) výčet určující, která pole této struktury jsou vyplněna.
+Kombinace hodnot z [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) výčtu určující, která pole této struktury jsou vyplněna.
 
 `bpResLocation`\
-[BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) unii, která určuje umístění zarážky řešení.
+BP_RESOLUTION_LOCATION [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) unie, která určuje umístění rozlišení zarážky.
 
 `pProgram`\
-[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekt, který reprezentuje aplikaci, ve kterém došlo k chybě zarážku.
+[Objekt IDebugProgram2,](../../../extensibility/debugger/reference/idebugprogram2.md) který představuje aplikaci, ve které došlo k chybě zarážky.
 
 `pThread`\
-[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt, který reprezentuje vlákno, na kterém běží aplikace, která generovala chybu zarážku.
+Objekt [IDebugThread2,](../../../extensibility/debugger/reference/idebugthread2.md) který představuje vlákno, na kterém je spuštěna aplikace, která generovala chybu zarážky.
 
 `bstrMessage`\
-Řetězec obsahující všechny upozornění nebo chybové zprávy vyplývající z řešení této chyby.
+Řetězec obsahující upozornění nebo chybovou zprávu vyplývající z tohoto řešení chyb.
 
 `dwType`\
-Hodnota z [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) výčet, který určuje typ chyby zarážky.
+Hodnota z [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) výčtu, který určuje typ chyby zarážky.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je vrácen z [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) metody.
+Tato struktura je vrácena z [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) metoda.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -78,7 +78,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)
 - [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)

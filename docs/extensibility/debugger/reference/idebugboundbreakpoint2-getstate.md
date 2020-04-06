@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::GetState | Dokumentace Microsoftu
+title: IDebugBoundBreakpoint2::GetState | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - GetState method
 - IDebugBoundBreakpoint2::GetState method
 ms.assetid: a40a8382-295e-4916-aae6-ffe3a9cd3f2d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d930b1a68b97548c02edd35fa48ef8f3a1935181
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 30e36880fda8b94eefcbe8b3110685b2114476a3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314487"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735471"
 ---
 # <a name="idebugboundbreakpoint2getstate"></a>IDebugBoundBreakpoint2::GetState
-Získá stav vázaná zarážka.
+Získá stav této vázané zarážky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,13 +42,13 @@ int GetState( 
 
 ## <a name="parameters"></a>Parametry
 `pState`\
-[out] Vrátí hodnotu z [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) výčet popisující stav zarážky.
+[out] Vrátí hodnotu z [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) výčtu, který popisuje stav zarážky.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CBoundBreakpoint` objekt, který zveřejňuje [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) rozhraní.
+Následující příklad ukazuje, jak implementovat `CBoundBreakpoint` tuto metodu pro jednoduchý objekt, který zveřejňuje rozhraní [IDebugBoundBreakpoint2.](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 
 ```
 HRESULT CBoundBreakpoint::GetState(BP_STATE* pState)
@@ -70,6 +70,6 @@ HRESULT CBoundBreakpoint::GetState(BP_STATE* pState)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 - [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)

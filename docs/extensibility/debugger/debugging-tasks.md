@@ -1,48 +1,48 @@
 ---
-title: Ladění úloh | Dokumentace Microsoftu
+title: Ladění úkolů | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], tasks
 ms.assetid: 5d60e9e8-305e-4a48-829f-b9440fc8af7b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 774999dbdcb9eaf4a948364956ed95ab57e24d10
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d41f53ab1392ea3c31908faf65a871fa100fbb3f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345858"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738956"
 ---
-# <a name="debug-tasks"></a>Ladění úloh
-Chcete-li ladit program, musí být spuštěn a ladicí stroj (DE) musí být připojené k němu, jinak DE musí být připojené k dříve spuštěný program. Po připojení, musíte vygenerovat DE určitých událostí po spuštění. V odpovědi balíček ladění pokusí vytvořit vazbu zarážky nastavené v integrovaném vývojovém prostředí. Když program dosáhne vázaná zarážka, zastaví a počká na vstup uživatele.
+# <a name="debug-tasks"></a>Ladění úkolů
+Chcete-li ladit program, musí být spuštěn a ladicí modul (DE) musí být připojen k němu, jinak DE musí být připojen k dříve spuštěný program. Po připojení musí DE generovat určité události při spuštění. V reakci na to se ladicí balíček pokusí svázat zarážky nastavené v ide. Když program narazí na vázanou zarážku, zastaví se a čeká na vstup uživatele.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Problémy se zabezpečením](../../extensibility/debugger/security-issues.md) popisuje kroky zabezpečení, které jsou potřebné k ladění programu.
+ [Problémy se zabezpečením](../../extensibility/debugger/security-issues.md) Popisuje kroky zabezpečení, které jsou potřebné k ladění programu.
 
- [Spusťte program](../../extensibility/debugger/launching-a-program.md) obsahuje podrobné pokyny o tom, jak určit DE, která volá operačního systému spustit program.
+ [Spuštění programu](../../extensibility/debugger/launching-a-program.md) Obsahuje podrobné pokyny k zadání de, který volá operační systém ke spuštění programu.
 
- [Připojení přímo k programu](../../extensibility/debugger/attaching-directly-to-a-program.md) popisuje proces pro ladění programu v procesu, který je již spuštěna.
+ [Připojení přímo k programu](../../extensibility/debugger/attaching-directly-to-a-program.md) Popisuje proces používaný k ladění programu v procesu, který je již spuštěn.
 
- [Odesílání událostí spuštění po spuštění](../../extensibility/debugger/sending-startup-events-after-a-launch.md) uvádí události, které se provedou po DE je připojení k programu, dokud je program v jeho hlavní vstupní bod a je připravený pro ladění.
+ [Odeslání událostí spuštění po spuštění](../../extensibility/debugger/sending-startup-events-after-a-launch.md) Uvádí události, ke kterým dochází po připojení DE k programu, dokud program není v hlavním vstupním bodě a je připraven k ladění.
 
- [Řízení spouštění](../../extensibility/debugger/control-of-execution.md) vysvětluje, jak je DE obvykle odešle událost vstupního bodu, na událost dokončení zatížení nebo událostí ukončení, v závislosti na okolnostech.
+ [Řízení provádění](../../extensibility/debugger/control-of-execution.md) Vysvětluje, jak DE obvykle odešle událost vstupního bodu, událost dokončení zatížení nebo událost zastavení v závislosti na okolnostech.
 
- [Vytvořit vazbu zarážky](../../extensibility/debugger/binding-breakpoints.md) popisuje, jak, pokud uživatel nastaví zarážku, rozhraní IDE výrobky zpracovává žádost a zobrazí výzvu ladicí relaci vytvořit zarážku.
+ [Zarážky vazby](../../extensibility/debugger/binding-breakpoints.md) Popisuje, jak, pokud uživatel nastaví zarážku, ide formuluje požadavek a vyzve relaci ladění k vytvoření zarážky.
 
- [Vyhodnocení výrazů](../../extensibility/debugger/evaluating-expressions.md) vysvětluje, jak vytvořit výrazy a co se stane při vyhodnocování výrazu.
+ [Vyhodnocení výrazů](../../extensibility/debugger/evaluating-expressions.md) Vysvětluje, jak jsou vytvářeny výrazy a co se stane při vyhodnocení výrazu.
 
- [Vizualizace a zobrazení dat](../../extensibility/debugger/visualizing-and-viewing-data.md) vysvětluje, jak vizualizérů typů a vlastních prohlížečů jsou podporované ve vyhodnocovací filtr výrazů (EE).
+ [Vizualizace a zobrazení dat](../../extensibility/debugger/visualizing-and-viewing-data.md) Vysvětluje, jak jsou vizualizéry typu a vlastní prohlížeče podporovány vyhodnocením výrazu (EE).
 
 ## <a name="related-sections"></a>Související oddíly
- [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md) popisuje hlavní koncepty ladění architektury.
+ [Koncepty ladicích programů](../../extensibility/debugger/debugger-concepts.md) Popisuje hlavní ladění architektonických konceptů.
 
- [Komponenty ladicího programu](../../extensibility/debugger/debugger-components.md) obsahuje základní informace o ladění komponenty, které zahrnují DE, EE a obslužné rutiny symbolů (SH) sady Visual Studio.
+ [Součásti ladicího programu](../../extensibility/debugger/debugger-components.md) Obsahuje přehled součástí ladění sady Visual Studio, které zahrnují obslužnou rutinu DE, EE a symbol (SH).
 
- [Kontexty ladicího programu](../../extensibility/debugger/debugger-contexts.md) vysvětluje, jak funguje DE současně v kontextech hodnocení kódu, dokumentace a výraz. Popisuje všech třech kontextech, umístění, pozice nebo vyhodnocení relevantní k němu.
+ [Kontexty ladicího programu](../../extensibility/debugger/debugger-contexts.md) Vysvětluje, jak DE pracuje současně v rámci kontextu kódování kódu, dokumentace a výrazu. Popisuje pro každý ze tří kontextů umístění, umístění nebo hodnocení, které jsou pro něj relevantní.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
  [Začínáme](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)

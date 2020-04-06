@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::SetCondition | Dokumentace Microsoftu
+title: IDebugBoundBreakpoint2::SetCondition | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - SetCondition method
 - IDebugBoundBreakpoint2::SetCondition method
 ms.assetid: 5d366876-efed-43d0-8ea1-dfdb009cbfac
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 93109204a02b808c69bed242665bb6e373d6fe7d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f23fbe1b353378ca521fa802bdeae25fd12476df
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337435"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735458"
 ---
 # <a name="idebugboundbreakpoint2setcondition"></a>IDebugBoundBreakpoint2::SetCondition
-Nastavuje nebo mění podmínky spojené s vázaná zarážka.
+Nastaví nebo změní podmínku přidruženou k této vázané zarážky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,15 +42,15 @@ int SetCondition( 
 
 ## <a name="parameters"></a>Parametry
 `bpCondition`\
-[in] Hodnota z [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) výčet, který popisuje podmínku.
+[v] Hodnota z [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) výčet, který popisuje podmínku.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_BP_DELETED` Pokud státu objekt vázaná zarážka nastavená na `BPS_DELETED` (součástí [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) výčet).
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `E_BP_DELETED` pokud je nastaven stav vázaného `BPS_DELETED` objektu zarážky (část [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) výčet).
 
 ## <a name="remarks"></a>Poznámky
- Jakoukoli podmínku, která byla dříve přidružená k této zarážky se ztratí.
+ Všechny podmínky, které byly dříve přidruženy k této zarážky je ztracena.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 - [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)
 - [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)

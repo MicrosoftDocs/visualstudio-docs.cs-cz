@@ -1,5 +1,5 @@
 ---
-title: DEBUG_CUSTOM_VIEWER | Microsoft Docs
+title: DEBUG_CUSTOM_VIEWER | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - DEBUG_CUSTOM_VIEWER structure
 ms.assetid: 8e0ef3f0-0107-48e8-a037-6e52b4c4ed9d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2ba4af7ef465a4d98f78eccc9f7dce7dd4fa43aa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3de9b8f7ef30cffbdd78399dc831060e413ba51b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346188"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737541"
 ---
-# <a name="debugcustomviewer"></a>DEBUG_CUSTOM_VIEWER
-Struktura, která identifikuje vlastní prohlížeč nebo zadejte vizualizér.
+# <a name="debug_custom_viewer"></a>DEBUG_CUSTOM_VIEWER
+Struktura, která identifikuje vlastní prohlížeč nebo typ vizualizéru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,25 +51,25 @@ public struct DEBUG_CUSTOM_VIEWER {
 
 ## <a name="members"></a>Členové
 `dwID`\
-ID k rozlišení více prohlížečů nebo vizualizéry implementované jeden `GUID`.
+ID pro rozlišení více prohlížečů nebo `GUID`vizualizérů implementovaných jedním .
 
 `bstrMenuName`\
 Text, který se zobrazí v rozevírací nabídce.
 
 `bstrDescription`\
-Popis vlastní prohlížeč nebo vizualizér typů (musí mít hodnotu null Pokud není využito).
+Popis vlastního prohlížeče nebo vizualizéru typu (musí být nulová hodnota, pokud není použita).
 
 `guidLang`\
-Jazyk poskytující vyhodnocovací filtr výrazů.
+Jazyk hodnotitela výrazu poskytujícího.
 
 `guidVendor`\
-Dodavatel poskytování vyhodnocovací filtr výrazů.
+Dodavatel poskytujícího vyhodnocení výrazu.
 
 `bstrMetric`\
-Metriky, pod kterým vlastní prohlížeč nebo vizualizér typů `CLSID` uložená.
+Metrika, pod kterou je `CLSID` uložen vlastní prohlížeč nebo vizualizér typu.
 
 ## <a name="remarks"></a>Poznámky
-Seznam tato struktura je vrácený voláním [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) – metoda (a při rozšíření i [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) metoda).
+Seznam této struktury je vrácena volání [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) metoda (a rozšíření [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) metoda).
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -78,7 +78,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)
 - [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)

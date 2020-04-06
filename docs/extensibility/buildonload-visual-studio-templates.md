@@ -1,5 +1,5 @@
 ---
-title: Buildonload – atribut a element (šablony sady Visual Studio)
+title: Atribut a element BuildOnLoad (šablony sady Visual Studio)
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - BuildOnLoad attribute [Visual Studio Templates]
 - BuildOnLoad element [Visual Studio Templates]
 ms.assetid: 950f5fc1-d041-4090-9a5c-60844768a4cc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f32056aae3c860aee250248c606bbda4dbf9506c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3be4016822ccaaae2f1352f91ecc10f09273a889
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321273"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739954"
 ---
-# <a name="buildonload-attribute-and-element"></a>Buildonload – atribut a element
+# <a name="buildonload-attribute-and-element"></a>Atribut a element BuildOnLoad
 
-Určuje, jestli se projekt sestavil ihned po jeho vytvoření. **Buildonload –** je atribut a element.
+Určuje, zda má být projekt vytvořen ihned po jeho vytvoření. **BuildOnLoad** je atribut i prvek.
 
-Element hierarchie:
+Hierarchie prvků:
 
 ```xml
 <VSTemplate>
@@ -33,7 +33,7 @@ Element hierarchie:
     <BuildOnLoad>
 ```
 
-## <a name="element-syntax"></a>Syntaxe elementů
+## <a name="element-syntax"></a>Syntaxe prvku
 
 ```xml
 <BuildOnLoad> true/false </BuildOnLoad>
@@ -41,21 +41,21 @@ Element hierarchie:
 
 ## <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
 
 ## <a name="text-value"></a>Textová hodnota
 
-Textová hodnota, která je třeba **buildonload –** elementu. Text musí být buď `true` nebo `false`, která určuje, jestli se projekt sestavil ihned po jeho vytvoření.
+Pro element **BuildOnLoad** je vyžadována textová hodnota. Text musí být `true` `false`buď nebo , označující, zda chcete vytvořit projekt ihned po jeho vytvoření.
 
 ## <a name="remarks"></a>Poznámky
 
-**Buildonload –** je volitelný atribut. Výchozí hodnota je `false`.
+**BuildOnLoad** je volitelný atribut. Výchozí hodnota je `false`.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje metadata C# šablony při **buildonload –** slouží jako element:
+Následující příklad ilustruje metadata pro šablonu Jazyka C#, když **se buildonload** používá jako prvek:
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -82,9 +82,9 @@ Následující příklad ukazuje metadata C# šablony při **buildonload –** s
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Buildprojectonload – element](buildprojectonload-element-visual-studio-templates.md)
-- [TemplateContent – element](../extensibility/templatecontent-element-visual-studio-templates.md)
+- [Element BuildProjectOnload](buildprojectonload-element-visual-studio-templates.md)
+- [Prvek TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)

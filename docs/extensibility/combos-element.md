@@ -1,25 +1,25 @@
 ---
-title: Combos – Element | Dokumentace Microsoftu
+title: Komba Prvek | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Combos element (VSCT XML schema)
 - VSCT XML schema elements, Combos
 ms.assetid: ef48d2d2-0c47-4f93-8cfe-52026b6c463e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e0d4c15a5255a621268b239cb2cde4439b4c02b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d005ea69aea7f0331877326abe4087fcff403553
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334889"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739801"
 ---
-# <a name="combos-element"></a>Combos – element
-Skupiny [prvek pole se seznamem](../extensibility/combo-element.md) elementy.
+# <a name="combos-element"></a>Komba prvek
+Skupiny [Combo element](../extensibility/combo-element.md) prvky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,27 +30,27 @@ Skupiny [prvek pole se seznamem](../extensibility/combo-element.md) elementy.
 </Combos>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Combos – element](../extensibility/combos-element.md)|Prvky pole se seznamem skupin.|
-|[Combo – element](../extensibility/combo-element.md)|Definuje příkazy, které se zobrazí v poli se seznamem.|
+|[Komba prvek](../extensibility/combos-element.md)|Skupiny Combo prvky.|
+|[Kombinovaný prvek](../extensibility/combo-element.md)|Definuje příkazy, které se zobrazují v poli se seznamem.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Commands – element](../extensibility/commands-element.md)|Představuje kolekci příkazů na panelu nástrojů VSPackage.|
+|[Element příkazy](../extensibility/commands-element.md)|Představuje kolekci příkazů na panelu nástrojů VSPackage.|
 
 ## <a name="example"></a>Příklad
 
@@ -76,6 +76,6 @@ Skupiny [prvek pole se seznamem](../extensibility/combo-element.md) elementy.
 </Combos>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+## <a name="see-also"></a>Viz také
+- [Jak VSPackages přidat prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

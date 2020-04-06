@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField | Dokumentace Microsoftu
+title: IDebugEnumField | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEnumField interface
 ms.assetid: 42f685bf-0f39-47f4-98b0-6022efe2bf97
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14ea4834619d9e28d4b8a15206b3ea9411f50017
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7885f36a113809e81279498a769e257af4f1cde2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345111"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730167"
 ---
 # <a name="idebugenumfield"></a>IDebugEnumField
 Toto rozhraní představuje typ výčtu.
@@ -29,23 +29,23 @@ IDebugEnumField : IDebugContainerField
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Poskytovatel symbolů implementuje toto rozhraní představující výčet.
+ Zprostředkovatel symbolu implementuje toto rozhraní představující výčt.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Použití [QueryInterface](/cpp/atl/queryinterface) získat z tohoto rozhraní [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) rozhraní, pokud [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) vrátí `FIELD_TYPE_ENUM`.
+ Pomocí [queryinterface](/cpp/atl/queryinterface) získat toto rozhraní z rozhraní [IDebugField,](../../../extensibility/debugger/reference/idebugfield.md) pokud [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) vrátí `FIELD_TYPE_ENUM`.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce VTable pořadí
- Kromě metod na `IDebugField` a `IDebugContainerField` rozhraní, toto rozhraní implementuje následujících metod:
+## <a name="methods-in-vtable-order"></a>Metody v pořadí VTable
+ Kromě metod na rozhraní `IDebugField` `IDebugContainerField` a toto rozhraní implementuje následující metody:
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetUnderlyingSymbol](../../../extensibility/debugger/reference/idebugenumfield-getunderlyingsymbol.md)|Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) popisující název pro tento typ výčtu.|
-|[GetStringFromValue](../../../extensibility/debugger/reference/idebugenumfield-getstringfromvalue.md)|Vrátí název spojeného s danou hodnotou konstanty výčtu.|
-|[GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)|Vrátí hodnotu přidruženou k názvu konstantní daný výčet|
-|[GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)|Vrátí hodnotu přidruženou k dané výčtu konstant názvem, ale bez rozlišování případů.|
+|[GetUnderlyingSymbol](../../../extensibility/debugger/reference/idebugenumfield-getunderlyingsymbol.md)|Vrátí [pole IDebugField](../../../extensibility/debugger/reference/idebugfield.md) popisující název pro tento typ výčtu.|
+|[GetStringFromValue](../../../extensibility/debugger/reference/idebugenumfield-getstringfromvalue.md)|Vrátí název konstanty výčtu přidružené k dané hodnotě.|
+|[GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)|Vrátí hodnotu přidruženou k názvu konstanty daného výčtu.|
+|[GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)|Vrátí hodnotu přidruženou k názvu konstanty daného výčtu, ale ignoruje případ.|
 
 ## <a name="remarks"></a>Poznámky
- Je základní symbol, který je ve skutečnosti vázané na umístění s [svázat](../../../extensibility/debugger/reference/idebugbinder-bind.md).
+ Jedná se o základní symbol, který je ve skutečnosti vázán na umístění s [Bind](../../../extensibility/debugger/reference/idebugbinder-bind.md).
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: sh.h
@@ -54,8 +54,8 @@ IDebugEnumField : IDebugContainerField
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní poskytovatele symbolů ](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
 - [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)
-- [Bind](../../../extensibility/debugger/reference/idebugbinder-bind.md)
+- [Vytvořit vazbu](../../../extensibility/debugger/reference/idebugbinder-bind.md)

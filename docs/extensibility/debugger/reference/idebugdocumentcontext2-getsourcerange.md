@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::GetSourceRange | Dokumentace Microsoftu
+title: IDebugDocumentContext2::GetSourceRange | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentContext2::GetSourceRange
 ms.assetid: 5903c75e-5390-4d13-9314-1ee276255313
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 210ac493a2b717b901e989dcb248efe29ad3fe75
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 782cf230c38af77da09b49f69c093e2e95bf7199
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311848"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731797"
 ---
 # <a name="idebugdocumentcontext2getsourcerange"></a>IDebugDocumentContext2::GetSourceRange
-Získá zdrojový kód rozsah tohoto dokumentu kontextu.
+Získá rozsah zdrojového kódu tohoto kontextu dokumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,20 +43,20 @@ int GetSourceRange( 
 
 ## <a name="parameters"></a>Parametry
 `pBegPosition`\
-[out v] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která se vyplní počáteční pozice. Tento argument nastavena na hodnotu null, pokud tyto informace není potřeba.
+[dovnitř, ven] [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která je vyplněna počáteční polohou. Pokud tyto informace nejsou potřeba, nastavte tento argument na hodnotu null.
 
 `pEndPosition`\
-[out v] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která se vyplní koncovou pozici. Tento argument nastavena na hodnotu null, pokud tyto informace není potřeba.
+[dovnitř, ven] [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která je vyplněna koncovou polohou. Pokud tyto informace nejsou potřeba, nastavte tento argument na hodnotu null.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Zdrojový rozsah je celý rozsah zdrojový kód z aktuální příkaz zpět jenom po předchozí prohlášení, které přispěly kódu. Zdrojový rozsah se obvykle používá ke kombinování příkazy zdrojového, včetně komentáře s kódem v okně zpětný překlad.
+ Zdrojový rozsah je celý rozsah zdrojového kódu, od aktuálního příkazu zpět až po předchozí příkaz, který přispěl kódem. Zdrojová oblast se obvykle používá pro míchání zdrojových příkazů, včetně poznámek, s kódem v okně demontáže.
 
- Chcete-li získat oblasti pro pouze příkazy kódu obsažené v kontextu tohoto dokumentu, zavolejte [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md) metody.
+ Chcete-li získat rozsah pouze příkazy kódu obsažené v tomto kontextu dokumentu, volání [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md) metoda.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)
 - [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)
 - [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

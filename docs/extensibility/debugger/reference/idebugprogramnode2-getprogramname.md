@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetProgramName | Dokumentace Microsoftu
+title: IDebugProgramNode2::GetProgramName | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramNode2::GetProgramName
 ms.assetid: 510c7f5d-48ff-4d9f-ad79-fbad9f15239d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9882bd1686498bd9d1afc27f3a7edb695226a2f7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9af930716725a62fff5ea3d1635b506b06b26086
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351108"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722000"
 ---
 # <a name="idebugprogramnode2getprogramname"></a>IDebugProgramNode2::GetProgramName
 Získá název programu.
@@ -44,13 +44,13 @@ int GetProgramName (
 [out] Vrátí název programu.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Název programu není totéž jako cesta k programu, i když název programu může být součástí tyto cesty.
+Název programu není totéž jako cesta k programu, i když název programu může být součástí takové cesty.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CProgram` objekt, který implementuje [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) rozhraní. `MakeBstr` Funkce přidělí kopii zadaného řetězce BSTR.
+Následující příklad ukazuje, jak implementovat `CProgram` tuto metodu pro jednoduchý objekt, který implementuje rozhraní [IDebugProgramNode2.](../../../extensibility/debugger/reference/idebugprogramnode2.md) Funkce `MakeBstr` přiděluje kopii zadaného řetězce jako BSTR.
 
 ```cpp
 HRESULT CProgram::GetProgramName(BSTR* pbstrProgramName) {
@@ -63,5 +63,5 @@ HRESULT CProgram::GetProgramName(BSTR* pbstrProgramName) {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

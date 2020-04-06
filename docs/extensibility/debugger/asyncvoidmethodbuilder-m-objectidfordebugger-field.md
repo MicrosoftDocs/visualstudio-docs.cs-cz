@@ -1,30 +1,30 @@
 ---
-title: Asyncvoidmethodbuilder.m_objectidfordebugger – pole | Dokumentace Microsoftu
+title: AsyncVoidMethodBuilder.m_objectIdForDebugger Pole | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - m_objectIdForDebugger field, AsyncVoidMethodBuilder structure [.NET Framework debug engines]
 ms.assetid: 81331a7b-6bec-46e4-a53e-515d0fad2400
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e744b766a32232470e6d79b1cf8bfba08e1636c0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 10d63a92e2648c269c51faddc9521323c76116b1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350954"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739324"
 ---
-# <a name="asyncvoidmethodbuildermobjectidfordebugger-field"></a>AsyncVoidMethodBuilder.m_objectIdForDebugger field
-Představuje laxně inicializovaný objekt použitý objektem ladicí program k jednoznačné identifikaci tohoto Tvůrce.
+# <a name="asyncvoidmethodbuilderm_objectidfordebugger-field"></a>Pole AsyncVoidMethodBuilder.m_objectIdForDebugger
+Představuje líně inicializovaný objekt používaný ladicím programem k jednoznačné identifikaci tohoto tvůrce.
 
- **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>
+ **Obor názvů:**<xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
- **Sestavení:** mscorlib (v knihovně mscorlib.dll)
+ **Sestava:** mscorlib (v mscorlib.dll)
 
- Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.
+ Vzhledem k tomu, že k tomuto internímu členu nelze získat přístup z rozhraní .NET Framework, je ve společném zprostředkujícím jazyce (CIL) k dispozici následující syntaxe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,6 +32,6 @@ Představuje laxně inicializovaný objekt použitý objektem ladicí program k 
 .field private object m_objectIdForDebugger
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder>
-- [Interní informace o paralelním rozšíření pro rozhraní .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [Vnitřní rozhraní paralelního rozšíření pro rozhraní .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

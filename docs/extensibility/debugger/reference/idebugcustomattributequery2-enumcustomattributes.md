@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery2::EnumCustomAttributes | Dokumentace Microsoftu
+title: IDebugCustomAttributeQuery2::EnumCustomAttributes | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCustomAttributeQuery2::EnumCustomAttributes
 ms.assetid: 94bfce74-aa3d-45f0-8e04-5715faf85217
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fc9cc9158939ac0cbd7cac482961e2078b8249ad
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5b00ead2236a36c2fa12e1ad154b9f853aa2224d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322235"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732583"
 ---
 # <a name="idebugcustomattributequery2enumcustomattributes"></a>IDebugCustomAttributeQuery2::EnumCustomAttributes
-Získá enumerátor pro všechny vlastní atributy připojené k tomuto poli.
+Získá čítač výčtu pro všechny vlastní atributy připojené k tomuto poli.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,14 +41,14 @@ int EnumCustomAttributes(
 
 ## <a name="parameters"></a>Parametry
 `ppEnum`\
-[out] Vrátí [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) objekt představující seznam vlastních atributů; jinak vrátí hodnotu null, pokud neexistují žádné vlastní atributy.
+[out] Vrátí objekt [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) představující seznam vlastních atributů. v opačném případě vrátí hodnotu null, pokud neexistují žádné vlastní atributy.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu, vrátí hodnotu S_OK nebo S_FALSE, pokud nejsou žádné vlastní atributy v tomto poli. V opačném případě vrátí kód chyby;
+ Pokud je úspěšná, vrátí S_OK nebo S_FALSE pokud v tomto poli nejsou žádné vlastní atributy. V opačném případě vrátí kód chyby;
 
 ## <a name="remarks"></a>Poznámky
- Pole může mít několik vlastních atributů.
+ Pole může mít více vlastních atributů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)
 - [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

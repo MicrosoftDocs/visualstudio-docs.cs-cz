@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessEx2::Attach | Dokumentace Microsoftu
+title: IDebugProcessEx2::Připojit | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcessEx2::Attach method
 ms.assetid: f3334ed7-39bf-4d02-a338-36f567b9b287
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5932535810f28e6f5da96ab69457f7364563d622
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d70da2530a1677367a22968436a17eba809fd24a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325333"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723384"
 ---
 # <a name="idebugprocessex2attach"></a>IDebugProcessEx2::Attach
-Tato metoda informuje proces relace je nyní ladění procesu.
+Tato metoda informuje proces, že relace je nyní ladění procesu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int Attach(
 
 ## <a name="parameters"></a>Parametry
 `pSession`\
-[in] Hodnota, která jednoznačně identifikuje relace připojení k tomuto procesu.
+[v] Hodnota, která jednoznačně identifikuje relaci připojenou k tomuto procesu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Předané rozhraní `pSession` je považován za pouze do souboru cookie, hodnotu, která jednoznačně identifikuje správce ladění relace připojení k tomuto procesu; žádný z metod na zadané rozhraní není funkční.
+ Předané rozhraní `pSession` má být považováno pouze za soubor cookie, což je hodnota, která jednoznačně identifikuje správce ladění relace, který je připojen k tomuto procesu; žádná z metod na dodaném rozhraní není funkční.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProcessEx2](../../../extensibility/debugger/reference/idebugprocessex2.md)

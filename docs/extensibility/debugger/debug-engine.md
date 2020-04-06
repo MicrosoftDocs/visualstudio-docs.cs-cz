@@ -1,43 +1,43 @@
 ---
-title: Ladicí stroj | Dokumentace Microsoftu
+title: Ladicí modul | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debug engines
 ms.assetid: 148b1efc-ca07-4d8e-bdfc-c723a760c620
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e7e5afa4e68d37254c3cb07f1bafa2b48ee787a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a4cb00796f8db23a43cd81a06d80d0fac40f075e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336548"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739062"
 ---
-# <a name="debug-engine"></a>Ladicí stroj
-Ladicí stroj (DE) funguje překladač nebo operačního systému k poskytování služeb ladění, jako je například ovládací prvek, zarážky a výraz zkušební spuštění. DE je zodpovědný za monitorování stavu programu, který se právě ladí. K tomu používá DE jakékoli metody jsou k dispozici v modulu runtime podporované, jestli z procesoru nebo z rozhraní API poskytovaných modulu runtime.
+# <a name="debug-engine"></a>Ladicí modul
+Ladicí modul (DE) pracuje s interpretem nebo operačním systémem a poskytuje ladicí služby, jako je řízení provádění, zarážky a vyhodnocení výrazu. De je zodpovědný za sledování stavu programu, který je laděn. Chcete-li to provést, DE používá jakékoli metody, které jsou k dispozici v podporovanémodulu runtime, ať už z procesoru nebo z rozhraní API dodané modulu runtime.
 
- Například common language runtime (CLR) poskytuje mechanismus pro monitorování spuštěný program prostřednictvím rozhraní ICorDebugXXX. DE, který podporuje modul CLR použije příslušné rozhraní ICorDebugXXX ke sledování laděného programu spravovaného kódu. Potom komunikuje změny stavu pro správce ladění relace (SDM), která předá tyto informace [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí.
-
-> [!NOTE]
-> Ladicí stroj cílí na konkrétního modulu runtime, to znamená, ve kterém program laděn spuštění systému. Modul CLR je modul runtime pro spravovaný kód a modul runtime Win32 je pro nativní aplikace pro Windows. Pokud vytvoříte jazyk můžete cílit na jednu z těchto dvou modulů runtime, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] již poskytuje nezbytné ladicí stroj. Vše, co máte k implementaci je vyhodnocovače výrazů.
-
-## <a name="debug-engine-operation"></a>Ladění modulu operace
- Monitorování služby jsou implementované pomocí rozhraní DE a může způsobit, že balíček ladění pro přechod mezi různé provozní režimy. Další informace najdete v tématu [provozní režimy](../../extensibility/debugger/operational-modes.md). Obvykle existuje pouze jedna implementace DE pro každé prostředí za běhu.
+ Například modul CLR (COMMON Language runtime) poskytuje mechanismy pro sledování spuštěného programu prostřednictvím rozhraní ICorDebugXXX. De, který podporuje CLR používá příslušné rozhraní ICorDebugXXX sledovat program spravovaného kódu, který je laděn. Potom sdělí všechny změny stavu správce ladění relace (SDM), který předá tyto informace [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ide.
 
 > [!NOTE]
-> I když existují samostatné implementace DE příkazů jazyka Transact-SQL a [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)], VBScript a [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] sdílet jeden DE.
+> Ladicí modul cílí na konkrétní modul runtime, tj. CLR je runtime pro spravovaný kód a win32 runtime je pro nativní aplikace systému Windows. Pokud jazyk, který vytvoříte můžete cílit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] jeden z těchto dvou modulů runtimes, již dodává potřebné ladicí motory. Vše, co musíte implementovat, je vyhodnocení výrazu.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění umožňuje ladit stroje pro spuštění jedním ze dvou způsobů: buď ve stejném procesu jako [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostředí, nebo právě laděny ve stejném procesu jako cílového programu. Druhý formulář obvykle dochází, když se v laděném procesu je ve skutečnosti skript spuštěn pod interpretu. Ladicí stroj musí mít dokonalou znalost interpretu pro monitorování skriptu. V takovém případě interpretu je ve skutečnosti modul runtime; ladicí stroj jsou pro implementace modulu runtime specifické. Kromě toho je možné rozdělit provádění jedné DE přes hranice procesu a strojově (například vzdálené ladění).
+## <a name="debug-engine-operation"></a>Ladění provozu motoru
+ Monitorovací služby jsou implementovány prostřednictvím rozhraní DE a může způsobit ladicí balíček pro přechod mezi různými provozními režimy. Další informace naleznete v [tématu Provozní režimy](../../extensibility/debugger/operational-modes.md). Obvykle existuje pouze jedna implementace DE pro prostředí za běhu.
 
- Zpřístupňuje DE [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění v rozhraní. Veškerá komunikace je pomocí modelu COM. Zda DE je načten v procesu, out-of-process nebo na jiném počítači, neovlivní komunikace komponent.
+> [!NOTE]
+> Zatímco existují samostatné de implementace pro Transact-SQL [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)]a [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] , VBScript a sdílet jeden DE.
 
- DE spolupracuje komponenty Chyba při vyhodnocování výrazu DE pro tento konkrétní runtime k pochopení syntaxe výrazů. DE funguje taky s komponentou obslužné rutiny symbolů pro přístup k symbolické ladicí informace generované kompilátorem jazyka. Další informace najdete v tématu [vyhodnocovací filtr výrazů](../../extensibility/debugger/expression-evaluator.md) a [poskytovatel symbolů](../../extensibility/debugger/symbol-provider.md).
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ladění umožňuje ladění motorů spustit jedním ze dvou způsobů: buď ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] stejném procesu jako prostředí, nebo ve stejném procesu jako cílový program, který je laděn. Druhá forma obvykle dochází, když proces, který je laděn je ve skutečnosti skript spuštěný pod interpret. Ladicí modul musí mít důvěrné znalosti interpreta, aby bylo možné sledovat skript. V tomto případě je interpret ve skutečnosti runtime; ladicí moduly jsou pro konkrétní implementace modulu runtime. Kromě toho implementace jednoho DE lze rozdělit mezi hranice procesu a počítače (například vzdálené ladění).
 
-## <a name="see-also"></a>Viz také:
-- [Komponenty ladicího programu](../../extensibility/debugger/debugger-components.md)
-- [Chyba při vyhodnocování výrazu](../../extensibility/debugger/expression-evaluator.md)
+ DE zpřístupňuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění rozhraní. Veškerá komunikace probíhá prostřednictvím com. Zda je de načten v procesu, mimo proces nebo v jiném počítači, nemá vliv na komunikaci součástí.
+
+ DE pracuje s komponentou vyhodnocení výrazu, aby DE pro daný běh ový čas pochopil syntaxi výrazů. DE také pracuje s komponentou obslužné rutiny symbolu pro přístup k informacím o symbolickéladění generované kompilátorem jazyka. Další informace naleznete v [tématu Vyhodnocení výrazu](../../extensibility/debugger/expression-evaluator.md) a [zprostředkovatel symbol .](../../extensibility/debugger/symbol-provider.md)
+
+## <a name="see-also"></a>Viz také
+- [Součásti ladicího programu](../../extensibility/debugger/debugger-components.md)
+- [Vyhodnocení výrazu](../../extensibility/debugger/expression-evaluator.md)
 - [Poskytovatel symbolů](../../extensibility/debugger/symbol-provider.md)

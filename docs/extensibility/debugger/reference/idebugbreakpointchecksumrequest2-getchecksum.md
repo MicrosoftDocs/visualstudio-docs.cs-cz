@@ -1,27 +1,27 @@
 ---
-title: IDebugBreakpointChecksumRequest2::GetChecksum | Dokumentace Microsoftu
+title: IDebugBreakpointChecksumRequest2::GetChecksum | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugBreakpointChecksumRequest2::GetChecksum
 ms.assetid: ec434882-e5c0-4d76-a58b-22c260d8626e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a266a827e3dc73ea1c3cc5b3fb28cbb99acba1a7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6fe1d2828f15b295f42c7fd756f2ffc407a632c9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314337"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735181"
 ---
 # <a name="idebugbreakpointchecksumrequest2getchecksum"></a>IDebugBreakpointChecksumRequest2::GetChecksum
-Načte dokument kontrolního součtu pro zarážku požadavek zadaný jedinečný identifikátor algoritmu kontrolního součtu použít.
+Načte kontrolní součet dokumentu pro požadavek na zarážky vzhledem k jedinečnému identifikátoru algoritmu kontrolního součtu, který má být používán.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,16 +41,16 @@ public int GetChecksum(
 
 ## <a name="parameters"></a>Parametry
 `guidAlgorithm`\
-[in] Jedinečný identifikátor algoritmu kontrolního součtu.
+[v] Jedinečný identifikátor algoritmu kontrolního součtu
 
 `pChecksumData`\
-[out] Kontrolní součet dokumentu pro požadavek zarážku.
+[out] Kontrolní součet dokumentu pro požadavek na zarážku.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje funkci, která kontroluje, zda kontrolní součet dokumentu, který má být vázán, odpovídá jednomu z uživatelského rozhraní.
+Následující příklad ukazuje funkci, která kontroluje, zda kontrolní součet dokumentu, který má být vázán, odpovídá jednomu z ui.
 
 ```cpp
 bool CDebugProgram::DoChecksumsMatch(CDebugPendingBreakpoint *pPending, CDebugCodeContext *pContext)
@@ -104,5 +104,5 @@ bool CDebugProgram::DoChecksumsMatch(CDebugPendingBreakpoint *pPending, CDebugCo
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugBreakpointChecksumRequest2](../../../extensibility/debugger/reference/idebugbreakpointchecksumrequest2.md)

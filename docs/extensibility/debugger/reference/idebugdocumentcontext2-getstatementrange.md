@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::GetStatementRange | Dokumentace Microsoftu
+title: IDebugDocumentContext2::GetStatementRange | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentContext2::GetStatementRange
 ms.assetid: bc94851a-0ec4-47ea-99c7-0a585e54e726
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6ef4dae20a69fefcb67240e82999bdf2798d56e5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 50e521d98f10477d56dfece30e20fd000b87b632
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335300"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731769"
 ---
 # <a name="idebugdocumentcontext2getstatementrange"></a>IDebugDocumentContext2::GetStatementRange
-Získá rozsah souboru příkazů kontextu dokumentu.
+Získá rozsah příkazu souboru kontextu dokumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,21 +43,21 @@ int GetStatementRange(
 
 ## <a name="parameters"></a>Parametry
 `pBegPosition`\
-[out v] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která se vyplní počáteční pozice. Tento argument nastavena na hodnotu null, pokud tyto informace není potřeba.
+[dovnitř, ven] [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která je vyplněna počáteční polohou. Pokud tyto informace nejsou potřeba, nastavte tento argument na hodnotu null.
 
 `pEndPosition`\
-[out v] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která se vyplní koncovou pozici. Tento argument nastavena na hodnotu null, pokud tyto informace není potřeba.
+[dovnitř, ven] [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která je vyplněna koncovou polohou. Pokud tyto informace nejsou potřeba, nastavte tento argument na hodnotu null.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Příkaz rozsah je rozsah řádků, které přispěly kód, na který odkazuje tento kontext dokumentu.
+Rozsah výkazu je rozsah řádků, které přispěly kódem, na který odkazuje tento kontext dokumentu.
 
-Chcete-li získat rozsah zdrojového kódu (včetně komentáře) v kontextu tohoto dokumentu, zavolejte [getsourcerange –](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md) metody.
+Chcete-li získat rozsah zdrojového kódu (včetně komentářů) v rámci tohoto kontextu dokumentu, volání [GetSourceRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md) metoda.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CDebugContext` objekt, který zveřejňuje [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) rozhraní. V tomto příkladu vyplní koncovou pozici pouze v případě, že počáteční pozice není hodnotou null.
+Následující příklad ukazuje, jak implementovat `CDebugContext` tuto metodu pro jednoduchý objekt, který zveřejňuje rozhraní [IDebugDocumentContext2.](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) Tento příklad vyplní koncovou pozici pouze v případě, že počáteční pozice není nulovou hodnotou.
 
 ```cpp
 HRESULT CDebugContext::GetStatementRange(TEXT_POSITION* pBegPosition,
@@ -88,7 +88,7 @@ HRESULT CDebugContext::GetStatementRange(TEXT_POSITION* pBegPosition,
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)
 - [GetSourceRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md)
 - [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetParentField | Dokumentace Microsoftu
+title: Atribut IDebugCustomAttribute::GetParentField | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCustomAttribute::GetParentField
 ms.assetid: bcdfdf37-bfcf-4988-a7b8-4c731d0af1b0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6a99310520109dad6a1b8084405119e0a106ad89
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1fae84a4d02438335aea00c50dd9b89520d08bae
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350052"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732697"
 ---
 # <a name="idebugcustomattributegetparentfield"></a>IDebugCustomAttribute::GetParentField
-Získá pole, ke kterému je připojený vlastního atributu.
+Získá pole, ke kterému je připojen vlastní atribut.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,14 +41,14 @@ int GetParentField(
 
 ## <a name="parameters"></a>Parametry
 `ppField`\
-[out] Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objekt, který reprezentuje pole, ke kterému je připojený vlastního atributu.
+[out] Vrátí objekt [IDebugField,](../../../extensibility/debugger/reference/idebugfield.md) který představuje pole, ke kterému je připojen vlastní atribut.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Volání [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) metodu na vrácený [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) je určit, jaký druh pole nadřazeného objektu.
+ Volání [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) metoda na vrácené [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objektu k určení, jaký druh pole nadřazené je.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

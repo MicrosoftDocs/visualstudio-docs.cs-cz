@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetAttributeTypeField | Dokumentace Microsoftu
+title: Atribut IDebugCustomAttribute::GetAttributeTypeField | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCustomAttribute::GetAttributeTypeField
 ms.assetid: d6ce26d5-42ba-44c1-8659-0516db5bc82d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 70168bb233cb061d7c01b9285c701920d54d7238
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 51341b3c9b351307d2662538cc3a6797c58b62f9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315158"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732779"
 ---
 # <a name="idebugcustomattributegetattributetypefield"></a>IDebugCustomAttribute::GetAttributeTypeField
-Získá typ vlastního atributu třídy.
+Získá typ třídy vlastní atribut.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,14 +41,14 @@ int GetAttributeTypeField(
 
 ## <a name="parameters"></a>Parametry
 `ppCAType`\
-[out] Vrátí [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objekt, který představuje třídu, z nichž je vlastní atribut instance.
+[out] Vrátí objekt [IDebugClassField,](../../../extensibility/debugger/reference/idebugclassfield.md) který představuje třídu, jejíž vlastní atribut je instance.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Vlastní atribut je vždy třídou. Tato metoda poskytuje přístup [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objekt, který popisuje tuto třídu.
+ Vlastní atribut je vždy třída. Tato metoda poskytuje přístup k objektu [IDebugClassField,](../../../extensibility/debugger/reference/idebugclassfield.md) který popisuje tuto třídu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

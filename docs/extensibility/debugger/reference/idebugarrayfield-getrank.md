@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayField::GetRank | Dokumentace Microsoftu
+title: IDebugArrayField::GetRank | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugArrayField::GetRank method
 ms.assetid: 2364b876-5be1-4bab-9b8f-3b6121da35c6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 33d5118ffa045ccc2315ccb596850be6922fc2ed
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 692f2f13d861d9688ba349fbc80cb1ca426582c1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321679"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736306"
 ---
 # <a name="idebugarrayfieldgetrank"></a>IDebugArrayField::GetRank
-Získá pořadí nebo počet rozměrů pole.
+Získá pořadí nebo počet dimenzí pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetRank(
 
 ## <a name="parameters"></a>Parametry
 `pdwRank`\
-[out] Vrátí počet rozměrů.
+[out] Vrátí pořadí.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Rozměr pole odpovídá počet rozměrů. V jazyce C++ a C# vícerozměrná pole jsou ve skutečnosti pole polí a může proto považovat jenom jednorozměrná pole (a `GetRank` metoda vždy vrátí hodnotu 1). V [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)], na druhé straně vícerozměrná pole jsou zpracovány jinak a pořadí těchto pole odpovídá počet rozměrů (a `GetRank` metoda vždy vrátí počet dimenzí).
+ Pořadí pole odpovídá počtu dimenzí. V jazycích C++ a C# jsou vícerozměrná pole ve skutečnosti pole polí a proto `GetRank` mohou být považována pouze za jednorozměrné pole (a metoda vždy vrátí 1). V [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]aplikaci jsou naopak vícerozměrná pole zpracována odlišně a pořadí takového pole odráží počet `GetRank` rozměrů (a metoda vždy vrací počet dimenzí).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)

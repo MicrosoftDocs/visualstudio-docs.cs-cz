@@ -1,28 +1,28 @@
 ---
-title: IDebugDocumentChecksum2::GetChecksumAndAlgorithmId | Microsoft Docs
+title: IDebugDocumentChecksum2::GetChecksumAndAlgorithmId | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugDocumentChecksum2::GetChecksumAndAlgorithmI
 - GetChecksumAndAlgorithmI
 ms.assetid: 25efef99-0ef3-4332-a752-607605fc6e67
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 20cf33743d222e160458afcdcf186022a7405fa3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c26d5b9c2c45fd1ce932fc1108e4f77f2508cb31
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350082"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731938"
 ---
 # <a name="idebugdocumentchecksum2getchecksumandalgorithmid"></a>IDebugDocumentChecksum2::GetChecksumAndAlgorithmId
-Načte identifikátor dokumentu. kontrolní součet a algoritmus maximální počet bajtů, které mají použít.
+Načte kontrolní součet dokumentu a identifikátor algoritmu s maximálním počtem bajtů, které mají být používány.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,22 +46,22 @@ public int GetChecksumAndAlgorithmId(
 
 ## <a name="parameters"></a>Parametry
 `pRetVal`\
-[out] Jedinečný identifikátor pro tento algoritmus kontrolního součtu.
+[out] Jedinečný identifikátor algoritmu kontrolního součtu
 
 `cMaxBytes`\
-[in] Maximální počet bajtů, které mají být použita pro kontrolní součet.
+[v] Maximální počet bajtů, které mají být použity pro kontrolní součet.
 
 `pChecksum`\
 [out] Hodnota kontrolního součtu.
 
 `pcNumBytes`\
-[out] Skutečný počet bajtů používaných pro kontrolní součet.
+[out] Skutečný počet bajtů použitých pro kontrolní součet.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad používá tuto metodu k získání kontrolního součtu a algoritmus pro dokument.
+Následující příklad používá tuto metodu k získání kontrolního součtu a algoritmu pro dokument.
 
 ```cpp
 HRESULT CDebugCodeContext::GetDocumentChecksumAndAlgorithmId(GUID *pguidAlgorithm, BYTE **ppChecksum, ULONG *pcNumBytes)
@@ -126,5 +126,5 @@ HRESULT CDebugCodeContext::GetDocumentChecksumAndAlgorithmId(GUID *pguidAlgorith
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDocumentChecksum2](../../../extensibility/debugger/reference/idebugdocumentchecksum2.md)

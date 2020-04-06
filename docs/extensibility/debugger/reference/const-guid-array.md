@@ -1,5 +1,5 @@
 ---
-title: CONST_GUID_ARRAY | Microsoft Docs
+title: CONST_GUID_ARRAY | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - CONST_GUID_ARRAY structure
 ms.assetid: bd55e7d8-372c-4c3e-9eed-28f6b415a5db
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4eb1cf0a94a427363bc54b7b204f20d9447db0c0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c0021ef24e0cafec0119263d2c74175f0d38d784
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346518"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737632"
 ---
-# <a name="constguidarray"></a>CONST_GUID_ARRAY
-Struktura, která obsahuje seznam `GUID`s.
+# <a name="const_guid_array"></a>CONST_GUID_ARRAY
+Struktura, která obsahuje `GUID`seznam s.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,15 +43,15 @@ public struct CONST_GUID_ARRAY {
 
 ## <a name="members"></a>Členové
 `dwCount`\
-Počet `GUID`ve `Members` pole.
+Počet `GUID`s v `Members` poli.
 
 `Members`\
 Pole `GUID`s.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je předán [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) metoda a vrátí [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) a [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) metody.
+Tato struktura je předána metodě [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) a je vrácena z metod [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) a [WatchForProviderEvents.](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)
 
-Vlastníka instance této struktury je zodpovědná za uvolnění přidělení paměti.
+Vlastník instance této struktury je zodpovědný za uvolnění paměti přidělené.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -60,7 +60,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)
 - [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)

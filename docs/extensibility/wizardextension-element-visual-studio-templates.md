@@ -1,5 +1,5 @@
 ---
-title: WizardExtension – – element (šablony sady Visual Studio) | Microsoft Docs
+title: Element WizardExtension (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WizardExtension element [Visual Studio Templates]
 - <WizardExtension> element [Visual Studio Templates]
 ms.assetid: d54b01c1-50f5-4b65-828c-686e2321cc8c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cfd46573f70b31559f9d6c4749c142d763537764
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fd81b32861114d654aa794b992826589406b1df9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748939"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740370"
 ---
 # <a name="wizardextension-element-visual-studio-templates"></a>WizardExtension – element (šablony sady Visual Studio)
-Obsahuje registrační prvky pro přizpůsobení Průvodce šablonou.
+Obsahuje registrační prvky pro přizpůsobení průvodce šablonou.
 
- \<VSTemplate >... \<WizardExtension >
+ \<VSTemplate> ... \<> rozšíření průvodce
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,26 +39,26 @@ Obsahuje registrační prvky pro přizpůsobení Průvodce šablonou.
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené elementy
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Assembly](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|Požadovaný element.<br /><br /> Určuje název nebo silný název sestavení, které se zobrazí v globální mezipaměti sestavení (GAC). V elementu `WizardExtension` musí být alespoň jeden prvek `Assembly`.|
-|[FullClassName –](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|Požadovaný element.<br /><br /> Plně kvalifikovaný název třídy, která implementuje rozhraní `IWizard`. V elementu `WizardExtension` musí být alespoň jeden prvek `FullClassName`.|
+|[Sestavení](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|Požadovaný element.<br /><br /> Určuje název nebo silný název sestavení, které se zobrazí v globální mezipaměti sestavení. Musí být alespoň `Assembly` jeden prvek `WizardExtension` v prvku.|
+|[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|Požadovaný element.<br /><br /> Plně kvalifikovaný název třídy, která `IWizard` implementuje rozhraní. Musí být alespoň `FullClassName` jeden prvek `WizardExtension` v prvku.|
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Obsahuje všechna metadata pro šablonu projektu, šablonu položky nebo Startovní sadu.|
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Obsahuje všechna metadata pro šablonu projektu, šablonu položky nebo startovní soupravu.|
 
 ## <a name="remarks"></a>Poznámky
- `WizardExtension` je volitelný podřízený prvek `VSTemplate`.
+ `WizardExtension`je volitelný podřízený `VSTemplate`prvek .
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metadata pro standardní šablonu projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikace systému Windows.
+ Následující příklad ilustruje metadata pro standardní šablonu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu pro aplikaci systému Windows.
 
 ```
 <VSTemplate Version="3.0.0" Type="Item"
@@ -88,7 +88,7 @@ Obsahuje registrační prvky pro přizpůsobení Průvodce šablonou.
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
 - [Postupy: Použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md)
