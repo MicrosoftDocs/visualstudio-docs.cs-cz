@@ -1,55 +1,55 @@
 ---
-title: 'Návod: implementace fragmentů kódu | Microsoft Docs'
+title: 'Návod: Implementace fragmentů kódu | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: adbc5382-d170-441c-9fd0-80faa1816478
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84674a12165a3c5cd47c9004274669d377d330c5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ba1b6e0852c1ec1b306938b791eed78e79d211ce
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72632512"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697101"
 ---
-# <a name="walkthrough-implement-code-snippets"></a>Návod: implementace fragmentů kódu
-Můžete vytvořit fragmenty kódu a zahrnout je do rozšíření editoru, aby je uživatelé rozšíření mohli přidat ke svému vlastnímu kódu.
+# <a name="walkthrough-implement-code-snippets"></a>Návod: Implementace fragmentů kódu
+Můžete vytvořit fragmenty kódu a zahrnout je do rozšíření editoru, aby je uživatelé rozšíření mohli přidat do vlastního kódu.
 
- Fragment kódu je fragment kódu nebo jiného textu, který lze začlenit do souboru. Chcete-li zobrazit všechny fragmenty, které byly zaregistrovány pro konkrétní programovací jazyky, v nabídce **nástroje** klikněte na **Správce fragmentů kódu**. Chcete-li vložit fragment do souboru, klikněte pravým tlačítkem na místo, kde chcete fragment kódu, klikněte na možnost Vložit fragment nebo **Obklopte**se, Najděte požadovaný fragment a pak na něj dvakrát klikněte. Stisknutím klávesy **TAB** nebo **SHIFT** +**TAB** upravte příslušné části fragmentu a stisknutím klávesy **ENTER** nebo **ESC** ji potvrďte. Další informace naleznete v tématu [fragmenty kódu](../ide/code-snippets.md).
+ Fragment kódu je fragment kódu nebo jiného textu, který lze začlenit do souboru. Chcete-li zobrazit všechny úryvky, které byly zaregistrovány pro určité programovací jazyky, klepněte v nabídce **Nástroje** na **položku Správce výstřižků kódu**. Pokud chcete vložit úryvek do souboru, klikněte pravým tlačítkem myši na místo, kam chcete úryvek vložit, klikněte na Vložit úryvek nebo **Obklopit**do , vyhledejte požadovaný úryvek a poklikejte na něj. Stisknutím **klávesy Tab** nebo **Shift**+**Shift** upravte příslušné části úryvku a pak ho přijměte stisknutím **klávesenter** nebo **Esc.** Další informace naleznete v [tématu Fragmenty kódu](../ide/code-snippets.md).
 
- Fragment kódu je obsažen v souboru XML, který má příponu názvu souboru. fragment *. Fragment může obsahovat pole, která jsou zvýrazněna po vložení fragmentu, aby ho uživatel mohl najít a změnit. Soubor fragmentů také poskytuje informace pro **Správce fragmentů kódu** , aby mohl zobrazit název fragmentu ve správné kategorii. Informace o schématu fragmentu kódu naleznete v [referenčních informacích o schématu fragmentů kódu](../ide/code-snippets-schema-reference.md).
+ Fragment kódu je obsažen v souboru XML, který má příponu .snippet* název souboru. Úryvek může obsahovat pole, která jsou zvýrazněna po vložení fragmentu, aby je uživatel mohl najít a změnit. Výstřižek soubor také poskytuje informace pro **správce fragmentu kódu** tak, aby jej můžete zobrazit název výstřižku ve správné kategorii. Informace o schématu úryvku naleznete v [tématu Code snippets odkaz na schéma](../ide/code-snippets-schema-reference.md).
 
- Tento návod učí, jak provádět tyto úlohy:
+ Tento návod učí, jak provádět tyto úkoly:
 
-1. Vytvořte a zaregistrujte fragmenty kódu pro konkrétní jazyk.
+1. Vytvořte a zaregistrujte fragmenty kódu pro určitý jazyk.
 
-2. Přidejte příkaz **Vložit fragment** do místní nabídky.
+2. Přidejte příkaz **Vložit úryvek** do místní nabídky.
 
-3. Implementujte rozšíření fragmentů.
+3. Implementujte rozšíření fragmentu.
 
-   Tento návod vychází z [návodu: dokončování příkazů zobrazení](../extensibility/walkthrough-displaying-statement-completion.md).
+   Tento návod je založen na [návodu: Zobrazení dokončení příkazu](../extensibility/walkthrough-displaying-statement-completion.md).
 
 ## <a name="prerequisites"></a>Požadavky
- Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+ Počínaje Visual Studio 2015, nenainstalujete Visual Studio SDK ze služby stažení. Je součástí volitelné funkce v nastavení sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace naleznete [v tématu Instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-and-register-code-snippets"></a>Vytvoření a registrace fragmentů kódu
- Fragmenty kódu jsou obvykle spojeny s registrovanou jazykovou službou. Nemusíte ale implementovat <xref:Microsoft.VisualStudio.Package.LanguageService> k registraci fragmentů kódu. Místo toho stačí zadat identifikátor GUID v souboru indexu fragmentu a potom použít stejný identifikátor GUID v <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute>, který přidáte do projektu.
+ Fragmenty kódu jsou obvykle přidruženy k registrované jazykové službě. Však není třeba implementovat <xref:Microsoft.VisualStudio.Package.LanguageService> k registraci fragmenty kódu. Místo toho stačí zadat identifikátor GUID v souboru indexu úryvku <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> a potom použít stejný identifikátor GUID v aplikaci, kterou přidáte do projektu.
 
  Následující kroky ukazují, jak vytvořit fragmenty kódu a přidružit je k určitému identifikátoru GUID.
 
 1. Vytvořte následující adresářovou strukturu:
 
-    **%InstallDir%\TestSnippets\Snippets\1033 \\**
+    **%InstallDir%\TestSnippets\Úryvky\1033\\**
 
-    kde *% INSTALLDIR%* je instalační složka sady Visual Studio. (I když se tato cesta obvykle používá k instalaci fragmentů kódu, můžete zadat libovolnou cestu.)
+    kde *%InstallDir%* je instalační složka sady Visual Studio. (I když se tato cesta obvykle používá k instalaci fragmentů kódu, můžete zadat libovolnou cestu.)
 
-2. Ve složce \ 1033 \ vytvořte soubor *. XML* a pojmenujte jej **TestSnippets. XML**. (I když se tento název obvykle používá pro soubor indexu fragmentů, můžete zadat libovolný název, pokud má příponu názvu souboru *. XML* .) Přidejte následující text a pak odstraňte zástupný identifikátor GUID a přidejte vlastní.
+2. Ve složce \1033\ vytvořte soubor *XML* a pojmenujte jej **TestSnippets.xml**. (I když se tento název obvykle používá pro soubor indexu výstřižku, můžete zadat libovolný název, pokud má příponu *XML.)* Přidejte následující text a odstraňte zástupný identifikátor GUID a přidejte vlastní.
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -66,7 +66,7 @@ Můžete vytvořit fragmenty kódu a zahrnout je do rozšíření editoru, aby j
    </SnippetCollection>
    ```
 
-3. Vytvořte soubor ve složce fragmentů, pojmenujte **ho `.snippet`** a pak přidejte následující text:
+3. Vytvořte soubor ve složce složek úryvku, pojmenujte jej **a**`.snippet`přidejte následující text:
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -108,145 +108,145 @@ Můžete vytvořit fragmenty kódu a zahrnout je do rozšíření editoru, aby j
    </CodeSnippets>
    ```
 
-   Následující kroky ukazují, jak registrovat fragmenty kódu.
+   Následující kroky ukazují, jak zaregistrovat fragmenty kódu.
 
-### <a name="to-register-code-snippets-for-a-specific-guid"></a>Registrace fragmentů kódu pro určitý identifikátor GUID
+### <a name="to-register-code-snippets-for-a-specific-guid"></a>Registrace fragmentů kódu pro konkrétní identifikátor GUID
 
-1. Otevřete projekt **CompletionTest** . Informace o tom, jak vytvořit tento projekt, naleznete v tématu [Návod: dokončování příkazů zobrazení](../extensibility/walkthrough-displaying-statement-completion.md).
+1. Otevřete projekt **CompletionTest.** Informace o tom, jak vytvořit tento projekt, naleznete [v tématu Návod: Zobrazení dokončení příkazu](../extensibility/walkthrough-displaying-statement-completion.md).
 
 2. V projektu přidejte odkazy na následující sestavení:
 
-    - Microsoft. VisualStudio. TextManager. Interop
+    - Microsoft.VisualStudio.TextManager.Interop
 
-    - Microsoft. VisualStudio. TextManager. Interop. 8.0
+    - Microsoft.VisualStudio.TextManager.Interop.8.0
 
-    - Microsoft. MSXML
+    - soubor Microsoft.msxml
 
-3. V projektu otevřete soubor **source. extension. vsixmanifest** .
+3. V projektu otevřete soubor **source.extension.vsixmanifest.**
 
-4. Ujistěte se, že karta **assets** obsahuje typ obsahu **VSPackage** a že **projekt** je nastaven na název projektu.
+4. Ujistěte se, že **karta Prostředky** obsahuje typ obsahu **VsPackage** a že **aplikace Project** je nastavena na název projektu.
 
-5. Vyberte projekt CompletionTest a ve okno Vlastnosti sadě **Generovat soubor pkgdef** na **hodnotu true**. Uložte projekt.
+5. Vyberte projekt CompletionTest a v sadě vlastností **vyberte hodnotu Generate Pkgdef File** to **true**. Uložte projekt.
 
-6. Přidejte do projektu statickou třídu `SnippetUtilities`.
+6. Přidejte `SnippetUtilities` statickou třídu do projektu.
 
      [!code-csharp[VSSDKCompletionTest#22](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_1.cs)]
      [!code-vb[VSSDKCompletionTest#22](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_1.vb)]
 
-7. Ve třídě SnippetUtilities definujte identifikátor GUID a poskytněte mu hodnotu, kterou jste použili v souboru *SnippetsIndex. XML* .
+7. Ve třídě SnippetUtilities definujte identifikátor GUID a přiřazujte mu hodnotu, kterou jste použili v souboru *SnippetsIndex.xml.*
 
      [!code-csharp[VSSDKCompletionTest#23](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_2.cs)]
      [!code-vb[VSSDKCompletionTest#23](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_2.vb)]
 
-8. Přidejte <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> do `TestCompletionHandler` třídy. Tento atribut lze přidat do libovolné veřejné nebo interní (nestatické) třídy v projektu. (Pro obor názvů Microsoft. VisualStudio. Shell možná budete muset přidat direktivu `using`.)
+8. Přidejte <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> do `TestCompletionHandler` třídy. Tento atribut lze přidat do libovolné veřejné nebo interní (nestatické) třídy v projektu. (Bude pravděpodobně muset `using` přidat direktivu pro obor názvů Microsoft.VisualStudio.Shell.)
 
      [!code-csharp[VSSDKCompletionTest#24](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_3.cs)]
      [!code-vb[VSSDKCompletionTest#24](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_3.vb)]
 
-9. Sestavte a spusťte projekt. V experimentální instanci aplikace Visual Studio, která se spustí při spuštění projektu, by měl fragment, který jste právě zaregistrovali, zobrazit ve **Správci fragmentů kódu** v jazyce **TestSnippets** .
+9. Sestavení a spuštění projektu. V experimentální instanci sady Visual Studio, která začíná při spuštění projektu, by měl být fragment, který jste právě zaregistrovali, zobrazen ve **Správci fragmentů kódu** v **jazyce TestSnippets.**
 
-## <a name="add-the-insert-snippet-command-to-the-shortcut-menu"></a>Přidání příkazu Vložit fragment do místní nabídky
- Příkaz **Vložit fragment** není součástí místní nabídky pro textový soubor. Proto je nutné příkaz Povolit.
+## <a name="add-the-insert-snippet-command-to-the-shortcut-menu"></a>Přidání příkazu Vložit úryvek do místní nabídky
+ Příkaz **Vložit úryvek** není v místní nabídce textového souboru zahrnut. Proto je nutné povolit příkaz.
 
-#### <a name="to-add-the-insert-snippet-command-to-the-shortcut-menu"></a>Přidání příkazu Vložit fragment do místní nabídky
+#### <a name="to-add-the-insert-snippet-command-to-the-shortcut-menu"></a>Přidání příkazu Vložit úryvek do místní nabídky
 
-1. Otevřete soubor `TestCompletionCommandHandler` třídy.
+1. Otevřete `TestCompletionCommandHandler` soubor třídy.
 
-     Vzhledem k tomu, že tato třída implementuje <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>, lze aktivovat příkaz **Vložit fragment kódu** v metodě <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>. Před povolením příkazu ověřte, že tato metoda není volána uvnitř funkce automatizace, protože při kliknutí na příkaz **Vložit fragment** kódu se zobrazí uživatelské rozhraní pro výběr fragmentu (UI).
+     Vzhledem k <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>tomu, že tato třída implementuje <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> , můžete aktivovat příkaz **Vložit úryvek** v metodě. Před povolením příkazu zkontrolujte, zda tato metoda není volána uvnitř funkce automatizace, protože po klepnutí na příkaz **Vložit úryvek** se zobrazí uživatelské rozhraní pro výběr fragmentu (UI).
 
      [!code-csharp[VSSDKCompletionTest#25](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_4.cs)]
      [!code-vb[VSSDKCompletionTest#25](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_4.vb)]
 
-2. Sestavte a spusťte projekt. V experimentální instanci otevřete soubor s příponou názvu souboru *. zzz* a potom klikněte pravým tlačítkem myši kdekoli v něm. Příkaz **INSERT fragment** by měl být zobrazen v místní nabídce.
+2. Sestavení a spuštění projektu. V experimentální instanci otevřete soubor s příponou *.zzz* a klikněte pravým tlačítkem myši na libovolné místo v něm. Příkaz **Vložit úryvek** by se měl objevit v místní nabídce.
 
-## <a name="implement-snippet-expansion-in-the-snippet-picker-ui"></a>Implementovat rozšíření fragmentů kódu v uživatelském rozhraní výběru fragmentu
- V této části se dozvíte, jak implementovat rozšíření fragmentů kódu, aby se zobrazilo uživatelské rozhraní pro výběr fragmentu, když se v místní nabídce klikne na **Vložit fragment** kódu. Fragment kódu je také rozbalen, pokud uživatel zadá zástupce fragmentu kódu a pak stiskne **kartu**.
+## <a name="implement-snippet-expansion-in-the-snippet-picker-ui"></a>Implementace rozšíření fragmentu v uzdu výběru výstřižků
+ Tato část ukazuje, jak implementovat rozšíření fragmentu kódu tak, aby se při kliknutí na fragment vložit v místní nabídce zobrazilo ujatého ovládacího **panelu výstřižků.** Fragment kódu je také rozbalen, když uživatel zadá zástupce fragmentu kódu a stiskne **klávesu Tab**.
 
- Chcete-li zobrazit uživatelské rozhraní pro výběr fragmentu a povolit možnost navigace a vložení fragmentu po vložení, použijte metodu <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>. Samotné vložení je zpracováváno metodou <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A>.
+ Chcete-li zobrazit uživatelské uživatelské tlačítko pro výběr výstřižků a povolit přijetí <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> fragmentu navigace a po vložení, použijte metodu. Vložení samotné je zpracována <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A> metodou.
 
- Implementace rozšíření fragmentu kódu používá starší <xref:Microsoft.VisualStudio.TextManager.Interop> rozhraní. Při převodu z aktuálních tříd editoru na starší verzi kódu si pamatujte, že starší rozhraní používají kombinaci čísel řádků a čísel sloupců k určení umístění v textové vyrovnávací paměti, ale aktuální třídy používají jeden index. Proto pokud má vyrovnávací paměť tři řádky, z nichž každý má 10 znaků (plus nový řádek, který se počítá jako jeden znak), čtvrtý znak na třetím řádku je na pozici 27 v aktuální implementaci, ale je na řádku 2, pozice 3 ve staré implementaci.
+ Implementace rozšíření fragmentu kódu používá <xref:Microsoft.VisualStudio.TextManager.Interop> starší rozhraní. Při překladu z aktuální třídy editoru do staršího kódu, nezapomeňte, že starší rozhraní použít kombinaci čísla řádků a čísla sloupců k určení umístění v textové vyrovnávací paměti, ale aktuální třídy používají jeden index. Proto pokud vyrovnávací paměť má tři řádky, z nichž každý má 10 znaků (plus nový řádek, který se počítá jako jeden znak), čtvrtý znak na třetím řádku je na pozici 27 v aktuální implementaci, ale je na řádku 2, pozice 3 ve staré implementaci.
 
-#### <a name="to-implement-snippet-expansion"></a>Implementace rozšíření fragmentů kódu
+#### <a name="to-implement-snippet-expansion"></a>Implementace rozšíření úryvku
 
-1. Do souboru, který obsahuje třídu `TestCompletionCommandHandler` přidejte následující direktivy `using`.
+1. Do souboru, `TestCompletionCommandHandler` který obsahuje třídu, přidejte následující `using` direktivy.
 
      [!code-csharp[VSSDKCompletionTest#26](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_5.cs)]
      [!code-vb[VSSDKCompletionTest#26](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_5.vb)]
 
-2. Nastavit třídu `TestCompletionCommandHandler` implementovat rozhraní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient>.
+2. Proveďte `TestCompletionCommandHandler` třídu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient> implementovat rozhraní.
 
      [!code-csharp[VSSDKCompletionTest#27](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_6.cs)]
      [!code-vb[VSSDKCompletionTest#27](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_6.vb)]
 
-3. Ve třídě `TestCompletionCommandHandlerProvider` importujte <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>.
+3. Ve `TestCompletionCommandHandlerProvider` třídě importujte <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>.
 
      [!code-csharp[VSSDKCompletionTest#28](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_7.cs)]
      [!code-vb[VSSDKCompletionTest#28](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_7.vb)]
 
-4. Přidejte některá soukromá pole pro rozhraní rozšíření kódu a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.
+4. Přidejte některá privátní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>pole pro rozhraní pro rozšíření kódu a rozhraní .
 
      [!code-csharp[VSSDKCompletionTest#29](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_8.cs)]
      [!code-vb[VSSDKCompletionTest#29](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_8.vb)]
 
-5. V konstruktoru třídy `TestCompletionCommandHandler` nastavte následující pole.
+5. V konstruktoru `TestCompletionCommandHandler` třídy nastavte následující pole.
 
      [!code-csharp[VSSDKCompletionTest#30](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_9.cs)]
      [!code-vb[VSSDKCompletionTest#30](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_9.vb)]
 
-6. Chcete-li zobrazit výběr fragmentu, když uživatel klikne na příkaz **Vložit fragment** , přidejte následující kód do metody <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>. (Aby bylo toto vysvětlení čitelnější, `Exec()`code, který se používá pro dokončování příkazů, není zobrazen. místo toho jsou bloky kódu přidány do existující metody.) Po kódu, který kontroluje znak, přidejte následující blok kódu.
+6. Chcete-li zobrazit výběr výstřižků, když uživatel klepne na příkaz Vložit <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> **výstřižek,** přidejte k metodě následující kód. (Chcete-li toto vysvětlení `Exec()`čitelnější, kód, který se používá pro dokončení příkazu není zobrazen; místo toho bloky kódu jsou přidány do existující metody.) Za kód, který kontroluje znak, přidejte následující blok kódu.
 
      [!code-csharp[VSSDKCompletionTest#31](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_10.cs)]
      [!code-vb[VSSDKCompletionTest#31](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_10.vb)]
 
-7. Pokud má fragment kódu pole, která lze procházet, zůstane relace rozšíření otevřená, dokud není rozšíření explicitně přijato; Pokud fragment kódu neobsahuje žádná pole, relace je zavřena a je vrácena jako `null` metodou <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.InvokeInsertionUI%2A>. V metodě <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>, po kódu uživatelského rozhraní výběru fragmentu, který jste přidali v předchozím kroku, přidejte následující kód pro zpracování navigace fragmentem (když uživatel stiskne **kartu nebo** **SHIFT** +**kartu** po vložení fragmentu kódu).
+7. Pokud úryvek obsahuje pole, která lze procházet, relace rozšíření je zachována otevřená, dokud není rozšíření explicitně přijato; Pokud úryvek nemá žádná pole, relace je `null` uzavřena <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.InvokeInsertionUI%2A> a je vrácena metodou. V <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> metodě po kódu uživatelského rozhraní pro výběr fragmentu, který jste přidali v předchozím kroku, přidejte následující kód pro zpracování navigace výstřižků (když uživatel po vložení fragmentu **stiskne kartu Tab** nebo **Shift**+**Tab).**
 
      [!code-csharp[VSSDKCompletionTest#32](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_11.cs)]
      [!code-vb[VSSDKCompletionTest#32](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_11.vb)]
 
-8. Chcete-li vložit fragment kódu, když uživatel zadá odpovídající zástupce a pak stiskne **kartu**, přidejte kód do metody <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>. Soukromá metoda, která vloží fragment kódu, bude zobrazena v pozdějším kroku. Po navigačním kódu, který jste přidali v předchozím kroku, přidejte následující kód.
+8. Chcete-li vložit fragment kódu, když uživatel zadá odpovídajícího zástupce a <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> pak stiskne **klávesu Tab**, přidejte do metody kód. Soukromá metoda, která vloží úryvek, se zobrazí v pozdějším kroku. Za navigační kód, který jste přidali v předchozím kroku, přidejte následující kód.
 
      [!code-csharp[VSSDKCompletionTest#33](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_12.cs)]
      [!code-vb[VSSDKCompletionTest#33](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_12.vb)]
 
-9. Implementujte metody rozhraní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient>. V této implementaci jsou <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.EndExpansion%2A> a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A> jediné metody, které vás zajímají. Ostatní metody by měly vracet pouze <xref:Microsoft.VisualStudio.VSConstants.S_OK>.
+9. Implementujte metody <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient> rozhraní. V této implementaci jsou <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.EndExpansion%2A> jedinými <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A>způsoby zájmu a . Ostatní metody by <xref:Microsoft.VisualStudio.VSConstants.S_OK>měly jen vrátit .
 
      [!code-csharp[VSSDKCompletionTest#34](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_13.cs)]
      [!code-vb[VSSDKCompletionTest#34](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_13.vb)]
 
-10. Implementujte metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A>. Pomocná metoda, která ve skutečnosti vkládá rozšíření, je zahrnuta v pozdějším kroku. @No__t_0 poskytuje informace o řádku a sloupci, které můžete získat z <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.
+10. Implementujte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A> metodu. Pomocná metoda, která ve skutečnosti vloží rozšíření je popsána v pozdějším kroku. Poskytuje <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan> informace o řádcích a sloupcích, které můžete získat z . <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>
 
      [!code-csharp[VSSDKCompletionTest#35](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_14.cs)]
      [!code-vb[VSSDKCompletionTest#35](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_14.vb)]
 
-11. Následující soukromá metoda vloží fragment kódu na základě zástupce nebo názvu a cesty. Pak zavolá metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansion.InsertNamedExpansion%2A> se fragmentem.
+11. Následující soukromá metoda vloží fragment kódu, založený buď na zástupce, nebo na názvu a cestě. Potom volá <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansion.InsertNamedExpansion%2A> metodu s úryvek.
 
      [!code-csharp[VSSDKCompletionTest#36](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_15.cs)]
      [!code-vb[VSSDKCompletionTest#36](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_15.vb)]
 
-## <a name="build-and-test-code-snippet-expansion"></a>Sestavení a testování rozšíření fragmentů kódu
- Můžete testovat, zda rozšíření fragmentů funguje ve vašem projektu.
+## <a name="build-and-test-code-snippet-expansion"></a>Sestavení a testování rozšíření fragmentu kódu
+ Můžete otestovat, zda rozšíření fragmentu funguje v projektu.
 
-1. Sestavte řešení. Při spuštění tohoto projektu v ladicím programu se spustí druhá instance sady Visual Studio.
+1. Sestavte řešení. Při spuštění tohoto projektu v ladicím programu je spuštěna druhá instance sady Visual Studio.
 
 2. Otevřete textový soubor a zadejte nějaký text.
 
-3. Klikněte pravým tlačítkem někam do textu a pak klikněte na **Vložit fragment**.
+3. Klikněte pravým tlačítkem myši na místo v textu a potom klikněte na **Vložit úryvek**.
 
-4. Uživatelské rozhraní pro výběr fragmentu by se mělo zobrazit s automaticky otevírané okno, které uvádí **test náhradních polí**. Dvakrát klikněte na automaticky otevírané okno.
+4. U iniciátoru pro výběr fragmentů by se mělo zobrazit s vyskakovacím vyskakovacím formulářem, který říká **Testovat náhradní pole**. Poklepejte na automaticky otevírané okno.
 
-     Následující fragment kódu by měl být vložen.
+     Měl by být vložen následující úryvek.
 
     ```
     MessageBox.Show("first");
     MessageBox.Show("second");
     ```
 
-     Nestiskněte klávesu **ENTER** nebo **ESC**.
+     Nestisknout **klávesu Enter** nebo **Esc**.
 
-5. Stisknutím klávesy **TAB** a **SHIFT** +**TAB** přepínejte mezi "First" a "Second".
+5. Stisknutím **kláves YTab** a **Shift**+**Tab** přepínejte mezi "first" a "second".
 
-6. Přijměte vložení stisknutím klávesy **ENTER** nebo **ESC**.
+6. Přijměte vložení stisknutím **klávesy Enter** nebo **Esc**.
 
-7. V jiné části textu zadejte "test" a stiskněte klávesu **TAB**. Vzhledem k tomu, že "test" je zástupce fragmentu kódu, fragment by měl být vložen znovu.
+7. V jiné části textu zadejte "test" a stiskněte **klávesu Tab**. Vzhledem k tomu, že "test" je zástupce fragmentu kódu, měl by být fragment vložen znovu.
 
 ## <a name="next-steps"></a>Další kroky

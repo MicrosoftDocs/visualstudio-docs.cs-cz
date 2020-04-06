@@ -1,81 +1,81 @@
 ---
-title: 'Návod: Vytvoření sady SDK pomocí jazyka C++ | Dokumentace Microsoftu'
+title: 'Návod: Vytvoření sady SDK pomocí jazyka C++ | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 36ea793b-3832-41a1-b906-69e680ad5e1d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a60194c6512b67e1e3e90389b0221b6cdb8a5226
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 65643e65490eacb79eea4d76aa49ff10d6cccf66
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66312689"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697636"
 ---
 # <a name="walkthrough-create-an-sdk-using-c"></a>Návod: Vytvoření sady SDK pomocí jazyka C++
-Tento návod ukazuje, jak vytvořit nativní C++ matematické knihovny sady SDK, balíčku sady SDK jako Visual Studio Extension (VSIX) a použijte ji k vytvoření aplikace. Návod je rozdělen na tyto kroky:
+Tento návod ukazuje, jak vytvořit nativní matematickou knihovnu C++, zabalit sdk jako rozšíření Visual Studio Extension (VSIX) a pak ji použít k vytvoření aplikace. Návod je rozdělen do následujících kroků:
 
-- [Chcete-li vytvořit nativní a prostředí Windows Runtime knihovny](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createClassLibrary)
+- [Vytvoření nativních knihoven a knihoven prostředí Windows Runtime](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createClassLibrary)
 
-- [Chcete-li vytvořit projekt rozšíření NativeMathVSIX](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createVSIX)
+- [Vytvoření projektu rozšíření NativeMathVSIX](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createVSIX)
 
-- [K vytvoření ukázkové aplikace, která používá knihovnu tříd](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createSample)
+- [Vytvoření ukázkové aplikace, která používá knihovnu tříd](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createSample)
 
 ## <a name="prerequisites"></a>Požadavky
- Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
+ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sady Visual Studio SDK. Další informace naleznete v [tématu Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
-## <a name="createClassLibrary"></a> Chcete-li vytvořit nativní a prostředí Windows Runtime knihovny
+## <a name="to-create-the-native-and-windows-runtime-libraries"></a><a name="createClassLibrary"></a>Vytvoření nativních knihoven a knihoven prostředí Windows Runtime
 
-1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**.
+1. Na řádku nabídek zvolte **Soubor** > **nového** > **projektu**.
 
-2. V seznamu šablon rozbalte **Visual C++**  > **Windows Universal**a pak vyberte **knihovny DLL (Windows Universal apps)** šablony. V **název** zadejte `NativeMath`a klikněte na tlačítko **OK** tlačítko.
+2. V seznamu šablon rozbalte **visual c++** > **Windows Universal**a vyberte šablonu **DLL (Windows Universal apps).** Do pole **Název** `NativeMath`zadejte a pak zvolte tlačítko **OK.**
 
-3. Aktualizace *NativeMath.h* tak, aby odpovídala následující kód.
+3. Aktualizujte *nativemath.h* tak, aby odpovídala následující kód.
 
      [!code-cpp[CreatingAnSDKUsingCpp#1](../extensibility/codesnippet/CPP/walkthrough-creating-an-sdk-using-cpp_1.h)]
 
-4. Aktualizace *NativeMath.cpp* tak, aby odpovídala takto:
+4. Aktualizujte *nativemath.cpp* tak, aby odpovídala tomuto kódu:
 
      [!code-cpp[CreatingAnSDKUsingCpp#2](../extensibility/codesnippet/CPP/walkthrough-creating-an-sdk-using-cpp_2.cpp)]
 
-5. V **Průzkumníka řešení**, otevřete místní nabídku pro **řešení "NativeMath"** a klikněte na tlačítko **přidat** > **nový projekt**.
+5. V **Průzkumníku řešení**otevřete místní nabídku **řešení NativeMath**a pak zvolte **Přidat** > **nový projekt**.
 
-6. V seznamu šablon rozbalte **Visual C++** a pak vyberte **součást prostředí Windows Runtime** šablony. V **název** zadejte `NativeMathWRT`a klikněte na tlačítko **OK** tlačítko.
+6. V seznamu šablon rozbalte **visual c++** a vyberte šablonu **komponenty Prostředí Windows Runtime.** Do pole **Název** `NativeMathWRT`zadejte a pak zvolte tlačítko **OK.**
 
-7. Aktualizace *Class1.h* tak, aby odpovídala takto:
+7. Aktualizujte *class1.h* tak, aby odpovídala tomuto kódu:
 
      [!code-cpp[CreatingAnSDKUsingCpp#3](../extensibility/codesnippet/CPP/walkthrough-creating-an-sdk-using-cpp_3.h)]
 
-8. Aktualizace *Class1.cpp* tak, aby odpovídala takto:
+8. Aktualizujte *class1.cpp* tak, aby odpovídala tomuto kódu:
 
      [!code-cpp[CreatingAnSDKUsingCpp#4](../extensibility/codesnippet/CPP/walkthrough-creating-an-sdk-using-cpp_4.cpp)]
 
-9. V panelu nabídky zvolte **sestavení** > **sestavit řešení**.
+9. Na řádku nabídek zvolte **Build** > **Build Build Solution**.
 
-## <a name="createVSIX"></a> Chcete-li vytvořit projekt rozšíření NativeMathVSIX
+## <a name="to-create-the-nativemathvsix-extension-project"></a><a name="createVSIX"></a>Vytvoření projektu rozšíření NativeMathVSIX
 
-1. V **Průzkumníka řešení**, otevřete místní nabídku pro **řešení "NativeMath"** a klikněte na tlačítko **přidat** > **nový projekt**.
+1. V **Průzkumníku řešení**otevřete místní nabídku **řešení NativeMath**a pak zvolte **Přidat** > **nový projekt**.
 
-2. V seznamu šablon rozbalte **Visual C#**  > **rozšiřitelnost**a pak vyberte **projekt VSIX**. V **název** zadejte **NativeMathVSIX**a klikněte na tlačítko **OK** tlačítko.
+2. V seznamu šablon rozbalte položku**Rozšiřitelnost** **jazyka Visual C#** > a vyberte **možnost Projekt VSIX**. Do pole **Název** zadejte **NativeMathVSIX**a pak zvolte tlačítko **OK.**
 
-3. V **Průzkumníka řešení**, otevřete místní nabídku pro **source.extension.vsixmanifest**a klikněte na tlačítko **zobrazit kód**.
+3. V **Průzkumníku řešení**otevřete místní nabídku pro **source.extension.vsixmanifest**a pak zvolte **Zobrazit kód**.
 
-4. Použijte následující kód XML má nahradit existující soubor XML.
+4. K nahrazení existujícího xml použijte následující kód XML.
 
     [!code-xml[CreatingAnSDKUsingCpp#6](../extensibility/codesnippet/XML/walkthrough-creating-an-sdk-using-cpp_6.xml)]
 
-5. V **Průzkumníka řešení**, otevřete místní nabídku **NativeMathVSIX** projektu a klikněte na tlačítko **přidat** > **nová položka**.
+5. V **Průzkumníku řešení**otevřete místní nabídku pro projekt **NativeMathVSIX** a pak zvolte **Přidat** > **novou položku**.
 
-6. V seznamu **položky Visual C#** , rozbalte **Data**a pak vyberte **soubor XML**. V **název** zadejte `SDKManifest.xml`a klikněte na tlačítko **OK** tlačítko.
+6. V seznamu **položek visual c#** rozbalte **položku Data**a vyberte **soubor XML**. Do pole **Název** `SDKManifest.xml`zadejte a pak zvolte tlačítko **OK.**
 
-7. Pomocí tohoto XML kódu nahraďte obsah souboru:
+7. Tento kód XML slouží k nahrazení obsahu souboru:
 
      [!code-xml[CreatingAnSDKUsingCpp#5](../extensibility/codesnippet/XML/walkthrough-creating-an-sdk-using-cpp_5.xml)]
 
-8. V **Průzkumníka řešení**v části **NativeMathVSIX** projekt, vytvořte tuto strukturu složek:
+8. V **Průzkumníku řešení**v rámci projektu **NativeMathVSIX** vytvořte tuto strukturu složek:
 
     ```xml
     \DesignTime
@@ -92,87 +92,87 @@ Tento návod ukazuje, jak vytvořit nativní C++ matematické knihovny sady SDK,
                 \Neutral
     ```
 
-9. V **Průzkumníka řešení**, otevřete místní nabídku pro **řešení "NativeMath"** a klikněte na tlačítko **otevřít složku v Průzkumníku souborů**.
+9. V **Průzkumníku řešení**otevřete místní nabídku **řešení NativeMath**a pak **v Průzkumníkovi souborů**zvolte Otevřít složku .
 
-10. V **Průzkumníka souborů**, kopie *$SolutionRoot$\NativeMath\NativeMath.h*a potom v **Průzkumníka řešení**v části **NativeMathVSIX**projektu, vložte ji *$SolutionRoot$ \NativeMathVSIX\DesignTime\CommonConfiguration\Neutral\Include\\*  složky.
+10. V **Průzkumníkovi souborů**zkopírujte *$SolutionRoot$\NativeMath\NativeMath.h*a potom v **Průzkumníku řešení**v rámci projektu **NativeMathVSIX** jej vložte do složky *\\ $SolutionRoot$\NativeMathVSIX\DesignTime\CommonConfiguration\Neutral\Include.*
 
-     Kopírování *$SolutionRoot$\Debug\NativeMath\NativeMath.lib*a vložte jej do *$SolutionRoot$ \NativeMathVSIX\DesignTime\Debug\x86\\*  složky.
+     Zkopírujte *$SolutionRoot$\Debug\NativeMath\NativeMath.lib*a vložte jej do složky *\\ $SolutionRoot$\NativeMathVSIX\DesignTime\Debug\x86.*
 
-     Kopírování *$SolutionRoot$\Debug\NativeMath\NativeMath.dll* a vložte ji *$SolutionRoot$ \NativeMathVSIX\Redist\Debug\x86\\*  složky.
+     Zkopírujte *soubor $SolutionRoot$\Debug\NativeMath\NativeMath.dll* a vložte jej do složky *$SolutionRoot$\NativeMathVSIX\Redist\Debug\x86.\\ *
 
-     Kopírování *$SolutionRoot$\Debug\NativeMathWRT\NativeMathWRT.dll* a vložte ji *$SolutionRoot$ \NativeMathVSIX\Redist\Debug\x86* složky.
-     Kopírování *$SolutionRoot$\Debug\NativeMathWRT\NativeMathWRT.winmd* a vložte ji *$SolutionRoot$ \NativeMathVSIX\References\CommonConfiguration\Neutral* složky.
+     Zkopírujte *$SolutionRoot$\Debug\NativeMathWRT\NativeMathWRT.dll* a vložte ji do složky *$SolutionRoot$\NativeMathVSIX\Redist\Debug\x86.*
+     Zkopírujte *$SolutionRoot$\Debug\NativeMathWRT\NativeMathWRT.winmd* a vložte jej do složky *$SolutionRoot$\NativeMathVSIX\References\CommonConfiguration\Neutral.*
 
-     Kopírování *$SolutionRoot$\Debug\NativeMathWRT\NativeMathWRT.pri* a vložte ji *$SolutionRoot$ \NativeMathVSIX\References\CommonConfiguration\Neutral* složky.
+     Zkopírujte *soubor $SolutionRoot$\Debug\NativeMathWRT\NativeMathWRT.pri* a vložte jej do složky *$SolutionRoot$\NativeMathVSIX\References\CommonConfiguration\Neutral.*
 
-11. V *$SolutionRoot$ \NativeMathVSIX\DesignTime\Debug\x86\\*  složce vytvořte textový soubor s názvem *NativeMathSDK.props*a pak vložte do něj následující obsah:
+11. Ve složce *$SolutionRoot$\NativeMathVSIX\DesignTime\Debug\x86\\ * vytvořte textový soubor s názvem *NativeMathSDK.props*a vložte do ní následující obsah:
 
     [!code-xml[CreatingAnSDKUsingCpp#7](../extensibility/codesnippet/XML/walkthrough-creating-an-sdk-using-cpp_7.xml)]
 
-12. V panelu nabídky zvolte **zobrazení** > **ostatní Windows** > **okno vlastností** (klávesnice: Zvolte **F4** klíč).
+12. Na řádku nabídek zvolte **Zobrazit** > další**okno vlastností systému** **Windows** > (Klávesnice: Zvolte klávesu **F4).**
 
-13. V **Průzkumníka řešení**, vyberte **NativeMathWRT.winmd** souboru. V **vlastnosti** okno Změnit **akce sestavení** vlastnost **obsahu**a potom změňte **zahrnout do VSIX** vlastnost  **Hodnota TRUE**.
+13. V **Průzkumníku řešení**vyberte soubor **NativeMathWRT.winmd.** V okně **Vlastnosti** změňte vlastnost **Akce sestavení** na **obsah**a potom změňte vlastnost Zahrnout **do vSIX** na **Hodnotu True**.
 
-     Opakujte tento postup u **NativeMath.h** souboru.
+     Tento postup opakujte pro soubor **NativeMath.h.**
 
-     Opakujte tento postup u **NativeMathWRT.pri** souboru.
+     Tento postup opakujte pro soubor **NativeMathWRT.pri.**
 
-     Opakujte tento postup u **NativeMath.Lib** souboru.
+     Tento postup opakujte pro soubor **NativeMath.Lib.**
 
-     Opakujte tento postup u **NativeMathSDK.props** souboru.
+     Tento postup opakujte pro soubor **NativeMathSDK.props.**
 
-14. V **Průzkumníka řešení**, vyberte **NativeMath.h** souboru. V **vlastnosti** okno Změnit **zahrnout do VSIX** vlastnost **True**.
+14. V **Průzkumníku řešení**vyberte soubor **NativeMath.h.** V okně **Vlastnosti** změňte vlastnost **Zahrnout do vSIX** na **True**.
 
-     Opakujte tento postup u **NativeMath.dll** souboru.
+     Tento postup opakujte pro soubor **NativeMath.dll.**
 
-     Opakujte tento postup u **NativeMathWRT.dll** souboru.
+     Tento postup opakujte pro soubor **NativeMathWRT.dll.**
 
-     Opakujte tento postup u **SDKManifest.xml** souboru.
+     Tento postup opakujte pro soubor **SDKManifest.xml.**
 
-15. V panelu nabídky zvolte **sestavení** > **sestavit řešení**.
+15. Na řádku nabídek zvolte **Build** > **Build Build Solution**.
 
-16. V **Průzkumníka řešení**, otevřete místní nabídku **NativeMathVSIX** projektu a klikněte na tlačítko **otevřít složku v Průzkumníku souborů**.
+16. V **Průzkumníku řešení**otevřete místní nabídku pro projekt **NativeMathVSIX** a pak zvolte **Otevřít složku v Průzkumníkovi souborů**.
 
-17. V **Průzkumníka souborů**, přejděte *$SolutionRoot$ \NativeMathVSIX\bin\Debug* složku a potom spusťte *NativeMathVSIX.vsix* a spusťte tak instalaci.
+17. V **Průzkumníkovi souborů**přejděte do složky *$SolutionRoot$\NativeMathVSIX\bin\Debug* a spusťte program *NativeMathVSIX.vsix* a začínejte s instalací.
 
-18. Zvolte **nainstalovat** tlačítko, počkejte na dokončení instalace a potom otevřete sadu Visual Studio.
+18. Zvolte tlačítko **Instalovat,** počkejte na dokončení instalace a otevřete Visual Studio.
 
-## <a name="createSample"></a> K vytvoření ukázkové aplikace, která používá knihovnu tříd
+## <a name="to-create-a-sample-app-that-uses-the-class-library"></a><a name="createSample"></a>Vytvoření ukázkové aplikace, která používá knihovnu tříd
 
-1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**.
+1. Na řádku nabídek zvolte **Soubor** > **nového** > **projektu**.
 
-2. V seznamu šablon rozbalte **Visual C++**  > **Windows Universal** a pak vyberte **prázdnou aplikaci**. V **název** zadejte **NativeMathSDKSample**a klikněte na tlačítko **OK** tlačítko.
+2. V seznamu šablon rozbalte **Visual C++** > **Windows Universal** a pak vyberte **Prázdná aplikace**. Do pole **Název** zadejte **NativeMathSDKSample**a pak zvolte tlačítko **OK.**
 
-3. V **Průzkumníka řešení**, otevřete místní nabídku **NativeMathSDKSample** projektu a klikněte na tlačítko **přidat** > **odkaz**.
+3. V **Průzkumníku řešení**otevřete místní nabídku projektu **NativeMathSDKSample** a pak zvolte **Přidat** > **odkaz**.
 
-4. V **přidat odkaz** dialogové okno, v seznamu typy odkazů, rozbalte **Universal Windows**a pak vyberte **rozšíření**. Nakonec vyberte **nativní sadou SDK matematické** zaškrtněte políčko a klikněte na tlačítko **OK** tlačítko.
+4. V dialogovém okně **Přidat odkaz** rozbalte v seznamu typů odkazů **položku Univerzální systém Windows**a vyberte **položku Rozšíření**. Nakonec zaškrtněte políčko **Nativní matematický sdk** a pak zvolte tlačítko **OK.**
 
-5. Zobrazte vlastnosti projektu pro NativeMathSDKSample.
+5. Zobrazení vlastností projektu pro nativeMathSDKSample.
 
-    Vlastnosti, které jste definovali v *NativeMathSDK.props* byly použity při přidání odkazu. Můžete ověřit kontrolou byly použity vlastnosti **adresáře VC ++** vlastnost projektu **vlastnosti konfigurace**.
+    Vlastnosti, které jste definovali v *nativemathsdk.props* byly použity při přidání odkazu. Vlastnosti můžete ověřit kontrolou **vlastností Adresářů VC++** **vlastnosti projektu vlastnosti konfigurace**.
 
-6. V **Průzkumníka řešení**, otevřete **MainPage.xaml**a pak pomocí následujících XAML nahraďte jeho obsah:
+6. V **Průzkumníku řešení**otevřete **soubor MainPage.xaml**a potom jeho obsah nahraďte pomocí následujícího xaml:
 
     [!code-xml[CreatingAnSDKUsingCppDemoApp#1](../extensibility/codesnippet/Xaml/walkthrough-creating-an-sdk-using-cpp_8.xaml)]
 
-7. Aktualizace *Mainpage.xaml.h* tak, aby odpovídala takto:
+7. Aktualizujte *soubor Mainpage.xaml.h* tak, aby odpovídal tomuto kódu:
 
     [!code-cpp[CreatingAnSDKUsingCppDemoApp#2](../extensibility/codesnippet/CPP/walkthrough-creating-an-sdk-using-cpp_9.h)]
 
-8. Aktualizace *MainPage.xaml.cpp* tak, aby odpovídala takto:
+8. Aktualizujte *soubor MainPage.xaml.cpp* tak, aby odpovídal tomuto kódu:
 
      [!code-cpp[CreatingAnSDKUsingCppDemoApp#3](../extensibility/codesnippet/CPP/walkthrough-creating-an-sdk-using-cpp_10.cpp)]
 
-9. Zvolte **F5** klíč ke spuštění aplikace.
+9. Zvolte klávesu **F5** pro spuštění aplikace.
 
-10. V aplikaci, zadejte jakékoli dvě čísla, vyberte operaci a klikněte na tlačítko **=** tlačítko.
+10. V aplikaci zadejte libovolná dvě čísla, vyberte operaci a pak zvolte **=** tlačítko.
 
-     Správný výsledek se zobrazí.
+     Zobrazí se správný výsledek.
 
-    Tento průvodce vám ukázal, jak vytvořit a použít rozšiřující sadu SDK pro volání do [!INCLUDE[wrt](../extensibility/includes/wrt_md.md)] knihovny a non -[!INCLUDE[wrt](../extensibility/includes/wrt_md.md)] knihovny.
+    Tento návod ukázal, jak vytvořit a použít sada SDK rozšíření pro volání do [!INCLUDE[wrt](../extensibility/includes/wrt_md.md)] knihovny a jiné než knihovny.[!INCLUDE[wrt](../extensibility/includes/wrt_md.md)]
 
 ## <a name="next-steps"></a>Další kroky
 
-## <a name="see-also"></a>Viz také:
-- [Návod: Vytvoření sady SDK s využitím C# nebo Visual Basic](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md)
-- [Vytvořit sadu software development kit](../extensibility/creating-a-software-development-kit.md)
+## <a name="see-also"></a>Viz také
+- [Návod: Vytvoření sady SDK pomocí jazyka C# nebo jazyka Visual Basic](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md)
+- [Vytvoření sady pro vývoj softwaru](../extensibility/creating-a-software-development-kit.md)

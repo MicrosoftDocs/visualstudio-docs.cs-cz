@@ -1,5 +1,5 @@
 ---
-title: Objekt VSTextView | Microsoft Docs
+title: Objekt VSTextView | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - VSTextView object, reference
 - views [Visual Studio SDK], reference
 ms.assetid: 78272ddc-9718-4c65-a94e-a44a2e8d54f4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 927bbee8bde62ff24396ea7b50e55e901b8cff06
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 81d5e02d6ec18f8561a83b414532a4b78def5c09
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189017"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697716"
 ---
 # <a name="vstextview-object"></a>Objekt VSTextView
 
-Textové zobrazení je okno, které umožňuje uživatelům zobrazit a upravit textovou vyrovnávací paměť textu v kódu Unicode. V podstatě se jedná o to, co většina uživatelů na Editor odkazuje. Vzhledem k tomu, že je zobrazení odděleno od vyrovnávací paměti různými textovými vrstvami (zalamování řádků, text sbalení a tak dále), není zaručeno, že zobrazení je přesná reprezentace textu ve vyrovnávací paměti. Další informace o zobrazení textu najdete v tématu [přístup k zobrazení TheText pomocí starší verze rozhraní API](/visualstudio/extensibility/accessing-thetext-view-by-using-the-legacy-api?view=vs-2015).
+Zobrazení textu je okno, které umožňuje uživatelům zobrazit a upravit text Unicode textové vyrovnávací paměti. Zobrazení je v podstatě to, co většina uživatelů označuje jako editor. Vzhledem k tomu, že zobrazení je odděleno od vyrovnávací paměti různými textovými vrstvami (zalamování řádků, osnova textu a tak dále), není zaručeno, že zobrazení bude přesnou reprezentací textu ve vyrovnávací paměti. Další informace o zobrazení textu naleznete [v tématu Přístup k zobrazení Text pomocí starší rozhraní API](/visualstudio/extensibility/accessing-thetext-view-by-using-the-legacy-api?view=vs-2015).
 
-Následující tabulka ukazuje rozhraní v objektu <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>.
+V následující tabulce jsou uvedena <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> rozhraní v objektu.
 
 |Rozhraní|Popis|
 |---------------|-----------------|
-|[IDropSource](/windows/desktop/api/oleidl/nn-oleidl-idropsource)|Standardní rozhraní OLE.|
+|[Zdroj IDrop](/windows/desktop/api/oleidl/nn-oleidl-idropsource)|Standardní rozhraní OLE.|
 |<xref:Microsoft.VisualStudio.OLE.Interop.IDropTarget>|Standardní rozhraní OLE.|
 |<xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite>|Standardní rozhraní OLE.|
 |<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|Standardní rozhraní OLE.|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>|Umožňuje vytváření složených akcí (tj. akcí, které jsou seskupeny v jedné jednotce zpět/znovu).|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>|Poskytuje základní metody pro správu a přístup k zobrazení. `IVsTextView` není bezpečný pro přístup z více vláken.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>|Umožňuje vytváření složených akcí (to znamená akcí seskupených do jedné jednotky vrátit nebo znovu).|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>|Poskytuje základní metody pro správu a přístup k zobrazení. `IVsTextView`není bezpečně vytesána se závitem.|
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|Vytvoří a spravuje podokno okna.|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLayeredTextView>|Komunikuje s vrstvami textu.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLayeredTextView>|Spolupracuje s textovými vrstvami.|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsThreadSafeTextView>|Provádí operace v zobrazení z jiného vlákna.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Úpravy obrázků](https://www.microsoft.com/download/details.aspx?id=55984)
 - [Objekt VSTextBuffer](../extensibility/vstextbuffer-object.md)

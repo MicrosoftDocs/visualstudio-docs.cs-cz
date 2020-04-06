@@ -1,5 +1,5 @@
 ---
-title: Maxframeworkversion – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Prvek MaxFrameworkVersion (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - <MaxFrameworkVersion> Element (Visual Studio Templates)
 - MaxFrameworkVersion Element (Visual Studio Templates)
 ms.assetid: f732a9d3-fc29-405b-9298-01ea83fc58b8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0a00e174e3454dcb054c13252ef699a7cbc87df8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9c3acf9c40499417fe180ce470224824cc89a113
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318596"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702625"
 ---
-# <a name="maxframeworkversion-element-visual-studio-templates"></a>Maxframeworkversion – element (šablony sady Visual Studio)
+# <a name="maxframeworkversion-element-visual-studio-templates"></a>Prvek MaxFrameworkVersion (šablony sady Visual Studio)
 
-Určuje maximální verzi rozhraní .NET Framework, který vyžaduje šablony. Určuje nejvyšší hodnotu, která je k dispozici v **cílovou verzi rozhraní Framework** rozevíracího seznamu z **nový projekt** dialogového okna. Aby uživatelé mohli vybrat verzi rozhraní framework, musíte zadat také [requiredframeworkversion –](../extensibility/requiredframeworkversion-element-visual-studio-templates.md) jako minimální verzi rozhraní .NET Framework pro šablonu.
+Určuje maximální verzi rozhraní .NET Framework, kterou šablona vyžaduje. Určuje nejvyšší hodnotu, která je k dispozici v rozevíracím okně **Verze cílového rozhraní** v dialogovém okně **Nový projekt.** Aby uživatelé mohli vybrat verzi architektury, musíte také zadat [RequiredFrameworkVersion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md) jako minimální verzi rozhraní .NET Framework pro šablonu.
 
 > [!IMPORTANT]
-> Od verze Visual Studio 2017 verze 15.6 a **cílovou verzi rozhraní Framework** rozevíracího seznamu už není filtr pro zobrazený šablony v **šablony** část **nový projekt** dialogového okna. Místo toho **cílovou verzi rozhraní Framework** rozevírací seznam funguje jako výběr framework pro vybranou šablonu.
+> Počínaje Visual Studio 2017 verze 15.6, cílový **rámec verze** rozevírací seznam již není filtr pro zobrazené šablony v části **Šablony** dialogového okna **Nový projekt.** Místo toho rozevírací nabídka **verze cílového rozhraní** funguje jako výběr architektury pro vybranou šablonu.
 
- \<VSTemplate> \<TemplateData> \<MaxFrameworkVersion>
+ \<VSTemplate \<> TemplateData> \<MaxFrameworkVersion>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,33 +34,33 @@ Určuje maximální verzi rozhraní .NET Framework, který vyžaduje šablony. U
 <MaxFrameworkVersion> ... </MaxFrameworkVersion>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazí buď **nový projekt** nebo **přidat novou položku** dialogové okno.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být nejvyšší číslo verze rozhraní .NET Framework, který je povolen pomocí šablony.
+ Text musí být nejvyšší číslo verze rozhraní .NET Framework, který je povolen šablonou.
 
 ## <a name="remarks"></a>Poznámky
 
-`MaxFrameworkVersion` je volitelný prvek. `MaxFrameworkVersion` Elementu musí vynechat, pokud to není nutné, aby nedocházelo k neúmyslně omezit rozsah z balíčků .NET Framework verze šablony. Musí být také vynechána, pokud rozhraní .NET Framework se nedá použít v šabloně.
+`MaxFrameworkVersion`je volitelný prvek. Prvek `MaxFrameworkVersion` by měl být vynechán, pokud není vyžadován, aby nedošlo k neúmyslnému omezení podporovaného rozsahu verzí rozhraní .NET Framework pro šablonu. Měl by být také vynechán, pokud rozhraní .NET Framework není pro šablonu použitelné.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje metadata pro standardní [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablony třídy.
+Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablonu standardní třídy.
 
 ```xml
 <VSTemplate Type="Item" Version="3.0.0"
@@ -80,9 +80,9 @@ Následující příklad ukazuje metadata pro standardní [!INCLUDE[csprcs](../d
 </VSTemplate>
 ```
 
-V tomto příkladu, maximální verze rozhraní .NET Framework, která je nutná šablonou, reprezentovaný `MaxFrameworkVersion`, je 4.7.1. Do projektu vytvořeného s touto šablonou můžete cílit na rozhraní .NET Framework verze až 4.7.1.
+V tomto příkladu je maximální verze rozhraní .NET Framework, `MaxFrameworkVersion`která je vyžadována šablonou, reprezentovaná rozhraním 4.7.1. Projekt vytvořený pomocí této šablony může cílit na verze rozhraní .NET Framework až do verze 4.7.1.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

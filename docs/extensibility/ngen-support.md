@@ -1,50 +1,50 @@
 ---
-title: Podpora Ngen ve VSIX v. 3 | Dokumentace Microsoftu
+title: Podpora Ngen ve vSIX v3 | Dokumenty společnosti Microsoft
 ms.date: 11/09/2016
 ms.topic: conceptual
 ms.assetid: 1472e884-c74e-4c23-9d4a-6d8bdcac043b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 24f1b0a26875bbbf8dfc4ac7db1049f7309d9aa2
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.openlocfilehash: cb75b9256ca937106235fa7a7d66d9cec71c9c60
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67891121"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702403"
 ---
 # <a name="ngen-support-in-vsix-v3"></a>Podpora Ngen ve VSIX v. 3
 
-Pomocí sady Visual Studio 2017 a nové VSIX v. 3 manifestu rozšíření (verze 3) formát, teď můžou vývojáři rozšíření "ngen" jejich sestavení v době instalace.
+S Visual Studio 2017 a nový Formát manifestu rozšíření VSIX v3 (verze 3) rozšíření, rozšíření vývojáři nyní "ngen" jejich sestavení v době instalace.
 
-Níže je výňatkem z webu MSDN, která vysvětluje, jaké "ngen" dělá:
+Níže je výňatek z MSDN, který vysvětluje, co "ngen" dělá:
 
->Native Image Generator (*Ngen.exe*) je nástroj zvyšující výkon spravovaných aplikací. *Ngen.exe* vytváří nativní bitové kopie, které jsou soubory obsahující zkompilovaný strojový kód závislý na procesoru a nainstaluje je do mezipaměti nativních bitových kopií v místním počítači. Modul runtime může ke kompilaci původního sestavení použít nativní bitové kopie z mezipaměti namísto kompilátoru JIT (just-in-time).
+>Generátor nativního obrazu (*Ngen.exe*) je nástroj, který zlepšuje výkon spravovaných aplikací. *Ngen.exe* vytvoří nativní bitové kopie, což jsou soubory obsahující zkompilovaný strojový kód specifický pro procesor, a nainstaluje je do nativní mezipaměti bitových kopií v místním počítači. Modul runtime může ke kompilaci původního sestavení použít nativní bitové kopie z mezipaměti namísto kompilátoru JIT (just-in-time).
 >
->z [Ngen.exe (Generátor nativních obrázků)](/dotnet/framework/tools/ngen-exe-native-image-generator)
+>od [Ngen.exe (Nativní generátor obrázků)](/dotnet/framework/tools/ngen-exe-native-image-generator)
 
-Aby "ngen" sestavení musí být rozšíření VSIX nainstalován "jednotlivé instance vázaná na počítač". Lze povolit zaškrtnutím políčka "all users" `extension.vsixmanifest` návrháře:
+Aby bylo možné "ngen" sestavení, VSIX musí být nainstalován "per-instance per-machine". To lze povolit zaškrtnutím zaškrtávacího `extension.vsixmanifest` políčka "všichni uživatelé" v návrháři:
 
-![Zkontrolujte všechny uživatele](media/check-all-users.png)
+![kontrola všech uživatelů](media/check-all-users.png)
 
-## <a name="how-to-enable-ngen"></a>Povolení technologie Ngen
+## <a name="how-to-enable-ngen"></a>Jak povolit Ngen
 
-Pokud chcete povolit ngen pro sestavení, můžete použít **vlastnosti** okna v sadě Visual Studio.
+Chcete-li povolit ngen pro sestavení, můžete použít okno **Vlastnosti** v sadě Visual Studio.
 
-Existují 4 vlastnosti, které je možné nastavit:
+K dispozici jsou 4 vlastnosti, které lze nastavit:
 
-1. **Ngen** (Boolean) – Pokud je hodnota true, instalační program sady Visual Studio bude "ngen" sestavení.
-2. **Aplikace Ngen** (string) – Ngen nabízí možnost použití aplikace *app.config* souboru, aby bylo možné vyřešit závislosti sestavení. Tato hodnota musí být nastavena na aplikaci jehož *app.config* chcete použít (relativní k adresáři instalace sady Visual Studio).
-3. **Architektura Ngen** (výčtu) – architektura pro nativní kompilaci vašeho sestavení. Možnosti jsou:. NotSpecified b. X86 c. X64 d. Všechny
-4. **Priorita Ngen** (celé číslo mezi 1 a 3) – úroveň The Ngen Priority je popsána v [úrovně priority Ngen.exe](/dotnet/framework/tools/ngen-exe-native-image-generator#priority-levels).
+1. **Ngen** (Boolean) - Pokud true, instalační program sady Visual Studio bude "ngen" sestavení.
+2. **Ngen aplikace** (řetězec) - Ngen poskytuje možnost použít soubor *app.config* aplikace k vyřešení závislosti sestavení. Tato hodnota by měla být nastavena na aplikaci, jejíž *application.config* chcete použít (vzhledem k instalačnímu adresáři sady Visual Studio).
+3. **Ngen Architektura** (výčtu) - architektura nativně zkompilovat sestavení. Možnosti jsou: a. NotSpecified b. X86 c. X64 d. Všechny
+4. **Priorita Ngen** (celé číslo mezi 1 a 3) - Úroveň priority Ngen je dokumentována na [úrovních priority Ngen.exe](/dotnet/framework/tools/ngen-exe-native-image-generator#priority-levels).
 
-Tady se můžete podívat na **vlastnosti** okno v akci:
+Zde je pohled na okno **Vlastnosti** v akci:
 
-![v dialogovém okně Vlastnosti Ngen](media/ngen-in-properties.png)
+![ngen ve vlastnostech](media/ngen-in-properties.png)
 
-Metadata se přidá do projektu odkaz v projektu VSIX *.csproj* souboru:
+Tím přidáte metadata do odkazu projektu uvnitř souboru *.csproj* projektu VSIX:
 
 ```xml
  <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
@@ -58,8 +58,8 @@ Metadata se přidá do projektu odkaz v projektu VSIX *.csproj* souboru:
 ```
 
 > [!NOTE]
-> Pokud dáváte přednost můžete přímo, upravte soubor csproj.
+> Soubor .csproj můžete upravit přímo, pokud dáváte přednost.
 
 ## <a name="extra-information"></a>Další informace
 
-Vlastnosti návrháře změny se aplikují na víc než jenom odkazy projektu; můžete nastavit metadata Ngen pro položky v rámci projektu také (pomocí stejných metod, popsané výše), dokud položky jsou sestavení .NET.
+Změny návrháře vlastností platí pro více než jen odkazy na projekt; můžete nastavit metadata Ngen pro položky uvnitř projektu také (pomocí stejných metod popsaných výše), pokud jsou položky .NET sestavení.

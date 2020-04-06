@@ -1,5 +1,5 @@
 ---
-title: Průvodce (. Soubor vsz) | Dokumentace Microsoftu
+title: Průvodce (. Vsz) Soubor | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - vsz files
 - wizards, files
 ms.assetid: 72e1d0f3-eef1-455e-b803-96827f030f50
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b4bbd69bc92ee96fcf93749aa6f700ad76ff72c8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0fedf409c0ca320c054ddf1cc16318d08d25463a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309722"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80703314"
 ---
 # <a name="wizard-vsz-file"></a>Soubor průvodce (.Vsz)
 
-Integrované vývojové prostředí (IDE) používá souborů .vsz ke spouštění průvodců. Tyto soubory .vsz obsahují informace, které prostředí IDE používá k určení, které průvodce k volání a jaké informace se mají předat do průvodce.
+Integrované vývojové prostředí (IDE) používá soubory .vsz ke spuštění průvodců. Tyto soubory .vsz obsahují informace, které rozhraní IDE používá k určení, který průvodce má volat a jaké informace mají být mu předávány.
 
-Soubor .vsz je verze souboru textu ve formátu .ini, který nemá žádné oddíly. Informace o známých rozhraní IDE se ukládají na začátku souboru. To poskytuje spojení mezi průvodce, který volá rozhraní IDE a parametry, které jsou v souboru .vsz předávat do integrovaného vývojového prostředí. Zbytek souboru obsahuje parametry, které jsou specifické pro průvodce a, který se má shromažďovat integrovaného vývojového prostředí a předat konkrétní průvodce.
+Soubor .vsz je verze textového souboru formátu INI, který nemá žádné oddíly. Informace známé ide je uložen na začátku souboru. To poskytuje propojení mezi průvodcem, který volá rozhraní IDE, a parametry, které jsou v souboru .vsz, který má být předán rozhraní IDE. Zbytek souboru poskytuje parametry, které jsou specifické pro průvodce a které mají být shromažďovány rozhraním IDE a předány konkrétnímu průvodci.
 
-Následující příklad ukazuje obsah souboru.
+Následující příklad ukazuje obsah souboru .vsz.
 
 ```
 VSWizard 8.0
@@ -34,19 +34,19 @@ Param="WIZARDNAME = Wizard One"
 Param="WIZARDUI = FALSE"
 ```
 
-Toto jsou částí v souboru.
+Následují části souboru .vsz.
 
 |Část|Popis|
 |----------|-----------------|
-|VSWizard|První parametr v souboru je číslo verze formátu souboru šablony. Toto číslo verze musí být 6.0, 7.0, 7.1 nebo 8.0. Různé počty nelze spustit a způsobit chybu neplatný formát.|
-|Průvodce|Toto pole obsahuje OLE ProgID průvodce, případně řetězcové vyjádření identifikátoru GUID CLSID průvodce, který je spoluvytvářen pomocí integrovaného vývojového prostředí.|
-|Param|Tyto části jsou volitelné. Můžete přidat až potřebné.|
+|VSWizard|Prvním parametrem v souboru je číslo verze formátu souboru šablony. Toto číslo verze musí být 6.0, 7.0, 7.1 nebo 8.0. Jiná čísla nelze spustit a způsobit chybu neplatného formátu.|
+|Průvodce|Toto pole obsahuje identifikátor OLE ProgID průvodce nebo zástupce řetězce GUID identifikátoru CLSID průvodce, který je vytvořen rozhraním IDE.|
+|Param|Tyto díly jsou volitelné. Můžete přidat tolik, kolik potřebujete.|
 
-Parametry povolení souboru .vsz předávat další vlastní parametry průvodce. Každá hodnota předána jako element řetězce v poli variant průvodce. Další informace najdete v tématu [vlastní parametry](../../extensibility/internals/custom-parameters.md).
+Parametry umožňují, aby soubor VSZ předal průvodci další vlastní parametry. Každá hodnota je předána jako prvek řetězce v poli variant průvodce. Další informace naleznete [v tématu Vlastní parametry](../../extensibility/internals/custom-parameters.md).
 
-Pro přidání ID národního prostředí výchozí do souboru .vsz, zadejte `FALLBACK_LCID`= xxxx, kde xxxx je ID národního prostředí, například 1033 pro angličtinu. Když `FALLBACK_LCID` je definován parametr, Průvodce používá ID zadaného národního prostředí pro použití náhradní lokality, pokud aktuální ID nebyl nalezen.
+Chcete-li do souboru .vsz přidat výchozí `FALLBACK_LCID`ID národního prostředí, zadejte =xxxx, kde xxxx je ID národního prostředí, například 1033 pro angličtinu. Pokud `FALLBACK_LCID` je definován parametr, průvodce použije zadané ID záložního národního prostředí, pokud není nalezeno aktuální ID.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vlastní parametry](../../extensibility/internals/custom-parameters.md)
 - [Průvodci](../../extensibility/internals/wizards.md)

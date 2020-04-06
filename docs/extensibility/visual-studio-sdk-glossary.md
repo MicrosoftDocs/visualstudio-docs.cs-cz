@@ -1,140 +1,140 @@
 ---
-title: Glosář sady Visual Studio SDK | Dokumentace Microsoftu
+title: Glosář sady Visual Studio SDK | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - glossary [Visual Studio SDK]
 ms.assetid: b64d432b-c39b-4904-ad18-3c3218b6e3aa
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5aa8398f3a102031c3a40074f76557ef311d4d7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 332e606e689e9394f2fcdc8cbc902e2d4a6e5ab5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322409"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698159"
 ---
-# <a name="visual-studio-sdk-glossary"></a>Visual Studio SDK Glosář
-Tento glosář obsahuje definice podmínek, které se používají v [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] dokumentaci.
+# <a name="visual-studio-sdk-glossary"></a>Glosář sady Visual Studio SDK
+Tento glosář obsahuje definice termínů, [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] které se používají v dokumentaci.
 
-## <a name="terms"></a>Podmínky
- doplněk aplikace nástroj, ovladač nebo jiný software přidané do primární aplikace. V sadě Visual Studio integrované vývojové prostředí (IDE) je doplněk aplikace založené na službě Automation, která rozšiřuje možnosti integrovaného vývojového prostředí.
+## <a name="terms"></a>Výrazy
+ Doplněk Nástrojová aplikace, ovladač nebo jiný software přidaný do primární aplikace. V integrovaném vývojovém prostředí sady Visual Studio (IDE) je doplněk aplikace založená na automatizaci, která rozšiřuje možnosti integrovaného prostředí.
 
- model automatizace modelu automatizace, známá v předchozích verzích sady Visual Studio jako model rozšiřitelnosti, je programovací rozhraní, které poskytuje přístup k základní rutiny tuto jednotku integrovaného vývojového prostředí. Doplňky, průvodci a makra použít objekty v modelu automatizace pro ovládací prvek nebo rozšiřovat funkce integrovaného vývojového prostředí.
+ Model automatizace Model automatizace, známý v předchozích verzích sady Visual Studio jako model rozšiřitelnosti, je programovací rozhraní, které umožňuje přístup k základním rutinám, které řídí rozhraní IDE. Doplňky, průvodci a makra používají objekty v modelu automatizace k řízení nebo rozšíření funkcí rozhraní IDE.
 
- příkaz kontextu uživatelského rozhraní přidružení identifikátoru GUID, zda se příkaz uživatelského rozhraní nebo element jako je panel nástrojů. Příkaz kontextu uživatelského rozhraní je na rozdíl od kontext výběru není připojen k časového období.
+ příkaz Kontext uživatelského rozhraní Přidružení identifikátoru GUID s viditelností příkazu uživatelského rozhraní nebo prvku, například panelu nástrojů. Kontext ui příkazu je na rozdíl od kontextu výběru v tom, že není připojen k oknu.
 
- Příkaz kontextu uživatelského rozhraní umožňuje:
+ Kontext příkazového ui lze použít k:
 
-- Identifikátor GUID přiřadíte panel nástrojů, který se zobrazí, když se aktivuje konkrétní okno.
+- Přiřaďte identifikátor GUID k panelu nástrojů, který se zobrazí při aktivaci určitého okna.
 
-- Přiřadíte identifikátor GUID na dostupnost příkazu bez nutnosti načtení nebo spuštění VSPackage.
+- Přiřaďte identifikátor GUID k dostupnosti příkazu bez nutnosti načíst nebo spustit balíček VSPackage.
 
-- Přiřaďte GUID ovlivnit aktivní vazbu klíče.
+- Přiřaďte identifikátor GUID, který ovlivní vazbu aktivního klíče.
 
-- Přiřadíte identifikátor GUID zapnout záznam makra.
+- Přiřaďte identifikátor GUID k zapnutí záznamu makra.
 
-- Přiřadíte identifikátor GUID k aktivaci režimu ladění nebo přepínat mezi návrhem a režimu běhu v editoru.
+- Přiřaďte identifikátor GUID k aktivaci režimu ladění nebo k přepínání mezi režimem návrhu a spuštění v editoru.
 
-  komponenta software, který můžete vytvořit součást funkce aplikace bez této aplikace má již existující informace o implementaci pro software. Komunikace mezi komponenty a aplikace je výhradně prostřednictvím rozhraní OLE style.
+  component Část softwaru, která může být součástí funkce aplikace, aniž by tato aplikace měla všechny již existující informace o implementaci softwaru. Komunikace mezi komponentou a aplikací probíhá výhradně prostřednictvím rozhraní stylu OLE.
 
-  služby Správce komponent, `SOleComponentManager`, který poskytuje služby koordinace bez uživatelského rozhraní pro součásti nejvyšší úrovně. `SOleComponentManager` Služba implementuje `IOleComponentManager` rozhraní.
+  Správce komponent Služba `SOleComponentManager`, která poskytuje služby koordinace neuživatelského rozhraní pro součásti nejvyšší úrovně. Služba `SOleComponentManager` implementuje `IOleComponentManager` rozhraní.
 
-  součásti uživatelského rozhraní Správce služby, `SOleComponentUIManager`, který poskytuje uživatelské rozhraní koordinace služby. `SOleComponentUIManager` Služba implementuje `IOleComponentUIManager` a `IOleInPlaceComponentUIManager` rozhraní.
+  správce uživatelského rozhraní `SOleComponentUIManager`komponenty A služba , která poskytuje služby koordinace uživatelského rozhraní. Služba `SOleComponentUIManager` implementuje `IOleComponentUIManager` `IOleInPlaceComponentUIManager` rozhraní a.
 
-  kontejner objektů a dat kontextu `IVsUserContext` objekt (objekt modelu COM) připojené k jako součást prostředí. Tento objekt obsahuje klíčová slova pro vyhledávání, **F1** klíčová slova a atributy, které se vztahují na komponentu. Kontext kontejnery objektů a dat dále odkazovat na žádné kontext kontejnery objektů a dat, které jsou propojeny k nim.
+  kontextová `IVsUserContext` taška Objekt (objekt COM) připojený ke součásti prostředí. Tento objekt obsahuje vyhledávací klíčová slova, klíčová slova **F1** a atributy, které se vztahují k komponentě. Kontexttašky navíc přejděte na všechny podkontextové tašky, které jsou s nimi propojeny.
 
-  kontext zprostředkovatele A komponenty v integrovaném vývojovém prostředí, který se má kontext kontejneru s ním spojená. Tyto součásti zahrnují panel nástrojů, editor nebo projekt hierarchie.
+  zprostředkovatel kontextu Součást v ide, která má kontextový vak s ním spojené. Tyto součásti zahrnují okno nástroje, editor nebo hierarchii projektu.
 
-  Návrhář programovací rozhraní, který umožňuje uživatelům pracovat s prvky uživatelského rozhraní (formuláře, tlačítka a další ovládací prvky).
+  Návrhář Programovací rozhraní, které umožňuje uživatelům manipulovat s prvky uživatelského rozhraní (formuláře, tlačítka a další ovládací prvky).
 
-  Objekt DocData A COM zapouzdření podkladová data dokumentu ve světě, ve kterých je oddělení dokument/zobrazení (například v případě text editor, by to byl textové vyrovnávací paměti základního všechna zobrazení textového editoru). Pokud EditorFactory neposkytuje tento objekt, rozhraní IDE vyrábí jeden svým jménem. Odpovědnosti tento objekt je ke správě trvalost dat a sdílení sémantiky pro více zobrazení přes to stejné `DocData`. Pokud `DocData` podporuje `IOleCommandTarget` rozhraní, je zahrnutý v směrování příkazů UIShell.
+  DocData Objekt COM zapouzdřující podkladová data dokumentu ve světě, kde je oddělení dokumentu/zobrazení (například v případě textového editoru by to byla textová vyrovnávací paměť, která je základem všech zobrazení textového editoru). Pokud EditorFactory neposkytuje tento objekt, ide vyrábí jeden jeho jménem. Odpovědnost tohoto objektu je spravovat trvalost dat a sdílení sémantiku pro více zobrazení přes totéž `DocData`. Pokud `DocData` objekt podporuje `IOleCommandTarget` rozhraní, je součástí směrování příkazů prostředí UIShell.
 
-  K hostování uživatelského rozhraní v rámci poskytované hostitelem používá technologii DocObject. Přesněji řečeno, tento výraz odkazuje na všechny vložení, který podporuje `IOleDocument` a souvisejících rozhraní. Tato technologie má mnoho možných aplikací, jako jsou podrobnosti implementace modelu COM dokumentů, oken nástrojů v jazyce Visual Basic 5.0, návrháři ActiveX v jazyce Visual Basic 6.0 a tak dále.
+  DocObject Technologie slouží k hostování uI v rámci poskytované hostitelem. Přesněji řečeno, tento termín odkazuje na `IOleDocument` jakékoli vkládání, které podporuje a související rozhraní. Tato technologie má mnoho potenciálních aplikací, jako jsou podrobnosti implementace dokumentů COM, okna nástrojů v jazyce Visual Basic 5.0, návrháři ActiveX v jazyce Visual Basic 6.0 a tak dále.
 
-  dokument slouží k obecně naleznete v dokumentu jako celek – jak `DocData` a `DocView`. Například DocumentFrame obsahuje `DocView`, ale také uchovává odkaz na `DocData` zpracování trvalosti.
+  dokument: Slouží k obecnému odkazu na dokument `DocData` jako `DocView`celek – jak na . Například DocumentFrame obsahuje `DocView`, ale také zachová odkaz `DocData` na pro zpracování trvalost.
 
-  DocView The DocObject/vložení/WindowPane pomocí kterého uživatel pracuje na Zobrazit a pracovat s podkladovým `DocData`. Není uživatelé využívají výhod Document/View oddělení, který je součástí `DocObject` návrh rozhraní. Uživatelé používat celý DocObject tak, aby fungoval jako zobrazení namísto použití více abstraktní (a méně formalizovanou) pojem podkladová data označované jako `DocData`. `DocView` objekty jsou vždy integrované s objekty rámce dokumentu (podřízených oken MDI) rozhraní IDE.
+  DocView DocObject/Embedding/WindowPane, se kterým uživatel spolupracuje k zobrazení `DocData`a manipulaci s podkladem . Uživatelé nevyužívají výhod oddělení document/view, které `DocObject` je součástí návrhu rozhraní. Uživatelé používají celý DocObject fungovat jako zobrazení namísto použití více abstraktní (a méně `DocData`formalizované) pojem podkladových dat známý jako . `DocView`objekty jsou vždy vloženy s objekty rámečku dokumentu (podřízenými okny MDI) integrovaného prostředí.
 
-  DTE `DTE` (rozšíření nástrojů pro vývoj) objektu je úplně nahoře přístupový bod v modelu automatizace sady Visual Studio, který umožňuje programově automatizovat a rozšířit rozhraní IDE.
+  DTE `DTE` Objekt (Rozšiřitelnost vývojových nástrojů) je nejvíce nejnavštěvovanějším přístupovým bodem v modelu automatizace sady Visual Studio, který umožňuje programově automatizovat a rozšířit rozhraní IDE.
 
-  Dynamická nápověda panelu nástrojů okno, které je implementované integrovaným vývojovým prostředím a zobrazí seznam vyhledávání – klíčové slovo nebo **F1** témata nápovědy.
+  Okno nástroje dynamické nápovědy, které je implementováno nástrojem IDE a zobrazuje seznam vyhledávacího klíčového slova nebo témat nápovědy **F1.**
 
-  Editor kódu (třída, identifikátor CLSID), který implementuje `DocView`. Implementuje navíc `DocData` Pokud podporuje zobrazení a data oddělení.
+  editor kód (třída, CLSID), `DocView`který implementuje . Také implementuje, `DocData` pokud je podporováno zobrazení a oddělení dat.
 
-  rozšíření A funkce, která upravuje, upraví nebo přidá do rozhraní IDE. Vytváření rozšíření pomocí modelu automatizace nebo rozšíření VSPackages.
+  rozšíření Funkce, která upravuje, přizpůsobuje nebo přidává do rozhraní IDE. Rozšíření můžete vytvořit pomocí modelu automatizace nebo VSPackages.
 
-  externí editor editor, který se neomezuje jen na rozhraní IDE, jako je například Microsoft Word. Byl zaregistrován prostřednictvím vlastní mechanismy a je možné mimo rozhraní IDE. Pokud tento editor může být vložen, zobrazí se v rámci okna v rozhraní IDE. Pokud nemůže být vložený, se vytvoří samostatné okno nejvyšší úrovně.
+  externí editor Editor, který není specifický pro rozhraní IDE, například Microsoft Word. Byla registrována prostřednictvím vlastních mechanismů a může být použita mimo ide. Pokud tento editor lze vložit, zobrazí se v okně v integrovaném rozhraní. Pokud jej nelze vložit, vytvoří se samostatné okno nejvyšší úrovně.
 
-  hierarchie stromu uzlů, každý uzel přidružený sadu vlastností.
+  hierarchie Strom uzlů, každý uzel přidružený k sadě vlastností.
 
-  součást nezávislé nejvyšší úrovně A součást, která používá nemodálního okna nejvyšší úrovně a může efektivně pracovat jako samostatné aplikace rozhraní okna, ale je implementována jako objekt v rámci procesu. Proto musí komponentu nezávislé nejvyšší úrovně koordinovat modalitě a služba smyčky zpráv pomocí integrovaného vývojového prostředí. Objekty v rámci procesu nemají své vlastní smyčku zpráv.
+  nezávislá komponenta nejvyšší úrovně Komponenta, která používá nemodivé okno nejvyšší úrovně a může efektivně fungovat jako samostatné okno aplikace, ale je implementována jako objekt v procesu. Proto musí nezávislá komponenta nejvyšší úrovně koordinovat modalitu a služby smyčky zpráv s ide. Objekty v procesu nemají vlastní smyčku zpráv.
 
-  Poskytovatel informací o zprostředkovateli informace je modul, který můžete vyhledat klíčová slova a vrátí seznam témat, formu `IVsUserContextItem` objekty. K poskytování **F1** – klíčové slovo vyhledávání položek pro zprostředkovatele informace, zaregistrujte zkompilovaný soubor nápovědy ( *. HxS*) se systémem. Témata nápovědy v těchto souborech zadejte seznam témat týkajících se zobrazí v okně Dynamická nápověda a zobrazí, zda uživatel stiskne **F1**.
+  poskytovatel informací Poskytovatel informací je modul, který dokáže vyhledat klíčová slova a `IVsUserContextItem` vrátit seznam témat ve formě objektů. Chcete-li poskytnout položky klíčových slov **F1** a vyhledávání pro poskytovatele informací, zaregistrujte zkompilovaný soubor nápovědy (*. HxS*) se systémem. Témata nápovědy v těchto souborech poskytují seznam témat zobrazených v okně Dynamické nápovědy a zobrazení, zda uživatel stiskne **klávesu F1**.
 
-  místní objekt balíčku VSPackage A komponenty, který implementuje `IOleInPlaceComponent` rozhraní pro správu okno, které je vizuálně obsažené v okně dokumentu vlastněné integrovaného vývojového prostředí. Místní součásti není součástí standardní OLE-slučování nabídek; Místo toho jsou jejich prvky uživatelského rozhraní integrace do integrovaného vývojového prostředí.
+  na místě komponenty VSPackage objekt, `IOleInPlaceComponent` který implementuje rozhraní pro správu okna, které je vizuálně obsaženo v okně dokumentu vlastněné ide. Místní součásti se neúčastní standardního slučování nabídek OLE; místo toho integrují své prvky uživatelského rozhraní do rozhraní IDE.
 
-  Existují dva typy místní komponenty: standardní kabelové místní komponenty a ovládací prvky komponenty.
+  Existují dva typy součástí na místě: pevně zapojené komponenty a ovládací prvky komponent.
 
-  Standardní kabelové místní součásti mají nabídky, panely nástrojů a příkazů, které jsou úzce integrovány do uživatelského rozhraní IDE, jako povolí, pokud byly vytvořeny přímo do integrovaného vývojového prostředí.
+  Pevně integrované komponenty mají nabídky, panely nástrojů a příkazy, které jsou pevně integrovány do uživatelského rozhraní integrovaného prostředí IDE a vypadají, jako by byly integrovány přímo do integrovaného vývojového prostředí.
 
-  Součásti ovládacích prvků nemáte žádný vlastní prvky uživatelského rozhraní, integrovaný do rozhraní IDE; Místo toho používají nabídek rozhraní IDE, příkazy a panelů nástrojů. Může například použít příkaz tučné mají být zobrazena tučně vybrané aplikace word v rámci ovládacího prvku RTF vložené ve formuláři. Součásti ovládacích prvků však může vyžádat, aby dynamicky nainstalované komponenty konkrétní prvky uživatelského rozhraní zobrazily.
+  Ovládací prvky komponent nemají žádné vlastní prvky uživatelského rozhraní integrované do integrovaného vývojového prostředí; místo toho používají nabídky, příkazy a panely nástrojů prostředí IDE. Příkaz Tučné lze například použít k tučnému vybranému slovu v ovládacím prvku s formátovaným textem vloženém do formuláře. Ovládací prvky komponent však můžete požadovat, aby dynamicky instalované prvky uživatelského rozhraní specifické pro komponenty.
 
-  jazykové služby A sadu objektů, které umožňuje vývojářům VSPackage k implementaci funkcí jazyka počítače editory kódu, jako je text označení a barevné označování.
+  Jazyková služba Sada objektů, která vývojářům aplikace VSPackage umožňuje implementovat funkce editorů kódu počítačového jazyka, jako je označování textu a vybarvení.
 
-  Různé soubory projektu projektu použitému k uložení otevřených souborů, které nejsou v každém projektu. Seznam položek v tomto projektu není trvalý.
+  Různé soubory projektu Project slouží k domu otevřené soubory, které nejsou v žádném projektu. Seznam položek v tomto projektu není trvalý.
 
-  Projekt projekty jsou tvořené hierarchie objekty nebo objekty COM, které implementují `IVsHierarchy` rozhraní.
+  projekt projekt projekt projekty jsou tvořeny objekty hierarchie nebo COM objekty, které implementují `IVsHierarchy` rozhraní.
 
-  specifické pro projekt Návrhář nebo editor A Návrhář, který nelze použít bez ohledu na jejich typ projektu. Všechny návrháře specifické pro projekt, musíte zadat informace o jejich objekt pro vytváření editoru v registru. Integrované vývojové prostředí pak můžete vytvořit instanci Návrháře pokaždé, když určitý typ souboru se otevře v konkrétním projektu.
+  Návrhář nebo editor specifický pro projekt Návrhář, který nelze použít nezávisle na typu projektu. Všichni návrháři specifické pro projekt musí zadat informace editor factory v registru. IDE pak můžete vytvořit instanci návrháře při každém otevření určitého typu souboru v určitém projektu.
 
-  okna okno A typu projektu, který neustále sleduje hierarchie aktuálně aktivní projektu a položky z kontextu globálního výběru. Pomocí typu projektu windows `SVsTrackSelectionEx` IDE změny výstrah a zobrazit zpětné vazby pro uživatele. Průzkumník řešení je příkladem okno typ projektu.
+  Okno typu projektu Okno, které neustále sleduje aktuálně aktivní hierarchii projektu a položku z kontextu globálního výběru. Okna typu project `SVsTrackSelectionEx` používají službu k upozornění ide změn a zobrazení zpětné vazby pro uživatele. Průzkumník řešení je příkladem okna typu projektu.
 
-  Okno Vlastnosti dříve prohlížeč vlastností.
+  Okno Vlastnosti Dříve prohlížeč vlastností.
 
-  odkaz na projekty založené na projekt, který nevyžaduje, aby soubory projektu ve stejném adresáři. Místo toho odkazy na soubory z jiných adresářů nesouvisejících ukládání a udržuje samotného projektu.
+  projekty založené na odkazech Projekt, který nevyžaduje soubory pro projekt, který má být ve stejném adresáři. Místo toho jsou odkazy na soubory z jiných nesouvisejících adresářů uloženy a udržovány samotným projektem.
 
-  spuštění tabulky interní strukturu dokumentu pomocí kterého rozhraní IDE udržuje seznam všech aktuálně otevřených dokumentů. Seznam obsahuje všechny otevřené dokumenty v paměti bez ohledu na to, zda dokumenty jsou právě upravována. Dokument je všechny položky, které se uloží, včetně uložených procedur otevřít v editoru, soubory v projektu nebo souboru hlavního projektu (například soubor *.vcproj).
+  spuštění tabulky dokumentů Vnitřní struktura, kterou ide udržuje seznam všech aktuálně otevřených dokumentů. Seznam obsahuje všechny otevřené dokumenty v paměti bez ohledu na to, zda jsou dokumenty právě upravovány. Dokument je libovolná položka, která je uložena, včetně uložených procedur otevřených v editoru, souborů v projektu nebo v hlavním souboru projektu (například soubor *.vcproj).
 
-  kontext výběru dat, která je součástí podrobností každého okna v rozhraní IDE a slouží ke sledování aktivních výběrů. Výběr kontext se skládá z:
+  kontext výběru Data, která jsou součástí podrobností každého okna v ide a slouží ke sledování aktivních výběrů. Kontext výběru se skládá z:
 
-- Ukazatel `IVsHierarchy` rozhraní hierarchie projektu
+- Ukazatel na `IVsHierarchy` rozhraní hierarchie projektu
 
-- Identifikátor položky, položky projektu.
+- Identifikátor položky projektu.
 
-- Ukazatel `ISelectionContainer` rozhraní poskytuje přístup k vlastnostem pro aktivní objekty.
+- Ukazatel na `ISelectionContainer` rozhraní poskytující přístup k vlastnostem aktivních objektů.
 
-- Pole hodnoty prvku.
+- Pole hodnot prvků.
 
-  servisní smlouva pro sadu rozhraní modelu COM, který se nachází v jednom objektu COM. Při vytváření služby, který je určený identifikátorem GUID, můžete definovat sadu rozhraní modelu COM, které provádí služba. Objekty modelu COM pomocí služby pro komunikaci mezi sebou.
+  služba: Smlouva pro sadu rozhraní COM, která je umístěna v jednom objektu COM. Při vytváření služby, která je identifikována identifikátorem GUID, definujete sadu rozhraní COM, která provádí službu. Objekty MODELU COM používají služby ke komunikaci mezi sebou.
 
-  řešení seskupení souvisejících projektů, se kterými uživatel pracuje.
+  řešení Skupina souvisejících projektů, se kterými uživatel pracuje.
 
-  Standardní návrháře návrháře, který se dají používat nezávisle na typu projektu. Všechny standardní návrháře musíte zadat informace o jejich objekt pro vytváření editoru v registru. Integrované vývojové prostředí pak můžete vytvořit instanci Návrháře při každém otevření souboru s konkrétní příponou. Data musíte zachovat do souboru.
+  standardní návrhář Návrhář, který lze použít nezávisle na typu projektu. Všichni standardní návrháři musí zadat informace editorfactory v registru. IDE pak můžete vytvořit instanci návrháře při každém otevření souboru s určitou příponou. Data musí uchovávat do souboru.
 
-  Standardní editor Editor, který je možné nezávisle na žádné konkrétní typ projektu. Takové editory obsahují EditorFactories zaregistrovaný v registru. To umožňuje rozhraní IDE k vyhledání a vyvolání editoru.
+  standardní editor editor, který lze použít nezávisle na konkrétním typu projektu. Tito redaktoři mají EditorFactories registrovány v registru. To umožňuje rozhraní IDE vyhledat a vyvolat editor.
 
-  Standardní editor operačního systému vložení, který není konkrétní Visual Studio. Je zaregistrované pomocí dobře známých klíčů Win32 (například Průzkumník systému Win32 ví, jak vyvolat). Pokud takové editor může být vložen, editor stále hlásí na příslušné místo v integrovaném vývojovém prostředí. V opačném případě se vytvoří samostatné okno nejvyšší úrovně pro takové editory.
+  standardní editor operačního systému Vkládání, které není specifické pro Visual Studio. Je registrován pomocí známých win32 klíče (například Win32 Explorer ví, jak vyvolat). Pokud takový editor může být vložen, editor stále zobrazí na svém místě v integrovaném rozhraní. V opačném případě je pro tyto editory vytvořeno samostatné okno nejvyšší úrovně.
 
-  kontext kontejner objektů a dat `IVsUserContext` objekt propojený s kontejner kontextu. Objekt obsahuje klíčová slova pro vyhledávání, **F1** klíčová slova a atributy pro výběr v rámci jako součást integrované vývojové prostředí. Kontext příklady příkazu v panelu nástrojů nebo klíčové slovo v editoru.
+  podkontextová `IVsUserContext` taška Objekt spojený s kontextovou taškou. Objekt obsahuje vyhledávací klíčová slova, klíčová slova **F1** a atributy pro výběr v rámci komponenty IDE. Příklady podkontextu zahrnují příkaz v okně nástroje nebo klíčové slovo v editoru.
 
-  Okno nástroje seznamu úkolů, které je implementované integrovaným vývojovým prostředím a zobrazí seznam aktivních úloh.
+  Okno nástroje seznamu úkolů, které je implementováno nástrojem IDE a zobrazuje seznam aktivních úkolů.
 
-  Běžný název textové vyrovnávací paměti pro objekt `VSTextBuffer`.
+  textový vyrovnávací paměť Běžný `VSTextBuffer`název objektu .
 
-  Text zobrazení běžný název pro objekt `VSTextView`.
+  Zobrazení textu Běžný název `VSTextView`objektu .
 
-  Nástroj pro součást nejvyšší úrovně A součást, která funguje jako nemodálního automaticky otevíraném okně, úzce koordinaci s uživatelským rozhraním rozhraní IDE. Stejně jako nezávislé komponenty nejvyšší úrovně musí komponenty nejvyšší úrovně nástroje také koordinovat modalitě a služba smyčky zpráv pomocí integrovaného vývojového prostředí.
+  součást nejvyšší úrovně nástroje Komponenta, která funguje jako nemodivé vyskakovací okno a úzce koordinuje s uživatelským rozhraním rozhraní IDE. Stejně jako nezávislé součásti nejvyšší úrovně musí součásti nejvyšší úrovně nástroje také koordinovat modalitu a služby smyčky zpráv s ide.
 
-  součást nejvyšší úrovně A VSPackage objektu, který spravuje nemodální okno nejvyšší úrovně namísto klientské oblasti okna IDE. Nejvyšší úrovně komponenty implementovaly `IOleComponent` rozhraní, abyste mohli využívat služba smyčky zpráv, jako je například přístup do nečinnosti.
+  Komponenta nejvyšší úrovně Objekt VSPackage, který spravuje nemodlavé okno nejvyšší úrovně namísto klientské oblasti okna IDE. Součásti nejvyšší úrovně `IOleComponent` implementují rozhraní, aby využily služeb smyčky zpráv, jako je například přístup k době nečinnosti.
 
-  Objekt uživatelského rozhraní aktivní A VSPackage, která je viditelná a má právě fokus.
+  Aktivní objekt UI VSPackage, který je viditelný a aktuálně má fokus.
 
-  Objekt modelu COM A hierarchie uživatelského rozhraní, která implementuje `IVsUIHierarchy` rozhraní umožňuje zobrazení hierarchie. V okně hierarchie uživatelského rozhraní implementuje `ISelectionContainer` rozhraní aktualizovat v okně Vlastnosti; ostatní okna typ projektu můžete tuto implementaci použít v případě potřeby.
+  Hierarchie uživatelského rozhraní Objekt `IVsUIHierarchy` COM, který implementuje rozhraní, aby bylo možné zobrazit hierarchii. Okno hierarchie uživatelského `ISelectionContainer` rozhraní implementuje rozhraní pro aktualizaci okna Vlastnosti; ostatní okna typu projektu můžete použít tuto implementaci, v případě potřeby.
 
-  VSCT tabulky příkazů sady Visual Studio. Souboru .vsct obsahuje informace o umístění a chování, nabídek, panelů nástrojů a příkazů ve formátu XML.
+  VSCT Visual Studio příkaz tabulky. Soubor .vsct obsahuje informace o umístění a chování nabídek, panelů nástrojů a příkazů ve formátu XML.
 
-  VSPackage Instalovatelné softwarového produktu, který přispívá jeden nebo více z následujících položek je rozšířením rozhraní IDE sady Visual Studio: uživatelské rozhraní, služby, typy projektů nebo editoru nebo návrháře. VSPackage se skládá z objektu modelu COM, který implementuje `IVsPackage` rozhraní a jeden nebo více jiných objektů COM, které implementují jiných rozhraní pro podporu výběru a další funkce. Kromě toho VSPackage má požadavky na konkrétní registraci.
+  VSPackage Instalovatelný software, který rozšiřuje rozhraní IDE sady Visual Studio tím, že přispívá jednou nebo více z následujících položek: uživatelské rozhraní, služby, typy projektů nebo editor/návrhář. VSPackage se skládá z objektu COM, který implementuje `IVsPackage` rozhraní a jeden nebo více dalších objektů COM, které implementují další rozhraní pro podporu výběru a další funkce. Kromě toho VSPackage má specifické požadavky na registraci.

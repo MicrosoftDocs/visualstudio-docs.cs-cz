@@ -1,5 +1,5 @@
 ---
-title: Funkce SccRemove | Microsoft Docs
+title: Funkce SccRemove | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccRemove function
 ms.assetid: 20830fdc-c0e9-4a5f-bf60-33f28874442f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ff7299868b96aedb7cc096b4e939a0f8015aeb8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 17889d50dbdcf68dd4cca161d6703b8b6d69ad47
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72720778"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700459"
 ---
 # <a name="sccremove-function"></a>SccRemove – funkce
-Tato funkce odstraní soubory ze systému správy zdrojů.
+Tato funkce odstraní soubory ze systému správy zdrojového kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,48 +39,48 @@ SCCRTN SccRemove(
 #### <a name="parameters"></a>Parametry
  pvContext
 
-pro Struktura kontextu modulu plug-in správy zdrojových kódů.
+[v] Struktura kontextu modulu plug-in správy zdrojového kódu.
 
- hWnd
+ Hwnd
 
-pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.
+[v] Popisovač okna IDE, který může modul plug-in správy zdrojového kódu použít jako nadřazený modul pro všechna dialogová okna, která poskytuje.
 
- nFiles
+ nSoubory
 
-pro Počet souborů zadaných v poli `lpFileNames`.
+[v] Počet souborů zadaných `lpFileNames` v poli.
 
- lpFileNames
+ lpNázev souboru
 
-pro Pole plně kvalifikovaných názvů místních cest souborů, které mají být odebrány.
+[v] Pole plně kvalifikovaných názvů místních cest souborů, které mají být odebrány.
 
- lpComment
+ lpKomentář
 
-pro Komentář, který se má použít u každého odebraného souboru
+[v] Komentář, který má být použit pro každý soubor, který je odebírán.
 
- fOptions
+ fMožnosti
 
-pro Příznaky příkazu (nepoužívá se)
+[v] Příkazové příznaky (nepoužité).
 
- pvOptions
+ pvMožnosti
 
-pro Možnosti specifické pro modul plug-in správy zdrojového kódu.
+[v] Možnosti specifické pro modul plug-in správy zdrojového kódu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Odebrání bylo úspěšné.|
-|SCC_E_FILENOTCONTROLLED|Vybraný soubor není pod správou zdrojových kódů.|
+|SCC_OK|Odstranění bylo úspěšné.|
+|SCC_E_FILENOTCONTROLLED|Vybraný soubor není pod směřovat zdroj.|
 |SCC_E_OPNOTSUPPORTED|Systém správy zdrojového kódu tuto operaci nepodporuje.|
-|SCC_E_ISCHECKEDOUT|Soubor nelze odebrat, protože uživatel je aktuálně rezervován.|
-|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize.|
-|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k provedení této operace.|
-|SCC_E_NONSPECIFICERROR|Nespecifická chyba; soubor nebyl odebrán.|
-|SCC_I_OPERATIONCANCELED|Operace byla zrušena před dokončením.|
+|SCC_E_ISCHECKEDOUT|Soubor nelze odebrat, protože jej uživatel má aktuálně rezervován.|
+|SCC_E_ACCESSFAILURE|Při přístupu k systému správy zdrojového kódu došlo k potížím se sítí nebo konflikty.|
+|SCC_E_NOTAUTHORIZED|Uživatel není oprávněn provádět tuto operaci.|
+|SCC_E_NONSPECIFICERROR|Nespecifické selhání; soubor nebyl odebrán.|
+|SCC_I_OPERATIONCANCELED|Operace byla před dokončením zrušena.|
 
 ## <a name="remarks"></a>Poznámky
- Tato funkce odebere soubory ze systému správy zdrojů, ale neodstraní je z místního pevného disku uživatele.
+ Tato funkce odebere soubory ze systému správy zdrojového kódu, ale neodstraní je z místního pevného disku uživatele.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

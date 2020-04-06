@@ -1,5 +1,5 @@
 ---
-title: Visibilityconstraints – Element | Dokumentace Microsoftu
+title: Prvek Viditelnostomezení | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - VSCT XML schema elements, VisibilityConstraints
 - VisibilityConstraints element (VSCT XML schema)
 ms.assetid: d6dcd314-6fe4-4693-a189-91fa026c7b34
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee64b4b8ccebe6e63b5c558df68e0a5625b37884
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b1aaa9573b883910ac6fa5d921a9bc79ce1c1cf3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310669"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698195"
 ---
-# <a name="visibilityconstraints-element"></a>Visibilityconstraints – element
-Visibilityconstraints – element určuje statické viditelnost skupiny příkazů a panely nástrojů. Nejprve řídí viditelnost [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE) bez načtení sady VSPackage.
+# <a name="visibilityconstraints-element"></a>VisibilityConstraints prvek
+Prvek VisibilityConstraints určuje statickou viditelnost skupin příkazů a panelů nástrojů. Viditelnost je nejprve řízena integrované vývojové [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] prostředí (IDE) bez načtení VSPackage.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,27 +32,27 @@ Visibilityconstraints – element určuje statické viditelnost skupiny příkaz
 </VisibilityConstraints>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Visibilityitem – element](../extensibility/visibilityitem-element.md)|Určuje statické viditelnost příkazů a panely nástrojů.|
-|[Visibilityconstraints –](../extensibility/visibilityconstraints-element.md)|Určuje, zda statických skupin příkazů a panely nástrojů.|
+|[VisibilityItem element](../extensibility/visibilityitem-element.md)|Určuje statickou viditelnost příkazů a panelů nástrojů.|
+|[Omezení viditelnosti](../extensibility/visibilityconstraints-element.md)|Určuje statickou viditelnost skupin příkazů a panelů nástrojů.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Commandtable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy (například položek nabídky, nabídky, panely nástrojů a pole se seznamem), které poskytuje VSPackage pro prostředí IDE.|
+|[Element CommandTable](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy (například položky nabídky, nabídky, panely nástrojů a pole se seznamem), které VSPackage poskytuje ide.|
 
 ## <a name="example"></a>Příklad
 
@@ -63,6 +63,6 @@ Visibilityconstraints – element určuje statické viditelnost skupiny příkaz
 </VisibilityConstraints>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Visibilityitem – element](../extensibility/visibilityitem-element.md)
-- [Visual Studio tabulky příkazů (. Soubory Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také
+- [VisibilityItem element](../extensibility/visibilityitem-element.md)
+- [Visual Studio příkaz tabulky (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

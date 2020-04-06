@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3 | Dokumentace Microsoftu
+title: IDebugProcess3 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcess3 interface
 ms.assetid: 7bd6b952-cf34-4e66-b8f6-d472dac3748f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8db169a06864fad24ef7e6ce4c2d188e2a88ef1d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b423ee2cb95ad55296c452cfdc4b891ee4cd26a0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313849"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723540"
 ---
 # <a name="idebugprocess3"></a>IDebugProcess3
-Toto rozhraní představuje spuštěného procesu a jeho programy. Toto rozhraní existuje jako náhrada do několika metod v [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) rozhraní. To umožňuje řídit všechny programy v procesu.
+Toto rozhraní představuje spuštěný proces a jeho programy. Toto rozhraní existuje jako náhrada za několik metod v rozhraní [IDebugProgram2.](../../../extensibility/debugger/reference/idebugprogram2.md) Poskytuje kontrolu nad všemi programy v procesu.
 
 > [!NOTE]
-> [Pokračovat](../../../extensibility/debugger/reference/idebugprogram2-continue.md), [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md), a [krok](../../../extensibility/debugger/reference/idebugprogram2-step.md) metody jsou zastaralé a už musí být použity. Použít metody odpovídající na `IDebugProcess3` místo toho rozhraní.
+> [Metody Continue](../../../extensibility/debugger/reference/idebugprogram2-continue.md), [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md)a [Step](../../../extensibility/debugger/reference/idebugprogram2-step.md) jsou zastaralé a neměly by se používat. Místo toho použijte `IDebugProcess3` odpovídající metody v rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,27 +32,27 @@ IDebugProcess3 : IDebugProcess2
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Toto rozhraní je implementováno port. Tento vlastní port dodavatele pro správu programů jako skupinu. Když programy se spravují jako skupiny, můžete řídit jejich spuštění a navázání jazyk pro vyhodnocovače výrazů. Toto rozhraní musí být implementované dodavatele portu.
+ Toto rozhraní je implementováno dodavatelem vlastního portu pro správu programů jako skupiny. Pokud jsou programy spravovány jako skupina, můžete řídit jejich provádění a vytvořit jazyk pro vyhodnocení výrazu. Toto rozhraní musí být implementováno dodavatelem portu.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Toto rozhraní je volán primárně správce ladění relace (SDM) aby bylo možné pracovat se skupinou programy uvedené v tomto procesu.
+ Toto rozhraní je voláno především správcem ladění relace (SDM) za účelem interakce se skupinou programů identifikovaných v tomto procesu.
 
- Volání [QueryInterface](/cpp/atl/queryinterface) na [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) rozhraní k získání tohoto rozhraní.
+ Volání [QueryInterface](/cpp/atl/queryinterface) na [rozhraní IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) získat toto rozhraní.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- Kromě metod zděděných z [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md), `IDebugProcess3` implementuje následující metody.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ Kromě metod zděděných z [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)implementuje `IDebugProcess3` následující metody.
 
 |Metoda|Popis|
 |------------|-----------------|
-|[Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md)|Pokračuje v provádění nebo krokování procesem.|
-|[Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md)|Zahájí vykonávání procesu.|
-|[Step](../../../extensibility/debugger/reference/idebugprocess3-step.md)|Kroky dál jedna instrukce nebo příkaz v procesu.|
-|[GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)|Získá z důvodu, že proces byl spuštěn pro ladění.|
-|[SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)|Nastaví hostování jazyk tak, aby načíst vyhodnocovací filtr výrazů odpovídající ladicí stroj.|
-|[GetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-gethostingprocesslanguage.md)|Získá jazyk pro tento proces aktuálně nastavená.|
-|[DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)|Zakáže upravit a pokračovat (ENC) pro tento proces.<br /><br /> Dodavatel port. Tento vlastní port neimplementuje této metody (vždy by měl vrátit `E_NOTIMPL`).|
-|[GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md)|Získání stavu KODÉRU pro tento proces.<br /><br /> Dodavatel port. Tento vlastní port neimplementuje této metody (vždy by měl vrátit `E_NOTIMPL`).|
-|[GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md)|Načte pole jedinečné identifikátory pro dostupné ladicí stroj.|
+|[Pokračovat](../../../extensibility/debugger/reference/idebugprocess3-continue.md)|Pokračuje v provádění nebo krokování procesu.|
+|[Spuštění](../../../extensibility/debugger/reference/idebugprocess3-execute.md)|Zahájí provádění procesu.|
+|[Krok](../../../extensibility/debugger/reference/idebugprocess3-step.md)|Kroky vpřed jednu instrukce nebo příkaz v procesu.|
+|[GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)|Získá důvod, že proces byl spuštěn pro ladění.|
+|[SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)|Nastaví hostitelský jazyk tak, aby ladicí modul mohl načíst příslušný vyhodnocení výrazu.|
+|[GetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-gethostingprocesslanguage.md)|Načte jazyk aktuálně nastavený pro tento proces.|
+|[DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)|Zakáže upravit a pokračovat (ENC) pro tento proces.<br /><br /> Dodavatel vlastního portu tuto metodu neimplementuje (měl by vždy vrátit). `E_NOTIMPL`|
+|[GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md)|Získejte stav ENC pro tento proces.<br /><br /> Dodavatel vlastního portu tuto metodu neimplementuje (měl by vždy vrátit). `E_NOTIMPL`|
+|[GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md)|Načte pole jedinečných identifikátorů pro dostupné ladicí moduly.|
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: Msdbg.h
@@ -61,7 +61,7 @@ IDebugProcess3 : IDebugProcess2
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

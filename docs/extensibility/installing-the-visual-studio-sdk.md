@@ -1,40 +1,40 @@
 ---
-title: Instalace sady Visual Studio SDK | Dokumentace Microsoftu
+title: Instalace sady Visual Studio SDK | Dokumenty společnosti Microsoft
 ms.date: 07/12/2018
 ms.topic: conceptual
 ms.assetid: c730edb6-5099-4c16-85a8-08def09f1455
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4208c20cc3e7da34efaf98af16f0f41d54613824
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2f391708abbd8a9b66f2dfd5aaa6559cb075910d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66340761"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710350"
 ---
 # <a name="install-the-visual-studio-sdk"></a>Instalace sady Visual Studio SDK
 
-Visual Studio SDK (Software Development Kit) je volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později.
+Sada Visual Studio SDK (Software Development Kit) je volitelná funkce v nastavení sady Visual Studio. VS SDK můžete také nainstalovat později.
 
 ## <a name="install-the-visual-studio-sdk-as-part-of-a-visual-studio-installation"></a>Instalace sady Visual Studio SDK jako součást instalace sady Visual Studio
 
-Zahrnout VS SDK v instalaci sady Visual Studio, nainstalujte **vývoj rozšíření sady Visual Studio** úloha v části **další sady nástrojů**. Tato úloha nainstaluje Visual Studio SDK a nezbytné předpoklady. Instalace můžete dále ladit výběr nebo zrušení výběru součásti z **Souhrn** zobrazení.
+Chcete-li zahrnout sadu VS SDK do instalace sady Visual Studio, nainstalujte **úlohu vývoje rozšíření sady Visual Studio** v části Jiné sady **nástrojů**. Tato úloha nainstaluje sady Visual Studio SDK a nezbytné předpoklady. Instalaci můžete dále vyladit výběrem nebo zrušením výběru součástí ze **souhrnného** zobrazení.
 
 ## <a name="install-the-visual-studio-sdk-after-installing-visual-studio"></a>Instalace sady Visual Studio SDK po instalaci sady Visual Studio
 
-Pokud chcete nainstalovat Visual Studio SDK po dokončení instalace sady Visual Studio, spusťte znovu instalační program sady Visual Studio a vyberte **vývoj rozšíření sady Visual Studio** pracovního vytížení.
+Chcete-li nainstalovat sadu Visual Studio SDK po dokončení instalace sady Visual Studio, spusťte znovu instalační program sady Visual Studio a vyberte **úlohu vývoje rozšíření sady Visual Studio.**
 
-## <a name="install-the-visual-studio-sdk-from-a-solution"></a>Nainstalovat v rámci řešení sady Visual Studio SDK
+## <a name="install-the-visual-studio-sdk-from-a-solution"></a>Instalace sady Visual Studio SDK z řešení
 
-Pokud otevřete řešení s projektem rozšíření bez první instalace VS SDK vás vyzve **nainstalovat chybějící funkce** dialogové okno k instalaci **vývoj rozšíření sady Visual Studio** úlohy:
+Pokud otevřete řešení s projektem rozšiřitelnosti bez předchozí instalace sady VS SDK, budete vyzváni pomocí dialogového okna **Nainstalovat chybějící funkce** k instalaci **úlohy vývoje rozšíření sady Visual Studio:**
 
-![Vývoj rozšíření nainstalovat](../extensibility/media/install-extension-development.png "nainstalovat vývoj rozšíření")
+![Instalace vývoje rozšíření](../extensibility/media/install-extension-development.png "Instalace vývoje rozšíření")
 
 ## <a name="install-the-visual-studio-sdk-from-the-command-line"></a>Instalace sady Visual Studio SDK z příkazového řádku
 
-Jak pomocí sady Visual Studio úlohy nebo komponenty, můžete také nainstalovat **vývoj rozšíření sady Visual Studio** úloh (ID: Microsoft.VisualStudio.Workload.VisualStudioExtension) z příkazového řádku. Zobrazit [použít parametry příkazového řádku instalace sady Visual Studio](../install/use-command-line-parameters-to-install-visual-studio.md) podrobné informace o přepínače příkazového řádku a obecné pokyny k určení úlohy nebo komponenty, identifikátory.
+Stejně jako u všech úloh nebo komponent sady Visual Studio můžete z příkazového řádku nainstalovat **také úlohu vývoje rozšíření sady Visual Studio** (ID: Microsoft.VisualStudio.Workload.VisualStudioExtension). Podrobnosti o příslušných přepínačích příkazového řádku a obecné pokyny k určení identifikátorů pracovního vytížení nebo součásti naleznete v tématu [Použití parametrů příkazového řádku k instalaci sady Visual Studio.](../install/use-command-line-parameters-to-install-visual-studio.md)
 
-Všimněte si, že je nutné použít instalační program sady Visual Studio, který odpovídá vaší nainstalované verzi sady Visual Studio. Například pokud máte v počítači nainstalovaný Visual Studio Enterprise, musíte spustit instalační program sady Visual Studio Enterprise (*vs_enterprise.exe*).
+Všimněte si, že je nutné použít instalační program sady Visual Studio, který odpovídá nainstalované verzi sady Visual Studio. Máte-li například v počítači nainstalovanou aplikaci Visual Studio Enterprise, je nutné spustit instalační program sady Visual Studio Enterprise (*vs_enterprise.exe*).

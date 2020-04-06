@@ -3,17 +3,17 @@ title: Obrázky a ikony pro visual studio | Dokumenty společnosti Microsoft
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1e449fb30bd95319a46d1db50da63778f6800a70
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: dfef803d2bffb19cc54974465c7892b4d68ff3d6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303195"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80699053"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Obrázky a ikony pro Visual Studio
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a>Použití obrázků v sadě Visual Studio
@@ -258,7 +258,7 @@ ms.locfileid: "79303195"
 
 - rozlišení položek v rámci technologie IntelliSense
 
-### <a name="accessibility"></a>Přístupnost
+### <a name="accessibility"></a>Usnadnění
  Visual Studio dodržování zásady vyžadují, aby všechny ikony zaškrtnuté do produktu projít požadavky na usnadnění pro barvu a kontrast. Barvy v paletě vizuálních jazyků byly testovány a splňují tyto požadavky.
 
 #### <a name="color-inversion-for-dark-themes"></a>Barevná inverze pro tmavé motivy
@@ -319,7 +319,7 @@ ms.locfileid: "79303195"
 
 ||||||
 |-|-|-|-|-|
-|![Ikona Spustit](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")<br />Spusťte|![Ikona Zastavit](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")<br />Zastavit|![Ikona odstranění](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")<br />Odstranění|![Ikona Uložit](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")<br />Uložit|![Ikona Přechod zpět](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")<br />Navigace zpět|
+|![Ikona Spustit](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")<br />Spusťte|![Ikona Zastavit](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")<br />Zastavit|![Ikona odstranění](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")<br />Odstranit|![Ikona Uložit](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")<br />Uložit|![Ikona Přechod zpět](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")<br />Navigace zpět|
 
 ### <a name="code-hierarchy-palette"></a>Paleta hierarchie kódu
 
@@ -427,4 +427,4 @@ ms.locfileid: "79303195"
 
 |F12|||
 |---------|-|-|
-|![F12 pěkný kód ikonu](../../extensibility/ux-guidelines/media/0405-61_f12prettycode.png "0405-61_F12PrettyCode")<br />Pěkný kód|![Ikona varování F12](../../extensibility/ux-guidelines/media/0405-62_f12warning.png "0405-62_F12Warning")<br />Upozornění|![Ikona aplikace Emulovat f12](../../extensibility/ux-guidelines/media/0405-63_f12emulate.png "0405-63_F12Emulate")<br />Napodobit|
+|![F12 pěkný kód ikonu](../../extensibility/ux-guidelines/media/0405-61_f12prettycode.png "0405-61_F12PrettyCode")<br />Pěkný kód|![Ikona varování F12](../../extensibility/ux-guidelines/media/0405-62_f12warning.png "0405-62_F12Warning")<br />Upozornění|![Ikona aplikace Emulovat f12](../../extensibility/ux-guidelines/media/0405-63_f12emulate.png "0405-63_F12Emulate")<br />Emulace|

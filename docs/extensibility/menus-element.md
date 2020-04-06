@@ -1,25 +1,25 @@
 ---
-title: Menus – Element | Dokumentace Microsoftu
+title: Menu Element | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, Menus
 - Menus element (VSCT XML schema)
 ms.assetid: d825a99b-e05c-4dd9-8933-a180216d667a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ef5124bc59a4eb0671ba5493f79ea301aa48fc71
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a6382abed36aba66087066bf5664ae55682e39e2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346632"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702581"
 ---
-# <a name="menus-element"></a>Menus – element
-Definuje nabídky a panely nástrojů, které implementuje VSPackage.
+# <a name="menus-element"></a>Prvek nabídek
+Definuje všechny nabídky a panely nástrojů, které implementuje VSPackage.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,27 +30,27 @@ Definuje nabídky a panely nástrojů, které implementuje VSPackage.
 </Menus>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené elementy
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Menus – element](../extensibility/menus-element.md)|Definuje nabídky a panely nástrojů, které implementuje VSPackage.|
-|[Menu – element](../extensibility/menu-element.md)|Představuje jednu nabídku nebo panel nástrojů.|
+|[Prvek nabídek](../extensibility/menus-element.md)|Definuje všechny nabídky a panely nástrojů, které implementuje VSPackage.|
+|[Prvek nabídky](../extensibility/menu-element.md)|Představuje jednu nabídku nebo panel nástrojů.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Commands – element](../extensibility/commands-element.md)|Představuje kolekci příkazů v sady VSPackage.|
+|[Element příkazy](../extensibility/commands-element.md)|Představuje kolekci příkazů v VSPackage.|
 
 ## <a name="example"></a>Příklad
 
@@ -77,6 +77,6 @@ Definuje nabídky a panely nástrojů, které implementuje VSPackage.
 <Commands>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+## <a name="see-also"></a>Viz také
+- [Jak VSPackages přidat prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

@@ -1,5 +1,5 @@
 ---
-title: SupportsCodeSeparation – – element (šablony sady Visual Studio) | Microsoft Docs
+title: SupportsCodeSeparation Element (Šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - SupportsCodeSeparation element [Visual Studio Templates]
 - <SupportsCodeSeparation> element [Visual Studio Templates]
 ms.assetid: 8112aac8-a269-40e5-b92b-9b9a6ff5a542
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e68516a798bcd4d1437ab504c09b4cc529eb889
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: bd52ae47f47f3ca1fce23f7cf8d37260ec86fb0c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72719431"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80699502"
 ---
 # <a name="supportscodeseparation-element-visual-studio-templates"></a>SupportsCodeSeparation – element (šablony sady Visual Studio)
-Určuje, zda je v dialogovém okně **Přidat novou položku** povoleno zaškrtávací políčko **umístit kód do samostatného souboru** .
+Určuje, zda je v dialogovém okně **Přidat novou položku** povoleno políčko **Umístit v samostatném souboru.**
 
- \<VSTemplate > \<TemplateData > \<SupportsCodeSeparation >
+ \<VSTemplate \<> TemplateData> \<podporuje>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,31 +36,31 @@ Určuje, zda je v dialogovém okně **Přidat novou položku** povoleno zaškrt�
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené elementy
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Nová položka** .|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Nová **položka.**|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být buď `true`, nebo `false`, což značí, zda je v dialogovém okně **Přidat novou položku** povoleno zaškrtávací políčko **umístit kód do samostatného souboru** .
+ Text musí být `true` `false`buď nebo , označující, zda je v dialogovém okně **Přidat novou položku** povoleno **políčko Umístit v samostatném souboru.**
 
 ## <a name="remarks"></a>Poznámky
- `SupportsCodeSeparation` je volitelný prvek. Výchozí hodnota je `false`.
+ `SupportsCodeSeparation`je volitelný prvek. Výchozí hodnota je `false`.
 
- Element `SupportsCodeSeparation` je k dispozici pouze pro šablony webových položek.
+ Prvek `SupportsCodeSeparation` je k dispozici pouze pro šablony webových položek.
 
- Oddělení kódu nebo model stránky s kódem na pozadí umožňuje uchovávat značky v jednom souboru a programový kód v jiném souboru. Tento model používají [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] a jiné jazyky .NET.
+ Oddělení kódu nebo model stránky s kódem na pozadí umožňuje zachovat značky v jednom souboru a programovací kód v jiném souboru. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]a další jazyky .NET používají tento model.
 
 ## <a name="example"></a>Příklad
- Následující příklad určuje, že se má **v samostatném souboru zobrazit možnost umístit kód** .
+ Následující příklad určuje zobrazení **kódu Umístit v samostatném souboru.**
 
 ```
 <VSTemplate Version="3.0.0" Type="Project"
@@ -84,6 +84,6 @@ Určuje, zda je v dialogovém okně **Přidat novou položku** povoleno zaškrt�
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

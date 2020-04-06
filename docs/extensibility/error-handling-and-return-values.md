@@ -1,5 +1,5 @@
 ---
-title: Zpracování chyb a návratových hodnot | Dokumentace Microsoftu
+title: Zpracování chyb a vrácené hodnoty | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,54 +7,54 @@ helpviewer_keywords:
 - error handling
 - return values
 ms.assetid: b2d9079d-39a6-438a-8010-290056694b5c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e3120302de007c9d2b454a0ba7cb5c58e7c7db7b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 30b6b9bff9056360f9ea840f47b1488f05bee872
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309885"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711938"
 ---
-# <a name="error-handling-and-return-values"></a>Zpracování chyb a návratových hodnot
-Rozšíření VSPackages a modelu COM použít stejnou architekturu pro chyby. `SetErrorInfo` a `GetErrorInfo` funkce jsou součástí rozhraní (API) systému Win32. Žádné VSPackage v integrovaném vývojovém prostředí (IDE) můžete volat tyto globální rozhraní API Win32 pro bohaté chybové informace záznamu při přijetí oznámení o chybě. [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] Poskytuje sestavení vzájemné spolupráce pro správu informací o chybě.
+# <a name="error-handling-and-return-values"></a>Zpracování chyb a vrácení hodnot
+VSPackages a COM používají stejnou architekturu pro chyby. Funkce `SetErrorInfo` `GetErrorInfo` a jsou součástí rozhraní API pro programování aplikací Win32. Všechny VSPackage v integrovaném vývojovém prostředí (IDE) můžete volat tyto globální rozhraní API Win32 zaznamenat bohaté informace o chybě při příjmu oznámení o chybě. Poskytuje [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] interop sestavení pro správu informací o chybách.
 
-## <a name="interop-methods"></a>Spolupráce metody
- V zájmu usnadnění práce, rozhraní IDE poskytuje metodu, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A>, použije místo volání rozhraní API systému Win32. Spravovaný kód používá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A>. Při chybě `HRESULT` dorazí na úroveň, kde by měl být zobrazí chybová zpráva (to je často objekt implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> obslužná rutina příkazu), integrovaného vývojového prostředí používá jinou metodu, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A>, zobrazíte odpovídající zprávu pole. Spravovaný kód používá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> metody.
+## <a name="interop-methods"></a>Interop metody
+ Pro usnadnění ide poskytuje metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A>, použít místo volání win32 API. Ve spravovaném <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A>kódu použití . Když chyba `HRESULT` dorazí na úroveň, kde by měla být zobrazena chybová <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> zpráva (to je často <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A>objekt implementující obslužnou rutinu příkazu), ide používá jinou metodu , k zobrazení příslušného okna se zprávou. Ve spravovaném <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> kódu použijte metodu.
 
- Jako implementátora VSPackage, objekty COM obvykle implementují `ISupportErrorInfo`. `ISupportErrorInfo` Rozhraní zajišťuje, že můžete bohaté chybové informace svisle nahoru řetěz volání. Objekty, které by mohly používat napříč procesy nebo napříč vlákny, musí podporovat `ISupportErrorInfo` zajistit, že je bohaté chybové informace správně zařazené zpět volajícímu.
+ Jako implementátor VSPackage objekty COM `ISupportErrorInfo`obvykle implementují . Rozhraní `ISupportErrorInfo` zajišťuje, že bohaté informace o chybách se mohou pohybovat svisle nahoru v řetězci volání. Objekty, které mohou být použity `ISupportErrorInfo` napříč procesy nebo napříč vlákny musí podporovat zajistit, že bohaté informace o chybě je správně zařazen zpět do volajícího.
 
- Všechny objekty, které se vztahují k rozšíření VSPackages a, které jsou součástí rozšíření integrovaného vývojového prostředí, včetně objekty pro vytváření editoru, editory, hierarchie a nabízí služby, by měly podporovat bohaté chybové informace. Zatímco integrovaného vývojového prostředí nevyžaduje, aby tyto objekty balíčku VSPackage pro implementaci `ISupportErrorInfo`, je vždy podporována.
+ Všechny objekty, které souvisejí s VSPackages a které se podílejí na rozšíření ide, včetně editor továrny, editory, hierarchie a nabízené služby, by měly podporovat bohaté informace o chybách. Zatímco IDE nevyžaduje tyto Objekty VSPackage k implementaci `ISupportErrorInfo`, je vždy podporována.
 
- Rozhraní IDE je zodpovědný za ohlašování informací o chybě a zobrazuje uživateli [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] pokaždé, když `HRESULT` je postoupena do integrovaného vývojového prostředí. Rozhraní IDE je také mechanismus pro vytváření `ErrorInfo` objekty.
+ Rozhraní IDE je zodpovědný za hlášení informací o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] chybách `HRESULT` a jejich zobrazení uživateli vždy, když je šířen do ide. IDE je také mechanismus `ErrorInfo` pro vytváření objektů.
 
 ## <a name="general-guidelines"></a>Obecné pokyny
- Můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> metody pro nastavení a hlášení chyb, které jsou interní v balíčku VSPackage implementaci. Ale jako obecné pravidlo, postupujte podle těchto pokynů pro zpracování chybové zprávy v vašeho balíčku VSPackage:
+ Můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> a nastavit a hlásit chyby, které jsou interní implementace VSPackage také. Jako obecné pravidlo však postupujte podle následujících pokynů pro zpracování chybových zpráv v balíčku VSPackage:
 
-- Implementace `ISupportErrorInfo` v balíčku VSPackage COM objekty.
+- Implementujte `ISupportErrorInfo` v objektech VSPackage COM.
 
-- Vytvořte mechanismu, který volá pro zasílání zpráv o chybách <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> metoda v objektech, které implementují <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>.
+- Vytvořte mechanismus zasílání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> zpráv o chybách, který volá metodu v objektech, které implementují <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>.
 
-- Umožní zobrazení chyb uživatelům prostřednictvím integrovaného vývojového prostředí <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> metody.
+- Nechte ide zobrazit chyby <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> pro uživatele prostřednictvím metody.
 
 ## <a name="error-information-in-the-ide"></a>Informace o chybě v rozhraní IDE
- Následující pravidla určují, jak zpracovat informace o chybě v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí:
+ Následující pravidla označují, jak zpracovat [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] informace o chybě v rozhraní IDE:
 
-- Jak obranné strategii zaručí, že informace o zastaralých chybě není hlášena, funkce tohoto volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> byste nejprve zavolat metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> metoda. Předejte `null` k vymazání mezipaměti chybové zprávy před volání nic, která může nastavit nové informace o chybě.
+- Jako obranná strategie zaručit, že zastaralé informace o chybě není <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> hlášena uživatelům, funkce, které volají metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> by měl nejprve volání metody. Před `null` voláním nic, co by mohlo nastavit nové informace o chybách, předajte chybové zprávy uložené v mezipaměti.
 
-- Funkce, které nehlásí přímo chybové zprávy jsou povoleny pouze pro volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> metodu, pokud vrací chybu `HRESULT`. Je přípustné vymazat `ErrorInfo` při vstupu do funkce nebo při vrácení <xref:Microsoft.VisualStudio.VSConstants.S_OK>. Jedinou výjimkou tohoto pravidla je když volání vrátí chybu `HRESULT` ze které lze přijímající straně explicitně obnovit nebo bez obav ignorovat.
+- Funkce, které nejsou přímo hlásit chybové <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> zprávy jsou povoleny volat `HRESULT`metodu pouze v případě, že vracejí chybu . Je přípustné vymazat `ErrorInfo` na vstupu do funkce nebo při <xref:Microsoft.VisualStudio.VSConstants.S_OK>návratu . Jedinou výjimkou z tohoto pravidla je, `HRESULT` když volání vrátí chybu, ze které přijímající strana může explicitně obnovit nebo bezpečně ignorovat.
 
-- Každá strana, která explicitně ignoruje chyba `HRESULT` musí volat <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> metodu s <xref:Microsoft.VisualStudio.VSConstants.S_OK>. V opačném případě `ErrorInfo` objekt může nechtěně použít při jiná strana dojde k chybě bez zadání vlastní `ErrorInfo`.
+- Každá strana, která explicitně ignoruje chybu, `HRESULT` musí volat metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> s <xref:Microsoft.VisualStudio.VSConstants.S_OK>. V opačném `ErrorInfo` případě může být objekt omylem použit, když `ErrorInfo`jiná strana vygeneruje chybu bez poskytnutí vlastní .
 
-- Všechny metody, které pocházejí chybu `HRESULT` ukončena. doporučujeme volat <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> metodu k dispozici bohaté chybové informace. Pokud vráceného `HRESULT` je speciální `FACILITY_ITF` chyby a metoda je vyžadovat, aby poskytli správnou `ErrorInfo`objektu. Pokud Vrácená chyba je standardní systémové chybě (například <xref:Microsoft.VisualStudio.VSConstants.E_OUTOFMEMORY>, <xref:Microsoft.VisualStudio.VSConstants.E_ABORT>, <xref:Microsoft.VisualStudio.VSConstants.E_INVALIDARG>, <xref:Microsoft.VisualStudio.VSConstants.E_UNEXPECTED>a tak dále.) je přijatelné vrácení kódu chyby bez explicitního volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> metody. Jako obranné kódování strategii, při původní chybu `HRESULT` (včetně chyby systému), vždy volejte <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> metoda, buď pomocí `ErrorInfo` popisující selhání podrobněji, nebo `null`.
+- Všechny metody, které `HRESULT` pocházejí z chyby se doporučuje volat metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> poskytnout bohaté informace o chybě. Pokud vrácená `HRESULT` je `FACILITY_ITF` zvláštní chyba, pak metoda je `ErrorInfo`nutné poskytnout správný objekt. Pokud je vrácená chyba standardní systémovou <xref:Microsoft.VisualStudio.VSConstants.E_OUTOFMEMORY> <xref:Microsoft.VisualStudio.VSConstants.E_ABORT>chybou (například , , <xref:Microsoft.VisualStudio.VSConstants.E_INVALIDARG> <xref:Microsoft.VisualStudio.VSConstants.E_UNEXPECTED>, , a tak dále.), je přijatelné vrátit kód chyby bez explicitního <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> volání metody. Jako strategie obrannékódování při vytvoření `HRESULT` chyby (včetně systémových <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> chyb) `ErrorInfo` vždy zavolejte metodu, `null`buď s popisem selhání podrobněji, nebo .
 
-- Všechny funkce, které vrátí chybu, vytvoří se jiné volání musí projít na informacích, které bylo přijato z neúspěšný volání v `HRESULT` beze změny `ErrorInfo` objektu.
+- Všechny funkce, které vracejí chybu pocházející z jiného volání, musí předat `HRESULT` informace, které `ErrorInfo` byly přijaty z neúspěšného volání, aniž by došlo k úpravě objektu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>
-- [SetErrorInfo (Automatizace součástí)](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-seterrorinfo)
+- [SetErrorInfo (automatizace komponent)](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-seterrorinfo)
 - [GetErrorInfo](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-geterrorinfo)
-- [ISupportErrorInfo rozhraní](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)
+- [Rozhraní ISupportErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)

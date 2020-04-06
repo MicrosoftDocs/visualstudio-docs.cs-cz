@@ -1,5 +1,5 @@
 ---
-title: OBJECT_TYPE | Dokumentace Microsoftu
+title: OBJECT_TYPE | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - OBJECT_TYPE enumeration
 ms.assetid: c4d246f9-8a98-44ec-b2bb-ff5c684f668e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 726e4978ac2c474b1f23b90f409f25b8a58aceab
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4ffb85a14e42dd57c345481285eb1f776b3866d3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349922"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714132"
 ---
-# <a name="objecttype"></a>OBJECT_TYPE
-Určuje typ objektu z vyhodnocovací filtr výrazů.
+# <a name="object_type"></a>OBJECT_TYPE
+Určuje typ objektu z vyhodnocení výrazu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,7 +68,7 @@ public enum enum_OBJECT_TYPE { 
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
  `OBJECT_TYPE_BOOLEAN`\
  Označuje, že objekt je logická hodnota.
 
@@ -76,34 +76,34 @@ public enum enum_OBJECT_TYPE { 
  Označuje, že objekt je znak.
 
  `OBJECT_TYPE_I1`\
- Označuje, že objekt je celé číslo se znaménkem jeden bajtové.
+ Označuje, že objekt je jednobajtové podepsané celé číslo.
 
  `OBJECT_TYPE_U1`\
- Označuje, že objekt je jeden bajtové číslo bez znaménka.
+ Označuje, že objekt je jednobajtové nepodepsané celé číslo.
 
  `OBJECT_TYPE_I2`\
- Označuje, že objekt je dva bajty celé číslo se znaménkem.
+ Označuje, že objekt je dvoubajtové podezla.
 
  `OBJECT_TYPE_U2`\
- Označuje, že objekt je celé číslo bez znaménka dva bajtu.
+ Označuje, že objekt je dvoubajtové nepodepsané celé číslo.
 
  `OBJECT_TYPE_I4`\
- Označuje, že objekt je celé číslo se znaménkem čtyř bajtů.
+ Označuje, že objekt je čtyřbajtové podezla.
 
  `OBJECT_TYPE_U4`\
- Označuje, že objekt je celé číslo bez znaménka čtyř bajtů.
+ Označuje, že objekt je čtyřbajtové nepodepsané celé číslo.
 
  `OBJECT_TYPE_I8`\
- Označuje, že objekt je podepsané celé číslo osm bajtů.
+ Označuje, že objekt je podezírné osmibajtové číslo.
 
  `OBJECT_TYPE_U8`\
- Označuje, že objekt je celé číslo bez znaménka osm bajtu.
+ Označuje, že objekt je osmibajtové nepodepsané celé číslo.
 
  `OBJECT_TYPE_R4`\
- Označuje, že objekt je číslo s plovoucí desetinnou čárkou čtyř bajtů.
+ Označuje, že objekt je čtyřbajtové číslo s plovoucí desetinnou desetinnou tácem.
 
  `OBJECT_TYPE_R8`\
- Označuje, že objekt je číslo s plovoucí desetinnou čárkou osm bajtu.
+ Označuje, že objekt je osmibajtové číslo s plovoucí desetinnou desetinnou tácem.
 
  `OBJECT_TYPE_OBJECT`\
  Označuje, že objekt je objekt.
@@ -115,7 +115,7 @@ public enum enum_OBJECT_TYPE { 
  Označuje, že objekt je třída.
 
 ## <a name="remarks"></a>Poznámky
- Předán jako argument [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md) a [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md) metody.
+ Předáno jako argument metodám [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md) a [CreateArrayObject.](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md)
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: ee.h
@@ -124,7 +124,7 @@ public enum enum_OBJECT_TYPE { 
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md)
 - [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md)

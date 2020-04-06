@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetInfo | Dokumentace Microsoftu
+title: IDebugStackFrame2::GetInfo | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugStackFrame2::GetInfo
 ms.assetid: 19c6870b-b94e-453c-bf19-82ce95b79d26
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ad560386991a0545510e1b74a140d17cc35fcbe3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 09768fc58640d79a3b5628bafc16b2267f1f8a4c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352116"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719726"
 ---
 # <a name="idebugstackframe2getinfo"></a>IDebugStackFrame2::GetInfo
 Získá popis rámce zásobníku.
@@ -45,18 +45,18 @@ int GetInfo ( 
 
 ## <a name="parameters"></a>Parametry
 `dwFieldSpec`\
-[in] Kombinace příznaků z [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) výčet, který určuje, jaké pole `pFrameInfo` parametr mají být vyplněna.
+[v] Kombinace příznaků z [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) výčtu, která určuje, `pFrameInfo` která pole parametru mají být vyplněna.
 
 `nRadix`\
-[in] Základ, který se má použít v jakékoli číselné informace o formátování.
+[v] Radix, který se použije při formátování všech číselných informací.
 
 `pFrameInfo`\
-[out] A [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) struktura, která se vyplní popis rámce zásobníku.
+[out] [FrameINFO](../../../extensibility/debugger/reference/frameinfo.md) struktura, která je vyplněna s popisem rámce zásobníku.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)
 - [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)
 - [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)

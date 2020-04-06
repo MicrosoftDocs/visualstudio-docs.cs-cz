@@ -1,5 +1,5 @@
 ---
-title: Objekt VSCodeWindow | Microsoft Docs
+title: Objekt VSCodeWindow | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - views [Visual Studio SDK], VSCodeWindow object
 - VsCodeWindow object
 ms.assetid: cf5fe926-e784-4098-bc01-cac49c7c55c6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 36b7e0e6806f88efe373dffa3f21ba79baefb281
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 55739b1ef577123ac0395b4c5cfb1e3c5dbc779f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189050"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697961"
 ---
 # <a name="vscodewindow-object"></a>Objekt VSCodeWindow
-Okno kódu je specializované okno dokumentu, které může obsahovat jedno nebo více textových zobrazení, obvykle objekt <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>.
+Okno kódu je specializované okno dokumentu, které může obsahovat <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> jedno nebo více textových zobrazení, obvykle objekt.
 
- V architektuře je okno kódu okno dokumentu, které je v rámci rámce okna. V případě funkce je okno kódu jednoduše oknem dokumentu s dalšími funkcemi. V režimu MDI (Multiple Document Interface) je okno Code podřízeného rámce MDI. Další informace najdete v tématu [přizpůsobení oken kódu pomocí starší verze rozhraní API](/visualstudio/extensibility/customizing-code-windows-by-using-the-legacy-api?view=vs-2015).
+ Architektonicky okno kódu je okno dokumentu, který je v rámci okna. Funkčně je okno kódu jednoduše okno dokumentu s dalšími funkcemi. V režimu rozhraní více dokumentů (MDI) je okno kódu podřízeným rámcem MDI. Další informace naleznete v [tématu Přizpůsobení oken kódu pomocí staršího rozhraní API](/visualstudio/extensibility/customizing-code-windows-by-using-the-legacy-api?view=vs-2015).
 
- Následující tabulka obsahuje rozhraní v objektu <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>.
+ Následující tabulka obsahuje rozhraní v <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow> objektu.
 
 |Metoda|Popis|
 |------------|-----------------|
-|<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>|Poskytuje obecný přístupový mechanismus pro vyhledání služby, kterou identifikuje globálně jedinečný identifikátor (GUID).|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>|Představuje podřízený objekt MDI (Multiple Document Interface), který obsahuje jedno nebo více zobrazení kódu.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|Vyplní rámec okna.|
+|<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>|Poskytuje obecný mechanismus přístupu k vyhledání služby, která identifikuje globálně jedinečný identifikátor (GUID).|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>|Představuje podřízenou položku rozhraní více dokumentů (MDI), která obsahuje jedno nebo více zobrazení kódu.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|Vyplní rámeček okna.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>
 - [Úpravy obrázků](https://www.microsoft.com/download/details.aspx?id=55984)

@@ -1,59 +1,59 @@
 ---
-title: 'Návod: zobrazení návrhů na žárovku | Microsoft Docs'
+title: 'Návod: Zobrazení návrhů žárovek | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 99e5566d-450e-4660-9bca-454e1c056a02
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c9d0c0893e7e8bee2b28b095cab08165c8cafa08
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 09773e2be81ce51971709db590a07ca9960104fa
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72632623"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697476"
 ---
-# <a name="walkthrough-display-light-bulb-suggestions"></a>Návod: zobrazení návrhů žárovky
-Žárovky jsou ikony v editoru sady Visual Studio, které se rozbalí k zobrazení sady akcí, například opravy pro problémy identifikované vestavěnými analyzátory kódu nebo refaktoringu kódu.
+# <a name="walkthrough-display-light-bulb-suggestions"></a>Návod: Zobrazení návrhů žárovek
+Žárovky jsou ikony v editoru Sady Visual Studio, které rozbalí zobrazení sady akcí, například opravy problémů identifikovaných integrovanými analyzátory kódu nebo refaktoringkódu kódu.
 
- V editorech C# vizuálů a Visual Basic můžete také pomocí .NET Compiler Platform ("Roslyn") zapisovat a zabalit vlastní analyzátory kódu s akcemi, které automaticky zobrazují žárovky. Další informace naleznete v tématu:
+ V editorech Visual C# a Visual Basic můžete také použít platformu kompilátoru .NET ("Roslyn") k zápisu a balení vlastních analyzátorů kódu s akcemi, které automaticky zobrazují žárovky. Další informace naleznete v tématu:
 
-- [Postupy: psaní C# diagnostiky a opravy kódu](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)
+- [Postup: Napište diagnostiku a opravu kódu jazyka C#](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)
 
-- [Postupy: zápis diagnostiky Visual Basic a opravy kódu](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)
+- [Postup: Napište diagnostiku a opravu kódu jazyka Visual Basic](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)
 
-  Jiné jazyky C++ , jako je například, poskytují žárovky pro některé rychlé akce, jako je například návrh k vytvoření zástupné implementace této funkce.
+  Jiné jazyky, jako je například C++ také poskytují žárovky pro některé rychlé akce, jako je například návrh na vytvoření se zakázaným inzerováním implementace této funkce.
 
-  To vypadá jako žárovka. V Visual Basic nebo vizuálním C# projektu se v názvu proměnné zobrazí červená vlnovka, pokud je neplatná. Pokud překročíte ukazatel myši na neplatný identifikátor, zobrazí se v blízkosti kurzoru žárovka.
+  Zde je to, co žárovka vypadá. V projektu jazyka Visual Basic nebo Visual C# se pod názvem proměnné zobrazí červená vlnovka, pokud je neplatná. Pokud najedete myší na neplatný identifikátor, zobrazí se v blízkosti kurzoru žárovka.
 
-  ![žárovka](../extensibility/media/lightbulb.png "Žárovky")
+  ![Žárovky](../extensibility/media/lightbulb.png "Žárovka")
 
-  Pokud kliknete na šipku dolů u žárovky, zobrazí se sada navrhovaných akcí spolu s náhledem vybrané akce. V tomto případě se v případě provedení akce zobrazí změny provedené v kódu.
+  Pokud kliknete na šipku dolů u žárovky, zobrazí se sada navrhovaných akcí spolu s náhledem vybrané akce. V tomto případě se zobrazí změny, které jsou provedeny v kódu, pokud provedete akci.
 
-  ![náhled návrhů](../extensibility/media/lightbulbpreview.png "LightBulbPreview")
+  ![náhled žárovky](../extensibility/media/lightbulbpreview.png "Náhled žárovky")
 
-  K poskytnutí vlastních navrhovaných akcí můžete použít žárovky. Můžete například zadat akce pro přesunutí počátečních složených závorek na nový řádek nebo jejich přesunutí na konec předcházejícího řádku. Následující návod ukazuje, jak vytvořit žárovku, která se zobrazí na aktuálním slově a má dvě navrhované akce: **převést na velká písmena** a **převést na malá písmena**.
+  Pomocí žárovek můžete poskytnout vlastní navrhované akce. Můžete například poskytnout akce pro přesunutí úvodních složených závorek na nový řádek nebo jejich přesunutí na konec předchozího řádku. Následující návod ukazuje, jak vytvořit žárovku, která se zobrazí na aktuální slovo a má dvě navrhované akce: **Převést na velká písmena** a **převést na malá písmena**.
 
 ## <a name="prerequisites"></a>Požadavky
- Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+ Počínaje Visual Studio 2015, nenainstalujete Visual Studio SDK ze služby stažení. Je součástí volitelné funkce v nastavení sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace naleznete [v tématu Instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="create-a-managed-extensibility-framework-mef-project"></a>Vytvořit projekt Managed Extensibility Framework (MEF)
+## <a name="create-a-managed-extensibility-framework-mef-project"></a>Vytvoření projektu spravovaného rámce rozšiřitelnosti (MEF)
 
-1. Vytvořte projekt C# VSIX. (V dialogovém okně **Nový projekt** vyberte možnost **vizuální C# rozšíření**a **projekt VSIX**.) Pojmenujte `LightBulbTest` řešení.
+1. Vytvořte projekt C# VSIX. (V dialogovém okně **Nový projekt** vyberte možnost **Vizuální C# / Rozšiřitelnost**a potom **v six projectu**.) Pojmenujte `LightBulbTest`řešení .
 
-2. Přidejte do projektu šablonu položky **klasifikátoru editoru** . Další informace naleznete v tématu [Vytvoření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).
+2. Přidejte do projektu šablonu **položky třídění editoru.** Další informace naleznete [v tématu Vytvoření rozšíření se šablonou položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).
 
-3. Odstraňte existující soubory třídy.
+3. Odstraňte existující soubory tříd.
 
-4. Do projektu přidejte následující odkaz a nastavte **Kopírovat místně** na `False`:
+4. Přidejte do projektu následující odkaz a `False`nastavte nastavení Kopírovat **místní** na :
 
-     *Microsoft. VisualStudio. Language. IntelliSense*
+     *Microsoft.VisualStudio.Language.Intellisense*
 
-5. Přidejte nový soubor třídy a pojmenujte ho **LightBulbTest**.
+5. Přidejte nový soubor třídy a pojmenujte jej **LightBulbTest**.
 
-6. Přidejte následující direktivy using:
+6. Pomocí direktiv přidejte následující příkazy:
 
     ```csharp
     using System;
@@ -72,7 +72,7 @@ ms.locfileid: "72632623"
 
 ## <a name="implement-the-light-bulb-source-provider"></a>Implementace poskytovatele zdroje žárovky
 
-1. V souboru třídy *LightBulbTest.cs* odstraňte třídu LightBulbTest. Přidejte třídu s názvem **TestSuggestedActionsSourceProvider** , která implementuje <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>. Exportujte s názvem **navrhovaných akcí testu** a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text".
+1. V *souboru třídy LightBulbTest.cs* odstraňte třídu LightBulbTest. Přidejte třídu s názvem **TestSuggestedActionsSourceProvider,** která implementuje <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>. Exportujte jej s názvem **testovaných navrhovaných akcí** a "text". <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>
 
     ```csharp
     [Export(typeof(ISuggestedActionsSourceProvider))]
@@ -81,14 +81,14 @@ ms.locfileid: "72632623"
     internal class TestSuggestedActionsSourceProvider : ISuggestedActionsSourceProvider
     ```
 
-2. Uvnitř třídy poskytovatele zdroje importujte <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> a přidejte ho jako vlastnost.
+2. Uvnitř třídy zdrojového <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> zprostředkovatele importujte a přidejte ji jako vlastnost.
 
     ```csharp
     [Import(typeof(ITextStructureNavigatorSelectorService))]
     internal ITextStructureNavigatorSelectorService NavigatorService { get; set; }
     ```
 
-3. Implementací metody <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider.CreateSuggestedActionsSource%2A> pro vrácení objektu <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>. Zdroj je popsán v následující části.
+3. Implementujte <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider.CreateSuggestedActionsSource%2A> metodu <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> k vrácení objektu. Zdroj je popsán v další části.
 
     ```csharp
     public ISuggestedActionsSource CreateSuggestedActionsSource(ITextView textView, ITextBuffer textBuffer)
@@ -101,16 +101,16 @@ ms.locfileid: "72632623"
     }
     ```
 
-## <a name="implement-the-isuggestedactionsource"></a>Implementace rozhraní ISuggestedActionSource
- Navrhovaný zdroj akce zodpovídá za shromáždění sady navrhovaných akcí a jejich přidání do správného kontextu. V tomto případě je kontext aktuální slovo a navrhované akce jsou **UpperCaseSuggestedAction** a **LowerCaseSuggestedAction**, které jsou popsány v následující části.
+## <a name="implement-the-isuggestedactionsource"></a>Implementace zdroje ISuggestedActionSource
+ Navrhovaný zdroj akce je zodpovědný za shromažďování sady navrhovaných akcí a jejich přidání do správného kontextu. V tomto případě kontext je aktuální slovo a navrhované akce jsou **UpperCaseSuggestedAction** a **LowerCaseSuggestedAction**, který je popsán v následující části.
 
-1. Přidejte třídu **TestSuggestedActionsSource** , která implementuje <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>.
+1. Přidejte třídu **TestSuggestedActionsSource,** který implementuje <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>.
 
     ```csharp
     internal class TestSuggestedActionsSource : ISuggestedActionsSource
     ```
 
-2. Přidat soukromá pole, která jsou jen pro čtení pro navrhovaný zprostředkovatel zdroje akce, vyrovnávací paměť textu a textové zobrazení.
+2. Přidejte soukromá pole jen pro čtení pro navrhovaného zprostředkovatele zdroje akcí, vyrovnávací paměť textu a zobrazení textu.
 
     ```csharp
     private readonly TestSuggestedActionsSourceProvider m_factory;
@@ -129,7 +129,7 @@ ms.locfileid: "72632623"
     }
     ```
 
-4. Přidejte soukromou metodu, která vrátí slovo, které je aktuálně pod kurzorem. Následující metoda prohledá aktuální umístění kurzoru a požádá navigátor textové struktury o rozsah slova. Pokud je kurzor na slovo, <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> se vrátí v parametru out; v opačném případě je parametr `out` `null` a metoda vrátí `false`.
+4. Přidejte soukromou metodu, která vrací slovo, které je aktuálně pod kurzorem. Následující metoda se dívá na aktuální umístění kurzoru a požádá navigátor struktury textu o rozsah slova. Pokud je kurzor na <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> slovo, je vrácena v out parametr; jinak je `out` `null` parametr a metoda `false`vrátí .
 
     ```csharp
     private bool TryGetWordUnderCaret(out TextExtent wordExtent)
@@ -154,9 +154,9 @@ ms.locfileid: "72632623"
     }
     ```
 
-5. Implementujte metodu <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.HasSuggestedActionsAsync%2A>. Editor volá tuto metodu a zjistí, zda se má zobrazit žárovka. Toto volání je často prováděno například pokaždé, když se kurzor přesune z jednoho řádku na druhý nebo když ukazatel myši setrvá na chybové vlnovce. Je asynchronní, aby bylo možné provádět jiné operace uživatelského rozhraní v době, kdy tato metoda funguje. Ve většině případů tato metoda potřebuje provést analýzu a analýzu aktuálního řádku, takže zpracování může nějakou dobu trvat.
+5. Implementujte <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.HasSuggestedActionsAsync%2A> metodu. Editor volá tuto metodu zjistit, zda chcete zobrazit žárovku. Toto volání se provádí často, například vždy, když kurzor přesune z jedné čáry na druhou, nebo když myši najede myší nad chybovou vlnovkou. Je asynchronní, aby bylo možné pokračovat v jiných operacích s uznamamství, zatímco tato metoda funguje. Ve většině případů je třeba provést některé analýzy a analýzy aktuálnířádek, takže zpracování může nějakou dobu trvat.
 
-     V této implementaci asynchronně získá <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> a určí, zda je rozsah významný, jako v, zda má nějaký text jiný než prázdný znak.
+     V této implementaci asynchronně získá <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> a určuje, zda je rozsah významný, jako v, zda má nějaký text než mezery.
 
     ```csharp
     public Task<bool> HasSuggestedActionsAsync(ISuggestedActionCategorySet requestedActionCategories, SnapshotSpan range, CancellationToken cancellationToken)
@@ -174,10 +174,10 @@ ms.locfileid: "72632623"
     }
     ```
 
-6. Implementujte metodu <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.GetSuggestedActions%2A>, která vrací pole <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> objektů, které obsahují různé objekty <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction>. Tato metoda je volána při rozbalení žárovky.
+6. Implementujte <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.GetSuggestedActions%2A> metodu, která <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> vrací pole objektů, které obsahují různé <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> objekty. Tato metoda se nazývá při rozbalení žárovky.
 
     > [!WARNING]
-    > Měli byste se ujistit, že implementace `HasSuggestedActionsAsync()` a `GetSuggestedActions()` jsou konzistentní; To znamená, že pokud `HasSuggestedActionsAsync()` vrátí `true`, `GetSuggestedActions()` by měly mít některé akce k zobrazení. V mnoha případech je `HasSuggestedActionsAsync()` volána těsně před `GetSuggestedActions()`, ale to není vždy případ. Například pokud uživatel vyvolá akce žárovky stisknutím klávesy (**CTRL +** .), je volána pouze `GetSuggestedActions()`.
+    > Měli byste se ujistit, `HasSuggestedActionsAsync()` `GetSuggestedActions()` že implementace a jsou konzistentní; to znamená, `HasSuggestedActionsAsync()` `true`že `GetSuggestedActions()` pokud vrátí , pak by měl mít některé akce k zobrazení. V mnoha `HasSuggestedActionsAsync()` případech se `GetSuggestedActions()`nazývá těsně před , ale to není vždy případ. Například pokud uživatel vyvolá akce žárovky stisknutím tlačítka ( `GetSuggestedActions()` CTRL **+** .) se nazývá pouze.
 
     ```csharp
     public IEnumerable<SuggestedActionSet> GetSuggestedActions(ISuggestedActionCategorySet requestedActionCategories, SnapshotSpan range, CancellationToken cancellationToken)
@@ -194,13 +194,13 @@ ms.locfileid: "72632623"
     }
     ```
 
-7. Definujte událost `SuggestedActionsChanged`.
+7. Definujte `SuggestedActionsChanged` událost.
 
     ```csharp
     public event EventHandler<EventArgs> SuggestedActionsChanged;
     ```
 
-8. K dokončení implementace přidejte implementace pro `Dispose()` a metody `TryGetTelemetryId()`. Nechcete provádět telemetrii, takže stačí vrátit `false` a nastavit identifikátor GUID na `Empty`.
+8. Chcete-li dokončit implementaci, přidejte implementace pro `Dispose()` metody a. `TryGetTelemetryId()` Nechcete dělat telemetrii, takže `false` stačí vrátit a `Empty`nastavit identifikátor GUID na .
 
     ```csharp
     public void Dispose()
@@ -215,20 +215,20 @@ ms.locfileid: "72632623"
     }
     ```
 
-## <a name="implement-light-bulb-actions"></a>Implementace akcí žárovky
+## <a name="implement-light-bulb-actions"></a>Implementace akcí s žárovkami
 
-1. V projektu přidejte odkaz na *Microsoft. VisualStudio. Imaging. Interop. 14.0. designtime. dll* a nastavte **kopírovat místně** na `False`.
+1. V projektu přidejte odkaz na *Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll* a `False`nastavte Kopírovat **místní** na .
 
-2. Vytvořte dvě třídy, první pojmenovaný `UpperCaseSuggestedAction` a druhý s názvem `LowerCaseSuggestedAction`. Obě třídy implementují <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction>.
+2. Vytvořte dvě třídy, první s názvem `UpperCaseSuggestedAction` a druhou s názvem `LowerCaseSuggestedAction`. Obě třídy implementovat <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction>.
 
     ```csharp
     internal class UpperCaseSuggestedAction : ISuggestedAction
     internal class LowerCaseSuggestedAction : ISuggestedAction
     ```
 
-     Obě třídy jsou podobné s tím rozdílem, že jedna volání <xref:System.String.ToUpper%2A> a druhá volání <xref:System.String.ToLower%2A>. Následující postup pokrývá pouze velké třídy akcí, ale je nutné implementovat obě třídy. Použijte postup pro implementaci velkých a malých písmen jako vzor pro implementaci akce s malými písmeny.
+     Obě třídy jsou stejné <xref:System.String.ToUpper%2A> kromě toho, <xref:System.String.ToLower%2A>že jeden volání a ostatní volání . Následující kroky se týkají pouze velké třídy akce, ale je nutné implementovat obě třídy. Použijte kroky pro implementaci akce velkých písmen jako vzor pro implementaci akce malá písmena.
 
-3. Přidejte následující direktivy using pro tyto třídy:
+3. Přidejte následující pomocí direktiv pro tyto třídy:
 
     ```csharp
     using Microsoft.VisualStudio.Imaging.Interop;
@@ -239,7 +239,7 @@ ms.locfileid: "72632623"
 
     ```
 
-4. Deklarovat sadu privátních polí
+4. Deklarujte sadu soukromých polí.
 
     ```csharp
     private ITrackingSpan m_span;
@@ -260,7 +260,7 @@ ms.locfileid: "72632623"
     }
     ```
 
-6. Implementujte metodu <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetPreviewAsync%2A>, aby se zobrazila náhled akce.
+6. Implementujte <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetPreviewAsync%2A> metodu tak, aby se zobrazil náhled akce.
 
     ```csharp
     public Task<object> GetPreviewAsync(CancellationToken cancellationToken)
@@ -272,7 +272,7 @@ ms.locfileid: "72632623"
     }
     ```
 
-7. Implementujte metodu <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetActionSetsAsync%2A> tak, aby vracela prázdné <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> výčtu.
+7. Implementujte <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetActionSetsAsync%2A> metodu tak, <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> aby vrátí prázdný výčet.
 
     ```csharp
     public Task<IEnumerable<SuggestedActionSet>> GetActionSetsAsync(CancellationToken cancellationToken)
@@ -316,7 +316,7 @@ ms.locfileid: "72632623"
     }
     ```
 
-9. Implementujte metodu <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.Invoke%2A> nahrazením textu v rozsahu velkými ekvivalenty.
+9. Implementujte <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.Invoke%2A> metodu nahrazením textu v rozsahu jeho ekvivalentem velkých písmen.
 
     ```csharp
     public void Invoke(CancellationToken cancellationToken)
@@ -326,9 +326,9 @@ ms.locfileid: "72632623"
     ```
 
     > [!WARNING]
-    > Metoda **vyvolání** akce žárovky se neočekává pro zobrazení uživatelského rozhraní. Pokud vaše akce vyvolá nové uživatelské rozhraní (například dialogové okno náhledu nebo výběr), nezobrazujte uživatelské rozhraní přímo z metody **Invoke** , ale místo toho Naplánujte zobrazení uživatelského rozhraní po návratu z **vyvolání**.
+    > Akce žárovky **Invoke** metoda se neočekává, že zobrazit uI. Pokud vaše akce vyvolá nové uhlavní nastavení (například náhled nebo dialogové okno výběru), nezobrazujte ui přímo z metody **Invoke,** ale místo toho naplánujte zobrazení vašeho hlavního nastavení po návratu z **Invoke**.
 
-10. K dokončení implementace přidejte metody `Dispose()` a `TryGetTelemetryId()`.
+10. Chcete-li dokončit implementaci, přidejte metody `Dispose()` a. `TryGetTelemetryId()`
 
     ```csharp
     public void Dispose()
@@ -343,23 +343,23 @@ ms.locfileid: "72632623"
     }
     ```
 
-11. Nezapomeňte to samé udělat pro `LowerCaseSuggestedAction` změnu zobrazovaného textu na "převést" {0} na malá písmena "a volání <xref:System.String.ToUpper%2A> na <xref:System.String.ToLower%2A>.
+11. Nezapomeňte `LowerCaseSuggestedAction` udělat totéž pro změnu textu zobrazení na{0}"Převést ' ' <xref:System.String.ToUpper%2A> na <xref:System.String.ToLower%2A>malá písmena " a volání .
 
 ## <a name="build-and-test-the-code"></a>Sestavení a testování kódu
- Chcete-li otestovat tento kód, sestavte řešení LightBulbTest a spusťte ho v experimentální instanci.
+ Chcete-li otestovat tento kód, vytvořte řešení LightBulbTest a spusťte jej v instanci Experimental.
 
 1. Sestavte řešení.
 
-2. Při spuštění tohoto projektu v ladicím programu se spustí druhá instance sady Visual Studio.
+2. Při spuštění tohoto projektu v ladicím programu je spuštěna druhá instance sady Visual Studio.
 
-3. Vytvořte textový soubor a zadejte nějaký text. Nalevo od textu by se měla zobrazit žárovka.
+3. Vytvořte textový soubor a zadejte nějaký text. Vlevo od textu byste měli vidět žárovku.
 
-     ![testování žárovky](../extensibility/media/testlightbulb.png "TestLIghtBulb")
+     ![otestovat žárovku](../extensibility/media/testlightbulb.png "TestLIghtBulb")
 
-4. Ukažte v žárovkě. Měla by se zobrazit šipka dolů.
+4. Namiřte na žárovku. Měl bys vidět šipku dolů.
 
-5. Po kliknutí na žárovku by se měly zobrazit dvě navrhované akce spolu s náhledem vybrané akce.
+5. Po klepnutí na žárovku by se měly zobrazit dvě navrhované akce spolu s náhledem vybrané akce.
 
-     ![žárovka testu, rozbaleno](../extensibility/media/testlightbulbexpanded.gif "TestLIghtBulbExpanded")
+     ![zkušební žárovka, rozšířená](../extensibility/media/testlightbulbexpanded.gif "TestLIghtBulbExpanded")
 
-6. Pokud kliknete na první akci, veškerý text v aktuálním slově by se měl převést na velká písmena. Pokud kliknete na druhou akci, veškerý text by měl být převeden na malá písmena.
+6. Pokud klepnete na první akci, veškerý text v aktuálním slově by měl být převeden na velká písmena. Pokud klepnete na druhou akci, veškerý text by měl být převeden na malá písmena.

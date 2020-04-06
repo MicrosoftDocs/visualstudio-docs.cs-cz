@@ -1,5 +1,5 @@
 ---
-title: MODULE_FLAGS | Dokumentace Microsoftu
+title: MODULE_FLAGS | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - MODULE_FLAGS enumeration
 ms.assetid: 0e555b42-b846-4dbb-812e-8e3d11c85b2d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4b8080710b3225f025c329e0c5cb42331e1a059f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 78c7f24d64ffca667706c3b2fcebeffad16a9d85
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346796"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714259"
 ---
-# <a name="moduleflags"></a>MODULE_FLAGS
-Použít k popisu modulu.
+# <a name="module_flags"></a>MODULE_FLAGS
+Používá se k popisu modulu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,29 +50,29 @@ public enum enum_MODULE_FLAGS { 
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
  `MODULE_FLAG_NONE`\
- Určuje žádný modul.
+ Neurčuje žádný modul.
 
  `MODULE_FLAG_SYSTEM`\
- Určuje modul systému.
+ Určuje systémový modul.
 
  `MODULE_FLAG_SYMBOLS`\
- Určuje symbol modulu.
+ Určuje modul symbolů.
 
  `MODULE_FLAG_64BIT`\
- Určuje modul 64-bit.
+ Určuje 64bitový modul.
 
  `MODULE_FLAG_OPTIMIZED`\
- Určuje, že byla optimalizována modulu. Tento stav se projeví v **moduly** okna.
+ Určuje, že modul byl optimalizován. Tento stav se projeví v okně **Moduly.**
 
  `MODULE_FLAG_UNOPTIMIZED`\
- Určuje, že optimalizovanou modulu. Tento stav se projeví v **moduly** okna. Toto je výchozí stav.
+ Určuje, že modul nebyl optimalizován. Tento stav se projeví v okně **Moduly.** Toto je výchozí stav.
 
 ## <a name="remarks"></a>Poznámky
- Používá pro `m_dwModuleFlags` člena [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktury.
+ Používá se `m_dwModuleFlags` pro člen [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktury.
 
- Tyto příznaky lze kombinovat pomocí logické bitové `OR`.
+ Tyto příznaky mohou být kombinovány `OR`s bitovým .
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -81,6 +81,6 @@ public enum enum_MODULE_FLAGS { 
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)

@@ -1,5 +1,5 @@
 ---
-title: Requiredframeworkversion – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Funkce RequiredFrameworkVersion Element (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - <RequiredFrameworkVersion> (Visual Studio Templates)
 - RequiredFrameworkVersion (Visual Studio Templates)
 ms.assetid: 08a4f609-51a5-4723-b89f-99277fb18871
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0550fc1d286c04c61a1c0b2503326a002fde729e
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 060ebc0633de67d93257e24c2dff24d2aa0970da
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744758"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701500"
 ---
-# <a name="requiredframeworkversion-element-visual-studio-templates"></a>Requiredframeworkversion – element (šablony sady Visual Studio)
+# <a name="requiredframeworkversion-element-visual-studio-templates"></a>Prvek RequiredFrameworkVersion (šablony sady Visual Studio)
 
-Určuje minimální verzi rozhraní .NET Framework, která je vyžadované šablonou. Způsobí, že **cílovou verzi rozhraní Framework** rozevírací seznam, který se má zobrazit **nový projekt** dialogového okna. `RequiredFrameworkVersion` Element také určuje nejnižší hodnota, která je k dispozici v rozevírací nabídce.
+Určuje minimální verzi rozhraní .NET Framework, kterou šablona vyžaduje. Způsobí, že **cílové verze architektury rozbalovací** zobrazí v dialogovém okně **Nový projekt.** Prvek `RequiredFrameworkVersion` také určuje nejnižší hodnotu, která je k dispozici v rozevírací mase.
 
 > [!IMPORTANT]
-> Od verze Visual Studio 2017 verze 15.6 a **cílovou verzi rozhraní Framework** rozevíracího seznamu už není filtr pro zobrazený šablony v **šablony** část **nový projekt** dialogového okna. Místo toho rozevírací seznam funguje jako výběr framework pro vybranou šablonu.
+> Počínaje Visual Studio 2017 verze 15.6, cílový **rámec verze** rozevírací seznam již není filtr pro zobrazené šablony v části **Šablony** dialogového okna **Nový projekt.** Místo toho rozevírací rozbalovací akce funguje jako výběr architektury pro vybranou šablonu.
 
- \<VSTemplate> \<TemplateData> \<RequiredFrameworkVersion>
+ \<VSTemplate \<> TemplateData> \<RequiredFrameworkVersion>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,33 +34,33 @@ Určuje minimální verzi rozhraní .NET Framework, která je vyžadované šabl
 <RequiredFrameworkVersion> .... </RequiredFrameworkVersion>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazí buď **nový projekt** nebo **přidat novou položku** dialogové okno.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být číslo minimální verze rozhraní .NET Framework, který je požadovaný pro šablonu.
+ Text musí být minimální číslo verze rozhraní .NET Framework, které je požadováno pro šablonu.
 
 ## <a name="remarks"></a>Poznámky
 
-`RequiredFrameworkVersion` je volitelný prvek. Použijte tento prvek jenom v případě, že šablony podporují konkrétní minimální verzi (a novějších verzích, pokud existuje) rozhraní .NET Framework. Pokud zadáte `RequiredFrameworkVersion` elementu a šablony nepodporuje konkrétní minimální verzi rozhraní .NET Framework **cílovou verzi rozhraní Framework** rozevíracího seznamu se zobrazí, když se nedá použít.
+`RequiredFrameworkVersion`je volitelný prvek. Tento prvek použijte pouze v případě, že šablona podporuje určitou minimální verzi (a novější verze, pokud existuje) rozhraní .NET Framework. Pokud zadáte `RequiredFrameworkVersion` prvek a vaše šablona nepodporuje konkrétní minimální verzi rozhraní .NET Framework, zobrazí se rozevírací seznam **Verze cílového rozhraní,** pokud není použitelná.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje metadata pro standardní [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablony třídy.
+Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablonu standardní třídy.
 
 ```xml
 <VSTemplate Type="Item" Version="3.0.0"
@@ -80,10 +80,10 @@ Následující příklad ukazuje metadata pro standardní [!INCLUDE[csprcs](../d
 </VSTemplate>
 ```
 
-V tomto příkladu, minimální verze rozhraní .NET Framework, která je nutná šablonou, reprezentovaný `RequiredFrameworkVersion`, je 3.0. Do projektu vytvořeného s touto šablonou můžete cílit na rozhraní .NET Framework verze 3.0 od.
+V tomto příkladu je minimální verze rozhraní .NET Framework, `RequiredFrameworkVersion`která je vyžadována šablonou, reprezentovaná rozhraním , 3.0. Projekt vytvořený pomocí této šablony může cílit na verze rozhraní .NET Framework od verze 3.0.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Přehled cílení na rozhraní Framework](../ide/visual-studio-multi-targeting-overview.md)
+- [Přehled cílení na rozhraní](../ide/visual-studio-multi-targeting-overview.md)

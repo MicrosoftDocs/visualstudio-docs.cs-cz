@@ -1,5 +1,5 @@
 ---
-title: Using Managed Package Framework pro typ projektu (C#) | Dokumentace Microsoftu
+title: Použití architektury spravovaného balíčku pro typ projektu (C#) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,29 +7,29 @@ helpviewer_keywords:
 - MPF projects
 - managed package framework, creating projects
 ms.assetid: 926de536-eead-415b-9451-f1ddc8c44630
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a36dcb0ba8b55b6f3dece44e0fe7872e8696404f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7ca9dda0b699e0f70b0c945ab9ecfe9f9f4dcda6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324637"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80704124"
 ---
 # <a name="using-the-managed-package-framework-to-implement-a-project-type-c"></a>Použití rozhraní MPF (Managed Package Framework) k implementaci typu projektu (C#)
-Managed Package Framework (MPF) poskytuje třídy jazyka C# můžete použít nebo dědí implementovat vlastní typy projektů. MPF mnoho rozhraní sady Visual Studio očekává, že typ projektu chcete poskytnout, implementuje, poskytne vám zdarma soustředit na implementaci údaje vašeho typu projektu.
+Rozhraní MPF (Managed Package Framework) poskytuje třídy Jazyka C#, které můžete použít nebo zdědit k implementaci vlastních typů projektů. MPF implementuje mnoho rozhraní Visual Studio očekává, že typ projektu poskytnout, takže můžete soustředit na implementaci podrobnosti typu projektu.
 
-## <a name="using-the-mpf-project-source-code"></a>Pomocí MPF projektů zdrojového kódu.
- Managed Package Framework pro projekty (MPFProj) poskytuje pomocné třídy pro vytváření a správu nový systém projektů. Na rozdíl od jiných tříd v MPF projektů třídy nejsou součástí sestavení součástí sady Visual Studio. Místo toho jsou k dispozici tříd projektu jako zdrojový kód v [MPF projektů 2013](https://github.com/tunnelvisionlabs/MPFProj10).
+## <a name="using-the-mpf-project-source-code"></a>Použití zdrojového kódu projektu MPF
+ Architektura spravovaného balíčku pro projekty (MPFProj) poskytuje pomocné třídy pro vytváření a správu nového systému projektu. Na rozdíl od jiných tříd v MPF, třídy projektu nejsou zahrnuty v sestavení chod u sady Visual Studio. Místo toho jsou třídy projektu k dispozici jako zdrojový kód na [MPF pro projekty 2013](https://github.com/tunnelvisionlabs/MPFProj10).
 
- Chcete-li přidat tento projekt do řešení sady VSPackage, postupujte takto:
+ Chcete-li přidat tento projekt do řešení VSPackage, postupujte takto:
 
-1. Stáhnout soubory MPFProj *MPFProjectDir*.
+1. Stáhněte soubory MPFProj do *MPFProjectDir*.
 
-2. V *MPFProjectDir*\Dev10\Src\CSharp\ProjectBase.file, změnit následující blok:
+2. V *souboru MPFProjectDir*\Dev10\Src\CSharp\ProjectBase.file změňte následující blok:
 
 ```
 <!-- Provide a default value for $(ProjectBasePath) -->
@@ -40,9 +40,9 @@ Managed Package Framework (MPF) poskytuje třídy jazyka C# můžete použít ne
 
 1. Vytvořte projekt VSPackage.
 
-2. Uvolněte projekt VSPackage.
+2. Uvolnění projektu VSPackage.
 
-3. Upravit soubor .csproj VSPackage tak, že přidáte následující blok před druhou `<Import>` bloků:
+3. Upravte soubor VSPackage .csproj přidáním následujícího bloku před ostatní `<Import>` bloky:
 
 ```
 <Import Project="MPFProjectDir\Dev10\Src\CSharp\ProjectBase.files" />
@@ -66,8 +66,8 @@ Managed Package Framework (MPF) poskytuje třídy jazyka C# můžete použít ne
 
 5. Sestavte projekt.
 
-## <a name="hierarchy-classes"></a>Hierarchie tříd
- Následující tabulka shrnuje třídy v MPFProj, které podporují hierarchie projektu. Další informace najdete v tématu [hierarchie a výběr](../../extensibility/internals/hierarchies-and-selection.md).
+## <a name="hierarchy-classes"></a>Třídy hierarchie
+ Následující tabulka shrnuje třídy v MPFProj, které podporují hierarchie projektů. Další informace naleznete v [tématu Hierarchie a výběr](../../extensibility/internals/hierarchies-and-selection.md).
 
 |Název třídy|
 |----------------|
@@ -84,15 +84,15 @@ Managed Package Framework (MPF) poskytuje třídy jazyka C# můžete použít ne
 |`Microsoft.VisualStudio.Package.BuildDependency`|
 
 ## <a name="document-handling-classes"></a>Třídy zpracování dokumentů
- V následující tabulce jsou uvedeny třídy v MPF, které podporují zpracování dokumentů. Další informace najdete v tématu [otevření a uložení položek projektu](../../extensibility/internals/opening-and-saving-project-items.md).
+ V následující tabulce jsou uvedeny třídy v MPF, které podporují zpracování dokumentů. Další informace naleznete v [tématu Otevírání a ukládání položek projektu](../../extensibility/internals/opening-and-saving-project-items.md).
 
 |Název třídy|
 |----------------|
 |`Microsoft.VisualStudio.Package.DocumentManager`|
 |`Microsoft.VisualStudio.Package.FileDocumentManager`|
 
-## <a name="configuration-and-output-classes"></a>Konfigurace a třídy výstupu
- V následující tabulce jsou uvedeny třídy v MPF, která aplikacím umožňují podporu více konfigurací, jako je ladění a vydání a kolekce výstup projektu typy projektů. Další informace najdete v tématu [Správa možností konfigurace](../../extensibility/internals/managing-configuration-options.md).
+## <a name="configuration-and-output-classes"></a>Třídy konfigurace a výstupu
+ V následující tabulce jsou uvedeny třídy v MPF, které umožňují typy projektů podporovat více konfigurací, jako je například ladění a vydání a kolekce výstupu projektu. Další informace naleznete v [tématu Správa možností konfigurace](../../extensibility/internals/managing-configuration-options.md).
 
 |Název třídy|
 |----------------|
@@ -102,8 +102,8 @@ Managed Package Framework (MPF) poskytuje třídy jazyka C# můžete použít ne
 |`Microsoft.VisualStudio.Package.OutputGroup`|
 |`Microsoft.VisualStudio.Package.ProjectElement`|
 
-## <a name="automation-support-classes"></a>Třídy pro podporu automatizace
- V následující tabulce jsou uvedeny třídy v MPF, které podporují automatizaci, tak, aby uživatelé typu projektu můžete psát doplňky.
+## <a name="automation-support-classes"></a>Třídy podpory automatizace
+ V následující tabulce jsou uvedeny třídy v MPF, které podporují automatizaci tak, aby uživatelé typu projektu mohou psát doplňky.
 
 |Název třídy|
 |----------------|
@@ -113,8 +113,8 @@ Managed Package Framework (MPF) poskytuje třídy jazyka C# můžete použít ne
 |`Microsoft.VisualStudio.Package.Automation.OAProjectItem`|
 |`Microsoft.VisualStudio.Package.Automation.OANestedProjectItem`|
 
-## <a name="properties-classes"></a>Vlastnosti třídy
- V následující tabulce jsou uvedeny třídy v MPF, která aplikacím umožňují typy projektů přidat vlastnosti, že uživatelé mohou procházet a upravovat v prohlížeči vlastností.
+## <a name="properties-classes"></a>Třídy vlastností
+ V následující tabulce jsou uvedeny třídy v MPF, které umožňují typům projektů přidávat vlastnosti, které mohou uživatelé procházet a upravovat v prohlížeči vlastností.
 
 |Název třídy|
 |----------------|

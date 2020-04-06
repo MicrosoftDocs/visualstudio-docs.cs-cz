@@ -1,40 +1,40 @@
 ---
-title: Určení, jestli se má implementovat VSPackage zdrojového ovládacího prvku | Dokumentace Microsoftu
+title: Určení, zda implementovat zdrojového kódu VSPackage | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control packages, about source control packages
 ms.assetid: 60b3326e-e7e2-4729-95fc-b682e7ad5c99
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ba0ac240c8b8a93b6afbf1ec7dd580090ee54fd9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8707f3c1ced1cc2df9d3ae77280fc8779874a837
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351610"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80708725"
 ---
-# <a name="determine-whether-to-implement-a-source-control-vspackage"></a>Určete, jestli se má implementovat balíčku VSPackage správy zdrojového kódu
-Tato část popisuje možnosti řízení moduly plug-in zdrojového kódu a balíčků VSPackage správy zdrojového kódu pro rozšíření řešení a nabízí rozsáhlé pokyny o výběru cesty vhodné integrace správy zdrojového kódu.
+# <a name="determine-whether-to-implement-a-source-control-vspackage"></a>Určit, zda chcete implementovat zdrojového ovládacího prvku VSPackage
+Tato část zpracovává volby modulů plug-in správy zdrojového kódu a správy zdrojového kódu VSPackages pro rozšíření řešení správy zdrojového kódu a poskytuje obecné pokyny pro výběr vhodné cesty integrace.
 
-## <a name="small-source-control-solution-with-limited-resources"></a>Malé source řešení pro ovládací prvek s omezenými zdroji
- Pokud mají omezené prostředky a nemůže být burdened s nároky na zápis zdrojový ovládací prvek balíček, můžete vytvořit moduly plug-in založené na rozhraní API modulu Plug-in zdroje ovládacího prvku. To umožňuje pracovat souběžně s balíčky správy zdrojového kódu a můžete přepínat mezi ovládací prvek moduly plug-in zdrojového kódu a balíčky na vyžádání. Další informace najdete v tématu [registrace a výběr](../../extensibility/internals/registration-and-selection-source-control-vspackage.md).
+## <a name="small-source-control-solution-with-limited-resources"></a>Řešení správy malých zdrojů s omezenými zdroji
+ Pokud máte omezené prostředky a nelze je zatížit režií psaní balíčku správy zdrojového kódu, můžete vytvořit moduly plug-in moduly api založené na modulu API správy zdrojového kódu. Další informace naleznete v [tématu Registrace a výběr](../../extensibility/internals/registration-and-selection-source-control-vspackage.md).
 
-## <a name="large-source-control-solution-with-a-rich-feature-set"></a>Velké source řešení pro ovládací prvek s bohatou sadou funkcí
- Pokud chcete implementovat řešení zdrojového ovládacího prvku, který poskytuje bohaté zdrojového ovládacího prvku modelu, který není dostatečně zachyceny pomocí rozhraní API modulu Plug-in zdroje ovládacího prvku, zvažte zdrojový balíček ovládací prvek jako cestu integrace. To platí zejména v případě, že místo toho by byly nahrazeny zdrojový balíček adaptér ovládací prvek (který komunikuje se ovládací prvek moduly plug-in zdrojového kódu a poskytuje základní zdroj ovládací prvek uživatelského rozhraní) s vlastním tak, aby bylo možné zpracovat události ovládacího prvku zdroje vlastní způsobem. Pokud už máte uspokojivé zdrojový ovládací prvek uživatelského rozhraní a chcete zachovat ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], možnosti správy zdrojového kódu balíček umožňuje udělat přesně takhle. Zdrojový ovládací prvek balíček není obecná a je určený výhradně pro použití s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí.
+## <a name="large-source-control-solution-with-a-rich-feature-set"></a>Řešení pro slučovací řízení velkých zdrojů s bohatou sadou funkcí
+ Pokud chcete implementovat řešení správy zdrojového kódu, který poskytuje bohatý zdroj ový model správy, který není dostatečně zachycen pomocí rozhraní API modulu plug-in správy zdrojového kódu, můžete považovat balíček správy zdrojového kódu jako cestu integrace. To platí zejména v případě, že byste raději nahradit balíček adaptéru správy zdrojového kódu (který komunikuje s moduly plug-in správy zdrojového kódu a poskytuje základní zdroj ovládacího prvku uI) s vlastní tak, že můžete zpracovat události správy zdrojového kódu vlastním způsobem. Pokud již máte uspokojivé uživatelské nastavení správy zdrojového kódu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]a chcete zachovat toto prostředí v , možnost balíčku správy zdrojového kódu umožňuje provést právě to. Balíček správy zdrojového kódu není obecný a [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je určen výhradně pro použití s ide.
 
- Pokud chcete implementovat řešení zdrojového ovládacího prvku, který poskytuje flexibilitu a lepší kontrolu nad zdrojového ovládacího prvku logiky a uživatelského rozhraní, možná dáte přednost zdrojového ovládacího prvku balíček integrace trasy. Můžete:
+ Pokud chcete implementovat řešení správy zdrojového kódu, které poskytuje flexibilitu a bohatší kontrolu nad logikou správy zdrojového kódu a ui, můžete upřednostňovat směrování integrace balíčku správy zdrojového kódu. Můžete:
 
-1. Zaregistrovat vlastní ovládací prvek zdroje balíčku VSPackage (viz [registrace a výběr](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)).
+1. Zaregistrujte si vlastní zdrojového ovládacího prvku VSPackage (viz [Registrace a výběr](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)).
 
-2. Nahraďte výchozí zdrojový ovládací prvek uživatelského rozhraní vlastního uživatelského rozhraní (viz [vlastní uživatelské rozhraní](../../extensibility/internals/custom-user-interface-source-control-vspackage.md)).
+2. Nahraďte výchozí uživatelské rozhraní správy zdrojového kódu vlastním uživatelským rozhraním (viz [Vlastní uživatelské rozhraní](../../extensibility/internals/custom-user-interface-source-control-vspackage.md)).
 
-3. Zadejte glyfy použít a zpracovat události piktogram Průzkumníka řešení (viz [piktogramů](../../extensibility/internals/glyph-control-source-control-vspackage.md)).
+3. Určete glyfy, které mají být použity, a zpracovat události glyfů Průzkumníka řešení (viz [Kontrola glyfů).](../../extensibility/internals/glyph-control-source-control-vspackage.md)
 
-4. Zpracování událostí dotazu upravit a uložit dotaz (viz [dotaz upravit dotaz uložit](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)).
+4. Zpracovat události úprav dotazu a ukládání dotazů (viz [Úprava dotazu při ukládání dotazu).](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vytvoření modulu plug-in správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-plug-in.md)

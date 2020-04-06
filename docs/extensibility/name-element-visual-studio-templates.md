@@ -1,5 +1,5 @@
 ---
-title: Name – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Element Name (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -8,22 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - Name element [Visual Studio project templates]
 ms.assetid: 48788dbf-7da0-4443-8061-aab966fc22c8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b0365740f5ea8ab20ed79d077134afd32356bcc
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b2a02dc377bac5f93f8e0365f6f3d9ccb81737a8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344725"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702458"
 ---
-# <a name="name-element-visual-studio-templates"></a>Name – element (šablony sady Visual Studio)
-Určuje název šablony, jak se zobrazí v **nový projekt** nebo **přidat novou položku** dialogové okno.
+# <a name="name-element-visual-studio-templates"></a>Element Name (šablony sady Visual Studio)
+Určuje název šablony tak, jak se zobrazuje v dialogovém okně **Nový projekt** nebo Přidat **novou položku.**
 
- \<Vstemplate – > \<TemplateData > \<Name >
+ \<VSTemplate \<> TemplateData> \<název>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,35 +35,35 @@ Určuje název šablony, jak se zobrazí v **nový projekt** nebo **přidat novo
 <Name Package="{PackageID}" ID="ResourceID" />
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Package`|Volitelný atribut pro scénáře pro pokročilé uživatele.<br /><br /> Identifikátor GUID, který určuje balíček sady Visual Studio.|
-|`ID`|Volitelný atribut pro scénáře pro pokročilé uživatele.<br /><br /> Určuje ID prostředku. Visual Studio|
+|`Package`|Volitelný atribut pro pokročilé uživatelské scénáře.<br /><br /> Identifikátor GUID, který určuje ID balíčku sady Visual Studio.|
+|`ID`|Volitelný atribut pro pokročilé uživatelské scénáře.<br /><br /> Určuje ID prostředku sady Visual Studio.|
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
 
 ## <a name="text-value"></a>Textová hodnota
- Pokud je vyžadována textová hodnota `Package` a `ID` atributy se používají.
+ Textová hodnota je `Package` vyžadována, pokud nejsou použity atributy a. `ID`
 
  Text obsahuje název šablony.
 
 ## <a name="remarks"></a>Poznámky
- `Name` je vyžadovaný podřízený prvek `TemplateData`.
+ `Name`je povinnýpodřízený `TemplateData`prvek .
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metadata pro šablona projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikace.
+ Následující příklad ukazuje metadata pro šablonu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu pro aplikaci.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -89,6 +89,6 @@ Určuje název šablony, jak se zobrazí v **nový projekt** nebo **přidat novo
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

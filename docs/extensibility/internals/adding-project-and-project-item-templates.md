@@ -1,76 +1,76 @@
 ---
-title: Přidání projektu a šablony položek projektu | Dokumentace Microsoftu
+title: Přidání šablon položek projektu a projektu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], adding
 - project items [Visual Studio], adding
 ms.assetid: 8c59217f-56e5-4540-a73b-cd10de189373
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 38ab7a0a14c5a4e832aec330852546b64a41fd0c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 14eb1a9e2e63fa6e63d3ba2efa4426421e6b5593
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315849"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710199"
 ---
-# <a name="add-project-and-project-item-templates"></a>Přidat projekt a šablony položek projektu
-Když vytvoříte vlastní typy projektů, musíte poskytovat podporu pro přidání nové projekty a položky projektu pomocí standardní [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE) dialogových oknech. Následující témata popisují různé techniky pro přidání projektů a položek projektů.
+# <a name="add-project-and-project-item-templates"></a>Přidání šablon položek projektu a projektu
+Při vytváření vlastních typů projektů je nutné poskytnout podporu pro přidávání [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nových projektů a položek projektu pomocí standardních dialogových oken integrovaného vývojového prostředí (IDE). Následující témata popisují různé techniky pro přidávání projektů a položek projektu.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Kontext projektu](../../extensibility/internals/project-context.md)
 
- Tento článek vysvětluje, že projekt obsahuje většinu kontextové informace pro co ukáže v prostředí.
+ Vysvětluje, že projekt poskytuje většinu kontextové informace o tom, co se stane v prostředí.
 
 - [Priorita projektu](../../extensibility/internals/project-priority.md)
 
- Tento článek vysvětluje, že položka projektu je obvykle členem skupiny jednoho projektu, která pomáhá zabránit nejednoznačnost o tom, které se používá projekt, otevřete položku.
+ Vysvětluje, že položka projektu je obvykle členem jednoho projektu, aby se zabránilo nejednoznačnosti o tom, který projekt se používá k otevření položky.
 
-- [Různé soubory projektu](../../extensibility/internals/miscellaneous-files-project.md)
+- [Projekt různé soubory](../../extensibility/internals/miscellaneous-files-project.md)
 
- Poskytuje informace o dva typy editorů, které lze použít k otevření souborů v projektu a roli hraje projektu při určování, které editor pro použití při otevření položky projektu.
+ Obsahuje informace o dvou typech editorů, které lze použít k otevření souborů v projektu, a o roli, kterou projekt hraje při určování editoru, který se má použít při otevření položky projektu.
 
 - [Registrace šablon projektů a položek](../../extensibility/internals/registering-project-and-item-templates.md)
 
- Vysvětluje, co se stane, když [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vytvoření projektu.
+ Vysvětluje, co se [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] stane při vytvoření projektu.
 
-- [Přidání položek do dialogových oken přidat novou položku](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
+- [Přidání položek do dialogového okna Přidat novou položku](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
 
- Vysvětluje postup přidání položky, které chcete **přidat novou položku** dialogové okno.
+ Vysvětluje proces přidávání položek do dialogového okna **Přidat novou položku.**
 
-- [Přidat adresářů do dialogového okna Nový projekt pole](../../extensibility/internals/adding-directories-to-the-new-project-dialog-box.md)
+- [Přidání adresářů do dialogového okna Nový projekt](../../extensibility/internals/adding-directories-to-the-new-project-dialog-box.md)
 
- Poskytuje příklad registrace nového adresáře, který obsahuje vlastní šablony, které jsou k dispozici společností VSPackage.
+ Obsahuje příklad registrace nového adresáře, který obsahuje vlastní šablony zpřístupněné balíčkem VSPackage.
 
-- [Přidat adresářů do dialogového okna Přidat novou položku](../../extensibility/internals/adding-directories-to-the-add-new-item-dialog-box.md)
+- [Přidání adresářů do dialogového okna Přidat novou položku](../../extensibility/internals/adding-directories-to-the-add-new-item-dialog-box.md)
 
- Poskytuje příklad novou sadu adresářů pro registraci **přidat novou položku** dialogové okno.
+ Uvádí příklad registrace nové sady adresářů pro dialogové okno **Přidat novou položku.**
 
-- [Příkazy definované prostředím IDE pro rozšíření systémů projektů](../../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)
+- [Příkazy definované ide pro rozšíření projektových systémů](../../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)
 
- Obsahuje seznam různých typů položek příkaz používá pro rozšíření systémů projektů.
+ Uvádí různé typy položek příkazů používaných pro rozšíření projektových systémů.
 
-- [Identifikátory CatID pro objekty, které se obvykle používají k rozšíření projektů](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)
+- [CATID pro objekty, které se obvykle používají k rozšíření projektů](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)
 
- Uvádí identifikátory CatID pro objekty, které se používají k rozšíření [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)], [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)], a [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] systémy projektů.
+ Seznam catidů pro objekty, [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]které [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] se používají k rozšíření , a projektové systémy.
 
 ## <a name="related-sections"></a>Související oddíly
-- [Postupy: Otevřít editoru pro konkrétní projekt](../../extensibility/how-to-open-project-specific-editors.md)
+- [Postup: Otevření editorů specifických pro projekt](../../extensibility/how-to-open-project-specific-editors.md)
 
- Obsahuje podrobné pokyny pro otevírání položky vnitřně vázaný na zvláštní editor pro projekt.
+ Obsahuje podrobné pokyny pro otevření položky vnitřně vázané na konkrétní editor pro projekt.
 
-- [Postupy: Otevřít standardních editorů](../../extensibility/how-to-open-standard-editors.md)
+- [Postup: Otevření standardních editorů](../../extensibility/how-to-open-standard-editors.md)
 
- Obsahuje podrobné pokyny pro otevření standardní editor.
+ Obsahuje podrobné pokyny pro otevření standardního editoru.
 
-- [Podtypy projektů](../../extensibility/internals/project-subtypes.md)
+- [Podtypy projektu](../../extensibility/internals/project-subtypes.md)
 
- Obsahuje odkazy na koncepční témata podtyp projektu. Podtypy projektů rozšířit existující [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] a [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] projekty.
+ Obsahuje odkazy na koncepční témata podtypu projektu. Podtypy projektu [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] rozšiřují [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] stávající a projekty.
 
 - [Typy projektů](../../extensibility/internals/project-types.md)
 
- Obsahuje odkazy na další témata, která nabízí informace o navrhování nových typů projektů.
+ Obsahuje odkazy na další témata, která nabízejí informace o tom, jak navrhnout nové typy projektů.

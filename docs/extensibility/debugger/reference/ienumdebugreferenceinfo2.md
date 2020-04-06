@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugReferenceInfo2 | Dokumentace Microsoftu
+title: IEnumDebugReferenceInfo2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugReferenceInfo2
 ms.assetid: 7ed01441-686f-4032-8268-a4c750f19f85
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b664b068ac7cd30a7475ab14bfe1b064c98142c2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6132235a7e4789c7d9efe5bae9d7fd531112dab4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324408"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80715267"
 ---
 # <a name="ienumdebugreferenceinfo2"></a>IEnumDebugReferenceInfo2
-Vytvoří výčet toto rozhraní [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury.
+Toto rozhraní vyjmenovává [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,24 +29,24 @@ IEnumDebugReferenceInfo2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Ladicí stroj (DE) implementuje toto rozhraní jako součást jeho podporu pro odkazy na objekty v paměti. Toto rozhraní musí být implementované jenom v případě, že jsou podporovány odkazy.
+ Ladicí modul (DE) implementuje toto rozhraní jako součást jeho podporu pro odkazy na objekty v paměti. Toto rozhraní musí být implementováno pouze v případě, že jsou podporovány odkazy.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Visual Studio volání [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) získat toto rozhraní.
+ Visual Studio volá [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) k získání tohoto rozhraní.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IEnumDebugReferenceInfo2`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IEnumDebugReferenceInfo2`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[Next](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-next.md)|Načte zadaný počet [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury v sekvenci výčtu.|
-|[Skip](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-skip.md)|Vynechá zadaný počet [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury v pořadí výčtu.|
-|[Reset](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-reset.md)|Návrat na začátek sekvence výčtu.|
-|[Clone](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-clone.md)|Vytvoří čítač, který obsahuje stejného stavu jako aktuální enumerátor výčtu.|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-getcount.md)|Získá počet [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury v enumerátor.|
+|[Další](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-next.md)|Načte zadaný počet [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury v pořadí výčtu.|
+|[Přeskočit](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-skip.md)|Přeskočí zadaný počet [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktur v pořadí výčtu.|
+|[Resetovat](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-reset.md)|Obnoví pořadí výčtu na začátek.|
+|[Klonování](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-clone.md)|Vytvoří čítač výčtu, který obsahuje stejný stav výčtu jako aktuální čítač výčtu.|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-getcount.md)|Získá počet [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury v čítači výčtu.|
 
 ## <a name="remarks"></a>Poznámky
- Odkaz je v podstatě typu a adresu, že vlastnost je název, typ a adresu. Odkaz se uchovávají jako objekt uvedené existuje v paměti. Zobrazit [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) další podrobnosti.
+ Odkaz je v podstatě typ a adresa, zatímco vlastnost je název, typ a adresa. Odkaz přetrvává tak dlouho, dokud existující objekt v paměti. Další podrobnosti naleznete v [tématu IDebugReference2.](../../../extensibility/debugger/reference/idebugreference2.md)
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -55,7 +55,7 @@ IEnumDebugReferenceInfo2 : IUnknown
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)
 - [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

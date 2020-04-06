@@ -1,55 +1,55 @@
 ---
-title: Moduly plug-in správy zdrojového | Dokumentace Microsoftu
+title: Moduly plug-in správy zdrojového kódu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, reference
 ms.assetid: 964980ca-21c5-4706-8535-6ea23e1c9cc9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 01e7a0ca8a509d430a0794a2cedb4b2e9d869585
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cc5f092e0ae93109d071af0b1a67999947e73e90
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331831"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80699895"
 ---
 # <a name="source-control-plug-ins"></a>Moduly plug-in správy zdrojového kódu
-Zdrojový ovládací prvek modulu Plug-in SDK odkaz na oddíl obsahuje kompletní rozhraní specifikace, která umožňuje systémy správy zdrojového kódu pro integraci s [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Určuje syntaxi a sémantiku různé funkce a datové typy, které modul plug-in správy zdrojového kódu musí implementovat rozhraní s [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE).
+Referenční část modulu Plug-in Source Control Plug-in Obsahuje úplnou specifikaci rozhraní, která umožňuje integraci systémů správy zdrojového kódu s [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Určuje syntaxi a sémantiku různých funkcí a datových typů, které musí modul [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] plug-in správy zdrojového kódu implementovat do rozhraní s integrovaným vývojovým prostředím (IDE).
 
 ## <a name="in-this-section"></a>V tomto oddílu
-- [Zdroje funkcí rozhraní API ovládacího prvku modulu Plug-in](../extensibility/source-control-plug-in-api-functions.md) seznam funkcí, které je třeba implementovat modul plug-in správy zdrojového kódu, aby bylo možné v souladu s rozhraním API modulů Plug-in zdroje ovládacího prvku.
+- [Funkce rozhraní API pro sčást dat](../extensibility/source-control-plug-in-api-functions.md) Uvádí funkce, které musí být implementovány modulu plug-in správy zdrojového kódu, aby bylo možné splnit rozhraní api modulu plug-in správy zdrojového kódu.
 
-- [Zpětné volání funkce implementované integrovaným vývojovým prostředím](../extensibility/callback-functions-implemented-by-the-ide.md) popisuje funkce, které modul plug-in správy zdrojového kódu se používá k předání informací zpět do integrovaného vývojového prostředí, zatímco některé příkazy provádějí.
+- [Funkce zpětného volání implementované ide](../extensibility/callback-functions-implemented-by-the-ide.md) Popisuje funkce, které modul plug-in správy zdrojového kódu používá k předání informací zpět do ide při provádění určitých příkazů.
 
-- [Enumerátory](../extensibility/enumerators.md) uvádí výčet datových typů v rozhraní API modulu Plug-in zdroje ovládacího prvku, které musíte znát plug-in správy zdrojových kódů.
+- [Čítače výčtu](../extensibility/enumerators.md) Zobrazí seznam datových typů čítače v rozhraní API modulu plug-in správy zdrojového kódu, o kterém musí modul plug-in správy zdrojového kódu vědět.
 
-- [Příznaky funkcí](../extensibility/capability-flags.md) popisuje `SCC_CAP_xxx` příznaky, které se označují schopnosti poskytovatele.
+- [Příznaky schopností](../extensibility/capability-flags.md) Popisuje `SCC_CAP_xxx` příznaky, které označují možnosti zprostředkovatele.
 
-- [Příznaky Bitflag používané konkrétními příkazy](../extensibility/bitflags-used-by-specific-commands.md) uvádí příznaky, které jsou užitečné v kontextu konkrétní příkazy.
+- [Bitové příznaky používané určitými příkazy](../extensibility/bitflags-used-by-specific-commands.md) Uvádí příznaky, které jsou užitečné v kontextu konkrétní příkazy.
 
-- [Kódy chyb](../extensibility/error-codes.md) jsou uvedeny běžné chyby hodnoty vrácené funkcí jako `SCCTRN`.
+- [Kódy chyb](../extensibility/error-codes.md) Uvádí běžné chybové hodnoty `SCCTRN`vrácené funkcemi jako .
 
-- [Řetězce používané jako klíče pro vyhledání modulu Plug-in zdrojového ovládacího prvku](../extensibility/strings-used-as-keys-for-finding-a-source-control-plug-in.md) popisuje klíče pro přístup k registru k vyhledání modulu plug-in správy zdrojového kódu.
+- [Řetězce používané jako klíče pro vyhledání modulu plug-in správy zdrojového kódu](../extensibility/strings-used-as-keys-for-finding-a-source-control-plug-in.md) Popisuje klíče pro přístup k registru najít modul plug-in správy zdrojového kódu.
 
-- [MSSCCPRJ. Soubor SCC](../extensibility/mssccprj-scc-file.md) popisuje soubor na straně klienta, který obsahuje informace neprůhledné rozhraní IDE, ale modul plug-in správy zdrojového kódu, která je používaná k nalezení řešení nebo projektu ve správě verzí.
+- [MSSCCPRJ. SCC File](../extensibility/mssccprj-scc-file.md) Popisuje soubor na straně klienta, který obsahuje informace neprůhledné ide, ale který je používán modul plug-in správy zdrojového kódu k vyhledání řešení nebo projektu v řízení verzí.
 
-- [Osvědčené postupy pro implementaci modulu Plug-in zdrojového ovládacího prvku](../extensibility/best-practices-for-implementing-a-source-control-plug-in.md) poskytuje kolekci důležité technické připomenutí pamatovat, když implementujete rozhraní API modulu Plug-in zdroje ovládacího prvku.
+- [Doporučené postupy pro implementaci modulu plug-in správy zdrojového kódu](../extensibility/best-practices-for-implementing-a-source-control-plug-in.md) Poskytuje kolekci důležitých technických připomenutí, která si můžete pamatovat při implementaci rozhraní PLUG-in source control.
 
-- [Omezení délky řetězců](../extensibility/restrictions-on-string-lengths.md) popisuje omezení v rozhraní API modulu Plug-in zdroje ovládacího prvku na délky řetězce použité v různých funkcí.
+- [Omezení délky řetězců](../extensibility/restrictions-on-string-lengths.md) Popisuje omezení v rozhraní API modulu plug-in správy zdrojového kódu na délky řetězců používaných v různých funkcích.
 
-- [Glosář](../extensibility/source-control-plug-in-glossary.md) poskytuje užitečné termíny a jejich definice pro čtení v dokumentaci sady SDK modulu Plug-in zdroje ovládacího prvku.
+- [Slovníček pojmů](../extensibility/source-control-plug-in-glossary.md) Obsahuje užitečné termíny a jejich definice pro čtení dokumentace sady Plug-in správy zdrojového kódu.
 
-- [Postupy: Zapnout vypnutí upozornění kompatibility pro moduly plug-in správy zdrojových kódů](../extensibility/how-to-turn-off-compatibility-warnings-for-source-control-plug-ins.md) popisuje, jak zakázat upozornění.
+- [Postup: Vypnutí upozornění na kompatibilitu modulů plug-in správy zdrojového kódu](../extensibility/how-to-turn-off-compatibility-warnings-for-source-control-plug-ins.md) Popisuje, jak zakázat upozornění.
 
 ## <a name="related-sections"></a>Související oddíly
-- [Ukázka modulu Plug-in ovládací prvek zdroje](https://www.microsoft.com/download/details.aspx?id=55984) najdete vzorek funkce modulu plug-in správy zdrojového kódu.
+- [Ukázka modulu plug-in správy zdrojového kódu](https://www.microsoft.com/download/details.aspx?id=55984) Obsahuje ukázku funkcí modulu plug-in správy zdrojového kódu.
 
-- [Testovací Příručka pro moduly plug-in správy zdrojových kódů](../extensibility/internals/test-guide-for-source-control-plug-ins.md) popisuje testovací postupy související s plug-in správy zdrojových kódů.
+- [Průvodce testováním modulů plug-in správy zdrojového kódu](../extensibility/internals/test-guide-for-source-control-plug-ins.md) Popisuje testovací postupy související s modulem plug-in správy zdrojového kódu.
 
-- [Vytvoření modulu Plug-in zdrojového ovládacího prvku](../extensibility/internals/creating-a-source-control-plug-in.md) popisuje, jak vytvořit plug-in správy zdrojových kódů, který poskytuje funkce správy zdrojového kódu, zatímco používáte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] zdrojového ovládacího prvku uživatelského rozhraní (UI).
+- [Vytvoření modulu plug-in správy zdrojového kódu](../extensibility/internals/creating-a-source-control-plug-in.md) Popisuje, jak vytvořit modul plug-in správy zdrojového kódu, který [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] poskytuje funkce správy zdrojového kódu při použití uživatelského rozhraní správy zdrojového kódu(UI).
 
-- [Referenční dokumentace jazyka Visual Studio SDK](../extensibility/visual-studio-sdk-reference.md) zobrazí seznam referenčních témat.
+- [Referenční příručka sady Visual Studio SDK](../extensibility/visual-studio-sdk-reference.md) Zobrazí seznam referenčních témat.

@@ -1,35 +1,35 @@
 ---
-title: 'Návod: Přidání XAML vlastní úvodní stránku | Dokumentace Microsoftu'
+title: 'Návod: Přidání vlastního xaml na úvodní stránku | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - custom start page
 - xaml start page
 ms.assetid: 9af4d5f9-1cfc-4221-aea7-c8cd3f7571a6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 543faf9cf122e77cce6242f95008b777cd5666b2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4e2afc90dc96978e8a8290afaa2d3278e8b621b3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322781"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697680"
 ---
-# <a name="walkthrough-add-custom-xaml-to-the-start-page"></a>Návod: Přidat vlastní XAML na úvodní stránku
+# <a name="walkthrough-add-custom-xaml-to-the-start-page"></a>Návod: Přidání vlastního xaml na úvodní stránku
 
 Tento návod ukazuje, jak vytvořit vlastní úvodní stránku sady Visual Studio, která obsahuje webový prohlížeč.
 
 ## <a name="add-custom-xaml"></a>Přidat vlastní XAML
 
-1. Vytvořit podle pokynů v úvodní stránku [vytvořit vlastní úvodní stránku](../extensibility/creating-a-custom-start-page.md).
+1. Vytvořte úvodní stránku podle pokynů v části [Vytvoření vlastní úvodní stránky](../extensibility/creating-a-custom-start-page.md).
 
-2. V *souboru MainWindow.xaml* souboru, vyhledejte \<mřížky > oddílu.
+2. V souboru *MainWindow.xaml* \<vyhledejte oddíl Grid>.
 
-3. Přidat \<TabControl > element a \<TabItem > uvnitř \< mřížky > element, jak je znázorněno v následujícím příkladu.
+3. Přidejte \<prvek> TabControl a \<> \< položky TabItem uvnitř elementu Grid>, jak je znázorněno v následujícím příkladu.
 
     ```xml
     <Grid>
@@ -41,7 +41,7 @@ Tento návod ukazuje, jak vytvořit vlastní úvodní stránku sady Visual Studi
     </Grid>
     ```
 
-4. Přidejte druhý \<TabItem >, pomocí \<tlačítko > element, který se otevře nový projekt:
+4. Přidejte \<druhou> Položky \<tabitem s prvkem Button>, který otevře nový projekt:
 
     ```xml
     <Grid>
@@ -61,33 +61,33 @@ Tento návod ukazuje, jak vytvořit vlastní úvodní stránku sady Visual Studi
 
 ## <a name="test-the-custom-start-page"></a>Testování vlastní úvodní stránky
 
-1. Stisknutím klávesy **F5**.
+1. Stiskněte **klávesu F5**.
 
-     Otevře se experimentální instanci sady Visual Studio, s vlastní úvodní stránku nainstalované, ale nejsou vybrány.
+     Experimentální instance sady Visual Studio se otevře s nainstalovanou vlastní úvodní stránkou, ale není vybrána.
 
-2. V experimentální instanci sady Visual Studio, otevřete **Tools/Options / prostředí** stránky.
+2. V experimentální instanci sady Visual Studio otevřete stránku **Nástroje /Možnosti / Prostředí.**
 
-3. Vyberte **spuštění**. Na **přizpůsobit úvodní stránku** seznamu vyberte vaše *.xaml* souboru a klikněte na tlačítko **OK**.
+3. Vyberte **možnost Spustit**. V seznamu **Přizpůsobit úvodní stránku** vyberte soubor *.xaml* a klepněte na **tlačítko OK**.
 
-4. Na **zobrazení** nabídky, klikněte na tlačítko **úvodní stránka**.
+4. V nabídce **Zobrazení** klepněte na tlačítko **Úvodní stránka**.
 
-5. Klikněte na tlačítko **Bingu** kartu.
+5. Klikněte na kartu **Bing.**
 
-     Měli byste vidět Bingu webové stránky.
+     Měla by se zobrazit webová stránka Bingu.
 
-6. Klikněte na tlačítko **MyButton** kartu.
+6. Klepněte na kartu **MyButton.**
 
-     Měli byste vidět **MyProject** tlačítko, které se otevře **nový projekt** dialogového okna.
+     Mělo by se zobrazit tlačítko **MyProject,** které otevře dialogové okno **Nový projekt.**
 
-7. Ukončete experimentální instanci.
+7. Zavřete experimentální instanci.
 
-Chcete-li použít vlastní úvodní stránky v **nástroje** > **možnosti** > **prostředí**vyberte **spuštění**. Na **přizpůsobit úvodní stránku** seznamu vyberte vaše *.xaml* souboru a klikněte na tlačítko **OK**.
+Chcete-li použít vlastní **Tools** > úvodní stránku, vyberte v části**Tools Options** > **Environment** **položku Startup**. V seznamu **Přizpůsobit úvodní stránku** vyberte soubor *.xaml* a klepněte na **tlačítko OK**.
 
 ## <a name="next-steps"></a>Další kroky
 
-Úvodní stránku sady Visual Studio teď obsahuje kartu, která se zobrazí na kartě webového prohlížeče a MyButton kartu. Můžete vytvořit vlastní úvodní stránky, které mají další funkce pomocí *použití modelu code-behind* modelu Chcete-li přidat vlastní .dll, jak je znázorněno v [přidání uživatelského ovládacího prvku na úvodní stránku](../extensibility/adding-user-control-to-the-start-page.md). Vlastní úvodní stránky můžete sdílet s ostatními uživateli publikováním výsledný soubor .vsix [Visual Studio Marketplace](https://marketplace.visualstudio.com/) webový server nebo do jiného webu nebo síťové sdílené složky. Další informace najdete v tématu [nasazení vlastní úvodní stránky](../extensibility/deploying-custom-start-pages.md).
+Úvodní stránka sady Visual Studio nyní obsahuje kartu, která zobrazuje kartu webového prohlížeče a kartu MyButton. Pomocí modelu *s kódem na pozadí* můžete vytvořit vlastní úvodní stránky, které mají další funkce, a přidat tak vlastní dll, jak je znázorněno v části Přidání [uživatelského ovládacího prvku na úvodní stránku](../extensibility/adding-user-control-to-the-start-page.md). Vlastní úvodní stránky můžete sdílet s ostatními uživateli publikováním výsledného souboru Vsix na webu [Webu Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo na jiném webu nebo sdílené síťové složce. Další informace naleznete v [tématu Nasazení vlastních úvodních stránek](../extensibility/deploying-custom-start-pages.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přizpůsobení úvodní stránky](../ide/customizing-the-start-page-for-visual-studio.md)
-- [Kontejner ovládacích prvků WPF](https://msdn.microsoft.com/library/a0177167-d7db-4205-9607-8ae316952566)
+- [Ovládací prvky kontejneru WPF](https://msdn.microsoft.com/library/a0177167-d7db-4205-9607-8ae316952566)

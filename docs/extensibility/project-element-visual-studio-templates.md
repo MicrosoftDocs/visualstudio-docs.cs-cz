@@ -1,5 +1,5 @@
 ---
-title: Project – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Prvek projektu (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Project element [Visual Studio Templates]
 - <Project> element [Visual Studio Templates]
 ms.assetid: 1da15ea6-26e2-462b-a03e-584ef4996579
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 843ba7935dbddb95c9a3043deff534db9157f15b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 335a1e4efa62f07e10bb24b9971627d24bb13273
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336055"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701994"
 ---
-# <a name="project-element-visual-studio-templates"></a>Project – element (šablony sady Visual Studio)
-Určuje soubory nebo adresáře přidat do projektu.
+# <a name="project-element-visual-studio-templates"></a>Prvek projektu (šablony sady Visual Studio)
+Určuje soubory nebo adresáře, které chcete přidat do projektu.
 
- \<VSTemplate> \<TemplateContent> \<Project>
+ \<VSTemplate \<> TemplateContent> \<project>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,42 +38,42 @@ Určuje soubory nebo adresáře přidat do projektu.
 </Project>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`File`|Požadovaný atribut.<br /><br /> Určuje název souboru projektu v šabloně *ZIP* souboru.|
-|`ReplaceParameters`|Nepovinný atribut.<br /><br /> Logická hodnota určující, zda soubor projektu obsahuje hodnoty parametrů, které musí být nahrazen, když je projekt vytvořen z šablony. Výchozí hodnota je `false`.|
-|`TargetFileName`|Nepovinný atribut.<br /><br /> Určuje název souboru projektu, když je projekt vytvořen z šablony.|
-|`IgnoreProjectParameter`|Nepovinný atribut.<br /><br /> Určuje, zda by měl přidat projekt do aktuálního řešení. Pokud hodnota parametru vlastní, "$*myCustomParameter*$" existuje v nahrazení souboru parametrů je projekt vytvořen, ale nebyl přidán do aktuálně otevřeného řešení v rámci.|
+|`File`|Požadovaný atribut.<br /><br /> Určuje název souboru projektu v souboru *ZIP* šablony.|
+|`ReplaceParameters`|Nepovinný atribut.<br /><br /> Logická hodnota, která určuje, zda soubor projektu obsahuje hodnoty parametrů, které musí být nahrazeny při vytvoření projektu ze šablony. Výchozí hodnota `false`je .|
+|`TargetFileName`|Nepovinný atribut.<br /><br /> Určuje název souboru projektu při vytvoření projektu ze šablony.|
+|`IgnoreProjectParameter`|Nepovinný atribut.<br /><br /> Určuje, zda má být projekt přidán do aktuálního řešení. Pokud hodnota vlastního parametru "$*myCustomParameter*$" existuje v souboru nahrazení parametru, projekt je vytvořen, ale není přidán jako součást aktuálně otevřeného řešení.|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[Složka](../extensibility/folder-element-visual-studio-project-templates.md)|Volitelný element.<br /><br /> Určuje složku, kterou chcete přidat do projektu.|
-|[ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md)|Volitelný element.<br /><br /> Určuje soubor a přidejte do projektu.|
+|[ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md)|Volitelný element.<br /><br /> Určuje soubor, který má být přidejte do projektu.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Požadovaný element.|
 
 ## <a name="remarks"></a>Poznámky
- `Project` je volitelný podřízený prvek `TemplateContent`.
+ `Project`je volitelný podřízený `TemplateContent`prvek .
 
- `Project` Elementu je použita zadat projekt a proto je platná pouze v šablonách projektů.
+ Prvek `Project` se používá ke specifii projektu, a proto je platný pouze v šablonách projektu.
 
- `Project` elementy mohou mít [složky](../extensibility/folder-element-visual-studio-project-templates.md) podřízené prvky nebo [ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md) podřízené prvky, ale ne kombinace obou `Folder` a `ProjectItem` podřízené prvky.
+ `Project`elementy mohou mít [Folder](../extensibility/folder-element-visual-studio-project-templates.md) children elementy nebo [ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md) podřízené prvky, ale ne směs obou `Folder` a `ProjectItem` podřízených prvků.
 
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky přejmenuje název souboru projektu na základě zadaného uživatelem, v názvu **nový projekt** dialogové okno. Použití `TargetFileName` atribut, pokud byste chtěli poskytnout alternativní název_souboru pro souborů projektu vytvořených šablonou.
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]automaticky přejmenuje název souboru projektu na základě názvu zadaného uživatelem v dialogovém okně **Nový projekt.** Atribut `TargetFileName` použijte, pokud chcete zadat alternativní název souboru pro soubory projektu vytvořené pomocí šablony.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metadata pro šablona projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikace.
+ Následující příklad ukazuje metadata pro šablonu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu pro aplikaci.
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -99,8 +99,8 @@ Určuje soubory nebo adresáře přidat do projektu.
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [ProjectItem – element (šablony projektů Visual Studio)](../extensibility/projectitem-element-visual-studio-project-templates.md)
-- [Folder – element (šablony projektů Visual Studio)](../extensibility/folder-element-visual-studio-project-templates.md)
+- [Element ProjectItem (šablony projektů sady Visual Studio)](../extensibility/projectitem-element-visual-studio-project-templates.md)
+- [Element složky (šablony projektů sady Visual Studio)](../extensibility/folder-element-visual-studio-project-templates.md)

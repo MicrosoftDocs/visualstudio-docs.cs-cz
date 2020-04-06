@@ -3,17 +3,17 @@ title: Text a nápověda k unám pro visual studio | Dokumenty společnosti Micr
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c0477a0e1994e9c3b94df13ace4c1f3b4df51039
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: b3247aeaa702b59722471c7d28e98957f04f3e07
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303125"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698301"
 ---
 # <a name="ui-text-and-help-for-visual-studio"></a>Text uživatelského rozhraní a nápověda pro Visual Studio
 ## <a name="ui-text-and-terminology"></a><a name="BKMK_UITextAndTerminology"></a>Text a terminologie ui
@@ -160,7 +160,7 @@ ms.locfileid: "79303125"
 |Přihlásit se / odhlásit|Slovesa používaná jako synonymum pro web pro reprezentaci ověřování do webové vlastnosti. V rámci klientů to jednou používáme jako pojem nejvyšší úrovně pro přihlášení a odhlášení z připojení uživatelů ide, což představuje identitu nejvyšší úrovně, která poskytuje vyšší úrovně funkcí, jako je roaming a licencování, které nejsou k dispozici u všech ostatních připojení.|Uživatel ide je jedinou funkcí, která by měla představovat přihlášení / odhlásit sloveso, protože představuje uživatele ide nejvyšší úrovně.|
 |Připojit / odpojit|Používá se v místech, kde funkce udržuje jedno připojení k online službě.|Průzkumník serveru, kde můžete mít současně jenom jedno aktivní připojení Azure, je příkladem připojení nebo odpojení.|
 |Přidat / odebrat|Nedestruktivní. Používá se při přidávání nebo odebírání něčeho ze seznamu.|Dialogové okno seznamu serveru Správce připojení TFS je příkladem doplňku Přidat nebo odebrat.|
-|Odstranění|Destruktivní. Použijte pouze v případě, že odebraný prvek bude trvale zahozen nebo odstraněn z disku.|"Odstranit" obvykle vyžaduje výzvu, pokud výsledek odstraní soubor z disku.|
+|Odstranit|Destruktivní. Použijte pouze v případě, že odebraný prvek bude trvale zahozen nebo odstraněn z disku.|"Odstranit" obvykle vyžaduje výzvu, pokud výsledek odstraní soubor z disku.|
 
 ## <a name="error-messages"></a>Chybové zprávy
 

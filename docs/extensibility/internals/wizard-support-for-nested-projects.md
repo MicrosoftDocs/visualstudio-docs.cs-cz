@@ -1,5 +1,5 @@
 ---
-title: Podpora průvodce pro vnořené projekty | Microsoft Docs
+title: Podpora průvodce vnořených projektů | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,27 +7,27 @@ helpviewer_keywords:
 - nested projects, wizard support
 - New Project wizard
 ms.assetid: 1b496acc-b326-4cdb-bb48-e3b5c6f12e05
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5e498f21499f4b07bf77bb79829fc6d92227f1f2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f7f37700d908167ebef8c071021558822bdce173
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72721425"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80703197"
 ---
 # <a name="wizard-support-for-nested-projects"></a>Podpora průvodce pro vnořené projekty
-Rozhraní IDE spustí dva průvodce, které může nadřazený projekt pro vnořené projekty implementovat: průvodce **vytvořením nového projektu** a průvodce **přidáním položky** .
+Rozhraní IDE spustí dva průvodce, které může implementovat nadřazený projekt pro vnořené projekty: Průvodce **novým projektem** a Průvodce **přidáním položky.**
 
- Pokud uživatel spustí průvodce **vytvořením** projektu výběrem možnosti **Přidat projekt** a kliknutím na **položku Nový projekt** v nabídce soubor nebo výběrem možnosti **Přidat** a kliknutím pravým tlačítkem myši na **Nový projekt** v Průzkumník řešení, rozhraní IDE spustí **AddProject** příkaz a implementace nadřazeného projektu **AddProject** příkazu vrátí buď soubor šablony projektu, nebo soubor průvodce (. vsz), který má sadu kontextových parametrů.
+ Pokud uživatel spustí Průvodce **novým projektem** tak, že v nabídce Soubor **vyberete Přidat projekt** a klepnete na tlačítko **Přidat** a klepnete pravým tlačítkem myši na Nový **projekt,** spustí ide příkaz **AddProject** a implementace příkazu **AddProject** nadřazeného projektu vrátí soubor projektu šablony nebo soubor průvodce (.vsz), který má sadu kontextových parametrů. **Add**
 
- Podobně implementace průvodců **AddItem** nadřazeného projektu vrátí soubor. vsz, který má jinou sadu kontextových parametrů.
+ Podobně nadřazený projekt implementace **AddItem** průvodců vrátí soubor .vsz, který má jinou sadu parametrů kontextu.
 
- Další informace o průvodcích najdete v tématu [Průvodce (. Vsz)](../../extensibility/internals/wizard-dot-vsz-file.md), [kontextové parametry](../../extensibility/internals/context-parameters.md) a [Registrace šablon projektů a položek](../../extensibility/internals/registering-project-and-item-templates.md).
+ Další informace o čarodějích naleznete v [průvodci (. Vsz) soubor](../../extensibility/internals/wizard-dot-vsz-file.md), [kontextové parametry](../../extensibility/internals/context-parameters.md) a [registrace projektů a šablon položek](../../extensibility/internals/registering-project-and-item-templates.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>
 - [Vnoření projektů](../../extensibility/internals/nesting-projects.md)

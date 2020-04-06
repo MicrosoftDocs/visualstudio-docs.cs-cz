@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Step | Dokumentace Microsoftu
+title: IDebugProgram2::Krok | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgram2::Step
 ms.assetid: e4c2ffce-9810-4088-8162-eac9ef04f2a9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8030bd45850a2b81e3cfb03a83497bba77c4515c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 194e72eba5a3f137e4650752a090d91ad7c402fa
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325287"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722755"
 ---
 # <a name="idebugprogram2step"></a>IDebugProgram2::Step
-Provádí se krok.
+Provede krok.
 
 > [!NOTE]
-> Tato metoda je zastaralá. Použití [krok](../../../extensibility/debugger/reference/idebugprocess3-step.md) metoda místo.
+> Tato metoda je zastaralé. Místo toho použijte metodu [Step.](../../../extensibility/debugger/reference/idebugprocess3-step.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,24 +48,24 @@ int Step( 
 
 ## <a name="parameters"></a>Parametry
 `pThread`\
-[in] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt, který reprezentuje vlákna se stupňovitým.
+[v] [Objekt IDebugThread2,](../../../extensibility/debugger/reference/idebugthread2.md) který představuje vlákno, které je stupňovaný.
 
 `sk`\
-[in] Hodnota z [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) výčet, který určuje typ kroku.
+[v] Hodnota z výčtu [STEPKIND,](../../../extensibility/debugger/reference/stepkind.md) který určuje druh kroku.
 
 `step`\
-[in] Hodnota z [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) výčet, který určuje jednotku kroku (třeba pomocí příkazu nebo instrukce).
+[v] Hodnota z výčtu [STEPUNIT,](../../../extensibility/debugger/reference/stepunit.md) která určuje jednotku kroku (například příkazem nebo instrukcí).
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- V případě, že je komunikace mezi vlákny ani synchronizaci vláken, by se spustit ostatní vlákna v program při krokování konkrétní vlákno.
+ V případě, že existuje synchronizace vláken nebo komunikace mezi vlákny, ostatní vlákna v programu by měla být spuštěna, když je určité vlákno krokování.
 
 > [!WARNING]
-> Neodesílat událostí ukončení nebo okamžité (synchronní) události, která [události](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) při zpracování tohoto volání; v opačném případě ladicí program může přestat reagovat.
+> Neodesílejte událost zastavení nebo okamžitou (synchronní) událost na [událost](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) při zpracování tohoto hovoru; jinak může zavěsit ladicí program.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)
-- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+- [Událost](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

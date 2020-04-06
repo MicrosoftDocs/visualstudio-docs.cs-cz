@@ -1,28 +1,28 @@
 ---
-title: IEEVisualizerService::GetValueDisplayStringCount | Dokumentace Microsoftu
+title: IEEVisualizerService::GetValueDisplayStringCount | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IEEVisualizerService::GetValueDisplayStringCount
 - GetValueDisplayStringCount
 ms.assetid: d683a833-fbfb-4042-84df-6905124a268a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 20e09dad1d87df646d1dc8ef7509842b49a8cdaa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5c1a664594e55b8db21562a650c2c750668c2584
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66308922"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80717984"
 ---
 # <a name="ieevisualizerservicegetvaluedisplaystringcount"></a>IEEVisualizerService::GetValueDisplayStringCount
-Získá počet řetězců hodnota má být zobrazen pro zadanou vlastnost nebo pole.
+Načte počet řetězců hodnot, které se mají zobrazit pro zadanou vlastnost nebo pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,16 +44,16 @@ int GetValueDisplayStringCount (
 
 ## <a name="parameters"></a>Parametry
 `displayKind`\
-[in] Hodnota z [DisplayKind](../../../extensibility/debugger/reference/displaykind.md) výčtu.
+[v] Hodnota z výčtu [DisplayKind.](../../../extensibility/debugger/reference/displaykind.md)
 
 `propertyOrField`\
-[in] [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) rozhraní, které představuje vlastnost nebo pole.
+[v] [Rozhraní IDebugField,](../../../extensibility/debugger/reference/idebugfield.md) které představuje vlastnost nebo pole.
 
 `pcelt`\
-[out] Vrátí hodnotu řetězce k zobrazení.
+[out] Vrátí počet řetězců hodnot, které se mají zobrazit.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

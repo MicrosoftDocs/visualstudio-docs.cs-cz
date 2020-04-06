@@ -1,6 +1,6 @@
 ---
 title: Přečtěte si, jak otestovat kód pomocí živého testování částí
-ms.date: 08/31/2017
+ms.date: 04/03/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - Live Unit Testing
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 748dfc592fbf7a3b9737e9f418362067b92bb8ff
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2abc8eaaca923435620148d7313c6cc422bd1870
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594289"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697362"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Začínáme s funkcí Live Unit Testing
 
@@ -36,7 +36,7 @@ Začněte vytvořením řešení Sady Visual Studio s názvem UtilityLibraries, 
 
 1. V nabídce Visual Studio nejvyšší úrovně vyberte **Soubor** > **nového** > **projektu.**
 
-1. Zadejte **řešení** do vyhledávacího pole šablony a pak vyberte šablonu **Prázdné řešení.**
+1. Zadejte **řešení** do vyhledávacího pole šablony a pak vyberte šablonu **Prázdné řešení.** Název projektu **UtilityLibraries**.
 
    ::: moniker range="vs-2017"
 
@@ -67,7 +67,7 @@ Teď, když jste vytvořili řešení, vytvoříte knihovnu tříd s názvem Str
 
 ::: moniker range=">=vs-2019"
 
-2. Zadejte **knihovnu tříd** do vyhledávacího pole šablony a vyberte šablonu **Knihovna tříd (.NET Standard).** Klikněte na **Další**.
+2. Zadejte **knihovnu tříd** do vyhledávacího pole šablony a vyberte šablonu **Knihovna tříd (.NET Standard).** Klikněte na **Další**.
 
    > [!NOTE]
    > Vzhledem k tomu, že naše knihovna cíle .NET Standard spíše než konkrétní implementaci .NET, může být volána z libovolné implementace rozhraní .NET, která podporuje tuto verzi .NET Standard. Další informace naleznete v tématu [.NET Standard](/dotnet/standard/net-standard).
@@ -78,7 +78,7 @@ Teď, když jste vytvořili řešení, vytvoříte knihovnu tříd s názvem Str
 
 ::: moniker-end
 
-5. Nahraďte všechny existující kód y v okně kódu následujícím kódem:
+5. Nahraďte veškerý existující kód v editoru kódu následujícím kódem:
 
    [!code-csharp[StringLibrary source code](samples/csharp/utilitylibraries/stringlibrary/class1.cs)]
 
@@ -115,7 +115,7 @@ Dalším krokem je vytvoření projektu testování částí k testování kniho
 
 ::: moniker range=">=vs-2019"
 
-2. Do vyhledávacího pole šablony zadejte **test částí** a vyberte šablonu Projekt testování **částí (.NET Core).** Klikněte na **Další**.
+2. Do vyhledávacího pole šablony zadejte **test částí** a vyberte šablonu Testovací **projekt MSTest (.NET Core).** Klikněte na **Další**.
 
 3. Pojmenujte projekt **StringLibraryTests**.
 
@@ -136,11 +136,13 @@ Dalším krokem je vytvoření projektu testování částí k testování kniho
 
 7. Uložte projekt tak, že na panelu nástrojů vyberete ikonu **Uložit.**
 
-8. Vzhledem k tomu, že kód testování částí obsahuje některé znaky, které nejsou ascii, visual studio zobrazí následující dialogové okno, které varuje, že některé znaky budou ztraceny, pokud soubor uložíte ve výchozím formátu ASCII. Zvolte tlačítko **Uložit s jiným kódováním.**
+   Vzhledem k tomu, že kód testu částí obsahuje některé znaky, které nejsou ascii, zobrazí se následující dialogové okno, ve které je třeba upozornit, že některé znaky budou ztraceny, pokud soubor uložíte ve výchozím formátu ASCII.
+
+8. Zvolte tlačítko **Uložit s jiným kódováním.**
 
    ![Volba kódování souboru](media/lut-start/ascii-encoding.png)
 
-9. V rozevíracím seznamu **Kódování** v dialogovém okně **Možnosti předběžného uložení** zvolte **Unicode (UTF-8 bez podpisu) – Znaková stránka 65001**, jak ukazuje následující obrázek:
+9. V rozevíracím seznamu **Kódování** v dialogovém okně **Možnosti předběžného uložení** zvolte **Unicode (UTF-8 bez podpisu) – Codepage 65001**, jak ukazuje následující obrázek:
 
    ![Výběr kódování UTF-8](media/lut-start/utf8-encoding.png)
 
@@ -152,17 +154,24 @@ Vytvořili jste knihovnu tříd, stejně jako některé testy částí pro něj.
 
 Zatím, i když jste napsali testy pro knihovnu tříd StringLibrary, jste je neprovedli. Živé testování částí je spustí automaticky, jakmile je povolíte. Chcete-li to provést, postupujte takto:
 
-1. Volitelně vyberte okno kódu, které obsahuje kód pro StringLibrary. Toto je *buď Class1.cs* pro projekt Jazyka C# nebo *Class1.vb* pro projekt jazyka Visual Basic. (Tento krok umožňuje vizuálně zkontrolovat výsledek testů a rozsah pokrytí kódu, jakmile povolíte živé testování částí.)
+1. Volitelně vyberte okno editoru kódu, které obsahuje kód pro StringLibrary. Toto je *buď Class1.cs* pro projekt Jazyka C# nebo *Class1.vb* pro projekt jazyka Visual Basic. (Tento krok umožňuje vizuálně zkontrolovat výsledek testů a rozsah pokrytí kódu, jakmile povolíte živé testování částí.)
 
 1. V nabídce Visual Studio nejvyšší úrovně vyberte **Testovat** > **živé testování** > **Start** částí.
 
 1. Visual Studio spustí live unit test, který automaticky spustí všechny testy.
 
-Po dokončení spuštění testů **průzkumník testů** zobrazí celkové výsledky a výsledek jednotlivých testů. Kromě toho okno kódu graficky zobrazí pokrytí testovacíkód a výsledek pro testy. Jak ukazuje následující obrázek, všechny tři testy byly úspěšně provedeny. Také ukazuje, že naše testy se vztahuje `StartsWithUpper` všechny cesty kódu v metodě a tyto testy všechny úspěšně provedeny (což je označeno zelenou zaškrtnutí, "✓"). Nakonec ukazuje, že žádná z ostatních metod v StringLibrary mají pokrytí kódu (což je označeno modrou čárou "➖").
+::: moniker range="vs-2017"
+Po dokončení spuštění testů **průzkumník testů** zobrazí celkové výsledky a výsledek jednotlivých testů. Kromě toho okno editoru kódu graficky zobrazuje pokrytí testovacího kódu a výsledek testů. Jak ukazuje následující obrázek, všechny tři testy byly úspěšně provedeny. Také ukazuje, že naše testy se vztahuje `StartsWithUpper` všechny cesty kódu v metodě a tyto testy všechny úspěšně provedeny (což je označeno zelenou zaškrtnutí, "✓"). Nakonec ukazuje, že žádná z ostatních metod v StringLibrary mají pokrytí kódu (což je označeno modrou čárou "➖").
 
-![Průzkumník testů a okno kódu po spuštění testování živé jednotky](media/lut-start/lut-results-cs.png)
+![Okno Průzkumníka testů a editoru kódu po spuštění testování živých částí](media/lut-start/lut-results-cs.png)
+::: moniker-end
+::: moniker range=">=vs-2019"
+Po dokončení spuštění testů **živé testování částí** zobrazí celkové výsledky a výsledek jednotlivých testů. Kromě toho okno editoru kódu graficky zobrazuje pokrytí testovacího kódu a výsledek testů. Jak ukazuje následující obrázek, všechny tři testy byly úspěšně provedeny. Také ukazuje, že naše testy se vztahuje `StartsWithUpper` všechny cesty kódu v metodě a tyto testy všechny úspěšně provedeny (což je označeno zelenou zaškrtnutí, "✓"). Nakonec ukazuje, že žádná z ostatních metod v StringLibrary mají pokrytí kódu (což je označeno modrou čárou "➖").
 
-Můžete také získat podrobnější informace o pokrytí testu a výsledky testů výběrem konkrétní ikonu pokrytí kódu v okně kódu. Chcete-li tento detail prozkoumat, postupujte takto:
+![Okno Průzkumníka živých testů a editoru kódu po spuštění testování živých částí](media/lut-start/vs-2019/lut-results-cs.png)
+::: moniker-end
+
+Můžete také získat podrobnější informace o pokrytí testu a výsledky testů výběrem konkrétní ikonu pokrytí kódu v okně editoru kódu. Chcete-li tento detail prozkoumat, postupujte takto:
 
 1. Klikněte na zelenou značku zaškrtnutí na řádku, který se čte `if (String.IsNullOrWhiteSpace(s))` v metodě. `StartsWithUpper` Jak ukazuje následující obrázek, živé testování částí označuje, že tři testy pokrývají tento řádek kódu a že všechny byly úspěšně provedeny.
 
@@ -188,9 +197,14 @@ Chcete-li rozšířit `StartsWithLower` pokrytí kódu na metodu, postupujte tak
 
     [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest2.cs#2)]
 
-1. Live Testování částí automaticky provede nové a upravené testy při úpravě zdrojového kódu. Jak ukazuje následující obrázek **Průzkumníka testů,** všechny testy, včetně dvou, které jste přidali, a těch, které jste upravili, byly úspěšné.
+1. Live Testování částí automaticky provede nové a upravené testy při úpravě zdrojového kódu. Jak ukazuje následující obrázek, všechny testy, včetně dvou, které jste přidali, a těch, které jste upravili, byly úspěšné.
 
+   ::: moniker range="vs-2017"
    ![Průzkumník testů po rozšíření pokrytí testu](media/lut-start/test-dynamic.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2019"
+   ![Průzkumník živých testů po rozšíření pokrytí testu](media/lut-start/vs-2019/test-dynamic.png)
+   ::: moniker-end
 
 1. Přepněte do okna, které obsahuje zdrojový kód třídy StringLibrary. Živé testování částí nyní ukazuje, že `StartsWithLower` naše pokrytí kódu je rozšířena na metodu.
 
@@ -210,7 +224,12 @@ V této části se podíváte, jak můžete pomocí živého testování část�
 
 1. Při spuštění testu živé testování částí `TestHasEmbeddedSpaces` označuje, že metoda se nezdařila, jak ukazuje následující obrázek:
 
+   ::: moniker range="vs-2017"
    ![Průzkumník testů hlásí neúspěšný test](media/lut-start/test-failure.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2019"
+   ![Průzkumník živých testů hlásící neúspěšný test](media/lut-start/vs-2019/test-failure.png)
+   ::: moniker-end
 
 1. Vyberte okno, ve které se zobrazí kód knihovny. Živé testování částí rozšířilo `HasEmbeddedSpaces` pokrytí kódu na metodu. Také hlásí selhání testu přidáním🞩červeného " " k řádkům, na které se vztahují neúspěšné testy.
 
@@ -218,19 +237,24 @@ V této části se podíváte, jak můžete pomocí živého testování část�
 
    ![Informace o testování živých částí v neúspěšném testu](media/lut-start/test-failure-info-cs.png)
 
-1. Vyberte neúspěšný test **TestHasEmbeddedSpaces.** Živé testování částí poskytuje řadu možností, jako je například spuštění všech testů, spuštění vybraných testů, ladění všech testů a ladění vybraných testů, jak ukazuje následující obrázek:
+1. Vyberte neúspěšný test **TestHasEmbeddedSpaces.** Živé testování částí poskytuje několik možností, jako je například spuštění všech testů a ladění všech testů, jak ukazuje následující obrázek:
 
+   ::: moniker range="vs-2017"
    ![Možnosti testování živých částí pro neúspěšný test](media/lut-start/test-failure-options.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2019"
+   ![Možnosti testování živých částí pro neúspěšný test](media/lut-start/vs-2019/test-failure-options.png)
+   ::: moniker-end
 
-1. Chcete-li ladit neúspěšný test, vyberte **možnost Ladění vybrané.**
+1. Chcete-li ladit neúspěšný test, vyberte **možnost Ladění vše.**
 
 1. Visual Studio provede test v režimu ladění.
 
-   Test přiřadí každý řetězec v poli `phrase` proměnné s názvem `HasEmbeddedSpaces` a předá ji metodě. Spuštění programu pozastaví a vyvolá ladicí program při `false`prvním vyhodnocení výrazu . Dialogové okno výjimky, které je [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.istrue) výsledkem neočekávané hodnoty ve volání metody, je zobrazeno na následujícím obrázku.
+   Test přiřadí každý řetězec v poli `phrase` proměnné s názvem `HasEmbeddedSpaces` a předá ji metodě. Spuštění programu pozastaví a vyvolá ladicí program při `false`prvním vyhodnocení výrazu . Dialogové okno výjimky, které je [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.istrue) výsledkem neočekávané hodnoty ve volání metody, je znázorněno na následujícím obrázku.
 
    ![Dialogové okno Výjimka testování živých částí](media/lut-start/exception-dialog-cs.png)
 
-   Kromě toho jsou k dispozici všechny ladicí nástroje, které sada Visual Studio poskytuje, které nám pomáhají řešit potíže s neúspěšným testem, jak ukazuje následující obrázek:
+   Kromě toho jsou k dispozici všechny ladicí nástroje, které sada Visual Studio poskytuje, které nám pomáhají řešit potíže s naším neúspěšným testem, jak ukazuje následující obrázek:
 
    ![Nástroje pro ladění sady Visual Studio](media/lut-start/debugging-tools-cs.png)
 
@@ -245,9 +269,9 @@ To poskytuje dostatek informací pro předběžné vyšetření chyby. Buď `Tes
 
     [!code-csharp[The TestHasEmbeddedSpaces test method](samples/snippets/csharp/lut-start/program2.cs#1)]
 
-1. Živé testování částí automaticky znovu spustí neúspěšnou testovací metodu a aktualizuje výsledky v okně kódu a v **Průzkumníkovi testů**, jak ukazuje následující obrázek:
+1. Živé testování částí automaticky znovu spustí neúspěšnou testovací metodu.
 
-    ![Úspěšný test HasEmbeddedSpaces](media/lut-start/test-success-cs.png)
+   Živé testování částí ukazuje aktualizované výsledky, které se také zobrazí v okně editoru kódu.
 
 ## <a name="see-also"></a>Viz také
 

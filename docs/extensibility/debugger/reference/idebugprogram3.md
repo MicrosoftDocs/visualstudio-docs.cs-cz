@@ -1,24 +1,24 @@
 ---
-title: IDebugProgram3 | Dokumentace Microsoftu
+title: IDebugProgram3 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugProgram3 interface
 ms.assetid: 4301ba23-c00c-4ce5-8b1e-3f27da312034
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0cfc29f300bc9f28f857424a7a91b4b6bfd3bf82
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9da63d54f64a4ef7592fdbc4d36e2b31220f82df
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331531"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722640"
 ---
 # <a name="idebugprogram3"></a>IDebugProgram3
-Toto rozhraní představuje program, který běží v procesu a rozšiřuje [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md) tím, že poskytuje informace o vláknech.
+Toto rozhraní představuje program, který je spuštěn v procesu a rozšiřuje [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md) poskytnutím informací o vlákně.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,17 +27,17 @@ IDebugProgram3 : IDebugProgram3
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Ladicí stroj (DE) a vlastní port dodavatele implementovat toto rozhraní k reprezentaci programu v procesu. Správce ladění relace (SDM) také implementuje toto rozhraní poskytnout informace o [připojit](../../../extensibility/debugger/reference/idebugprogram2-attach.md).
+ Ladicí modul (DE) a dodavatel vlastního portu implementují toto rozhraní tak, aby představovalo program v procesu. Správce ladění relace (SDM) také implementuje toto rozhraní poskytnout informace [připojit](../../../extensibility/debugger/reference/idebugprogram2-attach.md).
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) událost vrátí toto rozhraní pro nový program. Toto rozhraní je také použít jako parametr pro mnoho metod na více rozhraní.
+ Událost [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) vrátí toto rozhraní pro nový program. Toto rozhraní se také používá jako parametr pro mnoho metod na více rozhraních.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IDebugProgram3`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IDebugProgram3`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[ExecuteOnThread](../../../extensibility/debugger/reference/idebugprogram3-executeonthread.md)|Spustí program. Vlákno se vrátí do poskytnout informace o ladicího programu, ve které vlákno je uživatel zobrazení při provádění.|
+|[ExecuteOnThread](../../../extensibility/debugger/reference/idebugprogram3-executeonthread.md)|Spustí program. Vlákno je vrácena poskytnout ladicí program informace o tom, které vlákno uživatel je zobrazení při provádění.|
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -47,15 +47,15 @@ IDebugProgram3 : IDebugProgram3
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="remarks"></a>Poznámky
- Program je kontejner vlákna spuštěná v konkrétní za běhu architektury, zatímco proces se skládá z jednoho nebo více programů.
+ Program je kontejner vláken spuštěný v určité architektuře za běhu, zatímco proces se skládá z jednoho nebo více programů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [GetProgram](../../../extensibility/debugger/reference/idebugthread2-getprogram.md)
-- [Next](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md)
-- [Event](../../../extensibility/debugger/reference/idebugportevents2-event.md)
-- [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)
+- [Další](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md)
+- [Událost](../../../extensibility/debugger/reference/idebugportevents2-event.md)
+- [Připojit](../../../extensibility/debugger/reference/idebugengine2-attach.md)
 - [DestroyProgram](../../../extensibility/debugger/reference/idebugengine2-destroyprogram.md)
-- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+- [Událost](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
 - [Attach_V7](../../../extensibility/debugger/reference/idebugprogramnode2-attach-v7.md)

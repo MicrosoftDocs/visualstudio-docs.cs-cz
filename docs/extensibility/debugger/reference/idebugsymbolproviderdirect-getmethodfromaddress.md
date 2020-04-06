@@ -1,28 +1,28 @@
 ---
-title: IDebugSymbolProviderDirect::GetMethodFromAddress | Dokumentace Microsoftu
+title: IDebugSymbolProviderDirect::GetMethodFromAddress | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSymbolProviderDirect::GetMethodFromAddress
 - GetMethodFromAddress
 ms.assetid: 33ffd197-1221-41bc-a9f6-f133ebdcb783
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 89a110886837c793d45842db6ed80690626dd9d6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4a062056f4a61521966417e9923a17f6d85b991a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335166"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718930"
 ---
 # <a name="idebugsymbolproviderdirectgetmethodfromaddress"></a>IDebugSymbolProviderDirect::GetMethodFromAddress
-Načte informace o metodě na adrese zadaný ladění.
+Načte informace o metodě na zadanou adresu ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,28 +52,28 @@ int GetMethodFromAddress(
 
 ## <a name="parameters"></a>Parametry
 `pAddress`\
-[in] Ladění adresu, která je reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.
+[v] Ladicí adresa, která je reprezentována rozhraním [IDebugAddress.](../../../extensibility/debugger/reference/idebugaddress.md)
 
 `pGuid`\
-[out] Jedinečný identifikátor modulu.
+[out] Jedinečný identifikátor modulu
 
 `pAppID`\
 [out] Identifikátor domény aplikace.
 
 `pTokenClass`\
-[out] Token, který představuje třídu obsahující.
+[out] Token, který představuje obsahující třídy.
 
 `pTokenMethod`\
 [out] Token, který představuje modul.
 
 `pdwOffset`\
-[out] Posun v bajtech od začátku `pAddress` parametru.
+[out] Posun v bajtů od začátku parametru. `pAddress`
 
 `pdwVersion`\
 [out] Číslo verze metody.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

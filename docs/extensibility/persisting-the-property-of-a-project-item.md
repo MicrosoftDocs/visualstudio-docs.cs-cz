@@ -1,33 +1,33 @@
 ---
-title: Trvalé uložení vlastnosti položky projektu | Dokumentace Microsoftu
+title: Trvalé vlastnosti položky projektu | Dokumenty společnosti Microsoft
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - properties, adding to a project item
 - project items, adding properties
 ms.assetid: d7a0f2b0-d427-4d49-9536-54edfb37c0f3
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 02055e4e9f25f98193e8b27d42326589aef47762
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 15c280f15436a5e27bcc0dcc4d2fb9e9bdd82933
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336109"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702207"
 ---
-# <a name="persist-the-property-of-a-project-item"></a>Zachovat vlastnosti položky projektu
-Můžete chtít zachovat vlastnosti, které přidáte do položky projektu, jako je například autor zdrojového souboru. To lze provést uložení vlastnost v souboru projektu.
+# <a name="persist-the-property-of-a-project-item"></a>Zachovat vlastnost položky projektu
+Můžete chtít zachovat vlastnost, kterou přidáte do položky projektu, jako je například autor zdrojového souboru. To lze provést uložením vlastnosti v souboru projektu.
 
- Prvním krokem k uchování vlastností v souboru projektu je získat hierarchii projektu jako <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> rozhraní. Toto rozhraní můžete získat pomocí služby Automation nebo s použitím <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>. Po získání rozhraní můžete určit, která položka projektu je aktuálně vybrána. Jakmile budete mít ID položky projektu, můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> přidat vlastnost.
+ Prvním krokem k zachování vlastnosti v souboru projektu je získat <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> hierarchii projektu jako rozhraní. Toto rozhraní můžete získat buď pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>automatizace nebo pomocí aplikace . Jakmile získáte rozhraní, můžete jej použít k určení, která položka projektu je aktuálně vybrána. Jakmile budete mít ID položky <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> projektu, můžete přidat vlastnost.
 
- V následujících postupech budete uchovávat *VsPkg.cs* vlastnost `Author` s hodnotou `Tom` v souboru projektu.
+ V následujících postupech přetrvávají *vlastnost VsPkg.cs* `Author` s hodnotou `Tom` v souboru projektu.
 
-## <a name="to-obtain-the-project-hierarchy-with-the-dte-object"></a>Chcete-li získat hierarchii projektu s objekt DTE
+## <a name="to-obtain-the-project-hierarchy-with-the-dte-object"></a>Získání hierarchie projektu s objektem DTE
 
-1. Přidejte následující kód do vašeho balíčku VSPackage:
+1. Přidejte do balíčku VSPackage následující kód:
 
     ```csharp
     EnvDTE.DTE dte = (EnvDTE.DTE)Package.GetGlobalService(typeof(EnvDTE.DTE));
@@ -39,9 +39,9 @@ Můžete chtít zachovat vlastnosti, které přidáte do položky projektu, jako
     solution.GetProjectOfUniqueName(uniqueName, out hierarchy);
     ```
 
-## <a name="to-persist-the-project-item-property-with-the-dte-object"></a>Zachovat vlastnosti položky projektu s objekt DTE
+## <a name="to-persist-the-project-item-property-with-the-dte-object"></a>Chcete-li zachovat vlastnost položky projektu s objektem DTE
 
-1. Přidejte následující kód do kódu uvedeného v metodě v předchozím postupu:
+1. Do kódu uvedeného v metodě v předchozím postupu přidejte následující kód:
 
     ```csharp
     IVsBuildPropertyStorage buildPropertyStorage =
@@ -56,9 +56,9 @@ Můžete chtít zachovat vlastnosti, které přidáte do položky projektu, jako
     }
     ```
 
-## <a name="to-obtain-the-project-hierarchy-using-ivsmonitorselection"></a>Chcete-li získat hierarchii projektu pomocí IVsMonitorSelection
+## <a name="to-obtain-the-project-hierarchy-using-ivsmonitorselection"></a>Získání hierarchie projektu pomocí iVsMonitorSelection
 
-1. Přidejte následující kód do vašeho balíčku VSPackage:
+1. Přidejte do balíčku VSPackage následující kód:
 
     ```csharp
     IVsHierarchy hierarchy = null;
@@ -100,9 +100,9 @@ Můžete chtít zachovat vlastnosti, které přidáte do položky projektu, jako
     }
     ```
 
-## <a name="to-persist-the-selected-project-item-property-given-the-project-hierarchy"></a>Zachovat položky vlastnosti vybraného projektu dána hierarchie projektu
+## <a name="to-persist-the-selected-project-item-property-given-the-project-hierarchy"></a>Chcete-li zachovat vybranou vlastnost položky projektu vzhledem k hierarchii projektu
 
-1. Přidejte následující kód do kódu uvedeného v metodě v předchozím postupu:
+1. Do kódu uvedeného v metodě v předchozím postupu přidejte následující kód:
 
     ```csharp
     IVsBuildPropertyStorage buildPropertyStorage =
@@ -113,18 +113,18 @@ Můžete chtít zachovat vlastnosti, které přidáte do položky projektu, jako
     }
     ```
 
-## <a name="to-verify-that-the-property-is-persisted"></a>Chcete-li ověřit, že vlastnost je trvalá.
+## <a name="to-verify-that-the-property-is-persisted"></a>Ověření trvalé vlastnosti
 
-1. Spustit [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a poté otevřete nebo vytvořte řešení.
+1. Spusťte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a otevřete nebo vytvořte řešení.
 
-2. Vyberte projekt položku VsPkg.cs v **Průzkumníka řešení**.
+2. Vyberte položku projektu VsPkg.cs v **Průzkumníku řešení**.
 
-3. Použijte zarážku nebo jinak určit, že je načten vašeho balíčku VSPackage a že SetItemAttribute běží.
+3. Použijte zarážku nebo jinak určete, že je načten váš VSPackage a že SetItemAttribute běží.
 
    > [!NOTE]
-   > Je možné vykonat autoload VSPackage v kontextu uživatelského rozhraní <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_guid>. Další informace najdete v tématu [načtení rozšíření VSPackages](../extensibility/loading-vspackages.md).
+   > Vkontextu VSPackage můžete automaticky načíst <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_guid>v kontextu ui . Další informace naleznete v [tématu Load VSPackages](../extensibility/loading-vspackages.md).
 
-4. Zavřít [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a pak otevřete soubor projektu v poznámkovém bloku. Měli byste vidět \<Autor > Označit hodnota vlastní, následujícím způsobem:
+4. Zavřete [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a otevřete soubor projektu v poznámkovém bloku. Měli byste \<vidět značku autora> s hodnotou Tom, a to následovně:
 
    ```xml
    <Compile Include="VsPkg.cs">
@@ -132,6 +132,6 @@ Můžete chtít zachovat vlastnosti, které přidáte do položky projektu, jako
    </Compile>
    ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vlastní nástroje](../extensibility/internals/custom-tools.md)

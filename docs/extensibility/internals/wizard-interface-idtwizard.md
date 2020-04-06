@@ -1,27 +1,27 @@
 ---
-title: Rozhraní průvodce (IDTWizard) | Microsoft Docs
+title: Rozhraní průvodce (IDTWizard) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - IDTWizard interface
 - wizards, interface
 ms.assetid: 09618d9d-d115-45b6-bccc-de328994b39c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f571fbd0a68ddbf56b637071ac250159461f61d1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: bb1c8d728a76097321e4e1f16640cab97599d6ba
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72721533"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80703280"
 ---
 # <a name="wizard-interface-idtwizard"></a>Rozhraní průvodce (IDTWizard)
-Integrované vývojové prostředí (IDE) používá rozhraní <xref:EnvDTE.IDTWizard> ke komunikaci s průvodci. Průvodci musí implementovat toto rozhraní, aby bylo možné ho nainstalovat do rozhraní IDE.
+Integrované vývojové prostředí (IDE) <xref:EnvDTE.IDTWizard> používá rozhraní ke komunikaci s průvodci. Průvodci musí implementovat toto rozhraní, aby mohly být nainstalovány v rozhraní IDE.
 
- Metoda <xref:EnvDTE.IDTWizard.Execute%2A> je jediná metoda přidružená k rozhraní <xref:EnvDTE.IDTWizard>. Průvodci implementují tuto metodu a rozhraní IDE volá metodu na rozhraní. Následující příklad ukazuje signaturu metody.
+ Metoda <xref:EnvDTE.IDTWizard.Execute%2A> je jedinou metodou <xref:EnvDTE.IDTWizard> přidruženou k rozhraní. Průvodci implementovat tuto metodu a IDE volá metodu na rozhraní. Následující příklad ukazuje podpis metody.
 
 ```
 /* IDTWizard Method */
@@ -34,27 +34,27 @@ STDMETHOD(Execute)(THIS_
    );
 ```
 
- Spouštěcí mechanismus je podobný jak pro **Nový projekt** , tak pro průvodce **přidáním nových položek** . Chcete-li spustit aplikaci, zavolejte rozhraní <xref:EnvDTE.IDTWizard> definované v Dteinternal. h. Jediným rozdílem je sada kontextových a vlastních parametrů, které jsou předány rozhraní při volání rozhraní.
+ Mechanismus spuštění je podobný pro **průvodce Nový projekt** a Přidat novou **položku.** Chcete-li spustit buď, volání <xref:EnvDTE.IDTWizard> rozhraní definované v Dteinternal.h. Jediným rozdílem je sada kontextu a vlastní parametry, které jsou předány rozhraní při volání rozhraní.
 
- Následující informace popisují rozhraní <xref:EnvDTE.IDTWizard>, které průvodci musí implementovat pro práci v rozhraní [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE. Rozhraní IDE volá metodu <xref:EnvDTE.IDTWizard.Execute%2A> v průvodci a projde ji následujícím způsobem:
+ Následující informace popisují <xref:EnvDTE.IDTWizard> rozhraní, které musí průvodci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] implementovat, aby fungovalo v rozhraní IDE. Rozhraní IDE <xref:EnvDTE.IDTWizard.Execute%2A> volá metodu v průvodci a předá ji následující:
 
 - Objekt DTE
 
-     Objekt DTE je kořenem modelu automatizace.
+     DTE objekt je kořen modelu automatizace.
 
-- Popisovač dialogového okna okna, jak je znázorněno v segmentu kódu, `hwndOwner ([in] long)`.
+- Úchyt k dialogovému oknu, `hwndOwner ([in] long)`jak je znázorněno v segmentu kódu .
 
-     Průvodce používá tuto `hwndOwner` jako nadřazený pro dialogové okno průvodce.
+     Průvodce to `hwndOwner` použije jako nadřazený dialog pro dialogové okno průvodce.
 
-- Kontextové parametry předané rozhraní jako typ variant pro SAFEARRAY, jak je znázorněno v segmentu kódu `[in] SAFEARRAY (VARIANT)* ContextParams`.
+- Kontextové parametry předané rozhraní jako varianta pro SAFEARRAY, jak je znázorněno v segmentu kódu . `[in] SAFEARRAY (VARIANT)* ContextParams`
 
-     Kontextové parametry obsahují pole hodnot, které jsou specifické pro druh spouštěného průvodce a aktuální stav projektu. Rozhraní IDE předá Průvodce kontextovým parametrům. Další informace najdete v tématu [kontextové parametry](../../extensibility/internals/context-parameters.md).
+     Parametry kontextu obsahují pole hodnot, které jsou specifické pro druh průvodce, který je spuštěn, a aktuální stav projektu. Rozhraní IDE předá parametry kontextu průvodci. Další informace naleznete [v tématu Context Parameters](../../extensibility/internals/context-parameters.md).
 
-- Vlastní parametry předané do rozhraní jako typ variant pro SAFEARRAY, jak je znázorněno v segmentu kódu `[in] SAFEARRAY (VARIANT)* CustomParams`.
+- Vlastní parametry předané rozhraní jako varianta pro SAFEARRAY, `[in] SAFEARRAY (VARIANT)* CustomParams`jak je znázorněno v segmentu kódu .
 
-     Vlastní parametry obsahují pole uživatelsky definovaných parametrů. Soubor. vsz předává vlastním parametrům IDE. Hodnoty jsou určeny příkazy `Param=`. Další informace najdete v tématu [vlastní parametry](../../extensibility/internals/custom-parameters.md).
+     Vlastní parametry obsahují pole uživatelem definovaných parametrů. Soubor .vsz předá vlastní parametry rozhraní IDE. Hodnoty jsou určeny `Param=` příkazy. Další informace naleznete [v tématu Vlastní parametry](../../extensibility/internals/custom-parameters.md).
 
-- Návratové hodnoty pro rozhraní jsou
+- Vrácené hodnoty pro rozhraní jsou
 
     ```
     wizardResultSuccess = -1,
@@ -63,8 +63,8 @@ STDMETHOD(Execute)(THIS_
     wizardResultBackout = 2
     ```
 
-## <a name="see-also"></a>Viz také:
-- [Kontextové parametry](../../extensibility/internals/context-parameters.md)
+## <a name="see-also"></a>Viz také
+- [Parametry kontextu](../../extensibility/internals/context-parameters.md)
 - [Vlastní parametry](../../extensibility/internals/custom-parameters.md)
 - [Průvodci](../../extensibility/internals/wizards.md)
 - [Soubor průvodce (.Vsz)](../../extensibility/internals/wizard-dot-vsz-file.md)

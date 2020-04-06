@@ -1,5 +1,5 @@
 ---
-title: Vstemplate – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Element VSTemplate (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - VSTemplate element [Visual Studio project templates]
 ms.assetid: f8ac561b-3b0b-4246-9ec9-118d2447e9a9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cdcbde9ab8e49d439ab909b4cd5563d6b8ec3afa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 651e8b6dbbe11c450b105f3185e7e987bb30da9b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322872"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697868"
 ---
-# <a name="vstemplate-element-visual-studio-templates"></a>Vstemplate – element (šablony sady Visual Studio)
-Obsahuje všechna metadata o šablony projektu, šablonu položky nebo starter kit.
+# <a name="vstemplate-element-visual-studio-templates"></a>Element VSTemplate (šablony sady Visual Studio)
+Obsahuje všechna metadata o šabloně projektu, šabloně položky nebo startovní sady.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,33 +33,33 @@ Obsahuje všechna metadata o šablony projektu, šablonu položky nebo starter k
 </VSTemplate>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 | Atribut | Popis |
 |-----------| - |
-| `Type` | Identifikuje šablony, která jako šablona projektu nebo šablony položky. Tento atribut může mít hodnotu `Project` nebo `Item`. |
-| `Version` | Určuje číslo verze šablony. Šablony v [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] a [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] mít `Version` hodnotu atributu `3.0.0`. |
+| `Type` | Identifikuje šablonu jako šablonu projektu nebo šablonu položky. Tento atribut může mít `Project` `Item`hodnotu nebo . |
+| `Version` | Určuje číslo verze šablony. Šablony v [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] a `Version` mají hodnotu atributu `3.0.0`. |
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Určuje data, která rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|
-|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Určuje obsah značek šablony.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Určuje data, která šablonu kategorizuje, a definuje způsob její zobrazení v dialogovém okně **Nový projekt** nebo Přidat **novou položku.**|
+|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Určuje obsah šablony.|
 |[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Volitelný element.|
 |[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|Volitelný element.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
- Žádné
+ Žádné.
 
 ## <a name="remarks"></a>Poznámky
- `VSTemplate` Prvek je kořenovým elementem *.vstemplate* soubory.
+ Prvek `VSTemplate` je kořenovým prvkem souborů *.vstemplate.*
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metadata pro šablona projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikace.
+ Následující příklad ukazuje metadata pro šablonu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu pro aplikaci.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -85,6 +85,6 @@ Obsahuje všechna metadata o šablony projektu, šablonu položky nebo starter k
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

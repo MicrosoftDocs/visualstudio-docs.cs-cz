@@ -1,86 +1,86 @@
 ---
-title: Přidávání položek do přidání nové položky v dialogových oknech | Dokumentace Microsoftu
+title: Přidání položek do dialogových oken Přidat novou položku | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Add New Item dialog box, adding items
 ms.assetid: 2f70863b-425b-4e65-86b4-d6a898e29dc7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61a9921103bf5954061fbb61c405ba1d36ffb782
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: af7f9e5c792785a23ad1674a50abeb4eb6d3cba9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328056"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710215"
 ---
-# <a name="add-items-to-the-add-new-item-dialog-box"></a>Přidání položek do dialogových oken přidat novou položku
-Proces přidávání položek do **přidat novou položku** spustí dialogové okno s klíči registru. Jak je znázorněno v následující položky registru **AddItemTemplates** oddíl obsahuje cestu a název adresáře, ve které položky k dispozici v **přidat novou položku** jsou umístěny dialogové okno.
+# <a name="add-items-to-the-add-new-item-dialog-box"></a>Přidání položek do dialogového okna Přidat novou položku
+Proces přidávání položek do dialogového okna **Přidat novou položku** začíná klíči registru. Jak je znázorněno v následujících položkách registru, oddíl **AddItemTemplates** obsahuje cestu a název adresáře, do kterého jsou umístěny položky zpřístupněné v dialogovém okně **Přidat novou položku.**
 
 > [!NOTE]
-> Tabulka ihned po segmentu kódu obsahuje další informace o položku registru.
+> Tabulka bezprostředně následující za segmentem kódu obsahuje další informace o položce registru.
 
- V této části se nachází v rámci **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0Exp\Projects**.
+ Tato část je umístěna pod **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0Exp\Projects**.
 
- První identifikátor GUID je identifikátor CLSID projektech tohoto typu; druhý identifikátor GUID označuje typ registrované projektu pro přidání položek šablony:
+ První identifikátor GUID je identifikátor CLSID pro projekty tohoto typu; druhý identifikátor GUID označuje registrovaný typ projektu pro šablony Přidat položky:
 
- **\\{C061DB26-5833-11D2-96F5-000000000000}\\AddItemTemplates\\TemplatesDir\\{ACEF4EB2-57CF-11D2-96F4-000000000000}\\1**
+ **\\{C061DB26-5833-11D2-96F5-000000000000} \\AddItemTemplates\\TemplatesDir\\{ACEF4EB2-57CF-11D2-96F4-00000000000}\\1**
 
- **@** = #6
+ **@**= #6
 
- **TemplatesDir** = \\&lt;cestu instalace sady Visual Studio SDK&gt;\\VSIntegration\\&lt;SomeFolder&gt; \\ &lt;SomePackage&gt;\\&lt;SomeProject&gt;\\&lt;SomeProjectItems&gt;
+ **TemplatesDir** = \\&lt;Visual Studio SDK instalační\\&lt;cesta&gt;\\&lt;&gt;\\VSIntegration&gt;\\&lt;SomeFolder SomePackage&gt;\\&lt;SomeProject SomeProjectItems&gt;
 
  **SortPriority** = dword:00000064
 
-| Name | Type | Data (z *.rgs* souboru) | Popis |
+| Name (Název) | Typ | Data (ze souboru *RGS)* | Popis |
 |------------------|-----------| - | - |
-| @ (Výchozí) | REG_SZ | #% IDS_ADDITEM_TEMPLATES_ENTRY % | ID prostředku pro **přidat položku** šablony. |
-| Val TemplatesDir | REG_SZ | TEMPLATE_PATH %\\&lt;SomeProjectItems&gt; | Cesta položky projektu zobrazí v dialogovém okně pro **přidat novou položku** průvodce. |
-| Val SortPriority | REG_DWORD | 100 ([!INCLUDE[vcprx64](../../extensibility/internals/includes/vcprx64_md.md)]) | Určuje pořadí řazení v uzlu stromu soubory zobrazené v **přidat novou položku** dialogové okno. |
+| @ (Výchozí) | REG_SZ | #%IDS_ADDITEM_TEMPLATES_ENTRY% | ID prostředku pro přidání šablon **položek.** |
+| Val TemplatesDir | REG_SZ | %TEMPLATE_PATH%\\&lt;Některé položky projektu&gt; | Cesta k položkám projektu zobrazeným v dialogovém okně průvodce **Přidání nové položky** |
+| Val SortPriority | REG_DWORD | 100[!INCLUDE[vcprx64](../../extensibility/internals/includes/vcprx64_md.md)]( ) | Určuje pořadí řazení souborů zobrazených v dialogovém okně **Přidat novou položku** v uzlu stromu. |
 
 > [!NOTE]
-> Identifikátory GUID pro Visual C# a typy projektů jazyka Visual Basic jsou následující:
+> Guids pro typy projektů Visual C# a Visual Basic jsou následující:
 > - [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]: {FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}
 > - [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]: {F184B08F-C81C-45F6-A57F-5ABD9991F28F}
 
- Adresář pro uvedené **TemplatesDir**, což je *TEMPLATE_PATH %\\&lt;SomeProjectItems&gt;* , je uzel na levé straně **přidat Nová položka** dialog box stromu. Další prvky ve stromu jsou založeny na podadresáře v tomto kořenovém adresáři. Položky v pravém podokně jsou k dispozici mají být přidány do projektu soubory **přidat novou položku** dialogové okno.
+ Adresář uvedený pro **TemplatesDir**, což je *\\&lt;%TEMPLATE_PATH% SomeProjectItems&gt;*, je uzel na levé straně stromu dialogového okna Přidat novou **položku.** Další prvky ve stromu jsou založeny na podadresáři v tomto kořenovém adresáři. Soubory, které jsou k dispozici k přidání do projektu, jsou položky v pravém podokně dialogového okna **Přidat novou položku.**
 
- Obvykle se tato složka obsahovat soubory šablon pro váš projekt, například šablonu HTML nebo *.cpp* soubor a všechny *.vsz* soubory pro spuštění průvodců. Pokud chcete řídit, jak jsou zobrazeny položky, můžete použít také *.vsdir* soubory pro lokalizaci názvy adresářů a ikony. Lokalizovaný řetězec je popisek, který se zobrazí v dialogovém okně, které představuje tento uzel v **přidat novou položku** dialog box stromu.
+ Tato složka obvykle obsahuje soubory šablon pro váš projekt, například soubor ŠABLONY HTML nebo *CPP,* a všechny soubory *VSZ* pro spuštění průvodců. Chcete-li určit způsob zobrazení položek, můžete také zahrnout soubory *.vsdir* pro lokalizaci názvů adresářů a ikon. Lokalizovaný řetězec je titulek, který se zobrazí v dialogovém okně, které představuje tento uzel ve stromu dialogového okna **Přidat novou položku.**
 
- Ale není potřeba mít všechno v jednom *.vsdir* souboru. Můžete mít jednu *.vsdir* soubor pro každou položku v adresáři. Další informace najdete v tématu [soubor průvodce (.vsz)](../../extensibility/internals/wizard-dot-vsz-file.md) a [soubory popis (.vsdir) adresář šablon](../../extensibility/internals/template-directory-description-dot-vsdir-files.md).
+ Však není třeba mít vše v jednom souboru *.vsdir.* Můžete mít jeden soubor *VSDIR* pro každou položku v adresáři. Další informace naleznete v [tématu Průvodce (.vsz) soubor](../../extensibility/internals/wizard-dot-vsz-file.md) a [popis adresáře šablony (.vsdir) soubory](../../extensibility/internals/template-directory-description-dot-vsdir-files.md).
 
 > [!NOTE]
-> *.Vsdir* soubory v adresářích šablony jsou volitelné. Pokud chcete pouze umístit prvek projektu v adresáři a zobrazit je v **přidat novou položku** dialogovém okně můžete umístit tento soubor do adresáře šablon podle **TemplatesDir** příkazu. Soubor se pak zobrazí v pravém podokně **přidat novou položku** dialogové okno pro daný projekt. Ale pokud chcete zobrazit lokalizované titulek pro soubor nebo ikonu, je nutné zahrnout alespoň jeden *.vsdir* soubor v adresáři šablony.
+> Soubory *.vsdir* v adresářích šablon jsou volitelné. Pokud chcete pouze vložit prvek projektu do adresáře a zobrazit jej v dialogovém okně **Přidat novou položku,** můžete tento soubor umístit do adresáře šablon určeného v příkazu **TemplatesDir.** Soubor se pak zobrazí v pravém podokně dialogového okna **Přidat novou položku** pro tento projekt. Pokud však chcete zobrazit lokalizovaný titulek pro soubor nebo ikonu, musíte do adresáře šablon zahrnout alespoň jeden soubor *VSDIR.*
 
-## <a name="group-project-items"></a>Seskupení položek projektu
- Pokud budete chtít obsahují šablony skupiny do složek v **přidat novou položku** dialogové okno pole stromu, musí mít podadresářích v kořenovém adresáři šablony položky v nich. Když **přidat novou položku** dialogové okno se zobrazí uživatelům, budou také naleznete v tématu podsložky a mít možnost vybrat elementy projektu z nich.
+## <a name="group-project-items"></a>Seskupit položky projektu
+ Pokud chcete obsahovat skupiny šablon ve složkách ve stromu dialogového okna **Přidat novou položku,** musíte mít podadresáře pod kořenovou šablonou pod adresářem kořenové šablony s položkami v nich. Když se uživatelům zobrazí dialogové okno **Přidat novou položku,** uvidí také podsložky a budou z nich moci vybírat prvky projektu.
 
- Priorita řazení v segmentu kódu určuje, kde se tento adresář šablony vytvoří ve stromové struktuře vzhledem k další prvky uzlu stromu. Pro **přidat novou položku** dialogové okno, prioritu řazení je vše, co musí obsahovat tak, aby vaše položky se zobrazí ve správném umístění v dialogovém okně.
+ Priorita řazení v segmentu kódu určuje, kde bude tento adresář šablony vytvořen ve stromu vzhledem k ostatním prvkům uzlu stromu. V dialogovém okně **Přidat novou položku** je prioritou řazení vše, co je nutné zahrnout, aby se položky v dialogovém okně zobrazily ve správném umístění.
 
- Můžete také implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2> rozhraní k filtrování, co se zobrazí **přidat novou položku** dialogové okno. Prostřednictvím implementace tohoto rozhraní, můžete nastavit jednu šablonu adresáře na disku, který obsahuje, například 50 Průvodce šablony a souborů. Tímto způsobem může mít různé typy projektů s 20 souborů, které patří do jednoho projektu typu, jiné 30 souborů, které patří k jinému typu projektu a všechny soubory, které jsou k dispozici v obecné typu projektu. Tímto způsobem, v závislosti na tom, který projekt se vytvoří šablonu, můžete zobrazit jinou sadu souborů šablon.
+ Můžete také implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2> rozhraní pro filtrování toho, co je zobrazeno v dialogovém okně Přidat novou **položku.** Implementací tohoto rozhraní můžete nastavit jeden adresář šablony na disku, který obsahuje například 50 souborů šablon a průvodců. Tímto způsobem můžete mít různé typy projektů s 20 soubory, které patří do jednoho typu projektu, dalších 30 souborů, které patří do jiného typu projektu a všechny soubory, které jsou k dispozici v obecném typu projektu. Tímto způsobem v závislosti na vytvoření šablony projektu můžete zobrazit jinou sadu souborů šablon.
 
- Například v projektu jazyka Visual Basic, bude pravděpodobně webové projekty a projekty klienta. Webové formuláře nejsou užitečné položky pro přidání do projektu klienta a modelu windows forms nejsou užitečné položky pro přidání do projektu webového serveru. Proto můžete vytvořit jeden adresář šablon, která obsahuje všechny soubory pro oba typy projektu. Pak pomocí implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>, skryjete položky, které nebude zobrazovat na základě typu projektu nebo nastavení projektu na projekt.
+ Například v projektu jazyka Visual Basic můžete mít webové projekty a klientské projekty. Webové formuláře nejsou užitečné položky přidat do klientského projektu a formuláře systému Windows nejsou užitečné položky přidat do projektu webového serveru. Proto můžete vytvořit jeden adresář šablony, který obsahuje všechny soubory pro oba typy projektu. Implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>potom můžete skrýt položky, které by neměly být zobrazeny na základě typu projektu nebo nastavení projektu v projektu.
 
-## <a name="filter-project-items"></a>Filtrovat položky projektu
- `IVsFilterAddProjectItemDlg2` poskytuje pro filtrování ve stromu (levé podokno) a soubory projektu (pravé podokno) prvků následujícími způsoby:
+## <a name="filter-project-items"></a>Filtrování položek projektu
+ `IVsFilterAddProjectItemDlg2`poskytuje filtrování prvků ve stromu (levé podokno) a soubory projektu (pravé podokno) následujícími způsoby:
 
-- Lokalizované názvy (popisků se zobrazí v dialogovém okně, které je součástí *.vsdir* souboru) poskytované `IVsFilterAddProjectItemDlg`.
+- Podle lokalizovaných názvů (titulky zobrazené v dialogovém okně obsaženém v souboru `IVsFilterAddProjectItemDlg` *.vsdir)* poskytovaném společností .
 
-- Skutečné názvy souborů a složek na disku (Nelokalizováno – žádné *.vsdir* souboru) poskytované `IVsFilterAddProjectItemDlg`.
+- Podle skutečných názvů souborů a složek na disku (nelokalizované – žádný `IVsFilterAddProjectItemDlg` *soubor VSDIR)* poskytované programem .
 
-- Podle kategorie, poskytuje `IVsFilterAddProjectItemDlg2`.
+- Podle kategorie, poskytované `IVsFilterAddProjectItemDlg2`.
 
-  Můžete filtrovat podle kategorie, zadejte řetězec kategorie pro položku *.vsdir* soubor, třeba *webový formulář* nebo *klientskou položku* v jazyce Visual Basic. Potom načte kategorie klasifikace z kódu dialogového okna *.vsdir* souboru a předává je na vás. Tyto informace můžete předat do vaší implementace `IVsFilterAddProjectItemDlg2` k filtrování **přidat novou položku** dialogové okno podle kategorií. Můžete také filtrovat položky pro webové stránky nebo jako klient případy aplikaci Win32. Kromě toho můžete identifikovat [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] položky označené jako Microsoft Foundation Classes (MFC) nebo položky aktivní šablony knihovny (ATL). Při určování tyto položky můžete systém projektu tak, aby systém je možné filtrovat podle kategorií a klasifikací definovat své vlastní klasifikace.
+  Chcete-li filtrovat podle kategorií, zadejte řetězec kategorie pro položku v souboru *.vsdir,* například *webový formulář* nebo *položku Klient* v jazyce Visual Basic. Kód dialogového okna pak načte klasifikaci kategorií ze souboru *.vsdir* a předá vám ji. Tyto informace pak můžete předat `IVsFilterAddProjectItemDlg2` implementaci aplikace a filtrovat dialogové okno **Přidat novou položku** podle kategorií. Můžete také filtrovat položky pro webové stránky nebo jako klient win32 případy aplikace. Kromě toho můžete [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] identifikovat označené položky jako položky Třídy Microsoft Foundation (MFC) nebo aktivní knihovny šablon (ATL). Při identifikaci těchto položek může systém projektu definovat vlastní klasifikace tak, aby systém mohl být filtrován na základě kategorií a klasifikací.
 
-  Pokud implementujete tuto funkci filtru, nemají mapování tabulky všechny položky, který by měl být skrytý. Můžete jednoduše klasifikovat položky do typů a vložit klasifikace *.vsdir* soubor nebo soubory. Potom můžete skrýt, některá z položek, které mají určité klasifikace prostřednictvím implementace rozhraní. Tímto způsobem můžete vytvořit položky v **přidat novou položku** dynamické dialogové okno pole na základě stavu v rámci projektu.
+  Pokud implementujete tuto funkci filtru, není třeba mapovat tabulku každé položky, která by měla být skryta. Položky můžete jednoduše klasifikovat do typů a umístit klasifikace do souboru *.vsdir* nebo souborů. Potom můžete skrýt všechny položky, které mají konkrétní klasifikaci implementací rozhraní. Tímto způsobem můžete položky v dialogovém okně **Přidat novou položku** dynamické na základě stavu v rámci projektu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>
 - [Registrace šablon projektů a položek](../../extensibility/internals/registering-project-and-item-templates.md)
-- [Identifikátory CatID pro objekty, které se obvykle používají k rozšíření projektů](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)
-- [Přidat projekt a šablony položek projektu](../../extensibility/internals/adding-project-and-project-item-templates.md)
-- [Soubory šablon directory popis (.vsdir)](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)
-- [Soubor průvodce (.vsz)](../../extensibility/internals/wizard-dot-vsz-file.md)
+- [CATID pro objekty, které se obvykle používají k rozšíření projektů](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)
+- [Přidání šablon položek projektu a projektu](../../extensibility/internals/adding-project-and-project-item-templates.md)
+- [Soubory popisu adresáře šablony (.vsdir)](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)
+- [Soubor Průvodce (.vsz)](../../extensibility/internals/wizard-dot-vsz-file.md)

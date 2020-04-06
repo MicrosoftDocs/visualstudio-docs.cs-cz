@@ -1,41 +1,41 @@
 ---
-title: Vytvoříte balíček rozšíření pomocí šablony položky balíčku rozšíření | Dokumentace Microsoftu
+title: Vytvoření rozšíření pack se šablonou položky rozšíření pack | Dokumenty společnosti Microsoft
 ms.date: 07/27/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extensions
 ms.assetid: 5388EEBA-211D-4114-8CD9-70C899919F7E
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: Meng
 ms.workload:
 - vssdk
-ms.openlocfilehash: 66a1c42340a88f0756d4fcc1f323433ab2640127
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fa1c141e18a3870eaad4b155d816e30ee207f45d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322798"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697753"
 ---
 # <a name="walkthrough-create-an-extension-pack"></a>Návod: Vytvoření balíčku rozšíření
 
-Balíček rozšíření pro je sada rozšíření, které mohou být nainstalovány společně. Balíčky rozšíření umožňují snadno sdílet vaše oblíbená rozšíření s ostatními uživateli nebo sady sadu rozšíření pro konkrétní scénář.
+Rozšíření Pack je sada rozšíření, které lze nainstalovat společně. Rozšiřující balíčky umožňují snadno sdílet oblíbená rozšíření s ostatními uživateli nebo spojit sadu rozšíření pro konkrétní scénář.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Spouští se v sadě Visual Studio 2015, Visual Studio SDK je zahrnuté jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+Počínaje Visual Studio 2015, Visual Studio SDK je součástí volitelné funkce v nastavení Sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace naleznete [v tématu Instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
-Balíček rozšíření funkce je k dispozici od verze Visual Studio 15.8 ve verzi Preview 2.
+Funkce Extension Pack je k dispozici od Visual Studia 15.8 Preview 2.
 
-## <a name="create-an-extension-with-an-extension-pack-item-template"></a>Vytváření rozšíření pomocí šablony položky balíček rozšíření
+## <a name="create-an-extension-with-an-extension-pack-item-template"></a>Vytvoření rozšíření se šablonou položky balíčku rozšíření
 
-Balíček rozšíření pro položky šablona vytvoří balíček rozšíření pro sadu rozšíření, které mohou být nainstalovány společně.
+Šablona položky rozšíření pack vytvoří rozšíření pack se sadou rozšíření, které lze nainstalovat společně.
 
-1. V **nový projekt** dialogové okno, vyhledejte "vsix" a vyberte **projekt VSIX**. Pro **název projektu**, typ "Balíček rozšíření pro Test". Vyberte **Vytvořit**.
+1. V dialogovém okně **Nový projekt** vyhledejte "vsix" a vyberte **VSIX Project**. Do **pole Název projektu**zadejte "Test Extension Pack". Vyberte **Vytvořit**.
 
-2. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **přidat** > **nová položka**. Přejděte do aplikace Visual C# **rozšiřitelnost** uzel a vyberte možnost **balíček rozšíření**. Ponechte výchozí název souboru (ExtensionPack1.cs).
+2. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na uzel projektu a vyberte **přidat** > **novou položku**. Přejděte do uzlu **rozšiřitelnosti** visual c# a vyberte **rozšíření balíčku**. Ponechte výchozí název souboru (ExtensionPack1.cs).
 
-3. Při přidání ExtensionPack1.vsext souboru, který obsahuje následující kód
+3. Je přidán soubor ExtensionPack1.vsext, který obsahuje následující kód
 
    ```json
    {
@@ -56,57 +56,57 @@ Balíček rozšíření pro položky šablona vytvoří balíček rozšíření 
    }
    ```
 
-4. Vsixid rozšíření, které chcete zahrnout do balíčku rozšíření můžete najít na [Visual Studio Marketplace](https://marketplace.visualstudio.com/). Najít rozšíření, které chcete zahrnout, a klikněte na **ID kopie**. Můžete aktualizovat existující **vsixId** v uvedeném souboru nebo jiného rozšíření přidat do seznamu.
+4. Vsixid rozšíření zahrnout do rozšíření pack lze nalézt na [webu Visual Studio Marketplace](https://marketplace.visualstudio.com/). Najděte rozšíření, které chcete zahrnout, a klikněte na **Kopírovat ID**. Můžete aktualizovat existující **vsixId** ve výše uvedeném souboru nebo přidat další rozšíření do seznamu.
 
-    ![Zkopírujte VsixId z Marketplace](media/vsixid-marketplace.png)
+    ![Kopírovat VsixId z marketplace](media/vsixid-marketplace.png)
 
-5. Sestavte projekt a nahrát rozšíření na webu Marketplace. Zobrazit [publikování rozšíření sady Visual Studio](../extensibility/walkthrough-publishing-a-visual-studio-extension.md).
+5. Sestavte projekt a nahrajte rozšíření na Marketplace. Viz [Publikování rozšíření Sady Visual Studio](../extensibility/walkthrough-publishing-a-visual-studio-extension.md).
 
 > [!NOTE]
-> Balíček rozšíření pro můžete nainstalovat pouze rozšíření, které jsou k dispozici na [Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo [privátní Galerie](../extensibility/how-to-create-an-atom-feed-for-a-private-gallery.md).
+> Balíček rozšíření můžete nainstalovat pouze rozšíření, které jsou k dispozici na [webu Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo soukromé [galerie](../extensibility/how-to-create-an-atom-feed-for-a-private-gallery.md).
 
-## <a name="install-the-extension-pack-from-the-visual-studio-marketplace"></a>Nainstalovat balíček rozšíření z Visual Studio Marketplace
+## <a name="install-the-extension-pack-from-the-visual-studio-marketplace"></a>Instalace sady Extension Pack z webu Visual Studio Marketplace
 
-Teď, když se publikuje rozšíření, nainstalujte ho v sadě Visual Studio a ho vyzkoušeli.
+Teď, když je rozšíření publikováno, nainstalujte ho do sady Visual Studio a otestujte jej tam.
 
 ::: moniker range="vs-2017"
 
-1. V sadě Visual Studio na **nástroje** nabídky, klikněte na tlačítko **rozšíření a aktualizace**.
+1. V sadě Visual Studio klikněte v nabídce **Nástroje** na **položku Rozšíření a aktualizace**.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. V sadě Visual Studio na **rozšíření** nabídky, klikněte na tlačítko **spravovaných rozšíření**.
+1. V sadě Visual Studio klikněte v nabídce **Rozšíření** na **položku Spravovaná rozšíření**.
 
 ::: moniker-end
 
-2. Klikněte na tlačítko **Online** a vyhledejte "Balíček rozšíření pro Test".
+2. Klikněte na **Online** a vyhledejte "Test Extension Pack".
 
-3. Klikněte na tlačítko **Stáhnout**. Rozšíření a její seznam přípon, které jsou součástí balíčku rozšíření se pak být naplánovaná instalace.
+3. Klepněte na tlačítko **Stáhnout**. Rozšíření a jeho seznam rozšíření zahrnutých v rozšíření pack u následných okolností bude naplánováno k instalaci.
 
-4. Následuje ukázkový balíček rozšíření pro stažení zobrazení **spravovat rozšíření** dialogového okna. Pokud chcete nainstalovat jenom některé z zahrnutých rozšíření v balíčku rozšíření, můžete upravit seznam rozšíření v **naplánované pro instalaci**.
+4. Níže je ukázka rozšíření Pack stáhnout zobrazení dialogového okna **Spravovat rozšíření.** Pokud dáváte přednost instalaci pouze některých zahrnutých rozšíření v balíčku Rozšíření, můžete upravit seznam rozšíření v **naplánované instalaci**.
 
-    ![Stáhněte si balíček rozšíření z Marketplace](media/vside-extensionpack.png)
+    ![Stáhnout balíček rozšíření z Marketplace](media/vside-extensionpack.png)
 
-5. K dokončení instalace, ukončete všechny instance sady Visual Studio.
+5. Chcete-li dokončit instalaci, zavřete všechny instance sady Visual Studio.
 
-## <a name="remove-the-extension"></a>Odebrat rozšíření
+## <a name="remove-the-extension"></a>Odebrání rozšíření
 
-Odebrat rozšíření z počítače:
+Odebrání rozšíření z počítače:
 
 ::: moniker range="vs-2017"
 
-1. V sadě Visual Studio na **nástroje** nabídky, klikněte na tlačítko **rozšíření a aktualizace**.
+1. V sadě Visual Studio klikněte v nabídce **Nástroje** na **položku Rozšíření a aktualizace**.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. V sadě Visual Studio na **rozšíření** nabídky, klikněte na tlačítko **spravovaných rozšíření**.
+1. V sadě Visual Studio klikněte v nabídce **Rozšíření** na **položku Spravovaná rozšíření**.
 
 ::: moniker-end
 
-2. Vyberte **balíček rozšíření pro Test** a potom klikněte na tlačítko **odinstalovat**. Rozšíření a její seznam přípon, které jsou součástí balíčku rozšíření se pak být naplánovaná odinstalace.
+2. Vyberte **test rozšíření Pack** a klepněte na tlačítko **Odinstalovat**. Rozšíření a jeho seznam rozšíření zahrnutých v rozšíření pack u následných bude naplánováno na odinstalaci.
 
-3. K dokončení odinstalace, zavřete všechny instance sady Visual Studio.
+3. Chcete-li provést odinstalaci, zavřete všechny instance sady Visual Studio.

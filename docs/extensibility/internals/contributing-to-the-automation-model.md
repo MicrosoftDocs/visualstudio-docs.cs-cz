@@ -1,69 +1,69 @@
 ---
-title: Přispívání do modelu automatizace | Dokumentace Microsoftu
+title: Přispívání k modelu automatizace | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - automation [Visual Studio SDK]
 ms.assetid: 44de482d-93c8-41a4-843c-cefda995a03e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 47e6686c82dcb0272fa9b3b3c4d3b7c73afe4475
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d660edc740229c3e91b99e1f59eb37b4e9312098
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335435"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709272"
 ---
-# <a name="contribute-to-the-automation-model"></a>Přispívání do modelu automatizace
-Visual Studio poskytuje sadu rozhraní automatizace pro přizpůsobení prostředí. Model automatizace je objektový model, který umožňuje koncovým uživatelům vytvářet doplňky sady Visual Studio a rozšíření.
+# <a name="contribute-to-the-automation-model"></a>Přispějte k modelu automatizace
+Visual Studio poskytuje sadu rozhraní automatizace pro přizpůsobení prostředí. Model automatizace je objektový model, který umožňuje koncovým uživatelům vytvářet doplňky a rozšíření sady Visual Studio.
 
- Kromě toho je vhodné pro vás, jako vývojář VSPackage přispívat do modelu automatizace Tímto způsobem, koncovým uživatelům vašeho balíčku VSPackage pro vytváření doplňků a obecně poskytují konzistentní uživatelské prostředí modelu při použití vašeho balíčku VSPackage v povolíte [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
+ Kromě toho je vhodné, abyste jako vývojář VSPackage přispívali k modelu automatizace; Tímto způsobem povolíte koncovým uživatelům vašeho balíčku VSPackage vytvářet doplňky a obecně poskytují konzistentní uživatelské [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]modelové prostředí při použití vašeho balíčku VSPackage v aplikaci .
 
- Chcete-li konzistentní prostředí koncového uživatele, můžete postupovat podle sadu pokynů, které při návrhu vašeho balíčku VSPackage tak, aby model automatizace pro vaše VSPackage následuje myšlenky v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
+ Chcete-li, aby prostředí pro koncové uživatele bylo konzistentní, můžete při navrhování balíčku VSPackage postupovat podle sady [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]pokynů tak, aby model automatizace pro váš balíček VSPackage sledoval nápady v aplikaci .
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Přehled modelu automatizace](../../extensibility/internals/automation-model-overview.md)
 
- Definuje model automatizace jako související skupiny objektů, které řídí hlavní charakteristiky společné prostředí. Tuto sadu objektů je uvedena v diagramu modelu automatizace.
+ Definuje model automatizace jako související skupiny objektů, které řídí hlavní aspekty společného prostředí. Tato sada objektů je zobrazena v diagramu modelu automatizace.
 
-- [Poskytování automatizace pro balíčky VSPackages](../../extensibility/internals/providing-automation-for-vspackages.md)
+- [Zajištění automatizace pro balíčky VSPackages](../../extensibility/internals/providing-automation-for-vspackages.md)
 
- Tento článek popisuje dva hlavní způsoby poskytování automatizace pro vaše VSPackage.
+ Popisuje dva hlavní způsoby, jak zajistit automatizaci pro váš VSPackage.
 
-- [Vystavení objektů projektu](../../extensibility/internals/exposing-project-objects.md)
+- [Vystavit objekty projektu](../../extensibility/internals/exposing-project-objects.md)
 
- Poskytuje podrobné pokyny pro vytvoření balíčku VSPackage konkrétní objekty.
+ Obsahuje podrobné pokyny pro vytváření objektů specifických pro vspackage.
 
-- [Projekt modelování](../../extensibility/internals/project-modeling.md)
+- [Modelování projektů](../../extensibility/internals/project-modeling.md)
 
- Popisuje standardní projekt objekty, které jsou nutné k vytvoření automatizace pro nový typ projektu a ukazuje cestu, která následuje automatizace projektu. Toto téma obsahuje také výpisech deklarací a implementaci tříd.
+ Vysvětluje standardní objekty projektu, které jsou nutné k vytvoření automatizace pro nový typ projektu a ilustruje cestu, která následuje automatizace projektu. Toto téma také obsahuje výpisy deklarací a implementace pro třídy.
 
-- [Vystavení události](../../extensibility/internals/exposing-events-in-the-visual-studio-sdk.md)
+- [Vystavit události](../../extensibility/internals/exposing-events-in-the-visual-studio-sdk.md)
 
- Poskytuje podrobné pokyny pro vytvoření události pro váš model automatizace.
+ Obsahuje podrobné pokyny pro vytváření událostí pro váš model automatizace.
 
-- [Podpora automatizace pro stránky Možnosti](../../extensibility/internals/automation-support-for-options-pages.md)
+- [Podpora automatizace pro stránky možností](../../extensibility/internals/automation-support-for-options-pages.md)
 
- Popisuje, jak vrátit objekt automatizace pro podporu vlastnosti VSPackage vlastní **možnosti** dialogové okno na **nástroj** nabídky tím, že rozšíří `DTE.Properties` objektu.
+ Popisuje, jak vrátit objekt automatizace pro podporu vlastností dialogového okna vlastní **volby** VSPackage v nabídce **Nástroj** rozšířením objektu. `DTE.Properties`
 
-- [Poskytování automatizace pro kód](../../extensibility/internals/providing-automation-for-code.md)
+- [Zajištění automatizace pro kód](../../extensibility/internals/providing-automation-for-code.md)
 
- Tento článek vysvětluje, že vytvoření modelu automatizace kódu se nevyžaduje. Ale je k dispozici odkaz v tomto tématu, které poskytuje přehledné informace do modely kódu.
+ Vysvětluje, že vytvoření modelu automatizace pro váš kód není vyžadováno. Odkaz je však k dispozici v tomto tématu, který poskytuje podrobné informace o modelech kódu.
 
-- [Postupy: Poskytování automatizace pro Windows](../../extensibility/internals/how-to-provide-automation-for-windows.md)
+- [Postup: Zajištění automatizace pro Windows](../../extensibility/internals/how-to-provide-automation-for-windows.md)
 
- Vysvětluje, že poskytování automatizace je vhodné pokaždé, když chcete zpřístupnit objekty automatizace v okně a prostředí už neposkytuje předem připravená automatizační objekt. Tento článek popisuje automatizace pro okna nástrojů a oken dokumentu.
+ Vysvětluje, že poskytování automatizace je vhodné vždy, když chcete zpřístupnit objekty automatizace v okně a prostředí již neposkytuje objekt připravené automatizace. Popisuje automatizaci pro okna nástrojů a okna dokumentů.
 
 - [Použití modelu automatizace](../../extensibility/internals/using-the-automation-model.md)
 
- Poskytuje dva příklady kódu, které ukazují, jak spotřebitel automatizace získá počáteční projekt objekty automatizace.
+ Obsahuje dva příklady kódu, které ukazují, jak spotřebitel automatizace získá počáteční objekty automatizace projektu.
 
-- [Automatizace pro objekty konfigurace a SelectedItem](../../extensibility/internals/automation-for-configuration-and-selecteditem-objects.md)
+- [Automatizace pro objekty Konfigurace a SelectedItem](../../extensibility/internals/automation-for-configuration-and-selecteditem-objects.md)
 
- Poskytuje informace o automatizaci pro konfiguraci a SelectedItems objekty.
+ Obsahuje informace o automatizaci objektů Configuration a SelectedItems.
 
-## <a name="reference"></a>Odkaz
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> Obsahuje ukázku kódu, který ukazuje, jak VSPackage podílí na objektový model DTE automatizace. Obsahuje seznam parametrů, vrácené hodnoty a vybrané poznámky.
+## <a name="reference"></a>Referenční informace
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>Poskytuje ukázku kódu, která ukazuje, jak se VSPackage účastní objektového modelu automatizace DTE. Uvádí parametry, vrácené hodnoty a vybrané poznámky.

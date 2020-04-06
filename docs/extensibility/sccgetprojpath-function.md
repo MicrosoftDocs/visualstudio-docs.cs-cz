@@ -1,5 +1,5 @@
 ---
-title: Sccgetprojpath – funkce | Dokumentace Microsoftu
+title: Funkce SccGetProjPath | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - SccGetProjPath function
 ms.assetid: 1079847e-d45f-4cb8-9d92-1e01ce5d08f6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b31a17e89003967aef6a423dda87572b4a07c387
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 281787da3499c081fbbe6f59b7b8175a4dbf24d7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353684"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700694"
 ---
-# <a name="sccgetprojpath-function"></a>Sccgetprojpath – funkce
-Tato funkce se zobrazí výzva pro cestu k projektu, což je řetězec, který má smysl pouze na modul plug-in správy zdrojového kódu. Je volána, když se uživatel:
+# <a name="sccgetprojpath-function"></a>SccGetProjPath
+Tato funkce vyzve uživatele k cestě projektu, což je řetězec, který má smysl pouze pro modul plug-in správy zdrojového kódu. Je volána, když je uživatel:
 
 - Vytvoření nového projektu
 
-- Přidat existující projekt do správy verzí
+- Přidání existujícího projektu do správy verzí
 
-- Pokouším se najít existující projekt ovládacího prvku verze
+- Pokus o nalezení existujícího projektu správy verzí
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,73 +46,73 @@ SCCRTN SccGetProjPath (
 ### <a name="parameters"></a>Parametry
  pvContext
 
-[in] Struktura kontext modulu plug-in zdroje ovládacího prvku.
+[v] Struktura kontextu modulu plug-in správy zdrojového kódu.
 
- hWnd
+ Hwnd
 
-[in] Popisovač okna integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu můžete použít jako nadřazený pro všechna dialogová okna, které poskytuje.
+[v] Popisovač okna IDE, který může modul plug-in správy zdrojového kódu použít jako nadřazený modul pro všechna dialogová okna, která poskytuje.
 
- lpUser
+ lpUživatel
 
-[out v] Uživatelské jméno (nesmí přesáhnout SCC_USER_SIZE, včetně ukončovacího znaku NULL)
+[dovnitř, ven] Uživatelské jméno (nepřekračovat SCC_USER_SIZE, včetně zakončení NULL)
 
  lpProjName
 
-[out v] Název projektu IDE, pracovní prostor projektu nebo souboru pravidel (nesmí přesáhnout SCC_PRJPATH_SIZE, včetně ukončovacího znaku NULL).
+[dovnitř, ven] Název projektu IDE, pracovního prostoru projektu nebo makefile (nesmí překročit SCC_PRJPATH_SIZE, včetně zakončení NULL).
 
  lpLocalPath
 
-[out v] Cesta pracovního projektu. Pokud `bAllowChangePath` je `TRUE`, modul plug-in správy zdrojového kódu můžete upravit tento řetězec (nesmí přesáhnout _MAX_PATH, včetně ukončovacího znaku null).
+[dovnitř, ven] Pracovní cesta projektu. Pokud `bAllowChangePath` `TRUE`je , modul plug-in správy zdrojového kódu můžete upravit tento řetězec (nesmí překročit _MAX_PATH, včetně null-terminator).
 
  lpAuxProjPath
 
-[out v] Vyrovnávací paměť pro vrácený projektu k cestě (nesmí přesáhnout SCC_PRJPATH_SIZE, včetně ukončovacího znaku NULL).
+[dovnitř, ven] Vyrovnávací paměť pro vrácenou cestu projektu (nesmí překročit SCC_PRJPATH_SIZE, včetně zakončení NULL).
 
  bAllowChangePath
 
-[in] Pokud je to `TRUE`, modul plug-in správy zdrojového kódu můžete k zadání a upravovat `lpLocalPath` řetězec.
+[v] Pokud je `TRUE`toto , modul plug-in správy `lpLocalPath` zdrojového kódu může vyzvat k zadání a upravit řetězec.
 
- pbNew
+ pbNový
 
-[out v] Hodnota v označuje, zda chcete-li vytvořit nový projekt. Vrácená hodnota označuje úspěch vytvoření projektu:
+[dovnitř, ven] Přicházející hodnota označuje, zda chcete vytvořit nový projekt. Vrácená hodnota označuje úspěch při vytváření projektu:
 
-|příchozí|interpretace|
+|Příchozí|Interpretace|
 |--------------|--------------------|
-|HODNOTA TRUE|Uživatel může vytvořit nový projekt.|
-|FALSE|Uživatele nelze vytvořit nový projekt.|
+|TRUE|Uživatel může vytvořit nový projekt.|
+|FALSE|Uživatel nesmí vytvořit nový projekt.|
 
-|Odchozí|interpretace|
+|Odchozí|Interpretace|
 |--------------|--------------------|
-|HODNOTA TRUE|Nový projekt byl vytvořen.|
-|FALSE|Je vybraný existující projekt.|
+|TRUE|Byl vytvořen nový projekt.|
+|FALSE|Byl vybrán existující projekt.|
 
 ## <a name="return-value"></a>Návratová hodnota
- Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |SCC_OK|Projekt byl úspěšně vytvořen nebo načten.|
 |SCC_I_OPERATIONCANCELED|Operace byla zrušena.|
-|SCC_E_ACCESSFAILURE|Došlo k problému, přístup k systému správy zdrojového kódu, pravděpodobně kvůli problémům se síti nebo kolize.|
-|SCC_E_CONNECTIONFAILURE|Došlo k pokusu o připojení k systému správy zdrojového kódu.|
+|SCC_E_ACCESSFAILURE|Při přístupu k systému správy zdrojového kódu došlo k potížím se sítí nebo konflikty.|
+|SCC_E_CONNECTIONFAILURE|Při pokusu o připojení k systému správy zdrojového kódu došlo k potížím.|
 |SCC_E_NONSPECIFICERROR|Došlo k nespecifikované chybě.|
 
 ## <a name="remarks"></a>Poznámky
- Účelem této funkce je pro rozhraní IDE k získání parametry `lpProjName` a `lpAuxProjPath`. Po modul plug-in správy zdrojového kódu se zobrazí výzva pro tyto informace, předá tyto dva řetězce zpět do integrovaného vývojového prostředí. Rozhraní IDE uchovává tyto řetězce v souboru řešení a předává je do [sccopenproject –](../extensibility/sccopenproject-function.md) vždy, když uživatel otevře tento projekt. Tyto řetězce povolte modul plug-in pro sledování informací, které jsou spojené s projektem.
+ Účelem této funkce je pro ide získat `lpProjName` `lpAuxProjPath`parametry a . Poté, co modul plug-in správy zdrojového kódu vyzve uživatele k zadání těchto informací, předá tyto dva řetězce zpět do rozhraní IDE. IDE zachová tyto řetězce v souboru řešení a předá je [SccOpenProject](../extensibility/sccopenproject-function.md) vždy, když uživatel otevře tento projekt. Tyto řetězce umožňují modulu plug-in sledovat informace přidružené k projektu.
 
- Při prvním volání funkce `lpAuxProjPath` je nastaven na prázdný řetězec. `lProjName` může také být prázdný, nebo může obsahovat název projektu integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu může použít nebo ignorovat. Po návratu funkce úspěšně, modul plug-in vrátí dva řetězce odpovídající. Integrovaného vývojového prostředí nepředpokládá, o tyto řetězce, nebudeme je používat a neumožňuje uživateli je upravovat. Pokud chce uživatel změnit nastavení, bude volat rozhraní IDE `SccGetProjPath` znovu, předanou ve stejné hodnoty se v minulosti obdržel předchozí čas. To poskytuje modul plug-in úplnou kontrolu nad tyto dva řetězce.
+ Při prvním volání funkce `lpAuxProjPath` je nastavena na prázdný řetězec. `lProjName`může být také prázdný nebo může obsahovat název projektu IDE, který může modul plug-in správy zdrojového kódu použít nebo ignorovat. Když se funkce úspěšně vrátí, modul plug-in vrátí dva odpovídající řetězce. Rozhraní IDE nevytváří žádné předpoklady o těchto řetězcích, nebude je používat a neumožní uživateli je upravit. Pokud uživatel chce změnit nastavení, ide `SccGetProjPath` bude volat znovu, předávání stejné hodnoty, které obdržel předchozí čas. To dává plug-in úplnou kontrolu nad těmito dvěma řetězci.
 
- Pro `lpUser`, rozhraní IDE může předat uživatelské jméno, nebo ho jednoduše předat ukazatel na prázdný řetězec. Pokud je uživatelské jméno, modul plug-in správy zdrojového kódu by měl používat jako výchozí. Ale pokud nebyl předán žádný název, nebo pokud se přihlášení nezdařilo se zadaným názvem, modul plug-in by měl požádat uživatele o přihlášení a předejte název zpět v `lpUser` při přijetí platné přihlašovací údaje. Vzhledem k tomu, že modul plug-in mohou změnit tento řetězec, rozhraní IDE se vždy přidělí vyrovnávací paměť o velikosti (`SCC_USER_LEN`+ 1).
+ Pro `lpUser`rozhraní IDE může předat uživatelské jméno, nebo může jednoduše předat ukazatel na prázdný řetězec. Pokud existuje uživatelské jméno, modul plug-in správy zdrojového kódu by jej měl použít jako výchozí. Pokud však nebylo předáno žádné jméno nebo pokud se přihlášení s daným názvem nezdařilo, modul `lpUser` plug-in by měl vyzvat uživatele k přihlášení a předat jméno zpět, když obdrží platné přihlášení. Vzhledem k tomu, že modul plug-in může tento řetězec`SCC_USER_LEN`změnit, bude ide vždy přidělit vyrovnávací paměť velikosti ( +1).
 
 > [!NOTE]
-> První akci prováděnou v integrovaném vývojovém prostředí může být volání na buď `SccOpenProject` funkce nebo `SccGetProjPath` funkce. Proto obou z nich mít identická `lpUser` parametr, který umožňuje přihlásit uživatele v době buď plug-in správy zdrojových kódů. I v případě, že vrácení z funkce naznačuje chybu, musí modulu plug-in zadejte tento řetězec s platným přihlašovacím jménem.
+> První akce, kterou provádí ide může být `SccOpenProject` volání `SccGetProjPath` funkce nebo funkce. Proto oba mají stejný `lpUser` parametr, který umožňuje modul plug-in správy zdrojového kódu pro přihlášení uživatele v obou časech. I v případě, že návrat z funkce označuje selhání, modul plug-in musí vyplnit tento řetězec s platným přihlašovacím jménem.
 
- `lpLocalPath` je adresář, ve kterém balancovat projektu. Může být prázdný řetězec. Pokud není žádný adresář aktuálně definován (třeba v případě uživatelů, pokus o stažení projektu ze správy zdrojového kódu) a pokud `bAllowChangePath` je `TRUE`, modul plug-in správy zdrojového kódu můžete požádat uživatele o vstup nebo některé jiné metody použijte k nastavení jeho vlastní řetězec do `lpLocalPath`. Pokud `bAllowChangePath` je `FALSE`, modul plug-in neměli měnit řetězec, protože uživatel již pracuje v zadaném adresáři.
+ `lpLocalPath`je adresář, ve kterém uživatel uchovává projekt. Může to být prázdný řetězec. Pokud není aktuálně definován žádný adresář (jako v případě uživatele, který se pokouší stáhnout `bAllowChangePath` projekt `TRUE`ze systému správy zdrojového kódu) a pokud je , může `lpLocalPath`modul plug-in správy zdrojového kódu vyzvat uživatele k zadání nebo použít jinou metodu k umístění vlastního řetězce do . Pokud `bAllowChangePath` `FALSE`je , modul plug-in by neměl změnit řetězec, protože uživatel již pracuje v zadaném adresáři.
 
- Pokud uživatel vytvoří nový projekt, které budou umístěny pod správou zdrojových kódů, modul plug-in správy zdrojového kódu nemusí ve skutečnosti jej vytvořit v systému správy zdrojového kódu v době `SccGetProjPath` je volána. Místo toho předává zpět řetězec spolu s nenulovou hodnotu pro `pbNew`, která udává, že projekt bude vytvořen v systému správy zdrojového kódu.
+ Pokud uživatel vytvoří nový projekt, který má být umístěn pod správou zdrojového kódu, modul `SccGetProjPath` plug-in správy zdrojového kódu nemusí ve skutečnosti vytvořit v systému správy zdrojového kódu v době, kdy se nazývá. Místo toho předá řetězec spolu s nenulovou hodnotou pro `pbNew`, což znamená, že projekt bude vytvořen v systému správy zdrojového kódu.
 
- Například, pokud uživatel **nový projekt** průvodce v sadě Visual Studio přidá jeho projekt do správy zdrojových kódů, tuto funkci volá, Visual Studio a modulu plug-in Určuje, zda je možné vytvořit nový projekt v systému správy zdrojového kódu pro obsahují projekt sady Visual Studio. Pokud uživatel klikne **zrušit** před dokončením průvodce, nikdy vytvoření projektu. Pokud uživatel klikne **OK**, Visual Studio volá `SccOpenProject`a předejte `SCC_OPT_CREATEIFNEW`, a vytvoření projektu spravovanými zdroji v daném čase.
+ Například pokud uživatel v **průvodci Nový projekt** v sadě Visual Studio přidá svůj projekt do zdrojového kódu, Visual Studio volá tuto funkci a modul plug-in určuje, zda je v pořádku vytvořit nový projekt v systému správy zdrojového kódu obsahovat projekt sady Visual Studio. Pokud uživatel klepne na tlačítko **Storno** před dokončením průvodce, projekt se nikdy nevytvoří. Pokud uživatel klepne na **tlačítko OK**, Visual Studio volá `SccOpenProject`, předávání a `SCC_OPT_CREATEIFNEW`zdroj řízený projekt je vytvořen v té době.
 
-## <a name="see-also"></a>Viz také:
-- [Funkce modulu plug-in API zdrojového ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>Viz také
+- [Funkce rozhraní API pro řízení zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)
 - [SccOpenProject](../extensibility/sccopenproject-function.md)

@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide | Dokumentace Microsoftu
+title: IPropertyProxyeeside | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IPropertyProxyEESide interface
 ms.assetid: cf227cf8-39d9-4758-8f7e-a697aebb1926
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f6528b146ad3128dd880e594b25ebb5df88bb8f2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c89cecbf22091a45e31c307c5b523ac8aa4c924e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353444"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714863"
 ---
 # <a name="ipropertyproxyeeside"></a>IPropertyProxyEESide
-Toto rozhraní poskytuje metody pro zobrazení dat na související objekt. Toto rozhraní je součástí Podpora vizualizérů typů.
+Toto rozhraní poskytuje metody pro zobrazení dat o přidruženém objektu. Toto rozhraní je součástí podpory pro vizualizéry typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,25 +29,25 @@ IPropertyProxyEESide : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Vyhodnocovače výrazů implementuje toto rozhraní pro podporu vizualizérů typů.
+ Vyhodnocení výrazu implementuje toto rozhraní pro podporu vizualizérů typu.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Volání [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) získat toto rozhraní. Volání [QueryInterface](/cpp/atl/queryinterface) na [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) rozhraní získat [IPropertyProxyProvider](../../../extensibility/debugger/reference/ipropertyproxyprovider.md) rozhraní.
+ Volání [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) získat toto rozhraní. Volání [QueryInterface](/cpp/atl/queryinterface) v rozhraní [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) získat rozhraní [IPropertyProxyProvider.](../../../extensibility/debugger/reference/ipropertyproxyprovider.md)
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- Toto rozhraní implementují následujících metod:
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ Tímto rozhraním jsou implementovány následující metody:
 
 |Metoda|Popis|
 |------------|-----------------|
-|[InitSourceDataProvider](../../../extensibility/debugger/reference/ipropertyproxyeeside-initsourcedataprovider.md)|Inicializuje zprostředkovatele zdroje dat tak, aby data objektu přístupná.|
+|[InitSourceDataProvider](../../../extensibility/debugger/reference/ipropertyproxyeeside-initsourcedataprovider.md)|Inicializuje zprostředkovatele zdroje dat, aby bylo možné přistupovat k datům objektu.|
 |[GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md)|Načte informace o sestavení objektu.|
 |[GetInitialData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getinitialdata.md)|Získá počáteční data pro objekt.|
-|[CreateReplacementObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md)|Vytvoří kopii stávající datové úložiště.|
-|[InPlaceUpdateObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-inplaceupdateobject.md)|Vytvoří odkaz na existující datové úložiště.|
-|[ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)|Načte informace o konkrétní sestavení v kontextu sestavení obsahující tento objekt.|
+|[CreateReplacementObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md)|Vytvoří kopii existujícího úložiště dat.|
+|[InPlaceUpdateObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-inplaceupdateobject.md)|Vytvoří odkaz na existující úložiště dat.|
+|[ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)|Načte informace o konkrétním sestavení v kontextu sestavení obsahujícího tento objekt.|
 
 ## <a name="remarks"></a>Poznámky
- Typ vizualizéru používá pro přístup k hodnoty přidružené k objektu, který toto rozhraní je součástí tohoto rozhraní. K datům přistupuje prostřednictvím [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) rozhraní, která poskytuje zobrazení jen pro čtení dat.
+ Vizualizér typu používá toto rozhraní pro přístup k hodnotám přidruženým k objektu, jehož je toto rozhraní součástí. Data jsou přístupná prostřednictvím rozhraní [IEEDataStorage,](../../../extensibility/debugger/reference/ieedatastorage.md) které poskytuje zobrazení dat jen pro čtení.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -56,7 +56,7 @@ IPropertyProxyEESide : IUnknown
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)
 - [Vizualizér typů a vlastní prohlížeč](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)
 - [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)

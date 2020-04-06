@@ -1,5 +1,5 @@
 ---
-title: PDB_TYPE | Dokumentace Microsoftu
+title: PDB_TYPE | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - PDB_TYPE structure
 ms.assetid: 1c1bb772-77d6-4870-90b2-fd9247d0004e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3121106b84111d20bf2915c0f9398fa92807cfd9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1f736d7d9b190fc46945e2f4f7c309b88c3e851f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349904"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714109"
 ---
-# <a name="pdbtype"></a>PDB_TYPE
+# <a name="pdb_type"></a>PDB_TYPE
 
-Tato struktura Určuje informace o typ pole z symbolů ze souboru PDB.
+Tato struktura určuje informace o typu pole převzatém ze symbolu PDB.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,17 +47,17 @@ public struct PDB_TYPE {
 ## <a name="members"></a>Členové
 
 `ulAppDomainID`\
-ID aplikace, ze kterého přišel symbolu. Slouží k jednoznačné identifikaci instance aplikace.
+ID aplikace, ze které symbol pochází. Používá se k jednoznačné identifikaci instance aplikace.
 
 `guidModule`\
 Identifikátor GUID modulu, který obsahuje toto pole.
 
 `symid`\
-ID symbol, který odpovídá do tohoto pole.
+ID symbolu, který odpovídá tomuto poli.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato struktura se zobrazí jako součást sjednocení v [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) strukturu, kdy `dwKind` pole `TYPE_INFO` struktura je nastavena na `TYPE_KIND_PDB` (hodnotu z [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) výčet).
+Tato struktura se zobrazí jako součást unie ve [struktuře TYPE_INFO,](../../../extensibility/debugger/reference/type-info.md) `dwKind` když je pole `TYPE_INFO` struktury nastaveno na `TYPE_KIND_PDB` (hodnota z [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) výčtu).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -67,7 +67,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)

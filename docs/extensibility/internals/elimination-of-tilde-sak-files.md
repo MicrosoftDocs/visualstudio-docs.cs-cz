@@ -1,5 +1,5 @@
 ---
-title: Odstranění ~ SAK souborů | Dokumentace Microsoftu
+title: Odstranění souborů ~SAK | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,31 +7,31 @@ helpviewer_keywords:
 - ~sak files
 - source control plug-ins, ~SAK files
 ms.assetid: 5277b5fa-073b-4bd1-8ba1-9dc913aa3c50
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e409a08ba295bb55eb1fcfcd2a048a9bdb5ea7c9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0294198bb1560f8df6f17170013f88d4fe11e5cf
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66327537"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80708505"
 ---
-# <a name="elimination-of-sak-files"></a>Odstranění ~ SAK soubory
-Zdrojový ovládací prvek modulu Plug-in API 1.2 *~ SAK* soubory byly nahrazeny příznaky funkcí a nových funkcí, které zjišťují, zda zdroj modulu plug-in podporuje ovládací prvek *MSSCCPRJ* Souborová služba a sdílenými registracemi.
+# <a name="elimination-of-sak-files"></a>Odstranění souborů ~SAK
+V rozhraní API modulu plug-in správy zdrojového kódu 1.2 byly soubory *~SAK* nahrazeny příznaky schopností a novými funkcemi, které detekují, zda modul plug-in správy zdrojového kódu podporuje soubor *MSSCCPRJ* a sdílené pokladny.
 
-## <a name="sak-files"></a>~ Souborů SAK
-Visual Studio .NET 2003 vytvoření dočasných souborů s předponou *~ SAK*. Tyto soubory se používají k určení, jestli podporuje modul plug-in správy zdrojového kódu:
+## <a name="sak-files"></a>~Soubory SAK
+Visual Studio .NET 2003 vytvořilo dočasné soubory s předponou *~SAK*. Tyto soubory se používají k určení, zda modul plug-in správy zdrojového kódu podporuje:
 
-- *MSSCCPRJ.SCC* souboru.
+- Soubor *MSSCCPRJ.SCC.*
 
-- Více (sdílené) rezervace.
+- Více (sdílených) výtek.
 
-Pro moduly plug-in, které podporují pokročilé funkce, které jsou k dispozici v rozhraní API 1.2 zdrojový ovládací prvek modulu Plug-in rozhraní IDE dokáže tyto možnosti bez vytvoření dočasných souborů pomocí nové možnosti, příznaky a funkce, které jsou podrobně popsané v následujících částech.
+Pro moduly plug-in, které podporují pokročilé funkce poskytované v rozhraní API plug-in správy zdrojového kódu 1.2, ide můžete zjistit tyto možnosti bez vytváření dočasných souborů pomocí nových funkcí, příznaky a funkce, podrobně popsané v následujících částech.
 
-## <a name="new-capability-flags"></a>Nové příznaky funkcí
+## <a name="new-capability-flags"></a>Nové příznaky schopností
  `SCC_CAP_SCCFILE`
 
  `SCC_CAP_MULTICHECKOUT`
@@ -41,14 +41,14 @@ Pro moduly plug-in, které podporují pokročilé funkce, které jsou k dispozic
 
 - [SccIsMultiCheckoutEnabled](../../extensibility/sccismulticheckoutenabled-function.md)
 
- Pokud více rezervace (sdílené) podporuje modul plug-in správy zdrojového kódu, pak deklaruje `SCC_CAP_MULTICHECKOUT` funkce a implementuje `SccIsMultiCheckOutEnabled` funkce. Tato funkce je volána pokaždé, když probíhá operace rezervace na kterýkoli z projektů se spravovanými zdroji.
+ Pokud modul plug-in správy zdrojového kódu podporuje více (sdílených) povýběrů, deklaruje `SCC_CAP_MULTICHECKOUT` schopnost a implementuje `SccIsMultiCheckOutEnabled` funkci. Tato funkce je volána vždy, když dojde k operaci pokladny na některém z projektů řízených zdrojem.
 
- Pokud modul plug-in správy zdrojového kódu podporuje vytváření a využívání *MSSCCPRJ.SCC* souboru, deklaruje `SCC_CAP_SCCFILE` funkce a implementuje [sccwillcreatesccfile –](../../extensibility/sccwillcreatesccfile-function.md). Tato funkce je volána s seznam souborů. Funkce vrátí `TRUE' or 'FALSE` pro každý soubor k označení, zda by měl používat Visual Studio *MSSCCPRJ.SCC* souboru k němu. Pokud se rozhodne modul plug-in správy zdrojového kódu není pro podporu těchto nových funkcí a funkcí, ho můžete použít následující klíč registru zakázat vytvoření těchto souborů:
+ Pokud modul plug-in správy zdrojového kódu podporuje vytvoření a použití souboru *MSSCCPRJ.SCC,* pak deklaruje `SCC_CAP_SCCFILE` schopnost a implementuje Soubor [SccWillCreateSccFile](../../extensibility/sccwillcreatesccfile-function.md). Tato funkce je volána se seznamem souborů. Funkce vrátí `TRUE' or 'FALSE` pro každý soubor označující, zda Visual Studio by měl použít soubor *MSSCCPRJ.SCC* pro něj. Pokud se modul plug-in správy zdrojového kódu rozhodne nepodporovat tyto nové funkce a funkce, může zakázat vytváření těchto souborů pomocí následujícího klíče registru:
 
- **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl]DoNotCreateTemporaryFilesInSourceControl** = *dword:00000001*
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] DoNotCreateTemporaryFilesInSourceControl** = *dword:00000001*
 
 > [!NOTE]
-> Pokud tento klíč registru je nastavena na *DWORD: 00000000*odpovídá klíči se neexistující a sady Visual Studio dál pokoušet o vytvoření dočasné soubory. Nicméně pokud nastavení klíče registru *DWORD: 00000001*, Visual Studio nebude pokoušet o vytvoření dočasné soubory. Místo toho předpokládá, že modul plug-in správy zdrojového kódu není podporováno *MSSCCPRJ.SCC* souboru a sdílenými registracemi nepodporuje.
+> Pokud je tento klíč registru nastaven na *dword:00000000*, je ekvivalentní klíč je neexistující a Visual Studio stále pokouší vytvořit dočasné soubory. Pokud je však klíč registru nastaven na *dword:00000001*, aplikace Visual Studio se nepokusí vytvořit dočasné soubory. Místo toho předpokládá, že modul plug-in správy zdrojového kódu nepodporuje soubor *MSSCCPRJ.SCC* a nepodporuje sdílené pokladny.
 
-## <a name="see-also"></a>Viz také:
-- [Co je nového v zdrojový ovládací prvek modulu Plug-in API verze 1.2](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)
+## <a name="see-also"></a>Viz také
+- [Co je nového v rozhraní Plug-in Plug-in API správy zdrojového kódu verze 1.2](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

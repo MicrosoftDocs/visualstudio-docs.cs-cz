@@ -1,5 +1,5 @@
 ---
-title: Icon – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Element ikony (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -8,22 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - Icon element [Visual Studio project templates]
 ms.assetid: ec01d903-f4c2-4ca2-9cbc-e939ec84016c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4068c192d7e01f4c9162e8006152a90b38aed05b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ff725e2db0d74e571b8c41d8a8aa80228938fbff
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350146"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710534"
 ---
-# <a name="icon-element-visual-studio-templates"></a>Icon – element (šablony sady Visual Studio)
-Určuje cestu a název souboru, který slouží jako ikona, která se zobrazí v jednom souboru obrázku **nový projekt** nebo **přidat novou položku** dialogovém okně pro šablonu.
+# <a name="icon-element-visual-studio-templates"></a>Prvek ikony (šablony sady Visual Studio)
+Určuje cestu a název souboru obrázku, který slouží jako ikona, která se zobrazí v dialogovém okně **Nový projekt** nebo Přidat **novou položku** pro šablonu.
 
- \<Vstemplate – > \<TemplateData > \<ikonu >
+ \<> \<> \<vsšablona> Šablona
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,35 +37,35 @@ Určuje cestu a název souboru, který slouží jako ikona, která se zobrazí v
 <Icon Package="{PackageID}" ID="ResourceID" />
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Package`|Volitelný atribut pro scénáře pro pokročilé uživatele.<br /><br /> Identifikátor GUID, který určuje balíček sady Visual Studio.|
-|`ID`|Volitelný atribut pro scénáře pro pokročilé uživatele.<br /><br /> Určuje ID prostředku. Visual Studio|
+|`Package`|Volitelný atribut pro pokročilé uživatelské scénáře.<br /><br /> Identifikátor GUID, který určuje ID balíčku sady Visual Studio.|
+|`ID`|Volitelný atribut pro pokročilé uživatelské scénáře.<br /><br /> Určuje ID prostředku sady Visual Studio.|
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
 
 ## <a name="text-value"></a>Textová hodnota
- Pokud je vyžadována textová hodnota `Package` a `ID` atributy se používají.
+ Textová hodnota je `Package` vyžadována, pokud nejsou použity atributy a. `ID`
 
- Text obsahuje název a cesta k souboru, který se zobrazí ikona šablony **nový projekt** dialogové okno.
+ Text poskytuje cestu a název souboru ikony šablony, které se zobrazí v dialogovém okně **Nový projekt.**
 
 ## <a name="remarks"></a>Poznámky
- `Icon` je vyžadovaný podřízený prvek `TemplateData`.
+ `Icon`je povinnýpodřízený `TemplateData`prvek .
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metadata pro šablona projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikace.
+ Následující příklad ukazuje metadata pro šablonu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu pro aplikaci.
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -91,6 +91,6 @@ Určuje cestu a název souboru, který slouží jako ikona, která se zobrazí v
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

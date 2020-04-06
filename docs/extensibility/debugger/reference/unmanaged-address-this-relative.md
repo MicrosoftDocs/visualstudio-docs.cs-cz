@@ -1,5 +1,5 @@
 ---
-title: UNMANAGED_ADDRESS_THIS_RELATIVE | Dokumentace Microsoftu
+title: UNMANAGED_ADDRESS_THIS_RELATIVE | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - UNMANAGED_ADDRESS_THIS_RELATIVE structure
 ms.assetid: e6a91ace-2d47-4ff9-aefb-8d8b68eab0b2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 30a70f33edbe3cf817ebe4ad383c54bc02275a72
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ea493170c7b422129485fcea4248981a2b506001
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316105"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713256"
 ---
-# <a name="unmanagedaddressthisrelative"></a>UNMANAGED_ADDRESS_THIS_RELATIVE
-Tato struktura představuje adresu, která je vzhledem k `this` ukazatel (`Me` v jazyce Visual Basic).
+# <a name="unmanaged_address_this_relative"></a>UNMANAGED_ADDRESS_THIS_RELATIVE
+Tato struktura představuje adresu, která `this` je`Me` relativní k ukazateli (v jazyce Visual Basic).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,16 +45,16 @@ public struct UNMANAGED_THIS_RELATIVE {
 
 ## <a name="members"></a>Členové
  `dwOffset`\
- Posun bajtu od základní umístění (například začátek třídy vtable).
+ Posun bajtu od základní pozice (například začátek vtable třídy).
 
  `dwBitOffset`\
- Posun v bitech od základní pozice (vždy 0 Pokud odkazující na bitové pole).
+ Posun v bitech ze základní polohy (vždy 0, pokud neodkazuje na bitové pole).
 
  `dwBitLength`\
- Počet bitů představující adresu (vždy 0 Pokud odkazující na bitové pole).
+ Počet bitů představujících adresu (vždy 0, pokud neodkazuje na bitové pole).
 
 ## <a name="remarks"></a>Poznámky
- Tato struktura je součástí sjednocení v [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) strukturu, kdy `dwKind` pole `DEBUG_ADDRESS_UNION` struktura je nastavena na `ADDRESS_KIND_UNMANAGED_THIS_RELATIVE` (hodnotu z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet).
+ Tato struktura je součástí unie ve struktuře [DEBUG_ADDRESS_UNION,](../../../extensibility/debugger/reference/debug-address-union.md) když `dwKind` je pole `DEBUG_ADDRESS_UNION` struktury nastaveno na `ADDRESS_KIND_UNMANAGED_THIS_RELATIVE` (hodnota z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčtu).
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: sh.h
@@ -63,6 +63,6 @@ public struct UNMANAGED_THIS_RELATIVE {
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)

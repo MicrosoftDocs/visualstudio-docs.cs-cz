@@ -1,55 +1,55 @@
 ---
-title: Managed Extensibility Framework v editoru | Microsoft Docs
+title: Rozhraní Spravované rozšiřitelnosti v editoru | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - using MEF for extensions
 ms.assetid: 3f59a285-6c33-4ae3-a4fb-ec1f5aa21bd1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f376a43b6d59ba494db2ad4e5ef26b260d91f6ad
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 888c5206b87079cf9fa91cb68e9801cb3c4f8c1a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72632608"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702868"
 ---
-# <a name="managed-extensibility-framework-in-the-editor"></a>Managed Extensibility Framework v editoru
-Editor je sestaven pomocí komponent Managed Extensibility Framework (MEF). Můžete sestavit vlastní komponenty rozhraní MEF pro rozšiřování editoru a váš kód může také spotřebovávat komponenty editoru.
+# <a name="managed-extensibility-framework-in-the-editor"></a>Rozhraní Spravované rozšiřitelnosti v editoru
+Editor je sestaven pomocí součástí Managed Extensibility Framework (MEF). Můžete vytvořit vlastní mef komponenty rozšířit editor a váš kód může využívat editor komponenty také.
 
-## <a name="overview-of-the-managed-extensibility-framework"></a>Přehled Managed Extensibility Framework
- MEF je knihovna .NET, která umožňuje přidat a upravit funkce aplikace nebo komponenty, které následují programovací model MEF. Editor sady Visual Studio může současně poskytovat a spotřebovávat součásti komponenty MEF.
+## <a name="overview-of-the-managed-extensibility-framework"></a>Přehled rámce spravované rozšiřitelnosti
+ MEF je knihovna .NET, která umožňuje přidávat a upravovat funkce aplikace nebo součásti, která následuje za programovacím modelem MEF. Editor Visual Studio může poskytovat i využívat součásti MEF.
 
- Rozhraní MEF je obsaženo v sestavení *System. ComponentModel. kompozice. dll* .NET Framework verze 4.
+ MEF je obsažen v sestavení rozhraní .NET Framework verze 4 *System.ComponentModel.Composition.dll.*
 
- Další informace o MEF naleznete v tématu [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).
+ Další informace o MEF naleznete [v tématu Spravované rozšíření framework (MEF)](/dotnet/framework/mef/index).
 
-### <a name="component-parts-and-composition-containers"></a>Části komponent a kontejnery kompozice
- Součást komponenty je třída nebo člen třídy, která může provádět jednu (nebo obě) z následujících možností:
+### <a name="component-parts-and-composition-containers"></a>Součásti a kompozice kontejnery
+ Součást součásti je třída nebo člen třídy, který může provést jednu (nebo obě) následující:
 
-- Využití jiné součásti
+- Spotřebovávat jinou součást
 
-- Využíváno jinou komponentou
+- Spotřebovávat jinou komponentou
 
-  Představte si například aplikaci nákupu, která má komponentu pro zadání objednávky, která závisí na datech o dostupnosti produktů poskytovaných komponentou inventáře skladu. V rámci podmínek MEF může součást inventarizace *exportovat* data o dostupnosti produktu a část objednávky může data *importovat* . Část objednávky a část inventarizace nemusejí o sobě navzájem informovat. *kontejner kompozice* (poskytnutý hostitelskou aplikací) zodpovídá za údržbu sady exportů a řešení exportů a importů.
+  Zvažte například nákupní aplikaci, která má komponentu položky objednávky, která závisí na datech dostupnosti produktu poskytnutých komponentou skladových zásob. Z hlediska MEF může skladová část *exportovat* data dostupnosti produktu a část položky objednávky může *data importovat.* Část položky objednávky a skladová část o sobě nemusí vědět; *kontejner složení* (poskytnutý hostitelskou aplikací) je zodpovědný za udržování souboru vývozů a řešení vývozů a importů.
 
-  Kontejner kompozice, <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>, je obvykle vlastněn hostitelem. Kontejner kompozice udržuje *katalog* exportovaných součástí komponent.
+  Kontejner složení <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>, je obvykle vlastněn hostitelem. Kontejner složení udržuje *katalog* exportovaných součástí.
 
-### <a name="export-and-import-component-parts"></a>Exportovat a importovat části součásti
- Můžete exportovat jakékoli funkce, pokud jsou implementovány jako veřejná třída nebo veřejný člen třídy (vlastnost nebo metoda). Nemusíte odvodit součást komponenty z <xref:System.ComponentModel.Composition.Primitives.ComposablePart>. Místo toho je nutné přidat atribut <xref:System.ComponentModel.Composition.ExportAttribute> ke třídě nebo členu třídy, který chcete exportovat. Tento atribut určuje *kontrakt* , podle kterého může další součást součásti importovat vaše funkce.
+### <a name="export-and-import-component-parts"></a>Export a import součástí
+ Můžete exportovat všechny funkce, tak dlouho, dokud je implementována jako veřejná třída nebo veřejný člen třídy (vlastnost nebo metoda). Součást není třeba odvozovat <xref:System.ComponentModel.Composition.Primitives.ComposablePart>z aplikace . Místo toho je <xref:System.ComponentModel.Composition.ExportAttribute> nutné přidat atribut do třídy nebo člena třídy, který chcete exportovat. Tento atribut určuje *smlouvu,* podle které může jiná součást importovat vaše funkce.
 
-### <a name="the-export-contract"></a>Kontrakt exportu
- @No__t_0 definuje entitu (třídu, rozhraní nebo strukturu), která se exportuje. Obvykle atribut exportu přebírá parametr, který určuje typ exportu.
+### <a name="the-export-contract"></a>Vývozní smlouva
+ Definuje <xref:System.ComponentModel.Composition.ExportAttribute> entitu (třídu, rozhraní nebo strukturu), která je exportována. Atribut exportu obvykle přebírá parametr, který určuje typ exportu.
 
 ```
 [Export(typeof(ContentTypeDefinition))]
 class TestContentTypeDefinition : ContentTypeDefinition {   }
 ```
 
- Ve výchozím nastavení atribut <xref:System.ComponentModel.Composition.ExportAttribute> definuje kontrakt, který je typem exportované třídy.
+ Ve výchozím <xref:System.ComponentModel.Composition.ExportAttribute> nastavení atribut definuje smlouvu, která je typem exportující třídy.
 
 ```
 [Export]
@@ -58,7 +58,7 @@ class TestContentTypeDefinition : ContentTypeDefinition {   }
 class TestAdornmentLayerDefinition : AdornmentLayerDefinition {   }
 ```
 
- V příkladu je výchozí atribut `[Export]` ekvivalentem `[Export(typeof(TestAdornmentLayerDefinition))]`.
+ V příkladu je `[Export]` výchozí atribut `[Export(typeof(TestAdornmentLayerDefinition))]`ekvivalentní .
 
  Můžete také exportovat vlastnost nebo metodu, jak je znázorněno v následujícím příkladu.
 
@@ -70,37 +70,37 @@ public AdornmentLayerDefinition scarletLayerDefinition;
 ```
 
 ### <a name="import-a-mef-export"></a>Import exportu MEF
- Pokud chcete použít export MEF, musíte znát kontrakt (obvykle typ), pomocí kterého byl exportován, a přidat atribut <xref:System.ComponentModel.Composition.ImportAttribute>, který má tuto hodnotu. Ve výchozím nastavení atribut import přijímá jeden parametr, což je typ třídy, kterou upravuje. Následující řádky kódu importují typ <xref:Microsoft.VisualStudio.Text.Classification.IClassificationTypeRegistryService>.
+ Pokud chcete spotřebovat export MEF, musíte znát smlouvu (obvykle typ), podle kterého byla <xref:System.ComponentModel.Composition.ImportAttribute> exportována, a přidat atribut, který má tuto hodnotu. Ve výchozím nastavení má atribut import u jednoho parametru, což je typ třídy, kterou upravuje. Následující řádky kódu importují <xref:Microsoft.VisualStudio.Text.Classification.IClassificationTypeRegistryService> typ.
 
 ```
 [Import]
 internal IClassificationTypeRegistryService ClassificationRegistry;
 ```
 
-## <a name="get-editor-functionality-from-a-mef-component-part"></a>Získat funkce editoru z části součásti MEF
- Pokud je váš stávající kód součástí komponenty MEF, můžete použít metadata rozhraní MEF pro použití částí komponenty editoru.
+## <a name="get-editor-functionality-from-a-mef-component-part"></a>Získání funkce editoru z součásti MEF
+ Pokud je váš existující kód součástí MEF, můžete použít metadata MEF ke spotřebování součástí editoru.
 
-#### <a name="to-consume-editor-functionality-from-a-mef-component-part"></a>Pro využívání funkcí editoru z součásti MEF
+#### <a name="to-consume-editor-functionality-from-a-mef-component-part"></a>Využití funkcí editoru z součásti MEF
 
-1. Přidejte odkazy na *System. kompozice. ComponentModel. dll*, který je v globální mezipaměti sestavení (GAC), a do sestavení editoru.
+1. Přidejte odkazy na *soubor System.Composition.ComponentModel.dll*, který je v globální mezipaměti sestavení (GAC), a na sestavení editoru.
 
-2. Přidejte relevantní direktivy using.
+2. Přidejte příslušné direktivy pomocí.
 
     ```
     using System.ComponentModel.Composition;
     using Microsoft.VisualStudio.Text;
     ```
 
-3. Následujícím způsobem přidejte atribut `[Import]` do rozhraní služby.
+3. Přidejte `[Import]` atribut do rozhraní služby následujícím způsobem.
 
     ```
     [Import]
     ITextBufferFactoryService textBufferService;
     ```
 
-4. Po získání služby můžete využít některou z jejích komponent.
+4. Po získání služby můžete spotřebovat některou z jejích součástí.
 
-5. Po zkompilování sestavení jej vložte do složky *.. \Common7\IDE\Components \* složku instalace sady Visual Studio.
+5. Po kompilaci sestavení jej vložte do *.. \Common7\IDE\Components\* v instalaci sady Visual Studio.
 
-## <a name="see-also"></a>Viz také:
-- [Rozšiřovací body služby jazyka a editoru](../extensibility/language-service-and-editor-extension-points.md)
+## <a name="see-also"></a>Viz také
+- [Jazykové služby a rozšiřující body editoru](../extensibility/language-service-and-editor-extension-points.md)

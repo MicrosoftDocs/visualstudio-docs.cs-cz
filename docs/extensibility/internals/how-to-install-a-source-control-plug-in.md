@@ -1,120 +1,120 @@
 ---
-title: 'Postupy: Instalace modulu Plug-in správy zdrojového kódu | Dokumentace Microsoftu'
+title: 'Postup: Instalace modulu plug-in správy zdrojového kódu | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - installation [Visual Studio SDK], source control plug-ins
 - source control plug-ins, installing
 ms.assetid: 9e2e01d9-7beb-42b2-99b2-86995578afda
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9de10f1aebd47093a3cc3f41343e73cefdde473a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9c0ac87aec3d6ac2532909772238e020e33bf78f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334914"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707997"
 ---
-# <a name="how-to-install-a-source-control-plug-in"></a>Postupy: Instalace modulu plug-in správy zdrojového kódu
-Vytvoření ovládacího prvku zdroj modulu plug-in zahrnuje tři kroky:
+# <a name="how-to-install-a-source-control-plug-in"></a>Postup: Instalace modulu plug-in pro řízení zdrojového kódu
+Vytvoření modulu plug-in správy zdrojového kódu zahrnuje tři kroky:
 
-1. Vytvoření knihovny DLL pomocí funkce definované v referenční části této dokumentace rozhraní API modulu Plug-in zdroje ovládacího prvku.
+1. Vytvořte dll s funkcemi definovanými v referenční části rozhraní API modulu plug-in správy zdrojového kódu v této dokumentaci.
 
-2. Implementujte funkce definované rozhraní API modulu Plug-in zdroje ovládacího prvku. Když [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] volání, zpřístupnit rozhraní a dialogových oknech v modulu plug-in.
+2. Implementujte funkce definované rozhraním API správy zdrojového kódu. Když [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] volá pro to, zpřístupnit rozhraní a dialogová okna z plug-in.
 
-3. Zaregistruje knihovnu DLL tak, že položky registru.
+3. Zaregistrujte dll provedením příslušných položek registru.
 
 ## <a name="integration-with-visual-studio"></a>Integrace se sadou Visual Studio
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporuje ovládací prvek moduly plug-in zdrojového kódu, které odpovídají rozhraní API modulu Plug-in zdroje ovládacího prvku.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]podporuje moduly plug-in správy zdrojového kódu, které odpovídají rozhraní API modulu plug-in správy zdrojového kódu.
 
 ### <a name="register-the-source-control-plug-in"></a>Registrace modulu plug-in správy zdrojového kódu
- Před spuštěné integrované vývojové prostředí (IDE) může volat do systému správy zdrojového kódu, musí nejprve vyhledat zdroj řídit knihovnu DLL modulu plug-in, který exportuje rozhraní API.
+ Před spuštění integrované vývojové prostředí (IDE) můžete volat do systému správy zdrojového kódu, musí nejprve najít modul DLL správy zdrojového kódu, který exportuje rozhraní API.
 
-#### <a name="to-register-the-source-control-plug-in-dll"></a>K registraci zdroje řídit knihovnu DLL modulu plug-in
+#### <a name="to-register-the-source-control-plug-in-dll"></a>Registrace modulu DLL modulu Plug-in správy zdrojového kódu
 
-1. Přidat dvě položky v rámci **HKEY_LOCAL_MACHINE** klíče v **softwaru** podklíč, který určuje název podklíče vaší společnosti, za nímž následuje vaše podklíč název produktu. Vzor je **HKEY_LOCAL_MACHINE\SOFTWARE\\\<název společnosti >\\\<název produktu >\\\<položka >**  =  *hodnota*. Dvě položky jsou vždy volány **SCCServerName** a **SCCServerPath**. Každá je regulární řetězec.
+1. Do podklíče **HKEY_LOCAL_MACHINE** přidejte dvě položky do podklíče **SOFTWARE,** který určuje podklíč názvu společnosti následovaný podklíčem název produktu. Vzor je **HKEY_LOCAL_MACHINE\SOFTWARE\\\<název \\ \<společnosti \\ \<>název produktu>položka>**  =  *hodnota*. Tyto dvě položky se vždy nazývají **SCCServerName** a **SCCServerPath**. Každý z nich je pravidelný řetězec.
 
-    Například pokud je název vaší společnosti Microsoft a váš produkt ovládacího prvku zdroje se jmenuje SourceSafe, pak tato cesta v registru by **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe**. V tomto podklíči první položka **SCCServerName**, je řetězec čitelný pro uživatele pojmenování váš produkt. Druhá položka **SCCServerPath**, je úplná cesta ke zdroji ovládacího prvku knihovnu DLL modulu plug-in, ke kterému integrovaném vývojovém prostředí by měl připojit. Následující tabulka obsahuje ukázkové položky registru:
+    Pokud je například název vaší společnosti Microsoft a produkt správy zdrojového kódu je pojmenován SourceSafe, bude tato cesta registru **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe**. V tomto podklíči je první položka **SCCServerName**uživatelem čitelný řetězec s názvem produktu. Druhá položka, **SCCServerPath**, je úplná cesta k modulu DLL modulu Plug-in správy zdrojového kódu, ke které by se mělo ide připojit. Ukázkové položky registru jsou k dispozici:
 
-   |Ukázkové položky registru|Ukázková hodnota|
+   |Ukázková položka registru|Ukázková hodnota|
    |---------------------------|------------------|
    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe\SCCServerName|Microsoft Visual SourceSafe|
    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe\SCCServerPath|*c:\vss\win32\ssscc.dll*|
 
    > [!NOTE]
-   > SCCServerPath je úplná cesta k modulu plug-in SourceSafe. Modul plug-in správy zdrojů se bude používat jiné názvy produktů a společnosti ale stejné cesty položky registru.
+   > SCCServerPath je úplná cesta k modulu plug-in SourceSafe. Modul plug-in správy zdrojového kódu bude používat různé názvy společností a produktů, ale stejné cesty k zadání registru.
 
-2. Následující volitelné položky registru je možné změnit chování vašich plug-in správy zdrojových kódů. Tyto položky přejděte v podklíči stejné jako **SccServerName** a **SccServerPath**.
+2. Následující volitelné položky registru lze použít k úpravě chování modulu plug-in správy zdrojového kódu. Tyto položky přejdou do stejného podklíče jako **SccServerName** a **SccServerPath**.
 
-   - **HideInVisualStudioregistry** položky lze použít, pokud nechcete, aby váš zdrojový ovládací prvek plug výslovný souhlas a zobrazí v **výběr modulu Plug-in** seznam [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Tato položka také ovlivní automatické přepnutí do modulu plug-in správy zdrojového kódu. Jeden využití pro tuto položku je-li zadat zdroj balíčku ovládací prvek, který nahrazuje modul plug-in správy zdrojů, ale chcete, aby bylo snazší uživatel chce přejít od používání modulu plug-in pro zdrojový ovládací prvek balíček správy zdrojového kódu. Při instalaci balíčku ovládací prvek zdroje nastaví této položky registru, který skryje modulu plug-in.
+   - Položku **registru HideInVisualStudio** lze použít, pokud nechcete, aby se modul plug-in správy [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]zdrojového kódu zobrazil v seznamu **výběru modulu plug-in** aplikace . Tato položka bude mít také vliv na automatické přepnutí do modulu plug-in správy zdrojového kódu. Jedním z možných použití pro tuto položku je, pokud zadáte balíček správy zdrojového kódu, který nahradí modul plug-in správy zdrojového kódu, ale chcete usnadnit uživateli migraci z použití modulu plug-in správy zdrojového kódu do balíčku správy zdrojového kódu. Při instalaci balíčku správy zdrojového kódu nastaví tuto položku registru, která skryje modul plug-in.
 
-      **HideInVisualStudio** je hodnotou DWORD a je nastavená na *1* Skrýt modul plug-in nebo *0* zobrazíte modulu plug-in. Pokud se nezobrazí položka registru, je výchozí chování zobrazíte modulu plug-in.
+      **HideInVisualStudio** je hodnota DWORD a je nastavena na *1* skrýt modul plug-in nebo *0* pro zobrazení modulu plug-in. Pokud se položka registru nezobrazí, je výchozím chováním zobrazení modulu plug-in.
 
-   - **DisableSccManager** položky registru je možné zakázat nebo skrýt **spuštění \<Server správy zdrojového kódu >** nabídky, která obvykle se zobrazí v části **souboru**  >  **Správy zdrojových kódů** podnabídka. Výběrem této nabídky možnost volání [sccrunscc –](../../extensibility/sccrunscc-function.md) funkce. Modul plug-in správy zdrojů nemusí podporovat externí program, a proto můžete chtít zakázat nebo skrýt i **spuštění** nabídky.
+   - Položku registru **DisableSccManager** lze použít k zakázání nebo skrytí možnosti nabídky **Launch \<Source Control Server>,** která se obvykle zobrazuje v podnabídce Správa **zdrojového** > **kódu.** Výběr této možnosti nabídky volá funkci [SccRunScc.](../../extensibility/sccrunscc-function.md) Modul plug-in správy zdrojového kódu nemusí podporovat externí program, a proto můžete chtít zakázat nebo dokonce skrýt možnost nabídky **Spustit.**
 
-      **DisableSccManager** je hodnotou DWORD a je nastavená na *0* povolit **spuštění \<Server správy zdrojového kódu >** klikněte na možnost nastavena na *1* do zakázat možnost nabídky a nastavte na *2* ke skrytí možnosti nabídky. Pokud se nezobrazí této položky registru, výchozí chování je zobrazíte možnosti nabídky.
+      **DisableSccManager** je hodnota DWORD a je nastavena na *hodnotu 0,* aby byla povolena možnost nabídky **Launch \<Source Control Server>,** nastavenou na *hodnotu 1* pro zakázání možnosti nabídky a na *hodnotu 2* pro skrytí možnosti nabídky. Pokud se tato položka registru nezobrazí, je výchozím chováním zobrazení možnosti nabídky.
 
-   | Ukázkové položky registru | Ukázková hodnota |
+   | Ukázková položka registru | Ukázková hodnota |
    | - |--------------|
    | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe\HideInVisualStudio | 1 |
    | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe\DisableSccManager | 1 |
 
-3. Přidat podklíč, **SourceCodeControlProvider**v části **HKEY_LOCAL_MACHINE** klíče v **softwaru** podklíči.
+3. Pod podklíč **HKEY_LOCAL_MACHINE** v podklíči **SOFTWARE** přidejte podklíč **SourceCodeControlProvider.**
 
-    V tomto podklíči položku registru **ProviderRegKey** je nastavena na řetězec, který představuje podklíče umístěny v registru v kroku 1. Vzor je **HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\ProviderRegKey** = *softwaru\\< název společnosti\>\\< název produktu \>* .
+    V rámci tohoto podklíče je položka registru **ProviderRegKey** nastavena na řetězec, který představuje podklíč, který jste umístili do registru v kroku 1. Vzor je **HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\ProviderRegKey** = *\\ SOFTWARE\> \\<název\>společnosti<název produktu*.
 
     Následuje ukázkový obsah pro tento podklíč.
 
-   |Položky registru|Ukázková hodnota|
+   |Položka registru|Ukázková hodnota|
    |--------------------|------------------|
    |HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\ProviderRegKey|SOFTWARE\Microsoft\SourceSafe|
 
    > [!NOTE]
-   > Modul plug-in správy zdrojů používat stejné podklíč a názvy položek, ale hodnoty budou pravděpodobně lišit.
+   > Modul plug-in správy zdrojového kódu bude používat stejné názvy podklíčů a položek, ale hodnota se bude lišit.
 
-4. Vytvořit podklíč s názvem **InstalledSCCProviders** pod **SourceCodeControlProvider** podklíče a umístěte jedna položka v tomto podklíči.
+4. Vytvořte podklíč s názvem **InstalledSCCProviders** pod podklíčem **SourceCodeControlProvider** a umístěte jednu položku pod tento podklíč.
 
-    Název této položky je čitelný pro uživatele název zprostředkovatele (stejná jako hodnota zadaná pro položku SCCServerName) a hodnota je zase podklíč vytvořili v kroku 1. Vzor je **HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders\\< zobrazovaný název\>**  = *softwaru\\< společnosti název\>\\< název produktu\>* .
+    Název této položky je uživatelem čitelný název zprostředkovatele (stejný jako hodnota zadaná pro položku SCCServerName) a hodnota je opět podklíč vytvořený v kroku 1. Vzor je **HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders\\<\>zobrazovaný název** = *SOFTWARE\\<název\> \\ společnosti<název\>produktu*.
 
-    Příklad:
+    Například:
 
-   |Ukázkové položky registru|Ukázková hodnota|
+   |Ukázková položka registru|Ukázková hodnota|
    |---------------------------|------------------|
    |HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders\Microsoft Visual SourceSafe|SOFTWARE\Microsoft\SourceSafe|
 
    > [!NOTE]
-   > Může existovat více zdroj moduly plug-in správy registrovaný tímto způsobem. To je jak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] najde všechny nainstalované moduly plug-in založené na rozhraní API modulu Plug-in zdroje ovládacího prvku.
+   > Tímto způsobem může být registrováno více modulů plug-in správy zdrojového kódu. Toje, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] jak najde všechny nainstalované moduly plug-in moduly plug-in založených na zdrojové matné správě.
 
-## <a name="how-an-ide-locates-the-dll"></a>Jak integrované vývojové prostředí vyhledává knihovny DLL
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Integrovaném vývojovém prostředí má dva způsoby jak najít zdroj řídit knihovnu DLL modulu plug-in:
+## <a name="how-an-ide-locates-the-dll"></a>Jak ide vyhledá DLL
+ IDE [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] má dva způsoby, jak najít modul DLL modulu plug-in správy zdrojového kódu:
 
-- Vyhledání modulu plug-in správy zdrojového kódu výchozí a k němu připojit bezobslužně.
+- Najděte výchozí modul plug-in správy zdrojového kódu a připojte se k němu tiše.
 
-- Hledání všechny registrované zdroje moduly plug-in správy, ze kterého uživatel vybere jeden
+- Najít všechny registrované moduly plug-in správy zdrojového kódu, ze kterého uživatel vybere jeden.
 
-  Najít knihovnu DLL jako první, rozhraní IDE hledá **HKEY_LOCAL_MACHINE\Software\SourceCodeControlProvider** podklíče položku **ProviderRegKey**. Hodnota této položky se odkazuje na jiný podklíči. Poté hledá integrovaného vývojového prostředí pro položku s názvem **SccServerPath** v druhé podklíče pod **HKEY_LOCAL_MACHINE**. Hodnota této položky odkazuje na knihovnu DLL integrovaného vývojového prostředí.
-
-> [!NOTE]
-> Rozhraní IDE se nenačte knihovny DLL z relativní cesty (například *.\NewProvider.DLL*). Je nutné zadat úplnou cestu k souboru DLL (například *c:\Providers\NewProvider.DLL*). To tím, že zabrání načítání knihoven DLL modulu plug-in neoprávněným nebo zosobněného posiluje zabezpečení rozhraní IDE.
-
- Vyhledejte knihovnu DLL v druhý způsob, hledá integrovaného vývojového prostředí **HKEY_LOCAL_MACHINE\Software\SourceCodeControlProvider\InstalledSCCProviders** podklíč pro všechny položky. Každá položka má název a hodnotu. Rozhraní IDE zobrazí seznam tyto názvy pro uživatele. Když uživatel vybere název, najde integrovaného vývojového prostředí pro vybraný název, který odkazuje na podklíč hodnotu. Hledat položky s názvem **SccServerPath** v tomto podklíči pod **HKEY_LOCAL_MACHINE**. Hodnota této položky odkazuje na správný knihovny DLL rozhraní IDE.
-
- Modul plug-in správy zdrojového kódu musí podporovat obě možnosti hledání knihovny DLL a v důsledku toho nastaví **ProviderRegKey**, přepíše jakékoli předchozí nastavení. Důležitější je, je nutné přidat sám do seznamu **InstalledSccProviders** tak, že uživatel může mít celou řadu které plug-in správy zdrojových kódů k použití.
+  Chcete-li najít knihovnu DLL prvním způsobem, ide hledá pod **podklíč HKEY_LOCAL_MACHINE\Software\SourceCodeControlProvider** pro položku **ProviderRegKey**. Hodnota tohoto vstupu odkazuje na jiný podklíč. IDE pak hledá položku s názvem **SccServerPath** v tomto druhém podklíči pod **HKEY_LOCAL_MACHINE**. Hodnota tohoto vstupu odkazuje ide na DLL.
 
 > [!NOTE]
-> Protože **HKEY_LOCAL_MACHINE** klíč se používá, pouze jeden zdroj ovládacího prvku modulu plug-in lze zaregistrovat jako výchozí plug-in správy zdrojových kódů na daném počítači (ale [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] umožňuje uživatelům určit, které modul plug-in správy zdrojů chtějí se ve skutečnosti použít pro konkrétní řešení). Během procesu instalace zkontrolujte, pokud je již nastaven modul plug-in správy zdrojového kódu; Pokud ano, požádejte uživatele, jestli se mají nastavit nový ovládací prvek zdroje modul plug-in instaluje jako výchozí. Při odinstalaci, neodebírejte jiných podklíče registru, které jsou společné pro všechny ovládací prvek moduly plug-in zdrojového kódu v **HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider**; odebrat jenom vaší konkrétní podklíč SCC.
+> IDE nenačte knihovny DLL z relativních cest (například *.\NewProvider.DLL).* Musí být zadána úplná cesta k knihovně DLL (například *c:\Providers\NewProvider.DLL*). To posiluje zabezpečení ide tím, že brání načítání neoprávněných nebo zosobněné moduly DLL modulů DLL.
 
-## <a name="how-the-ide-detects-version-1213-support"></a>Jak rozhraní IDE zjistí podporu verze 1.2 a 1.3
- Jak se [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] detekci, jestli funkce modulu plug-in podporuje rozhraní API modulu Plug-in zdroje ovládacího prvku verze 1.2 a 1.3? Chcete-li deklarovat rozšířená možnost, modul plug-in správy zdrojového kódu musí implementovat odpovídající funkce:
+ Chcete-li najít knihovnu DLL druhým způsobem, ide hledá pod **HKEY_LOCAL_MACHINE\Software\SourceCodeControlProvider\InstalledSCCProviders** pod položky. Každá položka má název a hodnotu. Rozhraní IDE zobrazí uživateli seznam těchto názvů. Když uživatel vybere jméno, ide najde hodnotu pro vybraný název, který odkazuje na podklíč. IDE hledá položku s názvem **SccServerPath** v tomto podklíči **pod HKEY_LOCAL_MACHINE**. Hodnota tohoto vstupu odkazuje ide na správnou dll.
 
- Nejprve je potřeba [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zkontroluje hodnotu vrácený voláním [sccgetversion –](../../extensibility/sccgetversion-function.md). Musí být větší než nebo rovna hodnotě 1.2.
+ Modul plug-in správy zdrojového kódu musí podporovat oba způsoby hledání knihovny DLL a následně nastaví **ProviderRegKey**, přepsání všech předchozích nastavení. Ještě důležitější je, že musí přidat sám do seznamu **InstalledSccProviders,** takže uživatel může mít na výběr, který modul plug-in správy zdrojového kódu použít.
 
- Dále [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Určuje, jestli konkrétní nová funkce je podporováno prozkoumáním `lpSccCaps` argument u [sccinitialize –](../../extensibility/sccinitialize-function.md).
+> [!NOTE]
+> Vzhledem k tomu, že je použit klíč **HKEY_LOCAL_MACHINE,** lze jako výchozí modul plug-in správy [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zdrojového kódu v daném počítači zaregistrovat pouze jeden modul plug-in správy zdrojového kódu (umožňuje však uživatelům určit, který modul plug-in správy zdrojového kódu, který chtějí skutečně použít pro konkrétní řešení). Během procesu instalace zkontrolujte, zda je modul plug-in správy zdrojového kódu již nastaven. Pokud ano, zeptejte se uživatele, zda má být nainstalován nový modul plug-in správy zdrojového kódu jako výchozí. Během odinstalace neodstraňujte jiné podklíče registru, které jsou společné pro všechny moduly plug-in správy zdrojového kódu v **HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider**; odeberte pouze váš konkrétní podklíč SCC.
 
- Pokud jsou obě tyto podmínky splněny, lze volat nové funkce podporované ve verzi 1.2 a 1.3.
+## <a name="how-the-ide-detects-version-1213-support"></a>Jak ide detekuje podporu verze 1.2/1.3
+ Jak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zjistíte, zda modul plug-in podporuje funkci rozhraní API pro řízení zdrojů verze 1.2 a 1.3? Chcete-li deklarovat pokročilé schopnosti, musí modul plug-in správy zdrojového kódu implementovat odpovídající funkci:
 
-## <a name="see-also"></a>Viz také:
-- [Začínáme s plug-in zdroje ovládacího prvku](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Nejprve zkontroluje hodnotu vrácenou voláním [SccGetVersion](../../extensibility/sccgetversion-function.md). Musí být větší nebo rovna 1,2.
+
+ Dále [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] určuje, zda je konkrétní nová schopnost `lpSccCaps` podporována zkoumáním argumentu na [SccInitialize](../../extensibility/sccinitialize-function.md).
+
+ Pokud jsou splněny obě tyto podmínky, lze volat nové funkce podporované ve verzích 1.2 a 1.3.
+
+## <a name="see-also"></a>Viz také
+- [Začínáme s moduly plug-in správy zdrojového kódu](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)

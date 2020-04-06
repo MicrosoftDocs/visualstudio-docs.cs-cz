@@ -1,128 +1,128 @@
 ---
-title: 'Kontrolní seznam: Vytvoření služby starší verze jazyka | Dokumentace Microsoftu'
+title: 'Kontrolní seznam: Vytvoření služby staršího jazyka | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - language services
 - language services, native code
 ms.assetid: 8b73b341-a33a-4ab5-9390-178c9e563d2d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 17e9936561bd0ebaa3742610b9b481d60e8489fb
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 11785dab63cbb6a95ab2d34c5edbfb4525ebf34c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823659"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709794"
 ---
-# <a name="checklist-create-a-legacy-language-service"></a>Kontrolní seznam: Vytvoření služby starší verze jazyka
-Následující kontrolní seznam obsahuje souhrn základní kroky nezbytné k vytvoření služby pro jazyk [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] základní editor. K integraci služby jazyka do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], je nutné vytvořit vyhodnocovací filtr výrazů ladění. Další informace najdete v tématu [zápisu vyhodnocovací filtr výrazů CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md) v [rozšiřitelnost ladicího programu sady Visual Studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md).
+# <a name="checklist-create-a-legacy-language-service"></a>Kontrolní seznam: Vytvoření služby starších jazyků
+Následující kontrolní seznam shrnuje základní kroky, které je třeba [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] provést, abyste vytvořili jazykovou službu pro základní editor. Chcete-li integrovat [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]službu jazyka do aplikace , je nutné vytvořit vyhodnocení ladicího výrazu. Další informace naleznete [v tématu Write a CLR expression evaluator](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md) in the [Visual Studio ladicí program rozšiřitelnost](../../extensibility/debugger/visual-studio-debugger-extensibility.md).
 
-## <a name="steps-to-create-a-language-service"></a>Postup vytvoření služby jazyka
+## <a name="steps-to-create-a-language-service"></a>Postup vytvoření jazykové služby
 
 1. Implementujte rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>.
 
-    - V VSPackage, implementovat <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> rozhraní k zajištění služeb jazyka.
+    - Ve vašem VSPackage <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> implementovat rozhraní poskytovat jazykovou službu.
 
-    - Zpřístupnění služby jazyka pro integrované vývojové prostředí (IDE) v vaše <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> implementace.
+    - Zpřístupněte svou jazykovou službu integrovanému vývojovému prostředí (IDE) v implementaci. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>
 
-2. Implementace <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> rozhraní ve třídě služby hlavní jazyk.
+2. Implementujte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> rozhraní v hlavní třídě služby jazyka.
 
-     <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> Výchozí bod interakce mezi základní editor a služba jazyka je rozhraní.
+     Rozhraní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> je výchozím bodem interakce mezi editorem jádra a jazykovou službou.
 
 ### <a name="optional-features"></a>Volitelné funkce
- Následující funkce jsou volitelné a je možné implementovat v libovolném pořadí. Tyto funkce zvýšit funkce služby jazyka.
+ Následující funkce jsou volitelné a mohou být implementovány v libovolném pořadí. Tyto funkce zvyšují funkčnost jazykové služby.
 
-- Barevné zvýrazňování syntaxe
+- Zbarvení syntaxe
 
-  Implementujte rozhraní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>. Implementace tohoto rozhraní by měl analyzátor informace mají vracet informace o příslušné barvu.
+  Implementujte rozhraní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>. Implementace tohoto rozhraní by měl analyzátor informace vrátit příslušné informace o barvě.
 
-  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> Vrátí metoda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> rozhraní. Vytvoří instanci samostatné colorizer pro každou textovou vyrovnávací paměť, takže by měla implementovat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> rozhraní samostatně. Další informace najdete v tématu [barevné zvýrazňování syntaxe ve službě starší verze jazyka](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md).
+  Metoda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> vrátí <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> rozhraní. Pro každou textovou vyrovnávací paměť je vytvořena samostatná <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> instance colorizeru, takže byste měli implementovat rozhraní samostatně. Další informace naleznete [v tématu Syntax coloring in a legacy language service](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md).
 
-- Okno kódu
+- Okno Kód
 
-  Implementace <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> rozhraní pro povolení služby jazyka pro příjem oznámení o vytvoření nového okna kódu.
+  Implementujte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> rozhraní, které umožní službě jazyka přijímat oznámení o vytvoření nového okna kódu.
 
-  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> Vrátí metoda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> rozhraní. Služba jazyka můžete přidat zvláštní uživatelského rozhraní do okna kódu v <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.AddAdornments%2A>. Služba jazyka můžete také provést žádné speciální zpracování, jako je například přidávání filtr zobrazení textu v <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.OnNewView%2A>.
+  Metoda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> vrátí <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> rozhraní. Služba jazyka pak můžete přidat speciální uI <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.AddAdornments%2A>do okna kódu v . Služba jazyka může také provést jakékoli zvláštní zpracování, například přidání filtru zobrazení textu do . <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.OnNewView%2A>
 
 - Filtr zobrazení textu
 
-  Kvůli dokončení příkazu IntelliSense ve službě jazyka musí zachytit některé příkazy, které by jinak zpracovat zobrazení textu. Aby se zachytily tyto příkazy, proveďte následující kroky:
+  Chcete-li poskytnout dokončování příkazu IntelliSense ve službě jazyka, musíte zachytit některé příkazy, které by jinak textové zobrazení zpracovat. Chcete-li tyto příkazy zachytit, proveďte následující kroky:
 
-  - Implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> se účastnit řetězec a popisovač editor příkazů.
+  - Implementujte <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> k účasti v řetězci příkazů a popisovač editoru příkazy.
 
-  - Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> metoda a předejte jí váš <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> implementace.
+  - Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> metody a předat <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> v implementaci.
 
-  - Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.RemoveCommandFilter%2A> metoda při odpojení ze zobrazení tak, aby tyto příkazy jsou již předat vám.
+  - Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.RemoveCommandFilter%2A> metody při odpojení od zobrazení tak, aby tyto příkazy již nejsou předány k vám.
 
-  Příkazy, které musí být zpracován závislými na službách, které jsou k dispozici. Další informace najdete v tématu [důležité příkazy pro jazyk služby filtry](../../extensibility/internals/important-commands-for-language-service-filters.md).
+  Příkazy, které musí být zpracovány závisí na služby, které jsou k dispozici. Další informace naleznete v [tématu Důležité příkazy pro filtry jazykových služeb](../../extensibility/internals/important-commands-for-language-service-filters.md).
 
   > [!NOTE]
-  > <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter> Rozhraní musí být implementováno na stejný objekt jako <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní.
+  > Rozhraní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter> musí být implementováno na <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> stejném objektu jako rozhraní.
 
-- Dokončování příkazů
+- Dokončení výkazu
 
   Implementujte rozhraní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet>.
 
-  Podporují dokončení příkaz – příkaz (to znamená, <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>) a volat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> metoda ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> rozhraní předání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> rozhraní. Další informace najdete v tématu [dokončování příkazů ve službě starší verze jazyka](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md).
+  Podporujte příkaz dokončení příkazu <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>(to <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> znamená ) <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> a volejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> metodu v rozhraní a předejte rozhraní. Další informace naleznete [v tématu Dokončení výkazu ve starší jazykové službě](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md).
 
-- Tipy – metoda
+- Tipy pro metody
 
-  Implementace <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> rozhraní poskytující data pro okno tipů metody.
+  Implementujte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> rozhraní poskytnout data pro okno tip metody.
 
-  Nainstalujte do filtru textového zobrazení k odpovídajícím způsobem, zpracovat příkazy, abyste věděli, kdy se má zobrazit okno s metoda datový tip. Další informace najdete v tématu [informace o parametrech ve službě starší verze jazyka](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md).
+  Nainstalujte filtr zobrazení textu pro vhodné zpracování příkazů, abyste věděli, kdy se má zobrazit okno tipu dat metody. Další informace naleznete [v tématu Informace o parametrech ve starší jazykové službě](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md).
 
-- Označování chyb
+- Značky chyb
 
   Implementujte rozhraní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>.
 
-  Vytvořit chybu značky objekty, které implementují <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> rozhraní a volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A> metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> rozhraní objektu značky chyb.
+  Vytvořte objekty značky <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> chyb, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A> které implementují rozhraní a volají metodu a předávají <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> rozhraní objektu značky chyby.
 
-  Každá značka chyby obvykle spravuje položky v okně Seznam úloh.
+  Každá značka chyb obvykle spravuje položku v okně seznamu úkolů.
 
 - Položky seznamu úkolů
 
-  Implementace zadání třídy položky úkolů <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskItem> rozhraní.
+  Implementujte třídu položky úkolu poskytující <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskItem> rozhraní.
 
-  Implementovat, poskytují třídy úloha zprostředkovatele <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskProvider> rozhraní a <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskProvider2> rozhraní.
+  Implementujte třídu zprostředkovatele úloh, která <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskProvider> poskytuje rozhraní a <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskProvider2> rozhraní.
 
-  Implementace zadání třídy výčtu úloh <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumTaskItems> rozhraní.
+  Implementujte třídu výčtu <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumTaskItems> úloh, která poskytuje rozhraní.
 
-  Registrace poskytovatele úloh se seznamem úkolů <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskList.RegisterTaskProvider%2A> metody.
+  Zaregistrujte poskytovatele úloh <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskList.RegisterTaskProvider%2A> metodou seznamu úkolů.
 
-  Získat <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskList> rozhraní voláním jazyková služba poskytovatele služeb s identifikátor GUID <xref:Microsoft.VisualStudio.Shell.Interop.SVsTaskList>.
+  Získejte <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskList> rozhraní voláním poskytovatele služeb jazykové služby <xref:Microsoft.VisualStudio.Shell.Interop.SVsTaskList>pomocí identifikátoru GUID služby .
 
-  Vytvoření objektů položku úkolu a volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskList.RefreshTasks%2A> metoda ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskList> rozhraní, když jsou nové nebo aktualizovat úkoly.
+  Vytvořte objekty položky úkolu <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskList> a zavolejte metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskList.RefreshTasks%2A> v rozhraní, když jsou nové nebo aktualizované úkoly.
 
-- Položky úkolu komentář
+- Komentovat položky úkolu
 
-  Použití <xref:Microsoft.VisualStudio.Shell.Interop.IVsCommentTaskInfo> rozhraní a <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumCommentTaskTokens> rozhraní pro získání komentáře úkolu tokenů.
+  Pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsCommentTaskInfo> rozhraní a <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumCommentTaskTokens> rozhraní získat tokeny úlohy komentáře.
 
-  Získat <xref:Microsoft.VisualStudio.Shell.Interop.IVsCommentTaskInfo> rozhraní z <xref:Microsoft.VisualStudio.Shell.Interop.SVsTaskList> služby.
+  Získat <xref:Microsoft.VisualStudio.Shell.Interop.IVsCommentTaskInfo> rozhraní ze <xref:Microsoft.VisualStudio.Shell.Interop.SVsTaskList> služby.
 
   Získat <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumCommentTaskTokens> rozhraní z <xref:Microsoft.VisualStudio.Shell.Interop.IVsCommentTaskInfo.EnumTokens%2A> metody.
 
-  Implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskListEvents> rozhraní pro naslouchání změn v seznamu tokenů.
+  Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskListEvents> rozhraní naslouchat změnám v seznamu tokenů.
 
 - Sbalování
 
-  Existuje několik možností pro podporu osnovy. Například můžete podporovat **sbalit do definic** příkazu, řídit editor osnovy oblastí ani nepodporuje spravovanými klientské oblasti. Další informace najdete v tématu [jak: Rozšířená podpora osnovy ve službě starší verze jazyka](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md).
+  Existuje několik možností, jak podpořit osnovu. Můžete například podporovat příkaz **Sbalit do definic,** poskytnout oblasti osnovy řízené editorem nebo podporovat oblasti řízené klientem. Další informace naleznete v [tématu Postup: Poskytování rozšířené podpory ve službě starších jazyků](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md).
 
-- Registrace služby jazyka
+- Registrace jazykové služby
 
-  Další informace o postupu při registraci služba jazyka naleznete v tématu [registrace služby starší verze jazyka](../../extensibility/internals/registering-a-legacy-language-service2.md) a [Správa balíčky VSPackages](../../extensibility/managing-vspackages.md).
+  Další informace o registraci jazykové služby naleznete v [tématu Registrace služby starších jazyků](../../extensibility/internals/registering-a-legacy-language-service2.md) a [Správa balíčků VSPackages](../../extensibility/managing-vspackages.md).
 
 - Kontextová nápověda
 
-  Poskytuje kontext k editoru v jednom z následujících způsobů:
+  Poskytněte editoru kontext jedním z následujících způsobů:
 
-  - Poskytuje kontext pro text značky implementací <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider> rozhraní.
+  - Zadejte kontext pro textové značky implementací <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider> rozhraní.
 
-  - Zadejte všechny uživatelský kontext implementací <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider> rozhraní.
+  - Zadejte veškerý kontext uživatele <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider> implementací rozhraní.
 
-## <a name="see-also"></a>Viz také:
-- [Vývoj služby starší verze jazyka](../../extensibility/internals/developing-a-legacy-language-service.md)
-- [Zápis vyhodnocovací filtr výrazů modulu CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
+## <a name="see-also"></a>Viz také
+- [Vývoj služby starších jazyků](../../extensibility/internals/developing-a-legacy-language-service.md)
+- [Napsat vyhodnocení výrazu CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::DisableENC | Dokumentace Microsoftu
+title: IDebugProcess3::DjeableENC | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcess3::DisableENC
 ms.assetid: cffdbdac-4d76-4aeb-aa55-5d0410db99f1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a3ee29540a11248a299d65c32cf2c8396b1fa2ef
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5b39bb448501bacd5ab458b7e61bb1a5044bc8a3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314051"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723729"
 ---
 # <a name="idebugprocess3disableenc"></a>IDebugProcess3::DisableENC
-Tato metoda explicitně zakáže upravit a pokračovat na tento proces (a všechny programy obsahuje). Dodavatel port. Tento vlastní port byste vždy vrátí `E_NOTIMPL`.
+Tato metoda explicitně zakáže upravit a pokračovat v tomto procesu (a všechny programy, které obsahuje). Dodavatel vlastního portu `E_NOTIMPL`by měl vždy vrátit .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,17 +40,17 @@ HRESULT DisableENC(
 
 ## <a name="parameters"></a>Parametry
 `reason`\
-[in] Hodnota z [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) výčtu.
+[v] Hodnota z [encUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) výčtu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 > [!NOTE]
-> Dodavatel port. Tento vlastní port byste vždy vrátí `E_NOTIMPL`.
+> Dodavatel vlastního portu `E_NOTIMPL`by měl vždy vrátit .
 
 ## <a name="remarks"></a>Poznámky
- Jednou upravit a pokračovat je zakázaná pro proces, ho můžete znovu povolit pouze restartování procesu.
+ Jakmile upravit a pokračovat je zakázán pro proces, může být znovu povolena pouze restartováním procesu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)
 - [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md)

@@ -1,27 +1,27 @@
 ---
-title: Keybinding – Element | Dokumentace Microsoftu
+title: Element keybinding | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, KeyBindings
 - KeyBinding element (VSCT XML schema)
 ms.assetid: e55a1098-15df-42a9-9f87-e3a99cf437dd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9c3bc5e10c928c50bca1ea3879531885f4580519
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b458e70a9a85c11707c50da2e16e3aa73f51bc12
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309632"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80703148"
 ---
-# <a name="keybinding-element"></a>Keybinding – element
-Keybinding – element určuje klávesové zkratky pro příkazy.
+# <a name="keybinding-element"></a>Element KeyBinding
+Element KeyBinding určuje klávesové zkratky pro příkazy.
 
- Příkazy může mít jeden a duální klávesové zkratky, které jsou k nim má přiřazené. Příkladem jednoho vazbu klíče je **Ctrl**+**S** pro **Uložit** příkazu. Duální klávesové zkratky vyžadují dvě po sobě jdoucích kombinace kláves pro spuštění příkazu. Je například duální vazbu klíče <strong>Ctrl *+</strong>K<strong>,</strong>Ctrl<strong>+</strong>K** nastavit záložky.
+ Příkazy mohou mít k nim přidružené vazby s jedním i dvěma klíči. Příkladem jedné vazby klíče je **Ctrl**+**S** pro příkaz **Uložit.** Dvouklávesové vazby vyžadují dvě po sobě jdoucí kombinace kláves pro aktivaci příkazu. Příkladem vazby s dvěma klávesami je <strong>Ctrl*+</strong>K<strong>,</strong>Ctrl<strong>+</strong>K**, chcete-li nastavit záložku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,35 +29,35 @@ Keybinding – element určuje klávesové zkratky pro příkazy.
 <Keybinding guid="MyGuid" id="MyId" Editor="MyEditor" key1="B" key2="x" mod1="Control" mod2="Alt" />
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|identifikátor GUID|Povinný parametr.|
-|id|Povinný parametr.|
-|editor|Povinný parametr. Identifikátor GUID editoru určuje kontext úprav, pro kterou bude klávesová zkratka aktivní. Hodnota oboru globální vazby je "guidVSStd97".|
-|key1|Povinný parametr. Platné hodnoty jsou všechny typable alfanumerické znaky a dvěma číslicemi šestnáctkových hodnot předchází 0 x a [VK_constants](/windows/desktop/inputdev/virtual-key-codes).|
-|mod1|Volitelné. Libovolnou kombinaci **Ctrl**, **Alt**, a **Shift** odděleny mezerou.|
-|key2|Volitelné. Platné hodnoty jsou všechny typable alfanumerické znaky a dvěma číslicemi šestnáctkových hodnot předchází 0 x a [VK_constants](/windows/desktop/inputdev/virtual-key-codes).|
-|mod2|Volitelné. Libovolnou kombinaci **Ctrl**, **Alt**, a **Shift** odděleny mezerou.|
-|Emulátor|Volitelné.|
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Identifikátor guid|Povinná hodnota.|
+|id|Povinná hodnota.|
+|editor|Povinná hodnota. Identifikátor GUID editoru označuje kontext úprav, pro který bude tato klávesová zkratka aktivní. Hodnota oboru globální vazby je "guidVSStd97".|
+|key1|Povinná hodnota. Platné hodnoty zahrnují všechny typizovatelné alfanumerické a také dvoumístné šestnáctkové hodnoty, před nimiž je 0x a [VK_constants](/windows/desktop/inputdev/virtual-key-codes).|
+|mod1|Nepovinný parametr. Libovolná kombinace **kláves Ctrl**, **Alt**a **Shift** oddělených mezerou.|
+|key2|Nepovinný parametr. Platné hodnoty zahrnují všechny typizovatelné alfanumerické a také dvoumístné šestnáctkové hodnoty, před nimiž je 0x a [VK_constants](/windows/desktop/inputdev/virtual-key-codes).|
+|mod2|Nepovinný parametr. Libovolná kombinace **kláves Ctrl**, **Alt**a **Shift** oddělených mezerou.|
+|emulátor|Nepovinný parametr.|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|Nadřazené||
+|Nadřazený||
 |Poznámka||
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Keybindings – element](../extensibility/keybindings-element.md)|Seskupí elementy klávesové zkratky a další seskupení klávesové zkratky.|
+|[Element KeyBindings](../extensibility/keybindings-element.md)|Seskupí keybinding prvky a další keybindings seskupení.|
 
 ## <a name="example"></a>Příklad
 
@@ -70,6 +70,6 @@ Keybinding – element určuje klávesové zkratky pro příkazy.
 </KeyBindings>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Keybindings – element](../extensibility/keybindings-element.md)
-- [Soubory tabulky (.vsct) příkaz pro Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také
+- [Element KeyBindings](../extensibility/keybindings-element.md)
+- [Soubory příkazů sady Visual Studio (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

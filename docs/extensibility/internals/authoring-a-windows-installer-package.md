@@ -1,53 +1,53 @@
 ---
-title: Vytváření balíčku Instalační služba systému Windows | Microsoft Docs
+title: Vytvoření balíčku Instalační služby systému Windows | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - .msi files, VSPackages
 - msi files, VSPackages
 ms.assetid: 0ce7c21d-0d3f-47fe-a0bb-eed506e32609
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa967b5f23ff9f4e5afa67b9b1cb4e83707616c6
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 03d30c0e2b3b375e6e0efedddd3a017fbfb8646a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982232"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710028"
 ---
-# <a name="author-a-windows-installer-package"></a>Vytvořit balíček Instalační služba systému Windows
-Datové jednotky Instalační služba systému Windows modelu. Místo psaní skriptu procedurálního kopírování souborů a zápis položek registru například můžete vytvářet řádky a sloupce v databázových tabulkách, které obsahují data souborů a registru.
+# <a name="author-a-windows-installer-package"></a>Vytvoření balíčku Instalační služby systému Windows
+Data řídí model Instalační služby systému Windows. Místo psaní procedurálního skriptu pro kopírování souborů a zápis položek registru například vdatabázových tabulkách, které obsahují data souborů a registru, vytvoříte řádky a sloupce.
 
-## <a name="database-entries"></a>Databázové položky
-Chcete-li nainstalovat VSPackage, balíček Instalační služba systému Windows musí obsahovat databázové položky, aby bylo možné provádět následující úlohy:
+## <a name="database-entries"></a>Položky databáze
+Chcete-li nainstalovat balíček VSPackage, musí balíček Instalační služby systému Windows obsahovat položky databáze, aby bylo nutné provádět následující úkoly:
 
-- Vyhledejte v systému, jestli chcete najít verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vaše VSPackage podporuje (pomocí Instalační služba systému Windows tabulek, které zahrnují AppSearch, CompLocator, RegLocator, DrLocator a Signature).
+- Vyhledejte v systému verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podpory Služby VSPackage (pomocí tabulek Instalační služby systému Windows, které obsahují aplikace AppSearch, CompLocator, RegLocator, DrLocator a Signature).
 
-- Zrušíte instalaci, pokud není nainstalovaná žádná podporovaná verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nebo pokud není splněn jiný požadavek na systém pro VSPackage (pomocí tabulky LaunchCondition).
+- Zrušte instalaci, pokud [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] není nainstalována žádná podporovaná verze programu Nebo pokud není splněn jiný systémový požadavek balíčku VSPackage (pomocí tabulky LaunchCondition).
 
-- Nainstalujte rozhraní VSPackage a závislé soubory (pomocí adresáře, komponenty a tabulek souborů).
+- Nainstalujte soubory VSPackage a závislé soubory (pomocí tabulky adresářů, komponent a souborů).
 
-- Přidejte do registru vhodné informace pro VSPackage (pomocí tabulky registru).
+- Přidejte příslušné informace pro VSPackage do registru (pomocí tabulky Registru).
 
-- Integrujte VSPackage v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] voláním souboru **devenv. exe/setup** (pomocí tabulky CustomAction).
+- Integrujte VSPackage v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **voláním devenv.exe /setup** (pomocí tabulky CustomAction).
 
-Další informace najdete v tématu [Instalační služba systému Windows](/windows/desktop/Msi/windows-installer-portal).
+Další informace naleznete v [instalační službě systému Windows](/windows/desktop/Msi/windows-installer-portal).
 
-## <a name="setup-tools"></a>Nástroje pro instalaci
-Nejrůznější nástroje pro instalaci třetích stran poskytují vývojové prostředí pro Instalační služba systému Windows balíčky. K dispozici jsou tyto bezplatné nástroje:
+## <a name="setup-tools"></a>Nástroje pro nastavení
+Různé nástroje pro nastavení jiných výrobců poskytují vývojové prostředí pro balíčky Instalační služby systému Windows. K dispozici jsou následující bezplatné nástroje:
 
-- InstallShield – omezená edice
+- Limitovaná edice InstallShield
 
-   Pomocí dialogového okna **Nový projekt** sady Visual Studio můžete získat omezené verze programu InstallShield. Rozbalte **jiné typy projektů** a potom vyberte **nastavení a nasazení**. Vyberte šablonu InstallShield.
+   Omezenou verzi programu InstallShield můžete získat prostřednictvím dialogového okna **Nový projekt** sady Visual Studio. Rozbalte **další typy projektů** a vyberte nastavení a **nasazení**. Vyberte šablonu InstallShield.
 
-- Sada nástrojů XML Instalační služba systému Windows
+- Sada nástrojů XML Instalační služby systému Windows
 
-   Sada nástrojů Instalační služba systému Windows XML (WiX) vytváří Instalační služba systému Windows balíčky ze zdrojových souborů XML. Sada nástrojů WiX je projekt Microsoft Open-Source. Zdrojový kód a spustitelné soubory si můžete stáhnout ze sady [nástrojů WIX](https://sourceforge.net/projects/wix/).
+   Sada nástrojů WiX (Installer XML) systému Windows vytváří balíčky Instalační služby systému Windows ze zdrojových souborů XML. Sada nástrojů WiX je projekt s otevřeným zdrojovým kódem společnosti Microsoft. Můžete si stáhnout zdrojový kód a spustitelné soubory z [sady nástrojů Wix](https://sourceforge.net/projects/wix/).
 
-   Komerční produkty, které se integrují do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pomocí [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)], najdete v tématu [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
+   Komerční produkty, které [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] se [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]integrují pomocí webu , naleznete v tématu [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
 
-## <a name="see-also"></a>Viz také:
-- [Instalace VSPackage pomocí Instalační služba systému Windows](../../extensibility/internals/installing-vspackages-with-windows-installer.md)
+## <a name="see-also"></a>Viz také
+- [Instalace balíčků VSPackages s Instalační službou systému Windows](../../extensibility/internals/installing-vspackages-with-windows-installer.md)

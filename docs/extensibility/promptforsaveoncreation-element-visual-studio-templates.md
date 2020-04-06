@@ -1,5 +1,5 @@
 ---
-title: PromptForSaveOnCreation – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: PromptForSaveOnCreation Element (Visual Studio Templates) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -8,22 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - PromptForSaveOnCreation element [Visual Studio project templates]
 ms.assetid: 75174674-0c3c-4b57-b2fd-6ea8e817b67d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 802bcd357fe82434f7cf5aaf835b2841e6dc8dc5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2e6bbd62120da59da1fb26e671c1aa02f33949f4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335986"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701783"
 ---
-# <a name="promptforsaveoncreation-element-visual-studio-templates"></a>PromptForSaveOnCreation – element (šablony sady Visual Studio)
+# <a name="promptforsaveoncreation-element-visual-studio-templates"></a>Prvek PromptForSaveOnCreation (šablony sady Visual Studio)
 
-Určuje, zda je uživatel vyzván k uložení umístění prostřednictvím projektu **nový projekt** dialogové okno při vytváření projektu. Pokud tento prvek je nastaven na `true`, pak bude uživatel vyzván k uložení umístění. Pokud `false`, tak se výzva nezobrazí (to znamená, je vytvořen dočasný projekt).
+Určuje, zda bude uživatel při vytváření projektu vyzván k uložení projektu prostřednictvím dialogového okna **Nový projekt.** Pokud je tento `true`prvek nastaven na , bude uživatel vyzván k uložení umístění. Pokud `false`, pak nejsou vyzváni (to znamená, že je vytvořen dočasný projekt).
 
 ```xml
 \<VSTemplate>
@@ -37,33 +37,33 @@ Určuje, zda je uživatel vyzván k uložení umístění prostřednictvím proj
 <PromptForSaveOnCreation> true/false </PromptForSaveOnCreation>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být buď `true` nebo `false`, `true` označující, že uživateli zobrazí výzva k uložení umístění při vytváření nového projektu.
+ Text musí být `true` `false`buď `true` nebo , označující, že uživatel bude při vytváření nového projektu vyzván k uložení.
 
 ## <a name="remarks"></a>Poznámky
- `PromptForSaveOnCreation` je volitelný prvek. Výchozí hodnota je `false`.
+ `PromptForSaveOnCreation`je volitelný prvek. Výchozí hodnota je `false`.
 
- Dočasné projekty jsou projekty, které můžete vytvářet a upravovat bez uložení obsahu tohoto projektu na disku.
+ Dočasné projekty jsou projekty, které můžete vytvořit a upravit bez uložení obsahu tohoto projektu na disk.
 
 ## <a name="example"></a>Příklad
- Následující příklad nastaví hodnotu `PromptForSaveOnCreation` rovna `false`, což umožní vytvoření podobě dočasného projektu projektu.
+ Následující příklad nastaví `PromptForSaveOnCreation` hodnotu `false`rovna , která určuje, aby projekt, který má být vytvořen jako dočasný projekt.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -90,7 +90,7 @@ Určuje, zda je uživatel vyzván k uložení umístění prostřednictvím proj
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

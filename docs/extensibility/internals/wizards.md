@@ -1,59 +1,59 @@
 ---
-title: Průvodce | Dokumentace Microsoftu
+title: Kouzelníci | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], providing wizard support
 ms.assetid: 59d9a77f-ee80-474b-a14f-90f477ab717b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e3b17d7ef3137c48ddda97e1b2b5bbf0e58cf5bb
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d65cf2dcc10380b0ac750c8e1b0e7fd56eab95b5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66312837"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80703210"
 ---
 # <a name="wizards"></a>Průvodci
-Po vytvoření průvodce obvykle chcete a přidejte ji tak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE) tak, aby ho ostatní mohli používat. Přidání průvodce se pak objeví v **přidat nový projekt** nebo **přidat novou položku** dialogových oknech. Chcete-li zobrazit **přidat nový projekt** nebo **přidat novou položku** dialogové okno polí klikněte pravým tlačítkem na řešení otevřeného v **Průzkumníku řešení**, přejděte na **přidat**, a pak klikněte na tlačítko **nový projekt** nebo **nová položka**.
+Po vytvoření průvodce jej obvykle chcete přidat do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE), aby jej ostatní mohli používat. Přidaný průvodce se pak zobrazí v dialogových oknech **Přidat nový projekt** nebo Přidat novou **položku.** Pokud chcete zobrazit dialogová okna **Přidat nový projekt** nebo Přidat novou **položku,** klikněte pravým tlačítkem myši na otevřené řešení v **Průzkumníku řešení**, přejděte na **Přidat**a potom klikněte na **Nový projekt** nebo **Nová položka**.
 
- Průvodce je možné implementovat v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] umožňuje uživatelům vyberte ze stromu zobrazení dostupných hodnot při otevření **přidat nový projekt** dialogové okno nebo **přidat novou položku** dialogové okno, nebo když, klikněte pravým tlačítkem na položky v **Průzkumníka řešení**.
+ Průvodci mohou být [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] implementováni v aplikaci, aby uživatelé mohli vybírat ze stromového zobrazení dostupných hodnot při otevření dialogového okna **Přidat nový projekt** nebo dialogového okna Přidat novou **položku** nebo když klepnou pravým tlačítkem myši na položku v **Průzkumníku řešení**.
 
- V průvodci můžete zadat možnost lokalizace název nového projektu nebo ites a můžete určit ikonu, která uživatelům se zobrazí, když vyberou průvodce. Můžete také řídit pořadí, ve kterém se objeví nové položky vzhledem k další položky k dispozici; položky, nemusí být uspořádány podle abecedy.
+ V průvodci můžete zadat možnost lokalizovat název nového projektu nebo ites a můžete určit ikonu, kterou uživatelé uvidí při výběru průvodce. Můžete také řídit pořadí, ve kterém se nové položky zobrazují vzhledem k ostatním dostupným položkám; položky nemusí být uspořádány abecedně.
 
- Můžete také zadat průvodce, který spustí odlišně, na základě vlastních parametrů, které se předávají při otevření průvodce.
+ Můžete také zadat průvodce, který se spustí odlišně, na základě vlastních parametrů, které jsou předány průvodci při jeho otevření.
 
- Témata v této části popisují soubory, které implementují způsobit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **přidat nový projekt** a **přidat novou položku** dialogová okna seznam průvodce mezi dostupných průvodcích a šablony a požadavky, které průvodce musí splňovat pro správnou funkci v integrovaném vývojovém prostředí.
+ Témata v této části popisují soubory, které [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] implementujete, aby dialogové okna **Přidat nový projekt** a Přidat novou **položku** uvedeprůvodce mezi dostupnými průvodci a šablonami a požadavky, které musí průvodce splňovat, aby v prostředí IDE fungoval správně.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Soubory popisu adresáře šablon (.Vsdir)](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)
 
- Poskytuje přehled o jaké šablony soubory popisu adresáře a vysvětluje, jak fungují v prostředí IDE pro zobrazení složek, souborů průvodce .vsz a souborů šablon, které jsou spojené s projektem v dialogových oknech.
+ Poskytuje přehled souborů s popisem adresáře šablony a vysvětluje, jak fungují v prostředí IDE pro zobrazení složek, souborů průvodce .vsz a souborů šablon, které jsou přidruženy k projektu v dialogových oknech.
 
 - [Soubor průvodce (.Vsz)](../../extensibility/internals/wizard-dot-vsz-file.md)
 
- Vysvětluje, jak spuštění rozhraní IDE průvodců a obsahuje tři části souboru.
+ Vysvětluje, jak rozhraní IDE spustí průvodce a uvádí tři části souboru .vsz.
 
 - [Rozhraní průvodce (IDTWizard)](../../extensibility/internals/wizard-interface-idtwizard.md)
 
- Popisuje `IDTWizard` rozhraní, které průvodce musí implementovat pracovat v integrovaném vývojovém prostředí.
+ Popisuje `IDTWizard` rozhraní, které musí průvodci implementovat, aby fungovalo v rozhraní IDE.
 
-- [Kontextové parametry](../../extensibility/internals/context-parameters.md)
+- [Parametry kontextu](../../extensibility/internals/context-parameters.md)
 
- Vysvětluje, jak se implementují průvodců a co se stane, když je integrované vývojové prostředí úspěšné parametry kontextu pro implementaci.
+ Vysvětluje, jak jsou implementováni průvodci a co nastane, když rozhraní IDE předá parametry kontextu do implementace.
 
 - [Vlastní parametry](../../extensibility/internals/custom-parameters.md)
 
- Vysvětluje, jak použít vlastní parametry pro řízení používání průvodce po spuštění průvodce.
+ Vysvětluje, jak používat vlastní parametry k řízení operace průvodce po spuštění průvodce.
 
 ## <a name="related-sections"></a>Související oddíly
 - [Typy projektů](../../extensibility/internals/project-types.md)
 
- Obsahuje odkazy na další témata, která nabízí informace o navrhování nových typů projektů.
+ Obsahuje odkazy na další témata, která nabízejí informace o tom, jak navrhnout nové typy projektů.
 
 - [Rozšíření projektů](../../extensibility/extending-projects.md)
 
- Popisuje způsob použití [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projekty a řešení pro uspořádání souborů s kódem a soubory prostředků a jak implementovat správy zdrojového kódu.
+ Popisuje použití [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projektů a řešení k uspořádání souborů kódu a souborů prostředků a jak implementovat správu zdrojového kódu.

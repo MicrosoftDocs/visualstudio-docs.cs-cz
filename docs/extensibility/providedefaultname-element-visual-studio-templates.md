@@ -1,5 +1,5 @@
 ---
-title: Providedefaultname – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Prvek ProvideDefaultName (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -8,22 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - ProvideDefaultName element [Visual Studio project templates]
 ms.assetid: 7b0e7b20-fd6b-42e2-81d0-e5100cea0528
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a2a19d6a93b709128e8750b6cea82d067b77db98
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 192716198f605a5f6b4f62730e84dcf83b4229cc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335812"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701721"
 ---
-# <a name="providedefaultname-element-visual-studio-templates"></a>Providedefaultname – element (šablony sady Visual Studio)
-Určuje, zda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] systém projektu bude generovat výchozí název šablony do **přidat novou položku** nebo **nový projekt** dialogové okno.
+# <a name="providedefaultname-element-visual-studio-templates"></a>Element ProvideDefaultName (šablony sady Visual Studio)
+Určuje, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] zda systém projektu vygeneruje výchozí název šablony v dialogovém okně **Přidat novou položku** nebo Nový **projekt.**
 
- \<Vstemplate – > \<TemplateData > \<providedefaultname – >
+ \<VSTemplate \<> TemplateData> \<ProvideDefaultName>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,35 +31,35 @@ Určuje, zda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] systém p
 <ProvideDefaultName> true/false </ProvideDefaultName>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené elementy
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být buď `true` nebo `false`, označující, jestli se mají generovat výchozí název šablony do **přidat novou položku** nebo **nový projekt** dialogové okno.
+ Text musí být `true` `false`buď nebo , označující, zda má být v dialogovém okně **Přidat novou položku** nebo **Nový projekt** generován výchozí název šablony.
 
 ## <a name="remarks"></a>Poznámky
- `ProvideDefaultName` je volitelný prvek. Výchozí hodnota je `true`.
+ `ProvideDefaultName`je volitelný prvek. Výchozí hodnota je `true`.
 
- Pokud `ProvideDefaultName` element je `false`, **název** polí **přidat novou položku** a **nový projekt** dialogových oknech obsahovat hodnotu `<Enter_name>`.
+ Pokud `ProvideDefaultName` je `false`prvek , pole **Název** dialogových oken Přidat novou `<Enter_name>` **položku** a Nový **projekt** obsahují hodnotu .
 
- Použití [defaultname –](../extensibility/defaultname-element-visual-studio-templates.md) elementu, chcete-li určit výchozí název projektu nebo položky v **přidat novou položku** a **nový projekt** dialogových oknech. Při hodnotu `ProvideDefaultName` element je `true`, vynechání `DefaultName` – element pro projekty naplní dialogových oken s názvem šablony, tedy hodnota [název](../extensibility/name-element-visual-studio-templates.md) elementu.
+ Pomocí elementu [DefaultName](../extensibility/defaultname-element-visual-studio-templates.md) určete výchozí název projektu nebo položky v dialogových oknech **Přidat novou položku** a **Nový projekt.** Pokud `ProvideDefaultName` je `true`hodnota prvku , vynechání `DefaultName` prvku pro projekty naplní dialogové okno s názvem šablony, to znamená hodnota z [Name](../extensibility/name-element-visual-studio-templates.md) element.
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu nastaví `ProvideDefaultName` elementu `false`.
+ Následující příklad kódu `ProvideDefaultName` nastaví `false`prvek na .
 
 ```
 <VSTemplate Type="Item" Version="3.0.0"
@@ -77,6 +77,6 @@ Určuje, zda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] systém p
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

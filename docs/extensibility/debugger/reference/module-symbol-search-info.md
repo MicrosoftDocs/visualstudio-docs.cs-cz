@@ -1,5 +1,5 @@
 ---
-title: MODULE_SYMBOL_SEARCH_INFO | Dokumentace Microsoftu
+title: MODULE_SYMBOL_SEARCH_INFO | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - MODULE_SYMBOL_SEARCH_INFO structure
 ms.assetid: 432aff03-08a5-4c5a-b2d5-e212090fc70a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c521ebe321813013b83a951d4d2aa5f60fd1646d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5f15587759c4f665d1593d1298c47459a0e64aac
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346620"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714244"
 ---
-# <a name="modulesymbolsearchinfo"></a>MODULE_SYMBOL_SEARCH_INFO
+# <a name="module_symbol_search_info"></a>MODULE_SYMBOL_SEARCH_INFO
 
-Obsahuje informace o vyhledávací cesty symbolů, které byly prohledány stavu.
+Obsahuje informace o stavu cest vyhledávání symbolů, které byly prohledány.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,22 +46,22 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
 ## <a name="members"></a>Členové
 
 `dwValidFields`\
-Kombinace příznaků z [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) výčet určující druh hledání informace popsané v této struktuře.
+Kombinace příznaků z [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) výčtu určující druh informací o hledání popsaných v této struktuře.
 
 `bstrVerboseSearchInfo`\
-Cesta pro vyhledávání a výsledky, které jsou spojeny do jednoho řetězce.
+Cesta hledání a výsledky se zřetězí do jednoho řetězce.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato struktura je vrácená z volání [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) metody.
+Tato struktura je vrácena z volání [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) metoda.
 
-Pokud `bstrVerboseSearchInfo` pole není prázdné a obsahuje seznam cest prohledávat a výsledky hledání. V seznamu je formátováno s cestou, následované třemi tečkami ("..."), za nímž následuje výsledek. Pokud existuje více než jednu dvojici výsledek cestu, každý pár oddělený pár "\r\n" (návrat na začátek řádku return nebo odřádkování). Vzor vypadá takto:
+Pokud `bstrVerboseSearchInfo` pole není prázdné, obsahuje seznam prohledávaných cest a výsledky tohoto hledání. Seznam je formátován s cestou, následuje tři tečky ("..."), následuje výsledek. Pokud existuje více než jeden pár výsledků cesty, pak je každá dvojice oddělena dvojicí "\r\n" (carriage-return/linefeed). Vzor vypadá takto:
 
-\<cesta >... \<výsledku > \r\n\<cesta >... \<výsledku > \r\n\<cesta >... \<výsledku >
+\<cesta>... \<výsledek>\r\n\<> cesty... \<výsledek>\r\n\<> cesty... \<výsledek>
 
-Všimněte si, že poslední položka nemá \r\n pořadí.
+Všimněte si, že poslední položka nemá \r\n sekvenci.
 
-Tady je možný výskyt `bstrVerboseSearchInfo` řetězec, který se poslal na standardní výstup.
+Zde je `bstrVerboseSearchInfo` možný řetězec, který byl odeslán na standardní ven.
 
 `c:\symbols\user32.pdb... File not found.`
 
@@ -77,7 +77,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)

@@ -1,77 +1,77 @@
 ---
-title: Referenční dokumentace schématu VSCT XML | Dokumentace Microsoftu
+title: Odkaz na schéma XML VSCT | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio command table configuration files (VSCT), XML schema
 - VSCT XML schema elements
 ms.assetid: 49e7efae-e713-4762-a824-96fdaf92cdc9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94197efeadf8cd7148cbc41f3f71df625718bba7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 923a0c4b64fcae3a409a2298d6d481f6e1bb14db
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350722"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697903"
 ---
-# <a name="vsct-xml-schema-reference"></a>Referenční dokumentace schématu VSCT XML
-Poskytuje tabulku elementy schématu tabulky kompilátoru příkaz, povolené podřízených elementů a atributů pro každý.
+# <a name="vsct-xml-schema-reference"></a>Odkaz na schéma XML VSCT
+Obsahuje tabulku prvků schématu kompilátoru tabulky příkazů s povolenými podřízenými prvky a atributy pro každý.
 
- Soubor konfigurace (.vsct) založený na formátu XML příkaz tabulka definuje příkaz prvky, které poskytuje VSPackage integrovaného vývojového prostředí (IDE). Tyto prvky patří položek nabídky, nabídky, panely nástrojů a pole se seznamem.
+ Konfigurace tabulky příkazů založené na xml (.vsct) soubor definuje prvky příkazu, které VSPackage poskytuje integrované vývojové prostředí (IDE). Mezi tyto prvky patří položky nabídky, nabídky, panely nástrojů a pole se seznamem.
 
 > [!NOTE]
-> Kompilátor VSCT lze spustit v souboru .vsct preprocesor. Protože to je obvykle zahrnuje C++ preprocesoru, že můžete definovat a makra, které mají stejnou syntaxi, která se používá v souborech C++. Příklady jsou součástí .vsct souboru, který **nový projekt** průvodcem pro projekt VSPackage.
+> Kompilátor VSCT může spustit preprocesor v souboru .vsct. Protože se obvykle jedná o preprocesor jazyka C++, můžete definovat zahrnutí a makra, která mají stejnou syntaxi, která se používá v souborech jazyka C++. Příklady jsou uvedeny v souboru .vsct, který vytvoří průvodce **nový projekt** pro projekt VSPackage.
 
 ## <a name="optional-elements"></a>Volitelné prvky
- Některé VSCT prvky jsou volitelné. Pokud `Parent` argument nezadá, Group_Undefined:0 bude možné implicitní. Pokud `Icon` argument nezadáte, bude mlčky předpokládané guidOfficeIcon:msotcidNoIcon. Když je definována klávesovou zkratku, emulace, která se obvykle nepoužívá, je volitelný.
+ Některé prvky VSCT jsou volitelné. Pokud `Parent` není zadán argument, Group_Undefined:0 bude implicitní. Pokud `Icon` argument není zadán, guidOfficeIcon:msotcidNoIcon bude implicitní. Je-li definována klávesová zkratka, je emulace, která se obvykle nepoužívá, nepovinná.
 
- Rastrový obrázek položky může být vložen v době kompilace, tak, že zadáte umístění pruhu rastrového obrázku v `href` argument. Vymazat bitmapu je zkopírované během sloučení spíše než extrahovaná ze zdroje knihovny DLL. Když `href` argument je k dispozici, `usedList` volitelně argument a všechny sloty v pruhu rastrového obrázku jsou považovány za použít.
+ Bitmapové položky mohou být vloženy v době kompilace zadáním umístění bitmapového proužku v argumentu. `href` Bitmapový proužek je zkopírován během sloučení, nikoli extrahován ze zdrojů dll. Pokud `href` je k dispozici `usedList` argument, argument se stane volitelný a všechny sloty v rastrový proužek jsou považovány za použité.
 
- Všechny hodnoty GUID a ID musí být definován pomocí symbolické názvy. Tyto názvy mohou být definovány v souborech hlaviček nebo VSCT \<symboly > oddíly. Symbolické názvy musí být místní, zahrnuté prostřednictvím \<zahrnout > elementy, nebo odkazovaná \<Extern > elementy. Symbolický název je importován z hlavičky souboru zadaného v \<Extern > elementu, jestliže postupuje jednoduchý vzorec #define hodnota symbolu. Hodnota může být další symbol, tak dlouho, dokud tento symbol byla dříve definovaná. Identifikátor GUID definice musí mít formát OLE nebo C++. ID hodnoty mohou být desítkové číslice nebo šestnáctkové číslice, před kterými je 0 x, jak je znázorněno v následující řádky:
+ Všechny hodnoty GUID a ID musí být definovány pomocí symbolických názvů. Tyto názvy mohou být definovány v \<hlavičkových souborech nebo v oddílech VSCT Symbols>. Symbolické názvy musí být \<místní, zahrnuty prostřednictvím \<include> prvky nebo odkazuje Extern> prvky. Symbolický název je importován ze \<souboru záhlaví určeného v prvku Extern>, pokud se řídí jednoduchým vzorem #define SYMBOL VALUE. Hodnota může být jiný symbol, pokud byl tento symbol dříve definován. Definice identifikátorů GUID musí následovat formát OLE nebo C++. Hodnoty ID mohou být desetinné číslice nebo šestnáctkové číslice, které předchází 0x, jak je znázorněno na následujících řádcích:
 
 - {6D484634-E53D-4a2c-ADCB-55145C9362C8}
 
-- { 0x6d484634, 0xe53d, 0x4a2c, { 0xad, 0xcb, 0x55, 0x14, 0x5c, 0x93, 0x62, 0xc8 } }
+- { 0x6d484634, 0xe53d, 0x4a2c, { 0xad, 0xcb, 0x55, 0x14, 0x5c, 0x93, 0x62, 0xc8 }
 
-  Komentáře XML mohou být použity, ale operace round-trip grafické uživatelské rozhraní (GUI) nástroje může zrušit je. Obsah \<Poznámka > elementy zaručeno udržovat bez ohledu na formát.
+  Mohou být použity komentáře XML, ale nástroje grafického uživatelského rozhraní (GUI) s odezvou je mohou zahodit. Obsah \<anotace> prvky jsou zaručeny zachovány bez ohledu na formát.
 
-## <a name="schema-hierarchy"></a>Hierarchie schémat
- Souboru .vsct má následující hlavní prvky.
+## <a name="schema-hierarchy"></a>Hierarchie schématu
+ Soubor .vsct obsahuje následující hlavní prvky.
 
-- [Commandtable – element](../extensibility/commandtable-element.md)
+- [Element CommandTable](../extensibility/commandtable-element.md)
 
-- [Extern – element](../extensibility/extern-element.md)
+- [Extern prvek](../extensibility/extern-element.md)
 
-- [Prvek direktivy include](../extensibility/include-element.md)
+- [Zahrnout prvek](../extensibility/include-element.md)
 
-- [Define – element](../extensibility/define-element.md)
+- [Definovat prvek](../extensibility/define-element.md)
 
-- [Commands – element](../extensibility/commands-element.md)
+- [Element příkazy](../extensibility/commands-element.md)
 
-- [Commandplacements – element](../extensibility/commandplacements-element.md)
+- [Element CommandPlacements](../extensibility/commandplacements-element.md)
 
-- [Visibilityconstraints – element](../extensibility/visibilityconstraints-element.md)
+- [VisibilityConstraints prvek](../extensibility/visibilityconstraints-element.md)
 
-- [Keybindings – element](../extensibility/keybindings-element.md)
+- [Element KeyBindings](../extensibility/keybindings-element.md)
 
-- [Usedcommands – element](../extensibility/usedcommands-element.md)
+- [Element UsedCommands](../extensibility/usedcommands-element.md)
 
-- [Nadřazený element](../extensibility/parent-element.md)
+- [Nadřazený prvek](../extensibility/parent-element.md)
 
-- [Icon – element](../extensibility/icon-element.md)
+- [Prvek ikony](../extensibility/icon-element.md)
 
-- [Strings – element](../extensibility/strings-element.md)
+- [Řetězec, prvek](../extensibility/strings-element.md)
 
-- [Command Flag – element](../extensibility/command-flag-element.md)
+- [Element Příkaz Flag](../extensibility/command-flag-element.md)
 
-- [Symbols – element](../extensibility/symbols-element.md)
+- [Prvek symbolů](../extensibility/symbols-element.md)
 
 - [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md)
 
-## <a name="see-also"></a>Viz také:
-- [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [Směrování příkazů v balíčcích VSPackage](../extensibility/internals/command-routing-in-vspackages.md)
+## <a name="see-also"></a>Viz také
+- [Jak VSPackages přidat prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [Směrování příkazů v balíčcích VSPackages](../extensibility/internals/command-routing-in-vspackages.md)

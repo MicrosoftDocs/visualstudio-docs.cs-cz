@@ -1,5 +1,5 @@
 ---
-title: Locationfield – Element (šablony projektů Visual Studio) | Dokumentace Microsoftu
+title: Element LocationField (šablony projektů sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -8,22 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - LocationField element [Visual Studio project templates]
 ms.assetid: 6aaaa155-6ce0-4f7f-aa50-8d63d7a7c992
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b440595207cee6a146e6d85ee5e9f7c492ee3eee
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d993e84bec41486ef4dce6ad98c61f23ab2a46bd
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309174"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702888"
 ---
-# <a name="locationfield-element-visual-studio-project-templates"></a>Locationfield – element (šablony projektů Visual Studio)
-Určuje, zda je či není **umístění** textové pole **nový projekt** dialogové okno je povolena, zakázané nebo skrytý pro šablonu projektu.
+# <a name="locationfield-element-visual-studio-project-templates"></a>Element LocationField (šablony projektů sady Visual Studio)
+Určuje, zda je textové pole **Umístění** v dialogovém okně **Nový projekt** pro šablonu projektu povoleno, zakázáno nebo skryto.
 
- \<VSTemplate> \<TemplateData> \<LocationField>
+ \<> VSTemplate \<> \<TemplateData>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,41 +31,41 @@ Určuje, zda je či není **umístění** textové pole **nový projekt** dialog
 <LocationField> Enabled/Disabled/Hidden </LocationField>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt**.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Kategorizuje šablonu a definuje, jak se zobrazí v **novém projektu**.|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text platné hodnoty jsou:
+ Platné textové hodnoty jsou:
 
-- `Enabled`, který určuje, že **umístění** pomocí boxingu **nový projekt** dialogové okno je povolená.
+- `Enabled`, který určuje, že je povoleno pole **Umístění** dialogového okna **Nový projekt.**
 
-- `Disabled`, který určuje, že **umístění** pomocí boxingu **nový projekt** dialogové okno je zakázaná.
+- `Disabled`, který určuje, že pole **Umístění** dialogového okna **Nový projekt** je zakázáno.
 
-- `Hidden`, který určuje, že **umístění** pomocí boxingu **nový projekt** dialogové okno je skrytá.
+- `Hidden`, který určuje, že pole **Umístění** dialogového okna **Nový projekt** je skryté.
 
 ## <a name="remarks"></a>Poznámky
  Výchozí hodnota je `Enabled`.
 
- **Umístění** textové pole **nový projekt** dialogové okno umožňuje uživatelům změnit výchozí adresář, ve kterém se uloží nové projekty.
+ Textové pole **Umístění** v dialogovém okně **Nový projekt** umožňuje uživatelům změnit výchozí adresář, ve kterém jsou uloženy nové projekty.
 
- Hodnota zadaná v `Location` elementu je jenom respektovat dialogových oken Pokud podkladový systém projektu podporuje.
+ Hodnota zadaná `Location` v prvku je dodržena pouze dialogovéokno, pokud základní systém projektu podporuje.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metadata [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablony.
+ Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablonu.
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -92,6 +92,6 @@ Určuje, zda je či není **umístění** textové pole **nový projekt** dialog
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

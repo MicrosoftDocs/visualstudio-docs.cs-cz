@@ -3,37 +3,37 @@ title: Spuštění sady Visual Studio pomocí DTE
 titleSuffix: ''
 ms.date: 04/26/2019
 ms.topic: conceptual
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 79af14e80ef39b0cad732dcd0c9f37af1481bd4c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3217835571ac659ac2cef2b46cb45a1c02ba2584
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590628"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80703039"
 ---
 # <a name="launch-visual-studio-using-dte"></a>Spuštění sady Visual Studio pomocí DTE
 
-Počínaje sadou Visual Studio 2017 se mechanismus pro spuštění sady Visual Studio pomocí DTE liší od spuštění předchozích verzí sady Visual Studio. Tato změna je nezbytná, protože Visual Studio 2017 a novější podporuje souběžné instalace hlavních verzí (například můžete mít nainstalovanou verzi Preview a prodejní verzi nainstalovanou vedle sebe).
+Počínaje Visual Studio 2017, mechanismus pro spuštění Sady Visual Studio pomocí DTE se liší od spuštění předchozíverze sady Visual Studio. Tato změna je nezbytná, protože Visual Studio 2017 a novější podporuje souběžné instalace hlavních verzí (například můžete mít náhled a verzi nainstalovanou vedle sebe).
 
-Zbývající část tohoto článku ukazuje kód, který můžete použít ke spuštění sady Visual Studio 2019 pomocí DTE.
+Zbývající část tohoto článku ukazuje kód, který můžete použít ke spuštění Visual Studio 2019 pomocí DTE.
 
 ## <a name="set-up-the-project"></a>Nastavení projektu
 
-Chcete-li zobrazit kód spuštění v akci, vytvořte projekt pomocí následujících kroků.
+Chcete-li zobrazit spouštěcí kód v akci, vytvořte projekt podle následujících kroků.
 
-1. Vytvoří nový projekt **konzolové aplikace** pro .NET Framework.
+1. Vytvořte nový projekt **konzolové aplikace** pro rozhraní .NET Framework.
 
-2. Nainstalujte balíček NuGet [Microsoft. VisualStudio. Setup. Configuration. Interop](https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/) a přidejte odkaz na sestavení.
+2. Nainstalujte balíček [Microsoft.VisualStudio.Setup.Configuration.Interop](https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/) NuGet a přidejte odkaz na sestavení.
 
 3. Přidejte odkaz na EnvDTE.
 
-4. Vložte [vzorový kód](#example-code) , který následuje do souboru *program.cs* .
+4. Vložte [ukázkový kód,](#example-code) který následuje, do *Program.cs* souboru.
 
-5. Stisknutím klávesy **F5** program spusťte. Před ukončením programu by se měla zobrazit aplikace Visual Studio 2019 Open.
+5. Stisknutím **klávesy F5** spusťte program. Před ukončením programu byste měli vidět Visual Studio 2019 otevřít.
 
 ## <a name="example-code"></a>Příklad kódu
 
@@ -185,7 +185,7 @@ namespace ConsoleLauncherApp
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Najít Visual Studio](locating-visual-studio.md)
-- [Návod: přístup k objektu DTE z rozšíření editoru](walkthrough-accessing-the-dte-object-from-an-editor-extension.md)
+- [Vyhledání sady Visual Studio](locating-visual-studio.md)
+- [Návod: Přístup k objektu DTE z rozšíření editoru](walkthrough-accessing-the-dte-object-from-an-editor-extension.md)

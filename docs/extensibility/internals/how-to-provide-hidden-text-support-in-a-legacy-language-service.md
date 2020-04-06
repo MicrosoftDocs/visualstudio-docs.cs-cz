@@ -1,5 +1,5 @@
 ---
-title: Poskytování podpory skrytého textu ve službě starší verze jazyka
+title: Poskytování skryté textové podpory ve službě starších jazyků
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,41 +7,41 @@ helpviewer_keywords:
 - editors [Visual Studio SDK], hidden text
 - language services, implementing hidden text regions
 ms.assetid: 1c1dce9f-bbe2-4fc3-a736-5f78a237f4cc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c3d1088399256a4d5b16fa269ce022800ed645b1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8a9d5fe85932f87eb68b6b5a0f5868ebbf8f2b5f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351026"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707928"
 ---
-# <a name="how-to-provide-hidden-text-support-in-a-legacy-language-service"></a>Postupy: Poskytování podpory skrytého textu ve službě starší verze jazyka
-Můžete vytvořit skrytý text oblastech kromě oblasti osnovy. Oblasti skrytého textu může být spravovanými klienta nebo řídit editoru a umožňují zcela skrýt oblast textu. Editor zobrazí počet skrytých oblastí: jako vodorovné čáry. Příkladem je **pouze pro skript** zobrazení v editoru jazyka HTML.
+# <a name="how-to-provide-hidden-text-support-in-a-legacy-language-service"></a>Postup: Poskytnutí skryté textové podpory ve službě starších jazyků
+Kromě oblastí osnovy můžete vytvořit skryté oblasti textu. Oblasti skrytého textu lze řídit klientem nebo editorem a slouží k úplnému skrytí oblasti textu. Editor zobrazí skrytou oblast jako vodorovné čáry. Příkladem je zobrazení **Pouze skript v** editoru HTML.
 
-## <a name="to-implement-a-hidden-text-region"></a>K implementaci oblasti skrytého textu
+## <a name="to-implement-a-hidden-text-region"></a>Implementace oblasti skrytého textu
 
-1. Volání `QueryService` pro <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>.
+1. Výzva `QueryService` <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>pro .
 
-     Vrátí ukazatel na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager>.
+     To vrátí ukazatel <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager>na .
 
-2. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A>a předejte ukazatele pro dané textové vyrovnávací paměti. Určuje, zda relace skrytého textu, který je již existuje pro vyrovnávací paměť.
+2. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A>, předávání ukazatele pro daný text vyrovnávací paměti. To určuje, zda relace skrytého textu již existuje pro vyrovnávací paměť.
 
-3. Pokud už existuje a není potřeba vytvořit jeden a ukazatel na existující <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> je vrácen objekt. Použijte tento ukazatel na výčet a nabídnout vytvořit oblasti skrytého textu. V opačném případě volat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A> vytvořte relaci skrytého textu pro vyrovnávací paměť.
+3. Pokud jeden již existuje, není nutné jej vytvořit a je <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> vrácen ukazatel na existující objekt. Tento ukazatel slouží k vytvoření výčtu a vytvoření skrytých oblastí textu. V opačném <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A> případě volání vytvořit skryté textové relace pro vyrovnávací paměť.
 
-     Ukazatel <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> je vrácen objekt.
+     Je vrácen <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> ukazatel na objekt.
 
     > [!NOTE]
-    > Při volání `CreateHiddenTextSession`, můžete zadat klienta skrytého textu (to znamená <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextClient>). Klient skrytého textu vás upozorní, když skrytého textu nebo osnovy rozbalená nebo sbalená uživatelem.
+    > Při volání `CreateHiddenTextSession`můžete zadat skrytého textového klienta (to znamená). <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextClient> Klient skrytého textu vás upozorní, když je skrytý text nebo osnova rozbalena nebo sbalena uživatelem.
 
-4. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession.AddHiddenRegions%2A> můžete přidat jednu nebo více nových popisují oblastí najednou, zadáním následujících informací v `reHidReg` (<xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>) parametru:
+4. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession.AddHiddenRegions%2A> pro přidání jedné nebo více nových oblastí osnovy najednou `reHidReg` <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>a zadání následujících informací v parametru ( :
 
-    1. Zadejte hodnotu `hrtConcealed` v `iType` člena <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> struktury k označení, že při vytváření skrytých oblastí, nikoli na oblast osnovy.
+    1. Zadejte hodnotu `hrtConcealed` `iType` v <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> členu struktury, která označuje, že vytváříte skrytou oblast, nikoli oblast osnovy.
 
         > [!NOTE]
-        > Pokud se skryté oblasti jsou skryté, editoru automaticky zobrazí čáry kolem skryté regiony udávajících přítomnost.
+        > Pokud jsou skryté oblasti skryté, editor automaticky zobrazí řádky kolem skrytých oblastí, které označují jejich přítomnost.
 
-    2. Určete, zda je oblast spravovanými klienta nebo editor spravovanými v `dwBehavior` členy <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> struktury. Inteligentní sbalování implementace může obsahovat kombinaci řídit editoru a klient osnovy a skrytý text oblastech.
+    2. Určete, zda je oblast řízena klientem nebo editorem v `dwBehavior` členech <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> struktury. Implementace inteligentního osnovy může obsahovat kombinaci oblastí osnovy řízených editorem a klientem a skrytých textových oblastí.

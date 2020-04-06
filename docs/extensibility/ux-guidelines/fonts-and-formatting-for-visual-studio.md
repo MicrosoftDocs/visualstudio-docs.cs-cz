@@ -3,17 +3,17 @@ title: Písma a formátování sady Visual Studio | Dokumenty společnosti Micro
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: c3c3df69-83b4-4fd0-b5b1-e18c33f39376
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8634ab15a10b59fc21de390e0633d6d91793616d
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: bf1550026fb5c9d9395d931f21d48bc4739ea8c3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303132"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698585"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Písma a formátování pro Visual Studio
 ## <a name="the-environment-font"></a><a name="BKMK_TheEnvironmentFont"></a>Písmo prostředí

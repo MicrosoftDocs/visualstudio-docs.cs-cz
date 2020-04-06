@@ -1,41 +1,41 @@
 ---
-title: Ukázková implementace změny hodnot | Dokumentace Microsoftu
+title: Ukázková implementace měnících se hodnot | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - expression evaluation, local values
 - debugging [Debugging SDK], expression evaluation
 ms.assetid: ee2d955b-12ca-4f27-89aa-c2d0e768b6b6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f500ecd327fd641af2bdf881a26e35024d2b856d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1d7b712d2a97b02bed215c4996d3309341fb8ff9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315040"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713117"
 ---
-# <a name="sample-implementation-of-changing-values"></a>Ukázková implementace změny hodnot
+# <a name="sample-implementation-of-changing-values"></a>Ukázková implementace měnících se hodnot
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka Chyba při vyhodnocování výrazu spravované](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Každý místní zobrazí v **lokální** má okno [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objekt přidružen. To `IDebugProperty2` objekt obsahuje název, hodnotu a typ na místní. Když uživatel změní hodnotu místní, Visual Studio volá [SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md) aktualizovat hodnoty místní proměnné v paměti. V tomto příkladu je reprezentována místní `CFieldProperty` třídu, která implementuje `IDebugProperty2` rozhraní.
+ Každý místní zobrazené v okně **Locals** má [iDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objekt s ním spojené. Tento `IDebugProperty2` objekt obsahuje místní název, hodnotu a typ. Když uživatel změní hodnotu místní, Visual Studio volá [SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md) aktualizovat hodnotu místní v paměti. V tomto příkladu je místní `CFieldProperty` reprezentována `IDebugProperty2` třídou, která implementuje rozhraní.
 
 > [!NOTE]
-> Pro **Watch** a **QuickWatch** výrazy, mění hodnotu je reprezentována `CValueProperty` třídy v ukázce MyCEE. Ale implementace `IDebugProperty2::SetValueAsString` je stejný, jak je znázorněno zde.
+> Pro **výrazy Watch** a **QuickWatch** je změněná `CValueProperty` hodnota reprezentována třídou v ukázce MyCEE. Implementace `IDebugProperty2::SetValueAsString` je však stejná, jak je uvedeno zde.
 
- Provádění `IDebugProperty2::SetValueAsString` provádí následující úlohy:
+ Provádění provádí `IDebugProperty2::SetValueAsString` následující úkoly:
 
-1. Vyhodnotí výraz, který má hodnotu.
+1. Vyhodnotí výraz k vytvoření hodnoty.
 
-2. Vytvoří vazbu přidruženého [IDebugField](../../extensibility/debugger/reference/idebugfield.md) objektu na jeho umístění v paměti a vytvoří [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) objektu.
+2. Sváže přidružený objekt [IDebugField](../../extensibility/debugger/reference/idebugfield.md) s umístěním paměti a vytvoří objekt [IDebugObject.](../../extensibility/debugger/reference/idebugobject.md)
 
 3. Převede hodnotu na řadu bajtů.
 
-4. Volání [SetValue](../../extensibility/debugger/reference/idebugobject-setvalue.md) k uložení počet bajtů v paměti.
+4. Volá [SetValue](../../extensibility/debugger/reference/idebugobject-setvalue.md) pro uložení bajtů v paměti.
 
 ## <a name="managed-code"></a>Spravovaný kód
  Následující kód je implementace `IDebugProperty2::SetValueAsString` ve spravovaném kódu.
@@ -223,7 +223,7 @@ namespace EEMC
 ```
 
 ## <a name="unmanaged-code"></a>Nespravovaný kód
- Následující kód je implementace `IDebugProperty2::SetValueAsString` ve spravovaném kódu. Pomocná funkce `FieldCoerceValueType` (nejsou zobrazené) vynutí `VARIANT` určitého typu a díky, že hodnota je jeden z typů `FieldSetValue` dokáže zpracovat.
+ Následující kód je implementace `IDebugProperty2::SetValueAsString` ve spravovaném kódu. Pomocná funkce `FieldCoerceValueType` (není zobrazena) vynutí a `VARIANT` být určitý typ a `FieldSetValue` zajišťuje, že hodnota je jedním z typů může zpracovat.
 
 ```cpp
 STDMETHODIMP CFieldProperty::SetValueAsString(
@@ -420,6 +420,6 @@ HRESULT FieldSetValue(
 
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Změna hodnoty lokální](../../extensibility/debugger/changing-the-value-of-a-local.md)
-- [Kontext vyhodnocení](../../extensibility/debugger/evaluation-context.md)
+## <a name="see-also"></a>Viz také
+- [Změna hodnoty místního](../../extensibility/debugger/changing-the-value-of-a-local.md)
+- [Souvislosti hodnocení](../../extensibility/debugger/evaluation-context.md)

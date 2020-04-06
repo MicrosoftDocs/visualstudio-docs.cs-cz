@@ -1,37 +1,37 @@
 ---
-title: Analyzátory Roslyn a knihovna pro kódování kódu pro ImmutableArrays | Microsoft Docs
+title: Analyzátory Roslyn a knihovna podporující kód pro immutablearrays | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8665a37e4afd387ff4f77a8bdb5da430d773ae1d
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 7d6b26d27c77ecb578d8eef0807c35b8efb8581a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75848723"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701395"
 ---
-# <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Analyzátory Roslyn a knihovna pro kódování kódu pro ImmutableArrays
+# <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Analyzátory Roslyn a knihovna s pomocí kódu pro immutablearrays
 
-[.NET Compiler Platform](https://github.com/dotnet/roslyn) ("Roslyn") pomáhá vytvářet knihovny podporující kód. Knihovna pro práci s kódem poskytuje funkce nástroje a nástrojů (Roslyn Analyzer), které vám pomůžou s používáním knihovny nejlepším způsobem nebo k tomu, aby se předešlo chybám. V tomto tématu se dozvíte, jak vytvořit Real World Roslyn Analyzer pro zachycení běžných chyb při použití balíčku NuGet [System. Collections. unmutable](https://www.nuget.org/packages/System.Collections.Immutable) . Příklad také ukazuje, jak poskytnout opravu kódu pro problém kódu nalezený analyzátorem. Uživatelé uvidí opravy kódu v uživatelském rozhraní žárovky aplikace Visual Studio a můžou automaticky použít opravu kódu.
+[Platforma kompilátoru .NET](https://github.com/dotnet/roslyn) ("Roslyn") vám pomůže vytvářet knihovny podporující kód. Knihovna s ohledem na kód poskytuje funkce, které můžete použít a nástroje (analyzátory Roslyn), které vám pomohou používat knihovnu nejlepším způsobem nebo aby se zabránilo chybám. Toto téma ukazuje, jak vytvořit analyzátor Roslyn v reálném světě zachytit běžné chyby při použití balíčku [System.Collections.Immutable](https://www.nuget.org/packages/System.Collections.Immutable) NuGet. Příklad také ukazuje, jak poskytnout opravu kódu pro problém s kódem zjištěný analyzátorem. Uživatelům se zobrazí opravy kódu v uživatelském uživatelském nastavení žárovky sady Visual Studio a mohou použít opravu pro kód automaticky.
 
 ## <a name="get-started"></a>Začínáme
 
 K sestavení tohoto příkladu potřebujete následující:
 
-* Visual Studio 2015 (ne Express Edition) nebo novější verze. Můžete použít bezplatnou [edici Visual Studio Community Edition](https://visualstudio.microsoft.com/vs/community/) .
-* [Sada Visual Studio SDK](../extensibility/visual-studio-sdk.md). Při instalaci sady Visual Studio můžete také zaškrtnout **Visual Studio Extensibility Tools** v části **společné nástroje** pro instalaci sady SDK ve stejnou dobu. Pokud jste již nainstalovali sadu Visual Studio, můžete tuto sadu SDK nainstalovat také tak, že v levém navigačním podokně zadáte **soubor** hlavní nabídky > **C#** **Nový** **projekt** > , zvolíte možnost **rozšíření**. Když vyberete šablonu projektu s popisem cesty "**nainstalovat Visual Studio Extensibility Tools**", zobrazí se výzva ke stažení a instalaci sady SDK.
-* [.NET Compiler Platform ("Roslyn") SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK). Tuto sadu SDK můžete nainstalovat také **tak, že**v levém navigačním podokně **C#** vyberete **soubor** hlavní nabídky > **Nový** > a pak zvolíte **rozšiřitelnost**. Když vyberete možnost stáhnout šablonu projektu s popisem cesty **.NET COMPILER Platform SDK**, zobrazí se výzva ke stažení a instalaci sady SDK. Tato sada SDK zahrnuje [Roslyn syntax visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer). Tento užitečný nástroj vám pomůže zjistit, jaké typy modelů kódu byste měli v analyzátoru Hledat. Infrastruktura analyzátoru volá do vašeho kódu pro konkrétní typy modelu kódu, takže váš kód se v případě potřeby spustí pouze v případě potřeby a může se zaměřit pouze na analýzu relevantního kódu.
+* Visual Studio 2015 (ne Express Edition) nebo novější verze. Můžete použít bezplatnou [verzi Visual Studio Community Edition](https://visualstudio.microsoft.com/vs/community/)
+* [Sada Visual Studio SDK](../extensibility/visual-studio-sdk.md). Při instalaci sady Visual Studio můžete také zkontrolovat **nástroje rozšiřitelnosti sady Visual Studio** v části Běžné **nástroje** a nainstalovat sadu SDK současně. Pokud jste již nainstalovali visual studio, můžete také nainstalovat tuto sadu SDK přejdete do hlavní nabídky **Soubor** > **nový** > **projekt**, zvolte **C#** v levém navigačním podokně a pak zvolte **rozšiřitelnost**. Pokud zvolíte šablonu projektu navigace s popisem cesty aplikace**Visual Studio,** zobrazí se výzva ke stažení a instalaci sady SDK.
+* [Platforma kompilátoru .NET ("Roslyn") SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK). Tuto sadu SDK můžete nainstalovat také tak, že přejdete do hlavní nabídky **Soubor** > **nový** > **projekt**, v levém navigačním podokně zvolíte **C#a** pak zvolíte **rozšiřitelnost**. Pokud zvolíte "Stáhnout šablonu projektu s dračenou drasi pomocí platformy **.NET Compiler Platform SDK**", zobrazí se výzva ke stažení a instalaci sady SDK. Tato sada SDK obsahuje [vizualizér syntaxe Roslyn](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer). Tento užitečný nástroj vám pomůže zjistit, jaké typy modelů kódu byste měli hledat v analyzátoru. Infrastruktura analyzátoru volá do vašeho kódu pro konkrétní typy modelů kódu, takže váš kód se spustí pouze v případě potřeby a může se soustředit pouze na analýzu příslušného kódu.
 
-## <a name="whats-the-problem"></a>Jaký je problém?
+## <a name="whats-the-problem"></a>V čem je problém?
 
-Představte si, že zadáváte knihovnu s podporou ImmutableArray (například <xref:System.Collections.Immutable.ImmutableArray%601?displayProperty=fullName>). C#Vývojáři mají spoustu zkušeností s poli .NET. Vzhledem k povaze ImmutableArrays a optimalizačních technik používaných při implementaci však C# vývojář intuitions způsobí, že uživatelé vaší knihovny zapisují poškozený kód, jak je vysvětleno níže. Kromě toho uživatelé nevidí své chyby, dokud neproběhne doba běhu, což není prostředí kvality, které se používá v aplikaci Visual Studio s .NET.
+Představte si, že poskytujete knihovnu s <xref:System.Collections.Immutable.ImmutableArray%601?displayProperty=fullName>podporou ImmutableArray (například). Vývojáři jazyka C# mají mnoho zkušeností s poli .NET. Však vzhledem k povaze ImmutableArrays a optimalizační techniky používané v implementaci C# vývojář intuice způsobit uživatelům knihovny psát poškozený kód, jak je vysvětleno níže. Kromě toho uživatelé neuvidí jejich chyby až do běhu, což není kvalitní prostředí, které jsou zvyklí v sadě Visual Studio s .NET.
 
-Uživatelé mají zkušenosti s psaním kódu podobného následujícímu:
+Uživatelé jsou obeznámeni s psaním kódu, jako je následující:
 
 ```csharp
 var a1 = new int[0];
@@ -40,7 +40,7 @@ var a2 = new int[] { 1, 2, 3, 4, 5 };
 Console.WriteLine("a2.Length = { 0}", a2.Length);
 ```
 
-Vytváření prázdných polí pro vyplnění dalšími řádky kódu a používání syntaxe inicializátoru kolekce je pro C# vývojáře známo. Nicméně zápis stejného kódu pro ImmutableArray havárie za běhu:
+Vytvoření prázdných polí k vyplnění s následujícířádky kódu a pomocí syntaxe inicializátoru kolekce jsou známé vývojářům jazyka C#. Psaní stejného kódu pro ImmutableArray však dojde k chybě za běhu:
 
 ```csharp
 var b1 = new ImmutableArray<int>();
@@ -49,21 +49,21 @@ var b2 = new ImmutableArray<int> { 1, 2, 3, 4, 5 };
 Console.WriteLine("b2.Length = { 0}", b2.Length);
 ```
 
-První chyba je způsobená implementací ImmutableArray k zabalení základního úložiště dat pomocí struktury. Struktury musí mít konstruktory bez parametrů, aby `default(T)` výrazy mohly vracet struktury se všemi nula nebo null členy. Když se kód přistupuje `b1.Length`, dojde k chybě při dereference hodnoty null v době běhu, protože v struktuře ImmutableArray není žádné zdrojové pole úložiště. Správný způsob vytvoření prázdného ImmutableArray je `ImmutableArray<int>.Empty`.
+První chyba je způsobena implementací ImmutableArray pomocí struktury k zabalení podkladového úložiště dat. Structs musí mít konstruktory bez `default(T)` parametrů, aby výrazy mohly vrátit struktury se všemi členy nuly nebo null. Při přístupu `b1.Length`kódu je chyba null dereference, protože v struktuře ImmutableArray neexistuje žádné základní pole úložiště. Správný způsob, jak vytvořit prázdný ImmutableArray je `ImmutableArray<int>.Empty`.
 
-Chyba se inicializátory kolekce je způsobena tím, že metoda `ImmutableArray.Add` vrací nové instance pokaždé, když ji zavoláte. Vzhledem k tomu, že se ImmutableArrays nikdy nemění, při přidání nového prvku se vrátí nový objekt ImmutableArray (který může sdílet úložiště z důvodů výkonu s dříve existující ImmutableArray). Protože `b2` odkazuje na první ImmutableArray před voláním `Add()` pětkrát, `b2` je výchozí ImmutableArray. Při volání délky dojde také k chybě s zpětným odkazem na hodnotu null. Správný způsob, jak inicializovat ImmutableArray bez ručního volání metody Add, je použít `ImmutableArray.CreateRange(new int[] {1, 2, 3, 4, 5})`.
+K chybě s inicializátory kolekce dojde, `ImmutableArray.Add` protože metoda vrátí nové instance při každém volání. Protože ImmutableArrays nikdy změnit, při přidání nového prvku, získáte zpět nový objekt ImmutableArray (který může sdílet úložiště z důvodů výkonu s dříve existující ImmutableArray). Vzhledem k tomu, `b2` že odkazuje `Add()` na první `b2` ImmutableArray před voláním pětkrát, je výchozí ImmutableArray. Volání Length na něm také dojde k chybě s chybou null dereference. Správný způsob, jak inicializovat ImmutableArray bez ručního volání Add je použití `ImmutableArray.CreateRange(new int[] {1, 2, 3, 4, 5})`.
 
-## <a name="find-relevant-syntax-node-types-to-trigger-your-analyzer"></a>Najde relevantní typy uzlů syntaxe, které aktivují analyzátor.
+## <a name="find-relevant-syntax-node-types-to-trigger-your-analyzer"></a>Vyhledání relevantních typů syntaktických uzlů pro aktivaci analyzátoru
 
- Chcete-li začít sestavovat analyzátor, nejprve nahlaste, jaký typ SyntaxNode je třeba vyhledat. Spusťte **syntax visualizer** v nabídce **zobrazení** > další syntax visualizer **Windows** > **Roslyn**.
+ Chcete-li začít stavět analyzátor, nejprve zjistěte, jaký typ SyntaxNode musíte hledat. Spusťte **vizualizaci syntaxe** z nabídky **Zobrazit** > jiný**vizualizátor syntaxe systému****Windows** > Roslyn .
 
-Umístěte blikající kurzor editoru na řádek, který deklaruje `b1`. Uvidíte, že Syntax Visualizer se zobrazí v uzlu `LocalDeclarationStatement` stromu syntaxe. Tento uzel má `VariableDeclaration`, který zase má `VariableDeclarator`, který zase obsahuje `EqualsValueClause`a nakonec je `ObjectCreationExpression`. Po kliknutí na stromové struktuře Syntax Visualizer uzlů zobrazí syntaxe v okně editoru zvýraznění kódu reprezentovaného tímto uzlem. Názvy dílčích typů SyntaxNode odpovídají názvům použitým v C# gramatice.
+Umístěte stříška editoru na řádek, `b1`který deklaruje . Zobrazí se syntaxvisualizer ukazuje, že `LocalDeclarationStatement` jste v uzlu stromu syntaxe. Tento uzel má `VariableDeclaration`, který zase `VariableDeclarator`má , který `EqualsValueClause`zase má , `ObjectCreationExpression`a nakonec je . Když kliknete do stromu syntaxe vizualizéru uzlů, syntaxe v okně editoru zvýrazní vám kód reprezentovaný tímto uzlem. Názvy podtypů SyntaxNode odpovídají názvům použitým v gramatice jazyka C#.
 
 ## <a name="create-the-analyzer-project"></a>Vytvoření projektu analyzátoru
 
-V hlavní nabídce vyberte možnost **soubor** > **Nový** > **projekt**. V dialogovém okně **Nový projekt** v části **C#** projekty v levém navigačním panelu vyberte možnost **rozšiřitelnost**a v pravém podokně vyberte položku **analyzátor s opravou kódu** projektu šablona. Zadejte název a potvrďte dialog.
+V hlavní nabídce zvolte **Soubor** > **nového** > **projektu**. V dialogovém okně **Nový projekt** v části Projekty **Jazyka C#** na levém navigačním panelu zvolte **Rozšiřitelnost**a v pravém podokně zvolte **Analyzátor s šablonou** projektu Oprava kódu. Zadejte název a potvrďte dialogové okno.
 
-Šablona otevře soubor *DiagnosticAnalyzer.cs* . Vyberte tuto kartu vyrovnávací paměti editoru. Tento soubor obsahuje třídu analyzátoru (vytvořenou z názvu, který jste přiřadili projektu), který je odvozený od `DiagnosticAnalyzer` (typ rozhraní API Roslyn). Vaše nová třída má `DiagnosticAnalyzerAttribute` deklaraci analyzátoru je relevantní pro C# jazyk, aby kompilátor vyhledá a načítají váš analyzátor.
+Šablona otevře *soubor DiagnosticAnalyzer.cs.* Zvolte tuto kartu vyrovnávací paměti editoru. Tento soubor má třídu analyzátoru (vytvořenou z názvu, `DiagnosticAnalyzer` který jste dali projektu), která je odvozena z (typ rozhraní API Roslyn). Vaše nová třída `DiagnosticAnalyzerAttribute` má deklarující analyzátor je relevantní pro jazyk C#tak, aby kompilátor zjistí a načte analyzátor.
 
 ```csharp
 [DiagnosticAnalyzer(LanguageNames.CSharp)]
@@ -71,56 +71,56 @@ public class ImmutableArrayAnalyzerAnalyzer : DiagnosticAnalyzer
 {}
 ```
 
-Analyzátor můžete implementovat pomocí Visual Basic, který cílí C# na kód, a naopak. V DiagnosticAnalyzerAttribute je důležitější, aby bylo možné zvolit, zda se analyzátor zaměřuje na jeden nebo oba jazyky. Propracovanější analyzátory, které vyžadují podrobné modelování jazyka, mohou být pouze zaměřeny na jeden jazyk. Pokud váš analyzátor například kontroluje pouze názvy typů nebo názvy veřejných členů, může být možné použít Roslyn nabídky Common Language Model v rámci Visual Basic a C#. Například FxCop upozorňuje, že třída implementuje <xref:System.Runtime.Serialization.ISerializable>, ale třída nemá atribut <xref:System.SerializableAttribute> je nezávislý na jazyce a funguje pro Visual Basic i C# kód.
+Můžete implementovat analyzátor pomocí jazyka Visual Basic, který se zaměřuje na kód Jazyka C# a naopak. V atributu DiagnosticAnalyzerAttribute je důležitější zvolit, zda analyzátor cílí na jeden nebo oba. Sofistikovanější analyzátory, které vyžadují podrobné modelování jazyka může cílit pouze na jeden jazyk. Pokud váš analyzátor, například pouze kontroluje názvy typů nebo názvy veřejných členů, může být možné použít společný jazykový model Roslyn nabízí v rámci jazyka Visual Basic a C#. Například FxCop varuje, že <xref:System.Runtime.Serialization.ISerializable>třída implementuje , <xref:System.SerializableAttribute> ale třída nemá atribut je nezávislý na jazyku a funguje pro visual basic a c# kód.
 
-## <a name="initialize-the-analyzer"></a>Inicializace analyzátoru
+## <a name="initialize-the-analyzer"></a>Inicializovat analyzátor
 
- Posuňte se trochu dolů ve třídě `DiagnosticAnalyzer`, aby se zobrazila metoda `Initialize`. Kompilátor volá tuto metodu při aktivaci analyzátoru. Metoda přebírá objekt `AnalysisContext`, který umožňuje analyzátoru získat informace o kontextu a registrovat zpětná volání pro události pro typy kódu, který chcete analyzovat.
+ Posuňte `DiagnosticAnalyzer` se trochu `Initialize` dolů ve třídě, abyste viděli metodu. Kompilátor volá tuto metodu při aktivaci analyzátoru. Metoda trvá `AnalysisContext` objekt, který umožňuje analyzátoru získat informace o kontextu a zaregistrovat zpětná volání pro události pro druhy kódu, který chcete analyzovat.
 
 ```csharp
 public override void Initialize(AnalysisContext context) {}
 ```
 
-V této metodě otevřete nový řádek a zadejte "Context". zobrazí se seznam pro doplňování technologie IntelliSense. V seznamu pro doplňování si můžete prohlédnout mnoho metod `Register...` pro zpracování různých typů událostí. Například první `RegisterCodeBlockAction`volá zpět do kódu pro blok, který je obvykle kód mezi složenými závorkami. Registrace pro blok také volá zpět do kódu pro inicializátor pole, hodnotu poskytnutou atributu nebo hodnotu volitelného parametru.
+Otevřete nový řádek v této metodě a zadejte "kontext". zobrazíte seznam dokončení technologie IntelliSense. Můžete vidět v seznamu dokončení `Register...` existuje mnoho metod pro zpracování různých druhů událostí. Například první , `RegisterCodeBlockAction`volá zpět do kódu pro blok, což je obvykle kód mezi složené závorky. Registrace pro blok také volá zpět do kódu pro inicializátor pole, hodnotu přiřazenou atributu nebo hodnotu volitelného parametru.
 
-Další příklad, `RegisterCompilationStartAction`, volá zpět na váš kód na začátku kompilace, což je užitečné v případě, že potřebujete shromáždit stav v mnoha umístěních. Můžete vytvořit datovou strukturu, vyslovit ke shromáždění všech používaných symbolů a pokaždé, když je analyzátor volán zpět pro určitou syntaxi nebo symbol, můžete uložit informace o každém umístění v datové struktuře. Pokud jste volali zpět z důvodu ukončení kompilace, můžete analyzovat všechna umístění, která jste uložili, například k hlášení, které symboly kód používá z každého příkazu `using`.
+Jako další `RegisterCompilationStartAction`příklad , volá zpět do kódu na začátku kompilace, což je užitečné, když potřebujete shromažďovat stav na mnoha místech. Můžete vytvořit datovou strukturu, řekněme, shromažďovat všechny použité symboly, a pokaždé, když váš analyzátor je volán zpět pro některé syntaxe nebo symbol, můžete uložit informace o každé umístění ve vaší datové struktuře. Když jste voláni zpět z důvodu konce kompilace, můžete analyzovat všechna uložená místa, například `using` hlásit, jaké symboly kód používá z každého příkazu.
 
-Pomocí **syntax visualizer**jste zjistili, že chcete volat, když kompilátor zpracovává ObjectCreationExpression. Tento kód použijete k nastavení zpětného volání:
+Pomocí **syntaxe Visualizer**, jste zjistili, že chcete být volána při kompilátoru zpracovává ObjectCreationExpression. Tento kód slouží k nastavení zpětného volání:
 
 ```csharp
 context.RegisterSyntaxNodeAction(c => AnalyzeObjectCreation(c),
                                  SyntaxKind.ObjectCreationExpression);
 ```
 
-Zaregistrujete se pro uzel syntaxe a filtr pouze pro uzly syntaxe pro vytvoření objektu. Podle úmluvy používají autoři analyzátoru lambda při registraci akcí, které pomáhají udržet bezstavové analyzátory. Můžete použít funkci sady Visual Studio **generovanou z využití** k vytvoření metody `AnalyzeObjectCreation`. Tím se vygeneruje správný typ kontextového parametru.
+Zaregistrujete se pro syntaktický uzel a filtrujete pouze syntaxe objektů. Podle konvence autoři analyzátoru používají lambda při registraci akcí, což pomáhá udržovat analyzátory bezstavové. `AnalyzeObjectCreation` Metodu můžete vytvořit pomocí funkce Visual Studio Generovat z **použití.** Tím se vygeneruje správný typ parametru kontextu pro vás příliš.
 
 ## <a name="set-properties-for-users-of-your-analyzer"></a>Nastavení vlastností pro uživatele analyzátoru
 
-Aby se analyzátor zobrazil správně v uživatelském rozhraní sady Visual Studio, vyhledejte a upravte následující řádek kódu k identifikaci vašeho analyzátoru:
+Aby se váš analyzátor v ykumském jazyce správně zostřil, vyhledejte a upravte následující řádek kódu k identifikaci analyzátoru:
 
 ```csharp
 internal const string Category = "Naming";
 ```
 
-Změna `"Naming"` k `"API Guidance"`.
+Změnit `"Naming"` `"API Guidance"`na .
 
-Dále vyhledejte a otevřete v projektu soubor *Resources. resx* pomocí **Průzkumník řešení**. Můžete vložit popis pro svůj analyzátor, název atd. Můžete změnit hodnotu pro všechny z nich na `"Don't use ImmutableArray<T> constructor"` pro teď. Můžete vložit argumenty formátování řetězce do řetězce ({0}, {1}atd.) a později při volání `Diagnostic.Create()`můžete dodat `params` pole argumentů, které mají být předány.
+Dále vyhledejte a otevřete soubor *Resources.resx* v projektu pomocí **Průzkumníka řešení**. Můžete vložit popis analyzátoru, názvu atd. Prozatím můžete změnit hodnotu všech `"Don't use ImmutableArray<T> constructor"` těchto hodnot. Argumenty formátování řetězce můžete vložit do{0}řetězce {1}( , , atd.) a později při volání `Diagnostic.Create()`můžete zadat `params` pole argumentů, které mají být předány.
 
-## <a name="analyze-an-object-creation-expression"></a>Analýza výrazu pro vytvoření objektu
+## <a name="analyze-an-object-creation-expression"></a>Analýza výrazu vytvoření objektu
 
-Metoda `AnalyzeObjectCreation` přebírá jiný typ kontextu dodaný rozhraním analyzátoru kódu. `AnalysisContext` metody `Initialize` umožňuje registrovat zpětná volání akcí pro nastavení analyzátoru. `SyntaxNodeAnalysisContext`například má `CancellationToken`, které lze předat. Pokud uživatel spustí psaní v editoru, Roslyn zruší spouštění analyzátorů, aby ušetřili práci a vylepšili výkon. V dalším příkladu má tento kontext vlastnost Node, která vrací uzel syntaxe pro vytvoření objektu.
+Metoda `AnalyzeObjectCreation` trvá jiný typ kontextu dodané rozhraní analyzátoru kódu. Metoda `Initialize` `AnalysisContext` umožňuje zaregistrovat zpětná volání akce pro nastavení analyzátoru. Například `SyntaxNodeAnalysisContext`, `CancellationToken` má, které můžete předat. Pokud uživatel začne psát v editoru, Roslyn zruší spuštění analyzátorů uložit práci a zlepšit výkon. Jako další příklad tento kontext má vlastnost Uzel, který vrací uzel syntaxe vytvoření objektu.
 
-Získejte uzel, který můžete předpokládat je typ, pro který jste vyfiltroval akci uzlu syntaxe:
+Získejte uzel, který můžete předpokládat, je typ, pro který jste filtrovali akce uzlu syntaxe:
 
 ```csharp
 var objectCreation = (ObjectCreationExpressionSyntax)context.Node;
 ```
 
-### <a name="launch-visual-studio-with-your-analyzer-the-first-time"></a>Při prvním spuštění sady Visual Studio s analyzátorem
+### <a name="launch-visual-studio-with-your-analyzer-the-first-time"></a>První spuštění sady Visual Studio s analyzátorem
 
-Spusťte Visual Studio tak, že sestavíte a spustíte analyzátor (stisknete klávesu **F5**). Vzhledem k tomu, že spouštěcí projekt v **Průzkumník řešení** je projekt VSIX, spuštění kódu sestaví kód a VSIX a potom spustí aplikaci Visual Studio s nainstalovaným souborem VSIX. Při spuštění sady Visual Studio tímto způsobem se spustí s odlišným podregistrem, aby vaše vaše testovací instance během vytváření analyzátorů neovlivnila Vaše hlavní použití sady Visual Studio. Při prvním spuštění tímto způsobem provede aplikace Visual Studio několik inicializací, jako při prvním spuštění sady Visual Studio po její instalaci.
+Spuštění sady Visual Studio sestavením a spuštěním analyzátoru (stiskněte **klávesu F5).** Vzhledem k tomu, že projekt při spuštění v **Průzkumníku řešení** je projekt VSIX, spuštění kódu vytvoří váš kód a VSIX a spustí visual studio s nainstalovaným VSIX. Při spuštění sady Visual Studio tímto způsobem se spustí s podregistrem odlišné registru tak, aby hlavní použití sady Visual Studio nebude ovlivněna testovací instance při vytváření analyzátory. Při prvním spuštění tímto způsobem Visual Studio provádí několik inicializace podobné při prvním spuštění sady Visual Studio po instalaci.
 
-Vytvořte projekt konzoly a potom zadejte kód pole do vaší hlavní metody konzolové aplikace:
+Vytvořte projekt konzoly a zadejte kód pole do konzolových aplikací Hlavní metoda:
 
 ```csharp
 var b1 = new ImmutableArray<int>();
@@ -129,23 +129,23 @@ var b2 = new ImmutableArray<int> { 1, 2, 3, 4, 5 };
 Console.WriteLine("b2.Length = {0}", b2.Length);
 ```
 
-Řádky kódu s `ImmutableArray` mají vlnovky, protože potřebujete získat neměnné balíčky NuGet a přidat do kódu příkaz `using`. Stiskněte pravé tlačítko ukazatel na uzlu projektu v **Průzkumník řešení** a zvolte možnost **Spravovat balíčky NuGet**. Ve Správci NuGet zadejte do vyhledávacího pole "neměnný" a zvolte položku **System. Collections. unmutable** (v levém podokně nevybírejte možnost **Microsoft. BCL. unmutable**) a stiskněte tlačítko **instalovat** v pravém podokně. Při instalaci balíčku se přidá odkaz na odkazy na projekt.
+Řádky kódu s `ImmutableArray` mají vlnovky, protože je potřeba získat neměnné `using` NuGet balíček a přidat příkaz do kódu. Stiskněte pravé tlačítko ukazatele v uzlu projektu v **Průzkumníku řešení** a zvolte **Spravovat balíčky NuGet**. Ve správci NuGet zadejte do vyhledávacího pole příkaz Neměnné a v levém podokně zvolte položku **System.Collections.Immutable** (nezvolte **Microsoft.Bcl.Immutable**) a v pravém podokně stiskněte tlačítko **Instalovat.** Instalace balíčku přidá odkaz na odkazy na projekt.
 
-V části `ImmutableArray`se pořád zobrazují červené vlnovky, takže se do tohoto identifikátoru umístí blikající kurzor a stisknete **Ctrl**+ **.** (tečka) pro uvedení nabídky Navrhovaná oprava a zvolení přidání příslušného příkazu `using`.
+Pod ním se stále zobrazují `ImmutableArray`červené vlnovky , proto umístěte stříšku do tohoto identifikátoru a stiskněte **klávesu Ctrl**+**.** (období) vyvolat navrhovanou nabídku opravy a zvolit `using` přidání příslušného prohlášení.
 
-**Uložte všechny a zavřete** druhou instanci sady Visual Studio, aby se teď do čistého stavu dalo pokračovat.
+**Uložit vše a zavřít** druhou instanci Sady Visual Studio pro tuto chvíli, aby vás v čistém stavu pokračovat.
 
-## <a name="finish-the-analyzer-using-edit-and-continue"></a>Dokončení analyzátoru pomocí úpravy a pokračování
+## <a name="finish-the-analyzer-using-edit-and-continue"></a>Dokončete analyzátor pomocí úprav a pokračujte
 
-V první instanci sady Visual Studio nastavte zarážku na začátku `AnalyzeObjectCreation` metody stisknutím klávesy **F9** se blikajícím kurzorem na prvním řádku.
+V první instanci sady Visual Studio nastavte zarážku na začátku `AnalyzeObjectCreation` metody stisknutím **klávesy F9** s stříška na prvním řádku.
 
-Znovu spusťte analyzátor pomocí klávesy **F5**a ve druhé instanci aplikace Visual Studio znovu otevřete konzolovou aplikaci, kterou jste vytvořili naposledy.
+Spusťte analyzátor znovu s **F5**a ve druhé instanci sady Visual Studio znovu otevřete konzolovou aplikaci, kterou jste vytvořili naposledy.
 
-Vrátíte se k první instanci sady Visual Studio na zarážce, protože kompilátor Roslyn viděl výraz pro vytvoření objektu a volal do vašeho analyzátoru.
+Vrátíte se k první instanci Sady Visual Studio na zarážky, protože kompilátor Roslyn viděl výraz vytvoření objektu a volána do analyzátoru.
 
-**Získá uzel pro vytvoření objektu.** Krok nad řádkem, který nastaví proměnnou `objectCreation` stisknutím klávesy **F10**a v **příkazovém podokně** se vyhodnotí výraz `"objectCreation.ToString()"`. Vidíte, že uzel syntaxe, na kterou proměnná odkazuje, je kód `"new ImmutableArray<int>()"`, přesně co hledáte.
+**Získejte uzel vytváření objektů.** Krok přes řádek, `objectCreation` který nastaví proměnnou stisknutím **F10**a `"objectCreation.ToString()"`v bezprostřední **okno** vyhodnotit výraz . Uvidíte, že uzel syntaxe proměnná `"new ImmutableArray<int>()"`odkazuje na je kód , jen to, co hledáte.
 
-**Získá objekt typu\> ImmutableArray < T.** Je nutné ověřit, zda je vytvořen typ ImmutableArray. Nejprve získáte objekt, který představuje tento typ. Zkontrolujte typy pomocí sémantického modelu, abyste měli jistotu, že máte přesně správný typ a řetězec porovnáte z `ToString()`. Na konci funkce zadejte následující řádek kódu:
+**Získejte objekt ImmutableArray<Typu T.\>** Je třeba zkontrolovat, zda je vytvářený typ ImmutableArray. Nejprve získáte objekt, který představuje tento typ. Zkontrolujte typy pomocí sémantického modelu, abyste zajistili, že máte přesně `ToString()`ten správný typ, a neporovnáváte řetězec z aplikace . Na konec funkce uveďte následující řádek kódu:
 
 ```csharp
 var immutableArrayOfTType =
@@ -154,21 +154,21 @@ var immutableArrayOfTType =
            .GetTypeByMetadataName("System.Collections.Immutable.ImmutableArray`1");
 ```
 
-Určíte obecné typy v metadatech pomocí zpětných impulsů (') a počtu obecných parametrů. Proto nevidíte "... ImmutableArray\<T > v názvu metadat.
+Obecné typy v metadatech s backticks (') a počet obecných parametrů. To je důvod, proč nevidíte "... ImmutableArray\<T>" v názvu metadat.
 
-Sémantický model má mnoho užitečných věcí, které vám pomůžou klást otázky ke symbolům, toku dat, proměnlivé životnosti atd. Roslyn odděluje uzly syntaxe od sémantického modelu pro různé technické důvody (výkon, chybný kód modelování atd.). Chcete, aby model kompilace vyhledal informace obsažené v odkazech pro přesné porovnání.
+Sémantický model má mnoho užitečných věcí, které vám umožní klást otázky o symbolech, toku dat, proměnné životnosti atd. Roslyn odděluje syntaktické uzly od sémantického modelu z různých technických důvodů (výkon, modelování chybného kódu atd.). Chcete, aby model kompilace vyhledat informace obsažené v odkazech pro přesné porovnání.
 
-Žlutý ukazatel spuštění lze přetáhnout na levou stranu okna editoru. Přetáhněte ji na řádek, který nastaví `objectCreation` proměnnou a krok nad novým řádkem kódu pomocí nástroje **F10**. Pokud najedete ukazatelem myši na proměnnou `immutableArrayOfType`, uvidíte, že jsme v sémantickém modelu našli přesný typ.
+Můžete přetáhnout žlutý ukazatel spuštění na levé straně okna editoru. Přetáhněte ji na čáru, `objectCreation` která nastaví proměnnou a krok přes nový řádek kódu pomocí **F10**. Pokud najedete myší na proměnnou `immutableArrayOfType`, zjistíte, že jsme našli přesný typ v sémantickém modelu.
 
-**Získá typ výrazu pro vytvoření objektu.** "Type" se používá v několika způsobech tohoto článku, ale to znamená, že pokud máte výraz "New foo", budete muset získat model foo. Musíte získat typ výrazu pro vytvoření objektu, abyste viděli, zda se jedná o typ ImmutableArray\<T > typu. Použijte znovu sémantický model a získejte informace o symbolech pro symbol typu (ImmutableArray) ve výrazu pro vytvoření objektu. Na konci funkce zadejte následující řádek kódu:
+**Získejte typ výrazu vytvoření objektu.** "Typ" se používá několika způsoby v tomto článku, ale to znamená, že pokud máte výraz "new Foo", musíte získat model Foo. Musíte získat typ výrazu vytvoření objektu, abyste zjistili, zda\<se jedná o typ> ImmutableArray T. Znovu použijte sémantický model k získání informací o symbolu symbolu typu (ImmutableArray) ve výrazu pro vytvoření objektu. Na konec funkce uveďte následující řádek kódu:
 
 ```csharp
 var symbolInfo = context.SemanticModel.GetSymbolInfo(objectCreation.Type).Symbol as INamedTypeSymbol;
 ```
 
-Vzhledem k tomu, že analyzátor potřebuje zpracovat neúplný nebo nesprávný kód v vyrovnávací paměti editoru (například chybí příkaz `using`), měli byste vyhledat `symbolInfo` `null`. K dokončení analýzy musíte získat pojmenovaný typ (INamedTypeSymbol) z objektu informací o symbolu.
+Vzhledem k tomu, že analyzátor potřebuje zpracovat neúplný nebo nesprávný kód ve vyrovnávacích vyrovnávacích paměťech editoru (například chybí `using` příkaz), měli byste zkontrolovat, `symbolInfo` zda jsou `null`. Chcete-li dokončit analýzu, musíte získat pojmenovaný typ (INamedTypeSymbol) z informačního objektu symbolu.
 
-**Porovnejte typy.** Vzhledem k tomu, že existuje otevřený obecný typ T, který hledáme, a typ v kódu je konkrétní obecný typ, dotazuje se na informace o tom, co je typ vytvořený (otevřený obecný typ), a porovnejte tento výsledek s `immutableArrayOfTType`. Zadejte následující na konci metody:
+**Porovnejte typy.** Vzhledem k tomu, že je otevřený obecný typ T, který hledáme, a typ v kódu je konkrétní obecný typ, dotaz informace o symbolu `immutableArrayOfTType`pro co typ je vytvořen z (otevřený obecný typ) a porovnat tento výsledek s . Na konci metody zadejte následující:
 
 ```csharp
 if (symbolInfo != null &&
@@ -176,13 +176,13 @@ if (symbolInfo != null &&
 {}
 ```
 
-**Nahlaste diagnostiku.** Generování sestav diagnostiky je poměrně snadné. Použijete pravidlo vytvořené pro vás v šabloně projektu, která je definována před metodou Initialize. Vzhledem k tomu, že tato situace v kódu je chyba, můžete změnit řádek, který pravidlo inicializuje, aby nahradilo `DiagnosticSeverity.Warning` (zelenou vlnovkou) pomocí `DiagnosticSeverity.Error` (červená vlnovka). Zbytek pravidla inicializuje z prostředků, které jste upravili na začátku tohoto návodu. Také je nutné vykázat umístění pro vlnovkou, což je umístění specifikace typu výrazu pro vytvoření objektu. Zadejte tento kód do `if`ového bloku:
+**Nahlaste diagnostiku.** Hlášení diagnostiky je docela snadné. Pravidlo vytvořené pro vás v šabloně projektu, která je definována před metodou Initialize. Vzhledem k tomu, že tato situace v kódu je chyba, můžete změnit řádek, který inicializoval pravidlo nahradit `DiagnosticSeverity.Warning` (zelená vlnovka) s `DiagnosticSeverity.Error` (červená vlnovka). Zbytek pravidla inicializuje ze zdrojů, které jste upravili v blízkosti začátku návodu. Musíte také nahlásit umístění vlnovky, což je umístění specifikace typu výrazu vytvoření objektu. Zadejte tento `if` kód do bloku:
 
 ```csharp
 context.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation()));
 ```
 
-Funkce by měla vypadat takto (může se formátovat jinak):
+Vaše funkce by měla vypadat takto (možná formátován jinak):
 
 ```csharp
 private void AnalyzeObjectCreation(SyntaxNodeAnalysisContext context)
@@ -204,13 +204,13 @@ private void AnalyzeObjectCreation(SyntaxNodeAnalysisContext context)
 }
 ```
 
-Odeberte zarážku, abyste viděli, jak analyzátor funguje (a zastavil návrat na první instanci sady Visual Studio). Přetáhněte ukazatel spuštění na začátek metody a stisknutím klávesy **F5** pokračujte v provádění. Když přepnete zpět na druhou instanci aplikace Visual Studio, kompilátor spustí znovu kontrolu kódu a bude volat do vašeho analyzátoru. V části `ImmutableType<int>`vidíte vlnovku.
+Odeberte zarážku, abyste viděli, že analyzátor funguje (a přestaňte se vracet k první instanci sady Visual Studio). Přetáhněte ukazatel spuštění na začátek metody a stisknutím **klávesy F5** pokračujte v provádění. Když přepnete zpět na druhou instanci sady Visual Studio, kompilátor začne znovu prozkoumat kód a bude volat do analyzátoru. Můžete vidět klikyháky `ImmutableType<int>`pod .
 
-## <a name="adding-a-code-fix-for-the-code-issue"></a>Přidání "opravy kódu" pro problém s kódem
+## <a name="adding-a-code-fix-for-the-code-issue"></a>Přidání "Oprava kódu" pro problém s kódem
 
-Než začnete, zavřete druhou instanci aplikace Visual Studio a ukončete ladění v první instanci sady Visual Studio (kde vyvíjíte analyzátor).
+Než začnete, zavřete druhou instanci sady Visual Studio a zastavte ladění v první instanci sady Visual Studio (kde vyvíjíte analyzátor).
 
-**Přidejte novou třídu.** Použijte místní nabídku (pravé tlačítko myši) na uzlu projektu v **Průzkumník řešení** a vyberte možnost Přidat novou položku. Přidejte třídu s názvem `BuildCodeFixProvider`. Tato třída musí být odvozena od `CodeFixProvider`a bude nutné použít **kombinaci kláves Ctrl**+ **.** (period) k vyvolání opravy kódu, která přidá správný příkaz `using`. Tato třída také musí být opatřena poznámkou `ExportCodeFixProvider` atributu a k vyřešení výčtu `LanguageNames` budete muset přidat příkaz `using`. Měli byste mít soubor třídy, který obsahuje následující kód:
+**Přidejte novou třídu.** Použijte místní nabídku (pravé tlačítko ukazatele) v uzlu projektu v **Průzkumníku řešení** a zvolte přidání nové položky. Přidejte třídu s názvem `BuildCodeFixProvider`. Tato třída musí `CodeFixProvider`být odvozena z , a budete muset použít **Ctrl**+**.** (období) vyvolat opravu kódu, která `using` přidá správný příkaz. Tato třída také musí být anotována s atributem `ExportCodeFixProvider` `using` a budete `LanguageNames` muset přidat příkaz k vyřešení výčtu. Měli byste mít soubor třídy s následujícím kódem:
 
 ```csharp
 using Microsoft.CodeAnalysis;
@@ -223,35 +223,35 @@ namespace ImmutableArrayAnalyzer
     {}
 ```
 
-**Odvozené odvozené členy** Nyní umístěte blikající kurzor editoru do identifikátoru `CodeFixProvider` a stiskněte **Ctrl**+ **.** (period) pro zástupnou proceduru pro implementaci této abstraktní základní třídy. Tím se vygeneruje vlastnost a metoda pro vás.
+**Stub z odvozených členů.** Nyní umístěte stříšku editoru `CodeFixProvider` do identifikátoru a stiskněte **klávesu Ctrl**+**.** (period) se zakázaným inzerováním implementace pro tuto abstraktní základní třídu. Tím se vygeneruje vlastnost a metoda pro vás.
 
-**Implementujte vlastnost.** Do těla `get` `FixableDiagnosticIds` vlastnosti zadejte následující kód:
+**Implementujte vlastnost.** Vyplňte `FixableDiagnosticIds` `get` tělo nemovitosti následujícím kódem:
 
 ```csharp
 return ImmutableArray.Create(ImmutableArrayAnalyzerAnalyzer.DiagnosticId);
 ```
 
-Roslyn spojuje diagnostiku a opravy porovnáním těchto identifikátorů, což jsou pouze řetězce. Šablona projektu vygenerovala ID diagnostiky za vás a Vy ji můžete změnit. Kód ve vlastnosti jednoduše vrátí ID z třídy Analyzer.
+Roslyn sdružuje diagnostiku a opravy porovnáním těchto identifikátorů, které jsou pouze řetězce. Šablona projektu pro vás vygenerovala diagnostické ID a můžete jej změnit. Kód ve vlastnosti pouze vrátí ID z třídy analyzátoru.
 
-**Metoda RegisterCodeFixAsync přebírá kontext.** Kontext je důležitý, protože oprava kódu může být použita na více diagnostických nástrojů, nebo může být více než jeden problém na řádku kódu. Pokud zadáte "Context". v těle metody se v seznamu dokončení IntelliSense zobrazí několik užitečných členů. K dispozici je člen CancellationTokenu, který vám umožní zjistit, jestli je potřeba tuto opravu zrušit. Existuje člen dokumentu, který má spoustu užitečných členů a umožňuje získat objekty modelu projektu a řešení. Je členem rozsahu, který je na začátku a na konci umístění kódu zadaného při nahlášení diagnostiky.
+**Metoda RegisterCodeFixAsync přebírá kontext.** Kontext je důležité, protože oprava kódu lze použít pro více diagnostiky nebo může být více než jeden problém na řádku kódu. Pokud zadáte "kontext". v těle metody vám seznam dokončení Technologie IntelliSense zobrazí některé užitečné členy. Je CancellationToken člen, který můžete zkontrolovat, zda něco chce zrušit opravu. Je document člen, který má spoustu užitečných členů a umožňuje získat k objektům projektu a modelu řešení. Je span člen, který je začátek a konec umístění kódu zadané při oznamování diagnostiky.
 
-**Nastavte tuto metodu jako asynchronní.** První věc, kterou je třeba udělat, je opravit vygenerovanou deklaraci metody, která bude `async` metodou. Oprava kódu pro podkládá z implementace abstraktní třídy nezahrnuje klíčové slovo `async`, i když metoda vrátí `Task`.
+**Proveďte metodu asynchronní.** První věc, kterou musíte udělat, je opravit deklaraci generované metody jako metodu. `async` Oprava kódu pro stubbing z implementace abstraktní třídy `async` neobsahuje klíčové slovo `Task`i v případě, že metoda vrátí .
 
-**Získejte kořen stromu syntaxe.** Chcete-li upravit kód, který je potřeba k vytvoření nového stromu syntaxe se změnami, které provádí oprava kódu. K volání `GetSyntaxRootAsync`potřebujete `Document` z kontextu. Jedná se o asynchronní metodu, protože existuje neznámá práce pro získání stromu syntaxe, případně k získání souboru z disku, jeho analýzy a sestavení modelu kódu Roslyn. Uživatelské rozhraní sady Visual Studio by mělo během této doby reagovat, které používá `async` povoluje. Nahraďte řádek kódu v metodě následujícím kódem:
+**Získejte kořen stromu syntaxe.** Chcete-li upravit kód, musíte vytvořit nový strom syntaxe se změnami, které provede oprava kódu. Chcete-li `Document` volat , `GetSyntaxRootAsync`potřebujete z kontextu . Toto je asynchronní metoda, protože je neznámá práce získat strom syntaxe, případně včetně získání souboru z disku, jeho analýzu a vytváření modelu kódu Roslyn pro něj. Visual Studio UI by měla reagovat `async` během této doby, která pomocí umožňuje. Řádek kódu v metodě se nahradí následujícím:
 
 ```csharp
 var root = await context.Document
                         .GetSyntaxRootAsync(context.CancellationToken);
 ```
 
-**Vyhledejte uzel s problémem.** Předáte do rozsahu kontextu, ale nalezený uzel nemusí být kód, který je třeba změnit. Nahlášená Diagnostika poskytuje pouze rozpětí pro identifikátor typu (kde je tato vlnovka patřila), ale je nutné nahradit celý výraz pro vytvoření objektu, včetně klíčového slova `new` na začátku a v závorkách na konci. Do metody přidejte následující kód (a použijte **kombinaci kláves Ctrl**+ **.** Postup přidání příkazu `using` pro `ObjectCreationExpressionSyntax`):
+**Najít uzel s problémem.** Předáte v rozsahu kontextu, ale uzel, který najdete nemusí být kód, který musíte změnit. Hlášená diagnostika poskytla pouze rozsah identifikátoru typu (kam patřila vlnovka), ale je třeba nahradit `new` celý výraz pro vytvoření objektu, včetně klíčového slova na začátku a závorek na konci. Přidejte do metody následující kód (a použijte **kombinaci kláves Ctrl**+**.** přidáte `using` příkaz pro `ObjectCreationExpressionSyntax`):
 
 ```csharp
 var objectCreation = root.FindNode(context.Span)
                          .FirstAncestorOrSelf<ObjectCreationExpressionSyntax>();
 ```
 
-**Zaregistrujte opravu kódu pro uživatelské rozhraní žárovky.** Když zaregistrujete opravu kódu, Roslyn se do uživatelského rozhraní aplikace Visual Studio automaticky připojí k uživatelskému rozhraní žárovky. Koncovým uživatelům uvidí, že můžou používat **Ctrl**+ **.** (tečka), když analyzátor využije špatný `ImmutableArray<T>` konstruktoru. Vzhledem k tomu, že se poskytovatel opravy kódu spustí pouze v případě, že dojde k problému, můžete předpokládat, že máte hledaný výraz pro vytvoření objektu. Z kontextového parametru můžete zaregistrovat novou opravu kódu přidáním následujícího kódu na konec `RegisterCodeFixAsync` metody:
+**Zaregistrujte opravu kódu pro ui žárovky.** Při registraci opravy kódu roslyn připojí do visual studio žárovky ujzlíku automaticky. Koncoví uživatelé uvidí, že mohou používat **kombinaci kláves**+**.** (tečka), kdy váš analyzátor vlní špatné `ImmutableArray<T>` použití konstruktoru. Vzhledem k tomu, že zprostředkovatel opravy kódu se spustí pouze v případě, že došlo k problému, můžete předpokládat, že máte výraz vytvoření objektu, který jste hledali. Z parametru context můžete zaregistrovat novou opravu kódu přidáním `RegisterCodeFixAsync` následujícího kódu na konec metody:
 
 ```csharp
 context.RegisterCodeFix(
@@ -262,17 +262,17 @@ context.RegisterCodeFix(
             context.Diagnostics[0]);
 ```
 
-Je nutné umístit blikající kurzor editoru do identifikátoru `CodeAction`a potom použít **Ctrl**+ **.** (period), chcete-li přidat příslušný příkaz `using` pro tento typ.
+Musíte umístit editors stříšku v `CodeAction`identifikátoru, , pak použijte **Ctrl**+**.** (tečka) pro `using` přidání příslušného prohlášení pro tento typ.
 
-Pak umístěte blikající kurzor editoru do identifikátoru `ChangeToImmutableArrayEmpty` a použijte **kombinaci kláves Ctrl**+ **.** znovu pro vygenerování tohoto zástupného kódu metody.
+Potom umístěte stříšku editoru do identifikátoru a použijte `ChangeToImmutableArrayEmpty` **klávesu Ctrl**+**.** znovu generovat tuto metodu se zakázaným inzerováním pro vás.
 
-Tento poslední fragment kódu, který jste přidali, zaregistruje opravu kódu předáním `CodeAction` a ID diagnostiky pro druh problému, který byl nalezen. V tomto příkladu je k dispozici pouze jedno ID diagnostiky, pro který tento kód poskytuje opravy, takže můžete jednoduše předat první prvek pole ID diagnostiky. Při vytváření `CodeAction`předáte text, který by měl uživatelské rozhraní žárovky používat jako Popis opravy kódu. Předáte také funkci, která přijímá CancellationToken a vrátí nový dokument. Nový dokument má nový strom syntaxe, který obsahuje váš opravený kód, který volá `ImmutableArray.Empty`. Tento fragment kódu používá výraz lambda tak, aby se mohl zavřít v uzlu objectCreation a v dokumentu kontextu.
+Tento poslední fragment kódu, který jste přidali, `CodeAction` zaregistruje opravu kódu předáním a diagnostického ID pro druh nalezeného problému. V tomto příkladu existuje pouze jedno diagnostické ID, které tento kód poskytuje opravy, takže můžete předat první prvek pole id diagnostiky. Při vytváření `CodeAction`, předáte v textu, který by měl použít ui žárovky jako popis opravy kódu. Také předat funkci, která má CancellationToken a vrátí nový dokument. Nový dokument má nový strom syntaxe, který `ImmutableArray.Empty`obsahuje opravený kód, který volá . Tento fragment kódu používá lambda tak, aby jej můžete zavřít přes objektVytvoření uzlu a dokumentu kontextu.
 
-**Vytvořte nový strom syntaxe.** V metodě `ChangeToImmutableArrayEmpty`, jejíž dříve vygenerovali stub, zadejte řádek Code: `ImmutableArray<int>.Empty;`. Pokud znovu zobrazíte okno **syntax visualizer** nástrojů, uvidíte tuto syntaxi uzel SimpleMemberAccessExpression. To je to, co tato metoda potřebuje k sestavení a vrácení v novém dokumentu.
+**Vytvořte nový strom syntaxe.** Do `ChangeToImmutableArrayEmpty` metody, jejíž zástupný kód jste vygenerovali dříve, zadejte řádek kódu: `ImmutableArray<int>.Empty;`. Pokud znovu zobrazíte okno nástroje **Vizualizace syntaxe,** uvidíte, že tato syntaxe je uzel SimpleMemberAccessExpression. To je to, co tato metoda potřebuje k vytvoření a vrácení v novém dokumentu.
 
-První změna `ChangeToImmutableArrayEmpty` je přidání `async` před `Task<Document>`, protože generátory kódu nemohou předpokládat, že by metoda měla být asynchronní.
+První změna `ChangeToImmutableArrayEmpty` je přidat `async` `Task<Document>` před, protože generátory kódu nelze předpokládat, že metoda by měla být asynchronní.
 
-Vyplňte text následujícím kódem, aby vaše metoda vypadala podobně jako v následujícím příkladu:
+Vyplňte tělo s následujícím kódem tak, aby vaše metoda vypadá podobně jako následující:
 
 ```csharp
 private async Task<Document> ChangeToImmutableArrayEmpty(
@@ -288,28 +288,28 @@ private async Task<Document> ChangeToImmutableArrayEmpty(
 }
 ```
 
-V identifikátoru `SyntaxGenerator` bude nutné vložit blikající kurzor a použít **Ctrl**+ **.** (period), chcete-li přidat příslušný příkaz `using` pro tento typ.
+Budete muset dát editors stříšky `SyntaxGenerator` v identifikátoru a používat **Ctrl**+**.** (tečka) pro `using` přidání příslušného prohlášení pro tento typ.
 
-Tento kód používá `SyntaxGenerator`, což je užitečný typ pro vytváření nového kódu. Po získání generátoru pro dokument, který má problém s kódem, `ChangeToImmutableArrayEmpty` volá `MemberAccessExpression`a předání typu, který má člen, pro který chceme získat přístup a předání názvu člena jako řetězce.
+Tento kód `SyntaxGenerator`používá , což je užitečný typ pro vytváření nového kódu. Po získání generátoru pro dokument, který `ChangeToImmutableArrayEmpty` `MemberAccessExpression`má problém s kódem, volání , předání typu, který má člen chceme získat přístup a předání jméno člena jako řetězec.
 
-V dalším kroku metoda načte kořen dokumentu a protože to může zahrnovat libovolnou práci v obecném případě, kód očekává toto volání a předá token zrušení. Modely kódu Roslyn jsou neměnné, jako při práci s řetězcem .NET; Při aktualizaci řetězce se při návratu zobrazí nový objekt řetězce. Když zavoláte `ReplaceNode`, vrátíte se do nového kořenového uzlu. Většina stromu syntaxe je sdílena (protože je neměnný), ale uzel `objectCreation` je nahrazen uzlem `memberAccess` a zároveň všechny nadřazené uzly až do kořenového adresáře stromu syntaxe.
+Dále metoda načte kořen dokumentu a protože to může zahrnovat libovolnou práci v obecném případě, kód čeká na toto volání a předá token zrušení. Modely kódu Roslyn jsou neměnné, jako je práce s řetězcem .NET; při aktualizaci řetězce získáte nový objekt řetězce na oplátku. Při volání `ReplaceNode`získáte zpět nový kořenový uzel. Většina stromu syntaxe je sdílena (protože je `objectCreation` neměnný), `memberAccess` ale uzel je nahrazen uzlem, stejně jako všechny nadřazené uzly až do kořene kořene stromu syntaxe.
 
-## <a name="try-your-code-fix"></a>Vyzkoušejte si opravu kódu
+## <a name="try-your-code-fix"></a>Vyzkoušejte opravu kódu
 
-Nyní můžete stisknutím klávesy **F5** spustit Analyzátor ve druhé instanci aplikace Visual Studio. Otevřete projekt konzoly, který jste použili dříve. Nyní by se měla zobrazit žárovka, kde je nový výraz pro vytvoření objektu `ImmutableArray<int>`. Pokud stisknete klávesu **Ctrl**+ **.** (tečka), zobrazí se oprava kódu a v uživatelském rozhraní žárovky se zobrazí automaticky vygenerovaný náhled rozdílů kódu. Roslyn to vytvoří za vás.
+Nyní můžete stisknutím **klávesy F5** spustit analyzátor v druhé instanci sady Visual Studio. Otevřete projekt konzoly, který jste používali dříve. Nyní byste měli vidět žárovku se zobrazí, `ImmutableArray<int>`kde je nový výraz pro vytvoření objektu pro . Pokud stisknete **kombinaci kláves ctrl**+**.** (tečka), pak uvidíte opravu kódu a v uzdvižně vygenerovaném náhledu rozdílu kódu. Roslyn to pro tebe vytvořila.
 
-**Tip pro:** Pokud spustíte druhou instanci aplikace Visual Studio a žárovku s opravou kódu nevidíte, možná budete muset vymazat mezipaměť komponent sady Visual Studio. Vymazání mezipaměti vynutí, aby aplikace Visual Studio znovu prozkoumala komponenty, takže Visual Studio by pak mělo vybrat nejnovější komponentu. Nejprve vypněte druhou instanci aplikace Visual Studio. Pak v **Průzkumníkovi Windows**přejděte do *%localappdata%\Microsoft\VisualStudio\16.0Roslyn\\* . ("16,0" se změní z verze na verzi pomocí sady Visual Studio.) Odstraňte podadresář *ComponentModelCache*.
+**Pro Tip:** Pokud spustíte druhou instanci sady Visual Studio a nevidíte žárovku s opravou kódu, bude pravděpodobně nutné vymazat mezipaměť komponent sady Visual Studio. Vymazání mezipaměti vynutí Visual Studio znovu prozkoumat součásti, takže Visual Studio by pak měl vyzvednout nejnovější součásti. Nejprve vypněte druhou instanci sady Visual Studio. Potom v **Průzkumníkovi Windows**přejděte na *\\%LOCALAPPDATA%\Microsoft\VisualStudio\16.0Roslyn*. ("16.0" změní z verze na verzi s Visual Studio.) Odstraňte podadresář *ComponentModelCache*.
 
-## <a name="talk-video-and-finish-code-project"></a>Pohovořit video a dokončit projekt kódu
+## <a name="talk-video-and-finish-code-project"></a>Diskuse o videu a dokončení projektu kódu
 
-Tento příklad můžete zobrazit v [tomto rozhovoru](https://channel9.msdn.com/events/Build/2015/3-725)a podrobněji na něm. Tento rozhovor ukazuje pracovní analyzátor a provede vás procesem jeho sestavení.
+Můžete vidět tento příklad vyvinut a diskutovány dále v [této řeči](https://channel9.msdn.com/events/Build/2015/3-725). Diskuse demonstruje pracovní analyzátor a provede vás jeho stavbou.
 
-[Zde](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)můžete zobrazit veškerý dokončený kód. Podsložky *DoNotUseImmutableArrayCollectionInitializer* a *DoNotUseImmutableArrayCtor* mají každý C# soubor pro hledání problémů a C# soubor, který implementuje opravy kódu, které se zobrazují v uživatelském rozhraní nástroje Visual Studio Light žárovky. Všimněte si, že dokončený kód má trochu větší abstrakci, aby nedošlo k načtení ImmutableArray\<T > typu objektu. Používá vnořené zaregistrované akce k uložení objektu typu v kontextu, který je k dispozici vždy, když se spustí dílčí akce (analýza inicializace objektů a analýza kolekcí).
+Můžete vidět všechny hotové kód [zde](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers). Podsložky *DoNotUseImmutableArrayCollectionInitializer* a *DoNotUseImmutableArrayCtor* mají soubor C# pro hledání problémů a soubor Jazyka C#, který implementuje opravy kódu, které se zobrazují v uzlech žárovky Visual Studio. Všimněte si, že hotový kód má trochu více abstrakce, aby se zabránilo načítání objektu typu ImmutableArray\<T> znovu a znovu. Používá vnořené registrované akce k uložení objektu typu v kontextu, který je k dispozici při každém spuštění dílčích akcí (analýza vytváření objektů a analýzy inicializace kolekce).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-* [\\\Build 2015 rozhovor](https://channel9.msdn.com/events/Build/2015/3-725)
-* [Hotový kód na GitHubu](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)
-* [Několik příkladů na GitHubu, seskupené do tří druhů analyzátorů](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
-* [Další dokumentace na webu GitHub OSS](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)
+* [\\\Build 2015 diskuse](https://channel9.msdn.com/events/Build/2015/3-725)
+* [Dokončený kód na GitHubu](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)
+* [Několik příkladů na GitHubu, seskupených do tří druhů analyzátorů](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
+* [Další dokumenty na webu GitHub OSS](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)
 * [Pravidla FxCop implementovaná pomocí analyzátorů Roslyn na GitHubu](https://github.com/dotnet/roslyn/tree/master/src/Diagnostics/FxCop)

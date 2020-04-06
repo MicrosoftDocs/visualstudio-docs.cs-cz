@@ -1,45 +1,45 @@
 ---
-title: 'Návod: použití klávesových zkratek s rozšířením editoru | Microsoft Docs'
+title: 'Návod: Použití klávesové zkratky s rozšířením editoru | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - link keystrokes to commands
 ms.assetid: cf6cc6c6-5a65-4f90-8f14-663decf74672
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d95d41024bd839c8c556ac94501b20d1a81b7a97
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 651598c0dbe746a9a26a6d60ce72b02853f98d47
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647901"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697155"
 ---
-# <a name="walkthrough-use-a-shortcut-key-with-an-editor-extension"></a>Návod: použití klávesových zkratek s rozšířením editoru
-Můžete reagovat na klávesové zkratky v rozšíření editoru. Následující návod ukazuje, jak přidat doplňky zobrazení do textového zobrazení pomocí klávesových zkratek. Tento návod je založen na šabloně editoru doplňků zobrazení a umožňuje přidat doplňky pomocí znaku +.
+# <a name="walkthrough-use-a-shortcut-key-with-an-editor-extension"></a>Návod: Použití klávesové zkratky s rozšířením editoru
+Můžete reagovat na klávesové zkratky v rozšíření editoru. Následující návod ukazuje, jak přidat vylepšení zobrazení do zobrazení textu pomocí klávesové zkratky. Tento návod je založen na šabloně editoru vylepšení výřezu a umožňuje přidat vylepšení pomocí znaku +.
 
 ## <a name="prerequisites"></a>Požadavky
- Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+ Počínaje Visual Studio 2015, nenainstalujete Visual Studio SDK ze služby stažení. Je součástí volitelné funkce v nastavení sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace naleznete [v tématu Instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="create-a-managed-extensibility-framework-mef-project"></a>Vytvořit projekt Managed Extensibility Framework (MEF)
+## <a name="create-a-managed-extensibility-framework-mef-project"></a>Vytvoření projektu spravovaného rámce rozšiřitelnosti (MEF)
 
-1. Vytvořte projekt C# VSIX. (V dialogovém okně **Nový projekt** vyberte možnost **vizuální C# rozšíření**a **projekt VSIX**.) Pojmenujte `KeyBindingTest` řešení.
+1. Vytvořte projekt C# VSIX. (V dialogovém okně **Nový projekt** vyberte možnost **Vizuální C# / Rozšiřitelnost**a potom **v six projectu**.) Pojmenujte `KeyBindingTest`řešení .
 
-2. Přidejte do projektu šablonu položky vylepšení textu editoru a pojmenujte ji `KeyBindingTest`. Další informace naleznete v tématu [Vytvoření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).
+2. Přidejte do projektu šablonu položky Vylepšení `KeyBindingTest`textu editoru a pojmenujte ji . Další informace naleznete [v tématu Vytvoření rozšíření se šablonou položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).
 
-3. Přidejte následující odkazy a nastavte **CopyLocal** na `false`:
+3. Přidejte následující odkazy a nastavte `false` **CopyLocal** na :
 
-    Microsoft. VisualStudio. Editor
+    Microsoft.VisualStudio.Editor
 
-    Microsoft. VisualStudio. OLE. Interop
+    Microsoft.VisualStudio.OLE.Interop
 
-    Microsoft. VisualStudio. Shell. 14.0
+    Microsoft.VisualStudio.Shell.14.0
 
-    Microsoft. VisualStudio. TextManager. Interop
+    Microsoft.VisualStudio.TextManager.Interop
 
-   V souboru třídy KeyBindingTest změňte název třídy na PurpleCornerBox. Použijte žárovku, která se zobrazí na levém okraji, a proveďte další příslušné změny. Uvnitř konstruktoru změňte název přípředné vrstvy z **KeyBindingTest** na **PurpleCornerBox**:
+   V souboru třídy KeyBindingTest změňte název třídy na PurpleCornerBox. Použijte žárovku, která se zobrazí v levém okraji, abyste udělali další vhodné změny. Uvnitř konstruktoru změňte název vrstvy vylepšení z **KeyBindingTest** na **PurpleCornerBox**:
 
 ```csharp
 this.layer = view.GetAdornmentLayer("PurpleCornerBox");
@@ -54,16 +54,16 @@ V souboru třídy KeyBindingTestTextViewCreationListener.cs změňte název Ador
 public AdornmentLayerDefinition editorAdornmentLayer;
 ```
 
-## <a name="handle-typechar-command"></a>Zpracovat příkaz TYPECHAR
-Před vydáním sady Visual Studio 2017 verze 15,6 jediným způsobem, jak zpracovávat příkazy v rozšíření editoru, je implementace filtru příkazů založeného na <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>. Visual Studio 2017 verze 15,6 představila moderní zjednodušený přístup na základě obslužných rutin příkazů editoru. Následující dvě části ukazují, jak zpracovat příkaz pomocí staršího i moderního přístupu.
+## <a name="handle-typechar-command"></a>Popisovač TYPECHAR, příkaz
+Před Visual Studio 2017 verze 15.6 jediný způsob, jak pracovat s <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> příkazy v rozšíření editoru byla implementace filtru příkazů na základě. Visual Studio 2017 verze 15.6 zavedlo moderní zjednodušený přístup založený na obslužných rutinách příkazů editoru. Následující dvě části ukazují, jak zpracovat příkaz pomocí starší verze a moderní přístup.
 
-## <a name="define-the-command-filter-prior-to-visual-studio-2017-version-156"></a>Definice filtru příkazů (před verzí sady Visual Studio 2017 15,6)
+## <a name="define-the-command-filter-prior-to-visual-studio-2017-version-156"></a>Definování filtru příkazů (před Visual Studio 2017 verze 15.6)
 
- Filtr příkazů je implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>, která zpracovává příkaz vytvořením doplňky.
+ Příkaz ový filtr je <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>implementace aplikace , která zpracovává příkaz vytvořením instance vylepšení.
 
-1. Přidejte soubor třídy a pojmenujte ho `KeyBindingCommandFilter`.
+1. Přidejte soubor třídy `KeyBindingCommandFilter`a pojmenujte jej .
 
-2. Přidejte následující direktivy using.
+2. Přidejte následující pomocí direktiv.
 
     ```csharp
     using System;
@@ -74,13 +74,13 @@ Před vydáním sady Visual Studio 2017 verze 15,6 jediným způsobem, jak zprac
 
     ```
 
-3. Třída s názvem KeyBindingCommandFilter by měla dědit z <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>.
+3. Třída s názvem KeyBindingCommandFilter <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>by měla dědit z .
 
     ```csharp
     internal class KeyBindingCommandFilter : IOleCommandTarget
     ```
 
-4. Přidejte soukromá pole pro textové zobrazení, další příkaz v řetězu příkazů a příznak, který představuje, zda byl filtr příkazů již přidán.
+4. Přidejte soukromá pole pro zobrazení textu, další příkaz v řetězci příkazů a příznak představující, zda již byl přidán filtr příkazů.
 
     ```csharp
     private IWpfTextView m_textView;
@@ -89,7 +89,7 @@ Před vydáním sady Visual Studio 2017 verze 15,6 jediným způsobem, jak zprac
     internal bool m_adorned;
     ```
 
-5. Přidejte konstruktor, který nastaví textové zobrazení.
+5. Přidejte konstruktor, který nastaví zobrazení textu.
 
     ```csharp
     public KeyBindingCommandFilter(IWpfTextView textView)
@@ -99,7 +99,7 @@ Před vydáním sady Visual Studio 2017 verze 15,6 jediným způsobem, jak zprac
     }
     ```
 
-6. Implementujte metodu `QueryStatus()` následujícím způsobem.
+6. Implementujte `QueryStatus()` metodu následujícím způsobem.
 
     ```csharp
     int IOleCommandTarget.QueryStatus(ref Guid pguidCmdGroup, uint cCmds, OLECMD[] prgCmds, IntPtr pCmdText)
@@ -108,7 +108,7 @@ Před vydáním sady Visual Studio 2017 verze 15,6 jediným způsobem, jak zprac
     }
     ```
 
-7. Implementujte metodu `Exec()` tak, aby do zobrazení přidala fialové pole, pokud je zapsán znak plus ( **+** ).
+7. Implementujte `Exec()` metodu tak, aby přidala do zobrazení**+** fialové pole, pokud je zadán znak znaménko plus ( ).
 
     ```csharp
     int IOleCommandTarget.Exec(ref Guid pguidCmdGroup, uint nCmdID, uint nCmdexecopt, IntPtr pvaIn, IntPtr pvaOut)
@@ -132,10 +132,10 @@ Před vydáním sady Visual Studio 2017 verze 15,6 jediným způsobem, jak zprac
 
     ```
 
-## <a name="add-the-command-filter-prior-to-visual-studio-2017-version-156"></a>Přidejte filtr příkazů (před verzí Visual Studio 2017 15,6)
- Poskytovatel doplňků musí do textového zobrazení přidat filtr příkazů. V tomto příkladu poskytovatel implementuje <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> k naslouchání událostem vytváření zobrazení textu. Tento poskytovatel vylepšení také exportuje vrstvu pro úpravy, která definuje pořadí vykreslování doplňku.
+## <a name="add-the-command-filter-prior-to-visual-studio-2017-version-156"></a>Přidání filtru příkazů (před Visual Studio 2017 verze 15.6)
+ Zprostředkovatel vylepšení musí do textového zobrazení přidat filtr příkazů. V tomto příkladu zprostředkovatel <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> implementuje naslouchat události vytváření zobrazení textu. Tento zprostředkovatel vylepšení také exportuje vrstvu vylepšení, která definuje pořadí vykreslování vylepšení.
 
-1. Do souboru KeyBindingTestTextViewCreationListener přidejte následující direktivy using:
+1. V souboru KeyBindingTestTextViewCreationListener přidejte pomocí direktiv následující:
 
     ```csharp
     using System;
@@ -150,7 +150,7 @@ Před vydáním sady Visual Studio 2017 verze 15,6 jediným způsobem, jak zprac
 
     ```
 
-2. Chcete-li získat adaptér pro zobrazení textu, je nutné naimportovat <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>.
+2. Chcete-li získat adaptér zobrazení textu, je nutné importovat . <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>
 
     ```csharp
     [Import(typeof(IVsEditorAdaptersFactoryService))]
@@ -158,7 +158,7 @@ Před vydáním sady Visual Studio 2017 verze 15,6 jediným způsobem, jak zprac
 
     ```
 
-3. Změňte metodu <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> tak, aby přidala `KeyBindingCommandFilter`.
+3. Změňte <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> metodu tak, `KeyBindingCommandFilter`aby přidá .
 
     ```csharp
     public void TextViewCreated(IWpfTextView textView)
@@ -191,19 +191,19 @@ Před vydáním sady Visual Studio 2017 verze 15,6 jediným způsobem, jak zprac
     }
     ```
 
-## <a name="implement-a-command-handler-starting-in-visual-studio-2017-version-156"></a>Implementace obslužné rutiny příkazu (počínaje verzí Visual Studio 2017 verze 15,6)
+## <a name="implement-a-command-handler-starting-in-visual-studio-2017-version-156"></a>Implementace obslužné rutiny příkazů (počínaje visual studio 2017 verze 15.6)
 
-Nejdřív aktualizujte odkazy NuGet projektu tak, aby odkazovaly na nejnovější Editor API:
+Nejprve aktualizujte odkazy na Nuget projektu tak, aby odkazovaly na nejnovější rozhraní API editoru:
 
-1. Klikněte pravým tlačítkem na projekt a vyberte **Spravovat balíčky NuGet**.
+1. Klikněte pravým tlačítkem myši na projekt a vyberte **spravovat balíčky Nuget**.
 
-2. Ve **Správci balíčků NuGet**vyberte kartu **aktualizace** , zaškrtněte políčko **Vybrat všechny balíčky** a pak vyberte **aktualizovat**.
+2. Ve **Správci balíčků aplikace Nuget**vyberte kartu **Aktualizace,** zaškrtněte políčko **Vybrat všechny balíčky** a pak vyberte **Aktualizovat**.
 
-Obslužná rutina příkazu je implementace <xref:Microsoft.VisualStudio.Commanding.ICommandHandler%601>, která zpracovává příkaz vytvořením doplňku.
+Obslužná rutina příkazu je implementace aplikace <xref:Microsoft.VisualStudio.Commanding.ICommandHandler%601>, která zpracovává příkaz vytvořením instance vylepšení.
 
-1. Přidejte soubor třídy a pojmenujte ho `KeyBindingCommandHandler`.
+1. Přidejte soubor třídy `KeyBindingCommandHandler`a pojmenujte jej .
 
-2. Přidejte následující direktivy using.
+2. Přidejte následující pomocí direktiv.
 
    ```csharp
    using Microsoft.VisualStudio.Commanding;
@@ -213,7 +213,7 @@ Obslužná rutina příkazu je implementace <xref:Microsoft.VisualStudio.Command
    using System.ComponentModel.Composition;
    ```
 
-3. Třída s názvem KeyBindingCommandHandler by měla dědit z `ICommandHandler<TypeCharCommandArgs>` a exportovat jako <xref:Microsoft.VisualStudio.Commanding.ICommandHandler>:
+3. Třída s názvem KeyBindingCommandHandler `ICommandHandler<TypeCharCommandArgs>`by měla <xref:Microsoft.VisualStudio.Commanding.ICommandHandler>dědit z a exportovat ji jako :
 
    ```csharp
    [Export(typeof(ICommandHandler))]
@@ -228,7 +228,7 @@ Obslužná rutina příkazu je implementace <xref:Microsoft.VisualStudio.Command
    public string DisplayName => "KeyBindingTest";
    ```
 
-5. Implementujte metodu `GetCommandState()` následujícím způsobem. Vzhledem k tomu, že tato obslužná rutina příkazu zpracovává základní editor příkazu TYPECHAR, může delegovat povolení příkazu základnímu editoru.
+5. Implementujte `GetCommandState()` metodu následujícím způsobem. Vzhledem k tomu, že tento příkaz obslužná rutina zpracovává příkaz typechar základního editoru, může delegovat povolení příkazu do základního editoru.
 
    ```csharp
    public CommandState GetCommandState(TypeCharCommandArgs args)
@@ -237,7 +237,7 @@ Obslužná rutina příkazu je implementace <xref:Microsoft.VisualStudio.Command
    }
    ```
 
-6. Implementujte metodu `ExecuteCommand()` tak, aby do zobrazení přidala fialové pole, pokud je zapsán znak plus ( **+** ).
+6. Implementujte `ExecuteCommand()` metodu tak, aby přidala do zobrazení**+** fialové pole, pokud je zadán znak znaménko plus ( ).
 
    ```csharp
    public bool ExecuteCommand(TypeCharCommandArgs args, CommandExecutionContext executionContext)
@@ -257,7 +257,7 @@ Obslužná rutina příkazu je implementace <xref:Microsoft.VisualStudio.Command
    }
    ```
 
-   7. Zkopírujte definici vrstvy doplňků ze souboru *KeyBindingTestTextViewCreationListener.cs* do *KeyBindingCommandHandler.cs* a pak odstraňte soubor *KeyBindingTestTextViewCreationListener.cs* :
+   7. Zkopírujte definici vrstvy vylepšení ze souboru *KeyBindingTestTextViewCreationListener.cs* do *KeyBindingCommandHandler.cs* a poté *KeyBindingTestTextViewCreationListener.cs* soubor odstraňte:
 
    ```csharp
    /// <summary>
@@ -270,11 +270,11 @@ Obslužná rutina příkazu je implementace <xref:Microsoft.VisualStudio.Command
    private AdornmentLayerDefinition editorAdornmentLayer;
    ```
 
-## <a name="make-the-adornment-appear-on-every-line"></a>Zobrazení přívylepšení na každém řádku
+## <a name="make-the-adornment-appear-on-every-line"></a>Aby se ozdoba objevila na každém řádku
 
-Původní doplňky se objevily u každého znaku a v textovém souboru. Teď, když jsme změnili kód tak, aby přidal doplňky jako odpověď na **+** znak, přidá doplňky jenom na řádek, na kterém je zadaný **+** znak. Kód pro úpravy můžeme změnit tak, aby se doplňky zobrazovaly na všech znakech a.
+Původní ozdoba se objevila na každém znaku "a" v textovém souboru. Nyní, když jsme změnili kód přidat vylepšení **+** v reakci na znak, přidá vylepšení **+** pouze na řádku, kde je zadán znak. Můžeme změnit kód ozdoby tak, aby ozdoba opět objeví na každém 'a'.
 
-V souboru *KeyBindingTest.cs* změňte metodu `CreateVisuals()` tak, aby procházela všemi řádky v zobrazení, aby se vyměnil znak "a".
+V *souboru KeyBindingTest.cs* `CreateVisuals()` změňte metodu iterátpřes všechny řádky v zobrazení k dekoraci znaku 'a'.
 
 ```csharp
 private void CreateVisuals(ITextViewLine line)
@@ -320,8 +320,8 @@ private void CreateVisuals(ITextViewLine line)
 
 ## <a name="build-and-test-the-code"></a>Sestavení a testování kódu
 
-1. Sestavte řešení KeyBindingTest a spusťte ho v experimentální instanci.
+1. Vytvořte řešení KeyBindingTest a spusťte jej v experimentální instanci.
 
-2. Vytvořte nebo otevřete textový soubor. Zadejte některá slova obsahující znak "a" a potom zadejte **+** kdekoli v textovém zobrazení.
+2. Vytvořte nebo otevřete textový soubor. Zadejte některá slova obsahující znak "a" a pak zadejte **+** kdekoli v textovém zobrazení.
 
-     Do každého znaku a v souboru by se měl objevit fialový čtverec.
+     Na každém znaku "a" v souboru by se měl objevit fialový čtverec.

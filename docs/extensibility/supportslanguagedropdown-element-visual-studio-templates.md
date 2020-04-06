@@ -1,5 +1,5 @@
 ---
-title: SupportsLanguageDropDown – – element (šablony sady Visual Studio) | Microsoft Docs
+title: Podporuje ElementLanguageDropDown (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - SupportsLanguageDropDown element [Visual Studio Templates]
 - <SupportsLanguageDropDown> element [Visual Studio Templates]
 ms.assetid: 641197d5-f724-4c06-bc47-2e22dad3fbfb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9b5727bd9aa09b05fc95d8f9f9b7913a6046b81
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1230b493fe746a272cf4ca4cffe9d197afd8ba1b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72719417"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80699459"
 ---
 # <a name="supportslanguagedropdown-element-visual-studio-templates"></a>SupportsLanguageDropDown – element (šablony sady Visual Studio)
-Určuje, zda je šablona položky webu identická pro více jazyků a zda je v dialogovém okně **Přidat novou položku** možnost **jazyk** povolená.
+Určuje, zda je šablona webové položky shodná pro více jazyků a zda je v dialogovém okně **Přidat novou položku** povolena možnost **Jazyk.**
 
- \<VSTemplate > \<TemplateData > \<SupportsLanguageDropDown >
+ \<VSTemplate \<> TemplateData> \<podporuje> Rozvržení jazyka
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,31 +36,31 @@ Určuje, zda je šablona položky webu identická pro více jazyků a zda je v d
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené elementy
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být buď `true`, nebo `false`, který označuje, jestli je možnost **jazyk** k dispozici v dialogovém okně **Přidat novou položku** .
+ Text musí být `true` `false`buď nebo , označující, zda je možnost **Jazyk** k dispozici v dialogovém okně **Přidat novou položku.**
 
 ## <a name="remarks"></a>Poznámky
- `SupportsLanguageDropDown` je volitelný prvek. Výchozí hodnota je `false`.
+ `SupportsLanguageDropDown`je volitelný prvek. Výchozí hodnota je `false`.
 
- Element `SupportsLanguageDropDown` je k dispozici pouze pro šablony webových položek.
+ Prvek `SupportsLanguageDropDown` je k dispozici pouze pro šablony webových položek.
 
- Pokud je hodnota tohoto prvku nastavena na `true`, je šablona položky shodná pro všechny programovací jazyky a možnost **jazyk** je povolena v dialogovém okně **Přidat novou položku** . Tato možnost umožňuje zvolit programovací jazyk nové položky, kterou chcete vytvořit z šablony.
+ Pokud je hodnota tohoto prvku `true`nastavena na hodnotu , je šablona položky shodná pro všechny programovací jazyky a možnost **Jazyk** je povolena v dialogovém okně **Přidat novou položku.** Tato možnost umožňuje zvolit programovací jazyk nové položky, kterou chcete vytvořit ze šablony.
 
 ## <a name="example"></a>Příklad
- Následující příklad určuje, že se má zobrazit možnost rozevíracího seznamu **jazyka** .
+ Následující příklad určuje zobrazení možnosti rozevíracího **seznamu Jazyk.**
 
 ```
 <VSTemplate Version="3.0.0" Type="Project"
@@ -84,6 +84,6 @@ Určuje, zda je šablona položky webu identická pro více jazyků a zda je v d
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

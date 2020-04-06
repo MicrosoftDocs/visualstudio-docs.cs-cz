@@ -1,30 +1,30 @@
 ---
-title: Task_state_faulted – pole | Dokumentace Microsoftu
+title: TASK_STATE_FAULTED pole | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - TASK_STATE_FAULTED field, Task class [.NET Framework debug engines]
 ms.assetid: ced826ae-09a9-4acf-af00-a2343d396bb8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f8ae3c654518ec051d3f4d1fd0eeb43b4ef5e710
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1c9bd5b9ec57e652dd7a57ee3434a2525eeeedbe
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348364"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712681"
 ---
-# <a name="taskstatefaulted-field"></a>Task_state_faulted – pole
-Úloha byla dokončena z důvodu neošetřené výjimky.
+# <a name="task_state_faulted-field"></a>TASK_STATE_FAULTED pole
+Úkol byl dokončen z důvodu neošetřené výjimky.
 
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>
+ **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Sestavení:** mscorlib (v *mscorlib.dll*)
+ **Sestava:** mscorlib (v *mscorlib.dll*)
 
- Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.
+ Vzhledem k tomu, že k tomuto internímu členu nemáte přístup z rozhraní .NET Framework, je ve společném zprostředkujícím jazyce (CIL) k dispozici následující syntaxe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,7 +33,7 @@ ms.locfileid: "66348364"
 ```
 
 ## <a name="remarks"></a>Poznámky
- Pokud [m_stateflags –](../../extensibility/debugger/m-stateflags-field.md) pole obsahuje tuto hodnotu <xref:System.Threading.Tasks.Task.Status%2A> vrátí vlastnost <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>.
+ Pokud [m_stateFlags](../../extensibility/debugger/m-stateflags-field.md) pole obsahuje tuto <xref:System.Threading.Tasks.Task.Status%2A> hodnotu, vrátí vlastnost <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>.
 
-## <a name="see-also"></a>Viz také:
-- [Třída úlohy](../../extensibility/debugger/task-class-internal-members.md)
+## <a name="see-also"></a>Viz také
+- [Třída úkolu](../../extensibility/debugger/task-class-internal-members.md)

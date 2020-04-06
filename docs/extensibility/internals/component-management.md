@@ -1,52 +1,52 @@
 ---
-title: Správa komponent | Dokumentace Microsoftu
+title: Správa komponent | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - installation [Visual Studio SDK], components
 - installation [Visual Studio SDK], file management
 ms.assetid: 029bffa2-6841-4caa-a41a-442467e1aedc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 477079cdb0349b2299b5cb829770800a4930958d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b5dcac9fb14a83021b852be2c52436fcdca84bf5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310016"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709327"
 ---
 # <a name="component-management"></a>Správa komponent
-Jednotky úloh v instalačním programu sady Windows se označují jako součásti Instalační služby systému Windows (říká se jim WICs nebo pouze komponenty). Identifikátor GUID identifikuje každý WIC, což je základní jednotkou instalace a pro nastavení, která pomocí Instalační služby systému Windows pro počítání odkazů.
+Jednotky úloh v Instalační službě systému Windows jsou označovány jako součásti Instalační služby systému Windows (někdy nazývané WiC nebo pouze součásti). Identifikátor GUID identifikuje každý wic, což je základní jednotka instalace a počítání odkazů pro nastavení, která používají Instalační službu systému Windows.
 
- I když několik produktů slouží k vytvoření balíčku VSPackage instalační program, tento postup předpokládá použití Instalační služby systému Windows (*MSI*) soubory. Při vytváření instalační program, musíte správně spravovat nasazení souborů tak, aby správné počítání se stane po celou dobu. V důsledku toho různé verze produktu nebude rušit nebo rozdělit mezi sebou v kombinaci instalace a odinstalace scénáře.
+ Přestože k vytvoření instalačního programu VSPackage můžete použít několik produktů, tato diskuse předpokládá použití souborů Instalační služby systému Windows (*MSI*). Při vytváření instalačního programu je nutné správně spravovat nasazení souborů, aby vždy nastat správné počítání odkazů. V důsledku toho různé verze produktu nebudou vzájemně zasahovat ani se vzájemně rozbít v kombinaci scénářů instalace a odinstalace.
 
- V instalačním programu Windows počítání odkazů dochází na úrovni součásti. Musíte pečlivě uspořádání prostředků – soubory, položky registru a tak dále, do komponenty. Existují další úrovně organizace, jako jsou moduly, funkce a produkty –, které mohou pomoci v různých scénářích. Další informace najdete v tématu [Instalační služby systému Windows Základy](../../extensibility/internals/windows-installer-basics.md).
+ V Instalační službě systému Windows dochází k počítání odkazů na úrovni komponenty. Je nutné pečlivě uspořádat prostředky – soubory, položky registru a tak dále – do součástí. Existují i jiné úrovně organizace , které mohou pomoci v různých scénářích. Další informace naleznete v [tématu Základy Instalační služby systému Windows](../../extensibility/internals/windows-installer-basics.md).
 
-## <a name="guidelines-of-authoring-setup-for-side-by-side-installation"></a>Pokyny k vytváření nastavení pro instalaci vedle sebe
+## <a name="guidelines-of-authoring-setup-for-side-by-side-installation"></a>Pokyny pro vytváření nastavení pro souběžnou instalaci
 
-- Autor soubory a klíče registru, které jsou odkazy sdíleny mezi verzí do jejich vlastních složek.
+- Autor soubory a klíče registru, které jsou sdíleny mezi verzemi do svých vlastních součástí.
 
-     To umožňuje snadno je můžou využívat v budoucí verzi. Například knihovny typů, které jsou registrovány globálně, přípony souborů, další položky zaregistrované v **HKEY_CLASSES_ROOT**, a tak dále.
+     To vám umožní snadno je konzumovat v další verzi. Například knihovny typů, které jsou registrovány globálně, přípony souborů, další položky registrované v **HKEY_CLASSES_ROOT**a tak dále.
 
-- Sdílené součásti pro seskupení samostatné slučovací moduly.
+- Seskupte sdílené součásti do samostatných slučovacích modulů.
 
-     Tato strategie pomáhá Autor správně pro instalaci vedle sebe v budoucnu.
+     Tato strategie vám pomůže správně vytvářet pro souběžné instalace vpřed.
 
-- Nainstalujte sdíleným souborům a klíčům registru pomocí stejné komponenty Instalační služby systému Windows ve verzích.
+- Nainstalujte sdílené soubory a klíče registru pomocí stejných součástí Instalační služby systému Windows v různých verzích.
 
-     Pokud používáte jiné součásti, soubory a položky registru jsou odinstalovat, pokud jeden označené verzí balíčku VSPackage je odinstalována, ale jiné VSPackage je nainstalovaná.
+     Pokud používáte jinou komponentu, soubory a položky registru jsou odinstalovány, když je odinstalován jeden vsed verze VSPackage, ale jiný VSPackage je stále nainstalován.
 
-- Nekombinujte čísly verzí a sdílené položky pod stejnou komponentou.
+- Nemíchejte verze a sdílené položky ve stejné součásti.
 
-     To znemožňuje nainstalovat do globální umístění a verzované položky, které chcete izolované umístění sdílené položky.
+     Tím znemožňujete instalaci sdílených položek do globálního umístění a položek s verzí do izolovaných umístění.
 
-- Není nutné klíče sdíleného registru, které odkazují na soubory označené verzí.
+- Nemáte sdílené klíče registru, které odkazují na soubory s verzí.
 
-     Pokud tak učiníte, při instalaci jinou verzí balíčku VSPackage se přepíše sdílené klíče. Po odebrání druhou verzi souboru, ke kterému bude ukazovat klíč je pryč.
+     Pokud tak učiníte, sdílené klíče budou přepsány při instalaci jiné verze VSPackage. Po odebrání druhé verze je soubor, na který klíč ukazuje, pryč.
 
-## <a name="see-also"></a>Viz také:
-- [Výběr mezi sdíleným a verzovaným rozšířením VSPackages](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)
+## <a name="see-also"></a>Viz také
+- [Výběr mezi sdílenými a verzemi vs balíčků](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)
 - [Scénáře instalace balíčku VSPackage](../../extensibility/internals/vspackage-setup-scenarios.md)

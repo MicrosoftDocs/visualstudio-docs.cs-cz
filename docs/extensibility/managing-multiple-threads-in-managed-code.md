@@ -1,31 +1,31 @@
 ---
-title: 'Postupy: Správa více vláken ve spravovaném kódu | Dokumentace Microsoftu'
+title: 'Postup: Správa více vláken ve spravovaném kódu | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 59730063-cc29-4dae-baff-2234ad8d0c8f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 307ee61380b137cc7426c641a85844934ff0377a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ceaa0af4f57fe374cf9cf4b2dd8b4f40af74a852
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66340606"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702783"
 ---
-# <a name="how-to-manage-multiple-threads-in-managed-code"></a>Postupy: Správa více vláken ve spravovaném kódu
-Pokud máte spravované rozšíření VSPackage, která volá asynchronní metody nebo má operace, které jsou spouštěny na vlákna kromě vlákna uživatelského rozhraní Visual Studio, postupujte podle pokynů uvedených níže. Vlákna uživatelského rozhraní můžete zachovat responzivní, protože není nutné čekat pro práci v jiném vlákně, k dokončení. Můžete provést kódu efektivnější, protože není nutné další vlákna, které zabírají prostor v zásobníku a je možné provádět spolehlivější a snadněji ladit, protože zabránit zablokování a konflikty. program přestane reagovat.
+# <a name="how-to-manage-multiple-threads-in-managed-code"></a>Postup: Správa více vláken ve spravovaném kódu
+Pokud máte spravované rozšíření VSPackage, které volá asynchronní metody nebo má operace, které se provádějí v jiných vláknech než ve vlákně uživatelského rozhraní sady Visual Studio, postupujte podle pokynů uvedených níže. Vlákno uživatelského rozhraní můžete zachovat tak, aby reagovalo, protože nemusí čekat na dokončení práce na jiném vlákně. Můžete zefektivnit váš kód, protože nemáte další vlákna, která zabírají místo zásobníku a můžete jej spolehlivější a snadněji ladit, protože se vyhnete zablokování a zablokuje.
 
- Obecně platí, můžete přepnout z vlákna uživatelského rozhraní do jiného vlákna, nebo naopak. Po návratu metody, aktuální vlákno je vlákno, ze kterého byla původně volána.
+ Obecně můžete přepnout z vlákna uživatelského rozhraní na jiné vlákno nebo naopak. Když metoda vrátí, aktuální vlákno je vlákno, ze kterého byl původně volán.
 
 > [!IMPORTANT]
-> Tyto pokyny používají rozhraní API v <xref:Microsoft.VisualStudio.Threading> obor názvů, zejména <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> třídy. Rozhraní API v tomto oboru názvů jsou novinkou [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]. Můžete získat instanci <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> z <xref:Microsoft.VisualStudio.Shell.ThreadHelper> vlastnost `ThreadHelper.JoinableTaskFactory`.
+> Následující pokyny používají api v <xref:Microsoft.VisualStudio.Threading> oboru názvů, zejména <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> třídy. Api v tomto oboru názvů [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]jsou nové v . Můžete získat instanci <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> a <xref:Microsoft.VisualStudio.Shell.ThreadHelper> `ThreadHelper.JoinableTaskFactory`z vlastnosti .
 
-## <a name="switch-from-the-ui-thread-to-a-background-thread"></a>Přepnout z vlákna uživatelského rozhraní na vlákně na pozadí
+## <a name="switch-from-the-ui-thread-to-a-background-thread"></a>Přepnutí z vlákna uživatelského rozhraní na vlákno na pozadí
 
-1. Pokud jsou ve vlákně uživatelského rozhraní a chcete provést asynchronní práce na vlákně na pozadí, použijte `Task.Run()`:
+1. Pokud jste ve vlákně uživatelského rozhraní a chcete provést asynchronní `Task.Run()`práci na vlákně na pozadí, použijte :
 
     ```csharp
     await Task.Run(async delegate{
@@ -35,7 +35,7 @@ Pokud máte spravované rozšíření VSPackage, která volá asynchronní metod
 
     ```
 
-2. Pokud jste ve vlákně uživatelského rozhraní a chcete synchronně blokovat, když se provede práci na vlákně na pozadí, použijte <xref:System.Threading.Tasks.TaskScheduler> vlastnost `TaskScheduler.Default` uvnitř <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>:
+2. Pokud jste ve vlákně uživatelského rozhraní a chcete synchronně blokovat při provádění práce na <xref:System.Threading.Tasks.TaskScheduler> `TaskScheduler.Default` vlákně na pozadí, použijte vlastnost uvnitř <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>:
 
     ```csharp
     // using Microsoft.VisualStudio.Threading;
@@ -47,18 +47,18 @@ Pokud máte spravované rozšíření VSPackage, která volá asynchronní metod
     });
     ```
 
-## <a name="switch-from-a-background-thread-to-the-ui-thread"></a>Přepnout na vlákno uživatelského rozhraní z vlákna na pozadí
+## <a name="switch-from-a-background-thread-to-the-ui-thread"></a>Přepnutí z vlákna na pozadí do vlákna uživatelského rozhraní
 
-1. Pokud jste na vlákně na pozadí a chcete udělat něco na vlákně uživatelského rozhraní, použijte <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>:
+1. Pokud jste ve vlákně na pozadí a chcete něco udělat <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>ve vlákně uživatelského rozhraní, použijte :
 
     ```csharp
     // Switch to main thread
     await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
     ```
 
-     Můžete použít <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> metoda přepnout na vlákno uživatelského rozhraní. Tato metoda odešle zprávu do vlákna uživatelského rozhraní s pokračováním aktuální asynchronní metody a taky komunikuje se službou rest rozhraní dělení na vlákna nastaví správnou prioritu a zabránit zablokování.
+     Tuto metodu <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> můžete použít k přepnutí do vlákna uživatelského rozhraní. Tato metoda odešle zprávu vlákno uživatelského rozhraní s pokračováním aktuální asynchronní metody a také komunikuje se zbytkem architektury podprocesu nastavit správnou prioritu a vyhnout se zablokování.
 
-     Pokud není asynchronní metodu vlákno na pozadí a nemůže provádět asynchronní, můžete stále použít `await` syntaxe přepnout na vlákno uživatelského rozhraní obalením svoji práci s <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>, jako v tomto příkladu:
+     Pokud vaše metoda vlákna na pozadí není asynchronní a nelze ji asynchronní, `await` můžete stále použít syntaxi k přepnutí do vlákna uživatelského rozhraní zabalením práce s <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>, jako v tomto příkladu:
 
     ```csharp
     ThreadHelper.JoinableTaskFactory.Run(async delegate {
