@@ -1,5 +1,5 @@
 ---
-title: IDebugModule2::ReloadSymbols_Deprecated | Dokumentace Microsoftu
+title: IDebugModule2::ReloadSymbols_Deprecated | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugModule2::ReloadSymbols method
 ms.assetid: 0f9f0133-7d58-4cd9-a6ca-1141e095749d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 635e305c0dd88d72017048da6353f813fcc46406
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e776434e17d90cd2c61c926bbf0100a44ecc524b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323961"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726917"
 ---
-# <a name="idebugmodule2reloadsymbolsdeprecated"></a>IDebugModule2::ReloadSymbols_Deprecated
-ZASTARALÉ. NEPOUŽÍVEJTE. Znovu načte symboly pro tento modul.
+# <a name="idebugmodule2reloadsymbols_deprecated"></a>IDebugModule2::ReloadSymbols_Deprecated
+Zastaralé. NEPOUŽÍVEJTE. Znovu načte symboly pro tento modul.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,17 +43,17 @@ int ReloadSymbols( 
 
 ## <a name="parameters"></a>Parametry
 `pszUrlToSymbols`\
-[in] Cesta k úložišti symbolů.
+[v] Cesta k úložišti symbolů.
 
 `pbstrDebugMessage`\
-[out] Vrátí informačních zpráv, jako je například stav nebo chybové zprávy, který se zobrazí napravo od názvu modulu v okně moduly.
+[out] Vrátí informační zprávu, například stav nebo chybovou zprávu, která se zobrazí vpravo od názvu modulu v okně Moduly.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Ladicí stroj by měla vždy vrátit `E_FAIL`.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Ladicí modul by `E_FAIL`měl vždy vrátit .
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda se už nepodporuje. Implementace [LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md) metoda místo.
+ Tato metoda již není podporována. Implementujte metodu [LoadSymbols.](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)
 - [LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md)

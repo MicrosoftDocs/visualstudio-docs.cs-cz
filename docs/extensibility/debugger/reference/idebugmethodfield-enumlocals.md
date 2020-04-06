@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::EnumLocals | Dokumentace Microsoftu
+title: IDebugMethodField::EnumLocals | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugMethodField::EnumLocals method
 ms.assetid: b0456a6d-2b96-49e2-a871-516571b4f6a5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bd4e2ffcaa66af58d3cc7ab57420de32d77eec92
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 08872160860d0d442f9807705dea70190dff9b28
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346769"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727203"
 ---
 # <a name="idebugmethodfieldenumlocals"></a>IDebugMethodField::EnumLocals
-Vytvoří čítač pro vybrané místní proměnné metody.
+Vytvoří čítač výčtu pro vybrané místní proměnné metody.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,18 +43,18 @@ int EnumLocals(
 
 ## <a name="parameters"></a>Parametry
 `pAddress`\
-[in] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) objekt představující adresa pro ladění, který vybere kontextu nebo oboru, ze kterého se má získat oknech místní hodnoty.
+[v] [Objekt IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) představující ladicí adresu, která vybere kontext nebo obor, ze kterého chcete získat místní.
 
 `ppLocals`\
-[out] Vrátí [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objekt představující seznam lokální; v opačném případě vrátí hodnotu null, pokud neexistují žádné místní hodnoty.
+[out] Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam místních obyvatel. v opačném případě vrátí hodnotu null, pokud neexistují žádné místní.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě úspěchu vrátí hodnotu S_OK nebo vrátí S_FALSE v případě, že neexistují žádné místní hodnoty. V opačném případě vrátí kód chyby.
+Pokud je úspěšná, vrátí S_OK nebo vrátí S_FALSE pokud neexistují žádné místní. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Jsou uvedené pouze proměnné definované v rámci bloku, který obsahuje adresu daného ladění. V případě potřeby jsou všechny lokální proměnné, včetně všech místních hodnot vygenerovaný kompilátorem, zavolejte [EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md) metody.
+Jsou uvedeny pouze proměnné definované v rámci bloku, který obsahuje danou adresu ladění. Pokud jsou potřeba všechny místní, včetně místních obyvatel generované kompilátorem, zavolejte metodu [EnumAllLocals.](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md)
 
-Metoda může obsahovat více bloků nebo kontextu oboru. Například následující contrived metoda obsahuje tři obory, dvě vnitřní bloky a samotné tělo metody.
+Metoda může obsahovat více kontextů oboru nebo bloků. Například následující vykonstruovaná metoda obsahuje tři obory, dva vnitřní bloky a samotné tělo metody.
 
 ```csharp
 public void func(int index)
@@ -74,9 +74,9 @@ public void func(int index)
 }
 ```
 
-[IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) objekt představuje `func` metoda sama. Volání `EnumLocals` metodou [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nastavena na `Inner Scope 1` vrátí adresu obsahující Výčet `temp1` proměnných, například.
+Objekt [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) představuje `func` samotnou metodu. Volání `EnumLocals` metody s [iDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nastavenou `Inner Scope 1` na adresu vrátí výčet obsahující například proměnnou. `temp1`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)
 - [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

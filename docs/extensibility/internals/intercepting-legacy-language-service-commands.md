@@ -1,39 +1,39 @@
 ---
-title: Zachycení příkazy služby starší verze jazyka | Dokumentace Microsoftu
+title: Zachycení příkazů služby starších jazyků | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - commands, intercepting language service
 - language services, intercepting commands
 ms.assetid: eea69f03-349c-44bb-bd4f-4925c0dc3e55
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3716f02b076bd5ea7ef63135133acffc823a7703
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5206bced8b4bfae32498434765e5c3f61801b386
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314944"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707441"
 ---
 # <a name="intercepting-legacy-language-service-commands"></a>Příkazy zachytávání služby starší verze jazyka
-S [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], můžete použít příkazy zachycení služby jazyka, které by jinak zpracovávají zobrazení textu. To je užitečné pro konkrétní jazyk chování, které nespravuje zobrazení textu. Tyto příkazy je možné zachytit přidáním jednoho nebo více filtrů příkaz k zobrazení textu z vaší služby jazyka.
+Pomocí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]rozhraní můžete mít příkazy pro zachycení služby jazyka, které by jinak zpracovat textové zobrazení. To je užitečné pro chování specifické pro jazyk, které nespravuje zobrazení textu. Tyto příkazy můžete zachytit přidáním jednoho nebo více filtrů příkazů do textového zobrazení ze služby jazyka.
 
 ## <a name="getting-and-routing-the-command"></a>Získání a směrování příkazu
- Příkaz Filtr je <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> objekt, který sleduje některé sekvence znaků nebo klíče příkazy. Více než jeden filtr příkazu můžete přidružit jeden textové zobrazení. Každé zobrazení textu udržuje příkaz z řetězu filtrů. Po vytvoření nového filtru příkaz přidáte filtr do řetězce pro zobrazení odpovídající text.
+ Filtr příkazů je <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> objekt, který monitoruje určité sekvence znaků nebo příkazy kláves. K jednomu textovému zobrazení můžete přidružit více než jeden filtr příkazů. Každé textové zobrazení udržuje řetězec filtrů příkazů. Po vytvoření nového filtru příkazů přidáte filtr do řetězce pro příslušné textové zobrazení.
 
- Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> přidat příkaz filtr do řetězce. Při volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A>, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vrátí jiný filtr příkaz, ke kterému lze předat příkazy, které filtr příkaz nezpracovává.
+ Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> metody na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> přidat příkazový filtr do řetězce. Při volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vrátí jiný filtr příkazů, ke kterému můžete předat příkazy, které filtr příkazu nezpracovává.
 
- Máte následující možnosti pro zpracování příkazu:
+ Pro zpracování příkazů máte následující možnosti:
 
-- Zpracování příkazu a pak předejte příkazu dalšímu příkazu filtru v řetězci.
+- Zpracovat příkaz a poté jej předat dalšímu příkazu filtru v řetězci.
 
-- Zpracování příkazu a nelze předat příkazu dalšímu filtru příkazu.
+- Zpracovat příkaz a nepředávat příkaz na další příkaz filtr.
 
-- Ke zpracování příkazu, ale příkaz dalšímu filtru příkazu předat.
+- Nezpracovat příkaz, ale předat příkaz na další příkaz filtr.
 
-- Ignorujte příkazu. Nezpracuje v aktuální filtr a nepředávejte dalšímu filtru.
+- Ignorujte příkaz. Nemanipulujte s ním v aktuálním filtru a nepředávají jej dalšímu filtru.
 
-  Informace o příkazech, které by měl zpracovat služby jazyka najdete v tématu [důležité příkazy pro filtry služby jazyka](../../extensibility/internals/important-commands-for-language-service-filters.md).
+  Informace o tom, které příkazy by měla služba jazyka zpracovávat, naleznete [v tématu Důležité příkazy pro filtry jazykové služby](../../extensibility/internals/important-commands-for-language-service-filters.md).

@@ -1,5 +1,5 @@
 ---
-title: REFERENCE_TYPE | Dokumentace Microsoftu
+title: REFERENCE_TYPE | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - REFERENCE_TYPE enumeration
 ms.assetid: b1ffba10-eb9d-48ba-bf48-6d8b71d6f270
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c45457566682e373b879892cfdd26707102ebd5f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 29ce6ad17aa32b98fd28914c422a49bd8bcc14b5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66329271"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713662"
 ---
-# <a name="referencetype"></a>REFERENCE_TYPE
+# <a name="reference_type"></a>REFERENCE_TYPE
 Určuje typ odkazu.
 
 ## <a name="syntax"></a>Syntaxe
@@ -42,17 +42,17 @@ public enum enum_REFERENCE_TYPE { 
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
  `REF_TYPE_WEAK`\
- Určuje nestálý odkaz. Nelze kombinovat s `REF_TYPE_STRONG`.
+ Určuje slabý odkaz. Nelze kombinovat s `REF_TYPE_STRONG`.
 
  `REF_TYPE_STRONG`\
- Určuje silného odkazu. Nelze kombinovat s `REF_TYPE_WEAK`.
+ Určuje silný odkaz. Nelze kombinovat s `REF_TYPE_WEAK`.
 
 ## <a name="remarks"></a>Poznámky
- Použít jako `dwRefType` člena [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury.
+ Používá se `dwRefType` jako člen [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury.
 
- Předán jako parametr [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md) metody.
+ Předánjako parametr metodě [SetReferenceType.](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md)
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -61,7 +61,7 @@ public enum enum_REFERENCE_TYPE { 
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)
 - [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md)

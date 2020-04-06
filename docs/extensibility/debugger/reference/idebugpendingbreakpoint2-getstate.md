@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::GetState | Dokumentace Microsoftu
+title: IDebugPendingBreakpoint2::GetState | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - GetState method
 - IDebugPendingBreakpoint2::GetState method
 ms.assetid: e88d543f-2e83-4ba7-86ca-f874e39955ff
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 84ee5c48a74fa9ed707cc55be3cbc1ab49940552
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4ad65ff6fcebb18ac1b8852c08195e9a8b062749
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347780"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725750"
 ---
 # <a name="idebugpendingbreakpoint2getstate"></a>IDebugPendingBreakpoint2::GetState
-Získá stav čekající zarážka.
+Získá stav čekající zarážky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,11 +42,11 @@ int GetState( 
 
 ## <a name="parameters"></a>Parametry
 `pState`\
-[out v] A [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) struktura, která obsahuje popis tohoto čekajících zarážek.
+[dovnitř, ven] Struktura [PENDING_BP_STATE_INFO,](../../../extensibility/debugger/reference/pending-bp-state-info.md) která je vyplněna s popisem této čekající zarážky.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
 - [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)

@@ -1,5 +1,5 @@
 ---
-title: Sccaddfilesfromscc – funkce | Dokumentace Microsoftu
+title: Funkce SccAddFilesFromSCC | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccAddFilesFromSCC function
 ms.assetid: f21a3500-ade8-4dd8-8647-10e2179be9c1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cfe58c3eef4b09fccb5cd21b714e5987ae1e08aa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1d22527644edbf1697112f5cf8b73b8a3f72b774
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333967"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701287"
 ---
-# <a name="sccaddfilesfromscc-function"></a>Sccaddfilesfromscc – funkce
-Tato funkce přidá seznam souborů ze správy zdrojových kódů aktuálně otevřeném projektu.
+# <a name="sccaddfilesfromscc-function"></a>SccAddFilesFromSCC
+Tato funkce přidá seznam souborů ze správy zdrojového kódu do aktuálně otevřeného projektu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,52 +39,52 @@ SCCRTN SccAddFilesFromSCC(
 ```
 
 ### <a name="parameters"></a>Parametry
- pContext
+ pKontext
 
-[in] Ukazatel kontext modulu plug-in zdroje ovládacího prvku.
+[v] Ukazatel kontextu modulu plug-in správy zdrojového kódu.
 
- hWnd
+ Hwnd
 
-[in] Popisovač okna integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu můžete použít jako nadřazený pro všechna dialogová okna, které poskytuje.
+[v] Popisovač okna IDE, který může modul plug-in správy zdrojového kódu použít jako nadřazený modul pro všechna dialogová okna, která poskytuje.
 
- lpUser
+ lpUživatel
 
-[out v] Uživatelské jméno (až SCC_USER_SIZE, včetně ukončovacího znaku null).
+[dovnitř, ven] Uživatelské jméno (až SCC_USER_SIZE, včetně zakončení null).
 
  lpAuxProjPath
 
-[out v] Pomocné řetězec, který identifikuje projektu (až `SCC_PRJPATH_`velikost, včetně ukončovacího znaku null).
+[dovnitř, ven] Pomocný řetězec identifikující projekt `SCC_PRJPATH_`(až do velikosti, včetně zakončení null).
 
- cFiles
+ cSoubory
 
-[in] Počet souborů, které jsou uvedena v každém `lpFilePaths`.
+[v] Počet souborů daných `lpFilePaths`společností .
 
  lpFilePaths
 
-[out v] Pole názvy souborů přidejte do aktuálního projektu.
+[dovnitř, ven] Pole názvů souborů, které chcete přidat do aktuálního projektu.
 
- lpDestination
+ lpCíl
 
-[in] Cílová cesta kde soubory jsou k zapsání.
+[v] Cílová cesta, kde mají být zapsány soubory.
 
- lpComment
+ lpKomentář
 
-[in] Komentář, který se má použít pro všechny přidávané soubory.
+[v] Komentář, který má být použit pro každý z přidávaných souborů.
 
- pbResults
+ pbVýsledky
 
-[out v] Pole příznaky, které jsou sady, čímž indikuje úspěšné provedení (nenulovou hodnotu nebo hodnotu TRUE) nebo selhání (nula nebo hodnotu NEPRAVDA) pro každý soubor (velikost pole musí být dlouhý aspoň `cFiles` dlouhý).
+[dovnitř, ven] Pole příznaků, které jsou nastaveny tak, aby označovat úspěch (nenulová nebo PRAVDA) nebo `cFiles` selhání (nula nebo NEPRAVDA) pro každý soubor (velikost pole musí být alespoň dlouhá).
 
 ## <a name="return-value"></a>Návratová hodnota
- Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |SCC_E_PROJNOTOPEN|Projekt není otevřen.|
-|SCC_E_OPNOTPERFORMED|Připojení není na stejný projekt podle specifikace `lpAuxProjPath.`|
-|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k aktualizaci databáze.|
-|SCC_E_NONSPECIFICERROR|Neznámá chyba|
-|SCC_I_RELOADFILE|Soubor nebo projekt je potřeba znovu načíst.|
+|SCC_E_OPNOTPERFORMED|Připojení není ke stejnému projektu, jak je určeno`lpAuxProjPath.`|
+|SCC_E_NOTAUTHORIZED|Uživatel není oprávněn aktualizovat databázi.|
+|SCC_E_NONSPECIFICERROR|Neznámou chybu.|
+|SCC_I_RELOADFILE|Soubor nebo projekt je třeba znovu načíst.|
 
-## <a name="see-also"></a>Viz také:
-- [Funkce modulu plug-in API zdrojového ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>Viz také
+- [Funkce rozhraní API pro řízení zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)

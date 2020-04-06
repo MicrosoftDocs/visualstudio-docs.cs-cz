@@ -1,5 +1,5 @@
 ---
-title: METADATA_TYPE | Dokumentace Microsoftu
+title: METADATA_TYPE | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - METADATA_TYPE structure
 ms.assetid: 2d8b78f6-0aef-4d79-809a-cff9b2c24659
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3d608e4e9bf9987eb1dd430a9e22660c1da6a90a
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: afe5ea128775c7be0e48035ab4c7e7d370c9d233
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746702"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714292"
 ---
-# <a name="metadatatype"></a>METADATA_TYPE
-Tato struktura Určuje informace o typ pole z metadat.
+# <a name="metadata_type"></a>METADATA_TYPE
+Tato struktura určuje informace o typu pole převzatém z metadat.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,7 +45,7 @@ public struct METADATA_TYPE {
 
 ## <a name="parameters"></a>Parametry
  `ulAppDomainID`\
- ID aplikace, ze kterého přišel symbolu. Slouží k jednoznačné identifikaci instance aplikace.
+ ID aplikace, ze které symbol pochází. Používá se k jednoznačné identifikaci instance aplikace.
 
  `guidModule`\
  Identifikátor GUID modulu, který obsahuje toto pole.
@@ -53,12 +53,12 @@ public struct METADATA_TYPE {
  `tokClass`\
  ID tokenu metadat tohoto typu.
 
- [C++] `_mdToken` je `typedef` pro 32bitovou verzi `int`.
+ [C++] `_mdToken` je `typedef` pro 32bitový `int`.
 
 ## <a name="remarks"></a>Poznámky
- Tato struktura se zobrazí jako součást sjednocení v [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) strukturu, kdy `dwKind` pole `TYPE_INFO` struktura je nastavena na `TYPE_KIND_METADATA` (hodnotu z [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) výčet).
+ Tato struktura se zobrazí jako součást unie ve [struktuře TYPE_INFO,](../../../extensibility/debugger/reference/type-info.md) `dwKind` když je pole `TYPE_INFO` struktury nastaveno na `TYPE_KIND_METADATA` (hodnota z [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) výčtu).
 
- `tokClass` Hodnotu, která jednoznačně identifikuje typ tokenu metadat. Podrobnosti o tom, jak interpretovat horní bits ID tokenu metadat najdete v tématu `CorTokenType` výčtu v souboru comimage_flags v rozhraní .NET Framework SDK.
+ Hodnota `tokClass` je token metadat, který jednoznačně identifikuje typ. Podrobnosti o tom, jak interpretovat horní bity ID `CorTokenType` tokenu metadat, naleznete ve výčtu v souboru corhdr.h v sdk rozhraní .NET Framework.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: sh.h
@@ -67,7 +67,7 @@ public struct METADATA_TYPE {
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)
 - [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)

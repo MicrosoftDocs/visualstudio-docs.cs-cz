@@ -1,25 +1,25 @@
 ---
-title: Menu Element | Dokumentace Microsoftu
+title: Prvek nabídky | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, Menus
 - Menus element (VSCT XML schema)
 ms.assetid: ce0560f3-b4c9-4ab2-a99c-d4e10f37b9e0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c789eae4b7435ae6d1ed648804d78ab9b478aef9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8dc4731f95e31781f6b10704d7cb14dc83e96d7a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311839"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702601"
 ---
-# <a name="menu-element"></a>Menu – element
-Definuje jednu položku nabídky. Toto jsou šest typů nabídek: Kontext, nabídky, MenuController, MenuControllerLatched, nástrojů a ToolWindowToolbar.
+# <a name="menu-element"></a>Prvek nabídky
+Definuje jednu položku nabídky. Jedná se o šest druhů nabídek: Kontext, Menu, MenuController, MenuControllerLatched, Toolbar a ToolWindowToolbar.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,34 +31,34 @@ Definuje jednu položku nabídky. Toto jsou šest typů nabídek: Kontext, nabí
 </Menu>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|identifikátor GUID|Povinný parametr. Identifikátor GUID identifikátoru GUID a ID příkazu.|
-|id|Povinný parametr. ID identifikátoru GUID a ID příkazu.|
-|priorita|Volitelné. Číselná hodnota, která určuje relativní umístění nabídky ve skupině nabídek.|
-|ToolbarPriorityInBand|Volitelné. Číselná hodnota, která určuje relativní pozici panelu nástrojů ve svazku, když je toto okno ukotveno.|
-| – typ|Volitelné. Výčtová hodnota, která určuje typ prvku.<br /><br /> Pokud není k dispozici, je výchozí typ nabídky.<br /><br /> Kontext<br /> Místní nabídka, která se zobrazí, když uživatel klepne pravým tlačítkem myši časového období. Místní nabídka má následující vlastnosti:<br /><br /> – Nepoužívá **nadřazené** a **Priority** pole, po který se má zobrazit jako místní nabídky v nabídce.<br />– Je možné jako podnabídku a také jako místní nabídky. V takovém případě obě **ID skupiny** a **Priority** jsou dodržovány pole.<br />-Je vždy dostupná.<br /><br /> Místní nabídce se zobrazí jenom v případě, že jsou splněny následující podmínky:<br /><br /> –, Který je hostitelem ho se zobrazí okno.<br />-Obslužnou rutinu myši v sady VSPackage zjistí kliknutí pravým tlačítkem myši na okno a potom volá metodu, která zpracovává příkaz.<br />– Místní nabídce se zobrazí při volání <xref:Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager.ShowContextMenu%2A> – metoda (doporučený postup) nebo <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowContextMenu%2A> metody.<br /><br /> Nabídka<br /> Poskytuje rozevírací nabídky. Rozevírací nabídka má následující vlastnosti:<br /><br /> -Respektuje nadřazené do její definice.<br />– Musí mít nadřazenou skupinu nebo commandplacement – do skupiny.<br />-Může být podnabídky do jakéhokoli jiného typu nabídky.<br />-Se automaticky zobrazí pokaždé, když se zobrazí její nadřazené nabídky.<br />-Nevyžaduje provádění jakékoli VSPackage kód, který se zobrazí.<br /><br /> MenuController<br /> Obsahuje tlačítko rozdělení rozevírací nabídky, která se obvykle používá v panelech nástrojů. Zobrazí se nabídka MenuController má následující vlastnosti:<br /><br /> – Musí být obsažen v jiné nabídky prostřednictvím nadřazené nebo commandplacement –.<br />-Respektuje nadřazené do její definice.<br />-Může mít jakýkoli druh nabídce jako jeho nadřazený objekt.<br />-Je automaticky k dispozici pokaždé, když se zobrazí její nadřazené nabídky.<br />-Nevyžaduje, aby programový podporu, aby v nabídce Zobrazit.<br /><br /> Příkaz v nabídce tlačítka rozdělení je zobrazený na tlačítku pro nabídky. Příkaz zobrazí má jednu z následujících vlastností:<br /><br /> -Je poslední příkaz, který byl použit, pokud příkaz je stále zobrazí a povoleno.<br />-Je první zobrazené příkaz.<br /><br /> MenuControllerLatched<br /> Poskytuje rozevírací nabídky tlačítka rozdělení, pro které je možné zadat příkaz jako výchozí výběr označením příkazu jako stisknutého.<br /><br /> Stisknutí příkaz je příkaz, který je označen v nabídce jako vybrané, obvykle zobrazením zaškrtávací políčko. Příkaz můžete označením stisknutého, pokud má OLECMDF_LATCHED příznak nastaven na něm v implementaci `QueryStatus` metodu <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní. Zobrazí se nabídka MenuControllerLatched má následující vlastnosti:<br /><br /> – Musí být obsažen v jiné nabídky prostřednictvím nadřazené skupiny nebo commandplacement –.<br />-Respektuje nadřazené do její definice.<br />-Může mít jakýkoli druh nabídce jako jeho nadřazený objekt.<br />-Je k dispozici pokaždé, když se zobrazí její nadřazené nabídky.<br />-Nevyžaduje, aby programový podporu, aby v nabídce Zobrazit.<br /><br /> Příkaz v nabídce tlačítka rozdělení je zobrazený na tlačítku pro nabídky. Příkaz zobrazí má jednu z následujících vlastností:<br /><br /> -Je první zobrazené příkaz, který je stisknutého.<br />-Je první zobrazené příkaz.<br /><br /> Panel nástrojů<br /> Obsahuje panel nástrojů. Panel nástrojů má následující vlastnosti:<br /><br /> -Ignoruje nadřazené do její definice.<br />-Nelze nastavit podnabídky žádné skupiny, dokonce ani s použitím commandplacement –.<br />-Je vždy zobrazit kliknutím **panely nástrojů** na **zobrazení** nabídky.<br />-Lze zobrazit pomocí [visibilityitem –](../extensibility/visibilityitem-element.md).<br />-Nevyžaduje žádný kód, vytvořte ho. Příklad, jak vytvořit panel nástrojů, naleznete v tématu [přidat panel nástrojů](../extensibility/adding-a-toolbar.md).<br /><br /> ToolWindowToolbar<br /> Obsahuje panel nástrojů, který je připojen k okno konkrétní nástroje, stejně, jako je panel nástrojů připojen do vývojového prostředí.<br /><br /> -Ignoruje nadřazené do její definice.<br />-Nelze nastavit podnabídky žádné skupiny, dokonce ani s použitím commandplacement –.<br />-Se zobrazí jenom v případě, že se zobrazí okno nástroje, který je hostitelem panelu nástrojů a panelu nástrojů sady VSPackage explicitně přidá na panel nástrojů. To se většinou děje při získání vlastností hostitele nástrojů vytvoří panel nástrojů (reprezentovaná <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolWindowToolbarHost> rozhraní) z rámce okna nástrojů a potom voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolWindowToolbarHost.AddToolbar%2A> metody.|
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Identifikátor guid|Povinná hodnota. Identifikátor GUID identifikátoru příkazu GUID/ID.|
+|id|Povinná hodnota. ID identifikátoru příkazu GUID/ID.|
+|Prioritou|Nepovinný parametr. Číselná hodnota, která určuje relativní polohu nabídky ve skupině nabídek.|
+|ToolbarPriorityInBand|Nepovinný parametr. Číselná hodnota, která určuje relativní polohu panelu nástrojů v pásmu, když je okno ukotveno.|
+|type|Nepovinný parametr. Výčet hodnota, která určuje druh prvku.<br /><br /> Pokud není k dispozici, výchozí typ je Menu.<br /><br /> Kontext<br /> Místní nabídka, která se zobrazí, když uživatel klepne pravým tlačítkem myši na okno. Místní nabídka má následující charakteristiky:<br /><br /> - Nepoužije pole **Nadřazený** a **Priorita,** pokud má být nabídka zobrazena jako místní nabídka.<br />- Může být použit jako podnabídka a také jako místní menu. V tomto případě jsou respektována pole **ID skupiny** i **priority.**<br />- Není vždy k dispozici.<br /><br /> Místní nabídka se zobrazí pouze v případě, že jsou splněny následující podmínky:<br /><br /> - Zobrazí se okno, které jej hostuje.<br />- Obslužná rutina myši v balíčku VSPackage detekuje klepnutí pravým tlačítkem myši na okno a pak zavolá metodu, která zpracovává příkaz.<br />- Místní nabídka se zobrazí <xref:Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager.ShowContextMenu%2A> voláním metody (doporučený <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowContextMenu%2A> přístup) nebo metody.<br /><br /> Nabídka<br /> Obsahuje rozevírací nabídku. Rozevírací nabídka má následující charakteristiky:<br /><br /> - Respektuje Parent ve své definici.<br />- Musí mít nadřazenou skupinu nebo CommandPlacement do skupiny.<br />- Může být podnabídka v jakémkoli jiném druhu menu.<br />- Automaticky se zobrazí vždy, když se zobrazí jeho nadřazené menu.<br />- Nevyžaduje implementaci žádného kódu VSPackage, aby byl zobrazen.<br /><br /> Kontrolka nabídky<br /> Obsahuje rozevírací nabídku rozděleného tlačítka, která se obvykle používá v panelech nástrojů. Nabídka MenuController má následující charakteristiky:<br /><br /> - Musí být obsažena v jiné nabídce prostřednictvím Parent nebo CommandPlacement.<br />- Respektuje Parent ve své definici.<br />- Může mít jakékoliv menu jako jeho rodič.<br />- Je automaticky k dispozici vždy, když je zobrazena nadřazená nabídka.<br />- Nevyžaduje programovou podporu, aby se nabídka zobrazí.<br /><br /> Na tlačítku nabídky se zobrazí příkaz z nabídky rozděleného tlačítka. Zobrazený příkaz má jednu z následujících vlastností:<br /><br /> - Jedná se o poslední příkaz, který byl použit, pokud je příkaz stále zobrazen a povolen.<br />- Jedná se o první zobrazený příkaz.<br /><br /> MenuControllerLatched<br /> Obsahuje rozevírací nabídku rozděleného tlačítka, pro kterou lze příkaz zadat jako výchozí výběr označením příkazu jako zámku.<br /><br /> Příkaz se zámkem je příkaz, který je v nabídce označen jako vybraný, obvykle zobrazením zaškrtnutí. Příkaz může být označen jako západka, pokud má OLECMDF_LATCHED příznak `QueryStatus` nastavit na <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> něm v implementaci metody rozhraní. Nabídka MenuControllerLatched má následující charakteristiky:<br /><br /> - Musí být obsaženy v jiné nabídce prostřednictvím nadřazené skupiny nebo CommandPlacement.<br />- Respektuje Parent ve své definici.<br />- Může mít jakékoliv menu jako jeho rodič.<br />- Je k dispozici vždy, když je zobrazena nadřazená nabídka.<br />- Nevyžaduje programovou podporu, aby se nabídka zobrazí.<br /><br /> Na tlačítku nabídky se zobrazí příkaz z nabídky rozděleného tlačítka. Zobrazený příkaz má jednu z následujících vlastností:<br /><br /> - Jedná se o první zobrazený příkaz, který je zajištěn.<br />- Jedná se o první zobrazený příkaz.<br /><br /> Panel nástrojů<br /> Poskytuje panel nástrojů. Panel nástrojů má následující charakteristiky:<br /><br /> - Ignoruje Parent v jeho definici.<br />- Nelze vytvořit podnabídku žádné skupiny, a to ani pomocí CommandPlacement.<br />- Lze zobrazit vždy kliknutím na **panely nástrojů** v nabídce **Zobrazení.**<br />- Lze zobrazit pomocí [VisibilityItem](../extensibility/visibilityitem-element.md).<br />- Nevyžaduje žádný kód k jeho vytvoření. Příklad vytvoření panelu nástrojů naleznete v [tématu Přidání panelu nástrojů](../extensibility/adding-a-toolbar.md).<br /><br /> ToolWindowToolbar<br /> Poskytuje panel nástrojů, který je připojen k určitému oknu nástroje, stejně jako panel nástrojů je připojen k vývojovému prostředí.<br /><br /> - Ignoruje Parent v jeho definici.<br />- Nelze vytvořit podnabídku žádné skupiny, a to ani pomocí CommandPlacement.<br />- Zobrazí se pouze v případě, že se zobrazí okno nástroje, které je hostitelem panelu nástrojů, a vspackage explicitně přidá panel nástrojů do okna nástroje. To se obvykle provádí při vytvoření okna nástroje získáním vlastnosti hostitele <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolWindowToolbarHost> panelu nástrojů (reprezentované rozhraním) z rámce okna nástroje a následným voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolWindowToolbarHost.AddToolbar%2A> metody.|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|Nadřazené|Volitelné. Nadřazený prvek položky nabídky.|
-|CommandFlag|Povinný parametr. Zobrazit [Command flag – element](../extensibility/command-flag-element.md). Platné hodnoty CommandFlag nabídky jsou následující:<br /><br /> -   **AlwaysCreate**<br />-   **DefaultDocked**<br />-   **DefaultInvisible** -tento příznak nemá vliv na displeji panely nástrojů.<br />-   **DontCache**<br />-   **DynamicVisibility** -tento příznak nemá vliv na displeji panely nástrojů.<br />-   **IconAndText**<br />-   **NoCustomize**<br />-   **NotInTBList**<br />-   **NoToolbarClose**<br />-   **TextChanges**<br />-   **TextIsAnchorCommand**|
-|Řetězce|Povinný parametr. Zobrazit [Strings – element](../extensibility/strings-element.md). Podřízené `ButtonText` element musí být definován.|
+|Nadřazený|Nepovinný parametr. Nadřazený prvek položky nabídky.|
+|Příkaz Ový příznak|Povinná hodnota. Viz [Element command flag](../extensibility/command-flag-element.md). Platné hodnoty CommandFlag pro nabídku jsou následující:<br /><br /> -   **Alwayscreate**<br />-   **DefaultDocked**<br />-   **DefaultInvisible** - Tento příznak nemá vliv na zobrazení panelů nástrojů.<br />-   **DontCache**<br />-   **DynamicVisibility** - Tento příznak nemá vliv na zobrazení panelů nástrojů.<br />-   **IconAndText**<br />-   **BezPřizpůsobení**<br />-   **NotInTBList**<br />-   **Zavřít panel NoToolbar**<br />-   **TextZměny**<br />-   **TextIsAnchorCommand**|
+|Řetězce|Povinná hodnota. Viz [Strings element](../extensibility/strings-element.md). Podřízený `ButtonText` prvek musí být definován.|
 |Poznámka|Volitelný komentář.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Menus – element](../extensibility/menus-element.md)|Definuje všechny nabídky, které implementuje VSPackage.|
+|[Prvek nabídek](../extensibility/menus-element.md)|Definuje všechny nabídky, které implementuje VSPackage.|
 
 ## <a name="example"></a>Příklad
 
@@ -74,5 +74,5 @@ Definuje jednu položku nabídky. Toto jsou šest typů nabídek: Kontext, nabí
 </Menu>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Soubory, tabulky příkazů aplikace Visual Studio (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také
+- [Soubor příkazů Visual Studio (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

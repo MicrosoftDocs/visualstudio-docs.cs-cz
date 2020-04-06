@@ -1,5 +1,5 @@
 ---
-title: Zpětná vazba uživateli | Dokumentace Microsoftu
+title: Zpětná vazba pro uživatele | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,56 +8,56 @@ helpviewer_keywords:
 - IDE, context
 - IDE, user feedback
 ms.assetid: 2d472a24-3813-4f5f-9783-b491ad8a71ad
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e2255a972dd7a889713e77fa686b348500c03ea7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 46b9190b16b9aa444384847bf209ccca50c7f768
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328984"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80708404"
 ---
-# <a name="feedback-to-the-user"></a>Zpětná vazba uživateli
-V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE), vizuální zpětnou vazbu týkající se dostupné funkce podle aktuálního výběru a globální výběr kontextu uživatele. V následující tabulce jsou uvedeny funkce, které jsou k dispozici v kontextech jiný výběr.
+# <a name="feedback-to-the-user"></a>Zpětná vazba pro uživatele
+V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí (IDE) je vizuální zpětná vazba týkající se dostupných funkcí založena na aktuálním výběru uživatele a kontextu globálního výběru. V následující tabulce jsou uvedeny funkce, které jsou k dispozici v různých kontextech výběru.
 
 |Kontext výběru|Dostupné funkce|
 |-----------------------|-----------------------------|
 |IDE – integrované vývojové prostředí|Globální|
-|Aktuální nastavení produktu|Specifické pro produkt|
-|Aktivní hierarchii|Konkrétní typ hierarchie|
-|Aktivní hierarchii položky|Konkrétní typ položku hierarchie|
-|Aktivní dokument|Konkrétní typ dokumentu|
-|Okno nejvyšší rozhraní více dokumentů (MDI)|Konkrétní typ okna|
-|Kontext aktuálního výběru|Konkrétní kontext výběru|
+|Aktuální sada produktů|Specifický produkt|
+|Aktivní hierarchie|Specifický typ hierarchie|
+|Aktivní položka hierarchie|Specifický typ položky hierarchie|
+|Aktivní dokument|Specifický typ dokumentu|
+|Okno Rozhraní mDI (Topmost multiple-document)|Specifický typ okna|
+|Aktuální kontext výběru|Kontext výběru specifický|
 
- Pokud se pouze zařízení surface funkce zákazníci potřebují a nepřetržitě poskytovat konzistentní výběru a zpětná vazba místní prostředí, vám pomůže zjednodušit v integrovaném vývojovém prostředí. Při každém otevření okna v rozhraní IDE, platí následující pravidla:
+ Pokud pouze povrch funkce, které uživatelé potřebují a neustále poskytují konzistentní výběr a kontext prostředí zpětnou vazbu, snížíte složitost v ide. Následující pravidla platí při každém otevření okna v ide:
 
-- Pokud se okno změní jeho výběr kontextu, je v okně, jasně označeny názor na výběr a **dynamická Nápověda** okno, pokud je vidět, se aktualizuje tak, aby odrážela aktuální kontext.
+- Pokud okno změní kontext výběru, je v okně jasně uvedena zpětná vazba výběru a okno **dynamické nápovědy,** pokud je zobrazeno, je aktualizováno tak, aby odráželo aktuální kontext.
 
-- Pokud se okno změní kontext globálního výběru, všechny kontextové nabídky, okna aktivní hierarchii a záhlaví okna aplikace se aktualizují tak, aby odrážela aktuální kontext.
+- Pokud okno změní kontext globálního výběru, všechny kontextové nabídky, aktivní okno hierarchie a záhlaví aplikace se aktualizují tak, aby odrážely aktuální kontext.
 
-- Okna by měl surface vlastnosti pro aktuální výběr v **vlastnosti** okno a volitelně také, zda se zobrazí, **stránky vlastností** dialogové okno.
+- Okno by mělo mít vlastnosti povrchu pro aktuální výběr v okně **Vlastnosti** a volitelně, pokud je zobrazeno, dialogové okno **Stránky vlastností.**
 
-- Pokud okno není surface vlastnosti nebo změnit výběr globální kontext, názor na výběr by neměl zůstat v okně když už není aktivní okno v integrovaném vývojovém prostředí.
+- Pokud okno nemá povrch vlastnosti nebo změnit kontext globálního výběru, zpětná vazba výběru by neměla zůstat v okně, pokud již není aktivní okno v rozhraní IDE.
 
-- Všechna okna nástrojů konkrétní dokumenty by měly odrážet neustále aktivní dokument.
+- Všechna okna nástrojů specifických pro dokument by měla průběžně odrážet aktivní dokument.
 
-- Nabídky, panely nástrojů a záhlaví okna aplikace by měly odrážet okno klienta nejvyššího rozhraní více dokumentů (MDI).
+- Nabídky, panely nástrojů a záhlaví aplikace by měly odrážet nejvyšší okno klienta rozhraní mdi (multiple-document).
 
-  Například, když kód HTML zobrazení **webový formulář** webové aplikace Visual Basic je projekt otevřít, a uživatel vybere `<td>` značky, zpětná vazba je k dispozici v následujícím způsobem:
+  Pokud je například otevřeno zobrazení **HTML webového formuláře** v projektu webové aplikace `<td>` jazyka Visual Basic a uživatel vybere značku, je zpětná vazba poskytnuta následujícím způsobem:
 
-- Výběr je uvedené v aktivní okno a reflektován v **vlastnosti** okna.
+- Výběr je vyznačen v aktivním okně a projeven v okně **Vlastnosti.**
 
-- Konkrétní dokumenty **nástrojů** aktualizován, aby odrážel aktivní dokument.
+- Panel **nástrojů** specifický pro dokument je aktualizován tak, aby odrážel aktivní dokument.
 
-- **Editor** nástrojů a **tabulky** nabídky se zobrazí a aktualizuje záhlaví tak, aby odrážely okně webového formuláře.
+- Zobrazí se panel nástrojů **Editor** a nabídka **Tabulka** a záhlaví se aktualizuje tak, aby odráželo okno Webový formulář.
 
-- Okno aktivní hierarchii, což je obvykle **Průzkumníka řešení**a jeho název panelu aktualizovat tak, aby odrážela aktuální kontext a kontextové **projektu** příkazy nabídky nyní budou vztahovat na aktivním webu Projekt aplikace.
+- Okno aktivní hierarchie, což je obvykle **Průzkumník řešení**, a jeho aktualizace záhlaví, která odráží aktuální kontext a kontextové příkazy nabídky **Aplikace project,** se nyní vztahují na aktivní projekt webové aplikace.
 
-## <a name="see-also"></a>Viz také:
-- [Výběr a Měna v prostředí IDE](../../extensibility/internals/selection-and-currency-in-the-ide.md)
-- [Kontextové objekty výběru](../../extensibility/internals/selection-context-objects.md)
+## <a name="see-also"></a>Viz také
+- [Výběr a měna v ide](../../extensibility/internals/selection-and-currency-in-the-ide.md)
+- [Objekty kontextu výběru](../../extensibility/internals/selection-context-objects.md)
 - [Hierarchie a výběr](../../extensibility/internals/hierarchies-and-selection.md)

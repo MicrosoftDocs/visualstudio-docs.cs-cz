@@ -1,43 +1,43 @@
 ---
-title: Rozšíření projektů | Dokumentace Microsoftu
+title: Rozšíření projektů | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions [Visual Studio]
 - projects [Visual Studio]
 ms.assetid: 096d273d-4fe9-4f24-9b00-470bfbdf4bdf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0333e09aee207e10657999dda4b5b1d59e181cf
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 14108a304cc5f85c9a870bc66804df7daa98f3ca
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341110"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711753"
 ---
-# <a name="extend-projects"></a>Rozšíření projektů
-Projekty a řešení se způsoby, kterými Visual Studio slouží k uspořádání kódu a zdrojové soubory do jednotek pro kompilaci a nasazení. Můžete najít další informace o projektech v [projekty (Visual Studio SDK)](../extensibility/extending-projects.md).
+# <a name="extend-projects"></a>Rozšířit projekty
+Projekty a řešení jsou způsoby, jakými Visual Studio organizuje soubory kódu a prostředků do jednotek kompilace a nasazení. Další informace o projektech naleznete v [aplikaci Projects (Visual Studio SDK).](../extensibility/extending-projects.md)
 
- Můžete vytvořit vlastní typy projektů pomocí Visual Studio SDK a rozhraní Managed Package Framework pro projekty, které si můžete stáhnout na [Managed Package Framework pro projekty](https://github.com/tunnelvisionlabs/MPFProj10). Chcete-li pochopit, jak jsou implementovány vlastní projekty, naleznete v tématu [nová generace projektů: Pod pokličkou, část 1](../extensibility/internals/new-project-generation-under-the-hood-part-one.md) a [nová generace projektů: Pod pokličkou, část 2](../extensibility/internals/new-project-generation-under-the-hood-part-two.md).
+ Vlastní typy projektů můžete vytvořit pomocí sady Visual Studio SDK a rozhraní Managed Package Framework for Projects, které si můžete stáhnout v [rámci spravovaného balíčku pro projekty](https://github.com/tunnelvisionlabs/MPFProj10). Chcete-li pochopit, jak jsou implementovány vlastní projekty, viz [Nové generování projektu: Pod kapotou, první část](../extensibility/internals/new-project-generation-under-the-hood-part-one.md) a Nová generace [projektu: Pod kapotou, část druhá](../extensibility/internals/new-project-generation-under-the-hood-part-two.md).
 
- Témata v této části popisují, jak vytvořit vlastní projekty a ke správě různých typů řešení sady Visual Studio.
+ Témata v této části popisují, jak vytvořit vlastní projekty a jak spravovat různé typy řešení sady Visual Studio.
 
 ## <a name="in-this-section"></a>V tomto oddílu
-- [Vytvoření systému základního projektu, část 1](../extensibility/creating-a-basic-project-system-part-1.md) popisuje, jak vytvořit vlastní projektový systém.
+- [Vytvoření základního projektového systému, část 1](../extensibility/creating-a-basic-project-system-part-1.md) Popisuje, jak vytvořit vlastní systém projektu.
 
-- [Vytvoření systému základního projektu, část 2](../extensibility/creating-a-basic-project-system-part-2.md) popisuje, jak vytvořit vlastní projektový systém.
+- [Vytvoření základního projektového systému, část 2](../extensibility/creating-a-basic-project-system-part-2.md) Popisuje, jak vytvořit vlastní systém projektu.
 
-- [Ukládání dat v souborech projektu](../extensibility/saving-data-in-project-files.md) vysvětluje, jak přidat do projektu (<em>.</em> Proj *) soubory.
+- [Uložení dat do souborů projektu](../extensibility/saving-data-in-project-files.md) Vysvětluje, jak přidat do projektu (<em>.</em> proj*).
 
-- [Ověření podtypů projektu za běhu](../extensibility/verifying-subtypes-of-a-project-at-run-time.md) vysvětluje, jak ověřit podtyp projektu za běhu.
+- [Ověření podtypů projektu za běhu](../extensibility/verifying-subtypes-of-a-project-at-run-time.md) Vysvětluje, jak ověřit podtyp projektu za běhu.
 
-- [Přidávat a odebírat stránky vlastností](../extensibility/adding-and-removing-property-pages.md) vysvětluje, jak přizpůsobit stránky vlastností pro svůj vlastní projekt.
+- [Přidání a odebrání stránek vlastností](../extensibility/adding-and-removing-property-pages.md) Vysvětluje, jak přizpůsobit stránky vlastností pro vlastní projekt.
 
-- [Přidání atributu do položky projektu](../extensibility/adding-an-attribute-to-a-project-item.md) vysvětluje, jak přidat do položky projektu vlastní atribut.
+- [Přidání atributu k položce projektu](../extensibility/adding-an-attribute-to-a-project-item.md) Vysvětluje, jak přidat atribut do vlastní položky projektu.
 
-- [Zachovat vlastnosti položky projektu](../extensibility/persisting-the-property-of-a-project-item.md) vysvětluje, jak zachovat vlastnosti položky projektu vlastní.
+- [Zachovat vlastnost položky projektu](../extensibility/persisting-the-property-of-a-project-item.md) Vysvětluje, jak zachovat vlastnosti vlastní položky projektu.
 
-- [Spravovat projekty pro universal Windows](../extensibility/managing-universal-windows-projects.md) vysvětluje, jak spravovat projekty universal.
+- [Správa univerzálních projektů systému Windows](../extensibility/managing-universal-windows-projects.md) Vysvětluje, jak řídit univerzální projekty.

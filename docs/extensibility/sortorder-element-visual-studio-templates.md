@@ -1,5 +1,5 @@
 ---
-title: Element prořazení (šablony sady Visual Studio) | Microsoft Docs
+title: Prvek SortOrder (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - SortOrder element [Visual Studio Templates]
 - <SortOrder> element [Visual Studio Templates]
 ms.assetid: 151932c1-f08a-4f78-a8d0-bd2f32211a9c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2875bcb4583c1d2ec47a935d1a8bb4f0de109a92
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 935d00335a21d3e129e79ce351e554ea93787447
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72719915"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80699956"
 ---
 # <a name="sortorder-element-visual-studio-templates"></a>SortOrder – element (šablony sady Visual Studio)
-Určuje hodnotu, která se používá k uspořádání šablony, mezi ostatními šablonami ve stejné kategorii, jak se zobrazuje v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .
+Určuje hodnotu, která se používá k uspořádání šablony, mimo jiné šablony ve stejné kategorii, jak se zobrazí v dialogovém okně **Nový projekt** nebo Přidat **novou položku.**
 
- \<VSTemplate > \<TemplateData > \<SortOrder >
+ \<VSTemplate \<> TemplateData> \<pořadí řazení>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,31 +36,31 @@ Určuje hodnotu, která se používá k uspořádání šablony, mezi ostatními
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné
+ Žádné.
 
 ### <a name="child-elements"></a>Podřízené elementy
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- @No__t_0, která představuje hodnotu pořadí řazení.
+ A, `integer` který představuje hodnotu pořadí řazení.
 
 ## <a name="remarks"></a>Poznámky
- `SortOrder` je volitelný prvek. Výchozí hodnota je 100 a všechny hodnoty musí být násobkem 10.
+ `SortOrder`je volitelný prvek. Výchozí hodnota je 100 a všechny hodnoty musí být násobky 10.
 
- Element `SortOrder` se pro šablony vytvořené uživatelem ignoruje. Všechny uživatelem vytvořené šablony jsou seřazené abecedně.
+ Prvek `SortOrder` je ignorován pro uživatelem vytvořené šablony. Všechny uživatelem vytvořené šablony jsou seřazeny abecedně.
 
- Šablony s nízkou hodnotou pořadí řazení se zobrazí v dialogovém okně **Nový projekt** nebo **Nový přidat položku** před šablonami, které mají vysoké hodnoty pořadí řazení.
+ Šablony s nízkými hodnotami pořadí řazení se zobrazí v dialogovém okně **Nový projekt** nebo Nová **přidat položku** před šablonami s vysokými hodnotami pořadí řazení.
 
 ## <a name="example"></a>Příklad
- Následující příklad ilustruje metadata pro standardní šablonu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] třídy.
+ Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablonu standardní třídy.
 
 ```
 <VSTemplate Type="Item" Version="3.0.0"
@@ -79,8 +79,8 @@ Určuje hodnotu, která se používá k uspořádání šablony, mezi ostatními
 </VSTemplate>
 ```
 
- V tomto příkladu je prvek `SortOrder` relativně vysoký. Je pravděpodobnější, že jiné šablony [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] položek budou mít `SortOrder` hodnotu nižší než `290` a zobrazí se před touto šablonou v dialogovém okně **Nová položka** .
+ V tomto příkladu `SortOrder` je prvek poměrně vysoký. Je pravděpodobné, [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] že jiné šablony `SortOrder` položek budou `290` mít hodnotu nižší než a zobrazí se před touto šablonou v dialogovém okně **Nová položka.**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

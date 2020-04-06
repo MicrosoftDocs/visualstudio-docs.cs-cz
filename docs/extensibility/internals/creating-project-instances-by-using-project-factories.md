@@ -1,50 +1,50 @@
 ---
-title: Vytváření instancí projektu pomocí objektů pro vytváření projektů | Dokumentace Microsoftu
+title: Vytváření instancí projektu pomocí továren projektu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - project factories
 - projects [Visual Studio SDK], project factories
 ms.assetid: 94c90012-8669-459c-af8e-307ac242c8c4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b6f6dee7850610b222cf26964dd4811fcf79b5a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 31ba5dd11af18f8a723b2271544eff2bd292e2e8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66329398"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709053"
 ---
-# <a name="create-project-instances-by-using-project-factories"></a>Vytvoření instance projektu pomocí objektů pro vytváření projektů
-Typů projektů v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] použít *objekt pro vytváření projektu* pro vytvoření instancí objektů projektu. Objekt pro vytváření projektu je podobná objekt pro vytváření tříd standardní cocreatable objektů COM. Nicméně objekty projektu nejsou cocreatable; mohou být vytvořeny pouze pomocí objekt pro vytváření projektu.
+# <a name="create-project-instances-by-using-project-factories"></a>Vytvoření instancí projektu pomocí továren projektu
+Typy projektů [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] používají *továrnu projektu* k vytvoření instancí objektů projektu. Továrna projektu je podobná standardní třídy factory pro cocreatable com objekty. Objekty projektu však nejsou cocreatable; lze vytvořit pouze pomocí továrny projektu.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Volá objekt pro vytváření projektů v vašeho balíčku VSPackage implementovat, pokud uživatel načte existující projekt nebo vytvoří nový projekt v integrovaném vývojovém prostředí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Nový objekt projektu poskytuje integrované vývojové prostředí s dostatek informací k naplnění **Průzkumníka řešení**. Nový objekt projektu také poskytuje požadovaná rozhraní pro podporu všechny příslušné akce uživatelského rozhraní inicializuje v integrovaném vývojovém prostředí.
+ IDE [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] volá továrnu projektu implementované v Balíčku VSPackage, když uživatel [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]načte existující projekt nebo vytvoří nový projekt v aplikaci . Nový objekt projektu poskytuje rozhraní IDE dostatek informací k naplnění **Průzkumníka řešení**. Nový objekt projektu také poskytuje požadovaná rozhraní pro podporu všech příslušných akcí uživatelského rozhraní iniciovaných rozhraním IDE.
 
- Můžete implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory> rozhraní ve třídě ve vašem projektu. Obvykle se nachází v jeho vlastní modul.
+ Rozhraní můžete <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory> implementovat ve třídě v projektu. Obvykle se nachází ve vlastním modulu.
 
- Projekty, které podporují agregaci vlastník musí zachovat klíčem vlastníka v jejich souboru projektu. Když <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A> metoda je volána v projektu s klíčem vlastníka, vlastnictví projektu převede na objekt pro vytváření projektu GUID pak zavolá jeho vlastníka klíč `CreateProject` metody v této výrobě projektu provedete skutečné vytváření.
+ Projekty, které podporují agregaci vlastníkem musí zachovat klíč vlastníka v souboru projektu. Pokud <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A> je metoda volána na projekt s klíčem vlastníka, vlastněný projekt převede svůj `CreateProject` klíč vlastníka na identifikátor GUID továrny projektu a poté zavolá metodu v této továrně projektu k vytvoření skutečného vytvoření.
 
-## <a name="create-an-owned-project"></a>Vytvořit projekt vlastněná podnikem
- Vlastník vytvoří vlastní projekt ve dvou fázích:
+## <a name="create-an-owned-project"></a>Vytvoření vlastněného projektu
+ Vlastník vytvoří vlastněný projekt ve dvou fázích:
 
-1. Při volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory.PreCreateForOwner%2A> metody. Díky tomu vlastnictví projektu příležitost k vytvoření objektu agregované projektu založen na vstupní řízení `IUnknown`. Vlastněné projektu předá vnitřní `IUnknown` a agregovaného objektu zpátky do projektu vlastníka. Díky tomu vlastnictví projektu příležitost k uložení vnitřní `IUnknown`.
+1. Voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory.PreCreateForOwner%2A> metody. To dává vlastněný projekt možnost vytvořit agregovaný objekt `IUnknown`projektu na základě vstupní řízení . Vlastněný projekt předá `IUnknown` vnitřní a agregovaný objekt zpět do projektu vlastníka. To dává vlastněný projekt možnost `IUnknown`uložit vnitřní .
 
-2. Při volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory.InitializeForOwner%2A> metody. Vlastněné project sleduje všechny její instance, když tato metoda je volána, bez volání `IVsProjectFactory::CreateProject` jako by tomu bylo v případě projektů, které nejsou vlastněny. Vstup `VSOWNEDPROJECTOBJECT` výčet je obvykle agregované vlastnictví projektu. Vlastněné projektu pomocí této proměnné můžete určit, zda již byla vytvořena jeho objekt projektu (soubor cookie není rovno NULL) nebo musí být vytvořeny (rovná se soubor cookie NULL).
+2. Voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory.InitializeForOwner%2A> metody. Vlastněný projekt provede všechny jeho konkretizovat, `IVsProjectFactory::CreateProject` když je tato metoda volána namísto volání, jak by tomu bylo v případě projektů, které nejsou vlastněny. Vstupní `VSOWNEDPROJECTOBJECT` výčet je obvykle agregovaný vlastněný projekt. Vlastněný projekt může tuto proměnnou použít k určení, zda byl jeho objekt projektu již vytvořen (soubor cookie se nerovná hodnotě NULL) nebo musí být vytvořen (soubor cookie se rovná hodnotě NULL).
 
-   Typy projektů jsou označeny projekt jedinečný identifikátor GUID, podobně jako na identifikátor CLSID objektu COM cocreatable. Obvykle zpracovává jeden projekt objekt pro vytváření vytváření instancí typu jednoho projektu, i když je možné mít jeden objekt pro vytváření projektu zpracovávat více než jeden projekt typu GUID.
+   Typy projektů jsou identifikovány jedinečným identifikátorem GUID projektu, podobně jako identifikátor CLSID cocreatable COM objektu. Obvykle jeden projekt factory zpracovává vytváření instancí jednoho typu projektu, i když je možné mít jeden projekt factory popisovat více než jeden typ projektu GUID.
 
-   Typy projektů jsou spojeny s konkrétní příponou názvu. Když uživatel pokusí otevřít existující soubor projektu nebo se pokusí vytvořit nový projekt pomocí klonování šablony, integrovaném vývojovém prostředí používá rozšíření souboru k určení odpovídajícího projektu GUID.
+   Typy projektů jsou přidruženy k určité příponě názvu souboru. Když se uživatel pokusí otevřít existující soubor projektu nebo se pokusí vytvořit nový projekt klonováním šablony, ide používá příponu v souboru k určení odpovídajícího identifikátoru GUID projektu.
 
-   Jakmile rozhraní IDE zjistí, jestli musíte vytvořit nový projekt nebo otevřete existující projekt určitého typu, integrovaném vývojovém prostředí používá informace v systémovém registru pod **[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\8.0\Projects]**  k vyhledání, která implementuje objekt pro vytváření projektu vyžaduje VSPackage. Rozhraní IDE načte tento VSPackage. V <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> metoda sady VSPackage musíte zaregistrovat jeho objekt pro vytváření projektů pomocí integrovaného vývojového prostředí pomocí volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes.RegisterProjectType%2A> metody.
+   Jakmile rozhraní IDE určí, zda musí vytvořit nový projekt nebo otevřít existující projekt určitého typu, použije ide informace v systémovém registru pod **[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\8.0\Projects]** k určení, který vSPackage implementuje požadovanou továrnu projektu. IDE načte tento VSPackage. V <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> metodě VSPackage musí zaregistrovat své továrny projektu <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes.RegisterProjectType%2A> s IDE voláním metody.
 
-   Hlavní metodou `IVsProjectFactory` rozhraní je <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>, který by měl zpracovat dva scénáře: otevření existujícího projektu a vytvoření nového projektu. Většina projektů jejich stav projektu uložený v souboru projektu. Obvykle jsou nové projekty vytvořené vytváření kopie souboru šablony předán `CreateProject` metodu a poté otevřou kopie. Existující projekty se mohl vytvořit jeho instanci přímo otevření souboru projektu předány `CreateProject` metody. `CreateProject` Metodu můžete zobrazit další funkce uživatelského rozhraní pro uživatele podle potřeby.
+   Primární metoda `IVsProjectFactory` rozhraní je <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>, který by měl zpracovat dva scénáře: otevření existujícího projektu a vytvoření nového projektu. Většina projektů ukládá svůj stav projektu do souboru projektu. Obvykle nové projekty jsou vytvořeny vytvořením kopie souboru `CreateProject` šablony předány metodě a potom otevření kopie. Existující projekty jsou vytvořena instance přímým otevřením `CreateProject` souboru projektu předán metodě. Metoda `CreateProject` může zobrazit další funkce uživatelského rozhraní pro uživatele podle potřeby.
 
-   Projekt můžete také použít žádné soubory a místo toho uložte jeho stav projektu v mechanismus pro ukládání než systém souborů, jako jsou databáze nebo webového serveru. V tomto případě předán parametr název souboru `CreateProject` metoda není ve skutečnosti cestu systému souborů, ale jedinečný řetězec – adresa URL – k identifikaci dat projektu. Není potřeba kopírovat soubory šablon, které jsou předány `CreateProject` aktivuje sekvenci odpovídající konstruktoru, který má být proveden.
+   Projekt může také použít žádné soubory a místo toho uložit svůj stav projektu v mechanismu úložiště než v systému souborů, jako je například databáze nebo webový server. V tomto případě parametr název souboru předaný metodě `CreateProject` není ve skutečnosti cestou systému souborů, ale jedinečným řetězcem – adresou URL – k identifikaci dat projektu. Není nutné kopírovat soubory šablony, které `CreateProject` jsou předány k aktivaci příslušné konstrukční sekvence, která má být provedena.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes>

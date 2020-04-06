@@ -1,24 +1,24 @@
 ---
-title: Osnova a skrytý Text ve službě starší verze jazyka | Dokumentace Microsoftu
+title: Osnova a skrytý text ve službě staršího jazyka | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - outlining, supporting in native code
 ms.assetid: 252c5221-2e64-461c-8dcf-b622e400e0be
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: abe608036e8531415aab11300eb9583ffaca9021
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b1f05d42de0201a7556046d19baf55830fa62c22
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314871"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80706828"
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>Osnova a skrytý text ve službě starší verze jazyka
-Sbalování umožňuje sbalit posloupnost řádky textu do jednoho řádku. Například v jazyce C++ mohou být sbalena všechny metody do jednoho řádku zobrazující pouze podpis metody. Skrytý text je posloupnost řádky textu, které může být zobrazený nebo skrytý.
+Osnova umožňuje sbalit posloupnost řádků textu do jednoho řádku. Například v jazyce C++ všechny metody mohou být sbaleny na jeden řádek, zobrazující pouze podpis metody. Skrytý text je posloupnost textových řádků, které lze zobrazit nebo skrýt.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Postupy: Podpora osnovy ve službě starší verze jazyka](../../extensibility/internals/how-to-support-outlining-in-a-legacy-language-service.md)
@@ -27,8 +27,8 @@ Sbalování umožňuje sbalit posloupnost řádky textu do jednoho řádku. Nap�
 
 - [Postupy: Poskytování podpory skrytého textu ve službě starší verze jazyka](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)
 
- Vysvětluje účel oblasti skrytého textu a poskytuje pokyny o tom, jak implementovat oblasti skrytého textu.
+ Vysvětluje účel oblasti skrytý text a poskytuje pokyny o tom, jak implementovat oblast skrytý text.
 
-- [Postupy: Poskytování rozšířené podpory osnovy ve službě starší verze jazyka](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)
+- [Postupy: Rozšířená podpora osnovy ve službě starší verze jazyka](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)
 
- Vysvětluje dvě možnosti, které rozšiřují podpora osnovy pro váš jazyk nad rámec podpora *sbalit do definic* příkazu.
+ Vysvětluje dvě možnosti, které rozšiřují nastínit podporu pro váš jazyk mimo podporu *sbalit definice* příkazu.

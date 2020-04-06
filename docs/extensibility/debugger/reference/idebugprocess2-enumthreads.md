@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::EnumThreads | Dokumentace Microsoftu
+title: IDebugProcess2::EnumThreads | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcess2::EnumThreads
 ms.assetid: 05677385-7a7f-4545-8438-af00dde85db0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 664f4264fd12106fef0650a31a888470e09a3154
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 52383649fc45eae6bbac6831f9bb233b9c0a2fde
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353171"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80724066"
 ---
 # <a name="idebugprocess2enumthreads"></a>IDebugProcess2::EnumThreads
-Načte seznam všech vláken spuštěných v rámci procesu.
+Načte seznam všech vláken spuštěných v procesu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,17 +41,17 @@ int EnumThreads(
 
 ## <a name="parameters"></a>Parametry
 `ppEnum`\
-[out] Vrátí [IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md) objekt, který obsahuje seznam všech vláken ve všech aplikacích v procesu.
+[out] Vrátí objekt [IEnumDebugThreads2,](../../../extensibility/debugger/reference/ienumdebugthreads2.md) který obsahuje seznam všech vláken ve všech programech v procesu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda vytvoří výčet vlákna spuštěná v každém programu a kombinuje je do procesu zobrazení vlákna. Jedno vlákno může běžet ve více programech; Tato metoda vytvoří výčet bylo vlákno pouze jednou.
+ Tato metoda vytvoří výčet podprocesů spuštěných v každém programu a pak je zkombinuje do zobrazení procesu podprocesů. Jedno vlákno může být spuštěno ve více programech. tato metoda vyjmenovává toto vlákno pouze jednou.
 
- Tato metoda představuje seznam vláken procesu bez duplicitní položky. V opačném případě se vytvořit výčet vlákna spuštěná v konkrétní aplikaci, použijte [enumthreads –](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md) metody.
+ Tato metoda představuje seznam vláken procesu bez duplikátů. V opačném případě výčet podprocesů spuštěných v určitém programu použijte metodu [EnumThreads.](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md)
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

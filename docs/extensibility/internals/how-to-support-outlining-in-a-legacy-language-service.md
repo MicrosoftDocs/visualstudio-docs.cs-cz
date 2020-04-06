@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Podpora osnovy ve službě starší verze jazyka | Dokumentace Microsoftu'
+title: 'Postup: Podpora osnovy ve službě starší jazyk | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,44 +7,44 @@ helpviewer_keywords:
 - language services, supporting Collapse to Definitions command
 - hidden text, Collapse to Definitions command
 ms.assetid: bb6e74c3-93e4-4ef7-afc7-1c9b342f083b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6f79f98ede5c28f8e3acb682ebe8f23e4dc4f72e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 28396d513c83ed83e2769e75a6020a98b10251b4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66312041"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707909"
 ---
-# <a name="how-to-support-outlining-in-a-legacy-language-service"></a>Postupy: Podpora osnovy ve službě starší verze jazyka
-Sbalení se používá k rozbalit nebo sbalit různé oblasti textu. Sbalování stejně, jako se používá mohou být definovány rozdílně v různých jazycích. Další informace najdete v tématu [Osnova](../../ide/outlining.md).
+# <a name="how-to-support-outlining-in-a-legacy-language-service"></a>Postup: Podpora osnovy ve starší jazykové službě
+Osnova se používá k rozbalení nebo sbalení různých oblastí textu. Způsob, jakým se osnova používá, lze definovat odlišně různými jazyky. Další informace naleznete [v tématu Osnova](../../ide/outlining.md).
 
- Služby starší verze jazyka jsou implementovány jako součást sady VSPackage, ale novější způsob implementace funkce služba jazyka je pro použití rozšíření MEF. Další informace o nový způsob implementace sbalování najdete v tématu [názorný postup: Sbalování](../../extensibility/walkthrough-outlining.md).
+ Starší jazykové služby jsou implementovány jako součást VSPackage, ale novější způsob implementace funkcí služby jazyka je použití rozšíření MEF. Další informace o novém způsobu implementace osnovy najdete v [tématu Návod: Osnova](../../extensibility/walkthrough-outlining.md).
 
 > [!NOTE]
-> Doporučujeme vám, že začnete používat nový editor API co nejdříve. Tím vylepšíme výkonu vaší služby jazyka a umožňují využívat nové funkce editoru.
+> Doporučujeme, abyste co nejdříve začali používat nové rozhraní API editoru. Tím se zlepší výkon služby jazyka a umožní vám využít nové funkce editoru.
 
- Následující ukazuje, jak podporovat tento příkaz pro vaši službu jazyka.
+ Následující ukazuje, jak podporovat tento příkaz pro službu jazyka.
 
-## <a name="to-support-outlining"></a>Pro podporu osnovy
+## <a name="to-support-outlining"></a>Chcete-li podpořit osnovu
 
-1. Implementace <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningCapableLanguage> na váš objekt služby jazyka.
+1. Implementujte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningCapableLanguage> objekt služby jazyka.
 
-2. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A> u aktuálního objektu relace sbalování přidávat nové oblasti osnovy.
+2. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A> aktuálního objektu relace osnovy přidejte nové oblasti osnovy.
 
 ## <a name="robust-programming"></a>Robustní programování
- Když uživatel vybere **sbalit do definic** na **Osnova** nabídky, volání IDE <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningCapableLanguage.CollapseToDefinitions%2A> na službě jazyka.
+ Když uživatel vybere **sbalit definice v** nabídce **Osnova,** rozhraní IDE zavolá <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningCapableLanguage.CollapseToDefinitions%2A> na vaši jazykovou službu.
 
- Když tato metoda je volána, rozhraní IDE předá <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> ukazatel (ukazatel na textové vyrovnávací paměti) a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession> (ukazatel na aktuální relace sbalování).
+ Při volání této metody ide předá v <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> ukazatel (ukazatel na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession> vyrovnávací paměť textu) a (ukazatel na aktuální relaci osnovy).
 
- Můžete volat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A> metodu pro více oblastí osnovy tak, že zadáte v těchto oblastech `rgOutlnReg` parametr. `rgOutlnReg` Parametr je <xref:Microsoft.VisualStudio.TextManager.Interop.NewOutlineRegion> struktury. Tento postup umožňuje určit jiné vlastnosti skryté oblasti, jako je například, jestli je konkrétní oblasti rozbalená nebo sbalená.
+ Metodu pro <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A> více oblastí osnovy můžete volat `rgOutlnReg` zadáním těchto oblastí v parametru. Parametr `rgOutlnReg` je <xref:Microsoft.VisualStudio.TextManager.Interop.NewOutlineRegion> struktura. Tento proces umožňuje určit různé charakteristiky skryté oblasti, například zda je určitá oblast rozbalená nebo sbalená.
 
 > [!NOTE]
-> Buďte opatrní skrytí znaky nového řádku. Skrytý text by měl rozšířit od samého začátku první řádek poslední znak na posledním řádku oddíl, zanechá viditelný posledním znakem nového řádku.
+> Buďte opatrní při skrývání znaků nového řádku. Skrytý text by měl přesahovat od začátku prvního řádku do posledního znaku posledního řádku v oddílu, přičemž konečný znak nového řádku by měl být viditelný.
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Poskytování podpory skrytého textu ve službě starší verze jazyka](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)
-- [Postupy: Rozšířená podpora osnovy ve službě starší verze jazyka](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)
+## <a name="see-also"></a>Viz také
+- [Postup: Poskytnutí skryté textové podpory ve službě starších jazyků](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)
+- [Postup: Poskytování rozšířené podpory ve starší jazykové službě](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)

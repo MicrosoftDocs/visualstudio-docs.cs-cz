@@ -1,5 +1,5 @@
 ---
-title: 'IEnumDebugFields:: Next | Microsoft Docs'
+title: IEnumDebugFields::Další | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugFields::Next method
 ms.assetid: 22c177a2-af81-4234-812b-f9b47be245a2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 216ce9d49ba9de33307ad692787d6e6d36ee15c3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d82a3b4ceafca7de2277a85b65b9d9ef98c31243
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72727650"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80716844"
 ---
 # <a name="ienumdebugfieldsnext"></a>IEnumDebugFields::Next
-Tato metoda vrací další sadu prvků z výčtu.
+Tato metoda vrátí další sadu prvků z výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,17 +45,17 @@ int Next(
 
 ## <a name="parameters"></a>Parametry
 `celt`\
-pro Počet prvků, které mají být načteny. Určuje také maximální velikost `rgelt` pole.
+[v] Počet prvků načíst. Také určuje maximální velikost `rgelt` pole.
 
 `rgelt`\
-[in, out] Pole [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) prvků, které se mají vyplnit
+[dovnitř, ven] Pole [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) prvky, které mají být vyplněny.
 
 `pceltFetched`\
-mimo Vrátí počet prvků, které jsou ve skutečnosti vráceny v `rgelt`.
+[out] Vrátí počet prvků skutečně `rgelt`vrácených v .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud bylo vráceno méně než požadovaný počet prvků. v opačném případě vrátí kód chyby.
+ Pokud je `S_OK`úspěšná, vrátí . Vrátí, `S_FALSE` pokud menší než požadovaný počet prvků mohou být vráceny; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

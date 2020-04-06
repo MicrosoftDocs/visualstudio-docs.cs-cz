@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugModules2::Reset | Dokumentace Microsoftu
+title: IEnumDebugModules2::Obnovit | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugModules2::Reset
 ms.assetid: f6ff364c-2644-4919-b950-3cb82eb6f601
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b969b03c955368415d2e5911eb46731d133abad3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 81fc33620449837f3d2af883f0721d24df92e804
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350328"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80716527"
 ---
 # <a name="ienumdebugmodules2reset"></a>IEnumDebugModules2::Reset
-Obnoví výčtu na první prvek.
+Obnoví výčet na první prvek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,10 +38,10 @@ int Reset();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Až tato metoda je volána, další volání [Další](../../../extensibility/debugger/reference/ienumdebugmodules2-next.md) metoda vrátí první prvek výčtu.
+ Po volání této metody další volání [Next](../../../extensibility/debugger/reference/ienumdebugmodules2-next.md) metoda vrátí první prvek výčtu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md)

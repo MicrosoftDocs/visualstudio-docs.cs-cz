@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2::WatchForExpressionEvaluationOnThread | Dokumentace Microsoftu
+title: IDebugEngineProgram2::WatchForExpressionEvaluationOnThread | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngineProgram2::WatchForExpressionEvaluationOnThread
 ms.assetid: 01d05e77-8cac-4d1b-b19f-25756767ed27
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e72292f403b28c66cddbcee623f27ddfcbe5c3aa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e988e1d64af38a55f5d946f704e1edb4df29b1d5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345182"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730372"
 ---
 # <a name="idebugengineprogram2watchforexpressionevaluationonthread"></a>IDebugEngineProgram2::WatchForExpressionEvaluationOnThread
-Umožňuje nebo zakazuje vyhodnocení výrazu, ke kterým došlo u dané vlákno, i v případě, že program přestal.
+Umožňuje (nebo zakáže) vyhodnocení výrazu dojít v daném vlákně, i v případě, že program byl zastaven.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,29 +49,29 @@ int WatchForExpressionEvaluationOnThread( 
 
 ## <a name="parameters"></a>Parametry
 `pOriginatingProgram`\
-[in] [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekt představující program, který je vyhodnocení výrazu.
+[v] [Objekt IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) představující program, který vyhodnocuje výraz.
 
 `dwTid`\
-[in] Určuje identifikátor vlákna.
+[v] Určuje identifikátor vlákna.
 
 `dwEvalFlags`\
-[in] Kombinace příznaků z [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) výčet určující, jak se má provést vyhodnocení.
+[v] Kombinace příznaků z výčtu [EVALFLAGS,](../../../extensibility/debugger/reference/evalflags.md) které určují, jak má být hodnocení provedeno.
 
 `pExprCallback`\
-[in] [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objekt, který se má použít k odeslání události ladění, ke kterým dochází při vyhodnocení výrazu.
+[v] [Objekt IDebugCallBackback2,](../../../extensibility/debugger/reference/idebugeventcallback2.md) který má být použit k odeslání ladicí události, ke kterým dochází během vyhodnocení výrazu.
 
 `fWatch`\
-[in] Pokud nenulová (`TRUE`), umožňuje vyhodnocování výrazů ve vlákně identifikovaný `dwTid`; v opačném případě nula (`FALSE`) nepovoluje vyhodnocení výrazu v daném vláknu.
+[v] Pokud nenulová`TRUE`( ), umožňuje vyhodnocení `dwTid`výrazu na vlákno označené ; jinak nula`FALSE`( ) zakazuje vyhodnocení výrazu v tomto vlákně.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Když správce ladění relace (SDM) požádá program identifikován `pOriginatingProgram` parametr vyhodnocení výrazu, upozorní všech ostatních připojených programů po zavolání metody.
+ Když správce ladění relace (SDM) požádá program, `pOriginatingProgram` identifikovaný parametrem, vyhodnotit výraz, upozorní všechny ostatní připojené programy voláním této metody.
 
- Vyhodnocení výrazu v jedné aplikaci může způsobit, že kód ke spuštění v jiném, z důvodu vyhodnocení funkce nebo vyhodnocení žádné `IDispatch` vlastnosti. Tato metoda umožňuje z tohoto důvodu vyhodnocení výrazu ke spuštění a dokončení, i když vlákno je pravděpodobně zastavená v rámci tohoto programu.
+ Vyhodnocení výrazu v jednom programu může způsobit spuštění kódu v `IDispatch` jiném programu z důvodu vyhodnocení funkce nebo vyhodnocení všech vlastností. Z tohoto důvodu tato metoda umožňuje vyhodnocení výrazu spustit a dokončit i v případě, že vlákno může být zastavenv tomto programu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)
 - [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)
 - [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

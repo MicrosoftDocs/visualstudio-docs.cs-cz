@@ -1,31 +1,31 @@
 ---
-title: Visibilityitem – Element | Dokumentace Microsoftu
+title: Prvek VisibilityItem | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VisibilityItem element (VSCT XML schema)
 - VSCT XML schema elements, VisibilityItem
 ms.assetid: 0932f551-972d-4194-84bb-426e3e4375e4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6c817b9a004872800b02f6a7c6d0f64fd324304b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9129d64e430d661bbdd8f7682e64c93650570211
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310735"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698152"
 ---
-# <a name="visibilityitem-element"></a>Visibilityitem – element
-`VisibilityItem` Element určuje statické viditelnost příkazů a panelů nástrojů. Každá položka identifikuje příkaz nebo nabídky a také objekt context přidružený příkaz uživatelského rozhraní. Sada Visual Studio zjistí bez načítání rozšíření VSPackages, který je definovat příkazy, nabídek a panelů nástrojů a jejich viditelnost. Využívá integrovaného vývojového prostředí <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> metodou ke zjištění, jestli je aktivní kontext uživatelského rozhraní příkazů.
+# <a name="visibilityitem-element"></a>VisibilityItem element
+Prvek `VisibilityItem` určuje statickou viditelnost příkazů a panelů nástrojů. Každá položka identifikuje příkaz nebo nabídku a také přidružený kontext ui příkazu. Visual Studio detekuje příkazy, nabídky a panely nástrojů a jejich viditelnost, bez načtení VSPackages, které je definují. IDE používá <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> metodu k určení, zda je aktivní kontext ui příkazu.
 
- Po načtení sady VSPackage, Visual Studio očekává, že příkaz viditelnost bude určen sady VSPackage místo `VisibilityItem`. K určení přehled o svých rukou, můžete implementovat buď <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> obslužná rutina události nebo <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metoda, v závislosti na tom, jak jste implementovali svých rukou.
+ Po načtení VSPackage Visual Studio očekává, že viditelnost příkazu bude určena `VisibilityItem`VSPackage spíše než . Chcete-li zjistit viditelnost příkazu, můžete <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> implementovat obslužnou rutinu události nebo metodu <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> v závislosti na tom, jak jste implementovali příkaz.
 
- Příkaz nebo nabídky, která má `VisibilityItem` elementu se zobrazí pouze v případě, souvisejícího kontextu je aktivní. Můžete přidružit jediným příkazem, nabídku nebo panel nástrojů jeden nebo více kontexty příkaz uživatelského rozhraní zahrnutím záznam pro každou kombinaci kontext příkazů. Pokud příkaz nebo nabídky je spojeno s více kontexty příkaz uživatelského rozhraní, příkaz nebo nabídky je viditelné při aktivním některou z uživatelského rozhraní kontexty přidružený příkaz.
+ Příkaz nebo nabídka, `VisibilityItem` která má prvek, se zobrazí pouze v případě, že je aktivní přidružený kontext. Jeden příkaz, nabídku nebo panel nástrojů můžete přidružit k jednomu nebo více kontextům příkazového ui zahrnutím položky pro každou kombinaci kontextu příkazu. Pokud je příkaz nebo nabídka přidružena k více kontextům příkazu, je příkaz nebo nabídka viditelná, když je aktivní některý z přidružených kontextů hlavního nastavení příkazu.
 
- `VisibilityItem` Element platí pouze pro příkazy, nabídky a panely nástrojů, ne do skupin. Element, který nemá se souvisejícím `VisibilityItem` pokaždé, když je aktivní nabídku nadřazené je element viditelný.
+ Prvek `VisibilityItem` se vztahuje pouze na příkazy, nabídky a panely nástrojů, nikoli na skupiny. Prvek, který nemá související `VisibilityItem` prvek, je viditelný vždy, když je aktivní jeho nadřazená nabídka.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,29 +36,29 @@ ms.locfileid: "66310735"
   context="guidNotViewSourceMode"/>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|identifikátor GUID|Povinný parametr. Identifikátor GUID identifikátoru GUID a ID příkazu.|
-|id|Povinný parametr. ID identifikátoru GUID a ID příkazu.|
-|kontext|Povinný parametr. Kontext uživatelského rozhraní, ve kterém je příkaz viditelný.|
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Identifikátor guid|Povinná hodnota. Identifikátor GUID identifikátoru příkazu GUID/ID.|
+|id|Povinná hodnota. ID identifikátoru příkazu GUID/ID.|
+|kontext|Povinná hodnota. Kontext ui, ve kterém je příkaz viditelný.|
+|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+ Žádný
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Visibilityconstraints – element](../extensibility/visibilityconstraints-element.md)|`VisibilityConstraints` Prvek určuje statické viditelnost skupiny příkazů a panely nástrojů.|
+|[VisibilityConstraints prvek](../extensibility/visibilityconstraints-element.md)|Prvek `VisibilityConstraints` určuje statickou viditelnost skupin příkazů a panelů nástrojů.|
 
 ## <a name="remarks"></a>Poznámky
- Standardní uživatelské rozhraní Visual Studio kontexty jsou definovány v *cestu instalace sady Visual Studio SDK*\VisualStudioIntegration\Common\Inc\vsshlids.h soubor stejně jako v <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids> a <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> třídy. Úplnější sadu kontexty uživatelského rozhraní je definováno v <xref:Microsoft.VisualStudio.VSConstants> třídy.
+ Standardní kontexty ui sady Visual Studio jsou definovány v *instalační cestě sady Visual Studio SDK*\VisualStudioIntegration\Common\Inc\vsshlids.h a také ve třídách <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids> a. <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> Úplnější sada kontextů ui je <xref:Microsoft.VisualStudio.VSConstants> definována ve třídě.
 
 ## <a name="example"></a>Příklad
 
@@ -69,11 +69,11 @@ ms.locfileid: "66310735"
 </VisibilityConstraints>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A>
 - <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus>
 - <xref:Microsoft.VisualStudio.VSConstants>
 - <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids>
 - <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>
-- [Visibilityconstraints – element](../extensibility/visibilityconstraints-element.md)
-- [Visual Studio tabulky příkazů (. Soubory Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [VisibilityConstraints prvek](../extensibility/visibilityconstraints-element.md)
+- [Visual Studio příkaz tabulky (. Vsct) Soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

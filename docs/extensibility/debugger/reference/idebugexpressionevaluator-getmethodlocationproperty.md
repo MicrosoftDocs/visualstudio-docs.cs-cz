@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::GetMethodLocationProperty | Dokumentace Microsoftu
+title: IDebugExpressionEvaluator::GetMethodLocationProperty | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExpressionEvaluator::GetMethodLocationProperty method
 ms.assetid: 52c42a2e-f144-476b-8bef-442464c8fe8e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: faa2767e54e9821c7b3270fa60f5be232a2c232f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a6ba87d6c1a1f7370ce5e209440589f362b87035
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325771"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729517"
 ---
 # <a name="idebugexpressionevaluatorgetmethodlocationproperty"></a>IDebugExpressionEvaluator::GetMethodLocationProperty
-Tato metoda převede metoda umístění a posun na adresu paměti.
+Tato metoda převede umístění metody a posun na adresu paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,29 +49,29 @@ int GetMethodLocationProperty(
 
 ## <a name="parameters"></a>Parametry
 `upstrFullyQualifiedMethodPlusOffset`\
-[in] Metoda umístění a posun, vyjádřený jako řetězec.
+[v] Umístění metody a posun, vyjádřené jako řetězec.
 
 `pSymbolProvider`\
-[in] Poskytovatel symbolů vyjádřený jako [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) objektu.
+[v] Zprostředkovatel symbolu vyjádřený jako objekt [IDebugSymbolProvider.](../../../extensibility/debugger/reference/idebugsymbolprovider.md)
 
 `pAddress`\
-[in] Adresy v rámci metody, vyjádřené jako [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) objektu.
+[v] Adresa v rámci metody, vyjádřené jako objekt [IDebugAddress.](../../../extensibility/debugger/reference/idebugaddress.md)
 
 `pBinder`\
-[in] Vazač vyjádřený jako [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) objektu.
+[v] Pořadač vyjádřený jako objekt [IDebugBinder.](../../../extensibility/debugger/reference/idebugbinder.md)
 
 `ppProperty`\
-[out] Vrátí [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) rozhraní, které představuje adresu paměti.
+[out] Vrátí rozhraní [IDebugProperty2,](../../../extensibility/debugger/reference/idebugproperty2.md) které představuje adresu paměti.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Vrácené adresu je možné nastavit zarážku, třeba.
+ Vrácená adresa slouží například k nastavení zarážky.
 
- Bez ohledu na název `upstrFullyQualifiedMethodPlusOffset`, tento parametr je možné předat název metody částečně kvalifikované. V takovém případě vybrané metody je ten, který obklopuje `pAddress`. Jak tento parametr je interpretován je až po implementaci vyhodnocovací filtr výrazů a jazyk, který podporuje.
+ Navzdory názvu `upstrFullyQualifiedMethodPlusOffset`může být tento parametr předán částečně kvalifikovaný název metody. V takovém případě je vybraná metoda, `pAddress`která obklopuje . Způsob interpretace tohoto parametru je na implementaci vyhodnocení výrazu a jazyk, který podporuje.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)
 - [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

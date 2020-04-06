@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::CanBind | Dokumentace Microsoftu
+title: IDebugPendingBreakpoint2::CanBind | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - IDebugPendingBreakpoint2::CanBind method
 - CanBind method
 ms.assetid: 84a2b189-ccf1-467e-8fab-0c0da68f0b91
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c9325d8a0c8ee39aec6f8ceccb5bbb894eef2163
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 07625f7249092e2de3d3dccaaef31a2869755e36
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311736"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725974"
 ---
 # <a name="idebugpendingbreakpoint2canbind"></a>IDebugPendingBreakpoint2::CanBind
-Určuje, zda tento čekající zarážka mohl vytvořit vazbu k umístění kódu.
+Určuje, zda tato čekající zarážka může vázat na umístění kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,16 +42,16 @@ int CanBind ( 
 
 ## <a name="parameters"></a>Parametry
 `ppErrorEnum`\
-[out] Vrátí [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) objekt, který obsahuje seznam [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) objektů, pokud může dojít k chybám.
+[out] Vrátí objekt [IEnum DebugErrorBreakpoints2,](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) který obsahuje seznam objektů [IDebugErrorBreakpoint2,](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) pokud by mohlo dojít k chybám.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK.` vrátí `S_FALSE` Pokud nelze vytvořit vazbu k zarážce, v takovém případě vrátí chyby podle `ppErrorEnum` parametru. V opačném případě vrátí kód chyby. Vrátí `E_BP_DELETED` Pokud zarážka byla odstraněna.
+ Pokud je `S_OK.` úspěšná, vrátí vrátí, `S_FALSE` pokud zarážka `ppErrorEnum` nelze vázat, v takovém případě jsou chyby vráceny parametrem. V opačném případě vrátí kód chyby. Vrátí, `E_BP_DELETED` pokud byla zarážka odstraněna.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je volána k určení, co by mohlo dojít v případě, že to čekající zarážka byla vázaná. Volání [svázat](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) metoda ve skutečnosti vytvořit vazbu čekající zarážka.
+ Tato metoda je volána k určení, co by se stalo, pokud tato čekající zarážka byla vázána. Volání [Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) metoda skutečně vázat čekající zarážka.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CPendingBreakpoint` objekt, který zveřejňuje [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) rozhraní.
+ Následující příklad ukazuje, jak implementovat `CPendingBreakpoint` tuto metodu pro jednoduchý objekt, který zveřejňuje rozhraní [IDebugPendingBreakpoint2.](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
 
 ```cpp
 HRESULT CPendingBreakpoint::CanBind(IEnumDebugErrorBreakpoints2** ppErrorEnum)
@@ -138,8 +138,8 @@ HRESULT CPendingBreakpoint::CanBind(IEnumDebugErrorBreakpoints2** ppErrorEnum)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
 - [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)
 - [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)
-- [Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)
+- [Vytvořit vazbu](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)

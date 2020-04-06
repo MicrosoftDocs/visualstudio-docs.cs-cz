@@ -1,27 +1,27 @@
 ---
-title: IDebugProgram3::ExecuteOnThread | Dokumentace Microsoftu
+title: IDebugProgram3::ExecuteOnThread | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugProgram3::ExecuteOnThread
 ms.assetid: 2f5211e3-7a3f-47bf-9595-dfc8b4895d0d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 798a0caca394a21d6ee12a99efeacb2f27f6969c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 201c08352bc5b616298349c52197529ef3f1a7d2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66343606"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722657"
 ---
 # <a name="idebugprogram3executeonthread"></a>IDebugProgram3::ExecuteOnThread
-Spustí ladicí program. Vlákno se vrátí do poskytnout informace o ladicího programu, ve které vlákno je uživatel zobrazení při provádění programu.
+Spustí program ladicího programu. Vlákno je vrácena poskytnout ladicí program informace o tom, které vlákno uživatel je zobrazení při provádění programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,22 +38,22 @@ int ExecuteOnThread(
 
 ## <a name="parameters"></a>Parametry
 `pThread`\
-[in] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objektu.
+[v] Objekt [IDebugThread2.](../../../extensibility/debugger/reference/idebugthread2.md)
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Existují tři způsoby, že ladicí program může pokračovat v provádění po zastavení:
+ Ladicí program může pokračovat v provádění po zastavení třemi různými způsoby:
 
-- Spusťte: Zrušit všechny předchozí krok a spusťte až k další zarážce a tak dále.
+- Spouštět: Zrušte všechny předchozí kroky a spouštět až do další zarážky a tak dále.
 
-- Krok: Zrušit všechny původní kroku a spustit, dokud se nedokončí nový krok.
+- Krok: Zrušte všechny staré kroky a spouštět, dokud se nový krok nedokončí.
 
-- Pokračujte: Spusťte znovu a ponechání aktivní žádné staré kroku.
+- Pokračovat: Spusťte znovu a nechte všechny staré kroky aktivní.
 
-  Vlákno předán `ExecuteOnThread` je užitečné, když se budete rozhodovat, ve kterém kroku zrušit. Pokud si nejste jisti vlákno, spusťte zruší všechny kroky. Se znalostí vlákna stačí zrušit kroku na aktivní vlákno.
+  Vlákno předané `ExecuteOnThread` do je užitečné při rozhodování, který krok zrušit. Pokud neznáte vlákno, spuštění spustit zruší všechny kroky. Se znalostí vlákna stačí zrušit krok v aktivním vlákně.
 
-## <a name="see-also"></a>Viz také:
-- [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md)
+## <a name="see-also"></a>Viz také
+- [Spuštění](../../../extensibility/debugger/reference/idebugprogram2-execute.md)
 - [IDebugProgram3](../../../extensibility/debugger/reference/idebugprogram3.md)

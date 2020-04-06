@@ -1,28 +1,28 @@
 ---
-title: IDebugSymbolProviderDirect::GetAppIDFromAddress | Dokumentace Microsoftu
+title: IDebugSymbolProviderDirect::GetAppIDFromAddress | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSymbolProviderDirect::GetAppIDFromAddress
 - GetAppIDFromAddress
 ms.assetid: d76a0f36-79c4-4c58-9db3-880b00d11610
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 59078cd574c30992d332983704aba4d70f069d5c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: df1dbea23cf29809c5f504359ebf02b40c14e6e2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347438"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719154"
 ---
 # <a name="idebugsymbolproviderdirectgetappidfromaddress"></a>IDebugSymbolProviderDirect::GetAppIDFromAddress
-Načte identifikátor domény aplikace podle první adresy ladění.
+Načte identifikátor domény aplikace s adresou ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,13 +42,13 @@ int GetAppIDFromAddress(
 
 ## <a name="parameters"></a>Parametry
 `pAddress`\
-[in] Ladění adresu, která je reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.
+[v] Ladicí adresa, která je reprezentována rozhraním [IDebugAddress.](../../../extensibility/debugger/reference/idebugaddress.md)
 
 `pAppID`\
 [out] Identifikátor domény aplikace.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

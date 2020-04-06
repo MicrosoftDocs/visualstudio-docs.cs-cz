@@ -1,33 +1,33 @@
 ---
-title: Podpora služby jazyka pro ladění | Dokumentace Microsoftu
+title: Podpora jazykových služeb pro ladění | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugger, language support
 - language services, debugging support
 ms.assetid: 7a44067f-a410-4a6a-84d2-bda5184140bc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8d4946c25aeac2d677b7a527a3d2bb338db3aa31
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8c80e8e1f584b1728f342cb596b689f6a22c9297
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333651"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707438"
 ---
 # <a name="language-service-support-for-debugging"></a>Podpora služby jazyka pro ladění
-Služba jazyka může poskytovat funkce, které podporují ladicí program prostřednictvím <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageDebugInfo> rozhraní. Tyto funkce patří ověřování zarážek a poskytnutí seznam výrazů **automatické hodnoty** okna.
+Služba jazyka může poskytovat funkce, které podporují <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageDebugInfo> ladicí program prostřednictvím rozhraní. Mezi tyto funkce patří ověřování zarážek a poskytování seznamu výrazů do okna **Autos.**
 
- Musíte však mít vyhodnocovače výrazů pro ladění jazyka. Chyba při vyhodnocování výrazu je zodpovědná za vaše rozhodnutí vyzkoušet výrazy k vytvoření hodnot při ladění. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu:
+ Však musíte mít vyhodnocení výrazu ladit váš jazyk. Vyhodnocení výrazu je zodpovědný za vyhodnocení výrazy vytvářet hodnoty při ladění. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu:
 
-- [Vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)
+- [Vyhodnocení výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)
 
-- [Ukázka Vyhodnocovač spravovaných výrazů](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
+- [Ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
 
 ## <a name="compiler-output"></a>Výstup kompilátoru
- Typ kompilátoru jazyka určuje, co je potřeba provést k implementaci ladění pro váš jazyk. Pokud se kompilátor zaměřuje na operační systém Windows a zapíše soubor PDB, můžete ladit programy s nativním kódem ladicím modulu, který je integrovaný do sady Visual Studio. Pokud váš kompilátor vytvoří jazyk Microsoft intermediate language (MSIL), můžete ladit programy se spravovaným kódem ladění modul, který je také integrované do sady Visual Studio. Pokud se kompilátor zaměřuje na proprietární operačního systému nebo jiné běhové prostředí, budete muset napsat vlastní modulu pro ladění.
+ Typ kompilátoru určuje, co je třeba provést k implementaci ladění pro váš jazyk. Pokud kompilátor cílí na operační systém Windows a zapíše soubor PDB, můžete ladit programy pomocí nativního ladicího modulu kódu, který je integrován do sady Visual Studio. Pokud kompilátor vytváří zprostředkující jazyk Microsoftu (MSIL), můžete ladit programy pomocí modulu ladění spravovaného kódu, který je také integrován do sady Visual Studio. Pokud váš kompilátor cílí na proprietární operační systém nebo jiné prostředí runtime, musíte napsat vlastní ladicí modul.
 
- Další informace o implementaci ladění jazyka najdete v tématu [Začínáme](../../extensibility/debugger/getting-started-with-debugger-extensibility.md) v aplikaci Visual Studio SDK ladění.
+ Další informace o implementaci ladění pro váš jazyk naleznete v [tématu Začínáme](../../extensibility/debugger/getting-started-with-debugger-extensibility.md) v sadě Visual Studio Ladění SDK.

@@ -1,24 +1,24 @@
 ---
-title: Registrace starší verze jazyka Service1 | Microsoft Docs
+title: Registrace služby staršího jazyka1 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - language services [managed package framework], registering
 ms.assetid: d33b08af-09e0-4c79-87b2-5536b27fbacf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b6607f96a37c8805c8a01d1d8aa5271ef84f1c6a
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 91776382fff1818986049558c9d86e8fce4d0dd7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252377"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80705894"
 ---
 # <a name="registering-a-legacy-language-service"></a>Registrace služby starší verze jazyka
-V rámci spravovaného balíčku rozhraní (MPF) je jazyková služba proffered pomocí VSPackage (viz [VSPackage](../../extensibility/internals/vspackages.md)) a je zaregistrována [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] přidáním klíčů registru a záznamů. Tento proces registrace se provádí částečně během instalace a částečně v době běhu.
+V rámci spravovaného balíčku (MPF) je jazyková služba nabízena balíčkem VSPackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (viz [VSPackages)](../../extensibility/internals/vspackages.md)a je registrována přidáním klíčů registru a položek. Tento proces registrace se provádí částečně během instalace a částečně za běhu.
 
 ## <a name="register-the-language-service-by-using-attributes"></a>Registrace jazykové služby pomocí atributů
  Následující atributy se používají k registraci jazykové služby.
@@ -33,9 +33,9 @@ V rámci spravovaného balíčku rozhraní (MPF) je jazyková služba proffered 
 
 - <xref:Microsoft.VisualStudio.Shell.ProvideLanguageEditorOptionPageAttribute>
 
-  Tyto atributy jsou vysvětleny níže.
+  Tyto atributy jsou vysvětleny níže
 
-### <a name="provideserviceattribute"></a>ProvideServiceAttribute
+### <a name="provideserviceattribute"></a>Atribut ProvideServiceAttribute
  Tento atribut registruje službu jazyka jako službu.
 
 ### <a name="example"></a>Příklad
@@ -54,8 +54,8 @@ namespace TestLanguagePackage
 }
 ```
 
-### <a name="providelanguageserviceattribute"></a>ProvideLanguageServiceAttribute
- Tento atribut registruje službu jazyka specificky jako službu jazyka. Umožňuje nastavit možnosti, které určují funkce, které vaše služba jazyka nabízí. V příkladu se zobrazuje podmnožina možností, kterou může poskytovat služba jazyka. Úplnou sadu možností jazykové služby najdete v tématu <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>.
+### <a name="providelanguageserviceattribute"></a>Atribut ProvideLanguageServiceAttribute
+ Tento atribut registruje službu jazyka konkrétně jako jazykovou službu. Umožňuje nastavit možnosti, které určují funkce, které nabízí služba jazyka. Příklad ukazuje podmnožinu možností, které může jazyková služba poskytnout. Úplnou sadu možností jazykových <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>služeb naleznete v tématu .
 
 ### <a name="example"></a>Příklad
 
@@ -79,8 +79,8 @@ namespace TestLanguagePackage
 }
 ```
 
-### <a name="providelanguageextensionattribute"></a>ProvideLanguageExtensionAttribute
- Tento atribut přidruží službu jazyka k příponě souboru. Pokaždé, když se načte soubor s tímto rozšířením, v jakémkoli projektu se spustí vaše jazyková služba a použije se k zobrazení obsahu souboru.
+### <a name="providelanguageextensionattribute"></a>Poskytnout atribut _LanguageExtensionAttribute
+ Tento atribut přidruží jazykovou službu k příponě souboru. Při každém načtení souboru s tímto rozšířením je v libovolném projektu spuštěna a použita služba jazyka k zobrazení obsahu souboru.
 
 ### <a name="example"></a>Příklad
 
@@ -98,8 +98,8 @@ namespace TestLanguagePackage
 }
 ```
 
-### <a name="providelanguagecodeexpansionattribute"></a>ProvideLanguageCodeExpansionAttribute
- Tento atribut zaregistruje umístění, ze kterého jsou získány rozšíření kódu nebo šablony fragmentů. Tyto informace jsou používány **prohlížečem fragmentů kódu** a editorem při vložení fragmentu kódu do zdrojového souboru.
+### <a name="providelanguagecodeexpansionattribute"></a>Poskytnout atribut Rozšíření kódu_jazyce
+ Tento atribut registruje umístění, ze kterého jsou získány šablony rozšíření kódu nebo fragmentu. Tyto informace jsou používány **prohlížečem fragmentů kódu** a editorem při vložení fragmentu kódu do zdrojového souboru.
 
 ### <a name="example"></a>Příklad
 
@@ -124,11 +124,11 @@ namespace TestLanguagePackage
 }
 ```
 
-### <a name="providelanguageeditoroptionpageattribute"></a>ProvideLanguageEditorOptionPageAttribute
- Tento atribut zaregistruje stránku vlastností, která se má zobrazit v dialogovém okně **Možnosti** v kategorii **textový editor** . Pro každou stránku, která se má zobrazit pro vaši jazykovou službu, použijte jeden z těchto atributů. Pokud potřebujete uspořádat své stránky ve stromové struktuře, použijte další atributy k definování každého uzlu stromu.
+### <a name="providelanguageeditoroptionpageattribute"></a>Poskytnout atribut LanguageEditorOptionPageAttribute
+ Tento atribut zaregistruje stránku vlastností, která se má zobrazit v dialogovém okně **Možnosti** v kategorii **Textový editor.** Použijte jeden z těchto atributů pro každou stránku, která se zobrazí pro vaši jazykovou službu. Pokud potřebujete uspořádat stránky do stromové struktury, použijte další atributy k definování každého uzlu stromu.
 
 ### <a name="example"></a>Příklad
- Tento příklad ukazuje dvě stránky vlastností, **Možnosti** a **odsazení**a jeden uzel, který obsahuje druhou stránku vlastností.
+ Tento příklad ukazuje dvě stránky **vlastností, Možnosti** a **Odsazení**a jeden uzel, který obsahuje druhou stránku vlastnosti.
 
 ```csharp
 using Microsoft.VisualStudio.Shell;
@@ -159,11 +159,11 @@ namespace TestLanguagePackage
 }
 ```
 
-## <a name="proffer-the-language-service-at-run-time"></a>Nabídnout službu jazyka za běhu
- Když je váš jazykový balíček načtený, musíte říct [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , že je vaše jazyková služba připravená. Provedete to tak, že Proffering službu. To se provádí v <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metodě. Kromě toho je třeba spustit časovač, který volá vaši službu jazyka během nečinnosti, aby bylo možné provést analýzu na pozadí. Tento časovač nečinnosti slouží také k aktualizaci vlastností dokumentu, pokud jste provedli implementaci <xref:Microsoft.VisualStudio.Package.DocumentProperties> přes třídu. Aby bylo možné podporovat časovač, musí balíček implementovat <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent> rozhraní ( <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent.FDoIdle%2A> pouze metoda musí být plně implementována; zbývající metody mohou vracet výchozí hodnoty).
+## <a name="proffer-the-language-service-at-run-time"></a>Proffer jazyková služba v době běhu
+ Po načtení jazykového balíčku [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je nutné sdělit, že je jazyková služba připravena. Můžete to provést tím, že nabízí službu. To se provádí <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> v metodě. Kromě toho je třeba spustit časovač, který volá službu jazyka během období nečinnosti, takže lze provést analýzu na pozadí. Tento časovač nečinnosti se také používá k aktualizaci <xref:Microsoft.VisualStudio.Package.DocumentProperties> vlastností dokumentu, pokud jste implementovali některé prostřednictvím třídy. Chcete-li podporovat časovač, váš balíček musí implementovat <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent> rozhraní (pouze <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent.FDoIdle%2A> metoda musí být plně implementována; zbývající metody mohou vrátit výchozí hodnoty).
 
 ### <a name="example"></a>Příklad
- Tento příklad ukazuje typický přístup k Proffering služby a poskytnutí časovače nečinnosti.
+ Tento příklad ukazuje typický přístup k nabízení služby a poskytování časovače nečinnosti.
 
 ```csharp
 

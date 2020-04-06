@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2 | Dokumentace Microsoftu
+title: IDebugPortEx2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPortEx2 interface
 ms.assetid: 144724d0-38ee-4c9b-87ca-8a504371182b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bed6cd047af4ba57a1880d87e30a990dcf83efac
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5789681b0da70f46dadac1e29d0d6bb9dc905d1a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66340430"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80724999"
 ---
 # <a name="idebugportex2"></a>IDebugPortEx2
-Toto rozhraní umožňuje relace ladění správci řízení aplikací a procesů spuštěných na portu.
+Toto rozhraní umožňuje správci ladění relace (SDM) řídit programy a procesy spuštěné na portu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,27 +29,27 @@ IDebugPortEx2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Dodavatel port. Tento vlastní port implementuje toto rozhraní na stejný objekt, který implementuje [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md).
+ Vlastní port dodavatel implementuje toto rozhraní na stejný objekt, který implementuje [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md).
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Volání SDM [QueryInterface](/cpp/atl/queryinterface) na `IDebugPort2` rozhraní k získání tohoto rozhraní.
+ SDM volá [QueryInterface](/cpp/atl/queryinterface) `IDebugPort2` v rozhraní získat toto rozhraní.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IDebugPortEx2`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IDebugPortEx2`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
 |[LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md)|Spustí spustitelný soubor.|
 |[ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)|Pokračuje v provádění procesu.|
-|[CanTerminateProcess](../../../extensibility/debugger/reference/idebugportex2-canterminateprocess.md)|Určuje, zda lze ukončit proces.|
-|[TerminateProcess](../../../extensibility/debugger/reference/idebugportex2-terminateprocess.md)|Ukončení procesu.|
-|[GetPortProcessId](../../../extensibility/debugger/reference/idebugportex2-getportprocessid.md)|Získá ID procesu portu samotný.|
+|[CanTerminateProcess](../../../extensibility/debugger/reference/idebugportex2-canterminateprocess.md)|Určuje, zda lze proces ukončit.|
+|[TerminateProcess](../../../extensibility/debugger/reference/idebugportex2-terminateprocess.md)|Ukončí proces.|
+|[GetPortProcessId](../../../extensibility/debugger/reference/idebugportex2-getportprocessid.md)|Získá ID procesu portu samotného.|
 |[GetProgram](../../../extensibility/debugger/reference/idebugportex2-getprogram.md)|Získá program přidružený k uzlu programu.|
 
 ## <a name="remarks"></a>Poznámky
- Toto rozhraní je obvykle privátní mezi SDM a port. Tento vlastní port dodavatelem.
+ Toto rozhraní je obvykle soukromé mezi SDM a dodavatelem vlastního portu.
 
- V případě potřeby ladicího stroje (DE) můžete vyhledat tato rozhraní [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) předán rozhraní [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) a používat [LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) ke spuštění programu. Toto není povinné však a Zavedenými můžete dělat cokoli, co je potřeba udělat pro spuštění programu požadavku.
+ V případě potřeby ladicí modul (DE) můžete vyhledat toto rozhraní na rozhraní [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) předán [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) a použít [LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) ke spuštění programu. To však není požadavek a DE může dělat, co je třeba udělat pro spuštění programu požadavku.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: portpriv.h
@@ -58,6 +58,6 @@ IDebugPortEx2 : IUnknown
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

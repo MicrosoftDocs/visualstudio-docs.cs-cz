@@ -1,69 +1,69 @@
 ---
-title: Instalace balíčků VSPackage pomocí Instalační služby systému Windows | Dokumentace Microsoftu
+title: Instalace balíčků VSPackages s Instalační službou systému Windows | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - installation [Visual Studio SDK], with Windows Installer
 - VSPackages, deploying
 ms.assetid: 41d2c72c-0a97-4fcd-b3aa-33a8d3aa962a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94dcb85e3cfef9c44cb8e88720f53c296f8bf997
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2eb90dbffa9f04cd17afa70d2bdfc59205bc99cb
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349853"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707466"
 ---
 # <a name="installing-vspackages-with-windows-installer"></a>Instalace balíčků VSPackage pomocí Instalační služby systému Windows
-Integrace do vaší VSPackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vyžaduje více než pouhé kopírování souborů na počítači uživatele. Instalační program vašeho balíčku VSPackage musíte nainstalovat sady VSPackage a jeho závislých souborů a zaregistrovat a integrovat je do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Vaše VSPackage můžete využít výhod funkcí pro integraci například ikonu zobrazení na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] úvodní obrazovky a o dialogové okno.
+Integrace vspackage do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vyžaduje více než jen kopírování souborů do počítače uživatele. Instalační program vspackage musí nainstalovat VSPackage a jeho závislé soubory a [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]zaregistrovat a integrovat je do . VSPackage můžete využít funkce integrace, jako je například zobrazení ikony na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] úvodní obrazovce a o dialogovém okně.
 
- Soubory Instalační služby systému Microsoft Windows jsou doporučeným způsobem, jak distribuovat vaše rozšíření VSPackages. Snadno použitelné balíčky Instalační služby systému Windows můžete spustit v libovolném operačním systému Windows nepodporuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Další informace najdete v tématu [Instalační služby systému Windows](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).
+ Soubory Instalační služby systému Microsoft Windows jsou doporučeným způsobem distribuce balíčků VSPackages. Snadno použitelné balíčky Instalační služby systému Windows lze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]spustit v libovolném operačním systému Windows podporovaném programem . Další informace naleznete v [instalační službě systému Windows](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Základní informace o Instalační službě systému Windows](../../extensibility/internals/windows-installer-basics.md)
 
- Poskytuje přehled Instalační služby systému Windows.
+ Obsahuje přehled Instalační služby systému Windows.
 
 - [Scénáře instalace balíčku VSPackage](../../extensibility/internals/vspackage-setup-scenarios.md)
 
- Tento článek popisuje různé způsoby, které může podporovat-souběžnými instalacemi vaše rozšíření VSPackages a [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
+ Popisuje různé způsoby, jak můžete podporovat souběžné instalace vspackages a [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
 
 - [Vytvoření balíčku Instalační služby systému Windows](../../extensibility/internals/authoring-a-windows-installer-package.md)
 
- Poskytuje přehled o obvyklé kroky instalační programy podle správně nainstalovat a integrovat do VSPackages [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
+ Obsahuje přehled typických kroků, kterými instalační programy postupují [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]pro správnou instalaci a integraci balíčků VSPackages do aplikace .
 
 - [Zjištění požadavků na systém](../../extensibility/internals/detecting-system-requirements.md)
 
- Popisuje, jak můžete zjistit, instalační program [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a jeho součástmi a zrušit instalační program, pokud nejsou splněny požadavky na VSPackage.
+ Popisuje, jak instalační program [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] může zjistit a jeho součásti a zrušit instalaci, pokud nejsou splněny požadavky VSPackage.
 
 - [Správa komponent](../../extensibility/internals/component-management.md)
 
- Popisuje, jak vyvíjet instalační program, který bude udržovat tak integritu předchozích verzích produktu.
+ Popisuje, jak vyvinout instalační program, který bude udržovat integritu předchozích verzí produktu.
 
 - [Výběr instalačního adresáře pro balíček VSPackage](../../extensibility/internals/choosing-the-installation-directory-for-a-vspackage.md)
 
- Shrnuje možnosti pro vyhledání rozšíření VSPackages.
+ Shrnuje možnosti pro vyhledání VSPackages.
 
 - [Registrace balíčku VSPackage](../../extensibility/internals/vspackage-registration.md)
 
- Popisuje, jak balíčky VSPackages zaregistrovaní v době instalace a proč samoregistračního není dobrý nápad.
+ Popisuje, jak jsou v době instalace registrovány vbalíčcích VSPackages a proč je vlastní registrace špatný nápad.
 
 - [Nasazování typů projektů](../../extensibility/internals/deploying-project-types.md)
 
- Popisuje, jak použít nový typ projektu agregátor pro typy projektů spravovaného kódu.
+ Popisuje, jak použít nový agregátor typu projektu pro typy projektů spravovaného kódu.
 
-- [Postupy: Vygenerování informací registru pro instalační program](../../extensibility/internals/how-to-generate-registry-information-for-an-installer.md)
+- [Postupy: Vygenerování informací registru pro instalační program ](../../extensibility/internals/how-to-generate-registry-information-for-an-installer.md)
 
- Vysvětluje způsob používání RegPkg.exe ke generování manifestu registrace pro spravovaná VSPackage.
+ Vysvětluje, jak použít RegPkg.exe generovat manifest registrace pro spravované VSPackage.
 
 - [Příkazy, které se musí spustit po instalaci](../../extensibility/internals/commands-that-must-be-run-after-installation.md)
 
- Vysvětluje, jak spouštět příkazy po instalaci rozšíření VSPackages do integrace [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
+ Vysvětluje, jak spustit příkazy po instalaci integrovat [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]VSPackages do aplikace .
 
 - [Odinstalace balíčku VSPackage pomocí Instalační služby systému Windows](../../extensibility/internals/uninstalling-a-vspackage-with-windows-installer.md)
 
- Popisuje kroky, které instalační program musíte provést, když uživatelé odinstalaci vašeho balíčku VSPackage.
+ Popisuje kroky, které musí instalační program provést při odinstalaci balíčku VSPackage uživateli.

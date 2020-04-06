@@ -1,5 +1,5 @@
 ---
-title: Návrhář manifestů VSIX | Dokumentace Microsoftu
+title: VSIX Manifest Designer | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -9,125 +9,125 @@ helpviewer_keywords:
 - vsix manifest
 - manifest designer
 ms.assetid: 5a691e77-cf91-430d-90ea-361d9031ef83
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c13d32ab6b91dce94bab307f6bbc6744f9c17a0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 30620e0fe91d0e90995d2d2f721950f878c65fdc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322841"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697897"
 ---
 # <a name="vsix-manifest-designer"></a>Návrhář manifestu VSIX
-Upraví soubor manifestu balíčku VSIX, který nastaví chování při instalaci rozšíření sady Visual Studio.
+Upraví soubor manifestu balíčku VSIX, který nastaví chování instalace pro rozšíření sady Visual Studio.
 
- **Návrhář manifestu VSIX** mapuje na základní schéma VSIX. Každý prvek ve schématu můžete nastavit pomocí odpovídající ovládací prvek v návrháři. Další informace o schématu najdete v tématu [VSIX Extension Schema 2.0 referenční informace](../extensibility/vsix-extension-schema-2-0-reference.md).
+ **VSIX Manifest Designer** mapuje na základní schéma VSIX. Každý prvek ve schématu lze nastavit pomocí odpovídající ovládací prvek v návrháři. Další informace o schématu naleznete v tématu [VSIX Extension Schema 2.0 Reference](../extensibility/vsix-extension-schema-2-0-reference.md).
 
- Chcete-li otevřít **Návrhář manifestu VSIX**, vyhledejte *source.extension.vsixmanifest* ve **Průzkumníku řešení**a otevřete soubor. Pokud soubor neobsahuje platný kód XML, manifest designer nelze otevřít.
+ Chcete-li otevřít **Návrhář manifestu VSIX**, vyhledejte soubor *source.extension.vsixmanifest* v **Průzkumníku řešení**a otevřete soubor. Pokud soubor neobsahuje platný kód XML, návrhář manifestu se neotevře.
 
 > [!NOTE]
-> *Source.extension.vsixmanifest* soubor se nachází výstup do *extension.vsixmanifest* když je sestaven balíček.
+> Soubor *source.extension.vsixmanifest* je výstup na *extension.vsixmanifest* při sestavení balíčku.
 
-## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
- **Návrhář manifestu VSIX** obsahuje čtyři oddíly, které odpovídají těmto nejvyšší úrovně prvky schématu:
+## <a name="uielement-list"></a>Seznam Prvků UI
+ **Návrhář manifestu VSIX** obsahuje čtyři oddíly, které odpovídají těmto prvkům nejvyšší úrovně schématu:
 
 - Metadata
 
-- Cíle instalace
+- Instalace cílů
 
 - Prostředky
 
 - Závislosti
 
-  Oblast záhlaví obsahuje následující ovládací prvky.
+  Oblast nadpisu obsahuje následující ovládací prvky.
 
-  **Název produktu** popisuje název rozšíření.
+  **Název produktu** Popisuje název rozšíření.
 
-  **ID produktu** určuje jedinečné identifikační informace pro tento balíček.
+  **ID produktu** Určuje jedinečné identifikační informace pro tento balíček.
 
   **Autor** Určuje jméno autora rozšíření.
 
   **Verze** Určuje číslo verze rozšíření.
 
-  **Metadat** karta obsahuje následující ovládací prvky.
+  Karta **Metadata** obsahuje následující ovládací prvky.
 
-  **Popis** poskytuje textový popis rozšíření, který se má zobrazit v **Správce rozšíření**.
+  **Popis** Obsahuje textový popis rozšíření, které se zobrazí ve **Správci rozšíření**.
 
-  **Jazyk** Určuje výchozí jazyk pro balíček, který odpovídá textová data v manifestu. `Language` Atribut konvenci, common language runtime (CLR) národního prostředí kódu pro sestavení prostředků, třeba cs-us, en, fr-fr. Výchozí hodnota je neutrální, což znamená, že balíček se spustí v jakékoli jazykové verzi sady Visual Studio.
+  **Jazyk** Určuje výchozí jazyk pro balíček, který odpovídá textovým datům v manifestu. Atribut `Language` následuje konvence kódu národního prostředí cltime společného jazyka (CLR) pro sestavení prostředků, například en-us, en, fr-fr. Ve výchozím nastavení je hodnota neutrální, což znamená, že balíček bude spuštěn v libovolné jazykové verzi sady Visual Studio.
 
-  **Licence** Určuje textový soubor, který obsahuje licenci, pokud je k dispozici.
+  **Licence** Určuje textový soubor, který obsahuje uživatelskou licenci, pokud je k dispozici.
 
-  **Ikona** Určuje soubor grafiky ( *.png*, *.bmp*, *.jpeg*, *.ico*), který obsahuje ikonu, který se má zobrazit v **Správce rozšíření**, pokud je k dispozici ikona. Obrázek ikony musí být 32 x 32 pixelů nebo změně velikosti se do příslušných dimenzí. Pokud není zadána žádná ikona, **Správce rozšíření** používá výchozí ikona.
+  **Ikona** Určuje grafický soubor (*.png*, *.bmp*, *.jpeg*, *.ico*), který obsahuje ikonu, která má být zobrazena ve **Správci rozšíření**, pokud je ikona přítomna. Obrázek ikony musí mít rozměr y 32 x 32 pixelů, jinak se jeho velikost na tyto rozměry zmenšuje. Pokud není zadána žádná ikona, **správce rozšíření** použije výchozí ikonu.
 
-  **Obrázek náhledu** Určuje soubor grafiky ( *.png*, *.bmp*, *.jpeg*, *.ico*), který obsahuje image ve verzi preview pro Zobrazit v **Správce rozšíření**, pokud image ve verzi preview je k dispozici. Obrázek náhledu, musí být 200 x 200 pixelů. Pokud není zadán žádný náhled obrázku, **Správce rozšíření** používá výchozí image.
+  **Náhled obrázku** Určuje grafický soubor (*.png*, *.bmp*, *.jpeg*, *.ico*), který obsahuje náhled obrazu, který má být zobrazen ve **Správci rozšíření**, pokud je k dispozici náhled obrazu. Náhled obrazu musí mít 200 x 200 pixelů. Pokud není zadán žádný náhled obrazu, **Správce rozšíření** používá výchozí obraz.
 
-  **Značky** přidá text značky pro tipy pro hledání.
+  **Značky** Přidá textové značky, které se mají použít pro rady při hledání.
 
-  **Zpráva k vydání verze** Určuje soubor ( *.txt*, *.rtf*), který obsahuje zprávu k vydání verze. Přijímá také adresu URL webu, který se zobrazí zpráva k vydání verze.
+  **Poznámky k verzi** Určuje soubor (*.txt*, *.rtf*), který obsahuje poznámky k verzi. Také přebírá adresu URL webu, který zobrazuje poznámky k verzi.
 
-  **Příručka Začínáme** Určuje soubor ( *.txt*, *.rtf*), který obsahuje informace o tom, jak použít rozšíření nebo obsah v balíčku souboru VSIX. Tento průvodce se zobrazí po dokončení instalace rozšíření. Přijímá také adresu URL webu, který se zobrazí v průvodci.
+  **Příručka Začínáme** Určuje soubor (*.txt*, *.rtf*), který obsahuje informace o použití přípony nebo obsahu v balíčku VSIX. Tato příručka se zobrazí po dokončení instalace rozšíření. Také přebírá adresu URL webu, který zobrazuje průvodce.
 
-  **Další informace o adrese URL** Určuje adresu URL webu, který obsahuje další informace o produktu.
+  **Další adresa URL informací** Určuje adresu URL webu, který obsahuje další informace o produktu.
 
-  **Cíle instalace** karta obsahuje následující ovládací prvky.
+  Karta **Cíle instalace** obsahuje následující ovládací prvky.
 
-  **Typ instalace** uvádí **rozšíření sady Visual Studio** a **rozšíření SDK** tak, jak cílit na typech instalace. Možnosti se liší v závislosti na typu, který zvolíte.
+  **Typ instalace** Zobrazí seznam **rozšíření sady Visual Studio** a sady **SDK** jako cílové typy instalace. Možnosti se liší v závislosti na zvoleném typu.
 
-  **Rozšíření sady Visual Studio** uvádí **InstallationTarget** prvky, které popisují, jak lze nainstalovat balíček a do které produkty sady Visual Studio můžou toto rozšíření nainstalovat. Každý produkt se identifikují samostatně, lepší výkon díky název a verzi nebo verzi. Produkty lze přidávat do seznamu, upravit a odstranit. Název a verzi produktu odpovídá **Id** a **verze** atributy přidruženého **InstallationTarget** elementu.
+  **Rozšíření sady Visual Studio** Uvádí **installationtarget** prvky, které popisují, jak lze nainstalovat balíček a do kterých produktů sady Visual Studio toto rozšíření lze nainstalovat. Každý produkt je identifikován samostatně podle názvu a rozsahu verzí nebo verzí. Produkty lze přidat do seznamu, upravit a odstranit. Název a verze produktu odpovídají **Id** a **Version** atributy přidružené **installationtarget** element.
 
-  **Rozsah verzí** je [12,0, 14,0] a používá následující zápis:
+  **Rozsah verzí** je [12.0, 14.0] a používá následující zápis:
 
-- [-minimální verze (včetně)
+- [ - minimální verze včetně
 
-- ]-maximální verze (včetně)
+- ] - maximální verze včetně
 
-- (– minimální verze exkluzivní
+- ( - minimální verze exkluzivní
 
-- ) – exkluzivní maximální verze
+- ) - maximální verze exkluzivní
 
-- Jedna verze # - jenom určená verze
+- Jedna verze # - pouze zadaná verze
 
-  **Rozšíření sady SDK** Určuje globální instalace, který není v oboru konkrétního produktu a verze. **Identifikátor cílové platformy** je na platformě, jako je například "Windows,", který cílíte. **Cílit na verzi platformy** je verze, jako je například 8.0 cílové platformy. **Název sady SDK** a **verze sady SDK** jsou název a číslo verze sady SDK, v uvedeném pořadí.
+  **Sada SDK rozšíření** Určuje globální instalaci, která není vymezena na konkrétní produkt a verzi. **Identifikátor cílové platformy** je platforma, například Windows, na kterou cílíte. **Verze cílové platformy** je verze, například 8.0, cílové platformy. **Název sady SDK** a **verze sady SDK** jsou název a číslo verze sady SDK.
 
-  **Tento VSIX se nainstalují pro všechny uživatele (vyžaduje zvýšení úrovně oprávnění při instalaci)** Pokud toto políčko zaškrtnete, rozšíření je nainstalované pro všechny uživatele; v opačném případě se nainstaluje jenom pro aktuálního uživatele.
+  **Tento VSIX je nainstalován pro všechny uživatele (vyžaduje zvýšení při instalaci)** Pokud zaškrtnete toto políčko, rozšíření je nainstalováno pro všechny uživatele. v opačném případě je nainstalován pouze pro aktuálního uživatele.
 
-  **Tento VSIX nainstalovaného pomocí Instalační služby systému Windows** Pokud toto políčko zaškrtnete, je rozšíření nainstalované pomocí Instalační služby systému Windows (*MSI* souboru); v opačném případě je nainstalována jako typického balíčku VSIX (*VSIX.*  souboru).
+  **Tento VSIX je nainstalován Instalační službou systému Windows** Pokud toto políčko zaškrtnete, bude přípona nainstalována Instalační službou systému Windows (*soubor MSI);* v opačném případě je nainstalován jako typický balíček VSIX (*soubor .vsix).*
 
-  **Prostředky** karta obsahuje následující ovládací prvky.
+  Karta **Prostředky** obsahuje následující ovládací prvky.
 
-  **Seznam prostředků** uvádí Asset prvky, které popisují prvky rozšíření nebo obsahu, že tento balíček zařízení surface. Každé rozšíření nebo obsahu elementu je uvedena samostatně podle zdroje, typu a cestu. Prvky rozšíření a obsah můžete přidat do seznamu, upravit a odstranit. Typ a cestu k rozšíření nebo obsah elementu odpovídá `Type` a `Path` atributy přidruženého `Asset` elementu. Jsou známé následující typy:
+  **Seznam aktiv** Zobrazí seznam prvků Asset, které popisují prvky rozšíření nebo obsahu, které tento balíček zobrazí. Každý prvek rozšíření nebo obsahu je uveden samostatně podle zdroje, typu a cesty. Rozšíření a prvky obsahu lze přidat do seznamu, upravit a odstranit. Typ a cesta prvku rozšíření nebo obsahu `Type` odpovídá `Path` atributům a `Asset` přidruženého prvku. Následující typy jsou známy:
 
-- Microsoft.VisualStudio.Package
+- Balíček Microsoft.VisualStudio.Package
 
-- Microsoft.VisualStudio.MefComponent
+- Součást Microsoft.VisualStudio.MefComponent
 
-- Microsoft.VisualStudio.ToolboxControl
+- Ovládací prvek Microsoft.VisualStudio.Toolbox
 
 - Microsoft.VisualStudio.Samples
 
-- Microsoft.VisualStudio.ProjectTemplate
+- Šablona Microsoft.VisualStudio.ProjectTemplate
 
-- Microsoft.VisualStudio.ItemTemplate
+- Šablona Microsoft.VisualStudio.Item
 
 - Microsoft.VisualStudio.Assembly
 
 - Microsoft.ExtensionSDK
 
-  Můžete přidat nebo upravit assetu, musíte zadat typ prostředku, jestli prostředek je projekt v aktuálním řešení nebo soubor v systému souborů a název projektu. Můžete také zadat název složky, ve kterém mají být vloženy.
+  Chcete-li přidat nebo upravit datový zdroj, musíte zadat typ datového zdroje, zda se jedná o projekt v aktuálním řešení nebo soubor v systému souborů, a název projektu. Můžete také zadat název složky, do které chcete vložit.
 
-  Můžete také vytvořit vlastní typy a poskytnout je jedinečné názvy.
+  Můžete také vytvořit vlastní typy a dát jim jedinečné názvy.
 
-  **Závislosti** karta obsahuje následující ovládací prvky.
+  Karta **Závislosti** obsahuje následující ovládací prvky.
 
-  **Název zdroje a rozsah verzí** obsahuje elementy Dependency tohoto balíčku, které jsou i další balíčky, na kterých závisí tento balíček. Pokud je zadaná závislost balíčku, musí být nainstalována před instalací tohoto balíčku; v opačném případě tento balíček musíte jej nainstalovat.
+  **Název, zdroj a rozsah verzí** Seznam prvků závislostí tohoto balíčku, které jsou další balíčky, které tento balíček závisí na. Pokud je zadán balíček závislostí, musí být nainstalován před instalací tohoto balíčku; v opačném případě jej tento balíček musí nainstalovat.
 
-  Závislé balíčky jsou určena podle identifikátoru, název, rozsah verzí, zdroje a jak se závislost, které je potřeba vyřešit. Každý balíček závislostí uvedený samostatně podle názvu, verze a zdroje. Závislé balíčky lze přidávat do seznamu, upravit a odstranit.
+  Balíčky závislostí jsou určeny identifikátorem, názvem, rozsahem verze, zdrojem a způsobem, jakým má být závislost vyřešena. Každý balíček závislostí je uveden samostatně podle názvu, verze a zdroje. Balíčky závislostí lze přidat do seznamu, upravit a odstranit.
 
-  Identifikátor musí odpovídat `ID` atribut metadata balíčků závislostí. Zdrojem může být projekt v aktuálním řešení, aktuálně nainstalovaná rozšíření nebo soubor. **Jak je vyřešit závislost** nastavení může být relativní cesta vnořené balíčku nebo adresu URL umístění stahování pro závislost. ID, verze a řešení závislostí balíčku odpovídají `Id`, `Version`, a `Location` atributy přidruženého `Dependency` elementu.
+  Identifikátor musí odpovídat `ID` atributu metadat balíčku závislostí. Zdrojem může být projekt v aktuálním řešení, aktuálně nainstalované rozšíření nebo soubor. **Jak je závislost vyřešena** nastavení může být relativní cestu vnořený balíček nebo URL umístění pro stahování pro závislost. ID, verze a řešení balíčku závislostí `Id`odpovídají atributům `Version`, `Location` a atributům `Dependency` přidruženého prvku.
 
-## <a name="see-also"></a>Viz také:
-- [VSIX extension schema 2.0 – referenční informace](../extensibility/vsix-extension-schema-2-0-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma rozšíření VSIX 2.0](../extensibility/vsix-extension-schema-2-0-reference.md)
 - [Anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md)

@@ -1,5 +1,5 @@
 ---
-title: Rozšíření uživatelských nastavení a možnosti | Dokumentace Microsoftu
+title: Rozšíření uživatelských nastavení a možností | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,27 +8,27 @@ helpviewer_keywords:
 - Options dialog box, controlling with the Visual Studio SDK
 - VSPackages, user preferences
 ms.assetid: 5bb6277a-8c9d-48c8-9b4e-1cb3052caded
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f7b8e1205f98aa701f816f42d7115a5d5ded959
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 854928c5461d60bb39b75d2895d8d1c8d0a0e8c5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342809"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711559"
 ---
-# <a name="extend-user-settings-and-options"></a>Rozšířit možnosti a nastavení uživatele
-V sadě Visual Studio existují dva hlavní způsoby, jak předvoleb uživatelů. **Nástroje** > **možnosti** stránky povolit uživatelům nastavit vlastní hodnoty u různých druhů, obecné a jazykově specifické nastavení. Uživatelská nastavení umožňují uživatelům zadání obecných vlastností konfigurace sady Visual Studio. Další informace o stránky možnosti najdete v tématu [možnosti a stránky možnosti](../extensibility/internals/options-and-options-pages.md). Další informace o nastavení uživatele, najdete v části [podpora pro uživatelská nastavení](../extensibility/internals/support-for-user-settings.md).
+# <a name="extend-user-settings-and-options"></a>Rozšíření uživatelských nastavení a možností
+V sadě Visual Studio existují dva hlavní způsoby, jak zachovat uživatelské předvolby. Stránky**Možnosti** **nástroje** > umožňují uživatelům nastavit vlastní hodnoty pro mnoho různých druhů nastavení, a to jak obecné, tak specifické pro jazyk. Uživatelská nastavení umožňují uživatelům určit obecné vlastnosti konfigurace sady Visual Studio. Další informace o stránkách možností naleznete v [tématu Možnosti a stránky možností](../extensibility/internals/options-and-options-pages.md). Další informace o uživatelích naleznete v [tématu Podpora uživatelských nastavení](../extensibility/internals/support-for-user-settings.md).
 
-- [Vytvoření stránky možnosti](../extensibility/creating-an-options-page.md) vysvětluje, jak vytvořit stránku možností.
+- [Vytvoření stránky možností](../extensibility/creating-an-options-page.md) Vysvětluje, jak vytvořit stránku možností.
 
-- [Vytvoření kategorie nastavení](../extensibility/creating-a-settings-category.md) vysvětluje, jak vytvořit kategorii nastavení.
+- [Vytvoření kategorie nastavení](../extensibility/creating-a-settings-category.md) Vysvětluje, jak vytvořit kategorii nastavení.
 
-- [Použití nastavení úložiště](../extensibility/using-the-settings-store.md) vysvětluje, jak použít nastavení úložiště.
+- [Použití úložiště nastavení](../extensibility/using-the-settings-store.md) Vysvětluje, jak používat úložiště nastavení.
 
-- [Získat informace o službě z úložiště nastavení](../extensibility/getting-service-information-from-the-settings-store.md) vysvětluje, jak načíst dostupné služby z nastavení úložiště.
+- [Získání informací o službě z úložiště nastavení](../extensibility/getting-service-information-from-the-settings-store.md) Vysvětluje, jak získat dostupné služby z úložiště nastavení.
 
-- [Zapsat do úložiště uživatelských nastavení](../extensibility/writing-to-the-user-settings-store.md) vysvětluje, jak zapsat do úložiště uživatelských nastavení.
+- [Zápis do úložiště uživatelských nastavení](../extensibility/writing-to-the-user-settings-store.md) Vysvětluje, jak psát do úložiště uživatelských nastavení.

@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::GetName | Dokumentace Microsoftu
+title: IDebugProcess2::GetName | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcess2::GetName
 ms.assetid: a2f66ab5-53e5-4cdc-a1b5-3b8afa8ee646
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d869f041bee3d187e4cd980328819505e667114e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 68026ed56aabd08f93588277c8d2b44e13604974
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339024"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723966"
 ---
 # <a name="idebugprocess2getname"></a>IDebugProcess2::GetName
-Získá název, jméno nebo název souboru procesu.
+Získá název, popisný název nebo název souboru procesu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,14 +43,14 @@ int GetName( 
 
 ## <a name="parameters"></a>Parametry
 `gnType`\
-[in] Hodnota z [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) výčet, který určuje, jaký typ název, který vrátí.
+[v] Hodnota z [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) výčtu, který určuje, jaký typ názvu vrátit.
 
 `pbstrName`\
 [out] Vrátí název procesu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)

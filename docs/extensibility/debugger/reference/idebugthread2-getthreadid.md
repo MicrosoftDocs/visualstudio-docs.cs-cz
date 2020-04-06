@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetThreadId | Dokumentace Microsoftu
+title: IDebugThread2::GetThreadId | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugThread2::GetThreadId
 ms.assetid: db8b1c07-6b86-47f9-b292-bac19c276d36
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 66ad2151f6455d758d57c51a387184a9fcce8ec7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a7788cc09d92ff4c784fbcb7004393fe0d3074c8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320175"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718701"
 ---
 # <a name="idebugthread2getthreadid"></a>IDebugThread2::GetThreadId
-Získá identifikátor systému.
+Získá identifikátor podprocesu systému.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,16 +41,16 @@ int GetThreadId (
 
 ## <a name="parameters"></a>Parametry
 `pdwThreadId`\
-[out] Vrátí identifikátor systému.
+[out] Vrátí identifikátor systémového vlákna.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-ID vlákna slouží k identifikaci vlákno mezi ostatní vlákna v procesu.
+ID vlákna se používá k identifikaci podprocesu mezi všemi ostatními vlákny v procesu.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CProgram` objekt, který implementuje [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) rozhraní.
+Následující příklad ukazuje, jak implementovat `CProgram` tuto metodu pro jednoduchý objekt, který implementuje rozhraní [IDebugThread2.](../../../extensibility/debugger/reference/idebugthread2.md)
 
 ```cpp
 HRESULT CProgram::GetThreadId(DWORD* pdwThreadId) {
@@ -59,5 +59,5 @@ HRESULT CProgram::GetThreadId(DWORD* pdwThreadId) {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

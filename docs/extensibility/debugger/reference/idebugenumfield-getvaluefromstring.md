@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetValueFromString | Dokumentace Microsoftu
+title: IDebugEnumField::GetValueFromString | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEnumField::GetValueFromString method
 ms.assetid: 1ef8ac5e-a3e0-4078-b876-7f5615aedcbb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 81b74ecc780e2fd9df3cad5516c25f8a1fa657ec
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bb340721c9f446b740c2723dc3f6dc05452e74de
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345125"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730257"
 ---
 # <a name="idebugenumfieldgetvaluefromstring"></a>IDebugEnumField::GetValueFromString
-Tato metoda vrátí hodnotu přidruženou k názvu konstanta výčtu.
+Tato metoda vrátí hodnotu přidruženou k názvu konstanty výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,17 +43,17 @@ int GetValueFromString(
 
 ## <a name="parameters"></a>Parametry
 `pszValue`\
-[in] Řetězec určující název, který má být získána hodnota. Všimněte si, že pro C++, toto je řetězec širokých znaků.
+[v] Řetězec určující název, pro který chcete získat hodnotu. Všimněte si, že pro C++ se jedná o řetězec široký znak.
 
 `pValue`\
-[out] Vrátí související číselnou hodnotu.
+[out] Vrátí přidruženou číselnou hodnotu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE`, pokud název není součástí výčtu nebo kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném `S_FALSE`případě vrátí , pokud název není součástí výčtu nebo kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je velká a malá písmena. Hledat bez tohoto rozlišování potřeby (například v jazyce jako například Visual Basic, kde názvy nejsou malá a velká písmena) a použít [GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md).
+ Tato metoda je malá a velká písmena. Pokud je potřeba hledání bez rozlišování velkých a malých písmen (například v jazyce, jako je například Visual Basic, kde názvy nejsou malá a velká písmena), použijte [GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)
 - [GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)

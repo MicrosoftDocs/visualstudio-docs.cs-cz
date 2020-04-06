@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame3::GetUnwindCodeContext | Dokumentace Microsoftu
+title: IDebugStackFrame3::GetUnwindCodeContext | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugStackFrame3::GetUnwindCodeContext method
 ms.assetid: b25f7e7d-2b24-48e4-93b3-829e61d73ebf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a63883b8c2f1f7e09070173281f5e9eeda528352
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 488f675c39bb01c87aca13a9bef8cc4a715ecf18
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352093"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719494"
 ---
 # <a name="idebugstackframe3getunwindcodecontext"></a>IDebugStackFrame3::GetUnwindCodeContext
-Vrátí kontext kódu představující umístění, pokud operace unwind zásobníku došlo k chybě.
+Vrátí kontext kódu představující umístění, pokud došlo k operaci unwind zásobníku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,14 +41,14 @@ int GetUnwindCodeContext(
 
 ## <a name="parameters"></a>Parametry
 `ppCodeContext`\
-[out] Vrátí [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který představuje místní umístění kódu, pokud došlo k odvíjení zásobníku.
+[out] Vrátí objekt [IDebugCodeContext2,](../../../extensibility/debugger/reference/idebugcodecontext2.md) který představuje umístění kontextu kódu, pokud došlo k unwind zásobníku.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- I když tato metoda může vrátit kontext kódu pro umístění po odvíjení zásobníku, neznamená nutně, že odvíjení zásobníku ve skutečnosti může dojít v aktuální rámec zásobníku.
+ I když tato metoda může vrátit kontext kódu pro umístění po unwind zásobníku, nemusí nutně znamenat, že unwind zásobníku může skutečně dojít v aktuálním rámci zásobníku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)
 - [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

@@ -1,5 +1,5 @@
 ---
-title: Zápis běžné Vyhodnocovač výrazů modulu Runtime jazyka | Dokumentace Microsoftu
+title: Psaní revaluorátoru exprese běžného běhu za běhu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,42 +7,42 @@ helpviewer_keywords:
 - expression evaluation, samples
 - debugging [Debugging SDK], expression evaluators tutorial
 ms.assetid: bd79d57f-8e0a-4e14-a417-0b1de28fa1b2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c295fcd881ed5348842355846c37af95b725f17e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4e46eaef395a7c66792662b3c5d4b9fbad419dfb
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348249"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712326"
 ---
-# <a name="writing-a-common-language-runtime-expression-evaluator"></a>Zápis běžné vyhodnocovač výrazů modulu runtime jazyka
+# <a name="writing-a-common-language-runtime-expression-evaluator"></a>Psaní relgenivátoru exprese za běhu běžného jazyka
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka Chyba při vyhodnocování výrazu spravované](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Chyba při vyhodnocování výrazu (EE) je součástí ladicího stroje (DE), která zpracovává syntaxi a sémantiku programovací jazyk, který vytvořil laděného kódu. Výrazy musí být vyhodnocena v rámci kontextu programovací jazyk. Například v některých jazycích znamená výraz "A + B" "sum A a B." V jiných jazycích stejný výraz může znamenat "A nebo b" Díky tomu se samostatnou EE musí být napsané pro každý programovací jazyk, který generuje kód objektu k ladění v rozhraní IDE sady Visual Studio.
+ Vyhodnocení výrazu (EE) je část ladicího modulu (DE), který zpracovává syntaxi a sémantiku programovacího jazyka, který produkoval kód, který je laděn. Výrazy musí být vyhodnoceny v kontextu programovacího jazyka. Například v některých jazycích výraz "A+B" znamená "součet A a B.". V jiných jazycích může stejný výraz znamenat "A nebo B". Proto musí být napsáno samostatné EE pro každý programovací jazyk, který generuje objektový kód, který má být laděn v ide sady Visual Studio.
 
- Některé aspekty ladění balíčku sady Visual Studio musí interpretovat kódu v rámci programovací jazyk. Například při provádění zastaví na zarážce, všechny výrazy, které uživatel zadal do **Watch** okna musí být vyhodnocen a zobrazí. Uživatel může změnit hodnotu místní proměnné tak, že zadáte výraz do **Watch** okno nebo do **okamžité** okna.
+ Některé aspekty balíčku ladění sady Visual Studio musí interpretovat kód v kontextu programovacího jazyka. Například při spuštění zastaví na zarážku, všechny výrazy, které uživatel zadal do okna **sledování** musí být vyhodnoceny a zobrazeny. Uživatel může změnit hodnotu místní proměnné zadáním výrazu do okna **Kukátka** nebo do okna **Okamžité.**
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Common language runtime a výraz hodnocení](../../extensibility/debugger/common-language-runtime-and-expression-evaluation.md) , který vysvětluje, když provádíte integraci proprietární programovací jazyk do IDE sady Visual Studio, zápis EE dokáže vyhodnocování výrazů v rámci vlastní jazyk Umožňuje zkompilovat pro jazyk Microsoft intermediate language (MSIL), aniž byste museli napsat ladicího stroje.
+ [Společné jazykové runtime a vyhodnocení výrazu](../../extensibility/debugger/common-language-runtime-and-expression-evaluation.md) Vysvětluje, že při integraci proprietární programovací jazyk do ide Sady Visual Studio, psaní EE schopné vyhodnocení výrazy v kontextu proprietární ho jazyka umožňuje kompilovat do zprostředkující jazyk Microsoft (MSIL) bez psaní ladicí modul.
 
- [Architektura vyhodnocovače výrazů](../../extensibility/debugger/expression-evaluator-architecture.md) popisuje, jak požadovaná EE rozhraní implementace a volání common language runtime symbol zprostředkovatele (SP) a rozhraní vazače.
+ [Architektura vyhodnocení výrazu](../../extensibility/debugger/expression-evaluator-architecture.md) Popisuje, jak implementovat požadovaná rozhraní EE a volat zprostředkovatele symbolů modulu RUNTIME (SP) a rozhraní pořadače jazyka.
 
- [Registrace vyhodnocovače výrazů](../../extensibility/debugger/registering-an-expression-evaluator.md) poznámky, že EE musí registrovat jako objekt pro vytváření tříd se modul common language runtime a běhová prostředí sady Visual Studio.
+ [Registrace vyhodnocení výrazu](../../extensibility/debugger/registering-an-expression-evaluator.md) Konstatuje, že EE musí zaregistrovat sám jako továrna třídy s běžným jazykem runtime a Visual Studio runtime prostředí.
 
- [Implementace vyhodnocovače výrazů](../../extensibility/debugger/implementing-an-expression-evaluator.md) popisuje, jak proces vyhodnocení výrazu obsahuje ladicí stroj (DE), poskytovatel symbolů (SP), objekt vazače a vyhodnocovací filtr výrazů (EE).
+ [Implementace vyhodnocení výrazu](../../extensibility/debugger/implementing-an-expression-evaluator.md) Popisuje, jak proces vyhodnocení výrazu zahrnuje ladicí modul (DE), zprostředkovatel symbolu (SP), objekt pořadače a vyhodnocení výrazu (EE).
 
- [Zobrazení místních hodnot](../../extensibility/debugger/displaying-locals.md) popisuje, jak při pozastavení provádění ladit balíček volá DE k získání seznamu místních proměnných a argumentů.
+ [Zobrazit místní obyvatele](../../extensibility/debugger/displaying-locals.md) Popisuje, jak při pozastavení spuštění ladicí balíček volá DE získat seznam místních proměnných a argumentů.
 
- [Vyhodnocení výrazu okna kukátka](../../extensibility/debugger/evaluating-a-watch-window-expression.md) dokumenty, jakým způsobem volá DE k určení aktuální hodnoty každý výraz v svůj seznam ke zhlédnutí balíčku ladění sady Visual Studio.
+ [Vyhodnocení výrazu okna kukátka](../../extensibility/debugger/evaluating-a-watch-window-expression.md) Dokumentuje, jak balíček ladění sady Visual Studio volá DE k určení aktuální hodnoty každého výrazu v seznamu sledovaných položek.
 
- [Změna hodnoty místní](../../extensibility/debugger/changing-the-value-of-a-local.md) vysvětluje, že v změna hodnoty lokální, má každý řádek v okně místních hodnot přidruženého objektu, který obsahuje název, typ a aktuální hodnoty místní hodnoty.
+ [Změna hodnoty místního](../../extensibility/debugger/changing-the-value-of-a-local.md) Vysvětluje, že při změně hodnoty local, každý řádek locals okna má přidružený objekt, který poskytuje název, typ a aktuální hodnotu místní.
 
- [Implementace vizualizérů typů a vlastních prohlížečů](../../extensibility/debugger/implementing-type-visualizers-and-custom-viewers.md) vysvětluje, které rozhraní musí být implementováno jaká součást pro podporu vizualizérů typů a vlastních prohlížečů.
+ [Implementace vizualizérů typů a vlastních prohlížečů](../../extensibility/debugger/implementing-type-visualizers-and-custom-viewers.md) Vysvětluje, které rozhraní musí být implementováno, kterou komponentou pro podporu vizualizátorů typů a vlastních prohlížečů.
 
-## <a name="see-also"></a>Viz také:
- [Rozšiřitelnost ladicího programu Visual Studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
+## <a name="see-also"></a>Viz také
+ [Rozšiřitelnost ladicího programu visual studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

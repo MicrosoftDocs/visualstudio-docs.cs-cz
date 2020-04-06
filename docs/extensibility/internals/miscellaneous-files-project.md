@@ -1,5 +1,5 @@
 ---
-title: Projekt různých souborů | Microsoft Docs
+title: Různé soubory projektu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,34 +8,34 @@ helpviewer_keywords:
 - Solution Items folder
 - files, opening with Miscellaneous Files project
 ms.assetid: 93a278a8-d4f4-400b-8945-4f1b0a2b5bac
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c46126507ef9bb293bd0fa6771f53343ad6206f7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 95cc1312fb7b381e1e20df834698480295fadcc8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72726682"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707101"
 ---
 # <a name="miscellaneous-files-project"></a>Projekt Ostatní soubory
-Když uživatel otevře položky projektu, IDE přiřadí k různým souborům všechny položky, které nejsou členy žádného projektu v řešení.
+Když uživatel otevře položky projektu, ide přiřadí různé soubory projektu všechny položky, které nejsou členy žádné projekty v řešení.
 
- Projekty hrají významnou roli při určování, který Editor se používá, když uživatel otevře položku projektu. Projekt může být navržen pro otevření určitých souborů pomocí editoru specifického pro projekt nebo standardního editoru.
+ Projekty hrají významnou roli při určování, který editor se používá, když uživatel otevře položku projektu. Projekt může být navržen tak, aby otevíral určité soubory pomocí editoru specifického pro projekt nebo standardního editoru.
 
- Editor specifický pro projekt obvykle vyžaduje, aby uživatel měl zvláštní znalosti nebo aby v projektu používal speciální rozhraní. Další informace najdete v tématu [Postup: otevření editorů specifických pro projekt](../../extensibility/how-to-open-project-specific-editors.md).
+ Editor specifický pro projekt obvykle vyžaduje, aby uživatel měl zvláštní znalosti nebo používal speciální rozhraní z projektu. Další informace naleznete v [tématu How to: Open Project-Specific Editors](../../extensibility/how-to-open-project-specific-editors.md).
 
- Standardní editor může otevřít libovolný soubor konkrétního rozšíření v jakémkoli projektu. Uživatel může přizpůsobit některé standardní editory, jako je [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] textový editor, pro projekty, ale zachovat jejich veřejný charakter. Standardní editory se vytvářejí pomocí metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>.
+ Standardní editor můžete otevřít libovolný soubor konkrétní přípony v libovolném projektu. Uživatel může přizpůsobit některé standardní editory, například [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] textový editor, pro projekty, ale stále si zachová svůj veřejný charakter. Standardní editory jsou vytvářeny pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metody.
 
- Pokud žádný projekt v řešení nereaguje na to, že může otevřít položku projektu, integrované vývojové prostředí (IDE) poskytuje speciální projekt nazvaný projekt různé soubory, který otevírá libovolný soubor.
+ Pokud žádný projekt v řešení odpoví, že může otevřít položku projektu, ide poskytuje speciální projekt s názvem Různé soubory projektu, který otevře libovolný soubor.
 
- Tento speciální projekt poskytuje pro otevření souboru mimo kontext projektu. Při zpracování metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> se v projektech různých souborů vždy reaguje s velmi nízkou prioritou. Proto projekt různé soubory vždycky vyplyne do všech projektů s vyšší prioritou, které mohou otevírat soubory.
+ Tento speciální projekt umožňuje otevření souboru mimo kontext projektu. Během zpracování <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> metody různé soubory projektu vždy reaguje s velmi nízkou prioritou. Proto různé soubory projektu vždy výnosy do jakékoli vyšší prioritu projektu, který může otevřít soubory.
 
- Projekt různých souborů nevyžaduje, aby ho uživatel explicitně vytvořil pomocí dialogového okna **Nový projekt** . Také projekt různých souborů nespravuje trvale seznam členů projektu. K zaznamenání seznamu naposledy použitých souborů pro každého uživatele používá volitelnou funkci.
+ Projekt Různé soubory nevyžaduje, aby jej uživatel explicitně vytvořil pomocí dialogového okna **Nový projekt.** Také různé soubory projektu není trvale spravovat seznam členů projektu. Používá volitelnou funkci pro záznam seznamu naposledy použitých souborů pro každého uživatele.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument>
 - <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY>

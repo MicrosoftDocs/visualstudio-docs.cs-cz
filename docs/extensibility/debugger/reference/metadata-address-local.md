@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_LOCAL | Dokumentace Microsoftu
+title: METADATA_ADDRESS_LOCAL | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - METADATA_ADDRESS_LOCAL structure
 ms.assetid: 635f6bc5-c486-4e0e-83db-36f15e543843
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f8500d7ad1e03e08fa852afe9b8b77e49562f355
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e3adf9ca5f679c7a526f10b1ee6c91d50dac52d2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345626"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714475"
 ---
-# <a name="metadataaddresslocal"></a>METADATA_ADDRESS_LOCAL
+# <a name="metadata_address_local"></a>METADATA_ADDRESS_LOCAL
 
-Tato struktura představuje adresu místní proměnné v rámci oboru (obvykle funkce nebo metoda).
+Tato struktura představuje adresu místní proměnné v rámci oboru (obvykle funkce nebo metody).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,22 +47,22 @@ public struct METADATA_ADDRESS_LOCAL {
 ## <a name="members"></a>Členové
 
 `tokMethod`\
-ID metody nebo funkce lokální proměnná je součástí.
+ID metody nebo funkce, které je místní proměnná součástí.
 
-[C++] `_mdToken` je `typedef` pro 32bitovou verzi `int`.
+[C++] `_mdToken` je `typedef` pro 32bitový `int`.
 
 `pLocal`\
-Token jehož adresa představuje tuto strukturu.
+Token, jehož adresa této struktury představuje.
 
 `dwIndex`\
-Může být index tuto místní proměnnou v metodě nebo funkci nebo jinou hodnotu (specifické pro jazyk).
+Může být index této místní proměnné v metodě nebo funkci nebo nějakou jinou hodnotu (specifické pro jazyk).
 
 ## <a name="remarks"></a>Poznámky
 
-Tato struktura je součástí sjednocení v [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) strukturu, kdy `dwKind` pole `DEBUG_ADDRESS_UNION` struktura je nastavena na `ADDRESS_KIND_LOCAL` (hodnotu z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet).
+Tato struktura je součástí unie ve struktuře [DEBUG_ADDRESS_UNION,](../../../extensibility/debugger/reference/debug-address-union.md) když `dwKind` je pole `DEBUG_ADDRESS_UNION` struktury nastaveno na `ADDRESS_KIND_LOCAL` (hodnota z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčtu).
 
 > [!WARNING]
-> [C++ pouze] Pokud `pLocal` nemá hodnotu null, pak je nutné volat `Release` na token ukazatel (`addr` je pole v [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) struktura):
+> [Pouze C++] Pokud `pLocal` není null, pak `Release` je nutné volat`addr` na ukazatel tokenu ( je pole ve [struktuře DEBUG_ADDRESS):](../../../extensibility/debugger/reference/debug-address.md)
 >
 > ```cpp
 > if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL && addr.addr.addrLocal.pLocal != NULL)
@@ -79,7 +79,7 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)

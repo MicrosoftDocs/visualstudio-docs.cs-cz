@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetLanguageInfo | Dokumentace Microsoftu
+title: IDebugStackFrame2::GetLanguageInfo | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugStackFrame2::GetLanguageInfo
 ms.assetid: 0e12fd92-f155-46a7-8272-cda279388cfb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0318f99d234309093717c9603ec1153e71d6d7f3
-ms.sourcegitcommit: 74c5360186731de07828764eb32ea1033a8c2275
+ms.openlocfilehash: cefb4bdd9d0c85311c63e6a988956301a6c2cc14
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559700"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719712"
 ---
 # <a name="idebugstackframe2getlanguageinfo"></a>IDebugStackFrame2::GetLanguageInfo
 
-Získá jazyk přidružené k tento rámec zásobníku.
+Získá jazyk přidružený k tomuto rámci zásobníku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,10 +45,10 @@ int GetLanguageInfo ( 
 ## <a name="parameters"></a>Parametry
 
 `pbstrLanguage`\
-[out] Vrátí název jazyka, který implementuje metodu spojenou s rámce zásobníku.
+[out] Vrátí název jazyka, který implementuje metodu přidruženou k tomuto rámci zásobníku.
 
 `pguidLanguage`\
-[out] Vrátí `GUID` jazyka. Pro [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] jazyků, například následující mohou být vráceny:
+[out] `GUID` Vrátí jazyk. Pro [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] jazyky, například mohou být vráceny následující:
 
 - `guidVBScriptLang`\
 
@@ -64,8 +64,8 @@ int GetLanguageInfo ( 
 
 ## <a name="return-value"></a>Návratová hodnota
 
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

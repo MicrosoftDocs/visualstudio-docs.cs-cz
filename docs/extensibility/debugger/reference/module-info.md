@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO | Dokumentace Microsoftu
+title: MODULE_INFO | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - MODULE_INFO structure
 ms.assetid: f2e06180-1ab3-4eb5-a428-7994cceb61b6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: db67710fd7ee71cddf1e7dbee030cb208a1de86c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 59ab4d0bb2a7aaa4b08f616ea0a99be85b521bb0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339112"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714317"
 ---
-# <a name="moduleinfo"></a>MODULE_INFO
-Popisuje konkrétního modulu (knihovny DLL, EXE nebo sestavení).
+# <a name="module_info"></a>MODULE_INFO
+Popisuje konkrétní modul (DLL, EXE nebo sestavení).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,7 +63,7 @@ public struct MODULE_INFO { 
 
 ## <a name="members"></a>Členové
  `dwValidFields`\
- Kombinace příznaků z [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) výčet, který určuje, která pole jsou vyplněna.
+ Kombinace příznaků z [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) výčtu, která určuje, která pole jsou vyplněna.
 
  `m_bstrName`\
  Název modulu.
@@ -75,13 +75,13 @@ public struct MODULE_INFO { 
  Verze modulu.
 
  `m_bstrDebugMessage`\
- Volitelnou zprávu o modulu, třeba "symboly nelze načíst."
+ Volitelná zpráva o modulu, například "Symboly nelze načíst."
 
  `m_addrLoadAddress`\
  Adresa načtení modulu.
 
  `m_addrPreferredLoadAddress`\
- Adresa upřednostňovaného zatížení modulu.
+ Upřednostňovaná načítaná adresa modulu.
 
  `m_dwSize`\
  Velikost modulu.
@@ -93,15 +93,15 @@ public struct MODULE_INFO { 
  Čas poslední změny souboru symbolů.
 
  `m_bstrUrlSymbolLocation`\
- Umístění souboru symbolů (například ".\\") zadaný v modulu. Najít symboly pro modul se používá jako výchozí umístění.
+ Umístění souboru symbolů (například\\". ") zadané v modulu. Používá se jako počáteční umístění k vyhledání symbolů pro modul.
 
  `m_dwModuleFlags`\
- Kombinace příznaků z [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) výčet, který popisuje modulu.
+ Kombinace příznaků z [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) výčtu, který popisuje modul.
 
 ## <a name="remarks"></a>Poznámky
- Tato struktura je předán [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) metody, kde je vyplněna.
+ Tato struktura je předána [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) metoda, kde je vyplněna.
 
- Tato struktura odpovídá jednotlivých modulů uvedených v **moduly** okna.
+ Tato struktura odpovídá každému modulu uvedenému v okně **Moduly.**
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -110,7 +110,7 @@ public struct MODULE_INFO { 
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)
 - [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md)

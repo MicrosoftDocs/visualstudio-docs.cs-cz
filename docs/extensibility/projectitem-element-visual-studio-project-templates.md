@@ -1,5 +1,5 @@
 ---
-title: ProjectItem – Element (šablony projektů Visual Studio) | Dokumentace Microsoftu
+title: Element ProjectItem (šablony projektů sady Visual Studio) | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - ProjectItem element [Visual Studio project templates]
 - <ProjectItem> element [Visual Studio project templates]
 ms.assetid: 82879fbe-7756-42cd-9a07-c10edf5b4673
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 09f062575cc7d0978fbacede32cfe22d0f98a71c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 11052d8e585f1d06f6d787402001cfbbe2b6810f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335953"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701841"
 ---
-# <a name="projectitem-element-visual-studio-project-templates"></a>ProjectItem – element (šablony projektů Visual Studio)
+# <a name="projectitem-element-visual-studio-project-templates"></a>Element ProjectItem (šablony projektů sady Visual Studio)
 Určuje soubor, který je součástí šablony projektu.
 
 > [!NOTE]
-> `ProjectItem` Element přijímá různé atributy v závislosti na tom, jestli je šablona pro projekt nebo položku. Toto téma vysvětluje, `ProjectItem` – element pro šablony projektů. Pro vysvětlení, `ProjectItem` – element pro šablony položek, naleznete v tématu [ProjectItem – Element (šablony položek aplikace Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md).
+> Prvek `ProjectItem` přijímá různé atributy v závislosti na tom, zda je šablona pro projekt nebo položku. Toto téma `ProjectItem` vysvětluje prvek pro šablony projektů. Vysvětlení prvku pro `ProjectItem` šablony položek naleznete v tématu [ProjectItem Element (Visual Studio Item Templates).](../extensibility/projectitem-element-visual-studio-item-templates.md)
 
- \<VSTemplate> \<TemplateContent> \<Project> \<ProjectItem>
+ \<VSTemplate \<> TemplateContent \< \<> project> ProjectItem>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,73 +43,73 @@ Určuje soubor, který je součástí šablony projektu.
 </ProjectItem>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a elementy
+## <a name="attributes-and-elements"></a>Atributy a prvky
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
 
 | Atribut | Popis |
 |---------------------| - |
-| `TargetFileName` | Nepovinný atribut.<br /><br /> Určuje název a cesta k položce projektu, když je projekt vytvořen z šablony. Tento atribut je užitečné pro vytvoření adresářové struktury liší od adresářovou strukturu v šabloně *ZIP* souboru, nebo k vytvoření názvu položky pomocí nahrazení parametru. |
-| `ReplaceParameters` | Nepovinný atribut.<br /><br /> Logická hodnota určující, zda položka má hodnoty parametrů, které musí být nahrazen, když je projekt vytvořen z šablony. Výchozí hodnota je `false`. |
-| `OpenInEditor` | Nepovinný atribut.<br /><br /> Logická hodnota, která určuje, zda položka by měl být otevřen v jeho příslušných editoru v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] při vytvoření projektu ze šablony.<br /><br /> `OpenInWebBrowser` a `OpenInHelpBrowser` atributy se ignorují u položky s `OpenInEditor` hodnotu `true`.<br /><br /> Výchozí hodnota je `false`. |
-| `OpenInWebBrowser` | Nepovinný atribut.<br /><br /> Logická hodnota, která určuje, zda položky by měla otevřít webový prohlížeč při vytvoření projektu ze šablony.<br /><br /> Pouze soubory HTML a textové soubory, které jsou místní pro projekt lze otevřít ve webovém prohlížeči. Externí adresy URL nelze otevřít pomocí tohoto atributu.<br /><br /> Výchozí hodnota je `false`. |
-| `OpenInHelpBrowser` | Nepovinný atribut.<br /><br /> Logická hodnota, která určuje, zda položka by měl být otevřen v aplikaci Help viewer, když je projekt vytvořen z šablony.<br /><br /> Pouze soubory HTML a textové soubory, které jsou místní pro projekt lze otevřít v prohlížeči. Externí adresy URL nelze otevřít pomocí tohoto atributu.<br /><br /> Výchozí hodnota je `false`. |
-| `OpenOrder` | Nepovinný atribut.<br /><br /> Určuje číselnou hodnotu, která představuje pořadí, položky se otevřou v jejich příslušných editorech. Všechny hodnoty musí být násobky 10. Položky s vyšší `OpenOrder` hodnoty jsou otevřen jako první. |
+| `TargetFileName` | Nepovinný atribut.<br /><br /> Určuje název a cestu položky projektu při vytvoření projektu ze šablony. Tento atribut je užitečný pro vytvoření struktury adresáře odlišné od struktury adresáře v souboru *ZIP* šablony nebo pro použití nahrazení parametrů k vytvoření názvu položky. |
+| `ReplaceParameters` | Nepovinný atribut.<br /><br /> Logická hodnota, která určuje, zda má položka hodnoty parametrů, které musí být nahrazeny při vytvoření projektu ze šablony. Výchozí hodnota `false`je . |
+| `OpenInEditor` | Nepovinný atribut.<br /><br /> Logická hodnota, která určuje, zda má být položka [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] otevřena v příslušném editoru v aplikaci při vytvoření projektu ze šablony.<br /><br /> `OpenInWebBrowser` Atributy `OpenInHelpBrowser` a jsou ignorovány u `OpenInEditor` položky `true`s hodnotou .<br /><br /> Výchozí hodnota je `false`. |
+| `OpenInWebBrowser` | Nepovinný atribut.<br /><br /> Logická hodnota, která určuje, zda má být položka otevřena webový prohlížeč při vytvoření projektu ze šablony.<br /><br /> Ve webovém prohlížeči lze otevřít pouze soubory HTML a textové soubory, které jsou místní pro projekt. Pomocí tohoto atributu nelze otevřít externí adresy URL.<br /><br /> Výchozí hodnota je `false`. |
+| `OpenInHelpBrowser` | Nepovinný atribut.<br /><br /> Logická hodnota, která určuje, zda má být položka otevřena v prohlížeči nápovědy při vytvoření projektu ze šablony.<br /><br /> V prohlížeči nápovědy lze otevřít pouze soubory HTML a textové soubory, které jsou v projektu místní. Pomocí tohoto atributu nelze otevřít externí adresy URL.<br /><br /> Výchozí hodnota je `false`. |
+| `OpenOrder` | Nepovinný atribut.<br /><br /> Určuje číselnou hodnotu, která představuje pořadí, ve které budou položky otevřeny v příslušných editorech. Všechny hodnoty musí být násobky 10. Nejprve `OpenOrder` se otevřou položky s vyššími hodnotami. |
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné
+ Žádné.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|[Projekt](../extensibility/project-element-visual-studio-templates.md)|Určuje soubory nebo adresáře přidat do projektu.|
+|[Project](../extensibility/project-element-visual-studio-templates.md)|Určuje soubory nebo adresáře, které chcete přidat do projektu.|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- A `string` , která představuje název nebo cesta k souboru v šabloně *ZIP* souboru.
+ A, `string` který představuje název nebo cestu k souboru v souboru *.zip* šablony.
 
 ## <a name="remarks"></a>Poznámky
- `ProjectItem` je volitelný podřízený `Project`.
+ `ProjectItem`je volitelné dítě `Project`.
 
- `TargetFileName` Atribut lze použít k vytvoření adresářové struktury liší od adresářovou strukturu v šabloně *ZIP* souboru. Například pokud soubor *MyFile.vb* existuje v kořenovém adresáři šablony *ZIP* souboru, ale chcete mít soubor, který má být umístěn v adresáři s názvem *CustomFiles* ve všech projektech vytvořené z této šablony, měli byste použít následující kód XML:
+ Atribut `TargetFileName` lze použít k vytvoření struktury adresáře odlišné od struktury adresáře v souboru *zip* šablony. Pokud například soubor *MyFile.vb* existuje v kořenovém adresáři souboru *ZIP* šablony, ale chcete, aby byl soubor umístěn do adresáře s názvem *CustomFiles* ve všech projektech vytvořených ze šablony, použijte následující xml:
 
 ```xml
 <ProjectItem TargetFileName="CustomFiles\MyFile.vb">MyFile.vb</ProjectItem>
 ```
 
- `TargetFileName` Atribut lze také přejmenovat soubory, které obsahují mezinárodní znaky v jejich názvy souborů. Například šablona *ZIP* souboru nemůže obsahovat názvy souborů se znaky Unicode, takže ho musí přejmenovat, předtím, než mohou být zkomprimovány do *ZIP* souboru. `TargetFileName` Atribut je možné nastavit název souboru zpět na původní název souboru ve formátu Unicode.
+ Atribut `TargetFileName` lze také přejmenovat soubory, které obsahují mezinárodní znaky v jejich názvy souborů. Soubor *ZIP* šablony například nemůže obsahovat názvy souborů se znaky Unicode, takže soubor musí být přejmenován, aby mohl být komprimován do souboru *ZIP.* Atribut `TargetFileName` lze použít k nastavení názvu souboru zpět na původní název souboru Unicode.
 
- `TargetFileName` Atribut lze použít také k přejmenování souborů s parametry. Následující postup vysvětluje, jak přejmenovat soubor *MyFile.vb*, která existuje v kořenovém adresáři šablony *ZIP* soubor s názvem souboru na základě názvu projektu.
+ Atribut `TargetFileName` lze také přejmenovat soubory s parametry. Následující postup vysvětluje, jak přejmenovat soubor *MyFile.vb*, který existuje v kořenovém adresáři souboru *ZIP* šablony, na název souboru na základě názvu projektu.
 
-### <a name="to-rename-files-with-parameters"></a>Přejmenujte soubory s parametry
+### <a name="to-rename-files-with-parameters"></a>Přejmenování souborů pomocí parametrů
 
-1. Použijte následující kód XML v *.vstemplate* souboru:
+1. V souboru *.vstemplate* použijte následující kód XML:
 
    ```xml
    <ProjectItem TargetFileName="$safeprojectname$.vb">MyFile.vb</ProjectItem>
    ```
 
-2. Otevřete soubor projektu ( *.vbproj* pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projektu) v textovém editoru nebo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+2. Otevřete soubor projektu (*.vbproj* pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projekt) [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]v textovém editoru nebo .
 
-3. Vyhledejte řádek v souboru projektu, který vypadá podobně jako následující kód XML:
+3. Vyhledejte řádek v souboru projektu, který vypadá podobně jako následující xml:
 
    ```xml
    <Compile Include="MyFile.vb">
    ```
 
-4. Řádek kódu nahraďte následující kód XML:
+4. Nahraďte řádek kódu následujícím xml:
 
    ```xml
    <Compile Include="$safeprojectname$.vb">
    ```
 
-    Pokud je projekt je vytvořen z této šablony, názvu souboru bude vycházet zadaný název uživatele v **nový projekt** dialogovém okně se všemi problematické znaky a byly odebrány mezery. Další informace najdete v tématu [parametry šablony](../ide/template-parameters.md).
+    Při vytvoření projektu z této šablony bude název souboru založen na názvu, který uživatel zadal v dialogovém okně **Nový projekt,** přičemž budou odebrány všechny nebezpečné znaky a mezery. Další informace naleznete v [tématu Template parameters](../ide/template-parameters.md).
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metadata pro šablona projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikace.
+ Následující příklad ukazuje metadata pro šablonu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu pro aplikaci.
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -135,8 +135,8 @@ Určuje soubor, který je součástí šablony projektu.
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
 - [Parametry šablony](../ide/template-parameters.md)
-- [ProjectItem – element (šablony sady Visual Studio položky)](../extensibility/projectitem-element-visual-studio-item-templates.md)
+- [Element ProjectItem (šablony položek sady Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::GetStringChars | Dokumentace Microsoftu
+title: Vlastnost IDebugProperty3::GetStringChars | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty3::GetStringChars
 ms.assetid: 832c37f3-85cb-4227-8ab2-f27a80eafe90
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 16d352ae5397d786c5d77f56a513e9ae2db2d7b3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 693a29bc30ef206428713ace36275389de1b7f0a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348833"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721078"
 ---
 # <a name="idebugproperty3getstringchars"></a>IDebugProperty3::GetStringChars
-Načte řetězec přidružený k této vlastnosti a ukládá ho do uživatelem zadané vyrovnávací paměti.
+Načte řetězec přidružený k této vlastnosti a uloží jej do vyrovnávací paměti zadané uživatelem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,24 +45,24 @@ int GetStringChars(
 
 ## <a name="parameters"></a>Parametry
 `buflen`\
-[in] Maximální počet znaků, které může obsahovat uživatelem zadané vyrovnávací paměti.
+[v] Maximální počet znaků, které může obsahovat vyrovnávací paměť dodaná uživatelem.
 
 `rgString`\
 [out] Vrátí řetězec.
 
- [C++ pouze], `rgString` je ukazatel do vyrovnávací paměti, která přijímá znaků Unicode řetězce. Tuto vyrovnávací paměť musí být dlouhý aspoň `buflen` znaků (ne v bajtech) velikosti.
+ [Pouze C++] `rgString` je ukazatel na vyrovnávací paměť, která přijímá znaky Unicode řetězce. Tato vyrovnávací paměť `buflen` musí mít velikost alespoň znaků (nikoli bajtů).
 
 `pceltFetched`\
-[out] Pokud se vrátí počet znaků ve skutečnosti uloženy ve vyrovnávací paměti. (Může být `NULL` v jazyce C++.)
+[out] Kde je vrácen počet znaků skutečně uloženy ve vyrovnávací paměti. (Může `NULL` být v jazyce C++.)
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-V jazyce C++, musí věnovat pozornost – pomáhat zajistit, že vyrovnávací paměť je alespoň `buflen` znaků Unicode. Všimněte si, že znak Unicode je 2 bajty dlouhý.
+V jazyce C++ je třeba dbát na `buflen` to, aby vyrovnávací paměť byla alespoň dlouhé znaky Unicode. Všimněte si, že znak Unicode je 2 bajty dlouhé.
 
 > [!NOTE]
-> Vrácený řetězec v jazyce C++, nezahrnuje ukončující znak null. Pokud tento parametr zadaný, `pceltFetched` určí počet znaků v řetězci.
+> V jazyce C++ vrácený řetězec neobsahuje ukončující znak null. Pokud je `pceltFetched` uveden, bude určovat počet znaků v řetězci.
 
 ## <a name="example"></a>Příklad
 
@@ -87,7 +87,7 @@ CStringW RetrievePropertyString(IDebugProperty2 *pPropInfo)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [GetStringCharLength](../../../extensibility/debugger/reference/idebugproperty3-getstringcharlength.md)
 - [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

@@ -1,27 +1,27 @@
 ---
-title: IDebugSourceServerModule::GetSourceServerData | Dokumentace Microsoftu
+title: IDebugSourceServerModule::GetSourceServerData | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSourceServerModule::GetSourceServerData
 ms.assetid: f15d86aa-1bd9-4b16-a64a-21b01c27db2e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e24fb48014d8a336e9d46ceb8471e2efe126de1f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c0388e4a1916a16f7e429fa4f32c45ed62fdb02e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321896"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719928"
 ---
 # <a name="idebugsourceservermodulegetsourceserverdata"></a>IDebugSourceServerModule::GetSourceServerData
-Načte pole informace o zdrojovém serveru.
+Načte pole informací zdrojového serveru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,16 +41,16 @@ public int GetSourceServerData(
 
 ## <a name="parameters"></a>Parametry
 `pDataByteCount`\
-[out] Počet bajtů v poli data.
+[out] Počet bajtů v datovém poli.
 
 `ppData`\
-[out] Odkaz na pole data.
+[out] Odkaz na datové pole.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak pro tuto metodu implementovat **CModule** objekt, který zveřejňuje [IDebugSourceServerModule](../../../extensibility/debugger/reference/idebugsourceservermodule.md) rozhraní.
+Následující příklad ukazuje, jak implementovat tuto metodu pro **cmodule** objekt, který zveřejňuje rozhraní [IDebugSourceServerModule.](../../../extensibility/debugger/reference/idebugsourceservermodule.md)
 
 ```cpp
 HRESULT CModule::GetSourceServerData(ULONG* pDataByteCount, BYTE** ppData)
@@ -74,5 +74,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugSourceServerModule](../../../extensibility/debugger/reference/idebugsourceservermodule.md)

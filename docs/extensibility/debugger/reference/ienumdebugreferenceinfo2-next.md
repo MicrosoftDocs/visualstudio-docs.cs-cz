@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugReferenceInfo2::Next | Dokumentace Microsoftu
+title: IEnumDebugReferenceInfo2::Další | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugReferenceInfo2::Next
 ms.assetid: 70b31a57-1701-4757-9e7e-63ec60a71b3c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0860210a2ed80374346268012ae98cf5704b4c7a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4bb10504b2dbe02856364baa0670a7c825ef80cd
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322650"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80715329"
 ---
 # <a name="ienumdebugreferenceinfo2next"></a>IEnumDebugReferenceInfo2::Next
-Vrátí další sadu elementů z výčtu.
+Vrátí další sadu prvků z výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,17 +45,17 @@ int Next(
 
 ## <a name="parameters"></a>Parametry
 `celt`\
-[in] Počet prvků, které mají načíst. Také určuje maximální velikost `rgelt` pole.
+[v] Počet prvků načíst. Také určuje maximální velikost `rgelt` pole.
 
 `rgelt`\
-[out v] Pole [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) prvků, které mají být vyplněna.
+[dovnitř, ven] Pole [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) prvků, které mají být vyplněny.
 
 `pceltFetched`\
-[out] Vrátí počet prvků ve skutečnosti vrácených v `rgelt`.
+[out] Vrátí počet prvků skutečně `rgelt`vrácených v .
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` pokud menší než požadovaný počet prvků, které může být vrácena; v opačném případě vrátí kód chyby.
+ Pokud je `S_OK`úspěšná, vrátí . Vrátí, `S_FALSE` pokud menší než požadovaný počet prvků mohou být vráceny; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)
 - [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)

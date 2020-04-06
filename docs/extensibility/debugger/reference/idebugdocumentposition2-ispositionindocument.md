@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentPosition2::IsPositionInDocument | Dokumentace Microsoftu
+title: IDebugDocumentPosition2::IsPositionInDocument | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentPosition2::IsPositionInDocument
 ms.assetid: d5cf57cb-b93b-4e1d-bec9-185f4fe8668d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ab4792427a98f97fcd50d4b39c2bb332527a0942
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4d92dddda8fd9831f5d66b602cd48fdbbc3dbcf1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333411"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731657"
 ---
 # <a name="idebugdocumentposition2ispositionindocument"></a>IDebugDocumentPosition2::IsPositionInDocument
-Určuje, pokud pozice dokumentu je součástí daného dokumentu.
+Určuje, zda je pozice dokumentu obsažena v daném dokumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,14 +41,14 @@ int IsPositionInDocument( 
 
 ## <a name="parameters"></a>Parametry
 `pDoc`\
-[in] [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) objekt, který reprezentuje obsahující Release candidate dokumentu.
+[v] [Objekt IDebugDocument2,](../../../extensibility/debugger/reference/idebugdocument2.md) který představuje kandidáta obsahujícího dokumentu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda se používá především v nastavení zarážek [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) rozhraní. Jako dokumenty jsou načteny, umístění zarážky je volána k určení, jestli dokument obsahuje tuto pozici.
+ Tato metoda se používá především při nastavování zarážek v [rozhraních IDebugDocument2.](../../../extensibility/debugger/reference/idebugdocument2.md) Při načítání dokumentů je volána pozice zarážky, která určuje, zda dokument tuto pozici obsahuje.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)
 - [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

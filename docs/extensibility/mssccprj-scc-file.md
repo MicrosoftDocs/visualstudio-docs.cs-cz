@@ -1,77 +1,77 @@
 ---
-title: MSSCCPRJ. Soubor SCC | Dokumentace Microsoftu
+title: MSSCCPRJ. Spis SCC | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, MSSCCPRJ.SCC file
 - MSSCCPRJ.SCC file
 ms.assetid: 6f2e39d6-b79d-407e-976f-b62a3cedd378
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 983c6aa0a418ec87d521852bd4b0d781c5c90cfa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 89511b7c8b69c5793eceef7d58153dde253a4f47
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344024"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702472"
 ---
 # <a name="mssccprjscc-file"></a>MSSCCPRJ. Soubor SCC
-Umístíte-li sady Visual Studio řešení nebo projekt pod správou zdrojového kódu pomocí rozhraní IDE, rozhraní IDE obdrží dvě klíčové informace. Informace pocházejí z ve formě řetězce modul plug-in správy zdrojového kódu. Tyto řetězce "AuxPath" a "Název_projektu", jsou neprůhledné rozhraní IDE, ale slouží modul plug-in provede najít řešení nebo projektu ve správě verzí. Rozhraní IDE obvykle získá tyto řetězce při prvním voláním [sccgetprojpath –](../extensibility/sccgetprojpath-function.md), a pak ukládá je do souboru řešení nebo projektu pro budoucí volání [sccopenproject –](../extensibility/sccopenproject-function.md). Když je vložená v soubory řešení a projektu, řetězce "AuxPath" a "Název_projektu" se neaktualizují automaticky, když uživatel větve, větve, nebo zkopíruje soubory řešení a projektu, které jsou ve správě verzí. Pokud chcete mít jistotu, že soubory řešení a projektu, přejděte na jejich správné umístění ve správě verzí, musí uživatelé ručně aktualizujte řetězce. Vzhledem k tomu, že řetězce mají být neprůhledný, nemusí být vždy jasné jak by měly být aktualizovány.
+Při umístění řešení sady Visual Studio nebo projektu pod smytí zdrojového kódu pomocí ide, ide obdrží dva klíčové informace. Informace pochází z modulu plug-in správy zdrojového kódu ve formě řetězců. Tyto řetězce" "AuxPath" a "ProjName", jsou neprůhledné pro IDE, ale jsou používány modulem plug-in k vyhledání řešení nebo projektu v řízení verzí. IDE obvykle získá tyto řetězce poprvé voláním [SccGetProjPath](../extensibility/sccgetprojpath-function.md)a potom uloží do souboru řešení nebo projektu pro budoucí volání [SccOpenProject](../extensibility/sccopenproject-function.md). Při vložení do souborů řešení a projektu řetězce "AuxPath" a "ProjName" nejsou automaticky aktualizovány, když uživatel větve, větve nebo kopie řešení a projektové soubory, které jsou ve správě verzí. Chcete-li se ujistit, že soubory řešení a projektu odkazují na jejich správné umístění ve správě verzí, musí uživatelé ručně aktualizovat řetězce. Vzhledem k tomu, že řetězce jsou určeny k neprůhledné, nemusí být vždy jasné, jak by měly být aktualizovány.
 
- Modul plug-in správy zdrojového kódu se můžete vyhnout tomuto problému uložením "AuxPath" a "Název_projektu" řetězce ve speciální soubor s názvem *MSSCCPRJ.SCC* souboru. Je na straně klienta, místní soubor, který vlastní a spravuje pomocí modulu plug-in. Tento soubor je nikdy umístěn pod správou zdrojových kódů, ale generuje modul plug-in pro každý adresář, který obsahuje soubory se spravovanými zdroji. Pokud chcete zjistit, které soubory jsou soubory řešení a projektu sady Visual Studio, modul plug-in správy zdrojového kódu můžete porovnat standardní nebo uživatelem zadaný seznam přípon souborů. Jakmile rozhraní IDE zjistí, že modul plug-in podporuje *MSSCCPRJ.SCC* souboru, se přestane pro vložení řetězce "AuxPath" a "Název_projektu" do souborů řešení a projektu a načte z těchto řetězců *MSSCCPRJ.SCC*souboru místo toho.
+ Modul plug-in správy zdrojového kódu se může tomuto problému vyhnout uložením řetězců "AuxPath" a "ProjName" do speciálního souboru nazývaného soubor *MSSCCPRJ.SCC.* Jedná se o místní soubor na straně klienta, který je vlastněn a spravován modulem plug-in. Tento soubor není nikdy umístěn pod správou zdrojového kódu, ale je generován modulem plug-in pro každý adresář, který obsahuje soubory řízené zdrojem. Chcete-li zjistit, které soubory jsou soubory sady Visual Studio a soubory projektu, modul plug-in správy zdrojového kódu můžete porovnat přípony souborů proti standardní nebo uživatelem dodaný seznam. Jakmile ide zjistí, že modul plug-in podporuje soubor *MSSCCPRJ.SCC,* přestane vložit řetězce "AuxPath" a "ProjName" do souborů řešení a projektu a místo toho přečte tyto řetězce ze souboru *MSSCCPRJ.SCC.*
 
- Zdrojový ovládací prvek modulu plug-in, který podporuje *MSSCCPRJ.SCC* souboru musí dodržovat následující pokyny:
+ Modul plug-in správy zdrojového kódu, který podporuje soubor *MSSCCPRJ.SCC,* musí dodržovat následující pokyny:
 
-- Může existovat pouze jeden *MSSCCPRJ.SCC* souboru jednotlivých adresářích.
+- V jednom adresáři může být pouze jeden soubor *MSSCCPRJ.SCC.*
 
-- *MSSCCPRJ.SCC* soubor může obsahovat "AuxPath" a "Název_projektu" pro více souborů, které jsou pod správou zdrojových kódů v rámci zadaného adresáře.
+- Soubor *MSSCCPRJ.SCC* může obsahovat "AuxPath" a "ProjName" pro více souborů, které jsou pod smyčkovou správou zdrojového kódu v daném adresáři.
 
-- Řetězec "AuxPath" nesmí obsahovat uvozovky uvnitř. To může mít kolem něj uvozovky jako oddělovače (například pár dvojitých uvozovek slouží k označení prázdný řetězec). Integrované vývojové prostředí odstraní všechny nabídky z řetězce "AuxPath" přečtení z *MSSCCPRJ.SCC* souboru.
+- Řetězec "AuxPath" nesmí obsahovat uvozovky uvnitř. Je povoleno mít uvozovky kolem něj jako oddělovače (například pár dvojitých uvozovek lze použít k označení prázdný řetězec). IDE bude strip všechny citace z řetězce "AuxPath" při čtení ze souboru *MSSCCPRJ.SCC.*
 
-- "Název_projektu" řetězce ve *MSSCCPRJ. Soubor SCC* musí odpovídat přesně řetězec vrácený z `SccGetProjPath` funkce. Pokud řetězec vrácený funkcí nemá uvozovky kolem něj zobrazí řetězec *MSSCCPRJ.SCC* soubor musí obsahovat uvozovky kolem něj a naopak.
+- Řetězec "ProjName" v *MSSCCPRJ. Soubor SCC* musí přesně odpovídat `SccGetProjPath` řetězci vrácenému z funkce. Pokud řetězec vrácený funkcí obsahuje uvozovky kolem něj, řetězec v souboru *MSSCCPRJ.SCC* musí mít uvozovky kolem něj a naopak.
 
-- *MSSCCPRJ.SCC* soubor se vytvoří nebo aktualizuje pokaždé, když se soubor nachází pod správou zdrojových kódů.
+- Soubor *MSSCCPRJ.SCC* je vytvořen nebo aktualizován vždy, když je soubor umístěn pod shodou zdrojového kódu.
 
-- Pokud *MSSCCPRJ.SCC* soubor odstraní, poskytovatel by měl znovu při příštím provádí operaci správy zdrojových kódů týkající se tohoto adresáře.
+- Pokud soubor *MSSCCPRJ.SCC* odstraní, zprostředkovatel by měl znovu vygenerovat při příštím provedení operace správy zdrojového kódu týkající se tohoto adresáře.
 
-- *MSSCCPRJ.SCC* souboru musí striktně řídit definovaném formátu.
+- Soubor *MSSCCPRJ.SCC* musí přísně dodržovat definovaný formát.
 
-## <a name="an-illustration-of-the-mssccprjscc-file-format"></a>Obrázek MSSCCPRJ. Formát souboru SCC
- Tady je příklad *MSSCCPRJ.SCC* formát souboru (čísla řádků jsou k dispozici pouze jako vodítko a by neměly být obsažené v těle souboru):
+## <a name="an-illustration-of-the-mssccprjscc-file-format"></a>Ilustrace MSSCCPRJ. Formát souboru SCC
+ Následuje ukázka formátu souboru *MSSCCPRJ.SCC* (čísla řádků jsou uvedena pouze jako vodítko a neměla by být zahrnuta do těla souboru):
 
-- [Řádek 1] `SCC = This is a Source Code Control file`
+- [Řádek 1]`SCC = This is a Source Code Control file`
 
 - [Řádek 2]
 
-- [Řádek 3] `[TestApp.sln]`
+- [Řádek 3]`[TestApp.sln]`
 
-- [Řádek 4] `SCC_Aux_Path = "\\server\vss\"`
+- [Řádek 4]`SCC_Aux_Path = "\\server\vss\"`
 
-- [Řádku 5] `SCC_Project_Name = "$/TestApp"`
+- [Řádek 5]`SCC_Project_Name = "$/TestApp"`
 
 - [Řádek 6]
 
-- [Řádek 7] `[TestApp.csproj]`
+- [Řádek 7]`[TestApp.csproj]`
 
-- [Řádek 8] `SCC_Aux_Path = "\\server\vss\"`
+- [Řádek 8]`SCC_Aux_Path = "\\server\vss\"`
 
-- [Řádku 9] `SCC_Project_Name = "$/TestApp"`
+- [Řádek 9]`SCC_Project_Name = "$/TestApp"`
 
- První řádek stavy účel souboru a slouží jako podpis pro všechny soubory tohoto typu. Tento řádek by měl vypadat přesně to ve všech *MSSCCPRJ.SCC* soubory:
+ První řádek uvádí účel souboru a slouží jako podpis pro všechny soubory tohoto typu. Tento řádek by měl vypadat přesně takhle ve všech souborech *MSSCCPRJ.SCC:*
 
  `SCC = This is a Source Code Control file`
 
- Následující část obsahuje podrobnosti o nastavení pro každý soubor označené podle názvu souboru v hranatých závorkách. Tato část se opakuje pro každý soubor sledován. Tento řádek je příklad názvu souboru, konkrétně `[TestApp.csproj]`. Integrované vývojové prostředí očekává, že následující dva řádky. Ale nedefinuje styl z hodnot fronty definovaných. Proměnné jsou `SCC_Aux_Path` a `SCC_Project_Name`.
+ Následující část podrobně popisuje nastavení pro každý soubor, označený názvem souboru v hranatých závorkách. Tato část se opakuje pro každý sledovaný soubor. Tento řádek je ukázkou názvu souboru, a to . `[TestApp.csproj]` Ide očekává následující dva řádky. Nedefinuje však styl definovaných hodnot. Proměnné jsou `SCC_Aux_Path` a `SCC_Project_Name`.
 
  `SCC_Aux_Path = "\\server\vss\"`
 
  `SCC_Project_Name = "$/TestApp"`
 
- Neexistuje žádný koncový oddělovač pro tento oddíl. Název souboru, stejně jako všechny literály, které se zobrazují v souboru, jsou definovány v souboru hlaviček scc.h. Další informace najdete v tématu [řetězce používané jako klíče pro vyhledání modulu plug-in správy zdrojového kódu](../extensibility/strings-used-as-keys-for-finding-a-source-control-plug-in.md).
+ V této části neexistuje žádný koncový oddělovač. Název souboru a všechny literály, které se v souboru zobrazují, jsou definovány v hlavičkovém souboru scc.h. Další informace naleznete [v tématu Řetězce používané jako klíče pro hledání modulu plug-in správy zdrojového kódu](../extensibility/strings-used-as-keys-for-finding-a-source-control-plug-in.md).
 
-## <a name="see-also"></a>Viz také:
-- [Ovládací prvek moduly plug-in zdrojového kódu](../extensibility/source-control-plug-ins.md)
-- [Řetězce používané jako klíče pro vyhledání modulu plug-in správy zdrojového kódu](../extensibility/strings-used-as-keys-for-finding-a-source-control-plug-in.md)
+## <a name="see-also"></a>Viz také
+- [Moduly plug-in pro směřuje zdroj](../extensibility/source-control-plug-ins.md)
+- [Řetězce používané jako klíče pro nalezení modulu plug-in správy zdrojového kódu](../extensibility/strings-used-as-keys-for-finding-a-source-control-plug-in.md)

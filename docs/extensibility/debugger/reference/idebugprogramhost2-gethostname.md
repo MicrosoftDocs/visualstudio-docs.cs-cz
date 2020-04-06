@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramHost2::GetHostName | Dokumentace Microsoftu
+title: IDebugProgramHost2::GetHostName | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramHost2::GetHostName
 ms.assetid: 48bbb089-e59a-471a-9965-24b42a8dabf3
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 851905a9ca642f029444a2f6c1adfdfe543fdf70
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5f1bd63d6b53359cf3b86f5e3849cb18bd8367f7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351272"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722227"
 ---
 # <a name="idebugprogramhost2gethostname"></a>IDebugProgramHost2::GetHostName
 Získá název, popisný název nebo název souboru hostitelského procesu tohoto programu.
@@ -43,17 +43,17 @@ int GetHostName( 
 
 ## <a name="parameters"></a>Parametry
 `dwType`\
-[in] Hodnota z [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) výčtu.
+[v] Hodnota z [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) výčtu.
 
 `pbstrHostName`\
-[out] Vrátí název požadovaného hostitelského procesu.
+[out] Vrátí požadovaný název procesu hostování.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- V typické implementace této metody `dwType` parametr je ignorován a vrátí se popisný název hostitelského počítače. Další možnou implementaci je předat `dwType` parametr volání [gethostname –](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) metodu k získání názvu.
+ V typické implementaci této metody `dwType` je parametr ignorován a je vrácen popisný název hostitelského počítače. Další možnou `dwType` implementací je předat parametr volání metody [GetHostName,](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) aby získal název.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)
 - [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md)

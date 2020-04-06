@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetValue | Dokumentace Microsoftu
+title: IDebugObject::GetValue | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugObject::GetValue method
 ms.assetid: eec6051e-8ecb-49fa-bdd4-dd786f211692
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 59d58e136045bb4177755c981f91974f9ac2fa77
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 45d555cbea6bf8239ef4527ba982072e17532af4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323649"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726542"
 ---
 # <a name="idebugobjectgetvalue"></a>IDebugObject::GetValue
-Získá hodnotu objektu ve formě po sobě jdoucích řady bajtů.
+Získá hodnotu objektu jako po sobě jdoucí řady bajtů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,16 +43,16 @@ int GetValue(
 
 ## <a name="parameters"></a>Parametry
 `pValue`\
-[out v] Pole, které se vyplní sérii po sobě jdoucích bajtů představující hodnotu objektu.
+[dovnitř, ven] Pole, které je vyplněno po sobě jdoucí řadou bajtů představujících hodnotu objektu.
 
 `nSize`\
-[in] Maximální počet bajtů k načtení.
+[v] Maximální počet bajtů načíst.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Získat celkový počet bajtů hodnoty, které můžete načíst pomocí volání [getsize –](../../../extensibility/debugger/reference/idebugobject-getsize.md) metody.
+ Získejte celkový počet bajtů hodnoty, které lze načíst voláním metody [GetSize.](../../../extensibility/debugger/reference/idebugobject-getsize.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

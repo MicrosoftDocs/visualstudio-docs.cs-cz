@@ -1,5 +1,5 @@
 ---
-title: LAUNCH_FLAGS | Dokumentace Microsoftu
+title: LAUNCH_FLAGS | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - LAUNCH_FLAGS enumeration
 ms.assetid: f51aab02-d257-4302-bb79-b7d8ba9ac4e5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 27975f4055a433891251c675bff3aacaaa9f6bb3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f18fb850641391f451f5eedb08b7130566dd4de3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339371"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714708"
 ---
-# <a name="launchflags"></a>LAUNCH_FLAGS
+# <a name="launch_flags"></a>LAUNCH_FLAGS
 Určuje příznaky spuštění ladění.
 
 ## <a name="syntax"></a>Syntaxe
@@ -46,9 +46,9 @@ public enum enum_LAUNCH_FLAGS {
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
 `LAUNCH_DEBUG`\
-Spustí proces pro ladění.
+Spustí proces ladění.
 
 `LAUNCH_NODEBUG`\
 Spustí proces bez ladění.
@@ -57,12 +57,12 @@ Spustí proces bez ladění.
 ZASTARALÉ, NEPOUŽÍVEJTE.
 
 `LAUNCH_MERGE_ENV`\
-Spustí proces a sloučí prostředí s spouštění hostitele.
+Spustí proces a sloučí prostředí s hostitelem spuštění.
 
 ## <a name="remarks"></a>Poznámky
-Tyto hodnoty jsou předány jako argument [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) metody.
+Tyto hodnoty jsou předány jako argument [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) metoda.
 
-Tyto příznaky lze kombinovat pomocí logické bitové `OR`.
+Tyto příznaky mohou být kombinovány `OR`s bitovým .
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: msdbg.h
@@ -71,6 +71,6 @@ Obor názvů: Microsoft.VisualStudio.Debugger.Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)

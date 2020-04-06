@@ -1,31 +1,31 @@
 ---
-title: Rozšíření okna výstup | Dokumentace Microsoftu
+title: Rozšíření výstupního okna | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Output window, about Output window
 ms.assetid: b02fa88c-f92a-4ff6-ba5f-2eb4d48a643a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd02ce74f2fee8255d92c47149a46f1003b02011
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 800b443b079111d1d09fffdd900b246a020578f4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311028"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711645"
 ---
-# <a name="extend-the-output-window"></a>Rozšíření okna výstup
-**Výstup** okna je sada pro čtení a zápis textových podoken. Visual Studio obsahuje tyto předdefinované podokna: **Sestavení**, ve které projekty komunikovat zprávy o sestavení, a **Obecné**, ve kterém [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] komunikuje zprávy o integrovaném vývojovém prostředí. Projekty získáte odkaz na **sestavení** podokně automaticky až <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> metody rozhraní a sady Visual Studio nabízí přímý přístup k **Obecné** podokna prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> Služba. Kromě předdefinovaných podoken můžete vytvořit a spravovat vlastní vlastní podokna.
+# <a name="extend-the-output-window"></a>Rozšíření okna Výstup
+Okno **Výstup** je sada textových panelů pro čtení a zápis. Visual Studio má tyto předdefinované podokna: **Sestavení**, ve kterém projekty [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] komunikovat zprávy o sestavení a **obecné**, ve kterém komunikuje zprávy o integrovaném systému. Projekty získat odkaz na **sestavení** <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> podokna automaticky prostřednictvím metod rozhraní a Visual <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> Studio nabízí přímý přístup k **obecné** podokno prostřednictvím služby. Kromě předdefinovaných podoken můžete vytvářet a spravovat vlastní podokna.
 
- Můžete řídit **výstup** přímo pomocí okna <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> rozhraní. <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> Rozhraní, které nabízí <xref:Microsoft.VisualStudio.Shell.Interop.SVsOutputWindow> služeb, definuje metody pro vytváření, načítání a zničení **výstup** podoken. <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> Rozhraní definuje metody pro zobrazení podoken, skrytí podokna a manipulaci s jejich textu. Alternativní způsob řízení **výstup** okno je prostřednictvím <xref:EnvDTE.OutputWindow> a <xref:EnvDTE.OutputWindowPane> objekty v objektovém modelu automatizace sady Visual Studio. Tyto objekty zapouzdřují téměř všechny funkce <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> rozhraní. Kromě toho <xref:EnvDTE.OutputWindow> a <xref:EnvDTE.OutputWindowPane> objekty přidat některé funkce vyšší úrovně usnadňují výčet **výstup** podokna a načíst text z podokna.
+ Okno **Výstup** můžete ovládat přímo <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> prostřednictvím rozhraní a. Rozhraní, <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> které nabízí <xref:Microsoft.VisualStudio.Shell.Interop.SVsOutputWindow> služba, definuje metody pro vytváření, načítání a **ničení** výstupní chod oken. Rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> definuje metody pro zobrazení podoken, skrytí podoken a manipulaci s jejich textem. Alternativní způsob ovládání **výstupní** okno je <xref:EnvDTE.OutputWindow> <xref:EnvDTE.OutputWindowPane> prostřednictvím a objekty v objektovém modelu Visual Studio Automation. Tyto objekty zapouzdřují téměř <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> všechny funkce rozhraní a. Kromě toho <xref:EnvDTE.OutputWindow> a <xref:EnvDTE.OutputWindowPane> objekty přidat některé vyšší úrovně funkce, aby bylo snazší výčet podokna okna **výstup** a načíst text z podoken.
 
-## <a name="create-an-extension-that-uses-the-output-pane"></a>Vytvoření rozšíření, které se používá v podokně výstupu
- Můžete vytvořit rozšíření, která zpracovává různých aspektů podokno výstup.
+## <a name="create-an-extension-that-uses-the-output-pane"></a>Vytvoření rozšíření, které používá podokno Výstup
+ Můžete vytvořit rozšíření, které vykonává různé aspekty podokna Výstup.
 
-1. Vytvořte projekt VSIX s názvem `TestOutput` pomocí příkazu nabídky s názvem **TestOutput**. Další informace najdete v tématu [vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
+1. Vytvořte projekt VSIX s názvem `TestOutput` příkazu nabídky s názvem **TestOutput**. Další informace naleznete [v tématu Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
 
 2. Přidejte následující odkazy:
 
@@ -33,14 +33,14 @@ ms.locfileid: "66311028"
 
     2. EnvDTE80
 
-3. V *TestOutput.cs*, přidejte následující příkaz using:
+3. V *TestOutput.cs*přidejte následující příkaz using:
 
     ```f#
     using EnvDTE;
     using EnvDTE80;
     ```
 
-4. V *TestOutput.cs*, odstranit `ShowMessageBox` metody. Přidejte následující pahýl metody:
+4. V *TestOutput.cs*odstraňte metodu. `ShowMessageBox` Přidejte následující metodu se zakázaným inzerováním:
 
     ```csharp
     private void OutputCommandHandler(object sender, EventArgs e)
@@ -48,7 +48,7 @@ ms.locfileid: "66311028"
     }
     ```
 
-5. V konstruktoru TestOutput změňte na OutputCommandHandler obslužná rutina příkazu. Tady je část, která přidá příkazy:
+5. V konstruktoru TestOutput změňte obslužnou rutinu příkazu na OutputCommandHandler. Zde je část, která přidává příkazy:
 
     ```csharp
     OleMenuCommandService commandService = this.ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
@@ -61,7 +61,7 @@ ms.locfileid: "66311028"
     }
     ```
 
-6. Následující části mají různé metody, které ukazují různé způsoby práci s podoknem výstupu. Můžete volat tyto metody pro text `OutputCommandHandler()` metody. Například následující kód přidá `CreatePane()` metody uvedené v další části.
+6. Níže uvedené části mají různé metody, které ukazují různé způsoby práce s podoknem Výstup. Tyto metody můžete volat do `OutputCommandHandler()` těla metody. Například následující kód přidá `CreatePane()` metodu uvedenou v další části.
 
     ```csharp
     private void OutputCommandHandler(object sender, EventArgs e)
@@ -70,8 +70,8 @@ ms.locfileid: "66311028"
     }
     ```
 
-## <a name="create-an-output-window-with-ivsoutputwindow"></a>Vytvořit výstupní okno s IVsOutputWindow
- Tento příklad ukazuje, jak vytvořit nový **výstup** podokno okna s použitím <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> rozhraní.
+## <a name="create-an-output-window-with-ivsoutputwindow"></a>Vytvoření výstupního okna s iVsOutputWindow
+ Tento příklad ukazuje, jak vytvořit nové podokno okna **Výstup** pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> rozhraní.
 
 ```csharp
 void CreatePane(Guid paneGuid, string title,
@@ -95,10 +95,10 @@ void CreatePane(Guid paneGuid, string title,
 }
 ```
 
- Pokud chcete přidat tuto metodu rozšíření uvedený v předchozí části, když kliknete **vyvolat TestOutput** příkazu byste měli vidět **výstup** okno s hlavičku, která uvádí, že **zobrazit výstup od: CreatedPane** a slova **jde v podokně vytvoření** v podokně samotný.
+ Pokud přidáte tuto metodu do rozšíření uvedeného v předchozím oddílu, po klepnutí na příkaz **Vyvolat testVýstup** se zobrazí okno **Výstup** se záhlavím **Show output from: CreatedPane** a slovy **Toto je podokno Vytvořeno** v samotném podokně.
 
-## <a name="create-an-output-window-with-outputwindow"></a>Vytvořit výstupní okno s outputwindow –
- Tento příklad ukazuje, jak vytvořit **výstup** podokno okna s použitím <xref:EnvDTE.OutputWindow> objektu.
+## <a name="create-an-output-window-with-outputwindow"></a>Vytvoření výstupního okna s oknem OutputWindow
+ Tento příklad ukazuje, jak vytvořit **podokno** okna Výstup pomocí objektu. <xref:EnvDTE.OutputWindow>
 
 ```csharp
 void CreatePane(string title)
@@ -120,12 +120,12 @@ void CreatePane(string title)
 }
 ```
 
- I když <xref:EnvDTE.OutputWindowPanes> kolekce umožňuje načíst **výstup** podokno okna podle jeho názvu, podokno názvy nemusí být jedinečný. Pokud jste pochybovat jedinečnost názvu, použijte <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow.GetPane%2A> metody k získání správné podokně podle její identifikátor GUID.
+ Přestože <xref:EnvDTE.OutputWindowPanes> kolekce umožňuje načíst podokno okna **Výstup** podle názvu, není zaručeno, že názvy podokn a panelu budou jedinečné. Když pochybujete o jedinečnosti názvu, použijte metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow.GetPane%2A> k načtení správného podokna pomocí identifikátoru GUID.
 
- Pokud chcete přidat tuto metodu rozšíření uvedený v předchozí části, když kliknete **vyvolat TestOutput** příkaz, zobrazí se v okně výstupu se, že **zobrazit výstup z:: DTEPane** a slova **přidá podokno DTE** v podokně samotný.
+ Pokud přidáte tuto metodu do rozšíření uvedeného v předchozím oddílu, po klepnutí na příkaz **Vyvolat testVýstup** se zobrazí okno Výstup se záhlavím **Show output from: DTEPane** a slovy **Added DTE Pane** v samotném podokně.
 
-## <a name="delete-an-output-window"></a>Odstranit výstupní okno
- Tento příklad ukazuje, jak odstranit **výstup** podokno okna.
+## <a name="delete-an-output-window"></a>Odstranit okno Výstup
+ Tento příklad ukazuje, jak odstranit podokno okna **Výstup.**
 
 ```csharp
 void DeletePane(Guid paneGuid)
@@ -147,10 +147,10 @@ void DeletePane(Guid paneGuid)
 }
 ```
 
- Pokud chcete přidat tuto metodu rozšíření uvedený v předchozí části, když kliknete **vyvolat TestOutput** příkaz, zobrazí se v okně výstupu se, že **zobrazit výstup z:: Nové podokno** a slova **přidá podokno vytvořili** v podokně samotný. Pokud kliknete **vyvolat TestOutput** příkaz znovu, v podokně se odstraní.
+ Pokud přidáte tuto metodu do rozšíření uvedeného v předchozím oddílu, po klepnutí na příkaz **Vyvolat testvýstup** se zobrazí okno Výstup se záhlavím **Show output from: New Pane** a slovy Added Created **Pane** v samotném podokně. Pokud znovu klepnete na příkaz **Vyvolat výstup testu,** podokno se odstraní.
 
-## <a name="get-the-general-pane-of-the-output-window"></a>Hlavní podokno okna výstup
- Tento příklad ukazuje, jak získat předdefinované **Obecné** podokně **výstup** okna.
+## <a name="get-the-general-pane-of-the-output-window"></a>Získání podokna Obecné okna Výstup
+ Tento příklad ukazuje, jak získat předdefinované **obecné** podokno okna **Výstup.**
 
 ```csharp
 IVsOutputWindowPane GetGeneralPane()
@@ -160,10 +160,10 @@ IVsOutputWindowPane GetGeneralPane()
 }
 ```
 
- Pokud chcete přidat tuto metodu rozšíření uvedený v předchozí části, když kliknete **vyvolat TestOutput** příkazu byste měli vidět, který **výstup** okno zobrazuje slova **nalezen obecné Podokno** v podokně.
+ Pokud přidáte tuto metodu do rozšíření uvedeného v předchozím oddílu, po klepnutí na příkaz **Vyvolat testVýstup** byste měli vidět, že v okně **Výstup** se v podokně zobrazují **podokno Nalezené obecné.**
 
-## <a name="get-the-build-pane-of-the-output-window"></a>Získat sestavení podokna okna výstupu
- Tento příklad ukazuje, jak najít **sestavení** podokno a zápis do něj. Vzhledem k tomu, **sestavení** není ve výchozím nastavení aktivuje podokno, aktivuje se také.
+## <a name="get-the-build-pane-of-the-output-window"></a>Získání podokna sestavení okna Výstup
+ Tento příklad ukazuje, jak najít podokno **sestavení** a zapisovat do něj. Vzhledem k **tomu, že** podokno sestavení není ve výchozím nastavení aktivováno, aktivuje se také.
 
 ```csharp
 void OutputTaskItemStringExExample(string buildMessage)

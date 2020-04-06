@@ -1,5 +1,5 @@
 ---
-title: IDebugModule2::GetInfo | Dokumentace Microsoftu
+title: IDebugModule2::GetInfo | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - GetInfo method
 - IDebugModule2::GetInfo method
 ms.assetid: de337e66-294f-4ac9-b21e-71fac7418e36
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1fe5060f66c56a033fb0bdcc8ae7dee368d2824e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c68c583702d7def5a7bff3ee40a9b8b2c537bb31
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323973"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726959"
 ---
 # <a name="idebugmodule2getinfo"></a>IDebugModule2::GetInfo
 Získá informace o tomto modulu.
@@ -44,18 +44,18 @@ int GetInfo( 
 
 ## <a name="parameters"></a>Parametry
 `dwFields`\
-[in] Kombinace příznaků z [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) výčtu, která pole zadáte `pInfo` mají doplnit.
+[v] Kombinace příznaků z [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) výčtu, které `pInfo` určují, která pole mají být vyplněna.
 
 `pInfo`\
-[out v] A [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktura, která se vyplní popis modulu.
+[dovnitř, ven] Struktura [MODULE_INFO,](../../../extensibility/debugger/reference/module-info.md) která je vyplněna popisem modulu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktura obsahuje název modulu, který se zobrazí **moduly** okna.
+ Struktura [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) obsahuje název modulu, který je zobrazen v okně **Moduly.**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)
 - [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)
 - [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)

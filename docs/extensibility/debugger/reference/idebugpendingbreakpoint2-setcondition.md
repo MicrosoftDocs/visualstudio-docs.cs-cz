@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::SetCondition | Dokumentace Microsoftu
+title: IDebugPendingBreakpoint2::SetCondition | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - SetCondition method
 - IDebugPendingBreakpoint2::SetCondition method
 ms.assetid: 0534224f-654f-4862-bc4d-a9a81a5f8899
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1a71e22d118b64e15bb9da15b2f9152a90440f1a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4683d944f2489b8b21ff545c86e3d867283d644a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347655"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725720"
 ---
 # <a name="idebugpendingbreakpoint2setcondition"></a>IDebugPendingBreakpoint2::SetCondition
-Nastavuje nebo mění podmínky spojené se čekající zarážkou.
+Nastaví nebo změní podmínku přidruženou k čekající zarážky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,14 +42,14 @@ int SetCondition( 
 
 ## <a name="parameters"></a>Parametry
 `bpCondition`\
-[in] A [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) struktura, která určuje podmínku, která má nastavit.
+[v] A [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) struktura, která určuje podmínku nastavit.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Jakoukoli podmínku, která byla dříve přidružená čekající zarážka se ztratí. Všechny zarážky, které jsou vázány z této čekající zarážka se nazývají nastavit jejich stav na hodnotu zadanou v `bpCondition` parametru.
+ Všechny podmínky, které byly dříve přidruženy k čekající zarážky je ztracena. Všechny zarážky vázané z této čekající zarážky jsou volány `bpCondition` k nastavení jejich podmínky na hodnotu zadanou v parametru.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
 - [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)

@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPortSuppliers2::Clone | Dokumentace Microsoftu
+title: IEnumDebugPortSuppliers2:Klonování | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugPortSuppliers2::Clone
 ms.assetid: 98b9914d-4f32-44da-b422-68830bce44b4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e42686db45eb4437cd13d66866a152a69b91b14a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bc6dc6c055f9821c9c7f02312762d3dd0a44bc58
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326416"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80716093"
 ---
 # <a name="ienumdebugportsuppliers2clone"></a>IEnumDebugPortSuppliers2::Clone
-Vrátí kopii objektu do aktuálního výčtu jako samostatný objekt.
+Vrátí kopii aktuálnívýčty jako samostatný objekt.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int Clone(
 
 ## <a name="parameters"></a>Parametry
 `ppEnum`\
-[out] Vrátí kopii objektu tento výčet jako samostatný objekt.
+[out] Vrátí kopii tohoto výčtu jako samostatný objekt.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Kopírování výčet má stejného stavu jako původní v době, kdy tato metoda je volána. Ale tuto kopii a původní stavy jsou oddělené a je možné změnit individuálně.
+ Kopie výčtu má stejný stav jako originál v době, kdy je tato metoda volána. Stavy kopie a originálu jsou však samostatné a lze je změnit jednotlivě.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md)

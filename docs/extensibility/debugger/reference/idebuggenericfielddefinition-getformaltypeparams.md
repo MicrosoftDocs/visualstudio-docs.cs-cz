@@ -1,28 +1,28 @@
 ---
-title: IDebugGenericFieldDefinition::GetFormalTypeParams | Dokumentace Microsoftu
+title: IDebugGenericFieldDefinition::GetFormalTypeParams | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - GetFormalTypeParams
 - IDebugGenericFieldDefinition::GetFormalTypeParams
 ms.assetid: cadbd6a1-bc7c-4aff-8777-5396b7a23c3e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 164bb5c3f74dec9a56ce3146c5e7ec62d6eb46b4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4926d94e4ba032f3ff10ca8fdf7027ac6f6e751c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313167"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728241"
 ---
 # <a name="idebuggenericfielddefinitiongetformaltypeparams"></a>IDebugGenericFieldDefinition::GetFormalTypeParams
-Načte parametry typu zadaný počet parametrů.
+Načte parametry typu za daný počet parametrů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,19 +44,19 @@ int GetFormalTypeParams(
 
 ## <a name="parameters"></a>Parametry
 `cParams`\
-[in] Počet parametrů.
+[v] Počet parametrů.
 
 `ppParams`\
 [out] Pole parametrů typu.
 
 `pcParams`\
-[out v] Počet parametrů `ppParams` pole.
+[dovnitř, ven] Počet parametrů v `ppParams` poli.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Vrátí parametrů typu v pořadí zleva doprava. Například slovníku\<K, V > vrátí IDebugFormalGenericParameters {K, V}.
+ Vrátí parametry typu v pořadí zleva doprava. Například Dictionary\<K,V> vrátí iDebugFormalGenericParameters {K,V}.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

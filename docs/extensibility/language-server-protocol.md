@@ -1,67 +1,67 @@
 ---
-title: Přehled protokolu Server Language | Dokumentace Microsoftu
+title: Přehled protokolu jazykového serveru | Dokumenty společnosti Microsoft
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.assetid: 6a7d93c2-31ea-4bae-8b29-6988a567ddf2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f6f114d7165b85051092234ea33dfc7f73e1487
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c3bd5dce3cfb7022a8abb6397dc87b418144cbe1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309628"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80703106"
 ---
 # <a name="language-server-protocol"></a>Protokol jazyka serveru
 
-## <a name="what-is-the-language-server-protocol"></a>Co je protokol jazyka serveru?
+## <a name="what-is-the-language-server-protocol"></a>Co je protokol language server?
 
-Podpůrné bohaté funkce úprav, jako je zdrojový kód dokončováním automaticky nebo **přejít k definici** pro programovací jazyk v nějakém editoru nebo prostředí IDE je obvykle velmi obtížné a časově náročné. Obvykle se vyžaduje zadání doménový model (skener, analyzátor, kontrolu typu, tvůrce a další) v programovacím jazyce IDE nebo editoru. Například modul plug-in Eclipse CDT, který poskytuje podporu pro C/C++ v integrovaném vývojovém prostředí Eclipse napsané v jazyce Java od integrovaného vývojového prostředí Eclipse, samotného je napsána v jazyce Java. Následující tento přístup, znamená to implementace modelu domény C/C++ v TypeScript pro Visual Studio Code a model v samostatné doméně C# pro sadu Visual Studio.
+Podpora funkce bohaté úpravy, jako je automatické dokončování zdrojového kódu nebo **přejít na definici** pro programovací jazyk v editoru nebo IDE je tradičně velmi náročné a časově náročné. Obvykle vyžaduje psaní modelu domény (skener, analyzátor, kontrola typu, tvůrce a další) v programovacím jazyce editoru nebo IDE. Například eclipse CDT plugin, který poskytuje podporu pro C/C++ v Eclipse IDE je napsán v Jazyce Java, protože Eclipse IDE sám je napsán v Jazyce Java. Podle tohoto přístupu by to znamenalo implementaci modelu domény C/C++ v typescriptu pro kód sady Visual Studio a modelu samostatné domény v jazyce C# pro visual studio.
 
-Vytváření domény jazykově specifické modely jsou také mnohem jednodušší, pokud nástroj pro vývoj můžete znovu použít existující knihovny pro konkrétní jazyky. Tyto knihovny jsou obvykle implementovány v programovacím jazyce (například dobré C/C++ doménu, kterou modely jsou implementovány v jazyce C/C++). Integrace knihovny jazyka C/C++ do editoru napsané v TypeScript je technicky možné ale obtížné provést.
+Vytváření modelů domén specifických pro jazyk je také mnohem jednodušší, pokud vývojový nástroj může znovu použít existující knihovny specifické pro jazyk. Tyto knihovny jsou však obvykle implementovány v samotném programovacím jazyce (například dobré modely domény C/C++ jsou implementovány v jazyce C/C++). Integrace knihovny C/C++ do editoru napsaného v jazyce TypeScript je technicky možná, ale je těžké ji provést.
 
-### <a name="language-servers"></a>Jazyk servery
+### <a name="language-servers"></a>Jazykové servery
 
-Další možností je spustit knihovny ve svém vlastním procesu a využít meziprocesové komunikace na to. Zprávy odeslané vzájemně tvoří protokol. Protokol jazyka serveru (LSP) je produkt standardizovat zprávy vyměňují mezi proces serveru jazyk a vývojový nástroj. Použití jazyka servery nebo demons není nové nebo nový nápad. Editory jako Vim a Emacs mají byla to nějakou dobu k zajištění podpory sémantický automatické dokončování. Cílem LSP byla pro zjednodušení tyto druhy integrace a poskytují užitečné rámec pro vystavení jazykové funkce pro celou řadu nástrojů.
+Dalším přístupem je spuštění knihovny ve vlastním procesu a použití meziprocesové komunikace k rozhovoru s ní. Zprávy odeslané tam a zpět tvoří protokol. Protokol lsp (Language Server) je produktem standardizace zpráv vyměňovaných mezi vývojovým nástrojem a procesem jazykového serveru. Používání jazykových serverů nebo démonů není nová nebo nová myšlenka. Redaktoři jako Vim a Emacs to dělají již nějakou dobu, aby poskytli sémantickou podporu automatického dokončování. Cílem LSP bylo zjednodušit tyto druhy integrací a poskytnout užitečný rámec pro vystavení jazykových funkcí různým nástrojům.
 
-Společný protokol umožňuje integraci programovacích funkcí jazyka do vývojový nástroj s minimálními fuss opětovným použitím stávající implementaci modelu domény jazyk. Jazyk serveru back endem může být napsaná v PHP, Python nebo Java a LSP umožňuje ji snadno integrovat do různých nástrojů. Protokol pracuje na běžné úroveň abstrakce, tak, aby nástroj může nabídnout bohaté jazykových služeb bez nutnosti abyste úplně pochopili drobné rozdíly specifické pro základní model domény.
+Společný protokol umožňuje integraci funkcí programovacího jazyka do vývojového nástroje s minimálním problémem opětovným použitím existující implementace modelu domény jazyka. Jazyk server back-end by mohl být napsán v PHP, Python, nebo Java a LSP umožňuje snadno integrovat do různých nástrojů. Protokol pracuje na společné úrovni abstrakce, takže nástroj může nabízet bohaté jazykové služby, aniž by bylo nutné plně pochopit nuance specifické pro základní model domény.
 
-## <a name="how-work-on-the-lsp-started"></a>Jak fungují na LSP spuštění
+## <a name="how-work-on-the-lsp-started"></a>Jak začala práce na lsp
 
-LSP se průběžně vyvíjel a teď je ve verzi 3.0. Spustit při konceptu jazyka serveru se nenačítají omnisharp k poskytování bohatých funkcí pro úpravy pro C#. Na začátku OmniSharp použít protokol HTTP s datovou část JSON a je integrována do několika editory včetně [Visual Studio Code](https://code.visualstudio.com).
+LSP se vyvíjel v průběhu času a dnes je na verzi 3.0. Začalo to, když koncept jazykového serveru byl zachycen omnisharp poskytnout bohaté funkce pro úpravy pro C#. Zpočátku OmniSharp používá protokol HTTP s datovou částí JSON a byl integrován do několika editorů, včetně [visual studio kód](https://code.visualstudio.com).
 
-Přibližně ve stejnou dobu Microsoft začal pracovat na serveru jazyka TypeScript, za účelem podpory TypeScript v editorech jako (emacs) a Sublime Text. V této implementaci editoru komunikuje přes stdin/stdout pomocí procesu TypeScript serveru a používá INSPIROVANÉ ladicí program protokolu V8 datovou část JSON pro požadavky a odpovědi. TypeScript server integroval do TypeScript Sublime modul plug-in a VS Code pro bohaté úpravy TypeScript.
+Přibližně ve stejnou dobu začala společnost Microsoft pracovat na jazykovém serveru TypeScript s myšlenkou podporovat TypeScript v editorech, jako je Emacs a Sublime Text. V této implementaci editor komunikuje prostřednictvím stdin/stdout s procesem serveru TypeScript a používá datovou část JSON inspirovanou protokolem ladicího programu V8 pro požadavky a odpovědi. Server TypeScript byl integrován do modulu plug-in TypeScript Sublime a vs kód pro bohaté úpravy jazyka TypeScript.
 
-Po s obslužných rutin integrated dva servery pro jiný jazyk, VS Code tým postupně přišel s novým prostředím běžné protokol jazyka serveru editory a integrovanými vývojovými prostředími. Společný protokol umožňuje poskytovatele jazyka k vytvoření serveru jeden jazyk, který mohou využívat jiné prostředí IDE. Jazyk serveru příjemce má jenom jednou implementace protokolu na straně klienta. Výsledkem win-win situace pro poskytovatele jazyka a jazyk příjemce.
+Po integraci dvou různých jazykových serverů začal tým VS Code zkoumat protokol společného jazykového serveru pro editory a IDE. Společný protokol umožňuje poskytovateli jazyka vytvořit jeden jazykový server, který může být spotřebován různými ite. Příjemce jazykového serveru má k implementaci klientské straně protokolu pouze jednou. Výsledkem je win-win situace pro poskytovatele jazyka a příjemce jazyka.
 
-Protokol jazyka serveru začít protokolu používané serverem TypeScript rozšíření s další jazykové funkce INSPIROVANÉ VS Code jazyka rozhraní API. Protokol se zálohuje pomocí JSON-RPC pro vzdálené volání díky jednoduchost a knihovny.
+Protokol jazykového serveru byl spuštěn protokolem používaným serverem TypeScript a rozšiřoval jej o další jazykové funkce inspirované rozhraním API jazyka VS Code. Protokol je zálohován json-RPC pro vzdálené vyvolání z důvodu jeho jednoduchosti a existující knihovny.
 
-VS Code týmu prototypem. protokol implementací několik serverů linter jazyka, které reagovat na požadavky na lint (kontroly) souboru a vrátit sadu zjištěné upozornění a chyby. Cílem bylo lint soubor jako uživatelské úpravy v dokumentu, což znamená, že během relace editor bude existovat mnoho linting požadavků. To dávalo smysl použít zachovat serveru a spouštění tak, aby nový proces linting nejsou potřeba ke spuštění pro každé uživatelské úpravy. Několik serverů linter byly implementované, včetně VS Code ESLint a TSLint rozšíření. Tyto dva servery linter jsou implementovány v jazyce TypeScript/JavaScript i spustit na Node.js. Sdílení knihovny, který implementuje klientských a serverových součástí protokolu.
+Tým VS Code prototypoval protokol implementací několika jazykových serverů linter, které reagují na požadavky na lint (scan) soubor a vrátí sadu zjištěných varování a chyb. Cílem bylo lint soubor jako uživatel úpravy v dokumentu, což znamená, že bude mnoho linting žádostí během relace editoru. Mělo smysl udržovat server v provozu, aby pro každého uživatele nebylo nutné spustit nový proces lintingu. Bylo implementováno několik linter serverů, včetně rozšíření ESLint a TSLint společnosti VS Code. Tyto dva linter servery jsou implementovány v TypeScript/JavaScript a spustit na Node.js. Sdílejí knihovnu, která implementuje klientskou a serverovou část protokolu.
 
-## <a name="how-the-lsp-works"></a>Jak funguje LSP
+## <a name="how-the-lsp-works"></a>Jak LSP funguje
 
-Jazyk serveru běží ve vlastním procesu a nástrojů, jako je Visual Studio nebo VS Code komunikovat se serverem přes JSON-RPC pomocí protokolu jazyka. Další výhodou operační ve vyhrazeném procesu serveru jazyk je předcházet problémům s výkonem související s modelem jednoho procesu. Skutečné přenosový kanál může být buď stdio, sokety, pojmenované kanály nebo uzel ipc Pokud klient i server jsou napsané v Node.js.
+Jazykový server běží ve vlastním procesu a nástroje jako Visual Studio nebo VS Code komunikují se serverem pomocí jazykového protokolu přes JSON-RPC. Další výhodou jazykového serveru pracujícího ve vyhrazeném procesu je, že se vyhnete problémům s výkonem souvisejícím s jedním modelem procesu. Skutečný přenosový kanál může být stdio, sokety, pojmenované kanály nebo uzel ipc, pokud klient i server jsou zapsány v Node.js.
 
-Níže je příklad pro nástroj a jazyk serveru komunikaci během rutinu úprav relace:
+Níže je uveden příklad komunikace nástroje a jazykového serveru během rutinní relace úprav:
 
-![Vývojový diagram vrstvy](media/lsp-flow-diagram.png)
+![lsp diagram udění](media/lsp-flow-diagram.png)
 
-* **Uživatel otevře soubor (označované jako dokument) v nástroji**: Nástroj oznámí jazyk serveru je otevřený dokument ("textDocument/didOpen"). Od této chvíle pravdivých informací o obsahu dokumentu je už v systému souborů, ale ponechá nástroj v paměti.
+* **Uživatel otevře soubor (označovaný jako dokument) v nástroji**: Nástroj upozorní jazykový server, že dokument je otevřený ("textDocument/didOpen"). Od této chvíle již není pravda o obsahu dokumentu v systému souborů, ale uchovává nástroj v paměti.
 
-* **Uživatel provede změny**: Nástroj pošle oznámení serveru o změně dokumentu ("textDocument/didChange") a sémantické informace programu se aktualizuje pomocí jazyka serveru. V takovém případě jazyk serveru tyto informace analyzuje a upozorní nástroj zjištěné chyby a upozornění ("textDocument/publishDiagnostics").
+* **Uživatel provede úpravy**: Nástroj upozorní server na změnu dokumentu ("textDocument/didChange") a sémantické informace o programu jsou aktualizovány jazykovým serverem. V takovém případě jazykový server analyzuje tyto informace a upozorní nástroj zjištěnými chybami a upozorněními ("textDocument/publishDiagnostics").
 
-* **Uživatel provede "Přejít k definici" na symbol v editoru**: Nástroj odešle požadavek ' textDocument/definici' se dvěma parametry: (1) na identifikátor URI dokumentu a (2) umístění textu, ze kterého byla spuštěna přejít na definici požadavku na server. Server odpoví identifikátor URI dokumentu a umístění definice symbolu v dokumentu.
+* **Uživatel provede "Přejít na definici" na symbol v editoru**: Nástroj odešle požadavek 'textDocument/definition' se dvěma parametry: (1) identifikátor URI dokumentu a (2) textový postoj, odkud byl iniciován požadavek Přejít na definici na server. Server odpoví identifikátorem URI dokumentu a umístěním definice symbolu uvnitř dokumentu.
 
-* **Uživatel nezavře dokument (soubor)** : ' TextDocument/didClose' oznámení se odesílá z nástroje informování jazyk serveru, na kterém je dokument nyní již v paměti a které aktuální obsah je nyní aktuální v systému souborů.
+* **Uživatel zavře dokument (soubor)**: 'textDocument/didClose' oznámení je odeslána z nástroje, informování jazykový server, že dokument je nyní již v paměti a že aktuální obsah je nyní aktuální v systému souborů.
 
-Tento příklad ukazuje, jak se protokol komunikuje se serverem nástroje jazyka na úrovni funkce editoru, jako je "Přejít k definici", "Najít všechny odkazy". Datové typy používané v protokolu jsou editoru nebo integrovaného vývojového prostředí datové typy jako otevřený textový dokument a pozici kurzoru. Datové typy, které nejsou na úrovni programovací model domény jazyka, která by obvykle mají stromu abstraktní syntaxe a kompilátoru symboly (například přeložit typy, obory názvů,...). To výrazně zjednodušuje protokolu.
+Tento příklad ilustruje, jak protokol komunikuje s jazykovým serverem na úrovni funkcí editoru, jako je "Přejít na definici", "Najít všechny odkazy". Datové typy používané protokolem jsou editor nebo IDE 'datové typy' jako aktuálně otevřený textový dokument a umístění kurzoru. Datové typy nejsou na úrovni modelu domény programovacího jazyka, který by obvykle poskytoval abstraktní syntaktické stromy a symboly kompilátoru (například vyřešené typy, obory názvů, ...). To výrazně zjednodušuje protokol.
 
-Nyní Pojďme se podívat na žádost "textDocument/definice" podrobněji. V následující tabulce jsou datových částí, které patří mezi nástrojem klienta a serveru jazyk pro požadavek "Přejít k definici" v dokumentu C++.
+Nyní se podívejme na 'textDocument /definition' požadavek podrobněji. Níže jsou datové části, které jdou mezi klientský nástroj a jazykový server pro "Přejít na definici" požadavek v dokumentu C++.
 
-To je požadavek:
+Toto je požadavek:
 
 ```json
 {
@@ -80,7 +80,7 @@ To je požadavek:
 }
 ```
 
-Jedná se o odpověď:
+Toto je odpověď:
 
 ```json
 {
@@ -102,22 +102,22 @@ Jedná se o odpověď:
 }
 ```
 
-Když popisující typy dat na úrovni editoru, nikoli na úrovni modelu programovací jazyk je jedním z důvodů pro úspěch protokol jazyka serveru. Je mnohem jednodušší ke standardizaci textový dokument identifikátor URI nebo pozice kurzoru v porovnání s standardizovat abstraktní syntaxe stromu a kompilátoru symboly v různých programovacích jazycích.
+Při zpětném pohledu je popis datových typů na úrovni editoru spíše než na úrovni modelu programovacího jazyka jedním z důvodů úspěchu protokolu jazykového serveru. Je mnohem jednodušší standardizovat identifikátor URI textového dokumentu nebo pozici kurzoru ve srovnání se standardizací abstraktního stromu syntaxe a symbolů kompilátoru v různých programovacích jazycích.
 
-Když uživatel pracuje s různými jazyky, VS Code obvykle spouští na serveru jazyk každý programovací jazyk. Následující příklad ukazuje relaci, kde uživatel pracuje na jazyce Java a SASS soubory.
+Když uživatel pracuje s různými jazyky, VS Code obvykle spustí jazykový server pro každý programovací jazyk. Následující příklad ukazuje relaci, kde uživatel pracuje na Java a SASS soubory.
 
-![Java a sass](media/lsp-java-and-sass.png)
+![java a sass](media/lsp-java-and-sass.png)
 
 ### <a name="capabilities"></a>Možnosti
 
-Každý jazyk serveru může podporovat všechny funkce definované v protokolu. Proto se klient a server oznamuje jejich sadu podporovaných funkcí prostřednictvím "funkce". Například server oznamuje, že ho můžou zpracovat žádost o "textDocument/definice", ale to nemusí zpracovat žádost o 'pracovní prostor/symbol'. Podobně můžete klientům oznamujeme, že jsou schopný poskytnout ' Chystáte se uložit' oznámení předtím, než je uložen dokument, aby server dokáže výpočetní textové úpravy automaticky formátovat upravený dokument.
+Ne každý jazykový server může podporovat všechny funkce definované protokolem. Proto klient a server oznamuje jejich podporované funkce nastavené prostřednictvím 'schopnosti'. Jako příklad server oznamuje, že může zpracovat požadavek 'textDocument/definition', ale nemusí zpracovat požadavek "pracovní prostor/symbol". Podobně mohou klienti oznámit, že jsou schopni poskytnout oznámení o uložení před uložením dokumentu, aby server mohl vypočítat textové úpravy pro automatické formátování upraveného dokumentu.
 
-## <a name="integrating-a-language-server"></a>Integrace jazyka serveru
+## <a name="integrating-a-language-server"></a>Integrace jazykového serveru
 
-Skutečné integrace jazyk serveru do určitého nástroje není určené protokol jazyka serveru a je ponecháno na implementors nástroj. Některé nástroje integrace jazyka serverů obecně tak, že rozšíření, které lze spustit a obraťte se na jakýkoli druh jazyk serveru. Jiné, jako VS Code, vytvořte vlastní rozšíření na serveru pro jazyk tak, aby je mít pořád povolený a zajistit tak některé funkce vlastních jazykových rozšíření.
+Skutečná integrace jazykového serveru do určitého nástroje není definována protokolem jazykového serveru a je ponechána implementátorům nástrojů. Některé nástroje integrují jazykové servery obecně tím, že mají rozšíření, které lze spustit a mluvit s jakýmkoli jazykem serveru. Jiné, například VS Code, vytvářejí vlastní rozšíření na jazykový server, takže rozšíření je stále schopno poskytovat některé vlastní jazykové funkce.
 
-Pro zjednodušení implementace jazyka serverů a klientů, existují knihovny nebo sad SDK pro součásti klienta a serveru. Tyto knihovny jsou k dispozici pro různé jazyky. Například neexistuje [modul npm jazyk klienta](https://www.npmjs.com/package/vscode-languageclient) k usnadnění integrace jazyk serveru do rozšíření VS Code a další [modul npm jazyk serveru](https://www.npmjs.com/package/vscode-languageserver) zapsat jazyk serveru pomocí Node.js. Toto je aktuální [seznamu](https://github.com/Microsoft/language-server-protocol/wiki/Protocol-Implementations) podporu knihoven.
+Pro zjednodušení implementace jazykových serverů a klientů existují knihovny nebo sady SDK pro klientské a serverové části. Tyto knihovny jsou k dispozici pro různé jazyky. Například je [modul npm klienta jazyka](https://www.npmjs.com/package/vscode-languageclient) pro usnadnění integrace jazykového serveru do rozšíření VS Code a jiného [modulu npm pro](https://www.npmjs.com/package/vscode-languageserver) zápis jazykového serveru pomocí node.js. Toto je aktuální [seznam](https://github.com/Microsoft/language-server-protocol/wiki/Protocol-Implementations) knihoven podpory.
 
-## <a name="using-the-language-server-protocol-in-visual-studio"></a>V sadě Visual Studio pomocí protokol jazyka serveru
+## <a name="using-the-language-server-protocol-in-visual-studio"></a>Použití protokolu Language Server Protocol v sadě Visual Studio
 
-* [Přidání rozšíření protokol jazyka serveru](adding-an-lsp-extension.md) – přečtěte si o integraci jazyk serveru do sady Visual Studio.
+* [Přidání rozšíření Language Server Protocol](adding-an-lsp-extension.md) – Informace o integraci jazykového serveru do sady Visual Studio.

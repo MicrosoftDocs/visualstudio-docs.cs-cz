@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2::PublishProgram | Dokumentace Microsoftu
+title: IDebugProgramPublisher2::PublishProgram | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramPublisher2::PublishProgram
 ms.assetid: 92ff63f0-e869-4040-b3ae-b2c899e708ff
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5d4f0b279bafe5291679237efdaada7907ddc515
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 20de162bdc3be2cc4771c9746b13c40a1e140a96
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66343373"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721683"
 ---
 # <a name="idebugprogrampublisher2publishprogram"></a>IDebugProgramPublisher2::PublishProgram
-Tato metoda provádí program, který je k dispozici pro ladicí stroj (DEs) a správce ladění relace.
+Tato metoda zpřístupňuje program pro ladicí moduly (DEs) a správce ladění relace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,20 +45,20 @@ int PublishProgram(
 
 ## <a name="parameters"></a>Parametry
 `Engines`\
-[in] Pole identifikátorů GUID pro DEs, které můžete spustit nebo připojit k tomuto programu.
+[v] Pole identifikátorů GUID pro des, které lze spustit nebo připojit k tomuto programu.
 
 `szFriendlyName`\
-[in] Popisný název pro program (tím se zobrazí v nabídkách a dialogová okna, které budou zobrazovat uživateli).
+[v] Popisný název programu (zobrazí se v nabídkách nebo dialogových oknech prezentovaných uživateli).
 
 `pDebuggeeInterface`\
-[in] `IUnknown` rozhraní programu (Tato hodnota se používá jako soubor cookie k jednoznačné identifikaci program; tato stejná hodnota se používá program "publikování")
+[v] `IUnknown` rozhraní pro program (tato hodnota se používá jako soubor cookie k jednoznačné identifikaci programu; tato stejná hodnota se používá k "zrušení publikování" programu)
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Chcete-li již nejsou k dispozici pro ladění programu, volání [UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md).
+ Chcete-li, aby program již nebyl k dispozici pro ladění, volejte [UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)
 - [UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerObject::SetBytes | Dokumentace Microsoftu
+title: IDebugPointerObject::SetBytes | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPointerObject::SetBytes method
 ms.assetid: 8c578b38-38d7-46f3-bb2e-8a730fccd334
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1e7b3fd72285f6a6c9c4abeca4e6b262d981be8f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: dede3ee5291afbfbeab4d6e60dcbd56e205e4526
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331555"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725510"
 ---
 # <a name="idebugpointerobjectsetbytes"></a>IDebugPointerObject::SetBytes
-Nastaví hodnotu, na který je odkazováno v řadě po sobě jdoucích bajtů.
+Nastaví hodnotu, na kterou se ukazuje z řady po sobě jdoucích bajtů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,23 +47,23 @@ int SetBytes(
 
 ## <a name="parameters"></a>Parametry
 `dwStart`\
-[in] Posun v bajtech od začátku objekt odkazoval.
+[v] Posun v bajtech od začátku objektu, na který byl odkazován.
 
 `dwCount`\
-[in] Počet bajtů, které mají nastavit.
+[v] Počet bajtů, které chcete nastavit.
 
 `pBytes`\
-[in] Pole bajtů představuje novou hodnotu. Tato hodnota bude uložena do objektu, spuštění na dané pozici.
+[v] Pole bajtů představující novou hodnotu. Tato hodnota je uložena do objektu, počínaje daným posunem.
 
 `pdwBytes`\
-[out] Vrátí že počet bajtů ve skutečnosti nastavit.
+[out] Vrátí počet skutečně nastavených bajtů.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.
+ Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda se používá, pokud ukazatel reprezentovaný tímto objektem [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) odkazuje na primitivní typ nebo jednoduchý pole primitivní typy (to znamená, pole, které může být reprezentován jednoduché pořadí bajtů). To `IDebugPointerObject` objektu nemůže být nulový odkaz (musí odkazovat na adresu v paměti).
+ Tato metoda se používá, pokud ukazatel reprezentované tímto [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) odkazuje na primitivní typ nebo jednoduché pole primitivních typů (to znamená pole, které může být reprezentováno jednoduchou sekvencí bajtů). Tento `IDebugPointerObject` objekt nemůže být nulový odkaz (musí odkazovat na adresu v paměti).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [GetBytes](../../../extensibility/debugger/reference/idebugpointerobject-getbytes.md)
 - [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)

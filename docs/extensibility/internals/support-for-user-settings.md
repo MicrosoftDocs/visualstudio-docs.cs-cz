@@ -1,5 +1,5 @@
 ---
-title: Podpora pro uživatelská nastavení | Dokumentace Microsoftu
+title: Podpora uživatelských nastavení | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,53 +7,53 @@ helpviewer_keywords:
 - user settings [Visual Studio SDK], registering persistence support
 - persistence, registering settings
 ms.assetid: ad9beac3-4f8d-4093-ad0e-6fb00444a709
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 90f04d5657fb6f680139ee6de5a47625304b5dbd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 02bb2450196de76917e9cffc2f5f5acc6c8ee7b7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309749"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80704781"
 ---
 # <a name="support-for-user-settings"></a>Podpora pro uživatelská nastavení
-VSPackage může definovat jeden nebo více kategorií nastavení, které jsou skupiny proměnných stavu, které se zachovávají po kliknutí **Importovat/exportovat nastavení** příkaz **nástroje** nabídky. Pokud chcete povolit tento trvalost, použijte nastavení rozhraní API v [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)].
+VSPackage může definovat jednu nebo více kategorií nastavení, což jsou skupiny proměnných stavu, které přetrvávají, když uživatel zvolí příkaz **Nastavení importu nebo exportu** v nabídce **Nástroje.** Chcete-li povolit tuto trvalost, použijte [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]nastavení API v .
 
- Položky registru, který se označuje jako bod vlastní nastavení a identifikátor GUID definuje kategorie nastavení na VSPackage. VSPackage může podporovat více kategorie nastavení, každý definovaný pomocí vlastního nastavení bodu.
+ Položka registru, která je označována jako bod vlastního nastavení a identifikátor GUID definuje kategorii nastavení balíčku VSPackage. VSPackage může podporovat více kategorií nastavení, z nichž každá je definována bodem vlastního nastavení.
 
-- Implementace nastavení, které jsou založeny na sestavení vzájemné spolupráce (pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings> rozhraní) by měl vytvořit vlastní nastavení bodu pomocí úpravy registru nebo pomocí skriptu registrátoru (souboru .rgs). Další informace najdete v tématu [vytváření skriptů registrátoru](/cpp/atl/creating-registrar-scripts).
+- Implementace nastavení, která jsou založena na interop <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings> sestavení (pomocí rozhraní) by měla vytvořit vlastní bod nastavení buď úpravou registru nebo pomocí skriptu registrátora (.rgs soubor). Další informace naleznete [v tématu Vytváření skriptů registrátorů](/cpp/atl/creating-registrar-scripts).
 
-- Kód, který používá Managed Package Framework (MPF) by měl vytvořit vlastní nastavení bodů připojením <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> VSPackage pro každý bod vlastní nastavení.
+- Kód, který používá rozhraní MPF (Managed Package Framework) <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> by měl vytvořit body vlastního nastavení připojením a k balíčku VSPackage pro každý bod vlastního nastavení.
 
-     Pokud jeden VSPackage podporuje několik bodů vlastní nastavení, každý vlastního nastavení bodu je implementováno samostatné třídy a každé registraci jedinečnou instanci <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> třídy. V důsledku toho nastavení implementující třída může podporovat více než jednu kategorii nastavení.
+     Pokud jeden VSPackage podporuje několik bodů vlastního nastavení, každý bod vlastního nastavení je implementován <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> samostatnou třídou a každý je registrován jedinečnou instancí třídy. V důsledku toho nastavení implementující třídu může podporovat více než jednu kategorii nastavení.
 
-## <a name="custom-settings-point-registry-entry-details"></a>Podrobnosti položky registru bodu vlastní nastavení
- Vlastní nastavení body se vytvoří v registru v následujícím umístění: HKLM\Software\Microsoft\VisualStudio\\ *\<verze >* \UserSettings\\`<CSPName>`, kde `<CSPName>` je název vlastního nastavení bodu podporuje VSPackage a  *\<verze >* je verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], například 8.0.
+## <a name="custom-settings-point-registry-entry-details"></a>Podrobnosti o položce registru vlastního bodu nastavení
+ Body vlastního nastavení jsou vytvořeny v položce registru v následujícím umístění:\\*\< *HKLM\Software\Microsoft\VisualStudio Version>\UserSettings\\`<CSPName>`, kde `<CSPName>` je název bodu vlastního nastavení, který podporuje VSPackage a [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] * \<verze>* je verze aplikace , například 8.0.
 
 > [!NOTE]
-> Kořenová cesta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *\<verze >* lze přepsat pomocí alternativního root, kdy [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je integrované vývojové prostředí (IDE) inicializovat. Další informace najdete v tématu [přepínače příkazového řádku](../../extensibility/command-line-switches-visual-studio-sdk.md).
+> Kořenová cesta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<Version>* lze přepsat alternativním [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kořenem při inicializování integrovaného vývojového prostředí (IDE). Další informace naleznete v [tématu Command-Line Switches](../../extensibility/command-line-switches-visual-studio-sdk.md).
 
- Struktura položky registru je znázorněno níže:
+ Struktura položky registru je znázorněna níže:
 
- HKLM\Software\Microsoft\VisualStudio\\ *\<Version>* \UserSettings\
+ HKLM\Software\Microsoft\VisualStudio\\*\<Version>* \UserSettings\
 
- `<CSPName`> = s: 12345 #.
+ `<CSPName`>= s '#12345'
 
- Balíček = "{XXXXXX XXXX XXXX XXXX XXXXXXXXX}.
+ Balíček = {XXXXXX XXXX XXXX XXXX XXXXXXXXX}'
 
- Kategorie = "{YYYYYY YYYY rrrr rrrr YYYYYYYYY}.
+ Kategorie = '{YYYYYY YYYY YYYY YYYYYYYYYYY}'
 
- ResourcePackage = "{ZZZZZZ ZZZZ ZZZZ ZZZZ ZZZZZZZZZ}.
+ ResourcePackage = '{Zzzzz Zzzz Zzzz Zzzz zzzzzzz}'
 
- AlternateParent = CategoryName
+ AlternateParent = Název_kategorie
 
-| Name | Typ | Data | Popis |
+| Name (Název) | Typ | Data | Popis |
 |-----------------|--------| - | - |
-| (Výchozí) | REG_SZ | Název vlastního nastavení bodu | Název klíče, `<CSPName`>, je nelokalizovaný název vlastního nastavení bodu.<br /><br /> Pro implementace podle MPF, je tím, že zkombinujete získat název klíče `categoryName` a `objectName` argumenty <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> konstruktor do `categoryName_objectName`.<br /><br /> Klíč může být prázdný nebo měl obsahovat ID odkazu na lokalizovaný řetězec v satelitní knihovně DLL. Tato hodnota pochází z `objectNameResourceID` argument <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> konstruktoru. |
-| Balíček | REG_SZ | GUID | Identifikátor GUID sady VSPackage, která implementuje vlastního nastavení bodu.<br /><br /> Implementace založené na používání MPF <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> třídy, použijte konstruktoru `objectType` argument, který obsahuje sady VSPackage <xref:System.Type> a reflexe získat tuto hodnotu. |
-| Kategorie | REG_SZ | GUID | Identifikátor GUID identifikující kategorie nastavení.<br /><br /> Pro implementace podle sestavení vzájemné spolupráce, tato hodnota může být libovolně zvolený identifikátor GUID, který [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí se předá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings.ExportSettings%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings.ImportSettings%2A> metody. Všechny implementace z těchto dvou metod by měl ověřit své argumenty identifikátor GUID.<br /><br /> Pro implementace podle MPF, je tento identifikátor GUID získané <xref:System.Type> implementace třídy [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] mechanismus nastavení. |
-| ResourcePackage | REG_SZ | GUID | Volitelné.<br /><br /> Cestu k satelitní knihovny DLL obsahující lokalizované řetězce, pokud je neposkytuje implementaci VSPackage.<br /><br /> MPF používá reflexi získat správný zdroj balíčku VSPackage, takže <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> třída nemá nastaven tento argument. |
-| AlternateParent | REG_SZ | Název složky v rámci stránky Možnosti nástrojů obsahující tento bod vlastní nastavení. | Volitelné.<br /><br /> Tato hodnota musíte nastavit pouze v případě, že nastavení implementace podporuje **možnosti nástrojů** stránky, které používají mechanismus trvalosti v [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] místo mechanismus v modelu automatizace pro uložení stavu.<br /><br /> V těchto případech je hodnota v klíči AlternateParent `topic` část `topic.sub-topic` řetězec používaný k identifikaci konkrétní **ToolsOptions** stránky. Třeba **ToolsOptions** stránky `"TextEditor.Basic"` bude hodnota AlternateParent `"TextEditor"`.<br /><br /> Když <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> generuje vlastního nastavení bodu, je stejný jako název kategorie. |
+| (Výchozí) | REG_SZ | Název bodu vlastního nastavení | Název klíče, `<CSPName`>, je nelokalizovaný název bodu vlastního nastavení.<br /><br /> Pro implementace založené na MPF, název klíče je získán `categoryName` `objectName` kombinací a <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> argumenty `categoryName_objectName`konstruktoru do .<br /><br /> Klíč může být prázdný nebo může obsahovat ID odkazu na lokalizovaný řetězec v satelitní dll. Tato hodnota je `objectNameResourceID` získána <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> z argumentu konstruktoru. |
+| Balíček | REG_SZ | GUID | Identifikátor GUID balíčku VSPackage, který implementuje bod vlastního nastavení.<br /><br /> Implementace založené na MPF <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> pomocí třídy, použijte `objectType` argument konstruktoru obsahující <xref:System.Type> VSPackage a reflexe získat tuto hodnotu. |
+| Kategorie | REG_SZ | GUID | IDENTIFIKÁTOR GUID identifikující kategorii nastavení.<br /><br /> Pro implementace založené na interop sestavení, tato hodnota může být libovolně [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zvolené GUID, který IDE předává <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings.ExportSettings%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings.ImportSettings%2A> metody. Všechny implementace těchto dvou metod by měly ověřit jejich argumenty GUID.<br /><br /> Pro implementace založené na MPF tento identifikátor <xref:System.Type> GUID je získán [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] třídy implementující mechanismus nastavení. |
+| Balíček prostředků | REG_SZ | GUID | Nepovinný parametr.<br /><br /> Cesta k satelitní dll obsahující lokalizované řetězce, pokud implementující VSPackage neposkytuje.<br /><br /> MPF používá reflexe získat správný prostředek VSPackage, takže <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> třída nenastaví tento argument. |
+| Alternativní rodič | REG_SZ | Název složky na stránce Možnosti nástrojů obsahující tento bod vlastního nastavení. | Nepovinný parametr.<br /><br /> Tuto hodnotu je nutné nastavit pouze v případě, že implementace [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] nastavení podporuje stránky **Tools Options,** které používají mechanismus trvalosti v mechanismu, nikoli mechanismu s mechanismem v modelu automatizace k uložení stavu.<br /><br /> V těchto případech je hodnota v klíči AlternateParent `topic` část `topic.sub-topic` řetězce, který slouží k identifikaci konkrétní **ToolsOptions** stránky. Například pro **ToolsOptions** `"TextEditor.Basic"` stránku hodnota AlternateParent `"TextEditor"`by .<br /><br /> Když <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> generuje bod vlastního nastavení, je stejný jako název kategorie. |

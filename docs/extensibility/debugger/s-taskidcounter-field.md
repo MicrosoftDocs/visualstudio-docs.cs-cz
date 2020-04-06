@@ -1,30 +1,30 @@
 ---
-title: s_taskidcounter – pole | Dokumentace Microsoftu
+title: s_taskIdCounter pole | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - m_taskIdCounter field, Task class [.NET Framework debug engines]
 ms.assetid: 7e5a1907-c652-4046-b207-d2f1ef7b8029
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dca3e82b3adef44fd3d9473ba5eff0164bb12c8d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5b4c91d47fc1123a6737873fd27b7c95e0a98487
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318913"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713122"
 ---
-# <a name="staskidcounter-field"></a>s_taskIdCounter – pole
-Další dostupné identifikátorem <xref:System.Threading.Tasks.Task> objektu.
+# <a name="s_taskidcounter-field"></a>s_taskIdCounter – pole
+Další dostupný identifikátor <xref:System.Threading.Tasks.Task> objektu.
 
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>
+ **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Sestavení:** mscorlib (v knihovně mscorlib.dll)
+ **Sestava:** mscorlib (v mscorlib.dll)
 
- Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.
+ Vzhledem k tomu, že k tomuto internímu členu nemáte přístup z rozhraní .NET Framework, je ve společném zprostředkujícím jazyce (CIL) k dispozici následující syntaxe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,5 +34,5 @@ Další dostupné identifikátorem <xref:System.Threading.Tasks.Task> objektu.
 
 ## <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
-- [Třída úlohy](../../extensibility/debugger/task-class-internal-members.md)
+## <a name="see-also"></a>Viz také
+- [Třída úkolu](../../extensibility/debugger/task-class-internal-members.md)

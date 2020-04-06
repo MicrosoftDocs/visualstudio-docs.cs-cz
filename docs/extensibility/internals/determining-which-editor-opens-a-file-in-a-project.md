@@ -1,5 +1,5 @@
 ---
-title: Určení, které Editor otevře soubor v projektu | Dokumentace Microsoftu
+title: Určení, který editor otevře soubor v projektu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,38 +8,38 @@ helpviewer_keywords:
 - project types, determining which editor opens a file
 - persistence, determining which editor opens a file
 ms.assetid: acbcf4d8-a53a-4727-9043-696a47369479
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8e54a922cfa36aad8c8c7e68e87012926a8ab715
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: af7037a3b4bfbae1801e802256af240d017d2789
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351598"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80708658"
 ---
-# <a name="determine-which-editor-opens-a-file-in-a-project"></a>Určení, které editor otevře soubor v projektu
-Když uživatel otevře soubor v projektu, prostředí prochází proces dotazování, nakonec otevřete příslušné editoru nebo návrháře pro tento soubor. Počáteční postup náhradník prostředí je stejný pro standardních a vlastních editorů. Prostředí používá celou řadu kritéria při dotazování které editor k použití pro otevření souboru a sady VSPackage se muset domluvit se prostředí během tohoto procesu.
+# <a name="determine-which-editor-opens-a-file-in-a-project"></a>Určení editoru, který otevře soubor v projektu
+Když uživatel otevře soubor v projektu, prostředí prochází procesem dotazování a nakonec otevře příslušný editor nebo návrhář pro tento soubor. Počáteční postup používaný prostředím je stejný pro standardní i vlastní editory. Prostředí používá řadu kritérií při dotazování, který editor použít k otevření souboru a VSPackage musí koordinovat s prostředím během tohoto procesu.
 
- Když uživatel například vybere **otevřít** příkaz **souboru** nabídky a následně klikne *filename.rtf* (nebo jakýkoli jiný soubor s *.rtf*rozšíření), volání prostředí <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> implementace pro každý projekt, nakonec procházením všechny instance projektu v řešení. Projekty vrátit sadu příznaků, které identifikují deklarací identity v dokumentu podle priority. Pomocí nejvyšší prioritou, prostředí volá odpovídající <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> metody. Další informace o procesu dotazování, naleznete v tématu [přidat projekt a šablony položek projektu](../../extensibility/internals/adding-project-and-project-item-templates.md).
+ Například když uživatel vybere příkaz **Otevřít** z nabídky **Soubor** a pak zvolí *filename.rtf* (nebo jakýkoli jiný soubor s <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> příponou *RTF),* prostředí volá implementaci pro každý projekt, případně cykluje přes všechny instance projektu v řešení. Projekty vrátí sadu příznaků, které identifikují deklarace identity v dokumentu podle priority. Použití nejvyšší prioritu prostředí volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> příslušnou metodu. Další informace o procesu dotazování naleznete v tématu [Přidání šablon položek projektu a projektu](../../extensibility/internals/adding-project-and-project-item-templates.md).
 
- Projekt ostatní soubory deklarací všechny soubory, které nejsou převzatá podle jiných projektů. Tímto způsobem vlastních editorech můžete otevřít dokumenty, než standardní editory je otevřít. Pokud projekt ostatní soubory deklarací souboru, prostředí volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metody k otevření souboru s standardní editor. Prostředí ověří jeho vnitřní seznam registrovaných editory pro jednu, která zpracovává *.rtf* soubory. Tento seznam se nachází v registru v klíči následující:
+ Projekt Různé soubory nárokuje všechny soubory, které nejsou nárokovány jinými projekty. Tímto způsobem mohou vlastní editory otevřít dokumenty před jejich otevřením standardními editory. Pokud projekt Různé soubory nárokuje soubor, prostředí volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metodu k otevření souboru pomocí standardního editoru. Prostředí zkontroluje svůj interní seznam registrovaných editorů pro ten, který zpracovává *soubory RTF.* Tento seznam je umístěn v registru na následující klíč:
 
- **HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\\<verze > \Editors\\\<guid objekt pro vytváření editoru > \Extensions**
+ **HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\\<verze>\Editors\\\<editor factory guid>\Extensions**
 
- Prostředí také zkontroluje identifikátory tříd **HKEY_CLASSES_ROOT\CLSID** klíčů pro všechny objekty, které mají podklíč **DocObject**. Pokud přípona souboru je zde nalezen, embedded verzi aplikace, jako je například Microsoft Word, se vytvoří v místě v sadě Visual Studio. Tyto objekty dokumentu musí být složené soubory, které implementují <xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage> musí implementovat rozhraní, nebo objekt <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> rozhraní.
+ Prostředí také kontroluje identifikátory tříd v klíči **HKEY_CLASSES_ROOT\CLSID** pro všechny objekty, které mají podklíč **DocObject**. Pokud je zde nalezena přípona souboru, je v aplikaci Visual Studio vytvořena vložená verze aplikace, například Aplikace Microsoft Word. Tyto objekty dokumentu musí být <xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage> složené soubory, které <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> implementují rozhraní nebo objekt musí implementovat rozhraní.
 
- Pokud není žádný objekt factory editoru pro *.rtf* soubory v registru, pak prostředí vypadá **HKEY_CLASSES_ROOT\\.rtf** klíče a otevře se editor, existuje zadaná. Pokud přípona souboru nebyla nalezena v **HKEY_CLASSES_ROOT**, pak prostředí pomocí textového editoru sady Visual Studio core otevřete soubor, pokud se jedná textový soubor.
+ Pokud v registru neexistuje žádná továrna editoru pro soubory *RTF,* prostředí vyhledá **klíč HKEY_CLASSES_ROOT\\.rtf** a otevře zde zadaný editor. Pokud přípona souboru není nalezena v **HKEY_CLASSES_ROOT**, pak prostředí používá základní textový editor sady Visual Studio k otevření souboru, pokud se jedná o textový soubor.
 
- Pokud se nezdaří základní text editor, které dojde, že pokud soubor není textový soubor, pak prostředí používá jeho binární editor pro tento soubor.
+ Pokud základní textový editor selže, ke kterému dochází, pokud soubor není textový soubor, pak prostředí používá jeho binární editor pro soubor.
 
- Pokud prostředí najít editor pro *.rtf* rozšíření v jeho registru, načte sady VSPackage, která implementuje tento objekt pro vytváření editoru. Prostředí volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> metoda u nového balíčku VSPackage. Volání VSPackage `QueryService` pro `SID_SVsRegistorEditor`, použije <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> metody pro registraci objekt factory editoru s prostředím.
+ Pokud prostředí najít editor pro rozšíření *.rtf* ve svém registru, načte VSPackage, který implementuje tento editor factory. Prostředí volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> metodu na nový VSPackage. VSPackage volání `QueryService` `SID_SVsRegistorEditor`pro , <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> pomocí metody zaregistrovat editor factory s prostředím.
 
- Prostředí proběhne znovu teď u jeho vnitřní seznam registrovaných editorů najít objekt factory editoru nově zaregistrovaný pro *.rtf* soubory. Prostředí volá vaši implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> metodu v souboru název a zobrazit typ vytvoření.
+ Prostředí nyní znovu zkontroluje svůj interní seznam registrovaných editorů, aby nalezlo nově registrovanou továrnu editorů pro soubory *RTF.* Prostředí volá implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> metody, předávání v názvu souboru a typ zobrazení vytvořit.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>
 - <xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>

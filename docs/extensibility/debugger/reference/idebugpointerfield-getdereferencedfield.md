@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerField::GetDereferencedField | Dokumentace Microsoftu
+title: IDebugPointerField::GetDereferencedField | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPointerField::GetDereferencedField method
 ms.assetid: 8de988ab-cd79-4287-be72-3c900f2fe407
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fef8ee4e584703338afd09e5303ac184f28b3a49
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 617711a611e6eb1ea162c3abd8ad2b793b4756cb
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331612"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725621"
 ---
 # <a name="idebugpointerfieldgetdereferencedfield"></a>IDebugPointerField::GetDereferencedField
-Tato metoda vrátí typ objektu, na kterou odkazuje tento objekt ukazatele.
+Tato metoda vrátí typ objektu, na který odkazuje tento objekt ukazatele.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,14 +41,14 @@ int GetDereferencedField(
 
 ## <a name="parameters"></a>Parametry
 `ppField`\
-[out] Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) popisující typ cílového objektu.
+[out] Vrátí [pole IDebugField](../../../extensibility/debugger/reference/idebugfield.md) popisující typ cílového objektu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pokud například [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md) objektu odkazuje na celé číslo, [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) typ vrácený touto metodou popisuje typu celé číslo.
+ Pokud například objekt [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md) odkazuje na celé číslo, typ [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) vrácený touto metodou popisuje tento typ celé číslo.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

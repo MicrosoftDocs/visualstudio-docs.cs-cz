@@ -1,5 +1,5 @@
 ---
-title: SYMBOL_SEARCH_INFO_FIELDS | Dokumentace Microsoftu
+title: SYMBOL_SEARCH_INFO_FIELDS | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - SYMBOL_SEARCH_INFO_FIELDS enumeration
 ms.assetid: bce35af0-722d-46d4-afa6-eaae598c51ff
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 86a7fb7c891d0c22bc415920014e905cf3d9c6fa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bf8a1ad8a5dabc663ef29f5f2c36fdf0fbd8b786
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322366"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713483"
 ---
-# <a name="symbolsearchinfofields"></a>SYMBOL_SEARCH_INFO_FIELDS
-Určuje typ informací o symbolu pro načtení.
+# <a name="symbol_search_info_fields"></a>SYMBOL_SEARCH_INFO_FIELDS
+Určuje druh informací o symbolu, které chcete načíst.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,18 +45,18 @@ public enum enum_SYMBOL_SEARCH_INFO_FIELDS
 
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
  `SSIF_NONE`\
- Označuje žádné příznaky
+ Označuje žádné příznaky.
 
  `SSIF_VERBOSE_SEARCH_INFO`\
- Vrátí všechny vyhledávání cesty pro hledání symbolů
+ Vrátí všechny vyhledávací cesty použité pro hledání symbolů.
 
 ## <a name="remarks"></a>Poznámky
- Tyto příznaky jsou předávány jako parametr [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) vrácená metodou ke zjištění množství informací.
+ Tyto příznaky jsou předány jako parametr [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) metoda k určení množství vrácených informací.
 
 > [!NOTE]
-> V současné době pouze `SSIF_VERBOSE_SEARCH_INFO` se podporuje, a musí být zadán jako `dwFlags` parametr `IDebugModule3::GetSymbolInfo`. Všechny ostatní hodnoty vrátí chybu.
+> V současné `SSIF_VERBOSE_SEARCH_INFO` době je podporována pouze a `dwFlags` musí `IDebugModule3::GetSymbolInfo`být zadána jako parametr . Všechny ostatní hodnoty vrátí chybu.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -65,6 +65,6 @@ public enum enum_SYMBOL_SEARCH_INFO_FIELDS
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)

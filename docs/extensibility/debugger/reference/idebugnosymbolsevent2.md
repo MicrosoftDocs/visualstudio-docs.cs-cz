@@ -1,24 +1,24 @@
 ---
-title: IDebugNoSymbolsEvent2 | Dokumentace Microsoftu
+title: IDebugNoSymbolsEvent2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugNoSymbolsEvent2 interface
 ms.assetid: f6fb6388-47f6-4385-9ad5-95d62f9a7592
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dadd4547d5b0f691b454a98ba714abea9bf6f058
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9483c5a434ddfddb3f877111deabea9be6520b05
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323717"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726719"
 ---
 # <a name="idebugnosymbolsevent2"></a>IDebugNoSymbolsEvent2
-Signály [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] ladicího programu uživatelského rozhraní uživatele upozornit, že symbolů nebyl nalezen pro spuštěnou spustitelný soubor.
+Signalizuje [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] uživatelskérozhraní ladicího programu, aby uživatele varoval, že symboly nelze nalézt pro spuštěný spustitelný soubor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,7 +27,7 @@ IDebugNoSymbolsEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Pomocí ladicími stroji implementovat a používat [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] ladicího programu uživatelského rozhraní.
+ Implementováno ladicími [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] moduly a spotřebováno uzlem ladicího programu.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: Msdbg.h

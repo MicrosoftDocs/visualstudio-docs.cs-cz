@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugReferenceInfo2::Skip | Dokumentace Microsoftu
+title: IEnumDebugReferenceInfo2::Přeskočit | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugReferenceInfo2::Skip
 ms.assetid: 12f07ed8-92bd-47b5-9113-f73fec5bdde6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fa8f4e7c9ff04ff20ca58a14465399c62a71bbb1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2c2247b30d1f300992ef86f80fe44e8ea680fc15
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350871"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80715284"
 ---
 # <a name="ienumdebugreferenceinfo2skip"></a>IEnumDebugReferenceInfo2::Skip
-Přeskočí za zadaný počet prvků.
+Přeskočí zadaný počet prvků.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int Skip(
 
 ## <a name="parameters"></a>Parametry
 `celt`\
-[in] Počet prvků, které mají přeskočit.
+[v] Počet prvků přeskočit.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud `celt` je větší než počet zbývajících prvků; v opačném případě vrátí kód chyby.
+ Pokud je `S_OK`úspěšná, vrátí . `S_FALSE` Vrátí, `celt` pokud je větší než počet zbývajících prvků; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pokud `celt` Určuje hodnotu větší než počet zbývajících prvků výčtu je nastavena na konci a `S_FALSE` je vrácena.
+ Pokud `celt` určuje hodnotu větší než počet zbývajících prvků, výčet je `S_FALSE` nastavena na konec a je vrácena.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)

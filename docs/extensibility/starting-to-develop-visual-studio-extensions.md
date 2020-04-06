@@ -1,57 +1,57 @@
 ---
-title: Zahájení vývoje rozšíření sady Visual Studio | Microsoft Docs
+title: Začínáse vyvíjet rozšíření sady Visual Studio | Dokumenty společnosti Microsoft
 ms.date: 09/18/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started, Visual Studio integration
 - Visual Studio, integration
 ms.assetid: 8fe5e2ab-a424-4173-9d39-dd082c4d58d0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 63fa0db72a01ddf1f6e1003fc27cf6a28128e036
-ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
+ms.openlocfilehash: 744475e61458f7b91ce08fba4d17046df36f5558
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76269120"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80699744"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Začínáme s vývojem rozšíření sady Visual Studio
 
-Pokud jste ještě nikdy nezapsali rozšíření sady Visual Studio, pravděpodobně máte k dispozici nějaké dotazy. Tady uvádíme některé z nejběžnějších. Pokud nevidíte informace, které hledáte, použijte tlačítka pro zpětnou vazbu (**byla tato stránka užitečná?** v dolní části obrazovky), pokud chcete požádat o to, co chcete.
+Pokud jste nikdy předtím nenapsali rozšíření sady Visual Studio, pravděpodobně máte nějaké otázky. Vyjmenovali jsme zde některé z nejběžnějších. Pokud nevidíte informace, které hledáte, použijte tlačítka pro zpětnou vazbu **(Byla tato stránka užitečná?** v dolní části obrazovky) a požádejte o to, co chcete.
 
 > [!NOTE]
-> Tento článek se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [rozšíření Visual Studio pro Mac](/visualstudio/mac/extending-visual-studio-mac). Visual Studio Code najdete v tématu [rozhraní API pro rozšíření Visual Studio Code](https://code.visualstudio.com/api).
+> Tento článek se vztahuje na Visual Studio v systému Windows. Visual Studio pro Mac najdete [v tématu Rozšíření Visual Studia pro Mac](/visualstudio/mac/extending-visual-studio-mac). Kód sady Visual Studio najdete v [tématu Rozhraní API rozšíření kódu sady Visual Studio](https://code.visualstudio.com/api).
 
-## <a name="what-software-do-i-need-to-develop-visual-studio-extensions"></a>Jaký software potřebujete pro vývoj rozšíření sady Visual Studio?
+## <a name="what-software-do-i-need-to-develop-visual-studio-extensions"></a>Jaký software potřebuji k vývoji rozšíření sady Visual Studio?
 
-Aby bylo možné vyvíjet rozšíření sady Visual Studio, je třeba nainstalovat sadu Visual Studio SDK společně se sadou Visual Studio. Sadu Visual Studio SDK můžete nainstalovat jako součást pravidelného nastavení, nebo ji můžete nainstalovat později. Další informace o instalaci sady Visual Studio SDK naleznete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
+Chcete-li vyvíjet rozšíření sady Visual Studio, je třeba nainstalovat sady Visual Studio SDK kromě sady Visual Studio. Sady Visual Studio SDK můžete nainstalovat jako součást pravidelnéinstalace nebo ji můžete nainstalovat později. Další informace o instalaci sady Visual Studio SDK naleznete v [tématu Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
-## <a name="what-kinds-of-things-can-i-do-with-visual-studio-extensions"></a>Jaké druhy věcí můžete dělat s rozšířeními Visual Studia?
+## <a name="what-kinds-of-things-can-i-do-with-visual-studio-extensions"></a>Jaké druhy věcí lze dělat s rozšířeními sady Visual Studio?
 
-Limit nebe, který je v případě, že se přidávají k imaginárním různým rozšířením sady Visual Studio. Většina rozšíření samozřejmě má něco, co dělat s psaním kódu, ale to nemusí být případ. Tady je několik příkladů typů rozšíření, která můžete vytvořit:
+Nebe je limit, pokud jde o představu různých rozšíření sady Visual Studio. Samozřejmě, většina rozšíření má něco společného s psaním kódu, ale to nemusí být případ. Zde je několik příkladů typů rozšíření, které můžete vytvořit:
 
-- Podpora pro jazyky, které nejsou zahrnuté v aplikaci Visual Studio s barvou syntaxe, IntelliSense a kompilátor a podpora ladění
+- Podpora jazyků, které nejsou zahrnuty v sadě Visual Studio, s barvicí syntaxe, Technologie IntelliSense a podporou kompilátoru a ladění
 
-- Nástroje pro produktivitu, které rozšiřují základní integrované vývojové prostředí vyzkoušejte další šablony, dialogová okna refaktoringu, nový kód nebo okna nástrojů
+- Nástroje pro zvýšení produktivity, které rozšiřují základní prostředí IDE o další šablony, refaktoring kódu, nová dialogová okna nebo okna nástrojů
 
-- Ať už specifický pro doménu pro scénáře, jako je podpora návrhu nebo cloudových dat
+- Návrháři specifických pro doménu pro scénáře, jako je návrh dat nebo cloudová podpora
 
-Příklady rozšíření najdete v [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs). Řada rozšíření je open source a Marketplace obsahuje odkazy na své úložiště GitHub.
+Příklady rozšíření, podívejte se na [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs). Mnoho rozšíření jsou open sourced a Marketplace obsahuje odkazy na jejich úložiště GitHub.
 
-## <a name="which-visual-studio-features-can-i-extend"></a>Které funkce Visual Studia můžete rozšířit?
+## <a name="which-visual-studio-features-can-i-extend"></a>Které funkce sady Visual Studio lze rozšířit?
 
-Teoreticky vzato můžete rozšířit téměř libovolnou část aplikace Visual Studio: nabídky, panely nástrojů, příkazy, windows, řešení, projekty, editory a tak dále.
+Teoreticky můžete rozšířit téměř libovolnou část sady Visual Studio: nabídky, panely nástrojů, příkazy, okna, řešení, projekty, editory a tak dále.
 
-V praxi jsme našli, funkce, které většinu lidí by rádi rozšířili jsou příkazy, nabídky a panely nástrojů, windows, technologie IntelliSense a projekty. Tady jsou odkazy na relevantní části:
+V praxi jsme zjistili, že funkce, které chce většina lidí rozšířit, jsou příkazy, nabídky a panely nástrojů, okna, technologie IntelliSense a projekty. Zde jsou odkazy na příslušné oddíly:
 
-- [Rozšiřování nabídek a příkazů](../extensibility/extending-menus-and-commands.md): Přidat vlastní položky do sady Visual Studio nabídek a panelů nástrojů. Můžete využít k otevření nové funkce sady Visual Studio nebo vlastních aplikací externí pomocné rutiny. Můžete také zadat vlastní klávesové zkratky pro vaše položky nabídky.
+- [Rozšíření nabídek a příkazů](../extensibility/extending-menus-and-commands.md): přidejte vlastní položky do nabídek a panelů nástrojů sady Visual Studio. Můžete je použít ke spuštění nové funkce sady Visual Studio nebo vlastní externí pomocné aplikace. Můžete také zadat vlastní zkratky pro položky nabídky.
 
-- [Rozšíření a přizpůsobení nástrojů Windows](../extensibility/extending-and-customizing-tool-windows.md): rozšíření existujícími okny nástrojů nebo vytvořit vlastní panel nástrojů. Například můžete přidat nové vlastnosti **vlastnosti**, nebo můžete vytvořit nového okna nástroje pro přidání dalších funkcí.
+- [Rozšíření a přizpůsobení nástroje Windows](../extensibility/extending-and-customizing-tool-windows.md): rozšířit stávající okna nástrojů nebo vytvořit vlastní nástroj okna. Můžete například přidat nové vlastnosti **vlastnosti nebo**můžete vytvořit nové okno nástroje pro přidání dalších funkcí.
 
-- [Rozšíření pro Editor a jazykové služby](../extensibility/editor-and-language-service-extensions.md): přidejte vlastní vlastní nastavení do technologie IntelliSense poskytované pro jazyky sady Visual Studio nebo vytvořte podporu pro nové programovací jazyky. Můžete vytvořit nový příkaz dokončování, nabízení návrhů a nové popisky rychlé informace. Pomocí žárovek můžete přidat refaktoringu návrhy a opravy kódu pro podporu nové programovací jazyky.
+- [Rozšíření editoru a jazykových služeb](../extensibility/editor-and-language-service-extensions.md): přidejte vlastní vlastní vlastní nastavení do technologie IntelliSense poskytované pro jazyky sady Visual Studio nebo vytvořte podporu pro nové programovací jazyky. Můžete vytvořit nové dokončování příkazů, návrhy a nové popisky QuickInfo. Pomocí žárovek můžete přidat návrhy refaktoringu a opravy kódu pro podporu nových programovacích jazyků.
 
 - [Rozšíření projektů](../extensibility/extending-projects.md)
 
@@ -63,37 +63,37 @@ V praxi jsme našli, funkce, které většinu lidí by rádi rozšířili jsou p
 
 - [Izolované prostředí sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/)
 
-## <a name="BKMK_ProjectTemplate"></a> Jaké šablony projektu jsou poskytovány VSSDK?
- Dva hlavní typy rozšíření jsou rozšíření VSPackages a rozhraní MEF. Rozšíření VSPackage se obecně používají pro rozšíření, které používají nebo rozšířit příkazů, nástrojů oken a projekty. Rozšíření rozhraní MEF umožňují rozšířit nebo upravit editoru sady Visual Studio.
+## <a name="what-project-templates-are-provided-by-the-vssdk"></a><a name="BKMK_ProjectTemplate"></a>Jaké šablony projektů poskytuje sada VSSDK?
+ Dva hlavní typy rozšíření jsou Rozšíření VSPackages a MEF. Obecně však Rozšíření VSPackage se používají pro rozšíření, která používají nebo rozšiřují příkazy, okna nástrojů a projekty. Rozšíření MEF se používají k rozšíření nebo přizpůsobení editoru sady Visual Studio.
 
- Pro rozšíření jazyka Visual C# a Visual Basic poskytuje VSSDK prázdná šablona projektu VSIX, které můžete použít společně s nové šablony položky, které vytvářejí, příkazy nabídky, panely nástrojů a rozšíření editoru. Můžete také pomocí této šablony balíček šablony projektů, fragmenty kódu a další artefakty pro distribuci ostatním uživatelům.
+ Pro rozšíření Visual C# a Visual Basic poskytuje sada VSSDK prázdnou šablonu projektu VSIX, kterou můžete použít společně s novými šablonami položek, které vytvářejí příkazy nabídek, okna nástrojů a rozšíření editoru. Tuto šablonu můžete také použít k balení šablon projektů, fragmentů kódu a dalších artefaktů pro distribuci ostatním uživatelům.
 
- Pro jazyk C++ průvodce VSPackage poskytuje kód pro přidání příkazů nabídky, panely nástrojů a vlastních editorech.
+ Pro C++ průvodce VSPackage poskytuje kód pro přidání příkazů nabídky, oken nástrojů a vlastních editorů.
 
- Šablona izolovaného prostředí slouží k rozšíření v prostředí nástroje Visual Studio, kterou můžete značku a distribuovat jako vlastní verzi balíčku. Následující témata ukazují, jak začít pracovat s jednotlivými typy rozšíření:
+ Šablona Izolované prostředí se používá k balení rozšíření ve verzi prostředí Visual Studio, které můžete označit a distribuovat jako vlastní. Následující témata ukazují, jak začít s jednotlivými druhy rozšíření:
 
-- Příkazy nabídky: [vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md)
+- Příkazy nabídky: [Vytvoření rozšíření pomocí příkazu Nabídky](../extensibility/creating-an-extension-with-a-menu-command.md)
 
-- Nástroje systému windows: [vytváření rozšíření pomocí panelu nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md)
+- Okna nástrojů: [Vytvoření rozšíření s oknem nástroje](../extensibility/creating-an-extension-with-a-tool-window.md)
 
-- Rozšíření editoru: [vytváření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md)
+- Rozšíření editoru: [Vytvoření rozšíření se šablonou položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md)
 
-- Základní rozšíření VSPackages: [vytváření rozšíření pomocí VSPackage](../extensibility/creating-an-extension-with-a-vspackage.md)
+- Základní VSPackages: [Vytvoření rozšíření s VSPackage](../extensibility/creating-an-extension-with-a-vspackage.md)
 
-- Šablona projektu VSIX: [Začínáme s šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md)
+- Šablona projektu VSIX: [Začínáme se šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md)
 
-## <a name="how-do-i-get-my-extension-to-look-like-visual-studio"></a>Jak získám mého rozšíření, aby vypadala jako Visual Studio?
- Skvělé tipy k návrhu uživatelského rozhraní pro rozšíření v [Visual Studio zkušenosti uživatelů](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).
+## <a name="how-do-i-get-my-extension-to-look-like-visual-studio"></a>Jak získám rozšíření tak, aby vypadalo jako Visual Studio?
+ Získejte skvělé tipy pro návrh uživatelského rozhraní pro vaše rozšíření v [pokynech pro uživatelské prostředí sady Visual Studio](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).
 
-## <a name="where-can-i-find-examples-of-vssdk-code"></a>Kde najdu příklady VSSDK kódu?
- Jednotlivé odkazy uvedené v předchozí části jste podrobné návody, které ukazují, jak implementovat konkrétní funkce. Můžete také vyhledat opensourcová VSSDK ukázky na Githubu v [ukázky sady Visual Studio](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
+## <a name="where-can-i-find-examples-of-vssdk-code"></a>Kde najdu příklady kódu VSSDK?
+ Každý z odkazů uvedených v předchozí části mají podrobné návody, které ukazují, jak implementovat konkrétní funkce. Můžete také najít open source VSSDK ukázky na GitHub u [Visual Studio ukázky](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
 
-## <a name="how-can-i-distribute-my-extension"></a>Jak je můžete distribuovat mého rozšíření?
- Můžete nainstalovat rozšíření na jiném počítači nebo odeslat do vašich přátel jako soubor .vsix, který nainstalujete poklepáním. Můžete najít další informace o balíčků VSIX v [přesouvání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md).
+## <a name="how-can-i-distribute-my-extension"></a>Jak mohu rozšíření distribuovat?
+ Rozšíření můžete nainstalovat do jiného počítače nebo ji odeslat přátelům jako soubor .vsix, který nainstalujete poklepáním. Další informace o balíčcích VSIX najdete v [aplikaci Shipping Visual Studio Extensions](../extensibility/shipping-visual-studio-extensions.md).
 
- Rozšíření můžete také publikovat na Visual Studio Marketplace, což jim umožní zobrazit velký počet zákazníků sady Visual Studio. Příklad balení rozšíření na tržišti najdete v tématu [Návod: publikování rozšíření aplikace Visual Studio](../extensibility/walkthrough-publishing-a-visual-studio-extension.md). Další informace o tom, co potřebujete udělat k publikování na webu Marketplace, najdete v tématu [produkty a rozšíření pro Visual Studio](/azure/devops/extend/overview?view=vsts).
+ Rozšíření můžete také publikovat na webu Visual Studio Marketplace, což jej zviditelní pro velký počet zákazníků sady Visual Studio. Příklad balení rozšíření na Marketplace najdete v [tématu Návod: Publikování rozšíření sady Visual Studio](../extensibility/walkthrough-publishing-a-visual-studio-extension.md). Další informace o tom, co je potřeba udělat pro publikování na webu Marketplace, najdete v [tématu Produkty a rozšíření pro Visual Studio](/azure/devops/extend/overview?view=vsts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Rozšíření sady Visual Studio pro Mac](/visualstudio/mac/extending-visual-studio-mac)
-- [Rozšíření Visual Studio Code](https://code.visualstudio.com/api)
+- [Rozšíření kódu sady Visual Studio](https://code.visualstudio.com/api)

@@ -1,44 +1,44 @@
 ---
-title: Registrace programu | Dokumentace Microsoftu
+title: Registrace programu | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - programs, registration
 - debugging [Debugging SDK], program registration
 ms.assetid: d726a161-7db3-4ef4-b258-9f6a5be68418
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60bc94efb9d3b2026de31c6018b466d432bf98f8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b68fa67f784d155288482ad724b632ed5ba5fa41
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315962"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713161"
 ---
 # <a name="register-the-program"></a>Registrace programu
-Po ladicí stroj získal port, reprezentovaný [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) rozhraní, je dalším krokem při povolení ladění programu registrace s portem. Po registraci do programu je k dispozici pro ladění pomocí jedné z následujících způsobů:
+Po ladění motoru získal port, reprezentované [rozhraní IDebugPort2,](../../extensibility/debugger/reference/idebugport2.md) dalším krokem v povolení programu ladit je zaregistrovat s portem. Po registraci je program k dispozici pro ladění jedním z následujících způsobů:
 
-- Proces připojení, která umožňuje ladicího programu k získání úplné kontroly ladění běžící aplikace.
+- Proces připojení, který umožňuje ladicí program získat úplné ladění řízení spuštěné aplikace.
 
-- Just-in-time (JIT) ladění, která umožňuje za fakt ladění programu, který se spustí bez ohledu na jejich ladicí program. Za běhu architektury zachytí chyba, ladicí program se upozornění před operačního systému nebo běhové prostředí uvolní paměť a prostředky neškodné programu.
+- Just-in-time (JIT) ladění, které umožňuje ladění po faktu programu, který běží nezávisle na ladicím programu. Když architektura za běhu zachytí chybu, ladicí program je upozorněn před operační systém nebo prostředí runtime uvolní paměť a prostředky chybující program.
 
 ## <a name="registering-procedure"></a>Postup registrace
 
-### <a name="to-register-your-program"></a>Registrace aplikace
+### <a name="to-register-your-program"></a>Registrace programu
 
-1. Volání [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) metoda implementovaná port.
+1. Volání metody [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) implementované portem.
 
-     `IDebugPortNotify2::AddProgramNode` vyžaduje ukazatel [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) rozhraní.
+     `IDebugPortNotify2::AddProgramNode`vyžaduje ukazatel na rozhraní [IDebugProgramNode2.](../../extensibility/debugger/reference/idebugprogramnode2.md)
 
-     Obvykle když operační systém nebo prostředí za běhu načte program, vytvoří uzel programu. Pokud ladicí stroj (DE) se zobrazí výzva k načtení programu, DE vytváří a registruje uzel programu.
+     Obvykle při načtení programu operačního systému nebo prostředí run-time vytvoří uzel programu. Pokud ladicí modul (DE) je vyzván k načtení programu, DE vytvoří a zaregistruje uzel programu.
 
-     Následující příklad ukazuje ladicí stroj spuštění programu a její registrací pomocí portu.
+     Následující příklad ukazuje ladicí modul, který spouští program a registruje jej pomocí portu.
 
     > [!NOTE]
-    > Tento vzorový kód není jediným způsobem, jak spustit a pokračovat v procesu. Tento kód je především Příklad registrace programu s portem.
+    > Tato ukázka kódu není jediný způsob, jak spustit a obnovit proces; tento kód je především příkladem registrace programu s portem.
 
     ```cpp
     // This is an IDebugEngineLaunch2 method.
@@ -104,6 +104,6 @@ Po ladicí stroj získal port, reprezentovaný [IDebugPort2](../../extensibility
 
     ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Získání portu](../../extensibility/debugger/getting-a-port.md)
-- [Povolení ladění programu](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)
+- [Povolení odlazení programu](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

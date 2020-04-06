@@ -1,5 +1,5 @@
 ---
-title: Scccheckin – funkce | Dokumentace Microsoftu
+title: Funkce SccCheckin | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccCheckin function
 ms.assetid: e3f26ac2-6163-42e1-a764-22cfea5a3bc6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 22264f9882192e05a9812cad4d6ea7f74bfdabfc
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a5ba512642e1a63d9d39856f96194d717583d44f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333942"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701185"
 ---
-# <a name="scccheckin-function"></a>Scccheckin – funkce
-Tato funkce zkontroluje v dříve rezervovaných souborů do systému správy zdrojového kódu, ukládání změn a vytvořit novou verzi. Tato funkce je volána s počet a pole názvů souborů se změnami.
+# <a name="scccheckin-function"></a>SccCheckin
+Tato funkce vrátí se změnami dříve zasazených souborů do systému správy zdrojového kódu, uvejte změny a vytvoříte novou verzi. Tato funkce je volána s počtem a pole názvy souborů, které mají být uvedeny se změnami.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,54 +39,54 @@ SCCRTN SccCheckin (
 ### <a name="parameters"></a>Parametry
  pvContext
 
-[in] Struktura kontext modulu plug-in zdroje ovládacího prvku.
+[v] Struktura kontextu modulu plug-in správy zdrojového kódu.
 
- hWnd
+ Hwnd
 
-[in] Popisovač okna integrovaného vývojového prostředí, pomocí modulu plug-in SCC můžete jako nadřazený pro všechna dialogová okna, které poskytuje.
+[v] Popisovač okna IDE, který může modul plug-in SCC použít jako nadřazený pro všechna dialogová okna, která poskytuje.
 
- %{nfiles/
+ nSoubory
 
-[in] Počet souborů, které se rozhodli vrátit se změnami.
+[v] Počet souborů vybraných ke vrácení se změnami.
 
- lpFileNames
+ lpNázev souboru
 
-[in] Pole úplná místní cesta názvy souborů, které mají být vráceny se změnami.
+[v] Pole plně kvalifikovaných názvů místních cest souborů, které mají být uvedeny se změnami.
 
- lpComment
+ lpKomentář
 
-[in] Komentář se má použít u všech vybraných souborů se změnami. Tento parametr je `NULL` Pokud modul plug-in správy zdrojového kódu by se zobrazit výzva pro komentář.
+[v] Komentář, který má být použit pro každý z vybraných souborů, které jsou soubory se změnami. Tento parametr `NULL` je, pokud modul plug-in správy zdrojového kódu by měl vyzvat k zadání komentáře.
 
- fOptions
+ fMožnosti
 
-[in] Příkaz příznaky, buď 0 nebo `SCC_KEEP_CHECKEDOUT`.
+[v] Příkazové příznaky, `SCC_KEEP_CHECKEDOUT`buď 0 nebo .
 
- pvOptions
+ pvMožnosti
 
-[in] SCC plug-konkrétní možnosti.
+[v] Možnosti specifické pro modul plug-in SCC.
 
 ## <a name="return-value"></a>Návratová hodnota
- Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:
+ Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Soubor byl úspěšně vrácen se změnami.|
-|SCC_E_FILENOTCONTROLLED|Vybraný soubor není pod správou zdrojového kódu.|
-|SCC_E_ACCESSFAILURE|Došlo k problému, přístup k systému správy zdrojového kódu, pravděpodobně kvůli problémům se síti nebo kolize. Doporučuje se zkuste to znovu.|
-|SCC_E_NONSPECIFICERROR|K nespecifikované chybě. Soubor se změnami.|
-|SCC_E_NOTCHECKEDOUT|Uživatel není rezervován souboru, takže nelze vrácení se změnami.|
-|SCC_E_CHECKINCONFLICT|Vrácení se změnami nelze provést, protože:<br /><br /> – Vrátil jiný uživatel má dopředu a `bAutoReconcile` je chybná.<br /><br /> -nebo-<br /><br /> -Automatické sloučení nelze provést, (například když jsou binární soubory).|
-|SCC_E_VERIFYMERGE|Soubor se sloučit automaticky, ale nebyla vrácena čekající ověření uživatele.|
-|SCC_E_FIXMERGE|Soubor se sloučit automaticky, ale nebyla vrácena kvůli konfliktu při slučování, který se musí ručně vyřešit.|
-|SCC_E_NOTAUTHORIZED|Uživatel nemůže k provedení této operace.|
-|SCC_I_OPERATIONCANCELED|Operace byla zrušena před dokončením.|
-|SCC_I_RELOADFILE|Soubor nebo projekt je potřeba znovu načíst.|
-|SCC_E_FILENOTEXIST|Místní soubor se nenašel.|
+|SCC_OK|Soubor byl úspěšně odbaven.|
+|SCC_E_FILENOTCONTROLLED|Vybraný soubor není pod sohledem zdrojového kódu.|
+|SCC_E_ACCESSFAILURE|Při přístupu k systému správy zdrojového kódu došlo k potížím se sítí nebo konflikty. Doporučuje se opakování.|
+|SCC_E_NONSPECIFICERROR|Nespecifické selhání. Soubor nebyl se změnami.|
+|SCC_E_NOTCHECKEDOUT|Uživatel soubor nezadal, takže jej nelze provést se změnami.|
+|SCC_E_CHECKINCONFLICT|Vrácení se změnami nelze provést, protože:<br /><br /> - Jiný uživatel se přihlásil `bAutoReconcile` dopředu a byl nepravdivý.<br /><br /> -nebo-<br /><br /> - Automatické sloučení nelze provést (například když jsou soubory binární).|
+|SCC_E_VERIFYMERGE|Soubor byl automaticky sloučen, ale nebyl vrácen se změnami v čekajícím ověření uživatele.|
+|SCC_E_FIXMERGE|Soubor byl automaticky sloučen, ale nebyl vrácen se změnami z důvodu konfliktu sloučení, který je nutné ručně vyřešit.|
+|SCC_E_NOTAUTHORIZED|Uživatel není oprávněn provádět tuto operaci.|
+|SCC_I_OPERATIONCANCELED|Operace byla před dokončením zrušena.|
+|SCC_I_RELOADFILE|Soubor nebo projekt je třeba znovu načíst.|
+|SCC_E_FILENOTEXIST|Místní soubor nebyl nalezen.|
 
 ## <a name="remarks"></a>Poznámky
- Komentář se vztahuje na všechny soubory se změnami. Může být argumentem komentář `null` string, v takovém případě můžete plug-in správy zdrojových kódů vyzývat uživatele k řetězec komentáře pro každý soubor.
+ Komentář se vztahuje na všechny soubory, které jsou kontrolovány. Argument komentáře může `null` být řetězec, v takovém případě může modul plug-in správy zdrojového kódu vyzvat uživatele k zadání řetězce komentáře pro každý soubor.
 
- `fOptions` Argument můžete zadat hodnotu `SCC_KEEP_CHECKEDOUT` příznak označující záměru uživatele se změnami soubor a prohlédněte si ho znovu.
+ Argument `fOptions` může být uveden a `SCC_KEEP_CHECKEDOUT` hodnota příznaku k označení záměru uživatele vrátit se změnami souboru a rezervovat znovu.
 
-## <a name="see-also"></a>Viz také:
-- [Funkce modulu plug-in API zdrojového ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>Viz také
+- [Funkce rozhraní API pro řízení zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)

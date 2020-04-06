@@ -1,28 +1,28 @@
 ---
-title: Setnotificationforwaitcompletion – metoda | Dokumentace Microsoftu
+title: SetNotificationForWaitCompletion Metoda | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - SetNotificationForWaitCompletion method, Task class [.NET Framework debug engines]
 ms.assetid: da149c9a-20f4-4543-a29e-429c8c1d2e19
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5d9bee2579cc3a93f657291551955f0c9b7565b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 226ac41c8e3b7427ac3b9aba7bea08dbb7329d16
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348584"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712865"
 ---
 # <a name="setnotificationforwaitcompletion-method"></a>SetNotificationForWaitCompletion – metoda
-Nastaví nebo vymaže stav bit TASK_STATE_WAIT_COMPLETION_NOTIFICATION.
+Nastaví nebo vymaže bit stavu TASK_STATE_WAIT_COMPLETION_NOTIFICATION.
 
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>
+ **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Sestavení:** mscorlib (v *mscorlib.dll*)
+ **Sestava:** mscorlib (v *mscorlib.dll*)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,14 +33,14 @@ internal void SetNotificationForWaitCompletion(bool enabled)
 ### <a name="parameters"></a>Parametry
  `enabled`
 
- `true` Chcete-li nastavit bit; `false` na Zrušit nastavení bitu.
+ `true`pro nastavení bitu; `false` pro odstavení bitu.
 
 ## <a name="exceptions"></a>Výjimky
 
 ## <a name="remarks"></a>Poznámky
- Ladicí program nastaví tento bit ke kroku mimo tělo metody na asynchronní. Pokud `enabled` je `true`, tato metoda musí být volána pouze na úkol, který dosud nebyl dokončen. Když `enabled` je `false`, tuto metodu lze volat pro dokončené úlohy. V obou případech to by měla sloužit pouze pro příslib – vizuální styl úlohy.
+ Ladicí program nastaví tento bit, aby pomohl vystoupit z těla asynchronní metody. Pokud `enabled` `true`je , tato metoda musí být volána pouze na úkol, který ještě nebyl dokončen. Pokud `enabled` `false`je , tato metoda může být volána na dokončené úkoly. V obou těchto případě by měl být použit pouze pro úkoly ve stylu příslibu.
 
 ## <a name="requirements"></a>Požadavky
 
-## <a name="see-also"></a>Viz také:
-- [Třída úlohy](../../extensibility/debugger/task-class-internal-members.md)
+## <a name="see-also"></a>Viz také
+- [Třída úkolu](../../extensibility/debugger/task-class-internal-members.md)

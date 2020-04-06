@@ -1,30 +1,30 @@
 ---
-title: Identifikátory GUID integrovaného vývojového prostředí | Dokumentace Microsoftu
+title: Identifikátory GUID | Dokumenty společnosti Microsoft
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - GUIDs, integrated development environment
 - IDE, GUIDs
 ms.assetid: d31a0f97-b7be-4fb5-a942-8ba4527bc068
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: da2cdd5a292de0413845da0ce2d7e8b4678cf895
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 41f9931b8e36dcb363624ecbc67e186bd3f5f71c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311171"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710488"
 ---
 # <a name="ide-guids"></a>Identifikátory GUID integrovaného vývojového prostředí
 
-<xref:Microsoft.VisualStudio.VSConstants> Třídy publikuje GUID některé části integrovaného vývojového prostředí (IDE), jak je uvedeno v následující tabulce.
+Třída <xref:Microsoft.VisualStudio.VSConstants> publikuje identifikátory GUID některých částí integrovaného vývojového prostředí (IDE), jak je uvedeno v následující tabulce.
 
-## <a name="core-systems"></a>Základních systémů
+## <a name="core-systems"></a>Základní systémy
 
-|Konstanta|GUID|
+|Trvalé|GUID|
 |--------------|----------|
 |<xref:Microsoft.VisualStudio.VSConstants.CLSID.HtmDocData_guid>|62C81794-A9EC-11D0-8198-00A0C91BBEE3|
 |<xref:Microsoft.VisualStudio.VSConstants.VsPackageGuid.HtmlEditorPackage_guid>|1B437D20-F8FE-11D2-A6AE-00104BCC7269|
@@ -35,27 +35,27 @@ ms.locfileid: "66311171"
 |<xref:Microsoft.VisualStudio.VSConstants.VsEditorFactoryGuid.HtmlEditor_guid>|C76D83F8-A489-11D0-8195-00A0C91BBEE3|
 |<xref:Microsoft.VisualStudio.VSConstants.VsEditorFactoryGuid.TextEditor_guid>|8B382828-6202-11d1-8870-0000F87579D2|
 
-## <a name="broadly-visible-components"></a>Veřejně viditelné komponenty
+## <a name="broadly-visible-components"></a>Široce viditelné součásti
 
-|Konstanta|GUID|
+|Trvalé|GUID|
 |--------------|----------|
 |<xref:Microsoft.VisualStudio.VSConstants.CLSID.VsUIHierarchyWindow_guid>|7D960B07-7AF8-11D0-8E5E-00A0C911005A|
 |<xref:Microsoft.VisualStudio.VSConstants.VsEditorFactoryGuid.ExternalEditor_guid>|8137C9E8-35FE-4AF2-87B0-DE3C45F395FD|
-|Microsoft.VisualStudio.VSConstants.SID_SUIHostCommandDispatcher|e69cd190-1276-11d1-9f64-00a0c911004f|
+|Soubor Microsoft.VisualStudio.VSConstants.SID_SUIHostCommandDispatcher|e69cd190-1276-11d1-9f64-00a0c911004f|
 |Microsoft.VisualStudio.VSConstants.SID_SVsGeneralOutputWindowPane|65482c72-defa-41b7-902c-11c091889c83|
 
-## <a name="files-virtual-and-physical-folders-and-subprojects"></a>Soubory, virtuálními a fyzickými složky a dílčích projektů
+## <a name="files-virtual-and-physical-folders-and-subprojects"></a>Soubory, virtuální a fyzické složky a dílčí projekty
 
-|Konstanta|GUID|
+|Trvalé|GUID|
 |--------------|----------|
 |<xref:Microsoft.VisualStudio.VSConstants.ItemTypeGuid.PhysicalFile_guid>|6bb5f8ee-4483-11d3-8bcf-00c04f8ec28c|
 |<xref:Microsoft.VisualStudio.VSConstants.ItemTypeGuid.PhysicalFolder_guid>|6bb5f8ef-4483-11d3-8bcf-00c04f8ec28c|
 |<xref:Microsoft.VisualStudio.VSConstants.ItemTypeGuid.SubProject_guid>|EA6618E8-6E24-4528-94BE-6889FE16485C|
 |<xref:Microsoft.VisualStudio.VSConstants.ItemTypeGuid.VirtualFolder_guid>|6bb5f8f0-4483-11d3-8bcf-00c04f8ec28c|
 
-## <a name="ui-contexts"></a>Kontexty uživatelského rozhraní
+## <a name="ui-contexts"></a>Kontexty ui
 
-|Konstanta|GUID|
+|Trvalé|GUID|
 |--------------|----------|
 |<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.CodeWindow_guid>|8fe2df1d-e0da-4ebe-9d5c-415d40e487b5|
 |<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.Debugging_guid>|adfc4e61-0397-11d1-9f4e-00a0c911004f|
@@ -69,9 +69,9 @@ ms.locfileid: "66311171"
 |<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasMultipleProjects_guid>|93694fa0-0397-11d1-9f4e-00a0c911004f|
 |<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasSingleProject_guid>|adfc4e66-0397-11d1-9f4e-00a0c911004f|
 
-## <a name="output-pane"></a>Podokno výstup
+## <a name="output-pane"></a>Podokno Výstup
 
-|Konstanta|GUID|
+|Trvalé|GUID|
 |--------------|----------|
 |<xref:Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.BuildOutputPane_guid>|1BD8A850-02D1-11D1-BEE7-00A0C913D1F8|
 |<xref:Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.DebugPane_guid>|FC076020-078A-11D1-A7DF-00A0C9110051|
@@ -80,22 +80,22 @@ ms.locfileid: "66311171"
 |<xref:Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.StoreValidationPane_guid>|54065C74-1B11-4249-9EA7-5540D1A6D528|
 |Microsoft.VisualStudio.VSConstants.SID_SVsGeneralOutputWindowPane|65482c72-defa-41b7-902c-11c091889c83|
 
-## <a name="command-sets-and-properties"></a>Příkaz sady a vlastnosti
+## <a name="command-sets-and-properties"></a>Sady a vlastnosti příkazů
 
-|Konstanta|GUID|
+|Trvalé|GUID|
 |--------------|----------|
 |Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97|5EFC7975-14BC-11CF-9B2B-00AA00573819|
 |Microsoft.VisualStudio.VSConstants.GUID_VsUIHierarchyWindowCmds>|60481700-078b-11d1-aaf8-00a0c9055a90|
 
 ## <a name="iunknown"></a>IUnknown
 
-|Konstanta|GUID|
+|Trvalé|GUID|
 |--------------|----------|
-|<xref:Microsoft.VisualStudio.VSConstants.IID_IUnknown>|00000000-0000-0000-C000-000000000046|
+|<xref:Microsoft.VisualStudio.VSConstants.IID_IUnknown>|00000000-0000-0000-0000-0000000000046|
 
-## <a name="task-list-guids"></a>Seznam úkolů identifikátory GUID
+## <a name="task-list-guids"></a>Identifikátory GUID seznamu úkolů
 
-|Konstanta|GUID|
+|Trvalé|GUID|
 |--------------|----------|
 |<xref:Microsoft.VisualStudio.VSConstants.VsTaskListView.All>|1880202e-fc20-11d2-8bb1-00c04f8ec28c|
 |<xref:Microsoft.VisualStudio.VSConstants.VsTaskListView.CheckedTasks>|18802036-fc20-11d2-8bb1-00c04f8ec28c|
@@ -109,7 +109,7 @@ ms.locfileid: "66311171"
 |<xref:Microsoft.VisualStudio.VSConstants.CLSID.VsTaskList_guid>|BC5955D5-aa0d-11d0-a8c5-00a0c921a4d2|
 |<xref:Microsoft.VisualStudio.VSConstants.VsPackageGuid.VsTaskListPackage_guid>|4A9B7E50-aa16-11d0-a8c5-00a0c921a4d2|
 
-## <a name="component-selector-page-guids"></a>Stránka Výběr komponenty identifikátory GUID
+## <a name="component-selector-page-guids"></a>Identifikátory GUID stránky pro výběr komponent
 
 |Konstanty|GUID|
 |---------------|----------|
@@ -117,7 +117,7 @@ ms.locfileid: "66311171"
 |Microsoft.VisualStudio.VSConstants.GUID_COMPlusPage|9A341D95-5A64-11d3-BFF9-00C04F990235|
 |Microsoft.VisualStudio.VSConstants.GUID_SolutionPage|9A341D97-5A64-11d3-BFF9-00C04F990235|
 
-## <a name="miscellaneous-shell-guids"></a>Identifikátory GUID různé prostředí
+## <a name="miscellaneous-shell-guids"></a>Různé identifikátory GUID granátu
 
 |Konstanty|GUID|
 |---------------|----------|
@@ -125,8 +125,8 @@ ms.locfileid: "66311171"
 |<xref:Microsoft.VisualStudio.VSConstants.VsPackageGuid.VsDocOutlinePackage_guid>|21af45b0-ffa5-11d0-b63f-00a0c922e851|
 |Microsoft.VisualStudio.VSConstants.SID_SVsToolboxActiveXDataProvider|35222106-bb44-11d0-8c46-00c04fc2aae2|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Konstanty modelu COM ve spravovaném kódu](../extensibility/com-constants-in-managed-code.md)
-- [Konstanty integrovaného vývojového prostředí](../extensibility/ide-constants.md)
-- [Příkazy definované prostředím IDE pro rozšíření projektu s ystems](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)
+- [Konstanty COM ve spravovaném kódu](../extensibility/com-constants-in-managed-code.md)
+- [Konstanty IDE](../extensibility/ide-constants.md)
+- [Příkazy definované ide pro rozšíření projektu s ystems](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)

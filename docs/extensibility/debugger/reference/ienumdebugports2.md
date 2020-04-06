@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPorts2 | Dokumentace Microsoftu
+title: IEnumDebugPorts2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugPorts2
 ms.assetid: 1754eef3-cf62-42e0-b218-1911acba77d4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c24edcd5ef47408cd4c11b3d0548ad34516702a1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f3cc46ef8abb6ef1fbb8f072d97b0fc4a537af1a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326509"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80716099"
 ---
 # <a name="ienumdebugports2"></a>IEnumDebugPorts2
-Toto rozhraní uvádí porty počítači nebo port dodavatele.
+Toto rozhraní vyjmenovává porty dodavatele počítače nebo portu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,26 +29,26 @@ IEnumDebugPorts2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Dodavatel port. Tento vlastní port implementuje toto rozhraní představující seznam portů vytvořili dodavatelem. Visual Studio implementuje toto rozhraní podporu vlastní dodavatele portu.
+ Vlastní dodavatel portu implementuje toto rozhraní představující seznam portů vytvořených dodavatelem. Visual Studio implementuje toto rozhraní na podporu vlastního dodavatele portu.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Volání [EnumPorts](../../../extensibility/debugger/reference/idebugportsupplier2-enumports.md) získat toto rozhraní představující seznam portů, které jsou vytvořené dodavatele portu. Volání [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) získat toto rozhraní představující seznam portů, které byly uloženy na disk.
+ Volání [EnumPorts](../../../extensibility/debugger/reference/idebugportsupplier2-enumports.md) získat toto rozhraní představující seznam portů vytvořených dodavatelem portu. Volání [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) získat toto rozhraní představující seznam portů, které byly uloženy na disk.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IEnumDebugPorts2`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IEnumDebugPorts2`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[Next](../../../extensibility/debugger/reference/ienumdebugports2-next.md)|Načte zadaný počet portů v sekvenci výčtu.|
-|[Skip](../../../extensibility/debugger/reference/ienumdebugports2-skip.md)|Vynechá zadaný počet portů v sekvenci výčtu.|
-|[Reset](../../../extensibility/debugger/reference/ienumdebugports2-reset.md)|Návrat na začátek sekvence výčtu.|
-|[Clone](../../../extensibility/debugger/reference/ienumdebugports2-clone.md)|Vytvoří čítač, který obsahuje stejného stavu jako aktuální enumerátor výčtu.|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugports2-getcount.md)|Získá počet portů v enumerátor.|
+|[Další](../../../extensibility/debugger/reference/ienumdebugports2-next.md)|Načte zadaný počet portů v pořadí výčtu.|
+|[Přeskočit](../../../extensibility/debugger/reference/ienumdebugports2-skip.md)|Přeskočí zadaný počet portů v pořadí výčtu.|
+|[Resetovat](../../../extensibility/debugger/reference/ienumdebugports2-reset.md)|Obnoví pořadí výčtu na začátek.|
+|[Klonování](../../../extensibility/debugger/reference/ienumdebugports2-clone.md)|Vytvoří čítač výčtu, který obsahuje stejný stav výčtu jako aktuální čítač výčtu.|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugports2-getcount.md)|Získá počet portů v čítači výčtu.|
 
 ## <a name="remarks"></a>Poznámky
- Visual Studio používá toto rozhraní k naplnění seznamu porty používané pro připojení k procesům.
+ Visual Studio používá toto rozhraní k naplnění seznamu portů používaných pro připojení k procesům.
 
- Ladicí stroj obvykle nepoužívá toto rozhraní.
+ Ladicí modul obvykle nepoužívá toto rozhraní.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -57,7 +57,7 @@ IEnumDebugPorts2 : IUnknown
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)
 - [EnumPorts](../../../extensibility/debugger/reference/idebugcoreserver2-enumports.md)
 - [EnumPorts](../../../extensibility/debugger/reference/idebugportsupplier2-enumports.md)

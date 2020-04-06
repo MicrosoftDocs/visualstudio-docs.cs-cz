@@ -1,5 +1,5 @@
 ---
-title: Sbalení ve službě starší verze jazyka | Microsoft Docs
+title: Osnova ve službě staršího jazyka | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,46 +7,46 @@ helpviewer_keywords:
 - language services [managed package framework], outlining
 - outlining, supporting in language services [managed package framework]
 ms.assetid: 7b5578b4-a20a-4b94-ad4c-98687ac133b9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6b2ba55a2e77a1f7261812a181ad780c2ef2b71
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: be485a0e7406d49c4dcce77958c720e0b62504b6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72726179"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80706815"
 ---
 # <a name="outlining-in-a-legacy-language-service"></a>Osnova ve službě starší verze jazyka
-Díky osnově je možné sbalit složitý program na přehled nebo osnovu. Například C# všechny metody mohou být sbaleny do jednoho řádku, který zobrazuje pouze signaturu metody. Kromě toho mohou být struktury a třídy sbaleny, aby zobrazovaly pouze názvy struktur a tříd. V rámci jediné metody může být komplexní logika sbalena k zobrazení celkového toku zobrazením pouze prvního řádku příkazů, jako jsou `foreach`, `if` a `while`.
+Osnova umožňuje sbalit složitý program do přehledu nebo osnovy. Například v C# všechny metody mohou být sbaleny na jeden řádek, zobrazující pouze podpis metody. Kromě toho struktury a třídy lze sbalit zobrazit pouze názvy struktur a tříd. Uvnitř jedné metody lze sbalit komplexní logiku, která zobrazí celkový tok `foreach` `if`zobrazením `while`pouze prvního řádku příkazů, například , a .
 
- Starší jazykové služby jsou implementovány jako součást sady VSPackage, ale novější způsob, jak implementovat funkce jazykové služby, je použít rozšíření MEF. Další informace najdete v tématu [Návod: sbalení](../../extensibility/walkthrough-outlining.md).
+ Starší jazykové služby jsou implementovány jako součást VSPackage, ale novější způsob implementace funkcí služby jazyka je použití rozšíření MEF. Další informace naleznete v [tématu Návod: Osnova](../../extensibility/walkthrough-outlining.md).
 
 > [!NOTE]
-> Doporučujeme začít používat nové rozhraní API editoru co nejrychleji. Tím se vylepšit výkon vaší jazykové služby a umožní vám využít nové funkce editoru.
+> Doporučujeme, abyste co nejdříve začali používat nové rozhraní API editoru. Tím se zlepší výkon služby jazyka a umožní vám využít nové funkce editoru.
 
-## <a name="enabling-support-for-outlining"></a>Povolení podpory pro sbalení
- Pokud chcete povolit automatické sbalení, je položka registru `AutoOutlining` nastavena na hodnotu 1. Automatické sbalení nastaví analýzu celého zdroje při načtení nebo změně souboru za účelem identifikace skrytých oblastí a zobrazení glyfů osnovy. Sbalení lze také kontrolovat ručně uživatelem.
+## <a name="enabling-support-for-outlining"></a>Povolení podpory pro osnovu
+ Položka `AutoOutlining` registru je nastavena na 1, aby bylo možné automatické osnovy. Automatické osnovy nastaví analýzu celého zdroje při načtení nebo změně souboru za účelem identifikace skrytých oblastí a zobrazení osnovních glyfů. Osnova může být také řízena ručně uživatelem.
 
- Hodnotu položky registru `AutoOutlining` lze získat prostřednictvím vlastnosti <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> třídy <xref:Microsoft.VisualStudio.Package.LanguagePreferences>. Položku registru `AutoOutlining` lze inicializovat pomocí pojmenovaného parametru pro atribut <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> (podrobnosti naleznete v tématu [Registrace služby starší verze jazyka](../../extensibility/internals/registering-a-legacy-language-service1.md) ).
+ Hodnotu položky `AutoOutlining` registru lze získat <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> prostřednictvím <xref:Microsoft.VisualStudio.Package.LanguagePreferences> vlastnosti ve třídě. Položku `AutoOutlining` registru lze inicializovat s <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> pojmenovaným parametrem atributu (podrobnosti naleznete v [tématu Registrace služby staršího jazyka).](../../extensibility/internals/registering-a-legacy-language-service1.md)
 
 ## <a name="the-hidden-region"></a>Skrytá oblast
- Aby se zajistilo sbalení, musí vaše jazyková služba podporovat skryté oblasti. Jedná se o rozsah textu, který lze rozbalit nebo sbalit. Skryté oblasti můžou být oddělené standardními jazykovými symboly, jako jsou složené závorky nebo vlastní symboly. Například C# má `#region` / `#endregion` dvojici, která odděluje skrytou oblast.
+ Chcete-li poskytnout osnovy, musí vaše jazyková služba podporovat skryté oblasti. Jedná se o rozsahy textu, které lze rozbalit nebo sbalit. Skryté oblasti mohou být odděleny standardními jazykovými symboly, například složenými závorkami, nebo vlastními symboly. Například C# má `#region` / `#endregion` pár, který vymezuje skryté oblasti.
 
- Skryté oblasti se spravují pomocí skrytého správce oblastí, který je vystavený jako rozhraní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>.
+ Skryté oblasti jsou spravovány správcem skrytých <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> oblastí, který je vystaven jako rozhraní.
 
- Sbalení používá skryté oblasti rozhraní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenRegion> a obsahuje rozpětí skryté oblasti, aktuálního viditelného stavu a banner, který se zobrazí při sbalení rozpětí.
+ Osnova používá skryté <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenRegion> oblasti rozhraní a obsahují rozsah skryté oblasti, aktuální viditelný stav a banner, který se má zobrazit při sbalení rozpětí.
 
- Analyzátor služby jazyka používá metodu <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> k přidání nové skryté oblasti s výchozím chováním pro skryté oblasti, zatímco metoda <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> umožňuje přizpůsobit vzhled a chování obrysu. Jakmile budou skryté oblasti předány relaci skryté oblasti, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] spravuje skryté oblasti pro službu jazyka.
+ Analyzátor jazykových služeb <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> používá metodu k přidání nové skryté oblasti s <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> výchozím chováním pro skryté oblasti, zatímco metoda umožňuje přizpůsobit vzhled a chování osnovy. Jakmile jsou skryté oblasti uvedeny [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] do relace skryté oblasti, spravuje skryté oblasti pro jazykovou službu.
 
- Pokud potřebujete určit, kdy má být relace skryté oblasti zničena, dojde ke změně skryté oblasti nebo je nutné zajistit, aby byla viditelná konkrétní skrytá oblast. je nutné odvodit třídu z třídy <xref:Microsoft.VisualStudio.Package.Source> a přepsat příslušné metody, <xref:Microsoft.VisualStudio.Package.Source.OnBeforeSessionEnd%2A>, <xref:Microsoft.VisualStudio.Package.Source.OnHiddenRegionChange%2A> a <xref:Microsoft.VisualStudio.Package.Source.MakeBaseSpanVisible%2A>, v uvedeném pořadí.
+ Pokud potřebujete určit, kdy je relace skryté oblasti zničena, změní se skrytá oblast nebo se potřebujete ujistit, že je viditelná určitá skrytá oblast; musíte odvodit <xref:Microsoft.VisualStudio.Package.Source> třídu z třídy <xref:Microsoft.VisualStudio.Package.Source.OnBeforeSessionEnd%2A>a <xref:Microsoft.VisualStudio.Package.Source.OnHiddenRegionChange%2A>přepsat <xref:Microsoft.VisualStudio.Package.Source.MakeBaseSpanVisible%2A>příslušné metody , , a , v uvedeném pořadí.
 
 ### <a name="example"></a>Příklad
- Tady je zjednodušený příklad vytváření skrytých oblastí pro všechny páry složených závorek. Předpokládá se, že jazyk poskytuje párování složených závorek a že složené závorky obsahují aspoň složené závorky ({a}). Tento přístup slouží pouze pro ilustrativní účely. Úplná implementace by měla kompletní zpracování případů v <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>. Tento příklad také ukazuje, jak nastavit předvolbu <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> pro dočasné `true`. Alternativou je zadat `AutoOutlining` pojmenovaný parametr v atributu `ProvideLanguageServiceAttribute` ve vašem jazykovém balíčku.
+ Zde je zjednodušený příklad vytváření skrytých oblastí pro všechny páry složených závorek. Předpokládá se, že jazyk poskytuje odpovídající složená závorka a že složená závorka, která mají být spárována, zahrnují alespoň složené závorky ({ a }). Tento přístup je pouze pro ilustrační účely. Úplné provedení by mělo úplné řešení <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>případů v . Tento příklad také ukazuje, <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> jak `true` dočasně nastavit předvolbu. Alternativou je zadat `AutoOutlining` pojmenovaný parametr `ProvideLanguageServiceAttribute` v atributu v jazykovém balíčku.
 
- Tento příklad předpokládá C# pravidla pro komentáře, řetězce a literály.
+ Tento příklad předpokládá c# pravidla pro komentáře, řetězce a literály.
 
 ```csharp
 using Microsoft.VisualStudio.Package;
@@ -117,6 +117,6 @@ namespace MyLanguagePackage
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Funkce služby starší verze jazyka](../../extensibility/internals/legacy-language-service-features1.md)
 - [Registrace služby starší verze jazyka](../../extensibility/internals/registering-a-legacy-language-service1.md)

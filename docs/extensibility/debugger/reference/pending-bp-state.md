@@ -1,5 +1,5 @@
 ---
-title: PENDING_BP_STATE | Microsoft Docs
+title: PENDING_BP_STATE | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - PENDING_BP_STATE enumeration
 ms.assetid: ac04ad72-fa92-4a15-ade2-0d0bbbadfc7f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6707c09e409e2a04d7afec0322b575a70cea33cf
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 69c8dbe1022ee0b1b2ff034d2b83b947c8fb3df6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349874"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714000"
 ---
-# <a name="pendingbpstate"></a>PENDING_BP_STATE
-Určuje stav čekající zarážkou (zarážky, který nebyl dosud vázán).
+# <a name="pending_bp_state"></a>PENDING_BP_STATE
+Určuje stav čekající zarážky (zarážka, která ještě nebyla vázána).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,21 +46,21 @@ public enum enum_PENDING_BP_STATE { 
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
  `PBPS_NONE`\
- Zástupný symbol nula. Tato hodnota se nikdy vrátí.
+ Zástupný symbol pro nulu. Tato hodnota je nikdy vrácena.
 
  `PBPS_DELETED`\
- Označuje, že čekající zarážka byla smazána.
+ Označuje, že čekající zarážka byla odstraněna.
 
  `PBPS_DISABLED`\
- Určuje, že je zakázána čekající zarážka.
+ Označuje, že čekající zarážka je zakázána.
 
  `PBPS_ENABLED`\
- Označuje, zda je povoleno čekající zarážka.
+ Označuje, že čekající zarážka je povolena.
 
 ## <a name="remarks"></a>Poznámky
- Použít jako `state` člena [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) struktury.
+ Použijte jako `state` člen [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) struktury.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -69,6 +69,6 @@ public enum enum_PENDING_BP_STATE { 
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)

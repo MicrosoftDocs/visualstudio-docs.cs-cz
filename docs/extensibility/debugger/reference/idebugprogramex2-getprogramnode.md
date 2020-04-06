@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEx2::GetProgramNode | Dokumentace Microsoftu
+title: IDebugProgramEx2::GetProgramNode | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramEx2::Attach
 ms.assetid: 1545ffbf-1422-4b5d-9bb9-314ba8665041
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 163c5e543c031d706c0a9922a5f6cfc19e540888
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 13fea906a0234186050fc51a8f23c903778fb055
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325174"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722341"
 ---
 # <a name="idebugprogramex2getprogramnode"></a>IDebugProgramEx2::GetProgramNode
-Získá uzel program přidružený k programu.
+Získá uzel programu přidružený k programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,11 +41,11 @@ int GetProgramNode( 
 
 ## <a name="parameters"></a>Parametry
 `ppProgramNode`\
-[out] Vrátí [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objekt, který představuje uzel program spojené s tímto programem.
+[out] Vrátí objekt [IDebugProgramNode2,](../../../extensibility/debugger/reference/idebugprogramnode2.md) který představuje uzel programu přidružený k tomuto programu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

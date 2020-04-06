@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetName | Dokumentace Microsoftu
+title: IDebugThread2::GetName | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugThread2::GetName
 ms.assetid: eec54b8f-4a0e-4919-b0f9-81d4bd1e0b6f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d6b57aac800027a4a591c3ea683761e19a31462c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9d4828b573585969154f2ad1d484c9fcdf767417
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320216"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718770"
 ---
 # <a name="idebugthread2getname"></a>IDebugThread2::GetName
 Získá název vlákna.
@@ -44,11 +44,11 @@ int GetName ( 
 [out] Vrátí název vlákna.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Načíst název je vždy název, který je možné zobrazit a popisuje tento název vlákna. Název vlákna mohou být odvozen od za běhu architektury, že podporuje s názvem vláken, nebo může být název odvozený z ladicího stroje. Alternativně lze nastavit název vlákna voláním [setthreadname –](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md) metody.
+ Načtený název je vždy název, který lze zobrazit a tento název popisuje vlákno. Název vlákna může být odvozen z architektury za běhu, která podporuje pojmenovaná vlákna, nebo může být název odvozený z ladicího stroje. Případně název vlákna lze nastavit voláním Metody [SetThreadName.](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)
 - [SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md)

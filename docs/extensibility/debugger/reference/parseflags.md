@@ -1,5 +1,5 @@
 ---
-title: PARSEFLAGS | Dokumentace Microsoftu
+title: PARSEFLAGS | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - PARSEFLAGS enumeration
 ms.assetid: 47943f0a-54cb-4493-a62e-5dba97bd4c35
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6123c6438defff596351fff3d1ba31ea52a19f28
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0cc70fdd9fe1279e4d419a422b970eb3d3b07c65
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349937"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714120"
 ---
 # <a name="parseflags"></a>PARSEFLAGS
-Určuje, jak analyzovat výrazu.
+Určuje způsob analýzy výrazu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,18 +44,18 @@ public enum enum_PARSEFLAGS { 
 };
 ```
 
-## <a name="fields"></a>Pole
+## <a name="fields"></a>Fields (Pole)
  `PARSE_EXPRESSION`\
  Označuje, že výraz není příkaz.
 
  `PARSE_FUNCTION_AS_ADDRESS`\
- Označuje, že výraz má být analyzován (a později vyhodnoceny) jako adresu.
+ Označuje, že výraz má být analyzován (a později vyhodnocen) jako adresa.
 
  `PARSE_DESIGN_TIME_EXPR_EVAL`\
- Označuje, že v době návrhu je analyzován výrazu (to znamená, když je Návrhář otevřený).
+ Označuje, že výraz je analyzován během návrhu (to znamená, když je otevřen návrhář).
 
 ## <a name="remarks"></a>Poznámky
- Předán jako parametr [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) a [analyzovat](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) metody.
+ Předánjako parametr [metod ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) a [Parse.](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: msdbg.h
@@ -64,7 +64,7 @@ public enum enum_PARSEFLAGS { 
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)
 - [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineLaunch2 | Dokumentace Microsoftu
+title: IDebugEngineLaunch2 | Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngineLaunch2 interface
 ms.assetid: 5eaf2ad8-3fbf-446e-b48b-5327ad3f5255
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4b6f59c9444b0c54f8a230f8eb4487e16b65ebf4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ee77cbd680df2c851d53aac298605023227fa6f8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345226"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730490"
 ---
 # <a name="idebugenginelaunch2"></a>IDebugEngineLaunch2
-Ladicí stroj (DE) používá ke spuštění a ukončení aplikace.
+Používá se ladicí modul (DE) ke spuštění a ukončení programů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,20 +29,20 @@ IDebugEngineLaunch2 : IDebugEngine2
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Toto rozhraní implementují vlastní DE v případě, že má zvláštní požadavky na spouštění procesu, který nelze zpracovat zcela port. Tento vlastní port. To je obvykle tento případ, když je DE je součástí interpretu a laděný proces je skript: interpretu je potřeba nejdřív spustit, a pak je načíst skript a je spuštěna. Port můžete spustit interpret, ale skript může vyžadovat zvláštní zpracování (což je, kde je DE má roli). Toto rozhraní je implementováno pouze v případě, že existují jedinečným požadavkům pro spuštění programu, který nemůže zpracovávat port. Tento vlastní port.
+ Toto rozhraní je implementováno vlastní DE, pokud má zvláštní požadavky pro spuštění procesu, který nelze zcela zpracovat vlastní port. To je obvykle případ, kdy DE je součástí interpreta a proces, který je odladěn je skript: interpret musí být spuštěn nejprve a pak skript je načten a spuštěn. Port může spustit interpret, ale skript může vyžadovat zvláštní zpracování (což je místo, kde DE má roli). Toto rozhraní je implementováno pouze v případě, že existují jedinečné požadavky na spuštění programu, který vlastní port nelze zpracovat.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Toto rozhraní je volán Správce ladění relace (SDM) Pokud SDM můžete získat toto rozhraní z [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) rozhraní (pomocí funkce QueryInterface). Pokud toto rozhraní můžete získat, SDM ví, že je DE má zvláštní požadavky a volá tato rozhraní ke spuštění programu nemuseli port, spusťte ji.
+ Toto rozhraní je voláno správcem ladění relace (SDM), pokud SDM může získat toto rozhraní z rozhraní [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) (pomocí QueryInterface). Pokud lze získat toto rozhraní, SDM ví, že DE má zvláštní požadavky a volá toto rozhraní ke spuštění programu namísto spuštění portu.
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
- V následující tabulce jsou uvedeny metody objektu `IDebugEngineLaunch2`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+ V následující tabulce jsou `IDebugEngineLaunch2`uvedeny metody .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)|Prostřednictvím DE spustí nějaký proces.|
-|[ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md)|Obnoví spuštění procesu.|
-|[CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md)|Určuje, pokud lze ukončit proces.|
-|[TerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-terminateprocess.md)|Ukončení procesu.|
+|[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)|Spustí proces pomocí DE.|
+|[ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md)|Obnoví provádění procesu.|
+|[CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md)|Určuje, zda lze proces ukončit.|
+|[TerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-terminateprocess.md)|Ukončí proces.|
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: Msdbg.h
@@ -51,5 +51,5 @@ IDebugEngineLaunch2 : IDebugEngine2
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

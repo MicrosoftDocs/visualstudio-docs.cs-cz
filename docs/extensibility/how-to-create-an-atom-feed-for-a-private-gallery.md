@@ -1,40 +1,40 @@
 ---
-title: 'Postupy: Vytvoření Atom pro privátní galerii | Dokumentace Microsoftu'
+title: 'Postup: Vytvoření informačního kanálu Atom pro soukromou galerii | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Atom feed, VSIX private galleries
 - VSIX private galleries, Atom feed
 ms.assetid: 5897f538-9c41-486f-97d9-a1976d20d9fd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 027a7f70240695e64051ef6c16fd3e5469d75900
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c72fbf2d3973ffd84de1cf6f33788c43511c3ce4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66340890"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711010"
 ---
-# <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>Postupy: Vytvoření Atom pro privátní galerii
-Můžete vytvořit kanál Atom (RSS) do umístění v intranetu, která obsahuje rozšíření a přidání informačního kanálu do **rozšíření a aktualizace** jako privátní galerie. Další informace najdete v tématu [privátní Galerie](../extensibility/private-galleries.md).
+# <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>Postup: Vytvoření informačního kanálu Atom pro soukromou galerii
+Můžete vytvořit informační kanál Atom (RSS) do umístění v intranetu, který obsahuje rozšíření, a přidat informační kanál do **rozšíření a aktualizací** jako soukromou galerii. Další informace naleznete v [tématu Soukromé galerie](../extensibility/private-galleries.md).
 
 ## <a name="create-an-atom-feed"></a>Vytvoření informačního kanálu Atom
- Vytvořit jako soukromou galerii informačního kanálu Atom, nejdřív shromáždit vaše rozšíření (*VSIX* souborů) do složky. Můžete je uspořádat do podsložky potřebujete. Budete také potřebovat následující prostředky:
+ Chcete-li vytvořit informační kanál Atom jako soukromou galerii, nejprve shromážděte rozšíření *(soubory všest)* do složky. Pokud chcete, můžete je uspořádat do podsložek. Budete také potřebovat následující zdroje:
 
-- *Atom.xml* soubor, který zpřístupňuje rozšíření jako privátní galerie. Informace o tom, jak se připojit *atom.xml* do souboru **rozšíření a aktualizace**, naleznete v tématu [privátní Galerie](../extensibility/private-galleries.md).
+- Soubor *atom.xml,* který zpřístupňuje přípony jako soukromou galerii. Informace o připojení souboru *atom.xml* k **rozšířením a aktualizacím**naleznete [v tématu Soukromé galerie](../extensibility/private-galleries.md).
 
-- Složka, která obsahuje všechny soubory obrázků, které se extrahují z rozšíření (například snímky obrazovky). *Atom.xml* soubor obsahuje relativní odkazy na tyto Image tak, aby byly k dispozici v **rozšíření a aktualizace**.
+- Složka obsahující všechny obrazové soubory, které byly extrahovány z rozšíření (například snímky obrazovek). Soubor *atom.xml* obsahuje relativní odkazy na tyto obrázky tak, aby byly k dispozici v **rozšíření a aktualizace**.
 
   Předpokládejme například, že jste shromáždili následující dvě rozšíření do složky:
 
-- *Template_Wizard_239.VSIX*, což je prázdná šablona projektu VSIX.
+- *Template_Wizard_239.vsix*, což je prázdná šablona projektu VSIX.
 
-- *SelectionHighlight.vsix*, což je nástroj, který zvýraznit všechny výskyty vybrané aplikace word.
+- *SelectionHighlight.vsix*, což je nástroj pro zvýraznění všech instancí vybraného slova.
 
-  Obsah *atom.xml* soubor bude vypadat podobně jako v následujícím příkladu:
+  Obsah souboru *atom.xml* by se podobal následujícímu příkladu:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -70,7 +70,7 @@ Můžete vytvořit kanál Atom (RSS) do umístění v intranetu, která obsahuje
 </feed>
 ```
 
- Všimněte si, že dvě značky odkazu odkazovat na snímky obrazovky v generovanou složku Obrázky.
+ Všimněte si, že dvě značky odkazů odkazují na snímky obrazovek v generované složce obrázků.
 
-## <a name="see-also"></a>Viz také:
-- [Privátní Galerie](../extensibility/private-galleries.md)
+## <a name="see-also"></a>Viz také
+- [Soukromé galerie](../extensibility/private-galleries.md)
