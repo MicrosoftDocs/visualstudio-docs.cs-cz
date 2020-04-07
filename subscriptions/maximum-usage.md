@@ -4,18 +4,21 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: c473b01f-2dfe-4cc2-ad29-bb5e2a268123
-ms.date: 03/03/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 description: Přečtěte si, jak zobrazit maximální počet přiřazených předplatných na portálu pro správu.
-ms.openlocfilehash: 3f62c251262bc16f8f214c6f7bcc22674c7430b2
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 0fe9dbe494867c99ba62bcb5f56c372da7ac50aa
+ms.sourcegitcommit: 1f7aed335c48215dff5c151f76f22e3f10e8b564
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232261"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808346"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>Použití funkce maximálního využití ke sledování počtu přiřazených předplatných
-Nová funkce na portálu pro správu předplatných sady Visual Studio vám pomůže sledovat, kolik předplatných jste zakoupili a přiřadili, a identifikuje maximální počet předplatných jednotlivých úrovní, které jste přiřadili, a to jak v minulém roce, tak v celém roce. dobu trvání vaší smlouvy(ů). 
+Nová funkce na portálu pro správu předplatných sady Visual Studio vám pomůže sledovat, kolik předplatných jste zakoupili a přiřadili, a identifikuje maximální počet předplatných jednotlivých úrovní, které jste přiřadili, a to jak v posledním roce, tak po celou dobu trvání smluv. 
+
+## <a name="maximum-usage-overview"></a>Přehled maximálního využití
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4tdQK] 
 
 ## <a name="view-your-maximum-usage"></a>Zobrazení maximálního využití
 Chcete-li zobrazit maximální počet předplatných přiřazených pro libovolnou smlouvu a úroveň předplatného:
@@ -45,7 +48,7 @@ A: Informace v přehledu zobrazuje *aktuální* přiřazení a dostupná předpl
 ## <a name="see-also"></a>Viz také
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky

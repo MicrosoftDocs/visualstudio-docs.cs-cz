@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 3f4b0528-03f0-4a02-b3c3-a39292a9bbe1
-ms.date: 03/17/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 description: Předplatné sady Visual Studio – proč se mi zobrazuje hotmail nebo gmailové adresy pro předplatitele?
-ms.openlocfilehash: 7cd6a4761efb7dcad7568bd0a95ba33141407055
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: e926caa8aef5a655b1f09ab8d6dbab1d70946827
+ms.sourcegitcommit: 1f7aed335c48215dff5c151f76f22e3f10e8b564
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79550339"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808338"
 ---
 # <a name="visual-studio-subscriptions--why-do-i-see-personal-accounts-for-my-subscribers"></a>Předplatná visual studia – proč se u odběratelů zobrazují osobní účty?
 Poté, co společnosti migrovaly z Centra multilicenčních služeb (VLSC) na nový [portál správy předplatných](https://manage.visualstudio.com)sady Visual Studio , byli správci překvapeni, že "Přihlašovací e-mailová adresa" pro některé předplatitele zobrazuje osobní e-mailovou adresu, jako je Hotmail nebo Outlook.  Další informace naleznete v [tomto videu](https://www.youtube.com/watch?v=J61EYaVN-dQ&list=PLReL099Y5nReJhZ6o8CQFPSBgzGCHX99_&index=6).
@@ -28,6 +28,9 @@ Během procesu aktivace odběratele: K přihlášení byl vyžadován účet Mic
 > Moderní prostředí pro [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) předplatitele podporuje typy identit Work/School i Microsoft Account (MSA).
 
 ## <a name="solution"></a>Řešení
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4th6B]
+
 Chcete-li problém vyřešit, jednoduše vyberte tlačítko **Připojit e-maily** a systém se pokusí porovnat účty s MSA s existujícími uživateli ve vaší organizaci Azure Active Directory (Azure AD) na základě odpovídající jméno a příjmení. Pokud dojde k chybě, můžete odstranit libovolnou shodu kliknutím na **X** napravo od shody.  
 
 > [!div class="mx-imgBorder"]
@@ -49,7 +52,7 @@ Další klikněte na "pokračovat", který vás zavede na obrazovku popisující
 ## <a name="see-also"></a>Viz také
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ##  <a name="next-steps"></a>Další kroky
