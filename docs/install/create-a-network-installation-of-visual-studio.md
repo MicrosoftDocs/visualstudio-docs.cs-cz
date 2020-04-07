@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ea7efd82aa25844e8eb33745aa53d44be1ed14f6
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.openlocfilehash: 1f9c1ffc0252f0fcd92f026c876adfc8ad694c41
+ms.sourcegitcommit: 273b657e115c1756adb84e0e56b6f2c709bcee76
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80544064"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80759728"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Vytvoření síťové instalace sady Visual Studio
 
@@ -297,4 +297,4 @@ Máme k dispozici i další možnosti podpory. Seznam najdete na stránce [Zpět
 - [Aktualizace sady Visual Studio v servisním směrném plánu](update-servicing-baseline.md)
 - [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 - [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md)
-- [Instalace certifikátů požadovaných pro offline instalaci sady Visual Studio](/install-certificates-for-visual-studio-offline.md)
+- [Instalace certifikátů požadovaných pro offline instalaci sady Visual Studio](install-certificates-for-visual-studio-offline.md)
