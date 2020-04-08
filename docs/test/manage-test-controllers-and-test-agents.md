@@ -7,12 +7,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: efcc284291281b6e370cf51ddbe175faf8f1204c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 086601cb8cde00d63e3be85c028201922ebe5b76
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75584410"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880192"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>Správa kontrolerů testů a testovacích agentů
 
@@ -20,7 +20,9 @@ Pokud chcete pomocí sady Visual Studio vzdáleně spouštět testy, distribuova
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
+::: moniker range="vs-2017"
 Pokud používáte Microsoft Test Manager ke spuštění testů v testovacích prostředích, můžete spravovat testovací řadiče a jejich agenty pomocí **Správce testovacího kontroléru** v **Centru testovacího prostředí** pro Správce testů společnosti Microsoft. Toto téma je použitelné pouze v případě, že ke spuštění testů používáte visual studio.
+::: moniker-end
 
 Informace o instalaci a konfiguraci testovacích agentů a testovacích řadičů pro spuštění testů v sadě Visual Studio naleznete v [tématu Konfigurace testovacích agentů a řadičů](../test/configure-test-agents-and-controllers-for-load-tests.md).
 
@@ -90,25 +92,36 @@ Můžete chtít přidat testovacího agenta do jiného testovacího řadiče neb
 
 Testovací agent musí být nastaven a offline stavu před jeho odebráním.
 
+::: moniker range="vs-2017"
 > [!NOTE]
 > Tento postup nelze použít k odebrání agentů, kteří jsou registrováni na řadič jako součást testovacího prostředí. Chcete-li odebrat tyto agenty z řadiče, je nutné odebrat prostředí pomocí Správce testů společnosti Microsoft.
+::: moniker-end
+::: moniker range=">=vs-2019"
+> [!NOTE]
+> Tento postup nelze použít k odebrání agentů, kteří jsou registrováni na řadič jako součást testovacího prostředí.
+::: moniker-end
 
 ### <a name="to-remove-a-test-agent-from-a-test-controller"></a>Odebrání testovacího agenta z testovacího řadiče
 
-1. Pokud testovací řadič není registrován v projektu, postupujte takto.
+::: moniker range=">=vs-2019"
+V Sadě Visual Studio 2019 nelze odebrat testovacího agenta, pokud je testovací řadič registrován v projektu.
+::: moniker-end
+Pokud testovací řadič není registrován v projektu, postupujte takto.
 
-    1. V Sadě Visual Studio otevřete soubor nastavení testu pro testovací projekt, zvolte **Role** a zvolte **Spravovat testovací řadiče** z rozevíracího seznamu pro pole **Řadič.**
+1. V Sadě Visual Studio otevřete soubor nastavení testu pro testovací projekt, zvolte **Role** a zvolte **Spravovat testovací řadiče** z rozevíracího seznamu pro pole **Řadič.**
 
-         Zobrazí se dialogové okno **Spravovat testovací řadič.**
+   Zobrazí se dialogové okno **Spravovat testovací řadič.**
 
-    2. Do rozevíracího seznamu **Řadič** zadejte název počítače, ve kterém jste nastavili testovací řadič. Pokud jste dříve spravovali konkrétní testovací řadič, můžete vybrat název ze seznamu.
+2. Do rozevíracího seznamu **Řadič** zadejte název počítače, ve kterém jste nastavili testovací řadič. Pokud jste dříve spravovali konkrétní testovací řadič, můžete vybrat název ze seznamu.
 
-    3. V podokně **Agenti** vyberte název testovacího agenta. Pokud je agent stále online, zvolte **Offline.** Chcete-li ji odebrat, zvolte **Odebrat**.
+3. V podokně **Agenti** vyberte název testovacího agenta. Pokud je agent stále online, zvolte **Offline.** Chcete-li ji odebrat, zvolte **Odebrat**.
 
-        > [!NOTE]
-        > Odebrání testovacího agenta pouze disassociates z testovacího řadiče. Chcete-li testovacího agenta zcela odinstalovat, použijte ovládací panel **Programy a funkce** v počítači testovacího agenta.
+   > [!NOTE]
+   > Odebrání testovacího agenta pouze disassociates z testovacího řadiče. Chcete-li testovacího agenta zcela odinstalovat, použijte ovládací panel **Programy a funkce** v počítači testovacího agenta.
 
-2. Pokud je testovací řadič registrován v projektu, odeberte agenta pomocí Správce testů společnosti Microsoft.
+::: moniker range="vs-2017"
+Pokud je testovací řadič registrován v projektu, odeberte agenta pomocí Správce testů společnosti Microsoft.
+::: moniker-end
 
 ## <a name="change-the-settings-for-a-test-agent"></a>Změna nastavení testovacího agenta
 
@@ -125,8 +138,10 @@ Můžete změnit stav a další nastavení testovacího agenta pomocí následuj
 
 ### <a name="to-change-the-settings-of-a-test-agent"></a>Změna nastavení testovacího agenta
 
+::: moniker range="vs-2017"
 > [!NOTE]
 > Pokud je testovací agent registrován na testovací řadič, který je registrován v projektu, změňte nastavení ve Správci testů společnosti Microsoft.
+::: moniker-end
 
 1. Chcete-li nakonfigurovat a sledovat testovací řadič a všechny registrované agenty pro zátěžový test, zvolte nabídku **Zátěžový test** v sadě Visual Studio a pak zvolte **Spravovat řadiče testu**. Pro všechny ostatní testy otevřete soubor nastavení testu pro testovací projekt v sadě Visual Studio, zvolte **Role** a zvolte **Spravovat testovací řadiče** z rozbalovací nabídky pro pole **Řadič.**
 
@@ -157,7 +172,7 @@ Změny atributů testu agenta a atributu testovacího agenta vstoupí v platnost
 
 Chcete-li nakonfigurovat testovací řadič, musíte použít **nástroj pro konfiguraci řadiče týmového testu**. Při konfiguraci testovacího řadiče můžete zaregistrovat testovací řadič s jinou kolekcí projektu nebo zrušit registraci testovacího řadiče z kolekce projektu.
 
-Pokud chcete zaregistrovat testovací řadič s kolekcí projektů Team Foundation Server, musí být účet, který používáte pro službu testovacího řadiče, členem skupiny Účty testovací služby kolekce projektů pro kolekci projektů nebo účet který používáte ke spuštění nástroje konfigurace testovacího řadiče, musí být správce množin.
+Pokud chcete zaregistrovat testovací řadič s kolekcí projektů Team Foundation Server, musí být účet, který používáte pro službu testovacího řadiče, členem skupiny Účty testovací služby kolekce projektů pro kolekci projektů nebo účet, který používáte ke spuštění nástroje konfigurace testovacího řadiče, musí být správcem kolekce projektů.
 
 > [!NOTE]
 > Pokud zrušíte registraci testovacího řadiče z kolekce projektu, který má existující prostředí v kolekci projektu, prostředí jsou stále udržovány, pokud jste přesunuli tuto kolekci projektu a znovu zaregistrujete testovací řadič do této přesunuté kolekce projektu.

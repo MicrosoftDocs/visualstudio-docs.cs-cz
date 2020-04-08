@@ -9,20 +9,23 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: bd6e9b2d9ea408e451b7032a00c3c96fb0ef2b58
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ca762c103ab5b3d3e94b3117dd9570787562b002
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75566823"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880127"
 ---
 # <a name="use-azure-test-plans-instead-of-lab-management-for-automated-testing"></a>Použití testovacích plánů Azure namísto správy testovacího prostředí pro automatizované testování
 
 Pokud používáte Microsoft Test Manager a Lab Management pro automatizované testování nebo pro automatizaci sestavení nasazení a testování, toto téma vysvětluje, jak můžete dosáhnout stejných cílů pomocí [funkce sestavení a vydání](/azure/devops/pipelines/index?view=vsts) v Azure Pipelines a Team Foundation Server (TFS).
 
+> [!NOTE]
+> Microsoft Test Manager se v Sadě Visual Studio 2017 zanese a v sadě Visual Studio 2019 se odebere.
+
 ## <a name="build-deploy-test-automation"></a>Automatizace sestavení a nasazení a testování
 
-Microsoft Test Manager a Lab Management spoléhají na definici sestavení XAML pro automatizaci sestavení, nasazení a testování vašich aplikací. Sestavení XAML závisí na různých konstrukcích vytvořených ve Správci testů společnosti Microsoft, jako je testovací prostředí, testovací sady a nastavení testování, a na různých součástech infrastruktury, jako je řadič sestavení, agenti sestavení, testovací řadič a testovací agenti, aby tohoto cíle dosáhnout. Tosamé můžete provést s menším počtem kroků pomocí Azure Pipelines nebo TFS.
+Microsoft Test Manager a Lab Management spoléhají na definici sestavení XAML pro automatizaci sestavení, nasazení a testování vašich aplikací. Sestavení XAML závisí na různých konstrukcích vytvořených ve Správci testů společnosti Microsoft, jako je testovací prostředí, testovací sady a nastavení testování, a na různých součástech infrastruktury, jako je například řadič sestavení, agenti sestavení, testovací řadič a testovací agenti k dosažení tohoto cíle. Tosamé můžete provést s menším počtem kroků pomocí Azure Pipelines nebo TFS.
 
 | Kroky | Se sestavením XAML | V sestavení nebo vydání |
 |-------|----------------------|-----------------|
@@ -53,7 +56,7 @@ Samoobslužné zřizovací funkce Lab Center mají dva odlišné cíle:
 
 Vzhledem k vývoji bohatších systémů správy veřejného a soukromého cloudu, jako jsou [Microsoft Azure](https://azure.microsoft.com/) a Microsoft [Azure Stack](https://azure.microsoft.com/overview/azure-stack/), však v TFS 2017 a dalších aplikacích neexistuje žádný vývoj funkcí správy infrastruktury. Místo toho pokračuje zaměření na snadnou spotřebu prostředků spravovaných prostřednictvím těchto cloudových infrastruktur.
 
-Následující tabulka shrnuje typické aktivity, které provádíte v Centru testovacího prostředí, a způsob, jakým je můžete provádět prostřednictvím scvmm nebo Azure (pokud se jedná o aktivity správy infrastruktury) nebo prostřednictvím TFS a Azure DevOps Services (pokud jsou test nebo nasazení aktivity):
+Následující tabulka shrnuje typické aktivity, které provádíte v Centru testovacího prostředí, a způsob, jakým je můžete provést prostřednictvím scvmm nebo Azure (pokud se jedná o aktivity správy infrastruktury) nebo prostřednictvím TFS a Azure DevOps Services (pokud se jedná o aktivity testování nebo nasazení):
 
 | Kroky | S Lab Center | V sestavení nebo vydání |
 |-------|-----------------|-----------------------|

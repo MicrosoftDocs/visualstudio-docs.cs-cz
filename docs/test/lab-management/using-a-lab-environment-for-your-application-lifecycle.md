@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: b02f8bf9542b5de4737d173835c011f59c3fdc86
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 499f335edabe77d001a1a2486e7b559abe6c7a8a
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75847293"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880335"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>Použití laboratorního prostředí pro vaše devops
 
@@ -53,6 +53,7 @@ Můžete provádět automatizované testování a automatizaci sestavení a nasa
 
 Další informace naleznete v [tématu Použití správy sestavení nebo vydání](use-build-or-rm-instead-of-lab-management.md).
 
+::: moniker range="vs-2017"
 ## <a name="use-the-visual-studio-lab-management-features-of-microsoft-test-manager"></a>Použití funkcí visual studio lab management u Microsoft Test Manager
 
 Při použití edice Visual Studio Enterprise můžete vytvářet a spravovat testovací prostředí pomocí funkcí visual studio lab management u Microsoft Test Manageru.
@@ -128,7 +129,7 @@ Další informace o správě testovacího prostředí naleznete v tématu:
 * [Nastavení pro prostředí SCVMM](https://msdn.microsoft.com/library/dd380687%28v=vs.140%29.aspx)
 * [Správa oprávnění](https://msdn.microsoft.com/library/dd380760%28v=vs.140%29.aspx)
 * [Změnit nastavení](https://msdn.microsoft.com/library/ee704508%28v=vs.140%29.aspx)
-* [Řešení potíží](https://msdn.microsoft.com/library/ee853230%28v=vs.140%29.aspx)
+* [Odstraňování potíží](https://msdn.microsoft.com/library/ee853230%28v=vs.140%29.aspx)
 
 Informace o nastavení prostředí naleznete v tématu:
 
@@ -136,6 +137,7 @@ Informace o nastavení prostředí naleznete v tématu:
 * [Standardní laboratorní prostředí](https://msdn.microsoft.com/library/ee390842.aspx)
 * [SCVMM (virtuální) prostředí](https://msdn.microsoft.com/library/ee943322.aspx)
 * [Vytváření a používání izolovaného síťového prostředí](https://msdn.microsoft.com/library/ee518924.aspx)
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také
 

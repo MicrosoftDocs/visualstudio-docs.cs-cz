@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3bd667579d9ff0645e7dd2753278257a9796709
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f333cc3409056739cef7c378d9815f10439ab37e
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75585636"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880361"
 ---
 # <a name="use-coded-ui-test-to-test-your-code"></a>Testování kódu pomocí programového testu ui
 
@@ -429,15 +429,20 @@ myWinCheckBox.Checked = true;
 
      `SetProperty(myWinCheckBox.PropertyNames.Checked, true);`
 
-## <a name="debug"></a>Ladění
+## <a name="debug"></a>Ladit
 
 Můžete analyzovat programové testy ui pomocí protokolů test kódovaného rozhraní. Protokoly testovaných kódovaných ui filtrují a zaznamenávají důležité informace o spuštění testů programového ui. Formát protokolů umožňuje rychle ladit problémy. Další informace naleznete v [tématu Analýza kódovaných testů ui pomocí kódovaných protokolů testů ui](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md).
 
 ## <a name="whats-next"></a>Co dále?
 
+::: moniker range="vs-2017"
 **Další možnosti pro spuštění programových testů ui:** Programové testy ui můžete spustit přímo z visual studia, jak je popsáno výše v tomto tématu. Kromě toho můžete spustit automatizované testy ui z Microsoft Test Manager nebo pomocí Azure Pipelines. Pokud jsou testy programového rozhraní automatizované, musí při jejich spuštění pracovat s plochou, na rozdíl od jiných automatizovaných testů.
+::: moniker-end
+::: moniker range=">=vs-2019"
+**Další možnosti pro spuštění programových testů ui:** Programové testy ui můžete spustit přímo z visual studia, jak je popsáno výše v tomto tématu. Kromě toho můžete spustit automatizované testy ui pomocí Azure Pipelines. Pokud jsou testy programového rozhraní automatizované, musí při jejich spuštění pracovat s plochou, na rozdíl od jiných automatizovaných testů.
+::: moniker-end
 
-- [Spouštění testování částí pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md)
+- [Spouštění testů částí pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md)
 
 - [Spuštění testů v procesu sestavení](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)
 
@@ -449,7 +454,7 @@ Můžete analyzovat programové testy ui pomocí protokolů test kódovaného ro
 
 - [Rozšíření kódovaných testů a záznamů akcí v oblasti usměrňovaného rozhraní](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
 
-Programové testy ui se často používají k automatizaci ručních testů. Další informace o ručních testech naleznete v [tématu Spuštění ručních testů pomocí správce testů společnosti Microsoft](/azure/devops/test/mtm/run-manual-tests-with-microsoft-test-manager?view=vsts). Další informace o automatizovaných testech naleznete [v tématu Test tools in Visual Studio](../test/improve-code-quality.md).
+Programové testy ui se často používají k automatizaci ručních testů. Další informace o automatizovaných testech naleznete [v tématu Test tools in Visual Studio](../test/improve-code-quality.md).
 
 ## <a name="see-also"></a>Viz také
 

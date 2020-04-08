@@ -8,12 +8,12 @@ ms.assetid: bd7ad36c-54cb-4d2a-9aea-9d10ad98d7ba
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f196c3850c9413a7c68fd1fe67af50273915f249
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5b198d8d3e9156b8a38325034bf19ce96b742d9e
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589172"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880153"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>Postup: Vytvoření adaptéru diagnostických dat
 
@@ -23,7 +23,7 @@ Chcete-li vytvořit *adaptér diagnostických dat*, vytvořte knihovnu tříd po
 
 Můžete vytvořit adaptér diagnostických dat, který ovlivňuje počítač, ve kterém jsou spuštěny testy, nebo počítač, který je součástí prostředí, které používáte ke spuštění testovací aplikace. Například shromažďování souborů v testovacím počítači, kde jsou spuštěny testy nebo shromažďování souborů v počítači sloužícím v roli webového serveru pro vaši aplikaci.
 
-Adaptér diagnostických dat můžete poskytnout popisný název, který se zobrazí při vytváření nastavení testu pomocí Správce testů společnosti Microsoft nebo sady Visual Studio. Nastavení testu umožňuje definovat, která role počítače bude při spuštění testů spouštět konkrétní adaptéry diagnostických dat ve vašem prostředí. Adaptéry diagnostických dat můžete také nakonfigurovat při vytváření nastavení testu. Můžete například vytvořit adaptér diagnostických dat, který shromažďuje vlastní protokoly z webového serveru. Při vytváření nastavení testu můžete vybrat spuštění tohoto adaptéru diagnostických dat v počítači nebo počítačích, které provádějí tuto roli webového serveru, a můžete upravit konfiguraci nastavení testu tak, aby shromažďovala pouze poslední tři protokoly, které byly vytvořeny. Další informace o nastavení testu naleznete v [tématu Shromažďování diagnostických informací pomocí nastavení testu](../test/collect-diagnostic-information-using-test-settings.md).
+Adaptér diagnostických dat můžete dát popisný název, který se zobrazí při vytváření nastavení testu pomocí sady Visual Studio nebo Microsoft Test Manager (zastaralé v sadě Visual Studio 2017). Nastavení testu umožňuje definovat, která role počítače bude při spuštění testů spouštět konkrétní adaptéry diagnostických dat ve vašem prostředí. Adaptéry diagnostických dat můžete také nakonfigurovat při vytváření nastavení testu. Můžete například vytvořit adaptér diagnostických dat, který shromažďuje vlastní protokoly z webového serveru. Při vytváření nastavení testu můžete vybrat spuštění tohoto adaptéru diagnostických dat v počítači nebo počítačích, které provádějí tuto roli webového serveru, a můžete upravit konfiguraci nastavení testu tak, aby shromažďovala pouze poslední tři protokoly, které byly vytvořeny. Další informace o nastavení testu naleznete v [tématu Shromažďování diagnostických informací pomocí nastavení testu](../test/collect-diagnostic-information-using-test-settings.md).
 
 Události jsou vyvolány při spuštění testů tak, aby adaptér diagnostických dat můžete provádět úlohy v tomto okamžiku v testu.
 
@@ -255,7 +255,7 @@ Pomocí následujícího postupu vytvořte adaptér diagnostických dat, který 
 
 14. Další informace o tom, jak nakonfigurovat nastavení testu pro použití prostředí při spuštění testů, naleznete [v tématu Shromažďování diagnostických dat v ručních testech (Plány testů Azure).](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
 
-15. Chcete-li vybrat adaptér diagnostických dat, musíte nejprve vybrat existující nastavení testu nebo vytvořit nové z Microsoft Test Manager nebo Visual Studio. Adaptér se zobrazí na kartě **Data a diagnostika** nastavení testu s popisným názvem, který jste přiřadili třídě.
+15. Chcete-li vybrat adaptér diagnostických dat, musíte nejprve vybrat existující nastavení testu nebo vytvořit nové z Visual Studia nebo Microsoft Test Manager (zastaralé v Sadě Visual Studio 2017). Adaptér se zobrazí na kartě **Data a diagnostika** nastavení testu s popisným názvem, který jste přiřadili třídě.
 
 16. Nastavte tato nastavení testu tak, aby byla aktivní. Další informace o nastavení testu naleznete v [tématu Shromažďování diagnostických informací pomocí nastavení testu](../test/collect-diagnostic-information-using-test-settings.md).
 

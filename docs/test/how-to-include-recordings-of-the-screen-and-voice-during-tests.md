@@ -8,12 +8,12 @@ ms.assetid: 2cefe8c2-430a-4cb4-bbe0-f3edb2e5bc03
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 94d8fdc2765b3a073ca481d09bc38dfbc9b38f2c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d53f03ed711b613a44aaf7cd243bd9aadeb2c93b
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589016"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880322"
 ---
 # <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>Postup: Zahrnout nahrávky obrazovky a hlasu během testů pomocí nastavení testu
 
@@ -58,8 +58,14 @@ Obrazovku a hlasový záznamník lze použít s manuálními nebo automatizovan�
 
 7. Vyberte **OK**. Nastavení kolektoru diagnostických trasování jsou nyní nakonfigurována a uložena pro nastavení testu.
 
+    ::: moniker range="vs-2017"
     > [!TIP]
     > Chcete-li obnovit konfiguraci tohoto adaptéru diagnostických dat, zvolte **Obnovit na výchozí konfiguraci** pro sadu Visual Studio a **Obnovit výchozí** pro Správce testů společnosti Microsoft.
+    ::: moniker-end
+    ::: moniker range=">=vs-2019"
+    > [!TIP]
+    > Chcete-li obnovit konfiguraci tohoto adaptéru diagnostických dat, zvolte **Obnovit výchozí konfiguraci** v sadě Visual Studio.
+    ::: moniker-end
 
 ## <a name="see-also"></a>Viz také
 

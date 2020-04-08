@@ -8,12 +8,12 @@ ms.assetid: 6832fe39-04d5-4d94-8a18-3e2730bad423
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0132401df33bd65d7e328307167b6c228155bb42
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 07df32104394dffcd61d1561309b77e61593f6e6
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78169388"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880231"
 ---
 # <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>Postup: Konfigurace ASP.NET profileru pro zátěžové testy pomocí nastavení testu v sadě Visual Studio
 
@@ -22,7 +22,7 @@ Pomocí adaptéru diagnostických dat ASP.NET profileru můžete shromažďovat 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
-> Tento adaptér diagnostických dat nelze použít pro testy, které jsou spuštěny pomocí Správce testů společnosti Microsoft. Diagnostický adaptér ASP.NET Profiler můžete použít s zátěžovými testy pouze pomocí webů, což vyžaduje Visual Studio Enterprise.
+> Tento adaptér diagnostických dat nelze použít pro testy, které jsou spuštěny pomocí Správce testů společnosti Microsoft (zastaralé v sadě Visual Studio 2017). Diagnostický adaptér ASP.NET Profiler můžete použít s zátěžovými testy pouze pomocí webů, což vyžaduje Visual Studio Enterprise.
 
 Adaptér diagnostických dat ASP.NET profileru umožňuje shromažďovat data ASP.NET profileru z aplikační vrstvy při spuštění zátěžového testu. Profiler by neměl být spouštěn pro dlouho trvající testy, například pro zátěžové testy, které trvají déle než jednu hodinu. Důvodem je, že soubor profileru může dosáhnout velikosti až stovek megabajtů. Místo toho spusťte kratší zátěžové testy pomocí ASP.NET profileru, který vám stále poskytne výhodu hluboké diagnostiky problémů s výkonem.
 

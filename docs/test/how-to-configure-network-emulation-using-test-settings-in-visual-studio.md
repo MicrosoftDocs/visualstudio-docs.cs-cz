@@ -8,12 +8,12 @@ ms.assetid: ff275cfb-5df9-4710-9a91-9caabaaad34f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 350640a4db6a81d19801aedb03d0d490895f97ef
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 685b22f25c7138c4c3e7c9068ba52864e40648e1
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589211"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880140"
 ---
 # <a name="how-to-configure-network-emulation-using-test-settings-in-visual-studio"></a>Postup: Konfigurace emulace sítě pomocí nastavení testu v sadě Visual Studio
 
@@ -24,12 +24,19 @@ Adaptér diagnostických dat můžete nakonfigurovat tak, aby otestoval aplikaci
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
+::: moniker range="vs-2017"
 Následující postup popisuje, jak nakonfigurovat emulaci sítě z konfiguračního editoru. Tyto kroky platí pro editor konfigurace ve Správci testů společnosti Microsoft i v sadě Visual Studio.
+::: moniker-end
+::: moniker range=">=vs-2019"
+Následující postup popisuje, jak nakonfigurovat emulaci sítě z konfiguračního editoru. Tyto kroky platí pro editor konfigurace v sadě Visual Studio.
+::: moniker-end
 
 > [!NOTE]
-> Adaptér diagnostických dat emulace sítě je použitelný pouze pro nastavení testu sady Visual Studio. Nepoužívá se pro nastavení testu ve Správci testů společnosti Microsoft.
+> Adaptér diagnostických dat emulace sítě je použitelný pouze pro nastavení testu sady Visual Studio. Nepoužívá se pro nastavení testu ve Správci testů microsoftu (zastaralé v sadě Visual Studio 2017).
 
+::: moniker range="vs-2017"
 Účet, který má oprávnění správce, musí být použit pro emulaci sítě. Pokud jste pro místní roli, která spouští ruční testy, vybrali emulaci sítě, je nutné spustit správce testů pomocí oprávnění správce. Pokud jste vybrali emulaci sítě pro jakoukoli jinou roli, je nutné ověřit, zda testovací agent v počítači pro tuto roli používá uživatelský účet, který je členem skupiny Administrators. Další informace o nastavení účtu testovacího agenta naleznete v [tématu Instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
+::: moniker-end
 
 > [!NOTE]
 > Účet síťové služby, který je výchozím účtem testovacího agenta, není členem skupiny administrators.

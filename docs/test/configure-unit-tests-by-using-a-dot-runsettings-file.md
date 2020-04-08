@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: cad3a644935e14a605dbef02bddc1f9337c1f5e9
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: bd6d2f394edf1a1d2c96404a8af3714fbe9550d6
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233087"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880348"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *.runsettings*
 
@@ -330,7 +330,7 @@ Tato nastavení jsou specifická pro testovací adaptér, <xref:Microsoft.Visual
 |Konfigurace|Výchozí|Hodnoty|
 |-|-|-|
 |**ForcedLegacyMode**|false (nepravda)|V sadě Visual Studio 2012 byl adaptér MSTest optimalizován tak, aby byl rychlejší a škálovatelnější. Některé rysy chování sady, jako například pořadí, ve kterém jsou testy spuštěny, nemusí být přesně stejné jako v předchozích edicích sady Visual Studio. Nastavte tuto hodnotu na **true** pro použití staršího testovacího adaptéru.<br /><br />Toto nastavení můžete například použít, pokud máte pro testování částí zadaný soubor *app.config.*<br /><br />Doporučujeme zvážit refaktoring testů, aby bylo možné použít novější adaptér.|
-|**IgnoreTestImpact**|false (nepravda)|Funkce dopadu testu upřednostňuje při spuštění testů prostřednictvím adaptéru MSTest nebo nástroje Microsoft Test Manager testy, které jsou ovlivněny nedávnými změnami. Toto nastavení funkci deaktivuje. Další informace naleznete v [tématu Které testy by měly být spuštěny od předchozího sestavení](https://msdn.microsoft.com/library/dd286589).|
+|**IgnoreTestImpact**|false (nepravda)|Funkce dopadu testu upřednostňuje testy, které jsou ovlivněny nedávnými změnami při spuštění v MSTest nebo z Microsoft Test Manager (zastaralé v Sadě Visual Studio 2017). Toto nastavení funkci deaktivuje. Další informace naleznete v [tématu Které testy by měly být spuštěny od předchozího sestavení](https://msdn.microsoft.com/library/dd286589).|
 |**SettingsFile**||Zde můžete zadat soubor nastavení testu, který se má použít s adaptérem MSTest. Soubor nastavení testu můžete také zadat [v nabídce nastavení](#ide).<br /><br />Pokud zadáte tuto hodnotu, musíte také nastavit **ForcedlegacyMode** na **true**.<br /><br />`<ForcedLegacyMode>true</ForcedLegacyMode>`|
 |**KeepExecutorAliveAfterLegacyRun**|false (nepravda)|Po dokončení běhu testu je adaptér MSTest vypnut. Každý proces, který je spuštěn jako součást testu je také zabit. Pokud chcete zachovat zachycovač testu naživu, nastavte hodnotu na **hodnotu true**. Toto nastavení můžete například použít k zachování spuštěného prohlížeče mezi kódovými testy ui.|
 |**DeploymentEnabled**|true|Pokud nastavíte hodnotu **na hodnotu false**, položky nasazení, které jste zadali v testovací metodě, nebudou zkopírovány do adresáře nasazení.|

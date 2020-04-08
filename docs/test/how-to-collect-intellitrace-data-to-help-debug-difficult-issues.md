@@ -11,16 +11,16 @@ ms.assetid: 02b6716f-569e-4961-938a-e790a0c74b5c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 826d16fa316340226df042b0d762d923c43d39c9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: adc77ee87bbbf07d04fd7c01a554c7c074e5bf7f
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594770"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880218"
 ---
 # <a name="how-to-collect-intellitrace-data-to-help-debug-difficult-issues"></a>Postup: Shromažďování dat IntelliTrace, které vám pomohou při ladění obtížných problémů
 
-Adaptér diagnostických dat pro intelliTrace můžete nakonfigurovat tak, aby shromažďoval konkrétní informace o sledování diagnostiky ve visual stdio. Testy mohou tento adaptér používat. Test může shromažďovat podstatné diagnostické události aplikace, které může vývojář později použít pro trasování skrze kód a nalezení příčiny chyby. Adaptér diagnostiky dat pro technologii IntelliTrace lze použít pro manuální, nebo automatizované testy.
+Adaptér diagnostických dat pro intelliTrace můžete nakonfigurovat tak, aby shromažďoval konkrétní informace o trasování diagnostiky v sadě Visual Studio. Testy mohou tento adaptér používat. Test může shromažďovat podstatné diagnostické události aplikace, které může vývojář později použít pro trasování skrze kód a nalezení příčiny chyby. Adaptér diagnostiky dat pro technologii IntelliTrace lze použít pro manuální, nebo automatizované testy.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -40,14 +40,24 @@ Data shromažďovaná do souboru IntelliTrace zvyšují efektivitu ladění zkr�
 > [!WARNING]
 > Adaptér diagnostiky dat pro technologii IntelliTrace funguje díky instrumentaci spravovaného procesu, která musí být provedena po načtení testů pro testovací běh. Pokud již byl proces, který chcete sledovat, spuštěn, nebudou shromážděny žádné soubory IntelliTrace, protože proces již probíhá. To lze obejít ověřením, že se proces před načtením testů ukončil. Poté po načtení testů nebo spuštění prvního testu spusťte proces.
 
+::: moniker range="vs-2017"
 Následující postup popisuje, jak nakonfigurovat data IntelliTrace, která chcete shromažďovat. Tyto kroky platí pro konfigurační editor v Microsoft Test Manager a Test Nastavení dialogového okna v sadě Visual Studio.
+::: moniker-end
+::: moniker range=">=vs-2019"
+Následující postup popisuje, jak nakonfigurovat data IntelliTrace, která chcete shromažďovat. Tyto kroky platí pro dialogové okno Nastavení testu v sadě Visual Studio.
+::: moniker-end
 
 > [!NOTE]
 > Uživatelský účet pro testovacího agenta, který je používán k shromažďování dat IntelliTrace, musí být členem skupiny administrátorů. Další informace naleznete v [tématu Instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
 
 ## <a name="configure-the-data-to-collect-with-the-intellitrace-diagnostic-data-adapter"></a>Konfigurace dat pro shromažďování pomocí adaptéru diagnostických dat IntelliTrace
 
+::: moniker range="vs-2017"
 Před provedením kroků v tomto postupu je nutné otevřít nastavení testu ze správce testů společnosti Microsoft nebo sady Visual Studio a vybrat stránku **Data a diagnostika.**
+::: moniker-end
+::: moniker range=">=vs-2019"
+Před provedením kroků v tomto postupu je nutné otevřít nastavení testu z aplikace Visual Studio a vybrat stránku **Data a diagnostika.**
+::: moniker-end
 
 ### <a name="to-configure-the-data-to-collect-with-the-intellitrace-diagnostic-data-adapter"></a>Konfigurace dat pro shromažďování pomocí adaptéru diagnostických dat IntelliTrace
 
@@ -60,7 +70,7 @@ Před provedením kroků v tomto postupu je nutné otevřít nastavení testu ze
      Tento proxy server umožňuje shromažďovat informace o volání http z klienta na webový server pro adaptéry diagnostických dat IntelliTrace a Test Impact.
 
     > [!WARNING]
-    > Pokud se rozhodnete použít vlastní účet pro identitu, která je používána pro fond aplikací na internetovém informačním serveru (IIS), kde chcete shromažďovat data IntelliTrace, musíte vytvořit místní uživatelský profil v počítači služby IIS pro vlastní účet, který se používá. Místní profil lze pro vlastní účet vytvořit jednorázovým přihlášením na počítači se službou IIS místně, nebo spuštěním následujícího příkazu příkazového řádku pomocí vlastních pověření účtu:
+    > Pokud se rozhodnete použít vlastní účet pro identitu, která se používá pro fond aplikací na serveru Internet Information Server (IIS), kde chcete shromažďovat data IntelliTrace, je nutné vytvořit místní profil uživatele v počítači služby IIS pro vlastní účet, který je používán. Místní profil lze pro vlastní účet vytvořit jednorázovým přihlášením na počítači se službou IIS místně, nebo spuštěním následujícího příkazu příkazového řádku pomocí vlastních pověření účtu:
     >
     > **runas /user:doména\název /profil cmd.exe**
 
@@ -103,10 +113,16 @@ Před provedením kroků v tomto postupu je nutné otevřít nastavení testu ze
     > [!NOTE]
     > Pokud velikost pro záznam zvětšíte, může dojít k problému s vypršením času při ukládání tohoto záznamu společně s výsledky testů.
 
-12. Pokud používáte Microsoft Test Manager, zvolte **Uložit**. Pokud používáte Visual Studio, zvolte **OK**. Nastavení technologie IntelliTrace je nyní nakonfigurováno a uloženo pro nastavení testů.
+12. Pokud používáte Microsoft Test Manager (zastaralé v Sadě Visual Studio 2017), zvolte **Uložit**. Pokud používáte Visual Studio, zvolte **OK**. Nastavení technologie IntelliTrace je nyní nakonfigurováno a uloženo pro nastavení testů.
 
+    ::: moniker range="vs-2017"
     > [!NOTE]
     > Chcete-li obnovit konfiguraci tohoto adaptéru diagnostických dat, zvolte **Obnovit na výchozí konfiguraci** pro sadu Visual Studio nebo **Obnovit výchozí** pro Správce testů společnosti Microsoft.
+    ::: moniker-end
+    ::: moniker range=">=vs-2019"
+    > [!NOTE]
+    > Chcete-li obnovit konfiguraci tohoto adaptéru diagnostických dat, zvolte **Obnovit výchozí konfiguraci** v sadě Visual Studio.
+    ::: moniker-end
 
 ## <a name="see-also"></a>Viz také
 
