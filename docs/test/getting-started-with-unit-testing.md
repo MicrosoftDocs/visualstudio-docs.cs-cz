@@ -1,6 +1,6 @@
 ---
-title: Začínáme s testováním částí
-ms.date: 03/04/2020
+title: Začínáme s testováním jednotek
+ms.date: 04/07/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit test plans
@@ -9,14 +9,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 90c3cbdee722c4cf12c515f06659cc03f3179e1e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d961af66658d6924da1b5ba38b9ec7f2a8b19aaa
+ms.sourcegitcommit: c3b6af7367bef67a02c37404534229b935f713a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78289851"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80892788"
 ---
-# <a name="get-started-with-unit-testing"></a>Začínáme s testováním částí
+# <a name="get-started-with-unit-testing"></a>Začínáme s testováním jednotek
 
 Pomocí sady Visual Studio můžete definovat a spouštět testy částí k udržování stavu kódu, zajištění pokrytí kódu a hledání chyb a chyb dříve než vaši zákazníci. Spouštějte testy částí často a ujistěte se, že váš kód funguje správně.
 
