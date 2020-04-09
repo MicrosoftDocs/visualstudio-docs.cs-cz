@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Zjistěte, jak mohou správci přiřazovat licence více odběratelům pomocí funkce Hromadné přidání nebo skupin služby Microsoft Azure Active Directory.
-ms.openlocfilehash: 5a1327e497a48b6173afd4a7ad095dfcabacd098
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.openlocfilehash: eb641d86733ef794f1d53ae6eee45e0bdf4fde18
+ms.sourcegitcommit: deab74e8f41b30b28c041b048d67b3fff2cceab9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274060"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80994442"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Přiřazení předplatných více uživatelům
 Portál správy předplatných umožňuje přidávat uživatele jednou za čas nebo ve velkých skupinách.  Informace o přidání jednotlivých uživatelů naleznete v tématu [Přidání jednotlivých uživatelů](assign-license.md).
@@ -73,8 +73,6 @@ Použití této funkce usnadňuje možnost i nadále se přibližovat přiřazen
 
 > [!IMPORTANT]
 >
-> Použití skupin Azure AD je povoleno ve fázích.  Nemusí se okamžitě zobrazit funkce povolená pro vaši smlouvu(y).
->
 > Následující omezení platí pro použití skupin Azure AD pro přidávání odběratelů:
 > - Skupiny musí obsahovat alespoň jeden člen.  Prázdné skupiny nejsou podporovány.
 > - Skupiny musí mít méně než 1 000 uživatelů. 
@@ -124,7 +122,7 @@ A: V závislosti na tom, jak vaše organizace nakonfigurovala Azure AD, může z
 ## <a name="see-also"></a>Viz také
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
