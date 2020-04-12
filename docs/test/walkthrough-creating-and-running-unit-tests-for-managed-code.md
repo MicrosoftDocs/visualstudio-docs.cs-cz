@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: 4d5878e2c5950e45f65f8d56efdf53cd7b2e89ea
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b68cb720a636483a0c5e8c3193142d95dbb0afcd
+ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79094678"
+ms.lasthandoff: 04/12/2020
+ms.locfileid: "81223668"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>Návod: Vytváření a spouštění testů jednotek pro spravovaný kód
 
@@ -431,7 +431,7 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 
 ### <a name="retest-rewrite-and-reanalyze"></a>Přezkoušení, přepis a přeanalýza
 
-Předpokládejme, že je chyba v metodě testované a `Debit` <xref:System.ArgumentOutOfRangeException> metoda ani vyvolat bez ohledu na výstup správnou zprávu s výjimkou. V současné době testovací metoda nezpracovává tento případ. Pokud `debitAmount` je hodnota platná (to znamená menší než zůstatek a větší než nula), není zachycena žádná výjimka, takže assert nikdy nevyvolá. Přesto zkušební metoda projde. To není dobré, protože chcete, aby testovací metoda selhala, pokud není vyvolána žádná výjimka.
+V současné době testovací metoda nezpracovává všechny případy, které by měl. Pokud testovky, `Debit` metoda, nepodařilo <xref:System.ArgumentOutOfRangeException> vyvolat, když `debitAmount` byl větší než zůstatek (nebo menší než nula), zkušební metoda by projít. To není dobré, protože chcete, aby testovací metoda selhala, pokud není vyvolána žádná výjimka.
 
 Toto je chyba v testovací metodě. Chcete-li problém vyřešit, přidejte assert <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> na konci zkušební metody pro zpracování případu, kde není vyvolána žádná výjimka.
 

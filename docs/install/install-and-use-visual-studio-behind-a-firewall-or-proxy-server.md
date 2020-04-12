@@ -17,16 +17,16 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 44ffc778d398c2f9a1cfaf026d2364ee1dc27f9b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 025cf432912d38976507c93545e7c38b44d86fd8
+ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79303006"
+ms.lasthandoff: 04/12/2020
+ms.locfileid: "81223655"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Instalace a použití sady Visual Studio a služeb Azure Services za bránou firewall nebo proxy serverem
 
-Pokud vy nebo vaše organizace používáte bezpečnostní opatření, jako je brána firewall nebo proxy server, pak existují adresy URL domény, které můžete chtít přidat do seznamu povolených adres a porty a protokoly, které budete chtít otevřít, abyste měli nejlepší zkušenosti s instalací a použitím Visual Studio a služby Azure.
+Pokud vy nebo vaše organizace používá bezpečnostní opatření, jako je brána firewall nebo proxy server, pak existují adresy URL domény, které můžete chtít přidat do "seznamu povolených" a porty a protokoly, které můžete chtít otevřít, abyste měli co nejlepší zkušenosti při instalaci a používání sady Visual Studio a služby Azure.
 
 * **[Instalace sady Visual Studio](#install-visual-studio)**: Tyto tabulky obsahují adresy URL domény, které chcete přidat do seznamu povolených adres, abyste měli přístup ke všem požadovaným součástem a úlohám.
 
@@ -147,7 +147,7 @@ Někdy můžete spustit v síti nebo proxy související chyby při instalaci ne
 
 ## <a name="get-support"></a>Získat podporu
 
-Nabízíme možnost podpory [**živého chatu**](https://visualstudio.microsoft.com/vs/support/#talktous) (pouze v angličtině) pro problémy související s instalací.
+Nabízíme možnost podpory [**instalačního chatu**](https://visualstudio.microsoft.com/vs/support/#talktous) (pouze v angličtině) pro problémy související s instalací.
 
 Zde je několik dalších možností podpory:
 
@@ -160,5 +160,5 @@ Zde je několik dalších možností podpory:
 * [Požadavky na připojení pro Live Share](/visualstudio/liveshare/reference/connectivity/)
 * [Vytvoření síťové instalace sady Visual Studio](create-a-network-installation-of-visual-studio.md)
 * [Poradce při potížích se sítí v sadě Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md)
-* [Průvodce správcem sady Visual Studio](visual-studio-administrator-guide.md)
+* [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)
 * [Instalace za bránu firewall nebo proxy server (Visual Studio pro Mac)](/visualstudio/mac/install-behind-a-firewall-or-proxy-server)

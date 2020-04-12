@@ -4,18 +4,18 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 3f4b0528-03f0-4a02-b3c3-a39292a9bbe1
-ms.date: 04/07/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 description: Předplatné sady Visual Studio – proč se mi zobrazuje hotmail nebo gmailové adresy pro předplatitele?
-ms.openlocfilehash: e926caa8aef5a655b1f09ab8d6dbab1d70946827
-ms.sourcegitcommit: 1f7aed335c48215dff5c151f76f22e3f10e8b564
+ms.openlocfilehash: 44b18bd46d55349fae5a3ece03cee9fe93240148
+ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808338"
+ms.lasthandoff: 04/12/2020
+ms.locfileid: "81223681"
 ---
 # <a name="visual-studio-subscriptions--why-do-i-see-personal-accounts-for-my-subscribers"></a>Předplatná visual studia – proč se u odběratelů zobrazují osobní účty?
-Poté, co společnosti migrovaly z Centra multilicenčních služeb (VLSC) na nový [portál správy předplatných](https://manage.visualstudio.com)sady Visual Studio , byli správci překvapeni, že "Přihlašovací e-mailová adresa" pro některé předplatitele zobrazuje osobní e-mailovou adresu, jako je Hotmail nebo Outlook.  Další informace naleznete v [tomto videu](https://www.youtube.com/watch?v=J61EYaVN-dQ&list=PLReL099Y5nReJhZ6o8CQFPSBgzGCHX99_&index=6).
+Poté, co společnosti migrovaly z Centra multilicenčních služeb (VLSC) na nový [portál správy předplatných](https://manage.visualstudio.com)sady Visual Studio , byli správci překvapeni, že "Přihlašovací e-mailová adresa" pro některé předplatitele zobrazuje osobní e-mailovou adresu, jako je Hotmail nebo Outlook.  
 
 ## <a name="cause"></a>Příčina
 K tomuto scénáři dochází z důvodu přihlášení procesy, které byly přidruženy ke starším prostředí předplatitele MSDN. Uživatelé byli migrována z Volume License Service Center (VLSC) na portál pro správu předplatných sady Visual Studio bez úprav. Správci si možná nebyli vědomi toho, že uživatelé používali osobní účty k přístupu k výhodám předplatného. Před migracepředplatitele sady Visual Studio, které byly dokončeny v roce 2016, byly k úspěšnému použití předplatného sady Visual Studio vyžadovány dvě akce:

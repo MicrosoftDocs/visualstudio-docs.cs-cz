@@ -1,6 +1,6 @@
 ---
 title: Live Unit Testing
-ms.date: 03/07/2017
+ms.date: 04/07/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - Live Unit Testing
@@ -8,12 +8,12 @@ author: mikejo5000
 ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e1a0ec1fd6f2fbdf4f016b1d22db5a6929b5e24
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 34200e8719ef25de3c54c612b967cf3d4f9bab85
+ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75851434"
+ms.lasthandoff: 04/12/2020
+ms.locfileid: "81223697"
 ---
 # <a name="how-to-configure-and-use-live-unit-testing"></a>Jak konfigurovat a používat živé testování částí
 
@@ -130,12 +130,13 @@ Z neúspěšného testu můžete snadno ladit kód produktu, provádět úpravy 
 
 Například selhání testu zobrazené v předchozím obrázku bylo způsobeno nesprávným předpokladem v `true` testovací metodě, že neabecední znaky vrátit při předání metodě. <xref:System.Char.IsLower%2A?displayProperty=fullName> Po opravě zkušební metody by měly projít všechny testy. Není třeba pozastavit nebo zastavit živé testování částí.
 
+::: moniker range="vs-2017"
 ## <a name="test-explorer"></a>Průzkumník testů
 
 **Průzkumník testů** poskytuje rozhraní, které umožňuje spouštět a ladit testy a analyzovat výsledky testů. Živé testování částí se integruje s **Průzkumníkem testů**. Pokud testování živých částí není povoleno nebo je zastaveno, **Průzkumník testů** zobrazí stav testů částí při posledním spuštění testu. Změny zdrojového kódu vyžadují opětovné spuštění testů. Naopak při aktivnítestování částí je povolena, stav testování částí v **Průzkumníku testů** je aktualizován okamžitě. Není nutné explicitně spustit testy částí.
 
 > [!TIP]
-> Sem **Průzkumníka testů** otevřete výběrem **možnosti Testovat** > **Průzkumníka testů** **systému Windows** > z nabídky Visual Studio nejvyšší úrovně.
+> Živé **testování částí** otevřete výběrem **testovacího** > **průzkumníka systému** **Windows** > z nabídky Visual Studio nejvyšší úrovně.
 
 Můžete si všimnout v okně **Průzkumníka testů,** že některé testy jsou vybledlé. Například když povolíte live testování částí po otevření dříve uloženého projektu, okno **Průzkumníktestů** vybledlo všechny, ale neúspěšný test, jak ukazuje následující obrázek. V tomto případě live testování částí má znovu spustit neúspěšný test, ale neznovu spustit úspěšné testy. Důvodem je, že živé testování částí trvalá data označuje, že nebyly žádné změny od testování byly naposledy úspěšně spuštěny.
 
@@ -148,6 +149,28 @@ Existují určité rozdíly mezi live testování částí automaticky spuštěn
 - Spuštění nebo ladění testů z okna Průzkumníka testů spouští pravidelné binární soubory, zatímco živé testování částí spouští instrumentované binární soubory.
 - Živé testování částí nevytváří novou doménu aplikace pro spuštění testů, ale spíše spustí testy z výchozí domény. Testy spuštěné z okna **Průzkumníka testů** vytvářejí novou doménu aplikace.
 - Testování živých částí spustí testy v každé testovací sestavení postupně. V okně **Průzkumník testů** můžete spustit více testů paralelně.
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+## <a name="live-unit-testing-window"></a>Okno Testování živých částí
+
+**Živé testování částí**, podobně jako **Průzkumník testů**, poskytuje rozhraní, které umožňuje spouštět a ladit testy a analyzovat výsledky testů. Pokud je povoleno testování živých částí, stav testů částí v **Průzkumníku testů** je okamžitě aktualizován. Není nutné explicitně spustit testy částí. Pokud testování živých částí není povoleno nebo je zastaveno, **živé testování částí** zobrazí stav testů částí při posledním spuštění testu. Po restartování živétestování částí je ke opětovnému spuštění testů nutná změna zdrojového kódu.
+
+> [!TIP]
+> Živé testování částí spusťte výběrem **možnosti Testovat** > **živé testování** > částí**start** z nabídky Visual Studia nejvyšší úrovně. Okno **Testování živých částí** můžete také otevřít pomocí **okna Zobrazit** > další**testovací jednotky služby****Windows** > Live .
+
+Můžete si všimnout v okně **testování živé jednotky,** že některé testy jsou vybledlé. Například při zastavení a restartování live testování částí, okno **testování živých částí** vybledne všechny testy, jak ukazuje následující obrázek. Výsledky testů vybledlého ven ukazují, že test nebyl součástí nejnovějšího testu živé jednotky. Testy spustit pouze v případě, že je zjištěna změna testu nebo závislosti testu. Pokud nedojde k žádné změně, zabrání zbytečně spuštění testu. V tomto případě je šedě zobrazený výsledek testu stále "aktuální", i když nebyl součástí posledního spuštění.
+
+![Vybledlé testy v Průzkumníkovi testů](media/vs-2019/lut-test-explorer.png)
+
+Můžete znovu spustit všechny testy, které se zobrazí vybledlé provedením změny kódu.
+
+Existují určité rozdíly mezi live testování částí automaticky spuštěna aktualizace výsledků testů a explicitně spuštěny testy z **Průzkumníka testů**. Tyto rozdíly zahrnují:
+
+- Spuštění nebo ladění testů z okna Průzkumníka testů spouští pravidelné binární soubory, zatímco živé testování částí spouští instrumentované binární soubory.
+- Živé testování částí nevytváří novou doménu aplikace pro spuštění testů, ale spíše spustí testy z výchozí domény. Testy spuštěné z okna **Průzkumníka testů** vytvářejí novou doménu aplikace.
+- Testování živých částí spustí testy v každé testovací sestavení postupně. V okně **Průzkumník testů** můžete spustit více testů paralelně.
+::: moniker-end
 
 ## <a name="large-solutions"></a>Velká řešení
 
