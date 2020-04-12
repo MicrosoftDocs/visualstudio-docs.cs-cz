@@ -75,7 +75,6 @@
 ### [Supersprávci a správci](admin-roles.md)
 ### [Nastavení předvoleb smluv](admin-prefs.md)
 ### [Přehled](using-admin-portal.md)
-### [Videokurz: Použití portálu pro správu](https://www.youtube.com/watch?v=XG-E-IDjA-w&list=PLReL099Y5nReJhZ6o8CQFPSBgzGCHX99_&index=3&t=0s)
 ### Přiřazení předplatných
 #### [Přidání jednotlivých uživatelů](assign-license.md)
 #### [Přidání více uživatelů](assign-license-bulk.md)
