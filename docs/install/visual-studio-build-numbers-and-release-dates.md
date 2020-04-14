@@ -11,12 +11,13 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 130903670a9128ceeef5b2b016ccd1d75338b4fc
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+open_to_public_contributors: false
+ms.openlocfilehash: 4f157413909d512cd88de7bde67a6c197a0c8d92
+ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880205"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81276315"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Čísla sestavení a data vydání sady Visual Studio
 

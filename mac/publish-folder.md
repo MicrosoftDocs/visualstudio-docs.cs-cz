@@ -8,12 +8,12 @@ author: sayedihashimi
 ms.author: sayedha
 manager: unniravindranathan
 ms.prod: visual-studio-mac
-ms.openlocfilehash: 5dfee3999eddd8c4dacdd6180e18a4a50e6535dc
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 0ea70fb1a5898e2415b7f74e93233ca03ea52c45
+ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "73715906"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224495"
 ---
 # <a name="publish-to-a-folder-using-visual-studio-for-mac"></a>Publikování ve složce pomocí Visual Studia pro Mac
 
@@ -52,7 +52,7 @@ Pomocí Visual Studia for Mac můžete publikovat projekty .NET Core do složky 
 
 ## <a name="customize-publish-options"></a>Přizpůsobení možností publikování
 
-Chcete-li změnit název profilu publikování (který je zobrazen v místní nabídce publikování), přejmenujte soubor profilu publikování. Ujistěte se, že neměnit`.puxbml`příponu souboru ( ).
+Chcete-li změnit název profilu publikování (který je zobrazen v místní nabídce publikování), přejmenujte soubor profilu publikování. Ujistěte se, že neměnit`.pubxml`příponu souboru ( ).
 
 Chcete-li změnit cestu ke složce publikování, otevřete profil publikování a upravte hodnotu. `publishUrl`
 

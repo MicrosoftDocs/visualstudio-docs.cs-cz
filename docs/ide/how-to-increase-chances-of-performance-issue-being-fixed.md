@@ -1,16 +1,16 @@
 ---
 title: Jak můžete zvýšit pravděpodobnost, že bude problém s výkonem opraven
 description: Další informace a doporučené postupy pro odesílání problémů s výkonem v sadě Visual Studio
-author: seaniyer
-ms.author: seiyer
+author: madskristensen
+ms.author: madsk
 ms.date: 11/19/2019
 ms.topic: reference
-ms.openlocfilehash: 119de27298acafee7dc563a30246b18da42f9f29
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1a83a9c16e915bde2958193c640c0981f5edc005
+ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75918165"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81276452"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Jak zvýšit pravděpodobnost, že bude problém s výkonem vyřešen
 
@@ -113,7 +113,7 @@ VS přestane reagovat na delší dobu.
 
 **Přímo reprodukovatelná nereagoznost**
 
-Jak je popsáno v odpovídající části o haváriích, pro problémy, které lze snadno reprodukovat, vidět na více strojích a mohou být demonstrovány v malém vzorku, nejcennější zprávy o zpětné vazbě jsou ty, které obsahují kroky k reprodukci problému a zahrnují ukázkový zdrojový kód, který demonstruje problém.
+Jak je popsáno v odpovídající části o selhání, pro problémy, které lze snadno reprodukovat, vidět na více počítačích a může být prokázáno v malém vzorku, nejcennější zprávy o zpětné vazbě jsou ty, které obsahují kroky k reprodukci problému a zahrnují zdrojový kód vzorku, který demonstruje problém.
 
 **Neznámá nereagoza**
 

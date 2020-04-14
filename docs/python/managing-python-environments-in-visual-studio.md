@@ -9,16 +9,16 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5e269e19a09aec157e38eaf8938b5995c2647803
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a47af0e87907608ec9f71de4e605772eb1caed8e
+ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79302831"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224560"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Jak vytvořit a spravovat prostředí Pythonu v sadě Visual Studio
 
-*Prostředí* Pythonu je kontext, ve kterém spustíte kód Pythonu a zahrnuje globální, virtuální a conda prostředí. Prostředí se skládá z interpretu, knihovny (obvykle standardní knihovny Pythonu) a sady nainstalovaných balíčků. Tyto součásti společně určují, které jazykové konstrukce a syntaxe jsou platné, jaké funkce operačního systému můžete přistupovat a které balíčky můžete použít.
+**Prostředí Pythonu** je kontext, ve kterém spustíte kód Pythonu a zahrnuje globální, virtuální a conda prostředí. Prostředí se skládá z interpretu, knihovny (obvykle standardní knihovny Pythonu) a sady nainstalovaných balíčků. Tyto součásti společně určují, které jazykové konstrukce a syntaxe jsou platné, jaké funkce operačního systému můžete přistupovat a které balíčky můžete použít.
 
 V sadě Visual Studio v systému Windows použijete okno **Prostředí Pythonu,** jak je popsáno v tomto článku, ke správě prostředí a k výběru jednoho jako výchozí pro nové projekty. Další aspekty prostředí se nacházejí v následujících článcích:
 

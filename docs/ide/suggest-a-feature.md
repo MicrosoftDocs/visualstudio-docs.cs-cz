@@ -3,17 +3,17 @@ title: Navržení funkce
 description: Popisuje, jaké návrhy jsou na komunitu vývojářů, jak vytvořit návrh a jak jsou používány návrhy společností Microsoft v rozcestníku sady Visual Studio.
 ms.date: 12/17/2018
 ms.topic: conceptual
-author: seaniyer
-ms.author: seiyer
+author: madskristensen
+ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3af6d0b7b9f211fb9d0aa0a4b9a96b618081b89e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: bbe6992bd48cfe28dfe3df20f5540aca76390bf1
+ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74853513"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81276485"
 ---
 # <a name="suggest-a-feature-for-visual-studio"></a>Navrhnout funkci pro sadu Visual Studio
 

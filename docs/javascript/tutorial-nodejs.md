@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 416926742da427ba7ff18c6fa07de6477361cfa3
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 260bc6ff6eb2d0bfbf0b9abd19062892c358728a
+ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "78235077"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224521"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>Kurz: Vytvoření aplikace Node.js a Express v sadě Visual Studio
 
@@ -56,7 +56,7 @@ npm je výchozí správce balíčků pro soubor Node.js. Správce balíčků usn
 
 ### <a name="what-is-express"></a>Co je expresní?
 
-Express je rozhraní webové aplikace, které se používá jako serverová architektura pro soubor Node.js k vytváření webových aplikací. Express umožňuje použít zvolit různé front-end ové architektury k vytvoření ui, jako je Pug (dříve nazývaný Jade). Pug se používá v tomto kurzu.
+Express je rozhraní webové aplikace, které se používá jako serverová architektura pro soubor Node.js k vytváření webových aplikací. Express umožňuje zvolit různé front-endové architektury pro vytvoření ui, jako je Pug (dříve nazývaný Jade). Pug se používá v tomto kurzu.
 
 ## <a name="prerequisites"></a>Požadavky
 

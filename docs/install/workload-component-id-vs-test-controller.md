@@ -15,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: fbbda9c8-d2c6-474d-b52d-a95227d52fe7
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 73d83f6d4fa722da47298adf06649c4ff8abc670
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+open_to_public_contributors: false
+ms.openlocfilehash: a0b0961aae1942a503f6470d7ca727a6d52019b1
+ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79437499"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81276354"
 ---
 # <a name="visual-studio-test-controller-component-directory"></a>Adresář součástí komponenty testovacího řadiče sady Visual Studio
 
@@ -47,7 +48,7 @@ ms.locfileid: "79437499"
 ## <a name="see-also"></a>Viz také
 
 * [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md)
-* [Průvodce správcem sady Visual Studio](visual-studio-administrator-guide.md)
-* [Instalace sady Visual Studio pomocí parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
+* [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)
+* [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
   * [Příklady parametrů příkazového řádku](command-line-parameter-examples.md)
 * [Vytvoření offline instalace sady Visual Studio](create-an-offline-installation-of-visual-studio.md)

@@ -16,12 +16,13 @@ ms.assetid: a3c0cc76-e3ce-435c-a1af-a6318b5a4dbe
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: vs-2017
-ms.openlocfilehash: 3db18da6e09b3206d81f5600d54700f912a411e8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+open_to_public_contributors: false
+ms.openlocfilehash: 1e24f90f24921bee9a6132ccc047c0b9da37fc90
+ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76113910"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81276289"
 ---
 # <a name="visual-studio-desktop-express-component-directory"></a>Adresář komponent Visual Studio Desktop Express
 
@@ -96,7 +97,7 @@ neuvedeno | neuvedeno | neuvedeno
 ## <a name="see-also"></a>Viz také
 
 * [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md)
-* [Průvodce správcem sady Visual Studio](visual-studio-administrator-guide.md)
-* [Instalace sady Visual Studio pomocí parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
+* [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)
+* [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
   * [Příklady parametrů příkazového řádku](command-line-parameter-examples.md)
 * [Vytvoření offline instalace sady Visual Studio](create-an-offline-installation-of-visual-studio.md)

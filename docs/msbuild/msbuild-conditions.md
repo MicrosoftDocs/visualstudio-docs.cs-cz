@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbed62c13fc963af382ede113b138451303d9382
-ms.sourcegitcommit: 273b657e115c1756adb84e0e56b6f2c709bcee76
+ms.openlocfilehash: 1f13910e2481e574e18c7a8efaee6601137c0720
+ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80759709"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224469"
 ---
 # <a name="msbuild-conditions"></a>Podmínky msbuildu
 
@@ -29,8 +29,8 @@ MSBuild podporuje konkrétní sadu podmínek, které `Condition` lze použít v�
 
 |Podmínka|Popis|
 |---------------|-----------------|
-|'`stringA`' == '`stringB`'|Vyhodnotí `true` `stringA` if `stringB`rovná se .<br /><br /> Příklad:<br /><br /> `Condition="'$(CONFIG)'=='DEBUG'"`<br /><br /> Jednoduché uvozovky nejsou vyžadovány pro jednoduché alfanumerické řetězce nebo logické hodnoty. Pro prázdné hodnoty jsou však vyžadovány jednoduché uvozovky.|
-|'`stringA`' != '`stringB`'|`true` Vyhodnotí, `stringA` pokud není `stringB`rovno .<br /><br /> Příklad:<br /><br /> `Condition="'$(CONFIG)'!='DEBUG'"`<br /><br /> Jednoduché uvozovky nejsou vyžadovány pro jednoduché alfanumerické řetězce nebo logické hodnoty. Pro prázdné hodnoty jsou však vyžadovány jednoduché uvozovky.|
+|'`stringA`' == '`stringB`'|Vyhodnotí `true` `stringA` if `stringB`rovná se .<br /><br /> Příklad:<br /><br /> `Condition="'$(CONFIG)'=='DEBUG'"`<br /><br /> Jednoduché uvozovky nejsou vyžadovány pro jednoduché alfanumerické řetězce nebo logické hodnoty. Pro prázdné hodnoty jsou však vyžadovány jednoduché uvozovky. Tato kontrola je malá a velká písmena.|
+|'`stringA`' != '`stringB`'|`true` Vyhodnotí, `stringA` pokud není `stringB`rovno .<br /><br /> Příklad:<br /><br /> `Condition="'$(CONFIG)'!='DEBUG'"`<br /><br /> Jednoduché uvozovky nejsou vyžadovány pro jednoduché alfanumerické řetězce nebo logické hodnoty. Pro prázdné hodnoty jsou však vyžadovány jednoduché uvozovky. Tato kontrola je malá a velká písmena.|
 |\<, >, \<=, >=|Vyhodnotí číselné hodnoty operandů. Vrátí, `true` pokud je relační hodnocení true. Operandy musí být vyhodnoceny na desetinné nebo šestnáctkové číslo. Šestnáctková čísla musí začínat písmenem "0x". **Poznámka:**  V XML musí `<` `>` být znaky a musí být uvozeny. Symbol `<` je reprezentován jako `&lt;`. Symbol `>` je reprezentován jako `&gt;`.|
 |Existuje('`stringA`')|Vyhodnotí, `true` zda existuje soubor `stringA` nebo složka s názvem.<br /><br /> Příklad:<br /><br /> `Condition="!Exists('$(builtdir)')"`<br /><br /> Jednoduché uvozovky nejsou vyžadovány pro jednoduché alfanumerické řetězce nebo logické hodnoty. Pro prázdné hodnoty jsou však vyžadovány jednoduché uvozovky.|
 |HasTrailingSlash('`stringA`')|Vyhodnotí, `true` pokud zadaný řetězec obsahuje koncový\\znak zpětného lomítka ( ) nebo lomítko (/).<br /><br /> Příklad:<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> Jednoduché uvozovky nejsou vyžadovány pro jednoduché alfanumerické řetězce nebo logické hodnoty. Pro prázdné hodnoty jsou však vyžadovány jednoduché uvozovky.|

@@ -10,12 +10,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: affad69f6821addb50686d4f41d0bdb3bd816e8e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: bfca799111c83f29924c997218c42f09bff5568a
+ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75919014"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224456"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe – možnosti příkazového řádku
 
@@ -46,7 +46,7 @@ V následující tabulce jsou uvedeny všechny možnosti nástroje *VSTest.Conso
 |**/Framework: [*verze frameworku*]**|Cílová verze rozhraní .NET, která má být použita pro spuštění testu.<br />Příklady `Framework35`hodnot `Framework40` `Framework45`jsou `FrameworkUap10` `.NETCoreApp,Version=v1.1`, , , .<br />Pokud je cílová architektura zadána jako **Framework35**, testy jsou spuštěny v clr 4.0 "kompatibly mode".<br />Příklad: `/Framework:framework40`|
 |**/TestCaseFilter:[*výraz*]**|Spusťte testy, které odpovídají danému výrazu.<br /><\> Výraz je vlastnost\><formátu\>\| =\>hodnota<[<Expression ].<br />Příklad: `/TestCaseFilter:"Priority=1"`<br />Příklad: `/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />Možnost příkazového řádku **/TestCaseFilter** nelze použít s možností příkazového řádku **/Tests.** <br />Informace o vytváření a používání výrazů naleznete v [tématu TestCase filter](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).|
 |**/?**|Zobrazí informace o využití.|
-|**/Logger:[*uri/friendlyname*]**|Zadejte protokolovací nástroj pro výsledky testů.<br />Příklad: Chcete-li protokolovat výsledky do souboru výsledků testů sady Visual Studio (TRX), použijte<br />**/Logger:trx**<br />**[; LogFileName=\<Výchozí je jedinečný název souboru>]**<br />Příklad: Chcete-li publikovat výsledky testů na serveru Team Foundation, použijte TfsPublisher:<br />**/logger:TfsPublisher;**<br />**Collection=<\>url projektu ;**<br />**BuildName= název\>sestavení<;**<br />**TeamProject =<\>název projektu ;**<br />**[; Platforma\<= výchozí hodnota "Jakýkoli procesor">]**<br />**[; Flavor\<= Výchozí nastavení "Ladění">]**<br />**[; RunTitle =\><název ]**<br />Poznámka: TfsPublisher logger je zastaralé v Sadě Visual Studio 2017 a není podporována v novějších verzích sady Visual Studio. Pro tyto scénáře použijte vlastní protokolování místo. Tento protokolovací nástroj přepne protokolovací nástroj do staršího režimu.|
+|**/Logger:[*uri/friendlyname*]**|Zadejte protokolovací nástroj pro výsledky testů.<br />Příklad: Chcete-li protokolovat výsledky do souboru výsledků testů sady Visual Studio (TRX), použijte<br />**/Logger:trx**<br />**[; LogFileName=\<Výchozí je jedinečný název souboru>]**|
 |**/ListTesty:[*název souboru*]**|Seznamy zjištěných testů z daného testovacího kontejneru.|
 |**/ListObjevitelé**|Seznam nainstalovaných testovacích objevitelů.|
 |**/SeznamExecutors**|Zobrazí seznam nainstalovaných vykonavatelů testů.|
