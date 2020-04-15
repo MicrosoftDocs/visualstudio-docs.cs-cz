@@ -1,7 +1,7 @@
 ---
 title: Připojit ke spuštěným procesům pomocí ladicího programu | Dokumenty společnosti Microsoft
 ms.custom: seodec18
-ms.date: 04/08/2019
+ms.date: 04/14/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.processes.attach
@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5305be7615e426d7792d8dd3fefb2579e2ab6be
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 075f5b0df703e31ea265085f422567a4fb5298a4
+ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233039"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81385483"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Připojení ladicího programu sady Visual Studio ke spuštěným procesům
 Ladicí program sady Visual Studio můžete připojit ke spuštěnému procesu v místním nebo vzdáleném počítači. Po spuštění procesu vyberte **ladit** > **připojit k procesu** nebo stiskněte **Ctrl**+**Alt**+**P** v sadě Visual Studio a pomocí dialogového okna Připojit k **procesu** připojte ladicí program k procesu.
@@ -253,22 +253,22 @@ U některých typů aplikací, jako jsou aplikace Universal App (UPW), se nepři
 
 Pro ladicí program připojit ke kódu napsanému v jazyce C++, kód musí vyzařovat `DebuggableAttribute`. Můžete přidat do kódu automaticky propojením s parametrem [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute) linker.
 
-Pro ladění skriptů na straně klienta musí být v prohlížeči povoleno ladění skriptů. Pro ladění skriptu na straně klienta v Chromu zvolte jako typ kódu **webovou sadu** a v závislosti na typu aplikace možná budete `chrome.exe --remote-debugging-port=9222` muset zavřít všechny instance Chromu a spustit prohlížeč v režimu ladění (zadejte příkaz z příkazového řádku).
+Pro ladění skriptů na straně klienta musí být v prohlížeči povoleno ladění skriptů. Pro ladění skriptu na straně klienta v Chromu zvolte jako typ kódu **JavaScript (Chrome)** nebo **JavaScript (Microsoft Edge - Chromium)** a v závislosti na typu `chrome.exe --remote-debugging-port=9222` aplikace možná budete muset zavřít všechny instance Chromu a spustit prohlížeč v režimu ladění (typ z příkazového řádku). V dřívějších verzích sady Visual Studio byl ladicí program skriptu pro Chrome **webovou sadou**.
 
 Chcete-li rychle vybrat spuštěný proces, ke kterému chcete připojit, zadejte v sadě Visual Studio **kombinaci**+**Alt**+**P**a zadejte první písmeno názvu procesu.
 
 |Scénář|Metoda ladění|Název procesu|Poznámky a odkazy|
 |-|-|-|-|
 |Vzdálené ladění ASP.NET 4 nebo 4.5 na serveru služby IIS|Použití vzdálených nástrojů a **připojení ke zpracovat**|*w3wp.exe*|Viz [Vzdálené ladění ASP.NET ve vzdáleném počítači služby IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
-|Vzdálené ladění ASP.NET jádra na serveru služby IIS|Použití vzdálených nástrojů a **připojení ke zpracovat**|*dotnet.exe* nebo *appname.exe*|Informace o nasazení aplikací najdete v tématu [Publikování ve službách IIS](https://docs.asp.net/en/latest/publishing/iis.html). Informace o ladění naleznete v [tématu Vzdálené ladění ASP.NET jádra ve vzdáleném počítači služby IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)|
-|Ladění skriptu na straně klienta na místním serveru služby IIS pro podporované typy aplikací |Použít **připojit k procesu**|*chrome.exe*, *MicrosoftEdgeCP.exe*nebo *iexplore.exe*|Ladění skriptů musí být povoleno. V chromu musíte chrome spustit také v režimu ladění a v poli **Připojit k** vybrat **kód Webkit.**|
+|Vzdálené ladění ASP.NET jádra na serveru služby IIS|Použití vzdálených nástrojů a **připojení ke zpracovat**|*w3wp.exe* nebo *dotnet.exe*|Počínaje rozhraním .NET Core 3 se proces *w3wp.exe* používá pro výchozí [model hostování v aplikaci](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models). Informace o nasazení aplikací najdete v tématu [Publikování ve službách IIS](/aspnet/core/host-and-deploy/iis/). Podrobnější informace naleznete v [tématu Vzdálené ladění ASP.NET jádra ve vzdáleném počítači služby IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md#BKMK_attach)|
+|Ladění skriptu na straně klienta na místním serveru služby IIS pro podporované typy aplikací |Použít **připojit k procesu**|*chrome.exe*, *MicrosoftEdgeCP.exe*nebo *iexplore.exe*|Ladění skriptů musí být povoleno. V chromu musíte chrome spustit také v `chrome.exe --remote-debugging-port=9222` ladicím režimu (zadejte text z příkazového řádku) a v poli **Připojit k** vybrat **JavaScript (Chrome).**|
 |Ladění aplikace C#, Visual Basic nebo C++ v místním počítači|Použijte standardní ladění (**F5**) nebo **připojit k procesu**|*\<název aplikace>.exe*|Ve většině scénářů použijte standardní ladění a **nepřipojit k procesu**.|
-|Vzdálené ladění aplikace pro plochu windows|Vzdálené nástroje|Není dostupné.| Viz [Vzdálené ladění aplikace Jazyka C# nebo Visual Basic](../debugger/remote-debugging-csharp.md) nebo Vzdálené ladění aplikace [c++](../debugger/remote-debugging-cpp.md)|
+|Vzdálené ladění aplikace pro plochu windows|Vzdálené nástroje|–| Viz [Vzdálené ladění aplikace Jazyka C# nebo Visual Basic](../debugger/remote-debugging-csharp.md) nebo Vzdálené ladění aplikace [c++](../debugger/remote-debugging-cpp.md)|
 |Ladění .NET Core na Linuxu|Použít **připojit k procesu**|*dotnet.exe*|Informace o použití SSH naleznete [v tématu Vzdálené ladění .NET Core běžící na Linuxu pomocí SSH](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md). |
 |Ladění aplikace ASP.NET v místním počítači po spuštění aplikace bez ladicího programu|Použít **připojit k procesu**|*iiexpress.exe*|To může být užitečné, aby se vaše aplikace načítat rychleji, například (například) při profilování. |
 |Ladění jiných podporovaných typů aplikací v procesu serveru|Pokud je server vzdálený, použijte vzdálené nástroje a **připojit k procesu**|*chrome.exe*, *iexplore.exe*nebo jiné procesy|V případě potřeby použijte program Sledování prostředků k identifikaci procesu. Viz [Vzdálené ladění](../debugger/remote-debugging.md).|
-|Vzdálené ladění univerzální aplikace pro Windows (UPW), OneCore, HoloLens nebo aplikace IoT|Ladění nainstalovaného balíčku aplikace|Není dostupné.|Viz [Ladění nainstalovaného balíčku aplikace](debug-installed-app-package.md) namísto použití připojení k **procesu**|
-|Ladění univerzální aplikace pro Windows (UPW), OneCore, HoloLens nebo aplikace IoT, kterou jste nespustili z Visual Studia|Ladění nainstalovaného balíčku aplikace|Není dostupné.|Viz [Ladění nainstalovaného balíčku aplikace](debug-installed-app-package.md) namísto použití připojení k **procesu**|
+|Vzdálené ladění univerzální aplikace pro Windows (UPW), OneCore, HoloLens nebo aplikace IoT|Ladění nainstalovaného balíčku aplikace|–|Viz [Ladění nainstalovaného balíčku aplikace](debug-installed-app-package.md) namísto použití připojení k **procesu**|
+|Ladění univerzální aplikace pro Windows (UPW), OneCore, HoloLens nebo aplikace IoT, kterou jste nespustili z Visual Studia|Ladění nainstalovaného balíčku aplikace|–|Viz [Ladění nainstalovaného balíčku aplikace](debug-installed-app-package.md) namísto použití připojení k **procesu**|
 
 ## <a name="use-debugger-features"></a>Použití funkcí ladicího programu
 

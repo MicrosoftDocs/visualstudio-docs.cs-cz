@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.prod: visual-studio-dev16
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: bd9ac1bda9cb5f5d9cc5d84248200434426307c8
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: d6d519483b350f2c1086c76bc17522b71a435fe9
+ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80501939"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389971"
 ---
 Pomocí Visual Studia můžete snadno vytvářet, ladit a spouštět kontejnerizované aplikace .NET, ASP.NET a ASP.NET Core a publikovat je do registru kontejnerů Azure (ACR), Docker Hubu, služby Azure App Service nebo vlastního registru kontejnerů. V tomto článku publikujeme aplikaci ASP.NET Core do ACR.
 
@@ -21,7 +21,7 @@ Pomocí Visual Studia můžete snadno vytvářet, ladit a spouštět kontejneriz
 * [Desktop Dockeru](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) s nainstalovanou úlohou **pro vývoj webu**, nástroje **Azure** nebo **.NET Core**
 * [Nástroje pro vývoj jádra rozhraní .NET](https://dotnet.microsoft.com/download/dotnet-core/)
-* Chcete-li publikovat do registru kontejnerů Azure, předplatné Azure. [Zaregistrujte si bezplatnou zkušební verzi](https://azure.microsoft.com/offers/ms-azr-0044p/).
+* Chcete-li publikovat do registru kontejnerů Azure, předplatné Azure. [Zaregistrujte si bezplatnou zkušební verzi](https://azure.microsoft.com/free/dotnet/).
 
 ## <a name="installation-and-setup"></a>Instalace a nastavení
 
@@ -69,7 +69,7 @@ Předchozí *soubor Dockerfile* je založen na image [Microsoft/aspnetcore](http
 
 Když je zaškrtnuto políčko **Konfigurovat pro protokol HTTPS** nového dialogového okna projektu, *dockerfile* zpřístupní dva porty. Jeden port se používá pro přenosy HTTP; druhý port se používá pro protokol HTTPS. Pokud políčko není zaškrtnuto, jeden port (80) je vystaven pro přenosy HTTP.
 
-## <a name="debug"></a>Ladění
+## <a name="debug"></a>Ladit
 
 Vyberte **Docker** z rozevíracího okna ladění na panelu nástrojů a začněte ladit aplikaci. Může se zobrazit zpráva s výzvou k důvěře certifikátu. zvolte důvěřovat certifikátu, aby mohl pokračovat.
 
