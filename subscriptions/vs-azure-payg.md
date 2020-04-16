@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 5dc7f57e-883a-4cc1-a914-06245a8cb1ff
-ms.date: 07/30/2019
+ms.date: 04/15/2020
 ms.topic: conceptual
 description: Přečtěte si, jak nastavit účet Azure Sprůběžnou platbou.
-ms.openlocfilehash: b05f8a051a47d150b1c6670c54941820fcc73c47
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 4fdbaacd9f778d7e81667cd4faa504f877775f02
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80231975"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444844"
 ---
 # <a name="azure-devtest-pay-as-you-go-subscriptions"></a>Předplatná Azure DevTest s průběžným platbou
 Spolupracujte se svým týmem v cloudu.  Vytvořte více předplatných s průběžnými platbami s průběžnými platbami, které umožňují spolupráci s ostatními odběrateli a zároveň poskytují izolaci mezi týmy a prostředími.  Získáte exkluzivní zlevněné hodinové sazby za vývoj a testování a práva k používání cloudu pro váš předplacený software v Azure.
@@ -39,7 +39,7 @@ Spolupracujte se svým týmem v cloudu.  Vytvořte více předplatných s průb�
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 ### <a name="q--what-if-i-want-to-make-changes-to-this-subscription"></a>Otázka: Co když chci v tomto předplatném provést změny?
 A: Chcete-li provést změny v některém z vašich předplatných Azure:
-1. Přihlaste se k [portálu Azure](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. V seznamu v levém podokně vyberte **položku Správa nákladů + Fakturace**.
 3. Seznam předplatných se zobrazí v poli **Moje předplatná.** Klikněte na požadované předplatné.
 4. Nyní budete mít možnosti spravovat nebo zrušit předplatné, přejmenovat ho, změnit adresář nebo převést vlastnictví fakturace.
@@ -47,7 +47,7 @@ A: Chcete-li provést změny v některém z vašich předplatných Azure:
 ## <a name="see-also"></a>Viz také
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky

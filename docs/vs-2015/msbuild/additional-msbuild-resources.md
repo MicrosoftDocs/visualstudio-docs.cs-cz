@@ -1,5 +1,5 @@
 ---
-title: Další prostředky nástroje MSBuild | Microsoft Docs
+title: Další zdroje pro msbuild | Dokumenty společnosti Microsoft
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -599,12 +599,12 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6460d26ea7b7240cf54dfe3379ec75634bc5465d
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: aa25e4e15406c9091e90dfd8be5c2efd0a19e41b
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75847061"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81445048"
 ---
 # <a name="additional-msbuild-resources"></a>Další prostředky nástroje MSBuild
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -612,15 +612,15 @@ ms.locfileid: "75847061"
 Pokud pro řešený problém nelze najít potřebné informace v dokumentaci, lze použít jiné zdroje, například články znalostní báze, komunitu vývojářů nebo odbornou pomoc.  
   
 ## <a name="knowledge-base-articles"></a>Články znalostní báze  
- Ve znalostní bázi (KB) je možné hledat online články týkající se problémů s produktem. Ne všechny problémy mají odpovídající článek ve znalostní bázi, ale chyby, se kterými se setkal velký počet zákazníků, jsou obvykle uvedeny. Na webu [znalostní báze (výsledky hledání MSBuild)](https://search.microsoft.com/supportresults.aspx?q=knowledge+base+MSBuild&x=0&y=0) můžete získat přístup k ČLÁNKŮm znalostní báze.  
+ Ve znalostní bázi (KB) je možné hledat online články týkající se problémů s produktem. Ne všechny problémy mají odpovídající článek ve znalostní bázi, ale chyby, se kterými se setkal velký počet zákazníků, jsou obvykle uvedeny. K článkům kb můžete přistupovat na webu [znalostní báze Knowledge Base.](https://support.microsoft.com/help/242450/how-to-query-the-microsoft-knowledge-base-by-using-keywords-and-query)  
   
 ## <a name="community-forums"></a>Diskuzní fóra  
- Fóra umožňují interakci s dalšími vývojáři a také zaměstnanci společnosti Microsoft. Pokud narazíte na chybu, pro kterou nelze nalézt řešení, je možné poslat otázky týkající se problému na fórum. Také je možné prohledat diskusní skupiny a zjistit, zda někdo z ostatních psal o stejném problému. Na webu [MSDN fóra](https://social.msdn.microsoft.com/forums/en-US/msbuild/threads/) můžete získat přístup k fóru Visual Studio MSBuild.  
+ Fóra umožňují interakci s dalšími vývojáři a také zaměstnanci společnosti Microsoft. Pokud narazíte na chybu, pro kterou nelze nalézt řešení, je možné poslat otázky týkající se problému na fórum. Také je možné prohledat diskusní skupiny a zjistit, zda někdo z ostatních psal o stejném problému. Fóra Visual Studio MSBuild můžete získat na webu [Fóra MSDN.](https://social.msdn.microsoft.com/forums/en-US/msbuild/threads/)  
   
- K [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] komunitní prostředky můžete přistupovat na webu [Channel 9 MSBuild](https://channel9.msdn.com/) .  
+ K prostředkům komunity můžete získat přístup [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] na webu [MSBuild kanálu 9.](https://channel9.msdn.com/)  
   
 ## <a name="product-support"></a>Podpora produktu  
- Pokud máte i po vyzkoušení dalších prostředků nějaké dotazy, můžete kontaktovat služby podpory Microsoftu na webu [Microsoft Help and Support](https://support.microsoft.com/) . Informace o podpoře produktu dostupné ve vaší oblasti najdete v tématu o [komunikaci s námi](../ide/talk-to-us.md).  
+ Pokud máte i po vyzkoušení jiných prostředků otázky, můžete se obrátit na služby podpory společnosti Microsoft na webu [nápovědy a podpory společnosti Microsoft.](https://support.microsoft.com/) Informace o podpoře produktů, které jsou k dispozici ve vaší oblasti, naleznete [v tématu Talk to Us](../ide/talk-to-us.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Řešení potíží s cílením na rozhraní .NET Framework](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)

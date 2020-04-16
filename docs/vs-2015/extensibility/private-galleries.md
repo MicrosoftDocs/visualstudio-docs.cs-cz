@@ -1,5 +1,5 @@
 ---
-title: Privátní Galerie | Dokumentace Microsoftu
+title: Soukromé galerie | Dokumenty společnosti Microsoft
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,45 +11,45 @@ ms.assetid: b6b3dee7-91c5-4556-9f69-0d56b675e83b
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 097d666a839f67e657610b34641ed29da91797be
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 895fbef5459de75c7ccdc6a090fc30ec27a030f9
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68194014"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444918"
 ---
 # <a name="private-galleries"></a>Privátní galerie
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete sdílet ovládací prvky, šablony a nástroje, které vyvíjíte jejich zveřejněním *privátní Galerie* v síti intranet pro vaši organizaci, a to následujícím způsobem:  
+Ovládací prvky, šablony a nástroje, které vyvíjíte, můžete sdílet tak, že je zveřejníte v *soukromé galerii* v síti intranet pro vaši organizaci, a to následovně:  
   
-- Vytvořte kanál Atom (RSS) do centrálního umístění vhodně nakonfigurovaná (úložiště) na vašem intranetu. Další informace najdete v tématu [jak: Vytvoření Atom pro privátní galerii](../extensibility/how-to-create-an-atom-feed-for-a-private-gallery.md).  
+- Vytvořte informační kanál RsS (Atom) do vhodně nakonfigurovaného centrálního umístění (úložiště) v intranetu. Další informace naleznete v [tématu How to: Create atom feed for a Private Gallery](../extensibility/how-to-create-an-atom-feed-for-a-private-gallery.md).  
   
-- Soubor .pkgdef, který popisuje privátní Galerie distribuujte. Doporučujeme tuto konfiguraci pro správce, kteří se chcete připojit soukromou galerii mnoho počítačů současně.  
+- Rozdejte soubor .pkgdef, který popisuje soukromou galerii. Tuto konfiguraci doporučujeme správcům, kteří chtějí současně připojit soukromou galerii k mnoha počítačům.  
   
-## <a name="adding-a-private-gallery-to-extensions-and-updates-in-visual-studio"></a>Přidání privátní Galerie rozšíření a aktualizace v sadě Visual Studio  
- Privátní Galerie je k dispozici, můžete přidávat na **rozšíření a aktualizace** v sadě Visual Studio.  
+## <a name="adding-a-private-gallery-to-extensions-and-updates-in-visual-studio"></a>Přidání soukromé galerie do rozšíření a aktualizací v sadě Visual Studio  
+ Když je k dispozici soukromá galerie, můžete ji přidat do **rozšíření a aktualizace** v sadě Visual Studio.  
   
- ![Dialogové okno pro přidání správce rozšíření](../extensibility/media/em-adddialog.png "EM_AddDialog")  
+ ![Dialogové okno Přidat Správce rozšíření](../extensibility/media/em-adddialog.png "EM_AddDialog")  
   
-#### <a name="to-add-a-private-gallery-to-extensions-and-updates"></a>Chcete-li přidat soukromou galerii rozšíření a aktualizace  
+#### <a name="to-add-a-private-gallery-to-extensions-and-updates"></a>Přidání soukromé galerie do rozšíření a aktualizací  
   
-1. V panelu nabídky zvolte **nástroje**, **možnosti**.  
+1. Na řádku nabídek zvolte **Nástroje**, **Možnosti**.  
   
-2. V **prostředí** uzlu, vyberte **rozšíření a aktualizace**.  
+2. V uzlu **Prostředí** vyberte **Rozšíření a aktualizace**.  
   
-3. Zvolte **přidat** tlačítko.  
+3. Vyberte tlačítko **Přidat**.  
   
-4. V **název** pole, zadejte název pro privátní galerii, například `My Gallery`.  
+4. Do pole **Název** zadejte název soukromé galerie, `My Gallery`například .  
   
-5. V **URL** zadejte adresu URL informačního kanálu Atom nebo webu služby SharePoint, který je hostitelem privátní galerie.  
+5. Do pole **URL** zadejte adresu URL informačního kanálu Atom nebo sharepointového webu, který je hostitelem soukromé galerie.  
   
-    1. Pokud je hostitel informačního kanálu Atom, která se připojuje k privátní galerie, adresa URL by vypadat podobně jako tato: http://www.mywebsite/mygallery/atom.xml.  Tato adresa URL může odkazovat na soubor nebo síťovou cestu.  
+    1. Pokud je hostitelem informační kanál Atom, který se připojuje k `http://www.mywebsite/mygallery/atom.xml`soukromé galerii, adresa URL by se podobala této adrese: .  Tato adresa URL může odkazovat na soubor nebo síťovou cestu.  
   
-    2. Pokud hostitel je web služby SharePoint, adresa URL by vypadat podobně jako tato: http://mysharepoint/sites/mygallery/forms/AllItems.aspx.  
+    2. Pokud je hostitelem sharepointový web, bude `http://mysharepoint/sites/mygallery/forms/AllItems.aspx`adresa URL vypadat podobně jako tato: .  
   
-### <a name="managing-private-galleries"></a>Správa privátní Galerie  
- Správce může zpřístupnit soukromou galerii několik počítačů ve stejnou dobu úpravou registru systému na každém počítači. K tomu vytvořte soubor .pkgdef, který popisuje nové klíče registru a jejich hodnoty.  Formát tohoto souboru je následující.  
+### <a name="managing-private-galleries"></a>Správa soukromých galerií  
+ Správce může zpřístupnit soukromou galerii několika počítačům současně úpravou systémového registru v každém počítači. Chcete-li to provést, vytvořte soubor .pkgdef, který popisuje nové klíče registru a jejich hodnoty.  Formát tohoto souboru je následující.  
   
 ```  
 [$RootPath$\ExtensionManager\Repositories\{UniqueGUID}]  
@@ -63,33 +63,33 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
   
 ```  
   
- Další informace najdete v tématu [jak: Správa privátní galerie s použitím nastavení registru](../extensibility/how-to-manage-a-private-gallery-by-using-registry-settings.md).  
+ Další informace naleznete v [tématu How to: Manage a Private Gallery using Registry Settings](../extensibility/how-to-manage-a-private-gallery-by-using-registry-settings.md).  
   
-## <a name="installing-extensions-from-a-private-gallery"></a>Instalace rozšíření z privátní Galerie  
- Můžete vyhledat a nainstalovat rozšíření sady Visual Studio z privátní Galerie v **rozšíření a aktualizace**. Následující kroky používají privátní galerie s názvem `My Gallery`.  
+## <a name="installing-extensions-from-a-private-gallery"></a>Instalace rozšíření ze soukromé galerie  
+ Rozšíření sady Visual Studio můžete vyhledat a nainstalovat ze soukromé galerie v **části Rozšíření a aktualizace**. Následující kroky používají soukromou `My Gallery`galerii s názvem .  
   
- ![Správce rozšíření pro instalaci privátní Galerie](../extensibility/media/em.png "EM_")  
+ ![Správce rozšíření instaluje soukromou galerii](../extensibility/media/em.png "EM_")  
   
-#### <a name="to-search-for-and-install-extensions-from-a-private-gallery"></a>K vyhledání a instalace rozšíření z privátní Galerie  
+#### <a name="to-search-for-and-install-extensions-from-a-private-gallery"></a>Vyhledání a instalace rozšíření ze soukromé galerie  
   
-1. V panelu nabídky zvolte **nástroje**, **rozšíření a aktualizace**.  
+1. Na řádku nabídek zvolte **Nástroje**, **Rozšíření a Aktualizace**.  
   
 2. V levém podokně vyberte **Online rozšíření**a pak vyberte **Moje galerie**.  
   
-3. V pravém podokně vyberte rozšíření a klikněte na tlačítko **Stáhnout** tlačítko.  
+3. V pravém podokně vyberte rozšíření a pak zvolte tlačítko **Stáhnout.**  
   
-## <a name="updating-extensions-from-a-private-gallery"></a>Aktualizace rozšíření z privátní Galerie  
- Jako nová verze rozšíření sady Visual Studio jsme zveřejnili v privátní galerii, můžete aktualizovat rozšíření, které jste nainstalovali. Následující kroky používají privátní galerie s názvem `My Repository`.  
+## <a name="updating-extensions-from-a-private-gallery"></a>Aktualizace rozšíření ze soukromé galerie  
+ Jako nové verze rozšíření Sady Visual Studio jsou zaúčtovány v soukromé galerii, můžete aktualizovat rozšíření, které jste nainstalovali. Následující kroky používají soukromou `My Repository`galerii s názvem .  
   
- ![Aktualizace rozšíření správce privátní Galerie](../extensibility/media/em-update.png "EM_Update")  
+ ![Aktualizace galerie správce rozšíření](../extensibility/media/em-update.png "EM_Update")  
   
-#### <a name="to-update-an-installed-extension-from-a-private-gallery"></a>K aktualizaci nainstalovaného rozšíření z privátní Galerie  
+#### <a name="to-update-an-installed-extension-from-a-private-gallery"></a>Aktualizace nainstalovaného rozšíření ze soukromé galerie  
   
-1. V panelu nabídky zvolte **nástroje**, **rozšíření a aktualizace**.  
+1. Na řádku nabídek zvolte **Nástroje**, **Rozšíření a Aktualizace**.  
   
-2. V levém podokně vyberte **aktualizace**a pak vyberte **Moje úložiště**.  
+2. V levém podokně vyberte **Aktualizace**a pak vyberte **Moje úložiště**.  
   
-3. V pravém podokně vyberte rozšíření a klikněte na tlačítko **aktualizace** tlačítko.  
+3. V pravém podokně vyberte rozšíření a pak zvolte tlačítko **Aktualizovat.**  
   
 ## <a name="see-also"></a>Viz také  
  [Hledání a používání rozšíření sady Visual Studio](../ide/finding-and-using-visual-studio-extensions.md)   

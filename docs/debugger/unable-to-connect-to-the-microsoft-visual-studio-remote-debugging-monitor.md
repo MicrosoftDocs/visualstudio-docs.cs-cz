@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d509292bc3c7a909289abf0c73babccfead31532
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: d6173d6b3525a1bd723bc859d34b889b3796d295
+ms.sourcegitcommit: c3b92a9912a5816f16c6059d1738dbc833851346
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/15/2020
-ms.locfileid: "81385402"
+ms.locfileid: "81397373"
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Nepodařilo se připojit ke sledování Microsoft Visual Studio Remote Debugging Monitor.
 Tato zpráva může nastat, protože monitor vzdáleného ladění není správně nastaven ve vzdáleném počítači nebo je vzdálený počítač nepřístupný z důvodu problémů se sítí nebo přítomnosti brány firewall.
@@ -34,6 +34,7 @@ Zpráva `Unable to Connect to the Microsoft Visual Studio Remote Debugging Monit
 
 - [Ladicí program se nemůže připojit ke vzdálenému počítači. Ladicí program nemohl přeložit zadaný název počítače.](#cannot_connect)
 - [Požadavek na připojení byl odmítnut vzdáleným ladicím programem.](#rejected)
+- [Připojení ke vzdálenému koncovému bodu bylo ukončeno.](#connection_terminated)
 - [Neplatný přístup k umístění paměti](#invalid_access)
 - [Ve vzdáleném počítači není spuštěn žádný server se zadaným názvem.](#no_server)
 - [Požadovaný název byl platný, ale nebyla nalezena žádná data požadovaného typu.](#valid_name)
@@ -67,17 +68,19 @@ V dialogovém okně **Připojit k procesu** nebo ve vlastnostech projektu zkontr
 
 Pokud jsou tyto hodnoty správné a zpráva uvádí režim **ověřování systému Windows,** zkontrolujte, zda je vzdálený ladicí program ve správném režimu ověřování **(Nástroje > možnosti**).
 
-## <a name="the-connection-with-the-remote-endpoint-was-terminated"></a><a name="connection_terminated"></a>Připojení se vzdáleným koncovým bodem bylo ukončeno.
+## <a name="connection-with-the-remote-endpoint-was-terminated"></a><a name="connection_terminated"></a>Připojení ke vzdálenému koncovému bodu bylo ukončeno.
 
 Pokud ladíte aplikaci služby Azure App Service, zkuste místo **připojit k procesu**použít příkaz [Připojit ladicí program](../debugger/remote-debugging-azure.md#remote_debug_azure_app_service) z Průzkumníka cloudu nebo Průzkumníka serveru .
 
 Pokud používáte **připojit k procesu** ladění:
 
-1. V dialogovém okně **Připojit k procesu** nebo ve vlastnostech projektu zkontrolujte, zda název vzdáleného počítače a číslo portu odpovídají názvu a číslu portu zobrazenému v okně vzdáleného ladicího programu. Pokud je nesprávná, opravte ji a akci opakujte.
+- V dialogovém okně **Připojit k procesu** nebo ve vlastnostech projektu zkontrolujte, zda název vzdáleného počítače a číslo portu odpovídají názvu a číslu portu zobrazenému v okně vzdáleného ladicího programu. Pokud je nesprávná, opravte ji a akci opakujte.
 
-2. Podrobnější informace, které vám pomohou problém vyřešit, naleznete v protokolu aplikace na serveru (Prohlížeč událostí v systému Windows).
+- Pokud se pokoušíte připojit pomocí názvu hostitele, zkuste místo toho adresu IP.
 
-3. V opačném případě zkuste restartovat visual studio s oprávněními správce a akci opakujte.
+- Podrobnější informace, které vám pomohou problém vyřešit, naleznete v protokolu aplikace na serveru (Prohlížeč událostí v systému Windows).
+
+- V opačném případě zkuste restartovat visual studio s oprávněními správce a akci opakujte.
 
 ## <a name="invalid-access-to-memory-location"></a><a name="invalid_access"></a>Neplatný přístup k umístění paměti
 

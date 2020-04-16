@@ -8,12 +8,12 @@ manager: jillfra
 ms.technology: vs-azure
 ms.workload:
 - azure
-ms.openlocfilehash: f5868f97301eba62d16ea68cdaa0c97c8e20edd1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 931f8c2a6d3be130ef78f59f9b3853d28fad8cd4
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75916953"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444684"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Začínáme s nástroji Visual Studio Kubernetes Tools
 
@@ -40,7 +40,7 @@ Chcete-li tuto novou funkci využít, budete potřebovat:
 
     1. Cluster služby Azure Kubernetes. Další informace naleznete [v tématu Vytvoření clusteru AKS](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster). Ujistěte se, že [se připojíte ke clusteru](/azure/aks/kubernetes-walkthrough#connect-to-the-cluster) z vývojové pracovní stanice.
 
-    1. Helm CLI nainstalován na vývojové pracovní stanici. Další informace naleznete [v tématu Instalace helmu](https://github.com/kubernetes/helm/blob/master/docs/install.md).
+    1. Helm CLI nainstalován na vývojové pracovní stanici. Další informace naleznete [v tématu Instalace helmu](https://github.com/helm/helm-www/blob/master/content/en/docs/helm/helm_install.md).
 
     1. Helm nakonfigurován proti clusteru AKS pomocí příkazu. `helm init` Další informace o tom, jak to provést, naleznete v [tématu Konfigurace helmu](/azure/aks/kubernetes-helm#configure-helm).
 ::: moniker-end

@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 876781cb6967f5d10dddccd54a46e218170445ab
-ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
+ms.openlocfilehash: 46bfa808cbf99e942d7aadd2802f51eecfcefae8
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79432362"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444903"
 ---
 # <a name="deploying-a-visual-studio-tools-for-office-solution-using-windows-installer"></a>Nasazení nástrojů sady Visual Studio pro řešení Office pomocí Instalační služby systému Windows
 
@@ -122,7 +122,7 @@ Prvním krokem je vytvoření projektu instalace.
 ::: moniker-end
 ::: moniker range="=vs-2019"
 3. V **dialogovém** okně Přidat nový projekt vyberte šablonu **Instalační projekt.**
-4. Klikněte na **Další**.
+4. Klikněte na **Další**.
 ::: moniker-end
 
 5. Do pole **Název** zadejte **OfficeAddInSetup**.
@@ -593,7 +593,7 @@ s
 ## <a name="about-the-authors"></a>O autorech
 
 Wouter van Vugt je mvp společnosti Microsoft s technologiemi Office Open XML a nezávislým konzultantem zaměřeným na vytváření aplikací Office Business (OBA) se službou SharePoint, Microsoft Office a souvisejícími technologiemi .NET.
-Wouter je častým přispěvatelem k webům komunity vývojářů, jako jsou [OpenXmlDeveloper.org](http://openxmldeveloper.org/) a [MSDN](/previous-versions/office/developer/office-2007/bb879915(v=office.12)). Vydal několik bílých knih a článků, stejně jako knihu k dispozici on-line s názvem Open XML: Explained e-book.
-Wouter je zakladatelem společnosti Code-Counsel, nizozemské společnosti, která se zaměřuje na poskytování špičkového technického obsahu prostřednictvím různých kanálů. Můžete se dozvědět více o Wouter čtení jeho blog a navštívit [Code-Counsel webové stránky](http://www.code-counsel.net/).
+Wouter je častým přispěvatelem k webům komunity vývojářů, jako je [MSDN](/previous-versions/office/developer/office-2007/bb879915(v=office.12)). Vydal několik bílých knih a článků, stejně jako knihu k dispozici on-line s názvem Open XML: Explained e-book.
+Wouter je zakladatelem společnosti Code-Counsel, nizozemské společnosti, která se zaměřuje na poskytování špičkového technického obsahu prostřednictvím různých kanálů. Můžete se dozvědět více o Wouter čtením jeho blog.
 
 Ted Pattison je SharePoint MVP, autor, trenér a zakladatel Ted Pattison Group. Na podzim roku 2005 byl Ted najat skupinou Microsoft Developer Platform Evangelism, aby vytvořil vzdělávací osnovy pro vývojáře Ascend pro služby Windows SharePoint Services 3.0 a Microsoft Office SharePoint Server 2007. Od té doby se Ted zaměřuje výhradně na vzdělávání profesionálních vývojářů v technologiích SharePointu 2007. Ted dokončil psaní knihy pro Microsoft Press s názvem Uvnitř Windows SharePoint Services 3.0, která se zaměřuje na to, jak používat SharePoint jako vývojovou platformu pro vytváření obchodních řešení. Ted také píše sloupec zaměřený na vývojáře pro časopis MSDN s názvem Office Space.

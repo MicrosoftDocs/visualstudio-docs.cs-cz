@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: c304aca5171e1addab9a941105f11fb534eaa5ff
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: d75bb4f5274201b7cf745ff8c7c6f27b869855c3
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74474016"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81445009"
 ---
 # <a name="publish-a-nodejs-application-to-azure-linux-app-service"></a>Publikování aplikace Node.js do Azure (Linux App Service)
 
@@ -27,7 +27,7 @@ Při publikování aplikace Node.js do Azure existuje několik možností. Patř
 V tomto kurzu nasadíte aplikaci do [linuxové služby App Service](/azure/app-service/containers/app-service-linux-intro).
 Linux App Service nasazuje linuxový docker kontejner ke spuštění aplikace Node.js (na rozdíl od služby Windows App Service, která spouští aplikace Node.js za službou IIS ve Windows).
 
-Tento kurz ukazuje, jak vytvořit aplikaci Node.js počínaje šablonou nainstalovanou pomocí nástrojů Node.js pro Visual Studio, přesunut kód do úložiště na GitHubu a pak zřídit službu Azure App Service prostřednictvím webového portálu Azure, abyste mohli nasadit z Úložiště GitHub. Pokud chcete pomocí příkazového řádku zřídit službu Azure App Service a vysunout kód z místního úložiště Git, přečtěte si viz [Vytvoření aplikace Node.js](/azure/app-service/containers/quickstart-nodejs).
+Tento kurz ukazuje, jak vytvořit aplikaci Node.js počínaje šablonou nainstalovanou pomocí nástrojů Node.js pro Visual Studio, přesunut kód do úložiště na GitHubu a pak zřídit službu Azure App Service prostřednictvím webového portálu Azure, abyste mohli nasadit z úložiště GitHuby. Pokud chcete pomocí příkazového řádku zřídit službu Azure App Service a vysunout kód z místního úložiště Git, přečtěte si viz [Vytvoření aplikace Node.js](/azure/app-service/containers/quickstart-nodejs).
 
 V tomto kurzu se naučíte:
 > [!div class="checklist"]
@@ -109,7 +109,7 @@ Nastavení GitHubu pro Visual Studio:
 
 ## <a name="create-a-linux-app-service-in-azure"></a>Vytvoření linuxové služby aplikací v Azure
 
-1. Přihlaste se k [portálu Azure](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 
 2. Ze seznamu služeb vlevo vyberte **Služby aplikací** a klikněte na **Přidat**.
 
@@ -173,7 +173,7 @@ Nastavení GitHubu pro Visual Studio:
 ## <a name="troubleshooting"></a>Řešení potíží
 
 * Pokud proces node.exe zemře (to znamená, že dojde k neošetřené výjimce), kontejner se restartuje.
-* Při spuštění kontejneru, prochází různými heuristiky zjistit, jak spustit proces Node.js. Podrobnosti o implementaci lze zobrazit na [generateStartupCommand.js](https://github.com/Azure-App-Service/node/blob/master/8.9.4/startup/generateStartupCommand.js).
+* Při spuštění kontejneru, prochází různými heuristiky zjistit, jak spustit proces Node.js. Podrobnosti o implementaci lze zobrazit na [generateStartupCommand.js](https://github.com/Azure/app-service-builtin-images/blob/master/node/8.9.4/startup/generateStartupCommand.js).
 * Můžete se připojit k běžící kontejner přes SSH pro vyšetřování. To se dá snadno provést pomocí portálu Azure. Vyberte službu App Service a posuňte se dolů v seznamu nástrojů, dokud nedosáhnete **SSH** v části **Vývojové nástroje.**
 * Chcete-li pomoci při řešení potíží, přejděte na nastavení **protokolů diagnostiky** pro službu App Service a změňte nastavení **protokolování kontejneru Dockeru** z **vypnuto** na **systém souborů**. Protokoly jsou vytvořeny v kontejneru pod */home/LogFiles/*_docker.log*, a lze přistupovat na poli pomocí SSH nebo FTP(S).
 * Webu může být přiřazen vlastní název domény, nikoli adresa URL *.azurewebsites.net přiřazená ve výchozím nastavení. Další podrobnosti naleznete v tématu [Mapovat vlastní doménu](/azure/app-service/app-service-web-tutorial-custom-domain).

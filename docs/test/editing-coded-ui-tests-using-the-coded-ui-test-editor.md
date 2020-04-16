@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 1e861c31fa2959c3bace008af7937f6686b2705f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8df6d1ea44cb9737c39653366c7b35823051d5f6
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589653"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81445035"
 ---
 # <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>Úprava kódovaných testů ui pomocí Editoru testů programovaného ui
 
@@ -74,7 +74,7 @@ Pomocí Editoru testkódovaného ui můžete rychle vyhledat a zobrazit všechny
 
 Chcete-li upravit vlastnosti akce uj. **UI Action**
 
-Pokud například server není k dispozici a k webovému prohlížeči je přidružena akce uživatelského prostředí, `'http://Contoso2/default.aspx'`která uvádí **Přejít na webovou stránku ,<http://Contoso1/default.aspx>** můžete změnit adresu URL na .
+Pokud například server není k dispozici a k webovému prohlížeči je přidružena akce uživatelského prostředí, která uvádí **Přejít na\/webovou stránku http: /Contoso1/default.aspx**, můžete adresu URL změnit na `http://Contoso2/default.aspx`.
 
 ![Vlastnosti ovládacích prvků](../test/media/codeduitestcontrolprop.png)
 

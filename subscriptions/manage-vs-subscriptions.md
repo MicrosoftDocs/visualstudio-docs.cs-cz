@@ -7,12 +7,12 @@ ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Přečtěte si, jak maximálně využít předplatná Sady Visual Studio
-ms.openlocfilehash: 8790897f0e5169aebc020035b4c8c1d5749c230e
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 7d883092372d58f4a5bcc787daed0a99124a1704
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232360"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444869"
 ---
 # <a name="managing-subscriptions"></a>Správa předplatných
 
@@ -52,7 +52,6 @@ Na stránce Výhody se předplatné, které se používá, zřetelně zobrazí v
 **Předplatná získaná prostřednictvím programů:**  Pokud předplatné získáte prostřednictvím programu, bude vaše předplatné vázáno na vaši účast v programu. Další informace získáte od kontaktů programu.
 
 - [Představte si](https://imagine.microsoft.com/about)
-- [Bizspark](https://bizspark.microsoft.com/About/Offers)
 - [Microsoft Partner Network](https://partner.microsoft.com)
 - [Certifikovaný trenér microsoftu](https://www.microsoft.com/learning/mct-certification.aspx)
 
@@ -106,7 +105,7 @@ A: V závislosti na nákupní kanál, Microsoft udržuje zákaznická data pro r
 |    Volume Licensing Service Center (VLSC)              |    180          |
 |    Smlouva o produktech a službách společnosti Microsoft    |    180          |
 |    Předplatná Visual Studio Cloud                   |    180          |
-|    Program (např. mct, bizspark, mpn, imagine)          |    180          |
+|    Program (např. MCT, MPN, Imagine)          |    180          |
 |    Není určen k opětovnému prodeji (např.                      |    180          |
 |    DevEssentials                                       |    30           |
 
@@ -117,13 +116,13 @@ A: V závislosti na nákupní kanál, Microsoft udržuje zákaznická data pro r
 ## <a name="see-also"></a>Viz také
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Spravujete předplatná pro vaši organizaci?  Další informace o správě předplatných Sady Visual Studio:
 - [Přiřazení jednotlivých předplatných](assign-license.md)
 - [Přiřazení více předplatných](assign-license-bulk.md)
-- [Úpravy předplatných](edit-license.md)
+- [Úprava předplatných](edit-license.md)
 - [Odstranění předplatných](delete-license.md)
 - [Určení maximálního využití](maximum-usage.md)

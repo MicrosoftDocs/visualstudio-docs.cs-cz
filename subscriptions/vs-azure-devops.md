@@ -7,17 +7,22 @@ ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
 ms.date: 03/24/2020
 ms.topic: conceptual
 description: Zjistěte, jak můžete používat Azure DevOps jako předplatitele Visual Studia.
-ms.openlocfilehash: 11bd1262e72042b01c2514edc3bc3158325b9417
-ms.sourcegitcommit: 67dd2aedfe9752afaec9625ed3056fa03bd2699e
+ms.openlocfilehash: a68456b93a307d97ab706e18b3790e84be547f9f
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80607173"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444818"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Výhody Azure DevOps pro předplatitele Sady Visual Studio
 Jako aktivní předplatitel Visual Studia můžete v Azure DevOps, které jsou součástí vašeho předplatného, používat celou řadu funkcí, které jsou součástí vašeho předplatného jako výhodu. Tyto stejné funkce budete moct používat v každé organizaci Azure DevOps, ve které jste členem, ať už jste organizaci vytvořili nebo jste ji přidali někdo jiný.
 
 ## <a name="sign-in"></a>Přihlášení
+
+   > [!div class="mx-imgBorder"]
+   > ![Dlaždice Azure DevOps](_img/vs-azure-devops/vs-azure-devops-tile.png)
+
+   
 Když se přihlásíte k Azure DevOps pomocí identity, kterou jste použili pro aktivaci předplatného Sady Visual Studio, nebo [alternativní identity](vs-alternate-identity.md), automaticky to rozpoznáme.  Tímto způsobem můžete také přidat pracovní nebo školní účet (který používáte při přihlášení do Sady Visual Studio, Office 365 nebo podnikové nebo školní sítě), což vám umožní přístup k Azure DevOps pomocí vašeho osobního účtu i pracovního nebo školního účtu.
 
 [Zaregistrujte si bezplatnou organizaci Azure DevOps](https://visualstudio.microsoft.com/team-services/)

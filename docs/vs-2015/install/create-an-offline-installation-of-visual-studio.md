@@ -1,5 +1,5 @@
 ---
-title: Vytvořit Offline instalaci | Dokumentace Microsoftu
+title: Vytvoření offline instalace | Dokumenty společnosti Microsoft
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-install
@@ -13,67 +13,67 @@ caps.latest.revision: 22
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 72bf11519ec500082304fde431122d05ee65db54
-ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
+ms.openlocfilehash: a6a9707d517a8a43d9a9ca156a5f7291ecee9bee
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76124514"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81445061"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Vytvoření offline instalace sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [vytvoření offline instalace sady Visual Studio](/visualstudio/install/create-an-offline-installation-of-visual-studio) nebo [Vytvoření síťové instalace sady Visual Studio](/visualstudio/install/create-a-network-installation-of-visual-studio).
+Nejnovější dokumentaci k sadě Visual Studio najdete [v tématu Vytvoření offline instalace sady Visual Studio](/visualstudio/install/create-an-offline-installation-of-visual-studio) nebo Vytvoření síťové instalace sady Visual [Studio](/visualstudio/install/create-a-network-installation-of-visual-studio).
 
-Tato stránka popisuje postup instalace sady Visual Studio 2015, když nejsou připojeni k Internetu. Však "odpojené" instalace, musíte nejprve vytvoříte rozložení pro offline instalaci pomocí počítač, který je připojený k Internetu. Tady je postup.
+Tato stránka popisuje, jak nainstalovat Visual Studio 2015, když nejste připojeni k Internetu. Chcete-li však provést "odpojenou" instalaci, musíte nejprve vytvořit rozložení instalace offline pomocí počítače připojeného k Internetu. Zde je návod, jak to udělat.
 
 > [!IMPORTANT]
-> Pokud je offline počítač se systémem Windows 7 SP1 nebo Windows Server 2008 R2, naleznete zvláštní pokyny v [odstraňování potíží s offline instalací](#BKMK_tshoot) části tohoto tématu.  Musí postupovat podle těchto pokynů *před* nainstalujete Visual Studio 2015.
+> Pokud je v počítači s offline systémem Windows 7 SP1 nebo Windows Server 2008 R2 spuštěn, přečtěte si zvláštní pokyny v části [Poradce při potížích s offline instalací](#BKMK_tshoot) tohoto tématu.  Před instalací sady Visual Studio 2015 *je* nutné postupovat podle těchto pokynů.
 
-## <a name="BKMK_Offline"></a> Instalace vytvořením offline instalace
+## <a name="installing-by-creating-an-offline-installation"></a><a name="BKMK_Offline"></a>Instalace vytvořením offline instalace
 
-#### <a name="to-create-an-offline-installation-layout"></a>Chcete-li vytvářet rozložení offline instalaci
+#### <a name="to-create-an-offline-installation-layout"></a>Vytvoření rozložení instalace offline
 
-1. Zvolte edici sady Visual Studio, kterou chcete nainstalovat z [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20Enterprise%202015) stránce pro stažení.
+1. Zvolte edici Sady Visual Studio, kterou chcete nainstalovat, na stránce [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20Enterprise%202015) stahování.
 
-2. Po stažení instalačního programu do umístění v systému souborů spusťte "\<název spustitelného souboru >/layout".
+2. Po stažení instalačního programu do umístění v systému souborů spusťte spustit název spustitelný\<soubor> /layout.
 
-     Například spusťte: `vs_enterprise.exe /layout D:\VisualStudio2015`
+     Spustit například:`vs_enterprise.exe /layout D:\VisualStudio2015`
 
-     S použitím `/layout` přepínače, můžete stáhnout téměř všechny instalační balíčky, nejen ty, které se vztahují k počítači ke stažení. Tento přístup vám dává soubory, které je potřeba spustit tento instalační program kdekoli a může být užitečné, pokud chcete nainstalovat součásti, které původně nebyly nainstalovány.
+     Pomocí přepínače `/layout` si můžete stáhnout téměř všechny instalační balíčky, nejen ty, které se vztahují na stahování stroje. Tento přístup poskytuje soubory, které potřebujete ke spuštění tohoto instalačního programu kdekoli a může být užitečné, pokud chcete nainstalovat součásti, které nebyly původně nainstalovány.
 
-3. Po spuštění tohoto příkazu se zobrazí dialogové okno, které je možné změnit složku offline instalace rozložení uložená.   Klikněte **Stáhnout** tlačítko.
+3. Po spuštění tohoto příkazu se zobrazí dialogové okno, které umožňuje změnit složku, ve které se má nacházet rozložení instalace offline.   Dále klikněte na tlačítko **Stáhnout.**
 
-     Po úspěšném stažení balíčku by se měla zobrazit zpráva, že **instalační program byl úspěšný. Všechny zadané součásti byly úspěšně získány.**
+     Po úspěšném stažení balíčku by se měla zobrazit zpráva s textem **Setup Successful! Všechny zadané součásti byly úspěšně získány.**
 
-4. Vyhledejte složku, kterou jste zadali dříve. (Například vyhledat D:\VisualStudio2015.) Tato složka obsahuje všechno, co potřebujete ke zkopírování do sdíleného umístění nebo instalačního média.
+4. Vyhledejte složku, kterou jste zadali dříve. (Například vyhledejte D:\VisualStudio2015.) Tato složka obsahuje vše, co potřebujete ke kopírování do sdíleného umístění nebo k instalaci média.
 
     > [!CAUTION]
-    > Sady Android SDK v současné době nepodporuje prostředí offline instalace. Pokud nainstalujete na počítač, který není připojený k Internetu položky instalace sady Android SDK, instalace se nemusí podařit. Další informace najdete v části "Řešení potíží s offline instalace" v tomto tématu.
+    > V současné době sada Android SDK nepodporuje offline instalaci. Pokud nainstalujete položky instalace sady Android SDK do počítače, který není připojen k Internetu, instalace může selhat. Další informace naleznete v části Poradce při potížích s offline instalací v tomto tématu.
 
 5. Spusťte instalaci z umístění souboru nebo z instalačního média.
 
-## <a name="updating-an-offline-installation"></a>Aktualizace offline instalace
- Společnost Microsoft vydala několik aktualizací pro sadu Visual Studio 2015. K aktualizaci instalace Visual Studio, jednoduše stáhnout edice, ze z [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20Enterprise%202015) stránce pro stažení. Potom postupujte podle kroků uvedených v tomto tématu můžete vytvořit nové rozložení pro offline instalaci a pak ji použijete k aktualizaci kopie sady Visual Studio 2015.
+## <a name="updating-an-offline-installation"></a>Aktualizace instalace offline
+ Společnost Microsoft vydala několik aktualizací pro Visual Studio 2015. Chcete-li aktualizovat instalaci sady Visual Studio, jednoduše si stáhněte požadovanou edici ze stránky [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20Enterprise%202015) stahování. Dále postupujte podle kroků popsaných v tomto tématu a vytvořte nové rozložení instalace offline a pak ho použijte k aktualizaci kopie Sady Visual Studio 2015.
 
-## <a name="BKMK_tshoot"></a> Řešení potíží s offline instalace
- Při offline instalaci z offline instalaci mezipaměti, může se zobrazit zprávy s upozorněním nebude moct instalaci některých komponent a balíčků. Následující tabulka obsahuje možné řešení pro tyto scénáře.
+## <a name="troubleshooting-an-offline-installation"></a><a name="BKMK_tshoot"></a>Poradce při potížích s offline instalací
+ Při instalaci offline z mezipaměti instalace offline se mohou zobrazit varovné zprávy o tom, že nelze nainstalovat některé součásti a balíčky. Následující tabulka obsahuje možná řešení pro tyto scénáře.
 
-| Součásti nebo balíčku | Řešení |
+| Součást nebo balíček | Řešení |
 |-|-|
-| Nástroj Dotfuscator a Analytics Community Edition 5.19.1 (pro edice Community, Professional a Enterprise sady Visual Studio, jako nainstalovanou v **Windows 7 SP1** a **systému Windows Server 2008 R2**) | Pokud je offline počítač spuštěný **Windows 7 SP1** nebo **systému Windows Server 2008 R2**, musíte provést následující kroky před instalací sady Visual Studio 2015:<br /><br /> 1. Nakonfigurujte soubor nebo webový server tak, aby stahoval soubory CTL.<br /><br /> 2. přesměrujte adresu URL automatické aktualizace Microsoftu pro odpojené prostředí.<br /><br /> Další informace najdete v tématu [konfigurovat Důvěryhodné kořeny a zakázané certifikáty](https://technet.microsoft.com/library/dn265983.aspx) stránky na webu Microsoft TechNet. |
-| Instalace sady Android SDK (úroveň rozhraní API) | Musíte mít internetové připojení k instalaci balíčků sady Android SDK (úroveň rozhraní API). Pokud jste v síti s omezeným přístupem, musí umožňovat přístup k následujícím adresám URL, když instalujete Visual Studio:<br /><br /> -   https://dl.google.com:443<br />-   https://dl-ssl.google.com:443<br />-   https://dl-ssl.google.com/android/repository/*<br /> <br />Další informace o tom, jak vyřešit možné problémy s nastavením proxy serveru, najdete v článku [selháním (instalace sady Android SDK) za proxy serverem instalace sady Visual Studio 2015](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/) blogový příspěvek. |
-| Šablony pro rozšiřující položky sady Visual Studio<br /><br /> Rozšíření GitHub pro Visual Studio<br /><br /> Nástroje Powershellu pro Visual Studio | Pokud nemáte připojení k Internetu při instalaci sady Visual Studio 2015, můžete použít speciální offline kanál ke generování rozložení pro offline instalaci. **Poznámka:** tento speciální kanál obsahuje nejnovější aktualizace pro sadu Visual Studio 2015. <br /><br /> Vytvořte offline kanál speciální, spusťte následující příkaz: / Layout *jednotka:* \VisualStudio2015 /overridefeeduri *adresu URL pro informační kanál xml*<br /><br /> Například pro anglickou speciální offline kanál sady Visual Studio 2015 Enterprise, spusťte tento příkaz:<br /><br /> `vs_enterprise_ENU.exe /layout D:\VisualStudio2015 /overridefeeduri "https://go.microsoft.com/fwlink/?LinkID=785882&clcid0x409"`<br /><br /> Úplný seznam adres URL, které můžete použít k vytvoření speciální offline kanálu v jazyce podle vašeho výběru najdete v následující tabulce. |
+| Dotfuscator a Analytics Community Edition 5.19.1 (pro edice Community, Professional a Enterprise sady Visual Studio, nainstalované v **systémech Windows 7 SP1** a **Windows Server 2008 R2**) | Pokud je v počítači offline spuštěn **systém Windows 7 SP1** nebo **Windows Server 2008 R2**, je třeba před instalací sady Visual Studio 2015 provést následující kroky:<br /><br /> 1. Nakonfigurujte soubor nebo webový server pro stahování souborů CTL.<br /><br /> 2. Přesměrujte adresu URL automatické aktualizace společnosti Microsoft do odpojeného prostředí.<br /><br /> Další informace naleznete na stránce [Konfigurace důvěryhodných kořenových adresářů a nepovolených certifikátů](https://technet.microsoft.com/library/dn265983.aspx) na webu Microsoft TechNet. |
+| Nastavení sady Android SDK (úroveň rozhraní API) | Chcete-li nainstalovat balíčky sady Android SDK (úroveň rozhraní API), musíte mít připojení k internetu. Pokud jste v síti s omezeným přístupem, musíte při instalaci sady Visual Studio povolit přístup k následujícím adresám URL:<br /><br /> -   `https://dl.google.com:443`<br />-   `https://dl-ssl.google.com:443`<br />-   `https://dl-ssl.google.com/android/repository/*`<br /> <br />Další informace o řešení možných problémů s nastavením proxy serveru najdete v tématu [selhání instalace sady Visual Studio 2015 (nastavení sady Android SDK) za příspěvkem](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/) blogu proxy. |
+| Šablony položek rozšiřitelnosti sady Visual Studio<br /><br /> GitHub Extension for Visual Studio<br /><br /> Nástroje PowerShellu pro Visual Studio | Pokud nemáte připojení k internetu při instalaci Sady Visual Studio 2015, můžete použít speciální offline kanál pro generování rozložení instalace offline. **Poznámka:**  Tento speciální informační kanál obsahuje nejnovější aktualizace visual studia 2015. <br /><br /> Chcete-li vytvořit speciální offline kanál, spusťte následující příkaz: /layout *Drive:* \VisualStudio2015 /overridefeeduri *URL-to-feed-xml*<br /><br /> Například pro speciální offline kanál v anglickém jazyce sady Visual Studio 2015 Enterprise spusťte:<br /><br /> `vs_enterprise_ENU.exe /layout D:\VisualStudio2015 /overridefeeduri "https://go.microsoft.com/fwlink/?LinkID=785882&clcid0x409"`<br /><br /> Úplný seznam adres URL, které můžete použít k vytvoření speciálního offline informačního kanálu v jazyce, který si vyberete, najdete v následující tabulce. |
 
- Pomocí následující adresy URL vytvoření specifické pro jazyk speciální offline informačního kanálu, jak je popsáno v předchozí tabulce.
+ Pomocí následujících adres URL vytvořte speciální offline kanál specifický pro jazyk, jak je popsáno v tabulce výše.
 
-|       Jazyk        |                            URL                            |
+|       Jazyk        |                            zprostředkovatele identity                            |
 |-----------------------|-----------------------------------------------------------|
 | Čínština (zjednodušená)  | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x804 |
 | Čínština (tradiční) | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x404 |
 |         Čeština         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x405 |
 |        Němčina         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x407 |
-|        angličtina        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x409 |
+|        Angličtina        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x409 |
 |        Španělština        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0xC0A |
 |        Francouzština         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x40C |
 |        Italština        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x410 |

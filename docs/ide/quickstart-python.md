@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: cbb06ac800fd21e2354b04fb2e7e46306da7ed72
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 649f933c3d0fc2962ed0f7efc2ab09449bdd72ba
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "70180352"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444944"
 ---
 # <a name="quickstart-create-your-first-python-web-app-using-visual-studio"></a>Úvodní příručka: Vytvoření první webové aplikace Pythonu pomocí Visual Studia
 
@@ -182,7 +182,7 @@ Nyní jste připraveni přidat trochu kódu Pythonu k implementaci minimální w
 
 3. Vyberte **možnost Ladění > Spustit bez ladění** (**Ctrl**+**F5**), která ukládá změny souborů a spouští aplikaci.
 
-4. Zobrazí se příkazové okno se <https://localhost:4449/>zprávou *Spuštěno v `localhost:4449` "a okno prohlížeče by se mělo otevřít tam, kde se zobrazí zpráva "Hello, Python!" Požadavek GET se také zobrazí v příkazovém okně se stavem 200.
+4. Zobrazí se příkazové okno se zprávou **Spuštěno v\/https: /localhost:4449**a okno prohlížeče by se mělo otevřít tam, kde se `localhost:4449` zobrazí zpráva "Hello, Python!" Požadavek GET se také zobrazí v příkazovém okně se stavem 200.
 
     Pokud se prohlížeč neotevře automaticky, spusťte prohlížeč `localhost:4449`podle vašeho výběru a přejděte na .
 

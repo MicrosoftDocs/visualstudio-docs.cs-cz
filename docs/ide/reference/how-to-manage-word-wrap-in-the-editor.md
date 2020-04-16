@@ -12,19 +12,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f68da0d937c27d0fb3175ca87d8d749c3f1e90aa
-ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
+ms.openlocfilehash: 0f49925211247e346ac3203de20a97496c54295d
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/12/2020
-ms.locfileid: "81223642"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444801"
 ---
 # <a name="how-to-manage-word-wrap-in-the-editor"></a>Postup: Správa zalamování slov v editoru
 
 Můžete nastavit a vymazat možnost **zalamování aplikace Word.** Pokud je tato možnost nastavena, část dlouhého řádku, která přesahuje aktuální šířku okna Editor kódu, se zobrazí na dalším řádku. Pokud je tato možnost například vymazána, abyste usnadnili použití číslování řádků, můžete posunout doprava a zobrazit tak konce dlouhých čar.
 
 > [!NOTE]
-> Toto téma platí pro Visual Studio v systému Windows. Visual Studio na Macu najdete [v tématu Zdrojový editor: Zalamování řádků](/visualstudio/mac/source-editor#word-wrap).
+> Toto téma platí pro Visual Studio v systému Windows. Visual Studio pro Mac najdete [v tématu Zdrojový editor: Zalamování řádků](/visualstudio/mac/source-editor#word-wrap).
 
 ## <a name="to-set-word-wrap-preferences"></a>Nastavení předvoleb zalamování slov
 
