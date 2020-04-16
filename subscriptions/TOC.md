@@ -2,7 +2,7 @@
 # [Co je nového](whats-new-in-subscriptions.md)
 # Předplatná
 ## Zakoupení předplatných
-### [Maloobchod](https://visualstudio.microsoft.com/vs/pricing)
+### [Maloobchod](buy-activate-retail.md)
 ### Cloud 
 #### [Přehled](vscloud-overview.md)
 #### [Časté otázky k fakturaci](vscloud-billing-faq.md)
@@ -13,7 +13,6 @@
 #### [Správa předplatných pro MPN](manage-mpn-subscriptions.md)
 ### [Microsoft pro startupy](program-startups.md)
 ## Přihlášení 
-### [Aktivace maloobchodních předplatných](activate-store-subscriptions.md)
 ### [Přihlášení účtem Microsoft](sign-in-msa.md)
 ### [Přihlášení pracovním/školním účtem](sign-in-work.md)
 ### [Přihlášení pomocí GitHubu](sign-in-github.md)
