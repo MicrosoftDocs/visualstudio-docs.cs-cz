@@ -23,16 +23,6 @@
       href: /azure/key-vault/vs-key-vault-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
     - name: Přidání služby Azure Active Directory (AD)
       href: /azure/active-directory/develop/vs-active-directory-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-    - name: Přidání služby Cognitive Services
-      items:
-        - name: Analýza textu
-          href: /azure/cognitive-services/text-analytics/vs-text-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-        - name: Vyhledávání pomocí služby Bing
-          href: /azure/cognitive-services/bing-news-search/vs-bing-news-search-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-        - name: Rozpoznávání obličeje
-          href: /azure/cognitive-services/face/vs-face-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-        - name: Computer Vision
-          href: /azure/cognitive-services/computer-vision/vs-computer-vision-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
 - name: Vývoj pro Azure Cloud Services
   expanded: false
   items:
@@ -106,7 +96,7 @@
           href: /azure/vs-azure-tools-storage-explorer-files?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
         - name: Zpráva k vydání verze Průzkumníka služby Microsoft Azure Storage
           href: /azure/vs-azure-tools-storage-explorer-relnotes?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-        - name: Dostupnost Storage Exploreru
+        - name: Usnadnění přístupu k Průzkumníkovi služby Storage
           href: /azure/vs-azure-tools-storage-explorer-accessibility?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
 - name: Průzkumník cloudu
   items:
