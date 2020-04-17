@@ -5,12 +5,12 @@ author: madskristensen
 ms.author: madsk
 ms.date: 11/19/2019
 ms.topic: reference
-ms.openlocfilehash: 1a83a9c16e915bde2958193c640c0981f5edc005
-ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
+ms.openlocfilehash: f5c83a145eb56dcb95c6e9a299c690ae960442c9
+ms.sourcegitcommit: 4bcd6abb89feff1cf8251e3ded73fdc30b67e347
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81276452"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81615036"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Jak zvýšit pravděpodobnost, že bude problém s výkonem vyřešen
 
@@ -74,17 +74,17 @@ V těchto problémech postupujte podle pokynů v části[Jak nahlásit problém]
 Pokud si nejste jisti, co způsobuje vaše pády nebo se zdají být náhodné, můžete zachytit výpisy místně pokaždé, když dojde k chybě sady Visual Studio a připojit je k samostatným položkám zpětné vazby. Chcete-li uložit výpisy místně při selhání sady Visual Studio, spusťte v okně příkazů správce následující příkazy:
 
 ```
-reg add "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\Windows Error
-Reporting\\LocalDumps\\devenv.exe"
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error
+Reporting\LocalDumps\devenv.exe"
 
-reg add "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\Windows Error
-Reporting\\LocalDumps\\devenv.exe" /v DumpType /t REG_DWORD /d 2
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error
+Reporting\LocalDumps\devenv.exe" /v DumpType /t REG_DWORD /d 2
 
-reg add "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\Windows Error
-Reporting\\LocalDumps\\devenv.exe" /v DumpCount /t REG_DWORD /d 2
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error
+Reporting\LocalDumps\devenv.exe" /v DumpCount /t REG_DWORD /d 2
 
-reg add "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\Windows Error
-Reporting\\LocalDumps\\devenv.exe" /v DumpFolder /t REG_SZ /d "C:\\CrashDumps"
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error
+Reporting\LocalDumps\devenv.exe" /v DumpFolder /t REG_SZ /d "C:\CrashDumps"
 ```
 
 Podle potřeby přizpůsobte počet výpisu a složku výpisu. Další informace o těchto nastaveních naleznete [zde](/windows/win32/wer/collecting-user-mode-dumps).
