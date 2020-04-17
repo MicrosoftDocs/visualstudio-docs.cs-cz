@@ -1,123 +1,123 @@
 ---
 title: Publikování cloudové služby Azure
-description: Zjistěte, jak nakonfigurovat různá nastavení v Visual Studio Průvodci publikováním aplikace Azure
+description: Zjistěte, jak nakonfigurovat různá nastavení v Průvodci publikováním aplikací Azure ve Visual Studiu
 author: ghogen
 manager: jillfra
 assetId: 7d8f1ac9-e439-47e0-a183-0642c4ea1920
-ms.custom: seodec18
+ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 312a7e072ff5dfbe1a462abb68c8a74a42823e82
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bc3c58343c699833a5a12eee6f79c023f57a2e85
+ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62550327"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81489646"
 ---
 # <a name="using-the-visual-studio-publish-azure-application-wizard"></a>Použití průvodce publikováním aplikace Azure v sadě Visual Studio
 
-Poté, co při vývoji webové aplikace v sadě Visual Studio, můžete publikovat tuto aplikaci do cloudové služby Azure s použitím **publikování aplikaci Azure** průvodce.
+Po vývoji webové aplikace ve Visual Studiu můžete publikovat tuto aplikaci do cloudové služby Azure pomocí průvodce **publikováním aplikací Azure.**
 
 > [!Note]
-> Tento článek je o nasazení ke cloudovým službám, ne k webovým stránkám. Informace o nasazení do webové stránky najdete v tématu [postup nasazení na webu Azure](https://social.msdn.microsoft.com/Search/windowsazure?query=How%20to%20Deploy%20an%20Azure%20Web%20Site&Refinement=138&ac=4#refinementChanges=117&pageNumber=1&showMore=false).
+> Tento článek pojednává o nasazení do cloudových služeb, nikoli na weby. Informace o nasazení na webech najdete [v tématu Jak nasadit web Azure](https://social.msdn.microsoft.com/Search/windowsazure?query=How%20to%20Deploy%20an%20Azure%20Web%20Site&Refinement=138&ac=4#refinementChanges=117&pageNumber=1&showMore=false).
 
-## <a name="accessing-the-publish-azure-application-wizard"></a>Přístup k Průvodci publikování aplikaci Azure
+## <a name="accessing-the-publish-azure-application-wizard"></a>Přístup k průvodci publikováním aplikací Azure
 
-Průvodce publikování aplikaci Azure v závislosti na typu projektu sady Visual Studio, ke kterým máte dvě možnosti, jak můžete přistupovat.
+K Průvodci publikováním aplikace Azure můžete přistupovat dvěma způsoby v závislosti na typu projektu sady Visual Studio, který máte.
 
-**Pokud máte projektu cloudové služby Azure:**
+**Pokud máte projekt cloudové služby Azure:**
 
-1. Vytvořte nebo otevřete v sadě Visual Studio projekt cloudové služby Azure.
+1. Vytvořte nebo otevřete projekt cloudové služby Azure ve Visual Studiu.
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a v místní nabídce vyberte **publikovat**.
+1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na projekt a v kontextové nabídce vyberte **publikovat**.
 
-**Pokud máte projekt webové aplikace, který není povolen pro Azure:**
+**Pokud máte projekt webové aplikace, který není povolený pro Azure:**
 
-1. Vytvořte nebo otevřete v sadě Visual Studio projekt cloudové služby Azure.
+1. Vytvořte nebo otevřete projekt cloudové služby Azure ve Visual Studiu.
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a v místní nabídce vyberte **převést** > **převést na projekt cloudové služby Azure**.
+1. V **Průzkumníku řešení**klikněte pravým tlačítkem myši na projekt a v kontextové nabídce vyberte **Převést** > **na projekt cloudové služby Azure**.
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na nově vytvořený projekt Azure a v místní nabídce vyberte **publikovat**.
+1. V **Průzkumníku řešení**klikněte pravým tlačítkem myši na nově vytvořený projekt Azure a v místní nabídce vyberte **Publikovat**.
 
 ## <a name="sign-in-page"></a>Přihlašovací stránka
 
 ![Přihlašovací stránka](./media/vs-azure-tools-publish-azure-application-wizard/sign-in.png)
 
-**Účet** – vyberte účet nebo vyberte **přidat účet** v rozevíracím seznamu účtů.
+**Účet** – Vyberte účet nebo vyberte **Přidat účet** v rozevíracím seznamu účtu.
 
-**Vaše předplatné** – zvolte předplatné, které chcete použít pro vaše nasazení.
+**Zvolte předplatné** – zvolte předplatné, které chcete použít pro nasazení.
 
-## <a name="settings-page---common-settings-tab"></a>Stránka nastavení – karta obecná nastavení
+## <a name="settings-page---common-settings-tab"></a>Stránka Nastavení – karta Běžná nastavení
 
-![Obecná nastavení](./media/vs-azure-tools-publish-azure-application-wizard/settings-common-settings.png)
+![Společná nastavení](./media/vs-azure-tools-publish-azure-application-wizard/settings-common-settings.png)
 
-**Cloudová služba** – pomocí rozevíracího seznamu vyberte existující cloud service, nebo vyberte  **&lt;vytvořit nový >** a vytvořit cloudovou službu. Datové centrum zobrazuje v závorkách pro každou cloudovou službu. Doporučuje se, že data center umístění pro cloudovou službu být stejné jako umístění centra dat pro účet úložiště (rozšířené nastavení).
+**Cloudová služba** – Pomocí rozevíracího přehledu vyberte existující cloudovou službu nebo vyberte ** &lt;Vytvořit novou>** a vytvořte cloudovou službu. Datové centrum se zobrazí v závorce pro každou cloudovou službu. Doporučujese, aby umístění datového centra pro cloudovou službu bylo stejné jako umístění datového centra pro účet úložiště (Upřesnit nastavení).
 
-**Prostředí** – vyberte buď **produkční** nebo **pracovní**. Zvolte testovací prostředí, pokud chcete nasadit aplikaci v testovacím prostředí.
+**Prostředí** – vyberte **možnost Výroba** nebo **Pracovní .** Pokud chcete nasadit aplikaci v testovacím prostředí, zvolte pracovní prostředí.
 
-**Konfigurace sestavení** – vyberte buď **ladění** nebo **vydání**.
+**Konfigurace sestavení** – vyberte možnost **Ladění** nebo **vydání**.
 
-**Konfigurace služby** – vyberte buď **cloudu** nebo **místní**.
+**Konfigurace služby** – vyberte **cloud nebo** **místní**.
 
-**Povolení vzdálené plochy pro všechny role** – tuto možnost vyberte, pokud chcete, aby mohli vzdáleně připojit ke službě. Tato možnost slouží především pro řešení potíží. Další informace najdete v tématu [povolit připojení ke vzdálené ploše pro roli v cloudových službách Azure pomocí sady Visual Studio](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
+**Povolit vzdálenou plochu pro všechny role** – tuto možnost vyberte, pokud se chcete vzdáleně připojit ke službě. Tato možnost se používá především pro řešení potíží. Další informace najdete [v tématu Povolení připojení ke vzdálené ploše pro roli v Cloudových službách Azure pomocí sady Visual Studio](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
 
-**Povolit nasazení webu pro všechny webové role** – vyberte tuto možnost, chcete-li povolit nasazení webové služby. Je také nutné vybrat **povolit vzdálenou plochu pro všechny role** možnost tuto funkci používat. Další informace najdete v tématu [publikování cloudové služby pomocí sady Visual Studio](vs-azure-tools-publishing-a-cloud-service.md).
+**Povolit nasazení webu pro všechny webové role** – Tuto možnost vyberte, chcete-li povolit nasazení webu pro službu. Chcete-li tuto funkci používat, musíte také vybrat možnost **Povolit vzdálenou plochu pro všechny role.** Další informace naleznete [v tématu Publikování cloudové služby pomocí sady Visual Studio](vs-azure-tools-publishing-a-cloud-service.md).
 
-## <a name="settings-page---advanced-settings-tab"></a>Stránka nastavení – karta Upřesnit nastavení
+## <a name="settings-page---advanced-settings-tab"></a>Stránka Nastavení – karta Upřesnit nastavení
 
-![Pokročilá nastavení](./media/vs-azure-tools-publish-azure-application-wizard/settings-advanced-settings.png)
+![Upřesnit nastavení](./media/vs-azure-tools-publish-azure-application-wizard/settings-advanced-settings.png)
 
-**Popisek nasazení** – buď přijměte výchozí název nebo zadejte název podle vašeho výběru. Chcete-li připojí data k označení nasazení, ponechte políčko zaškrtnuté.
+**Popisek nasazení** – buď přijměte výchozí název, nebo zadejte název podle svého výběru. Chcete-li připojit datum k popisku nasazení, ponechte zaškrtnuté políčko.
 
-**Účet úložiště** – vyberte účet úložiště pro toto nasazení **&lt;vytvořit nový > vytvořit účet úložiště. Datové centrum zobrazuje v závorkách pro každý účet úložiště. Doporučuje se, že pro účet úložiště s umístěním datového centra je stejné jako umístění pro System center data pro cloudovou službu (nastavení).
+**Účet úložiště** – Vyberte účet úložiště, který&lt;chcete použít pro toto nasazení, ** Vytvořit nový> k vytvoření účtu úložiště. Datové centrum se zobrazí v závorce pro každý účet úložiště. Doporučuje se, aby umístění datového centra pro účet úložiště bylo stejné jako umístění datového centra pro cloudovou službu (Společná nastavení).
 
-Účet služby Azure storage ukládá balíček pro nasazení aplikace. Po nasazení aplikace je balíček odebrat z účtu úložiště.
+Účet úložiště Azure ukládá balíček pro nasazení aplikace. Po nasazení aplikace je balíček odebrán z účtu úložiště.
 
-**Odstranit nasazení při selhání** – tuto možnost použijte k nasazení odstranit, pokud při publikování došlo k chybám. To mělo být zaškrtnuté políčko, pokud chcete udržovat konstantní virtuální IP adresu pro cloudovou službu.
+**Odstranit nasazení při selhání** – Tuto možnost vyberte, chcete-li, aby bylo nasazení odstraněno, pokud během publikování dojde k chybám. To by mělo být nezaškrtnuté, pokud chcete udržovat konstantní virtuální IP adresu pro vaši cloudovou službu.
 
-**Aktualizace nasazení** – tuto možnost vyberte, pokud chcete nasadit pouze aktualizované součásti. Tento typ nasazení může být rychlejší než úplné nasazení. To by měly být porovnány, pokud chcete udržovat konstantní virtuální IP adresu pro cloudovou službu.
+**Aktualizace nasazení** – tuto možnost vyberte, pokud chcete nasadit pouze aktualizované součásti. Tento typ nasazení může být rychlejší než úplné nasazení. To by mělo být kontrolováno, pokud chcete udržovat konstantní virtuální IP adresu pro vaši cloudovou službu.
 
-**Nasazení aktualizace - nastavení** -tento dialog umožňuje dále určit, jak chcete, aby role, které chcete aktualizovat. Pokud se rozhodnete **přírůstkové aktualizace**, každou instanci vaší aplikace se aktualizuje jednu po druhé, tak, aby aplikace byla vždy dostupná. Pokud se rozhodnete **Souběžná aktualizace**, všechny instance aplikace jsou aktualizovány ve stejnou dobu. Aktualizuje se současně je rychlejší, ale vaše služba nemusí být k dispozici během procesu aktualizace.
+**Aktualizace nasazení - nastavení** - Toto dialogové okno slouží k dalšímu určení, jak chcete role aktualizovat. Pokud zvolíte **přírůstková aktualizace**, každá instance aplikace se aktualizuje jeden po druhém, takže aplikace je vždy k dispozici. Pokud zvolíte **simultánní aktualizaci**, budou aktualizovány všechny instance aplikace současně. Simultánní aktualizace je rychlejší, ale vaše služba nemusí být během procesu aktualizace k dispozici.
 
 ![Nastavení nasazení](./media/vs-azure-tools-publish-azure-application-wizard/deployment-settings.png)
 
-**Povolení technologie IntelliTrace** – určete, zda chcete povolit IntelliTrace. Pomocí nástroje IntelliTrace můžete protokolovat podrobné ladicí informace pro instanci role při spuštění v Azure. Pokud je potřeba najít příčinu problému, můžete protokoly IntelliTrace ke krokování kódu ze sady Visual Studio, jako kdyby byly spuštěné v Azure. Další informace o používání nástroje IntelliTrace naleznete v tématu [ladění publikované Azure cloudové služby pomocí IntelliTrace a sady Visual Studio](./vs-azure-tools-intellitrace-debug-published-cloud-services.md).
+**Povolit IntelliTrace** - Zadejte, zda chcete povolit IntelliTrace. S IntelliTrace můžete protokolovat rozsáhlé informace o ladění pro instanci role při spuštění v Azure. Pokud potřebujete najít příčinu problému, můžete použít protokoly IntelliTrace krokovat kód z Visual Studia, jako kdyby byly spuštěny v Azure. Další informace o používání IntelliTrace najdete [v tématu ladění publikované cloudové služby Azure pomocí Visual Studia a IntelliTrace](./vs-azure-tools-intellitrace-debug-published-cloud-services.md).
 
-**Povolit profilaci** – určete, zda chcete povolit profilaci výkonu. Profiler sady Visual Studio umožňuje získat podrobné analýzy výpočetní aspektů vykonávání cloudové služby. Další informace o používání profileru sady Visual Studio najdete v tématu [testování výkonu cloudové služby Azure](./vs-azure-tools-performance-profiling-cloud-services.md).
+**Povolit profilování** – určete, zda chcete povolit profilování výkonu. Profilování sady Visual Studio umožňuje získat hloubkovou analýzu výpočetních aspektů fungování cloudové služby. Další informace o použití profileru Sady Visual Studio najdete [v tématu Testování výkonu cloudové služby Azure](./vs-azure-tools-performance-profiling-cloud-services.md).
 
-**Povolit vzdálený ladicí program pro všechny role** – určete, zda chcete povolit vzdálené ladění. Další informace o ladění cloudové služby pomocí sady Visual Studio najdete v tématu [ladění Azure cloudové služby nebo virtuálního počítače v sadě Visual Studio](./vs-azure-tools-debug-cloud-services-virtual-machines.md).
+**Povolit vzdálený ladicí program pro všechny role** – určete, zda chcete povolit vzdálené ladění. Další informace o ladění cloudových služeb pomocí Visual Studia najdete [v tématu ladění cloudové služby Azure nebo virtuálního počítače v sadě Visual Studio](./vs-azure-tools-debug-cloud-services-virtual-machines.md).
 
-## <a name="diagnostics-settings-page"></a>Stránka nastavení diagnostiky
+## <a name="diagnostics-settings-page"></a>Stránka Nastavení diagnostiky
 
 ![Nastavení diagnostiky](./media/vs-azure-tools-publish-azure-application-wizard/diagnostic-settings.png)
 
-Diagnostika umožňuje řešení cloudové služby Azure (nebo virtuální počítač Azure). Informace o diagnostice najdete v tématu [konfiguraci diagnostiky pro Azure Cloud Services a Virtual Machines](./vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md). Informace o Application Insights najdete v tématu [co je Application Insights?](/azure/application-insights/app-insights-overview).
+Diagnostika umožňuje řešit potíže s cloudovou službou Azure (nebo virtuálním počítačem Azure). Informace o diagnostice najdete [v tématu Konfigurace diagnostiky pro cloudové služby Azure a virtuální počítače](./vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md). Informace o Application Insights najdete v tématu [Co je Application Insights?](/azure/application-insights/app-insights-overview).
 
 ## <a name="summary-page"></a>Stránka souhrnu
 
 ![Souhrn](./media/vs-azure-tools-publish-azure-application-wizard/summary.png)
 
-**Cílový profil** – můžete vytvořit profil publikování z nastavení, které jste zvolili. Například může vytvořit jeden profil pro testovací prostředí a druhý k produkci. Chcete-li tento profil uložit, zvolte **Uložit** ikonu. Průvodce vytvoří profil a uloží ho do projektu sady Visual Studio. Chcete-li změnit název profilu, otevřete **cílový profil** seznamu a klikněte na tlačítko  **&lt;spravovat... &gt;**.
+**Cílový profil** – můžete vytvořit profil publikování z nastavení, které jste zvolili. Můžete například vytvořit jeden profil pro testovací prostředí a jiný pro výrobu. Chcete-li tento profil uložit, zvolte ikonu **Uložit.** Průvodce vytvoří profil a uloží jej v projektu sady Visual Studio. Chcete-li upravit název profilu, otevřete seznam **Cílový profil** a pak zvolte ** &lt;Spravovat... &gt;**.
 
    > [!Note]
-   > Profil publikování se zobrazí v Průzkumníku řešení v sadě Visual Studio a nastavení profilu se zapisují do souboru s příponou .azurePubxml. Nastavení se ukládají jako atributy značky XML.
+   > Profil publikování se zobrazí v Průzkumníkovi řešení v sadě Visual Studio a nastavení profilu se zapíše do souboru s příponou .azurePubxml. Nastavení jsou uložena jako atributy tagů XML.
 
 ## <a name="publishing-your-application"></a>Publikování aplikace
 
-Jakmile nakonfigurujete všechna nastavení pro váš projekt nasazení, vyberte **publikovat** v dolní části dialogového okna. Můžete sledovat stav procesu v **výstup** okna v sadě Visual Studio.
+Po konfiguraci všech nastavení pro nasazení projektu vyberte **Publikovat** v dolní části dialogového okna. Stav procesu můžete sledovat v okně **Výstup** v sadě Visual Studio.
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Migrace a publikovat webovou aplikaci do cloudové služby Azure ze sady Visual Studio](./vs-azure-tools-migrate-publish-web-app-to-cloud-service.md)
+- [Migrace a publikování webové aplikace do cloudové služby Azure z Visual Studia](./vs-azure-tools-migrate-publish-web-app-to-cloud-service.md)
 
-- [Zjistěte, jak publikovat cloudovou službu Azure pomocí sady Visual Studio](./vs-azure-tools-publishing-a-cloud-service.md)
+- [Přečtěte si, jak pomocí Visual Studia publikovat cloudovou službu Azure.](./vs-azure-tools-publishing-a-cloud-service.md)
 
-- [Ladění publikované Azure cloudové služby pomocí IntelliTrace a sady Visual Studio](./vs-azure-tools-intellitrace-debug-published-cloud-services.md)
+- [Ladění publikované cloudové služby Azure pomocí sady Visual Studio a nástroje IntelliTrace](./vs-azure-tools-intellitrace-debug-published-cloud-services.md)
 
 - [Testování výkonu cloudové služby Azure](./vs-azure-tools-performance-profiling-cloud-services.md)
 
-- [Konfiguruje se Diagnostika pro Azure Cloud Services a Virtual Machines](./vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md).
+- [Konfigurace diagnostiky pro cloudové služby Azure a virtuální počítače](./vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md).
 
 - [Co je Application Insights?](/azure/application-insights/app-insights-overview)

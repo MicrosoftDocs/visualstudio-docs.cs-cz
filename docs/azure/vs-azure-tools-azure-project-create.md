@@ -1,69 +1,69 @@
 ---
 title: Vytvoření projektu cloudové služby Azure
-description: Naučte se vytvořit projekt Azure cloud service pomocí sady Visual Studio
+description: Naučte se nyní vytvořit projekt cloudové služby Azure pomocí Sady Visual Studio
 author: ghogen
 manager: jillfra
 assetId: ec580df7-3dcc-45a9-a1d9-8c110678dfb5
-ms.custom: seodec18
+ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/19/2019
 ms.author: ghogen
-ms.openlocfilehash: 722c816329c70bb2efad03f9554e201bcc9fde16
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 23e2db0b42fb12872feb5942d9f4eeaab96d3c2d
+ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253464"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81489750"
 ---
 # <a name="create-an-azure-cloud-service-project-with-visual-studio"></a>Vytvoření projektu cloudové služby Azure v sadě Visual Studio
 
-Nástroje Azure pro sadu Visual Studio poskytuje šablony projektu, který vám umožní vytvářet [cloudové služby Azure](/azure/cloud-services/cloud-services-choose-me), což je jednoduchá služby Azure pro obecné účely. Po vytvoření projektu sady Visual Studio umožňuje nakonfigurovat, ladit a nasadit cloudovou službu Azure.
+Visual Studio poskytuje šablonu projektu, která umožňuje vytvořit [cloudovou službu Azure](/azure/cloud-services/cloud-services-choose-me), což je jednoduchá služba Azure pro obecné účely. Po vytvoření projektu visual studio umožňuje konfigurovat, ladit a nasadit cloudovou službu do Azure.
 
-## <a name="steps-to-create-an-azure-cloud-service-project-in-visual-studio"></a>Kroky pro vytvoření projektu Azure cloud service v sadě Visual Studio
-Tato část vás provede vytvořením projektu cloudové služby Azure v sadě Visual Studio s jeden nebo více webových rolí.
+## <a name="steps-to-create-an-azure-cloud-service-project-in-visual-studio"></a>Postup vytvoření projektu cloudové služby Azure ve Visual Studiu
+Tato část vás provede vytvořením projektu cloudové služby Azure ve Visual Studiu s jednou nebo více webovými rolemi.
 
 ::: moniker range="vs-2017"
 1. Otevřete Visual Studio jako správce.
 
-1. V hlavní nabídce vyberte **soubor** > **Nový** > **projekt**.
+1. V hlavní nabídce vyberte **Soubor** > **nový** > **projekt**.
 
-1. Vyberte **cloudu** z jazyka Visual C# nebo Visual Basic projektu šablony uzlů a vyberte **Azure Cloud Service** ze seznamu šablon.
+1. Vyberte **Cloud** z uzlů šablony projektu Visual C# nebo Visual Basic a ze seznamu šablon vyberte **Azure Cloud Service.**
 
-    ![Nová Cloudová služba Azure](./media/vs-azure-tools-azure-project-create/new-project-wizard-for-cloud-service.png)
+    ![Nová cloudová služba Azure](./media/vs-azure-tools-azure-project-create/new-project-wizard-for-cloud-service.png)
 
-1. Určete, která verze rozhraní .NET Framework, kterou chcete použít k vývoji projektu.
+1. Určete, kterou verzi rozhraní .NET Framework chcete použít k vývoji projektu.
 
-1. Zadejte název a umístění pro váš projekt a název řešení.
+1. Zadejte název a umístění projektu a název řešení.
 
 1. Vyberte **OK**.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-1. V okně Start vyberte možnost **vytvořit nový projekt**.
+1. V počátečním okně zvolte **Vytvořit nový projekt**.
 
-1. Do vyhledávacího pole zadejte *Cloud*a pak zvolte **cloudová služba Azure**.
+1. Do vyhledávacího pole zadejte *do cloudu*a pak zvolte **Azure Cloud Service**.
 
-   ![Nová Cloudová služba Azure](./media/vs-azure-tools-azure-project-create/vs-2019/new-project-cloud-service.png)
+   ![Nová cloudová služba Azure](./media/vs-azure-tools-azure-project-create/vs-2019/new-project-cloud-service.png)
 
-1. Zadejte název projektu a klikněte na **vytvořit**.
+1. Pojmenujte projekt a zvolte **Vytvořit**.
 
-   ![Zadat název projektu](./media/vs-azure-tools-azure-project-create/vs-2019/new-project-cloud-service-2.png)
+   ![Pojmenujte projekt](./media/vs-azure-tools-azure-project-create/vs-2019/new-project-cloud-service-2.png)
 ::: moniker-end
 
-1. V **nová Cloudová služba Microsoft Azure** dialogového okna, vyberte role, které chcete přidat a zvolte tlačítko se šipkou doprava a přidejte je do vašeho řešení.
+1. V dialogovém okně **Nová cloudová služba Microsoft Azure** vyberte role, které chcete přidat, a zvolte tlačítko se šipkou vpravo, které chcete přidat do svého řešení.
 
-    ![Vyberte nové role Azure cloud service](./media/vs-azure-tools-azure-project-create/new-cloud-service.png)
+    ![Výběr nových rolí cloudové služby Azure](./media/vs-azure-tools-azure-project-create/new-cloud-service.png)
 
-1. Chcete-li přejmenovat roli, která jste přidali, najeďte myší na roli v **nová Cloudová služba Microsoft Azure** dialogového okna a v místní nabídce vyberte **přejmenovat**. Můžete také přejmenovat roli v rámci vašeho řešení (v **Průzkumníka řešení**) po byla přidána.
+1. Pokud chcete přejmenovat roli, kterou jste přidali, najeďte na roli v dialogovém okně **Nová cloudová služba Microsoft Azure** a v místní nabídce vyberte **Přejmenovat**. Můžete také přejmenovat roli v rámci řešení (v **Průzkumníku řešení**) po jeho přidání.
 
-    ![Přejmenujte roli Azure cloud service](./media/vs-azure-tools-azure-project-create/new-cloud-service-rename.png)
+    ![Přejmenování role cloudové služby Azure](./media/vs-azure-tools-azure-project-create/new-cloud-service-rename.png)
 
-Projekt sady Visual Studio v Azure má přiřazení k roli projekty v řešení. Projekt obsahuje také *definiční soubor služby* a *konfigurační soubor služby*:
+Projekt Visual Studio Azure má přidružení k projektům rolí v řešení. Projekt také obsahuje *soubor definice služby* a *konfigurační soubor služby*:
 
-- **Definiční soubor služby** – definuje nastavení modulu runtime pro vaši aplikaci, včetně toho, jaké role jsou povinné, koncové body a velikost virtuálního počítače.
-- **Konfigurační soubor služby** – nakonfiguruje, kolik instancí role jsou spouštění a hodnoty k nastavení určenému pro roli.
+- **Definiční soubor služby** – definuje nastavení běhu pro vaši aplikaci, včetně požadovaných rolí, koncových bodů a velikosti virtuálního počítače.
+- **Konfigurační soubor služby** – Konfiguruje, kolik instancí role je spuštěno a hodnoty nastavení definované pro roli.
 
-Další informace o těchto souborech najdete v tématu [nakonfigurovat role cloudové služby Azure pomocí sady Visual Studio](vs-azure-tools-configure-roles-for-cloud-service.md).
+Další informace o těchto souborech najdete [v tématu Konfigurace rolí pro cloudovou službu Azure pomocí sady Visual Studio](vs-azure-tools-configure-roles-for-cloud-service.md).
 
 ## <a name="next-steps"></a>Další kroky
-- [Správa rolí v Azure cloud service projektů pomocí sady Visual Studio](./vs-azure-tools-cloud-service-project-managing-roles.md)
+- [Správa rolí v projektech cloudových služeb Azure pomocí Visual Studia](./vs-azure-tools-cloud-service-project-managing-roles.md)

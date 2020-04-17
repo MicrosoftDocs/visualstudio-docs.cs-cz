@@ -11,12 +11,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: df4630182e89dad08360794057bda856ff4d677b
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 199a27dbfef2b7297563e87d973137e2acd9c745
+ms.sourcegitcommit: eef26de3d7a5c971baedbecf3b4941fb683ddb2d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79549950"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81544286"
 ---
 # <a name="javascript-and-typescript-in-visual-studio-2019"></a>JavaScript a Script script ve Visual Studiu 2019
 
@@ -38,7 +38,8 @@ Visual Studio 2019 nabízí několik možností pro integraci kompilace TypeScri
 * [Balíček TypeScript npm](https://www.npmjs.com/package/typescript). Pokud je do projektu nainstalován balíček npm pro typescript 2.1 nebo vyšší, načte se odpovídající verze služby jazyka TypeScript v editoru.
 * Sada TypeScript SDK, která je ve výchozím nastavení k dispozici v instalačním programu sady Visual Studio, a samostatná sada SDK ke stažení z [webu VS Marketplace](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.typescript-331-vs2017).
 
-Pro projekty vyvinuté v sadě Visual Studio 2019 doporučujeme použít balíčky TypeScript NuGet a npm pro větší přenositelnost na různých platformách a prostředích.
+> [!TIP]
+> Pro projekty vyvinuté v Sadě Visual Studio 2019 doporučujeme použít balíček TypeScript NuGet nebo TypeScript npm pro větší přenositelnost na různých platformách a prostředích.
 
 Jedním z běžných použití pro balíček NuGet je kompilace TypeScript pomocí rozhraní PŘÍKAZOVÉHO PŘÍKAZU jádra .NET. Pokud ručně neupravíte soubor projektu pro import cílů sestavení z instalace sady TypeScript SDK, je balíček NuGet jediným `dotnet build` `dotnet publish`způsobem, jak povolit kompilaci jazyka TypeScript pomocí příkazů rozhraní .NET Core CLI, jako jsou příkazy a .
 

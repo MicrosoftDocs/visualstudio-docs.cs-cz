@@ -2,7 +2,7 @@
 title: Správa balíčků npm
 description: Visual Studio vám pomůže spravovat balíčky pomocí Správce balíčků Node.js (npm)
 ms.custom: seodec18
-ms.date: 03/12/2020
+ms.date: 04/16/2020
 ms.topic: conceptual
 ms.devlang: javascript
 author: mikejo5000
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: dba657d30eedef26337c708e7ede6c5ab85ed4cc
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: ef831b5ffee172b642572535162713a53d8ae578
+ms.sourcegitcommit: eef26de3d7a5c971baedbecf3b4941fb683ddb2d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79549963"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81544325"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Správa balíčků npm v sadě Visual Studio
 
@@ -28,26 +28,32 @@ Integrace visual studio s npm se liší v závislosti na typu projektu.
 * [ASP.NET Core](#aspnet-core-projects)
 * [Otevřít složku (Node.js)](../javascript/develop-javascript-code-without-solutions-projects.md)
 
+*package.json* je soubor používaný npm ke správě závislostí balíčků a verzí balíčků pro místně nainstalované balíčky. Další informace o tomto souboru naleznete v [tématu package.json configuration](../javascript/configure-packages-with-package-json.md).
+
 > [!Important]
 > npm očekává *node_modules* složku a *package.json* v kořenovém adresáři projektu. Pokud se struktura složek aplikace liší, měli byste upravit strukturu složek, pokud chcete spravovat balíčky npm pomocí sady Visual Studio.
 
-> [!NOTE]
-> Pro existující projekty Node.js použijte šablonu **řešení řešení Z existujícího node.js** k povolení npm v projektu.
-
 ## <a name="nodejs-projects"></a>Projekty Node.js
 
-Pro projekty Node.js použijte jednu z následujících metod:
+U projektů Node.js můžete provádět následující úkoly:
 * [Instalace balíčků z Průzkumníka řešení](#npmInstallWindow)
 * [Správa nainstalovaných balíčků z Průzkumníka řešení](#solutionExplorer)
 * [Použití `.npm` příkazu v interaktivním okně Node.js](#interactive)
 
 Tyto funkce spolupracují a synchronizují se systémem projektu a souborem *package.json* v projektu.
 
+### <a name="prerequisites"></a>Požadavky
+
+Chcete-li přidat podporu npm do projektu, potřebujete **zatížení vývoje Node.js** a nainstalovaný runtime Node.js. Podrobné kroky naleznete v [tématu Vytvoření projektu Node.js](/visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json).
+
+> [!NOTE]
+> Pro existující projekty Node.js použijte **šablonu řešení řešení Z existujícího node.js** nebo typ projektu [Otevřít složku (Node.js)](../javascript/develop-javascript-code-without-solutions-projects.md) k povolení npm v projektu.
+
 ### <a name="install-packages-from-solution-explorer-nodejs"></a><a name="npmInstallWindow"></a>Instalace balíčků z Průzkumníka řešení (Node.js)
 
 U projektů Node.js je nejjednodušší způsob, jak nainstalovat balíčky npm, přes instalační okno balíčku npm. Chcete-li získat přístup k tomuto oknu, klepněte pravým tlačítkem myši na uzel **npm** v projektu a vyberte možnost **Instalovat nové balíčky npm**.
 
-![Instalace nového balíčku npm z průzkumníka řešení](../javascript/media/solution-explorer-install-package.png)
+:::image type="content" source="../javascript/media/solution-explorer-install-package.png" alt-text="Instalace nového balíčku npm z průzkumníka řešení" border="true":::
 
 V tomto okně můžete vyhledat balíček, určit možnosti a nainstalovat.
 
@@ -108,11 +114,17 @@ U projektů, jako jsou projekty ASP.NET Core, můžete integrovat podporu npm do
 
 ### <a name="add-npm-support-to-a-project-aspnet-core"></a><a name="npmAdd"></a>Přidání podpory npm do projektu (ASP.NET Core)
 
-Pokud váš projekt ještě neobsahuje soubor *package.json,* můžete přidat jednu podporu npm přidáním souboru package.json do projektu.
+Pokud váš projekt ještě neobsahuje soubor *package.json,* můžete jej přidat a povolit podporu npm přidáním souboru *package.json* do projektu.
 
-1. Chcete-li soubor přidat, klepněte pravým tlačítkem myši na projekt v Průzkumníku řešení a zvolte **Přidat** > **novou položku**. Zvolte **konfigurační soubor npm**, použijte výchozí název a klepněte na **tlačítko Přidat**.
+1. Pokud nemáte nainstalovaný soubor Node.js, doporučujeme nainstalovat verzi LTS z webu [Node.js](https://nodejs.org/en/download/) pro nejlepší kompatibilitu s externími rozhraními a knihovnami.
+
+   npm vyžaduje Node.js.
+
+1. Chcete-li přidat soubor *package.json,* klepněte pravým tlačítkem myši na projekt v Průzkumníku řešení a zvolte **Přidat** > **novou položku**. Zvolte **konfigurační soubor npm**, použijte výchozí název a klepněte na **tlačítko Přidat**.
 
    ![Přidání souboru package.json do projektu](../javascript/media/npm-add-package-json.png)
+
+   Pokud nevidíte npm konfigurační soubor uvedené, Node.js vývojové nástroje nejsou nainstalovány. Instalační službu sady Visual Studio můžete použít k přidání **vývojovéúlohy Node.js.** Poté opakujte předchozí krok.
 
 1. Zahrnout jeden nebo více balíčků `dependencies` `devDependencies` npm do nebo části *package.json*. Do souboru můžete například přidat následující:
 
@@ -126,7 +138,7 @@ Pokud váš projekt ještě neobsahuje soubor *package.json,* můžete přidat j
 Při uložení souboru Visual Studio přidá balíček pod **závislostí / npm** uzlu v Průzkumníku řešení. Pokud uzel nevidíte, klikněte pravým tlačítkem myši na **soubor package.json** a zvolte **Obnovit balíčky**.
 
 >[!NOTE]
-> V některých případech může Průzkumník řešení znamenat, že balíček npm není synchronizován s *souborem package.json* z důvodu známého problému [popsaného zde](https://github.com/aspnet/Tooling/issues/479). Balíček se může například při instalaci zobrazit jako nenainstalovaný. Ve většině případů můžete aktualizovat Průzkumníka řešení odstraněním *package.json*, restartováním sady Visual Studio a opětovným přidáním souboru *package.json,* jak je popsáno výše v tomto článku.
+> V některých případech průzkumník řešení nemusí zobrazit správný stav pro nainstalované balíčky npm z důvodu známého problému [popsaného zde](https://github.com/aspnet/Tooling/issues/479). Balíček se může například při instalaci zobrazit jako nenainstalovaný. Ve většině případů můžete aktualizovat Průzkumníka řešení odstraněním *package.json*, restartováním sady Visual Studio a opětovným přidáním souboru *package.json,* jak je popsáno výše v tomto článku.
 
 ### <a name="install-packages-using-packagejson-aspnet-core"></a><a name="npmInstallPackage"></a>Instalace balíčků pomocí package.json (ASP.NET Core)
 
@@ -136,7 +148,7 @@ U projektů s npm v ceně můžete `package.json`konfigurovat balíčky npm pomo
 
 Technologie IntelliSense v *souboru package.json* vám pomůže vybrat konkrétní verzi balíčku npm.
 
-![Hledat balíček npm](../javascript/media/npm-add-package-intellisense.png)
+:::image type="content" source="../javascript/media/npm-add-package-intellisense.png" alt-text="Vybrat verzi balíčku npm" border="true":::
 
 Při uložení souboru Visual Studio přidá balíček pod **závislostí / npm** uzlu v Průzkumníku řešení. Pokud uzel nevidíte, klikněte pravým tlačítkem myši na **soubor package.json** a zvolte **Obnovit balíčky**.
 

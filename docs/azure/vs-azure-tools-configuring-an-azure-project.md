@@ -1,48 +1,48 @@
 ---
 title: Konfigurace projektu cloudové služby Azure
-description: Zjistěte, jak nakonfigurovat projekt cloudové služby Azure v sadě Visual Studio, v závislosti na vašich požadavcích pro daný projekt.
+description: Zjistěte, jak nakonfigurovat projekt cloudové služby Azure v sadě Visual Studio, v závislosti na vašich požadavcích na tento projekt.
 author: ghogen
 manager: jillfra
 assetId: 609d6965-05cc-47b1-82dc-c76a92d4f295
-ms.custom: seodec18
+ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/06/2017
 ms.author: ghogen
-ms.openlocfilehash: 77985de756274793c99673c79dac26e59129a7ea
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 609830b5182ef726a6d1933acecb1ddcbf4e25ef
+ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62572475"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81489698"
 ---
 # <a name="configure-an-azure-cloud-service-project-with-visual-studio"></a>Konfigurace projektu cloudové služby Azure v sadě Visual Studio
-Projekt Azure cloud service, můžete nakonfigurovat v závislosti na vašich požadavcích pro daný projekt. Můžete nastavit vlastnosti projektu v těchto kategoriích:
+Projekt cloudové služby Azure můžete nakonfigurovat v závislosti na vašich požadavcích na tento projekt. Můžete nastavit vlastnosti projektu pro následující kategorie:
 
-- **Publikovat do cloudového Azure** – můžete nastavit vlastnosti a ujistěte se, že není možné omylem odstranit existující cloudové služby nasadit do Azure.
-- **Spuštění nebo ladění cloudové služby na místním počítači** – můžete vybrat konfiguraci služby, kterou chcete použít a určit, jestli chcete spustit emulátor úložiště Azure.
-- **Ověřit balíček cloudové služby, když se vytvoří** – se můžete rozhodnout používat zpracovávat všechna upozornění jako chyby tak, aby bylo možné zajistit, že balíček cloudové služby nasadí bez problémů.
+- **Publikování cloudové služby do Azure** – můžete nastavit vlastnost a ujistěte se, že existující cloudová služba nasazená do Azure není omylem odstraněna.
+- **Spuštění nebo ladění cloudové služby v místním počítači** – můžete vybrat konfiguraci služby, která se má použít, a určit, jestli chcete spustit emulátor úložiště Azure.
+- **Ověřte balíček cloudové služby při jeho vytvoření** – můžete se rozhodnout považovat všechna upozornění za chyby, abyste zajistili, že balíček cloudových služeb nasadí bez problémů.
 
-## <a name="steps-to-configure-an-azure-cloud-service-project"></a>Postup konfigurace projektu Azure cloud service
-1. Otevřete nebo vytvořte projekt cloudové služby v sadě Visual Studio
+## <a name="steps-to-configure-an-azure-cloud-service-project"></a>Postup konfigurace projektu cloudové služby Azure
+1. Otevření nebo vytvoření projektu cloudové služby v sadě Visual Studio
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a v místní nabídce vyberte **vlastnosti**.
+1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na projekt a v kontextové nabídce vyberte **příkaz Vlastnosti**.
 
-1. Na stránce vlastností projektu, vyberte **vývoj** kartu.
+1. Na stránce vlastností projektu vyberte kartu **Vývoj.**
 
-    ![Nabídku vlastností projektu](./media/vs-azure-tools-configuring-an-azure-project/solution-explorer-project-properties-menu.png)
+    ![Nabídka vlastností projektu](./media/vs-azure-tools-configuring-an-azure-project/solution-explorer-project-properties-menu.png)
 
-1. Nastavte **příkazový řádek před odstraněním stávajícího nasazení** k **True**. Toto nastavení pomůže zajistit, že nechtěně neodstraníte stávajícího nasazení v Azure
+1. Před **odstraněním existujícího nasazení** na **hodnotu True**nastavte výzvu. Toto nastavení pomáhá zajistit, že omylem neodstraníte stávající nasazení v Azure.
 
-1. Vyberte požadovaný **konfigurace služby** udávajících konfiguraci služby, kterou chcete použít při spuštění nebo ladění místní cloudové služby. Další informace o tom, jak změnit konfiguraci služby pro roli najdete v tématu [ke konfiguraci role pro cloudové služby Azure s využitím sady Visual Studio](./vs-azure-tools-configure-roles-for-cloud-service.md).
+1. Vyberte požadovanou **konfiguraci služby** a označte, kterou konfiguraci služby chcete použít při místním spuštění nebo ladění cloudové služby. Další informace o tom, jak upravit konfiguraci služby pro roli, najdete v [tématu Jak nakonfigurovat role pro cloudovou službu Azure pomocí sady Visual Studio](./vs-azure-tools-configure-roles-for-cloud-service.md).
 
-1. Nastavte **emulátoru úložiště Azure spustit** k **True** spustit emulátor úložiště Azure, při spouštění nebo ladění místní cloudové služby.
+1. Nastavte **spustit emulátor úložiště Azure** na **True,** abyste spustili emulátor úložiště Azure, když spustíte nebo ladíte cloudovou službu místně.
 
-1. Nastavte **zpracovávat upozornění jako chyby** k **True** k Ujistěte se, že nelze publikovat, pokud jsou chyby ověření balíčku.
+1. Nastavte **Považovat upozornění jako chyby** true a ujistěte se, že nelze publikovat, pokud existují chyby ověření balíčku. **True**
 
-1. Nastavte **používat porty webového projektu** k **True** abyste měli jistotu, že vaše webová role používá stejný port pokaždé, když ji spustí místně v rámci služby IIS Express.
+1. Nastavte: **Pomocí portů webového projektu** na **hodnotu True** se ujistěte, že vaše webová role používá stejný port při každém spuštění místně ve službě IIS Express.
 
 1. Na panelu nástrojů sady Visual Studio vyberte **Uložit**.
 
 ## <a name="next-steps"></a>Další kroky
-- [Konfigurace projektu Azure v použití několika konfigurací služby](vs-azure-tools-multiple-services-project-configurations.md)
+- [Konfigurace projektu Azure pomocí více konfigurací služeb](vs-azure-tools-multiple-services-project-configurations.md)

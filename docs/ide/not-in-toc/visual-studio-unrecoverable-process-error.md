@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1879be46498d851eec0fbfce71b2328bdfc9afb
-ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
+ms.openlocfilehash: c30ac5950ca9bf775b05e9f77867c119b7c7565d
+ms.sourcegitcommit: eef26de3d7a5c971baedbecf3b4941fb683ddb2d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81224437"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81544338"
 ---
 # <a name="visual-studio-unrecoverable-process-error"></a>Chyba procesu neopravitelného v sadě Visual Studio
 
@@ -33,7 +33,9 @@ Následuje seznam procesů mimo proc používaných visual studio. Tento seznam 
 
 - Soubor Microsoft.Alm.Shared.Remoting.RemoteContainer.dll
 - Microsoft.CodeAnalysis.LiveUnitTesting.EntryPoint
+- Soubor MSBuild.exe
 - PerfWatson2.exe
+- SkriptedSandbox64.exe
 - Služba ServiceHub.Host.CLR.x86.exe
 - ServiceHub.Host.Node.x86.exe
 - ServiceHub.IdentityHost.exe
@@ -41,6 +43,9 @@ Následuje seznam procesů mimo proc používaných visual studio. Tento seznam 
 - ServiceHub.RoslynCodeAnalysisService32.exe
 - ServiceHub.SettingsHost.exe
 - ServiceHub.VSDetouredHost.exe
+- Soubor VBCSCompiler.exe
+- VsHub.exe
+- vstest.discoveryengine.x86.exe
 - WaAppAgent.exe
 - WindowsAzureGuestAgent.exe
 - WindowsAzureTelemetryService.exe

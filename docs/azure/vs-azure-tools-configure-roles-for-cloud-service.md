@@ -4,17 +4,17 @@ description: Přečtěte si, jak nastavit a nakonfigurovat role pro cloudové sl
 author: ghogen
 manager: jillfra
 assetId: d397ef87-64e5-401a-aad5-7f83f1022e16
-ms.custom: seodec18
+ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: ded315917fb0e40159aed327ed98f747bb31c4b1
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: a01a1fb182fc9d45e4e08dcd9acb8e0ec734f098
+ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301732"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81489724"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>Konfigurace rolí cloudové služby Azure v sadě Visual Studio
 Cloudová služba Azure může mít jednu nebo více pracovních nebo webových rolí. Pro každou roli je třeba definovat, jak je tato role nastavena, a také nakonfigurovat způsob, jakým je tato role spuštěna. Další informace o rolích v cloudových službách najdete ve videu [Úvod do Cloudových služeb Azure](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services).
