@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e68f2bdf0559dc2bea6bd349dbf5f9bedca3671e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ab46aef69bd6356eda0925c492a029b43cc57295
+ms.sourcegitcommit: 98421670ed0b8170aaa32d3d6f8681298f401a1d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633314"
+ms.lasthandoff: 04/18/2020
+ms.locfileid: "81638036"
 ---
 # <a name="msbuild-inline-tasks"></a>MSBuild vsazené úkoly
 
@@ -52,7 +52,7 @@ ms.locfileid: "77633314"
 
 - Atribut `TaskFactory` pojmenuje třídu, která implementuje inline task factory.
 
-- Atribut `AssemblyFile` udává umístění inline task factory. Případně můžete `AssemblyName` atribut použít k určení plně kvalifikovaného názvu třídy inline task factory, která se obvykle nachází v globální mezipaměti sestavení (GAC).
+- Atribut `AssemblyFile` udává umístění inline task factory. Případně můžete `AssemblyName` atribut použít k určení plně kvalifikovaného názvu třídy inline task factory, která je obvykle umístěna v aplikaci `$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll`.
 
 Zbývající prvky `DoNothing` úkolu jsou prázdné a jsou k dispozici pro ilustraci pořadí a strukturu včleněného úkolu. Podrobnější příklad je uveden dále v tomto tématu.
 
