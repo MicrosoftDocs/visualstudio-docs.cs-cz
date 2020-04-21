@@ -94,8 +94,6 @@
               href: how-to-set-a-security-zone-for-a-clickonce-application.md
             - name: Nastavení vlastních oprávnění pro aplikaci ClickOnce
               href: how-to-set-custom-permissions-for-a-clickonce-application.md
-            - name: Ladění aplikace ClickOnce s omezenými oprávněními
-              href: how-to-debug-a-clickonce-application-with-restricted-permissions.md
             - name: Přidání důvěryhodného vydavatele na klientský počítač
               href: how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md
             - name: Opětovné podepisování manifestů aplikace a nasazení

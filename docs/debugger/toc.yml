@@ -447,7 +447,7 @@
             - name: Kontrola vlastností XAML při ladění
               href: inspect-xaml-properties-while-debugging.md
             - name: Psaní a ladění spuštěného kódu XAML
-              href: xaml-hot-reload.md
+              href: ../xaml-tools/xaml-hot-reload.md
             - name: Ladění kódu XAML v programu Blend
               href: ../xaml-tools/debug-xaml-in-blend.md?toc=/visualstudio/debugger/toc.json
             - name: HTML a CSS
@@ -507,7 +507,7 @@
                 - name: Kontrola vlastností XAML při ladění
                   href: inspect-xaml-properties-while-debugging.md
                 - name: Psaní a ladění spuštěného kódu XAML
-                  href: xaml-hot-reload.md
+                  href: ../xaml-tools/xaml-hot-reload.md
                 - name: Použití vizualizéru stromu WPF
                   href: how-to-use-the-wpf-tree-visualizer.md
                 - name: Zobrazení informací o trasování WPF
