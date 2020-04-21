@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: a3aee4945b4a3b41a7f6ec532268c2c19f549d0a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5fdb0cc217062190e02e70b6361c8a3a2aa2f935
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79301956"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81648526"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>Vytvoření přenosného nastavení vlastního editoru pomocí řešení EditorConfig
 
@@ -104,7 +104,7 @@ Existuje několik dalších způsobů, jak můžete do projektu přidat soubor E
 
 - [Funkce odvození kódu](/visualstudio/intellicode/code-style-inference) IntelliCode pro Visual Studio odvodí styly kódu z existujícího kódu. Potom vytvoří neprázdný soubor EditorConfig s předvolbami stylu kódu, které jsou již definovány.
 
-- Počínaje Visual Studio 2019, můžete [vygenerovat Soubor EditorConfig na základě nastavení stylu kódu](/visualstudio/ide/code-styles-and-code-cleanup#code-styles-in-editorconfig-files) v**možnosti** **nástroje** > .
+- Počínaje Visual Studio 2019, můžete [vygenerovat Soubor EditorConfig na základě nastavení stylu kódu](code-styles-and-code-cleanup.md#code-styles-in-editorconfig-files) v**možnosti** **nástroje** > .
 
 ## <a name="file-hierarchy-and-precedence"></a>Hierarchie souborů a priorita
 

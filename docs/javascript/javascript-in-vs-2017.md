@@ -12,12 +12,12 @@ caps.latest.revision: 1
 author: bowdenk7
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 75b2a336cf9a229b4834b68e0f7bed5d6b1174f4
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 9df1b66f1a2407d523e38cd71fc9ffa993cd2d92
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233070"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649633"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>JavaScript v sadě Visual Studio 2017
 
@@ -58,7 +58,7 @@ Požadovaná nastavení pro soubor tsconfig jsou následující:
 Do tohoto nastavení by mělo být přidáno výstupní umístění, stejně jako složky, které nejsou projektové, například `node_modules` nebo `temp`, .
 - `enableAutoDiscovery`: Toto nastavení umožňuje automatickou detekci a stahování definičních souborů, jak je uvedeno výše.
 - `compileOnSave`: Toto nastavení informuje kompilátor, pokud by měl překompilovat kdykoli je zdrojový soubor uložen v sadě Visual Studio.
-- `typeAcquisition`: Tato sada nastavení řídí chování automatického pořizování typů (dále [vysvětlete](/visualstudio/ide/javascript-intellisense#Auto)v této části)
+- `typeAcquisition`: Tato sada nastavení řídí chování automatického pořizování typů (dále [vysvětlete](../ide/javascript-intellisense.md#Auto)v této části)
 
 Chcete-li převést soubory JavaScript u modulů CommonJS a umístit je do `./out` složky, můžete použít následující `tsconfig.json` soubor:
 
@@ -260,7 +260,7 @@ Další informace o vytváření`.d.ts`souborů deklarací [naleznete zde](http:
 Vzhledem k tomu, že nová jazyková služba je poháněna statickou analýzou spíše než prováděcím strojem (přečtěte si [tento problém](https://github.com/Microsoft/TypeScript/issues/4789) pro informace o rozdílech), existuje několik vzorů JavaScriptu, které již nelze zjistit.
 Nejběžnějším vzorem je vzor "expando".
 V současné době služba jazyka nemůže poskytovat technologie IntelliSense u objektů, které mají vlastnosti připnuté po deklaraci.
-Například:
+Příklad:
 
 ```js
 var obj = {};

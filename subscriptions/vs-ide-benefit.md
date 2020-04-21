@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
-ms.date: 03/25/2020
+ms.date: 04/17/2020
 ms.topic: conceptual
 description: Přečtěte si, jak stáhnout a nainstalovat rozhraní IDE sady Visual Studio, které je součástí předplatného sady Visual Studio.
-ms.openlocfilehash: 154e5449603a8a92d2c2a52887fc4631b8dd0ab9
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.openlocfilehash: 84666b0fd4362002fe15b21a6f23cd96c9cdc6a1
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80273969"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649561"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Výhoda Visual Studia 2019
 
@@ -23,7 +23,7 @@ Jako předplatitel visual studio máte přístup k ide sady Visual Studio.  Konk
 *(Visual Studio Enterprise se používá v tomto příkladu.)*
 
 Stažení rozhraní IDE:
-1. Přihlaste [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)se do .
+1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 2. Vyhledejte dlaždici IDE sady Visual Studio v části Nástroje a klikněte na odkaz **Stáhnout** v dolní části dlaždice zaměstnaneckých výhod.  Můžete si ji také stáhnout ze stránky [Ke stažení.](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs)
    > [!div class="mx-imgBorder"]
    > ![Dlaždice Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-tile.png)
@@ -67,7 +67,7 @@ Stažení rozhraní IDE:
 | Visual Studio Professional (standardní, měsíční cloud) | VL, Azure, Maloobchod                                       | K dispozici.                                                            |  Ano          |
 | Visual Studio Professional s GitHub Enterprise | Vl   | K dispozici.              |  Ano          |
 | Visual Studio Test Professional (standard)                         | VL, Maloobchod                                              | K dispozici.                                             |  Ano         |
-| Platformy MSDN (standardní)                                          | VL, Maloobchod                                              | Není k dispozici.                                              |  Není dostupné.          |
+| Platformy MSDN (standardní)                                          | VL, Maloobchod                                              | Není k dispozici.                                              |  –          |
 
 <sup>1</sup>  *Zahrnuje: Není pro další prodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), FTE, MCT Software & Services Developer, BizSpark, Imagine, Most Valuable Professional (MVP), Regionální ředitel (RD).  Nezahrnuje se: MCT Software & Services.*
 
@@ -85,7 +85,7 @@ Nejste si jisti, které předplatné používáte?  Připojte [https://my.visual
 ## <a name="see-also"></a>Viz také
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky

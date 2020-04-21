@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2c3e7813e5e07a0fbb8f4ebf5838c883faa0fb8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 16be10dc69f203e52eb0dccc0e0738399d37ee3d
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595719"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649439"
 ---
 # <a name="debug-page-project-designer"></a>Stránka Ladění, návrhář projektu
 
@@ -87,5 +87,5 @@ Zaškrtnutím nebo zrušením zaškrtnutí tohoto políčka povolíte nebo zaká
 - [První seznámení s ladicím programem](../../debugger/debugger-feature-tour.md)
 - [Nastavení projektu pro konfigurace ladění jazyka C#](../../debugger/project-settings-for-csharp-debug-configurations.md)
 - [Nastavení projektu pro konfiguraci ladění jazyka Visual Basic](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
-- [Postupy: Ladění aplikace ClickOnce s omezenými oprávněními](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)
+- [Zabezpečené aplikace ClickOnce](../../deployment/securing-clickonce-applications.md)
 - [Postupy: Vytvoření a úprava konfigurací](../../ide/how-to-create-and-edit-configurations.md)

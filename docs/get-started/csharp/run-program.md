@@ -1,5 +1,5 @@
 ---
-title: Jak spustit program Jazyka C#
+title: Jak spustit program (C#)
 description: Průvodce pro začátečníky o spuštění programu Jazyka C# v sadě Visual Studio.
 ms.custom: get-started
 ms.date: 10/16/2019
@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ffe52fc2bf7d05084307b4d972e45f4b1d2acdf
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: ee28bde6de10006ccfdc5175cca629ad9d1590d0
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "76924614"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649636"
 ---
 # <a name="how-to-run-a-c-program-in-visual-studio"></a>Postup: Spuštění programu Jazyka C# v sadě Visual Studio
 
@@ -76,7 +76,7 @@ Pokud kód, který chcete spustit, je v GitHubu nebo v úložišti Azure DevOps,
 
 Program spustíte stisknutím zelené šipky **(tlačítko Start)** na hlavním panelu nástrojů sady Visual Studio nebo stisknutím **klávesY F5** nebo **Ctrl**+**F5.** Při použití tlačítka **Start** se spustí pod ladicím programem.  Visual Studio se pokusí vytvořit kód v projektu a spustit jej.  Pokud se to podaří, skvělé! Ale pokud ne, pokračovat ve čtení pro některé nápady, jak se dostat do stavět úspěšně.
 
-## <a name="troubleshooting"></a>Řešení potíží
+## <a name="troubleshooting"></a>Poradce při potížích
 
 Váš kód může mít chyby, ale pokud je kód správný, ale závisí pouze na některých jiných sestaveních nebo balíčcích NuGet nebo byl napsán tak, aby cílit na jinou verzi rozhraní .NET, můžete jej snadno opravit.
 

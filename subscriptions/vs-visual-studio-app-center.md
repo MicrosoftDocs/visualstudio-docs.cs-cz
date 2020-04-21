@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: badd1d4a-90a6-46de-a037-945a91e6019b
-ms.date: 03/26/2020
+ms.date: 04/20/2020
 ms.topic: conceptual
 description: Přečtěte si o výhodách Visual Studia App Center zahrnutých v předplatných Visual Studia.
-ms.openlocfilehash: abe929398035bef8800949712ad6cc4e0ac93721
-ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
+ms.openlocfilehash: d47e3cfef8be2a3a03dab94d6a38f2ecde160f0c
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80301860"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649778"
 ---
 # <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Centrum aplikací Visual Studia v předplatných Visual Studia
 
@@ -24,7 +24,7 @@ App Center je řízení misí pro aplikace.
 
 ## <a name="activation-steps"></a>Kroky aktivace
 Začít s Visual Studio App Center je snadné.
-1. Přihlaste [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)se do .
+1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 
 2. Vyhledejte dlaždici Centra aplikací Visual Studia a klikněte na **Začínáme**.
     > [!div class="mx-imgBorder"]
@@ -77,7 +77,7 @@ Teď byste měli mít přístup k portálu App Center a vytvořit si účet.
 ## <a name="see-also"></a>Viz také
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky

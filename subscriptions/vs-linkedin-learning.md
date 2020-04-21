@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
-ms.date: 03/25/2020
+ms.date: 04/17/2020
 ms.topic: conceptual
 description: Přečtěte si o výhodách Služby LinkedIn Learning, která je součástí předplatného LinkedIn Premium zahrnutého ve vybraných předplatných Visual Studia.
-ms.openlocfilehash: 57744c21123188448048b469aa06153cf81a949f
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.openlocfilehash: a0b837ce4a86b48acb690030c1a96064b336cd61
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80273956"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649526"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Výhoda pro výuku LinkedIn v předplatných Visual Studia
 
@@ -23,11 +23,11 @@ Abyste mohli využít výhod svého výukového programu LinkedIn, musíte mít 
 
 ## <a name="activation-steps"></a>Kroky aktivace
 Aktivace předplatného LinkedIn Premium a výhody LinkedIn Learning:
-1. Přihlaste [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)se do .
+1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 
 2. Vyhledejte dlaždici Učení linkedinu v kategorii Vzdělávání a klikněte na odkaz **Získat kód.**
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice výhod pro učení linkedinu](_img/vs-linkedin/vs-linkedin-3-month-tile.png)
+   > ![Dlaždice výhod pro učení linkedinu](_img/vs-linkedin/vs-linkedin-6-month-tile.png)
 
 3. Pokud již máte účet LinkedIn a jste automaticky přihlášeni, budete okamžitě přejděte na stránku aktivace výhod pro výuku LinkedIn.  Pokud máte účet LinkedIn, ale nejste automaticky přihlášeni, jednoduše zadejte své uživatelské jméno a heslo a klikněte na **Přihlásit se**.  Chcete-li aktivovat nabídku, přejděte k [tomuto kroku.](#activate-your-offer)
 
@@ -100,7 +100,7 @@ A: Ne, linkedin učení nabídka je k dispozici pouze pro nové předplatitele.
 ## <a name="see-also"></a>Viz také
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky

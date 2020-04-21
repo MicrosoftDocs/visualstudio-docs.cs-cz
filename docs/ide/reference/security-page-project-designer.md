@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1834713ad114ab8a86e314bbe052f4873b308956
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 272d37ef9e73aa5dd0d10ca0210b18a945f993fd
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75593574"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649826"
 ---
 # <a name="security-page-project-designer"></a>Stránka Zabezpečení, návrhář projektu
 
@@ -68,7 +68,7 @@ Ve výchozím nastavení je u projektů aplikace webového prohlížeče WPF tat
 
 Otevře šablonu manifestu aplikace (app.manifest) pro konfiguraci oprávnění pro **sadu oprávnění (Vlastní).**
 
- **Pokročilé**
+ **Upřesnit**
 
 Otevře [dialogové okno Upřesnit nastavení zabezpečení](../../ide/reference/advanced-security-settings-dialog-box.md), které slouží ke konfiguraci nastavení pro ladění aplikace s omezenými oprávněními. Tato nastavení jsou kontrolovány během ladění a výjimky oprávnění označují, že vaše aplikace může potřebovat více oprávnění, než je definováno v zóně.
 
@@ -80,7 +80,7 @@ Otevře [dialogové okno Upřesnit nastavení zabezpečení](../../ide/reference
 - [Postupy: Povolení nastavení zabezpečení ClickOnce](../../deployment/how-to-enable-clickonce-security-settings.md)
 - [Postupy: Nastavení zóny zabezpečení pro aplikaci ClickOnce](../../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
 - [Postupy: Nastavení vlastních oprávnění pro aplikaci ClickOnce](../../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
-- [Postupy: Ladění aplikace ClickOnce s omezenými oprávněními](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)
+- [Zabezpečené aplikace ClickOnce](../../deployment/securing-clickonce-applications.md)
 - [ClickOnce Zabezpečení a nasazení](../../deployment/clickonce-security-and-deployment.md)
 - [Referenční dokumentace k vlastnostem projektu](../../ide/reference/project-properties-reference.md)
-- [Dialogové okno Pokročilé nastavení zabezpečení](../../ide/reference/advanced-security-settings-dialog-box.md)
+- [Dialogové okno Upřesnit nastavení zabezpečení](../../ide/reference/advanced-security-settings-dialog-box.md)

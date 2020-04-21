@@ -10,12 +10,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 5a0595fdf7331c8b2825c6092b5b29a19974887b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d1bca9bed18de822de71ca441387adeaefc65ec3
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79302257"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649400"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>Používání Visual Studio Tools for Unity
 
@@ -157,7 +157,7 @@ Můžete ladit vývoj sestavení různých unity přehrávače s Visual Studio.
 
    ![Zvolte instanci Unity, ke které se chcete připojit.](../cross-platform/media/vstu_attach-debugger.png "vstu_connection_to_unity")
 
-   **Projektu**
+   **Project**
 
    Název projektu Unity, který je spuštěn v této instanci Unity.
 
@@ -202,7 +202,7 @@ Všimněte si, že scénář popsaný zde předpokládá, že máte zdrojový k�
 
    Soubory PDB jsou potřebné pro ladění, protože obsahují ladicí symboly dll a mapovat kód DLL do formuláře zdrojového kódu. Pokud cílíte na starší runtime, Visual Studio Tools for Unity použije informace z DLL a PDB k vytvoření dll. MDB, což je formát ladicí symbol používaný starším skriptovacím strojem Unity. Pokud cílíte na nový runtime a pomocí portable-PDB, Visual Studio Tools for Unity se nebude snažit provést žádný převod symbolu jako nový runtime Unity je schopen nativně využívat přenosné pdbs.
 
-   Více informací o generaci PDB naleznete [zde](/visualstudio/debugger/how-to-set-debug-and-release-configurations). Pokud cílíte na nový runtime, ujistěte se, že "Ladění informace" je nastavena na "Portable", aby bylo možné správně generovat Portable-PDB. Pokud cílíte na starší runtime, musíte použít "Full".
+   Více informací o generaci PDB naleznete [zde](../debugger/how-to-set-debug-and-release-configurations.md). Pokud cílíte na nový runtime, ujistěte se, že "Ladění informace" je nastavena na "Portable", aby bylo možné správně generovat Portable-PDB. Pokud cílíte na starší runtime, musíte použít "Full".
 
 4. Ladění kódu. Nyní můžete ladit zdrojový kód DLL společně se zdrojovým kódem projektu Unity a použít všechny funkce ladění, na které jste zvyklí, jako jsou zarážky a krokování kódu.
 

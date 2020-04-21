@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
-ms.date: 03/26/2020
+ms.date: 04/20/2020
 ms.topic: conceptual
 description: Přečtěte si, jak aktivovat předplatné Parasoft Virtualize/SOA Test Professional, které je součástí předplatného sady Visual Studio.
-ms.openlocfilehash: 5f6673ecd3721232feb727ceda2c399e2ee12348
-ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
+ms.openlocfilehash: 320223c76178259d86c2abc942a5852115c6c94a
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80301900"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649451"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Parasoft Virtualize/SOAtest Professional Desktop v předplatných Visual Studio
 
@@ -47,7 +47,7 @@ Test dříve a častěji.  Simulujte a otestujte chování nedostupných vyvíje
 
 9. Zvolte požadovaný jazyk a klepněte na tlačítko **OK**.
 
-10. Parasoft SOAtest & Virtualizovat Instalační průvodce se spustí.  Klikněte na **Další**.
+10. Parasoft SOAtest & Virtualizovat Instalační průvodce se spustí.  Klikněte na **Další**.
     > [!div class="mx-imgBorder"]
     > ![Start instalace Parasoft Benefit](_img/vs-parasoft/vs-parasoft-start-install.png)
 
@@ -97,7 +97,7 @@ Test dříve a častěji.  Simulujte a otestujte chování nedostupných vyvíje
 ## <a name="see-also"></a>Viz také
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky

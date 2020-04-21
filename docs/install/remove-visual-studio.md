@@ -22,12 +22,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b0e8c8fe10451e9e5906eabf7f4f65086d147904
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 98886df1c7fb09fa30d5c54abe19452780195b6a
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76113707"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649196"
 ---
 # <a name="remove-visual-studio"></a>Odebrat Visual Studio
 
@@ -51,10 +51,10 @@ Nástroj spustíte takto: `InstallCleanup.exe`
 1. Otevřete příkazový řádek správce. Chcete-li otevřít příkazový řádek správce, postupujte takto:
    * Do pole "Zadejte zde pro vyhledávání" zadejte **cmd.**
    * Klepněte pravým tlačítkem myši na **příkazový řádek**a pak zvolte **Spustit jako správce**.
-1. Zadejte úplnou `InstallCleanup.exe` cestu nástroje a přidejte přepínač příkazového řádku, který dáváte přednost. Ve výchozím nastavení je cesta nástroje následující:
+1. Zadejte úplnou `InstallCleanup.exe` cestu nástroje a přidejte přepínač příkazového řádku, který dáváte přednost. Ve výchozím nastavení je cesta nástroje následující. Dvojité uvozovky uzavírají příkaz obsahující mezery:
 
    ```
-   C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\layout\InstallCleanup.exe
+   "C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\layout\InstallCleanup.exe"
    ```
 
    > [!NOTE]

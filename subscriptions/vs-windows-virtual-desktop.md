@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
-ms.date: 04/01/2020
+ms.date: 04/20/2020
 ms.topic: conceptual
 description: Zjistěte, jak můžete využít výhod virtuální plochy Microsoft Windows prostřednictvím předplatného sady Visual Studio.
-ms.openlocfilehash: 3954a3e86c319b8d433e509a8b283201c3313410
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.openlocfilehash: 87911b1b7b6eb63eb85b64515d5d24755e4656e6
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550691"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649735"
 ---
 # <a name="access-windows-virtual-desktop-in-subscriptions"></a>Přístup k virtuální ploše Windows v předplatných 
 Předplatitelé Visual Studia teď mohou používat své kredity Azure pro vývoj a testování jednotlivých kreditů pro služby Microsoft Windows Virtual Desktop.  
@@ -52,8 +52,8 @@ Když jsou všechny vaše požadavky na místě, budete chtít dokončit několi
 | Visual Studio Professional s GitHub Enterprise | Vl                                       | K dispozici.                                        |  Ano           |
 | Visual Studio Test Professional (standard)                         | VL, Maloobchod                                              | K dispozici.|  Ano          |
 | Platformy MSDN (standardní)                                          | VL, Maloobchod                                              | K dispozici.                                         |  Ano          |
-| Visual Studio Enterprise (standard)  | NFR<sup>1</sup> |Není k dispozici.  | Není dostupné. |
-| Visual Studio Enterprise, Visual Studio Professional (měsíční cloud) | Azure | Není k dispozici. | Není dostupné. |
+| Visual Studio Enterprise (standard)  | NFR<sup>1</sup> |Není k dispozici.  | – |
+| Visual Studio Enterprise, Visual Studio Professional (měsíční cloud) | Azure | Není k dispozici. | – |
 
 <sup>1</sup>  *Zahrnuje: Není pro další prodej (NFR), FTE, Nejhodnotnější Professional (MVP), Regionální ředitel (RD), Microsoft Partner Network (MPN), Visual Studio Průmysl Partner (VSIP), Microsoft Certified Trainer, BizSpark, Imagine*
 

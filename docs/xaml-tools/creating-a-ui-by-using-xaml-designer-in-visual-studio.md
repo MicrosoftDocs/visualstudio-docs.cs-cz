@@ -12,16 +12,16 @@ ms.assetid: c54969a7-d75a-4a35-9b37-af7a596a7c24
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: a2a0e25779df1e0b91a69518dc2257119e33cca4
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 31a31e413ecd39b7d15f8ea3cd0417c2493463ca
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79190340"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649622"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>Vytvoření uživatelského rozhraní pomocí Návrháře XAML
 
-Návrhář XAML v sadě Visual Studio a Blend for Visual Studio poskytuje vizuální rozhraní, které vám pomůže navrhnout aplikace založené na XAML, jako jsou aplikace WPF, UpWP a Xamarin.Forms. Uživatelská rozhraní pro aplikace můžete vytvořit přetažením ovládacích prvků z okna Panelu nástrojů (okno Datové zdroje v prolnutí pro sadu Visual Studio) a nastavením vlastností v okně Vlastnosti. XAML můžete také upravit přímo v zobrazení XAML.
+Návrhář XAML v sadě Visual Studio a Blend for Visual Studio poskytuje vizuální rozhraní, které vám pomůže navrhnout aplikace založené na XAML, jako jsou WPF a UPW. Uživatelská rozhraní pro aplikace můžete vytvořit přetažením ovládacích prvků z okna Panelu nástrojů (okno Datové zdroje v prolnutí pro sadu Visual Studio) a nastavením vlastností v okně Vlastnosti. XAML můžete také upravit přímo v zobrazení XAML.
 
 Pro pokročilé uživatele můžete dokonce [přizpůsobit XAML Designer](https://github.com/microsoft/xaml-designer-extensibility/blob/master/documents/xaml-designer-extensibility-migration.md).
 

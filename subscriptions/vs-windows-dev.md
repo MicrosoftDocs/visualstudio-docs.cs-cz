@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
-ms.date: 03/26/2020
+ms.date: 04/20/2020
 ms.topic: conceptual
 description: Přečtěte si o vývojářském účtu Windows, který je součástí předplatného Sady Visual Studio.
-ms.openlocfilehash: 795eccdf72fad7df760d709b44351444b6dea424
-ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
+ms.openlocfilehash: c3764330b5ace58f976f726770fa7a3e9ed2a4ed
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80301855"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649711"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Účet pro vývojáře Windows v předplatných Visual Studia
 Váš vývojářský účet Windows, který je součástí vybraného předplatného Visual Studia, vám umožní odesílat bezplatné a placené aplikace pro Windows do Windows Storu.
@@ -22,7 +22,7 @@ Chcete-li používat svůj vývojářský účet systému Windows, musíte si na
 
 Doporučujeme vytvořit "soukromé" okno prohlížeče pro tento proces.  Například v prohlížeči Google Chrome vytvořte nové anonymní okno.  V aplikaci Internet Explorer vytvořte nové okno InPrivate.
 
-1. Přihlaste [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)se do .
+1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 2. Vyhledejte dlaždici účtu pro vývojáře systému Windows v části Nástroje a klikněte na odkaz **Získat kód** v dolní části dlaždice zaměstnaneckých výhod.  Zkopírujte kód do schránky a klepněte na **tlačítko Aktivovat**.
    > [!div class="mx-imgBorder"]
    > ![Dlaždice zaměstnaneckých výhod pro vývojáře systému Windows](_img/vs-windows-dev/vs-windows-dev-tile.png)
@@ -36,7 +36,7 @@ Doporučujeme vytvořit "soukromé" okno prohlížeče pro tento proces.  Např�
 7. Vytvořte zobrazované jméno vydavatele.  Bude se jedná o jedinečný název, který zákazníci uvidí a neboť jsou spojeni s vašimi aplikacemi, doplňky a službami.
 8. Zadejte kontaktní údaje a preferovaný jazyk e-mailu a klepněte na tlačítko **Další**.
 9. Můžete být požádáni o ověření hesla.  Zadejte a klepněte na **tlačítko Přihlásit se**.
-10. Na stránce Registrace – platba vložte kód, který jste zkopírovali dříve, do pole Propagační kód.  Stránka se aktualizuje tak, aby zobrazovala, že *není vyžadována žádná platba*.  Klikněte na **Další**.
+10. Na stránce Registrace – platba vložte kód, který jste zkopírovali dříve, do pole Propagační kód.  Stránka se aktualizuje tak, aby zobrazovala, že *není vyžadována žádná platba*.  Klikněte na **Další**.
 11. Zkontrolujte informace o svém účtu, zkontrolujte smlouvu s vývojářem aplikací a kliknutím na toto políčko označte, že podmínky souhlasíte.  Klikněte na **Dokončit**.
 12. Chcete-li začít používat vývojářský účet systému Windows, klepněte na **tlačítko Přejít na řídicí panel!**
 
@@ -68,7 +68,7 @@ Nejste si jisti, které předplatné používáte?  Připojte [https://my.visual
 ## <a name="see-also"></a>Viz také
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky

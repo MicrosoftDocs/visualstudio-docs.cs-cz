@@ -8,12 +8,12 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 2dc938b5-37e9-4dfc-8676-5d0a91d366ab
-ms.openlocfilehash: 435185a628dbf256802ae36dae45eac60d304a54
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.openlocfilehash: c19bb72a7d5262c5d0864d12d44266c8ef016acf
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80544054"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649675"
 ---
 # <a name="what39s-new-in-visual-studio-subscriptions"></a>Co&#39;nového v předplatných Visual Studia
 
@@ -39,6 +39,23 @@ Pokud vaše organizace používá Azure Active Directory (Azure AD), můžete te
 S potěšením oznamujeme rozšíření výhod, které nabízí náš partner CAST Highlight. 
 - Délka výhody zahrnuté v předplatných Sady Visual Studio Enterprise byla prodloužena na šest měsíců.  
 - Předplatitelé sady Visual Studio Professional nyní mohou získat předplatné, které jim umožňuje posoudit jednu aplikaci po dobu tří měsíců. 
+
+## <a name="2020-q2-april-june"></a>2. čtvrtletí 2020 (duben–červen)
+
+### <a name="visual-studio-subscriptions-portal"></a>Portál předplatných visual studia
+
+Portál předplatných sady Visual Studio prošel významnými změnami ve vzhledu a snadném použití.  
+
+- Dlaždice zaměstnaneckých výhod byly změněny a všechny jsou zobrazeny v okně, takže nemusíte posouvat doleva nebo doprava, abyste viděli všechny dlaždice v dané kategorii. 
+- Pomocí výběru kategorií můžete zobrazit všechny dostupné výhody nebo zobrazit pouze jednu kategorii.
+   > [!div class="mx-imgBorder"]
+   > ![Výběr nové kategorie zaměstnaneckých výhod](_img/whats-new/whats-new-category-picker.png)
+- Také jsme přesunuli výběr předplatného z pravého horního rohu okna na přístupnější místo.
+   > [!div class="mx-imgBorder"]
+   > ![Nový výběr předplatného](_img/whats-new/whats-new-sub-picker.png)
+- V horní části seznamu výhod jsme přidali "Nejlepší výhodu", abychom mohli využít nové nebo oblíbené výhody.  
+   > [!div class="mx-imgBorder"]
+   > ![Nová výhoda](_img/whats-new/whats-new-featured.png)
 
 ## <a name="next-steps"></a>Další kroky
 - Podívejte se na nové portál [správy předplatného](https://manage.visualstudio.com) u im

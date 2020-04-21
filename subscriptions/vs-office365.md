@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 9c70adf7-7d1b-4322-8e34-9149e8735a13
-ms.date: 03/26/2020
+ms.date: 04/20/2020
 ms.topic: conceptual
 description: Přečtěte si o výhodách Office 365 Pro Plus, které jsou součástí některých předplatných Visual Studia.
-ms.openlocfilehash: ce0527fbf4912ed55ed99f9368c8f10dde68a091
-ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
+ms.openlocfilehash: 3db596912739562b65a0568864dfdf224cc28b3a
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80301913"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649478"
 ---
 # <a name="office-365-pro-plus-in-visual-studio-subscriptions"></a>Předplatná Office 365 Pro Plus v Předplatná Visual Studia
 
@@ -57,12 +57,12 @@ Stažení mandatáku a aktivace Office 365 Pro Plus postupujte takto:
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (standard)   | VL, Azure, Maloobchod| K dispozici.       |  Ano          |
 | Visual Studio Enterprise s GitHub Enterprise  | Vl | K dispozici.       |  Ano          |
-| Visual Studio Enterprise (standard)   | NFR<sup>1</sup> | Není k dispozici.       |  Není dostupné.          |
-| Visual Studio Professional (standard) | VL, Azure, Maloobchod                                       | Není k dispozici.                                                            |  Není dostupné.          |
-| Visual Studio Professional s GitHub Enterprise | Vl | Není k dispozici.         |  Není dostupné.          |
-| Visual Studio Test Professional (standard)                         | VL, Maloobchod                                              | Není k dispozici.                                             |  Není dostupné.          |
-| Platformy MSDN (standardní)                                          | VL, Maloobchod                                              | Není k dispozici.                                              |  Není dostupné.          |
-| Visual Studio Enterprise, Visual Studio Professional (měsíční cloud) | Azure | Není k dispozici. | Není dostupné. |
+| Visual Studio Enterprise (standard)   | NFR<sup>1</sup> | Není k dispozici.       |  –          |
+| Visual Studio Professional (standard) | VL, Azure, Maloobchod                                       | Není k dispozici.                                                            |  –          |
+| Visual Studio Professional s GitHub Enterprise | Vl | Není k dispozici.         |  –          |
+| Visual Studio Test Professional (standard)                         | VL, Maloobchod                                              | Není k dispozici.                                             |  –          |
+| Platformy MSDN (standardní)                                          | VL, Maloobchod                                              | Není k dispozici.                                              |  –          |
+| Visual Studio Enterprise, Visual Studio Professional (měsíční cloud) | Azure | Není k dispozici. | – |
 |  |
 
 <sup>1</sup>  *Zahrnuje: Není pro další prodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), FTE, MCT Software & Services Developer, BizSpark, Most Valuable Professional (MVP), Regionální ředitel (RD), MCT Software & Services, Imagine, Microsoft Partner Network.*
@@ -80,7 +80,7 @@ Nejste si jisti, které předplatné používáte?  Připojte [https://my.visual
 ## <a name="see-also"></a>Viz také
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky

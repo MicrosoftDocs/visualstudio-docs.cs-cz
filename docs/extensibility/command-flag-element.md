@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7173bc1ebc5507eadf319c0374f4c878dea62857
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 84138a69dbb42fc349c12276fd7cca4b593e4d47
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739774"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649370"
 ---
 # <a name="command-flag-eelement"></a>Příkazový příznak Eelement
 Upraví nadřazený prvek.
@@ -60,7 +60,6 @@ Upraví nadřazený prvek.
 |PostExec|Způsobí, že příkaz neblokuje. Vývojové prostředí odkládá spuštění, dokud nebudou dokončeny všechny dotazy předběžného zpracování.<br /><br /> Platí pro:`Button`|
 |RouteToDocs|Příkaz je směrován do aktivního dokumentu.<br /><br /> Platí pro:`Button`|
 |RoztáhnoutVodorovně|Je-li tento příznak nastaven, šířka se stane minimální šířkou pole se seznamem a pokud je na panelu nástrojů místo, pole se seznamem se roztáhne tak, aby vyplnilo dostupné místo. K tomu dochází pouze v případě, že panel nástrojů je vodorovně ukotven a pouze jeden pole se seznamem na panelu nástrojů může použít příznak (příznak je ignorován na všech kromě prvního pole se seznamem).<br /><br /> Platí pro:`Combo`|
-|TextMenuUseButton|Toto `ButtonText` pole použijte pro nabídky. Výchozí pole `MenuText` je, pokud je zadáno.<br /><br /> Platí pro:`Button`|
 |TextZměny|Příkaz nebo text nabídky lze změnit za běhu, `QueryStatus` obvykle prostřednictvím metody.<br /><br /> Platí pro: `Button`,`Menu`|
 |TextChangesButton|Platí pro:`Button`|
 |TextIsAnchorCommand|Pro řadič nabídky je text nabídky převzat z výchozího příkazu (kotva). Příkaz kotvy je poslední vybraný nebo západný příkaz. Pokud tento příznak není nastaven, ovladač `MenuText` nabídky používá vlastní pole. Klepnutí na řadič nabídky však stále umožňuje poslední vybraný příkaz z tohoto řadiče.<br /><br /> Doporučujeme kombinovat tuto vlajku `TextChanges` s vlajkou.<br /><br /> Tento příznak se vztahuje pouze na nabídky typu MenuController nebo MenuControllerLatched.<br /><br /> Platí pro:`Menu`|
@@ -70,7 +69,7 @@ Upraví nadřazený prvek.
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
-|Element|Popis|
+|Prvek|Popis|
 |-------------|-----------------|
 |[Prvek tlačítek](../extensibility/buttons-element.md)|Poskytuje skupinu pro [prvky Button elementu.](../extensibility/button-element.md)|
 |[Prvek nabídek](../extensibility/menus-element.md)|Definuje všechny nabídky, které implementuje VSPackage.|

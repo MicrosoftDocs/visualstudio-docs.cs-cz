@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
-ms.date: 03/26/2020
+ms.date: 04/20/2020
 ms.topic: conceptual
 description: Přečtěte si o trénovacím předplatném Pluralsight, které je součástí vybraných předplatných Sady Visual Studio.
-ms.openlocfilehash: 71af6f269fe84ef633215dcb526b89dffe8481a0
-ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
+ms.openlocfilehash: 6ae0a77cf4849f0e648eeed17830911c90c8b584
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80301882"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649806"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Výhody školení Pluralsight v předplatných Sady Visual Studio
 
@@ -25,7 +25,7 @@ V následující tabulce je podrobně uvedeno, jaké výhody předplatného Plur
 ## <a name="activation-steps"></a>Kroky aktivace
 1. Chcete-li aktivovat [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) předplatné, připojte se k odkazu **Získat kód** na dlaždici výhody Pluralsight, která se nachází v části Profesionální rozvoj, a klikněte na něj.
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice výhod pluralsightu](_img/vs-pluralsight/vs-pluralsight-3month-tile.png)
+   > ![Dlaždice výhod pluralsightu](_img/vs-pluralsight/vs-pluralsight-6month-tile.png)
    >
    > [!IMPORTANT]
    > Když kliknete na odkaz "Získat kód" na dlaždici výhody Pluralsight, může se zobrazit následující zpráva:
@@ -101,7 +101,7 @@ A: Na konci svého bezplatného předplatného Pluralsight se můžete rozhodnou
 ## <a name="see-also"></a>Viz také
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky

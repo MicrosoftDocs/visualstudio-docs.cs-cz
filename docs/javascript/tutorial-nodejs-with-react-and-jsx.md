@@ -2,7 +2,7 @@
 title: Vytvoření aplikace Node.js a React
 description: V tomto kurzu vytvoříte aplikaci pomocí nástrojů Node.js Tools for Visual Studio.
 ms.custom: mvc
-ms.date: 11/01/2019
+ms.date: 4/20/2020
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 55086c473929158f50f05db790cf5842f1b696db
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 265445306babf198c3d0063252846414a589a29c
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79550031"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649257"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Kurz: Vytvoření aplikace Node.js a React v sadě Visual Studio
 
@@ -72,7 +72,7 @@ webpack svazky JavaScript soubory, takže mohou běžet v prohlížeči. Může 
 
 * Je nutné mít nainstalovaný modul runtime Node.js.
 
-    Tento kurz byl testován s verzí 10.16.0.
+    Tento kurz byl testován s verzí 12.6.2.
 
     Pokud ji nemáte nainstalovanou, doporučujeme nainstalovat verzi LTS z webu [Node.js](https://nodejs.org/en/download/) pro nejlepší kompatibilitu s externími architekturami a knihovnami. Soubor Node.js je vytvořen pro 32bitové a 64bitové architektury. Nástroje Node.js v sadě Visual Studio, které jsou součástí úlohy Node.js, podporují obě verze. Je vyžadován pouze jeden a instalační program Node.js podporuje pouze jednu, která je nainstalována současně.
     
@@ -125,7 +125,7 @@ Tato aplikace vyžaduje ke správnému fungování řadu modulů npm.
 
 1. V Průzkumníku řešení (pravé podokno) klikněte pravým tlačítkem na uzel **npm** v projektu a zvolte **Nainstalovat nové balíčky npm**.
 
-    V dialogovém okně **Nainstalovat nové balíčky npm** můžete zvolit instalaci nejnovější verze balíčků nebo určit konkrétní verzi. Pokud zvolíte instalaci nejnovější verze těchto balíčků, ale při dalším postupu dojde k neočekávaným chybám, bude asi potřeba nainstalovat přesně ty verze balíčků, které jsou uvedené dále v tomto postupu.
+    V dialogovém okně **Nainstalovat nové balíčky npm** můžete zvolit instalaci nejnovější verze balíčků nebo určit konkrétní verzi. Pokud se rozhodnete nainstalovat aktuální verzi těchto balíčků, ale později narazíte na neočekávané chyby, můžete nainstalovat přesné verze balíčků popsané dále v těchto krocích.
 
 1. V dialogovém okně **Instalovat nové balíčky npm** vyhledejte balíček react a vyberte **instalovat balíček** a nainstalujte jej.
 
@@ -139,14 +139,14 @@ Tato aplikace vyžaduje ke správnému fungování řadu modulů npm.
 
     ```json
     "dependencies": {
-      "express": "~4.16.4",
+      "express": "~4.17.1",
       "path": "~0.12.7",
-      "react": "~16.6.0",
-      "react-dom": "~16.6.0",
-      "ts-loader": "~5.3.0",
-      "typescript": "~3.1.5",
-      "webpack": "~4.23.1",
-      "webpack-cli": "~3.1.2"
+      "react": "~16.13.1",
+      "react-dom": "~16.13.1",
+      "ts-loader": "~7.0.1",
+      "typescript": "~3.8.3",
+      "webpack": "~4.42.1",
+      "webpack-cli": "~3.3.11"
     }
     ```
 
@@ -154,7 +154,9 @@ Tato aplikace vyžaduje ke správnému fungování řadu modulů npm.
 
 1. Uložte změny.
 
-1. Klepněte pravým tlačítkem myši na uzel **npm** v projektu a zvolte **Aktualizovat balíčky npm**.
+1. Klepněte pravým tlačítkem myši na uzel **npm** v projektu a zvolte **Nainstalovat balíčky npm**.
+
+    Tento příkaz spustí příkaz npm install přímo.
 
     V dolním podokně vyberte okno **Výstup,** chcete-li zobrazit průběh instalace balíčků. Instalace může trvat několik minut a nemusí se zobrazit výsledky okamžitě. Chcete-li zobrazit výstup, ujistěte se, že vyberete **Npm** v poli **Zobrazit výstup z** v okně **Výstup.**
 

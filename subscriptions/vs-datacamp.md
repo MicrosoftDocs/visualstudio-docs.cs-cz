@@ -4,21 +4,21 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
-ms.date: 03/25/2020
+ms.date: 04/17/2020
 ms.topic: conceptual
 description: Přečtěte si o trénovacím předplatném DataCamp, které je součástí vybraných předplatných Sady Visual Studio.
-ms.openlocfilehash: 0b5aa20667728847afc83c77401f8651cbad106d
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.openlocfilehash: 85545df5a38f5f8c3e3c29e6ffe1581298999562
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80273982"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649574"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Výhody školení DataCamp v předplatných Visual Studia
 Způsobilá předplatná sady Visual Studio zahrnují předplatná datacampu.  S DataCamp, můžete se naučit všechny dovednosti datové vědy, které potřebujete z pohodlí vašeho prohlížeče. Můžete si vybrat, kdy a co se naučíte. Bez softwaru k instalaci a bez zvláštních hardwarových požadavků je učení datové vědy snadnější než kdy předtím.
 
 ## <a name="activation-steps"></a>Kroky aktivace
-1. Přihlaste [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)se do .
+1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 
 2. Vyhledejte dlaždici zaměstnaneckých výhod DataCamp v kategorii "Profesionální rozvoj" a klikněte na **Aktivovat**.
    > [!div class="mx-imgBorder"]
@@ -65,8 +65,8 @@ Můžete se zastavit kdykoli a pokračovat v tréninku v příštím zasedání.
 | Visual Studio Professional s GitHub Enterprise| Vl | 3 měsíce                                                            |  Ne.  K dispozici pouze pro nové předplatitele           |
 | Visual Studio Test Professional (standard)                         | VL, Maloobchod                                              | 3 měsíce                                             |  Ne.  K dispozici pouze pro nové předplatitele           |
 | Platformy MSDN (standardní)                                          | VL, Maloobchod                                              | 3 měsíce                                              |  Ne.  K dispozici pouze pro nové předplatitele           |
-| Visual Studio Enterprise (standard)  | NFR<sup>1</sup> |Není k dispozici.  | Není dostupné. |
-| Visual Studio Enterprise, Visual Studio Professional (měsíční cloud) | Azure | Není k dispozici. | Není dostupné. |
+| Visual Studio Enterprise (standard)  | NFR<sup>1</sup> |Není k dispozici.  | – |
+| Visual Studio Enterprise, Visual Studio Professional (měsíční cloud) | Azure | Není k dispozici. | – |
 
 <sup>1</sup>  *Zahrnuje: Není pro další prodej (NFR), FTE, Nejhodnotnější Professional (MVP), Regionální ředitel (RD), Microsoft Partner Network (MPN), Visual Studio Průmysl Partner (VSIP), Microsoft Certified Trainer, BizSpark, Imagine*
 
@@ -86,7 +86,7 @@ Nejste si jisti, které předplatné používáte?  Připojte [https://my.visual
 ## <a name="see-also"></a>Viz také
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky

@@ -1,5 +1,5 @@
 ---
-title: 'Upozornění: ladění skriptů zakázáno | Microsoft Docs'
+title: 'Upozornění: Ladění skriptů zakázáno | Dokumenty společnosti Microsoft'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,33 +15,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 91875a370f6d072cf2dd69807f516b8f1a808461
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 15de1a1e516cb3d84c24428ef04dd87baedaed9e
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728202"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81648507"
 ---
 # <a name="warning-script-debugging-disabled"></a>Upozornění: Ladění skriptů zakázáno
-Ladění skriptů je momentálně v Internet Exploreru zakázané.
+Ladění skriptů je v aplikaci Internet Explorer aktuálně zakázáno.
 
- K tomuto upozornění dochází při pokusu o ladění skriptu bez povolení ladění skriptu v aplikaci Internet Explorer. Z bezpečnostních důvodů Internet Explorer ve výchozím nastavení zakáže ladění skriptu.
+ K tomuto upozornění dochází při pokusu o ladění skriptu bez povolení ladění skriptu v aplikaci Internet Explorer. Z bezpečnostních důvodů aplikace Internet Explorer ve výchozím nastavení zakáže ladění skriptů.
 
-### <a name="to-enable-script-debugging-in-internet-explorer"></a>Povolení ladění skriptu v aplikaci Internet Explorer
+### <a name="to-enable-script-debugging-in-internet-explorer"></a>Povolení ladění skriptů v aplikaci Internet Explorer
 
-1. V nabídce **nástroje** Internet Exploreru vyberte **Možnosti Internetu**.
+1. V nabídce **Nástroje** aplikace Internet Explorer zvolte **Možnosti Internetu**.
 
-2. V dialogovém okně **Možnosti Internetu** klikněte na kartu **Upřesnit** .
+2. V dialogu **Možnosti Internetu** klikněte na kartu **Upřesnit** .
 
-3. Na kartě **Upřesnit** se podívejte do pole **Nastavení** , v kategorii **procházení** .
+3. Na kartě **Upřesnit** se podívejte do pole **Nastavení** V kategorii **Procházení.**
 
-4. Zrušte zaškrtnutí políčka **Zakázat ladění skriptů (Internet Explorer)** .
+4. Zrušte **zaškrtnutí položky Disable Script Debugging (Internet Explorer).**
 
 5. Klikněte na tlačítko **OK**.
 
-6. Ukončete a znovu spusťte aplikaci Internet Explorer.
+6. Ukončete a restartujte aplikaci Internet Explorer.
 
-     Nové nastavení bude platit nyní.
+     Nové nastavení bude nyní v platnosti.
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Připojení ke skriptu](../debugger/how-to-attach-to-script.md)
+## <a name="see-also"></a>Viz také
+- [Postup: Připojení ke skriptu](attach-to-running-processes-with-the-visual-studio-debugger.md)
