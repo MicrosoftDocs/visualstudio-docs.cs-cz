@@ -77,6 +77,7 @@
 ### Přiřazení předplatných
 #### [Přidání jednotlivých uživatelů](assign-license.md)
 #### [Přidání více uživatelů](assign-license-bulk.md)
+#### [Přiřazení konkrétních předplatných](assign-guid.md)
 ### [Úprava předplatných](edit-license.md)
 ### [Odstranění předplatných](delete-license.md)
 ### [Hledání předplatného](search-license.md)

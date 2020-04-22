@@ -1,8 +1,8 @@
 ---
 title: Vytvoření aplikace Node.js a React
 description: V tomto kurzu vytvoříte aplikaci pomocí nástrojů Node.js Tools for Visual Studio.
-ms.custom: mvc
-ms.date: 4/20/2020
+ms.custom: ''
+ms.date: 4/21/2020
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 265445306babf198c3d0063252846414a589a29c
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: c6813e0ad482bb211269c9da3950842dda7f6abd
+ms.sourcegitcommit: a7f781d5a089e6aab6b073a07f3d4d2967af8aa6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649257"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760113"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Kurz: Vytvoření aplikace Node.js a React v sadě Visual Studio
 
@@ -106,7 +106,7 @@ Nejprve vytvoříte projekt webové aplikace Node.js.
 
     (3) Uzel npm zobrazuje všechny nainstalované balíčky npm. Můžete klepnout pravým tlačítkem myši na uzel npm a vyhledat a nainstalovat balíčky npm pomocí dialogového okna nebo nainstalovat a aktualizovat balíčky pomocí nastavení v *souboru package.json* a pravým tlačítkem myši v uzlu npm.
 
-    (4) *package.json* je soubor používaný npm ke správě závislostí balíčků a verzí balíčků pro místně nainstalované balíčky. Další informace o tomto souboru naleznete v [tématu package.json configuration](../javascript/configure-packages-with-package-json.md)
+    (4) *package.json* je soubor používaný npm ke správě závislostí balíčků a verzí balíčků pro místně nainstalované balíčky. Další informace naleznete v [tématu Správa balíčků npm](../javascript/npm-package-management.md).
 
     (5) Soubory projektu, jako je *například server.js,* se zobrazí pod uzlou položkou projektu. *server.js* je spouštěcí soubor projektu, a proto se zobrazuje **tučně**. Spouštěcí soubor můžete nastavit tak, že klepnete pravým tlačítkem myši na soubor v projektu a vyberete **možnost Nastavit jako spouštěcí soubor Node.js**.
 
@@ -129,7 +129,7 @@ Tato aplikace vyžaduje ke správnému fungování řadu modulů npm.
 
 1. V dialogovém okně **Instalovat nové balíčky npm** vyhledejte balíček react a vyberte **instalovat balíček** a nainstalujte jej.
 
-    ![Instalace balíčků npm](../javascript/media/tutorial-nodejs-react-install-packages.png)
+    ![Instalace balíčků npm](../javascript/media/tutorial-nodejs-react-install-package.png)
 
     Vyberte okno **Výstup,** chcete-li zobrazit průběh instalace balíčku (v poli **Zobrazit výstup z** vyberte možnost **Npm).** Po dokončení instalace se tento balíček zobrazí pod uzlem **npm**.
 
@@ -162,7 +162,7 @@ Tato aplikace vyžaduje ke správnému fungování řadu modulů npm.
 
     Tady jsou moduly npm, které se po instalaci zobrazí v Průzkumníku řešení.
 
-    ![Balíčky npm](../javascript/media/tutorial-nodejs-react-npm-modules.png)
+    ![Balíčky npm](../javascript/media/tutorial-nodejs-react-npm-modules-installed.png)
 
     > [!NOTE]
     > Pokud chcete balíčky npm nainstalovat raději pomocí příkazového řádku, klikněte pravým tlačítkem na uzel projektu a zvolte **Otevřít tady příkazový řádek**. K instalaci balíčků použijte standardní příkazy Node.js.
@@ -312,7 +312,7 @@ V předchozím postupu jste do projektu přidali *webpack-config.js*. Dále při
 
     V okně příkazového řádku se zobrazí výsledek.
 
-    ![Spuštění webpacku](../javascript/media/tutorial-nodejs-react-run-webpack.png)
+    ![Spuštění webpacku](../javascript/media/tutorial-nodejs-react-run-webpack-cmd.png)
 
     Pokud se místo uvedeného výstupu zobrazují nějaké chyby, je potřeba je před použitím aplikace odstranit. Příčinou těchto chyb může být skutečnost, že se vaše verze balíčků npm liší od verzí používaných v tomto kurzu. Jednou možností, jak chyby odstranit, je použití přesně těch verzí, které jsou uvedené v dřívějším postupu. Pokud jsou některé z těchto verzí balíčků zastaralé a způsobují chyby, může být k odstranění chyb potřeba nainstalovat novější verze. Informace o použití *souboru package.json* k řízení verzí balíčků npm naleznete v [tématu package.json configuration](../javascript/configure-packages-with-package-json.md).
 
@@ -342,7 +342,7 @@ Počínaje Visual Studio 2019 je vyžadován skript sestavení. Namísto transpi
 
 ## <a name="run-the-app"></a>Spuštění aplikace
 
-1. Jako aktuální cíl ladění vyberte Microsoft Edge nebo Chrome.
+1. Jako aktuální cíl ladění vyberte **webový server (Google Chrome)** nebo **webový server (Microsoft Edge).**
 
     ::: moniker range=">=vs-2019"
     ![Výběr Chromu jako cíle ladění](../javascript/media/vs-2019/tutorial-nodejs-react-debug-target.png)
@@ -351,12 +351,7 @@ Počínaje Visual Studio 2019 je vyžadován skript sestavení. Namísto transpi
     ![Výběr Chromu jako cíle ladění](../javascript/media/tutorial-nodejs-react-debug-target.png)
     ::: moniker-end
 
-    ::: moniker range=">=vs-2019"
-    Pokud je Chrome ve vašem počítači k dispozici, ale nezobrazuje se jako možnost, zvolte **webový prohlížeč (název prohlížeče)** > **Vyberte webový prohlížeč** z rozevíracího seznamu ladění cíle a vyberte **Chrome** jako výchozí cíl prohlížeče.
-    ::: moniker-end
-    ::: moniker range="vs-2017"
-    Pokud je Chrome ve vašem počítači k dispozici, ale nezobrazuje se jako možnost, zvolte z rozevíracího seznamu ladění cílovou adresu **Prohlížeče (název prohlížeče)** > **Google Chrome** a jako výchozí cíl prohlížeče vyberte Prohlížeč **Chrome.**
-    ::: moniker-end
+    Pokud je Chrome ve vašem počítači k dispozici, ale nezobrazuje se jako možnost, zvolte **Procházet pomocí** z rozevíracího seznamu ladění cíle a vyberte Chrome jako výchozí cíl prohlížeče (zvolte **Nastavit jako výchozí**).
 
 1. Ke spuštění aplikace stiskněte **F5** (**Ladit** > **Spustit ladění**) nebo tlačítko se zelenou šipkou.
 

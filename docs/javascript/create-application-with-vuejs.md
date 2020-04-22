@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: af781f5735a3539d8b0e2d098bb9252bc60193fc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: edf5307984b4efc00a7c83c84fe5cb87954a93dd
+ms.sourcegitcommit: 5c804c42d24d35dcf2ba195aba9ce07031743f62
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "70180264"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81744918"
 ---
 # <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>Vytvoření aplikace Vue.js pomocí nástrojů Node.js pro visual studio
 
@@ -51,7 +51,7 @@ Následující nové funkce podporují vývoj aplikací Vue.js v sadě Visual St
 
     Pokud ho nemáte nainstalovaný, nainstalujte si verzi LTS z webu [Node.js](https://nodejs.org/en/download/). Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud nerozpozná nainstalovaný za běhu, můžete nakonfigurovat projekt tak, aby odkazoval na nainstalovaný běh na stránce vlastností. (Po vytvoření projektu klepněte pravým tlačítkem myši na uzel projektu a zvolte **vlastnosti).**
 
-## <a name="create-a-vuejs-project-using-a-template"></a>Vytvoření projektu Vue.js pomocí šablony
+## <a name="create-a-vuejs-project-using-nodejs"></a>Vytvoření projektu Vue.js pomocí souboru Node.js
 
 Nové šablony Vue.js můžete použít k vytvoření nového projektu. Použití šablony je nejjednodušší způsob, jak začít. Podrobné kroky najdete [v tématu Vytvoření první aplikace Vue.js pomocí Sady Visual Studio](../javascript/quickstart-vuejs-with-nodejs.md).
 

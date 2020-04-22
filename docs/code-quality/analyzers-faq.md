@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 680d52ff04553d399b6abeb53919d8aafd4fa792
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 56b0c0defe5593c9dc0e2111ef5984a5c51eaf55
+ms.sourcegitcommit: a7f781d5a089e6aab6b073a07f3d4d2967af8aa6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301690"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760130"
 ---
 # <a name="code-analysis-faq"></a>Nejčastější dotazy k analýze kódu
 
@@ -87,6 +87,12 @@ Kromě sady pravidel a EditorConfig soubory, některé analyzátory jsou konfigu
      <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.5\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.5\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
      ...
      ```
+
+## <a name="code-analysis-solution-property-page"></a>Stránka vlastností řešení analýzy kódu
+
+**Otázka:** Kde je stránka vlastností Analýza kódu pro řešení?
+
+**A**: Stránka vlastností Analýza kódu na úrovni řešení byla odebrána ve prospěch spolehlivější skupiny sdílených vlastností. Pro správu analýzy kódu na úrovni projektu je stále k dispozici stránka vlastností Analýza kódu. (Pro spravované projekty doporučujeme také migraci z pravidel na EditorConfig pro konfiguraci pravidla.)  Pro sdílení pravidel mezi více nebo všechny projekty v řešení nebo úložiště, doporučujeme definovat skupinu vlastností s CodeAnalysisRuleSet vlastnost ve sdíleném souboru rekvizity/cíle nebo Directory.props/Directory.targets souboru. Pokud nemáte žádné takové společné rekvizity nebo cíle, které importují všechny projekty, měli byste zvážit [přidání takové skupiny vlastností do adresáře Directory.props nebo Directory.targets v adresáři řešení nejvyšší úrovně, který je automaticky importován ve všech souborech projektu definovaných v adresáři nebo jeho podadresářích](https://docs.microsoft.com/visualstudio/msbuild/customize-your-build?directorybuildprops-and-directorybuildtargets).
 
 ## <a name="see-also"></a>Viz také
 

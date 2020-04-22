@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 31eab6c10451bb6be9e53870bf2724c188d650f4
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: 0b4b699c01522878d83e59aadb2c6a54e9d7517f
+ms.sourcegitcommit: a7f781d5a089e6aab6b073a07f3d4d2967af8aa6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649499"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760178"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Správa balíčků npm v sadě Visual Studio
 
@@ -86,13 +86,13 @@ Chcete-li provést jednu z následujících akcí, klepněte pravým tlačítkem
 
 * **Instalace nových balíčků NPM** Otevře ui pro instalaci nových balíčků.
 * **Instalace balíčků NPM** Spustí příkaz instalace npm a nainstaluje všechny balíčky uvedené v *souboru package.json*. (Spustí `npm install`.)
-* **Aktualizovat balíčky npm** Aktualizuje balíček na verzi zadanou v *souboru package.json*. (Spustí `npm update --save`.)
+* **Aktualizovat balíčky npm** Aktualizuje balíčky na poslední verze podle rozsahu semver zadaný v *package.json*. (Spustí `npm update --save`se .). Rozsahy Semver jsou obvykle určeny pomocí "~" nebo "^". Další informace naleznete v [konfiguraci souboru package.json](../javascript/configure-packages-with-package-json.md).
 
 Klepněte pravým tlačítkem myši na uzel balíčku a prováďte jednu z následujících akcí:
 
 * **Instalace balíčků npm** Spustí příkaz npm install a nainstaluje verzi balíčku uvedenou v *souboru package.json*. (Spustí `npm install`.)
-* **Aktualizovat balíčky npm** Aktualizuje balíček na verzi zadanou v *souboru package.json*. (Spustit `npm update --save`.)
-* **Odinstalovat npm balíčky** Odinstalujte balíček a odeberte jej `npm uninstall --save`z *souboru package.json* (Spustí .)
+* **Aktualizovat balíčky npm** Aktualizuje balíček na poslední verzi podle rozsahu semver zadaný v *package.json*. (Spustit `npm update --save`.) Rozsahy Semver jsou obvykle určeny pomocí "~" nebo "^".
+* **Odinstalovat npm balíčky** Odinstaluje balíček a odebere jej z `npm uninstall --save` *package.json* (Spustí .)
 ::: moniker-end
 ::: moniker range="vs-2017"
 Klepněte pravým tlačítkem myši na uzel balíčku nebo uzel **npm** a prováďte jednu z následujících akcí:

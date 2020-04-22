@@ -1,7 +1,7 @@
 ---
 title: Vytvoření aplikace Node.js a Express
 description: V tomto kurzu vytvoříte aplikaci pomocí nástrojů Node.js Tools for Visual Studio.
-ms.date: 09/24/2018
+ms.date: 04/20/2020
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 260bc6ff6eb2d0bfbf0b9abd19062892c358728a
-ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
+ms.openlocfilehash: 3d91f20dec22379d79b5f295fccf49aae0733a24
+ms.sourcegitcommit: 5c804c42d24d35dcf2ba195aba9ce07031743f62
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81224521"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81744886"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>Kurz: Vytvoření aplikace Node.js a Express v sadě Visual Studio
 
@@ -109,13 +109,13 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro aplikaci 
 
     (3) Uzel npm zobrazuje všechny nainstalované balíčky npm. Můžete klepnout pravým tlačítkem myši na uzel npm a vyhledat a nainstalovat balíčky npm pomocí dialogového okna nebo nainstalovat a aktualizovat balíčky pomocí nastavení v *souboru package.json* a pravým tlačítkem myši v uzlu npm.
 
-    (4) *package.json* je soubor používaný npm ke správě závislostí balíčků a verzí balíčků pro místně nainstalované balíčky. Další informace o tomto souboru naleznete v [tématu package.json configuration](../javascript/configure-packages-with-package-json.md)
+    (4) *package.json* je soubor používaný npm ke správě závislostí balíčků a verzí balíčků pro místně nainstalované balíčky. Další informace naleznete v [tématu Správa balíčků npm](../javascript/npm-package-management.md).
 
     (5) Soubory projektu, jako je *například app.js,* se zobrazí pod uzlou aplikací projektu. *app.js* je spouštěcí soubor projektu, a proto se zobrazuje **tučně**. Spouštěcí soubor můžete nastavit tak, že klepnete pravým tlačítkem myši na soubor v projektu a vyberete **možnost Nastavit jako spouštěcí soubor Node.js**.
 
 1. Otevřete uzel **npm** a ujistěte se, že jsou k dispozici všechny požadované balíčky npm.
 
-    Pokud nějaké balíčky chybí (ikona vykřičníku), můžete klepnout pravým tlačítkem myši na uzel **npm** a zvolit **možnost Instalovat chybějící balíčky npm**.
+    Pokud nějaké balíčky chybí (ikona vykřičníku), můžete kliknout pravým tlačítkem myši na uzel **npm** a zvolit **Instalovat balíčky npm**.
 
 ## <a name="add-some-code"></a>Přidání nějakého kódu
 
@@ -194,7 +194,7 @@ IntelliSense je nástroj sady Visual Studio, který vám pomůže při psaní k�
 
     Poslední řádek této zprávy informuje, že interpret jazyka JavaScript`,`očekával čárku ( ).
 
-1. V dolním podokně klikněte na kartu **Seznam chyb.**
+1. V dolním podokně klikněte na kartu **Seznam chyb** a pro typ nahlášených problémů vyberte Build **+ IntelliSense.**
 
     Zobrazí se upozornění a popis spolu s názvem souboru a číslem řádku.
 
@@ -218,7 +218,7 @@ Dále spustíte aplikaci s připojeným ladicím programem Visual Studia. Než t
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
-1. Vyberte cíl ladění na panelu nástrojů Ladění, například Microsoft Edge nebo Chrome.
+1. Vyberte cíl ladění na panelu nástrojů Ladění, například **na webovém serveru (Google Chrome)** nebo **webovém serveru (Microsoft Edge).**
 
     ::: moniker range=">=vs-2019"
     ![Vyberte cíl ladění](../javascript/media/vs-2019/tutorial-nodejs-deploy-target.png)

@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: a1995353d00f9e48811f388e1d853c93850b85f4
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 882c3a148164ab88412a817abd72d0608fadf9b2
+ms.sourcegitcommit: 5c804c42d24d35dcf2ba195aba9ce07031743f62
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "78235103"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81744977"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-vuejs-app"></a>Úvodní příručka: Vytvoření první aplikace Vue.js pomocí Sady Visual Studio
 
@@ -103,19 +103,24 @@ Nejprve vytvoříte projekt webové aplikace Vue.js.
 
 ## <a name="build-the-project"></a>Sestavení projektu
 
+::: moniker range=">=vs-2019"
+1. Dále zvolte **sestavení** > **sestavení řešení** k sestavení projektu.
+
+1. Zkontrolujte **okno Výstup,** chcete-li zobrazit výsledky sestavení, a zvolte **Sestavit** ze seznamu Zobrazit **výstup ze** seznamu.
+::: moniker-end
+::: moniker range="vs-2017"
 1. (Pouze projekt jazyka TypeScript) V sadě Visual Studio zvolte **Build** > **Clean Solution**.
 
-    ::: moniker range=">=vs-2019"
-    V šabloně TypeScript, která je součástí Visual Studia 2019, tento krok přeskočte.
-    ::: moniker-end
+1. Dále zvolte **sestavení** > **sestavení řešení** k sestavení projektu.
 
-1. Dále zvolte **sestavení** > **sestavení řešení** k sestavení projektu. Zkontrolujte **okno Výstup,** chcete-li zobrazit výsledky sestavení, a zvolte **Sestavit** ze seznamu Zobrazit **výstup ze** seznamu.
+1. Zkontrolujte **okno Výstup,** chcete-li zobrazit výsledky sestavení, a zvolte **Sestavit** ze seznamu Zobrazit **výstup ze** seznamu.
+::: moniker-end
 
-    Šablona projektu JavaScript Vue.js (a starší verze šablony `build` Jazyka) používá skript npm konfigurací události post build. Chcete-li toto nastavení změnit, otevřete soubor projektu*\<(název\>projektu .njsproj*) z Průzkumníka Windows a vyhledejte tento řádek kódu:
+Šablona projektu JavaScript Vue.js (a starší verze šablony `build` Jazyka) používá skript npm konfigurací události post build. Chcete-li toto nastavení změnit, otevřete soubor projektu*\<(název\>projektu .njsproj*) z Průzkumníka Windows a vyhledejte tento řádek kódu:
 
-    ```xml
-    <PostBuildEvent>npm run build</PostBuildEvent>
-    ```
+```xml
+<PostBuildEvent>npm run build</PostBuildEvent>
+```
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
@@ -135,6 +140,6 @@ Gratulujeme k dokončení tohoto rychlého startu! Doufáme, že jste se dozvěd
 
 ## <a name="next-steps"></a>Další kroky
 
+- Projděte si článek pro [Vue.js](create-application-with-vuejs.md)
 - Procházení [kurzu pro Node.js a Express](tutorial-nodejs.md)
-- Projděte [si kurz pro Node.js a reagovat](tutorial-nodejs-with-react-and-jsx.md)
 - [Nasazení aplikace do linuxové služby App Service](../javascript/publish-nodejs-app-azure.md)
