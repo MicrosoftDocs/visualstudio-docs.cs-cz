@@ -175,9 +175,9 @@
         - name: Používání nástrojů Unity
           href: using-vsmac-tools-unity.md
         - name: Používání .NET 4.x v Unity
-          href: /visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context
+          href: /visualstudio/cross-platform/unity-scripting-upgrade?context=visualstudio/mac/context
         - name: Protokol změn
-          href: /visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context
+          href: /visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac?context=visualstudio/mac/context
     - name: Mobilní aplikace s Xamarinem
       href: /visualstudio/mac/xamarin
 - name: Usnadnění
