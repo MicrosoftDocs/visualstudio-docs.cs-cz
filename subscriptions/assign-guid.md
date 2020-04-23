@@ -6,12 +6,12 @@ manager: lank
 ms.date: 04/20/2020
 ms.topic: conceptual
 description: Zjistěte, jak mohou správci určit guid předplatného pro předplatitele
-ms.openlocfilehash: 722aaedcd6da0224311960d1587d0c2c24eec60f
-ms.sourcegitcommit: a7f781d5a089e6aab6b073a07f3d4d2967af8aa6
+ms.openlocfilehash: e2e8cd4f5d07f218fc23c0b7b6f28ababc25263f
+ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760156"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82072590"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Přiřazení konkrétních předplatných na portálu pro správu předplatných sady Visual Studio
 
@@ -49,6 +49,7 @@ Posledním krokem je stažení šablony **hromadného přidání,** vyplnění p
 
 > [!IMPORTANT]
 > Chcete-li zajistit úspěšné nahrání, ujistěte se, že:
+> - Šablonu propojenou v dialogovém okně používáte, když vyberete **možnost Hromadné přidání**.  Nepoužívejte místně uloženou kopii šablony, protože nemusí obsahovat všechna požadovaná pole.  Použití staré šablony způsobí selhání nahrávání. 
 > - Všechna pole zobrazená jako **Povinná** v šabloně jsou úplná.
 > - Ve sloupci **Chybová zpráva** nejsou uvedeny žádné chyby.
 > - Každý identifikátor GUID se v šabloně používá pouze jednou. 

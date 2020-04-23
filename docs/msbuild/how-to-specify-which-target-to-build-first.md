@@ -12,23 +12,23 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c679b2a43ec799035f9bafb6a03a546808498342
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.openlocfilehash: 7656237be5cf7906293a294885cfa3e6c8bd4e36
+ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80543992"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82072525"
 ---
 # <a name="how-to-specify-which-target-to-build-first"></a>Postup: Určete, který cíl má být sestavován jako první
 
-Soubor projektu může obsahovat `Target` jeden nebo více prvků, které definují způsob vytvoření projektu. Modul Microsoft Build Engine (MSBuild) vytvoří první projekt, který najde, a všechny `DefaultTargets` závislosti, `InitialTargets` pokud soubor projektu obsahuje atribut, atribut nebo cíl je určen na příkazovém řádku pomocí **přepínače -target.**
+Soubor projektu může obsahovat `Target` jeden nebo více prvků, které definují způsob vytvoření projektu. Modul Microsoft Build Engine (MSBuild) vytvoří první cíl, který najde, a všechny `DefaultTargets` závislosti, `InitialTargets` pokud soubor projektu obsahuje atribut, atribut nebo cíl je určen na příkazovém řádku pomocí **přepínače -target.**
 ## <a name="use-the-initialtargets-attribute"></a>Použití atributu InitialTargets
 
 Atribut `InitialTargets` `Project` prvku určuje cíl, který bude spuštěn jako první, i když jsou `DefaultTargets` cíle zadány na příkazovém řádku nebo v atributu.
 
 #### <a name="to-specify-one-initial-target"></a>Určení jednoho počátečního cíle
 
-- Zadejte výchozí cíl `InitialTargets` v `Project` atributu prvku. Například:
+- Zadejte výchozí cíl `InitialTargets` v `Project` atributu prvku. Příklad:
 
    `<Project InitialTargets="Clean">`
 
@@ -46,7 +46,7 @@ Atribut `InitialTargets` `Project` prvku určuje cíl, který bude spuštěn jak
 
 #### <a name="to-specify-one-default-target"></a>Určení jednoho výchozího cíle
 
-- Zadejte výchozí cíl `DefaultTargets` v `Project` atributu prvku. Například:
+- Zadejte výchozí cíl `DefaultTargets` v `Project` atributu prvku. Příklad:
 
    `<Project DefaultTargets="Compile">`
 
@@ -64,13 +64,13 @@ Atribut `InitialTargets` `Project` prvku určuje cíl, který bude spuštěn jak
 
 #### <a name="to-use-a-target-other-than-the-default-target-first"></a>První použití jiného než výchozího cíle
 
-- Zadejte cíl jako první cíl pomocí přepínače příkazového řádku **-target.** Například:
+- Zadejte cíl jako první cíl pomocí přepínače příkazového řádku **-target.** Příklad:
 
      `msbuild file.proj -target:Clean`
 
 #### <a name="to-use-several-targets-other-than-the-default-targets-first"></a>První použití několika cílů než výchozích cílů
 
-- Seznam cílů oddělených středníky nebo čárkami pomocí přepínače příkazového řádku **-target.** Například:
+- Seznam cílů oddělených středníky nebo čárkami pomocí přepínače příkazového řádku **-target.** Příklad:
 
      `msbuild <file name>.proj -t:Clean;Compile`
 
