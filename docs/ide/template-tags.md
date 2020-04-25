@@ -1,6 +1,6 @@
 ---
-title: Přidání nebo úprava tagů v šablonách projektu
-description: Přečtěte si, jak přidat nebo upravit značky v šablonách projektů ve Visual Studiu.
+title: Přidání nebo úprava značek v šablonách projektů
+description: Naučte se přidávat nebo upravovat značky v šablonách projektů v aplikaci Visual Studio.
 ms.date: 04/30/2019
 author: minsa110
 ms.author: somin
@@ -13,35 +13,35 @@ helpviewer_keywords:
 - updating templates [Visual Studio]
 - template tagging, updating
 - template tags, updating
-ms.openlocfilehash: 37fa5449847eb4c093475df11a07decb31168f1f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ef26a566229c228711ba6e57de50402df255c3dd
+ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "73189532"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153030"
 ---
 # <a name="add-tags-to-project-templates"></a>Přidání značek do šablon projektů
 
-Počínaje [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/) verze 16.1 Náhled 2, můžete přidat jazyk, platformu a značky typu projektu do šablon projektu. 
+Počínaje verzí [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/) verze 16,1 Preview 2 můžete do šablon projektu přidat značky jazyka, platformy a typu projektu. 
 
-Značky se používají na dvou místech v dialogovém okně **Nový projekt:**
+Značky se používají na dvou místech v dialogovém okně **Nový projekt** :
 
-- Značky se zobrazí pod popisem šablony.
+- V popisu šablony se zobrazí značky.
 
-   ![Šablona projektu se značkami v dialogovém okně Nový projekt](media/npd-item-with-template-tags.png)
+   ![Šablona projektu s značkami v dialogovém okně Nový projekt](media/npd-item-with-template-tags.png)
 
-- Značky umožňují prohledávat a filtrovat šablonu.
+- Značky umožňují vyhledávat a filtrovat šablonu.
 
    ![Hledání a filtrování v dialogovém okně Nový projekt](media/npd-search-and-filter.png)
 
-Značky můžete přidat aktualizací souboru XML *.vstemplate.* Můžete buď použít značky šablony, které jsou integrované do Sady Visual Studio, nebo vytvořit vlastní značky šablon. Značky šablony se zobrazí jenom v dialogovém okně **Nový projekt** Visual Studia 2019. Značky šablon nemají vliv na způsob vykreslení šablony v dřívějších verzích sady Visual Studio.
+Značky lze přidat aktualizací souboru XML *. vstemplate* . Můžete buď použít Tagy šablony, které jsou součástí sady Visual Studio, nebo vytvořit vlastní značky šablony. Značky šablony se zobrazí pouze v dialogovém okně **Nový projekt** sady Visual Studio 2019. Značky šablony nemají vliv na to, jak šablona vykreslí v dřívějších verzích sady Visual Studio.
 
-## <a name="add-or-edit-tags"></a>Přidání nebo úprava značek
+## <a name="add-or-edit-tags"></a>Přidat nebo upravit značky
 
-Tagy v xml *šablony* projektu můžete přidat nebo upravit, když projdete některou z následujících akcí:
+Pokud provedete jednu z následujících akcí, můžete přidat nebo upravit značky v souboru XML šablony projektu *. vstemplate* :
 
 * [Vytvořte novou šablonu projektu](how-to-create-project-templates.md) pomocí Průvodce exportem šablony.
-* [Aktualizujte existující šablonu projektu](how-to-update-existing-templates.md).
+* [Aktualizujte stávající šablonu projektu](how-to-update-existing-templates.md).
 * [Vytvořte novou šablonu projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md).
 
 ## <a name="syntax"></a>Syntaxe
@@ -54,7 +54,7 @@ Tagy v xml *šablony* projektu můžete přidat nebo upravit, když projdete ně
 
 ## <a name="attributes"></a>Atributy
 
-V pokročilých uživatelských scénářích můžete použít následující volitelné atributy:
+V pokročilých scénářích uživatelů můžete použít následující volitelné atributy:
 
 |Atribut|Popis|
 |---------------|-----------------|
@@ -77,39 +77,39 @@ Syntaxe:
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Element|Popis|
+|Prvek|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|(Povinné) Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo V dialogovém okně Přidat **novou položku.**|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovanou Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo v dialogovém okně **Přidat novou položku** .|
 
 ## <a name="text-value"></a>Textová hodnota
 
-Textová hodnota je vyžadována, pokud nepoužíváte atributy `Package` a. `ID`
+Textová hodnota je povinná, pokud nepoužijete atributy `Package` a. `ID`
 
-Text obsahuje název šablony.
+Text poskytuje název šablony.
 
-## <a name="built-in-tags"></a>Vestavěné značky
+## <a name="built-in-tags"></a>Předdefinované značky
 
-Visual Studio nabízí seznam předdefinovaných značek. Když přidáte vestavěnou značku, značka vykreslí lokalizovaný prostředek. 
+Visual Studio nabízí seznam předdefinovaných značek. Když přidáte vestavěnou značku, značka vykresluje lokalizovaný prostředek. 
 
-V následujícím seznamu jsou uvedeny předdefinované značky, které jsou k dispozici v sadě Visual Studio. Odpovídající hodnoty jsou zobrazeny v závorce.
+Následující seznam obsahuje předdefinované značky, které jsou k dispozici v aplikaci Visual Studio. Odpovídající hodnoty jsou uvedeny v závorkách.
 
-| Jazyk | Platforma | Typ projektu |
+| Značka jazyka | Značka platformy | Značka typu projektu |
 | -- | -- | -- |
-| C++`cpp`( ) | Android`android`( ) | Mrak`cloud`( ) |
-| C#`csharp`( ) | Azure`azure`( ) | Konzola`console`( ) |
-| F#`fsharp`( ) | iOS`ios`( ) | Plocha`desktop`( ) |
-| Java (`java`) | Linux`linux`( ) | Rozšíření (`extension`) |
-| JavaScript`javascript`( ) | macOS`macos`( ) | Hry`games`( ) |
-| Krajta (`python`) | tvOS`tvos`( ) | IoT`iot`( ) |
-| Dotaz Languate`querylanguage`( ) | Okna`windows`( ) | Knihovna`library`( ) |
-| TypeScript`typescript`( ) | Konzole`xbox`Xbox ( ) | Strojové`machinelearning`učení ( ) |
-| Visual Basic`visualbasic`( ) | | Mobilní`mobile`( ) |
-| | | Kancelář`office`( ) |
-| | | Ostatní`other`( ) |
-| | | Služba`service`( ) |
-| | | Zkouška`test`( ) |
-| | | Upw`uwp`( ) |
-| | | Web`web`( ) |
+| C++ (`cpp`) | Android (`android`) | Cloud (`cloud`) |
+| C# (`csharp`) | Azure (`azure`) | Konzola (`console`) |
+| F # (`fsharp`) | iOS (`ios`) | Plocha (`desktop`) |
+| Java (`java`) | Linux (`linux`) | Rozšíření (`extension`) |
+| JavaScript (`javascript`) | macOS (`macos`) | Hry (`games`) |
+| Python (`python`) | tvOS (`tvos`) | IoT (`iot`) |
+| Dotaz Languate (`querylanguage`) | Windows (`windows`) | Knihovna (`library`) |
+| TypeScript (`typescript`) | Xbox (`xbox`) | Machine Learning (`machinelearning`) |
+| Visual Basic (`visualbasic`) | | Mobilní (`mobile`) |
+| | | Office (`office`) |
+| | | Jiný (`other`) |
+| | | Služba (`service`) |
+| | | Test (`test`) |
+| | | UWP (`uwp`) |
+| | | Web (`web`) |
 
 ## <a name="example"></a>Příklad
 
@@ -147,7 +147,7 @@ Následující příklad ukazuje metadata pro šablonu projektu pro aplikaci Vis
 
 ## <a name="see-also"></a>Viz také
 
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
-- [Vytvoření šablon projektů a položek](creating-project-and-item-templates.md)
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+- [Vytváření šablon projektů a položek](creating-project-and-item-templates.md)
 - [Přizpůsobení šablon projektů a položek](customizing-project-and-item-templates.md)
 - [Začínáme se šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md)
