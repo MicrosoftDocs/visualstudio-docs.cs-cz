@@ -158,6 +158,10 @@ f1_keywords:
 - CA1823
 - CA1824
 - CA1825
+- CA1826
+- CA1827
+- CA1828
+- CA1829
 - CA1900
 - CA1901
 - CA1903
@@ -266,12 +270,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d4f532baf1434ea318a86ce2cb2fc717fff98623
-ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
+ms.openlocfilehash: 554de8df2d05d0ae4f248762891dd0cec543e5a9
+ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153013"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167381"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>Upozornění analýzy kódu pro spravovaný kód podle CheckId
 
@@ -424,6 +428,10 @@ Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovan
 | CA1823 | [CA1823: Vyhněte se nepoužitým privátním polím](../code-quality/ca1823.md) | Byla zjištěna soukromá pole, která v rámci sestavení zjevně nejsou přístupná. |
 | CA1824 |[CA1824: Označte sestavení pomocí atributu NeutralResourcesLanguageAttribute](../code-quality/ca1824.md) | Atribut NeutralResourcesLanguage informuje správce prostředků jazyka, který byl použit k zobrazení prostředků neutrální jazykové verze pro sestavení. To zlepšuje výkon vyhledávání při prvním získání prostředků a může zmenšit vaši pracovní sadu. |
 | CA1825 |[CA1825: Vyhněte se přidělením pole s nulovou délkou.](../code-quality/ca1825.md) | Inicializace pole nulové délky vede k nepotřebnému přidělení paměti. Místo toho použijte staticky přidělenou instanci prázdného pole voláním <xref:System.Array.Empty%2A?displayProperty=nameWithType>. Přidělení paměti se sdílí ve všech voláních této metody. |
+| CA1826 |[CA1826: použijte vlastnost namísto vyčíslitelné metody LINQ](../code-quality/ca1826.md) | <xref:System.Linq.Enumerable>Metoda LINQ byla použita pro typ, který podporuje ekvivalentní, efektivnější vlastnost. |
+| CA1827 |[CA1827: Nepoužívejte Count/LongCount, když se dá použít Any.](../code-quality/ca1827.md) | <xref:System.Linq.Enumerable.Count%2A>nebo <xref:System.Linq.Enumerable.LongCount%2A> se použila metoda <xref:System.Linq.Enumerable.Any%2A> , kde by byla metoda efektivnější. |
+| CA1828 |[CA1828: Nepoužívejte CountAsync/LongCountAsync, pokud se dá použít AnyAsync](../code-quality/ca1828.md) | <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.CountAsync%2A>nebo <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.LongCountAsync%2A> se použila metoda <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AnyAsync%2A> , kde by byla metoda efektivnější. |
+| CA1829 |[CA1829: použijte vlastnost length/Count namísto metody vyčíslitelné. Count.](../code-quality/ca1829.md) | <xref:System.Linq.Enumerable.Count%2A>Metoda LINQ byla použita pro typ, který podporuje ekvivalentní, efektivnější `Length` nebo `Count` vlastnost. |
 | CA1900 | [CA1900: Pole hodnot by měla být přenosná](../code-quality/ca1900.md) | Toto pravidlo kontroluje, zda struktury, které jsou deklarovány pomocí explicitního rozložení, budou při zařazení na nespravovaný kód v 64bitových operačních systémech správně zarovnány. |
 | CA1901 | [CA1901: deklarace P/Invoke by měly být přenosné](../code-quality/ca1901.md) | Toto pravidlo vyhodnotí velikost každého parametru a vrácené hodnoty vyvolání P/Invoke a ověří, zda je velikost parametru správná při zařazení na nespravovaný kód na 32bitových a 64bitových operačních systémech. |
 | CA1903 | [CA1903: Použijte pouze API z cílového rozhraní .NET Framework](../code-quality/ca1903.md) | Člen nebo typ používá člen nebo typ, který byl uveden v aktualizaci Service Pack, která nebyla zahrnuta stejně jako cílové rozhraní projektu. |
