@@ -1,23 +1,23 @@
 ---
-title: Vlastnosti sestavení nástrojů kontejnerů sady Visual Studio
+title: Vlastnosti sestavení kontejnerů sady Visual Studio
 author: ghogen
-description: Přehled procesu sestavení kontejnerových nástrojů
+description: Přehled procesu sestavení nástrojů kontejneru
 ms.author: ghogen
 ms.date: 06/06/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 3caa8a76f461515c0d2265590383861b6e10d0a1
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: 1b23d918621d79756fd77a1dd9b98009b2769ed3
+ms.sourcegitcommit: 596f92fcc84e6f4494178863a66aed85afe0bb08
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472667"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82189488"
 ---
-# <a name="container-tools-build-properties"></a>Kontejnerové nástroje sestavení vlastnosti
+# <a name="container-tools-build-properties"></a>Vlastnosti sestavení kontejnerových nástrojů
 
-Můžete přizpůsobit, jak Visual Studio staví projekty kontejnerů nastavením vlastností, které MSBuild používá k sestavení projektu. Můžete například změnit název souboru Dockerfile, zadat značky a popisky pro vaše image, poskytnout další argumenty předané příkazům Dockeru a určit, zda Visual Studio provádí určité optimalizace výkonu, jako je vytváření mimo prostředí kontejneru. Můžete také nastavit vlastnosti ladění, jako je například název spustitelného souboru ke spuštění a argumenty příkazového řádku, které chcete poskytnout.
+Můžete přizpůsobit způsob, jakým Visual Studio sestaví projekty kontejneru, nastavením vlastností, které nástroj MSBuild používá k sestavení projektu. Můžete například změnit název souboru Dockerfile, zadat značky a štítky pro obrázky, poskytnout další argumenty předané příkazům Docker a určit, zda aplikace Visual Studio provede určité optimalizace výkonu, jako je například sestavení mimo prostředí kontejneru. Můžete také nastavit vlastnosti ladění, jako je název spustitelného souboru, který se má spustit, a argumenty příkazového řádku, které mají být zadány.
 
-Chcete-li nastavit hodnotu vlastnosti, upravte soubor projektu. Předpokládejme například, že váš dockerfile se nazývá *MyDockerfile*. Vlastnost v `DockerfileFile` souboru projektu můžete nastavit následujícím způsobem.
+Chcete-li nastavit hodnotu vlastnosti, upravte soubor projektu. Předpokládejme například, že vaše souboru Dockerfile má název *MyDockerfile*. `DockerfileFile` Vlastnost můžete nastavit v souboru projektu následujícím způsobem.
 
 ```xml
 <PropertyGroup>
@@ -25,37 +25,65 @@ Chcete-li nastavit hodnotu vlastnosti, upravte soubor projektu. Předpokládejme
 </PropertyGroup>
 ```
 
-Nastavení vlastnosti můžete přidat `PropertyGroup` do existujícího prvku, nebo pokud není, vytvořte nový `PropertyGroup` prvek.
+Nastavení vlastnosti můžete přidat do existujícího `PropertyGroup` prvku, nebo pokud není jedna, vytvořte nový `PropertyGroup` prvek.
 
-V následující tabulce jsou uvedeny vlastnosti MSBuild, které jsou k dispozici pro projekty kontejnerů. Verze balíčku NuGet se vztahuje na [Microsoft.VisualStudio.Azure.Containers.Tools.Targets](https://www.nuget.org/packages/Microsoft.VisualStudio.Azure.Containers.Tools.Targets/).
+V následující tabulce jsou uvedeny vlastnosti MSBuild dostupné pro projekty kontejnerů. Verze balíčku NuGet se vztahuje na [Microsoft. VisualStudio. Azure. containers. Tools. targets](https://www.nuget.org/packages/Microsoft.VisualStudio.Azure.Containers.Tools.Targets/).
 
 | Název vlastnosti | Popis | Výchozí hodnota  | Verze balíčku NuGet|
 |---------------|-------------|----------------|----------------------|
-| ContainerDevelopmentMode | Určuje, zda je povolena optimalizace "build-on-host" ("ladění rychlého režimu".  Povolené hodnoty jsou **rychlé** a **pravidelné**. | Rychle |1.0.1872750 nebo novější|
-| KontejnerVsDbgPath | Cesta pro ladicí program VSDBG. | `%USERPROFILE%\vsdbg\vs2017u5` |1.0.1985401 nebo novější|
-| DockerDebuggeeArguments | Při ladění ladicí program je pokyn předat tyto argumenty spustitelného souboru. | Nevztahuje se na projekty ASP.NET rozhraní .NET Framework |1.7.8 nebo novější|
-| Program DockerDebuggeeProgram | Při ladění je ladicí program instruován ke spuštění tohoto spustitelného souboru. | Pro základní projekty .NET: dotnet, ASP.NET .NET Framework projekty: Není použitelné (IIS se vždy používá) |1.7.8 nebo novější|
-| Program DockerDebuggeeKillProgram | Tento příkaz se používá k usmrcení spuštěného procesu v kontejneru. | Nevztahuje se na projekty ASP.NET rozhraní .NET Framework |1.7.8 nebo novější|
-| DockerDebuggeeWorkingDirectory | Při ladění je ladicí program instruován k použití této cesty jako pracovního adresáře. | C:\app (Windows) nebo /app (Linux) |1.7.8 nebo novější|
-| DockerDefaultTargetOS | Výchozí cílový operační systém používaný při vytváření image Dockeru. | Sada visual studio. |1.0.1985401 nebo novější|
-| DockerImageLabels | Výchozí sada popisků aplikovaných na image Dockeru. | com.microsoft.created-by=visual-studio;com.microsoft.visual-studio.project-name=$(MSBuildProjectName) |1.5.4 nebo novější|
-| DockerFastModeProjectMountDirectory|V **rychlém režimu**tato vlastnost určuje, kde je výstupní adresář projektu připojen ke svazku do spuštěného kontejneru.|C:\app (Windows) nebo /app (Linux)|1.9.2 nebo novější|
-| DockerfileBuildArguments | Další argumenty předané příkazu sestavení Dockeru. | Neužívá se. |1.0.1872750 nebo novější|
-| DockerfileContext | Výchozí kontext používaný při vytváření image Dockeru jako cesta vzhledem k dockerfile. | Sada visual studio. |1.0.1872750 nebo novější|
-| DockerfileFastModeStage | Fáze Dockerfile (to znamená cíl), která se má použít při vytváření bitové kopie v režimu ladění. | První fáze nalezená v Dockerfile (základna) |
-| Soubor dockeru | Popisuje výchozí soubor Dockerfile, který bude použit k sestavení nebo spuštění kontejneru pro projekt. To může být také cesta. | Soubor dockeru |1.0.1872750 nebo novější|
-| DockerfileRunArguments | Další argumenty předané příkazu spuštění Dockeru. | Neužívá se. |1.0.1872750 nebo novější|
-| DockerfileRunEnvironmentFiles | Seznam souborů prostředí oddělených středníkem použitýběhem spuštění Dockeru. | Neužívá se. |1.0.1872750 nebo novější|
-| Značka DockerfileTag | Značka, která se použije při vytváření image Dockeru. V ladění ":dev" je připojen ke značce. | Název sestavy po odstranění nealfanumerických znaků pomocí následujících pravidel: <br/> Pokud je výsledná značka celá číselná, pak je jako předpona vložen "image" (například image2314). <br/> Pokud je výsledná značka prázdný řetězec, pak se jako značka používá "image". |1.0.1872750 nebo novější|
+| ContainerDevelopmentMode | Určuje, jestli je povolená optimalizace optimalizace sestavení na úrovni hostitele (rychlý režim).  Povolené hodnoty jsou **rychlé** a **pravidelné**. | Světl |1.0.1872750 nebo novější|
+| ContainerVsDbgPath | Cesta k ladicímu programu VSDBG | `%USERPROFILE%\vsdbg\vs2017u5` |1.0.1985401 nebo novější|
+| DockerDebuggeeArguments | Při ladění je ladicí program vyzván k předání těchto argumentů spuštěnému spustitelnému souboru. | Nedá se použít pro projekty ASP.NET .NET Framework. |1.7.8 nebo novější|
+| DockerDebuggeeProgram | Při ladění je ladicí program vyzván ke spuštění tohoto spustitelného souboru. | Pro projekty .NET Core: dotnet, ASP.NET .NET Framework projekty: nejde použít (služba IIS se vždycky používá). |1.7.8 nebo novější|
+| DockerDebuggeeKillProgram | Tento příkaz slouží k ukončení běžícího procesu v kontejneru. | Nedá se použít pro projekty ASP.NET .NET Framework. |1.7.8 nebo novější|
+| DockerDebuggeeWorkingDirectory | Při ladění je ladicí program vyzván k použití této cesty jako pracovního adresáře. | C:\app (Windows) nebo/App (Linux) |1.7.8 nebo novější|
+| DockerDefaultTargetOS | Výchozí cílový operační systém, který se používá při vytváření image Docker. | Nastaveno sadou Visual Studio. |1.0.1985401 nebo novější|
+| DockerImageLabels | Výchozí sada popisků použitých pro bitovou kopii Docker. | com. Microsoft. Created-by = Visual-Studio; com. Microsoft. Visual-Studio. Project-Name = $ (MSBuildProjectName) |1.5.4 nebo novější|
+| DockerFastModeProjectMountDirectory|V **rychlém režimu**Tato vlastnost řídí, kde je výstupní adresář projektu připojen ke svazku do běžícího kontejneru.|C:\app (Windows) nebo/App (Linux)|1.9.2 nebo novější|
+| DockerfileBuildArguments | Do příkazu [Docker Build](https://docs.docker.com/engine/reference/commandline/build/) byly předány další argumenty. | Neužívá se. |1.0.1872750 nebo novější|
+| DockerfileContext | Výchozí kontext použitý při vytváření image Docker jako cesta relativní k souboru Dockerfile. | Nastaveno sadou Visual Studio. |1.0.1872750 nebo novější|
+| DockerfileFastModeStage | Fáze souboru Dockerfile (tj. Target), která se má použít při sestavování image v režimu ladění. | V souboru Dockerfile se našla první fáze (Base). |
+| DockerfileFile | Popisuje výchozí souboru Dockerfile, který bude použit k sestavení nebo spuštění kontejneru pro projekt. Může to být i cesta. | Souboru Dockerfile |1.0.1872750 nebo novější|
+| DockerfileRunArguments | Další argumenty předané příkazu [Docker Run](https://docs.docker.com/engine/reference/commandline/run/) . | Neužívá se. |1.0.1872750 nebo novější|
+| DockerfileRunEnvironmentFiles | Středníky oddělený seznam souborů prostředí použitých při spuštění Docker. | Neužívá se. |1.0.1872750 nebo novější|
+| DockerfileTag | Značka, která bude použita při sestavování image Docker. V ladění je k značce připojen ":d EV". | Název sestavení po odstranění nealfanumerických znaků pomocí následujících pravidel: <br/> Pokud je výsledná značka všechna číselná, pak se jako předpona vloží "image" (například image2314). <br/> Pokud je výsledná značka prázdným řetězcem, použije se jako značka "image". |1.0.1872750 nebo novější|
+
+## <a name="example"></a>Příklad
+
+Následující soubor projektu ukazuje příklady některých z těchto nastavení.
+
+```xml
+ <Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>feae72bf-2368-4487-b6c6-546c19338cb1</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <!-- In CI/CD scenarios, you might need to change the context. By default, Visual Studio uses the
+         folder above the Dockerfile. The path is relative to the Dockerfile, so here the context is
+         set to the same folder as the Dockerfile. -->
+    <DockerfileContext>.</DockerfileContext>
+    <!-- Set `docker run` arguments to mount a volume -->
+    <DockerfileRunArguments>-v $(pwd)/host-folder:/container-folder:ro</DockerfileRunArguments>
+    <!-- Set `docker build` arguments to add a custom tag -->
+    <DockerfileBuildArguments>-t contoso/front-end:v2.0</DockerfileBuildArguments>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.6" />
+  </ItemGroup>
+
+</Project>
+```
 
 ## <a name="next-steps"></a>Další kroky
 
-Informace o vlastnostech MSBuild obecně naleznete v tématu [Vlastnosti msbuild](../msbuild/msbuild-properties.md).
+Informace o vlastnostech MSBuildu obecně naleznete v tématu [vlastnosti MSBuild](../msbuild/msbuild-properties.md).
 
 ## <a name="see-also"></a>Viz také
 
-[Vlastnosti sestavení dockeru](docker-compose-properties.md)
+[Docker Compose vlastnosti sestavení](docker-compose-properties.md)
 
 [Nastavení spuštění nástrojů kontejneru](container-launch-settings.md)
 
-[Vyhrazené a dobře známé vlastnosti msbuild](../msbuild/msbuild-reserved-and-well-known-properties.md)
+[Rezervované a dobře známé vlastnosti nástroje MSBuild](../msbuild/msbuild-reserved-and-well-known-properties.md)

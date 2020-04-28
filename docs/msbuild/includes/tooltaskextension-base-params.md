@@ -3,12 +3,12 @@ author: ghogen
 ms.author: ghogen
 ms.topic: include
 ms.date: 4/23/2020
-ms.openlocfilehash: 38ac6925e98f4eb17b57d083c45977cb3f0f29ea
-ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
+ms.openlocfilehash: 40108f56ee9d64688fc665fdef0e0ab731bddfff
+ms.sourcegitcommit: 596f92fcc84e6f4494178863a66aed85afe0bb08
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167293"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82204617"
 ---
 ### <a name="tooltaskextension-parameters"></a>Parametry ToolTaskExtension –
 
