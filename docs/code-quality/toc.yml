@@ -332,6 +332,10 @@
                   href: ca1064.md
                 - name: 'CA1065: Nevyvolávejte výjimky v neočekávaných umístěních'
                   href: ca1065.md
+                - name: 'CA1066: Při přepisu Equals implementujte IEquatable.'
+                  href: ca1066.md
+                - name: 'CA1067: Při implementaci IEquatable přepište Equals.'
+                  href: ca1067.md
                 - name: 'CA1068: Parametry CancellationToken musí být poslední.'
                   href: ca1068.md
                 - name: 'CA2210: Sestavení by měla mít platné silné názvy'
@@ -426,6 +430,8 @@
                   href: ca1506.md
                 - name: 'CA1507: Místo řetězce použijte výraz nameof.'
                   href: ca1507.md
+                - name: 'CA1508: Vyhněte se mrtvému podmíněnému kódu'
+                  href: ca1508.md
             - name: Upozornění mobility
               items:
                 - name: Přehled
@@ -531,6 +537,14 @@
                   href: ca1824.md
                 - name: 'CA1825: Vyhněte se přidělení pole s nulovou délkou.'
                   href: ca1825.md
+                - name: 'CA1826: Použijte vlastnost namísto vyčíslitelné metody Linq'
+                  href: ca1826.md
+                - name: 'CA1827: Nepoužívejte Count/LongCount, když se dá použít Any'
+                  href: ca1827.md
+                - name: 'CA1828: Nepoužívejte CountAsync/LongCount, když se dá použít AnyAsync'
+                  href: ca1828.md
+                - name: 'CA1829: Použijte vlastnost Length/Count místo metody Enumerable.Count'
+                  href: ca1829.md
             - name: Upozornění přenositelnosti
               items:
                 - name: Přehled
