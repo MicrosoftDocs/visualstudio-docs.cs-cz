@@ -1,5 +1,5 @@
 ---
-title: Přepínače příkazového řádku Devenv
+title: Devenv – přepínače příkazového řádku
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -13,86 +13,86 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b3ed82bd8ba3845541d7dce628f99fb78b62ab9f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ed7a36ad561daf87ec65db0f6c51c9dd7833eb9e
+ms.sourcegitcommit: ddd99f64a3f86508892a6d61e8a33c88fb911cc4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595706"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255567"
 ---
 # <a name="devenv-command-line-switches"></a>Devenv – přepínače příkazového řádku
 
-Devenv umožňuje nastavit různé možnosti pro IDE, sestavení projektů, ladění projektů a nasazení projektů z příkazového řádku. Pomocí těchto přepínačů můžete spustit ide ze skriptu nebo souboru BAT (například skript pro noční sestavení) nebo spustit ide v určité konfiguraci.
+Nástroj devenv umožňuje nastavit různé možnosti pro rozhraní IDE, sestavit projekty, ladit projekty a nasadit projekty z příkazového řádku. Pomocí těchto přepínačů spusťte rozhraní IDE ze skriptu nebo souboru. bat (například skriptu pro noční sestavení) nebo spusťte integrované vývojové prostředí (IDE) v konkrétní konfiguraci.
 
 > [!NOTE]
-> Pro úlohy související s sestavením se doporučuje použít MSBuild namísto devenv. Další informace naleznete v [tématu MSBuild command-line reference](../../msbuild/msbuild-command-line-reference.md).
+> Pro úlohy související s sestavením se doporučuje použít MSBuild místo devenv. Další informace naleznete v tématu [Reference k příkazovému řádku nástroje MSBuild](../../msbuild/msbuild-command-line-reference.md).
 
-Informace o přepínačích, které souvisejí s vývojem vbalíčku, naleznete také v [tématu Přepínače příkazového řádku Devenv pro vývoj balíčku VSPackage](../../extensibility/devenv-command-line-switches-for-vspackage-development.md).
+Informace o přepínačích, které souvisejí s vývojem VSPackage, naleznete také v [přepínačích příkazového řádku devenv pro vývoj pro VSPackage](../../extensibility/devenv-command-line-switches-for-vspackage-development.md).
 
-## <a name="devenv-switch-syntax"></a>Syntaxe přepínače Devenv
+## <a name="devenv-switch-syntax"></a>Syntaxe přepínače devenv
 
-Příkazy, které `devenv` začínají, `devenv.com` jsou zpracovány nástrojem, který poskytuje výstup `stdout` `stderr`prostřednictvím standardních datových proudů systému, například a . Nástroj určuje příslušné přesměrování vstupně-výstupních výstupů, když zachytí výstup, například do souboru TXT.
+Příkazy, které začínají `devenv` , jsou zpracovávány `devenv.com` nástrojem, který doručuje výstup přes standardní systémové proudy, `stdout` například `stderr`a. Nástroj určuje vhodné přesměrování vstupu a výstupu při zachycení výstupu, například souboru. txt.
 
-Alternativně příkazy, které `devenv.exe` začínají můžete použít stejné `devenv.com` přepínače, ale nástroj je vynechán. Použití `devenv.exe` přímo zabraňuje výstupu z objevit na konzole.
+Příkazy, které začínají na, `devenv.exe` mohou také používat stejné přepínače, ale tento `devenv.com` nástroj je obejít. Použití `devenv.exe` přímo brání v zobrazení výstupu v konzole nástroje.
 
-Pravidla syntaxe `devenv` pro přepínače se podobají pravidlům pro ostatní nástroje příkazového řádku DOS. Následující pravidla syntaxe `devenv` platí pro všechny přepínače a jejich argumenty:
+Pravidla syntaxe pro `devenv` přepínače se podobají pravidlům pro další nástroje příkazového řádku systému DOS. Následující pravidla syntaxe se vztahují na všechny `devenv` přepínače a jejich argumenty:
 
-- Příkazy začínají `devenv`na .
+- Příkazy začínají na `devenv`.
 
-- Přepínače nerozlišují malá a velká písmena.
+- U přepínačů se nerozlišují malá a velká písmena.
 
-- Přepínač můžete určit pomocí pomlčky ("-") nebo lomítka ("/").
+- Můžete zadat přepínač pomocí pomlčky ("-") nebo lomítka ("/").
 
-- Při zadávání řešení nebo projektu je prvním argumentem název souboru řešení nebo souboru projektu, včetně cesty k souboru.
+- Při zadání řešení nebo projektu je prvním argumentem název souboru řešení nebo souboru projektu, včetně cesty k souboru.
 
-- Pokud první argument je soubor, který není řešení nebo projekt, tento soubor se otevře v příslušném editoru, v nové instanci ide.
+- Pokud je první argument soubor, který není řešením nebo projektem, tento soubor se otevře v příslušném editoru v nové instanci rozhraní IDE.
 
-- Pokud zadáte název souboru projektu namísto názvu `devenv` souboru řešení, příkaz prohledá nadřazenou složku souboru projektu pro soubor řešení, který má stejný název. Příkaz `devenv myproject1.vbproj /build` například vyhledá v nadřazené složce `myproject1.sln`soubor řešení s názvem .
+- Když zadáte název souboru projektu namísto názvu souboru řešení, `devenv` příkaz vyhledá nadřazenou složku souboru projektu pro soubor řešení, který má stejný název. Například příkaz `devenv myproject1.vbproj /build` vyhledá nadřazenou složku pro soubor řešení s názvem `myproject1.sln`.
 
   > [!NOTE]
-  > Jeden a jediný soubor řešení, který odkazuje na tento projekt by měl být umístěn v nadřazené složce. Pokud nadřazená složka neobsahuje žádný soubor řešení, který odkazuje na tento projekt, nebo pokud nadřazená složka obsahuje dva nebo více souborů řešení, které na něj odkazují, je vytvořen dočasný soubor řešení.
+  > Pouze jeden soubor řešení, který odkazuje na tento projekt, by měl být umístěn v nadřazené složce. Pokud nadřazená složka neobsahuje žádný soubor řešení, který odkazuje na tento projekt, nebo Pokud nadřazená složka obsahuje dva nebo více souborů řešení, které na něj odkazují, je vytvořen dočasný soubor řešení.
 
-- Pokud cesty k souborům a názvy souborů obsahují mezery, musíte je uzavřete do uvozovek (""). Například, `"c:\project a\"`.
+- Pokud cesty k souborům a názvy souborů obsahují mezery, je nutné je uzavřít do uvozovek (""). Například, `"c:\project a\"`.
 
-- Vložte jeden znak mezery mezi přepínače a argumenty na stejném řádku. Příkaz `devenv /log output.txt` například otevře ide a vyhlásí všechny informace protokolu pro tuto relaci na output.txt.
+- Vložte znak mezery mezi přepínače a argumenty na stejný řádek. Například příkaz `devenv /log output.txt` otevře integrované vývojové prostředí (IDE) a zapíše všechny informace protokolu pro relaci do výstupního formátu. txt.
 
-- V `devenv` příkazech nelze použít syntaxi porovnávání vzorů.
+- V příkazech nelze použít syntaxi porovnávání se `devenv` vzorem.
 
-## <a name="devenv-switches"></a>Devenv přepínače
+## <a name="devenv-switches"></a>Přepínače devenv
 
-Následující přepínače příkazového řádku zobrazují ide a proveďte popsaný úkol.
-
-|Přepínač příkazového řádku|Popis|
-| - |-----------------|
-|[/Příkaz](command-devenv-exe.md)|Spustí ide a provede zadaný příkaz.<br /><br /> `devenv /command "nav https://docs.microsoft.com/"`|
-|[/DebugExe](debugexe-devenv-exe.md)|Načte spustitelný soubor jazyka C++ pod kontrolou ladicího programu. Tento přepínač není k dispozici pro spustitelné soubory jazyka Visual Basic nebo C#. Další informace naleznete [v tématu Automaticky spustit proces v ladicím programu](../../debugger/debug-multiple-processes.md#BKMK_Automatically_start_an_process_in_the_debugger).<br /><br /> `devenv /debugexe mysln.exe`|
-|[/Rozdíl](diff.md)|Porovná dva soubory. Trvá čtyři parametry: *SourceFile*, *TargetFile*, *SourceDisplayName* (volitelné) a *TargetDisplayName* (volitelné).<br /><br /> `devenv /diff File1 File2 Alias1 Alias2`|
-|[/DoNotLoadProjekty](donotloadprojects-devenv-exe.md)|Otevře zadané řešení bez načtení všech projektů.<br /><br /> `devenv /donotloadprojects mysln.sln`|
-|[/Upravit](edit-devenv-exe.md)|Otevře zadané soubory v spuštěné instanci této aplikace. Pokud neexistují žádné spuštěné instance, spustí novou instanci se zjednodušeným rozložením okna.<br /><br /> `devenv /edit File1 File2`|
-|[/LCID nebo /L](lcid-devenv-exe.md)|Nastaví výchozí jazyk pro rozhraní IDE. Pokud zadaný jazyk není součástí instalace sady Visual Studio, toto nastavení je ignorováno.<br /><br /> `devenv /l 1033`|
-|[/Protokolovat](log-devenv-exe.md)|Spustí visual studio a protokoly všechny aktivity do souboru protokolu.<br /><br /> `devenv /log mylogfile.xml`|
-|[/NoSplash](nosplash-devenv-exe.md)|Otevře ide bez zobrazení úvodní obrazovky.<br /><br /> `devenv /nosplash File1 File2`|
-|[/Spustit nebo /R](run-devenv-exe.md)|Zkompiluje a spustí zadané řešení.<br /><br /> `devenv /run mysln.sln`|
-|[/RunExit](runexit-devenv-exe.md)|Zkompiluje a spustí zadané řešení, minimalizuje ide při spuštění řešení a zavře ide po dokončení řešení.<br /><br /> `devenv /runexit mysln.sln`|
-|[/SafeMode](safemode-devenv-exe.md)|Spustí visual studio v nouzovém režimu. Tento přepínač načte pouze výchozí prostředí, výchozí služby a dodávané verze balíčků jiných výrobců.<br /><br /> Tento přepínač nepřijímá žádné argumenty.|
-|[/UseEnv](useenv-devenv-exe.md)|Způsobí, že ide používat PATH, INCLUDE, LIBPATH a LIB proměnné prostředí pro kompilaci C++. Tento přepínač je nainstalován s vývojem plochy s úlohou **C++.** Další informace naleznete [v tématu Nastavení proměnných cesty a prostředí pro sestavení příkazového řádku](/cpp/build/setting-the-path-and-environment-variables-for-command-line-builds).|
-
-Následující přepínače příkazového řádku nezobrazují ide.
+Následující přepínače příkazového řádku zobrazují integrované vývojové prostředí (IDE) a dělají popsaný úkol.
 
 |Přepínač příkazového řádku|Popis|
 | - |-----------------|
-|[/?](q-devenv-exe.md)|Zobrazí nápovědu pro `devenv` přepínače v okně **příkazového řádku**.<br /><br /> Tento přepínač nepřijímá žádné argumenty.|
-|[/Sestavení](build-devenv-exe.md)|Vytvoří zadané řešení nebo projekt podle konfigurace zadaného řešení.<br /><br /> `devenv mysln.sln /build`|
-|[/Clean](clean-devenv-exe.md)|Odstraní všechny soubory vytvořené příkazem sestavení, aniž by to ovlivnilo zdrojové soubory.<br /><br /> `devenv mysln.sln /clean`|
-|[/Nasazení](deploy-devenv-exe.md)|Vytvoří řešení, spolu se soubory potřebné pro nasazení, v souladu s konfigurací řešení.<br /><br /> `devenv mysln.sln /deploy`|
-|[/Out](out-devenv-exe.md)|Umožňuje zadat soubor pro příjem chyb při vytváření.<br /><br /> `devenv mysln.sln /build Debug /out log.txt`|
-|[/Projekt](project-devenv-exe.md)|Projekt k sestavení, čištění nebo nasazení. Tento přepínač můžete použít pouze `/Build`v případě, `/Rebuild` `/Clean`že `/Deploy` jste také zadali přepínač , , nebo přepínač.<br /><br /> `devenv mysln.sln /build Debug /project proj1`|
-|[/ProjectConfig](projectconfig-devenv-exe.md)|Určuje konfiguraci projektu, kterou chcete sestavit nebo nasadit. Tento přepínač můžete použít pouze v případě, že jste přepínač také dodali. `/Project`<br /><br /> `devenv mysln.sln /build Release /project proj1 /projectconfig Release`|
-|[/Znovu sestavit](rebuild-devenv-exe.md)|Vyčistí a pak vytvoří zadané řešení nebo projekt podle konfigurace zadaného řešení.<br /><br /> `devenv mysln.sln /rebuild`|
-|[/ResetSettings](resetsettings-devenv-exe.md)|Obnoví výchozí nastavení sady Visual Studio. Volitelně obnoví nastavení na `.vssettings` zadaný soubor.<br /><br /> `devenv /resetsettings mysettings.vssettings`|
-|[/Upgrade](upgrade-devenv-exe.md)|Inovuje zadaný soubor řešení a všechny jeho soubory projektu nebo zadaný soubor projektu na aktuální formáty sady Visual Studio pro tyto soubory.<br /><br /> `devenv mysln.sln /upgrade`|
+|[/Command](command-devenv-exe.md)|Spustí integrované vývojové prostředí (IDE) a provede zadaný příkaz.<br /><br /> `devenv /command "nav https://docs.microsoft.com/"`|
+|[/DebugExe](debugexe-devenv-exe.md)|Načte spustitelný soubor C++ pod ovládacím prvkem ladicího programu. Tento přepínač není k dispozici pro Visual Basic nebo pro spustitelné soubory v jazyce C#. Další informace najdete v tématu [automatické spuštění procesu v ladicím programu](../../debugger/debug-multiple-processes.md#BKMK_Automatically_start_an_process_in_the_debugger).<br /><br /> `devenv /debugexe mysln.exe`|
+|[/](diff.md)|Porovná dva soubory. Má čtyři parametry: *požadovaný sourcefile*, *CílovýSoubor*, *Zdrojovýnázevzobrazení* (volitelné) a *cílovýnázevzobrazení* (volitelné).<br /><br /> `devenv /diff File1 File2 Alias1 Alias2`|
+|[/DoNotLoadProjects](donotloadprojects-devenv-exe.md)|Otevře zadané řešení bez načtení jakýchkoli projektů.<br /><br /> `devenv /donotloadprojects mysln.sln`|
+|[/Edit](edit-devenv-exe.md)|Otevře zadané soubory ve spuštěné instanci této aplikace. Pokud neexistují žádné spuštěné instance, spustí se nová instance se zjednodušeným rozložením oken.<br /><br /> `devenv /edit File1 File2`|
+|[/LCID nebo/L](lcid-devenv-exe.md)|Nastaví výchozí jazyk integrovaného vývojového prostředí (IDE). Pokud zadaný jazyk není zahrnutý v instalaci sady Visual Studio, toto nastavení se ignoruje.<br /><br /> `devenv /l 1033`|
+|[/Log](log-devenv-exe.md)|Spustí Visual Studio a zaznamená všechny aktivity do souboru protokolu.<br /><br /> `devenv /log mylogfile.xml`|
+|[/NoSplash](nosplash-devenv-exe.md)|Otevře IDE bez zobrazení úvodní obrazovky.<br /><br /> `devenv /nosplash File1 File2`|
+|[/ResetSettings](resetsettings-devenv-exe.md)|Obnoví výchozí nastavení sady Visual Studio. Volitelně obnoví nastavení do zadaného `.vssettings` souboru.<br /><br /> `devenv /resetsettings mysettings.vssettings`|
+|[/Run nebo/R](run-devenv-exe.md)|Zkompiluje a spustí zadané řešení.<br /><br /> `devenv /run mysln.sln`|
+|[/RunExit](runexit-devenv-exe.md)|Zkompiluje a spustí zadané řešení, minimalizuje integrované vývojové prostředí (IDE) při spuštění řešení a po skončení běhu řešení ukončí prostředí IDE.<br /><br /> `devenv /runexit mysln.sln`|
+|[/SafeMode](safemode-devenv-exe.md)|Spustí aplikaci Visual Studio v nouzovém režimu. Tento přepínač načte jenom výchozí prostředí, výchozí služby a dodávané verze balíčků třetích stran.<br /><br /> Tento přepínač nepřijímá žádné argumenty.|
+|[/UseEnv](useenv-devenv-exe.md)|Způsobí, že rozhraní IDE použije proměnné prostředí PATH, INCLUDE, LIBPATH a LIB pro kompilaci C++. Tento přepínač se instaluje s úlohou **vývoj desktopových aplikací v C++** . Další informace naleznete v tématu [Nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](/cpp/build/setting-the-path-and-environment-variables-for-command-line-builds).|
+
+Následující přepínače příkazového řádku nezobrazují integrované vývojové prostředí (IDE).
+
+|Přepínač příkazového řádku|Popis|
+| - |-----------------|
+|[/?](q-devenv-exe.md)|Zobrazí nápovědu pro `devenv` přepínače v **okně příkazového řádku**.<br /><br /> Tento přepínač nepřijímá žádné argumenty.|
+|[/Build](build-devenv-exe.md)|Sestavení zadaného řešení nebo projektu podle konfigurace zadaného řešení.<br /><br /> `devenv mysln.sln /build`|
+|[/Clean](clean-devenv-exe.md)|Odstraní všechny soubory vytvořené příkazem Build bez vlivu na zdrojové soubory.<br /><br /> `devenv mysln.sln /clean`|
+|[/Deploy](deploy-devenv-exe.md)|Sestaví řešení společně se soubory nezbytnými pro nasazení podle konfigurace řešení.<br /><br /> `devenv mysln.sln /deploy`|
+|[/Out](out-devenv-exe.md)|Umožňuje určit soubor pro příjem chyb při sestavování.<br /><br /> `devenv mysln.sln /build Debug /out log.txt`|
+|[/Project](project-devenv-exe.md)|Projekt, který se má sestavit, vyčistit nebo nasadit Tento přepínač můžete `/Build`použít pouze v případě, že jste zadali také přepínač `/Rebuild`, `/Clean`, nebo `/Deploy` .<br /><br /> `devenv mysln.sln /build Debug /project proj1`|
+|[/ProjectConfig](projectconfig-devenv-exe.md)|Určuje konfiguraci projektu, která se má sestavit nebo nasadit. Tento přepínač můžete použít pouze v `/Project` případě, že jste zadali také přepínač.<br /><br /> `devenv mysln.sln /build Release /project proj1 /projectconfig Release`|
+|[/Rebuild](rebuild-devenv-exe.md)|Vyčistí a pak sestaví zadané řešení nebo projekt podle konfigurace zadaného řešení.<br /><br /> `devenv mysln.sln /rebuild`|
+|[/Upgrade](upgrade-devenv-exe.md)|Provede upgrade zadaného souboru řešení a všech jeho souborů projektu nebo zadaného souboru projektu na aktuální formáty sady Visual Studio pro tyto soubory.<br /><br /> `devenv mysln.sln /upgrade`|
 
 ## <a name="see-also"></a>Viz také
 
 - [Obecné, prostředí, dialogové okno Možnosti](general-environment-options-dialog-box.md)
-- [Přepínače příkazového řádku Devenv pro vývoj vbalíčku VSPackage](../../extensibility/devenv-command-line-switches-for-vspackage-development.md)
+- [Přepínače příkazového řádku nástroje devenv pro vývoj pro VSPackage](../../extensibility/devenv-command-line-switches-for-vspackage-development.md)
