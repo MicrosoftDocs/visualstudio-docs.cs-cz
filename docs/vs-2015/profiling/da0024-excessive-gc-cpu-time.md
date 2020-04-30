@@ -13,25 +13,27 @@ caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 99b538231346c8bad644c8a55e468c60e39b90ea
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: fbe6da087d10d3373a1f5d7836d4fa5207801bc7
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852317"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586747"
 ---
 # <a name="da0024-excessive-gc-cpu-time"></a>DA0024: Nadměrný čas procesoru uvolňování paměti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-ID pravidla | DA0024 |  
-| Kategorie |. Použití rozhraní .NET Framework |  
-| Metoda profilování | Vše |  
-| Zpráva |% času v uvolňování paměti je velmi vysoká. Existuje nadměrné množství režijních nákladů na shromažďování paměti. |  
-| Typ pravidla | Upozornění |  
+|||  
+|-|-|  
+|ID pravidla|DA0024|  
+|Kategorie|Využití .NET Framework|  
+|Metoda profilace|Všechny|  
+|Zpráva|% Času v uvolňování paměti je velmi vysoké. Existuje nadměrné množství režijních nákladů na uvolňování paměti.|  
+|Typ pravidla|Upozornění|  
   
  Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.  
   
-## <a name="cause"></a>příčina  
+## <a name="cause"></a>Příčina  
  Údaje o výkonu systému, které byly shromážděny během profilace, ukazují, že množství času stráveného uvolňováním paměti je příliš vysoké v porovnání s celkovou dobou zpracování aplikace.  
   
 ## <a name="rule-description"></a>Popis pravidla  
@@ -45,6 +47,6 @@ ID pravidla | DA0024 |
 > Pokud je poměr času stráveného uvolňováním paměti značný, ale není nadměrně v porovnání s celkovou dobou zpracování aplikace, [DA0023: vysoký čas procesoru GC](../profiling/da0023-high-gc-cpu-time.md) se místo tohoto pravidla aktivuje.  
   
 ## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění  
- Dvakrát klikněte na zprávu v okně Seznam chyb, abyste přešli na [zobrazení značek](../profiling/marks-view.md) dat profilování. Vyhledá **paměť .NET CLR\\% času ve SLOUPCI GC** . Určete, zda existují konkrétní fáze provádění programu, kde režie pro uvolňování paměti spravované paměti je těžší než jiné fáze. Porovná hodnoty% času v GC na míru uvolňování paměti hlášené v počtu **kolekcí 0. generace**, **počet kolekcí 1**. generace, počet kolekcí **s hodnotou 2** . generace.  
+ Dvakrát klikněte na zprávu v okně Seznam chyb, abyste přešli na [zobrazení značek](../profiling/marks-view.md) dat profilování. Vyhledá **% času paměti\\.NET CLR ve sloupci GC** . Určete, zda existují konkrétní fáze provádění programu, kde režie pro uvolňování paměti spravované paměti je těžší než jiné fáze. Porovná hodnoty% času v GC na míru uvolňování paměti hlášené v počtu **kolekcí 0. generace**, **počet kolekcí 1**. generace, počet kolekcí **s hodnotou 2** . generace.  
   
- Hodnota% času v GC se pokusí hlásit množství času, který aplikace stráví prováděním uvolňování paměti úměrnou celkovému množství zpracování. Počítejte s tím, že pokud hodnota% času v GC může nahlásit velmi vysokou hodnotu, ale není to kvůli nadměrnému uvolňování paměti. Další informace o tom, jak se počítá hodnota% času v GC, najdete v tématu [rozdíl mezi daty výkonu hlášených různými nástroji – 4](https://blogs.msdn.com/maoni/archive/2007/01/11/difference-between-perf-data-reported-by-different-tools-4.aspx) záznamem **Maoni blogu** na webu MSDN. Pokud dojde k chybám stránky nebo dojde k přerušení aplikace jinou funkcí s vyšší prioritou v počítači při uvolňování paměti, bude% času v čítači GC tyto další prodlevy odrážet.
+ Hodnota% času v GC se pokusí hlásit množství času, který aplikace stráví prováděním uvolňování paměti úměrnou celkovému množství zpracování. Počítejte s tím, že pokud hodnota% času v GC může nahlásit velmi vysokou hodnotu, ale není to kvůli nadměrnému uvolňování paměti. Další informace o tom, jak se počítá hodnota% času v GC, najdete v tématu [rozdíl mezi daty výkonu hlášených různými nástroji – 4](https://devblogs.microsoft.com/dotnet/difference-between-perf-data-reported-by-different-tools-4/) záznamem **Maoni blogu** na webu MSDN. Pokud dojde k chybám stránky nebo dojde k přerušení aplikace jinou funkcí s vyšší prioritou v počítači při uvolňování paměti, bude% času v čítači GC tyto další prodlevy odrážet.

@@ -8,12 +8,12 @@ ms.assetid: 51b53778-469c-4cc9-854c-4e4992d6389b
 caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b44e921a8e1ba13d3f0786d4633f942f94f3eaaa
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 0ec4c0a9594202b6755500d683c426238264aec3
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851279"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586982"
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>Testování aplikací pro SharePoint 2010 pomocí programových testů uživatelského rozhraní
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,23 +53,23 @@ Zahrnutí programových testů uživatelského rozhraní do aplikace SharePoint 
 > [!WARNING]
 > Zadání textu v libovolné buňce aplikace Excel, za kterým následuje akce se šipkou klávesou, není správně zaznamenáváno. Buňky můžete vybrat pomocí myši.
 
- Pokud zaznamenáváte akce do prázdné buňky, je nutné upravit kód dvojitým kliknutím na buňku a následným prováděním operace set text. To je potřeba, protože kliknutím na buňku, za kterou se akce klávesnice aktivuje, `textarea` v rámci buňky. Pouhým záznamem `setvalue` v prázdné buňce bude vyhledán `editbox`, který není k dispozici, dokud nekliknete na buňku. Příklad:
+ Pokud zaznamenáváte akce do prázdné buňky, je nutné upravit kód dvojitým kliknutím na buňku a následným prováděním operace set text. To je potřeba, protože kliknutím na buňku, za kterou se aktivuje jakákoli akce klávesnice, `textarea` aktivuje v rámci buňky. Pouhým záznamem `setvalue` v prázdné buňce bude hledání, `editbox` které není k dispozici, dokud nekliknete na buňku. Příklad:
 
 ```csharp
 Mouse.DoubliClick(uiItemCell,new Point(31,14));
 uiGridKeyboardInputEdit.Text=value;
 ```
 
- Pokud provádíte zaznamenávání akcí v neprázdné buňce, znamená to, že nahrávání bude trochu složitější, protože když do buňky přidáte text, nový \<ovládací prvek div > je přidán jako podřízený objekt buňky. Nový \<ovládací prvek div > obsahuje text, který jste právě zadali. Zapisovač musí zaznamenávat akce pro nový \<> ovládací prvek div; nemůže to však být způsobeno tím, že nový \<ovládací prvek div > neexistuje až po zadání testu. Chcete-li tento problém vyřešit, je nutné ručně provést následující změny kódu.
+ Pokud provádíte zaznamenávání akcí na neprázdné buňce, znamená to, že záznam získá trochu složitější, protože když do buňky přidáte text, nový \<ovládací prvek div> je přidán jako podřízený objekt buňky. Nový \<ovládací prvek div> obsahuje text, který jste právě zadali. Zapisovač musí zaznamenávat akce na novém \<ovládacím prvku div>; Nicméně to nemůže být způsobeno tím \<, že nový ovládací prvek div> neexistuje až po zadání testu. Chcete-li tento problém vyřešit, je nutné ručně provést následující změny kódu.
 
-1. Přejít na inicializaci buňky a nastavit `RowIndex` a `ColumnIndex` primární vlastnosti:
+1. Přejít k inicializaci buňky a nastavit `RowIndex` a `ColumnIndex` primární vlastnosti:
 
     ```csharp
     this.mUIItemCell.SearchProperties[HtmlCell.PropertyNames. RowIndex] = "3";
     this.mUIItemCell.SearchProperties[HtmlCell.PropertyNames. ColumnIndex] = "3";
     ```
 
-2. Najít podřízenou položku `HtmlDiv` buňky:
+2. Najděte `HtmlDiv` podřízenou buňku:
 
     ```csharp
     private UITestControl getControlToDoubleClick(HtmlCell cell)
@@ -85,13 +85,13 @@ uiGridKeyboardInputEdit.Text=value;
 
     ```
 
-3. Přidejte kód pro akci poklikání myši na `HtmlDiv`:
+3. Přidejte kód pro akci dvojitého kliknutí myši na `HtmlDiv`:
 
     ```csharp
     Mouse.DoubleClick(uIItemPane, new Point(31, 14)); )
     ```
 
-4. Přidejte kód pro nastavení textu na `TextArea`:
+4. Přidejte kód pro nastavení textu `TextArea`:
 
     ```csharp
     uIGridKeyboardInputEdit.Text = value; }
@@ -141,7 +141,7 @@ uiGridKeyboardInputEdit.Text=value;
  [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5 automatizace systémových testů](https://msdn.microsoft.com/library/jj159335.aspx)
 
 ### <a name="forum"></a>Fórum
- [Blog sady Visual Studio ALM + Team Foundation Server](https://blogs.msdn.com/b/visualstudioalm/)
+ [Blog sady Visual Studio ALM + Team Foundation Server](https://devblogs.microsoft.com/devops/welcome-to-the-visual-studio-alm-team-foundation-server-blog/)
 
 ## <a name="see-also"></a>Viz také
- [Použití automatizace uživatelského rozhraní k otestování](../test/use-ui-automation-to-test-your-code.md) [výkonu webu kódu a zátěžového testování aplikací sharepoint 2010 a 2013](https://msdn.microsoft.com/library/20c2e469-0e4e-4296-a739-c0e8fff36e54) [vytvoření řešení SharePoint](https://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631) [ověřování a ladění vytváření a ladění kódu SharePointu](https://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c) [](https://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae) [profilace výkonu aplikací SharePoint](https://msdn.microsoft.com/library/61ae02e7-3f37-4230-bae1-54a498c2fae8)
+ [Použití automatizace uživatelského rozhraní k otestování](../test/use-ui-automation-to-test-your-code.md) [výkonu webu kódu a zátěžového testování aplikací sharepoint 2010 a 2013](https://msdn.microsoft.com/library/20c2e469-0e4e-4296-a739-c0e8fff36e54) [vytvoření řešení SharePoint](https://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631) [ověřování a ladění vytváření a ladění kódu SharePointu](https://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c) [Building and Debugging SharePoint Solutions](https://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae) [profilace výkonu aplikací SharePoint](https://msdn.microsoft.com/library/61ae02e7-3f37-4230-bae1-54a498c2fae8)

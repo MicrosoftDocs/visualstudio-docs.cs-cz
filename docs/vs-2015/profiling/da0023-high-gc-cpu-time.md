@@ -13,25 +13,27 @@ caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 19bc4631e5cac9eea7b355bd25147edf384e86b6
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: bf5e841fdccbd6a41d0e7ee61c9f5278c6a882e3
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75844494"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586865"
 ---
 # <a name="da0023-high-gc-cpu-time"></a>DA0023: Vysoký čas procesoru uvolňování paměti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-ID pravidla | DA0023 |  
-| Kategorie |. Použití rozhraní .NET Framework |  
-| Metoda profilování | Vše |  
-| Zpráva |% času v uvolňování paměti je poměrně vysoká. Tato indikace nadměrného množství režijních nákladů na uvolňování paměti může mít vliv na odezvu vaší aplikace. Můžete shromáždit údaje o přidělování paměti .NET a informace o životnosti objektů, abyste porozuměli způsobu přidělení paměti, které vaše aplikace používá. |  
-| Typ pravidla | Informační |  
+|||  
+|-|-|  
+|ID pravidla|DA0023|  
+|Kategorie|Využití .NET Framework|  
+|Metoda profilace|Všechny|  
+|Zpráva|% Času v uvolňování paměti je poměrně vysoké. Tato indikace nadměrného množství režijních nákladů na uvolňování paměti může mít vliv na odezvu vaší aplikace. Můžete shromáždit data o přidělování paměti .NET a informace o životnosti objektů, abyste porozuměli způsobu přidělení paměti, které vaše aplikace používá lépe.|  
+|Typ pravidla|Informační|  
   
  Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.  
   
-## <a name="cause"></a>příčina  
+## <a name="cause"></a>Příčina  
  Data o výkonu systému shromažďovaná během profilace označují, že množství času stráveného uvolňováním paměti je v porovnání s celkovou dobou zpracování aplikace významné.  
   
 ## <a name="rule-description"></a>Popis pravidla  
@@ -45,6 +47,6 @@ ID pravidla | DA0023 |
 > Když je poměr doby strávená uvolňováním paměti nadměrně v porovnání s celkovou dobou zpracování aplikace, [DA0024: Nadměrný čas procesoru uvolňování paměti](../profiling/da0024-excessive-gc-cpu-time.md) , místo aby bylo toto pravidlo aktivováno.  
   
 ## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění  
- Dvakrát klikněte na zprávu v okně Seznam chyb, abyste přešli na [zobrazení značek](../profiling/marks-view.md) dat profilování. Vyhledá **paměť .NET CLR\\% času ve SLOUPCI GC** . Určete, zda existují konkrétní fáze provádění programu, kde režie pro uvolňování paměti spravované paměti je těžší než jiné fáze. Porovná hodnoty% času v GC na míru uvolňování paměti hlášené v počtu **kolekcí 0. generace**, **počet kolekcí 1**. generace, počet kolekcí **s hodnotou 2** . generace.  
+ Dvakrát klikněte na zprávu v okně Seznam chyb, abyste přešli na [zobrazení značek](../profiling/marks-view.md) dat profilování. Vyhledá **% času paměti\\.NET CLR ve sloupci GC** . Určete, zda existují konkrétní fáze provádění programu, kde režie pro uvolňování paměti spravované paměti je těžší než jiné fáze. Porovná hodnoty% času v GC na míru uvolňování paměti hlášené v počtu **kolekcí 0. generace**, **počet kolekcí 1**. generace, počet kolekcí **s hodnotou 2** . generace.  
   
- Hodnota% času v GC se pokusí hlásit množství času, který aplikace stráví prováděním uvolňování paměti úměrnou celkovému množství zpracování. Počítejte s tím, že pokud hodnota% času v GC může nahlásit velmi vysokou hodnotu, ale není to kvůli nadměrnému uvolňování paměti. Další informace o tom, jak se počítá hodnota% času v GC, najdete v tématu [rozdíl mezi daty výkonu hlášených různými nástroji – 4](https://blogs.msdn.com/maoni/archive/2007/01/11/difference-between-perf-data-reported-by-different-tools-4.aspx) záznamem **Maoni blogu** na webu MSDN. Pokud dojde k chybám stránky nebo dojde k přerušení aplikace jinou funkcí s vyšší prioritou v počítači při uvolňování paměti, bude% času v čítači GC tyto další prodlevy odrážet.
+ Hodnota% času v GC se pokusí hlásit množství času, který aplikace stráví prováděním uvolňování paměti úměrnou celkovému množství zpracování. Počítejte s tím, že pokud hodnota% času v GC může nahlásit velmi vysokou hodnotu, ale není to kvůli nadměrnému uvolňování paměti. Další informace o tom, jak se počítá hodnota% času v GC, najdete v tématu [rozdíl mezi daty výkonu hlášených různými nástroji – 4](https://devblogs.microsoft.com/dotnet/difference-between-perf-data-reported-by-different-tools-4/) záznamem **Maoni blogu** na webu MSDN. Pokud dojde k chybám stránky nebo dojde k přerušení aplikace jinou funkcí s vyšší prioritou v počítači při uvolňování paměti, bude% času v čítači GC tyto další prodlevy odrážet.

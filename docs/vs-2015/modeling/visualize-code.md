@@ -13,17 +13,17 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9dcb6edf8ce69d48805c3ad8c3c25ef9cc0ed591
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 4ffd105032cda050ab16132b6a4c2d54488028b8
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851342"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586768"
 ---
 # <a name="visualize-code"></a>Vizualizace kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pomocí nástrojů pro vizualizaci a modelování v aplikaci Visual Studio můžete pochopit existující kód a popsat svou aplikaci. To vám umožní vizuálně zjistit, jak by mohly vaše změny ovlivnit kód, a pomůže vám to posoudit práci a rizika vyplývající z těchto změn. Příklad:
+Pomocí nástrojů pro vizualizaci a modelování v aplikaci Visual Studio můžete pochopit existující kód a popsat svou aplikaci. To vám umožní vizuálně zjistit, jak změny můžou ovlivnit kód, a pomohou vám posoudit práci a rizika vyplývající z těchto změn. Příklad:
 
 - Chcete-li pochopit vztahy v kódu, namapujte tyto vztahy vizuálně.
 
@@ -41,17 +41,17 @@ Pomocí nástrojů pro vizualizaci a modelování v aplikaci Visual Studio můž
 
 |||
 |-|-|
-|**Pochopení kódu a jeho vztahů:**<br /><br /> Mapování vztahů mezi určitými částmi kódu.<br /><br /> Podívejte se na přehled vztahů v kódu pro celé řešení.<br /><br /> **Poznámka**: v této verzi sady Visual Studio se jako místo *grafu závislostí*používá pojem *Mapa kódu* .|-   [závislosti map napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md)<br />-   [použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)<br />-   [nalezení potenciálních problémů pomocí analyzátorů mapy kódu](../modeling/find-potential-problems-using-code-map-analyzers.md)<br />-   [metody map v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)|
+|**Pochopení kódu a jeho vztahů:**<br /><br /> Mapování vztahů mezi určitými částmi kódu.<br /><br /> Podívejte se na přehled vztahů v kódu pro celé řešení.<br /><br /> **Poznámka**: v této verzi sady Visual Studio se jako místo *grafu závislostí*používá pojem *Mapa kódu* .|-   [Mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md)<br />-   [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)<br />-   [Nalezení potenciálních problémů pomocí analyzátorů mapy kódu](../modeling/find-potential-problems-using-code-map-analyzers.md)<br />-   [Mapování metod v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)|
 |**Porozumění strukturám tříd:**<br /><br /> Vizualizujte strukturu tříd v projektu vytvořením diagramů tříd z kódu.|[Postupy: Přidání diagramů tříd do projektů (Návrhář tříd)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)|
-|**Popište návrh systému vysoké úrovně a ověřte kód pro tento návrh:**<br /><br /> Popište návrh systému vysoké úrovně a jeho zamýšlené závislosti vytvořením diagramů vrstev. Ověřte kód pro tento návrh a ujistěte se, že závislosti v kódu zůstávají v souladu s návrhem.|-   [vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [diagramy vrstev: referenční](../modeling/layer-diagrams-reference.md) dokumentace<br />-   [diagramy vrstev: pokyny](../modeling/layer-diagrams-guidelines.md)<br />-   [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)|
-|**Komunikace s požadavky a architekturou uživatele:**<br /><br /> Vykreslením následujících diagramů UML můžete modelovat požadavky uživatelů a architekturu softwarového systému: aktivita, komponenta, třída, sekvence a případ použití.|-   [vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)<br />[požadavky uživatelů -   modelu](../modeling/model-user-requirements.md)<br />-   [modelování architektury vaší aplikace](../modeling/model-your-app-s-architecture.md)|
+|**Popište návrh systému vysoké úrovně a ověřte kód pro tento návrh:**<br /><br /> Popište návrh systému vysoké úrovně a jeho zamýšlené závislosti vytvořením diagramů vrstev. Ověřte kód pro tento návrh a ujistěte se, že závislosti v kódu zůstávají v souladu s návrhem.|-   [Vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [Diagramy vrstev: Referenční dokumentace](../modeling/layer-diagrams-reference.md)<br />-   [Diagramy vrstev: pokyny](../modeling/layer-diagrams-guidelines.md)<br />-   [Ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)|
+|**Komunikace s požadavky a architekturou uživatele:**<br /><br /> Vykreslením následujících diagramů UML můžete modelovat požadavky uživatelů a architekturu softwarového systému: aktivita, komponenta, třída, sekvence a případ použití.|-   [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)<br />-   [Modelování uživatelských požadavků](../modeling/model-user-requirements.md)<br />-   [Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="external-resources"></a>Externí prostředky
+## <a name="external-resources"></a>Externí zdroje
 
 |**Kategorie**|**Odkazy**|
 |------------------|---------------|
-|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
-|**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](https://blogs.msdn.com/b/visualstudioalm)|
+|**Fóra**|-   [Nástroje pro vizualizaci sady Visual Studio & modelování](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](https://devblogs.microsoft.com/devops/welcome-to-the-visual-studio-alm-team-foundation-server-blog/)|
 |**Technické články a deníky**|[Fórum architektury MSDN](https://msdn.microsoft.com/architecture/default.aspx)|
 
 ## <a name="see-also"></a>Viz také

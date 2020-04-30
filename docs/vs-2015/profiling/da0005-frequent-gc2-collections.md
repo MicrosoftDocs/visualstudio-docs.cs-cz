@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 74091a3fe2da42ce3a9d16fdfa581d7774492574
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 46e03ecb00e4a5733039e003d170f3cfe0a854ee
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852312"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586965"
 ---
 # <a name="da0005-frequent-gc2-collections"></a>DA0005: Časté shromažďování GC2
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ RuleId | DA0005 |
 | Zpráva | Mnohé z vašich objektů se shromažďují v paměti generace 2. |  
 | Typ zprávy | Upozornění |  
   
-## <a name="cause"></a>příčina  
+## <a name="cause"></a>Příčina  
  V uvolňování paměti 2. generace se uvolňuje velký počet paměťových objektů .NET.  
   
 ## <a name="rule-description"></a>Popis pravidla  
@@ -38,7 +38,7 @@ RuleId | DA0005 |
   
  Objekty v generaci 0 jsou často shromažďovány a obvykle velmi efektivně. Objekty v generaci 1 jsou shromažďovány méně často a méně efektivní. A konečně dlouhodobé objekty v generaci 2 by měly být shromažďovány ještě méně často. Největší náročná operace je shromažďování 2, což je úplné spuštění uvolňování paměti.  
   
- Toto pravidlo je vyvoláno, když došlo k proporcování příliš velkého počtu uvolnění paměti generace 2. Pokud je v kolekci 1. generace načteno příliš mnoho poměrně krátkodobých objektů, ale je možné je shromáždit v úplné kolekci 2. generace, náklady na správu paměti lze snadno přetvořit. Další informace najdete v části věnované [krizi v polovině životního cyklu](https://blogs.msdn.com/ricom/archive/2003/12/04/41281.aspx) na webu MSDN na Mariani výkonu pikantní.  
+ Toto pravidlo je vyvoláno, když došlo k proporcování příliš velkého počtu uvolnění paměti generace 2. Pokud je v kolekci 1. generace načteno příliš mnoho poměrně krátkodobých objektů, ale je možné je shromáždit v úplné kolekci 2. generace, náklady na správu paměti lze snadno přetvořit. Další informace najdete v části věnované [krizi v polovině životního cyklu](https://docs.microsoft.com/archive/blogs/ricom/mid-life-crisis) na webu MSDN na Mariani výkonu pikantní.  
   
 ## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění  
  Projděte si sestavy [zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md) , abyste pochopili, jaký je model přidělení paměti aplikace. Pomocí [zobrazení životnosti objektů](../profiling/object-lifetime-view.md) určete, který z datových objektů programu je v generaci 2, a pak se z něj uvolní. Pomocí [zobrazení přidělení](../profiling/dotnet-memory-allocations-view.md) Určete cestu spuštění, která je výsledkem těchto přidělení.  

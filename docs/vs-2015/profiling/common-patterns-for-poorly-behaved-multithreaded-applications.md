@@ -13,12 +13,12 @@ caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 414b5ea6a6cf6bf0277ad8d2df51b20c39f558e1
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 128de95d347fece01c9177057346b00e412e1e6f
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852169"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586639"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Obecné vzory pro vícevláknové aplikace s nevhodným chováním
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ Vizualizátor souběžnosti pomáhá vývojářům vizualizovat chování vícev
   
  Jak je znázorněno na následujícím obrázku, Vizualizér souběžnosti může tento příznak zobrazit také v zobrazení využití procesoru, kde navzdory přítomnosti více vláken aplikace spotřebovává pouze jeden logický jádro.  
   
- Další informace najdete v tématu "vzor výkonu 1: identifikace kolizí zámků" v blogu Hazim Shafi [Parallel Performance Tools for Windows](https://blogs.msdn.com/hshafi) na webu blogu MSDN.  
+ Další informace najdete v tématu "vzor výkonu 1: identifikace kolizí zámků" v blogu Hazim Shafi [Parallel Performance Tools for Windows](https://docs.microsoft.com/archive/blogs/hshafi/) na webu blogu MSDN.  
   
  ![Uzamknout spory](../profiling/media/lockcontention-2.png "LockContention_2")  
   
@@ -57,7 +57,7 @@ Vizualizátor souběžnosti pomáhá vývojářům vizualizovat chování vícev
 - Vyhodnoťte způsob, jakým proces určí příslušný počet vláken pro spuštění během této fáze práce. Pokud váš proces přímo vypočítá počet aktivních paralelních vláken, zvažte úpravu tohoto algoritmu, aby lépe zohlednil počet dostupných logických jader v systému. Použijete-li Concurrency Runtime, Task Parallel Library nebo PLINQ, tato knihovna provede práci výpočtu počtu vláken.  
   
 ## <a name="inefficient-io"></a>Neefektivní vstupně-výstupní operace  
- ![Neefektivní I&#47;v](../profiling/media/inefficient-io.png "Inefficient_IO")  
+ ![Neefektivní I&#47;O](../profiling/media/inefficient-io.png "Inefficient_IO")  
   
  Vyvýšení nebo zneužití vstupně-výstupních operací je běžné příčinou neefektivity v aplikacích. Vezměte v úvahu předchozí obrázek. Profil viditelné časové osy ukazuje, že v/v se spotřebuje 42 procent viditelného času vlákna. Časová osa zobrazuje velké objemy vstupně-výstupních operací, což znamená, že profilovaná aplikace je často blokovaná pomocí vstupně-výstupních operací. Chcete-li zobrazit podrobnosti o druzích vstupně-výstupních operací a o tom, kde je program zablokován, přihlaste se k problematickým oblastem, Prohlédněte si profil viditelné časové osy a kliknutím na konkrétní vstupně-výstupní blok zobrazte aktuální zásobníky volání.  
   

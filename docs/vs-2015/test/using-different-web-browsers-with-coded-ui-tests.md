@@ -8,12 +8,12 @@ ms.assetid: a859595f-6517-43f2-9d61-c706cb55a388
 caps.latest.revision: 25
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8a5034a13771c0ea1f7b6dcd2e073ad02e838e07
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 5234dddad13ccb52cc653a68ad1c35370a4eae18
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851218"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586331"
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>Používání jiných webových prohlížečů v programových testech uživatelského rozhraní
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -95,8 +95,8 @@ Programové testy UI mohou automatizovat testování webových aplikací tím, �
 
     2. V případě **výjimek modulu CLR (Common Language Runtime)** zrušte kontrolu **neošetřeného uživatelem**.
 
-## <a name="generate"></a>*V programovém testu UI se nezobrazuje možnost změnit BrowserWindow. CurrentBrowser.*
- Je možné, že používáte verzi [!INCLUDE[vs2011_first](../includes/vs2011-first-md.md)], která nepodporuje programové testy UI pomocí různých webových prohlížečů. Chcete-li použít tyto programové testy uživatelského rozhraní, je nutné použít Visual Studio Enterprise.
+## <a name="i-dont-see-the-option-to-change-browserwindowcurrentbrowser-in-the-coded-ui-test"></a><a name="generate"></a>*V programovém testu UI se nezobrazuje možnost změnit BrowserWindow. CurrentBrowser.*
+ Je možné [!INCLUDE[vs2011_first](../includes/vs2011-first-md.md)] , že používáte verzi, která nepodporuje programové testy UI pomocí různých webových prohlížečů. Chcete-li použít tyto programové testy uživatelského rozhraní, je nutné použít Visual Studio Enterprise.
 
  *Co dalšího mám vědět?*
  **Poznámky**
@@ -113,11 +113,11 @@ Programové testy UI mohou automatizovat testování webových aplikací tím, �
 
 - ![Tip](../test/media/tip.png "Tip") Výstup můžete nakonfigurovat tak, aby zahrnoval snímky obrazovky v protokolech kódovaného uživatelského rozhraní. Chcete-li tak učinit, musíte provést některá nastavení konfigurace v souboru QTAgent32.exe.config. Ve výchozím nastavení je tento soubor nainstalován v následujícím umístění:
 
-   **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**
+   **C:\Program Files (x86) \Microsoft Visual Studio 11.0 \ Common7\IDE**
 
    Nastavte následující hodnoty:
 
-  - `EqtTraceLevel` v části `system.diagnostics`.
+  - `EqtTraceLevel`v `system.diagnostics` části.
 
   - `<add name="EqtTraceLevel" value="4" />`
 
@@ -125,7 +125,7 @@ Programové testy UI mohou automatizovat testování webových aplikací tím, �
 
     Další informace naleznete v tématu [Analýza programových testů uživatelského rozhraní pomocí protokolů kódovaného testu uživatelského rozhraní](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md).
 
-## <a name="external-resources"></a>Externí prostředky
+## <a name="external-resources"></a>Externí zdroje
 
 ### <a name="videos"></a>Videa
  [Záznam v aplikaci IE a přehrávání všude](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!183&authkey=!ANqaLtCZbtJrImU)
@@ -144,7 +144,7 @@ Programové testy UI mohou automatizovat testování webových aplikací tím, �
  [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5: automatizace systémových testů](https://msdn.microsoft.com/library/jj159335.aspx)
 
 ### <a name="faq"></a>Nejčastější dotazy
- [Nejčastější dotazy k programovým testům UI – 1](https://blogs.msdn.com/b/mathew_aniyan/archive/tags/faq/)
+ [Nejčastější dotazy k programovým testům UI – 1](https://docs.microsoft.com/archive/blogs/mathew_aniyan/content-index-for-coded-ui-test)
 
  [Nejčastější dotazy k programovým testům UI – 2](https://social.msdn.microsoft.com/Forums/en-US/vsautotest/thread/3a74dd2c-cef8-4923-abbf-7a91f489e6c4)
 

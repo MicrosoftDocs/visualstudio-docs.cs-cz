@@ -11,12 +11,12 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5952a65881a84ab131703db630f5f3b257683e45
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 4db3506ca21289c8ffda8582337cd8027a261438
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852185"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586356"
 ---
 # <a name="use-models-in-your-development-process"></a>Použití modelů ve vývojových procesech
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit 
 
 - Komunikace s modely vám pomůže sdělit důležité koncepty méně dvojznačnější než u přirozeného jazyka. Další informace najdete v tématu [modelování architektury aplikace](../modeling/model-your-app-s-architecture.md).
 
-- V některých případech můžete použít modely pro generování kódu nebo jiných artefaktů, například schémat databáze nebo dokumentů. Například komponenty modelování [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] jsou generovány z modelu.  Další informace najdete v tématu [generování a konfigurace aplikace z modelů](../modeling/generate-and-configure-your-app-from-models.md).
+- V některých případech můžete použít modely pro generování kódu nebo jiných artefaktů, například schémat databáze nebo dokumentů. Například komponenty modelování z [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] jsou vygenerovány z modelu.  Další informace najdete v tématu [generování a konfigurace aplikace z modelů](../modeling/generate-and-configure-your-app-from-models.md).
 
   Modely můžete používat v nejrůznějších procesech, od extrémní agilní až po vysokou procedury.
 
@@ -48,7 +48,7 @@ V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit 
  V obou případech vytvoření modelu téměř vždy vede k výraznému snížení nekonzistencí a nejednoznačnosti. Různí účastníci mají často různé porozumění obchodnímu světě, ve kterém systém funguje, a různí vývojáři mají často různé informace o tom, jak systém funguje. Použití modelu jako fokusu diskuze obvykle zveřejňuje tyto rozdíly. Další informace o použití modelu ke snížení nekonzistencí najdete v tématu [model uživatelských požadavků](../modeling/model-user-requirements.md).
 
 ### <a name="use-models-with-other-artifacts"></a>Použití modelů s jinými artefakty
- Model není sám o sobě specifikací požadavků nebo architekturou. Jedná se o nástroj, který vám umožní vyjádřit některé aspekty těchto věcí podrobněji, ale ne všechny koncepty požadované během návrhu softwaru. Modely by se proto měly používat společně s jinými komunikačními prostředky, jako jsou stránky nebo odstavce OneNotu, systém Microsoft Office dokumenty, pracovní položky v [!INCLUDE[esprfound](../includes/esprfound-md.md)]nebo rychlé poznámky na stěně na místnosti projektu. Kromě poslední položky mohou být všechny tyto typy objektů propojeny s částmi prvků modelu.
+ Model není sám o sobě specifikací požadavků nebo architekturou. Jedná se o nástroj, který vám umožní vyjádřit některé aspekty těchto věcí podrobněji, ale ne všechny koncepty požadované během návrhu softwaru. Modely by se proto měly používat společně s jinými komunikačními prostředky, jako jsou stránky nebo odstavce OneNotu, systém Microsoft Office dokumenty, pracovní položky v [!INCLUDE[esprfound](../includes/esprfound-md.md)]nebo rychlé poznámky na stěně projektové místnosti. Kromě poslední položky mohou být všechny tyto typy objektů propojeny s částmi prvků modelu.
 
  Další aspekty specifikace, které se obvykle používají společně s modely, zahrnují následující. V závislosti na měřítku a stylu vašeho projektu můžete použít několik těchto aspektů nebo nepoužívat vůbec:
 
@@ -86,14 +86,14 @@ V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit 
 
 - Na konci každé iterace si podržíte požadavky Workshop, abyste definovali podrobně požadavky nebo uživatelské scénáře, které budou vyvinuty v další iteraci. Pozvání uživatelů a obchodních účastníků, kteří mohou rozhodnout o prioritách, a také vývojáře a testery systému. Umožňuje třem hodinám definovat požadavky na iteraci na 2 týdny.
 
-- Cílem dílny je, aby všichni souhlasili s tím, co bude provedeno na konci další iterace. Použijte modely jako jeden z nástrojů, které vám pomůžou tyto požadavky vyjasnit. Výstupem dílny je nevyřízené položky iterace: to je seznam úloh vývoje v [!INCLUDE[esprfound](../includes/esprfound-md.md)] a sady testů v [!INCLUDE[TCMext](../includes/tcmext-md.md)].
+- Cílem dílny je, aby všichni souhlasili s tím, co bude provedeno na konci další iterace. Použijte modely jako jeden z nástrojů, které vám pomůžou tyto požadavky vyjasnit. Výstupem dílny je nevyřízené položky iterace: to je seznam vývojářských úloh v [!INCLUDE[esprfound](../includes/esprfound-md.md)] nástroji a sady testů v [!INCLUDE[TCMext](../includes/tcmext-md.md)].
 
 - V části požadavky Workshop proberte návrh pouze v případě, že potřebujete určit odhady pro úlohy vývoje. V opačném případě ponechte diskuzi na chování systému, které uživatelé můžou pracovat přímo. Model požadavků si ponechte oddělené od modelu architektury.
 
 - Netechničtí účastníci většinou nemají žádné problémy s porozuměním diagramům UML s některými pokyny.
 
 #### <a name="link-model-to-work-items"></a>Propojit model s pracovními položkami
- Až se požadavky Workshop vyvíjejí, vypracovali Podrobnosti modelu požadavků a propojí model s vývojovými úkoly. To lze provést propojením pracovních položek v [!INCLUDE[esprfound](../includes/esprfound-md.md)] k prvkům v modelu. Další informace o tom, jak to provést, naleznete v tématu [propojování prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).
+ Až se požadavky Workshop vyvíjejí, vypracovali Podrobnosti modelu požadavků a propojí model s vývojovými úkoly. To lze provést propojováním pracovních položek v [!INCLUDE[esprfound](../includes/esprfound-md.md)] s prvky v modelu. Další informace o tom, jak to provést, naleznete v tématu [propojování prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).
 
  Libovolný prvek můžete propojit s pracovními položkami, ale nejužitečnější prvky jsou následující:
 
@@ -128,13 +128,13 @@ V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit 
 |Způsoby návrhu<br /><br /> Konvence a metody řešení problémů s návrhem, které se používají ve všech částech návrhu|– Diagramy tříd UML popisují struktury vzoru<br />– Diagramy sekvence nebo aktivity zobrazují interakce a algoritmy.|
 |Analýza kódu<br /><br /> Z kódu lze vygenerovat několik typů diagramů.|– Sekvenční diagramy znázorňují interakci mezi objekty v kódu.<br />– Diagramy vrstev znázorňují závislosti mezi třídami. Aktualizovaný kód lze ověřit proti diagramu vrstev.<br />Diagramy tříd zobrazují třídy v kódu.|
 
-## <a name="external-resources"></a>Externí prostředky
+## <a name="external-resources"></a>Externí zdroje
 
 |**Kategorie**|**Odkazy**|
 |------------------|---------------|
 |**Videa**|![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN jak mám videa: jak vytvářet a používat modely a diagramy UML (Visual Studio 2010 Ultimate)](https://msdn.microsoft.com/vstudio/gg418384)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: UML se sadou Visual Studio 2010](https://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-1-Brainstorming-a-Project/)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN postup I série: nástroje a rozšiřitelnost UML (Visual Studio 2010 Ultimate)](https://msdn.microsoft.com/vstudio/ff859492)|
-|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
-|**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](https://blogs.msdn.com/b/visualstudioalm)|
+|**Fóra**|-   [Nástroje pro vizualizaci sady Visual Studio & modelování](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](https://devblogs.microsoft.com/devops/welcome-to-the-visual-studio-alm-team-foundation-server-blog/)|
 |**Technické články a deníky**|[Centrum architektury MSDN](https://msdn.microsoft.com/architecture/default.aspx)<br /><br /> [Pokyny k nástrojům architektury sady Visual Studio](../modeling/visual-studio-architecture-tooling-guidance.md)|
 
 ## <a name="see-also"></a>Viz také

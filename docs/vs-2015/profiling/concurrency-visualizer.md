@@ -16,17 +16,17 @@ caps.latest.revision: 36
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: becaa70d2eed862d77f4c666b0a408054eaf5926
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: e7061acabbe5ce18ff6e1f210fe0003bdaf88980
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850946"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586822"
 ---
 # <a name="concurrency-visualizer"></a>Vizualizér souběžnosti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-POZNÁMKA:]
+ZNAČTE
 > Vizualizátor souběžnosti je volitelným rozšířením sady Visual Studio. Stáhněte si nástroje Vizualizátor souběžnosti a kolekce Vizualizátor souběžnosti z následujících odkazů:  
 > 
 > - Stáhněte si rozšíření [Vizualizátor souběžnosti](https://visualstudiogallery.msdn.microsoft.com/a6c24ce9-beec-4545-9261-293061436ee9) .  
@@ -43,13 +43,13 @@ POZNÁMKA:]
   
 ## <a name="related-topics"></a>Související témata  
   
-|Název|Popis|  
+|Nadpis|Popis|  
 |-----------|-----------------|  
 |[Zobrazení využití](../profiling/utilization-view.md)|Popisuje, jak zobrazit a analyzovat činnost systému napříč všemi procesory.|  
 |[Zobrazení vláken](../profiling/threads-view-parallel-performance.md)|Popisuje, jak analyzovat interakce mezi vlákny v programu.|  
 |[Zobrazení jader](../profiling/cores-view.md)|Popisuje, jak analyzovat migraci vláken napříč jádry.|  
-|[Obecné vzory pro vícevláknové aplikace s nevhodným chováním](../profiling/common-patterns-for-poorly-behaved-multithreaded-applications.md)|Popisuje několik běžných vzorů a ukazuje, jak se zobrazují ve Vizualizátor souběžnosti.|  
-|[Paralelní vývoj v blogu sady Visual Studio](https://blogs.msdn.com/b/visualizeparallel)|Poskytuje tipy a osvědčené postupy pro Vizualizátor souběžnosti.|  
+|[Běžné vzory pro vícevláknové aplikace s nevhodným chováním](../profiling/common-patterns-for-poorly-behaved-multithreaded-applications.md)|Popisuje několik běžných vzorů a ukazuje, jak se zobrazují ve Vizualizátor souběžnosti.|  
+|[Paralelní vývoj v blogu sady Visual Studio](https://docs.microsoft.com/archive/blogs/visualizeparallel/)|Poskytuje tipy a osvědčené postupy pro Vizualizátor souběžnosti.|  
 |[Zobrazení sestav výkonu](../profiling/performance-report-views.md)|Poskytuje referenční informace o sestavách a zobrazeních sady Visual Studio Nástroje pro profilaci.|  
 |[SDK Vizualizéru souběžnosti](../profiling/concurrency-visualizer-sdk.md)|Popisuje, jak instrumentovat zdrojový kód pro zobrazení dalších informací v Vizualizátor souběžnosti.|  
 |[Nástroj příkazového řádku Vizualizéru souběžnosti (CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md)|Popisuje, jak použít nástroj příkazového řádku Vizualizátor souběžnosti (CVCollectionCmd. exe) ke shromáždění a zpracování trasování na počítačích, které nemají aplikaci Visual Studio.|  
