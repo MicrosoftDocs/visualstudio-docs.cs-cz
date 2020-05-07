@@ -432,6 +432,8 @@
                   href: ca1507.md
                 - name: 'CA1508: Vyhněte se mrtvému podmíněnému kódu'
                   href: ca1508.md
+                - name: 'CA1509: Neplatná položka v souboru konfigurace metrik kódu'
+                  href: ca1509.md
             - name: Upozornění mobility
               items:
                 - name: Přehled
@@ -575,6 +577,8 @@
                   href: ca2006.md
                 - name: 'CA2007: Nečekejte přímo na úlohu'
                   href: ca2007.md
+                - name: 'CA2009: Nevolejte ToImmutableCollection pro hodnotu ImmutableCollection'
+                  href: ca2009.md
             - name: Upozornění zabezpečení
               items:
                 - name: Přehled
