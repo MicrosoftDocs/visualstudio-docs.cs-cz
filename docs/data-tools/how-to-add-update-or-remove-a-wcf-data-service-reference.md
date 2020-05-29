@@ -14,27 +14,35 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c60dffc7bb47336ae36e64a366def3c4dce06213
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 494e85049a173749d418276340389ebe826a0b0b
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586581"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184225"
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Postupy: Přidání, aktualizace nebo odebrání odkazu na službu WCF Data Service
-*Odkaz na službu* umožňuje projektu přístup k jednomu nebo více [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]. Pomocí dialogového okna **Přidat odkaz na službu** můžete vyhledat [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] v aktuálním řešení, místně, v místní síti nebo na internetu.
+
+::: moniker range="vs-2017"
+*Odkaz na službu* umožňuje projektu přístup k jednomu nebo více [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] . Pomocí dialogového okna **Přidat odkaz na službu** můžete vyhledat [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] v aktuálním řešení, místně, v místní síti nebo na internetu.
+::: moniker-end
+::: moniker range=">=vs-2019"
+Uzel **připojené služby** v **Průzkumník řešení** můžete použít pro přístup k **Microsoft WCF Web Service reference Provider**, který umožňuje spravovat odkazy na datové služby Windows Communication Foundation (WCF).
+::: moniker-end
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="add-a-service-reference"></a>Přidat odkaz na službu
+## <a name="add-a-wcf-service-reference"></a>Přidat odkaz na službu WCF
 
 ### <a name="to-add-a-reference-to-an-external-service"></a>Přidání odkazu na externí službu
 
+::: moniker range="vs-2017"
+
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na název projektu, do kterého chcete přidat službu, a pak klikněte na **Přidat odkaz na službu**.
 
-     Zobrazí se dialogové okno **Přidat odkaz na službu** .
+   Zobrazí se dialogové okno **Přidat odkaz na službu** .
 
-2. Do pole **adresa** zadejte adresu URL služby a potom kliknutím na tlačítko **Přejít** vyhledejte službu. Pokud služba implementuje zabezpečení uživatelského jména a hesla, může se zobrazit výzva k zadání uživatelského jména a hesla.
+1. Do pole **adresa** zadejte adresu URL služby a potom kliknutím na tlačítko **Přejít** vyhledejte službu. Pokud služba implementuje zabezpečení uživatelského jména a hesla, může se zobrazit výzva k zadání uživatelského jména a hesla.
 
     > [!NOTE]
     > Měli byste odkazovat jenom na služby z důvěryhodného zdroje. Přidání odkazů z nedůvěryhodného zdroje může ohrozit zabezpečení.
@@ -43,34 +51,91 @@ ms.locfileid: "75586581"
 
      Po provedení hledání se zobrazí indikátor průběhu. Hledání můžete kdykoli zastavit kliknutím na tlačítko **zastavit**.
 
-3. V seznamu **služby** rozbalte uzel pro službu, kterou chcete použít, a vyberte sadu entit.
+1. V seznamu **služby** rozbalte uzel pro službu, kterou chcete použít, a vyberte sadu entit.
 
-4. Do pole **obor názvů** zadejte obor názvů, který chcete použít pro referenci.
+1. Do pole **obor názvů** zadejte obor názvů, který chcete použít pro referenci.
 
-5. Kliknutím na tlačítko **OK** přidejte odkaz na projekt.
+1. Kliknutím na tlačítko **OK** přidejte odkaz na projekt.
+
+     Je vygenerován klient služby (proxy) a do souboru *App. config* je přidána metadata, která popisují službu.
+::: moniker-end
+::: moniker range=">=vs-2019"
+1. V **Průzkumník řešení**dvakrát klikněte nebo klepněte na uzel **připojené služby** .
+
+   Otevře se karta **Konfigurovat služby** .
+
+1. Vyberte **Microsoft WCF Web Service reference Provider**.
+
+   Zobrazí se dialogové okno **Konfigurovat odkaz na webovou službu WCF** .
+
+   ![Snímek obrazovky dialogového okna poskytovatele webové služby WCF](media/vs-2019/configure-wcf-web-service-reference-dialog.png)
+
+
+1. Do pole **identifikátor URI** zadejte adresu URL služby a potom kliknutím na tlačítko **Přejít** vyhledejte službu. Pokud služba implementuje zabezpečení uživatelského jména a hesla, může se zobrazit výzva k zadání uživatelského jména a hesla.
+
+    > [!NOTE]
+    > Měli byste odkazovat jenom na služby z důvěryhodného zdroje. Přidání odkazů z nedůvěryhodného zdroje může ohrozit zabezpečení.
+
+     Můžete taky vybrat adresu URL ze seznamu **identifikátorů URI** , ve které se uloží předchozí 15 adres URL, na kterých se našla platná metadata služby.
+
+     Po provedení hledání se zobrazí indikátor průběhu. Hledání můžete kdykoli zastavit kliknutím na tlačítko **zastavit**.
+
+1. V seznamu **služby** rozbalte uzel pro službu, kterou chcete použít, a vyberte sadu entit.
+
+1. Do pole **obor názvů** zadejte obor názvů, který chcete použít pro referenci.
+
+1. Kliknutím na tlačítko **Dokončit** přidejte odkaz na projekt.
 
      Je vygenerován klient služby (proxy) a do souboru *App. config* je přidána metadata, která popisují službu.
 
+::: moniker-end
+
 ### <a name="to-add-a-reference-to-a-service-in-the-current-solution"></a>Přidání odkazu na službu v aktuálním řešení
+
+::: moniker range="vs-2017"
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na název projektu, do kterého chcete přidat službu, a pak klikněte na **Přidat odkaz na službu**.
 
     Zobrazí se dialogové okno **Přidat odkaz na službu** .
 
-2. Klikněte na tlačítko **Zjistit**.
+1. Klikněte na tlačítko **Zjistit**.
 
-    Do seznamu **služeb** se přidají všechny služby ([!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] i WCF) v aktuálním řešení.
+    Do [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] seznamu **služeb** se přidají všechny služby (a služby WCF) v aktuálním řešení.
 
-3. V seznamu **služby** rozbalte uzel pro službu, kterou chcete použít, a vyberte sadu entit.
+1. V seznamu **služby** rozbalte uzel pro službu, kterou chcete použít, a vyberte sadu entit.
 
-4. Do pole **obor názvů** zadejte obor názvů, který chcete použít pro referenci.
+1. Do pole **obor názvů** zadejte obor názvů, který chcete použít pro referenci.
 
-5. Kliknutím na tlačítko **OK** přidejte odkaz na projekt.
+1. Kliknutím na tlačítko **OK** přidejte odkaz na projekt.
+
+    Klient služby (proxy) vygeneruje a metadata, která popisují službu, se přidají do souboru *App. config* .
+::: moniker-end
+::: moniker range=">=vs-2019"
+1. V **Průzkumník řešení**dvakrát klikněte nebo klepněte na uzel **připojené služby** . 
+
+   Otevře se karta **Konfigurovat služby** .
+
+1. Vyberte **Microsoft WCF Web Service reference Provider**.
+
+   Zobrazí se dialogové okno **Konfigurovat odkaz na webovou službu WCF** .
+
+1. Klikněte na tlačítko **Zjistit**.
+
+    Do [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] seznamu **služeb** se přidají všechny služby (a služby WCF) v aktuálním řešení.
+
+1. V seznamu **služby** rozbalte uzel pro službu, kterou chcete použít, a vyberte sadu entit.
+
+1. Do pole **obor názvů** zadejte obor názvů, který chcete použít pro referenci.
+
+1. Kliknutím na tlačítko **Dokončit** přidejte odkaz na projekt.
 
     Klient služby (proxy) vygeneruje a metadata, která popisují službu, se přidají do souboru *App. config* .
 
+::: moniker-end
+
 ## <a name="update-a-service-reference"></a>Aktualizovat odkaz na službu
-Model EDM (Entity Data Model) pro [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] se někdy změní. Pokud k tomu dojde, musíte aktualizovat odkaz na službu.
+
+Model EDM (Entity Data Model) se [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] někdy změní. Pokud k tomu dojde, musíte aktualizovat odkaz na službu.
 
 ### <a name="to-update-a-service-reference"></a>Aktualizace odkazu na službu
 
@@ -79,6 +144,7 @@ Model EDM (Entity Data Model) pro [!INCLUDE[ssAstoria](../data-tools/includes/ss
      Dialogové okno průběh se zobrazí, když je odkaz aktualizován z jeho původního umístění a klient služby se znovu vygeneruje, aby odrážel všechny změny v metadatech.
 
 ## <a name="remove-a-service-reference"></a>Odebrat odkaz na službu
+
 Pokud se už odkaz na službu nepoužívá, můžete ho odebrat z řešení.
 
 ### <a name="to-remove-a-service-reference"></a>Odebrání odkazu na službu
@@ -90,6 +156,6 @@ Pokud se už odkaz na službu nepoužívá, můžete ho odebrat z řešení.
     > [!NOTE]
     > Jakýkoli kód, který odkazuje na odkaz na službu, je nutné odebrat ručně.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Služby Windows Communication Foundation Services a WCF Data Services v aplikaci Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
