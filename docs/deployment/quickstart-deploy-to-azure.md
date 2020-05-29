@@ -10,44 +10,54 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 4bbff0c2d149afddc355afe5f6c93e9d0aea54c0
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 842f7912d88031d720f438800ef6b54133ce05c9
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "72806907"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184488"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Publikování webové aplikace do služby Azure App Service pomocí sady Visual Studio
 
-Pro ASP.NET ASP.NET core, Node.js a .NET Core aplikace, publikovat do služby Azure App Service nebo Azure App Service Linux (pomocí kontejnerů) pomocí jedné z následujících metod.
+Pro aplikace ASP.NET, ASP.NET Core, Node. js a .NET Core proveďte publikování do Azure App Service nebo Azure App Service Linux (pomocí kontejnerů) pomocí jedné z následujících metod.
 
 * Pro průběžné (nebo automatizované) nasazení aplikací použijte Azure DevOps s [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops).
 
-* Pro jednorázové (nebo ruční) nasazení aplikací použijte nástroj **publikování** v Sadě Visual Studio k nasazení ASP.NET, ASP.NET Core, Node.js a .NET Core aplikace do služby Azure App Service nebo App Service pro Linux (pomocí kontejnerů). U aplikací v Pythonu postupujte podle kroků v [Pythonu – publikování do služby Azure App Service](../python/publishing-python-web-applications-to-azure-from-visual-studio.md).
+* Pro jednorázové (nebo ruční) nasazení aplikací použijte nástroj **publikování** v aplikaci Visual Studio k nasazení aplikací ASP.NET, ASP.NET Core, Node. js a .NET Core do Azure App Service nebo App Service pro Linux (pomocí kontejnerů). V případě aplikací Python postupujte podle pokynů v [Pythonu – publikování do Azure App Service](../python/publishing-python-web-applications-to-azure-from-visual-studio.md).
 
-Tento článek popisuje, jak používat nástroj **publikování** pro jednorázové nasazení.
+Tento článek popisuje, jak používat nástroj pro **publikování** pro nasazení v jednom čase.
 
 [!INCLUDE [quickstart-prereqs-azure](includes/quickstart-prereqs-azure.md)]
 
-## <a name="publish-to-azure-app-service"></a>Publikování do Azure App Service
+## <a name="publish-to-azure-app-service-on-windows"></a>Publikování do Azure App Service ve Windows
 
-1. V Průzkumníku řešení klikněte pravým tlačítkem myši na projekt a zvolte **Publikovat** (nebo použijte položku nabídky**Publikovat** **sestavení).** > 
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na projekt a vyberte **publikovat** (nebo použijte **Build**  >  položku nabídky**publikovat** sestavení).
 
-    ![Příkaz Publikovat v kontextové nabídce projektu v Průzkumníku řešení](../deployment/media/quickstart-publish.png "Zvolte Publikovat")
+    ![Příkaz publikovat v místní nabídce projektu v Průzkumník řešení](../deployment/media/quickstart-publish.png "Zvolit publikování")
 
-1. Pokud jste dříve nakonfigurovali profily publikování, zobrazí se podokno **Publikovat** a v takovém případě vyberte **možnost Vytvořit nový profil**.
+1. V dialogovém okně **publikovat** vyberte **Azure**.
 
-1. V **dialogovém** okně Vybrat cíl publikování zvolte **Služba aplikace**.
+    ![Zvolit cíl publikování](../deployment/media/quickstart-publish-azure.png)
 
-    ![Zvolte službu Azure App Service](../deployment/media/quickstart-publish-azure.png "Zvolte službu Azure App Service")
+1. Vyberte * * Azure App Service (Windows) * * a **Další**.
 
-1. Vyberte **Publikovat**. Zobrazí se dialogové okno **Vytvořit službu App Service.** V případě potřeby se přihlaste pomocí účtu Azure a pole naplní výchozí nastavení služby app service.
+    ![Zvolit Azure App Service v systému Linux](../deployment/media/quickstart-publish-windows-select-azure-service.png)
 
-    ![Vytvoření služby App Service](../deployment/media/quickstart-publish-settings-app-service.png "Vytvoření služby Azure App Service")
+1. V případě potřeby se přihlaste pomocí účtu Azure. Vyberte **vytvořit nový Azure App Service...**
 
-1. Vyberte **Vytvořit**. Visual Studio nasadí aplikaci do služby Azure App Service a webová aplikace se načte ve vašem prohlížeči. Podokno **Publikování** vlastností projektu zobrazuje adresu URL webu a další podrobnosti.
+    ![Odkaz pro vytvoření nové instance Azure App Service](../deployment/media/quickstart-publish-windows-create-new-link.png)
 
-    ![Podokno vlastností publikování se souhrnem profilu](../deployment/media/quickstart-publish-app-service-summary.png)
+1. V dialogovém okně **vytvořit Azure App Service (Windows)** se naplní pole **název aplikace**, **skupina prostředků**a položka **plánu App Service** . Tyto názvy můžete zachovat nebo je změnit. Až budete připraveni, vyberte **vytvořit**.
+
+    ![Zvolit Azure App Service](../deployment/media/quickstart-publish-windows-create-new-dialog.png)
+
+1. V dialogovém okně **publikovat** se nově vytvořená instance automaticky vybrala. Až budete připraveni, klikněte na **Dokončit**.
+
+    ![Zvolit Azure App Service](../deployment/media/quickstart-publish-windows-select-instance.png)
+
+1. Vyberte **Publikovat**. Visual Studio nasadí aplikaci do vašeho Azure App Service a webová aplikace se načte v prohlížeči. V podokně **publikování** vlastností projektu se zobrazuje adresa URL webu a další podrobnosti.
+
+    ![Podokno vlastností publikování znázorňující souhrn profilu](../deployment/media/quickstart-publish-windows-summary-page.png)
 
 ## <a name="clean-up-resources"></a>Vyčištění prostředků
 
@@ -58,7 +68,7 @@ Vyberte **Odstranit**, do textového pole zadejte **myResourceGroup** a potom vy
 
 ## <a name="next-steps"></a>Další kroky
 
-V tomto rychlém startu jste se naučili, jak pomocí Sady Visual Studio vytvořit profil publikování pro nasazení do Azure. Profil publikování můžete také nakonfigurovat importem nastavení publikování ze služby Azure App Service.
+V tomto rychlém startu jste zjistili, jak pomocí sady Visual Studio vytvořit profil publikování pro nasazení do Azure. Profil publikování můžete také nakonfigurovat importem nastavení publikování z Azure App Service.
 
 > [!div class="nextstepaction"]
 > [Import nastavení publikování a nasazení do Azure](tutorial-import-publish-settings-azure.md)

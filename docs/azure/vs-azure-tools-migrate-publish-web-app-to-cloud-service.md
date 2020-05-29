@@ -1,6 +1,6 @@
 ---
-title: Migrace & publikování webové aplikace do služby Azure Cloud Service
-description: Zjistěte, jak migrovat a publikovat webovou aplikaci do cloudové služby Azure pomocí Visual Studia
+title: Migrace & publikování webové aplikace do cloudové služby Azure
+description: Naučte se migrovat a publikovat webovou aplikaci do cloudové služby Azure pomocí sady Visual Studio.
 author: ghogen
 manager: jillfra
 ms.assetid: 9394adfd-a645-4664-9354-dd5df08e8c91
@@ -9,85 +9,85 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/10/2017
 ms.author: ghogen
-ms.openlocfilehash: a5f918cac9d2b9e97c047e8823d7702768134336
-ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
+ms.openlocfilehash: c3d622d52e6ae1c1e25563fdbb05f68a9ecc91d0
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81489672"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84179996"
 ---
-# <a name="how-to-migrate-and-publish-a-web-application-to-an-azure-cloud-service-from-visual-studio"></a>Postup: Migrace a publikování webové aplikace do cloudové služby Azure z Visual Studia
+# <a name="how-to-migrate-and-publish-a-web-application-to-an-azure-cloud-service-from-visual-studio"></a>Postupy: migrace a publikování webové aplikace do cloudové služby Azure ze sady Visual Studio
 
-Chcete-li využít výhod hostingových služeb a škálování schopnosti Azure, můžete chtít migrovat a nasadit webové aplikace do cloudové služby Azure. Jsou vyžadovány pouze minimální změny. Tento článek popisuje nasazení pouze do cloudových služeb; v aplikaci App Service najdete [v tématu Nasazení webové aplikace ve službě Azure App Service](/azure/app-service/app-service-deploy-local-git).
+Aby bylo možné využívat služby hostování a škálování možností Azure, můžete chtít migrovat a nasazovat webovou aplikaci do cloudové služby Azure. Vyžadují se jenom minimální změny. Tento článek se zabývá nasazením jenom pro cloudové služby. App Service najdete v tématu [nasazení webové aplikace v Azure App Service](/azure/app-service/app-service-deploy-local-git).
 
 > [!Important]
-> Tato migrace je podporována pouze pro konkrétní projekty pracovního postupu ASP.NET, Silverlight, WCF a WCF. Není podporována pro ASP.NET základní projekty. Viz [Podporované šablony projektů](#supported-project-templates).
+> Tato migrace je podporována pouze pro konkrétní projekty pracovního postupu ASP.NET, WCF a WCF. Pro ASP.NET Core projekty není podporována. Viz článek [podporované šablony projektů](#supported-project-templates).
 
-## <a name="migrate-a-project-to-cloud-services"></a>Migrace projektu do cloudových služeb
+## <a name="migrate-a-project-to-cloud-services"></a>Migrace projektu na cloudové služby
 
-1. Klikněte pravým tlačítkem myši na projekt webové aplikace a vyberte **převést > převést na projekt cloudové služby Microsoft Azure**. (Všimněte si, že tento příkaz se nezobrazí, pokud již máte projekt webové role v řešení.)
-1. Visual Studio vytvoří projekt cloudové služby v řešení, které obsahuje požadovanou webovou roli. Název tohoto projektu je stejný jako váš projekt aplikace `.Azure`s plus přípona .
-1. Visual Studio také nastaví **Copy Local** vlastnost true pro všechna sestavení, které jsou požadovány pro MVC 2, MVC 3, MVC 4 a Silverlight obchodní aplikace. Tato vlastnost přidá tato sestavení do balíčku služeb, který se používá pro nasazení.
+1. Klikněte pravým tlačítkem myši na uzel řešení a vyberte **přidat > nový projekt...** a přidejte do stávajícího řešení nový projekt **cloudové služby Azure (Classic)** .
+1. V dialogovém okně **nový Microsoft Azure cloudová služba (Classic)** klikněte na OK bez přidání rolí do projektu.
+1. V nově přidaném Cloud Services projektu klikněte pravým tlačítkem na uzel role a vyberte **Přidat projekt webové role v řešení...**.
+1. V dialogu **přidružit k projektu role** vyberte projekt, který chcete přidružit jako webovou roli.
 
    > [!Important]
-   > Pokud máte další sestavení nebo soubory, které jsou požadovány pro tuto webovou aplikaci, je nutné ručně nastavit vlastnosti těchto souborů. Informace o nastavení těchto vlastností naleznete [v tématu Zahrnutí souborů do balíčku služeb](vs-azure-tools-publishing-a-cloud-service.md#include-files-in-the-service-package).
+   > Máte-li další sestavení nebo soubory, které jsou požadovány pro tuto webovou aplikaci, je nutné ručně nastavit vlastnosti těchto souborů. Informace o tom, jak tyto vlastnosti nastavit, najdete v tématu [zahrnutí souborů do balíčku služby](vs-azure-tools-publishing-a-cloud-service.md#include-files-in-the-service-package).
 
-### <a name="errors-and-warnings"></a>Chyby a varování
+### <a name="errors-and-warnings"></a>Chyby a upozornění
 
-Všechna upozornění nebo chyby, ke kterým dojde, označují problémy, které je třeba opravit před nasazením do Azure, jako jsou chybějící sestavení.
+Všechna upozornění a chyby, ke kterým dojde, označují problémy, které se mají opravit před nasazením do Azure, například chybějící sestavení.
 
-Pokud vytvoříte aplikaci, spustíte ji místně pomocí emulátoru výpočetního prostředí nebo ji publikujete do Azure, může se zobrazit chyba: "Zadaná cesta, název souboru nebo obojí jsou příliš dlouhé." Tato chyba označuje, že délka plně kvalifikovaný název projektu Azure přesahuje 146 znaků. Chcete-li problém opravit, přesuňte řešení do jiné složky s kratší cestou.
+Pokud sestavíte aplikaci, spustíte ji místně pomocí emulátoru služby COMPUTE nebo ji publikujete do Azure, může se zobrazit chyba: Zadaná cesta, název souboru nebo obojí jsou příliš dlouhé. Tato chyba označuje, že délka plně kvalifikovaného názvu projektu Azure překračuje 146 znaků. Chcete-li tento problém vyřešit, přesuňte řešení do jiné složky s kratší cestou.
 
-Další informace o tom, jak zacházet s upozorněními jako s chybami, najdete [v tématu Konfigurace projektu cloudové služby Azure pomocí sady Visual Studio](vs-azure-tools-configuring-an-azure-project.md).
+Další informace o tom, jak zacházet s upozorněními jako s chybami, najdete v tématu [konfigurace projektu cloudové služby Azure pomocí sady Visual Studio](vs-azure-tools-configuring-an-azure-project.md).
 
-### <a name="test-the-migration-locally"></a>Testování migrace místně
+### <a name="test-the-migration-locally"></a>Místní testování migrace
 
-1. V **Průzkumníku řešení**Sady Visual Studio klepněte pravým tlačítkem myši na projekt přidané cloudové služby a vyberte příkaz **Nastavit jako spouštěcí projekt**.
-1. Vyberte **ladění > spuštění ladění** (F5) ke spuštění prostředí ladění Azure. Toto prostředí konkrétně poskytuje emulaci různých služeb Azure.
+1. V sadě Visual Studio **Průzkumník řešení**klikněte pravým tlačítkem myši na přidaný projekt cloudové služby a vyberte **nastavit jako spouštěný projekt**.
+1. Vyberte **ladit > spustit ladění** (F5) a spusťte ladicí prostředí Azure. Toto prostředí konkrétně zajišťuje emulaci různých služeb Azure.
 
-### <a name="use-an-azure-sql-database-for-your-application"></a>Použití databáze Azure SQL pro vaši aplikaci
+### <a name="use-an-azure-sql-database-for-your-application"></a>Použití Azure SQL Database pro vaši aplikaci
 
-Pokud máte připojovací řetězec pro vaši webovou aplikaci, která používá místní databázi SQL Serveru, musíte místo toho migrovat databázi do azure sql database a aktualizovat připojovací řetězec. Pokyny k tomuto procesu naleznete v následujících tématech:
+Pokud máte připojovací řetězec pro webovou aplikaci, která používá místní databázi SQL Server, je nutné místo toho migrovat databázi do Azure SQL Database a aktualizovat připojovací řetězec. Pokyny k tomuto procesu najdete v následujících tématech:
 
 - [Migrace databáze systému SQL Server do služby SQL Database v cloudu](/azure/sql-database/sql-database-cloud-migrate)
-- [Pomocí rozhraní .NET (C#) s Visual Studio se můžete připojit a dotazovat a databázi Azure SQL](/azure/sql-database/sql-database-connect-query-dotnet-visual-studio).
+- [Použijte .NET (C#) se sadou Visual Studio pro připojení a dotazování a Azure SQL Database](/azure/sql-database/sql-database-connect-query-dotnet-visual-studio).
 
 ## <a name="publish-the-application-to-azure-cloud-service"></a>Publikování aplikace do cloudové služby Azure
 
-1. Vytvořte potřebné účty cloudových služeb a úložišť ve svém předplatném Azure, jak je popsáno v [části Příprava na publikování nebo nasazení aplikace Azure z Visual Studia](vs-azure-tools-cloud-service-publish-set-up-required-services-in-visual-studio.md).
-1. V Sadě Visual Studio klikněte pravým tlačítkem myši na projekt aplikace a vyberte **Publikovat do Microsoft Azure...** (což se liší od možnosti Publikovat..." .).
-1. V **publikování aplikace Azure,** která se zobrazí, přihlaste se pomocí účtu s předplatným Azure a vyberte **další >**.
-1. Na kartě **Nastavení > běžná nastavení** vyberte cílovou cloudovou službu z rozevíracího seznamu **Cloudové služby** spolu s vybraným prostředím a konfiguracemi.
-1. V **části Nastavení > Upřesnit nastavení**vyberte účet úložiště, který chcete použít, a pak vyberte Další **>**.
-1. V **části Diagnostika**zvolte, zda chcete odesílat informace do přehledů aplikací.
-1. Chcete-li zobrazit souhrn, vyberte **další >** a pak vyberte **Publikovat** a spusťte nasazení.
-1. Visual Studio otevře okno protokolu aktivit, ve kterém můžete sledovat průběh:
+1. Vytvořte potřebné cloudové služby a účty úložiště v předplatném Azure, jak je popsáno v tématu [Příprava k publikování nebo nasazení aplikace Azure ze sady Visual Studio](vs-azure-tools-cloud-service-publish-set-up-required-services-in-visual-studio.md).
+1. V aplikaci Visual Studio klikněte pravým tlačítkem na projekt aplikace a vyberte **publikovat do Microsoft Azure...** (to se liší od "publikovat...". příkaz.).
+1. V části **publikovat aplikaci Azure** , která se zobrazí, se přihlaste pomocí účtu s vaším předplatným Azure a vyberte **Další >**.
+1. Na kartě **nastavení > společná nastavení** vyberte cílovou cloudovou službu z rozevíracího seznamu **cloudová služba** společně s vybraným prostředím a konfiguracemi.
+1. V **nastavení > Upřesnit nastavení**vyberte účet úložiště, který se má použít, a pak vyberte **Další >**.
+1. V nástroji **Diagnostika**vyberte, zda chcete Application Insights odeslat informace.
+1. Vyberte **další >** pro zobrazení souhrnu a pak vyberte **publikovat** a spusťte nasazení.
+1. Visual Studio otevře okno protokolu aktivit, kde můžete sledovat průběh:
 
     ![VST_AzureActivityLog](./media/vs-azure-tools-migrate-publish-web-app-to-cloud-service/IC744149.png)
 
-1. (Nepovinné) Chcete-li proces nasazení zrušit, klepněte pravým tlačítkem myši na řádkovou položku v protokolu aktivit a zvolte **zrušit a odebrat**. Tento příkaz zastaví proces nasazení a odstraní prostředí nasazení z Azure. Poznámka: Chcete-li odebrat toto prostředí nasazení po jeho nasazení, musíte použít [portál Azure](https://portal.azure.com).
-1. (Nepovinné) Po spuštění instancí rolí Visual Studio automaticky zobrazí prostředí nasazení v průzkumníku serveru > uzlu **Cloudservices.** Zde můžete zobrazit stav jednotlivých instancí rolí.
-1. Chcete-li získat přístup k vaší aplikaci po nasazení, zvolte šipku vedle vašeho nasazení, když se stav **Dokončeno** zobrazí v **protokolu aktivit Azure** spolu s adresou URL. Podrobnosti o spuštění konkrétního typu webové aplikace z Azure najdete v následující tabulce.
+1. Volitelné Proces nasazení zrušíte tak, že kliknete pravým tlačítkem myši na položku řádku v protokolu aktivit a kliknete na **zrušit a odebrat**. Tento příkaz zastaví proces nasazení a odstraní prostředí nasazení z Azure. Poznámka: Chcete-li odebrat toto prostředí nasazení po nasazení, je nutné použít [Azure Portal](https://portal.azure.com).
+1. Volitelné Po spuštění instancí rolí Visual Studio automaticky zobrazí prostředí nasazení v uzlu **Průzkumník serveru > Cloud Services** . Tady můžete zobrazit stav jednotlivých instancí rolí.
+1. Pro přístup k aplikaci po nasazení klikněte na šipku vedle vašeho nasazení, jakmile se stav **dokončeno** zobrazí v **protokolu aktivit Azure** společně s adresou URL. Podrobnosti o tom, jak spustit konkrétní typ webové aplikace z Azure, najdete v následující tabulce.
 
-## <a name="using-the-compute-emulator-and-starting-application-in-azure"></a>Použití výpočetního emulátoru a spuštění aplikace v Azure
+## <a name="using-the-compute-emulator-and-starting-application-in-azure"></a>Použití výpočetní emulátoru a spuštění aplikace v Azure
 
-Všechny typy aplikací lze spustit v prohlížeči připojeném k ladicímu programu sady Visual Studio výběrem **možnosti Ladění > Start Ladění** (F5). S ASP.NET prázdný projekt webové aplikace, `.aspx` musíte nejprve přidat stránku v aplikaci a nastavit ji jako úvodní stránku pro váš webový projekt.
+Všechny typy aplikací můžete spustit v prohlížeči připojeném k ladicímu programu sady Visual Studio tak, že vyberete **ladění > spustit ladění** (F5). V případě ASP.NET prázdného projektu webové aplikace musíte nejprve `.aspx` do aplikace přidat stránku a nastavit ji jako úvodní stránku pro webový projekt.
 
-Následující tabulka obsahuje podrobnosti o spuštění aplikace v Azure:
+Následující tabulka uvádí podrobnosti o spuštění aplikace v Azure:
 
-| Typ webové aplikace | Běh v Azure |
+| Typ webové aplikace | Běžící v Azure |
 | --- | --- |
-| ASP.NET webová aplikace<br/>(včetně MVC 2, MVC 3, MVC 4) | Vyberte adresu URL na kartě **Nasazení** pro **protokol aktivit Azure**. |
-| ASP.NET prázdná webová aplikace | Pokud máte ve `.aspx` své aplikaci výchozí stránku, vyberte adresu URL na kartě **Nasazení** pro **protokol aktivit Azure**. Chcete-li přejít na jinou stránku, zadejte v prohlížeči adresu URL následujícího formuláře:`<deployment_url>/<page_name>.aspx` |
-| Aplikace Silverlight<br/>Aplikace Silverlight Business<br/>Navigační aplikace Silverlight | Přejděte na konkrétní stránku aplikace pomocí následujícího formuláře URL:`<deployment_url>/<page_name>.aspx` |
-| Aplikace služby WCF<br/>Aplikace služby pracovního postupu WCF | Nastavte `.svc` soubor jako úvodní stránku projektu služby WCF. Poté přejděte na`<deployment_url>/<service_file>.svc` |
-| ASP.NET dynamických entit<br/>ASP.NET dynamická data Linq na SQL | Aktualizujte připojovací řetězec, jak je popsáno v další části. Potom přejděte na . `<deployment_url>/<page_name>.aspx` Pro Linq na SQL, musíte použít databázi Azure SQL. |
+| Webová aplikace ASP.NET<br/>(včetně MVC 2, MVC 3, MVC 4) | Vyberte adresu URL na kartě **nasazení** v **protokolu aktivit Azure**. |
+| Prázdná webová aplikace ASP.NET | Pokud máte `.aspx` ve své aplikaci výchozí stránku, vyberte adresu URL v **protokolu aktivit Azure**na kartě **nasazení** . Pokud chcete přejít na jinou stránku, zadejte adresu URL následujícího formuláře v prohlížeči:`<deployment_url>/<page_name>.aspx` |
+| Aplikace služby WCF<br/>Aplikace služby pracovního postupu WCF | Nastavte `.svc` soubor jako úvodní stránku pro váš projekt služby WCF. Pak přejděte na`<deployment_url>/<service_file>.svc` |
+| ASP.NET dynamické entity<br/>ASP.NET dynamická data LINQ to SQL | Aktualizujte připojovací řetězec, jak je popsáno v následující části. Pak přejděte na `<deployment_url>/<page_name>.aspx` . V případě technologie LINQ to SQL je nutné použít databázi SQL Azure. |
 
 ## <a name="update-a-connection-string-for-aspnet-dynamic-entities"></a>Aktualizace připojovacího řetězce pro dynamické entity ASP.NET
 
-1. Vytvořte databázi SQL Azure pro ASP.NET webové entity, jak je popsáno výše v (#use-an-azuresql-database-for-your-application).
-1. Přidejte tabulky a pole, které potřebujete pro tuto databázi z webu Azure Portal.
-1. Zadejte připojovací řetězec v souboru `web.config` v následujícím formátu a uložte soubor:
+1. Vytvořte databázi SQL Azure pro webovou aplikaci ASP.NET Dynamic Entities, jak je popsáno výše v tématu (#use-a-azuresql-Database-for-the-Application).
+1. Přidejte tabulky a pole, které potřebujete pro tuto databázi, z Azure Portal.
+1. V souboru zadejte připojovací řetězec `web.config` s následujícím formátem a soubor uložte:
 
     ```xml
     <add name="tempdbEntities"
@@ -95,7 +95,7 @@ Následující tabulka obsahuje podrobnosti o spuštění aplikace v Azure:
      providerName="System.Data.EntityClient"/>
     ```
 
-    Aktualizujte hodnotu *connectionString* pomocí připojovacího řetězce ADO.NET pro databázi SQL Azure následujícím způsobem:
+    Aktualizujte hodnotu *ConnectionString* pomocí připojovacího řetězce ADO.NET pro vaši databázi SQL Azure následujícím způsobem:
 
     ```xml
     <add name="tempdbEntities"
@@ -105,26 +105,23 @@ Následující tabulka obsahuje podrobnosti o spuštění aplikace v Azure:
 
 ## <a name="supported-project-templates"></a>Podporované šablony projektů
 
-Aplikace, které lze migrovat a publikovat do cloudových služeb, musí používat jednu ze šablon v následující tabulce. ASP.NET Jádro není podporováno.
+Aplikace, které je možné migrovat a publikovat do Cloud Services, musí používat jednu ze šablon v následující tabulce. ASP.NET Core se nepodporuje.
 
 | Skupina šablon | Šablona projektu |
 | --- | --- |
-| Web | ASP.NET webová aplikace (rozhraní.NET Framework) |
-| Web | ASP.NET Webová aplikace MVC 2 |
-| Web | ASP.NET Webová aplikace MVC 3 |
-| Web | ASP.NET webová aplikace MVC4 |
-| Web | ASP.NET prázdná webová aplikace (nebo web) |
-| Web | ASP.NET MVC 2 Prázdná webová aplikace |
-| Web | ASP.NET webová aplikace dynamických datových entit |
-| Web | ASP.NET webovou aplikaci Dynamic Data Linq do webové aplikace SQL |
-| Silverlight | Aplikace Silverlight |
-| Silverlight | Aplikace Silverlight Business |
-| Silverlight | Navigační aplikace Silverlight |
+| Web | ASP.NET webová aplikace (.NET Framework) |
+| Web | Webová aplikace ASP.NET MVC 2 |
+| Web | Webová aplikace ASP.NET MVC 3 |
+| Web | Webová aplikace ASP.NET MVC4 |
+| Web | Prázdná webová aplikace ASP.NET (nebo Web) |
+| Web | Prázdná webová aplikace ASP.NET MVC 2 |
+| Web | Webová aplikace entit dynamických dat ASP.NET |
+| Web | Webová aplikace LINQ do SQL ASP.NET Dynamic Data |
 | WCF | Aplikace služby WCF |
 | WCF | Aplikace služby pracovního postupu WCF |
 | Pracovní postup | Aplikace služby pracovního postupu WCF |
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Příprava na publikování nebo nasazení aplikace Azure z Visual Studia](vs-azure-tools-cloud-service-publish-set-up-required-services-in-visual-studio.md)
-- [Nastavení pojmenovaných ověřovacích pověření](vs-azure-tools-setting-up-named-authentication-credentials.md).
+- [Příprava k publikování nebo nasazení aplikace Azure ze sady Visual Studio](vs-azure-tools-cloud-service-publish-set-up-required-services-in-visual-studio.md)
+- [Nastavování přihlašovacích údajů s názvem ověřování](vs-azure-tools-setting-up-named-authentication-credentials.md).

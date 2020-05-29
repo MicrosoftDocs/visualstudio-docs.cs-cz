@@ -1,38 +1,38 @@
 ---
-title: Pracovní vytížení a ID součástí Visual Studio Test Agent 2019
+title: ID úlohy a ID komponent sady Visual Studio Test Agent 2019
 titleSuffix: ''
-description: Vzdálené spuštění automatizovaných testů a zátěžových testů pomocí úloh a ID komponent sady Visual Studio
+description: Použití úloh sady Visual Studio a ID komponent ke vzdálenému spouštění automatizovaných testů a zátěžových testů
 keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 03/16/2020
+ms.date: 05/19/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: d600b5c3fc48423f8bdb1824cb04a20dcbaae08d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: cb04a1bd7bb44dc6dc0bb04be6cc8603e4a2597b
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79437528"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184302"
 ---
 ## <a name="test-agent"></a>Test Agent
 
-**ID:** Microsoft.VisualStudio.Workload.TestAgent
+**ID:** Microsoft. VisualStudio. úlohy. TestAgent
 
-**Popis:** Podporuje vzdálené spouštění automatizovaných testů a zátěžových testů
+**Popis:** Podporuje vzdálené spouštění automatizovaných testů a zátěžových testů.
 
-### <a name="components-included-by-this-workload"></a>Komponenty zahrnuté do tohoto pracovního vytížení
+### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Version | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Základní funkce testovacího agenta | 16.0.28315.86 | Požaduje se
+Microsoft. VisualStudio. Component. TestTools. TestAgent | Základní funkce testovacího agenta | 16.0.28315.86 | Vyžadováno
 
 ## <a name="unaffiliated-components"></a>Nepřidružené součásti
 
-Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé součásti.
+Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé komponenty.
 
-ID součásti | Name (Název) | Version
+ID součásti | Název | Verze
 --- | --- | ---
-neuvedeno | neuvedeno | neuvedeno
+Není k dispozici | Není k dispozici | Není k dispozici
