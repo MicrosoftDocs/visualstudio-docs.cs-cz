@@ -1,7 +1,7 @@
 ---
 title: Vzdálené ladění ASP.NET Core na vzdáleném počítači IIS | Microsoft Docs
 ms.custom: remotedebugging
-ms.date: 05/21/2018
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.assetid: 573a3fc5-6901-41f1-bc87-557aa45d8858
 author: mikejo5000
@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 3e11480949545781630dec0c533949dd200ecbc7
-ms.sourcegitcommit: 7a9d5c10690c594dcdb414d88b20e070d43e7a4c
+ms.openlocfilehash: 4d2f2e2a698063dfb5ac6261d8a9b01a073d112e
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82218883"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84173870"
 ---
 # <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio"></a>Vzdálené ladění ASP.NET Core na vzdáleném počítači IIS v aplikaci Visual Studio
 
@@ -37,8 +37,9 @@ K provedení kroků uvedených v tomto článku se vyžaduje Visual Studio 2017.
 Tyto postupy byly testovány na těchto konfiguracích serveru:
 * Windows Server 2012 R2 a IIS 8
 * Windows Server 2016 a IIS 10
+* Windows Server 2019 a IIS 10
 
-## <a name="network-requirements"></a>Síťové požadavky
+## <a name="network-requirements"></a>Požadavky sítě
 
 Ladění mezi dvěma počítači připojenými prostřednictvím proxy serveru není podporováno. Ladění přes vysokou latenci nebo připojení s nízkou šířkou pásma, jako je například telefonické připojení k Internetu nebo přes Internet v zemích, se nedoporučuje a může být neúspěšné nebo nepřijatelně pomalé. Úplný seznam požadavků najdete v tématu [požadavky](../debugger/remote-debugging.md#requirements_msvsmon).
 
@@ -80,7 +81,10 @@ Po stažení softwaru můžete získat žádosti o udělení oprávnění k nač
 
 ## <a name="install-aspnet-core-on-windows-server"></a>Instalace ASP.NET Core v systému Windows Server
 
-1. Nainstalujte [hostující sadu Windows serveru .NET Core](https://aka.ms/dotnetcore-2-windowshosting) do hostitelského systému. Svazek nainstaluje modul runtime .NET Core, knihovnu .NET Core a modul ASP.NET Core. Podrobné pokyny najdete v tématu [publikování do služby IIS](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration).
+1. Nainstalujte hostující sadu .NET Core do hostitelského systému. Svazek nainstaluje modul runtime .NET Core, knihovnu .NET Core a modul ASP.NET Core. Podrobné pokyny najdete v tématu [publikování do služby IIS](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration).
+
+    Pro .NET Core 3 nainstalujte hostující sadu [.NET Core](https://dotnet.microsoft.com/permalink/dotnetcore-current-windows-runtime-bundle-installer).
+    Pro .NET Core 2 nainstalujte [hostování Windows serveru .NET Core](https://aka.ms/dotnetcore-2-windowshosting).
 
     > [!NOTE]
     > Pokud systém nemá připojení k Internetu, Stáhněte a nainstalujte *[Microsoft Visual C++ 2015 Distribuovatelný](https://www.microsoft.com/download/details.aspx?id=53840)* před instalací hostitelské sady Windows serveru .NET Core.
@@ -100,7 +104,13 @@ Pokud potřebujete pomáhat s nasazením aplikace do služby IIS, zvažte tyto m
 Tuto možnost můžete použít k vytvoření souboru nastavení publikování a importování do sady Visual Studio.
 
 > [!NOTE]
-> Tato metoda nasazení používá Nasazení webu. Pokud chcete ručně nakonfigurovat Nasazení webu v aplikaci Visual Studio namísto importu nastavení, můžete místo Nasazení webu 3,6 pro hostitelské servery nainstalovat Nasazení webu 3,6. Pokud však Nasazení webu nakonfigurujete ručně, budete se muset ujistit, že je složka aplikace na serveru nakonfigurovaná se správnými hodnotami a oprávněními (viz část [Konfigurace webu ASP.NET](#BKMK_deploy_asp_net)).
+> Tato metoda nasazení používá Nasazení webu, který musí být nainstalován na serveru. Pokud chcete Nasazení webu nakonfigurovat ručně místo importu nastavení, můžete místo Nasazení webu 3,6 pro hostitelské servery nainstalovat Nasazení webu 3,6. Pokud však Nasazení webu nakonfigurujete ručně, budete se muset ujistit, že je složka aplikace na serveru nakonfigurovaná se správnými hodnotami a oprávněními (viz část [Konfigurace webu ASP.NET](#BKMK_deploy_asp_net)).
+
+### <a name="configure-the-aspnet-core-web-site"></a>Nakonfigurovat ASP.NET Core Web
+
+1. Ve Správci služby IIS klikněte v levém podokně v části **připojení**na položku **fondy aplikací**. Otevřete **DefaultAppPool** a nastavte **verzi .NET CLR** na **žádný spravovaný kód**. To je nutné pro ASP.NET Core. Výchozí web používá rozhraní DefaultAppPool.
+
+2. Zastavte a restartujte službu DefaultAppPool.
 
 ### <a name="install-and-configure-web-deploy-for-hosting-servers-on-windows-server"></a>Instalace a konfigurace Nasazení webu pro hostitelské servery na Windows serveru
 
@@ -114,11 +124,11 @@ Tuto možnost můžete použít k vytvoření souboru nastavení publikování a
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
-Po úspěšném nasazení aplikace by se měla spustit automaticky. Pokud se aplikace nespustí ze sady Visual Studio, spusťte aplikaci ve službě IIS. Pro ASP.NET Core se musíte ujistit, že je pole fond aplikací pro **DefaultAppPool** nastavené na **žádný spravovaný kód**.
+Po úspěšném nasazení aplikace by se měla spustit automaticky. Pokud se aplikace nespustí ze sady Visual Studio, spusťte aplikaci ve službě IIS, abyste ověřili, že funguje správně. V případě ASP.NET Core musíte také zajistit, aby pole fond aplikací pro **DefaultAppPool** bylo nastaveno na **žádný spravovaný kód**.
 
 1. V dialogovém okně **Nastavení** Povolte ladění kliknutím na tlačítko **Další**, zvolte konfiguraci **ladění** a pak zvolte **odebrat další soubory v cílovém umístění** v možnostech **publikování souboru** .
 
-    > [!NOTE]
+    > [!IMPORTANT]
     > Pokud zvolíte konfiguraci vydané verze, zakážete ladění v souboru *Web. config* při publikování.
 
 1. Klikněte na **Uložit** a znovu publikujte aplikaci.
@@ -176,22 +186,22 @@ Informace o spuštění vzdáleného ladícího programu jako služby najdete v 
     > [!TIP]
     > V aplikaci Visual Studio 2017 a novějších verzích se můžete znovu připojit ke stejnému procesu, ke kterému jste dříve připojeni pomocí příkazu **Debug > znovu připojit k procesu...** (Shift + Alt + P).
 
-3. Nastavte pole Kvalifikátor na ** \<název vzdáleného počítače>** a stiskněte klávesu **ENTER**.
+3. Nastavte pole Kvalifikátor na **\<remote computer name>** a stiskněte klávesu **ENTER**.
 
-    Ověřte, že Visual Studio přidá požadovaný port do názvu počítače, který se zobrazí ve formátu: ** \<název vzdáleného počítače>:p.**
+    Ověřte, že Visual Studio přidá požadovaný port do názvu počítače, který se zobrazí ve formátu: ** \<remote computer name> :p** .
 
     ::: moniker range=">=vs-2019"
-    V aplikaci Visual Studio 2019 byste měli vidět ** \<název vzdáleného počítače>:4024**
+    V aplikaci Visual Studio 2019 byste měli vidět ** \<remote computer name> : 4024**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V aplikaci Visual Studio 2017 byste měli vidět ** \<název vzdáleného počítače>:4022**
+    V aplikaci Visual Studio 2017 byste měli vidět ** \<remote computer name> : 4022**
     ::: moniker-end
     Port je povinný. Pokud se číslo portu nezobrazuje, přidejte ho ručně.
 
 4. Klikněte na **Aktualizovat**.
     V okně **Dostupné procesy** by se měly zobrazit některé procesy.
 
-    Pokud nevidíte žádné procesy, zkuste místo názvu vzdáleného počítače použít IP adresu (vyžaduje se port). Adresu IPv4 můžete `ipconfig` získat pomocí příkazu v příkazovém řádku.
+    Pokud nevidíte žádné procesy, zkuste místo názvu vzdáleného počítače použít IP adresu (vyžaduje se port). `ipconfig`Adresu IPv4 můžete získat pomocí příkazu v příkazovém řádku.
 
     Chcete-li použít tlačítko **Najít** , bude pravděpodobně nutné na serveru [otevřít port UDP 3702](#bkmk_openports) .
 
@@ -214,7 +224,7 @@ Informace o spuštění vzdáleného ladícího programu jako služby najdete v 
 
 7. Klikněte na **připojit**.
 
-8. Otevřete web vzdáleného počítače. V prohlížeči přejdete na **http://\<název vzdáleného počítače>**.
+8. Otevřete web vzdáleného počítače. V prohlížeči, navštivte **http:// \<remote computer name> **.
 
     Měla by se zobrazit webová stránka ASP.NET.
 

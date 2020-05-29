@@ -1,26 +1,26 @@
 ---
-ms.openlocfilehash: 8adac174fbc78778e7154a205088fb9e9a57ae4a
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: f286002112667ba763419f0e3d6265dbe1942212
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "68143520"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84173869"
 ---
 
-1. V počítači, ve kterém je v aplikaci Visual Studio otevřen a ASP.NET projektu, klepněte pravým tlačítkem myši na projekt v Průzkumníku řešení a zvolte **Publikovat**.
+1. V počítači, kde máte otevřený projekt ASP.NET v aplikaci Visual Studio, klikněte pravým tlačítkem na projekt v Průzkumník řešení a vyberte **publikovat**.
 
-1. Pokud jste dříve nakonfigurovali profily publikování, zobrazí se podokno **Publikovat.** Klepněte na **tlačítko Vytvořit nový profil**.
+1. Pokud jste již dříve nakonfigurovali všechny publikační profily, otevře se podokno **publikování** . Klikněte na **vytvořit nový profil**.
 
-1. V **dialogovém** okně Vybrat cíl publikování klikněte na **Importovat profil**.
+1. V dialogovém okně **vybrat cíl publikování** klikněte na **Importovat profil**.
 
-    ![Zvolte Publikovat](../../deployment/media/tutorial-publish-tool-import-profile.png)
+    ![Zvolit publikování](../../deployment/media/tutorial-publish-tool-import-profile.png)
 
 1. Přejděte do umístění souboru nastavení publikování, který jste vytvořili v předchozí části.
 
-1. V dialogovém okně **Importovat soubor nastavení publikování** přejděte na profil vytvořený v předchozí části a vyberte jej a klepněte na **tlačítko Otevřít**.
+1. V dialogovém okně **importovat soubor nastavení publikování** přejděte na a vyberte profil, který jste vytvořili v předchozí části, a klikněte na **otevřít**.
 
-    Visual Studio zahájí proces nasazení a okno Výstup zobrazuje průběh a výsledky.
+    Visual Studio spustí proces nasazení a v okně výstup se zobrazí průběh a výsledky.
 
-    Pokud se zobrazí chyby nasazení, klikněte na **Nastavení** a upravte nastavení. Upravte nastavení a kliknutím na **Ověřit otestujte** nová nastavení. Pokud název hostitele nebyl nalezen, zkuste adresu IP namísto názvu hostitele v polích Adresa URL **serveru** a **cíle.**
+    Pokud se zobrazí nějaké chyby nasazení, klikněte na **Nastavení** a upravte nastavení. Upravte nastavení a kliknutím na **ověřit** otestujte nová nastavení. Pokud se název hostitele nenajde, zkuste IP adresu místo názvu hostitele v polích **Server** a **cílová adresa URL** .
 
-    ![Úpravy nastavení v nástroji Publikovat](../../deployment/media/tutorial-configure-publish-settings-in-tool.png)
+    ![Upravit nastavení v nástroji pro publikování](../../deployment/media/tutorial-configure-publish-settings-in-tool.png)

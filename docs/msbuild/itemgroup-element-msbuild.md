@@ -1,5 +1,5 @@
 ---
-title: Element skupiny položek (MSBuild) | Dokumenty společnosti Microsoft
+title: ItemCollection – element (MSBuild) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,18 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8064ce4c13419238ca5877893a731d2ac53afb25
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c058a5986f72192a86d0e554d9e0d0b9bdce1b42
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633639"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84173509"
 ---
-# <a name="itemgroup-element-msbuild"></a>Element ItemGroup (MSBuild)
+# <a name="itemgroup-element-msbuild"></a>Item – Element (MSBuild)
 
-Obsahuje sadu uživatelem definovaných prvků [item.](../msbuild/item-element-msbuild.md) Každá položka použitá v projektu MSBuild musí `ItemGroup` být zadána jako podřízený prvek.
+Obsahuje sadu uživatelsky definovaných prvků [položky](../msbuild/item-element-msbuild.md) . Všechny položky používané v projektu MSBuild musí být zadány jako podřízený `ItemGroup` prvek elementu.
 
-\<> \<položky položky projektu>
+\<Project>
+\<ItemGroup>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +42,7 @@ Obsahuje sadu uživatelem definovaných prvků [item.](../msbuild/item-element-m
 </ItemGroup>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
 
 Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
@@ -49,25 +50,25 @@ Následující části popisují atributy, podřízené prvky a nadřazené prvk
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Condition`|Nepovinný atribut. Podmínka, která má být vyhodnocena. Další informace naleznete v tématu [Podmínky](../msbuild/msbuild-conditions.md).|
-|`Label`|Nepovinný atribut. Identifikuje `ItemGroup`.|
+|`Condition`|Nepovinný atribut. Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
+|`Label`|Nepovinný atribut. Identifikuje `ItemGroup` .|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Element|Popis|
+|Prvek|Popis|
 |-------------|-----------------|
-|[Položka](../msbuild/item-element-msbuild.md)|Definuje vstupy pro proces sestavení. V rozhraní může `Item` být nula `ItemGroup`nebo více prvků.|
+|[Položka](../msbuild/item-element-msbuild.md)|Definuje vstupy procesu sestavení. Může existovat nula nebo více `Item` prvků v `ItemGroup` .|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-| Element | Popis |
+| Prvek | Popis |
 | - | - |
-| [Projektu](../msbuild/project-element-msbuild.md) | Požadovaný kořenový prvek souboru projektu MSBuild. |
-| [Cíl](../msbuild/target-element-msbuild.md) | Počínaje rozhraním .NET Framework `ItemGroup` 3.5 se `Target` prvek může zobrazit uvnitř prvku. Další informace naleznete v tématu [Cíle](../msbuild/msbuild-targets.md). |
+| [Project](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
+| [Cílové](../msbuild/target-element-msbuild.md) | Počínaje .NET Framework 3,5 se `ItemGroup` element může objevit uvnitř `Target` elementu. Další informace najdete v tématu [cíle](../msbuild/msbuild-targets.md). |
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje uživatelem definované `Res` `CodeFiles` kolekce položek `ItemGroup` a deklarované uvnitř prvku. Každá z položek `Res` v kolekci položek obsahuje uživatelem definovaný podřízený element [ItemMetadata.](../msbuild/itemmetadata-element-msbuild.md)
+Následující příklad kódu ukazuje uživatelsky definované kolekce položek `Res` a `CodeFiles` deklarované uvnitř `ItemGroup` elementu. Každá položka v `Res` kolekci položek obsahuje uživatelsky definovaný podřízený element [ItemMetadata –](../msbuild/itemmetadata-element-msbuild.md) .
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -86,8 +87,12 @@ Následující příklad kódu ukazuje uživatelem definované `Res` `CodeFiles`
 </Project>
 ```
 
+V jednoduchém souboru projektu obvykle používáte jeden `ItemGroup` prvek, ale můžete také použít více `ItemGroup` prvků. Je-li `ItemGroup` použito více prvků, položky jsou zkombinovány do jediného prvku `ItemGroup` . Některé položky mohou být například obsaženy v samostatném `ItemGroup` prvku, který je definován v importovaném souboru.
+
+ItemGroups může mít podmínky použité pomocí `Condition` atributu. V takovém případě jsou položky přidány do seznamu položek pouze v případě, že je podmínka splněna. Zobrazit [podmínky nástroje MSBuild](msbuild-conditions.md)
+
 ## <a name="see-also"></a>Viz také
 
-- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
-- [Items](../msbuild/msbuild-items.md)
-- [Běžné položky projektu MSBuild](../msbuild/common-msbuild-project-items.md)
+- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Items (Položky)](../msbuild/msbuild-items.md)
+- [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md)

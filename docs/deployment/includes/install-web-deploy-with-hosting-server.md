@@ -1,29 +1,29 @@
 ---
-ms.openlocfilehash: 0fc18fab56f5b46ef097cdf699e4f0569dc190c9
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 1e6c6714720d652fff266e3e852d01982c98e34a
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "68143529"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84173871"
 ---
-Nasazení webu 3.6 pro hostitelské servery poskytuje další konfigurační funkce, které umožňují vytvoření souboru nastavení publikování z uživatelského prostředí.
+Nasazení webu 3,6 pro hostitelské servery poskytuje další konfigurační funkce, které umožňují vytvořit soubor nastavení publikování z uživatelského rozhraní.
 
-1. Pokud je v systému Windows Server již nainstalovánweb Deploy 3.6, odinstalujte jej pomocí **Ovládacích panelů** > **Programy** > **Odinstalujte program**.
+1. Pokud již máte v systému Windows Server nainstalované nasazení webu 3,6, odinstalujte ji pomocí **ovládacího panelu**  >  **programy**  >  **Odinstalovat program**.
 
-2. Dále nainstalujte web deploy 3.6 pro hostování serverů v systému Windows Server.
+2. Dále nainstalujte Nasazení webu 3,6 pro hostitelské servery na Windows serveru.
 
-    Chcete-li nainstalovat nasazení webu pro hostitelské servery, použijte [Instalační službu webové platformy (WebPI).](https://www.microsoft.com/web/downloads/platform.aspx) (Chcete-li najít odkaz Instalační služby webové platformy ze služby IIS, vyberte **službu IIS** v levém podokně Správce serveru. Klepněte pravým tlačítkem myši na server a vyberte **správce Internetové informační služby (IIS).**
+    Chcete-li nainstalovat Nasazení webu pro hostitelské servery, použijte instalační program webové platformy (WebPI). (Pokud chcete najít odkaz instalace webové platformy ze služby IIS, vyberte **IIS** v levém podokně Správce serveru. V podokně Server klikněte pravým tlačítkem na server a vyberte **Správce služby Internetová informační služba (IIS)**. Pak použijte odkaz **získat nové součásti webové platformy** v okně **Akce** .) Můžete také získat instalační program webové platformy (WebPI) ze [souborů ke stažení](https://www.microsoft.com/web/downloads/platform.aspx).
 
-    V Instalační službě webové platformy najdete na kartě Aplikace **web deploy for hosting servers.**
+    V instalačním programu webové platformy najdete na kartě aplikace **Nasazení webu 3,6 pro hostitelské servery** .
 
-3. Pokud jste ještě nenainstalovali **skripty a nástroje služby IIS pro správu,** nainstalujte je nyní.
+3. Pokud jste ještě nenainstalovali **skripty a nástroje správy služby IIS**, nainstalujte je nyní.
 
-    Přejděte na **Vyberte** > **nástroje pro správu****webového serveru (IIS)** > a vyberte roli **Skripty a nástroje pro správu služby IIS,** klepněte na tlačítko **Další**a nainstalujte roli.
+    Přejděte na **Vybrat**  >  Nástroje pro správu**webového serveru (IIS)** a  >  **Management Tools**pak vyberte role **skripty a nástroje správy služby IIS** , klikněte na **Další**a pak nainstalujte roli.
 
-    ![Instalace skriptů a nástrojů pro správu služby IIS](../../deployment/media/tutorial-iis-management-scripts-and-tools.png)
+    ![Nainstalovat skripty a nástroje správy služby IIS](../../deployment/media/tutorial-iis-management-scripts-and-tools.png)
 
-    Skripty a nástroje jsou nutné k povolení generování souboru nastavení publikování.
+    Aby bylo možné povolit generování souboru nastavení publikování, jsou skripty a nástroje nutné.
 
-4. (Nepovinné) Ověřte, zda je nasazení webu správně spuštěno otevřením **Ovládacích panelů > nástroje pro správu systému a zabezpečení > nástroje pro správu > služby** a ujistěte se, že je **spuštěna služba Agent Service pro nasazení webu** (název služby se liší ve starších verzích).
+4. Volitelné Ověřte, zda je Nasazení webu spuštěn správně. Otevřete **ovládací Panel > systém a zabezpečení > nástroje pro správu > služby** a ujistěte se, že je spuštěna **Webová Deployment Agent služba** (název služby se liší ve starších verzích).
 
-    Pokud služba agenta není spuštěna, spusťte ji. Pokud není k dispozici vůbec, přejděte do **Ovládacích panelů > Programy > Odinstalovat program**, **vyhledejte verzi aplikace Microsoft Web \<Deploy>**. **Zvolte, zda chcete změnit** instalaci a ujistěte se, že zvolíte Bude nainstalován na místní pevný **disk** pro součásti nasazení webu. Dokončete kroky instalace změny.
+    Pokud služba agenta není spuštěná, spusťte ji. Pokud není vůbec k dispozici, přečtěte si v **Ovládacích panelech > programy > odinstalace programu**, vyhledejte **Microsoft \<version> nasazení webu **. Vyberte **změnu** instalace a ujistěte se, že jste zvolili instalaci **na místní pevný disk** pro součásti nasazení webu. Dokončete postup změny instalace.
