@@ -1,12 +1,12 @@
 ---
-title: Úlohy a ID součástí nástrojů sady Visual Studio
+title: Visual Studio Build Tools úlohy a ID komponent
 titleSuffix: ''
-description: Použití úloh visual studia a ID součástí k vytváření klasických aplikací založených na systému Windows
+description: Použití úloh sady Visual Studio a ID komponent k vytváření klasických aplikací založených na Windows
 keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 03/16/2020
+ms.date: 05/19/2020
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -16,14 +16,14 @@ ms.assetid: b99298df-0280-47fc-af73-44cd7a8ac553
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 930dc73cb1ad38f46e8d5567468eedcb432f6b3d
-ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
+ms.openlocfilehash: 476180e2d49246088d85f1d162761ae180532eac
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81276426"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183145"
 ---
-# <a name="visual-studio-build-tools-component-directory"></a>Adresář komponent nástrojů pro sestavení sady Visual Studio
+# <a name="visual-studio-build-tools-component-directory"></a>Visual Studio Build Tools adresář součástí
 
 [!INCLUDE[workloads-components-universal-header_md](includes/workloads-components-universal-header_md.md)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "81276426"
 
 [!INCLUDE[workloads-components-header-2017_md](includes/workloads-components-header-2017_md.md)]
 
-Chcete-li nainstalovat tyto součásti pomocí ručního instalačního programu, stáhněte a [spusťte nástroje sestavení pro sady Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
+Chcete-li nainstalovat tyto komponenty pomocí ručního instalačního programu, Stáhněte a spusťte [Nástroje sestavení pro Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
 
 [!INCLUDE[Visual Studio Build Tools 2017](includes/vs-2017/workload-component-id-vs-build-tools.md)]
 
@@ -41,7 +41,7 @@ Chcete-li nainstalovat tyto součásti pomocí ručního instalačního programu
 
 [!INCLUDE[workloads-components-header-2019_md](includes/workloads-components-header-2019_md.md)]
 
-Chcete-li nainstalovat tyto součásti pomocí ručního instalačního programu, stáhněte a [spusťte nástroje sestavení pro sady Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
+Chcete-li nainstalovat tyto součásti pomocí ručního instalačního programu, Stáhněte a spusťte [Nástroje sestavení pro Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
 
 [!INCLUDE[Visual Studio Build Tools 2019](includes/vs-2019/workload-component-id-vs-build-tools.md)]
 

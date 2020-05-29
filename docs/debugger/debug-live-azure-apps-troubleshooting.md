@@ -11,16 +11,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc0d5ce27c3241b89a1baaf540cab4f1f56d24b5
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 16d55c4e729a39f46b4b038490e92f7cb43bf98d
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911601"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84182869"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Řešení potíží a známé problémy pro ladění snímků v aplikaci Visual Studio
 
-Pokud kroky popsané v tomto článku problém nevyřeší, vyhledejte problém v [komunitě vývojářů](https://developercommunity.visualstudio.com/spaces/8/index.html) nebo nahlásit nový problém výběrem možnosti **help** > **Odeslat názor** > **nahlásit problém** v aplikaci Visual Studio.
+Pokud kroky popsané v tomto článku problém nevyřeší, vyhledejte problém v [komunitě vývojářů](https://developercommunity.visualstudio.com/spaces/8/index.html) nebo nahlásit nový problém výběrem možnosti **help**  >  **Odeslat zpětnou vazbu**  >  **ohlásit problém** v aplikaci Visual Studio.
 
 ## <a name="issue-attach-snapshot-debugger-encounters-an-http-status-code-error"></a>Problém: "připojit Snapshot Debugger" narazí na chybu stavového kódu HTTP
 
@@ -30,12 +30,36 @@ Pokud se v okně **výstup** zobrazí následující chyba během pokusu o přip
 
 ### <a name="401-unauthorized"></a>(401) Neautorizováno
 
-Tato chyba označuje, že volání REST vydané aplikací Visual Studio do Azure používá neplatné přihlašovací údaje. Tato chyba může způsobit známou chybu v modulu Azure Active Directory Easy OAuth.
+Tato chyba označuje, že volání REST vydané aplikací Visual Studio do Azure používá neplatné přihlašovací údaje. 
 
 Proveďte tyto kroky:
 
-* Ujistěte se, že váš účet přizpůsobení sady Visual Studio má oprávnění k předplatnému Azure a prostředku, ke kterému se připojujete. Rychlý způsob, jak to zjistit, je ověřit, jestli je prostředek k dispozici v dialogovém okně **ladění** > **připojit Snapshot Debugger...**  > **prostředek Azure** > **Vyberte existující**nebo v Průzkumníku cloudu.
+* Ujistěte se, že váš účet přizpůsobení sady Visual Studio má oprávnění k předplatnému Azure a prostředku, ke kterému se připojujete. Rychlý způsob, jak to zjistit, je ověřit, jestli je prostředek k dispozici v dialogovém okně z okna **ladit**  >  **připojit Snapshot Debugger...**  >  **Prostředek Azure**  >  **Vyberte existující**nebo v Průzkumníku cloudu.
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
+
+Pokud jste na svém App Service povolili ověřování/autorizaci (EasyAuth), může dojít k chybě 401 s LaunchAgentAsync v chybové zprávě zásobníku volání. Ujistěte se prosím, že **akce, která se má provést, když je požadavek ověřený** , je nastavený tak, aby **povoloval anonymní žádosti (bez akce)** v Azure Portal a místo toho poskytoval soubor Authorization. JSON v D:\Home\sites\wwwroot s následujícím obsahem. 
+
+```
+{
+  "routes": [
+    {
+      "path_prefix": "/",
+      "policies": {
+        "unauthenticated_action": "RedirectToLoginPage"
+      }
+    },
+    {
+      "http_methods": [ "POST" ],
+      "path_prefix": "/41C07CED-2E08-4609-9D9F-882468261608/api/agent",
+      "policies": {
+        "unauthenticated_action": "AllowAnonymous"
+      }
+    }
+  ]
+}
+```
+
+První postup efektivně zabezpečuje vaši doménu aplikace podobným způsobem jako při **přihlašování pomocí [IdentityProvider]**. Druhá trasa zveřejňuje koncový bod ladicího programu snímků AgentLaunch mimo ověřování, který provádí předdefinovanou akci spuštění agenta diagnostiky ladicího programu snímků *jenom v případě* , že je pro vaši službu App Service povolené rozšíření předinstalovaného serveru ladicího programu snímků. Další podrobnosti o konfiguraci Authorization. JSON najdete v tématu [autorizační pravidla URL](https://azure.github.io/AppService/2016/11/17/URL-Authorization-Rules.html).
 
 ### <a name="403-forbidden"></a>(403) zakázáno
 
@@ -54,8 +78,8 @@ Tato chyba označuje, že web nebyl na serveru nalezen.
 Proveďte tyto kroky:
 
 * Ověřte, že je web nasazený a spuštěný na prostředku App Service, ke kterému se připojujete.
-* Ověřte, že je web k dispozici na adrese https://\<prostředek\>. azurewebsites.net
-* Ověřte, že vaše správně běžící vlastní webová aplikace nevrátí stavový kód 404, když se k němu přistupoval v https://\<prostředku\>. azurewebsites.net
+* Ověřte, že je web k dispozici na adrese https:// \<resource\> . azurewebsites.NET.
+* Ověřte, že vaše správně běžící vlastní webová aplikace nevrátí stavový kód 404 při použití v https:// \<resource\> . azurewebsites.NET.
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
 
 ### <a name="406-not-acceptable"></a>(406) nepřijatelný
@@ -64,7 +88,7 @@ Tato chyba značí, že server nemůže reagovat na sadu typů v hlavičce Accep
 
 Proveďte tyto kroky:
 
-* Ověřte, že je web k dispozici na adrese https://\<prostředku\>. azurewebsites.net
+* Ověřte, že je web k dispozici na adrese https:// \<resource\> . azurewebsites.NET.
 * Ověřte, že se váš web nemigruje na nové instance. Snapshot Debugger používá pojem ARRAffinity pro směrování požadavků na konkrétní instance, které mohou tuto chybu způsobit občas.
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
 
@@ -82,7 +106,7 @@ Proveďte tyto kroky:
 
 ::: moniker range="vs-2017"
 
-* Ověřte v Azure Portal, že AppSettings pro ladicího programu snímků (SNAPSHOTDEBUGGER_EXTENSION_VERSION) a InstrumentationEngine (INSTRUMENTATIONENGINE_EXTENSION_VERSION) jsou velkými písmeny. Pokud ne, aktualizujte nastavení ručně, což vynutí restartování lokality.
+* Ověřte v Azure Portal, že AppSettings pro ladicího programu snímků (SNAPSHOTDEBUGGER_EXTENSION_VERSION) a InstrumentationEngine (INSTRUMENTATIONENGINE_EXTENSION_VERSION) jsou velká písmena. Pokud ne, aktualizujte nastavení ručně, což vynutí restartování lokality.
 ::: moniker-end
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
 
@@ -173,15 +197,15 @@ Pokud to chcete opravit, odstraňte v Azure Portal následující nastavení apl
 
 ### <a name="enable-agent-logs"></a>Povolit protokoly agentů
 
-Pokud chcete povolit a zakázat protokolování agenta, otevřete Visual Studio. přejděte na *nástroje > možnosti > Snapshot Debugger > povolit protokolování agenta*. Poznámka: Pokud je povolena taky možnost *Odstranit staré protokoly agentů při spuštění relace* , budou se při každém úspěšném připojení sady Visual Studio odstraňovat předchozí protokoly agentů.
+Pokud chcete povolit a zakázat protokolování agenta, otevřete Visual Studio. přejděte na *nástroje>možnosti>Snapshot Debugger>povolit protokolování agenta*. Poznámka: Pokud je povolena taky možnost *Odstranit staré protokoly agentů při spuštění relace* , budou se při každém úspěšném připojení sady Visual Studio odstraňovat předchozí protokoly agentů.
 
 Protokoly agentů najdete v následujících umístěních:
 
 - App Services:
-  - Přejděte na web Kudu vašeho App Service (to znamená yourappservice. **SCM**. azurewebsites.NET) a přejděte na konzolu ladění.
+  - Přejděte na web Kudu vašeho App Service (to znamená yourappservice.** SCM**. azurewebsites.NET) a přejděte na konzolu ladění.
   - Protokoly agentů jsou uloženy v následujícím adresáři: D:\home\LogFiles\SiteExtensions\DiagnosticsAgentLogs\
 - VIRTUÁLNÍ POČÍTAČ/VMSS:
-  - Přihlaste se k VIRTUÁLNÍmu počítači a protokoly agentů se ukládají takto: C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics\<verze > \SnapshotDebuggerAgent_ *. txt
+  - Přihlaste se k VIRTUÁLNÍmu počítači, protokoly agentů jsou uložené takto: C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics \<Version> \ SnapshotDebuggerAgent_ *. txt
 - AKS
   - Přejděte do následujícího adresáře:/tmp/diag/AgentLogs/*
 
@@ -190,10 +214,10 @@ Protokoly agentů najdete v následujících umístěních:
 Protokoly instrumentace najdete v následujících umístěních:
 
 - App Services:
-  - Protokolování chyb je automaticky odesláno do D:\Home\LogFiles\eventlog.xml, události jsou označeny `<Provider Name="Instrumentation Engine" />` nebo "produkční zarážky".
+  - Protokolování chyb je automaticky odesláno do D:\Home\LogFiles\eventlog.xml, události jsou označeny pomocí `<Provider Name="Instrumentation Engine" />` nebo "produkčních zarážek".
 - VIRTUÁLNÍ POČÍTAČ/VMSS:
   - Přihlaste se ke svému VIRTUÁLNÍmu počítači a otevřete Prohlížeč událostí.
-  - Otevřete následující zobrazení: *protokoly Windows > aplikaci*.
+  - Otevřete následující zobrazení: *protokoly Windows>aplikaci*.
   - *Filtrovat aktuální protokol* podle *zdroje událostí* pomocí *zarážek v produkčním* prostředí nebo *modulu instrumentace*.
 - AKS
   - Protokolování modulu instrumentace na/TMP/diag/log.txt (nastavení MicrosoftInstrumentationEngine_FileLogPath v souboru Dockerfile)
@@ -218,7 +242,7 @@ Ladění a Application Insights snímků závisí na ICorProfiler, který se na�
 - Spusťte lokalitu slotu. Doporučujeme, abyste web navštívili znovu.
 - Zaměňte slot v produkčním prostředí.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [Ladění živých aplikací ASP.NET pomocí Snapshot Debugger](../debugger/debug-live-azure-applications.md)

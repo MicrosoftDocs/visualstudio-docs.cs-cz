@@ -1,96 +1,130 @@
 ---
-title: Začínáme s nástroji Visual Studio pro jednotu | Dokumenty společnosti Microsoft
+title: Začínáme s Visual Studio Tools for Unity | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 05/11/2020
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: 66b5b4eb-13b5-4071-98d2-87fafa4598a8
-author: conceptdev
+author: indiesaudi
 ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: c22b9c25f95ea26f2cdaf5c2035fb7a373123241
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1b39de7437348a79901615e4482544c78f189d04
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79302271"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184649"
 ---
-# <a name="get-started-with-visual-studio-tools-for-unity"></a>Začínáme s nástroji Visual Studio pro jednotu
+# <a name="get-started-with-visual-studio-tools-for-unity"></a>Začínáme s Visual Studio Tools for Unity
 
 ## <a name="install-visual-studio"></a>Instalace sady Visual Studio
 
-### <a name="unity-bundled-installation"></a>Unity přibalená instalace
+### <a name="unity-bundled-installation"></a>Instalace sady Unity
 
-Počínaje Unity 2018.1, Visual Studio je výchozí editor skriptů Jazyka C# pro Unity a je součástí Unity Download Assistant, stejně jako nástroj pro instalaci Unity Hub.
+Od Unity 2018,1 je Visual Studio výchozím editorem skriptu v jazyce C# pro Unity a je zahrnutý v Pomocníkovi pro stahování Unity a také v nástroji pro instalaci centra Unity.
 
-- Stáhnout Unity z [store.unity.com](https://store.unity.com/).
+- Stáhněte si Unity z [Store.Unity.com](https://store.unity.com/).
 
-Během instalace se ujistěte, že je visual studio zaškrtnuto v seznamu součástí, které chcete nainstalovat pomocí Unity:
+Během instalace se ujistěte, že je v seznamu komponent, které se mají nainstalovat s Unity, zaškrtnuté políčko Visual Studio:
 
 #### <a name="unity-hub"></a>Centrum Unity
 
-![instalace rozbočovače unity](media/vstu_unity-hub.png)
+:::moniker range="vs-2017"
+![Instalace centra Unity](media/vs-2017/vstu-unity-hub.png)
+:::moniker-end
+:::moniker range=">=vs-2019"
+![Instalace centra Unity](media/vs-2019/vstu-unity-hub.png)
+:::moniker-end
 
-#### <a name="unity-download-assistant"></a>Asistent stahování Unity
+:::moniker range="vs-2017"
 
-![unity download asistent instalace](media/vstu_download-assistant.png)
+#### <a name="unity-download-assistant"></a>Pomocník pro stahování Unity
 
-#### <a name="check-for-updates-to-visual-studio"></a>Kontrola aktualizací sady Visual Studio
+![Instalace pomocníka pro stahování Unity](media/vs-2017/vstu-download-assistant.png)
 
-Verze sady Visual Studio, která je součástí instalace Unity, nemusí být nejnovější. Doporučujeme vyhledat aktualizace, abyste měli přístup k nejnovějším nástrojům a funkcím.
-
-- [Aktualizace sady Visual Studio](../install/update-visual-studio.md)
+Verze sady Visual Studio, která je součástí instalace Unity, nemusí být nejnovější. Pokud se zobrazí výzva k instalaci sady Visual Studio 2017, doporučujeme ručně nainstalovat novější verzi sady Visual Studio.
+:::moniker-end
 
 ### <a name="manual-installation"></a>Ruční instalace
 
-Pokud už máte nainstalovanou Visual Studio 2017 nebo chcete ji nainstalovat ručně, spusťte instalační program Sady Visual Studio.
+Pokud už máte nainstalovanou aplikaci Visual Studio nebo pokud chcete ručně nainstalovat, spusťte instalační program sady Visual Studio.
 
-1. [Stáhněte si instalační program sady Visual Studio](../install/install-visual-studio.md)nebo jej otevřete, pokud jste již nainstalovali.
+1. [Stáhněte si instalační program sady Visual Studio](../install/install-visual-studio.md)nebo ho otevřete, pokud už je nainstalovaný.
 
-1. Klikněte na **Změnit** (pokud jste již nainstalovali) nebo **Nainstalovat** (pro nové instalace) pro požadovanou verzi sady Visual Studio.
+1. Klikněte na **Upravit** (Pokud je už nainstalovaný) nebo **nainstalujte** (pro nové instalace) pro požadovanou verzi sady Visual Studio.
 
-1. Na kartě **Úlohy** přejděte do části **Mobilní & gaming** a vyberte vývoj hry s pracovní zátěží **Unity.**
+1. Na kartě **úlohy** se posuňte do části **mobilní & hry** a vyberte úlohu **vývoj her pomocí Unity** .
 
-    ![Pracovní zátěž Jednoty](media/vstu_unity-workload.png)
+   :::moniker range="vs-2017"
+   ![Zatížení Unity](media/vs-2017/vstu-unity-workload.png)
+   :::moniker-end
+   :::moniker range=">=vs-2019"
+   ![Zatížení Unity](media/vs-2019/vstu-unity-workload.png)
+   :::moniker-end
 
-1. V pravém dolním rohu okna instalačního programu klikněte na **Změnit** (pokud jste již nainstalovali) nebo **Nainstalovat** (pro nové instalace).
+1. Klikněte na **Upravit** (Pokud je už nainstalovaný) nebo **nainstalujte** (pro nové instalace) v pravém dolním rohu okna instalačního programu.
 
-## <a name="configure-unity-for-use-with-visual-studio"></a>Konfigurace unity pro použití s Visual Studio
 
-Počínaje Unity 2018.1, Visual Studio by měl být výchozí externí editor skriptů v Unity. Můžete to potvrdit nebo změnit externí editor skriptů na konkrétní verzi sady Visual Studio:
+#### <a name="check-for-updates-to-visual-studio"></a>Vyhledat aktualizace sady Visual Studio
 
-1. Z nabídky **Úpravy** vyberte **Předvolby.**
+Doporučuje se zkontrolovat aktualizace v sadě Visual Studio, abyste měli jistotu, že máte přístup k nejnovějším nástrojům a funkcím. Tím nedojde k přerušení vašeho projektu Unity.
 
-   ![Vybrat předvolby](media/vstu_unity-preferences.png)
+- [Aktualizace sady Visual Studio](../install/update-visual-studio.md)
 
-2. V dialogovém okně Předvolby vyberte kartu **Externí nástroje.**
 
-3. V rozevíracím seznamu **Externí editor skriptů** zvolte požadovanou verzi sady Visual Studio, pokud je v seznamu uvedená, jinak vyberte **Procházet...**.
+## <a name="configure-unity-for-use-with-visual-studio"></a>Konfigurace Unity pro použití se sadou Visual Studio
 
-   ![Výběr sady Visual Studio](media/vstu_unity-external-tools.png)
+Od Unity 2018,1 by měl být Visual Studio výchozím editorem externích skriptů v Unity. Můžete to potvrdit nebo změnit externí editor skriptu na konkrétní verzi sady Visual Studio:
 
-4. Pokud **je vybrána možnost Procházet...** byla vybrána, přejděte do adresáře **Common7/IDE** uvnitř instalačního adresáře sady Visual Studio a vyberte **devenv.exe**. Potom klepněte na tlačítko **Otevřít**.
+1. V nabídce **Upravit** vyberte **Předvolby** .
 
-   ![Vybrat otevřít](media/vstu_browse-for-application.png)
+   :::moniker range="vs-2017"
+   ![Vybrat předvolby](media/vs-2017/vstu-unity-preferences.png)
+   :::moniker-end
+   :::moniker range=">=vs-2019"
+   ![Vybrat předvolby](media/vs-2019/vstu-unity-preferences.png)
+   :::moniker-end
 
-5. Po výběru sady Visual Studio v seznamu **Externí editor skriptů** zkontrolujte, zda je zaškrtnuté políčko **Připojení editoru.**
+2. V dialogovém okně Předvolby vyberte kartu **externí nástroje** .
 
-6. Chcete-li dokončit proces konfigurace, zavřete dialogové okno **Předvolby.**
+3. V rozevíracím seznamu **editoru externích skriptů** zvolte požadovanou verzi sady Visual Studio, pokud je uvedena, jinak vyberte **Procházet...**.
 
-## <a name="support-for-older-versions"></a>Podpora starších verzí
+   :::moniker range="vs-2017"
+   ![Vybrat Visual Studio](media/vs-2017/vstu-unity-external-tools.png)
+   :::moniker-end
+   :::moniker range=">=vs-2019"
+   ![Vybrat Visual Studio](media/vs-2019/vstu-unity-external-tools.png)
+   :::moniker-end
 
- Stáhněte a nainstalujte nástroje Visual Studio pro jednotu z webu Visual Studio Marketplace. Budete muset nainstalovat správný balíček pro vaši verzi sady Visual Studio.
 
-- Pro komunitu Visual Studio 2015, Visual Studio 2015 Professional nebo Visual Studio 2015 Enterprise:
+4. Pokud jste vybrali možnost **Procházet...** , přejděte do adresáře **Common7/IDE** v instalačním adresáři sady Visual Studio a vyberte **devenv. exe**. Pak klikněte na **otevřít**.
 
-   [Stažení visual studio 2015 nástroje pro jednotu](https://marketplace.visualstudio.com/items?itemName=SebastienLebreton.VisualStudio2015ToolsforUnity)
+   :::moniker range="vs-2017"
+   ![Vyberte otevřít.](media/vs-2017/vstu-browse-for-application.png)
+   :::moniker-end
+   :::moniker range=">=vs-2019"
+   ![Vyberte otevřít.](media/vs-2019/vstu-browse-for-application.png)
+   :::moniker-end
+
+5. Jakmile je v seznamu **Editor externích skriptů** vybraná možnost Visual Studio, zkontrolujte, že je zaškrtnuté políčko **připojovat Editor** .
+
+6. Zavřete dialogové okno **Předvolby** a dokončete proces konfigurace.
+
+## <a name="support-for-older-versions"></a>Podpora pro starší verze
+
+Stáhněte a nainstalujte Visual Studio Tools for Unity z Visual Studio Marketplace. Budete muset nainstalovat správný balíček pro vaši verzi sady Visual Studio.
+
+- Pro Visual Studio 2015 Community, Visual Studio 2015 Professional nebo Visual Studio 2015 Enterprise:
+
+   [Stáhnout Visual Studio 2015 Tools for Unity](https://marketplace.visualstudio.com/items?itemName=SebastienLebreton.VisualStudio2015ToolsforUnity)
 
 > [!NOTE]
-> Visual Studio Tools for Unity vyžaduje Unity 5.2 a vyšší, stejně jako verze Visual Studio, která podporuje rozšíření, jako je visual studio společenství, professional, premium nebo enterprise. Chcete-li ověřit, že nástroje sady Visual Studio pro jednotu jsou povoleny v instalaci Unity, vyberte **o jednotě** z nabídky **Nápověda** a vyhledejte text "Microsoft Visual Studio Tools for Unity povoleno" v levém dolním rohu dialogového okna.
-> ![o jednotě](media/vstu_about-unity.png)
+> Visual Studio Tools for Unity vyžaduje Unity 5,2 a vyšší a také verzi sady Visual Studio, která podporuje rozšíření, jako je Visual Studio Community, Professional, Premium nebo Enterprise. Pokud chcete ověřit, že je ve vaší instalaci Unity povolený Visual Studio Tools for Unity, vyberte z nabídky **help** možnost **o Unity** a vyhledejte text "Microsoft Visual Studio nástrojů pro Unity Enabled" v levém dolním rohu dialogového okna.
+> ![o Unity](media/vs-2019/vstu-about-unity.png)
+
 
 ## <a name="next-steps"></a>Další kroky
 
- Informace o tom, jak pracovat s projektem Unity a ladit ho v sadě Visual Studio, najdete v [tématu Nástroje visual studia pro jednotu](../cross-platform/using-visual-studio-tools-for-unity.md).
+ Informace o tom, jak pracovat s projektem Unity a ladit ho v aplikaci Visual Studio, najdete v tématu [Visual Studio Tools for Unity](../cross-platform/using-visual-studio-tools-for-unity.md).

@@ -3,15 +3,15 @@ title: Nástroje kontejneru sady Visual Studio s ASP.NET Core a reagují. js
 author: ghogen
 description: Naučte se používat nástroje sady Visual Studio Container a Docker for Windows
 ms.author: ghogen
-ms.date: 10/16/2019
+ms.date: 05/14/2020
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: 47bcdd4de4ffd938d6b9aed5a166a863873f526b
-ms.sourcegitcommit: ddd99f64a3f86508892a6d61e8a33c88fb911cc4
+ms.openlocfilehash: f7dfc0aa1346c4e888f64f7cd8f23add3056c070
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255549"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84182782"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>Rychlý Start: použití Docker s nareagující jednostránkové aplikace v aplikaci Visual Studio
 
@@ -72,16 +72,16 @@ Další krok se liší v závislosti na tom, jestli používáte kontejnery Linu
 
 *Souboru Dockerfile*je v projektu vytvořen recept pro vytvoření finální image Docker. Porozumění příkazům, které jsou v něm, najdete v [referenčních informacích k souboru Dockerfile](https://docs.docker.com/engine/reference/builder/) .
 
-Otevřete *souboru Dockerfile* v projektu a přidejte následující řádky pro instalaci Node. js 10. x do kontejneru. Nezapomeňte přidat tyto řádky do první části, chcete-li přidat instalaci správce balíčků *npm. exe* do základní bitové kopie, která se používá v následujících krocích.
+Otevřete *souboru Dockerfile* v projektu a přidejte následující řádky pro instalaci Node. js 10. x do kontejneru. Nezapomeňte přidat tyto řádky v první části, chcete-li přidat instalaci správce balíčků *npm. exe* do základní image a také v `build` části.
 
-```
+```Dockerfile
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
 RUN apt-get install -y nodejs
 ```
 
 *Souboru Dockerfile* by teď měl vypadat nějak takto:
 
-```
+```Dockerfile
 FROM microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim AS base
 WORKDIR /app
 EXPOSE 80 
@@ -90,6 +90,8 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
 RUN apt-get install -y nodejs
 
 FROM microsoft/dotnet:2.2-sdk-stretch AS build
+RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
+RUN apt-get install -y nodejs
 WORKDIR /src
 COPY ["WebApplication37/WebApplication37.csproj", "WebApplication37/"]
 RUN dotnet restore "WebApplication37/WebApplication37.csproj"
@@ -123,7 +125,7 @@ Aktualizujte souboru Dockerfile přidáním následujících řádků. Tato akce
    1. Přidat ``# escape=` `` na první řádek souboru Dockerfile
    1. Přidejte následující řádky před`FROM … base`
 
-      ```
+      ```Dockerfile
       FROM mcr.microsoft.com/powershell:nanoserver-1903 AS downloadnodejs
       SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop';$ProgressPreference='silentlyContinue';"]
       RUN Invoke-WebRequest -OutFile nodejs.zip -UseBasicParsing "https://nodejs.org/dist/v10.16.3/node-v10.16.3-win-x64.zip"; `
@@ -133,17 +135,19 @@ Aktualizujte souboru Dockerfile přidáním následujících řádků. Tato akce
 
    1. Přidejte následující řádek před a za`FROM … build`
 
-      ```
+      ```Dockerfile
       COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
       ```
 
    1. Úplný souboru Dockerfile by teď měl vypadat nějak takto:
 
-      ```
+      ```Dockerfile
       # escape=`
       #Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
       #For more information, please see https://aka.ms/containercompat
       FROM mcr.microsoft.com/powershell:nanoserver-1903 AS downloadnodejs
+      RUN mkdir -p C:\nodejsfolder
+      WORKDIR C:\nodejsfolder
       SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop';$ProgressPreference='silentlyContinue';"]
       RUN Invoke-WebRequest -OutFile nodejs.zip -UseBasicParsing "https://nodejs.org/dist/v10.16.3/node-v10.16.3-win-x64.zip"; `
       Expand-Archive nodejs.zip -DestinationPath C:\; `
@@ -173,9 +177,9 @@ Aktualizujte souboru Dockerfile přidáním následujících řádků. Tato akce
       ENTRYPOINT ["dotnet", "WebApplication37.dll"]
       ```
 
-1. Aktualizujte soubor. dockerignore odebráním `**/bin`.
+1. Aktualizujte soubor. dockerignore odebráním `**/bin` .
 
-## <a name="debug"></a>Ladit
+## <a name="debug"></a>Ladění
 
 V rozevíracím seznamu ladění na panelu nástrojů vyberte **Docker** a spusťte ladění aplikace. Může se zobrazit zpráva s výzvou k důvěřování certifikátu. Chcete-li pokračovat, vyberte možnost důvěryhodného certifikátu.  Při prvním sestavení, Docker stáhne základní image, takže může trvat delší dobu.
 
@@ -227,7 +231,7 @@ Jakmile se cyklus vývoje a ladění aplikace dokončí, můžete vytvořit prov
     | **Předpona DNS** | Globálně jedinečný název | Název, který jedinečně identifikuje váš registr kontejneru. |
     | **Předplatné** | Zvolte vaše předplatné. | Předplatné Azure, které se má použít. |
     | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, zvolte **Nová**.|
-    | **[SKLADOVÉ](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
+    | **[SKU](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
     | **Umístění registru** | Umístění, které je blízko vás | Vyberte umístění v [oblasti](https://azure.microsoft.com/regions/) poblíž nebo v blízkosti jiných služeb, které budou používat váš registr kontejneru. |
 
     ![Dialog pro vytváření Azure Container Registry v aplikaci Visual Studio][0]
@@ -240,7 +244,7 @@ Jakmile se cyklus vývoje a ladění aplikace dokončí, můžete vytvořit prov
 
 Kontejner teď můžete načíst z registru do libovolného hostitele, který podporuje spouštění imagí Docker, například [Azure Container Instances](/azure/container-instances/container-instances-tutorial-deploy-app).
 
-## <a name="additional-resources"></a>Další materiály a zdroje informací
+## <a name="additional-resources"></a>Další zdroje
 
 * [Vývoj kontejnerů pomocí sady Visual Studio](/visualstudio/containers)
 * [Řešení potíží při vývoji v sadě Visual Studio pomocí Dockeru](troubleshooting-docker-errors.md)

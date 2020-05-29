@@ -1,6 +1,6 @@
 ---
-title: 'Postup: Vytvoření více konfigurací současně'
-ms.date: 11/04/2016
+title: 'Postupy: sestavení více konfigurací'
+ms.date: 05/13/2020
 ms.technology: vs-ide-compile
 ms.topic: conceptual
 ms.assetid: ba830937-3317-4674-8cc2-c0cd565603c5
@@ -9,38 +9,40 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33cd217a08f62b4919af6d72017176c110cf5e5a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b6d6a3b4f9110f85ff42e8b9dcf6dd531c3802e2
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77904084"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183545"
 ---
-# <a name="how-to-build-multiple-configurations-simultaneously"></a>Postup: Vytvoření více konfigurací současně
+# <a name="how-to-build-multiple-configurations-in-a-single-build-request"></a>Postupy: sestavení více konfigurací v rámci jedné žádosti o sestavení
 
-Můžete vytvořit většinu typů projektů s více nebo dokonce všechny jejich konfigurace sestavení současně pomocí dialogového okna **dávkové sestavení.** Nelze však vytvořit následující typy projektů ve více konfiguracích sestavení současně:
+Můžete sestavit většinu typů projektů s více nebo dokonce všechny konfigurace sestavení s jednou akcí IDE pomocí dialogového okna **dávkové sestavení** . Nemůžete však sestavit následující typy projektů ve více konfiguracích sestavení současně:
 
-1. [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]aplikace vytvořené pro Windows pomocí JavaScriptu.
+1. [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]aplikace sestavené pro Windows pomocí JavaScriptu
 
-2. Všechny projekty jazyka.
+2. Všechny projekty Visual Basic.
 
-Pokud řešení obsahuje libovolný projekt těchto dvou typů projektů, **pak dávkové sestavení** není k dispozici pro toto řešení. V takovém případě se příkaz nezobrazí v nabídce **Sestavení.**
+3. Projekty CMake.
 
-   Další informace o konfiguracích sestavení naleznete v [tématu Understand build configurations](../ide/understanding-build-configurations.md).
+Pokud řešení obsahuje libovolný projekt těchto dvou typů projektu, není **dávkové sestavení** pro toto řešení k dispozici. V takovém případě se příkaz nezobrazí v nabídce **sestavení** .
 
-## <a name="to-build-a-project-in-multiple-build-configurations"></a>Vytvoření projektu ve více konfiguracích sestavení
+   Další informace o konfiguracích sestavení naleznete v tématu [Principy konfigurací sestavení](../ide/understanding-build-configurations.md).
 
-1. Na řádku nabídek zvolte **Sestavení** > **dávkového sestavení**. Nebo stisknutím **klávesy Ctrl**+**Q** otevřete `Batch Build`vyhledávací pole a vyhledejte .
+## <a name="to-build-a-project-in-multiple-build-configurations"></a>Sestavení projektu v rámci více konfigurací sestavení
 
-2. Ve sloupci **Sestavení** zaškrtněte políčka pro konfigurace, ve kterých chcete vytvořit projekt.
+1. Na řádku nabídek klikněte na položku **sestavit**  >  **dávkovou sestavování**. Nebo stiskněte klávesu **CTRL** + **Q** pro otevření vyhledávacího pole a vyhledejte `Batch Build` .
+
+2. Ve sloupci **sestavení** zaškrtněte políčka pro konfigurace, ve kterých chcete sestavit projekt.
 
     > [!TIP]
-    > Chcete-li upravit nebo vytvořit konfiguraci sestavení pro řešení, zvolte **Vytvořit** > **Nástroj pro konfiguraci na** řádku nabídek a otevřete dialogové okno Správce **konfigurace.** Po úpravě konfigurace sestavení pro řešení zvolte tlačítko **Znovu sestavit** v dialogovém okně **Dávkové sestavení** a aktualizujte všechny konfigurace sestavení pro projekty v řešení.
+    > Chcete-li upravit nebo vytvořit konfiguraci sestavení pro řešení, vyberte možnost **sestavit**  >  **Configuration Manager** na řádku nabídek, čímž otevřete dialogové okno **Configuration Manager** . Po úpravě konfigurace sestavení pro řešení klikněte na tlačítko **znovu sestavit** v dialogovém okně **dávkové sestavení** , aby se aktualizovaly všechny konfigurace sestavení pro projekty v řešení.
 
-3. Zvolte **tlačítka sestavení** nebo znovu **sestavit** k sestavení projektu s konfiguracemi, které jste zadali.
+3. Kliknutím na tlačítko **sestavení** nebo znovu **sestavit** Sestavte projekt s konfiguracemi, které jste určili.
 
 ## <a name="see-also"></a>Viz také
 
-- [Postup: Vytváření a úpravy konfigurací](../ide/how-to-create-and-edit-configurations.md)
+- [Postupy: vytváření a úpravy konfigurací](../ide/how-to-create-and-edit-configurations.md)
 - [Vysvětlení konfigurací sestavení](../ide/understanding-build-configurations.md)
-- [Paralelní vytváření více projektů](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)
+- [Paralelní sestavení více projektů](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)

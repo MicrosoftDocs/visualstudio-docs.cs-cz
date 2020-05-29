@@ -4,23 +4,27 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
-ms.date: 03/02/2020
+ms.date: 05/10/2020
 ms.topic: conceptual
 description: Přečtěte si, jak můžou správci přiřazovat licence k několika předplatitelům pomocí funkce hromadného přidání nebo skupin Microsoft Azure Active Directory.
-ms.openlocfilehash: 7fb9987b0d25da1be8a01f0cef82e019c20460d1
-ms.sourcegitcommit: 1b7412f1a5b039b2b294c6001013f399ea7aa5bc
+ms.openlocfilehash: 41dd3049c790ac790b46d12b976eb3ab6457fcb2
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82564183"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84182895"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Přiřazení předplatných více uživatelům
 Portál pro správu předplatných umožňuje přidat uživatele v jednom okamžiku nebo ve velkých skupinách.  Chcete-li přidat jednotlivé uživatele, přečtěte si téma [přidání jednotlivých uživatelů](assign-license.md).
 
 Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromadného přidání, nebo pokud vaše organizace používá Microsoft Azure Active Directory (Azure AD), můžete použít skupiny Azure AD. Tento článek vysvětluje postup pro obě možnosti. 
 
+<br>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vxNq]
+
 ## <a name="use-bulk-add-to-assign-subscriptions"></a>Použití hromadného přidání k přiřazení předplatných
-1. Přihlaste se na portál pro správu předplatných sady Visual Studio na adrese https://manage.visualstudio.com.
+1. Přihlaste se na portál pro správu předplatných sady Visual Studio na adrese https://manage.visualstudio.com .
 
 2. Pokud chcete najednou přidat víc předplatitelů, přejděte na kartu **Spravovat předplatitele** . Zvolte kartu **Přidat** a pak v rozevíracím seznamu vyberte **hromadné přidání** .  
 
@@ -32,6 +36,9 @@ Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromad
    > Vždy stáhnout nejnovější verzi této šablony. Pokud používáte starší verzi, může hromadné nahrání selhat.
 
 3. V tabulce aplikace Excel vyplňte pole informacemi pro jednotlivce, ke kterým chcete přiřadit odběry. (*Odkaz* je volitelné pole.) Uložte soubor místně, až budete hotovi.
+
+    > [!NOTE]
+    > Jedno z polí v šabloně umožňuje správcům povolit nebo zakázat stahování softwaru pro předplatitele.  Zakázání stahování také zakáže přístup k klíčům Product Key.
 
    Pro zajištění hladkého nahrávání si dodržujte následující osvědčené postupy:
 
@@ -74,6 +81,7 @@ Díky této funkci se můžete snadno soustředit na přiřazení předplatného
 > [!IMPORTANT]
 >
 > Následující omezení se vztahují na použití skupin Azure AD pro přidávání předplatitelů:
+> - Správce musí být členem tenanta AAD, když se poprvé přidá skupina na portál pro správu.  Po přidání skupiny nebudou změny členství ve skupinách vyžadovat zapojení správce. 
 > - Skupiny musí obsahovat alespoň jeden člen.  Prázdné skupiny se nepodporují.
 > - Skupiny musí mít méně než 1 000 uživatelů. 
 > - Všichni uživatelé musí být na nejvyšší úrovni skupiny.  Vnořené skupiny se nepodporují.
@@ -81,7 +89,11 @@ Díky této funkci se můžete snadno soustředit na přiřazení předplatného
 > - Všichni členové skupiny musí mít e-mailovou adresu přidruženou ke svému účtu Azure AD.
 > - Samostatné e-mailové adresy pro oznámení se nepodporují u předplatných přidaných pomocí skupin Azure AD.  
 
-1. Přihlaste se na portál pro správu předplatných sady Visual Studio na adrese [https://manage.visualstudio.com](https://manage.visualstudio.com).
+<br>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4rvvW]
+
+1. Přihlaste se na portál pro správu předplatných sady Visual Studio na adrese [https://manage.visualstudio.com](https://manage.visualstudio.com) .
 
 2. Pokud chcete najednou přidat víc odběratelů, přejděte na kartu **Spravovat předplatitele** .
 
@@ -106,9 +118,6 @@ Díky této funkci se můžete snadno soustředit na přiřazení předplatného
 > [!NOTE]
 > Pokud jste již odběry přiřadili uživatelům, kteří jsou následně přidáni jako součást skupiny Azure AD, budou přidány jako součást skupiny a nebudou již uvedeny jednotlivě. Pokud je však individuální předplatné pro jinou úroveň předplatného, budou mít dvě předplatná.  Příklad: Pokud má uživatel individuální Visual Studio Professional předplatné a je členem skupiny, ke které přiřadíte Visual Studio Enterprise předplatných, budou mít obě.  
 
-<br>
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vxNq]
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 ### <a name="q-can-i-choose-multiple-subscription-levels-to-be-assigned-within-an-azure-ad-group"></a>Otázka: mohu vybrat více úrovní předplatného, které mají být přiřazeny v rámci skupiny Azure AD? 
@@ -121,7 +130,7 @@ Odpověď: ne. Pokud chcete upravit informace pro jednotlivé odběratele, budet
 Odpověď: v závislosti na tom, jak vaše organizace nakonfigurovala Azure AD, se může zobrazit zpoždění až 24 hodin, než se uživatel přidá. Pokud je delší než 24 hodin, obraťte se na [podporu](https://visualstudio.microsoft.com/support/support-overview-vs).  
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)

@@ -1,38 +1,38 @@
 ---
-title: Přidání explicitního přetypádka
+title: Přidání explicitního přetypování
 ms.date: 03/26/2020
 ms.topic: reference
-author: y87feng
-ms.author: t-yufen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 78a61a8ed782df935a146b111bbc4107fa7c6d82
-ms.sourcegitcommit: 0ba0cbff77eac15feab1a73eeee3667006794b29
+ms.openlocfilehash: e159082266b848ce4742e436c706f3f71b2cc9ea
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80417320"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84182973"
 ---
-# <a name="add-explicit-cast"></a>Přidání explicitního přetypádka
+# <a name="add-explicit-cast"></a>Přidání explicitního přetypování
 
-Toto generování kódu se vztahuje na:
+Tato generace kódu platí pro:
 
 - C#
 
-**Co:** Umožňuje automaticky přidat explicitní přetypování do výrazu na základě použití.
+**Co:** Umožňuje automaticky přidat explicitní přetypování na výraz na základě využití.
 
-**Kdy:** Do výrazu je třeba přidat explicitní přetypování a chcete jej správně přiřadit automaticky.
+**Když:** Musíte přidat explicitní přetypování do výrazu a chcete ho správně přiřadit automaticky.
 
-**Proč:** Explicitní přetypování můžete do výrazu přidat ručně, ale tato funkce jej přidá automaticky na základě kontextu kódu.
+**Proč:** Explicitní přetypování můžete přidat do výrazu ručně, ale tato funkce je automaticky přidá na základě kontextu kódu.
 
 ## <a name="how-to-use-it"></a>Jak ji použít
 
-1. Umístěte stříšku na chybu.
-2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
-3. Vyberte **Přidat explicitní přetypovátí**.
+1. Umístěte blikající kurzor na chybu.
+2. Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
+3. Vyberte **Přidat explicitní přetypování**.
 
-   ![Přidání explicitní rychlé akce přetypování v sadě Visual Studio](media/add-explicit-cast.png)
+   ![Přidat k rychlé akci explicitního přetypování v aplikaci Visual Studio](media/add-explicit-cast.png)
 
 ## <a name="see-also"></a>Viz také
 

@@ -7,12 +7,12 @@ ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Informace o tom, jak můžou správci přiřazovat licence předplatitelům
-ms.openlocfilehash: 0810cf9d24f6ac218db59eea87a1c092abaa2a3f
-ms.sourcegitcommit: 1b7412f1a5b039b2b294c6001013f399ea7aa5bc
+ms.openlocfilehash: a90d6f3fec1f619cda397788c130f7514307effd
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82564157"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183467"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Přiřazení licencí na portálu pro správu předplatných sady Visual Studio
 Jako správce předplatných sady Visual Studio můžete použít portál pro správu k přiřazení předplatných jednotlivým uživatelům a skupinám uživatelů.
@@ -20,7 +20,7 @@ Jako správce předplatných sady Visual Studio můžete použít portál pro sp
 Pro skupiny uživatelů máte možnosti, jak přiřadíte odběry.  
 - Odběry můžete přiřadit v jednom okamžiku.
 - Můžete také rychle a snadno odeslat seznamy předplatitelů a informace o jejich předplatném pomocí funkce [hromadného přidání](assign-license-bulk.md) .
-- Pokud vaše organizace používá Microsoft Azure Active Directory (Azure AD), můžete k přiřazení předplatných skupinám uživatelů použít skupiny Azure AD.  (Tato funkce se nasazuje ve fázích a nemusí být k dispozici pro vaši organizaci hned.)
+- Pokud vaše organizace používá Microsoft Azure Active Directory (Azure AD), můžete k [přiřazení předplatných skupinám uživatelů použít skupiny Azure AD](https://docs.microsoft.com/visualstudio/subscriptions/assign-license-bulk#use-azure-active-directory-groups-to-assign-subscriptions) .  
 
 
 ## <a name="add-a-single-subscriber"></a>Přidání jednoho předplatitele
@@ -39,7 +39,11 @@ Zde je postup přiřazení předplatného sady Visual Studio novému uživateli,
    > [!div class="mx-imgBorder"]
    > ![Podrobnosti předplatitele](_img/assign-license-add/subscriber-details.png)
 
-    Pokud chcete, aby měl tento předplatitel přístup ke stažení softwaru, když se přihlásí na [portál předplatných sady Visual Studio](https://my.visualstudio.com?wt.mc_id=o~msft~docs), nezapomeňte v části **Nastavení stahování** ponechat přepínač stahování zapnuto. Pokud se rozhodnete zakázat stahování, uživatel nebude mít přístup ke stažení softwaru, ale stále bude mít přístup ke všem dalším výhodám zahrnutým v předplatném.
+    > [!NOTE]
+    > Aby se členové klienta Azure Active Directory viděli při zadávání názvu předplatitele, musí být správce členem tenanta. 
+
+
+    Pokud chcete, aby měl tento předplatitel přístup ke stažení softwaru, když se přihlásí na [portál předplatných sady Visual Studio](https://my.visualstudio.com?wt.mc_id=o~msft~docs), nezapomeňte v části **Nastavení stahování** ponechat přepínač stahování zapnuto. Pokud se rozhodnete zakázat stahování, uživatel nebude mít přístup ke stažení softwaru.  Přístup k klíčům Product Key bude taky zakázaný.  Předplatitel stále bude mít přístup ke všem dalším výhodám zahrnutým v předplatném.
    > [!div class="mx-imgBorder"]
    > ![Přístup k souborům ke stažení](media/access-to-downloads.png)
 
@@ -55,7 +59,7 @@ Zde je postup přiřazení předplatného sady Visual Studio novému uživateli,
 Po přidání odběratele se e-mail s přiřazením automaticky pošle novému předplatiteli s dalšími pokyny. E-mail s přiřazením můžete kdykoli odeslat, a to tak, že vyberete odběratele a kliknete na tlačítko **znovu odeslat** v horní nabídce.  Chcete-li znovu odeslat e-maily více uživatelům, podržte při výběru odběratelů klávesu **CTRL** .  Po kliknutí na tlačítko **znovu odeslat** se zobrazí dialogové okno s výzvou, abyste potvrdili, že chcete tomuto předplatiteli znovu odeslat.  
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
