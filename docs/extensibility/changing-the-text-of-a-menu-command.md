@@ -1,5 +1,5 @@
 ---
-title: Změna textu příkazu nabídky | Dokumenty společnosti Microsoft
+title: Změna textu příkazu nabídky | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,21 +12,21 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ff6af7bdd64342e86201af79dbe5c7968b247d6b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 88a20d9f29ae86f7946389cafd26d67c244caea7
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739844"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183688"
 ---
 # <a name="change-the-text-of-a-menu-command"></a>Změna textu příkazu nabídky
-Následující kroky ukazují, jak změnit textový popisek příkazu nabídky pomocí služby. <xref:System.ComponentModel.Design.IMenuCommandService>
+Následující kroky ukazují, jak změnit textový popisek příkazu nabídky pomocí <xref:System.ComponentModel.Design.IMenuCommandService> služby.
 
-## <a name="changing-a-menu-command-label-with-the-imenucommandservice"></a>Změna popisku příkazu nabídky pomocí služby IMenuCommandService
+## <a name="changing-a-menu-command-label-with-the-imenucommandservice"></a>Změna popisku příkazu nabídky pomocí IMenuCommandService
 
-1. Vytvořte projekt VSIX s názvem `MenuText` příkazu nabídky s názvem **ChangeMenuText**. Další informace naleznete [v tématu Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
+1. Vytvořte projekt VSIX s názvem `MenuText` s příkazem nabídky s názvem **ChangeMenuText**. Další informace najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-2. V souboru *.vsct* `TextChanges` přidejte příznak do příkazu nabídky, jak je znázorněno v následujícím příkladu.
+2. V souboru *. vsct* přidejte `TextChanges` příznak do příkazu nabídky, jak je znázorněno v následujícím příkladu.
 
     ```xml
     <Button guid="guidChangeMenuTextPackageCmdSet" id="ChangeMenuTextId" priority="0x0100" type="Button">
@@ -39,7 +39,7 @@ Následující kroky ukazují, jak změnit textový popisek příkazu nabídky p
     </Button>
     ```
 
-3. V *souboru ChangeMenuText.cs* vytvořte obslužnou rutinu události, která bude volána před zobrazením příkazu nabídky.
+3. V souboru *ChangeMenuText.cs* vytvořte obslužnou rutinu události, která bude volána před zobrazením příkazu nabídky.
 
     ```csharp
     private void OnBeforeQueryStatus(object sender, EventArgs e)
@@ -52,37 +52,27 @@ Následující kroky ukazují, jak změnit textový popisek příkazu nabídky p
     }
     ```
 
-    Můžete také aktualizovat stav příkazu nabídky v této <xref:System.ComponentModel.Design.MenuCommand.Visible%2A> <xref:System.ComponentModel.Design.MenuCommand.Checked%2A>metodě <xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> změnou <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> vlastností , a objektu.
+    Můžete také aktualizovat stav příkazu nabídky v této metodě změnou <xref:System.ComponentModel.Design.MenuCommand.Visible%2A> <xref:System.ComponentModel.Design.MenuCommand.Checked%2A> vlastností, a <xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> v <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> objektu.
 
-4. V konstruktoru ChangeMenuText nahraďte původní inicializaci příkazu a kód umístění kódem, který vytvoří <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> (spíše než `MenuCommand`a ), který představuje příkaz nabídky, přidá obslužnou rutinu <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> události a dá příkaz nabídky do služby příkazu nabídky.
+4. V konstruktoru ChangeMenuText nahraďte původní inicializaci příkazu a kód umístění kódem, který vytvoří <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> (spíše než a `MenuCommand` ), který představuje příkaz nabídky, přidá <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> obslužnou rutinu události a poskytne příkaz nabídky službě příkazu nabídky.
 
-    Zde je to, co by mělo vypadat:
+    Tady je to, co by mělo vypadat takto:
 
     ```csharp
-    private ChangeMenuText(Package package)
+    private ChangeMenuText(AsyncPackage package, OleMenuCommandService commandService)
     {
-        if (package == null)
-        {
-            throw new ArgumentNullException(nameof(package));
-        }
-
-        this.package = package;
-
-        OleMenuCommandService commandService = this.ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
-        if (commandService != null)
-        {
-            CommandID menuCommandID = new CommandID(MenuGroup, CommandId);
-            EventHandler eventHandler = this.ShowMessageBox;
-            OleMenuCommand menuItem = new OleMenuCommand(ShowMessageBox, menuCommandID);
-            menuItem.BeforeQueryStatus +=
-                new EventHandler(OnBeforeQueryStatus);
-            commandService.AddCommand(menuItem);
-        }
+        this.package = package ?? throw new ArgumentNullException(nameof(package));
+        commandService = commandService ?? throw new ArgumentNullException(nameof(commandService));
+        
+        var menuCommandID = new CommandID(CommandSet, CommandId);
+        var menuItem = new OleMenuCommand(this.Excute, menuCommandID);
+        menuItem.BeforeQueryStatus += new EventHandler(OnBeforeQueryStatus);
+        commandService.AddCommand(menuItem);
     }
     ```
 
-5. Sestavení projektu a začít ladění. Zobrazí se experimentální instance sady Visual Studio.
+5. Sestavte projekt a spusťte ladění. Zobrazí se experimentální instance aplikace Visual Studio.
 
-6. V nabídce **Tools** by se měl zobrazit příkaz s názvem **Invoke ChangeMenuText**.
+6. V nabídce **nástroje** byste měli vidět příkaz s názvem **Invoke ChangeMenuText**.
 
-7. Klepněte na příkaz. Měli byste vidět okno se zprávou oznamující, že **MenuItemCallback** byla volána. Když zavřete okno se zprávou, měli byste vidět, že název příkazu v nabídce Nástroje je nyní **Nový text**.
+7. Klikněte na příkaz. Mělo by se zobrazit okno se zprávou oznamující, že byl zavolán tento **MenuItemCallback** . Po zavření okna se zprávou byste měli vidět, že název příkazu v nabídce nástroje je teď **nový text**.

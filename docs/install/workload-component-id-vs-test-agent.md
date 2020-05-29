@@ -1,12 +1,12 @@
 ---
-title: Úlohy testovacího agenta visual studia a ID součástí
+title: Zatížení a ID komponent testovacího agenta sady Visual Studio
 titleSuffix: ''
-description: Vzdálené spuštění automatizovaných testů a zátěžových testů pomocí úloh a ID komponent sady Visual Studio
+description: Použití úloh sady Visual Studio a ID komponent ke vzdálenému spouštění automatizovaných testů a zátěžových testů
 keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 03/16/2020
+ms.date: 05/19/2020
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -16,14 +16,14 @@ ms.assetid: 55aea29b-1066-4e5a-aa99-fc87d4efb6d5
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 5a24e7c95d3e55b5b91d737877b9292e0af0db58
-ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
+ms.openlocfilehash: a02467d388217a61d911542a111154e3f90d0b44
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81276400"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184303"
 ---
-# <a name="visual-studio-test-agent-component-directory"></a>Adresář komponent y Agent testovacího studia visual studio
+# <a name="visual-studio-test-agent-component-directory"></a>Adresář komponenty Visual Studio Test Agent
 
 [!INCLUDE[workloads-components-universal-header_md](includes/workloads-components-universal-header_md.md)]
 

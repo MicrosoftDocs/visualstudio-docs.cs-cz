@@ -13,22 +13,22 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 867aac31f1515136e3aa9f0a6f171ec425d90cf7
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: e31ec2be9ccce0b07b04746d2ed51ab3909cdd2c
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472794"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183675"
 ---
 # <a name="code-snippets-schema-reference"></a>Referenční informace ke schématu fragmentů kódu
 
-Výstřižky kódu IntelliSense jsou předem navržené části kódu, které jsou připraveny k vložení do aplikace pomocí sady Visual Studio. Svou produktivitu můžete zvýšit tak, že vytvoříte fragmenty kódu, které snižují množství času stráveného zadáváním opakujícího se kódu nebo hledáním ukázek. Pomocí schématu XML výstřižků kódu IntelliSense můžete vytvořit vlastní fragmenty kódu a přidat je do fragmentů kódu, které visual studio již obsahuje.
+Fragmenty kódu technologie IntelliSense jsou předem vytvořené části kódu, které jsou připravené k vložení do vaší aplikace pomocí sady Visual Studio. Svou produktivitu můžete zvýšit tak, že vytvoříte fragmenty kódu, které snižují množství času stráveného zadáváním opakujícího se kódu nebo hledáním ukázek. Pomocí schématu XML fragmentu kódu technologie IntelliSense můžete vytvořit vlastní fragmenty kódu a přidat je do fragmentů kódu, které již aplikace Visual Studio obsahuje.
 
-## <a name="assembly-element"></a>Montážní prvek
+## <a name="assembly-element"></a>Element Assembly
 
 Určuje název sestavení, na které se odkazuje fragment kódu.
 
-Textová hodnota elementu **Assembly** je popisný textový název `System.dll`sestavení, například , `System,Version=1.0.0.1,Culture=neutral,PublicKeyToken=9b35aa323c18d4fb1`nebo jeho silný název, například .
+Textovou hodnotou elementu **sestavení** je popisný textový název sestavení, například `System.dll` nebo jeho silný název, jako je například `System,Version=1.0.0.1,Culture=neutral,PublicKeyToken=9b35aa323c18d4fb1` .
 
 ```xml
 <Assembly>
@@ -36,15 +36,15 @@ Textová hodnota elementu **Assembly** je popisný textový název `System.dll`s
 </Assembly>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Referenční prvek](../ide/code-snippets-schema-reference.md#reference-element)|Obsahuje informace o odkazech na sestavení vyžadovaných fragmentem kódu.|
+|[Element reference](../ide/code-snippets-schema-reference.md#reference-element)|Obsahuje informace o odkazech na sestavení vyžadovaných fragmentem kódu.|
 
 Je vyžadována textová hodnota. Tento text určuje sestavení, na které se odkazuje fragment kódu.
 
-## <a name="author-element"></a>Autorprvek
+## <a name="author-element"></a>Element Author
 
-Určuje jméno autora fragmentu kódu. **Správce fragmentů kódu** zobrazí název uložený `Author` v prvku fragmentu kódu.
+Určuje jméno autora fragmentu kódu. **Správce fragmentů kódu** zobrazí název uložený v `Author` elementu fragmentu kódu.
 
 ```xml
 <Author>
@@ -52,9 +52,9 @@ Určuje jméno autora fragmentu kódu. **Správce fragmentů kódu** zobrazí n�
 </Author>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Element záhlaví](../ide/code-snippets-schema-reference.md#header-element)|Obsahuje obecné informace o fragmentu kódu.|
+|[Element Header](../ide/code-snippets-schema-reference.md#header-element)|Obsahuje obecné informace o fragmentu kódu.|
 
 Je vyžadována textová hodnota. Tento text určuje autora fragmentu kódu.
 
@@ -64,35 +64,35 @@ Poskytuje kontejner pro krátké bloky kódu.
 
 ### <a name="keywords"></a>Klíčová slova
 
-V textu `Code` prvku jsou k dispozici dvě `$end$` vyhrazená slova: a `$selected$`. `$end$`označuje umístění, kam chcete umístit kurzor po vložení fragmentu kódu. `$selected$`představuje text vybraný v dokumentu, který má být vložen do fragmentu, když je vyvolán. Například daný úryvek, který zahrnuje:
+Dvě vyhrazená slova jsou k dispozici pro použití v textu `Code` prvku: `$end$` a `$selected$` . `$end$`označuje umístění, kam se má umístit kurzor po vložení fragmentu kódu. `$selected$`představuje text vybraný v dokumentu, který má být vložen do fragmentu při jeho vyvolání. Například s ohledem na fragment kódu, který obsahuje:
 
 ```
 $selected$ is a great color.
 ```
 
-Pokud je slovo "Modrá" vybráno, když uživatel vyvolá šablonu, výsledkem je:
+Pokud je vybráno slovo "Blue", když uživatel vyvolá šablonu, výsledek je:
 
 ```
 Blue is a great color.
 ```
 
-Ve fragmentu `$end$` kódu `$selected$` nesmíte použít ani jeden nebo vícekrát. Pokud tak učiníte, je rozpoznána pouze druhá instance. Vzhledem k tomu, úryvek, který zahrnuje:
+`$end$` `$selected$` Ve fragmentu kódu nesmíte použít ani více než jednou. V takovém případě je rozpoznána pouze druhá instance. Daný fragment obsahuje:
 
 ```
 $selected$ is a great color. I love $selected$.
 ```
 
-Pokud je vybráno slovo "Modrá", výsledkem je:
+Pokud je vybráno slovo "Blue", výsledek je:
 
 ```
  is a great color. I love Blue.
 ```
 
-Počáteční mezera se zobrazí, `$selected$` protože `is`mezi a .
+Počáteční místo se zobrazí, protože mezi a je mezera `$selected$` `is` .
 
-Všechna `$` ostatní klíčová slova jsou `<Literal>` dynamicky definována ve značkách a. `<Object>`
+Všechna ostatní `$` klíčová slova jsou dynamicky definována `<Literal>` v `<Object>` tagu a.
 
-Následuje struktura Code elementu:
+Následuje struktura prvku kódu:
 
 ```xml
 <Code Language="Language"
@@ -102,26 +102,27 @@ Následuje struktura Code elementu:
 </Code>
 ```
 
-Je vyžadována textová hodnota. Tento text určuje kód spolu s literály a objekty, které můžete použít při vložení tohoto fragmentu kódu do souboru kódu.
+Je vyžadována textová hodnota. Tento text Určuje kód spolu s literály a objekty, které lze použít, když je tento fragment kódu vložen do souboru kódu.
 
 ### <a name="attributes"></a>Atributy
 
-Pro element Code jsou k dispozici tři atributy:
+Pro element kódu jsou k dispozici tři atributy:
 
-- **Atribut** - _Povinný_ jazyk, který určuje jazyk fragmentu kódu. Může jít o následující hodnoty:
+- **Jazyk**  -  _Povinný_ atribut, který určuje jazyk fragmentu kódu. Může jít o následující hodnoty:
 
    |Hodnota|Popis|
    |-----|-----------|
    |`VB`|Identifikuje fragment kódu jazyka Visual Basic.|
    |`CSharp`|Identifikuje fragment kódu jazyka C#.|
    |`CPP`|Identifikuje fragment kódu jazyka C++.|
+   |`XAML`|Identifikuje fragment kódu XAML.|
    |`XML`|Identifikuje fragment kódu jazyka XML.|
    |`JavaScript`|Identifikuje fragment kódu jazyka JavaScript.|
-   |`TypeScript`|Identifikuje fragment kódu typu TypeScript.|
+   |`TypeScript`|Identifikuje fragment kódu TypeScript.|
    |`SQL`|Identifikuje fragment kódu jazyka SQL.|
    |`HTML`|Identifikuje fragment kódu jazyka HTML.|
 
-- **Kind** - _Optional_ atribut, který určuje druh kódu, který fragment obsahuje. Může jít o následující hodnoty:
+- **Druh**  -  _Volitelný_ atribut, který určuje druh kódu, který obsahuje fragment. Může jít o následující hodnoty:
 
    |Hodnota|Popis|
    |-----|-----------|
@@ -131,13 +132,13 @@ Pro element Code jsou k dispozici tři atributy:
    |`file`|Určuje, že fragment kódu je celý soubor kódu. Tyto fragmenty kódu lze vložit samotné do souboru kódu nebo do oboru názvů.|
    |`any`|Určuje, že fragment kódu lze vložit kamkoli. Tato značka se používá pro fragmenty kódu, které jsou nezávislé na kontextu, například pro komentáře.|
 
-- **Oddělovač** - _Volitelný_ atribut, který určuje oddělovač používaný k popisu literály a objekty v kódu. Ve výchozím nastavení je `$`oddělovač .
+- **Oddělovač**  -  _Volitelný_ atribut, který určuje oddělovač, který se používá k popisu literálů a objektů v kódu. Ve výchozím nastavení je oddělovač `$` .
 
-### <a name="parent-element"></a>Nadřazený prvek
+### <a name="parent-element"></a>Nadřazený element
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Prvek úryvku](../ide/code-snippets-schema-reference.md#snippet-element)|Obsahuje odkazy, direktivy import, deklarace a kód fragmentu kódu.|
+|[Element fragmentu](../ide/code-snippets-schema-reference.md#snippet-element)|Obsahuje odkazy, direktivy import, deklarace a kód fragmentu kódu.|
 
 ## <a name="codesnippet-element"></a>Element CodeSnippet
 
@@ -152,20 +153,20 @@ Umožňuje zadat záhlaví a jeden nebo více fragmentů kódu technologie Inte
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Format`|Požadovaný atribut. Určuje verzi schématu fragmentu kódu. Atribut Format musí být řetězec, který používá syntaxi x.x.x, kde každé písmeno „x“ představuje číselnou hodnotu čísla verze. Visual Studio bude ignorovat fragmenty `Format` kódu s atributy, které nerozumí.|
+|`Format`|Požadovaný atribut. Určuje verzi schématu fragmentu kódu. Atribut Format musí být řetězec, který používá syntaxi x.x.x, kde každé písmeno „x“ představuje číselnou hodnotu čísla verze. Visual Studio bude ignorovat fragmenty kódu s `Format` atributy, které nerozumí.|
 
-|Podřízený prvek|Popis|
+|Podřízený element|Popis|
 |-------------------|-----------------|
-|[Element záhlaví](../ide/code-snippets-schema-reference.md#header-element)|Požadovaný element. Obsahuje obecné informace o fragmentu kódu. Ve fragmentu `Header` kódu musí být přesně jeden prvek.|
-|[Prvek úryvku](../ide/code-snippets-schema-reference.md#snippet-element)|Požadovaný element. Obsahuje kód, který bude vložen sadou Visual Studio. Ve fragmentu `Snippet` kódu musí být přesně jeden prvek.|
+|[Element Header](../ide/code-snippets-schema-reference.md#header-element)|Požadovaný element. Obsahuje obecné informace o fragmentu kódu. Fragment kódu musí obsahovat právě jeden `Header` element.|
+|[Element fragmentu](../ide/code-snippets-schema-reference.md#snippet-element)|Požadovaný element. Obsahuje kód, který bude vložen sadou Visual Studio. Fragment kódu musí obsahovat právě jeden `Snippet` element.|
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
 |[Element CodeSnippets](../ide/code-snippets-schema-reference.md#codesnippets-element)|Kořenový element schématu XML fragmentu kódu|
 
 ## <a name="codesnippets-element"></a>Element CodeSnippets
 
-Seskupí [prvky CodeSnippet.](../ide/code-snippets-schema-reference.md#codesnippet-element) Tento `CodeSnippets` prvek je kořenovým prvkem schématu XML fragmentu kódu.
+Seskupuje elementy [codesnippet](../ide/code-snippets-schema-reference.md#codesnippet-element) . `CodeSnippets`Element je kořenovým prvkem schématu XML fragmentu kódu.
 
 ```xml
 <CodeSnippets>
@@ -173,11 +174,11 @@ Seskupí [prvky CodeSnippet.](../ide/code-snippets-schema-reference.md#codesnipp
 </CodeSnippets>
 ```
 
-|Podřízený prvek|Popis|
+|Podřízený element|Popis|
 |-------------------|-----------------|
-|[Element CodeSnippet](../ide/code-snippets-schema-reference.md#codesnippet-element)|Volitelný element. Nadřazený element pro všechna data fragmentu kódu. V prvku může `CodeSnippet` být nula `CodeSnippets` nebo více prvků.|
+|[Element CodeSnippet](../ide/code-snippets-schema-reference.md#codesnippet-element)|Volitelný element. Nadřazený element pro všechna data fragmentu kódu. Element může obsahovat nula nebo více `CodeSnippet` prvků `CodeSnippets` .|
 
-## <a name="declarations-element"></a>Prvek Deklarace
+## <a name="declarations-element"></a>Element Declarations
 
 Určuje literály a objekty tvořící části fragmentu kódu, které lze upravovat.
 
@@ -188,16 +189,16 @@ Určuje literály a objekty tvořící části fragmentu kódu, které lze upra
 </Declarations>
 ```
 
-|Podřízený prvek|Popis|
+|Podřízený element|Popis|
 |-------------------|-----------------|
-|[Doslovný prvek](../ide/code-snippets-schema-reference.md#literal-element)|Volitelný element. Definuje literály fragmentu kódu, které lze upravovat. V prvku může `Literal` být nula `Declarations` nebo více prvků.|
-|[Prvek objektu](../ide/code-snippets-schema-reference.md#object-element)|Volitelný element. Definuje objekty fragmentu kódu, které lze upravovat. V prvku může `Object` být nula `Declarations` nebo více prvků.|
+|[Element Literal](../ide/code-snippets-schema-reference.md#literal-element)|Volitelný element. Definuje literály fragmentu kódu, které lze upravovat. Element může obsahovat nula nebo více `Literal` prvků `Declarations` .|
+|[Element Object](../ide/code-snippets-schema-reference.md#object-element)|Volitelný element. Definuje objekty fragmentu kódu, které lze upravovat. Element může obsahovat nula nebo více `Object` prvků `Declarations` .|
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Prvek úryvku](../ide/code-snippets-schema-reference.md#snippet-element)|Obsahuje odkazy, direktivy import, deklarace a kód fragmentu kódu.|
+|[Element fragmentu](../ide/code-snippets-schema-reference.md#snippet-element)|Obsahuje odkazy, direktivy import, deklarace a kód fragmentu kódu.|
 
-## <a name="default-element"></a>Výchozí prvek
+## <a name="default-element"></a>Výchozí element
 
 Určuje výchozí hodnotu literálu nebo objektu pro fragment kódu technologie IntelliSense.
 
@@ -207,14 +208,14 @@ Určuje výchozí hodnotu literálu nebo objektu pro fragment kódu technologie 
 </Default>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Doslovný prvek](../ide/code-snippets-schema-reference.md#literal-element)|Definuje pole literálu fragmentu kódu, která lze upravovat.|
-|[Prvek objektu](../ide/code-snippets-schema-reference.md#object-element)|Definuje pole objektu fragment kódu, která lze upravovat.|
+|[Element Literal](../ide/code-snippets-schema-reference.md#literal-element)|Definuje pole literálu fragmentu kódu, která lze upravovat.|
+|[Element Object](../ide/code-snippets-schema-reference.md#object-element)|Definuje pole objektu fragment kódu, která lze upravovat.|
 
 Je vyžadována textová hodnota. Tento text určuje výchozí hodnotu literálu nebo objektu, pomocí níž budou naplněna pole fragmentu kódu, která lze upravovat.
 
-## <a name="description-element"></a>Prvek popisu
+## <a name="description-element"></a>Description – element
 
 Určuje popisné informace o obsahu fragmentu kódu technologie IntelliSense.
 
@@ -224,18 +225,18 @@ Určuje popisné informace o obsahu fragmentu kódu technologie IntelliSense.
 </Description>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Element záhlaví](../ide/code-snippets-schema-reference.md#header-element)|Obsahuje obecné informace o fragmentu kódu.|
+|[Element Header](../ide/code-snippets-schema-reference.md#header-element)|Obsahuje obecné informace o fragmentu kódu.|
 
 Je vyžadována textová hodnota. Tento text popisuje fragment kódu.
 
-## <a name="function-element"></a>Funkční prvek
+## <a name="function-element"></a>Element Function
 
 Určuje funkci, která se má provést, když literál nebo objekt získá fokus v sadě Visual Studio.
 
 > [!NOTE]
-> Ne všechny `function` jazyky podporují prvky. Podívejte se na jazykově specifickou dokumentaci pro funkce, které jsou k dispozici.
+> Ne všechny jazyky podporují `function` prvky. Dostupné funkce najdete v dokumentaci ke konkrétnímu jazyku.
 
 ```xml
 <Function>
@@ -243,14 +244,14 @@ Určuje funkci, která se má provést, když literál nebo objekt získá fokus
 </Function>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Doslovný prvek](../ide/code-snippets-schema-reference.md#literal-element)|Definuje pole literálu fragmentu kódu, která lze upravovat.|
-|[Prvek objektu](../ide/code-snippets-schema-reference.md#object-element)|Definuje pole objektu fragment kódu, která lze upravovat.|
+|[Element Literal](../ide/code-snippets-schema-reference.md#literal-element)|Definuje pole literálu fragmentu kódu, která lze upravovat.|
+|[Element Object](../ide/code-snippets-schema-reference.md#object-element)|Definuje pole objektu fragment kódu, která lze upravovat.|
 
 Je vyžadována textová hodnota. Tento text určuje funkci, která se má provést, když pole literálu nebo objektu získá fokus v sadě Visual Studio.
 
-## <a name="header-element"></a>Element záhlaví
+## <a name="header-element"></a>Element Header
 
 Určuje obecné informace o fragmentu kódu technologie IntelliSense.
 
@@ -266,26 +267,26 @@ Určuje obecné informace o fragmentu kódu technologie IntelliSense.
 </Header>
 ```
 
-|Podřízený prvek|Popis|
+|Podřízený element|Popis|
 |-------------------|-----------------|
-|[Autorprvek](../ide/code-snippets-schema-reference.md#author-element)|Volitelný element. Jméno osoby nebo společnosti, která fragment kódu vytvořila. V prvku může `Author` být nula `Header` nebo jeden prvek.|
-|[Prvek popisu](../ide/code-snippets-schema-reference.md#description-element)|Volitelný element. Popis fragmentu kódu. V prvku může `Description` být nula `Header` nebo jeden prvek.|
-|[Prvek HelpUrl](../ide/code-snippets-schema-reference.md#helpurl-element)|Volitelný element. Adresa URL s dalšími informacemi o fragmentu kódu. V elementu Header `HelpURL` může být nula nebo jeden prvek. **Poznámka:**  Visual Studio nepoužívá `HelpUrl` prvek. Tento element je součástí schématu XML fragmentu kódu technologie IntelliSense a jakékoli fragmenty kódu, které tento element obsahují, budou úspěšně ověřeny, ale hodnota elementu nebude nikdy použita.|
-|[Prvek klíčová slova](../ide/code-snippets-schema-reference.md#keywords-element)|Volitelný element. Seskupí `Keyword` prvky. V prvku může `Keywords` být nula `Header` nebo jeden prvek.|
-|[Zástupce prvku](../ide/code-snippets-schema-reference.md#shortcut-element)|Volitelný element. Určuje textovou zkratku, pomocí níž lze fragment kódu vložit. V prvku může `Shortcut` být nula `Header` nebo jeden prvek.|
-|[Element SnippetTypes](../ide/code-snippets-schema-reference.md#snippettypes-element)|Volitelný element. Seskupí `SnippetType` prvky. V prvku může `SnippetTypes` být nula `Header` nebo jeden prvek. Pokud neexistují `SnippetTypes` žádné prvky, fragment kódu je vždy platný.|
-|[Prvek nadpisu](../ide/code-snippets-schema-reference.md#title-element)|Požadovaný element. Popisný název fragmentu kódu. V `Header` prvku musí `Title` být přesně jeden prvek.|
+|[Element Author](../ide/code-snippets-schema-reference.md#author-element)|Volitelný element. Jméno osoby nebo společnosti, která fragment kódu vytvořila. Element může obsahovat nula nebo jeden `Author` element `Header` .|
+|[Description – element](../ide/code-snippets-schema-reference.md#description-element)|Volitelný element. Popis fragmentu kódu. Element může obsahovat nula nebo jeden `Description` element `Header` .|
+|[Element HelpUrl](../ide/code-snippets-schema-reference.md#helpurl-element)|Volitelný element. Adresa URL s dalšími informacemi o fragmentu kódu. V elementu Header může být nula nebo jeden `HelpURL` element. **Poznámka:**  Visual Studio nepoužívá `HelpUrl` element. Tento element je součástí schématu XML fragmentu kódu technologie IntelliSense a jakékoli fragmenty kódu, které tento element obsahují, budou úspěšně ověřeny, ale hodnota elementu nebude nikdy použita.|
+|[Keywords – element](../ide/code-snippets-schema-reference.md#keywords-element)|Volitelný element. Seskupuje `Keyword` prvky. Element může obsahovat nula nebo jeden `Keywords` element `Header` .|
+|[Element zástupce](../ide/code-snippets-schema-reference.md#shortcut-element)|Volitelný element. Určuje textovou zkratku, pomocí níž lze fragment kódu vložit. Element může obsahovat nula nebo jeden `Shortcut` element `Header` .|
+|[Element SnippetTypes](../ide/code-snippets-schema-reference.md#snippettypes-element)|Volitelný element. Seskupuje `SnippetType` prvky. Element může obsahovat nula nebo jeden `SnippetTypes` element `Header` . Pokud nejsou žádné `SnippetTypes` prvky, fragment kódu je vždy platný.|
+|[Title – element](../ide/code-snippets-schema-reference.md#title-element)|Požadovaný element. Popisný název fragmentu kódu. Element musí obsahovat právě jeden `Title` element `Header` .|
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
 |[Element CodeSnippet](../ide/code-snippets-schema-reference.md#codesnippet-element)|Nadřazený element pro všechna data fragmentu kódu.|
 
-## <a name="helpurl-element"></a>Prvek HelpUrl
+## <a name="helpurl-element"></a>Element HelpUrl
 
 Určujte adresu URL s dalšími informacemi o fragmentu kódu.
 
 > [!NOTE]
-> Visual Studio nepoužívá `HelpUrl` prvek. Tento element je součástí schématu XML fragmentu kódu technologie IntelliSense a jakékoli fragmenty kódu, které tento element obsahují, budou úspěšně ověřeny, ale hodnota elementu nebude nikdy použita.
+> Visual Studio nepoužívá `HelpUrl` element. Tento element je součástí schématu XML fragmentu kódu technologie IntelliSense a jakékoli fragmenty kódu, které tento element obsahují, budou úspěšně ověřeny, ale hodnota elementu nebude nikdy použita.
 
 ```xml
 <HelpUrl>
@@ -293,15 +294,15 @@ Určujte adresu URL s dalšími informacemi o fragmentu kódu.
 </HelpUrl>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Element záhlaví](../ide/code-snippets-schema-reference.md#header-element)|Obsahuje obecné informace o fragmentu kódu.|
+|[Element Header](../ide/code-snippets-schema-reference.md#header-element)|Obsahuje obecné informace o fragmentu kódu.|
 
 Textová hodnota je volitelná. Tento text určuje adresu URL, na níž naleznete další informace o fragmentu kódu.
 
-## <a name="id-element"></a>ID prvek
+## <a name="id-element"></a>Element ID
 
-Určuje jedinečný identifikátor prvku `Literal` `Object` nebo. Žádné dva literály nebo objekty ve stejném fragmentu kódu mohou `ID` mít ve svých prvcích stejnou textovou hodnotu. Literály a objekty `ID` nemohou obsahovat prvek s hodnotou end. Hodnota `$end$` je vyhrazena a slouží k označení umístění pro umístění kurzoru po vložení fragmentu kódu.
+Určuje jedinečný identifikátor pro `Literal` `Object` element or. Žádné dva literály nebo objekty ve stejném fragmentu kódu nemohou mít ve svých prvcích stejnou textovou hodnotu `ID` . Literály a objekty nemůžou obsahovat `ID` element s hodnotou end. Hodnota `$end$` je vyhrazená a slouží k označení umístění, kam se má umístit kurzor po vložení fragmentu kódu.
 
 ```xml
 <ID>
@@ -309,16 +310,16 @@ Určuje jedinečný identifikátor prvku `Literal` `Object` nebo. Žádné dva l
 </ID>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Doslovný prvek](../ide/code-snippets-schema-reference.md#literal-element)|Definuje pole literálu fragmentu kódu, která lze upravovat.|
-|[Prvek objektu](../ide/code-snippets-schema-reference.md#object-element)|Definuje pole objektu fragment kódu, která lze upravovat.|
+|[Element Literal](../ide/code-snippets-schema-reference.md#literal-element)|Definuje pole literálu fragmentu kódu, která lze upravovat.|
+|[Element Object](../ide/code-snippets-schema-reference.md#object-element)|Definuje pole objektu fragment kódu, která lze upravovat.|
 
 Je vyžadována textová hodnota. Tento text určuje jedinečný identifikátor pro objekt nebo literál.
 
-## <a name="import-element"></a>Prvek importu
+## <a name="import-element"></a>Importovat element
 
-Určuje importované obory názvů používané fragmentem kódu Technologie IntelliSense.
+Určuje importované obory názvů používané fragmentem kódu technologie IntelliSense.
 
 ```xml
 <Import>
@@ -326,15 +327,15 @@ Určuje importované obory názvů používané fragmentem kódu Technologie Int
 </Import>
 ```
 
-|Podřízený prvek|Popis|
+|Podřízený element|Popis|
 |-------------------|-----------------|
-|[Prvek oboru názvů](../ide/code-snippets-schema-reference.md#namespace-element)|Požadovaný element. Určuje obor názvů používaný fragmentem kódu. V `Import` prvku musí `Namespace` být přesně jeden prvek.|
+|[Element Namespace](../ide/code-snippets-schema-reference.md#namespace-element)|Požadovaný element. Určuje obor názvů používaný fragmentem kódu. Element musí obsahovat právě jeden `Namespace` element `Import` .|
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Importuje prvek](../ide/code-snippets-schema-reference.md#imports-element)|Seskupení element pro **import** prvků.|
+|[Imports – element](../ide/code-snippets-schema-reference.md#imports-element)|Prvek seskupení pro elementy **Import** .|
 
-## <a name="imports-element"></a>Importuje prvek
+## <a name="imports-element"></a>Imports – element
 
 Seskupí jednotlivé `Import` prvky.
 
@@ -344,15 +345,15 @@ Seskupí jednotlivé `Import` prvky.
 </Imports>
 ```
 
-|Podřízený prvek|Popis|
+|Podřízený element|Popis|
 |-------------------|-----------------|
-|[Prvek importu](../ide/code-snippets-schema-reference.md#import-element)|Volitelný element. Obsahuje naimportované obory názvů pro fragment kódu. V prvku může být nula `Imports` nebo více **importovat** prvky.|
+|[Importovat element](../ide/code-snippets-schema-reference.md#import-element)|Volitelný element. Obsahuje naimportované obory názvů pro fragment kódu. Element může obsahovat nula nebo více elementů **importu** `Imports` .|
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Prvek úryvku](../ide/code-snippets-schema-reference.md#snippet-element)|Obsahuje odkazy, direktivy import, deklarace a kód fragmentu kódu.|
+|[Element fragmentu](../ide/code-snippets-schema-reference.md#snippet-element)|Obsahuje odkazy, direktivy import, deklarace a kód fragmentu kódu.|
 
-## <a name="keyword-element"></a>Prvek klíčového slova
+## <a name="keyword-element"></a>Element klíčového slova
 
 Určuje vlastní klíčové slovo pro fragment kódu. Klíčová slova fragmentů kódu používá sada Visual Studio a představují standardní způsob pro online poskytovatele obsahu, jak přidávat vlastní klíčová slova pro vyhledávání nebo kategorizaci.
 
@@ -362,13 +363,13 @@ Určuje vlastní klíčové slovo pro fragment kódu. Klíčová slova fragment�
 </Keyword>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Prvek klíčová slova](../ide/code-snippets-schema-reference.md#keywords-element)|Seskupí jednotlivé `Keyword` prvky.|
+|[Keywords – element](../ide/code-snippets-schema-reference.md#keywords-element)|Seskupí jednotlivé `Keyword` prvky.|
 
 Je vyžadována textová hodnota. Klíčové slovo fragmentu kódu.
 
-## <a name="keywords-element"></a>Prvek klíčová slova
+## <a name="keywords-element"></a>Keywords – element
 
 Seskupí jednotlivé `Keyword` prvky. Klíčová slova fragmentů kódu používá sada Visual Studio a představují standardní způsob pro online poskytovatele obsahu, jak přidávat vlastní klíčová slova pro vyhledávání nebo kategorizaci.
 
@@ -379,19 +380,19 @@ Seskupí jednotlivé `Keyword` prvky. Klíčová slova fragmentů kódu použív
 </Keywords>
 ```
 
-|Podřízený prvek|Popis|
+|Podřízený element|Popis|
 |-------------------|-----------------|
-|[Prvek klíčového slova](../ide/code-snippets-schema-reference.md#keyword-element)|Volitelný element. Obsahuje jednotlivá klíčová slova pro fragment kódu. V prvku může `Keyword` být nula `Keywords` nebo více prvků.|
+|[Element klíčového slova](../ide/code-snippets-schema-reference.md#keyword-element)|Volitelný element. Obsahuje jednotlivá klíčová slova pro fragment kódu. Element může obsahovat nula nebo více `Keyword` prvků `Keywords` .|
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Element záhlaví](../ide/code-snippets-schema-reference.md#header-element)|Obsahuje obecné informace o fragmentu kódu.|
+|[Element Header](../ide/code-snippets-schema-reference.md#header-element)|Obsahuje obecné informace o fragmentu kódu.|
 
-## <a name="literal-element"></a>Doslovný prvek
+## <a name="literal-element"></a>Element Literal
 
-Definuje literály fragmentu kódu, které lze upravovat. Prvek `Literal` se používá k identifikaci nahrazení části kódu, který je zcela obsažen v fragmentu, ale bude pravděpodobně přizpůsobit po vložení do kódu. Jako literály by měly být deklarovány například řetězcové literály, číselné hodnoty a některé názvy proměnných.
+Definuje literály fragmentu kódu, které lze upravovat. `Literal`Prvek slouží k identifikaci náhrady za část kódu, která je zcela obsažena v rámci fragmentu, ale bude pravděpodobně upravena poté, co je vložena do kódu. Jako literály by měly být deklarovány například řetězcové literály, číselné hodnoty a některé názvy proměnných.
 
-Literály a objekty nemohou obsahovat prvek **ID** s hodnotou vybrané nebo koncové hodnoty. Hodnota `$selected$` představuje text vybraný v dokumentu, který má být vložen do fragmentu, když je vyvolán. `$end$`označuje umístění, kam chcete umístit kurzor po vložení fragmentu kódu.
+Literály a objekty nesmí obsahovat element **ID** s hodnotou Selected nebo end. Hodnota `$selected$` představuje text vybraný v dokumentu, který má být vložen do fragmentu při jeho vyvolání. `$end$`označuje umístění, kam se má umístit kurzor po vložení fragmentu kódu.
 
 ```xml
 <Literal Editable="true/false">
@@ -404,22 +405,22 @@ Literály a objekty nemohou obsahovat prvek **ID** s hodnotou vybrané nebo konc
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Editable`|Volitelný `Boolean` atribut. Určuje, zda lze literál po vložení fragmentu kódu upravit. Výchozí hodnota tohoto atributu je `true`.|
+|`Editable`|Volitelný `Boolean` atribut. Určuje, zda lze literál po vložení fragmentu kódu upravit. Výchozí hodnota tohoto atributu je `true` .|
 
-|Podřízený prvek|Popis|
+|Podřízený element|Popis|
 |-------------------|-----------------|
-|[Výchozí prvek](../ide/code-snippets-schema-reference.md#default-element)|Požadovaný element. Určuje výchozí hodnotu literálu při vložení fragmentu kódu. V `Literal` prvku musí `Default` být přesně jeden prvek.|
-|[Funkční prvek](../ide/code-snippets-schema-reference.md#function-element)|Volitelný element. Určuje funkci, která se má provést, když literál získá fokus v sadě Visual Studio. V prvku může `Function` být nula `Literal` nebo jeden prvek.|
-|[ID prvek](../ide/code-snippets-schema-reference.md#id-element)|Požadovaný element. Určuje jedinečný identifikátor literálu. V `Literal` prvku musí `ID` být přesně jeden prvek.|
-|[Element popisu](../ide/code-snippets-schema-reference.md#tooltip-element)|Volitelný element. Popisuje očekávanou hodnotu a použití literálu. V prvku může být nula `Literal` nebo jeden **popisný popis** prvky.|
+|[Výchozí element](../ide/code-snippets-schema-reference.md#default-element)|Požadovaný element. Určuje výchozí hodnotu literálu při vložení fragmentu kódu. Element musí obsahovat právě jeden `Default` element `Literal` .|
+|[Element Function](../ide/code-snippets-schema-reference.md#function-element)|Volitelný element. Určuje funkci, která se má provést, když literál získá fokus v sadě Visual Studio. Element může obsahovat nula nebo jeden `Function` element `Literal` .|
+|[Element ID](../ide/code-snippets-schema-reference.md#id-element)|Požadovaný element. Určuje jedinečný identifikátor literálu. Element musí obsahovat právě jeden `ID` element `Literal` .|
+|[Element ToolTip](../ide/code-snippets-schema-reference.md#tooltip-element)|Volitelný element. Popisuje očekávanou hodnotu a použití literálu. Element může obsahovat nula nebo jeden element **ToolTip** `Literal` .|
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Prvek Deklarace](../ide/code-snippets-schema-reference.md#declarations-element)|Obsahuje literály a objekty fragmentu kódu, které lze upravovat.|
+|[Element Declarations](../ide/code-snippets-schema-reference.md#declarations-element)|Obsahuje literály a objekty fragmentu kódu, které lze upravovat.|
 
-## <a name="namespace-element"></a>Prvek oboru názvů
+## <a name="namespace-element"></a>Element Namespace
 
-Určuje obor názvů, který musí být naimportován, aby bylo možné fragment kódu zkompilovat a spustit. Obor názvů zadaný `Namespace` v elementu `using` je `Imports` automaticky přidán do směrnice nebo příkazu na začátku kódu, pokud ještě neexistuje.
+Určuje obor názvů, který musí být naimportován, aby bylo možné fragment kódu zkompilovat a spustit. Obor názvů zadaný v `Namespace` elementu je automaticky přidán do `using` direktivy nebo `Imports` příkazu na začátku kódu, pokud ještě neexistuje.
 
 ```xml
 <Namespace>
@@ -427,15 +428,15 @@ Určuje obor názvů, který musí být naimportován, aby bylo možné fragment
 </Namespace>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Prvek importu](../ide/code-snippets-schema-reference.md#import-element)|Naimportuje zadaný obor názvů.|
+|[Importovat element](../ide/code-snippets-schema-reference.md#import-element)|Naimportuje zadaný obor názvů.|
 
 Je vyžadována textová hodnota. Tento text určuje obor názvů, o kterém fragment kódu předpokládá, že bude naimportován.
 
-## <a name="object-element"></a>Prvek objektu
+## <a name="object-element"></a>Element Object
 
-Definuje objekty fragmentu kódu, které lze upravovat. Prvek `Object` se používá k identifikaci položky, která je vyžadována fragmentem kódu, ale pravděpodobně bude definována mimo samotný výstřižek. Jako objekty by měly být deklarovány například ovládací prvky modelu Windows Forms, ovládací prvky technologie ASP.NET nebo instance typů. Deklarace objektu vyžadují, aby byl zadán `Type` typ, který se provádí s elementem.
+Definuje objekty fragmentu kódu, které lze upravovat. `Object`Element se používá k identifikaci položky, která je požadována fragmentem kódu, ale je pravděpodobně definována mimo samotný fragment kódu. Jako objekty by měly být deklarovány například ovládací prvky modelu Windows Forms, ovládací prvky technologie ASP.NET nebo instance typů. Deklarace objektů vyžadují, aby byl zadán typ, který je proveden s `Type` prvkem.
 
 ```xml
 <Object Editable="true/false">
@@ -449,21 +450,21 @@ Definuje objekty fragmentu kódu, které lze upravovat. Prvek `Object` se použ�
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Editable`|Volitelný `Boolean` atribut. Určuje, zda lze literál po vložení fragmentu kódu upravit. Výchozí hodnota tohoto atributu je `true`.|
+|`Editable`|Volitelný `Boolean` atribut. Určuje, zda lze literál po vložení fragmentu kódu upravit. Výchozí hodnota tohoto atributu je `true` .|
 
-|Podřízený prvek|Popis|
+|Podřízený element|Popis|
 |-------------------|-----------------|
-|[Výchozí prvek](../ide/code-snippets-schema-reference.md#default-element)|Požadovaný element. Určuje výchozí hodnotu literálu při vložení fragmentu kódu. V `Literal` prvku musí `Default` být přesně jeden prvek.|
-|[Funkční prvek](../ide/code-snippets-schema-reference.md#function-element)|Volitelný element. Určuje funkci, která se má provést, když literál získá fokus v sadě Visual Studio. V prvku může `Function` být nula `Literal` nebo jeden prvek.|
-|[ID prvek](../ide/code-snippets-schema-reference.md#id-element)|Požadovaný element. Určuje jedinečný identifikátor literálu. V `Literal` prvku musí `ID` být přesně jeden prvek.|
-|[Element popisu](../ide/code-snippets-schema-reference.md#tooltip-element)|Volitelný element. Popisuje očekávanou hodnotu a použití literálu. V prvku může být nula `Literal` nebo jeden **popisný popis** prvky.|
-|[Typový prvek](../ide/code-snippets-schema-reference.md#type-element)|Požadovaný element. Určuje typ objektu. V `Object` prvku musí `Type` být přesně jeden prvek.|
+|[Výchozí element](../ide/code-snippets-schema-reference.md#default-element)|Požadovaný element. Určuje výchozí hodnotu literálu při vložení fragmentu kódu. Element musí obsahovat právě jeden `Default` element `Literal` .|
+|[Element Function](../ide/code-snippets-schema-reference.md#function-element)|Volitelný element. Určuje funkci, která se má provést, když literál získá fokus v sadě Visual Studio. Element může obsahovat nula nebo jeden `Function` element `Literal` .|
+|[Element ID](../ide/code-snippets-schema-reference.md#id-element)|Požadovaný element. Určuje jedinečný identifikátor literálu. Element musí obsahovat právě jeden `ID` element `Literal` .|
+|[Element ToolTip](../ide/code-snippets-schema-reference.md#tooltip-element)|Volitelný element. Popisuje očekávanou hodnotu a použití literálu. Element může obsahovat nula nebo jeden element **ToolTip** `Literal` .|
+|[Element Type](../ide/code-snippets-schema-reference.md#type-element)|Požadovaný element. Určuje typ objektu. Element musí obsahovat právě jeden `Type` element `Object` .|
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Prvek Deklarace](../ide/code-snippets-schema-reference.md#declarations-element)|Obsahuje literály a objekty fragmentu kódu, které lze upravovat.|
+|[Element Declarations](../ide/code-snippets-schema-reference.md#declarations-element)|Obsahuje literály a objekty fragmentu kódu, které lze upravovat.|
 
-## <a name="reference-element"></a>Referenční prvek
+## <a name="reference-element"></a>Element reference
 
 Určuje informace o odkazech na sestavení vyžadovaných fragmentem kódu.
 
@@ -474,16 +475,16 @@ Určuje informace o odkazech na sestavení vyžadovaných fragmentem kódu.
 </Reference>
 ```
 
-|Podřízený prvek|Popis|
+|Podřízený element|Popis|
 |-------------------|-----------------|
-|[Montážní prvek](../ide/code-snippets-schema-reference.md#assembly-element)|Požadovaný element. Obsahuje název sestavení, na které se odkazuje fragment kódu. V `Reference` prvku musí `Assembly` být přesně jeden prvek.|
-|[Prvek url](../ide/code-snippets-schema-reference.md#url-element)|Volitelný element. Obsahuje adresu URL s dalšími informacemi o odkazovaném sestavení. V prvku může `Url` být nula `Reference` nebo jeden prvek.|
+|[Element Assembly](../ide/code-snippets-schema-reference.md#assembly-element)|Požadovaný element. Obsahuje název sestavení, na které se odkazuje fragment kódu. Element musí obsahovat právě jeden `Assembly` element `Reference` .|
+|[Element URL](../ide/code-snippets-schema-reference.md#url-element)|Volitelný element. Obsahuje adresu URL s dalšími informacemi o odkazovaném sestavení. Element může obsahovat nula nebo jeden `Url` element `Reference` .|
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Element odkazů](../ide/code-snippets-schema-reference.md#references-element)|Seskupení element `Reference` pro prvky.|
+|[Odkazuje na element](../ide/code-snippets-schema-reference.md#references-element)|Seskupení elementu pro `Reference` elementy|
 
-## <a name="references-element"></a>Element odkazů
+## <a name="references-element"></a>Odkazuje na element
 
 Seskupí jednotlivé `Reference` prvky.
 
@@ -493,20 +494,20 @@ Seskupí jednotlivé `Reference` prvky.
 </References>
 ```
 
-|Podřízený prvek|Popis|
+|Podřízený element|Popis|
 |-------------------|-----------------|
-|[Referenční prvek](../ide/code-snippets-schema-reference.md#reference-element)|Volitelný element. Obsahuje informace o odkazech na sestavení pro fragment kódu. V prvku může `Reference` být nula `References` nebo více prvků.|
+|[Element reference](../ide/code-snippets-schema-reference.md#reference-element)|Volitelný element. Obsahuje informace o odkazech na sestavení pro fragment kódu. Element může obsahovat nula nebo více `Reference` prvků `References` .|
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Prvek úryvku](../ide/code-snippets-schema-reference.md#snippet-element)|Obsahuje odkazy, direktivy import, deklarace a kód fragmentu kódu.|
+|[Element fragmentu](../ide/code-snippets-schema-reference.md#snippet-element)|Obsahuje odkazy, direktivy import, deklarace a kód fragmentu kódu.|
 
-## <a name="shortcut-element"></a>Zástupce prvku
+## <a name="shortcut-element"></a>Element zástupce
 
-Určuje textovou zkratku, pomocí níž lze fragment kódu vložit. Textová hodnota `Shortcut` prvku může obsahovat pouze alfanumerické znaky a podtržítka ( _ ).
+Určuje textovou zkratku, pomocí níž lze fragment kódu vložit. Textová hodnota `Shortcut` elementu může obsahovat pouze alfanumerické znaky a podtržítka (_).
 
 > [!CAUTION]
-> Podtržítko (_) není podporováno znaky v c++ zástupce úryvku.
+> Podtržítka (_) nepodporují znaky v zástupcích fragmentů jazyka C++.
 
 ```xml
 <Shortcut>
@@ -514,13 +515,13 @@ Určuje textovou zkratku, pomocí níž lze fragment kódu vložit. Textová hod
 </Shortcut>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Element záhlaví](../ide/code-snippets-schema-reference.md#header-element)|Obsahuje obecné informace o fragmentu kódu.|
+|[Element Header](../ide/code-snippets-schema-reference.md#header-element)|Obsahuje obecné informace o fragmentu kódu.|
 
 Textová hodnota je volitelná. Tento text slouží jako zkratka pro vkládání fragmentů kódu.
 
-## <a name="snippet-element"></a>Prvek úryvku
+## <a name="snippet-element"></a>Element fragmentu
 
 Určuje odkazy, direktivy import, deklarace a kód fragmentu kódu.
 
@@ -533,14 +534,14 @@ Určuje odkazy, direktivy import, deklarace a kód fragmentu kódu.
 </Snippet>
 ```
 
-|Podřízený prvek|Popis|
+|Podřízený element|Popis|
 |-------------------|-----------------|
-|[Prvek kódu](../ide/code-snippets-schema-reference.md#code-element)|Požadovaný element. Určuje kód, který chcete vložit do souboru dokumentace. V `Snippet` prvku musí `Code` být přesně jeden prvek.|
-|[Prvek Deklarace](../ide/code-snippets-schema-reference.md#declarations-element)|Volitelný element. Určuje literály a objekty tvořící části fragmentu kódu, které lze upravovat. V prvku může `Declarations` být nula `Snippet` nebo jeden prvek.|
-|[Importuje prvek](../ide/code-snippets-schema-reference.md#imports-element)|Volitelný element. Seskupí jednotlivé `Import` prvky. V prvku může `Imports` být nula `Snippet` nebo jeden prvek.|
-|[Element odkazů](../ide/code-snippets-schema-reference.md#references-element)|Volitelný element. Seskupí jednotlivé `Reference` prvky. V prvku může `References` být nula `Snippet` nebo jeden prvek.|
+|[Element Code](../ide/code-snippets-schema-reference.md#code-element)|Požadovaný element. Určuje kód, který chcete vložit do souboru dokumentace. Element musí obsahovat právě jeden `Code` element `Snippet` .|
+|[Element Declarations](../ide/code-snippets-schema-reference.md#declarations-element)|Volitelný element. Určuje literály a objekty tvořící části fragmentu kódu, které lze upravovat. Element může obsahovat nula nebo jeden `Declarations` element `Snippet` .|
+|[Imports – element](../ide/code-snippets-schema-reference.md#imports-element)|Volitelný element. Seskupí jednotlivé `Import` prvky. Element může obsahovat nula nebo jeden `Imports` element `Snippet` .|
+|[Odkazuje na element](../ide/code-snippets-schema-reference.md#references-element)|Volitelný element. Seskupí jednotlivé `Reference` prvky. Element může obsahovat nula nebo jeden `References` element `Snippet` .|
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
 |[Element CodeSnippet](../ide/code-snippets-schema-reference.md#codesnippet-element)|Umožňuje zadat záhlaví a jeden nebo více fragmentů kódu technologie IntelliSense, které lze vložit do souborů kódu sady Visual Studio.|
 
@@ -554,21 +555,21 @@ Určuje, jak sada Visual Studio vloží fragment kódu.
 </SnippetType>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Element SnippetTypes](../ide/code-snippets-schema-reference.md#snippettypes-element)|Seskupí `SnippetType` prvky.|
+|[Element SnippetTypes](../ide/code-snippets-schema-reference.md#snippettypes-element)|Seskupuje `SnippetType` prvky.|
 
 Textová hodnota musí být jedna z následujících hodnot:
 
-- `SurroundsWith`: umožňuje umístění fragmentu kódu kolem vybrané části kódu.
+- `SurroundsWith`: umožňuje umístit fragment kódu kolem vybraného kusu kódu.
 
-- `Expansion`: umožňuje vložit fragment kódu do kurzoru.
+- `Expansion`: umožňuje vložení fragmentu kódu na pozici kurzoru.
 
-- `Refactoring`: určuje, že fragment kódu se používá během refaktoringu Jazyka C#. `Refactoring`nelze použít ve vlastních fragmentech kódu.
+- `Refactoring`: Určuje, zda je fragment kódu použit během refaktoringu jazyka C#. `Refactoring`nelze použít ve vlastních fragmentech kódu.
 
 ## <a name="snippettypes-element"></a>Element SnippetTypes
 
-Seskupí jednotlivé `SnippetType` prvky. Pokud `SnippetTypes` prvek není k dispozici, fragment kódu lze vložit kdekoli v kódu.
+Seskupí jednotlivé `SnippetType` prvky. Pokud `SnippetTypes` element není přítomen, může být fragment kódu vložen kamkoli do kódu.
 
 ```xml
 <SnippetTypes>
@@ -577,17 +578,17 @@ Seskupí jednotlivé `SnippetType` prvky. Pokud `SnippetTypes` prvek není k dis
 </SnippetTypes>
 ```
 
-|Podřízený prvek|Popis|
+|Podřízený element|Popis|
 |-------------------|-----------------|
-|[Element SnippetType](../ide/code-snippets-schema-reference.md#snippettype-element)|Volitelný element. Určuje, jak sada Visual Studio vloží fragment kódu do kódu. V prvku může `SnippetType` být nula `SnippetTypes` nebo více prvků.|
+|[Element SnippetType](../ide/code-snippets-schema-reference.md#snippettype-element)|Volitelný element. Určuje, jak sada Visual Studio vloží fragment kódu do kódu. Element může obsahovat nula nebo více `SnippetType` prvků `SnippetTypes` .|
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Element záhlaví](../ide/code-snippets-schema-reference.md#header-element)|Určuje obecné informace o fragmentu kódu.|
+|[Element Header](../ide/code-snippets-schema-reference.md#header-element)|Určuje obecné informace o fragmentu kódu.|
 
-## <a name="title-element"></a>Prvek nadpisu
+## <a name="title-element"></a>Title – element
 
-Určuje název fragmentu kódu. Název uložený `Title` v prvku fragmentu kódu se zobrazí v **výběru fragmentu kódu** a v popisu fragmentu kódu ve **Správci fragmentů kódu**.
+Určuje název fragmentu kódu. Název uložený v `Title` elementu fragmentu kódu se zobrazí ve **výběru fragmentu kódu** a v popisu fragmentu kódu ve **Správci fragmentů kódů**.
 
 ```xml
 <Title>
@@ -595,13 +596,13 @@ Určuje název fragmentu kódu. Název uložený `Title` v prvku fragmentu kódu
 </Title>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Element záhlaví](../ide/code-snippets-schema-reference.md#header-element)|Určuje obecné informace o fragmentu kódu.|
+|[Element Header](../ide/code-snippets-schema-reference.md#header-element)|Určuje obecné informace o fragmentu kódu.|
 
 Je vyžadována textová hodnota. Tento text určuje název fragmentu kódu.
 
-## <a name="tooltip-element"></a>Element popisu
+## <a name="tooltip-element"></a>Element ToolTip
 
 Popisuje očekávanou hodnotu a použití literálu nebo objektu ve fragmentu kódu. Sada Visual Studio tyto informace zobrazí v popisku při vložení fragmentu kódu do projektu. Text popisku se zobrazí po vložení fragmentu kódu po umístění ukazatele myši na literál nebo objekt.
 
@@ -611,16 +612,16 @@ Popisuje očekávanou hodnotu a použití literálu nebo objektu ve fragmentu k
 </ToolTip>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Doslovný prvek](../ide/code-snippets-schema-reference.md#literal-element)|Definuje pole literálu fragmentu kódu, která lze upravovat.|
-|[Prvek objektu](../ide/code-snippets-schema-reference.md#object-element)|Definuje pole objektu fragment kódu, která lze upravovat.|
+|[Element Literal](../ide/code-snippets-schema-reference.md#literal-element)|Definuje pole literálu fragmentu kódu, která lze upravovat.|
+|[Element Object](../ide/code-snippets-schema-reference.md#object-element)|Definuje pole objektu fragment kódu, která lze upravovat.|
 
 Je vyžadována textová hodnota. Tento text určuje popisek přidružený k objektu nebo literálu ve fragmentu kódu.
 
-## <a name="type-element"></a>Typový prvek
+## <a name="type-element"></a>Element Type
 
-Určuje typ objektu. Prvek `Object` se používá k identifikaci položky, která je vyžadována fragmentem kódu, ale pravděpodobně bude definována mimo samotný výstřižek. Jako objekty by měly být deklarovány například ovládací prvky modelu Windows Forms, ovládací prvky technologie ASP.NET nebo instance typů. Deklarace objektu vyžadují, aby byl zadán `Type` typ, který se provádí s elementem.
+Určuje typ objektu. `Object`Element se používá k identifikaci položky, která je požadována fragmentem kódu, ale je pravděpodobně definována mimo samotný fragment kódu. Jako objekty by měly být deklarovány například ovládací prvky modelu Windows Forms, ovládací prvky technologie ASP.NET nebo instance typů. Deklarace objektů vyžadují, aby byl zadán typ, který je proveden s `Type` prvkem.
 
 ```xml
 <Type>
@@ -628,22 +629,22 @@ Určuje typ objektu. Prvek `Object` se používá k identifikaci položky, kter�
 </Type>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Prvek objektu](../ide/code-snippets-schema-reference.md#object-element)|Definuje pole objektu fragment kódu, která lze upravovat.|
+|[Element Object](../ide/code-snippets-schema-reference.md#object-element)|Definuje pole objektu fragment kódu, která lze upravovat.|
 
-Je vyžadována textová hodnota. Tento text určuje typ objektu. Například:
+Je vyžadována textová hodnota. Tento text určuje typ objektu. Příklad:
 
 ```xml
 <Type>System.Data.SqlClient.SqlConnection</Type>
 ```
 
-## <a name="url-element"></a>Prvek url
+## <a name="url-element"></a>Element URL
 
 Určuje adresu URL s dalšími informacemi o odkazovaném sestavení.
 
 > [!NOTE]
-> Prvek `Url` je podporován pouze pro projekty jazyka.
+> `Url`Element je podporován pouze pro Visual Basic projekty.
 
 ```xml
 <Url>
@@ -651,9 +652,9 @@ Určuje adresu URL s dalšími informacemi o odkazovaném sestavení.
 </Url>
 ```
 
-|Nadřazený prvek|Popis|
+|Nadřazený element|Popis|
 | - |-----------------|
-|[Referenční prvek](../ide/code-snippets-schema-reference.md#reference-element)|Určuje odkazy na sestavení vyžadované fragmentem kódu.|
+|[Element reference](../ide/code-snippets-schema-reference.md#reference-element)|Určuje odkazy na sestavení vyžadované fragmentem kódu.|
 
 Je vyžadována textová hodnota. Tento text určuje adresu URL s dalšími informacemi o odkazovaném sestavení. Tato adresa URL se zobrazí, pokud odkaz nelze přidat do projektu.
 

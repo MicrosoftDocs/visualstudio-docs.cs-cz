@@ -1,6 +1,6 @@
 ---
-title: Vzory interakce pro visual studio | Dokumenty společnosti Microsoft
-ms.date: 11/04/2016
+title: Vzorce interakce pro Visual Studio | Microsoft Docs
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.assetid: a3643792-b0df-481c-bc35-576f948e04cf
 author: acangialosi
@@ -8,37 +8,37 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac917aeb2530570b755e7f1e6fc6de00714a54b0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 5cbfeef3352e4abd03e12cc6b228cea8a8c124a6
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80698379"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184403"
 ---
 # <a name="interaction-patterns-for-visual-studio"></a>Vzory interakcí pro Visual Studio
 ## <a name="overview"></a>Přehled
- Návrhový vzor je obecně jádrem návrhu, který lze použít v konkrétních situacích k řešení problémů s podobnými sadami omezení. Návrháři funkcí a systémů používají tyto návrhové vzory jako výchozí body, které pak mohou být přizpůsobeny jejich konkrétní situaci.
+ Vzor návrhu je obecně základem návrhu, který lze použít v určitých situacích k řešení problémů s podobnými sadami omezení. Návrháři funkcí a systému tyto vzory návrhu používají jako počáteční body, které je pak možné přizpůsobit na jejich konkrétní situaci.
 
- Visual Studio má knihovnu společné interakce vzory, které by měly být považovány při vytváření nových funkcí. Existují dva základní kontexty pro naše návrhové vzory: Visual Studio Client (devenv) a Visual Studio Online. Pro některé problémy s návrhem existuje všudypřítomný vzor, který funguje dobře ve všech situacích. V mnoha případech se však řešení může lišit pro uhlavního použití, které je prezentováno v prohlížeči a které je hostováno v klientské aplikaci.
+ Visual Studio má knihovnu běžných vzorů interakce, které byste měli vzít v úvahu při sestavování nových funkcí. Existují dva kontexty Core pro naše vzory návrhu: klient sady Visual Studio (devenv) a Visual Studio Codespaces (dřív Visual Studio Online). Pro některé problémy s návrhem je všudypřítomný vzor, který funguje dobře ve všech situacích. V mnoha případech se však řešení může lišit pro uživatelské rozhraní, které je prezentováno v prohlížeči a které je hostováno v klientské aplikaci.
 
-### <a name="visual-studio-client-pattern-types"></a>Typy vzorů klienta Visual Studio
+### <a name="visual-studio-client-pattern-types"></a>Typy vzorů klientů sady Visual Studio
 
 |Typ vzorku|Popis|Příklady|
 |------------------|-----------------|--------------|
-|**Vzory na úrovni aplikace**|Vzory na vysoké úrovni společné pro aplikaci, určení nebo zobrazení kontextu aplikace a obsahující složené a řídicí vzory v nich|- Okna nástrojů<br />- Okna dokumentů|
-|**Složené vzorky**|Běžné vzory, které se mohou rozprostírat napříč vzory aplikací nebo rozpoznaný vzor tvořený několika ovládacími prvky v odlišné konfiguraci|- Přepínání zobrazení<br />- Seznam stavitelé<br />- Zobrazení dat<br />- Oznámení<br />- Validace<br />- Výběrové modely|
-|**Vzory ovládacího prvku**|Podrobnosti o tom, jak se mají nízkoúrovňové kontroly chovat|- Pohledy na stromy<br />- Editace v rámci ovládacího prvku mřížky|
+|**Vzory na úrovni aplikace**|Vzor vysoké úrovně společné pro aplikaci, určení nebo zobrazení kontextu aplikace a obsahující složené a řídicí vzory v nich|– Okna nástrojů<br />– Dokumentová okna|
+|**Složené vzory**|Běžné vzory, které mohou být rozloženy napříč vzorci aplikace, nebo rozpoznaný vzor vytvořený několika ovládacími prvky v odlišné konfiguraci|– Zobrazení přepínání<br />– Seznam tvůrců<br />-Zobrazení dat<br />– Oznámení<br />– Ověření<br />-Výběr modelů|
+|**Vzory ovládacích prvků**|Konkrétní informace o tom, jak se očekává, že se ovládací prvky nízké úrovně chovají|– Stromová zobrazení<br />-Úpravy v rámci ovládacího prvku mřížky|
 
 ## <a name="application-patterns"></a>Vzory aplikací
- Na vysoké úrovni rozhraní sady Visual Studio obsahuje více oken, dialogových oken, příkazů a panelů nástrojů v rámci jednoho rozhraní IDE. Hierarchie sady Visual Studio určuje kontext a řídí nabídky. Klíčovými integračními body v uživatelském rozhraní rozhraní IDE jsou okna dokumentů, okna nástrojů, projekty, struktura příkazů, textový editor, panel nástrojů, okno Vlastnosti a možnosti > nástroje.
+ V rámci vysoké úrovně obsahuje rozhraní sady Visual Studio několik oken, dialogových oken, příkazů a panelů nástrojů v rámci jednoho integrovaného vývojového prostředí (IDE). Hierarchie sady Visual Studio určuje nabídky kontextu a jednotky. Klíčovým bodem integrace v uživatelském rozhraní rozhraní IDE jsou okna dokumentu, okna nástrojů, projekty, struktura příkazů, textový editor, sada nástrojů, okno Vlastnosti a nástroje > možnosti.
 
- Existují základní vzorce použití pro každý z klíčových integračních bodů v uživatelském rozhraní rozhraní IDE:
+ Existují základní vzory použití pro každý klíč integračních bodů v uživatelském rozhraní rozhraní IDE:
 
 - [Nabídky a příkazy pro Visual Studio](../../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md)
 
 - [Vzory aplikací pro Visual Studio](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md)
 
-  - [Interakce s okny](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_WindowInteractions)
+  - [Interakce oken](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_WindowInteractions)
 
   - [Okna nástrojů](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_ToolWindows)
 
@@ -48,30 +48,30 @@ ms.locfileid: "80698379"
 
   - [Projekty](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_Projects)
 
-## <a name="common-control-patterns"></a>Běžné vzory ovládacích prvku
- Vzory ovládacích prvků jsou hlavně o tom, jak se očekává, že se jednotlivé ovládací prvky budou chovat. To je jedna z oblastí, ve kterých konzistence je nejdůležitější.
+## <a name="common-control-patterns"></a>Běžné vzory ovládacích prvků
+ Vzory ovládacích prvků jsou převážně o tom, jak se očekává, že se jednotlivé ovládací prvky chovají. Jedná se o jednu oblast, ve které je konzistence nejdůležitější.
 
- Nejběžnější ovládací prvky v sadě Visual Studio by měly dodržovat pokyny pro systém Windows pro stolní počítače. Naše pokyny zahrnují pouze oblasti, ve kterých potřebujeme rozšířit společné konvence s interakcí specifické pro Visual Studio nebo místa, ve kterých nahrazujeme pokyny zcela s cílem přizpůsobit Visual Studio tak, aby vyhovovaly potřebám našich sofistikovaných uživatelů.
+ Nejběžnější ovládací prvky v aplikaci Visual Studio by měly postupovat podle pokynů pro stolní počítače s Windows. Naše pokyny obsahují jenom oblasti, ve kterých musíme rozšířit společné konvence s využitím interakcí se sadou Visual Studio, nebo míst, kde jsme zcela nahradili pokyny, aby bylo možné přizpůsobit sadu Visual Studio tak, aby splňovala potřeby našich propracovaných uživatelů.
 
 - [Vzory běžných ovládacích prvků pro Visual Studio](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md)
 
   - [Běžné ovládací prvky](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_CommonControls)
 
-  - [Ovládací prvky textu](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_TextControls)
+  - [Textové ovládací prvky](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_TextControls)
 
   - [Tlačítka a hypertextové odkazy](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_ButtonsAndHyperlinks)
 
-## <a name="composite-patterns"></a>Složené vzorky
- Existuje několik způsobů, které uživatelé očekávají k provedení úkolů. Kdykoli je to možné, měly by být prvky navrženy tak, aby tyto vzory používaly jak pro interakci, tak pro vizuální návrh.
+## <a name="composite-patterns"></a>Složené vzory
+ Existuje několik způsobů, jak mohou uživatelé provádět úkoly. Ať už je to možné, funkce by měly být navržené tak, aby byly použity jak pro interakce, tak pro vizuální návrh.
 
- Zatímco existuje mnoho složené vzory v rámci sady Visual Studio, některé z nejdůležitějších s ohledem na konzistenci jsou:
+ I když v sadě Visual Studio existuje mnoho složených vzorů, některé z nejdůležitějších z hlediska konzistence jsou:
 
 - [Složené vzory pro Visual Studio](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md)
 
-  - [UI na objektu a prohlížení](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_OnObjectUI)
+  - [Uživatelské rozhraní pro objekty a prohlížení](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_OnObjectUI)
 
-  - [Výběrové modely](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_SelectionModels)
+  - [Modely výběru](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_SelectionModels)
 
   - [Nastavení trvalosti a ukládání](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_PersistenceAndSavingSettings)
 
-  - [Dotykové ovládání](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_TouchInput)
+  - [Dotykové zadání](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_TouchInput)

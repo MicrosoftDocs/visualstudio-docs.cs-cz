@@ -1,5 +1,5 @@
 ---
-title: Ladění v době návrhu | Dokumentace Microsoftu
+title: Ladění v době návrhu | Microsoft Docs
 ms.custom: ''
 ms.date: 01/10/2019
 ms.topic: conceptual
@@ -16,26 +16,26 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: beb16ae52f880e31bd19a185d47b13c02026752f
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 8bc5d08e8b0ae71acb846e1e863e24e8b8def0ee
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916147"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183558"
 ---
-# <a name="debug-at-design-time-in-visual-studio-c-ccli-visual-basic-f"></a>Ladění v době návrhu v aplikaci Visual StudioC#( C++,/CLI, Visual Basic F#)
+# <a name="debug-at-design-time-in-visual-studio-c-ccli-visual-basic-f"></a>Ladění v době návrhu v aplikaci Visual Studio (C#, C++/CLI, Visual Basic, F #)
 
-Postup ladění kódu v době návrhu namísto při aplikace běží, můžete použít **okamžité** okna.
+Chcete-li ladit kód v době návrhu namísto spuštění aplikace, můžete použít okno **Immediate** .
 
-Chcete-li ladit kód XAML za aplikací z návrháře XAML, například pomocí deklarativních scénářů vázání dat, můžete použít **ladění** > **připojit k procesu**.
+Chcete-li ladit kód XAML za aplikací z návrháře XAML, například pomocí deklarativních scénářů vázání dat, můžete použít **ladění**  >  **připojit k procesu**.
 
-## <a name="use-the-immediate-window"></a>Použijte příkazové podokno
+## <a name="use-the-immediate-window"></a>Použít příkazové okno
 
-Můžete použít Visual Studio **okamžité** okna spuštění funkce nebo podprogram bez spuštění vaší aplikace. Pokud funkce nebo podprogram obsahuje zarážku, sada Visual Studio přeruší na zarážce. Potom můžete ladicí program windows prozkoumat stav vaší aplikace. Tato funkce se nazývá *ladění v době návrhu*.
+K provedení funkce nebo podprogramu bez spuštění aplikace můžete použít okno Visual Studio **Immediate** . Pokud funkce nebo podprogram obsahuje zarážku, bude Visual Studio na zarážce přerušeno. Pak můžete použít okna ladicího programu k prohlédnutí stavu programu. Tato funkce se nazývá *ladění v době návrhu*.
 
-V následujícím příkladu je v jazyce Visual Basic. Můžete také použít **okamžité** okno v době návrhu v C#aplikacích, F#a C++/CLI.
+Následující příklad je Visual Basic. Můžete také použít **okamžité** okno v době návrhu v aplikacích C#, F # a C++/CLI.
 
-1. Následující kód vložte do prázdné konzolové aplikace jazyka Visual Basic:
+1. Vložte následující kód do prázdné Visual Basic konzolové aplikace:
 
    ```vb
    Module Module1
@@ -57,23 +57,23 @@ V následujícím příkladu je v jazyce Visual Basic. Můžete také použít *
    End Module
    ```
 
-1. Nastavit zarážku na řádku **End Function**.
+1. Nastavte zarážku na **funkci end**řádku.
 
-1. Otevřít **okamžité** okna tak, že vyberete **ladění** > **Windows** > **okamžité**. Typ `?MyFunction` , a poté stiskněte klávesu **Enter**.
+1. Otevřete okno **okamžité** , a to tak, že vyberete možnost **ladit**  >  **Windows**hned  >  **Immediate**. `?MyFunction`Do okna zadejte a stiskněte klávesu **ENTER**.
 
-   Zarážka je dosaženo a hodnota **MáFunkce** v **lokální** je okno **1**. Když je aplikace v režimu pozastavení můžete prozkoumat zásobník volání a dalších oknech ladění.
+   Zarážka je dosaženo a hodnota **MyFunction** v okně **místních** hodnot je **1**. Můžete kontrolovat zásobník volání a další ladicí okna, zatímco je aplikace v režimu přerušení.
 
-1. Vyberte **pokračovat** na panelu nástrojů sady Visual Studio. Ukončení aplikace a **1** se vrátí v **okamžité** okna. Ujistěte se, že jste stále v režimu návrhu.
+1. Na panelu nástrojů sady Visual Studio vyberte **pokračovat** . Aplikace skončí a v **příkazovém** okně se vrátí **1** . Ujistěte se, že jste stále v režimu návrhu.
 
-1. Typ `?MyFunction` v **okamžité** znovu okno a stiskněte klávesu **Enter**. Zarážka je dosaženo a hodnota **MáFunkce** v **lokální** je okno **2**.
+1. Zadejte `?MyFunction` znovu **příkazové** okno a stiskněte klávesu **ENTER**. Zarážka je dosaženo a hodnota **MyFunction** v okně **místních** hodnot je **2**.
 
-1. Nevybírejte **pokračovat**, typ `?MySub()` v **okamžité** okno a poté stiskněte klávesu **Enter**. Zarážka je dosaženo a hodnota **MáFunkce** v **lokální** je okno **3**. Když je aplikace v režimu pozastavení můžete zkoumat stav aplikace.
+1. Bez výběru možnosti **pokračovat**zadejte `?MySub()` do příkazového **podokna** a potom stiskněte klávesu **ENTER**. Zarážka je dosaženo a hodnota **MyFunction** v okně **místní** hodnoty je **3**. Stav aplikace můžete prošetřit, zatímco je aplikace v režimu přerušení.
 
-1. Vyberte **pokračovat**. Zarážka je dosaženo znovu a hodnota **MáFunkce** v **lokální** je okno **2**. **Okamžité** vrátí okno **výraz byl vyhodnocen a nemá žádnou hodnotu**.
+1. Vyberte **Pokračovat**. Zarážka se znovu opakuje a hodnota **MyFunction** v okně **místní** hodnoty je teď **2**. **Okamžité** okno vrací **výraz byl vyhodnocen a nemá žádnou hodnotu**.
 
-1. Vyberte **pokračovat** znovu. Ukončení aplikace a **2** se vrátí v **okamžité** okna. Ujistěte se, že jste stále v režimu návrhu.
+1. Vyberte **pokračovat** znovu. Aplikace skončí a v **příkazovém** okně se vrátí **2** . Ujistěte se, že jste stále v režimu návrhu.
 
-1. Vymazat obsah **okamžité** okna, klikněte pravým tlačítkem a vyberte **Vymazat vše**.
+1. Pokud chcete vymazat obsah příkazového **podokna,** klikněte na něj pravým tlačítkem a vyberte **Vymazat vše**.
 
 ## <a name="debug-a-custom-xaml-control-at-design-time-by-attaching-to-xaml-designer"></a>Ladění vlastního ovládacího prvku XAML v době návrhu připojením k Návrháři XAML
 
@@ -83,17 +83,17 @@ V následujícím příkladu je v jazyce Visual Basic. Můžete také použít *
 
 1. Otevřete stránku XAML obsahující vlastní ovládací prvek, který chcete ladit.
 
-   V případě projektů UWP cílících na Windows Build 16299 nebo vyšší se v tomto kroku spustí proces *UwpSurface. exe* . U verzí WPF a UWP starších než Windows Build 16299 se v tomto kroku spustí proces *XDesProc. exe* .
+   V případě projektů UWP cílících na Windows Build 16299 nebo vyšší se v tomto kroku spustí proces *UwpSurface. exe* . V případě projektů WPF cílících na Windows Build 16299 nebo vyšší bude tento krok spustit proces *WpfSurface. exe* . U verzí WPF a UWP starších než Windows Build 16299 se v tomto kroku spustí proces *XDesProc. exe* . 
 
 1. Otevřete druhou instanci aplikace Visual Studio. Neotevírejte řešení nebo projekt ve druhé instanci.
 
-1. Ve druhé instanci aplikace Visual Studio otevřete nabídku **ladění** a vyberte možnost **připojit k procesu...** .
+1. Ve druhé instanci aplikace Visual Studio otevřete nabídku **ladění** a vyberte možnost **připojit k procesu...**.
 
-1. V závislosti na typu projektu (viz předchozí kroky) vyberte v seznamu dostupných procesů buď proces *UwpSurface. exe* , nebo *XDesProc. exe* .
+1. V závislosti na typu projektu (viz předchozí kroky) vyberte v seznamu dostupných procesů *UwpSurface. exe*, *WpfSurface. exe*nebo proces *XDesProc. exe* .
 
 1. V dialogovém okně **připojit k** **procesu** vyberte pro vlastní ovládací prvek, který chcete ladit, správný typ kódu.
 
-   Pokud vlastní ovládací prvek byl napsán v jazyce .NET, vyberte odpovídající typ kódu .NET, například **Managed (CoreCLR)** . Pokud vlastní ovládací prvek byl napsán v C++, vyberte možnost **nativní**.
+   Pokud vlastní ovládací prvek byl napsán v jazyce .NET, vyberte odpovídající typ kódu .NET, například **Managed (CoreCLR)**. Pokud vlastní ovládací prvek byl napsaný v jazyce C++, vyberte možnost **nativní**.
 
 1. Připojte druhou instanci aplikace Visual Studio kliknutím na tlačítko **připojit** .
 
@@ -107,6 +107,6 @@ V následujícím příkladu je v jazyce Visual Basic. Můžete také použít *
 
 1. Ladit kód ve druhé instanci aplikace Visual Studio.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)

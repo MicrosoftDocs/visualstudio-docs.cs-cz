@@ -1,5 +1,5 @@
 ---
-title: ClickOnce a nastavení aplikací | Dokumentace Microsoftu
+title: Nastavení ClickOnce a aplikace | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -14,46 +14,46 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 153df515fc762b7262dce81d8c1d1c4fe617ad61
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a72b5bc3f3645d9af1008f2c178ab285e8b45449
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62900608"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184130"
 ---
-# <a name="clickonce-and-application-settings"></a>Nastavení technologie ClickOnce a aplikace
-Nastavení aplikace pro Windows Forms umožňuje snadno vytvářet, ukládat a udržovat vlastní aplikace a preference uživatelů v klientském počítači. Následující dokument popisuje, jak fungují soubory nastavení aplikace do aplikace ClickOnce, a jak ClickOnce migruje nastavení při upgradu na novou verzi.
+# <a name="clickonce-and-application-settings"></a>ClickOnce a nastavení aplikace
+Nastavení aplikace pro model Windows Forms usnadňuje vytváření, ukládání a údržbu uživatelských předvoleb aplikace a uživatele na klientovi. Následující dokument popisuje, jak soubory nastavení aplikace fungují v aplikaci ClickOnce a jak ClickOnce migruje nastavení, když uživatel upgraduje na další verzi.
 
- Tyto informace se vztahují pouze k poskytovateli výchozí aplikaci nastavení \<xref:System.Configuration.LocalFileSettingsProvider > třída. Pokud zadáte vlastní poskytovatele, poskytovatel určí způsob, jakým ukládá svoje data a jak upgradu mezi verzemi jeho nastavení. Další informace o poskytovatelích nastavení aplikace najdete v tématu [architektura nastavení aplikace](/dotnet/framework/winforms/advanced/application-settings-architecture).
+ Níže uvedené informace platí pouze pro výchozího zprostředkovatele nastavení aplikace, <xref:System.Configuration.LocalFileSettingsProvider> třídy. Pokud zadáte vlastního poskytovatele, určí tento poskytovatel způsob, jakým ukládá svá data a jak upgradovat její nastavení mezi verzemi. Další informace o poskytovatelích nastavení aplikace najdete v tématu [Architektura nastavení aplikace](/dotnet/framework/winforms/advanced/application-settings-architecture).
 
 ## <a name="application-settings-files"></a>Soubory nastavení aplikace
- Nastavení aplikace využívá dva soubory:  *\<aplikace >. exe.config* a *user.config*, kde *aplikace* je název vaší aplikace Windows Forms. *User.config* se vytvoří na čas klienta první aplikace ukládá nastavení rozsahu uživatele. *\<Aplikace >. exe.config*, oproti tomu bude existovat před jejich nasazením při definování výchozí hodnoty pro nastavení. Visual Studio bude tento soubor obsahovat automaticky při použití jeho **publikovat** příkazu. Pokud vytvoříte aplikaci pomocí ClickOnce *Mage.exe* nebo *MageUI.exe*, je nutné tento soubor je součástí vaší aplikace na jiné soubory při naplňování manifest aplikace.
+ Nastavení aplikace využívá dva soubory: * \<app> . exe. config* a *User. config*, kde *aplikace* je název vaší model Windows Forms aplikace. *User. config* se vytvoří v klientovi, když aplikace poprvé ukládá nastavení s rozsahem uživatele. soubor * \<app> . exe. config*naproti tomu bude existovat před nasazením, pokud definujete výchozí hodnoty pro nastavení. Visual Studio bude tento soubor automaticky zahrnovat při použití příkazu **publikovat** . Pokud vytvoříte aplikaci ClickOnce pomocí nástroje *Mage. exe* nebo *MageUI. exe*, je nutné zajistit, aby byl tento soubor součástí dalších souborů aplikace při naplnění manifestu aplikace.
 
- V aplikacích Windows Forms, není nasazená pomocí ClickOnce, aplikaci prvku  *\<aplikace >. exe.config* soubor je uložen v adresáři aplikace, zatímco *user.config* je uložený soubor v uživatele **Documents and Settings** složky. Do aplikace ClickOnce  *\<aplikace >. exe.config* se nachází v adresáři aplikace v mezipaměti aplikace ClickOnce a *user.config* umístěn v adresáři data ClickOnce pro tuto aplikaci.
+ V model Windows Forms aplikaci, která není nasazena pomocí technologie ClickOnce, je soubor * \<app> . exe. config* aplikace aplikace uložen v adresáři aplikace, zatímco soubor *User. config* je uložen ve složce **Documents and Settings** uživatele. V aplikaci ClickOnce je soubor. * \<app> exe. config* umístěn v adresáři aplikace v mezipaměti aplikace ClickOnce a *uživatel. config* je umístěn v adresáři dat ClickOnce pro danou aplikaci.
 
- Bez ohledu na to, jak nasadit aplikace, nastavení aplikace zajišťuje bezpečný přístup ke čtení  *\<aplikace >. exe.config*a bezpečné pro čtení a zápis přístup k *user.config*.
+ Bez ohledu na to, jakým způsobem nasazujete aplikaci, nastavení aplikace zajišťuje bezpečný přístup pro čtení k * \<app> souboru. exe. config*a bezpečný přístup pro čtení a zápis do *souboru User. config*.
 
- Do aplikace ClickOnce velikosti souboru konfigurace používají nastavení aplikace omezen velikostí mezipaměti technologie ClickOnce. Další informace najdete v tématu [ClickOnce – Přehled mezipaměti](../deployment/clickonce-cache-overview.md).
+ V aplikaci ClickOnce je velikost konfiguračních souborů používaných nastavením aplikace omezená na velikost mezipaměti ClickOnce. Další informace najdete v tématu [Přehled mezipaměti ClickOnce](../deployment/clickonce-cache-overview.md).
 
-## <a name="version-upgrades"></a>Upgrady verzí
- Stejně jako každý verzi aplikace ClickOnce je izolovaný od ostatních verzí, jsou izolované od nastavení u jiných verzí i nastavení aplikace pro aplikaci ClickOnce. Když uživatel aktualizuje na novější verzi vaší aplikace, nastavení aplikace porovnává nejnovější (nejvyšší číslované) nastavení verze proti nastavení dodává s aktualizovanou verzi a sloučení nastavení na novou sadu souborů s nastavením.
+## <a name="version-upgrades"></a>Upgrady verze
+ Stejně jako každá verze aplikace ClickOnce je izolovaná od všech ostatních verzí, nastavení aplikace pro aplikaci ClickOnce je izolované i v nastavení jiných verzí. Když uživatel upgraduje na novější verzi vaší aplikace, nastavení aplikace porovná nejnovější nastavení verze (s nejvyšším číslem) s nastaveními dodanými s aktualizovanou verzí a sloučí nastavení do nové sady souborů nastavení.
 
- Následující tabulka popisuje, jak určuje nastavení, které chcete kopírovat, nastavení aplikace.
+ Následující tabulka popisuje, jak nastavení aplikace určuje, která nastavení se mají kopírovat.
 
 |Typ změny|Akce upgradu|
 |--------------------|--------------------|
-|Nastavení přidané do  *\<aplikace >. exe.config*|Nové nastavení je sloučen do aktuální verze  *\<aplikace >. exe.config*|
-|Odebrat z nastavení  *\<aplikace >. exe.config*|Původní nastavení se odebere z aktuální verze  *\<aplikace >. exe.config*|
-|Výchozí nastavení, které se změnily. místní nastavení stále nastavené na původní výchozí v *user.config*|Toto nastavení je sloučen do aktuální verze *user.config* nový výchozí hodnotu|
-|Výchozí nastavení, které se změnily. nastavení sady pro jiné než výchozí v *user.config*|Toto nastavení je sloučen do aktuální verze *user.config* s jinou než výchozí hodnotu uchovávají|
+|Nastavení přidáno do * \<app> . exe. config*|Nové nastavení je sloučeno do aktuální verze * \<app> . exe. config* .|
+|Nastavení se odebralo z * \<app> . exe. config* .|Staré nastavení se odebere z aktuální verze * \<app> . exe. config* .|
+|Nastavení se změnilo jako výchozí. místní nastavení se pořád nastavuje na původní výchozí hodnotu v *User. config.*|Toto nastavení se sloučí do *souboru User. config* aktuální verze s novou výchozí hodnotou.|
+|Nastavení se změnilo jako výchozí. nastavení nastavené na jiný než výchozí v *souboru User. config*|Toto nastavení se sloučí do *souboru User. config* aktuální verze s nezachovaným nastavením bez výchozí hodnoty.|
 
-Pokud jste vytvořili nastavení aplikace obálkovou třídu a chcete přizpůsobit logiku aktualizací, můžete přepsat \<xref:System.Configuration.ApplicationSettingsBase.Upgrade%2A > metoda.
+Pokud jste vytvořili svou vlastní obálkovou třídu nastavení aplikace a chcete přizpůsobit logiku aktualizace, můžete <xref:System.Configuration.ApplicationSettingsBase.Upgrade%2A> metodu přepsat.
 
-## <a name="clickonce-and-roaming-settings"></a>ClickOnce a nastavení roamingu
- ClickOnce nefunguje s cestovní nastavení, která umožňuje soubor nastavení chcete postupovat podle různých počítačích v síti. Pokud potřebujete nastavení roamingu, musíte buď k implementaci poskytovatele nastavení aplikace, která ukládá nastavení v síti, nebo vyvíjet vlastní třídy vlastní nastavení pro ukládání nastavení ve vzdáleném počítači. Další informace v nastavení poskytovatelů najdete v tématu [architektura nastavení aplikace](/dotnet/framework/winforms/advanced/application-settings-architecture).
+## <a name="clickonce-and-roaming-settings"></a>Nastavení ClickOnce a roamingu
+ ClickOnce nepracuje s nastaveními roamingu, což umožňuje, aby soubor nastavení následoval na počítačích v síti. Pokud potřebujete nastavení roamingu, budete muset buď implementovat poskytovatele nastavení aplikace, který bude ukládat nastavení přes síť, nebo vyvinout vlastní třídy nastavení pro ukládání nastavení na vzdáleném počítači. Další informace o zprostředkovatelích nastavení najdete v tématu [Architektura nastavení aplikace](/dotnet/framework/winforms/advanced/application-settings-architecture).
 
-## <a name="see-also"></a>Viz také:
-- [ClickOnce – zabezpečení a nasazení](../deployment/clickonce-security-and-deployment.md)
+## <a name="see-also"></a>Viz také
+- [Zabezpečení a nasazení ClickOnce](../deployment/clickonce-security-and-deployment.md)
 - [Přehled nastavení aplikace](/dotnet/framework/winforms/advanced/application-settings-overview)
-- [ClickOnce – Přehled mezipaměti](../deployment/clickonce-cache-overview.md)
-- [Přístup k lokálním a vzdáleným datům v aplikacích ClickOnce](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)
+- [Přehled mezipaměti ClickOnce](../deployment/clickonce-cache-overview.md)
+- [Přístup k místním a vzdáleným datům v aplikacích ClickOnce](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)

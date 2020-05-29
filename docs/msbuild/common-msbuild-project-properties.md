@@ -1,5 +1,5 @@
 ---
-title: Společné vlastnosti projektu MSBuild | Dokumenty společnosti Microsoft
+title: Obecné vlastnosti projektu nástroje MSBuild | Microsoft Docs
 ms.date: 01/18/2018
 ms.topic: reference
 dev_langs:
@@ -18,121 +18,122 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ece57a102851efe0198f8993b60dba8e0eae6dec
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7502644c9820b47149acb4a9b8a749bec70551e4
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634419"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84180425"
 ---
-# <a name="common-msbuild-project-properties"></a>Běžné vlastnosti projektu MSBuild
+# <a name="common-msbuild-project-properties"></a>Obecné vlastnosti projektu nástroje MSBuild
 
-V následující tabulce jsou uvedeny často používané vlastnosti, které jsou definovány v souborech projektu sady Visual Studio nebo zahrnuty do souborů *.targets,* které msbuild poskytuje.
+V následující tabulce jsou uvedeny často používané vlastnosti, které jsou definovány v souborech projektu sady Visual Studio nebo zahrnuté v souborech *. targets* , které poskytuje MSBuild.
 
- Soubory projektu v sadě Visual Studio (*.csproj*, *.vbproj*, *.vcxproj*a další) obsahují kód XML MSBuild, který se spustí při vytváření projektu pomocí rozhraní IDE. Projekty obvykle importují jeden nebo více souborů *.targets* k definování jejich procesu sestavení. Další informace naleznete v tématu [MSBuild .targets files](../msbuild/msbuild-dot-targets-files.md).
+ Soubory projektu v aplikaci Visual Studio (*. csproj*, *. vbproj*, *. vcxproj*a jiné) obsahují kód XML nástroje MSBuild, který se spouští při vytváření projektu pomocí integrovaného vývojového prostředí (IDE). Projekty obvykle importují jeden nebo více souborů *. targets* pro definování svého procesu sestavení. Další informace naleznete v tématu [MSBuild. targets Files](../msbuild/msbuild-dot-targets-files.md).
 
 ## <a name="list-of-common-properties-and-parameters"></a>Seznam společných vlastností a parametrů
 
 | Název vlastnosti nebo parametru | Popis |
 |------------------------------------| - |
-| Další libpathy | Určuje další složky, ve kterých by kompilátory měly hledat referenční sestavení. |
-| Přidejte moduly | Způsobí, že kompilátor zpřístupnit všechny informace o typu ze zadaných souborů pro projekt, který kompilaci. Tato vlastnost je `/addModules` ekvivalentní přepínač kompilátoru. |
-| ALToolPath | Cesta, kde lze nalézt *AL.exe.* Tato vlastnost přepíše aktuální verzi *souboru AL.exe* a povolí použití jiné verze. |
-| Ikona aplikace | Soubor ikony *.ico,* který má být předáván kompilátoru pro vložení jako ikonu Win32. Vlastnost je ekvivalentní `/win32icon` přepínač kompilátoru. |
-| ApplicationManifest | Určuje cestu k souboru, který se používá ke generování externích informací o manifestu řízení uživatelských účtů (UAC). Platí pouze pro projekty sady Visual Studio, které cílí na systém Windows Vista.<br /><br /> Ve většině případů je vložen manifest. Pokud však použijete nasazení com nebo ClickOnce zdarma registrace, může být manifest externí soubor, který je nainstalován společně s sestaveními aplikací. Další informace naleznete v vlastnosti NoWin32Manifest v tomto tématu. |
-| Soubor OriginatorKeyFile sestavení | Určuje soubor, který se používá k podepsání sestavení (*.snk* nebo *.pfx*) a který je předán [úkolu ResolveKeySource](../msbuild/resolvekeysource-task.md) ke generování skutečného klíče, který se používá k podepsání sestavení. |
-| AssemblySearchPaths | Seznam umístění pro vyhledávání během rozlišení sestavení referenční sestavení. Pořadí, ve kterém se cesty zobrazují v tomto seznamu, má smysl, protože cesty uvedené výše mají přednost před pozdějšími položkami. |
-| Assemblyname | Název konečného výstupního sestavení po sestavení projektu. |
-| Základní adresa | Určuje základní adresu hlavního výstupního sestavení. Tato vlastnost je `/baseaddress` ekvivalentní přepínač kompilátoru. |
-| BaseIntermediateOutputPath | Složka nejvyšší úrovně, kde jsou vytvořeny všechny zprostředkující výstupní složky specifické pro konfiguraci. Výchozí hodnota je `obj\`. Následující kód je příklad:`<BaseIntermediateOutputPath>c:\xyz\obj\</BaseIntermediateOutputPath>` |
-| Základní outputcesta | Určuje základní cestu pro výstupní soubor. Pokud je nastavena, MSBuild bude používat `OutputPath = $(BaseOutputPath)\$(Configuration)\`. Příklad syntaxe:`<BaseOutputPath>c:\xyz\bin\</BaseOutputPath>` |
-| BuildInParallel | Logická hodnota, která označuje, zda jsou odkazy na projekt vytvořeny nebo vyčištěny paralelně při použití multi-Proc MSBuild. Výchozí hodnota `true`je , což znamená, že projekty budou vytvořeny paralelně, pokud systém má více jader nebo procesorů. |
-| BuildProjectReferences | Logická hodnota, která označuje, zda jsou odkazy na projekt sestaveny msbuild. Automaticky nastavte `false` na pokud vytváříte projekt v integrovaném vývojovém `true` prostředí sady Visual Studio (IDE), pokud jinak. `-p:BuildProjectReferences=false`lze zadat na příkazovém řádku, aby se zabránilo kontrole, zda jsou odkazované projekty aktuální. |
-| Soubor CleanFile | Název souboru, který bude použit jako "čistá mezipaměť". Čistá mezipaměť je seznam generovaných souborů, které mají být odstraněny během operace čištění. Soubor je umístěn v cestě zprostředkující výstup procesem sestavení.<br /><br /> Tato vlastnost určuje pouze názvy souborů, které nemají informace o cestě. |
-| Codepage | Určuje znakovou stránku, která má být v kompilaci používána pro všechny soubory zdrojového kódu. Tato vlastnost je `/codepage` ekvivalentní přepínač kompilátoru. |
-| Soubor compilerresponsefile | Volitelný soubor odpovědí, který lze předat úlohám kompilátoru. |
-| Konfigurace | Konfigurace, kterou vytváříte, buď "Ladění" nebo "Release". |
-| CscToolPath | Cesta *csc.exe*, kompilátor jazyka C#. |
-| CustomBeforeMicrosoftCommonTargets | Název souboru projektu nebo cíle souboru, který má být importován automaticky před importem společných cílů. |
-| Symboly ladění | Logická hodnota, která označuje, zda jsou symboly generovány sestavením.<br /><br /> Nastavení **-p:DebugSymbols=false** na příkazovém řádku zakáže generování souborů symbolů databáze programů (*PDB).* |
-| Typ ladění | Definuje úroveň ladicích informací, které chcete vygenerovat. Platné hodnoty jsou "úplné", "pdbonly", "přenosné", "vložené" a "žádné". |
-| Definovat konstanty | Definuje konstanty podmíněného kompilátoru. Dvojice symbolů a hodnot jsou odděleny středníky a jsou určeny pomocí následující syntaxe:<br /><br /> *symbol1 = hodnota1 ; symbol2 = hodnota2*<br /><br /> Vlastnost je ekvivalentní `/define` přepínač kompilátoru. |
-| Definovatladění | Logická hodnota, která označuje, zda chcete definovat konstantu LADĚNÍ. |
-| Definovattrasovat | Logická hodnota, která označuje, zda chcete definovat konstantu TRACE. |
-| Delaysign | Logická hodnota, která označuje, zda chcete zpoždění podepsat sestavení spíše než úplné podepisování. |
-| Deterministická | Logická hodnota, která označuje, zda by měl kompilátor vyrábět identické sestavy pro identické vstupy. Tento parametr odpovídá `/deterministic` přepínači kompilátorů *vbc.exe* a *csc.exe.* |
-| Upozornění na zakázané | Potlačí zadaná upozornění. Musí být zadána pouze číselná část identifikátoru upozornění. Více upozornění jsou odděleny středníky. Tento parametr odpovídá `/nowarn` přepínači kompilátoru *vbc.exe.* |
-| Zakázat funkci DisableUpToDateCheck | Logická hodnota, která platí pouze pro Visual Studio. Správce sestavení sady Visual Studio používá proces s názvem FastUpToDateCheck k určení, zda projekt musí být znovu sestaven, aby byl aktuální. Tento proces je rychlejší než pomocí MSBuild k určení tohoto. Nastavení Vlastnost disableFastUpToDateCheck `true` umožňuje obejít správce sestavení sady Visual Studio a vynutit jeho použití MSBuild k určení, zda je projekt aktuální. |
-| Soubor dokumentace | Název souboru, který je generován jako soubor dokumentace XML. Tento název obsahuje pouze název souboru a neobsahuje žádné informace o cestě. |
-| Sestava chyb | Určuje, jak by měla úloha kompilátoru vykazovat interní chyby kompilátoru. Platné hodnoty jsou "výzva", "odeslat" nebo "žádné". Tato vlastnost je `/errorreport` ekvivalentní přepínač kompilátoru. |
-| Adresa ExcludeDeploymentUrl | [Úloha GenerateDeploymentManifest](../msbuild/generatedeploymentmanifest-task.md) přidá značku deploymentProvider do manifestu nasazení, pokud soubor projektu obsahuje některý z následujících prvků:<br /><br /> - UpdateUrl<br />- InstallUrl<br />- PublishUrl<br /><br /> Pomocí ExcludeDeploymentUrl však můžete zabránit přidání značky deploymentProvider do manifestu nasazení i v případě, že jsou zadány některé z výše uvedených adres URL. Chcete-li to provést, přidejte do souboru projektu následující vlastnost:<br /><br /> `<ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>` <br /><br />**Poznámka:**  ExcludeDeploymentUrl není vystavena v IDE sady Visual Studio a lze nastavit pouze ruční úpravou souboru projektu. Nastavení této vlastnosti nemá vliv na publikování v rámci sady Visual Studio; to znamená, že značka deploymentProvider bude stále přidána do adresy URL určené publishurl. |
-| Zarovnání souborů | Určuje, kde mají být v bajtech zarovnány části výstupního souboru. Platné hodnoty jsou 512, 1024, 2048, 4096, 8192. Tato vlastnost je `/filealignment` ekvivalentní přepínač kompilátoru. |
-| FrameworkPathOverride | Určuje umístění souborů *mscorlib.dll* a *microsoft.visualbasic.dll*. Tento parametr je `/sdkpath` ekvivalentní přepínači kompilátoru *vbc.exe.* |
-| Generovat dokumentaci | (C#, Visual Basic) Logický parametr, který označuje, zda je sestavenígenerována dokumentace. Pokud `true`sestavení generuje informace o dokumentaci a umístí je do souboru *XML* spolu s názvem spustitelného souboru nebo knihovny, kterou vytvořil avytvořil úlohu sestavení. |
-| GenerateFullPaths | (C#) Generovat úplné cesty pro názvy souborů ve výstupu pomocí [-fullpaths](/dotnet/csharp/language-reference/compiler-options/fullpaths-compiler-option) kompilátormožnost. |
-| Generovat serializační sestavení | Označuje, zda mají být sestavení serializace XML generována pomocí *sgen.exe*, kterou lze nastavit na zapnuto, automaticky nebo vypnuto. Tato vlastnost se používá pro sestavení, která cílí pouze na rozhraní .NET Framework. Chcete-li generovat sestavení serializace XML pro sestavení .NET Standard nebo .NET Core, odkazujte na balíček *Microsoft.XmlSerializer.Generator* NuGet. |
-| IntermediateOutputPath | Úplná zprostředkující výstupní `BaseIntermediateOutputPath`cesta odvozená z aplikace , pokud není zadána žádná cesta. Například *\obj\debug\\*. |
-| Název_kontejneru | Název kontejneru klíčů silného názvu. |
-| Soubor KeyOriginatorFile | Název souboru klíče silného názvu. |
-| Název_moduluAssembly | Název sestavení, které má být začleněn zkompilovaný modul. Vlastnost je ekvivalentní `/moduleassemblyname` přepínač kompilátoru. |
-| MSBuildProjectExtensionsPath | Určuje cestu, kde jsou umístěna rozšíření projektu. Ve výchozím nastavení to má `BaseIntermediateOutputPath`stejnou hodnotu jako . |
-| NoLogo | Logická hodnota, která označuje, zda má být logo kompilátoru vypnuto. Tato vlastnost je `/nologo` ekvivalentní přepínač kompilátoru. |
-| NoStdLib | Logická hodnota, která označuje, zda se má vyhnout odkazování na standardní knihovnu *(mscorlib.dll).* Výchozí hodnota je `false`. |
-| NoVBRuntimeReference | Logická hodnota, která označuje, zda by měl být do projektu zahrnut jako odkaz na soubor Runtime jazyka Visual Basic *(Microsoft.VisualBasic.dll).* |
-| NoWin32Manifest | Logická hodnota, která označuje, zda informace o manifestu řízení uživatelských účtů (UAC) budou vloženy do spustitelného souboru aplikace. Platí pouze pro projekty sady Visual Studio, které cílí na systém Windows Vista. V projektech nasazených pomocí clickonce a registrace bez COM, tento prvek je ignorována. `False`(výchozí hodnota) určuje, že informace o manifestu řízení uživatelských účtů (UAC) budou vloženy do spustitelného souboru aplikace. `True`určuje, že informace manifestu uac nebudou vloženy.<br /><br /> Tato vlastnost platí pouze pro projekty sady Visual Studio, které cílí na systém Windows Vista. V projektech nasazených pomocí clickonce a registrace bez COM, tato vlastnost je ignorována.<br /><br /> NoWin32Manifest byste měli přidat pouze v případě, že nechcete, aby visual studio vkládalo žádné informace o manifestu do spustitelného souboru aplikace. tento proces se nazývá *virtualizace*. Chcete-li použít `<ApplicationManifest>` virtualizaci, `<NoWin32Manifest>` nastavte ve spojení s následujícím:<br /><br /> - Pro projekty jazyka, odeberte `<ApplicationManifest>` uzel. (V projektech `<NoWin32Manifest>` jazyka Visual Basic `<ApplicationManifest>` je ignorována, pokud existuje uzel.)<br />- Pro projekty `<ApplicationManifest>` Jazyka `False` `<NoWin32Manifest>` C# nastavte na a na `True`. (V projektech `<ApplicationManifest>` Jazyka `<NoWin32Manifest>`C# přepíše .)<br /> Tato vlastnost je `/nowin32manifest` ekvivalentní přepínačkompilátoru *vbc.exe*. |
-| Optimalizace | Logická hodnota, která `true`při nastavení na , umožňuje optimalizace kompilátoru. Tato vlastnost je `/optimize` ekvivalentní přepínač kompilátoru. |
-| OptionCompare | Určuje způsob porovnání řetězců. Platné hodnoty jsou "binární" nebo "text". Tato vlastnost je `/optioncompare` ekvivalentní přepínačkompilátoru *vbc.exe*. |
-| OptionExplicit | Logická hodnota, která `true`při nastavení na , vyžaduje explicitní deklaraci proměnných ve zdrojovém kódu. Tato vlastnost je `/optionexplicit` ekvivalentní přepínač kompilátoru. |
-| OptionInfer | Logická hodnota, která `true`při nastavení na , umožňuje odvození typu proměnných. Tato vlastnost je `/optioninfer` ekvivalentní přepínač kompilátoru. |
-| OptionStrict | Logická hodnota, která `true`při nastavení na , způsobí, že úloha sestavení vynutit sémantiku přísného typu omezit implicitní převody typu. Tato vlastnost je `/optionstrict` ekvivalentní přepínači kompilátoru *vbc.exe.* |
-| OutDir | Označuje konečné výstupní umístění pro projekt nebo řešení. Při vytváření řešení OutDir lze shromáždit více výstupů projektu v jednom umístění. Kromě toho OutDir je součástí AssemblySearchPaths slouží k řešení odkazů. Například *bin\Debug*. |
+| AdditionalLibPaths | Určuje další složky, ve kterých mají kompilátory Hledat referenční sestavení. |
+| AddModules | Způsobí, že kompilátor zpřístupní všechny informace o typech ze zadaných souborů pro projekt, který kompilujete. Tato vlastnost je ekvivalentní `/addModules` přepínači kompilátoru. |
+| ALToolPath | Cesta, kde lze nalézt *Al. exe* . Tato vlastnost přepíše aktuální verzi *Al. exe* , aby bylo možné použít jinou verzi. |
+| ApplicationIcon | Soubor ikony *. ico* , který se předá kompilátoru pro vložení jako ikona Win32. Vlastnost je ekvivalentní `/win32icon` přepínači kompilátoru. |
+| Souboru ApplicationManifest | Určuje cestu k souboru, který se používá ke generování informací o manifestu nástroje řízení externích uživatelských účtů (UAC). Platí pouze pro projekty aplikace Visual Studio cílené na systém Windows Vista.<br /><br /> Ve většině případů je manifest vložen. Nicméně pokud používáte registraci bezplatného modelu COM nebo ClickOnce, manifest může být externí soubor, který je nainstalován společně se sestaveními vaší aplikace. Další informace najdete v tomto tématu v vlastnosti NoWin32Manifest. |
+| AssemblyOriginatorKeyFile | Určuje soubor, který se používá k podepsání sestavení (*. snk* nebo *. pfx*) a který je předán [úloze ResolveKeySource –](../msbuild/resolvekeysource-task.md) , aby vygeneroval skutečný klíč, který se používá k podepsání sestavení. |
+| AssemblySearchPaths | Seznam umístění, která se mají hledat během překladu referenčního sestavení v době sestavení Pořadí, ve kterém se cesty zobrazují v tomto seznamu, je smysluplné, protože cesty uvedené dříve mají přednost před pozdějšími položkami. |
+| Doplňk | Název konečného výstupního sestavení po sestavení projektu. |
+| BaseAddress | Určuje základní adresu hlavního výstupního sestavení. Tato vlastnost je ekvivalentní `/baseaddress` přepínači kompilátoru. |
+| BaseIntermediateOutputPath | Složka na nejvyšší úrovni, kde jsou vytvořeny všechny přechodné výstupní složky specifické pro konfiguraci. Výchozí hodnota je `obj\`. Následující kód je příklad:`<BaseIntermediateOutputPath>c:\xyz\obj\</BaseIntermediateOutputPath>` |
+| BaseOutputPath | Určuje základní cestu pro výstupní soubor. Pokud je nastaveno, nástroj MSBuild bude používat `OutputPath = $(BaseOutputPath)\$(Configuration)\` . Příklad syntaxe:`<BaseOutputPath>c:\xyz\bin\</BaseOutputPath>` |
+| BuildInParallel | Logická hodnota, která označuje, zda jsou odkazy na projekt vytvářeny nebo čištěny paralelně při použití nástroje MSBuild pro více procesů. Výchozí hodnota je `true` , což znamená, že projekty budou sestaveny paralelně, pokud má systém více jader nebo procesorů. |
+| BuildProjectReferences | Logická hodnota, která určuje, zda jsou odkazy na projekt sestaveny nástrojem MSBuild. Automaticky nastaveno na `false` , pokud vytváříte projekt v integrovaném vývojovém prostředí sady Visual Studio (IDE), `true` Pokud je v opačném případě. `-p:BuildProjectReferences=false`dá se zadat na příkazovém řádku, abyste se vyhnuli kontrole, jestli jsou odkazované projekty aktuální. |
+| CleanFile | Název souboru, který se použije jako "čistá mezipaměť". Čistá mezipaměť je seznam generovaných souborů, které mají být odstraněny během operace čištění. Soubor je umístěn do mezilehlé výstupní cesty procesem sestavení.<br /><br /> Tato vlastnost určuje pouze názvy souborů, které nemají informace o cestě. |
+| Stránky | Určuje znakovou stránku, která se má použít pro všechny soubory zdrojového kódu v kompilaci. Tato vlastnost je ekvivalentní `/codepage` přepínači kompilátoru. |
+| CompilerResponseFile | Volitelný soubor odpovědí, který lze předat úlohám kompilátoru. |
+| Konfigurace | Konfigurace, kterou vytváříte, buď "ladit" nebo "Release". |
+| CscToolPath | Cesta k souboru *CSc. exe*, kompilátor jazyka C#. |
+| CustomBeforeMicrosoftCommonTargets | Název souboru projektu nebo souboru cílů, který má být importován automaticky před importem běžných cílů. |
+| DebugSymbols | Logická hodnota, která určuje, zda jsou symboly generovány sestavením.<br /><br /> Nastavení **-p:DebugSymbols = false** na příkazovém řádku zakáže generování souborů symbolů databáze programu (*PDB*). |
+| DebugType | Definuje úroveň ladicích informací, které chcete vygenerovat. Platné hodnoty jsou "Full", "pdbonly", "Portable", "Embedded" a "none". |
+| DefineConstants | Definuje podmíněné konstanty kompilátoru. Páry symbol/hodnota jsou odděleny středníky a jsou určeny pomocí následující syntaxe:<br /><br /> *symbol1 = hodnota1; symbol2 = hodnota2*<br /><br /> Vlastnost je ekvivalentní `/define` přepínači kompilátoru. |
+| DefineDebug | Logická hodnota, která určuje, zda má být definována konstanta ladění. |
+| DefineTrace | Logická hodnota, která určuje, zda má být definována konstanta TRACE. |
+| DelaySign | Logická hodnota, která označuje, zda chcete sestavení zpozdit podpisem, nikoli úplným podepsáním. |
+| Deterministická | Logická hodnota, která určuje, zda má kompilátor vytvořit identická sestavení pro stejné vstupy. Tento parametr odpovídá `/deterministic` přepínači kompilátoru *Vbc. exe* a *CSc. exe* . |
+| DisabledWarnings | Potlačí zadaná upozornění. Je třeba zadat pouze číselnou část identifikátoru upozornění. Několik upozornění je odděleno středníky. Tento parametr odpovídá `/nowarn` přepínači kompilátoru *Vbc. exe* . |
+| DisableFastUpToDateCheck | Logická hodnota, která se vztahuje pouze na Visual Studio. Správce sestavení sady Visual Studio používá proces nazvaný FastUpToDateCheck k určení, zda projekt musí být znovu sestaven, aby byl aktuální. Tento proces je rychlejší než použití nástroje MSBuild k tomu, aby ji bylo možné určit. Nastavení vlastnosti DisableFastUpToDateCheck na `true` umožňuje obejít správce sestavení sady Visual Studio a vynutit použití nástroje MSBuild k určení, zda je projekt aktuální. |
+| DocumentationFile | Název souboru, který je generován jako soubor dokumentace XML. Tento název obsahuje pouze název souboru a neobsahuje informace o cestě. |
+| ErrorReport | Určuje, jak má úloha kompilátoru nahlásit interní chyby kompilátoru. Platné hodnoty jsou "prompt", "Odeslat" nebo "none". Tato vlastnost je ekvivalentní `/errorreport` přepínači kompilátoru. |
+| ExcludeDeploymentUrl | [Úloha GenerateDeploymentManifest –](../msbuild/generatedeploymentmanifest-task.md) Přidá značku deploymentProvider do manifestu nasazení, pokud soubor projektu obsahuje některý z následujících prvků:<br /><br /> - UpdateUrl<br />– InstallUrl<br />- PublishUrl<br /><br /> Pomocí ExcludeDeploymentUrl však můžete zabránit přidání značky deploymentProvider do manifestu nasazení, i když je zadána kterákoli z výše uvedených adres URL. Chcete-li to provést, přidejte do souboru projektu následující vlastnost:<br /><br /> `<ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>` <br /><br />**Poznámka:**  ExcludeDeploymentUrl se nezveřejňuje v integrovaném vývojovém prostředí sady Visual Studio a dá se nastavit jenom ruční úpravou souboru projektu. Nastavení této vlastnosti neovlivní publikování v rámci sady Visual Studio; To znamená, že značka deploymentProvider bude stále přidána na adresu URL určenou parametrem PublishUrl. |
+| Zarovnání. | Určuje, kam se v bajtech mají zarovnat oddíly výstupního souboru. Platné hodnoty jsou 512, 1024, 2048, 4096, 8192. Tato vlastnost je ekvivalentní `/filealignment` přepínači kompilátoru. |
+| FrameworkPathOverride | Určuje umístění *knihovny mscorlib. dll* a *Microsoft. VisualBasic. dll*. Tento parametr je ekvivalentní `/sdkpath` přepínači kompilátoru *Vbc. exe* . |
+| GenerateDocumentation | (C#, Visual Basic) Logický parametr, který označuje, zda je dokumentace generována sestavením. Pokud `true` , sestavení generuje informace o dokumentaci a umístí je do souboru *. XML* spolu s názvem spustitelného souboru nebo knihovny, kterou vytvořil úkol sestavení. |
+| GenerateFullPaths | Jazyk Vygenerujte úplné cesty pro názvy souborů ve výstupu pomocí možnosti kompilátoru [-fullpaths –](/dotnet/csharp/language-reference/compiler-options/fullpaths-compiler-option) . |
+| GenerateSerializationAssemblies | Určuje, zda by měla být sestavení serializace XML generována nástrojem *Sgen. exe*, který lze nastavit na hodnotu on, auto nebo off. Tato vlastnost se používá pouze pro sestavení, která cílí pouze na .NET Framework. Chcete-li generovat sestavení serializace XML pro sestavení .NET Standard nebo .NET Core, odkazujte na balíček NuGet *Microsoft. XmlSerializer. Generator* . |
+| IntermediateOutputPath | Úplná zprostředkující výstupní cesta odvozená od `BaseIntermediateOutputPath` , pokud není zadána žádná cesta. Například *\obj\debug \\ *. |
+| ContainerName | Název kontejneru klíčů se silným názvem. |
+| KeyOriginatorFile | Název souboru klíče se silným názvem. |
+| Moduleassemblyname – | Název sestavení, do kterého má být kompilovaný modul začleněn. Vlastnost je ekvivalentní `/moduleassemblyname` přepínači kompilátoru. |
+| MSBuildProjectExtensionsPath | Určuje cestu, kde se nachází rozšíření projektu. Ve výchozím nastavení má tato hodnota stejnou hodnotu jako `BaseIntermediateOutputPath` . |
+| NoLogo | Logická hodnota, která označuje, zda má být vypnuto logo kompilátoru. Tato vlastnost je ekvivalentní `/nologo` přepínači kompilátoru. |
+| NoStdLib | Logická hodnota, která označuje, zda se má vyhýbat odkazování na standardní knihovnu (*mscorlib. dll*). Výchozí hodnota je `false`. |
+| NoVBRuntimeReference | Logická hodnota, která označuje, zda Visual Basic modul runtime (*Microsoft. VisualBasic. dll*) by měl být zahrnut jako odkaz v projektu. |
+| NoWin32Manifest | Logická hodnota, která označuje, zda informace o manifestu nástroje řízení uživatelských účtů (UAC) budou vloženy do spustitelného souboru aplikace. Platí pouze pro projekty aplikace Visual Studio cílené na systém Windows Vista. V projektech nasazených pomocí technologie ClickOnce a modelu COM bez registrace je tento prvek ignorován. `False`(výchozí hodnota) určuje, že informace o manifestu nástroje řízení uživatelských účtů (UAC) budou vloženy do spustitelného souboru aplikace. `True`Určuje, že informace o manifestu nástroje řízení uživatelských účtů nebudou vloženy.<br /><br /> Tato vlastnost se vztahuje pouze na projekty sady Visual Studio cílené na systém Windows Vista. V projektech nasazených pomocí technologie ClickOnce a modelu COM bez registrace je tato vlastnost ignorována.<br /><br /> NoWin32Manifest byste měli přidat pouze v případě, že nechcete, aby aplikace Visual Studio vložila do spustitelného souboru aplikace žádné informace o manifestu. Tento proces se nazývá *virtualizace*. Chcete-li použít virtualizaci, nastavte `<ApplicationManifest>` ve spojení s `<NoWin32Manifest>` následujícím způsobem:<br /><br /> – Pro Visual Basic projekty odeberte `<ApplicationManifest>` uzel. (V Visual Basic projekty `<NoWin32Manifest>` se ignoruje, když `<ApplicationManifest>` uzel existuje.)<br />– Pro projekty v jazyce C# nastavte `<ApplicationManifest>` na `False` a `<NoWin32Manifest>` na `True` . (V projektech C#, `<ApplicationManifest>` Overrides `<NoWin32Manifest>` .)<br /> Tato vlastnost je ekvivalentní `/nowin32manifest` přepínači kompilátoru *Vbc. exe*. |
+| Optimalizace | Logická hodnota, která Pokud je nastavena na `true` , umožňuje optimalizace kompilátoru. Tato vlastnost je ekvivalentní `/optimize` přepínači kompilátoru. |
+| OptionCompare – | Určuje, jak se provádí porovnávání řetězců. Platné hodnoty jsou "Binary" nebo "text". Tato vlastnost je ekvivalentní `/optioncompare` přepínači kompilátoru *Vbc. exe*. |
+| OptionExplicit – | Logická hodnota, která Pokud je nastavena na `true` , vyžaduje explicitní deklaraci proměnných ve zdrojovém kódu. Tato vlastnost je ekvivalentní `/optionexplicit` přepínači kompilátoru. |
+| Optioninfer – | Logická hodnota, která Pokud je nastavena na `true` , umožňuje odvozování typů proměnných. Tato vlastnost je ekvivalentní `/optioninfer` přepínači kompilátoru. |
+| OptionStrict – | Logická hodnota, která Pokud je nastavena na `true` , způsobí, že úloha sestavení vynutí striktní sémantiku typu pro omezení implicitních převodů typu. Tato vlastnost je ekvivalentní `/optionstrict` přepínači kompilátoru *Vbc. exe* . |
+| OutDir | Označuje konečné výstupní umístění projektu nebo řešení. Při sestavování řešení lze OutDir použít ke shromáždění více výstupů projektu na jednom místě. Kromě toho je OutDir zahrnut v AssemblySearchPaths, který se používá pro překládání odkazů. Například *bin\Debug*. |
 | OutputPath | Určuje cestu k výstupnímu adresáři vzhledem k adresáři projektu, například *bin\Debug*. |
-| Typ výstupu | Určuje formát souboru výstupního souboru. Tento parametr může mít jednu z následujících hodnot:<br /><br /> - V knihovně. Vytvoří knihovnu kódu. (Výchozí hodnota.)<br />- Exe. Vytvoří konzolovou aplikaci.<br />- Modul. Vytvoří modul.<br />- Winexe, co se s tím zvýžela. Vytvoří program založený na systému Windows.<br /><br /> Tato vlastnost je `/target` ekvivalentní přepínači kompilátoru *vbc.exe.* |
-| Přepsatsoubory ReadOnlyFiles | Logická hodnota, která označuje, zda chcete povolit sestavení přepsat soubory jen pro čtení nebo spustit chybu. |
-| Mapa cesty | Určuje způsob mapování fyzických cest na názvy zdrojových cest, které kompilátor vyvodí. Tato vlastnost je `/pathmap` ekvivalentní přepínači kompilátoru *csc.exe.* |
-| Soubor Pdb | Název souboru *PDB,* který vyzařujete. Tato vlastnost je `/pdb` ekvivalentní přepínači kompilátoru *csc.exe.* |
-| Platforma | Operační systém, pro který vytváříte. Platné hodnoty jsou "Libovolný procesor", "x86" a "x64". |
-| ProcessorArchitecture | Architektura procesoru, která se používá při překládání odkazů na sestavení. Platné hodnoty jsou "msil", "x86", "amd64" nebo "ia64". |
-| Vytvořitpouzereferencesestavení | Logická hodnota, která instruuje kompilátor emitovat pouze referenční sestavení, nikoli kompilovaný kód. Nelze použít ve `ProduceReferenceAssembly`spojení s .  Tato vlastnost odpovídá `/refonly` přepínači *kompilátorů vbc.exe* a *csc.exe.* |
-| ProduceReferenceAssembly | Logická hodnota, která `true` při nastavení umožňuje výrobu [referenčních sestav](/dotnet/standard/assembly/reference-assemblies) pro aktuální sestavení. `Deterministic`by `true` měla být při použití této funkce. Tato vlastnost odpovídá `/refout` přepínači *kompilátorů vbc.exe* a *csc.exe.* |
-| RemoveIntegerChecks | Logická hodnota, která označuje, zda zakázat kontroly chyb přetečení celé číslo. Výchozí hodnota je `false`. Tato vlastnost je `/removeintchecks` ekvivalentní přepínači kompilátoru *vbc.exe.* |
-| Rootnamespace | Kořenový obor názvů, který se má použít při pojmenování vloženého prostředku. Tento obor názvů je součástí názvu manifestu vloženého prostředku. |
-| Satellite_AlgorithmId | ID algoritmu s hash em *AL.exe,* který se má použít při vytváření satelitních sestavení. |
-| Satellite_BaseAddress | Základní adresa, která se má použít při sestaveních `CreateSatelliteAssemblies` satelitů specifických pro jazykovou verzi pomocí cíle. |
-| Satellite_CompanyName | Název společnosti převést do *AL.exe* během generování satelitní montáže. |
-| Satellite_Configuration | Název konfigurace předat do *AL.exe* během generování satelitní sestavení. |
-| Satellite_Description | Popisný text předat do *AL.exe* během generování satelitní sestavení. |
-| Satellite_EvidenceFile | Vloží zadaný soubor do satelitního sestavení, které má název prostředku Security.Evidence. |
-| Satellite_FileVersion | Určuje řetězec pro pole Verze souboru v satelitním sestavení. |
-| Satellite_Flags | Určuje hodnotu pole Příznaky v satelitním sestavení. |
-| Satellite_GenerateFullPaths | Způsobí, že úloha sestavení použije absolutní cesty pro všechny soubory uvedené v chybové zprávě. |
+| OutputType | Určuje formát výstupního souboru. Tento parametr může mít jednu z následujících hodnot:<br /><br /> Knihovna. Vytvoří knihovnu kódu. (Výchozí hodnota.)<br />Programu. Vytvoří konzolovou aplikaci.<br />Čipu. Vytvoří modul.<br />Winexe. Vytvoří program založený na systému Windows.<br /><br /> Tato vlastnost je ekvivalentní `/target` přepínači kompilátoru *Vbc. exe* . |
+| OverwriteReadOnlyFiles | Logická hodnota, která označuje, zda chcete povolit sestavení pro přepsání souborů jen pro čtení nebo spuštění chyby. |
+| PathMap | Určuje, jak namapovat fyzické cesty na výstup názvů zdrojových cest kompilátorem. Tato vlastnost je ekvivalentní `/pathmap` přepínači kompilátoru *CSc. exe* . |
+| PdbFile | Název souboru *. pdb* , který vysíláte. Tato vlastnost je ekvivalentní `/pdb` přepínači kompilátoru *CSc. exe* . |
+| Platforma | Operační systém, pro který sestavíte. Platné hodnoty jsou "any CPU", "x86" a "x64". |
+| ProcessorArchitecture | Architektura procesoru, která se používá, když jsou přeloženy odkazy na sestavení. Platné hodnoty jsou "MSIL", "x86", "amd64" nebo "ia64". |
+| ProduceOnlyReferenceAssembly | Logická hodnota, která instruuje kompilátor, aby vygenerovala pouze referenční sestavení namísto zkompilovaného kódu. Nelze použít ve spojení s `ProduceReferenceAssembly` .  Tato vlastnost odpovídá `/refonly` přepínači kompilátoru *Vbc. exe* a *CSc. exe* . |
+| ProduceReferenceAssembly | Logická hodnota, která Pokud je nastavena na `true` povolenou výrobu [referenčních sestavení](/dotnet/standard/assembly/reference-assemblies) pro aktuální sestavení. `Deterministic`by měla být `true` při použití této funkce. Tato vlastnost odpovídá `/refout` přepínači kompilátoru *Vbc. exe* a *CSc. exe* . |
+| RemoveIntegerChecks | Logická hodnota, která označuje, zda se mají zakázat kontroly chyb přetečení celých čísel. Výchozí hodnota je `false`. Tato vlastnost je ekvivalentní `/removeintchecks` přepínači kompilátoru *Vbc. exe* . |
+| RootNamespace | Kořenový obor názvů, který se má použít při pojmenování vloženého prostředku. Tento obor názvů je součástí názvu vloženého manifestu prostředku. |
+| Satellite_AlgorithmId | ID algoritmu hash *Al. exe* , který má být použit při vytváření satelitních sestavení. |
+| Satellite_BaseAddress | Základní adresa, která se použije v případě satelitních sestavení specifických pro jazykovou verzi, se vytváří pomocí `CreateSatelliteAssemblies` cíle. |
+| Satellite_CompanyName | Název společnosti, který se má předat *Al. exe* během vytváření satelitních sestavení. |
+| Satellite_Configuration | Název konfigurace, který se má předat *Al. exe* během vytváření satelitních sestavení. |
+| Satellite_Description | Text popisu, který se má předat souboru *Al. exe* během vytváření satelitních sestavení. |
+| Satellite_EvidenceFile | Vloží zadaný soubor do satelitního sestavení, které má název prostředku "Security. evidence". |
+| Satellite_FileVersion | Určuje řetězec pro pole verze souboru v satelitním sestavení. |
+| Satellite_Flags | Určuje hodnotu pro pole flags v satelitním sestavení. |
+| Satellite_GenerateFullPaths | Způsobí, že úloha sestavení použije absolutní cesty pro všechny soubory hlášené v chybové zprávě. |
 | Satellite_LinkResource | Propojí zadané soubory prostředků se satelitním sestavením. |
-| Satellite_MainEntryPoint | Určuje plně kvalifikovaný název (tj. class.method) metody, která má být používána jako vstupní bod při převodu modulu na spustitelný soubor během generování satelitního sestavení. |
-| Satellite_ProductName | Určuje řetězec pro pole Produkt v satelitním sestavení. |
+| Satellite_MainEntryPoint | Určuje plně kvalifikovaný název (tj. Class. Method) metody pro použití jako vstupní bod při převodu modulu na spustitelný soubor během generování satelitního sestavení. |
+| Satellite_ProductName | Určuje řetězec pro pole produktu v satelitním sestavení. |
 | Satellite_ProductVersion | Určuje řetězec pro pole ProductVersion v satelitním sestavení. |
-| Satellite_TargetType | Určuje formát souboru výstupního souboru satelitního sestavení jako "knihovna", "exe" nebo "win". Výchozí hodnota je "knihovna". |
-| Satellite_Title | Určuje řetězec pro pole Název v satelitním sestavení. |
-| Satellite_Trademark | Určuje řetězec pro pole Ochranná známka v satelitním sestavení. |
+| Satellite_TargetType | Určuje formát výstupního souboru satelitního sestavení jako "Library", "exe" nebo "Win". Výchozí hodnota je "Library". |
+| Satellite_Title | Určuje řetězec pro pole title v satelitním sestavení. |
+| Satellite_Trademark | Určuje řetězec pro pole ochranné známky v satelitním sestavení. |
 | Satellite_Version | Určuje informace o verzi satelitního sestavení. |
-| Satellite_Win32Icon | Vloží soubor ikony *.ico* do satelitního sestavení. |
-| Satellite_Win32Resource | Vloží prostředek Win32 (*.res* soubor) do satelitního sestavení. |
-| Sgentoolpath | Volitelná cesta nástroje, která označuje, kde získat *SGen.exe* při přepsání aktuální verze *programu SGen.exe.* Tato vlastnost se používá pouze pro rozhraní .NET Framework.|
-| SgenuseProxyTypy | Logická hodnota, která označuje, zda mají být typy proxy generovány souborem *SGen.exe*. To platí pouze v případě, že je funkce *GenerateSerializationAssemblies* nastavena na zapnuto a pouze pro rozhraní .NET Framework.<br /><br /> Cíl SGen používá tuto vlastnost k nastavení příznaku UseProxyTypes. Tato vlastnost výchozí true a neexistuje žádné uI to změnit. Chcete-li generovat sestavení serializace pro typy jiných než webservice, přidejte tuto vlastnost do souboru projektu a nastavte ji na hodnotu false před importem *cílů Microsoft.Common.Targets* nebo *C#/VB.targets*. |
-| StartupObject | Určuje třídu nebo modul, který obsahuje metodu Main nebo proceduru Sub Main. Tato vlastnost je `/main` ekvivalentní přepínač kompilátoru. |
-| Verze subsystému | Určuje minimální verzi subsystému, kterou může generovaný spustitelný soubor použít. Tato vlastnost je `/subsystemversion` ekvivalentní přepínač kompilátoru. Informace o výchozí hodnotě této vlastnosti naleznete v tématu [/subsystemversion (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/subsystemversion) nebo [/subsystemversion (Možnosti kompilátoru Jazyka C#).](/dotnet/csharp/language-reference/compiler-options/subsystemversion-compiler-option) |
-| TargetCompactFramework | Verze rozhraní .NET Compact Framework, která je vyžadována ke spuštění vytvářené aplikace. Zadání tohoto umožňuje odkazovat na určité rozhraní sestavení, které nemusí být možné odkazovat jinak. |
-| Cílová verze Framework | Verze rozhraní .NET Framework, která je vyžadována ke spuštění aplikace, kterou vytváříte. Zadání tohoto umožňuje odkazovat na určité rozhraní sestavení, které nemusí být možné odkazovat jinak. |
-| TreatWarningsAsChyby | Logický parametr, který, `true`pokud , způsobí, že všechna upozornění, které mají být považovány za chyby. Tento parametr je `/nowarn` ekvivalentní přepínači kompilátoru. |
-| UseHostCompilerIfAvailable | Logický parametr, který, `true`pokud , způsobí, že úloha sestavení použije objekt kompilátoru v procesu, pokud je k dispozici. Tento parametr používá pouze visual studio. |
-| Utf8Výstup | Logický parametr, který `true`pokud protokoluje výstup kompilátoru pomocí kódování UTF-8. Tento parametr je `/utf8Output` ekvivalentní přepínači kompilátoru. |
-| Cesta VbcToolPath | Volitelná cesta, která označuje jiné umístění pro *vbc.exe* při přepsání aktuální verze *programu vbc.exe.* |
-| VbcVerbosita | Určuje podrobnost výstupu kompilátoru jazyka Visual Basic. Platné hodnoty jsou "Tichý", "Normální" (výchozí hodnota) nebo "Podrobné". |
-| VisualStudioVersion | Určuje verzi sady Visual Studio, ve které by měl být tento projekt považován za spuštěný. Pokud tato vlastnost není zadán, MSBuild nastaví na přiměřenou výchozí hodnotu.<br /><br /> Tato vlastnost se používá v několika typech projektu k určení sady cílů, které se používají pro sestavení. Pokud `ToolsVersion` je pro projekt nastavena na `VisualStudioVersion` hodnotu 4.0 nebo vyšší, slouží k určení, kterou podsadu nástrojů chcete použít. Další informace naleznete v [tématu Toolset (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md). |
-| WarningsAsErrors | Určuje seznam upozornění, která mají být považována za chyby. Tento parametr je `/warnaserror` ekvivalentní přepínači kompilátoru. |
-| WarningsNotAsChyby | Určuje seznam upozornění, která nejsou považována za chyby. Tento parametr je `/warnaserror` ekvivalentní přepínači kompilátoru. |
-| Win32Manifest | Název souboru manifestu, který by měl být vložen do konečného sestavení. Tento parametr je `/win32Manifest` ekvivalentní přepínači kompilátoru. |
-| Win32Zdroj | Název souboru prostředku Win32, který má být vložen do konečného sestavení. Tento parametr je `/win32resource` ekvivalentní přepínači kompilátoru. |
+| Satellite_Win32Icon | Vloží soubor ikony *. ico* do satelitního sestavení. |
+| Satellite_Win32Resource | Vloží prostředek systému Win32 (soubor *. res* ) do satelitního sestavení. |
+| SGenToolPath | Volitelná cesta nástroje, která označuje, kde získat *Sgen. exe* , když je aktuální verze *Sgen. exe* přepsána. Tato vlastnost se používá jenom pro .NET Framework.|
+| SGenUseProxyTypes | Logická hodnota, která určuje, zda mají být typy proxy generovány pomocí *Sgen. exe*. To platí jenom v případě, že je *GenerateSerializationAssemblies* nastavené na zapnuto a jenom pro .NET Framework.<br /><br /> Cíl SGen používá tuto vlastnost k nastavení příznaku UseProxyTypes. Tato vlastnost je nastavena na hodnotu true a neexistuje žádné uživatelské rozhraní, které by bylo možné změnit. Chcete-li generovat sestavení serializace pro typy non-WebService, přidejte tuto vlastnost do souboru projektu a nastavte ji na false před importem *Microsoft. Common. targets* nebo *C#/VB.targets*. |
+| SkipInvalidConfigurations | Když `true` , vygeneruje upozornění na neplatnou platformu a kombinace konfigurací, ale sestavení neselže, pokud není `false` definováno (výchozí), vygeneruje chybu. |
+| StartupObject | Určuje třídu nebo modul, který obsahuje metodu Main nebo Sub Main Procedure. Tato vlastnost je ekvivalentní `/main` přepínači kompilátoru. |
+| SubsystemVersion | Určuje minimální verzi subsystému, kterou může vygenerovaný spustitelný soubor použít. Tato vlastnost je ekvivalentní `/subsystemversion` přepínači kompilátoru. Informace o výchozí hodnotě této vlastnosti naleznete v tématu [/subsystemversion (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/subsystemversion) nebo [/subsystemversion (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/subsystemversion-compiler-option). |
+| TargetCompactFramework | Verze prostředí .NET Compact Framework potřebná ke spuštění aplikace, kterou vytváříte. Zadáním této možnosti můžete odkazovat na konkrétní sestavení rozhraní, která pravděpodobně nebudete moci odkazovat jinak. |
+| TargetFrameworkVersion | Verze .NET Framework potřebná ke spuštění aplikace, kterou vytváříte. Zadáním této možnosti můžete odkazovat na konkrétní sestavení rozhraní, která pravděpodobně nebudete moci odkazovat jinak. |
+| TreatWarningsAsErrors | Logický parametr, který v případě `true` , že způsobí, že všechna upozornění budou považována za chyby. Tento parametr je ekvivalentní `/nowarn` přepínači kompilátoru. |
+| UseHostCompilerIfAvailable | Logický parametr, který v případě `true` způsobí, že úloha sestavení použije vnitroprocesové objekt kompilátoru, pokud je k dispozici. Tento parametr je používán pouze v aplikaci Visual Studio. |
+| Utf8output – | Logický parametr, který v případě `true` , protokoluje výstup kompilátoru pomocí kódování UTF-8. Tento parametr je ekvivalentní `/utf8Output` přepínači kompilátoru. |
+| VbcToolPath | Volitelná cesta, která označuje jiné umístění pro *Vbc. exe* , když je aktuální verze *Vbc. exe* přepsána. |
+| VbcVerbosity | Určuje podrobnost výstupu kompilátoru Visual Basic. Platné hodnoty jsou "quiet", "normální" (výchozí hodnota) nebo "Verbose". |
+| VisualStudioVersion | Určuje verzi sady Visual Studio, ve které se má tento projekt považovat za spuštěný. Pokud tato vlastnost není zadána, MSBuild ji nastaví na rozumnou výchozí hodnotu.<br /><br /> Tato vlastnost se používá v několika typech projektů k určení sady cílů, které se používají pro sestavení. Pokud `ToolsVersion` je nastaven na 4,0 nebo vyšší pro projekt, `VisualStudioVersion` slouží k určení, kterou dílčí sadu nástrojů použít. Další informace najdete v tématu [Sada nástrojů (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md). |
+| WarningsAsErrors | Určuje seznam upozornění, která mají být považována za chyby. Tento parametr je ekvivalentní `/warnaserror` přepínači kompilátoru. |
+| WarningsNotAsErrors | Určuje seznam upozornění, která nejsou považována za chyby. Tento parametr je ekvivalentní `/warnaserror` přepínači kompilátoru. |
+| Win32Manifest | Název souboru manifestu, který má být vložen do konečného sestavení. Tento parametr je ekvivalentní `/win32Manifest` přepínači kompilátoru. |
+| Win32Resource | Název souboru prostředku Win32, který se má vložit do konečného sestavení Tento parametr je ekvivalentní `/win32resource` přepínači kompilátoru. |
 
 ## <a name="see-also"></a>Viz také
 
-- [Běžné položky projektu MSBuild](../msbuild/common-msbuild-project-items.md)
+- [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md)

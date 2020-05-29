@@ -5,19 +5,19 @@ description: Seznam vydaných verzí a čísel sestavení pro sadu Visual Studio
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 04/23/2020
+ms.date: 05/27/2020
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 33d82e84b28fa85bf4cfb014ecd292f31e0c84cb
-ms.sourcegitcommit: 5ab22b8601db9c420691f8e57abe140e837aa720
+ms.openlocfilehash: f286262e77064f38e3ce09a32ec5dec82a22fe89
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82109452"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183194"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Čísla sestavení a data vydání sady Visual Studio
 
@@ -29,6 +29,14 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 
 | **Verze**| **Kanál** | **Datum vydání** | **Verze buildu** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.4.9 | Vydat | 27. května 2020 | 16.4.30120.98 |
+| 16.7.0 | Preview 1 | 19. května 2020 | 16.7.30114.128 |
+| 16.6.0 | Vydat | 19. května 2020 | 16.6.30114.105 |
+| 16.5.5 | Vydat | 12. května 2020 | 16.5.30104.148 |
+| 16.4.8 | Vydat | 12. května 2020 | 16.4.30107.140 |
+| 16.0.14 | Vydat | 12. května 2020 | 16.0.28803.735 |
+| 16.6.0 | Preview 6 | 7. května 2020 | 16.6.30105.148 |
+| 16.6.0 | Preview 5 | 30. dubna 2020 | 16.6.30028.174 |
 | 16.6.0 | Preview 4 | 23. dubna 2020 | 16.6.30021.99 |
 | 16.6.0 | Preview 3 | 16. dubna 2020 | 16.6.30014.187 |
 | 16.0.13 | Vydat | 14. dubna 2020 | 16.0.28803.718 |
@@ -141,6 +149,7 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 
 | **Verze**| **Kanál** | **Datum vydání** | **Verze buildu** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.9.23 | Vydat | 12. května 2020 | 15.9.28307.1146 |
 | 15.9.22 | Vydat | 14. dubna 2020 | 15.9.28307.1093 |
 | 15.9.21 | Vydat | 10. března 2020 | 15.9.28307.1064 |
 | 15.9.20 | Vydat | 11. února 2020 | 15.9.28307.1033 |

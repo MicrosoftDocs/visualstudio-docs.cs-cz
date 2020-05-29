@@ -1,5 +1,5 @@
 ---
-title: '&lt;trustInfo&gt; – Element (aplikace ClickOnce) | Dokumentace Microsoftu'
+title: '&lt;trustInfo – &gt; element (aplikace ClickOnce) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,15 +22,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d6ac13c6eb76bff5ffc07043fd20063700237fc
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 5873eb18b2f803acfd5aba9444657884b1a24581
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66745587"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184429"
 ---
-# <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustInfo&gt; – element (aplikace ClickOnce)
-Popisuje minimální oprávnění požadovaná pro aplikaci, aby běžela v klientském počítači.
+# <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustInfo – &gt; element (aplikace ClickOnce)
+Popisuje minimální oprávnění zabezpečení potřebná ke spuštění aplikace v klientském počítači.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,41 +67,41 @@ Popisuje minimální oprávnění požadovaná pro aplikaci, aby běžela v klie
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- `trustInfo` Element je povinný a je v `asm.v2` oboru názvů. Nemá žádné atributy a obsahuje následující prvky.
+ `trustInfo`Element je povinný a je v `asm.v2` oboru názvů. Nemá žádné atributy a obsahuje následující prvky.
 
-## <a name="security"></a>zabezpečení
- Povinný parametr. Tento element je podřízeným prvkem `trustInfo` elementu. Obsahuje `applicationRequestMinimum` elementu a nemá žádné atributy.
+## <a name="security"></a>security
+ Povinná hodnota. Tento prvek je podřízeným `trustInfo` prvkem elementu. Obsahuje `applicationRequestMinimum` element a nemá žádné atributy.
 
 ## <a name="applicationrequestminimum"></a>applicationRequestMinimum
- Povinný parametr. Tento element je podřízeným prvkem `security` elementu a obsahuje `PermissionSet`, `assemblyRequest`, a `defaultAssemblyRequest`elementy. Tento element nemá žádné atributy.
+ Povinná hodnota. Tento prvek je podřízeným `security` prvkem prvku a obsahuje `PermissionSet` `assemblyRequest` prvky, a `defaultAssemblyRequest` . Tento element nemá žádné atributy.
 
 ## <a name="permissionset"></a>PermissionSet
- Povinný parametr. Tento element je podřízeným prvkem `applicationRequestMinimum` elementu a obsahuje `IPermission` elementu. Tento element má následující atributy.
+ Povinná hodnota. Tento prvek je podřízeným prvkem `applicationRequestMinimum` prvku a obsahuje `IPermission` prvek. Tento element má následující atributy.
 
 - `ID`
 
-     Povinný parametr. Určuje sadu oprávnění. Tento atribut může být libovolná hodnota. ID odkazuje `defaultAssemblyRequest` a `assemblyRequest` atributy.
+     Povinná hodnota. Identifikuje sadu oprávnění. Tento atribut může být libovolná hodnota. Na ID je odkazováno v `defaultAssemblyRequest` `assemblyRequest` atributech a.
 
 - `version`
 
-     Povinný parametr. Určuje verzi oprávnění. Obvykle je tato hodnota `1`.
+     Povinná hodnota. Určuje verzi oprávnění. Obvykle je tato hodnota `1` .
 
-## <a name="ipermission"></a>Rozhraní IPermission.
- Volitelné. Tento element je podřízeným prvkem `PermissionSet` elementu. `IPermission` Element plně identifikuje oprávnění třídy v rozhraní .NET Framework. `IPermission` Element má následující atributy, ale mohou mít další atributy, které odpovídají vlastnosti třídy oprávnění. Syntaxe pro konkrétní oprávnění najdete příklady uvedené v souboru Security.config.
+## <a name="ipermission"></a>IPermission
+ Nepovinný parametr. Tento prvek je podřízeným `PermissionSet` prvkem elementu. `IPermission`Element plně identifikuje třídu oprávnění v .NET Framework. `IPermission`Element má následující atributy, ale může mít další atributy, které odpovídají vlastnostem třídy oprávnění. Chcete-li zjistit syntaxi konkrétního oprávnění, přečtěte si příklady uvedené v souboru Security. config.
 
 - `class`
 
-     Povinný parametr. Určuje třídu oprávnění pomocí silného názvu. Například následující kód označuje `FileDialogPermission` typu.
+     Povinná hodnota. Identifikuje třídu oprávnění podle silného názvu. Například následující kód identifikuje `FileDialogPermission` typ.
 
      `System.Security.Permissions.FileDialogPermission, mscorlib, Version=1.2.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`
 
 - `version`
 
-     Povinný parametr. Určuje verzi oprávnění. Tato hodnota je obvykle `1`.
+     Povinná hodnota. Určuje verzi oprávnění. Tato hodnota je obvykle `1` .
 
 - `Unrestricted`
 
-     Povinný parametr. Označuje, zda aplikace potřebuje neomezená oprávnění. Pokud `true`, udělení oprávnění Nepodmíněný. Pokud `false`, nebo pokud tento atribut není definován, je omezen atributy specifické pro oprávnění definované na `IPermission` značky. Proveďte následující oprávnění:
+     Povinná hodnota. Určuje, jestli aplikace potřebuje neomezené udělení tohoto oprávnění. Pokud je `true` udělení oprávnění nepodmíněné. Pokud je `false` , nebo pokud tento atribut není definován, je omezen podle atributů specifických pro oprávnění definovaných na `IPermission` značce. Proveďte následující oprávnění:
 
     ```xml
     <IPermission
@@ -114,59 +114,59 @@ Popisuje minimální oprávnění požadovaná pro aplikaci, aby běžela v klie
       Unrestricted="true" />
     ```
 
-     V tomto příkladu deklarace <xref:System.Security.Permissions.EnvironmentPermission> omezí aplikace pro čtení jenom proměnné prostředí uživatelské jméno, zatímco deklarace <xref:System.Security.Permissions.FileDialogPermission> poskytuje aplikaci neomezené použití operátoru all <xref:System.Windows.Forms.FileDialog> třídy.
+     V tomto příkladu deklarace pro <xref:System.Security.Permissions.EnvironmentPermission> omezuje aplikaci pouze na čtení uživatelského jména proměnné prostředí, zatímco deklarace pro <xref:System.Security.Permissions.FileDialogPermission> dává aplikaci neomezený přístup ke všem <xref:System.Windows.Forms.FileDialog> třídám.
 
 ## <a name="defaultassemblyrequest"></a>defaultAssemblyRequest
- Volitelné. Identifikuje sadu oprávnění udělená všechna sestavení. Tento element je podřízeným prvkem `applicationRequestMinimum` elementu a nemá tento atribut.
+ Nepovinný parametr. Určuje sadu oprávnění udělených pro všechna sestavení. Tento prvek je podřízeným `applicationRequestMinimum` prvkem prvku a má následující atribut.
 
 - `permissionSetReference`
 
-     Povinný parametr. Určuje ID sady oprávnění, která je výchozí oprávnění. Sada oprávnění je deklarován v `PermissionSet` elementu.
+     Povinná hodnota. Určuje ID sady oprávnění, která je výchozím oprávněním. Sada oprávnění je deklarována v `PermissionSet` elementu.
 
 ## <a name="assemblyrequest"></a>assemblyRequest
- Volitelné. Určuje oprávnění pro konkrétní sestavení. Tento element je podřízeným prvkem `applicationRequestMinimum` prvek a má následující atributy.
+ Nepovinný parametr. Identifikuje oprávnění pro konkrétní sestavení. Tento prvek je podřízeným `applicationRequestMinimum` prvkem prvku a má následující atributy.
 
 - `Name`
 
-     Povinný parametr. Určuje název sestavení.
+     Povinná hodnota. Určuje název sestavení.
 
 - `permissionSetReference`
 
-     Povinný parametr. Určuje ID sady oprávnění, která toto sestavení vyžaduje. Sada oprávnění je deklarován v `PermissionSet` elementu.
+     Povinná hodnota. Určuje ID sady oprávnění, kterou toto sestavení vyžaduje. Sada oprávnění je deklarována v `PermissionSet` elementu.
 
 ## <a name="requestedprivileges"></a>requestedPrivileges
- Volitelné. Tento element je podřízeným prvkem `security` elementu a obsahuje `requestedExecutionLevel` elementu. Tento element nemá žádné atributy.
+ Nepovinný parametr. Tento prvek je podřízeným prvkem `security` prvku a obsahuje `requestedExecutionLevel` prvek. Tento element nemá žádné atributy.
 
 ## <a name="requestedexecutionlevel"></a>requestedExecutionLevel
- Volitelné. Určuje úroveň zabezpečení, ve kterém aplikace požádá o který se spustí. Tento element nemá žádné podřízené položky a má následující atributy.
+ Nepovinný parametr. Určuje úroveň zabezpečení, na které aplikace požaduje spuštění. Tento element nemá žádné podřízené položky a má následující atributy.
 
 - `Level`
 
-   Povinný parametr. Označuje, že úroveň zabezpečení aplikace požaduje. Možné hodnoty jsou:
+   Povinná hodnota. Označuje úroveň zabezpečení, kterou aplikace požaduje. Možné hodnoty:
 
-   `asInvoker`, požadování žádná další oprávnění. Tato úroveň vyžaduje že důvěryhodnosti žádné další výzvy.
+   `asInvoker`, nevyžaduje žádná další oprávnění. Tato úroveň nevyžaduje žádné další výzvy pro vztah důvěryhodnosti.
 
-   `highestAvailable`, požadování nejvyšší oprávnění, která je k dispozici nadřazenému procesu.
+   `highestAvailable`požaduje nejvyšší oprávnění, která jsou k dispozici nadřazenému procesu.
 
-   `requireAdministrator`, vyžaduje oprávnění správce s úplnými oprávněními.
+   `requireAdministrator`, vyžaduje oprávnění úplného správce.
 
-   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace bude instalovat pouze s hodnotou `asInvoker`. Instalace s jakoukoli jinou hodnotu se nezdaří.
+   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]aplikace se nainstalují jenom s hodnotou `asInvoker` . Instalace s jakoukoli jinou hodnotou se nezdaří.
 
 - `uiAccess`
 
-   Volitelné. Určuje, jestli aplikace vyžaduje přístup k prvkům chráněného uživatelského rozhraní. Hodnoty jsou buď `true` nebo `false`, a výchozí hodnota je false. Pouze podepsané aplikace by měla mít hodnotu true.
+   Nepovinný parametr. Určuje, zda aplikace vyžaduje přístup k prvkům chráněného uživatelského rozhraní. Hodnoty jsou buď `true` nebo `false` , a výchozí hodnota je false. Pouze podepsané aplikace by měly mít hodnotu true.
 
 ## <a name="remarks"></a>Poznámky
- Pokud [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace požaduje více oprávnění než klientský počítač, udělí se ve výchozím nastavení, CLR správce důvěryhodnosti modulu CLR runtime požádá uživatele, pokud chce poskytnout aplikace tuto zvýšenou úroveň důvěryhodnosti. Pokud uživatel je hodnota Ne, aplikace se nespustí; v opačném případě bude spuštěna s požadovaná oprávnění.
+ Pokud [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace požádá o další oprávnění, než bude klientský počítač ve výchozím nastavení udělovat, bude správce vztahu důvěryhodnosti modulu CLR požádat uživatele, pokud chce aplikaci udělit tuto zvýšenou úroveň důvěryhodnosti. Pokud ne, aplikace se nespustí; v opačném případě se spustí s požadovanými oprávněními.
 
- Všechna oprávnění požadovaná pomocí `defaultAssemblyRequest` a `assemblyRequest` udělí bez vyzvání uživatele, pokud manifest nasazení nemá platnou licenci.
+ Všechna oprávnění vyžadovaná pomocí `defaultAssemblyRequest` a `assemblyRequest` budou udělována bez zobrazení výzvy uživateli, pokud má manifest pro nasazení platnou důvěryhodnou licenci.
 
- Další informace o zvýšení úrovně oprávnění najdete v tématu [zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md). Další informace o nasazení zásad najdete v tématu [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md).
+ Další informace o zvýšení oprávnění najdete v tématu [zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md). Další informace o nasazení zásad najdete v tématu [Přehled nasazení důvěryhodných aplikací](../deployment/trusted-application-deployment-overview.md).
 
 ## <a name="examples"></a>Příklady
- Následující tři příklady ilustrují `trustInfo` elementy pro výchozí hodnotu s názvem zóny zabezpečení – Internet, LocalIntranet a FullTrust – pro použití v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace tohoto nasazení.
+ Následující tři příklady kódu ilustrují `trustInfo` prvky pro výchozí pojmenované zóny zabezpečení – Internet, LocalIntranet a FullTrust – pro použití v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifestu aplikace nasazení.
 
- První příklad ukazuje, `trustInfo` – element pro výchozí oprávnění, který je k dispozici v zóně zabezpečení Internetu.
+ První příklad ukazuje `trustInfo` prvek pro výchozí oprávnění dostupná v zóně zabezpečení Internetu.
 
 ```xml
 <trustInfo>
@@ -202,7 +202,7 @@ Popisuje minimální oprávnění požadovaná pro aplikaci, aby běžela v klie
   </trustInfo>
 ```
 
- Druhý příklad ukazuje, `trustInfo` – element pro výchozí oprávnění, který je k dispozici v zóně zabezpečení LocalIntranet.
+ Druhý příklad ukazuje `trustInfo` prvek pro výchozí oprávnění dostupná v zóně zabezpečení LocalIntranet.
 
 ```xml
 <trustInfo>
@@ -254,7 +254,7 @@ Popisuje minimální oprávnění požadovaná pro aplikaci, aby běžela v klie
 </trustInfo>
 ```
 
- Třetí příklad ukazuje, `trustInfo` – element pro výchozí oprávnění, který je k dispozici v zóně zabezpečení FullTrust.
+ Třetí příklad ukazuje `trustInfo` prvek pro výchozí oprávnění dostupná v zóně zabezpečení FullTrust.
 
 ```xml
 <trustInfo>
@@ -267,6 +267,6 @@ Popisuje minimální oprávnění požadovaná pro aplikaci, aby běžela v klie
 </trustInfo>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Důvěryhodné Přehled nasazení aplikace](../deployment/trusted-application-deployment-overview.md)
-- [ClickOnce – manifest aplikace](../deployment/clickonce-application-manifest.md)
+## <a name="see-also"></a>Viz také
+- [Přehled nasazení důvěryhodných aplikací](../deployment/trusted-application-deployment-overview.md)
+- [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)
